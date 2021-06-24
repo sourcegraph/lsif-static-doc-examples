@@ -7,22 +7,36 @@ It is a separate package so that users of pkg/conf do not indirectly import pkg/
 ## Index
 
 * [Variables](#var)
+    * [var Default](#Default)
     * [var DevAndTesting](#DevAndTesting)
     * [var DockerContainer](#DockerContainer)
     * [var KubernetesOrDockerComposeOrPureDocker](#KubernetesOrDockerComposeOrPureDocker)
-    * [var Default](#Default)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
+
+### <a id="Default" href="#Default">var Default</a>
+
+```
+searchKey: confdefaults.Default
+tags: [variable struct]
+```
+
+```Go
+var Default conftypes.RawUnified
+```
+
+Default is the default for *this* deployment type. It is populated by pkg/conf at init time. 
 
 ### <a id="DevAndTesting" href="#DevAndTesting">var DevAndTesting</a>
 
 ```
 searchKey: confdefaults.DevAndTesting
+tags: [variable struct]
 ```
 
 ```Go
@@ -39,6 +53,7 @@ Note: This actually generally only applies to 'go test' because we always overri
 
 ```
 searchKey: confdefaults.DockerContainer
+tags: [variable struct]
 ```
 
 ```Go
@@ -51,6 +66,7 @@ DockerContainer is the default configuration applied to Docker single-container 
 
 ```
 searchKey: confdefaults.KubernetesOrDockerComposeOrPureDocker
+tags: [variable struct]
 ```
 
 ```Go
@@ -58,16 +74,4 @@ var KubernetesOrDockerComposeOrPureDocker = ...
 ```
 
 KubernetesOrDockerComposeOrPureDocker is the default configuration applied to Kubernetes, Docker Compose, and pure Docker instances of Sourcegraph. 
-
-### <a id="Default" href="#Default">var Default</a>
-
-```
-searchKey: confdefaults.Default
-```
-
-```Go
-var Default conftypes.RawUnified
-```
-
-Default is the default for *this* deployment type. It is populated by pkg/conf at init time. 
 

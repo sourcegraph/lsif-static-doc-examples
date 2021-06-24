@@ -4,7 +4,9 @@
     "identifier": "corrupt-archives",
     "newPage": true,
     "searchKey": "dev/corrupt-archives",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,34 +39,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/dev/corrupt-archives#corruptArchives",
-              "documentation": {
-                "identifier": "corruptArchives",
-                "newPage": false,
-                "searchKey": "main.corruptArchives",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func corruptArchives(dir string) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc corruptArchives(dir string) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/dev/corrupt-archives#corruptArchive",
               "documentation": {
                 "identifier": "corruptArchive",
                 "newPage": false,
                 "searchKey": "main.corruptArchive",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -79,12 +62,36 @@
           },
           {
             "node": {
+              "pathID": "/dev/corrupt-archives#corruptArchives",
+              "documentation": {
+                "identifier": "corruptArchives",
+                "newPage": false,
+                "searchKey": "main.corruptArchives",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func corruptArchives(dir string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc corruptArchives(dir string) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/dev/corrupt-archives#main",
               "documentation": {
                 "identifier": "main",
                 "newPage": false,
                 "searchKey": "main.main",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },

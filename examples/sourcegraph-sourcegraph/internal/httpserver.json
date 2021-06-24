@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/httpserver",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,7 @@
                 "newPage": false,
                 "searchKey": "httpserver.server",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -65,6 +68,7 @@
                       "newPage": false,
                       "searchKey": "httpserver.server.Start",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -87,6 +91,7 @@
                       "newPage": false,
                       "searchKey": "httpserver.server.Stop",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -115,6 +120,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -129,72 +135,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/httpserver#NewHandler",
-              "documentation": {
-                "identifier": "NewHandler",
-                "newPage": false,
-                "searchKey": "httpserver.NewHandler",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func NewHandler(setupRoutes func(router *mux.Router)) http.Handler"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc NewHandler(setupRoutes func(router *mux.Router)) http.Handler\n```\n\nNewHandler creates an HTTP handler with a default /healthz endpoint. If a function is provided, it will be invoked with a router on which additional routes can be installed. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/httpserver#NewListener",
-              "documentation": {
-                "identifier": "NewListener",
-                "newPage": false,
-                "searchKey": "httpserver.NewListener",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func NewListener(addr string) (_ net.Listener, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc NewListener(addr string) (_ net.Listener, err error)\n```\n\nNewListener returns a TCP listener accepting connections on the given address. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/httpserver#SanitizeAddr",
-              "documentation": {
-                "identifier": "SanitizeAddr",
-                "newPage": false,
-                "searchKey": "httpserver.SanitizeAddr",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SanitizeAddr(addr string) (string, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SanitizeAddr(addr string) (string, error)\n```\n\nSanitizeAddr replaces the host in the given address with 127.0.0.1 if no host is supplied or if running in insecure dev mode. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/httpserver#New",
               "documentation": {
                 "identifier": "New",
                 "newPage": false,
                 "searchKey": "httpserver.New",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -214,7 +162,9 @@
                 "identifier": "NewFromAddr",
                 "newPage": false,
                 "searchKey": "httpserver.NewFromAddr",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -223,6 +173,72 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc NewFromAddr(addr string, httpServer *http.Server) goroutine.BackgroundRoutine\n```\n\nNew returns a BackgroundRoutine that serves the given handler on the given address. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/httpserver#NewHandler",
+              "documentation": {
+                "identifier": "NewHandler",
+                "newPage": false,
+                "searchKey": "httpserver.NewHandler",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewHandler(setupRoutes func(router *mux.Router)) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewHandler(setupRoutes func(router *mux.Router)) http.Handler\n```\n\nNewHandler creates an HTTP handler with a default /healthz endpoint. If a function is provided, it will be invoked with a router on which additional routes can be installed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/httpserver#NewListener",
+              "documentation": {
+                "identifier": "NewListener",
+                "newPage": false,
+                "searchKey": "httpserver.NewListener",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewListener(addr string) (_ net.Listener, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewListener(addr string) (_ net.Listener, err error)\n```\n\nNewListener returns a TCP listener accepting connections on the given address. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/httpserver#SanitizeAddr",
+              "documentation": {
+                "identifier": "SanitizeAddr",
+                "newPage": false,
+                "searchKey": "httpserver.SanitizeAddr",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SanitizeAddr(addr string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SanitizeAddr(addr string) (string, error)\n```\n\nSanitizeAddr replaces the host in the given address with 127.0.0.1 if no host is supplied or if running in insecure dev mode. \n\n"
               },
               "children": null
             }

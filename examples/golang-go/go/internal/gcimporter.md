@@ -5,89 +5,75 @@ Package gcimporter implements Import for gc-generated object files.
 ## Index
 
 * [Constants](#const)
-    * [const debug](#debug)
-    * [const predeclReserved](#predeclReserved)
-    * [const definedType](#definedType)
-    * [const pointerType](#pointerType)
-    * [const sliceType](#sliceType)
     * [const arrayType](#arrayType)
     * [const chanType](#chanType)
-    * [const mapType](#mapType)
-    * [const signatureType](#signatureType)
-    * [const structType](#structType)
-    * [const interfaceType](#interfaceType)
+    * [const debug](#debug)
+    * [const definedType](#definedType)
     * [const deltaNewFile](#deltaNewFile)
+    * [const interfaceType](#interfaceType)
+    * [const mapType](#mapType)
     * [const maxTime](#maxTime)
+    * [const pointerType](#pointerType)
+    * [const predeclReserved](#predeclReserved)
+    * [const signatureType](#signatureType)
+    * [const sliceType](#sliceType)
+    * [const structType](#structType)
 * [Variables](#var)
-    * [var pkgExts](#pkgExts)
     * [var fakeLines](#fakeLines)
     * [var fakeLinesOnce](#fakeLinesOnce)
-    * [var predeclared](#predeclared)
     * [var importedObjectTests](#importedObjectTests)
+    * [var pkgExts](#pkgExts)
+    * [var predeclared](#predeclared)
 * [Types](#type)
+    * [type anyType struct{}](#anyType)
+        * [func (t anyType) String() string](#anyType.String)
+        * [func (t anyType) Underlying() types.Type](#anyType.Underlying)
     * [type byPath []*types.Package](#byPath)
         * [func (a byPath) Len() int](#byPath.Len)
-        * [func (a byPath) Swap(i, j int)](#byPath.Swap)
         * [func (a byPath) Less(i, j int) bool](#byPath.Less)
+        * [func (a byPath) Swap(i, j int)](#byPath.Swap)
+    * [type fakeFileSet struct](#fakeFileSet)
+        * [func (s *fakeFileSet) pos(file string, line, column int) token.Pos](#fakeFileSet.pos)
+    * [type iimporter struct](#iimporter)
+        * [func (p *iimporter) doDecl(pkg *types.Package, name string)](#iimporter.doDecl)
+        * [func (p *iimporter) pkgAt(off uint64) *types.Package](#iimporter.pkgAt)
+        * [func (p *iimporter) stringAt(off uint64) string](#iimporter.stringAt)
+        * [func (p *iimporter) typAt(off uint64, base *types.Named) types.Type](#iimporter.typAt)
+    * [type importReader struct](#importReader)
+        * [func (r *importReader) bool() bool](#importReader.bool)
+        * [func (r *importReader) byte() byte](#importReader.byte)
+        * [func (r *importReader) declare(obj types.Object)](#importReader.declare)
+        * [func (r *importReader) doType(base *types.Named) types.Type](#importReader.doType)
+        * [func (r *importReader) ident() string](#importReader.ident)
+        * [func (r *importReader) int64() int64](#importReader.int64)
+        * [func (r *importReader) kind() itag](#importReader.kind)
+        * [func (r *importReader) mpfloat(typ *types.Basic) constant.Value](#importReader.mpfloat)
+        * [func (r *importReader) mpint(x *big.Int, typ *types.Basic)](#importReader.mpint)
+        * [func (r *importReader) obj(name string)](#importReader.obj)
+        * [func (r *importReader) param() *types.Var](#importReader.param)
+        * [func (r *importReader) paramList() *types.Tuple](#importReader.paramList)
+        * [func (r *importReader) pkg() *types.Package](#importReader.pkg)
+        * [func (r *importReader) pos() token.Pos](#importReader.pos)
+        * [func (r *importReader) posv0()](#importReader.posv0)
+        * [func (r *importReader) posv1()](#importReader.posv1)
+        * [func (r *importReader) qualifiedIdent() (*types.Package, string)](#importReader.qualifiedIdent)
+        * [func (r *importReader) signature(recv *types.Var) *types.Signature](#importReader.signature)
+        * [func (r *importReader) string() string](#importReader.string)
+        * [func (r *importReader) typ() types.Type](#importReader.typ)
+        * [func (r *importReader) uint64() uint64](#importReader.uint64)
+        * [func (r *importReader) value() (typ types.Type, val constant.Value)](#importReader.value)
     * [type intReader struct](#intReader)
         * [func (r *intReader) int64() int64](#intReader.int64)
         * [func (r *intReader) uint64() uint64](#intReader.uint64)
     * [type itag uint64](#itag)
-    * [type iimporter struct](#iimporter)
-        * [func (p *iimporter) doDecl(pkg *types.Package, name string)](#iimporter.doDecl)
-        * [func (p *iimporter) stringAt(off uint64) string](#iimporter.stringAt)
-        * [func (p *iimporter) pkgAt(off uint64) *types.Package](#iimporter.pkgAt)
-        * [func (p *iimporter) typAt(off uint64, base *types.Named) types.Type](#iimporter.typAt)
-    * [type importReader struct](#importReader)
-        * [func (r *importReader) obj(name string)](#importReader.obj)
-        * [func (r *importReader) declare(obj types.Object)](#importReader.declare)
-        * [func (r *importReader) value() (typ types.Type, val constant.Value)](#importReader.value)
-        * [func (r *importReader) mpint(x *big.Int, typ *types.Basic)](#importReader.mpint)
-        * [func (r *importReader) mpfloat(typ *types.Basic) constant.Value](#importReader.mpfloat)
-        * [func (r *importReader) ident() string](#importReader.ident)
-        * [func (r *importReader) qualifiedIdent() (*types.Package, string)](#importReader.qualifiedIdent)
-        * [func (r *importReader) pos() token.Pos](#importReader.pos)
-        * [func (r *importReader) posv0()](#importReader.posv0)
-        * [func (r *importReader) posv1()](#importReader.posv1)
-        * [func (r *importReader) typ() types.Type](#importReader.typ)
-        * [func (r *importReader) pkg() *types.Package](#importReader.pkg)
-        * [func (r *importReader) string() string](#importReader.string)
-        * [func (r *importReader) doType(base *types.Named) types.Type](#importReader.doType)
-        * [func (r *importReader) kind() itag](#importReader.kind)
-        * [func (r *importReader) signature(recv *types.Var) *types.Signature](#importReader.signature)
-        * [func (r *importReader) paramList() *types.Tuple](#importReader.paramList)
-        * [func (r *importReader) param() *types.Var](#importReader.param)
-        * [func (r *importReader) bool() bool](#importReader.bool)
-        * [func (r *importReader) int64() int64](#importReader.int64)
-        * [func (r *importReader) uint64() uint64](#importReader.uint64)
-        * [func (r *importReader) byte() byte](#importReader.byte)
-    * [type fakeFileSet struct](#fakeFileSet)
-        * [func (s *fakeFileSet) pos(file string, line, column int) token.Pos](#fakeFileSet.pos)
-    * [type anyType struct{}](#anyType)
-        * [func (t anyType) Underlying() types.Type](#anyType.Underlying)
-        * [func (t anyType) String() string](#anyType.String)
 * [Functions](#func)
-    * [func readGopackHeader(r *bufio.Reader) (name string, size int, err error)](#readGopackHeader)
     * [func FindExportData(r *bufio.Reader) (hdr string, err error)](#FindExportData)
     * [func FindPkg(path, srcDir string) (filename, id string)](#FindPkg)
     * [func Import(fset *token.FileSet, packages map[string]*types.Package, path, srcDir string, lookup func(path string) (io.ReadCloser, error)) (pkg *types.Package, err error)](#Import)
-    * [func iImportData(fset *token.FileSet, imports map[string]*types.Package, dataReader *bufio.Reader, path string) (pkg *types.Package, err error)](#iImportData)
-    * [func intSize(b *types.Basic) (signed bool, maxBytes uint)](#intSize)
-    * [func isInterface(t types.Type) bool](#isInterface)
-    * [func errorf(format string, args ...interface{})](#errorf)
-    * [func chanDir(d int) types.ChanDir](#chanDir)
-    * [func skipSpecialPlatforms(t *testing.T)](#skipSpecialPlatforms)
-    * [func compile(t *testing.T, dirname, filename, outdirname string) string](#compile)
-    * [func testPath(t *testing.T, path, srcDir string) *types.Package](#testPath)
-    * [func testDir(t *testing.T, dir string, endTime time.Time) (nimports int)](#testDir)
-    * [func mktmpdir(t *testing.T) string](#mktmpdir)
-    * [func TestImportTestdata(t *testing.T)](#TestImportTestdata)
-    * [func TestVersionHandling(t *testing.T)](#TestVersionHandling)
-    * [func TestImportStdLib(t *testing.T)](#TestImportStdLib)
-    * [func TestImportedTypes(t *testing.T)](#TestImportedTypes)
-    * [func verifyInterfaceMethodRecvs(t *testing.T, named *types.Named, level int)](#verifyInterfaceMethodRecvs)
-    * [func TestIssue5815(t *testing.T)](#TestIssue5815)
     * [func TestCorrectMethodPackage(t *testing.T)](#TestCorrectMethodPackage)
+    * [func TestImportStdLib(t *testing.T)](#TestImportStdLib)
+    * [func TestImportTestdata(t *testing.T)](#TestImportTestdata)
+    * [func TestImportedTypes(t *testing.T)](#TestImportedTypes)
     * [func TestIssue13566(t *testing.T)](#TestIssue13566)
     * [func TestIssue13898(t *testing.T)](#TestIssue13898)
     * [func TestIssue15517(t *testing.T)](#TestIssue15517)
@@ -95,81 +81,36 @@ Package gcimporter implements Import for gc-generated object files.
     * [func TestIssue20046(t *testing.T)](#TestIssue20046)
     * [func TestIssue25301(t *testing.T)](#TestIssue25301)
     * [func TestIssue25596(t *testing.T)](#TestIssue25596)
-    * [func importPkg(t *testing.T, path, srcDir string) *types.Package](#importPkg)
+    * [func TestIssue5815(t *testing.T)](#TestIssue5815)
+    * [func TestVersionHandling(t *testing.T)](#TestVersionHandling)
+    * [func chanDir(d int) types.ChanDir](#chanDir)
+    * [func compile(t *testing.T, dirname, filename, outdirname string) string](#compile)
     * [func compileAndImportPkg(t *testing.T, name string) *types.Package](#compileAndImportPkg)
+    * [func errorf(format string, args ...interface{})](#errorf)
+    * [func iImportData(fset *token.FileSet, imports map[string]*types.Package, dataReader *bufio.Reader, path string) (pkg *types.Package, err error)](#iImportData)
+    * [func importPkg(t *testing.T, path, srcDir string) *types.Package](#importPkg)
+    * [func intSize(b *types.Basic) (signed bool, maxBytes uint)](#intSize)
+    * [func isInterface(t types.Type) bool](#isInterface)
     * [func lookupObj(t *testing.T, scope *types.Scope, name string) types.Object](#lookupObj)
+    * [func mktmpdir(t *testing.T) string](#mktmpdir)
+    * [func readGopackHeader(r *bufio.Reader) (name string, size int, err error)](#readGopackHeader)
+    * [func skipSpecialPlatforms(t *testing.T)](#skipSpecialPlatforms)
+    * [func testDir(t *testing.T, dir string, endTime time.Time) (nimports int)](#testDir)
+    * [func testPath(t *testing.T, path, srcDir string) *types.Package](#testPath)
+    * [func verifyInterfaceMethodRecvs(t *testing.T, named *types.Named, level int)](#verifyInterfaceMethodRecvs)
 
 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
-```
-
-### <a id="debug" href="#debug">const debug</a>
-
-```
-searchKey: gcimporter.debug
-tags: [private]
-```
-
-```Go
-const debug = false
-```
-
-debugging/development support 
-
-### <a id="predeclReserved" href="#predeclReserved">const predeclReserved</a>
-
-```
-searchKey: gcimporter.predeclReserved
-tags: [private]
-```
-
-```Go
-const predeclReserved = 32
-```
-
-### <a id="definedType" href="#definedType">const definedType</a>
-
-```
-searchKey: gcimporter.definedType
-tags: [private]
-```
-
-```Go
-const definedType itag = iota
-```
-
-Types 
-
-### <a id="pointerType" href="#pointerType">const pointerType</a>
-
-```
-searchKey: gcimporter.pointerType
-tags: [private]
-```
-
-```Go
-const pointerType
-```
-
-### <a id="sliceType" href="#sliceType">const sliceType</a>
-
-```
-searchKey: gcimporter.sliceType
-tags: [private]
-```
-
-```Go
-const sliceType
+tags: [package private]
 ```
 
 ### <a id="arrayType" href="#arrayType">const arrayType</a>
 
 ```
 searchKey: gcimporter.arrayType
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -180,62 +121,44 @@ const arrayType
 
 ```
 searchKey: gcimporter.chanType
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
 const chanType
 ```
 
-### <a id="mapType" href="#mapType">const mapType</a>
+### <a id="debug" href="#debug">const debug</a>
 
 ```
-searchKey: gcimporter.mapType
-tags: [private]
-```
-
-```Go
-const mapType
-```
-
-### <a id="signatureType" href="#signatureType">const signatureType</a>
-
-```
-searchKey: gcimporter.signatureType
-tags: [private]
+searchKey: gcimporter.debug
+tags: [constant boolean private]
 ```
 
 ```Go
-const signatureType
+const debug = false
 ```
 
-### <a id="structType" href="#structType">const structType</a>
+debugging/development support 
+
+### <a id="definedType" href="#definedType">const definedType</a>
 
 ```
-searchKey: gcimporter.structType
-tags: [private]
-```
-
-```Go
-const structType
-```
-
-### <a id="interfaceType" href="#interfaceType">const interfaceType</a>
-
-```
-searchKey: gcimporter.interfaceType
-tags: [private]
+searchKey: gcimporter.definedType
+tags: [constant number private]
 ```
 
 ```Go
-const interfaceType
+const definedType itag = iota
 ```
+
+Types 
 
 ### <a id="deltaNewFile" href="#deltaNewFile">const deltaNewFile</a>
 
 ```
 searchKey: gcimporter.deltaNewFile
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -244,39 +167,105 @@ const deltaNewFile = -64
 
 deltaNewFile is a magic line delta offset indicating a new file. We use -64 because it is rare; see issue 20080 and CL 41619. -64 is the smallest int that fits in a single byte as a varint. 
 
+### <a id="interfaceType" href="#interfaceType">const interfaceType</a>
+
+```
+searchKey: gcimporter.interfaceType
+tags: [constant number private]
+```
+
+```Go
+const interfaceType
+```
+
+### <a id="mapType" href="#mapType">const mapType</a>
+
+```
+searchKey: gcimporter.mapType
+tags: [constant number private]
+```
+
+```Go
+const mapType
+```
+
 ### <a id="maxTime" href="#maxTime">const maxTime</a>
 
 ```
 searchKey: gcimporter.maxTime
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
 const maxTime = 30 * time.Second
 ```
 
-## <a id="var" href="#var">Variables</a>
+### <a id="pointerType" href="#pointerType">const pointerType</a>
 
 ```
-tags: [private]
-```
-
-### <a id="pkgExts" href="#pkgExts">var pkgExts</a>
-
-```
-searchKey: gcimporter.pkgExts
-tags: [private]
+searchKey: gcimporter.pointerType
+tags: [constant number private]
 ```
 
 ```Go
-var pkgExts = [...]string{".a", ".o"}
+const pointerType
+```
+
+### <a id="predeclReserved" href="#predeclReserved">const predeclReserved</a>
+
+```
+searchKey: gcimporter.predeclReserved
+tags: [constant number private]
+```
+
+```Go
+const predeclReserved = 32
+```
+
+### <a id="signatureType" href="#signatureType">const signatureType</a>
+
+```
+searchKey: gcimporter.signatureType
+tags: [constant number private]
+```
+
+```Go
+const signatureType
+```
+
+### <a id="sliceType" href="#sliceType">const sliceType</a>
+
+```
+searchKey: gcimporter.sliceType
+tags: [constant number private]
+```
+
+```Go
+const sliceType
+```
+
+### <a id="structType" href="#structType">const structType</a>
+
+```
+searchKey: gcimporter.structType
+tags: [constant number private]
+```
+
+```Go
+const structType
+```
+
+## <a id="var" href="#var">Variables</a>
+
+```
+tags: [package private]
 ```
 
 ### <a id="fakeLines" href="#fakeLines">var fakeLines</a>
 
 ```
 searchKey: gcimporter.fakeLines
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -287,46 +276,90 @@ var fakeLines []int
 
 ```
 searchKey: gcimporter.fakeLinesOnce
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
 var fakeLinesOnce sync.Once
 ```
 
-### <a id="predeclared" href="#predeclared">var predeclared</a>
-
-```
-searchKey: gcimporter.predeclared
-tags: [private]
-```
-
-```Go
-var predeclared = ...
-```
-
 ### <a id="importedObjectTests" href="#importedObjectTests">var importedObjectTests</a>
 
 ```
 searchKey: gcimporter.importedObjectTests
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
 var importedObjectTests = ...
 ```
 
+### <a id="pkgExts" href="#pkgExts">var pkgExts</a>
+
+```
+searchKey: gcimporter.pkgExts
+tags: [variable array string private]
+```
+
+```Go
+var pkgExts = [...]string{".a", ".o"}
+```
+
+### <a id="predeclared" href="#predeclared">var predeclared</a>
+
+```
+searchKey: gcimporter.predeclared
+tags: [variable array interface private]
+```
+
+```Go
+var predeclared = ...
+```
+
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
+```
+
+### <a id="anyType" href="#anyType">type anyType struct{}</a>
+
+```
+searchKey: gcimporter.anyType
+tags: [struct private]
+```
+
+```Go
+type anyType struct{}
+```
+
+#### <a id="anyType.String" href="#anyType.String">func (t anyType) String() string</a>
+
+```
+searchKey: gcimporter.anyType.String
+tags: [function private]
+```
+
+```Go
+func (t anyType) String() string
+```
+
+#### <a id="anyType.Underlying" href="#anyType.Underlying">func (t anyType) Underlying() types.Type</a>
+
+```
+searchKey: gcimporter.anyType.Underlying
+tags: [function private]
+```
+
+```Go
+func (t anyType) Underlying() types.Type
 ```
 
 ### <a id="byPath" href="#byPath">type byPath []*types.Package</a>
 
 ```
 searchKey: gcimporter.byPath
-tags: [private]
+tags: [array struct private]
 ```
 
 ```Go
@@ -337,87 +370,67 @@ type byPath []*types.Package
 
 ```
 searchKey: gcimporter.byPath.Len
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (a byPath) Len() int
 ```
 
-#### <a id="byPath.Swap" href="#byPath.Swap">func (a byPath) Swap(i, j int)</a>
-
-```
-searchKey: gcimporter.byPath.Swap
-tags: [private]
-```
-
-```Go
-func (a byPath) Swap(i, j int)
-```
-
 #### <a id="byPath.Less" href="#byPath.Less">func (a byPath) Less(i, j int) bool</a>
 
 ```
 searchKey: gcimporter.byPath.Less
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (a byPath) Less(i, j int) bool
 ```
 
-### <a id="intReader" href="#intReader">type intReader struct</a>
+#### <a id="byPath.Swap" href="#byPath.Swap">func (a byPath) Swap(i, j int)</a>
 
 ```
-searchKey: gcimporter.intReader
-tags: [private]
+searchKey: gcimporter.byPath.Swap
+tags: [method private]
 ```
 
 ```Go
-type intReader struct {
-	*bufio.Reader
-	path string
+func (a byPath) Swap(i, j int)
+```
+
+### <a id="fakeFileSet" href="#fakeFileSet">type fakeFileSet struct</a>
+
+```
+searchKey: gcimporter.fakeFileSet
+tags: [struct private]
+```
+
+```Go
+type fakeFileSet struct {
+	fset  *token.FileSet
+	files map[string]*token.File
 }
 ```
 
-#### <a id="intReader.int64" href="#intReader.int64">func (r *intReader) int64() int64</a>
+Synthesize a token.Pos 
+
+#### <a id="fakeFileSet.pos" href="#fakeFileSet.pos">func (s *fakeFileSet) pos(file string, line, column int) token.Pos</a>
 
 ```
-searchKey: gcimporter.intReader.int64
-tags: [private]
-```
-
-```Go
-func (r *intReader) int64() int64
-```
-
-#### <a id="intReader.uint64" href="#intReader.uint64">func (r *intReader) uint64() uint64</a>
-
-```
-searchKey: gcimporter.intReader.uint64
-tags: [private]
+searchKey: gcimporter.fakeFileSet.pos
+tags: [method private]
 ```
 
 ```Go
-func (r *intReader) uint64() uint64
-```
-
-### <a id="itag" href="#itag">type itag uint64</a>
-
-```
-searchKey: gcimporter.itag
-tags: [private]
-```
-
-```Go
-type itag uint64
+func (s *fakeFileSet) pos(file string, line, column int) token.Pos
 ```
 
 ### <a id="iimporter" href="#iimporter">type iimporter struct</a>
 
 ```
 searchKey: gcimporter.iimporter
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -442,40 +455,40 @@ type iimporter struct {
 
 ```
 searchKey: gcimporter.iimporter.doDecl
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (p *iimporter) doDecl(pkg *types.Package, name string)
 ```
 
-#### <a id="iimporter.stringAt" href="#iimporter.stringAt">func (p *iimporter) stringAt(off uint64) string</a>
-
-```
-searchKey: gcimporter.iimporter.stringAt
-tags: [private]
-```
-
-```Go
-func (p *iimporter) stringAt(off uint64) string
-```
-
 #### <a id="iimporter.pkgAt" href="#iimporter.pkgAt">func (p *iimporter) pkgAt(off uint64) *types.Package</a>
 
 ```
 searchKey: gcimporter.iimporter.pkgAt
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (p *iimporter) pkgAt(off uint64) *types.Package
 ```
 
+#### <a id="iimporter.stringAt" href="#iimporter.stringAt">func (p *iimporter) stringAt(off uint64) string</a>
+
+```
+searchKey: gcimporter.iimporter.stringAt
+tags: [method private]
+```
+
+```Go
+func (p *iimporter) stringAt(off uint64) string
+```
+
 #### <a id="iimporter.typAt" href="#iimporter.typAt">func (p *iimporter) typAt(off uint64, base *types.Named) types.Type</a>
 
 ```
 searchKey: gcimporter.iimporter.typAt
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -486,7 +499,7 @@ func (p *iimporter) typAt(off uint64, base *types.Named) types.Type
 
 ```
 searchKey: gcimporter.importReader
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -500,88 +513,154 @@ type importReader struct {
 }
 ```
 
-#### <a id="importReader.obj" href="#importReader.obj">func (r *importReader) obj(name string)</a>
+#### <a id="importReader.bool" href="#importReader.bool">func (r *importReader) bool() bool</a>
 
 ```
-searchKey: gcimporter.importReader.obj
-tags: [private]
+searchKey: gcimporter.importReader.bool
+tags: [function private]
 ```
 
 ```Go
-func (r *importReader) obj(name string)
+func (r *importReader) bool() bool
+```
+
+#### <a id="importReader.byte" href="#importReader.byte">func (r *importReader) byte() byte</a>
+
+```
+searchKey: gcimporter.importReader.byte
+tags: [function private]
+```
+
+```Go
+func (r *importReader) byte() byte
 ```
 
 #### <a id="importReader.declare" href="#importReader.declare">func (r *importReader) declare(obj types.Object)</a>
 
 ```
 searchKey: gcimporter.importReader.declare
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (r *importReader) declare(obj types.Object)
 ```
 
-#### <a id="importReader.value" href="#importReader.value">func (r *importReader) value() (typ types.Type, val constant.Value)</a>
+#### <a id="importReader.doType" href="#importReader.doType">func (r *importReader) doType(base *types.Named) types.Type</a>
 
 ```
-searchKey: gcimporter.importReader.value
-tags: [private]
-```
-
-```Go
-func (r *importReader) value() (typ types.Type, val constant.Value)
-```
-
-#### <a id="importReader.mpint" href="#importReader.mpint">func (r *importReader) mpint(x *big.Int, typ *types.Basic)</a>
-
-```
-searchKey: gcimporter.importReader.mpint
-tags: [private]
+searchKey: gcimporter.importReader.doType
+tags: [method private]
 ```
 
 ```Go
-func (r *importReader) mpint(x *big.Int, typ *types.Basic)
-```
-
-#### <a id="importReader.mpfloat" href="#importReader.mpfloat">func (r *importReader) mpfloat(typ *types.Basic) constant.Value</a>
-
-```
-searchKey: gcimporter.importReader.mpfloat
-tags: [private]
-```
-
-```Go
-func (r *importReader) mpfloat(typ *types.Basic) constant.Value
+func (r *importReader) doType(base *types.Named) types.Type
 ```
 
 #### <a id="importReader.ident" href="#importReader.ident">func (r *importReader) ident() string</a>
 
 ```
 searchKey: gcimporter.importReader.ident
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (r *importReader) ident() string
 ```
 
-#### <a id="importReader.qualifiedIdent" href="#importReader.qualifiedIdent">func (r *importReader) qualifiedIdent() (*types.Package, string)</a>
+#### <a id="importReader.int64" href="#importReader.int64">func (r *importReader) int64() int64</a>
 
 ```
-searchKey: gcimporter.importReader.qualifiedIdent
-tags: [private]
+searchKey: gcimporter.importReader.int64
+tags: [function private]
 ```
 
 ```Go
-func (r *importReader) qualifiedIdent() (*types.Package, string)
+func (r *importReader) int64() int64
+```
+
+#### <a id="importReader.kind" href="#importReader.kind">func (r *importReader) kind() itag</a>
+
+```
+searchKey: gcimporter.importReader.kind
+tags: [function private]
+```
+
+```Go
+func (r *importReader) kind() itag
+```
+
+#### <a id="importReader.mpfloat" href="#importReader.mpfloat">func (r *importReader) mpfloat(typ *types.Basic) constant.Value</a>
+
+```
+searchKey: gcimporter.importReader.mpfloat
+tags: [method private]
+```
+
+```Go
+func (r *importReader) mpfloat(typ *types.Basic) constant.Value
+```
+
+#### <a id="importReader.mpint" href="#importReader.mpint">func (r *importReader) mpint(x *big.Int, typ *types.Basic)</a>
+
+```
+searchKey: gcimporter.importReader.mpint
+tags: [method private]
+```
+
+```Go
+func (r *importReader) mpint(x *big.Int, typ *types.Basic)
+```
+
+#### <a id="importReader.obj" href="#importReader.obj">func (r *importReader) obj(name string)</a>
+
+```
+searchKey: gcimporter.importReader.obj
+tags: [method private]
+```
+
+```Go
+func (r *importReader) obj(name string)
+```
+
+#### <a id="importReader.param" href="#importReader.param">func (r *importReader) param() *types.Var</a>
+
+```
+searchKey: gcimporter.importReader.param
+tags: [function private]
+```
+
+```Go
+func (r *importReader) param() *types.Var
+```
+
+#### <a id="importReader.paramList" href="#importReader.paramList">func (r *importReader) paramList() *types.Tuple</a>
+
+```
+searchKey: gcimporter.importReader.paramList
+tags: [function private]
+```
+
+```Go
+func (r *importReader) paramList() *types.Tuple
+```
+
+#### <a id="importReader.pkg" href="#importReader.pkg">func (r *importReader) pkg() *types.Package</a>
+
+```
+searchKey: gcimporter.importReader.pkg
+tags: [function private]
+```
+
+```Go
+func (r *importReader) pkg() *types.Package
 ```
 
 #### <a id="importReader.pos" href="#importReader.pos">func (r *importReader) pos() token.Pos</a>
 
 ```
 searchKey: gcimporter.importReader.pos
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -592,7 +671,7 @@ func (r *importReader) pos() token.Pos
 
 ```
 searchKey: gcimporter.importReader.posv0
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -603,226 +682,137 @@ func (r *importReader) posv0()
 
 ```
 searchKey: gcimporter.importReader.posv1
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (r *importReader) posv1()
 ```
 
-#### <a id="importReader.typ" href="#importReader.typ">func (r *importReader) typ() types.Type</a>
+#### <a id="importReader.qualifiedIdent" href="#importReader.qualifiedIdent">func (r *importReader) qualifiedIdent() (*types.Package, string)</a>
 
 ```
-searchKey: gcimporter.importReader.typ
-tags: [private]
-```
-
-```Go
-func (r *importReader) typ() types.Type
-```
-
-#### <a id="importReader.pkg" href="#importReader.pkg">func (r *importReader) pkg() *types.Package</a>
-
-```
-searchKey: gcimporter.importReader.pkg
-tags: [private]
+searchKey: gcimporter.importReader.qualifiedIdent
+tags: [function private]
 ```
 
 ```Go
-func (r *importReader) pkg() *types.Package
-```
-
-#### <a id="importReader.string" href="#importReader.string">func (r *importReader) string() string</a>
-
-```
-searchKey: gcimporter.importReader.string
-tags: [private]
-```
-
-```Go
-func (r *importReader) string() string
-```
-
-#### <a id="importReader.doType" href="#importReader.doType">func (r *importReader) doType(base *types.Named) types.Type</a>
-
-```
-searchKey: gcimporter.importReader.doType
-tags: [private]
-```
-
-```Go
-func (r *importReader) doType(base *types.Named) types.Type
-```
-
-#### <a id="importReader.kind" href="#importReader.kind">func (r *importReader) kind() itag</a>
-
-```
-searchKey: gcimporter.importReader.kind
-tags: [private]
-```
-
-```Go
-func (r *importReader) kind() itag
+func (r *importReader) qualifiedIdent() (*types.Package, string)
 ```
 
 #### <a id="importReader.signature" href="#importReader.signature">func (r *importReader) signature(recv *types.Var) *types.Signature</a>
 
 ```
 searchKey: gcimporter.importReader.signature
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (r *importReader) signature(recv *types.Var) *types.Signature
 ```
 
-#### <a id="importReader.paramList" href="#importReader.paramList">func (r *importReader) paramList() *types.Tuple</a>
+#### <a id="importReader.string" href="#importReader.string">func (r *importReader) string() string</a>
 
 ```
-searchKey: gcimporter.importReader.paramList
-tags: [private]
-```
-
-```Go
-func (r *importReader) paramList() *types.Tuple
-```
-
-#### <a id="importReader.param" href="#importReader.param">func (r *importReader) param() *types.Var</a>
-
-```
-searchKey: gcimporter.importReader.param
-tags: [private]
+searchKey: gcimporter.importReader.string
+tags: [function private]
 ```
 
 ```Go
-func (r *importReader) param() *types.Var
+func (r *importReader) string() string
 ```
 
-#### <a id="importReader.bool" href="#importReader.bool">func (r *importReader) bool() bool</a>
+#### <a id="importReader.typ" href="#importReader.typ">func (r *importReader) typ() types.Type</a>
 
 ```
-searchKey: gcimporter.importReader.bool
-tags: [private]
-```
-
-```Go
-func (r *importReader) bool() bool
-```
-
-#### <a id="importReader.int64" href="#importReader.int64">func (r *importReader) int64() int64</a>
-
-```
-searchKey: gcimporter.importReader.int64
-tags: [private]
+searchKey: gcimporter.importReader.typ
+tags: [function private]
 ```
 
 ```Go
-func (r *importReader) int64() int64
+func (r *importReader) typ() types.Type
 ```
 
 #### <a id="importReader.uint64" href="#importReader.uint64">func (r *importReader) uint64() uint64</a>
 
 ```
 searchKey: gcimporter.importReader.uint64
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (r *importReader) uint64() uint64
 ```
 
-#### <a id="importReader.byte" href="#importReader.byte">func (r *importReader) byte() byte</a>
+#### <a id="importReader.value" href="#importReader.value">func (r *importReader) value() (typ types.Type, val constant.Value)</a>
 
 ```
-searchKey: gcimporter.importReader.byte
-tags: [private]
-```
-
-```Go
-func (r *importReader) byte() byte
-```
-
-### <a id="fakeFileSet" href="#fakeFileSet">type fakeFileSet struct</a>
-
-```
-searchKey: gcimporter.fakeFileSet
-tags: [private]
+searchKey: gcimporter.importReader.value
+tags: [function private]
 ```
 
 ```Go
-type fakeFileSet struct {
-	fset  *token.FileSet
-	files map[string]*token.File
+func (r *importReader) value() (typ types.Type, val constant.Value)
+```
+
+### <a id="intReader" href="#intReader">type intReader struct</a>
+
+```
+searchKey: gcimporter.intReader
+tags: [struct private]
+```
+
+```Go
+type intReader struct {
+	*bufio.Reader
+	path string
 }
 ```
 
-Synthesize a token.Pos 
-
-#### <a id="fakeFileSet.pos" href="#fakeFileSet.pos">func (s *fakeFileSet) pos(file string, line, column int) token.Pos</a>
+#### <a id="intReader.int64" href="#intReader.int64">func (r *intReader) int64() int64</a>
 
 ```
-searchKey: gcimporter.fakeFileSet.pos
-tags: [private]
+searchKey: gcimporter.intReader.int64
+tags: [function private]
 ```
 
 ```Go
-func (s *fakeFileSet) pos(file string, line, column int) token.Pos
+func (r *intReader) int64() int64
 ```
 
-### <a id="anyType" href="#anyType">type anyType struct{}</a>
+#### <a id="intReader.uint64" href="#intReader.uint64">func (r *intReader) uint64() uint64</a>
 
 ```
-searchKey: gcimporter.anyType
-tags: [private]
-```
-
-```Go
-type anyType struct{}
-```
-
-#### <a id="anyType.Underlying" href="#anyType.Underlying">func (t anyType) Underlying() types.Type</a>
-
-```
-searchKey: gcimporter.anyType.Underlying
-tags: [private]
+searchKey: gcimporter.intReader.uint64
+tags: [function private]
 ```
 
 ```Go
-func (t anyType) Underlying() types.Type
+func (r *intReader) uint64() uint64
 ```
 
-#### <a id="anyType.String" href="#anyType.String">func (t anyType) String() string</a>
+### <a id="itag" href="#itag">type itag uint64</a>
 
 ```
-searchKey: gcimporter.anyType.String
-tags: [private]
+searchKey: gcimporter.itag
+tags: [number private]
 ```
 
 ```Go
-func (t anyType) String() string
+type itag uint64
 ```
 
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
-```
-
-### <a id="readGopackHeader" href="#readGopackHeader">func readGopackHeader(r *bufio.Reader) (name string, size int, err error)</a>
-
-```
-searchKey: gcimporter.readGopackHeader
-tags: [private]
-```
-
-```Go
-func readGopackHeader(r *bufio.Reader) (name string, size int, err error)
+tags: [package private]
 ```
 
 ### <a id="FindExportData" href="#FindExportData">func FindExportData(r *bufio.Reader) (hdr string, err error)</a>
 
 ```
 searchKey: gcimporter.FindExportData
+tags: [method]
 ```
 
 ```Go
@@ -835,6 +825,7 @@ FindExportData positions the reader r at the beginning of the export data sectio
 
 ```
 searchKey: gcimporter.FindPkg
+tags: [method]
 ```
 
 ```Go
@@ -847,6 +838,7 @@ FindPkg returns the filename and unique package id for an import path based on p
 
 ```
 searchKey: gcimporter.Import
+tags: [method]
 ```
 
 ```Go
@@ -855,195 +847,11 @@ func Import(fset *token.FileSet, packages map[string]*types.Package, path, srcDi
 
 Import imports a gc-generated package given its import path and srcDir, adds the corresponding package object to the packages map, and returns the object. The packages map must contain all packages already imported. 
 
-### <a id="iImportData" href="#iImportData">func iImportData(fset *token.FileSet, imports map[string]*types.Package, dataReader *bufio.Reader, path string) (pkg *types.Package, err error)</a>
-
-```
-searchKey: gcimporter.iImportData
-tags: [private]
-```
-
-```Go
-func iImportData(fset *token.FileSet, imports map[string]*types.Package, dataReader *bufio.Reader, path string) (pkg *types.Package, err error)
-```
-
-iImportData imports a package from the serialized package data and returns the number of bytes consumed and a reference to the package. If the export data version is not recognized or the format is otherwise compromised, an error is returned. 
-
-### <a id="intSize" href="#intSize">func intSize(b *types.Basic) (signed bool, maxBytes uint)</a>
-
-```
-searchKey: gcimporter.intSize
-tags: [private]
-```
-
-```Go
-func intSize(b *types.Basic) (signed bool, maxBytes uint)
-```
-
-### <a id="isInterface" href="#isInterface">func isInterface(t types.Type) bool</a>
-
-```
-searchKey: gcimporter.isInterface
-tags: [private]
-```
-
-```Go
-func isInterface(t types.Type) bool
-```
-
-### <a id="errorf" href="#errorf">func errorf(format string, args ...interface{})</a>
-
-```
-searchKey: gcimporter.errorf
-tags: [private]
-```
-
-```Go
-func errorf(format string, args ...interface{})
-```
-
-### <a id="chanDir" href="#chanDir">func chanDir(d int) types.ChanDir</a>
-
-```
-searchKey: gcimporter.chanDir
-tags: [private]
-```
-
-```Go
-func chanDir(d int) types.ChanDir
-```
-
-### <a id="skipSpecialPlatforms" href="#skipSpecialPlatforms">func skipSpecialPlatforms(t *testing.T)</a>
-
-```
-searchKey: gcimporter.skipSpecialPlatforms
-tags: [private]
-```
-
-```Go
-func skipSpecialPlatforms(t *testing.T)
-```
-
-skipSpecialPlatforms causes the test to be skipped for platforms where builders (build.golang.org) don't have access to compiled packages for import. 
-
-### <a id="compile" href="#compile">func compile(t *testing.T, dirname, filename, outdirname string) string</a>
-
-```
-searchKey: gcimporter.compile
-tags: [private]
-```
-
-```Go
-func compile(t *testing.T, dirname, filename, outdirname string) string
-```
-
-compile runs the compiler on filename, with dirname as the working directory, and writes the output file to outdirname. 
-
-### <a id="testPath" href="#testPath">func testPath(t *testing.T, path, srcDir string) *types.Package</a>
-
-```
-searchKey: gcimporter.testPath
-tags: [private]
-```
-
-```Go
-func testPath(t *testing.T, path, srcDir string) *types.Package
-```
-
-### <a id="testDir" href="#testDir">func testDir(t *testing.T, dir string, endTime time.Time) (nimports int)</a>
-
-```
-searchKey: gcimporter.testDir
-tags: [private]
-```
-
-```Go
-func testDir(t *testing.T, dir string, endTime time.Time) (nimports int)
-```
-
-### <a id="mktmpdir" href="#mktmpdir">func mktmpdir(t *testing.T) string</a>
-
-```
-searchKey: gcimporter.mktmpdir
-tags: [private]
-```
-
-```Go
-func mktmpdir(t *testing.T) string
-```
-
-### <a id="TestImportTestdata" href="#TestImportTestdata">func TestImportTestdata(t *testing.T)</a>
-
-```
-searchKey: gcimporter.TestImportTestdata
-tags: [private]
-```
-
-```Go
-func TestImportTestdata(t *testing.T)
-```
-
-### <a id="TestVersionHandling" href="#TestVersionHandling">func TestVersionHandling(t *testing.T)</a>
-
-```
-searchKey: gcimporter.TestVersionHandling
-tags: [private]
-```
-
-```Go
-func TestVersionHandling(t *testing.T)
-```
-
-### <a id="TestImportStdLib" href="#TestImportStdLib">func TestImportStdLib(t *testing.T)</a>
-
-```
-searchKey: gcimporter.TestImportStdLib
-tags: [private]
-```
-
-```Go
-func TestImportStdLib(t *testing.T)
-```
-
-### <a id="TestImportedTypes" href="#TestImportedTypes">func TestImportedTypes(t *testing.T)</a>
-
-```
-searchKey: gcimporter.TestImportedTypes
-tags: [private]
-```
-
-```Go
-func TestImportedTypes(t *testing.T)
-```
-
-### <a id="verifyInterfaceMethodRecvs" href="#verifyInterfaceMethodRecvs">func verifyInterfaceMethodRecvs(t *testing.T, named *types.Named, level int)</a>
-
-```
-searchKey: gcimporter.verifyInterfaceMethodRecvs
-tags: [private]
-```
-
-```Go
-func verifyInterfaceMethodRecvs(t *testing.T, named *types.Named, level int)
-```
-
-verifyInterfaceMethodRecvs verifies that method receiver types are named if the methods belong to a named interface type. 
-
-### <a id="TestIssue5815" href="#TestIssue5815">func TestIssue5815(t *testing.T)</a>
-
-```
-searchKey: gcimporter.TestIssue5815
-tags: [private]
-```
-
-```Go
-func TestIssue5815(t *testing.T)
-```
-
 ### <a id="TestCorrectMethodPackage" href="#TestCorrectMethodPackage">func TestCorrectMethodPackage(t *testing.T)</a>
 
 ```
 searchKey: gcimporter.TestCorrectMethodPackage
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -1052,11 +860,44 @@ func TestCorrectMethodPackage(t *testing.T)
 
 Smoke test to ensure that imported methods get the correct package. 
 
+### <a id="TestImportStdLib" href="#TestImportStdLib">func TestImportStdLib(t *testing.T)</a>
+
+```
+searchKey: gcimporter.TestImportStdLib
+tags: [method private test]
+```
+
+```Go
+func TestImportStdLib(t *testing.T)
+```
+
+### <a id="TestImportTestdata" href="#TestImportTestdata">func TestImportTestdata(t *testing.T)</a>
+
+```
+searchKey: gcimporter.TestImportTestdata
+tags: [method private test]
+```
+
+```Go
+func TestImportTestdata(t *testing.T)
+```
+
+### <a id="TestImportedTypes" href="#TestImportedTypes">func TestImportedTypes(t *testing.T)</a>
+
+```
+searchKey: gcimporter.TestImportedTypes
+tags: [method private test]
+```
+
+```Go
+func TestImportedTypes(t *testing.T)
+```
+
 ### <a id="TestIssue13566" href="#TestIssue13566">func TestIssue13566(t *testing.T)</a>
 
 ```
 searchKey: gcimporter.TestIssue13566
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -1067,7 +908,7 @@ func TestIssue13566(t *testing.T)
 
 ```
 searchKey: gcimporter.TestIssue13898
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -1078,7 +919,7 @@ func TestIssue13898(t *testing.T)
 
 ```
 searchKey: gcimporter.TestIssue15517
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -1089,7 +930,7 @@ func TestIssue15517(t *testing.T)
 
 ```
 searchKey: gcimporter.TestIssue15920
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -1100,7 +941,7 @@ func TestIssue15920(t *testing.T)
 
 ```
 searchKey: gcimporter.TestIssue20046
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -1111,7 +952,7 @@ func TestIssue20046(t *testing.T)
 
 ```
 searchKey: gcimporter.TestIssue25301
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -1122,43 +963,205 @@ func TestIssue25301(t *testing.T)
 
 ```
 searchKey: gcimporter.TestIssue25596
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestIssue25596(t *testing.T)
 ```
 
-### <a id="importPkg" href="#importPkg">func importPkg(t *testing.T, path, srcDir string) *types.Package</a>
+### <a id="TestIssue5815" href="#TestIssue5815">func TestIssue5815(t *testing.T)</a>
 
 ```
-searchKey: gcimporter.importPkg
-tags: [private]
+searchKey: gcimporter.TestIssue5815
+tags: [method private test]
 ```
 
 ```Go
-func importPkg(t *testing.T, path, srcDir string) *types.Package
+func TestIssue5815(t *testing.T)
 ```
+
+### <a id="TestVersionHandling" href="#TestVersionHandling">func TestVersionHandling(t *testing.T)</a>
+
+```
+searchKey: gcimporter.TestVersionHandling
+tags: [method private test]
+```
+
+```Go
+func TestVersionHandling(t *testing.T)
+```
+
+### <a id="chanDir" href="#chanDir">func chanDir(d int) types.ChanDir</a>
+
+```
+searchKey: gcimporter.chanDir
+tags: [method private]
+```
+
+```Go
+func chanDir(d int) types.ChanDir
+```
+
+### <a id="compile" href="#compile">func compile(t *testing.T, dirname, filename, outdirname string) string</a>
+
+```
+searchKey: gcimporter.compile
+tags: [method private]
+```
+
+```Go
+func compile(t *testing.T, dirname, filename, outdirname string) string
+```
+
+compile runs the compiler on filename, with dirname as the working directory, and writes the output file to outdirname. 
 
 ### <a id="compileAndImportPkg" href="#compileAndImportPkg">func compileAndImportPkg(t *testing.T, name string) *types.Package</a>
 
 ```
 searchKey: gcimporter.compileAndImportPkg
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func compileAndImportPkg(t *testing.T, name string) *types.Package
 ```
 
+### <a id="errorf" href="#errorf">func errorf(format string, args ...interface{})</a>
+
+```
+searchKey: gcimporter.errorf
+tags: [method private]
+```
+
+```Go
+func errorf(format string, args ...interface{})
+```
+
+### <a id="iImportData" href="#iImportData">func iImportData(fset *token.FileSet, imports map[string]*types.Package, dataReader *bufio.Reader, path string) (pkg *types.Package, err error)</a>
+
+```
+searchKey: gcimporter.iImportData
+tags: [method private]
+```
+
+```Go
+func iImportData(fset *token.FileSet, imports map[string]*types.Package, dataReader *bufio.Reader, path string) (pkg *types.Package, err error)
+```
+
+iImportData imports a package from the serialized package data and returns the number of bytes consumed and a reference to the package. If the export data version is not recognized or the format is otherwise compromised, an error is returned. 
+
+### <a id="importPkg" href="#importPkg">func importPkg(t *testing.T, path, srcDir string) *types.Package</a>
+
+```
+searchKey: gcimporter.importPkg
+tags: [method private]
+```
+
+```Go
+func importPkg(t *testing.T, path, srcDir string) *types.Package
+```
+
+### <a id="intSize" href="#intSize">func intSize(b *types.Basic) (signed bool, maxBytes uint)</a>
+
+```
+searchKey: gcimporter.intSize
+tags: [method private]
+```
+
+```Go
+func intSize(b *types.Basic) (signed bool, maxBytes uint)
+```
+
+### <a id="isInterface" href="#isInterface">func isInterface(t types.Type) bool</a>
+
+```
+searchKey: gcimporter.isInterface
+tags: [method private]
+```
+
+```Go
+func isInterface(t types.Type) bool
+```
+
 ### <a id="lookupObj" href="#lookupObj">func lookupObj(t *testing.T, scope *types.Scope, name string) types.Object</a>
 
 ```
 searchKey: gcimporter.lookupObj
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func lookupObj(t *testing.T, scope *types.Scope, name string) types.Object
 ```
+
+### <a id="mktmpdir" href="#mktmpdir">func mktmpdir(t *testing.T) string</a>
+
+```
+searchKey: gcimporter.mktmpdir
+tags: [method private]
+```
+
+```Go
+func mktmpdir(t *testing.T) string
+```
+
+### <a id="readGopackHeader" href="#readGopackHeader">func readGopackHeader(r *bufio.Reader) (name string, size int, err error)</a>
+
+```
+searchKey: gcimporter.readGopackHeader
+tags: [method private]
+```
+
+```Go
+func readGopackHeader(r *bufio.Reader) (name string, size int, err error)
+```
+
+### <a id="skipSpecialPlatforms" href="#skipSpecialPlatforms">func skipSpecialPlatforms(t *testing.T)</a>
+
+```
+searchKey: gcimporter.skipSpecialPlatforms
+tags: [method private]
+```
+
+```Go
+func skipSpecialPlatforms(t *testing.T)
+```
+
+skipSpecialPlatforms causes the test to be skipped for platforms where builders (build.golang.org) don't have access to compiled packages for import. 
+
+### <a id="testDir" href="#testDir">func testDir(t *testing.T, dir string, endTime time.Time) (nimports int)</a>
+
+```
+searchKey: gcimporter.testDir
+tags: [method private]
+```
+
+```Go
+func testDir(t *testing.T, dir string, endTime time.Time) (nimports int)
+```
+
+### <a id="testPath" href="#testPath">func testPath(t *testing.T, path, srcDir string) *types.Package</a>
+
+```
+searchKey: gcimporter.testPath
+tags: [method private]
+```
+
+```Go
+func testPath(t *testing.T, path, srcDir string) *types.Package
+```
+
+### <a id="verifyInterfaceMethodRecvs" href="#verifyInterfaceMethodRecvs">func verifyInterfaceMethodRecvs(t *testing.T, named *types.Named, level int)</a>
+
+```
+searchKey: gcimporter.verifyInterfaceMethodRecvs
+tags: [method private]
+```
+
+```Go
+func verifyInterfaceMethodRecvs(t *testing.T, named *types.Named, level int)
+```
+
+verifyInterfaceMethodRecvs verifies that method receiver types are named if the methods belong to a named interface type. 
 

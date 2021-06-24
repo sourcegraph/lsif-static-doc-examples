@@ -11,14 +11,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="ExampleAbs" href="#ExampleAbs">func ExampleAbs()</a>
 
 ```
 searchKey: cmplx_test.ExampleAbs
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -29,7 +29,7 @@ func ExampleAbs()
 
 ```
 searchKey: cmplx_test.ExampleExp
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -42,7 +42,7 @@ ExampleExp computes Euler's identity.
 
 ```
 searchKey: cmplx_test.ExamplePolar
-tags: [private]
+tags: [function private]
 ```
 
 ```Go

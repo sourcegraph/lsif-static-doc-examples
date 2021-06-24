@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/unsafeheader_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/unsafeheader_test#unsafePointerType",
-              "documentation": {
-                "identifier": "unsafePointerType",
-                "newPage": false,
-                "searchKey": "unsafeheader_test.unsafePointerType",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var unsafePointerType"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar unsafePointerType = reflect.TypeOf(unsafe.Pointer(nil))\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/unsafeheader_test#uintptrType",
               "documentation": {
                 "identifier": "uintptrType",
                 "newPage": false,
                 "searchKey": "unsafeheader_test.uintptrType",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -77,6 +59,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar uintptrType = reflect.TypeOf(uintptr(0))\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/unsafeheader_test#unsafePointerType",
+              "documentation": {
+                "identifier": "unsafePointerType",
+                "newPage": false,
+                "searchKey": "unsafeheader_test.unsafePointerType",
+                "tags": [
+                  "variable",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var unsafePointerType"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar unsafePointerType = reflect.TypeOf(unsafe.Pointer(nil))\n```\n\n"
               },
               "children": null
             }
@@ -92,6 +98,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -112,7 +119,9 @@
                 "newPage": false,
                 "searchKey": "unsafeheader_test.TestTypeMatchesReflectType",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -128,12 +137,37 @@
           },
           {
             "node": {
+              "pathID": "/internal/unsafeheader_test#TestWriteThroughHeader",
+              "documentation": {
+                "identifier": "TestWriteThroughHeader",
+                "newPage": false,
+                "searchKey": "unsafeheader_test.TestWriteThroughHeader",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteThroughHeader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteThroughHeader(t *testing.T)\n```\n\nTestWriteThroughHeader ensures that the headers in the unsafeheader package can successfully mutate variables of the corresponding built-in types. \n\nThis test is expected to fail under -race (which implicitly enables -d=checkptr) if the runtime views the header types as incompatible with the underlying built-in types. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/unsafeheader_test#testHeaderMatchesReflect",
               "documentation": {
                 "identifier": "testHeaderMatchesReflect",
                 "newPage": false,
                 "searchKey": "unsafeheader_test.testHeaderMatchesReflect",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -156,6 +190,7 @@
                 "newPage": false,
                 "searchKey": "unsafeheader_test.typeCompatible",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -166,28 +201,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc typeCompatible(t, rt reflect.Type) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/unsafeheader_test#TestWriteThroughHeader",
-              "documentation": {
-                "identifier": "TestWriteThroughHeader",
-                "newPage": false,
-                "searchKey": "unsafeheader_test.TestWriteThroughHeader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestWriteThroughHeader(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestWriteThroughHeader(t *testing.T)\n```\n\nTestWriteThroughHeader ensures that the headers in the unsafeheader package can successfully mutate variables of the corresponding built-in types. \n\nThis test is expected to fail under -race (which implicitly enables -d=checkptr) if the runtime views the header types as incompatible with the underlying built-in types. \n\n"
               },
               "children": null
             }

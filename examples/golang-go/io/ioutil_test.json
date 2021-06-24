@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "io/ioutil_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "ioutil_test.patternHasSeparator",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -90,6 +95,7 @@
                 "newPage": false,
                 "searchKey": "ioutil_test.ExampleReadAll",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -112,6 +118,7 @@
                 "newPage": false,
                 "searchKey": "ioutil_test.ExampleReadDir",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -128,12 +135,36 @@
           },
           {
             "node": {
+              "pathID": "/io/ioutil_test#ExampleReadFile",
+              "documentation": {
+                "identifier": "ExampleReadFile",
+                "newPage": false,
+                "searchKey": "ioutil_test.ExampleReadFile",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleReadFile()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleReadFile()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/io/ioutil_test#ExampleTempDir",
               "documentation": {
                 "identifier": "ExampleTempDir",
                 "newPage": false,
                 "searchKey": "ioutil_test.ExampleTempDir",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -156,6 +187,7 @@
                 "newPage": false,
                 "searchKey": "ioutil_test.ExampleTempDir_suffix",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -178,6 +210,7 @@
                 "newPage": false,
                 "searchKey": "ioutil_test.ExampleTempFile",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -200,6 +233,7 @@
                 "newPage": false,
                 "searchKey": "ioutil_test.ExampleTempFile_suffix",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -216,34 +250,13 @@
           },
           {
             "node": {
-              "pathID": "/io/ioutil_test#ExampleReadFile",
-              "documentation": {
-                "identifier": "ExampleReadFile",
-                "newPage": false,
-                "searchKey": "ioutil_test.ExampleReadFile",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleReadFile()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleReadFile()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/io/ioutil_test#ExampleWriteFile",
               "documentation": {
                 "identifier": "ExampleWriteFile",
                 "newPage": false,
                 "searchKey": "ioutil_test.ExampleWriteFile",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -260,101 +273,15 @@
           },
           {
             "node": {
-              "pathID": "/io/ioutil_test#checkSize",
-              "documentation": {
-                "identifier": "checkSize",
-                "newPage": false,
-                "searchKey": "ioutil_test.checkSize",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func checkSize(t *testing.T, path string, size int64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc checkSize(t *testing.T, path string, size int64)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/ioutil_test#TestReadFile",
-              "documentation": {
-                "identifier": "TestReadFile",
-                "newPage": false,
-                "searchKey": "ioutil_test.TestReadFile",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReadFile(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReadFile(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/ioutil_test#TestWriteFile",
-              "documentation": {
-                "identifier": "TestWriteFile",
-                "newPage": false,
-                "searchKey": "ioutil_test.TestWriteFile",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestWriteFile(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestWriteFile(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/ioutil_test#TestReadOnlyWriteFile",
-              "documentation": {
-                "identifier": "TestReadOnlyWriteFile",
-                "newPage": false,
-                "searchKey": "ioutil_test.TestReadOnlyWriteFile",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReadOnlyWriteFile(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReadOnlyWriteFile(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/io/ioutil_test#TestReadDir",
               "documentation": {
                 "identifier": "TestReadDir",
                 "newPage": false,
                 "searchKey": "ioutil_test.TestReadDir",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -370,66 +297,48 @@
           },
           {
             "node": {
-              "pathID": "/io/ioutil_test#TestTempFile",
+              "pathID": "/io/ioutil_test#TestReadFile",
               "documentation": {
-                "identifier": "TestTempFile",
+                "identifier": "TestReadFile",
                 "newPage": false,
-                "searchKey": "ioutil_test.TestTempFile",
+                "searchKey": "ioutil_test.TestReadFile",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestTempFile(t *testing.T)"
+                "value": "func TestReadFile(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestTempFile(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestReadFile(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/io/ioutil_test#TestTempFile_pattern",
+              "pathID": "/io/ioutil_test#TestReadOnlyWriteFile",
               "documentation": {
-                "identifier": "TestTempFile_pattern",
+                "identifier": "TestReadOnlyWriteFile",
                 "newPage": false,
-                "searchKey": "ioutil_test.TestTempFile_pattern",
+                "searchKey": "ioutil_test.TestReadOnlyWriteFile",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestTempFile_pattern(t *testing.T)"
+                "value": "func TestReadOnlyWriteFile(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestTempFile_pattern(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/ioutil_test#TestTempFile_BadPattern",
-              "documentation": {
-                "identifier": "TestTempFile_BadPattern",
-                "newPage": false,
-                "searchKey": "ioutil_test.TestTempFile_BadPattern",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTempFile_BadPattern(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTempFile_BadPattern(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestReadOnlyWriteFile(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -442,7 +351,9 @@
                 "newPage": false,
                 "searchKey": "ioutil_test.TestTempDir",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -464,7 +375,9 @@
                 "newPage": false,
                 "searchKey": "ioutil_test.TestTempDir_BadDir",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -486,7 +399,9 @@
                 "newPage": false,
                 "searchKey": "ioutil_test.TestTempDir_BadPattern",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -496,6 +411,125 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc TestTempDir_BadPattern(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/ioutil_test#TestTempFile",
+              "documentation": {
+                "identifier": "TestTempFile",
+                "newPage": false,
+                "searchKey": "ioutil_test.TestTempFile",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTempFile(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTempFile(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/ioutil_test#TestTempFile_BadPattern",
+              "documentation": {
+                "identifier": "TestTempFile_BadPattern",
+                "newPage": false,
+                "searchKey": "ioutil_test.TestTempFile_BadPattern",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTempFile_BadPattern(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTempFile_BadPattern(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/ioutil_test#TestTempFile_pattern",
+              "documentation": {
+                "identifier": "TestTempFile_pattern",
+                "newPage": false,
+                "searchKey": "ioutil_test.TestTempFile_pattern",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTempFile_pattern(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTempFile_pattern(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/ioutil_test#TestWriteFile",
+              "documentation": {
+                "identifier": "TestWriteFile",
+                "newPage": false,
+                "searchKey": "ioutil_test.TestWriteFile",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteFile(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteFile(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/ioutil_test#checkSize",
+              "documentation": {
+                "identifier": "checkSize",
+                "newPage": false,
+                "searchKey": "ioutil_test.checkSize",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkSize(t *testing.T, path string, size int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkSize(t *testing.T, path string, size int64)\n```\n\n"
               },
               "children": null
             }

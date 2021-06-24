@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,7 @@
                 "newPage": false,
                 "searchKey": "mux_test.authenticationMiddleware",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -59,34 +62,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/mux_test#authenticationMiddleware.Populate",
-                    "documentation": {
-                      "identifier": "authenticationMiddleware.Populate",
-                      "newPage": false,
-                      "searchKey": "mux_test.authenticationMiddleware.Populate",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (amw *authenticationMiddleware) Populate()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (amw *authenticationMiddleware) Populate()\n```\n\nInitialize it somewhere \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/mux_test#authenticationMiddleware.Middleware",
                     "documentation": {
                       "identifier": "authenticationMiddleware.Middleware",
                       "newPage": false,
                       "searchKey": "mux_test.authenticationMiddleware.Middleware",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -97,6 +79,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (amw *authenticationMiddleware) Middleware(next http.Handler) http.Handler\n```\n\nMiddleware function, which will be called for each request \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/mux_test#authenticationMiddleware.Populate",
+                    "documentation": {
+                      "identifier": "authenticationMiddleware.Populate",
+                      "newPage": false,
+                      "searchKey": "mux_test.authenticationMiddleware.Populate",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (amw *authenticationMiddleware) Populate()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (amw *authenticationMiddleware) Populate()\n```\n\nInitialize it somewhere \n\n"
                     },
                     "children": null
                   }
@@ -115,6 +120,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -129,34 +135,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/mux_test#Example_authenticationMiddleware",
-              "documentation": {
-                "identifier": "Example_authenticationMiddleware",
-                "newPage": false,
-                "searchKey": "mux_test.Example_authenticationMiddleware",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Example_authenticationMiddleware()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Example_authenticationMiddleware()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/mux_test#ExampleCORSMethodMiddleware",
               "documentation": {
                 "identifier": "ExampleCORSMethodMiddleware",
                 "newPage": false,
                 "searchKey": "mux_test.ExampleCORSMethodMiddleware",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -179,6 +164,7 @@
                 "newPage": false,
                 "searchKey": "mux_test.ExampleRoute_HeadersRegexp",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -201,6 +187,7 @@
                 "newPage": false,
                 "searchKey": "mux_test.ExampleRoute_HeadersRegexp_exactMatch",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -211,6 +198,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc ExampleRoute_HeadersRegexp_exactMatch()\n```\n\nThis example demonstrates setting a strict regular expression matcher for the header value. Using the start and end of string anchors, the value must be an exact match. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mux_test#Example_authenticationMiddleware",
+              "documentation": {
+                "identifier": "Example_authenticationMiddleware",
+                "newPage": false,
+                "searchKey": "mux_test.Example_authenticationMiddleware",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_authenticationMiddleware()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_authenticationMiddleware()\n```\n\n"
               },
               "children": null
             }

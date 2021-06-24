@@ -4,7 +4,9 @@
     "identifier": "gzip",
     "newPage": true,
     "searchKey": "compress/gzip",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,12 +39,273 @@
         "children": [
           {
             "node": {
+              "pathID": "/compress/gzip#BestCompression",
+              "documentation": {
+                "identifier": "BestCompression",
+                "newPage": false,
+                "searchKey": "gzip.BestCompression",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const BestCompression"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst BestCompression = flate.BestCompression\n```\n\nThese constants are copied from the flate package, so that code that imports \"compress/gzip\" does not also have to import \"compress/flate\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/compress/gzip#BestSpeed",
+              "documentation": {
+                "identifier": "BestSpeed",
+                "newPage": false,
+                "searchKey": "gzip.BestSpeed",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const BestSpeed"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst BestSpeed = flate.BestSpeed\n```\n\nThese constants are copied from the flate package, so that code that imports \"compress/gzip\" does not also have to import \"compress/flate\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/compress/gzip#DefaultCompression",
+              "documentation": {
+                "identifier": "DefaultCompression",
+                "newPage": false,
+                "searchKey": "gzip.DefaultCompression",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const DefaultCompression"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst DefaultCompression = flate.DefaultCompression\n```\n\nThese constants are copied from the flate package, so that code that imports \"compress/gzip\" does not also have to import \"compress/flate\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/compress/gzip#HuffmanOnly",
+              "documentation": {
+                "identifier": "HuffmanOnly",
+                "newPage": false,
+                "searchKey": "gzip.HuffmanOnly",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const HuffmanOnly"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst HuffmanOnly = flate.HuffmanOnly\n```\n\nThese constants are copied from the flate package, so that code that imports \"compress/gzip\" does not also have to import \"compress/flate\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/compress/gzip#NoCompression",
+              "documentation": {
+                "identifier": "NoCompression",
+                "newPage": false,
+                "searchKey": "gzip.NoCompression",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const NoCompression"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst NoCompression = flate.NoCompression\n```\n\nThese constants are copied from the flate package, so that code that imports \"compress/gzip\" does not also have to import \"compress/flate\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/compress/gzip#flagComment",
+              "documentation": {
+                "identifier": "flagComment",
+                "newPage": false,
+                "searchKey": "gzip.flagComment",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const flagComment"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst flagComment = 1 << 4\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/compress/gzip#flagExtra",
+              "documentation": {
+                "identifier": "flagExtra",
+                "newPage": false,
+                "searchKey": "gzip.flagExtra",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const flagExtra"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst flagExtra = 1 << 2\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/compress/gzip#flagHdrCrc",
+              "documentation": {
+                "identifier": "flagHdrCrc",
+                "newPage": false,
+                "searchKey": "gzip.flagHdrCrc",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const flagHdrCrc"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst flagHdrCrc = 1 << 1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/compress/gzip#flagName",
+              "documentation": {
+                "identifier": "flagName",
+                "newPage": false,
+                "searchKey": "gzip.flagName",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const flagName"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst flagName = 1 << 3\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/compress/gzip#flagText",
+              "documentation": {
+                "identifier": "flagText",
+                "newPage": false,
+                "searchKey": "gzip.flagText",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const flagText"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst flagText = 1 << 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/compress/gzip#gzipDeflate",
+              "documentation": {
+                "identifier": "gzipDeflate",
+                "newPage": false,
+                "searchKey": "gzip.gzipDeflate",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const gzipDeflate"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst gzipDeflate = 8\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/compress/gzip#gzipID1",
               "documentation": {
                 "identifier": "gzipID1",
                 "newPage": false,
                 "searchKey": "gzip.gzipID1",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -63,6 +328,8 @@
                 "newPage": false,
                 "searchKey": "gzip.gzipID2",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -73,238 +340,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst gzipID2 = 0x8b\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/compress/gzip#gzipDeflate",
-              "documentation": {
-                "identifier": "gzipDeflate",
-                "newPage": false,
-                "searchKey": "gzip.gzipDeflate",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const gzipDeflate"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst gzipDeflate = 8\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/compress/gzip#flagText",
-              "documentation": {
-                "identifier": "flagText",
-                "newPage": false,
-                "searchKey": "gzip.flagText",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const flagText"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst flagText = 1 << 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/compress/gzip#flagHdrCrc",
-              "documentation": {
-                "identifier": "flagHdrCrc",
-                "newPage": false,
-                "searchKey": "gzip.flagHdrCrc",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const flagHdrCrc"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst flagHdrCrc = 1 << 1\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/compress/gzip#flagExtra",
-              "documentation": {
-                "identifier": "flagExtra",
-                "newPage": false,
-                "searchKey": "gzip.flagExtra",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const flagExtra"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst flagExtra = 1 << 2\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/compress/gzip#flagName",
-              "documentation": {
-                "identifier": "flagName",
-                "newPage": false,
-                "searchKey": "gzip.flagName",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const flagName"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst flagName = 1 << 3\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/compress/gzip#flagComment",
-              "documentation": {
-                "identifier": "flagComment",
-                "newPage": false,
-                "searchKey": "gzip.flagComment",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const flagComment"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst flagComment = 1 << 4\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/compress/gzip#NoCompression",
-              "documentation": {
-                "identifier": "NoCompression",
-                "newPage": false,
-                "searchKey": "gzip.NoCompression",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const NoCompression"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst NoCompression = flate.NoCompression\n```\n\nThese constants are copied from the flate package, so that code that imports \"compress/gzip\" does not also have to import \"compress/flate\". \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/compress/gzip#BestSpeed",
-              "documentation": {
-                "identifier": "BestSpeed",
-                "newPage": false,
-                "searchKey": "gzip.BestSpeed",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const BestSpeed"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst BestSpeed = flate.BestSpeed\n```\n\nThese constants are copied from the flate package, so that code that imports \"compress/gzip\" does not also have to import \"compress/flate\". \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/compress/gzip#BestCompression",
-              "documentation": {
-                "identifier": "BestCompression",
-                "newPage": false,
-                "searchKey": "gzip.BestCompression",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const BestCompression"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst BestCompression = flate.BestCompression\n```\n\nThese constants are copied from the flate package, so that code that imports \"compress/gzip\" does not also have to import \"compress/flate\". \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/compress/gzip#DefaultCompression",
-              "documentation": {
-                "identifier": "DefaultCompression",
-                "newPage": false,
-                "searchKey": "gzip.DefaultCompression",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const DefaultCompression"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst DefaultCompression = flate.DefaultCompression\n```\n\nThese constants are copied from the flate package, so that code that imports \"compress/gzip\" does not also have to import \"compress/flate\". \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/compress/gzip#HuffmanOnly",
-              "documentation": {
-                "identifier": "HuffmanOnly",
-                "newPage": false,
-                "searchKey": "gzip.HuffmanOnly",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const HuffmanOnly"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst HuffmanOnly = flate.HuffmanOnly\n```\n\nThese constants are copied from the flate package, so that code that imports \"compress/gzip\" does not also have to import \"compress/flate\". \n\n"
               },
               "children": null
             }
@@ -319,7 +354,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -337,7 +374,10 @@
                 "identifier": "ErrChecksum",
                 "newPage": false,
                 "searchKey": "gzip.ErrChecksum",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -357,7 +397,10 @@
                 "identifier": "ErrHeader",
                 "newPage": false,
                 "searchKey": "gzip.ErrHeader",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -372,34 +415,15 @@
           },
           {
             "node": {
-              "pathID": "/compress/gzip#le",
-              "documentation": {
-                "identifier": "le",
-                "newPage": false,
-                "searchKey": "gzip.le",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var le"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar le = binary.LittleEndian\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/compress/gzip#gunzipTests",
               "documentation": {
                 "identifier": "gunzipTests",
                 "newPage": false,
                 "searchKey": "gzip.gunzipTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -410,6 +434,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar gunzipTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/compress/gzip#le",
+              "documentation": {
+                "identifier": "le",
+                "newPage": false,
+                "searchKey": "gzip.le",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var le"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar le = binary.LittleEndian\n```\n\n"
               },
               "children": null
             }
@@ -424,7 +472,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -442,7 +492,9 @@
                 "identifier": "Header",
                 "newPage": false,
                 "searchKey": "gzip.Header",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -462,7 +514,9 @@
                 "identifier": "Reader",
                 "newPage": false,
                 "searchKey": "gzip.Reader",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -480,7 +534,9 @@
                       "identifier": "NewReader",
                       "newPage": false,
                       "searchKey": "gzip.NewReader",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -495,20 +551,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/compress/gzip#Reader.Reset",
+                    "pathID": "/compress/gzip#Reader.Close",
                     "documentation": {
-                      "identifier": "Reader.Reset",
+                      "identifier": "Reader.Close",
                       "newPage": false,
-                      "searchKey": "gzip.Reader.Reset",
-                      "tags": null
+                      "searchKey": "gzip.Reader.Close",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (z *Reader) Reset(r io.Reader) error"
+                      "value": "func (z *Reader) Close() error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (z *Reader) Reset(r io.Reader) error\n```\n\nReset discards the Reader z's state and makes it equivalent to the result of its original state from NewReader, but reading from r instead. This permits reusing a Reader rather than allocating a new one. \n\n"
+                      "value": "```Go\nfunc (z *Reader) Close() error\n```\n\nClose closes the Reader. It does not close the underlying io.Reader. In order for the GZIP checksum to be verified, the reader must be fully consumed until the io.EOF. \n\n"
                     },
                     "children": null
                   }
@@ -520,7 +578,9 @@
                       "identifier": "Reader.Multistream",
                       "newPage": false,
                       "searchKey": "gzip.Reader.Multistream",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -535,22 +595,44 @@
                 },
                 {
                   "node": {
-                    "pathID": "/compress/gzip#Reader.readString",
+                    "pathID": "/compress/gzip#Reader.Read",
                     "documentation": {
-                      "identifier": "Reader.readString",
+                      "identifier": "Reader.Read",
                       "newPage": false,
-                      "searchKey": "gzip.Reader.readString",
+                      "searchKey": "gzip.Reader.Read",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (z *Reader) readString() (string, error)"
+                      "value": "func (z *Reader) Read(p []byte) (n int, err error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (z *Reader) readString() (string, error)\n```\n\nreadString reads a NUL-terminated string from z.r. It treats the bytes read as being encoded as ISO 8859-1 (Latin-1) and will output a string encoded using UTF-8. This method always updates z.digest with the data read. \n\n"
+                      "value": "```Go\nfunc (z *Reader) Read(p []byte) (n int, err error)\n```\n\nRead implements io.Reader, reading uncompressed bytes from its underlying Reader. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/compress/gzip#Reader.Reset",
+                    "documentation": {
+                      "identifier": "Reader.Reset",
+                      "newPage": false,
+                      "searchKey": "gzip.Reader.Reset",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (z *Reader) Reset(r io.Reader) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (z *Reader) Reset(r io.Reader) error\n```\n\nReset discards the Reader z's state and makes it equivalent to the result of its original state from NewReader, but reading from r instead. This permits reusing a Reader rather than allocating a new one. \n\n"
                     },
                     "children": null
                   }
@@ -563,6 +645,7 @@
                       "newPage": false,
                       "searchKey": "gzip.Reader.readHeader",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -579,40 +662,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/compress/gzip#Reader.Read",
+                    "pathID": "/compress/gzip#Reader.readString",
                     "documentation": {
-                      "identifier": "Reader.Read",
+                      "identifier": "Reader.readString",
                       "newPage": false,
-                      "searchKey": "gzip.Reader.Read",
-                      "tags": null
+                      "searchKey": "gzip.Reader.readString",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (z *Reader) Read(p []byte) (n int, err error)"
+                      "value": "func (z *Reader) readString() (string, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (z *Reader) Read(p []byte) (n int, err error)\n```\n\nRead implements io.Reader, reading uncompressed bytes from its underlying Reader. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/compress/gzip#Reader.Close",
-                    "documentation": {
-                      "identifier": "Reader.Close",
-                      "newPage": false,
-                      "searchKey": "gzip.Reader.Close",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (z *Reader) Close() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (z *Reader) Close() error\n```\n\nClose closes the Reader. It does not close the underlying io.Reader. In order for the GZIP checksum to be verified, the reader must be fully consumed until the io.EOF. \n\n"
+                      "value": "```Go\nfunc (z *Reader) readString() (string, error)\n```\n\nreadString reads a NUL-terminated string from z.r. It treats the bytes read as being encoded as ISO 8859-1 (Latin-1) and will output a string encoded using UTF-8. This method always updates z.digest with the data read. \n\n"
                     },
                     "children": null
                   }
@@ -627,7 +693,9 @@
                 "identifier": "Writer",
                 "newPage": false,
                 "searchKey": "gzip.Writer",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -645,7 +713,9 @@
                       "identifier": "NewWriter",
                       "newPage": false,
                       "searchKey": "gzip.NewWriter",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -665,7 +735,9 @@
                       "identifier": "NewWriterLevel",
                       "newPage": false,
                       "searchKey": "gzip.NewWriterLevel",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -680,12 +752,101 @@
                 },
                 {
                   "node": {
+                    "pathID": "/compress/gzip#Writer.Close",
+                    "documentation": {
+                      "identifier": "Writer.Close",
+                      "newPage": false,
+                      "searchKey": "gzip.Writer.Close",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (z *Writer) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (z *Writer) Close() error\n```\n\nClose closes the Writer by flushing any unwritten data to the underlying io.Writer and writing the GZIP footer. It does not close the underlying io.Writer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/compress/gzip#Writer.Flush",
+                    "documentation": {
+                      "identifier": "Writer.Flush",
+                      "newPage": false,
+                      "searchKey": "gzip.Writer.Flush",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (z *Writer) Flush() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (z *Writer) Flush() error\n```\n\nFlush flushes any pending compressed data to the underlying writer. \n\nIt is useful mainly in compressed network protocols, to ensure that a remote reader has enough data to reconstruct a packet. Flush does not return until the data has been written. If the underlying writer returns an error, Flush returns that error. \n\nIn the terminology of the zlib library, Flush is equivalent to Z_SYNC_FLUSH. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/compress/gzip#Writer.Reset",
+                    "documentation": {
+                      "identifier": "Writer.Reset",
+                      "newPage": false,
+                      "searchKey": "gzip.Writer.Reset",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (z *Writer) Reset(w io.Writer)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (z *Writer) Reset(w io.Writer)\n```\n\nReset discards the Writer z's state and makes it equivalent to the result of its original state from NewWriter or NewWriterLevel, but writing to w instead. This permits reusing a Writer rather than allocating a new one. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/compress/gzip#Writer.Write",
+                    "documentation": {
+                      "identifier": "Writer.Write",
+                      "newPage": false,
+                      "searchKey": "gzip.Writer.Write",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (z *Writer) Write(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (z *Writer) Write(p []byte) (int, error)\n```\n\nWrite writes a compressed form of p to the underlying io.Writer. The compressed bytes are not necessarily flushed until the Writer is closed. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/compress/gzip#Writer.init.gzip.go",
                     "documentation": {
                       "identifier": "Writer.init.gzip.go",
                       "newPage": false,
                       "searchKey": "gzip.Writer.init",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -702,32 +863,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/compress/gzip#Writer.Reset",
-                    "documentation": {
-                      "identifier": "Writer.Reset",
-                      "newPage": false,
-                      "searchKey": "gzip.Writer.Reset",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (z *Writer) Reset(w io.Writer)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (z *Writer) Reset(w io.Writer)\n```\n\nReset discards the Writer z's state and makes it equivalent to the result of its original state from NewWriter or NewWriterLevel, but writing to w instead. This permits reusing a Writer rather than allocating a new one. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/compress/gzip#Writer.writeBytes",
                     "documentation": {
                       "identifier": "Writer.writeBytes",
                       "newPage": false,
                       "searchKey": "gzip.Writer.writeBytes",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -750,6 +892,7 @@
                       "newPage": false,
                       "searchKey": "gzip.Writer.writeString",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -760,66 +903,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (z *Writer) writeString(s string) (err error)\n```\n\nwriteString writes a UTF-8 string s in GZIP's format to z.w. GZIP (RFC 1952) specifies that strings are NUL-terminated ISO 8859-1 (Latin-1). \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/compress/gzip#Writer.Write",
-                    "documentation": {
-                      "identifier": "Writer.Write",
-                      "newPage": false,
-                      "searchKey": "gzip.Writer.Write",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (z *Writer) Write(p []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (z *Writer) Write(p []byte) (int, error)\n```\n\nWrite writes a compressed form of p to the underlying io.Writer. The compressed bytes are not necessarily flushed until the Writer is closed. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/compress/gzip#Writer.Flush",
-                    "documentation": {
-                      "identifier": "Writer.Flush",
-                      "newPage": false,
-                      "searchKey": "gzip.Writer.Flush",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (z *Writer) Flush() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (z *Writer) Flush() error\n```\n\nFlush flushes any pending compressed data to the underlying writer. \n\nIt is useful mainly in compressed network protocols, to ensure that a remote reader has enough data to reconstruct a packet. Flush does not return until the data has been written. If the underlying writer returns an error, Flush returns that error. \n\nIn the terminology of the zlib library, Flush is equivalent to Z_SYNC_FLUSH. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/compress/gzip#Writer.Close",
-                    "documentation": {
-                      "identifier": "Writer.Close",
-                      "newPage": false,
-                      "searchKey": "gzip.Writer.Close",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (z *Writer) Close() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (z *Writer) Close() error\n```\n\nClose closes the Writer by flushing any unwritten data to the underlying io.Writer and writing the GZIP footer. It does not close the underlying io.Writer. \n\n"
                     },
                     "children": null
                   }
@@ -835,6 +918,7 @@
                 "newPage": false,
                 "searchKey": "gzip.gunzipTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -857,6 +941,7 @@
                 "newPage": false,
                 "searchKey": "gzip.limitedWriter",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -877,6 +962,7 @@
                       "newPage": false,
                       "searchKey": "gzip.limitedWriter.Write",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -904,7 +990,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -917,22 +1005,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/compress/gzip#noEOF",
+              "pathID": "/compress/gzip#TestConcat",
               "documentation": {
-                "identifier": "noEOF",
+                "identifier": "TestConcat",
                 "newPage": false,
-                "searchKey": "gzip.noEOF",
+                "searchKey": "gzip.TestConcat",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func noEOF(err error) error"
+                "value": "func TestConcat(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc noEOF(err error) error\n```\n\nnoEOF converts io.EOF to io.ErrUnexpectedEOF. \n\n"
+                "value": "```Go\nfunc TestConcat(t *testing.T)\n```\n\nMultiple gzip files concatenated form a valid gzip file. \n\n"
               },
               "children": null
             }
@@ -945,7 +1035,9 @@
                 "newPage": false,
                 "searchKey": "gzip.TestDecompressor",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -961,101 +1053,15 @@
           },
           {
             "node": {
-              "pathID": "/compress/gzip#TestIssue6550",
-              "documentation": {
-                "identifier": "TestIssue6550",
-                "newPage": false,
-                "searchKey": "gzip.TestIssue6550",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIssue6550(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIssue6550(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/compress/gzip#TestMultistreamFalse",
-              "documentation": {
-                "identifier": "TestMultistreamFalse",
-                "newPage": false,
-                "searchKey": "gzip.TestMultistreamFalse",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMultistreamFalse(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMultistreamFalse(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/compress/gzip#TestNilStream",
-              "documentation": {
-                "identifier": "TestNilStream",
-                "newPage": false,
-                "searchKey": "gzip.TestNilStream",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestNilStream(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestNilStream(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/compress/gzip#TestTruncatedStreams",
-              "documentation": {
-                "identifier": "TestTruncatedStreams",
-                "newPage": false,
-                "searchKey": "gzip.TestTruncatedStreams",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTruncatedStreams(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTruncatedStreams(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/compress/gzip#TestEmpty",
               "documentation": {
                 "identifier": "TestEmpty",
                 "newPage": false,
                 "searchKey": "gzip.TestEmpty",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1071,22 +1077,48 @@
           },
           {
             "node": {
-              "pathID": "/compress/gzip#TestRoundTrip",
+              "pathID": "/compress/gzip#TestGZIPFilesHaveZeroMTimes",
               "documentation": {
-                "identifier": "TestRoundTrip",
+                "identifier": "TestGZIPFilesHaveZeroMTimes",
                 "newPage": false,
-                "searchKey": "gzip.TestRoundTrip",
+                "searchKey": "gzip.TestGZIPFilesHaveZeroMTimes",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestRoundTrip(t *testing.T)"
+                "value": "func TestGZIPFilesHaveZeroMTimes(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestRoundTrip(t *testing.T)\n```\n\nTestRoundTrip tests that gzipping and then gunzipping is the identity function. \n\n"
+                "value": "```Go\nfunc TestGZIPFilesHaveZeroMTimes(t *testing.T)\n```\n\nTestGZIPFilesHaveZeroMTimes checks that every .gz file in the tree has a zero MTIME. This is a requirement for the Debian maintainers to be able to have deterministic packages. \n\nSee [https://golang.org/issue/14937](https://golang.org/issue/14937). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/compress/gzip#TestIssue6550",
+              "documentation": {
+                "identifier": "TestIssue6550",
+                "newPage": false,
+                "searchKey": "gzip.TestIssue6550",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue6550(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue6550(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1099,7 +1131,9 @@
                 "newPage": false,
                 "searchKey": "gzip.TestLatin1",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1121,7 +1155,9 @@
                 "newPage": false,
                 "searchKey": "gzip.TestLatin1RoundTrip",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1137,79 +1173,15 @@
           },
           {
             "node": {
-              "pathID": "/compress/gzip#TestWriterFlush",
-              "documentation": {
-                "identifier": "TestWriterFlush",
-                "newPage": false,
-                "searchKey": "gzip.TestWriterFlush",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestWriterFlush(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestWriterFlush(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/compress/gzip#TestConcat",
-              "documentation": {
-                "identifier": "TestConcat",
-                "newPage": false,
-                "searchKey": "gzip.TestConcat",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestConcat(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestConcat(t *testing.T)\n```\n\nMultiple gzip files concatenated form a valid gzip file. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/compress/gzip#TestWriterReset",
-              "documentation": {
-                "identifier": "TestWriterReset",
-                "newPage": false,
-                "searchKey": "gzip.TestWriterReset",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestWriterReset(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestWriterReset(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/compress/gzip#TestLimitedWrite",
               "documentation": {
                 "identifier": "TestLimitedWrite",
                 "newPage": false,
                 "searchKey": "gzip.TestLimitedWrite",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1225,22 +1197,144 @@
           },
           {
             "node": {
-              "pathID": "/compress/gzip#TestGZIPFilesHaveZeroMTimes",
+              "pathID": "/compress/gzip#TestMultistreamFalse",
               "documentation": {
-                "identifier": "TestGZIPFilesHaveZeroMTimes",
+                "identifier": "TestMultistreamFalse",
                 "newPage": false,
-                "searchKey": "gzip.TestGZIPFilesHaveZeroMTimes",
+                "searchKey": "gzip.TestMultistreamFalse",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestGZIPFilesHaveZeroMTimes(t *testing.T)"
+                "value": "func TestMultistreamFalse(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestGZIPFilesHaveZeroMTimes(t *testing.T)\n```\n\nTestGZIPFilesHaveZeroMTimes checks that every .gz file in the tree has a zero MTIME. This is a requirement for the Debian maintainers to be able to have deterministic packages. \n\nSee [https://golang.org/issue/14937](https://golang.org/issue/14937). \n\n"
+                "value": "```Go\nfunc TestMultistreamFalse(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/compress/gzip#TestNilStream",
+              "documentation": {
+                "identifier": "TestNilStream",
+                "newPage": false,
+                "searchKey": "gzip.TestNilStream",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNilStream(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNilStream(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/compress/gzip#TestRoundTrip",
+              "documentation": {
+                "identifier": "TestRoundTrip",
+                "newPage": false,
+                "searchKey": "gzip.TestRoundTrip",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRoundTrip(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRoundTrip(t *testing.T)\n```\n\nTestRoundTrip tests that gzipping and then gunzipping is the identity function. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/compress/gzip#TestTruncatedStreams",
+              "documentation": {
+                "identifier": "TestTruncatedStreams",
+                "newPage": false,
+                "searchKey": "gzip.TestTruncatedStreams",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTruncatedStreams(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTruncatedStreams(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/compress/gzip#TestWriterFlush",
+              "documentation": {
+                "identifier": "TestWriterFlush",
+                "newPage": false,
+                "searchKey": "gzip.TestWriterFlush",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriterFlush(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriterFlush(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/compress/gzip#TestWriterReset",
+              "documentation": {
+                "identifier": "TestWriterReset",
+                "newPage": false,
+                "searchKey": "gzip.TestWriterReset",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriterReset(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriterReset(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1253,6 +1347,7 @@
                 "newPage": false,
                 "searchKey": "gzip.checkZeroMTime",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1263,6 +1358,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc checkZeroMTime(t *testing.T, path string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/compress/gzip#noEOF",
+              "documentation": {
+                "identifier": "noEOF",
+                "newPage": false,
+                "searchKey": "gzip.noEOF",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func noEOF(err error) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc noEOF(err error) error\n```\n\nnoEOF converts io.EOF to io.ErrUnexpectedEOF. \n\n"
               },
               "children": null
             }

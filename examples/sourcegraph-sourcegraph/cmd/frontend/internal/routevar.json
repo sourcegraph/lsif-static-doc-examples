@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "cmd/frontend/internal/routevar",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,10 @@
                 "identifier": "Def",
                 "newPage": false,
                 "searchKey": "routevar.Def",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -59,32 +64,15 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/routevar#RepoPattern",
-              "documentation": {
-                "identifier": "RepoPattern",
-                "newPage": false,
-                "searchKey": "routevar.RepoPattern",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const RepoPattern"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst RepoPattern = `(?P<repo>(?:` + pathComponentNotDelim + `/)*` + pathComponentNotDelim + `)`\n```\n\nRepoPattern is the regexp pattern that matches repo path strings (\"repo\" or \"domain.com/repo\" or \"domain.com/path/to/repo\"). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/routevar#RepoPathDelim",
               "documentation": {
                 "identifier": "RepoPathDelim",
                 "newPage": false,
                 "searchKey": "routevar.RepoPathDelim",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -99,22 +87,23 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/routevar#pathComponentNotDelim",
+              "pathID": "/cmd/frontend/internal/routevar#RepoPattern",
               "documentation": {
-                "identifier": "pathComponentNotDelim",
+                "identifier": "RepoPattern",
                 "newPage": false,
-                "searchKey": "routevar.pathComponentNotDelim",
+                "searchKey": "routevar.RepoPattern",
                 "tags": [
-                  "private"
+                  "constant",
+                  "string"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const pathComponentNotDelim"
+                "value": "const RepoPattern"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst pathComponentNotDelim = `(?:[^@/` + RepoPathDelim + `]|(?:[^/@]{2,}))`\n```\n\n"
+                "value": "```Go\nconst RepoPattern = `(?P<repo>(?:` + pathComponentNotDelim + `/)*` + pathComponentNotDelim + `)`\n```\n\nRepoPattern is the regexp pattern that matches repo path strings (\"repo\" or \"domain.com/repo\" or \"domain.com/path/to/repo\"). \n\n"
               },
               "children": null
             }
@@ -126,7 +115,10 @@
                 "identifier": "RevPattern",
                 "newPage": false,
                 "searchKey": "routevar.RevPattern",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -135,6 +127,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst RevPattern = `(?P<rev>(?:` + pathComponentNotDelim + `/)*` + pathComponentNotDelim + `)`\n```\n\nRevPattern is the regexp pattern that matches a VCS revision specifier (e.g., \"master\" or \"my/branch~1\", or a full 40-char commit ID). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/routevar#pathComponentNotDelim",
+              "documentation": {
+                "identifier": "pathComponentNotDelim",
+                "newPage": false,
+                "searchKey": "routevar.pathComponentNotDelim",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const pathComponentNotDelim"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst pathComponentNotDelim = `(?:[^@/` + RepoPathDelim + `]|(?:[^/@]{2,}))`\n```\n\n"
               },
               "children": null
             }
@@ -150,6 +166,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -164,12 +181,83 @@
         "children": [
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/routevar#Repo",
+              "documentation": {
+                "identifier": "Repo",
+                "newPage": false,
+                "searchKey": "routevar.Repo",
+                "tags": [
+                  "variable",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Repo"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Repo = `{Repo:` + namedToNonCapturingGroups(RepoPattern) + `}`\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/routevar#RepoRevSuffix",
+              "documentation": {
+                "identifier": "RepoRevSuffix",
+                "newPage": false,
+                "searchKey": "routevar.RepoRevSuffix",
+                "tags": [
+                  "variable",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var RepoRevSuffix"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar RepoRevSuffix = `{Rev:` + namedToNonCapturingGroups(`(?:@`+RevPattern+`)?`) + `}`\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/routevar#Rev",
+              "documentation": {
+                "identifier": "Rev",
+                "newPage": false,
+                "searchKey": "routevar.Rev",
+                "tags": [
+                  "variable",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Rev"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Rev = `{Rev:` + namedToNonCapturingGroups(RevPattern) + `}`\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/routevar#namedCaptureGroup",
               "documentation": {
                 "identifier": "namedCaptureGroup",
                 "newPage": false,
                 "searchKey": "routevar.namedCaptureGroup",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -186,72 +274,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/routevar#Repo",
-              "documentation": {
-                "identifier": "Repo",
-                "newPage": false,
-                "searchKey": "routevar.Repo",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var Repo"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar Repo = `{Repo:` + namedToNonCapturingGroups(RepoPattern) + `}`\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/routevar#Rev",
-              "documentation": {
-                "identifier": "Rev",
-                "newPage": false,
-                "searchKey": "routevar.Rev",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var Rev"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar Rev = `{Rev:` + namedToNonCapturingGroups(RevPattern) + `}`\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/routevar#RepoRevSuffix",
-              "documentation": {
-                "identifier": "RepoRevSuffix",
-                "newPage": false,
-                "searchKey": "routevar.RepoRevSuffix",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var RepoRevSuffix"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar RepoRevSuffix = `{Rev:` + namedToNonCapturingGroups(`(?:@`+RevPattern+`)?`) + `}`\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/routevar#repoPattern",
               "documentation": {
                 "identifier": "repoPattern",
                 "newPage": false,
                 "searchKey": "routevar.repoPattern",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -277,6 +307,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -296,7 +327,9 @@
                 "identifier": "DefAtRev",
                 "newPage": false,
                 "searchKey": "routevar.DefAtRev",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -314,7 +347,9 @@
                       "identifier": "ToDefAtRev",
                       "newPage": false,
                       "searchKey": "routevar.ToDefAtRev",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -332,53 +367,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/routevar#RepoRev",
-              "documentation": {
-                "identifier": "RepoRev",
-                "newPage": false,
-                "searchKey": "routevar.RepoRev",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RepoRev struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RepoRev struct {\n\tRepo api.RepoName // a repo path\n\tRev  string       // a VCS revision specifier (branch, \"master~7\", commit ID, etc.)\n}\n```\n\nA RepoRev specifies a repo at a revision. The revision need not be an absolute commit ID. This RepoRev type is appropriate for user input (e.g., from a URL), where it is convenient to allow users to specify non-absolute commit IDs that the server can resolve. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/internal/routevar#ToRepoRev",
-                    "documentation": {
-                      "identifier": "ToRepoRev",
-                      "newPage": false,
-                      "searchKey": "routevar.ToRepoRev",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func ToRepoRev(routeVars map[string]string) RepoRev"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc ToRepoRev(routeVars map[string]string) RepoRev\n```\n\nToRepoRev marshals a map containing route variables generated by (RepoRevSpec).RouteVars() and returns the equivalent RepoRevSpec struct. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/routevar#InvalidError",
               "documentation": {
                 "identifier": "InvalidError",
                 "newPage": false,
                 "searchKey": "routevar.InvalidError",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -396,7 +392,9 @@
                       "identifier": "InvalidError.Error",
                       "newPage": false,
                       "searchKey": "routevar.InvalidError.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -405,6 +403,51 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (e InvalidError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/routevar#RepoRev",
+              "documentation": {
+                "identifier": "RepoRev",
+                "newPage": false,
+                "searchKey": "routevar.RepoRev",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoRev struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoRev struct {\n\tRepo api.RepoName // a repo path\n\tRev  string       // a VCS revision specifier (branch, \"master~7\", commit ID, etc.)\n}\n```\n\nA RepoRev specifies a repo at a revision. The revision need not be an absolute commit ID. This RepoRev type is appropriate for user input (e.g., from a URL), where it is convenient to allow users to specify non-absolute commit IDs that the server can resolve. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/routevar#ToRepoRev",
+                    "documentation": {
+                      "identifier": "ToRepoRev",
+                      "newPage": false,
+                      "searchKey": "routevar.ToRepoRev",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ToRepoRev(routeVars map[string]string) RepoRev"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ToRepoRev(routeVars map[string]string) RepoRev\n```\n\nToRepoRev marshals a map containing route variables generated by (RepoRevSpec).RouteVars() and returns the equivalent RepoRevSpec struct. \n\n"
                     },
                     "children": null
                   }
@@ -423,6 +466,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -437,12 +481,291 @@
         "children": [
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/routevar#DefRouteVars",
+              "documentation": {
+                "identifier": "DefRouteVars",
+                "newPage": false,
+                "searchKey": "routevar.DefRouteVars",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DefRouteVars(s DefAtRev) map[string]string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DefRouteVars(s DefAtRev) map[string]string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/routevar#ParseRepo",
+              "documentation": {
+                "identifier": "ParseRepo",
+                "newPage": false,
+                "searchKey": "routevar.ParseRepo",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ParseRepo(spec string) (repo api.RepoName, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ParseRepo(spec string) (repo api.RepoName, err error)\n```\n\nParseRepo parses a repo path string. If spec is invalid, an InvalidError is returned. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/routevar#RepoRevRouteVars",
+              "documentation": {
+                "identifier": "RepoRevRouteVars",
+                "newPage": false,
+                "searchKey": "routevar.RepoRevRouteVars",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RepoRevRouteVars(s RepoRev) map[string]string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RepoRevRouteVars(s RepoRev) map[string]string\n```\n\nRepoRevRouteVars returns route variables for constructing routes to a repository revision. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/routevar#RepoRouteVars",
+              "documentation": {
+                "identifier": "RepoRouteVars",
+                "newPage": false,
+                "searchKey": "routevar.RepoRouteVars",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RepoRouteVars(repo api.RepoName) map[string]string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RepoRouteVars(repo api.RepoName) map[string]string\n```\n\nRepoRouteVars returns route variables for constructing repository routes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/routevar#TestDefRouteVars",
+              "documentation": {
+                "identifier": "TestDefRouteVars",
+                "newPage": false,
+                "searchKey": "routevar.TestDefRouteVars",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDefRouteVars(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDefRouteVars(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/routevar#TestNamedToNonCapturingGroups",
+              "documentation": {
+                "identifier": "TestNamedToNonCapturingGroups",
+                "newPage": false,
+                "searchKey": "routevar.TestNamedToNonCapturingGroups",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNamedToNonCapturingGroups(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNamedToNonCapturingGroups(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/routevar#TestRepo",
+              "documentation": {
+                "identifier": "TestRepo",
+                "newPage": false,
+                "searchKey": "routevar.TestRepo",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepo(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepo(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/routevar#TestRepoPattern",
+              "documentation": {
+                "identifier": "TestRepoPattern",
+                "newPage": false,
+                "searchKey": "routevar.TestRepoPattern",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepoPattern(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepoPattern(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/routevar#TestRepoRevSpec",
+              "documentation": {
+                "identifier": "TestRepoRevSpec",
+                "newPage": false,
+                "searchKey": "routevar.TestRepoRevSpec",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepoRevSpec(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepoRevSpec(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/routevar#TestRev",
+              "documentation": {
+                "identifier": "TestRev",
+                "newPage": false,
+                "searchKey": "routevar.TestRev",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRev(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRev(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/routevar#TestRevPattern",
+              "documentation": {
+                "identifier": "TestRevPattern",
+                "newPage": false,
+                "searchKey": "routevar.TestRevPattern",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRevPattern(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRevPattern(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/routevar#ToRepo",
+              "documentation": {
+                "identifier": "ToRepo",
+                "newPage": false,
+                "searchKey": "routevar.ToRepo",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ToRepo(routeVars map[string]string) api.RepoName"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ToRepo(routeVars map[string]string) api.RepoName\n```\n\nToRepo returns the repo path string from a map containing route variables. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/routevar#defURLPathToKeyPath",
               "documentation": {
                 "identifier": "defURLPathToKeyPath",
                 "newPage": false,
                 "searchKey": "routevar.defURLPathToKeyPath",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -459,32 +782,13 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/routevar#DefRouteVars",
-              "documentation": {
-                "identifier": "DefRouteVars",
-                "newPage": false,
-                "searchKey": "routevar.DefRouteVars",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func DefRouteVars(s DefAtRev) map[string]string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc DefRouteVars(s DefAtRev) map[string]string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/routevar#namedToNonCapturingGroups",
               "documentation": {
                 "identifier": "namedToNonCapturingGroups",
                 "newPage": false,
                 "searchKey": "routevar.namedToNonCapturingGroups",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -501,136 +805,13 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/routevar#ParseRepo",
-              "documentation": {
-                "identifier": "ParseRepo",
-                "newPage": false,
-                "searchKey": "routevar.ParseRepo",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ParseRepo(spec string) (repo api.RepoName, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ParseRepo(spec string) (repo api.RepoName, err error)\n```\n\nParseRepo parses a repo path string. If spec is invalid, an InvalidError is returned. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/routevar#RepoRouteVars",
-              "documentation": {
-                "identifier": "RepoRouteVars",
-                "newPage": false,
-                "searchKey": "routevar.RepoRouteVars",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func RepoRouteVars(repo api.RepoName) map[string]string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc RepoRouteVars(repo api.RepoName) map[string]string\n```\n\nRepoRouteVars returns route variables for constructing repository routes. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/routevar#ToRepo",
-              "documentation": {
-                "identifier": "ToRepo",
-                "newPage": false,
-                "searchKey": "routevar.ToRepo",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ToRepo(routeVars map[string]string) api.RepoName"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ToRepo(routeVars map[string]string) api.RepoName\n```\n\nToRepo returns the repo path string from a map containing route variables. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/routevar#RepoRevRouteVars",
-              "documentation": {
-                "identifier": "RepoRevRouteVars",
-                "newPage": false,
-                "searchKey": "routevar.RepoRevRouteVars",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func RepoRevRouteVars(s RepoRev) map[string]string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc RepoRevRouteVars(s RepoRev) map[string]string\n```\n\nRepoRevRouteVars returns route variables for constructing routes to a repository revision. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/routevar#pathUnescape",
-              "documentation": {
-                "identifier": "pathUnescape",
-                "newPage": false,
-                "searchKey": "routevar.pathUnescape",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func pathUnescape(p string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc pathUnescape(p string) string\n```\n\npathUnescape is a limited version of url.QueryEscape that only unescapes '?'. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/routevar#TestDefRouteVars",
-              "documentation": {
-                "identifier": "TestDefRouteVars",
-                "newPage": false,
-                "searchKey": "routevar.TestDefRouteVars",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDefRouteVars(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDefRouteVars(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/routevar#pairs",
               "documentation": {
                 "identifier": "pairs",
                 "newPage": false,
                 "searchKey": "routevar.pairs",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -647,132 +828,23 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/routevar#TestNamedToNonCapturingGroups",
+              "pathID": "/cmd/frontend/internal/routevar#pathUnescape",
               "documentation": {
-                "identifier": "TestNamedToNonCapturingGroups",
+                "identifier": "pathUnescape",
                 "newPage": false,
-                "searchKey": "routevar.TestNamedToNonCapturingGroups",
+                "searchKey": "routevar.pathUnescape",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestNamedToNonCapturingGroups(t *testing.T)"
+                "value": "func pathUnescape(p string) string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestNamedToNonCapturingGroups(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/routevar#TestRepoPattern",
-              "documentation": {
-                "identifier": "TestRepoPattern",
-                "newPage": false,
-                "searchKey": "routevar.TestRepoPattern",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRepoPattern(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRepoPattern(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/routevar#TestRevPattern",
-              "documentation": {
-                "identifier": "TestRevPattern",
-                "newPage": false,
-                "searchKey": "routevar.TestRevPattern",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRevPattern(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRevPattern(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/routevar#TestRepo",
-              "documentation": {
-                "identifier": "TestRepo",
-                "newPage": false,
-                "searchKey": "routevar.TestRepo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRepo(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRepo(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/routevar#TestRev",
-              "documentation": {
-                "identifier": "TestRev",
-                "newPage": false,
-                "searchKey": "routevar.TestRev",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRev(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRev(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/routevar#TestRepoRevSpec",
-              "documentation": {
-                "identifier": "TestRepoRevSpec",
-                "newPage": false,
-                "searchKey": "routevar.TestRepoRevSpec",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRepoRevSpec(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRepoRevSpec(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc pathUnescape(p string) string\n```\n\npathUnescape is a limited version of url.QueryEscape that only unescapes '?'. \n\n"
               },
               "children": null
             }

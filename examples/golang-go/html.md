@@ -10,42 +10,46 @@ Package html provides functions for escaping and unescaping HTML text.
 * [Constants](#const)
     * [const longestEntityWithoutSemicolon](#longestEntityWithoutSemicolon)
 * [Variables](#var)
-    * [var entity](#entity)
-    * [var entity2](#entity2)
-    * [var populateMapsOnce](#populateMapsOnce)
-    * [var replacementTable](#replacementTable)
-    * [var htmlEscaper](#htmlEscaper)
-    * [var unescapeTests](#unescapeTests)
     * [var benchEscapeData](#benchEscapeData)
     * [var benchEscapeNone](#benchEscapeNone)
-    * [var benchUnescapeSparse](#benchUnescapeSparse)
     * [var benchUnescapeDense](#benchUnescapeDense)
+    * [var benchUnescapeSparse](#benchUnescapeSparse)
+    * [var entity](#entity)
+    * [var entity2](#entity2)
+    * [var htmlEscaper](#htmlEscaper)
+    * [var populateMapsOnce](#populateMapsOnce)
+    * [var replacementTable](#replacementTable)
+    * [var unescapeTests](#unescapeTests)
 * [Types](#type)
     * [type unescapeTest struct](#unescapeTest)
 * [Functions](#func)
-    * [func populateMaps()](#populateMaps)
-    * [func unescapeEntity(b []byte, dst, src int) (dst1, src1 int)](#unescapeEntity)
-    * [func EscapeString(s string) string](#EscapeString)
-    * [func UnescapeString(s string) string](#UnescapeString)
-    * [func init()](#init.entity_test.go)
-    * [func TestEntityLength(t *testing.T)](#TestEntityLength)
-    * [func TestUnescape(t *testing.T)](#TestUnescape)
-    * [func TestUnescapeEscape(t *testing.T)](#TestUnescapeEscape)
     * [func BenchmarkEscape(b *testing.B)](#BenchmarkEscape)
     * [func BenchmarkEscapeNone(b *testing.B)](#BenchmarkEscapeNone)
     * [func BenchmarkUnescape(b *testing.B)](#BenchmarkUnescape)
+    * [func BenchmarkUnescapeDense(b *testing.B)](#BenchmarkUnescapeDense)
     * [func BenchmarkUnescapeNone(b *testing.B)](#BenchmarkUnescapeNone)
     * [func BenchmarkUnescapeSparse(b *testing.B)](#BenchmarkUnescapeSparse)
-    * [func BenchmarkUnescapeDense(b *testing.B)](#BenchmarkUnescapeDense)
+    * [func EscapeString(s string) string](#EscapeString)
+    * [func TestEntityLength(t *testing.T)](#TestEntityLength)
+    * [func TestUnescape(t *testing.T)](#TestUnescape)
+    * [func TestUnescapeEscape(t *testing.T)](#TestUnescapeEscape)
+    * [func UnescapeString(s string) string](#UnescapeString)
+    * [func init()](#init.entity_test.go)
+    * [func populateMaps()](#populateMaps)
+    * [func unescapeEntity(b []byte, dst, src int) (dst1, src1 int)](#unescapeEntity)
 
 
 ## <a id="const" href="#const">Constants</a>
+
+```
+tags: [package]
+```
 
 ### <a id="longestEntityWithoutSemicolon" href="#longestEntityWithoutSemicolon">const longestEntityWithoutSemicolon</a>
 
 ```
 searchKey: html.longestEntityWithoutSemicolon
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -56,11 +60,59 @@ All entities that do not end with ';' are 6 or fewer bytes long.
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [package]
+```
+
+### <a id="benchEscapeData" href="#benchEscapeData">var benchEscapeData</a>
+
+```
+searchKey: html.benchEscapeData
+tags: [variable string private]
+```
+
+```Go
+var benchEscapeData = strings.Repeat("AAAAA < BBBBB > CCCCC & DDDDD ' EEEEE \" ", 100)
+```
+
+### <a id="benchEscapeNone" href="#benchEscapeNone">var benchEscapeNone</a>
+
+```
+searchKey: html.benchEscapeNone
+tags: [variable string private]
+```
+
+```Go
+var benchEscapeNone = strings.Repeat("AAAAA x BBBBB x CCCCC x DDDDD x EEEEE x ", 100)
+```
+
+### <a id="benchUnescapeDense" href="#benchUnescapeDense">var benchUnescapeDense</a>
+
+```
+searchKey: html.benchUnescapeDense
+tags: [variable string private]
+```
+
+```Go
+var benchUnescapeDense = strings.Repeat("&amp;&lt; &amp; &lt;", 100)
+```
+
+### <a id="benchUnescapeSparse" href="#benchUnescapeSparse">var benchUnescapeSparse</a>
+
+```
+searchKey: html.benchUnescapeSparse
+tags: [variable string private]
+```
+
+```Go
+var benchUnescapeSparse = ...
+```
+
 ### <a id="entity" href="#entity">var entity</a>
 
 ```
 searchKey: html.entity
-tags: [private]
+tags: [variable object private]
 ```
 
 ```Go
@@ -75,7 +127,7 @@ Note that the HTML5 list is larger than the HTML4 list at [http://www.w3.org/TR/
 
 ```
 searchKey: html.entity2
-tags: [private]
+tags: [variable object private]
 ```
 
 ```Go
@@ -84,11 +136,22 @@ var entity2 map[string][2]rune
 
 HTML entities that are two unicode codepoints. 
 
+### <a id="htmlEscaper" href="#htmlEscaper">var htmlEscaper</a>
+
+```
+searchKey: html.htmlEscaper
+tags: [variable struct private]
+```
+
+```Go
+var htmlEscaper = ...
+```
+
 ### <a id="populateMapsOnce" href="#populateMapsOnce">var populateMapsOnce</a>
 
 ```
 searchKey: html.populateMapsOnce
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -101,7 +164,7 @@ populateMapsOnce guards calling populateMaps.
 
 ```
 searchKey: html.replacementTable
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -110,79 +173,28 @@ var replacementTable = ...
 
 These replacements permit compatibility with old numeric entities that assumed Windows-1252 encoding. [https://html.spec.whatwg.org/multipage/parsing.html#numeric-character-reference-end-state](https://html.spec.whatwg.org/multipage/parsing.html#numeric-character-reference-end-state) 
 
-### <a id="htmlEscaper" href="#htmlEscaper">var htmlEscaper</a>
-
-```
-searchKey: html.htmlEscaper
-tags: [private]
-```
-
-```Go
-var htmlEscaper = ...
-```
-
 ### <a id="unescapeTests" href="#unescapeTests">var unescapeTests</a>
 
 ```
 searchKey: html.unescapeTests
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
 var unescapeTests = ...
 ```
 
-### <a id="benchEscapeData" href="#benchEscapeData">var benchEscapeData</a>
-
-```
-searchKey: html.benchEscapeData
-tags: [private]
-```
-
-```Go
-var benchEscapeData = strings.Repeat("AAAAA < BBBBB > CCCCC & DDDDD ' EEEEE \" ", 100)
-```
-
-### <a id="benchEscapeNone" href="#benchEscapeNone">var benchEscapeNone</a>
-
-```
-searchKey: html.benchEscapeNone
-tags: [private]
-```
-
-```Go
-var benchEscapeNone = strings.Repeat("AAAAA x BBBBB x CCCCC x DDDDD x EEEEE x ", 100)
-```
-
-### <a id="benchUnescapeSparse" href="#benchUnescapeSparse">var benchUnescapeSparse</a>
-
-```
-searchKey: html.benchUnescapeSparse
-tags: [private]
-```
-
-```Go
-var benchUnescapeSparse = ...
-```
-
-### <a id="benchUnescapeDense" href="#benchUnescapeDense">var benchUnescapeDense</a>
-
-```
-searchKey: html.benchUnescapeDense
-tags: [private]
-```
-
-```Go
-var benchUnescapeDense = strings.Repeat("&amp;&lt; &amp; &lt;", 100)
-```
-
 ## <a id="type" href="#type">Types</a>
+
+```
+tags: [package]
+```
 
 ### <a id="unescapeTest" href="#unescapeTest">type unescapeTest struct</a>
 
 ```
 searchKey: html.unescapeTest
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -198,36 +210,81 @@ type unescapeTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="populateMaps" href="#populateMaps">func populateMaps()</a>
-
 ```
-searchKey: html.populateMaps
-tags: [private]
+tags: [package]
 ```
 
-```Go
-func populateMaps()
-```
-
-populateMaps populates entity and entity2. 
-
-### <a id="unescapeEntity" href="#unescapeEntity">func unescapeEntity(b []byte, dst, src int) (dst1, src1 int)</a>
+### <a id="BenchmarkEscape" href="#BenchmarkEscape">func BenchmarkEscape(b *testing.B)</a>
 
 ```
-searchKey: html.unescapeEntity
-tags: [private]
+searchKey: html.BenchmarkEscape
+tags: [method private benchmark]
 ```
 
 ```Go
-func unescapeEntity(b []byte, dst, src int) (dst1, src1 int)
+func BenchmarkEscape(b *testing.B)
 ```
 
-unescapeEntity reads an entity like "&lt;" from b[src:] and writes the corresponding "<" to b[dst:], returning the incremented dst and src cursors. Precondition: b[src] == '&' && dst <= src. 
+### <a id="BenchmarkEscapeNone" href="#BenchmarkEscapeNone">func BenchmarkEscapeNone(b *testing.B)</a>
+
+```
+searchKey: html.BenchmarkEscapeNone
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkEscapeNone(b *testing.B)
+```
+
+### <a id="BenchmarkUnescape" href="#BenchmarkUnescape">func BenchmarkUnescape(b *testing.B)</a>
+
+```
+searchKey: html.BenchmarkUnescape
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkUnescape(b *testing.B)
+```
+
+### <a id="BenchmarkUnescapeDense" href="#BenchmarkUnescapeDense">func BenchmarkUnescapeDense(b *testing.B)</a>
+
+```
+searchKey: html.BenchmarkUnescapeDense
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkUnescapeDense(b *testing.B)
+```
+
+### <a id="BenchmarkUnescapeNone" href="#BenchmarkUnescapeNone">func BenchmarkUnescapeNone(b *testing.B)</a>
+
+```
+searchKey: html.BenchmarkUnescapeNone
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkUnescapeNone(b *testing.B)
+```
+
+### <a id="BenchmarkUnescapeSparse" href="#BenchmarkUnescapeSparse">func BenchmarkUnescapeSparse(b *testing.B)</a>
+
+```
+searchKey: html.BenchmarkUnescapeSparse
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkUnescapeSparse(b *testing.B)
+```
 
 ### <a id="EscapeString" href="#EscapeString">func EscapeString(s string) string</a>
 
 ```
 searchKey: html.EscapeString
+tags: [method]
 ```
 
 ```Go
@@ -236,10 +293,44 @@ func EscapeString(s string) string
 
 EscapeString escapes special characters like "<" to become "&lt;". It escapes only five such characters: <, >, &, ' and ". UnescapeString(EscapeString(s)) == s always holds, but the converse isn't always true. 
 
+### <a id="TestEntityLength" href="#TestEntityLength">func TestEntityLength(t *testing.T)</a>
+
+```
+searchKey: html.TestEntityLength
+tags: [method private test]
+```
+
+```Go
+func TestEntityLength(t *testing.T)
+```
+
+### <a id="TestUnescape" href="#TestUnescape">func TestUnescape(t *testing.T)</a>
+
+```
+searchKey: html.TestUnescape
+tags: [method private test]
+```
+
+```Go
+func TestUnescape(t *testing.T)
+```
+
+### <a id="TestUnescapeEscape" href="#TestUnescapeEscape">func TestUnescapeEscape(t *testing.T)</a>
+
+```
+searchKey: html.TestUnescapeEscape
+tags: [method private test]
+```
+
+```Go
+func TestUnescapeEscape(t *testing.T)
+```
+
 ### <a id="UnescapeString" href="#UnescapeString">func UnescapeString(s string) string</a>
 
 ```
 searchKey: html.UnescapeString
+tags: [method]
 ```
 
 ```Go
@@ -252,109 +343,36 @@ UnescapeString unescapes entities like "&lt;" to become "<". It unescapes a larg
 
 ```
 searchKey: html.init
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func init()
 ```
 
-### <a id="TestEntityLength" href="#TestEntityLength">func TestEntityLength(t *testing.T)</a>
+### <a id="populateMaps" href="#populateMaps">func populateMaps()</a>
 
 ```
-searchKey: html.TestEntityLength
-tags: [private]
-```
-
-```Go
-func TestEntityLength(t *testing.T)
-```
-
-### <a id="TestUnescape" href="#TestUnescape">func TestUnescape(t *testing.T)</a>
-
-```
-searchKey: html.TestUnescape
-tags: [private]
+searchKey: html.populateMaps
+tags: [function private]
 ```
 
 ```Go
-func TestUnescape(t *testing.T)
+func populateMaps()
 ```
 
-### <a id="TestUnescapeEscape" href="#TestUnescapeEscape">func TestUnescapeEscape(t *testing.T)</a>
+populateMaps populates entity and entity2. 
+
+### <a id="unescapeEntity" href="#unescapeEntity">func unescapeEntity(b []byte, dst, src int) (dst1, src1 int)</a>
 
 ```
-searchKey: html.TestUnescapeEscape
-tags: [private]
-```
-
-```Go
-func TestUnescapeEscape(t *testing.T)
-```
-
-### <a id="BenchmarkEscape" href="#BenchmarkEscape">func BenchmarkEscape(b *testing.B)</a>
-
-```
-searchKey: html.BenchmarkEscape
-tags: [private]
+searchKey: html.unescapeEntity
+tags: [method private]
 ```
 
 ```Go
-func BenchmarkEscape(b *testing.B)
+func unescapeEntity(b []byte, dst, src int) (dst1, src1 int)
 ```
 
-### <a id="BenchmarkEscapeNone" href="#BenchmarkEscapeNone">func BenchmarkEscapeNone(b *testing.B)</a>
-
-```
-searchKey: html.BenchmarkEscapeNone
-tags: [private]
-```
-
-```Go
-func BenchmarkEscapeNone(b *testing.B)
-```
-
-### <a id="BenchmarkUnescape" href="#BenchmarkUnescape">func BenchmarkUnescape(b *testing.B)</a>
-
-```
-searchKey: html.BenchmarkUnescape
-tags: [private]
-```
-
-```Go
-func BenchmarkUnescape(b *testing.B)
-```
-
-### <a id="BenchmarkUnescapeNone" href="#BenchmarkUnescapeNone">func BenchmarkUnescapeNone(b *testing.B)</a>
-
-```
-searchKey: html.BenchmarkUnescapeNone
-tags: [private]
-```
-
-```Go
-func BenchmarkUnescapeNone(b *testing.B)
-```
-
-### <a id="BenchmarkUnescapeSparse" href="#BenchmarkUnescapeSparse">func BenchmarkUnescapeSparse(b *testing.B)</a>
-
-```
-searchKey: html.BenchmarkUnescapeSparse
-tags: [private]
-```
-
-```Go
-func BenchmarkUnescapeSparse(b *testing.B)
-```
-
-### <a id="BenchmarkUnescapeDense" href="#BenchmarkUnescapeDense">func BenchmarkUnescapeDense(b *testing.B)</a>
-
-```
-searchKey: html.BenchmarkUnescapeDense
-tags: [private]
-```
-
-```Go
-func BenchmarkUnescapeDense(b *testing.B)
-```
+unescapeEntity reads an entity like "&lt;" from b[src:] and writes the corresponding "<" to b[dst:], returning the incremented dst and src cursors. Precondition: b[src] == '&' && dst <= src. 
 

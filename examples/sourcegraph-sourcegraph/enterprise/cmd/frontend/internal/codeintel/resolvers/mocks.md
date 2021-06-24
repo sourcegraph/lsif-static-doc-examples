@@ -12,72 +12,6 @@
         * [func (m *MockQueryResolver) Hover(v0 context.Context, v1 int, v2 int) (string, lsifstore.Range, bool, error)](#MockQueryResolver.Hover)
         * [func (m *MockQueryResolver) Ranges(v0 context.Context, v1 int, v2 int) ([]resolvers.AdjustedCodeIntelligenceRange, error)](#MockQueryResolver.Ranges)
         * [func (m *MockQueryResolver) References(v0 context.Context, v1 int, v2 int, v3 int, v4 string) ([]resolvers.AdjustedLocation, string, error)](#MockQueryResolver.References)
-    * [type QueryResolverDefinitionsFunc struct](#QueryResolverDefinitionsFunc)
-        * [func (f *QueryResolverDefinitionsFunc) SetDefaultHook(hook func(context.Context, int, int) ([]resolvers.AdjustedLocation, error))](#QueryResolverDefinitionsFunc.SetDefaultHook)
-        * [func (f *QueryResolverDefinitionsFunc) PushHook(hook func(context.Context, int, int) ([]resolvers.AdjustedLocation, error))](#QueryResolverDefinitionsFunc.PushHook)
-        * [func (f *QueryResolverDefinitionsFunc) SetDefaultReturn(r0 []resolvers.AdjustedLocation, r1 error)](#QueryResolverDefinitionsFunc.SetDefaultReturn)
-        * [func (f *QueryResolverDefinitionsFunc) PushReturn(r0 []resolvers.AdjustedLocation, r1 error)](#QueryResolverDefinitionsFunc.PushReturn)
-        * [func (f *QueryResolverDefinitionsFunc) nextHook() func(context.Context, int, int) ([]resolvers.AdjustedLocation, error)](#QueryResolverDefinitionsFunc.nextHook)
-        * [func (f *QueryResolverDefinitionsFunc) appendCall(r0 QueryResolverDefinitionsFuncCall)](#QueryResolverDefinitionsFunc.appendCall)
-        * [func (f *QueryResolverDefinitionsFunc) History() []QueryResolverDefinitionsFuncCall](#QueryResolverDefinitionsFunc.History)
-    * [type QueryResolverDefinitionsFuncCall struct](#QueryResolverDefinitionsFuncCall)
-        * [func (c QueryResolverDefinitionsFuncCall) Args() []interface{}](#QueryResolverDefinitionsFuncCall.Args)
-        * [func (c QueryResolverDefinitionsFuncCall) Results() []interface{}](#QueryResolverDefinitionsFuncCall.Results)
-    * [type QueryResolverDiagnosticsFunc struct](#QueryResolverDiagnosticsFunc)
-        * [func (f *QueryResolverDiagnosticsFunc) SetDefaultHook(hook func(context.Context, int) ([]resolvers.AdjustedDiagnostic, int, error))](#QueryResolverDiagnosticsFunc.SetDefaultHook)
-        * [func (f *QueryResolverDiagnosticsFunc) PushHook(hook func(context.Context, int) ([]resolvers.AdjustedDiagnostic, int, error))](#QueryResolverDiagnosticsFunc.PushHook)
-        * [func (f *QueryResolverDiagnosticsFunc) SetDefaultReturn(r0 []resolvers.AdjustedDiagnostic, r1 int, r2 error)](#QueryResolverDiagnosticsFunc.SetDefaultReturn)
-        * [func (f *QueryResolverDiagnosticsFunc) PushReturn(r0 []resolvers.AdjustedDiagnostic, r1 int, r2 error)](#QueryResolverDiagnosticsFunc.PushReturn)
-        * [func (f *QueryResolverDiagnosticsFunc) nextHook() func(context.Context, int) ([]resolvers.AdjustedDiagnostic, int, error)](#QueryResolverDiagnosticsFunc.nextHook)
-        * [func (f *QueryResolverDiagnosticsFunc) appendCall(r0 QueryResolverDiagnosticsFuncCall)](#QueryResolverDiagnosticsFunc.appendCall)
-        * [func (f *QueryResolverDiagnosticsFunc) History() []QueryResolverDiagnosticsFuncCall](#QueryResolverDiagnosticsFunc.History)
-    * [type QueryResolverDiagnosticsFuncCall struct](#QueryResolverDiagnosticsFuncCall)
-        * [func (c QueryResolverDiagnosticsFuncCall) Args() []interface{}](#QueryResolverDiagnosticsFuncCall.Args)
-        * [func (c QueryResolverDiagnosticsFuncCall) Results() []interface{}](#QueryResolverDiagnosticsFuncCall.Results)
-    * [type QueryResolverDocumentationPageFunc struct](#QueryResolverDocumentationPageFunc)
-        * [func (f *QueryResolverDocumentationPageFunc) SetDefaultHook(hook func(context.Context, string) (*semantic.DocumentationPageData, error))](#QueryResolverDocumentationPageFunc.SetDefaultHook)
-        * [func (f *QueryResolverDocumentationPageFunc) PushHook(hook func(context.Context, string) (*semantic.DocumentationPageData, error))](#QueryResolverDocumentationPageFunc.PushHook)
-        * [func (f *QueryResolverDocumentationPageFunc) SetDefaultReturn(r0 *semantic.DocumentationPageData, r1 error)](#QueryResolverDocumentationPageFunc.SetDefaultReturn)
-        * [func (f *QueryResolverDocumentationPageFunc) PushReturn(r0 *semantic.DocumentationPageData, r1 error)](#QueryResolverDocumentationPageFunc.PushReturn)
-        * [func (f *QueryResolverDocumentationPageFunc) nextHook() func(context.Context, string) (*semantic.DocumentationPageData, error)](#QueryResolverDocumentationPageFunc.nextHook)
-        * [func (f *QueryResolverDocumentationPageFunc) appendCall(r0 QueryResolverDocumentationPageFuncCall)](#QueryResolverDocumentationPageFunc.appendCall)
-        * [func (f *QueryResolverDocumentationPageFunc) History() []QueryResolverDocumentationPageFuncCall](#QueryResolverDocumentationPageFunc.History)
-    * [type QueryResolverDocumentationPageFuncCall struct](#QueryResolverDocumentationPageFuncCall)
-        * [func (c QueryResolverDocumentationPageFuncCall) Args() []interface{}](#QueryResolverDocumentationPageFuncCall.Args)
-        * [func (c QueryResolverDocumentationPageFuncCall) Results() []interface{}](#QueryResolverDocumentationPageFuncCall.Results)
-    * [type QueryResolverHoverFunc struct](#QueryResolverHoverFunc)
-        * [func (f *QueryResolverHoverFunc) SetDefaultHook(hook func(context.Context, int, int) (string, lsifstore.Range, bool, error))](#QueryResolverHoverFunc.SetDefaultHook)
-        * [func (f *QueryResolverHoverFunc) PushHook(hook func(context.Context, int, int) (string, lsifstore.Range, bool, error))](#QueryResolverHoverFunc.PushHook)
-        * [func (f *QueryResolverHoverFunc) SetDefaultReturn(r0 string, r1 lsifstore.Range, r2 bool, r3 error)](#QueryResolverHoverFunc.SetDefaultReturn)
-        * [func (f *QueryResolverHoverFunc) PushReturn(r0 string, r1 lsifstore.Range, r2 bool, r3 error)](#QueryResolverHoverFunc.PushReturn)
-        * [func (f *QueryResolverHoverFunc) nextHook() func(context.Context, int, int) (string, lsifstore.Range, bool, error)](#QueryResolverHoverFunc.nextHook)
-        * [func (f *QueryResolverHoverFunc) appendCall(r0 QueryResolverHoverFuncCall)](#QueryResolverHoverFunc.appendCall)
-        * [func (f *QueryResolverHoverFunc) History() []QueryResolverHoverFuncCall](#QueryResolverHoverFunc.History)
-    * [type QueryResolverHoverFuncCall struct](#QueryResolverHoverFuncCall)
-        * [func (c QueryResolverHoverFuncCall) Args() []interface{}](#QueryResolverHoverFuncCall.Args)
-        * [func (c QueryResolverHoverFuncCall) Results() []interface{}](#QueryResolverHoverFuncCall.Results)
-    * [type QueryResolverRangesFunc struct](#QueryResolverRangesFunc)
-        * [func (f *QueryResolverRangesFunc) SetDefaultHook(hook func(context.Context, int, int) ([]resolvers.AdjustedCodeIntelligenceRange, error))](#QueryResolverRangesFunc.SetDefaultHook)
-        * [func (f *QueryResolverRangesFunc) PushHook(hook func(context.Context, int, int) ([]resolvers.AdjustedCodeIntelligenceRange, error))](#QueryResolverRangesFunc.PushHook)
-        * [func (f *QueryResolverRangesFunc) SetDefaultReturn(r0 []resolvers.AdjustedCodeIntelligenceRange, r1 error)](#QueryResolverRangesFunc.SetDefaultReturn)
-        * [func (f *QueryResolverRangesFunc) PushReturn(r0 []resolvers.AdjustedCodeIntelligenceRange, r1 error)](#QueryResolverRangesFunc.PushReturn)
-        * [func (f *QueryResolverRangesFunc) nextHook() func(context.Context, int, int) ([]resolvers.AdjustedCodeIntelligenceRange, error)](#QueryResolverRangesFunc.nextHook)
-        * [func (f *QueryResolverRangesFunc) appendCall(r0 QueryResolverRangesFuncCall)](#QueryResolverRangesFunc.appendCall)
-        * [func (f *QueryResolverRangesFunc) History() []QueryResolverRangesFuncCall](#QueryResolverRangesFunc.History)
-    * [type QueryResolverRangesFuncCall struct](#QueryResolverRangesFuncCall)
-        * [func (c QueryResolverRangesFuncCall) Args() []interface{}](#QueryResolverRangesFuncCall.Args)
-        * [func (c QueryResolverRangesFuncCall) Results() []interface{}](#QueryResolverRangesFuncCall.Results)
-    * [type QueryResolverReferencesFunc struct](#QueryResolverReferencesFunc)
-        * [func (f *QueryResolverReferencesFunc) SetDefaultHook(hook func(context.Context, int, int, int, string) ([]resolvers.AdjustedLocation, string, error))](#QueryResolverReferencesFunc.SetDefaultHook)
-        * [func (f *QueryResolverReferencesFunc) PushHook(hook func(context.Context, int, int, int, string) ([]resolvers.AdjustedLocation, string, error))](#QueryResolverReferencesFunc.PushHook)
-        * [func (f *QueryResolverReferencesFunc) SetDefaultReturn(r0 []resolvers.AdjustedLocation, r1 string, r2 error)](#QueryResolverReferencesFunc.SetDefaultReturn)
-        * [func (f *QueryResolverReferencesFunc) PushReturn(r0 []resolvers.AdjustedLocation, r1 string, r2 error)](#QueryResolverReferencesFunc.PushReturn)
-        * [func (f *QueryResolverReferencesFunc) nextHook() func(context.Context, int, int, int, string) ([]resolvers.AdjustedLocation, string, error)](#QueryResolverReferencesFunc.nextHook)
-        * [func (f *QueryResolverReferencesFunc) appendCall(r0 QueryResolverReferencesFuncCall)](#QueryResolverReferencesFunc.appendCall)
-        * [func (f *QueryResolverReferencesFunc) History() []QueryResolverReferencesFuncCall](#QueryResolverReferencesFunc.History)
-    * [type QueryResolverReferencesFuncCall struct](#QueryResolverReferencesFuncCall)
-        * [func (c QueryResolverReferencesFuncCall) Args() []interface{}](#QueryResolverReferencesFuncCall.Args)
-        * [func (c QueryResolverReferencesFuncCall) Results() []interface{}](#QueryResolverReferencesFuncCall.Results)
     * [type MockResolver struct](#MockResolver)
         * [func NewMockResolver() *MockResolver](#NewMockResolver)
         * [func NewMockResolverFrom(i resolvers.Resolver) *MockResolver](#NewMockResolverFrom)
@@ -94,146 +28,212 @@
         * [func (m *MockResolver) QueueAutoIndexJobForRepo(v0 context.Context, v1 int) error](#MockResolver.QueueAutoIndexJobForRepo)
         * [func (m *MockResolver) UpdateIndexConfigurationByRepositoryID(v0 context.Context, v1 int, v2 string) error](#MockResolver.UpdateIndexConfigurationByRepositoryID)
         * [func (m *MockResolver) UploadConnectionResolver(v0 dbstore.GetUploadsOptions) *resolvers.UploadsResolver](#MockResolver.UploadConnectionResolver)
+    * [type QueryResolverDefinitionsFunc struct](#QueryResolverDefinitionsFunc)
+        * [func (f *QueryResolverDefinitionsFunc) History() []QueryResolverDefinitionsFuncCall](#QueryResolverDefinitionsFunc.History)
+        * [func (f *QueryResolverDefinitionsFunc) PushHook(hook func(context.Context, int, int) ([]resolvers.AdjustedLocation, error))](#QueryResolverDefinitionsFunc.PushHook)
+        * [func (f *QueryResolverDefinitionsFunc) PushReturn(r0 []resolvers.AdjustedLocation, r1 error)](#QueryResolverDefinitionsFunc.PushReturn)
+        * [func (f *QueryResolverDefinitionsFunc) SetDefaultHook(hook func(context.Context, int, int) ([]resolvers.AdjustedLocation, error))](#QueryResolverDefinitionsFunc.SetDefaultHook)
+        * [func (f *QueryResolverDefinitionsFunc) SetDefaultReturn(r0 []resolvers.AdjustedLocation, r1 error)](#QueryResolverDefinitionsFunc.SetDefaultReturn)
+        * [func (f *QueryResolverDefinitionsFunc) appendCall(r0 QueryResolverDefinitionsFuncCall)](#QueryResolverDefinitionsFunc.appendCall)
+        * [func (f *QueryResolverDefinitionsFunc) nextHook() func(context.Context, int, int) ([]resolvers.AdjustedLocation, error)](#QueryResolverDefinitionsFunc.nextHook)
+    * [type QueryResolverDefinitionsFuncCall struct](#QueryResolverDefinitionsFuncCall)
+        * [func (c QueryResolverDefinitionsFuncCall) Args() []interface{}](#QueryResolverDefinitionsFuncCall.Args)
+        * [func (c QueryResolverDefinitionsFuncCall) Results() []interface{}](#QueryResolverDefinitionsFuncCall.Results)
+    * [type QueryResolverDiagnosticsFunc struct](#QueryResolverDiagnosticsFunc)
+        * [func (f *QueryResolverDiagnosticsFunc) History() []QueryResolverDiagnosticsFuncCall](#QueryResolverDiagnosticsFunc.History)
+        * [func (f *QueryResolverDiagnosticsFunc) PushHook(hook func(context.Context, int) ([]resolvers.AdjustedDiagnostic, int, error))](#QueryResolverDiagnosticsFunc.PushHook)
+        * [func (f *QueryResolverDiagnosticsFunc) PushReturn(r0 []resolvers.AdjustedDiagnostic, r1 int, r2 error)](#QueryResolverDiagnosticsFunc.PushReturn)
+        * [func (f *QueryResolverDiagnosticsFunc) SetDefaultHook(hook func(context.Context, int) ([]resolvers.AdjustedDiagnostic, int, error))](#QueryResolverDiagnosticsFunc.SetDefaultHook)
+        * [func (f *QueryResolverDiagnosticsFunc) SetDefaultReturn(r0 []resolvers.AdjustedDiagnostic, r1 int, r2 error)](#QueryResolverDiagnosticsFunc.SetDefaultReturn)
+        * [func (f *QueryResolverDiagnosticsFunc) appendCall(r0 QueryResolverDiagnosticsFuncCall)](#QueryResolverDiagnosticsFunc.appendCall)
+        * [func (f *QueryResolverDiagnosticsFunc) nextHook() func(context.Context, int) ([]resolvers.AdjustedDiagnostic, int, error)](#QueryResolverDiagnosticsFunc.nextHook)
+    * [type QueryResolverDiagnosticsFuncCall struct](#QueryResolverDiagnosticsFuncCall)
+        * [func (c QueryResolverDiagnosticsFuncCall) Args() []interface{}](#QueryResolverDiagnosticsFuncCall.Args)
+        * [func (c QueryResolverDiagnosticsFuncCall) Results() []interface{}](#QueryResolverDiagnosticsFuncCall.Results)
+    * [type QueryResolverDocumentationPageFunc struct](#QueryResolverDocumentationPageFunc)
+        * [func (f *QueryResolverDocumentationPageFunc) History() []QueryResolverDocumentationPageFuncCall](#QueryResolverDocumentationPageFunc.History)
+        * [func (f *QueryResolverDocumentationPageFunc) PushHook(hook func(context.Context, string) (*semantic.DocumentationPageData, error))](#QueryResolverDocumentationPageFunc.PushHook)
+        * [func (f *QueryResolverDocumentationPageFunc) PushReturn(r0 *semantic.DocumentationPageData, r1 error)](#QueryResolverDocumentationPageFunc.PushReturn)
+        * [func (f *QueryResolverDocumentationPageFunc) SetDefaultHook(hook func(context.Context, string) (*semantic.DocumentationPageData, error))](#QueryResolverDocumentationPageFunc.SetDefaultHook)
+        * [func (f *QueryResolverDocumentationPageFunc) SetDefaultReturn(r0 *semantic.DocumentationPageData, r1 error)](#QueryResolverDocumentationPageFunc.SetDefaultReturn)
+        * [func (f *QueryResolverDocumentationPageFunc) appendCall(r0 QueryResolverDocumentationPageFuncCall)](#QueryResolverDocumentationPageFunc.appendCall)
+        * [func (f *QueryResolverDocumentationPageFunc) nextHook() func(context.Context, string) (*semantic.DocumentationPageData, error)](#QueryResolverDocumentationPageFunc.nextHook)
+    * [type QueryResolverDocumentationPageFuncCall struct](#QueryResolverDocumentationPageFuncCall)
+        * [func (c QueryResolverDocumentationPageFuncCall) Args() []interface{}](#QueryResolverDocumentationPageFuncCall.Args)
+        * [func (c QueryResolverDocumentationPageFuncCall) Results() []interface{}](#QueryResolverDocumentationPageFuncCall.Results)
+    * [type QueryResolverHoverFunc struct](#QueryResolverHoverFunc)
+        * [func (f *QueryResolverHoverFunc) History() []QueryResolverHoverFuncCall](#QueryResolverHoverFunc.History)
+        * [func (f *QueryResolverHoverFunc) PushHook(hook func(context.Context, int, int) (string, lsifstore.Range, bool, error))](#QueryResolverHoverFunc.PushHook)
+        * [func (f *QueryResolverHoverFunc) PushReturn(r0 string, r1 lsifstore.Range, r2 bool, r3 error)](#QueryResolverHoverFunc.PushReturn)
+        * [func (f *QueryResolverHoverFunc) SetDefaultHook(hook func(context.Context, int, int) (string, lsifstore.Range, bool, error))](#QueryResolverHoverFunc.SetDefaultHook)
+        * [func (f *QueryResolverHoverFunc) SetDefaultReturn(r0 string, r1 lsifstore.Range, r2 bool, r3 error)](#QueryResolverHoverFunc.SetDefaultReturn)
+        * [func (f *QueryResolverHoverFunc) appendCall(r0 QueryResolverHoverFuncCall)](#QueryResolverHoverFunc.appendCall)
+        * [func (f *QueryResolverHoverFunc) nextHook() func(context.Context, int, int) (string, lsifstore.Range, bool, error)](#QueryResolverHoverFunc.nextHook)
+    * [type QueryResolverHoverFuncCall struct](#QueryResolverHoverFuncCall)
+        * [func (c QueryResolverHoverFuncCall) Args() []interface{}](#QueryResolverHoverFuncCall.Args)
+        * [func (c QueryResolverHoverFuncCall) Results() []interface{}](#QueryResolverHoverFuncCall.Results)
+    * [type QueryResolverRangesFunc struct](#QueryResolverRangesFunc)
+        * [func (f *QueryResolverRangesFunc) History() []QueryResolverRangesFuncCall](#QueryResolverRangesFunc.History)
+        * [func (f *QueryResolverRangesFunc) PushHook(hook func(context.Context, int, int) ([]resolvers.AdjustedCodeIntelligenceRange, error))](#QueryResolverRangesFunc.PushHook)
+        * [func (f *QueryResolverRangesFunc) PushReturn(r0 []resolvers.AdjustedCodeIntelligenceRange, r1 error)](#QueryResolverRangesFunc.PushReturn)
+        * [func (f *QueryResolverRangesFunc) SetDefaultHook(hook func(context.Context, int, int) ([]resolvers.AdjustedCodeIntelligenceRange, error))](#QueryResolverRangesFunc.SetDefaultHook)
+        * [func (f *QueryResolverRangesFunc) SetDefaultReturn(r0 []resolvers.AdjustedCodeIntelligenceRange, r1 error)](#QueryResolverRangesFunc.SetDefaultReturn)
+        * [func (f *QueryResolverRangesFunc) appendCall(r0 QueryResolverRangesFuncCall)](#QueryResolverRangesFunc.appendCall)
+        * [func (f *QueryResolverRangesFunc) nextHook() func(context.Context, int, int) ([]resolvers.AdjustedCodeIntelligenceRange, error)](#QueryResolverRangesFunc.nextHook)
+    * [type QueryResolverRangesFuncCall struct](#QueryResolverRangesFuncCall)
+        * [func (c QueryResolverRangesFuncCall) Args() []interface{}](#QueryResolverRangesFuncCall.Args)
+        * [func (c QueryResolverRangesFuncCall) Results() []interface{}](#QueryResolverRangesFuncCall.Results)
+    * [type QueryResolverReferencesFunc struct](#QueryResolverReferencesFunc)
+        * [func (f *QueryResolverReferencesFunc) History() []QueryResolverReferencesFuncCall](#QueryResolverReferencesFunc.History)
+        * [func (f *QueryResolverReferencesFunc) PushHook(hook func(context.Context, int, int, int, string) ([]resolvers.AdjustedLocation, string, error))](#QueryResolverReferencesFunc.PushHook)
+        * [func (f *QueryResolverReferencesFunc) PushReturn(r0 []resolvers.AdjustedLocation, r1 string, r2 error)](#QueryResolverReferencesFunc.PushReturn)
+        * [func (f *QueryResolverReferencesFunc) SetDefaultHook(hook func(context.Context, int, int, int, string) ([]resolvers.AdjustedLocation, string, error))](#QueryResolverReferencesFunc.SetDefaultHook)
+        * [func (f *QueryResolverReferencesFunc) SetDefaultReturn(r0 []resolvers.AdjustedLocation, r1 string, r2 error)](#QueryResolverReferencesFunc.SetDefaultReturn)
+        * [func (f *QueryResolverReferencesFunc) appendCall(r0 QueryResolverReferencesFuncCall)](#QueryResolverReferencesFunc.appendCall)
+        * [func (f *QueryResolverReferencesFunc) nextHook() func(context.Context, int, int, int, string) ([]resolvers.AdjustedLocation, string, error)](#QueryResolverReferencesFunc.nextHook)
+    * [type QueryResolverReferencesFuncCall struct](#QueryResolverReferencesFuncCall)
+        * [func (c QueryResolverReferencesFuncCall) Args() []interface{}](#QueryResolverReferencesFuncCall.Args)
+        * [func (c QueryResolverReferencesFuncCall) Results() []interface{}](#QueryResolverReferencesFuncCall.Results)
     * [type ResolverCommitGraphFunc struct](#ResolverCommitGraphFunc)
-        * [func (f *ResolverCommitGraphFunc) SetDefaultHook(hook func(context.Context, int) (graphqlbackend.CodeIntelligenceCommitGraphResolver, error))](#ResolverCommitGraphFunc.SetDefaultHook)
-        * [func (f *ResolverCommitGraphFunc) PushHook(hook func(context.Context, int) (graphqlbackend.CodeIntelligenceCommitGraphResolver, error))](#ResolverCommitGraphFunc.PushHook)
-        * [func (f *ResolverCommitGraphFunc) SetDefaultReturn(r0 graphqlbackend.CodeIntelligenceCommitGraphResolver, r1 error)](#ResolverCommitGraphFunc.SetDefaultReturn)
-        * [func (f *ResolverCommitGraphFunc) PushReturn(r0 graphqlbackend.CodeIntelligenceCommitGraphResolver, r1 error)](#ResolverCommitGraphFunc.PushReturn)
-        * [func (f *ResolverCommitGraphFunc) nextHook() func(context.Context, int) (graphqlbackend.CodeIntelligenceCommitGraphResolver, error)](#ResolverCommitGraphFunc.nextHook)
-        * [func (f *ResolverCommitGraphFunc) appendCall(r0 ResolverCommitGraphFuncCall)](#ResolverCommitGraphFunc.appendCall)
         * [func (f *ResolverCommitGraphFunc) History() []ResolverCommitGraphFuncCall](#ResolverCommitGraphFunc.History)
+        * [func (f *ResolverCommitGraphFunc) PushHook(hook func(context.Context, int) (graphqlbackend.CodeIntelligenceCommitGraphResolver, error))](#ResolverCommitGraphFunc.PushHook)
+        * [func (f *ResolverCommitGraphFunc) PushReturn(r0 graphqlbackend.CodeIntelligenceCommitGraphResolver, r1 error)](#ResolverCommitGraphFunc.PushReturn)
+        * [func (f *ResolverCommitGraphFunc) SetDefaultHook(hook func(context.Context, int) (graphqlbackend.CodeIntelligenceCommitGraphResolver, error))](#ResolverCommitGraphFunc.SetDefaultHook)
+        * [func (f *ResolverCommitGraphFunc) SetDefaultReturn(r0 graphqlbackend.CodeIntelligenceCommitGraphResolver, r1 error)](#ResolverCommitGraphFunc.SetDefaultReturn)
+        * [func (f *ResolverCommitGraphFunc) appendCall(r0 ResolverCommitGraphFuncCall)](#ResolverCommitGraphFunc.appendCall)
+        * [func (f *ResolverCommitGraphFunc) nextHook() func(context.Context, int) (graphqlbackend.CodeIntelligenceCommitGraphResolver, error)](#ResolverCommitGraphFunc.nextHook)
     * [type ResolverCommitGraphFuncCall struct](#ResolverCommitGraphFuncCall)
         * [func (c ResolverCommitGraphFuncCall) Args() []interface{}](#ResolverCommitGraphFuncCall.Args)
         * [func (c ResolverCommitGraphFuncCall) Results() []interface{}](#ResolverCommitGraphFuncCall.Results)
     * [type ResolverDeleteIndexByIDFunc struct](#ResolverDeleteIndexByIDFunc)
-        * [func (f *ResolverDeleteIndexByIDFunc) SetDefaultHook(hook func(context.Context, int) error)](#ResolverDeleteIndexByIDFunc.SetDefaultHook)
-        * [func (f *ResolverDeleteIndexByIDFunc) PushHook(hook func(context.Context, int) error)](#ResolverDeleteIndexByIDFunc.PushHook)
-        * [func (f *ResolverDeleteIndexByIDFunc) SetDefaultReturn(r0 error)](#ResolverDeleteIndexByIDFunc.SetDefaultReturn)
-        * [func (f *ResolverDeleteIndexByIDFunc) PushReturn(r0 error)](#ResolverDeleteIndexByIDFunc.PushReturn)
-        * [func (f *ResolverDeleteIndexByIDFunc) nextHook() func(context.Context, int) error](#ResolverDeleteIndexByIDFunc.nextHook)
-        * [func (f *ResolverDeleteIndexByIDFunc) appendCall(r0 ResolverDeleteIndexByIDFuncCall)](#ResolverDeleteIndexByIDFunc.appendCall)
         * [func (f *ResolverDeleteIndexByIDFunc) History() []ResolverDeleteIndexByIDFuncCall](#ResolverDeleteIndexByIDFunc.History)
+        * [func (f *ResolverDeleteIndexByIDFunc) PushHook(hook func(context.Context, int) error)](#ResolverDeleteIndexByIDFunc.PushHook)
+        * [func (f *ResolverDeleteIndexByIDFunc) PushReturn(r0 error)](#ResolverDeleteIndexByIDFunc.PushReturn)
+        * [func (f *ResolverDeleteIndexByIDFunc) SetDefaultHook(hook func(context.Context, int) error)](#ResolverDeleteIndexByIDFunc.SetDefaultHook)
+        * [func (f *ResolverDeleteIndexByIDFunc) SetDefaultReturn(r0 error)](#ResolverDeleteIndexByIDFunc.SetDefaultReturn)
+        * [func (f *ResolverDeleteIndexByIDFunc) appendCall(r0 ResolverDeleteIndexByIDFuncCall)](#ResolverDeleteIndexByIDFunc.appendCall)
+        * [func (f *ResolverDeleteIndexByIDFunc) nextHook() func(context.Context, int) error](#ResolverDeleteIndexByIDFunc.nextHook)
     * [type ResolverDeleteIndexByIDFuncCall struct](#ResolverDeleteIndexByIDFuncCall)
         * [func (c ResolverDeleteIndexByIDFuncCall) Args() []interface{}](#ResolverDeleteIndexByIDFuncCall.Args)
         * [func (c ResolverDeleteIndexByIDFuncCall) Results() []interface{}](#ResolverDeleteIndexByIDFuncCall.Results)
     * [type ResolverDeleteUploadByIDFunc struct](#ResolverDeleteUploadByIDFunc)
-        * [func (f *ResolverDeleteUploadByIDFunc) SetDefaultHook(hook func(context.Context, int) error)](#ResolverDeleteUploadByIDFunc.SetDefaultHook)
-        * [func (f *ResolverDeleteUploadByIDFunc) PushHook(hook func(context.Context, int) error)](#ResolverDeleteUploadByIDFunc.PushHook)
-        * [func (f *ResolverDeleteUploadByIDFunc) SetDefaultReturn(r0 error)](#ResolverDeleteUploadByIDFunc.SetDefaultReturn)
-        * [func (f *ResolverDeleteUploadByIDFunc) PushReturn(r0 error)](#ResolverDeleteUploadByIDFunc.PushReturn)
-        * [func (f *ResolverDeleteUploadByIDFunc) nextHook() func(context.Context, int) error](#ResolverDeleteUploadByIDFunc.nextHook)
-        * [func (f *ResolverDeleteUploadByIDFunc) appendCall(r0 ResolverDeleteUploadByIDFuncCall)](#ResolverDeleteUploadByIDFunc.appendCall)
         * [func (f *ResolverDeleteUploadByIDFunc) History() []ResolverDeleteUploadByIDFuncCall](#ResolverDeleteUploadByIDFunc.History)
+        * [func (f *ResolverDeleteUploadByIDFunc) PushHook(hook func(context.Context, int) error)](#ResolverDeleteUploadByIDFunc.PushHook)
+        * [func (f *ResolverDeleteUploadByIDFunc) PushReturn(r0 error)](#ResolverDeleteUploadByIDFunc.PushReturn)
+        * [func (f *ResolverDeleteUploadByIDFunc) SetDefaultHook(hook func(context.Context, int) error)](#ResolverDeleteUploadByIDFunc.SetDefaultHook)
+        * [func (f *ResolverDeleteUploadByIDFunc) SetDefaultReturn(r0 error)](#ResolverDeleteUploadByIDFunc.SetDefaultReturn)
+        * [func (f *ResolverDeleteUploadByIDFunc) appendCall(r0 ResolverDeleteUploadByIDFuncCall)](#ResolverDeleteUploadByIDFunc.appendCall)
+        * [func (f *ResolverDeleteUploadByIDFunc) nextHook() func(context.Context, int) error](#ResolverDeleteUploadByIDFunc.nextHook)
     * [type ResolverDeleteUploadByIDFuncCall struct](#ResolverDeleteUploadByIDFuncCall)
         * [func (c ResolverDeleteUploadByIDFuncCall) Args() []interface{}](#ResolverDeleteUploadByIDFuncCall.Args)
         * [func (c ResolverDeleteUploadByIDFuncCall) Results() []interface{}](#ResolverDeleteUploadByIDFuncCall.Results)
     * [type ResolverGetIndexByIDFunc struct](#ResolverGetIndexByIDFunc)
-        * [func (f *ResolverGetIndexByIDFunc) SetDefaultHook(hook func(context.Context, int) (dbstore.Index, bool, error))](#ResolverGetIndexByIDFunc.SetDefaultHook)
-        * [func (f *ResolverGetIndexByIDFunc) PushHook(hook func(context.Context, int) (dbstore.Index, bool, error))](#ResolverGetIndexByIDFunc.PushHook)
-        * [func (f *ResolverGetIndexByIDFunc) SetDefaultReturn(r0 dbstore.Index, r1 bool, r2 error)](#ResolverGetIndexByIDFunc.SetDefaultReturn)
-        * [func (f *ResolverGetIndexByIDFunc) PushReturn(r0 dbstore.Index, r1 bool, r2 error)](#ResolverGetIndexByIDFunc.PushReturn)
-        * [func (f *ResolverGetIndexByIDFunc) nextHook() func(context.Context, int) (dbstore.Index, bool, error)](#ResolverGetIndexByIDFunc.nextHook)
-        * [func (f *ResolverGetIndexByIDFunc) appendCall(r0 ResolverGetIndexByIDFuncCall)](#ResolverGetIndexByIDFunc.appendCall)
         * [func (f *ResolverGetIndexByIDFunc) History() []ResolverGetIndexByIDFuncCall](#ResolverGetIndexByIDFunc.History)
+        * [func (f *ResolverGetIndexByIDFunc) PushHook(hook func(context.Context, int) (dbstore.Index, bool, error))](#ResolverGetIndexByIDFunc.PushHook)
+        * [func (f *ResolverGetIndexByIDFunc) PushReturn(r0 dbstore.Index, r1 bool, r2 error)](#ResolverGetIndexByIDFunc.PushReturn)
+        * [func (f *ResolverGetIndexByIDFunc) SetDefaultHook(hook func(context.Context, int) (dbstore.Index, bool, error))](#ResolverGetIndexByIDFunc.SetDefaultHook)
+        * [func (f *ResolverGetIndexByIDFunc) SetDefaultReturn(r0 dbstore.Index, r1 bool, r2 error)](#ResolverGetIndexByIDFunc.SetDefaultReturn)
+        * [func (f *ResolverGetIndexByIDFunc) appendCall(r0 ResolverGetIndexByIDFuncCall)](#ResolverGetIndexByIDFunc.appendCall)
+        * [func (f *ResolverGetIndexByIDFunc) nextHook() func(context.Context, int) (dbstore.Index, bool, error)](#ResolverGetIndexByIDFunc.nextHook)
     * [type ResolverGetIndexByIDFuncCall struct](#ResolverGetIndexByIDFuncCall)
         * [func (c ResolverGetIndexByIDFuncCall) Args() []interface{}](#ResolverGetIndexByIDFuncCall.Args)
         * [func (c ResolverGetIndexByIDFuncCall) Results() []interface{}](#ResolverGetIndexByIDFuncCall.Results)
     * [type ResolverGetIndexesByIDsFunc struct](#ResolverGetIndexesByIDsFunc)
-        * [func (f *ResolverGetIndexesByIDsFunc) SetDefaultHook(hook func(context.Context, ...int) ([]dbstore.Index, error))](#ResolverGetIndexesByIDsFunc.SetDefaultHook)
-        * [func (f *ResolverGetIndexesByIDsFunc) PushHook(hook func(context.Context, ...int) ([]dbstore.Index, error))](#ResolverGetIndexesByIDsFunc.PushHook)
-        * [func (f *ResolverGetIndexesByIDsFunc) SetDefaultReturn(r0 []dbstore.Index, r1 error)](#ResolverGetIndexesByIDsFunc.SetDefaultReturn)
-        * [func (f *ResolverGetIndexesByIDsFunc) PushReturn(r0 []dbstore.Index, r1 error)](#ResolverGetIndexesByIDsFunc.PushReturn)
-        * [func (f *ResolverGetIndexesByIDsFunc) nextHook() func(context.Context, ...int) ([]dbstore.Index, error)](#ResolverGetIndexesByIDsFunc.nextHook)
-        * [func (f *ResolverGetIndexesByIDsFunc) appendCall(r0 ResolverGetIndexesByIDsFuncCall)](#ResolverGetIndexesByIDsFunc.appendCall)
         * [func (f *ResolverGetIndexesByIDsFunc) History() []ResolverGetIndexesByIDsFuncCall](#ResolverGetIndexesByIDsFunc.History)
+        * [func (f *ResolverGetIndexesByIDsFunc) PushHook(hook func(context.Context, ...int) ([]dbstore.Index, error))](#ResolverGetIndexesByIDsFunc.PushHook)
+        * [func (f *ResolverGetIndexesByIDsFunc) PushReturn(r0 []dbstore.Index, r1 error)](#ResolverGetIndexesByIDsFunc.PushReturn)
+        * [func (f *ResolverGetIndexesByIDsFunc) SetDefaultHook(hook func(context.Context, ...int) ([]dbstore.Index, error))](#ResolverGetIndexesByIDsFunc.SetDefaultHook)
+        * [func (f *ResolverGetIndexesByIDsFunc) SetDefaultReturn(r0 []dbstore.Index, r1 error)](#ResolverGetIndexesByIDsFunc.SetDefaultReturn)
+        * [func (f *ResolverGetIndexesByIDsFunc) appendCall(r0 ResolverGetIndexesByIDsFuncCall)](#ResolverGetIndexesByIDsFunc.appendCall)
+        * [func (f *ResolverGetIndexesByIDsFunc) nextHook() func(context.Context, ...int) ([]dbstore.Index, error)](#ResolverGetIndexesByIDsFunc.nextHook)
     * [type ResolverGetIndexesByIDsFuncCall struct](#ResolverGetIndexesByIDsFuncCall)
         * [func (c ResolverGetIndexesByIDsFuncCall) Args() []interface{}](#ResolverGetIndexesByIDsFuncCall.Args)
         * [func (c ResolverGetIndexesByIDsFuncCall) Results() []interface{}](#ResolverGetIndexesByIDsFuncCall.Results)
     * [type ResolverGetUploadByIDFunc struct](#ResolverGetUploadByIDFunc)
-        * [func (f *ResolverGetUploadByIDFunc) SetDefaultHook(hook func(context.Context, int) (dbstore.Upload, bool, error))](#ResolverGetUploadByIDFunc.SetDefaultHook)
-        * [func (f *ResolverGetUploadByIDFunc) PushHook(hook func(context.Context, int) (dbstore.Upload, bool, error))](#ResolverGetUploadByIDFunc.PushHook)
-        * [func (f *ResolverGetUploadByIDFunc) SetDefaultReturn(r0 dbstore.Upload, r1 bool, r2 error)](#ResolverGetUploadByIDFunc.SetDefaultReturn)
-        * [func (f *ResolverGetUploadByIDFunc) PushReturn(r0 dbstore.Upload, r1 bool, r2 error)](#ResolverGetUploadByIDFunc.PushReturn)
-        * [func (f *ResolverGetUploadByIDFunc) nextHook() func(context.Context, int) (dbstore.Upload, bool, error)](#ResolverGetUploadByIDFunc.nextHook)
-        * [func (f *ResolverGetUploadByIDFunc) appendCall(r0 ResolverGetUploadByIDFuncCall)](#ResolverGetUploadByIDFunc.appendCall)
         * [func (f *ResolverGetUploadByIDFunc) History() []ResolverGetUploadByIDFuncCall](#ResolverGetUploadByIDFunc.History)
+        * [func (f *ResolverGetUploadByIDFunc) PushHook(hook func(context.Context, int) (dbstore.Upload, bool, error))](#ResolverGetUploadByIDFunc.PushHook)
+        * [func (f *ResolverGetUploadByIDFunc) PushReturn(r0 dbstore.Upload, r1 bool, r2 error)](#ResolverGetUploadByIDFunc.PushReturn)
+        * [func (f *ResolverGetUploadByIDFunc) SetDefaultHook(hook func(context.Context, int) (dbstore.Upload, bool, error))](#ResolverGetUploadByIDFunc.SetDefaultHook)
+        * [func (f *ResolverGetUploadByIDFunc) SetDefaultReturn(r0 dbstore.Upload, r1 bool, r2 error)](#ResolverGetUploadByIDFunc.SetDefaultReturn)
+        * [func (f *ResolverGetUploadByIDFunc) appendCall(r0 ResolverGetUploadByIDFuncCall)](#ResolverGetUploadByIDFunc.appendCall)
+        * [func (f *ResolverGetUploadByIDFunc) nextHook() func(context.Context, int) (dbstore.Upload, bool, error)](#ResolverGetUploadByIDFunc.nextHook)
     * [type ResolverGetUploadByIDFuncCall struct](#ResolverGetUploadByIDFuncCall)
         * [func (c ResolverGetUploadByIDFuncCall) Args() []interface{}](#ResolverGetUploadByIDFuncCall.Args)
         * [func (c ResolverGetUploadByIDFuncCall) Results() []interface{}](#ResolverGetUploadByIDFuncCall.Results)
     * [type ResolverGetUploadsByIDsFunc struct](#ResolverGetUploadsByIDsFunc)
-        * [func (f *ResolverGetUploadsByIDsFunc) SetDefaultHook(hook func(context.Context, ...int) ([]dbstore.Upload, error))](#ResolverGetUploadsByIDsFunc.SetDefaultHook)
-        * [func (f *ResolverGetUploadsByIDsFunc) PushHook(hook func(context.Context, ...int) ([]dbstore.Upload, error))](#ResolverGetUploadsByIDsFunc.PushHook)
-        * [func (f *ResolverGetUploadsByIDsFunc) SetDefaultReturn(r0 []dbstore.Upload, r1 error)](#ResolverGetUploadsByIDsFunc.SetDefaultReturn)
-        * [func (f *ResolverGetUploadsByIDsFunc) PushReturn(r0 []dbstore.Upload, r1 error)](#ResolverGetUploadsByIDsFunc.PushReturn)
-        * [func (f *ResolverGetUploadsByIDsFunc) nextHook() func(context.Context, ...int) ([]dbstore.Upload, error)](#ResolverGetUploadsByIDsFunc.nextHook)
-        * [func (f *ResolverGetUploadsByIDsFunc) appendCall(r0 ResolverGetUploadsByIDsFuncCall)](#ResolverGetUploadsByIDsFunc.appendCall)
         * [func (f *ResolverGetUploadsByIDsFunc) History() []ResolverGetUploadsByIDsFuncCall](#ResolverGetUploadsByIDsFunc.History)
+        * [func (f *ResolverGetUploadsByIDsFunc) PushHook(hook func(context.Context, ...int) ([]dbstore.Upload, error))](#ResolverGetUploadsByIDsFunc.PushHook)
+        * [func (f *ResolverGetUploadsByIDsFunc) PushReturn(r0 []dbstore.Upload, r1 error)](#ResolverGetUploadsByIDsFunc.PushReturn)
+        * [func (f *ResolverGetUploadsByIDsFunc) SetDefaultHook(hook func(context.Context, ...int) ([]dbstore.Upload, error))](#ResolverGetUploadsByIDsFunc.SetDefaultHook)
+        * [func (f *ResolverGetUploadsByIDsFunc) SetDefaultReturn(r0 []dbstore.Upload, r1 error)](#ResolverGetUploadsByIDsFunc.SetDefaultReturn)
+        * [func (f *ResolverGetUploadsByIDsFunc) appendCall(r0 ResolverGetUploadsByIDsFuncCall)](#ResolverGetUploadsByIDsFunc.appendCall)
+        * [func (f *ResolverGetUploadsByIDsFunc) nextHook() func(context.Context, ...int) ([]dbstore.Upload, error)](#ResolverGetUploadsByIDsFunc.nextHook)
     * [type ResolverGetUploadsByIDsFuncCall struct](#ResolverGetUploadsByIDsFuncCall)
         * [func (c ResolverGetUploadsByIDsFuncCall) Args() []interface{}](#ResolverGetUploadsByIDsFuncCall.Args)
         * [func (c ResolverGetUploadsByIDsFuncCall) Results() []interface{}](#ResolverGetUploadsByIDsFuncCall.Results)
     * [type ResolverIndexConfigurationFunc struct](#ResolverIndexConfigurationFunc)
-        * [func (f *ResolverIndexConfigurationFunc) SetDefaultHook(hook func(context.Context, int) ([]byte, error))](#ResolverIndexConfigurationFunc.SetDefaultHook)
-        * [func (f *ResolverIndexConfigurationFunc) PushHook(hook func(context.Context, int) ([]byte, error))](#ResolverIndexConfigurationFunc.PushHook)
-        * [func (f *ResolverIndexConfigurationFunc) SetDefaultReturn(r0 []byte, r1 error)](#ResolverIndexConfigurationFunc.SetDefaultReturn)
-        * [func (f *ResolverIndexConfigurationFunc) PushReturn(r0 []byte, r1 error)](#ResolverIndexConfigurationFunc.PushReturn)
-        * [func (f *ResolverIndexConfigurationFunc) nextHook() func(context.Context, int) ([]byte, error)](#ResolverIndexConfigurationFunc.nextHook)
-        * [func (f *ResolverIndexConfigurationFunc) appendCall(r0 ResolverIndexConfigurationFuncCall)](#ResolverIndexConfigurationFunc.appendCall)
         * [func (f *ResolverIndexConfigurationFunc) History() []ResolverIndexConfigurationFuncCall](#ResolverIndexConfigurationFunc.History)
+        * [func (f *ResolverIndexConfigurationFunc) PushHook(hook func(context.Context, int) ([]byte, error))](#ResolverIndexConfigurationFunc.PushHook)
+        * [func (f *ResolverIndexConfigurationFunc) PushReturn(r0 []byte, r1 error)](#ResolverIndexConfigurationFunc.PushReturn)
+        * [func (f *ResolverIndexConfigurationFunc) SetDefaultHook(hook func(context.Context, int) ([]byte, error))](#ResolverIndexConfigurationFunc.SetDefaultHook)
+        * [func (f *ResolverIndexConfigurationFunc) SetDefaultReturn(r0 []byte, r1 error)](#ResolverIndexConfigurationFunc.SetDefaultReturn)
+        * [func (f *ResolverIndexConfigurationFunc) appendCall(r0 ResolverIndexConfigurationFuncCall)](#ResolverIndexConfigurationFunc.appendCall)
+        * [func (f *ResolverIndexConfigurationFunc) nextHook() func(context.Context, int) ([]byte, error)](#ResolverIndexConfigurationFunc.nextHook)
     * [type ResolverIndexConfigurationFuncCall struct](#ResolverIndexConfigurationFuncCall)
         * [func (c ResolverIndexConfigurationFuncCall) Args() []interface{}](#ResolverIndexConfigurationFuncCall.Args)
         * [func (c ResolverIndexConfigurationFuncCall) Results() []interface{}](#ResolverIndexConfigurationFuncCall.Results)
     * [type ResolverIndexConnectionResolverFunc struct](#ResolverIndexConnectionResolverFunc)
-        * [func (f *ResolverIndexConnectionResolverFunc) SetDefaultHook(hook func(dbstore.GetIndexesOptions) *resolvers.IndexesResolver)](#ResolverIndexConnectionResolverFunc.SetDefaultHook)
-        * [func (f *ResolverIndexConnectionResolverFunc) PushHook(hook func(dbstore.GetIndexesOptions) *resolvers.IndexesResolver)](#ResolverIndexConnectionResolverFunc.PushHook)
-        * [func (f *ResolverIndexConnectionResolverFunc) SetDefaultReturn(r0 *resolvers.IndexesResolver)](#ResolverIndexConnectionResolverFunc.SetDefaultReturn)
-        * [func (f *ResolverIndexConnectionResolverFunc) PushReturn(r0 *resolvers.IndexesResolver)](#ResolverIndexConnectionResolverFunc.PushReturn)
-        * [func (f *ResolverIndexConnectionResolverFunc) nextHook() func(dbstore.GetIndexesOptions) *resolvers.IndexesResolver](#ResolverIndexConnectionResolverFunc.nextHook)
-        * [func (f *ResolverIndexConnectionResolverFunc) appendCall(r0 ResolverIndexConnectionResolverFuncCall)](#ResolverIndexConnectionResolverFunc.appendCall)
         * [func (f *ResolverIndexConnectionResolverFunc) History() []ResolverIndexConnectionResolverFuncCall](#ResolverIndexConnectionResolverFunc.History)
+        * [func (f *ResolverIndexConnectionResolverFunc) PushHook(hook func(dbstore.GetIndexesOptions) *resolvers.IndexesResolver)](#ResolverIndexConnectionResolverFunc.PushHook)
+        * [func (f *ResolverIndexConnectionResolverFunc) PushReturn(r0 *resolvers.IndexesResolver)](#ResolverIndexConnectionResolverFunc.PushReturn)
+        * [func (f *ResolverIndexConnectionResolverFunc) SetDefaultHook(hook func(dbstore.GetIndexesOptions) *resolvers.IndexesResolver)](#ResolverIndexConnectionResolverFunc.SetDefaultHook)
+        * [func (f *ResolverIndexConnectionResolverFunc) SetDefaultReturn(r0 *resolvers.IndexesResolver)](#ResolverIndexConnectionResolverFunc.SetDefaultReturn)
+        * [func (f *ResolverIndexConnectionResolverFunc) appendCall(r0 ResolverIndexConnectionResolverFuncCall)](#ResolverIndexConnectionResolverFunc.appendCall)
+        * [func (f *ResolverIndexConnectionResolverFunc) nextHook() func(dbstore.GetIndexesOptions) *resolvers.IndexesResolver](#ResolverIndexConnectionResolverFunc.nextHook)
     * [type ResolverIndexConnectionResolverFuncCall struct](#ResolverIndexConnectionResolverFuncCall)
         * [func (c ResolverIndexConnectionResolverFuncCall) Args() []interface{}](#ResolverIndexConnectionResolverFuncCall.Args)
         * [func (c ResolverIndexConnectionResolverFuncCall) Results() []interface{}](#ResolverIndexConnectionResolverFuncCall.Results)
     * [type ResolverQueryResolverFunc struct](#ResolverQueryResolverFunc)
-        * [func (f *ResolverQueryResolverFunc) SetDefaultHook(hook func(context.Context, *graphqlbackend.GitBlobLSIFDataArgs) (resolvers.QueryResolver, error))](#ResolverQueryResolverFunc.SetDefaultHook)
-        * [func (f *ResolverQueryResolverFunc) PushHook(hook func(context.Context, *graphqlbackend.GitBlobLSIFDataArgs) (resolvers.QueryResolver, error))](#ResolverQueryResolverFunc.PushHook)
-        * [func (f *ResolverQueryResolverFunc) SetDefaultReturn(r0 resolvers.QueryResolver, r1 error)](#ResolverQueryResolverFunc.SetDefaultReturn)
-        * [func (f *ResolverQueryResolverFunc) PushReturn(r0 resolvers.QueryResolver, r1 error)](#ResolverQueryResolverFunc.PushReturn)
-        * [func (f *ResolverQueryResolverFunc) nextHook() func(context.Context, *graphqlbackend.GitBlobLSIFDataArgs) (resolvers.QueryResolver, error)](#ResolverQueryResolverFunc.nextHook)
-        * [func (f *ResolverQueryResolverFunc) appendCall(r0 ResolverQueryResolverFuncCall)](#ResolverQueryResolverFunc.appendCall)
         * [func (f *ResolverQueryResolverFunc) History() []ResolverQueryResolverFuncCall](#ResolverQueryResolverFunc.History)
+        * [func (f *ResolverQueryResolverFunc) PushHook(hook func(context.Context, *graphqlbackend.GitBlobLSIFDataArgs) (resolvers.QueryResolver, error))](#ResolverQueryResolverFunc.PushHook)
+        * [func (f *ResolverQueryResolverFunc) PushReturn(r0 resolvers.QueryResolver, r1 error)](#ResolverQueryResolverFunc.PushReturn)
+        * [func (f *ResolverQueryResolverFunc) SetDefaultHook(hook func(context.Context, *graphqlbackend.GitBlobLSIFDataArgs) (resolvers.QueryResolver, error))](#ResolverQueryResolverFunc.SetDefaultHook)
+        * [func (f *ResolverQueryResolverFunc) SetDefaultReturn(r0 resolvers.QueryResolver, r1 error)](#ResolverQueryResolverFunc.SetDefaultReturn)
+        * [func (f *ResolverQueryResolverFunc) appendCall(r0 ResolverQueryResolverFuncCall)](#ResolverQueryResolverFunc.appendCall)
+        * [func (f *ResolverQueryResolverFunc) nextHook() func(context.Context, *graphqlbackend.GitBlobLSIFDataArgs) (resolvers.QueryResolver, error)](#ResolverQueryResolverFunc.nextHook)
     * [type ResolverQueryResolverFuncCall struct](#ResolverQueryResolverFuncCall)
         * [func (c ResolverQueryResolverFuncCall) Args() []interface{}](#ResolverQueryResolverFuncCall.Args)
         * [func (c ResolverQueryResolverFuncCall) Results() []interface{}](#ResolverQueryResolverFuncCall.Results)
     * [type ResolverQueueAutoIndexJobForRepoFunc struct](#ResolverQueueAutoIndexJobForRepoFunc)
-        * [func (f *ResolverQueueAutoIndexJobForRepoFunc) SetDefaultHook(hook func(context.Context, int) error)](#ResolverQueueAutoIndexJobForRepoFunc.SetDefaultHook)
-        * [func (f *ResolverQueueAutoIndexJobForRepoFunc) PushHook(hook func(context.Context, int) error)](#ResolverQueueAutoIndexJobForRepoFunc.PushHook)
-        * [func (f *ResolverQueueAutoIndexJobForRepoFunc) SetDefaultReturn(r0 error)](#ResolverQueueAutoIndexJobForRepoFunc.SetDefaultReturn)
-        * [func (f *ResolverQueueAutoIndexJobForRepoFunc) PushReturn(r0 error)](#ResolverQueueAutoIndexJobForRepoFunc.PushReturn)
-        * [func (f *ResolverQueueAutoIndexJobForRepoFunc) nextHook() func(context.Context, int) error](#ResolverQueueAutoIndexJobForRepoFunc.nextHook)
-        * [func (f *ResolverQueueAutoIndexJobForRepoFunc) appendCall(r0 ResolverQueueAutoIndexJobForRepoFuncCall)](#ResolverQueueAutoIndexJobForRepoFunc.appendCall)
         * [func (f *ResolverQueueAutoIndexJobForRepoFunc) History() []ResolverQueueAutoIndexJobForRepoFuncCall](#ResolverQueueAutoIndexJobForRepoFunc.History)
+        * [func (f *ResolverQueueAutoIndexJobForRepoFunc) PushHook(hook func(context.Context, int) error)](#ResolverQueueAutoIndexJobForRepoFunc.PushHook)
+        * [func (f *ResolverQueueAutoIndexJobForRepoFunc) PushReturn(r0 error)](#ResolverQueueAutoIndexJobForRepoFunc.PushReturn)
+        * [func (f *ResolverQueueAutoIndexJobForRepoFunc) SetDefaultHook(hook func(context.Context, int) error)](#ResolverQueueAutoIndexJobForRepoFunc.SetDefaultHook)
+        * [func (f *ResolverQueueAutoIndexJobForRepoFunc) SetDefaultReturn(r0 error)](#ResolverQueueAutoIndexJobForRepoFunc.SetDefaultReturn)
+        * [func (f *ResolverQueueAutoIndexJobForRepoFunc) appendCall(r0 ResolverQueueAutoIndexJobForRepoFuncCall)](#ResolverQueueAutoIndexJobForRepoFunc.appendCall)
+        * [func (f *ResolverQueueAutoIndexJobForRepoFunc) nextHook() func(context.Context, int) error](#ResolverQueueAutoIndexJobForRepoFunc.nextHook)
     * [type ResolverQueueAutoIndexJobForRepoFuncCall struct](#ResolverQueueAutoIndexJobForRepoFuncCall)
         * [func (c ResolverQueueAutoIndexJobForRepoFuncCall) Args() []interface{}](#ResolverQueueAutoIndexJobForRepoFuncCall.Args)
         * [func (c ResolverQueueAutoIndexJobForRepoFuncCall) Results() []interface{}](#ResolverQueueAutoIndexJobForRepoFuncCall.Results)
     * [type ResolverUpdateIndexConfigurationByRepositoryIDFunc struct](#ResolverUpdateIndexConfigurationByRepositoryIDFunc)
-        * [func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) SetDefaultHook(hook func(context.Context, int, string) error)](#ResolverUpdateIndexConfigurationByRepositoryIDFunc.SetDefaultHook)
-        * [func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) PushHook(hook func(context.Context, int, string) error)](#ResolverUpdateIndexConfigurationByRepositoryIDFunc.PushHook)
-        * [func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) SetDefaultReturn(r0 error)](#ResolverUpdateIndexConfigurationByRepositoryIDFunc.SetDefaultReturn)
-        * [func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) PushReturn(r0 error)](#ResolverUpdateIndexConfigurationByRepositoryIDFunc.PushReturn)
-        * [func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) nextHook() func(context.Context, int, string) error](#ResolverUpdateIndexConfigurationByRepositoryIDFunc.nextHook)
-        * [func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) appendCall(r0 ResolverUpdateIndexConfigurationByRepositoryIDFuncCall)](#ResolverUpdateIndexConfigurationByRepositoryIDFunc.appendCall)
         * [func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) History() []ResolverUpdateIndexConfigurationByRepositoryIDFuncCall](#ResolverUpdateIndexConfigurationByRepositoryIDFunc.History)
+        * [func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) PushHook(hook func(context.Context, int, string) error)](#ResolverUpdateIndexConfigurationByRepositoryIDFunc.PushHook)
+        * [func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) PushReturn(r0 error)](#ResolverUpdateIndexConfigurationByRepositoryIDFunc.PushReturn)
+        * [func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) SetDefaultHook(hook func(context.Context, int, string) error)](#ResolverUpdateIndexConfigurationByRepositoryIDFunc.SetDefaultHook)
+        * [func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) SetDefaultReturn(r0 error)](#ResolverUpdateIndexConfigurationByRepositoryIDFunc.SetDefaultReturn)
+        * [func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) appendCall(r0 ResolverUpdateIndexConfigurationByRepositoryIDFuncCall)](#ResolverUpdateIndexConfigurationByRepositoryIDFunc.appendCall)
+        * [func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) nextHook() func(context.Context, int, string) error](#ResolverUpdateIndexConfigurationByRepositoryIDFunc.nextHook)
     * [type ResolverUpdateIndexConfigurationByRepositoryIDFuncCall struct](#ResolverUpdateIndexConfigurationByRepositoryIDFuncCall)
         * [func (c ResolverUpdateIndexConfigurationByRepositoryIDFuncCall) Args() []interface{}](#ResolverUpdateIndexConfigurationByRepositoryIDFuncCall.Args)
         * [func (c ResolverUpdateIndexConfigurationByRepositoryIDFuncCall) Results() []interface{}](#ResolverUpdateIndexConfigurationByRepositoryIDFuncCall.Results)
     * [type ResolverUploadConnectionResolverFunc struct](#ResolverUploadConnectionResolverFunc)
-        * [func (f *ResolverUploadConnectionResolverFunc) SetDefaultHook(hook func(dbstore.GetUploadsOptions) *resolvers.UploadsResolver)](#ResolverUploadConnectionResolverFunc.SetDefaultHook)
-        * [func (f *ResolverUploadConnectionResolverFunc) PushHook(hook func(dbstore.GetUploadsOptions) *resolvers.UploadsResolver)](#ResolverUploadConnectionResolverFunc.PushHook)
-        * [func (f *ResolverUploadConnectionResolverFunc) SetDefaultReturn(r0 *resolvers.UploadsResolver)](#ResolverUploadConnectionResolverFunc.SetDefaultReturn)
-        * [func (f *ResolverUploadConnectionResolverFunc) PushReturn(r0 *resolvers.UploadsResolver)](#ResolverUploadConnectionResolverFunc.PushReturn)
-        * [func (f *ResolverUploadConnectionResolverFunc) nextHook() func(dbstore.GetUploadsOptions) *resolvers.UploadsResolver](#ResolverUploadConnectionResolverFunc.nextHook)
-        * [func (f *ResolverUploadConnectionResolverFunc) appendCall(r0 ResolverUploadConnectionResolverFuncCall)](#ResolverUploadConnectionResolverFunc.appendCall)
         * [func (f *ResolverUploadConnectionResolverFunc) History() []ResolverUploadConnectionResolverFuncCall](#ResolverUploadConnectionResolverFunc.History)
+        * [func (f *ResolverUploadConnectionResolverFunc) PushHook(hook func(dbstore.GetUploadsOptions) *resolvers.UploadsResolver)](#ResolverUploadConnectionResolverFunc.PushHook)
+        * [func (f *ResolverUploadConnectionResolverFunc) PushReturn(r0 *resolvers.UploadsResolver)](#ResolverUploadConnectionResolverFunc.PushReturn)
+        * [func (f *ResolverUploadConnectionResolverFunc) SetDefaultHook(hook func(dbstore.GetUploadsOptions) *resolvers.UploadsResolver)](#ResolverUploadConnectionResolverFunc.SetDefaultHook)
+        * [func (f *ResolverUploadConnectionResolverFunc) SetDefaultReturn(r0 *resolvers.UploadsResolver)](#ResolverUploadConnectionResolverFunc.SetDefaultReturn)
+        * [func (f *ResolverUploadConnectionResolverFunc) appendCall(r0 ResolverUploadConnectionResolverFuncCall)](#ResolverUploadConnectionResolverFunc.appendCall)
+        * [func (f *ResolverUploadConnectionResolverFunc) nextHook() func(dbstore.GetUploadsOptions) *resolvers.UploadsResolver](#ResolverUploadConnectionResolverFunc.nextHook)
     * [type ResolverUploadConnectionResolverFuncCall struct](#ResolverUploadConnectionResolverFuncCall)
         * [func (c ResolverUploadConnectionResolverFuncCall) Args() []interface{}](#ResolverUploadConnectionResolverFuncCall.Args)
         * [func (c ResolverUploadConnectionResolverFuncCall) Results() []interface{}](#ResolverUploadConnectionResolverFuncCall.Results)
@@ -242,13 +242,14 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="MockQueryResolver" href="#MockQueryResolver">type MockQueryResolver struct</a>
 
 ```
 searchKey: mocks.MockQueryResolver
+tags: [struct]
 ```
 
 ```Go
@@ -280,6 +281,7 @@ MockQueryResolver is a mock implementation of the QueryResolver interface (from 
 
 ```
 searchKey: mocks.NewMockQueryResolver
+tags: [function]
 ```
 
 ```Go
@@ -292,6 +294,7 @@ NewMockQueryResolver creates a new mock of the QueryResolver interface. All meth
 
 ```
 searchKey: mocks.NewMockQueryResolverFrom
+tags: [method]
 ```
 
 ```Go
@@ -304,6 +307,7 @@ NewMockQueryResolverFrom creates a new mock of the MockQueryResolver interface. 
 
 ```
 searchKey: mocks.MockQueryResolver.Definitions
+tags: [method]
 ```
 
 ```Go
@@ -316,6 +320,7 @@ Definitions delegates to the next hook function in the queue and stores the para
 
 ```
 searchKey: mocks.MockQueryResolver.Diagnostics
+tags: [method]
 ```
 
 ```Go
@@ -328,6 +333,7 @@ Diagnostics delegates to the next hook function in the queue and stores the para
 
 ```
 searchKey: mocks.MockQueryResolver.DocumentationPage
+tags: [method]
 ```
 
 ```Go
@@ -340,6 +346,7 @@ DocumentationPage delegates to the next hook function in the queue and stores th
 
 ```
 searchKey: mocks.MockQueryResolver.Hover
+tags: [method]
 ```
 
 ```Go
@@ -352,6 +359,7 @@ Hover delegates to the next hook function in the queue and stores the parameter 
 
 ```
 searchKey: mocks.MockQueryResolver.Ranges
+tags: [method]
 ```
 
 ```Go
@@ -364,6 +372,7 @@ Ranges delegates to the next hook function in the queue and stores the parameter
 
 ```
 searchKey: mocks.MockQueryResolver.References
+tags: [method]
 ```
 
 ```Go
@@ -372,928 +381,11 @@ func (m *MockQueryResolver) References(v0 context.Context, v1 int, v2 int, v3 in
 
 References delegates to the next hook function in the queue and stores the parameter and result values of this invocation. 
 
-### <a id="QueryResolverDefinitionsFunc" href="#QueryResolverDefinitionsFunc">type QueryResolverDefinitionsFunc struct</a>
-
-```
-searchKey: mocks.QueryResolverDefinitionsFunc
-```
-
-```Go
-type QueryResolverDefinitionsFunc struct {
-	defaultHook func(context.Context, int, int) ([]resolvers.AdjustedLocation, error)
-	hooks       []func(context.Context, int, int) ([]resolvers.AdjustedLocation, error)
-	history     []QueryResolverDefinitionsFuncCall
-	mutex       sync.Mutex
-}
-```
-
-QueryResolverDefinitionsFunc describes the behavior when the Definitions method of the parent MockQueryResolver instance is invoked. 
-
-#### <a id="QueryResolverDefinitionsFunc.SetDefaultHook" href="#QueryResolverDefinitionsFunc.SetDefaultHook">func (f *QueryResolverDefinitionsFunc) SetDefaultHook(hook func(context.Context, int, int) ([]resolvers.AdjustedLocation, error))</a>
-
-```
-searchKey: mocks.QueryResolverDefinitionsFunc.SetDefaultHook
-```
-
-```Go
-func (f *QueryResolverDefinitionsFunc) SetDefaultHook(hook func(context.Context, int, int) ([]resolvers.AdjustedLocation, error))
-```
-
-SetDefaultHook sets function that is called when the Definitions method of the parent MockQueryResolver instance is invoked and the hook queue is empty. 
-
-#### <a id="QueryResolverDefinitionsFunc.PushHook" href="#QueryResolverDefinitionsFunc.PushHook">func (f *QueryResolverDefinitionsFunc) PushHook(hook func(context.Context, int, int) ([]resolvers.AdjustedLocation, error))</a>
-
-```
-searchKey: mocks.QueryResolverDefinitionsFunc.PushHook
-```
-
-```Go
-func (f *QueryResolverDefinitionsFunc) PushHook(hook func(context.Context, int, int) ([]resolvers.AdjustedLocation, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the Definitions method of the parent MockQueryResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="QueryResolverDefinitionsFunc.SetDefaultReturn" href="#QueryResolverDefinitionsFunc.SetDefaultReturn">func (f *QueryResolverDefinitionsFunc) SetDefaultReturn(r0 []resolvers.AdjustedLocation, r1 error)</a>
-
-```
-searchKey: mocks.QueryResolverDefinitionsFunc.SetDefaultReturn
-```
-
-```Go
-func (f *QueryResolverDefinitionsFunc) SetDefaultReturn(r0 []resolvers.AdjustedLocation, r1 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="QueryResolverDefinitionsFunc.PushReturn" href="#QueryResolverDefinitionsFunc.PushReturn">func (f *QueryResolverDefinitionsFunc) PushReturn(r0 []resolvers.AdjustedLocation, r1 error)</a>
-
-```
-searchKey: mocks.QueryResolverDefinitionsFunc.PushReturn
-```
-
-```Go
-func (f *QueryResolverDefinitionsFunc) PushReturn(r0 []resolvers.AdjustedLocation, r1 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="QueryResolverDefinitionsFunc.nextHook" href="#QueryResolverDefinitionsFunc.nextHook">func (f *QueryResolverDefinitionsFunc) nextHook() func(context.Context, int, int) ([]resolvers.AdjustedLocation, error)</a>
-
-```
-searchKey: mocks.QueryResolverDefinitionsFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *QueryResolverDefinitionsFunc) nextHook() func(context.Context, int, int) ([]resolvers.AdjustedLocation, error)
-```
-
-#### <a id="QueryResolverDefinitionsFunc.appendCall" href="#QueryResolverDefinitionsFunc.appendCall">func (f *QueryResolverDefinitionsFunc) appendCall(r0 QueryResolverDefinitionsFuncCall)</a>
-
-```
-searchKey: mocks.QueryResolverDefinitionsFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *QueryResolverDefinitionsFunc) appendCall(r0 QueryResolverDefinitionsFuncCall)
-```
-
-#### <a id="QueryResolverDefinitionsFunc.History" href="#QueryResolverDefinitionsFunc.History">func (f *QueryResolverDefinitionsFunc) History() []QueryResolverDefinitionsFuncCall</a>
-
-```
-searchKey: mocks.QueryResolverDefinitionsFunc.History
-```
-
-```Go
-func (f *QueryResolverDefinitionsFunc) History() []QueryResolverDefinitionsFuncCall
-```
-
-History returns a sequence of QueryResolverDefinitionsFuncCall objects describing the invocations of this function. 
-
-### <a id="QueryResolverDefinitionsFuncCall" href="#QueryResolverDefinitionsFuncCall">type QueryResolverDefinitionsFuncCall struct</a>
-
-```
-searchKey: mocks.QueryResolverDefinitionsFuncCall
-```
-
-```Go
-type QueryResolverDefinitionsFuncCall struct {
-	// Arg0 is the value of the 1st argument passed to this method
-	// invocation.
-	Arg0 context.Context
-	// Arg1 is the value of the 2nd argument passed to this method
-	// invocation.
-	Arg1 int
-	// Arg2 is the value of the 3rd argument passed to this method
-	// invocation.
-	Arg2 int
-	// Result0 is the value of the 1st result returned from this method
-	// invocation.
-	Result0 []resolvers.AdjustedLocation
-	// Result1 is the value of the 2nd result returned from this method
-	// invocation.
-	Result1 error
-}
-```
-
-QueryResolverDefinitionsFuncCall is an object that describes an invocation of method Definitions on an instance of MockQueryResolver. 
-
-#### <a id="QueryResolverDefinitionsFuncCall.Args" href="#QueryResolverDefinitionsFuncCall.Args">func (c QueryResolverDefinitionsFuncCall) Args() []interface{}</a>
-
-```
-searchKey: mocks.QueryResolverDefinitionsFuncCall.Args
-```
-
-```Go
-func (c QueryResolverDefinitionsFuncCall) Args() []interface{}
-```
-
-Args returns an interface slice containing the arguments of this invocation. 
-
-#### <a id="QueryResolverDefinitionsFuncCall.Results" href="#QueryResolverDefinitionsFuncCall.Results">func (c QueryResolverDefinitionsFuncCall) Results() []interface{}</a>
-
-```
-searchKey: mocks.QueryResolverDefinitionsFuncCall.Results
-```
-
-```Go
-func (c QueryResolverDefinitionsFuncCall) Results() []interface{}
-```
-
-Results returns an interface slice containing the results of this invocation. 
-
-### <a id="QueryResolverDiagnosticsFunc" href="#QueryResolverDiagnosticsFunc">type QueryResolverDiagnosticsFunc struct</a>
-
-```
-searchKey: mocks.QueryResolverDiagnosticsFunc
-```
-
-```Go
-type QueryResolverDiagnosticsFunc struct {
-	defaultHook func(context.Context, int) ([]resolvers.AdjustedDiagnostic, int, error)
-	hooks       []func(context.Context, int) ([]resolvers.AdjustedDiagnostic, int, error)
-	history     []QueryResolverDiagnosticsFuncCall
-	mutex       sync.Mutex
-}
-```
-
-QueryResolverDiagnosticsFunc describes the behavior when the Diagnostics method of the parent MockQueryResolver instance is invoked. 
-
-#### <a id="QueryResolverDiagnosticsFunc.SetDefaultHook" href="#QueryResolverDiagnosticsFunc.SetDefaultHook">func (f *QueryResolverDiagnosticsFunc) SetDefaultHook(hook func(context.Context, int) ([]resolvers.AdjustedDiagnostic, int, error))</a>
-
-```
-searchKey: mocks.QueryResolverDiagnosticsFunc.SetDefaultHook
-```
-
-```Go
-func (f *QueryResolverDiagnosticsFunc) SetDefaultHook(hook func(context.Context, int) ([]resolvers.AdjustedDiagnostic, int, error))
-```
-
-SetDefaultHook sets function that is called when the Diagnostics method of the parent MockQueryResolver instance is invoked and the hook queue is empty. 
-
-#### <a id="QueryResolverDiagnosticsFunc.PushHook" href="#QueryResolverDiagnosticsFunc.PushHook">func (f *QueryResolverDiagnosticsFunc) PushHook(hook func(context.Context, int) ([]resolvers.AdjustedDiagnostic, int, error))</a>
-
-```
-searchKey: mocks.QueryResolverDiagnosticsFunc.PushHook
-```
-
-```Go
-func (f *QueryResolverDiagnosticsFunc) PushHook(hook func(context.Context, int) ([]resolvers.AdjustedDiagnostic, int, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the Diagnostics method of the parent MockQueryResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="QueryResolverDiagnosticsFunc.SetDefaultReturn" href="#QueryResolverDiagnosticsFunc.SetDefaultReturn">func (f *QueryResolverDiagnosticsFunc) SetDefaultReturn(r0 []resolvers.AdjustedDiagnostic, r1 int, r2 error)</a>
-
-```
-searchKey: mocks.QueryResolverDiagnosticsFunc.SetDefaultReturn
-```
-
-```Go
-func (f *QueryResolverDiagnosticsFunc) SetDefaultReturn(r0 []resolvers.AdjustedDiagnostic, r1 int, r2 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="QueryResolverDiagnosticsFunc.PushReturn" href="#QueryResolverDiagnosticsFunc.PushReturn">func (f *QueryResolverDiagnosticsFunc) PushReturn(r0 []resolvers.AdjustedDiagnostic, r1 int, r2 error)</a>
-
-```
-searchKey: mocks.QueryResolverDiagnosticsFunc.PushReturn
-```
-
-```Go
-func (f *QueryResolverDiagnosticsFunc) PushReturn(r0 []resolvers.AdjustedDiagnostic, r1 int, r2 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="QueryResolverDiagnosticsFunc.nextHook" href="#QueryResolverDiagnosticsFunc.nextHook">func (f *QueryResolverDiagnosticsFunc) nextHook() func(context.Context, int) ([]resolvers.AdjustedDiagnostic, int, error)</a>
-
-```
-searchKey: mocks.QueryResolverDiagnosticsFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *QueryResolverDiagnosticsFunc) nextHook() func(context.Context, int) ([]resolvers.AdjustedDiagnostic, int, error)
-```
-
-#### <a id="QueryResolverDiagnosticsFunc.appendCall" href="#QueryResolverDiagnosticsFunc.appendCall">func (f *QueryResolverDiagnosticsFunc) appendCall(r0 QueryResolverDiagnosticsFuncCall)</a>
-
-```
-searchKey: mocks.QueryResolverDiagnosticsFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *QueryResolverDiagnosticsFunc) appendCall(r0 QueryResolverDiagnosticsFuncCall)
-```
-
-#### <a id="QueryResolverDiagnosticsFunc.History" href="#QueryResolverDiagnosticsFunc.History">func (f *QueryResolverDiagnosticsFunc) History() []QueryResolverDiagnosticsFuncCall</a>
-
-```
-searchKey: mocks.QueryResolverDiagnosticsFunc.History
-```
-
-```Go
-func (f *QueryResolverDiagnosticsFunc) History() []QueryResolverDiagnosticsFuncCall
-```
-
-History returns a sequence of QueryResolverDiagnosticsFuncCall objects describing the invocations of this function. 
-
-### <a id="QueryResolverDiagnosticsFuncCall" href="#QueryResolverDiagnosticsFuncCall">type QueryResolverDiagnosticsFuncCall struct</a>
-
-```
-searchKey: mocks.QueryResolverDiagnosticsFuncCall
-```
-
-```Go
-type QueryResolverDiagnosticsFuncCall struct {
-	// Arg0 is the value of the 1st argument passed to this method
-	// invocation.
-	Arg0 context.Context
-	// Arg1 is the value of the 2nd argument passed to this method
-	// invocation.
-	Arg1 int
-	// Result0 is the value of the 1st result returned from this method
-	// invocation.
-	Result0 []resolvers.AdjustedDiagnostic
-	// Result1 is the value of the 2nd result returned from this method
-	// invocation.
-	Result1 int
-	// Result2 is the value of the 3rd result returned from this method
-	// invocation.
-	Result2 error
-}
-```
-
-QueryResolverDiagnosticsFuncCall is an object that describes an invocation of method Diagnostics on an instance of MockQueryResolver. 
-
-#### <a id="QueryResolverDiagnosticsFuncCall.Args" href="#QueryResolverDiagnosticsFuncCall.Args">func (c QueryResolverDiagnosticsFuncCall) Args() []interface{}</a>
-
-```
-searchKey: mocks.QueryResolverDiagnosticsFuncCall.Args
-```
-
-```Go
-func (c QueryResolverDiagnosticsFuncCall) Args() []interface{}
-```
-
-Args returns an interface slice containing the arguments of this invocation. 
-
-#### <a id="QueryResolverDiagnosticsFuncCall.Results" href="#QueryResolverDiagnosticsFuncCall.Results">func (c QueryResolverDiagnosticsFuncCall) Results() []interface{}</a>
-
-```
-searchKey: mocks.QueryResolverDiagnosticsFuncCall.Results
-```
-
-```Go
-func (c QueryResolverDiagnosticsFuncCall) Results() []interface{}
-```
-
-Results returns an interface slice containing the results of this invocation. 
-
-### <a id="QueryResolverDocumentationPageFunc" href="#QueryResolverDocumentationPageFunc">type QueryResolverDocumentationPageFunc struct</a>
-
-```
-searchKey: mocks.QueryResolverDocumentationPageFunc
-```
-
-```Go
-type QueryResolverDocumentationPageFunc struct {
-	defaultHook func(context.Context, string) (*semantic.DocumentationPageData, error)
-	hooks       []func(context.Context, string) (*semantic.DocumentationPageData, error)
-	history     []QueryResolverDocumentationPageFuncCall
-	mutex       sync.Mutex
-}
-```
-
-QueryResolverDocumentationPageFunc describes the behavior when the DocumentationPage method of the parent MockQueryResolver instance is invoked. 
-
-#### <a id="QueryResolverDocumentationPageFunc.SetDefaultHook" href="#QueryResolverDocumentationPageFunc.SetDefaultHook">func (f *QueryResolverDocumentationPageFunc) SetDefaultHook(hook func(context.Context, string) (*semantic.DocumentationPageData, error))</a>
-
-```
-searchKey: mocks.QueryResolverDocumentationPageFunc.SetDefaultHook
-```
-
-```Go
-func (f *QueryResolverDocumentationPageFunc) SetDefaultHook(hook func(context.Context, string) (*semantic.DocumentationPageData, error))
-```
-
-SetDefaultHook sets function that is called when the DocumentationPage method of the parent MockQueryResolver instance is invoked and the hook queue is empty. 
-
-#### <a id="QueryResolverDocumentationPageFunc.PushHook" href="#QueryResolverDocumentationPageFunc.PushHook">func (f *QueryResolverDocumentationPageFunc) PushHook(hook func(context.Context, string) (*semantic.DocumentationPageData, error))</a>
-
-```
-searchKey: mocks.QueryResolverDocumentationPageFunc.PushHook
-```
-
-```Go
-func (f *QueryResolverDocumentationPageFunc) PushHook(hook func(context.Context, string) (*semantic.DocumentationPageData, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the DocumentationPage method of the parent MockQueryResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="QueryResolverDocumentationPageFunc.SetDefaultReturn" href="#QueryResolverDocumentationPageFunc.SetDefaultReturn">func (f *QueryResolverDocumentationPageFunc) SetDefaultReturn(r0 *semantic.DocumentationPageData, r1 error)</a>
-
-```
-searchKey: mocks.QueryResolverDocumentationPageFunc.SetDefaultReturn
-```
-
-```Go
-func (f *QueryResolverDocumentationPageFunc) SetDefaultReturn(r0 *semantic.DocumentationPageData, r1 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="QueryResolverDocumentationPageFunc.PushReturn" href="#QueryResolverDocumentationPageFunc.PushReturn">func (f *QueryResolverDocumentationPageFunc) PushReturn(r0 *semantic.DocumentationPageData, r1 error)</a>
-
-```
-searchKey: mocks.QueryResolverDocumentationPageFunc.PushReturn
-```
-
-```Go
-func (f *QueryResolverDocumentationPageFunc) PushReturn(r0 *semantic.DocumentationPageData, r1 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="QueryResolverDocumentationPageFunc.nextHook" href="#QueryResolverDocumentationPageFunc.nextHook">func (f *QueryResolverDocumentationPageFunc) nextHook() func(context.Context, string) (*semantic.DocumentationPageData, error)</a>
-
-```
-searchKey: mocks.QueryResolverDocumentationPageFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *QueryResolverDocumentationPageFunc) nextHook() func(context.Context, string) (*semantic.DocumentationPageData, error)
-```
-
-#### <a id="QueryResolverDocumentationPageFunc.appendCall" href="#QueryResolverDocumentationPageFunc.appendCall">func (f *QueryResolverDocumentationPageFunc) appendCall(r0 QueryResolverDocumentationPageFuncCall)</a>
-
-```
-searchKey: mocks.QueryResolverDocumentationPageFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *QueryResolverDocumentationPageFunc) appendCall(r0 QueryResolverDocumentationPageFuncCall)
-```
-
-#### <a id="QueryResolverDocumentationPageFunc.History" href="#QueryResolverDocumentationPageFunc.History">func (f *QueryResolverDocumentationPageFunc) History() []QueryResolverDocumentationPageFuncCall</a>
-
-```
-searchKey: mocks.QueryResolverDocumentationPageFunc.History
-```
-
-```Go
-func (f *QueryResolverDocumentationPageFunc) History() []QueryResolverDocumentationPageFuncCall
-```
-
-History returns a sequence of QueryResolverDocumentationPageFuncCall objects describing the invocations of this function. 
-
-### <a id="QueryResolverDocumentationPageFuncCall" href="#QueryResolverDocumentationPageFuncCall">type QueryResolverDocumentationPageFuncCall struct</a>
-
-```
-searchKey: mocks.QueryResolverDocumentationPageFuncCall
-```
-
-```Go
-type QueryResolverDocumentationPageFuncCall struct {
-	// Arg0 is the value of the 1st argument passed to this method
-	// invocation.
-	Arg0 context.Context
-	// Arg1 is the value of the 2nd argument passed to this method
-	// invocation.
-	Arg1 string
-	// Result0 is the value of the 1st result returned from this method
-	// invocation.
-	Result0 *semantic.DocumentationPageData
-	// Result1 is the value of the 2nd result returned from this method
-	// invocation.
-	Result1 error
-}
-```
-
-QueryResolverDocumentationPageFuncCall is an object that describes an invocation of method DocumentationPage on an instance of MockQueryResolver. 
-
-#### <a id="QueryResolverDocumentationPageFuncCall.Args" href="#QueryResolverDocumentationPageFuncCall.Args">func (c QueryResolverDocumentationPageFuncCall) Args() []interface{}</a>
-
-```
-searchKey: mocks.QueryResolverDocumentationPageFuncCall.Args
-```
-
-```Go
-func (c QueryResolverDocumentationPageFuncCall) Args() []interface{}
-```
-
-Args returns an interface slice containing the arguments of this invocation. 
-
-#### <a id="QueryResolverDocumentationPageFuncCall.Results" href="#QueryResolverDocumentationPageFuncCall.Results">func (c QueryResolverDocumentationPageFuncCall) Results() []interface{}</a>
-
-```
-searchKey: mocks.QueryResolverDocumentationPageFuncCall.Results
-```
-
-```Go
-func (c QueryResolverDocumentationPageFuncCall) Results() []interface{}
-```
-
-Results returns an interface slice containing the results of this invocation. 
-
-### <a id="QueryResolverHoverFunc" href="#QueryResolverHoverFunc">type QueryResolverHoverFunc struct</a>
-
-```
-searchKey: mocks.QueryResolverHoverFunc
-```
-
-```Go
-type QueryResolverHoverFunc struct {
-	defaultHook func(context.Context, int, int) (string, lsifstore.Range, bool, error)
-	hooks       []func(context.Context, int, int) (string, lsifstore.Range, bool, error)
-	history     []QueryResolverHoverFuncCall
-	mutex       sync.Mutex
-}
-```
-
-QueryResolverHoverFunc describes the behavior when the Hover method of the parent MockQueryResolver instance is invoked. 
-
-#### <a id="QueryResolverHoverFunc.SetDefaultHook" href="#QueryResolverHoverFunc.SetDefaultHook">func (f *QueryResolverHoverFunc) SetDefaultHook(hook func(context.Context, int, int) (string, lsifstore.Range, bool, error))</a>
-
-```
-searchKey: mocks.QueryResolverHoverFunc.SetDefaultHook
-```
-
-```Go
-func (f *QueryResolverHoverFunc) SetDefaultHook(hook func(context.Context, int, int) (string, lsifstore.Range, bool, error))
-```
-
-SetDefaultHook sets function that is called when the Hover method of the parent MockQueryResolver instance is invoked and the hook queue is empty. 
-
-#### <a id="QueryResolverHoverFunc.PushHook" href="#QueryResolverHoverFunc.PushHook">func (f *QueryResolverHoverFunc) PushHook(hook func(context.Context, int, int) (string, lsifstore.Range, bool, error))</a>
-
-```
-searchKey: mocks.QueryResolverHoverFunc.PushHook
-```
-
-```Go
-func (f *QueryResolverHoverFunc) PushHook(hook func(context.Context, int, int) (string, lsifstore.Range, bool, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the Hover method of the parent MockQueryResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="QueryResolverHoverFunc.SetDefaultReturn" href="#QueryResolverHoverFunc.SetDefaultReturn">func (f *QueryResolverHoverFunc) SetDefaultReturn(r0 string, r1 lsifstore.Range, r2 bool, r3 error)</a>
-
-```
-searchKey: mocks.QueryResolverHoverFunc.SetDefaultReturn
-```
-
-```Go
-func (f *QueryResolverHoverFunc) SetDefaultReturn(r0 string, r1 lsifstore.Range, r2 bool, r3 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="QueryResolverHoverFunc.PushReturn" href="#QueryResolverHoverFunc.PushReturn">func (f *QueryResolverHoverFunc) PushReturn(r0 string, r1 lsifstore.Range, r2 bool, r3 error)</a>
-
-```
-searchKey: mocks.QueryResolverHoverFunc.PushReturn
-```
-
-```Go
-func (f *QueryResolverHoverFunc) PushReturn(r0 string, r1 lsifstore.Range, r2 bool, r3 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="QueryResolverHoverFunc.nextHook" href="#QueryResolverHoverFunc.nextHook">func (f *QueryResolverHoverFunc) nextHook() func(context.Context, int, int) (string, lsifstore.Range, bool, error)</a>
-
-```
-searchKey: mocks.QueryResolverHoverFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *QueryResolverHoverFunc) nextHook() func(context.Context, int, int) (string, lsifstore.Range, bool, error)
-```
-
-#### <a id="QueryResolverHoverFunc.appendCall" href="#QueryResolverHoverFunc.appendCall">func (f *QueryResolverHoverFunc) appendCall(r0 QueryResolverHoverFuncCall)</a>
-
-```
-searchKey: mocks.QueryResolverHoverFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *QueryResolverHoverFunc) appendCall(r0 QueryResolverHoverFuncCall)
-```
-
-#### <a id="QueryResolverHoverFunc.History" href="#QueryResolverHoverFunc.History">func (f *QueryResolverHoverFunc) History() []QueryResolverHoverFuncCall</a>
-
-```
-searchKey: mocks.QueryResolverHoverFunc.History
-```
-
-```Go
-func (f *QueryResolverHoverFunc) History() []QueryResolverHoverFuncCall
-```
-
-History returns a sequence of QueryResolverHoverFuncCall objects describing the invocations of this function. 
-
-### <a id="QueryResolverHoverFuncCall" href="#QueryResolverHoverFuncCall">type QueryResolverHoverFuncCall struct</a>
-
-```
-searchKey: mocks.QueryResolverHoverFuncCall
-```
-
-```Go
-type QueryResolverHoverFuncCall struct {
-	// Arg0 is the value of the 1st argument passed to this method
-	// invocation.
-	Arg0 context.Context
-	// Arg1 is the value of the 2nd argument passed to this method
-	// invocation.
-	Arg1 int
-	// Arg2 is the value of the 3rd argument passed to this method
-	// invocation.
-	Arg2 int
-	// Result0 is the value of the 1st result returned from this method
-	// invocation.
-	Result0 string
-	// Result1 is the value of the 2nd result returned from this method
-	// invocation.
-	Result1 lsifstore.Range
-	// Result2 is the value of the 3rd result returned from this method
-	// invocation.
-	Result2 bool
-	// Result3 is the value of the 4th result returned from this method
-	// invocation.
-	Result3 error
-}
-```
-
-QueryResolverHoverFuncCall is an object that describes an invocation of method Hover on an instance of MockQueryResolver. 
-
-#### <a id="QueryResolverHoverFuncCall.Args" href="#QueryResolverHoverFuncCall.Args">func (c QueryResolverHoverFuncCall) Args() []interface{}</a>
-
-```
-searchKey: mocks.QueryResolverHoverFuncCall.Args
-```
-
-```Go
-func (c QueryResolverHoverFuncCall) Args() []interface{}
-```
-
-Args returns an interface slice containing the arguments of this invocation. 
-
-#### <a id="QueryResolverHoverFuncCall.Results" href="#QueryResolverHoverFuncCall.Results">func (c QueryResolverHoverFuncCall) Results() []interface{}</a>
-
-```
-searchKey: mocks.QueryResolverHoverFuncCall.Results
-```
-
-```Go
-func (c QueryResolverHoverFuncCall) Results() []interface{}
-```
-
-Results returns an interface slice containing the results of this invocation. 
-
-### <a id="QueryResolverRangesFunc" href="#QueryResolverRangesFunc">type QueryResolverRangesFunc struct</a>
-
-```
-searchKey: mocks.QueryResolverRangesFunc
-```
-
-```Go
-type QueryResolverRangesFunc struct {
-	defaultHook func(context.Context, int, int) ([]resolvers.AdjustedCodeIntelligenceRange, error)
-	hooks       []func(context.Context, int, int) ([]resolvers.AdjustedCodeIntelligenceRange, error)
-	history     []QueryResolverRangesFuncCall
-	mutex       sync.Mutex
-}
-```
-
-QueryResolverRangesFunc describes the behavior when the Ranges method of the parent MockQueryResolver instance is invoked. 
-
-#### <a id="QueryResolverRangesFunc.SetDefaultHook" href="#QueryResolverRangesFunc.SetDefaultHook">func (f *QueryResolverRangesFunc) SetDefaultHook(hook func(context.Context, int, int) ([]resolvers.AdjustedCodeIntelligenceRange, error))</a>
-
-```
-searchKey: mocks.QueryResolverRangesFunc.SetDefaultHook
-```
-
-```Go
-func (f *QueryResolverRangesFunc) SetDefaultHook(hook func(context.Context, int, int) ([]resolvers.AdjustedCodeIntelligenceRange, error))
-```
-
-SetDefaultHook sets function that is called when the Ranges method of the parent MockQueryResolver instance is invoked and the hook queue is empty. 
-
-#### <a id="QueryResolverRangesFunc.PushHook" href="#QueryResolverRangesFunc.PushHook">func (f *QueryResolverRangesFunc) PushHook(hook func(context.Context, int, int) ([]resolvers.AdjustedCodeIntelligenceRange, error))</a>
-
-```
-searchKey: mocks.QueryResolverRangesFunc.PushHook
-```
-
-```Go
-func (f *QueryResolverRangesFunc) PushHook(hook func(context.Context, int, int) ([]resolvers.AdjustedCodeIntelligenceRange, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the Ranges method of the parent MockQueryResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="QueryResolverRangesFunc.SetDefaultReturn" href="#QueryResolverRangesFunc.SetDefaultReturn">func (f *QueryResolverRangesFunc) SetDefaultReturn(r0 []resolvers.AdjustedCodeIntelligenceRange, r1 error)</a>
-
-```
-searchKey: mocks.QueryResolverRangesFunc.SetDefaultReturn
-```
-
-```Go
-func (f *QueryResolverRangesFunc) SetDefaultReturn(r0 []resolvers.AdjustedCodeIntelligenceRange, r1 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="QueryResolverRangesFunc.PushReturn" href="#QueryResolverRangesFunc.PushReturn">func (f *QueryResolverRangesFunc) PushReturn(r0 []resolvers.AdjustedCodeIntelligenceRange, r1 error)</a>
-
-```
-searchKey: mocks.QueryResolverRangesFunc.PushReturn
-```
-
-```Go
-func (f *QueryResolverRangesFunc) PushReturn(r0 []resolvers.AdjustedCodeIntelligenceRange, r1 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="QueryResolverRangesFunc.nextHook" href="#QueryResolverRangesFunc.nextHook">func (f *QueryResolverRangesFunc) nextHook() func(context.Context, int, int) ([]resolvers.AdjustedCodeIntelligenceRange, error)</a>
-
-```
-searchKey: mocks.QueryResolverRangesFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *QueryResolverRangesFunc) nextHook() func(context.Context, int, int) ([]resolvers.AdjustedCodeIntelligenceRange, error)
-```
-
-#### <a id="QueryResolverRangesFunc.appendCall" href="#QueryResolverRangesFunc.appendCall">func (f *QueryResolverRangesFunc) appendCall(r0 QueryResolverRangesFuncCall)</a>
-
-```
-searchKey: mocks.QueryResolverRangesFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *QueryResolverRangesFunc) appendCall(r0 QueryResolverRangesFuncCall)
-```
-
-#### <a id="QueryResolverRangesFunc.History" href="#QueryResolverRangesFunc.History">func (f *QueryResolverRangesFunc) History() []QueryResolverRangesFuncCall</a>
-
-```
-searchKey: mocks.QueryResolverRangesFunc.History
-```
-
-```Go
-func (f *QueryResolverRangesFunc) History() []QueryResolverRangesFuncCall
-```
-
-History returns a sequence of QueryResolverRangesFuncCall objects describing the invocations of this function. 
-
-### <a id="QueryResolverRangesFuncCall" href="#QueryResolverRangesFuncCall">type QueryResolverRangesFuncCall struct</a>
-
-```
-searchKey: mocks.QueryResolverRangesFuncCall
-```
-
-```Go
-type QueryResolverRangesFuncCall struct {
-	// Arg0 is the value of the 1st argument passed to this method
-	// invocation.
-	Arg0 context.Context
-	// Arg1 is the value of the 2nd argument passed to this method
-	// invocation.
-	Arg1 int
-	// Arg2 is the value of the 3rd argument passed to this method
-	// invocation.
-	Arg2 int
-	// Result0 is the value of the 1st result returned from this method
-	// invocation.
-	Result0 []resolvers.AdjustedCodeIntelligenceRange
-	// Result1 is the value of the 2nd result returned from this method
-	// invocation.
-	Result1 error
-}
-```
-
-QueryResolverRangesFuncCall is an object that describes an invocation of method Ranges on an instance of MockQueryResolver. 
-
-#### <a id="QueryResolverRangesFuncCall.Args" href="#QueryResolverRangesFuncCall.Args">func (c QueryResolverRangesFuncCall) Args() []interface{}</a>
-
-```
-searchKey: mocks.QueryResolverRangesFuncCall.Args
-```
-
-```Go
-func (c QueryResolverRangesFuncCall) Args() []interface{}
-```
-
-Args returns an interface slice containing the arguments of this invocation. 
-
-#### <a id="QueryResolverRangesFuncCall.Results" href="#QueryResolverRangesFuncCall.Results">func (c QueryResolverRangesFuncCall) Results() []interface{}</a>
-
-```
-searchKey: mocks.QueryResolverRangesFuncCall.Results
-```
-
-```Go
-func (c QueryResolverRangesFuncCall) Results() []interface{}
-```
-
-Results returns an interface slice containing the results of this invocation. 
-
-### <a id="QueryResolverReferencesFunc" href="#QueryResolverReferencesFunc">type QueryResolverReferencesFunc struct</a>
-
-```
-searchKey: mocks.QueryResolverReferencesFunc
-```
-
-```Go
-type QueryResolverReferencesFunc struct {
-	defaultHook func(context.Context, int, int, int, string) ([]resolvers.AdjustedLocation, string, error)
-	hooks       []func(context.Context, int, int, int, string) ([]resolvers.AdjustedLocation, string, error)
-	history     []QueryResolverReferencesFuncCall
-	mutex       sync.Mutex
-}
-```
-
-QueryResolverReferencesFunc describes the behavior when the References method of the parent MockQueryResolver instance is invoked. 
-
-#### <a id="QueryResolverReferencesFunc.SetDefaultHook" href="#QueryResolverReferencesFunc.SetDefaultHook">func (f *QueryResolverReferencesFunc) SetDefaultHook(hook func(context.Context, int, int, int, string) ([]resolvers.AdjustedLocation, string, error))</a>
-
-```
-searchKey: mocks.QueryResolverReferencesFunc.SetDefaultHook
-```
-
-```Go
-func (f *QueryResolverReferencesFunc) SetDefaultHook(hook func(context.Context, int, int, int, string) ([]resolvers.AdjustedLocation, string, error))
-```
-
-SetDefaultHook sets function that is called when the References method of the parent MockQueryResolver instance is invoked and the hook queue is empty. 
-
-#### <a id="QueryResolverReferencesFunc.PushHook" href="#QueryResolverReferencesFunc.PushHook">func (f *QueryResolverReferencesFunc) PushHook(hook func(context.Context, int, int, int, string) ([]resolvers.AdjustedLocation, string, error))</a>
-
-```
-searchKey: mocks.QueryResolverReferencesFunc.PushHook
-```
-
-```Go
-func (f *QueryResolverReferencesFunc) PushHook(hook func(context.Context, int, int, int, string) ([]resolvers.AdjustedLocation, string, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the References method of the parent MockQueryResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="QueryResolverReferencesFunc.SetDefaultReturn" href="#QueryResolverReferencesFunc.SetDefaultReturn">func (f *QueryResolverReferencesFunc) SetDefaultReturn(r0 []resolvers.AdjustedLocation, r1 string, r2 error)</a>
-
-```
-searchKey: mocks.QueryResolverReferencesFunc.SetDefaultReturn
-```
-
-```Go
-func (f *QueryResolverReferencesFunc) SetDefaultReturn(r0 []resolvers.AdjustedLocation, r1 string, r2 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="QueryResolverReferencesFunc.PushReturn" href="#QueryResolverReferencesFunc.PushReturn">func (f *QueryResolverReferencesFunc) PushReturn(r0 []resolvers.AdjustedLocation, r1 string, r2 error)</a>
-
-```
-searchKey: mocks.QueryResolverReferencesFunc.PushReturn
-```
-
-```Go
-func (f *QueryResolverReferencesFunc) PushReturn(r0 []resolvers.AdjustedLocation, r1 string, r2 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="QueryResolverReferencesFunc.nextHook" href="#QueryResolverReferencesFunc.nextHook">func (f *QueryResolverReferencesFunc) nextHook() func(context.Context, int, int, int, string) ([]resolvers.AdjustedLocation, string, error)</a>
-
-```
-searchKey: mocks.QueryResolverReferencesFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *QueryResolverReferencesFunc) nextHook() func(context.Context, int, int, int, string) ([]resolvers.AdjustedLocation, string, error)
-```
-
-#### <a id="QueryResolverReferencesFunc.appendCall" href="#QueryResolverReferencesFunc.appendCall">func (f *QueryResolverReferencesFunc) appendCall(r0 QueryResolverReferencesFuncCall)</a>
-
-```
-searchKey: mocks.QueryResolverReferencesFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *QueryResolverReferencesFunc) appendCall(r0 QueryResolverReferencesFuncCall)
-```
-
-#### <a id="QueryResolverReferencesFunc.History" href="#QueryResolverReferencesFunc.History">func (f *QueryResolverReferencesFunc) History() []QueryResolverReferencesFuncCall</a>
-
-```
-searchKey: mocks.QueryResolverReferencesFunc.History
-```
-
-```Go
-func (f *QueryResolverReferencesFunc) History() []QueryResolverReferencesFuncCall
-```
-
-History returns a sequence of QueryResolverReferencesFuncCall objects describing the invocations of this function. 
-
-### <a id="QueryResolverReferencesFuncCall" href="#QueryResolverReferencesFuncCall">type QueryResolverReferencesFuncCall struct</a>
-
-```
-searchKey: mocks.QueryResolverReferencesFuncCall
-```
-
-```Go
-type QueryResolverReferencesFuncCall struct {
-	// Arg0 is the value of the 1st argument passed to this method
-	// invocation.
-	Arg0 context.Context
-	// Arg1 is the value of the 2nd argument passed to this method
-	// invocation.
-	Arg1 int
-	// Arg2 is the value of the 3rd argument passed to this method
-	// invocation.
-	Arg2 int
-	// Arg3 is the value of the 4th argument passed to this method
-	// invocation.
-	Arg3 int
-	// Arg4 is the value of the 5th argument passed to this method
-	// invocation.
-	Arg4 string
-	// Result0 is the value of the 1st result returned from this method
-	// invocation.
-	Result0 []resolvers.AdjustedLocation
-	// Result1 is the value of the 2nd result returned from this method
-	// invocation.
-	Result1 string
-	// Result2 is the value of the 3rd result returned from this method
-	// invocation.
-	Result2 error
-}
-```
-
-QueryResolverReferencesFuncCall is an object that describes an invocation of method References on an instance of MockQueryResolver. 
-
-#### <a id="QueryResolverReferencesFuncCall.Args" href="#QueryResolverReferencesFuncCall.Args">func (c QueryResolverReferencesFuncCall) Args() []interface{}</a>
-
-```
-searchKey: mocks.QueryResolverReferencesFuncCall.Args
-```
-
-```Go
-func (c QueryResolverReferencesFuncCall) Args() []interface{}
-```
-
-Args returns an interface slice containing the arguments of this invocation. 
-
-#### <a id="QueryResolverReferencesFuncCall.Results" href="#QueryResolverReferencesFuncCall.Results">func (c QueryResolverReferencesFuncCall) Results() []interface{}</a>
-
-```
-searchKey: mocks.QueryResolverReferencesFuncCall.Results
-```
-
-```Go
-func (c QueryResolverReferencesFuncCall) Results() []interface{}
-```
-
-Results returns an interface slice containing the results of this invocation. 
-
 ### <a id="MockResolver" href="#MockResolver">type MockResolver struct</a>
 
 ```
 searchKey: mocks.MockResolver
+tags: [struct]
 ```
 
 ```Go
@@ -1347,6 +439,7 @@ MockResolver is a mock implementation of the Resolver interface (from the packag
 
 ```
 searchKey: mocks.NewMockResolver
+tags: [function]
 ```
 
 ```Go
@@ -1359,6 +452,7 @@ NewMockResolver creates a new mock of the Resolver interface. All methods return
 
 ```
 searchKey: mocks.NewMockResolverFrom
+tags: [method]
 ```
 
 ```Go
@@ -1371,6 +465,7 @@ NewMockResolverFrom creates a new mock of the MockResolver interface. All method
 
 ```
 searchKey: mocks.MockResolver.CommitGraph
+tags: [method]
 ```
 
 ```Go
@@ -1383,6 +478,7 @@ CommitGraph delegates to the next hook function in the queue and stores the para
 
 ```
 searchKey: mocks.MockResolver.DeleteIndexByID
+tags: [method]
 ```
 
 ```Go
@@ -1395,6 +491,7 @@ DeleteIndexByID delegates to the next hook function in the queue and stores the 
 
 ```
 searchKey: mocks.MockResolver.DeleteUploadByID
+tags: [method]
 ```
 
 ```Go
@@ -1407,6 +504,7 @@ DeleteUploadByID delegates to the next hook function in the queue and stores the
 
 ```
 searchKey: mocks.MockResolver.GetIndexByID
+tags: [method]
 ```
 
 ```Go
@@ -1419,6 +517,7 @@ GetIndexByID delegates to the next hook function in the queue and stores the par
 
 ```
 searchKey: mocks.MockResolver.GetIndexesByIDs
+tags: [method]
 ```
 
 ```Go
@@ -1431,6 +530,7 @@ GetIndexesByIDs delegates to the next hook function in the queue and stores the 
 
 ```
 searchKey: mocks.MockResolver.GetUploadByID
+tags: [method]
 ```
 
 ```Go
@@ -1443,6 +543,7 @@ GetUploadByID delegates to the next hook function in the queue and stores the pa
 
 ```
 searchKey: mocks.MockResolver.GetUploadsByIDs
+tags: [method]
 ```
 
 ```Go
@@ -1455,6 +556,7 @@ GetUploadsByIDs delegates to the next hook function in the queue and stores the 
 
 ```
 searchKey: mocks.MockResolver.IndexConfiguration
+tags: [method]
 ```
 
 ```Go
@@ -1467,6 +569,7 @@ IndexConfiguration delegates to the next hook function in the queue and stores t
 
 ```
 searchKey: mocks.MockResolver.IndexConnectionResolver
+tags: [method]
 ```
 
 ```Go
@@ -1479,6 +582,7 @@ IndexConnectionResolver delegates to the next hook function in the queue and sto
 
 ```
 searchKey: mocks.MockResolver.QueryResolver
+tags: [method]
 ```
 
 ```Go
@@ -1491,6 +595,7 @@ QueryResolver delegates to the next hook function in the queue and stores the pa
 
 ```
 searchKey: mocks.MockResolver.QueueAutoIndexJobForRepo
+tags: [method]
 ```
 
 ```Go
@@ -1503,6 +608,7 @@ QueueAutoIndexJobForRepo delegates to the next hook function in the queue and st
 
 ```
 searchKey: mocks.MockResolver.UpdateIndexConfigurationByRepositoryID
+tags: [method]
 ```
 
 ```Go
@@ -1515,6 +621,7 @@ UpdateIndexConfigurationByRepositoryID delegates to the next hook function in th
 
 ```
 searchKey: mocks.MockResolver.UploadConnectionResolver
+tags: [method]
 ```
 
 ```Go
@@ -1523,10 +630,983 @@ func (m *MockResolver) UploadConnectionResolver(v0 dbstore.GetUploadsOptions) *r
 
 UploadConnectionResolver delegates to the next hook function in the queue and stores the parameter and result values of this invocation. 
 
+### <a id="QueryResolverDefinitionsFunc" href="#QueryResolverDefinitionsFunc">type QueryResolverDefinitionsFunc struct</a>
+
+```
+searchKey: mocks.QueryResolverDefinitionsFunc
+tags: [struct]
+```
+
+```Go
+type QueryResolverDefinitionsFunc struct {
+	defaultHook func(context.Context, int, int) ([]resolvers.AdjustedLocation, error)
+	hooks       []func(context.Context, int, int) ([]resolvers.AdjustedLocation, error)
+	history     []QueryResolverDefinitionsFuncCall
+	mutex       sync.Mutex
+}
+```
+
+QueryResolverDefinitionsFunc describes the behavior when the Definitions method of the parent MockQueryResolver instance is invoked. 
+
+#### <a id="QueryResolverDefinitionsFunc.History" href="#QueryResolverDefinitionsFunc.History">func (f *QueryResolverDefinitionsFunc) History() []QueryResolverDefinitionsFuncCall</a>
+
+```
+searchKey: mocks.QueryResolverDefinitionsFunc.History
+tags: [function]
+```
+
+```Go
+func (f *QueryResolverDefinitionsFunc) History() []QueryResolverDefinitionsFuncCall
+```
+
+History returns a sequence of QueryResolverDefinitionsFuncCall objects describing the invocations of this function. 
+
+#### <a id="QueryResolverDefinitionsFunc.PushHook" href="#QueryResolverDefinitionsFunc.PushHook">func (f *QueryResolverDefinitionsFunc) PushHook(hook func(context.Context, int, int) ([]resolvers.AdjustedLocation, error))</a>
+
+```
+searchKey: mocks.QueryResolverDefinitionsFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *QueryResolverDefinitionsFunc) PushHook(hook func(context.Context, int, int) ([]resolvers.AdjustedLocation, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the Definitions method of the parent MockQueryResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="QueryResolverDefinitionsFunc.PushReturn" href="#QueryResolverDefinitionsFunc.PushReturn">func (f *QueryResolverDefinitionsFunc) PushReturn(r0 []resolvers.AdjustedLocation, r1 error)</a>
+
+```
+searchKey: mocks.QueryResolverDefinitionsFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *QueryResolverDefinitionsFunc) PushReturn(r0 []resolvers.AdjustedLocation, r1 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="QueryResolverDefinitionsFunc.SetDefaultHook" href="#QueryResolverDefinitionsFunc.SetDefaultHook">func (f *QueryResolverDefinitionsFunc) SetDefaultHook(hook func(context.Context, int, int) ([]resolvers.AdjustedLocation, error))</a>
+
+```
+searchKey: mocks.QueryResolverDefinitionsFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *QueryResolverDefinitionsFunc) SetDefaultHook(hook func(context.Context, int, int) ([]resolvers.AdjustedLocation, error))
+```
+
+SetDefaultHook sets function that is called when the Definitions method of the parent MockQueryResolver instance is invoked and the hook queue is empty. 
+
+#### <a id="QueryResolverDefinitionsFunc.SetDefaultReturn" href="#QueryResolverDefinitionsFunc.SetDefaultReturn">func (f *QueryResolverDefinitionsFunc) SetDefaultReturn(r0 []resolvers.AdjustedLocation, r1 error)</a>
+
+```
+searchKey: mocks.QueryResolverDefinitionsFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *QueryResolverDefinitionsFunc) SetDefaultReturn(r0 []resolvers.AdjustedLocation, r1 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="QueryResolverDefinitionsFunc.appendCall" href="#QueryResolverDefinitionsFunc.appendCall">func (f *QueryResolverDefinitionsFunc) appendCall(r0 QueryResolverDefinitionsFuncCall)</a>
+
+```
+searchKey: mocks.QueryResolverDefinitionsFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *QueryResolverDefinitionsFunc) appendCall(r0 QueryResolverDefinitionsFuncCall)
+```
+
+#### <a id="QueryResolverDefinitionsFunc.nextHook" href="#QueryResolverDefinitionsFunc.nextHook">func (f *QueryResolverDefinitionsFunc) nextHook() func(context.Context, int, int) ([]resolvers.AdjustedLocation, error)</a>
+
+```
+searchKey: mocks.QueryResolverDefinitionsFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *QueryResolverDefinitionsFunc) nextHook() func(context.Context, int, int) ([]resolvers.AdjustedLocation, error)
+```
+
+### <a id="QueryResolverDefinitionsFuncCall" href="#QueryResolverDefinitionsFuncCall">type QueryResolverDefinitionsFuncCall struct</a>
+
+```
+searchKey: mocks.QueryResolverDefinitionsFuncCall
+tags: [struct]
+```
+
+```Go
+type QueryResolverDefinitionsFuncCall struct {
+	// Arg0 is the value of the 1st argument passed to this method
+	// invocation.
+	Arg0 context.Context
+	// Arg1 is the value of the 2nd argument passed to this method
+	// invocation.
+	Arg1 int
+	// Arg2 is the value of the 3rd argument passed to this method
+	// invocation.
+	Arg2 int
+	// Result0 is the value of the 1st result returned from this method
+	// invocation.
+	Result0 []resolvers.AdjustedLocation
+	// Result1 is the value of the 2nd result returned from this method
+	// invocation.
+	Result1 error
+}
+```
+
+QueryResolverDefinitionsFuncCall is an object that describes an invocation of method Definitions on an instance of MockQueryResolver. 
+
+#### <a id="QueryResolverDefinitionsFuncCall.Args" href="#QueryResolverDefinitionsFuncCall.Args">func (c QueryResolverDefinitionsFuncCall) Args() []interface{}</a>
+
+```
+searchKey: mocks.QueryResolverDefinitionsFuncCall.Args
+tags: [function]
+```
+
+```Go
+func (c QueryResolverDefinitionsFuncCall) Args() []interface{}
+```
+
+Args returns an interface slice containing the arguments of this invocation. 
+
+#### <a id="QueryResolverDefinitionsFuncCall.Results" href="#QueryResolverDefinitionsFuncCall.Results">func (c QueryResolverDefinitionsFuncCall) Results() []interface{}</a>
+
+```
+searchKey: mocks.QueryResolverDefinitionsFuncCall.Results
+tags: [function]
+```
+
+```Go
+func (c QueryResolverDefinitionsFuncCall) Results() []interface{}
+```
+
+Results returns an interface slice containing the results of this invocation. 
+
+### <a id="QueryResolverDiagnosticsFunc" href="#QueryResolverDiagnosticsFunc">type QueryResolverDiagnosticsFunc struct</a>
+
+```
+searchKey: mocks.QueryResolverDiagnosticsFunc
+tags: [struct]
+```
+
+```Go
+type QueryResolverDiagnosticsFunc struct {
+	defaultHook func(context.Context, int) ([]resolvers.AdjustedDiagnostic, int, error)
+	hooks       []func(context.Context, int) ([]resolvers.AdjustedDiagnostic, int, error)
+	history     []QueryResolverDiagnosticsFuncCall
+	mutex       sync.Mutex
+}
+```
+
+QueryResolverDiagnosticsFunc describes the behavior when the Diagnostics method of the parent MockQueryResolver instance is invoked. 
+
+#### <a id="QueryResolverDiagnosticsFunc.History" href="#QueryResolverDiagnosticsFunc.History">func (f *QueryResolverDiagnosticsFunc) History() []QueryResolverDiagnosticsFuncCall</a>
+
+```
+searchKey: mocks.QueryResolverDiagnosticsFunc.History
+tags: [function]
+```
+
+```Go
+func (f *QueryResolverDiagnosticsFunc) History() []QueryResolverDiagnosticsFuncCall
+```
+
+History returns a sequence of QueryResolverDiagnosticsFuncCall objects describing the invocations of this function. 
+
+#### <a id="QueryResolverDiagnosticsFunc.PushHook" href="#QueryResolverDiagnosticsFunc.PushHook">func (f *QueryResolverDiagnosticsFunc) PushHook(hook func(context.Context, int) ([]resolvers.AdjustedDiagnostic, int, error))</a>
+
+```
+searchKey: mocks.QueryResolverDiagnosticsFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *QueryResolverDiagnosticsFunc) PushHook(hook func(context.Context, int) ([]resolvers.AdjustedDiagnostic, int, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the Diagnostics method of the parent MockQueryResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="QueryResolverDiagnosticsFunc.PushReturn" href="#QueryResolverDiagnosticsFunc.PushReturn">func (f *QueryResolverDiagnosticsFunc) PushReturn(r0 []resolvers.AdjustedDiagnostic, r1 int, r2 error)</a>
+
+```
+searchKey: mocks.QueryResolverDiagnosticsFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *QueryResolverDiagnosticsFunc) PushReturn(r0 []resolvers.AdjustedDiagnostic, r1 int, r2 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="QueryResolverDiagnosticsFunc.SetDefaultHook" href="#QueryResolverDiagnosticsFunc.SetDefaultHook">func (f *QueryResolverDiagnosticsFunc) SetDefaultHook(hook func(context.Context, int) ([]resolvers.AdjustedDiagnostic, int, error))</a>
+
+```
+searchKey: mocks.QueryResolverDiagnosticsFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *QueryResolverDiagnosticsFunc) SetDefaultHook(hook func(context.Context, int) ([]resolvers.AdjustedDiagnostic, int, error))
+```
+
+SetDefaultHook sets function that is called when the Diagnostics method of the parent MockQueryResolver instance is invoked and the hook queue is empty. 
+
+#### <a id="QueryResolverDiagnosticsFunc.SetDefaultReturn" href="#QueryResolverDiagnosticsFunc.SetDefaultReturn">func (f *QueryResolverDiagnosticsFunc) SetDefaultReturn(r0 []resolvers.AdjustedDiagnostic, r1 int, r2 error)</a>
+
+```
+searchKey: mocks.QueryResolverDiagnosticsFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *QueryResolverDiagnosticsFunc) SetDefaultReturn(r0 []resolvers.AdjustedDiagnostic, r1 int, r2 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="QueryResolverDiagnosticsFunc.appendCall" href="#QueryResolverDiagnosticsFunc.appendCall">func (f *QueryResolverDiagnosticsFunc) appendCall(r0 QueryResolverDiagnosticsFuncCall)</a>
+
+```
+searchKey: mocks.QueryResolverDiagnosticsFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *QueryResolverDiagnosticsFunc) appendCall(r0 QueryResolverDiagnosticsFuncCall)
+```
+
+#### <a id="QueryResolverDiagnosticsFunc.nextHook" href="#QueryResolverDiagnosticsFunc.nextHook">func (f *QueryResolverDiagnosticsFunc) nextHook() func(context.Context, int) ([]resolvers.AdjustedDiagnostic, int, error)</a>
+
+```
+searchKey: mocks.QueryResolverDiagnosticsFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *QueryResolverDiagnosticsFunc) nextHook() func(context.Context, int) ([]resolvers.AdjustedDiagnostic, int, error)
+```
+
+### <a id="QueryResolverDiagnosticsFuncCall" href="#QueryResolverDiagnosticsFuncCall">type QueryResolverDiagnosticsFuncCall struct</a>
+
+```
+searchKey: mocks.QueryResolverDiagnosticsFuncCall
+tags: [struct]
+```
+
+```Go
+type QueryResolverDiagnosticsFuncCall struct {
+	// Arg0 is the value of the 1st argument passed to this method
+	// invocation.
+	Arg0 context.Context
+	// Arg1 is the value of the 2nd argument passed to this method
+	// invocation.
+	Arg1 int
+	// Result0 is the value of the 1st result returned from this method
+	// invocation.
+	Result0 []resolvers.AdjustedDiagnostic
+	// Result1 is the value of the 2nd result returned from this method
+	// invocation.
+	Result1 int
+	// Result2 is the value of the 3rd result returned from this method
+	// invocation.
+	Result2 error
+}
+```
+
+QueryResolverDiagnosticsFuncCall is an object that describes an invocation of method Diagnostics on an instance of MockQueryResolver. 
+
+#### <a id="QueryResolverDiagnosticsFuncCall.Args" href="#QueryResolverDiagnosticsFuncCall.Args">func (c QueryResolverDiagnosticsFuncCall) Args() []interface{}</a>
+
+```
+searchKey: mocks.QueryResolverDiagnosticsFuncCall.Args
+tags: [function]
+```
+
+```Go
+func (c QueryResolverDiagnosticsFuncCall) Args() []interface{}
+```
+
+Args returns an interface slice containing the arguments of this invocation. 
+
+#### <a id="QueryResolverDiagnosticsFuncCall.Results" href="#QueryResolverDiagnosticsFuncCall.Results">func (c QueryResolverDiagnosticsFuncCall) Results() []interface{}</a>
+
+```
+searchKey: mocks.QueryResolverDiagnosticsFuncCall.Results
+tags: [function]
+```
+
+```Go
+func (c QueryResolverDiagnosticsFuncCall) Results() []interface{}
+```
+
+Results returns an interface slice containing the results of this invocation. 
+
+### <a id="QueryResolverDocumentationPageFunc" href="#QueryResolverDocumentationPageFunc">type QueryResolverDocumentationPageFunc struct</a>
+
+```
+searchKey: mocks.QueryResolverDocumentationPageFunc
+tags: [struct]
+```
+
+```Go
+type QueryResolverDocumentationPageFunc struct {
+	defaultHook func(context.Context, string) (*semantic.DocumentationPageData, error)
+	hooks       []func(context.Context, string) (*semantic.DocumentationPageData, error)
+	history     []QueryResolverDocumentationPageFuncCall
+	mutex       sync.Mutex
+}
+```
+
+QueryResolverDocumentationPageFunc describes the behavior when the DocumentationPage method of the parent MockQueryResolver instance is invoked. 
+
+#### <a id="QueryResolverDocumentationPageFunc.History" href="#QueryResolverDocumentationPageFunc.History">func (f *QueryResolverDocumentationPageFunc) History() []QueryResolverDocumentationPageFuncCall</a>
+
+```
+searchKey: mocks.QueryResolverDocumentationPageFunc.History
+tags: [function]
+```
+
+```Go
+func (f *QueryResolverDocumentationPageFunc) History() []QueryResolverDocumentationPageFuncCall
+```
+
+History returns a sequence of QueryResolverDocumentationPageFuncCall objects describing the invocations of this function. 
+
+#### <a id="QueryResolverDocumentationPageFunc.PushHook" href="#QueryResolverDocumentationPageFunc.PushHook">func (f *QueryResolverDocumentationPageFunc) PushHook(hook func(context.Context, string) (*semantic.DocumentationPageData, error))</a>
+
+```
+searchKey: mocks.QueryResolverDocumentationPageFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *QueryResolverDocumentationPageFunc) PushHook(hook func(context.Context, string) (*semantic.DocumentationPageData, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the DocumentationPage method of the parent MockQueryResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="QueryResolverDocumentationPageFunc.PushReturn" href="#QueryResolverDocumentationPageFunc.PushReturn">func (f *QueryResolverDocumentationPageFunc) PushReturn(r0 *semantic.DocumentationPageData, r1 error)</a>
+
+```
+searchKey: mocks.QueryResolverDocumentationPageFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *QueryResolverDocumentationPageFunc) PushReturn(r0 *semantic.DocumentationPageData, r1 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="QueryResolverDocumentationPageFunc.SetDefaultHook" href="#QueryResolverDocumentationPageFunc.SetDefaultHook">func (f *QueryResolverDocumentationPageFunc) SetDefaultHook(hook func(context.Context, string) (*semantic.DocumentationPageData, error))</a>
+
+```
+searchKey: mocks.QueryResolverDocumentationPageFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *QueryResolverDocumentationPageFunc) SetDefaultHook(hook func(context.Context, string) (*semantic.DocumentationPageData, error))
+```
+
+SetDefaultHook sets function that is called when the DocumentationPage method of the parent MockQueryResolver instance is invoked and the hook queue is empty. 
+
+#### <a id="QueryResolverDocumentationPageFunc.SetDefaultReturn" href="#QueryResolverDocumentationPageFunc.SetDefaultReturn">func (f *QueryResolverDocumentationPageFunc) SetDefaultReturn(r0 *semantic.DocumentationPageData, r1 error)</a>
+
+```
+searchKey: mocks.QueryResolverDocumentationPageFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *QueryResolverDocumentationPageFunc) SetDefaultReturn(r0 *semantic.DocumentationPageData, r1 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="QueryResolverDocumentationPageFunc.appendCall" href="#QueryResolverDocumentationPageFunc.appendCall">func (f *QueryResolverDocumentationPageFunc) appendCall(r0 QueryResolverDocumentationPageFuncCall)</a>
+
+```
+searchKey: mocks.QueryResolverDocumentationPageFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *QueryResolverDocumentationPageFunc) appendCall(r0 QueryResolverDocumentationPageFuncCall)
+```
+
+#### <a id="QueryResolverDocumentationPageFunc.nextHook" href="#QueryResolverDocumentationPageFunc.nextHook">func (f *QueryResolverDocumentationPageFunc) nextHook() func(context.Context, string) (*semantic.DocumentationPageData, error)</a>
+
+```
+searchKey: mocks.QueryResolverDocumentationPageFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *QueryResolverDocumentationPageFunc) nextHook() func(context.Context, string) (*semantic.DocumentationPageData, error)
+```
+
+### <a id="QueryResolverDocumentationPageFuncCall" href="#QueryResolverDocumentationPageFuncCall">type QueryResolverDocumentationPageFuncCall struct</a>
+
+```
+searchKey: mocks.QueryResolverDocumentationPageFuncCall
+tags: [struct]
+```
+
+```Go
+type QueryResolverDocumentationPageFuncCall struct {
+	// Arg0 is the value of the 1st argument passed to this method
+	// invocation.
+	Arg0 context.Context
+	// Arg1 is the value of the 2nd argument passed to this method
+	// invocation.
+	Arg1 string
+	// Result0 is the value of the 1st result returned from this method
+	// invocation.
+	Result0 *semantic.DocumentationPageData
+	// Result1 is the value of the 2nd result returned from this method
+	// invocation.
+	Result1 error
+}
+```
+
+QueryResolverDocumentationPageFuncCall is an object that describes an invocation of method DocumentationPage on an instance of MockQueryResolver. 
+
+#### <a id="QueryResolverDocumentationPageFuncCall.Args" href="#QueryResolverDocumentationPageFuncCall.Args">func (c QueryResolverDocumentationPageFuncCall) Args() []interface{}</a>
+
+```
+searchKey: mocks.QueryResolverDocumentationPageFuncCall.Args
+tags: [function]
+```
+
+```Go
+func (c QueryResolverDocumentationPageFuncCall) Args() []interface{}
+```
+
+Args returns an interface slice containing the arguments of this invocation. 
+
+#### <a id="QueryResolverDocumentationPageFuncCall.Results" href="#QueryResolverDocumentationPageFuncCall.Results">func (c QueryResolverDocumentationPageFuncCall) Results() []interface{}</a>
+
+```
+searchKey: mocks.QueryResolverDocumentationPageFuncCall.Results
+tags: [function]
+```
+
+```Go
+func (c QueryResolverDocumentationPageFuncCall) Results() []interface{}
+```
+
+Results returns an interface slice containing the results of this invocation. 
+
+### <a id="QueryResolverHoverFunc" href="#QueryResolverHoverFunc">type QueryResolverHoverFunc struct</a>
+
+```
+searchKey: mocks.QueryResolverHoverFunc
+tags: [struct]
+```
+
+```Go
+type QueryResolverHoverFunc struct {
+	defaultHook func(context.Context, int, int) (string, lsifstore.Range, bool, error)
+	hooks       []func(context.Context, int, int) (string, lsifstore.Range, bool, error)
+	history     []QueryResolverHoverFuncCall
+	mutex       sync.Mutex
+}
+```
+
+QueryResolverHoverFunc describes the behavior when the Hover method of the parent MockQueryResolver instance is invoked. 
+
+#### <a id="QueryResolverHoverFunc.History" href="#QueryResolverHoverFunc.History">func (f *QueryResolverHoverFunc) History() []QueryResolverHoverFuncCall</a>
+
+```
+searchKey: mocks.QueryResolverHoverFunc.History
+tags: [function]
+```
+
+```Go
+func (f *QueryResolverHoverFunc) History() []QueryResolverHoverFuncCall
+```
+
+History returns a sequence of QueryResolverHoverFuncCall objects describing the invocations of this function. 
+
+#### <a id="QueryResolverHoverFunc.PushHook" href="#QueryResolverHoverFunc.PushHook">func (f *QueryResolverHoverFunc) PushHook(hook func(context.Context, int, int) (string, lsifstore.Range, bool, error))</a>
+
+```
+searchKey: mocks.QueryResolverHoverFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *QueryResolverHoverFunc) PushHook(hook func(context.Context, int, int) (string, lsifstore.Range, bool, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the Hover method of the parent MockQueryResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="QueryResolverHoverFunc.PushReturn" href="#QueryResolverHoverFunc.PushReturn">func (f *QueryResolverHoverFunc) PushReturn(r0 string, r1 lsifstore.Range, r2 bool, r3 error)</a>
+
+```
+searchKey: mocks.QueryResolverHoverFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *QueryResolverHoverFunc) PushReturn(r0 string, r1 lsifstore.Range, r2 bool, r3 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="QueryResolverHoverFunc.SetDefaultHook" href="#QueryResolverHoverFunc.SetDefaultHook">func (f *QueryResolverHoverFunc) SetDefaultHook(hook func(context.Context, int, int) (string, lsifstore.Range, bool, error))</a>
+
+```
+searchKey: mocks.QueryResolverHoverFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *QueryResolverHoverFunc) SetDefaultHook(hook func(context.Context, int, int) (string, lsifstore.Range, bool, error))
+```
+
+SetDefaultHook sets function that is called when the Hover method of the parent MockQueryResolver instance is invoked and the hook queue is empty. 
+
+#### <a id="QueryResolverHoverFunc.SetDefaultReturn" href="#QueryResolverHoverFunc.SetDefaultReturn">func (f *QueryResolverHoverFunc) SetDefaultReturn(r0 string, r1 lsifstore.Range, r2 bool, r3 error)</a>
+
+```
+searchKey: mocks.QueryResolverHoverFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *QueryResolverHoverFunc) SetDefaultReturn(r0 string, r1 lsifstore.Range, r2 bool, r3 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="QueryResolverHoverFunc.appendCall" href="#QueryResolverHoverFunc.appendCall">func (f *QueryResolverHoverFunc) appendCall(r0 QueryResolverHoverFuncCall)</a>
+
+```
+searchKey: mocks.QueryResolverHoverFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *QueryResolverHoverFunc) appendCall(r0 QueryResolverHoverFuncCall)
+```
+
+#### <a id="QueryResolverHoverFunc.nextHook" href="#QueryResolverHoverFunc.nextHook">func (f *QueryResolverHoverFunc) nextHook() func(context.Context, int, int) (string, lsifstore.Range, bool, error)</a>
+
+```
+searchKey: mocks.QueryResolverHoverFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *QueryResolverHoverFunc) nextHook() func(context.Context, int, int) (string, lsifstore.Range, bool, error)
+```
+
+### <a id="QueryResolverHoverFuncCall" href="#QueryResolverHoverFuncCall">type QueryResolverHoverFuncCall struct</a>
+
+```
+searchKey: mocks.QueryResolverHoverFuncCall
+tags: [struct]
+```
+
+```Go
+type QueryResolverHoverFuncCall struct {
+	// Arg0 is the value of the 1st argument passed to this method
+	// invocation.
+	Arg0 context.Context
+	// Arg1 is the value of the 2nd argument passed to this method
+	// invocation.
+	Arg1 int
+	// Arg2 is the value of the 3rd argument passed to this method
+	// invocation.
+	Arg2 int
+	// Result0 is the value of the 1st result returned from this method
+	// invocation.
+	Result0 string
+	// Result1 is the value of the 2nd result returned from this method
+	// invocation.
+	Result1 lsifstore.Range
+	// Result2 is the value of the 3rd result returned from this method
+	// invocation.
+	Result2 bool
+	// Result3 is the value of the 4th result returned from this method
+	// invocation.
+	Result3 error
+}
+```
+
+QueryResolverHoverFuncCall is an object that describes an invocation of method Hover on an instance of MockQueryResolver. 
+
+#### <a id="QueryResolverHoverFuncCall.Args" href="#QueryResolverHoverFuncCall.Args">func (c QueryResolverHoverFuncCall) Args() []interface{}</a>
+
+```
+searchKey: mocks.QueryResolverHoverFuncCall.Args
+tags: [function]
+```
+
+```Go
+func (c QueryResolverHoverFuncCall) Args() []interface{}
+```
+
+Args returns an interface slice containing the arguments of this invocation. 
+
+#### <a id="QueryResolverHoverFuncCall.Results" href="#QueryResolverHoverFuncCall.Results">func (c QueryResolverHoverFuncCall) Results() []interface{}</a>
+
+```
+searchKey: mocks.QueryResolverHoverFuncCall.Results
+tags: [function]
+```
+
+```Go
+func (c QueryResolverHoverFuncCall) Results() []interface{}
+```
+
+Results returns an interface slice containing the results of this invocation. 
+
+### <a id="QueryResolverRangesFunc" href="#QueryResolverRangesFunc">type QueryResolverRangesFunc struct</a>
+
+```
+searchKey: mocks.QueryResolverRangesFunc
+tags: [struct]
+```
+
+```Go
+type QueryResolverRangesFunc struct {
+	defaultHook func(context.Context, int, int) ([]resolvers.AdjustedCodeIntelligenceRange, error)
+	hooks       []func(context.Context, int, int) ([]resolvers.AdjustedCodeIntelligenceRange, error)
+	history     []QueryResolverRangesFuncCall
+	mutex       sync.Mutex
+}
+```
+
+QueryResolverRangesFunc describes the behavior when the Ranges method of the parent MockQueryResolver instance is invoked. 
+
+#### <a id="QueryResolverRangesFunc.History" href="#QueryResolverRangesFunc.History">func (f *QueryResolverRangesFunc) History() []QueryResolverRangesFuncCall</a>
+
+```
+searchKey: mocks.QueryResolverRangesFunc.History
+tags: [function]
+```
+
+```Go
+func (f *QueryResolverRangesFunc) History() []QueryResolverRangesFuncCall
+```
+
+History returns a sequence of QueryResolverRangesFuncCall objects describing the invocations of this function. 
+
+#### <a id="QueryResolverRangesFunc.PushHook" href="#QueryResolverRangesFunc.PushHook">func (f *QueryResolverRangesFunc) PushHook(hook func(context.Context, int, int) ([]resolvers.AdjustedCodeIntelligenceRange, error))</a>
+
+```
+searchKey: mocks.QueryResolverRangesFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *QueryResolverRangesFunc) PushHook(hook func(context.Context, int, int) ([]resolvers.AdjustedCodeIntelligenceRange, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the Ranges method of the parent MockQueryResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="QueryResolverRangesFunc.PushReturn" href="#QueryResolverRangesFunc.PushReturn">func (f *QueryResolverRangesFunc) PushReturn(r0 []resolvers.AdjustedCodeIntelligenceRange, r1 error)</a>
+
+```
+searchKey: mocks.QueryResolverRangesFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *QueryResolverRangesFunc) PushReturn(r0 []resolvers.AdjustedCodeIntelligenceRange, r1 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="QueryResolverRangesFunc.SetDefaultHook" href="#QueryResolverRangesFunc.SetDefaultHook">func (f *QueryResolverRangesFunc) SetDefaultHook(hook func(context.Context, int, int) ([]resolvers.AdjustedCodeIntelligenceRange, error))</a>
+
+```
+searchKey: mocks.QueryResolverRangesFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *QueryResolverRangesFunc) SetDefaultHook(hook func(context.Context, int, int) ([]resolvers.AdjustedCodeIntelligenceRange, error))
+```
+
+SetDefaultHook sets function that is called when the Ranges method of the parent MockQueryResolver instance is invoked and the hook queue is empty. 
+
+#### <a id="QueryResolverRangesFunc.SetDefaultReturn" href="#QueryResolverRangesFunc.SetDefaultReturn">func (f *QueryResolverRangesFunc) SetDefaultReturn(r0 []resolvers.AdjustedCodeIntelligenceRange, r1 error)</a>
+
+```
+searchKey: mocks.QueryResolverRangesFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *QueryResolverRangesFunc) SetDefaultReturn(r0 []resolvers.AdjustedCodeIntelligenceRange, r1 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="QueryResolverRangesFunc.appendCall" href="#QueryResolverRangesFunc.appendCall">func (f *QueryResolverRangesFunc) appendCall(r0 QueryResolverRangesFuncCall)</a>
+
+```
+searchKey: mocks.QueryResolverRangesFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *QueryResolverRangesFunc) appendCall(r0 QueryResolverRangesFuncCall)
+```
+
+#### <a id="QueryResolverRangesFunc.nextHook" href="#QueryResolverRangesFunc.nextHook">func (f *QueryResolverRangesFunc) nextHook() func(context.Context, int, int) ([]resolvers.AdjustedCodeIntelligenceRange, error)</a>
+
+```
+searchKey: mocks.QueryResolverRangesFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *QueryResolverRangesFunc) nextHook() func(context.Context, int, int) ([]resolvers.AdjustedCodeIntelligenceRange, error)
+```
+
+### <a id="QueryResolverRangesFuncCall" href="#QueryResolverRangesFuncCall">type QueryResolverRangesFuncCall struct</a>
+
+```
+searchKey: mocks.QueryResolverRangesFuncCall
+tags: [struct]
+```
+
+```Go
+type QueryResolverRangesFuncCall struct {
+	// Arg0 is the value of the 1st argument passed to this method
+	// invocation.
+	Arg0 context.Context
+	// Arg1 is the value of the 2nd argument passed to this method
+	// invocation.
+	Arg1 int
+	// Arg2 is the value of the 3rd argument passed to this method
+	// invocation.
+	Arg2 int
+	// Result0 is the value of the 1st result returned from this method
+	// invocation.
+	Result0 []resolvers.AdjustedCodeIntelligenceRange
+	// Result1 is the value of the 2nd result returned from this method
+	// invocation.
+	Result1 error
+}
+```
+
+QueryResolverRangesFuncCall is an object that describes an invocation of method Ranges on an instance of MockQueryResolver. 
+
+#### <a id="QueryResolverRangesFuncCall.Args" href="#QueryResolverRangesFuncCall.Args">func (c QueryResolverRangesFuncCall) Args() []interface{}</a>
+
+```
+searchKey: mocks.QueryResolverRangesFuncCall.Args
+tags: [function]
+```
+
+```Go
+func (c QueryResolverRangesFuncCall) Args() []interface{}
+```
+
+Args returns an interface slice containing the arguments of this invocation. 
+
+#### <a id="QueryResolverRangesFuncCall.Results" href="#QueryResolverRangesFuncCall.Results">func (c QueryResolverRangesFuncCall) Results() []interface{}</a>
+
+```
+searchKey: mocks.QueryResolverRangesFuncCall.Results
+tags: [function]
+```
+
+```Go
+func (c QueryResolverRangesFuncCall) Results() []interface{}
+```
+
+Results returns an interface slice containing the results of this invocation. 
+
+### <a id="QueryResolverReferencesFunc" href="#QueryResolverReferencesFunc">type QueryResolverReferencesFunc struct</a>
+
+```
+searchKey: mocks.QueryResolverReferencesFunc
+tags: [struct]
+```
+
+```Go
+type QueryResolverReferencesFunc struct {
+	defaultHook func(context.Context, int, int, int, string) ([]resolvers.AdjustedLocation, string, error)
+	hooks       []func(context.Context, int, int, int, string) ([]resolvers.AdjustedLocation, string, error)
+	history     []QueryResolverReferencesFuncCall
+	mutex       sync.Mutex
+}
+```
+
+QueryResolverReferencesFunc describes the behavior when the References method of the parent MockQueryResolver instance is invoked. 
+
+#### <a id="QueryResolverReferencesFunc.History" href="#QueryResolverReferencesFunc.History">func (f *QueryResolverReferencesFunc) History() []QueryResolverReferencesFuncCall</a>
+
+```
+searchKey: mocks.QueryResolverReferencesFunc.History
+tags: [function]
+```
+
+```Go
+func (f *QueryResolverReferencesFunc) History() []QueryResolverReferencesFuncCall
+```
+
+History returns a sequence of QueryResolverReferencesFuncCall objects describing the invocations of this function. 
+
+#### <a id="QueryResolverReferencesFunc.PushHook" href="#QueryResolverReferencesFunc.PushHook">func (f *QueryResolverReferencesFunc) PushHook(hook func(context.Context, int, int, int, string) ([]resolvers.AdjustedLocation, string, error))</a>
+
+```
+searchKey: mocks.QueryResolverReferencesFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *QueryResolverReferencesFunc) PushHook(hook func(context.Context, int, int, int, string) ([]resolvers.AdjustedLocation, string, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the References method of the parent MockQueryResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="QueryResolverReferencesFunc.PushReturn" href="#QueryResolverReferencesFunc.PushReturn">func (f *QueryResolverReferencesFunc) PushReturn(r0 []resolvers.AdjustedLocation, r1 string, r2 error)</a>
+
+```
+searchKey: mocks.QueryResolverReferencesFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *QueryResolverReferencesFunc) PushReturn(r0 []resolvers.AdjustedLocation, r1 string, r2 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="QueryResolverReferencesFunc.SetDefaultHook" href="#QueryResolverReferencesFunc.SetDefaultHook">func (f *QueryResolverReferencesFunc) SetDefaultHook(hook func(context.Context, int, int, int, string) ([]resolvers.AdjustedLocation, string, error))</a>
+
+```
+searchKey: mocks.QueryResolverReferencesFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *QueryResolverReferencesFunc) SetDefaultHook(hook func(context.Context, int, int, int, string) ([]resolvers.AdjustedLocation, string, error))
+```
+
+SetDefaultHook sets function that is called when the References method of the parent MockQueryResolver instance is invoked and the hook queue is empty. 
+
+#### <a id="QueryResolverReferencesFunc.SetDefaultReturn" href="#QueryResolverReferencesFunc.SetDefaultReturn">func (f *QueryResolverReferencesFunc) SetDefaultReturn(r0 []resolvers.AdjustedLocation, r1 string, r2 error)</a>
+
+```
+searchKey: mocks.QueryResolverReferencesFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *QueryResolverReferencesFunc) SetDefaultReturn(r0 []resolvers.AdjustedLocation, r1 string, r2 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="QueryResolverReferencesFunc.appendCall" href="#QueryResolverReferencesFunc.appendCall">func (f *QueryResolverReferencesFunc) appendCall(r0 QueryResolverReferencesFuncCall)</a>
+
+```
+searchKey: mocks.QueryResolverReferencesFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *QueryResolverReferencesFunc) appendCall(r0 QueryResolverReferencesFuncCall)
+```
+
+#### <a id="QueryResolverReferencesFunc.nextHook" href="#QueryResolverReferencesFunc.nextHook">func (f *QueryResolverReferencesFunc) nextHook() func(context.Context, int, int, int, string) ([]resolvers.AdjustedLocation, string, error)</a>
+
+```
+searchKey: mocks.QueryResolverReferencesFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *QueryResolverReferencesFunc) nextHook() func(context.Context, int, int, int, string) ([]resolvers.AdjustedLocation, string, error)
+```
+
+### <a id="QueryResolverReferencesFuncCall" href="#QueryResolverReferencesFuncCall">type QueryResolverReferencesFuncCall struct</a>
+
+```
+searchKey: mocks.QueryResolverReferencesFuncCall
+tags: [struct]
+```
+
+```Go
+type QueryResolverReferencesFuncCall struct {
+	// Arg0 is the value of the 1st argument passed to this method
+	// invocation.
+	Arg0 context.Context
+	// Arg1 is the value of the 2nd argument passed to this method
+	// invocation.
+	Arg1 int
+	// Arg2 is the value of the 3rd argument passed to this method
+	// invocation.
+	Arg2 int
+	// Arg3 is the value of the 4th argument passed to this method
+	// invocation.
+	Arg3 int
+	// Arg4 is the value of the 5th argument passed to this method
+	// invocation.
+	Arg4 string
+	// Result0 is the value of the 1st result returned from this method
+	// invocation.
+	Result0 []resolvers.AdjustedLocation
+	// Result1 is the value of the 2nd result returned from this method
+	// invocation.
+	Result1 string
+	// Result2 is the value of the 3rd result returned from this method
+	// invocation.
+	Result2 error
+}
+```
+
+QueryResolverReferencesFuncCall is an object that describes an invocation of method References on an instance of MockQueryResolver. 
+
+#### <a id="QueryResolverReferencesFuncCall.Args" href="#QueryResolverReferencesFuncCall.Args">func (c QueryResolverReferencesFuncCall) Args() []interface{}</a>
+
+```
+searchKey: mocks.QueryResolverReferencesFuncCall.Args
+tags: [function]
+```
+
+```Go
+func (c QueryResolverReferencesFuncCall) Args() []interface{}
+```
+
+Args returns an interface slice containing the arguments of this invocation. 
+
+#### <a id="QueryResolverReferencesFuncCall.Results" href="#QueryResolverReferencesFuncCall.Results">func (c QueryResolverReferencesFuncCall) Results() []interface{}</a>
+
+```
+searchKey: mocks.QueryResolverReferencesFuncCall.Results
+tags: [function]
+```
+
+```Go
+func (c QueryResolverReferencesFuncCall) Results() []interface{}
+```
+
+Results returns an interface slice containing the results of this invocation. 
+
 ### <a id="ResolverCommitGraphFunc" href="#ResolverCommitGraphFunc">type ResolverCommitGraphFunc struct</a>
 
 ```
 searchKey: mocks.ResolverCommitGraphFunc
+tags: [struct]
 ```
 
 ```Go
@@ -1540,80 +1620,11 @@ type ResolverCommitGraphFunc struct {
 
 ResolverCommitGraphFunc describes the behavior when the CommitGraph method of the parent MockResolver instance is invoked. 
 
-#### <a id="ResolverCommitGraphFunc.SetDefaultHook" href="#ResolverCommitGraphFunc.SetDefaultHook">func (f *ResolverCommitGraphFunc) SetDefaultHook(hook func(context.Context, int) (graphqlbackend.CodeIntelligenceCommitGraphResolver, error))</a>
-
-```
-searchKey: mocks.ResolverCommitGraphFunc.SetDefaultHook
-```
-
-```Go
-func (f *ResolverCommitGraphFunc) SetDefaultHook(hook func(context.Context, int) (graphqlbackend.CodeIntelligenceCommitGraphResolver, error))
-```
-
-SetDefaultHook sets function that is called when the CommitGraph method of the parent MockResolver instance is invoked and the hook queue is empty. 
-
-#### <a id="ResolverCommitGraphFunc.PushHook" href="#ResolverCommitGraphFunc.PushHook">func (f *ResolverCommitGraphFunc) PushHook(hook func(context.Context, int) (graphqlbackend.CodeIntelligenceCommitGraphResolver, error))</a>
-
-```
-searchKey: mocks.ResolverCommitGraphFunc.PushHook
-```
-
-```Go
-func (f *ResolverCommitGraphFunc) PushHook(hook func(context.Context, int) (graphqlbackend.CodeIntelligenceCommitGraphResolver, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the CommitGraph method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="ResolverCommitGraphFunc.SetDefaultReturn" href="#ResolverCommitGraphFunc.SetDefaultReturn">func (f *ResolverCommitGraphFunc) SetDefaultReturn(r0 graphqlbackend.CodeIntelligenceCommitGraphResolver, r1 error)</a>
-
-```
-searchKey: mocks.ResolverCommitGraphFunc.SetDefaultReturn
-```
-
-```Go
-func (f *ResolverCommitGraphFunc) SetDefaultReturn(r0 graphqlbackend.CodeIntelligenceCommitGraphResolver, r1 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverCommitGraphFunc.PushReturn" href="#ResolverCommitGraphFunc.PushReturn">func (f *ResolverCommitGraphFunc) PushReturn(r0 graphqlbackend.CodeIntelligenceCommitGraphResolver, r1 error)</a>
-
-```
-searchKey: mocks.ResolverCommitGraphFunc.PushReturn
-```
-
-```Go
-func (f *ResolverCommitGraphFunc) PushReturn(r0 graphqlbackend.CodeIntelligenceCommitGraphResolver, r1 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverCommitGraphFunc.nextHook" href="#ResolverCommitGraphFunc.nextHook">func (f *ResolverCommitGraphFunc) nextHook() func(context.Context, int) (graphqlbackend.CodeIntelligenceCommitGraphResolver, error)</a>
-
-```
-searchKey: mocks.ResolverCommitGraphFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *ResolverCommitGraphFunc) nextHook() func(context.Context, int) (graphqlbackend.CodeIntelligenceCommitGraphResolver, error)
-```
-
-#### <a id="ResolverCommitGraphFunc.appendCall" href="#ResolverCommitGraphFunc.appendCall">func (f *ResolverCommitGraphFunc) appendCall(r0 ResolverCommitGraphFuncCall)</a>
-
-```
-searchKey: mocks.ResolverCommitGraphFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *ResolverCommitGraphFunc) appendCall(r0 ResolverCommitGraphFuncCall)
-```
-
 #### <a id="ResolverCommitGraphFunc.History" href="#ResolverCommitGraphFunc.History">func (f *ResolverCommitGraphFunc) History() []ResolverCommitGraphFuncCall</a>
 
 ```
 searchKey: mocks.ResolverCommitGraphFunc.History
+tags: [function]
 ```
 
 ```Go
@@ -1622,10 +1633,85 @@ func (f *ResolverCommitGraphFunc) History() []ResolverCommitGraphFuncCall
 
 History returns a sequence of ResolverCommitGraphFuncCall objects describing the invocations of this function. 
 
+#### <a id="ResolverCommitGraphFunc.PushHook" href="#ResolverCommitGraphFunc.PushHook">func (f *ResolverCommitGraphFunc) PushHook(hook func(context.Context, int) (graphqlbackend.CodeIntelligenceCommitGraphResolver, error))</a>
+
+```
+searchKey: mocks.ResolverCommitGraphFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverCommitGraphFunc) PushHook(hook func(context.Context, int) (graphqlbackend.CodeIntelligenceCommitGraphResolver, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the CommitGraph method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="ResolverCommitGraphFunc.PushReturn" href="#ResolverCommitGraphFunc.PushReturn">func (f *ResolverCommitGraphFunc) PushReturn(r0 graphqlbackend.CodeIntelligenceCommitGraphResolver, r1 error)</a>
+
+```
+searchKey: mocks.ResolverCommitGraphFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverCommitGraphFunc) PushReturn(r0 graphqlbackend.CodeIntelligenceCommitGraphResolver, r1 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverCommitGraphFunc.SetDefaultHook" href="#ResolverCommitGraphFunc.SetDefaultHook">func (f *ResolverCommitGraphFunc) SetDefaultHook(hook func(context.Context, int) (graphqlbackend.CodeIntelligenceCommitGraphResolver, error))</a>
+
+```
+searchKey: mocks.ResolverCommitGraphFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverCommitGraphFunc) SetDefaultHook(hook func(context.Context, int) (graphqlbackend.CodeIntelligenceCommitGraphResolver, error))
+```
+
+SetDefaultHook sets function that is called when the CommitGraph method of the parent MockResolver instance is invoked and the hook queue is empty. 
+
+#### <a id="ResolverCommitGraphFunc.SetDefaultReturn" href="#ResolverCommitGraphFunc.SetDefaultReturn">func (f *ResolverCommitGraphFunc) SetDefaultReturn(r0 graphqlbackend.CodeIntelligenceCommitGraphResolver, r1 error)</a>
+
+```
+searchKey: mocks.ResolverCommitGraphFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverCommitGraphFunc) SetDefaultReturn(r0 graphqlbackend.CodeIntelligenceCommitGraphResolver, r1 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverCommitGraphFunc.appendCall" href="#ResolverCommitGraphFunc.appendCall">func (f *ResolverCommitGraphFunc) appendCall(r0 ResolverCommitGraphFuncCall)</a>
+
+```
+searchKey: mocks.ResolverCommitGraphFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *ResolverCommitGraphFunc) appendCall(r0 ResolverCommitGraphFuncCall)
+```
+
+#### <a id="ResolverCommitGraphFunc.nextHook" href="#ResolverCommitGraphFunc.nextHook">func (f *ResolverCommitGraphFunc) nextHook() func(context.Context, int) (graphqlbackend.CodeIntelligenceCommitGraphResolver, error)</a>
+
+```
+searchKey: mocks.ResolverCommitGraphFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *ResolverCommitGraphFunc) nextHook() func(context.Context, int) (graphqlbackend.CodeIntelligenceCommitGraphResolver, error)
+```
+
 ### <a id="ResolverCommitGraphFuncCall" href="#ResolverCommitGraphFuncCall">type ResolverCommitGraphFuncCall struct</a>
 
 ```
 searchKey: mocks.ResolverCommitGraphFuncCall
+tags: [struct]
 ```
 
 ```Go
@@ -1651,6 +1737,7 @@ ResolverCommitGraphFuncCall is an object that describes an invocation of method 
 
 ```
 searchKey: mocks.ResolverCommitGraphFuncCall.Args
+tags: [function]
 ```
 
 ```Go
@@ -1663,6 +1750,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverCommitGraphFuncCall.Results
+tags: [function]
 ```
 
 ```Go
@@ -1675,6 +1763,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.ResolverDeleteIndexByIDFunc
+tags: [struct]
 ```
 
 ```Go
@@ -1688,80 +1777,11 @@ type ResolverDeleteIndexByIDFunc struct {
 
 ResolverDeleteIndexByIDFunc describes the behavior when the DeleteIndexByID method of the parent MockResolver instance is invoked. 
 
-#### <a id="ResolverDeleteIndexByIDFunc.SetDefaultHook" href="#ResolverDeleteIndexByIDFunc.SetDefaultHook">func (f *ResolverDeleteIndexByIDFunc) SetDefaultHook(hook func(context.Context, int) error)</a>
-
-```
-searchKey: mocks.ResolverDeleteIndexByIDFunc.SetDefaultHook
-```
-
-```Go
-func (f *ResolverDeleteIndexByIDFunc) SetDefaultHook(hook func(context.Context, int) error)
-```
-
-SetDefaultHook sets function that is called when the DeleteIndexByID method of the parent MockResolver instance is invoked and the hook queue is empty. 
-
-#### <a id="ResolverDeleteIndexByIDFunc.PushHook" href="#ResolverDeleteIndexByIDFunc.PushHook">func (f *ResolverDeleteIndexByIDFunc) PushHook(hook func(context.Context, int) error)</a>
-
-```
-searchKey: mocks.ResolverDeleteIndexByIDFunc.PushHook
-```
-
-```Go
-func (f *ResolverDeleteIndexByIDFunc) PushHook(hook func(context.Context, int) error)
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the DeleteIndexByID method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="ResolverDeleteIndexByIDFunc.SetDefaultReturn" href="#ResolverDeleteIndexByIDFunc.SetDefaultReturn">func (f *ResolverDeleteIndexByIDFunc) SetDefaultReturn(r0 error)</a>
-
-```
-searchKey: mocks.ResolverDeleteIndexByIDFunc.SetDefaultReturn
-```
-
-```Go
-func (f *ResolverDeleteIndexByIDFunc) SetDefaultReturn(r0 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverDeleteIndexByIDFunc.PushReturn" href="#ResolverDeleteIndexByIDFunc.PushReturn">func (f *ResolverDeleteIndexByIDFunc) PushReturn(r0 error)</a>
-
-```
-searchKey: mocks.ResolverDeleteIndexByIDFunc.PushReturn
-```
-
-```Go
-func (f *ResolverDeleteIndexByIDFunc) PushReturn(r0 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverDeleteIndexByIDFunc.nextHook" href="#ResolverDeleteIndexByIDFunc.nextHook">func (f *ResolverDeleteIndexByIDFunc) nextHook() func(context.Context, int) error</a>
-
-```
-searchKey: mocks.ResolverDeleteIndexByIDFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *ResolverDeleteIndexByIDFunc) nextHook() func(context.Context, int) error
-```
-
-#### <a id="ResolverDeleteIndexByIDFunc.appendCall" href="#ResolverDeleteIndexByIDFunc.appendCall">func (f *ResolverDeleteIndexByIDFunc) appendCall(r0 ResolverDeleteIndexByIDFuncCall)</a>
-
-```
-searchKey: mocks.ResolverDeleteIndexByIDFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *ResolverDeleteIndexByIDFunc) appendCall(r0 ResolverDeleteIndexByIDFuncCall)
-```
-
 #### <a id="ResolverDeleteIndexByIDFunc.History" href="#ResolverDeleteIndexByIDFunc.History">func (f *ResolverDeleteIndexByIDFunc) History() []ResolverDeleteIndexByIDFuncCall</a>
 
 ```
 searchKey: mocks.ResolverDeleteIndexByIDFunc.History
+tags: [function]
 ```
 
 ```Go
@@ -1770,10 +1790,85 @@ func (f *ResolverDeleteIndexByIDFunc) History() []ResolverDeleteIndexByIDFuncCal
 
 History returns a sequence of ResolverDeleteIndexByIDFuncCall objects describing the invocations of this function. 
 
+#### <a id="ResolverDeleteIndexByIDFunc.PushHook" href="#ResolverDeleteIndexByIDFunc.PushHook">func (f *ResolverDeleteIndexByIDFunc) PushHook(hook func(context.Context, int) error)</a>
+
+```
+searchKey: mocks.ResolverDeleteIndexByIDFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverDeleteIndexByIDFunc) PushHook(hook func(context.Context, int) error)
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the DeleteIndexByID method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="ResolverDeleteIndexByIDFunc.PushReturn" href="#ResolverDeleteIndexByIDFunc.PushReturn">func (f *ResolverDeleteIndexByIDFunc) PushReturn(r0 error)</a>
+
+```
+searchKey: mocks.ResolverDeleteIndexByIDFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverDeleteIndexByIDFunc) PushReturn(r0 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverDeleteIndexByIDFunc.SetDefaultHook" href="#ResolverDeleteIndexByIDFunc.SetDefaultHook">func (f *ResolverDeleteIndexByIDFunc) SetDefaultHook(hook func(context.Context, int) error)</a>
+
+```
+searchKey: mocks.ResolverDeleteIndexByIDFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverDeleteIndexByIDFunc) SetDefaultHook(hook func(context.Context, int) error)
+```
+
+SetDefaultHook sets function that is called when the DeleteIndexByID method of the parent MockResolver instance is invoked and the hook queue is empty. 
+
+#### <a id="ResolverDeleteIndexByIDFunc.SetDefaultReturn" href="#ResolverDeleteIndexByIDFunc.SetDefaultReturn">func (f *ResolverDeleteIndexByIDFunc) SetDefaultReturn(r0 error)</a>
+
+```
+searchKey: mocks.ResolverDeleteIndexByIDFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverDeleteIndexByIDFunc) SetDefaultReturn(r0 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverDeleteIndexByIDFunc.appendCall" href="#ResolverDeleteIndexByIDFunc.appendCall">func (f *ResolverDeleteIndexByIDFunc) appendCall(r0 ResolverDeleteIndexByIDFuncCall)</a>
+
+```
+searchKey: mocks.ResolverDeleteIndexByIDFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *ResolverDeleteIndexByIDFunc) appendCall(r0 ResolverDeleteIndexByIDFuncCall)
+```
+
+#### <a id="ResolverDeleteIndexByIDFunc.nextHook" href="#ResolverDeleteIndexByIDFunc.nextHook">func (f *ResolverDeleteIndexByIDFunc) nextHook() func(context.Context, int) error</a>
+
+```
+searchKey: mocks.ResolverDeleteIndexByIDFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *ResolverDeleteIndexByIDFunc) nextHook() func(context.Context, int) error
+```
+
 ### <a id="ResolverDeleteIndexByIDFuncCall" href="#ResolverDeleteIndexByIDFuncCall">type ResolverDeleteIndexByIDFuncCall struct</a>
 
 ```
 searchKey: mocks.ResolverDeleteIndexByIDFuncCall
+tags: [struct]
 ```
 
 ```Go
@@ -1796,6 +1891,7 @@ ResolverDeleteIndexByIDFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: mocks.ResolverDeleteIndexByIDFuncCall.Args
+tags: [function]
 ```
 
 ```Go
@@ -1808,6 +1904,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverDeleteIndexByIDFuncCall.Results
+tags: [function]
 ```
 
 ```Go
@@ -1820,6 +1917,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.ResolverDeleteUploadByIDFunc
+tags: [struct]
 ```
 
 ```Go
@@ -1833,80 +1931,11 @@ type ResolverDeleteUploadByIDFunc struct {
 
 ResolverDeleteUploadByIDFunc describes the behavior when the DeleteUploadByID method of the parent MockResolver instance is invoked. 
 
-#### <a id="ResolverDeleteUploadByIDFunc.SetDefaultHook" href="#ResolverDeleteUploadByIDFunc.SetDefaultHook">func (f *ResolverDeleteUploadByIDFunc) SetDefaultHook(hook func(context.Context, int) error)</a>
-
-```
-searchKey: mocks.ResolverDeleteUploadByIDFunc.SetDefaultHook
-```
-
-```Go
-func (f *ResolverDeleteUploadByIDFunc) SetDefaultHook(hook func(context.Context, int) error)
-```
-
-SetDefaultHook sets function that is called when the DeleteUploadByID method of the parent MockResolver instance is invoked and the hook queue is empty. 
-
-#### <a id="ResolverDeleteUploadByIDFunc.PushHook" href="#ResolverDeleteUploadByIDFunc.PushHook">func (f *ResolverDeleteUploadByIDFunc) PushHook(hook func(context.Context, int) error)</a>
-
-```
-searchKey: mocks.ResolverDeleteUploadByIDFunc.PushHook
-```
-
-```Go
-func (f *ResolverDeleteUploadByIDFunc) PushHook(hook func(context.Context, int) error)
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the DeleteUploadByID method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="ResolverDeleteUploadByIDFunc.SetDefaultReturn" href="#ResolverDeleteUploadByIDFunc.SetDefaultReturn">func (f *ResolverDeleteUploadByIDFunc) SetDefaultReturn(r0 error)</a>
-
-```
-searchKey: mocks.ResolverDeleteUploadByIDFunc.SetDefaultReturn
-```
-
-```Go
-func (f *ResolverDeleteUploadByIDFunc) SetDefaultReturn(r0 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverDeleteUploadByIDFunc.PushReturn" href="#ResolverDeleteUploadByIDFunc.PushReturn">func (f *ResolverDeleteUploadByIDFunc) PushReturn(r0 error)</a>
-
-```
-searchKey: mocks.ResolverDeleteUploadByIDFunc.PushReturn
-```
-
-```Go
-func (f *ResolverDeleteUploadByIDFunc) PushReturn(r0 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverDeleteUploadByIDFunc.nextHook" href="#ResolverDeleteUploadByIDFunc.nextHook">func (f *ResolverDeleteUploadByIDFunc) nextHook() func(context.Context, int) error</a>
-
-```
-searchKey: mocks.ResolverDeleteUploadByIDFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *ResolverDeleteUploadByIDFunc) nextHook() func(context.Context, int) error
-```
-
-#### <a id="ResolverDeleteUploadByIDFunc.appendCall" href="#ResolverDeleteUploadByIDFunc.appendCall">func (f *ResolverDeleteUploadByIDFunc) appendCall(r0 ResolverDeleteUploadByIDFuncCall)</a>
-
-```
-searchKey: mocks.ResolverDeleteUploadByIDFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *ResolverDeleteUploadByIDFunc) appendCall(r0 ResolverDeleteUploadByIDFuncCall)
-```
-
 #### <a id="ResolverDeleteUploadByIDFunc.History" href="#ResolverDeleteUploadByIDFunc.History">func (f *ResolverDeleteUploadByIDFunc) History() []ResolverDeleteUploadByIDFuncCall</a>
 
 ```
 searchKey: mocks.ResolverDeleteUploadByIDFunc.History
+tags: [function]
 ```
 
 ```Go
@@ -1915,10 +1944,85 @@ func (f *ResolverDeleteUploadByIDFunc) History() []ResolverDeleteUploadByIDFuncC
 
 History returns a sequence of ResolverDeleteUploadByIDFuncCall objects describing the invocations of this function. 
 
+#### <a id="ResolverDeleteUploadByIDFunc.PushHook" href="#ResolverDeleteUploadByIDFunc.PushHook">func (f *ResolverDeleteUploadByIDFunc) PushHook(hook func(context.Context, int) error)</a>
+
+```
+searchKey: mocks.ResolverDeleteUploadByIDFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverDeleteUploadByIDFunc) PushHook(hook func(context.Context, int) error)
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the DeleteUploadByID method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="ResolverDeleteUploadByIDFunc.PushReturn" href="#ResolverDeleteUploadByIDFunc.PushReturn">func (f *ResolverDeleteUploadByIDFunc) PushReturn(r0 error)</a>
+
+```
+searchKey: mocks.ResolverDeleteUploadByIDFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverDeleteUploadByIDFunc) PushReturn(r0 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverDeleteUploadByIDFunc.SetDefaultHook" href="#ResolverDeleteUploadByIDFunc.SetDefaultHook">func (f *ResolverDeleteUploadByIDFunc) SetDefaultHook(hook func(context.Context, int) error)</a>
+
+```
+searchKey: mocks.ResolverDeleteUploadByIDFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverDeleteUploadByIDFunc) SetDefaultHook(hook func(context.Context, int) error)
+```
+
+SetDefaultHook sets function that is called when the DeleteUploadByID method of the parent MockResolver instance is invoked and the hook queue is empty. 
+
+#### <a id="ResolverDeleteUploadByIDFunc.SetDefaultReturn" href="#ResolverDeleteUploadByIDFunc.SetDefaultReturn">func (f *ResolverDeleteUploadByIDFunc) SetDefaultReturn(r0 error)</a>
+
+```
+searchKey: mocks.ResolverDeleteUploadByIDFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverDeleteUploadByIDFunc) SetDefaultReturn(r0 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverDeleteUploadByIDFunc.appendCall" href="#ResolverDeleteUploadByIDFunc.appendCall">func (f *ResolverDeleteUploadByIDFunc) appendCall(r0 ResolverDeleteUploadByIDFuncCall)</a>
+
+```
+searchKey: mocks.ResolverDeleteUploadByIDFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *ResolverDeleteUploadByIDFunc) appendCall(r0 ResolverDeleteUploadByIDFuncCall)
+```
+
+#### <a id="ResolverDeleteUploadByIDFunc.nextHook" href="#ResolverDeleteUploadByIDFunc.nextHook">func (f *ResolverDeleteUploadByIDFunc) nextHook() func(context.Context, int) error</a>
+
+```
+searchKey: mocks.ResolverDeleteUploadByIDFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *ResolverDeleteUploadByIDFunc) nextHook() func(context.Context, int) error
+```
+
 ### <a id="ResolverDeleteUploadByIDFuncCall" href="#ResolverDeleteUploadByIDFuncCall">type ResolverDeleteUploadByIDFuncCall struct</a>
 
 ```
 searchKey: mocks.ResolverDeleteUploadByIDFuncCall
+tags: [struct]
 ```
 
 ```Go
@@ -1941,6 +2045,7 @@ ResolverDeleteUploadByIDFuncCall is an object that describes an invocation of me
 
 ```
 searchKey: mocks.ResolverDeleteUploadByIDFuncCall.Args
+tags: [function]
 ```
 
 ```Go
@@ -1953,6 +2058,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverDeleteUploadByIDFuncCall.Results
+tags: [function]
 ```
 
 ```Go
@@ -1965,6 +2071,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.ResolverGetIndexByIDFunc
+tags: [struct]
 ```
 
 ```Go
@@ -1978,80 +2085,11 @@ type ResolverGetIndexByIDFunc struct {
 
 ResolverGetIndexByIDFunc describes the behavior when the GetIndexByID method of the parent MockResolver instance is invoked. 
 
-#### <a id="ResolverGetIndexByIDFunc.SetDefaultHook" href="#ResolverGetIndexByIDFunc.SetDefaultHook">func (f *ResolverGetIndexByIDFunc) SetDefaultHook(hook func(context.Context, int) (dbstore.Index, bool, error))</a>
-
-```
-searchKey: mocks.ResolverGetIndexByIDFunc.SetDefaultHook
-```
-
-```Go
-func (f *ResolverGetIndexByIDFunc) SetDefaultHook(hook func(context.Context, int) (dbstore.Index, bool, error))
-```
-
-SetDefaultHook sets function that is called when the GetIndexByID method of the parent MockResolver instance is invoked and the hook queue is empty. 
-
-#### <a id="ResolverGetIndexByIDFunc.PushHook" href="#ResolverGetIndexByIDFunc.PushHook">func (f *ResolverGetIndexByIDFunc) PushHook(hook func(context.Context, int) (dbstore.Index, bool, error))</a>
-
-```
-searchKey: mocks.ResolverGetIndexByIDFunc.PushHook
-```
-
-```Go
-func (f *ResolverGetIndexByIDFunc) PushHook(hook func(context.Context, int) (dbstore.Index, bool, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the GetIndexByID method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="ResolverGetIndexByIDFunc.SetDefaultReturn" href="#ResolverGetIndexByIDFunc.SetDefaultReturn">func (f *ResolverGetIndexByIDFunc) SetDefaultReturn(r0 dbstore.Index, r1 bool, r2 error)</a>
-
-```
-searchKey: mocks.ResolverGetIndexByIDFunc.SetDefaultReturn
-```
-
-```Go
-func (f *ResolverGetIndexByIDFunc) SetDefaultReturn(r0 dbstore.Index, r1 bool, r2 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverGetIndexByIDFunc.PushReturn" href="#ResolverGetIndexByIDFunc.PushReturn">func (f *ResolverGetIndexByIDFunc) PushReturn(r0 dbstore.Index, r1 bool, r2 error)</a>
-
-```
-searchKey: mocks.ResolverGetIndexByIDFunc.PushReturn
-```
-
-```Go
-func (f *ResolverGetIndexByIDFunc) PushReturn(r0 dbstore.Index, r1 bool, r2 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverGetIndexByIDFunc.nextHook" href="#ResolverGetIndexByIDFunc.nextHook">func (f *ResolverGetIndexByIDFunc) nextHook() func(context.Context, int) (dbstore.Index, bool, error)</a>
-
-```
-searchKey: mocks.ResolverGetIndexByIDFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *ResolverGetIndexByIDFunc) nextHook() func(context.Context, int) (dbstore.Index, bool, error)
-```
-
-#### <a id="ResolverGetIndexByIDFunc.appendCall" href="#ResolverGetIndexByIDFunc.appendCall">func (f *ResolverGetIndexByIDFunc) appendCall(r0 ResolverGetIndexByIDFuncCall)</a>
-
-```
-searchKey: mocks.ResolverGetIndexByIDFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *ResolverGetIndexByIDFunc) appendCall(r0 ResolverGetIndexByIDFuncCall)
-```
-
 #### <a id="ResolverGetIndexByIDFunc.History" href="#ResolverGetIndexByIDFunc.History">func (f *ResolverGetIndexByIDFunc) History() []ResolverGetIndexByIDFuncCall</a>
 
 ```
 searchKey: mocks.ResolverGetIndexByIDFunc.History
+tags: [function]
 ```
 
 ```Go
@@ -2060,10 +2098,85 @@ func (f *ResolverGetIndexByIDFunc) History() []ResolverGetIndexByIDFuncCall
 
 History returns a sequence of ResolverGetIndexByIDFuncCall objects describing the invocations of this function. 
 
+#### <a id="ResolverGetIndexByIDFunc.PushHook" href="#ResolverGetIndexByIDFunc.PushHook">func (f *ResolverGetIndexByIDFunc) PushHook(hook func(context.Context, int) (dbstore.Index, bool, error))</a>
+
+```
+searchKey: mocks.ResolverGetIndexByIDFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverGetIndexByIDFunc) PushHook(hook func(context.Context, int) (dbstore.Index, bool, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the GetIndexByID method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="ResolverGetIndexByIDFunc.PushReturn" href="#ResolverGetIndexByIDFunc.PushReturn">func (f *ResolverGetIndexByIDFunc) PushReturn(r0 dbstore.Index, r1 bool, r2 error)</a>
+
+```
+searchKey: mocks.ResolverGetIndexByIDFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverGetIndexByIDFunc) PushReturn(r0 dbstore.Index, r1 bool, r2 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverGetIndexByIDFunc.SetDefaultHook" href="#ResolverGetIndexByIDFunc.SetDefaultHook">func (f *ResolverGetIndexByIDFunc) SetDefaultHook(hook func(context.Context, int) (dbstore.Index, bool, error))</a>
+
+```
+searchKey: mocks.ResolverGetIndexByIDFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverGetIndexByIDFunc) SetDefaultHook(hook func(context.Context, int) (dbstore.Index, bool, error))
+```
+
+SetDefaultHook sets function that is called when the GetIndexByID method of the parent MockResolver instance is invoked and the hook queue is empty. 
+
+#### <a id="ResolverGetIndexByIDFunc.SetDefaultReturn" href="#ResolverGetIndexByIDFunc.SetDefaultReturn">func (f *ResolverGetIndexByIDFunc) SetDefaultReturn(r0 dbstore.Index, r1 bool, r2 error)</a>
+
+```
+searchKey: mocks.ResolverGetIndexByIDFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverGetIndexByIDFunc) SetDefaultReturn(r0 dbstore.Index, r1 bool, r2 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverGetIndexByIDFunc.appendCall" href="#ResolverGetIndexByIDFunc.appendCall">func (f *ResolverGetIndexByIDFunc) appendCall(r0 ResolverGetIndexByIDFuncCall)</a>
+
+```
+searchKey: mocks.ResolverGetIndexByIDFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *ResolverGetIndexByIDFunc) appendCall(r0 ResolverGetIndexByIDFuncCall)
+```
+
+#### <a id="ResolverGetIndexByIDFunc.nextHook" href="#ResolverGetIndexByIDFunc.nextHook">func (f *ResolverGetIndexByIDFunc) nextHook() func(context.Context, int) (dbstore.Index, bool, error)</a>
+
+```
+searchKey: mocks.ResolverGetIndexByIDFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *ResolverGetIndexByIDFunc) nextHook() func(context.Context, int) (dbstore.Index, bool, error)
+```
+
 ### <a id="ResolverGetIndexByIDFuncCall" href="#ResolverGetIndexByIDFuncCall">type ResolverGetIndexByIDFuncCall struct</a>
 
 ```
 searchKey: mocks.ResolverGetIndexByIDFuncCall
+tags: [struct]
 ```
 
 ```Go
@@ -2092,6 +2205,7 @@ ResolverGetIndexByIDFuncCall is an object that describes an invocation of method
 
 ```
 searchKey: mocks.ResolverGetIndexByIDFuncCall.Args
+tags: [function]
 ```
 
 ```Go
@@ -2104,6 +2218,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverGetIndexByIDFuncCall.Results
+tags: [function]
 ```
 
 ```Go
@@ -2116,6 +2231,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.ResolverGetIndexesByIDsFunc
+tags: [struct]
 ```
 
 ```Go
@@ -2129,80 +2245,11 @@ type ResolverGetIndexesByIDsFunc struct {
 
 ResolverGetIndexesByIDsFunc describes the behavior when the GetIndexesByIDs method of the parent MockResolver instance is invoked. 
 
-#### <a id="ResolverGetIndexesByIDsFunc.SetDefaultHook" href="#ResolverGetIndexesByIDsFunc.SetDefaultHook">func (f *ResolverGetIndexesByIDsFunc) SetDefaultHook(hook func(context.Context, ...int) ([]dbstore.Index, error))</a>
-
-```
-searchKey: mocks.ResolverGetIndexesByIDsFunc.SetDefaultHook
-```
-
-```Go
-func (f *ResolverGetIndexesByIDsFunc) SetDefaultHook(hook func(context.Context, ...int) ([]dbstore.Index, error))
-```
-
-SetDefaultHook sets function that is called when the GetIndexesByIDs method of the parent MockResolver instance is invoked and the hook queue is empty. 
-
-#### <a id="ResolverGetIndexesByIDsFunc.PushHook" href="#ResolverGetIndexesByIDsFunc.PushHook">func (f *ResolverGetIndexesByIDsFunc) PushHook(hook func(context.Context, ...int) ([]dbstore.Index, error))</a>
-
-```
-searchKey: mocks.ResolverGetIndexesByIDsFunc.PushHook
-```
-
-```Go
-func (f *ResolverGetIndexesByIDsFunc) PushHook(hook func(context.Context, ...int) ([]dbstore.Index, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the GetIndexesByIDs method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="ResolverGetIndexesByIDsFunc.SetDefaultReturn" href="#ResolverGetIndexesByIDsFunc.SetDefaultReturn">func (f *ResolverGetIndexesByIDsFunc) SetDefaultReturn(r0 []dbstore.Index, r1 error)</a>
-
-```
-searchKey: mocks.ResolverGetIndexesByIDsFunc.SetDefaultReturn
-```
-
-```Go
-func (f *ResolverGetIndexesByIDsFunc) SetDefaultReturn(r0 []dbstore.Index, r1 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverGetIndexesByIDsFunc.PushReturn" href="#ResolverGetIndexesByIDsFunc.PushReturn">func (f *ResolverGetIndexesByIDsFunc) PushReturn(r0 []dbstore.Index, r1 error)</a>
-
-```
-searchKey: mocks.ResolverGetIndexesByIDsFunc.PushReturn
-```
-
-```Go
-func (f *ResolverGetIndexesByIDsFunc) PushReturn(r0 []dbstore.Index, r1 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverGetIndexesByIDsFunc.nextHook" href="#ResolverGetIndexesByIDsFunc.nextHook">func (f *ResolverGetIndexesByIDsFunc) nextHook() func(context.Context, ...int) ([]dbstore.Index, error)</a>
-
-```
-searchKey: mocks.ResolverGetIndexesByIDsFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *ResolverGetIndexesByIDsFunc) nextHook() func(context.Context, ...int) ([]dbstore.Index, error)
-```
-
-#### <a id="ResolverGetIndexesByIDsFunc.appendCall" href="#ResolverGetIndexesByIDsFunc.appendCall">func (f *ResolverGetIndexesByIDsFunc) appendCall(r0 ResolverGetIndexesByIDsFuncCall)</a>
-
-```
-searchKey: mocks.ResolverGetIndexesByIDsFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *ResolverGetIndexesByIDsFunc) appendCall(r0 ResolverGetIndexesByIDsFuncCall)
-```
-
 #### <a id="ResolverGetIndexesByIDsFunc.History" href="#ResolverGetIndexesByIDsFunc.History">func (f *ResolverGetIndexesByIDsFunc) History() []ResolverGetIndexesByIDsFuncCall</a>
 
 ```
 searchKey: mocks.ResolverGetIndexesByIDsFunc.History
+tags: [function]
 ```
 
 ```Go
@@ -2211,10 +2258,85 @@ func (f *ResolverGetIndexesByIDsFunc) History() []ResolverGetIndexesByIDsFuncCal
 
 History returns a sequence of ResolverGetIndexesByIDsFuncCall objects describing the invocations of this function. 
 
+#### <a id="ResolverGetIndexesByIDsFunc.PushHook" href="#ResolverGetIndexesByIDsFunc.PushHook">func (f *ResolverGetIndexesByIDsFunc) PushHook(hook func(context.Context, ...int) ([]dbstore.Index, error))</a>
+
+```
+searchKey: mocks.ResolverGetIndexesByIDsFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverGetIndexesByIDsFunc) PushHook(hook func(context.Context, ...int) ([]dbstore.Index, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the GetIndexesByIDs method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="ResolverGetIndexesByIDsFunc.PushReturn" href="#ResolverGetIndexesByIDsFunc.PushReturn">func (f *ResolverGetIndexesByIDsFunc) PushReturn(r0 []dbstore.Index, r1 error)</a>
+
+```
+searchKey: mocks.ResolverGetIndexesByIDsFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverGetIndexesByIDsFunc) PushReturn(r0 []dbstore.Index, r1 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverGetIndexesByIDsFunc.SetDefaultHook" href="#ResolverGetIndexesByIDsFunc.SetDefaultHook">func (f *ResolverGetIndexesByIDsFunc) SetDefaultHook(hook func(context.Context, ...int) ([]dbstore.Index, error))</a>
+
+```
+searchKey: mocks.ResolverGetIndexesByIDsFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverGetIndexesByIDsFunc) SetDefaultHook(hook func(context.Context, ...int) ([]dbstore.Index, error))
+```
+
+SetDefaultHook sets function that is called when the GetIndexesByIDs method of the parent MockResolver instance is invoked and the hook queue is empty. 
+
+#### <a id="ResolverGetIndexesByIDsFunc.SetDefaultReturn" href="#ResolverGetIndexesByIDsFunc.SetDefaultReturn">func (f *ResolverGetIndexesByIDsFunc) SetDefaultReturn(r0 []dbstore.Index, r1 error)</a>
+
+```
+searchKey: mocks.ResolverGetIndexesByIDsFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverGetIndexesByIDsFunc) SetDefaultReturn(r0 []dbstore.Index, r1 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverGetIndexesByIDsFunc.appendCall" href="#ResolverGetIndexesByIDsFunc.appendCall">func (f *ResolverGetIndexesByIDsFunc) appendCall(r0 ResolverGetIndexesByIDsFuncCall)</a>
+
+```
+searchKey: mocks.ResolverGetIndexesByIDsFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *ResolverGetIndexesByIDsFunc) appendCall(r0 ResolverGetIndexesByIDsFuncCall)
+```
+
+#### <a id="ResolverGetIndexesByIDsFunc.nextHook" href="#ResolverGetIndexesByIDsFunc.nextHook">func (f *ResolverGetIndexesByIDsFunc) nextHook() func(context.Context, ...int) ([]dbstore.Index, error)</a>
+
+```
+searchKey: mocks.ResolverGetIndexesByIDsFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *ResolverGetIndexesByIDsFunc) nextHook() func(context.Context, ...int) ([]dbstore.Index, error)
+```
+
 ### <a id="ResolverGetIndexesByIDsFuncCall" href="#ResolverGetIndexesByIDsFuncCall">type ResolverGetIndexesByIDsFuncCall struct</a>
 
 ```
 searchKey: mocks.ResolverGetIndexesByIDsFuncCall
+tags: [struct]
 ```
 
 ```Go
@@ -2240,6 +2362,7 @@ ResolverGetIndexesByIDsFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: mocks.ResolverGetIndexesByIDsFuncCall.Args
+tags: [function]
 ```
 
 ```Go
@@ -2252,6 +2375,7 @@ Args returns an interface slice containing the arguments of this invocation. The
 
 ```
 searchKey: mocks.ResolverGetIndexesByIDsFuncCall.Results
+tags: [function]
 ```
 
 ```Go
@@ -2264,6 +2388,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.ResolverGetUploadByIDFunc
+tags: [struct]
 ```
 
 ```Go
@@ -2277,80 +2402,11 @@ type ResolverGetUploadByIDFunc struct {
 
 ResolverGetUploadByIDFunc describes the behavior when the GetUploadByID method of the parent MockResolver instance is invoked. 
 
-#### <a id="ResolverGetUploadByIDFunc.SetDefaultHook" href="#ResolverGetUploadByIDFunc.SetDefaultHook">func (f *ResolverGetUploadByIDFunc) SetDefaultHook(hook func(context.Context, int) (dbstore.Upload, bool, error))</a>
-
-```
-searchKey: mocks.ResolverGetUploadByIDFunc.SetDefaultHook
-```
-
-```Go
-func (f *ResolverGetUploadByIDFunc) SetDefaultHook(hook func(context.Context, int) (dbstore.Upload, bool, error))
-```
-
-SetDefaultHook sets function that is called when the GetUploadByID method of the parent MockResolver instance is invoked and the hook queue is empty. 
-
-#### <a id="ResolverGetUploadByIDFunc.PushHook" href="#ResolverGetUploadByIDFunc.PushHook">func (f *ResolverGetUploadByIDFunc) PushHook(hook func(context.Context, int) (dbstore.Upload, bool, error))</a>
-
-```
-searchKey: mocks.ResolverGetUploadByIDFunc.PushHook
-```
-
-```Go
-func (f *ResolverGetUploadByIDFunc) PushHook(hook func(context.Context, int) (dbstore.Upload, bool, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the GetUploadByID method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="ResolverGetUploadByIDFunc.SetDefaultReturn" href="#ResolverGetUploadByIDFunc.SetDefaultReturn">func (f *ResolverGetUploadByIDFunc) SetDefaultReturn(r0 dbstore.Upload, r1 bool, r2 error)</a>
-
-```
-searchKey: mocks.ResolverGetUploadByIDFunc.SetDefaultReturn
-```
-
-```Go
-func (f *ResolverGetUploadByIDFunc) SetDefaultReturn(r0 dbstore.Upload, r1 bool, r2 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverGetUploadByIDFunc.PushReturn" href="#ResolverGetUploadByIDFunc.PushReturn">func (f *ResolverGetUploadByIDFunc) PushReturn(r0 dbstore.Upload, r1 bool, r2 error)</a>
-
-```
-searchKey: mocks.ResolverGetUploadByIDFunc.PushReturn
-```
-
-```Go
-func (f *ResolverGetUploadByIDFunc) PushReturn(r0 dbstore.Upload, r1 bool, r2 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverGetUploadByIDFunc.nextHook" href="#ResolverGetUploadByIDFunc.nextHook">func (f *ResolverGetUploadByIDFunc) nextHook() func(context.Context, int) (dbstore.Upload, bool, error)</a>
-
-```
-searchKey: mocks.ResolverGetUploadByIDFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *ResolverGetUploadByIDFunc) nextHook() func(context.Context, int) (dbstore.Upload, bool, error)
-```
-
-#### <a id="ResolverGetUploadByIDFunc.appendCall" href="#ResolverGetUploadByIDFunc.appendCall">func (f *ResolverGetUploadByIDFunc) appendCall(r0 ResolverGetUploadByIDFuncCall)</a>
-
-```
-searchKey: mocks.ResolverGetUploadByIDFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *ResolverGetUploadByIDFunc) appendCall(r0 ResolverGetUploadByIDFuncCall)
-```
-
 #### <a id="ResolverGetUploadByIDFunc.History" href="#ResolverGetUploadByIDFunc.History">func (f *ResolverGetUploadByIDFunc) History() []ResolverGetUploadByIDFuncCall</a>
 
 ```
 searchKey: mocks.ResolverGetUploadByIDFunc.History
+tags: [function]
 ```
 
 ```Go
@@ -2359,10 +2415,85 @@ func (f *ResolverGetUploadByIDFunc) History() []ResolverGetUploadByIDFuncCall
 
 History returns a sequence of ResolverGetUploadByIDFuncCall objects describing the invocations of this function. 
 
+#### <a id="ResolverGetUploadByIDFunc.PushHook" href="#ResolverGetUploadByIDFunc.PushHook">func (f *ResolverGetUploadByIDFunc) PushHook(hook func(context.Context, int) (dbstore.Upload, bool, error))</a>
+
+```
+searchKey: mocks.ResolverGetUploadByIDFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverGetUploadByIDFunc) PushHook(hook func(context.Context, int) (dbstore.Upload, bool, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the GetUploadByID method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="ResolverGetUploadByIDFunc.PushReturn" href="#ResolverGetUploadByIDFunc.PushReturn">func (f *ResolverGetUploadByIDFunc) PushReturn(r0 dbstore.Upload, r1 bool, r2 error)</a>
+
+```
+searchKey: mocks.ResolverGetUploadByIDFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverGetUploadByIDFunc) PushReturn(r0 dbstore.Upload, r1 bool, r2 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverGetUploadByIDFunc.SetDefaultHook" href="#ResolverGetUploadByIDFunc.SetDefaultHook">func (f *ResolverGetUploadByIDFunc) SetDefaultHook(hook func(context.Context, int) (dbstore.Upload, bool, error))</a>
+
+```
+searchKey: mocks.ResolverGetUploadByIDFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverGetUploadByIDFunc) SetDefaultHook(hook func(context.Context, int) (dbstore.Upload, bool, error))
+```
+
+SetDefaultHook sets function that is called when the GetUploadByID method of the parent MockResolver instance is invoked and the hook queue is empty. 
+
+#### <a id="ResolverGetUploadByIDFunc.SetDefaultReturn" href="#ResolverGetUploadByIDFunc.SetDefaultReturn">func (f *ResolverGetUploadByIDFunc) SetDefaultReturn(r0 dbstore.Upload, r1 bool, r2 error)</a>
+
+```
+searchKey: mocks.ResolverGetUploadByIDFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverGetUploadByIDFunc) SetDefaultReturn(r0 dbstore.Upload, r1 bool, r2 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverGetUploadByIDFunc.appendCall" href="#ResolverGetUploadByIDFunc.appendCall">func (f *ResolverGetUploadByIDFunc) appendCall(r0 ResolverGetUploadByIDFuncCall)</a>
+
+```
+searchKey: mocks.ResolverGetUploadByIDFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *ResolverGetUploadByIDFunc) appendCall(r0 ResolverGetUploadByIDFuncCall)
+```
+
+#### <a id="ResolverGetUploadByIDFunc.nextHook" href="#ResolverGetUploadByIDFunc.nextHook">func (f *ResolverGetUploadByIDFunc) nextHook() func(context.Context, int) (dbstore.Upload, bool, error)</a>
+
+```
+searchKey: mocks.ResolverGetUploadByIDFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *ResolverGetUploadByIDFunc) nextHook() func(context.Context, int) (dbstore.Upload, bool, error)
+```
+
 ### <a id="ResolverGetUploadByIDFuncCall" href="#ResolverGetUploadByIDFuncCall">type ResolverGetUploadByIDFuncCall struct</a>
 
 ```
 searchKey: mocks.ResolverGetUploadByIDFuncCall
+tags: [struct]
 ```
 
 ```Go
@@ -2391,6 +2522,7 @@ ResolverGetUploadByIDFuncCall is an object that describes an invocation of metho
 
 ```
 searchKey: mocks.ResolverGetUploadByIDFuncCall.Args
+tags: [function]
 ```
 
 ```Go
@@ -2403,6 +2535,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverGetUploadByIDFuncCall.Results
+tags: [function]
 ```
 
 ```Go
@@ -2415,6 +2548,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.ResolverGetUploadsByIDsFunc
+tags: [struct]
 ```
 
 ```Go
@@ -2428,80 +2562,11 @@ type ResolverGetUploadsByIDsFunc struct {
 
 ResolverGetUploadsByIDsFunc describes the behavior when the GetUploadsByIDs method of the parent MockResolver instance is invoked. 
 
-#### <a id="ResolverGetUploadsByIDsFunc.SetDefaultHook" href="#ResolverGetUploadsByIDsFunc.SetDefaultHook">func (f *ResolverGetUploadsByIDsFunc) SetDefaultHook(hook func(context.Context, ...int) ([]dbstore.Upload, error))</a>
-
-```
-searchKey: mocks.ResolverGetUploadsByIDsFunc.SetDefaultHook
-```
-
-```Go
-func (f *ResolverGetUploadsByIDsFunc) SetDefaultHook(hook func(context.Context, ...int) ([]dbstore.Upload, error))
-```
-
-SetDefaultHook sets function that is called when the GetUploadsByIDs method of the parent MockResolver instance is invoked and the hook queue is empty. 
-
-#### <a id="ResolverGetUploadsByIDsFunc.PushHook" href="#ResolverGetUploadsByIDsFunc.PushHook">func (f *ResolverGetUploadsByIDsFunc) PushHook(hook func(context.Context, ...int) ([]dbstore.Upload, error))</a>
-
-```
-searchKey: mocks.ResolverGetUploadsByIDsFunc.PushHook
-```
-
-```Go
-func (f *ResolverGetUploadsByIDsFunc) PushHook(hook func(context.Context, ...int) ([]dbstore.Upload, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the GetUploadsByIDs method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="ResolverGetUploadsByIDsFunc.SetDefaultReturn" href="#ResolverGetUploadsByIDsFunc.SetDefaultReturn">func (f *ResolverGetUploadsByIDsFunc) SetDefaultReturn(r0 []dbstore.Upload, r1 error)</a>
-
-```
-searchKey: mocks.ResolverGetUploadsByIDsFunc.SetDefaultReturn
-```
-
-```Go
-func (f *ResolverGetUploadsByIDsFunc) SetDefaultReturn(r0 []dbstore.Upload, r1 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverGetUploadsByIDsFunc.PushReturn" href="#ResolverGetUploadsByIDsFunc.PushReturn">func (f *ResolverGetUploadsByIDsFunc) PushReturn(r0 []dbstore.Upload, r1 error)</a>
-
-```
-searchKey: mocks.ResolverGetUploadsByIDsFunc.PushReturn
-```
-
-```Go
-func (f *ResolverGetUploadsByIDsFunc) PushReturn(r0 []dbstore.Upload, r1 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverGetUploadsByIDsFunc.nextHook" href="#ResolverGetUploadsByIDsFunc.nextHook">func (f *ResolverGetUploadsByIDsFunc) nextHook() func(context.Context, ...int) ([]dbstore.Upload, error)</a>
-
-```
-searchKey: mocks.ResolverGetUploadsByIDsFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *ResolverGetUploadsByIDsFunc) nextHook() func(context.Context, ...int) ([]dbstore.Upload, error)
-```
-
-#### <a id="ResolverGetUploadsByIDsFunc.appendCall" href="#ResolverGetUploadsByIDsFunc.appendCall">func (f *ResolverGetUploadsByIDsFunc) appendCall(r0 ResolverGetUploadsByIDsFuncCall)</a>
-
-```
-searchKey: mocks.ResolverGetUploadsByIDsFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *ResolverGetUploadsByIDsFunc) appendCall(r0 ResolverGetUploadsByIDsFuncCall)
-```
-
 #### <a id="ResolverGetUploadsByIDsFunc.History" href="#ResolverGetUploadsByIDsFunc.History">func (f *ResolverGetUploadsByIDsFunc) History() []ResolverGetUploadsByIDsFuncCall</a>
 
 ```
 searchKey: mocks.ResolverGetUploadsByIDsFunc.History
+tags: [function]
 ```
 
 ```Go
@@ -2510,10 +2575,85 @@ func (f *ResolverGetUploadsByIDsFunc) History() []ResolverGetUploadsByIDsFuncCal
 
 History returns a sequence of ResolverGetUploadsByIDsFuncCall objects describing the invocations of this function. 
 
+#### <a id="ResolverGetUploadsByIDsFunc.PushHook" href="#ResolverGetUploadsByIDsFunc.PushHook">func (f *ResolverGetUploadsByIDsFunc) PushHook(hook func(context.Context, ...int) ([]dbstore.Upload, error))</a>
+
+```
+searchKey: mocks.ResolverGetUploadsByIDsFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverGetUploadsByIDsFunc) PushHook(hook func(context.Context, ...int) ([]dbstore.Upload, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the GetUploadsByIDs method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="ResolverGetUploadsByIDsFunc.PushReturn" href="#ResolverGetUploadsByIDsFunc.PushReturn">func (f *ResolverGetUploadsByIDsFunc) PushReturn(r0 []dbstore.Upload, r1 error)</a>
+
+```
+searchKey: mocks.ResolverGetUploadsByIDsFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverGetUploadsByIDsFunc) PushReturn(r0 []dbstore.Upload, r1 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverGetUploadsByIDsFunc.SetDefaultHook" href="#ResolverGetUploadsByIDsFunc.SetDefaultHook">func (f *ResolverGetUploadsByIDsFunc) SetDefaultHook(hook func(context.Context, ...int) ([]dbstore.Upload, error))</a>
+
+```
+searchKey: mocks.ResolverGetUploadsByIDsFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverGetUploadsByIDsFunc) SetDefaultHook(hook func(context.Context, ...int) ([]dbstore.Upload, error))
+```
+
+SetDefaultHook sets function that is called when the GetUploadsByIDs method of the parent MockResolver instance is invoked and the hook queue is empty. 
+
+#### <a id="ResolverGetUploadsByIDsFunc.SetDefaultReturn" href="#ResolverGetUploadsByIDsFunc.SetDefaultReturn">func (f *ResolverGetUploadsByIDsFunc) SetDefaultReturn(r0 []dbstore.Upload, r1 error)</a>
+
+```
+searchKey: mocks.ResolverGetUploadsByIDsFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverGetUploadsByIDsFunc) SetDefaultReturn(r0 []dbstore.Upload, r1 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverGetUploadsByIDsFunc.appendCall" href="#ResolverGetUploadsByIDsFunc.appendCall">func (f *ResolverGetUploadsByIDsFunc) appendCall(r0 ResolverGetUploadsByIDsFuncCall)</a>
+
+```
+searchKey: mocks.ResolverGetUploadsByIDsFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *ResolverGetUploadsByIDsFunc) appendCall(r0 ResolverGetUploadsByIDsFuncCall)
+```
+
+#### <a id="ResolverGetUploadsByIDsFunc.nextHook" href="#ResolverGetUploadsByIDsFunc.nextHook">func (f *ResolverGetUploadsByIDsFunc) nextHook() func(context.Context, ...int) ([]dbstore.Upload, error)</a>
+
+```
+searchKey: mocks.ResolverGetUploadsByIDsFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *ResolverGetUploadsByIDsFunc) nextHook() func(context.Context, ...int) ([]dbstore.Upload, error)
+```
+
 ### <a id="ResolverGetUploadsByIDsFuncCall" href="#ResolverGetUploadsByIDsFuncCall">type ResolverGetUploadsByIDsFuncCall struct</a>
 
 ```
 searchKey: mocks.ResolverGetUploadsByIDsFuncCall
+tags: [struct]
 ```
 
 ```Go
@@ -2539,6 +2679,7 @@ ResolverGetUploadsByIDsFuncCall is an object that describes an invocation of met
 
 ```
 searchKey: mocks.ResolverGetUploadsByIDsFuncCall.Args
+tags: [function]
 ```
 
 ```Go
@@ -2551,6 +2692,7 @@ Args returns an interface slice containing the arguments of this invocation. The
 
 ```
 searchKey: mocks.ResolverGetUploadsByIDsFuncCall.Results
+tags: [function]
 ```
 
 ```Go
@@ -2563,6 +2705,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.ResolverIndexConfigurationFunc
+tags: [struct]
 ```
 
 ```Go
@@ -2576,80 +2719,11 @@ type ResolverIndexConfigurationFunc struct {
 
 ResolverIndexConfigurationFunc describes the behavior when the IndexConfiguration method of the parent MockResolver instance is invoked. 
 
-#### <a id="ResolverIndexConfigurationFunc.SetDefaultHook" href="#ResolverIndexConfigurationFunc.SetDefaultHook">func (f *ResolverIndexConfigurationFunc) SetDefaultHook(hook func(context.Context, int) ([]byte, error))</a>
-
-```
-searchKey: mocks.ResolverIndexConfigurationFunc.SetDefaultHook
-```
-
-```Go
-func (f *ResolverIndexConfigurationFunc) SetDefaultHook(hook func(context.Context, int) ([]byte, error))
-```
-
-SetDefaultHook sets function that is called when the IndexConfiguration method of the parent MockResolver instance is invoked and the hook queue is empty. 
-
-#### <a id="ResolverIndexConfigurationFunc.PushHook" href="#ResolverIndexConfigurationFunc.PushHook">func (f *ResolverIndexConfigurationFunc) PushHook(hook func(context.Context, int) ([]byte, error))</a>
-
-```
-searchKey: mocks.ResolverIndexConfigurationFunc.PushHook
-```
-
-```Go
-func (f *ResolverIndexConfigurationFunc) PushHook(hook func(context.Context, int) ([]byte, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the IndexConfiguration method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="ResolverIndexConfigurationFunc.SetDefaultReturn" href="#ResolverIndexConfigurationFunc.SetDefaultReturn">func (f *ResolverIndexConfigurationFunc) SetDefaultReturn(r0 []byte, r1 error)</a>
-
-```
-searchKey: mocks.ResolverIndexConfigurationFunc.SetDefaultReturn
-```
-
-```Go
-func (f *ResolverIndexConfigurationFunc) SetDefaultReturn(r0 []byte, r1 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverIndexConfigurationFunc.PushReturn" href="#ResolverIndexConfigurationFunc.PushReturn">func (f *ResolverIndexConfigurationFunc) PushReturn(r0 []byte, r1 error)</a>
-
-```
-searchKey: mocks.ResolverIndexConfigurationFunc.PushReturn
-```
-
-```Go
-func (f *ResolverIndexConfigurationFunc) PushReturn(r0 []byte, r1 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverIndexConfigurationFunc.nextHook" href="#ResolverIndexConfigurationFunc.nextHook">func (f *ResolverIndexConfigurationFunc) nextHook() func(context.Context, int) ([]byte, error)</a>
-
-```
-searchKey: mocks.ResolverIndexConfigurationFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *ResolverIndexConfigurationFunc) nextHook() func(context.Context, int) ([]byte, error)
-```
-
-#### <a id="ResolverIndexConfigurationFunc.appendCall" href="#ResolverIndexConfigurationFunc.appendCall">func (f *ResolverIndexConfigurationFunc) appendCall(r0 ResolverIndexConfigurationFuncCall)</a>
-
-```
-searchKey: mocks.ResolverIndexConfigurationFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *ResolverIndexConfigurationFunc) appendCall(r0 ResolverIndexConfigurationFuncCall)
-```
-
 #### <a id="ResolverIndexConfigurationFunc.History" href="#ResolverIndexConfigurationFunc.History">func (f *ResolverIndexConfigurationFunc) History() []ResolverIndexConfigurationFuncCall</a>
 
 ```
 searchKey: mocks.ResolverIndexConfigurationFunc.History
+tags: [function]
 ```
 
 ```Go
@@ -2658,10 +2732,85 @@ func (f *ResolverIndexConfigurationFunc) History() []ResolverIndexConfigurationF
 
 History returns a sequence of ResolverIndexConfigurationFuncCall objects describing the invocations of this function. 
 
+#### <a id="ResolverIndexConfigurationFunc.PushHook" href="#ResolverIndexConfigurationFunc.PushHook">func (f *ResolverIndexConfigurationFunc) PushHook(hook func(context.Context, int) ([]byte, error))</a>
+
+```
+searchKey: mocks.ResolverIndexConfigurationFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverIndexConfigurationFunc) PushHook(hook func(context.Context, int) ([]byte, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the IndexConfiguration method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="ResolverIndexConfigurationFunc.PushReturn" href="#ResolverIndexConfigurationFunc.PushReturn">func (f *ResolverIndexConfigurationFunc) PushReturn(r0 []byte, r1 error)</a>
+
+```
+searchKey: mocks.ResolverIndexConfigurationFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverIndexConfigurationFunc) PushReturn(r0 []byte, r1 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverIndexConfigurationFunc.SetDefaultHook" href="#ResolverIndexConfigurationFunc.SetDefaultHook">func (f *ResolverIndexConfigurationFunc) SetDefaultHook(hook func(context.Context, int) ([]byte, error))</a>
+
+```
+searchKey: mocks.ResolverIndexConfigurationFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverIndexConfigurationFunc) SetDefaultHook(hook func(context.Context, int) ([]byte, error))
+```
+
+SetDefaultHook sets function that is called when the IndexConfiguration method of the parent MockResolver instance is invoked and the hook queue is empty. 
+
+#### <a id="ResolverIndexConfigurationFunc.SetDefaultReturn" href="#ResolverIndexConfigurationFunc.SetDefaultReturn">func (f *ResolverIndexConfigurationFunc) SetDefaultReturn(r0 []byte, r1 error)</a>
+
+```
+searchKey: mocks.ResolverIndexConfigurationFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverIndexConfigurationFunc) SetDefaultReturn(r0 []byte, r1 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverIndexConfigurationFunc.appendCall" href="#ResolverIndexConfigurationFunc.appendCall">func (f *ResolverIndexConfigurationFunc) appendCall(r0 ResolverIndexConfigurationFuncCall)</a>
+
+```
+searchKey: mocks.ResolverIndexConfigurationFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *ResolverIndexConfigurationFunc) appendCall(r0 ResolverIndexConfigurationFuncCall)
+```
+
+#### <a id="ResolverIndexConfigurationFunc.nextHook" href="#ResolverIndexConfigurationFunc.nextHook">func (f *ResolverIndexConfigurationFunc) nextHook() func(context.Context, int) ([]byte, error)</a>
+
+```
+searchKey: mocks.ResolverIndexConfigurationFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *ResolverIndexConfigurationFunc) nextHook() func(context.Context, int) ([]byte, error)
+```
+
 ### <a id="ResolverIndexConfigurationFuncCall" href="#ResolverIndexConfigurationFuncCall">type ResolverIndexConfigurationFuncCall struct</a>
 
 ```
 searchKey: mocks.ResolverIndexConfigurationFuncCall
+tags: [struct]
 ```
 
 ```Go
@@ -2687,6 +2836,7 @@ ResolverIndexConfigurationFuncCall is an object that describes an invocation of 
 
 ```
 searchKey: mocks.ResolverIndexConfigurationFuncCall.Args
+tags: [function]
 ```
 
 ```Go
@@ -2699,6 +2849,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverIndexConfigurationFuncCall.Results
+tags: [function]
 ```
 
 ```Go
@@ -2711,6 +2862,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.ResolverIndexConnectionResolverFunc
+tags: [struct]
 ```
 
 ```Go
@@ -2724,80 +2876,11 @@ type ResolverIndexConnectionResolverFunc struct {
 
 ResolverIndexConnectionResolverFunc describes the behavior when the IndexConnectionResolver method of the parent MockResolver instance is invoked. 
 
-#### <a id="ResolverIndexConnectionResolverFunc.SetDefaultHook" href="#ResolverIndexConnectionResolverFunc.SetDefaultHook">func (f *ResolverIndexConnectionResolverFunc) SetDefaultHook(hook func(dbstore.GetIndexesOptions) *resolvers.IndexesResolver)</a>
-
-```
-searchKey: mocks.ResolverIndexConnectionResolverFunc.SetDefaultHook
-```
-
-```Go
-func (f *ResolverIndexConnectionResolverFunc) SetDefaultHook(hook func(dbstore.GetIndexesOptions) *resolvers.IndexesResolver)
-```
-
-SetDefaultHook sets function that is called when the IndexConnectionResolver method of the parent MockResolver instance is invoked and the hook queue is empty. 
-
-#### <a id="ResolverIndexConnectionResolverFunc.PushHook" href="#ResolverIndexConnectionResolverFunc.PushHook">func (f *ResolverIndexConnectionResolverFunc) PushHook(hook func(dbstore.GetIndexesOptions) *resolvers.IndexesResolver)</a>
-
-```
-searchKey: mocks.ResolverIndexConnectionResolverFunc.PushHook
-```
-
-```Go
-func (f *ResolverIndexConnectionResolverFunc) PushHook(hook func(dbstore.GetIndexesOptions) *resolvers.IndexesResolver)
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the IndexConnectionResolver method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="ResolverIndexConnectionResolverFunc.SetDefaultReturn" href="#ResolverIndexConnectionResolverFunc.SetDefaultReturn">func (f *ResolverIndexConnectionResolverFunc) SetDefaultReturn(r0 *resolvers.IndexesResolver)</a>
-
-```
-searchKey: mocks.ResolverIndexConnectionResolverFunc.SetDefaultReturn
-```
-
-```Go
-func (f *ResolverIndexConnectionResolverFunc) SetDefaultReturn(r0 *resolvers.IndexesResolver)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverIndexConnectionResolverFunc.PushReturn" href="#ResolverIndexConnectionResolverFunc.PushReturn">func (f *ResolverIndexConnectionResolverFunc) PushReturn(r0 *resolvers.IndexesResolver)</a>
-
-```
-searchKey: mocks.ResolverIndexConnectionResolverFunc.PushReturn
-```
-
-```Go
-func (f *ResolverIndexConnectionResolverFunc) PushReturn(r0 *resolvers.IndexesResolver)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverIndexConnectionResolverFunc.nextHook" href="#ResolverIndexConnectionResolverFunc.nextHook">func (f *ResolverIndexConnectionResolverFunc) nextHook() func(dbstore.GetIndexesOptions) *resolvers.IndexesResolver</a>
-
-```
-searchKey: mocks.ResolverIndexConnectionResolverFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *ResolverIndexConnectionResolverFunc) nextHook() func(dbstore.GetIndexesOptions) *resolvers.IndexesResolver
-```
-
-#### <a id="ResolverIndexConnectionResolverFunc.appendCall" href="#ResolverIndexConnectionResolverFunc.appendCall">func (f *ResolverIndexConnectionResolverFunc) appendCall(r0 ResolverIndexConnectionResolverFuncCall)</a>
-
-```
-searchKey: mocks.ResolverIndexConnectionResolverFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *ResolverIndexConnectionResolverFunc) appendCall(r0 ResolverIndexConnectionResolverFuncCall)
-```
-
 #### <a id="ResolverIndexConnectionResolverFunc.History" href="#ResolverIndexConnectionResolverFunc.History">func (f *ResolverIndexConnectionResolverFunc) History() []ResolverIndexConnectionResolverFuncCall</a>
 
 ```
 searchKey: mocks.ResolverIndexConnectionResolverFunc.History
+tags: [function]
 ```
 
 ```Go
@@ -2806,10 +2889,85 @@ func (f *ResolverIndexConnectionResolverFunc) History() []ResolverIndexConnectio
 
 History returns a sequence of ResolverIndexConnectionResolverFuncCall objects describing the invocations of this function. 
 
+#### <a id="ResolverIndexConnectionResolverFunc.PushHook" href="#ResolverIndexConnectionResolverFunc.PushHook">func (f *ResolverIndexConnectionResolverFunc) PushHook(hook func(dbstore.GetIndexesOptions) *resolvers.IndexesResolver)</a>
+
+```
+searchKey: mocks.ResolverIndexConnectionResolverFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverIndexConnectionResolverFunc) PushHook(hook func(dbstore.GetIndexesOptions) *resolvers.IndexesResolver)
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the IndexConnectionResolver method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="ResolverIndexConnectionResolverFunc.PushReturn" href="#ResolverIndexConnectionResolverFunc.PushReturn">func (f *ResolverIndexConnectionResolverFunc) PushReturn(r0 *resolvers.IndexesResolver)</a>
+
+```
+searchKey: mocks.ResolverIndexConnectionResolverFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverIndexConnectionResolverFunc) PushReturn(r0 *resolvers.IndexesResolver)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverIndexConnectionResolverFunc.SetDefaultHook" href="#ResolverIndexConnectionResolverFunc.SetDefaultHook">func (f *ResolverIndexConnectionResolverFunc) SetDefaultHook(hook func(dbstore.GetIndexesOptions) *resolvers.IndexesResolver)</a>
+
+```
+searchKey: mocks.ResolverIndexConnectionResolverFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverIndexConnectionResolverFunc) SetDefaultHook(hook func(dbstore.GetIndexesOptions) *resolvers.IndexesResolver)
+```
+
+SetDefaultHook sets function that is called when the IndexConnectionResolver method of the parent MockResolver instance is invoked and the hook queue is empty. 
+
+#### <a id="ResolverIndexConnectionResolverFunc.SetDefaultReturn" href="#ResolverIndexConnectionResolverFunc.SetDefaultReturn">func (f *ResolverIndexConnectionResolverFunc) SetDefaultReturn(r0 *resolvers.IndexesResolver)</a>
+
+```
+searchKey: mocks.ResolverIndexConnectionResolverFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverIndexConnectionResolverFunc) SetDefaultReturn(r0 *resolvers.IndexesResolver)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverIndexConnectionResolverFunc.appendCall" href="#ResolverIndexConnectionResolverFunc.appendCall">func (f *ResolverIndexConnectionResolverFunc) appendCall(r0 ResolverIndexConnectionResolverFuncCall)</a>
+
+```
+searchKey: mocks.ResolverIndexConnectionResolverFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *ResolverIndexConnectionResolverFunc) appendCall(r0 ResolverIndexConnectionResolverFuncCall)
+```
+
+#### <a id="ResolverIndexConnectionResolverFunc.nextHook" href="#ResolverIndexConnectionResolverFunc.nextHook">func (f *ResolverIndexConnectionResolverFunc) nextHook() func(dbstore.GetIndexesOptions) *resolvers.IndexesResolver</a>
+
+```
+searchKey: mocks.ResolverIndexConnectionResolverFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *ResolverIndexConnectionResolverFunc) nextHook() func(dbstore.GetIndexesOptions) *resolvers.IndexesResolver
+```
+
 ### <a id="ResolverIndexConnectionResolverFuncCall" href="#ResolverIndexConnectionResolverFuncCall">type ResolverIndexConnectionResolverFuncCall struct</a>
 
 ```
 searchKey: mocks.ResolverIndexConnectionResolverFuncCall
+tags: [struct]
 ```
 
 ```Go
@@ -2829,6 +2987,7 @@ ResolverIndexConnectionResolverFuncCall is an object that describes an invocatio
 
 ```
 searchKey: mocks.ResolverIndexConnectionResolverFuncCall.Args
+tags: [function]
 ```
 
 ```Go
@@ -2841,6 +3000,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverIndexConnectionResolverFuncCall.Results
+tags: [function]
 ```
 
 ```Go
@@ -2853,6 +3013,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.ResolverQueryResolverFunc
+tags: [struct]
 ```
 
 ```Go
@@ -2866,80 +3027,11 @@ type ResolverQueryResolverFunc struct {
 
 ResolverQueryResolverFunc describes the behavior when the QueryResolver method of the parent MockResolver instance is invoked. 
 
-#### <a id="ResolverQueryResolverFunc.SetDefaultHook" href="#ResolverQueryResolverFunc.SetDefaultHook">func (f *ResolverQueryResolverFunc) SetDefaultHook(hook func(context.Context, *graphqlbackend.GitBlobLSIFDataArgs) (resolvers.QueryResolver, error))</a>
-
-```
-searchKey: mocks.ResolverQueryResolverFunc.SetDefaultHook
-```
-
-```Go
-func (f *ResolverQueryResolverFunc) SetDefaultHook(hook func(context.Context, *graphqlbackend.GitBlobLSIFDataArgs) (resolvers.QueryResolver, error))
-```
-
-SetDefaultHook sets function that is called when the QueryResolver method of the parent MockResolver instance is invoked and the hook queue is empty. 
-
-#### <a id="ResolverQueryResolverFunc.PushHook" href="#ResolverQueryResolverFunc.PushHook">func (f *ResolverQueryResolverFunc) PushHook(hook func(context.Context, *graphqlbackend.GitBlobLSIFDataArgs) (resolvers.QueryResolver, error))</a>
-
-```
-searchKey: mocks.ResolverQueryResolverFunc.PushHook
-```
-
-```Go
-func (f *ResolverQueryResolverFunc) PushHook(hook func(context.Context, *graphqlbackend.GitBlobLSIFDataArgs) (resolvers.QueryResolver, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the QueryResolver method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="ResolverQueryResolverFunc.SetDefaultReturn" href="#ResolverQueryResolverFunc.SetDefaultReturn">func (f *ResolverQueryResolverFunc) SetDefaultReturn(r0 resolvers.QueryResolver, r1 error)</a>
-
-```
-searchKey: mocks.ResolverQueryResolverFunc.SetDefaultReturn
-```
-
-```Go
-func (f *ResolverQueryResolverFunc) SetDefaultReturn(r0 resolvers.QueryResolver, r1 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverQueryResolverFunc.PushReturn" href="#ResolverQueryResolverFunc.PushReturn">func (f *ResolverQueryResolverFunc) PushReturn(r0 resolvers.QueryResolver, r1 error)</a>
-
-```
-searchKey: mocks.ResolverQueryResolverFunc.PushReturn
-```
-
-```Go
-func (f *ResolverQueryResolverFunc) PushReturn(r0 resolvers.QueryResolver, r1 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverQueryResolverFunc.nextHook" href="#ResolverQueryResolverFunc.nextHook">func (f *ResolverQueryResolverFunc) nextHook() func(context.Context, *graphqlbackend.GitBlobLSIFDataArgs) (resolvers.QueryResolver, error)</a>
-
-```
-searchKey: mocks.ResolverQueryResolverFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *ResolverQueryResolverFunc) nextHook() func(context.Context, *graphqlbackend.GitBlobLSIFDataArgs) (resolvers.QueryResolver, error)
-```
-
-#### <a id="ResolverQueryResolverFunc.appendCall" href="#ResolverQueryResolverFunc.appendCall">func (f *ResolverQueryResolverFunc) appendCall(r0 ResolverQueryResolverFuncCall)</a>
-
-```
-searchKey: mocks.ResolverQueryResolverFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *ResolverQueryResolverFunc) appendCall(r0 ResolverQueryResolverFuncCall)
-```
-
 #### <a id="ResolverQueryResolverFunc.History" href="#ResolverQueryResolverFunc.History">func (f *ResolverQueryResolverFunc) History() []ResolverQueryResolverFuncCall</a>
 
 ```
 searchKey: mocks.ResolverQueryResolverFunc.History
+tags: [function]
 ```
 
 ```Go
@@ -2948,10 +3040,85 @@ func (f *ResolverQueryResolverFunc) History() []ResolverQueryResolverFuncCall
 
 History returns a sequence of ResolverQueryResolverFuncCall objects describing the invocations of this function. 
 
+#### <a id="ResolverQueryResolverFunc.PushHook" href="#ResolverQueryResolverFunc.PushHook">func (f *ResolverQueryResolverFunc) PushHook(hook func(context.Context, *graphqlbackend.GitBlobLSIFDataArgs) (resolvers.QueryResolver, error))</a>
+
+```
+searchKey: mocks.ResolverQueryResolverFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverQueryResolverFunc) PushHook(hook func(context.Context, *graphqlbackend.GitBlobLSIFDataArgs) (resolvers.QueryResolver, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the QueryResolver method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="ResolverQueryResolverFunc.PushReturn" href="#ResolverQueryResolverFunc.PushReturn">func (f *ResolverQueryResolverFunc) PushReturn(r0 resolvers.QueryResolver, r1 error)</a>
+
+```
+searchKey: mocks.ResolverQueryResolverFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverQueryResolverFunc) PushReturn(r0 resolvers.QueryResolver, r1 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverQueryResolverFunc.SetDefaultHook" href="#ResolverQueryResolverFunc.SetDefaultHook">func (f *ResolverQueryResolverFunc) SetDefaultHook(hook func(context.Context, *graphqlbackend.GitBlobLSIFDataArgs) (resolvers.QueryResolver, error))</a>
+
+```
+searchKey: mocks.ResolverQueryResolverFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverQueryResolverFunc) SetDefaultHook(hook func(context.Context, *graphqlbackend.GitBlobLSIFDataArgs) (resolvers.QueryResolver, error))
+```
+
+SetDefaultHook sets function that is called when the QueryResolver method of the parent MockResolver instance is invoked and the hook queue is empty. 
+
+#### <a id="ResolverQueryResolverFunc.SetDefaultReturn" href="#ResolverQueryResolverFunc.SetDefaultReturn">func (f *ResolverQueryResolverFunc) SetDefaultReturn(r0 resolvers.QueryResolver, r1 error)</a>
+
+```
+searchKey: mocks.ResolverQueryResolverFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverQueryResolverFunc) SetDefaultReturn(r0 resolvers.QueryResolver, r1 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverQueryResolverFunc.appendCall" href="#ResolverQueryResolverFunc.appendCall">func (f *ResolverQueryResolverFunc) appendCall(r0 ResolverQueryResolverFuncCall)</a>
+
+```
+searchKey: mocks.ResolverQueryResolverFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *ResolverQueryResolverFunc) appendCall(r0 ResolverQueryResolverFuncCall)
+```
+
+#### <a id="ResolverQueryResolverFunc.nextHook" href="#ResolverQueryResolverFunc.nextHook">func (f *ResolverQueryResolverFunc) nextHook() func(context.Context, *graphqlbackend.GitBlobLSIFDataArgs) (resolvers.QueryResolver, error)</a>
+
+```
+searchKey: mocks.ResolverQueryResolverFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *ResolverQueryResolverFunc) nextHook() func(context.Context, *graphqlbackend.GitBlobLSIFDataArgs) (resolvers.QueryResolver, error)
+```
+
 ### <a id="ResolverQueryResolverFuncCall" href="#ResolverQueryResolverFuncCall">type ResolverQueryResolverFuncCall struct</a>
 
 ```
 searchKey: mocks.ResolverQueryResolverFuncCall
+tags: [struct]
 ```
 
 ```Go
@@ -2977,6 +3144,7 @@ ResolverQueryResolverFuncCall is an object that describes an invocation of metho
 
 ```
 searchKey: mocks.ResolverQueryResolverFuncCall.Args
+tags: [function]
 ```
 
 ```Go
@@ -2989,6 +3157,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverQueryResolverFuncCall.Results
+tags: [function]
 ```
 
 ```Go
@@ -3001,6 +3170,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.ResolverQueueAutoIndexJobForRepoFunc
+tags: [struct]
 ```
 
 ```Go
@@ -3014,80 +3184,11 @@ type ResolverQueueAutoIndexJobForRepoFunc struct {
 
 ResolverQueueAutoIndexJobForRepoFunc describes the behavior when the QueueAutoIndexJobForRepo method of the parent MockResolver instance is invoked. 
 
-#### <a id="ResolverQueueAutoIndexJobForRepoFunc.SetDefaultHook" href="#ResolverQueueAutoIndexJobForRepoFunc.SetDefaultHook">func (f *ResolverQueueAutoIndexJobForRepoFunc) SetDefaultHook(hook func(context.Context, int) error)</a>
-
-```
-searchKey: mocks.ResolverQueueAutoIndexJobForRepoFunc.SetDefaultHook
-```
-
-```Go
-func (f *ResolverQueueAutoIndexJobForRepoFunc) SetDefaultHook(hook func(context.Context, int) error)
-```
-
-SetDefaultHook sets function that is called when the QueueAutoIndexJobForRepo method of the parent MockResolver instance is invoked and the hook queue is empty. 
-
-#### <a id="ResolverQueueAutoIndexJobForRepoFunc.PushHook" href="#ResolverQueueAutoIndexJobForRepoFunc.PushHook">func (f *ResolverQueueAutoIndexJobForRepoFunc) PushHook(hook func(context.Context, int) error)</a>
-
-```
-searchKey: mocks.ResolverQueueAutoIndexJobForRepoFunc.PushHook
-```
-
-```Go
-func (f *ResolverQueueAutoIndexJobForRepoFunc) PushHook(hook func(context.Context, int) error)
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the QueueAutoIndexJobForRepo method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="ResolverQueueAutoIndexJobForRepoFunc.SetDefaultReturn" href="#ResolverQueueAutoIndexJobForRepoFunc.SetDefaultReturn">func (f *ResolverQueueAutoIndexJobForRepoFunc) SetDefaultReturn(r0 error)</a>
-
-```
-searchKey: mocks.ResolverQueueAutoIndexJobForRepoFunc.SetDefaultReturn
-```
-
-```Go
-func (f *ResolverQueueAutoIndexJobForRepoFunc) SetDefaultReturn(r0 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverQueueAutoIndexJobForRepoFunc.PushReturn" href="#ResolverQueueAutoIndexJobForRepoFunc.PushReturn">func (f *ResolverQueueAutoIndexJobForRepoFunc) PushReturn(r0 error)</a>
-
-```
-searchKey: mocks.ResolverQueueAutoIndexJobForRepoFunc.PushReturn
-```
-
-```Go
-func (f *ResolverQueueAutoIndexJobForRepoFunc) PushReturn(r0 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverQueueAutoIndexJobForRepoFunc.nextHook" href="#ResolverQueueAutoIndexJobForRepoFunc.nextHook">func (f *ResolverQueueAutoIndexJobForRepoFunc) nextHook() func(context.Context, int) error</a>
-
-```
-searchKey: mocks.ResolverQueueAutoIndexJobForRepoFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *ResolverQueueAutoIndexJobForRepoFunc) nextHook() func(context.Context, int) error
-```
-
-#### <a id="ResolverQueueAutoIndexJobForRepoFunc.appendCall" href="#ResolverQueueAutoIndexJobForRepoFunc.appendCall">func (f *ResolverQueueAutoIndexJobForRepoFunc) appendCall(r0 ResolverQueueAutoIndexJobForRepoFuncCall)</a>
-
-```
-searchKey: mocks.ResolverQueueAutoIndexJobForRepoFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *ResolverQueueAutoIndexJobForRepoFunc) appendCall(r0 ResolverQueueAutoIndexJobForRepoFuncCall)
-```
-
 #### <a id="ResolverQueueAutoIndexJobForRepoFunc.History" href="#ResolverQueueAutoIndexJobForRepoFunc.History">func (f *ResolverQueueAutoIndexJobForRepoFunc) History() []ResolverQueueAutoIndexJobForRepoFuncCall</a>
 
 ```
 searchKey: mocks.ResolverQueueAutoIndexJobForRepoFunc.History
+tags: [function]
 ```
 
 ```Go
@@ -3096,10 +3197,85 @@ func (f *ResolverQueueAutoIndexJobForRepoFunc) History() []ResolverQueueAutoInde
 
 History returns a sequence of ResolverQueueAutoIndexJobForRepoFuncCall objects describing the invocations of this function. 
 
+#### <a id="ResolverQueueAutoIndexJobForRepoFunc.PushHook" href="#ResolverQueueAutoIndexJobForRepoFunc.PushHook">func (f *ResolverQueueAutoIndexJobForRepoFunc) PushHook(hook func(context.Context, int) error)</a>
+
+```
+searchKey: mocks.ResolverQueueAutoIndexJobForRepoFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverQueueAutoIndexJobForRepoFunc) PushHook(hook func(context.Context, int) error)
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the QueueAutoIndexJobForRepo method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="ResolverQueueAutoIndexJobForRepoFunc.PushReturn" href="#ResolverQueueAutoIndexJobForRepoFunc.PushReturn">func (f *ResolverQueueAutoIndexJobForRepoFunc) PushReturn(r0 error)</a>
+
+```
+searchKey: mocks.ResolverQueueAutoIndexJobForRepoFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverQueueAutoIndexJobForRepoFunc) PushReturn(r0 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverQueueAutoIndexJobForRepoFunc.SetDefaultHook" href="#ResolverQueueAutoIndexJobForRepoFunc.SetDefaultHook">func (f *ResolverQueueAutoIndexJobForRepoFunc) SetDefaultHook(hook func(context.Context, int) error)</a>
+
+```
+searchKey: mocks.ResolverQueueAutoIndexJobForRepoFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverQueueAutoIndexJobForRepoFunc) SetDefaultHook(hook func(context.Context, int) error)
+```
+
+SetDefaultHook sets function that is called when the QueueAutoIndexJobForRepo method of the parent MockResolver instance is invoked and the hook queue is empty. 
+
+#### <a id="ResolverQueueAutoIndexJobForRepoFunc.SetDefaultReturn" href="#ResolverQueueAutoIndexJobForRepoFunc.SetDefaultReturn">func (f *ResolverQueueAutoIndexJobForRepoFunc) SetDefaultReturn(r0 error)</a>
+
+```
+searchKey: mocks.ResolverQueueAutoIndexJobForRepoFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverQueueAutoIndexJobForRepoFunc) SetDefaultReturn(r0 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverQueueAutoIndexJobForRepoFunc.appendCall" href="#ResolverQueueAutoIndexJobForRepoFunc.appendCall">func (f *ResolverQueueAutoIndexJobForRepoFunc) appendCall(r0 ResolverQueueAutoIndexJobForRepoFuncCall)</a>
+
+```
+searchKey: mocks.ResolverQueueAutoIndexJobForRepoFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *ResolverQueueAutoIndexJobForRepoFunc) appendCall(r0 ResolverQueueAutoIndexJobForRepoFuncCall)
+```
+
+#### <a id="ResolverQueueAutoIndexJobForRepoFunc.nextHook" href="#ResolverQueueAutoIndexJobForRepoFunc.nextHook">func (f *ResolverQueueAutoIndexJobForRepoFunc) nextHook() func(context.Context, int) error</a>
+
+```
+searchKey: mocks.ResolverQueueAutoIndexJobForRepoFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *ResolverQueueAutoIndexJobForRepoFunc) nextHook() func(context.Context, int) error
+```
+
 ### <a id="ResolverQueueAutoIndexJobForRepoFuncCall" href="#ResolverQueueAutoIndexJobForRepoFuncCall">type ResolverQueueAutoIndexJobForRepoFuncCall struct</a>
 
 ```
 searchKey: mocks.ResolverQueueAutoIndexJobForRepoFuncCall
+tags: [struct]
 ```
 
 ```Go
@@ -3122,6 +3298,7 @@ ResolverQueueAutoIndexJobForRepoFuncCall is an object that describes an invocati
 
 ```
 searchKey: mocks.ResolverQueueAutoIndexJobForRepoFuncCall.Args
+tags: [function]
 ```
 
 ```Go
@@ -3134,6 +3311,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverQueueAutoIndexJobForRepoFuncCall.Results
+tags: [function]
 ```
 
 ```Go
@@ -3146,6 +3324,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc
+tags: [struct]
 ```
 
 ```Go
@@ -3159,80 +3338,11 @@ type ResolverUpdateIndexConfigurationByRepositoryIDFunc struct {
 
 ResolverUpdateIndexConfigurationByRepositoryIDFunc describes the behavior when the UpdateIndexConfigurationByRepositoryID method of the parent MockResolver instance is invoked. 
 
-#### <a id="ResolverUpdateIndexConfigurationByRepositoryIDFunc.SetDefaultHook" href="#ResolverUpdateIndexConfigurationByRepositoryIDFunc.SetDefaultHook">func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) SetDefaultHook(hook func(context.Context, int, string) error)</a>
-
-```
-searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.SetDefaultHook
-```
-
-```Go
-func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) SetDefaultHook(hook func(context.Context, int, string) error)
-```
-
-SetDefaultHook sets function that is called when the UpdateIndexConfigurationByRepositoryID method of the parent MockResolver instance is invoked and the hook queue is empty. 
-
-#### <a id="ResolverUpdateIndexConfigurationByRepositoryIDFunc.PushHook" href="#ResolverUpdateIndexConfigurationByRepositoryIDFunc.PushHook">func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) PushHook(hook func(context.Context, int, string) error)</a>
-
-```
-searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.PushHook
-```
-
-```Go
-func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) PushHook(hook func(context.Context, int, string) error)
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the UpdateIndexConfigurationByRepositoryID method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="ResolverUpdateIndexConfigurationByRepositoryIDFunc.SetDefaultReturn" href="#ResolverUpdateIndexConfigurationByRepositoryIDFunc.SetDefaultReturn">func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) SetDefaultReturn(r0 error)</a>
-
-```
-searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.SetDefaultReturn
-```
-
-```Go
-func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) SetDefaultReturn(r0 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverUpdateIndexConfigurationByRepositoryIDFunc.PushReturn" href="#ResolverUpdateIndexConfigurationByRepositoryIDFunc.PushReturn">func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) PushReturn(r0 error)</a>
-
-```
-searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.PushReturn
-```
-
-```Go
-func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) PushReturn(r0 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverUpdateIndexConfigurationByRepositoryIDFunc.nextHook" href="#ResolverUpdateIndexConfigurationByRepositoryIDFunc.nextHook">func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) nextHook() func(context.Context, int, string) error</a>
-
-```
-searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) nextHook() func(context.Context, int, string) error
-```
-
-#### <a id="ResolverUpdateIndexConfigurationByRepositoryIDFunc.appendCall" href="#ResolverUpdateIndexConfigurationByRepositoryIDFunc.appendCall">func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) appendCall(r0 ResolverUpdateIndexConfigurationByRepositoryIDFuncCall)</a>
-
-```
-searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) appendCall(r0 ResolverUpdateIndexConfigurationByRepositoryIDFuncCall)
-```
-
 #### <a id="ResolverUpdateIndexConfigurationByRepositoryIDFunc.History" href="#ResolverUpdateIndexConfigurationByRepositoryIDFunc.History">func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) History() []ResolverUpdateIndexConfigurationByRepositoryIDFuncCall</a>
 
 ```
 searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.History
+tags: [function]
 ```
 
 ```Go
@@ -3241,10 +3351,85 @@ func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) History() []Resolve
 
 History returns a sequence of ResolverUpdateIndexConfigurationByRepositoryIDFuncCall objects describing the invocations of this function. 
 
+#### <a id="ResolverUpdateIndexConfigurationByRepositoryIDFunc.PushHook" href="#ResolverUpdateIndexConfigurationByRepositoryIDFunc.PushHook">func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) PushHook(hook func(context.Context, int, string) error)</a>
+
+```
+searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) PushHook(hook func(context.Context, int, string) error)
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the UpdateIndexConfigurationByRepositoryID method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="ResolverUpdateIndexConfigurationByRepositoryIDFunc.PushReturn" href="#ResolverUpdateIndexConfigurationByRepositoryIDFunc.PushReturn">func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) PushReturn(r0 error)</a>
+
+```
+searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) PushReturn(r0 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverUpdateIndexConfigurationByRepositoryIDFunc.SetDefaultHook" href="#ResolverUpdateIndexConfigurationByRepositoryIDFunc.SetDefaultHook">func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) SetDefaultHook(hook func(context.Context, int, string) error)</a>
+
+```
+searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) SetDefaultHook(hook func(context.Context, int, string) error)
+```
+
+SetDefaultHook sets function that is called when the UpdateIndexConfigurationByRepositoryID method of the parent MockResolver instance is invoked and the hook queue is empty. 
+
+#### <a id="ResolverUpdateIndexConfigurationByRepositoryIDFunc.SetDefaultReturn" href="#ResolverUpdateIndexConfigurationByRepositoryIDFunc.SetDefaultReturn">func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) SetDefaultReturn(r0 error)</a>
+
+```
+searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) SetDefaultReturn(r0 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverUpdateIndexConfigurationByRepositoryIDFunc.appendCall" href="#ResolverUpdateIndexConfigurationByRepositoryIDFunc.appendCall">func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) appendCall(r0 ResolverUpdateIndexConfigurationByRepositoryIDFuncCall)</a>
+
+```
+searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) appendCall(r0 ResolverUpdateIndexConfigurationByRepositoryIDFuncCall)
+```
+
+#### <a id="ResolverUpdateIndexConfigurationByRepositoryIDFunc.nextHook" href="#ResolverUpdateIndexConfigurationByRepositoryIDFunc.nextHook">func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) nextHook() func(context.Context, int, string) error</a>
+
+```
+searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *ResolverUpdateIndexConfigurationByRepositoryIDFunc) nextHook() func(context.Context, int, string) error
+```
+
 ### <a id="ResolverUpdateIndexConfigurationByRepositoryIDFuncCall" href="#ResolverUpdateIndexConfigurationByRepositoryIDFuncCall">type ResolverUpdateIndexConfigurationByRepositoryIDFuncCall struct</a>
 
 ```
 searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFuncCall
+tags: [struct]
 ```
 
 ```Go
@@ -3270,6 +3455,7 @@ ResolverUpdateIndexConfigurationByRepositoryIDFuncCall is an object that describ
 
 ```
 searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFuncCall.Args
+tags: [function]
 ```
 
 ```Go
@@ -3282,6 +3468,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverUpdateIndexConfigurationByRepositoryIDFuncCall.Results
+tags: [function]
 ```
 
 ```Go
@@ -3294,6 +3481,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.ResolverUploadConnectionResolverFunc
+tags: [struct]
 ```
 
 ```Go
@@ -3307,80 +3495,11 @@ type ResolverUploadConnectionResolverFunc struct {
 
 ResolverUploadConnectionResolverFunc describes the behavior when the UploadConnectionResolver method of the parent MockResolver instance is invoked. 
 
-#### <a id="ResolverUploadConnectionResolverFunc.SetDefaultHook" href="#ResolverUploadConnectionResolverFunc.SetDefaultHook">func (f *ResolverUploadConnectionResolverFunc) SetDefaultHook(hook func(dbstore.GetUploadsOptions) *resolvers.UploadsResolver)</a>
-
-```
-searchKey: mocks.ResolverUploadConnectionResolverFunc.SetDefaultHook
-```
-
-```Go
-func (f *ResolverUploadConnectionResolverFunc) SetDefaultHook(hook func(dbstore.GetUploadsOptions) *resolvers.UploadsResolver)
-```
-
-SetDefaultHook sets function that is called when the UploadConnectionResolver method of the parent MockResolver instance is invoked and the hook queue is empty. 
-
-#### <a id="ResolverUploadConnectionResolverFunc.PushHook" href="#ResolverUploadConnectionResolverFunc.PushHook">func (f *ResolverUploadConnectionResolverFunc) PushHook(hook func(dbstore.GetUploadsOptions) *resolvers.UploadsResolver)</a>
-
-```
-searchKey: mocks.ResolverUploadConnectionResolverFunc.PushHook
-```
-
-```Go
-func (f *ResolverUploadConnectionResolverFunc) PushHook(hook func(dbstore.GetUploadsOptions) *resolvers.UploadsResolver)
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the UploadConnectionResolver method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="ResolverUploadConnectionResolverFunc.SetDefaultReturn" href="#ResolverUploadConnectionResolverFunc.SetDefaultReturn">func (f *ResolverUploadConnectionResolverFunc) SetDefaultReturn(r0 *resolvers.UploadsResolver)</a>
-
-```
-searchKey: mocks.ResolverUploadConnectionResolverFunc.SetDefaultReturn
-```
-
-```Go
-func (f *ResolverUploadConnectionResolverFunc) SetDefaultReturn(r0 *resolvers.UploadsResolver)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverUploadConnectionResolverFunc.PushReturn" href="#ResolverUploadConnectionResolverFunc.PushReturn">func (f *ResolverUploadConnectionResolverFunc) PushReturn(r0 *resolvers.UploadsResolver)</a>
-
-```
-searchKey: mocks.ResolverUploadConnectionResolverFunc.PushReturn
-```
-
-```Go
-func (f *ResolverUploadConnectionResolverFunc) PushReturn(r0 *resolvers.UploadsResolver)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="ResolverUploadConnectionResolverFunc.nextHook" href="#ResolverUploadConnectionResolverFunc.nextHook">func (f *ResolverUploadConnectionResolverFunc) nextHook() func(dbstore.GetUploadsOptions) *resolvers.UploadsResolver</a>
-
-```
-searchKey: mocks.ResolverUploadConnectionResolverFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *ResolverUploadConnectionResolverFunc) nextHook() func(dbstore.GetUploadsOptions) *resolvers.UploadsResolver
-```
-
-#### <a id="ResolverUploadConnectionResolverFunc.appendCall" href="#ResolverUploadConnectionResolverFunc.appendCall">func (f *ResolverUploadConnectionResolverFunc) appendCall(r0 ResolverUploadConnectionResolverFuncCall)</a>
-
-```
-searchKey: mocks.ResolverUploadConnectionResolverFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *ResolverUploadConnectionResolverFunc) appendCall(r0 ResolverUploadConnectionResolverFuncCall)
-```
-
 #### <a id="ResolverUploadConnectionResolverFunc.History" href="#ResolverUploadConnectionResolverFunc.History">func (f *ResolverUploadConnectionResolverFunc) History() []ResolverUploadConnectionResolverFuncCall</a>
 
 ```
 searchKey: mocks.ResolverUploadConnectionResolverFunc.History
+tags: [function]
 ```
 
 ```Go
@@ -3389,10 +3508,85 @@ func (f *ResolverUploadConnectionResolverFunc) History() []ResolverUploadConnect
 
 History returns a sequence of ResolverUploadConnectionResolverFuncCall objects describing the invocations of this function. 
 
+#### <a id="ResolverUploadConnectionResolverFunc.PushHook" href="#ResolverUploadConnectionResolverFunc.PushHook">func (f *ResolverUploadConnectionResolverFunc) PushHook(hook func(dbstore.GetUploadsOptions) *resolvers.UploadsResolver)</a>
+
+```
+searchKey: mocks.ResolverUploadConnectionResolverFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverUploadConnectionResolverFunc) PushHook(hook func(dbstore.GetUploadsOptions) *resolvers.UploadsResolver)
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the UploadConnectionResolver method of the parent MockResolver instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="ResolverUploadConnectionResolverFunc.PushReturn" href="#ResolverUploadConnectionResolverFunc.PushReturn">func (f *ResolverUploadConnectionResolverFunc) PushReturn(r0 *resolvers.UploadsResolver)</a>
+
+```
+searchKey: mocks.ResolverUploadConnectionResolverFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverUploadConnectionResolverFunc) PushReturn(r0 *resolvers.UploadsResolver)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverUploadConnectionResolverFunc.SetDefaultHook" href="#ResolverUploadConnectionResolverFunc.SetDefaultHook">func (f *ResolverUploadConnectionResolverFunc) SetDefaultHook(hook func(dbstore.GetUploadsOptions) *resolvers.UploadsResolver)</a>
+
+```
+searchKey: mocks.ResolverUploadConnectionResolverFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *ResolverUploadConnectionResolverFunc) SetDefaultHook(hook func(dbstore.GetUploadsOptions) *resolvers.UploadsResolver)
+```
+
+SetDefaultHook sets function that is called when the UploadConnectionResolver method of the parent MockResolver instance is invoked and the hook queue is empty. 
+
+#### <a id="ResolverUploadConnectionResolverFunc.SetDefaultReturn" href="#ResolverUploadConnectionResolverFunc.SetDefaultReturn">func (f *ResolverUploadConnectionResolverFunc) SetDefaultReturn(r0 *resolvers.UploadsResolver)</a>
+
+```
+searchKey: mocks.ResolverUploadConnectionResolverFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *ResolverUploadConnectionResolverFunc) SetDefaultReturn(r0 *resolvers.UploadsResolver)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="ResolverUploadConnectionResolverFunc.appendCall" href="#ResolverUploadConnectionResolverFunc.appendCall">func (f *ResolverUploadConnectionResolverFunc) appendCall(r0 ResolverUploadConnectionResolverFuncCall)</a>
+
+```
+searchKey: mocks.ResolverUploadConnectionResolverFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *ResolverUploadConnectionResolverFunc) appendCall(r0 ResolverUploadConnectionResolverFuncCall)
+```
+
+#### <a id="ResolverUploadConnectionResolverFunc.nextHook" href="#ResolverUploadConnectionResolverFunc.nextHook">func (f *ResolverUploadConnectionResolverFunc) nextHook() func(dbstore.GetUploadsOptions) *resolvers.UploadsResolver</a>
+
+```
+searchKey: mocks.ResolverUploadConnectionResolverFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *ResolverUploadConnectionResolverFunc) nextHook() func(dbstore.GetUploadsOptions) *resolvers.UploadsResolver
+```
+
 ### <a id="ResolverUploadConnectionResolverFuncCall" href="#ResolverUploadConnectionResolverFuncCall">type ResolverUploadConnectionResolverFuncCall struct</a>
 
 ```
 searchKey: mocks.ResolverUploadConnectionResolverFuncCall
+tags: [struct]
 ```
 
 ```Go
@@ -3412,6 +3606,7 @@ ResolverUploadConnectionResolverFuncCall is an object that describes an invocati
 
 ```
 searchKey: mocks.ResolverUploadConnectionResolverFuncCall.Args
+tags: [function]
 ```
 
 ```Go
@@ -3424,6 +3619,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.ResolverUploadConnectionResolverFuncCall.Results
+tags: [function]
 ```
 
 ```Go

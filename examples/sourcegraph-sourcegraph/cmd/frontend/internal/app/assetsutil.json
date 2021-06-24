@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "cmd/frontend/internal/app/assetsutil",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "assetsutil.assetsRoot",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -67,6 +71,8 @@
                 "newPage": false,
                 "searchKey": "assetsutil.baseURL",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -92,6 +98,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -111,7 +118,9 @@
                 "identifier": "Mount",
                 "newPage": false,
                 "searchKey": "assetsutil.Mount",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -126,12 +135,35 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/app/assetsutil#URL",
+              "documentation": {
+                "identifier": "URL",
+                "newPage": false,
+                "searchKey": "assetsutil.URL",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func URL(p string) *url.URL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc URL(p string) *url.URL\n```\n\nURL returns a URL, possibly relative, to the asset at path p. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/app/assetsutil#init.handler.go",
               "documentation": {
                 "identifier": "init.handler.go",
                 "newPage": false,
                 "searchKey": "assetsutil.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -154,6 +186,7 @@
                 "newPage": false,
                 "searchKey": "assetsutil.isPhabricatorAsset",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -164,26 +197,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc isPhabricatorAsset(path string) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app/assetsutil#URL",
-              "documentation": {
-                "identifier": "URL",
-                "newPage": false,
-                "searchKey": "assetsutil.URL",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func URL(p string) *url.URL"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc URL(p string) *url.URL\n```\n\nURL returns a URL, possibly relative, to the asset at path p. \n\n"
               },
               "children": null
             }

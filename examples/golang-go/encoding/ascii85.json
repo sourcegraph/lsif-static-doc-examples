@@ -4,7 +4,9 @@
     "identifier": "ascii85",
     "newPage": true,
     "searchKey": "encoding/ascii85",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -41,6 +45,8 @@
                 "newPage": false,
                 "searchKey": "ascii85.bigtest",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -63,6 +69,9 @@
                 "newPage": false,
                 "searchKey": "ascii85.pairs",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -87,7 +96,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -100,79 +111,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/encoding/ascii85#encoder",
-              "documentation": {
-                "identifier": "encoder",
-                "newPage": false,
-                "searchKey": "ascii85.encoder",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type encoder struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype encoder struct {\n\terr  error\n\tw    io.Writer\n\tbuf  [4]byte    // buffered data waiting to be encoded\n\tnbuf int        // number of bytes in buf\n\tout  [1024]byte // output buffer\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/encoding/ascii85#encoder.Write",
-                    "documentation": {
-                      "identifier": "encoder.Write",
-                      "newPage": false,
-                      "searchKey": "ascii85.encoder.Write",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *encoder) Write(p []byte) (n int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *encoder) Write(p []byte) (n int, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/encoding/ascii85#encoder.Close",
-                    "documentation": {
-                      "identifier": "encoder.Close",
-                      "newPage": false,
-                      "searchKey": "ascii85.encoder.Close",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *encoder) Close() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *encoder) Close() error\n```\n\nClose flushes any pending output from the encoder. It is an error to call Write after calling Close. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/encoding/ascii85#CorruptInputError",
               "documentation": {
                 "identifier": "CorruptInputError",
                 "newPage": false,
                 "searchKey": "ascii85.CorruptInputError",
-                "tags": null
+                "tags": [
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -190,7 +136,9 @@
                       "identifier": "CorruptInputError.Error",
                       "newPage": false,
                       "searchKey": "ascii85.CorruptInputError.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -214,6 +162,7 @@
                 "newPage": false,
                 "searchKey": "ascii85.decoder",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -234,6 +183,7 @@
                       "newPage": false,
                       "searchKey": "ascii85.decoder.Read",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -253,12 +203,83 @@
           },
           {
             "node": {
+              "pathID": "/encoding/ascii85#encoder",
+              "documentation": {
+                "identifier": "encoder",
+                "newPage": false,
+                "searchKey": "ascii85.encoder",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type encoder struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype encoder struct {\n\terr  error\n\tw    io.Writer\n\tbuf  [4]byte    // buffered data waiting to be encoded\n\tnbuf int        // number of bytes in buf\n\tout  [1024]byte // output buffer\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/encoding/ascii85#encoder.Close",
+                    "documentation": {
+                      "identifier": "encoder.Close",
+                      "newPage": false,
+                      "searchKey": "ascii85.encoder.Close",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) Close() error\n```\n\nClose flushes any pending output from the encoder. It is an error to call Write after calling Close. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/ascii85#encoder.Write",
+                    "documentation": {
+                      "identifier": "encoder.Write",
+                      "newPage": false,
+                      "searchKey": "ascii85.encoder.Write",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) Write(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) Write(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/encoding/ascii85#testpair",
               "documentation": {
                 "identifier": "testpair",
                 "newPage": false,
                 "searchKey": "ascii85.testpair",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -283,7 +304,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -296,12 +319,36 @@
         "children": [
           {
             "node": {
+              "pathID": "/encoding/ascii85#Decode",
+              "documentation": {
+                "identifier": "Decode",
+                "newPage": false,
+                "searchKey": "ascii85.Decode",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Decode(dst, src []byte, flush bool) (ndst, nsrc int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Decode(dst, src []byte, flush bool) (ndst, nsrc int, err error)\n```\n\nDecode decodes src into dst, returning both the number of bytes written to dst and the number consumed from src. If src contains invalid ascii85 data, Decode will return the number of bytes successfully written and a CorruptInputError. Decode ignores space and control characters in src. Often, ascii85-encoded data is wrapped in <~ and ~> symbols. Decode expects these to have been stripped by the caller. \n\nIf flush is true, Decode assumes that src represents the end of the input stream and processes it completely rather than wait for the completion of another 32-bit block. \n\nNewDecoder wraps an io.Reader interface around Decode. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/encoding/ascii85#Encode",
               "documentation": {
                 "identifier": "Encode",
                 "newPage": false,
                 "searchKey": "ascii85.Encode",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -321,7 +368,9 @@
                 "identifier": "MaxEncodedLen",
                 "newPage": false,
                 "searchKey": "ascii85.MaxEncodedLen",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -336,52 +385,14 @@
           },
           {
             "node": {
-              "pathID": "/encoding/ascii85#NewEncoder",
-              "documentation": {
-                "identifier": "NewEncoder",
-                "newPage": false,
-                "searchKey": "ascii85.NewEncoder",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func NewEncoder(w io.Writer) io.WriteCloser"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc NewEncoder(w io.Writer) io.WriteCloser\n```\n\nNewEncoder returns a new ascii85 stream encoder. Data written to the returned writer will be encoded and then written to w. Ascii85 encodings operate in 32-bit blocks; when finished writing, the caller must Close the returned encoder to flush any trailing partial block. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/ascii85#Decode",
-              "documentation": {
-                "identifier": "Decode",
-                "newPage": false,
-                "searchKey": "ascii85.Decode",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Decode(dst, src []byte, flush bool) (ndst, nsrc int, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Decode(dst, src []byte, flush bool) (ndst, nsrc int, err error)\n```\n\nDecode decodes src into dst, returning both the number of bytes written to dst and the number consumed from src. If src contains invalid ascii85 data, Decode will return the number of bytes successfully written and a CorruptInputError. Decode ignores space and control characters in src. Often, ascii85-encoded data is wrapped in <~ and ~> symbols. Decode expects these to have been stripped by the caller. \n\nIf flush is true, Decode assumes that src represents the end of the input stream and processes it completely rather than wait for the completion of another 32-bit block. \n\nNewDecoder wraps an io.Reader interface around Decode. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/encoding/ascii85#NewDecoder",
               "documentation": {
                 "identifier": "NewDecoder",
                 "newPage": false,
                 "searchKey": "ascii85.NewDecoder",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -396,110 +407,46 @@
           },
           {
             "node": {
-              "pathID": "/encoding/ascii85#testEqual",
+              "pathID": "/encoding/ascii85#NewEncoder",
               "documentation": {
-                "identifier": "testEqual",
+                "identifier": "NewEncoder",
                 "newPage": false,
-                "searchKey": "ascii85.testEqual",
+                "searchKey": "ascii85.NewEncoder",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func testEqual(t *testing.T, msg string, args ...interface{}) bool"
+                "value": "func NewEncoder(w io.Writer) io.WriteCloser"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc testEqual(t *testing.T, msg string, args ...interface{}) bool\n```\n\n"
+                "value": "```Go\nfunc NewEncoder(w io.Writer) io.WriteCloser\n```\n\nNewEncoder returns a new ascii85 stream encoder. Data written to the returned writer will be encoded and then written to w. Ascii85 encodings operate in 32-bit blocks; when finished writing, the caller must Close the returned encoder to flush any trailing partial block. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/encoding/ascii85#strip85",
+              "pathID": "/encoding/ascii85#TestBig",
               "documentation": {
-                "identifier": "strip85",
+                "identifier": "TestBig",
                 "newPage": false,
-                "searchKey": "ascii85.strip85",
+                "searchKey": "ascii85.TestBig",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func strip85(s string) string"
+                "value": "func TestBig(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc strip85(s string) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/ascii85#TestEncode",
-              "documentation": {
-                "identifier": "TestEncode",
-                "newPage": false,
-                "searchKey": "ascii85.TestEncode",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEncode(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEncode(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/ascii85#TestEncoder",
-              "documentation": {
-                "identifier": "TestEncoder",
-                "newPage": false,
-                "searchKey": "ascii85.TestEncoder",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEncoder(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEncoder(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/ascii85#TestEncoderBuffering",
-              "documentation": {
-                "identifier": "TestEncoderBuffering",
-                "newPage": false,
-                "searchKey": "ascii85.TestEncoderBuffering",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEncoderBuffering(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEncoderBuffering(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestBig(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -512,7 +459,9 @@
                 "newPage": false,
                 "searchKey": "ascii85.TestDecode",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -528,13 +477,39 @@
           },
           {
             "node": {
+              "pathID": "/encoding/ascii85#TestDecodeCorrupt",
+              "documentation": {
+                "identifier": "TestDecodeCorrupt",
+                "newPage": false,
+                "searchKey": "ascii85.TestDecodeCorrupt",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecodeCorrupt(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecodeCorrupt(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/encoding/ascii85#TestDecoder",
               "documentation": {
                 "identifier": "TestDecoder",
                 "newPage": false,
                 "searchKey": "ascii85.TestDecoder",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -556,7 +531,9 @@
                 "newPage": false,
                 "searchKey": "ascii85.TestDecoderBuffering",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -572,57 +549,15 @@
           },
           {
             "node": {
-              "pathID": "/encoding/ascii85#TestDecodeCorrupt",
-              "documentation": {
-                "identifier": "TestDecodeCorrupt",
-                "newPage": false,
-                "searchKey": "ascii85.TestDecodeCorrupt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDecodeCorrupt(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDecodeCorrupt(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/ascii85#TestBig",
-              "documentation": {
-                "identifier": "TestBig",
-                "newPage": false,
-                "searchKey": "ascii85.TestBig",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestBig(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestBig(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/encoding/ascii85#TestDecoderInternalWhitespace",
               "documentation": {
                 "identifier": "TestDecoderInternalWhitespace",
                 "newPage": false,
                 "searchKey": "ascii85.TestDecoderInternalWhitespace",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -632,6 +567,124 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc TestDecoderInternalWhitespace(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/ascii85#TestEncode",
+              "documentation": {
+                "identifier": "TestEncode",
+                "newPage": false,
+                "searchKey": "ascii85.TestEncode",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncode(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncode(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/ascii85#TestEncoder",
+              "documentation": {
+                "identifier": "TestEncoder",
+                "newPage": false,
+                "searchKey": "ascii85.TestEncoder",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncoder(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncoder(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/ascii85#TestEncoderBuffering",
+              "documentation": {
+                "identifier": "TestEncoderBuffering",
+                "newPage": false,
+                "searchKey": "ascii85.TestEncoderBuffering",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncoderBuffering(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncoderBuffering(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/ascii85#strip85",
+              "documentation": {
+                "identifier": "strip85",
+                "newPage": false,
+                "searchKey": "ascii85.strip85",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func strip85(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc strip85(s string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/ascii85#testEqual",
+              "documentation": {
+                "identifier": "testEqual",
+                "newPage": false,
+                "searchKey": "ascii85.testEqual",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testEqual(t *testing.T, msg string, args ...interface{}) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testEqual(t *testing.T, msg string, args ...interface{}) bool\n```\n\n"
               },
               "children": null
             }

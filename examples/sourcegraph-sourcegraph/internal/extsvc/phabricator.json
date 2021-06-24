@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/extsvc/phabricator",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "phabricator.requestDuration",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -84,57 +89,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/extsvc/phabricator#meteredConn",
-              "documentation": {
-                "identifier": "meteredConn",
-                "newPage": false,
-                "searchKey": "phabricator.meteredConn",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type meteredConn struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype meteredConn struct {\n\tgonduit.Conn\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/extsvc/phabricator#meteredConn.CallContext",
-                    "documentation": {
-                      "identifier": "meteredConn.CallContext",
-                      "newPage": false,
-                      "searchKey": "phabricator.meteredConn.CallContext",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (mc *meteredConn) CallContext(ctx context.Context,..."
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (mc *meteredConn) CallContext(\n\tctx context.Context,\n\tmethod string,\n\tparams interface{},\n\tresult interface{},\n) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/extsvc/phabricator#Client",
               "documentation": {
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "phabricator.Client",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -152,7 +114,9 @@
                       "identifier": "NewClient",
                       "newPage": false,
                       "searchKey": "phabricator.NewClient",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -167,20 +131,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/extsvc/phabricator#Client.ListRepos",
+                    "pathID": "/internal/extsvc/phabricator#Client.GetDiffInfo",
                     "documentation": {
-                      "identifier": "Client.ListRepos",
+                      "identifier": "Client.GetDiffInfo",
                       "newPage": false,
-                      "searchKey": "phabricator.Client.ListRepos",
-                      "tags": null
+                      "searchKey": "phabricator.Client.GetDiffInfo",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (c *Client) ListRepos(ctx context.Context, args ListReposArgs) ([]*Repo, *Cursor, error)"
+                      "value": "func (c *Client) GetDiffInfo(ctx context.Context, diffID int) (*DiffInfo, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) ListRepos(ctx context.Context, args ListReposArgs) ([]*Repo, *Cursor, error)\n```\n\nListRepos lists all repositories matching the given arguments. \n\n"
+                      "value": "```Go\nfunc (c *Client) GetDiffInfo(ctx context.Context, diffID int) (*DiffInfo, error)\n```\n\nGetDiffInfo retrieves the DiffInfo of the diff with the given id. \n\n"
                     },
                     "children": null
                   }
@@ -192,7 +158,9 @@
                       "identifier": "Client.GetRawDiff",
                       "newPage": false,
                       "searchKey": "phabricator.Client.GetRawDiff",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -207,20 +175,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/extsvc/phabricator#Client.GetDiffInfo",
+                    "pathID": "/internal/extsvc/phabricator#Client.ListRepos",
                     "documentation": {
-                      "identifier": "Client.GetDiffInfo",
+                      "identifier": "Client.ListRepos",
                       "newPage": false,
-                      "searchKey": "phabricator.Client.GetDiffInfo",
-                      "tags": null
+                      "searchKey": "phabricator.Client.ListRepos",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (c *Client) GetDiffInfo(ctx context.Context, diffID int) (*DiffInfo, error)"
+                      "value": "func (c *Client) ListRepos(ctx context.Context, args ListReposArgs) ([]*Repo, *Cursor, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) GetDiffInfo(ctx context.Context, diffID int) (*DiffInfo, error)\n```\n\nGetDiffInfo retrieves the DiffInfo of the diff with the given id. \n\n"
+                      "value": "```Go\nfunc (c *Client) ListRepos(ctx context.Context, args ListReposArgs) ([]*Repo, *Cursor, error)\n```\n\nListRepos lists all repositories matching the given arguments. \n\n"
                     },
                     "children": null
                   }
@@ -230,12 +200,80 @@
           },
           {
             "node": {
+              "pathID": "/internal/extsvc/phabricator#Cursor",
+              "documentation": {
+                "identifier": "Cursor",
+                "newPage": false,
+                "searchKey": "phabricator.Cursor",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Cursor struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Cursor struct {\n\tLimit  uint64 `json:\"limit,omitempty\"`\n\tAfter  string `json:\"after,omitempty\"`\n\tBefore string `json:\"before,omitempty\"`\n\tOrder  string `json:\"order,omitempty\"`\n}\n```\n\nCursor represents the pagination cursor on many responses. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/phabricator#DiffInfo",
+              "documentation": {
+                "identifier": "DiffInfo",
+                "newPage": false,
+                "searchKey": "phabricator.DiffInfo",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DiffInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DiffInfo struct {\n\tMessage     string    `json:\"description\"`\n\tAuthorName  string    `json:\"authorName\"`\n\tAuthorEmail string    `json:\"authorEmail\"`\n\tDateCreated string    `json:\"dateCreated\"`\n\tDate        time.Time `json:\"omitempty\"`\n}\n```\n\nDiffInfo contains information for a diff such as the author \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/phabricator#ListReposArgs",
+              "documentation": {
+                "identifier": "ListReposArgs",
+                "newPage": false,
+                "searchKey": "phabricator.ListReposArgs",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ListReposArgs struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ListReposArgs struct {\n\t*Cursor\n}\n```\n\nListReposArgs defines the constraints to be satisfied by the ListRepos method. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/extsvc/phabricator#Repo",
               "documentation": {
                 "identifier": "Repo",
                 "newPage": false,
                 "searchKey": "phabricator.Repo",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -255,7 +293,9 @@
                 "identifier": "URI",
                 "newPage": false,
                 "searchKey": "phabricator.URI",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -276,6 +316,7 @@
                 "newPage": false,
                 "searchKey": "phabricator.apiRepo",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -296,6 +337,7 @@
                       "newPage": false,
                       "searchKey": "phabricator.apiRepo.ToRepo",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -315,12 +357,36 @@
           },
           {
             "node": {
+              "pathID": "/internal/extsvc/phabricator#apiRepoAttachments",
+              "documentation": {
+                "identifier": "apiRepoAttachments",
+                "newPage": false,
+                "searchKey": "phabricator.apiRepoAttachments",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type apiRepoAttachments struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype apiRepoAttachments struct {\n\tURIs apiURIsContainer `json:\"uris\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/extsvc/phabricator#apiRepoFields",
               "documentation": {
                 "identifier": "apiRepoFields",
                 "newPage": false,
                 "searchKey": "phabricator.apiRepoFields",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -343,6 +409,7 @@
                 "newPage": false,
                 "searchKey": "phabricator.apiRepoPolicy",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -359,56 +426,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/extsvc/phabricator#apiRepoAttachments",
-              "documentation": {
-                "identifier": "apiRepoAttachments",
-                "newPage": false,
-                "searchKey": "phabricator.apiRepoAttachments",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type apiRepoAttachments struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype apiRepoAttachments struct {\n\tURIs apiURIsContainer `json:\"uris\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc/phabricator#apiURIsContainer",
-              "documentation": {
-                "identifier": "apiURIsContainer",
-                "newPage": false,
-                "searchKey": "phabricator.apiURIsContainer",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type apiURIsContainer struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype apiURIsContainer struct {\n\tURIs []apiURI `json:\"uris\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/extsvc/phabricator#apiURI",
               "documentation": {
                 "identifier": "apiURI",
                 "newPage": false,
                 "searchKey": "phabricator.apiURI",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -425,12 +449,36 @@
           },
           {
             "node": {
+              "pathID": "/internal/extsvc/phabricator#apiURIBultin",
+              "documentation": {
+                "identifier": "apiURIBultin",
+                "newPage": false,
+                "searchKey": "phabricator.apiURIBultin",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type apiURIBultin struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype apiURIBultin struct {\n\tProtocol   string `json:\"protocol\"`\n\tIdentifier string `json:\"identifier\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/extsvc/phabricator#apiURIFields",
               "documentation": {
                 "identifier": "apiURIFields",
                 "newPage": false,
                 "searchKey": "phabricator.apiURIFields",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -453,6 +501,7 @@
                 "newPage": false,
                 "searchKey": "phabricator.apiURIs",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -469,84 +518,72 @@
           },
           {
             "node": {
-              "pathID": "/internal/extsvc/phabricator#apiURIBultin",
+              "pathID": "/internal/extsvc/phabricator#apiURIsContainer",
               "documentation": {
-                "identifier": "apiURIBultin",
+                "identifier": "apiURIsContainer",
                 "newPage": false,
-                "searchKey": "phabricator.apiURIBultin",
+                "searchKey": "phabricator.apiURIsContainer",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type apiURIBultin struct"
+                "value": "type apiURIsContainer struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype apiURIBultin struct {\n\tProtocol   string `json:\"protocol\"`\n\tIdentifier string `json:\"identifier\"`\n}\n```\n\n"
+                "value": "```Go\ntype apiURIsContainer struct {\n\tURIs []apiURI `json:\"uris\"`\n}\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/extsvc/phabricator#Cursor",
+              "pathID": "/internal/extsvc/phabricator#meteredConn",
               "documentation": {
-                "identifier": "Cursor",
+                "identifier": "meteredConn",
                 "newPage": false,
-                "searchKey": "phabricator.Cursor",
-                "tags": null
+                "searchKey": "phabricator.meteredConn",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type Cursor struct"
+                "value": "type meteredConn struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype Cursor struct {\n\tLimit  uint64 `json:\"limit,omitempty\"`\n\tAfter  string `json:\"after,omitempty\"`\n\tBefore string `json:\"before,omitempty\"`\n\tOrder  string `json:\"order,omitempty\"`\n}\n```\n\nCursor represents the pagination cursor on many responses. \n\n"
+                "value": "```Go\ntype meteredConn struct {\n\tgonduit.Conn\n}\n```\n\n"
               },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc/phabricator#ListReposArgs",
-              "documentation": {
-                "identifier": "ListReposArgs",
-                "newPage": false,
-                "searchKey": "phabricator.ListReposArgs",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ListReposArgs struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ListReposArgs struct {\n\t*Cursor\n}\n```\n\nListReposArgs defines the constraints to be satisfied by the ListRepos method. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc/phabricator#DiffInfo",
-              "documentation": {
-                "identifier": "DiffInfo",
-                "newPage": false,
-                "searchKey": "phabricator.DiffInfo",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type DiffInfo struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype DiffInfo struct {\n\tMessage     string    `json:\"description\"`\n\tAuthorName  string    `json:\"authorName\"`\n\tAuthorEmail string    `json:\"authorEmail\"`\n\tDateCreated string    `json:\"dateCreated\"`\n\tDate        time.Time `json:\"omitempty\"`\n}\n```\n\nDiffInfo contains information for a diff such as the author \n\n"
-              },
-              "children": null
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/phabricator#meteredConn.CallContext",
+                    "documentation": {
+                      "identifier": "meteredConn.CallContext",
+                      "newPage": false,
+                      "searchKey": "phabricator.meteredConn.CallContext",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (mc *meteredConn) CallContext(ctx context.Context,..."
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (mc *meteredConn) CallContext(\n\tctx context.Context,\n\tmethod string,\n\tparams interface{},\n\tresult interface{},\n) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
             }
           },
           {
@@ -557,6 +594,7 @@
                 "newPage": false,
                 "searchKey": "phabricator.unixTime",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -577,6 +615,7 @@
                       "newPage": false,
                       "searchKey": "phabricator.unixTime.UnmarshalJSON",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -605,6 +644,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -624,7 +664,9 @@
                 "identifier": "ParseDate",
                 "newPage": false,
                 "searchKey": "phabricator.ParseDate",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",

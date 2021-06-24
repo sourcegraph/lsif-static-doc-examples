@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/search/run",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,12 +41,37 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/search/run#DefaultSymbolLimit",
+              "documentation": {
+                "identifier": "DefaultSymbolLimit",
+                "newPage": false,
+                "searchKey": "run.DefaultSymbolLimit",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const DefaultSymbolLimit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst DefaultSymbolLimit = 100\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/search/run#defaultMaxSearchResults",
               "documentation": {
                 "identifier": "defaultMaxSearchResults",
                 "newPage": false,
                 "searchKey": "run.defaultMaxSearchResults",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -55,26 +82,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst defaultMaxSearchResults = 30\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#DefaultSymbolLimit",
-              "documentation": {
-                "identifier": "DefaultSymbolLimit",
-                "newPage": false,
-                "searchKey": "run.DefaultSymbolLimit",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const DefaultSymbolLimit"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst DefaultSymbolLimit = 100\n```\n\n"
               },
               "children": null
             }
@@ -90,6 +97,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -104,12 +112,38 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/search/run#MockSearchFilesInRepos",
+              "documentation": {
+                "identifier": "MockSearchFilesInRepos",
+                "newPage": false,
+                "searchKey": "run.MockSearchFilesInRepos",
+                "tags": [
+                  "variable",
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockSearchFilesInRepos"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockSearchFilesInRepos func(args *search.TextParameters) ([]*result.FileMatch, *streaming.Stats, error) = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/search/run#MockSearchRepositories",
               "documentation": {
                 "identifier": "MockSearchRepositories",
                 "newPage": false,
                 "searchKey": "run.MockSearchRepositories",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -129,7 +163,10 @@
                 "identifier": "MockSearchSymbols",
                 "newPage": false,
                 "searchKey": "run.MockSearchSymbols",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,34 +181,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/run#textSearchLimiter",
-              "documentation": {
-                "identifier": "textSearchLimiter",
-                "newPage": false,
-                "searchKey": "run.textSearchLimiter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var textSearchLimiter"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar textSearchLimiter = mutablelimiter.New(32)\n```\n\nA global limiter on number of concurrent searcher searches. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/search/run#mockSearchFilesInRepo",
               "documentation": {
                 "identifier": "mockSearchFilesInRepo",
                 "newPage": false,
                 "searchKey": "run.mockSearchFilesInRepo",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
@@ -188,20 +205,24 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/run#MockSearchFilesInRepos",
+              "pathID": "/internal/search/run#textSearchLimiter",
               "documentation": {
-                "identifier": "MockSearchFilesInRepos",
+                "identifier": "textSearchLimiter",
                 "newPage": false,
-                "searchKey": "run.MockSearchFilesInRepos",
-                "tags": null
+                "searchKey": "run.textSearchLimiter",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var MockSearchFilesInRepos"
+                "value": "var textSearchLimiter"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar MockSearchFilesInRepos func(args *search.TextParameters) ([]*result.FileMatch, *streaming.Stats, error) = ...\n```\n\n"
+                "value": "```Go\nvar textSearchLimiter = mutablelimiter.New(32)\n```\n\nA global limiter on number of concurrent searcher searches. \n\n"
               },
               "children": null
             }
@@ -217,6 +238,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -236,7 +258,9 @@
                 "identifier": "Aggregator",
                 "newPage": false,
                 "searchKey": "run.Aggregator",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -254,7 +278,9 @@
                       "identifier": "NewAggregator",
                       "newPage": false,
                       "searchKey": "run.NewAggregator",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -269,60 +295,66 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/search/run#Aggregator.Get",
+                    "pathID": "/internal/search/run#Aggregator.DoCommitSearch",
                     "documentation": {
-                      "identifier": "Aggregator.Get",
+                      "identifier": "Aggregator.DoCommitSearch",
                       "newPage": false,
-                      "searchKey": "run.Aggregator.Get",
-                      "tags": null
+                      "searchKey": "run.Aggregator.DoCommitSearch",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (a *Aggregator) Get() ([]result.Match, streaming.Stats, *multierror.Error)"
+                      "value": "func (a *Aggregator) DoCommitSearch(ctx context.Context, tp *search.TextParameters) (err error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (a *Aggregator) Get() ([]result.Match, streaming.Stats, *multierror.Error)\n```\n\nGet finalises aggregation over the stream and returns the aggregated result. It should only be called once each do* function is finished running. \n\n"
+                      "value": "```Go\nfunc (a *Aggregator) DoCommitSearch(ctx context.Context, tp *search.TextParameters) (err error)\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/internal/search/run#Aggregator.Send",
+                    "pathID": "/internal/search/run#Aggregator.DoDiffSearch",
                     "documentation": {
-                      "identifier": "Aggregator.Send",
+                      "identifier": "Aggregator.DoDiffSearch",
                       "newPage": false,
-                      "searchKey": "run.Aggregator.Send",
-                      "tags": null
+                      "searchKey": "run.Aggregator.DoDiffSearch",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (a *Aggregator) Send(event streaming.SearchEvent)"
+                      "value": "func (a *Aggregator) DoDiffSearch(ctx context.Context, tp *search.TextParameters) (err error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (a *Aggregator) Send(event streaming.SearchEvent)\n```\n\n"
+                      "value": "```Go\nfunc (a *Aggregator) DoDiffSearch(ctx context.Context, tp *search.TextParameters) (err error)\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/internal/search/run#Aggregator.Error",
+                    "pathID": "/internal/search/run#Aggregator.DoFilePathSearch",
                     "documentation": {
-                      "identifier": "Aggregator.Error",
+                      "identifier": "Aggregator.DoFilePathSearch",
                       "newPage": false,
-                      "searchKey": "run.Aggregator.Error",
-                      "tags": null
+                      "searchKey": "run.Aggregator.DoFilePathSearch",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (a *Aggregator) Error(err error)"
+                      "value": "func (a *Aggregator) DoFilePathSearch(ctx context.Context, args *search.TextParameters) (err error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (a *Aggregator) Error(err error)\n```\n\n"
+                      "value": "```Go\nfunc (a *Aggregator) DoFilePathSearch(ctx context.Context, args *search.TextParameters) (err error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -334,7 +366,9 @@
                       "identifier": "Aggregator.DoRepoSearch",
                       "newPage": false,
                       "searchKey": "run.Aggregator.DoRepoSearch",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -354,7 +388,9 @@
                       "identifier": "Aggregator.DoSymbolSearch",
                       "newPage": false,
                       "searchKey": "run.Aggregator.DoSymbolSearch",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -369,60 +405,66 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/search/run#Aggregator.DoFilePathSearch",
+                    "pathID": "/internal/search/run#Aggregator.Error",
                     "documentation": {
-                      "identifier": "Aggregator.DoFilePathSearch",
+                      "identifier": "Aggregator.Error",
                       "newPage": false,
-                      "searchKey": "run.Aggregator.DoFilePathSearch",
-                      "tags": null
+                      "searchKey": "run.Aggregator.Error",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (a *Aggregator) DoFilePathSearch(ctx context.Context, args *search.TextParameters) (err error)"
+                      "value": "func (a *Aggregator) Error(err error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (a *Aggregator) DoFilePathSearch(ctx context.Context, args *search.TextParameters) (err error)\n```\n\n"
+                      "value": "```Go\nfunc (a *Aggregator) Error(err error)\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/internal/search/run#Aggregator.DoDiffSearch",
+                    "pathID": "/internal/search/run#Aggregator.Get",
                     "documentation": {
-                      "identifier": "Aggregator.DoDiffSearch",
+                      "identifier": "Aggregator.Get",
                       "newPage": false,
-                      "searchKey": "run.Aggregator.DoDiffSearch",
-                      "tags": null
+                      "searchKey": "run.Aggregator.Get",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (a *Aggregator) DoDiffSearch(ctx context.Context, tp *search.TextParameters) (err error)"
+                      "value": "func (a *Aggregator) Get() ([]result.Match, streaming.Stats, *multierror.Error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (a *Aggregator) DoDiffSearch(ctx context.Context, tp *search.TextParameters) (err error)\n```\n\n"
+                      "value": "```Go\nfunc (a *Aggregator) Get() ([]result.Match, streaming.Stats, *multierror.Error)\n```\n\nGet finalises aggregation over the stream and returns the aggregated result. It should only be called once each do* function is finished running. \n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/internal/search/run#Aggregator.DoCommitSearch",
+                    "pathID": "/internal/search/run#Aggregator.Send",
                     "documentation": {
-                      "identifier": "Aggregator.DoCommitSearch",
+                      "identifier": "Aggregator.Send",
                       "newPage": false,
-                      "searchKey": "run.Aggregator.DoCommitSearch",
-                      "tags": null
+                      "searchKey": "run.Aggregator.Send",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (a *Aggregator) DoCommitSearch(ctx context.Context, tp *search.TextParameters) (err error)"
+                      "value": "func (a *Aggregator) Send(event streaming.SearchEvent)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (a *Aggregator) DoCommitSearch(ctx context.Context, tp *search.TextParameters) (err error)\n```\n\n"
+                      "value": "```Go\nfunc (a *Aggregator) Send(event streaming.SearchEvent)\n```\n\n"
                     },
                     "children": null
                   }
@@ -437,7 +479,9 @@
                 "identifier": "DiffCommitError",
                 "newPage": false,
                 "searchKey": "run.DiffCommitError",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -457,7 +501,9 @@
                 "identifier": "RepoLimitError",
                 "newPage": false,
                 "searchKey": "run.RepoLimitError",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -475,7 +521,9 @@
                       "identifier": "RepoLimitError.Error",
                       "newPage": false,
                       "searchKey": "run.RepoLimitError.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -493,53 +541,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/run#TimeLimitError",
-              "documentation": {
-                "identifier": "TimeLimitError",
-                "newPage": false,
-                "searchKey": "run.TimeLimitError",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type TimeLimitError run.DiffCommitError"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype TimeLimitError DiffCommitError\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/search/run#TimeLimitError.Error",
-                    "documentation": {
-                      "identifier": "TimeLimitError.Error",
-                      "newPage": false,
-                      "searchKey": "run.TimeLimitError.Error",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*TimeLimitError) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*TimeLimitError) Error() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/search/run#SearchCommitsInReposParameters",
               "documentation": {
                 "identifier": "SearchCommitsInReposParameters",
                 "newPage": false,
                 "searchKey": "run.SearchCommitsInReposParameters",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -554,12 +563,36 @@
           },
           {
             "node": {
+              "pathID": "/internal/search/run#SearchCursor",
+              "documentation": {
+                "identifier": "SearchCursor",
+                "newPage": false,
+                "searchKey": "run.SearchCursor",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SearchCursor struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SearchCursor struct {\n\t// RepositoryOffset indicates how many repositories (which are globally\n\t// sorted and ordered) to offset by.\n\tRepositoryOffset int32\n\n\t// ResultOffset indicates how many results within the first repository we\n\t// would search in to further offset by. This is so that we can paginate\n\t// results within e.g. a single large repository.\n\tResultOffset int32\n\n\t// Finished tells if there are more results for the query or if we've\n\t// consumed them all.\n\tFinished bool\n}\n```\n\nSearchCursor represents a decoded search pagination cursor. From an API consumer standpoint, it is an encoded opaque string. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/search/run#SearchInputs",
               "documentation": {
                 "identifier": "SearchInputs",
                 "newPage": false,
                 "searchKey": "run.SearchInputs",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -577,7 +610,9 @@
                       "identifier": "SearchInputs.MaxResults",
                       "newPage": false,
                       "searchKey": "run.SearchInputs.MaxResults",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -600,7 +635,9 @@
                 "identifier": "SearchPaginationInfo",
                 "newPage": false,
                 "searchKey": "run.SearchPaginationInfo",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -615,22 +652,47 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/run#SearchCursor",
+              "pathID": "/internal/search/run#TimeLimitError",
               "documentation": {
-                "identifier": "SearchCursor",
+                "identifier": "TimeLimitError",
                 "newPage": false,
-                "searchKey": "run.SearchCursor",
-                "tags": null
+                "searchKey": "run.TimeLimitError",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type SearchCursor struct"
+                "value": "type TimeLimitError run.DiffCommitError"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype SearchCursor struct {\n\t// RepositoryOffset indicates how many repositories (which are globally\n\t// sorted and ordered) to offset by.\n\tRepositoryOffset int32\n\n\t// ResultOffset indicates how many results within the first repository we\n\t// would search in to further offset by. This is so that we can paginate\n\t// results within e.g. a single large repository.\n\tResultOffset int32\n\n\t// Finished tells if there are more results for the query or if we've\n\t// consumed them all.\n\tFinished bool\n}\n```\n\nSearchCursor represents a decoded search pagination cursor. From an API consumer standpoint, it is an encoded opaque string. \n\n"
+                "value": "```Go\ntype TimeLimitError DiffCommitError\n```\n\n"
               },
-              "children": null
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/run#TimeLimitError.Error",
+                    "documentation": {
+                      "identifier": "TimeLimitError.Error",
+                      "newPage": false,
+                      "searchKey": "run.TimeLimitError.Error",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*TimeLimitError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*TimeLimitError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
             }
           }
         ]
@@ -644,6 +706,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -658,196 +721,70 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/search/run#checkDiffCommitSearchLimits",
+              "pathID": "/internal/search/run#BenchmarkSearchRepositories",
               "documentation": {
-                "identifier": "checkDiffCommitSearchLimits",
+                "identifier": "BenchmarkSearchRepositories",
                 "newPage": false,
-                "searchKey": "run.checkDiffCommitSearchLimits",
+                "searchKey": "run.BenchmarkSearchRepositories",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func checkDiffCommitSearchLimits(ctx context.Context, args *search.TextParameters, resultType string) error"
+                "value": "func BenchmarkSearchRepositories(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc checkDiffCommitSearchLimits(ctx context.Context, args *search.TextParameters, resultType string) error\n```\n\n"
+                "value": "```Go\nfunc BenchmarkSearchRepositories(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/search/run#commitParametersToDiffParameters",
+              "pathID": "/internal/search/run#Benchmark_highlightMatches",
               "documentation": {
-                "identifier": "commitParametersToDiffParameters",
+                "identifier": "Benchmark_highlightMatches",
                 "newPage": false,
-                "searchKey": "run.commitParametersToDiffParameters",
+                "searchKey": "run.Benchmark_highlightMatches",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func commitParametersToDiffParameters(ctx context.Context, db dbutil.DB, op *search.CommitParameters) (*search.DiffParameters, error)"
+                "value": "func Benchmark_highlightMatches(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc commitParametersToDiffParameters(ctx context.Context, db dbutil.DB, op *search.CommitParameters) (*search.DiffParameters, error)\n```\n\n"
+                "value": "```Go\nfunc Benchmark_highlightMatches(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/search/run#SearchCommitsInRepoStream",
+              "pathID": "/internal/search/run#ComputeSymbols",
               "documentation": {
-                "identifier": "SearchCommitsInRepoStream",
+                "identifier": "ComputeSymbols",
                 "newPage": false,
-                "searchKey": "run.SearchCommitsInRepoStream",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SearchCommitsInRepoStream(ctx context.Context, db dbutil.DB, op search.CommitParameters, s streaming.Sender) (err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SearchCommitsInRepoStream(ctx context.Context, db dbutil.DB, op search.CommitParameters, s streaming.Sender) (err error)\n```\n\nSearchCommitsInRepoStream searches for commits based on op. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#errorName",
-              "documentation": {
-                "identifier": "errorName",
-                "newPage": false,
-                "searchKey": "run.errorName",
+                "searchKey": "run.ComputeSymbols",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func errorName(diff bool) string"
+                "value": "func ComputeSymbols(ctx context.Context, repoName types.RepoName, commitID api.CommitID, inputRev *string, query *string, first *int32, includePatterns *[]string) (res []*result.SymbolMatch, err error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc errorName(diff bool) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#orderedFuzzyRegexp",
-              "documentation": {
-                "identifier": "orderedFuzzyRegexp",
-                "newPage": false,
-                "searchKey": "run.orderedFuzzyRegexp",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func orderedFuzzyRegexp(pieces []string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc orderedFuzzyRegexp(pieces []string) string\n```\n\norderedFuzzyRegexp interpolate a lazy 'match everything' regexp pattern to achieve an ordered fuzzy regexp match. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#logCommitSearchResultsToMatches",
-              "documentation": {
-                "identifier": "logCommitSearchResultsToMatches",
-                "newPage": false,
-                "searchKey": "run.logCommitSearchResultsToMatches",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func logCommitSearchResultsToMatches(op *search.CommitParameters, repoName types.RepoName, rawResults []*git.LogCommitSearchResult) []*result.CommitMatch"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc logCommitSearchResultsToMatches(op *search.CommitParameters, repoName types.RepoName, rawResults []*git.LogCommitSearchResult) []*result.CommitMatch\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#fromVCSHighlights",
-              "documentation": {
-                "identifier": "fromVCSHighlights",
-                "newPage": false,
-                "searchKey": "run.fromVCSHighlights",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func fromVCSHighlights(vcsHighlights []git.Highlight) []result.HighlightedRange"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc fromVCSHighlights(vcsHighlights []git.Highlight) []result.HighlightedRange\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#cleanDiffPreview",
-              "documentation": {
-                "identifier": "cleanDiffPreview",
-                "newPage": false,
-                "searchKey": "run.cleanDiffPreview",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func cleanDiffPreview(highlights []result.HighlightedRange, rawDiffResult string) (string, []result.HighlightedRange)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc cleanDiffPreview(highlights []result.HighlightedRange, rawDiffResult string) (string, []result.HighlightedRange)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#highlightMatches",
-              "documentation": {
-                "identifier": "highlightMatches",
-                "newPage": false,
-                "searchKey": "run.highlightMatches",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func highlightMatches(pattern *regexp.Regexp, data []byte) *result.HighlightedString"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc highlightMatches(pattern *regexp.Regexp, data []byte) *result.HighlightedString\n```\n\n"
+                "value": "```Go\nfunc ComputeSymbols(ctx context.Context, repoName types.RepoName, commitID api.CommitID, inputRev *string, query *string, first *int32, includePatterns *[]string) (res []*result.SymbolMatch, err error)\n```\n\n"
               },
               "children": null
             }
@@ -859,7 +796,9 @@
                 "identifier": "ResolveCommitParameters",
                 "newPage": false,
                 "searchKey": "run.ResolveCommitParameters",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -874,32 +813,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/run#SearchCommitsInRepos",
-              "documentation": {
-                "identifier": "SearchCommitsInRepos",
-                "newPage": false,
-                "searchKey": "run.SearchCommitsInRepos",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SearchCommitsInRepos(ctx context.Context, db dbutil.DB, args *search.TextParametersForCommitParameters, params SearchCommitsInReposParameters) (err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SearchCommitsInRepos(ctx context.Context, db dbutil.DB, args *search.TextParametersForCommitParameters, params SearchCommitsInReposParameters) (err error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/search/run#SearchCommitDiffsInRepos",
               "documentation": {
                 "identifier": "SearchCommitDiffsInRepos",
                 "newPage": false,
                 "searchKey": "run.SearchCommitDiffsInRepos",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -919,7 +840,9 @@
                 "identifier": "SearchCommitLogInRepos",
                 "newPage": false,
                 "searchKey": "run.SearchCommitLogInRepos",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -934,324 +857,44 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/run#commitMatchesToMatches",
+              "pathID": "/internal/search/run#SearchCommitsInRepoStream",
               "documentation": {
-                "identifier": "commitMatchesToMatches",
+                "identifier": "SearchCommitsInRepoStream",
                 "newPage": false,
-                "searchKey": "run.commitMatchesToMatches",
+                "searchKey": "run.SearchCommitsInRepoStream",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func commitMatchesToMatches(commitMatches []*result.CommitMatch) []result.Match"
+                "value": "func SearchCommitsInRepoStream(ctx context.Context, db dbutil.DB, op search.CommitParameters, s streaming.Sender) (err error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc commitMatchesToMatches(commitMatches []*result.CommitMatch) []result.Match\n```\n\n"
+                "value": "```Go\nfunc SearchCommitsInRepoStream(ctx context.Context, db dbutil.DB, op search.CommitParameters, s streaming.Sender) (err error)\n```\n\nSearchCommitsInRepoStream searches for commits based on op. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/search/run#expandUsernamesToEmails",
+              "pathID": "/internal/search/run#SearchCommitsInRepos",
               "documentation": {
-                "identifier": "expandUsernamesToEmails",
+                "identifier": "SearchCommitsInRepos",
                 "newPage": false,
-                "searchKey": "run.expandUsernamesToEmails",
+                "searchKey": "run.SearchCommitsInRepos",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func expandUsernamesToEmails(ctx context.Context, db dbutil.DB, values []string) (expandedValues []string, err error)"
+                "value": "func SearchCommitsInRepos(ctx context.Context, db dbutil.DB, args *search.TextParametersForCommitParameters, params SearchCommitsInReposParameters) (err error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc expandUsernamesToEmails(ctx context.Context, db dbutil.DB, values []string) (expandedValues []string, err error)\n```\n\nexpandUsernamesToEmails expands references to usernames to mention all possible (known and verified) email addresses for the user. \n\nFor example, given a list [\"foo\", \"@alice\"] where the user \"alice\" has 2 email addresses \"alice@example.com\" and \"alice@example.org\", it would return [\"foo\", \"alice@example\\\\.com\", \"alice@example\\\\.org\"]. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#SearchRepositories",
-              "documentation": {
-                "identifier": "SearchRepositories",
-                "newPage": false,
-                "searchKey": "run.SearchRepositories",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SearchRepositories(ctx context.Context, args *search.TextParameters, limit int32, stream streaming.Sender) (err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SearchRepositories(ctx context.Context, args *search.TextParameters, limit int32, stream streaming.Sender) (err error)\n```\n\nSearchRepositories searches for repositories by name. \n\nFor a repository to match a query, the repository's name must match all of the repo: patterns AND the default patterns (i.e., the patterns that are not prefixed with any search field). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#repoRevsToRepoMatches",
-              "documentation": {
-                "identifier": "repoRevsToRepoMatches",
-                "newPage": false,
-                "searchKey": "run.repoRevsToRepoMatches",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func repoRevsToRepoMatches(ctx context.Context, repos []*search.RepositoryRevisions) []result.Match"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc repoRevsToRepoMatches(ctx context.Context, repos []*search.RepositoryRevisions) []result.Match\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#matchRepos",
-              "documentation": {
-                "identifier": "matchRepos",
-                "newPage": false,
-                "searchKey": "run.matchRepos",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func matchRepos(pattern *regexp.Regexp, resolved []*search.RepositoryRevisions, results chan<- []*search.RepositoryRevisions)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc matchRepos(pattern *regexp.Regexp, resolved []*search.RepositoryRevisions, results chan<- []*search.RepositoryRevisions)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#reposToAdd",
-              "documentation": {
-                "identifier": "reposToAdd",
-                "newPage": false,
-                "searchKey": "run.reposToAdd",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func reposToAdd(ctx context.Context, args *search.TextParameters, repos []*search.RepositoryRevisions) ([]*search.RepositoryRevisions, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc reposToAdd(ctx context.Context, args *search.TextParameters, repos []*search.RepositoryRevisions) ([]*search.RepositoryRevisions, error)\n```\n\nreposToAdd determines which repositories should be included in the result set based on whether they fit in the subset of repostiories specified in the query's `repohasfile` and `-repohasfile` fields if they exist. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#handleRepoSearchResult",
-              "documentation": {
-                "identifier": "handleRepoSearchResult",
-                "newPage": false,
-                "searchKey": "run.handleRepoSearchResult",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func handleRepoSearchResult(repoRev *search.RepositoryRevisions, limitHit, timedOut bool, searchErr error) (_ streaming.Stats, fatalErr error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc handleRepoSearchResult(repoRev *search.RepositoryRevisions, limitHit, timedOut bool, searchErr error) (_ streaming.Stats, fatalErr error)\n```\n\nhandleRepoSearchResult handles the limitHit and searchErr returned by a search function, returning common as to reflect that new information. If searchErr is a fatal error, it returns a non-nil error; otherwise, if searchErr == nil or a non-fatal error, it returns a nil error. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#getRepos",
-              "documentation": {
-                "identifier": "getRepos",
-                "newPage": false,
-                "searchKey": "run.getRepos",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func getRepos(ctx context.Context, p *search.Promise) ([]*search.RepositoryRevisions, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc getRepos(ctx context.Context, p *search.Promise) ([]*search.RepositoryRevisions, error)\n```\n\ngetRepos is a wrapper around p.Get. It returns an error if the promise contains an underlying type other than []*search.RepositoryRevisions. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#statsDeref",
-              "documentation": {
-                "identifier": "statsDeref",
-                "newPage": false,
-                "searchKey": "run.statsDeref",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func statsDeref(s *streaming.Stats) streaming.Stats"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc statsDeref(s *streaming.Stats) streaming.Stats\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#SearchSymbols",
-              "documentation": {
-                "identifier": "SearchSymbols",
-                "newPage": false,
-                "searchKey": "run.SearchSymbols",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SearchSymbols(ctx context.Context, args *search.TextParameters, limit int, stream streaming.Sender) (err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SearchSymbols(ctx context.Context, args *search.TextParameters, limit int, stream streaming.Sender) (err error)\n```\n\nSearchSymbols searches the given repos in parallel for symbols matching the given search query it can be used for both search suggestions and search results \n\nMay return partial results and an error \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#searchSymbolsInRepo",
-              "documentation": {
-                "identifier": "searchSymbolsInRepo",
-                "newPage": false,
-                "searchKey": "run.searchSymbolsInRepo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func searchSymbolsInRepo(ctx context.Context, repoRevs *search.RepositoryRevisions, patternInfo *search.TextPatternInfo, limit int) (res []*result.FileMatch, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc searchSymbolsInRepo(ctx context.Context, repoRevs *search.RepositoryRevisions, patternInfo *search.TextPatternInfo, limit int) (res []*result.FileMatch, err error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#indexedSymbolsBranch",
-              "documentation": {
-                "identifier": "indexedSymbolsBranch",
-                "newPage": false,
-                "searchKey": "run.indexedSymbolsBranch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func indexedSymbolsBranch(ctx context.Context, repository, commit string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc indexedSymbolsBranch(ctx context.Context, repository, commit string) string\n```\n\nindexedSymbols checks to see if Zoekt has indexed symbols information for a repository at a specific commit. If it has it returns the branch name (for use when querying zoekt). Otherwise an empty string is returned. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#searchZoektSymbols",
-              "documentation": {
-                "identifier": "searchZoektSymbols",
-                "newPage": false,
-                "searchKey": "run.searchZoektSymbols",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func searchZoektSymbols(ctx context.Context, repoName types.RepoName, commitID api.CommitID, inputRev *string, branch string, queryString *string, first *int32, includePatterns *[]string) (res []*result.SymbolMatch, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc searchZoektSymbols(ctx context.Context, repoName types.RepoName, commitID api.CommitID, inputRev *string, branch string, queryString *string, first *int32, includePatterns *[]string) (res []*result.SymbolMatch, err error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#ComputeSymbols",
-              "documentation": {
-                "identifier": "ComputeSymbols",
-                "newPage": false,
-                "searchKey": "run.ComputeSymbols",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ComputeSymbols(ctx context.Context, repoName types.RepoName, commitID api.CommitID, inputRev *string, query *string, first *int32, includePatterns *[]string) (res []*result.SymbolMatch, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ComputeSymbols(ctx context.Context, repoName types.RepoName, commitID api.CommitID, inputRev *string, query *string, first *int32, includePatterns *[]string) (res []*result.SymbolMatch, err error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#limitOrDefault",
-              "documentation": {
-                "identifier": "limitOrDefault",
-                "newPage": false,
-                "searchKey": "run.limitOrDefault",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func limitOrDefault(first *int32) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc limitOrDefault(first *int32) int\n```\n\n"
+                "value": "```Go\nfunc SearchCommitsInRepos(ctx context.Context, db dbutil.DB, args *search.TextParametersForCommitParameters, params SearchCommitsInReposParameters) (err error)\n```\n\n"
               },
               "children": null
             }
@@ -1263,7 +906,9 @@
                 "identifier": "SearchFilesInRepo",
                 "newPage": false,
                 "searchKey": "run.SearchFilesInRepo",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1278,120 +923,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/run#repoShouldBeSearched",
-              "documentation": {
-                "identifier": "repoShouldBeSearched",
-                "newPage": false,
-                "searchKey": "run.repoShouldBeSearched",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func repoShouldBeSearched(ctx context.Context, searcherURLs *endpoint.Map, searchPattern *search.TextPatternInfo, gitserverRepo api.RepoName, commit api.CommitID, fetchTimeout time.Duration) (shouldBeSearched bool, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc repoShouldBeSearched(ctx context.Context, searcherURLs *endpoint.Map, searchPattern *search.TextPatternInfo, gitserverRepo api.RepoName, commit api.CommitID, fetchTimeout time.Duration) (shouldBeSearched bool, err error)\n```\n\nrepoShouldBeSearched determines whether a repository should be searched in, based on whether the repository fits in the subset of repositories specified in the query's `repohasfile` and `-repohasfile` flags if they exist. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#repoHasFilesWithNamesMatching",
-              "documentation": {
-                "identifier": "repoHasFilesWithNamesMatching",
-                "newPage": false,
-                "searchKey": "run.repoHasFilesWithNamesMatching",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func repoHasFilesWithNamesMatching(ctx context.Context, searcherURLs *endpoint.Map, include bool, repoHasFileFlag []string, gitserverRepo api.RepoName, commit api.CommitID, fetchTimeout time.Duration) (bool, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc repoHasFilesWithNamesMatching(ctx context.Context, searcherURLs *endpoint.Map, include bool, repoHasFileFlag []string, gitserverRepo api.RepoName, commit api.CommitID, fetchTimeout time.Duration) (bool, error)\n```\n\nrepoHasFilesWithNamesMatching searches in a repository for matches for the patterns in the `repohasfile` or `-repohasfile` flags, and returns whether or not the repoShouldBeSearched in or not, based on whether matches were returned. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#fileMatchesToMatches",
-              "documentation": {
-                "identifier": "fileMatchesToMatches",
-                "newPage": false,
-                "searchKey": "run.fileMatchesToMatches",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func fileMatchesToMatches(fms []*result.FileMatch) []result.Match"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc fileMatchesToMatches(fms []*result.FileMatch) []result.Match\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#matchesToFileMatches",
-              "documentation": {
-                "identifier": "matchesToFileMatches",
-                "newPage": false,
-                "searchKey": "run.matchesToFileMatches",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func matchesToFileMatches(matches []result.Match) ([]*result.FileMatch, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc matchesToFileMatches(matches []result.Match) ([]*result.FileMatch, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#SearchFilesInReposBatch",
-              "documentation": {
-                "identifier": "SearchFilesInReposBatch",
-                "newPage": false,
-                "searchKey": "run.SearchFilesInReposBatch",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SearchFilesInReposBatch(ctx context.Context, args *search.TextParameters) ([]*result.FileMatch, streaming.Stats, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SearchFilesInReposBatch(ctx context.Context, args *search.TextParameters) ([]*result.FileMatch, streaming.Stats, error)\n```\n\nSearchFilesInRepoBatch is a convenience function around searchFilesInRepos which collects the results from the stream. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/search/run#SearchFilesInRepos",
               "documentation": {
                 "identifier": "SearchFilesInRepos",
                 "newPage": false,
                 "searchKey": "run.SearchFilesInRepos",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1406,22 +945,66 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/run#callSearcherOverRepos",
+              "pathID": "/internal/search/run#SearchFilesInReposBatch",
               "documentation": {
-                "identifier": "callSearcherOverRepos",
+                "identifier": "SearchFilesInReposBatch",
                 "newPage": false,
-                "searchKey": "run.callSearcherOverRepos",
+                "searchKey": "run.SearchFilesInReposBatch",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func callSearcherOverRepos(ctx context.Context,..."
+                "value": "func SearchFilesInReposBatch(ctx context.Context, args *search.TextParameters) ([]*result.FileMatch, streaming.Stats, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc callSearcherOverRepos(\n\tctx context.Context,\n\targs *search.TextParameters,\n\tstream streaming.Sender,\n\tsearcherRepos []*search.RepositoryRevisions,\n\tindex bool,\n) (err error)\n```\n\ncallSearcherOverRepos calls searcher on searcherRepos. \n\n"
+                "value": "```Go\nfunc SearchFilesInReposBatch(ctx context.Context, args *search.TextParameters) ([]*result.FileMatch, streaming.Stats, error)\n```\n\nSearchFilesInRepoBatch is a convenience function around searchFilesInRepos which collects the results from the stream. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#SearchRepositories",
+              "documentation": {
+                "identifier": "SearchRepositories",
+                "newPage": false,
+                "searchKey": "run.SearchRepositories",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SearchRepositories(ctx context.Context, args *search.TextParameters, limit int32, stream streaming.Sender) (err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SearchRepositories(ctx context.Context, args *search.TextParameters, limit int32, stream streaming.Sender) (err error)\n```\n\nSearchRepositories searches for repositories by name. \n\nFor a repository to match a query, the repository's name must match all of the repo: patterns AND the default patterns (i.e., the patterns that are not prefixed with any search field). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#SearchSymbols",
+              "documentation": {
+                "identifier": "SearchSymbols",
+                "newPage": false,
+                "searchKey": "run.SearchSymbols",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SearchSymbols(ctx context.Context, args *search.TextParameters, limit int, stream streaming.Sender) (err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SearchSymbols(ctx context.Context, args *search.TextParameters, limit int, stream streaming.Sender) (err error)\n```\n\nSearchSymbols searches the given repos in parallel for symbols matching the given search query it can be used for both search suggestions and search results \n\nMay return partial results and an error \n\n"
               },
               "children": null
             }
@@ -1434,7 +1017,9 @@
                 "newPage": false,
                 "searchKey": "run.TestCheckDiffCommitSearchLimits",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1450,145 +1035,15 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/run#TestSearchCommitsInRepo",
-              "documentation": {
-                "identifier": "TestSearchCommitsInRepo",
-                "newPage": false,
-                "searchKey": "run.TestSearchCommitsInRepo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSearchCommitsInRepo(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSearchCommitsInRepo(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#resetMocks",
-              "documentation": {
-                "identifier": "resetMocks",
-                "newPage": false,
-                "searchKey": "run.resetMocks",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func resetMocks()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc resetMocks()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#TestExpandUsernamesToEmails",
-              "documentation": {
-                "identifier": "TestExpandUsernamesToEmails",
-                "newPage": false,
-                "searchKey": "run.TestExpandUsernamesToEmails",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestExpandUsernamesToEmails(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestExpandUsernamesToEmails(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#TestHighlightMatches",
-              "documentation": {
-                "identifier": "TestHighlightMatches",
-                "newPage": false,
-                "searchKey": "run.TestHighlightMatches",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestHighlightMatches(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestHighlightMatches(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#Benchmark_highlightMatches",
-              "documentation": {
-                "identifier": "Benchmark_highlightMatches",
-                "newPage": false,
-                "searchKey": "run.Benchmark_highlightMatches",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Benchmark_highlightMatches(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Benchmark_highlightMatches(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#searchCommitsInRepo",
-              "documentation": {
-                "identifier": "searchCommitsInRepo",
-                "newPage": false,
-                "searchKey": "run.searchCommitsInRepo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func searchCommitsInRepo(ctx context.Context, db dbutil.DB, op search.CommitParameters) (results []*result.CommitMatch, limitHit, timedOut bool, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc searchCommitsInRepo(ctx context.Context, db dbutil.DB, op search.CommitParameters) (results []*result.CommitMatch, limitHit, timedOut bool, err error)\n```\n\nsearchCommitsInRepo is a blocking version of searchCommitsInRepoStream. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/search/run#TestCommitSearchResult_Limit",
               "documentation": {
                 "identifier": "TestCommitSearchResult_Limit",
                 "newPage": false,
                 "searchKey": "run.TestCommitSearchResult_Limit",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1604,88 +1059,72 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/run#TestSearchRepositories",
+              "pathID": "/internal/search/run#TestExpandUsernamesToEmails",
               "documentation": {
-                "identifier": "TestSearchRepositories",
+                "identifier": "TestExpandUsernamesToEmails",
                 "newPage": false,
-                "searchKey": "run.TestSearchRepositories",
+                "searchKey": "run.TestExpandUsernamesToEmails",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestSearchRepositories(t *testing.T)"
+                "value": "func TestExpandUsernamesToEmails(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestSearchRepositories(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestExpandUsernamesToEmails(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/search/run#searchRepositoriesBatch",
+              "pathID": "/internal/search/run#TestFileMatch_Limit",
               "documentation": {
-                "identifier": "searchRepositoriesBatch",
+                "identifier": "TestFileMatch_Limit",
                 "newPage": false,
-                "searchKey": "run.searchRepositoriesBatch",
+                "searchKey": "run.TestFileMatch_Limit",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func searchRepositoriesBatch(ctx context.Context, args *search.TextParameters, limit int32) ([]result.Match, streaming.Stats, error)"
+                "value": "func TestFileMatch_Limit(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc searchRepositoriesBatch(ctx context.Context, args *search.TextParameters, limit int32) ([]result.Match, streaming.Stats, error)\n```\n\n"
+                "value": "```Go\nfunc TestFileMatch_Limit(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/search/run#TestRepoShouldBeAdded",
+              "pathID": "/internal/search/run#TestHighlightMatches",
               "documentation": {
-                "identifier": "TestRepoShouldBeAdded",
+                "identifier": "TestHighlightMatches",
                 "newPage": false,
-                "searchKey": "run.TestRepoShouldBeAdded",
+                "searchKey": "run.TestHighlightMatches",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestRepoShouldBeAdded(t *testing.T)"
+                "value": "func TestHighlightMatches(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestRepoShouldBeAdded(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/run#repoShouldBeAdded",
-              "documentation": {
-                "identifier": "repoShouldBeAdded",
-                "newPage": false,
-                "searchKey": "run.repoShouldBeAdded",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func repoShouldBeAdded(ctx context.Context, zoekt *searchbackend.Zoekt, repo *search.RepositoryRevisions, pattern *search.TextPatternInfo) (bool, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc repoShouldBeAdded(ctx context.Context, zoekt *searchbackend.Zoekt, repo *search.RepositoryRevisions, pattern *search.TextPatternInfo) (bool, error)\n```\n\nrepoShouldBeAdded determines whether a repository should be included in the result set based on whether the repository fits in the subset of repostiories specified in the query's `repohasfile` and `-repohasfile` fields if they exist. \n\n"
+                "value": "```Go\nfunc TestHighlightMatches(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1698,7 +1137,9 @@
                 "newPage": false,
                 "searchKey": "run.TestMatchRepos",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1714,35 +1155,15 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/run#BenchmarkSearchRepositories",
-              "documentation": {
-                "identifier": "BenchmarkSearchRepositories",
-                "newPage": false,
-                "searchKey": "run.BenchmarkSearchRepositories",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkSearchRepositories(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkSearchRepositories(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/search/run#TestOrderedFuzzyRegexp",
               "documentation": {
                 "identifier": "TestOrderedFuzzyRegexp",
                 "newPage": false,
                 "searchKey": "run.TestOrderedFuzzyRegexp",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1758,13 +1179,87 @@
           },
           {
             "node": {
+              "pathID": "/internal/search/run#TestRepoShouldBeAdded",
+              "documentation": {
+                "identifier": "TestRepoShouldBeAdded",
+                "newPage": false,
+                "searchKey": "run.TestRepoShouldBeAdded",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepoShouldBeAdded(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepoShouldBeAdded(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#TestRepoShouldBeSearched",
+              "documentation": {
+                "identifier": "TestRepoShouldBeSearched",
+                "newPage": false,
+                "searchKey": "run.TestRepoShouldBeSearched",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepoShouldBeSearched(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepoShouldBeSearched(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#TestSearchCommitsInRepo",
+              "documentation": {
+                "identifier": "TestSearchCommitsInRepo",
+                "newPage": false,
+                "searchKey": "run.TestSearchCommitsInRepo",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSearchCommitsInRepo(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSearchCommitsInRepo(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/search/run#TestSearchFilesInRepos",
               "documentation": {
                 "identifier": "TestSearchFilesInRepos",
                 "newPage": false,
                 "searchKey": "run.TestSearchFilesInRepos",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1786,7 +1281,9 @@
                 "newPage": false,
                 "searchKey": "run.TestSearchFilesInReposStream",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1802,12 +1299,61 @@
           },
           {
             "node": {
+              "pathID": "/internal/search/run#TestSearchFilesInRepos_multipleRevsPerRepo",
+              "documentation": {
+                "identifier": "TestSearchFilesInRepos_multipleRevsPerRepo",
+                "newPage": false,
+                "searchKey": "run.TestSearchFilesInRepos_multipleRevsPerRepo",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSearchFilesInRepos_multipleRevsPerRepo(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSearchFilesInRepos_multipleRevsPerRepo(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#TestSearchRepositories",
+              "documentation": {
+                "identifier": "TestSearchRepositories",
+                "newPage": false,
+                "searchKey": "run.TestSearchRepositories",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSearchRepositories(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSearchRepositories(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/search/run#assertReposStatus",
               "documentation": {
                 "identifier": "assertReposStatus",
                 "newPage": false,
                 "searchKey": "run.assertReposStatus",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1824,44 +1370,345 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/run#TestSearchFilesInRepos_multipleRevsPerRepo",
+              "pathID": "/internal/search/run#callSearcherOverRepos",
               "documentation": {
-                "identifier": "TestSearchFilesInRepos_multipleRevsPerRepo",
+                "identifier": "callSearcherOverRepos",
                 "newPage": false,
-                "searchKey": "run.TestSearchFilesInRepos_multipleRevsPerRepo",
+                "searchKey": "run.callSearcherOverRepos",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestSearchFilesInRepos_multipleRevsPerRepo(t *testing.T)"
+                "value": "func callSearcherOverRepos(ctx context.Context,..."
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestSearchFilesInRepos_multipleRevsPerRepo(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc callSearcherOverRepos(\n\tctx context.Context,\n\targs *search.TextParameters,\n\tstream streaming.Sender,\n\tsearcherRepos []*search.RepositoryRevisions,\n\tindex bool,\n) (err error)\n```\n\ncallSearcherOverRepos calls searcher on searcherRepos. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/search/run#TestRepoShouldBeSearched",
+              "pathID": "/internal/search/run#checkDiffCommitSearchLimits",
               "documentation": {
-                "identifier": "TestRepoShouldBeSearched",
+                "identifier": "checkDiffCommitSearchLimits",
                 "newPage": false,
-                "searchKey": "run.TestRepoShouldBeSearched",
+                "searchKey": "run.checkDiffCommitSearchLimits",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestRepoShouldBeSearched(t *testing.T)"
+                "value": "func checkDiffCommitSearchLimits(ctx context.Context, args *search.TextParameters, resultType string) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestRepoShouldBeSearched(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc checkDiffCommitSearchLimits(ctx context.Context, args *search.TextParameters, resultType string) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#cleanDiffPreview",
+              "documentation": {
+                "identifier": "cleanDiffPreview",
+                "newPage": false,
+                "searchKey": "run.cleanDiffPreview",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func cleanDiffPreview(highlights []result.HighlightedRange, rawDiffResult string) (string, []result.HighlightedRange)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc cleanDiffPreview(highlights []result.HighlightedRange, rawDiffResult string) (string, []result.HighlightedRange)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#commitMatchesToMatches",
+              "documentation": {
+                "identifier": "commitMatchesToMatches",
+                "newPage": false,
+                "searchKey": "run.commitMatchesToMatches",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func commitMatchesToMatches(commitMatches []*result.CommitMatch) []result.Match"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc commitMatchesToMatches(commitMatches []*result.CommitMatch) []result.Match\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#commitParametersToDiffParameters",
+              "documentation": {
+                "identifier": "commitParametersToDiffParameters",
+                "newPage": false,
+                "searchKey": "run.commitParametersToDiffParameters",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func commitParametersToDiffParameters(ctx context.Context, db dbutil.DB, op *search.CommitParameters) (*search.DiffParameters, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc commitParametersToDiffParameters(ctx context.Context, db dbutil.DB, op *search.CommitParameters) (*search.DiffParameters, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#errorName",
+              "documentation": {
+                "identifier": "errorName",
+                "newPage": false,
+                "searchKey": "run.errorName",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func errorName(diff bool) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc errorName(diff bool) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#expandUsernamesToEmails",
+              "documentation": {
+                "identifier": "expandUsernamesToEmails",
+                "newPage": false,
+                "searchKey": "run.expandUsernamesToEmails",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func expandUsernamesToEmails(ctx context.Context, db dbutil.DB, values []string) (expandedValues []string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc expandUsernamesToEmails(ctx context.Context, db dbutil.DB, values []string) (expandedValues []string, err error)\n```\n\nexpandUsernamesToEmails expands references to usernames to mention all possible (known and verified) email addresses for the user. \n\nFor example, given a list [\"foo\", \"@alice\"] where the user \"alice\" has 2 email addresses \"alice@example.com\" and \"alice@example.org\", it would return [\"foo\", \"alice@example\\\\.com\", \"alice@example\\\\.org\"]. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#fileMatchesToMatches",
+              "documentation": {
+                "identifier": "fileMatchesToMatches",
+                "newPage": false,
+                "searchKey": "run.fileMatchesToMatches",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fileMatchesToMatches(fms []*result.FileMatch) []result.Match"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fileMatchesToMatches(fms []*result.FileMatch) []result.Match\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#fromVCSHighlights",
+              "documentation": {
+                "identifier": "fromVCSHighlights",
+                "newPage": false,
+                "searchKey": "run.fromVCSHighlights",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fromVCSHighlights(vcsHighlights []git.Highlight) []result.HighlightedRange"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fromVCSHighlights(vcsHighlights []git.Highlight) []result.HighlightedRange\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#getRepos",
+              "documentation": {
+                "identifier": "getRepos",
+                "newPage": false,
+                "searchKey": "run.getRepos",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getRepos(ctx context.Context, p *search.Promise) ([]*search.RepositoryRevisions, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getRepos(ctx context.Context, p *search.Promise) ([]*search.RepositoryRevisions, error)\n```\n\ngetRepos is a wrapper around p.Get. It returns an error if the promise contains an underlying type other than []*search.RepositoryRevisions. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#handleRepoSearchResult",
+              "documentation": {
+                "identifier": "handleRepoSearchResult",
+                "newPage": false,
+                "searchKey": "run.handleRepoSearchResult",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func handleRepoSearchResult(repoRev *search.RepositoryRevisions, limitHit, timedOut bool, searchErr error) (_ streaming.Stats, fatalErr error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc handleRepoSearchResult(repoRev *search.RepositoryRevisions, limitHit, timedOut bool, searchErr error) (_ streaming.Stats, fatalErr error)\n```\n\nhandleRepoSearchResult handles the limitHit and searchErr returned by a search function, returning common as to reflect that new information. If searchErr is a fatal error, it returns a non-nil error; otherwise, if searchErr == nil or a non-fatal error, it returns a nil error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#highlightMatches",
+              "documentation": {
+                "identifier": "highlightMatches",
+                "newPage": false,
+                "searchKey": "run.highlightMatches",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func highlightMatches(pattern *regexp.Regexp, data []byte) *result.HighlightedString"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc highlightMatches(pattern *regexp.Regexp, data []byte) *result.HighlightedString\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#indexedSymbolsBranch",
+              "documentation": {
+                "identifier": "indexedSymbolsBranch",
+                "newPage": false,
+                "searchKey": "run.indexedSymbolsBranch",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func indexedSymbolsBranch(ctx context.Context, repository, commit string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc indexedSymbolsBranch(ctx context.Context, repository, commit string) string\n```\n\nindexedSymbols checks to see if Zoekt has indexed symbols information for a repository at a specific commit. If it has it returns the branch name (for use when querying zoekt). Otherwise an empty string is returned. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#limitOrDefault",
+              "documentation": {
+                "identifier": "limitOrDefault",
+                "newPage": false,
+                "searchKey": "run.limitOrDefault",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func limitOrDefault(first *int32) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc limitOrDefault(first *int32) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#logCommitSearchResultsToMatches",
+              "documentation": {
+                "identifier": "logCommitSearchResultsToMatches",
+                "newPage": false,
+                "searchKey": "run.logCommitSearchResultsToMatches",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func logCommitSearchResultsToMatches(op *search.CommitParameters, repoName types.RepoName, rawResults []*git.LogCommitSearchResult) []*result.CommitMatch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc logCommitSearchResultsToMatches(op *search.CommitParameters, repoName types.RepoName, rawResults []*git.LogCommitSearchResult) []*result.CommitMatch\n```\n\n"
               },
               "children": null
             }
@@ -1874,6 +1721,7 @@
                 "newPage": false,
                 "searchKey": "run.makeRepositoryRevisions",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1890,12 +1738,59 @@
           },
           {
             "node": {
+              "pathID": "/internal/search/run#matchRepos",
+              "documentation": {
+                "identifier": "matchRepos",
+                "newPage": false,
+                "searchKey": "run.matchRepos",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func matchRepos(pattern *regexp.Regexp, resolved []*search.RepositoryRevisions, results chan<- []*search.RepositoryRevisions)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc matchRepos(pattern *regexp.Regexp, resolved []*search.RepositoryRevisions, results chan<- []*search.RepositoryRevisions)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#matchesToFileMatches",
+              "documentation": {
+                "identifier": "matchesToFileMatches",
+                "newPage": false,
+                "searchKey": "run.matchesToFileMatches",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func matchesToFileMatches(matches []result.Match) ([]*result.FileMatch, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc matchesToFileMatches(matches []result.Match) ([]*result.FileMatch, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/search/run#mkRepos",
               "documentation": {
                 "identifier": "mkRepos",
                 "newPage": false,
                 "searchKey": "run.mkRepos",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1912,22 +1807,276 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/run#TestFileMatch_Limit",
+              "pathID": "/internal/search/run#orderedFuzzyRegexp",
               "documentation": {
-                "identifier": "TestFileMatch_Limit",
+                "identifier": "orderedFuzzyRegexp",
                 "newPage": false,
-                "searchKey": "run.TestFileMatch_Limit",
+                "searchKey": "run.orderedFuzzyRegexp",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestFileMatch_Limit(t *testing.T)"
+                "value": "func orderedFuzzyRegexp(pieces []string) string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestFileMatch_Limit(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc orderedFuzzyRegexp(pieces []string) string\n```\n\norderedFuzzyRegexp interpolate a lazy 'match everything' regexp pattern to achieve an ordered fuzzy regexp match. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#repoHasFilesWithNamesMatching",
+              "documentation": {
+                "identifier": "repoHasFilesWithNamesMatching",
+                "newPage": false,
+                "searchKey": "run.repoHasFilesWithNamesMatching",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func repoHasFilesWithNamesMatching(ctx context.Context, searcherURLs *endpoint.Map, include bool, repoHasFileFlag []string, gitserverRepo api.RepoName, commit api.CommitID, fetchTimeout time.Duration) (bool, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc repoHasFilesWithNamesMatching(ctx context.Context, searcherURLs *endpoint.Map, include bool, repoHasFileFlag []string, gitserverRepo api.RepoName, commit api.CommitID, fetchTimeout time.Duration) (bool, error)\n```\n\nrepoHasFilesWithNamesMatching searches in a repository for matches for the patterns in the `repohasfile` or `-repohasfile` flags, and returns whether or not the repoShouldBeSearched in or not, based on whether matches were returned. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#repoRevsToRepoMatches",
+              "documentation": {
+                "identifier": "repoRevsToRepoMatches",
+                "newPage": false,
+                "searchKey": "run.repoRevsToRepoMatches",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func repoRevsToRepoMatches(ctx context.Context, repos []*search.RepositoryRevisions) []result.Match"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc repoRevsToRepoMatches(ctx context.Context, repos []*search.RepositoryRevisions) []result.Match\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#repoShouldBeAdded",
+              "documentation": {
+                "identifier": "repoShouldBeAdded",
+                "newPage": false,
+                "searchKey": "run.repoShouldBeAdded",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func repoShouldBeAdded(ctx context.Context, zoekt *searchbackend.Zoekt, repo *search.RepositoryRevisions, pattern *search.TextPatternInfo) (bool, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc repoShouldBeAdded(ctx context.Context, zoekt *searchbackend.Zoekt, repo *search.RepositoryRevisions, pattern *search.TextPatternInfo) (bool, error)\n```\n\nrepoShouldBeAdded determines whether a repository should be included in the result set based on whether the repository fits in the subset of repostiories specified in the query's `repohasfile` and `-repohasfile` fields if they exist. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#repoShouldBeSearched",
+              "documentation": {
+                "identifier": "repoShouldBeSearched",
+                "newPage": false,
+                "searchKey": "run.repoShouldBeSearched",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func repoShouldBeSearched(ctx context.Context, searcherURLs *endpoint.Map, searchPattern *search.TextPatternInfo, gitserverRepo api.RepoName, commit api.CommitID, fetchTimeout time.Duration) (shouldBeSearched bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc repoShouldBeSearched(ctx context.Context, searcherURLs *endpoint.Map, searchPattern *search.TextPatternInfo, gitserverRepo api.RepoName, commit api.CommitID, fetchTimeout time.Duration) (shouldBeSearched bool, err error)\n```\n\nrepoShouldBeSearched determines whether a repository should be searched in, based on whether the repository fits in the subset of repositories specified in the query's `repohasfile` and `-repohasfile` flags if they exist. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#reposToAdd",
+              "documentation": {
+                "identifier": "reposToAdd",
+                "newPage": false,
+                "searchKey": "run.reposToAdd",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func reposToAdd(ctx context.Context, args *search.TextParameters, repos []*search.RepositoryRevisions) ([]*search.RepositoryRevisions, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc reposToAdd(ctx context.Context, args *search.TextParameters, repos []*search.RepositoryRevisions) ([]*search.RepositoryRevisions, error)\n```\n\nreposToAdd determines which repositories should be included in the result set based on whether they fit in the subset of repostiories specified in the query's `repohasfile` and `-repohasfile` fields if they exist. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#resetMocks",
+              "documentation": {
+                "identifier": "resetMocks",
+                "newPage": false,
+                "searchKey": "run.resetMocks",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func resetMocks()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc resetMocks()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#searchCommitsInRepo",
+              "documentation": {
+                "identifier": "searchCommitsInRepo",
+                "newPage": false,
+                "searchKey": "run.searchCommitsInRepo",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func searchCommitsInRepo(ctx context.Context, db dbutil.DB, op search.CommitParameters) (results []*result.CommitMatch, limitHit, timedOut bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc searchCommitsInRepo(ctx context.Context, db dbutil.DB, op search.CommitParameters) (results []*result.CommitMatch, limitHit, timedOut bool, err error)\n```\n\nsearchCommitsInRepo is a blocking version of searchCommitsInRepoStream. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#searchRepositoriesBatch",
+              "documentation": {
+                "identifier": "searchRepositoriesBatch",
+                "newPage": false,
+                "searchKey": "run.searchRepositoriesBatch",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func searchRepositoriesBatch(ctx context.Context, args *search.TextParameters, limit int32) ([]result.Match, streaming.Stats, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc searchRepositoriesBatch(ctx context.Context, args *search.TextParameters, limit int32) ([]result.Match, streaming.Stats, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#searchSymbolsInRepo",
+              "documentation": {
+                "identifier": "searchSymbolsInRepo",
+                "newPage": false,
+                "searchKey": "run.searchSymbolsInRepo",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func searchSymbolsInRepo(ctx context.Context, repoRevs *search.RepositoryRevisions, patternInfo *search.TextPatternInfo, limit int) (res []*result.FileMatch, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc searchSymbolsInRepo(ctx context.Context, repoRevs *search.RepositoryRevisions, patternInfo *search.TextPatternInfo, limit int) (res []*result.FileMatch, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#searchZoektSymbols",
+              "documentation": {
+                "identifier": "searchZoektSymbols",
+                "newPage": false,
+                "searchKey": "run.searchZoektSymbols",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func searchZoektSymbols(ctx context.Context, repoName types.RepoName, commitID api.CommitID, inputRev *string, branch string, queryString *string, first *int32, includePatterns *[]string) (res []*result.SymbolMatch, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc searchZoektSymbols(ctx context.Context, repoName types.RepoName, commitID api.CommitID, inputRev *string, branch string, queryString *string, first *int32, includePatterns *[]string) (res []*result.SymbolMatch, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/run#statsDeref",
+              "documentation": {
+                "identifier": "statsDeref",
+                "newPage": false,
+                "searchKey": "run.statsDeref",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func statsDeref(s *streaming.Stats) streaming.Stats"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc statsDeref(s *streaming.Stats) streaming.Stats\n```\n\n"
               },
               "children": null
             }

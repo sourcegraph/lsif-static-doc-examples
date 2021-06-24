@@ -15,8 +15,8 @@ Currently plugins are only supported on Linux, FreeBSD, and macOS. Please report
 ## Index
 
 * [Variables](#var)
-    * [var pluginsMu](#pluginsMu)
     * [var plugins](#plugins)
+    * [var pluginsMu](#pluginsMu)
 * [Types](#type)
     * [type Plugin struct](#Plugin)
         * [func Open(path string) (*Plugin, error)](#Open)
@@ -25,40 +25,49 @@ Currently plugins are only supported on Linux, FreeBSD, and macOS. Please report
     * [type Symbol interface{}](#Symbol)
         * [func lookup(p *Plugin, symName string) (Symbol, error)](#lookup)
 * [Functions](#func)
-    * [func lastmoduleinit() (pluginpath string, syms map[string]interface{}, errstr string)](#lastmoduleinit)
     * [func doInit(t unsafe.Pointer)](#doInit)
+    * [func lastmoduleinit() (pluginpath string, syms map[string]interface{}, errstr string)](#lastmoduleinit)
 
 
 ## <a id="var" href="#var">Variables</a>
 
-### <a id="pluginsMu" href="#pluginsMu">var pluginsMu</a>
-
 ```
-searchKey: plugin.pluginsMu
-tags: [private]
-```
-
-```Go
-var pluginsMu sync.Mutex
+tags: [package]
 ```
 
 ### <a id="plugins" href="#plugins">var plugins</a>
 
 ```
 searchKey: plugin.plugins
-tags: [private]
+tags: [variable object private]
 ```
 
 ```Go
 var plugins map[string]*Plugin
 ```
 
+### <a id="pluginsMu" href="#pluginsMu">var pluginsMu</a>
+
+```
+searchKey: plugin.pluginsMu
+tags: [variable struct private]
+```
+
+```Go
+var pluginsMu sync.Mutex
+```
+
 ## <a id="type" href="#type">Types</a>
+
+```
+tags: [package]
+```
 
 ### <a id="Plugin" href="#Plugin">type Plugin struct</a>
 
 ```
 searchKey: plugin.Plugin
+tags: [struct]
 ```
 
 ```Go
@@ -76,6 +85,7 @@ Plugin is a loaded Go plugin.
 
 ```
 searchKey: plugin.Open
+tags: [method]
 ```
 
 ```Go
@@ -88,7 +98,7 @@ Open opens a Go plugin. If a path has already been opened, then the existing *Pl
 
 ```
 searchKey: plugin.open
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -99,6 +109,7 @@ func open(name string) (*Plugin, error)
 
 ```
 searchKey: plugin.Plugin.Lookup
+tags: [method]
 ```
 
 ```Go
@@ -111,6 +122,7 @@ Lookup searches for a symbol named symName in plugin p. A symbol is any exported
 
 ```
 searchKey: plugin.Symbol
+tags: [interface]
 ```
 
 ```Go
@@ -154,7 +166,7 @@ f.(func())() // prints "Hello, number 7"
 
 ```
 searchKey: plugin.lookup
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -163,24 +175,15 @@ func lookup(p *Plugin, symName string) (Symbol, error)
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="lastmoduleinit" href="#lastmoduleinit">func lastmoduleinit() (pluginpath string, syms map[string]interface{}, errstr string)</a>
-
 ```
-searchKey: plugin.lastmoduleinit
-tags: [private]
+tags: [package]
 ```
-
-```Go
-func lastmoduleinit() (pluginpath string, syms map[string]interface{}, errstr string)
-```
-
-lastmoduleinit is defined in package runtime 
 
 ### <a id="doInit" href="#doInit">func doInit(t unsafe.Pointer)</a>
 
 ```
 searchKey: plugin.doInit
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -188,4 +191,17 @@ func doInit(t unsafe.Pointer)
 ```
 
 doInit is defined in package runtime 
+
+### <a id="lastmoduleinit" href="#lastmoduleinit">func lastmoduleinit() (pluginpath string, syms map[string]interface{}, errstr string)</a>
+
+```
+searchKey: plugin.lastmoduleinit
+tags: [function private]
+```
+
+```Go
+func lastmoduleinit() (pluginpath string, syms map[string]interface{}, errstr string)
+```
+
+lastmoduleinit is defined in package runtime 
 

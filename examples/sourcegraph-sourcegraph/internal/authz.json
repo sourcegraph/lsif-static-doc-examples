@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/authz",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,40 +41,69 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/authz#SourcegraphServiceType",
+              "pathID": "/internal/authz#None",
               "documentation": {
-                "identifier": "SourcegraphServiceType",
+                "identifier": "None",
                 "newPage": false,
-                "searchKey": "authz.SourcegraphServiceType",
-                "tags": null
+                "searchKey": "authz.None",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const SourcegraphServiceType"
+                "value": "const None"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst SourcegraphServiceType = \"sourcegraph\"\n```\n\nThe service type and service ID for explicit repository permissions APIs (aka Sourcegraph authz provider). \n\n"
+                "value": "```Go\nconst None Perms = 0\n```\n\nPerm constants. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/authz#SourcegraphServiceID",
+              "pathID": "/internal/authz#PermRepos",
               "documentation": {
-                "identifier": "SourcegraphServiceID",
+                "identifier": "PermRepos",
                 "newPage": false,
-                "searchKey": "authz.SourcegraphServiceID",
-                "tags": null
+                "searchKey": "authz.PermRepos",
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const SourcegraphServiceID"
+                "value": "const PermRepos"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst SourcegraphServiceID = \"https://sourcegraph.com/\"\n```\n\nThe service type and service ID for explicit repository permissions APIs (aka Sourcegraph authz provider). \n\n"
+                "value": "```Go\nconst PermRepos PermType = \"repos\"\n```\n\nPermRepos is the list of available user permission types. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz#Read",
+              "documentation": {
+                "identifier": "Read",
+                "newPage": false,
+                "searchKey": "authz.Read",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Read"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Read Perms = 1 << iota\n```\n\nPerm constants. \n\n"
               },
               "children": null
             }
@@ -84,7 +115,10 @@
                 "identifier": "SchemeToken",
                 "newPage": false,
                 "searchKey": "authz.SchemeToken",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +138,10 @@
                 "identifier": "SchemeTokenSudo",
                 "newPage": false,
                 "searchKey": "authz.SchemeTokenSudo",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -119,80 +156,23 @@
           },
           {
             "node": {
-              "pathID": "/internal/authz#None",
+              "pathID": "/internal/authz#ScopeSiteAdminSudo",
               "documentation": {
-                "identifier": "None",
+                "identifier": "ScopeSiteAdminSudo",
                 "newPage": false,
-                "searchKey": "authz.None",
-                "tags": null
+                "searchKey": "authz.ScopeSiteAdminSudo",
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const None"
+                "value": "const ScopeSiteAdminSudo"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst None Perms = 0\n```\n\nPerm constants. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/authz#Read",
-              "documentation": {
-                "identifier": "Read",
-                "newPage": false,
-                "searchKey": "authz.Read",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const Read"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst Read Perms = 1 << iota\n```\n\nPerm constants. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/authz#Write",
-              "documentation": {
-                "identifier": "Write",
-                "newPage": false,
-                "searchKey": "authz.Write",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const Write"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst Write\n```\n\nPerm constants. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/authz#PermRepos",
-              "documentation": {
-                "identifier": "PermRepos",
-                "newPage": false,
-                "searchKey": "authz.PermRepos",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const PermRepos"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst PermRepos PermType = \"repos\"\n```\n\nPermRepos is the list of available user permission types. \n\n"
+                "value": "```Go\nconst ScopeSiteAdminSudo = \"site-admin:sudo\" // Ability to perform any action as any other user.\n\n```\n\n"
               },
               "children": null
             }
@@ -204,7 +184,10 @@
                 "identifier": "ScopeUserAll",
                 "newPage": false,
                 "searchKey": "authz.ScopeUserAll",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -219,20 +202,69 @@
           },
           {
             "node": {
-              "pathID": "/internal/authz#ScopeSiteAdminSudo",
+              "pathID": "/internal/authz#SourcegraphServiceID",
               "documentation": {
-                "identifier": "ScopeSiteAdminSudo",
+                "identifier": "SourcegraphServiceID",
                 "newPage": false,
-                "searchKey": "authz.ScopeSiteAdminSudo",
-                "tags": null
+                "searchKey": "authz.SourcegraphServiceID",
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const ScopeSiteAdminSudo"
+                "value": "const SourcegraphServiceID"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst ScopeSiteAdminSudo = \"site-admin:sudo\" // Ability to perform any action as any other user.\n\n```\n\n"
+                "value": "```Go\nconst SourcegraphServiceID = \"https://sourcegraph.com/\"\n```\n\nThe service type and service ID for explicit repository permissions APIs (aka Sourcegraph authz provider). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz#SourcegraphServiceType",
+              "documentation": {
+                "identifier": "SourcegraphServiceType",
+                "newPage": false,
+                "searchKey": "authz.SourcegraphServiceType",
+                "tags": [
+                  "constant",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SourcegraphServiceType"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SourcegraphServiceType = \"sourcegraph\"\n```\n\nThe service type and service ID for explicit repository permissions APIs (aka Sourcegraph authz provider). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz#Write",
+              "documentation": {
+                "identifier": "Write",
+                "newPage": false,
+                "searchKey": "authz.Write",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Write"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Write\n```\n\nPerm constants. \n\n"
               },
               "children": null
             }
@@ -248,6 +280,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -262,22 +295,167 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/authz#errUnrecognizedScheme",
+              "pathID": "/internal/authz#AllScopes",
               "documentation": {
-                "identifier": "errUnrecognizedScheme",
+                "identifier": "AllScopes",
                 "newPage": false,
-                "searchKey": "authz.errUnrecognizedScheme",
+                "searchKey": "authz.AllScopes",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var AllScopes"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar AllScopes = []string{\n\tScopeUserAll,\n\tScopeSiteAdminSudo,\n}\n```\n\nAllScopes is a list of all known access token scopes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz#ErrPermsNotFound",
+              "documentation": {
+                "identifier": "ErrPermsNotFound",
+                "newPage": false,
+                "searchKey": "authz.ErrPermsNotFound",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrPermsNotFound"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrPermsNotFound = errors.New(\"permissions not found\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz#allowAccessByDefault",
+              "documentation": {
+                "identifier": "allowAccessByDefault",
+                "newPage": false,
+                "searchKey": "authz.allowAccessByDefault",
+                "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var errUnrecognizedScheme"
+                "value": "var allowAccessByDefault"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar errUnrecognizedScheme = ...\n```\n\nerrUnrecognizedScheme occurs when the Authorization header scheme (the first token) is not recognized. \n\n"
+                "value": "```Go\nvar allowAccessByDefault = true\n```\n\nallowAccessByDefault, if set to true, grants all users access to repositories that are not matched by any authz provider. The default value is true. It is only set to false in error modes (when the configuration is in a state where interpreting it literally could lead to leakage of private repositories). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz#authzMu",
+              "documentation": {
+                "identifier": "authzMu",
+                "newPage": false,
+                "searchKey": "authz.authzMu",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var authzMu"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar authzMu sync.RWMutex\n```\n\nauthzMu protects access to both allowAccessByDefault and authzProviders \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz#authzProviders",
+              "documentation": {
+                "identifier": "authzProviders",
+                "newPage": false,
+                "searchKey": "authz.authzProviders",
+                "tags": [
+                  "variable",
+                  "array",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var authzProviders"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar authzProviders []Provider\n```\n\nauthzProviders is the currently registered list of authorization providers. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz#authzProvidersReady",
+              "documentation": {
+                "identifier": "authzProvidersReady",
+                "newPage": false,
+                "searchKey": "authz.authzProvidersReady",
+                "tags": [
+                  "variable",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var authzProvidersReady"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar authzProvidersReady = make(chan struct{})\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz#authzProvidersReadyOnce",
+              "documentation": {
+                "identifier": "authzProvidersReadyOnce",
+                "newPage": false,
+                "searchKey": "authz.authzProvidersReadyOnce",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var authzProvidersReadyOnce"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar authzProvidersReadyOnce sync.Once\n```\n\nauthzProvidersReady and authzProvidersReadyOnce together indicate when GetProviders should no longer block. It should block until SetProviders is called at least once. \n\n"
               },
               "children": null
             }
@@ -290,6 +468,8 @@
                 "newPage": false,
                 "searchKey": "authz.errHTTPAuthParamsDuplicateKey",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -312,6 +492,8 @@
                 "newPage": false,
                 "searchKey": "authz.errHTTPAuthParamsNoEquals",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -328,130 +510,24 @@
           },
           {
             "node": {
-              "pathID": "/internal/authz#ErrPermsNotFound",
+              "pathID": "/internal/authz#errUnrecognizedScheme",
               "documentation": {
-                "identifier": "ErrPermsNotFound",
+                "identifier": "errUnrecognizedScheme",
                 "newPage": false,
-                "searchKey": "authz.ErrPermsNotFound",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ErrPermsNotFound"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ErrPermsNotFound = errors.New(\"permissions not found\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/authz#allowAccessByDefault",
-              "documentation": {
-                "identifier": "allowAccessByDefault",
-                "newPage": false,
-                "searchKey": "authz.allowAccessByDefault",
+                "searchKey": "authz.errUnrecognizedScheme",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var allowAccessByDefault"
+                "value": "var errUnrecognizedScheme"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar allowAccessByDefault = true\n```\n\nallowAccessByDefault, if set to true, grants all users access to repositories that are not matched by any authz provider. The default value is true. It is only set to false in error modes (when the configuration is in a state where interpreting it literally could lead to leakage of private repositories). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/authz#authzProvidersReadyOnce",
-              "documentation": {
-                "identifier": "authzProvidersReadyOnce",
-                "newPage": false,
-                "searchKey": "authz.authzProvidersReadyOnce",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var authzProvidersReadyOnce"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar authzProvidersReadyOnce sync.Once\n```\n\nauthzProvidersReady and authzProvidersReadyOnce together indicate when GetProviders should no longer block. It should block until SetProviders is called at least once. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/authz#authzProvidersReady",
-              "documentation": {
-                "identifier": "authzProvidersReady",
-                "newPage": false,
-                "searchKey": "authz.authzProvidersReady",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var authzProvidersReady"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar authzProvidersReady = make(chan struct{})\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/authz#authzProviders",
-              "documentation": {
-                "identifier": "authzProviders",
-                "newPage": false,
-                "searchKey": "authz.authzProviders",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var authzProviders"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar authzProviders []Provider\n```\n\nauthzProviders is the currently registered list of authorization providers. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/authz#authzMu",
-              "documentation": {
-                "identifier": "authzMu",
-                "newPage": false,
-                "searchKey": "authz.authzMu",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var authzMu"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar authzMu sync.RWMutex\n```\n\nauthzMu protects access to both allowAccessByDefault and authzProviders \n\n"
+                "value": "```Go\nvar errUnrecognizedScheme = ...\n```\n\nerrUnrecognizedScheme occurs when the Authorization header scheme (the first token) is not recognized. \n\n"
               },
               "children": null
             }
@@ -464,6 +540,8 @@
                 "newPage": false,
                 "searchKey": "authz.isTest",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
@@ -474,26 +552,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar isTest = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/authz#AllScopes",
-              "documentation": {
-                "identifier": "AllScopes",
-                "newPage": false,
-                "searchKey": "authz.AllScopes",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var AllScopes"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar AllScopes = []string{\n\tScopeUserAll,\n\tScopeSiteAdminSudo,\n}\n```\n\nAllScopes is a list of all known access token scopes. \n\n"
               },
               "children": null
             }
@@ -509,6 +567,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -523,12 +582,59 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/authz#ErrStalePermissions",
+              "documentation": {
+                "identifier": "ErrStalePermissions",
+                "newPage": false,
+                "searchKey": "authz.ErrStalePermissions",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ErrStalePermissions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ErrStalePermissions struct {\n\tUserID int32\n\tPerm   Perms\n\tType   PermType\n}\n```\n\nErrStalePermissions is returned by LoadPermissions when the stored permissions are stale (e.g. the first time a user needs them and they haven't been fetched yet). Callers should pass this error up to the user and show a more friendly prompt message in the UI. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/authz#ErrStalePermissions.Error",
+                    "documentation": {
+                      "identifier": "ErrStalePermissions.Error",
+                      "newPage": false,
+                      "searchKey": "authz.ErrStalePermissions.Error",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e ErrStalePermissions) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e ErrStalePermissions) Error() string\n```\n\nError implements the error interface. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/authz#ExternalUserPermissions",
               "documentation": {
                 "identifier": "ExternalUserPermissions",
                 "newPage": false,
                 "searchKey": "authz.ExternalUserPermissions",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -543,40 +649,22 @@
           },
           {
             "node": {
-              "pathID": "/internal/authz#Provider",
+              "pathID": "/internal/authz#PermType",
               "documentation": {
-                "identifier": "Provider",
+                "identifier": "PermType",
                 "newPage": false,
-                "searchKey": "authz.Provider",
-                "tags": null
+                "searchKey": "authz.PermType",
+                "tags": [
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type Provider interface"
+                "value": "type PermType string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype Provider interface {\n\t// FetchAccount returns the external account that identifies the user to this authz provider,\n\t// taking as input the current list of external accounts associated with the\n\t// user. Implementations should always recompute the returned account (rather than returning an\n\t// element of `current` if it has the correct ServiceID and ServiceType).\n\t//\n\t// Implementations should use only the `user` and `current` parameters to compute the returned\n\t// external account. Specifically, they should not try to get the currently authenticated user\n\t// from the context parameter.\n\t//\n\t// The `user` argument should always be non-nil. If no external account can be computed for the\n\t// provided user, implementations should return nil, nil.\n\t//\n\t// The `verifiedEmails` should only contain a list of verified emails that is\n\t// associated to the `user`.\n\tFetchAccount(ctx context.Context, user *types.User, current []*extsvc.Account, verifiedEmails []string) (mine *extsvc.Account, err error)\n\n\t// FetchUserPerms returns a collection of accessible repository/project IDs (on\n\t// code host) that the given account has read access on the code host. The\n\t// repository/project ID should be the same value as it would be used as or\n\t// prefix of api.ExternalRepoSpec.ID. The returned set should only include\n\t// private repositories/project IDs.\n\t//\n\t// Because permissions fetching APIs are often expensive, the implementation should\n\t// try to return partial but valid results in case of error, and it is up to callers\n\t// to decide whether to discard.\n\tFetchUserPerms(ctx context.Context, account *extsvc.Account) (*ExternalUserPermissions, error)\n\n\t// FetchRepoPerms returns a list of user IDs (on code host) who have read access to\n\t// the given repository/project on the code host. The user ID should be the same value\n\t// as it would be used as extsvc.Account.AccountID. The returned list should\n\t// include both direct access and inherited from the group/organization/team membership.\n\t//\n\t// Because permissions fetching APIs are often expensive, the implementation should\n\t// try to return partial but valid results in case of error, and it is up to callers\n\t// to decide whether to discard.\n\tFetchRepoPerms(ctx context.Context, repo *extsvc.Repository) ([]extsvc.AccountID, error)\n\n\t// ServiceType returns the service type (e.g., \"gitlab\") of this authz provider.\n\tServiceType() string\n\n\t// ServiceID returns the service ID (e.g., \"https://gitlab.mycompany.com/\") of this authz\n\t// provider.\n\tServiceID() string\n\n\t// URN returns the unique resource identifier of external service where the authz provider\n\t// is defined.\n\tURN() string\n\n\t// Validate checks the configuration and credentials of the authz provider and returns any\n\t// problems.\n\tValidate() (problems []string)\n}\n```\n\nProvider defines a source of truth of which repositories a user is authorized to view. The user is identified by an extsvc.Account instance. Examples of authz providers include the following: \n\n* Code host * LDAP groups * SAML identity provider (via SAML group permissions) \n\nIn most cases, an authz provider represents a code host, because it is the source of truth for repository permissions. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/authz#RepoPerms",
-              "documentation": {
-                "identifier": "RepoPerms",
-                "newPage": false,
-                "searchKey": "authz.RepoPerms",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RepoPerms struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RepoPerms struct {\n\tRepo  *types.Repo\n\tPerms Perms\n}\n```\n\nRepoPerms contains a repo and the permissions a given user has associated with it. \n\n"
+                "value": "```Go\ntype PermType string\n```\n\nPermType is the object type of the user permissions. \n\n"
               },
               "children": null
             }
@@ -588,7 +676,9 @@
                 "identifier": "Perms",
                 "newPage": false,
                 "searchKey": "authz.Perms",
-                "tags": null
+                "tags": [
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -606,7 +696,9 @@
                       "identifier": "Perms.Include",
                       "newPage": false,
                       "searchKey": "authz.Perms.Include",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -626,7 +718,9 @@
                       "identifier": "Perms.String",
                       "newPage": false,
                       "searchKey": "authz.Perms.String",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -644,225 +738,24 @@
           },
           {
             "node": {
-              "pathID": "/internal/authz#PermType",
+              "pathID": "/internal/authz#Provider",
               "documentation": {
-                "identifier": "PermType",
+                "identifier": "Provider",
                 "newPage": false,
-                "searchKey": "authz.PermType",
-                "tags": null
+                "searchKey": "authz.Provider",
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type PermType string"
+                "value": "type Provider interface"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype PermType string\n```\n\nPermType is the object type of the user permissions. \n\n"
+                "value": "```Go\ntype Provider interface {\n\t// FetchAccount returns the external account that identifies the user to this authz provider,\n\t// taking as input the current list of external accounts associated with the\n\t// user. Implementations should always recompute the returned account (rather than returning an\n\t// element of `current` if it has the correct ServiceID and ServiceType).\n\t//\n\t// Implementations should use only the `user` and `current` parameters to compute the returned\n\t// external account. Specifically, they should not try to get the currently authenticated user\n\t// from the context parameter.\n\t//\n\t// The `user` argument should always be non-nil. If no external account can be computed for the\n\t// provided user, implementations should return nil, nil.\n\t//\n\t// The `verifiedEmails` should only contain a list of verified emails that is\n\t// associated to the `user`.\n\tFetchAccount(ctx context.Context, user *types.User, current []*extsvc.Account, verifiedEmails []string) (mine *extsvc.Account, err error)\n\n\t// FetchUserPerms returns a collection of accessible repository/project IDs (on\n\t// code host) that the given account has read access on the code host. The\n\t// repository/project ID should be the same value as it would be used as or\n\t// prefix of api.ExternalRepoSpec.ID. The returned set should only include\n\t// private repositories/project IDs.\n\t//\n\t// Because permissions fetching APIs are often expensive, the implementation should\n\t// try to return partial but valid results in case of error, and it is up to callers\n\t// to decide whether to discard.\n\tFetchUserPerms(ctx context.Context, account *extsvc.Account) (*ExternalUserPermissions, error)\n\n\t// FetchRepoPerms returns a list of user IDs (on code host) who have read access to\n\t// the given repository/project on the code host. The user ID should be the same value\n\t// as it would be used as extsvc.Account.AccountID. The returned list should\n\t// include both direct access and inherited from the group/organization/team membership.\n\t//\n\t// Because permissions fetching APIs are often expensive, the implementation should\n\t// try to return partial but valid results in case of error, and it is up to callers\n\t// to decide whether to discard.\n\tFetchRepoPerms(ctx context.Context, repo *extsvc.Repository) ([]extsvc.AccountID, error)\n\n\t// ServiceType returns the service type (e.g., \"gitlab\") of this authz provider.\n\tServiceType() string\n\n\t// ServiceID returns the service ID (e.g., \"https://gitlab.mycompany.com/\") of this authz\n\t// provider.\n\tServiceID() string\n\n\t// URN returns the unique resource identifier of external service where the authz provider\n\t// is defined.\n\tURN() string\n\n\t// Validate checks the configuration and credentials of the authz provider and returns any\n\t// problems.\n\tValidate() (problems []string)\n}\n```\n\nProvider defines a source of truth of which repositories a user is authorized to view. The user is identified by an extsvc.Account instance. Examples of authz providers include the following: \n\n* Code host * LDAP groups * SAML identity provider (via SAML group permissions) \n\nIn most cases, an authz provider represents a code host, because it is the source of truth for repository permissions. \n\n"
               },
               "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/authz#RepoPermsSort",
-              "documentation": {
-                "identifier": "RepoPermsSort",
-                "newPage": false,
-                "searchKey": "authz.RepoPermsSort",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RepoPermsSort []authz.RepoPerms"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RepoPermsSort []RepoPerms\n```\n\nRepoPermsSort sorts a slice of RepoPerms to guarantee a stable ordering. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/authz#RepoPermsSort.Len",
-                    "documentation": {
-                      "identifier": "RepoPermsSort.Len",
-                      "newPage": false,
-                      "searchKey": "authz.RepoPermsSort.Len",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s RepoPermsSort) Len() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s RepoPermsSort) Len() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/authz#RepoPermsSort.Swap",
-                    "documentation": {
-                      "identifier": "RepoPermsSort.Swap",
-                      "newPage": false,
-                      "searchKey": "authz.RepoPermsSort.Swap",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s RepoPermsSort) Swap(i, j int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s RepoPermsSort) Swap(i, j int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/authz#RepoPermsSort.Less",
-                    "documentation": {
-                      "identifier": "RepoPermsSort.Less",
-                      "newPage": false,
-                      "searchKey": "authz.RepoPermsSort.Less",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s RepoPermsSort) Less(i, j int) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s RepoPermsSort) Less(i, j int) bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/authz#ErrStalePermissions",
-              "documentation": {
-                "identifier": "ErrStalePermissions",
-                "newPage": false,
-                "searchKey": "authz.ErrStalePermissions",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ErrStalePermissions struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ErrStalePermissions struct {\n\tUserID int32\n\tPerm   Perms\n\tType   PermType\n}\n```\n\nErrStalePermissions is returned by LoadPermissions when the stored permissions are stale (e.g. the first time a user needs them and they haven't been fetched yet). Callers should pass this error up to the user and show a more friendly prompt message in the UI. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/authz#ErrStalePermissions.Error",
-                    "documentation": {
-                      "identifier": "ErrStalePermissions.Error",
-                      "newPage": false,
-                      "searchKey": "authz.ErrStalePermissions.Error",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e ErrStalePermissions) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e ErrStalePermissions) Error() string\n```\n\nError implements the error interface. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/authz#UserPermissions",
-              "documentation": {
-                "identifier": "UserPermissions",
-                "newPage": false,
-                "searchKey": "authz.UserPermissions",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type UserPermissions struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype UserPermissions struct {\n\tUserID    int32           // The internal database ID of a user\n\tPerm      Perms           // The permission set\n\tType      PermType        // The type of the permissions\n\tIDs       *roaring.Bitmap // The object IDs\n\tUpdatedAt time.Time       // The last updated time\n\tSyncedAt  time.Time       // The last user-centric synced time\n}\n```\n\nUserPermissions are the permissions of a user to perform an action on the given set of object IDs of the defined type. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/authz#UserPermissions.Expired",
-                    "documentation": {
-                      "identifier": "UserPermissions.Expired",
-                      "newPage": false,
-                      "searchKey": "authz.UserPermissions.Expired",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *UserPermissions) Expired(ttl time.Duration, now time.Time) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *UserPermissions) Expired(ttl time.Duration, now time.Time) bool\n```\n\nExpired returns true if these UserPermissions have elapsed the given ttl. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/authz#UserPermissions.AuthorizedRepos",
-                    "documentation": {
-                      "identifier": "UserPermissions.AuthorizedRepos",
-                      "newPage": false,
-                      "searchKey": "authz.UserPermissions.AuthorizedRepos",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *UserPermissions) AuthorizedRepos(repos []*types.Repo) []RepoPerms"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *UserPermissions) AuthorizedRepos(repos []*types.Repo) []RepoPerms\n```\n\nAuthorizedRepos returns the intersection of the given repository IDs with the authorized IDs. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/authz#UserPermissions.TracingFields",
-                    "documentation": {
-                      "identifier": "UserPermissions.TracingFields",
-                      "newPage": false,
-                      "searchKey": "authz.UserPermissions.TracingFields",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *UserPermissions) TracingFields() []otlog.Field"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *UserPermissions) TracingFields() []otlog.Field\n```\n\nTracingFields returns tracing fields for the opentracing log. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
             }
           },
           {
@@ -872,7 +765,9 @@
                 "identifier": "RepoPermissions",
                 "newPage": false,
                 "searchKey": "authz.RepoPermissions",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -890,7 +785,9 @@
                       "identifier": "RepoPermissions.Expired",
                       "newPage": false,
                       "searchKey": "authz.RepoPermissions.Expired",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -910,7 +807,9 @@
                       "identifier": "RepoPermissions.TracingFields",
                       "newPage": false,
                       "searchKey": "authz.RepoPermissions.TracingFields",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -928,12 +827,126 @@
           },
           {
             "node": {
+              "pathID": "/internal/authz#RepoPerms",
+              "documentation": {
+                "identifier": "RepoPerms",
+                "newPage": false,
+                "searchKey": "authz.RepoPerms",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoPerms struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoPerms struct {\n\tRepo  *types.Repo\n\tPerms Perms\n}\n```\n\nRepoPerms contains a repo and the permissions a given user has associated with it. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz#RepoPermsSort",
+              "documentation": {
+                "identifier": "RepoPermsSort",
+                "newPage": false,
+                "searchKey": "authz.RepoPermsSort",
+                "tags": [
+                  "array",
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoPermsSort []authz.RepoPerms"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoPermsSort []RepoPerms\n```\n\nRepoPermsSort sorts a slice of RepoPerms to guarantee a stable ordering. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/authz#RepoPermsSort.Len",
+                    "documentation": {
+                      "identifier": "RepoPermsSort.Len",
+                      "newPage": false,
+                      "searchKey": "authz.RepoPermsSort.Len",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s RepoPermsSort) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s RepoPermsSort) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz#RepoPermsSort.Less",
+                    "documentation": {
+                      "identifier": "RepoPermsSort.Less",
+                      "newPage": false,
+                      "searchKey": "authz.RepoPermsSort.Less",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s RepoPermsSort) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s RepoPermsSort) Less(i, j int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz#RepoPermsSort.Swap",
+                    "documentation": {
+                      "identifier": "RepoPermsSort.Swap",
+                      "newPage": false,
+                      "searchKey": "authz.RepoPermsSort.Swap",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s RepoPermsSort) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s RepoPermsSort) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/authz#UserPendingPermissions",
               "documentation": {
                 "identifier": "UserPendingPermissions",
                 "newPage": false,
                 "searchKey": "authz.UserPendingPermissions",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -951,7 +964,9 @@
                       "identifier": "UserPendingPermissions.TracingFields",
                       "newPage": false,
                       "searchKey": "authz.UserPendingPermissions.TracingFields",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -960,6 +975,95 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (p *UserPendingPermissions) TracingFields() []otlog.Field\n```\n\nTracingFields returns tracing fields for the opentracing log. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz#UserPermissions",
+              "documentation": {
+                "identifier": "UserPermissions",
+                "newPage": false,
+                "searchKey": "authz.UserPermissions",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UserPermissions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UserPermissions struct {\n\tUserID    int32           // The internal database ID of a user\n\tPerm      Perms           // The permission set\n\tType      PermType        // The type of the permissions\n\tIDs       *roaring.Bitmap // The object IDs\n\tUpdatedAt time.Time       // The last updated time\n\tSyncedAt  time.Time       // The last user-centric synced time\n}\n```\n\nUserPermissions are the permissions of a user to perform an action on the given set of object IDs of the defined type. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/authz#UserPermissions.AuthorizedRepos",
+                    "documentation": {
+                      "identifier": "UserPermissions.AuthorizedRepos",
+                      "newPage": false,
+                      "searchKey": "authz.UserPermissions.AuthorizedRepos",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *UserPermissions) AuthorizedRepos(repos []*types.Repo) []RepoPerms"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *UserPermissions) AuthorizedRepos(repos []*types.Repo) []RepoPerms\n```\n\nAuthorizedRepos returns the intersection of the given repository IDs with the authorized IDs. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz#UserPermissions.Expired",
+                    "documentation": {
+                      "identifier": "UserPermissions.Expired",
+                      "newPage": false,
+                      "searchKey": "authz.UserPermissions.Expired",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *UserPermissions) Expired(ttl time.Duration, now time.Time) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *UserPermissions) Expired(ttl time.Duration, now time.Time) bool\n```\n\nExpired returns true if these UserPermissions have elapsed the given ttl. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz#UserPermissions.TracingFields",
+                    "documentation": {
+                      "identifier": "UserPermissions.TracingFields",
+                      "newPage": false,
+                      "searchKey": "authz.UserPermissions.TracingFields",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *UserPermissions) TracingFields() []otlog.Field"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *UserPermissions) TracingFields() []otlog.Field\n```\n\nTracingFields returns tracing fields for the opentracing log. \n\n"
                     },
                     "children": null
                   }
@@ -978,6 +1082,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -992,12 +1097,84 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/authz#BenchmarkPermsInclude",
+              "documentation": {
+                "identifier": "BenchmarkPermsInclude",
+                "newPage": false,
+                "searchKey": "authz.BenchmarkPermsInclude",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkPermsInclude(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkPermsInclude(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz#BenchmarkPermsString",
+              "documentation": {
+                "identifier": "BenchmarkPermsString",
+                "newPage": false,
+                "searchKey": "authz.BenchmarkPermsString",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkPermsString(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkPermsString(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz#GetProviders",
+              "documentation": {
+                "identifier": "GetProviders",
+                "newPage": false,
+                "searchKey": "authz.GetProviders",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetProviders() (authzAllowByDefault bool, providers []Provider)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetProviders() (authzAllowByDefault bool, providers []Provider)\n```\n\nGetProviders returns the current authz parameters. It is concurrency-safe. \n\nIt blocks until SetProviders has been called at least once. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/authz#IsUnrecognizedScheme",
               "documentation": {
                 "identifier": "IsUnrecognizedScheme",
                 "newPage": false,
                 "searchKey": "authz.IsUnrecognizedScheme",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1017,7 +1194,9 @@
                 "identifier": "ParseAuthorizationHeader",
                 "newPage": false,
                 "searchKey": "authz.ParseAuthorizationHeader",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1032,78 +1211,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/authz#parseHTTPCredentials",
-              "documentation": {
-                "identifier": "parseHTTPCredentials",
-                "newPage": false,
-                "searchKey": "authz.parseHTTPCredentials",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func parseHTTPCredentials(credentials string) (scheme, token68 string, params map[string]string, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc parseHTTPCredentials(credentials string) (scheme, token68 string, params map[string]string, err error)\n```\n\nparseHTTPCredentials parses the \"credentials\" token as defined in [RFC 7235 Appendix C]([https://tools.ietf.org/html/rfc7235#appendix-C](https://tools.ietf.org/html/rfc7235#appendix-C)). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/authz#parseHTTPAuthParams",
-              "documentation": {
-                "identifier": "parseHTTPAuthParams",
-                "newPage": false,
-                "searchKey": "authz.parseHTTPAuthParams",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func parseHTTPAuthParams(value string) (params map[string]string, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc parseHTTPAuthParams(value string) (params map[string]string, err error)\n```\n\nparseHTTPAuthParams extracts key/value pairs from a comma-separated list of auth-params as defined in [RFC 7235, Appendix C]([https://tools.ietf.org/html/rfc7235#appendix-C](https://tools.ietf.org/html/rfc7235#appendix-C)) and returns a map. \n\nThe resulting values are unquoted. The keys are matched case-insensitively, and each key MUST only occur once per challenge (according to [RFC 7235, Section 2.1]([https://tools.ietf.org/html/rfc7235#section-2.1](https://tools.ietf.org/html/rfc7235#section-2.1))). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/authz#parseHTTPHeaderList",
-              "documentation": {
-                "identifier": "parseHTTPHeaderList",
-                "newPage": false,
-                "searchKey": "authz.parseHTTPHeaderList",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func parseHTTPHeaderList(value string) []string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc parseHTTPHeaderList(value string) []string\n```\n\nparseHTTPHeaderList parses a \"#rule\" as defined in [RFC 2068 Section 2.1]([https://tools.ietf.org/html/rfc2068#section-2.1](https://tools.ietf.org/html/rfc2068#section-2.1)). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/authz#SetProviders",
               "documentation": {
                 "identifier": "SetProviders",
                 "newPage": false,
                 "searchKey": "authz.SetProviders",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1118,33 +1233,15 @@
           },
           {
             "node": {
-              "pathID": "/internal/authz#GetProviders",
-              "documentation": {
-                "identifier": "GetProviders",
-                "newPage": false,
-                "searchKey": "authz.GetProviders",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetProviders() (authzAllowByDefault bool, providers []Provider)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetProviders() (authzAllowByDefault bool, providers []Provider)\n```\n\nGetProviders returns the current authz parameters. It is concurrency-safe. \n\nIt blocks until SetProviders has been called at least once. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/authz#TestParseAuthorizationHeader",
               "documentation": {
                 "identifier": "TestParseAuthorizationHeader",
                 "newPage": false,
                 "searchKey": "authz.TestParseAuthorizationHeader",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1166,7 +1263,9 @@
                 "newPage": false,
                 "searchKey": "authz.TestParseHTTPCredentials",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1188,7 +1287,9 @@
                 "newPage": false,
                 "searchKey": "authz.TestPermsInclude",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1204,35 +1305,15 @@
           },
           {
             "node": {
-              "pathID": "/internal/authz#BenchmarkPermsInclude",
-              "documentation": {
-                "identifier": "BenchmarkPermsInclude",
-                "newPage": false,
-                "searchKey": "authz.BenchmarkPermsInclude",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkPermsInclude(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkPermsInclude(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/authz#TestPermsString",
               "documentation": {
                 "identifier": "TestPermsString",
                 "newPage": false,
                 "searchKey": "authz.TestPermsString",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1248,22 +1329,24 @@
           },
           {
             "node": {
-              "pathID": "/internal/authz#BenchmarkPermsString",
+              "pathID": "/internal/authz#TestUserPermissions_AuthorizedRepos",
               "documentation": {
-                "identifier": "BenchmarkPermsString",
+                "identifier": "TestUserPermissions_AuthorizedRepos",
                 "newPage": false,
-                "searchKey": "authz.BenchmarkPermsString",
+                "searchKey": "authz.TestUserPermissions_AuthorizedRepos",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkPermsString(b *testing.B)"
+                "value": "func TestUserPermissions_AuthorizedRepos(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkPermsString(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc TestUserPermissions_AuthorizedRepos(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1276,6 +1359,7 @@
                 "newPage": false,
                 "searchKey": "authz.bitmap",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1292,22 +1376,69 @@
           },
           {
             "node": {
-              "pathID": "/internal/authz#TestUserPermissions_AuthorizedRepos",
+              "pathID": "/internal/authz#parseHTTPAuthParams",
               "documentation": {
-                "identifier": "TestUserPermissions_AuthorizedRepos",
+                "identifier": "parseHTTPAuthParams",
                 "newPage": false,
-                "searchKey": "authz.TestUserPermissions_AuthorizedRepos",
+                "searchKey": "authz.parseHTTPAuthParams",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestUserPermissions_AuthorizedRepos(t *testing.T)"
+                "value": "func parseHTTPAuthParams(value string) (params map[string]string, err error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestUserPermissions_AuthorizedRepos(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc parseHTTPAuthParams(value string) (params map[string]string, err error)\n```\n\nparseHTTPAuthParams extracts key/value pairs from a comma-separated list of auth-params as defined in [RFC 7235, Appendix C]([https://tools.ietf.org/html/rfc7235#appendix-C](https://tools.ietf.org/html/rfc7235#appendix-C)) and returns a map. \n\nThe resulting values are unquoted. The keys are matched case-insensitively, and each key MUST only occur once per challenge (according to [RFC 7235, Section 2.1]([https://tools.ietf.org/html/rfc7235#section-2.1](https://tools.ietf.org/html/rfc7235#section-2.1))). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz#parseHTTPCredentials",
+              "documentation": {
+                "identifier": "parseHTTPCredentials",
+                "newPage": false,
+                "searchKey": "authz.parseHTTPCredentials",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseHTTPCredentials(credentials string) (scheme, token68 string, params map[string]string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseHTTPCredentials(credentials string) (scheme, token68 string, params map[string]string, err error)\n```\n\nparseHTTPCredentials parses the \"credentials\" token as defined in [RFC 7235 Appendix C]([https://tools.ietf.org/html/rfc7235#appendix-C](https://tools.ietf.org/html/rfc7235#appendix-C)). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz#parseHTTPHeaderList",
+              "documentation": {
+                "identifier": "parseHTTPHeaderList",
+                "newPage": false,
+                "searchKey": "authz.parseHTTPHeaderList",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseHTTPHeaderList(value string) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseHTTPHeaderList(value string) []string\n```\n\nparseHTTPHeaderList parses a \"#rule\" as defined in [RFC 2068 Section 2.1]([https://tools.ietf.org/html/rfc2068#section-2.1](https://tools.ietf.org/html/rfc2068#section-2.1)). \n\n"
               },
               "children": null
             }

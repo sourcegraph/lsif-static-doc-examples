@@ -3,23 +3,34 @@
 ## Index
 
 * [Functions](#func)
+    * [func ExampleNewTLSServer()](#ExampleNewTLSServer)
     * [func ExampleResponseRecorder()](#ExampleResponseRecorder)
     * [func ExampleServer()](#ExampleServer)
     * [func ExampleServer_hTTP2()](#ExampleServer_hTTP2)
-    * [func ExampleNewTLSServer()](#ExampleNewTLSServer)
 
 
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
+```
+
+### <a id="ExampleNewTLSServer" href="#ExampleNewTLSServer">func ExampleNewTLSServer()</a>
+
+```
+searchKey: httptest_test.ExampleNewTLSServer
+tags: [function private]
+```
+
+```Go
+func ExampleNewTLSServer()
 ```
 
 ### <a id="ExampleResponseRecorder" href="#ExampleResponseRecorder">func ExampleResponseRecorder()</a>
 
 ```
 searchKey: httptest_test.ExampleResponseRecorder
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -30,7 +41,7 @@ func ExampleResponseRecorder()
 
 ```
 searchKey: httptest_test.ExampleServer
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -41,21 +52,10 @@ func ExampleServer()
 
 ```
 searchKey: httptest_test.ExampleServer_hTTP2
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func ExampleServer_hTTP2()
-```
-
-### <a id="ExampleNewTLSServer" href="#ExampleNewTLSServer">func ExampleNewTLSServer()</a>
-
-```
-searchKey: httptest_test.ExampleNewTLSServer
-tags: [private]
-```
-
-```Go
-func ExampleNewTLSServer()
 ```
 

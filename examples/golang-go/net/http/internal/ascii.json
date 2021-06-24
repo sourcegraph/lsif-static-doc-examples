@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "net/http/internal/ascii",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,9 @@
                 "identifier": "EqualFold",
                 "newPage": false,
                 "searchKey": "ascii.EqualFold",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -59,54 +63,14 @@
           },
           {
             "node": {
-              "pathID": "/net/http/internal/ascii#lower",
-              "documentation": {
-                "identifier": "lower",
-                "newPage": false,
-                "searchKey": "ascii.lower",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func lower(b byte) byte"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc lower(b byte) byte\n```\n\nlower returns the ASCII lowercase version of b. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/internal/ascii#IsPrint",
-              "documentation": {
-                "identifier": "IsPrint",
-                "newPage": false,
-                "searchKey": "ascii.IsPrint",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IsPrint(s string) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IsPrint(s string) bool\n```\n\nIsPrint returns whether s is ASCII and printable according to [https://tools.ietf.org/html/rfc20#section-4.2](https://tools.ietf.org/html/rfc20#section-4.2). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/http/internal/ascii#Is",
               "documentation": {
                 "identifier": "Is",
                 "newPage": false,
                 "searchKey": "ascii.Is",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -121,20 +85,22 @@
           },
           {
             "node": {
-              "pathID": "/net/http/internal/ascii#ToLower",
+              "pathID": "/net/http/internal/ascii#IsPrint",
               "documentation": {
-                "identifier": "ToLower",
+                "identifier": "IsPrint",
                 "newPage": false,
-                "searchKey": "ascii.ToLower",
-                "tags": null
+                "searchKey": "ascii.IsPrint",
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func ToLower(s string) (lower string, ok bool)"
+                "value": "func IsPrint(s string) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc ToLower(s string) (lower string, ok bool)\n```\n\nToLower returns the lowercase version of s if s is ASCII and printable. \n\n"
+                "value": "```Go\nfunc IsPrint(s string) bool\n```\n\nIsPrint returns whether s is ASCII and printable according to [https://tools.ietf.org/html/rfc20#section-4.2](https://tools.ietf.org/html/rfc20#section-4.2). \n\n"
               },
               "children": null
             }
@@ -147,7 +113,9 @@
                 "newPage": false,
                 "searchKey": "ascii.TestEqualFold",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -169,7 +137,9 @@
                 "newPage": false,
                 "searchKey": "ascii.TestIsPrint",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -179,6 +149,51 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc TestIsPrint(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/internal/ascii#ToLower",
+              "documentation": {
+                "identifier": "ToLower",
+                "newPage": false,
+                "searchKey": "ascii.ToLower",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ToLower(s string) (lower string, ok bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ToLower(s string) (lower string, ok bool)\n```\n\nToLower returns the lowercase version of s if s is ASCII and printable. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/internal/ascii#lower",
+              "documentation": {
+                "identifier": "lower",
+                "newPage": false,
+                "searchKey": "ascii.lower",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func lower(b byte) byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc lower(b byte) byte\n```\n\nlower returns the ASCII lowercase version of b. \n\n"
               },
               "children": null
             }

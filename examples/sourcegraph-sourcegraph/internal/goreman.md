@@ -5,63 +5,52 @@ Package goreman implements a process supervisor for a Procfile.
 ## Index
 
 * [Constants](#const)
-    * [const Shutdown](#Shutdown)
     * [const Ignore](#Ignore)
+    * [const Shutdown](#Shutdown)
 * [Variables](#var)
-    * [var procs](#procs)
-    * [var maxProcNameLength](#maxProcNameLength)
-    * [var procDiedAction](#procDiedAction)
-    * [var colors](#colors)
     * [var ci](#ci)
+    * [var colors](#colors)
+    * [var maxProcNameLength](#maxProcNameLength)
     * [var mutex](#mutex)
-    * [var wg](#wg)
+    * [var procDiedAction](#procDiedAction)
+    * [var procs](#procs)
     * [var signals](#signals)
+    * [var wg](#wg)
 * [Types](#type)
-    * [type procInfo struct](#procInfo)
-    * [type ProcDiedAction uint](#ProcDiedAction)
-    * [type Options struct](#Options)
-    * [type clogger struct](#clogger)
-        * [func createLogger(proc string) *clogger](#createLogger)
-        * [func (l *clogger) writeBuffers(line []byte)](#clogger.writeBuffers)
-        * [func (l *clogger) writeLines()](#clogger.writeLines)
-        * [func (l *clogger) Write(p []byte) (int, error)](#clogger.Write)
     * [type Goreman struct{}](#Goreman)
         * [func (Goreman) RestartAll(args struct{}, ret *string) (err error)](#Goreman.RestartAll)
+    * [type Options struct](#Options)
+    * [type ProcDiedAction uint](#ProcDiedAction)
+    * [type clogger struct](#clogger)
+        * [func createLogger(proc string) *clogger](#createLogger)
+        * [func (l *clogger) Write(p []byte) (int, error)](#clogger.Write)
+        * [func (l *clogger) writeBuffers(line []byte)](#clogger.writeBuffers)
+        * [func (l *clogger) writeLines()](#clogger.writeLines)
+    * [type procInfo struct](#procInfo)
 * [Functions](#func)
-    * [func readProcfile(content []byte) error](#readProcfile)
     * [func Start(contents []byte, opts Options) error](#Start)
-    * [func stopProc(proc string, kill bool) error](#stopProc)
+    * [func readProcfile(content []byte) error](#readProcfile)
+    * [func spawnProc(proc string) bool](#spawnProc)
     * [func startProc(proc string) error](#startProc)
     * [func startProcs()](#startProcs)
-    * [func waitProcs() error](#waitProcs)
-    * [func stopProcs(kill bool)](#stopProcs)
-    * [func spawnProc(proc string) bool](#spawnProc)
-    * [func terminateProc(proc string) error](#terminateProc)
     * [func startServer(addr string) error](#startServer)
+    * [func stopProc(proc string, kill bool) error](#stopProc)
+    * [func stopProcs(kill bool)](#stopProcs)
+    * [func terminateProc(proc string) error](#terminateProc)
+    * [func waitProcs() error](#waitProcs)
 
 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
-
-### <a id="Shutdown" href="#Shutdown">const Shutdown</a>
-
-```
-searchKey: goreman.Shutdown
-```
-
-```Go
-const Shutdown ProcDiedAction = iota
-```
-
-Shutdown will shutdown Goreman if any process shuts down with a non-zero exit code. 
 
 ### <a id="Ignore" href="#Ignore">const Ignore</a>
 
 ```
 searchKey: goreman.Ignore
+tags: [constant number]
 ```
 
 ```Go
@@ -70,54 +59,41 @@ const Ignore
 
 Ignore will continue running Goreman and will leave not restart the dead process. 
 
+### <a id="Shutdown" href="#Shutdown">const Shutdown</a>
+
+```
+searchKey: goreman.Shutdown
+tags: [constant number]
+```
+
+```Go
+const Shutdown ProcDiedAction = iota
+```
+
+Shutdown will shutdown Goreman if any process shuts down with a non-zero exit code. 
+
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
-### <a id="procs" href="#procs">var procs</a>
+### <a id="ci" href="#ci">var ci</a>
 
 ```
-searchKey: goreman.procs
-tags: [private]
-```
-
-```Go
-var procs map[string]*procInfo
-```
-
-process informations named with proc. 
-
-### <a id="maxProcNameLength" href="#maxProcNameLength">var maxProcNameLength</a>
-
-```
-searchKey: goreman.maxProcNameLength
-tags: [private]
+searchKey: goreman.ci
+tags: [variable number private]
 ```
 
 ```Go
-var maxProcNameLength int
+var ci int
 ```
-
-### <a id="procDiedAction" href="#procDiedAction">var procDiedAction</a>
-
-```
-searchKey: goreman.procDiedAction
-tags: [private]
-```
-
-```Go
-var procDiedAction ProcDiedAction
-```
-
-procDiedAction is the ProcDiedAction to take. Goreman still is globals everywhere \o/ 
 
 ### <a id="colors" href="#colors">var colors</a>
 
 ```
 searchKey: goreman.colors
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -131,93 +107,111 @@ var colors = []ct.Color{
 }
 ```
 
-### <a id="ci" href="#ci">var ci</a>
+### <a id="maxProcNameLength" href="#maxProcNameLength">var maxProcNameLength</a>
 
 ```
-searchKey: goreman.ci
-tags: [private]
+searchKey: goreman.maxProcNameLength
+tags: [variable number private]
 ```
 
 ```Go
-var ci int
+var maxProcNameLength int
 ```
 
 ### <a id="mutex" href="#mutex">var mutex</a>
 
 ```
 searchKey: goreman.mutex
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
 var mutex = new(sync.Mutex)
 ```
 
-### <a id="wg" href="#wg">var wg</a>
+### <a id="procDiedAction" href="#procDiedAction">var procDiedAction</a>
 
 ```
-searchKey: goreman.wg
-tags: [private]
+searchKey: goreman.procDiedAction
+tags: [variable number private]
 ```
 
 ```Go
-var wg sync.WaitGroup
+var procDiedAction ProcDiedAction
 ```
+
+procDiedAction is the ProcDiedAction to take. Goreman still is globals everywhere \o/ 
+
+### <a id="procs" href="#procs">var procs</a>
+
+```
+searchKey: goreman.procs
+tags: [variable object private]
+```
+
+```Go
+var procs map[string]*procInfo
+```
+
+process informations named with proc. 
 
 ### <a id="signals" href="#signals">var signals</a>
 
 ```
 searchKey: goreman.signals
-tags: [private]
+tags: [variable private]
 ```
 
 ```Go
 var signals = make(chan os.Signal, 10)
 ```
 
+### <a id="wg" href="#wg">var wg</a>
+
+```
+searchKey: goreman.wg
+tags: [variable struct private]
+```
+
+```Go
+var wg sync.WaitGroup
+```
+
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
-### <a id="procInfo" href="#procInfo">type procInfo struct</a>
+### <a id="Goreman" href="#Goreman">type Goreman struct{}</a>
 
 ```
-searchKey: goreman.procInfo
-tags: [private]
-```
-
-```Go
-type procInfo struct {
-	proc    string
-	cmdline string
-	stopped bool // true if we stopped it
-	cmd     *exec.Cmd
-	mu      sync.Mutex
-	cond    *sync.Cond
-	waitErr error
-}
-```
-
--- process information structure. 
-
-### <a id="ProcDiedAction" href="#ProcDiedAction">type ProcDiedAction uint</a>
-
-```
-searchKey: goreman.ProcDiedAction
+searchKey: goreman.Goreman
+tags: [struct]
 ```
 
 ```Go
-type ProcDiedAction uint
+type Goreman struct{}
 ```
 
-ProcDiedAction specifies the behaviour Goreman takes if a process exits with a non-zero exit code. 
+#### <a id="Goreman.RestartAll" href="#Goreman.RestartAll">func (Goreman) RestartAll(args struct{}, ret *string) (err error)</a>
+
+```
+searchKey: goreman.Goreman.RestartAll
+tags: [method]
+```
+
+```Go
+func (Goreman) RestartAll(args struct{}, ret *string) (err error)
+```
+
+rpc: restart all (stop all, then start all) 
 
 ### <a id="Options" href="#Options">type Options struct</a>
 
 ```
 searchKey: goreman.Options
+tags: [struct]
 ```
 
 ```Go
@@ -230,11 +224,24 @@ type Options struct {
 }
 ```
 
+### <a id="ProcDiedAction" href="#ProcDiedAction">type ProcDiedAction uint</a>
+
+```
+searchKey: goreman.ProcDiedAction
+tags: [number]
+```
+
+```Go
+type ProcDiedAction uint
+```
+
+ProcDiedAction specifies the behaviour Goreman takes if a process exits with a non-zero exit code. 
+
 ### <a id="clogger" href="#clogger">type clogger struct</a>
 
 ```
 searchKey: goreman.clogger
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -252,7 +259,7 @@ type clogger struct {
 
 ```
 searchKey: goreman.createLogger
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -261,11 +268,24 @@ func createLogger(proc string) *clogger
 
 create logger instance. 
 
+#### <a id="clogger.Write" href="#clogger.Write">func (l *clogger) Write(p []byte) (int, error)</a>
+
+```
+searchKey: goreman.clogger.Write
+tags: [method private]
+```
+
+```Go
+func (l *clogger) Write(p []byte) (int, error)
+```
+
+write handler of logger. 
+
 #### <a id="clogger.writeBuffers" href="#clogger.writeBuffers">func (l *clogger) writeBuffers(line []byte)</a>
 
 ```
 searchKey: goreman.clogger.writeBuffers
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -278,7 +298,7 @@ write any stored buffers, plus the given line, then empty out the buffers.
 
 ```
 searchKey: goreman.clogger.writeLines
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -287,64 +307,38 @@ func (l *clogger) writeLines()
 
 bundle writes into lines, waiting briefly for completion of lines 
 
-#### <a id="clogger.Write" href="#clogger.Write">func (l *clogger) Write(p []byte) (int, error)</a>
+### <a id="procInfo" href="#procInfo">type procInfo struct</a>
 
 ```
-searchKey: goreman.clogger.Write
-tags: [private]
-```
-
-```Go
-func (l *clogger) Write(p []byte) (int, error)
-```
-
-write handler of logger. 
-
-### <a id="Goreman" href="#Goreman">type Goreman struct{}</a>
-
-```
-searchKey: goreman.Goreman
+searchKey: goreman.procInfo
+tags: [struct private]
 ```
 
 ```Go
-type Goreman struct{}
+type procInfo struct {
+	proc    string
+	cmdline string
+	stopped bool // true if we stopped it
+	cmd     *exec.Cmd
+	mu      sync.Mutex
+	cond    *sync.Cond
+	waitErr error
+}
 ```
 
-#### <a id="Goreman.RestartAll" href="#Goreman.RestartAll">func (Goreman) RestartAll(args struct{}, ret *string) (err error)</a>
-
-```
-searchKey: goreman.Goreman.RestartAll
-```
-
-```Go
-func (Goreman) RestartAll(args struct{}, ret *string) (err error)
-```
-
-rpc: restart all (stop all, then start all) 
+-- process information structure. 
 
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
-
-### <a id="readProcfile" href="#readProcfile">func readProcfile(content []byte) error</a>
-
-```
-searchKey: goreman.readProcfile
-tags: [private]
-```
-
-```Go
-func readProcfile(content []byte) error
-```
-
-read Procfile and parse it. 
 
 ### <a id="Start" href="#Start">func Start(contents []byte, opts Options) error</a>
 
 ```
 searchKey: goreman.Start
+tags: [method]
 ```
 
 ```Go
@@ -353,24 +347,37 @@ func Start(contents []byte, opts Options) error
 
 Start starts up the Procfile. 
 
-### <a id="stopProc" href="#stopProc">func stopProc(proc string, kill bool) error</a>
+### <a id="readProcfile" href="#readProcfile">func readProcfile(content []byte) error</a>
 
 ```
-searchKey: goreman.stopProc
-tags: [private]
+searchKey: goreman.readProcfile
+tags: [method private]
 ```
 
 ```Go
-func stopProc(proc string, kill bool) error
+func readProcfile(content []byte) error
 ```
 
-stop specified proc. 
+read Procfile and parse it. 
+
+### <a id="spawnProc" href="#spawnProc">func spawnProc(proc string) bool</a>
+
+```
+searchKey: goreman.spawnProc
+tags: [method private]
+```
+
+```Go
+func spawnProc(proc string) bool
+```
+
+spawn command that specified as proc. Returns true if it stopped due to goreman stopping it. 
 
 ### <a id="startProc" href="#startProc">func startProc(proc string) error</a>
 
 ```
 searchKey: goreman.startProc
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -383,7 +390,7 @@ start specified proc. if proc is started already, return nil.
 
 ```
 searchKey: goreman.startProcs
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -392,59 +399,11 @@ func startProcs()
 
 startProcs starts the processes. 
 
-### <a id="waitProcs" href="#waitProcs">func waitProcs() error</a>
-
-```
-searchKey: goreman.waitProcs
-tags: [private]
-```
-
-```Go
-func waitProcs() error
-```
-
-waitProcs waits for processes to complete. 
-
-### <a id="stopProcs" href="#stopProcs">func stopProcs(kill bool)</a>
-
-```
-searchKey: goreman.stopProcs
-tags: [private]
-```
-
-```Go
-func stopProcs(kill bool)
-```
-
-### <a id="spawnProc" href="#spawnProc">func spawnProc(proc string) bool</a>
-
-```
-searchKey: goreman.spawnProc
-tags: [private]
-```
-
-```Go
-func spawnProc(proc string) bool
-```
-
-spawn command that specified as proc. Returns true if it stopped due to goreman stopping it. 
-
-### <a id="terminateProc" href="#terminateProc">func terminateProc(proc string) error</a>
-
-```
-searchKey: goreman.terminateProc
-tags: [private]
-```
-
-```Go
-func terminateProc(proc string) error
-```
-
 ### <a id="startServer" href="#startServer">func startServer(addr string) error</a>
 
 ```
 searchKey: goreman.startServer
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -452,4 +411,52 @@ func startServer(addr string) error
 ```
 
 start rpc server. 
+
+### <a id="stopProc" href="#stopProc">func stopProc(proc string, kill bool) error</a>
+
+```
+searchKey: goreman.stopProc
+tags: [method private]
+```
+
+```Go
+func stopProc(proc string, kill bool) error
+```
+
+stop specified proc. 
+
+### <a id="stopProcs" href="#stopProcs">func stopProcs(kill bool)</a>
+
+```
+searchKey: goreman.stopProcs
+tags: [method private]
+```
+
+```Go
+func stopProcs(kill bool)
+```
+
+### <a id="terminateProc" href="#terminateProc">func terminateProc(proc string) error</a>
+
+```
+searchKey: goreman.terminateProc
+tags: [method private]
+```
+
+```Go
+func terminateProc(proc string) error
+```
+
+### <a id="waitProcs" href="#waitProcs">func waitProcs() error</a>
+
+```
+searchKey: goreman.waitProcs
+tags: [function private]
+```
+
+```Go
+func waitProcs() error
+```
+
+waitProcs waits for processes to complete. 
 

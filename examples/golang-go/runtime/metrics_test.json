@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "runtime/metrics_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,13 +41,85 @@
         "children": [
           {
             "node": {
+              "pathID": "/runtime/metrics_test#ExampleRead_readingAllMetrics",
+              "documentation": {
+                "identifier": "ExampleRead_readingAllMetrics",
+                "newPage": false,
+                "searchKey": "metrics_test.ExampleRead_readingAllMetrics",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRead_readingAllMetrics()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRead_readingAllMetrics()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/metrics_test#ExampleRead_readingOneMetric",
+              "documentation": {
+                "identifier": "ExampleRead_readingOneMetric",
+                "newPage": false,
+                "searchKey": "metrics_test.ExampleRead_readingOneMetric",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRead_readingOneMetric()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRead_readingOneMetric()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/metrics_test#TestDescriptionDocs",
+              "documentation": {
+                "identifier": "TestDescriptionDocs",
+                "newPage": false,
+                "searchKey": "metrics_test.TestDescriptionDocs",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDescriptionDocs(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDescriptionDocs(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/runtime/metrics_test#TestDescriptionNameFormat",
               "documentation": {
                 "identifier": "TestDescriptionNameFormat",
                 "newPage": false,
                 "searchKey": "metrics_test.TestDescriptionNameFormat",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -67,6 +141,7 @@
                 "newPage": false,
                 "searchKey": "metrics_test.extractMetricDocs",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -83,78 +158,13 @@
           },
           {
             "node": {
-              "pathID": "/runtime/metrics_test#TestDescriptionDocs",
-              "documentation": {
-                "identifier": "TestDescriptionDocs",
-                "newPage": false,
-                "searchKey": "metrics_test.TestDescriptionDocs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDescriptionDocs(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDescriptionDocs(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/metrics_test#ExampleRead_readingOneMetric",
-              "documentation": {
-                "identifier": "ExampleRead_readingOneMetric",
-                "newPage": false,
-                "searchKey": "metrics_test.ExampleRead_readingOneMetric",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRead_readingOneMetric()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRead_readingOneMetric()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/metrics_test#ExampleRead_readingAllMetrics",
-              "documentation": {
-                "identifier": "ExampleRead_readingAllMetrics",
-                "newPage": false,
-                "searchKey": "metrics_test.ExampleRead_readingAllMetrics",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRead_readingAllMetrics()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRead_readingAllMetrics()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/runtime/metrics_test#medianBucket",
               "documentation": {
                 "identifier": "medianBucket",
                 "newPage": false,
                 "searchKey": "metrics_test.medianBucket",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },

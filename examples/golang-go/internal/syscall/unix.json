@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/syscall/unix",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,10 @@
                 "identifier": "AT_REMOVEDIR",
                 "newPage": false,
                 "searchKey": "unix.AT_REMOVEDIR",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +69,10 @@
                 "identifier": "AT_SYMLINK_NOFOLLOW",
                 "newPage": false,
                 "searchKey": "unix.AT_SYMLINK_NOFOLLOW",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -88,6 +96,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -102,52 +111,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/syscall/unix#Unlinkat",
-              "documentation": {
-                "identifier": "Unlinkat",
-                "newPage": false,
-                "searchKey": "unix.Unlinkat",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Unlinkat(dirfd int, path string, flags int) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Unlinkat(dirfd int, path string, flags int) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/syscall/unix#Openat",
-              "documentation": {
-                "identifier": "Openat",
-                "newPage": false,
-                "searchKey": "unix.Openat",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Openat(dirfd int, path string, flags int, perm uint32) (int, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Openat(dirfd int, path string, flags int, perm uint32) (int, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/syscall/unix#Fstatat",
               "documentation": {
                 "identifier": "Fstatat",
                 "newPage": false,
                 "searchKey": "unix.Fstatat",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -162,44 +133,111 @@
           },
           {
             "node": {
-              "pathID": "/internal/syscall/unix#unlinkat",
+              "pathID": "/internal/syscall/unix#GetEntropy",
               "documentation": {
-                "identifier": "unlinkat",
+                "identifier": "GetEntropy",
                 "newPage": false,
-                "searchKey": "unix.unlinkat",
+                "searchKey": "unix.GetEntropy",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func unlinkat(dirfd int, path string, flags int) error"
+                "value": "func GetEntropy(p []byte) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc unlinkat(dirfd int, path string, flags int) error\n```\n\n"
+                "value": "```Go\nfunc GetEntropy(p []byte) error\n```\n\nGetEntropy calls the macOS getentropy system call. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/syscall/unix#openat",
+              "pathID": "/internal/syscall/unix#IsNonblock",
               "documentation": {
-                "identifier": "openat",
+                "identifier": "IsNonblock",
                 "newPage": false,
-                "searchKey": "unix.openat",
+                "searchKey": "unix.IsNonblock",
                 "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsNonblock(fd int) (nonblocking bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsNonblock(fd int) (nonblocking bool, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/syscall/unix#Openat",
+              "documentation": {
+                "identifier": "Openat",
+                "newPage": false,
+                "searchKey": "unix.Openat",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Openat(dirfd int, path string, flags int, perm uint32) (int, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Openat(dirfd int, path string, flags int, perm uint32) (int, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/syscall/unix#Unlinkat",
+              "documentation": {
+                "identifier": "Unlinkat",
+                "newPage": false,
+                "searchKey": "unix.Unlinkat",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Unlinkat(dirfd int, path string, flags int) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Unlinkat(dirfd int, path string, flags int) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/syscall/unix#fcntl",
+              "documentation": {
+                "identifier": "fcntl",
+                "newPage": false,
+                "searchKey": "unix.fcntl",
+                "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func openat(dirfd int, path string, flags int, perm uint32) (int, error)"
+                "value": "func fcntl(fd int, cmd int, arg int) (int, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc openat(dirfd int, path string, flags int, perm uint32) (int, error)\n```\n\n"
+                "value": "```Go\nfunc fcntl(fd int, cmd int, arg int) (int, error)\n```\n\nImplemented in the syscall package. \n\n"
               },
               "children": null
             }
@@ -212,6 +250,7 @@
                 "newPage": false,
                 "searchKey": "unix.fstatat",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -234,6 +273,7 @@
                 "newPage": false,
                 "searchKey": "unix.libc_getentropy_trampoline",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -250,20 +290,23 @@
           },
           {
             "node": {
-              "pathID": "/internal/syscall/unix#GetEntropy",
+              "pathID": "/internal/syscall/unix#openat",
               "documentation": {
-                "identifier": "GetEntropy",
+                "identifier": "openat",
                 "newPage": false,
-                "searchKey": "unix.GetEntropy",
-                "tags": null
+                "searchKey": "unix.openat",
+                "tags": [
+                  "method",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func GetEntropy(p []byte) error"
+                "value": "func openat(dirfd int, path string, flags int, perm uint32) (int, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc GetEntropy(p []byte) error\n```\n\nGetEntropy calls the macOS getentropy system call. \n\n"
+                "value": "```Go\nfunc openat(dirfd int, path string, flags int, perm uint32) (int, error)\n```\n\n"
               },
               "children": null
             }
@@ -276,6 +319,7 @@
                 "newPage": false,
                 "searchKey": "unix.syscall_syscall",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -292,42 +336,23 @@
           },
           {
             "node": {
-              "pathID": "/internal/syscall/unix#IsNonblock",
+              "pathID": "/internal/syscall/unix#unlinkat",
               "documentation": {
-                "identifier": "IsNonblock",
+                "identifier": "unlinkat",
                 "newPage": false,
-                "searchKey": "unix.IsNonblock",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IsNonblock(fd int) (nonblocking bool, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IsNonblock(fd int) (nonblocking bool, err error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/syscall/unix#fcntl",
-              "documentation": {
-                "identifier": "fcntl",
-                "newPage": false,
-                "searchKey": "unix.fcntl",
+                "searchKey": "unix.unlinkat",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func fcntl(fd int, cmd int, arg int) (int, error)"
+                "value": "func unlinkat(dirfd int, path string, flags int) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc fcntl(fd int, cmd int, arg int) (int, error)\n```\n\nImplemented in the syscall package. \n\n"
+                "value": "```Go\nfunc unlinkat(dirfd int, path string, flags int) error\n```\n\n"
               },
               "children": null
             }

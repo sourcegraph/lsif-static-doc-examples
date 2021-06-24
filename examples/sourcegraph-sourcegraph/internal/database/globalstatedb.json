@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/database/globalstatedb",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,10 @@
                 "identifier": "Mock",
                 "newPage": false,
                 "searchKey": "globalstatedb.Mock",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -68,6 +73,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -87,7 +93,9 @@
                 "identifier": "State",
                 "newPage": false,
                 "searchKey": "globalstatedb.State",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -105,7 +113,9 @@
                       "identifier": "Get",
                       "newPage": false,
                       "searchKey": "globalstatedb.Get",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -126,6 +136,7 @@
                       "newPage": false,
                       "searchKey": "globalstatedb.getConfiguration",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -145,34 +156,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/database/globalstatedb#queryExecDatabaseHandler",
-              "documentation": {
-                "identifier": "queryExecDatabaseHandler",
-                "newPage": false,
-                "searchKey": "globalstatedb.queryExecDatabaseHandler",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type queryExecDatabaseHandler interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype queryExecDatabaseHandler interface {\n\tQueryRow(ctx context.Context, query *sqlf.Query) *sql.Row\n\tExec(ctx context.Context, query *sqlf.Query) error\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/database/globalstatedb#execDatabaseHandler",
               "documentation": {
                 "identifier": "execDatabaseHandler",
                 "newPage": false,
                 "searchKey": "globalstatedb.execDatabaseHandler",
                 "tags": [
+                  "interface",
                   "private"
                 ]
               },
@@ -183,6 +173,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\ntype execDatabaseHandler interface {\n\tExec(ctx context.Context, query *sqlf.Query) error\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/globalstatedb#queryExecDatabaseHandler",
+              "documentation": {
+                "identifier": "queryExecDatabaseHandler",
+                "newPage": false,
+                "searchKey": "globalstatedb.queryExecDatabaseHandler",
+                "tags": [
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type queryExecDatabaseHandler interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype queryExecDatabaseHandler interface {\n\tQueryRow(ctx context.Context, query *sqlf.Query) *sql.Row\n\tExec(ctx context.Context, query *sqlf.Query) error\n}\n```\n\n"
               },
               "children": null
             }
@@ -198,6 +211,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -212,32 +226,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/database/globalstatedb#SiteInitialized",
-              "documentation": {
-                "identifier": "SiteInitialized",
-                "newPage": false,
-                "searchKey": "globalstatedb.SiteInitialized",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SiteInitialized(ctx context.Context) (alreadyInitialized bool, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SiteInitialized(ctx context.Context) (alreadyInitialized bool, err error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/database/globalstatedb#EnsureInitialized",
               "documentation": {
                 "identifier": "EnsureInitialized",
                 "newPage": false,
                 "searchKey": "globalstatedb.EnsureInitialized",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -252,22 +248,46 @@
           },
           {
             "node": {
-              "pathID": "/internal/database/globalstatedb#tryInsertNew",
+              "pathID": "/internal/database/globalstatedb#SiteInitialized",
               "documentation": {
-                "identifier": "tryInsertNew",
+                "identifier": "SiteInitialized",
                 "newPage": false,
-                "searchKey": "globalstatedb.tryInsertNew",
+                "searchKey": "globalstatedb.SiteInitialized",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func tryInsertNew(ctx context.Context, dbh execDatabaseHandler) error"
+                "value": "func SiteInitialized(ctx context.Context) (alreadyInitialized bool, err error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc tryInsertNew(ctx context.Context, dbh execDatabaseHandler) error\n```\n\n"
+                "value": "```Go\nfunc SiteInitialized(ctx context.Context) (alreadyInitialized bool, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/globalstatedb#TestGet",
+              "documentation": {
+                "identifier": "TestGet",
+                "newPage": false,
+                "searchKey": "globalstatedb.TestGet",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGet(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGet(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -280,6 +300,7 @@
                 "newPage": false,
                 "searchKey": "globalstatedb.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -296,22 +317,23 @@
           },
           {
             "node": {
-              "pathID": "/internal/database/globalstatedb#TestGet",
+              "pathID": "/internal/database/globalstatedb#tryInsertNew",
               "documentation": {
-                "identifier": "TestGet",
+                "identifier": "tryInsertNew",
                 "newPage": false,
-                "searchKey": "globalstatedb.TestGet",
+                "searchKey": "globalstatedb.tryInsertNew",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestGet(t *testing.T)"
+                "value": "func tryInsertNew(ctx context.Context, dbh execDatabaseHandler) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestGet(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc tryInsertNew(ctx context.Context, dbh execDatabaseHandler) error\n```\n\n"
               },
               "children": null
             }

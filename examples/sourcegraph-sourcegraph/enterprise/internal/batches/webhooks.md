@@ -3,114 +3,101 @@
 ## Index
 
 * [Variables](#var)
-    * [var githubEvents](#githubEvents)
     * [var errExternalServiceNotFound](#errExternalServiceNotFound)
     * [var errExternalServiceWrongKind](#errExternalServiceWrongKind)
     * [var errPipelineMissingMergeRequest](#errPipelineMissingMergeRequest)
+    * [var githubEvents](#githubEvents)
     * [var update](#update)
 * [Types](#type)
     * [type BitbucketServerWebhook struct](#BitbucketServerWebhook)
         * [func NewBitbucketServerWebhook(store *store.Store) *BitbucketServerWebhook](#NewBitbucketServerWebhook)
         * [func (h *BitbucketServerWebhook) ServeHTTP(w http.ResponseWriter, r *http.Request)](#BitbucketServerWebhook.ServeHTTP)
-        * [func (h *BitbucketServerWebhook) parseEvent(r *http.Request) (interface{}, *types.ExternalService, *httpError)](#BitbucketServerWebhook.parseEvent)
         * [func (h *BitbucketServerWebhook) convertEvent(theirs interface{}) (prs []PR, ours keyer)](#BitbucketServerWebhook.convertEvent)
+        * [func (h *BitbucketServerWebhook) parseEvent(r *http.Request) (interface{}, *types.ExternalService, *httpError)](#BitbucketServerWebhook.parseEvent)
     * [type GitHubWebhook struct](#GitHubWebhook)
         * [func NewGitHubWebhook(store *store.Store) *GitHubWebhook](#NewGitHubWebhook)
         * [func (h *GitHubWebhook) Register(router *webhooks.GitHubWebhook)](#GitHubWebhook.Register)
-        * [func (h *GitHubWebhook) handleGitHubWebhook(ctx context.Context, extSvc *types.ExternalService, payload interface{}) error](#GitHubWebhook.handleGitHubWebhook)
+        * [func (*GitHubWebhook) assignedEvent(e *gh.PullRequestEvent) *github.AssignedEvent](#GitHubWebhook.assignedEvent)
+        * [func (h *GitHubWebhook) checkRunEvent(cr *gh.CheckRun) *github.CheckRun](#GitHubWebhook.checkRunEvent)
+        * [func (h *GitHubWebhook) checkSuiteEvent(cs *gh.CheckSuite) *github.CheckSuite](#GitHubWebhook.checkSuiteEvent)
+        * [func (*GitHubWebhook) closedOrMergeEvent(e *gh.PullRequestEvent) keyer](#GitHubWebhook.closedOrMergeEvent)
+        * [func (h *GitHubWebhook) commitStatusEvent(e *gh.StatusEvent) *github.CommitStatus](#GitHubWebhook.commitStatusEvent)
         * [func (h *GitHubWebhook) convertEvent(ctx context.Context, externalServiceID string, theirs interface{}) (prs []PR, ours keyer)](#GitHubWebhook.convertEvent)
+        * [func (*GitHubWebhook) convertToDraftEvent(e *gh.PullRequestEvent) *github.ConvertToDraftEvent](#GitHubWebhook.convertToDraftEvent)
+        * [func (h *GitHubWebhook) handleGitHubWebhook(ctx context.Context, extSvc *types.ExternalService, payload interface{}) error](#GitHubWebhook.handleGitHubWebhook)
         * [func (*GitHubWebhook) issueComment(e *gh.IssueCommentEvent) *github.IssueComment](#GitHubWebhook.issueComment)
         * [func (*GitHubWebhook) labeledEvent(e *gh.PullRequestEvent) *github.LabelEvent](#GitHubWebhook.labeledEvent)
-        * [func (*GitHubWebhook) readyForReviewEvent(e *gh.PullRequestEvent) *github.ReadyForReviewEvent](#GitHubWebhook.readyForReviewEvent)
-        * [func (*GitHubWebhook) convertToDraftEvent(e *gh.PullRequestEvent) *github.ConvertToDraftEvent](#GitHubWebhook.convertToDraftEvent)
-        * [func (*GitHubWebhook) assignedEvent(e *gh.PullRequestEvent) *github.AssignedEvent](#GitHubWebhook.assignedEvent)
-        * [func (*GitHubWebhook) unassignedEvent(e *gh.PullRequestEvent) *github.UnassignedEvent](#GitHubWebhook.unassignedEvent)
-        * [func (*GitHubWebhook) reviewRequestedEvent(e *gh.PullRequestEvent) *github.ReviewRequestedEvent](#GitHubWebhook.reviewRequestedEvent)
-        * [func (*GitHubWebhook) reviewRequestRemovedEvent(e *gh.PullRequestEvent) *github.ReviewRequestRemovedEvent](#GitHubWebhook.reviewRequestRemovedEvent)
-        * [func (*GitHubWebhook) renamedTitleEvent(e *gh.PullRequestEvent) *github.RenamedTitleEvent](#GitHubWebhook.renamedTitleEvent)
-        * [func (*GitHubWebhook) closedOrMergeEvent(e *gh.PullRequestEvent) keyer](#GitHubWebhook.closedOrMergeEvent)
-        * [func (*GitHubWebhook) reopenedEvent(e *gh.PullRequestEvent) *github.ReopenedEvent](#GitHubWebhook.reopenedEvent)
-        * [func (*GitHubWebhook) pullRequestReviewEvent(e *gh.PullRequestReviewEvent) *github.PullRequestReview](#GitHubWebhook.pullRequestReviewEvent)
         * [func (*GitHubWebhook) pullRequestReviewCommentEvent(e *gh.PullRequestReviewCommentEvent) *github.PullRequestReviewComment](#GitHubWebhook.pullRequestReviewCommentEvent)
-        * [func (h *GitHubWebhook) commitStatusEvent(e *gh.StatusEvent) *github.CommitStatus](#GitHubWebhook.commitStatusEvent)
-        * [func (h *GitHubWebhook) checkSuiteEvent(cs *gh.CheckSuite) *github.CheckSuite](#GitHubWebhook.checkSuiteEvent)
-        * [func (h *GitHubWebhook) checkRunEvent(cr *gh.CheckRun) *github.CheckRun](#GitHubWebhook.checkRunEvent)
+        * [func (*GitHubWebhook) pullRequestReviewEvent(e *gh.PullRequestReviewEvent) *github.PullRequestReview](#GitHubWebhook.pullRequestReviewEvent)
+        * [func (*GitHubWebhook) readyForReviewEvent(e *gh.PullRequestEvent) *github.ReadyForReviewEvent](#GitHubWebhook.readyForReviewEvent)
+        * [func (*GitHubWebhook) renamedTitleEvent(e *gh.PullRequestEvent) *github.RenamedTitleEvent](#GitHubWebhook.renamedTitleEvent)
+        * [func (*GitHubWebhook) reopenedEvent(e *gh.PullRequestEvent) *github.ReopenedEvent](#GitHubWebhook.reopenedEvent)
+        * [func (*GitHubWebhook) reviewRequestRemovedEvent(e *gh.PullRequestEvent) *github.ReviewRequestRemovedEvent](#GitHubWebhook.reviewRequestRemovedEvent)
+        * [func (*GitHubWebhook) reviewRequestedEvent(e *gh.PullRequestEvent) *github.ReviewRequestedEvent](#GitHubWebhook.reviewRequestedEvent)
+        * [func (*GitHubWebhook) unassignedEvent(e *gh.PullRequestEvent) *github.UnassignedEvent](#GitHubWebhook.unassignedEvent)
     * [type GitLabWebhook struct](#GitLabWebhook)
         * [func NewGitLabWebhook(store *store.Store) *GitLabWebhook](#NewGitLabWebhook)
         * [func (h *GitLabWebhook) ServeHTTP(w http.ResponseWriter, r *http.Request)](#GitLabWebhook.ServeHTTP)
+        * [func (h *GitLabWebhook) enqueueChangesetSyncFromEvent(ctx context.Context, esID string, event *webhooks.MergeRequestEventCommon) error](#GitLabWebhook.enqueueChangesetSyncFromEvent)
+        * [func (h *GitLabWebhook) getChangesetForPR(ctx context.Context, tx *store.Store, pr *PR, repo *types.Repo) (*btypes.Changeset, error)](#GitLabWebhook.getChangesetForPR)
         * [func (h *GitLabWebhook) getExternalServiceFromRawID(ctx context.Context, raw string) (*types.ExternalService, error)](#GitLabWebhook.getExternalServiceFromRawID)
         * [func (h *GitLabWebhook) handleEvent(ctx context.Context, extSvc *types.ExternalService, event interface{}) *httpError](#GitLabWebhook.handleEvent)
-        * [func (h *GitLabWebhook) enqueueChangesetSyncFromEvent(ctx context.Context, esID string, event *webhooks.MergeRequestEventCommon) error](#GitLabWebhook.enqueueChangesetSyncFromEvent)
         * [func (h *GitLabWebhook) handlePipelineEvent(ctx context.Context, esID string, event *webhooks.PipelineEvent) error](#GitLabWebhook.handlePipelineEvent)
-        * [func (h *GitLabWebhook) getChangesetForPR(ctx context.Context, tx *store.Store, pr *PR, repo *types.Repo) (*btypes.Changeset, error)](#GitLabWebhook.getChangesetForPR)
+    * [type PR struct](#PR)
+        * [func gitlabToPR(project *gitlab.ProjectCommon, mr *gitlab.MergeRequest) PR](#gitlabToPR)
     * [type Webhook struct](#Webhook)
         * [func (h Webhook) getRepoForPR(ctx context.Context,...](#Webhook.getRepoForPR)
         * [func (h Webhook) upsertChangesetEvent(ctx context.Context,...](#Webhook.upsertChangesetEvent)
-    * [type PR struct](#PR)
-        * [func gitlabToPR(project *gitlab.ProjectCommon, mr *gitlab.MergeRequest) PR](#gitlabToPR)
-    * [type keyer interface](#keyer)
-    * [type httpError struct](#httpError)
-        * [func (e httpError) Error() string](#httpError.Error)
     * [type brokenDB struct](#brokenDB)
-        * [func (db *brokenDB) QueryContext(ctx context.Context, q string, args ...interface{}) (*sql.Rows, error)](#brokenDB.QueryContext)
         * [func (db *brokenDB) ExecContext(ctx context.Context, q string, args ...interface{}) (sql.Result, error)](#brokenDB.ExecContext)
+        * [func (db *brokenDB) QueryContext(ctx context.Context, q string, args ...interface{}) (*sql.Rows, error)](#brokenDB.QueryContext)
         * [func (db *brokenDB) QueryRowContext(ctx context.Context, q string, args ...interface{}) *sql.Row](#brokenDB.QueryRowContext)
     * [type brokenReader struct](#brokenReader)
         * [func (br *brokenReader) Close() error](#brokenReader.Close)
         * [func (br *brokenReader) Read(p []byte) (int, error)](#brokenReader.Read)
+    * [type httpError struct](#httpError)
+        * [func (e httpError) Error() string](#httpError.Error)
+    * [type keyer interface](#keyer)
     * [type nestedTx struct](#nestedTx)
-        * [func (ntx *nestedTx) Rollback() error](#nestedTx.Rollback)
-        * [func (ntx *nestedTx) Commit() error](#nestedTx.Commit)
         * [func (ntx *nestedTx) BeginTx(ctx context.Context, opts *sql.TxOptions) error](#nestedTx.BeginTx)
+        * [func (ntx *nestedTx) Commit() error](#nestedTx.Commit)
+        * [func (ntx *nestedTx) Rollback() error](#nestedTx.Rollback)
     * [type noNestingTx struct](#noNestingTx)
         * [func (nntx *noNestingTx) BeginTx(ctx context.Context, opts *sql.TxOptions) error](#noNestingTx.BeginTx)
     * [type webhookTestCase struct](#webhookTestCase)
         * [func loadWebhookTestCase(t testing.TB, path string) webhookTestCase](#loadWebhookTestCase)
 * [Functions](#func)
-    * [func validateGitLabSecret(extSvc *types.ExternalService, secret string) (bool, error)](#validateGitLabSecret)
+    * [func TestValidateGitLabSecret(t *testing.T)](#TestValidateGitLabSecret)
+    * [func TestWebhooksIntegration(t *testing.T)](#TestWebhooksIntegration)
+    * [func assertBodyIncludes(t *testing.T, r io.Reader, want string)](#assertBodyIncludes)
+    * [func assertChangesetEventForChangeset(t *testing.T, ctx context.Context, tx *store.Store, changeset *btypes.Changeset, want btypes.ChangesetEventKind)](#assertChangesetEventForChangeset)
+    * [func createGitLabChangeset(t *testing.T, ctx context.Context, store *store.Store, repo *types.Repo) *btypes.Changeset](#createGitLabChangeset)
+    * [func createGitLabExternalService(t *testing.T, ctx context.Context, esStore *database.ExternalServiceStore) *types.ExternalService](#createGitLabExternalService)
+    * [func createGitLabRepo(t *testing.T, ctx context.Context, rstore *database.RepoStore, es *types.ExternalService) *types.Repo](#createGitLabRepo)
+    * [func createMergeRequestPayload(t *testing.T, repo *types.Repo, changeset *btypes.Changeset, action string) string](#createMergeRequestPayload)
+    * [func createPipelinePayload(t *testing.T, repo *types.Repo, changeset *btypes.Changeset, pipeline gitlab.Pipeline) string](#createPipelinePayload)
     * [func extractExternalServiceID(extSvc *types.ExternalService) (string, error)](#extractExternalServiceID)
+    * [func getSingleRepo(ctx context.Context, bitbucketSource *repos.BitbucketServerSource, name string) (*types.Repo, error)](#getSingleRepo)
+    * [func gitLabTestSetup(t *testing.T, db *sql.DB) *store.Store](#gitLabTestSetup)
     * [func respond(w http.ResponseWriter, code int, v interface{})](#respond)
+    * [func sign(t *testing.T, message, secret []byte) string](#sign)
     * [func testBitbucketWebhook(db *sql.DB, userID int32) func(*testing.T)](#testBitbucketWebhook)
     * [func testGitHubWebhook(db *sql.DB, userID int32) func(*testing.T)](#testGitHubWebhook)
     * [func testGitLabWebhook(db *sql.DB, userID int32) func(*testing.T)](#testGitLabWebhook)
-    * [func TestValidateGitLabSecret(t *testing.T)](#TestValidateGitLabSecret)
-    * [func gitLabTestSetup(t *testing.T, db *sql.DB) *store.Store](#gitLabTestSetup)
-    * [func assertBodyIncludes(t *testing.T, r io.Reader, want string)](#assertBodyIncludes)
-    * [func assertChangesetEventForChangeset(t *testing.T, ctx context.Context, tx *store.Store, changeset *btypes.Changeset, want btypes.ChangesetEventKind)](#assertChangesetEventForChangeset)
-    * [func createGitLabExternalService(t *testing.T, ctx context.Context, esStore *database.ExternalServiceStore) *types.ExternalService](#createGitLabExternalService)
-    * [func createGitLabRepo(t *testing.T, ctx context.Context, rstore *database.RepoStore, es *types.ExternalService) *types.Repo](#createGitLabRepo)
-    * [func createGitLabChangeset(t *testing.T, ctx context.Context, store *store.Store, repo *types.Repo) *btypes.Changeset](#createGitLabChangeset)
-    * [func createMergeRequestPayload(t *testing.T, repo *types.Repo, changeset *btypes.Changeset, action string) string](#createMergeRequestPayload)
-    * [func createPipelinePayload(t *testing.T, repo *types.Repo, changeset *btypes.Changeset, pipeline gitlab.Pipeline) string](#createPipelinePayload)
-    * [func getSingleRepo(ctx context.Context, bitbucketSource *repos.BitbucketServerSource, name string) (*types.Repo, error)](#getSingleRepo)
-    * [func sign(t *testing.T, message, secret []byte) string](#sign)
-    * [func TestWebhooksIntegration(t *testing.T)](#TestWebhooksIntegration)
+    * [func validateGitLabSecret(extSvc *types.ExternalService, secret string) (bool, error)](#validateGitLabSecret)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
-
-### <a id="githubEvents" href="#githubEvents">var githubEvents</a>
-
-```
-searchKey: webhooks.githubEvents
-tags: [private]
-```
-
-```Go
-var githubEvents = ...
-```
-
-githubEvents is the set of events this webhook handler listens to you can find info about what these events contain here: [https://docs.github.com/en/free-pro-team](https://docs.github.com/en/free-pro-team)@latest/developers/webhooks-and-events/webhook-events-and-payloads 
 
 ### <a id="errExternalServiceNotFound" href="#errExternalServiceNotFound">var errExternalServiceNotFound</a>
 
 ```
 searchKey: webhooks.errExternalServiceNotFound
-tags: [private]
+tags: [variable interface private]
 ```
 
 ```Go
@@ -121,7 +108,7 @@ var errExternalServiceNotFound = errors.New("external service not found")
 
 ```
 searchKey: webhooks.errExternalServiceWrongKind
-tags: [private]
+tags: [variable interface private]
 ```
 
 ```Go
@@ -132,18 +119,31 @@ var errExternalServiceWrongKind = errors.New("external service is not of the exp
 
 ```
 searchKey: webhooks.errPipelineMissingMergeRequest
-tags: [private]
+tags: [variable interface private]
 ```
 
 ```Go
 var errPipelineMissingMergeRequest = errors.New("pipeline event does not include a merge request")
 ```
 
+### <a id="githubEvents" href="#githubEvents">var githubEvents</a>
+
+```
+searchKey: webhooks.githubEvents
+tags: [variable array string private]
+```
+
+```Go
+var githubEvents = ...
+```
+
+githubEvents is the set of events this webhook handler listens to you can find info about what these events contain here: [https://docs.github.com/en/free-pro-team](https://docs.github.com/en/free-pro-team)@latest/developers/webhooks-and-events/webhook-events-and-payloads 
+
 ### <a id="update" href="#update">var update</a>
 
 ```
 searchKey: webhooks.update
-tags: [private]
+tags: [variable boolean private]
 ```
 
 ```Go
@@ -153,13 +153,14 @@ var update = flag.Bool("update", false, "update testdata")
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="BitbucketServerWebhook" href="#BitbucketServerWebhook">type BitbucketServerWebhook struct</a>
 
 ```
 searchKey: webhooks.BitbucketServerWebhook
+tags: [struct]
 ```
 
 ```Go
@@ -172,6 +173,7 @@ type BitbucketServerWebhook struct {
 
 ```
 searchKey: webhooks.NewBitbucketServerWebhook
+tags: [method]
 ```
 
 ```Go
@@ -182,38 +184,40 @@ func NewBitbucketServerWebhook(store *store.Store) *BitbucketServerWebhook
 
 ```
 searchKey: webhooks.BitbucketServerWebhook.ServeHTTP
+tags: [method]
 ```
 
 ```Go
 func (h *BitbucketServerWebhook) ServeHTTP(w http.ResponseWriter, r *http.Request)
 ```
 
-#### <a id="BitbucketServerWebhook.parseEvent" href="#BitbucketServerWebhook.parseEvent">func (h *BitbucketServerWebhook) parseEvent(r *http.Request) (interface{}, *types.ExternalService, *httpError)</a>
-
-```
-searchKey: webhooks.BitbucketServerWebhook.parseEvent
-tags: [private]
-```
-
-```Go
-func (h *BitbucketServerWebhook) parseEvent(r *http.Request) (interface{}, *types.ExternalService, *httpError)
-```
-
 #### <a id="BitbucketServerWebhook.convertEvent" href="#BitbucketServerWebhook.convertEvent">func (h *BitbucketServerWebhook) convertEvent(theirs interface{}) (prs []PR, ours keyer)</a>
 
 ```
 searchKey: webhooks.BitbucketServerWebhook.convertEvent
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (h *BitbucketServerWebhook) convertEvent(theirs interface{}) (prs []PR, ours keyer)
 ```
 
+#### <a id="BitbucketServerWebhook.parseEvent" href="#BitbucketServerWebhook.parseEvent">func (h *BitbucketServerWebhook) parseEvent(r *http.Request) (interface{}, *types.ExternalService, *httpError)</a>
+
+```
+searchKey: webhooks.BitbucketServerWebhook.parseEvent
+tags: [method private]
+```
+
+```Go
+func (h *BitbucketServerWebhook) parseEvent(r *http.Request) (interface{}, *types.ExternalService, *httpError)
+```
+
 ### <a id="GitHubWebhook" href="#GitHubWebhook">type GitHubWebhook struct</a>
 
 ```
 searchKey: webhooks.GitHubWebhook
+tags: [struct]
 ```
 
 ```Go
@@ -228,6 +232,7 @@ GitHubWebhook receives GitHub organization webhook events that are relevant to B
 
 ```
 searchKey: webhooks.NewGitHubWebhook
+tags: [method]
 ```
 
 ```Go
@@ -238,6 +243,7 @@ func NewGitHubWebhook(store *store.Store) *GitHubWebhook
 
 ```
 searchKey: webhooks.GitHubWebhook.Register
+tags: [method]
 ```
 
 ```Go
@@ -246,11 +252,90 @@ func (h *GitHubWebhook) Register(router *webhooks.GitHubWebhook)
 
 Register registers this webhook handler to handle events with the passed webhook router 
 
+#### <a id="GitHubWebhook.assignedEvent" href="#GitHubWebhook.assignedEvent">func (*GitHubWebhook) assignedEvent(e *gh.PullRequestEvent) *github.AssignedEvent</a>
+
+```
+searchKey: webhooks.GitHubWebhook.assignedEvent
+tags: [method private]
+```
+
+```Go
+func (*GitHubWebhook) assignedEvent(e *gh.PullRequestEvent) *github.AssignedEvent
+```
+
+#### <a id="GitHubWebhook.checkRunEvent" href="#GitHubWebhook.checkRunEvent">func (h *GitHubWebhook) checkRunEvent(cr *gh.CheckRun) *github.CheckRun</a>
+
+```
+searchKey: webhooks.GitHubWebhook.checkRunEvent
+tags: [method private]
+```
+
+```Go
+func (h *GitHubWebhook) checkRunEvent(cr *gh.CheckRun) *github.CheckRun
+```
+
+#### <a id="GitHubWebhook.checkSuiteEvent" href="#GitHubWebhook.checkSuiteEvent">func (h *GitHubWebhook) checkSuiteEvent(cs *gh.CheckSuite) *github.CheckSuite</a>
+
+```
+searchKey: webhooks.GitHubWebhook.checkSuiteEvent
+tags: [method private]
+```
+
+```Go
+func (h *GitHubWebhook) checkSuiteEvent(cs *gh.CheckSuite) *github.CheckSuite
+```
+
+#### <a id="GitHubWebhook.closedOrMergeEvent" href="#GitHubWebhook.closedOrMergeEvent">func (*GitHubWebhook) closedOrMergeEvent(e *gh.PullRequestEvent) keyer</a>
+
+```
+searchKey: webhooks.GitHubWebhook.closedOrMergeEvent
+tags: [method private]
+```
+
+```Go
+func (*GitHubWebhook) closedOrMergeEvent(e *gh.PullRequestEvent) keyer
+```
+
+closed events from github have a 'merged flag which identifies them as merge events instead. 
+
+#### <a id="GitHubWebhook.commitStatusEvent" href="#GitHubWebhook.commitStatusEvent">func (h *GitHubWebhook) commitStatusEvent(e *gh.StatusEvent) *github.CommitStatus</a>
+
+```
+searchKey: webhooks.GitHubWebhook.commitStatusEvent
+tags: [method private]
+```
+
+```Go
+func (h *GitHubWebhook) commitStatusEvent(e *gh.StatusEvent) *github.CommitStatus
+```
+
+#### <a id="GitHubWebhook.convertEvent" href="#GitHubWebhook.convertEvent">func (h *GitHubWebhook) convertEvent(ctx context.Context, externalServiceID string, theirs interface{}) (prs []PR, ours keyer)</a>
+
+```
+searchKey: webhooks.GitHubWebhook.convertEvent
+tags: [method private]
+```
+
+```Go
+func (h *GitHubWebhook) convertEvent(ctx context.Context, externalServiceID string, theirs interface{}) (prs []PR, ours keyer)
+```
+
+#### <a id="GitHubWebhook.convertToDraftEvent" href="#GitHubWebhook.convertToDraftEvent">func (*GitHubWebhook) convertToDraftEvent(e *gh.PullRequestEvent) *github.ConvertToDraftEvent</a>
+
+```
+searchKey: webhooks.GitHubWebhook.convertToDraftEvent
+tags: [method private]
+```
+
+```Go
+func (*GitHubWebhook) convertToDraftEvent(e *gh.PullRequestEvent) *github.ConvertToDraftEvent
+```
+
 #### <a id="GitHubWebhook.handleGitHubWebhook" href="#GitHubWebhook.handleGitHubWebhook">func (h *GitHubWebhook) handleGitHubWebhook(ctx context.Context, extSvc *types.ExternalService, payload interface{}) error</a>
 
 ```
 searchKey: webhooks.GitHubWebhook.handleGitHubWebhook
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -259,22 +344,11 @@ func (h *GitHubWebhook) handleGitHubWebhook(ctx context.Context, extSvc *types.E
 
 handleGithubWebhook is the entry point for webhooks from the webhook router, see the events it's registered to handle in GitHubWebhook.Register 
 
-#### <a id="GitHubWebhook.convertEvent" href="#GitHubWebhook.convertEvent">func (h *GitHubWebhook) convertEvent(ctx context.Context, externalServiceID string, theirs interface{}) (prs []PR, ours keyer)</a>
-
-```
-searchKey: webhooks.GitHubWebhook.convertEvent
-tags: [private]
-```
-
-```Go
-func (h *GitHubWebhook) convertEvent(ctx context.Context, externalServiceID string, theirs interface{}) (prs []PR, ours keyer)
-```
-
 #### <a id="GitHubWebhook.issueComment" href="#GitHubWebhook.issueComment">func (*GitHubWebhook) issueComment(e *gh.IssueCommentEvent) *github.IssueComment</a>
 
 ```
 searchKey: webhooks.GitHubWebhook.issueComment
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -285,173 +359,106 @@ func (*GitHubWebhook) issueComment(e *gh.IssueCommentEvent) *github.IssueComment
 
 ```
 searchKey: webhooks.GitHubWebhook.labeledEvent
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (*GitHubWebhook) labeledEvent(e *gh.PullRequestEvent) *github.LabelEvent
 ```
 
-#### <a id="GitHubWebhook.readyForReviewEvent" href="#GitHubWebhook.readyForReviewEvent">func (*GitHubWebhook) readyForReviewEvent(e *gh.PullRequestEvent) *github.ReadyForReviewEvent</a>
-
-```
-searchKey: webhooks.GitHubWebhook.readyForReviewEvent
-tags: [private]
-```
-
-```Go
-func (*GitHubWebhook) readyForReviewEvent(e *gh.PullRequestEvent) *github.ReadyForReviewEvent
-```
-
-#### <a id="GitHubWebhook.convertToDraftEvent" href="#GitHubWebhook.convertToDraftEvent">func (*GitHubWebhook) convertToDraftEvent(e *gh.PullRequestEvent) *github.ConvertToDraftEvent</a>
-
-```
-searchKey: webhooks.GitHubWebhook.convertToDraftEvent
-tags: [private]
-```
-
-```Go
-func (*GitHubWebhook) convertToDraftEvent(e *gh.PullRequestEvent) *github.ConvertToDraftEvent
-```
-
-#### <a id="GitHubWebhook.assignedEvent" href="#GitHubWebhook.assignedEvent">func (*GitHubWebhook) assignedEvent(e *gh.PullRequestEvent) *github.AssignedEvent</a>
-
-```
-searchKey: webhooks.GitHubWebhook.assignedEvent
-tags: [private]
-```
-
-```Go
-func (*GitHubWebhook) assignedEvent(e *gh.PullRequestEvent) *github.AssignedEvent
-```
-
-#### <a id="GitHubWebhook.unassignedEvent" href="#GitHubWebhook.unassignedEvent">func (*GitHubWebhook) unassignedEvent(e *gh.PullRequestEvent) *github.UnassignedEvent</a>
-
-```
-searchKey: webhooks.GitHubWebhook.unassignedEvent
-tags: [private]
-```
-
-```Go
-func (*GitHubWebhook) unassignedEvent(e *gh.PullRequestEvent) *github.UnassignedEvent
-```
-
-#### <a id="GitHubWebhook.reviewRequestedEvent" href="#GitHubWebhook.reviewRequestedEvent">func (*GitHubWebhook) reviewRequestedEvent(e *gh.PullRequestEvent) *github.ReviewRequestedEvent</a>
-
-```
-searchKey: webhooks.GitHubWebhook.reviewRequestedEvent
-tags: [private]
-```
-
-```Go
-func (*GitHubWebhook) reviewRequestedEvent(e *gh.PullRequestEvent) *github.ReviewRequestedEvent
-```
-
-#### <a id="GitHubWebhook.reviewRequestRemovedEvent" href="#GitHubWebhook.reviewRequestRemovedEvent">func (*GitHubWebhook) reviewRequestRemovedEvent(e *gh.PullRequestEvent) *github.ReviewRequestRemovedEvent</a>
-
-```
-searchKey: webhooks.GitHubWebhook.reviewRequestRemovedEvent
-tags: [private]
-```
-
-```Go
-func (*GitHubWebhook) reviewRequestRemovedEvent(e *gh.PullRequestEvent) *github.ReviewRequestRemovedEvent
-```
-
-#### <a id="GitHubWebhook.renamedTitleEvent" href="#GitHubWebhook.renamedTitleEvent">func (*GitHubWebhook) renamedTitleEvent(e *gh.PullRequestEvent) *github.RenamedTitleEvent</a>
-
-```
-searchKey: webhooks.GitHubWebhook.renamedTitleEvent
-tags: [private]
-```
-
-```Go
-func (*GitHubWebhook) renamedTitleEvent(e *gh.PullRequestEvent) *github.RenamedTitleEvent
-```
-
-#### <a id="GitHubWebhook.closedOrMergeEvent" href="#GitHubWebhook.closedOrMergeEvent">func (*GitHubWebhook) closedOrMergeEvent(e *gh.PullRequestEvent) keyer</a>
-
-```
-searchKey: webhooks.GitHubWebhook.closedOrMergeEvent
-tags: [private]
-```
-
-```Go
-func (*GitHubWebhook) closedOrMergeEvent(e *gh.PullRequestEvent) keyer
-```
-
-closed events from github have a 'merged flag which identifies them as merge events instead. 
-
-#### <a id="GitHubWebhook.reopenedEvent" href="#GitHubWebhook.reopenedEvent">func (*GitHubWebhook) reopenedEvent(e *gh.PullRequestEvent) *github.ReopenedEvent</a>
-
-```
-searchKey: webhooks.GitHubWebhook.reopenedEvent
-tags: [private]
-```
-
-```Go
-func (*GitHubWebhook) reopenedEvent(e *gh.PullRequestEvent) *github.ReopenedEvent
-```
-
-#### <a id="GitHubWebhook.pullRequestReviewEvent" href="#GitHubWebhook.pullRequestReviewEvent">func (*GitHubWebhook) pullRequestReviewEvent(e *gh.PullRequestReviewEvent) *github.PullRequestReview</a>
-
-```
-searchKey: webhooks.GitHubWebhook.pullRequestReviewEvent
-tags: [private]
-```
-
-```Go
-func (*GitHubWebhook) pullRequestReviewEvent(e *gh.PullRequestReviewEvent) *github.PullRequestReview
-```
-
 #### <a id="GitHubWebhook.pullRequestReviewCommentEvent" href="#GitHubWebhook.pullRequestReviewCommentEvent">func (*GitHubWebhook) pullRequestReviewCommentEvent(e *gh.PullRequestReviewCommentEvent) *github.PullRequestReviewComment</a>
 
 ```
 searchKey: webhooks.GitHubWebhook.pullRequestReviewCommentEvent
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (*GitHubWebhook) pullRequestReviewCommentEvent(e *gh.PullRequestReviewCommentEvent) *github.PullRequestReviewComment
 ```
 
-#### <a id="GitHubWebhook.commitStatusEvent" href="#GitHubWebhook.commitStatusEvent">func (h *GitHubWebhook) commitStatusEvent(e *gh.StatusEvent) *github.CommitStatus</a>
+#### <a id="GitHubWebhook.pullRequestReviewEvent" href="#GitHubWebhook.pullRequestReviewEvent">func (*GitHubWebhook) pullRequestReviewEvent(e *gh.PullRequestReviewEvent) *github.PullRequestReview</a>
 
 ```
-searchKey: webhooks.GitHubWebhook.commitStatusEvent
-tags: [private]
-```
-
-```Go
-func (h *GitHubWebhook) commitStatusEvent(e *gh.StatusEvent) *github.CommitStatus
-```
-
-#### <a id="GitHubWebhook.checkSuiteEvent" href="#GitHubWebhook.checkSuiteEvent">func (h *GitHubWebhook) checkSuiteEvent(cs *gh.CheckSuite) *github.CheckSuite</a>
-
-```
-searchKey: webhooks.GitHubWebhook.checkSuiteEvent
-tags: [private]
+searchKey: webhooks.GitHubWebhook.pullRequestReviewEvent
+tags: [method private]
 ```
 
 ```Go
-func (h *GitHubWebhook) checkSuiteEvent(cs *gh.CheckSuite) *github.CheckSuite
+func (*GitHubWebhook) pullRequestReviewEvent(e *gh.PullRequestReviewEvent) *github.PullRequestReview
 ```
 
-#### <a id="GitHubWebhook.checkRunEvent" href="#GitHubWebhook.checkRunEvent">func (h *GitHubWebhook) checkRunEvent(cr *gh.CheckRun) *github.CheckRun</a>
+#### <a id="GitHubWebhook.readyForReviewEvent" href="#GitHubWebhook.readyForReviewEvent">func (*GitHubWebhook) readyForReviewEvent(e *gh.PullRequestEvent) *github.ReadyForReviewEvent</a>
 
 ```
-searchKey: webhooks.GitHubWebhook.checkRunEvent
-tags: [private]
+searchKey: webhooks.GitHubWebhook.readyForReviewEvent
+tags: [method private]
 ```
 
 ```Go
-func (h *GitHubWebhook) checkRunEvent(cr *gh.CheckRun) *github.CheckRun
+func (*GitHubWebhook) readyForReviewEvent(e *gh.PullRequestEvent) *github.ReadyForReviewEvent
+```
+
+#### <a id="GitHubWebhook.renamedTitleEvent" href="#GitHubWebhook.renamedTitleEvent">func (*GitHubWebhook) renamedTitleEvent(e *gh.PullRequestEvent) *github.RenamedTitleEvent</a>
+
+```
+searchKey: webhooks.GitHubWebhook.renamedTitleEvent
+tags: [method private]
+```
+
+```Go
+func (*GitHubWebhook) renamedTitleEvent(e *gh.PullRequestEvent) *github.RenamedTitleEvent
+```
+
+#### <a id="GitHubWebhook.reopenedEvent" href="#GitHubWebhook.reopenedEvent">func (*GitHubWebhook) reopenedEvent(e *gh.PullRequestEvent) *github.ReopenedEvent</a>
+
+```
+searchKey: webhooks.GitHubWebhook.reopenedEvent
+tags: [method private]
+```
+
+```Go
+func (*GitHubWebhook) reopenedEvent(e *gh.PullRequestEvent) *github.ReopenedEvent
+```
+
+#### <a id="GitHubWebhook.reviewRequestRemovedEvent" href="#GitHubWebhook.reviewRequestRemovedEvent">func (*GitHubWebhook) reviewRequestRemovedEvent(e *gh.PullRequestEvent) *github.ReviewRequestRemovedEvent</a>
+
+```
+searchKey: webhooks.GitHubWebhook.reviewRequestRemovedEvent
+tags: [method private]
+```
+
+```Go
+func (*GitHubWebhook) reviewRequestRemovedEvent(e *gh.PullRequestEvent) *github.ReviewRequestRemovedEvent
+```
+
+#### <a id="GitHubWebhook.reviewRequestedEvent" href="#GitHubWebhook.reviewRequestedEvent">func (*GitHubWebhook) reviewRequestedEvent(e *gh.PullRequestEvent) *github.ReviewRequestedEvent</a>
+
+```
+searchKey: webhooks.GitHubWebhook.reviewRequestedEvent
+tags: [method private]
+```
+
+```Go
+func (*GitHubWebhook) reviewRequestedEvent(e *gh.PullRequestEvent) *github.ReviewRequestedEvent
+```
+
+#### <a id="GitHubWebhook.unassignedEvent" href="#GitHubWebhook.unassignedEvent">func (*GitHubWebhook) unassignedEvent(e *gh.PullRequestEvent) *github.UnassignedEvent</a>
+
+```
+searchKey: webhooks.GitHubWebhook.unassignedEvent
+tags: [method private]
+```
+
+```Go
+func (*GitHubWebhook) unassignedEvent(e *gh.PullRequestEvent) *github.UnassignedEvent
 ```
 
 ### <a id="GitLabWebhook" href="#GitLabWebhook">type GitLabWebhook struct</a>
 
 ```
 searchKey: webhooks.GitLabWebhook
+tags: [struct]
 ```
 
 ```Go
@@ -464,6 +471,7 @@ type GitLabWebhook struct {
 
 ```
 searchKey: webhooks.NewGitLabWebhook
+tags: [method]
 ```
 
 ```Go
@@ -474,6 +482,7 @@ func NewGitLabWebhook(store *store.Store) *GitLabWebhook
 
 ```
 searchKey: webhooks.GitLabWebhook.ServeHTTP
+tags: [method]
 ```
 
 ```Go
@@ -482,11 +491,33 @@ func (h *GitLabWebhook) ServeHTTP(w http.ResponseWriter, r *http.Request)
 
 ServeHTTP implements the http.Handler interface. 
 
+#### <a id="GitLabWebhook.enqueueChangesetSyncFromEvent" href="#GitLabWebhook.enqueueChangesetSyncFromEvent">func (h *GitLabWebhook) enqueueChangesetSyncFromEvent(ctx context.Context, esID string, event *webhooks.MergeRequestEventCommon) error</a>
+
+```
+searchKey: webhooks.GitLabWebhook.enqueueChangesetSyncFromEvent
+tags: [method private]
+```
+
+```Go
+func (h *GitLabWebhook) enqueueChangesetSyncFromEvent(ctx context.Context, esID string, event *webhooks.MergeRequestEventCommon) error
+```
+
+#### <a id="GitLabWebhook.getChangesetForPR" href="#GitLabWebhook.getChangesetForPR">func (h *GitLabWebhook) getChangesetForPR(ctx context.Context, tx *store.Store, pr *PR, repo *types.Repo) (*btypes.Changeset, error)</a>
+
+```
+searchKey: webhooks.GitLabWebhook.getChangesetForPR
+tags: [method private]
+```
+
+```Go
+func (h *GitLabWebhook) getChangesetForPR(ctx context.Context, tx *store.Store, pr *PR, repo *types.Repo) (*btypes.Changeset, error)
+```
+
 #### <a id="GitLabWebhook.getExternalServiceFromRawID" href="#GitLabWebhook.getExternalServiceFromRawID">func (h *GitLabWebhook) getExternalServiceFromRawID(ctx context.Context, raw string) (*types.ExternalService, error)</a>
 
 ```
 searchKey: webhooks.GitLabWebhook.getExternalServiceFromRawID
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -501,7 +532,7 @@ On failure, errExternalServiceNotFound is returned if the ID doesn't match any G
 
 ```
 searchKey: webhooks.GitLabWebhook.handleEvent
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -510,43 +541,49 @@ func (h *GitLabWebhook) handleEvent(ctx context.Context, extSvc *types.ExternalS
 
 handleEvent is essentially a router: it dispatches based on the event type to perform whatever changeset action is appropriate for that event. 
 
-#### <a id="GitLabWebhook.enqueueChangesetSyncFromEvent" href="#GitLabWebhook.enqueueChangesetSyncFromEvent">func (h *GitLabWebhook) enqueueChangesetSyncFromEvent(ctx context.Context, esID string, event *webhooks.MergeRequestEventCommon) error</a>
-
-```
-searchKey: webhooks.GitLabWebhook.enqueueChangesetSyncFromEvent
-tags: [private]
-```
-
-```Go
-func (h *GitLabWebhook) enqueueChangesetSyncFromEvent(ctx context.Context, esID string, event *webhooks.MergeRequestEventCommon) error
-```
-
 #### <a id="GitLabWebhook.handlePipelineEvent" href="#GitLabWebhook.handlePipelineEvent">func (h *GitLabWebhook) handlePipelineEvent(ctx context.Context, esID string, event *webhooks.PipelineEvent) error</a>
 
 ```
 searchKey: webhooks.GitLabWebhook.handlePipelineEvent
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (h *GitLabWebhook) handlePipelineEvent(ctx context.Context, esID string, event *webhooks.PipelineEvent) error
 ```
 
-#### <a id="GitLabWebhook.getChangesetForPR" href="#GitLabWebhook.getChangesetForPR">func (h *GitLabWebhook) getChangesetForPR(ctx context.Context, tx *store.Store, pr *PR, repo *types.Repo) (*btypes.Changeset, error)</a>
+### <a id="PR" href="#PR">type PR struct</a>
 
 ```
-searchKey: webhooks.GitLabWebhook.getChangesetForPR
-tags: [private]
+searchKey: webhooks.PR
+tags: [struct]
 ```
 
 ```Go
-func (h *GitLabWebhook) getChangesetForPR(ctx context.Context, tx *store.Store, pr *PR, repo *types.Repo) (*btypes.Changeset, error)
+type PR struct {
+	ID             int64
+	RepoExternalID string
+}
 ```
+
+#### <a id="gitlabToPR" href="#gitlabToPR">func gitlabToPR(project *gitlab.ProjectCommon, mr *gitlab.MergeRequest) PR</a>
+
+```
+searchKey: webhooks.gitlabToPR
+tags: [method private]
+```
+
+```Go
+func gitlabToPR(project *gitlab.ProjectCommon, mr *gitlab.MergeRequest) PR
+```
+
+gitlabToPR instantiates a new PR instance given fields that are commonly available in GitLab webhook payloads. 
 
 ### <a id="Webhook" href="#Webhook">type Webhook struct</a>
 
 ```
 searchKey: webhooks.Webhook
+tags: [struct]
 ```
 
 ```Go
@@ -563,7 +600,7 @@ type Webhook struct {
 
 ```
 searchKey: webhooks.Webhook.getRepoForPR
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -579,7 +616,7 @@ func (h Webhook) getRepoForPR(
 
 ```
 searchKey: webhooks.Webhook.upsertChangesetEvent
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -591,50 +628,92 @@ func (h Webhook) upsertChangesetEvent(
 ) (err error)
 ```
 
-### <a id="PR" href="#PR">type PR struct</a>
+### <a id="brokenDB" href="#brokenDB">type brokenDB struct</a>
 
 ```
-searchKey: webhooks.PR
-```
-
-```Go
-type PR struct {
-	ID             int64
-	RepoExternalID string
-}
-```
-
-#### <a id="gitlabToPR" href="#gitlabToPR">func gitlabToPR(project *gitlab.ProjectCommon, mr *gitlab.MergeRequest) PR</a>
-
-```
-searchKey: webhooks.gitlabToPR
-tags: [private]
+searchKey: webhooks.brokenDB
+tags: [struct private]
 ```
 
 ```Go
-func gitlabToPR(project *gitlab.ProjectCommon, mr *gitlab.MergeRequest) PR
+type brokenDB struct{ err error }
 ```
 
-gitlabToPR instantiates a new PR instance given fields that are commonly available in GitLab webhook payloads. 
+brokenDB provides a dbutil.DB that always fails: for methods that return an error, the err field will be returned; otherwise nil will be returned. 
 
-### <a id="keyer" href="#keyer">type keyer interface</a>
+#### <a id="brokenDB.ExecContext" href="#brokenDB.ExecContext">func (db *brokenDB) ExecContext(ctx context.Context, q string, args ...interface{}) (sql.Result, error)</a>
 
 ```
-searchKey: webhooks.keyer
-tags: [private]
+searchKey: webhooks.brokenDB.ExecContext
+tags: [method private]
 ```
 
 ```Go
-type keyer interface {
-	Key() string
-}
+func (db *brokenDB) ExecContext(ctx context.Context, q string, args ...interface{}) (sql.Result, error)
+```
+
+#### <a id="brokenDB.QueryContext" href="#brokenDB.QueryContext">func (db *brokenDB) QueryContext(ctx context.Context, q string, args ...interface{}) (*sql.Rows, error)</a>
+
+```
+searchKey: webhooks.brokenDB.QueryContext
+tags: [method private]
+```
+
+```Go
+func (db *brokenDB) QueryContext(ctx context.Context, q string, args ...interface{}) (*sql.Rows, error)
+```
+
+#### <a id="brokenDB.QueryRowContext" href="#brokenDB.QueryRowContext">func (db *brokenDB) QueryRowContext(ctx context.Context, q string, args ...interface{}) *sql.Row</a>
+
+```
+searchKey: webhooks.brokenDB.QueryRowContext
+tags: [method private]
+```
+
+```Go
+func (db *brokenDB) QueryRowContext(ctx context.Context, q string, args ...interface{}) *sql.Row
+```
+
+### <a id="brokenReader" href="#brokenReader">type brokenReader struct</a>
+
+```
+searchKey: webhooks.brokenReader
+tags: [struct private]
+```
+
+```Go
+type brokenReader struct{ err error }
+```
+
+brokenReader implements an io.ReadCloser that always returns an error when read. 
+
+#### <a id="brokenReader.Close" href="#brokenReader.Close">func (br *brokenReader) Close() error</a>
+
+```
+searchKey: webhooks.brokenReader.Close
+tags: [function private]
+```
+
+```Go
+func (br *brokenReader) Close() error
+```
+
+#### <a id="brokenReader.Read" href="#brokenReader.Read">func (br *brokenReader) Read(p []byte) (int, error)</a>
+
+```
+searchKey: webhooks.brokenReader.Read
+tags: [method private]
+```
+
+```Go
+func (br *brokenReader) Read(p []byte) (int, error)
 ```
 
 ### <a id="httpError" href="#httpError">type httpError struct</a>
 
 ```
 searchKey: webhooks.httpError
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -648,99 +727,31 @@ type httpError struct {
 
 ```
 searchKey: webhooks.httpError.Error
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (e httpError) Error() string
 ```
 
-### <a id="brokenDB" href="#brokenDB">type brokenDB struct</a>
+### <a id="keyer" href="#keyer">type keyer interface</a>
 
 ```
-searchKey: webhooks.brokenDB
-tags: [private]
-```
-
-```Go
-type brokenDB struct{ err error }
-```
-
-brokenDB provides a dbutil.DB that always fails: for methods that return an error, the err field will be returned; otherwise nil will be returned. 
-
-#### <a id="brokenDB.QueryContext" href="#brokenDB.QueryContext">func (db *brokenDB) QueryContext(ctx context.Context, q string, args ...interface{}) (*sql.Rows, error)</a>
-
-```
-searchKey: webhooks.brokenDB.QueryContext
-tags: [private]
+searchKey: webhooks.keyer
+tags: [interface private]
 ```
 
 ```Go
-func (db *brokenDB) QueryContext(ctx context.Context, q string, args ...interface{}) (*sql.Rows, error)
-```
-
-#### <a id="brokenDB.ExecContext" href="#brokenDB.ExecContext">func (db *brokenDB) ExecContext(ctx context.Context, q string, args ...interface{}) (sql.Result, error)</a>
-
-```
-searchKey: webhooks.brokenDB.ExecContext
-tags: [private]
-```
-
-```Go
-func (db *brokenDB) ExecContext(ctx context.Context, q string, args ...interface{}) (sql.Result, error)
-```
-
-#### <a id="brokenDB.QueryRowContext" href="#brokenDB.QueryRowContext">func (db *brokenDB) QueryRowContext(ctx context.Context, q string, args ...interface{}) *sql.Row</a>
-
-```
-searchKey: webhooks.brokenDB.QueryRowContext
-tags: [private]
-```
-
-```Go
-func (db *brokenDB) QueryRowContext(ctx context.Context, q string, args ...interface{}) *sql.Row
-```
-
-### <a id="brokenReader" href="#brokenReader">type brokenReader struct</a>
-
-```
-searchKey: webhooks.brokenReader
-tags: [private]
-```
-
-```Go
-type brokenReader struct{ err error }
-```
-
-brokenReader implements an io.ReadCloser that always returns an error when read. 
-
-#### <a id="brokenReader.Close" href="#brokenReader.Close">func (br *brokenReader) Close() error</a>
-
-```
-searchKey: webhooks.brokenReader.Close
-tags: [private]
-```
-
-```Go
-func (br *brokenReader) Close() error
-```
-
-#### <a id="brokenReader.Read" href="#brokenReader.Read">func (br *brokenReader) Read(p []byte) (int, error)</a>
-
-```
-searchKey: webhooks.brokenReader.Read
-tags: [private]
-```
-
-```Go
-func (br *brokenReader) Read(p []byte) (int, error)
+type keyer interface {
+	Key() string
+}
 ```
 
 ### <a id="nestedTx" href="#nestedTx">type nestedTx struct</a>
 
 ```
 searchKey: webhooks.nestedTx
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -751,44 +762,44 @@ nestedTx wraps an existing transaction and overrides its transaction methods to 
 
 It would be theoretically possible to use savepoints to implement something resembling the semantics of a true nested transaction, but that's unnecessary for these tests. 
 
-#### <a id="nestedTx.Rollback" href="#nestedTx.Rollback">func (ntx *nestedTx) Rollback() error</a>
-
-```
-searchKey: webhooks.nestedTx.Rollback
-tags: [private]
-```
-
-```Go
-func (ntx *nestedTx) Rollback() error
-```
-
-#### <a id="nestedTx.Commit" href="#nestedTx.Commit">func (ntx *nestedTx) Commit() error</a>
-
-```
-searchKey: webhooks.nestedTx.Commit
-tags: [private]
-```
-
-```Go
-func (ntx *nestedTx) Commit() error
-```
-
 #### <a id="nestedTx.BeginTx" href="#nestedTx.BeginTx">func (ntx *nestedTx) BeginTx(ctx context.Context, opts *sql.TxOptions) error</a>
 
 ```
 searchKey: webhooks.nestedTx.BeginTx
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (ntx *nestedTx) BeginTx(ctx context.Context, opts *sql.TxOptions) error
 ```
 
+#### <a id="nestedTx.Commit" href="#nestedTx.Commit">func (ntx *nestedTx) Commit() error</a>
+
+```
+searchKey: webhooks.nestedTx.Commit
+tags: [function private]
+```
+
+```Go
+func (ntx *nestedTx) Commit() error
+```
+
+#### <a id="nestedTx.Rollback" href="#nestedTx.Rollback">func (ntx *nestedTx) Rollback() error</a>
+
+```
+searchKey: webhooks.nestedTx.Rollback
+tags: [function private]
+```
+
+```Go
+func (ntx *nestedTx) Rollback() error
+```
+
 ### <a id="noNestingTx" href="#noNestingTx">type noNestingTx struct</a>
 
 ```
 searchKey: webhooks.noNestingTx
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -801,7 +812,7 @@ noNestingTx is another transaction wrapper that always returns an error when a t
 
 ```
 searchKey: webhooks.noNestingTx.BeginTx
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -812,7 +823,7 @@ func (nntx *noNestingTx) BeginTx(ctx context.Context, opts *sql.TxOptions) error
 
 ```
 searchKey: webhooks.webhookTestCase
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -829,7 +840,7 @@ type webhookTestCase struct {
 
 ```
 searchKey: webhooks.loadWebhookTestCase
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -839,110 +850,36 @@ func loadWebhookTestCase(t testing.TB, path string) webhookTestCase
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
-```
-
-### <a id="validateGitLabSecret" href="#validateGitLabSecret">func validateGitLabSecret(extSvc *types.ExternalService, secret string) (bool, error)</a>
-
-```
-searchKey: webhooks.validateGitLabSecret
-tags: [private]
-```
-
-```Go
-func validateGitLabSecret(extSvc *types.ExternalService, secret string) (bool, error)
-```
-
-validateGitLabSecret validates that the given secret matches one of the webhooks in the external service. 
-
-### <a id="extractExternalServiceID" href="#extractExternalServiceID">func extractExternalServiceID(extSvc *types.ExternalService) (string, error)</a>
-
-```
-searchKey: webhooks.extractExternalServiceID
-tags: [private]
-```
-
-```Go
-func extractExternalServiceID(extSvc *types.ExternalService) (string, error)
-```
-
-### <a id="respond" href="#respond">func respond(w http.ResponseWriter, code int, v interface{})</a>
-
-```
-searchKey: webhooks.respond
-tags: [private]
-```
-
-```Go
-func respond(w http.ResponseWriter, code int, v interface{})
-```
-
-### <a id="testBitbucketWebhook" href="#testBitbucketWebhook">func testBitbucketWebhook(db *sql.DB, userID int32) func(*testing.T)</a>
-
-```
-searchKey: webhooks.testBitbucketWebhook
-tags: [private]
-```
-
-```Go
-func testBitbucketWebhook(db *sql.DB, userID int32) func(*testing.T)
-```
-
-Run from integration_test.go 
-
-### <a id="testGitHubWebhook" href="#testGitHubWebhook">func testGitHubWebhook(db *sql.DB, userID int32) func(*testing.T)</a>
-
-```
-searchKey: webhooks.testGitHubWebhook
-tags: [private]
-```
-
-```Go
-func testGitHubWebhook(db *sql.DB, userID int32) func(*testing.T)
-```
-
-Run from integration_test.go 
-
-### <a id="testGitLabWebhook" href="#testGitLabWebhook">func testGitLabWebhook(db *sql.DB, userID int32) func(*testing.T)</a>
-
-```
-searchKey: webhooks.testGitLabWebhook
-tags: [private]
-```
-
-```Go
-func testGitLabWebhook(db *sql.DB, userID int32) func(*testing.T)
+tags: [package private]
 ```
 
 ### <a id="TestValidateGitLabSecret" href="#TestValidateGitLabSecret">func TestValidateGitLabSecret(t *testing.T)</a>
 
 ```
 searchKey: webhooks.TestValidateGitLabSecret
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestValidateGitLabSecret(t *testing.T)
 ```
 
-### <a id="gitLabTestSetup" href="#gitLabTestSetup">func gitLabTestSetup(t *testing.T, db *sql.DB) *store.Store</a>
+### <a id="TestWebhooksIntegration" href="#TestWebhooksIntegration">func TestWebhooksIntegration(t *testing.T)</a>
 
 ```
-searchKey: webhooks.gitLabTestSetup
-tags: [private]
+searchKey: webhooks.TestWebhooksIntegration
+tags: [method private test]
 ```
 
 ```Go
-func gitLabTestSetup(t *testing.T, db *sql.DB) *store.Store
+func TestWebhooksIntegration(t *testing.T)
 ```
-
-gitLabTestSetup instantiates the stores and a clock for use within tests. Any changes made to the stores will be rolled back after the test is complete. 
 
 ### <a id="assertBodyIncludes" href="#assertBodyIncludes">func assertBodyIncludes(t *testing.T, r io.Reader, want string)</a>
 
 ```
 searchKey: webhooks.assertBodyIncludes
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -955,7 +892,7 @@ assertBodyIncludes checks for a specific substring within the given response bod
 
 ```
 searchKey: webhooks.assertChangesetEventForChangeset
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -964,11 +901,24 @@ func assertChangesetEventForChangeset(t *testing.T, ctx context.Context, tx *sto
 
 assertChangesetEventForChangeset checks that one (and only one) changeset event has been created on the given changeset, and that it is of the given kind. 
 
+### <a id="createGitLabChangeset" href="#createGitLabChangeset">func createGitLabChangeset(t *testing.T, ctx context.Context, store *store.Store, repo *types.Repo) *btypes.Changeset</a>
+
+```
+searchKey: webhooks.createGitLabChangeset
+tags: [method private]
+```
+
+```Go
+func createGitLabChangeset(t *testing.T, ctx context.Context, store *store.Store, repo *types.Repo) *btypes.Changeset
+```
+
+createGitLabChangeset creates a mock GitLab changeset. 
+
 ### <a id="createGitLabExternalService" href="#createGitLabExternalService">func createGitLabExternalService(t *testing.T, ctx context.Context, esStore *database.ExternalServiceStore) *types.ExternalService</a>
 
 ```
 searchKey: webhooks.createGitLabExternalService
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -981,7 +931,7 @@ createGitLabExternalService creates a mock GitLab service with a valid configura
 
 ```
 searchKey: webhooks.createGitLabRepo
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -990,24 +940,11 @@ func createGitLabRepo(t *testing.T, ctx context.Context, rstore *database.RepoSt
 
 createGitLabRepo creates a mock GitLab repo attached to the given external service. 
 
-### <a id="createGitLabChangeset" href="#createGitLabChangeset">func createGitLabChangeset(t *testing.T, ctx context.Context, store *store.Store, repo *types.Repo) *btypes.Changeset</a>
-
-```
-searchKey: webhooks.createGitLabChangeset
-tags: [private]
-```
-
-```Go
-func createGitLabChangeset(t *testing.T, ctx context.Context, store *store.Store, repo *types.Repo) *btypes.Changeset
-```
-
-createGitLabChangeset creates a mock GitLab changeset. 
-
 ### <a id="createMergeRequestPayload" href="#createMergeRequestPayload">func createMergeRequestPayload(t *testing.T, repo *types.Repo, changeset *btypes.Changeset, action string) string</a>
 
 ```
 searchKey: webhooks.createMergeRequestPayload
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1020,7 +957,7 @@ createMergeRequestPayload creates a mock GitLab webhook payload of the merge req
 
 ```
 searchKey: webhooks.createPipelinePayload
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1029,36 +966,110 @@ func createPipelinePayload(t *testing.T, repo *types.Repo, changeset *btypes.Cha
 
 createPipelinePayload creates a mock GitLab webhook payload of the pipeline object kind. 
 
+### <a id="extractExternalServiceID" href="#extractExternalServiceID">func extractExternalServiceID(extSvc *types.ExternalService) (string, error)</a>
+
+```
+searchKey: webhooks.extractExternalServiceID
+tags: [method private]
+```
+
+```Go
+func extractExternalServiceID(extSvc *types.ExternalService) (string, error)
+```
+
 ### <a id="getSingleRepo" href="#getSingleRepo">func getSingleRepo(ctx context.Context, bitbucketSource *repos.BitbucketServerSource, name string) (*types.Repo, error)</a>
 
 ```
 searchKey: webhooks.getSingleRepo
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func getSingleRepo(ctx context.Context, bitbucketSource *repos.BitbucketServerSource, name string) (*types.Repo, error)
 ```
 
+### <a id="gitLabTestSetup" href="#gitLabTestSetup">func gitLabTestSetup(t *testing.T, db *sql.DB) *store.Store</a>
+
+```
+searchKey: webhooks.gitLabTestSetup
+tags: [method private]
+```
+
+```Go
+func gitLabTestSetup(t *testing.T, db *sql.DB) *store.Store
+```
+
+gitLabTestSetup instantiates the stores and a clock for use within tests. Any changes made to the stores will be rolled back after the test is complete. 
+
+### <a id="respond" href="#respond">func respond(w http.ResponseWriter, code int, v interface{})</a>
+
+```
+searchKey: webhooks.respond
+tags: [method private]
+```
+
+```Go
+func respond(w http.ResponseWriter, code int, v interface{})
+```
+
 ### <a id="sign" href="#sign">func sign(t *testing.T, message, secret []byte) string</a>
 
 ```
 searchKey: webhooks.sign
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func sign(t *testing.T, message, secret []byte) string
 ```
 
-### <a id="TestWebhooksIntegration" href="#TestWebhooksIntegration">func TestWebhooksIntegration(t *testing.T)</a>
+### <a id="testBitbucketWebhook" href="#testBitbucketWebhook">func testBitbucketWebhook(db *sql.DB, userID int32) func(*testing.T)</a>
 
 ```
-searchKey: webhooks.TestWebhooksIntegration
-tags: [private]
+searchKey: webhooks.testBitbucketWebhook
+tags: [method private]
 ```
 
 ```Go
-func TestWebhooksIntegration(t *testing.T)
+func testBitbucketWebhook(db *sql.DB, userID int32) func(*testing.T)
 ```
+
+Run from integration_test.go 
+
+### <a id="testGitHubWebhook" href="#testGitHubWebhook">func testGitHubWebhook(db *sql.DB, userID int32) func(*testing.T)</a>
+
+```
+searchKey: webhooks.testGitHubWebhook
+tags: [method private]
+```
+
+```Go
+func testGitHubWebhook(db *sql.DB, userID int32) func(*testing.T)
+```
+
+Run from integration_test.go 
+
+### <a id="testGitLabWebhook" href="#testGitLabWebhook">func testGitLabWebhook(db *sql.DB, userID int32) func(*testing.T)</a>
+
+```
+searchKey: webhooks.testGitLabWebhook
+tags: [method private]
+```
+
+```Go
+func testGitLabWebhook(db *sql.DB, userID int32) func(*testing.T)
+```
+
+### <a id="validateGitLabSecret" href="#validateGitLabSecret">func validateGitLabSecret(extSvc *types.ExternalService, secret string) (bool, error)</a>
+
+```
+searchKey: webhooks.validateGitLabSecret
+tags: [method private]
+```
+
+```Go
+func validateGitLabSecret(extSvc *types.ExternalService, secret string) (bool, error)
+```
+
+validateGitLabSecret validates that the given secret matches one of the webhooks in the external service. 
 

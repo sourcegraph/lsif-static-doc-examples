@@ -3,50 +3,33 @@
 ## Index
 
 * [Types](#type)
-    * [type Repo struct](#Repo)
     * [type Client struct](#Client)
         * [func NewClient(host string) *Client](#NewClient)
         * [func (c *Client) ListRepos(ctx context.Context) ([]*Repo, error)](#Client.ListRepos)
+    * [type Repo struct](#Repo)
     * [type errUnauthorized struct](#errUnauthorized)
         * [func (*errUnauthorized) Unauthorized() bool](#errUnauthorized.Unauthorized)
 * [Functions](#func)
+    * [func CloneURL(externalRepoSpec api.ExternalRepoSpec) string](#CloneURL)
     * [func ExternalRepoSpec(repo *Repo, serviceID string) api.ExternalRepoSpec](#ExternalRepoSpec)
     * [func ServiceID(gitoliteHost string) string](#ServiceID)
-    * [func CloneURL(externalRepoSpec api.ExternalRepoSpec) string](#CloneURL)
-    * [func decodeRepos(host, gitoliteInfo string) []*Repo](#decodeRepos)
-    * [func maybeUnauthorized(err error) error](#maybeUnauthorized)
     * [func TestDecodeRepos(t *testing.T)](#TestDecodeRepos)
     * [func TestMaybeUnauthorized(t *testing.T)](#TestMaybeUnauthorized)
+    * [func decodeRepos(host, gitoliteInfo string) []*Repo](#decodeRepos)
+    * [func maybeUnauthorized(err error) error](#maybeUnauthorized)
 
 
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
-
-### <a id="Repo" href="#Repo">type Repo struct</a>
-
-```
-searchKey: gitolite.Repo
-```
-
-```Go
-type Repo struct {
-	// Name is the name of the repository as it is returned by `ssh git@GITOLITE_HOST info`
-	Name string
-
-	// URL is the clone URL of the repository.
-	URL string
-}
-```
-
-Repo is the repository metadata returned by the Gitolite API. 
 
 ### <a id="Client" href="#Client">type Client struct</a>
 
 ```
 searchKey: gitolite.Client
+tags: [struct]
 ```
 
 ```Go
@@ -65,6 +48,7 @@ Impl note: To change the above, remove the invocation of the `ssh` binary and re
 
 ```
 searchKey: gitolite.NewClient
+tags: [method]
 ```
 
 ```Go
@@ -75,17 +59,37 @@ func NewClient(host string) *Client
 
 ```
 searchKey: gitolite.Client.ListRepos
+tags: [method]
 ```
 
 ```Go
 func (c *Client) ListRepos(ctx context.Context) ([]*Repo, error)
 ```
 
+### <a id="Repo" href="#Repo">type Repo struct</a>
+
+```
+searchKey: gitolite.Repo
+tags: [struct]
+```
+
+```Go
+type Repo struct {
+	// Name is the name of the repository as it is returned by `ssh git@GITOLITE_HOST info`
+	Name string
+
+	// URL is the clone URL of the repository.
+	URL string
+}
+```
+
+Repo is the repository metadata returned by the Gitolite API. 
+
 ### <a id="errUnauthorized" href="#errUnauthorized">type errUnauthorized struct</a>
 
 ```
 searchKey: gitolite.errUnauthorized
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -98,7 +102,7 @@ type errUnauthorized struct {
 
 ```
 searchKey: gitolite.errUnauthorized.Unauthorized
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -108,13 +112,27 @@ func (*errUnauthorized) Unauthorized() bool
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
+
+### <a id="CloneURL" href="#CloneURL">func CloneURL(externalRepoSpec api.ExternalRepoSpec) string</a>
+
+```
+searchKey: gitolite.CloneURL
+tags: [method]
+```
+
+```Go
+func CloneURL(externalRepoSpec api.ExternalRepoSpec) string
+```
+
+CloneURL returns the clone URL of the external repository. The external repo spec must be of type "gitolite"; otherwise, this will return an empty string. 
 
 ### <a id="ExternalRepoSpec" href="#ExternalRepoSpec">func ExternalRepoSpec(repo *Repo, serviceID string) api.ExternalRepoSpec</a>
 
 ```
 searchKey: gitolite.ExternalRepoSpec
+tags: [method]
 ```
 
 ```Go
@@ -125,53 +143,18 @@ func ExternalRepoSpec(repo *Repo, serviceID string) api.ExternalRepoSpec
 
 ```
 searchKey: gitolite.ServiceID
+tags: [method]
 ```
 
 ```Go
 func ServiceID(gitoliteHost string) string
 ```
 
-### <a id="CloneURL" href="#CloneURL">func CloneURL(externalRepoSpec api.ExternalRepoSpec) string</a>
-
-```
-searchKey: gitolite.CloneURL
-```
-
-```Go
-func CloneURL(externalRepoSpec api.ExternalRepoSpec) string
-```
-
-CloneURL returns the clone URL of the external repository. The external repo spec must be of type "gitolite"; otherwise, this will return an empty string. 
-
-### <a id="decodeRepos" href="#decodeRepos">func decodeRepos(host, gitoliteInfo string) []*Repo</a>
-
-```
-searchKey: gitolite.decodeRepos
-tags: [private]
-```
-
-```Go
-func decodeRepos(host, gitoliteInfo string) []*Repo
-```
-
-### <a id="maybeUnauthorized" href="#maybeUnauthorized">func maybeUnauthorized(err error) error</a>
-
-```
-searchKey: gitolite.maybeUnauthorized
-tags: [private]
-```
-
-```Go
-func maybeUnauthorized(err error) error
-```
-
-newErrUnauthorized will return an errUnauthorized wrapping err if there is permission issue. Otherwise, it return err unchanged This ensures that we implement the unauthorizeder interface from the errcode package 
-
 ### <a id="TestDecodeRepos" href="#TestDecodeRepos">func TestDecodeRepos(t *testing.T)</a>
 
 ```
 searchKey: gitolite.TestDecodeRepos
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -182,10 +165,34 @@ func TestDecodeRepos(t *testing.T)
 
 ```
 searchKey: gitolite.TestMaybeUnauthorized
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestMaybeUnauthorized(t *testing.T)
 ```
+
+### <a id="decodeRepos" href="#decodeRepos">func decodeRepos(host, gitoliteInfo string) []*Repo</a>
+
+```
+searchKey: gitolite.decodeRepos
+tags: [method private]
+```
+
+```Go
+func decodeRepos(host, gitoliteInfo string) []*Repo
+```
+
+### <a id="maybeUnauthorized" href="#maybeUnauthorized">func maybeUnauthorized(err error) error</a>
+
+```
+searchKey: gitolite.maybeUnauthorized
+tags: [method private]
+```
+
+```Go
+func maybeUnauthorized(err error) error
+```
+
+newErrUnauthorized will return an errUnauthorized wrapping err if there is permission issue. Otherwise, it return err unchanged This ensures that we implement the unauthorizeder interface from the errcode package 
 

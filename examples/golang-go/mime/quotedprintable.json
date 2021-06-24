@@ -4,7 +4,9 @@
     "identifier": "quotedprintable",
     "newPage": true,
     "searchKey": "mime/quotedprintable",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -41,6 +45,8 @@
                 "newPage": false,
                 "searchKey": "quotedprintable.lineMaxLen",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -63,6 +69,8 @@
                 "newPage": false,
                 "searchKey": "quotedprintable.upperhex",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -87,7 +95,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -100,12 +110,39 @@
         "children": [
           {
             "node": {
+              "pathID": "/mime/quotedprintable#badSoftRx",
+              "documentation": {
+                "identifier": "badSoftRx",
+                "newPage": false,
+                "searchKey": "quotedprintable.badSoftRx",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var badSoftRx"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar badSoftRx = regexp.MustCompile(`=([^\\r\\n]+?\\n)|([^\\r\\n]+$)|(\\r$)|(\\r[^\\n]+\\n)|( \\r\\n)`)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/mime/quotedprintable#crlf",
               "documentation": {
                 "identifier": "crlf",
                 "newPage": false,
                 "searchKey": "quotedprintable.crlf",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -128,6 +165,9 @@
                 "newPage": false,
                 "searchKey": "quotedprintable.lf",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -150,6 +190,9 @@
                 "newPage": false,
                 "searchKey": "quotedprintable.softSuffix",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -166,56 +209,15 @@
           },
           {
             "node": {
-              "pathID": "/mime/quotedprintable#useQprint",
-              "documentation": {
-                "identifier": "useQprint",
-                "newPage": false,
-                "searchKey": "quotedprintable.useQprint",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var useQprint"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar useQprint = flag.Bool(\"qprint\", false, \"Compare against the 'qprint' program.\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/quotedprintable#badSoftRx",
-              "documentation": {
-                "identifier": "badSoftRx",
-                "newPage": false,
-                "searchKey": "quotedprintable.badSoftRx",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var badSoftRx"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar badSoftRx = regexp.MustCompile(`=([^\\r\\n]+?\\n)|([^\\r\\n]+$)|(\\r$)|(\\r[^\\n]+\\n)|( \\r\\n)`)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/mime/quotedprintable#testMsg",
               "documentation": {
                 "identifier": "testMsg",
                 "newPage": false,
                 "searchKey": "quotedprintable.testMsg",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -226,6 +228,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar testMsg = ...\n```\n\nFrom [https://fr.wikipedia.org/wiki/Quoted-Printable](https://fr.wikipedia.org/wiki/Quoted-Printable) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/quotedprintable#useQprint",
+              "documentation": {
+                "identifier": "useQprint",
+                "newPage": false,
+                "searchKey": "quotedprintable.useQprint",
+                "tags": [
+                  "variable",
+                  "boolean",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var useQprint"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar useQprint = flag.Bool(\"qprint\", false, \"Compare against the 'qprint' program.\")\n```\n\n"
               },
               "children": null
             }
@@ -240,7 +266,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -258,7 +286,9 @@
                 "identifier": "Reader",
                 "newPage": false,
                 "searchKey": "quotedprintable.Reader",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -276,7 +306,9 @@
                       "identifier": "NewReader",
                       "newPage": false,
                       "searchKey": "quotedprintable.NewReader",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -296,7 +328,9 @@
                       "identifier": "Reader.Read",
                       "newPage": false,
                       "searchKey": "quotedprintable.Reader.Read",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -319,7 +353,9 @@
                 "identifier": "Writer",
                 "newPage": false,
                 "searchKey": "quotedprintable.Writer",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -337,7 +373,9 @@
                       "identifier": "NewWriter",
                       "newPage": false,
                       "searchKey": "quotedprintable.NewWriter",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -352,32 +390,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/mime/quotedprintable#Writer.Write",
-                    "documentation": {
-                      "identifier": "Writer.Write",
-                      "newPage": false,
-                      "searchKey": "quotedprintable.Writer.Write",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (w *Writer) Write(p []byte) (n int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (w *Writer) Write(p []byte) (n int, err error)\n```\n\nWrite encodes p using quoted-printable encoding and writes it to the underlying io.Writer. It limits line length to 76 characters. The encoded bytes are not necessarily flushed until the Writer is closed. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/mime/quotedprintable#Writer.Close",
                     "documentation": {
                       "identifier": "Writer.Close",
                       "newPage": false,
                       "searchKey": "quotedprintable.Writer.Close",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -392,44 +412,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/mime/quotedprintable#Writer.write",
+                    "pathID": "/mime/quotedprintable#Writer.Write",
                     "documentation": {
-                      "identifier": "Writer.write",
+                      "identifier": "Writer.Write",
                       "newPage": false,
-                      "searchKey": "quotedprintable.Writer.write",
+                      "searchKey": "quotedprintable.Writer.Write",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (w *Writer) write(p []byte) error"
+                      "value": "func (w *Writer) Write(p []byte) (n int, err error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (w *Writer) write(p []byte) error\n```\n\nwrite limits text encoded in quoted-printable to 76 characters per line. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/mime/quotedprintable#Writer.encode",
-                    "documentation": {
-                      "identifier": "Writer.encode",
-                      "newPage": false,
-                      "searchKey": "quotedprintable.Writer.encode",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (w *Writer) encode(b byte) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (w *Writer) encode(b byte) error\n```\n\n"
+                      "value": "```Go\nfunc (w *Writer) Write(p []byte) (n int, err error)\n```\n\nWrite encodes p using quoted-printable encoding and writes it to the underlying io.Writer. It limits line length to 76 characters. The encoded bytes are not necessarily flushed until the Writer is closed. \n\n"
                     },
                     "children": null
                   }
@@ -442,6 +440,7 @@
                       "newPage": false,
                       "searchKey": "quotedprintable.Writer.checkLastByte",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -458,22 +457,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/mime/quotedprintable#Writer.insertSoftLineBreak",
+                    "pathID": "/mime/quotedprintable#Writer.encode",
                     "documentation": {
-                      "identifier": "Writer.insertSoftLineBreak",
+                      "identifier": "Writer.encode",
                       "newPage": false,
-                      "searchKey": "quotedprintable.Writer.insertSoftLineBreak",
+                      "searchKey": "quotedprintable.Writer.encode",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (w *Writer) insertSoftLineBreak() error"
+                      "value": "func (w *Writer) encode(b byte) error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (w *Writer) insertSoftLineBreak() error\n```\n\n"
+                      "value": "```Go\nfunc (w *Writer) encode(b byte) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/mime/quotedprintable#Writer.flush",
+                    "documentation": {
+                      "identifier": "Writer.flush",
+                      "newPage": false,
+                      "searchKey": "quotedprintable.Writer.flush",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) flush() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) flush() error\n```\n\n"
                     },
                     "children": null
                   }
@@ -486,6 +509,7 @@
                       "newPage": false,
                       "searchKey": "quotedprintable.Writer.insertCRLF",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -502,22 +526,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/mime/quotedprintable#Writer.flush",
+                    "pathID": "/mime/quotedprintable#Writer.insertSoftLineBreak",
                     "documentation": {
-                      "identifier": "Writer.flush",
+                      "identifier": "Writer.insertSoftLineBreak",
                       "newPage": false,
-                      "searchKey": "quotedprintable.Writer.flush",
+                      "searchKey": "quotedprintable.Writer.insertSoftLineBreak",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (w *Writer) flush() error"
+                      "value": "func (w *Writer) insertSoftLineBreak() error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (w *Writer) flush() error\n```\n\n"
+                      "value": "```Go\nfunc (w *Writer) insertSoftLineBreak() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/mime/quotedprintable#Writer.write",
+                    "documentation": {
+                      "identifier": "Writer.write",
+                      "newPage": false,
+                      "searchKey": "quotedprintable.Writer.write",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) write(p []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) write(p []byte) error\n```\n\nwrite limits text encoded in quoted-printable to 76 characters per line. \n\n"
                     },
                     "children": null
                   }
@@ -535,7 +583,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -548,12 +598,180 @@
         "children": [
           {
             "node": {
+              "pathID": "/mime/quotedprintable#BenchmarkWriter",
+              "documentation": {
+                "identifier": "BenchmarkWriter",
+                "newPage": false,
+                "searchKey": "quotedprintable.BenchmarkWriter",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkWriter(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkWriter(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/quotedprintable#TestExhaustive",
+              "documentation": {
+                "identifier": "TestExhaustive",
+                "newPage": false,
+                "searchKey": "quotedprintable.TestExhaustive",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExhaustive(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExhaustive(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/quotedprintable#TestReader",
+              "documentation": {
+                "identifier": "TestReader",
+                "newPage": false,
+                "searchKey": "quotedprintable.TestReader",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/quotedprintable#TestRoundTrip",
+              "documentation": {
+                "identifier": "TestRoundTrip",
+                "newPage": false,
+                "searchKey": "quotedprintable.TestRoundTrip",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRoundTrip(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRoundTrip(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/quotedprintable#TestWriter",
+              "documentation": {
+                "identifier": "TestWriter",
+                "newPage": false,
+                "searchKey": "quotedprintable.TestWriter",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriter(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriter(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/quotedprintable#TestWriterBinary",
+              "documentation": {
+                "identifier": "TestWriterBinary",
+                "newPage": false,
+                "searchKey": "quotedprintable.TestWriterBinary",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriterBinary(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriterBinary(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/quotedprintable#everySequence",
+              "documentation": {
+                "identifier": "everySequence",
+                "newPage": false,
+                "searchKey": "quotedprintable.everySequence",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func everySequence(base, alpha string, length int, fn func(string))"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc everySequence(base, alpha string, length int, fn func(string))\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/mime/quotedprintable#fromHex",
               "documentation": {
                 "identifier": "fromHex",
                 "newPage": false,
                 "searchKey": "quotedprintable.fromHex",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -570,34 +788,13 @@
           },
           {
             "node": {
-              "pathID": "/mime/quotedprintable#readHexByte",
-              "documentation": {
-                "identifier": "readHexByte",
-                "newPage": false,
-                "searchKey": "quotedprintable.readHexByte",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func readHexByte(v []byte) (b byte, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc readHexByte(v []byte) (b byte, err error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/mime/quotedprintable#isQPDiscardWhitespace",
               "documentation": {
                 "identifier": "isQPDiscardWhitespace",
                 "newPage": false,
                 "searchKey": "quotedprintable.isQPDiscardWhitespace",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -620,6 +817,7 @@
                 "newPage": false,
                 "searchKey": "quotedprintable.isWhitespace",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -636,110 +834,23 @@
           },
           {
             "node": {
-              "pathID": "/mime/quotedprintable#TestReader",
+              "pathID": "/mime/quotedprintable#readHexByte",
               "documentation": {
-                "identifier": "TestReader",
+                "identifier": "readHexByte",
                 "newPage": false,
-                "searchKey": "quotedprintable.TestReader",
+                "searchKey": "quotedprintable.readHexByte",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestReader(t *testing.T)"
+                "value": "func readHexByte(v []byte) (b byte, err error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestReader(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/quotedprintable#everySequence",
-              "documentation": {
-                "identifier": "everySequence",
-                "newPage": false,
-                "searchKey": "quotedprintable.everySequence",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func everySequence(base, alpha string, length int, fn func(string))"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc everySequence(base, alpha string, length int, fn func(string))\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/quotedprintable#TestExhaustive",
-              "documentation": {
-                "identifier": "TestExhaustive",
-                "newPage": false,
-                "searchKey": "quotedprintable.TestExhaustive",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestExhaustive(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestExhaustive(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/quotedprintable#TestWriter",
-              "documentation": {
-                "identifier": "TestWriter",
-                "newPage": false,
-                "searchKey": "quotedprintable.TestWriter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestWriter(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestWriter(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/quotedprintable#TestWriterBinary",
-              "documentation": {
-                "identifier": "TestWriterBinary",
-                "newPage": false,
-                "searchKey": "quotedprintable.TestWriterBinary",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestWriterBinary(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestWriterBinary(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc readHexByte(v []byte) (b byte, err error)\n```\n\n"
               },
               "children": null
             }
@@ -752,6 +863,7 @@
                 "newPage": false,
                 "searchKey": "quotedprintable.testWriter",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -762,50 +874,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc testWriter(t *testing.T, binary bool)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/quotedprintable#TestRoundTrip",
-              "documentation": {
-                "identifier": "TestRoundTrip",
-                "newPage": false,
-                "searchKey": "quotedprintable.TestRoundTrip",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRoundTrip(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRoundTrip(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/quotedprintable#BenchmarkWriter",
-              "documentation": {
-                "identifier": "BenchmarkWriter",
-                "newPage": false,
-                "searchKey": "quotedprintable.BenchmarkWriter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkWriter(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkWriter(b *testing.B)\n```\n\n"
               },
               "children": null
             }

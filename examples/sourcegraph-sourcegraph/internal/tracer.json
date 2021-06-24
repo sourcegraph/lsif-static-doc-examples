@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/tracer",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "tracer.tracingNotEnabledURL",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -84,32 +89,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/tracer#Options",
-              "documentation": {
-                "identifier": "Options",
-                "newPage": false,
-                "searchKey": "tracer.Options",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Options struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Options struct {\n\tserviceName string\n}\n```\n\nOptions control the behavior of a tracer. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/tracer#Option",
               "documentation": {
                 "identifier": "Option",
                 "newPage": false,
                 "searchKey": "tracer.Option",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -127,7 +114,9 @@
                       "identifier": "ServiceName",
                       "newPage": false,
                       "searchKey": "tracer.ServiceName",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -145,12 +134,35 @@
           },
           {
             "node": {
+              "pathID": "/internal/tracer#Options",
+              "documentation": {
+                "identifier": "Options",
+                "newPage": false,
+                "searchKey": "tracer.Options",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Options struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Options struct {\n\tserviceName string\n}\n```\n\nOptions control the behavior of a tracer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/tracer#jaegerOpts",
               "documentation": {
                 "identifier": "jaegerOpts",
                 "newPage": false,
                 "searchKey": "tracer.jaegerOpts",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -173,6 +185,7 @@
                 "newPage": false,
                 "searchKey": "tracer.switchableTracer",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -193,6 +206,7 @@
                       "newPage": false,
                       "searchKey": "tracer.newSwitchableTracer",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -209,56 +223,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/tracer#switchableTracer.StartSpan",
-                    "documentation": {
-                      "identifier": "switchableTracer.StartSpan",
-                      "newPage": false,
-                      "searchKey": "tracer.switchableTracer.StartSpan",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t *switchableTracer) StartSpan(operationName string, opts ...opentracing.StartSpanOption) opentracing.Span"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t *switchableTracer) StartSpan(operationName string, opts ...opentracing.StartSpanOption) opentracing.Span\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/tracer#switchableTracer.Inject",
-                    "documentation": {
-                      "identifier": "switchableTracer.Inject",
-                      "newPage": false,
-                      "searchKey": "tracer.switchableTracer.Inject",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t *switchableTracer) Inject(sm opentracing.SpanContext, format interface{}, carrier interface{}) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t *switchableTracer) Inject(sm opentracing.SpanContext, format interface{}, carrier interface{}) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/tracer#switchableTracer.Extract",
                     "documentation": {
                       "identifier": "switchableTracer.Extract",
                       "newPage": false,
                       "searchKey": "tracer.switchableTracer.Extract",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -275,12 +246,59 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/tracer#switchableTracer.Inject",
+                    "documentation": {
+                      "identifier": "switchableTracer.Inject",
+                      "newPage": false,
+                      "searchKey": "tracer.switchableTracer.Inject",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *switchableTracer) Inject(sm opentracing.SpanContext, format interface{}, carrier interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *switchableTracer) Inject(sm opentracing.SpanContext, format interface{}, carrier interface{}) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/tracer#switchableTracer.StartSpan",
+                    "documentation": {
+                      "identifier": "switchableTracer.StartSpan",
+                      "newPage": false,
+                      "searchKey": "tracer.switchableTracer.StartSpan",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *switchableTracer) StartSpan(operationName string, opts ...opentracing.StartSpanOption) opentracing.Span"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *switchableTracer) StartSpan(operationName string, opts ...opentracing.StartSpanOption) opentracing.Span\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/tracer#switchableTracer.set",
                     "documentation": {
                       "identifier": "switchableTracer.set",
                       "newPage": false,
                       "searchKey": "tracer.switchableTracer.set",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -309,6 +327,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -323,12 +342,35 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/tracer#Init",
+              "documentation": {
+                "identifier": "Init",
+                "newPage": false,
+                "searchKey": "tracer.Init",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Init(options ...Option)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Init(options ...Option)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/tracer#init.tracer.go",
               "documentation": {
                 "identifier": "init.tracer.go",
                 "newPage": false,
                 "searchKey": "tracer.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -345,32 +387,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/tracer#Init",
-              "documentation": {
-                "identifier": "Init",
-                "newPage": false,
-                "searchKey": "tracer.Init",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Init(options ...Option)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Init(options ...Option)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/tracer#initTracer",
               "documentation": {
                 "identifier": "initTracer",
                 "newPage": false,
                 "searchKey": "tracer.initTracer",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -393,6 +416,7 @@
                 "newPage": false,
                 "searchKey": "tracer.newTracer",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },

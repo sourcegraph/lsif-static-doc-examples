@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/dev/ci/internal/ci",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,9 @@
                 "newPage": false,
                 "searchKey": "ci.ignoredRootFiles",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
@@ -70,6 +75,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -89,7 +95,9 @@
                 "identifier": "Config",
                 "newPage": false,
                 "searchKey": "ci.Config",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -107,7 +115,9 @@
                       "identifier": "ComputeConfig",
                       "newPage": false,
                       "searchKey": "ci.ComputeConfig",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -122,188 +132,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/dev/ci/internal/ci#Config.shortCommit",
-                    "documentation": {
-                      "identifier": "Config.shortCommit",
-                      "newPage": false,
-                      "searchKey": "ci.Config.shortCommit",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c Config) shortCommit() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c Config) shortCommit() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/dev/ci/internal/ci#Config.isMainBranch",
-                    "documentation": {
-                      "identifier": "Config.isMainBranch",
-                      "newPage": false,
-                      "searchKey": "ci.Config.isMainBranch",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Config) isMainBranch() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Config) isMainBranch() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/dev/ci/internal/ci#Config.ensureCommit",
-                    "documentation": {
-                      "identifier": "Config.ensureCommit",
-                      "newPage": false,
-                      "searchKey": "ci.Config.ensureCommit",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c Config) ensureCommit() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c Config) ensureCommit() error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/dev/ci/internal/ci#Config.isPR",
-                    "documentation": {
-                      "identifier": "Config.isPR",
-                      "newPage": false,
-                      "searchKey": "ci.Config.isPR",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c Config) isPR() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c Config) isPR() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/dev/ci/internal/ci#Config.isDocsOnly",
-                    "documentation": {
-                      "identifier": "Config.isDocsOnly",
-                      "newPage": false,
-                      "searchKey": "ci.Config.isDocsOnly",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c Config) isDocsOnly() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c Config) isDocsOnly() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/dev/ci/internal/ci#Config.isSgOnly",
-                    "documentation": {
-                      "identifier": "Config.isSgOnly",
-                      "newPage": false,
-                      "searchKey": "ci.Config.isSgOnly",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c Config) isSgOnly() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c Config) isSgOnly() bool\n```\n\nisSgOnly returns whether the changedFiles are only in the ./dev/sg folder. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/dev/ci/internal/ci#Config.isGoOnly",
-                    "documentation": {
-                      "identifier": "Config.isGoOnly",
-                      "newPage": false,
-                      "searchKey": "ci.Config.isGoOnly",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c Config) isGoOnly() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c Config) isGoOnly() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/dev/ci/internal/ci#Config.shouldRunE2EandQA",
-                    "documentation": {
-                      "identifier": "Config.shouldRunE2EandQA",
-                      "newPage": false,
-                      "searchKey": "ci.Config.shouldRunE2EandQA",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c Config) shouldRunE2EandQA() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c Config) shouldRunE2EandQA() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/dev/ci/internal/ci#Config.candidateImageTag",
                     "documentation": {
                       "identifier": "Config.candidateImageTag",
                       "newPage": false,
                       "searchKey": "ci.Config.candidateImageTag",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -320,12 +155,151 @@
                 },
                 {
                   "node": {
+                    "pathID": "/enterprise/dev/ci/internal/ci#Config.ensureCommit",
+                    "documentation": {
+                      "identifier": "Config.ensureCommit",
+                      "newPage": false,
+                      "searchKey": "ci.Config.ensureCommit",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c Config) ensureCommit() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c Config) ensureCommit() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/dev/ci/internal/ci#Config.isDocsOnly",
+                    "documentation": {
+                      "identifier": "Config.isDocsOnly",
+                      "newPage": false,
+                      "searchKey": "ci.Config.isDocsOnly",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c Config) isDocsOnly() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c Config) isDocsOnly() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/dev/ci/internal/ci#Config.isGoOnly",
+                    "documentation": {
+                      "identifier": "Config.isGoOnly",
+                      "newPage": false,
+                      "searchKey": "ci.Config.isGoOnly",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c Config) isGoOnly() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c Config) isGoOnly() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/dev/ci/internal/ci#Config.isMainBranch",
+                    "documentation": {
+                      "identifier": "Config.isMainBranch",
+                      "newPage": false,
+                      "searchKey": "ci.Config.isMainBranch",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Config) isMainBranch() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Config) isMainBranch() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/dev/ci/internal/ci#Config.isPR",
+                    "documentation": {
+                      "identifier": "Config.isPR",
+                      "newPage": false,
+                      "searchKey": "ci.Config.isPR",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c Config) isPR() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c Config) isPR() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/dev/ci/internal/ci#Config.isSgOnly",
+                    "documentation": {
+                      "identifier": "Config.isSgOnly",
+                      "newPage": false,
+                      "searchKey": "ci.Config.isSgOnly",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c Config) isSgOnly() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c Config) isSgOnly() bool\n```\n\nisSgOnly returns whether the changedFiles are only in the ./dev/sg folder. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/enterprise/dev/ci/internal/ci#Config.isStorybookAffected",
                     "documentation": {
                       "identifier": "Config.isStorybookAffected",
                       "newPage": false,
                       "searchKey": "ci.Config.isStorybookAffected",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -336,6 +310,52 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (c Config) isStorybookAffected() bool\n```\n\nRun Storybook workflow only if related files were changed. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/dev/ci/internal/ci#Config.shortCommit",
+                    "documentation": {
+                      "identifier": "Config.shortCommit",
+                      "newPage": false,
+                      "searchKey": "ci.Config.shortCommit",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c Config) shortCommit() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c Config) shortCommit() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/dev/ci/internal/ci#Config.shouldRunE2EandQA",
+                    "documentation": {
+                      "identifier": "Config.shouldRunE2EandQA",
+                      "newPage": false,
+                      "searchKey": "ci.Config.shouldRunE2EandQA",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c Config) shouldRunE2EandQA() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c Config) shouldRunE2EandQA() bool\n```\n\n"
                     },
                     "children": null
                   }
@@ -354,6 +374,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -368,286 +389,22 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/dev/ci/internal/ci#contains",
+              "pathID": "/enterprise/dev/ci/internal/ci#GeneratePipeline",
               "documentation": {
-                "identifier": "contains",
+                "identifier": "GeneratePipeline",
                 "newPage": false,
-                "searchKey": "ci.contains",
+                "searchKey": "ci.GeneratePipeline",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func contains(s []string, str string) bool"
+                "value": "func GeneratePipeline(c Config) (*bk.Pipeline, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc contains(s []string, str string) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/dev/ci/internal/ci#isAllowedRootFile",
-              "documentation": {
-                "identifier": "isAllowedRootFile",
-                "newPage": false,
-                "searchKey": "ci.isAllowedRootFile",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func isAllowedRootFile(p string) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc isAllowedRootFile(p string) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/dev/ci/internal/ci#addDocs",
-              "documentation": {
-                "identifier": "addDocs",
-                "newPage": false,
-                "searchKey": "ci.addDocs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func addDocs(pipeline *bk.Pipeline)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc addDocs(pipeline *bk.Pipeline)\n```\n\nVerifies the docs formatting and builds the `docsite` command. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/dev/ci/internal/ci#addCheck",
-              "documentation": {
-                "identifier": "addCheck",
-                "newPage": false,
-                "searchKey": "ci.addCheck",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func addCheck(pipeline *bk.Pipeline)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc addCheck(pipeline *bk.Pipeline)\n```\n\nAdds the static check test step. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/dev/ci/internal/ci#addLint",
-              "documentation": {
-                "identifier": "addLint",
-                "newPage": false,
-                "searchKey": "ci.addLint",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func addLint(pipeline *bk.Pipeline)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc addLint(pipeline *bk.Pipeline)\n```\n\nAdds the lint test step. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/dev/ci/internal/ci#addWebApp",
-              "documentation": {
-                "identifier": "addWebApp",
-                "newPage": false,
-                "searchKey": "ci.addWebApp",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func addWebApp(pipeline *bk.Pipeline)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc addWebApp(pipeline *bk.Pipeline)\n```\n\nAdds steps for the OSS and Enterprise web app builds. Runs the web app tests. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/dev/ci/internal/ci#addBrowserExt",
-              "documentation": {
-                "identifier": "addBrowserExt",
-                "newPage": false,
-                "searchKey": "ci.addBrowserExt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func addBrowserExt(pipeline *bk.Pipeline)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc addBrowserExt(pipeline *bk.Pipeline)\n```\n\nBuilds and tests the browser extension. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/dev/ci/internal/ci#addSharedTests",
-              "documentation": {
-                "identifier": "addSharedTests",
-                "newPage": false,
-                "searchKey": "ci.addSharedTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func addSharedTests(c Config) func(pipeline *bk.Pipeline)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc addSharedTests(c Config) func(pipeline *bk.Pipeline)\n```\n\nAdds the shared frontend tests (shared between the web app and browser extension). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/dev/ci/internal/ci#addBrandedTests",
-              "documentation": {
-                "identifier": "addBrandedTests",
-                "newPage": false,
-                "searchKey": "ci.addBrandedTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func addBrandedTests(pipeline *bk.Pipeline)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc addBrandedTests(pipeline *bk.Pipeline)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/dev/ci/internal/ci#addPostgresBackcompat",
-              "documentation": {
-                "identifier": "addPostgresBackcompat",
-                "newPage": false,
-                "searchKey": "ci.addPostgresBackcompat",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func addPostgresBackcompat(pipeline *bk.Pipeline)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc addPostgresBackcompat(pipeline *bk.Pipeline)\n```\n\nAdds PostgreSQL backcompat tests. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/dev/ci/internal/ci#addGoTests",
-              "documentation": {
-                "identifier": "addGoTests",
-                "newPage": false,
-                "searchKey": "ci.addGoTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func addGoTests(pipeline *bk.Pipeline)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc addGoTests(pipeline *bk.Pipeline)\n```\n\nAdds the Go test step. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/dev/ci/internal/ci#addGoBuild",
-              "documentation": {
-                "identifier": "addGoBuild",
-                "newPage": false,
-                "searchKey": "ci.addGoBuild",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func addGoBuild(pipeline *bk.Pipeline)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc addGoBuild(pipeline *bk.Pipeline)\n```\n\nBuilds the OSS and Enterprise Go commands. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/dev/ci/internal/ci#addDockerfileLint",
-              "documentation": {
-                "identifier": "addDockerfileLint",
-                "newPage": false,
-                "searchKey": "ci.addDockerfileLint",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func addDockerfileLint(pipeline *bk.Pipeline)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc addDockerfileLint(pipeline *bk.Pipeline)\n```\n\nLints the Dockerfiles. \n\n"
+                "value": "```Go\nfunc GeneratePipeline(c Config) (*bk.Pipeline, error)\n```\n\nGeneratePipeline is the main pipeline generation function. It defines the build pipeline for each of the main CI cases, which are defined in the main switch statement in the function. \n\n"
               },
               "children": null
             }
@@ -660,6 +417,7 @@
                 "newPage": false,
                 "searchKey": "ci.addBackendIntegrationTests",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -676,12 +434,59 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/dev/ci/internal/ci#addBrandedTests",
+              "documentation": {
+                "identifier": "addBrandedTests",
+                "newPage": false,
+                "searchKey": "ci.addBrandedTests",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addBrandedTests(pipeline *bk.Pipeline)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addBrandedTests(pipeline *bk.Pipeline)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/ci#addBrowserExt",
+              "documentation": {
+                "identifier": "addBrowserExt",
+                "newPage": false,
+                "searchKey": "ci.addBrowserExt",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addBrowserExt(pipeline *bk.Pipeline)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addBrowserExt(pipeline *bk.Pipeline)\n```\n\nBuilds and tests the browser extension. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/dev/ci/internal/ci#addBrowserExtensionE2ESteps",
               "documentation": {
                 "identifier": "addBrowserExtensionE2ESteps",
                 "newPage": false,
                 "searchKey": "ci.addBrowserExtensionE2ESteps",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -704,6 +509,7 @@
                 "newPage": false,
                 "searchKey": "ci.addBrowserExtensionReleaseSteps",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -720,166 +526,13 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/dev/ci/internal/ci#wait",
-              "documentation": {
-                "identifier": "wait",
-                "newPage": false,
-                "searchKey": "ci.wait",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func wait(pipeline *bk.Pipeline)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc wait(pipeline *bk.Pipeline)\n```\n\nAdds a Buildkite pipeline \"Wait\". \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/dev/ci/internal/ci#triggerAsync",
-              "documentation": {
-                "identifier": "triggerAsync",
-                "newPage": false,
-                "searchKey": "ci.triggerAsync",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func triggerAsync(c Config) func(*bk.Pipeline)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc triggerAsync(c Config) func(*bk.Pipeline)\n```\n\nTrigger the async pipeline to run. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/dev/ci/internal/ci#triggerUpdaterPipeline",
-              "documentation": {
-                "identifier": "triggerUpdaterPipeline",
-                "newPage": false,
-                "searchKey": "ci.triggerUpdaterPipeline",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func triggerUpdaterPipeline(c Config) func(*bk.Pipeline)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc triggerUpdaterPipeline(c Config) func(*bk.Pipeline)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/dev/ci/internal/ci#clusterDockerImages",
-              "documentation": {
-                "identifier": "clusterDockerImages",
-                "newPage": false,
-                "searchKey": "ci.clusterDockerImages",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func clusterDockerImages(images []string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc clusterDockerImages(images []string) string\n```\n\nimages used by cluster-qa test \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/dev/ci/internal/ci#triggerE2EandQA",
-              "documentation": {
-                "identifier": "triggerE2EandQA",
-                "newPage": false,
-                "searchKey": "ci.triggerE2EandQA",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func triggerE2EandQA(c Config, commonEnv map[string]string) func(*bk.Pipeline)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc triggerE2EandQA(c Config, commonEnv map[string]string) func(*bk.Pipeline)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/dev/ci/internal/ci#copyEnv",
-              "documentation": {
-                "identifier": "copyEnv",
-                "newPage": false,
-                "searchKey": "ci.copyEnv",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func copyEnv(keys ...string) map[string]string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc copyEnv(keys ...string) map[string]string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/dev/ci/internal/ci#addDockerImages",
-              "documentation": {
-                "identifier": "addDockerImages",
-                "newPage": false,
-                "searchKey": "ci.addDockerImages",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func addDockerImages(c Config, final bool) func(*bk.Pipeline)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc addDockerImages(c Config, final bool) func(*bk.Pipeline)\n```\n\nBuild all relevant Docker images for Sourcegraph (for example, candidates and final images), given the current CI case (e.g., \"tagged release\", \"release branch\", \"master branch\", etc.) \n\nNotes: \n\n- Publishing of `insiders` implies deployment - See `images.go` for more details on what images get built and where they get published \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/dev/ci/internal/ci#addCandidateDockerImage",
               "documentation": {
                 "identifier": "addCandidateDockerImage",
                 "newPage": false,
                 "searchKey": "ci.addCandidateDockerImage",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -896,12 +549,105 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/dev/ci/internal/ci#addCheck",
+              "documentation": {
+                "identifier": "addCheck",
+                "newPage": false,
+                "searchKey": "ci.addCheck",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addCheck(pipeline *bk.Pipeline)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addCheck(pipeline *bk.Pipeline)\n```\n\nAdds the static check test step. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/ci#addDockerImages",
+              "documentation": {
+                "identifier": "addDockerImages",
+                "newPage": false,
+                "searchKey": "ci.addDockerImages",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addDockerImages(c Config, final bool) func(*bk.Pipeline)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addDockerImages(c Config, final bool) func(*bk.Pipeline)\n```\n\nBuild all relevant Docker images for Sourcegraph (for example, candidates and final images), given the current CI case (e.g., \"tagged release\", \"release branch\", \"master branch\", etc.) \n\nNotes: \n\n- Publishing of `insiders` implies deployment - See `images.go` for more details on what images get built and where they get published \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/ci#addDockerfileLint",
+              "documentation": {
+                "identifier": "addDockerfileLint",
+                "newPage": false,
+                "searchKey": "ci.addDockerfileLint",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addDockerfileLint(pipeline *bk.Pipeline)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addDockerfileLint(pipeline *bk.Pipeline)\n```\n\nLints the Dockerfiles. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/ci#addDocs",
+              "documentation": {
+                "identifier": "addDocs",
+                "newPage": false,
+                "searchKey": "ci.addDocs",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addDocs(pipeline *bk.Pipeline)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addDocs(pipeline *bk.Pipeline)\n```\n\nVerifies the docs formatting and builds the `docsite` command. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/dev/ci/internal/ci#addFinalDockerImage",
               "documentation": {
                 "identifier": "addFinalDockerImage",
                 "newPage": false,
                 "searchKey": "ci.addFinalDockerImage",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -918,20 +664,322 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/dev/ci/internal/ci#GeneratePipeline",
+              "pathID": "/enterprise/dev/ci/internal/ci#addGoBuild",
               "documentation": {
-                "identifier": "GeneratePipeline",
+                "identifier": "addGoBuild",
                 "newPage": false,
-                "searchKey": "ci.GeneratePipeline",
-                "tags": null
+                "searchKey": "ci.addGoBuild",
+                "tags": [
+                  "method",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func GeneratePipeline(c Config) (*bk.Pipeline, error)"
+                "value": "func addGoBuild(pipeline *bk.Pipeline)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc GeneratePipeline(c Config) (*bk.Pipeline, error)\n```\n\nGeneratePipeline is the main pipeline generation function. It defines the build pipeline for each of the main CI cases, which are defined in the main switch statement in the function. \n\n"
+                "value": "```Go\nfunc addGoBuild(pipeline *bk.Pipeline)\n```\n\nBuilds the OSS and Enterprise Go commands. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/ci#addGoTests",
+              "documentation": {
+                "identifier": "addGoTests",
+                "newPage": false,
+                "searchKey": "ci.addGoTests",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addGoTests(pipeline *bk.Pipeline)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addGoTests(pipeline *bk.Pipeline)\n```\n\nAdds the Go test step. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/ci#addLint",
+              "documentation": {
+                "identifier": "addLint",
+                "newPage": false,
+                "searchKey": "ci.addLint",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addLint(pipeline *bk.Pipeline)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addLint(pipeline *bk.Pipeline)\n```\n\nAdds the lint test step. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/ci#addPostgresBackcompat",
+              "documentation": {
+                "identifier": "addPostgresBackcompat",
+                "newPage": false,
+                "searchKey": "ci.addPostgresBackcompat",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addPostgresBackcompat(pipeline *bk.Pipeline)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addPostgresBackcompat(pipeline *bk.Pipeline)\n```\n\nAdds PostgreSQL backcompat tests. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/ci#addSharedTests",
+              "documentation": {
+                "identifier": "addSharedTests",
+                "newPage": false,
+                "searchKey": "ci.addSharedTests",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addSharedTests(c Config) func(pipeline *bk.Pipeline)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addSharedTests(c Config) func(pipeline *bk.Pipeline)\n```\n\nAdds the shared frontend tests (shared between the web app and browser extension). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/ci#addWebApp",
+              "documentation": {
+                "identifier": "addWebApp",
+                "newPage": false,
+                "searchKey": "ci.addWebApp",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addWebApp(pipeline *bk.Pipeline)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addWebApp(pipeline *bk.Pipeline)\n```\n\nAdds steps for the OSS and Enterprise web app builds. Runs the web app tests. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/ci#clusterDockerImages",
+              "documentation": {
+                "identifier": "clusterDockerImages",
+                "newPage": false,
+                "searchKey": "ci.clusterDockerImages",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func clusterDockerImages(images []string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc clusterDockerImages(images []string) string\n```\n\nimages used by cluster-qa test \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/ci#contains",
+              "documentation": {
+                "identifier": "contains",
+                "newPage": false,
+                "searchKey": "ci.contains",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func contains(s []string, str string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc contains(s []string, str string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/ci#copyEnv",
+              "documentation": {
+                "identifier": "copyEnv",
+                "newPage": false,
+                "searchKey": "ci.copyEnv",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func copyEnv(keys ...string) map[string]string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc copyEnv(keys ...string) map[string]string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/ci#isAllowedRootFile",
+              "documentation": {
+                "identifier": "isAllowedRootFile",
+                "newPage": false,
+                "searchKey": "ci.isAllowedRootFile",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isAllowedRootFile(p string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isAllowedRootFile(p string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/ci#triggerAsync",
+              "documentation": {
+                "identifier": "triggerAsync",
+                "newPage": false,
+                "searchKey": "ci.triggerAsync",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func triggerAsync(c Config) func(*bk.Pipeline)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc triggerAsync(c Config) func(*bk.Pipeline)\n```\n\nTrigger the async pipeline to run. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/ci#triggerE2EandQA",
+              "documentation": {
+                "identifier": "triggerE2EandQA",
+                "newPage": false,
+                "searchKey": "ci.triggerE2EandQA",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func triggerE2EandQA(c Config, commonEnv map[string]string) func(*bk.Pipeline)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc triggerE2EandQA(c Config, commonEnv map[string]string) func(*bk.Pipeline)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/ci#triggerUpdaterPipeline",
+              "documentation": {
+                "identifier": "triggerUpdaterPipeline",
+                "newPage": false,
+                "searchKey": "ci.triggerUpdaterPipeline",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func triggerUpdaterPipeline(c Config) func(*bk.Pipeline)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc triggerUpdaterPipeline(c Config) func(*bk.Pipeline)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/ci#wait",
+              "documentation": {
+                "identifier": "wait",
+                "newPage": false,
+                "searchKey": "ci.wait",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func wait(pipeline *bk.Pipeline)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc wait(pipeline *bk.Pipeline)\n```\n\nAdds a Buildkite pipeline \"Wait\". \n\n"
               },
               "children": null
             }

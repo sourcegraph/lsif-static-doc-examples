@@ -4,35 +4,36 @@
 
 * [Types](#type)
     * [type FeatureFlag struct](#FeatureFlag)
-        * [func (f *FeatureFlag) EvaluateForUser(userID int32) bool](#FeatureFlag.EvaluateForUser)
         * [func (f *FeatureFlag) EvaluateForAnonymousUser(anonymousUID string) bool](#FeatureFlag.EvaluateForAnonymousUser)
+        * [func (f *FeatureFlag) EvaluateForUser(userID int32) bool](#FeatureFlag.EvaluateForUser)
         * [func (f *FeatureFlag) EvaluateGlobal() (res bool, ok bool)](#FeatureFlag.EvaluateGlobal)
     * [type FeatureFlagBool struct](#FeatureFlagBool)
     * [type FeatureFlagRollout struct](#FeatureFlagRollout)
-    * [type Override struct](#Override)
+    * [type FeatureFlagStore interface](#FeatureFlagStore)
     * [type FlagSet map[string]bool](#FlagSet)
         * [func FromContext(ctx context.Context) FlagSet](#FromContext)
         * [func (f FlagSet) GetBool(flag string) (bool, bool)](#FlagSet.GetBool)
         * [func (f FlagSet) GetBoolOr(flag string, defaultVal bool) bool](#FlagSet.GetBoolOr)
+    * [type Override struct](#Override)
     * [type flagContextKey struct{}](#flagContextKey)
-    * [type FeatureFlagStore interface](#FeatureFlagStore)
 * [Functions](#func)
-    * [func hashUserAndFlag(userID int32, flagName string) uint32](#hashUserAndFlag)
-    * [func hashAnonymousUserAndFlag(anonymousUID, flagName string) uint32](#hashAnonymousUserAndFlag)
     * [func Middleware(ffs FeatureFlagStore, next http.Handler) http.Handler](#Middleware)
     * [func contextWithFeatureFlags(ffs FeatureFlagStore, r *http.Request) context.Context](#contextWithFeatureFlags)
+    * [func hashAnonymousUserAndFlag(anonymousUID, flagName string) uint32](#hashAnonymousUserAndFlag)
+    * [func hashUserAndFlag(userID int32, flagName string) uint32](#hashUserAndFlag)
 
 
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="FeatureFlag" href="#FeatureFlag">type FeatureFlag struct</a>
 
 ```
 searchKey: featureflag.FeatureFlag
+tags: [struct]
 ```
 
 ```Go
@@ -50,22 +51,11 @@ type FeatureFlag struct {
 }
 ```
 
-#### <a id="FeatureFlag.EvaluateForUser" href="#FeatureFlag.EvaluateForUser">func (f *FeatureFlag) EvaluateForUser(userID int32) bool</a>
-
-```
-searchKey: featureflag.FeatureFlag.EvaluateForUser
-```
-
-```Go
-func (f *FeatureFlag) EvaluateForUser(userID int32) bool
-```
-
-EvaluateForUser evaluates the feature flag for a userID. 
-
 #### <a id="FeatureFlag.EvaluateForAnonymousUser" href="#FeatureFlag.EvaluateForAnonymousUser">func (f *FeatureFlag) EvaluateForAnonymousUser(anonymousUID string) bool</a>
 
 ```
 searchKey: featureflag.FeatureFlag.EvaluateForAnonymousUser
+tags: [method]
 ```
 
 ```Go
@@ -74,10 +64,24 @@ func (f *FeatureFlag) EvaluateForAnonymousUser(anonymousUID string) bool
 
 EvaluateForAnonymousUser evaluates the feature flag for an anonymous user ID. 
 
+#### <a id="FeatureFlag.EvaluateForUser" href="#FeatureFlag.EvaluateForUser">func (f *FeatureFlag) EvaluateForUser(userID int32) bool</a>
+
+```
+searchKey: featureflag.FeatureFlag.EvaluateForUser
+tags: [method]
+```
+
+```Go
+func (f *FeatureFlag) EvaluateForUser(userID int32) bool
+```
+
+EvaluateForUser evaluates the feature flag for a userID. 
+
 #### <a id="FeatureFlag.EvaluateGlobal" href="#FeatureFlag.EvaluateGlobal">func (f *FeatureFlag) EvaluateGlobal() (res bool, ok bool)</a>
 
 ```
 searchKey: featureflag.FeatureFlag.EvaluateGlobal
+tags: [function]
 ```
 
 ```Go
@@ -90,6 +94,7 @@ EvaluateGlobal returns the evaluated feature flag for a global context (no user 
 
 ```
 searchKey: featureflag.FeatureFlagBool
+tags: [struct]
 ```
 
 ```Go
@@ -102,6 +107,7 @@ type FeatureFlagBool struct {
 
 ```
 searchKey: featureflag.FeatureFlagRollout
+tags: [struct]
 ```
 
 ```Go
@@ -113,18 +119,18 @@ type FeatureFlagRollout struct {
 }
 ```
 
-### <a id="Override" href="#Override">type Override struct</a>
+### <a id="FeatureFlagStore" href="#FeatureFlagStore">type FeatureFlagStore interface</a>
 
 ```
-searchKey: featureflag.Override
+searchKey: featureflag.FeatureFlagStore
+tags: [interface]
 ```
 
 ```Go
-type Override struct {
-	UserID   *int32
-	OrgID    *int32
-	FlagName string
-	Value    bool
+type FeatureFlagStore interface {
+	GetUserFlags(context.Context, int32) (map[string]bool, error)
+	GetAnonymousUserFlags(context.Context, string) (map[string]bool, error)
+	GetGlobalFeatureFlags(context.Context) (map[string]bool, error)
 }
 ```
 
@@ -132,6 +138,7 @@ type Override struct {
 
 ```
 searchKey: featureflag.FlagSet
+tags: [object]
 ```
 
 ```Go
@@ -142,6 +149,7 @@ type FlagSet map[string]bool
 
 ```
 searchKey: featureflag.FromContext
+tags: [method]
 ```
 
 ```Go
@@ -154,6 +162,7 @@ FromContext retrieves the current set of flags from the current request's contex
 
 ```
 searchKey: featureflag.FlagSet.GetBool
+tags: [method]
 ```
 
 ```Go
@@ -164,69 +173,51 @@ func (f FlagSet) GetBool(flag string) (bool, bool)
 
 ```
 searchKey: featureflag.FlagSet.GetBoolOr
+tags: [method]
 ```
 
 ```Go
 func (f FlagSet) GetBoolOr(flag string, defaultVal bool) bool
 ```
 
+### <a id="Override" href="#Override">type Override struct</a>
+
+```
+searchKey: featureflag.Override
+tags: [struct]
+```
+
+```Go
+type Override struct {
+	UserID   *int32
+	OrgID    *int32
+	FlagName string
+	Value    bool
+}
+```
+
 ### <a id="flagContextKey" href="#flagContextKey">type flagContextKey struct{}</a>
 
 ```
 searchKey: featureflag.flagContextKey
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
 type flagContextKey struct{}
 ```
 
-### <a id="FeatureFlagStore" href="#FeatureFlagStore">type FeatureFlagStore interface</a>
-
-```
-searchKey: featureflag.FeatureFlagStore
-```
-
-```Go
-type FeatureFlagStore interface {
-	GetUserFlags(context.Context, int32) (map[string]bool, error)
-	GetAnonymousUserFlags(context.Context, string) (map[string]bool, error)
-	GetGlobalFeatureFlags(context.Context) (map[string]bool, error)
-}
-```
-
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
-```
-
-### <a id="hashUserAndFlag" href="#hashUserAndFlag">func hashUserAndFlag(userID int32, flagName string) uint32</a>
-
-```
-searchKey: featureflag.hashUserAndFlag
-tags: [private]
-```
-
-```Go
-func hashUserAndFlag(userID int32, flagName string) uint32
-```
-
-### <a id="hashAnonymousUserAndFlag" href="#hashAnonymousUserAndFlag">func hashAnonymousUserAndFlag(anonymousUID, flagName string) uint32</a>
-
-```
-searchKey: featureflag.hashAnonymousUserAndFlag
-tags: [private]
-```
-
-```Go
-func hashAnonymousUserAndFlag(anonymousUID, flagName string) uint32
+tags: [package private]
 ```
 
 ### <a id="Middleware" href="#Middleware">func Middleware(ffs FeatureFlagStore, next http.Handler) http.Handler</a>
 
 ```
 searchKey: featureflag.Middleware
+tags: [method]
 ```
 
 ```Go
@@ -239,10 +230,32 @@ Middleware evaluates the feature flags for the current user and adds the feature
 
 ```
 searchKey: featureflag.contextWithFeatureFlags
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func contextWithFeatureFlags(ffs FeatureFlagStore, r *http.Request) context.Context
+```
+
+### <a id="hashAnonymousUserAndFlag" href="#hashAnonymousUserAndFlag">func hashAnonymousUserAndFlag(anonymousUID, flagName string) uint32</a>
+
+```
+searchKey: featureflag.hashAnonymousUserAndFlag
+tags: [method private]
+```
+
+```Go
+func hashAnonymousUserAndFlag(anonymousUID, flagName string) uint32
+```
+
+### <a id="hashUserAndFlag" href="#hashUserAndFlag">func hashUserAndFlag(userID int32, flagName string) uint32</a>
+
+```
+searchKey: featureflag.hashUserAndFlag
+tags: [method private]
+```
+
+```Go
+func hashUserAndFlag(userID int32, flagName string) uint32
 ```
 

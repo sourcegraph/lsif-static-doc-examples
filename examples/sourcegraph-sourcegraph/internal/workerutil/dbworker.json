@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/workerutil/dbworker",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,10 @@
                 "identifier": "ErrNotConditions",
                 "newPage": false,
                 "searchKey": "dbworker.ErrNotConditions",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -68,6 +73,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -87,7 +93,9 @@
                 "identifier": "Handler",
                 "newPage": false,
                 "searchKey": "dbworker.Handler",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -107,7 +115,9 @@
                 "identifier": "HandlerFunc",
                 "newPage": false,
                 "searchKey": "dbworker.HandlerFunc",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -125,7 +135,9 @@
                       "identifier": "HandlerFunc.Handle",
                       "newPage": false,
                       "searchKey": "dbworker.HandlerFunc.Handle",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -143,12 +155,169 @@
           },
           {
             "node": {
+              "pathID": "/internal/workerutil/dbworker#Resetter",
+              "documentation": {
+                "identifier": "Resetter",
+                "newPage": false,
+                "searchKey": "dbworker.Resetter",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Resetter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Resetter struct {\n\tstore    store.Store\n\toptions  ResetterOptions\n\tclock    glock.Clock\n\tctx      context.Context // root context passed to the database\n\tcancel   func()          // cancels the root context\n\tfinished chan struct{}   // signals that Start has finished\n}\n```\n\nResetter periodically moves all unlocked records that have been in the processing state for a while back to queued. \n\nAn unlocked record signifies that it is not actively being processed and records in this state for more than a few seconds are very likely to be stuck after the worker processing them has crashed. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker#NewResetter",
+                    "documentation": {
+                      "identifier": "NewResetter",
+                      "newPage": false,
+                      "searchKey": "dbworker.NewResetter",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewResetter(store store.Store, options ResetterOptions) *Resetter"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewResetter(store store.Store, options ResetterOptions) *Resetter\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker#newResetter",
+                    "documentation": {
+                      "identifier": "newResetter",
+                      "newPage": false,
+                      "searchKey": "dbworker.newResetter",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newResetter(store store.Store, options ResetterOptions, clock glock.Clock) *Resetter"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newResetter(store store.Store, options ResetterOptions, clock glock.Clock) *Resetter\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker#Resetter.Start",
+                    "documentation": {
+                      "identifier": "Resetter.Start",
+                      "newPage": false,
+                      "searchKey": "dbworker.Resetter.Start",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resetter) Start()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resetter) Start()\n```\n\nStart begins periodically calling reset stalled on the underlying store. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker#Resetter.Stop",
+                    "documentation": {
+                      "identifier": "Resetter.Stop",
+                      "newPage": false,
+                      "searchKey": "dbworker.Resetter.Stop",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resetter) Stop()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resetter) Stop()\n```\n\nStop will cause the resetter loop to exit after the current iteration. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker#ResetterMetrics",
+              "documentation": {
+                "identifier": "ResetterMetrics",
+                "newPage": false,
+                "searchKey": "dbworker.ResetterMetrics",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ResetterMetrics struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ResetterMetrics struct {\n\tRecordResets        prometheus.Counter\n\tRecordResetFailures prometheus.Counter\n\tErrors              prometheus.Counter\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker#ResetterOptions",
+              "documentation": {
+                "identifier": "ResetterOptions",
+                "newPage": false,
+                "searchKey": "dbworker.ResetterOptions",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ResetterOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ResetterOptions struct {\n\tName     string\n\tInterval time.Duration\n\tMetrics  ResetterMetrics\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/workerutil/dbworker#handlerShim",
               "documentation": {
                 "identifier": "handlerShim",
                 "newPage": false,
                 "searchKey": "dbworker.handlerShim",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -169,6 +338,7 @@
                       "newPage": false,
                       "searchKey": "dbworker.handlerShim.Handle",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -185,12 +355,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/workerutil/dbworker#handlerShim.PostHandle",
+                    "documentation": {
+                      "identifier": "handlerShim.PostHandle",
+                      "newPage": false,
+                      "searchKey": "dbworker.handlerShim.PostHandle",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *handlerShim) PostHandle(ctx context.Context, record workerutil.Record)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *handlerShim) PostHandle(ctx context.Context, record workerutil.Record)\n```\n\nPostHandle calls into the inner handler if it implements the HandlerWithHooks interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/workerutil/dbworker#handlerShim.PreDequeue",
                     "documentation": {
                       "identifier": "handlerShim.PreDequeue",
                       "newPage": false,
                       "searchKey": "dbworker.handlerShim.PreDequeue",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -213,6 +407,7 @@
                       "newPage": false,
                       "searchKey": "dbworker.handlerShim.PreHandle",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -226,173 +421,8 @@
                     },
                     "children": null
                   }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil/dbworker#handlerShim.PostHandle",
-                    "documentation": {
-                      "identifier": "handlerShim.PostHandle",
-                      "newPage": false,
-                      "searchKey": "dbworker.handlerShim.PostHandle",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *handlerShim) PostHandle(ctx context.Context, record workerutil.Record)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *handlerShim) PostHandle(ctx context.Context, record workerutil.Record)\n```\n\nPostHandle calls into the inner handler if it implements the HandlerWithHooks interface. \n\n"
-                    },
-                    "children": null
-                  }
                 }
               ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker#Resetter",
-              "documentation": {
-                "identifier": "Resetter",
-                "newPage": false,
-                "searchKey": "dbworker.Resetter",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Resetter struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Resetter struct {\n\tstore    store.Store\n\toptions  ResetterOptions\n\tclock    glock.Clock\n\tctx      context.Context // root context passed to the database\n\tcancel   func()          // cancels the root context\n\tfinished chan struct{}   // signals that Start has finished\n}\n```\n\nResetter periodically moves all unlocked records that have been in the processing state for a while back to queued. \n\nAn unlocked record signifies that it is not actively being processed and records in this state for more than a few seconds are very likely to be stuck after the worker processing them has crashed. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil/dbworker#NewResetter",
-                    "documentation": {
-                      "identifier": "NewResetter",
-                      "newPage": false,
-                      "searchKey": "dbworker.NewResetter",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewResetter(store store.Store, options ResetterOptions) *Resetter"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewResetter(store store.Store, options ResetterOptions) *Resetter\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil/dbworker#newResetter",
-                    "documentation": {
-                      "identifier": "newResetter",
-                      "newPage": false,
-                      "searchKey": "dbworker.newResetter",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func newResetter(store store.Store, options ResetterOptions, clock glock.Clock) *Resetter"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc newResetter(store store.Store, options ResetterOptions, clock glock.Clock) *Resetter\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil/dbworker#Resetter.Start",
-                    "documentation": {
-                      "identifier": "Resetter.Start",
-                      "newPage": false,
-                      "searchKey": "dbworker.Resetter.Start",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Resetter) Start()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Resetter) Start()\n```\n\nStart begins periodically calling reset stalled on the underlying store. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil/dbworker#Resetter.Stop",
-                    "documentation": {
-                      "identifier": "Resetter.Stop",
-                      "newPage": false,
-                      "searchKey": "dbworker.Resetter.Stop",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Resetter) Stop()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Resetter) Stop()\n```\n\nStop will cause the resetter loop to exit after the current iteration. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker#ResetterOptions",
-              "documentation": {
-                "identifier": "ResetterOptions",
-                "newPage": false,
-                "searchKey": "dbworker.ResetterOptions",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ResetterOptions struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ResetterOptions struct {\n\tName     string\n\tInterval time.Duration\n\tMetrics  ResetterMetrics\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker#ResetterMetrics",
-              "documentation": {
-                "identifier": "ResetterMetrics",
-                "newPage": false,
-                "searchKey": "dbworker.ResetterMetrics",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ResetterMetrics struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ResetterMetrics struct {\n\tRecordResets        prometheus.Counter\n\tRecordResetFailures prometheus.Counter\n\tErrors              prometheus.Counter\n}\n```\n\n"
-              },
-              "children": null
             }
           },
           {
@@ -403,6 +433,7 @@
                 "newPage": false,
                 "searchKey": "dbworker.storeShim",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -417,34 +448,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker#storeShim.QueuedCount",
-                    "documentation": {
-                      "identifier": "storeShim.QueuedCount",
-                      "newPage": false,
-                      "searchKey": "dbworker.storeShim.QueuedCount",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *storeShim) QueuedCount(ctx context.Context, extraArguments interface{}) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *storeShim) QueuedCount(ctx context.Context, extraArguments interface{}) (int, error)\n```\n\nQueuedCount calls into the inner store. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/workerutil/dbworker#storeShim.Dequeue",
                     "documentation": {
                       "identifier": "storeShim.Dequeue",
                       "newPage": false,
                       "searchKey": "dbworker.storeShim.Dequeue",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -455,6 +465,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (s *storeShim) Dequeue(ctx context.Context, extraArguments interface{}) (workerutil.Record, workerutil.Store, bool, error)\n```\n\nDequeue calls into the inner store. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker#storeShim.QueuedCount",
+                    "documentation": {
+                      "identifier": "storeShim.QueuedCount",
+                      "newPage": false,
+                      "searchKey": "dbworker.storeShim.QueuedCount",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *storeShim) QueuedCount(ctx context.Context, extraArguments interface{}) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *storeShim) QueuedCount(ctx context.Context, extraArguments interface{}) (int, error)\n```\n\nQueuedCount calls into the inner store. \n\n"
                     },
                     "children": null
                   }
@@ -473,6 +506,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -487,12 +521,82 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/workerutil/dbworker#NewWorker",
+              "documentation": {
+                "identifier": "NewWorker",
+                "newPage": false,
+                "searchKey": "dbworker.NewWorker",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewWorker(ctx context.Context, store store.Store, handler Handler, options workerutil.WorkerOptions) *workerutil.Worker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewWorker(ctx context.Context, store store.Store, handler Handler, options workerutil.WorkerOptions) *workerutil.Worker\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker#TestResetter",
+              "documentation": {
+                "identifier": "TestResetter",
+                "newPage": false,
+                "searchKey": "dbworker.TestResetter",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestResetter(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestResetter(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker#convertArguments",
+              "documentation": {
+                "identifier": "convertArguments",
+                "newPage": false,
+                "searchKey": "dbworker.convertArguments",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func convertArguments(v interface{}) ([]*sqlf.Query, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc convertArguments(v interface{}) ([]*sqlf.Query, error)\n```\n\nconvertArguments converts the given interface value into a slice of *sqlf.Query values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/workerutil/dbworker#newHandlerShim",
               "documentation": {
                 "identifier": "newHandlerShim",
                 "newPage": false,
                 "searchKey": "dbworker.newHandlerShim",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -515,6 +619,7 @@
                 "newPage": false,
                 "searchKey": "dbworker.newStoreShim",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -525,70 +630,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc newStoreShim(store store.Store) workerutil.Store\n```\n\nnewStoreShim wraps the given store in a shim. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker#convertArguments",
-              "documentation": {
-                "identifier": "convertArguments",
-                "newPage": false,
-                "searchKey": "dbworker.convertArguments",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func convertArguments(v interface{}) ([]*sqlf.Query, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc convertArguments(v interface{}) ([]*sqlf.Query, error)\n```\n\nconvertArguments converts the given interface value into a slice of *sqlf.Query values. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker#NewWorker",
-              "documentation": {
-                "identifier": "NewWorker",
-                "newPage": false,
-                "searchKey": "dbworker.NewWorker",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func NewWorker(ctx context.Context, store store.Store, handler Handler, options workerutil.WorkerOptions) *workerutil.Worker"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc NewWorker(ctx context.Context, store store.Store, handler Handler, options workerutil.WorkerOptions) *workerutil.Worker\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker#TestResetter",
-              "documentation": {
-                "identifier": "TestResetter",
-                "newPage": false,
-                "searchKey": "dbworker.TestResetter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestResetter(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestResetter(t *testing.T)\n```\n\n"
               },
               "children": null
             }

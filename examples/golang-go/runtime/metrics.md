@@ -148,33 +148,38 @@ Below is the full list of supported metrics, ordered lexicographically.
 
 * [Constants](#const)
     * [const KindBad](#KindBad)
-    * [const KindUint64](#KindUint64)
     * [const KindFloat64](#KindFloat64)
     * [const KindFloat64Histogram](#KindFloat64Histogram)
+    * [const KindUint64](#KindUint64)
 * [Variables](#var)
     * [var allDesc](#allDesc)
 * [Types](#type)
     * [type Description struct](#Description)
     * [type Float64Histogram struct](#Float64Histogram)
     * [type Sample struct](#Sample)
-    * [type ValueKind int](#ValueKind)
     * [type Value struct](#Value)
-        * [func (v Value) Kind() ValueKind](#Value.Kind)
-        * [func (v Value) Uint64() uint64](#Value.Uint64)
         * [func (v Value) Float64() float64](#Value.Float64)
         * [func (v Value) Float64Histogram() *Float64Histogram](#Value.Float64Histogram)
+        * [func (v Value) Kind() ValueKind](#Value.Kind)
+        * [func (v Value) Uint64() uint64](#Value.Uint64)
+    * [type ValueKind int](#ValueKind)
 * [Functions](#func)
     * [func All() []Description](#All)
-    * [func runtime_readMetrics(unsafe.Pointer, int, int)](#runtime_readMetrics)
     * [func Read(m []Sample)](#Read)
+    * [func runtime_readMetrics(unsafe.Pointer, int, int)](#runtime_readMetrics)
 
 
 ## <a id="const" href="#const">Constants</a>
+
+```
+tags: [package]
+```
 
 ### <a id="KindBad" href="#KindBad">const KindBad</a>
 
 ```
 searchKey: metrics.KindBad
+tags: [constant number]
 ```
 
 ```Go
@@ -183,22 +188,11 @@ const KindBad ValueKind = iota
 
 KindBad indicates that the Value has no type and should not be used. 
 
-### <a id="KindUint64" href="#KindUint64">const KindUint64</a>
-
-```
-searchKey: metrics.KindUint64
-```
-
-```Go
-const KindUint64
-```
-
-KindUint64 indicates that the type of the Value is a uint64. 
-
 ### <a id="KindFloat64" href="#KindFloat64">const KindFloat64</a>
 
 ```
 searchKey: metrics.KindFloat64
+tags: [constant number]
 ```
 
 ```Go
@@ -211,6 +205,7 @@ KindFloat64 indicates that the type of the Value is a float64.
 
 ```
 searchKey: metrics.KindFloat64Histogram
+tags: [constant number]
 ```
 
 ```Go
@@ -219,13 +214,30 @@ const KindFloat64Histogram
 
 KindFloat64Histogram indicates that the type of the Value is a *Float64Histogram. 
 
+### <a id="KindUint64" href="#KindUint64">const KindUint64</a>
+
+```
+searchKey: metrics.KindUint64
+tags: [constant number]
+```
+
+```Go
+const KindUint64
+```
+
+KindUint64 indicates that the type of the Value is a uint64. 
+
 ## <a id="var" href="#var">Variables</a>
+
+```
+tags: [package]
+```
 
 ### <a id="allDesc" href="#allDesc">var allDesc</a>
 
 ```
 searchKey: metrics.allDesc
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
@@ -236,10 +248,15 @@ The English language descriptions below must be kept in sync with the descriptio
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [package]
+```
+
 ### <a id="Description" href="#Description">type Description struct</a>
 
 ```
 searchKey: metrics.Description
+tags: [struct]
 ```
 
 ```Go
@@ -293,6 +310,7 @@ Description describes a runtime metric.
 
 ```
 searchKey: metrics.Float64Histogram
+tags: [struct]
 ```
 
 ```Go
@@ -330,6 +348,7 @@ Float64Histogram represents a distribution of float64 values.
 
 ```
 searchKey: metrics.Sample
+tags: [struct]
 ```
 
 ```Go
@@ -347,22 +366,11 @@ type Sample struct {
 
 Sample captures a single metric sample. 
 
-### <a id="ValueKind" href="#ValueKind">type ValueKind int</a>
-
-```
-searchKey: metrics.ValueKind
-```
-
-```Go
-type ValueKind int
-```
-
-ValueKind is a tag for a metric Value which indicates its type. 
-
 ### <a id="Value" href="#Value">type Value struct</a>
 
 ```
 searchKey: metrics.Value
+tags: [struct]
 ```
 
 ```Go
@@ -375,36 +383,11 @@ type Value struct {
 
 Value represents a metric value returned by the runtime. 
 
-#### <a id="Value.Kind" href="#Value.Kind">func (v Value) Kind() ValueKind</a>
-
-```
-searchKey: metrics.Value.Kind
-```
-
-```Go
-func (v Value) Kind() ValueKind
-```
-
-Kind returns the tag representing the kind of value this is. 
-
-#### <a id="Value.Uint64" href="#Value.Uint64">func (v Value) Uint64() uint64</a>
-
-```
-searchKey: metrics.Value.Uint64
-```
-
-```Go
-func (v Value) Uint64() uint64
-```
-
-Uint64 returns the internal uint64 value for the metric. 
-
-If v.Kind() != KindUint64, this method panics. 
-
 #### <a id="Value.Float64" href="#Value.Float64">func (v Value) Float64() float64</a>
 
 ```
 searchKey: metrics.Value.Float64
+tags: [function]
 ```
 
 ```Go
@@ -419,6 +402,7 @@ If v.Kind() != KindFloat64, this method panics.
 
 ```
 searchKey: metrics.Value.Float64Histogram
+tags: [function]
 ```
 
 ```Go
@@ -429,12 +413,58 @@ Float64Histogram returns the internal *Float64Histogram value for the metric.
 
 If v.Kind() != KindFloat64Histogram, this method panics. 
 
+#### <a id="Value.Kind" href="#Value.Kind">func (v Value) Kind() ValueKind</a>
+
+```
+searchKey: metrics.Value.Kind
+tags: [function]
+```
+
+```Go
+func (v Value) Kind() ValueKind
+```
+
+Kind returns the tag representing the kind of value this is. 
+
+#### <a id="Value.Uint64" href="#Value.Uint64">func (v Value) Uint64() uint64</a>
+
+```
+searchKey: metrics.Value.Uint64
+tags: [function]
+```
+
+```Go
+func (v Value) Uint64() uint64
+```
+
+Uint64 returns the internal uint64 value for the metric. 
+
+If v.Kind() != KindUint64, this method panics. 
+
+### <a id="ValueKind" href="#ValueKind">type ValueKind int</a>
+
+```
+searchKey: metrics.ValueKind
+tags: [number]
+```
+
+```Go
+type ValueKind int
+```
+
+ValueKind is a tag for a metric Value which indicates its type. 
+
 ## <a id="func" href="#func">Functions</a>
+
+```
+tags: [package]
+```
 
 ### <a id="All" href="#All">func All() []Description</a>
 
 ```
 searchKey: metrics.All
+tags: [function]
 ```
 
 ```Go
@@ -443,23 +473,11 @@ func All() []Description
 
 All returns a slice of containing metric descriptions for all supported metrics. 
 
-### <a id="runtime_readMetrics" href="#runtime_readMetrics">func runtime_readMetrics(unsafe.Pointer, int, int)</a>
-
-```
-searchKey: metrics.runtime_readMetrics
-tags: [private]
-```
-
-```Go
-func runtime_readMetrics(unsafe.Pointer, int, int)
-```
-
-Implemented in the runtime. 
-
 ### <a id="Read" href="#Read">func Read(m []Sample)</a>
 
 ```
 searchKey: metrics.Read
+tags: [method]
 ```
 
 ```Go
@@ -475,4 +493,17 @@ Note that re-use has some caveats. Notably, Values should not be read or manipul
 It is safe to execute multiple Read calls concurrently, but their arguments must share no underlying memory. When in doubt, create a new []Sample from scratch, which is always safe, though may be inefficient. 
 
 Sample values with names not appearing in All will have their Value populated as KindBad to indicate that the name is unknown. 
+
+### <a id="runtime_readMetrics" href="#runtime_readMetrics">func runtime_readMetrics(unsafe.Pointer, int, int)</a>
+
+```
+searchKey: metrics.runtime_readMetrics
+tags: [method private]
+```
+
+```Go
+func runtime_readMetrics(unsafe.Pointer, int, int)
+```
+
+Implemented in the runtime. 
 

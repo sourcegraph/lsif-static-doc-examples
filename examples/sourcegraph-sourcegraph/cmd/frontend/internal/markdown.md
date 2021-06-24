@@ -12,14 +12,14 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="once" href="#once">var once</a>
 
 ```
 searchKey: markdown.once
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -30,7 +30,7 @@ var once sync.Once
 
 ```
 searchKey: markdown.policy
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -40,13 +40,14 @@ var policy *bluemonday.Policy
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Render" href="#Render">func Render(content string) string</a>
 
 ```
 searchKey: markdown.Render
+tags: [method]
 ```
 
 ```Go

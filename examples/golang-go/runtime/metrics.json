@@ -4,7 +4,9 @@
     "identifier": "metrics",
     "newPage": true,
     "searchKey": "runtime/metrics",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,10 @@
                 "identifier": "KindBad",
                 "newPage": false,
                 "searchKey": "metrics.KindBad",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -55,32 +62,15 @@
           },
           {
             "node": {
-              "pathID": "/runtime/metrics#KindUint64",
-              "documentation": {
-                "identifier": "KindUint64",
-                "newPage": false,
-                "searchKey": "metrics.KindUint64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const KindUint64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst KindUint64\n```\n\nKindUint64 indicates that the type of the Value is a uint64. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/runtime/metrics#KindFloat64",
               "documentation": {
                 "identifier": "KindFloat64",
                 "newPage": false,
                 "searchKey": "metrics.KindFloat64",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +90,10 @@
                 "identifier": "KindFloat64Histogram",
                 "newPage": false,
                 "searchKey": "metrics.KindFloat64Histogram",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -109,6 +102,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst KindFloat64Histogram\n```\n\nKindFloat64Histogram indicates that the type of the Value is a *Float64Histogram. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/metrics#KindUint64",
+              "documentation": {
+                "identifier": "KindUint64",
+                "newPage": false,
+                "searchKey": "metrics.KindUint64",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const KindUint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst KindUint64\n```\n\nKindUint64 indicates that the type of the Value is a uint64. \n\n"
               },
               "children": null
             }
@@ -123,7 +139,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -142,6 +160,9 @@
                 "newPage": false,
                 "searchKey": "metrics.allDesc",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -166,7 +187,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -184,7 +207,9 @@
                 "identifier": "Description",
                 "newPage": false,
                 "searchKey": "metrics.Description",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -204,7 +229,9 @@
                 "identifier": "Float64Histogram",
                 "newPage": false,
                 "searchKey": "metrics.Float64Histogram",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -224,7 +251,9 @@
                 "identifier": "Sample",
                 "newPage": false,
                 "searchKey": "metrics.Sample",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -239,32 +268,14 @@
           },
           {
             "node": {
-              "pathID": "/runtime/metrics#ValueKind",
-              "documentation": {
-                "identifier": "ValueKind",
-                "newPage": false,
-                "searchKey": "metrics.ValueKind",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ValueKind int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ValueKind int\n```\n\nValueKind is a tag for a metric Value which indicates its type. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/runtime/metrics#Value",
               "documentation": {
                 "identifier": "Value",
                 "newPage": false,
                 "searchKey": "metrics.Value",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -277,52 +288,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/runtime/metrics#Value.Kind",
-                    "documentation": {
-                      "identifier": "Value.Kind",
-                      "newPage": false,
-                      "searchKey": "metrics.Value.Kind",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v Value) Kind() ValueKind"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v Value) Kind() ValueKind\n```\n\nKind returns the tag representing the kind of value this is. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/runtime/metrics#Value.Uint64",
-                    "documentation": {
-                      "identifier": "Value.Uint64",
-                      "newPage": false,
-                      "searchKey": "metrics.Value.Uint64",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v Value) Uint64() uint64"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v Value) Uint64() uint64\n```\n\nUint64 returns the internal uint64 value for the metric. \n\nIf v.Kind() != KindUint64, this method panics. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/runtime/metrics#Value.Float64",
                     "documentation": {
                       "identifier": "Value.Float64",
                       "newPage": false,
                       "searchKey": "metrics.Value.Float64",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -342,7 +315,9 @@
                       "identifier": "Value.Float64Histogram",
                       "newPage": false,
                       "searchKey": "metrics.Value.Float64Histogram",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -354,8 +329,74 @@
                     },
                     "children": null
                   }
+                },
+                {
+                  "node": {
+                    "pathID": "/runtime/metrics#Value.Kind",
+                    "documentation": {
+                      "identifier": "Value.Kind",
+                      "newPage": false,
+                      "searchKey": "metrics.Value.Kind",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v Value) Kind() ValueKind"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v Value) Kind() ValueKind\n```\n\nKind returns the tag representing the kind of value this is. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/runtime/metrics#Value.Uint64",
+                    "documentation": {
+                      "identifier": "Value.Uint64",
+                      "newPage": false,
+                      "searchKey": "metrics.Value.Uint64",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v Value) Uint64() uint64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v Value) Uint64() uint64\n```\n\nUint64 returns the internal uint64 value for the metric. \n\nIf v.Kind() != KindUint64, this method panics. \n\n"
+                    },
+                    "children": null
+                  }
                 }
               ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/metrics#ValueKind",
+              "documentation": {
+                "identifier": "ValueKind",
+                "newPage": false,
+                "searchKey": "metrics.ValueKind",
+                "tags": [
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ValueKind int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ValueKind int\n```\n\nValueKind is a tag for a metric Value which indicates its type. \n\n"
+              },
+              "children": null
             }
           }
         ]
@@ -368,7 +409,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -386,7 +429,9 @@
                 "identifier": "All",
                 "newPage": false,
                 "searchKey": "metrics.All",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -401,12 +446,35 @@
           },
           {
             "node": {
+              "pathID": "/runtime/metrics#Read",
+              "documentation": {
+                "identifier": "Read",
+                "newPage": false,
+                "searchKey": "metrics.Read",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Read(m []Sample)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Read(m []Sample)\n```\n\nRead populates each Value field in the given slice of metric samples. \n\nDesired metrics should be present in the slice with the appropriate name. The user of this API is encouraged to re-use the same slice between calls for efficiency, but is not required to do so. \n\nNote that re-use has some caveats. Notably, Values should not be read or manipulated while a Read with that value is outstanding; that is a data race. This property includes pointer-typed Values (for example, Float64Histogram) whose underlying storage will be reused by Read when possible. To safely use such values in a concurrent setting, all data must be deep-copied. \n\nIt is safe to execute multiple Read calls concurrently, but their arguments must share no underlying memory. When in doubt, create a new []Sample from scratch, which is always safe, though may be inefficient. \n\nSample values with names not appearing in All will have their Value populated as KindBad to indicate that the name is unknown. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/runtime/metrics#runtime_readMetrics",
               "documentation": {
                 "identifier": "runtime_readMetrics",
                 "newPage": false,
                 "searchKey": "metrics.runtime_readMetrics",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -417,26 +485,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc runtime_readMetrics(unsafe.Pointer, int, int)\n```\n\nImplemented in the runtime. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/metrics#Read",
-              "documentation": {
-                "identifier": "Read",
-                "newPage": false,
-                "searchKey": "metrics.Read",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Read(m []Sample)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Read(m []Sample)\n```\n\nRead populates each Value field in the given slice of metric samples. \n\nDesired metrics should be present in the slice with the appropriate name. The user of this API is encouraged to re-use the same slice between calls for efficiency, but is not required to do so. \n\nNote that re-use has some caveats. Notably, Values should not be read or manipulated while a Read with that value is outstanding; that is a data race. This property includes pointer-typed Values (for example, Float64Histogram) whose underlying storage will be reused by Read when possible. To safely use such values in a concurrent setting, all data must be deep-copied. \n\nIt is safe to execute multiple Read calls concurrently, but their arguments must share no underlying memory. When in doubt, create a new []Sample from scratch, which is always safe, though may be inefficient. \n\nSample values with names not appearing in All will have their Value populated as KindBad to indicate that the name is unknown. \n\n"
               },
               "children": null
             }

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/search/streaming/http",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,12 +41,38 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/search/streaming/http#CommitMatchType",
+              "documentation": {
+                "identifier": "CommitMatchType",
+                "newPage": false,
+                "searchKey": "http.CommitMatchType",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const CommitMatchType"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst CommitMatchType\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/search/streaming/http#FileMatchType",
               "documentation": {
                 "identifier": "FileMatchType",
                 "newPage": false,
                 "searchKey": "http.FileMatchType",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +92,10 @@
                 "identifier": "RepoMatchType",
                 "newPage": false,
                 "searchKey": "http.RepoMatchType",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +115,10 @@
                 "identifier": "SymbolMatchType",
                 "newPage": false,
                 "searchKey": "http.SymbolMatchType",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -93,26 +127,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst SymbolMatchType\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/streaming/http#CommitMatchType",
-              "documentation": {
-                "identifier": "CommitMatchType",
-                "newPage": false,
-                "searchKey": "http.CommitMatchType",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const CommitMatchType"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst CommitMatchType\n```\n\n"
               },
               "children": null
             }
@@ -128,6 +142,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -147,7 +162,9 @@
                 "identifier": "Decoder",
                 "newPage": false,
                 "searchKey": "http.Decoder",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -165,7 +182,9 @@
                       "identifier": "Decoder.ReadAll",
                       "newPage": false,
                       "searchKey": "http.Decoder.ReadAll",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -183,42 +202,65 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/streaming/http#eventMatchUnmarshaller",
+              "pathID": "/internal/search/streaming/http#EventAlert",
               "documentation": {
-                "identifier": "eventMatchUnmarshaller",
+                "identifier": "EventAlert",
                 "newPage": false,
-                "searchKey": "http.eventMatchUnmarshaller",
+                "searchKey": "http.EventAlert",
                 "tags": [
-                  "private"
+                  "struct"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type eventMatchUnmarshaller struct"
+                "value": "type EventAlert struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype eventMatchUnmarshaller struct {\n\tEventMatch\n}\n```\n\n"
+                "value": "```Go\ntype EventAlert struct {\n\tTitle           string          `json:\"title\"`\n\tDescription     string          `json:\"description,omitempty\"`\n\tProposedQueries []ProposedQuery `json:\"proposedQueries\"`\n}\n```\n\nEventAlert is GQL.SearchAlert. It replaces when sent to match existing behaviour. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/http#EventCommitMatch",
+              "documentation": {
+                "identifier": "EventCommitMatch",
+                "newPage": false,
+                "searchKey": "http.EventCommitMatch",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type EventCommitMatch struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype EventCommitMatch struct {\n\t// Type is always CommitMatchType. Included here for marshalling.\n\tType MatchType `json:\"type\"`\n\n\tLabel      string `json:\"label\"`\n\tURL        string `json:\"url\"`\n\tDetail     string `json:\"detail\"`\n\tRepository string `json:\"repository\"`\n\tRepoStars  int    `json:\"repoStars,omitempty\"`\n\tContent    string `json:\"content\"`\n\t// [line, character, length]\n\tRanges [][3]int32 `json:\"ranges\"`\n}\n```\n\nEventCommitMatch is the generic results interface from GQL. There is a lot of potential data that may be useful here, and some thought needs to be put into what is actually useful in a commit result / or if we should have a \"type\" for that. \n\n"
               },
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/search/streaming/http#eventMatchUnmarshaller.UnmarshalJSON",
+                    "pathID": "/internal/search/streaming/http#EventCommitMatch.eventMatch",
                     "documentation": {
-                      "identifier": "eventMatchUnmarshaller.UnmarshalJSON",
+                      "identifier": "EventCommitMatch.eventMatch",
                       "newPage": false,
-                      "searchKey": "http.eventMatchUnmarshaller.UnmarshalJSON",
+                      "searchKey": "http.EventCommitMatch.eventMatch",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (r *eventMatchUnmarshaller) UnmarshalJSON(b []byte) error"
+                      "value": "func (e *EventCommitMatch) eventMatch()"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (r *eventMatchUnmarshaller) UnmarshalJSON(b []byte) error\n```\n\n"
+                      "value": "```Go\nfunc (e *EventCommitMatch) eventMatch()\n```\n\n"
                     },
                     "children": null
                   }
@@ -228,20 +270,22 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/streaming/http#EventMatch",
+              "pathID": "/internal/search/streaming/http#EventError",
               "documentation": {
-                "identifier": "EventMatch",
+                "identifier": "EventError",
                 "newPage": false,
-                "searchKey": "http.EventMatch",
-                "tags": null
+                "searchKey": "http.EventError",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type EventMatch interface"
+                "value": "type EventError struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype EventMatch interface {\n\t// private marker method so only top level event match types are allowed.\n\teventMatch()\n}\n```\n\nEventMatch is an interface which only the top level match event types implement. Use this for your results slice rather than interface{}. \n\n"
+                "value": "```Go\ntype EventError struct {\n\tMessage string `json:\"message\"`\n}\n```\n\nEventError emulates a JavaScript error with a message property as is returned when the search encounters an error. \n\n"
               },
               "children": null
             }
@@ -253,7 +297,9 @@
                 "identifier": "EventFileMatch",
                 "newPage": false,
                 "searchKey": "http.EventFileMatch",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -272,6 +318,7 @@
                       "newPage": false,
                       "searchKey": "http.EventFileMatch.eventMatch",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -291,12 +338,36 @@
           },
           {
             "node": {
+              "pathID": "/internal/search/streaming/http#EventFilter",
+              "documentation": {
+                "identifier": "EventFilter",
+                "newPage": false,
+                "searchKey": "http.EventFilter",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type EventFilter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype EventFilter struct {\n\tValue    string `json:\"value\"`\n\tLabel    string `json:\"label\"`\n\tCount    int    `json:\"count\"`\n\tLimitHit bool   `json:\"limitHit\"`\n\tKind     string `json:\"kind\"`\n}\n```\n\nEventFilter is a suggestion for a search filter. Currently has a 1-1 correspondance with the SearchFilter graphql type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/search/streaming/http#EventLineMatch",
               "documentation": {
                 "identifier": "EventLineMatch",
                 "newPage": false,
                 "searchKey": "http.EventLineMatch",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -311,12 +382,36 @@
           },
           {
             "node": {
+              "pathID": "/internal/search/streaming/http#EventMatch",
+              "documentation": {
+                "identifier": "EventMatch",
+                "newPage": false,
+                "searchKey": "http.EventMatch",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type EventMatch interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype EventMatch interface {\n\t// private marker method so only top level event match types are allowed.\n\teventMatch()\n}\n```\n\nEventMatch is an interface which only the top level match event types implement. Use this for your results slice rather than interface{}. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/search/streaming/http#EventRepoMatch",
               "documentation": {
                 "identifier": "EventRepoMatch",
                 "newPage": false,
                 "searchKey": "http.EventRepoMatch",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -335,6 +430,7 @@
                       "newPage": false,
                       "searchKey": "http.EventRepoMatch.eventMatch",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -359,7 +455,9 @@
                 "identifier": "EventSymbolMatch",
                 "newPage": false,
                 "searchKey": "http.EventSymbolMatch",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -378,6 +476,7 @@
                       "newPage": false,
                       "searchKey": "http.EventSymbolMatch.eventMatch",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -397,155 +496,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/streaming/http#Symbol",
-              "documentation": {
-                "identifier": "Symbol",
-                "newPage": false,
-                "searchKey": "http.Symbol",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Symbol struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Symbol struct {\n\tURL           string `json:\"url\"`\n\tName          string `json:\"name\"`\n\tContainerName string `json:\"containerName\"`\n\tKind          string `json:\"kind\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/streaming/http#EventCommitMatch",
-              "documentation": {
-                "identifier": "EventCommitMatch",
-                "newPage": false,
-                "searchKey": "http.EventCommitMatch",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type EventCommitMatch struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype EventCommitMatch struct {\n\t// Type is always CommitMatchType. Included here for marshalling.\n\tType MatchType `json:\"type\"`\n\n\tLabel      string `json:\"label\"`\n\tURL        string `json:\"url\"`\n\tDetail     string `json:\"detail\"`\n\tRepository string `json:\"repository\"`\n\tRepoStars  int    `json:\"repoStars,omitempty\"`\n\tContent    string `json:\"content\"`\n\t// [line, character, length]\n\tRanges [][3]int32 `json:\"ranges\"`\n}\n```\n\nEventCommitMatch is the generic results interface from GQL. There is a lot of potential data that may be useful here, and some thought needs to be put into what is actually useful in a commit result / or if we should have a \"type\" for that. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/search/streaming/http#EventCommitMatch.eventMatch",
-                    "documentation": {
-                      "identifier": "EventCommitMatch.eventMatch",
-                      "newPage": false,
-                      "searchKey": "http.EventCommitMatch.eventMatch",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *EventCommitMatch) eventMatch()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *EventCommitMatch) eventMatch()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/streaming/http#EventFilter",
-              "documentation": {
-                "identifier": "EventFilter",
-                "newPage": false,
-                "searchKey": "http.EventFilter",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type EventFilter struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype EventFilter struct {\n\tValue    string `json:\"value\"`\n\tLabel    string `json:\"label\"`\n\tCount    int    `json:\"count\"`\n\tLimitHit bool   `json:\"limitHit\"`\n\tKind     string `json:\"kind\"`\n}\n```\n\nEventFilter is a suggestion for a search filter. Currently has a 1-1 correspondance with the SearchFilter graphql type. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/streaming/http#EventAlert",
-              "documentation": {
-                "identifier": "EventAlert",
-                "newPage": false,
-                "searchKey": "http.EventAlert",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type EventAlert struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype EventAlert struct {\n\tTitle           string          `json:\"title\"`\n\tDescription     string          `json:\"description,omitempty\"`\n\tProposedQueries []ProposedQuery `json:\"proposedQueries\"`\n}\n```\n\nEventAlert is GQL.SearchAlert. It replaces when sent to match existing behaviour. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/streaming/http#ProposedQuery",
-              "documentation": {
-                "identifier": "ProposedQuery",
-                "newPage": false,
-                "searchKey": "http.ProposedQuery",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ProposedQuery struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ProposedQuery struct {\n\tDescription string `json:\"description,omitempty\"`\n\tQuery       string `json:\"query\"`\n}\n```\n\nProposedQuery is a suggested query to run when we emit an alert. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/streaming/http#EventError",
-              "documentation": {
-                "identifier": "EventError",
-                "newPage": false,
-                "searchKey": "http.EventError",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type EventError struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype EventError struct {\n\tMessage string `json:\"message\"`\n}\n```\n\nEventError emulates a JavaScript error with a message property as is returned when the search encounters an error. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/search/streaming/http#MatchType",
               "documentation": {
                 "identifier": "MatchType",
                 "newPage": false,
                 "searchKey": "http.MatchType",
-                "tags": null
+                "tags": [
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -563,7 +521,9 @@
                       "identifier": "MatchType.MarshalJSON",
                       "newPage": false,
                       "searchKey": "http.MatchType.MarshalJSON",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -583,7 +543,9 @@
                       "identifier": "MatchType.UnmarshalJSON",
                       "newPage": false,
                       "searchKey": "http.MatchType.UnmarshalJSON",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -601,20 +563,44 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/streaming/http#WriterStat",
+              "pathID": "/internal/search/streaming/http#ProposedQuery",
               "documentation": {
-                "identifier": "WriterStat",
+                "identifier": "ProposedQuery",
                 "newPage": false,
-                "searchKey": "http.WriterStat",
-                "tags": null
+                "searchKey": "http.ProposedQuery",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type WriterStat struct"
+                "value": "type ProposedQuery struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype WriterStat struct {\n\tEvent    string\n\tBytes    int\n\tDuration time.Duration\n\tError    error\n}\n```\n\n"
+                "value": "```Go\ntype ProposedQuery struct {\n\tDescription string `json:\"description,omitempty\"`\n\tQuery       string `json:\"query\"`\n}\n```\n\nProposedQuery is a suggested query to run when we emit an alert. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/http#Symbol",
+              "documentation": {
+                "identifier": "Symbol",
+                "newPage": false,
+                "searchKey": "http.Symbol",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Symbol struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Symbol struct {\n\tURL           string `json:\"url\"`\n\tName          string `json:\"name\"`\n\tContainerName string `json:\"containerName\"`\n\tKind          string `json:\"kind\"`\n}\n```\n\n"
               },
               "children": null
             }
@@ -626,7 +612,9 @@
                 "identifier": "Writer",
                 "newPage": false,
                 "searchKey": "http.Writer",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -644,7 +632,9 @@
                       "identifier": "NewWriter",
                       "newPage": false,
                       "searchKey": "http.NewWriter",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -664,7 +654,9 @@
                       "identifier": "Writer.Event",
                       "newPage": false,
                       "searchKey": "http.Writer.Event",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -684,7 +676,9 @@
                       "identifier": "Writer.EventBytes",
                       "newPage": false,
                       "searchKey": "http.Writer.EventBytes",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -693,6 +687,75 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (e *Writer) EventBytes(event string, dataLine []byte) (err error)\n```\n\nEventBytes writes dataLine as an event. dataLine is not allowed to contain a newline. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/http#WriterStat",
+              "documentation": {
+                "identifier": "WriterStat",
+                "newPage": false,
+                "searchKey": "http.WriterStat",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type WriterStat struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype WriterStat struct {\n\tEvent    string\n\tBytes    int\n\tDuration time.Duration\n\tError    error\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/http#eventMatchUnmarshaller",
+              "documentation": {
+                "identifier": "eventMatchUnmarshaller",
+                "newPage": false,
+                "searchKey": "http.eventMatchUnmarshaller",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type eventMatchUnmarshaller struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype eventMatchUnmarshaller struct {\n\tEventMatch\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming/http#eventMatchUnmarshaller.UnmarshalJSON",
+                    "documentation": {
+                      "identifier": "eventMatchUnmarshaller.UnmarshalJSON",
+                      "newPage": false,
+                      "searchKey": "http.eventMatchUnmarshaller.UnmarshalJSON",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *eventMatchUnmarshaller) UnmarshalJSON(b []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *eventMatchUnmarshaller) UnmarshalJSON(b []byte) error\n```\n\n"
                     },
                     "children": null
                   }
@@ -711,6 +774,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -730,7 +794,9 @@
                 "identifier": "NewRequest",
                 "newPage": false,
                 "searchKey": "http.NewRequest",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -745,12 +811,37 @@
           },
           {
             "node": {
+              "pathID": "/internal/search/streaming/http#TestDecoder",
+              "documentation": {
+                "identifier": "TestDecoder",
+                "newPage": false,
+                "searchKey": "http.TestDecoder",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecoder(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecoder(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/search/streaming/http#splitColon",
               "documentation": {
                 "identifier": "splitColon",
                 "newPage": false,
                 "searchKey": "http.splitColon",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -761,28 +852,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc splitColon(data []byte) ([]byte, []byte)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/streaming/http#TestDecoder",
-              "documentation": {
-                "identifier": "TestDecoder",
-                "newPage": false,
-                "searchKey": "http.TestDecoder",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDecoder(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDecoder(t *testing.T)\n```\n\n"
               },
               "children": null
             }

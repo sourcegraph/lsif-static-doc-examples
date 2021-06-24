@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "cmd/frontend/internal/suspiciousnames",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "suspiciousnames.suspiciousNames",
                 "tags": [
+                  "variable",
+                  "object",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -89,7 +94,9 @@
                 "identifier": "CheckNameAllowedForUserOrOrganization",
                 "newPage": false,
                 "searchKey": "suspiciousnames.CheckNameAllowedForUserOrOrganization",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -110,6 +117,7 @@
                 "newPage": false,
                 "searchKey": "suspiciousnames.isSuspicious",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },

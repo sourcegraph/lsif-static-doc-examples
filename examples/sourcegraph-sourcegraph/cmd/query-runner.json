@@ -4,7 +4,9 @@
     "identifier": "query-runner",
     "newPage": true,
     "searchKey": "cmd/query-runner",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -41,6 +45,8 @@
                 "newPage": false,
                 "searchKey": "main.gqlSearchQuery",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -63,6 +69,8 @@
                 "newPage": false,
                 "searchKey": "main.port",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -85,6 +93,8 @@
                 "newPage": false,
                 "searchKey": "main.utmSourceEmail",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -107,6 +117,8 @@
                 "newPage": false,
                 "searchKey": "main.utmSourceSlack",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -131,7 +143,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -144,122 +158,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/query-runner#testNotificationMu",
-              "documentation": {
-                "identifier": "testNotificationMu",
-                "newPage": false,
-                "searchKey": "main.testNotificationMu",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var testNotificationMu"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar testNotificationMu sync.Mutex\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/query-runner#newSearchResultsEmailTemplates",
-              "documentation": {
-                "identifier": "newSearchResultsEmailTemplates",
-                "newPage": false,
-                "searchKey": "main.newSearchResultsEmailTemplates",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var newSearchResultsEmailTemplates"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar newSearchResultsEmailTemplates = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/query-runner#notifySubscribedTemplate",
-              "documentation": {
-                "identifier": "notifySubscribedTemplate",
-                "newPage": false,
-                "searchKey": "main.notifySubscribedTemplate",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var notifySubscribedTemplate"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar notifySubscribedTemplate = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/query-runner#notifyUnsubscribedTemplate",
-              "documentation": {
-                "identifier": "notifyUnsubscribedTemplate",
-                "newPage": false,
-                "searchKey": "main.notifyUnsubscribedTemplate",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var notifyUnsubscribedTemplate"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar notifyUnsubscribedTemplate = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/query-runner#forceRunInterval",
-              "documentation": {
-                "identifier": "forceRunInterval",
-                "newPage": false,
-                "searchKey": "main.forceRunInterval",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var forceRunInterval"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar forceRunInterval = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/query-runner#debugPretendSavedQueryResultsExist",
               "documentation": {
                 "identifier": "debugPretendSavedQueryResultsExist",
                 "newPage": false,
                 "searchKey": "main.debugPretendSavedQueryResultsExist",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
@@ -282,6 +188,8 @@
                 "newPage": false,
                 "searchKey": "main.executor",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -304,6 +212,8 @@
                 "newPage": false,
                 "searchKey": "main.externalURL",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -314,6 +224,126 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar externalURL *url.URL\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#forceRunInterval",
+              "documentation": {
+                "identifier": "forceRunInterval",
+                "newPage": false,
+                "searchKey": "main.forceRunInterval",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var forceRunInterval"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar forceRunInterval = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#newSearchResultsEmailTemplates",
+              "documentation": {
+                "identifier": "newSearchResultsEmailTemplates",
+                "newPage": false,
+                "searchKey": "main.newSearchResultsEmailTemplates",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var newSearchResultsEmailTemplates"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar newSearchResultsEmailTemplates = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#notifySubscribedTemplate",
+              "documentation": {
+                "identifier": "notifySubscribedTemplate",
+                "newPage": false,
+                "searchKey": "main.notifySubscribedTemplate",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var notifySubscribedTemplate"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar notifySubscribedTemplate = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#notifyUnsubscribedTemplate",
+              "documentation": {
+                "identifier": "notifyUnsubscribedTemplate",
+                "newPage": false,
+                "searchKey": "main.notifyUnsubscribedTemplate",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var notifyUnsubscribedTemplate"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar notifyUnsubscribedTemplate = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#testNotificationMu",
+              "documentation": {
+                "identifier": "testNotificationMu",
+                "newPage": false,
+                "searchKey": "main.testNotificationMu",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testNotificationMu"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testNotificationMu sync.Mutex\n```\n\n"
               },
               "children": null
             }
@@ -328,7 +358,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -341,123 +373,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/query-runner#graphQLQuery",
-              "documentation": {
-                "identifier": "graphQLQuery",
-                "newPage": false,
-                "searchKey": "main.graphQLQuery",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type graphQLQuery struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype graphQLQuery struct {\n\tQuery     string      `json:\"query\"`\n\tVariables interface{} `json:\"variables\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/query-runner#gqlSearchVars",
-              "documentation": {
-                "identifier": "gqlSearchVars",
-                "newPage": false,
-                "searchKey": "main.gqlSearchVars",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type gqlSearchVars struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype gqlSearchVars struct {\n\tQuery string `json:\"query\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/query-runner#gqlSearchResponse",
-              "documentation": {
-                "identifier": "gqlSearchResponse",
-                "newPage": false,
-                "searchKey": "main.gqlSearchResponse",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type gqlSearchResponse struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype gqlSearchResponse struct {\n\tData struct {\n\t\tSearch struct {\n\t\t\tResults struct {\n\t\t\t\tApproximateResultCount string\n\t\t\t\tCloning                []*api.Repo\n\t\t\t\tTimedout               []*api.Repo\n\t\t\t\tResults                []interface{}\n\t\t\t}\n\t\t}\n\t}\n\tErrors []interface{}\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/query-runner#search",
-                    "documentation": {
-                      "identifier": "search",
-                      "newPage": false,
-                      "searchKey": "main.search",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func search(ctx context.Context, query string) (*gqlSearchResponse, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc search(ctx context.Context, query string) (*gqlSearchResponse, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/query-runner#performSearch",
-                    "documentation": {
-                      "identifier": "performSearch",
-                      "newPage": false,
-                      "searchKey": "main.performSearch",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func performSearch(ctx context.Context, query string) (v *gqlSearchResponse, execDuration time.Duration, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc performSearch(ctx context.Context, query string) (v *gqlSearchResponse, execDuration time.Duration, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/query-runner#executorT",
               "documentation": {
                 "identifier": "executorT",
                 "newPage": false,
                 "searchKey": "main.executorT",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -478,6 +400,7 @@
                       "newPage": false,
                       "searchKey": "main.executorT.run",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -500,6 +423,7 @@
                       "newPage": false,
                       "searchKey": "main.executorT.runQuery",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -519,12 +443,129 @@
           },
           {
             "node": {
+              "pathID": "/cmd/query-runner#gqlSearchResponse",
+              "documentation": {
+                "identifier": "gqlSearchResponse",
+                "newPage": false,
+                "searchKey": "main.gqlSearchResponse",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type gqlSearchResponse struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype gqlSearchResponse struct {\n\tData struct {\n\t\tSearch struct {\n\t\t\tResults struct {\n\t\t\t\tApproximateResultCount string\n\t\t\t\tCloning                []*api.Repo\n\t\t\t\tTimedout               []*api.Repo\n\t\t\t\tResults                []interface{}\n\t\t\t}\n\t\t}\n\t}\n\tErrors []interface{}\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/query-runner#performSearch",
+                    "documentation": {
+                      "identifier": "performSearch",
+                      "newPage": false,
+                      "searchKey": "main.performSearch",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func performSearch(ctx context.Context, query string) (v *gqlSearchResponse, execDuration time.Duration, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc performSearch(ctx context.Context, query string) (v *gqlSearchResponse, execDuration time.Duration, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/query-runner#search",
+                    "documentation": {
+                      "identifier": "search",
+                      "newPage": false,
+                      "searchKey": "main.search",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func search(ctx context.Context, query string) (*gqlSearchResponse, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc search(ctx context.Context, query string) (*gqlSearchResponse, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#gqlSearchVars",
+              "documentation": {
+                "identifier": "gqlSearchVars",
+                "newPage": false,
+                "searchKey": "main.gqlSearchVars",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type gqlSearchVars struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype gqlSearchVars struct {\n\tQuery string `json:\"query\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#graphQLQuery",
+              "documentation": {
+                "identifier": "graphQLQuery",
+                "newPage": false,
+                "searchKey": "main.graphQLQuery",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type graphQLQuery struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype graphQLQuery struct {\n\tQuery     string      `json:\"query\"`\n\tVariables interface{} `json:\"variables\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/query-runner#notifier",
               "documentation": {
                 "identifier": "notifier",
                 "newPage": false,
                 "searchKey": "main.notifier",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -545,6 +586,7 @@
                       "newPage": false,
                       "searchKey": "main.notifier.emailNotify",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -567,6 +609,7 @@
                       "newPage": false,
                       "searchKey": "main.notifier.slackNotify",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -586,57 +629,13 @@
           },
           {
             "node": {
-              "pathID": "/cmd/query-runner#recipientSpec",
-              "documentation": {
-                "identifier": "recipientSpec",
-                "newPage": false,
-                "searchKey": "main.recipientSpec",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type recipientSpec struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype recipientSpec struct {\n\tuserID, orgID int32\n}\n```\n\nrecipientSpec identifies a recipient of a saved search notification. Exactly one of its fields is nonzero. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/query-runner#recipientSpec.String",
-                    "documentation": {
-                      "identifier": "recipientSpec.String",
-                      "newPage": false,
-                      "searchKey": "main.recipientSpec.String",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r recipientSpec) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r recipientSpec) String() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/query-runner#recipient",
               "documentation": {
                 "identifier": "recipient",
                 "newPage": false,
                 "searchKey": "main.recipient",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -657,6 +656,7 @@
                       "newPage": false,
                       "searchKey": "main.recipient.String",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -676,12 +676,61 @@
           },
           {
             "node": {
+              "pathID": "/cmd/query-runner#recipientSpec",
+              "documentation": {
+                "identifier": "recipientSpec",
+                "newPage": false,
+                "searchKey": "main.recipientSpec",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type recipientSpec struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype recipientSpec struct {\n\tuserID, orgID int32\n}\n```\n\nrecipientSpec identifies a recipient of a saved search notification. Exactly one of its fields is nonzero. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/query-runner#recipientSpec.String",
+                    "documentation": {
+                      "identifier": "recipientSpec.String",
+                      "newPage": false,
+                      "searchKey": "main.recipientSpec.String",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r recipientSpec) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r recipientSpec) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/query-runner#recipients",
               "documentation": {
                 "identifier": "recipients",
                 "newPage": false,
                 "searchKey": "main.recipients",
                 "tags": [
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -702,6 +751,7 @@
                       "newPage": false,
                       "searchKey": "main.diffNotificationRecipients",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -724,6 +774,7 @@
                       "newPage": false,
                       "searchKey": "main.recipients.add",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -746,6 +797,7 @@
                       "newPage": false,
                       "searchKey": "main.recipients.get",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -773,7 +825,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -786,88 +840,48 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/query-runner#diffSavedQueryConfigs",
+              "pathID": "/cmd/query-runner#TestDiffNotificationRecipients",
               "documentation": {
-                "identifier": "diffSavedQueryConfigs",
+                "identifier": "TestDiffNotificationRecipients",
                 "newPage": false,
-                "searchKey": "main.diffSavedQueryConfigs",
+                "searchKey": "main.TestDiffNotificationRecipients",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func diffSavedQueryConfigs(oldList, newList map[api.SavedQueryIDSpec]api.ConfigSavedQuery) (deleted, updated, created map[api.SavedQuerySpecAndConfig]api.SavedQuerySpecAndConfig)"
+                "value": "func TestDiffNotificationRecipients(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc diffSavedQueryConfigs(oldList, newList map[api.SavedQueryIDSpec]api.ConfigSavedQuery) (deleted, updated, created map[api.SavedQuerySpecAndConfig]api.SavedQuerySpecAndConfig)\n```\n\ndiffSavedQueryConfigs takes the old and new saved queries configurations. \n\nIt returns maps whose keys represent the old value and value represent the new value, i.e. a map of the saved query in the oldList and what its new value is in the newList for each respective category. For deleted, the new value will be an empty struct. \n\n"
+                "value": "```Go\nfunc TestDiffNotificationRecipients(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/query-runner#sendNotificationsForCreatedOrUpdatedOrDeleted",
+              "pathID": "/cmd/query-runner#TestGetNotificationRecipients",
               "documentation": {
-                "identifier": "sendNotificationsForCreatedOrUpdatedOrDeleted",
+                "identifier": "TestGetNotificationRecipients",
                 "newPage": false,
-                "searchKey": "main.sendNotificationsForCreatedOrUpdatedOrDeleted",
+                "searchKey": "main.TestGetNotificationRecipients",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func sendNotificationsForCreatedOrUpdatedOrDeleted(oldList, newList map[api.SavedQueryIDSpec]api.ConfigSavedQuery)"
+                "value": "func TestGetNotificationRecipients(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc sendNotificationsForCreatedOrUpdatedOrDeleted(oldList, newList map[api.SavedQueryIDSpec]api.ConfigSavedQuery)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/query-runner#notifySavedQueryWasCreatedOrUpdated",
-              "documentation": {
-                "identifier": "notifySavedQueryWasCreatedOrUpdated",
-                "newPage": false,
-                "searchKey": "main.notifySavedQueryWasCreatedOrUpdated",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func notifySavedQueryWasCreatedOrUpdated(oldValue, newValue api.SavedQuerySpecAndConfig) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc notifySavedQueryWasCreatedOrUpdated(oldValue, newValue api.SavedQuerySpecAndConfig) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/query-runner#serveTestNotification",
-              "documentation": {
-                "identifier": "serveTestNotification",
-                "newPage": false,
-                "searchKey": "main.serveTestNotification",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func serveTestNotification(w http.ResponseWriter, r *http.Request)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc serveTestNotification(w http.ResponseWriter, r *http.Request)\n```\n\n"
+                "value": "```Go\nfunc TestGetNotificationRecipients(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -880,6 +894,7 @@
                 "newPage": false,
                 "searchKey": "main.canSendEmail",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -896,12 +911,36 @@
           },
           {
             "node": {
+              "pathID": "/cmd/query-runner#diffSavedQueryConfigs",
+              "documentation": {
+                "identifier": "diffSavedQueryConfigs",
+                "newPage": false,
+                "searchKey": "main.diffSavedQueryConfigs",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func diffSavedQueryConfigs(oldList, newList map[api.SavedQueryIDSpec]api.ConfigSavedQuery) (deleted, updated, created map[api.SavedQuerySpecAndConfig]api.SavedQuerySpecAndConfig)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc diffSavedQueryConfigs(oldList, newList map[api.SavedQueryIDSpec]api.ConfigSavedQuery) (deleted, updated, created map[api.SavedQuerySpecAndConfig]api.SavedQuerySpecAndConfig)\n```\n\ndiffSavedQueryConfigs takes the old and new saved queries configurations. \n\nIt returns maps whose keys represent the old value and value represent the new value, i.e. a map of the saved query in the oldList and what its new value is in the newList for each respective category. For deleted, the new value will be an empty struct. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/query-runner#emailNotifySubscribeUnsubscribe",
               "documentation": {
                 "identifier": "emailNotifySubscribeUnsubscribe",
                 "newPage": false,
                 "searchKey": "main.emailNotifySubscribeUnsubscribe",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -918,56 +957,13 @@
           },
           {
             "node": {
-              "pathID": "/cmd/query-runner#sendEmail",
-              "documentation": {
-                "identifier": "sendEmail",
-                "newPage": false,
-                "searchKey": "main.sendEmail",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func sendEmail(ctx context.Context, userID int32, eventType string, template txtypes.Templates, data interface{}) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc sendEmail(ctx context.Context, userID int32, eventType string, template txtypes.Templates, data interface{}) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/query-runner#gqlURL",
-              "documentation": {
-                "identifier": "gqlURL",
-                "newPage": false,
-                "searchKey": "main.gqlURL",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func gqlURL(queryName string) (string, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc gqlURL(queryName string) (string, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/query-runner#extractTime",
               "documentation": {
                 "identifier": "extractTime",
                 "newPage": false,
                 "searchKey": "main.extractTime",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -984,188 +980,13 @@
           },
           {
             "node": {
-              "pathID": "/cmd/query-runner#main",
-              "documentation": {
-                "identifier": "main",
-                "newPage": false,
-                "searchKey": "main.main",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func main()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc main()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/query-runner#writeError",
-              "documentation": {
-                "identifier": "writeError",
-                "newPage": false,
-                "searchKey": "main.writeError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func writeError(w http.ResponseWriter, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc writeError(w http.ResponseWriter, err error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/query-runner#latestResultTime",
-              "documentation": {
-                "identifier": "latestResultTime",
-                "newPage": false,
-                "searchKey": "main.latestResultTime",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func latestResultTime(prevInfo *api.SavedQueryInfo, v *gqlSearchResponse, searchErr error) time.Time"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc latestResultTime(prevInfo *api.SavedQueryInfo, v *gqlSearchResponse, searchErr error) time.Time\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/query-runner#notify",
-              "documentation": {
-                "identifier": "notify",
-                "newPage": false,
-                "searchKey": "main.notify",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func notify(ctx context.Context, spec api.SavedQueryIDSpec, query api.ConfigSavedQuery, newQuery string, results *gqlSearchResponse) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc notify(ctx context.Context, spec api.SavedQueryIDSpec, query api.ConfigSavedQuery, newQuery string, results *gqlSearchResponse) error\n```\n\nnotify handles sending notifications for new search results. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/query-runner#searchURL",
-              "documentation": {
-                "identifier": "searchURL",
-                "newPage": false,
-                "searchKey": "main.searchURL",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func searchURL(query, utmSource string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc searchURL(query, utmSource string) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/query-runner#savedSearchListPageURL",
-              "documentation": {
-                "identifier": "savedSearchListPageURL",
-                "newPage": false,
-                "searchKey": "main.savedSearchListPageURL",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func savedSearchListPageURL(utmSource string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc savedSearchListPageURL(utmSource string) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/query-runner#sourcegraphURL",
-              "documentation": {
-                "identifier": "sourcegraphURL",
-                "newPage": false,
-                "searchKey": "main.sourcegraphURL",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func sourcegraphURL(path, query, utmSource string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc sourcegraphURL(path, query, utmSource string) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/query-runner#logEvent",
-              "documentation": {
-                "identifier": "logEvent",
-                "newPage": false,
-                "searchKey": "main.logEvent",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func logEvent(userID int32, eventName, eventType string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc logEvent(userID int32, eventName, eventType string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/query-runner#getNotificationRecipients",
               "documentation": {
                 "identifier": "getNotificationRecipients",
                 "newPage": false,
                 "searchKey": "main.getNotificationRecipients",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1182,12 +1003,289 @@
           },
           {
             "node": {
+              "pathID": "/cmd/query-runner#gqlURL",
+              "documentation": {
+                "identifier": "gqlURL",
+                "newPage": false,
+                "searchKey": "main.gqlURL",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func gqlURL(queryName string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc gqlURL(queryName string) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#latestResultTime",
+              "documentation": {
+                "identifier": "latestResultTime",
+                "newPage": false,
+                "searchKey": "main.latestResultTime",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func latestResultTime(prevInfo *api.SavedQueryInfo, v *gqlSearchResponse, searchErr error) time.Time"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc latestResultTime(prevInfo *api.SavedQueryInfo, v *gqlSearchResponse, searchErr error) time.Time\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#logEvent",
+              "documentation": {
+                "identifier": "logEvent",
+                "newPage": false,
+                "searchKey": "main.logEvent",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func logEvent(userID int32, eventName, eventType string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc logEvent(userID int32, eventName, eventType string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#notify",
+              "documentation": {
+                "identifier": "notify",
+                "newPage": false,
+                "searchKey": "main.notify",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func notify(ctx context.Context, spec api.SavedQueryIDSpec, query api.ConfigSavedQuery, newQuery string, results *gqlSearchResponse) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc notify(ctx context.Context, spec api.SavedQueryIDSpec, query api.ConfigSavedQuery, newQuery string, results *gqlSearchResponse) error\n```\n\nnotify handles sending notifications for new search results. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#notifySavedQueryWasCreatedOrUpdated",
+              "documentation": {
+                "identifier": "notifySavedQueryWasCreatedOrUpdated",
+                "newPage": false,
+                "searchKey": "main.notifySavedQueryWasCreatedOrUpdated",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func notifySavedQueryWasCreatedOrUpdated(oldValue, newValue api.SavedQuerySpecAndConfig) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc notifySavedQueryWasCreatedOrUpdated(oldValue, newValue api.SavedQuerySpecAndConfig) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#savedSearchListPageURL",
+              "documentation": {
+                "identifier": "savedSearchListPageURL",
+                "newPage": false,
+                "searchKey": "main.savedSearchListPageURL",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func savedSearchListPageURL(utmSource string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc savedSearchListPageURL(utmSource string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#searchURL",
+              "documentation": {
+                "identifier": "searchURL",
+                "newPage": false,
+                "searchKey": "main.searchURL",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func searchURL(query, utmSource string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc searchURL(query, utmSource string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#sendEmail",
+              "documentation": {
+                "identifier": "sendEmail",
+                "newPage": false,
+                "searchKey": "main.sendEmail",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sendEmail(ctx context.Context, userID int32, eventType string, template txtypes.Templates, data interface{}) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sendEmail(ctx context.Context, userID int32, eventType string, template txtypes.Templates, data interface{}) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#sendNotificationsForCreatedOrUpdatedOrDeleted",
+              "documentation": {
+                "identifier": "sendNotificationsForCreatedOrUpdatedOrDeleted",
+                "newPage": false,
+                "searchKey": "main.sendNotificationsForCreatedOrUpdatedOrDeleted",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sendNotificationsForCreatedOrUpdatedOrDeleted(oldList, newList map[api.SavedQueryIDSpec]api.ConfigSavedQuery)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sendNotificationsForCreatedOrUpdatedOrDeleted(oldList, newList map[api.SavedQueryIDSpec]api.ConfigSavedQuery)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#serveTestNotification",
+              "documentation": {
+                "identifier": "serveTestNotification",
+                "newPage": false,
+                "searchKey": "main.serveTestNotification",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveTestNotification(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveTestNotification(w http.ResponseWriter, r *http.Request)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#slackNotify",
+              "documentation": {
+                "identifier": "slackNotify",
+                "newPage": false,
+                "searchKey": "main.slackNotify",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func slackNotify(ctx context.Context, recipient *recipient, text string, slackWebhookURL *string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc slackNotify(ctx context.Context, recipient *recipient, text string, slackWebhookURL *string) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/query-runner#slackNotifySubscribed",
               "documentation": {
                 "identifier": "slackNotifySubscribed",
                 "newPage": false,
                 "searchKey": "main.slackNotifySubscribed",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1210,6 +1308,7 @@
                 "newPage": false,
                 "searchKey": "main.slackNotifyUnsubscribed",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1226,66 +1325,46 @@
           },
           {
             "node": {
-              "pathID": "/cmd/query-runner#slackNotify",
+              "pathID": "/cmd/query-runner#sourcegraphURL",
               "documentation": {
-                "identifier": "slackNotify",
+                "identifier": "sourcegraphURL",
                 "newPage": false,
-                "searchKey": "main.slackNotify",
+                "searchKey": "main.sourcegraphURL",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func slackNotify(ctx context.Context, recipient *recipient, text string, slackWebhookURL *string) error"
+                "value": "func sourcegraphURL(path, query, utmSource string) string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc slackNotify(ctx context.Context, recipient *recipient, text string, slackWebhookURL *string) error\n```\n\n"
+                "value": "```Go\nfunc sourcegraphURL(path, query, utmSource string) string\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/query-runner#TestGetNotificationRecipients",
+              "pathID": "/cmd/query-runner#writeError",
               "documentation": {
-                "identifier": "TestGetNotificationRecipients",
+                "identifier": "writeError",
                 "newPage": false,
-                "searchKey": "main.TestGetNotificationRecipients",
+                "searchKey": "main.writeError",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestGetNotificationRecipients(t *testing.T)"
+                "value": "func writeError(w http.ResponseWriter, err error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestGetNotificationRecipients(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/query-runner#TestDiffNotificationRecipients",
-              "documentation": {
-                "identifier": "TestDiffNotificationRecipients",
-                "newPage": false,
-                "searchKey": "main.TestDiffNotificationRecipients",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDiffNotificationRecipients(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDiffNotificationRecipients(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc writeError(w http.ResponseWriter, err error)\n```\n\n"
               },
               "children": null
             }

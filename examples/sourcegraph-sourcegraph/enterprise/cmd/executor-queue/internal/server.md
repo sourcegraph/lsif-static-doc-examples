@@ -3,59 +3,61 @@
 ## Index
 
 * [Variables](#var)
-    * [var ErrUnknownQueue](#ErrUnknownQueue)
     * [var ErrUnknownJob](#ErrUnknownJob)
+    * [var ErrUnknownQueue](#ErrUnknownQueue)
     * [var shutdownErr](#shutdownErr)
 * [Types](#type)
+    * [type Options struct](#Options)
+    * [type QueueMetrics struct](#QueueMetrics)
+        * [func newQueueMetrics(observationContext *observation.Context) *QueueMetrics](#newQueueMetrics)
+    * [type QueueOptions struct](#QueueOptions)
+    * [type errorResponse struct](#errorResponse)
+    * [type executorMeta struct](#executorMeta)
     * [type handler struct](#handler)
         * [func newHandler(options Options, clock glock.Clock) *handler](#newHandler)
         * [func newHandlerWithMetrics(options Options, clock glock.Clock, observationContext *observation.Context) *handler](#newHandlerWithMetrics)
-        * [func (m *handler) dequeue(ctx context.Context, queueName, executorName string) (_ apiclient.Job, dequeued bool, _ error)](#handler.dequeue)
         * [func (m *handler) addExecutionLogEntry(ctx context.Context, queueName, executorName string, jobID int, entry workerutil.ExecutionLogEntry) error](#handler.addExecutionLogEntry)
-        * [func (m *handler) markComplete(ctx context.Context, queueName, executorName string, jobID int) error](#handler.markComplete)
-        * [func (m *handler) markErrored(ctx context.Context, queueName, executorName string, jobID int, errorMessage string) error](#handler.markErrored)
-        * [func (m *handler) markFailed(ctx context.Context, queueName, executorName string, jobID int, errorMessage string) error](#handler.markFailed)
-        * [func (m *handler) findMeta(queueName, executorName string, jobID int, remove bool) (jobMeta, error)](#handler.findMeta)
         * [func (m *handler) addMeta(executorName string, job jobMeta)](#handler.addMeta)
-        * [func (m *handler) updateMetrics()](#handler.updateMetrics)
-        * [func (h *handler) heartbeat(ctx context.Context, executorName string, jobIDs []int) ([]int, error)](#handler.heartbeat)
         * [func (h *handler) cleanup(ctx context.Context) error](#handler.cleanup)
-        * [func (h *handler) shutdown()](#handler.shutdown)
-        * [func (h *handler) unknownJobs(executorName string, ids []int) []int](#handler.unknownJobs)
-        * [func (h *handler) pruneJobs(executorName string, ids []int) (dead []jobMeta)](#handler.pruneJobs)
-        * [func (h *handler) pruneExecutors() (jobs []jobMeta)](#handler.pruneExecutors)
-        * [func (h *handler) requeueJobs(ctx context.Context, jobs []jobMeta) (errs error)](#handler.requeueJobs)
-        * [func (h *handler) requeueJob(ctx context.Context, job jobMeta) error](#handler.requeueJob)
-        * [func (h *handler) setupRoutes(router *mux.Router)](#handler.setupRoutes)
-        * [func (h *handler) handleDequeue(w http.ResponseWriter, r *http.Request)](#handler.handleDequeue)
+        * [func (m *handler) dequeue(ctx context.Context, queueName, executorName string) (_ apiclient.Job, dequeued bool, _ error)](#handler.dequeue)
+        * [func (m *handler) findMeta(queueName, executorName string, jobID int, remove bool) (jobMeta, error)](#handler.findMeta)
         * [func (h *handler) handleAddExecutionLogEntry(w http.ResponseWriter, r *http.Request)](#handler.handleAddExecutionLogEntry)
+        * [func (h *handler) handleDequeue(w http.ResponseWriter, r *http.Request)](#handler.handleDequeue)
+        * [func (h *handler) handleHeartbeat(w http.ResponseWriter, r *http.Request)](#handler.handleHeartbeat)
         * [func (h *handler) handleMarkComplete(w http.ResponseWriter, r *http.Request)](#handler.handleMarkComplete)
         * [func (h *handler) handleMarkErrored(w http.ResponseWriter, r *http.Request)](#handler.handleMarkErrored)
         * [func (h *handler) handleMarkFailed(w http.ResponseWriter, r *http.Request)](#handler.handleMarkFailed)
-        * [func (h *handler) handleHeartbeat(w http.ResponseWriter, r *http.Request)](#handler.handleHeartbeat)
+        * [func (h *handler) heartbeat(ctx context.Context, executorName string, jobIDs []int) ([]int, error)](#handler.heartbeat)
+        * [func (m *handler) markComplete(ctx context.Context, queueName, executorName string, jobID int) error](#handler.markComplete)
+        * [func (m *handler) markErrored(ctx context.Context, queueName, executorName string, jobID int, errorMessage string) error](#handler.markErrored)
+        * [func (m *handler) markFailed(ctx context.Context, queueName, executorName string, jobID int, errorMessage string) error](#handler.markFailed)
+        * [func (h *handler) pruneExecutors() (jobs []jobMeta)](#handler.pruneExecutors)
+        * [func (h *handler) pruneJobs(executorName string, ids []int) (dead []jobMeta)](#handler.pruneJobs)
+        * [func (h *handler) requeueJob(ctx context.Context, job jobMeta) error](#handler.requeueJob)
+        * [func (h *handler) requeueJobs(ctx context.Context, jobs []jobMeta) (errs error)](#handler.requeueJobs)
+        * [func (h *handler) setupRoutes(router *mux.Router)](#handler.setupRoutes)
+        * [func (h *handler) shutdown()](#handler.shutdown)
+        * [func (h *handler) unknownJobs(executorName string, ids []int) []int](#handler.unknownJobs)
+        * [func (m *handler) updateMetrics()](#handler.updateMetrics)
         * [func (h *handler) wrapHandler(w http.ResponseWriter, r *http.Request, payload interface{}, handler func() (int, interface{}, error))](#handler.wrapHandler)
-    * [type Options struct](#Options)
-    * [type QueueOptions struct](#QueueOptions)
-    * [type executorMeta struct](#executorMeta)
-    * [type jobMeta struct](#jobMeta)
-    * [type QueueMetrics struct](#QueueMetrics)
-        * [func newQueueMetrics(observationContext *observation.Context) *QueueMetrics](#newQueueMetrics)
-    * [type errorResponse struct](#errorResponse)
     * [type handlerWrapper struct](#handlerWrapper)
         * [func (hw *handlerWrapper) Handle(ctx context.Context) error](#handlerWrapper.Handle)
         * [func (hw *handlerWrapper) HandleError(err error)](#handlerWrapper.HandleError)
         * [func (hw *handlerWrapper) OnShutdown()](#handlerWrapper.OnShutdown)
+    * [type jobMeta struct](#jobMeta)
     * [type testRecord struct](#testRecord)
         * [func (r testRecord) RecordID() int](#testRecord.RecordID)
 * [Functions](#func)
     * [func NewServer(options Options, observationContext *observation.Context) goroutine.BackgroundRoutine](#NewServer)
+    * [func TestAddExecutionLogEntry(t *testing.T)](#TestAddExecutionLogEntry)
+    * [func TestAddExecutionLogEntryUnknownJob(t *testing.T)](#TestAddExecutionLogEntryUnknownJob)
+    * [func TestAddExecutionLogEntryUnknownQueue(t *testing.T)](#TestAddExecutionLogEntryUnknownQueue)
+    * [func TestCleanup(t *testing.T)](#TestCleanup)
     * [func TestDequeue(t *testing.T)](#TestDequeue)
+    * [func TestDequeueMaxTransactions(t *testing.T)](#TestDequeueMaxTransactions)
     * [func TestDequeueNoRecord(t *testing.T)](#TestDequeueNoRecord)
     * [func TestDequeueUnknownQueue(t *testing.T)](#TestDequeueUnknownQueue)
-    * [func TestDequeueMaxTransactions(t *testing.T)](#TestDequeueMaxTransactions)
-    * [func TestAddExecutionLogEntry(t *testing.T)](#TestAddExecutionLogEntry)
-    * [func TestAddExecutionLogEntryUnknownQueue(t *testing.T)](#TestAddExecutionLogEntryUnknownQueue)
-    * [func TestAddExecutionLogEntryUnknownJob(t *testing.T)](#TestAddExecutionLogEntryUnknownJob)
+    * [func TestHeartbeat(t *testing.T)](#TestHeartbeat)
     * [func TestMarkComplete(t *testing.T)](#TestMarkComplete)
     * [func TestMarkCompleteUnknownJob(t *testing.T)](#TestMarkCompleteUnknownJob)
     * [func TestMarkCompleteUnknownQueue(t *testing.T)](#TestMarkCompleteUnknownQueue)
@@ -63,41 +65,41 @@
     * [func TestMarkErroredUnknownJob(t *testing.T)](#TestMarkErroredUnknownJob)
     * [func TestMarkErroredUnknownQueue(t *testing.T)](#TestMarkErroredUnknownQueue)
     * [func TestMarkFailed(t *testing.T)](#TestMarkFailed)
-    * [func TestHeartbeat(t *testing.T)](#TestHeartbeat)
-    * [func TestCleanup(t *testing.T)](#TestCleanup)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
-```
-
-### <a id="ErrUnknownQueue" href="#ErrUnknownQueue">var ErrUnknownQueue</a>
-
-```
-searchKey: server.ErrUnknownQueue
-```
-
-```Go
-var ErrUnknownQueue = errors.New("unknown queue")
+tags: [package private]
 ```
 
 ### <a id="ErrUnknownJob" href="#ErrUnknownJob">var ErrUnknownJob</a>
 
 ```
 searchKey: server.ErrUnknownJob
+tags: [variable interface]
 ```
 
 ```Go
 var ErrUnknownJob = errors.New("unknown job")
 ```
 
+### <a id="ErrUnknownQueue" href="#ErrUnknownQueue">var ErrUnknownQueue</a>
+
+```
+searchKey: server.ErrUnknownQueue
+tags: [variable interface]
+```
+
+```Go
+var ErrUnknownQueue = errors.New("unknown queue")
+```
+
 ### <a id="shutdownErr" href="#shutdownErr">var shutdownErr</a>
 
 ```
 searchKey: server.shutdownErr
-tags: [private]
+tags: [variable interface private]
 ```
 
 ```Go
@@ -107,361 +109,14 @@ var shutdownErr = errors.New("server shutting down")
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
-
-### <a id="handler" href="#handler">type handler struct</a>
-
-```
-searchKey: server.handler
-tags: [private]
-```
-
-```Go
-type handler struct {
-	options          Options
-	clock            glock.Clock
-	executors        map[string]*executorMeta
-	dequeueSemaphore chan struct{} // tracks available dequeue slots
-	m                sync.Mutex    // protects executors
-	queueMetrics     *QueueMetrics
-}
-```
-
-#### <a id="newHandler" href="#newHandler">func newHandler(options Options, clock glock.Clock) *handler</a>
-
-```
-searchKey: server.newHandler
-tags: [private]
-```
-
-```Go
-func newHandler(options Options, clock glock.Clock) *handler
-```
-
-#### <a id="newHandlerWithMetrics" href="#newHandlerWithMetrics">func newHandlerWithMetrics(options Options, clock glock.Clock, observationContext *observation.Context) *handler</a>
-
-```
-searchKey: server.newHandlerWithMetrics
-tags: [private]
-```
-
-```Go
-func newHandlerWithMetrics(options Options, clock glock.Clock, observationContext *observation.Context) *handler
-```
-
-#### <a id="handler.dequeue" href="#handler.dequeue">func (m *handler) dequeue(ctx context.Context, queueName, executorName string) (_ apiclient.Job, dequeued bool, _ error)</a>
-
-```
-searchKey: server.handler.dequeue
-tags: [private]
-```
-
-```Go
-func (m *handler) dequeue(ctx context.Context, queueName, executorName string) (_ apiclient.Job, dequeued bool, _ error)
-```
-
-dequeue selects a job record from the database and stashes metadata including the job record and the locking transaction. If no job is available for processing, or the server has hit its maximum transactions, a false-valued flag is returned. 
-
-#### <a id="handler.addExecutionLogEntry" href="#handler.addExecutionLogEntry">func (m *handler) addExecutionLogEntry(ctx context.Context, queueName, executorName string, jobID int, entry workerutil.ExecutionLogEntry) error</a>
-
-```
-searchKey: server.handler.addExecutionLogEntry
-tags: [private]
-```
-
-```Go
-func (m *handler) addExecutionLogEntry(ctx context.Context, queueName, executorName string, jobID int, entry workerutil.ExecutionLogEntry) error
-```
-
-addExecutionLogEntry calls AddExecutionLogEntry for the given job. If the job identifier is not known, a false-valued flag is returned. 
-
-#### <a id="handler.markComplete" href="#handler.markComplete">func (m *handler) markComplete(ctx context.Context, queueName, executorName string, jobID int) error</a>
-
-```
-searchKey: server.handler.markComplete
-tags: [private]
-```
-
-```Go
-func (m *handler) markComplete(ctx context.Context, queueName, executorName string, jobID int) error
-```
-
-markComplete calls MarkComplete for the given job, then commits the job's transaction. The job is removed from the executor's job list on success. 
-
-#### <a id="handler.markErrored" href="#handler.markErrored">func (m *handler) markErrored(ctx context.Context, queueName, executorName string, jobID int, errorMessage string) error</a>
-
-```
-searchKey: server.handler.markErrored
-tags: [private]
-```
-
-```Go
-func (m *handler) markErrored(ctx context.Context, queueName, executorName string, jobID int, errorMessage string) error
-```
-
-markErrored calls MarkErrored for the given job, then commits the job's transaction. The job is removed from the executor's job list on success. 
-
-#### <a id="handler.markFailed" href="#handler.markFailed">func (m *handler) markFailed(ctx context.Context, queueName, executorName string, jobID int, errorMessage string) error</a>
-
-```
-searchKey: server.handler.markFailed
-tags: [private]
-```
-
-```Go
-func (m *handler) markFailed(ctx context.Context, queueName, executorName string, jobID int, errorMessage string) error
-```
-
-markFailed calls MarkFailed for the given job, then commits the job's transaction. The job is removed from the executor's job list on success. 
-
-#### <a id="handler.findMeta" href="#handler.findMeta">func (m *handler) findMeta(queueName, executorName string, jobID int, remove bool) (jobMeta, error)</a>
-
-```
-searchKey: server.handler.findMeta
-tags: [private]
-```
-
-```Go
-func (m *handler) findMeta(queueName, executorName string, jobID int, remove bool) (jobMeta, error)
-```
-
-findMeta returns the job with the given id and executor name. If the job is unknown, an error is returned. If the remove parameter is true, the job will be removed from the executor's job list on success. 
-
-#### <a id="handler.addMeta" href="#handler.addMeta">func (m *handler) addMeta(executorName string, job jobMeta)</a>
-
-```
-searchKey: server.handler.addMeta
-tags: [private]
-```
-
-```Go
-func (m *handler) addMeta(executorName string, job jobMeta)
-```
-
-addMeta adds a job to the given executor's job list. 
-
-#### <a id="handler.updateMetrics" href="#handler.updateMetrics">func (m *handler) updateMetrics()</a>
-
-```
-searchKey: server.handler.updateMetrics
-tags: [private]
-```
-
-```Go
-func (m *handler) updateMetrics()
-```
-
-#### <a id="handler.heartbeat" href="#handler.heartbeat">func (h *handler) heartbeat(ctx context.Context, executorName string, jobIDs []int) ([]int, error)</a>
-
-```
-searchKey: server.handler.heartbeat
-tags: [private]
-```
-
-```Go
-func (h *handler) heartbeat(ctx context.Context, executorName string, jobIDs []int) ([]int, error)
-```
-
-heartbeat will release the transaction for any job that is not confirmed to be in-progress by the given executor. This method is called when the executor POSTs its in-progress job identifiers to the /heartbeat route. This method returns the set of identifiers which the executor erroneously claims to hold (and are sent back as a hint to stop processing). 
-
-#### <a id="handler.cleanup" href="#handler.cleanup">func (h *handler) cleanup(ctx context.Context) error</a>
-
-```
-searchKey: server.handler.cleanup
-tags: [private]
-```
-
-```Go
-func (h *handler) cleanup(ctx context.Context) error
-```
-
-cleanup will release the transactions held by any executor that has not sent a heartbeat in a while. This method is called periodically in the background. 
-
-#### <a id="handler.shutdown" href="#handler.shutdown">func (h *handler) shutdown()</a>
-
-```
-searchKey: server.handler.shutdown
-tags: [private]
-```
-
-```Go
-func (h *handler) shutdown()
-```
-
-shutdown releases all transactions. This method is called on process shutdown. 
-
-#### <a id="handler.unknownJobs" href="#handler.unknownJobs">func (h *handler) unknownJobs(executorName string, ids []int) []int</a>
-
-```
-searchKey: server.handler.unknownJobs
-tags: [private]
-```
-
-```Go
-func (h *handler) unknownJobs(executorName string, ids []int) []int
-```
-
-unknownJobs returns the set of job identifiers reported by the executor which do not have an associated transaction held by this instance of the executor queue. This can occur when the executor-queue restarts and loses its transaction state. We send these identifiers back to the executor as a hint to stop processing. 
-
-#### <a id="handler.pruneJobs" href="#handler.pruneJobs">func (h *handler) pruneJobs(executorName string, ids []int) (dead []jobMeta)</a>
-
-```
-searchKey: server.handler.pruneJobs
-tags: [private]
-```
-
-```Go
-func (h *handler) pruneJobs(executorName string, ids []int) (dead []jobMeta)
-```
-
-pruneJobs updates the set of job identifiers assigned to the given executor and returns any job that was known to us but not reported by the executor. 
-
-#### <a id="handler.pruneExecutors" href="#handler.pruneExecutors">func (h *handler) pruneExecutors() (jobs []jobMeta)</a>
-
-```
-searchKey: server.handler.pruneExecutors
-tags: [private]
-```
-
-```Go
-func (h *handler) pruneExecutors() (jobs []jobMeta)
-```
-
-pruneExecutors will release the transactions held by any executor that has not sent a heartbeat in a while and return the attached jobs. 
-
-#### <a id="handler.requeueJobs" href="#handler.requeueJobs">func (h *handler) requeueJobs(ctx context.Context, jobs []jobMeta) (errs error)</a>
-
-```
-searchKey: server.handler.requeueJobs
-tags: [private]
-```
-
-```Go
-func (h *handler) requeueJobs(ctx context.Context, jobs []jobMeta) (errs error)
-```
-
-requeueJobs releases and requeues each of the given jobs. 
-
-#### <a id="handler.requeueJob" href="#handler.requeueJob">func (h *handler) requeueJob(ctx context.Context, job jobMeta) error</a>
-
-```
-searchKey: server.handler.requeueJob
-tags: [private]
-```
-
-```Go
-func (h *handler) requeueJob(ctx context.Context, job jobMeta) error
-```
-
-requeueJob requeues the given job and releases the associated transaction. 
-
-#### <a id="handler.setupRoutes" href="#handler.setupRoutes">func (h *handler) setupRoutes(router *mux.Router)</a>
-
-```
-searchKey: server.handler.setupRoutes
-tags: [private]
-```
-
-```Go
-func (h *handler) setupRoutes(router *mux.Router)
-```
-
-#### <a id="handler.handleDequeue" href="#handler.handleDequeue">func (h *handler) handleDequeue(w http.ResponseWriter, r *http.Request)</a>
-
-```
-searchKey: server.handler.handleDequeue
-tags: [private]
-```
-
-```Go
-func (h *handler) handleDequeue(w http.ResponseWriter, r *http.Request)
-```
-
-POST /{queueName}/dequeue 
-
-#### <a id="handler.handleAddExecutionLogEntry" href="#handler.handleAddExecutionLogEntry">func (h *handler) handleAddExecutionLogEntry(w http.ResponseWriter, r *http.Request)</a>
-
-```
-searchKey: server.handler.handleAddExecutionLogEntry
-tags: [private]
-```
-
-```Go
-func (h *handler) handleAddExecutionLogEntry(w http.ResponseWriter, r *http.Request)
-```
-
-POST /{queueName}/addExecutionLogEntry 
-
-#### <a id="handler.handleMarkComplete" href="#handler.handleMarkComplete">func (h *handler) handleMarkComplete(w http.ResponseWriter, r *http.Request)</a>
-
-```
-searchKey: server.handler.handleMarkComplete
-tags: [private]
-```
-
-```Go
-func (h *handler) handleMarkComplete(w http.ResponseWriter, r *http.Request)
-```
-
-POST /{queueName}/markComplete 
-
-#### <a id="handler.handleMarkErrored" href="#handler.handleMarkErrored">func (h *handler) handleMarkErrored(w http.ResponseWriter, r *http.Request)</a>
-
-```
-searchKey: server.handler.handleMarkErrored
-tags: [private]
-```
-
-```Go
-func (h *handler) handleMarkErrored(w http.ResponseWriter, r *http.Request)
-```
-
-POST /{queueName}/markErrored 
-
-#### <a id="handler.handleMarkFailed" href="#handler.handleMarkFailed">func (h *handler) handleMarkFailed(w http.ResponseWriter, r *http.Request)</a>
-
-```
-searchKey: server.handler.handleMarkFailed
-tags: [private]
-```
-
-```Go
-func (h *handler) handleMarkFailed(w http.ResponseWriter, r *http.Request)
-```
-
-POST /{queueName}/markFailed 
-
-#### <a id="handler.handleHeartbeat" href="#handler.handleHeartbeat">func (h *handler) handleHeartbeat(w http.ResponseWriter, r *http.Request)</a>
-
-```
-searchKey: server.handler.handleHeartbeat
-tags: [private]
-```
-
-```Go
-func (h *handler) handleHeartbeat(w http.ResponseWriter, r *http.Request)
-```
-
-POST /heartbeat 
-
-#### <a id="handler.wrapHandler" href="#handler.wrapHandler">func (h *handler) wrapHandler(w http.ResponseWriter, r *http.Request, payload interface{}, handler func() (int, interface{}, error))</a>
-
-```
-searchKey: server.handler.wrapHandler
-tags: [private]
-```
-
-```Go
-func (h *handler) wrapHandler(w http.ResponseWriter, r *http.Request, payload interface{}, handler func() (int, interface{}, error))
-```
-
-wrapHandler decodes the request body into the given payload pointer, then calls the given handler function. If the body cannot be decoded, a 400 BadRequest is returned and the handler function is not called. If the handler function returns an error, a 500 Internal Server Error is returned. Otherwise, the response status will match the status code value returned from the handler, and the payload value returned from the handler is encoded and written to the response body. 
 
 ### <a id="Options" href="#Options">type Options struct</a>
 
 ```
 searchKey: server.Options
+tags: [struct]
 ```
 
 ```Go
@@ -496,57 +151,11 @@ type Options struct {
 }
 ```
 
-### <a id="QueueOptions" href="#QueueOptions">type QueueOptions struct</a>
-
-```
-searchKey: server.QueueOptions
-```
-
-```Go
-type QueueOptions struct {
-	// Store is a required dbworker store store for each registered queue.
-	Store store.Store
-
-	// RecordTransformer is a required hook for each registered queue that transforms a generic
-	// record from that queue into the job to be given to an executor.
-	RecordTransformer func(record workerutil.Record) (apiclient.Job, error)
-}
-```
-
-### <a id="executorMeta" href="#executorMeta">type executorMeta struct</a>
-
-```
-searchKey: server.executorMeta
-tags: [private]
-```
-
-```Go
-type executorMeta struct {
-	lastUpdate time.Time
-	jobs       []jobMeta
-}
-```
-
-### <a id="jobMeta" href="#jobMeta">type jobMeta struct</a>
-
-```
-searchKey: server.jobMeta
-tags: [private]
-```
-
-```Go
-type jobMeta struct {
-	queueName string
-	record    workerutil.Record
-	tx        store.Store
-	started   time.Time
-}
-```
-
 ### <a id="QueueMetrics" href="#QueueMetrics">type QueueMetrics struct</a>
 
 ```
 searchKey: server.QueueMetrics
+tags: [struct]
 ```
 
 ```Go
@@ -560,18 +169,36 @@ type QueueMetrics struct {
 
 ```
 searchKey: server.newQueueMetrics
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func newQueueMetrics(observationContext *observation.Context) *QueueMetrics
 ```
 
+### <a id="QueueOptions" href="#QueueOptions">type QueueOptions struct</a>
+
+```
+searchKey: server.QueueOptions
+tags: [struct]
+```
+
+```Go
+type QueueOptions struct {
+	// Store is a required dbworker store store for each registered queue.
+	Store store.Store
+
+	// RecordTransformer is a required hook for each registered queue that transforms a generic
+	// record from that queue into the job to be given to an executor.
+	RecordTransformer func(record workerutil.Record) (apiclient.Job, error)
+}
+```
+
 ### <a id="errorResponse" href="#errorResponse">type errorResponse struct</a>
 
 ```
 searchKey: server.errorResponse
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -580,11 +207,373 @@ type errorResponse struct {
 }
 ```
 
+### <a id="executorMeta" href="#executorMeta">type executorMeta struct</a>
+
+```
+searchKey: server.executorMeta
+tags: [struct private]
+```
+
+```Go
+type executorMeta struct {
+	lastUpdate time.Time
+	jobs       []jobMeta
+}
+```
+
+### <a id="handler" href="#handler">type handler struct</a>
+
+```
+searchKey: server.handler
+tags: [struct private]
+```
+
+```Go
+type handler struct {
+	options          Options
+	clock            glock.Clock
+	executors        map[string]*executorMeta
+	dequeueSemaphore chan struct{} // tracks available dequeue slots
+	m                sync.Mutex    // protects executors
+	queueMetrics     *QueueMetrics
+}
+```
+
+#### <a id="newHandler" href="#newHandler">func newHandler(options Options, clock glock.Clock) *handler</a>
+
+```
+searchKey: server.newHandler
+tags: [method private]
+```
+
+```Go
+func newHandler(options Options, clock glock.Clock) *handler
+```
+
+#### <a id="newHandlerWithMetrics" href="#newHandlerWithMetrics">func newHandlerWithMetrics(options Options, clock glock.Clock, observationContext *observation.Context) *handler</a>
+
+```
+searchKey: server.newHandlerWithMetrics
+tags: [method private]
+```
+
+```Go
+func newHandlerWithMetrics(options Options, clock glock.Clock, observationContext *observation.Context) *handler
+```
+
+#### <a id="handler.addExecutionLogEntry" href="#handler.addExecutionLogEntry">func (m *handler) addExecutionLogEntry(ctx context.Context, queueName, executorName string, jobID int, entry workerutil.ExecutionLogEntry) error</a>
+
+```
+searchKey: server.handler.addExecutionLogEntry
+tags: [method private]
+```
+
+```Go
+func (m *handler) addExecutionLogEntry(ctx context.Context, queueName, executorName string, jobID int, entry workerutil.ExecutionLogEntry) error
+```
+
+addExecutionLogEntry calls AddExecutionLogEntry for the given job. If the job identifier is not known, a false-valued flag is returned. 
+
+#### <a id="handler.addMeta" href="#handler.addMeta">func (m *handler) addMeta(executorName string, job jobMeta)</a>
+
+```
+searchKey: server.handler.addMeta
+tags: [method private]
+```
+
+```Go
+func (m *handler) addMeta(executorName string, job jobMeta)
+```
+
+addMeta adds a job to the given executor's job list. 
+
+#### <a id="handler.cleanup" href="#handler.cleanup">func (h *handler) cleanup(ctx context.Context) error</a>
+
+```
+searchKey: server.handler.cleanup
+tags: [method private]
+```
+
+```Go
+func (h *handler) cleanup(ctx context.Context) error
+```
+
+cleanup will release the transactions held by any executor that has not sent a heartbeat in a while. This method is called periodically in the background. 
+
+#### <a id="handler.dequeue" href="#handler.dequeue">func (m *handler) dequeue(ctx context.Context, queueName, executorName string) (_ apiclient.Job, dequeued bool, _ error)</a>
+
+```
+searchKey: server.handler.dequeue
+tags: [method private]
+```
+
+```Go
+func (m *handler) dequeue(ctx context.Context, queueName, executorName string) (_ apiclient.Job, dequeued bool, _ error)
+```
+
+dequeue selects a job record from the database and stashes metadata including the job record and the locking transaction. If no job is available for processing, or the server has hit its maximum transactions, a false-valued flag is returned. 
+
+#### <a id="handler.findMeta" href="#handler.findMeta">func (m *handler) findMeta(queueName, executorName string, jobID int, remove bool) (jobMeta, error)</a>
+
+```
+searchKey: server.handler.findMeta
+tags: [method private]
+```
+
+```Go
+func (m *handler) findMeta(queueName, executorName string, jobID int, remove bool) (jobMeta, error)
+```
+
+findMeta returns the job with the given id and executor name. If the job is unknown, an error is returned. If the remove parameter is true, the job will be removed from the executor's job list on success. 
+
+#### <a id="handler.handleAddExecutionLogEntry" href="#handler.handleAddExecutionLogEntry">func (h *handler) handleAddExecutionLogEntry(w http.ResponseWriter, r *http.Request)</a>
+
+```
+searchKey: server.handler.handleAddExecutionLogEntry
+tags: [method private]
+```
+
+```Go
+func (h *handler) handleAddExecutionLogEntry(w http.ResponseWriter, r *http.Request)
+```
+
+POST /{queueName}/addExecutionLogEntry 
+
+#### <a id="handler.handleDequeue" href="#handler.handleDequeue">func (h *handler) handleDequeue(w http.ResponseWriter, r *http.Request)</a>
+
+```
+searchKey: server.handler.handleDequeue
+tags: [method private]
+```
+
+```Go
+func (h *handler) handleDequeue(w http.ResponseWriter, r *http.Request)
+```
+
+POST /{queueName}/dequeue 
+
+#### <a id="handler.handleHeartbeat" href="#handler.handleHeartbeat">func (h *handler) handleHeartbeat(w http.ResponseWriter, r *http.Request)</a>
+
+```
+searchKey: server.handler.handleHeartbeat
+tags: [method private]
+```
+
+```Go
+func (h *handler) handleHeartbeat(w http.ResponseWriter, r *http.Request)
+```
+
+POST /heartbeat 
+
+#### <a id="handler.handleMarkComplete" href="#handler.handleMarkComplete">func (h *handler) handleMarkComplete(w http.ResponseWriter, r *http.Request)</a>
+
+```
+searchKey: server.handler.handleMarkComplete
+tags: [method private]
+```
+
+```Go
+func (h *handler) handleMarkComplete(w http.ResponseWriter, r *http.Request)
+```
+
+POST /{queueName}/markComplete 
+
+#### <a id="handler.handleMarkErrored" href="#handler.handleMarkErrored">func (h *handler) handleMarkErrored(w http.ResponseWriter, r *http.Request)</a>
+
+```
+searchKey: server.handler.handleMarkErrored
+tags: [method private]
+```
+
+```Go
+func (h *handler) handleMarkErrored(w http.ResponseWriter, r *http.Request)
+```
+
+POST /{queueName}/markErrored 
+
+#### <a id="handler.handleMarkFailed" href="#handler.handleMarkFailed">func (h *handler) handleMarkFailed(w http.ResponseWriter, r *http.Request)</a>
+
+```
+searchKey: server.handler.handleMarkFailed
+tags: [method private]
+```
+
+```Go
+func (h *handler) handleMarkFailed(w http.ResponseWriter, r *http.Request)
+```
+
+POST /{queueName}/markFailed 
+
+#### <a id="handler.heartbeat" href="#handler.heartbeat">func (h *handler) heartbeat(ctx context.Context, executorName string, jobIDs []int) ([]int, error)</a>
+
+```
+searchKey: server.handler.heartbeat
+tags: [method private]
+```
+
+```Go
+func (h *handler) heartbeat(ctx context.Context, executorName string, jobIDs []int) ([]int, error)
+```
+
+heartbeat will release the transaction for any job that is not confirmed to be in-progress by the given executor. This method is called when the executor POSTs its in-progress job identifiers to the /heartbeat route. This method returns the set of identifiers which the executor erroneously claims to hold (and are sent back as a hint to stop processing). 
+
+#### <a id="handler.markComplete" href="#handler.markComplete">func (m *handler) markComplete(ctx context.Context, queueName, executorName string, jobID int) error</a>
+
+```
+searchKey: server.handler.markComplete
+tags: [method private]
+```
+
+```Go
+func (m *handler) markComplete(ctx context.Context, queueName, executorName string, jobID int) error
+```
+
+markComplete calls MarkComplete for the given job, then commits the job's transaction. The job is removed from the executor's job list on success. 
+
+#### <a id="handler.markErrored" href="#handler.markErrored">func (m *handler) markErrored(ctx context.Context, queueName, executorName string, jobID int, errorMessage string) error</a>
+
+```
+searchKey: server.handler.markErrored
+tags: [method private]
+```
+
+```Go
+func (m *handler) markErrored(ctx context.Context, queueName, executorName string, jobID int, errorMessage string) error
+```
+
+markErrored calls MarkErrored for the given job, then commits the job's transaction. The job is removed from the executor's job list on success. 
+
+#### <a id="handler.markFailed" href="#handler.markFailed">func (m *handler) markFailed(ctx context.Context, queueName, executorName string, jobID int, errorMessage string) error</a>
+
+```
+searchKey: server.handler.markFailed
+tags: [method private]
+```
+
+```Go
+func (m *handler) markFailed(ctx context.Context, queueName, executorName string, jobID int, errorMessage string) error
+```
+
+markFailed calls MarkFailed for the given job, then commits the job's transaction. The job is removed from the executor's job list on success. 
+
+#### <a id="handler.pruneExecutors" href="#handler.pruneExecutors">func (h *handler) pruneExecutors() (jobs []jobMeta)</a>
+
+```
+searchKey: server.handler.pruneExecutors
+tags: [function private]
+```
+
+```Go
+func (h *handler) pruneExecutors() (jobs []jobMeta)
+```
+
+pruneExecutors will release the transactions held by any executor that has not sent a heartbeat in a while and return the attached jobs. 
+
+#### <a id="handler.pruneJobs" href="#handler.pruneJobs">func (h *handler) pruneJobs(executorName string, ids []int) (dead []jobMeta)</a>
+
+```
+searchKey: server.handler.pruneJobs
+tags: [method private]
+```
+
+```Go
+func (h *handler) pruneJobs(executorName string, ids []int) (dead []jobMeta)
+```
+
+pruneJobs updates the set of job identifiers assigned to the given executor and returns any job that was known to us but not reported by the executor. 
+
+#### <a id="handler.requeueJob" href="#handler.requeueJob">func (h *handler) requeueJob(ctx context.Context, job jobMeta) error</a>
+
+```
+searchKey: server.handler.requeueJob
+tags: [method private]
+```
+
+```Go
+func (h *handler) requeueJob(ctx context.Context, job jobMeta) error
+```
+
+requeueJob requeues the given job and releases the associated transaction. 
+
+#### <a id="handler.requeueJobs" href="#handler.requeueJobs">func (h *handler) requeueJobs(ctx context.Context, jobs []jobMeta) (errs error)</a>
+
+```
+searchKey: server.handler.requeueJobs
+tags: [method private]
+```
+
+```Go
+func (h *handler) requeueJobs(ctx context.Context, jobs []jobMeta) (errs error)
+```
+
+requeueJobs releases and requeues each of the given jobs. 
+
+#### <a id="handler.setupRoutes" href="#handler.setupRoutes">func (h *handler) setupRoutes(router *mux.Router)</a>
+
+```
+searchKey: server.handler.setupRoutes
+tags: [method private]
+```
+
+```Go
+func (h *handler) setupRoutes(router *mux.Router)
+```
+
+#### <a id="handler.shutdown" href="#handler.shutdown">func (h *handler) shutdown()</a>
+
+```
+searchKey: server.handler.shutdown
+tags: [function private]
+```
+
+```Go
+func (h *handler) shutdown()
+```
+
+shutdown releases all transactions. This method is called on process shutdown. 
+
+#### <a id="handler.unknownJobs" href="#handler.unknownJobs">func (h *handler) unknownJobs(executorName string, ids []int) []int</a>
+
+```
+searchKey: server.handler.unknownJobs
+tags: [method private]
+```
+
+```Go
+func (h *handler) unknownJobs(executorName string, ids []int) []int
+```
+
+unknownJobs returns the set of job identifiers reported by the executor which do not have an associated transaction held by this instance of the executor queue. This can occur when the executor-queue restarts and loses its transaction state. We send these identifiers back to the executor as a hint to stop processing. 
+
+#### <a id="handler.updateMetrics" href="#handler.updateMetrics">func (m *handler) updateMetrics()</a>
+
+```
+searchKey: server.handler.updateMetrics
+tags: [function private]
+```
+
+```Go
+func (m *handler) updateMetrics()
+```
+
+#### <a id="handler.wrapHandler" href="#handler.wrapHandler">func (h *handler) wrapHandler(w http.ResponseWriter, r *http.Request, payload interface{}, handler func() (int, interface{}, error))</a>
+
+```
+searchKey: server.handler.wrapHandler
+tags: [method private]
+```
+
+```Go
+func (h *handler) wrapHandler(w http.ResponseWriter, r *http.Request, payload interface{}, handler func() (int, interface{}, error))
+```
+
+wrapHandler decodes the request body into the given payload pointer, then calls the given handler function. If the body cannot be decoded, a 400 BadRequest is returned and the handler function is not called. If the handler function returns an error, a 500 Internal Server Error is returned. Otherwise, the response status will match the status code value returned from the handler, and the payload value returned from the handler is encoded and written to the response body. 
+
 ### <a id="handlerWrapper" href="#handlerWrapper">type handlerWrapper struct</a>
 
 ```
 searchKey: server.handlerWrapper
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -595,7 +584,7 @@ type handlerWrapper struct{ handler *handler }
 
 ```
 searchKey: server.handlerWrapper.Handle
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -606,7 +595,7 @@ func (hw *handlerWrapper) Handle(ctx context.Context) error
 
 ```
 searchKey: server.handlerWrapper.HandleError
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -617,18 +606,34 @@ func (hw *handlerWrapper) HandleError(err error)
 
 ```
 searchKey: server.handlerWrapper.OnShutdown
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (hw *handlerWrapper) OnShutdown()
 ```
 
+### <a id="jobMeta" href="#jobMeta">type jobMeta struct</a>
+
+```
+searchKey: server.jobMeta
+tags: [struct private]
+```
+
+```Go
+type jobMeta struct {
+	queueName string
+	record    workerutil.Record
+	tx        store.Store
+	started   time.Time
+}
+```
+
 ### <a id="testRecord" href="#testRecord">type testRecord struct</a>
 
 ```
 searchKey: server.testRecord
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -642,7 +647,7 @@ type testRecord struct {
 
 ```
 searchKey: server.testRecord.RecordID
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -652,13 +657,14 @@ func (r testRecord) RecordID() int
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="NewServer" href="#NewServer">func NewServer(options Options, observationContext *observation.Context) goroutine.BackgroundRoutine</a>
 
 ```
 searchKey: server.NewServer
+tags: [method]
 ```
 
 ```Go
@@ -667,22 +673,77 @@ func NewServer(options Options, observationContext *observation.Context) gorouti
 
 NewServer returns an HTTP job queue server. 
 
+### <a id="TestAddExecutionLogEntry" href="#TestAddExecutionLogEntry">func TestAddExecutionLogEntry(t *testing.T)</a>
+
+```
+searchKey: server.TestAddExecutionLogEntry
+tags: [method private test]
+```
+
+```Go
+func TestAddExecutionLogEntry(t *testing.T)
+```
+
+### <a id="TestAddExecutionLogEntryUnknownJob" href="#TestAddExecutionLogEntryUnknownJob">func TestAddExecutionLogEntryUnknownJob(t *testing.T)</a>
+
+```
+searchKey: server.TestAddExecutionLogEntryUnknownJob
+tags: [method private test]
+```
+
+```Go
+func TestAddExecutionLogEntryUnknownJob(t *testing.T)
+```
+
+### <a id="TestAddExecutionLogEntryUnknownQueue" href="#TestAddExecutionLogEntryUnknownQueue">func TestAddExecutionLogEntryUnknownQueue(t *testing.T)</a>
+
+```
+searchKey: server.TestAddExecutionLogEntryUnknownQueue
+tags: [method private test]
+```
+
+```Go
+func TestAddExecutionLogEntryUnknownQueue(t *testing.T)
+```
+
+### <a id="TestCleanup" href="#TestCleanup">func TestCleanup(t *testing.T)</a>
+
+```
+searchKey: server.TestCleanup
+tags: [method private test]
+```
+
+```Go
+func TestCleanup(t *testing.T)
+```
+
 ### <a id="TestDequeue" href="#TestDequeue">func TestDequeue(t *testing.T)</a>
 
 ```
 searchKey: server.TestDequeue
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestDequeue(t *testing.T)
 ```
 
+### <a id="TestDequeueMaxTransactions" href="#TestDequeueMaxTransactions">func TestDequeueMaxTransactions(t *testing.T)</a>
+
+```
+searchKey: server.TestDequeueMaxTransactions
+tags: [method private test]
+```
+
+```Go
+func TestDequeueMaxTransactions(t *testing.T)
+```
+
 ### <a id="TestDequeueNoRecord" href="#TestDequeueNoRecord">func TestDequeueNoRecord(t *testing.T)</a>
 
 ```
 searchKey: server.TestDequeueNoRecord
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -693,62 +754,29 @@ func TestDequeueNoRecord(t *testing.T)
 
 ```
 searchKey: server.TestDequeueUnknownQueue
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestDequeueUnknownQueue(t *testing.T)
 ```
 
-### <a id="TestDequeueMaxTransactions" href="#TestDequeueMaxTransactions">func TestDequeueMaxTransactions(t *testing.T)</a>
+### <a id="TestHeartbeat" href="#TestHeartbeat">func TestHeartbeat(t *testing.T)</a>
 
 ```
-searchKey: server.TestDequeueMaxTransactions
-tags: [private]
-```
-
-```Go
-func TestDequeueMaxTransactions(t *testing.T)
-```
-
-### <a id="TestAddExecutionLogEntry" href="#TestAddExecutionLogEntry">func TestAddExecutionLogEntry(t *testing.T)</a>
-
-```
-searchKey: server.TestAddExecutionLogEntry
-tags: [private]
+searchKey: server.TestHeartbeat
+tags: [method private test]
 ```
 
 ```Go
-func TestAddExecutionLogEntry(t *testing.T)
-```
-
-### <a id="TestAddExecutionLogEntryUnknownQueue" href="#TestAddExecutionLogEntryUnknownQueue">func TestAddExecutionLogEntryUnknownQueue(t *testing.T)</a>
-
-```
-searchKey: server.TestAddExecutionLogEntryUnknownQueue
-tags: [private]
-```
-
-```Go
-func TestAddExecutionLogEntryUnknownQueue(t *testing.T)
-```
-
-### <a id="TestAddExecutionLogEntryUnknownJob" href="#TestAddExecutionLogEntryUnknownJob">func TestAddExecutionLogEntryUnknownJob(t *testing.T)</a>
-
-```
-searchKey: server.TestAddExecutionLogEntryUnknownJob
-tags: [private]
-```
-
-```Go
-func TestAddExecutionLogEntryUnknownJob(t *testing.T)
+func TestHeartbeat(t *testing.T)
 ```
 
 ### <a id="TestMarkComplete" href="#TestMarkComplete">func TestMarkComplete(t *testing.T)</a>
 
 ```
 searchKey: server.TestMarkComplete
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -759,7 +787,7 @@ func TestMarkComplete(t *testing.T)
 
 ```
 searchKey: server.TestMarkCompleteUnknownJob
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -770,7 +798,7 @@ func TestMarkCompleteUnknownJob(t *testing.T)
 
 ```
 searchKey: server.TestMarkCompleteUnknownQueue
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -781,7 +809,7 @@ func TestMarkCompleteUnknownQueue(t *testing.T)
 
 ```
 searchKey: server.TestMarkErrored
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -792,7 +820,7 @@ func TestMarkErrored(t *testing.T)
 
 ```
 searchKey: server.TestMarkErroredUnknownJob
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -803,7 +831,7 @@ func TestMarkErroredUnknownJob(t *testing.T)
 
 ```
 searchKey: server.TestMarkErroredUnknownQueue
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -814,32 +842,10 @@ func TestMarkErroredUnknownQueue(t *testing.T)
 
 ```
 searchKey: server.TestMarkFailed
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestMarkFailed(t *testing.T)
-```
-
-### <a id="TestHeartbeat" href="#TestHeartbeat">func TestHeartbeat(t *testing.T)</a>
-
-```
-searchKey: server.TestHeartbeat
-tags: [private]
-```
-
-```Go
-func TestHeartbeat(t *testing.T)
-```
-
-### <a id="TestCleanup" href="#TestCleanup">func TestCleanup(t *testing.T)</a>
-
-```
-searchKey: server.TestCleanup
-tags: [private]
-```
-
-```Go
-func TestCleanup(t *testing.T)
 ```
 

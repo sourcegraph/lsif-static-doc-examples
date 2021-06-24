@@ -9,14 +9,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="ExampleDial" href="#ExampleDial">func ExampleDial()</a>
 
 ```
 searchKey: syslog_test.ExampleDial
-tags: [private]
+tags: [function private]
 ```
 
 ```Go

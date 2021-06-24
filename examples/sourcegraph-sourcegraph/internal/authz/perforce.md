@@ -6,37 +6,38 @@
     * [type Provider struct](#Provider)
         * [func NewProvider(urn, host, user, password string) *Provider](#NewProvider)
         * [func (p *Provider) FetchAccount(ctx context.Context, user *types.User, _ []*extsvc.Account, verifiedEmails []string) (_ *extsvc.Account, err error)](#Provider.FetchAccount)
-        * [func (p *Provider) canRevokeReadAccess(level string) bool](#Provider.canRevokeReadAccess)
-        * [func (p *Provider) canGrantReadAccess(level string) bool](#Provider.canGrantReadAccess)
+        * [func (p *Provider) FetchRepoPerms(ctx context.Context, repo *extsvc.Repository) ([]extsvc.AccountID, error)](#Provider.FetchRepoPerms)
         * [func (p *Provider) FetchUserPerms(ctx context.Context, account *extsvc.Account) (*authz.ExternalUserPermissions, error)](#Provider.FetchUserPerms)
+        * [func (p *Provider) ServiceID() string](#Provider.ServiceID)
+        * [func (p *Provider) ServiceType() string](#Provider.ServiceType)
+        * [func (p *Provider) URN() string](#Provider.URN)
+        * [func (p *Provider) Validate() (problems []string)](#Provider.Validate)
+        * [func (p *Provider) canGrantReadAccess(level string) bool](#Provider.canGrantReadAccess)
+        * [func (p *Provider) canRevokeReadAccess(level string) bool](#Provider.canRevokeReadAccess)
         * [func (p *Provider) getAllUserEmails(ctx context.Context) (map[string]string, error)](#Provider.getAllUserEmails)
         * [func (p *Provider) getAllUsers(ctx context.Context) ([]string, error)](#Provider.getAllUsers)
         * [func (p *Provider) getGroupMembers(ctx context.Context, group string) ([]string, error)](#Provider.getGroupMembers)
-        * [func (p *Provider) FetchRepoPerms(ctx context.Context, repo *extsvc.Repository) ([]extsvc.AccountID, error)](#Provider.FetchRepoPerms)
-        * [func (p *Provider) ServiceType() string](#Provider.ServiceType)
-        * [func (p *Provider) ServiceID() string](#Provider.ServiceID)
-        * [func (p *Provider) URN() string](#Provider.URN)
-        * [func (p *Provider) Validate() (problems []string)](#Provider.Validate)
 * [Functions](#func)
     * [func NewAuthzProviders(conns []*types.PerforceConnection) (ps []authz.Provider, problems []string, warnings []string)](#NewAuthzProviders)
-    * [func newAuthzProvider(urn string,...](#newAuthzProvider)
-    * [func ValidateAuthz(cfg *schema.PerforceConnection) error](#ValidateAuthz)
     * [func TestMain(m *testing.M)](#TestMain)
     * [func TestProvider_FetchAccount(t *testing.T)](#TestProvider_FetchAccount)
-    * [func TestProvider_FetchUserPerms(t *testing.T)](#TestProvider_FetchUserPerms)
     * [func TestProvider_FetchRepoPerms(t *testing.T)](#TestProvider_FetchRepoPerms)
+    * [func TestProvider_FetchUserPerms(t *testing.T)](#TestProvider_FetchUserPerms)
+    * [func ValidateAuthz(cfg *schema.PerforceConnection) error](#ValidateAuthz)
+    * [func newAuthzProvider(urn string,...](#newAuthzProvider)
 
 
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Provider" href="#Provider">type Provider struct</a>
 
 ```
 searchKey: perforce.Provider
+tags: [struct]
 ```
 
 ```Go
@@ -61,6 +62,7 @@ Provider implements authz.Provider for Perforce depot permissions.
 
 ```
 searchKey: perforce.NewProvider
+tags: [method]
 ```
 
 ```Go
@@ -73,6 +75,7 @@ NewProvider returns a new Perforce authorization provider that uses the given ho
 
 ```
 searchKey: perforce.Provider.FetchAccount
+tags: [method]
 ```
 
 ```Go
@@ -81,36 +84,24 @@ func (p *Provider) FetchAccount(ctx context.Context, user *types.User, _ []*exts
 
 FetchAccount uses given user's verified emails to match users on the Perforce Server. It returns when any of the verified email has matched and the match result is not deterministic. 
 
-#### <a id="Provider.canRevokeReadAccess" href="#Provider.canRevokeReadAccess">func (p *Provider) canRevokeReadAccess(level string) bool</a>
+#### <a id="Provider.FetchRepoPerms" href="#Provider.FetchRepoPerms">func (p *Provider) FetchRepoPerms(ctx context.Context, repo *extsvc.Repository) ([]extsvc.AccountID, error)</a>
 
 ```
-searchKey: perforce.Provider.canRevokeReadAccess
-tags: [private]
-```
-
-```Go
-func (p *Provider) canRevokeReadAccess(level string) bool
-```
-
-canRevokeReadAccess returns true if the given access level is able to revoke read account for a depot prefix. 
-
-#### <a id="Provider.canGrantReadAccess" href="#Provider.canGrantReadAccess">func (p *Provider) canGrantReadAccess(level string) bool</a>
-
-```
-searchKey: perforce.Provider.canGrantReadAccess
-tags: [private]
+searchKey: perforce.Provider.FetchRepoPerms
+tags: [method]
 ```
 
 ```Go
-func (p *Provider) canGrantReadAccess(level string) bool
+func (p *Provider) FetchRepoPerms(ctx context.Context, repo *extsvc.Repository) ([]extsvc.AccountID, error)
 ```
 
-canGrantReadAccess returns true if the given access level is able to grant read account for a depot prefix. 
+FetchRepoPerms returns a list of users that have access to the given repository on the Perforce Server. 
 
 #### <a id="Provider.FetchUserPerms" href="#Provider.FetchUserPerms">func (p *Provider) FetchUserPerms(ctx context.Context, account *extsvc.Account) (*authz.ExternalUserPermissions, error)</a>
 
 ```
 searchKey: perforce.Provider.FetchUserPerms
+tags: [method]
 ```
 
 ```Go
@@ -119,11 +110,81 @@ func (p *Provider) FetchUserPerms(ctx context.Context, account *extsvc.Account) 
 
 FetchUserPerms returns a list of depot prefixes that the given user has access to on the Perforce Server. 
 
+#### <a id="Provider.ServiceID" href="#Provider.ServiceID">func (p *Provider) ServiceID() string</a>
+
+```
+searchKey: perforce.Provider.ServiceID
+tags: [function]
+```
+
+```Go
+func (p *Provider) ServiceID() string
+```
+
+#### <a id="Provider.ServiceType" href="#Provider.ServiceType">func (p *Provider) ServiceType() string</a>
+
+```
+searchKey: perforce.Provider.ServiceType
+tags: [function]
+```
+
+```Go
+func (p *Provider) ServiceType() string
+```
+
+#### <a id="Provider.URN" href="#Provider.URN">func (p *Provider) URN() string</a>
+
+```
+searchKey: perforce.Provider.URN
+tags: [function]
+```
+
+```Go
+func (p *Provider) URN() string
+```
+
+#### <a id="Provider.Validate" href="#Provider.Validate">func (p *Provider) Validate() (problems []string)</a>
+
+```
+searchKey: perforce.Provider.Validate
+tags: [function]
+```
+
+```Go
+func (p *Provider) Validate() (problems []string)
+```
+
+#### <a id="Provider.canGrantReadAccess" href="#Provider.canGrantReadAccess">func (p *Provider) canGrantReadAccess(level string) bool</a>
+
+```
+searchKey: perforce.Provider.canGrantReadAccess
+tags: [method private]
+```
+
+```Go
+func (p *Provider) canGrantReadAccess(level string) bool
+```
+
+canGrantReadAccess returns true if the given access level is able to grant read account for a depot prefix. 
+
+#### <a id="Provider.canRevokeReadAccess" href="#Provider.canRevokeReadAccess">func (p *Provider) canRevokeReadAccess(level string) bool</a>
+
+```
+searchKey: perforce.Provider.canRevokeReadAccess
+tags: [method private]
+```
+
+```Go
+func (p *Provider) canRevokeReadAccess(level string) bool
+```
+
+canRevokeReadAccess returns true if the given access level is able to revoke read account for a depot prefix. 
+
 #### <a id="Provider.getAllUserEmails" href="#Provider.getAllUserEmails">func (p *Provider) getAllUserEmails(ctx context.Context) (map[string]string, error)</a>
 
 ```
 searchKey: perforce.Provider.getAllUserEmails
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -136,7 +197,7 @@ getAllUserEmails returns a set of username <-> email pairs of all users in the P
 
 ```
 searchKey: perforce.Provider.getAllUsers
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -149,7 +210,7 @@ getAllUsers returns a list of usernames of all users in the Perforce server.
 
 ```
 searchKey: perforce.Provider.getGroupMembers
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -158,68 +219,17 @@ func (p *Provider) getGroupMembers(ctx context.Context, group string) ([]string,
 
 getGroupMembers returns all members of the given group in the Perforce server. 
 
-#### <a id="Provider.FetchRepoPerms" href="#Provider.FetchRepoPerms">func (p *Provider) FetchRepoPerms(ctx context.Context, repo *extsvc.Repository) ([]extsvc.AccountID, error)</a>
-
-```
-searchKey: perforce.Provider.FetchRepoPerms
-```
-
-```Go
-func (p *Provider) FetchRepoPerms(ctx context.Context, repo *extsvc.Repository) ([]extsvc.AccountID, error)
-```
-
-FetchRepoPerms returns a list of users that have access to the given repository on the Perforce Server. 
-
-#### <a id="Provider.ServiceType" href="#Provider.ServiceType">func (p *Provider) ServiceType() string</a>
-
-```
-searchKey: perforce.Provider.ServiceType
-```
-
-```Go
-func (p *Provider) ServiceType() string
-```
-
-#### <a id="Provider.ServiceID" href="#Provider.ServiceID">func (p *Provider) ServiceID() string</a>
-
-```
-searchKey: perforce.Provider.ServiceID
-```
-
-```Go
-func (p *Provider) ServiceID() string
-```
-
-#### <a id="Provider.URN" href="#Provider.URN">func (p *Provider) URN() string</a>
-
-```
-searchKey: perforce.Provider.URN
-```
-
-```Go
-func (p *Provider) URN() string
-```
-
-#### <a id="Provider.Validate" href="#Provider.Validate">func (p *Provider) Validate() (problems []string)</a>
-
-```
-searchKey: perforce.Provider.Validate
-```
-
-```Go
-func (p *Provider) Validate() (problems []string)
-```
-
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="NewAuthzProviders" href="#NewAuthzProviders">func NewAuthzProviders(conns []*types.PerforceConnection) (ps []authz.Provider, problems []string, warnings []string)</a>
 
 ```
 searchKey: perforce.NewAuthzProviders
+tags: [method]
 ```
 
 ```Go
@@ -228,38 +238,11 @@ func NewAuthzProviders(conns []*types.PerforceConnection) (ps []authz.Provider, 
 
 NewAuthzProviders returns the set of Perforce authz providers derived from the connections. It also returns any validation problems with the config, separating these into "serious problems" and "warnings". "Serious problems" are those that should make Sourcegraph set authz.allowAccessByDefault to false. "Warnings" are all other validation problems. 
 
-### <a id="newAuthzProvider" href="#newAuthzProvider">func newAuthzProvider(urn string,...</a>
-
-```
-searchKey: perforce.newAuthzProvider
-tags: [private]
-```
-
-```Go
-func newAuthzProvider(
-	urn string,
-	a *schema.PerforceAuthorization,
-	host, user, password string,
-) (authz.Provider, error)
-```
-
-### <a id="ValidateAuthz" href="#ValidateAuthz">func ValidateAuthz(cfg *schema.PerforceConnection) error</a>
-
-```
-searchKey: perforce.ValidateAuthz
-```
-
-```Go
-func ValidateAuthz(cfg *schema.PerforceConnection) error
-```
-
-ValidateAuthz validates the authorization fields of the given Perforce external service config. 
-
 ### <a id="TestMain" href="#TestMain">func TestMain(m *testing.M)</a>
 
 ```
 searchKey: perforce.TestMain
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -270,32 +253,60 @@ func TestMain(m *testing.M)
 
 ```
 searchKey: perforce.TestProvider_FetchAccount
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestProvider_FetchAccount(t *testing.T)
 ```
 
+### <a id="TestProvider_FetchRepoPerms" href="#TestProvider_FetchRepoPerms">func TestProvider_FetchRepoPerms(t *testing.T)</a>
+
+```
+searchKey: perforce.TestProvider_FetchRepoPerms
+tags: [method private test]
+```
+
+```Go
+func TestProvider_FetchRepoPerms(t *testing.T)
+```
+
 ### <a id="TestProvider_FetchUserPerms" href="#TestProvider_FetchUserPerms">func TestProvider_FetchUserPerms(t *testing.T)</a>
 
 ```
 searchKey: perforce.TestProvider_FetchUserPerms
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestProvider_FetchUserPerms(t *testing.T)
 ```
 
-### <a id="TestProvider_FetchRepoPerms" href="#TestProvider_FetchRepoPerms">func TestProvider_FetchRepoPerms(t *testing.T)</a>
+### <a id="ValidateAuthz" href="#ValidateAuthz">func ValidateAuthz(cfg *schema.PerforceConnection) error</a>
 
 ```
-searchKey: perforce.TestProvider_FetchRepoPerms
-tags: [private]
+searchKey: perforce.ValidateAuthz
+tags: [method]
 ```
 
 ```Go
-func TestProvider_FetchRepoPerms(t *testing.T)
+func ValidateAuthz(cfg *schema.PerforceConnection) error
+```
+
+ValidateAuthz validates the authorization fields of the given Perforce external service config. 
+
+### <a id="newAuthzProvider" href="#newAuthzProvider">func newAuthzProvider(urn string,...</a>
+
+```
+searchKey: perforce.newAuthzProvider
+tags: [method private]
+```
+
+```Go
+func newAuthzProvider(
+	urn string,
+	a *schema.PerforceAuthorization,
+	host, user, password string,
+) (authz.Provider, error)
 ```
 

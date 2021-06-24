@@ -14,13 +14,14 @@ Package sysinfo implements high level hardware information gathering that can be
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="CPU" href="#CPU">var CPU</a>
 
 ```
 searchKey: sysinfo.CPU
+tags: [variable struct]
 ```
 
 ```Go
@@ -30,14 +31,14 @@ var CPU cpuInfo
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="cpuInfo" href="#cpuInfo">type cpuInfo struct</a>
 
 ```
 searchKey: sysinfo.cpuInfo
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -51,7 +52,7 @@ type cpuInfo struct {
 
 ```
 searchKey: sysinfo.cpuInfo.Name
-tags: [private]
+tags: [function private]
 ```
 
 ```Go

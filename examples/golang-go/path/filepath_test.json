@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "path/filepath_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/path/filepath_test#sep",
-              "documentation": {
-                "identifier": "sep",
-                "newPage": false,
-                "searchKey": "filepath_test.sep",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const sep"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst sep = filepath.Separator\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/path/filepath_test#lsep",
               "documentation": {
                 "identifier": "lsep",
                 "newPage": false,
                 "searchKey": "filepath_test.lsep",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -77,6 +59,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst lsep = filepath.ListSeparator\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#sep",
+              "documentation": {
+                "identifier": "sep",
+                "newPage": false,
+                "searchKey": "filepath_test.sep",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const sep"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst sep = filepath.Separator\n```\n\n"
               },
               "children": null
             }
@@ -92,6 +98,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -106,452 +113,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/path/filepath_test#matchTests",
-              "documentation": {
-                "identifier": "matchTests",
-                "newPage": false,
-                "searchKey": "filepath_test.matchTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var matchTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar matchTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#globTests",
-              "documentation": {
-                "identifier": "globTests",
-                "newPage": false,
-                "searchKey": "filepath_test.globTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var globTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar globTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#globSymlinkTests",
-              "documentation": {
-                "identifier": "globSymlinkTests",
-                "newPage": false,
-                "searchKey": "filepath_test.globSymlinkTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var globSymlinkTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar globSymlinkTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#cleantests",
-              "documentation": {
-                "identifier": "cleantests",
-                "newPage": false,
-                "searchKey": "filepath_test.cleantests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var cleantests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar cleantests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#wincleantests",
-              "documentation": {
-                "identifier": "wincleantests",
-                "newPage": false,
-                "searchKey": "filepath_test.wincleantests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var wincleantests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar wincleantests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#slashtests",
-              "documentation": {
-                "identifier": "slashtests",
-                "newPage": false,
-                "searchKey": "filepath_test.slashtests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var slashtests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar slashtests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#splitlisttests",
-              "documentation": {
-                "identifier": "splitlisttests",
-                "newPage": false,
-                "searchKey": "filepath_test.splitlisttests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var splitlisttests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar splitlisttests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#winsplitlisttests",
-              "documentation": {
-                "identifier": "winsplitlisttests",
-                "newPage": false,
-                "searchKey": "filepath_test.winsplitlisttests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var winsplitlisttests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar winsplitlisttests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#unixsplittests",
-              "documentation": {
-                "identifier": "unixsplittests",
-                "newPage": false,
-                "searchKey": "filepath_test.unixsplittests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var unixsplittests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar unixsplittests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#winsplittests",
-              "documentation": {
-                "identifier": "winsplittests",
-                "newPage": false,
-                "searchKey": "filepath_test.winsplittests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var winsplittests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar winsplittests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#jointests",
-              "documentation": {
-                "identifier": "jointests",
-                "newPage": false,
-                "searchKey": "filepath_test.jointests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var jointests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar jointests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#winjointests",
-              "documentation": {
-                "identifier": "winjointests",
-                "newPage": false,
-                "searchKey": "filepath_test.winjointests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var winjointests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar winjointests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#exttests",
-              "documentation": {
-                "identifier": "exttests",
-                "newPage": false,
-                "searchKey": "filepath_test.exttests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var exttests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar exttests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#tree",
-              "documentation": {
-                "identifier": "tree",
-                "newPage": false,
-                "searchKey": "filepath_test.tree",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var tree"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar tree = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#basetests",
-              "documentation": {
-                "identifier": "basetests",
-                "newPage": false,
-                "searchKey": "filepath_test.basetests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var basetests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar basetests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#winbasetests",
-              "documentation": {
-                "identifier": "winbasetests",
-                "newPage": false,
-                "searchKey": "filepath_test.winbasetests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var winbasetests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar winbasetests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#dirtests",
-              "documentation": {
-                "identifier": "dirtests",
-                "newPage": false,
-                "searchKey": "filepath_test.dirtests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var dirtests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar dirtests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#windirtests",
-              "documentation": {
-                "identifier": "windirtests",
-                "newPage": false,
-                "searchKey": "filepath_test.windirtests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var windirtests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar windirtests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#isabstests",
-              "documentation": {
-                "identifier": "isabstests",
-                "newPage": false,
-                "searchKey": "filepath_test.isabstests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var isabstests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar isabstests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#winisabstests",
-              "documentation": {
-                "identifier": "winisabstests",
-                "newPage": false,
-                "searchKey": "filepath_test.winisabstests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var winisabstests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar winisabstests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/path/filepath_test#EvalSymlinksTestDirs",
               "documentation": {
                 "identifier": "EvalSymlinksTestDirs",
                 "newPage": false,
                 "searchKey": "filepath_test.EvalSymlinksTestDirs",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -574,6 +144,9 @@
                 "newPage": false,
                 "searchKey": "filepath_test.EvalSymlinksTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -596,6 +169,9 @@
                 "newPage": false,
                 "searchKey": "filepath_test.absTestDirs",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
@@ -618,6 +194,9 @@
                 "newPage": false,
                 "searchKey": "filepath_test.absTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
@@ -634,12 +213,240 @@
           },
           {
             "node": {
+              "pathID": "/path/filepath_test#basetests",
+              "documentation": {
+                "identifier": "basetests",
+                "newPage": false,
+                "searchKey": "filepath_test.basetests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var basetests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar basetests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#cleantests",
+              "documentation": {
+                "identifier": "cleantests",
+                "newPage": false,
+                "searchKey": "filepath_test.cleantests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var cleantests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar cleantests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#dirtests",
+              "documentation": {
+                "identifier": "dirtests",
+                "newPage": false,
+                "searchKey": "filepath_test.dirtests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var dirtests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar dirtests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#exttests",
+              "documentation": {
+                "identifier": "exttests",
+                "newPage": false,
+                "searchKey": "filepath_test.exttests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var exttests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar exttests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#globSymlinkTests",
+              "documentation": {
+                "identifier": "globSymlinkTests",
+                "newPage": false,
+                "searchKey": "filepath_test.globSymlinkTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var globSymlinkTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar globSymlinkTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#globTests",
+              "documentation": {
+                "identifier": "globTests",
+                "newPage": false,
+                "searchKey": "filepath_test.globTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var globTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar globTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#isabstests",
+              "documentation": {
+                "identifier": "isabstests",
+                "newPage": false,
+                "searchKey": "filepath_test.isabstests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var isabstests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar isabstests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#jointests",
+              "documentation": {
+                "identifier": "jointests",
+                "newPage": false,
+                "searchKey": "filepath_test.jointests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var jointests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar jointests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#matchTests",
+              "documentation": {
+                "identifier": "matchTests",
+                "newPage": false,
+                "searchKey": "filepath_test.matchTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var matchTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar matchTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/path/filepath_test#reltests",
               "documentation": {
                 "identifier": "reltests",
                 "newPage": false,
                 "searchKey": "filepath_test.reltests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -656,12 +463,264 @@
           },
           {
             "node": {
+              "pathID": "/path/filepath_test#slashtests",
+              "documentation": {
+                "identifier": "slashtests",
+                "newPage": false,
+                "searchKey": "filepath_test.slashtests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var slashtests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar slashtests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#splitlisttests",
+              "documentation": {
+                "identifier": "splitlisttests",
+                "newPage": false,
+                "searchKey": "filepath_test.splitlisttests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var splitlisttests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar splitlisttests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#tree",
+              "documentation": {
+                "identifier": "tree",
+                "newPage": false,
+                "searchKey": "filepath_test.tree",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var tree"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar tree = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#unixsplittests",
+              "documentation": {
+                "identifier": "unixsplittests",
+                "newPage": false,
+                "searchKey": "filepath_test.unixsplittests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var unixsplittests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar unixsplittests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#volumenametests",
+              "documentation": {
+                "identifier": "volumenametests",
+                "newPage": false,
+                "searchKey": "filepath_test.volumenametests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var volumenametests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar volumenametests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#winbasetests",
+              "documentation": {
+                "identifier": "winbasetests",
+                "newPage": false,
+                "searchKey": "filepath_test.winbasetests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var winbasetests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar winbasetests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#wincleantests",
+              "documentation": {
+                "identifier": "wincleantests",
+                "newPage": false,
+                "searchKey": "filepath_test.wincleantests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var wincleantests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar wincleantests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#windirtests",
+              "documentation": {
+                "identifier": "windirtests",
+                "newPage": false,
+                "searchKey": "filepath_test.windirtests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var windirtests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar windirtests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#winisabstests",
+              "documentation": {
+                "identifier": "winisabstests",
+                "newPage": false,
+                "searchKey": "filepath_test.winisabstests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var winisabstests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar winisabstests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#winjointests",
+              "documentation": {
+                "identifier": "winjointests",
+                "newPage": false,
+                "searchKey": "filepath_test.winjointests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var winjointests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar winjointests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/path/filepath_test#winreltests",
               "documentation": {
                 "identifier": "winreltests",
                 "newPage": false,
                 "searchKey": "filepath_test.winreltests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -678,22 +737,50 @@
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#volumenametests",
+              "pathID": "/path/filepath_test#winsplitlisttests",
               "documentation": {
-                "identifier": "volumenametests",
+                "identifier": "winsplitlisttests",
                 "newPage": false,
-                "searchKey": "filepath_test.volumenametests",
+                "searchKey": "filepath_test.winsplitlisttests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var volumenametests"
+                "value": "var winsplitlisttests"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar volumenametests = ...\n```\n\n"
+                "value": "```Go\nvar winsplitlisttests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#winsplittests",
+              "documentation": {
+                "identifier": "winsplittests",
+                "newPage": false,
+                "searchKey": "filepath_test.winsplittests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var winsplittests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar winsplittests = ...\n```\n\n"
               },
               "children": null
             }
@@ -709,6 +796,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -723,12 +811,105 @@
         "children": [
           {
             "node": {
+              "pathID": "/path/filepath_test#EvalSymlinksTest",
+              "documentation": {
+                "identifier": "EvalSymlinksTest",
+                "newPage": false,
+                "searchKey": "filepath_test.EvalSymlinksTest",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type EvalSymlinksTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype EvalSymlinksTest struct {\n\t// If dest is empty, the path is created; otherwise the dest is symlinked to the path.\n\tpath, dest string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#ExtTest",
+              "documentation": {
+                "identifier": "ExtTest",
+                "newPage": false,
+                "searchKey": "filepath_test.ExtTest",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ExtTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ExtTest struct {\n\tpath, ext string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#IsAbsTest",
+              "documentation": {
+                "identifier": "IsAbsTest",
+                "newPage": false,
+                "searchKey": "filepath_test.IsAbsTest",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type IsAbsTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype IsAbsTest struct {\n\tpath  string\n\tisAbs bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#JoinTest",
+              "documentation": {
+                "identifier": "JoinTest",
+                "newPage": false,
+                "searchKey": "filepath_test.JoinTest",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type JoinTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype JoinTest struct {\n\telem []string\n\tpath string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/path/filepath_test#MatchTest",
               "documentation": {
                 "identifier": "MatchTest",
                 "newPage": false,
                 "searchKey": "filepath_test.MatchTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -745,91 +926,25 @@
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#globTest",
+              "pathID": "/path/filepath_test#Node",
               "documentation": {
-                "identifier": "globTest",
+                "identifier": "Node",
                 "newPage": false,
-                "searchKey": "filepath_test.globTest",
+                "searchKey": "filepath_test.Node",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type globTest struct"
+                "value": "type Node struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype globTest struct {\n\tpattern string\n\tmatches []string\n}\n```\n\n"
+                "value": "```Go\ntype Node struct {\n\tname    string\n\tentries []*Node // nil if the entry is a file\n\tmark    int\n}\n```\n\n"
               },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/path/filepath_test#globTest.buildWant",
-                    "documentation": {
-                      "identifier": "globTest.buildWant",
-                      "newPage": false,
-                      "searchKey": "filepath_test.globTest.buildWant",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (test *globTest) buildWant(root string) []string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (test *globTest) buildWant(root string) []string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/path/filepath_test#globTest.globAbs",
-                    "documentation": {
-                      "identifier": "globTest.globAbs",
-                      "newPage": false,
-                      "searchKey": "filepath_test.globTest.globAbs",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (test *globTest) globAbs(root, rootPattern string) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (test *globTest) globAbs(root, rootPattern string) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/path/filepath_test#globTest.globRel",
-                    "documentation": {
-                      "identifier": "globTest.globRel",
-                      "newPage": false,
-                      "searchKey": "filepath_test.globTest.globRel",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (test *globTest) globRel(root string) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (test *globTest) globRel(root string) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
+              "children": null
             }
           },
           {
@@ -840,6 +955,7 @@
                 "newPage": false,
                 "searchKey": "filepath_test.PathTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -856,12 +972,36 @@
           },
           {
             "node": {
+              "pathID": "/path/filepath_test#RelTests",
+              "documentation": {
+                "identifier": "RelTests",
+                "newPage": false,
+                "searchKey": "filepath_test.RelTests",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RelTests struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RelTests struct {\n\troot, path, want string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/path/filepath_test#SplitListTest",
               "documentation": {
                 "identifier": "SplitListTest",
                 "newPage": false,
                 "searchKey": "filepath_test.SplitListTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -884,6 +1024,7 @@
                 "newPage": false,
                 "searchKey": "filepath_test.SplitTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -900,68 +1041,118 @@
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#JoinTest",
+              "pathID": "/path/filepath_test#VolumeNameTest",
               "documentation": {
-                "identifier": "JoinTest",
+                "identifier": "VolumeNameTest",
                 "newPage": false,
-                "searchKey": "filepath_test.JoinTest",
+                "searchKey": "filepath_test.VolumeNameTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type JoinTest struct"
+                "value": "type VolumeNameTest struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype JoinTest struct {\n\telem []string\n\tpath string\n}\n```\n\n"
+                "value": "```Go\ntype VolumeNameTest struct {\n\tpath string\n\tvol  string\n}\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#ExtTest",
+              "pathID": "/path/filepath_test#globTest",
               "documentation": {
-                "identifier": "ExtTest",
+                "identifier": "globTest",
                 "newPage": false,
-                "searchKey": "filepath_test.ExtTest",
+                "searchKey": "filepath_test.globTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type ExtTest struct"
+                "value": "type globTest struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype ExtTest struct {\n\tpath, ext string\n}\n```\n\n"
+                "value": "```Go\ntype globTest struct {\n\tpattern string\n\tmatches []string\n}\n```\n\n"
               },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#Node",
-              "documentation": {
-                "identifier": "Node",
-                "newPage": false,
-                "searchKey": "filepath_test.Node",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Node struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Node struct {\n\tname    string\n\tentries []*Node // nil if the entry is a file\n\tmark    int\n}\n```\n\n"
-              },
-              "children": null
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/path/filepath_test#globTest.buildWant",
+                    "documentation": {
+                      "identifier": "globTest.buildWant",
+                      "newPage": false,
+                      "searchKey": "filepath_test.globTest.buildWant",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (test *globTest) buildWant(root string) []string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (test *globTest) buildWant(root string) []string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/path/filepath_test#globTest.globAbs",
+                    "documentation": {
+                      "identifier": "globTest.globAbs",
+                      "newPage": false,
+                      "searchKey": "filepath_test.globTest.globAbs",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (test *globTest) globAbs(root, rootPattern string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (test *globTest) globAbs(root, rootPattern string) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/path/filepath_test#globTest.globRel",
+                    "documentation": {
+                      "identifier": "globTest.globRel",
+                      "newPage": false,
+                      "searchKey": "filepath_test.globTest.globRel",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (test *globTest) globRel(root string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (test *globTest) globRel(root string) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
             }
           },
           {
@@ -972,6 +1163,7 @@
                 "newPage": false,
                 "searchKey": "filepath_test.statDirEntry",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -986,22 +1178,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/path/filepath_test#statDirEntry.Name",
+                    "pathID": "/path/filepath_test#statDirEntry.Info",
                     "documentation": {
-                      "identifier": "statDirEntry.Name",
+                      "identifier": "statDirEntry.Info",
                       "newPage": false,
-                      "searchKey": "filepath_test.statDirEntry.Name",
+                      "searchKey": "filepath_test.statDirEntry.Info",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (d *statDirEntry) Name() string"
+                      "value": "func (d *statDirEntry) Info() (fs.FileInfo, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (d *statDirEntry) Name() string\n```\n\n"
+                      "value": "```Go\nfunc (d *statDirEntry) Info() (fs.FileInfo, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1014,6 +1207,7 @@
                       "newPage": false,
                       "searchKey": "filepath_test.statDirEntry.IsDir",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1030,12 +1224,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/path/filepath_test#statDirEntry.Name",
+                    "documentation": {
+                      "identifier": "statDirEntry.Name",
+                      "newPage": false,
+                      "searchKey": "filepath_test.statDirEntry.Name",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *statDirEntry) Name() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *statDirEntry) Name() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/path/filepath_test#statDirEntry.Type",
                     "documentation": {
                       "identifier": "statDirEntry.Type",
                       "newPage": false,
                       "searchKey": "filepath_test.statDirEntry.Type",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1049,118 +1267,8 @@
                     },
                     "children": null
                   }
-                },
-                {
-                  "node": {
-                    "pathID": "/path/filepath_test#statDirEntry.Info",
-                    "documentation": {
-                      "identifier": "statDirEntry.Info",
-                      "newPage": false,
-                      "searchKey": "filepath_test.statDirEntry.Info",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *statDirEntry) Info() (fs.FileInfo, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *statDirEntry) Info() (fs.FileInfo, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
                 }
               ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#IsAbsTest",
-              "documentation": {
-                "identifier": "IsAbsTest",
-                "newPage": false,
-                "searchKey": "filepath_test.IsAbsTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type IsAbsTest struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype IsAbsTest struct {\n\tpath  string\n\tisAbs bool\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#EvalSymlinksTest",
-              "documentation": {
-                "identifier": "EvalSymlinksTest",
-                "newPage": false,
-                "searchKey": "filepath_test.EvalSymlinksTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type EvalSymlinksTest struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype EvalSymlinksTest struct {\n\t// If dest is empty, the path is created; otherwise the dest is symlinked to the path.\n\tpath, dest string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#RelTests",
-              "documentation": {
-                "identifier": "RelTests",
-                "newPage": false,
-                "searchKey": "filepath_test.RelTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RelTests struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RelTests struct {\n\troot, path, want string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#VolumeNameTest",
-              "documentation": {
-                "identifier": "VolumeNameTest",
-                "newPage": false,
-                "searchKey": "filepath_test.VolumeNameTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type VolumeNameTest struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype VolumeNameTest struct {\n\tpath string\n\tvol  string\n}\n```\n\n"
-              },
-              "children": null
             }
           }
         ]
@@ -1174,6 +1282,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -1188,144 +1297,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/path/filepath_test#ExampleExt",
-              "documentation": {
-                "identifier": "ExampleExt",
-                "newPage": false,
-                "searchKey": "filepath_test.ExampleExt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleExt()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleExt()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#ExampleSplitList",
-              "documentation": {
-                "identifier": "ExampleSplitList",
-                "newPage": false,
-                "searchKey": "filepath_test.ExampleSplitList",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleSplitList()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleSplitList()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#ExampleRel",
-              "documentation": {
-                "identifier": "ExampleRel",
-                "newPage": false,
-                "searchKey": "filepath_test.ExampleRel",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRel()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRel()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#ExampleSplit",
-              "documentation": {
-                "identifier": "ExampleSplit",
-                "newPage": false,
-                "searchKey": "filepath_test.ExampleSplit",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleSplit()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleSplit()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#ExampleJoin",
-              "documentation": {
-                "identifier": "ExampleJoin",
-                "newPage": false,
-                "searchKey": "filepath_test.ExampleJoin",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleJoin()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleJoin()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#ExampleMatch",
-              "documentation": {
-                "identifier": "ExampleMatch",
-                "newPage": false,
-                "searchKey": "filepath_test.ExampleMatch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleMatch()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleMatch()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/path/filepath_test#ExampleBase",
               "documentation": {
                 "identifier": "ExampleBase",
                 "newPage": false,
                 "searchKey": "filepath_test.ExampleBase",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1348,6 +1326,7 @@
                 "newPage": false,
                 "searchKey": "filepath_test.ExampleDir",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1364,12 +1343,36 @@
           },
           {
             "node": {
+              "pathID": "/path/filepath_test#ExampleExt",
+              "documentation": {
+                "identifier": "ExampleExt",
+                "newPage": false,
+                "searchKey": "filepath_test.ExampleExt",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleExt()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleExt()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/path/filepath_test#ExampleIsAbs",
               "documentation": {
                 "identifier": "ExampleIsAbs",
                 "newPage": false,
                 "searchKey": "filepath_test.ExampleIsAbs",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1386,22 +1389,115 @@
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#prepareTestDirTree",
+              "pathID": "/path/filepath_test#ExampleJoin",
               "documentation": {
-                "identifier": "prepareTestDirTree",
+                "identifier": "ExampleJoin",
                 "newPage": false,
-                "searchKey": "filepath_test.prepareTestDirTree",
+                "searchKey": "filepath_test.ExampleJoin",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func prepareTestDirTree(tree string) (string, error)"
+                "value": "func ExampleJoin()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc prepareTestDirTree(tree string) (string, error)\n```\n\n"
+                "value": "```Go\nfunc ExampleJoin()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#ExampleMatch",
+              "documentation": {
+                "identifier": "ExampleMatch",
+                "newPage": false,
+                "searchKey": "filepath_test.ExampleMatch",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleMatch()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleMatch()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#ExampleRel",
+              "documentation": {
+                "identifier": "ExampleRel",
+                "newPage": false,
+                "searchKey": "filepath_test.ExampleRel",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRel()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRel()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#ExampleSplit",
+              "documentation": {
+                "identifier": "ExampleSplit",
+                "newPage": false,
+                "searchKey": "filepath_test.ExampleSplit",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleSplit()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleSplit()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#ExampleSplitList",
+              "documentation": {
+                "identifier": "ExampleSplitList",
+                "newPage": false,
+                "searchKey": "filepath_test.ExampleSplitList",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleSplitList()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleSplitList()\n```\n\n"
               },
               "children": null
             }
@@ -1414,6 +1510,7 @@
                 "newPage": false,
                 "searchKey": "filepath_test.ExampleWalk",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1430,66 +1527,312 @@
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#errp",
+              "pathID": "/path/filepath_test#TestAbs",
               "documentation": {
-                "identifier": "errp",
+                "identifier": "TestAbs",
                 "newPage": false,
-                "searchKey": "filepath_test.errp",
+                "searchKey": "filepath_test.TestAbs",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func errp(e error) string"
+                "value": "func TestAbs(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc errp(e error) string\n```\n\n"
+                "value": "```Go\nfunc TestAbs(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#TestMatch",
+              "pathID": "/path/filepath_test#TestAbsEmptyString",
               "documentation": {
-                "identifier": "TestMatch",
+                "identifier": "TestAbsEmptyString",
                 "newPage": false,
-                "searchKey": "filepath_test.TestMatch",
+                "searchKey": "filepath_test.TestAbsEmptyString",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestMatch(t *testing.T)"
+                "value": "func TestAbsEmptyString(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestMatch(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestAbsEmptyString(t *testing.T)\n```\n\nEmpty path needs to be special-cased on Windows. See golang.org/issue/24441. We test it separately from all other absTests because the empty string is not a valid path, so it can't be used with os.Stat. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#contains",
+              "pathID": "/path/filepath_test#TestBase",
               "documentation": {
-                "identifier": "contains",
+                "identifier": "TestBase",
                 "newPage": false,
-                "searchKey": "filepath_test.contains",
+                "searchKey": "filepath_test.TestBase",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func contains(vector []string, s string) bool"
+                "value": "func TestBase(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc contains(vector []string, s string) bool\n```\n\ncontains reports whether vector contains the string s. \n\n"
+                "value": "```Go\nfunc TestBase(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#TestBug3486",
+              "documentation": {
+                "identifier": "TestBug3486",
+                "newPage": false,
+                "searchKey": "filepath_test.TestBug3486",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBug3486(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBug3486(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#TestClean",
+              "documentation": {
+                "identifier": "TestClean",
+                "newPage": false,
+                "searchKey": "filepath_test.TestClean",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestClean(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestClean(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#TestDir",
+              "documentation": {
+                "identifier": "TestDir",
+                "newPage": false,
+                "searchKey": "filepath_test.TestDir",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDir(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDir(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#TestDriveLetterInEvalSymlinks",
+              "documentation": {
+                "identifier": "TestDriveLetterInEvalSymlinks",
+                "newPage": false,
+                "searchKey": "filepath_test.TestDriveLetterInEvalSymlinks",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDriveLetterInEvalSymlinks(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDriveLetterInEvalSymlinks(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#TestEvalSymlinks",
+              "documentation": {
+                "identifier": "TestEvalSymlinks",
+                "newPage": false,
+                "searchKey": "filepath_test.TestEvalSymlinks",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEvalSymlinks(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEvalSymlinks(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#TestEvalSymlinksAboveRoot",
+              "documentation": {
+                "identifier": "TestEvalSymlinksAboveRoot",
+                "newPage": false,
+                "searchKey": "filepath_test.TestEvalSymlinksAboveRoot",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEvalSymlinksAboveRoot(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEvalSymlinksAboveRoot(t *testing.T)\n```\n\nIssue 30520 part 1. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#TestEvalSymlinksAboveRootChdir",
+              "documentation": {
+                "identifier": "TestEvalSymlinksAboveRootChdir",
+                "newPage": false,
+                "searchKey": "filepath_test.TestEvalSymlinksAboveRootChdir",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEvalSymlinksAboveRootChdir(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEvalSymlinksAboveRootChdir(t *testing.T)\n```\n\nIssue 30520 part 2. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#TestEvalSymlinksIsNotExist",
+              "documentation": {
+                "identifier": "TestEvalSymlinksIsNotExist",
+                "newPage": false,
+                "searchKey": "filepath_test.TestEvalSymlinksIsNotExist",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEvalSymlinksIsNotExist(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEvalSymlinksIsNotExist(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#TestExt",
+              "documentation": {
+                "identifier": "TestExt",
+                "newPage": false,
+                "searchKey": "filepath_test.TestExt",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExt(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExt(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#TestFromAndToSlash",
+              "documentation": {
+                "identifier": "TestFromAndToSlash",
+                "newPage": false,
+                "searchKey": "filepath_test.TestFromAndToSlash",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFromAndToSlash(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFromAndToSlash(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1502,7 +1845,9 @@
                 "newPage": false,
                 "searchKey": "filepath_test.TestGlob",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1524,7 +1869,9 @@
                 "newPage": false,
                 "searchKey": "filepath_test.TestGlobError",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1540,35 +1887,15 @@
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#TestGlobUNC",
-              "documentation": {
-                "identifier": "TestGlobUNC",
-                "newPage": false,
-                "searchKey": "filepath_test.TestGlobUNC",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGlobUNC(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGlobUNC(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/path/filepath_test#TestGlobSymlink",
               "documentation": {
                 "identifier": "TestGlobSymlink",
                 "newPage": false,
                 "searchKey": "filepath_test.TestGlobSymlink",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1584,132 +1911,96 @@
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#TestWindowsGlob",
+              "pathID": "/path/filepath_test#TestGlobUNC",
               "documentation": {
-                "identifier": "TestWindowsGlob",
+                "identifier": "TestGlobUNC",
                 "newPage": false,
-                "searchKey": "filepath_test.TestWindowsGlob",
+                "searchKey": "filepath_test.TestGlobUNC",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestWindowsGlob(t *testing.T)"
+                "value": "func TestGlobUNC(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestWindowsGlob(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestGlobUNC(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#TestNonWindowsGlobEscape",
+              "pathID": "/path/filepath_test#TestIsAbs",
               "documentation": {
-                "identifier": "TestNonWindowsGlobEscape",
+                "identifier": "TestIsAbs",
                 "newPage": false,
-                "searchKey": "filepath_test.TestNonWindowsGlobEscape",
+                "searchKey": "filepath_test.TestIsAbs",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestNonWindowsGlobEscape(t *testing.T)"
+                "value": "func TestIsAbs(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestNonWindowsGlobEscape(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestIsAbs(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#TestClean",
+              "pathID": "/path/filepath_test#TestIssue13582",
               "documentation": {
-                "identifier": "TestClean",
+                "identifier": "TestIssue13582",
                 "newPage": false,
-                "searchKey": "filepath_test.TestClean",
+                "searchKey": "filepath_test.TestIssue13582",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestClean(t *testing.T)"
+                "value": "func TestIssue13582(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestClean(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestIssue13582(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#TestFromAndToSlash",
+              "pathID": "/path/filepath_test#TestIssue29372",
               "documentation": {
-                "identifier": "TestFromAndToSlash",
+                "identifier": "TestIssue29372",
                 "newPage": false,
-                "searchKey": "filepath_test.TestFromAndToSlash",
+                "searchKey": "filepath_test.TestIssue29372",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestFromAndToSlash(t *testing.T)"
+                "value": "func TestIssue29372(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestFromAndToSlash(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#TestSplitList",
-              "documentation": {
-                "identifier": "TestSplitList",
-                "newPage": false,
-                "searchKey": "filepath_test.TestSplitList",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSplitList(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSplitList(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#TestSplit",
-              "documentation": {
-                "identifier": "TestSplit",
-                "newPage": false,
-                "searchKey": "filepath_test.TestSplit",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSplit(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSplit(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestIssue29372(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1722,7 +2013,9 @@
                 "newPage": false,
                 "searchKey": "filepath_test.TestJoin",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1738,198 +2031,144 @@
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#TestExt",
+              "pathID": "/path/filepath_test#TestMatch",
               "documentation": {
-                "identifier": "TestExt",
+                "identifier": "TestMatch",
                 "newPage": false,
-                "searchKey": "filepath_test.TestExt",
+                "searchKey": "filepath_test.TestMatch",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestExt(t *testing.T)"
+                "value": "func TestMatch(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestExt(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestMatch(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#walkTree",
+              "pathID": "/path/filepath_test#TestNonWindowsGlobEscape",
               "documentation": {
-                "identifier": "walkTree",
+                "identifier": "TestNonWindowsGlobEscape",
                 "newPage": false,
-                "searchKey": "filepath_test.walkTree",
+                "searchKey": "filepath_test.TestNonWindowsGlobEscape",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func walkTree(n *Node, path string, f func(path string, n *Node))"
+                "value": "func TestNonWindowsGlobEscape(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc walkTree(n *Node, path string, f func(path string, n *Node))\n```\n\n"
+                "value": "```Go\nfunc TestNonWindowsGlobEscape(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#makeTree",
+              "pathID": "/path/filepath_test#TestRel",
               "documentation": {
-                "identifier": "makeTree",
+                "identifier": "TestRel",
                 "newPage": false,
-                "searchKey": "filepath_test.makeTree",
+                "searchKey": "filepath_test.TestRel",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func makeTree(t *testing.T)"
+                "value": "func TestRel(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc makeTree(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestRel(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#markTree",
+              "pathID": "/path/filepath_test#TestSplit",
               "documentation": {
-                "identifier": "markTree",
+                "identifier": "TestSplit",
                 "newPage": false,
-                "searchKey": "filepath_test.markTree",
+                "searchKey": "filepath_test.TestSplit",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func markTree(n *Node)"
+                "value": "func TestSplit(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc markTree(n *Node)\n```\n\n"
+                "value": "```Go\nfunc TestSplit(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#checkMarks",
+              "pathID": "/path/filepath_test#TestSplitList",
               "documentation": {
-                "identifier": "checkMarks",
+                "identifier": "TestSplitList",
                 "newPage": false,
-                "searchKey": "filepath_test.checkMarks",
+                "searchKey": "filepath_test.TestSplitList",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func checkMarks(t *testing.T, report bool)"
+                "value": "func TestSplitList(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc checkMarks(t *testing.T, report bool)\n```\n\n"
+                "value": "```Go\nfunc TestSplitList(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#mark",
+              "pathID": "/path/filepath_test#TestVolumeName",
               "documentation": {
-                "identifier": "mark",
+                "identifier": "TestVolumeName",
                 "newPage": false,
-                "searchKey": "filepath_test.mark",
+                "searchKey": "filepath_test.TestVolumeName",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func mark(d fs.DirEntry, err error, errors *[]error, clear bool) error"
+                "value": "func TestVolumeName(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc mark(d fs.DirEntry, err error, errors *[]error, clear bool) error\n```\n\nAssumes that each node name is unique. Good enough for a test. If clear is true, any incoming error is cleared before return. The errors are always accumulated, though. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#chdir",
-              "documentation": {
-                "identifier": "chdir",
-                "newPage": false,
-                "searchKey": "filepath_test.chdir",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func chdir(t *testing.T, dir string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc chdir(t *testing.T, dir string)\n```\n\nchdir changes the current working directory to the named directory, and then restore the original working directory at the end of the test. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#chtmpdir",
-              "documentation": {
-                "identifier": "chtmpdir",
-                "newPage": false,
-                "searchKey": "filepath_test.chtmpdir",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func chtmpdir(t *testing.T) (restore func())"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc chtmpdir(t *testing.T) (restore func())\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#tempDirCanonical",
-              "documentation": {
-                "identifier": "tempDirCanonical",
-                "newPage": false,
-                "searchKey": "filepath_test.tempDirCanonical",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func tempDirCanonical(t *testing.T) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc tempDirCanonical(t *testing.T) string\n```\n\ntempDirCanonical returns a temporary directory for the test to use, ensuring that the returned path does not contain symlinks. \n\n"
+                "value": "```Go\nfunc TestVolumeName(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1942,7 +2181,9 @@
                 "newPage": false,
                 "searchKey": "filepath_test.TestWalk",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1964,7 +2205,9 @@
                 "newPage": false,
                 "searchKey": "filepath_test.TestWalkDir",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1980,79 +2223,15 @@
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#testWalk",
-              "documentation": {
-                "identifier": "testWalk",
-                "newPage": false,
-                "searchKey": "filepath_test.testWalk",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testWalk(t *testing.T, walk func(string, fs.WalkDirFunc) error, errVisit int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testWalk(t *testing.T, walk func(string, fs.WalkDirFunc) error, errVisit int)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#touch",
-              "documentation": {
-                "identifier": "touch",
-                "newPage": false,
-                "searchKey": "filepath_test.touch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func touch(t *testing.T, name string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc touch(t *testing.T, name string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#TestWalkSkipDirOnFile",
-              "documentation": {
-                "identifier": "TestWalkSkipDirOnFile",
-                "newPage": false,
-                "searchKey": "filepath_test.TestWalkSkipDirOnFile",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestWalkSkipDirOnFile(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestWalkSkipDirOnFile(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/path/filepath_test#TestWalkFileError",
               "documentation": {
                 "identifier": "TestWalkFileError",
                 "newPage": false,
                 "searchKey": "filepath_test.TestWalkFileError",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2068,66 +2247,279 @@
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#TestBase",
+              "pathID": "/path/filepath_test#TestWalkSkipDirOnFile",
               "documentation": {
-                "identifier": "TestBase",
+                "identifier": "TestWalkSkipDirOnFile",
                 "newPage": false,
-                "searchKey": "filepath_test.TestBase",
+                "searchKey": "filepath_test.TestWalkSkipDirOnFile",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestBase(t *testing.T)"
+                "value": "func TestWalkSkipDirOnFile(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestBase(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestWalkSkipDirOnFile(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#TestDir",
+              "pathID": "/path/filepath_test#TestWalkSymlink",
               "documentation": {
-                "identifier": "TestDir",
+                "identifier": "TestWalkSymlink",
                 "newPage": false,
-                "searchKey": "filepath_test.TestDir",
+                "searchKey": "filepath_test.TestWalkSymlink",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestDir(t *testing.T)"
+                "value": "func TestWalkSymlink(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestDir(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestWalkSymlink(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#TestIsAbs",
+              "pathID": "/path/filepath_test#TestWindowsGlob",
               "documentation": {
-                "identifier": "TestIsAbs",
+                "identifier": "TestWindowsGlob",
                 "newPage": false,
-                "searchKey": "filepath_test.TestIsAbs",
+                "searchKey": "filepath_test.TestWindowsGlob",
                 "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWindowsGlob(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWindowsGlob(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#chdir",
+              "documentation": {
+                "identifier": "chdir",
+                "newPage": false,
+                "searchKey": "filepath_test.chdir",
+                "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestIsAbs(t *testing.T)"
+                "value": "func chdir(t *testing.T, dir string)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestIsAbs(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc chdir(t *testing.T, dir string)\n```\n\nchdir changes the current working directory to the named directory, and then restore the original working directory at the end of the test. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#checkMarks",
+              "documentation": {
+                "identifier": "checkMarks",
+                "newPage": false,
+                "searchKey": "filepath_test.checkMarks",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkMarks(t *testing.T, report bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkMarks(t *testing.T, report bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#chtmpdir",
+              "documentation": {
+                "identifier": "chtmpdir",
+                "newPage": false,
+                "searchKey": "filepath_test.chtmpdir",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func chtmpdir(t *testing.T) (restore func())"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc chtmpdir(t *testing.T) (restore func())\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#contains",
+              "documentation": {
+                "identifier": "contains",
+                "newPage": false,
+                "searchKey": "filepath_test.contains",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func contains(vector []string, s string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc contains(vector []string, s string) bool\n```\n\ncontains reports whether vector contains the string s. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#errp",
+              "documentation": {
+                "identifier": "errp",
+                "newPage": false,
+                "searchKey": "filepath_test.errp",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func errp(e error) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc errp(e error) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#makeTree",
+              "documentation": {
+                "identifier": "makeTree",
+                "newPage": false,
+                "searchKey": "filepath_test.makeTree",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeTree(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeTree(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#mark",
+              "documentation": {
+                "identifier": "mark",
+                "newPage": false,
+                "searchKey": "filepath_test.mark",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mark(d fs.DirEntry, err error, errors *[]error, clear bool) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mark(d fs.DirEntry, err error, errors *[]error, clear bool) error\n```\n\nAssumes that each node name is unique. Good enough for a test. If clear is true, any incoming error is cleared before return. The errors are always accumulated, though. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#markTree",
+              "documentation": {
+                "identifier": "markTree",
+                "newPage": false,
+                "searchKey": "filepath_test.markTree",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func markTree(n *Node)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc markTree(n *Node)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path/filepath_test#prepareTestDirTree",
+              "documentation": {
+                "identifier": "prepareTestDirTree",
+                "newPage": false,
+                "searchKey": "filepath_test.prepareTestDirTree",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func prepareTestDirTree(tree string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc prepareTestDirTree(tree string) (string, error)\n```\n\n"
               },
               "children": null
             }
@@ -2140,6 +2532,7 @@
                 "newPage": false,
                 "searchKey": "filepath_test.simpleJoin",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2156,12 +2549,36 @@
           },
           {
             "node": {
+              "pathID": "/path/filepath_test#tempDirCanonical",
+              "documentation": {
+                "identifier": "tempDirCanonical",
+                "newPage": false,
+                "searchKey": "filepath_test.tempDirCanonical",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func tempDirCanonical(t *testing.T) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc tempDirCanonical(t *testing.T) string\n```\n\ntempDirCanonical returns a temporary directory for the test to use, ensuring that the returned path does not contain symlinks. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/path/filepath_test#testEvalSymlinks",
               "documentation": {
                 "identifier": "testEvalSymlinks",
                 "newPage": false,
                 "searchKey": "filepath_test.testEvalSymlinks",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2184,6 +2601,7 @@
                 "newPage": false,
                 "searchKey": "filepath_test.testEvalSymlinksAfterChdir",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2200,198 +2618,23 @@
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#TestEvalSymlinks",
+              "pathID": "/path/filepath_test#testWalk",
               "documentation": {
-                "identifier": "TestEvalSymlinks",
+                "identifier": "testWalk",
                 "newPage": false,
-                "searchKey": "filepath_test.TestEvalSymlinks",
+                "searchKey": "filepath_test.testWalk",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestEvalSymlinks(t *testing.T)"
+                "value": "func testWalk(t *testing.T, walk func(string, fs.WalkDirFunc) error, errVisit int)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestEvalSymlinks(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#TestEvalSymlinksIsNotExist",
-              "documentation": {
-                "identifier": "TestEvalSymlinksIsNotExist",
-                "newPage": false,
-                "searchKey": "filepath_test.TestEvalSymlinksIsNotExist",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEvalSymlinksIsNotExist(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEvalSymlinksIsNotExist(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#TestIssue13582",
-              "documentation": {
-                "identifier": "TestIssue13582",
-                "newPage": false,
-                "searchKey": "filepath_test.TestIssue13582",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIssue13582(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIssue13582(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#TestAbs",
-              "documentation": {
-                "identifier": "TestAbs",
-                "newPage": false,
-                "searchKey": "filepath_test.TestAbs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAbs(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAbs(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#TestAbsEmptyString",
-              "documentation": {
-                "identifier": "TestAbsEmptyString",
-                "newPage": false,
-                "searchKey": "filepath_test.TestAbsEmptyString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAbsEmptyString(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAbsEmptyString(t *testing.T)\n```\n\nEmpty path needs to be special-cased on Windows. See golang.org/issue/24441. We test it separately from all other absTests because the empty string is not a valid path, so it can't be used with os.Stat. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#TestRel",
-              "documentation": {
-                "identifier": "TestRel",
-                "newPage": false,
-                "searchKey": "filepath_test.TestRel",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRel(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRel(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#TestVolumeName",
-              "documentation": {
-                "identifier": "TestVolumeName",
-                "newPage": false,
-                "searchKey": "filepath_test.TestVolumeName",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestVolumeName(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestVolumeName(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#TestDriveLetterInEvalSymlinks",
-              "documentation": {
-                "identifier": "TestDriveLetterInEvalSymlinks",
-                "newPage": false,
-                "searchKey": "filepath_test.TestDriveLetterInEvalSymlinks",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDriveLetterInEvalSymlinks(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDriveLetterInEvalSymlinks(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#TestBug3486",
-              "documentation": {
-                "identifier": "TestBug3486",
-                "newPage": false,
-                "searchKey": "filepath_test.TestBug3486",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestBug3486(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestBug3486(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc testWalk(t *testing.T, walk func(string, fs.WalkDirFunc) error, errVisit int)\n```\n\n"
               },
               "children": null
             }
@@ -2404,6 +2647,7 @@
                 "newPage": false,
                 "searchKey": "filepath_test.testWalkSymlink",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2420,88 +2664,46 @@
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#TestWalkSymlink",
+              "pathID": "/path/filepath_test#touch",
               "documentation": {
-                "identifier": "TestWalkSymlink",
+                "identifier": "touch",
                 "newPage": false,
-                "searchKey": "filepath_test.TestWalkSymlink",
+                "searchKey": "filepath_test.touch",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestWalkSymlink(t *testing.T)"
+                "value": "func touch(t *testing.T, name string)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestWalkSymlink(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc touch(t *testing.T, name string)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/path/filepath_test#TestIssue29372",
+              "pathID": "/path/filepath_test#walkTree",
               "documentation": {
-                "identifier": "TestIssue29372",
+                "identifier": "walkTree",
                 "newPage": false,
-                "searchKey": "filepath_test.TestIssue29372",
+                "searchKey": "filepath_test.walkTree",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestIssue29372(t *testing.T)"
+                "value": "func walkTree(n *Node, path string, f func(path string, n *Node))"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestIssue29372(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#TestEvalSymlinksAboveRoot",
-              "documentation": {
-                "identifier": "TestEvalSymlinksAboveRoot",
-                "newPage": false,
-                "searchKey": "filepath_test.TestEvalSymlinksAboveRoot",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEvalSymlinksAboveRoot(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEvalSymlinksAboveRoot(t *testing.T)\n```\n\nIssue 30520 part 1. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path/filepath_test#TestEvalSymlinksAboveRootChdir",
-              "documentation": {
-                "identifier": "TestEvalSymlinksAboveRootChdir",
-                "newPage": false,
-                "searchKey": "filepath_test.TestEvalSymlinksAboveRootChdir",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEvalSymlinksAboveRootChdir(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEvalSymlinksAboveRootChdir(t *testing.T)\n```\n\nIssue 30520 part 2. \n\n"
+                "value": "```Go\nfunc walkTree(n *Node, path string, f func(path string, n *Node))\n```\n\n"
               },
               "children": null
             }

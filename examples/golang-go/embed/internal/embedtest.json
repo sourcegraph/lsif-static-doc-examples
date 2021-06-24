@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "embed/internal/embedtest",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/embed/internal/embedtest#global",
-              "documentation": {
-                "identifier": "global",
-                "newPage": false,
-                "searchKey": "embedtest.global",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var global"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar global embed.FS\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/embed/internal/embedtest#concurrency",
               "documentation": {
                 "identifier": "concurrency",
                 "newPage": false,
                 "searchKey": "embedtest.concurrency",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -89,6 +71,9 @@
                 "newPage": false,
                 "searchKey": "embedtest.glass",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -105,12 +90,38 @@
           },
           {
             "node": {
+              "pathID": "/embed/internal/embedtest#global",
+              "documentation": {
+                "identifier": "global",
+                "newPage": false,
+                "searchKey": "embedtest.global",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var global"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar global embed.FS\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/embed/internal/embedtest#testDirAll",
               "documentation": {
                 "identifier": "testDirAll",
                 "newPage": false,
                 "searchKey": "embedtest.testDirAll",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -133,6 +144,8 @@
                 "newPage": false,
                 "searchKey": "embedtest.testHiddenDir",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -155,6 +168,8 @@
                 "newPage": false,
                 "searchKey": "embedtest.testHiddenStar",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -180,6 +195,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -194,12 +210,132 @@
         "children": [
           {
             "node": {
+              "pathID": "/embed/internal/embedtest#TestDir",
+              "documentation": {
+                "identifier": "TestDir",
+                "newPage": false,
+                "searchKey": "embedtest.TestDir",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDir(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDir(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/embed/internal/embedtest#TestGlobal",
+              "documentation": {
+                "identifier": "TestGlobal",
+                "newPage": false,
+                "searchKey": "embedtest.TestGlobal",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGlobal(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGlobal(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/embed/internal/embedtest#TestHidden",
+              "documentation": {
+                "identifier": "TestHidden",
+                "newPage": false,
+                "searchKey": "embedtest.TestHidden",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHidden(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHidden(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/embed/internal/embedtest#TestUninitialized",
+              "documentation": {
+                "identifier": "TestUninitialized",
+                "newPage": false,
+                "searchKey": "embedtest.TestUninitialized",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUninitialized(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUninitialized(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/embed/internal/embedtest#testDir",
+              "documentation": {
+                "identifier": "testDir",
+                "newPage": false,
+                "searchKey": "embedtest.testDir",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testDir(t *testing.T, f embed.FS, name string, expect ...string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testDir(t *testing.T, f embed.FS, name string, expect ...string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/embed/internal/embedtest#testFiles",
               "documentation": {
                 "identifier": "testFiles",
                 "newPage": false,
                 "searchKey": "embedtest.testFiles",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -222,6 +358,7 @@
                 "newPage": false,
                 "searchKey": "embedtest.testString",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -232,116 +369,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc testString(t *testing.T, s, name, data string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/embed/internal/embedtest#testDir",
-              "documentation": {
-                "identifier": "testDir",
-                "newPage": false,
-                "searchKey": "embedtest.testDir",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testDir(t *testing.T, f embed.FS, name string, expect ...string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testDir(t *testing.T, f embed.FS, name string, expect ...string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/embed/internal/embedtest#TestGlobal",
-              "documentation": {
-                "identifier": "TestGlobal",
-                "newPage": false,
-                "searchKey": "embedtest.TestGlobal",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGlobal(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGlobal(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/embed/internal/embedtest#TestDir",
-              "documentation": {
-                "identifier": "TestDir",
-                "newPage": false,
-                "searchKey": "embedtest.TestDir",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDir(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDir(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/embed/internal/embedtest#TestHidden",
-              "documentation": {
-                "identifier": "TestHidden",
-                "newPage": false,
-                "searchKey": "embedtest.TestHidden",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestHidden(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestHidden(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/embed/internal/embedtest#TestUninitialized",
-              "documentation": {
-                "identifier": "TestUninitialized",
-                "newPage": false,
-                "searchKey": "embedtest.TestUninitialized",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUninitialized(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUninitialized(t *testing.T)\n```\n\n"
               },
               "children": null
             }

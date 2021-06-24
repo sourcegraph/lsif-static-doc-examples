@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/inventory",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "inventory.fileReadBufferSize",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -90,6 +95,9 @@
                 "newPage": false,
                 "searchKey": "inventory.newLine",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -115,6 +123,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -134,7 +143,9 @@
                 "identifier": "Context",
                 "newPage": false,
                 "searchKey": "inventory.Context",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -152,7 +163,9 @@
                       "identifier": "Context.Entries",
                       "newPage": false,
                       "searchKey": "inventory.Context.Entries",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -173,6 +186,7 @@
                       "newPage": false,
                       "searchKey": "inventory.Context.entries",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -189,34 +203,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/inventory#Context.tree",
-                    "documentation": {
-                      "identifier": "Context.tree",
-                      "newPage": false,
-                      "searchKey": "inventory.Context.tree",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Context) tree(ctx context.Context, tree fs.FileInfo, buf []byte) (inv Inventory, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Context) tree(ctx context.Context, tree fs.FileInfo, buf []byte) (inv Inventory, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/inventory#Context.file",
                     "documentation": {
                       "identifier": "Context.file",
                       "newPage": false,
                       "searchKey": "inventory.Context.file",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -227,6 +220,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (c *Context) file(ctx context.Context, file fs.FileInfo, buf []byte) (inv Inventory, err error)\n```\n\nfile computes the inventory of a single file. It caches the result. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/inventory#Context.tree",
+                    "documentation": {
+                      "identifier": "Context.tree",
+                      "newPage": false,
+                      "searchKey": "inventory.Context.tree",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Context) tree(ctx context.Context, tree fs.FileInfo, buf []byte) (inv Inventory, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Context) tree(ctx context.Context, tree fs.FileInfo, buf []byte) (inv Inventory, err error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -241,7 +257,9 @@
                 "identifier": "Inventory",
                 "newPage": false,
                 "searchKey": "inventory.Inventory",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -259,7 +277,9 @@
                       "identifier": "Sum",
                       "newPage": false,
                       "searchKey": "inventory.Sum",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -282,7 +302,9 @@
                 "identifier": "Lang",
                 "newPage": false,
                 "searchKey": "inventory.Lang",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -301,6 +323,7 @@
                       "newPage": false,
                       "searchKey": "inventory.getLang",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -326,6 +349,7 @@
                 "newPage": false,
                 "searchKey": "inventory.fi",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -340,12 +364,82 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/internal/inventory#fi.IsDir",
+                    "documentation": {
+                      "identifier": "fi.IsDir",
+                      "newPage": false,
+                      "searchKey": "inventory.fi.IsDir",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f fi) IsDir() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f fi) IsDir() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/inventory#fi.ModTime",
+                    "documentation": {
+                      "identifier": "fi.ModTime",
+                      "newPage": false,
+                      "searchKey": "inventory.fi.ModTime",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f fi) ModTime() time.Time"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f fi) ModTime() time.Time\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/inventory#fi.Mode",
+                    "documentation": {
+                      "identifier": "fi.Mode",
+                      "newPage": false,
+                      "searchKey": "inventory.fi.Mode",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f fi) Mode() os.FileMode"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f fi) Mode() os.FileMode\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/inventory#fi.Name",
                     "documentation": {
                       "identifier": "fi.Name",
                       "newPage": false,
                       "searchKey": "inventory.fi.Name",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -368,6 +462,7 @@
                       "newPage": false,
                       "searchKey": "inventory.fi.Size",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -384,78 +479,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/inventory#fi.IsDir",
-                    "documentation": {
-                      "identifier": "fi.IsDir",
-                      "newPage": false,
-                      "searchKey": "inventory.fi.IsDir",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f fi) IsDir() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f fi) IsDir() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/inventory#fi.Mode",
-                    "documentation": {
-                      "identifier": "fi.Mode",
-                      "newPage": false,
-                      "searchKey": "inventory.fi.Mode",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f fi) Mode() os.FileMode"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f fi) Mode() os.FileMode\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/inventory#fi.ModTime",
-                    "documentation": {
-                      "identifier": "fi.ModTime",
-                      "newPage": false,
-                      "searchKey": "inventory.fi.ModTime",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f fi) ModTime() time.Time"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f fi) ModTime() time.Time\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/inventory#fi.Sys",
                     "documentation": {
                       "identifier": "fi.Sys",
                       "newPage": false,
                       "searchKey": "inventory.fi.Sys",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -481,6 +511,7 @@
                 "newPage": false,
                 "searchKey": "inventory.nopReadCloser",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -495,34 +526,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/inventory#nopReadCloser.Read",
-                    "documentation": {
-                      "identifier": "nopReadCloser.Read",
-                      "newPage": false,
-                      "searchKey": "inventory.nopReadCloser.Read",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (n *nopReadCloser) Read(p []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (n *nopReadCloser) Read(p []byte) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/inventory#nopReadCloser.Close",
                     "documentation": {
                       "identifier": "nopReadCloser.Close",
                       "newPage": false,
                       "searchKey": "inventory.nopReadCloser.Close",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -533,6 +543,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (n *nopReadCloser) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/inventory#nopReadCloser.Read",
+                    "documentation": {
+                      "identifier": "nopReadCloser.Read",
+                      "newPage": false,
+                      "searchKey": "inventory.nopReadCloser.Read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n *nopReadCloser) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n *nopReadCloser) Read(p []byte) (int, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -551,6 +584,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -565,187 +599,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/inventory#countLines",
-              "documentation": {
-                "identifier": "countLines",
-                "newPage": false,
-                "searchKey": "inventory.countLines",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func countLines(r io.Reader, buf []byte) (lineCount int, byteCount int, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc countLines(r io.Reader, buf []byte) (lineCount int, byteCount int, err error)\n```\n\ncountLines counts the number of lines in the supplied reader it uses buf as a temporary buffer \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/inventory#GetLanguageByFilename",
-              "documentation": {
-                "identifier": "GetLanguageByFilename",
-                "newPage": false,
-                "searchKey": "inventory.GetLanguageByFilename",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetLanguageByFilename(name string) (language string, safe bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetLanguageByFilename(name string) (language string, safe bool)\n```\n\nGetLanguageByFilename returns the guessed language for the named file (and safe == true if this is very likely to be correct). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/inventory#init.inventory.go",
-              "documentation": {
-                "identifier": "init.inventory.go",
-                "newPage": false,
-                "searchKey": "inventory.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/inventory#preferLanguage",
-              "documentation": {
-                "identifier": "preferLanguage",
-                "newPage": false,
-                "searchKey": "inventory.preferLanguage",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func preferLanguage(lang, ext string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc preferLanguage(lang, ext string)\n```\n\npreferLanguage updates LanguagesByExtension to have lang listed first for ext. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/inventory#TestContext_Entries",
-              "documentation": {
-                "identifier": "TestContext_Entries",
-                "newPage": false,
-                "searchKey": "inventory.TestContext_Entries",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestContext_Entries(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestContext_Entries(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/inventory#TestGetLang_language",
-              "documentation": {
-                "identifier": "TestGetLang_language",
-                "newPage": false,
-                "searchKey": "inventory.TestGetLang_language",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGetLang_language(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGetLang_language(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/inventory#makeFileReader",
-              "documentation": {
-                "identifier": "makeFileReader",
-                "newPage": false,
-                "searchKey": "inventory.makeFileReader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func makeFileReader(ctx context.Context, path, contents string) func(context.Context, string) (io.ReadCloser, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc makeFileReader(ctx context.Context, path, contents string) func(context.Context, string) (io.ReadCloser, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/inventory#TestGet_readFile",
-              "documentation": {
-                "identifier": "TestGet_readFile",
-                "newPage": false,
-                "searchKey": "inventory.TestGet_readFile",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGet_readFile(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGet_readFile(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/inventory#BenchmarkGetLang",
               "documentation": {
                 "identifier": "BenchmarkGetLang",
                 "newPage": false,
                 "searchKey": "inventory.BenchmarkGetLang",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -767,7 +629,9 @@
                 "newPage": false,
                 "searchKey": "inventory.BenchmarkIsVendor",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -783,12 +647,199 @@
           },
           {
             "node": {
+              "pathID": "/internal/inventory#GetLanguageByFilename",
+              "documentation": {
+                "identifier": "GetLanguageByFilename",
+                "newPage": false,
+                "searchKey": "inventory.GetLanguageByFilename",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetLanguageByFilename(name string) (language string, safe bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetLanguageByFilename(name string) (language string, safe bool)\n```\n\nGetLanguageByFilename returns the guessed language for the named file (and safe == true if this is very likely to be correct). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/inventory#TestContext_Entries",
+              "documentation": {
+                "identifier": "TestContext_Entries",
+                "newPage": false,
+                "searchKey": "inventory.TestContext_Entries",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestContext_Entries(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestContext_Entries(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/inventory#TestGetLang_language",
+              "documentation": {
+                "identifier": "TestGetLang_language",
+                "newPage": false,
+                "searchKey": "inventory.TestGetLang_language",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetLang_language(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetLang_language(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/inventory#TestGet_readFile",
+              "documentation": {
+                "identifier": "TestGet_readFile",
+                "newPage": false,
+                "searchKey": "inventory.TestGet_readFile",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGet_readFile(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGet_readFile(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/inventory#countLines",
+              "documentation": {
+                "identifier": "countLines",
+                "newPage": false,
+                "searchKey": "inventory.countLines",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func countLines(r io.Reader, buf []byte) (lineCount int, byteCount int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc countLines(r io.Reader, buf []byte) (lineCount int, byteCount int, err error)\n```\n\ncountLines counts the number of lines in the supplied reader it uses buf as a temporary buffer \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/inventory#fakeContents",
+              "documentation": {
+                "identifier": "fakeContents",
+                "newPage": false,
+                "searchKey": "inventory.fakeContents",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fakeContents(path string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fakeContents(path string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/inventory#init.inventory.go",
+              "documentation": {
+                "identifier": "init.inventory.go",
+                "newPage": false,
+                "searchKey": "inventory.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/inventory#makeFileReader",
+              "documentation": {
+                "identifier": "makeFileReader",
+                "newPage": false,
+                "searchKey": "inventory.makeFileReader",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeFileReader(ctx context.Context, path, contents string) func(context.Context, string) (io.ReadCloser, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeFileReader(ctx context.Context, path, contents string) func(context.Context, string) (io.ReadCloser, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/inventory#newFileReader",
               "documentation": {
                 "identifier": "newFileReader",
                 "newPage": false,
                 "searchKey": "inventory.newFileReader",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -805,12 +856,36 @@
           },
           {
             "node": {
+              "pathID": "/internal/inventory#preferLanguage",
+              "documentation": {
+                "identifier": "preferLanguage",
+                "newPage": false,
+                "searchKey": "inventory.preferLanguage",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func preferLanguage(lang, ext string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc preferLanguage(lang, ext string)\n```\n\npreferLanguage updates LanguagesByExtension to have lang listed first for ext. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/inventory#readFileTree",
               "documentation": {
                 "identifier": "readFileTree",
                 "newPage": false,
                 "searchKey": "inventory.readFileTree",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -821,28 +896,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc readFileTree(name string) ([]fs.FileInfo, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/inventory#fakeContents",
-              "documentation": {
-                "identifier": "fakeContents",
-                "newPage": false,
-                "searchKey": "inventory.fakeContents",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func fakeContents(path string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc fakeContents(path string) string\n```\n\n"
               },
               "children": null
             }

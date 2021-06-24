@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/internal/insights/store",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "store.countDataFmtstr",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -61,22 +65,24 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/insights/store#upsertRepoNameFmtStr",
+              "pathID": "/enterprise/internal/insights/store#recordSeriesPointFmtstr",
               "documentation": {
-                "identifier": "upsertRepoNameFmtStr",
+                "identifier": "recordSeriesPointFmtstr",
                 "newPage": false,
-                "searchKey": "store.upsertRepoNameFmtStr",
+                "searchKey": "store.recordSeriesPointFmtstr",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const upsertRepoNameFmtStr"
+                "value": "const recordSeriesPointFmtstr"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst upsertRepoNameFmtStr = ...\n```\n\n"
+                "value": "```Go\nconst recordSeriesPointFmtstr = ...\n```\n\n"
               },
               "children": null
             }
@@ -89,6 +95,8 @@
                 "newPage": false,
                 "searchKey": "store.upsertMetadataFmtStr",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -105,22 +113,24 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/insights/store#recordSeriesPointFmtstr",
+              "pathID": "/enterprise/internal/insights/store#upsertRepoNameFmtStr",
               "documentation": {
-                "identifier": "recordSeriesPointFmtstr",
+                "identifier": "upsertRepoNameFmtStr",
                 "newPage": false,
-                "searchKey": "store.recordSeriesPointFmtstr",
+                "searchKey": "store.upsertRepoNameFmtStr",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const recordSeriesPointFmtstr"
+                "value": "const upsertRepoNameFmtStr"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst recordSeriesPointFmtstr = ...\n```\n\n"
+                "value": "```Go\nconst upsertRepoNameFmtStr = ...\n```\n\n"
               },
               "children": null
             }
@@ -136,6 +146,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -156,6 +167,8 @@
                 "newPage": false,
                 "searchKey": "store.seriesPointsQueryFmtstr",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -181,6 +194,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -195,123 +209,46 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/internal/insights/store#MockInterface",
+              "pathID": "/enterprise/internal/insights/store#CountDataOpts",
               "documentation": {
-                "identifier": "MockInterface",
+                "identifier": "CountDataOpts",
                 "newPage": false,
-                "searchKey": "store.MockInterface",
-                "tags": null
+                "searchKey": "store.CountDataOpts",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type MockInterface struct"
+                "value": "type CountDataOpts struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype MockInterface struct {\n\t// CountDataFunc is an instance of a mock function object controlling\n\t// the behavior of the method CountData.\n\tCountDataFunc *InterfaceCountDataFunc\n\t// RecordSeriesPointFunc is an instance of a mock function object\n\t// controlling the behavior of the method RecordSeriesPoint.\n\tRecordSeriesPointFunc *InterfaceRecordSeriesPointFunc\n\t// SeriesPointsFunc is an instance of a mock function object controlling\n\t// the behavior of the method SeriesPoints.\n\tSeriesPointsFunc *InterfaceSeriesPointsFunc\n}\n```\n\nMockInterface is a mock implementation of the Interface interface (from the package github.com/sourcegraph/sourcegraph/enterprise/internal/insights/store) used for unit testing. \n\n"
+                "value": "```Go\ntype CountDataOpts struct {\n\t// The time range to look for data, if non-nil.\n\tFrom, To *time.Time\n\n\t// SeriesID, if non-nil, indicates to look for data with this series ID only.\n\tSeriesID *string\n\n\t// RepoID, if non-nil, indicates to look for data with this repo ID only.\n\tRepoID *api.RepoID\n}\n```\n\n"
               },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/store#NewMockInterface",
-                    "documentation": {
-                      "identifier": "NewMockInterface",
-                      "newPage": false,
-                      "searchKey": "store.NewMockInterface",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewMockInterface() *MockInterface"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewMockInterface() *MockInterface\n```\n\nNewMockInterface creates a new mock of the Interface interface. All methods return zero values for all results, unless overwritten. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/store#NewMockInterfaceFrom",
-                    "documentation": {
-                      "identifier": "NewMockInterfaceFrom",
-                      "newPage": false,
-                      "searchKey": "store.NewMockInterfaceFrom",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewMockInterfaceFrom(i Interface) *MockInterface"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewMockInterfaceFrom(i Interface) *MockInterface\n```\n\nNewMockInterfaceFrom creates a new mock of the MockInterface interface. All methods delegate to the given implementation, unless overwritten. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/store#MockInterface.CountData",
-                    "documentation": {
-                      "identifier": "MockInterface.CountData",
-                      "newPage": false,
-                      "searchKey": "store.MockInterface.CountData",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *MockInterface) CountData(v0 context.Context, v1 CountDataOpts) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *MockInterface) CountData(v0 context.Context, v1 CountDataOpts) (int, error)\n```\n\nCountData delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/store#MockInterface.RecordSeriesPoint",
-                    "documentation": {
-                      "identifier": "MockInterface.RecordSeriesPoint",
-                      "newPage": false,
-                      "searchKey": "store.MockInterface.RecordSeriesPoint",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *MockInterface) RecordSeriesPoint(v0 context.Context, v1 RecordSeriesPointArgs) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *MockInterface) RecordSeriesPoint(v0 context.Context, v1 RecordSeriesPointArgs) error\n```\n\nRecordSeriesPoint delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/store#MockInterface.SeriesPoints",
-                    "documentation": {
-                      "identifier": "MockInterface.SeriesPoints",
-                      "newPage": false,
-                      "searchKey": "store.MockInterface.SeriesPoints",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *MockInterface) SeriesPoints(v0 context.Context, v1 SeriesPointsOpts) ([]SeriesPoint, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *MockInterface) SeriesPoints(v0 context.Context, v1 SeriesPointsOpts) ([]SeriesPoint, error)\n```\n\nSeriesPoints delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/store#Interface",
+              "documentation": {
+                "identifier": "Interface",
+                "newPage": false,
+                "searchKey": "store.Interface",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Interface interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Interface interface {\n\tSeriesPoints(ctx context.Context, opts SeriesPointsOpts) ([]SeriesPoint, error)\n\tRecordSeriesPoint(ctx context.Context, v RecordSeriesPointArgs) error\n\tCountData(ctx context.Context, opts CountDataOpts) (int, error)\n}\n```\n\nInterface is the interface describing a code insights store. See the Store struct for actual API usage. \n\n"
+              },
+              "children": null
             }
           },
           {
@@ -321,7 +258,9 @@
                 "identifier": "InterfaceCountDataFunc",
                 "newPage": false,
                 "searchKey": "store.InterfaceCountDataFunc",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -334,20 +273,22 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/store#InterfaceCountDataFunc.SetDefaultHook",
+                    "pathID": "/enterprise/internal/insights/store#InterfaceCountDataFunc.History",
                     "documentation": {
-                      "identifier": "InterfaceCountDataFunc.SetDefaultHook",
+                      "identifier": "InterfaceCountDataFunc.History",
                       "newPage": false,
-                      "searchKey": "store.InterfaceCountDataFunc.SetDefaultHook",
-                      "tags": null
+                      "searchKey": "store.InterfaceCountDataFunc.History",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *InterfaceCountDataFunc) SetDefaultHook(hook func(context.Context, CountDataOpts) (int, error))"
+                      "value": "func (f *InterfaceCountDataFunc) History() []InterfaceCountDataFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *InterfaceCountDataFunc) SetDefaultHook(hook func(context.Context, CountDataOpts) (int, error))\n```\n\nSetDefaultHook sets function that is called when the CountData method of the parent MockInterface instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *InterfaceCountDataFunc) History() []InterfaceCountDataFuncCall\n```\n\nHistory returns a sequence of InterfaceCountDataFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -359,7 +300,9 @@
                       "identifier": "InterfaceCountDataFunc.PushHook",
                       "newPage": false,
                       "searchKey": "store.InterfaceCountDataFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -374,32 +317,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/store#InterfaceCountDataFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "InterfaceCountDataFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "store.InterfaceCountDataFunc.SetDefaultReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *InterfaceCountDataFunc) SetDefaultReturn(r0 int, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *InterfaceCountDataFunc) SetDefaultReturn(r0 int, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/internal/insights/store#InterfaceCountDataFunc.PushReturn",
                     "documentation": {
                       "identifier": "InterfaceCountDataFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "store.InterfaceCountDataFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -414,22 +339,44 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/store#InterfaceCountDataFunc.nextHook",
+                    "pathID": "/enterprise/internal/insights/store#InterfaceCountDataFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "InterfaceCountDataFunc.nextHook",
+                      "identifier": "InterfaceCountDataFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "store.InterfaceCountDataFunc.nextHook",
+                      "searchKey": "store.InterfaceCountDataFunc.SetDefaultHook",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *InterfaceCountDataFunc) nextHook() func(context.Context, CountDataOpts) (int, error)"
+                      "value": "func (f *InterfaceCountDataFunc) SetDefaultHook(hook func(context.Context, CountDataOpts) (int, error))"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *InterfaceCountDataFunc) nextHook() func(context.Context, CountDataOpts) (int, error)\n```\n\n"
+                      "value": "```Go\nfunc (f *InterfaceCountDataFunc) SetDefaultHook(hook func(context.Context, CountDataOpts) (int, error))\n```\n\nSetDefaultHook sets function that is called when the CountData method of the parent MockInterface instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/store#InterfaceCountDataFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "InterfaceCountDataFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "store.InterfaceCountDataFunc.SetDefaultReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *InterfaceCountDataFunc) SetDefaultReturn(r0 int, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *InterfaceCountDataFunc) SetDefaultReturn(r0 int, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -442,6 +389,7 @@
                       "newPage": false,
                       "searchKey": "store.InterfaceCountDataFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -458,20 +406,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/store#InterfaceCountDataFunc.History",
+                    "pathID": "/enterprise/internal/insights/store#InterfaceCountDataFunc.nextHook",
                     "documentation": {
-                      "identifier": "InterfaceCountDataFunc.History",
+                      "identifier": "InterfaceCountDataFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "store.InterfaceCountDataFunc.History",
-                      "tags": null
+                      "searchKey": "store.InterfaceCountDataFunc.nextHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *InterfaceCountDataFunc) History() []InterfaceCountDataFuncCall"
+                      "value": "func (f *InterfaceCountDataFunc) nextHook() func(context.Context, CountDataOpts) (int, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *InterfaceCountDataFunc) History() []InterfaceCountDataFuncCall\n```\n\nHistory returns a sequence of InterfaceCountDataFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *InterfaceCountDataFunc) nextHook() func(context.Context, CountDataOpts) (int, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -486,7 +437,9 @@
                 "identifier": "InterfaceCountDataFuncCall",
                 "newPage": false,
                 "searchKey": "store.InterfaceCountDataFuncCall",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -504,7 +457,9 @@
                       "identifier": "InterfaceCountDataFuncCall.Args",
                       "newPage": false,
                       "searchKey": "store.InterfaceCountDataFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -524,7 +479,9 @@
                       "identifier": "InterfaceCountDataFuncCall.Results",
                       "newPage": false,
                       "searchKey": "store.InterfaceCountDataFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -547,7 +504,9 @@
                 "identifier": "InterfaceRecordSeriesPointFunc",
                 "newPage": false,
                 "searchKey": "store.InterfaceRecordSeriesPointFunc",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -560,20 +519,22 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/store#InterfaceRecordSeriesPointFunc.SetDefaultHook",
+                    "pathID": "/enterprise/internal/insights/store#InterfaceRecordSeriesPointFunc.History",
                     "documentation": {
-                      "identifier": "InterfaceRecordSeriesPointFunc.SetDefaultHook",
+                      "identifier": "InterfaceRecordSeriesPointFunc.History",
                       "newPage": false,
-                      "searchKey": "store.InterfaceRecordSeriesPointFunc.SetDefaultHook",
-                      "tags": null
+                      "searchKey": "store.InterfaceRecordSeriesPointFunc.History",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *InterfaceRecordSeriesPointFunc) SetDefaultHook(hook func(context.Context, RecordSeriesPointArgs) error)"
+                      "value": "func (f *InterfaceRecordSeriesPointFunc) History() []InterfaceRecordSeriesPointFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *InterfaceRecordSeriesPointFunc) SetDefaultHook(hook func(context.Context, RecordSeriesPointArgs) error)\n```\n\nSetDefaultHook sets function that is called when the RecordSeriesPoint method of the parent MockInterface instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *InterfaceRecordSeriesPointFunc) History() []InterfaceRecordSeriesPointFuncCall\n```\n\nHistory returns a sequence of InterfaceRecordSeriesPointFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -585,7 +546,9 @@
                       "identifier": "InterfaceRecordSeriesPointFunc.PushHook",
                       "newPage": false,
                       "searchKey": "store.InterfaceRecordSeriesPointFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -600,32 +563,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/store#InterfaceRecordSeriesPointFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "InterfaceRecordSeriesPointFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "store.InterfaceRecordSeriesPointFunc.SetDefaultReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *InterfaceRecordSeriesPointFunc) SetDefaultReturn(r0 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *InterfaceRecordSeriesPointFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/internal/insights/store#InterfaceRecordSeriesPointFunc.PushReturn",
                     "documentation": {
                       "identifier": "InterfaceRecordSeriesPointFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "store.InterfaceRecordSeriesPointFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -640,22 +585,44 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/store#InterfaceRecordSeriesPointFunc.nextHook",
+                    "pathID": "/enterprise/internal/insights/store#InterfaceRecordSeriesPointFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "InterfaceRecordSeriesPointFunc.nextHook",
+                      "identifier": "InterfaceRecordSeriesPointFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "store.InterfaceRecordSeriesPointFunc.nextHook",
+                      "searchKey": "store.InterfaceRecordSeriesPointFunc.SetDefaultHook",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *InterfaceRecordSeriesPointFunc) nextHook() func(context.Context, RecordSeriesPointArgs) error"
+                      "value": "func (f *InterfaceRecordSeriesPointFunc) SetDefaultHook(hook func(context.Context, RecordSeriesPointArgs) error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *InterfaceRecordSeriesPointFunc) nextHook() func(context.Context, RecordSeriesPointArgs) error\n```\n\n"
+                      "value": "```Go\nfunc (f *InterfaceRecordSeriesPointFunc) SetDefaultHook(hook func(context.Context, RecordSeriesPointArgs) error)\n```\n\nSetDefaultHook sets function that is called when the RecordSeriesPoint method of the parent MockInterface instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/store#InterfaceRecordSeriesPointFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "InterfaceRecordSeriesPointFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "store.InterfaceRecordSeriesPointFunc.SetDefaultReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *InterfaceRecordSeriesPointFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *InterfaceRecordSeriesPointFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -668,6 +635,7 @@
                       "newPage": false,
                       "searchKey": "store.InterfaceRecordSeriesPointFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -684,20 +652,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/store#InterfaceRecordSeriesPointFunc.History",
+                    "pathID": "/enterprise/internal/insights/store#InterfaceRecordSeriesPointFunc.nextHook",
                     "documentation": {
-                      "identifier": "InterfaceRecordSeriesPointFunc.History",
+                      "identifier": "InterfaceRecordSeriesPointFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "store.InterfaceRecordSeriesPointFunc.History",
-                      "tags": null
+                      "searchKey": "store.InterfaceRecordSeriesPointFunc.nextHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *InterfaceRecordSeriesPointFunc) History() []InterfaceRecordSeriesPointFuncCall"
+                      "value": "func (f *InterfaceRecordSeriesPointFunc) nextHook() func(context.Context, RecordSeriesPointArgs) error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *InterfaceRecordSeriesPointFunc) History() []InterfaceRecordSeriesPointFuncCall\n```\n\nHistory returns a sequence of InterfaceRecordSeriesPointFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *InterfaceRecordSeriesPointFunc) nextHook() func(context.Context, RecordSeriesPointArgs) error\n```\n\n"
                     },
                     "children": null
                   }
@@ -712,7 +683,9 @@
                 "identifier": "InterfaceRecordSeriesPointFuncCall",
                 "newPage": false,
                 "searchKey": "store.InterfaceRecordSeriesPointFuncCall",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -730,7 +703,9 @@
                       "identifier": "InterfaceRecordSeriesPointFuncCall.Args",
                       "newPage": false,
                       "searchKey": "store.InterfaceRecordSeriesPointFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -750,7 +725,9 @@
                       "identifier": "InterfaceRecordSeriesPointFuncCall.Results",
                       "newPage": false,
                       "searchKey": "store.InterfaceRecordSeriesPointFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -773,7 +750,9 @@
                 "identifier": "InterfaceSeriesPointsFunc",
                 "newPage": false,
                 "searchKey": "store.InterfaceSeriesPointsFunc",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -786,20 +765,22 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/store#InterfaceSeriesPointsFunc.SetDefaultHook",
+                    "pathID": "/enterprise/internal/insights/store#InterfaceSeriesPointsFunc.History",
                     "documentation": {
-                      "identifier": "InterfaceSeriesPointsFunc.SetDefaultHook",
+                      "identifier": "InterfaceSeriesPointsFunc.History",
                       "newPage": false,
-                      "searchKey": "store.InterfaceSeriesPointsFunc.SetDefaultHook",
-                      "tags": null
+                      "searchKey": "store.InterfaceSeriesPointsFunc.History",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *InterfaceSeriesPointsFunc) SetDefaultHook(hook func(context.Context, SeriesPointsOpts) ([]SeriesPoint, error))"
+                      "value": "func (f *InterfaceSeriesPointsFunc) History() []InterfaceSeriesPointsFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *InterfaceSeriesPointsFunc) SetDefaultHook(hook func(context.Context, SeriesPointsOpts) ([]SeriesPoint, error))\n```\n\nSetDefaultHook sets function that is called when the SeriesPoints method of the parent MockInterface instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *InterfaceSeriesPointsFunc) History() []InterfaceSeriesPointsFuncCall\n```\n\nHistory returns a sequence of InterfaceSeriesPointsFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -811,7 +792,9 @@
                       "identifier": "InterfaceSeriesPointsFunc.PushHook",
                       "newPage": false,
                       "searchKey": "store.InterfaceSeriesPointsFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -826,32 +809,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/store#InterfaceSeriesPointsFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "InterfaceSeriesPointsFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "store.InterfaceSeriesPointsFunc.SetDefaultReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *InterfaceSeriesPointsFunc) SetDefaultReturn(r0 []SeriesPoint, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *InterfaceSeriesPointsFunc) SetDefaultReturn(r0 []SeriesPoint, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/internal/insights/store#InterfaceSeriesPointsFunc.PushReturn",
                     "documentation": {
                       "identifier": "InterfaceSeriesPointsFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "store.InterfaceSeriesPointsFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -866,22 +831,44 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/store#InterfaceSeriesPointsFunc.nextHook",
+                    "pathID": "/enterprise/internal/insights/store#InterfaceSeriesPointsFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "InterfaceSeriesPointsFunc.nextHook",
+                      "identifier": "InterfaceSeriesPointsFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "store.InterfaceSeriesPointsFunc.nextHook",
+                      "searchKey": "store.InterfaceSeriesPointsFunc.SetDefaultHook",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *InterfaceSeriesPointsFunc) nextHook() func(context.Context, SeriesPointsOpts) ([]SeriesPoint, error)"
+                      "value": "func (f *InterfaceSeriesPointsFunc) SetDefaultHook(hook func(context.Context, SeriesPointsOpts) ([]SeriesPoint, error))"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *InterfaceSeriesPointsFunc) nextHook() func(context.Context, SeriesPointsOpts) ([]SeriesPoint, error)\n```\n\n"
+                      "value": "```Go\nfunc (f *InterfaceSeriesPointsFunc) SetDefaultHook(hook func(context.Context, SeriesPointsOpts) ([]SeriesPoint, error))\n```\n\nSetDefaultHook sets function that is called when the SeriesPoints method of the parent MockInterface instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/store#InterfaceSeriesPointsFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "InterfaceSeriesPointsFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "store.InterfaceSeriesPointsFunc.SetDefaultReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *InterfaceSeriesPointsFunc) SetDefaultReturn(r0 []SeriesPoint, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *InterfaceSeriesPointsFunc) SetDefaultReturn(r0 []SeriesPoint, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -894,6 +881,7 @@
                       "newPage": false,
                       "searchKey": "store.InterfaceSeriesPointsFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -910,20 +898,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/store#InterfaceSeriesPointsFunc.History",
+                    "pathID": "/enterprise/internal/insights/store#InterfaceSeriesPointsFunc.nextHook",
                     "documentation": {
-                      "identifier": "InterfaceSeriesPointsFunc.History",
+                      "identifier": "InterfaceSeriesPointsFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "store.InterfaceSeriesPointsFunc.History",
-                      "tags": null
+                      "searchKey": "store.InterfaceSeriesPointsFunc.nextHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *InterfaceSeriesPointsFunc) History() []InterfaceSeriesPointsFuncCall"
+                      "value": "func (f *InterfaceSeriesPointsFunc) nextHook() func(context.Context, SeriesPointsOpts) ([]SeriesPoint, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *InterfaceSeriesPointsFunc) History() []InterfaceSeriesPointsFuncCall\n```\n\nHistory returns a sequence of InterfaceSeriesPointsFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *InterfaceSeriesPointsFunc) nextHook() func(context.Context, SeriesPointsOpts) ([]SeriesPoint, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -938,7 +929,9 @@
                 "identifier": "InterfaceSeriesPointsFuncCall",
                 "newPage": false,
                 "searchKey": "store.InterfaceSeriesPointsFuncCall",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -956,7 +949,9 @@
                       "identifier": "InterfaceSeriesPointsFuncCall.Args",
                       "newPage": false,
                       "searchKey": "store.InterfaceSeriesPointsFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -976,7 +971,9 @@
                       "identifier": "InterfaceSeriesPointsFuncCall.Results",
                       "newPage": false,
                       "searchKey": "store.InterfaceSeriesPointsFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -994,200 +991,130 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/insights/store#Interface",
+              "pathID": "/enterprise/internal/insights/store#MockInterface",
               "documentation": {
-                "identifier": "Interface",
+                "identifier": "MockInterface",
                 "newPage": false,
-                "searchKey": "store.Interface",
-                "tags": null
+                "searchKey": "store.MockInterface",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type Interface interface"
+                "value": "type MockInterface struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype Interface interface {\n\tSeriesPoints(ctx context.Context, opts SeriesPointsOpts) ([]SeriesPoint, error)\n\tRecordSeriesPoint(ctx context.Context, v RecordSeriesPointArgs) error\n\tCountData(ctx context.Context, opts CountDataOpts) (int, error)\n}\n```\n\nInterface is the interface describing a code insights store. See the Store struct for actual API usage. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/store#Store",
-              "documentation": {
-                "identifier": "Store",
-                "newPage": false,
-                "searchKey": "store.Store",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Store struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Store struct {\n\t*basestore.Store\n\tnow func() time.Time\n}\n```\n\nStore exposes methods to read and write code insights domain models from persistent storage. \n\n"
+                "value": "```Go\ntype MockInterface struct {\n\t// CountDataFunc is an instance of a mock function object controlling\n\t// the behavior of the method CountData.\n\tCountDataFunc *InterfaceCountDataFunc\n\t// RecordSeriesPointFunc is an instance of a mock function object\n\t// controlling the behavior of the method RecordSeriesPoint.\n\tRecordSeriesPointFunc *InterfaceRecordSeriesPointFunc\n\t// SeriesPointsFunc is an instance of a mock function object controlling\n\t// the behavior of the method SeriesPoints.\n\tSeriesPointsFunc *InterfaceSeriesPointsFunc\n}\n```\n\nMockInterface is a mock implementation of the Interface interface (from the package github.com/sourcegraph/sourcegraph/enterprise/internal/insights/store) used for unit testing. \n\n"
               },
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/store#New",
+                    "pathID": "/enterprise/internal/insights/store#NewMockInterface",
                     "documentation": {
-                      "identifier": "New",
+                      "identifier": "NewMockInterface",
                       "newPage": false,
-                      "searchKey": "store.New",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func New(db dbutil.DB) *Store"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc New(db dbutil.DB) *Store\n```\n\nNew returns a new Store backed by the given Timescale db. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/store#NewWithClock",
-                    "documentation": {
-                      "identifier": "NewWithClock",
-                      "newPage": false,
-                      "searchKey": "store.NewWithClock",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewWithClock(db dbutil.DB, clock func() time.Time) *Store"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewWithClock(db dbutil.DB, clock func() time.Time) *Store\n```\n\nNewWithClock returns a new Store backed by the given db and clock for timestamps. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/store#Store.Handle",
-                    "documentation": {
-                      "identifier": "Store.Handle",
-                      "newPage": false,
-                      "searchKey": "store.Store.Handle",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Store) Handle() *basestore.TransactableHandle"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Store) Handle() *basestore.TransactableHandle\n```\n\nHandle returns the underlying transactable database handle. Needed to implement the ShareableStore interface. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/store#Store.With",
-                    "documentation": {
-                      "identifier": "Store.With",
-                      "newPage": false,
-                      "searchKey": "store.Store.With",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Store) With(other basestore.ShareableStore) *Store"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Store) With(other basestore.ShareableStore) *Store\n```\n\nWith creates a new Store with the given basestore.Shareable store as the underlying basestore.Store. Needed to implement the basestore.Store interface \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/store#Store.SeriesPoints",
-                    "documentation": {
-                      "identifier": "Store.SeriesPoints",
-                      "newPage": false,
-                      "searchKey": "store.Store.SeriesPoints",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Store) SeriesPoints(ctx context.Context, opts SeriesPointsOpts) ([]SeriesPoint, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Store) SeriesPoints(ctx context.Context, opts SeriesPointsOpts) ([]SeriesPoint, error)\n```\n\nSeriesPoints queries data points over time for a specific insights' series. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/store#Store.CountData",
-                    "documentation": {
-                      "identifier": "Store.CountData",
-                      "newPage": false,
-                      "searchKey": "store.Store.CountData",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Store) CountData(ctx context.Context, opts CountDataOpts) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Store) CountData(ctx context.Context, opts CountDataOpts) (int, error)\n```\n\nCountData counts the amount of data points in a given time range. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/store#Store.RecordSeriesPoint",
-                    "documentation": {
-                      "identifier": "Store.RecordSeriesPoint",
-                      "newPage": false,
-                      "searchKey": "store.Store.RecordSeriesPoint",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Store) RecordSeriesPoint(ctx context.Context, v RecordSeriesPointArgs) (err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Store) RecordSeriesPoint(ctx context.Context, v RecordSeriesPointArgs) (err error)\n```\n\nRecordSeriesPoint records a data point for the specfied series ID (which is a unique ID for the series, not a DB table primary key ID). \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/store#Store.query",
-                    "documentation": {
-                      "identifier": "Store.query",
-                      "newPage": false,
-                      "searchKey": "store.Store.query",
+                      "searchKey": "store.NewMockInterface",
                       "tags": [
-                        "private"
+                        "function"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (s *Store) query(ctx context.Context, q *sqlf.Query, sc scanFunc) error"
+                      "value": "func NewMockInterface() *MockInterface"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (s *Store) query(ctx context.Context, q *sqlf.Query, sc scanFunc) error\n```\n\n"
+                      "value": "```Go\nfunc NewMockInterface() *MockInterface\n```\n\nNewMockInterface creates a new mock of the Interface interface. All methods return zero values for all results, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/store#NewMockInterfaceFrom",
+                    "documentation": {
+                      "identifier": "NewMockInterfaceFrom",
+                      "newPage": false,
+                      "searchKey": "store.NewMockInterfaceFrom",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockInterfaceFrom(i Interface) *MockInterface"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockInterfaceFrom(i Interface) *MockInterface\n```\n\nNewMockInterfaceFrom creates a new mock of the MockInterface interface. All methods delegate to the given implementation, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/store#MockInterface.CountData",
+                    "documentation": {
+                      "identifier": "MockInterface.CountData",
+                      "newPage": false,
+                      "searchKey": "store.MockInterface.CountData",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockInterface) CountData(v0 context.Context, v1 CountDataOpts) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockInterface) CountData(v0 context.Context, v1 CountDataOpts) (int, error)\n```\n\nCountData delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/store#MockInterface.RecordSeriesPoint",
+                    "documentation": {
+                      "identifier": "MockInterface.RecordSeriesPoint",
+                      "newPage": false,
+                      "searchKey": "store.MockInterface.RecordSeriesPoint",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockInterface) RecordSeriesPoint(v0 context.Context, v1 RecordSeriesPointArgs) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockInterface) RecordSeriesPoint(v0 context.Context, v1 RecordSeriesPointArgs) error\n```\n\nRecordSeriesPoint delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/store#MockInterface.SeriesPoints",
+                    "documentation": {
+                      "identifier": "MockInterface.SeriesPoints",
+                      "newPage": false,
+                      "searchKey": "store.MockInterface.SeriesPoints",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockInterface) SeriesPoints(v0 context.Context, v1 SeriesPointsOpts) ([]SeriesPoint, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockInterface) SeriesPoints(v0 context.Context, v1 SeriesPointsOpts) ([]SeriesPoint, error)\n```\n\nSeriesPoints delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
                     },
                     "children": null
                   }
@@ -1197,12 +1124,36 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/insights/store#RecordSeriesPointArgs",
+              "documentation": {
+                "identifier": "RecordSeriesPointArgs",
+                "newPage": false,
+                "searchKey": "store.RecordSeriesPointArgs",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RecordSeriesPointArgs struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RecordSeriesPointArgs struct {\n\t// SeriesID is the unique series ID to query. It should describe the series of data uniquely,\n\t// but is not a DB table primary key ID.\n\tSeriesID string\n\n\t// Point is the actual data point recorded and at what time.\n\tPoint SeriesPoint\n\n\t// Repository name and DB ID to associate with this data point, if any.\n\t//\n\t// Both must be specified if one is specified.\n\tRepoName *string\n\tRepoID   *api.RepoID\n\n\t// Metadata contains arbitrary JSON metadata to associate with the data point, if any.\n\t//\n\t// See the DB schema comments for intended use cases. This should generally be small,\n\t// low-cardinality data to avoid inflating the table.\n\tMetadata interface{}\n}\n```\n\nRecordSeriesPointArgs describes arguments for the RecordSeriesPoint method. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/insights/store#SeriesPoint",
               "documentation": {
                 "identifier": "SeriesPoint",
                 "newPage": false,
                 "searchKey": "store.SeriesPoint",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1220,7 +1171,9 @@
                       "identifier": "SeriesPoint.String",
                       "newPage": false,
                       "searchKey": "store.SeriesPoint.String",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1243,7 +1196,9 @@
                 "identifier": "SeriesPointsOpts",
                 "newPage": false,
                 "searchKey": "store.SeriesPointsOpts",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1258,40 +1213,223 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/insights/store#CountDataOpts",
+              "pathID": "/enterprise/internal/insights/store#Store",
               "documentation": {
-                "identifier": "CountDataOpts",
+                "identifier": "Store",
                 "newPage": false,
-                "searchKey": "store.CountDataOpts",
-                "tags": null
+                "searchKey": "store.Store",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type CountDataOpts struct"
+                "value": "type Store struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype CountDataOpts struct {\n\t// The time range to look for data, if non-nil.\n\tFrom, To *time.Time\n\n\t// SeriesID, if non-nil, indicates to look for data with this series ID only.\n\tSeriesID *string\n\n\t// RepoID, if non-nil, indicates to look for data with this repo ID only.\n\tRepoID *api.RepoID\n}\n```\n\n"
+                "value": "```Go\ntype Store struct {\n\t*basestore.Store\n\tnow func() time.Time\n}\n```\n\nStore exposes methods to read and write code insights domain models from persistent storage. \n\n"
               },
-              "children": null
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/store#New",
+                    "documentation": {
+                      "identifier": "New",
+                      "newPage": false,
+                      "searchKey": "store.New",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func New(db dbutil.DB) *Store"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc New(db dbutil.DB) *Store\n```\n\nNew returns a new Store backed by the given Timescale db. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/store#NewWithClock",
+                    "documentation": {
+                      "identifier": "NewWithClock",
+                      "newPage": false,
+                      "searchKey": "store.NewWithClock",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewWithClock(db dbutil.DB, clock func() time.Time) *Store"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewWithClock(db dbutil.DB, clock func() time.Time) *Store\n```\n\nNewWithClock returns a new Store backed by the given db and clock for timestamps. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/store#Store.CountData",
+                    "documentation": {
+                      "identifier": "Store.CountData",
+                      "newPage": false,
+                      "searchKey": "store.Store.CountData",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) CountData(ctx context.Context, opts CountDataOpts) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) CountData(ctx context.Context, opts CountDataOpts) (int, error)\n```\n\nCountData counts the amount of data points in a given time range. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/store#Store.Handle",
+                    "documentation": {
+                      "identifier": "Store.Handle",
+                      "newPage": false,
+                      "searchKey": "store.Store.Handle",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) Handle() *basestore.TransactableHandle"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) Handle() *basestore.TransactableHandle\n```\n\nHandle returns the underlying transactable database handle. Needed to implement the ShareableStore interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/store#Store.RecordSeriesPoint",
+                    "documentation": {
+                      "identifier": "Store.RecordSeriesPoint",
+                      "newPage": false,
+                      "searchKey": "store.Store.RecordSeriesPoint",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) RecordSeriesPoint(ctx context.Context, v RecordSeriesPointArgs) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) RecordSeriesPoint(ctx context.Context, v RecordSeriesPointArgs) (err error)\n```\n\nRecordSeriesPoint records a data point for the specfied series ID (which is a unique ID for the series, not a DB table primary key ID). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/store#Store.SeriesPoints",
+                    "documentation": {
+                      "identifier": "Store.SeriesPoints",
+                      "newPage": false,
+                      "searchKey": "store.Store.SeriesPoints",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) SeriesPoints(ctx context.Context, opts SeriesPointsOpts) ([]SeriesPoint, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) SeriesPoints(ctx context.Context, opts SeriesPointsOpts) ([]SeriesPoint, error)\n```\n\nSeriesPoints queries data points over time for a specific insights' series. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/store#Store.With",
+                    "documentation": {
+                      "identifier": "Store.With",
+                      "newPage": false,
+                      "searchKey": "store.Store.With",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) With(other basestore.ShareableStore) *Store"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) With(other basestore.ShareableStore) *Store\n```\n\nWith creates a new Store with the given basestore.Shareable store as the underlying basestore.Store. Needed to implement the basestore.Store interface \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/store#Store.query",
+                    "documentation": {
+                      "identifier": "Store.query",
+                      "newPage": false,
+                      "searchKey": "store.Store.query",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) query(ctx context.Context, q *sqlf.Query, sc scanFunc) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) query(ctx context.Context, q *sqlf.Query, sc scanFunc) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/insights/store#RecordSeriesPointArgs",
+              "pathID": "/enterprise/internal/insights/store#scanFunc",
               "documentation": {
-                "identifier": "RecordSeriesPointArgs",
+                "identifier": "scanFunc",
                 "newPage": false,
-                "searchKey": "store.RecordSeriesPointArgs",
-                "tags": null
+                "searchKey": "store.scanFunc",
+                "tags": [
+                  "function",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type RecordSeriesPointArgs struct"
+                "value": "type scanFunc func(github.com/sourcegraph/sourcegraph/enterprise/internal/insights/store.scanner) (err error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype RecordSeriesPointArgs struct {\n\t// SeriesID is the unique series ID to query. It should describe the series of data uniquely,\n\t// but is not a DB table primary key ID.\n\tSeriesID string\n\n\t// Point is the actual data point recorded and at what time.\n\tPoint SeriesPoint\n\n\t// Repository name and DB ID to associate with this data point, if any.\n\t//\n\t// Both must be specified if one is specified.\n\tRepoName *string\n\tRepoID   *api.RepoID\n\n\t// Metadata contains arbitrary JSON metadata to associate with the data point, if any.\n\t//\n\t// See the DB schema comments for intended use cases. This should generally be small,\n\t// low-cardinality data to avoid inflating the table.\n\tMetadata interface{}\n}\n```\n\nRecordSeriesPointArgs describes arguments for the RecordSeriesPoint method. \n\n"
+                "value": "```Go\ntype scanFunc func(scanner) (err error)\n```\n\na scanFunc scans one or more rows from a scanner, returning the last id column scanned and the count of scanned rows. \n\n"
               },
               "children": null
             }
@@ -1304,6 +1442,7 @@
                 "newPage": false,
                 "searchKey": "store.scanner",
                 "tags": [
+                  "interface",
                   "private"
                 ]
               },
@@ -1314,28 +1453,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\ntype scanner interface {\n\tScan(dst ...interface{}) error\n}\n```\n\nscanner captures the Scan method of sql.Rows and sql.Row \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/store#scanFunc",
-              "documentation": {
-                "identifier": "scanFunc",
-                "newPage": false,
-                "searchKey": "store.scanFunc",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type scanFunc func(github.com/sourcegraph/sourcegraph/enterprise/internal/insights/store.scanner) (err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype scanFunc func(scanner) (err error)\n```\n\na scanFunc scans one or more rows from a scanner, returning the last id column scanned and the count of scanned rows. \n\n"
               },
               "children": null
             }
@@ -1351,6 +1468,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -1365,22 +1483,72 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/internal/insights/store#seriesPointsQuery",
+              "pathID": "/enterprise/internal/insights/store#TestCountData",
               "documentation": {
-                "identifier": "seriesPointsQuery",
+                "identifier": "TestCountData",
                 "newPage": false,
-                "searchKey": "store.seriesPointsQuery",
+                "searchKey": "store.TestCountData",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func seriesPointsQuery(opts SeriesPointsOpts) *sqlf.Query"
+                "value": "func TestCountData(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc seriesPointsQuery(opts SeriesPointsOpts) *sqlf.Query\n```\n\n"
+                "value": "```Go\nfunc TestCountData(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/store#TestRecordSeriesPoints",
+              "documentation": {
+                "identifier": "TestRecordSeriesPoints",
+                "newPage": false,
+                "searchKey": "store.TestRecordSeriesPoints",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRecordSeriesPoints(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRecordSeriesPoints(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/store#TestSeriesPoints",
+              "documentation": {
+                "identifier": "TestSeriesPoints",
+                "newPage": false,
+                "searchKey": "store.TestSeriesPoints",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSeriesPoints(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSeriesPoints(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1393,6 +1561,7 @@
                 "newPage": false,
                 "searchKey": "store.countDataQuery",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1415,6 +1584,7 @@
                 "newPage": false,
                 "searchKey": "store.scanAll",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1431,66 +1601,23 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/insights/store#TestSeriesPoints",
+              "pathID": "/enterprise/internal/insights/store#seriesPointsQuery",
               "documentation": {
-                "identifier": "TestSeriesPoints",
+                "identifier": "seriesPointsQuery",
                 "newPage": false,
-                "searchKey": "store.TestSeriesPoints",
+                "searchKey": "store.seriesPointsQuery",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestSeriesPoints(t *testing.T)"
+                "value": "func seriesPointsQuery(opts SeriesPointsOpts) *sqlf.Query"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestSeriesPoints(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/store#TestCountData",
-              "documentation": {
-                "identifier": "TestCountData",
-                "newPage": false,
-                "searchKey": "store.TestCountData",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCountData(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCountData(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/store#TestRecordSeriesPoints",
-              "documentation": {
-                "identifier": "TestRecordSeriesPoints",
-                "newPage": false,
-                "searchKey": "store.TestRecordSeriesPoints",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRecordSeriesPoints(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRecordSeriesPoints(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc seriesPointsQuery(opts SeriesPointsOpts) *sqlf.Query\n```\n\n"
               },
               "children": null
             }

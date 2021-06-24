@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/endpoint",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "endpoint.metricEndpointSize",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -84,12 +89,213 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/endpoint#Map",
+              "documentation": {
+                "identifier": "Map",
+                "newPage": false,
+                "searchKey": "endpoint.Map",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Map struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Map struct {\n\tmu      sync.Mutex\n\tinit    func() (*hashMap, error)\n\terr     error\n\turls    *hashMap\n\turlspec string\n}\n```\n\nMap is a consistent hash map to URLs. It uses the kubernetes API to watch the endpoints for a service and update the map when they change. It can also fallback to static URLs if not configured for kubernetes. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/endpoint#Empty",
+                    "documentation": {
+                      "identifier": "Empty",
+                      "newPage": false,
+                      "searchKey": "endpoint.Empty",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Empty(err error) *Map"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Empty(err error) *Map\n```\n\nEmpty returns an Endpoint map which always fails with err. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/endpoint#New",
+                    "documentation": {
+                      "identifier": "New",
+                      "newPage": false,
+                      "searchKey": "endpoint.New",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func New(urlspec string) *Map"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc New(urlspec string) *Map\n```\n\nNew creates a new Map for the URL specifier. \n\nIf the scheme is prefixed with \"k8s+\", one URL is expected and the format is expected to match e.g. k8s+[http://service.namespace:port/path](http://service.namespace:port/path). namespace, port and path are optional. URLs of this form will consistently hash among the endpoints for the Kubernetes service. The values returned by Get will look like [http://endpoint:port/path](http://endpoint:port/path). \n\nIf the scheme is not prefixed with \"k8s+\", a space separated list of URLs is expected. The map will consistently hash against these URLs in this case. This is useful for specifying non-Kubernetes endpoints. \n\nExamples URL specifiers: \n\n```\n\"k8s+[http://searcher](http://searcher)\"\n\"[http://searcher-1](http://searcher-1) [http://searcher-2](http://searcher-2) [http://searcher-3](http://searcher-3)\"\n\n```\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/endpoint#Static",
+                    "documentation": {
+                      "identifier": "Static",
+                      "newPage": false,
+                      "searchKey": "endpoint.Static",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Static(endpoints ...string) *Map"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Static(endpoints ...string) *Map\n```\n\nStatic returns an Endpoint map which consistently hashes over endpoints. \n\nThere are no requirements on endpoints, it can be any arbitrary string. Unlike static endpoints created via New. \n\nStatic Maps are guaranteed to never return an error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/endpoint#Map.Endpoints",
+                    "documentation": {
+                      "identifier": "Map.Endpoints",
+                      "newPage": false,
+                      "searchKey": "endpoint.Map.Endpoints",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *Map) Endpoints() (map[string]struct{}, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *Map) Endpoints() (map[string]struct{}, error)\n```\n\nEndpoints returns a set of all addresses. Do not modify the returned value. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/endpoint#Map.Get",
+                    "documentation": {
+                      "identifier": "Map.Get",
+                      "newPage": false,
+                      "searchKey": "endpoint.Map.Get",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *Map) Get(key string, exclude map[string]bool) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *Map) Get(key string, exclude map[string]bool) (string, error)\n```\n\nGet the closest URL in the hash to the provided key that is not in exclude. If no URL is found, \"\" is returned. \n\nNote: For k8s URLs we return URLs based on the registered endpoints. The endpoint may not actually be available yet / at the moment. So users of the URL should implement a retry strategy. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/endpoint#Map.GetMany",
+                    "documentation": {
+                      "identifier": "Map.GetMany",
+                      "newPage": false,
+                      "searchKey": "endpoint.Map.GetMany",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *Map) GetMany(keys ...string) ([]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *Map) GetMany(keys ...string) ([]string, error)\n```\n\nGetMany is the same as calling Get on each item of keys. It will only acquire the underlying endpoint map once, so is preferred to calling Get for each key which will acquire the endpoint map for each call. The benefit is it is faster (O(1) mutex acquires vs O(n)) and consistent (endpoint map is immutable vs may change between Get calls). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/endpoint#Map.String",
+                    "documentation": {
+                      "identifier": "Map.String",
+                      "newPage": false,
+                      "searchKey": "endpoint.Map.String",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *Map) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *Map) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/endpoint#Map.getUrls",
+                    "documentation": {
+                      "identifier": "Map.getUrls",
+                      "newPage": false,
+                      "searchKey": "endpoint.Map.getUrls",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *Map) getUrls() (*hashMap, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *Map) getUrls() (*hashMap, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/endpoint#hashFn",
               "documentation": {
                 "identifier": "hashFn",
                 "newPage": false,
                 "searchKey": "endpoint.hashFn",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -112,6 +318,7 @@
                 "newPage": false,
                 "searchKey": "endpoint.hashMap",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -126,34 +333,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/endpoint#hashMapNew",
-                    "documentation": {
-                      "identifier": "hashMapNew",
-                      "newPage": false,
-                      "searchKey": "endpoint.hashMapNew",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func hashMapNew(replicas int, fn hashFn) *hashMap"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc hashMapNew(replicas int, fn hashFn) *hashMap\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/endpoint#endpointsToMap",
                     "documentation": {
                       "identifier": "endpointsToMap",
                       "newPage": false,
                       "searchKey": "endpoint.endpointsToMap",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -170,12 +356,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/endpoint#hashMapNew",
+                    "documentation": {
+                      "identifier": "hashMapNew",
+                      "newPage": false,
+                      "searchKey": "endpoint.hashMapNew",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func hashMapNew(replicas int, fn hashFn) *hashMap"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc hashMapNew(replicas int, fn hashFn) *hashMap\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/endpoint#newConsistentHashMap",
                     "documentation": {
                       "identifier": "newConsistentHashMap",
                       "newPage": false,
                       "searchKey": "endpoint.newConsistentHashMap",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -192,34 +402,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/endpoint#hashMap.isEmpty",
-                    "documentation": {
-                      "identifier": "hashMap.isEmpty",
-                      "newPage": false,
-                      "searchKey": "endpoint.hashMap.isEmpty",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *hashMap) isEmpty() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *hashMap) isEmpty() bool\n```\n\nReturns true if there are no items available. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/endpoint#hashMap.add",
                     "documentation": {
                       "identifier": "hashMap.add",
                       "newPage": false,
                       "searchKey": "endpoint.hashMap.add",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -242,6 +431,7 @@
                       "newPage": false,
                       "searchKey": "endpoint.hashMap.get",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -255,186 +445,26 @@
                     },
                     "children": null
                   }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/endpoint#Map",
-              "documentation": {
-                "identifier": "Map",
-                "newPage": false,
-                "searchKey": "endpoint.Map",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Map struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Map struct {\n\tmu      sync.Mutex\n\tinit    func() (*hashMap, error)\n\terr     error\n\turls    *hashMap\n\turlspec string\n}\n```\n\nMap is a consistent hash map to URLs. It uses the kubernetes API to watch the endpoints for a service and update the map when they change. It can also fallback to static URLs if not configured for kubernetes. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/endpoint#New",
-                    "documentation": {
-                      "identifier": "New",
-                      "newPage": false,
-                      "searchKey": "endpoint.New",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func New(urlspec string) *Map"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc New(urlspec string) *Map\n```\n\nNew creates a new Map for the URL specifier. \n\nIf the scheme is prefixed with \"k8s+\", one URL is expected and the format is expected to match e.g. k8s+[http://service.namespace:port/path](http://service.namespace:port/path). namespace, port and path are optional. URLs of this form will consistently hash among the endpoints for the Kubernetes service. The values returned by Get will look like [http://endpoint:port/path](http://endpoint:port/path). \n\nIf the scheme is not prefixed with \"k8s+\", a space separated list of URLs is expected. The map will consistently hash against these URLs in this case. This is useful for specifying non-Kubernetes endpoints. \n\nExamples URL specifiers: \n\n```\n\"k8s+[http://searcher](http://searcher)\"\n\"[http://searcher-1](http://searcher-1) [http://searcher-2](http://searcher-2) [http://searcher-3](http://searcher-3)\"\n\n```\n"
-                    },
-                    "children": null
-                  }
                 },
                 {
                   "node": {
-                    "pathID": "/internal/endpoint#Static",
+                    "pathID": "/internal/endpoint#hashMap.isEmpty",
                     "documentation": {
-                      "identifier": "Static",
+                      "identifier": "hashMap.isEmpty",
                       "newPage": false,
-                      "searchKey": "endpoint.Static",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func Static(endpoints ...string) *Map"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc Static(endpoints ...string) *Map\n```\n\nStatic returns an Endpoint map which consistently hashes over endpoints. \n\nThere are no requirements on endpoints, it can be any arbitrary string. Unlike static endpoints created via New. \n\nStatic Maps are guaranteed to never return an error. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/endpoint#Empty",
-                    "documentation": {
-                      "identifier": "Empty",
-                      "newPage": false,
-                      "searchKey": "endpoint.Empty",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func Empty(err error) *Map"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc Empty(err error) *Map\n```\n\nEmpty returns an Endpoint map which always fails with err. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/endpoint#Map.String",
-                    "documentation": {
-                      "identifier": "Map.String",
-                      "newPage": false,
-                      "searchKey": "endpoint.Map.String",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *Map) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *Map) String() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/endpoint#Map.Get",
-                    "documentation": {
-                      "identifier": "Map.Get",
-                      "newPage": false,
-                      "searchKey": "endpoint.Map.Get",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *Map) Get(key string, exclude map[string]bool) (string, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *Map) Get(key string, exclude map[string]bool) (string, error)\n```\n\nGet the closest URL in the hash to the provided key that is not in exclude. If no URL is found, \"\" is returned. \n\nNote: For k8s URLs we return URLs based on the registered endpoints. The endpoint may not actually be available yet / at the moment. So users of the URL should implement a retry strategy. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/endpoint#Map.GetMany",
-                    "documentation": {
-                      "identifier": "Map.GetMany",
-                      "newPage": false,
-                      "searchKey": "endpoint.Map.GetMany",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *Map) GetMany(keys ...string) ([]string, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *Map) GetMany(keys ...string) ([]string, error)\n```\n\nGetMany is the same as calling Get on each item of keys. It will only acquire the underlying endpoint map once, so is preferred to calling Get for each key which will acquire the endpoint map for each call. The benefit is it is faster (O(1) mutex acquires vs O(n)) and consistent (endpoint map is immutable vs may change between Get calls). \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/endpoint#Map.Endpoints",
-                    "documentation": {
-                      "identifier": "Map.Endpoints",
-                      "newPage": false,
-                      "searchKey": "endpoint.Map.Endpoints",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *Map) Endpoints() (map[string]struct{}, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *Map) Endpoints() (map[string]struct{}, error)\n```\n\nEndpoints returns a set of all addresses. Do not modify the returned value. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/endpoint#Map.getUrls",
-                    "documentation": {
-                      "identifier": "Map.getUrls",
-                      "newPage": false,
-                      "searchKey": "endpoint.Map.getUrls",
+                      "searchKey": "endpoint.hashMap.isEmpty",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (m *Map) getUrls() (*hashMap, error)"
+                      "value": "func (m *hashMap) isEmpty() bool"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (m *Map) getUrls() (*hashMap, error)\n```\n\n"
+                      "value": "```Go\nfunc (m *hashMap) isEmpty() bool\n```\n\nReturns true if there are no items available. \n\n"
                     },
                     "children": null
                   }
@@ -450,6 +480,7 @@
                 "newPage": false,
                 "searchKey": "endpoint.k8sURL",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -470,6 +501,7 @@
                       "newPage": false,
                       "searchKey": "endpoint.parseURL",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -492,6 +524,7 @@
                       "newPage": false,
                       "searchKey": "endpoint.k8sURL.endpointURL",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -520,6 +553,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -534,66 +568,72 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/endpoint#inform",
+              "pathID": "/internal/endpoint#TestEndpoints",
               "documentation": {
-                "identifier": "inform",
+                "identifier": "TestEndpoints",
                 "newPage": false,
-                "searchKey": "endpoint.inform",
+                "searchKey": "endpoint.TestEndpoints",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func inform(client v1.EndpointsInterface, m *Map, u *k8sURL) error"
+                "value": "func TestEndpoints(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc inform(client v1.EndpointsInterface, m *Map, u *k8sURL) error\n```\n\n"
+                "value": "```Go\nfunc TestEndpoints(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/endpoint#namespace",
+              "pathID": "/internal/endpoint#TestExclude",
               "documentation": {
-                "identifier": "namespace",
+                "identifier": "TestExclude",
                 "newPage": false,
-                "searchKey": "endpoint.namespace",
+                "searchKey": "endpoint.TestExclude",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func namespace() string"
+                "value": "func TestExclude(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc namespace() string\n```\n\nnamespace returns the namespace the pod is currently running in this is done because the k8s client we previously used set the namespace when the client was created, the official k8s client does not \n\n"
+                "value": "```Go\nfunc TestExclude(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/endpoint#loadClient",
+              "pathID": "/internal/endpoint#TestK8sURL",
               "documentation": {
-                "identifier": "loadClient",
+                "identifier": "TestK8sURL",
                 "newPage": false,
-                "searchKey": "endpoint.loadClient",
+                "searchKey": "endpoint.TestK8sURL",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func loadClient() (client *kubernetes.Clientset, ns string, err error)"
+                "value": "func TestK8sURL(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc loadClient() (client *kubernetes.Clientset, ns string, err error)\n```\n\n"
+                "value": "```Go\nfunc TestK8sURL(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -606,7 +646,9 @@
                 "newPage": false,
                 "searchKey": "endpoint.TestNew",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -628,7 +670,9 @@
                 "newPage": false,
                 "searchKey": "endpoint.TestStatic",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -644,34 +688,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/endpoint#TestExclude",
-              "documentation": {
-                "identifier": "TestExclude",
-                "newPage": false,
-                "searchKey": "endpoint.TestExclude",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestExclude(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestExclude(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/endpoint#expectEndpoints",
               "documentation": {
                 "identifier": "expectEndpoints",
                 "newPage": false,
                 "searchKey": "endpoint.expectEndpoints",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -688,44 +711,69 @@
           },
           {
             "node": {
-              "pathID": "/internal/endpoint#TestEndpoints",
+              "pathID": "/internal/endpoint#inform",
               "documentation": {
-                "identifier": "TestEndpoints",
+                "identifier": "inform",
                 "newPage": false,
-                "searchKey": "endpoint.TestEndpoints",
+                "searchKey": "endpoint.inform",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestEndpoints(t *testing.T)"
+                "value": "func inform(client v1.EndpointsInterface, m *Map, u *k8sURL) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestEndpoints(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc inform(client v1.EndpointsInterface, m *Map, u *k8sURL) error\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/endpoint#TestK8sURL",
+              "pathID": "/internal/endpoint#loadClient",
               "documentation": {
-                "identifier": "TestK8sURL",
+                "identifier": "loadClient",
                 "newPage": false,
-                "searchKey": "endpoint.TestK8sURL",
+                "searchKey": "endpoint.loadClient",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestK8sURL(t *testing.T)"
+                "value": "func loadClient() (client *kubernetes.Clientset, ns string, err error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestK8sURL(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc loadClient() (client *kubernetes.Clientset, ns string, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/endpoint#namespace",
+              "documentation": {
+                "identifier": "namespace",
+                "newPage": false,
+                "searchKey": "endpoint.namespace",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func namespace() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc namespace() string\n```\n\nnamespace returns the namespace the pod is currently running in this is done because the k8s client we previously used set the namespace when the client was created, the official k8s client does not \n\n"
               },
               "children": null
             }

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "go/printer_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,13 +41,38 @@
         "children": [
           {
             "node": {
+              "pathID": "/go/printer_test#ExampleFprint",
+              "documentation": {
+                "identifier": "ExampleFprint",
+                "newPage": false,
+                "searchKey": "printer_test.ExampleFprint",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleFprint()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleFprint()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/go/printer_test#Test",
               "documentation": {
                 "identifier": "Test",
                 "newPage": false,
                 "searchKey": "printer_test.Test",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -67,6 +94,7 @@
                 "newPage": false,
                 "searchKey": "printer_test.parseFunc",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -77,28 +105,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc parseFunc(filename, functionname string) (fun *ast.FuncDecl, fset *token.FileSet)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/printer_test#ExampleFprint",
-              "documentation": {
-                "identifier": "ExampleFprint",
-                "newPage": false,
-                "searchKey": "printer_test.ExampleFprint",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleFprint()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleFprint()\n```\n\n"
               },
               "children": null
             }

@@ -4,7 +4,9 @@
     "identifier": "cmplx",
     "newPage": true,
     "searchKey": "math/cmplx",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,56 +39,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/math/cmplx#vc26",
-              "documentation": {
-                "identifier": "vc26",
-                "newPage": false,
-                "searchKey": "cmplx.vc26",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var vc26"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar vc26 = ...\n```\n\nThe higher-precision values in vc26 were used to derive the input arguments vc (see also comment below). For reference only (do not delete). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#vc",
-              "documentation": {
-                "identifier": "vc",
-                "newPage": false,
-                "searchKey": "cmplx.vc",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var vc"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar vc = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/math/cmplx#abs",
               "documentation": {
                 "identifier": "abs",
                 "newPage": false,
                 "searchKey": "cmplx.abs",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -101,12 +64,40 @@
           },
           {
             "node": {
+              "pathID": "/math/cmplx#absSC",
+              "documentation": {
+                "identifier": "absSC",
+                "newPage": false,
+                "searchKey": "cmplx.absSC",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var absSC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar absSC = []float64{\n\tmath.NaN(),\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/cmplx#acos",
               "documentation": {
                 "identifier": "acos",
                 "newPage": false,
                 "searchKey": "cmplx.acos",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -123,12 +114,40 @@
           },
           {
             "node": {
+              "pathID": "/math/cmplx#acosSC",
+              "documentation": {
+                "identifier": "acosSC",
+                "newPage": false,
+                "searchKey": "cmplx.acosSC",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var acosSC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar acosSC = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/cmplx#acosh",
               "documentation": {
                 "identifier": "acosh",
                 "newPage": false,
                 "searchKey": "cmplx.acosh",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -145,12 +164,40 @@
           },
           {
             "node": {
+              "pathID": "/math/cmplx#acoshSC",
+              "documentation": {
+                "identifier": "acoshSC",
+                "newPage": false,
+                "searchKey": "cmplx.acoshSC",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var acoshSC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar acoshSC = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/cmplx#asin",
               "documentation": {
                 "identifier": "asin",
                 "newPage": false,
                 "searchKey": "cmplx.asin",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -167,12 +214,40 @@
           },
           {
             "node": {
+              "pathID": "/math/cmplx#asinSC",
+              "documentation": {
+                "identifier": "asinSC",
+                "newPage": false,
+                "searchKey": "cmplx.asinSC",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var asinSC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar asinSC = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/cmplx#asinh",
               "documentation": {
                 "identifier": "asinh",
                 "newPage": false,
                 "searchKey": "cmplx.asinh",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -189,12 +264,40 @@
           },
           {
             "node": {
+              "pathID": "/math/cmplx#asinhSC",
+              "documentation": {
+                "identifier": "asinhSC",
+                "newPage": false,
+                "searchKey": "cmplx.asinhSC",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var asinhSC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar asinhSC = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/cmplx#atan",
               "documentation": {
                 "identifier": "atan",
                 "newPage": false,
                 "searchKey": "cmplx.atan",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -211,12 +314,40 @@
           },
           {
             "node": {
+              "pathID": "/math/cmplx#atanSC",
+              "documentation": {
+                "identifier": "atanSC",
+                "newPage": false,
+                "searchKey": "cmplx.atanSC",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var atanSC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar atanSC = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/cmplx#atanh",
               "documentation": {
                 "identifier": "atanh",
                 "newPage": false,
                 "searchKey": "cmplx.atanh",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -233,12 +364,66 @@
           },
           {
             "node": {
+              "pathID": "/math/cmplx#atanhSC",
+              "documentation": {
+                "identifier": "atanhSC",
+                "newPage": false,
+                "searchKey": "cmplx.atanhSC",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var atanhSC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar atanhSC = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#branchPoints",
+              "documentation": {
+                "identifier": "branchPoints",
+                "newPage": false,
+                "searchKey": "cmplx.branchPoints",
+                "tags": [
+                  "variable",
+                  "array",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var branchPoints"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar branchPoints = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/cmplx#conj",
               "documentation": {
                 "identifier": "conj",
                 "newPage": false,
                 "searchKey": "cmplx.conj",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -255,12 +440,40 @@
           },
           {
             "node": {
+              "pathID": "/math/cmplx#conjSC",
+              "documentation": {
+                "identifier": "conjSC",
+                "newPage": false,
+                "searchKey": "cmplx.conjSC",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var conjSC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar conjSC = []complex128{\n\tNaN(),\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/cmplx#cos",
               "documentation": {
                 "identifier": "cos",
                 "newPage": false,
                 "searchKey": "cmplx.cos",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -277,12 +490,40 @@
           },
           {
             "node": {
+              "pathID": "/math/cmplx#cosSC",
+              "documentation": {
+                "identifier": "cosSC",
+                "newPage": false,
+                "searchKey": "cmplx.cosSC",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var cosSC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar cosSC = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/cmplx#cosh",
               "documentation": {
                 "identifier": "cosh",
                 "newPage": false,
                 "searchKey": "cmplx.cosh",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -299,12 +540,64 @@
           },
           {
             "node": {
+              "pathID": "/math/cmplx#coshSC",
+              "documentation": {
+                "identifier": "coshSC",
+                "newPage": false,
+                "searchKey": "cmplx.coshSC",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var coshSC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar coshSC = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#eps",
+              "documentation": {
+                "identifier": "eps",
+                "newPage": false,
+                "searchKey": "cmplx.eps",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var eps"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar eps = 1.0 / (1 << 53)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/cmplx#exp",
               "documentation": {
                 "identifier": "exp",
                 "newPage": false,
                 "searchKey": "cmplx.exp",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -321,12 +614,114 @@
           },
           {
             "node": {
+              "pathID": "/math/cmplx#expSC",
+              "documentation": {
+                "identifier": "expSC",
+                "newPage": false,
+                "searchKey": "cmplx.expSC",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var expSC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar expSC = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#hugeIn",
+              "documentation": {
+                "identifier": "hugeIn",
+                "newPage": false,
+                "searchKey": "cmplx.hugeIn",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var hugeIn"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar hugeIn = ...\n```\n\nhuge values along the real axis for testing reducePi in Tan \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#inf",
+              "documentation": {
+                "identifier": "inf",
+                "newPage": false,
+                "searchKey": "cmplx.inf",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var inf"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar inf, nan = math.Inf(1), math.NaN()\n```\n\nspecial cases conform to C99 standard appendix G.6 Complex arithmetic \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#isNaNSC",
+              "documentation": {
+                "identifier": "isNaNSC",
+                "newPage": false,
+                "searchKey": "cmplx.isNaNSC",
+                "tags": [
+                  "variable",
+                  "array",
+                  "boolean",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var isNaNSC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar isNaNSC = []bool{\n\tfalse,\n\tfalse,\n\tfalse,\n\ttrue,\n\ttrue,\n\tfalse,\n\tfalse,\n\tfalse,\n\ttrue,\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/cmplx#log",
               "documentation": {
                 "identifier": "log",
                 "newPage": false,
                 "searchKey": "cmplx.log",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -349,6 +744,9 @@
                 "newPage": false,
                 "searchKey": "cmplx.log10",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -365,606 +763,15 @@
           },
           {
             "node": {
-              "pathID": "/math/cmplx#polar",
-              "documentation": {
-                "identifier": "polar",
-                "newPage": false,
-                "searchKey": "cmplx.polar",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var polar"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar polar = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#pow",
-              "documentation": {
-                "identifier": "pow",
-                "newPage": false,
-                "searchKey": "cmplx.pow",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var pow"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar pow = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#sin",
-              "documentation": {
-                "identifier": "sin",
-                "newPage": false,
-                "searchKey": "cmplx.sin",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var sin"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar sin = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#sinh",
-              "documentation": {
-                "identifier": "sinh",
-                "newPage": false,
-                "searchKey": "cmplx.sinh",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var sinh"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar sinh = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#sqrt",
-              "documentation": {
-                "identifier": "sqrt",
-                "newPage": false,
-                "searchKey": "cmplx.sqrt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var sqrt"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar sqrt = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#tan",
-              "documentation": {
-                "identifier": "tan",
-                "newPage": false,
-                "searchKey": "cmplx.tan",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var tan"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar tan = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#tanh",
-              "documentation": {
-                "identifier": "tanh",
-                "newPage": false,
-                "searchKey": "cmplx.tanh",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var tanh"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar tanh = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#hugeIn",
-              "documentation": {
-                "identifier": "hugeIn",
-                "newPage": false,
-                "searchKey": "cmplx.hugeIn",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var hugeIn"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar hugeIn = ...\n```\n\nhuge values along the real axis for testing reducePi in Tan \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#tanHuge",
-              "documentation": {
-                "identifier": "tanHuge",
-                "newPage": false,
-                "searchKey": "cmplx.tanHuge",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var tanHuge"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar tanHuge = ...\n```\n\nResults for tanHuge[i] calculated with [https://github.com/robpike/ivy](https://github.com/robpike/ivy) using 4096 bits of working precision. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#inf",
-              "documentation": {
-                "identifier": "inf",
-                "newPage": false,
-                "searchKey": "cmplx.inf",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var inf"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar inf, nan = math.Inf(1), math.NaN()\n```\n\nspecial cases conform to C99 standard appendix G.6 Complex arithmetic \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#nan",
-              "documentation": {
-                "identifier": "nan",
-                "newPage": false,
-                "searchKey": "cmplx.nan",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var nan"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar inf, nan = math.Inf(1), math.NaN()\n```\n\nspecial cases conform to C99 standard appendix G.6 Complex arithmetic \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#vcAbsSC",
-              "documentation": {
-                "identifier": "vcAbsSC",
-                "newPage": false,
-                "searchKey": "cmplx.vcAbsSC",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var vcAbsSC"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar vcAbsSC = []complex128{\n\tNaN(),\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#absSC",
-              "documentation": {
-                "identifier": "absSC",
-                "newPage": false,
-                "searchKey": "cmplx.absSC",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var absSC"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar absSC = []float64{\n\tmath.NaN(),\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#acosSC",
-              "documentation": {
-                "identifier": "acosSC",
-                "newPage": false,
-                "searchKey": "cmplx.acosSC",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var acosSC"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar acosSC = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#acoshSC",
-              "documentation": {
-                "identifier": "acoshSC",
-                "newPage": false,
-                "searchKey": "cmplx.acoshSC",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var acoshSC"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar acoshSC = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#asinSC",
-              "documentation": {
-                "identifier": "asinSC",
-                "newPage": false,
-                "searchKey": "cmplx.asinSC",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var asinSC"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar asinSC = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#asinhSC",
-              "documentation": {
-                "identifier": "asinhSC",
-                "newPage": false,
-                "searchKey": "cmplx.asinhSC",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var asinhSC"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar asinhSC = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#atanSC",
-              "documentation": {
-                "identifier": "atanSC",
-                "newPage": false,
-                "searchKey": "cmplx.atanSC",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var atanSC"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar atanSC = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#atanhSC",
-              "documentation": {
-                "identifier": "atanhSC",
-                "newPage": false,
-                "searchKey": "cmplx.atanhSC",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var atanhSC"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar atanhSC = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#vcConjSC",
-              "documentation": {
-                "identifier": "vcConjSC",
-                "newPage": false,
-                "searchKey": "cmplx.vcConjSC",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var vcConjSC"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar vcConjSC = []complex128{\n\tNaN(),\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#conjSC",
-              "documentation": {
-                "identifier": "conjSC",
-                "newPage": false,
-                "searchKey": "cmplx.conjSC",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var conjSC"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar conjSC = []complex128{\n\tNaN(),\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#cosSC",
-              "documentation": {
-                "identifier": "cosSC",
-                "newPage": false,
-                "searchKey": "cmplx.cosSC",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var cosSC"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar cosSC = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#coshSC",
-              "documentation": {
-                "identifier": "coshSC",
-                "newPage": false,
-                "searchKey": "cmplx.coshSC",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var coshSC"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar coshSC = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#expSC",
-              "documentation": {
-                "identifier": "expSC",
-                "newPage": false,
-                "searchKey": "cmplx.expSC",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var expSC"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar expSC = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#vcIsNaNSC",
-              "documentation": {
-                "identifier": "vcIsNaNSC",
-                "newPage": false,
-                "searchKey": "cmplx.vcIsNaNSC",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var vcIsNaNSC"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar vcIsNaNSC = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#isNaNSC",
-              "documentation": {
-                "identifier": "isNaNSC",
-                "newPage": false,
-                "searchKey": "cmplx.isNaNSC",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var isNaNSC"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar isNaNSC = []bool{\n\tfalse,\n\tfalse,\n\tfalse,\n\ttrue,\n\ttrue,\n\tfalse,\n\tfalse,\n\tfalse,\n\ttrue,\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#logSC",
-              "documentation": {
-                "identifier": "logSC",
-                "newPage": false,
-                "searchKey": "cmplx.logSC",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var logSC"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar logSC = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/math/cmplx#log10SC",
               "documentation": {
                 "identifier": "log10SC",
                 "newPage": false,
                 "searchKey": "cmplx.log10SC",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -981,22 +788,74 @@
           },
           {
             "node": {
-              "pathID": "/math/cmplx#vcPolarSC",
+              "pathID": "/math/cmplx#logSC",
               "documentation": {
-                "identifier": "vcPolarSC",
+                "identifier": "logSC",
                 "newPage": false,
-                "searchKey": "cmplx.vcPolarSC",
+                "searchKey": "cmplx.logSC",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var vcPolarSC"
+                "value": "var logSC"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar vcPolarSC = []complex128{\n\tNaN(),\n}\n```\n\n"
+                "value": "```Go\nvar logSC = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#nan",
+              "documentation": {
+                "identifier": "nan",
+                "newPage": false,
+                "searchKey": "cmplx.nan",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var nan"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar inf, nan = math.Inf(1), math.NaN()\n```\n\nspecial cases conform to C99 standard appendix G.6 Complex arithmetic \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#polar",
+              "documentation": {
+                "identifier": "polar",
+                "newPage": false,
+                "searchKey": "cmplx.polar",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var polar"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar polar = ...\n```\n\n"
               },
               "children": null
             }
@@ -1009,6 +868,9 @@
                 "newPage": false,
                 "searchKey": "cmplx.polarSC",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -1025,22 +887,25 @@
           },
           {
             "node": {
-              "pathID": "/math/cmplx#vcPowSC",
+              "pathID": "/math/cmplx#pow",
               "documentation": {
-                "identifier": "vcPowSC",
+                "identifier": "pow",
                 "newPage": false,
-                "searchKey": "cmplx.vcPowSC",
+                "searchKey": "cmplx.pow",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var vcPowSC"
+                "value": "var pow"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar vcPowSC = [][2]complex128{\n\t{NaN(), NaN()},\n\t{0, NaN()},\n}\n```\n\n"
+                "value": "```Go\nvar pow = ...\n```\n\n"
               },
               "children": null
             }
@@ -1053,6 +918,9 @@
                 "newPage": false,
                 "searchKey": "cmplx.powSC",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -1069,12 +937,40 @@
           },
           {
             "node": {
+              "pathID": "/math/cmplx#sin",
+              "documentation": {
+                "identifier": "sin",
+                "newPage": false,
+                "searchKey": "cmplx.sin",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sin"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sin = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/cmplx#sinSC",
               "documentation": {
                 "identifier": "sinSC",
                 "newPage": false,
                 "searchKey": "cmplx.sinSC",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -1091,12 +987,40 @@
           },
           {
             "node": {
+              "pathID": "/math/cmplx#sinh",
+              "documentation": {
+                "identifier": "sinh",
+                "newPage": false,
+                "searchKey": "cmplx.sinh",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sinh"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sinh = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/cmplx#sinhSC",
               "documentation": {
                 "identifier": "sinhSC",
                 "newPage": false,
                 "searchKey": "cmplx.sinhSC",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -1113,12 +1037,40 @@
           },
           {
             "node": {
+              "pathID": "/math/cmplx#sqrt",
+              "documentation": {
+                "identifier": "sqrt",
+                "newPage": false,
+                "searchKey": "cmplx.sqrt",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sqrt"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sqrt = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/cmplx#sqrtSC",
               "documentation": {
                 "identifier": "sqrtSC",
                 "newPage": false,
                 "searchKey": "cmplx.sqrtSC",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -1135,12 +1087,65 @@
           },
           {
             "node": {
+              "pathID": "/math/cmplx#tan",
+              "documentation": {
+                "identifier": "tan",
+                "newPage": false,
+                "searchKey": "cmplx.tan",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var tan"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar tan = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#tanHuge",
+              "documentation": {
+                "identifier": "tanHuge",
+                "newPage": false,
+                "searchKey": "cmplx.tanHuge",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var tanHuge"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar tanHuge = ...\n```\n\nResults for tanHuge[i] calculated with [https://github.com/robpike/ivy](https://github.com/robpike/ivy) using 4096 bits of working precision. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/cmplx#tanSC",
               "documentation": {
                 "identifier": "tanSC",
                 "newPage": false,
                 "searchKey": "cmplx.tanSC",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -1157,12 +1162,40 @@
           },
           {
             "node": {
+              "pathID": "/math/cmplx#tanh",
+              "documentation": {
+                "identifier": "tanh",
+                "newPage": false,
+                "searchKey": "cmplx.tanh",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var tanh"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar tanh = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/cmplx#tanhSC",
               "documentation": {
                 "identifier": "tanhSC",
                 "newPage": false,
                 "searchKey": "cmplx.tanhSC",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -1179,12 +1212,190 @@
           },
           {
             "node": {
+              "pathID": "/math/cmplx#vc",
+              "documentation": {
+                "identifier": "vc",
+                "newPage": false,
+                "searchKey": "cmplx.vc",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var vc"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar vc = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#vc26",
+              "documentation": {
+                "identifier": "vc26",
+                "newPage": false,
+                "searchKey": "cmplx.vc26",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var vc26"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar vc26 = ...\n```\n\nThe higher-precision values in vc26 were used to derive the input arguments vc (see also comment below). For reference only (do not delete). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#vcAbsSC",
+              "documentation": {
+                "identifier": "vcAbsSC",
+                "newPage": false,
+                "searchKey": "cmplx.vcAbsSC",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var vcAbsSC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar vcAbsSC = []complex128{\n\tNaN(),\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#vcConjSC",
+              "documentation": {
+                "identifier": "vcConjSC",
+                "newPage": false,
+                "searchKey": "cmplx.vcConjSC",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var vcConjSC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar vcConjSC = []complex128{\n\tNaN(),\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#vcIsNaNSC",
+              "documentation": {
+                "identifier": "vcIsNaNSC",
+                "newPage": false,
+                "searchKey": "cmplx.vcIsNaNSC",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var vcIsNaNSC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar vcIsNaNSC = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#vcPolarSC",
+              "documentation": {
+                "identifier": "vcPolarSC",
+                "newPage": false,
+                "searchKey": "cmplx.vcPolarSC",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var vcPolarSC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar vcPolarSC = []complex128{\n\tNaN(),\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#vcPowSC",
+              "documentation": {
+                "identifier": "vcPowSC",
+                "newPage": false,
+                "searchKey": "cmplx.vcPowSC",
+                "tags": [
+                  "variable",
+                  "array",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var vcPowSC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar vcPowSC = [][2]complex128{\n\t{NaN(), NaN()},\n\t{0, NaN()},\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/cmplx#zero",
               "documentation": {
                 "identifier": "zero",
                 "newPage": false,
                 "searchKey": "cmplx.zero",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -1195,50 +1406,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar zero = 0.0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#eps",
-              "documentation": {
-                "identifier": "eps",
-                "newPage": false,
-                "searchKey": "cmplx.eps",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var eps"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar eps = 1.0 / (1 << 53)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#branchPoints",
-              "documentation": {
-                "identifier": "branchPoints",
-                "newPage": false,
-                "searchKey": "cmplx.branchPoints",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var branchPoints"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar branchPoints = ...\n```\n\n"
               },
               "children": null
             }
@@ -1253,7 +1420,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1272,6 +1441,7 @@
                 "newPage": false,
                 "searchKey": "cmplx.ff",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1296,7 +1466,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1314,7 +1486,9 @@
                 "identifier": "Abs",
                 "newPage": false,
                 "searchKey": "cmplx.Abs",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1329,52 +1503,14 @@
           },
           {
             "node": {
-              "pathID": "/math/cmplx#Asin",
-              "documentation": {
-                "identifier": "Asin",
-                "newPage": false,
-                "searchKey": "cmplx.Asin",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Asin(x complex128) complex128"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Asin(x complex128) complex128\n```\n\nAsin returns the inverse sine of x. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#Asinh",
-              "documentation": {
-                "identifier": "Asinh",
-                "newPage": false,
-                "searchKey": "cmplx.Asinh",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Asinh(x complex128) complex128"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Asinh(x complex128) complex128\n```\n\nAsinh returns the inverse hyperbolic sine of x. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/math/cmplx#Acos",
               "documentation": {
                 "identifier": "Acos",
                 "newPage": false,
                 "searchKey": "cmplx.Acos",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1394,7 +1530,9 @@
                 "identifier": "Acosh",
                 "newPage": false,
                 "searchKey": "cmplx.Acosh",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1409,12 +1547,58 @@
           },
           {
             "node": {
+              "pathID": "/math/cmplx#Asin",
+              "documentation": {
+                "identifier": "Asin",
+                "newPage": false,
+                "searchKey": "cmplx.Asin",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Asin(x complex128) complex128"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Asin(x complex128) complex128\n```\n\nAsin returns the inverse sine of x. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#Asinh",
+              "documentation": {
+                "identifier": "Asinh",
+                "newPage": false,
+                "searchKey": "cmplx.Asinh",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Asinh(x complex128) complex128"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Asinh(x complex128) complex128\n```\n\nAsinh returns the inverse hyperbolic sine of x. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/cmplx#Atan",
               "documentation": {
                 "identifier": "Atan",
                 "newPage": false,
                 "searchKey": "cmplx.Atan",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1434,7 +1618,9 @@
                 "identifier": "Atanh",
                 "newPage": false,
                 "searchKey": "cmplx.Atanh",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1449,12 +1635,542 @@
           },
           {
             "node": {
+              "pathID": "/math/cmplx#BenchmarkAbs",
+              "documentation": {
+                "identifier": "BenchmarkAbs",
+                "newPage": false,
+                "searchKey": "cmplx.BenchmarkAbs",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkAbs(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkAbs(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#BenchmarkAcos",
+              "documentation": {
+                "identifier": "BenchmarkAcos",
+                "newPage": false,
+                "searchKey": "cmplx.BenchmarkAcos",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkAcos(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkAcos(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#BenchmarkAcosh",
+              "documentation": {
+                "identifier": "BenchmarkAcosh",
+                "newPage": false,
+                "searchKey": "cmplx.BenchmarkAcosh",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkAcosh(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkAcosh(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#BenchmarkAsin",
+              "documentation": {
+                "identifier": "BenchmarkAsin",
+                "newPage": false,
+                "searchKey": "cmplx.BenchmarkAsin",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkAsin(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkAsin(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#BenchmarkAsinh",
+              "documentation": {
+                "identifier": "BenchmarkAsinh",
+                "newPage": false,
+                "searchKey": "cmplx.BenchmarkAsinh",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkAsinh(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkAsinh(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#BenchmarkAtan",
+              "documentation": {
+                "identifier": "BenchmarkAtan",
+                "newPage": false,
+                "searchKey": "cmplx.BenchmarkAtan",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkAtan(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkAtan(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#BenchmarkAtanh",
+              "documentation": {
+                "identifier": "BenchmarkAtanh",
+                "newPage": false,
+                "searchKey": "cmplx.BenchmarkAtanh",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkAtanh(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkAtanh(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#BenchmarkConj",
+              "documentation": {
+                "identifier": "BenchmarkConj",
+                "newPage": false,
+                "searchKey": "cmplx.BenchmarkConj",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkConj(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkConj(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#BenchmarkCos",
+              "documentation": {
+                "identifier": "BenchmarkCos",
+                "newPage": false,
+                "searchKey": "cmplx.BenchmarkCos",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkCos(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkCos(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#BenchmarkCosh",
+              "documentation": {
+                "identifier": "BenchmarkCosh",
+                "newPage": false,
+                "searchKey": "cmplx.BenchmarkCosh",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkCosh(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkCosh(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#BenchmarkExp",
+              "documentation": {
+                "identifier": "BenchmarkExp",
+                "newPage": false,
+                "searchKey": "cmplx.BenchmarkExp",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkExp(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkExp(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#BenchmarkLog",
+              "documentation": {
+                "identifier": "BenchmarkLog",
+                "newPage": false,
+                "searchKey": "cmplx.BenchmarkLog",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkLog(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkLog(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#BenchmarkLog10",
+              "documentation": {
+                "identifier": "BenchmarkLog10",
+                "newPage": false,
+                "searchKey": "cmplx.BenchmarkLog10",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkLog10(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkLog10(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#BenchmarkPhase",
+              "documentation": {
+                "identifier": "BenchmarkPhase",
+                "newPage": false,
+                "searchKey": "cmplx.BenchmarkPhase",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkPhase(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkPhase(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#BenchmarkPolar",
+              "documentation": {
+                "identifier": "BenchmarkPolar",
+                "newPage": false,
+                "searchKey": "cmplx.BenchmarkPolar",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkPolar(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkPolar(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#BenchmarkPow",
+              "documentation": {
+                "identifier": "BenchmarkPow",
+                "newPage": false,
+                "searchKey": "cmplx.BenchmarkPow",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkPow(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkPow(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#BenchmarkRect",
+              "documentation": {
+                "identifier": "BenchmarkRect",
+                "newPage": false,
+                "searchKey": "cmplx.BenchmarkRect",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkRect(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkRect(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#BenchmarkSin",
+              "documentation": {
+                "identifier": "BenchmarkSin",
+                "newPage": false,
+                "searchKey": "cmplx.BenchmarkSin",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSin(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSin(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#BenchmarkSinh",
+              "documentation": {
+                "identifier": "BenchmarkSinh",
+                "newPage": false,
+                "searchKey": "cmplx.BenchmarkSinh",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSinh(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSinh(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#BenchmarkSqrt",
+              "documentation": {
+                "identifier": "BenchmarkSqrt",
+                "newPage": false,
+                "searchKey": "cmplx.BenchmarkSqrt",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSqrt(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSqrt(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#BenchmarkTan",
+              "documentation": {
+                "identifier": "BenchmarkTan",
+                "newPage": false,
+                "searchKey": "cmplx.BenchmarkTan",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkTan(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkTan(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#BenchmarkTanh",
+              "documentation": {
+                "identifier": "BenchmarkTanh",
+                "newPage": false,
+                "searchKey": "cmplx.BenchmarkTanh",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkTanh(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkTanh(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/cmplx#Conj",
               "documentation": {
                 "identifier": "Conj",
                 "newPage": false,
                 "searchKey": "cmplx.Conj",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1469,272 +2185,14 @@
           },
           {
             "node": {
-              "pathID": "/math/cmplx#Exp",
-              "documentation": {
-                "identifier": "Exp",
-                "newPage": false,
-                "searchKey": "cmplx.Exp",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Exp(x complex128) complex128"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Exp(x complex128) complex128\n```\n\nExp returns e**x, the base-e exponential of x. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#IsInf",
-              "documentation": {
-                "identifier": "IsInf",
-                "newPage": false,
-                "searchKey": "cmplx.IsInf",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IsInf(x complex128) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IsInf(x complex128) bool\n```\n\nIsInf reports whether either real(x) or imag(x) is an infinity. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#Inf",
-              "documentation": {
-                "identifier": "Inf",
-                "newPage": false,
-                "searchKey": "cmplx.Inf",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Inf() complex128"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Inf() complex128\n```\n\nInf returns a complex infinity, complex(+Inf, +Inf). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#IsNaN",
-              "documentation": {
-                "identifier": "IsNaN",
-                "newPage": false,
-                "searchKey": "cmplx.IsNaN",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IsNaN(x complex128) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IsNaN(x complex128) bool\n```\n\nIsNaN reports whether either real(x) or imag(x) is NaN and neither is an infinity. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#NaN",
-              "documentation": {
-                "identifier": "NaN",
-                "newPage": false,
-                "searchKey": "cmplx.NaN",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func NaN() complex128"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc NaN() complex128\n```\n\nNaN returns a complex `not-a-number' value. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#Log",
-              "documentation": {
-                "identifier": "Log",
-                "newPage": false,
-                "searchKey": "cmplx.Log",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Log(x complex128) complex128"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Log(x complex128) complex128\n```\n\nLog returns the natural logarithm of x. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#Log10",
-              "documentation": {
-                "identifier": "Log10",
-                "newPage": false,
-                "searchKey": "cmplx.Log10",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Log10(x complex128) complex128"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Log10(x complex128) complex128\n```\n\nLog10 returns the decimal logarithm of x. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#Phase",
-              "documentation": {
-                "identifier": "Phase",
-                "newPage": false,
-                "searchKey": "cmplx.Phase",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Phase(x complex128) float64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Phase(x complex128) float64\n```\n\nPhase returns the phase (also called the argument) of x. The returned value is in the range [-Pi, Pi]. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#Polar",
-              "documentation": {
-                "identifier": "Polar",
-                "newPage": false,
-                "searchKey": "cmplx.Polar",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Polar(x complex128) (r, θ float64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Polar(x complex128) (r, θ float64)\n```\n\nPolar returns the absolute value r and phase θ of x, such that x = r * e**θi. The phase is in the range [-Pi, Pi]. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#Pow",
-              "documentation": {
-                "identifier": "Pow",
-                "newPage": false,
-                "searchKey": "cmplx.Pow",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Pow(x, y complex128) complex128"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Pow(x, y complex128) complex128\n```\n\nPow returns x**y, the base-x exponential of y. For generalized compatibility with math.Pow: \n\n```\nPow(0, ±0) returns 1+0i\nPow(0, c) for real(c)<0 returns Inf+0i if imag(c) is zero, otherwise Inf+Inf i.\n\n```\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#Rect",
-              "documentation": {
-                "identifier": "Rect",
-                "newPage": false,
-                "searchKey": "cmplx.Rect",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Rect(r, θ float64) complex128"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Rect(r, θ float64) complex128\n```\n\nRect returns the complex number x with polar coordinates r, θ. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#Sin",
-              "documentation": {
-                "identifier": "Sin",
-                "newPage": false,
-                "searchKey": "cmplx.Sin",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Sin(x complex128) complex128"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Sin(x complex128) complex128\n```\n\nSin returns the sine of x. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#Sinh",
-              "documentation": {
-                "identifier": "Sinh",
-                "newPage": false,
-                "searchKey": "cmplx.Sinh",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Sinh(x complex128) complex128"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Sinh(x complex128) complex128\n```\n\nSinh returns the hyperbolic sine of x. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/math/cmplx#Cos",
               "documentation": {
                 "identifier": "Cos",
                 "newPage": false,
                 "searchKey": "cmplx.Cos",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1754,7 +2212,9 @@
                 "identifier": "Cosh",
                 "newPage": false,
                 "searchKey": "cmplx.Cosh",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1769,22 +2229,308 @@
           },
           {
             "node": {
-              "pathID": "/math/cmplx#sinhcosh",
+              "pathID": "/math/cmplx#Cot",
               "documentation": {
-                "identifier": "sinhcosh",
+                "identifier": "Cot",
                 "newPage": false,
-                "searchKey": "cmplx.sinhcosh",
+                "searchKey": "cmplx.Cot",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func sinhcosh(x float64) (sh, ch float64)"
+                "value": "func Cot(x complex128) complex128"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc sinhcosh(x float64) (sh, ch float64)\n```\n\ncalculate sinh and cosh \n\n"
+                "value": "```Go\nfunc Cot(x complex128) complex128\n```\n\nCot returns the cotangent of x. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#Exp",
+              "documentation": {
+                "identifier": "Exp",
+                "newPage": false,
+                "searchKey": "cmplx.Exp",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Exp(x complex128) complex128"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Exp(x complex128) complex128\n```\n\nExp returns e**x, the base-e exponential of x. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#Inf",
+              "documentation": {
+                "identifier": "Inf",
+                "newPage": false,
+                "searchKey": "cmplx.Inf",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Inf() complex128"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Inf() complex128\n```\n\nInf returns a complex infinity, complex(+Inf, +Inf). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#IsInf",
+              "documentation": {
+                "identifier": "IsInf",
+                "newPage": false,
+                "searchKey": "cmplx.IsInf",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsInf(x complex128) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsInf(x complex128) bool\n```\n\nIsInf reports whether either real(x) or imag(x) is an infinity. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#IsNaN",
+              "documentation": {
+                "identifier": "IsNaN",
+                "newPage": false,
+                "searchKey": "cmplx.IsNaN",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsNaN(x complex128) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsNaN(x complex128) bool\n```\n\nIsNaN reports whether either real(x) or imag(x) is NaN and neither is an infinity. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#Log",
+              "documentation": {
+                "identifier": "Log",
+                "newPage": false,
+                "searchKey": "cmplx.Log",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Log(x complex128) complex128"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Log(x complex128) complex128\n```\n\nLog returns the natural logarithm of x. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#Log10",
+              "documentation": {
+                "identifier": "Log10",
+                "newPage": false,
+                "searchKey": "cmplx.Log10",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Log10(x complex128) complex128"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Log10(x complex128) complex128\n```\n\nLog10 returns the decimal logarithm of x. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#NaN",
+              "documentation": {
+                "identifier": "NaN",
+                "newPage": false,
+                "searchKey": "cmplx.NaN",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NaN() complex128"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NaN() complex128\n```\n\nNaN returns a complex `not-a-number' value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#Phase",
+              "documentation": {
+                "identifier": "Phase",
+                "newPage": false,
+                "searchKey": "cmplx.Phase",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Phase(x complex128) float64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Phase(x complex128) float64\n```\n\nPhase returns the phase (also called the argument) of x. The returned value is in the range [-Pi, Pi]. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#Polar",
+              "documentation": {
+                "identifier": "Polar",
+                "newPage": false,
+                "searchKey": "cmplx.Polar",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Polar(x complex128) (r, θ float64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Polar(x complex128) (r, θ float64)\n```\n\nPolar returns the absolute value r and phase θ of x, such that x = r * e**θi. The phase is in the range [-Pi, Pi]. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#Pow",
+              "documentation": {
+                "identifier": "Pow",
+                "newPage": false,
+                "searchKey": "cmplx.Pow",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Pow(x, y complex128) complex128"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Pow(x, y complex128) complex128\n```\n\nPow returns x**y, the base-x exponential of y. For generalized compatibility with math.Pow: \n\n```\nPow(0, ±0) returns 1+0i\nPow(0, c) for real(c)<0 returns Inf+0i if imag(c) is zero, otherwise Inf+Inf i.\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#Rect",
+              "documentation": {
+                "identifier": "Rect",
+                "newPage": false,
+                "searchKey": "cmplx.Rect",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Rect(r, θ float64) complex128"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Rect(r, θ float64) complex128\n```\n\nRect returns the complex number x with polar coordinates r, θ. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#Sin",
+              "documentation": {
+                "identifier": "Sin",
+                "newPage": false,
+                "searchKey": "cmplx.Sin",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Sin(x complex128) complex128"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Sin(x complex128) complex128\n```\n\nSin returns the sine of x. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#Sinh",
+              "documentation": {
+                "identifier": "Sinh",
+                "newPage": false,
+                "searchKey": "cmplx.Sinh",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Sinh(x complex128) complex128"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Sinh(x complex128) complex128\n```\n\nSinh returns the hyperbolic sine of x. \n\n"
               },
               "children": null
             }
@@ -1796,7 +2542,9 @@
                 "identifier": "Sqrt",
                 "newPage": false,
                 "searchKey": "cmplx.Sqrt",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1816,7 +2564,9 @@
                 "identifier": "Tan",
                 "newPage": false,
                 "searchKey": "cmplx.Tan",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1836,7 +2586,9 @@
                 "identifier": "Tanh",
                 "newPage": false,
                 "searchKey": "cmplx.Tanh",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1851,12 +2603,727 @@
           },
           {
             "node": {
+              "pathID": "/math/cmplx#TestAbs",
+              "documentation": {
+                "identifier": "TestAbs",
+                "newPage": false,
+                "searchKey": "cmplx.TestAbs",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAbs(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAbs(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#TestAcos",
+              "documentation": {
+                "identifier": "TestAcos",
+                "newPage": false,
+                "searchKey": "cmplx.TestAcos",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAcos(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAcos(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#TestAcosh",
+              "documentation": {
+                "identifier": "TestAcosh",
+                "newPage": false,
+                "searchKey": "cmplx.TestAcosh",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAcosh(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAcosh(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#TestAsin",
+              "documentation": {
+                "identifier": "TestAsin",
+                "newPage": false,
+                "searchKey": "cmplx.TestAsin",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAsin(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAsin(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#TestAsinh",
+              "documentation": {
+                "identifier": "TestAsinh",
+                "newPage": false,
+                "searchKey": "cmplx.TestAsinh",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAsinh(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAsinh(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#TestAtan",
+              "documentation": {
+                "identifier": "TestAtan",
+                "newPage": false,
+                "searchKey": "cmplx.TestAtan",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAtan(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAtan(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#TestAtanh",
+              "documentation": {
+                "identifier": "TestAtanh",
+                "newPage": false,
+                "searchKey": "cmplx.TestAtanh",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAtanh(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAtanh(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#TestConj",
+              "documentation": {
+                "identifier": "TestConj",
+                "newPage": false,
+                "searchKey": "cmplx.TestConj",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestConj(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestConj(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#TestCos",
+              "documentation": {
+                "identifier": "TestCos",
+                "newPage": false,
+                "searchKey": "cmplx.TestCos",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCos(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCos(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#TestCosh",
+              "documentation": {
+                "identifier": "TestCosh",
+                "newPage": false,
+                "searchKey": "cmplx.TestCosh",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCosh(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCosh(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#TestExp",
+              "documentation": {
+                "identifier": "TestExp",
+                "newPage": false,
+                "searchKey": "cmplx.TestExp",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExp(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExp(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#TestInfiniteLoopIntanSeries",
+              "documentation": {
+                "identifier": "TestInfiniteLoopIntanSeries",
+                "newPage": false,
+                "searchKey": "cmplx.TestInfiniteLoopIntanSeries",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInfiniteLoopIntanSeries(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInfiniteLoopIntanSeries(t *testing.T)\n```\n\nSee issue 17577 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#TestIsNaN",
+              "documentation": {
+                "identifier": "TestIsNaN",
+                "newPage": false,
+                "searchKey": "cmplx.TestIsNaN",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIsNaN(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIsNaN(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#TestLog",
+              "documentation": {
+                "identifier": "TestLog",
+                "newPage": false,
+                "searchKey": "cmplx.TestLog",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLog(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLog(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#TestLog10",
+              "documentation": {
+                "identifier": "TestLog10",
+                "newPage": false,
+                "searchKey": "cmplx.TestLog10",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLog10(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLog10(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#TestPolar",
+              "documentation": {
+                "identifier": "TestPolar",
+                "newPage": false,
+                "searchKey": "cmplx.TestPolar",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPolar(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPolar(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#TestPow",
+              "documentation": {
+                "identifier": "TestPow",
+                "newPage": false,
+                "searchKey": "cmplx.TestPow",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPow(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPow(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#TestRect",
+              "documentation": {
+                "identifier": "TestRect",
+                "newPage": false,
+                "searchKey": "cmplx.TestRect",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRect(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRect(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#TestSin",
+              "documentation": {
+                "identifier": "TestSin",
+                "newPage": false,
+                "searchKey": "cmplx.TestSin",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSin(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSin(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#TestSinh",
+              "documentation": {
+                "identifier": "TestSinh",
+                "newPage": false,
+                "searchKey": "cmplx.TestSinh",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSinh(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSinh(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#TestSqrt",
+              "documentation": {
+                "identifier": "TestSqrt",
+                "newPage": false,
+                "searchKey": "cmplx.TestSqrt",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSqrt(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSqrt(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#TestTan",
+              "documentation": {
+                "identifier": "TestTan",
+                "newPage": false,
+                "searchKey": "cmplx.TestTan",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTan(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTan(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#TestTanHuge",
+              "documentation": {
+                "identifier": "TestTanHuge",
+                "newPage": false,
+                "searchKey": "cmplx.TestTanHuge",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTanHuge(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTanHuge(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#TestTanh",
+              "documentation": {
+                "identifier": "TestTanh",
+                "newPage": false,
+                "searchKey": "cmplx.TestTanh",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTanh(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTanh(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#alike",
+              "documentation": {
+                "identifier": "alike",
+                "newPage": false,
+                "searchKey": "cmplx.alike",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func alike(a, b float64) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc alike(a, b float64) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#cAlike",
+              "documentation": {
+                "identifier": "cAlike",
+                "newPage": false,
+                "searchKey": "cmplx.cAlike",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func cAlike(a, b complex128) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc cAlike(a, b complex128) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#cSoclose",
+              "documentation": {
+                "identifier": "cSoclose",
+                "newPage": false,
+                "searchKey": "cmplx.cSoclose",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func cSoclose(a, b complex128, e float64) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc cSoclose(a, b complex128, e float64) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#cTolerance",
+              "documentation": {
+                "identifier": "cTolerance",
+                "newPage": false,
+                "searchKey": "cmplx.cTolerance",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func cTolerance(a, b complex128, e float64) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc cTolerance(a, b complex128, e float64) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#cVeryclose",
+              "documentation": {
+                "identifier": "cVeryclose",
+                "newPage": false,
+                "searchKey": "cmplx.cVeryclose",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func cVeryclose(a, b complex128) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc cVeryclose(a, b complex128) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/cmplx#isExact",
+              "documentation": {
+                "identifier": "isExact",
+                "newPage": false,
+                "searchKey": "cmplx.isExact",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isExact(x float64) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isExact(x float64) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/cmplx#reducePi",
               "documentation": {
                 "identifier": "reducePi",
                 "newPage": false,
                 "searchKey": "cmplx.reducePi",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1873,12 +3340,36 @@
           },
           {
             "node": {
+              "pathID": "/math/cmplx#sinhcosh",
+              "documentation": {
+                "identifier": "sinhcosh",
+                "newPage": false,
+                "searchKey": "cmplx.sinhcosh",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sinhcosh(x float64) (sh, ch float64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sinhcosh(x float64) (sh, ch float64)\n```\n\ncalculate sinh and cosh \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/cmplx#tanSeries",
               "documentation": {
                 "identifier": "tanSeries",
                 "newPage": false,
                 "searchKey": "cmplx.tanSeries",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1895,32 +3386,13 @@
           },
           {
             "node": {
-              "pathID": "/math/cmplx#Cot",
-              "documentation": {
-                "identifier": "Cot",
-                "newPage": false,
-                "searchKey": "cmplx.Cot",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Cot(x complex128) complex128"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Cot(x complex128) complex128\n```\n\nCot returns the cotangent of x. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/math/cmplx#tolerance",
               "documentation": {
                 "identifier": "tolerance",
                 "newPage": false,
                 "searchKey": "cmplx.tolerance",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1943,6 +3415,7 @@
                 "newPage": false,
                 "searchKey": "cmplx.veryclose",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1953,1150 +3426,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc veryclose(a, b float64) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#alike",
-              "documentation": {
-                "identifier": "alike",
-                "newPage": false,
-                "searchKey": "cmplx.alike",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func alike(a, b float64) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc alike(a, b float64) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#cTolerance",
-              "documentation": {
-                "identifier": "cTolerance",
-                "newPage": false,
-                "searchKey": "cmplx.cTolerance",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func cTolerance(a, b complex128, e float64) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc cTolerance(a, b complex128, e float64) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#cSoclose",
-              "documentation": {
-                "identifier": "cSoclose",
-                "newPage": false,
-                "searchKey": "cmplx.cSoclose",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func cSoclose(a, b complex128, e float64) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc cSoclose(a, b complex128, e float64) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#cVeryclose",
-              "documentation": {
-                "identifier": "cVeryclose",
-                "newPage": false,
-                "searchKey": "cmplx.cVeryclose",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func cVeryclose(a, b complex128) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc cVeryclose(a, b complex128) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#cAlike",
-              "documentation": {
-                "identifier": "cAlike",
-                "newPage": false,
-                "searchKey": "cmplx.cAlike",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func cAlike(a, b complex128) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc cAlike(a, b complex128) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#isExact",
-              "documentation": {
-                "identifier": "isExact",
-                "newPage": false,
-                "searchKey": "cmplx.isExact",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func isExact(x float64) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc isExact(x float64) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#TestAbs",
-              "documentation": {
-                "identifier": "TestAbs",
-                "newPage": false,
-                "searchKey": "cmplx.TestAbs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAbs(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAbs(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#TestAcos",
-              "documentation": {
-                "identifier": "TestAcos",
-                "newPage": false,
-                "searchKey": "cmplx.TestAcos",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAcos(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAcos(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#TestAcosh",
-              "documentation": {
-                "identifier": "TestAcosh",
-                "newPage": false,
-                "searchKey": "cmplx.TestAcosh",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAcosh(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAcosh(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#TestAsin",
-              "documentation": {
-                "identifier": "TestAsin",
-                "newPage": false,
-                "searchKey": "cmplx.TestAsin",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAsin(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAsin(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#TestAsinh",
-              "documentation": {
-                "identifier": "TestAsinh",
-                "newPage": false,
-                "searchKey": "cmplx.TestAsinh",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAsinh(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAsinh(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#TestAtan",
-              "documentation": {
-                "identifier": "TestAtan",
-                "newPage": false,
-                "searchKey": "cmplx.TestAtan",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAtan(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAtan(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#TestAtanh",
-              "documentation": {
-                "identifier": "TestAtanh",
-                "newPage": false,
-                "searchKey": "cmplx.TestAtanh",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAtanh(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAtanh(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#TestConj",
-              "documentation": {
-                "identifier": "TestConj",
-                "newPage": false,
-                "searchKey": "cmplx.TestConj",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestConj(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestConj(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#TestCos",
-              "documentation": {
-                "identifier": "TestCos",
-                "newPage": false,
-                "searchKey": "cmplx.TestCos",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCos(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCos(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#TestCosh",
-              "documentation": {
-                "identifier": "TestCosh",
-                "newPage": false,
-                "searchKey": "cmplx.TestCosh",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCosh(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCosh(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#TestExp",
-              "documentation": {
-                "identifier": "TestExp",
-                "newPage": false,
-                "searchKey": "cmplx.TestExp",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestExp(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestExp(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#TestIsNaN",
-              "documentation": {
-                "identifier": "TestIsNaN",
-                "newPage": false,
-                "searchKey": "cmplx.TestIsNaN",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIsNaN(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIsNaN(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#TestLog",
-              "documentation": {
-                "identifier": "TestLog",
-                "newPage": false,
-                "searchKey": "cmplx.TestLog",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestLog(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestLog(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#TestLog10",
-              "documentation": {
-                "identifier": "TestLog10",
-                "newPage": false,
-                "searchKey": "cmplx.TestLog10",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestLog10(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestLog10(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#TestPolar",
-              "documentation": {
-                "identifier": "TestPolar",
-                "newPage": false,
-                "searchKey": "cmplx.TestPolar",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestPolar(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestPolar(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#TestPow",
-              "documentation": {
-                "identifier": "TestPow",
-                "newPage": false,
-                "searchKey": "cmplx.TestPow",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestPow(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestPow(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#TestRect",
-              "documentation": {
-                "identifier": "TestRect",
-                "newPage": false,
-                "searchKey": "cmplx.TestRect",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRect(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRect(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#TestSin",
-              "documentation": {
-                "identifier": "TestSin",
-                "newPage": false,
-                "searchKey": "cmplx.TestSin",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSin(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSin(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#TestSinh",
-              "documentation": {
-                "identifier": "TestSinh",
-                "newPage": false,
-                "searchKey": "cmplx.TestSinh",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSinh(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSinh(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#TestSqrt",
-              "documentation": {
-                "identifier": "TestSqrt",
-                "newPage": false,
-                "searchKey": "cmplx.TestSqrt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSqrt(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSqrt(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#TestTan",
-              "documentation": {
-                "identifier": "TestTan",
-                "newPage": false,
-                "searchKey": "cmplx.TestTan",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTan(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTan(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#TestTanh",
-              "documentation": {
-                "identifier": "TestTanh",
-                "newPage": false,
-                "searchKey": "cmplx.TestTanh",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTanh(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTanh(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#TestInfiniteLoopIntanSeries",
-              "documentation": {
-                "identifier": "TestInfiniteLoopIntanSeries",
-                "newPage": false,
-                "searchKey": "cmplx.TestInfiniteLoopIntanSeries",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestInfiniteLoopIntanSeries(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestInfiniteLoopIntanSeries(t *testing.T)\n```\n\nSee issue 17577 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#BenchmarkAbs",
-              "documentation": {
-                "identifier": "BenchmarkAbs",
-                "newPage": false,
-                "searchKey": "cmplx.BenchmarkAbs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkAbs(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkAbs(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#BenchmarkAcos",
-              "documentation": {
-                "identifier": "BenchmarkAcos",
-                "newPage": false,
-                "searchKey": "cmplx.BenchmarkAcos",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkAcos(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkAcos(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#BenchmarkAcosh",
-              "documentation": {
-                "identifier": "BenchmarkAcosh",
-                "newPage": false,
-                "searchKey": "cmplx.BenchmarkAcosh",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkAcosh(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkAcosh(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#BenchmarkAsin",
-              "documentation": {
-                "identifier": "BenchmarkAsin",
-                "newPage": false,
-                "searchKey": "cmplx.BenchmarkAsin",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkAsin(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkAsin(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#BenchmarkAsinh",
-              "documentation": {
-                "identifier": "BenchmarkAsinh",
-                "newPage": false,
-                "searchKey": "cmplx.BenchmarkAsinh",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkAsinh(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkAsinh(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#BenchmarkAtan",
-              "documentation": {
-                "identifier": "BenchmarkAtan",
-                "newPage": false,
-                "searchKey": "cmplx.BenchmarkAtan",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkAtan(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkAtan(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#BenchmarkAtanh",
-              "documentation": {
-                "identifier": "BenchmarkAtanh",
-                "newPage": false,
-                "searchKey": "cmplx.BenchmarkAtanh",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkAtanh(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkAtanh(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#BenchmarkConj",
-              "documentation": {
-                "identifier": "BenchmarkConj",
-                "newPage": false,
-                "searchKey": "cmplx.BenchmarkConj",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkConj(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkConj(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#BenchmarkCos",
-              "documentation": {
-                "identifier": "BenchmarkCos",
-                "newPage": false,
-                "searchKey": "cmplx.BenchmarkCos",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkCos(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkCos(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#BenchmarkCosh",
-              "documentation": {
-                "identifier": "BenchmarkCosh",
-                "newPage": false,
-                "searchKey": "cmplx.BenchmarkCosh",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkCosh(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkCosh(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#BenchmarkExp",
-              "documentation": {
-                "identifier": "BenchmarkExp",
-                "newPage": false,
-                "searchKey": "cmplx.BenchmarkExp",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkExp(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkExp(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#BenchmarkLog",
-              "documentation": {
-                "identifier": "BenchmarkLog",
-                "newPage": false,
-                "searchKey": "cmplx.BenchmarkLog",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkLog(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkLog(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#BenchmarkLog10",
-              "documentation": {
-                "identifier": "BenchmarkLog10",
-                "newPage": false,
-                "searchKey": "cmplx.BenchmarkLog10",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkLog10(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkLog10(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#BenchmarkPhase",
-              "documentation": {
-                "identifier": "BenchmarkPhase",
-                "newPage": false,
-                "searchKey": "cmplx.BenchmarkPhase",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkPhase(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkPhase(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#BenchmarkPolar",
-              "documentation": {
-                "identifier": "BenchmarkPolar",
-                "newPage": false,
-                "searchKey": "cmplx.BenchmarkPolar",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkPolar(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkPolar(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#BenchmarkPow",
-              "documentation": {
-                "identifier": "BenchmarkPow",
-                "newPage": false,
-                "searchKey": "cmplx.BenchmarkPow",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkPow(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkPow(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#BenchmarkRect",
-              "documentation": {
-                "identifier": "BenchmarkRect",
-                "newPage": false,
-                "searchKey": "cmplx.BenchmarkRect",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkRect(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkRect(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#BenchmarkSin",
-              "documentation": {
-                "identifier": "BenchmarkSin",
-                "newPage": false,
-                "searchKey": "cmplx.BenchmarkSin",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkSin(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkSin(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#BenchmarkSinh",
-              "documentation": {
-                "identifier": "BenchmarkSinh",
-                "newPage": false,
-                "searchKey": "cmplx.BenchmarkSinh",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkSinh(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkSinh(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#BenchmarkSqrt",
-              "documentation": {
-                "identifier": "BenchmarkSqrt",
-                "newPage": false,
-                "searchKey": "cmplx.BenchmarkSqrt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkSqrt(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkSqrt(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#BenchmarkTan",
-              "documentation": {
-                "identifier": "BenchmarkTan",
-                "newPage": false,
-                "searchKey": "cmplx.BenchmarkTan",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkTan(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkTan(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#BenchmarkTanh",
-              "documentation": {
-                "identifier": "BenchmarkTanh",
-                "newPage": false,
-                "searchKey": "cmplx.BenchmarkTanh",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkTanh(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkTanh(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/cmplx#TestTanHuge",
-              "documentation": {
-                "identifier": "TestTanHuge",
-                "newPage": false,
-                "searchKey": "cmplx.TestTanHuge",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTanHuge(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTanHuge(t *testing.T)\n```\n\n"
               },
               "children": null
             }

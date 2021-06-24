@@ -10,24 +10,24 @@ Because there can be multiple frontend processes running, these tasks must be id
     * [const recommendedPolicy](#recommendedPolicy)
 * [Functions](#func)
     * [func CheckRedisCacheEvictionPolicy()](#CheckRedisCacheEvictionPolicy)
-    * [func getRunID(c redis.Conn) (string, error)](#getRunID)
     * [func DeleteOldCacheDataInRedis()](#DeleteOldCacheDataInRedis)
     * [func DeleteOldEventLogsInPostgres(ctx context.Context, db dbutil.DB)](#DeleteOldEventLogsInPostgres)
     * [func DeleteOldSecurityEventLogsInPostgres(ctx context.Context, db dbutil.DB)](#DeleteOldSecurityEventLogsInPostgres)
+    * [func getRunID(c redis.Conn) (string, error)](#getRunID)
     * [func init()](#init.db_test.go)
 
 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="recommendedPolicy" href="#recommendedPolicy">const recommendedPolicy</a>
 
 ```
 searchKey: bg.recommendedPolicy
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -37,34 +37,25 @@ const recommendedPolicy = "allkeys-lru"
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="CheckRedisCacheEvictionPolicy" href="#CheckRedisCacheEvictionPolicy">func CheckRedisCacheEvictionPolicy()</a>
 
 ```
 searchKey: bg.CheckRedisCacheEvictionPolicy
+tags: [function]
 ```
 
 ```Go
 func CheckRedisCacheEvictionPolicy()
 ```
 
-### <a id="getRunID" href="#getRunID">func getRunID(c redis.Conn) (string, error)</a>
-
-```
-searchKey: bg.getRunID
-tags: [private]
-```
-
-```Go
-func getRunID(c redis.Conn) (string, error)
-```
-
 ### <a id="DeleteOldCacheDataInRedis" href="#DeleteOldCacheDataInRedis">func DeleteOldCacheDataInRedis()</a>
 
 ```
 searchKey: bg.DeleteOldCacheDataInRedis
+tags: [function]
 ```
 
 ```Go
@@ -75,6 +66,7 @@ func DeleteOldCacheDataInRedis()
 
 ```
 searchKey: bg.DeleteOldEventLogsInPostgres
+tags: [method]
 ```
 
 ```Go
@@ -85,17 +77,29 @@ func DeleteOldEventLogsInPostgres(ctx context.Context, db dbutil.DB)
 
 ```
 searchKey: bg.DeleteOldSecurityEventLogsInPostgres
+tags: [method]
 ```
 
 ```Go
 func DeleteOldSecurityEventLogsInPostgres(ctx context.Context, db dbutil.DB)
 ```
 
+### <a id="getRunID" href="#getRunID">func getRunID(c redis.Conn) (string, error)</a>
+
+```
+searchKey: bg.getRunID
+tags: [method private]
+```
+
+```Go
+func getRunID(c redis.Conn) (string, error)
+```
+
 ### <a id="init.db_test.go" href="#init.db_test.go">func init()</a>
 
 ```
 searchKey: bg.init
-tags: [private]
+tags: [function private]
 ```
 
 ```Go

@@ -9,20 +9,21 @@
     * [type testKey struct](#testKey)
         * [func (k *testKey) Decrypt(ctx context.Context, ciphertext []byte) (*encryption.Secret, error)](#testKey.Decrypt)
 * [Functions](#func)
-    * [func hash(v []byte) uint64](#hash)
     * [func TestCacheKey(t *testing.T)](#TestCacheKey)
+    * [func hash(v []byte) uint64](#hash)
 
 
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Key" href="#Key">type Key struct</a>
 
 ```
 searchKey: cache.Key
+tags: [struct]
 ```
 
 ```Go
@@ -39,6 +40,7 @@ Key provides an LRU cache wrapper for any encryption.Key implementation, caching
 
 ```
 searchKey: cache.New
+tags: [method]
 ```
 
 ```Go
@@ -51,6 +53,7 @@ New returns a cache.Key with an LRU cache of `size` values, wrapping the passed 
 
 ```
 searchKey: cache.Key.Decrypt
+tags: [method]
 ```
 
 ```Go
@@ -63,7 +66,7 @@ Decrypt attempts to find the decrypted ciphertext in the cache, if it is not fou
 
 ```
 searchKey: cache.testKey
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -77,7 +80,7 @@ type testKey struct {
 
 ```
 searchKey: cache.testKey.Decrypt
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -87,28 +90,28 @@ func (k *testKey) Decrypt(ctx context.Context, ciphertext []byte) (*encryption.S
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
-```
-
-### <a id="hash" href="#hash">func hash(v []byte) uint64</a>
-
-```
-searchKey: cache.hash
-tags: [private]
-```
-
-```Go
-func hash(v []byte) uint64
+tags: [package private]
 ```
 
 ### <a id="TestCacheKey" href="#TestCacheKey">func TestCacheKey(t *testing.T)</a>
 
 ```
 searchKey: cache.TestCacheKey
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestCacheKey(t *testing.T)
+```
+
+### <a id="hash" href="#hash">func hash(v []byte) uint64</a>
+
+```
+searchKey: cache.hash
+tags: [method private]
+```
+
+```Go
+func hash(v []byte) uint64
 ```
 

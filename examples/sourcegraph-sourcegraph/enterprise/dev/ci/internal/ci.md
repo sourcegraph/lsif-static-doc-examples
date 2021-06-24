@@ -9,56 +9,56 @@ Package ci is responsible for generating a Buildkite pipeline configuration. It 
 * [Types](#type)
     * [type Config struct](#Config)
         * [func ComputeConfig() Config](#ComputeConfig)
-        * [func (c Config) shortCommit() string](#Config.shortCommit)
-        * [func (c *Config) isMainBranch() bool](#Config.isMainBranch)
-        * [func (c Config) ensureCommit() error](#Config.ensureCommit)
-        * [func (c Config) isPR() bool](#Config.isPR)
-        * [func (c Config) isDocsOnly() bool](#Config.isDocsOnly)
-        * [func (c Config) isSgOnly() bool](#Config.isSgOnly)
-        * [func (c Config) isGoOnly() bool](#Config.isGoOnly)
-        * [func (c Config) shouldRunE2EandQA() bool](#Config.shouldRunE2EandQA)
         * [func (c Config) candidateImageTag() string](#Config.candidateImageTag)
+        * [func (c Config) ensureCommit() error](#Config.ensureCommit)
+        * [func (c Config) isDocsOnly() bool](#Config.isDocsOnly)
+        * [func (c Config) isGoOnly() bool](#Config.isGoOnly)
+        * [func (c *Config) isMainBranch() bool](#Config.isMainBranch)
+        * [func (c Config) isPR() bool](#Config.isPR)
+        * [func (c Config) isSgOnly() bool](#Config.isSgOnly)
         * [func (c Config) isStorybookAffected() bool](#Config.isStorybookAffected)
+        * [func (c Config) shortCommit() string](#Config.shortCommit)
+        * [func (c Config) shouldRunE2EandQA() bool](#Config.shouldRunE2EandQA)
 * [Functions](#func)
-    * [func contains(s []string, str string) bool](#contains)
-    * [func isAllowedRootFile(p string) bool](#isAllowedRootFile)
-    * [func addDocs(pipeline *bk.Pipeline)](#addDocs)
-    * [func addCheck(pipeline *bk.Pipeline)](#addCheck)
-    * [func addLint(pipeline *bk.Pipeline)](#addLint)
-    * [func addWebApp(pipeline *bk.Pipeline)](#addWebApp)
-    * [func addBrowserExt(pipeline *bk.Pipeline)](#addBrowserExt)
-    * [func addSharedTests(c Config) func(pipeline *bk.Pipeline)](#addSharedTests)
-    * [func addBrandedTests(pipeline *bk.Pipeline)](#addBrandedTests)
-    * [func addPostgresBackcompat(pipeline *bk.Pipeline)](#addPostgresBackcompat)
-    * [func addGoTests(pipeline *bk.Pipeline)](#addGoTests)
-    * [func addGoBuild(pipeline *bk.Pipeline)](#addGoBuild)
-    * [func addDockerfileLint(pipeline *bk.Pipeline)](#addDockerfileLint)
+    * [func GeneratePipeline(c Config) (*bk.Pipeline, error)](#GeneratePipeline)
     * [func addBackendIntegrationTests(c Config) func(*bk.Pipeline)](#addBackendIntegrationTests)
+    * [func addBrandedTests(pipeline *bk.Pipeline)](#addBrandedTests)
+    * [func addBrowserExt(pipeline *bk.Pipeline)](#addBrowserExt)
     * [func addBrowserExtensionE2ESteps(pipeline *bk.Pipeline)](#addBrowserExtensionE2ESteps)
     * [func addBrowserExtensionReleaseSteps(pipeline *bk.Pipeline)](#addBrowserExtensionReleaseSteps)
-    * [func wait(pipeline *bk.Pipeline)](#wait)
-    * [func triggerAsync(c Config) func(*bk.Pipeline)](#triggerAsync)
-    * [func triggerUpdaterPipeline(c Config) func(*bk.Pipeline)](#triggerUpdaterPipeline)
-    * [func clusterDockerImages(images []string) string](#clusterDockerImages)
-    * [func triggerE2EandQA(c Config, commonEnv map[string]string) func(*bk.Pipeline)](#triggerE2EandQA)
-    * [func copyEnv(keys ...string) map[string]string](#copyEnv)
-    * [func addDockerImages(c Config, final bool) func(*bk.Pipeline)](#addDockerImages)
     * [func addCandidateDockerImage(c Config, app string) func(*bk.Pipeline)](#addCandidateDockerImage)
+    * [func addCheck(pipeline *bk.Pipeline)](#addCheck)
+    * [func addDockerImages(c Config, final bool) func(*bk.Pipeline)](#addDockerImages)
+    * [func addDockerfileLint(pipeline *bk.Pipeline)](#addDockerfileLint)
+    * [func addDocs(pipeline *bk.Pipeline)](#addDocs)
     * [func addFinalDockerImage(c Config, app string, insiders bool) func(*bk.Pipeline)](#addFinalDockerImage)
-    * [func GeneratePipeline(c Config) (*bk.Pipeline, error)](#GeneratePipeline)
+    * [func addGoBuild(pipeline *bk.Pipeline)](#addGoBuild)
+    * [func addGoTests(pipeline *bk.Pipeline)](#addGoTests)
+    * [func addLint(pipeline *bk.Pipeline)](#addLint)
+    * [func addPostgresBackcompat(pipeline *bk.Pipeline)](#addPostgresBackcompat)
+    * [func addSharedTests(c Config) func(pipeline *bk.Pipeline)](#addSharedTests)
+    * [func addWebApp(pipeline *bk.Pipeline)](#addWebApp)
+    * [func clusterDockerImages(images []string) string](#clusterDockerImages)
+    * [func contains(s []string, str string) bool](#contains)
+    * [func copyEnv(keys ...string) map[string]string](#copyEnv)
+    * [func isAllowedRootFile(p string) bool](#isAllowedRootFile)
+    * [func triggerAsync(c Config) func(*bk.Pipeline)](#triggerAsync)
+    * [func triggerE2EandQA(c Config, commonEnv map[string]string) func(*bk.Pipeline)](#triggerE2EandQA)
+    * [func triggerUpdaterPipeline(c Config) func(*bk.Pipeline)](#triggerUpdaterPipeline)
+    * [func wait(pipeline *bk.Pipeline)](#wait)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="ignoredRootFiles" href="#ignoredRootFiles">var ignoredRootFiles</a>
 
 ```
 searchKey: ci.ignoredRootFiles
-tags: [private]
+tags: [variable array string private]
 ```
 
 ```Go
@@ -70,13 +70,14 @@ Changes in the files below will be ignored by the Storybook workflow.
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Config" href="#Config">type Config struct</a>
 
 ```
 searchKey: ci.Config
+tags: [struct]
 ```
 
 ```Go
@@ -119,107 +120,18 @@ Config is the set of configuration parameters that determine the structure of th
 
 ```
 searchKey: ci.ComputeConfig
+tags: [function]
 ```
 
 ```Go
 func ComputeConfig() Config
 ```
 
-#### <a id="Config.shortCommit" href="#Config.shortCommit">func (c Config) shortCommit() string</a>
-
-```
-searchKey: ci.Config.shortCommit
-tags: [private]
-```
-
-```Go
-func (c Config) shortCommit() string
-```
-
-#### <a id="Config.isMainBranch" href="#Config.isMainBranch">func (c *Config) isMainBranch() bool</a>
-
-```
-searchKey: ci.Config.isMainBranch
-tags: [private]
-```
-
-```Go
-func (c *Config) isMainBranch() bool
-```
-
-#### <a id="Config.ensureCommit" href="#Config.ensureCommit">func (c Config) ensureCommit() error</a>
-
-```
-searchKey: ci.Config.ensureCommit
-tags: [private]
-```
-
-```Go
-func (c Config) ensureCommit() error
-```
-
-#### <a id="Config.isPR" href="#Config.isPR">func (c Config) isPR() bool</a>
-
-```
-searchKey: ci.Config.isPR
-tags: [private]
-```
-
-```Go
-func (c Config) isPR() bool
-```
-
-#### <a id="Config.isDocsOnly" href="#Config.isDocsOnly">func (c Config) isDocsOnly() bool</a>
-
-```
-searchKey: ci.Config.isDocsOnly
-tags: [private]
-```
-
-```Go
-func (c Config) isDocsOnly() bool
-```
-
-#### <a id="Config.isSgOnly" href="#Config.isSgOnly">func (c Config) isSgOnly() bool</a>
-
-```
-searchKey: ci.Config.isSgOnly
-tags: [private]
-```
-
-```Go
-func (c Config) isSgOnly() bool
-```
-
-isSgOnly returns whether the changedFiles are only in the ./dev/sg folder. 
-
-#### <a id="Config.isGoOnly" href="#Config.isGoOnly">func (c Config) isGoOnly() bool</a>
-
-```
-searchKey: ci.Config.isGoOnly
-tags: [private]
-```
-
-```Go
-func (c Config) isGoOnly() bool
-```
-
-#### <a id="Config.shouldRunE2EandQA" href="#Config.shouldRunE2EandQA">func (c Config) shouldRunE2EandQA() bool</a>
-
-```
-searchKey: ci.Config.shouldRunE2EandQA
-tags: [private]
-```
-
-```Go
-func (c Config) shouldRunE2EandQA() bool
-```
-
 #### <a id="Config.candidateImageTag" href="#Config.candidateImageTag">func (c Config) candidateImageTag() string</a>
 
 ```
 searchKey: ci.Config.candidateImageTag
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -230,11 +142,79 @@ candidateImageTag provides the tag for a candidate image built for this Buildkit
 
 Note that the availability of this image depends on whether a candidate gets built, as determined in `addDockerImages()`. 
 
+#### <a id="Config.ensureCommit" href="#Config.ensureCommit">func (c Config) ensureCommit() error</a>
+
+```
+searchKey: ci.Config.ensureCommit
+tags: [function private]
+```
+
+```Go
+func (c Config) ensureCommit() error
+```
+
+#### <a id="Config.isDocsOnly" href="#Config.isDocsOnly">func (c Config) isDocsOnly() bool</a>
+
+```
+searchKey: ci.Config.isDocsOnly
+tags: [function private]
+```
+
+```Go
+func (c Config) isDocsOnly() bool
+```
+
+#### <a id="Config.isGoOnly" href="#Config.isGoOnly">func (c Config) isGoOnly() bool</a>
+
+```
+searchKey: ci.Config.isGoOnly
+tags: [function private]
+```
+
+```Go
+func (c Config) isGoOnly() bool
+```
+
+#### <a id="Config.isMainBranch" href="#Config.isMainBranch">func (c *Config) isMainBranch() bool</a>
+
+```
+searchKey: ci.Config.isMainBranch
+tags: [function private]
+```
+
+```Go
+func (c *Config) isMainBranch() bool
+```
+
+#### <a id="Config.isPR" href="#Config.isPR">func (c Config) isPR() bool</a>
+
+```
+searchKey: ci.Config.isPR
+tags: [function private]
+```
+
+```Go
+func (c Config) isPR() bool
+```
+
+#### <a id="Config.isSgOnly" href="#Config.isSgOnly">func (c Config) isSgOnly() bool</a>
+
+```
+searchKey: ci.Config.isSgOnly
+tags: [function private]
+```
+
+```Go
+func (c Config) isSgOnly() bool
+```
+
+isSgOnly returns whether the changedFiles are only in the ./dev/sg folder. 
+
 #### <a id="Config.isStorybookAffected" href="#Config.isStorybookAffected">func (c Config) isStorybookAffected() bool</a>
 
 ```
 searchKey: ci.Config.isStorybookAffected
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -243,180 +223,52 @@ func (c Config) isStorybookAffected() bool
 
 Run Storybook workflow only if related files were changed. 
 
+#### <a id="Config.shortCommit" href="#Config.shortCommit">func (c Config) shortCommit() string</a>
+
+```
+searchKey: ci.Config.shortCommit
+tags: [function private]
+```
+
+```Go
+func (c Config) shortCommit() string
+```
+
+#### <a id="Config.shouldRunE2EandQA" href="#Config.shouldRunE2EandQA">func (c Config) shouldRunE2EandQA() bool</a>
+
+```
+searchKey: ci.Config.shouldRunE2EandQA
+tags: [function private]
+```
+
+```Go
+func (c Config) shouldRunE2EandQA() bool
+```
+
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
-### <a id="contains" href="#contains">func contains(s []string, str string) bool</a>
+### <a id="GeneratePipeline" href="#GeneratePipeline">func GeneratePipeline(c Config) (*bk.Pipeline, error)</a>
 
 ```
-searchKey: ci.contains
-tags: [private]
-```
-
-```Go
-func contains(s []string, str string) bool
-```
-
-### <a id="isAllowedRootFile" href="#isAllowedRootFile">func isAllowedRootFile(p string) bool</a>
-
-```
-searchKey: ci.isAllowedRootFile
-tags: [private]
+searchKey: ci.GeneratePipeline
+tags: [method]
 ```
 
 ```Go
-func isAllowedRootFile(p string) bool
+func GeneratePipeline(c Config) (*bk.Pipeline, error)
 ```
 
-### <a id="addDocs" href="#addDocs">func addDocs(pipeline *bk.Pipeline)</a>
-
-```
-searchKey: ci.addDocs
-tags: [private]
-```
-
-```Go
-func addDocs(pipeline *bk.Pipeline)
-```
-
-Verifies the docs formatting and builds the `docsite` command. 
-
-### <a id="addCheck" href="#addCheck">func addCheck(pipeline *bk.Pipeline)</a>
-
-```
-searchKey: ci.addCheck
-tags: [private]
-```
-
-```Go
-func addCheck(pipeline *bk.Pipeline)
-```
-
-Adds the static check test step. 
-
-### <a id="addLint" href="#addLint">func addLint(pipeline *bk.Pipeline)</a>
-
-```
-searchKey: ci.addLint
-tags: [private]
-```
-
-```Go
-func addLint(pipeline *bk.Pipeline)
-```
-
-Adds the lint test step. 
-
-### <a id="addWebApp" href="#addWebApp">func addWebApp(pipeline *bk.Pipeline)</a>
-
-```
-searchKey: ci.addWebApp
-tags: [private]
-```
-
-```Go
-func addWebApp(pipeline *bk.Pipeline)
-```
-
-Adds steps for the OSS and Enterprise web app builds. Runs the web app tests. 
-
-### <a id="addBrowserExt" href="#addBrowserExt">func addBrowserExt(pipeline *bk.Pipeline)</a>
-
-```
-searchKey: ci.addBrowserExt
-tags: [private]
-```
-
-```Go
-func addBrowserExt(pipeline *bk.Pipeline)
-```
-
-Builds and tests the browser extension. 
-
-### <a id="addSharedTests" href="#addSharedTests">func addSharedTests(c Config) func(pipeline *bk.Pipeline)</a>
-
-```
-searchKey: ci.addSharedTests
-tags: [private]
-```
-
-```Go
-func addSharedTests(c Config) func(pipeline *bk.Pipeline)
-```
-
-Adds the shared frontend tests (shared between the web app and browser extension). 
-
-### <a id="addBrandedTests" href="#addBrandedTests">func addBrandedTests(pipeline *bk.Pipeline)</a>
-
-```
-searchKey: ci.addBrandedTests
-tags: [private]
-```
-
-```Go
-func addBrandedTests(pipeline *bk.Pipeline)
-```
-
-### <a id="addPostgresBackcompat" href="#addPostgresBackcompat">func addPostgresBackcompat(pipeline *bk.Pipeline)</a>
-
-```
-searchKey: ci.addPostgresBackcompat
-tags: [private]
-```
-
-```Go
-func addPostgresBackcompat(pipeline *bk.Pipeline)
-```
-
-Adds PostgreSQL backcompat tests. 
-
-### <a id="addGoTests" href="#addGoTests">func addGoTests(pipeline *bk.Pipeline)</a>
-
-```
-searchKey: ci.addGoTests
-tags: [private]
-```
-
-```Go
-func addGoTests(pipeline *bk.Pipeline)
-```
-
-Adds the Go test step. 
-
-### <a id="addGoBuild" href="#addGoBuild">func addGoBuild(pipeline *bk.Pipeline)</a>
-
-```
-searchKey: ci.addGoBuild
-tags: [private]
-```
-
-```Go
-func addGoBuild(pipeline *bk.Pipeline)
-```
-
-Builds the OSS and Enterprise Go commands. 
-
-### <a id="addDockerfileLint" href="#addDockerfileLint">func addDockerfileLint(pipeline *bk.Pipeline)</a>
-
-```
-searchKey: ci.addDockerfileLint
-tags: [private]
-```
-
-```Go
-func addDockerfileLint(pipeline *bk.Pipeline)
-```
-
-Lints the Dockerfiles. 
+GeneratePipeline is the main pipeline generation function. It defines the build pipeline for each of the main CI cases, which are defined in the main switch statement in the function. 
 
 ### <a id="addBackendIntegrationTests" href="#addBackendIntegrationTests">func addBackendIntegrationTests(c Config) func(*bk.Pipeline)</a>
 
 ```
 searchKey: ci.addBackendIntegrationTests
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -425,11 +277,35 @@ func addBackendIntegrationTests(c Config) func(*bk.Pipeline)
 
 Adds backend integration tests step. 
 
+### <a id="addBrandedTests" href="#addBrandedTests">func addBrandedTests(pipeline *bk.Pipeline)</a>
+
+```
+searchKey: ci.addBrandedTests
+tags: [method private]
+```
+
+```Go
+func addBrandedTests(pipeline *bk.Pipeline)
+```
+
+### <a id="addBrowserExt" href="#addBrowserExt">func addBrowserExt(pipeline *bk.Pipeline)</a>
+
+```
+searchKey: ci.addBrowserExt
+tags: [method private]
+```
+
+```Go
+func addBrowserExt(pipeline *bk.Pipeline)
+```
+
+Builds and tests the browser extension. 
+
 ### <a id="addBrowserExtensionE2ESteps" href="#addBrowserExtensionE2ESteps">func addBrowserExtensionE2ESteps(pipeline *bk.Pipeline)</a>
 
 ```
 searchKey: ci.addBrowserExtensionE2ESteps
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -440,7 +316,7 @@ func addBrowserExtensionE2ESteps(pipeline *bk.Pipeline)
 
 ```
 searchKey: ci.addBrowserExtensionReleaseSteps
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -449,83 +325,37 @@ func addBrowserExtensionReleaseSteps(pipeline *bk.Pipeline)
 
 Release the browser extension. 
 
-### <a id="wait" href="#wait">func wait(pipeline *bk.Pipeline)</a>
+### <a id="addCandidateDockerImage" href="#addCandidateDockerImage">func addCandidateDockerImage(c Config, app string) func(*bk.Pipeline)</a>
 
 ```
-searchKey: ci.wait
-tags: [private]
-```
-
-```Go
-func wait(pipeline *bk.Pipeline)
-```
-
-Adds a Buildkite pipeline "Wait". 
-
-### <a id="triggerAsync" href="#triggerAsync">func triggerAsync(c Config) func(*bk.Pipeline)</a>
-
-```
-searchKey: ci.triggerAsync
-tags: [private]
+searchKey: ci.addCandidateDockerImage
+tags: [method private]
 ```
 
 ```Go
-func triggerAsync(c Config) func(*bk.Pipeline)
+func addCandidateDockerImage(c Config, app string) func(*bk.Pipeline)
 ```
 
-Trigger the async pipeline to run. 
+Build a candidate docker image that will re-tagged with the final tags once the e2e tests pass. 
 
-### <a id="triggerUpdaterPipeline" href="#triggerUpdaterPipeline">func triggerUpdaterPipeline(c Config) func(*bk.Pipeline)</a>
-
-```
-searchKey: ci.triggerUpdaterPipeline
-tags: [private]
-```
-
-```Go
-func triggerUpdaterPipeline(c Config) func(*bk.Pipeline)
-```
-
-### <a id="clusterDockerImages" href="#clusterDockerImages">func clusterDockerImages(images []string) string</a>
+### <a id="addCheck" href="#addCheck">func addCheck(pipeline *bk.Pipeline)</a>
 
 ```
-searchKey: ci.clusterDockerImages
-tags: [private]
+searchKey: ci.addCheck
+tags: [method private]
 ```
 
 ```Go
-func clusterDockerImages(images []string) string
+func addCheck(pipeline *bk.Pipeline)
 ```
 
-images used by cluster-qa test 
-
-### <a id="triggerE2EandQA" href="#triggerE2EandQA">func triggerE2EandQA(c Config, commonEnv map[string]string) func(*bk.Pipeline)</a>
-
-```
-searchKey: ci.triggerE2EandQA
-tags: [private]
-```
-
-```Go
-func triggerE2EandQA(c Config, commonEnv map[string]string) func(*bk.Pipeline)
-```
-
-### <a id="copyEnv" href="#copyEnv">func copyEnv(keys ...string) map[string]string</a>
-
-```
-searchKey: ci.copyEnv
-tags: [private]
-```
-
-```Go
-func copyEnv(keys ...string) map[string]string
-```
+Adds the static check test step. 
 
 ### <a id="addDockerImages" href="#addDockerImages">func addDockerImages(c Config, final bool) func(*bk.Pipeline)</a>
 
 ```
 searchKey: ci.addDockerImages
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -538,24 +368,37 @@ Notes:
 
 - Publishing of `insiders` implies deployment - See `images.go` for more details on what images get built and where they get published 
 
-### <a id="addCandidateDockerImage" href="#addCandidateDockerImage">func addCandidateDockerImage(c Config, app string) func(*bk.Pipeline)</a>
+### <a id="addDockerfileLint" href="#addDockerfileLint">func addDockerfileLint(pipeline *bk.Pipeline)</a>
 
 ```
-searchKey: ci.addCandidateDockerImage
-tags: [private]
+searchKey: ci.addDockerfileLint
+tags: [method private]
 ```
 
 ```Go
-func addCandidateDockerImage(c Config, app string) func(*bk.Pipeline)
+func addDockerfileLint(pipeline *bk.Pipeline)
 ```
 
-Build a candidate docker image that will re-tagged with the final tags once the e2e tests pass. 
+Lints the Dockerfiles. 
+
+### <a id="addDocs" href="#addDocs">func addDocs(pipeline *bk.Pipeline)</a>
+
+```
+searchKey: ci.addDocs
+tags: [method private]
+```
+
+```Go
+func addDocs(pipeline *bk.Pipeline)
+```
+
+Verifies the docs formatting and builds the `docsite` command. 
 
 ### <a id="addFinalDockerImage" href="#addFinalDockerImage">func addFinalDockerImage(c Config, app string, insiders bool) func(*bk.Pipeline)</a>
 
 ```
 searchKey: ci.addFinalDockerImage
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -564,15 +407,175 @@ func addFinalDockerImage(c Config, app string, insiders bool) func(*bk.Pipeline)
 
 Tag and push final Docker image for the service defined by `app` after the e2e tests pass. 
 
-### <a id="GeneratePipeline" href="#GeneratePipeline">func GeneratePipeline(c Config) (*bk.Pipeline, error)</a>
+### <a id="addGoBuild" href="#addGoBuild">func addGoBuild(pipeline *bk.Pipeline)</a>
 
 ```
-searchKey: ci.GeneratePipeline
+searchKey: ci.addGoBuild
+tags: [method private]
 ```
 
 ```Go
-func GeneratePipeline(c Config) (*bk.Pipeline, error)
+func addGoBuild(pipeline *bk.Pipeline)
 ```
 
-GeneratePipeline is the main pipeline generation function. It defines the build pipeline for each of the main CI cases, which are defined in the main switch statement in the function. 
+Builds the OSS and Enterprise Go commands. 
+
+### <a id="addGoTests" href="#addGoTests">func addGoTests(pipeline *bk.Pipeline)</a>
+
+```
+searchKey: ci.addGoTests
+tags: [method private]
+```
+
+```Go
+func addGoTests(pipeline *bk.Pipeline)
+```
+
+Adds the Go test step. 
+
+### <a id="addLint" href="#addLint">func addLint(pipeline *bk.Pipeline)</a>
+
+```
+searchKey: ci.addLint
+tags: [method private]
+```
+
+```Go
+func addLint(pipeline *bk.Pipeline)
+```
+
+Adds the lint test step. 
+
+### <a id="addPostgresBackcompat" href="#addPostgresBackcompat">func addPostgresBackcompat(pipeline *bk.Pipeline)</a>
+
+```
+searchKey: ci.addPostgresBackcompat
+tags: [method private]
+```
+
+```Go
+func addPostgresBackcompat(pipeline *bk.Pipeline)
+```
+
+Adds PostgreSQL backcompat tests. 
+
+### <a id="addSharedTests" href="#addSharedTests">func addSharedTests(c Config) func(pipeline *bk.Pipeline)</a>
+
+```
+searchKey: ci.addSharedTests
+tags: [method private]
+```
+
+```Go
+func addSharedTests(c Config) func(pipeline *bk.Pipeline)
+```
+
+Adds the shared frontend tests (shared between the web app and browser extension). 
+
+### <a id="addWebApp" href="#addWebApp">func addWebApp(pipeline *bk.Pipeline)</a>
+
+```
+searchKey: ci.addWebApp
+tags: [method private]
+```
+
+```Go
+func addWebApp(pipeline *bk.Pipeline)
+```
+
+Adds steps for the OSS and Enterprise web app builds. Runs the web app tests. 
+
+### <a id="clusterDockerImages" href="#clusterDockerImages">func clusterDockerImages(images []string) string</a>
+
+```
+searchKey: ci.clusterDockerImages
+tags: [method private]
+```
+
+```Go
+func clusterDockerImages(images []string) string
+```
+
+images used by cluster-qa test 
+
+### <a id="contains" href="#contains">func contains(s []string, str string) bool</a>
+
+```
+searchKey: ci.contains
+tags: [method private]
+```
+
+```Go
+func contains(s []string, str string) bool
+```
+
+### <a id="copyEnv" href="#copyEnv">func copyEnv(keys ...string) map[string]string</a>
+
+```
+searchKey: ci.copyEnv
+tags: [method private]
+```
+
+```Go
+func copyEnv(keys ...string) map[string]string
+```
+
+### <a id="isAllowedRootFile" href="#isAllowedRootFile">func isAllowedRootFile(p string) bool</a>
+
+```
+searchKey: ci.isAllowedRootFile
+tags: [method private]
+```
+
+```Go
+func isAllowedRootFile(p string) bool
+```
+
+### <a id="triggerAsync" href="#triggerAsync">func triggerAsync(c Config) func(*bk.Pipeline)</a>
+
+```
+searchKey: ci.triggerAsync
+tags: [method private]
+```
+
+```Go
+func triggerAsync(c Config) func(*bk.Pipeline)
+```
+
+Trigger the async pipeline to run. 
+
+### <a id="triggerE2EandQA" href="#triggerE2EandQA">func triggerE2EandQA(c Config, commonEnv map[string]string) func(*bk.Pipeline)</a>
+
+```
+searchKey: ci.triggerE2EandQA
+tags: [method private]
+```
+
+```Go
+func triggerE2EandQA(c Config, commonEnv map[string]string) func(*bk.Pipeline)
+```
+
+### <a id="triggerUpdaterPipeline" href="#triggerUpdaterPipeline">func triggerUpdaterPipeline(c Config) func(*bk.Pipeline)</a>
+
+```
+searchKey: ci.triggerUpdaterPipeline
+tags: [method private]
+```
+
+```Go
+func triggerUpdaterPipeline(c Config) func(*bk.Pipeline)
+```
+
+### <a id="wait" href="#wait">func wait(pipeline *bk.Pipeline)</a>
+
+```
+searchKey: ci.wait
+tags: [method private]
+```
+
+```Go
+func wait(pipeline *bk.Pipeline)
+```
+
+Adds a Buildkite pipeline "Wait". 
 

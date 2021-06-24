@@ -14,14 +14,14 @@ Package suspiciousnames contains a blocklist of suspicious names for users and o
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="suspiciousNames" href="#suspiciousNames">var suspiciousNames</a>
 
 ```
 searchKey: suspiciousnames.suspiciousNames
-tags: [private]
+tags: [variable object private]
 ```
 
 ```Go
@@ -31,13 +31,14 @@ var suspiciousNames = ...
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="CheckNameAllowedForUserOrOrganization" href="#CheckNameAllowedForUserOrOrganization">func CheckNameAllowedForUserOrOrganization(desiredName string) error</a>
 
 ```
 searchKey: suspiciousnames.CheckNameAllowedForUserOrOrganization
+tags: [method]
 ```
 
 ```Go
@@ -54,7 +55,7 @@ It is intended to prevent users/organizations on Sourcegraph.com from changing t
 
 ```
 searchKey: suspiciousnames.isSuspicious
-tags: [private]
+tags: [method private]
 ```
 
 ```Go

@@ -4,7 +4,9 @@
     "identifier": "httputil",
     "newPage": true,
     "searchKey": "net/http/httputil",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -41,6 +45,8 @@
                 "newPage": false,
                 "searchKey": "httputil.fakeHopHeader",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -65,7 +71,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -78,66 +86,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/net/http/httputil#reqWriteExcludeHeaderDump",
+              "pathID": "/net/http/httputil#ErrClosed",
               "documentation": {
-                "identifier": "reqWriteExcludeHeaderDump",
+                "identifier": "ErrClosed",
                 "newPage": false,
-                "searchKey": "httputil.reqWriteExcludeHeaderDump",
+                "searchKey": "httputil.ErrClosed",
                 "tags": [
-                  "private"
+                  "variable",
+                  "struct",
+                  "deprecated"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var reqWriteExcludeHeaderDump"
+                "value": "var ErrClosed"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar reqWriteExcludeHeaderDump = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#errNoBody",
-              "documentation": {
-                "identifier": "errNoBody",
-                "newPage": false,
-                "searchKey": "httputil.errNoBody",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var errNoBody"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar errNoBody = errors.New(\"sentinel error value\")\n```\n\nerrNoBody is a sentinel error value used by failureToReadBody so we can detect that the lack of body was intentional. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#emptyBody",
-              "documentation": {
-                "identifier": "emptyBody",
-                "newPage": false,
-                "searchKey": "httputil.emptyBody",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var emptyBody"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar emptyBody = io.NopCloser(strings.NewReader(\"\"))\n```\n\nemptyBody is an instance of empty reader. \n\n"
+                "value": "```Go\nvar ErrClosed = &http.ProtocolError{ErrorString: \"connection closed by user\"}\n```\n\nDeprecated: No longer used. \n\n"
               },
               "children": null
             }
@@ -149,7 +115,10 @@
                 "identifier": "ErrLineTooLong",
                 "newPage": false,
                 "searchKey": "httputil.ErrLineTooLong",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -170,6 +139,8 @@
                 "newPage": false,
                 "searchKey": "httputil.ErrPersistEOF",
                 "tags": [
+                  "variable",
+                  "struct",
                   "deprecated"
                 ]
               },
@@ -186,34 +157,14 @@
           },
           {
             "node": {
-              "pathID": "/net/http/httputil#ErrClosed",
-              "documentation": {
-                "identifier": "ErrClosed",
-                "newPage": false,
-                "searchKey": "httputil.ErrClosed",
-                "tags": [
-                  "deprecated"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ErrClosed"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ErrClosed = &http.ProtocolError{ErrorString: \"connection closed by user\"}\n```\n\nDeprecated: No longer used. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/http/httputil#ErrPipeline",
               "documentation": {
                 "identifier": "ErrPipeline",
                 "newPage": false,
                 "searchKey": "httputil.ErrPipeline",
                 "tags": [
+                  "variable",
+                  "struct",
                   "deprecated"
                 ]
               },
@@ -230,12 +181,88 @@
           },
           {
             "node": {
+              "pathID": "/net/http/httputil#dumpResTests",
+              "documentation": {
+                "identifier": "dumpResTests",
+                "newPage": false,
+                "searchKey": "httputil.dumpResTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var dumpResTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar dumpResTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#dumpTests",
+              "documentation": {
+                "identifier": "dumpTests",
+                "newPage": false,
+                "searchKey": "httputil.dumpTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var dumpTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar dumpTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#emptyBody",
+              "documentation": {
+                "identifier": "emptyBody",
+                "newPage": false,
+                "searchKey": "httputil.emptyBody",
+                "tags": [
+                  "variable",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var emptyBody"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar emptyBody = io.NopCloser(strings.NewReader(\"\"))\n```\n\nemptyBody is an instance of empty reader. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/net/http/httputil#errClosed",
               "documentation": {
                 "identifier": "errClosed",
                 "newPage": false,
                 "searchKey": "httputil.errClosed",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -252,12 +279,39 @@
           },
           {
             "node": {
+              "pathID": "/net/http/httputil#errNoBody",
+              "documentation": {
+                "identifier": "errNoBody",
+                "newPage": false,
+                "searchKey": "httputil.errNoBody",
+                "tags": [
+                  "variable",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errNoBody"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errNoBody = errors.New(\"sentinel error value\")\n```\n\nerrNoBody is a sentinel error value used by failureToReadBody so we can detect that the lack of body was intentional. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/net/http/httputil#hopHeaders",
               "documentation": {
                 "identifier": "hopHeaders",
                 "newPage": false,
                 "searchKey": "httputil.hopHeaders",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
@@ -280,6 +334,8 @@
                 "newPage": false,
                 "searchKey": "httputil.inOurTests",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
@@ -296,56 +352,15 @@
           },
           {
             "node": {
-              "pathID": "/net/http/httputil#dumpTests",
-              "documentation": {
-                "identifier": "dumpTests",
-                "newPage": false,
-                "searchKey": "httputil.dumpTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var dumpTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar dumpTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#dumpResTests",
-              "documentation": {
-                "identifier": "dumpResTests",
-                "newPage": false,
-                "searchKey": "httputil.dumpResTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var dumpResTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar dumpResTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/http/httputil#proxyQueryTests",
               "documentation": {
                 "identifier": "proxyQueryTests",
                 "newPage": false,
                 "searchKey": "httputil.proxyQueryTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -356,6 +371,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar proxyQueryTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#reqWriteExcludeHeaderDump",
+              "documentation": {
+                "identifier": "reqWriteExcludeHeaderDump",
+                "newPage": false,
+                "searchKey": "httputil.reqWriteExcludeHeaderDump",
+                "tags": [
+                  "variable",
+                  "object",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var reqWriteExcludeHeaderDump"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar reqWriteExcludeHeaderDump = ...\n```\n\n"
               },
               "children": null
             }
@@ -370,7 +409,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -383,457 +424,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/net/http/httputil#dumpConn",
+              "pathID": "/net/http/httputil#BufferPool",
               "documentation": {
-                "identifier": "dumpConn",
+                "identifier": "BufferPool",
                 "newPage": false,
-                "searchKey": "httputil.dumpConn",
+                "searchKey": "httputil.BufferPool",
                 "tags": [
-                  "private"
+                  "interface"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type dumpConn struct"
+                "value": "type BufferPool interface"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype dumpConn struct {\n\tio.Writer\n\tio.Reader\n}\n```\n\ndumpConn is a net.Conn which writes to Writer and reads from Reader \n\n"
+                "value": "```Go\ntype BufferPool interface {\n\tGet() []byte\n\tPut([]byte)\n}\n```\n\nA BufferPool is an interface for getting and returning temporary byte slices for use by io.CopyBuffer. \n\n"
               },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/net/http/httputil#dumpConn.Close",
-                    "documentation": {
-                      "identifier": "dumpConn.Close",
-                      "newPage": false,
-                      "searchKey": "httputil.dumpConn.Close",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *dumpConn) Close() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *dumpConn) Close() error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/http/httputil#dumpConn.LocalAddr",
-                    "documentation": {
-                      "identifier": "dumpConn.LocalAddr",
-                      "newPage": false,
-                      "searchKey": "httputil.dumpConn.LocalAddr",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *dumpConn) LocalAddr() net.Addr"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *dumpConn) LocalAddr() net.Addr\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/http/httputil#dumpConn.RemoteAddr",
-                    "documentation": {
-                      "identifier": "dumpConn.RemoteAddr",
-                      "newPage": false,
-                      "searchKey": "httputil.dumpConn.RemoteAddr",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *dumpConn) RemoteAddr() net.Addr"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *dumpConn) RemoteAddr() net.Addr\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/http/httputil#dumpConn.SetDeadline",
-                    "documentation": {
-                      "identifier": "dumpConn.SetDeadline",
-                      "newPage": false,
-                      "searchKey": "httputil.dumpConn.SetDeadline",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *dumpConn) SetDeadline(t time.Time) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *dumpConn) SetDeadline(t time.Time) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/http/httputil#dumpConn.SetReadDeadline",
-                    "documentation": {
-                      "identifier": "dumpConn.SetReadDeadline",
-                      "newPage": false,
-                      "searchKey": "httputil.dumpConn.SetReadDeadline",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *dumpConn) SetReadDeadline(t time.Time) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *dumpConn) SetReadDeadline(t time.Time) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/http/httputil#dumpConn.SetWriteDeadline",
-                    "documentation": {
-                      "identifier": "dumpConn.SetWriteDeadline",
-                      "newPage": false,
-                      "searchKey": "httputil.dumpConn.SetWriteDeadline",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *dumpConn) SetWriteDeadline(t time.Time) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *dumpConn) SetWriteDeadline(t time.Time) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#neverEnding",
-              "documentation": {
-                "identifier": "neverEnding",
-                "newPage": false,
-                "searchKey": "httputil.neverEnding",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type neverEnding byte"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype neverEnding byte\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/net/http/httputil#neverEnding.Read",
-                    "documentation": {
-                      "identifier": "neverEnding.Read",
-                      "newPage": false,
-                      "searchKey": "httputil.neverEnding.Read",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b neverEnding) Read(p []byte) (n int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b neverEnding) Read(p []byte) (n int, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#delegateReader",
-              "documentation": {
-                "identifier": "delegateReader",
-                "newPage": false,
-                "searchKey": "httputil.delegateReader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type delegateReader struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype delegateReader struct {\n\tc   chan io.Reader\n\terr error     // only used if r is nil and c is closed.\n\tr   io.Reader // nil until received from c\n}\n```\n\ndelegateReader is a reader that delegates to another reader, once it arrives on a channel. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/net/http/httputil#delegateReader.Read",
-                    "documentation": {
-                      "identifier": "delegateReader.Read",
-                      "newPage": false,
-                      "searchKey": "httputil.delegateReader.Read",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *delegateReader) Read(p []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *delegateReader) Read(p []byte) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#failureToReadBody",
-              "documentation": {
-                "identifier": "failureToReadBody",
-                "newPage": false,
-                "searchKey": "httputil.failureToReadBody",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type failureToReadBody struct{}"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype failureToReadBody struct{}\n```\n\nfailureToReadBody is a io.ReadCloser that just returns errNoBody on Read. It's swapped in when we don't actually want to consume the body, but need a non-nil one, and want to distinguish the error from reading the dummy body. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/net/http/httputil#failureToReadBody.Read",
-                    "documentation": {
-                      "identifier": "failureToReadBody.Read",
-                      "newPage": false,
-                      "searchKey": "httputil.failureToReadBody.Read",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (failureToReadBody) Read([]byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (failureToReadBody) Read([]byte) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/http/httputil#failureToReadBody.Close",
-                    "documentation": {
-                      "identifier": "failureToReadBody.Close",
-                      "newPage": false,
-                      "searchKey": "httputil.failureToReadBody.Close",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (failureToReadBody) Close() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (failureToReadBody) Close() error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#ServerConn",
-              "documentation": {
-                "identifier": "ServerConn",
-                "newPage": false,
-                "searchKey": "httputil.ServerConn",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ServerConn struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ServerConn struct {\n\tmu              sync.Mutex // read-write protects the following fields\n\tc               net.Conn\n\tr               *bufio.Reader\n\tre, we          error // read/write errors\n\tlastbody        io.ReadCloser\n\tnread, nwritten int\n\tpipereq         map[*http.Request]uint\n\n\tpipe textproto.Pipeline\n}\n```\n\nServerConn is an artifact of Go's early HTTP implementation. It is low-level, old, and unused by Go's current HTTP stack. We should have deleted it before Go 1. \n\nDeprecated: Use the Server in package net/http instead. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/net/http/httputil#NewServerConn",
-                    "documentation": {
-                      "identifier": "NewServerConn",
-                      "newPage": false,
-                      "searchKey": "httputil.NewServerConn",
-                      "tags": [
-                        "deprecated"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewServerConn(c net.Conn, r *bufio.Reader) *ServerConn"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewServerConn(c net.Conn, r *bufio.Reader) *ServerConn\n```\n\nNewServerConn is an artifact of Go's early HTTP implementation. It is low-level, old, and unused by Go's current HTTP stack. We should have deleted it before Go 1. \n\nDeprecated: Use the Server in package net/http instead. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/http/httputil#ServerConn.Hijack",
-                    "documentation": {
-                      "identifier": "ServerConn.Hijack",
-                      "newPage": false,
-                      "searchKey": "httputil.ServerConn.Hijack",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (sc *ServerConn) Hijack() (net.Conn, *bufio.Reader)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (sc *ServerConn) Hijack() (net.Conn, *bufio.Reader)\n```\n\nHijack detaches the ServerConn and returns the underlying connection as well as the read-side bufio which may have some left over data. Hijack may be called before Read has signaled the end of the keep-alive logic. The user should not call Hijack while Read or Write is in progress. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/http/httputil#ServerConn.Close",
-                    "documentation": {
-                      "identifier": "ServerConn.Close",
-                      "newPage": false,
-                      "searchKey": "httputil.ServerConn.Close",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (sc *ServerConn) Close() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (sc *ServerConn) Close() error\n```\n\nClose calls Hijack and then also closes the underlying connection. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/http/httputil#ServerConn.Read",
-                    "documentation": {
-                      "identifier": "ServerConn.Read",
-                      "newPage": false,
-                      "searchKey": "httputil.ServerConn.Read",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (sc *ServerConn) Read() (*http.Request, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (sc *ServerConn) Read() (*http.Request, error)\n```\n\nRead returns the next request on the wire. An ErrPersistEOF is returned if it is gracefully determined that there are no more requests (e.g. after the first request on an HTTP/1.0 connection, or after a Connection:close on a HTTP/1.1 connection). \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/http/httputil#ServerConn.Pending",
-                    "documentation": {
-                      "identifier": "ServerConn.Pending",
-                      "newPage": false,
-                      "searchKey": "httputil.ServerConn.Pending",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (sc *ServerConn) Pending() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (sc *ServerConn) Pending() int\n```\n\nPending returns the number of unanswered requests that have been received on the connection. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/http/httputil#ServerConn.Write",
-                    "documentation": {
-                      "identifier": "ServerConn.Write",
-                      "newPage": false,
-                      "searchKey": "httputil.ServerConn.Write",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (sc *ServerConn) Write(req *http.Request, resp *http.Response) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (sc *ServerConn) Write(req *http.Request, resp *http.Response) error\n```\n\nWrite writes resp in response to req. To close the connection gracefully, set the Response.Close field to true. Write should be considered operational until it returns an error, regardless of any errors returned on the Read side. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
+              "children": null
             }
           },
           {
@@ -843,7 +451,9 @@
                 "identifier": "ClientConn",
                 "newPage": false,
                 "searchKey": "httputil.ClientConn",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -862,6 +472,7 @@
                       "newPage": false,
                       "searchKey": "httputil.NewClientConn",
                       "tags": [
+                        "method",
                         "deprecated"
                       ]
                     },
@@ -884,6 +495,7 @@
                       "newPage": false,
                       "searchKey": "httputil.NewProxyClientConn",
                       "tags": [
+                        "method",
                         "deprecated"
                       ]
                     },
@@ -900,32 +512,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/net/http/httputil#ClientConn.Hijack",
-                    "documentation": {
-                      "identifier": "ClientConn.Hijack",
-                      "newPage": false,
-                      "searchKey": "httputil.ClientConn.Hijack",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (cc *ClientConn) Hijack() (c net.Conn, r *bufio.Reader)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (cc *ClientConn) Hijack() (c net.Conn, r *bufio.Reader)\n```\n\nHijack detaches the ClientConn and returns the underlying connection as well as the read-side bufio which may have some left over data. Hijack may be called before the user or Read have signaled the end of the keep-alive logic. The user should not call Hijack while Read or Write is in progress. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/net/http/httputil#ClientConn.Close",
                     "documentation": {
                       "identifier": "ClientConn.Close",
                       "newPage": false,
                       "searchKey": "httputil.ClientConn.Close",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -940,20 +534,44 @@
                 },
                 {
                   "node": {
-                    "pathID": "/net/http/httputil#ClientConn.Write",
+                    "pathID": "/net/http/httputil#ClientConn.Do",
                     "documentation": {
-                      "identifier": "ClientConn.Write",
+                      "identifier": "ClientConn.Do",
                       "newPage": false,
-                      "searchKey": "httputil.ClientConn.Write",
-                      "tags": null
+                      "searchKey": "httputil.ClientConn.Do",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (cc *ClientConn) Write(req *http.Request) error"
+                      "value": "func (cc *ClientConn) Do(req *http.Request) (*http.Response, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (cc *ClientConn) Write(req *http.Request) error\n```\n\nWrite writes a request. An ErrPersistEOF error is returned if the connection has been closed in an HTTP keep-alive sense. If req.Close equals true, the keep-alive connection is logically closed after this request and the opposing server is informed. An ErrUnexpectedEOF indicates the remote closed the underlying TCP connection, which is usually considered as graceful close. \n\n"
+                      "value": "```Go\nfunc (cc *ClientConn) Do(req *http.Request) (*http.Response, error)\n```\n\nDo is convenience method that writes a request and reads a response. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#ClientConn.Hijack",
+                    "documentation": {
+                      "identifier": "ClientConn.Hijack",
+                      "newPage": false,
+                      "searchKey": "httputil.ClientConn.Hijack",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (cc *ClientConn) Hijack() (c net.Conn, r *bufio.Reader)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (cc *ClientConn) Hijack() (c net.Conn, r *bufio.Reader)\n```\n\nHijack detaches the ClientConn and returns the underlying connection as well as the read-side bufio which may have some left over data. Hijack may be called before the user or Read have signaled the end of the keep-alive logic. The user should not call Hijack while Read or Write is in progress. \n\n"
                     },
                     "children": null
                   }
@@ -965,7 +583,9 @@
                       "identifier": "ClientConn.Pending",
                       "newPage": false,
                       "searchKey": "httputil.ClientConn.Pending",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -985,7 +605,9 @@
                       "identifier": "ClientConn.Read",
                       "newPage": false,
                       "searchKey": "httputil.ClientConn.Read",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1000,20 +622,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/net/http/httputil#ClientConn.Do",
+                    "pathID": "/net/http/httputil#ClientConn.Write",
                     "documentation": {
-                      "identifier": "ClientConn.Do",
+                      "identifier": "ClientConn.Write",
                       "newPage": false,
-                      "searchKey": "httputil.ClientConn.Do",
-                      "tags": null
+                      "searchKey": "httputil.ClientConn.Write",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (cc *ClientConn) Do(req *http.Request) (*http.Response, error)"
+                      "value": "func (cc *ClientConn) Write(req *http.Request) error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (cc *ClientConn) Do(req *http.Request) (*http.Response, error)\n```\n\nDo is convenience method that writes a request and reads a response. \n\n"
+                      "value": "```Go\nfunc (cc *ClientConn) Write(req *http.Request) error\n```\n\nWrite writes a request. An ErrPersistEOF error is returned if the connection has been closed in an HTTP keep-alive sense. If req.Close equals true, the keep-alive connection is logically closed after this request and the opposing server is informed. An ErrUnexpectedEOF indicates the remote closed the underlying TCP connection, which is usually considered as graceful close. \n\n"
                     },
                     "children": null
                   }
@@ -1028,7 +652,9 @@
                 "identifier": "ReverseProxy",
                 "newPage": false,
                 "searchKey": "httputil.ReverseProxy",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1046,7 +672,9 @@
                       "identifier": "NewSingleHostReverseProxy",
                       "newPage": false,
                       "searchKey": "httputil.NewSingleHostReverseProxy",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1061,78 +689,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/net/http/httputil#ReverseProxy.defaultErrorHandler",
-                    "documentation": {
-                      "identifier": "ReverseProxy.defaultErrorHandler",
-                      "newPage": false,
-                      "searchKey": "httputil.ReverseProxy.defaultErrorHandler",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *ReverseProxy) defaultErrorHandler(rw http.ResponseWriter, req *http.Request, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *ReverseProxy) defaultErrorHandler(rw http.ResponseWriter, req *http.Request, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/http/httputil#ReverseProxy.getErrorHandler",
-                    "documentation": {
-                      "identifier": "ReverseProxy.getErrorHandler",
-                      "newPage": false,
-                      "searchKey": "httputil.ReverseProxy.getErrorHandler",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *ReverseProxy) getErrorHandler() func(http.ResponseWriter, *http.Request, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *ReverseProxy) getErrorHandler() func(http.ResponseWriter, *http.Request, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/http/httputil#ReverseProxy.modifyResponse",
-                    "documentation": {
-                      "identifier": "ReverseProxy.modifyResponse",
-                      "newPage": false,
-                      "searchKey": "httputil.ReverseProxy.modifyResponse",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *ReverseProxy) modifyResponse(rw http.ResponseWriter, res *http.Response, req *http.Request) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *ReverseProxy) modifyResponse(rw http.ResponseWriter, res *http.Response, req *http.Request) bool\n```\n\nmodifyResponse conditionally runs the optional ModifyResponse hook and reports whether the request should proceed. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/net/http/httputil#ReverseProxy.ServeHTTP",
                     "documentation": {
                       "identifier": "ReverseProxy.ServeHTTP",
                       "newPage": false,
                       "searchKey": "httputil.ReverseProxy.ServeHTTP",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1147,56 +711,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/net/http/httputil#ReverseProxy.flushInterval",
-                    "documentation": {
-                      "identifier": "ReverseProxy.flushInterval",
-                      "newPage": false,
-                      "searchKey": "httputil.ReverseProxy.flushInterval",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *ReverseProxy) flushInterval(res *http.Response) time.Duration"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *ReverseProxy) flushInterval(res *http.Response) time.Duration\n```\n\nflushInterval returns the p.FlushInterval value, conditionally overriding its value for a specific request/response. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/http/httputil#ReverseProxy.copyResponse",
-                    "documentation": {
-                      "identifier": "ReverseProxy.copyResponse",
-                      "newPage": false,
-                      "searchKey": "httputil.ReverseProxy.copyResponse",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *ReverseProxy) copyResponse(dst io.Writer, src io.Reader, flushInterval time.Duration) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *ReverseProxy) copyResponse(dst io.Writer, src io.Reader, flushInterval time.Duration) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/net/http/httputil#ReverseProxy.copyBuffer",
                     "documentation": {
                       "identifier": "ReverseProxy.copyBuffer",
                       "newPage": false,
                       "searchKey": "httputil.ReverseProxy.copyBuffer",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1213,12 +734,128 @@
                 },
                 {
                   "node": {
+                    "pathID": "/net/http/httputil#ReverseProxy.copyResponse",
+                    "documentation": {
+                      "identifier": "ReverseProxy.copyResponse",
+                      "newPage": false,
+                      "searchKey": "httputil.ReverseProxy.copyResponse",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *ReverseProxy) copyResponse(dst io.Writer, src io.Reader, flushInterval time.Duration) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *ReverseProxy) copyResponse(dst io.Writer, src io.Reader, flushInterval time.Duration) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#ReverseProxy.defaultErrorHandler",
+                    "documentation": {
+                      "identifier": "ReverseProxy.defaultErrorHandler",
+                      "newPage": false,
+                      "searchKey": "httputil.ReverseProxy.defaultErrorHandler",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *ReverseProxy) defaultErrorHandler(rw http.ResponseWriter, req *http.Request, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *ReverseProxy) defaultErrorHandler(rw http.ResponseWriter, req *http.Request, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#ReverseProxy.flushInterval",
+                    "documentation": {
+                      "identifier": "ReverseProxy.flushInterval",
+                      "newPage": false,
+                      "searchKey": "httputil.ReverseProxy.flushInterval",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *ReverseProxy) flushInterval(res *http.Response) time.Duration"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *ReverseProxy) flushInterval(res *http.Response) time.Duration\n```\n\nflushInterval returns the p.FlushInterval value, conditionally overriding its value for a specific request/response. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#ReverseProxy.getErrorHandler",
+                    "documentation": {
+                      "identifier": "ReverseProxy.getErrorHandler",
+                      "newPage": false,
+                      "searchKey": "httputil.ReverseProxy.getErrorHandler",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *ReverseProxy) getErrorHandler() func(http.ResponseWriter, *http.Request, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *ReverseProxy) getErrorHandler() func(http.ResponseWriter, *http.Request, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#ReverseProxy.handleUpgradeResponse",
+                    "documentation": {
+                      "identifier": "ReverseProxy.handleUpgradeResponse",
+                      "newPage": false,
+                      "searchKey": "httputil.ReverseProxy.handleUpgradeResponse",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *ReverseProxy) handleUpgradeResponse(rw http.ResponseWriter, req *http.Request, res *http.Response)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *ReverseProxy) handleUpgradeResponse(rw http.ResponseWriter, req *http.Request, res *http.Response)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/net/http/httputil#ReverseProxy.logf",
                     "documentation": {
                       "identifier": "ReverseProxy.logf",
                       "newPage": false,
                       "searchKey": "httputil.ReverseProxy.logf",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1235,22 +872,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/net/http/httputil#ReverseProxy.handleUpgradeResponse",
+                    "pathID": "/net/http/httputil#ReverseProxy.modifyResponse",
                     "documentation": {
-                      "identifier": "ReverseProxy.handleUpgradeResponse",
+                      "identifier": "ReverseProxy.modifyResponse",
                       "newPage": false,
-                      "searchKey": "httputil.ReverseProxy.handleUpgradeResponse",
+                      "searchKey": "httputil.ReverseProxy.modifyResponse",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (p *ReverseProxy) handleUpgradeResponse(rw http.ResponseWriter, req *http.Request, res *http.Response)"
+                      "value": "func (p *ReverseProxy) modifyResponse(rw http.ResponseWriter, res *http.Response, req *http.Request) bool"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (p *ReverseProxy) handleUpgradeResponse(rw http.ResponseWriter, req *http.Request, res *http.Response)\n```\n\n"
+                      "value": "```Go\nfunc (p *ReverseProxy) modifyResponse(rw http.ResponseWriter, res *http.Response, req *http.Request) bool\n```\n\nmodifyResponse conditionally runs the optional ModifyResponse hook and reports whether the request should proceed. \n\n"
                     },
                     "children": null
                   }
@@ -1260,128 +898,44 @@
           },
           {
             "node": {
-              "pathID": "/net/http/httputil#BufferPool",
+              "pathID": "/net/http/httputil#RoundTripperFunc",
               "documentation": {
-                "identifier": "BufferPool",
+                "identifier": "RoundTripperFunc",
                 "newPage": false,
-                "searchKey": "httputil.BufferPool",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type BufferPool interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype BufferPool interface {\n\tGet() []byte\n\tPut([]byte)\n}\n```\n\nA BufferPool is an interface for getting and returning temporary byte slices for use by io.CopyBuffer. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#writeFlusher",
-              "documentation": {
-                "identifier": "writeFlusher",
-                "newPage": false,
-                "searchKey": "httputil.writeFlusher",
+                "searchKey": "httputil.RoundTripperFunc",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type writeFlusher interface"
+                "value": "type RoundTripperFunc func(*net/http.Request) (*net/http.Response, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype writeFlusher interface {\n\tio.Writer\n\thttp.Flusher\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#maxLatencyWriter",
-              "documentation": {
-                "identifier": "maxLatencyWriter",
-                "newPage": false,
-                "searchKey": "httputil.maxLatencyWriter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type maxLatencyWriter struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype maxLatencyWriter struct {\n\tdst     writeFlusher\n\tlatency time.Duration // non-zero; negative means to flush immediately\n\n\tmu           sync.Mutex // protects t, flushPending, and dst.Flush\n\tt            *time.Timer\n\tflushPending bool\n}\n```\n\n"
+                "value": "```Go\ntype RoundTripperFunc func(*http.Request) (*http.Response, error)\n```\n\n"
               },
               "children": [
                 {
                   "node": {
-                    "pathID": "/net/http/httputil#maxLatencyWriter.Write",
+                    "pathID": "/net/http/httputil#RoundTripperFunc.RoundTrip",
                     "documentation": {
-                      "identifier": "maxLatencyWriter.Write",
+                      "identifier": "RoundTripperFunc.RoundTrip",
                       "newPage": false,
-                      "searchKey": "httputil.maxLatencyWriter.Write",
+                      "searchKey": "httputil.RoundTripperFunc.RoundTrip",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (m *maxLatencyWriter) Write(p []byte) (n int, err error)"
+                      "value": "func (fn RoundTripperFunc) RoundTrip(req *http.Request) (*http.Response, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (m *maxLatencyWriter) Write(p []byte) (n int, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/http/httputil#maxLatencyWriter.delayedFlush",
-                    "documentation": {
-                      "identifier": "maxLatencyWriter.delayedFlush",
-                      "newPage": false,
-                      "searchKey": "httputil.maxLatencyWriter.delayedFlush",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *maxLatencyWriter) delayedFlush()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *maxLatencyWriter) delayedFlush()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/http/httputil#maxLatencyWriter.stop",
-                    "documentation": {
-                      "identifier": "maxLatencyWriter.stop",
-                      "newPage": false,
-                      "searchKey": "httputil.maxLatencyWriter.stop",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *maxLatencyWriter) stop()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *maxLatencyWriter) stop()\n```\n\n"
+                      "value": "```Go\nfunc (fn RoundTripperFunc) RoundTrip(req *http.Request) (*http.Response, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1391,158 +945,158 @@
           },
           {
             "node": {
-              "pathID": "/net/http/httputil#switchProtocolCopier",
+              "pathID": "/net/http/httputil#ServerConn",
               "documentation": {
-                "identifier": "switchProtocolCopier",
+                "identifier": "ServerConn",
                 "newPage": false,
-                "searchKey": "httputil.switchProtocolCopier",
+                "searchKey": "httputil.ServerConn",
                 "tags": [
-                  "private"
+                  "struct"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type switchProtocolCopier struct"
+                "value": "type ServerConn struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype switchProtocolCopier struct {\n\tuser, backend io.ReadWriter\n}\n```\n\nswitchProtocolCopier exists so goroutines proxying data back and forth have nice names in stacks. \n\n"
+                "value": "```Go\ntype ServerConn struct {\n\tmu              sync.Mutex // read-write protects the following fields\n\tc               net.Conn\n\tr               *bufio.Reader\n\tre, we          error // read/write errors\n\tlastbody        io.ReadCloser\n\tnread, nwritten int\n\tpipereq         map[*http.Request]uint\n\n\tpipe textproto.Pipeline\n}\n```\n\nServerConn is an artifact of Go's early HTTP implementation. It is low-level, old, and unused by Go's current HTTP stack. We should have deleted it before Go 1. \n\nDeprecated: Use the Server in package net/http instead. \n\n"
               },
               "children": [
                 {
                   "node": {
-                    "pathID": "/net/http/httputil#switchProtocolCopier.copyFromBackend",
+                    "pathID": "/net/http/httputil#NewServerConn",
                     "documentation": {
-                      "identifier": "switchProtocolCopier.copyFromBackend",
+                      "identifier": "NewServerConn",
                       "newPage": false,
-                      "searchKey": "httputil.switchProtocolCopier.copyFromBackend",
+                      "searchKey": "httputil.NewServerConn",
                       "tags": [
-                        "private"
+                        "method",
+                        "deprecated"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (c switchProtocolCopier) copyFromBackend(errc chan<- error)"
+                      "value": "func NewServerConn(c net.Conn, r *bufio.Reader) *ServerConn"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (c switchProtocolCopier) copyFromBackend(errc chan<- error)\n```\n\n"
+                      "value": "```Go\nfunc NewServerConn(c net.Conn, r *bufio.Reader) *ServerConn\n```\n\nNewServerConn is an artifact of Go's early HTTP implementation. It is low-level, old, and unused by Go's current HTTP stack. We should have deleted it before Go 1. \n\nDeprecated: Use the Server in package net/http instead. \n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/net/http/httputil#switchProtocolCopier.copyToBackend",
+                    "pathID": "/net/http/httputil#ServerConn.Close",
                     "documentation": {
-                      "identifier": "switchProtocolCopier.copyToBackend",
+                      "identifier": "ServerConn.Close",
                       "newPage": false,
-                      "searchKey": "httputil.switchProtocolCopier.copyToBackend",
+                      "searchKey": "httputil.ServerConn.Close",
                       "tags": [
-                        "private"
+                        "function"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (c switchProtocolCopier) copyToBackend(errc chan<- error)"
+                      "value": "func (sc *ServerConn) Close() error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (c switchProtocolCopier) copyToBackend(errc chan<- error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#eofReader",
-              "documentation": {
-                "identifier": "eofReader",
-                "newPage": false,
-                "searchKey": "httputil.eofReader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type eofReader struct{}"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype eofReader struct{}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/net/http/httputil#eofReader.Close",
-                    "documentation": {
-                      "identifier": "eofReader.Close",
-                      "newPage": false,
-                      "searchKey": "httputil.eofReader.Close",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (n eofReader) Close() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (n eofReader) Close() error\n```\n\n"
+                      "value": "```Go\nfunc (sc *ServerConn) Close() error\n```\n\nClose calls Hijack and then also closes the underlying connection. \n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/net/http/httputil#eofReader.Read",
+                    "pathID": "/net/http/httputil#ServerConn.Hijack",
                     "documentation": {
-                      "identifier": "eofReader.Read",
+                      "identifier": "ServerConn.Hijack",
                       "newPage": false,
-                      "searchKey": "httputil.eofReader.Read",
+                      "searchKey": "httputil.ServerConn.Hijack",
                       "tags": [
-                        "private"
+                        "function"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (n eofReader) Read([]byte) (int, error)"
+                      "value": "func (sc *ServerConn) Hijack() (net.Conn, *bufio.Reader)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (n eofReader) Read([]byte) (int, error)\n```\n\n"
+                      "value": "```Go\nfunc (sc *ServerConn) Hijack() (net.Conn, *bufio.Reader)\n```\n\nHijack detaches the ServerConn and returns the underlying connection as well as the read-side bufio which may have some left over data. Hijack may be called before Read has signaled the end of the keep-alive logic. The user should not call Hijack while Read or Write is in progress. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#ServerConn.Pending",
+                    "documentation": {
+                      "identifier": "ServerConn.Pending",
+                      "newPage": false,
+                      "searchKey": "httputil.ServerConn.Pending",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sc *ServerConn) Pending() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sc *ServerConn) Pending() int\n```\n\nPending returns the number of unanswered requests that have been received on the connection. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#ServerConn.Read",
+                    "documentation": {
+                      "identifier": "ServerConn.Read",
+                      "newPage": false,
+                      "searchKey": "httputil.ServerConn.Read",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sc *ServerConn) Read() (*http.Request, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sc *ServerConn) Read() (*http.Request, error)\n```\n\nRead returns the next request on the wire. An ErrPersistEOF is returned if it is gracefully determined that there are no more requests (e.g. after the first request on an HTTP/1.0 connection, or after a Connection:close on a HTTP/1.1 connection). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#ServerConn.Write",
+                    "documentation": {
+                      "identifier": "ServerConn.Write",
+                      "newPage": false,
+                      "searchKey": "httputil.ServerConn.Write",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sc *ServerConn) Write(req *http.Request, resp *http.Response) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sc *ServerConn) Write(req *http.Request, resp *http.Response) error\n```\n\nWrite writes resp in response to req. To close the connection gracefully, set the Response.Close field to true. Write should be considered operational until it returns an error, regardless of any errors returned on the Read side. \n\n"
                     },
                     "children": null
                   }
                 }
               ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#dumpTest",
-              "documentation": {
-                "identifier": "dumpTest",
-                "newPage": false,
-                "searchKey": "httputil.dumpTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type dumpTest struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype dumpTest struct {\n\t// Either Req or GetReq can be set/nil but not both.\n\tReq    *http.Request\n\tGetReq func() *http.Request\n\n\tBody interface{} // optional []byte or func() io.ReadCloser to populate Req.Body\n\n\tWantDump    string\n\tWantDumpOut string\n\tMustError   bool // if true, the test is expected to throw an error\n\tNoBody      bool // if true, set DumpRequest{,Out} body to false\n}\n```\n\n"
-              },
-              "children": null
             }
           },
           {
@@ -1553,6 +1107,7 @@
                 "newPage": false,
                 "searchKey": "httputil.bufferPool",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1573,6 +1128,7 @@
                       "newPage": false,
                       "searchKey": "httputil.bufferPool.Get",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1595,6 +1151,7 @@
                       "newPage": false,
                       "searchKey": "httputil.bufferPool.Put",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1614,42 +1171,369 @@
           },
           {
             "node": {
-              "pathID": "/net/http/httputil#RoundTripperFunc",
+              "pathID": "/net/http/httputil#checkCloser",
               "documentation": {
-                "identifier": "RoundTripperFunc",
+                "identifier": "checkCloser",
                 "newPage": false,
-                "searchKey": "httputil.RoundTripperFunc",
+                "searchKey": "httputil.checkCloser",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type RoundTripperFunc func(*net/http.Request) (*net/http.Response, error)"
+                "value": "type checkCloser struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype RoundTripperFunc func(*http.Request) (*http.Response, error)\n```\n\n"
+                "value": "```Go\ntype checkCloser struct {\n\tclosed bool\n}\n```\n\n"
               },
               "children": [
                 {
                   "node": {
-                    "pathID": "/net/http/httputil#RoundTripperFunc.RoundTrip",
+                    "pathID": "/net/http/httputil#checkCloser.Close",
                     "documentation": {
-                      "identifier": "RoundTripperFunc.RoundTrip",
+                      "identifier": "checkCloser.Close",
                       "newPage": false,
-                      "searchKey": "httputil.RoundTripperFunc.RoundTrip",
+                      "searchKey": "httputil.checkCloser.Close",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (fn RoundTripperFunc) RoundTrip(req *http.Request) (*http.Response, error)"
+                      "value": "func (cc *checkCloser) Close() error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (fn RoundTripperFunc) RoundTrip(req *http.Request) (*http.Response, error)\n```\n\n"
+                      "value": "```Go\nfunc (cc *checkCloser) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#checkCloser.Read",
+                    "documentation": {
+                      "identifier": "checkCloser.Read",
+                      "newPage": false,
+                      "searchKey": "httputil.checkCloser.Read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (cc *checkCloser) Read(b []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (cc *checkCloser) Read(b []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#delegateReader",
+              "documentation": {
+                "identifier": "delegateReader",
+                "newPage": false,
+                "searchKey": "httputil.delegateReader",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type delegateReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype delegateReader struct {\n\tc   chan io.Reader\n\terr error     // only used if r is nil and c is closed.\n\tr   io.Reader // nil until received from c\n}\n```\n\ndelegateReader is a reader that delegates to another reader, once it arrives on a channel. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#delegateReader.Read",
+                    "documentation": {
+                      "identifier": "delegateReader.Read",
+                      "newPage": false,
+                      "searchKey": "httputil.delegateReader.Read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *delegateReader) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *delegateReader) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#dumpConn",
+              "documentation": {
+                "identifier": "dumpConn",
+                "newPage": false,
+                "searchKey": "httputil.dumpConn",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type dumpConn struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype dumpConn struct {\n\tio.Writer\n\tio.Reader\n}\n```\n\ndumpConn is a net.Conn which writes to Writer and reads from Reader \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#dumpConn.Close",
+                    "documentation": {
+                      "identifier": "dumpConn.Close",
+                      "newPage": false,
+                      "searchKey": "httputil.dumpConn.Close",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *dumpConn) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *dumpConn) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#dumpConn.LocalAddr",
+                    "documentation": {
+                      "identifier": "dumpConn.LocalAddr",
+                      "newPage": false,
+                      "searchKey": "httputil.dumpConn.LocalAddr",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *dumpConn) LocalAddr() net.Addr"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *dumpConn) LocalAddr() net.Addr\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#dumpConn.RemoteAddr",
+                    "documentation": {
+                      "identifier": "dumpConn.RemoteAddr",
+                      "newPage": false,
+                      "searchKey": "httputil.dumpConn.RemoteAddr",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *dumpConn) RemoteAddr() net.Addr"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *dumpConn) RemoteAddr() net.Addr\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#dumpConn.SetDeadline",
+                    "documentation": {
+                      "identifier": "dumpConn.SetDeadline",
+                      "newPage": false,
+                      "searchKey": "httputil.dumpConn.SetDeadline",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *dumpConn) SetDeadline(t time.Time) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *dumpConn) SetDeadline(t time.Time) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#dumpConn.SetReadDeadline",
+                    "documentation": {
+                      "identifier": "dumpConn.SetReadDeadline",
+                      "newPage": false,
+                      "searchKey": "httputil.dumpConn.SetReadDeadline",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *dumpConn) SetReadDeadline(t time.Time) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *dumpConn) SetReadDeadline(t time.Time) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#dumpConn.SetWriteDeadline",
+                    "documentation": {
+                      "identifier": "dumpConn.SetWriteDeadline",
+                      "newPage": false,
+                      "searchKey": "httputil.dumpConn.SetWriteDeadline",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *dumpConn) SetWriteDeadline(t time.Time) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *dumpConn) SetWriteDeadline(t time.Time) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#dumpTest",
+              "documentation": {
+                "identifier": "dumpTest",
+                "newPage": false,
+                "searchKey": "httputil.dumpTest",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type dumpTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype dumpTest struct {\n\t// Either Req or GetReq can be set/nil but not both.\n\tReq    *http.Request\n\tGetReq func() *http.Request\n\n\tBody interface{} // optional []byte or func() io.ReadCloser to populate Req.Body\n\n\tWantDump    string\n\tWantDumpOut string\n\tMustError   bool // if true, the test is expected to throw an error\n\tNoBody      bool // if true, set DumpRequest{,Out} body to false\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#eofReader",
+              "documentation": {
+                "identifier": "eofReader",
+                "newPage": false,
+                "searchKey": "httputil.eofReader",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type eofReader struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype eofReader struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#eofReader.Close",
+                    "documentation": {
+                      "identifier": "eofReader.Close",
+                      "newPage": false,
+                      "searchKey": "httputil.eofReader.Close",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n eofReader) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n eofReader) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#eofReader.Read",
+                    "documentation": {
+                      "identifier": "eofReader.Read",
+                      "newPage": false,
+                      "searchKey": "httputil.eofReader.Read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n eofReader) Read([]byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n eofReader) Read([]byte) (int, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1665,6 +1549,7 @@
                 "newPage": false,
                 "searchKey": "httputil.failingRoundTripper",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1685,6 +1570,7 @@
                       "newPage": false,
                       "searchKey": "httputil.failingRoundTripper.RoundTrip",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1704,12 +1590,270 @@
           },
           {
             "node": {
+              "pathID": "/net/http/httputil#failureToReadBody",
+              "documentation": {
+                "identifier": "failureToReadBody",
+                "newPage": false,
+                "searchKey": "httputil.failureToReadBody",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type failureToReadBody struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype failureToReadBody struct{}\n```\n\nfailureToReadBody is a io.ReadCloser that just returns errNoBody on Read. It's swapped in when we don't actually want to consume the body, but need a non-nil one, and want to distinguish the error from reading the dummy body. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#failureToReadBody.Close",
+                    "documentation": {
+                      "identifier": "failureToReadBody.Close",
+                      "newPage": false,
+                      "searchKey": "httputil.failureToReadBody.Close",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (failureToReadBody) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (failureToReadBody) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#failureToReadBody.Read",
+                    "documentation": {
+                      "identifier": "failureToReadBody.Read",
+                      "newPage": false,
+                      "searchKey": "httputil.failureToReadBody.Read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (failureToReadBody) Read([]byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (failureToReadBody) Read([]byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#maxLatencyWriter",
+              "documentation": {
+                "identifier": "maxLatencyWriter",
+                "newPage": false,
+                "searchKey": "httputil.maxLatencyWriter",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type maxLatencyWriter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype maxLatencyWriter struct {\n\tdst     writeFlusher\n\tlatency time.Duration // non-zero; negative means to flush immediately\n\n\tmu           sync.Mutex // protects t, flushPending, and dst.Flush\n\tt            *time.Timer\n\tflushPending bool\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#maxLatencyWriter.Write",
+                    "documentation": {
+                      "identifier": "maxLatencyWriter.Write",
+                      "newPage": false,
+                      "searchKey": "httputil.maxLatencyWriter.Write",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *maxLatencyWriter) Write(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *maxLatencyWriter) Write(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#maxLatencyWriter.delayedFlush",
+                    "documentation": {
+                      "identifier": "maxLatencyWriter.delayedFlush",
+                      "newPage": false,
+                      "searchKey": "httputil.maxLatencyWriter.delayedFlush",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *maxLatencyWriter) delayedFlush()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *maxLatencyWriter) delayedFlush()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#maxLatencyWriter.stop",
+                    "documentation": {
+                      "identifier": "maxLatencyWriter.stop",
+                      "newPage": false,
+                      "searchKey": "httputil.maxLatencyWriter.stop",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *maxLatencyWriter) stop()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *maxLatencyWriter) stop()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#neverEnding",
+              "documentation": {
+                "identifier": "neverEnding",
+                "newPage": false,
+                "searchKey": "httputil.neverEnding",
+                "tags": [
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type neverEnding byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype neverEnding byte\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#neverEnding.Read",
+                    "documentation": {
+                      "identifier": "neverEnding.Read",
+                      "newPage": false,
+                      "searchKey": "httputil.neverEnding.Read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b neverEnding) Read(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b neverEnding) Read(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#roundTripperFunc",
+              "documentation": {
+                "identifier": "roundTripperFunc",
+                "newPage": false,
+                "searchKey": "httputil.roundTripperFunc",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type roundTripperFunc func(req *net/http.Request) (*net/http.Response, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype roundTripperFunc func(req *http.Request) (*http.Response, error)\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#roundTripperFunc.RoundTrip",
+                    "documentation": {
+                      "identifier": "roundTripperFunc.RoundTrip",
+                      "newPage": false,
+                      "searchKey": "httputil.roundTripperFunc.RoundTrip",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fn roundTripperFunc) RoundTrip(req *http.Request) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fn roundTripperFunc) RoundTrip(req *http.Request) (*http.Response, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/net/http/httputil#staticResponseRoundTripper",
               "documentation": {
                 "identifier": "staticResponseRoundTripper",
                 "newPage": false,
                 "searchKey": "httputil.staticResponseRoundTripper",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1730,6 +1874,7 @@
                       "newPage": false,
                       "searchKey": "httputil.staticResponseRoundTripper.RoundTrip",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1755,6 +1900,7 @@
                 "newPage": false,
                 "searchKey": "httputil.staticTransport",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1775,6 +1921,7 @@
                       "newPage": false,
                       "searchKey": "httputil.staticTransport.RoundTrip",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1794,42 +1941,67 @@
           },
           {
             "node": {
-              "pathID": "/net/http/httputil#roundTripperFunc",
+              "pathID": "/net/http/httputil#switchProtocolCopier",
               "documentation": {
-                "identifier": "roundTripperFunc",
+                "identifier": "switchProtocolCopier",
                 "newPage": false,
-                "searchKey": "httputil.roundTripperFunc",
+                "searchKey": "httputil.switchProtocolCopier",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type roundTripperFunc func(req *net/http.Request) (*net/http.Response, error)"
+                "value": "type switchProtocolCopier struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype roundTripperFunc func(req *http.Request) (*http.Response, error)\n```\n\n"
+                "value": "```Go\ntype switchProtocolCopier struct {\n\tuser, backend io.ReadWriter\n}\n```\n\nswitchProtocolCopier exists so goroutines proxying data back and forth have nice names in stacks. \n\n"
               },
               "children": [
                 {
                   "node": {
-                    "pathID": "/net/http/httputil#roundTripperFunc.RoundTrip",
+                    "pathID": "/net/http/httputil#switchProtocolCopier.copyFromBackend",
                     "documentation": {
-                      "identifier": "roundTripperFunc.RoundTrip",
+                      "identifier": "switchProtocolCopier.copyFromBackend",
                       "newPage": false,
-                      "searchKey": "httputil.roundTripperFunc.RoundTrip",
+                      "searchKey": "httputil.switchProtocolCopier.copyFromBackend",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (fn roundTripperFunc) RoundTrip(req *http.Request) (*http.Response, error)"
+                      "value": "func (c switchProtocolCopier) copyFromBackend(errc chan<- error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (fn roundTripperFunc) RoundTrip(req *http.Request) (*http.Response, error)\n```\n\n"
+                      "value": "```Go\nfunc (c switchProtocolCopier) copyFromBackend(errc chan<- error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httputil#switchProtocolCopier.copyToBackend",
+                    "documentation": {
+                      "identifier": "switchProtocolCopier.copyToBackend",
+                      "newPage": false,
+                      "searchKey": "httputil.switchProtocolCopier.copyToBackend",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c switchProtocolCopier) copyToBackend(errc chan<- error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c switchProtocolCopier) copyToBackend(errc chan<- error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1839,69 +2011,25 @@
           },
           {
             "node": {
-              "pathID": "/net/http/httputil#checkCloser",
+              "pathID": "/net/http/httputil#writeFlusher",
               "documentation": {
-                "identifier": "checkCloser",
+                "identifier": "writeFlusher",
                 "newPage": false,
-                "searchKey": "httputil.checkCloser",
+                "searchKey": "httputil.writeFlusher",
                 "tags": [
+                  "interface",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type checkCloser struct"
+                "value": "type writeFlusher interface"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype checkCloser struct {\n\tclosed bool\n}\n```\n\n"
+                "value": "```Go\ntype writeFlusher interface {\n\tio.Writer\n\thttp.Flusher\n}\n```\n\n"
               },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/net/http/httputil#checkCloser.Close",
-                    "documentation": {
-                      "identifier": "checkCloser.Close",
-                      "newPage": false,
-                      "searchKey": "httputil.checkCloser.Close",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (cc *checkCloser) Close() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (cc *checkCloser) Close() error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/http/httputil#checkCloser.Read",
-                    "documentation": {
-                      "identifier": "checkCloser.Read",
-                      "newPage": false,
-                      "searchKey": "httputil.checkCloser.Read",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (cc *checkCloser) Read(b []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (cc *checkCloser) Read(b []byte) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
+              "children": null
             }
           }
         ]
@@ -1914,7 +2042,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1927,86 +2057,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/net/http/httputil#drainBody",
+              "pathID": "/net/http/httputil#BenchmarkServeHTTP",
               "documentation": {
-                "identifier": "drainBody",
+                "identifier": "BenchmarkServeHTTP",
                 "newPage": false,
-                "searchKey": "httputil.drainBody",
+                "searchKey": "httputil.BenchmarkServeHTTP",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func drainBody(b io.ReadCloser) (r1, r2 io.ReadCloser, err error)"
+                "value": "func BenchmarkServeHTTP(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc drainBody(b io.ReadCloser) (r1, r2 io.ReadCloser, err error)\n```\n\ndrainBody reads all of b to memory and then returns two equivalent ReadClosers yielding the same bytes. \n\nIt returns an error if the initial slurp of all bytes fails. It does not attempt to make the returned ReadClosers have identical error-matching behavior. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#outgoingLength",
-              "documentation": {
-                "identifier": "outgoingLength",
-                "newPage": false,
-                "searchKey": "httputil.outgoingLength",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func outgoingLength(req *http.Request) int64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc outgoingLength(req *http.Request) int64\n```\n\noutGoingLength is a copy of the unexported (*http.Request).outgoingLength method. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#DumpRequestOut",
-              "documentation": {
-                "identifier": "DumpRequestOut",
-                "newPage": false,
-                "searchKey": "httputil.DumpRequestOut",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func DumpRequestOut(req *http.Request, body bool) ([]byte, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc DumpRequestOut(req *http.Request, body bool) ([]byte, error)\n```\n\nDumpRequestOut is like DumpRequest but for outgoing client requests. It includes any headers that the standard http.Transport adds, such as User-Agent. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#valueOrDefault",
-              "documentation": {
-                "identifier": "valueOrDefault",
-                "newPage": false,
-                "searchKey": "httputil.valueOrDefault",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func valueOrDefault(value, def string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc valueOrDefault(value, def string) string\n```\n\nReturn value if nonempty, def otherwise. \n\n"
+                "value": "```Go\nfunc BenchmarkServeHTTP(b *testing.B)\n```\n\n"
               },
               "children": null
             }
@@ -2018,7 +2086,9 @@
                 "identifier": "DumpRequest",
                 "newPage": false,
                 "searchKey": "httputil.DumpRequest",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2033,12 +2103,36 @@
           },
           {
             "node": {
+              "pathID": "/net/http/httputil#DumpRequestOut",
+              "documentation": {
+                "identifier": "DumpRequestOut",
+                "newPage": false,
+                "searchKey": "httputil.DumpRequestOut",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DumpRequestOut(req *http.Request, body bool) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DumpRequestOut(req *http.Request, body bool) ([]byte, error)\n```\n\nDumpRequestOut is like DumpRequest but for outgoing client requests. It includes any headers that the standard http.Transport adds, such as User-Agent. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/net/http/httputil#DumpResponse",
               "documentation": {
                 "identifier": "DumpResponse",
                 "newPage": false,
                 "searchKey": "httputil.DumpResponse",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2058,7 +2152,9 @@
                 "identifier": "NewChunkedReader",
                 "newPage": false,
                 "searchKey": "httputil.NewChunkedReader",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2078,7 +2174,9 @@
                 "identifier": "NewChunkedWriter",
                 "newPage": false,
                 "searchKey": "httputil.NewChunkedWriter",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2093,132 +2191,24 @@
           },
           {
             "node": {
-              "pathID": "/net/http/httputil#singleJoiningSlash",
+              "pathID": "/net/http/httputil#TestClonesRequestHeaders",
               "documentation": {
-                "identifier": "singleJoiningSlash",
+                "identifier": "TestClonesRequestHeaders",
                 "newPage": false,
-                "searchKey": "httputil.singleJoiningSlash",
+                "searchKey": "httputil.TestClonesRequestHeaders",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func singleJoiningSlash(a, b string) string"
+                "value": "func TestClonesRequestHeaders(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc singleJoiningSlash(a, b string) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#joinURLPath",
-              "documentation": {
-                "identifier": "joinURLPath",
-                "newPage": false,
-                "searchKey": "httputil.joinURLPath",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func joinURLPath(a, b *url.URL) (path, rawpath string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc joinURLPath(a, b *url.URL) (path, rawpath string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#copyHeader",
-              "documentation": {
-                "identifier": "copyHeader",
-                "newPage": false,
-                "searchKey": "httputil.copyHeader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func copyHeader(dst, src http.Header)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc copyHeader(dst, src http.Header)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#shouldPanicOnCopyError",
-              "documentation": {
-                "identifier": "shouldPanicOnCopyError",
-                "newPage": false,
-                "searchKey": "httputil.shouldPanicOnCopyError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func shouldPanicOnCopyError(req *http.Request) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc shouldPanicOnCopyError(req *http.Request) bool\n```\n\nshouldPanicOnCopyError reports whether the reverse proxy should panic with http.ErrAbortHandler. This is the right thing to do by default, but Go 1.10 and earlier did not, so existing unit tests weren't expecting panics. Only panic in our own tests, or when running under the HTTP server. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#removeConnectionHeaders",
-              "documentation": {
-                "identifier": "removeConnectionHeaders",
-                "newPage": false,
-                "searchKey": "httputil.removeConnectionHeaders",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func removeConnectionHeaders(h http.Header)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc removeConnectionHeaders(h http.Header)\n```\n\nremoveConnectionHeaders removes hop-by-hop headers listed in the \"Connection\" header of h. See RFC 7230, section 6.1 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#upgradeType",
-              "documentation": {
-                "identifier": "upgradeType",
-                "newPage": false,
-                "searchKey": "httputil.upgradeType",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func upgradeType(h http.Header) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc upgradeType(h http.Header) string\n```\n\n"
+                "value": "```Go\nfunc TestClonesRequestHeaders(t *testing.T)\n```\n\nIssue 18327: verify we always do a deep copy of the Request.Header map before any mutations. \n\n"
               },
               "children": null
             }
@@ -2231,7 +2221,9 @@
                 "newPage": false,
                 "searchKey": "httputil.TestDumpRequest",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2247,145 +2239,15 @@
           },
           {
             "node": {
-              "pathID": "/net/http/httputil#deadline",
-              "documentation": {
-                "identifier": "deadline",
-                "newPage": false,
-                "searchKey": "httputil.deadline",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func deadline(t *testing.T, defaultDelay, needed time.Duration) time.Time"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc deadline(t *testing.T, defaultDelay, needed time.Duration) time.Time\n```\n\ndeadline returns the time which is needed before t.Deadline() if one is configured and it is s greater than needed in the future, otherwise defaultDelay from the current time. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#chunk",
-              "documentation": {
-                "identifier": "chunk",
-                "newPage": false,
-                "searchKey": "httputil.chunk",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func chunk(s string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc chunk(s string) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#mustParseURL",
-              "documentation": {
-                "identifier": "mustParseURL",
-                "newPage": false,
-                "searchKey": "httputil.mustParseURL",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func mustParseURL(s string) *url.URL"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc mustParseURL(s string) *url.URL\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#mustNewRequest",
-              "documentation": {
-                "identifier": "mustNewRequest",
-                "newPage": false,
-                "searchKey": "httputil.mustNewRequest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func mustNewRequest(method, url string, body io.Reader) *http.Request"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc mustNewRequest(method, url string, body io.Reader) *http.Request\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#mustReadRequest",
-              "documentation": {
-                "identifier": "mustReadRequest",
-                "newPage": false,
-                "searchKey": "httputil.mustReadRequest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func mustReadRequest(s string) *http.Request"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc mustReadRequest(s string) *http.Request\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#TestDumpResponse",
-              "documentation": {
-                "identifier": "TestDumpResponse",
-                "newPage": false,
-                "searchKey": "httputil.TestDumpResponse",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDumpResponse(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDumpResponse(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/http/httputil#TestDumpRequestOutIssue38352",
               "documentation": {
                 "identifier": "TestDumpRequestOutIssue38352",
                 "newPage": false,
                 "searchKey": "httputil.TestDumpRequestOutIssue38352",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2401,22 +2263,96 @@
           },
           {
             "node": {
-              "pathID": "/net/http/httputil#init.reverseproxy_test.go",
+              "pathID": "/net/http/httputil#TestDumpResponse",
               "documentation": {
-                "identifier": "init.reverseproxy_test.go",
+                "identifier": "TestDumpResponse",
                 "newPage": false,
-                "searchKey": "httputil.init",
+                "searchKey": "httputil.TestDumpResponse",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func init()"
+                "value": "func TestDumpResponse(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
+                "value": "```Go\nfunc TestDumpResponse(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#TestJoinURLPath",
+              "documentation": {
+                "identifier": "TestJoinURLPath",
+                "newPage": false,
+                "searchKey": "httputil.TestJoinURLPath",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestJoinURLPath(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestJoinURLPath(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#TestModifyResponseClosesBody",
+              "documentation": {
+                "identifier": "TestModifyResponseClosesBody",
+                "newPage": false,
+                "searchKey": "httputil.TestModifyResponseClosesBody",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestModifyResponseClosesBody(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestModifyResponseClosesBody(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#TestNilBody",
+              "documentation": {
+                "identifier": "TestNilBody",
+                "newPage": false,
+                "searchKey": "httputil.TestNilBody",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNilBody(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNilBody(t *testing.T)\n```\n\nIssue 12344 \n\n"
               },
               "children": null
             }
@@ -2429,7 +2365,9 @@
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxy",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2445,110 +2383,48 @@
           },
           {
             "node": {
-              "pathID": "/net/http/httputil#TestReverseProxyStripHeadersPresentInConnection",
+              "pathID": "/net/http/httputil#TestReverseProxyCancellation",
               "documentation": {
-                "identifier": "TestReverseProxyStripHeadersPresentInConnection",
+                "identifier": "TestReverseProxyCancellation",
                 "newPage": false,
-                "searchKey": "httputil.TestReverseProxyStripHeadersPresentInConnection",
+                "searchKey": "httputil.TestReverseProxyCancellation",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestReverseProxyStripHeadersPresentInConnection(t *testing.T)"
+                "value": "func TestReverseProxyCancellation(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestReverseProxyStripHeadersPresentInConnection(t *testing.T)\n```\n\nIssue 16875: remove any proxied headers mentioned in the \"Connection\" header value. \n\n"
+                "value": "```Go\nfunc TestReverseProxyCancellation(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/net/http/httputil#TestReverseProxyStripEmptyConnection",
+              "pathID": "/net/http/httputil#TestReverseProxyErrorHandler",
               "documentation": {
-                "identifier": "TestReverseProxyStripEmptyConnection",
+                "identifier": "TestReverseProxyErrorHandler",
                 "newPage": false,
-                "searchKey": "httputil.TestReverseProxyStripEmptyConnection",
+                "searchKey": "httputil.TestReverseProxyErrorHandler",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestReverseProxyStripEmptyConnection(t *testing.T)"
+                "value": "func TestReverseProxyErrorHandler(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestReverseProxyStripEmptyConnection(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#TestXForwardedFor",
-              "documentation": {
-                "identifier": "TestXForwardedFor",
-                "newPage": false,
-                "searchKey": "httputil.TestXForwardedFor",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestXForwardedFor(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestXForwardedFor(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#TestXForwardedFor_Omit",
-              "documentation": {
-                "identifier": "TestXForwardedFor_Omit",
-                "newPage": false,
-                "searchKey": "httputil.TestXForwardedFor_Omit",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestXForwardedFor_Omit(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestXForwardedFor_Omit(t *testing.T)\n```\n\nIssue 38079: don't append to X-Forwarded-For if it's present but nil \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#TestReverseProxyQuery",
-              "documentation": {
-                "identifier": "TestReverseProxyQuery",
-                "newPage": false,
-                "searchKey": "httputil.TestReverseProxyQuery",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReverseProxyQuery(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReverseProxyQuery(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestReverseProxyErrorHandler(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -2561,7 +2437,9 @@
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyFlushInterval",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2583,7 +2461,9 @@
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyFlushIntervalHeaders",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2599,101 +2479,15 @@
           },
           {
             "node": {
-              "pathID": "/net/http/httputil#TestReverseProxyCancellation",
-              "documentation": {
-                "identifier": "TestReverseProxyCancellation",
-                "newPage": false,
-                "searchKey": "httputil.TestReverseProxyCancellation",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReverseProxyCancellation(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReverseProxyCancellation(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#req",
-              "documentation": {
-                "identifier": "req",
-                "newPage": false,
-                "searchKey": "httputil.req",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func req(t *testing.T, v string) *http.Request"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc req(t *testing.T, v string) *http.Request\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#TestNilBody",
-              "documentation": {
-                "identifier": "TestNilBody",
-                "newPage": false,
-                "searchKey": "httputil.TestNilBody",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestNilBody(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestNilBody(t *testing.T)\n```\n\nIssue 12344 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#TestUserAgentHeader",
-              "documentation": {
-                "identifier": "TestUserAgentHeader",
-                "newPage": false,
-                "searchKey": "httputil.TestUserAgentHeader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUserAgentHeader(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUserAgentHeader(t *testing.T)\n```\n\nIssue 15524 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/http/httputil#TestReverseProxyGetPutBuffer",
               "documentation": {
                 "identifier": "TestReverseProxyGetPutBuffer",
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyGetPutBuffer",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2709,79 +2503,15 @@
           },
           {
             "node": {
-              "pathID": "/net/http/httputil#TestReverseProxy_Post",
-              "documentation": {
-                "identifier": "TestReverseProxy_Post",
-                "newPage": false,
-                "searchKey": "httputil.TestReverseProxy_Post",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReverseProxy_Post(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReverseProxy_Post(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#TestReverseProxy_NilBody",
-              "documentation": {
-                "identifier": "TestReverseProxy_NilBody",
-                "newPage": false,
-                "searchKey": "httputil.TestReverseProxy_NilBody",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReverseProxy_NilBody(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReverseProxy_NilBody(t *testing.T)\n```\n\nIssue 16036: send a Request with a nil Body when possible \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#TestReverseProxy_AllocatedHeader",
-              "documentation": {
-                "identifier": "TestReverseProxy_AllocatedHeader",
-                "newPage": false,
-                "searchKey": "httputil.TestReverseProxy_AllocatedHeader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReverseProxy_AllocatedHeader(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReverseProxy_AllocatedHeader(t *testing.T)\n```\n\nIssue 33142: always allocate the request headers \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/http/httputil#TestReverseProxyModifyResponse",
               "documentation": {
                 "identifier": "TestReverseProxyModifyResponse",
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyModifyResponse",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2797,176 +2527,72 @@
           },
           {
             "node": {
-              "pathID": "/net/http/httputil#TestReverseProxyErrorHandler",
+              "pathID": "/net/http/httputil#TestReverseProxyQuery",
               "documentation": {
-                "identifier": "TestReverseProxyErrorHandler",
+                "identifier": "TestReverseProxyQuery",
                 "newPage": false,
-                "searchKey": "httputil.TestReverseProxyErrorHandler",
+                "searchKey": "httputil.TestReverseProxyQuery",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestReverseProxyErrorHandler(t *testing.T)"
+                "value": "func TestReverseProxyQuery(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestReverseProxyErrorHandler(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestReverseProxyQuery(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/net/http/httputil#TestReverseProxy_CopyBuffer",
+              "pathID": "/net/http/httputil#TestReverseProxyStripEmptyConnection",
               "documentation": {
-                "identifier": "TestReverseProxy_CopyBuffer",
+                "identifier": "TestReverseProxyStripEmptyConnection",
                 "newPage": false,
-                "searchKey": "httputil.TestReverseProxy_CopyBuffer",
+                "searchKey": "httputil.TestReverseProxyStripEmptyConnection",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestReverseProxy_CopyBuffer(t *testing.T)"
+                "value": "func TestReverseProxyStripEmptyConnection(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestReverseProxy_CopyBuffer(t *testing.T)\n```\n\nIssue 16659: log errors from short read \n\n"
+                "value": "```Go\nfunc TestReverseProxyStripEmptyConnection(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/net/http/httputil#BenchmarkServeHTTP",
+              "pathID": "/net/http/httputil#TestReverseProxyStripHeadersPresentInConnection",
               "documentation": {
-                "identifier": "BenchmarkServeHTTP",
+                "identifier": "TestReverseProxyStripHeadersPresentInConnection",
                 "newPage": false,
-                "searchKey": "httputil.BenchmarkServeHTTP",
+                "searchKey": "httputil.TestReverseProxyStripHeadersPresentInConnection",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkServeHTTP(b *testing.B)"
+                "value": "func TestReverseProxyStripHeadersPresentInConnection(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkServeHTTP(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#TestServeHTTPDeepCopy",
-              "documentation": {
-                "identifier": "TestServeHTTPDeepCopy",
-                "newPage": false,
-                "searchKey": "httputil.TestServeHTTPDeepCopy",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestServeHTTPDeepCopy(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestServeHTTPDeepCopy(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#TestClonesRequestHeaders",
-              "documentation": {
-                "identifier": "TestClonesRequestHeaders",
-                "newPage": false,
-                "searchKey": "httputil.TestClonesRequestHeaders",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestClonesRequestHeaders(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestClonesRequestHeaders(t *testing.T)\n```\n\nIssue 18327: verify we always do a deep copy of the Request.Header map before any mutations. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#TestModifyResponseClosesBody",
-              "documentation": {
-                "identifier": "TestModifyResponseClosesBody",
-                "newPage": false,
-                "searchKey": "httputil.TestModifyResponseClosesBody",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestModifyResponseClosesBody(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestModifyResponseClosesBody(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#TestReverseProxy_PanicBodyError",
-              "documentation": {
-                "identifier": "TestReverseProxy_PanicBodyError",
-                "newPage": false,
-                "searchKey": "httputil.TestReverseProxy_PanicBodyError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReverseProxy_PanicBodyError(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReverseProxy_PanicBodyError(t *testing.T)\n```\n\nIssue 23643: panic on body copy error \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httputil#TestSelectFlushInterval",
-              "documentation": {
-                "identifier": "TestSelectFlushInterval",
-                "newPage": false,
-                "searchKey": "httputil.TestSelectFlushInterval",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSelectFlushInterval(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSelectFlushInterval(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestReverseProxyStripHeadersPresentInConnection(t *testing.T)\n```\n\nIssue 16875: remove any proxied headers mentioned in the \"Connection\" header value. \n\n"
               },
               "children": null
             }
@@ -2979,7 +2605,9 @@
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyWebSocket",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -3001,7 +2629,9 @@
                 "newPage": false,
                 "searchKey": "httputil.TestReverseProxyWebSocketCancellation",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -3017,22 +2647,168 @@
           },
           {
             "node": {
-              "pathID": "/net/http/httputil#TestUnannouncedTrailer",
+              "pathID": "/net/http/httputil#TestReverseProxy_AllocatedHeader",
               "documentation": {
-                "identifier": "TestUnannouncedTrailer",
+                "identifier": "TestReverseProxy_AllocatedHeader",
                 "newPage": false,
-                "searchKey": "httputil.TestUnannouncedTrailer",
+                "searchKey": "httputil.TestReverseProxy_AllocatedHeader",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestUnannouncedTrailer(t *testing.T)"
+                "value": "func TestReverseProxy_AllocatedHeader(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestUnannouncedTrailer(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestReverseProxy_AllocatedHeader(t *testing.T)\n```\n\nIssue 33142: always allocate the request headers \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#TestReverseProxy_CopyBuffer",
+              "documentation": {
+                "identifier": "TestReverseProxy_CopyBuffer",
+                "newPage": false,
+                "searchKey": "httputil.TestReverseProxy_CopyBuffer",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReverseProxy_CopyBuffer(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReverseProxy_CopyBuffer(t *testing.T)\n```\n\nIssue 16659: log errors from short read \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#TestReverseProxy_NilBody",
+              "documentation": {
+                "identifier": "TestReverseProxy_NilBody",
+                "newPage": false,
+                "searchKey": "httputil.TestReverseProxy_NilBody",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReverseProxy_NilBody(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReverseProxy_NilBody(t *testing.T)\n```\n\nIssue 16036: send a Request with a nil Body when possible \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#TestReverseProxy_PanicBodyError",
+              "documentation": {
+                "identifier": "TestReverseProxy_PanicBodyError",
+                "newPage": false,
+                "searchKey": "httputil.TestReverseProxy_PanicBodyError",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReverseProxy_PanicBodyError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReverseProxy_PanicBodyError(t *testing.T)\n```\n\nIssue 23643: panic on body copy error \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#TestReverseProxy_Post",
+              "documentation": {
+                "identifier": "TestReverseProxy_Post",
+                "newPage": false,
+                "searchKey": "httputil.TestReverseProxy_Post",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReverseProxy_Post(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReverseProxy_Post(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#TestSelectFlushInterval",
+              "documentation": {
+                "identifier": "TestSelectFlushInterval",
+                "newPage": false,
+                "searchKey": "httputil.TestSelectFlushInterval",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSelectFlushInterval(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSelectFlushInterval(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#TestServeHTTPDeepCopy",
+              "documentation": {
+                "identifier": "TestServeHTTPDeepCopy",
+                "newPage": false,
+                "searchKey": "httputil.TestServeHTTPDeepCopy",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestServeHTTPDeepCopy(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestServeHTTPDeepCopy(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -3045,7 +2821,9 @@
                 "newPage": false,
                 "searchKey": "httputil.TestSingleJoinSlash",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -3061,22 +2839,464 @@
           },
           {
             "node": {
-              "pathID": "/net/http/httputil#TestJoinURLPath",
+              "pathID": "/net/http/httputil#TestUnannouncedTrailer",
               "documentation": {
-                "identifier": "TestJoinURLPath",
+                "identifier": "TestUnannouncedTrailer",
                 "newPage": false,
-                "searchKey": "httputil.TestJoinURLPath",
+                "searchKey": "httputil.TestUnannouncedTrailer",
                 "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnannouncedTrailer(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnannouncedTrailer(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#TestUserAgentHeader",
+              "documentation": {
+                "identifier": "TestUserAgentHeader",
+                "newPage": false,
+                "searchKey": "httputil.TestUserAgentHeader",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUserAgentHeader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUserAgentHeader(t *testing.T)\n```\n\nIssue 15524 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#TestXForwardedFor",
+              "documentation": {
+                "identifier": "TestXForwardedFor",
+                "newPage": false,
+                "searchKey": "httputil.TestXForwardedFor",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestXForwardedFor(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestXForwardedFor(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#TestXForwardedFor_Omit",
+              "documentation": {
+                "identifier": "TestXForwardedFor_Omit",
+                "newPage": false,
+                "searchKey": "httputil.TestXForwardedFor_Omit",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestXForwardedFor_Omit(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestXForwardedFor_Omit(t *testing.T)\n```\n\nIssue 38079: don't append to X-Forwarded-For if it's present but nil \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#chunk",
+              "documentation": {
+                "identifier": "chunk",
+                "newPage": false,
+                "searchKey": "httputil.chunk",
+                "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestJoinURLPath(t *testing.T)"
+                "value": "func chunk(s string) string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestJoinURLPath(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc chunk(s string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#copyHeader",
+              "documentation": {
+                "identifier": "copyHeader",
+                "newPage": false,
+                "searchKey": "httputil.copyHeader",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func copyHeader(dst, src http.Header)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc copyHeader(dst, src http.Header)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#deadline",
+              "documentation": {
+                "identifier": "deadline",
+                "newPage": false,
+                "searchKey": "httputil.deadline",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func deadline(t *testing.T, defaultDelay, needed time.Duration) time.Time"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc deadline(t *testing.T, defaultDelay, needed time.Duration) time.Time\n```\n\ndeadline returns the time which is needed before t.Deadline() if one is configured and it is s greater than needed in the future, otherwise defaultDelay from the current time. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#drainBody",
+              "documentation": {
+                "identifier": "drainBody",
+                "newPage": false,
+                "searchKey": "httputil.drainBody",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func drainBody(b io.ReadCloser) (r1, r2 io.ReadCloser, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc drainBody(b io.ReadCloser) (r1, r2 io.ReadCloser, err error)\n```\n\ndrainBody reads all of b to memory and then returns two equivalent ReadClosers yielding the same bytes. \n\nIt returns an error if the initial slurp of all bytes fails. It does not attempt to make the returned ReadClosers have identical error-matching behavior. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#init.reverseproxy_test.go",
+              "documentation": {
+                "identifier": "init.reverseproxy_test.go",
+                "newPage": false,
+                "searchKey": "httputil.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#joinURLPath",
+              "documentation": {
+                "identifier": "joinURLPath",
+                "newPage": false,
+                "searchKey": "httputil.joinURLPath",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func joinURLPath(a, b *url.URL) (path, rawpath string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc joinURLPath(a, b *url.URL) (path, rawpath string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#mustNewRequest",
+              "documentation": {
+                "identifier": "mustNewRequest",
+                "newPage": false,
+                "searchKey": "httputil.mustNewRequest",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustNewRequest(method, url string, body io.Reader) *http.Request"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustNewRequest(method, url string, body io.Reader) *http.Request\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#mustParseURL",
+              "documentation": {
+                "identifier": "mustParseURL",
+                "newPage": false,
+                "searchKey": "httputil.mustParseURL",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustParseURL(s string) *url.URL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustParseURL(s string) *url.URL\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#mustReadRequest",
+              "documentation": {
+                "identifier": "mustReadRequest",
+                "newPage": false,
+                "searchKey": "httputil.mustReadRequest",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustReadRequest(s string) *http.Request"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustReadRequest(s string) *http.Request\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#outgoingLength",
+              "documentation": {
+                "identifier": "outgoingLength",
+                "newPage": false,
+                "searchKey": "httputil.outgoingLength",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func outgoingLength(req *http.Request) int64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc outgoingLength(req *http.Request) int64\n```\n\noutGoingLength is a copy of the unexported (*http.Request).outgoingLength method. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#removeConnectionHeaders",
+              "documentation": {
+                "identifier": "removeConnectionHeaders",
+                "newPage": false,
+                "searchKey": "httputil.removeConnectionHeaders",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func removeConnectionHeaders(h http.Header)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc removeConnectionHeaders(h http.Header)\n```\n\nremoveConnectionHeaders removes hop-by-hop headers listed in the \"Connection\" header of h. See RFC 7230, section 6.1 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#req",
+              "documentation": {
+                "identifier": "req",
+                "newPage": false,
+                "searchKey": "httputil.req",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func req(t *testing.T, v string) *http.Request"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc req(t *testing.T, v string) *http.Request\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#shouldPanicOnCopyError",
+              "documentation": {
+                "identifier": "shouldPanicOnCopyError",
+                "newPage": false,
+                "searchKey": "httputil.shouldPanicOnCopyError",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func shouldPanicOnCopyError(req *http.Request) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc shouldPanicOnCopyError(req *http.Request) bool\n```\n\nshouldPanicOnCopyError reports whether the reverse proxy should panic with http.ErrAbortHandler. This is the right thing to do by default, but Go 1.10 and earlier did not, so existing unit tests weren't expecting panics. Only panic in our own tests, or when running under the HTTP server. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#singleJoiningSlash",
+              "documentation": {
+                "identifier": "singleJoiningSlash",
+                "newPage": false,
+                "searchKey": "httputil.singleJoiningSlash",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func singleJoiningSlash(a, b string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc singleJoiningSlash(a, b string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#upgradeType",
+              "documentation": {
+                "identifier": "upgradeType",
+                "newPage": false,
+                "searchKey": "httputil.upgradeType",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func upgradeType(h http.Header) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc upgradeType(h http.Header) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httputil#valueOrDefault",
+              "documentation": {
+                "identifier": "valueOrDefault",
+                "newPage": false,
+                "searchKey": "httputil.valueOrDefault",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func valueOrDefault(value, def string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc valueOrDefault(value, def string) string\n```\n\nReturn value if nonempty, def otherwise. \n\n"
               },
               "children": null
             }

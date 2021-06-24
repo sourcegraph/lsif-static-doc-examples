@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/cmd/ghe-feeder",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,122 +41,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/cmd/ghe-feeder#reposProcessedCounter",
-              "documentation": {
-                "identifier": "reposProcessedCounter",
-                "newPage": false,
-                "searchKey": "main.reposProcessedCounter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var reposProcessedCounter"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar reposProcessedCounter = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/ghe-feeder#reposFailedCounter",
-              "documentation": {
-                "identifier": "reposFailedCounter",
-                "newPage": false,
-                "searchKey": "main.reposFailedCounter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var reposFailedCounter"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar reposFailedCounter = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/ghe-feeder#reposSucceededCounter",
-              "documentation": {
-                "identifier": "reposSucceededCounter",
-                "newPage": false,
-                "searchKey": "main.reposSucceededCounter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var reposSucceededCounter"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar reposSucceededCounter = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/ghe-feeder#reposAlreadyDoneCounter",
-              "documentation": {
-                "identifier": "reposAlreadyDoneCounter",
-                "newPage": false,
-                "searchKey": "main.reposAlreadyDoneCounter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var reposAlreadyDoneCounter"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar reposAlreadyDoneCounter = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/ghe-feeder#remainingWorkGauge",
-              "documentation": {
-                "identifier": "remainingWorkGauge",
-                "newPage": false,
-                "searchKey": "main.remainingWorkGauge",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var remainingWorkGauge"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar remainingWorkGauge = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/cmd/ghe-feeder#left",
               "documentation": {
                 "identifier": "left",
                 "newPage": false,
                 "searchKey": "main.left",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
@@ -171,12 +66,135 @@
           },
           {
             "node": {
+              "pathID": "/internal/cmd/ghe-feeder#remainingWorkGauge",
+              "documentation": {
+                "identifier": "remainingWorkGauge",
+                "newPage": false,
+                "searchKey": "main.remainingWorkGauge",
+                "tags": [
+                  "variable",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var remainingWorkGauge"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar remainingWorkGauge = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#reposAlreadyDoneCounter",
+              "documentation": {
+                "identifier": "reposAlreadyDoneCounter",
+                "newPage": false,
+                "searchKey": "main.reposAlreadyDoneCounter",
+                "tags": [
+                  "variable",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var reposAlreadyDoneCounter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar reposAlreadyDoneCounter = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#reposFailedCounter",
+              "documentation": {
+                "identifier": "reposFailedCounter",
+                "newPage": false,
+                "searchKey": "main.reposFailedCounter",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var reposFailedCounter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar reposFailedCounter = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#reposProcessedCounter",
+              "documentation": {
+                "identifier": "reposProcessedCounter",
+                "newPage": false,
+                "searchKey": "main.reposProcessedCounter",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var reposProcessedCounter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar reposProcessedCounter = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#reposSucceededCounter",
+              "documentation": {
+                "identifier": "reposSucceededCounter",
+                "newPage": false,
+                "searchKey": "main.reposSucceededCounter",
+                "tags": [
+                  "variable",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var reposSucceededCounter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar reposSucceededCounter = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/cmd/ghe-feeder#right",
               "documentation": {
                 "identifier": "right",
                 "newPage": false,
                 "searchKey": "main.right",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
@@ -202,6 +220,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -222,6 +241,7 @@
                 "newPage": false,
                 "searchKey": "main.feederDB",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -242,6 +262,7 @@
                       "newPage": false,
                       "searchKey": "main.newFeederDB",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -258,12 +279,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/cmd/ghe-feeder#feederDB.declareOrg",
+                    "documentation": {
+                      "identifier": "feederDB.declareOrg",
+                      "newPage": false,
+                      "searchKey": "main.feederDB.declareOrg",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fdr *feederDB) declareOrg(org string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fdr *feederDB) declareOrg(org string) error\n```\n\ndeclareOrg adds a newly created org from one of the workers. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/cmd/ghe-feeder#feederDB.declareRepo",
                     "documentation": {
                       "identifier": "feederDB.declareRepo",
                       "newPage": false,
                       "searchKey": "main.feederDB.declareRepo",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -286,6 +331,7 @@
                       "newPage": false,
                       "searchKey": "main.feederDB.failed",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -308,6 +354,7 @@
                       "newPage": false,
                       "searchKey": "main.feederDB.succeeded",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -318,95 +365,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (fdr *feederDB) succeeded(ownerRepo string, org string) error\n```\n\nsucceeded records that a worker has successfully processed the specified ownerRepo. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/ghe-feeder#feederDB.declareOrg",
-                    "documentation": {
-                      "identifier": "feederDB.declareOrg",
-                      "newPage": false,
-                      "searchKey": "main.feederDB.declareOrg",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (fdr *feederDB) declareOrg(org string) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (fdr *feederDB) declareOrg(org string) error\n```\n\ndeclareOrg adds a newly created org from one of the workers. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/ghe-feeder#producer",
-              "documentation": {
-                "identifier": "producer",
-                "newPage": false,
-                "searchKey": "main.producer",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type producer struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype producer struct {\n\t// how many lines are remaining to be processed\n\tremaining int64\n\t// where to send each ownerRepo. the workers expect 'owner/repo' strings\n\tpipe chan<- string\n\t// sqlite DB where each ownerRepo is declared (to keep progress and to implement resume functionality)\n\tfdr *feederDB\n\t// how many we have already processed\n\tnumAlreadyDone int64\n\t// logger for the pump\n\tlogger log15.Logger\n\t// terminal UI progress bar\n\tbar *progressbar.ProgressBar\n\t// skips this many lines from the input before starting to feed into the pipe\n\tskipNumLines int64\n}\n```\n\nproducer is pumping input line by line into the pipe channel for processing by the workers. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/ghe-feeder#producer.pumpFile",
-                    "documentation": {
-                      "identifier": "producer.pumpFile",
-                      "newPage": false,
-                      "searchKey": "main.producer.pumpFile",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (prdc *producer) pumpFile(ctx context.Context, path string) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (prdc *producer) pumpFile(ctx context.Context, path string) error\n```\n\npumpFile reads the specified file line by line and feeds ownerRepo strings into the pipe \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/ghe-feeder#producer.pump",
-                    "documentation": {
-                      "identifier": "producer.pump",
-                      "newPage": false,
-                      "searchKey": "main.producer.pump",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (prdc *producer) pump(ctx context.Context) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (prdc *producer) pump(ctx context.Context) error\n```\n\npump finds all the input files specified as command line by recursively going through all specified directories and looking for '*.csv', '*.json' and '*.txt' files. \n\n"
                     },
                     "children": null
                   }
@@ -422,6 +380,7 @@
                 "newPage": false,
                 "searchKey": "main.feederError",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -442,6 +401,7 @@
                       "newPage": false,
                       "searchKey": "main.feederError.Error",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -464,6 +424,7 @@
                       "newPage": false,
                       "searchKey": "main.feederError.Unwrap",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -483,12 +444,83 @@
           },
           {
             "node": {
+              "pathID": "/internal/cmd/ghe-feeder#producer",
+              "documentation": {
+                "identifier": "producer",
+                "newPage": false,
+                "searchKey": "main.producer",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type producer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype producer struct {\n\t// how many lines are remaining to be processed\n\tremaining int64\n\t// where to send each ownerRepo. the workers expect 'owner/repo' strings\n\tpipe chan<- string\n\t// sqlite DB where each ownerRepo is declared (to keep progress and to implement resume functionality)\n\tfdr *feederDB\n\t// how many we have already processed\n\tnumAlreadyDone int64\n\t// logger for the pump\n\tlogger log15.Logger\n\t// terminal UI progress bar\n\tbar *progressbar.ProgressBar\n\t// skips this many lines from the input before starting to feed into the pipe\n\tskipNumLines int64\n}\n```\n\nproducer is pumping input line by line into the pipe channel for processing by the workers. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/ghe-feeder#producer.pump",
+                    "documentation": {
+                      "identifier": "producer.pump",
+                      "newPage": false,
+                      "searchKey": "main.producer.pump",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (prdc *producer) pump(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (prdc *producer) pump(ctx context.Context) error\n```\n\npump finds all the input files specified as command line by recursively going through all specified directories and looking for '*.csv', '*.json' and '*.txt' files. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/ghe-feeder#producer.pumpFile",
+                    "documentation": {
+                      "identifier": "producer.pumpFile",
+                      "newPage": false,
+                      "searchKey": "main.producer.pumpFile",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (prdc *producer) pumpFile(ctx context.Context, path string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (prdc *producer) pumpFile(ctx context.Context, path string) error\n```\n\npumpFile reads the specified file line by line and feeds ownerRepo strings into the pipe \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/cmd/ghe-feeder#worker",
               "documentation": {
                 "identifier": "worker",
                 "newPage": false,
                 "searchKey": "main.worker",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -503,122 +535,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/cmd/ghe-feeder#worker.run",
-                    "documentation": {
-                      "identifier": "worker.run",
-                      "newPage": false,
-                      "searchKey": "main.worker.run",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (wkr *worker) run(ctx context.Context)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (wkr *worker) run(ctx context.Context)\n```\n\nrun spins until work channel closes or context cancels \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/ghe-feeder#worker.process",
-                    "documentation": {
-                      "identifier": "worker.process",
-                      "newPage": false,
-                      "searchKey": "main.worker.process",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (wkr *worker) process(ctx context.Context, owner, repo string) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (wkr *worker) process(ctx context.Context, owner, repo string) error\n```\n\nprocess does the necessary work for one ownerRepo string: clone, declare repo in GHE through API, add remote and push \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/ghe-feeder#worker.cloneRepo",
-                    "documentation": {
-                      "identifier": "worker.cloneRepo",
-                      "newPage": false,
-                      "searchKey": "main.worker.cloneRepo",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (wkr *worker) cloneRepo(ctx context.Context, owner, repo string) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (wkr *worker) cloneRepo(ctx context.Context, owner, repo string) error\n```\n\ncloneRepo clones the specified repo from github.com into the scratchDir \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/ghe-feeder#worker.addRemote",
-                    "documentation": {
-                      "identifier": "worker.addRemote",
-                      "newPage": false,
-                      "searchKey": "main.worker.addRemote",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (wkr *worker) addRemote(ctx context.Context, gheRepo *github.Repository, owner, repo string) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (wkr *worker) addRemote(ctx context.Context, gheRepo *github.Repository, owner, repo string) error\n```\n\naddRemote declares the GHE as a remote to the cloned repo \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/ghe-feeder#worker.pushToGHE",
-                    "documentation": {
-                      "identifier": "worker.pushToGHE",
-                      "newPage": false,
-                      "searchKey": "main.worker.pushToGHE",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (wkr *worker) pushToGHE(ctx context.Context, owner, repo string) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (wkr *worker) pushToGHE(ctx context.Context, owner, repo string) error\n```\n\npushToGHE does a `git push` command to the GHE remote \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/cmd/ghe-feeder#worker.addGHEOrg",
                     "documentation": {
                       "identifier": "worker.addGHEOrg",
                       "newPage": false,
                       "searchKey": "main.worker.addGHEOrg",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -641,6 +564,7 @@
                       "newPage": false,
                       "searchKey": "main.worker.addGHERepo",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -651,6 +575,121 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (wkr *worker) addGHERepo(ctx context.Context, owner, repo string) (*github.Repository, error)\n```\n\naddGHEOrg uses the GHE API to declare the repo at the GHE \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/ghe-feeder#worker.addRemote",
+                    "documentation": {
+                      "identifier": "worker.addRemote",
+                      "newPage": false,
+                      "searchKey": "main.worker.addRemote",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (wkr *worker) addRemote(ctx context.Context, gheRepo *github.Repository, owner, repo string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (wkr *worker) addRemote(ctx context.Context, gheRepo *github.Repository, owner, repo string) error\n```\n\naddRemote declares the GHE as a remote to the cloned repo \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/ghe-feeder#worker.cloneRepo",
+                    "documentation": {
+                      "identifier": "worker.cloneRepo",
+                      "newPage": false,
+                      "searchKey": "main.worker.cloneRepo",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (wkr *worker) cloneRepo(ctx context.Context, owner, repo string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (wkr *worker) cloneRepo(ctx context.Context, owner, repo string) error\n```\n\ncloneRepo clones the specified repo from github.com into the scratchDir \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/ghe-feeder#worker.process",
+                    "documentation": {
+                      "identifier": "worker.process",
+                      "newPage": false,
+                      "searchKey": "main.worker.process",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (wkr *worker) process(ctx context.Context, owner, repo string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (wkr *worker) process(ctx context.Context, owner, repo string) error\n```\n\nprocess does the necessary work for one ownerRepo string: clone, declare repo in GHE through API, add remote and push \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/ghe-feeder#worker.pushToGHE",
+                    "documentation": {
+                      "identifier": "worker.pushToGHE",
+                      "newPage": false,
+                      "searchKey": "main.worker.pushToGHE",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (wkr *worker) pushToGHE(ctx context.Context, owner, repo string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (wkr *worker) pushToGHE(ctx context.Context, owner, repo string) error\n```\n\npushToGHE does a `git push` command to the GHE remote \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/ghe-feeder#worker.run",
+                    "documentation": {
+                      "identifier": "worker.run",
+                      "newPage": false,
+                      "searchKey": "main.worker.run",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (wkr *worker) run(ctx context.Context)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (wkr *worker) run(ctx context.Context)\n```\n\nrun spins until work channel closes or context cancels \n\n"
                     },
                     "children": null
                   }
@@ -669,6 +708,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -683,78 +723,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/cmd/ghe-feeder#main",
-              "documentation": {
-                "identifier": "main",
-                "newPage": false,
-                "searchKey": "main.main",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func main()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc main()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/ghe-feeder#stats",
-              "documentation": {
-                "identifier": "stats",
-                "newPage": false,
-                "searchKey": "main.stats",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func stats(wkrs []*worker, prdc *producer) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc stats(wkrs []*worker, prdc *producer) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/ghe-feeder#getRandomName",
-              "documentation": {
-                "identifier": "getRandomName",
-                "newPage": false,
-                "searchKey": "main.getRandomName",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func getRandomName(retry int) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc getRandomName(retry int) string\n```\n\nGetRandomName generates a random name from the list of adjectives and surnames in this package formatted as \"adjective_surname\". For example 'focused_turing'. If retry is non-zero, a random integer between 0 and 10 will be added to the end of the name, e.g `focused_turing3` \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/cmd/ghe-feeder#extractOwnerRepoFromCSVLine",
               "documentation": {
                 "identifier": "extractOwnerRepoFromCSVLine",
                 "newPage": false,
                 "searchKey": "main.extractOwnerRepoFromCSVLine",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -771,12 +746,105 @@
           },
           {
             "node": {
+              "pathID": "/internal/cmd/ghe-feeder#getRandomName",
+              "documentation": {
+                "identifier": "getRandomName",
+                "newPage": false,
+                "searchKey": "main.getRandomName",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getRandomName(retry int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getRandomName(retry int) string\n```\n\nGetRandomName generates a random name from the list of adjectives and surnames in this package formatted as \"adjective_surname\". For example 'focused_turing'. If retry is non-zero, a random integer between 0 and 10 will be added to the end of the name, e.g `focused_turing3` \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#init.worker.go",
+              "documentation": {
+                "identifier": "init.worker.go",
+                "newPage": false,
+                "searchKey": "main.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#newGHEClient",
+              "documentation": {
+                "identifier": "newGHEClient",
+                "newPage": false,
+                "searchKey": "main.newGHEClient",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newGHEClient(ctx context.Context, baseURL, uploadURL, token string) (*github.Client, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newGHEClient(ctx context.Context, baseURL, uploadURL, token string) (*github.Client, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/cmd/ghe-feeder#numLinesInFile",
               "documentation": {
                 "identifier": "numLinesInFile",
                 "newPage": false,
                 "searchKey": "main.numLinesInFile",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -799,6 +867,7 @@
                 "newPage": false,
                 "searchKey": "main.numLinesTotal",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -815,56 +884,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/ghe-feeder#newGHEClient",
-              "documentation": {
-                "identifier": "newGHEClient",
-                "newPage": false,
-                "searchKey": "main.newGHEClient",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func newGHEClient(ctx context.Context, baseURL, uploadURL, token string) (*github.Client, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc newGHEClient(ctx context.Context, baseURL, uploadURL, token string) (*github.Client, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/ghe-feeder#init.worker.go",
-              "documentation": {
-                "identifier": "init.worker.go",
-                "newPage": false,
-                "searchKey": "main.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/cmd/ghe-feeder#randomOrgNameAndSize",
               "documentation": {
                 "identifier": "randomOrgNameAndSize",
                 "newPage": false,
                 "searchKey": "main.randomOrgNameAndSize",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -875,6 +901,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc randomOrgNameAndSize() (string, int)\n```\n\nrandomOrgNameAndSize returns a random, unique name for an org and a random size of repos it should have \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#stats",
+              "documentation": {
+                "identifier": "stats",
+                "newPage": false,
+                "searchKey": "main.stats",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func stats(wkrs []*worker, prdc *producer) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc stats(wkrs []*worker, prdc *producer) string\n```\n\n"
               },
               "children": null
             }

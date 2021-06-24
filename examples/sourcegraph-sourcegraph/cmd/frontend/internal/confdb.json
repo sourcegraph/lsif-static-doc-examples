@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "cmd/frontend/internal/confdb",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,10 @@
                 "identifier": "ErrNewerEdit",
                 "newPage": false,
                 "searchKey": "confdb.ErrNewerEdit",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -68,6 +73,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -87,7 +93,9 @@
                 "identifier": "SiteConfig",
                 "newPage": false,
                 "searchKey": "confdb.SiteConfig",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -105,7 +113,9 @@
                       "identifier": "SiteCreateIfUpToDate",
                       "newPage": false,
                       "searchKey": "confdb.SiteCreateIfUpToDate",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -125,7 +135,9 @@
                       "identifier": "SiteGetLatest",
                       "newPage": false,
                       "searchKey": "confdb.SiteGetLatest",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -146,6 +158,7 @@
                       "newPage": false,
                       "searchKey": "confdb.createIfUpToDate",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -168,6 +181,7 @@
                       "newPage": false,
                       "searchKey": "confdb.getLatest",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -193,6 +207,7 @@
                 "newPage": false,
                 "searchKey": "confdb.queryable",
                 "tags": [
+                  "interface",
                   "private"
                 ]
               },
@@ -213,6 +228,7 @@
                       "newPage": false,
                       "searchKey": "confdb.newTransaction",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -241,6 +257,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -255,12 +272,85 @@
         "children": [
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/confdb#TestSiteCreateIfUpToDate",
+              "documentation": {
+                "identifier": "TestSiteCreateIfUpToDate",
+                "newPage": false,
+                "searchKey": "confdb.TestSiteCreateIfUpToDate",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSiteCreateIfUpToDate(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSiteCreateIfUpToDate(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/confdb#TestSiteCreate_RejectInvalidJSON",
+              "documentation": {
+                "identifier": "TestSiteCreate_RejectInvalidJSON",
+                "newPage": false,
+                "searchKey": "confdb.TestSiteCreate_RejectInvalidJSON",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSiteCreate_RejectInvalidJSON(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSiteCreate_RejectInvalidJSON(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/confdb#TestSiteGetLatestDefault",
+              "documentation": {
+                "identifier": "TestSiteGetLatestDefault",
+                "newPage": false,
+                "searchKey": "confdb.TestSiteGetLatestDefault",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSiteGetLatestDefault(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSiteGetLatestDefault(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/confdb#addDefault",
               "documentation": {
                 "identifier": "addDefault",
                 "newPage": false,
                 "searchKey": "confdb.addDefault",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -277,100 +367,13 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/confdb#parseQueryRows",
-              "documentation": {
-                "identifier": "parseQueryRows",
-                "newPage": false,
-                "searchKey": "confdb.parseQueryRows",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func parseQueryRows(ctx context.Context, rows *sql.Rows) ([]*SiteConfig, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc parseQueryRows(ctx context.Context, rows *sql.Rows) ([]*SiteConfig, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/confdb#TestSiteGetLatestDefault",
-              "documentation": {
-                "identifier": "TestSiteGetLatestDefault",
-                "newPage": false,
-                "searchKey": "confdb.TestSiteGetLatestDefault",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSiteGetLatestDefault(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSiteGetLatestDefault(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/confdb#TestSiteCreate_RejectInvalidJSON",
-              "documentation": {
-                "identifier": "TestSiteCreate_RejectInvalidJSON",
-                "newPage": false,
-                "searchKey": "confdb.TestSiteCreate_RejectInvalidJSON",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSiteCreate_RejectInvalidJSON(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSiteCreate_RejectInvalidJSON(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/confdb#TestSiteCreateIfUpToDate",
-              "documentation": {
-                "identifier": "TestSiteCreateIfUpToDate",
-                "newPage": false,
-                "searchKey": "confdb.TestSiteCreateIfUpToDate",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSiteCreateIfUpToDate(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSiteCreateIfUpToDate(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/confdb#init.db_test.go",
               "documentation": {
                 "identifier": "init.db_test.go",
                 "newPage": false,
                 "searchKey": "confdb.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -381,6 +384,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/confdb#parseQueryRows",
+              "documentation": {
+                "identifier": "parseQueryRows",
+                "newPage": false,
+                "searchKey": "confdb.parseQueryRows",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseQueryRows(ctx context.Context, rows *sql.Rows) ([]*SiteConfig, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseQueryRows(ctx context.Context, rows *sql.Rows) ([]*SiteConfig, error)\n```\n\n"
               },
               "children": null
             }

@@ -30,13 +30,13 @@ Note especially that this package does not itself change behavior at run time ba
     * [const PreemptibleLoops](#PreemptibleLoops)
     * [const PreemptibleLoopsInt](#PreemptibleLoopsInt)
     * [const Regabi](#Regabi)
-    * [const RegabiInt](#RegabiInt)
     * [const RegabiArgs](#RegabiArgs)
     * [const RegabiArgsInt](#RegabiArgsInt)
     * [const RegabiDefer](#RegabiDefer)
     * [const RegabiDeferInt](#RegabiDeferInt)
     * [const RegabiG](#RegabiG)
     * [const RegabiGInt](#RegabiGInt)
+    * [const RegabiInt](#RegabiInt)
     * [const RegabiReflect](#RegabiReflect)
     * [const RegabiReflectInt](#RegabiReflectInt)
     * [const RegabiWrappers](#RegabiWrappers)
@@ -50,13 +50,14 @@ Note especially that this package does not itself change behavior at run time ba
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="FieldTrack" href="#FieldTrack">const FieldTrack</a>
 
 ```
 searchKey: goexperiment.FieldTrack
+tags: [constant boolean]
 ```
 
 ```Go
@@ -67,6 +68,7 @@ const FieldTrack = false
 
 ```
 searchKey: goexperiment.FieldTrackInt
+tags: [constant number]
 ```
 
 ```Go
@@ -77,6 +79,7 @@ const FieldTrackInt = 0
 
 ```
 searchKey: goexperiment.PreemptibleLoops
+tags: [constant boolean]
 ```
 
 ```Go
@@ -87,6 +90,7 @@ const PreemptibleLoops = false
 
 ```
 searchKey: goexperiment.PreemptibleLoopsInt
+tags: [constant number]
 ```
 
 ```Go
@@ -97,26 +101,18 @@ const PreemptibleLoopsInt = 0
 
 ```
 searchKey: goexperiment.Regabi
+tags: [constant boolean]
 ```
 
 ```Go
 const Regabi = false
 ```
 
-### <a id="RegabiInt" href="#RegabiInt">const RegabiInt</a>
-
-```
-searchKey: goexperiment.RegabiInt
-```
-
-```Go
-const RegabiInt = 0
-```
-
 ### <a id="RegabiArgs" href="#RegabiArgs">const RegabiArgs</a>
 
 ```
 searchKey: goexperiment.RegabiArgs
+tags: [constant boolean]
 ```
 
 ```Go
@@ -127,6 +123,7 @@ const RegabiArgs = false
 
 ```
 searchKey: goexperiment.RegabiArgsInt
+tags: [constant number]
 ```
 
 ```Go
@@ -137,6 +134,7 @@ const RegabiArgsInt = 0
 
 ```
 searchKey: goexperiment.RegabiDefer
+tags: [constant boolean]
 ```
 
 ```Go
@@ -147,6 +145,7 @@ const RegabiDefer = false
 
 ```
 searchKey: goexperiment.RegabiDeferInt
+tags: [constant number]
 ```
 
 ```Go
@@ -157,6 +156,7 @@ const RegabiDeferInt = 0
 
 ```
 searchKey: goexperiment.RegabiG
+tags: [constant boolean]
 ```
 
 ```Go
@@ -167,16 +167,29 @@ const RegabiG = false
 
 ```
 searchKey: goexperiment.RegabiGInt
+tags: [constant number]
 ```
 
 ```Go
 const RegabiGInt = 0
 ```
 
+### <a id="RegabiInt" href="#RegabiInt">const RegabiInt</a>
+
+```
+searchKey: goexperiment.RegabiInt
+tags: [constant number]
+```
+
+```Go
+const RegabiInt = 0
+```
+
 ### <a id="RegabiReflect" href="#RegabiReflect">const RegabiReflect</a>
 
 ```
 searchKey: goexperiment.RegabiReflect
+tags: [constant boolean]
 ```
 
 ```Go
@@ -187,6 +200,7 @@ const RegabiReflect = false
 
 ```
 searchKey: goexperiment.RegabiReflectInt
+tags: [constant number]
 ```
 
 ```Go
@@ -197,6 +211,7 @@ const RegabiReflectInt = 0
 
 ```
 searchKey: goexperiment.RegabiWrappers
+tags: [constant boolean]
 ```
 
 ```Go
@@ -207,6 +222,7 @@ const RegabiWrappers = false
 
 ```
 searchKey: goexperiment.RegabiWrappersInt
+tags: [constant number]
 ```
 
 ```Go
@@ -217,6 +233,7 @@ const RegabiWrappersInt = 0
 
 ```
 searchKey: goexperiment.StaticLockRanking
+tags: [constant boolean]
 ```
 
 ```Go
@@ -227,6 +244,7 @@ const StaticLockRanking = false
 
 ```
 searchKey: goexperiment.StaticLockRankingInt
+tags: [constant number]
 ```
 
 ```Go
@@ -236,13 +254,14 @@ const StaticLockRankingInt = 0
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Flags" href="#Flags">type Flags struct</a>
 
 ```
 searchKey: goexperiment.Flags
+tags: [struct]
 ```
 
 ```Go

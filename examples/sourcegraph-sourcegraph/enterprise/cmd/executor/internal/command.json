@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/cmd/executor/internal/command",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,10 @@
                 "identifier": "ScriptsPath",
                 "newPage": false,
                 "searchKey": "command.ScriptsPath",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -65,6 +70,8 @@
                 "newPage": false,
                 "searchKey": "command.firecrackerContainerDir",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -90,6 +97,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -104,12 +112,87 @@
         "children": [
           {
             "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#ErrIllegalCommand",
+              "documentation": {
+                "identifier": "ErrIllegalCommand",
+                "newPage": false,
+                "searchKey": "command.ErrIllegalCommand",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrIllegalCommand"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrIllegalCommand = errors.New(\"illegal command\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#allowedBinaries",
+              "documentation": {
+                "identifier": "allowedBinaries",
+                "newPage": false,
+                "searchKey": "command.allowedBinaries",
+                "tags": [
+                  "variable",
+                  "array",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var allowedBinaries"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar allowedBinaries = []string{\n\t\"docker\",\n\t\"git\",\n\t\"ignite\",\n\t\"src\",\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#commandComparer",
+              "documentation": {
+                "identifier": "commandComparer",
+                "newPage": false,
+                "searchKey": "command.commandComparer",
+                "tags": [
+                  "variable",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var commandComparer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar commandComparer = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/executor/internal/command#commonFirecrackerFlags",
               "documentation": {
                 "identifier": "commonFirecrackerFlags",
                 "newPage": false,
                 "searchKey": "command.commonFirecrackerFlags",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
@@ -126,12 +209,38 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#defaultRunner",
+              "documentation": {
+                "identifier": "defaultRunner",
+                "newPage": false,
+                "searchKey": "command.defaultRunner",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var defaultRunner"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar defaultRunner = &runnerWrapper{}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/executor/internal/command#igniteRunLock",
               "documentation": {
                 "identifier": "igniteRunLock",
                 "newPage": false,
                 "searchKey": "command.igniteRunLock",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -154,6 +263,8 @@
                 "newPage": false,
                 "searchKey": "command.imagePattern",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -164,92 +275,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar imagePattern = lazyregexp.New(`([^:@]+)(?::([^@]+))?(?:@sha256:([a-z0-9]{64}))?`)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#allowedBinaries",
-              "documentation": {
-                "identifier": "allowedBinaries",
-                "newPage": false,
-                "searchKey": "command.allowedBinaries",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var allowedBinaries"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar allowedBinaries = []string{\n\t\"docker\",\n\t\"git\",\n\t\"ignite\",\n\t\"src\",\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#ErrIllegalCommand",
-              "documentation": {
-                "identifier": "ErrIllegalCommand",
-                "newPage": false,
-                "searchKey": "command.ErrIllegalCommand",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ErrIllegalCommand"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ErrIllegalCommand = errors.New(\"illegal command\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#defaultRunner",
-              "documentation": {
-                "identifier": "defaultRunner",
-                "newPage": false,
-                "searchKey": "command.defaultRunner",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var defaultRunner"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar defaultRunner = &runnerWrapper{}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#commandComparer",
-              "documentation": {
-                "identifier": "commandComparer",
-                "newPage": false,
-                "searchKey": "command.commandComparer",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var commandComparer"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar commandComparer = ...\n```\n\n"
               },
               "children": null
             }
@@ -265,6 +290,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -279,678 +305,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#commandRunner",
-              "documentation": {
-                "identifier": "commandRunner",
-                "newPage": false,
-                "searchKey": "command.commandRunner",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type commandRunner interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype commandRunner interface {\n\tRunCommand(ctx context.Context, command command, logger *Logger) error\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#Logger",
-              "documentation": {
-                "identifier": "Logger",
-                "newPage": false,
-                "searchKey": "command.Logger",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Logger struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Logger struct {\n\treplacer *strings.Replacer\n\tentries  []workerutil.ExecutionLogEntry\n}\n```\n\nLogger tracks command invocations and stores the command's output and error stream values. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor/internal/command#NewLogger",
-                    "documentation": {
-                      "identifier": "NewLogger",
-                      "newPage": false,
-                      "searchKey": "command.NewLogger",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewLogger(replacements map[string]string) *Logger"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewLogger(replacements map[string]string) *Logger\n```\n\nNewLogger creates a new logger instance with the given replacement map. When the log messages are serialized, any occurrence of sensitive values are replace with a non-sensitive value. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor/internal/command#Logger.Log",
-                    "documentation": {
-                      "identifier": "Logger.Log",
-                      "newPage": false,
-                      "searchKey": "command.Logger.Log",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (l *Logger) Log(entry workerutil.ExecutionLogEntry)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (l *Logger) Log(entry workerutil.ExecutionLogEntry)\n```\n\nLog redacts secrets from the given log entry and stores it. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor/internal/command#Logger.Entries",
-                    "documentation": {
-                      "identifier": "Logger.Entries",
-                      "newPage": false,
-                      "searchKey": "command.Logger.Entries",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (l *Logger) Entries() (entries []workerutil.ExecutionLogEntry)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (l *Logger) Entries() (entries []workerutil.ExecutionLogEntry)\n```\n\nEntries returns a copy of the stored log entries. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#Operations",
-              "documentation": {
-                "identifier": "Operations",
-                "newPage": false,
-                "searchKey": "command.Operations",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Operations struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Operations struct {\n\tSetupGitInit              *observation.Operation\n\tSetupGitFetch             *observation.Operation\n\tSetupAddRemote            *observation.Operation\n\tSetupGitCheckout          *observation.Operation\n\tSetupDockerPull           *observation.Operation\n\tSetupDockerSave           *observation.Operation\n\tSetupDockerLoad           *observation.Operation\n\tSetupFirecrackerStart     *observation.Operation\n\tSetupRm                   *observation.Operation\n\tTeardownFirecrackerStop   *observation.Operation\n\tTeardownFirecrackerRemove *observation.Operation\n\tExec                      *observation.Operation\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor/internal/command#NewOperations",
-                    "documentation": {
-                      "identifier": "NewOperations",
-                      "newPage": false,
-                      "searchKey": "command.NewOperations",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewOperations(observationContext *observation.Context) *Operations"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewOperations(observationContext *observation.Context) *Operations\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#command",
-              "documentation": {
-                "identifier": "command",
-                "newPage": false,
-                "searchKey": "command.command",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type command struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype command struct {\n\tKey       string\n\tCommand   []string\n\tDir       string\n\tEnv       []string\n\tOperation *observation.Operation\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor/internal/command#formatRawOrDockerCommand",
-                    "documentation": {
-                      "identifier": "formatRawOrDockerCommand",
-                      "newPage": false,
-                      "searchKey": "command.formatRawOrDockerCommand",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func formatRawOrDockerCommand(spec CommandSpec, dir string, options Options) command"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc formatRawOrDockerCommand(spec CommandSpec, dir string, options Options) command\n```\n\nformatRawOrDockerCommand constructs the command to run on the host in order to invoke the given spec. If the spec does not specify an image, then the command will be run _directly_ on the host. Otherwise, the command will be run inside of a one-shot docker container subject to the resource limits specified in the given options. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor/internal/command#formatFirecrackerCommand",
-                    "documentation": {
-                      "identifier": "formatFirecrackerCommand",
-                      "newPage": false,
-                      "searchKey": "command.formatFirecrackerCommand",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func formatFirecrackerCommand(spec CommandSpec, name, repoDir string, options Options) command"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc formatFirecrackerCommand(spec CommandSpec, name, repoDir string, options Options) command\n```\n\nformatFirecrackerCommand constructs the command to run on the host via a Firecracker virtual machine in order to invoke the given spec. If the spec specifies an image, then the command will be run inside of a container inside of the VM. Otherwise, the command will be run inside of the VM. The containers are one-shot and subject to the resource limits specified in the given options. \n\nThe name value supplied here refers to the Firecracker virtual machine, which must have also been the name supplied to a successful invocation of setupFirecracker. Additionally, the virtual machine must not yet have been torn down (via teardownFirecracker). \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#Runner",
-              "documentation": {
-                "identifier": "Runner",
-                "newPage": false,
-                "searchKey": "command.Runner",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Runner interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Runner interface {\n\t// Setup prepares the runner to invoke a series of commands.\n\tSetup(ctx context.Context, imageNames, scriptPaths []string) error\n\n\t// Teardown disposes of any resources created in Setup.\n\tTeardown(ctx context.Context) error\n\n\t// Run invokes a command in the runner context.\n\tRun(ctx context.Context, command CommandSpec) error\n}\n```\n\nRunner is the interface between an executor and the host on which commands are invoked. Having this interface at this level allows us to use the same code paths for local development (via shell + docker) as well as production usage (via Firecracker). \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor/internal/command#NewRunner",
-                    "documentation": {
-                      "identifier": "NewRunner",
-                      "newPage": false,
-                      "searchKey": "command.NewRunner",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewRunner(dir string, logger *Logger, options Options, operations *Operations) Runner"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewRunner(dir string, logger *Logger, options Options, operations *Operations) Runner\n```\n\nNewRunner creates a new runner with the given options. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#CommandSpec",
-              "documentation": {
-                "identifier": "CommandSpec",
-                "newPage": false,
-                "searchKey": "command.CommandSpec",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type CommandSpec struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype CommandSpec struct {\n\tKey        string\n\tImage      string\n\tScriptPath string\n\tCommand    []string\n\tDir        string\n\tEnv        []string\n\tOperation  *observation.Operation\n}\n```\n\nCommandSpec represents a command that can be run on a machine, whether that is the host, in a virtual machine, or in a docker container. If an image is supplied, then the command will be run in a one-shot docker container. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#Options",
-              "documentation": {
-                "identifier": "Options",
-                "newPage": false,
-                "searchKey": "command.Options",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Options struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Options struct {\n\t// ExecutorName is a unique identifier for the requesting executor.\n\tExecutorName string\n\n\t// FirecrackerOptions configures the behavior of Firecracker virtual machine creation.\n\tFirecrackerOptions FirecrackerOptions\n\n\t// ResourceOptions configures the resource limits of docker container and Firecracker\n\t// virtual machines running on the executor.\n\tResourceOptions ResourceOptions\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#FirecrackerOptions",
-              "documentation": {
-                "identifier": "FirecrackerOptions",
-                "newPage": false,
-                "searchKey": "command.FirecrackerOptions",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type FirecrackerOptions struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype FirecrackerOptions struct {\n\t// Enabled determines if commands will be run in Firecracker virtual machines.\n\tEnabled bool\n\n\t// Image is the base image used for all Firecracker virtual machines.\n\tImage string\n\n\t// ImageArchivesPath is a path on the host where docker image tarfiles will be stored.\n\tImageArchivesPath string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#ResourceOptions",
-              "documentation": {
-                "identifier": "ResourceOptions",
-                "newPage": false,
-                "searchKey": "command.ResourceOptions",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ResourceOptions struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ResourceOptions struct {\n\t// NumCPUs is the number of virtual CPUs a container or VM can use.\n\tNumCPUs int\n\n\t// Memory is the maximum amount of memory a container or VM can use.\n\tMemory string\n\n\t// DiskSpace is the maximum amount of disk a container or VM can use.\n\tDiskSpace string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#dockerRunner",
-              "documentation": {
-                "identifier": "dockerRunner",
-                "newPage": false,
-                "searchKey": "command.dockerRunner",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type dockerRunner struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype dockerRunner struct {\n\tdir     string\n\tlogger  *Logger\n\toptions Options\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor/internal/command#dockerRunner.Setup",
-                    "documentation": {
-                      "identifier": "dockerRunner.Setup",
-                      "newPage": false,
-                      "searchKey": "command.dockerRunner.Setup",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *dockerRunner) Setup(ctx context.Context, imageNames, scriptPaths []string) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *dockerRunner) Setup(ctx context.Context, imageNames, scriptPaths []string) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor/internal/command#dockerRunner.Teardown",
-                    "documentation": {
-                      "identifier": "dockerRunner.Teardown",
-                      "newPage": false,
-                      "searchKey": "command.dockerRunner.Teardown",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *dockerRunner) Teardown(ctx context.Context) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *dockerRunner) Teardown(ctx context.Context) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor/internal/command#dockerRunner.Run",
-                    "documentation": {
-                      "identifier": "dockerRunner.Run",
-                      "newPage": false,
-                      "searchKey": "command.dockerRunner.Run",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *dockerRunner) Run(ctx context.Context, command CommandSpec) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *dockerRunner) Run(ctx context.Context, command CommandSpec) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#firecrackerRunner",
-              "documentation": {
-                "identifier": "firecrackerRunner",
-                "newPage": false,
-                "searchKey": "command.firecrackerRunner",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type firecrackerRunner struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype firecrackerRunner struct {\n\tname       string\n\tdir        string\n\tlogger     *Logger\n\toptions    Options\n\toperations *Operations\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor/internal/command#firecrackerRunner.Setup",
-                    "documentation": {
-                      "identifier": "firecrackerRunner.Setup",
-                      "newPage": false,
-                      "searchKey": "command.firecrackerRunner.Setup",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *firecrackerRunner) Setup(ctx context.Context, imageNames, scriptPaths []string) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *firecrackerRunner) Setup(ctx context.Context, imageNames, scriptPaths []string) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor/internal/command#firecrackerRunner.Teardown",
-                    "documentation": {
-                      "identifier": "firecrackerRunner.Teardown",
-                      "newPage": false,
-                      "searchKey": "command.firecrackerRunner.Teardown",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *firecrackerRunner) Teardown(ctx context.Context) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *firecrackerRunner) Teardown(ctx context.Context) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor/internal/command#firecrackerRunner.Run",
-                    "documentation": {
-                      "identifier": "firecrackerRunner.Run",
-                      "newPage": false,
-                      "searchKey": "command.firecrackerRunner.Run",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *firecrackerRunner) Run(ctx context.Context, command CommandSpec) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *firecrackerRunner) Run(ctx context.Context, command CommandSpec) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#runnerWrapper",
-              "documentation": {
-                "identifier": "runnerWrapper",
-                "newPage": false,
-                "searchKey": "command.runnerWrapper",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type runnerWrapper struct{}"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype runnerWrapper struct{}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor/internal/command#runnerWrapper.RunCommand",
-                    "documentation": {
-                      "identifier": "runnerWrapper.RunCommand",
-                      "newPage": false,
-                      "searchKey": "command.runnerWrapper.RunCommand",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (runnerWrapper) RunCommand(ctx context.Context, command command, logger *Logger) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (runnerWrapper) RunCommand(ctx context.Context, command command, logger *Logger) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#MockCommandRunner",
-              "documentation": {
-                "identifier": "MockCommandRunner",
-                "newPage": false,
-                "searchKey": "command.MockCommandRunner",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type MockCommandRunner struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype MockCommandRunner struct {\n\t// RunCommandFunc is an instance of a mock function object controlling\n\t// the behavior of the method RunCommand.\n\tRunCommandFunc *CommandRunnerRunCommandFunc\n}\n```\n\nMockCommandRunner is a mock implementation of the commandRunner interface (from the package github.com/sourcegraph/sourcegraph/enterprise/cmd/executor/internal/command) used for unit testing. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor/internal/command#NewMockCommandRunner",
-                    "documentation": {
-                      "identifier": "NewMockCommandRunner",
-                      "newPage": false,
-                      "searchKey": "command.NewMockCommandRunner",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewMockCommandRunner() *MockCommandRunner"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewMockCommandRunner() *MockCommandRunner\n```\n\nNewMockCommandRunner creates a new mock of the commandRunner interface. All methods return zero values for all results, unless overwritten. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor/internal/command#NewMockCommandRunnerFrom",
-                    "documentation": {
-                      "identifier": "NewMockCommandRunnerFrom",
-                      "newPage": false,
-                      "searchKey": "command.NewMockCommandRunnerFrom",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewMockCommandRunnerFrom(i surrogateMockCommandRunner) *MockCommandRunner"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewMockCommandRunnerFrom(i surrogateMockCommandRunner) *MockCommandRunner\n```\n\nNewMockCommandRunnerFrom creates a new mock of the MockCommandRunner interface. All methods delegate to the given implementation, unless overwritten. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor/internal/command#MockCommandRunner.RunCommand",
-                    "documentation": {
-                      "identifier": "MockCommandRunner.RunCommand",
-                      "newPage": false,
-                      "searchKey": "command.MockCommandRunner.RunCommand",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *MockCommandRunner) RunCommand(v0 context.Context, v1 command, v2 *Logger) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *MockCommandRunner) RunCommand(v0 context.Context, v1 command, v2 *Logger) error\n```\n\nRunCommand delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#surrogateMockCommandRunner",
-              "documentation": {
-                "identifier": "surrogateMockCommandRunner",
-                "newPage": false,
-                "searchKey": "command.surrogateMockCommandRunner",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type surrogateMockCommandRunner interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype surrogateMockCommandRunner interface {\n\tRunCommand(context.Context, command, *Logger) error\n}\n```\n\nsurrogateMockCommandRunner is a copy of the commandRunner interface (from the package github.com/sourcegraph/sourcegraph/enterprise/cmd/executor/internal/command). It is redefined here as it is unexported in the source package. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/executor/internal/command#CommandRunnerRunCommandFunc",
               "documentation": {
                 "identifier": "CommandRunnerRunCommandFunc",
                 "newPage": false,
                 "searchKey": "command.CommandRunnerRunCommandFunc",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -965,22 +326,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/executor/internal/command#CommandRunnerRunCommandFunc.SetDefaultHook",
+                    "pathID": "/enterprise/cmd/executor/internal/command#CommandRunnerRunCommandFunc.History",
                     "documentation": {
-                      "identifier": "CommandRunnerRunCommandFunc.SetDefaultHook",
+                      "identifier": "CommandRunnerRunCommandFunc.History",
                       "newPage": false,
-                      "searchKey": "command.CommandRunnerRunCommandFunc.SetDefaultHook",
+                      "searchKey": "command.CommandRunnerRunCommandFunc.History",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *CommandRunnerRunCommandFunc) SetDefaultHook(hook func(context.Context, command, *Logger) error)"
+                      "value": "func (f *CommandRunnerRunCommandFunc) History() []CommandRunnerRunCommandFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommandRunnerRunCommandFunc) SetDefaultHook(hook func(context.Context, command, *Logger) error)\n```\n\nSetDefaultHook sets function that is called when the RunCommand method of the parent MockCommandRunner instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *CommandRunnerRunCommandFunc) History() []CommandRunnerRunCommandFuncCall\n```\n\nHistory returns a sequence of CommandRunnerRunCommandFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -993,6 +355,7 @@
                       "newPage": false,
                       "searchKey": "command.CommandRunnerRunCommandFunc.PushHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1009,34 +372,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/executor/internal/command#CommandRunnerRunCommandFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "CommandRunnerRunCommandFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "command.CommandRunnerRunCommandFunc.SetDefaultReturn",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommandRunnerRunCommandFunc) SetDefaultReturn(r0 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommandRunnerRunCommandFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/cmd/executor/internal/command#CommandRunnerRunCommandFunc.PushReturn",
                     "documentation": {
                       "identifier": "CommandRunnerRunCommandFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "command.CommandRunnerRunCommandFunc.PushReturn",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1053,22 +395,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/executor/internal/command#CommandRunnerRunCommandFunc.nextHook",
+                    "pathID": "/enterprise/cmd/executor/internal/command#CommandRunnerRunCommandFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "CommandRunnerRunCommandFunc.nextHook",
+                      "identifier": "CommandRunnerRunCommandFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "command.CommandRunnerRunCommandFunc.nextHook",
+                      "searchKey": "command.CommandRunnerRunCommandFunc.SetDefaultHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *CommandRunnerRunCommandFunc) nextHook() func(context.Context, command, *Logger) error"
+                      "value": "func (f *CommandRunnerRunCommandFunc) SetDefaultHook(hook func(context.Context, command, *Logger) error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommandRunnerRunCommandFunc) nextHook() func(context.Context, command, *Logger) error\n```\n\n"
+                      "value": "```Go\nfunc (f *CommandRunnerRunCommandFunc) SetDefaultHook(hook func(context.Context, command, *Logger) error)\n```\n\nSetDefaultHook sets function that is called when the RunCommand method of the parent MockCommandRunner instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/command#CommandRunnerRunCommandFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "CommandRunnerRunCommandFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "command.CommandRunnerRunCommandFunc.SetDefaultReturn",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommandRunnerRunCommandFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommandRunnerRunCommandFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -1081,6 +447,7 @@
                       "newPage": false,
                       "searchKey": "command.CommandRunnerRunCommandFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1097,22 +464,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/executor/internal/command#CommandRunnerRunCommandFunc.History",
+                    "pathID": "/enterprise/cmd/executor/internal/command#CommandRunnerRunCommandFunc.nextHook",
                     "documentation": {
-                      "identifier": "CommandRunnerRunCommandFunc.History",
+                      "identifier": "CommandRunnerRunCommandFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "command.CommandRunnerRunCommandFunc.History",
+                      "searchKey": "command.CommandRunnerRunCommandFunc.nextHook",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *CommandRunnerRunCommandFunc) History() []CommandRunnerRunCommandFuncCall"
+                      "value": "func (f *CommandRunnerRunCommandFunc) nextHook() func(context.Context, command, *Logger) error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommandRunnerRunCommandFunc) History() []CommandRunnerRunCommandFuncCall\n```\n\nHistory returns a sequence of CommandRunnerRunCommandFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *CommandRunnerRunCommandFunc) nextHook() func(context.Context, command, *Logger) error\n```\n\n"
                     },
                     "children": null
                   }
@@ -1128,6 +496,7 @@
                 "newPage": false,
                 "searchKey": "command.CommandRunnerRunCommandFuncCall",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1148,6 +517,7 @@
                       "newPage": false,
                       "searchKey": "command.CommandRunnerRunCommandFuncCall.Args",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1170,6 +540,7 @@
                       "newPage": false,
                       "searchKey": "command.CommandRunnerRunCommandFuncCall.Results",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1186,6 +557,715 @@
                 }
               ]
             }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#CommandSpec",
+              "documentation": {
+                "identifier": "CommandSpec",
+                "newPage": false,
+                "searchKey": "command.CommandSpec",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommandSpec struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommandSpec struct {\n\tKey        string\n\tImage      string\n\tScriptPath string\n\tCommand    []string\n\tDir        string\n\tEnv        []string\n\tOperation  *observation.Operation\n}\n```\n\nCommandSpec represents a command that can be run on a machine, whether that is the host, in a virtual machine, or in a docker container. If an image is supplied, then the command will be run in a one-shot docker container. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#FirecrackerOptions",
+              "documentation": {
+                "identifier": "FirecrackerOptions",
+                "newPage": false,
+                "searchKey": "command.FirecrackerOptions",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FirecrackerOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FirecrackerOptions struct {\n\t// Enabled determines if commands will be run in Firecracker virtual machines.\n\tEnabled bool\n\n\t// Image is the base image used for all Firecracker virtual machines.\n\tImage string\n\n\t// ImageArchivesPath is a path on the host where docker image tarfiles will be stored.\n\tImageArchivesPath string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#Logger",
+              "documentation": {
+                "identifier": "Logger",
+                "newPage": false,
+                "searchKey": "command.Logger",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Logger struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Logger struct {\n\treplacer *strings.Replacer\n\tentries  []workerutil.ExecutionLogEntry\n}\n```\n\nLogger tracks command invocations and stores the command's output and error stream values. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/command#NewLogger",
+                    "documentation": {
+                      "identifier": "NewLogger",
+                      "newPage": false,
+                      "searchKey": "command.NewLogger",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewLogger(replacements map[string]string) *Logger"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewLogger(replacements map[string]string) *Logger\n```\n\nNewLogger creates a new logger instance with the given replacement map. When the log messages are serialized, any occurrence of sensitive values are replace with a non-sensitive value. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/command#Logger.Entries",
+                    "documentation": {
+                      "identifier": "Logger.Entries",
+                      "newPage": false,
+                      "searchKey": "command.Logger.Entries",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *Logger) Entries() (entries []workerutil.ExecutionLogEntry)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *Logger) Entries() (entries []workerutil.ExecutionLogEntry)\n```\n\nEntries returns a copy of the stored log entries. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/command#Logger.Log",
+                    "documentation": {
+                      "identifier": "Logger.Log",
+                      "newPage": false,
+                      "searchKey": "command.Logger.Log",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *Logger) Log(entry workerutil.ExecutionLogEntry)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *Logger) Log(entry workerutil.ExecutionLogEntry)\n```\n\nLog redacts secrets from the given log entry and stores it. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#MockCommandRunner",
+              "documentation": {
+                "identifier": "MockCommandRunner",
+                "newPage": false,
+                "searchKey": "command.MockCommandRunner",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockCommandRunner struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockCommandRunner struct {\n\t// RunCommandFunc is an instance of a mock function object controlling\n\t// the behavior of the method RunCommand.\n\tRunCommandFunc *CommandRunnerRunCommandFunc\n}\n```\n\nMockCommandRunner is a mock implementation of the commandRunner interface (from the package github.com/sourcegraph/sourcegraph/enterprise/cmd/executor/internal/command) used for unit testing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/command#NewMockCommandRunner",
+                    "documentation": {
+                      "identifier": "NewMockCommandRunner",
+                      "newPage": false,
+                      "searchKey": "command.NewMockCommandRunner",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockCommandRunner() *MockCommandRunner"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockCommandRunner() *MockCommandRunner\n```\n\nNewMockCommandRunner creates a new mock of the commandRunner interface. All methods return zero values for all results, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/command#NewMockCommandRunnerFrom",
+                    "documentation": {
+                      "identifier": "NewMockCommandRunnerFrom",
+                      "newPage": false,
+                      "searchKey": "command.NewMockCommandRunnerFrom",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockCommandRunnerFrom(i surrogateMockCommandRunner) *MockCommandRunner"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockCommandRunnerFrom(i surrogateMockCommandRunner) *MockCommandRunner\n```\n\nNewMockCommandRunnerFrom creates a new mock of the MockCommandRunner interface. All methods delegate to the given implementation, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/command#MockCommandRunner.RunCommand",
+                    "documentation": {
+                      "identifier": "MockCommandRunner.RunCommand",
+                      "newPage": false,
+                      "searchKey": "command.MockCommandRunner.RunCommand",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockCommandRunner) RunCommand(v0 context.Context, v1 command, v2 *Logger) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockCommandRunner) RunCommand(v0 context.Context, v1 command, v2 *Logger) error\n```\n\nRunCommand delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#Operations",
+              "documentation": {
+                "identifier": "Operations",
+                "newPage": false,
+                "searchKey": "command.Operations",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Operations struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Operations struct {\n\tSetupGitInit              *observation.Operation\n\tSetupGitFetch             *observation.Operation\n\tSetupAddRemote            *observation.Operation\n\tSetupGitCheckout          *observation.Operation\n\tSetupDockerPull           *observation.Operation\n\tSetupDockerSave           *observation.Operation\n\tSetupDockerLoad           *observation.Operation\n\tSetupFirecrackerStart     *observation.Operation\n\tSetupRm                   *observation.Operation\n\tTeardownFirecrackerStop   *observation.Operation\n\tTeardownFirecrackerRemove *observation.Operation\n\tExec                      *observation.Operation\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/command#NewOperations",
+                    "documentation": {
+                      "identifier": "NewOperations",
+                      "newPage": false,
+                      "searchKey": "command.NewOperations",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewOperations(observationContext *observation.Context) *Operations"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewOperations(observationContext *observation.Context) *Operations\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#Options",
+              "documentation": {
+                "identifier": "Options",
+                "newPage": false,
+                "searchKey": "command.Options",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Options struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Options struct {\n\t// ExecutorName is a unique identifier for the requesting executor.\n\tExecutorName string\n\n\t// FirecrackerOptions configures the behavior of Firecracker virtual machine creation.\n\tFirecrackerOptions FirecrackerOptions\n\n\t// ResourceOptions configures the resource limits of docker container and Firecracker\n\t// virtual machines running on the executor.\n\tResourceOptions ResourceOptions\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#ResourceOptions",
+              "documentation": {
+                "identifier": "ResourceOptions",
+                "newPage": false,
+                "searchKey": "command.ResourceOptions",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ResourceOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ResourceOptions struct {\n\t// NumCPUs is the number of virtual CPUs a container or VM can use.\n\tNumCPUs int\n\n\t// Memory is the maximum amount of memory a container or VM can use.\n\tMemory string\n\n\t// DiskSpace is the maximum amount of disk a container or VM can use.\n\tDiskSpace string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#Runner",
+              "documentation": {
+                "identifier": "Runner",
+                "newPage": false,
+                "searchKey": "command.Runner",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Runner interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Runner interface {\n\t// Setup prepares the runner to invoke a series of commands.\n\tSetup(ctx context.Context, imageNames, scriptPaths []string) error\n\n\t// Teardown disposes of any resources created in Setup.\n\tTeardown(ctx context.Context) error\n\n\t// Run invokes a command in the runner context.\n\tRun(ctx context.Context, command CommandSpec) error\n}\n```\n\nRunner is the interface between an executor and the host on which commands are invoked. Having this interface at this level allows us to use the same code paths for local development (via shell + docker) as well as production usage (via Firecracker). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/command#NewRunner",
+                    "documentation": {
+                      "identifier": "NewRunner",
+                      "newPage": false,
+                      "searchKey": "command.NewRunner",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewRunner(dir string, logger *Logger, options Options, operations *Operations) Runner"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewRunner(dir string, logger *Logger, options Options, operations *Operations) Runner\n```\n\nNewRunner creates a new runner with the given options. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#command",
+              "documentation": {
+                "identifier": "command",
+                "newPage": false,
+                "searchKey": "command.command",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type command struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype command struct {\n\tKey       string\n\tCommand   []string\n\tDir       string\n\tEnv       []string\n\tOperation *observation.Operation\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/command#formatFirecrackerCommand",
+                    "documentation": {
+                      "identifier": "formatFirecrackerCommand",
+                      "newPage": false,
+                      "searchKey": "command.formatFirecrackerCommand",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func formatFirecrackerCommand(spec CommandSpec, name, repoDir string, options Options) command"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc formatFirecrackerCommand(spec CommandSpec, name, repoDir string, options Options) command\n```\n\nformatFirecrackerCommand constructs the command to run on the host via a Firecracker virtual machine in order to invoke the given spec. If the spec specifies an image, then the command will be run inside of a container inside of the VM. Otherwise, the command will be run inside of the VM. The containers are one-shot and subject to the resource limits specified in the given options. \n\nThe name value supplied here refers to the Firecracker virtual machine, which must have also been the name supplied to a successful invocation of setupFirecracker. Additionally, the virtual machine must not yet have been torn down (via teardownFirecracker). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/command#formatRawOrDockerCommand",
+                    "documentation": {
+                      "identifier": "formatRawOrDockerCommand",
+                      "newPage": false,
+                      "searchKey": "command.formatRawOrDockerCommand",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func formatRawOrDockerCommand(spec CommandSpec, dir string, options Options) command"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc formatRawOrDockerCommand(spec CommandSpec, dir string, options Options) command\n```\n\nformatRawOrDockerCommand constructs the command to run on the host in order to invoke the given spec. If the spec does not specify an image, then the command will be run _directly_ on the host. Otherwise, the command will be run inside of a one-shot docker container subject to the resource limits specified in the given options. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#commandRunner",
+              "documentation": {
+                "identifier": "commandRunner",
+                "newPage": false,
+                "searchKey": "command.commandRunner",
+                "tags": [
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type commandRunner interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype commandRunner interface {\n\tRunCommand(ctx context.Context, command command, logger *Logger) error\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#dockerRunner",
+              "documentation": {
+                "identifier": "dockerRunner",
+                "newPage": false,
+                "searchKey": "command.dockerRunner",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type dockerRunner struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype dockerRunner struct {\n\tdir     string\n\tlogger  *Logger\n\toptions Options\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/command#dockerRunner.Run",
+                    "documentation": {
+                      "identifier": "dockerRunner.Run",
+                      "newPage": false,
+                      "searchKey": "command.dockerRunner.Run",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *dockerRunner) Run(ctx context.Context, command CommandSpec) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *dockerRunner) Run(ctx context.Context, command CommandSpec) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/command#dockerRunner.Setup",
+                    "documentation": {
+                      "identifier": "dockerRunner.Setup",
+                      "newPage": false,
+                      "searchKey": "command.dockerRunner.Setup",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *dockerRunner) Setup(ctx context.Context, imageNames, scriptPaths []string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *dockerRunner) Setup(ctx context.Context, imageNames, scriptPaths []string) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/command#dockerRunner.Teardown",
+                    "documentation": {
+                      "identifier": "dockerRunner.Teardown",
+                      "newPage": false,
+                      "searchKey": "command.dockerRunner.Teardown",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *dockerRunner) Teardown(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *dockerRunner) Teardown(ctx context.Context) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#firecrackerRunner",
+              "documentation": {
+                "identifier": "firecrackerRunner",
+                "newPage": false,
+                "searchKey": "command.firecrackerRunner",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type firecrackerRunner struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype firecrackerRunner struct {\n\tname       string\n\tdir        string\n\tlogger     *Logger\n\toptions    Options\n\toperations *Operations\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/command#firecrackerRunner.Run",
+                    "documentation": {
+                      "identifier": "firecrackerRunner.Run",
+                      "newPage": false,
+                      "searchKey": "command.firecrackerRunner.Run",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *firecrackerRunner) Run(ctx context.Context, command CommandSpec) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *firecrackerRunner) Run(ctx context.Context, command CommandSpec) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/command#firecrackerRunner.Setup",
+                    "documentation": {
+                      "identifier": "firecrackerRunner.Setup",
+                      "newPage": false,
+                      "searchKey": "command.firecrackerRunner.Setup",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *firecrackerRunner) Setup(ctx context.Context, imageNames, scriptPaths []string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *firecrackerRunner) Setup(ctx context.Context, imageNames, scriptPaths []string) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/command#firecrackerRunner.Teardown",
+                    "documentation": {
+                      "identifier": "firecrackerRunner.Teardown",
+                      "newPage": false,
+                      "searchKey": "command.firecrackerRunner.Teardown",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *firecrackerRunner) Teardown(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *firecrackerRunner) Teardown(ctx context.Context) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#runnerWrapper",
+              "documentation": {
+                "identifier": "runnerWrapper",
+                "newPage": false,
+                "searchKey": "command.runnerWrapper",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type runnerWrapper struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype runnerWrapper struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/command#runnerWrapper.RunCommand",
+                    "documentation": {
+                      "identifier": "runnerWrapper.RunCommand",
+                      "newPage": false,
+                      "searchKey": "command.runnerWrapper.RunCommand",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (runnerWrapper) RunCommand(ctx context.Context, command command, logger *Logger) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (runnerWrapper) RunCommand(ctx context.Context, command command, logger *Logger) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#surrogateMockCommandRunner",
+              "documentation": {
+                "identifier": "surrogateMockCommandRunner",
+                "newPage": false,
+                "searchKey": "command.surrogateMockCommandRunner",
+                "tags": [
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type surrogateMockCommandRunner interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype surrogateMockCommandRunner interface {\n\tRunCommand(context.Context, command, *Logger) error\n}\n```\n\nsurrogateMockCommandRunner is a copy of the commandRunner interface (from the package github.com/sourcegraph/sourcegraph/enterprise/cmd/executor/internal/command). It is redefined here as it is unexported in the source package. \n\n"
+              },
+              "children": null
+            }
           }
         ]
       }
@@ -1198,6 +1278,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -1212,12 +1293,418 @@
         "children": [
           {
             "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#TestFlatten",
+              "documentation": {
+                "identifier": "TestFlatten",
+                "newPage": false,
+                "searchKey": "command.TestFlatten",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFlatten(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFlatten(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#TestFormatFirecrackerCommandDockerCommand",
+              "documentation": {
+                "identifier": "TestFormatFirecrackerCommandDockerCommand",
+                "newPage": false,
+                "searchKey": "command.TestFormatFirecrackerCommandDockerCommand",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFormatFirecrackerCommandDockerCommand(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFormatFirecrackerCommandDockerCommand(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#TestFormatFirecrackerCommandDockerScript",
+              "documentation": {
+                "identifier": "TestFormatFirecrackerCommandDockerScript",
+                "newPage": false,
+                "searchKey": "command.TestFormatFirecrackerCommandDockerScript",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFormatFirecrackerCommandDockerScript(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFormatFirecrackerCommandDockerScript(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#TestFormatFirecrackerCommandRaw",
+              "documentation": {
+                "identifier": "TestFormatFirecrackerCommandRaw",
+                "newPage": false,
+                "searchKey": "command.TestFormatFirecrackerCommandRaw",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFormatFirecrackerCommandRaw(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFormatFirecrackerCommandRaw(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#TestFormatRawOrDockerCommandDockerCommand",
+              "documentation": {
+                "identifier": "TestFormatRawOrDockerCommandDockerCommand",
+                "newPage": false,
+                "searchKey": "command.TestFormatRawOrDockerCommandDockerCommand",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFormatRawOrDockerCommandDockerCommand(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFormatRawOrDockerCommandDockerCommand(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#TestFormatRawOrDockerCommandDockerScript",
+              "documentation": {
+                "identifier": "TestFormatRawOrDockerCommandDockerScript",
+                "newPage": false,
+                "searchKey": "command.TestFormatRawOrDockerCommandDockerScript",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFormatRawOrDockerCommandDockerScript(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFormatRawOrDockerCommandDockerScript(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#TestFormatRawOrDockerCommandRaw",
+              "documentation": {
+                "identifier": "TestFormatRawOrDockerCommandRaw",
+                "newPage": false,
+                "searchKey": "command.TestFormatRawOrDockerCommandRaw",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFormatRawOrDockerCommandRaw(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFormatRawOrDockerCommandRaw(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#TestIntersperse",
+              "documentation": {
+                "identifier": "TestIntersperse",
+                "newPage": false,
+                "searchKey": "command.TestIntersperse",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIntersperse(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIntersperse(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#TestMain",
+              "documentation": {
+                "identifier": "TestMain",
+                "newPage": false,
+                "searchKey": "command.TestMain",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMain(m *testing.M)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#TestRunCommandEmptyCommand",
+              "documentation": {
+                "identifier": "TestRunCommandEmptyCommand",
+                "newPage": false,
+                "searchKey": "command.TestRunCommandEmptyCommand",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRunCommandEmptyCommand(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRunCommandEmptyCommand(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#TestRunCommandIllegalCommand",
+              "documentation": {
+                "identifier": "TestRunCommandIllegalCommand",
+                "newPage": false,
+                "searchKey": "command.TestRunCommandIllegalCommand",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRunCommandIllegalCommand(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRunCommandIllegalCommand(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#TestSanitizeImage",
+              "documentation": {
+                "identifier": "TestSanitizeImage",
+                "newPage": false,
+                "searchKey": "command.TestSanitizeImage",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSanitizeImage(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSanitizeImage(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#TestSetupFirecracker",
+              "documentation": {
+                "identifier": "TestSetupFirecracker",
+                "newPage": false,
+                "searchKey": "command.TestSetupFirecracker",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSetupFirecracker(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSetupFirecracker(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#TestTeardownFirecracker",
+              "documentation": {
+                "identifier": "TestTeardownFirecracker",
+                "newPage": false,
+                "searchKey": "command.TestTeardownFirecracker",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTeardownFirecracker(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTeardownFirecracker(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#compareStrings",
+              "documentation": {
+                "identifier": "compareStrings",
+                "newPage": false,
+                "searchKey": "command.compareStrings",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func compareStrings(x, y []string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc compareStrings(x, y []string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#dockerEntrypointFlags",
+              "documentation": {
+                "identifier": "dockerEntrypointFlags",
+                "newPage": false,
+                "searchKey": "command.dockerEntrypointFlags",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func dockerEntrypointFlags() []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc dockerEntrypointFlags() []string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#dockerEnvFlags",
+              "documentation": {
+                "identifier": "dockerEnvFlags",
+                "newPage": false,
+                "searchKey": "command.dockerEnvFlags",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func dockerEnvFlags(env []string) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc dockerEnvFlags(env []string) []string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/executor/internal/command#dockerResourceFlags",
               "documentation": {
                 "identifier": "dockerResourceFlags",
                 "newPage": false,
                 "searchKey": "command.dockerResourceFlags",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1240,6 +1727,7 @@
                 "newPage": false,
                 "searchKey": "command.dockerVolumeFlags",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1262,6 +1750,7 @@
                 "newPage": false,
                 "searchKey": "command.dockerWorkingdirectoryFlags",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1278,122 +1767,13 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#dockerEnvFlags",
-              "documentation": {
-                "identifier": "dockerEnvFlags",
-                "newPage": false,
-                "searchKey": "command.dockerEnvFlags",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func dockerEnvFlags(env []string) []string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc dockerEnvFlags(env []string) []string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#dockerEntrypointFlags",
-              "documentation": {
-                "identifier": "dockerEntrypointFlags",
-                "newPage": false,
-                "searchKey": "command.dockerEntrypointFlags",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func dockerEntrypointFlags() []string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc dockerEntrypointFlags() []string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#setupFirecracker",
-              "documentation": {
-                "identifier": "setupFirecracker",
-                "newPage": false,
-                "searchKey": "command.setupFirecracker",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func setupFirecracker(ctx context.Context, runner commandRunner, logger *Logger, name, repoDir string, imageNames, scriptPaths []string, options Options, operations *Operations) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc setupFirecracker(ctx context.Context, runner commandRunner, logger *Logger, name, repoDir string, imageNames, scriptPaths []string, options Options, operations *Operations) error\n```\n\nsetupFirecracker invokes a set of commands to provision and prepare a Firecracker virtual machine instance. This is done in several steps: \n\n```\n- For each of the docker images supplied, issue a `docker pull` and a `docker save`\n  to ensure we have an up-to-date tar archive of the requested image on the host.\n  These can be shared between different jobs.\n- Provision a Firecracker VM (via ignite) subject to the resource limits specified\n  in the given options, and copy the contents of the working directory as well as\n  the docker image tar archives.\n- Inside of the Firecracker VM, run docker load over all of the copied tarfiles so\n  that we do not need to pull the images from inside the VM, which has an empty\n  docker cache and would require us to pull images on every job.\n\n```\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#teardownFirecracker",
-              "documentation": {
-                "identifier": "teardownFirecracker",
-                "newPage": false,
-                "searchKey": "command.teardownFirecracker",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func teardownFirecracker(ctx context.Context, runner commandRunner, logger *Logger, name string, options Options, operations *Operations) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc teardownFirecracker(ctx context.Context, runner commandRunner, logger *Logger, name string, options Options, operations *Operations) error\n```\n\nteardownFirecracker issues a stop and a remove request for the Firecracker VM with the given name. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#firecrackerResourceFlags",
-              "documentation": {
-                "identifier": "firecrackerResourceFlags",
-                "newPage": false,
-                "searchKey": "command.firecrackerResourceFlags",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func firecrackerResourceFlags(options ResourceOptions) []string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc firecrackerResourceFlags(options ResourceOptions) []string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/executor/internal/command#firecrackerCopyfileFlags",
               "documentation": {
                 "identifier": "firecrackerCopyfileFlags",
                 "newPage": false,
                 "searchKey": "command.firecrackerCopyfileFlags",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1410,220 +1790,23 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#tarfilePathOnHost",
+              "pathID": "/enterprise/cmd/executor/internal/command#firecrackerResourceFlags",
               "documentation": {
-                "identifier": "tarfilePathOnHost",
+                "identifier": "firecrackerResourceFlags",
                 "newPage": false,
-                "searchKey": "command.tarfilePathOnHost",
+                "searchKey": "command.firecrackerResourceFlags",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func tarfilePathOnHost(key string, options Options) string"
+                "value": "func firecrackerResourceFlags(options ResourceOptions) []string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc tarfilePathOnHost(key string, options Options) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#tarfilePathInVM",
-              "documentation": {
-                "identifier": "tarfilePathInVM",
-                "newPage": false,
-                "searchKey": "command.tarfilePathInVM",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func tarfilePathInVM(key string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc tarfilePathInVM(key string) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#sanitizeImage",
-              "documentation": {
-                "identifier": "sanitizeImage",
-                "newPage": false,
-                "searchKey": "command.sanitizeImage",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func sanitizeImage(image string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc sanitizeImage(image string) string\n```\n\nsanitizeImage sanitizes the given docker image for use by ignite. The ignite utility has some issue parsing docker tags that include a sha256 hash, so we try to remove it from any of the image references before passing it to the ignite command. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#redact",
-              "documentation": {
-                "identifier": "redact",
-                "newPage": false,
-                "searchKey": "command.redact",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func redact(entry workerutil.ExecutionLogEntry, replacer *strings.Replacer) workerutil.ExecutionLogEntry"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc redact(entry workerutil.ExecutionLogEntry, replacer *strings.Replacer) workerutil.ExecutionLogEntry\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#runCommand",
-              "documentation": {
-                "identifier": "runCommand",
-                "newPage": false,
-                "searchKey": "command.runCommand",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func runCommand(ctx context.Context, command command, logger *Logger) (err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc runCommand(ctx context.Context, command command, logger *Logger) (err error)\n```\n\nrunCommand invokes the given command on the host machine. The standard output and standard error streams of the invoked command are written to the given logger. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#validateCommand",
-              "documentation": {
-                "identifier": "validateCommand",
-                "newPage": false,
-                "searchKey": "command.validateCommand",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func validateCommand(command []string) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc validateCommand(command []string) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#prepCommand",
-              "documentation": {
-                "identifier": "prepCommand",
-                "newPage": false,
-                "searchKey": "command.prepCommand",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func prepCommand(ctx context.Context, command command) (cmd *exec.Cmd, stdout, stderr io.ReadCloser, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc prepCommand(ctx context.Context, command command) (cmd *exec.Cmd, stdout, stderr io.ReadCloser, err error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#readProcessPipes",
-              "documentation": {
-                "identifier": "readProcessPipes",
-                "newPage": false,
-                "searchKey": "command.readProcessPipes",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func readProcessPipes(stdout, stderr io.Reader) (*bytes.Buffer, *sync.WaitGroup)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc readProcessPipes(stdout, stderr io.Reader) (*bytes.Buffer, *sync.WaitGroup)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#monitorCommand",
-              "documentation": {
-                "identifier": "monitorCommand",
-                "newPage": false,
-                "searchKey": "command.monitorCommand",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func monitorCommand(ctx context.Context, cmd *exec.Cmd, pipeReaderWaitGroup *sync.WaitGroup) (int, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc monitorCommand(ctx context.Context, cmd *exec.Cmd, pipeReaderWaitGroup *sync.WaitGroup) (int, error)\n```\n\nmonitorCommand starts the given command and waits for the given wait group to complete. This function returns a non-nil error only if there was a system issue - commands that run but fail due to a non-zero exit code will return a nil error and the exit code. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#watchWaitGroup",
-              "documentation": {
-                "identifier": "watchWaitGroup",
-                "newPage": false,
-                "searchKey": "command.watchWaitGroup",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func watchWaitGroup(wg *sync.WaitGroup) <-chan struct{}"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc watchWaitGroup(wg *sync.WaitGroup) <-chan struct{}\n```\n\n"
+                "value": "```Go\nfunc firecrackerResourceFlags(options ResourceOptions) []string\n```\n\n"
               },
               "children": null
             }
@@ -1636,6 +1819,7 @@
                 "newPage": false,
                 "searchKey": "command.flatten",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1658,6 +1842,7 @@
                 "newPage": false,
                 "searchKey": "command.intersperse",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1674,210 +1859,13 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#TestFormatRawOrDockerCommandRaw",
-              "documentation": {
-                "identifier": "TestFormatRawOrDockerCommandRaw",
-                "newPage": false,
-                "searchKey": "command.TestFormatRawOrDockerCommandRaw",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestFormatRawOrDockerCommandRaw(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestFormatRawOrDockerCommandRaw(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#TestFormatRawOrDockerCommandDockerScript",
-              "documentation": {
-                "identifier": "TestFormatRawOrDockerCommandDockerScript",
-                "newPage": false,
-                "searchKey": "command.TestFormatRawOrDockerCommandDockerScript",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestFormatRawOrDockerCommandDockerScript(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestFormatRawOrDockerCommandDockerScript(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#TestFormatRawOrDockerCommandDockerCommand",
-              "documentation": {
-                "identifier": "TestFormatRawOrDockerCommandDockerCommand",
-                "newPage": false,
-                "searchKey": "command.TestFormatRawOrDockerCommandDockerCommand",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestFormatRawOrDockerCommandDockerCommand(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestFormatRawOrDockerCommandDockerCommand(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#TestFormatFirecrackerCommandRaw",
-              "documentation": {
-                "identifier": "TestFormatFirecrackerCommandRaw",
-                "newPage": false,
-                "searchKey": "command.TestFormatFirecrackerCommandRaw",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestFormatFirecrackerCommandRaw(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestFormatFirecrackerCommandRaw(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#TestFormatFirecrackerCommandDockerScript",
-              "documentation": {
-                "identifier": "TestFormatFirecrackerCommandDockerScript",
-                "newPage": false,
-                "searchKey": "command.TestFormatFirecrackerCommandDockerScript",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestFormatFirecrackerCommandDockerScript(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestFormatFirecrackerCommandDockerScript(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#TestFormatFirecrackerCommandDockerCommand",
-              "documentation": {
-                "identifier": "TestFormatFirecrackerCommandDockerCommand",
-                "newPage": false,
-                "searchKey": "command.TestFormatFirecrackerCommandDockerCommand",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestFormatFirecrackerCommandDockerCommand(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestFormatFirecrackerCommandDockerCommand(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#TestSetupFirecracker",
-              "documentation": {
-                "identifier": "TestSetupFirecracker",
-                "newPage": false,
-                "searchKey": "command.TestSetupFirecracker",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSetupFirecracker(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSetupFirecracker(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#TestTeardownFirecracker",
-              "documentation": {
-                "identifier": "TestTeardownFirecracker",
-                "newPage": false,
-                "searchKey": "command.TestTeardownFirecracker",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTeardownFirecracker(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTeardownFirecracker(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#TestSanitizeImage",
-              "documentation": {
-                "identifier": "TestSanitizeImage",
-                "newPage": false,
-                "searchKey": "command.TestSanitizeImage",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSanitizeImage(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSanitizeImage(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/executor/internal/command#makeTestOperation",
               "documentation": {
                 "identifier": "makeTestOperation",
                 "newPage": false,
                 "searchKey": "command.makeTestOperation",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1894,132 +1882,276 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#compareStrings",
+              "pathID": "/enterprise/cmd/executor/internal/command#monitorCommand",
               "documentation": {
-                "identifier": "compareStrings",
+                "identifier": "monitorCommand",
                 "newPage": false,
-                "searchKey": "command.compareStrings",
+                "searchKey": "command.monitorCommand",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func compareStrings(x, y []string) bool"
+                "value": "func monitorCommand(ctx context.Context, cmd *exec.Cmd, pipeReaderWaitGroup *sync.WaitGroup) (int, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc compareStrings(x, y []string) bool\n```\n\n"
+                "value": "```Go\nfunc monitorCommand(ctx context.Context, cmd *exec.Cmd, pipeReaderWaitGroup *sync.WaitGroup) (int, error)\n```\n\nmonitorCommand starts the given command and waits for the given wait group to complete. This function returns a non-nil error only if there was a system issue - commands that run but fail due to a non-zero exit code will return a nil error and the exit code. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#TestMain",
+              "pathID": "/enterprise/cmd/executor/internal/command#prepCommand",
               "documentation": {
-                "identifier": "TestMain",
+                "identifier": "prepCommand",
                 "newPage": false,
-                "searchKey": "command.TestMain",
+                "searchKey": "command.prepCommand",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestMain(m *testing.M)"
+                "value": "func prepCommand(ctx context.Context, command command) (cmd *exec.Cmd, stdout, stderr io.ReadCloser, err error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
+                "value": "```Go\nfunc prepCommand(ctx context.Context, command command) (cmd *exec.Cmd, stdout, stderr io.ReadCloser, err error)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#TestRunCommandEmptyCommand",
+              "pathID": "/enterprise/cmd/executor/internal/command#readProcessPipes",
               "documentation": {
-                "identifier": "TestRunCommandEmptyCommand",
+                "identifier": "readProcessPipes",
                 "newPage": false,
-                "searchKey": "command.TestRunCommandEmptyCommand",
+                "searchKey": "command.readProcessPipes",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestRunCommandEmptyCommand(t *testing.T)"
+                "value": "func readProcessPipes(stdout, stderr io.Reader) (*bytes.Buffer, *sync.WaitGroup)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestRunCommandEmptyCommand(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc readProcessPipes(stdout, stderr io.Reader) (*bytes.Buffer, *sync.WaitGroup)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#TestRunCommandIllegalCommand",
+              "pathID": "/enterprise/cmd/executor/internal/command#redact",
               "documentation": {
-                "identifier": "TestRunCommandIllegalCommand",
+                "identifier": "redact",
                 "newPage": false,
-                "searchKey": "command.TestRunCommandIllegalCommand",
+                "searchKey": "command.redact",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestRunCommandIllegalCommand(t *testing.T)"
+                "value": "func redact(entry workerutil.ExecutionLogEntry, replacer *strings.Replacer) workerutil.ExecutionLogEntry"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestRunCommandIllegalCommand(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc redact(entry workerutil.ExecutionLogEntry, replacer *strings.Replacer) workerutil.ExecutionLogEntry\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#TestFlatten",
+              "pathID": "/enterprise/cmd/executor/internal/command#runCommand",
               "documentation": {
-                "identifier": "TestFlatten",
+                "identifier": "runCommand",
                 "newPage": false,
-                "searchKey": "command.TestFlatten",
+                "searchKey": "command.runCommand",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestFlatten(t *testing.T)"
+                "value": "func runCommand(ctx context.Context, command command, logger *Logger) (err error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestFlatten(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc runCommand(ctx context.Context, command command, logger *Logger) (err error)\n```\n\nrunCommand invokes the given command on the host machine. The standard output and standard error streams of the invoked command are written to the given logger. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/executor/internal/command#TestIntersperse",
+              "pathID": "/enterprise/cmd/executor/internal/command#sanitizeImage",
               "documentation": {
-                "identifier": "TestIntersperse",
+                "identifier": "sanitizeImage",
                 "newPage": false,
-                "searchKey": "command.TestIntersperse",
+                "searchKey": "command.sanitizeImage",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestIntersperse(t *testing.T)"
+                "value": "func sanitizeImage(image string) string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestIntersperse(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc sanitizeImage(image string) string\n```\n\nsanitizeImage sanitizes the given docker image for use by ignite. The ignite utility has some issue parsing docker tags that include a sha256 hash, so we try to remove it from any of the image references before passing it to the ignite command. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#setupFirecracker",
+              "documentation": {
+                "identifier": "setupFirecracker",
+                "newPage": false,
+                "searchKey": "command.setupFirecracker",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func setupFirecracker(ctx context.Context, runner commandRunner, logger *Logger, name, repoDir string, imageNames, scriptPaths []string, options Options, operations *Operations) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc setupFirecracker(ctx context.Context, runner commandRunner, logger *Logger, name, repoDir string, imageNames, scriptPaths []string, options Options, operations *Operations) error\n```\n\nsetupFirecracker invokes a set of commands to provision and prepare a Firecracker virtual machine instance. This is done in several steps: \n\n```\n- For each of the docker images supplied, issue a `docker pull` and a `docker save`\n  to ensure we have an up-to-date tar archive of the requested image on the host.\n  These can be shared between different jobs.\n- Provision a Firecracker VM (via ignite) subject to the resource limits specified\n  in the given options, and copy the contents of the working directory as well as\n  the docker image tar archives.\n- Inside of the Firecracker VM, run docker load over all of the copied tarfiles so\n  that we do not need to pull the images from inside the VM, which has an empty\n  docker cache and would require us to pull images on every job.\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#tarfilePathInVM",
+              "documentation": {
+                "identifier": "tarfilePathInVM",
+                "newPage": false,
+                "searchKey": "command.tarfilePathInVM",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func tarfilePathInVM(key string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc tarfilePathInVM(key string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#tarfilePathOnHost",
+              "documentation": {
+                "identifier": "tarfilePathOnHost",
+                "newPage": false,
+                "searchKey": "command.tarfilePathOnHost",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func tarfilePathOnHost(key string, options Options) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc tarfilePathOnHost(key string, options Options) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#teardownFirecracker",
+              "documentation": {
+                "identifier": "teardownFirecracker",
+                "newPage": false,
+                "searchKey": "command.teardownFirecracker",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func teardownFirecracker(ctx context.Context, runner commandRunner, logger *Logger, name string, options Options, operations *Operations) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc teardownFirecracker(ctx context.Context, runner commandRunner, logger *Logger, name string, options Options, operations *Operations) error\n```\n\nteardownFirecracker issues a stop and a remove request for the Firecracker VM with the given name. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#validateCommand",
+              "documentation": {
+                "identifier": "validateCommand",
+                "newPage": false,
+                "searchKey": "command.validateCommand",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func validateCommand(command []string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc validateCommand(command []string) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/command#watchWaitGroup",
+              "documentation": {
+                "identifier": "watchWaitGroup",
+                "newPage": false,
+                "searchKey": "command.watchWaitGroup",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func watchWaitGroup(wg *sync.WaitGroup) <-chan struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc watchWaitGroup(wg *sync.WaitGroup) <-chan struct{}\n```\n\n"
               },
               "children": null
             }

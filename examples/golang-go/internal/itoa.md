@@ -10,13 +10,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Itoa" href="#Itoa">func Itoa(val int) string</a>
 
 ```
 searchKey: itoa.Itoa
+tags: [method]
 ```
 
 ```Go
@@ -29,6 +30,7 @@ Itoa converts val to a decimal string.
 
 ```
 searchKey: itoa.Uitoa
+tags: [method]
 ```
 
 ```Go

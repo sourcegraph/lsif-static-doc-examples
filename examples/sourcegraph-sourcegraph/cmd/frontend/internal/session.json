@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "cmd/frontend/internal/session",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/session#defaultExpiryPeriod",
-              "documentation": {
-                "identifier": "defaultExpiryPeriod",
-                "newPage": false,
-                "searchKey": "session.defaultExpiryPeriod",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const defaultExpiryPeriod"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst defaultExpiryPeriod = 90 * 24 * time.Hour\n```\n\ndefaultExpiryPeriod is the default session expiry period (if none is specified explicitly): 90 days. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/session#cookieName",
               "documentation": {
                 "identifier": "cookieName",
                 "newPage": false,
                 "searchKey": "session.cookieName",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -77,6 +59,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst cookieName = \"sgs\"\n```\n\ncookieName is the name of the HTTP cookie that stores the session ID. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/session#defaultExpiryPeriod",
+              "documentation": {
+                "identifier": "defaultExpiryPeriod",
+                "newPage": false,
+                "searchKey": "session.defaultExpiryPeriod",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const defaultExpiryPeriod"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst defaultExpiryPeriod = 90 * 24 * time.Hour\n```\n\ndefaultExpiryPeriod is the default session expiry period (if none is specified explicitly): 90 days. \n\n"
               },
               "children": null
             }
@@ -92,6 +98,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -106,34 +113,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/session#sessionStore",
-              "documentation": {
-                "identifier": "sessionStore",
-                "newPage": false,
-                "searchKey": "session.sessionStore",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var sessionStore"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar sessionStore sessions.Store\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/session#sessionCookieKey",
               "documentation": {
                 "identifier": "sessionCookieKey",
                 "newPage": false,
                 "searchKey": "session.sessionCookieKey",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -144,6 +131,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar sessionCookieKey = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/session#sessionStore",
+              "documentation": {
+                "identifier": "sessionStore",
+                "newPage": false,
+                "searchKey": "session.sessionStore",
+                "tags": [
+                  "variable",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sessionStore"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sessionStore sessions.Store\n```\n\n"
               },
               "children": null
             }
@@ -159,6 +170,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -179,6 +191,7 @@
                 "newPage": false,
                 "searchKey": "session.sessionInfo",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -201,6 +214,7 @@
                 "newPage": false,
                 "searchKey": "session.sessionsStore",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -221,6 +235,7 @@
                       "newPage": false,
                       "searchKey": "session.sessionsStore.Get",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -243,6 +258,7 @@
                       "newPage": false,
                       "searchKey": "session.sessionsStore.New",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -265,6 +281,7 @@
                       "newPage": false,
                       "searchKey": "session.sessionsStore.setSecureOptions",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -293,6 +310,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -307,304 +325,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/session#init.session.go",
-              "documentation": {
-                "identifier": "init.session.go",
-                "newPage": false,
-                "searchKey": "session.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/session#SetSessionStore",
-              "documentation": {
-                "identifier": "SetSessionStore",
-                "newPage": false,
-                "searchKey": "session.SetSessionStore",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SetSessionStore(s sessions.Store)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SetSessionStore(s sessions.Store)\n```\n\nSetSessionStore sets the backing store used for storing sessions on the server. It should be called exactly once. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/session#NewRedisStore",
-              "documentation": {
-                "identifier": "NewRedisStore",
-                "newPage": false,
-                "searchKey": "session.NewRedisStore",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func NewRedisStore(secureCookie func() bool) sessions.Store"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc NewRedisStore(secureCookie func() bool) sessions.Store\n```\n\nNewRedisStore creates a new session store backed by Redis. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/session#setSessionSecureOptions",
-              "documentation": {
-                "identifier": "setSessionSecureOptions",
-                "newPage": false,
-                "searchKey": "session.setSessionSecureOptions",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func setSessionSecureOptions(opts *sessions.Options, secure bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc setSessionSecureOptions(opts *sessions.Options, secure bool)\n```\n\nsetSessionSecureOptions set the values of the session.Options.Secure and session.Options.SameSite fields depending on the value of the secure field. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/session#Ping",
-              "documentation": {
-                "identifier": "Ping",
-                "newPage": false,
-                "searchKey": "session.Ping",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Ping() error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Ping() error\n```\n\nPing attempts to contact Redis and returns a non-nil error upon failure. It is intended to be used by health checks. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/session#ping",
-              "documentation": {
-                "identifier": "ping",
-                "newPage": false,
-                "searchKey": "session.ping",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ping(s *redistore.RediStore) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ping(s *redistore.RediStore) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/session#waitForRedis",
-              "documentation": {
-                "identifier": "waitForRedis",
-                "newPage": false,
-                "searchKey": "session.waitForRedis",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func waitForRedis(s *redistore.RediStore)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc waitForRedis(s *redistore.RediStore)\n```\n\nwaitForRedis waits up to a certain timeout for Redis to become reachable, to reduce the likelihood of the HTTP handlers starting to serve requests while Redis (and therefore session data) is still unavailable. After the timeout has elapsed, if Redis is still unreachable, it continues anyway (because that's probably better than the site not coming up at all). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/session#SetData",
-              "documentation": {
-                "identifier": "SetData",
-                "newPage": false,
-                "searchKey": "session.SetData",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SetData(w http.ResponseWriter, r *http.Request, key string, value interface{}) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SetData(w http.ResponseWriter, r *http.Request, key string, value interface{}) error\n```\n\nSetData sets the session data at the key. The session data is a map of keys to values. If no session exists, a new session is created. \n\nThe value is JSON-encoded before being stored. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/session#GetData",
-              "documentation": {
-                "identifier": "GetData",
-                "newPage": false,
-                "searchKey": "session.GetData",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetData(r *http.Request, key string, value interface{}) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetData(r *http.Request, key string, value interface{}) error\n```\n\nGetData reads the session data at the key into the data structure addressed by value (which must be a pointer). \n\nThe value is JSON-decoded from the raw bytes stored by the call to SetData. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/session#SetActor",
-              "documentation": {
-                "identifier": "SetActor",
-                "newPage": false,
-                "searchKey": "session.SetActor",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SetActor(w http.ResponseWriter, r *http.Request, actor *actor.Actor, expiryPeriod time.Duration, userCreatedAt time.Time) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SetActor(w http.ResponseWriter, r *http.Request, actor *actor.Actor, expiryPeriod time.Duration, userCreatedAt time.Time) error\n```\n\nSetActor sets the actor in the session, or removes it if actor == nil. If no session exists, a new session is created. \n\nIf expiryPeriod is 0, the default expiry period is used. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/session#hasSessionCookie",
-              "documentation": {
-                "identifier": "hasSessionCookie",
-                "newPage": false,
-                "searchKey": "session.hasSessionCookie",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func hasSessionCookie(r *http.Request) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc hasSessionCookie(r *http.Request) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/session#deleteSession",
-              "documentation": {
-                "identifier": "deleteSession",
-                "newPage": false,
-                "searchKey": "session.deleteSession",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func deleteSession(w http.ResponseWriter, r *http.Request) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc deleteSession(w http.ResponseWriter, r *http.Request) error\n```\n\ndeleteSession deletes the current session. If an error occurs, it returns the error but does not write an HTTP error response. \n\nIt should only be used when there is an unrecoverable, permanent error in the session data. To sign out the current user, use SetActor(r, nil). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/session#InvalidateSessionCurrentUser",
-              "documentation": {
-                "identifier": "InvalidateSessionCurrentUser",
-                "newPage": false,
-                "searchKey": "session.InvalidateSessionCurrentUser",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func InvalidateSessionCurrentUser(w http.ResponseWriter, r *http.Request) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc InvalidateSessionCurrentUser(w http.ResponseWriter, r *http.Request) error\n```\n\nInvalidateSessionCurrentUser invalidates all sessions for the current user. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/session#InvalidateSessionsByID",
-              "documentation": {
-                "identifier": "InvalidateSessionsByID",
-                "newPage": false,
-                "searchKey": "session.InvalidateSessionsByID",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func InvalidateSessionsByID(ctx context.Context, id int32) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc InvalidateSessionsByID(ctx context.Context, id int32) error\n```\n\nInvalidateSessionsByID invalidates all sessions for a user If an error occurs, it returns the error \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/session#CookieMiddleware",
               "documentation": {
                 "identifier": "CookieMiddleware",
                 "newPage": false,
                 "searchKey": "session.CookieMiddleware",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -624,7 +352,9 @@
                 "identifier": "CookieMiddlewareWithCSRFSafety",
                 "newPage": false,
                 "searchKey": "session.CookieMiddlewareWithCSRFSafety",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -639,22 +369,110 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/session#authenticateByCookie",
+              "pathID": "/cmd/frontend/internal/session#GetData",
               "documentation": {
-                "identifier": "authenticateByCookie",
+                "identifier": "GetData",
                 "newPage": false,
-                "searchKey": "session.authenticateByCookie",
+                "searchKey": "session.GetData",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func authenticateByCookie(r *http.Request, w http.ResponseWriter) context.Context"
+                "value": "func GetData(r *http.Request, key string, value interface{}) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc authenticateByCookie(r *http.Request, w http.ResponseWriter) context.Context\n```\n\n"
+                "value": "```Go\nfunc GetData(r *http.Request, key string, value interface{}) error\n```\n\nGetData reads the session data at the key into the data structure addressed by value (which must be a pointer). \n\nThe value is JSON-decoded from the raw bytes stored by the call to SetData. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/session#InvalidateSessionCurrentUser",
+              "documentation": {
+                "identifier": "InvalidateSessionCurrentUser",
+                "newPage": false,
+                "searchKey": "session.InvalidateSessionCurrentUser",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func InvalidateSessionCurrentUser(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc InvalidateSessionCurrentUser(w http.ResponseWriter, r *http.Request) error\n```\n\nInvalidateSessionCurrentUser invalidates all sessions for the current user. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/session#InvalidateSessionsByID",
+              "documentation": {
+                "identifier": "InvalidateSessionsByID",
+                "newPage": false,
+                "searchKey": "session.InvalidateSessionsByID",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func InvalidateSessionsByID(ctx context.Context, id int32) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc InvalidateSessionsByID(ctx context.Context, id int32) error\n```\n\nInvalidateSessionsByID invalidates all sessions for a user If an error occurs, it returns the error \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/session#NewRedisStore",
+              "documentation": {
+                "identifier": "NewRedisStore",
+                "newPage": false,
+                "searchKey": "session.NewRedisStore",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewRedisStore(secureCookie func() bool) sessions.Store"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewRedisStore(secureCookie func() bool) sessions.Store\n```\n\nNewRedisStore creates a new session store backed by Redis. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/session#Ping",
+              "documentation": {
+                "identifier": "Ping",
+                "newPage": false,
+                "searchKey": "session.Ping",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Ping() error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Ping() error\n```\n\nPing attempts to contact Redis and returns a non-nil error upon failure. It is intended to be used by health checks. \n\n"
               },
               "children": null
             }
@@ -666,7 +484,9 @@
                 "identifier": "ResetMockSessionStore",
                 "newPage": false,
                 "searchKey": "session.ResetMockSessionStore",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -681,88 +501,66 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/session#TestSetActorDeleteSession",
+              "pathID": "/cmd/frontend/internal/session#SetActor",
               "documentation": {
-                "identifier": "TestSetActorDeleteSession",
+                "identifier": "SetActor",
                 "newPage": false,
-                "searchKey": "session.TestSetActorDeleteSession",
+                "searchKey": "session.SetActor",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestSetActorDeleteSession(t *testing.T)"
+                "value": "func SetActor(w http.ResponseWriter, r *http.Request, actor *actor.Actor, expiryPeriod time.Duration, userCreatedAt time.Time) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestSetActorDeleteSession(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc SetActor(w http.ResponseWriter, r *http.Request, actor *actor.Actor, expiryPeriod time.Duration, userCreatedAt time.Time) error\n```\n\nSetActor sets the actor in the session, or removes it if actor == nil. If no session exists, a new session is created. \n\nIf expiryPeriod is 0, the default expiry period is used. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/session#checkCookieDeleted",
+              "pathID": "/cmd/frontend/internal/session#SetData",
               "documentation": {
-                "identifier": "checkCookieDeleted",
+                "identifier": "SetData",
                 "newPage": false,
-                "searchKey": "session.checkCookieDeleted",
+                "searchKey": "session.SetData",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func checkCookieDeleted(t *testing.T, resp *http.Response)"
+                "value": "func SetData(w http.ResponseWriter, r *http.Request, key string, value interface{}) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc checkCookieDeleted(t *testing.T, resp *http.Response)\n```\n\n"
+                "value": "```Go\nfunc SetData(w http.ResponseWriter, r *http.Request, key string, value interface{}) error\n```\n\nSetData sets the session data at the key. The session data is a map of keys to values. If no session exists, a new session is created. \n\nThe value is JSON-encoded before being stored. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/session#TestSessionExpiry",
+              "pathID": "/cmd/frontend/internal/session#SetSessionStore",
               "documentation": {
-                "identifier": "TestSessionExpiry",
+                "identifier": "SetSessionStore",
                 "newPage": false,
-                "searchKey": "session.TestSessionExpiry",
+                "searchKey": "session.SetSessionStore",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestSessionExpiry(t *testing.T)"
+                "value": "func SetSessionStore(s sessions.Store)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestSessionExpiry(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/session#TestManualSessionExpiry",
-              "documentation": {
-                "identifier": "TestManualSessionExpiry",
-                "newPage": false,
-                "searchKey": "session.TestManualSessionExpiry",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestManualSessionExpiry(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestManualSessionExpiry(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc SetSessionStore(s sessions.Store)\n```\n\nSetSessionStore sets the backing store used for storing sessions on the server. It should be called exactly once. \n\n"
               },
               "children": null
             }
@@ -775,7 +573,9 @@
                 "newPage": false,
                 "searchKey": "session.TestCookieMiddleware",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -791,44 +591,24 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/session#sessionCookie",
+              "pathID": "/cmd/frontend/internal/session#TestManualSessionExpiry",
               "documentation": {
-                "identifier": "sessionCookie",
+                "identifier": "TestManualSessionExpiry",
                 "newPage": false,
-                "searchKey": "session.sessionCookie",
+                "searchKey": "session.TestManualSessionExpiry",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func sessionCookie(r *http.Request) string"
+                "value": "func TestManualSessionExpiry(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc sessionCookie(r *http.Request) string\n```\n\nsessionCookie returns the session cookie from the header of the given request. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/session#TestRecoverFromInvalidCookieValue",
-              "documentation": {
-                "identifier": "TestRecoverFromInvalidCookieValue",
-                "newPage": false,
-                "searchKey": "session.TestRecoverFromInvalidCookieValue",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRecoverFromInvalidCookieValue(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRecoverFromInvalidCookieValue(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestManualSessionExpiry(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -841,7 +621,9 @@
                 "newPage": false,
                 "searchKey": "session.TestMismatchedUserCreationFails",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -863,7 +645,9 @@
                 "newPage": false,
                 "searchKey": "session.TestOldUserSessionSucceeds",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -873,6 +657,285 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc TestOldUserSessionSucceeds(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/session#TestRecoverFromInvalidCookieValue",
+              "documentation": {
+                "identifier": "TestRecoverFromInvalidCookieValue",
+                "newPage": false,
+                "searchKey": "session.TestRecoverFromInvalidCookieValue",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRecoverFromInvalidCookieValue(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRecoverFromInvalidCookieValue(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/session#TestSessionExpiry",
+              "documentation": {
+                "identifier": "TestSessionExpiry",
+                "newPage": false,
+                "searchKey": "session.TestSessionExpiry",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSessionExpiry(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSessionExpiry(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/session#TestSetActorDeleteSession",
+              "documentation": {
+                "identifier": "TestSetActorDeleteSession",
+                "newPage": false,
+                "searchKey": "session.TestSetActorDeleteSession",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSetActorDeleteSession(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSetActorDeleteSession(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/session#authenticateByCookie",
+              "documentation": {
+                "identifier": "authenticateByCookie",
+                "newPage": false,
+                "searchKey": "session.authenticateByCookie",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func authenticateByCookie(r *http.Request, w http.ResponseWriter) context.Context"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc authenticateByCookie(r *http.Request, w http.ResponseWriter) context.Context\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/session#checkCookieDeleted",
+              "documentation": {
+                "identifier": "checkCookieDeleted",
+                "newPage": false,
+                "searchKey": "session.checkCookieDeleted",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkCookieDeleted(t *testing.T, resp *http.Response)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkCookieDeleted(t *testing.T, resp *http.Response)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/session#deleteSession",
+              "documentation": {
+                "identifier": "deleteSession",
+                "newPage": false,
+                "searchKey": "session.deleteSession",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func deleteSession(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc deleteSession(w http.ResponseWriter, r *http.Request) error\n```\n\ndeleteSession deletes the current session. If an error occurs, it returns the error but does not write an HTTP error response. \n\nIt should only be used when there is an unrecoverable, permanent error in the session data. To sign out the current user, use SetActor(r, nil). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/session#hasSessionCookie",
+              "documentation": {
+                "identifier": "hasSessionCookie",
+                "newPage": false,
+                "searchKey": "session.hasSessionCookie",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hasSessionCookie(r *http.Request) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hasSessionCookie(r *http.Request) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/session#init.session.go",
+              "documentation": {
+                "identifier": "init.session.go",
+                "newPage": false,
+                "searchKey": "session.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/session#ping",
+              "documentation": {
+                "identifier": "ping",
+                "newPage": false,
+                "searchKey": "session.ping",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ping(s *redistore.RediStore) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ping(s *redistore.RediStore) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/session#sessionCookie",
+              "documentation": {
+                "identifier": "sessionCookie",
+                "newPage": false,
+                "searchKey": "session.sessionCookie",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sessionCookie(r *http.Request) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sessionCookie(r *http.Request) string\n```\n\nsessionCookie returns the session cookie from the header of the given request. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/session#setSessionSecureOptions",
+              "documentation": {
+                "identifier": "setSessionSecureOptions",
+                "newPage": false,
+                "searchKey": "session.setSessionSecureOptions",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func setSessionSecureOptions(opts *sessions.Options, secure bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc setSessionSecureOptions(opts *sessions.Options, secure bool)\n```\n\nsetSessionSecureOptions set the values of the session.Options.Secure and session.Options.SameSite fields depending on the value of the secure field. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/session#waitForRedis",
+              "documentation": {
+                "identifier": "waitForRedis",
+                "newPage": false,
+                "searchKey": "session.waitForRedis",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func waitForRedis(s *redistore.RediStore)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc waitForRedis(s *redistore.RediStore)\n```\n\nwaitForRedis waits up to a certain timeout for Redis to become reachable, to reduce the likelihood of the HTTP handlers starting to serve requests while Redis (and therefore session data) is still unavailable. After the timeout has elapsed, if Redis is still unreachable, it continues anyway (because that's probably better than the site not coming up at all). \n\n"
               },
               "children": null
             }

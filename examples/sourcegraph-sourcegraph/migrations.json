@@ -4,7 +4,9 @@
     "identifier": "migrations",
     "newPage": true,
     "searchKey": "migrations",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,34 +39,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/migrations#content",
-              "documentation": {
-                "identifier": "content",
-                "newPage": false,
-                "searchKey": "migrations.content",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var content"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar content embed.FS\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/migrations#CodeInsights",
               "documentation": {
                 "identifier": "CodeInsights",
                 "newPage": false,
                 "searchKey": "migrations.CodeInsights",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -82,7 +67,10 @@
                 "identifier": "CodeIntel",
                 "newPage": false,
                 "searchKey": "migrations.CodeIntel",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -102,7 +90,10 @@
                 "identifier": "Frontend",
                 "newPage": false,
                 "searchKey": "migrations.Frontend",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -111,6 +102,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar Frontend = mustSub(\"frontend\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/migrations#content",
+              "documentation": {
+                "identifier": "content",
+                "newPage": false,
+                "searchKey": "migrations.content",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var content"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar content embed.FS\n```\n\n"
               },
               "children": null
             }
@@ -125,7 +140,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -144,6 +161,7 @@
                 "newPage": false,
                 "searchKey": "migrations.mustSub",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/encryption/mounted",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "mounted.theScriptOfBeeMovie",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -89,7 +94,9 @@
                 "identifier": "Key",
                 "newPage": false,
                 "searchKey": "mounted.Key",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -107,7 +114,9 @@
                       "identifier": "NewKey",
                       "newPage": false,
                       "searchKey": "mounted.NewKey",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -122,20 +131,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/encryption/mounted#Key.Version",
+                    "pathID": "/internal/encryption/mounted#Key.Decrypt",
                     "documentation": {
-                      "identifier": "Key.Version",
+                      "identifier": "Key.Decrypt",
                       "newPage": false,
-                      "searchKey": "mounted.Key.Version",
-                      "tags": null
+                      "searchKey": "mounted.Key.Decrypt",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)"
+                      "value": "func (k *Key) Decrypt(ctx context.Context, ciphertext []byte) (*encryption.Secret, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)\n```\n\n"
+                      "value": "```Go\nfunc (k *Key) Decrypt(ctx context.Context, ciphertext []byte) (*encryption.Secret, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -147,7 +158,9 @@
                       "identifier": "Key.Encrypt",
                       "newPage": false,
                       "searchKey": "mounted.Key.Encrypt",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -162,20 +175,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/encryption/mounted#Key.Decrypt",
+                    "pathID": "/internal/encryption/mounted#Key.Version",
                     "documentation": {
-                      "identifier": "Key.Decrypt",
+                      "identifier": "Key.Version",
                       "newPage": false,
-                      "searchKey": "mounted.Key.Decrypt",
-                      "tags": null
+                      "searchKey": "mounted.Key.Version",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (k *Key) Decrypt(ctx context.Context, ciphertext []byte) (*encryption.Secret, error)"
+                      "value": "func (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (k *Key) Decrypt(ctx context.Context, ciphertext []byte) (*encryption.Secret, error)\n```\n\n"
+                      "value": "```Go\nfunc (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -191,6 +206,7 @@
                 "newPage": false,
                 "searchKey": "mounted.encryptedValue",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -216,6 +232,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -230,12 +247,37 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/encryption/mounted#TestRoundTrip",
+              "documentation": {
+                "identifier": "TestRoundTrip",
+                "newPage": false,
+                "searchKey": "mounted.TestRoundTrip",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRoundTrip(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRoundTrip(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/encryption/mounted#crc32Sum",
               "documentation": {
                 "identifier": "crc32Sum",
                 "newPage": false,
                 "searchKey": "mounted.crc32Sum",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -246,28 +288,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc crc32Sum(data []byte) uint32\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/encryption/mounted#TestRoundTrip",
-              "documentation": {
-                "identifier": "TestRoundTrip",
-                "newPage": false,
-                "searchKey": "mounted.TestRoundTrip",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRoundTrip(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRoundTrip(t *testing.T)\n```\n\n"
               },
               "children": null
             }

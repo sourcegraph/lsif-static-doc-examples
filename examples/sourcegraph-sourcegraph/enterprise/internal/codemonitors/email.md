@@ -4,12 +4,12 @@
 
 * [Constants](#const)
     * [const MonitorKind](#MonitorKind)
-    * [const utmSourceEmail](#utmSourceEmail)
     * [const priorityCritical](#priorityCritical)
+    * [const utmSourceEmail](#utmSourceEmail)
 * [Variables](#var)
-    * [var externalURL](#externalURL)
-    * [var MockSendEmailForNewSearchResult](#MockSendEmailForNewSearchResult)
     * [var MockExternalURL](#MockExternalURL)
+    * [var MockSendEmailForNewSearchResult](#MockSendEmailForNewSearchResult)
+    * [var externalURL](#externalURL)
     * [var newSearchResultsEmailTemplates](#newSearchResultsEmailTemplates)
 * [Types](#type)
     * [type TemplateDataNewSearchResults struct](#TemplateDataNewSearchResults)
@@ -17,22 +17,23 @@
         * [func NewTestTemplateDataForNewSearchResults(ctx context.Context, monitorDescription string) *TemplateDataNewSearchResults](#NewTestTemplateDataForNewSearchResults)
 * [Functions](#func)
     * [func SendEmailForNewSearchResult(ctx context.Context, userID int32, data *TemplateDataNewSearchResults) error](#SendEmailForNewSearchResult)
-    * [func sendEmail(ctx context.Context, userID int32, template txtypes.Templates, data interface{}) error](#sendEmail)
-    * [func getSearchURL(ctx context.Context, query, utmSource string) (string, error)](#getSearchURL)
     * [func getCodeMonitorURL(ctx context.Context, monitorID int64, utmSource string) (string, error)](#getCodeMonitorURL)
+    * [func getSearchURL(ctx context.Context, query, utmSource string) (string, error)](#getSearchURL)
+    * [func sendEmail(ctx context.Context, userID int32, template txtypes.Templates, data interface{}) error](#sendEmail)
     * [func sourcegraphURL(ctx context.Context, path, query, utmSource string) (string, error)](#sourcegraphURL)
 
 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="MonitorKind" href="#MonitorKind">const MonitorKind</a>
 
 ```
 searchKey: email.MonitorKind
+tags: [constant string]
 ```
 
 ```Go
@@ -41,70 +42,72 @@ const MonitorKind = "CodeMonitor"
 
 To avoid a circular dependency with the codemonitors/resolvers package we have to redeclare the MonitorKind. 
 
-### <a id="utmSourceEmail" href="#utmSourceEmail">const utmSourceEmail</a>
-
-```
-searchKey: email.utmSourceEmail
-tags: [private]
-```
-
-```Go
-const utmSourceEmail = "code-monitoring-email"
-```
-
 ### <a id="priorityCritical" href="#priorityCritical">const priorityCritical</a>
 
 ```
 searchKey: email.priorityCritical
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
 const priorityCritical = "CRITICAL"
 ```
 
+### <a id="utmSourceEmail" href="#utmSourceEmail">const utmSourceEmail</a>
+
+```
+searchKey: email.utmSourceEmail
+tags: [constant string private]
+```
+
+```Go
+const utmSourceEmail = "code-monitoring-email"
+```
+
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
-```
-
-### <a id="externalURL" href="#externalURL">var externalURL</a>
-
-```
-searchKey: email.externalURL
-tags: [private]
-```
-
-```Go
-var externalURL *url.URL
-```
-
-### <a id="MockSendEmailForNewSearchResult" href="#MockSendEmailForNewSearchResult">var MockSendEmailForNewSearchResult</a>
-
-```
-searchKey: email.MockSendEmailForNewSearchResult
-```
-
-```Go
-var MockSendEmailForNewSearchResult func(ctx context.Context, userID int32, data *TemplateDataNewSearchResults) error = ...
+tags: [package private]
 ```
 
 ### <a id="MockExternalURL" href="#MockExternalURL">var MockExternalURL</a>
 
 ```
 searchKey: email.MockExternalURL
+tags: [variable function]
 ```
 
 ```Go
 var MockExternalURL func() *url.URL
 ```
 
+### <a id="MockSendEmailForNewSearchResult" href="#MockSendEmailForNewSearchResult">var MockSendEmailForNewSearchResult</a>
+
+```
+searchKey: email.MockSendEmailForNewSearchResult
+tags: [variable function]
+```
+
+```Go
+var MockSendEmailForNewSearchResult func(ctx context.Context, userID int32, data *TemplateDataNewSearchResults) error = ...
+```
+
+### <a id="externalURL" href="#externalURL">var externalURL</a>
+
+```
+searchKey: email.externalURL
+tags: [variable struct private]
+```
+
+```Go
+var externalURL *url.URL
+```
+
 ### <a id="newSearchResultsEmailTemplates" href="#newSearchResultsEmailTemplates">var newSearchResultsEmailTemplates</a>
 
 ```
 searchKey: email.newSearchResultsEmailTemplates
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -114,13 +117,14 @@ var newSearchResultsEmailTemplates = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="TemplateDataNewSearchResults" href="#TemplateDataNewSearchResults">type TemplateDataNewSearchResults struct</a>
 
 ```
 searchKey: email.TemplateDataNewSearchResults
+tags: [struct]
 ```
 
 ```Go
@@ -138,6 +142,7 @@ type TemplateDataNewSearchResults struct {
 
 ```
 searchKey: email.NewTemplateDataForNewSearchResults
+tags: [method]
 ```
 
 ```Go
@@ -148,6 +153,7 @@ func NewTemplateDataForNewSearchResults(ctx context.Context, monitorDescription,
 
 ```
 searchKey: email.NewTestTemplateDataForNewSearchResults
+tags: [method]
 ```
 
 ```Go
@@ -157,57 +163,58 @@ func NewTestTemplateDataForNewSearchResults(ctx context.Context, monitorDescript
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="SendEmailForNewSearchResult" href="#SendEmailForNewSearchResult">func SendEmailForNewSearchResult(ctx context.Context, userID int32, data *TemplateDataNewSearchResults) error</a>
 
 ```
 searchKey: email.SendEmailForNewSearchResult
+tags: [method]
 ```
 
 ```Go
 func SendEmailForNewSearchResult(ctx context.Context, userID int32, data *TemplateDataNewSearchResults) error
 ```
 
-### <a id="sendEmail" href="#sendEmail">func sendEmail(ctx context.Context, userID int32, template txtypes.Templates, data interface{}) error</a>
-
-```
-searchKey: email.sendEmail
-tags: [private]
-```
-
-```Go
-func sendEmail(ctx context.Context, userID int32, template txtypes.Templates, data interface{}) error
-```
-
-### <a id="getSearchURL" href="#getSearchURL">func getSearchURL(ctx context.Context, query, utmSource string) (string, error)</a>
-
-```
-searchKey: email.getSearchURL
-tags: [private]
-```
-
-```Go
-func getSearchURL(ctx context.Context, query, utmSource string) (string, error)
-```
-
 ### <a id="getCodeMonitorURL" href="#getCodeMonitorURL">func getCodeMonitorURL(ctx context.Context, monitorID int64, utmSource string) (string, error)</a>
 
 ```
 searchKey: email.getCodeMonitorURL
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func getCodeMonitorURL(ctx context.Context, monitorID int64, utmSource string) (string, error)
 ```
 
+### <a id="getSearchURL" href="#getSearchURL">func getSearchURL(ctx context.Context, query, utmSource string) (string, error)</a>
+
+```
+searchKey: email.getSearchURL
+tags: [method private]
+```
+
+```Go
+func getSearchURL(ctx context.Context, query, utmSource string) (string, error)
+```
+
+### <a id="sendEmail" href="#sendEmail">func sendEmail(ctx context.Context, userID int32, template txtypes.Templates, data interface{}) error</a>
+
+```
+searchKey: email.sendEmail
+tags: [method private]
+```
+
+```Go
+func sendEmail(ctx context.Context, userID int32, template txtypes.Templates, data interface{}) error
+```
+
 ### <a id="sourcegraphURL" href="#sourcegraphURL">func sourcegraphURL(ctx context.Context, path, query, utmSource string) (string, error)</a>
 
 ```
 searchKey: email.sourcegraphURL
-tags: [private]
+tags: [method private]
 ```
 
 ```Go

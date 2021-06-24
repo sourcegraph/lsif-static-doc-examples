@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "encoding/gob_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,69 +41,25 @@
         "children": [
           {
             "node": {
-              "pathID": "/encoding/gob_test#Vector",
+              "pathID": "/encoding/gob_test#P",
               "documentation": {
-                "identifier": "Vector",
+                "identifier": "P",
                 "newPage": false,
-                "searchKey": "gob_test.Vector",
+                "searchKey": "gob_test.P",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type Vector struct"
+                "value": "type P struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype Vector struct {\n\tx, y, z int\n}\n```\n\nThe Vector type has unexported fields, which the package cannot access. We therefore write a BinaryMarshal/BinaryUnmarshal method pair to allow us to send and receive the type with the gob package. These interfaces are defined in the \"encoding\" package. We could equivalently use the locally defined GobEncode/GobDecoder interfaces. \n\n"
+                "value": "```Go\ntype P struct {\n\tX, Y, Z int\n\tName    string\n}\n```\n\n"
               },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/encoding/gob_test#Vector.MarshalBinary",
-                    "documentation": {
-                      "identifier": "Vector.MarshalBinary",
-                      "newPage": false,
-                      "searchKey": "gob_test.Vector.MarshalBinary",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v Vector) MarshalBinary() ([]byte, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v Vector) MarshalBinary() ([]byte, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/encoding/gob_test#Vector.UnmarshalBinary",
-                    "documentation": {
-                      "identifier": "Vector.UnmarshalBinary",
-                      "newPage": false,
-                      "searchKey": "gob_test.Vector.UnmarshalBinary",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *Vector) UnmarshalBinary(data []byte) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *Vector) UnmarshalBinary(data []byte) error\n```\n\nUnmarshalBinary modifies the receiver so it must take a pointer receiver. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
+              "children": null
             }
           },
           {
@@ -112,6 +70,7 @@
                 "newPage": false,
                 "searchKey": "gob_test.Point",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -132,6 +91,7 @@
                       "newPage": false,
                       "searchKey": "gob_test.Point.Hypotenuse",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -157,6 +117,7 @@
                 "newPage": false,
                 "searchKey": "gob_test.Pythagoras",
                 "tags": [
+                  "interface",
                   "private"
                 ]
               },
@@ -177,6 +138,7 @@
                       "newPage": false,
                       "searchKey": "gob_test.interfaceDecode",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -196,34 +158,13 @@
           },
           {
             "node": {
-              "pathID": "/encoding/gob_test#P",
-              "documentation": {
-                "identifier": "P",
-                "newPage": false,
-                "searchKey": "gob_test.P",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type P struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype P struct {\n\tX, Y, Z int\n\tName    string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/encoding/gob_test#Q",
               "documentation": {
                 "identifier": "Q",
                 "newPage": false,
                 "searchKey": "gob_test.Q",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -237,6 +178,76 @@
               },
               "children": null
             }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/gob_test#Vector",
+              "documentation": {
+                "identifier": "Vector",
+                "newPage": false,
+                "searchKey": "gob_test.Vector",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Vector struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Vector struct {\n\tx, y, z int\n}\n```\n\nThe Vector type has unexported fields, which the package cannot access. We therefore write a BinaryMarshal/BinaryUnmarshal method pair to allow us to send and receive the type with the gob package. These interfaces are defined in the \"encoding\" package. We could equivalently use the locally defined GobEncode/GobDecoder interfaces. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/encoding/gob_test#Vector.MarshalBinary",
+                    "documentation": {
+                      "identifier": "Vector.MarshalBinary",
+                      "newPage": false,
+                      "searchKey": "gob_test.Vector.MarshalBinary",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v Vector) MarshalBinary() ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v Vector) MarshalBinary() ([]byte, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/gob_test#Vector.UnmarshalBinary",
+                    "documentation": {
+                      "identifier": "Vector.UnmarshalBinary",
+                      "newPage": false,
+                      "searchKey": "gob_test.Vector.UnmarshalBinary",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Vector) UnmarshalBinary(data []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Vector) UnmarshalBinary(data []byte) error\n```\n\nUnmarshalBinary modifies the receiver so it must take a pointer receiver. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
           }
         ]
       }
@@ -249,6 +260,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -263,12 +275,36 @@
         "children": [
           {
             "node": {
+              "pathID": "/encoding/gob_test#Example_basic",
+              "documentation": {
+                "identifier": "Example_basic",
+                "newPage": false,
+                "searchKey": "gob_test.Example_basic",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_basic()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_basic()\n```\n\nThis example shows the basic usage of the package: Create an encoder, transmit some values, receive them with a decoder. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/encoding/gob_test#Example_encodeDecode",
               "documentation": {
                 "identifier": "Example_encodeDecode",
                 "newPage": false,
                 "searchKey": "gob_test.Example_encodeDecode",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -291,6 +327,7 @@
                 "newPage": false,
                 "searchKey": "gob_test.Example_interface",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -313,6 +350,7 @@
                 "newPage": false,
                 "searchKey": "gob_test.interfaceEncode",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -323,28 +361,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc interfaceEncode(enc *gob.Encoder, p Pythagoras)\n```\n\ninterfaceEncode encodes the interface value into the encoder. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/gob_test#Example_basic",
-              "documentation": {
-                "identifier": "Example_basic",
-                "newPage": false,
-                "searchKey": "gob_test.Example_basic",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Example_basic()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Example_basic()\n```\n\nThis example shows the basic usage of the package: Create an encoder, transmit some values, receive them with a decoder. \n\n"
               },
               "children": null
             }

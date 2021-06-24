@@ -13,21 +13,22 @@
 * [Types](#type)
     * [type SelectPath []string](#SelectPath)
         * [func SelectPathFromString(s string) (SelectPath, error)](#SelectPathFromString)
-        * [func (sp SelectPath) String() string](#SelectPath.String)
         * [func (sp SelectPath) Root() string](#SelectPath.Root)
+        * [func (sp SelectPath) String() string](#SelectPath.String)
     * [type object map[string]filter.object](#object)
 
 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Commit" href="#Commit">const Commit</a>
 
 ```
 searchKey: filter.Commit
+tags: [constant string]
 ```
 
 ```Go
@@ -38,6 +39,7 @@ const Commit = "commit"
 
 ```
 searchKey: filter.Content
+tags: [constant string]
 ```
 
 ```Go
@@ -48,6 +50,7 @@ const Content = "content"
 
 ```
 searchKey: filter.File
+tags: [constant string]
 ```
 
 ```Go
@@ -58,6 +61,7 @@ const File = "file"
 
 ```
 searchKey: filter.Repository
+tags: [constant string]
 ```
 
 ```Go
@@ -68,6 +72,7 @@ const Repository = "repo"
 
 ```
 searchKey: filter.Symbol
+tags: [constant string]
 ```
 
 ```Go
@@ -77,14 +82,14 @@ const Symbol = "symbol"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="validSelectors" href="#validSelectors">var validSelectors</a>
 
 ```
 searchKey: filter.validSelectors
-tags: [private]
+tags: [variable object private]
 ```
 
 ```Go
@@ -94,13 +99,14 @@ var validSelectors = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="SelectPath" href="#SelectPath">type SelectPath []string</a>
 
 ```
 searchKey: filter.SelectPath
+tags: [array string]
 ```
 
 ```Go
@@ -113,26 +119,18 @@ SelectPath represents a parsed and validated select value
 
 ```
 searchKey: filter.SelectPathFromString
+tags: [method]
 ```
 
 ```Go
 func SelectPathFromString(s string) (SelectPath, error)
 ```
 
-#### <a id="SelectPath.String" href="#SelectPath.String">func (sp SelectPath) String() string</a>
-
-```
-searchKey: filter.SelectPath.String
-```
-
-```Go
-func (sp SelectPath) String() string
-```
-
 #### <a id="SelectPath.Root" href="#SelectPath.Root">func (sp SelectPath) Root() string</a>
 
 ```
 searchKey: filter.SelectPath.Root
+tags: [function]
 ```
 
 ```Go
@@ -141,11 +139,22 @@ func (sp SelectPath) Root() string
 
 Root is the top-level result type that is being selected. Returns an empty string if SelectPath is empty 
 
+#### <a id="SelectPath.String" href="#SelectPath.String">func (sp SelectPath) String() string</a>
+
+```
+searchKey: filter.SelectPath.String
+tags: [function]
+```
+
+```Go
+func (sp SelectPath) String() string
+```
+
 ### <a id="object" href="#object">type object map[string]filter.object</a>
 
 ```
 searchKey: filter.object
-tags: [private]
+tags: [object private]
 ```
 
 ```Go

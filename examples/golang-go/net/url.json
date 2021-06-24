@@ -4,7 +4,9 @@
     "identifier": "url",
     "newPage": true,
     "searchKey": "net/url",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,22 +39,48 @@
         "children": [
           {
             "node": {
-              "pathID": "/net/url#upperhex",
+              "pathID": "/net/url#encodeFragment",
               "documentation": {
-                "identifier": "upperhex",
+                "identifier": "encodeFragment",
                 "newPage": false,
-                "searchKey": "url.upperhex",
+                "searchKey": "url.encodeFragment",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const upperhex"
+                "value": "const encodeFragment"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst upperhex = \"0123456789ABCDEF\"\n```\n\n"
+                "value": "```Go\nconst encodeFragment\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#encodeHost",
+              "documentation": {
+                "identifier": "encodeHost",
+                "newPage": false,
+                "searchKey": "url.encodeHost",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const encodeHost"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst encodeHost\n```\n\n"
               },
               "children": null
             }
@@ -63,6 +93,8 @@
                 "newPage": false,
                 "searchKey": "url.encodePath",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -85,6 +117,8 @@
                 "newPage": false,
                 "searchKey": "url.encodePathSegment",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -101,78 +135,14 @@
           },
           {
             "node": {
-              "pathID": "/net/url#encodeHost",
-              "documentation": {
-                "identifier": "encodeHost",
-                "newPage": false,
-                "searchKey": "url.encodeHost",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const encodeHost"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst encodeHost\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#encodeZone",
-              "documentation": {
-                "identifier": "encodeZone",
-                "newPage": false,
-                "searchKey": "url.encodeZone",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const encodeZone"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst encodeZone\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#encodeUserPassword",
-              "documentation": {
-                "identifier": "encodeUserPassword",
-                "newPage": false,
-                "searchKey": "url.encodeUserPassword",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const encodeUserPassword"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst encodeUserPassword\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/url#encodeQueryComponent",
               "documentation": {
                 "identifier": "encodeQueryComponent",
                 "newPage": false,
                 "searchKey": "url.encodeQueryComponent",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -189,22 +159,48 @@
           },
           {
             "node": {
-              "pathID": "/net/url#encodeFragment",
+              "pathID": "/net/url#encodeUserPassword",
               "documentation": {
-                "identifier": "encodeFragment",
+                "identifier": "encodeUserPassword",
                 "newPage": false,
-                "searchKey": "url.encodeFragment",
+                "searchKey": "url.encodeUserPassword",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const encodeFragment"
+                "value": "const encodeUserPassword"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst encodeFragment\n```\n\n"
+                "value": "```Go\nconst encodeUserPassword\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#encodeZone",
+              "documentation": {
+                "identifier": "encodeZone",
+                "newPage": false,
+                "searchKey": "url.encodeZone",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const encodeZone"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst encodeZone\n```\n\n"
               },
               "children": null
             }
@@ -217,6 +213,8 @@
                 "newPage": false,
                 "searchKey": "url.pathThatLooksSchemeRelative",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -227,6 +225,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst pathThatLooksSchemeRelative = \"//not.a.user@not.a.host/just/a/path\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#upperhex",
+              "documentation": {
+                "identifier": "upperhex",
+                "newPage": false,
+                "searchKey": "url.upperhex",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const upperhex"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst upperhex = \"0123456789ABCDEF\"\n```\n\n"
               },
               "children": null
             }
@@ -241,7 +263,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -254,144 +278,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/net/url#urltests",
-              "documentation": {
-                "identifier": "urltests",
-                "newPage": false,
-                "searchKey": "url.urltests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var urltests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar urltests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#parseRequestURLTests",
-              "documentation": {
-                "identifier": "parseRequestURLTests",
-                "newPage": false,
-                "searchKey": "url.parseRequestURLTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var parseRequestURLTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar parseRequestURLTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#stringURLTests",
-              "documentation": {
-                "identifier": "stringURLTests",
-                "newPage": false,
-                "searchKey": "url.stringURLTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var stringURLTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar stringURLTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#unescapeTests",
-              "documentation": {
-                "identifier": "unescapeTests",
-                "newPage": false,
-                "searchKey": "url.unescapeTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var unescapeTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar unescapeTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#queryEscapeTests",
-              "documentation": {
-                "identifier": "queryEscapeTests",
-                "newPage": false,
-                "searchKey": "url.queryEscapeTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var queryEscapeTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar queryEscapeTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#pathEscapeTests",
-              "documentation": {
-                "identifier": "pathEscapeTests",
-                "newPage": false,
-                "searchKey": "url.pathEscapeTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var pathEscapeTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar pathEscapeTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/url#encodeQueryTests",
               "documentation": {
                 "identifier": "encodeQueryTests",
                 "newPage": false,
                 "searchKey": "url.encodeQueryTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -408,12 +303,190 @@
           },
           {
             "node": {
+              "pathID": "/net/url#escapeBenchmarks",
+              "documentation": {
+                "identifier": "escapeBenchmarks",
+                "newPage": false,
+                "searchKey": "url.escapeBenchmarks",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var escapeBenchmarks"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar escapeBenchmarks = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#netErrorTests",
+              "documentation": {
+                "identifier": "netErrorTests",
+                "newPage": false,
+                "searchKey": "url.netErrorTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var netErrorTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar netErrorTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#parseRequestURLTests",
+              "documentation": {
+                "identifier": "parseRequestURLTests",
+                "newPage": false,
+                "searchKey": "url.parseRequestURLTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var parseRequestURLTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar parseRequestURLTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#parseTests",
+              "documentation": {
+                "identifier": "parseTests",
+                "newPage": false,
+                "searchKey": "url.parseTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var parseTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar parseTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#pathEscapeTests",
+              "documentation": {
+                "identifier": "pathEscapeTests",
+                "newPage": false,
+                "searchKey": "url.pathEscapeTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var pathEscapeTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar pathEscapeTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#queryEscapeTests",
+              "documentation": {
+                "identifier": "queryEscapeTests",
+                "newPage": false,
+                "searchKey": "url.queryEscapeTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var queryEscapeTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar queryEscapeTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#requritests",
+              "documentation": {
+                "identifier": "requritests",
+                "newPage": false,
+                "searchKey": "url.requritests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var requritests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar requritests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/net/url#resolvePathTests",
               "documentation": {
                 "identifier": "resolvePathTests",
                 "newPage": false,
                 "searchKey": "url.resolvePathTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -436,6 +509,9 @@
                 "newPage": false,
                 "searchKey": "url.resolveReferenceTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -452,56 +528,15 @@
           },
           {
             "node": {
-              "pathID": "/net/url#parseTests",
-              "documentation": {
-                "identifier": "parseTests",
-                "newPage": false,
-                "searchKey": "url.parseTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var parseTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar parseTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#requritests",
-              "documentation": {
-                "identifier": "requritests",
-                "newPage": false,
-                "searchKey": "url.requritests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var requritests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar requritests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/url#shouldEscapeTests",
               "documentation": {
                 "identifier": "shouldEscapeTests",
                 "newPage": false,
                 "searchKey": "url.shouldEscapeTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -518,56 +553,14 @@
           },
           {
             "node": {
-              "pathID": "/net/url#netErrorTests",
-              "documentation": {
-                "identifier": "netErrorTests",
-                "newPage": false,
-                "searchKey": "url.netErrorTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var netErrorTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar netErrorTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#escapeBenchmarks",
-              "documentation": {
-                "identifier": "escapeBenchmarks",
-                "newPage": false,
-                "searchKey": "url.escapeBenchmarks",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var escapeBenchmarks"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar escapeBenchmarks = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/url#sink",
               "documentation": {
                 "identifier": "sink",
                 "newPage": false,
                 "searchKey": "url.sink",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -578,6 +571,81 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar sink string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#stringURLTests",
+              "documentation": {
+                "identifier": "stringURLTests",
+                "newPage": false,
+                "searchKey": "url.stringURLTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var stringURLTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar stringURLTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#unescapeTests",
+              "documentation": {
+                "identifier": "unescapeTests",
+                "newPage": false,
+                "searchKey": "url.unescapeTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var unescapeTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar unescapeTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#urltests",
+              "documentation": {
+                "identifier": "urltests",
+                "newPage": false,
+                "searchKey": "url.urltests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var urltests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar urltests = ...\n```\n\n"
               },
               "children": null
             }
@@ -592,7 +660,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -605,12 +675,37 @@
         "children": [
           {
             "node": {
+              "pathID": "/net/url#EncodeQueryTest",
+              "documentation": {
+                "identifier": "EncodeQueryTest",
+                "newPage": false,
+                "searchKey": "url.EncodeQueryTest",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type EncodeQueryTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype EncodeQueryTest struct {\n\tm        Values\n\texpected string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/net/url#Error",
               "documentation": {
                 "identifier": "Error",
                 "newPage": false,
                 "searchKey": "url.Error",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -623,32 +718,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/net/url#Error.Unwrap",
-                    "documentation": {
-                      "identifier": "Error.Unwrap",
-                      "newPage": false,
-                      "searchKey": "url.Error.Unwrap",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *Error) Unwrap() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *Error) Unwrap() error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/net/url#Error.Error",
                     "documentation": {
                       "identifier": "Error.Error",
                       "newPage": false,
                       "searchKey": "url.Error.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -663,12 +740,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/net/url#Error.Temporary",
+                    "documentation": {
+                      "identifier": "Error.Temporary",
+                      "newPage": false,
+                      "searchKey": "url.Error.Temporary",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *Error) Temporary() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *Error) Temporary() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/net/url#Error.Timeout",
                     "documentation": {
                       "identifier": "Error.Timeout",
                       "newPage": false,
                       "searchKey": "url.Error.Timeout",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -683,20 +784,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/net/url#Error.Temporary",
+                    "pathID": "/net/url#Error.Unwrap",
                     "documentation": {
-                      "identifier": "Error.Temporary",
+                      "identifier": "Error.Unwrap",
                       "newPage": false,
-                      "searchKey": "url.Error.Temporary",
-                      "tags": null
+                      "searchKey": "url.Error.Unwrap",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (e *Error) Temporary() bool"
+                      "value": "func (e *Error) Unwrap() error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (e *Error) Temporary() bool\n```\n\n"
+                      "value": "```Go\nfunc (e *Error) Unwrap() error\n```\n\n"
                     },
                     "children": null
                   }
@@ -706,34 +809,14 @@
           },
           {
             "node": {
-              "pathID": "/net/url#encoding",
-              "documentation": {
-                "identifier": "encoding",
-                "newPage": false,
-                "searchKey": "url.encoding",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type encoding int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype encoding int\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/url#EscapeError",
               "documentation": {
                 "identifier": "EscapeError",
                 "newPage": false,
                 "searchKey": "url.EscapeError",
-                "tags": null
+                "tags": [
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -751,7 +834,9 @@
                       "identifier": "EscapeError.Error",
                       "newPage": false,
                       "searchKey": "url.EscapeError.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -769,12 +854,37 @@
           },
           {
             "node": {
+              "pathID": "/net/url#EscapeTest",
+              "documentation": {
+                "identifier": "EscapeTest",
+                "newPage": false,
+                "searchKey": "url.EscapeTest",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type EscapeTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype EscapeTest struct {\n\tin  string\n\tout string\n\terr error\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/net/url#InvalidHostError",
               "documentation": {
                 "identifier": "InvalidHostError",
                 "newPage": false,
                 "searchKey": "url.InvalidHostError",
-                "tags": null
+                "tags": [
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -792,7 +902,9 @@
                       "identifier": "InvalidHostError.Error",
                       "newPage": false,
                       "searchKey": "url.InvalidHostError.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -810,12 +922,37 @@
           },
           {
             "node": {
+              "pathID": "/net/url#RequestURITest",
+              "documentation": {
+                "identifier": "RequestURITest",
+                "newPage": false,
+                "searchKey": "url.RequestURITest",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RequestURITest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RequestURITest struct {\n\turl *URL\n\tout string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/net/url#URL",
               "documentation": {
                 "identifier": "URL",
                 "newPage": false,
                 "searchKey": "url.URL",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -833,7 +970,9 @@
                       "identifier": "Parse",
                       "newPage": false,
                       "searchKey": "url.Parse",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -853,7 +992,9 @@
                       "identifier": "ParseRequestURI",
                       "newPage": false,
                       "searchKey": "url.ParseRequestURI",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -874,6 +1015,7 @@
                       "newPage": false,
                       "searchKey": "url.parse",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -890,22 +1032,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/net/url#URL.setPath",
+                    "pathID": "/net/url#URL.EscapedFragment",
                     "documentation": {
-                      "identifier": "URL.setPath",
+                      "identifier": "URL.EscapedFragment",
                       "newPage": false,
-                      "searchKey": "url.URL.setPath",
+                      "searchKey": "url.URL.EscapedFragment",
                       "tags": [
-                        "private"
+                        "function"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (u *URL) setPath(p string) error"
+                      "value": "func (u *URL) EscapedFragment() string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (u *URL) setPath(p string) error\n```\n\nsetPath sets the Path and RawPath fields of the URL based on the provided escaped path p. It maintains the invariant that RawPath is only specified when it differs from the default encoding of the path. For example: - setPath(\"/foo/bar\")   will set Path=\"/foo/bar\" and RawPath=\"\" - setPath(\"/foo%2fbar\") will set Path=\"/foo/bar\" and RawPath=\"/foo%2fbar\" setPath will return an error only if the provided path contains an invalid escaping. \n\n"
+                      "value": "```Go\nfunc (u *URL) EscapedFragment() string\n```\n\nEscapedFragment returns the escaped form of u.Fragment. In general there are multiple possible escaped forms of any fragment. EscapedFragment returns u.RawFragment when it is a valid escaping of u.Fragment. Otherwise EscapedFragment ignores u.RawFragment and computes an escaped form on its own. The String method uses EscapedFragment to construct its result. In general, code should call EscapedFragment instead of reading u.RawFragment directly. \n\n"
                     },
                     "children": null
                   }
@@ -917,7 +1059,9 @@
                       "identifier": "URL.EscapedPath",
                       "newPage": false,
                       "searchKey": "url.URL.EscapedPath",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -932,12 +1076,255 @@
                 },
                 {
                   "node": {
+                    "pathID": "/net/url#URL.Hostname",
+                    "documentation": {
+                      "identifier": "URL.Hostname",
+                      "newPage": false,
+                      "searchKey": "url.URL.Hostname",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (u *URL) Hostname() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (u *URL) Hostname() string\n```\n\nHostname returns u.Host, stripping any valid port number if present. \n\nIf the result is enclosed in square brackets, as literal IPv6 addresses are, the square brackets are removed from the result. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/url#URL.IsAbs",
+                    "documentation": {
+                      "identifier": "URL.IsAbs",
+                      "newPage": false,
+                      "searchKey": "url.URL.IsAbs",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (u *URL) IsAbs() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (u *URL) IsAbs() bool\n```\n\nIsAbs reports whether the URL is absolute. Absolute means that it has a non-empty scheme. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/url#URL.MarshalBinary",
+                    "documentation": {
+                      "identifier": "URL.MarshalBinary",
+                      "newPage": false,
+                      "searchKey": "url.URL.MarshalBinary",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (u *URL) MarshalBinary() (text []byte, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (u *URL) MarshalBinary() (text []byte, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/url#URL.Parse",
+                    "documentation": {
+                      "identifier": "URL.Parse",
+                      "newPage": false,
+                      "searchKey": "url.URL.Parse",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (u *URL) Parse(ref string) (*URL, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (u *URL) Parse(ref string) (*URL, error)\n```\n\nParse parses a URL in the context of the receiver. The provided URL may be relative or absolute. Parse returns nil, err on parse failure, otherwise its return value is the same as ResolveReference. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/url#URL.Port",
+                    "documentation": {
+                      "identifier": "URL.Port",
+                      "newPage": false,
+                      "searchKey": "url.URL.Port",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (u *URL) Port() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (u *URL) Port() string\n```\n\nPort returns the port part of u.Host, without the leading colon. \n\nIf u.Host doesn't contain a valid numeric port, Port returns an empty string. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/url#URL.Query",
+                    "documentation": {
+                      "identifier": "URL.Query",
+                      "newPage": false,
+                      "searchKey": "url.URL.Query",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (u *URL) Query() Values"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (u *URL) Query() Values\n```\n\nQuery parses RawQuery and returns the corresponding values. It silently discards malformed value pairs. To check errors use ParseQuery. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/url#URL.Redacted",
+                    "documentation": {
+                      "identifier": "URL.Redacted",
+                      "newPage": false,
+                      "searchKey": "url.URL.Redacted",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (u *URL) Redacted() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (u *URL) Redacted() string\n```\n\nRedacted is like String but replaces any password with \"xxxxx\". Only the password in u.URL is redacted. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/url#URL.RequestURI",
+                    "documentation": {
+                      "identifier": "URL.RequestURI",
+                      "newPage": false,
+                      "searchKey": "url.URL.RequestURI",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (u *URL) RequestURI() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (u *URL) RequestURI() string\n```\n\nRequestURI returns the encoded path?query or opaque?query string that would be used in an HTTP request for u. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/url#URL.ResolveReference",
+                    "documentation": {
+                      "identifier": "URL.ResolveReference",
+                      "newPage": false,
+                      "searchKey": "url.URL.ResolveReference",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (u *URL) ResolveReference(ref *URL) *URL"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (u *URL) ResolveReference(ref *URL) *URL\n```\n\nResolveReference resolves a URI reference to an absolute URI from an absolute base URI u, per RFC 3986 Section 5.2. The URI reference may be relative or absolute. ResolveReference always returns a new URL instance, even if the returned URL is identical to either the base or reference. If ref is an absolute URL, then ResolveReference ignores base and returns a copy of ref. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/url#URL.String",
+                    "documentation": {
+                      "identifier": "URL.String",
+                      "newPage": false,
+                      "searchKey": "url.URL.String",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (u *URL) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (u *URL) String() string\n```\n\nString reassembles the URL into a valid URL string. The general form of the result is one of: \n\n```\nscheme:opaque?query#fragment\nscheme://userinfo@host/path?query#fragment\n\n```\nIf u.Opaque is non-empty, String uses the first form; otherwise it uses the second form. Any non-ASCII characters in host are escaped. To obtain the path, String uses u.EscapedPath(). \n\nIn the second form, the following rules apply: \n\n```\n- if u.Scheme is empty, scheme: is omitted.\n- if u.User is nil, userinfo@ is omitted.\n- if u.Host is empty, host/ is omitted.\n- if u.Scheme and u.Host are empty and u.User is nil,\n   the entire scheme://userinfo@host/ is omitted.\n- if u.Host is non-empty and u.Path begins with a /,\n   the form host/path does not add its own /.\n- if u.RawQuery is empty, ?query is omitted.\n- if u.Fragment is empty, #fragment is omitted.\n\n```\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/url#URL.UnmarshalBinary",
+                    "documentation": {
+                      "identifier": "URL.UnmarshalBinary",
+                      "newPage": false,
+                      "searchKey": "url.URL.UnmarshalBinary",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (u *URL) UnmarshalBinary(text []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (u *URL) UnmarshalBinary(text []byte) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/net/url#URL.setFragment",
                     "documentation": {
                       "identifier": "URL.setFragment",
                       "newPage": false,
                       "searchKey": "url.URL.setFragment",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -954,240 +1341,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/net/url#URL.EscapedFragment",
+                    "pathID": "/net/url#URL.setPath",
                     "documentation": {
-                      "identifier": "URL.EscapedFragment",
+                      "identifier": "URL.setPath",
                       "newPage": false,
-                      "searchKey": "url.URL.EscapedFragment",
-                      "tags": null
+                      "searchKey": "url.URL.setPath",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (u *URL) EscapedFragment() string"
+                      "value": "func (u *URL) setPath(p string) error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (u *URL) EscapedFragment() string\n```\n\nEscapedFragment returns the escaped form of u.Fragment. In general there are multiple possible escaped forms of any fragment. EscapedFragment returns u.RawFragment when it is a valid escaping of u.Fragment. Otherwise EscapedFragment ignores u.RawFragment and computes an escaped form on its own. The String method uses EscapedFragment to construct its result. In general, code should call EscapedFragment instead of reading u.RawFragment directly. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/url#URL.String",
-                    "documentation": {
-                      "identifier": "URL.String",
-                      "newPage": false,
-                      "searchKey": "url.URL.String",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (u *URL) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (u *URL) String() string\n```\n\nString reassembles the URL into a valid URL string. The general form of the result is one of: \n\n```\nscheme:opaque?query#fragment\nscheme://userinfo@host/path?query#fragment\n\n```\nIf u.Opaque is non-empty, String uses the first form; otherwise it uses the second form. Any non-ASCII characters in host are escaped. To obtain the path, String uses u.EscapedPath(). \n\nIn the second form, the following rules apply: \n\n```\n- if u.Scheme is empty, scheme: is omitted.\n- if u.User is nil, userinfo@ is omitted.\n- if u.Host is empty, host/ is omitted.\n- if u.Scheme and u.Host are empty and u.User is nil,\n   the entire scheme://userinfo@host/ is omitted.\n- if u.Host is non-empty and u.Path begins with a /,\n   the form host/path does not add its own /.\n- if u.RawQuery is empty, ?query is omitted.\n- if u.Fragment is empty, #fragment is omitted.\n\n```\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/url#URL.Redacted",
-                    "documentation": {
-                      "identifier": "URL.Redacted",
-                      "newPage": false,
-                      "searchKey": "url.URL.Redacted",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (u *URL) Redacted() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (u *URL) Redacted() string\n```\n\nRedacted is like String but replaces any password with \"xxxxx\". Only the password in u.URL is redacted. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/url#URL.IsAbs",
-                    "documentation": {
-                      "identifier": "URL.IsAbs",
-                      "newPage": false,
-                      "searchKey": "url.URL.IsAbs",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (u *URL) IsAbs() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (u *URL) IsAbs() bool\n```\n\nIsAbs reports whether the URL is absolute. Absolute means that it has a non-empty scheme. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/url#URL.Parse",
-                    "documentation": {
-                      "identifier": "URL.Parse",
-                      "newPage": false,
-                      "searchKey": "url.URL.Parse",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (u *URL) Parse(ref string) (*URL, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (u *URL) Parse(ref string) (*URL, error)\n```\n\nParse parses a URL in the context of the receiver. The provided URL may be relative or absolute. Parse returns nil, err on parse failure, otherwise its return value is the same as ResolveReference. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/url#URL.ResolveReference",
-                    "documentation": {
-                      "identifier": "URL.ResolveReference",
-                      "newPage": false,
-                      "searchKey": "url.URL.ResolveReference",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (u *URL) ResolveReference(ref *URL) *URL"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (u *URL) ResolveReference(ref *URL) *URL\n```\n\nResolveReference resolves a URI reference to an absolute URI from an absolute base URI u, per RFC 3986 Section 5.2. The URI reference may be relative or absolute. ResolveReference always returns a new URL instance, even if the returned URL is identical to either the base or reference. If ref is an absolute URL, then ResolveReference ignores base and returns a copy of ref. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/url#URL.Query",
-                    "documentation": {
-                      "identifier": "URL.Query",
-                      "newPage": false,
-                      "searchKey": "url.URL.Query",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (u *URL) Query() Values"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (u *URL) Query() Values\n```\n\nQuery parses RawQuery and returns the corresponding values. It silently discards malformed value pairs. To check errors use ParseQuery. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/url#URL.RequestURI",
-                    "documentation": {
-                      "identifier": "URL.RequestURI",
-                      "newPage": false,
-                      "searchKey": "url.URL.RequestURI",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (u *URL) RequestURI() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (u *URL) RequestURI() string\n```\n\nRequestURI returns the encoded path?query or opaque?query string that would be used in an HTTP request for u. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/url#URL.Hostname",
-                    "documentation": {
-                      "identifier": "URL.Hostname",
-                      "newPage": false,
-                      "searchKey": "url.URL.Hostname",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (u *URL) Hostname() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (u *URL) Hostname() string\n```\n\nHostname returns u.Host, stripping any valid port number if present. \n\nIf the result is enclosed in square brackets, as literal IPv6 addresses are, the square brackets are removed from the result. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/url#URL.Port",
-                    "documentation": {
-                      "identifier": "URL.Port",
-                      "newPage": false,
-                      "searchKey": "url.URL.Port",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (u *URL) Port() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (u *URL) Port() string\n```\n\nPort returns the port part of u.Host, without the leading colon. \n\nIf u.Host doesn't contain a valid numeric port, Port returns an empty string. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/url#URL.MarshalBinary",
-                    "documentation": {
-                      "identifier": "URL.MarshalBinary",
-                      "newPage": false,
-                      "searchKey": "url.URL.MarshalBinary",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (u *URL) MarshalBinary() (text []byte, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (u *URL) MarshalBinary() (text []byte, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/url#URL.UnmarshalBinary",
-                    "documentation": {
-                      "identifier": "URL.UnmarshalBinary",
-                      "newPage": false,
-                      "searchKey": "url.URL.UnmarshalBinary",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (u *URL) UnmarshalBinary(text []byte) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (u *URL) UnmarshalBinary(text []byte) error\n```\n\n"
+                      "value": "```Go\nfunc (u *URL) setPath(p string) error\n```\n\nsetPath sets the Path and RawPath fields of the URL based on the provided escaped path p. It maintains the invariant that RawPath is only specified when it differs from the default encoding of the path. For example: - setPath(\"/foo/bar\")   will set Path=\"/foo/bar\" and RawPath=\"\" - setPath(\"/foo%2fbar\") will set Path=\"/foo/bar\" and RawPath=\"/foo%2fbar\" setPath will return an error only if the provided path contains an invalid escaping. \n\n"
                     },
                     "children": null
                   }
@@ -1197,12 +1367,37 @@
           },
           {
             "node": {
+              "pathID": "/net/url#URLTest",
+              "documentation": {
+                "identifier": "URLTest",
+                "newPage": false,
+                "searchKey": "url.URLTest",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type URLTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype URLTest struct {\n\tin        string\n\tout       *URL   // expected parse\n\troundtrip string // expected result of reserializing the URL; empty means same as \"in\".\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/net/url#Userinfo",
               "documentation": {
                 "identifier": "Userinfo",
                 "newPage": false,
                 "searchKey": "url.Userinfo",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1220,7 +1415,9 @@
                       "identifier": "User",
                       "newPage": false,
                       "searchKey": "url.User",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1240,7 +1437,9 @@
                       "identifier": "UserPassword",
                       "newPage": false,
                       "searchKey": "url.UserPassword",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1261,6 +1460,7 @@
                       "newPage": false,
                       "searchKey": "url.parseAuthority",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1277,32 +1477,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/net/url#Userinfo.Username",
-                    "documentation": {
-                      "identifier": "Userinfo.Username",
-                      "newPage": false,
-                      "searchKey": "url.Userinfo.Username",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (u *Userinfo) Username() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (u *Userinfo) Username() string\n```\n\nUsername returns the username. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/net/url#Userinfo.Password",
                     "documentation": {
                       "identifier": "Userinfo.Password",
                       "newPage": false,
                       "searchKey": "url.Userinfo.Password",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1322,7 +1504,9 @@
                       "identifier": "Userinfo.String",
                       "newPage": false,
                       "searchKey": "url.Userinfo.String",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1331,6 +1515,28 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (u *Userinfo) String() string\n```\n\nString returns the encoded userinfo information in the standard form of \"username[:password]\". \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/url#Userinfo.Username",
+                    "documentation": {
+                      "identifier": "Userinfo.Username",
+                      "newPage": false,
+                      "searchKey": "url.Userinfo.Username",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (u *Userinfo) Username() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (u *Userinfo) Username() string\n```\n\nUsername returns the username. \n\n"
                     },
                     "children": null
                   }
@@ -1345,7 +1551,9 @@
                 "identifier": "Values",
                 "newPage": false,
                 "searchKey": "url.Values",
-                "tags": null
+                "tags": [
+                  "object"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1363,7 +1571,9 @@
                       "identifier": "ParseQuery",
                       "newPage": false,
                       "searchKey": "url.ParseQuery",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1378,52 +1588,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/net/url#Values.Get",
-                    "documentation": {
-                      "identifier": "Values.Get",
-                      "newPage": false,
-                      "searchKey": "url.Values.Get",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v Values) Get(key string) string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v Values) Get(key string) string\n```\n\nGet gets the first value associated with the given key. If there are no values associated with the key, Get returns the empty string. To access multiple values, use the map directly. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/url#Values.Set",
-                    "documentation": {
-                      "identifier": "Values.Set",
-                      "newPage": false,
-                      "searchKey": "url.Values.Set",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v Values) Set(key, value string)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v Values) Set(key, value string)\n```\n\nSet sets the key to value. It replaces any existing values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/net/url#Values.Add",
                     "documentation": {
                       "identifier": "Values.Add",
                       "newPage": false,
                       "searchKey": "url.Values.Add",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1443,7 +1615,9 @@
                       "identifier": "Values.Del",
                       "newPage": false,
                       "searchKey": "url.Values.Del",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1458,12 +1632,58 @@
                 },
                 {
                   "node": {
+                    "pathID": "/net/url#Values.Encode",
+                    "documentation": {
+                      "identifier": "Values.Encode",
+                      "newPage": false,
+                      "searchKey": "url.Values.Encode",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v Values) Encode() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v Values) Encode() string\n```\n\nEncode encodes the values into `URL encoded' form (\"bar=baz&foo=quux\") sorted by key. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/url#Values.Get",
+                    "documentation": {
+                      "identifier": "Values.Get",
+                      "newPage": false,
+                      "searchKey": "url.Values.Get",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v Values) Get(key string) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v Values) Get(key string) string\n```\n\nGet gets the first value associated with the given key. If there are no values associated with the key, Get returns the empty string. To access multiple values, use the map directly. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/net/url#Values.Has",
                     "documentation": {
                       "identifier": "Values.Has",
                       "newPage": false,
                       "searchKey": "url.Values.Has",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1478,20 +1698,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/net/url#Values.Encode",
+                    "pathID": "/net/url#Values.Set",
                     "documentation": {
-                      "identifier": "Values.Encode",
+                      "identifier": "Values.Set",
                       "newPage": false,
-                      "searchKey": "url.Values.Encode",
-                      "tags": null
+                      "searchKey": "url.Values.Set",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (v Values) Encode() string"
+                      "value": "func (v Values) Set(key, value string)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (v Values) Encode() string\n```\n\nEncode encodes the values into `URL encoded' form (\"bar=baz&foo=quux\") sorted by key. \n\n"
+                      "value": "```Go\nfunc (v Values) Set(key, value string)\n```\n\nSet sets the key to value. It replaces any existing values. \n\n"
                     },
                     "children": null
                   }
@@ -1501,66 +1723,23 @@
           },
           {
             "node": {
-              "pathID": "/net/url#URLTest",
+              "pathID": "/net/url#encoding",
               "documentation": {
-                "identifier": "URLTest",
+                "identifier": "encoding",
                 "newPage": false,
-                "searchKey": "url.URLTest",
+                "searchKey": "url.encoding",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type URLTest struct"
+                "value": "type encoding int"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype URLTest struct {\n\tin        string\n\tout       *URL   // expected parse\n\troundtrip string // expected result of reserializing the URL; empty means same as \"in\".\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#EscapeTest",
-              "documentation": {
-                "identifier": "EscapeTest",
-                "newPage": false,
-                "searchKey": "url.EscapeTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type EscapeTest struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype EscapeTest struct {\n\tin  string\n\tout string\n\terr error\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#EncodeQueryTest",
-              "documentation": {
-                "identifier": "EncodeQueryTest",
-                "newPage": false,
-                "searchKey": "url.EncodeQueryTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type EncodeQueryTest struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype EncodeQueryTest struct {\n\tm        Values\n\texpected string\n}\n```\n\n"
+                "value": "```Go\ntype encoding int\n```\n\n"
               },
               "children": null
             }
@@ -1573,6 +1752,7 @@
                 "newPage": false,
                 "searchKey": "url.parseTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1589,34 +1769,13 @@
           },
           {
             "node": {
-              "pathID": "/net/url#RequestURITest",
-              "documentation": {
-                "identifier": "RequestURITest",
-                "newPage": false,
-                "searchKey": "url.RequestURITest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RequestURITest struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RequestURITest struct {\n\turl *URL\n\tout string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/url#shouldEscapeTest",
               "documentation": {
                 "identifier": "shouldEscapeTest",
                 "newPage": false,
                 "searchKey": "url.shouldEscapeTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1633,79 +1792,13 @@
           },
           {
             "node": {
-              "pathID": "/net/url#timeoutError",
-              "documentation": {
-                "identifier": "timeoutError",
-                "newPage": false,
-                "searchKey": "url.timeoutError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type timeoutError struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype timeoutError struct {\n\ttimeout bool\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/net/url#timeoutError.Error",
-                    "documentation": {
-                      "identifier": "timeoutError.Error",
-                      "newPage": false,
-                      "searchKey": "url.timeoutError.Error",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *timeoutError) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *timeoutError) Error() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/url#timeoutError.Timeout",
-                    "documentation": {
-                      "identifier": "timeoutError.Timeout",
-                      "newPage": false,
-                      "searchKey": "url.timeoutError.Timeout",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *timeoutError) Timeout() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *timeoutError) Timeout() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/url#temporaryError",
               "documentation": {
                 "identifier": "temporaryError",
                 "newPage": false,
                 "searchKey": "url.temporaryError",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1726,6 +1819,7 @@
                       "newPage": false,
                       "searchKey": "url.temporaryError.Error",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1748,6 +1842,7 @@
                       "newPage": false,
                       "searchKey": "url.temporaryError.Temporary",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1767,12 +1862,83 @@
           },
           {
             "node": {
+              "pathID": "/net/url#timeoutError",
+              "documentation": {
+                "identifier": "timeoutError",
+                "newPage": false,
+                "searchKey": "url.timeoutError",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type timeoutError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype timeoutError struct {\n\ttimeout bool\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/url#timeoutError.Error",
+                    "documentation": {
+                      "identifier": "timeoutError.Error",
+                      "newPage": false,
+                      "searchKey": "url.timeoutError.Error",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *timeoutError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *timeoutError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/url#timeoutError.Timeout",
+                    "documentation": {
+                      "identifier": "timeoutError.Timeout",
+                      "newPage": false,
+                      "searchKey": "url.timeoutError.Timeout",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *timeoutError) Timeout() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *timeoutError) Timeout() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/net/url#timeoutTemporaryError",
               "documentation": {
                 "identifier": "timeoutTemporaryError",
                 "newPage": false,
                 "searchKey": "url.timeoutTemporaryError",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1793,6 +1959,7 @@
                       "newPage": false,
                       "searchKey": "url.timeoutTemporaryError.Error",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1820,7 +1987,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1833,148 +2002,168 @@
         "children": [
           {
             "node": {
-              "pathID": "/net/url#ishex",
+              "pathID": "/net/url#BenchmarkPathEscape",
               "documentation": {
-                "identifier": "ishex",
+                "identifier": "BenchmarkPathEscape",
                 "newPage": false,
-                "searchKey": "url.ishex",
+                "searchKey": "url.BenchmarkPathEscape",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func ishex(c byte) bool"
+                "value": "func BenchmarkPathEscape(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc ishex(c byte) bool\n```\n\n"
+                "value": "```Go\nfunc BenchmarkPathEscape(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/net/url#unhex",
+              "pathID": "/net/url#BenchmarkPathUnescape",
               "documentation": {
-                "identifier": "unhex",
+                "identifier": "BenchmarkPathUnescape",
                 "newPage": false,
-                "searchKey": "url.unhex",
+                "searchKey": "url.BenchmarkPathUnescape",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func unhex(c byte) byte"
+                "value": "func BenchmarkPathUnescape(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc unhex(c byte) byte\n```\n\n"
+                "value": "```Go\nfunc BenchmarkPathUnescape(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/net/url#shouldEscape",
+              "pathID": "/net/url#BenchmarkQueryEscape",
               "documentation": {
-                "identifier": "shouldEscape",
+                "identifier": "BenchmarkQueryEscape",
                 "newPage": false,
-                "searchKey": "url.shouldEscape",
+                "searchKey": "url.BenchmarkQueryEscape",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func shouldEscape(c byte, mode encoding) bool"
+                "value": "func BenchmarkQueryEscape(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc shouldEscape(c byte, mode encoding) bool\n```\n\nReturn true if the specified character should be escaped when appearing in a URL string, according to RFC 3986. \n\nPlease be informed that for now shouldEscape does not check all reserved characters correctly. See golang.org/issue/5684. \n\n"
+                "value": "```Go\nfunc BenchmarkQueryEscape(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/net/url#QueryUnescape",
+              "pathID": "/net/url#BenchmarkQueryUnescape",
               "documentation": {
-                "identifier": "QueryUnescape",
+                "identifier": "BenchmarkQueryUnescape",
                 "newPage": false,
-                "searchKey": "url.QueryUnescape",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func QueryUnescape(s string) (string, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc QueryUnescape(s string) (string, error)\n```\n\nQueryUnescape does the inverse transformation of QueryEscape, converting each 3-byte encoded substring of the form \"%AB\" into the hex-decoded byte 0xAB. It returns an error if any % is not followed by two hexadecimal digits. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#PathUnescape",
-              "documentation": {
-                "identifier": "PathUnescape",
-                "newPage": false,
-                "searchKey": "url.PathUnescape",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func PathUnescape(s string) (string, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc PathUnescape(s string) (string, error)\n```\n\nPathUnescape does the inverse transformation of PathEscape, converting each 3-byte encoded substring of the form \"%AB\" into the hex-decoded byte 0xAB. It returns an error if any % is not followed by two hexadecimal digits. \n\nPathUnescape is identical to QueryUnescape except that it does not unescape '+' to ' ' (space). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#unescape",
-              "documentation": {
-                "identifier": "unescape",
-                "newPage": false,
-                "searchKey": "url.unescape",
+                "searchKey": "url.BenchmarkQueryUnescape",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func unescape(s string, mode encoding) (string, error)"
+                "value": "func BenchmarkQueryUnescape(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc unescape(s string, mode encoding) (string, error)\n```\n\nunescape unescapes a string; the mode specifies which section of the URL string is being unescaped. \n\n"
+                "value": "```Go\nfunc BenchmarkQueryUnescape(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/net/url#QueryEscape",
+              "pathID": "/net/url#BenchmarkResolvePath",
               "documentation": {
-                "identifier": "QueryEscape",
+                "identifier": "BenchmarkResolvePath",
                 "newPage": false,
-                "searchKey": "url.QueryEscape",
-                "tags": null
+                "searchKey": "url.BenchmarkResolvePath",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func QueryEscape(s string) string"
+                "value": "func BenchmarkResolvePath(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc QueryEscape(s string) string\n```\n\nQueryEscape escapes the string so it can be safely placed inside a URL query. \n\n"
+                "value": "```Go\nfunc BenchmarkResolvePath(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#BenchmarkSplit",
+              "documentation": {
+                "identifier": "BenchmarkSplit",
+                "newPage": false,
+                "searchKey": "url.BenchmarkSplit",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSplit(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSplit(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#BenchmarkString",
+              "documentation": {
+                "identifier": "BenchmarkString",
+                "newPage": false,
+                "searchKey": "url.BenchmarkString",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkString(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkString(b *testing.B)\n```\n\n"
               },
               "children": null
             }
@@ -1986,7 +2175,9 @@
                 "identifier": "PathEscape",
                 "newPage": false,
                 "searchKey": "url.PathEscape",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2001,12 +2192,655 @@
           },
           {
             "node": {
+              "pathID": "/net/url#PathUnescape",
+              "documentation": {
+                "identifier": "PathUnescape",
+                "newPage": false,
+                "searchKey": "url.PathUnescape",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func PathUnescape(s string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc PathUnescape(s string) (string, error)\n```\n\nPathUnescape does the inverse transformation of PathEscape, converting each 3-byte encoded substring of the form \"%AB\" into the hex-decoded byte 0xAB. It returns an error if any % is not followed by two hexadecimal digits. \n\nPathUnescape is identical to QueryUnescape except that it does not unescape '+' to ' ' (space). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#QueryEscape",
+              "documentation": {
+                "identifier": "QueryEscape",
+                "newPage": false,
+                "searchKey": "url.QueryEscape",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func QueryEscape(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc QueryEscape(s string) string\n```\n\nQueryEscape escapes the string so it can be safely placed inside a URL query. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#QueryUnescape",
+              "documentation": {
+                "identifier": "QueryUnescape",
+                "newPage": false,
+                "searchKey": "url.QueryUnescape",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func QueryUnescape(s string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc QueryUnescape(s string) (string, error)\n```\n\nQueryUnescape does the inverse transformation of QueryEscape, converting each 3-byte encoded substring of the form \"%AB\" into the hex-decoded byte 0xAB. It returns an error if any % is not followed by two hexadecimal digits. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#TestEncodeQuery",
+              "documentation": {
+                "identifier": "TestEncodeQuery",
+                "newPage": false,
+                "searchKey": "url.TestEncodeQuery",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncodeQuery(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncodeQuery(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#TestGob",
+              "documentation": {
+                "identifier": "TestGob",
+                "newPage": false,
+                "searchKey": "url.TestGob",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGob(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGob(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#TestInvalidUserPassword",
+              "documentation": {
+                "identifier": "TestInvalidUserPassword",
+                "newPage": false,
+                "searchKey": "url.TestInvalidUserPassword",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInvalidUserPassword(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInvalidUserPassword(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#TestJSON",
+              "documentation": {
+                "identifier": "TestJSON",
+                "newPage": false,
+                "searchKey": "url.TestJSON",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestJSON(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestJSON(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#TestNilUser",
+              "documentation": {
+                "identifier": "TestNilUser",
+                "newPage": false,
+                "searchKey": "url.TestNilUser",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNilUser(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNilUser(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#TestParse",
+              "documentation": {
+                "identifier": "TestParse",
+                "newPage": false,
+                "searchKey": "url.TestParse",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParse(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParse(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#TestParseErrors",
+              "documentation": {
+                "identifier": "TestParseErrors",
+                "newPage": false,
+                "searchKey": "url.TestParseErrors",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseErrors(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseErrors(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#TestParseFailure",
+              "documentation": {
+                "identifier": "TestParseFailure",
+                "newPage": false,
+                "searchKey": "url.TestParseFailure",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseFailure(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseFailure(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#TestParseQuery",
+              "documentation": {
+                "identifier": "TestParseQuery",
+                "newPage": false,
+                "searchKey": "url.TestParseQuery",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseQuery(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseQuery(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#TestParseRequestURI",
+              "documentation": {
+                "identifier": "TestParseRequestURI",
+                "newPage": false,
+                "searchKey": "url.TestParseRequestURI",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseRequestURI(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseRequestURI(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#TestPathEscape",
+              "documentation": {
+                "identifier": "TestPathEscape",
+                "newPage": false,
+                "searchKey": "url.TestPathEscape",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPathEscape(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPathEscape(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#TestQueryEscape",
+              "documentation": {
+                "identifier": "TestQueryEscape",
+                "newPage": false,
+                "searchKey": "url.TestQueryEscape",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestQueryEscape(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestQueryEscape(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#TestQueryValues",
+              "documentation": {
+                "identifier": "TestQueryValues",
+                "newPage": false,
+                "searchKey": "url.TestQueryValues",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestQueryValues(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestQueryValues(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#TestRejectControlCharacters",
+              "documentation": {
+                "identifier": "TestRejectControlCharacters",
+                "newPage": false,
+                "searchKey": "url.TestRejectControlCharacters",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRejectControlCharacters(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRejectControlCharacters(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#TestRequestURI",
+              "documentation": {
+                "identifier": "TestRequestURI",
+                "newPage": false,
+                "searchKey": "url.TestRequestURI",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRequestURI(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRequestURI(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#TestResolvePath",
+              "documentation": {
+                "identifier": "TestResolvePath",
+                "newPage": false,
+                "searchKey": "url.TestResolvePath",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestResolvePath(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestResolvePath(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#TestResolveReference",
+              "documentation": {
+                "identifier": "TestResolveReference",
+                "newPage": false,
+                "searchKey": "url.TestResolveReference",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestResolveReference(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestResolveReference(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#TestShouldEscape",
+              "documentation": {
+                "identifier": "TestShouldEscape",
+                "newPage": false,
+                "searchKey": "url.TestShouldEscape",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestShouldEscape(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestShouldEscape(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#TestStarRequest",
+              "documentation": {
+                "identifier": "TestStarRequest",
+                "newPage": false,
+                "searchKey": "url.TestStarRequest",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStarRequest(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStarRequest(t *testing.T)\n```\n\nIssue 11202 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#TestURLErrorImplementsNetError",
+              "documentation": {
+                "identifier": "TestURLErrorImplementsNetError",
+                "newPage": false,
+                "searchKey": "url.TestURLErrorImplementsNetError",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestURLErrorImplementsNetError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestURLErrorImplementsNetError(t *testing.T)\n```\n\nTest that url.Error implements net.Error and that it forwards \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#TestURLHostnameAndPort",
+              "documentation": {
+                "identifier": "TestURLHostnameAndPort",
+                "newPage": false,
+                "searchKey": "url.TestURLHostnameAndPort",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestURLHostnameAndPort(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestURLHostnameAndPort(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#TestURLRedacted",
+              "documentation": {
+                "identifier": "TestURLRedacted",
+                "newPage": false,
+                "searchKey": "url.TestURLRedacted",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestURLRedacted(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestURLRedacted(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#TestURLString",
+              "documentation": {
+                "identifier": "TestURLString",
+                "newPage": false,
+                "searchKey": "url.TestURLString",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestURLString(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestURLString(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#TestUnescape",
+              "documentation": {
+                "identifier": "TestUnescape",
+                "newPage": false,
+                "searchKey": "url.TestUnescape",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnescape(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnescape(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/net/url#escape",
               "documentation": {
                 "identifier": "escape",
                 "newPage": false,
                 "searchKey": "url.escape",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2029,6 +2863,7 @@
                 "newPage": false,
                 "searchKey": "url.getScheme",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2045,22 +2880,23 @@
           },
           {
             "node": {
-              "pathID": "/net/url#split",
+              "pathID": "/net/url#ishex",
               "documentation": {
-                "identifier": "split",
+                "identifier": "ishex",
                 "newPage": false,
-                "searchKey": "url.split",
+                "searchKey": "url.ishex",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func split(s string, sep byte, cutc bool) (string, string)"
+                "value": "func ishex(c byte) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc split(s string, sep byte, cutc bool) (string, string)\n```\n\nsplit slices s into two substrings separated by the first occurrence of sep. If cutc is true then sep is excluded from the second substring. If sep does not occur in s then s and the empty string is returned. \n\n"
+                "value": "```Go\nfunc ishex(c byte) bool\n```\n\n"
               },
               "children": null
             }
@@ -2073,6 +2909,7 @@
                 "newPage": false,
                 "searchKey": "url.parseHost",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2089,56 +2926,13 @@
           },
           {
             "node": {
-              "pathID": "/net/url#validEncoded",
-              "documentation": {
-                "identifier": "validEncoded",
-                "newPage": false,
-                "searchKey": "url.validEncoded",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func validEncoded(s string, mode encoding) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc validEncoded(s string, mode encoding) bool\n```\n\nvalidEncoded reports whether s is a valid encoded path or fragment, according to mode. It must not contain any bytes that require escaping during encoding. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#validOptionalPort",
-              "documentation": {
-                "identifier": "validOptionalPort",
-                "newPage": false,
-                "searchKey": "url.validOptionalPort",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func validOptionalPort(port string) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc validOptionalPort(port string) bool\n```\n\nvalidOptionalPort reports whether port is either an empty string or matches /^:\\d*$/ \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/url#parseQuery",
               "documentation": {
                 "identifier": "parseQuery",
                 "newPage": false,
                 "searchKey": "url.parseQuery",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2161,6 +2955,7 @@
                 "newPage": false,
                 "searchKey": "url.resolvePath",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2177,12 +2972,59 @@
           },
           {
             "node": {
+              "pathID": "/net/url#shouldEscape",
+              "documentation": {
+                "identifier": "shouldEscape",
+                "newPage": false,
+                "searchKey": "url.shouldEscape",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func shouldEscape(c byte, mode encoding) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc shouldEscape(c byte, mode encoding) bool\n```\n\nReturn true if the specified character should be escaped when appearing in a URL string, according to RFC 3986. \n\nPlease be informed that for now shouldEscape does not check all reserved characters correctly. See golang.org/issue/5684. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url#split",
+              "documentation": {
+                "identifier": "split",
+                "newPage": false,
+                "searchKey": "url.split",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func split(s string, sep byte, cutc bool) (string, string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc split(s string, sep byte, cutc bool) (string, string)\n```\n\nsplit slices s into two substrings separated by the first occurrence of sep. If cutc is true then sep is excluded from the second substring. If sep does not occur in s then s and the empty string is returned. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/net/url#splitHostPort",
               "documentation": {
                 "identifier": "splitHostPort",
                 "newPage": false,
                 "searchKey": "url.splitHostPort",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2199,34 +3041,13 @@
           },
           {
             "node": {
-              "pathID": "/net/url#validUserinfo",
-              "documentation": {
-                "identifier": "validUserinfo",
-                "newPage": false,
-                "searchKey": "url.validUserinfo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func validUserinfo(s string) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc validUserinfo(s string) bool\n```\n\nvalidUserinfo reports whether s is a valid userinfo string per RFC 3986 Section 3.2.1: \n\n```\nuserinfo    = *( unreserved / pct-encoded / sub-delims / \":\" )\nunreserved  = ALPHA / DIGIT / \"-\" / \".\" / \"_\" / \"~\"\nsub-delims  = \"!\" / \"$\" / \"&\" / \"'\" / \"(\" / \")\"\n              / \"*\" / \"+\" / \",\" / \";\" / \"=\"\n\n```\nIt doesn't validate pct-encoded. The caller does that via func unescape. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/url#stringContainsCTLByte",
               "documentation": {
                 "identifier": "stringContainsCTLByte",
                 "newPage": false,
                 "searchKey": "url.stringContainsCTLByte",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2249,6 +3070,7 @@
                 "newPage": false,
                 "searchKey": "url.ufmt",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2265,682 +3087,115 @@
           },
           {
             "node": {
-              "pathID": "/net/url#BenchmarkString",
+              "pathID": "/net/url#unescape",
               "documentation": {
-                "identifier": "BenchmarkString",
+                "identifier": "unescape",
                 "newPage": false,
-                "searchKey": "url.BenchmarkString",
+                "searchKey": "url.unescape",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkString(b *testing.B)"
+                "value": "func unescape(s string, mode encoding) (string, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkString(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc unescape(s string, mode encoding) (string, error)\n```\n\nunescape unescapes a string; the mode specifies which section of the URL string is being unescaped. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/net/url#TestParse",
+              "pathID": "/net/url#unhex",
               "documentation": {
-                "identifier": "TestParse",
+                "identifier": "unhex",
                 "newPage": false,
-                "searchKey": "url.TestParse",
+                "searchKey": "url.unhex",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestParse(t *testing.T)"
+                "value": "func unhex(c byte) byte"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestParse(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc unhex(c byte) byte\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/net/url#TestParseRequestURI",
+              "pathID": "/net/url#validEncoded",
               "documentation": {
-                "identifier": "TestParseRequestURI",
+                "identifier": "validEncoded",
                 "newPage": false,
-                "searchKey": "url.TestParseRequestURI",
+                "searchKey": "url.validEncoded",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestParseRequestURI(t *testing.T)"
+                "value": "func validEncoded(s string, mode encoding) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestParseRequestURI(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc validEncoded(s string, mode encoding) bool\n```\n\nvalidEncoded reports whether s is a valid encoded path or fragment, according to mode. It must not contain any bytes that require escaping during encoding. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/net/url#TestURLString",
+              "pathID": "/net/url#validOptionalPort",
               "documentation": {
-                "identifier": "TestURLString",
+                "identifier": "validOptionalPort",
                 "newPage": false,
-                "searchKey": "url.TestURLString",
+                "searchKey": "url.validOptionalPort",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestURLString(t *testing.T)"
+                "value": "func validOptionalPort(port string) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestURLString(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc validOptionalPort(port string) bool\n```\n\nvalidOptionalPort reports whether port is either an empty string or matches /^:\\d*$/ \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/net/url#TestURLRedacted",
+              "pathID": "/net/url#validUserinfo",
               "documentation": {
-                "identifier": "TestURLRedacted",
+                "identifier": "validUserinfo",
                 "newPage": false,
-                "searchKey": "url.TestURLRedacted",
+                "searchKey": "url.validUserinfo",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestURLRedacted(t *testing.T)"
+                "value": "func validUserinfo(s string) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestURLRedacted(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#TestUnescape",
-              "documentation": {
-                "identifier": "TestUnescape",
-                "newPage": false,
-                "searchKey": "url.TestUnescape",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUnescape(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUnescape(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#TestQueryEscape",
-              "documentation": {
-                "identifier": "TestQueryEscape",
-                "newPage": false,
-                "searchKey": "url.TestQueryEscape",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestQueryEscape(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestQueryEscape(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#TestPathEscape",
-              "documentation": {
-                "identifier": "TestPathEscape",
-                "newPage": false,
-                "searchKey": "url.TestPathEscape",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestPathEscape(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestPathEscape(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#TestEncodeQuery",
-              "documentation": {
-                "identifier": "TestEncodeQuery",
-                "newPage": false,
-                "searchKey": "url.TestEncodeQuery",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEncodeQuery(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEncodeQuery(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#TestResolvePath",
-              "documentation": {
-                "identifier": "TestResolvePath",
-                "newPage": false,
-                "searchKey": "url.TestResolvePath",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestResolvePath(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestResolvePath(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#BenchmarkResolvePath",
-              "documentation": {
-                "identifier": "BenchmarkResolvePath",
-                "newPage": false,
-                "searchKey": "url.BenchmarkResolvePath",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkResolvePath(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkResolvePath(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#TestResolveReference",
-              "documentation": {
-                "identifier": "TestResolveReference",
-                "newPage": false,
-                "searchKey": "url.TestResolveReference",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestResolveReference(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestResolveReference(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#TestQueryValues",
-              "documentation": {
-                "identifier": "TestQueryValues",
-                "newPage": false,
-                "searchKey": "url.TestQueryValues",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestQueryValues(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestQueryValues(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#TestParseQuery",
-              "documentation": {
-                "identifier": "TestParseQuery",
-                "newPage": false,
-                "searchKey": "url.TestParseQuery",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestParseQuery(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestParseQuery(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#TestRequestURI",
-              "documentation": {
-                "identifier": "TestRequestURI",
-                "newPage": false,
-                "searchKey": "url.TestRequestURI",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRequestURI(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRequestURI(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#TestParseFailure",
-              "documentation": {
-                "identifier": "TestParseFailure",
-                "newPage": false,
-                "searchKey": "url.TestParseFailure",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestParseFailure(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestParseFailure(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#TestParseErrors",
-              "documentation": {
-                "identifier": "TestParseErrors",
-                "newPage": false,
-                "searchKey": "url.TestParseErrors",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestParseErrors(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestParseErrors(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#TestStarRequest",
-              "documentation": {
-                "identifier": "TestStarRequest",
-                "newPage": false,
-                "searchKey": "url.TestStarRequest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestStarRequest(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestStarRequest(t *testing.T)\n```\n\nIssue 11202 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#TestShouldEscape",
-              "documentation": {
-                "identifier": "TestShouldEscape",
-                "newPage": false,
-                "searchKey": "url.TestShouldEscape",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestShouldEscape(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestShouldEscape(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#TestURLErrorImplementsNetError",
-              "documentation": {
-                "identifier": "TestURLErrorImplementsNetError",
-                "newPage": false,
-                "searchKey": "url.TestURLErrorImplementsNetError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestURLErrorImplementsNetError(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestURLErrorImplementsNetError(t *testing.T)\n```\n\nTest that url.Error implements net.Error and that it forwards \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#TestURLHostnameAndPort",
-              "documentation": {
-                "identifier": "TestURLHostnameAndPort",
-                "newPage": false,
-                "searchKey": "url.TestURLHostnameAndPort",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestURLHostnameAndPort(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestURLHostnameAndPort(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#TestJSON",
-              "documentation": {
-                "identifier": "TestJSON",
-                "newPage": false,
-                "searchKey": "url.TestJSON",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestJSON(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestJSON(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#TestGob",
-              "documentation": {
-                "identifier": "TestGob",
-                "newPage": false,
-                "searchKey": "url.TestGob",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGob(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGob(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#TestNilUser",
-              "documentation": {
-                "identifier": "TestNilUser",
-                "newPage": false,
-                "searchKey": "url.TestNilUser",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestNilUser(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestNilUser(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#TestInvalidUserPassword",
-              "documentation": {
-                "identifier": "TestInvalidUserPassword",
-                "newPage": false,
-                "searchKey": "url.TestInvalidUserPassword",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestInvalidUserPassword(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestInvalidUserPassword(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#TestRejectControlCharacters",
-              "documentation": {
-                "identifier": "TestRejectControlCharacters",
-                "newPage": false,
-                "searchKey": "url.TestRejectControlCharacters",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRejectControlCharacters(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRejectControlCharacters(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#BenchmarkQueryEscape",
-              "documentation": {
-                "identifier": "BenchmarkQueryEscape",
-                "newPage": false,
-                "searchKey": "url.BenchmarkQueryEscape",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkQueryEscape(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkQueryEscape(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#BenchmarkPathEscape",
-              "documentation": {
-                "identifier": "BenchmarkPathEscape",
-                "newPage": false,
-                "searchKey": "url.BenchmarkPathEscape",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkPathEscape(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkPathEscape(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#BenchmarkQueryUnescape",
-              "documentation": {
-                "identifier": "BenchmarkQueryUnescape",
-                "newPage": false,
-                "searchKey": "url.BenchmarkQueryUnescape",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkQueryUnescape(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkQueryUnescape(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#BenchmarkPathUnescape",
-              "documentation": {
-                "identifier": "BenchmarkPathUnescape",
-                "newPage": false,
-                "searchKey": "url.BenchmarkPathUnescape",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkPathUnescape(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkPathUnescape(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url#BenchmarkSplit",
-              "documentation": {
-                "identifier": "BenchmarkSplit",
-                "newPage": false,
-                "searchKey": "url.BenchmarkSplit",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkSplit(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkSplit(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc validUserinfo(s string) bool\n```\n\nvalidUserinfo reports whether s is a valid userinfo string per RFC 3986 Section 3.2.1: \n\n```\nuserinfo    = *( unreserved / pct-encoded / sub-delims / \":\" )\nunreserved  = ALPHA / DIGIT / \"-\" / \".\" / \"_\" / \"~\"\nsub-delims  = \"!\" / \"$\" / \"&\" / \"'\" / \"(\" / \")\"\n              / \"*\" / \"+\" / \",\" / \";\" / \"=\"\n\n```\nIt doesn't validate pct-encoded. The caller does that via func unescape. \n\n"
               },
               "children": null
             }

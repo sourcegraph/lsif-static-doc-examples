@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "migrations_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,12 +41,85 @@
         "children": [
           {
             "node": {
+              "pathID": "/migrations_test#TestCodeIntelMigrations",
+              "documentation": {
+                "identifier": "TestCodeIntelMigrations",
+                "newPage": false,
+                "searchKey": "migrations_test.TestCodeIntelMigrations",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCodeIntelMigrations(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCodeIntelMigrations(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/migrations_test#TestFrontendMigrations",
+              "documentation": {
+                "identifier": "TestFrontendMigrations",
+                "newPage": false,
+                "searchKey": "migrations_test.TestFrontendMigrations",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFrontendMigrations(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFrontendMigrations(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/migrations_test#TestIDConstraints",
+              "documentation": {
+                "identifier": "TestIDConstraints",
+                "newPage": false,
+                "searchKey": "migrations_test.TestIDConstraints",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIDConstraints(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIDConstraints(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/migrations_test#init.migrations_test.go",
               "documentation": {
                 "identifier": "init.migrations_test.go",
                 "newPage": false,
                 "searchKey": "migrations_test.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -61,78 +136,13 @@
           },
           {
             "node": {
-              "pathID": "/migrations_test#TestIDConstraints",
-              "documentation": {
-                "identifier": "TestIDConstraints",
-                "newPage": false,
-                "searchKey": "migrations_test.TestIDConstraints",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIDConstraints(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIDConstraints(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/migrations_test#TestFrontendMigrations",
-              "documentation": {
-                "identifier": "TestFrontendMigrations",
-                "newPage": false,
-                "searchKey": "migrations_test.TestFrontendMigrations",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestFrontendMigrations(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestFrontendMigrations(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/migrations_test#TestCodeIntelMigrations",
-              "documentation": {
-                "identifier": "TestCodeIntelMigrations",
-                "newPage": false,
-                "searchKey": "migrations_test.TestCodeIntelMigrations",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCodeIntelMigrations(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCodeIntelMigrations(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/migrations_test#testMigrations",
               "documentation": {
                 "identifier": "testMigrations",
                 "newPage": false,
                 "searchKey": "migrations_test.testMigrations",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "hash_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,9 @@
                 "newPage": false,
                 "searchKey": "hash_test.marshalTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -70,6 +75,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -90,6 +96,7 @@
                 "newPage": false,
                 "searchKey": "hash_test.Example_binaryMarshaler",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -106,12 +113,37 @@
           },
           {
             "node": {
+              "pathID": "/hash_test#TestMarshalHash",
+              "documentation": {
+                "identifier": "TestMarshalHash",
+                "newPage": false,
+                "searchKey": "hash_test.TestMarshalHash",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMarshalHash(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMarshalHash(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/hash_test#fromHex",
               "documentation": {
                 "identifier": "fromHex",
                 "newPage": false,
                 "searchKey": "hash_test.fromHex",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -122,28 +154,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc fromHex(s string) []byte\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash_test#TestMarshalHash",
-              "documentation": {
-                "identifier": "TestMarshalHash",
-                "newPage": false,
-                "searchKey": "hash_test.TestMarshalHash",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMarshalHash(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMarshalHash(t *testing.T)\n```\n\n"
               },
               "children": null
             }

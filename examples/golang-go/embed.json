@@ -4,7 +4,9 @@
     "identifier": "embed",
     "newPage": true,
     "searchKey": "embed",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -25,7 +27,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -44,6 +48,8 @@
                 "newPage": false,
                 "searchKey": "embed.dotFile",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -68,7 +74,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -86,7 +94,9 @@
                 "identifier": "FS",
                 "newPage": false,
                 "searchKey": "embed.FS",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -99,12 +109,79 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/embed#FS.Open",
+                    "documentation": {
+                      "identifier": "FS.Open",
+                      "newPage": false,
+                      "searchKey": "embed.FS.Open",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f FS) Open(name string) (fs.File, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f FS) Open(name string) (fs.File, error)\n```\n\nOpen opens the named file for reading and returns it as an fs.File. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#FS.ReadDir",
+                    "documentation": {
+                      "identifier": "FS.ReadDir",
+                      "newPage": false,
+                      "searchKey": "embed.FS.ReadDir",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f FS) ReadDir(name string) ([]fs.DirEntry, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f FS) ReadDir(name string) ([]fs.DirEntry, error)\n```\n\nReadDir reads and returns the entire named directory. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#FS.ReadFile",
+                    "documentation": {
+                      "identifier": "FS.ReadFile",
+                      "newPage": false,
+                      "searchKey": "embed.FS.ReadFile",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f FS) ReadFile(name string) ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f FS) ReadFile(name string) ([]byte, error)\n```\n\nReadFile reads and returns the content of the named file. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/embed#FS.lookup",
                     "documentation": {
                       "identifier": "FS.lookup",
                       "newPage": false,
                       "searchKey": "embed.FS.lookup",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -127,6 +204,7 @@
                       "newPage": false,
                       "searchKey": "embed.FS.readDir",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -137,66 +215,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (f FS) readDir(dir string) []file\n```\n\nreadDir returns the list of files corresponding to the directory dir. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/embed#FS.Open",
-                    "documentation": {
-                      "identifier": "FS.Open",
-                      "newPage": false,
-                      "searchKey": "embed.FS.Open",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f FS) Open(name string) (fs.File, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f FS) Open(name string) (fs.File, error)\n```\n\nOpen opens the named file for reading and returns it as an fs.File. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/embed#FS.ReadDir",
-                    "documentation": {
-                      "identifier": "FS.ReadDir",
-                      "newPage": false,
-                      "searchKey": "embed.FS.ReadDir",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f FS) ReadDir(name string) ([]fs.DirEntry, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f FS) ReadDir(name string) ([]fs.DirEntry, error)\n```\n\nReadDir reads and returns the entire named directory. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/embed#FS.ReadFile",
-                    "documentation": {
-                      "identifier": "FS.ReadFile",
-                      "newPage": false,
-                      "searchKey": "embed.FS.ReadFile",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f FS) ReadFile(name string) ([]byte, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f FS) ReadFile(name string) ([]byte, error)\n```\n\nReadFile reads and returns the content of the named file. \n\n"
                     },
                     "children": null
                   }
@@ -212,6 +230,7 @@
                 "newPage": false,
                 "searchKey": "embed.file",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -226,12 +245,105 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/embed#file.Info",
+                    "documentation": {
+                      "identifier": "file.Info",
+                      "newPage": false,
+                      "searchKey": "embed.file.Info",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *file) Info() (fs.FileInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *file) Info() (fs.FileInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#file.IsDir",
+                    "documentation": {
+                      "identifier": "file.IsDir",
+                      "newPage": false,
+                      "searchKey": "embed.file.IsDir",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *file) IsDir() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *file) IsDir() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#file.ModTime",
+                    "documentation": {
+                      "identifier": "file.ModTime",
+                      "newPage": false,
+                      "searchKey": "embed.file.ModTime",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *file) ModTime() time.Time"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *file) ModTime() time.Time\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#file.Mode",
+                    "documentation": {
+                      "identifier": "file.Mode",
+                      "newPage": false,
+                      "searchKey": "embed.file.Mode",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *file) Mode() fs.FileMode"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *file) Mode() fs.FileMode\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/embed#file.Name",
                     "documentation": {
                       "identifier": "file.Name",
                       "newPage": false,
                       "searchKey": "embed.file.Name",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -254,6 +366,7 @@
                       "newPage": false,
                       "searchKey": "embed.file.Size",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -270,56 +383,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/embed#file.ModTime",
-                    "documentation": {
-                      "identifier": "file.ModTime",
-                      "newPage": false,
-                      "searchKey": "embed.file.ModTime",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *file) ModTime() time.Time"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *file) ModTime() time.Time\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/embed#file.IsDir",
-                    "documentation": {
-                      "identifier": "file.IsDir",
-                      "newPage": false,
-                      "searchKey": "embed.file.IsDir",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *file) IsDir() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *file) IsDir() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/embed#file.Sys",
                     "documentation": {
                       "identifier": "file.Sys",
                       "newPage": false,
                       "searchKey": "embed.file.Sys",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -342,6 +412,7 @@
                       "newPage": false,
                       "searchKey": "embed.file.Type",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -352,161 +423,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (f *file) Type() fs.FileMode\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/embed#file.Info",
-                    "documentation": {
-                      "identifier": "file.Info",
-                      "newPage": false,
-                      "searchKey": "embed.file.Info",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *file) Info() (fs.FileInfo, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *file) Info() (fs.FileInfo, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/embed#file.Mode",
-                    "documentation": {
-                      "identifier": "file.Mode",
-                      "newPage": false,
-                      "searchKey": "embed.file.Mode",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *file) Mode() fs.FileMode"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *file) Mode() fs.FileMode\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/embed#openFile",
-              "documentation": {
-                "identifier": "openFile",
-                "newPage": false,
-                "searchKey": "embed.openFile",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type openFile struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype openFile struct {\n\tf      *file // the file itself\n\toffset int64 // current read offset\n}\n```\n\nAn openFile is a regular file open for reading. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/embed#openFile.Close",
-                    "documentation": {
-                      "identifier": "openFile.Close",
-                      "newPage": false,
-                      "searchKey": "embed.openFile.Close",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *openFile) Close() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *openFile) Close() error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/embed#openFile.Stat",
-                    "documentation": {
-                      "identifier": "openFile.Stat",
-                      "newPage": false,
-                      "searchKey": "embed.openFile.Stat",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *openFile) Stat() (fs.FileInfo, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *openFile) Stat() (fs.FileInfo, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/embed#openFile.Read",
-                    "documentation": {
-                      "identifier": "openFile.Read",
-                      "newPage": false,
-                      "searchKey": "embed.openFile.Read",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *openFile) Read(b []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *openFile) Read(b []byte) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/embed#openFile.Seek",
-                    "documentation": {
-                      "identifier": "openFile.Seek",
-                      "newPage": false,
-                      "searchKey": "embed.openFile.Seek",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *openFile) Seek(offset int64, whence int) (int64, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *openFile) Seek(offset int64, whence int) (int64, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -522,6 +438,7 @@
                 "newPage": false,
                 "searchKey": "embed.openDir",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -542,6 +459,7 @@
                       "newPage": false,
                       "searchKey": "embed.openDir.Close",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -558,34 +476,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/embed#openDir.Stat",
-                    "documentation": {
-                      "identifier": "openDir.Stat",
-                      "newPage": false,
-                      "searchKey": "embed.openDir.Stat",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *openDir) Stat() (fs.FileInfo, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *openDir) Stat() (fs.FileInfo, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/embed#openDir.Read",
                     "documentation": {
                       "identifier": "openDir.Read",
                       "newPage": false,
                       "searchKey": "embed.openDir.Read",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -608,6 +505,7 @@
                       "newPage": false,
                       "searchKey": "embed.openDir.ReadDir",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -618,6 +516,145 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (d *openDir) ReadDir(count int) ([]fs.DirEntry, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#openDir.Stat",
+                    "documentation": {
+                      "identifier": "openDir.Stat",
+                      "newPage": false,
+                      "searchKey": "embed.openDir.Stat",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *openDir) Stat() (fs.FileInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *openDir) Stat() (fs.FileInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/embed#openFile",
+              "documentation": {
+                "identifier": "openFile",
+                "newPage": false,
+                "searchKey": "embed.openFile",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type openFile struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype openFile struct {\n\tf      *file // the file itself\n\toffset int64 // current read offset\n}\n```\n\nAn openFile is a regular file open for reading. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/embed#openFile.Close",
+                    "documentation": {
+                      "identifier": "openFile.Close",
+                      "newPage": false,
+                      "searchKey": "embed.openFile.Close",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *openFile) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *openFile) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#openFile.Read",
+                    "documentation": {
+                      "identifier": "openFile.Read",
+                      "newPage": false,
+                      "searchKey": "embed.openFile.Read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *openFile) Read(b []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *openFile) Read(b []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#openFile.Seek",
+                    "documentation": {
+                      "identifier": "openFile.Seek",
+                      "newPage": false,
+                      "searchKey": "embed.openFile.Seek",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *openFile) Seek(offset int64, whence int) (int64, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *openFile) Seek(offset int64, whence int) (int64, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#openFile.Stat",
+                    "documentation": {
+                      "identifier": "openFile.Stat",
+                      "newPage": false,
+                      "searchKey": "embed.openFile.Stat",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *openFile) Stat() (fs.FileInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *openFile) Stat() (fs.FileInfo, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -635,7 +672,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -648,12 +687,36 @@
         "children": [
           {
             "node": {
+              "pathID": "/embed#sortSearch",
+              "documentation": {
+                "identifier": "sortSearch",
+                "newPage": false,
+                "searchKey": "embed.sortSearch",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sortSearch(n int, f func(int) bool) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sortSearch(n int, f func(int) bool) int\n```\n\nsortSearch is like sort.Search, avoiding an import. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/embed#split",
               "documentation": {
                 "identifier": "split",
                 "newPage": false,
                 "searchKey": "embed.split",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -676,6 +739,7 @@
                 "newPage": false,
                 "searchKey": "embed.trimSlash",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -686,28 +750,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc trimSlash(name string) string\n```\n\ntrimSlash trims a trailing slash from name, if present, returning the possibly shortened name. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/embed#sortSearch",
-              "documentation": {
-                "identifier": "sortSearch",
-                "newPage": false,
-                "searchKey": "embed.sortSearch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func sortSearch(n int, f func(int) bool) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc sortSearch(n int, f func(int) bool) int\n```\n\nsortSearch is like sort.Search, avoiding an import. \n\n"
               },
               "children": null
             }

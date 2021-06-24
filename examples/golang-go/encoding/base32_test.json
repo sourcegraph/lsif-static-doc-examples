@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "encoding/base32_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/encoding/base32_test#ExampleEncoding_EncodeToString",
-              "documentation": {
-                "identifier": "ExampleEncoding_EncodeToString",
-                "newPage": false,
-                "searchKey": "base32_test.ExampleEncoding_EncodeToString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleEncoding_EncodeToString()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleEncoding_EncodeToString()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/encoding/base32_test#ExampleEncoding_DecodeString",
               "documentation": {
                 "identifier": "ExampleEncoding_DecodeString",
                 "newPage": false,
                 "searchKey": "base32_test.ExampleEncoding_DecodeString",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -83,12 +64,36 @@
           },
           {
             "node": {
+              "pathID": "/encoding/base32_test#ExampleEncoding_EncodeToString",
+              "documentation": {
+                "identifier": "ExampleEncoding_EncodeToString",
+                "newPage": false,
+                "searchKey": "base32_test.ExampleEncoding_EncodeToString",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleEncoding_EncodeToString()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleEncoding_EncodeToString()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/encoding/base32_test#ExampleNewEncoder",
               "documentation": {
                 "identifier": "ExampleNewEncoder",
                 "newPage": false,
                 "searchKey": "base32_test.ExampleNewEncoder",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },

@@ -37,24 +37,24 @@ Learn more about monitoring in [https://about.sourcegraph.com/handbook/engineeri
     * [const TitleKubernetesMonitoring](#TitleKubernetesMonitoring)
     * [const TitleProvisioningIndicators](#TitleProvisioningIndicators)
 * [Variables](#var)
-    * [var ContainerMissing](#ContainerMissing)
-    * [var ContainerMemoryUsage](#ContainerMemoryUsage)
     * [var ContainerCPUUsage](#ContainerCPUUsage)
     * [var ContainerIOUsage](#ContainerIOUsage)
+    * [var ContainerMemoryUsage](#ContainerMemoryUsage)
+    * [var ContainerMissing](#ContainerMissing)
     * [var FrontendInternalAPIErrorResponses](#FrontendInternalAPIErrorResponses)
-    * [var GoGoroutines](#GoGoroutines)
     * [var GoGcDuration](#GoGcDuration)
+    * [var GoGoroutines](#GoGoroutines)
     * [var KubernetesPodsAvailable](#KubernetesPodsAvailable)
     * [var ProvisioningCPUUsageLongTerm](#ProvisioningCPUUsageLongTerm)
-    * [var ProvisioningMemoryUsageLongTerm](#ProvisioningMemoryUsageLongTerm)
     * [var ProvisioningCPUUsageShortTerm](#ProvisioningCPUUsageShortTerm)
+    * [var ProvisioningMemoryUsageLongTerm](#ProvisioningMemoryUsageLongTerm)
     * [var ProvisioningMemoryUsageShortTerm](#ProvisioningMemoryUsageShortTerm)
 * [Types](#type)
     * [type Observable monitoring.Observable](#Observable)
         * [func (o Observable) Observable() monitoring.Observable](#Observable.Observable)
-        * [func (o Observable) WithWarning(a *monitoring.ObservableAlertDefinition) Observable](#Observable.WithWarning)
         * [func (o Observable) WithCritical(a *monitoring.ObservableAlertDefinition) Observable](#Observable.WithCritical)
         * [func (o Observable) WithNoAlerts(interpretation string) Observable](#Observable.WithNoAlerts)
+        * [func (o Observable) WithWarning(a *monitoring.ObservableAlertDefinition) Observable](#Observable.WithWarning)
     * [type sharedObservable func(containerName string, owner github.com/sourcegraph/sourcegraph/monitoring/monitoring.ObservableOwner) github.com/sourcegraph/sourcegraph/monitoring/definitions/shared.Observable](#sharedObservable)
 * [Functions](#func)
     * [func CadvisorNameMatcher(containerName string) string](#CadvisorNameMatcher)
@@ -62,10 +62,15 @@ Learn more about monitoring in [https://about.sourcegraph.com/handbook/engineeri
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [package]
+```
+
 ### <a id="TitleContainerMonitoring" href="#TitleContainerMonitoring">const TitleContainerMonitoring</a>
 
 ```
 searchKey: shared.TitleContainerMonitoring
+tags: [constant string]
 ```
 
 ```Go
@@ -82,6 +87,7 @@ cAdvisor metrics reference: [https://github.com/google/cadvisor/blob/master/docs
 
 ```
 searchKey: shared.TitleGolangMonitoring
+tags: [constant string]
 ```
 
 ```Go
@@ -96,6 +102,7 @@ Uses metrics exported by the Prometheus Golang library, so is available on all d
 
 ```
 searchKey: shared.TitleKubernetesMonitoring
+tags: [constant string]
 ```
 
 ```Go
@@ -110,6 +117,7 @@ These observables should only use metrics exported by Kubernetes, or use Prometh
 
 ```
 searchKey: shared.TitleProvisioningIndicators
+tags: [constant string]
 ```
 
 ```Go
@@ -122,30 +130,15 @@ These observables should only use cAdvisor metrics, and are thus only available 
 
 ## <a id="var" href="#var">Variables</a>
 
-### <a id="ContainerMissing" href="#ContainerMissing">var ContainerMissing</a>
-
 ```
-searchKey: shared.ContainerMissing
-```
-
-```Go
-var ContainerMissing sharedObservable = ...
-```
-
-### <a id="ContainerMemoryUsage" href="#ContainerMemoryUsage">var ContainerMemoryUsage</a>
-
-```
-searchKey: shared.ContainerMemoryUsage
-```
-
-```Go
-var ContainerMemoryUsage sharedObservable = ...
+tags: [package]
 ```
 
 ### <a id="ContainerCPUUsage" href="#ContainerCPUUsage">var ContainerCPUUsage</a>
 
 ```
 searchKey: shared.ContainerCPUUsage
+tags: [variable function]
 ```
 
 ```Go
@@ -156,6 +149,7 @@ var ContainerCPUUsage sharedObservable = ...
 
 ```
 searchKey: shared.ContainerIOUsage
+tags: [variable function]
 ```
 
 ```Go
@@ -164,40 +158,66 @@ var ContainerIOUsage sharedObservable = ...
 
 ContainerIOUsage monitors filesystem reads and writes, and is useful for services that use disk. 
 
+### <a id="ContainerMemoryUsage" href="#ContainerMemoryUsage">var ContainerMemoryUsage</a>
+
+```
+searchKey: shared.ContainerMemoryUsage
+tags: [variable function]
+```
+
+```Go
+var ContainerMemoryUsage sharedObservable = ...
+```
+
+### <a id="ContainerMissing" href="#ContainerMissing">var ContainerMissing</a>
+
+```
+searchKey: shared.ContainerMissing
+tags: [variable function]
+```
+
+```Go
+var ContainerMissing sharedObservable = ...
+```
+
 ### <a id="FrontendInternalAPIErrorResponses" href="#FrontendInternalAPIErrorResponses">var FrontendInternalAPIErrorResponses</a>
 
 ```
 searchKey: shared.FrontendInternalAPIErrorResponses
+tags: [variable function]
 ```
 
 ```Go
 var FrontendInternalAPIErrorResponses sharedObservable = ...
 ```
 
-### <a id="GoGoroutines" href="#GoGoroutines">var GoGoroutines</a>
-
-```
-searchKey: shared.GoGoroutines
-```
-
-```Go
-var GoGoroutines sharedObservable = ...
-```
-
 ### <a id="GoGcDuration" href="#GoGcDuration">var GoGcDuration</a>
 
 ```
 searchKey: shared.GoGcDuration
+tags: [variable function]
 ```
 
 ```Go
 var GoGcDuration sharedObservable = ...
 ```
 
+### <a id="GoGoroutines" href="#GoGoroutines">var GoGoroutines</a>
+
+```
+searchKey: shared.GoGoroutines
+tags: [variable function]
+```
+
+```Go
+var GoGoroutines sharedObservable = ...
+```
+
 ### <a id="KubernetesPodsAvailable" href="#KubernetesPodsAvailable">var KubernetesPodsAvailable</a>
 
 ```
 searchKey: shared.KubernetesPodsAvailable
+tags: [variable function]
 ```
 
 ```Go
@@ -208,36 +228,40 @@ var KubernetesPodsAvailable sharedObservable = ...
 
 ```
 searchKey: shared.ProvisioningCPUUsageLongTerm
+tags: [variable function]
 ```
 
 ```Go
 var ProvisioningCPUUsageLongTerm sharedObservable = ...
 ```
 
-### <a id="ProvisioningMemoryUsageLongTerm" href="#ProvisioningMemoryUsageLongTerm">var ProvisioningMemoryUsageLongTerm</a>
-
-```
-searchKey: shared.ProvisioningMemoryUsageLongTerm
-```
-
-```Go
-var ProvisioningMemoryUsageLongTerm sharedObservable = ...
-```
-
 ### <a id="ProvisioningCPUUsageShortTerm" href="#ProvisioningCPUUsageShortTerm">var ProvisioningCPUUsageShortTerm</a>
 
 ```
 searchKey: shared.ProvisioningCPUUsageShortTerm
+tags: [variable function]
 ```
 
 ```Go
 var ProvisioningCPUUsageShortTerm sharedObservable = ...
 ```
 
+### <a id="ProvisioningMemoryUsageLongTerm" href="#ProvisioningMemoryUsageLongTerm">var ProvisioningMemoryUsageLongTerm</a>
+
+```
+searchKey: shared.ProvisioningMemoryUsageLongTerm
+tags: [variable function]
+```
+
+```Go
+var ProvisioningMemoryUsageLongTerm sharedObservable = ...
+```
+
 ### <a id="ProvisioningMemoryUsageShortTerm" href="#ProvisioningMemoryUsageShortTerm">var ProvisioningMemoryUsageShortTerm</a>
 
 ```
 searchKey: shared.ProvisioningMemoryUsageShortTerm
+tags: [variable function]
 ```
 
 ```Go
@@ -246,10 +270,15 @@ var ProvisioningMemoryUsageShortTerm sharedObservable = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [package]
+```
+
 ### <a id="Observable" href="#Observable">type Observable monitoring.Observable</a>
 
 ```
 searchKey: shared.Observable
+tags: [struct]
 ```
 
 ```Go
@@ -262,6 +291,7 @@ Observable is a variant of normal Observables that offer convenience functions f
 
 ```
 searchKey: shared.Observable.Observable
+tags: [function]
 ```
 
 ```Go
@@ -270,22 +300,11 @@ func (o Observable) Observable() monitoring.Observable
 
 Observable is a convenience adapter that casts this SharedObservable as an normal Observable. 
 
-#### <a id="Observable.WithWarning" href="#Observable.WithWarning">func (o Observable) WithWarning(a *monitoring.ObservableAlertDefinition) Observable</a>
-
-```
-searchKey: shared.Observable.WithWarning
-```
-
-```Go
-func (o Observable) WithWarning(a *monitoring.ObservableAlertDefinition) Observable
-```
-
-WithWarning overrides this Observable's warning-level alert with the given alert. 
-
 #### <a id="Observable.WithCritical" href="#Observable.WithCritical">func (o Observable) WithCritical(a *monitoring.ObservableAlertDefinition) Observable</a>
 
 ```
 searchKey: shared.Observable.WithCritical
+tags: [method]
 ```
 
 ```Go
@@ -298,6 +317,7 @@ WithCritical overrides this Observable's critical-level alert with the given ale
 
 ```
 searchKey: shared.Observable.WithNoAlerts
+tags: [method]
 ```
 
 ```Go
@@ -306,11 +326,24 @@ func (o Observable) WithNoAlerts(interpretation string) Observable
 
 WithNoAlerts disables alerting on this Observable and sets the given interpretation instead. 
 
+#### <a id="Observable.WithWarning" href="#Observable.WithWarning">func (o Observable) WithWarning(a *monitoring.ObservableAlertDefinition) Observable</a>
+
+```
+searchKey: shared.Observable.WithWarning
+tags: [method]
+```
+
+```Go
+func (o Observable) WithWarning(a *monitoring.ObservableAlertDefinition) Observable
+```
+
+WithWarning overrides this Observable's warning-level alert with the given alert. 
+
 ### <a id="sharedObservable" href="#sharedObservable">type sharedObservable func(containerName string, owner github.com/sourcegraph/sourcegraph/monitoring/monitoring.ObservableOwner) github.com/sourcegraph/sourcegraph/monitoring/definitions/shared.Observable</a>
 
 ```
 searchKey: shared.sharedObservable
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -321,10 +354,15 @@ sharedObservable defines the type all shared observable variables should have in
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [package]
+```
+
 ### <a id="CadvisorNameMatcher" href="#CadvisorNameMatcher">func CadvisorNameMatcher(containerName string) string</a>
 
 ```
 searchKey: shared.CadvisorNameMatcher
+tags: [method]
 ```
 
 ```Go

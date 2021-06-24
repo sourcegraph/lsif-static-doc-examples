@@ -3,50 +3,62 @@
 ## Index
 
 * [Constants](#const)
+    * [const DefaultMutexDelay](#DefaultMutexDelay)
     * [const DefaultMutexExpiry](#DefaultMutexExpiry)
     * [const DefaultMutexTries](#DefaultMutexTries)
-    * [const DefaultMutexDelay](#DefaultMutexDelay)
     * [const dataVersion](#dataVersion)
     * [const dataVersionToDelete](#dataVersionToDelete)
 * [Variables](#var)
     * [var deleteBatchSize](#deleteBatchSize)
-    * [var pool](#pool)
     * [var globalPrefix](#globalPrefix)
+    * [var pool](#pool)
 * [Types](#type)
-    * [type MutexOptions struct](#MutexOptions)
     * [type Cache struct](#Cache)
         * [func New(keyPrefix string) *Cache](#New)
         * [func NewWithTTL(keyPrefix string, ttlSeconds int) *Cache](#NewWithTTL)
-        * [func (r *Cache) GetMulti(keys ...string) [][]byte](#Cache.GetMulti)
-        * [func (r *Cache) SetMulti(keyvals ...[2]string)](#Cache.SetMulti)
-        * [func (r *Cache) Get(key string) ([]byte, bool)](#Cache.Get)
-        * [func (r *Cache) Set(key string, b []byte)](#Cache.Set)
         * [func (r *Cache) Delete(key string)](#Cache.Delete)
+        * [func (r *Cache) Get(key string) ([]byte, bool)](#Cache.Get)
+        * [func (r *Cache) GetMulti(keys ...string) [][]byte](#Cache.GetMulti)
+        * [func (r *Cache) Set(key string, b []byte)](#Cache.Set)
+        * [func (r *Cache) SetMulti(keyvals ...[2]string)](#Cache.SetMulti)
         * [func (r *Cache) rkeyPrefix() string](#Cache.rkeyPrefix)
+    * [type MutexOptions struct](#MutexOptions)
     * [type TB interface](#TB)
 * [Functions](#func)
-    * [func TryAcquireMutex(ctx context.Context, name string, options MutexOptions) (context.Context, func(), bool)](#TryAcquireMutex)
     * [func DeleteOldCacheData(c redis.Conn) error](#DeleteOldCacheData)
     * [func SetupForTest(t TB)](#SetupForTest)
-    * [func deleteKeysWithPrefix(c redis.Conn, prefix string) error](#deleteKeysWithPrefix)
-    * [func TestTryAcquireMutex(t *testing.T)](#TestTryAcquireMutex)
+    * [func TestCache_deleteKeysWithPrefix(t *testing.T)](#TestCache_deleteKeysWithPrefix)
+    * [func TestCache_multi(t *testing.T)](#TestCache_multi)
     * [func TestCache_namespace(t *testing.T)](#TestCache_namespace)
     * [func TestCache_simple(t *testing.T)](#TestCache_simple)
-    * [func TestCache_multi(t *testing.T)](#TestCache_multi)
-    * [func TestCache_deleteKeysWithPrefix(t *testing.T)](#TestCache_deleteKeysWithPrefix)
+    * [func TestTryAcquireMutex(t *testing.T)](#TestTryAcquireMutex)
+    * [func TryAcquireMutex(ctx context.Context, name string, options MutexOptions) (context.Context, func(), bool)](#TryAcquireMutex)
     * [func bytes(s ...string) [][]byte](#bytes)
+    * [func deleteKeysWithPrefix(c redis.Conn, prefix string) error](#deleteKeysWithPrefix)
 
 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
+tags: [package private]
+```
+
+### <a id="DefaultMutexDelay" href="#DefaultMutexDelay">const DefaultMutexDelay</a>
+
+```
+searchKey: rcache.DefaultMutexDelay
+tags: [constant number]
+```
+
+```Go
+const DefaultMutexDelay = 512 * time.Millisecond
 ```
 
 ### <a id="DefaultMutexExpiry" href="#DefaultMutexExpiry">const DefaultMutexExpiry</a>
 
 ```
 searchKey: rcache.DefaultMutexExpiry
+tags: [constant number]
 ```
 
 ```Go
@@ -57,6 +69,7 @@ const DefaultMutexExpiry = time.Minute
 
 ```
 searchKey: rcache.DefaultMutexTries
+tags: [constant number]
 ```
 
 ```Go
@@ -65,21 +78,11 @@ const DefaultMutexTries = 3
 
 We make it low since we want to give up quickly. Failing to acquire the lock will be unrelated to failing to reach quorum. 
 
-### <a id="DefaultMutexDelay" href="#DefaultMutexDelay">const DefaultMutexDelay</a>
-
-```
-searchKey: rcache.DefaultMutexDelay
-```
-
-```Go
-const DefaultMutexDelay = 512 * time.Millisecond
-```
-
 ### <a id="dataVersion" href="#dataVersion">const dataVersion</a>
 
 ```
 searchKey: rcache.dataVersion
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -92,7 +95,7 @@ dataVersion is used for releases that change type structure for data that may al
 
 ```
 searchKey: rcache.dataVersionToDelete
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -102,14 +105,14 @@ const dataVersionToDelete = "v1"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="deleteBatchSize" href="#deleteBatchSize">var deleteBatchSize</a>
 
 ```
 searchKey: rcache.deleteBatchSize
-tags: [private]
+tags: [variable number private]
 ```
 
 ```Go
@@ -118,38 +121,155 @@ var deleteBatchSize = 5000
 
 The number of keys to delete per batch. The maximum number of keys that can be unpacked is determined by the Lua config LUAI_MAXCSTACK which is 8000 by default. See [https://www.lua.org/source/5.1/luaconf.h.html](https://www.lua.org/source/5.1/luaconf.h.html) 
 
-### <a id="pool" href="#pool">var pool</a>
-
-```
-searchKey: rcache.pool
-tags: [private]
-```
-
-```Go
-var pool = redispool.Cache
-```
-
 ### <a id="globalPrefix" href="#globalPrefix">var globalPrefix</a>
 
 ```
 searchKey: rcache.globalPrefix
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
 var globalPrefix = dataVersion
 ```
 
+### <a id="pool" href="#pool">var pool</a>
+
+```
+searchKey: rcache.pool
+tags: [variable struct private]
+```
+
+```Go
+var pool = redispool.Cache
+```
+
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
+
+### <a id="Cache" href="#Cache">type Cache struct</a>
+
+```
+searchKey: rcache.Cache
+tags: [struct]
+```
+
+```Go
+type Cache struct {
+	keyPrefix  string
+	ttlSeconds int
+}
+```
+
+Cache implements httpcache.Cache 
+
+#### <a id="New" href="#New">func New(keyPrefix string) *Cache</a>
+
+```
+searchKey: rcache.New
+tags: [method]
+```
+
+```Go
+func New(keyPrefix string) *Cache
+```
+
+New creates a redis backed Cache 
+
+#### <a id="NewWithTTL" href="#NewWithTTL">func NewWithTTL(keyPrefix string, ttlSeconds int) *Cache</a>
+
+```
+searchKey: rcache.NewWithTTL
+tags: [method]
+```
+
+```Go
+func NewWithTTL(keyPrefix string, ttlSeconds int) *Cache
+```
+
+NewWithTTL creates a redis backed Cache which expires values after ttlSeconds. 
+
+#### <a id="Cache.Delete" href="#Cache.Delete">func (r *Cache) Delete(key string)</a>
+
+```
+searchKey: rcache.Cache.Delete
+tags: [method]
+```
+
+```Go
+func (r *Cache) Delete(key string)
+```
+
+Delete implements httpcache.Cache.Delete 
+
+#### <a id="Cache.Get" href="#Cache.Get">func (r *Cache) Get(key string) ([]byte, bool)</a>
+
+```
+searchKey: rcache.Cache.Get
+tags: [method]
+```
+
+```Go
+func (r *Cache) Get(key string) ([]byte, bool)
+```
+
+Get implements httpcache.Cache.Get 
+
+#### <a id="Cache.GetMulti" href="#Cache.GetMulti">func (r *Cache) GetMulti(keys ...string) [][]byte</a>
+
+```
+searchKey: rcache.Cache.GetMulti
+tags: [method]
+```
+
+```Go
+func (r *Cache) GetMulti(keys ...string) [][]byte
+```
+
+#### <a id="Cache.Set" href="#Cache.Set">func (r *Cache) Set(key string, b []byte)</a>
+
+```
+searchKey: rcache.Cache.Set
+tags: [method]
+```
+
+```Go
+func (r *Cache) Set(key string, b []byte)
+```
+
+Set implements httpcache.Cache.Set 
+
+#### <a id="Cache.SetMulti" href="#Cache.SetMulti">func (r *Cache) SetMulti(keyvals ...[2]string)</a>
+
+```
+searchKey: rcache.Cache.SetMulti
+tags: [method]
+```
+
+```Go
+func (r *Cache) SetMulti(keyvals ...[2]string)
+```
+
+#### <a id="Cache.rkeyPrefix" href="#Cache.rkeyPrefix">func (r *Cache) rkeyPrefix() string</a>
+
+```
+searchKey: rcache.Cache.rkeyPrefix
+tags: [function private]
+```
+
+```Go
+func (r *Cache) rkeyPrefix() string
+```
+
+rkeyPrefix generates the actual key prefix we use on redis. 
 
 ### <a id="MutexOptions" href="#MutexOptions">type MutexOptions struct</a>
 
 ```
 searchKey: rcache.MutexOptions
+tags: [struct]
 ```
 
 ```Go
@@ -167,118 +287,11 @@ type MutexOptions struct {
 
 MutexOptions hold options passed to TryAcquireMutex. It is safe to pass zero values in which case defaults will be used instead. 
 
-### <a id="Cache" href="#Cache">type Cache struct</a>
-
-```
-searchKey: rcache.Cache
-```
-
-```Go
-type Cache struct {
-	keyPrefix  string
-	ttlSeconds int
-}
-```
-
-Cache implements httpcache.Cache 
-
-#### <a id="New" href="#New">func New(keyPrefix string) *Cache</a>
-
-```
-searchKey: rcache.New
-```
-
-```Go
-func New(keyPrefix string) *Cache
-```
-
-New creates a redis backed Cache 
-
-#### <a id="NewWithTTL" href="#NewWithTTL">func NewWithTTL(keyPrefix string, ttlSeconds int) *Cache</a>
-
-```
-searchKey: rcache.NewWithTTL
-```
-
-```Go
-func NewWithTTL(keyPrefix string, ttlSeconds int) *Cache
-```
-
-NewWithTTL creates a redis backed Cache which expires values after ttlSeconds. 
-
-#### <a id="Cache.GetMulti" href="#Cache.GetMulti">func (r *Cache) GetMulti(keys ...string) [][]byte</a>
-
-```
-searchKey: rcache.Cache.GetMulti
-```
-
-```Go
-func (r *Cache) GetMulti(keys ...string) [][]byte
-```
-
-#### <a id="Cache.SetMulti" href="#Cache.SetMulti">func (r *Cache) SetMulti(keyvals ...[2]string)</a>
-
-```
-searchKey: rcache.Cache.SetMulti
-```
-
-```Go
-func (r *Cache) SetMulti(keyvals ...[2]string)
-```
-
-#### <a id="Cache.Get" href="#Cache.Get">func (r *Cache) Get(key string) ([]byte, bool)</a>
-
-```
-searchKey: rcache.Cache.Get
-```
-
-```Go
-func (r *Cache) Get(key string) ([]byte, bool)
-```
-
-Get implements httpcache.Cache.Get 
-
-#### <a id="Cache.Set" href="#Cache.Set">func (r *Cache) Set(key string, b []byte)</a>
-
-```
-searchKey: rcache.Cache.Set
-```
-
-```Go
-func (r *Cache) Set(key string, b []byte)
-```
-
-Set implements httpcache.Cache.Set 
-
-#### <a id="Cache.Delete" href="#Cache.Delete">func (r *Cache) Delete(key string)</a>
-
-```
-searchKey: rcache.Cache.Delete
-```
-
-```Go
-func (r *Cache) Delete(key string)
-```
-
-Delete implements httpcache.Cache.Delete 
-
-#### <a id="Cache.rkeyPrefix" href="#Cache.rkeyPrefix">func (r *Cache) rkeyPrefix() string</a>
-
-```
-searchKey: rcache.Cache.rkeyPrefix
-tags: [private]
-```
-
-```Go
-func (r *Cache) rkeyPrefix() string
-```
-
-rkeyPrefix generates the actual key prefix we use on redis. 
-
 ### <a id="TB" href="#TB">type TB interface</a>
 
 ```
 searchKey: rcache.TB
+tags: [interface]
 ```
 
 ```Go
@@ -294,13 +307,95 @@ TB is a subset of testing.TB
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
+```
+
+### <a id="DeleteOldCacheData" href="#DeleteOldCacheData">func DeleteOldCacheData(c redis.Conn) error</a>
+
+```
+searchKey: rcache.DeleteOldCacheData
+tags: [method]
+```
+
+```Go
+func DeleteOldCacheData(c redis.Conn) error
+```
+
+DeleteOldCacheData deletes the rcache data in the given Redis instance that's prefixed with dataVersionToDelete 
+
+### <a id="SetupForTest" href="#SetupForTest">func SetupForTest(t TB)</a>
+
+```
+searchKey: rcache.SetupForTest
+tags: [method]
+```
+
+```Go
+func SetupForTest(t TB)
+```
+
+SetupForTest adjusts the globalPrefix and clears it out. You will have conflicts if you do `t.Parallel()` 
+
+### <a id="TestCache_deleteKeysWithPrefix" href="#TestCache_deleteKeysWithPrefix">func TestCache_deleteKeysWithPrefix(t *testing.T)</a>
+
+```
+searchKey: rcache.TestCache_deleteKeysWithPrefix
+tags: [method private test]
+```
+
+```Go
+func TestCache_deleteKeysWithPrefix(t *testing.T)
+```
+
+### <a id="TestCache_multi" href="#TestCache_multi">func TestCache_multi(t *testing.T)</a>
+
+```
+searchKey: rcache.TestCache_multi
+tags: [method private test]
+```
+
+```Go
+func TestCache_multi(t *testing.T)
+```
+
+### <a id="TestCache_namespace" href="#TestCache_namespace">func TestCache_namespace(t *testing.T)</a>
+
+```
+searchKey: rcache.TestCache_namespace
+tags: [method private test]
+```
+
+```Go
+func TestCache_namespace(t *testing.T)
+```
+
+### <a id="TestCache_simple" href="#TestCache_simple">func TestCache_simple(t *testing.T)</a>
+
+```
+searchKey: rcache.TestCache_simple
+tags: [method private test]
+```
+
+```Go
+func TestCache_simple(t *testing.T)
+```
+
+### <a id="TestTryAcquireMutex" href="#TestTryAcquireMutex">func TestTryAcquireMutex(t *testing.T)</a>
+
+```
+searchKey: rcache.TestTryAcquireMutex
+tags: [method private test]
+```
+
+```Go
+func TestTryAcquireMutex(t *testing.T)
 ```
 
 ### <a id="TryAcquireMutex" href="#TryAcquireMutex">func TryAcquireMutex(ctx context.Context, name string, options MutexOptions) (context.Context, func(), bool)</a>
 
 ```
 searchKey: rcache.TryAcquireMutex
+tags: [method]
 ```
 
 ```Go
@@ -315,104 +410,25 @@ they key no longer exists in Redis
 ```
 A caller can therefore assume that they are the sole holder of the lock as long as the context has not been cancelled. 
 
-### <a id="DeleteOldCacheData" href="#DeleteOldCacheData">func DeleteOldCacheData(c redis.Conn) error</a>
+### <a id="bytes" href="#bytes">func bytes(s ...string) [][]byte</a>
 
 ```
-searchKey: rcache.DeleteOldCacheData
-```
-
-```Go
-func DeleteOldCacheData(c redis.Conn) error
-```
-
-DeleteOldCacheData deletes the rcache data in the given Redis instance that's prefixed with dataVersionToDelete 
-
-### <a id="SetupForTest" href="#SetupForTest">func SetupForTest(t TB)</a>
-
-```
-searchKey: rcache.SetupForTest
+searchKey: rcache.bytes
+tags: [method private]
 ```
 
 ```Go
-func SetupForTest(t TB)
+func bytes(s ...string) [][]byte
 ```
-
-SetupForTest adjusts the globalPrefix and clears it out. You will have conflicts if you do `t.Parallel()` 
 
 ### <a id="deleteKeysWithPrefix" href="#deleteKeysWithPrefix">func deleteKeysWithPrefix(c redis.Conn, prefix string) error</a>
 
 ```
 searchKey: rcache.deleteKeysWithPrefix
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func deleteKeysWithPrefix(c redis.Conn, prefix string) error
-```
-
-### <a id="TestTryAcquireMutex" href="#TestTryAcquireMutex">func TestTryAcquireMutex(t *testing.T)</a>
-
-```
-searchKey: rcache.TestTryAcquireMutex
-tags: [private]
-```
-
-```Go
-func TestTryAcquireMutex(t *testing.T)
-```
-
-### <a id="TestCache_namespace" href="#TestCache_namespace">func TestCache_namespace(t *testing.T)</a>
-
-```
-searchKey: rcache.TestCache_namespace
-tags: [private]
-```
-
-```Go
-func TestCache_namespace(t *testing.T)
-```
-
-### <a id="TestCache_simple" href="#TestCache_simple">func TestCache_simple(t *testing.T)</a>
-
-```
-searchKey: rcache.TestCache_simple
-tags: [private]
-```
-
-```Go
-func TestCache_simple(t *testing.T)
-```
-
-### <a id="TestCache_multi" href="#TestCache_multi">func TestCache_multi(t *testing.T)</a>
-
-```
-searchKey: rcache.TestCache_multi
-tags: [private]
-```
-
-```Go
-func TestCache_multi(t *testing.T)
-```
-
-### <a id="TestCache_deleteKeysWithPrefix" href="#TestCache_deleteKeysWithPrefix">func TestCache_deleteKeysWithPrefix(t *testing.T)</a>
-
-```
-searchKey: rcache.TestCache_deleteKeysWithPrefix
-tags: [private]
-```
-
-```Go
-func TestCache_deleteKeysWithPrefix(t *testing.T)
-```
-
-### <a id="bytes" href="#bytes">func bytes(s ...string) [][]byte</a>
-
-```
-searchKey: rcache.bytes
-tags: [private]
-```
-
-```Go
-func bytes(s ...string) [][]byte
 ```
 

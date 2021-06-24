@@ -5,138 +5,120 @@ Package gosym implements access to the Go symbol and line number tables embedded
 ## Index
 
 * [Constants](#const)
-    * [const verUnknown](#verUnknown)
-    * [const ver11](#ver11)
-    * [const ver12](#ver12)
-    * [const ver116](#ver116)
-    * [const oldQuantum](#oldQuantum)
-    * [const go12magic](#go12magic)
     * [const go116magic](#go116magic)
+    * [const go12magic](#go12magic)
+    * [const oldQuantum](#oldQuantum)
+    * [const ver11](#ver11)
+    * [const ver116](#ver116)
+    * [const ver12](#ver12)
+    * [const verUnknown](#verUnknown)
 * [Variables](#var)
-    * [var littleEndianSymtab](#littleEndianSymtab)
     * [var bigEndianSymtab](#bigEndianSymtab)
+    * [var littleEndianSymtab](#littleEndianSymtab)
     * [var oldLittleEndianSymtab](#oldLittleEndianSymtab)
     * [var pclineTempDir](#pclineTempDir)
     * [var pclinetestBinary](#pclinetestBinary)
 * [Types](#type)
-    * [type version int](#version)
+    * [type DecodingError struct](#DecodingError)
+        * [func (e *DecodingError) Error() string](#DecodingError.Error)
+    * [type Func struct](#Func)
     * [type LineTable struct](#LineTable)
         * [func NewLineTable(data []byte, text uint64) *LineTable](#NewLineTable)
-        * [func (t *LineTable) parse(targetPC uint64, targetLine int) (b []byte, pc uint64, line int)](#LineTable.parse)
-        * [func (t *LineTable) slice(pc uint64) *LineTable](#LineTable.slice)
-        * [func (t *LineTable) PCToLine(pc uint64) int](#LineTable.PCToLine)
         * [func (t *LineTable) LineToPC(line int, maxpc uint64) uint64](#LineTable.LineToPC)
-        * [func (t *LineTable) isGo12() bool](#LineTable.isGo12)
-        * [func (t *LineTable) uintptr(b []byte) uint64](#LineTable.uintptr)
-        * [func (t *LineTable) parsePclnTab()](#LineTable.parsePclnTab)
-        * [func (t *LineTable) go12Funcs() []Func](#LineTable.go12Funcs)
-        * [func (t *LineTable) findFunc(pc uint64) []byte](#LineTable.findFunc)
-        * [func (t *LineTable) readvarint(pp *[]byte) uint32](#LineTable.readvarint)
-        * [func (t *LineTable) funcName(off uint32) string](#LineTable.funcName)
-        * [func (t *LineTable) stringFrom(arr []byte, off uint32) string](#LineTable.stringFrom)
-        * [func (t *LineTable) string(off uint32) string](#LineTable.string)
-        * [func (t *LineTable) step(p *[]byte, pc *uint64, val *int32, first bool) bool](#LineTable.step)
-        * [func (t *LineTable) pcvalue(off uint32, entry, targetpc uint64) int32](#LineTable.pcvalue)
+        * [func (t *LineTable) PCToLine(pc uint64) int](#LineTable.PCToLine)
         * [func (t *LineTable) findFileLine(entry uint64, filetab, linetab uint32, filenum, line int32, cutab []byte) uint64](#LineTable.findFileLine)
-        * [func (t *LineTable) go12PCToLine(pc uint64) (line int)](#LineTable.go12PCToLine)
-        * [func (t *LineTable) go12PCToFile(pc uint64) (file string)](#LineTable.go12PCToFile)
+        * [func (t *LineTable) findFunc(pc uint64) []byte](#LineTable.findFunc)
+        * [func (t *LineTable) funcName(off uint32) string](#LineTable.funcName)
+        * [func (t *LineTable) go12Funcs() []Func](#LineTable.go12Funcs)
         * [func (t *LineTable) go12LineToPC(file string, line int) (pc uint64)](#LineTable.go12LineToPC)
-        * [func (t *LineTable) initFileMap()](#LineTable.initFileMap)
         * [func (t *LineTable) go12MapFiles(m map[string]*Obj, obj *Obj)](#LineTable.go12MapFiles)
+        * [func (t *LineTable) go12PCToFile(pc uint64) (file string)](#LineTable.go12PCToFile)
+        * [func (t *LineTable) go12PCToLine(pc uint64) (line int)](#LineTable.go12PCToLine)
+        * [func (t *LineTable) initFileMap()](#LineTable.initFileMap)
+        * [func (t *LineTable) isGo12() bool](#LineTable.isGo12)
+        * [func (t *LineTable) parse(targetPC uint64, targetLine int) (b []byte, pc uint64, line int)](#LineTable.parse)
+        * [func (t *LineTable) parsePclnTab()](#LineTable.parsePclnTab)
+        * [func (t *LineTable) pcvalue(off uint32, entry, targetpc uint64) int32](#LineTable.pcvalue)
+        * [func (t *LineTable) readvarint(pp *[]byte) uint32](#LineTable.readvarint)
+        * [func (t *LineTable) slice(pc uint64) *LineTable](#LineTable.slice)
+        * [func (t *LineTable) step(p *[]byte, pc *uint64, val *int32, first bool) bool](#LineTable.step)
+        * [func (t *LineTable) string(off uint32) string](#LineTable.string)
+        * [func (t *LineTable) stringFrom(arr []byte, off uint32) string](#LineTable.stringFrom)
+        * [func (t *LineTable) uintptr(b []byte) uint64](#LineTable.uintptr)
+    * [type Obj struct](#Obj)
+        * [func (o *Obj) alineFromLine(path string, line int) (int, error)](#Obj.alineFromLine)
+        * [func (o *Obj) lineFromAline(aline int) (string, int)](#Obj.lineFromAline)
     * [type Sym struct](#Sym)
-        * [func (s *Sym) Static() bool](#Sym.Static)
+        * [func (s *Sym) BaseName() string](#Sym.BaseName)
         * [func (s *Sym) PackageName() string](#Sym.PackageName)
         * [func (s *Sym) ReceiverName() string](#Sym.ReceiverName)
-        * [func (s *Sym) BaseName() string](#Sym.BaseName)
-    * [type Func struct](#Func)
-    * [type Obj struct](#Obj)
-        * [func (o *Obj) lineFromAline(aline int) (string, int)](#Obj.lineFromAline)
-        * [func (o *Obj) alineFromLine(path string, line int) (int, error)](#Obj.alineFromLine)
+        * [func (s *Sym) Static() bool](#Sym.Static)
     * [type Table struct](#Table)
         * [func NewTable(symtab []byte, pcln *LineTable) (*Table, error)](#NewTable)
-        * [func getTable(t *testing.T) *Table](#getTable)
         * [func crack(file string, t *testing.T) (*elf.File, *Table)](#crack)
+        * [func getTable(t *testing.T) *Table](#getTable)
         * [func parse(file string, f *elf.File, t *testing.T) (*elf.File, *Table)](#parse)
+        * [func (t *Table) LineToPC(file string, line int) (pc uint64, fn *Func, err error)](#Table.LineToPC)
+        * [func (t *Table) LookupFunc(name string) *Func](#Table.LookupFunc)
+        * [func (t *Table) LookupSym(name string) *Sym](#Table.LookupSym)
         * [func (t *Table) PCToFunc(pc uint64) *Func](#Table.PCToFunc)
         * [func (t *Table) PCToLine(pc uint64) (file string, line int, fn *Func)](#Table.PCToLine)
-        * [func (t *Table) LineToPC(file string, line int) (pc uint64, fn *Func, err error)](#Table.LineToPC)
-        * [func (t *Table) LookupSym(name string) *Sym](#Table.LookupSym)
-        * [func (t *Table) LookupFunc(name string) *Func](#Table.LookupFunc)
         * [func (t *Table) SymByAddr(addr uint64) *Sym](#Table.SymByAddr)
-    * [type sym struct](#sym)
     * [type UnknownFileError string](#UnknownFileError)
         * [func (e UnknownFileError) Error() string](#UnknownFileError.Error)
     * [type UnknownLineError struct](#UnknownLineError)
         * [func (e *UnknownLineError) Error() string](#UnknownLineError.Error)
-    * [type DecodingError struct](#DecodingError)
-        * [func (e *DecodingError) Error() string](#DecodingError.Error)
+    * [type sym struct](#sym)
+    * [type version int](#version)
 * [Functions](#func)
-    * [func walksymtab(data []byte, fn func(sym) error) error](#walksymtab)
+    * [func Test115PclnParsing(t *testing.T)](#Test115PclnParsing)
+    * [func TestIssue29551(t *testing.T)](#TestIssue29551)
+    * [func TestLineAline(t *testing.T)](#TestLineAline)
+    * [func TestLineFromAline(t *testing.T)](#TestLineFromAline)
+    * [func TestPCLine(t *testing.T)](#TestPCLine)
+    * [func TestRemotePackage(t *testing.T)](#TestRemotePackage)
+    * [func TestStandardLibPackage(t *testing.T)](#TestStandardLibPackage)
+    * [func TestStandardLibPathPackage(t *testing.T)](#TestStandardLibPathPackage)
+    * [func assertString(t *testing.T, dsc, out, tgt string)](#assertString)
     * [func dotest(t *testing.T)](#dotest)
     * [func endtest()](#endtest)
     * [func skipIfNotELF(t *testing.T)](#skipIfNotELF)
-    * [func TestLineFromAline(t *testing.T)](#TestLineFromAline)
-    * [func TestLineAline(t *testing.T)](#TestLineAline)
-    * [func TestPCLine(t *testing.T)](#TestPCLine)
-    * [func Test115PclnParsing(t *testing.T)](#Test115PclnParsing)
-    * [func assertString(t *testing.T, dsc, out, tgt string)](#assertString)
-    * [func TestStandardLibPackage(t *testing.T)](#TestStandardLibPackage)
-    * [func TestStandardLibPathPackage(t *testing.T)](#TestStandardLibPathPackage)
-    * [func TestRemotePackage(t *testing.T)](#TestRemotePackage)
-    * [func TestIssue29551(t *testing.T)](#TestIssue29551)
+    * [func walksymtab(data []byte, fn func(sym) error) error](#walksymtab)
 
 
 ## <a id="const" href="#const">Constants</a>
 
-### <a id="verUnknown" href="#verUnknown">const verUnknown</a>
-
 ```
-searchKey: gosym.verUnknown
-tags: [private]
+tags: [package]
 ```
 
-```Go
-const verUnknown version = iota
-```
-
-### <a id="ver11" href="#ver11">const ver11</a>
+### <a id="go116magic" href="#go116magic">const go116magic</a>
 
 ```
-searchKey: gosym.ver11
-tags: [private]
+searchKey: gosym.go116magic
+tags: [constant number private]
 ```
 
 ```Go
-const ver11
+const go116magic = 0xfffffffa
 ```
 
-### <a id="ver12" href="#ver12">const ver12</a>
+### <a id="go12magic" href="#go12magic">const go12magic</a>
 
 ```
-searchKey: gosym.ver12
-tags: [private]
-```
-
-```Go
-const ver12
-```
-
-### <a id="ver116" href="#ver116">const ver116</a>
-
-```
-searchKey: gosym.ver116
-tags: [private]
+searchKey: gosym.go12magic
+tags: [constant number private]
 ```
 
 ```Go
-const ver116
+const go12magic = 0xfffffffb
 ```
 
 ### <a id="oldQuantum" href="#oldQuantum">const oldQuantum</a>
 
 ```
 searchKey: gosym.oldQuantum
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -145,57 +127,83 @@ const oldQuantum = 1
 
 NOTE(rsc): This is wrong for GOARCH=arm, which uses a quantum of 4, but we have no idea whether we're using arm or not. This only matters in the old (pre-Go 1.2) symbol table format, so it's not worth fixing. 
 
-### <a id="go12magic" href="#go12magic">const go12magic</a>
+### <a id="ver11" href="#ver11">const ver11</a>
 
 ```
-searchKey: gosym.go12magic
-tags: [private]
-```
-
-```Go
-const go12magic = 0xfffffffb
-```
-
-### <a id="go116magic" href="#go116magic">const go116magic</a>
-
-```
-searchKey: gosym.go116magic
-tags: [private]
+searchKey: gosym.ver11
+tags: [constant number private]
 ```
 
 ```Go
-const go116magic = 0xfffffffa
+const ver11
+```
+
+### <a id="ver116" href="#ver116">const ver116</a>
+
+```
+searchKey: gosym.ver116
+tags: [constant number private]
+```
+
+```Go
+const ver116
+```
+
+### <a id="ver12" href="#ver12">const ver12</a>
+
+```
+searchKey: gosym.ver12
+tags: [constant number private]
+```
+
+```Go
+const ver12
+```
+
+### <a id="verUnknown" href="#verUnknown">const verUnknown</a>
+
+```
+searchKey: gosym.verUnknown
+tags: [constant number private]
+```
+
+```Go
+const verUnknown version = iota
 ```
 
 ## <a id="var" href="#var">Variables</a>
 
-### <a id="littleEndianSymtab" href="#littleEndianSymtab">var littleEndianSymtab</a>
-
 ```
-searchKey: gosym.littleEndianSymtab
-tags: [private]
-```
-
-```Go
-var littleEndianSymtab = []byte{0xFD, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00}
+tags: [package]
 ```
 
 ### <a id="bigEndianSymtab" href="#bigEndianSymtab">var bigEndianSymtab</a>
 
 ```
 searchKey: gosym.bigEndianSymtab
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
 var bigEndianSymtab = []byte{0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x00, 0x00}
 ```
 
+### <a id="littleEndianSymtab" href="#littleEndianSymtab">var littleEndianSymtab</a>
+
+```
+searchKey: gosym.littleEndianSymtab
+tags: [variable array number private]
+```
+
+```Go
+var littleEndianSymtab = []byte{0xFD, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00}
+```
+
 ### <a id="oldLittleEndianSymtab" href="#oldLittleEndianSymtab">var oldLittleEndianSymtab</a>
 
 ```
 searchKey: gosym.oldLittleEndianSymtab
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -206,7 +214,7 @@ var oldLittleEndianSymtab = []byte{0xFE, 0xFF, 0xFF, 0xFF, 0x00, 0x00}
 
 ```
 searchKey: gosym.pclineTempDir
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
@@ -217,7 +225,7 @@ var pclineTempDir string
 
 ```
 searchKey: gosym.pclinetestBinary
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
@@ -226,23 +234,65 @@ var pclinetestBinary string
 
 ## <a id="type" href="#type">Types</a>
 
-### <a id="version" href="#version">type version int</a>
+```
+tags: [package]
+```
+
+### <a id="DecodingError" href="#DecodingError">type DecodingError struct</a>
 
 ```
-searchKey: gosym.version
-tags: [private]
+searchKey: gosym.DecodingError
+tags: [struct]
 ```
 
 ```Go
-type version int
+type DecodingError struct {
+	off int
+	msg string
+	val interface{}
+}
 ```
 
-version of the pclntab 
+DecodingError represents an error during the decoding of the symbol table. 
+
+#### <a id="DecodingError.Error" href="#DecodingError.Error">func (e *DecodingError) Error() string</a>
+
+```
+searchKey: gosym.DecodingError.Error
+tags: [function]
+```
+
+```Go
+func (e *DecodingError) Error() string
+```
+
+### <a id="Func" href="#Func">type Func struct</a>
+
+```
+searchKey: gosym.Func
+tags: [struct]
+```
+
+```Go
+type Func struct {
+	Entry uint64
+	*Sym
+	End       uint64
+	Params    []*Sym // nil for Go 1.3 and later binaries
+	Locals    []*Sym // nil for Go 1.3 and later binaries
+	FrameSize int
+	LineTable *LineTable
+	Obj       *Obj
+}
+```
+
+A Func collects information about a single function. 
 
 ### <a id="LineTable" href="#LineTable">type LineTable struct</a>
 
 ```
 searchKey: gosym.LineTable
+tags: [struct]
 ```
 
 ```Go
@@ -290,6 +340,7 @@ For the most part, LineTable's methods should be treated as an internal detail o
 
 ```
 searchKey: gosym.NewLineTable
+tags: [method]
 ```
 
 ```Go
@@ -298,48 +349,11 @@ func NewLineTable(data []byte, text uint64) *LineTable
 
 NewLineTable returns a new PC/line table corresponding to the encoded data. Text must be the start address of the corresponding text segment. 
 
-#### <a id="LineTable.parse" href="#LineTable.parse">func (t *LineTable) parse(targetPC uint64, targetLine int) (b []byte, pc uint64, line int)</a>
-
-```
-searchKey: gosym.LineTable.parse
-tags: [private]
-```
-
-```Go
-func (t *LineTable) parse(targetPC uint64, targetLine int) (b []byte, pc uint64, line int)
-```
-
-#### <a id="LineTable.slice" href="#LineTable.slice">func (t *LineTable) slice(pc uint64) *LineTable</a>
-
-```
-searchKey: gosym.LineTable.slice
-tags: [private]
-```
-
-```Go
-func (t *LineTable) slice(pc uint64) *LineTable
-```
-
-#### <a id="LineTable.PCToLine" href="#LineTable.PCToLine">func (t *LineTable) PCToLine(pc uint64) int</a>
-
-```
-searchKey: gosym.LineTable.PCToLine
-tags: [deprecated]
-```
-
-```Go
-func (t *LineTable) PCToLine(pc uint64) int
-```
-
-PCToLine returns the line number for the given program counter. 
-
-Deprecated: Use Table's PCToLine method instead. 
-
 #### <a id="LineTable.LineToPC" href="#LineTable.LineToPC">func (t *LineTable) LineToPC(line int, maxpc uint64) uint64</a>
 
 ```
 searchKey: gosym.LineTable.LineToPC
-tags: [deprecated]
+tags: [method deprecated]
 ```
 
 ```Go
@@ -350,154 +364,26 @@ LineToPC returns the program counter for the given line number, considering only
 
 Deprecated: Use Table's LineToPC method instead. 
 
-#### <a id="LineTable.isGo12" href="#LineTable.isGo12">func (t *LineTable) isGo12() bool</a>
+#### <a id="LineTable.PCToLine" href="#LineTable.PCToLine">func (t *LineTable) PCToLine(pc uint64) int</a>
 
 ```
-searchKey: gosym.LineTable.isGo12
-tags: [private]
-```
-
-```Go
-func (t *LineTable) isGo12() bool
-```
-
-isGo12 reports whether this is a Go 1.2 (or later) symbol table. 
-
-#### <a id="LineTable.uintptr" href="#LineTable.uintptr">func (t *LineTable) uintptr(b []byte) uint64</a>
-
-```
-searchKey: gosym.LineTable.uintptr
-tags: [private]
+searchKey: gosym.LineTable.PCToLine
+tags: [method deprecated]
 ```
 
 ```Go
-func (t *LineTable) uintptr(b []byte) uint64
+func (t *LineTable) PCToLine(pc uint64) int
 ```
 
-uintptr returns the pointer-sized value encoded at b. The pointer size is dictated by the table being read. 
+PCToLine returns the line number for the given program counter. 
 
-#### <a id="LineTable.parsePclnTab" href="#LineTable.parsePclnTab">func (t *LineTable) parsePclnTab()</a>
-
-```
-searchKey: gosym.LineTable.parsePclnTab
-tags: [private]
-```
-
-```Go
-func (t *LineTable) parsePclnTab()
-```
-
-parsePclnTab parses the pclntab, setting the version. 
-
-#### <a id="LineTable.go12Funcs" href="#LineTable.go12Funcs">func (t *LineTable) go12Funcs() []Func</a>
-
-```
-searchKey: gosym.LineTable.go12Funcs
-tags: [private]
-```
-
-```Go
-func (t *LineTable) go12Funcs() []Func
-```
-
-go12Funcs returns a slice of Funcs derived from the Go 1.2 pcln table. 
-
-#### <a id="LineTable.findFunc" href="#LineTable.findFunc">func (t *LineTable) findFunc(pc uint64) []byte</a>
-
-```
-searchKey: gosym.LineTable.findFunc
-tags: [private]
-```
-
-```Go
-func (t *LineTable) findFunc(pc uint64) []byte
-```
-
-findFunc returns the func corresponding to the given program counter. 
-
-#### <a id="LineTable.readvarint" href="#LineTable.readvarint">func (t *LineTable) readvarint(pp *[]byte) uint32</a>
-
-```
-searchKey: gosym.LineTable.readvarint
-tags: [private]
-```
-
-```Go
-func (t *LineTable) readvarint(pp *[]byte) uint32
-```
-
-readvarint reads, removes, and returns a varint from *pp. 
-
-#### <a id="LineTable.funcName" href="#LineTable.funcName">func (t *LineTable) funcName(off uint32) string</a>
-
-```
-searchKey: gosym.LineTable.funcName
-tags: [private]
-```
-
-```Go
-func (t *LineTable) funcName(off uint32) string
-```
-
-funcName returns the name of the function found at off. 
-
-#### <a id="LineTable.stringFrom" href="#LineTable.stringFrom">func (t *LineTable) stringFrom(arr []byte, off uint32) string</a>
-
-```
-searchKey: gosym.LineTable.stringFrom
-tags: [private]
-```
-
-```Go
-func (t *LineTable) stringFrom(arr []byte, off uint32) string
-```
-
-stringFrom returns a Go string found at off from a position. 
-
-#### <a id="LineTable.string" href="#LineTable.string">func (t *LineTable) string(off uint32) string</a>
-
-```
-searchKey: gosym.LineTable.string
-tags: [private]
-```
-
-```Go
-func (t *LineTable) string(off uint32) string
-```
-
-string returns a Go string found at off. 
-
-#### <a id="LineTable.step" href="#LineTable.step">func (t *LineTable) step(p *[]byte, pc *uint64, val *int32, first bool) bool</a>
-
-```
-searchKey: gosym.LineTable.step
-tags: [private]
-```
-
-```Go
-func (t *LineTable) step(p *[]byte, pc *uint64, val *int32, first bool) bool
-```
-
-step advances to the next pc, value pair in the encoded table. 
-
-#### <a id="LineTable.pcvalue" href="#LineTable.pcvalue">func (t *LineTable) pcvalue(off uint32, entry, targetpc uint64) int32</a>
-
-```
-searchKey: gosym.LineTable.pcvalue
-tags: [private]
-```
-
-```Go
-func (t *LineTable) pcvalue(off uint32, entry, targetpc uint64) int32
-```
-
-pcvalue reports the value associated with the target pc. off is the offset to the beginning of the pc-value table, and entry is the start PC for the corresponding function. 
+Deprecated: Use Table's PCToLine method instead. 
 
 #### <a id="LineTable.findFileLine" href="#LineTable.findFileLine">func (t *LineTable) findFileLine(entry uint64, filetab, linetab uint32, filenum, line int32, cutab []byte) uint64</a>
 
 ```
 searchKey: gosym.LineTable.findFileLine
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -506,37 +392,50 @@ func (t *LineTable) findFileLine(entry uint64, filetab, linetab uint32, filenum,
 
 findFileLine scans one function in the binary looking for a program counter in the given file on the given line. It does so by running the pc-value tables mapping program counter to file number. Since most functions come from a single file, these are usually short and quick to scan. If a file match is found, then the code goes to the expense of looking for a simultaneous line number match. 
 
-#### <a id="LineTable.go12PCToLine" href="#LineTable.go12PCToLine">func (t *LineTable) go12PCToLine(pc uint64) (line int)</a>
+#### <a id="LineTable.findFunc" href="#LineTable.findFunc">func (t *LineTable) findFunc(pc uint64) []byte</a>
 
 ```
-searchKey: gosym.LineTable.go12PCToLine
-tags: [private]
-```
-
-```Go
-func (t *LineTable) go12PCToLine(pc uint64) (line int)
-```
-
-go12PCToLine maps program counter to line number for the Go 1.2 pcln table. 
-
-#### <a id="LineTable.go12PCToFile" href="#LineTable.go12PCToFile">func (t *LineTable) go12PCToFile(pc uint64) (file string)</a>
-
-```
-searchKey: gosym.LineTable.go12PCToFile
-tags: [private]
+searchKey: gosym.LineTable.findFunc
+tags: [method private]
 ```
 
 ```Go
-func (t *LineTable) go12PCToFile(pc uint64) (file string)
+func (t *LineTable) findFunc(pc uint64) []byte
 ```
 
-go12PCToFile maps program counter to file name for the Go 1.2 pcln table. 
+findFunc returns the func corresponding to the given program counter. 
+
+#### <a id="LineTable.funcName" href="#LineTable.funcName">func (t *LineTable) funcName(off uint32) string</a>
+
+```
+searchKey: gosym.LineTable.funcName
+tags: [method private]
+```
+
+```Go
+func (t *LineTable) funcName(off uint32) string
+```
+
+funcName returns the name of the function found at off. 
+
+#### <a id="LineTable.go12Funcs" href="#LineTable.go12Funcs">func (t *LineTable) go12Funcs() []Func</a>
+
+```
+searchKey: gosym.LineTable.go12Funcs
+tags: [function private]
+```
+
+```Go
+func (t *LineTable) go12Funcs() []Func
+```
+
+go12Funcs returns a slice of Funcs derived from the Go 1.2 pcln table. 
 
 #### <a id="LineTable.go12LineToPC" href="#LineTable.go12LineToPC">func (t *LineTable) go12LineToPC(file string, line int) (pc uint64)</a>
 
 ```
 searchKey: gosym.LineTable.go12LineToPC
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -545,24 +444,11 @@ func (t *LineTable) go12LineToPC(file string, line int) (pc uint64)
 
 go12LineToPC maps a (file, line) pair to a program counter for the Go 1.2/1.16 pcln table. 
 
-#### <a id="LineTable.initFileMap" href="#LineTable.initFileMap">func (t *LineTable) initFileMap()</a>
-
-```
-searchKey: gosym.LineTable.initFileMap
-tags: [private]
-```
-
-```Go
-func (t *LineTable) initFileMap()
-```
-
-initFileMap initializes the map from file name to file number. 
-
 #### <a id="LineTable.go12MapFiles" href="#LineTable.go12MapFiles">func (t *LineTable) go12MapFiles(m map[string]*Obj, obj *Obj)</a>
 
 ```
 searchKey: gosym.LineTable.go12MapFiles
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -571,98 +457,176 @@ func (t *LineTable) go12MapFiles(m map[string]*Obj, obj *Obj)
 
 go12MapFiles adds to m a key for every file in the Go 1.2 LineTable. Every key maps to obj. That's not a very interesting map, but it provides a way for callers to obtain the list of files in the program. 
 
-### <a id="Sym" href="#Sym">type Sym struct</a>
+#### <a id="LineTable.go12PCToFile" href="#LineTable.go12PCToFile">func (t *LineTable) go12PCToFile(pc uint64) (file string)</a>
 
 ```
-searchKey: gosym.Sym
-```
-
-```Go
-type Sym struct {
-	Value  uint64
-	Type   byte
-	Name   string
-	GoType uint64
-	// If this symbol is a function symbol, the corresponding Func
-	Func *Func
-}
-```
-
-A Sym represents a single symbol table entry. 
-
-#### <a id="Sym.Static" href="#Sym.Static">func (s *Sym) Static() bool</a>
-
-```
-searchKey: gosym.Sym.Static
+searchKey: gosym.LineTable.go12PCToFile
+tags: [method private]
 ```
 
 ```Go
-func (s *Sym) Static() bool
+func (t *LineTable) go12PCToFile(pc uint64) (file string)
 ```
 
-Static reports whether this symbol is static (not visible outside its file). 
+go12PCToFile maps program counter to file name for the Go 1.2 pcln table. 
 
-#### <a id="Sym.PackageName" href="#Sym.PackageName">func (s *Sym) PackageName() string</a>
-
-```
-searchKey: gosym.Sym.PackageName
-```
-
-```Go
-func (s *Sym) PackageName() string
-```
-
-PackageName returns the package part of the symbol name, or the empty string if there is none. 
-
-#### <a id="Sym.ReceiverName" href="#Sym.ReceiverName">func (s *Sym) ReceiverName() string</a>
+#### <a id="LineTable.go12PCToLine" href="#LineTable.go12PCToLine">func (t *LineTable) go12PCToLine(pc uint64) (line int)</a>
 
 ```
-searchKey: gosym.Sym.ReceiverName
+searchKey: gosym.LineTable.go12PCToLine
+tags: [method private]
 ```
 
 ```Go
-func (s *Sym) ReceiverName() string
+func (t *LineTable) go12PCToLine(pc uint64) (line int)
 ```
 
-ReceiverName returns the receiver type name of this symbol, or the empty string if there is none. 
+go12PCToLine maps program counter to line number for the Go 1.2 pcln table. 
 
-#### <a id="Sym.BaseName" href="#Sym.BaseName">func (s *Sym) BaseName() string</a>
-
-```
-searchKey: gosym.Sym.BaseName
-```
-
-```Go
-func (s *Sym) BaseName() string
-```
-
-BaseName returns the symbol name without the package or receiver name. 
-
-### <a id="Func" href="#Func">type Func struct</a>
+#### <a id="LineTable.initFileMap" href="#LineTable.initFileMap">func (t *LineTable) initFileMap()</a>
 
 ```
-searchKey: gosym.Func
+searchKey: gosym.LineTable.initFileMap
+tags: [function private]
 ```
 
 ```Go
-type Func struct {
-	Entry uint64
-	*Sym
-	End       uint64
-	Params    []*Sym // nil for Go 1.3 and later binaries
-	Locals    []*Sym // nil for Go 1.3 and later binaries
-	FrameSize int
-	LineTable *LineTable
-	Obj       *Obj
-}
+func (t *LineTable) initFileMap()
 ```
 
-A Func collects information about a single function. 
+initFileMap initializes the map from file name to file number. 
+
+#### <a id="LineTable.isGo12" href="#LineTable.isGo12">func (t *LineTable) isGo12() bool</a>
+
+```
+searchKey: gosym.LineTable.isGo12
+tags: [function private]
+```
+
+```Go
+func (t *LineTable) isGo12() bool
+```
+
+isGo12 reports whether this is a Go 1.2 (or later) symbol table. 
+
+#### <a id="LineTable.parse" href="#LineTable.parse">func (t *LineTable) parse(targetPC uint64, targetLine int) (b []byte, pc uint64, line int)</a>
+
+```
+searchKey: gosym.LineTable.parse
+tags: [method private]
+```
+
+```Go
+func (t *LineTable) parse(targetPC uint64, targetLine int) (b []byte, pc uint64, line int)
+```
+
+#### <a id="LineTable.parsePclnTab" href="#LineTable.parsePclnTab">func (t *LineTable) parsePclnTab()</a>
+
+```
+searchKey: gosym.LineTable.parsePclnTab
+tags: [function private]
+```
+
+```Go
+func (t *LineTable) parsePclnTab()
+```
+
+parsePclnTab parses the pclntab, setting the version. 
+
+#### <a id="LineTable.pcvalue" href="#LineTable.pcvalue">func (t *LineTable) pcvalue(off uint32, entry, targetpc uint64) int32</a>
+
+```
+searchKey: gosym.LineTable.pcvalue
+tags: [method private]
+```
+
+```Go
+func (t *LineTable) pcvalue(off uint32, entry, targetpc uint64) int32
+```
+
+pcvalue reports the value associated with the target pc. off is the offset to the beginning of the pc-value table, and entry is the start PC for the corresponding function. 
+
+#### <a id="LineTable.readvarint" href="#LineTable.readvarint">func (t *LineTable) readvarint(pp *[]byte) uint32</a>
+
+```
+searchKey: gosym.LineTable.readvarint
+tags: [method private]
+```
+
+```Go
+func (t *LineTable) readvarint(pp *[]byte) uint32
+```
+
+readvarint reads, removes, and returns a varint from *pp. 
+
+#### <a id="LineTable.slice" href="#LineTable.slice">func (t *LineTable) slice(pc uint64) *LineTable</a>
+
+```
+searchKey: gosym.LineTable.slice
+tags: [method private]
+```
+
+```Go
+func (t *LineTable) slice(pc uint64) *LineTable
+```
+
+#### <a id="LineTable.step" href="#LineTable.step">func (t *LineTable) step(p *[]byte, pc *uint64, val *int32, first bool) bool</a>
+
+```
+searchKey: gosym.LineTable.step
+tags: [method private]
+```
+
+```Go
+func (t *LineTable) step(p *[]byte, pc *uint64, val *int32, first bool) bool
+```
+
+step advances to the next pc, value pair in the encoded table. 
+
+#### <a id="LineTable.string" href="#LineTable.string">func (t *LineTable) string(off uint32) string</a>
+
+```
+searchKey: gosym.LineTable.string
+tags: [method private]
+```
+
+```Go
+func (t *LineTable) string(off uint32) string
+```
+
+string returns a Go string found at off. 
+
+#### <a id="LineTable.stringFrom" href="#LineTable.stringFrom">func (t *LineTable) stringFrom(arr []byte, off uint32) string</a>
+
+```
+searchKey: gosym.LineTable.stringFrom
+tags: [method private]
+```
+
+```Go
+func (t *LineTable) stringFrom(arr []byte, off uint32) string
+```
+
+stringFrom returns a Go string found at off from a position. 
+
+#### <a id="LineTable.uintptr" href="#LineTable.uintptr">func (t *LineTable) uintptr(b []byte) uint64</a>
+
+```
+searchKey: gosym.LineTable.uintptr
+tags: [method private]
+```
+
+```Go
+func (t *LineTable) uintptr(b []byte) uint64
+```
+
+uintptr returns the pointer-sized value encoded at b. The pointer size is dictated by the table being read. 
 
 ### <a id="Obj" href="#Obj">type Obj struct</a>
 
 ```
 searchKey: gosym.Obj
+tags: [struct]
 ```
 
 ```Go
@@ -688,32 +652,105 @@ In Go 1 and Go 1.1, each package produced one Obj for all Go sources and one Obj
 
 In Go 1.2, there is a single Obj for the entire program. 
 
-#### <a id="Obj.lineFromAline" href="#Obj.lineFromAline">func (o *Obj) lineFromAline(aline int) (string, int)</a>
-
-```
-searchKey: gosym.Obj.lineFromAline
-tags: [private]
-```
-
-```Go
-func (o *Obj) lineFromAline(aline int) (string, int)
-```
-
 #### <a id="Obj.alineFromLine" href="#Obj.alineFromLine">func (o *Obj) alineFromLine(path string, line int) (int, error)</a>
 
 ```
 searchKey: gosym.Obj.alineFromLine
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (o *Obj) alineFromLine(path string, line int) (int, error)
 ```
 
+#### <a id="Obj.lineFromAline" href="#Obj.lineFromAline">func (o *Obj) lineFromAline(aline int) (string, int)</a>
+
+```
+searchKey: gosym.Obj.lineFromAline
+tags: [method private]
+```
+
+```Go
+func (o *Obj) lineFromAline(aline int) (string, int)
+```
+
+### <a id="Sym" href="#Sym">type Sym struct</a>
+
+```
+searchKey: gosym.Sym
+tags: [struct]
+```
+
+```Go
+type Sym struct {
+	Value  uint64
+	Type   byte
+	Name   string
+	GoType uint64
+	// If this symbol is a function symbol, the corresponding Func
+	Func *Func
+}
+```
+
+A Sym represents a single symbol table entry. 
+
+#### <a id="Sym.BaseName" href="#Sym.BaseName">func (s *Sym) BaseName() string</a>
+
+```
+searchKey: gosym.Sym.BaseName
+tags: [function]
+```
+
+```Go
+func (s *Sym) BaseName() string
+```
+
+BaseName returns the symbol name without the package or receiver name. 
+
+#### <a id="Sym.PackageName" href="#Sym.PackageName">func (s *Sym) PackageName() string</a>
+
+```
+searchKey: gosym.Sym.PackageName
+tags: [function]
+```
+
+```Go
+func (s *Sym) PackageName() string
+```
+
+PackageName returns the package part of the symbol name, or the empty string if there is none. 
+
+#### <a id="Sym.ReceiverName" href="#Sym.ReceiverName">func (s *Sym) ReceiverName() string</a>
+
+```
+searchKey: gosym.Sym.ReceiverName
+tags: [function]
+```
+
+```Go
+func (s *Sym) ReceiverName() string
+```
+
+ReceiverName returns the receiver type name of this symbol, or the empty string if there is none. 
+
+#### <a id="Sym.Static" href="#Sym.Static">func (s *Sym) Static() bool</a>
+
+```
+searchKey: gosym.Sym.Static
+tags: [function]
+```
+
+```Go
+func (s *Sym) Static() bool
+```
+
+Static reports whether this symbol is static (not visible outside its file). 
+
 ### <a id="Table" href="#Table">type Table struct</a>
 
 ```
 searchKey: gosym.Table
+tags: [struct]
 ```
 
 ```Go
@@ -733,6 +770,7 @@ Table represents a Go symbol table. It stores all of the symbols decoded from th
 
 ```
 searchKey: gosym.NewTable
+tags: [method]
 ```
 
 ```Go
@@ -741,43 +779,83 @@ func NewTable(symtab []byte, pcln *LineTable) (*Table, error)
 
 NewTable decodes the Go symbol table (the ".gosymtab" section in ELF), returning an in-memory representation. Starting with Go 1.3, the Go symbol table no longer includes symbol data. 
 
-#### <a id="getTable" href="#getTable">func getTable(t *testing.T) *Table</a>
-
-```
-searchKey: gosym.getTable
-tags: [private]
-```
-
-```Go
-func getTable(t *testing.T) *Table
-```
-
 #### <a id="crack" href="#crack">func crack(file string, t *testing.T) (*elf.File, *Table)</a>
 
 ```
 searchKey: gosym.crack
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func crack(file string, t *testing.T) (*elf.File, *Table)
 ```
 
+#### <a id="getTable" href="#getTable">func getTable(t *testing.T) *Table</a>
+
+```
+searchKey: gosym.getTable
+tags: [method private]
+```
+
+```Go
+func getTable(t *testing.T) *Table
+```
+
 #### <a id="parse" href="#parse">func parse(file string, f *elf.File, t *testing.T) (*elf.File, *Table)</a>
 
 ```
 searchKey: gosym.parse
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func parse(file string, f *elf.File, t *testing.T) (*elf.File, *Table)
 ```
 
+#### <a id="Table.LineToPC" href="#Table.LineToPC">func (t *Table) LineToPC(file string, line int) (pc uint64, fn *Func, err error)</a>
+
+```
+searchKey: gosym.Table.LineToPC
+tags: [method]
+```
+
+```Go
+func (t *Table) LineToPC(file string, line int) (pc uint64, fn *Func, err error)
+```
+
+LineToPC looks up the first program counter on the given line in the named file. It returns UnknownPathError or UnknownLineError if there is an error looking up this line. 
+
+#### <a id="Table.LookupFunc" href="#Table.LookupFunc">func (t *Table) LookupFunc(name string) *Func</a>
+
+```
+searchKey: gosym.Table.LookupFunc
+tags: [method]
+```
+
+```Go
+func (t *Table) LookupFunc(name string) *Func
+```
+
+LookupFunc returns the text, data, or bss symbol with the given name, or nil if no such symbol is found. 
+
+#### <a id="Table.LookupSym" href="#Table.LookupSym">func (t *Table) LookupSym(name string) *Sym</a>
+
+```
+searchKey: gosym.Table.LookupSym
+tags: [method]
+```
+
+```Go
+func (t *Table) LookupSym(name string) *Sym
+```
+
+LookupSym returns the text, data, or bss symbol with the given name, or nil if no such symbol is found. 
+
 #### <a id="Table.PCToFunc" href="#Table.PCToFunc">func (t *Table) PCToFunc(pc uint64) *Func</a>
 
 ```
 searchKey: gosym.Table.PCToFunc
+tags: [method]
 ```
 
 ```Go
@@ -790,6 +868,7 @@ PCToFunc returns the function containing the program counter pc, or nil if there
 
 ```
 searchKey: gosym.Table.PCToLine
+tags: [method]
 ```
 
 ```Go
@@ -798,46 +877,11 @@ func (t *Table) PCToLine(pc uint64) (file string, line int, fn *Func)
 
 PCToLine looks up line number information for a program counter. If there is no information, it returns fn == nil. 
 
-#### <a id="Table.LineToPC" href="#Table.LineToPC">func (t *Table) LineToPC(file string, line int) (pc uint64, fn *Func, err error)</a>
-
-```
-searchKey: gosym.Table.LineToPC
-```
-
-```Go
-func (t *Table) LineToPC(file string, line int) (pc uint64, fn *Func, err error)
-```
-
-LineToPC looks up the first program counter on the given line in the named file. It returns UnknownPathError or UnknownLineError if there is an error looking up this line. 
-
-#### <a id="Table.LookupSym" href="#Table.LookupSym">func (t *Table) LookupSym(name string) *Sym</a>
-
-```
-searchKey: gosym.Table.LookupSym
-```
-
-```Go
-func (t *Table) LookupSym(name string) *Sym
-```
-
-LookupSym returns the text, data, or bss symbol with the given name, or nil if no such symbol is found. 
-
-#### <a id="Table.LookupFunc" href="#Table.LookupFunc">func (t *Table) LookupFunc(name string) *Func</a>
-
-```
-searchKey: gosym.Table.LookupFunc
-```
-
-```Go
-func (t *Table) LookupFunc(name string) *Func
-```
-
-LookupFunc returns the text, data, or bss symbol with the given name, or nil if no such symbol is found. 
-
 #### <a id="Table.SymByAddr" href="#Table.SymByAddr">func (t *Table) SymByAddr(addr uint64) *Sym</a>
 
 ```
 searchKey: gosym.Table.SymByAddr
+tags: [method]
 ```
 
 ```Go
@@ -846,26 +890,11 @@ func (t *Table) SymByAddr(addr uint64) *Sym
 
 SymByAddr returns the text, data, or bss symbol starting at the given address. 
 
-### <a id="sym" href="#sym">type sym struct</a>
-
-```
-searchKey: gosym.sym
-tags: [private]
-```
-
-```Go
-type sym struct {
-	value  uint64
-	gotype uint64
-	typ    byte
-	name   []byte
-}
-```
-
 ### <a id="UnknownFileError" href="#UnknownFileError">type UnknownFileError string</a>
 
 ```
 searchKey: gosym.UnknownFileError
+tags: [string]
 ```
 
 ```Go
@@ -878,6 +907,7 @@ UnknownFileError represents a failure to find the specific file in the symbol ta
 
 ```
 searchKey: gosym.UnknownFileError.Error
+tags: [function]
 ```
 
 ```Go
@@ -888,6 +918,7 @@ func (e UnknownFileError) Error() string
 
 ```
 searchKey: gosym.UnknownLineError
+tags: [struct]
 ```
 
 ```Go
@@ -903,124 +934,53 @@ UnknownLineError represents a failure to map a line to a program counter, either
 
 ```
 searchKey: gosym.UnknownLineError.Error
+tags: [function]
 ```
 
 ```Go
 func (e *UnknownLineError) Error() string
 ```
 
-### <a id="DecodingError" href="#DecodingError">type DecodingError struct</a>
+### <a id="sym" href="#sym">type sym struct</a>
 
 ```
-searchKey: gosym.DecodingError
+searchKey: gosym.sym
+tags: [struct private]
 ```
 
 ```Go
-type DecodingError struct {
-	off int
-	msg string
-	val interface{}
+type sym struct {
+	value  uint64
+	gotype uint64
+	typ    byte
+	name   []byte
 }
 ```
 
-DecodingError represents an error during the decoding of the symbol table. 
-
-#### <a id="DecodingError.Error" href="#DecodingError.Error">func (e *DecodingError) Error() string</a>
+### <a id="version" href="#version">type version int</a>
 
 ```
-searchKey: gosym.DecodingError.Error
+searchKey: gosym.version
+tags: [number private]
 ```
 
 ```Go
-func (e *DecodingError) Error() string
+type version int
 ```
+
+version of the pclntab 
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="walksymtab" href="#walksymtab">func walksymtab(data []byte, fn func(sym) error) error</a>
-
 ```
-searchKey: gosym.walksymtab
-tags: [private]
-```
-
-```Go
-func walksymtab(data []byte, fn func(sym) error) error
-```
-
-### <a id="dotest" href="#dotest">func dotest(t *testing.T)</a>
-
-```
-searchKey: gosym.dotest
-tags: [private]
-```
-
-```Go
-func dotest(t *testing.T)
-```
-
-### <a id="endtest" href="#endtest">func endtest()</a>
-
-```
-searchKey: gosym.endtest
-tags: [private]
-```
-
-```Go
-func endtest()
-```
-
-### <a id="skipIfNotELF" href="#skipIfNotELF">func skipIfNotELF(t *testing.T)</a>
-
-```
-searchKey: gosym.skipIfNotELF
-tags: [private]
-```
-
-```Go
-func skipIfNotELF(t *testing.T)
-```
-
-skipIfNotELF skips the test if we are not running on an ELF system. These tests open and examine the test binary, and use elf.Open to do so. 
-
-### <a id="TestLineFromAline" href="#TestLineFromAline">func TestLineFromAline(t *testing.T)</a>
-
-```
-searchKey: gosym.TestLineFromAline
-tags: [private]
-```
-
-```Go
-func TestLineFromAline(t *testing.T)
-```
-
-### <a id="TestLineAline" href="#TestLineAline">func TestLineAline(t *testing.T)</a>
-
-```
-searchKey: gosym.TestLineAline
-tags: [private]
-```
-
-```Go
-func TestLineAline(t *testing.T)
-```
-
-### <a id="TestPCLine" href="#TestPCLine">func TestPCLine(t *testing.T)</a>
-
-```
-searchKey: gosym.TestPCLine
-tags: [private]
-```
-
-```Go
-func TestPCLine(t *testing.T)
+tags: [package]
 ```
 
 ### <a id="Test115PclnParsing" href="#Test115PclnParsing">func Test115PclnParsing(t *testing.T)</a>
 
 ```
 searchKey: gosym.Test115PclnParsing
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -1037,22 +997,66 @@ println("hello")
 ```
 } [END] 
 
-### <a id="assertString" href="#assertString">func assertString(t *testing.T, dsc, out, tgt string)</a>
+### <a id="TestIssue29551" href="#TestIssue29551">func TestIssue29551(t *testing.T)</a>
 
 ```
-searchKey: gosym.assertString
-tags: [private]
+searchKey: gosym.TestIssue29551
+tags: [method private test]
 ```
 
 ```Go
-func assertString(t *testing.T, dsc, out, tgt string)
+func TestIssue29551(t *testing.T)
+```
+
+### <a id="TestLineAline" href="#TestLineAline">func TestLineAline(t *testing.T)</a>
+
+```
+searchKey: gosym.TestLineAline
+tags: [method private test]
+```
+
+```Go
+func TestLineAline(t *testing.T)
+```
+
+### <a id="TestLineFromAline" href="#TestLineFromAline">func TestLineFromAline(t *testing.T)</a>
+
+```
+searchKey: gosym.TestLineFromAline
+tags: [method private test]
+```
+
+```Go
+func TestLineFromAline(t *testing.T)
+```
+
+### <a id="TestPCLine" href="#TestPCLine">func TestPCLine(t *testing.T)</a>
+
+```
+searchKey: gosym.TestPCLine
+tags: [method private test]
+```
+
+```Go
+func TestPCLine(t *testing.T)
+```
+
+### <a id="TestRemotePackage" href="#TestRemotePackage">func TestRemotePackage(t *testing.T)</a>
+
+```
+searchKey: gosym.TestRemotePackage
+tags: [method private test]
+```
+
+```Go
+func TestRemotePackage(t *testing.T)
 ```
 
 ### <a id="TestStandardLibPackage" href="#TestStandardLibPackage">func TestStandardLibPackage(t *testing.T)</a>
 
 ```
 searchKey: gosym.TestStandardLibPackage
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -1063,32 +1067,67 @@ func TestStandardLibPackage(t *testing.T)
 
 ```
 searchKey: gosym.TestStandardLibPathPackage
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestStandardLibPathPackage(t *testing.T)
 ```
 
-### <a id="TestRemotePackage" href="#TestRemotePackage">func TestRemotePackage(t *testing.T)</a>
+### <a id="assertString" href="#assertString">func assertString(t *testing.T, dsc, out, tgt string)</a>
 
 ```
-searchKey: gosym.TestRemotePackage
-tags: [private]
-```
-
-```Go
-func TestRemotePackage(t *testing.T)
-```
-
-### <a id="TestIssue29551" href="#TestIssue29551">func TestIssue29551(t *testing.T)</a>
-
-```
-searchKey: gosym.TestIssue29551
-tags: [private]
+searchKey: gosym.assertString
+tags: [method private]
 ```
 
 ```Go
-func TestIssue29551(t *testing.T)
+func assertString(t *testing.T, dsc, out, tgt string)
+```
+
+### <a id="dotest" href="#dotest">func dotest(t *testing.T)</a>
+
+```
+searchKey: gosym.dotest
+tags: [method private]
+```
+
+```Go
+func dotest(t *testing.T)
+```
+
+### <a id="endtest" href="#endtest">func endtest()</a>
+
+```
+searchKey: gosym.endtest
+tags: [function private]
+```
+
+```Go
+func endtest()
+```
+
+### <a id="skipIfNotELF" href="#skipIfNotELF">func skipIfNotELF(t *testing.T)</a>
+
+```
+searchKey: gosym.skipIfNotELF
+tags: [method private]
+```
+
+```Go
+func skipIfNotELF(t *testing.T)
+```
+
+skipIfNotELF skips the test if we are not running on an ELF system. These tests open and examine the test binary, and use elf.Open to do so. 
+
+### <a id="walksymtab" href="#walksymtab">func walksymtab(data []byte, fn func(sym) error) error</a>
+
+```
+searchKey: gosym.walksymtab
+tags: [method private]
+```
+
+```Go
+func walksymtab(data []byte, fn func(sym) error) error
 ```
 

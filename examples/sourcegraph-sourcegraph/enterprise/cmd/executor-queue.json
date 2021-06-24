@@ -4,7 +4,9 @@
     "identifier": "executor-queue",
     "newPage": true,
     "searchKey": "enterprise/cmd/executor-queue",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -25,7 +27,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -44,6 +48,8 @@
                 "newPage": false,
                 "searchKey": "main.port",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -68,7 +74,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -86,7 +94,9 @@
                 "identifier": "Config",
                 "newPage": false,
                 "searchKey": "main.Config",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +114,9 @@
                       "identifier": "Config.Load",
                       "newPage": false,
                       "searchKey": "main.Config.Load",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -124,7 +136,9 @@
                       "identifier": "Config.ServerOptions",
                       "newPage": false,
                       "searchKey": "main.Config.ServerOptions",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -148,6 +162,7 @@
                 "newPage": false,
                 "searchKey": "main.config",
                 "tags": [
+                  "interface",
                   "private"
                 ]
               },
@@ -172,7 +187,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -185,34 +202,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/cmd/executor-queue#main",
-              "documentation": {
-                "identifier": "main",
-                "newPage": false,
-                "searchKey": "main.main",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func main()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc main()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/executor-queue#connectToDatabase",
               "documentation": {
                 "identifier": "connectToDatabase",
                 "newPage": false,
                 "searchKey": "main.connectToDatabase",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -223,6 +219,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc connectToDatabase() *sql.DB\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor-queue#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
               },
               "children": null
             }

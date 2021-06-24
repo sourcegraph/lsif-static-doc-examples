@@ -6,450 +6,455 @@ Package xml implements a simple XML 1.0 parser that understands XML name spaces.
 
 * [Constants](#const)
     * [const Header](#Header)
-    * [const fElement](#fElement)
+    * [const HyperDrive](#HyperDrive)
+    * [const ImprobabilityDrive](#ImprobabilityDrive)
+    * [const OK](#OK)
+    * [const atomFeedString](#atomFeedString)
+    * [const dontInitNilPointers](#dontInitNilPointers)
+    * [const emptyXML](#emptyXML)
+    * [const fAny](#fAny)
     * [const fAttr](#fAttr)
     * [const fCDATA](#fCDATA)
     * [const fCharData](#fCharData)
-    * [const fInnerXML](#fInnerXML)
     * [const fComment](#fComment)
-    * [const fAny](#fAny)
-    * [const fOmitEmpty](#fOmitEmpty)
+    * [const fElement](#fElement)
+    * [const fInnerXML](#fInnerXML)
     * [const fMode](#fMode)
-    * [const xmlName](#xmlName)
+    * [const fOmitEmpty](#fOmitEmpty)
     * [const initNilPointers](#initNilPointers)
-    * [const dontInitNilPointers](#dontInitNilPointers)
-    * [const xmlURL](#xmlURL)
-    * [const xmlnsPrefix](#xmlnsPrefix)
-    * [const xmlPrefix](#xmlPrefix)
-    * [const stkStart](#stkStart)
-    * [const stkNs](#stkNs)
-    * [const stkEOF](#stkEOF)
-    * [const HyperDrive](#HyperDrive)
-    * [const ImprobabilityDrive](#ImprobabilityDrive)
-    * [const atomFeedString](#atomFeedString)
+    * [const nonStrictInput](#nonStrictInput)
     * [const pathTestString](#pathTestString)
-    * [const OK](#OK)
-    * [const withoutNameTypeData](#withoutNameTypeData)
-    * [const emptyXML](#emptyXML)
-    * [const whitespaceValuesXML](#whitespaceValuesXML)
-    * [const whitespaceAttrsXML](#whitespaceAttrsXML)
+    * [const stkEOF](#stkEOF)
+    * [const stkNs](#stkNs)
+    * [const stkStart](#stkStart)
     * [const testInput](#testInput)
     * [const testInputAltEncoding](#testInputAltEncoding)
-    * [const nonStrictInput](#nonStrictInput)
     * [const testScalarsInput](#testScalarsInput)
+    * [const whitespaceAttrsXML](#whitespaceAttrsXML)
+    * [const whitespaceValuesXML](#whitespaceValuesXML)
+    * [const withoutNameTypeData](#withoutNameTypeData)
+    * [const xmlName](#xmlName)
+    * [const xmlPrefix](#xmlPrefix)
+    * [const xmlURL](#xmlURL)
+    * [const xmlnsPrefix](#xmlnsPrefix)
 * [Variables](#var)
-    * [var begComment](#begComment)
-    * [var endComment](#endComment)
-    * [var endProcInst](#endProcInst)
-    * [var marshalerType](#marshalerType)
-    * [var marshalerAttrType](#marshalerAttrType)
-    * [var textMarshalerType](#textMarshalerType)
-    * [var ddBytes](#ddBytes)
-    * [var attrType](#attrType)
-    * [var unmarshalerType](#unmarshalerType)
-    * [var unmarshalerAttrType](#unmarshalerAttrType)
-    * [var textUnmarshalerType](#textUnmarshalerType)
-    * [var tinfoMap](#tinfoMap)
-    * [var nameType](#nameType)
-    * [var errRawToken](#errRawToken)
-    * [var entity](#entity)
-    * [var first](#first)
-    * [var second](#second)
-    * [var HTMLEntity](#HTMLEntity)
-    * [var htmlEntity](#htmlEntity)
     * [var HTMLAutoClose](#HTMLAutoClose)
-    * [var htmlAutoClose](#htmlAutoClose)
-    * [var escQuot](#escQuot)
-    * [var escApos](#escApos)
-    * [var escAmp](#escAmp)
-    * [var escLT](#escLT)
-    * [var escGT](#escGT)
-    * [var escTab](#escTab)
-    * [var escNL](#escNL)
-    * [var escCR](#escCR)
-    * [var escFFFD](#escFFFD)
-    * [var cdataStart](#cdataStart)
-    * [var cdataEnd](#cdataEnd)
-    * [var cdataEscape](#cdataEscape)
+    * [var HTMLEntity](#HTMLEntity)
+    * [var ageAttr](#ageAttr)
+    * [var all](#all)
+    * [var atomFeed](#atomFeed)
     * [var atomValue](#atomValue)
     * [var atomXML](#atomXML)
-    * [var nilStruct](#nilStruct)
-    * [var nameAttr](#nameAttr)
-    * [var ageAttr](#ageAttr)
-    * [var contentsAttr](#contentsAttr)
-    * [var empty](#empty)
-    * [var marshalTests](#marshalTests)
-    * [var marshalErrorTests](#marshalErrorTests)
-    * [var marshalIndentTests](#marshalIndentTests)
-    * [var encodeTokenTests](#encodeTokenTests)
-    * [var atomFeed](#atomFeed)
-    * [var pathTests](#pathTests)
+    * [var attrType](#attrType)
     * [var badPathTests](#badPathTests)
-    * [var tables](#tables)
-    * [var tableAttrs](#tableAttrs)
-    * [var testEntity](#testEntity)
-    * [var rawTokens](#rawTokens)
-    * [var cookedTokens](#cookedTokens)
-    * [var rawTokensAltEncoding](#rawTokensAltEncoding)
-    * [var xmlInput](#xmlInput)
-    * [var nonStrictTokens](#nonStrictTokens)
-    * [var nestedDirectivesInput](#nestedDirectivesInput)
-    * [var nestedDirectivesTokens](#nestedDirectivesTokens)
-    * [var all](#all)
-    * [var sixteen](#sixteen)
+    * [var begComment](#begComment)
+    * [var cdataEnd](#cdataEnd)
+    * [var cdataEscape](#cdataEscape)
+    * [var cdataStart](#cdataStart)
     * [var characterTests](#characterTests)
-    * [var procInstTests](#procInstTests)
+    * [var contentsAttr](#contentsAttr)
+    * [var cookedTokens](#cookedTokens)
+    * [var ddBytes](#ddBytes)
     * [var directivesWithCommentsInput](#directivesWithCommentsInput)
     * [var directivesWithCommentsTokens](#directivesWithCommentsTokens)
+    * [var empty](#empty)
+    * [var encodeTokenTests](#encodeTokenTests)
+    * [var endComment](#endComment)
+    * [var endProcInst](#endProcInst)
+    * [var entity](#entity)
+    * [var errRawToken](#errRawToken)
+    * [var escAmp](#escAmp)
+    * [var escApos](#escApos)
+    * [var escCR](#escCR)
+    * [var escFFFD](#escFFFD)
+    * [var escGT](#escGT)
+    * [var escLT](#escLT)
+    * [var escNL](#escNL)
+    * [var escQuot](#escQuot)
+    * [var escTab](#escTab)
+    * [var first](#first)
+    * [var htmlAutoClose](#htmlAutoClose)
+    * [var htmlEntity](#htmlEntity)
+    * [var marshalErrorTests](#marshalErrorTests)
+    * [var marshalIndentTests](#marshalIndentTests)
+    * [var marshalTests](#marshalTests)
+    * [var marshalerAttrType](#marshalerAttrType)
+    * [var marshalerType](#marshalerType)
+    * [var nameAttr](#nameAttr)
+    * [var nameType](#nameType)
+    * [var nestedDirectivesInput](#nestedDirectivesInput)
+    * [var nestedDirectivesTokens](#nestedDirectivesTokens)
+    * [var nilStruct](#nilStruct)
+    * [var nonStrictTokens](#nonStrictTokens)
+    * [var pathTests](#pathTests)
+    * [var procInstTests](#procInstTests)
+    * [var rawTokens](#rawTokens)
+    * [var rawTokensAltEncoding](#rawTokensAltEncoding)
+    * [var second](#second)
+    * [var sixteen](#sixteen)
+    * [var tableAttrs](#tableAttrs)
+    * [var tables](#tables)
+    * [var testEntity](#testEntity)
+    * [var textMarshalerType](#textMarshalerType)
+    * [var textUnmarshalerType](#textUnmarshalerType)
+    * [var tinfoMap](#tinfoMap)
+    * [var unmarshalerAttrType](#unmarshalerAttrType)
+    * [var unmarshalerType](#unmarshalerType)
+    * [var xmlInput](#xmlInput)
 * [Types](#type)
-    * [type Marshaler interface](#Marshaler)
-    * [type MarshalerAttr interface](#MarshalerAttr)
-    * [type Encoder struct](#Encoder)
-        * [func NewEncoder(w io.Writer) *Encoder](#NewEncoder)
-        * [func (enc *Encoder) Indent(prefix, indent string)](#Encoder.Indent)
-        * [func (enc *Encoder) Encode(v interface{}) error](#Encoder.Encode)
-        * [func (enc *Encoder) EncodeElement(v interface{}, start StartElement) error](#Encoder.EncodeElement)
-        * [func (enc *Encoder) EncodeToken(t Token) error](#Encoder.EncodeToken)
-        * [func (enc *Encoder) Flush() error](#Encoder.Flush)
-    * [type printer struct](#printer)
-        * [func (p *printer) createAttrPrefix(url string) string](#printer.createAttrPrefix)
-        * [func (p *printer) deleteAttrPrefix(prefix string)](#printer.deleteAttrPrefix)
-        * [func (p *printer) markPrefix()](#printer.markPrefix)
-        * [func (p *printer) popPrefix()](#printer.popPrefix)
-        * [func (p *printer) marshalValue(val reflect.Value, finfo *fieldInfo, startTemplate *StartElement) error](#printer.marshalValue)
-        * [func (p *printer) marshalAttr(start *StartElement, name Name, val reflect.Value) error](#printer.marshalAttr)
-        * [func (p *printer) marshalInterface(val Marshaler, start StartElement) error](#printer.marshalInterface)
-        * [func (p *printer) marshalTextInterface(val encoding.TextMarshaler, start StartElement) error](#printer.marshalTextInterface)
-        * [func (p *printer) writeStart(start *StartElement) error](#printer.writeStart)
-        * [func (p *printer) writeEnd(name Name) error](#printer.writeEnd)
-        * [func (p *printer) marshalSimple(typ reflect.Type, val reflect.Value) (string, []byte, error)](#printer.marshalSimple)
-        * [func (p *printer) marshalStruct(tinfo *typeInfo, val reflect.Value) error](#printer.marshalStruct)
-        * [func (p *printer) cachedWriteError() error](#printer.cachedWriteError)
-        * [func (p *printer) writeIndent(depthDelta int)](#printer.writeIndent)
-        * [func (p *printer) EscapeString(s string)](#printer.EscapeString)
-    * [type parentStack struct](#parentStack)
-        * [func (s *parentStack) trim(parents []string) error](#parentStack.trim)
-        * [func (s *parentStack) push(parents []string) error](#parentStack.push)
-    * [type UnsupportedTypeError struct](#UnsupportedTypeError)
-        * [func (e *UnsupportedTypeError) Error() string](#UnsupportedTypeError.Error)
-    * [type UnmarshalError string](#UnmarshalError)
-        * [func (e UnmarshalError) Error() string](#UnmarshalError.Error)
-    * [type Unmarshaler interface](#Unmarshaler)
-    * [type UnmarshalerAttr interface](#UnmarshalerAttr)
-    * [type typeInfo struct](#typeInfo)
-        * [func getTypeInfo(typ reflect.Type) (*typeInfo, error)](#getTypeInfo)
-    * [type fieldInfo struct](#fieldInfo)
-        * [func structFieldInfo(typ reflect.Type, f *reflect.StructField) (*fieldInfo, error)](#structFieldInfo)
-        * [func lookupXMLName(typ reflect.Type) (xmlname *fieldInfo)](#lookupXMLName)
-        * [func (finfo *fieldInfo) value(v reflect.Value, shouldInitNilPointers bool) reflect.Value](#fieldInfo.value)
-    * [type fieldFlags int](#fieldFlags)
-    * [type TagPathError struct](#TagPathError)
-        * [func (e *TagPathError) Error() string](#TagPathError.Error)
-    * [type SyntaxError struct](#SyntaxError)
-        * [func (e *SyntaxError) Error() string](#SyntaxError.Error)
-    * [type Name struct](#Name)
+    * [type AnyHolder struct](#AnyHolder)
+    * [type AnyOmitTest struct](#AnyOmitTest)
+    * [type AnySliceTest struct](#AnySliceTest)
+    * [type AnyTest struct](#AnyTest)
     * [type Attr struct](#Attr)
-    * [type Token interface{}](#Token)
-        * [func CopyToken(t Token) Token](#CopyToken)
-    * [type StartElement struct](#StartElement)
-        * [func defaultStart(typ reflect.Type, finfo *fieldInfo, startTemplate *StartElement) StartElement](#defaultStart)
-        * [func (e StartElement) Copy() StartElement](#StartElement.Copy)
-        * [func (e StartElement) End() EndElement](#StartElement.End)
-    * [type EndElement struct](#EndElement)
+    * [type AttrParent struct](#AttrParent)
+    * [type AttrTest struct](#AttrTest)
+    * [type AttrsTest struct](#AttrsTest)
+    * [type BadAttr struct](#BadAttr)
+    * [type BadPathEmbeddedA struct](#BadPathEmbeddedA)
+    * [type BadPathEmbeddedB struct](#BadPathEmbeddedB)
+    * [type BadPathTestA struct](#BadPathTestA)
+    * [type BadPathTestB struct](#BadPathTestB)
+    * [type BadPathTestC struct](#BadPathTestC)
+    * [type BadPathTestD struct](#BadPathTestD)
+    * [type Book struct](#Book)
+    * [type CDataTest struct](#CDataTest)
     * [type CharData []byte](#CharData)
         * [func (c CharData) Copy() CharData](#CharData.Copy)
+    * [type ChardataEmptyTest struct](#ChardataEmptyTest)
+    * [type Child struct](#Child)
+    * [type ChildToEmbed struct](#ChildToEmbed)
     * [type Comment []byte](#Comment)
         * [func (c Comment) Copy() Comment](#Comment.Copy)
-    * [type ProcInst struct](#ProcInst)
-        * [func (p ProcInst) Copy() ProcInst](#ProcInst.Copy)
-    * [type Directive []byte](#Directive)
-        * [func (d Directive) Copy() Directive](#Directive.Copy)
-    * [type TokenReader interface](#TokenReader)
+    * [type Data struct](#Data)
     * [type Decoder struct](#Decoder)
         * [func NewDecoder(r io.Reader) *Decoder](#NewDecoder)
         * [func NewTokenDecoder(t TokenReader) *Decoder](#NewTokenDecoder)
         * [func (d *Decoder) Decode(v interface{}) error](#Decoder.Decode)
         * [func (d *Decoder) DecodeElement(v interface{}, start *StartElement) error](#Decoder.DecodeElement)
-        * [func (d *Decoder) unmarshalInterface(val Unmarshaler, start *StartElement) error](#Decoder.unmarshalInterface)
-        * [func (d *Decoder) unmarshalTextInterface(val encoding.TextUnmarshaler) error](#Decoder.unmarshalTextInterface)
-        * [func (d *Decoder) unmarshalAttr(val reflect.Value, attr Attr) error](#Decoder.unmarshalAttr)
-        * [func (d *Decoder) unmarshal(val reflect.Value, start *StartElement) error](#Decoder.unmarshal)
-        * [func (d *Decoder) unmarshalPath(tinfo *typeInfo, sv reflect.Value, parents []string, start *StartElement) (consumed bool, err error)](#Decoder.unmarshalPath)
+        * [func (d *Decoder) InputOffset() int64](#Decoder.InputOffset)
+        * [func (d *Decoder) RawToken() (Token, error)](#Decoder.RawToken)
         * [func (d *Decoder) Skip() error](#Decoder.Skip)
         * [func (d *Decoder) Token() (Token, error)](#Decoder.Token)
-        * [func (d *Decoder) translate(n *Name, isElementName bool)](#Decoder.translate)
-        * [func (d *Decoder) switchToReader(r io.Reader)](#Decoder.switchToReader)
-        * [func (d *Decoder) push(kind int) *stack](#Decoder.push)
+        * [func (d *Decoder) attrval() []byte](#Decoder.attrval)
+        * [func (d *Decoder) autoClose(t Token) (Token, bool)](#Decoder.autoClose)
+        * [func (d *Decoder) getc() (b byte, ok bool)](#Decoder.getc)
+        * [func (d *Decoder) mustgetc() (b byte, ok bool)](#Decoder.mustgetc)
+        * [func (d *Decoder) name() (s string, ok bool)](#Decoder.name)
+        * [func (d *Decoder) nsname() (name Name, ok bool)](#Decoder.nsname)
         * [func (d *Decoder) pop() *stack](#Decoder.pop)
-        * [func (d *Decoder) pushEOF()](#Decoder.pushEOF)
         * [func (d *Decoder) popEOF() bool](#Decoder.popEOF)
+        * [func (d *Decoder) popElement(t *EndElement) bool](#Decoder.popElement)
+        * [func (d *Decoder) push(kind int) *stack](#Decoder.push)
+        * [func (d *Decoder) pushEOF()](#Decoder.pushEOF)
         * [func (d *Decoder) pushElement(name Name)](#Decoder.pushElement)
         * [func (d *Decoder) pushNs(local string, url string, ok bool)](#Decoder.pushNs)
-        * [func (d *Decoder) syntaxError(msg string) error](#Decoder.syntaxError)
-        * [func (d *Decoder) popElement(t *EndElement) bool](#Decoder.popElement)
-        * [func (d *Decoder) autoClose(t Token) (Token, bool)](#Decoder.autoClose)
-        * [func (d *Decoder) RawToken() (Token, error)](#Decoder.RawToken)
         * [func (d *Decoder) rawToken() (Token, error)](#Decoder.rawToken)
-        * [func (d *Decoder) attrval() []byte](#Decoder.attrval)
-        * [func (d *Decoder) space()](#Decoder.space)
-        * [func (d *Decoder) getc() (b byte, ok bool)](#Decoder.getc)
-        * [func (d *Decoder) InputOffset() int64](#Decoder.InputOffset)
-        * [func (d *Decoder) savedOffset() int](#Decoder.savedOffset)
-        * [func (d *Decoder) mustgetc() (b byte, ok bool)](#Decoder.mustgetc)
-        * [func (d *Decoder) ungetc(b byte)](#Decoder.ungetc)
-        * [func (d *Decoder) text(quote int, cdata bool) []byte](#Decoder.text)
-        * [func (d *Decoder) nsname() (name Name, ok bool)](#Decoder.nsname)
-        * [func (d *Decoder) name() (s string, ok bool)](#Decoder.name)
         * [func (d *Decoder) readName() (ok bool)](#Decoder.readName)
-    * [type stack struct](#stack)
-    * [type DriveType int](#DriveType)
-    * [type Passenger struct](#Passenger)
-    * [type Ship struct](#Ship)
-    * [type NamedType string](#NamedType)
-    * [type Port struct](#Port)
-    * [type Domain struct](#Domain)
-    * [type Book struct](#Book)
-    * [type Event struct](#Event)
-    * [type Movie struct](#Movie)
-    * [type Pi struct](#Pi)
-    * [type Universe struct](#Universe)
-    * [type Particle struct](#Particle)
+        * [func (d *Decoder) savedOffset() int](#Decoder.savedOffset)
+        * [func (d *Decoder) space()](#Decoder.space)
+        * [func (d *Decoder) switchToReader(r io.Reader)](#Decoder.switchToReader)
+        * [func (d *Decoder) syntaxError(msg string) error](#Decoder.syntaxError)
+        * [func (d *Decoder) text(quote int, cdata bool) []byte](#Decoder.text)
+        * [func (d *Decoder) translate(n *Name, isElementName bool)](#Decoder.translate)
+        * [func (d *Decoder) ungetc(b byte)](#Decoder.ungetc)
+        * [func (d *Decoder) unmarshal(val reflect.Value, start *StartElement) error](#Decoder.unmarshal)
+        * [func (d *Decoder) unmarshalAttr(val reflect.Value, attr Attr) error](#Decoder.unmarshalAttr)
+        * [func (d *Decoder) unmarshalInterface(val Unmarshaler, start *StartElement) error](#Decoder.unmarshalInterface)
+        * [func (d *Decoder) unmarshalPath(tinfo *typeInfo, sv reflect.Value, parents []string, start *StartElement) (consumed bool, err error)](#Decoder.unmarshalPath)
+        * [func (d *Decoder) unmarshalTextInterface(val encoding.TextUnmarshaler) error](#Decoder.unmarshalTextInterface)
     * [type Departure struct](#Departure)
-    * [type SecretAgent struct](#SecretAgent)
-    * [type NestedItems struct](#NestedItems)
-    * [type NestedOrder struct](#NestedOrder)
-    * [type MixedNested struct](#MixedNested)
-    * [type NilTest struct](#NilTest)
-    * [type Service struct](#Service)
+    * [type DirectAny struct](#DirectAny)
+    * [type DirectCDATA struct](#DirectCDATA)
+    * [type DirectChardata struct](#DirectChardata)
+    * [type DirectComment struct](#DirectComment)
+    * [type DirectElement struct](#DirectElement)
+    * [type DirectInnerXML struct](#DirectInnerXML)
+    * [type DirectOmitEmpty struct](#DirectOmitEmpty)
+    * [type Directive []byte](#Directive)
+        * [func (d Directive) Copy() Directive](#Directive.Copy)
+    * [type Domain struct](#Domain)
+    * [type DriveType int](#DriveType)
     * [type EmbedA struct](#EmbedA)
     * [type EmbedB struct](#EmbedB)
     * [type EmbedC struct](#EmbedC)
-    * [type embedD struct](#embedD)
-    * [type NameCasing struct](#NameCasing)
-    * [type NamePrecedence struct](#NamePrecedence)
-    * [type XMLNameWithTag struct](#XMLNameWithTag)
-    * [type XMLNameWithoutTag struct](#XMLNameWithoutTag)
-    * [type NameInField struct](#NameInField)
-    * [type AttrTest struct](#AttrTest)
-    * [type AttrsTest struct](#AttrsTest)
-    * [type OmitAttrTest struct](#OmitAttrTest)
-    * [type OmitFieldTest struct](#OmitFieldTest)
-    * [type AnyTest struct](#AnyTest)
-    * [type AnyOmitTest struct](#AnyOmitTest)
-    * [type AnySliceTest struct](#AnySliceTest)
-    * [type AnyHolder struct](#AnyHolder)
-    * [type RecurseA struct](#RecurseA)
-    * [type RecurseB struct](#RecurseB)
-    * [type PresenceTest struct](#PresenceTest)
-    * [type IgnoreTest struct](#IgnoreTest)
-    * [type MyBytes []byte](#MyBytes)
-    * [type Data struct](#Data)
-    * [type Plain struct](#Plain)
-    * [type MyInt int](#MyInt)
     * [type EmbedInt struct](#EmbedInt)
-    * [type Strings struct](#Strings)
-    * [type PointerFieldsTest struct](#PointerFieldsTest)
-    * [type ChardataEmptyTest struct](#ChardataEmptyTest)
-    * [type PointerAnonFields struct](#PointerAnonFields)
-    * [type MyMarshalerTest struct{}](#MyMarshalerTest)
-        * [func (m *MyMarshalerTest) MarshalXML(e *Encoder, start StartElement) error](#MyMarshalerTest.MarshalXML)
-    * [type MyMarshalerAttrTest struct{}](#MyMarshalerAttrTest)
-        * [func (m *MyMarshalerAttrTest) MarshalXMLAttr(name Name) (Attr, error)](#MyMarshalerAttrTest.MarshalXMLAttr)
-        * [func (m *MyMarshalerAttrTest) UnmarshalXMLAttr(attr Attr) error](#MyMarshalerAttrTest.UnmarshalXMLAttr)
-    * [type MarshalerStruct struct](#MarshalerStruct)
-    * [type InnerStruct struct](#InnerStruct)
-    * [type OuterStruct struct](#OuterStruct)
-    * [type OuterNamedStruct struct](#OuterNamedStruct)
-    * [type OuterNamedOrderedStruct struct](#OuterNamedOrderedStruct)
-    * [type OuterOuterStruct struct](#OuterOuterStruct)
-    * [type NestedAndChardata struct](#NestedAndChardata)
-    * [type NestedAndComment struct](#NestedAndComment)
-    * [type CDataTest struct](#CDataTest)
-    * [type NestedAndCData struct](#NestedAndCData)
-    * [type T1 struct{}](#T1)
-    * [type T2 struct{}](#T2)
-    * [type IndirComment struct](#IndirComment)
-    * [type DirectComment struct](#DirectComment)
-    * [type IfaceComment struct](#IfaceComment)
-    * [type IndirChardata struct](#IndirChardata)
-    * [type DirectChardata struct](#DirectChardata)
-    * [type IfaceChardata struct](#IfaceChardata)
-    * [type IndirCDATA struct](#IndirCDATA)
-    * [type DirectCDATA struct](#DirectCDATA)
-    * [type IfaceCDATA struct](#IfaceCDATA)
-    * [type IndirInnerXML struct](#IndirInnerXML)
-    * [type DirectInnerXML struct](#DirectInnerXML)
-    * [type IfaceInnerXML struct](#IfaceInnerXML)
-    * [type IndirElement struct](#IndirElement)
-    * [type DirectElement struct](#DirectElement)
-    * [type IfaceElement struct](#IfaceElement)
-    * [type IndirOmitEmpty struct](#IndirOmitEmpty)
-    * [type DirectOmitEmpty struct](#DirectOmitEmpty)
-    * [type IfaceOmitEmpty struct](#IfaceOmitEmpty)
-    * [type IndirAny struct](#IndirAny)
-    * [type DirectAny struct](#DirectAny)
-    * [type IfaceAny struct](#IfaceAny)
-    * [type AttrParent struct](#AttrParent)
-    * [type BadAttr struct](#BadAttr)
-    * [type limitedBytesWriter struct](#limitedBytesWriter)
-        * [func (lw *limitedBytesWriter) Write(p []byte) (n int, err error)](#limitedBytesWriter.Write)
-    * [type InvalidXMLName struct](#InvalidXMLName)
-    * [type Feed struct](#Feed)
+    * [type Encoder struct](#Encoder)
+        * [func NewEncoder(w io.Writer) *Encoder](#NewEncoder)
+        * [func (enc *Encoder) Encode(v interface{}) error](#Encoder.Encode)
+        * [func (enc *Encoder) EncodeElement(v interface{}, start StartElement) error](#Encoder.EncodeElement)
+        * [func (enc *Encoder) EncodeToken(t Token) error](#Encoder.EncodeToken)
+        * [func (enc *Encoder) Flush() error](#Encoder.Flush)
+        * [func (enc *Encoder) Indent(prefix, indent string)](#Encoder.Indent)
+    * [type EndElement struct](#EndElement)
     * [type Entry struct](#Entry)
+    * [type Event struct](#Event)
+    * [type Failure struct{}](#Failure)
+        * [func (Failure) UnmarshalXML(*Decoder, StartElement) error](#Failure.UnmarshalXML)
+    * [type Feed struct](#Feed)
+    * [type IXField struct](#IXField)
+    * [type IfaceAny struct](#IfaceAny)
+    * [type IfaceCDATA struct](#IfaceCDATA)
+    * [type IfaceChardata struct](#IfaceChardata)
+    * [type IfaceComment struct](#IfaceComment)
+    * [type IfaceElement struct](#IfaceElement)
+    * [type IfaceInnerXML struct](#IfaceInnerXML)
+    * [type IfaceOmitEmpty struct](#IfaceOmitEmpty)
+    * [type IgnoreTest struct](#IgnoreTest)
+    * [type IndirAny struct](#IndirAny)
+    * [type IndirCDATA struct](#IndirCDATA)
+    * [type IndirChardata struct](#IndirChardata)
+    * [type IndirComment struct](#IndirComment)
+    * [type IndirElement struct](#IndirElement)
+    * [type IndirInnerXML struct](#IndirInnerXML)
+    * [type IndirOmitEmpty struct](#IndirOmitEmpty)
+    * [type InnerStruct struct](#InnerStruct)
+    * [type InvalidXMLName struct](#InvalidXMLName)
     * [type Link struct](#Link)
-    * [type Person struct](#Person)
-    * [type Text struct](#Text)
-        * [func NewText(text string) Text](#NewText)
-    * [type PathTestItem struct](#PathTestItem)
-    * [type PathTestA struct](#PathTestA)
-    * [type PathTestB struct](#PathTestB)
-    * [type PathTestC struct](#PathTestC)
-    * [type PathTestSet struct](#PathTestSet)
-    * [type PathTestD struct](#PathTestD)
-    * [type PathTestE struct](#PathTestE)
-    * [type BadPathTestA struct](#BadPathTestA)
-    * [type BadPathTestB struct](#BadPathTestB)
-    * [type BadPathTestC struct](#BadPathTestC)
-    * [type BadPathTestD struct](#BadPathTestD)
-    * [type BadPathEmbeddedA struct](#BadPathEmbeddedA)
-    * [type BadPathEmbeddedB struct](#BadPathEmbeddedB)
-    * [type TestThree struct](#TestThree)
-    * [type Tables struct](#Tables)
-    * [type TableAttrs struct](#TableAttrs)
-    * [type TAttr struct](#TAttr)
+    * [type Marshaler interface](#Marshaler)
+    * [type MarshalerAttr interface](#MarshalerAttr)
+    * [type MarshalerStruct struct](#MarshalerStruct)
+    * [type MixedNested struct](#MixedNested)
+    * [type Movie struct](#Movie)
+    * [type MyAttr struct](#MyAttr)
+        * [func (m *MyAttr) UnmarshalXMLAttr(attr Attr) error](#MyAttr.UnmarshalXMLAttr)
+    * [type MyBytes []byte](#MyBytes)
     * [type MyCharData struct](#MyCharData)
         * [func (m *MyCharData) UnmarshalXML(d *Decoder, start StartElement) error](#MyCharData.UnmarshalXML)
         * [func (m *MyCharData) UnmarshalXMLAttr(attr Attr) error](#MyCharData.UnmarshalXMLAttr)
-    * [type MyAttr struct](#MyAttr)
-        * [func (m *MyAttr) UnmarshalXMLAttr(attr Attr) error](#MyAttr.UnmarshalXMLAttr)
+    * [type MyInt int](#MyInt)
+    * [type MyMarshalerAttrTest struct{}](#MyMarshalerAttrTest)
+        * [func (m *MyMarshalerAttrTest) MarshalXMLAttr(name Name) (Attr, error)](#MyMarshalerAttrTest.MarshalXMLAttr)
+        * [func (m *MyMarshalerAttrTest) UnmarshalXMLAttr(attr Attr) error](#MyMarshalerAttrTest.UnmarshalXMLAttr)
+    * [type MyMarshalerTest struct{}](#MyMarshalerTest)
+        * [func (m *MyMarshalerTest) MarshalXML(e *Encoder, start StartElement) error](#MyMarshalerTest.MarshalXML)
     * [type MyStruct struct](#MyStruct)
-    * [type Pea struct](#Pea)
-    * [type Pod struct](#Pod)
-    * [type X struct](#X)
-    * [type IXField struct](#IXField)
-    * [type Child struct](#Child)
-    * [type ChildToEmbed struct](#ChildToEmbed)
+    * [type Name struct](#Name)
+    * [type NameCasing struct](#NameCasing)
+    * [type NameInField struct](#NameInField)
+    * [type NamePrecedence struct](#NamePrecedence)
+    * [type NamedType string](#NamedType)
+    * [type NestedAndCData struct](#NestedAndCData)
+    * [type NestedAndChardata struct](#NestedAndChardata)
+    * [type NestedAndComment struct](#NestedAndComment)
+    * [type NestedItems struct](#NestedItems)
+    * [type NestedOrder struct](#NestedOrder)
+    * [type NilTest struct](#NilTest)
+    * [type OmitAttrTest struct](#OmitAttrTest)
+    * [type OmitFieldTest struct](#OmitFieldTest)
+    * [type OuterNamedOrderedStruct struct](#OuterNamedOrderedStruct)
+    * [type OuterNamedStruct struct](#OuterNamedStruct)
+    * [type OuterOuterStruct struct](#OuterOuterStruct)
+    * [type OuterStruct struct](#OuterStruct)
     * [type Parent struct](#Parent)
-    * [type WhitespaceValuesParent struct](#WhitespaceValuesParent)
+    * [type Particle struct](#Particle)
+    * [type Passenger struct](#Passenger)
+    * [type PathTestA struct](#PathTestA)
+    * [type PathTestB struct](#PathTestB)
+    * [type PathTestC struct](#PathTestC)
+    * [type PathTestD struct](#PathTestD)
+    * [type PathTestE struct](#PathTestE)
+    * [type PathTestItem struct](#PathTestItem)
+    * [type PathTestSet struct](#PathTestSet)
+    * [type Pea struct](#Pea)
+    * [type Person struct](#Person)
+    * [type Pi struct](#Pi)
+    * [type Plain struct](#Plain)
+    * [type Pod struct](#Pod)
+    * [type PointerAnonFields struct](#PointerAnonFields)
+    * [type PointerFieldsTest struct](#PointerFieldsTest)
+    * [type Port struct](#Port)
+    * [type PresenceTest struct](#PresenceTest)
+    * [type ProcInst struct](#ProcInst)
+        * [func (p ProcInst) Copy() ProcInst](#ProcInst.Copy)
+    * [type RecurseA struct](#RecurseA)
+    * [type RecurseB struct](#RecurseB)
+    * [type SecretAgent struct](#SecretAgent)
+    * [type Service struct](#Service)
+    * [type Ship struct](#Ship)
+    * [type StartElement struct](#StartElement)
+        * [func defaultStart(typ reflect.Type, finfo *fieldInfo, startTemplate *StartElement) StartElement](#defaultStart)
+        * [func (e StartElement) Copy() StartElement](#StartElement.Copy)
+        * [func (e StartElement) End() EndElement](#StartElement.End)
+    * [type Strings struct](#Strings)
+    * [type SyntaxError struct](#SyntaxError)
+        * [func (e *SyntaxError) Error() string](#SyntaxError.Error)
+    * [type T1 struct{}](#T1)
+    * [type T2 struct{}](#T2)
+    * [type TAttr struct](#TAttr)
+    * [type TableAttrs struct](#TableAttrs)
+    * [type Tables struct](#Tables)
+    * [type TagPathError struct](#TagPathError)
+        * [func (e *TagPathError) Error() string](#TagPathError.Error)
+    * [type TestThree struct](#TestThree)
+    * [type Text struct](#Text)
+        * [func NewText(text string) Text](#NewText)
+    * [type Token interface{}](#Token)
+        * [func CopyToken(t Token) Token](#CopyToken)
+    * [type TokenReader interface](#TokenReader)
+    * [type Universe struct](#Universe)
+    * [type UnmarshalError string](#UnmarshalError)
+        * [func (e UnmarshalError) Error() string](#UnmarshalError.Error)
+    * [type Unmarshaler interface](#Unmarshaler)
+    * [type UnmarshalerAttr interface](#UnmarshalerAttr)
+    * [type UnsupportedTypeError struct](#UnsupportedTypeError)
+        * [func (e *UnsupportedTypeError) Error() string](#UnsupportedTypeError.Error)
     * [type WhitespaceAttrsParent struct](#WhitespaceAttrsParent)
+    * [type WhitespaceValuesParent struct](#WhitespaceValuesParent)
+    * [type X struct](#X)
+    * [type XMLNameWithTag struct](#XMLNameWithTag)
+    * [type XMLNameWithoutTag struct](#XMLNameWithoutTag)
+    * [type allScalars struct](#allScalars)
+    * [type downCaser struct](#downCaser)
+        * [func (d *downCaser) Read(p []byte) (int, error)](#downCaser.Read)
+        * [func (d *downCaser) ReadByte() (c byte, err error)](#downCaser.ReadByte)
+    * [type embedD struct](#embedD)
+    * [type errWriter struct{}](#errWriter)
+        * [func (errWriter) Write(p []byte) (n int, err error)](#errWriter.Write)
+    * [type fieldFlags int](#fieldFlags)
+    * [type fieldInfo struct](#fieldInfo)
+        * [func lookupXMLName(typ reflect.Type) (xmlname *fieldInfo)](#lookupXMLName)
+        * [func structFieldInfo(typ reflect.Type, f *reflect.StructField) (*fieldInfo, error)](#structFieldInfo)
+        * [func (finfo *fieldInfo) value(v reflect.Value, shouldInitNilPointers bool) reflect.Value](#fieldInfo.value)
+    * [type item struct](#item)
+    * [type limitedBytesWriter struct](#limitedBytesWriter)
+        * [func (lw *limitedBytesWriter) Write(p []byte) (n int, err error)](#limitedBytesWriter.Write)
+    * [type mapper struct](#mapper)
+        * [func (m mapper) Token() (Token, error)](#mapper.Token)
+    * [type parentStack struct](#parentStack)
+        * [func (s *parentStack) push(parents []string) error](#parentStack.push)
+        * [func (s *parentStack) trim(parents []string) error](#parentStack.trim)
+    * [type printer struct](#printer)
+        * [func (p *printer) EscapeString(s string)](#printer.EscapeString)
+        * [func (p *printer) cachedWriteError() error](#printer.cachedWriteError)
+        * [func (p *printer) createAttrPrefix(url string) string](#printer.createAttrPrefix)
+        * [func (p *printer) deleteAttrPrefix(prefix string)](#printer.deleteAttrPrefix)
+        * [func (p *printer) markPrefix()](#printer.markPrefix)
+        * [func (p *printer) marshalAttr(start *StartElement, name Name, val reflect.Value) error](#printer.marshalAttr)
+        * [func (p *printer) marshalInterface(val Marshaler, start StartElement) error](#printer.marshalInterface)
+        * [func (p *printer) marshalSimple(typ reflect.Type, val reflect.Value) (string, []byte, error)](#printer.marshalSimple)
+        * [func (p *printer) marshalStruct(tinfo *typeInfo, val reflect.Value) error](#printer.marshalStruct)
+        * [func (p *printer) marshalTextInterface(val encoding.TextMarshaler, start StartElement) error](#printer.marshalTextInterface)
+        * [func (p *printer) marshalValue(val reflect.Value, finfo *fieldInfo, startTemplate *StartElement) error](#printer.marshalValue)
+        * [func (p *printer) popPrefix()](#printer.popPrefix)
+        * [func (p *printer) writeEnd(name Name) error](#printer.writeEnd)
+        * [func (p *printer) writeIndent(depthDelta int)](#printer.writeIndent)
+        * [func (p *printer) writeStart(start *StartElement) error](#printer.writeStart)
+    * [type stack struct](#stack)
+    * [type tokReader struct{}](#tokReader)
+        * [func (tokReader) Token() (Token, error)](#tokReader.Token)
     * [type toks struct](#toks)
         * [func (t *toks) Token() (Token, error)](#toks.Token)
     * [type toksNil struct](#toksNil)
         * [func (t *toksNil) Token() (Token, error)](#toksNil.Token)
-    * [type downCaser struct](#downCaser)
-        * [func (d *downCaser) ReadByte() (c byte, err error)](#downCaser.ReadByte)
-        * [func (d *downCaser) Read(p []byte) (int, error)](#downCaser.Read)
-    * [type allScalars struct](#allScalars)
-    * [type item struct](#item)
-    * [type errWriter struct{}](#errWriter)
-        * [func (errWriter) Write(p []byte) (n int, err error)](#errWriter.Write)
-    * [type mapper struct](#mapper)
-        * [func (m mapper) Token() (Token, error)](#mapper.Token)
-    * [type tokReader struct{}](#tokReader)
-        * [func (tokReader) Token() (Token, error)](#tokReader.Token)
-    * [type Failure struct{}](#Failure)
-        * [func (Failure) UnmarshalXML(*Decoder, StartElement) error](#Failure.UnmarshalXML)
+    * [type typeInfo struct](#typeInfo)
+        * [func getTypeInfo(typ reflect.Type) (*typeInfo, error)](#getTypeInfo)
 * [Functions](#func)
-    * [func Marshal(v interface{}) ([]byte, error)](#Marshal)
-    * [func MarshalIndent(v interface{}, prefix, indent string) ([]byte, error)](#MarshalIndent)
-    * [func isValidDirective(dir Directive) bool](#isValidDirective)
-    * [func indirect(vf reflect.Value) reflect.Value](#indirect)
-    * [func isEmptyValue(v reflect.Value) bool](#isEmptyValue)
-    * [func Unmarshal(data []byte, v interface{}) error](#Unmarshal)
-    * [func receiverType(val interface{}) string](#receiverType)
-    * [func copyValue(dst reflect.Value, src []byte) (err error)](#copyValue)
-    * [func min(a, b int) int](#min)
-    * [func addFieldInfo(typ reflect.Type, tinfo *typeInfo, newf *fieldInfo) error](#addFieldInfo)
-    * [func makeCopy(b []byte) []byte](#makeCopy)
-    * [func isInCharacterRange(r rune) (inrange bool)](#isInCharacterRange)
-    * [func isNameByte(c byte) bool](#isNameByte)
-    * [func isName(s []byte) bool](#isName)
-    * [func isNameString(s string) bool](#isNameString)
-    * [func EscapeText(w io.Writer, s []byte) error](#EscapeText)
-    * [func escapeText(w io.Writer, s []byte, escapeNewline bool) error](#escapeText)
-    * [func Escape(w io.Writer, s []byte)](#Escape)
-    * [func emitCDATA(w io.Writer, s []byte) error](#emitCDATA)
-    * [func procInst(param, s string) string](#procInst)
-    * [func ParseTime(str string) time.Time](#ParseTime)
-    * [func ifaceptr(x interface{}) interface{}](#ifaceptr)
-    * [func stringptr(x string) *string](#stringptr)
-    * [func TestMarshal(t *testing.T)](#TestMarshal)
-    * [func TestMarshalErrors(t *testing.T)](#TestMarshalErrors)
-    * [func TestUnmarshal(t *testing.T)](#TestUnmarshal)
-    * [func TestMarshalIndent(t *testing.T)](#TestMarshalIndent)
-    * [func TestMarshalWriteErrors(t *testing.T)](#TestMarshalWriteErrors)
-    * [func TestMarshalWriteIOErrors(t *testing.T)](#TestMarshalWriteIOErrors)
-    * [func TestMarshalFlush(t *testing.T)](#TestMarshalFlush)
     * [func BenchmarkMarshal(b *testing.B)](#BenchmarkMarshal)
     * [func BenchmarkUnmarshal(b *testing.B)](#BenchmarkUnmarshal)
-    * [func TestStructPointerMarshal(t *testing.T)](#TestStructPointerMarshal)
-    * [func TestEncodeToken(t *testing.T)](#TestEncodeToken)
-    * [func TestProcInstEncodeToken(t *testing.T)](#TestProcInstEncodeToken)
-    * [func TestDecodeEncode(t *testing.T)](#TestDecodeEncode)
-    * [func TestRace9796(t *testing.T)](#TestRace9796)
-    * [func TestIsValidDirective(t *testing.T)](#TestIsValidDirective)
-    * [func TestSimpleUseOfEncodeToken(t *testing.T)](#TestSimpleUseOfEncodeToken)
-    * [func TestIssue16158(t *testing.T)](#TestIssue16158)
-    * [func TestInvalidXMLName(t *testing.T)](#TestInvalidXMLName)
-    * [func TestUnmarshalFeed(t *testing.T)](#TestUnmarshalFeed)
-    * [func TestUnmarshalPaths(t *testing.T)](#TestUnmarshalPaths)
-    * [func TestUnmarshalBadPaths(t *testing.T)](#TestUnmarshalBadPaths)
-    * [func TestUnmarshalWithoutNameType(t *testing.T)](#TestUnmarshalWithoutNameType)
-    * [func TestUnmarshalAttr(t *testing.T)](#TestUnmarshalAttr)
-    * [func TestUnmarshalNS(t *testing.T)](#TestUnmarshalNS)
-    * [func TestMarshalNS(t *testing.T)](#TestMarshalNS)
-    * [func TestUnmarshalNSAttr(t *testing.T)](#TestUnmarshalNSAttr)
-    * [func TestMarshalNSAttr(t *testing.T)](#TestMarshalNSAttr)
-    * [func TestUnmarshaler(t *testing.T)](#TestUnmarshaler)
-    * [func TestUnmarshalIntoInterface(t *testing.T)](#TestUnmarshalIntoInterface)
-    * [func TestMalformedComment(t *testing.T)](#TestMalformedComment)
-    * [func TestInvalidInnerXMLType(t *testing.T)](#TestInvalidInnerXMLType)
-    * [func TestUnmarshalEmptyValues(t *testing.T)](#TestUnmarshalEmptyValues)
-    * [func TestUnmarshalWhitespaceValues(t *testing.T)](#TestUnmarshalWhitespaceValues)
-    * [func TestUnmarshalWhitespaceAttrs(t *testing.T)](#TestUnmarshalWhitespaceAttrs)
-    * [func TestDecodeEOF(t *testing.T)](#TestDecodeEOF)
-    * [func TestDecodeNilToken(t *testing.T)](#TestDecodeNilToken)
-    * [func TestRawToken(t *testing.T)](#TestRawToken)
-    * [func TestNonStrictRawToken(t *testing.T)](#TestNonStrictRawToken)
-    * [func TestRawTokenAltEncoding(t *testing.T)](#TestRawTokenAltEncoding)
-    * [func TestRawTokenAltEncodingNoConverter(t *testing.T)](#TestRawTokenAltEncodingNoConverter)
-    * [func testRawToken(t *testing.T, d *Decoder, raw string, rawTokens []Token)](#testRawToken)
-    * [func TestNestedDirectives(t *testing.T)](#TestNestedDirectives)
-    * [func TestToken(t *testing.T)](#TestToken)
-    * [func TestSyntax(t *testing.T)](#TestSyntax)
+    * [func Escape(w io.Writer, s []byte)](#Escape)
+    * [func EscapeText(w io.Writer, s []byte) error](#EscapeText)
+    * [func Marshal(v interface{}) ([]byte, error)](#Marshal)
+    * [func MarshalIndent(v interface{}, prefix, indent string) ([]byte, error)](#MarshalIndent)
+    * [func ParseTime(str string) time.Time](#ParseTime)
     * [func TestAllScalars(t *testing.T)](#TestAllScalars)
-    * [func TestIssue569(t *testing.T)](#TestIssue569)
-    * [func TestUnquotedAttrs(t *testing.T)](#TestUnquotedAttrs)
-    * [func TestValuelessAttrs(t *testing.T)](#TestValuelessAttrs)
     * [func TestCopyTokenCharData(t *testing.T)](#TestCopyTokenCharData)
     * [func TestCopyTokenStartElement(t *testing.T)](#TestCopyTokenStartElement)
-    * [func TestSyntaxErrorLineNum(t *testing.T)](#TestSyntaxErrorLineNum)
-    * [func TestTrailingRawToken(t *testing.T)](#TestTrailingRawToken)
-    * [func TestTrailingToken(t *testing.T)](#TestTrailingToken)
-    * [func TestEntityInsideCDATA(t *testing.T)](#TestEntityInsideCDATA)
-    * [func TestDisallowedCharacters(t *testing.T)](#TestDisallowedCharacters)
-    * [func TestIsInCharacterRange(t *testing.T)](#TestIsInCharacterRange)
-    * [func TestProcInstEncoding(t *testing.T)](#TestProcInstEncoding)
+    * [func TestDecodeEOF(t *testing.T)](#TestDecodeEOF)
+    * [func TestDecodeEncode(t *testing.T)](#TestDecodeEncode)
+    * [func TestDecodeNilToken(t *testing.T)](#TestDecodeNilToken)
     * [func TestDirectivesWithComments(t *testing.T)](#TestDirectivesWithComments)
+    * [func TestDisallowedCharacters(t *testing.T)](#TestDisallowedCharacters)
+    * [func TestEncodeToken(t *testing.T)](#TestEncodeToken)
+    * [func TestEntityInsideCDATA(t *testing.T)](#TestEntityInsideCDATA)
     * [func TestEscapeTextIOErrors(t *testing.T)](#TestEscapeTextIOErrors)
     * [func TestEscapeTextInvalidChar(t *testing.T)](#TestEscapeTextInvalidChar)
-    * [func TestIssue5880(t *testing.T)](#TestIssue5880)
+    * [func TestInvalidInnerXMLType(t *testing.T)](#TestInvalidInnerXMLType)
+    * [func TestInvalidXMLName(t *testing.T)](#TestInvalidXMLName)
+    * [func TestIsInCharacterRange(t *testing.T)](#TestIsInCharacterRange)
+    * [func TestIsValidDirective(t *testing.T)](#TestIsValidDirective)
     * [func TestIssue11405(t *testing.T)](#TestIssue11405)
     * [func TestIssue12417(t *testing.T)](#TestIssue12417)
-    * [func tokenMap(mapping func(t Token) Token) func(TokenReader) TokenReader](#tokenMap)
+    * [func TestIssue16158(t *testing.T)](#TestIssue16158)
+    * [func TestIssue569(t *testing.T)](#TestIssue569)
+    * [func TestIssue5880(t *testing.T)](#TestIssue5880)
+    * [func TestMalformedComment(t *testing.T)](#TestMalformedComment)
+    * [func TestMarshal(t *testing.T)](#TestMarshal)
+    * [func TestMarshalErrors(t *testing.T)](#TestMarshalErrors)
+    * [func TestMarshalFlush(t *testing.T)](#TestMarshalFlush)
+    * [func TestMarshalIndent(t *testing.T)](#TestMarshalIndent)
+    * [func TestMarshalNS(t *testing.T)](#TestMarshalNS)
+    * [func TestMarshalNSAttr(t *testing.T)](#TestMarshalNSAttr)
+    * [func TestMarshalWriteErrors(t *testing.T)](#TestMarshalWriteErrors)
+    * [func TestMarshalWriteIOErrors(t *testing.T)](#TestMarshalWriteIOErrors)
+    * [func TestNestedDirectives(t *testing.T)](#TestNestedDirectives)
     * [func TestNewTokenDecoderIdempotent(t *testing.T)](#TestNewTokenDecoderIdempotent)
-    * [func TestWrapDecoder(t *testing.T)](#TestWrapDecoder)
-    * [func TestTokenUnmarshaler(t *testing.T)](#TestTokenUnmarshaler)
-    * [func testRoundTrip(t *testing.T, input string)](#testRoundTrip)
+    * [func TestNonStrictRawToken(t *testing.T)](#TestNonStrictRawToken)
+    * [func TestProcInstEncodeToken(t *testing.T)](#TestProcInstEncodeToken)
+    * [func TestProcInstEncoding(t *testing.T)](#TestProcInstEncoding)
+    * [func TestRace9796(t *testing.T)](#TestRace9796)
+    * [func TestRawToken(t *testing.T)](#TestRawToken)
+    * [func TestRawTokenAltEncoding(t *testing.T)](#TestRawTokenAltEncoding)
+    * [func TestRawTokenAltEncodingNoConverter(t *testing.T)](#TestRawTokenAltEncodingNoConverter)
     * [func TestRoundTrip(t *testing.T)](#TestRoundTrip)
+    * [func TestSimpleUseOfEncodeToken(t *testing.T)](#TestSimpleUseOfEncodeToken)
+    * [func TestStructPointerMarshal(t *testing.T)](#TestStructPointerMarshal)
+    * [func TestSyntax(t *testing.T)](#TestSyntax)
+    * [func TestSyntaxErrorLineNum(t *testing.T)](#TestSyntaxErrorLineNum)
+    * [func TestToken(t *testing.T)](#TestToken)
+    * [func TestTokenUnmarshaler(t *testing.T)](#TestTokenUnmarshaler)
+    * [func TestTrailingRawToken(t *testing.T)](#TestTrailingRawToken)
+    * [func TestTrailingToken(t *testing.T)](#TestTrailingToken)
+    * [func TestUnmarshal(t *testing.T)](#TestUnmarshal)
+    * [func TestUnmarshalAttr(t *testing.T)](#TestUnmarshalAttr)
+    * [func TestUnmarshalBadPaths(t *testing.T)](#TestUnmarshalBadPaths)
+    * [func TestUnmarshalEmptyValues(t *testing.T)](#TestUnmarshalEmptyValues)
+    * [func TestUnmarshalFeed(t *testing.T)](#TestUnmarshalFeed)
+    * [func TestUnmarshalIntoInterface(t *testing.T)](#TestUnmarshalIntoInterface)
+    * [func TestUnmarshalNS(t *testing.T)](#TestUnmarshalNS)
+    * [func TestUnmarshalNSAttr(t *testing.T)](#TestUnmarshalNSAttr)
+    * [func TestUnmarshalPaths(t *testing.T)](#TestUnmarshalPaths)
+    * [func TestUnmarshalWhitespaceAttrs(t *testing.T)](#TestUnmarshalWhitespaceAttrs)
+    * [func TestUnmarshalWhitespaceValues(t *testing.T)](#TestUnmarshalWhitespaceValues)
+    * [func TestUnmarshalWithoutNameType(t *testing.T)](#TestUnmarshalWithoutNameType)
+    * [func TestUnmarshaler(t *testing.T)](#TestUnmarshaler)
+    * [func TestUnquotedAttrs(t *testing.T)](#TestUnquotedAttrs)
+    * [func TestValuelessAttrs(t *testing.T)](#TestValuelessAttrs)
+    * [func TestWrapDecoder(t *testing.T)](#TestWrapDecoder)
+    * [func Unmarshal(data []byte, v interface{}) error](#Unmarshal)
+    * [func addFieldInfo(typ reflect.Type, tinfo *typeInfo, newf *fieldInfo) error](#addFieldInfo)
+    * [func copyValue(dst reflect.Value, src []byte) (err error)](#copyValue)
+    * [func emitCDATA(w io.Writer, s []byte) error](#emitCDATA)
+    * [func escapeText(w io.Writer, s []byte, escapeNewline bool) error](#escapeText)
+    * [func ifaceptr(x interface{}) interface{}](#ifaceptr)
+    * [func indirect(vf reflect.Value) reflect.Value](#indirect)
+    * [func isEmptyValue(v reflect.Value) bool](#isEmptyValue)
+    * [func isInCharacterRange(r rune) (inrange bool)](#isInCharacterRange)
+    * [func isName(s []byte) bool](#isName)
+    * [func isNameByte(c byte) bool](#isNameByte)
+    * [func isNameString(s string) bool](#isNameString)
+    * [func isValidDirective(dir Directive) bool](#isValidDirective)
+    * [func makeCopy(b []byte) []byte](#makeCopy)
+    * [func min(a, b int) int](#min)
+    * [func procInst(param, s string) string](#procInst)
+    * [func receiverType(val interface{}) string](#receiverType)
+    * [func stringptr(x string) *string](#stringptr)
+    * [func testRawToken(t *testing.T, d *Decoder, raw string, rawTokens []Token)](#testRawToken)
+    * [func testRoundTrip(t *testing.T, input string)](#testRoundTrip)
+    * [func tokenMap(mapping func(t Token) Token) func(TokenReader) TokenReader](#tokenMap)
 
 
 ## <a id="const" href="#const">Constants</a>
+
+```
+tags: [package]
+```
 
 ### <a id="Header" href="#Header">const Header</a>
 
 ```
 searchKey: xml.Header
+tags: [constant string]
 ```
 
 ```Go
@@ -458,209 +463,11 @@ const Header = `<?xml version="1.0" encoding="UTF-8"?>` + "\n"
 
 Header is a generic XML header suitable for use with the output of Marshal. This is not automatically added to any output of this package, it is provided as a convenience. 
 
-### <a id="fElement" href="#fElement">const fElement</a>
-
-```
-searchKey: xml.fElement
-tags: [private]
-```
-
-```Go
-const fElement fieldFlags = 1 << iota
-```
-
-### <a id="fAttr" href="#fAttr">const fAttr</a>
-
-```
-searchKey: xml.fAttr
-tags: [private]
-```
-
-```Go
-const fAttr
-```
-
-### <a id="fCDATA" href="#fCDATA">const fCDATA</a>
-
-```
-searchKey: xml.fCDATA
-tags: [private]
-```
-
-```Go
-const fCDATA
-```
-
-### <a id="fCharData" href="#fCharData">const fCharData</a>
-
-```
-searchKey: xml.fCharData
-tags: [private]
-```
-
-```Go
-const fCharData
-```
-
-### <a id="fInnerXML" href="#fInnerXML">const fInnerXML</a>
-
-```
-searchKey: xml.fInnerXML
-tags: [private]
-```
-
-```Go
-const fInnerXML
-```
-
-### <a id="fComment" href="#fComment">const fComment</a>
-
-```
-searchKey: xml.fComment
-tags: [private]
-```
-
-```Go
-const fComment
-```
-
-### <a id="fAny" href="#fAny">const fAny</a>
-
-```
-searchKey: xml.fAny
-tags: [private]
-```
-
-```Go
-const fAny
-```
-
-### <a id="fOmitEmpty" href="#fOmitEmpty">const fOmitEmpty</a>
-
-```
-searchKey: xml.fOmitEmpty
-tags: [private]
-```
-
-```Go
-const fOmitEmpty
-```
-
-### <a id="fMode" href="#fMode">const fMode</a>
-
-```
-searchKey: xml.fMode
-tags: [private]
-```
-
-```Go
-const fMode = fElement | fAttr | fCDATA | fCharData | fInnerXML | fComment | fAny
-```
-
-### <a id="xmlName" href="#xmlName">const xmlName</a>
-
-```
-searchKey: xml.xmlName
-tags: [private]
-```
-
-```Go
-const xmlName = "XMLName"
-```
-
-### <a id="initNilPointers" href="#initNilPointers">const initNilPointers</a>
-
-```
-searchKey: xml.initNilPointers
-tags: [private]
-```
-
-```Go
-const initNilPointers = true
-```
-
-### <a id="dontInitNilPointers" href="#dontInitNilPointers">const dontInitNilPointers</a>
-
-```
-searchKey: xml.dontInitNilPointers
-tags: [private]
-```
-
-```Go
-const dontInitNilPointers = false
-```
-
-### <a id="xmlURL" href="#xmlURL">const xmlURL</a>
-
-```
-searchKey: xml.xmlURL
-tags: [private]
-```
-
-```Go
-const xmlURL = "http://www.w3.org/XML/1998/namespace"
-```
-
-### <a id="xmlnsPrefix" href="#xmlnsPrefix">const xmlnsPrefix</a>
-
-```
-searchKey: xml.xmlnsPrefix
-tags: [private]
-```
-
-```Go
-const xmlnsPrefix = "xmlns"
-```
-
-### <a id="xmlPrefix" href="#xmlPrefix">const xmlPrefix</a>
-
-```
-searchKey: xml.xmlPrefix
-tags: [private]
-```
-
-```Go
-const xmlPrefix = "xml"
-```
-
-### <a id="stkStart" href="#stkStart">const stkStart</a>
-
-```
-searchKey: xml.stkStart
-tags: [private]
-```
-
-```Go
-const stkStart = iota
-```
-
-### <a id="stkNs" href="#stkNs">const stkNs</a>
-
-```
-searchKey: xml.stkNs
-tags: [private]
-```
-
-```Go
-const stkNs
-```
-
-### <a id="stkEOF" href="#stkEOF">const stkEOF</a>
-
-```
-searchKey: xml.stkEOF
-tags: [private]
-```
-
-```Go
-const stkEOF
-```
-
 ### <a id="HyperDrive" href="#HyperDrive">const HyperDrive</a>
 
 ```
 searchKey: xml.HyperDrive
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -671,18 +478,29 @@ const HyperDrive DriveType = iota
 
 ```
 searchKey: xml.ImprobabilityDrive
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
 const ImprobabilityDrive
 ```
 
+### <a id="OK" href="#OK">const OK</a>
+
+```
+searchKey: xml.OK
+tags: [constant string private]
+```
+
+```Go
+const OK = "OK"
+```
+
 ### <a id="atomFeedString" href="#atomFeedString">const atomFeedString</a>
 
 ```
 searchKey: xml.atomFeedString
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -691,79 +509,198 @@ const atomFeedString = ...
 
 hget [http://codereview.appspot.com/rss/mine/rsc](http://codereview.appspot.com/rss/mine/rsc) 
 
-### <a id="pathTestString" href="#pathTestString">const pathTestString</a>
+### <a id="dontInitNilPointers" href="#dontInitNilPointers">const dontInitNilPointers</a>
 
 ```
-searchKey: xml.pathTestString
-tags: [private]
-```
-
-```Go
-const pathTestString = ...
-```
-
-### <a id="OK" href="#OK">const OK</a>
-
-```
-searchKey: xml.OK
-tags: [private]
+searchKey: xml.dontInitNilPointers
+tags: [constant boolean private]
 ```
 
 ```Go
-const OK = "OK"
-```
-
-### <a id="withoutNameTypeData" href="#withoutNameTypeData">const withoutNameTypeData</a>
-
-```
-searchKey: xml.withoutNameTypeData
-tags: [private]
-```
-
-```Go
-const withoutNameTypeData = `
-<?xml version="1.0" charset="utf-8"?>
-<Test3 Attr="OK" />`
+const dontInitNilPointers = false
 ```
 
 ### <a id="emptyXML" href="#emptyXML">const emptyXML</a>
 
 ```
 searchKey: xml.emptyXML
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
 const emptyXML = ...
 ```
 
-### <a id="whitespaceValuesXML" href="#whitespaceValuesXML">const whitespaceValuesXML</a>
+### <a id="fAny" href="#fAny">const fAny</a>
 
 ```
-searchKey: xml.whitespaceValuesXML
-tags: [private]
-```
-
-```Go
-const whitespaceValuesXML = ...
-```
-
-### <a id="whitespaceAttrsXML" href="#whitespaceAttrsXML">const whitespaceAttrsXML</a>
-
-```
-searchKey: xml.whitespaceAttrsXML
-tags: [private]
+searchKey: xml.fAny
+tags: [constant number private]
 ```
 
 ```Go
-const whitespaceAttrsXML = ...
+const fAny
+```
+
+### <a id="fAttr" href="#fAttr">const fAttr</a>
+
+```
+searchKey: xml.fAttr
+tags: [constant number private]
+```
+
+```Go
+const fAttr
+```
+
+### <a id="fCDATA" href="#fCDATA">const fCDATA</a>
+
+```
+searchKey: xml.fCDATA
+tags: [constant number private]
+```
+
+```Go
+const fCDATA
+```
+
+### <a id="fCharData" href="#fCharData">const fCharData</a>
+
+```
+searchKey: xml.fCharData
+tags: [constant number private]
+```
+
+```Go
+const fCharData
+```
+
+### <a id="fComment" href="#fComment">const fComment</a>
+
+```
+searchKey: xml.fComment
+tags: [constant number private]
+```
+
+```Go
+const fComment
+```
+
+### <a id="fElement" href="#fElement">const fElement</a>
+
+```
+searchKey: xml.fElement
+tags: [constant number private]
+```
+
+```Go
+const fElement fieldFlags = 1 << iota
+```
+
+### <a id="fInnerXML" href="#fInnerXML">const fInnerXML</a>
+
+```
+searchKey: xml.fInnerXML
+tags: [constant number private]
+```
+
+```Go
+const fInnerXML
+```
+
+### <a id="fMode" href="#fMode">const fMode</a>
+
+```
+searchKey: xml.fMode
+tags: [constant number private]
+```
+
+```Go
+const fMode = fElement | fAttr | fCDATA | fCharData | fInnerXML | fComment | fAny
+```
+
+### <a id="fOmitEmpty" href="#fOmitEmpty">const fOmitEmpty</a>
+
+```
+searchKey: xml.fOmitEmpty
+tags: [constant number private]
+```
+
+```Go
+const fOmitEmpty
+```
+
+### <a id="initNilPointers" href="#initNilPointers">const initNilPointers</a>
+
+```
+searchKey: xml.initNilPointers
+tags: [constant boolean private]
+```
+
+```Go
+const initNilPointers = true
+```
+
+### <a id="nonStrictInput" href="#nonStrictInput">const nonStrictInput</a>
+
+```
+searchKey: xml.nonStrictInput
+tags: [constant string private]
+```
+
+```Go
+const nonStrictInput = ...
+```
+
+### <a id="pathTestString" href="#pathTestString">const pathTestString</a>
+
+```
+searchKey: xml.pathTestString
+tags: [constant string private]
+```
+
+```Go
+const pathTestString = ...
+```
+
+### <a id="stkEOF" href="#stkEOF">const stkEOF</a>
+
+```
+searchKey: xml.stkEOF
+tags: [constant number private]
+```
+
+```Go
+const stkEOF
+```
+
+### <a id="stkNs" href="#stkNs">const stkNs</a>
+
+```
+searchKey: xml.stkNs
+tags: [constant number private]
+```
+
+```Go
+const stkNs
+```
+
+### <a id="stkStart" href="#stkStart">const stkStart</a>
+
+```
+searchKey: xml.stkStart
+tags: [constant number private]
+```
+
+```Go
+const stkStart = iota
 ```
 
 ### <a id="testInput" href="#testInput">const testInput</a>
 
 ```
 searchKey: xml.testInput
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -774,254 +711,114 @@ const testInput = ...
 
 ```
 searchKey: xml.testInputAltEncoding
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
 const testInputAltEncoding = ...
 ```
 
-### <a id="nonStrictInput" href="#nonStrictInput">const nonStrictInput</a>
-
-```
-searchKey: xml.nonStrictInput
-tags: [private]
-```
-
-```Go
-const nonStrictInput = ...
-```
-
 ### <a id="testScalarsInput" href="#testScalarsInput">const testScalarsInput</a>
 
 ```
 searchKey: xml.testScalarsInput
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
 const testScalarsInput = ...
 ```
 
+### <a id="whitespaceAttrsXML" href="#whitespaceAttrsXML">const whitespaceAttrsXML</a>
+
+```
+searchKey: xml.whitespaceAttrsXML
+tags: [constant string private]
+```
+
+```Go
+const whitespaceAttrsXML = ...
+```
+
+### <a id="whitespaceValuesXML" href="#whitespaceValuesXML">const whitespaceValuesXML</a>
+
+```
+searchKey: xml.whitespaceValuesXML
+tags: [constant string private]
+```
+
+```Go
+const whitespaceValuesXML = ...
+```
+
+### <a id="withoutNameTypeData" href="#withoutNameTypeData">const withoutNameTypeData</a>
+
+```
+searchKey: xml.withoutNameTypeData
+tags: [constant string private]
+```
+
+```Go
+const withoutNameTypeData = `
+<?xml version="1.0" charset="utf-8"?>
+<Test3 Attr="OK" />`
+```
+
+### <a id="xmlName" href="#xmlName">const xmlName</a>
+
+```
+searchKey: xml.xmlName
+tags: [constant string private]
+```
+
+```Go
+const xmlName = "XMLName"
+```
+
+### <a id="xmlPrefix" href="#xmlPrefix">const xmlPrefix</a>
+
+```
+searchKey: xml.xmlPrefix
+tags: [constant string private]
+```
+
+```Go
+const xmlPrefix = "xml"
+```
+
+### <a id="xmlURL" href="#xmlURL">const xmlURL</a>
+
+```
+searchKey: xml.xmlURL
+tags: [constant string private]
+```
+
+```Go
+const xmlURL = "http://www.w3.org/XML/1998/namespace"
+```
+
+### <a id="xmlnsPrefix" href="#xmlnsPrefix">const xmlnsPrefix</a>
+
+```
+searchKey: xml.xmlnsPrefix
+tags: [constant string private]
+```
+
+```Go
+const xmlnsPrefix = "xmlns"
+```
+
 ## <a id="var" href="#var">Variables</a>
 
-### <a id="begComment" href="#begComment">var begComment</a>
-
 ```
-searchKey: xml.begComment
-tags: [private]
-```
-
-```Go
-var begComment = []byte("<!--")
-```
-
-### <a id="endComment" href="#endComment">var endComment</a>
-
-```
-searchKey: xml.endComment
-tags: [private]
-```
-
-```Go
-var endComment = []byte("-->")
-```
-
-### <a id="endProcInst" href="#endProcInst">var endProcInst</a>
-
-```
-searchKey: xml.endProcInst
-tags: [private]
-```
-
-```Go
-var endProcInst = []byte("?>")
-```
-
-### <a id="marshalerType" href="#marshalerType">var marshalerType</a>
-
-```
-searchKey: xml.marshalerType
-tags: [private]
-```
-
-```Go
-var marshalerType = reflect.TypeOf((*Marshaler)(nil)).Elem()
-```
-
-### <a id="marshalerAttrType" href="#marshalerAttrType">var marshalerAttrType</a>
-
-```
-searchKey: xml.marshalerAttrType
-tags: [private]
-```
-
-```Go
-var marshalerAttrType = reflect.TypeOf((*MarshalerAttr)(nil)).Elem()
-```
-
-### <a id="textMarshalerType" href="#textMarshalerType">var textMarshalerType</a>
-
-```
-searchKey: xml.textMarshalerType
-tags: [private]
-```
-
-```Go
-var textMarshalerType = reflect.TypeOf((*encoding.TextMarshaler)(nil)).Elem()
-```
-
-### <a id="ddBytes" href="#ddBytes">var ddBytes</a>
-
-```
-searchKey: xml.ddBytes
-tags: [private]
-```
-
-```Go
-var ddBytes = []byte("--")
-```
-
-### <a id="attrType" href="#attrType">var attrType</a>
-
-```
-searchKey: xml.attrType
-tags: [private]
-```
-
-```Go
-var attrType = reflect.TypeOf(Attr{})
-```
-
-### <a id="unmarshalerType" href="#unmarshalerType">var unmarshalerType</a>
-
-```
-searchKey: xml.unmarshalerType
-tags: [private]
-```
-
-```Go
-var unmarshalerType = reflect.TypeOf((*Unmarshaler)(nil)).Elem()
-```
-
-### <a id="unmarshalerAttrType" href="#unmarshalerAttrType">var unmarshalerAttrType</a>
-
-```
-searchKey: xml.unmarshalerAttrType
-tags: [private]
-```
-
-```Go
-var unmarshalerAttrType = reflect.TypeOf((*UnmarshalerAttr)(nil)).Elem()
-```
-
-### <a id="textUnmarshalerType" href="#textUnmarshalerType">var textUnmarshalerType</a>
-
-```
-searchKey: xml.textUnmarshalerType
-tags: [private]
-```
-
-```Go
-var textUnmarshalerType = reflect.TypeOf((*encoding.TextUnmarshaler)(nil)).Elem()
-```
-
-### <a id="tinfoMap" href="#tinfoMap">var tinfoMap</a>
-
-```
-searchKey: xml.tinfoMap
-tags: [private]
-```
-
-```Go
-var tinfoMap sync.Map // map[reflect.Type]*typeInfo
-
-```
-
-### <a id="nameType" href="#nameType">var nameType</a>
-
-```
-searchKey: xml.nameType
-tags: [private]
-```
-
-```Go
-var nameType = reflect.TypeOf(Name{})
-```
-
-### <a id="errRawToken" href="#errRawToken">var errRawToken</a>
-
-```
-searchKey: xml.errRawToken
-tags: [private]
-```
-
-```Go
-var errRawToken = errors.New("xml: cannot use RawToken from UnmarshalXML method")
-```
-
-### <a id="entity" href="#entity">var entity</a>
-
-```
-searchKey: xml.entity
-tags: [private]
-```
-
-```Go
-var entity = ...
-```
-
-### <a id="first" href="#first">var first</a>
-
-```
-searchKey: xml.first
-tags: [private]
-```
-
-```Go
-var first = ...
-```
-
-### <a id="second" href="#second">var second</a>
-
-```
-searchKey: xml.second
-tags: [private]
-```
-
-```Go
-var second = ...
-```
-
-### <a id="HTMLEntity" href="#HTMLEntity">var HTMLEntity</a>
-
-```
-searchKey: xml.HTMLEntity
-```
-
-```Go
-var HTMLEntity map[string]string = htmlEntity
-```
-
-HTMLEntity is an entity map containing translations for the standard HTML entity characters. 
-
-See the Decoder.Strict and Decoder.Entity fields' documentation. 
-
-### <a id="htmlEntity" href="#htmlEntity">var htmlEntity</a>
-
-```
-searchKey: xml.htmlEntity
-tags: [private]
-```
-
-```Go
-var htmlEntity = ...
+tags: [package]
 ```
 
 ### <a id="HTMLAutoClose" href="#HTMLAutoClose">var HTMLAutoClose</a>
 
 ```
 searchKey: xml.HTMLAutoClose
+tags: [variable array string]
 ```
 
 ```Go
@@ -1032,157 +829,59 @@ HTMLAutoClose is the set of HTML elements that should be considered to close aut
 
 See the Decoder.Strict and Decoder.Entity fields' documentation. 
 
-### <a id="htmlAutoClose" href="#htmlAutoClose">var htmlAutoClose</a>
+### <a id="HTMLEntity" href="#HTMLEntity">var HTMLEntity</a>
 
 ```
-searchKey: xml.htmlAutoClose
-tags: [private]
-```
-
-```Go
-var htmlAutoClose = ...
-```
-
-### <a id="escQuot" href="#escQuot">var escQuot</a>
-
-```
-searchKey: xml.escQuot
-tags: [private]
+searchKey: xml.HTMLEntity
+tags: [variable object]
 ```
 
 ```Go
-var escQuot = []byte("&#34;") // shorter than "&quot;"
-
+var HTMLEntity map[string]string = htmlEntity
 ```
 
-### <a id="escApos" href="#escApos">var escApos</a>
+HTMLEntity is an entity map containing translations for the standard HTML entity characters. 
+
+See the Decoder.Strict and Decoder.Entity fields' documentation. 
+
+### <a id="ageAttr" href="#ageAttr">var ageAttr</a>
 
 ```
-searchKey: xml.escApos
-tags: [private]
-```
-
-```Go
-var escApos = []byte("&#39;") // shorter than "&apos;"
-
-```
-
-### <a id="escAmp" href="#escAmp">var escAmp</a>
-
-```
-searchKey: xml.escAmp
-tags: [private]
+searchKey: xml.ageAttr
+tags: [variable number private]
 ```
 
 ```Go
-var escAmp = []byte("&amp;")
+var ageAttr = uint(12)
 ```
 
-### <a id="escLT" href="#escLT">var escLT</a>
+### <a id="all" href="#all">var all</a>
 
 ```
-searchKey: xml.escLT
-tags: [private]
-```
-
-```Go
-var escLT = []byte("&lt;")
-```
-
-### <a id="escGT" href="#escGT">var escGT</a>
-
-```
-searchKey: xml.escGT
-tags: [private]
+searchKey: xml.all
+tags: [variable struct private]
 ```
 
 ```Go
-var escGT = []byte("&gt;")
+var all = ...
 ```
 
-### <a id="escTab" href="#escTab">var escTab</a>
+### <a id="atomFeed" href="#atomFeed">var atomFeed</a>
 
 ```
-searchKey: xml.escTab
-tags: [private]
-```
-
-```Go
-var escTab = []byte("&#x9;")
-```
-
-### <a id="escNL" href="#escNL">var escNL</a>
-
-```
-searchKey: xml.escNL
-tags: [private]
+searchKey: xml.atomFeed
+tags: [variable struct private]
 ```
 
 ```Go
-var escNL = []byte("&#xA;")
-```
-
-### <a id="escCR" href="#escCR">var escCR</a>
-
-```
-searchKey: xml.escCR
-tags: [private]
-```
-
-```Go
-var escCR = []byte("&#xD;")
-```
-
-### <a id="escFFFD" href="#escFFFD">var escFFFD</a>
-
-```
-searchKey: xml.escFFFD
-tags: [private]
-```
-
-```Go
-var escFFFD = []byte("\uFFFD") // Unicode replacement character
-
-```
-
-### <a id="cdataStart" href="#cdataStart">var cdataStart</a>
-
-```
-searchKey: xml.cdataStart
-tags: [private]
-```
-
-```Go
-var cdataStart = []byte("<![CDATA[")
-```
-
-### <a id="cdataEnd" href="#cdataEnd">var cdataEnd</a>
-
-```
-searchKey: xml.cdataEnd
-tags: [private]
-```
-
-```Go
-var cdataEnd = []byte("]]>")
-```
-
-### <a id="cdataEscape" href="#cdataEscape">var cdataEscape</a>
-
-```
-searchKey: xml.cdataEscape
-tags: [private]
-```
-
-```Go
-var cdataEscape = []byte("]]]]><![CDATA[>")
+var atomFeed = ...
 ```
 
 ### <a id="atomValue" href="#atomValue">var atomValue</a>
 
 ```
 searchKey: xml.atomValue
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -1193,306 +892,128 @@ var atomValue = ...
 
 ```
 searchKey: xml.atomXML
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
 var atomXML = ...
 ```
 
-### <a id="nilStruct" href="#nilStruct">var nilStruct</a>
+### <a id="attrType" href="#attrType">var attrType</a>
 
 ```
-searchKey: xml.nilStruct
-tags: [private]
-```
-
-```Go
-var nilStruct *Ship
-```
-
-### <a id="nameAttr" href="#nameAttr">var nameAttr</a>
-
-```
-searchKey: xml.nameAttr
-tags: [private]
+searchKey: xml.attrType
+tags: [variable interface private]
 ```
 
 ```Go
-var nameAttr = "Sarah"
-```
-
-### <a id="ageAttr" href="#ageAttr">var ageAttr</a>
-
-```
-searchKey: xml.ageAttr
-tags: [private]
-```
-
-```Go
-var ageAttr = uint(12)
-```
-
-### <a id="contentsAttr" href="#contentsAttr">var contentsAttr</a>
-
-```
-searchKey: xml.contentsAttr
-tags: [private]
-```
-
-```Go
-var contentsAttr = "lorem ipsum"
-```
-
-### <a id="empty" href="#empty">var empty</a>
-
-```
-searchKey: xml.empty
-tags: [private]
-```
-
-```Go
-var empty = ""
-```
-
-### <a id="marshalTests" href="#marshalTests">var marshalTests</a>
-
-```
-searchKey: xml.marshalTests
-tags: [private]
-```
-
-```Go
-var marshalTests = ...
-```
-
-Unless explicitly stated as such (or *Plain), all of the tests below are two-way tests. When introducing new tests, please try to make them two-way as well to ensure that marshaling and unmarshaling are as symmetrical as feasible. 
-
-### <a id="marshalErrorTests" href="#marshalErrorTests">var marshalErrorTests</a>
-
-```
-searchKey: xml.marshalErrorTests
-tags: [private]
-```
-
-```Go
-var marshalErrorTests = ...
-```
-
-### <a id="marshalIndentTests" href="#marshalIndentTests">var marshalIndentTests</a>
-
-```
-searchKey: xml.marshalIndentTests
-tags: [private]
-```
-
-```Go
-var marshalIndentTests = ...
-```
-
-### <a id="encodeTokenTests" href="#encodeTokenTests">var encodeTokenTests</a>
-
-```
-searchKey: xml.encodeTokenTests
-tags: [private]
-```
-
-```Go
-var encodeTokenTests = ...
-```
-
-### <a id="atomFeed" href="#atomFeed">var atomFeed</a>
-
-```
-searchKey: xml.atomFeed
-tags: [private]
-```
-
-```Go
-var atomFeed = ...
-```
-
-### <a id="pathTests" href="#pathTests">var pathTests</a>
-
-```
-searchKey: xml.pathTests
-tags: [private]
-```
-
-```Go
-var pathTests = ...
+var attrType = reflect.TypeOf(Attr{})
 ```
 
 ### <a id="badPathTests" href="#badPathTests">var badPathTests</a>
 
 ```
 searchKey: xml.badPathTests
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
 var badPathTests = ...
 ```
 
-### <a id="tables" href="#tables">var tables</a>
+### <a id="begComment" href="#begComment">var begComment</a>
 
 ```
-searchKey: xml.tables
-tags: [private]
-```
-
-```Go
-var tables = ...
-```
-
-### <a id="tableAttrs" href="#tableAttrs">var tableAttrs</a>
-
-```
-searchKey: xml.tableAttrs
-tags: [private]
+searchKey: xml.begComment
+tags: [variable array number private]
 ```
 
 ```Go
-var tableAttrs = ...
+var begComment = []byte("<!--")
 ```
 
-### <a id="testEntity" href="#testEntity">var testEntity</a>
+### <a id="cdataEnd" href="#cdataEnd">var cdataEnd</a>
 
 ```
-searchKey: xml.testEntity
-tags: [private]
-```
-
-```Go
-var testEntity = map[string]string{"何": "What", "is-it": "is it?"}
-```
-
-### <a id="rawTokens" href="#rawTokens">var rawTokens</a>
-
-```
-searchKey: xml.rawTokens
-tags: [private]
+searchKey: xml.cdataEnd
+tags: [variable array number private]
 ```
 
 ```Go
-var rawTokens = ...
+var cdataEnd = []byte("]]>")
 ```
 
-### <a id="cookedTokens" href="#cookedTokens">var cookedTokens</a>
+### <a id="cdataEscape" href="#cdataEscape">var cdataEscape</a>
 
 ```
-searchKey: xml.cookedTokens
-tags: [private]
-```
-
-```Go
-var cookedTokens = ...
-```
-
-### <a id="rawTokensAltEncoding" href="#rawTokensAltEncoding">var rawTokensAltEncoding</a>
-
-```
-searchKey: xml.rawTokensAltEncoding
-tags: [private]
+searchKey: xml.cdataEscape
+tags: [variable array number private]
 ```
 
 ```Go
-var rawTokensAltEncoding = ...
+var cdataEscape = []byte("]]]]><![CDATA[>")
 ```
 
-### <a id="xmlInput" href="#xmlInput">var xmlInput</a>
+### <a id="cdataStart" href="#cdataStart">var cdataStart</a>
 
 ```
-searchKey: xml.xmlInput
-tags: [private]
-```
-
-```Go
-var xmlInput = ...
-```
-
-### <a id="nonStrictTokens" href="#nonStrictTokens">var nonStrictTokens</a>
-
-```
-searchKey: xml.nonStrictTokens
-tags: [private]
+searchKey: xml.cdataStart
+tags: [variable array number private]
 ```
 
 ```Go
-var nonStrictTokens = ...
-```
-
-### <a id="nestedDirectivesInput" href="#nestedDirectivesInput">var nestedDirectivesInput</a>
-
-```
-searchKey: xml.nestedDirectivesInput
-tags: [private]
-```
-
-```Go
-var nestedDirectivesInput = ...
-```
-
-### <a id="nestedDirectivesTokens" href="#nestedDirectivesTokens">var nestedDirectivesTokens</a>
-
-```
-searchKey: xml.nestedDirectivesTokens
-tags: [private]
-```
-
-```Go
-var nestedDirectivesTokens = ...
-```
-
-### <a id="all" href="#all">var all</a>
-
-```
-searchKey: xml.all
-tags: [private]
-```
-
-```Go
-var all = ...
-```
-
-### <a id="sixteen" href="#sixteen">var sixteen</a>
-
-```
-searchKey: xml.sixteen
-tags: [private]
-```
-
-```Go
-var sixteen = "16"
+var cdataStart = []byte("<![CDATA[")
 ```
 
 ### <a id="characterTests" href="#characterTests">var characterTests</a>
 
 ```
 searchKey: xml.characterTests
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
 var characterTests = ...
 ```
 
-### <a id="procInstTests" href="#procInstTests">var procInstTests</a>
+### <a id="contentsAttr" href="#contentsAttr">var contentsAttr</a>
 
 ```
-searchKey: xml.procInstTests
-tags: [private]
+searchKey: xml.contentsAttr
+tags: [variable string private]
 ```
 
 ```Go
-var procInstTests = ...
+var contentsAttr = "lorem ipsum"
+```
+
+### <a id="cookedTokens" href="#cookedTokens">var cookedTokens</a>
+
+```
+searchKey: xml.cookedTokens
+tags: [variable array interface private]
+```
+
+```Go
+var cookedTokens = ...
+```
+
+### <a id="ddBytes" href="#ddBytes">var ddBytes</a>
+
+```
+searchKey: xml.ddBytes
+tags: [variable array number private]
+```
+
+```Go
+var ddBytes = []byte("--")
 ```
 
 ### <a id="directivesWithCommentsInput" href="#directivesWithCommentsInput">var directivesWithCommentsInput</a>
 
 ```
 searchKey: xml.directivesWithCommentsInput
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
@@ -1503,637 +1024,573 @@ var directivesWithCommentsInput = ...
 
 ```
 searchKey: xml.directivesWithCommentsTokens
-tags: [private]
+tags: [variable array interface private]
 ```
 
 ```Go
 var directivesWithCommentsTokens = ...
 ```
 
+### <a id="empty" href="#empty">var empty</a>
+
+```
+searchKey: xml.empty
+tags: [variable string private]
+```
+
+```Go
+var empty = ""
+```
+
+### <a id="encodeTokenTests" href="#encodeTokenTests">var encodeTokenTests</a>
+
+```
+searchKey: xml.encodeTokenTests
+tags: [variable array struct private]
+```
+
+```Go
+var encodeTokenTests = ...
+```
+
+### <a id="endComment" href="#endComment">var endComment</a>
+
+```
+searchKey: xml.endComment
+tags: [variable array number private]
+```
+
+```Go
+var endComment = []byte("-->")
+```
+
+### <a id="endProcInst" href="#endProcInst">var endProcInst</a>
+
+```
+searchKey: xml.endProcInst
+tags: [variable array number private]
+```
+
+```Go
+var endProcInst = []byte("?>")
+```
+
+### <a id="entity" href="#entity">var entity</a>
+
+```
+searchKey: xml.entity
+tags: [variable object private]
+```
+
+```Go
+var entity = ...
+```
+
+### <a id="errRawToken" href="#errRawToken">var errRawToken</a>
+
+```
+searchKey: xml.errRawToken
+tags: [variable interface private]
+```
+
+```Go
+var errRawToken = errors.New("xml: cannot use RawToken from UnmarshalXML method")
+```
+
+### <a id="escAmp" href="#escAmp">var escAmp</a>
+
+```
+searchKey: xml.escAmp
+tags: [variable array number private]
+```
+
+```Go
+var escAmp = []byte("&amp;")
+```
+
+### <a id="escApos" href="#escApos">var escApos</a>
+
+```
+searchKey: xml.escApos
+tags: [variable array number private]
+```
+
+```Go
+var escApos = []byte("&#39;") // shorter than "&apos;"
+
+```
+
+### <a id="escCR" href="#escCR">var escCR</a>
+
+```
+searchKey: xml.escCR
+tags: [variable array number private]
+```
+
+```Go
+var escCR = []byte("&#xD;")
+```
+
+### <a id="escFFFD" href="#escFFFD">var escFFFD</a>
+
+```
+searchKey: xml.escFFFD
+tags: [variable array number private]
+```
+
+```Go
+var escFFFD = []byte("\uFFFD") // Unicode replacement character
+
+```
+
+### <a id="escGT" href="#escGT">var escGT</a>
+
+```
+searchKey: xml.escGT
+tags: [variable array number private]
+```
+
+```Go
+var escGT = []byte("&gt;")
+```
+
+### <a id="escLT" href="#escLT">var escLT</a>
+
+```
+searchKey: xml.escLT
+tags: [variable array number private]
+```
+
+```Go
+var escLT = []byte("&lt;")
+```
+
+### <a id="escNL" href="#escNL">var escNL</a>
+
+```
+searchKey: xml.escNL
+tags: [variable array number private]
+```
+
+```Go
+var escNL = []byte("&#xA;")
+```
+
+### <a id="escQuot" href="#escQuot">var escQuot</a>
+
+```
+searchKey: xml.escQuot
+tags: [variable array number private]
+```
+
+```Go
+var escQuot = []byte("&#34;") // shorter than "&quot;"
+
+```
+
+### <a id="escTab" href="#escTab">var escTab</a>
+
+```
+searchKey: xml.escTab
+tags: [variable array number private]
+```
+
+```Go
+var escTab = []byte("&#x9;")
+```
+
+### <a id="first" href="#first">var first</a>
+
+```
+searchKey: xml.first
+tags: [variable struct private]
+```
+
+```Go
+var first = ...
+```
+
+### <a id="htmlAutoClose" href="#htmlAutoClose">var htmlAutoClose</a>
+
+```
+searchKey: xml.htmlAutoClose
+tags: [variable array string private]
+```
+
+```Go
+var htmlAutoClose = ...
+```
+
+### <a id="htmlEntity" href="#htmlEntity">var htmlEntity</a>
+
+```
+searchKey: xml.htmlEntity
+tags: [variable object private]
+```
+
+```Go
+var htmlEntity = ...
+```
+
+### <a id="marshalErrorTests" href="#marshalErrorTests">var marshalErrorTests</a>
+
+```
+searchKey: xml.marshalErrorTests
+tags: [variable array struct private]
+```
+
+```Go
+var marshalErrorTests = ...
+```
+
+### <a id="marshalIndentTests" href="#marshalIndentTests">var marshalIndentTests</a>
+
+```
+searchKey: xml.marshalIndentTests
+tags: [variable array struct private]
+```
+
+```Go
+var marshalIndentTests = ...
+```
+
+### <a id="marshalTests" href="#marshalTests">var marshalTests</a>
+
+```
+searchKey: xml.marshalTests
+tags: [variable array struct private]
+```
+
+```Go
+var marshalTests = ...
+```
+
+Unless explicitly stated as such (or *Plain), all of the tests below are two-way tests. When introducing new tests, please try to make them two-way as well to ensure that marshaling and unmarshaling are as symmetrical as feasible. 
+
+### <a id="marshalerAttrType" href="#marshalerAttrType">var marshalerAttrType</a>
+
+```
+searchKey: xml.marshalerAttrType
+tags: [variable interface private]
+```
+
+```Go
+var marshalerAttrType = reflect.TypeOf((*MarshalerAttr)(nil)).Elem()
+```
+
+### <a id="marshalerType" href="#marshalerType">var marshalerType</a>
+
+```
+searchKey: xml.marshalerType
+tags: [variable interface private]
+```
+
+```Go
+var marshalerType = reflect.TypeOf((*Marshaler)(nil)).Elem()
+```
+
+### <a id="nameAttr" href="#nameAttr">var nameAttr</a>
+
+```
+searchKey: xml.nameAttr
+tags: [variable string private]
+```
+
+```Go
+var nameAttr = "Sarah"
+```
+
+### <a id="nameType" href="#nameType">var nameType</a>
+
+```
+searchKey: xml.nameType
+tags: [variable interface private]
+```
+
+```Go
+var nameType = reflect.TypeOf(Name{})
+```
+
+### <a id="nestedDirectivesInput" href="#nestedDirectivesInput">var nestedDirectivesInput</a>
+
+```
+searchKey: xml.nestedDirectivesInput
+tags: [variable string private]
+```
+
+```Go
+var nestedDirectivesInput = ...
+```
+
+### <a id="nestedDirectivesTokens" href="#nestedDirectivesTokens">var nestedDirectivesTokens</a>
+
+```
+searchKey: xml.nestedDirectivesTokens
+tags: [variable array interface private]
+```
+
+```Go
+var nestedDirectivesTokens = ...
+```
+
+### <a id="nilStruct" href="#nilStruct">var nilStruct</a>
+
+```
+searchKey: xml.nilStruct
+tags: [variable struct private]
+```
+
+```Go
+var nilStruct *Ship
+```
+
+### <a id="nonStrictTokens" href="#nonStrictTokens">var nonStrictTokens</a>
+
+```
+searchKey: xml.nonStrictTokens
+tags: [variable array interface private]
+```
+
+```Go
+var nonStrictTokens = ...
+```
+
+### <a id="pathTests" href="#pathTests">var pathTests</a>
+
+```
+searchKey: xml.pathTests
+tags: [variable array interface private]
+```
+
+```Go
+var pathTests = ...
+```
+
+### <a id="procInstTests" href="#procInstTests">var procInstTests</a>
+
+```
+searchKey: xml.procInstTests
+tags: [variable array struct private]
+```
+
+```Go
+var procInstTests = ...
+```
+
+### <a id="rawTokens" href="#rawTokens">var rawTokens</a>
+
+```
+searchKey: xml.rawTokens
+tags: [variable array interface private]
+```
+
+```Go
+var rawTokens = ...
+```
+
+### <a id="rawTokensAltEncoding" href="#rawTokensAltEncoding">var rawTokensAltEncoding</a>
+
+```
+searchKey: xml.rawTokensAltEncoding
+tags: [variable array interface private]
+```
+
+```Go
+var rawTokensAltEncoding = ...
+```
+
+### <a id="second" href="#second">var second</a>
+
+```
+searchKey: xml.second
+tags: [variable struct private]
+```
+
+```Go
+var second = ...
+```
+
+### <a id="sixteen" href="#sixteen">var sixteen</a>
+
+```
+searchKey: xml.sixteen
+tags: [variable string private]
+```
+
+```Go
+var sixteen = "16"
+```
+
+### <a id="tableAttrs" href="#tableAttrs">var tableAttrs</a>
+
+```
+searchKey: xml.tableAttrs
+tags: [variable array struct private]
+```
+
+```Go
+var tableAttrs = ...
+```
+
+### <a id="tables" href="#tables">var tables</a>
+
+```
+searchKey: xml.tables
+tags: [variable array struct private]
+```
+
+```Go
+var tables = ...
+```
+
+### <a id="testEntity" href="#testEntity">var testEntity</a>
+
+```
+searchKey: xml.testEntity
+tags: [variable object private]
+```
+
+```Go
+var testEntity = map[string]string{"何": "What", "is-it": "is it?"}
+```
+
+### <a id="textMarshalerType" href="#textMarshalerType">var textMarshalerType</a>
+
+```
+searchKey: xml.textMarshalerType
+tags: [variable interface private]
+```
+
+```Go
+var textMarshalerType = reflect.TypeOf((*encoding.TextMarshaler)(nil)).Elem()
+```
+
+### <a id="textUnmarshalerType" href="#textUnmarshalerType">var textUnmarshalerType</a>
+
+```
+searchKey: xml.textUnmarshalerType
+tags: [variable interface private]
+```
+
+```Go
+var textUnmarshalerType = reflect.TypeOf((*encoding.TextUnmarshaler)(nil)).Elem()
+```
+
+### <a id="tinfoMap" href="#tinfoMap">var tinfoMap</a>
+
+```
+searchKey: xml.tinfoMap
+tags: [variable struct private]
+```
+
+```Go
+var tinfoMap sync.Map // map[reflect.Type]*typeInfo
+
+```
+
+### <a id="unmarshalerAttrType" href="#unmarshalerAttrType">var unmarshalerAttrType</a>
+
+```
+searchKey: xml.unmarshalerAttrType
+tags: [variable interface private]
+```
+
+```Go
+var unmarshalerAttrType = reflect.TypeOf((*UnmarshalerAttr)(nil)).Elem()
+```
+
+### <a id="unmarshalerType" href="#unmarshalerType">var unmarshalerType</a>
+
+```
+searchKey: xml.unmarshalerType
+tags: [variable interface private]
+```
+
+```Go
+var unmarshalerType = reflect.TypeOf((*Unmarshaler)(nil)).Elem()
+```
+
+### <a id="xmlInput" href="#xmlInput">var xmlInput</a>
+
+```
+searchKey: xml.xmlInput
+tags: [variable array string private]
+```
+
+```Go
+var xmlInput = ...
+```
+
 ## <a id="type" href="#type">Types</a>
 
-### <a id="Marshaler" href="#Marshaler">type Marshaler interface</a>
+```
+tags: [package]
+```
+
+### <a id="AnyHolder" href="#AnyHolder">type AnyHolder struct</a>
 
 ```
-searchKey: xml.Marshaler
+searchKey: xml.AnyHolder
+tags: [struct private]
 ```
 
 ```Go
-type Marshaler interface {
-	MarshalXML(e *Encoder, start StartElement) error
+type AnyHolder struct {
+	XMLName Name
+	XML     string `xml:",innerxml"`
 }
 ```
 
-Marshaler is the interface implemented by objects that can marshal themselves into valid XML elements. 
-
-MarshalXML encodes the receiver as zero or more XML elements. By convention, arrays or slices are typically encoded as a sequence of elements, one per entry. Using start as the element tag is not required, but doing so will enable Unmarshal to match the XML elements to the correct struct field. One common implementation strategy is to construct a separate value with a layout corresponding to the desired XML and then to encode it using e.EncodeElement. Another common strategy is to use repeated calls to e.EncodeToken to generate the XML output one token at a time. The sequence of encoded tokens must make up zero or more valid XML elements. 
-
-### <a id="MarshalerAttr" href="#MarshalerAttr">type MarshalerAttr interface</a>
+### <a id="AnyOmitTest" href="#AnyOmitTest">type AnyOmitTest struct</a>
 
 ```
-searchKey: xml.MarshalerAttr
+searchKey: xml.AnyOmitTest
+tags: [struct private]
 ```
 
 ```Go
-type MarshalerAttr interface {
-	MarshalXMLAttr(name Name) (Attr, error)
+type AnyOmitTest struct {
+	XMLName  struct{}   `xml:"a"`
+	Nested   string     `xml:"nested>value"`
+	AnyField *AnyHolder `xml:",any,omitempty"`
 }
 ```
 
-MarshalerAttr is the interface implemented by objects that can marshal themselves into valid XML attributes. 
-
-MarshalXMLAttr returns an XML attribute with the encoded value of the receiver. Using name as the attribute name is not required, but doing so will enable Unmarshal to match the attribute to the correct struct field. If MarshalXMLAttr returns the zero attribute Attr{}, no attribute will be generated in the output. MarshalXMLAttr is used only for struct fields with the "attr" option in the field tag. 
-
-### <a id="Encoder" href="#Encoder">type Encoder struct</a>
+### <a id="AnySliceTest" href="#AnySliceTest">type AnySliceTest struct</a>
 
 ```
-searchKey: xml.Encoder
+searchKey: xml.AnySliceTest
+tags: [struct private]
 ```
 
 ```Go
-type Encoder struct {
-	p printer
+type AnySliceTest struct {
+	XMLName  struct{}    `xml:"a"`
+	Nested   string      `xml:"nested>value"`
+	AnyField []AnyHolder `xml:",any"`
 }
 ```
 
-An Encoder writes XML data to an output stream. 
-
-#### <a id="NewEncoder" href="#NewEncoder">func NewEncoder(w io.Writer) *Encoder</a>
+### <a id="AnyTest" href="#AnyTest">type AnyTest struct</a>
 
 ```
-searchKey: xml.NewEncoder
-```
-
-```Go
-func NewEncoder(w io.Writer) *Encoder
-```
-
-NewEncoder returns a new encoder that writes to w. 
-
-#### <a id="Encoder.Indent" href="#Encoder.Indent">func (enc *Encoder) Indent(prefix, indent string)</a>
-
-```
-searchKey: xml.Encoder.Indent
+searchKey: xml.AnyTest
+tags: [struct private]
 ```
 
 ```Go
-func (enc *Encoder) Indent(prefix, indent string)
-```
-
-Indent sets the encoder to generate XML in which each element begins on a new indented line that starts with prefix and is followed by one or more copies of indent according to the nesting depth. 
-
-#### <a id="Encoder.Encode" href="#Encoder.Encode">func (enc *Encoder) Encode(v interface{}) error</a>
-
-```
-searchKey: xml.Encoder.Encode
-```
-
-```Go
-func (enc *Encoder) Encode(v interface{}) error
-```
-
-Encode writes the XML encoding of v to the stream. 
-
-See the documentation for Marshal for details about the conversion of Go values to XML. 
-
-Encode calls Flush before returning. 
-
-#### <a id="Encoder.EncodeElement" href="#Encoder.EncodeElement">func (enc *Encoder) EncodeElement(v interface{}, start StartElement) error</a>
-
-```
-searchKey: xml.Encoder.EncodeElement
-```
-
-```Go
-func (enc *Encoder) EncodeElement(v interface{}, start StartElement) error
-```
-
-EncodeElement writes the XML encoding of v to the stream, using start as the outermost tag in the encoding. 
-
-See the documentation for Marshal for details about the conversion of Go values to XML. 
-
-EncodeElement calls Flush before returning. 
-
-#### <a id="Encoder.EncodeToken" href="#Encoder.EncodeToken">func (enc *Encoder) EncodeToken(t Token) error</a>
-
-```
-searchKey: xml.Encoder.EncodeToken
-```
-
-```Go
-func (enc *Encoder) EncodeToken(t Token) error
-```
-
-EncodeToken writes the given XML token to the stream. It returns an error if StartElement and EndElement tokens are not properly matched. 
-
-EncodeToken does not call Flush, because usually it is part of a larger operation such as Encode or EncodeElement (or a custom Marshaler's MarshalXML invoked during those), and those will call Flush when finished. Callers that create an Encoder and then invoke EncodeToken directly, without using Encode or EncodeElement, need to call Flush when finished to ensure that the XML is written to the underlying writer. 
-
-EncodeToken allows writing a ProcInst with Target set to "xml" only as the first token in the stream. 
-
-#### <a id="Encoder.Flush" href="#Encoder.Flush">func (enc *Encoder) Flush() error</a>
-
-```
-searchKey: xml.Encoder.Flush
-```
-
-```Go
-func (enc *Encoder) Flush() error
-```
-
-Flush flushes any buffered XML to the underlying writer. See the EncodeToken documentation for details about when it is necessary. 
-
-### <a id="printer" href="#printer">type printer struct</a>
-
-```
-searchKey: xml.printer
-tags: [private]
-```
-
-```Go
-type printer struct {
-	*bufio.Writer
-	encoder    *Encoder
-	seq        int
-	indent     string
-	prefix     string
-	depth      int
-	indentedIn bool
-	putNewline bool
-	attrNS     map[string]string // map prefix -> name space
-	attrPrefix map[string]string // map name space -> prefix
-	prefixes   []string
-	tags       []Name
+type AnyTest struct {
+	XMLName  struct{}  `xml:"a"`
+	Nested   string    `xml:"nested>value"`
+	AnyField AnyHolder `xml:",any"`
 }
 ```
-
-#### <a id="printer.createAttrPrefix" href="#printer.createAttrPrefix">func (p *printer) createAttrPrefix(url string) string</a>
-
-```
-searchKey: xml.printer.createAttrPrefix
-tags: [private]
-```
-
-```Go
-func (p *printer) createAttrPrefix(url string) string
-```
-
-createAttrPrefix finds the name space prefix attribute to use for the given name space, defining a new prefix if necessary. It returns the prefix. 
-
-#### <a id="printer.deleteAttrPrefix" href="#printer.deleteAttrPrefix">func (p *printer) deleteAttrPrefix(prefix string)</a>
-
-```
-searchKey: xml.printer.deleteAttrPrefix
-tags: [private]
-```
-
-```Go
-func (p *printer) deleteAttrPrefix(prefix string)
-```
-
-deleteAttrPrefix removes an attribute name space prefix. 
-
-#### <a id="printer.markPrefix" href="#printer.markPrefix">func (p *printer) markPrefix()</a>
-
-```
-searchKey: xml.printer.markPrefix
-tags: [private]
-```
-
-```Go
-func (p *printer) markPrefix()
-```
-
-#### <a id="printer.popPrefix" href="#printer.popPrefix">func (p *printer) popPrefix()</a>
-
-```
-searchKey: xml.printer.popPrefix
-tags: [private]
-```
-
-```Go
-func (p *printer) popPrefix()
-```
-
-#### <a id="printer.marshalValue" href="#printer.marshalValue">func (p *printer) marshalValue(val reflect.Value, finfo *fieldInfo, startTemplate *StartElement) error</a>
-
-```
-searchKey: xml.printer.marshalValue
-tags: [private]
-```
-
-```Go
-func (p *printer) marshalValue(val reflect.Value, finfo *fieldInfo, startTemplate *StartElement) error
-```
-
-marshalValue writes one or more XML elements representing val. If val was obtained from a struct field, finfo must have its details. 
-
-#### <a id="printer.marshalAttr" href="#printer.marshalAttr">func (p *printer) marshalAttr(start *StartElement, name Name, val reflect.Value) error</a>
-
-```
-searchKey: xml.printer.marshalAttr
-tags: [private]
-```
-
-```Go
-func (p *printer) marshalAttr(start *StartElement, name Name, val reflect.Value) error
-```
-
-marshalAttr marshals an attribute with the given name and value, adding to start.Attr. 
-
-#### <a id="printer.marshalInterface" href="#printer.marshalInterface">func (p *printer) marshalInterface(val Marshaler, start StartElement) error</a>
-
-```
-searchKey: xml.printer.marshalInterface
-tags: [private]
-```
-
-```Go
-func (p *printer) marshalInterface(val Marshaler, start StartElement) error
-```
-
-marshalInterface marshals a Marshaler interface value. 
-
-#### <a id="printer.marshalTextInterface" href="#printer.marshalTextInterface">func (p *printer) marshalTextInterface(val encoding.TextMarshaler, start StartElement) error</a>
-
-```
-searchKey: xml.printer.marshalTextInterface
-tags: [private]
-```
-
-```Go
-func (p *printer) marshalTextInterface(val encoding.TextMarshaler, start StartElement) error
-```
-
-marshalTextInterface marshals a TextMarshaler interface value. 
-
-#### <a id="printer.writeStart" href="#printer.writeStart">func (p *printer) writeStart(start *StartElement) error</a>
-
-```
-searchKey: xml.printer.writeStart
-tags: [private]
-```
-
-```Go
-func (p *printer) writeStart(start *StartElement) error
-```
-
-writeStart writes the given start element. 
-
-#### <a id="printer.writeEnd" href="#printer.writeEnd">func (p *printer) writeEnd(name Name) error</a>
-
-```
-searchKey: xml.printer.writeEnd
-tags: [private]
-```
-
-```Go
-func (p *printer) writeEnd(name Name) error
-```
-
-#### <a id="printer.marshalSimple" href="#printer.marshalSimple">func (p *printer) marshalSimple(typ reflect.Type, val reflect.Value) (string, []byte, error)</a>
-
-```
-searchKey: xml.printer.marshalSimple
-tags: [private]
-```
-
-```Go
-func (p *printer) marshalSimple(typ reflect.Type, val reflect.Value) (string, []byte, error)
-```
-
-#### <a id="printer.marshalStruct" href="#printer.marshalStruct">func (p *printer) marshalStruct(tinfo *typeInfo, val reflect.Value) error</a>
-
-```
-searchKey: xml.printer.marshalStruct
-tags: [private]
-```
-
-```Go
-func (p *printer) marshalStruct(tinfo *typeInfo, val reflect.Value) error
-```
-
-#### <a id="printer.cachedWriteError" href="#printer.cachedWriteError">func (p *printer) cachedWriteError() error</a>
-
-```
-searchKey: xml.printer.cachedWriteError
-tags: [private]
-```
-
-```Go
-func (p *printer) cachedWriteError() error
-```
-
-return the bufio Writer's cached write error 
-
-#### <a id="printer.writeIndent" href="#printer.writeIndent">func (p *printer) writeIndent(depthDelta int)</a>
-
-```
-searchKey: xml.printer.writeIndent
-tags: [private]
-```
-
-```Go
-func (p *printer) writeIndent(depthDelta int)
-```
-
-#### <a id="printer.EscapeString" href="#printer.EscapeString">func (p *printer) EscapeString(s string)</a>
-
-```
-searchKey: xml.printer.EscapeString
-tags: [private]
-```
-
-```Go
-func (p *printer) EscapeString(s string)
-```
-
-EscapeString writes to p the properly escaped XML equivalent of the plain text data s. 
-
-### <a id="parentStack" href="#parentStack">type parentStack struct</a>
-
-```
-searchKey: xml.parentStack
-tags: [private]
-```
-
-```Go
-type parentStack struct {
-	p     *printer
-	stack []string
-}
-```
-
-#### <a id="parentStack.trim" href="#parentStack.trim">func (s *parentStack) trim(parents []string) error</a>
-
-```
-searchKey: xml.parentStack.trim
-tags: [private]
-```
-
-```Go
-func (s *parentStack) trim(parents []string) error
-```
-
-trim updates the XML context to match the longest common prefix of the stack and the given parents. A closing tag will be written for every parent popped. Passing a zero slice or nil will close all the elements. 
-
-#### <a id="parentStack.push" href="#parentStack.push">func (s *parentStack) push(parents []string) error</a>
-
-```
-searchKey: xml.parentStack.push
-tags: [private]
-```
-
-```Go
-func (s *parentStack) push(parents []string) error
-```
-
-push adds parent elements to the stack and writes open tags. 
-
-### <a id="UnsupportedTypeError" href="#UnsupportedTypeError">type UnsupportedTypeError struct</a>
-
-```
-searchKey: xml.UnsupportedTypeError
-```
-
-```Go
-type UnsupportedTypeError struct {
-	Type reflect.Type
-}
-```
-
-UnsupportedTypeError is returned when Marshal encounters a type that cannot be converted into XML. 
-
-#### <a id="UnsupportedTypeError.Error" href="#UnsupportedTypeError.Error">func (e *UnsupportedTypeError) Error() string</a>
-
-```
-searchKey: xml.UnsupportedTypeError.Error
-```
-
-```Go
-func (e *UnsupportedTypeError) Error() string
-```
-
-### <a id="UnmarshalError" href="#UnmarshalError">type UnmarshalError string</a>
-
-```
-searchKey: xml.UnmarshalError
-```
-
-```Go
-type UnmarshalError string
-```
-
-An UnmarshalError represents an error in the unmarshaling process. 
-
-#### <a id="UnmarshalError.Error" href="#UnmarshalError.Error">func (e UnmarshalError) Error() string</a>
-
-```
-searchKey: xml.UnmarshalError.Error
-```
-
-```Go
-func (e UnmarshalError) Error() string
-```
-
-### <a id="Unmarshaler" href="#Unmarshaler">type Unmarshaler interface</a>
-
-```
-searchKey: xml.Unmarshaler
-```
-
-```Go
-type Unmarshaler interface {
-	UnmarshalXML(d *Decoder, start StartElement) error
-}
-```
-
-Unmarshaler is the interface implemented by objects that can unmarshal an XML element description of themselves. 
-
-UnmarshalXML decodes a single XML element beginning with the given start element. If it returns an error, the outer call to Unmarshal stops and returns that error. UnmarshalXML must consume exactly one XML element. One common implementation strategy is to unmarshal into a separate value with a layout matching the expected XML using d.DecodeElement, and then to copy the data from that value into the receiver. Another common strategy is to use d.Token to process the XML object one token at a time. UnmarshalXML may not use d.RawToken. 
-
-### <a id="UnmarshalerAttr" href="#UnmarshalerAttr">type UnmarshalerAttr interface</a>
-
-```
-searchKey: xml.UnmarshalerAttr
-```
-
-```Go
-type UnmarshalerAttr interface {
-	UnmarshalXMLAttr(attr Attr) error
-}
-```
-
-UnmarshalerAttr is the interface implemented by objects that can unmarshal an XML attribute description of themselves. 
-
-UnmarshalXMLAttr decodes a single XML attribute. If it returns an error, the outer call to Unmarshal stops and returns that error. UnmarshalXMLAttr is used only for struct fields with the "attr" option in the field tag. 
-
-### <a id="typeInfo" href="#typeInfo">type typeInfo struct</a>
-
-```
-searchKey: xml.typeInfo
-tags: [private]
-```
-
-```Go
-type typeInfo struct {
-	xmlname *fieldInfo
-	fields  []fieldInfo
-}
-```
-
-typeInfo holds details for the xml representation of a type. 
-
-#### <a id="getTypeInfo" href="#getTypeInfo">func getTypeInfo(typ reflect.Type) (*typeInfo, error)</a>
-
-```
-searchKey: xml.getTypeInfo
-tags: [private]
-```
-
-```Go
-func getTypeInfo(typ reflect.Type) (*typeInfo, error)
-```
-
-getTypeInfo returns the typeInfo structure with details necessary for marshaling and unmarshaling typ. 
-
-### <a id="fieldInfo" href="#fieldInfo">type fieldInfo struct</a>
-
-```
-searchKey: xml.fieldInfo
-tags: [private]
-```
-
-```Go
-type fieldInfo struct {
-	idx     []int
-	name    string
-	xmlns   string
-	flags   fieldFlags
-	parents []string
-}
-```
-
-fieldInfo holds details for the xml representation of a single field. 
-
-#### <a id="structFieldInfo" href="#structFieldInfo">func structFieldInfo(typ reflect.Type, f *reflect.StructField) (*fieldInfo, error)</a>
-
-```
-searchKey: xml.structFieldInfo
-tags: [private]
-```
-
-```Go
-func structFieldInfo(typ reflect.Type, f *reflect.StructField) (*fieldInfo, error)
-```
-
-structFieldInfo builds and returns a fieldInfo for f. 
-
-#### <a id="lookupXMLName" href="#lookupXMLName">func lookupXMLName(typ reflect.Type) (xmlname *fieldInfo)</a>
-
-```
-searchKey: xml.lookupXMLName
-tags: [private]
-```
-
-```Go
-func lookupXMLName(typ reflect.Type) (xmlname *fieldInfo)
-```
-
-lookupXMLName returns the fieldInfo for typ's XMLName field in case it exists and has a valid xml field tag, otherwise it returns nil. 
-
-#### <a id="fieldInfo.value" href="#fieldInfo.value">func (finfo *fieldInfo) value(v reflect.Value, shouldInitNilPointers bool) reflect.Value</a>
-
-```
-searchKey: xml.fieldInfo.value
-tags: [private]
-```
-
-```Go
-func (finfo *fieldInfo) value(v reflect.Value, shouldInitNilPointers bool) reflect.Value
-```
-
-value returns v's field value corresponding to finfo. It's equivalent to v.FieldByIndex(finfo.idx), but when passed initNilPointers, it initializes and dereferences pointers as necessary. When passed dontInitNilPointers and a nil pointer is reached, the function returns a zero reflect.Value. 
-
-### <a id="fieldFlags" href="#fieldFlags">type fieldFlags int</a>
-
-```
-searchKey: xml.fieldFlags
-tags: [private]
-```
-
-```Go
-type fieldFlags int
-```
-
-### <a id="TagPathError" href="#TagPathError">type TagPathError struct</a>
-
-```
-searchKey: xml.TagPathError
-```
-
-```Go
-type TagPathError struct {
-	Struct       reflect.Type
-	Field1, Tag1 string
-	Field2, Tag2 string
-}
-```
-
-A TagPathError represents an error in the unmarshaling process caused by the use of field tags with conflicting paths. 
-
-#### <a id="TagPathError.Error" href="#TagPathError.Error">func (e *TagPathError) Error() string</a>
-
-```
-searchKey: xml.TagPathError.Error
-```
-
-```Go
-func (e *TagPathError) Error() string
-```
-
-### <a id="SyntaxError" href="#SyntaxError">type SyntaxError struct</a>
-
-```
-searchKey: xml.SyntaxError
-```
-
-```Go
-type SyntaxError struct {
-	Msg  string
-	Line int
-}
-```
-
-A SyntaxError represents a syntax error in the XML input stream. 
-
-#### <a id="SyntaxError.Error" href="#SyntaxError.Error">func (e *SyntaxError) Error() string</a>
-
-```
-searchKey: xml.SyntaxError.Error
-```
-
-```Go
-func (e *SyntaxError) Error() string
-```
-
-### <a id="Name" href="#Name">type Name struct</a>
-
-```
-searchKey: xml.Name
-```
-
-```Go
-type Name struct {
-	Space, Local string
-}
-```
-
-A Name represents an XML name (Local) annotated with a name space identifier (Space). In tokens returned by Decoder.Token, the Space identifier is given as a canonical URL, not the short prefix used in the document being parsed. 
 
 ### <a id="Attr" href="#Attr">type Attr struct</a>
 
 ```
 searchKey: xml.Attr
+tags: [struct]
 ```
 
 ```Go
@@ -2145,100 +1602,187 @@ type Attr struct {
 
 An Attr represents an attribute in an XML element (Name=Value). 
 
-### <a id="Token" href="#Token">type Token interface{}</a>
+### <a id="AttrParent" href="#AttrParent">type AttrParent struct</a>
 
 ```
-searchKey: xml.Token
-```
-
-```Go
-type Token interface{}
-```
-
-A Token is an interface holding one of the token types: StartElement, EndElement, CharData, Comment, ProcInst, or Directive. 
-
-#### <a id="CopyToken" href="#CopyToken">func CopyToken(t Token) Token</a>
-
-```
-searchKey: xml.CopyToken
+searchKey: xml.AttrParent
+tags: [struct private]
 ```
 
 ```Go
-func CopyToken(t Token) Token
-```
-
-CopyToken returns a copy of a Token. 
-
-### <a id="StartElement" href="#StartElement">type StartElement struct</a>
-
-```
-searchKey: xml.StartElement
-```
-
-```Go
-type StartElement struct {
-	Name Name
-	Attr []Attr
+type AttrParent struct {
+	X string `xml:"X>Y,attr"`
 }
 ```
 
-A StartElement represents an XML start element. 
-
-#### <a id="defaultStart" href="#defaultStart">func defaultStart(typ reflect.Type, finfo *fieldInfo, startTemplate *StartElement) StartElement</a>
+### <a id="AttrTest" href="#AttrTest">type AttrTest struct</a>
 
 ```
-searchKey: xml.defaultStart
-tags: [private]
+searchKey: xml.AttrTest
+tags: [struct private]
 ```
 
 ```Go
-func defaultStart(typ reflect.Type, finfo *fieldInfo, startTemplate *StartElement) StartElement
-```
-
-defaultStart returns the default start element to use, given the reflect type, field info, and start template. 
-
-#### <a id="StartElement.Copy" href="#StartElement.Copy">func (e StartElement) Copy() StartElement</a>
-
-```
-searchKey: xml.StartElement.Copy
-```
-
-```Go
-func (e StartElement) Copy() StartElement
-```
-
-Copy creates a new copy of StartElement. 
-
-#### <a id="StartElement.End" href="#StartElement.End">func (e StartElement) End() EndElement</a>
-
-```
-searchKey: xml.StartElement.End
-```
-
-```Go
-func (e StartElement) End() EndElement
-```
-
-End returns the corresponding XML end element. 
-
-### <a id="EndElement" href="#EndElement">type EndElement struct</a>
-
-```
-searchKey: xml.EndElement
-```
-
-```Go
-type EndElement struct {
-	Name Name
+type AttrTest struct {
+	Int   int     `xml:",attr"`
+	Named int     `xml:"int,attr"`
+	Float float64 `xml:",attr"`
+	Uint8 uint8   `xml:",attr"`
+	Bool  bool    `xml:",attr"`
+	Str   string  `xml:",attr"`
+	Bytes []byte  `xml:",attr"`
 }
 ```
 
-An EndElement represents an XML end element. 
+### <a id="AttrsTest" href="#AttrsTest">type AttrsTest struct</a>
+
+```
+searchKey: xml.AttrsTest
+tags: [struct private]
+```
+
+```Go
+type AttrsTest struct {
+	Attrs []Attr  `xml:",any,attr"`
+	Int   int     `xml:",attr"`
+	Named int     `xml:"int,attr"`
+	Float float64 `xml:",attr"`
+	Uint8 uint8   `xml:",attr"`
+	Bool  bool    `xml:",attr"`
+	Str   string  `xml:",attr"`
+	Bytes []byte  `xml:",attr"`
+}
+```
+
+### <a id="BadAttr" href="#BadAttr">type BadAttr struct</a>
+
+```
+searchKey: xml.BadAttr
+tags: [struct private]
+```
+
+```Go
+type BadAttr struct {
+	Name map[string]string `xml:"name,attr"`
+}
+```
+
+### <a id="BadPathEmbeddedA" href="#BadPathEmbeddedA">type BadPathEmbeddedA struct</a>
+
+```
+searchKey: xml.BadPathEmbeddedA
+tags: [struct private]
+```
+
+```Go
+type BadPathEmbeddedA struct {
+	First string
+}
+```
+
+### <a id="BadPathEmbeddedB" href="#BadPathEmbeddedB">type BadPathEmbeddedB struct</a>
+
+```
+searchKey: xml.BadPathEmbeddedB
+tags: [struct private]
+```
+
+```Go
+type BadPathEmbeddedB struct {
+	Second string `xml:"First"`
+}
+```
+
+### <a id="BadPathTestA" href="#BadPathTestA">type BadPathTestA struct</a>
+
+```
+searchKey: xml.BadPathTestA
+tags: [struct private]
+```
+
+```Go
+type BadPathTestA struct {
+	First  string `xml:"items>item1"`
+	Other  string `xml:"items>item2"`
+	Second string `xml:"items"`
+}
+```
+
+### <a id="BadPathTestB" href="#BadPathTestB">type BadPathTestB struct</a>
+
+```
+searchKey: xml.BadPathTestB
+tags: [struct private]
+```
+
+```Go
+type BadPathTestB struct {
+	Other  string `xml:"items>item2>value"`
+	First  string `xml:"items>item1"`
+	Second string `xml:"items>item1>value"`
+}
+```
+
+### <a id="BadPathTestC" href="#BadPathTestC">type BadPathTestC struct</a>
+
+```
+searchKey: xml.BadPathTestC
+tags: [struct private]
+```
+
+```Go
+type BadPathTestC struct {
+	First  string
+	Second string `xml:"First"`
+}
+```
+
+### <a id="BadPathTestD" href="#BadPathTestD">type BadPathTestD struct</a>
+
+```
+searchKey: xml.BadPathTestD
+tags: [struct private]
+```
+
+```Go
+type BadPathTestD struct {
+	BadPathEmbeddedA
+	BadPathEmbeddedB
+}
+```
+
+### <a id="Book" href="#Book">type Book struct</a>
+
+```
+searchKey: xml.Book
+tags: [struct private]
+```
+
+```Go
+type Book struct {
+	XMLName struct{} `xml:"book"`
+	Title   string   `xml:",chardata"`
+}
+```
+
+### <a id="CDataTest" href="#CDataTest">type CDataTest struct</a>
+
+```
+searchKey: xml.CDataTest
+tags: [struct private]
+```
+
+```Go
+type CDataTest struct {
+	Chardata string `xml:",cdata"`
+}
+```
 
 ### <a id="CharData" href="#CharData">type CharData []byte</a>
 
 ```
 searchKey: xml.CharData
+tags: [array number]
 ```
 
 ```Go
@@ -2251,6 +1795,7 @@ A CharData represents XML character data (raw text), in which XML escape sequenc
 
 ```
 searchKey: xml.CharData.Copy
+tags: [function]
 ```
 
 ```Go
@@ -2259,10 +1804,53 @@ func (c CharData) Copy() CharData
 
 Copy creates a new copy of CharData. 
 
+### <a id="ChardataEmptyTest" href="#ChardataEmptyTest">type ChardataEmptyTest struct</a>
+
+```
+searchKey: xml.ChardataEmptyTest
+tags: [struct private]
+```
+
+```Go
+type ChardataEmptyTest struct {
+	XMLName  Name    `xml:"test"`
+	Contents *string `xml:",chardata"`
+}
+```
+
+### <a id="Child" href="#Child">type Child struct</a>
+
+```
+searchKey: xml.Child
+tags: [struct private]
+```
+
+```Go
+type Child struct {
+	G struct {
+		I int
+	}
+}
+```
+
+### <a id="ChildToEmbed" href="#ChildToEmbed">type ChildToEmbed struct</a>
+
+```
+searchKey: xml.ChildToEmbed
+tags: [struct private]
+```
+
+```Go
+type ChildToEmbed struct {
+	X bool
+}
+```
+
 ### <a id="Comment" href="#Comment">type Comment []byte</a>
 
 ```
 searchKey: xml.Comment
+tags: [array number]
 ```
 
 ```Go
@@ -2275,6 +1863,7 @@ A Comment represents an XML comment of the form <!--comment-->. The bytes do not
 
 ```
 searchKey: xml.Comment.Copy
+tags: [function]
 ```
 
 ```Go
@@ -2283,79 +1872,26 @@ func (c Comment) Copy() Comment
 
 Copy creates a new copy of Comment. 
 
-### <a id="ProcInst" href="#ProcInst">type ProcInst struct</a>
+### <a id="Data" href="#Data">type Data struct</a>
 
 ```
-searchKey: xml.ProcInst
+searchKey: xml.Data
+tags: [struct private]
 ```
 
 ```Go
-type ProcInst struct {
-	Target string
-	Inst   []byte
+type Data struct {
+	Bytes  []byte
+	Attr   []byte `xml:",attr"`
+	Custom MyBytes
 }
 ```
-
-A ProcInst represents an XML processing instruction of the form <?target inst?> 
-
-#### <a id="ProcInst.Copy" href="#ProcInst.Copy">func (p ProcInst) Copy() ProcInst</a>
-
-```
-searchKey: xml.ProcInst.Copy
-```
-
-```Go
-func (p ProcInst) Copy() ProcInst
-```
-
-Copy creates a new copy of ProcInst. 
-
-### <a id="Directive" href="#Directive">type Directive []byte</a>
-
-```
-searchKey: xml.Directive
-```
-
-```Go
-type Directive []byte
-```
-
-A Directive represents an XML directive of the form <!text>. The bytes do not include the <! and > markers. 
-
-#### <a id="Directive.Copy" href="#Directive.Copy">func (d Directive) Copy() Directive</a>
-
-```
-searchKey: xml.Directive.Copy
-```
-
-```Go
-func (d Directive) Copy() Directive
-```
-
-Copy creates a new copy of Directive. 
-
-### <a id="TokenReader" href="#TokenReader">type TokenReader interface</a>
-
-```
-searchKey: xml.TokenReader
-```
-
-```Go
-type TokenReader interface {
-	Token() (Token, error)
-}
-```
-
-A TokenReader is anything that can decode a stream of XML tokens, including a Decoder. 
-
-When Token encounters an error or end-of-file condition after successfully reading a token, it returns the token. It may return the (non-nil) error from the same call or return the error (and a nil token) from a subsequent call. An instance of this general case is that a TokenReader returning a non-nil token at the end of the token stream may return either io.EOF or a nil error. The next Read should return nil, io.EOF. 
-
-Implementations of Token are discouraged from returning a nil token with a nil error. Callers should treat a return of nil, nil as indicating that nothing happened; in particular it does not indicate EOF. 
 
 ### <a id="Decoder" href="#Decoder">type Decoder struct</a>
 
 ```
 searchKey: xml.Decoder
+tags: [struct]
 ```
 
 ```Go
@@ -2435,6 +1971,7 @@ A Decoder represents an XML parser reading a particular input stream. The parser
 
 ```
 searchKey: xml.NewDecoder
+tags: [method]
 ```
 
 ```Go
@@ -2447,6 +1984,7 @@ NewDecoder creates a new XML parser reading from r. If r does not implement io.B
 
 ```
 searchKey: xml.NewTokenDecoder
+tags: [method]
 ```
 
 ```Go
@@ -2459,6 +1997,7 @@ NewTokenDecoder creates a new XML parser using an underlying token stream.
 
 ```
 searchKey: xml.Decoder.Decode
+tags: [method]
 ```
 
 ```Go
@@ -2471,6 +2010,7 @@ Decode works like Unmarshal, except it reads the decoder stream to find the star
 
 ```
 searchKey: xml.Decoder.DecodeElement
+tags: [method]
 ```
 
 ```Go
@@ -2479,75 +2019,37 @@ func (d *Decoder) DecodeElement(v interface{}, start *StartElement) error
 
 DecodeElement works like Unmarshal except that it takes a pointer to the start XML element to decode into v. It is useful when a client reads some raw XML tokens itself but also wants to defer to Unmarshal for some elements. 
 
-#### <a id="Decoder.unmarshalInterface" href="#Decoder.unmarshalInterface">func (d *Decoder) unmarshalInterface(val Unmarshaler, start *StartElement) error</a>
+#### <a id="Decoder.InputOffset" href="#Decoder.InputOffset">func (d *Decoder) InputOffset() int64</a>
 
 ```
-searchKey: xml.Decoder.unmarshalInterface
-tags: [private]
-```
-
-```Go
-func (d *Decoder) unmarshalInterface(val Unmarshaler, start *StartElement) error
-```
-
-unmarshalInterface unmarshals a single XML element into val. start is the opening tag of the element. 
-
-#### <a id="Decoder.unmarshalTextInterface" href="#Decoder.unmarshalTextInterface">func (d *Decoder) unmarshalTextInterface(val encoding.TextUnmarshaler) error</a>
-
-```
-searchKey: xml.Decoder.unmarshalTextInterface
-tags: [private]
+searchKey: xml.Decoder.InputOffset
+tags: [function]
 ```
 
 ```Go
-func (d *Decoder) unmarshalTextInterface(val encoding.TextUnmarshaler) error
+func (d *Decoder) InputOffset() int64
 ```
 
-unmarshalTextInterface unmarshals a single XML element into val. The chardata contained in the element (but not its children) is passed to the text unmarshaler. 
+InputOffset returns the input stream byte offset of the current decoder position. The offset gives the location of the end of the most recently returned token and the beginning of the next token. 
 
-#### <a id="Decoder.unmarshalAttr" href="#Decoder.unmarshalAttr">func (d *Decoder) unmarshalAttr(val reflect.Value, attr Attr) error</a>
-
-```
-searchKey: xml.Decoder.unmarshalAttr
-tags: [private]
-```
-
-```Go
-func (d *Decoder) unmarshalAttr(val reflect.Value, attr Attr) error
-```
-
-unmarshalAttr unmarshals a single XML attribute into val. 
-
-#### <a id="Decoder.unmarshal" href="#Decoder.unmarshal">func (d *Decoder) unmarshal(val reflect.Value, start *StartElement) error</a>
+#### <a id="Decoder.RawToken" href="#Decoder.RawToken">func (d *Decoder) RawToken() (Token, error)</a>
 
 ```
-searchKey: xml.Decoder.unmarshal
-tags: [private]
+searchKey: xml.Decoder.RawToken
+tags: [function]
 ```
 
 ```Go
-func (d *Decoder) unmarshal(val reflect.Value, start *StartElement) error
+func (d *Decoder) RawToken() (Token, error)
 ```
 
-Unmarshal a single XML element into val. 
-
-#### <a id="Decoder.unmarshalPath" href="#Decoder.unmarshalPath">func (d *Decoder) unmarshalPath(tinfo *typeInfo, sv reflect.Value, parents []string, start *StartElement) (consumed bool, err error)</a>
-
-```
-searchKey: xml.Decoder.unmarshalPath
-tags: [private]
-```
-
-```Go
-func (d *Decoder) unmarshalPath(tinfo *typeInfo, sv reflect.Value, parents []string, start *StartElement) (consumed bool, err error)
-```
-
-unmarshalPath walks down an XML structure looking for wanted paths, and calls unmarshal on them. The consumed result tells whether XML elements have been consumed from the Decoder until start's matching end element, or if it's still untouched because start is uninteresting for sv's fields. 
+RawToken is like Token but does not verify that start and end elements match and does not translate name space prefixes to their corresponding URLs. 
 
 #### <a id="Decoder.Skip" href="#Decoder.Skip">func (d *Decoder) Skip() error</a>
 
 ```
 searchKey: xml.Decoder.Skip
+tags: [function]
 ```
 
 ```Go
@@ -2560,6 +2062,7 @@ Skip reads tokens until it has consumed the end element matching the most recent
 
 ```
 searchKey: xml.Decoder.Token
+tags: [function]
 ```
 
 ```Go
@@ -2576,70 +2079,98 @@ Token guarantees that the StartElement and EndElement tokens it returns are prop
 
 Token implements XML name spaces as described by [https://www.w3.org/TR/REC-xml-names/](https://www.w3.org/TR/REC-xml-names/). Each of the Name structures contained in the Token has the Space set to the URL identifying its name space when known. If Token encounters an unrecognized name space prefix, it uses the prefix as the Space rather than report an error. 
 
-#### <a id="Decoder.translate" href="#Decoder.translate">func (d *Decoder) translate(n *Name, isElementName bool)</a>
+#### <a id="Decoder.attrval" href="#Decoder.attrval">func (d *Decoder) attrval() []byte</a>
 
 ```
-searchKey: xml.Decoder.translate
-tags: [private]
-```
-
-```Go
-func (d *Decoder) translate(n *Name, isElementName bool)
-```
-
-Apply name space translation to name n. The default name space (for Space=="") applies only to element names, not to attribute names. 
-
-#### <a id="Decoder.switchToReader" href="#Decoder.switchToReader">func (d *Decoder) switchToReader(r io.Reader)</a>
-
-```
-searchKey: xml.Decoder.switchToReader
-tags: [private]
+searchKey: xml.Decoder.attrval
+tags: [function private]
 ```
 
 ```Go
-func (d *Decoder) switchToReader(r io.Reader)
+func (d *Decoder) attrval() []byte
 ```
 
-#### <a id="Decoder.push" href="#Decoder.push">func (d *Decoder) push(kind int) *stack</a>
+#### <a id="Decoder.autoClose" href="#Decoder.autoClose">func (d *Decoder) autoClose(t Token) (Token, bool)</a>
 
 ```
-searchKey: xml.Decoder.push
-tags: [private]
+searchKey: xml.Decoder.autoClose
+tags: [method private]
 ```
 
 ```Go
-func (d *Decoder) push(kind int) *stack
+func (d *Decoder) autoClose(t Token) (Token, bool)
 ```
+
+If the top element on the stack is autoclosing and t is not the end tag, invent the end tag. 
+
+#### <a id="Decoder.getc" href="#Decoder.getc">func (d *Decoder) getc() (b byte, ok bool)</a>
+
+```
+searchKey: xml.Decoder.getc
+tags: [function private]
+```
+
+```Go
+func (d *Decoder) getc() (b byte, ok bool)
+```
+
+Read a single byte. If there is no byte to read, return ok==false and leave the error in d.err. Maintain line number. 
+
+#### <a id="Decoder.mustgetc" href="#Decoder.mustgetc">func (d *Decoder) mustgetc() (b byte, ok bool)</a>
+
+```
+searchKey: xml.Decoder.mustgetc
+tags: [function private]
+```
+
+```Go
+func (d *Decoder) mustgetc() (b byte, ok bool)
+```
+
+Must read a single byte. If there is no byte to read, set d.err to SyntaxError("unexpected EOF") and return ok==false 
+
+#### <a id="Decoder.name" href="#Decoder.name">func (d *Decoder) name() (s string, ok bool)</a>
+
+```
+searchKey: xml.Decoder.name
+tags: [function private]
+```
+
+```Go
+func (d *Decoder) name() (s string, ok bool)
+```
+
+Get name: /first(first|second)*/ Do not set d.err if the name is missing (unless unexpected EOF is received): let the caller provide better context. 
+
+#### <a id="Decoder.nsname" href="#Decoder.nsname">func (d *Decoder) nsname() (name Name, ok bool)</a>
+
+```
+searchKey: xml.Decoder.nsname
+tags: [function private]
+```
+
+```Go
+func (d *Decoder) nsname() (name Name, ok bool)
+```
+
+Get name space name: name with a : stuck in the middle. The part before the : is the name space identifier. 
 
 #### <a id="Decoder.pop" href="#Decoder.pop">func (d *Decoder) pop() *stack</a>
 
 ```
 searchKey: xml.Decoder.pop
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (d *Decoder) pop() *stack
 ```
 
-#### <a id="Decoder.pushEOF" href="#Decoder.pushEOF">func (d *Decoder) pushEOF()</a>
-
-```
-searchKey: xml.Decoder.pushEOF
-tags: [private]
-```
-
-```Go
-func (d *Decoder) pushEOF()
-```
-
-Record that after the current element is finished (that element is already pushed on the stack) Token should return EOF until popEOF is called. 
-
 #### <a id="Decoder.popEOF" href="#Decoder.popEOF">func (d *Decoder) popEOF() bool</a>
 
 ```
 searchKey: xml.Decoder.popEOF
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -2648,11 +2179,48 @@ func (d *Decoder) popEOF() bool
 
 Undo a pushEOF. The element must have been finished, so the EOF should be at the top of the stack. 
 
+#### <a id="Decoder.popElement" href="#Decoder.popElement">func (d *Decoder) popElement(t *EndElement) bool</a>
+
+```
+searchKey: xml.Decoder.popElement
+tags: [method private]
+```
+
+```Go
+func (d *Decoder) popElement(t *EndElement) bool
+```
+
+Record that we are ending an element with the given name. The name must match the record at the top of the stack, which must be a pushElement record. After popping the element, apply any undo records from the stack to restore the name translations that existed before we saw this element. 
+
+#### <a id="Decoder.push" href="#Decoder.push">func (d *Decoder) push(kind int) *stack</a>
+
+```
+searchKey: xml.Decoder.push
+tags: [method private]
+```
+
+```Go
+func (d *Decoder) push(kind int) *stack
+```
+
+#### <a id="Decoder.pushEOF" href="#Decoder.pushEOF">func (d *Decoder) pushEOF()</a>
+
+```
+searchKey: xml.Decoder.pushEOF
+tags: [function private]
+```
+
+```Go
+func (d *Decoder) pushEOF()
+```
+
+Record that after the current element is finished (that element is already pushed on the stack) Token should return EOF until popEOF is called. 
+
 #### <a id="Decoder.pushElement" href="#Decoder.pushElement">func (d *Decoder) pushElement(name Name)</a>
 
 ```
 searchKey: xml.Decoder.pushElement
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -2665,7 +2233,7 @@ Record that we are starting an element with the given name.
 
 ```
 searchKey: xml.Decoder.pushNs
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -2674,200 +2242,22 @@ func (d *Decoder) pushNs(local string, url string, ok bool)
 
 Record that we are changing the value of ns[local]. The old value is url, ok. 
 
-#### <a id="Decoder.syntaxError" href="#Decoder.syntaxError">func (d *Decoder) syntaxError(msg string) error</a>
-
-```
-searchKey: xml.Decoder.syntaxError
-tags: [private]
-```
-
-```Go
-func (d *Decoder) syntaxError(msg string) error
-```
-
-Creates a SyntaxError with the current line number. 
-
-#### <a id="Decoder.popElement" href="#Decoder.popElement">func (d *Decoder) popElement(t *EndElement) bool</a>
-
-```
-searchKey: xml.Decoder.popElement
-tags: [private]
-```
-
-```Go
-func (d *Decoder) popElement(t *EndElement) bool
-```
-
-Record that we are ending an element with the given name. The name must match the record at the top of the stack, which must be a pushElement record. After popping the element, apply any undo records from the stack to restore the name translations that existed before we saw this element. 
-
-#### <a id="Decoder.autoClose" href="#Decoder.autoClose">func (d *Decoder) autoClose(t Token) (Token, bool)</a>
-
-```
-searchKey: xml.Decoder.autoClose
-tags: [private]
-```
-
-```Go
-func (d *Decoder) autoClose(t Token) (Token, bool)
-```
-
-If the top element on the stack is autoclosing and t is not the end tag, invent the end tag. 
-
-#### <a id="Decoder.RawToken" href="#Decoder.RawToken">func (d *Decoder) RawToken() (Token, error)</a>
-
-```
-searchKey: xml.Decoder.RawToken
-```
-
-```Go
-func (d *Decoder) RawToken() (Token, error)
-```
-
-RawToken is like Token but does not verify that start and end elements match and does not translate name space prefixes to their corresponding URLs. 
-
 #### <a id="Decoder.rawToken" href="#Decoder.rawToken">func (d *Decoder) rawToken() (Token, error)</a>
 
 ```
 searchKey: xml.Decoder.rawToken
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (d *Decoder) rawToken() (Token, error)
 ```
 
-#### <a id="Decoder.attrval" href="#Decoder.attrval">func (d *Decoder) attrval() []byte</a>
-
-```
-searchKey: xml.Decoder.attrval
-tags: [private]
-```
-
-```Go
-func (d *Decoder) attrval() []byte
-```
-
-#### <a id="Decoder.space" href="#Decoder.space">func (d *Decoder) space()</a>
-
-```
-searchKey: xml.Decoder.space
-tags: [private]
-```
-
-```Go
-func (d *Decoder) space()
-```
-
-Skip spaces if any 
-
-#### <a id="Decoder.getc" href="#Decoder.getc">func (d *Decoder) getc() (b byte, ok bool)</a>
-
-```
-searchKey: xml.Decoder.getc
-tags: [private]
-```
-
-```Go
-func (d *Decoder) getc() (b byte, ok bool)
-```
-
-Read a single byte. If there is no byte to read, return ok==false and leave the error in d.err. Maintain line number. 
-
-#### <a id="Decoder.InputOffset" href="#Decoder.InputOffset">func (d *Decoder) InputOffset() int64</a>
-
-```
-searchKey: xml.Decoder.InputOffset
-```
-
-```Go
-func (d *Decoder) InputOffset() int64
-```
-
-InputOffset returns the input stream byte offset of the current decoder position. The offset gives the location of the end of the most recently returned token and the beginning of the next token. 
-
-#### <a id="Decoder.savedOffset" href="#Decoder.savedOffset">func (d *Decoder) savedOffset() int</a>
-
-```
-searchKey: xml.Decoder.savedOffset
-tags: [private]
-```
-
-```Go
-func (d *Decoder) savedOffset() int
-```
-
-Return saved offset. If we did ungetc (nextByte >= 0), have to back up one. 
-
-#### <a id="Decoder.mustgetc" href="#Decoder.mustgetc">func (d *Decoder) mustgetc() (b byte, ok bool)</a>
-
-```
-searchKey: xml.Decoder.mustgetc
-tags: [private]
-```
-
-```Go
-func (d *Decoder) mustgetc() (b byte, ok bool)
-```
-
-Must read a single byte. If there is no byte to read, set d.err to SyntaxError("unexpected EOF") and return ok==false 
-
-#### <a id="Decoder.ungetc" href="#Decoder.ungetc">func (d *Decoder) ungetc(b byte)</a>
-
-```
-searchKey: xml.Decoder.ungetc
-tags: [private]
-```
-
-```Go
-func (d *Decoder) ungetc(b byte)
-```
-
-Unread a single byte. 
-
-#### <a id="Decoder.text" href="#Decoder.text">func (d *Decoder) text(quote int, cdata bool) []byte</a>
-
-```
-searchKey: xml.Decoder.text
-tags: [private]
-```
-
-```Go
-func (d *Decoder) text(quote int, cdata bool) []byte
-```
-
-Read plain text section (XML calls it character data). If quote >= 0, we are in a quoted string and need to find the matching quote. If cdata == true, we are in a <![CDATA[ section and need to find ]]>. On failure return nil and leave the error in d.err. 
-
-#### <a id="Decoder.nsname" href="#Decoder.nsname">func (d *Decoder) nsname() (name Name, ok bool)</a>
-
-```
-searchKey: xml.Decoder.nsname
-tags: [private]
-```
-
-```Go
-func (d *Decoder) nsname() (name Name, ok bool)
-```
-
-Get name space name: name with a : stuck in the middle. The part before the : is the name space identifier. 
-
-#### <a id="Decoder.name" href="#Decoder.name">func (d *Decoder) name() (s string, ok bool)</a>
-
-```
-searchKey: xml.Decoder.name
-tags: [private]
-```
-
-```Go
-func (d *Decoder) name() (s string, ok bool)
-```
-
-Get name: /first(first|second)*/ Do not set d.err if the name is missing (unless unexpected EOF is received): let the caller provide better context. 
-
 #### <a id="Decoder.readName" href="#Decoder.readName">func (d *Decoder) readName() (ok bool)</a>
 
 ```
 searchKey: xml.Decoder.readName
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -2876,101 +2266,310 @@ func (d *Decoder) readName() (ok bool)
 
 Read a name and append its bytes to d.buf. The name is delimited by any single-byte character not valid in names. All multi-byte characters are accepted; the caller must check their validity. 
 
-### <a id="stack" href="#stack">type stack struct</a>
+#### <a id="Decoder.savedOffset" href="#Decoder.savedOffset">func (d *Decoder) savedOffset() int</a>
 
 ```
-searchKey: xml.stack
-tags: [private]
+searchKey: xml.Decoder.savedOffset
+tags: [function private]
 ```
 
 ```Go
-type stack struct {
-	next *stack
-	kind int
-	name Name
-	ok   bool
+func (d *Decoder) savedOffset() int
+```
+
+Return saved offset. If we did ungetc (nextByte >= 0), have to back up one. 
+
+#### <a id="Decoder.space" href="#Decoder.space">func (d *Decoder) space()</a>
+
+```
+searchKey: xml.Decoder.space
+tags: [function private]
+```
+
+```Go
+func (d *Decoder) space()
+```
+
+Skip spaces if any 
+
+#### <a id="Decoder.switchToReader" href="#Decoder.switchToReader">func (d *Decoder) switchToReader(r io.Reader)</a>
+
+```
+searchKey: xml.Decoder.switchToReader
+tags: [method private]
+```
+
+```Go
+func (d *Decoder) switchToReader(r io.Reader)
+```
+
+#### <a id="Decoder.syntaxError" href="#Decoder.syntaxError">func (d *Decoder) syntaxError(msg string) error</a>
+
+```
+searchKey: xml.Decoder.syntaxError
+tags: [method private]
+```
+
+```Go
+func (d *Decoder) syntaxError(msg string) error
+```
+
+Creates a SyntaxError with the current line number. 
+
+#### <a id="Decoder.text" href="#Decoder.text">func (d *Decoder) text(quote int, cdata bool) []byte</a>
+
+```
+searchKey: xml.Decoder.text
+tags: [method private]
+```
+
+```Go
+func (d *Decoder) text(quote int, cdata bool) []byte
+```
+
+Read plain text section (XML calls it character data). If quote >= 0, we are in a quoted string and need to find the matching quote. If cdata == true, we are in a <![CDATA[ section and need to find ]]>. On failure return nil and leave the error in d.err. 
+
+#### <a id="Decoder.translate" href="#Decoder.translate">func (d *Decoder) translate(n *Name, isElementName bool)</a>
+
+```
+searchKey: xml.Decoder.translate
+tags: [method private]
+```
+
+```Go
+func (d *Decoder) translate(n *Name, isElementName bool)
+```
+
+Apply name space translation to name n. The default name space (for Space=="") applies only to element names, not to attribute names. 
+
+#### <a id="Decoder.ungetc" href="#Decoder.ungetc">func (d *Decoder) ungetc(b byte)</a>
+
+```
+searchKey: xml.Decoder.ungetc
+tags: [method private]
+```
+
+```Go
+func (d *Decoder) ungetc(b byte)
+```
+
+Unread a single byte. 
+
+#### <a id="Decoder.unmarshal" href="#Decoder.unmarshal">func (d *Decoder) unmarshal(val reflect.Value, start *StartElement) error</a>
+
+```
+searchKey: xml.Decoder.unmarshal
+tags: [method private]
+```
+
+```Go
+func (d *Decoder) unmarshal(val reflect.Value, start *StartElement) error
+```
+
+Unmarshal a single XML element into val. 
+
+#### <a id="Decoder.unmarshalAttr" href="#Decoder.unmarshalAttr">func (d *Decoder) unmarshalAttr(val reflect.Value, attr Attr) error</a>
+
+```
+searchKey: xml.Decoder.unmarshalAttr
+tags: [method private]
+```
+
+```Go
+func (d *Decoder) unmarshalAttr(val reflect.Value, attr Attr) error
+```
+
+unmarshalAttr unmarshals a single XML attribute into val. 
+
+#### <a id="Decoder.unmarshalInterface" href="#Decoder.unmarshalInterface">func (d *Decoder) unmarshalInterface(val Unmarshaler, start *StartElement) error</a>
+
+```
+searchKey: xml.Decoder.unmarshalInterface
+tags: [method private]
+```
+
+```Go
+func (d *Decoder) unmarshalInterface(val Unmarshaler, start *StartElement) error
+```
+
+unmarshalInterface unmarshals a single XML element into val. start is the opening tag of the element. 
+
+#### <a id="Decoder.unmarshalPath" href="#Decoder.unmarshalPath">func (d *Decoder) unmarshalPath(tinfo *typeInfo, sv reflect.Value, parents []string, start *StartElement) (consumed bool, err error)</a>
+
+```
+searchKey: xml.Decoder.unmarshalPath
+tags: [method private]
+```
+
+```Go
+func (d *Decoder) unmarshalPath(tinfo *typeInfo, sv reflect.Value, parents []string, start *StartElement) (consumed bool, err error)
+```
+
+unmarshalPath walks down an XML structure looking for wanted paths, and calls unmarshal on them. The consumed result tells whether XML elements have been consumed from the Decoder until start's matching end element, or if it's still untouched because start is uninteresting for sv's fields. 
+
+#### <a id="Decoder.unmarshalTextInterface" href="#Decoder.unmarshalTextInterface">func (d *Decoder) unmarshalTextInterface(val encoding.TextUnmarshaler) error</a>
+
+```
+searchKey: xml.Decoder.unmarshalTextInterface
+tags: [method private]
+```
+
+```Go
+func (d *Decoder) unmarshalTextInterface(val encoding.TextUnmarshaler) error
+```
+
+unmarshalTextInterface unmarshals a single XML element into val. The chardata contained in the element (but not its children) is passed to the text unmarshaler. 
+
+### <a id="Departure" href="#Departure">type Departure struct</a>
+
+```
+searchKey: xml.Departure
+tags: [struct private]
+```
+
+```Go
+type Departure struct {
+	XMLName struct{}  `xml:"departure"`
+	When    time.Time `xml:",chardata"`
 }
 ```
 
-Parsing state - stack holds old name space translations and the current set of open elements. The translations to pop when ending a given tag are *below* it on the stack, which is more work but forced on us by XML. 
-
-### <a id="DriveType" href="#DriveType">type DriveType int</a>
+### <a id="DirectAny" href="#DirectAny">type DirectAny struct</a>
 
 ```
-searchKey: xml.DriveType
-tags: [private]
+searchKey: xml.DirectAny
+tags: [struct private]
 ```
 
 ```Go
-type DriveType int
-```
-
-### <a id="Passenger" href="#Passenger">type Passenger struct</a>
-
-```
-searchKey: xml.Passenger
-tags: [private]
-```
-
-```Go
-type Passenger struct {
-	Name   []string `xml:"name"`
-	Weight float32  `xml:"weight"`
+type DirectAny struct {
+	T1  T1
+	Any string `xml:",any"`
+	T2  T2
 }
 ```
 
-### <a id="Ship" href="#Ship">type Ship struct</a>
+### <a id="DirectCDATA" href="#DirectCDATA">type DirectCDATA struct</a>
 
 ```
-searchKey: xml.Ship
-tags: [private]
+searchKey: xml.DirectCDATA
+tags: [struct private]
 ```
 
 ```Go
-type Ship struct {
-	XMLName struct{} `xml:"spaceship"`
-
-	Name      string       `xml:"name,attr"`
-	Pilot     string       `xml:"pilot,attr"`
-	Drive     DriveType    `xml:"drive"`
-	Age       uint         `xml:"age"`
-	Passenger []*Passenger `xml:"passenger"`
-	secret    string
+type DirectCDATA struct {
+	T1    T1
+	CDATA string `xml:",cdata"`
+	T2    T2
 }
 ```
 
-### <a id="NamedType" href="#NamedType">type NamedType string</a>
+### <a id="DirectChardata" href="#DirectChardata">type DirectChardata struct</a>
 
 ```
-searchKey: xml.NamedType
-tags: [private]
-```
-
-```Go
-type NamedType string
-```
-
-### <a id="Port" href="#Port">type Port struct</a>
-
-```
-searchKey: xml.Port
-tags: [private]
+searchKey: xml.DirectChardata
+tags: [struct private]
 ```
 
 ```Go
-type Port struct {
-	XMLName struct{} `xml:"port"`
-	Type    string   `xml:"type,attr,omitempty"`
-	Comment string   `xml:",comment"`
-	Number  string   `xml:",chardata"`
+type DirectChardata struct {
+	T1       T1
+	Chardata string `xml:",chardata"`
+	T2       T2
 }
 ```
+
+### <a id="DirectComment" href="#DirectComment">type DirectComment struct</a>
+
+```
+searchKey: xml.DirectComment
+tags: [struct private]
+```
+
+```Go
+type DirectComment struct {
+	T1      T1
+	Comment string `xml:",comment"`
+	T2      T2
+}
+```
+
+### <a id="DirectElement" href="#DirectElement">type DirectElement struct</a>
+
+```
+searchKey: xml.DirectElement
+tags: [struct private]
+```
+
+```Go
+type DirectElement struct {
+	T1      T1
+	Element string
+	T2      T2
+}
+```
+
+### <a id="DirectInnerXML" href="#DirectInnerXML">type DirectInnerXML struct</a>
+
+```
+searchKey: xml.DirectInnerXML
+tags: [struct private]
+```
+
+```Go
+type DirectInnerXML struct {
+	T1       T1
+	InnerXML string `xml:",innerxml"`
+	T2       T2
+}
+```
+
+### <a id="DirectOmitEmpty" href="#DirectOmitEmpty">type DirectOmitEmpty struct</a>
+
+```
+searchKey: xml.DirectOmitEmpty
+tags: [struct private]
+```
+
+```Go
+type DirectOmitEmpty struct {
+	T1        T1
+	OmitEmpty string `xml:",omitempty"`
+	T2        T2
+}
+```
+
+### <a id="Directive" href="#Directive">type Directive []byte</a>
+
+```
+searchKey: xml.Directive
+tags: [array number]
+```
+
+```Go
+type Directive []byte
+```
+
+A Directive represents an XML directive of the form <!text>. The bytes do not include the <! and > markers. 
+
+#### <a id="Directive.Copy" href="#Directive.Copy">func (d Directive) Copy() Directive</a>
+
+```
+searchKey: xml.Directive.Copy
+tags: [function]
+```
+
+```Go
+func (d Directive) Copy() Directive
+```
+
+Copy creates a new copy of Directive. 
 
 ### <a id="Domain" href="#Domain">type Domain struct</a>
 
 ```
 searchKey: xml.Domain
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -2982,205 +2581,22 @@ type Domain struct {
 }
 ```
 
-### <a id="Book" href="#Book">type Book struct</a>
+### <a id="DriveType" href="#DriveType">type DriveType int</a>
 
 ```
-searchKey: xml.Book
-tags: [private]
-```
-
-```Go
-type Book struct {
-	XMLName struct{} `xml:"book"`
-	Title   string   `xml:",chardata"`
-}
-```
-
-### <a id="Event" href="#Event">type Event struct</a>
-
-```
-searchKey: xml.Event
-tags: [private]
+searchKey: xml.DriveType
+tags: [number private]
 ```
 
 ```Go
-type Event struct {
-	XMLName struct{} `xml:"event"`
-	Year    int      `xml:",chardata"`
-}
-```
-
-### <a id="Movie" href="#Movie">type Movie struct</a>
-
-```
-searchKey: xml.Movie
-tags: [private]
-```
-
-```Go
-type Movie struct {
-	XMLName struct{} `xml:"movie"`
-	Length  uint     `xml:",chardata"`
-}
-```
-
-### <a id="Pi" href="#Pi">type Pi struct</a>
-
-```
-searchKey: xml.Pi
-tags: [private]
-```
-
-```Go
-type Pi struct {
-	XMLName       struct{} `xml:"pi"`
-	Approximation float32  `xml:",chardata"`
-}
-```
-
-### <a id="Universe" href="#Universe">type Universe struct</a>
-
-```
-searchKey: xml.Universe
-tags: [private]
-```
-
-```Go
-type Universe struct {
-	XMLName struct{} `xml:"universe"`
-	Visible float64  `xml:",chardata"`
-}
-```
-
-### <a id="Particle" href="#Particle">type Particle struct</a>
-
-```
-searchKey: xml.Particle
-tags: [private]
-```
-
-```Go
-type Particle struct {
-	XMLName struct{} `xml:"particle"`
-	HasMass bool     `xml:",chardata"`
-}
-```
-
-### <a id="Departure" href="#Departure">type Departure struct</a>
-
-```
-searchKey: xml.Departure
-tags: [private]
-```
-
-```Go
-type Departure struct {
-	XMLName struct{}  `xml:"departure"`
-	When    time.Time `xml:",chardata"`
-}
-```
-
-### <a id="SecretAgent" href="#SecretAgent">type SecretAgent struct</a>
-
-```
-searchKey: xml.SecretAgent
-tags: [private]
-```
-
-```Go
-type SecretAgent struct {
-	XMLName   struct{} `xml:"agent"`
-	Handle    string   `xml:"handle,attr"`
-	Identity  string
-	Obfuscate string `xml:",innerxml"`
-}
-```
-
-### <a id="NestedItems" href="#NestedItems">type NestedItems struct</a>
-
-```
-searchKey: xml.NestedItems
-tags: [private]
-```
-
-```Go
-type NestedItems struct {
-	XMLName struct{} `xml:"result"`
-	Items   []string `xml:">item"`
-	Item1   []string `xml:"Items>item1"`
-}
-```
-
-### <a id="NestedOrder" href="#NestedOrder">type NestedOrder struct</a>
-
-```
-searchKey: xml.NestedOrder
-tags: [private]
-```
-
-```Go
-type NestedOrder struct {
-	XMLName struct{} `xml:"result"`
-	Field1  string   `xml:"parent>c"`
-	Field2  string   `xml:"parent>b"`
-	Field3  string   `xml:"parent>a"`
-}
-```
-
-### <a id="MixedNested" href="#MixedNested">type MixedNested struct</a>
-
-```
-searchKey: xml.MixedNested
-tags: [private]
-```
-
-```Go
-type MixedNested struct {
-	XMLName struct{} `xml:"result"`
-	A       string   `xml:"parent1>a"`
-	B       string   `xml:"b"`
-	C       string   `xml:"parent1>parent2>c"`
-	D       string   `xml:"parent1>d"`
-}
-```
-
-### <a id="NilTest" href="#NilTest">type NilTest struct</a>
-
-```
-searchKey: xml.NilTest
-tags: [private]
-```
-
-```Go
-type NilTest struct {
-	A interface{} `xml:"parent1>parent2>a"`
-	B interface{} `xml:"parent1>b"`
-	C interface{} `xml:"parent1>parent2>c"`
-}
-```
-
-### <a id="Service" href="#Service">type Service struct</a>
-
-```
-searchKey: xml.Service
-tags: [private]
-```
-
-```Go
-type Service struct {
-	XMLName struct{} `xml:"service"`
-	Domain  *Domain  `xml:"host>domain"`
-	Port    *Port    `xml:"host>port"`
-	Extra1  interface{}
-	Extra2  interface{} `xml:"host>extra2"`
-}
+type DriveType int
 ```
 
 ### <a id="EmbedA" href="#EmbedA">type EmbedA struct</a>
 
 ```
 searchKey: xml.EmbedA
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -3196,7 +2612,7 @@ type EmbedA struct {
 
 ```
 searchKey: xml.EmbedB
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -3210,7 +2626,7 @@ type EmbedB struct {
 
 ```
 searchKey: xml.EmbedC
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -3222,25 +2638,745 @@ type EmbedC struct {
 }
 ```
 
-### <a id="embedD" href="#embedD">type embedD struct</a>
+### <a id="EmbedInt" href="#EmbedInt">type EmbedInt struct</a>
 
 ```
-searchKey: xml.embedD
-tags: [private]
+searchKey: xml.EmbedInt
+tags: [struct private]
 ```
 
 ```Go
-type embedD struct {
-	fieldD string
-	FieldE string // Promoted and visible when embedD is embedded.
+type EmbedInt struct {
+	MyInt
 }
 ```
+
+### <a id="Encoder" href="#Encoder">type Encoder struct</a>
+
+```
+searchKey: xml.Encoder
+tags: [struct]
+```
+
+```Go
+type Encoder struct {
+	p printer
+}
+```
+
+An Encoder writes XML data to an output stream. 
+
+#### <a id="NewEncoder" href="#NewEncoder">func NewEncoder(w io.Writer) *Encoder</a>
+
+```
+searchKey: xml.NewEncoder
+tags: [method]
+```
+
+```Go
+func NewEncoder(w io.Writer) *Encoder
+```
+
+NewEncoder returns a new encoder that writes to w. 
+
+#### <a id="Encoder.Encode" href="#Encoder.Encode">func (enc *Encoder) Encode(v interface{}) error</a>
+
+```
+searchKey: xml.Encoder.Encode
+tags: [method]
+```
+
+```Go
+func (enc *Encoder) Encode(v interface{}) error
+```
+
+Encode writes the XML encoding of v to the stream. 
+
+See the documentation for Marshal for details about the conversion of Go values to XML. 
+
+Encode calls Flush before returning. 
+
+#### <a id="Encoder.EncodeElement" href="#Encoder.EncodeElement">func (enc *Encoder) EncodeElement(v interface{}, start StartElement) error</a>
+
+```
+searchKey: xml.Encoder.EncodeElement
+tags: [method]
+```
+
+```Go
+func (enc *Encoder) EncodeElement(v interface{}, start StartElement) error
+```
+
+EncodeElement writes the XML encoding of v to the stream, using start as the outermost tag in the encoding. 
+
+See the documentation for Marshal for details about the conversion of Go values to XML. 
+
+EncodeElement calls Flush before returning. 
+
+#### <a id="Encoder.EncodeToken" href="#Encoder.EncodeToken">func (enc *Encoder) EncodeToken(t Token) error</a>
+
+```
+searchKey: xml.Encoder.EncodeToken
+tags: [method]
+```
+
+```Go
+func (enc *Encoder) EncodeToken(t Token) error
+```
+
+EncodeToken writes the given XML token to the stream. It returns an error if StartElement and EndElement tokens are not properly matched. 
+
+EncodeToken does not call Flush, because usually it is part of a larger operation such as Encode or EncodeElement (or a custom Marshaler's MarshalXML invoked during those), and those will call Flush when finished. Callers that create an Encoder and then invoke EncodeToken directly, without using Encode or EncodeElement, need to call Flush when finished to ensure that the XML is written to the underlying writer. 
+
+EncodeToken allows writing a ProcInst with Target set to "xml" only as the first token in the stream. 
+
+#### <a id="Encoder.Flush" href="#Encoder.Flush">func (enc *Encoder) Flush() error</a>
+
+```
+searchKey: xml.Encoder.Flush
+tags: [function]
+```
+
+```Go
+func (enc *Encoder) Flush() error
+```
+
+Flush flushes any buffered XML to the underlying writer. See the EncodeToken documentation for details about when it is necessary. 
+
+#### <a id="Encoder.Indent" href="#Encoder.Indent">func (enc *Encoder) Indent(prefix, indent string)</a>
+
+```
+searchKey: xml.Encoder.Indent
+tags: [method]
+```
+
+```Go
+func (enc *Encoder) Indent(prefix, indent string)
+```
+
+Indent sets the encoder to generate XML in which each element begins on a new indented line that starts with prefix and is followed by one or more copies of indent according to the nesting depth. 
+
+### <a id="EndElement" href="#EndElement">type EndElement struct</a>
+
+```
+searchKey: xml.EndElement
+tags: [struct]
+```
+
+```Go
+type EndElement struct {
+	Name Name
+}
+```
+
+An EndElement represents an XML end element. 
+
+### <a id="Entry" href="#Entry">type Entry struct</a>
+
+```
+searchKey: xml.Entry
+tags: [struct private]
+```
+
+```Go
+type Entry struct {
+	Title   string    `xml:"title"`
+	ID      string    `xml:"id"`
+	Link    []Link    `xml:"link"`
+	Updated time.Time `xml:"updated"`
+	Author  Person    `xml:"author"`
+	Summary Text      `xml:"summary"`
+}
+```
+
+### <a id="Event" href="#Event">type Event struct</a>
+
+```
+searchKey: xml.Event
+tags: [struct private]
+```
+
+```Go
+type Event struct {
+	XMLName struct{} `xml:"event"`
+	Year    int      `xml:",chardata"`
+}
+```
+
+### <a id="Failure" href="#Failure">type Failure struct{}</a>
+
+```
+searchKey: xml.Failure
+tags: [struct private]
+```
+
+```Go
+type Failure struct{}
+```
+
+#### <a id="Failure.UnmarshalXML" href="#Failure.UnmarshalXML">func (Failure) UnmarshalXML(*Decoder, StartElement) error</a>
+
+```
+searchKey: xml.Failure.UnmarshalXML
+tags: [method private]
+```
+
+```Go
+func (Failure) UnmarshalXML(*Decoder, StartElement) error
+```
+
+### <a id="Feed" href="#Feed">type Feed struct</a>
+
+```
+searchKey: xml.Feed
+tags: [struct private]
+```
+
+```Go
+type Feed struct {
+	XMLName Name      `xml:"http://www.w3.org/2005/Atom feed"`
+	Title   string    `xml:"title"`
+	ID      string    `xml:"id"`
+	Link    []Link    `xml:"link"`
+	Updated time.Time `xml:"updated,attr"`
+	Author  Person    `xml:"author"`
+	Entry   []Entry   `xml:"entry"`
+}
+```
+
+### <a id="IXField" href="#IXField">type IXField struct</a>
+
+```
+searchKey: xml.IXField
+tags: [struct private]
+```
+
+```Go
+type IXField struct {
+	Five        int      `xml:"five"`
+	NotInnerXML []string `xml:",innerxml"`
+}
+```
+
+### <a id="IfaceAny" href="#IfaceAny">type IfaceAny struct</a>
+
+```
+searchKey: xml.IfaceAny
+tags: [struct private]
+```
+
+```Go
+type IfaceAny struct {
+	T1  T1
+	Any interface{} `xml:",any"`
+	T2  T2
+}
+```
+
+### <a id="IfaceCDATA" href="#IfaceCDATA">type IfaceCDATA struct</a>
+
+```
+searchKey: xml.IfaceCDATA
+tags: [struct private]
+```
+
+```Go
+type IfaceCDATA struct {
+	T1    T1
+	CDATA interface{} `xml:",cdata"`
+	T2    T2
+}
+```
+
+### <a id="IfaceChardata" href="#IfaceChardata">type IfaceChardata struct</a>
+
+```
+searchKey: xml.IfaceChardata
+tags: [struct private]
+```
+
+```Go
+type IfaceChardata struct {
+	T1       T1
+	Chardata interface{} `xml:",chardata"`
+	T2       T2
+}
+```
+
+### <a id="IfaceComment" href="#IfaceComment">type IfaceComment struct</a>
+
+```
+searchKey: xml.IfaceComment
+tags: [struct private]
+```
+
+```Go
+type IfaceComment struct {
+	T1      T1
+	Comment interface{} `xml:",comment"`
+	T2      T2
+}
+```
+
+### <a id="IfaceElement" href="#IfaceElement">type IfaceElement struct</a>
+
+```
+searchKey: xml.IfaceElement
+tags: [struct private]
+```
+
+```Go
+type IfaceElement struct {
+	T1      T1
+	Element interface{}
+	T2      T2
+}
+```
+
+### <a id="IfaceInnerXML" href="#IfaceInnerXML">type IfaceInnerXML struct</a>
+
+```
+searchKey: xml.IfaceInnerXML
+tags: [struct private]
+```
+
+```Go
+type IfaceInnerXML struct {
+	T1       T1
+	InnerXML interface{} `xml:",innerxml"`
+	T2       T2
+}
+```
+
+### <a id="IfaceOmitEmpty" href="#IfaceOmitEmpty">type IfaceOmitEmpty struct</a>
+
+```
+searchKey: xml.IfaceOmitEmpty
+tags: [struct private]
+```
+
+```Go
+type IfaceOmitEmpty struct {
+	T1        T1
+	OmitEmpty interface{} `xml:",omitempty"`
+	T2        T2
+}
+```
+
+### <a id="IgnoreTest" href="#IgnoreTest">type IgnoreTest struct</a>
+
+```
+searchKey: xml.IgnoreTest
+tags: [struct private]
+```
+
+```Go
+type IgnoreTest struct {
+	PublicSecret string `xml:"-"`
+}
+```
+
+### <a id="IndirAny" href="#IndirAny">type IndirAny struct</a>
+
+```
+searchKey: xml.IndirAny
+tags: [struct private]
+```
+
+```Go
+type IndirAny struct {
+	T1  T1
+	Any *string `xml:",any"`
+	T2  T2
+}
+```
+
+### <a id="IndirCDATA" href="#IndirCDATA">type IndirCDATA struct</a>
+
+```
+searchKey: xml.IndirCDATA
+tags: [struct private]
+```
+
+```Go
+type IndirCDATA struct {
+	T1    T1
+	CDATA *string `xml:",cdata"`
+	T2    T2
+}
+```
+
+### <a id="IndirChardata" href="#IndirChardata">type IndirChardata struct</a>
+
+```
+searchKey: xml.IndirChardata
+tags: [struct private]
+```
+
+```Go
+type IndirChardata struct {
+	T1       T1
+	Chardata *string `xml:",chardata"`
+	T2       T2
+}
+```
+
+### <a id="IndirComment" href="#IndirComment">type IndirComment struct</a>
+
+```
+searchKey: xml.IndirComment
+tags: [struct private]
+```
+
+```Go
+type IndirComment struct {
+	T1      T1
+	Comment *string `xml:",comment"`
+	T2      T2
+}
+```
+
+### <a id="IndirElement" href="#IndirElement">type IndirElement struct</a>
+
+```
+searchKey: xml.IndirElement
+tags: [struct private]
+```
+
+```Go
+type IndirElement struct {
+	T1      T1
+	Element *string
+	T2      T2
+}
+```
+
+### <a id="IndirInnerXML" href="#IndirInnerXML">type IndirInnerXML struct</a>
+
+```
+searchKey: xml.IndirInnerXML
+tags: [struct private]
+```
+
+```Go
+type IndirInnerXML struct {
+	T1       T1
+	InnerXML *string `xml:",innerxml"`
+	T2       T2
+}
+```
+
+### <a id="IndirOmitEmpty" href="#IndirOmitEmpty">type IndirOmitEmpty struct</a>
+
+```
+searchKey: xml.IndirOmitEmpty
+tags: [struct private]
+```
+
+```Go
+type IndirOmitEmpty struct {
+	T1        T1
+	OmitEmpty *string `xml:",omitempty"`
+	T2        T2
+}
+```
+
+### <a id="InnerStruct" href="#InnerStruct">type InnerStruct struct</a>
+
+```
+searchKey: xml.InnerStruct
+tags: [struct private]
+```
+
+```Go
+type InnerStruct struct {
+	XMLName Name `xml:"testns outer"`
+}
+```
+
+### <a id="InvalidXMLName" href="#InvalidXMLName">type InvalidXMLName struct</a>
+
+```
+searchKey: xml.InvalidXMLName
+tags: [struct private]
+```
+
+```Go
+type InvalidXMLName struct {
+	XMLName Name `xml:"error"`
+	Type    struct {
+		XMLName Name `xml:"type,attr"`
+	}
+}
+```
+
+### <a id="Link" href="#Link">type Link struct</a>
+
+```
+searchKey: xml.Link
+tags: [struct private]
+```
+
+```Go
+type Link struct {
+	Rel  string `xml:"rel,attr,omitempty"`
+	Href string `xml:"href,attr"`
+}
+```
+
+### <a id="Marshaler" href="#Marshaler">type Marshaler interface</a>
+
+```
+searchKey: xml.Marshaler
+tags: [interface]
+```
+
+```Go
+type Marshaler interface {
+	MarshalXML(e *Encoder, start StartElement) error
+}
+```
+
+Marshaler is the interface implemented by objects that can marshal themselves into valid XML elements. 
+
+MarshalXML encodes the receiver as zero or more XML elements. By convention, arrays or slices are typically encoded as a sequence of elements, one per entry. Using start as the element tag is not required, but doing so will enable Unmarshal to match the XML elements to the correct struct field. One common implementation strategy is to construct a separate value with a layout corresponding to the desired XML and then to encode it using e.EncodeElement. Another common strategy is to use repeated calls to e.EncodeToken to generate the XML output one token at a time. The sequence of encoded tokens must make up zero or more valid XML elements. 
+
+### <a id="MarshalerAttr" href="#MarshalerAttr">type MarshalerAttr interface</a>
+
+```
+searchKey: xml.MarshalerAttr
+tags: [interface]
+```
+
+```Go
+type MarshalerAttr interface {
+	MarshalXMLAttr(name Name) (Attr, error)
+}
+```
+
+MarshalerAttr is the interface implemented by objects that can marshal themselves into valid XML attributes. 
+
+MarshalXMLAttr returns an XML attribute with the encoded value of the receiver. Using name as the attribute name is not required, but doing so will enable Unmarshal to match the attribute to the correct struct field. If MarshalXMLAttr returns the zero attribute Attr{}, no attribute will be generated in the output. MarshalXMLAttr is used only for struct fields with the "attr" option in the field tag. 
+
+### <a id="MarshalerStruct" href="#MarshalerStruct">type MarshalerStruct struct</a>
+
+```
+searchKey: xml.MarshalerStruct
+tags: [struct private]
+```
+
+```Go
+type MarshalerStruct struct {
+	Foo MyMarshalerAttrTest `xml:",attr"`
+}
+```
+
+### <a id="MixedNested" href="#MixedNested">type MixedNested struct</a>
+
+```
+searchKey: xml.MixedNested
+tags: [struct private]
+```
+
+```Go
+type MixedNested struct {
+	XMLName struct{} `xml:"result"`
+	A       string   `xml:"parent1>a"`
+	B       string   `xml:"b"`
+	C       string   `xml:"parent1>parent2>c"`
+	D       string   `xml:"parent1>d"`
+}
+```
+
+### <a id="Movie" href="#Movie">type Movie struct</a>
+
+```
+searchKey: xml.Movie
+tags: [struct private]
+```
+
+```Go
+type Movie struct {
+	XMLName struct{} `xml:"movie"`
+	Length  uint     `xml:",chardata"`
+}
+```
+
+### <a id="MyAttr" href="#MyAttr">type MyAttr struct</a>
+
+```
+searchKey: xml.MyAttr
+tags: [struct private]
+```
+
+```Go
+type MyAttr struct {
+	attr string
+}
+```
+
+#### <a id="MyAttr.UnmarshalXMLAttr" href="#MyAttr.UnmarshalXMLAttr">func (m *MyAttr) UnmarshalXMLAttr(attr Attr) error</a>
+
+```
+searchKey: xml.MyAttr.UnmarshalXMLAttr
+tags: [method private]
+```
+
+```Go
+func (m *MyAttr) UnmarshalXMLAttr(attr Attr) error
+```
+
+### <a id="MyBytes" href="#MyBytes">type MyBytes []byte</a>
+
+```
+searchKey: xml.MyBytes
+tags: [array number private]
+```
+
+```Go
+type MyBytes []byte
+```
+
+### <a id="MyCharData" href="#MyCharData">type MyCharData struct</a>
+
+```
+searchKey: xml.MyCharData
+tags: [struct private]
+```
+
+```Go
+type MyCharData struct {
+	body string
+}
+```
+
+#### <a id="MyCharData.UnmarshalXML" href="#MyCharData.UnmarshalXML">func (m *MyCharData) UnmarshalXML(d *Decoder, start StartElement) error</a>
+
+```
+searchKey: xml.MyCharData.UnmarshalXML
+tags: [method private]
+```
+
+```Go
+func (m *MyCharData) UnmarshalXML(d *Decoder, start StartElement) error
+```
+
+#### <a id="MyCharData.UnmarshalXMLAttr" href="#MyCharData.UnmarshalXMLAttr">func (m *MyCharData) UnmarshalXMLAttr(attr Attr) error</a>
+
+```
+searchKey: xml.MyCharData.UnmarshalXMLAttr
+tags: [method private]
+```
+
+```Go
+func (m *MyCharData) UnmarshalXMLAttr(attr Attr) error
+```
+
+### <a id="MyInt" href="#MyInt">type MyInt int</a>
+
+```
+searchKey: xml.MyInt
+tags: [number private]
+```
+
+```Go
+type MyInt int
+```
+
+### <a id="MyMarshalerAttrTest" href="#MyMarshalerAttrTest">type MyMarshalerAttrTest struct{}</a>
+
+```
+searchKey: xml.MyMarshalerAttrTest
+tags: [struct private]
+```
+
+```Go
+type MyMarshalerAttrTest struct {
+}
+```
+
+#### <a id="MyMarshalerAttrTest.MarshalXMLAttr" href="#MyMarshalerAttrTest.MarshalXMLAttr">func (m *MyMarshalerAttrTest) MarshalXMLAttr(name Name) (Attr, error)</a>
+
+```
+searchKey: xml.MyMarshalerAttrTest.MarshalXMLAttr
+tags: [method private]
+```
+
+```Go
+func (m *MyMarshalerAttrTest) MarshalXMLAttr(name Name) (Attr, error)
+```
+
+#### <a id="MyMarshalerAttrTest.UnmarshalXMLAttr" href="#MyMarshalerAttrTest.UnmarshalXMLAttr">func (m *MyMarshalerAttrTest) UnmarshalXMLAttr(attr Attr) error</a>
+
+```
+searchKey: xml.MyMarshalerAttrTest.UnmarshalXMLAttr
+tags: [method private]
+```
+
+```Go
+func (m *MyMarshalerAttrTest) UnmarshalXMLAttr(attr Attr) error
+```
+
+### <a id="MyMarshalerTest" href="#MyMarshalerTest">type MyMarshalerTest struct{}</a>
+
+```
+searchKey: xml.MyMarshalerTest
+tags: [struct private]
+```
+
+```Go
+type MyMarshalerTest struct {
+}
+```
+
+#### <a id="MyMarshalerTest.MarshalXML" href="#MyMarshalerTest.MarshalXML">func (m *MyMarshalerTest) MarshalXML(e *Encoder, start StartElement) error</a>
+
+```
+searchKey: xml.MyMarshalerTest.MarshalXML
+tags: [method private]
+```
+
+```Go
+func (m *MyMarshalerTest) MarshalXML(e *Encoder, start StartElement) error
+```
+
+### <a id="MyStruct" href="#MyStruct">type MyStruct struct</a>
+
+```
+searchKey: xml.MyStruct
+tags: [struct private]
+```
+
+```Go
+type MyStruct struct {
+	Data *MyCharData
+	Attr *MyAttr `xml:",attr"`
+
+	Data2 MyCharData
+	Attr2 MyAttr `xml:",attr"`
+}
+```
+
+### <a id="Name" href="#Name">type Name struct</a>
+
+```
+searchKey: xml.Name
+tags: [struct]
+```
+
+```Go
+type Name struct {
+	Space, Local string
+}
+```
+
+A Name represents an XML name (Local) annotated with a name space identifier (Space). In tokens returned by Decoder.Token, the Space identifier is given as a canonical URL, not the short prefix used in the document being parsed. 
 
 ### <a id="NameCasing" href="#NameCasing">type NameCasing struct</a>
 
 ```
 searchKey: xml.NameCasing
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -3253,11 +3389,24 @@ type NameCasing struct {
 }
 ```
 
+### <a id="NameInField" href="#NameInField">type NameInField struct</a>
+
+```
+searchKey: xml.NameInField
+tags: [struct private]
+```
+
+```Go
+type NameInField struct {
+	Foo Name `xml:"ns foo"`
+}
+```
+
 ### <a id="NamePrecedence" href="#NamePrecedence">type NamePrecedence struct</a>
 
 ```
 searchKey: xml.NamePrecedence
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -3270,83 +3419,102 @@ type NamePrecedence struct {
 }
 ```
 
-### <a id="XMLNameWithTag" href="#XMLNameWithTag">type XMLNameWithTag struct</a>
+### <a id="NamedType" href="#NamedType">type NamedType string</a>
 
 ```
-searchKey: xml.XMLNameWithTag
-tags: [private]
+searchKey: xml.NamedType
+tags: [string private]
 ```
 
 ```Go
-type XMLNameWithTag struct {
-	XMLName Name   `xml:"InXMLNameTag"`
-	Value   string `xml:",chardata"`
+type NamedType string
+```
+
+### <a id="NestedAndCData" href="#NestedAndCData">type NestedAndCData struct</a>
+
+```
+searchKey: xml.NestedAndCData
+tags: [struct private]
+```
+
+```Go
+type NestedAndCData struct {
+	AB    []string `xml:"A>B"`
+	CDATA string   `xml:",cdata"`
 }
 ```
 
-### <a id="XMLNameWithoutTag" href="#XMLNameWithoutTag">type XMLNameWithoutTag struct</a>
+### <a id="NestedAndChardata" href="#NestedAndChardata">type NestedAndChardata struct</a>
 
 ```
-searchKey: xml.XMLNameWithoutTag
-tags: [private]
+searchKey: xml.NestedAndChardata
+tags: [struct private]
 ```
 
 ```Go
-type XMLNameWithoutTag struct {
-	XMLName Name
-	Value   string `xml:",chardata"`
+type NestedAndChardata struct {
+	AB       []string `xml:"A>B"`
+	Chardata string   `xml:",chardata"`
 }
 ```
 
-### <a id="NameInField" href="#NameInField">type NameInField struct</a>
+### <a id="NestedAndComment" href="#NestedAndComment">type NestedAndComment struct</a>
 
 ```
-searchKey: xml.NameInField
-tags: [private]
+searchKey: xml.NestedAndComment
+tags: [struct private]
 ```
 
 ```Go
-type NameInField struct {
-	Foo Name `xml:"ns foo"`
+type NestedAndComment struct {
+	AB      []string `xml:"A>B"`
+	Comment string   `xml:",comment"`
 }
 ```
 
-### <a id="AttrTest" href="#AttrTest">type AttrTest struct</a>
+### <a id="NestedItems" href="#NestedItems">type NestedItems struct</a>
 
 ```
-searchKey: xml.AttrTest
-tags: [private]
+searchKey: xml.NestedItems
+tags: [struct private]
 ```
 
 ```Go
-type AttrTest struct {
-	Int   int     `xml:",attr"`
-	Named int     `xml:"int,attr"`
-	Float float64 `xml:",attr"`
-	Uint8 uint8   `xml:",attr"`
-	Bool  bool    `xml:",attr"`
-	Str   string  `xml:",attr"`
-	Bytes []byte  `xml:",attr"`
+type NestedItems struct {
+	XMLName struct{} `xml:"result"`
+	Items   []string `xml:">item"`
+	Item1   []string `xml:"Items>item1"`
 }
 ```
 
-### <a id="AttrsTest" href="#AttrsTest">type AttrsTest struct</a>
+### <a id="NestedOrder" href="#NestedOrder">type NestedOrder struct</a>
 
 ```
-searchKey: xml.AttrsTest
-tags: [private]
+searchKey: xml.NestedOrder
+tags: [struct private]
 ```
 
 ```Go
-type AttrsTest struct {
-	Attrs []Attr  `xml:",any,attr"`
-	Int   int     `xml:",attr"`
-	Named int     `xml:"int,attr"`
-	Float float64 `xml:",attr"`
-	Uint8 uint8   `xml:",attr"`
-	Bool  bool    `xml:",attr"`
-	Str   string  `xml:",attr"`
-	Bytes []byte  `xml:",attr"`
+type NestedOrder struct {
+	XMLName struct{} `xml:"result"`
+	Field1  string   `xml:"parent>c"`
+	Field2  string   `xml:"parent>b"`
+	Field3  string   `xml:"parent>a"`
+}
+```
+
+### <a id="NilTest" href="#NilTest">type NilTest struct</a>
+
+```
+searchKey: xml.NilTest
+tags: [struct private]
+```
+
+```Go
+type NilTest struct {
+	A interface{} `xml:"parent1>parent2>a"`
+	B interface{} `xml:"parent1>b"`
+	C interface{} `xml:"parent1>parent2>c"`
 }
 ```
 
@@ -3354,7 +3522,7 @@ type AttrsTest struct {
 
 ```
 searchKey: xml.OmitAttrTest
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -3374,7 +3542,7 @@ type OmitAttrTest struct {
 
 ```
 searchKey: xml.OmitFieldTest
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -3391,357 +3559,11 @@ type OmitFieldTest struct {
 }
 ```
 
-### <a id="AnyTest" href="#AnyTest">type AnyTest struct</a>
-
-```
-searchKey: xml.AnyTest
-tags: [private]
-```
-
-```Go
-type AnyTest struct {
-	XMLName  struct{}  `xml:"a"`
-	Nested   string    `xml:"nested>value"`
-	AnyField AnyHolder `xml:",any"`
-}
-```
-
-### <a id="AnyOmitTest" href="#AnyOmitTest">type AnyOmitTest struct</a>
-
-```
-searchKey: xml.AnyOmitTest
-tags: [private]
-```
-
-```Go
-type AnyOmitTest struct {
-	XMLName  struct{}   `xml:"a"`
-	Nested   string     `xml:"nested>value"`
-	AnyField *AnyHolder `xml:",any,omitempty"`
-}
-```
-
-### <a id="AnySliceTest" href="#AnySliceTest">type AnySliceTest struct</a>
-
-```
-searchKey: xml.AnySliceTest
-tags: [private]
-```
-
-```Go
-type AnySliceTest struct {
-	XMLName  struct{}    `xml:"a"`
-	Nested   string      `xml:"nested>value"`
-	AnyField []AnyHolder `xml:",any"`
-}
-```
-
-### <a id="AnyHolder" href="#AnyHolder">type AnyHolder struct</a>
-
-```
-searchKey: xml.AnyHolder
-tags: [private]
-```
-
-```Go
-type AnyHolder struct {
-	XMLName Name
-	XML     string `xml:",innerxml"`
-}
-```
-
-### <a id="RecurseA" href="#RecurseA">type RecurseA struct</a>
-
-```
-searchKey: xml.RecurseA
-tags: [private]
-```
-
-```Go
-type RecurseA struct {
-	A string
-	B *RecurseB
-}
-```
-
-### <a id="RecurseB" href="#RecurseB">type RecurseB struct</a>
-
-```
-searchKey: xml.RecurseB
-tags: [private]
-```
-
-```Go
-type RecurseB struct {
-	A *RecurseA
-	B string
-}
-```
-
-### <a id="PresenceTest" href="#PresenceTest">type PresenceTest struct</a>
-
-```
-searchKey: xml.PresenceTest
-tags: [private]
-```
-
-```Go
-type PresenceTest struct {
-	Exists *struct{}
-}
-```
-
-### <a id="IgnoreTest" href="#IgnoreTest">type IgnoreTest struct</a>
-
-```
-searchKey: xml.IgnoreTest
-tags: [private]
-```
-
-```Go
-type IgnoreTest struct {
-	PublicSecret string `xml:"-"`
-}
-```
-
-### <a id="MyBytes" href="#MyBytes">type MyBytes []byte</a>
-
-```
-searchKey: xml.MyBytes
-tags: [private]
-```
-
-```Go
-type MyBytes []byte
-```
-
-### <a id="Data" href="#Data">type Data struct</a>
-
-```
-searchKey: xml.Data
-tags: [private]
-```
-
-```Go
-type Data struct {
-	Bytes  []byte
-	Attr   []byte `xml:",attr"`
-	Custom MyBytes
-}
-```
-
-### <a id="Plain" href="#Plain">type Plain struct</a>
-
-```
-searchKey: xml.Plain
-tags: [private]
-```
-
-```Go
-type Plain struct {
-	V interface{}
-}
-```
-
-### <a id="MyInt" href="#MyInt">type MyInt int</a>
-
-```
-searchKey: xml.MyInt
-tags: [private]
-```
-
-```Go
-type MyInt int
-```
-
-### <a id="EmbedInt" href="#EmbedInt">type EmbedInt struct</a>
-
-```
-searchKey: xml.EmbedInt
-tags: [private]
-```
-
-```Go
-type EmbedInt struct {
-	MyInt
-}
-```
-
-### <a id="Strings" href="#Strings">type Strings struct</a>
-
-```
-searchKey: xml.Strings
-tags: [private]
-```
-
-```Go
-type Strings struct {
-	X []string `xml:"A>B,omitempty"`
-}
-```
-
-### <a id="PointerFieldsTest" href="#PointerFieldsTest">type PointerFieldsTest struct</a>
-
-```
-searchKey: xml.PointerFieldsTest
-tags: [private]
-```
-
-```Go
-type PointerFieldsTest struct {
-	XMLName  Name    `xml:"dummy"`
-	Name     *string `xml:"name,attr"`
-	Age      *uint   `xml:"age,attr"`
-	Empty    *string `xml:"empty,attr"`
-	Contents *string `xml:",chardata"`
-}
-```
-
-### <a id="ChardataEmptyTest" href="#ChardataEmptyTest">type ChardataEmptyTest struct</a>
-
-```
-searchKey: xml.ChardataEmptyTest
-tags: [private]
-```
-
-```Go
-type ChardataEmptyTest struct {
-	XMLName  Name    `xml:"test"`
-	Contents *string `xml:",chardata"`
-}
-```
-
-### <a id="PointerAnonFields" href="#PointerAnonFields">type PointerAnonFields struct</a>
-
-```
-searchKey: xml.PointerAnonFields
-tags: [private]
-```
-
-```Go
-type PointerAnonFields struct {
-	*MyInt
-	*NamedType
-}
-```
-
-### <a id="MyMarshalerTest" href="#MyMarshalerTest">type MyMarshalerTest struct{}</a>
-
-```
-searchKey: xml.MyMarshalerTest
-tags: [private]
-```
-
-```Go
-type MyMarshalerTest struct {
-}
-```
-
-#### <a id="MyMarshalerTest.MarshalXML" href="#MyMarshalerTest.MarshalXML">func (m *MyMarshalerTest) MarshalXML(e *Encoder, start StartElement) error</a>
-
-```
-searchKey: xml.MyMarshalerTest.MarshalXML
-tags: [private]
-```
-
-```Go
-func (m *MyMarshalerTest) MarshalXML(e *Encoder, start StartElement) error
-```
-
-### <a id="MyMarshalerAttrTest" href="#MyMarshalerAttrTest">type MyMarshalerAttrTest struct{}</a>
-
-```
-searchKey: xml.MyMarshalerAttrTest
-tags: [private]
-```
-
-```Go
-type MyMarshalerAttrTest struct {
-}
-```
-
-#### <a id="MyMarshalerAttrTest.MarshalXMLAttr" href="#MyMarshalerAttrTest.MarshalXMLAttr">func (m *MyMarshalerAttrTest) MarshalXMLAttr(name Name) (Attr, error)</a>
-
-```
-searchKey: xml.MyMarshalerAttrTest.MarshalXMLAttr
-tags: [private]
-```
-
-```Go
-func (m *MyMarshalerAttrTest) MarshalXMLAttr(name Name) (Attr, error)
-```
-
-#### <a id="MyMarshalerAttrTest.UnmarshalXMLAttr" href="#MyMarshalerAttrTest.UnmarshalXMLAttr">func (m *MyMarshalerAttrTest) UnmarshalXMLAttr(attr Attr) error</a>
-
-```
-searchKey: xml.MyMarshalerAttrTest.UnmarshalXMLAttr
-tags: [private]
-```
-
-```Go
-func (m *MyMarshalerAttrTest) UnmarshalXMLAttr(attr Attr) error
-```
-
-### <a id="MarshalerStruct" href="#MarshalerStruct">type MarshalerStruct struct</a>
-
-```
-searchKey: xml.MarshalerStruct
-tags: [private]
-```
-
-```Go
-type MarshalerStruct struct {
-	Foo MyMarshalerAttrTest `xml:",attr"`
-}
-```
-
-### <a id="InnerStruct" href="#InnerStruct">type InnerStruct struct</a>
-
-```
-searchKey: xml.InnerStruct
-tags: [private]
-```
-
-```Go
-type InnerStruct struct {
-	XMLName Name `xml:"testns outer"`
-}
-```
-
-### <a id="OuterStruct" href="#OuterStruct">type OuterStruct struct</a>
-
-```
-searchKey: xml.OuterStruct
-tags: [private]
-```
-
-```Go
-type OuterStruct struct {
-	InnerStruct
-	IntAttr int `xml:"int,attr"`
-}
-```
-
-### <a id="OuterNamedStruct" href="#OuterNamedStruct">type OuterNamedStruct struct</a>
-
-```
-searchKey: xml.OuterNamedStruct
-tags: [private]
-```
-
-```Go
-type OuterNamedStruct struct {
-	InnerStruct
-	XMLName Name `xml:"outerns test"`
-	IntAttr int  `xml:"int,attr"`
-}
-```
-
 ### <a id="OuterNamedOrderedStruct" href="#OuterNamedOrderedStruct">type OuterNamedOrderedStruct struct</a>
 
 ```
 searchKey: xml.OuterNamedOrderedStruct
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -3752,11 +3574,26 @@ type OuterNamedOrderedStruct struct {
 }
 ```
 
+### <a id="OuterNamedStruct" href="#OuterNamedStruct">type OuterNamedStruct struct</a>
+
+```
+searchKey: xml.OuterNamedStruct
+tags: [struct private]
+```
+
+```Go
+type OuterNamedStruct struct {
+	InnerStruct
+	XMLName Name `xml:"outerns test"`
+	IntAttr int  `xml:"int,attr"`
+}
+```
+
 ### <a id="OuterOuterStruct" href="#OuterOuterStruct">type OuterOuterStruct struct</a>
 
 ```
 searchKey: xml.OuterOuterStruct
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -3765,952 +3602,17 @@ type OuterOuterStruct struct {
 }
 ```
 
-### <a id="NestedAndChardata" href="#NestedAndChardata">type NestedAndChardata struct</a>
+### <a id="OuterStruct" href="#OuterStruct">type OuterStruct struct</a>
 
 ```
-searchKey: xml.NestedAndChardata
-tags: [private]
+searchKey: xml.OuterStruct
+tags: [struct private]
 ```
 
 ```Go
-type NestedAndChardata struct {
-	AB       []string `xml:"A>B"`
-	Chardata string   `xml:",chardata"`
-}
-```
-
-### <a id="NestedAndComment" href="#NestedAndComment">type NestedAndComment struct</a>
-
-```
-searchKey: xml.NestedAndComment
-tags: [private]
-```
-
-```Go
-type NestedAndComment struct {
-	AB      []string `xml:"A>B"`
-	Comment string   `xml:",comment"`
-}
-```
-
-### <a id="CDataTest" href="#CDataTest">type CDataTest struct</a>
-
-```
-searchKey: xml.CDataTest
-tags: [private]
-```
-
-```Go
-type CDataTest struct {
-	Chardata string `xml:",cdata"`
-}
-```
-
-### <a id="NestedAndCData" href="#NestedAndCData">type NestedAndCData struct</a>
-
-```
-searchKey: xml.NestedAndCData
-tags: [private]
-```
-
-```Go
-type NestedAndCData struct {
-	AB    []string `xml:"A>B"`
-	CDATA string   `xml:",cdata"`
-}
-```
-
-### <a id="T1" href="#T1">type T1 struct{}</a>
-
-```
-searchKey: xml.T1
-tags: [private]
-```
-
-```Go
-type T1 struct{}
-```
-
-### <a id="T2" href="#T2">type T2 struct{}</a>
-
-```
-searchKey: xml.T2
-tags: [private]
-```
-
-```Go
-type T2 struct{}
-```
-
-### <a id="IndirComment" href="#IndirComment">type IndirComment struct</a>
-
-```
-searchKey: xml.IndirComment
-tags: [private]
-```
-
-```Go
-type IndirComment struct {
-	T1      T1
-	Comment *string `xml:",comment"`
-	T2      T2
-}
-```
-
-### <a id="DirectComment" href="#DirectComment">type DirectComment struct</a>
-
-```
-searchKey: xml.DirectComment
-tags: [private]
-```
-
-```Go
-type DirectComment struct {
-	T1      T1
-	Comment string `xml:",comment"`
-	T2      T2
-}
-```
-
-### <a id="IfaceComment" href="#IfaceComment">type IfaceComment struct</a>
-
-```
-searchKey: xml.IfaceComment
-tags: [private]
-```
-
-```Go
-type IfaceComment struct {
-	T1      T1
-	Comment interface{} `xml:",comment"`
-	T2      T2
-}
-```
-
-### <a id="IndirChardata" href="#IndirChardata">type IndirChardata struct</a>
-
-```
-searchKey: xml.IndirChardata
-tags: [private]
-```
-
-```Go
-type IndirChardata struct {
-	T1       T1
-	Chardata *string `xml:",chardata"`
-	T2       T2
-}
-```
-
-### <a id="DirectChardata" href="#DirectChardata">type DirectChardata struct</a>
-
-```
-searchKey: xml.DirectChardata
-tags: [private]
-```
-
-```Go
-type DirectChardata struct {
-	T1       T1
-	Chardata string `xml:",chardata"`
-	T2       T2
-}
-```
-
-### <a id="IfaceChardata" href="#IfaceChardata">type IfaceChardata struct</a>
-
-```
-searchKey: xml.IfaceChardata
-tags: [private]
-```
-
-```Go
-type IfaceChardata struct {
-	T1       T1
-	Chardata interface{} `xml:",chardata"`
-	T2       T2
-}
-```
-
-### <a id="IndirCDATA" href="#IndirCDATA">type IndirCDATA struct</a>
-
-```
-searchKey: xml.IndirCDATA
-tags: [private]
-```
-
-```Go
-type IndirCDATA struct {
-	T1    T1
-	CDATA *string `xml:",cdata"`
-	T2    T2
-}
-```
-
-### <a id="DirectCDATA" href="#DirectCDATA">type DirectCDATA struct</a>
-
-```
-searchKey: xml.DirectCDATA
-tags: [private]
-```
-
-```Go
-type DirectCDATA struct {
-	T1    T1
-	CDATA string `xml:",cdata"`
-	T2    T2
-}
-```
-
-### <a id="IfaceCDATA" href="#IfaceCDATA">type IfaceCDATA struct</a>
-
-```
-searchKey: xml.IfaceCDATA
-tags: [private]
-```
-
-```Go
-type IfaceCDATA struct {
-	T1    T1
-	CDATA interface{} `xml:",cdata"`
-	T2    T2
-}
-```
-
-### <a id="IndirInnerXML" href="#IndirInnerXML">type IndirInnerXML struct</a>
-
-```
-searchKey: xml.IndirInnerXML
-tags: [private]
-```
-
-```Go
-type IndirInnerXML struct {
-	T1       T1
-	InnerXML *string `xml:",innerxml"`
-	T2       T2
-}
-```
-
-### <a id="DirectInnerXML" href="#DirectInnerXML">type DirectInnerXML struct</a>
-
-```
-searchKey: xml.DirectInnerXML
-tags: [private]
-```
-
-```Go
-type DirectInnerXML struct {
-	T1       T1
-	InnerXML string `xml:",innerxml"`
-	T2       T2
-}
-```
-
-### <a id="IfaceInnerXML" href="#IfaceInnerXML">type IfaceInnerXML struct</a>
-
-```
-searchKey: xml.IfaceInnerXML
-tags: [private]
-```
-
-```Go
-type IfaceInnerXML struct {
-	T1       T1
-	InnerXML interface{} `xml:",innerxml"`
-	T2       T2
-}
-```
-
-### <a id="IndirElement" href="#IndirElement">type IndirElement struct</a>
-
-```
-searchKey: xml.IndirElement
-tags: [private]
-```
-
-```Go
-type IndirElement struct {
-	T1      T1
-	Element *string
-	T2      T2
-}
-```
-
-### <a id="DirectElement" href="#DirectElement">type DirectElement struct</a>
-
-```
-searchKey: xml.DirectElement
-tags: [private]
-```
-
-```Go
-type DirectElement struct {
-	T1      T1
-	Element string
-	T2      T2
-}
-```
-
-### <a id="IfaceElement" href="#IfaceElement">type IfaceElement struct</a>
-
-```
-searchKey: xml.IfaceElement
-tags: [private]
-```
-
-```Go
-type IfaceElement struct {
-	T1      T1
-	Element interface{}
-	T2      T2
-}
-```
-
-### <a id="IndirOmitEmpty" href="#IndirOmitEmpty">type IndirOmitEmpty struct</a>
-
-```
-searchKey: xml.IndirOmitEmpty
-tags: [private]
-```
-
-```Go
-type IndirOmitEmpty struct {
-	T1        T1
-	OmitEmpty *string `xml:",omitempty"`
-	T2        T2
-}
-```
-
-### <a id="DirectOmitEmpty" href="#DirectOmitEmpty">type DirectOmitEmpty struct</a>
-
-```
-searchKey: xml.DirectOmitEmpty
-tags: [private]
-```
-
-```Go
-type DirectOmitEmpty struct {
-	T1        T1
-	OmitEmpty string `xml:",omitempty"`
-	T2        T2
-}
-```
-
-### <a id="IfaceOmitEmpty" href="#IfaceOmitEmpty">type IfaceOmitEmpty struct</a>
-
-```
-searchKey: xml.IfaceOmitEmpty
-tags: [private]
-```
-
-```Go
-type IfaceOmitEmpty struct {
-	T1        T1
-	OmitEmpty interface{} `xml:",omitempty"`
-	T2        T2
-}
-```
-
-### <a id="IndirAny" href="#IndirAny">type IndirAny struct</a>
-
-```
-searchKey: xml.IndirAny
-tags: [private]
-```
-
-```Go
-type IndirAny struct {
-	T1  T1
-	Any *string `xml:",any"`
-	T2  T2
-}
-```
-
-### <a id="DirectAny" href="#DirectAny">type DirectAny struct</a>
-
-```
-searchKey: xml.DirectAny
-tags: [private]
-```
-
-```Go
-type DirectAny struct {
-	T1  T1
-	Any string `xml:",any"`
-	T2  T2
-}
-```
-
-### <a id="IfaceAny" href="#IfaceAny">type IfaceAny struct</a>
-
-```
-searchKey: xml.IfaceAny
-tags: [private]
-```
-
-```Go
-type IfaceAny struct {
-	T1  T1
-	Any interface{} `xml:",any"`
-	T2  T2
-}
-```
-
-### <a id="AttrParent" href="#AttrParent">type AttrParent struct</a>
-
-```
-searchKey: xml.AttrParent
-tags: [private]
-```
-
-```Go
-type AttrParent struct {
-	X string `xml:"X>Y,attr"`
-}
-```
-
-### <a id="BadAttr" href="#BadAttr">type BadAttr struct</a>
-
-```
-searchKey: xml.BadAttr
-tags: [private]
-```
-
-```Go
-type BadAttr struct {
-	Name map[string]string `xml:"name,attr"`
-}
-```
-
-### <a id="limitedBytesWriter" href="#limitedBytesWriter">type limitedBytesWriter struct</a>
-
-```
-searchKey: xml.limitedBytesWriter
-tags: [private]
-```
-
-```Go
-type limitedBytesWriter struct {
-	w      io.Writer
-	remain int // until writes fail
-}
-```
-
-#### <a id="limitedBytesWriter.Write" href="#limitedBytesWriter.Write">func (lw *limitedBytesWriter) Write(p []byte) (n int, err error)</a>
-
-```
-searchKey: xml.limitedBytesWriter.Write
-tags: [private]
-```
-
-```Go
-func (lw *limitedBytesWriter) Write(p []byte) (n int, err error)
-```
-
-### <a id="InvalidXMLName" href="#InvalidXMLName">type InvalidXMLName struct</a>
-
-```
-searchKey: xml.InvalidXMLName
-tags: [private]
-```
-
-```Go
-type InvalidXMLName struct {
-	XMLName Name `xml:"error"`
-	Type    struct {
-		XMLName Name `xml:"type,attr"`
-	}
-}
-```
-
-### <a id="Feed" href="#Feed">type Feed struct</a>
-
-```
-searchKey: xml.Feed
-tags: [private]
-```
-
-```Go
-type Feed struct {
-	XMLName Name      `xml:"http://www.w3.org/2005/Atom feed"`
-	Title   string    `xml:"title"`
-	ID      string    `xml:"id"`
-	Link    []Link    `xml:"link"`
-	Updated time.Time `xml:"updated,attr"`
-	Author  Person    `xml:"author"`
-	Entry   []Entry   `xml:"entry"`
-}
-```
-
-### <a id="Entry" href="#Entry">type Entry struct</a>
-
-```
-searchKey: xml.Entry
-tags: [private]
-```
-
-```Go
-type Entry struct {
-	Title   string    `xml:"title"`
-	ID      string    `xml:"id"`
-	Link    []Link    `xml:"link"`
-	Updated time.Time `xml:"updated"`
-	Author  Person    `xml:"author"`
-	Summary Text      `xml:"summary"`
-}
-```
-
-### <a id="Link" href="#Link">type Link struct</a>
-
-```
-searchKey: xml.Link
-tags: [private]
-```
-
-```Go
-type Link struct {
-	Rel  string `xml:"rel,attr,omitempty"`
-	Href string `xml:"href,attr"`
-}
-```
-
-### <a id="Person" href="#Person">type Person struct</a>
-
-```
-searchKey: xml.Person
-tags: [private]
-```
-
-```Go
-type Person struct {
-	Name     string `xml:"name"`
-	URI      string `xml:"uri"`
-	Email    string `xml:"email"`
-	InnerXML string `xml:",innerxml"`
-}
-```
-
-### <a id="Text" href="#Text">type Text struct</a>
-
-```
-searchKey: xml.Text
-tags: [private]
-```
-
-```Go
-type Text struct {
-	Type string `xml:"type,attr,omitempty"`
-	Body string `xml:",chardata"`
-}
-```
-
-#### <a id="NewText" href="#NewText">func NewText(text string) Text</a>
-
-```
-searchKey: xml.NewText
-tags: [private]
-```
-
-```Go
-func NewText(text string) Text
-```
-
-### <a id="PathTestItem" href="#PathTestItem">type PathTestItem struct</a>
-
-```
-searchKey: xml.PathTestItem
-tags: [private]
-```
-
-```Go
-type PathTestItem struct {
-	Value string
-}
-```
-
-### <a id="PathTestA" href="#PathTestA">type PathTestA struct</a>
-
-```
-searchKey: xml.PathTestA
-tags: [private]
-```
-
-```Go
-type PathTestA struct {
-	Items         []PathTestItem `xml:">Item1"`
-	Before, After string
-}
-```
-
-### <a id="PathTestB" href="#PathTestB">type PathTestB struct</a>
-
-```
-searchKey: xml.PathTestB
-tags: [private]
-```
-
-```Go
-type PathTestB struct {
-	Other         []PathTestItem `xml:"Items>Item1"`
-	Before, After string
-}
-```
-
-### <a id="PathTestC" href="#PathTestC">type PathTestC struct</a>
-
-```
-searchKey: xml.PathTestC
-tags: [private]
-```
-
-```Go
-type PathTestC struct {
-	Values1       []string `xml:"Items>Item1>Value"`
-	Values2       []string `xml:"Items>Item2>Value"`
-	Before, After string
-}
-```
-
-### <a id="PathTestSet" href="#PathTestSet">type PathTestSet struct</a>
-
-```
-searchKey: xml.PathTestSet
-tags: [private]
-```
-
-```Go
-type PathTestSet struct {
-	Item1 []PathTestItem
-}
-```
-
-### <a id="PathTestD" href="#PathTestD">type PathTestD struct</a>
-
-```
-searchKey: xml.PathTestD
-tags: [private]
-```
-
-```Go
-type PathTestD struct {
-	Other         PathTestSet `xml:"Items"`
-	Before, After string
-}
-```
-
-### <a id="PathTestE" href="#PathTestE">type PathTestE struct</a>
-
-```
-searchKey: xml.PathTestE
-tags: [private]
-```
-
-```Go
-type PathTestE struct {
-	Underline     string `xml:"Items>_>Value"`
-	Before, After string
-}
-```
-
-### <a id="BadPathTestA" href="#BadPathTestA">type BadPathTestA struct</a>
-
-```
-searchKey: xml.BadPathTestA
-tags: [private]
-```
-
-```Go
-type BadPathTestA struct {
-	First  string `xml:"items>item1"`
-	Other  string `xml:"items>item2"`
-	Second string `xml:"items"`
-}
-```
-
-### <a id="BadPathTestB" href="#BadPathTestB">type BadPathTestB struct</a>
-
-```
-searchKey: xml.BadPathTestB
-tags: [private]
-```
-
-```Go
-type BadPathTestB struct {
-	Other  string `xml:"items>item2>value"`
-	First  string `xml:"items>item1"`
-	Second string `xml:"items>item1>value"`
-}
-```
-
-### <a id="BadPathTestC" href="#BadPathTestC">type BadPathTestC struct</a>
-
-```
-searchKey: xml.BadPathTestC
-tags: [private]
-```
-
-```Go
-type BadPathTestC struct {
-	First  string
-	Second string `xml:"First"`
-}
-```
-
-### <a id="BadPathTestD" href="#BadPathTestD">type BadPathTestD struct</a>
-
-```
-searchKey: xml.BadPathTestD
-tags: [private]
-```
-
-```Go
-type BadPathTestD struct {
-	BadPathEmbeddedA
-	BadPathEmbeddedB
-}
-```
-
-### <a id="BadPathEmbeddedA" href="#BadPathEmbeddedA">type BadPathEmbeddedA struct</a>
-
-```
-searchKey: xml.BadPathEmbeddedA
-tags: [private]
-```
-
-```Go
-type BadPathEmbeddedA struct {
-	First string
-}
-```
-
-### <a id="BadPathEmbeddedB" href="#BadPathEmbeddedB">type BadPathEmbeddedB struct</a>
-
-```
-searchKey: xml.BadPathEmbeddedB
-tags: [private]
-```
-
-```Go
-type BadPathEmbeddedB struct {
-	Second string `xml:"First"`
-}
-```
-
-### <a id="TestThree" href="#TestThree">type TestThree struct</a>
-
-```
-searchKey: xml.TestThree
-tags: [private]
-```
-
-```Go
-type TestThree struct {
-	XMLName Name   `xml:"Test3"`
-	Attr    string `xml:",attr"`
-}
-```
-
-### <a id="Tables" href="#Tables">type Tables struct</a>
-
-```
-searchKey: xml.Tables
-tags: [private]
-```
-
-```Go
-type Tables struct {
-	HTable string `xml:"http://www.w3.org/TR/html4/ table"`
-	FTable string `xml:"http://www.w3schools.com/furniture table"`
-}
-```
-
-### <a id="TableAttrs" href="#TableAttrs">type TableAttrs struct</a>
-
-```
-searchKey: xml.TableAttrs
-tags: [private]
-```
-
-```Go
-type TableAttrs struct {
-	TAttr TAttr
-}
-```
-
-### <a id="TAttr" href="#TAttr">type TAttr struct</a>
-
-```
-searchKey: xml.TAttr
-tags: [private]
-```
-
-```Go
-type TAttr struct {
-	HTable string `xml:"http://www.w3.org/TR/html4/ table,attr"`
-	FTable string `xml:"http://www.w3schools.com/furniture table,attr"`
-	Lang   string `xml:"http://www.w3.org/XML/1998/namespace lang,attr,omitempty"`
-	Other1 string `xml:"http://golang.org/xml/ other,attr,omitempty"`
-	Other2 string `xml:"http://golang.org/xmlfoo/ other,attr,omitempty"`
-	Other3 string `xml:"http://golang.org/json/ other,attr,omitempty"`
-	Other4 string `xml:"http://golang.org/2/json/ other,attr,omitempty"`
-}
-```
-
-### <a id="MyCharData" href="#MyCharData">type MyCharData struct</a>
-
-```
-searchKey: xml.MyCharData
-tags: [private]
-```
-
-```Go
-type MyCharData struct {
-	body string
-}
-```
-
-#### <a id="MyCharData.UnmarshalXML" href="#MyCharData.UnmarshalXML">func (m *MyCharData) UnmarshalXML(d *Decoder, start StartElement) error</a>
-
-```
-searchKey: xml.MyCharData.UnmarshalXML
-tags: [private]
-```
-
-```Go
-func (m *MyCharData) UnmarshalXML(d *Decoder, start StartElement) error
-```
-
-#### <a id="MyCharData.UnmarshalXMLAttr" href="#MyCharData.UnmarshalXMLAttr">func (m *MyCharData) UnmarshalXMLAttr(attr Attr) error</a>
-
-```
-searchKey: xml.MyCharData.UnmarshalXMLAttr
-tags: [private]
-```
-
-```Go
-func (m *MyCharData) UnmarshalXMLAttr(attr Attr) error
-```
-
-### <a id="MyAttr" href="#MyAttr">type MyAttr struct</a>
-
-```
-searchKey: xml.MyAttr
-tags: [private]
-```
-
-```Go
-type MyAttr struct {
-	attr string
-}
-```
-
-#### <a id="MyAttr.UnmarshalXMLAttr" href="#MyAttr.UnmarshalXMLAttr">func (m *MyAttr) UnmarshalXMLAttr(attr Attr) error</a>
-
-```
-searchKey: xml.MyAttr.UnmarshalXMLAttr
-tags: [private]
-```
-
-```Go
-func (m *MyAttr) UnmarshalXMLAttr(attr Attr) error
-```
-
-### <a id="MyStruct" href="#MyStruct">type MyStruct struct</a>
-
-```
-searchKey: xml.MyStruct
-tags: [private]
-```
-
-```Go
-type MyStruct struct {
-	Data *MyCharData
-	Attr *MyAttr `xml:",attr"`
-
-	Data2 MyCharData
-	Attr2 MyAttr `xml:",attr"`
-}
-```
-
-### <a id="Pea" href="#Pea">type Pea struct</a>
-
-```
-searchKey: xml.Pea
-tags: [private]
-```
-
-```Go
-type Pea struct {
-	Cotelydon string
-}
-```
-
-### <a id="Pod" href="#Pod">type Pod struct</a>
-
-```
-searchKey: xml.Pod
-tags: [private]
-```
-
-```Go
-type Pod struct {
-	Pea interface{} `xml:"Pea"`
-}
-```
-
-### <a id="X" href="#X">type X struct</a>
-
-```
-searchKey: xml.X
-tags: [private]
-```
-
-```Go
-type X struct {
-	D string `xml:",comment"`
-}
-```
-
-### <a id="IXField" href="#IXField">type IXField struct</a>
-
-```
-searchKey: xml.IXField
-tags: [private]
-```
-
-```Go
-type IXField struct {
-	Five        int      `xml:"five"`
-	NotInnerXML []string `xml:",innerxml"`
-}
-```
-
-### <a id="Child" href="#Child">type Child struct</a>
-
-```
-searchKey: xml.Child
-tags: [private]
-```
-
-```Go
-type Child struct {
-	G struct {
-		I int
-	}
-}
-```
-
-### <a id="ChildToEmbed" href="#ChildToEmbed">type ChildToEmbed struct</a>
-
-```
-searchKey: xml.ChildToEmbed
-tags: [private]
-```
-
-```Go
-type ChildToEmbed struct {
-	X bool
+type OuterStruct struct {
+	InnerStruct
+	IntAttr int `xml:"int,attr"`
 }
 ```
 
@@ -4718,7 +3620,7 @@ type ChildToEmbed struct {
 
 ```
 searchKey: xml.Parent
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -4749,44 +3651,748 @@ type Parent struct {
 }
 ```
 
-### <a id="WhitespaceValuesParent" href="#WhitespaceValuesParent">type WhitespaceValuesParent struct</a>
+### <a id="Particle" href="#Particle">type Particle struct</a>
 
 ```
-searchKey: xml.WhitespaceValuesParent
-tags: [private]
+searchKey: xml.Particle
+tags: [struct private]
 ```
 
 ```Go
-type WhitespaceValuesParent struct {
-	BFalse bool
-	BTrue  bool
-	I      int
-	INeg   int
-	I8     int8
-	I8Neg  int8
-	I16    int16
-	I16Neg int16
-	I32    int32
-	I32Neg int32
-	I64    int64
-	I64Neg int64
-	UI     uint
-	UI8    uint8
-	UI16   uint16
-	UI32   uint32
-	UI64   uint64
-	F32    float32
-	F32Neg float32
-	F64    float64
-	F64Neg float64
+type Particle struct {
+	XMLName struct{} `xml:"particle"`
+	HasMass bool     `xml:",chardata"`
 }
+```
+
+### <a id="Passenger" href="#Passenger">type Passenger struct</a>
+
+```
+searchKey: xml.Passenger
+tags: [struct private]
+```
+
+```Go
+type Passenger struct {
+	Name   []string `xml:"name"`
+	Weight float32  `xml:"weight"`
+}
+```
+
+### <a id="PathTestA" href="#PathTestA">type PathTestA struct</a>
+
+```
+searchKey: xml.PathTestA
+tags: [struct private]
+```
+
+```Go
+type PathTestA struct {
+	Items         []PathTestItem `xml:">Item1"`
+	Before, After string
+}
+```
+
+### <a id="PathTestB" href="#PathTestB">type PathTestB struct</a>
+
+```
+searchKey: xml.PathTestB
+tags: [struct private]
+```
+
+```Go
+type PathTestB struct {
+	Other         []PathTestItem `xml:"Items>Item1"`
+	Before, After string
+}
+```
+
+### <a id="PathTestC" href="#PathTestC">type PathTestC struct</a>
+
+```
+searchKey: xml.PathTestC
+tags: [struct private]
+```
+
+```Go
+type PathTestC struct {
+	Values1       []string `xml:"Items>Item1>Value"`
+	Values2       []string `xml:"Items>Item2>Value"`
+	Before, After string
+}
+```
+
+### <a id="PathTestD" href="#PathTestD">type PathTestD struct</a>
+
+```
+searchKey: xml.PathTestD
+tags: [struct private]
+```
+
+```Go
+type PathTestD struct {
+	Other         PathTestSet `xml:"Items"`
+	Before, After string
+}
+```
+
+### <a id="PathTestE" href="#PathTestE">type PathTestE struct</a>
+
+```
+searchKey: xml.PathTestE
+tags: [struct private]
+```
+
+```Go
+type PathTestE struct {
+	Underline     string `xml:"Items>_>Value"`
+	Before, After string
+}
+```
+
+### <a id="PathTestItem" href="#PathTestItem">type PathTestItem struct</a>
+
+```
+searchKey: xml.PathTestItem
+tags: [struct private]
+```
+
+```Go
+type PathTestItem struct {
+	Value string
+}
+```
+
+### <a id="PathTestSet" href="#PathTestSet">type PathTestSet struct</a>
+
+```
+searchKey: xml.PathTestSet
+tags: [struct private]
+```
+
+```Go
+type PathTestSet struct {
+	Item1 []PathTestItem
+}
+```
+
+### <a id="Pea" href="#Pea">type Pea struct</a>
+
+```
+searchKey: xml.Pea
+tags: [struct private]
+```
+
+```Go
+type Pea struct {
+	Cotelydon string
+}
+```
+
+### <a id="Person" href="#Person">type Person struct</a>
+
+```
+searchKey: xml.Person
+tags: [struct private]
+```
+
+```Go
+type Person struct {
+	Name     string `xml:"name"`
+	URI      string `xml:"uri"`
+	Email    string `xml:"email"`
+	InnerXML string `xml:",innerxml"`
+}
+```
+
+### <a id="Pi" href="#Pi">type Pi struct</a>
+
+```
+searchKey: xml.Pi
+tags: [struct private]
+```
+
+```Go
+type Pi struct {
+	XMLName       struct{} `xml:"pi"`
+	Approximation float32  `xml:",chardata"`
+}
+```
+
+### <a id="Plain" href="#Plain">type Plain struct</a>
+
+```
+searchKey: xml.Plain
+tags: [struct private]
+```
+
+```Go
+type Plain struct {
+	V interface{}
+}
+```
+
+### <a id="Pod" href="#Pod">type Pod struct</a>
+
+```
+searchKey: xml.Pod
+tags: [struct private]
+```
+
+```Go
+type Pod struct {
+	Pea interface{} `xml:"Pea"`
+}
+```
+
+### <a id="PointerAnonFields" href="#PointerAnonFields">type PointerAnonFields struct</a>
+
+```
+searchKey: xml.PointerAnonFields
+tags: [struct private]
+```
+
+```Go
+type PointerAnonFields struct {
+	*MyInt
+	*NamedType
+}
+```
+
+### <a id="PointerFieldsTest" href="#PointerFieldsTest">type PointerFieldsTest struct</a>
+
+```
+searchKey: xml.PointerFieldsTest
+tags: [struct private]
+```
+
+```Go
+type PointerFieldsTest struct {
+	XMLName  Name    `xml:"dummy"`
+	Name     *string `xml:"name,attr"`
+	Age      *uint   `xml:"age,attr"`
+	Empty    *string `xml:"empty,attr"`
+	Contents *string `xml:",chardata"`
+}
+```
+
+### <a id="Port" href="#Port">type Port struct</a>
+
+```
+searchKey: xml.Port
+tags: [struct private]
+```
+
+```Go
+type Port struct {
+	XMLName struct{} `xml:"port"`
+	Type    string   `xml:"type,attr,omitempty"`
+	Comment string   `xml:",comment"`
+	Number  string   `xml:",chardata"`
+}
+```
+
+### <a id="PresenceTest" href="#PresenceTest">type PresenceTest struct</a>
+
+```
+searchKey: xml.PresenceTest
+tags: [struct private]
+```
+
+```Go
+type PresenceTest struct {
+	Exists *struct{}
+}
+```
+
+### <a id="ProcInst" href="#ProcInst">type ProcInst struct</a>
+
+```
+searchKey: xml.ProcInst
+tags: [struct]
+```
+
+```Go
+type ProcInst struct {
+	Target string
+	Inst   []byte
+}
+```
+
+A ProcInst represents an XML processing instruction of the form <?target inst?> 
+
+#### <a id="ProcInst.Copy" href="#ProcInst.Copy">func (p ProcInst) Copy() ProcInst</a>
+
+```
+searchKey: xml.ProcInst.Copy
+tags: [function]
+```
+
+```Go
+func (p ProcInst) Copy() ProcInst
+```
+
+Copy creates a new copy of ProcInst. 
+
+### <a id="RecurseA" href="#RecurseA">type RecurseA struct</a>
+
+```
+searchKey: xml.RecurseA
+tags: [struct private]
+```
+
+```Go
+type RecurseA struct {
+	A string
+	B *RecurseB
+}
+```
+
+### <a id="RecurseB" href="#RecurseB">type RecurseB struct</a>
+
+```
+searchKey: xml.RecurseB
+tags: [struct private]
+```
+
+```Go
+type RecurseB struct {
+	A *RecurseA
+	B string
+}
+```
+
+### <a id="SecretAgent" href="#SecretAgent">type SecretAgent struct</a>
+
+```
+searchKey: xml.SecretAgent
+tags: [struct private]
+```
+
+```Go
+type SecretAgent struct {
+	XMLName   struct{} `xml:"agent"`
+	Handle    string   `xml:"handle,attr"`
+	Identity  string
+	Obfuscate string `xml:",innerxml"`
+}
+```
+
+### <a id="Service" href="#Service">type Service struct</a>
+
+```
+searchKey: xml.Service
+tags: [struct private]
+```
+
+```Go
+type Service struct {
+	XMLName struct{} `xml:"service"`
+	Domain  *Domain  `xml:"host>domain"`
+	Port    *Port    `xml:"host>port"`
+	Extra1  interface{}
+	Extra2  interface{} `xml:"host>extra2"`
+}
+```
+
+### <a id="Ship" href="#Ship">type Ship struct</a>
+
+```
+searchKey: xml.Ship
+tags: [struct private]
+```
+
+```Go
+type Ship struct {
+	XMLName struct{} `xml:"spaceship"`
+
+	Name      string       `xml:"name,attr"`
+	Pilot     string       `xml:"pilot,attr"`
+	Drive     DriveType    `xml:"drive"`
+	Age       uint         `xml:"age"`
+	Passenger []*Passenger `xml:"passenger"`
+	secret    string
+}
+```
+
+### <a id="StartElement" href="#StartElement">type StartElement struct</a>
+
+```
+searchKey: xml.StartElement
+tags: [struct]
+```
+
+```Go
+type StartElement struct {
+	Name Name
+	Attr []Attr
+}
+```
+
+A StartElement represents an XML start element. 
+
+#### <a id="defaultStart" href="#defaultStart">func defaultStart(typ reflect.Type, finfo *fieldInfo, startTemplate *StartElement) StartElement</a>
+
+```
+searchKey: xml.defaultStart
+tags: [method private]
+```
+
+```Go
+func defaultStart(typ reflect.Type, finfo *fieldInfo, startTemplate *StartElement) StartElement
+```
+
+defaultStart returns the default start element to use, given the reflect type, field info, and start template. 
+
+#### <a id="StartElement.Copy" href="#StartElement.Copy">func (e StartElement) Copy() StartElement</a>
+
+```
+searchKey: xml.StartElement.Copy
+tags: [function]
+```
+
+```Go
+func (e StartElement) Copy() StartElement
+```
+
+Copy creates a new copy of StartElement. 
+
+#### <a id="StartElement.End" href="#StartElement.End">func (e StartElement) End() EndElement</a>
+
+```
+searchKey: xml.StartElement.End
+tags: [function]
+```
+
+```Go
+func (e StartElement) End() EndElement
+```
+
+End returns the corresponding XML end element. 
+
+### <a id="Strings" href="#Strings">type Strings struct</a>
+
+```
+searchKey: xml.Strings
+tags: [struct private]
+```
+
+```Go
+type Strings struct {
+	X []string `xml:"A>B,omitempty"`
+}
+```
+
+### <a id="SyntaxError" href="#SyntaxError">type SyntaxError struct</a>
+
+```
+searchKey: xml.SyntaxError
+tags: [struct]
+```
+
+```Go
+type SyntaxError struct {
+	Msg  string
+	Line int
+}
+```
+
+A SyntaxError represents a syntax error in the XML input stream. 
+
+#### <a id="SyntaxError.Error" href="#SyntaxError.Error">func (e *SyntaxError) Error() string</a>
+
+```
+searchKey: xml.SyntaxError.Error
+tags: [function]
+```
+
+```Go
+func (e *SyntaxError) Error() string
+```
+
+### <a id="T1" href="#T1">type T1 struct{}</a>
+
+```
+searchKey: xml.T1
+tags: [struct private]
+```
+
+```Go
+type T1 struct{}
+```
+
+### <a id="T2" href="#T2">type T2 struct{}</a>
+
+```
+searchKey: xml.T2
+tags: [struct private]
+```
+
+```Go
+type T2 struct{}
+```
+
+### <a id="TAttr" href="#TAttr">type TAttr struct</a>
+
+```
+searchKey: xml.TAttr
+tags: [struct private]
+```
+
+```Go
+type TAttr struct {
+	HTable string `xml:"http://www.w3.org/TR/html4/ table,attr"`
+	FTable string `xml:"http://www.w3schools.com/furniture table,attr"`
+	Lang   string `xml:"http://www.w3.org/XML/1998/namespace lang,attr,omitempty"`
+	Other1 string `xml:"http://golang.org/xml/ other,attr,omitempty"`
+	Other2 string `xml:"http://golang.org/xmlfoo/ other,attr,omitempty"`
+	Other3 string `xml:"http://golang.org/json/ other,attr,omitempty"`
+	Other4 string `xml:"http://golang.org/2/json/ other,attr,omitempty"`
+}
+```
+
+### <a id="TableAttrs" href="#TableAttrs">type TableAttrs struct</a>
+
+```
+searchKey: xml.TableAttrs
+tags: [struct private]
+```
+
+```Go
+type TableAttrs struct {
+	TAttr TAttr
+}
+```
+
+### <a id="Tables" href="#Tables">type Tables struct</a>
+
+```
+searchKey: xml.Tables
+tags: [struct private]
+```
+
+```Go
+type Tables struct {
+	HTable string `xml:"http://www.w3.org/TR/html4/ table"`
+	FTable string `xml:"http://www.w3schools.com/furniture table"`
+}
+```
+
+### <a id="TagPathError" href="#TagPathError">type TagPathError struct</a>
+
+```
+searchKey: xml.TagPathError
+tags: [struct]
+```
+
+```Go
+type TagPathError struct {
+	Struct       reflect.Type
+	Field1, Tag1 string
+	Field2, Tag2 string
+}
+```
+
+A TagPathError represents an error in the unmarshaling process caused by the use of field tags with conflicting paths. 
+
+#### <a id="TagPathError.Error" href="#TagPathError.Error">func (e *TagPathError) Error() string</a>
+
+```
+searchKey: xml.TagPathError.Error
+tags: [function]
+```
+
+```Go
+func (e *TagPathError) Error() string
+```
+
+### <a id="TestThree" href="#TestThree">type TestThree struct</a>
+
+```
+searchKey: xml.TestThree
+tags: [struct private]
+```
+
+```Go
+type TestThree struct {
+	XMLName Name   `xml:"Test3"`
+	Attr    string `xml:",attr"`
+}
+```
+
+### <a id="Text" href="#Text">type Text struct</a>
+
+```
+searchKey: xml.Text
+tags: [struct private]
+```
+
+```Go
+type Text struct {
+	Type string `xml:"type,attr,omitempty"`
+	Body string `xml:",chardata"`
+}
+```
+
+#### <a id="NewText" href="#NewText">func NewText(text string) Text</a>
+
+```
+searchKey: xml.NewText
+tags: [method private]
+```
+
+```Go
+func NewText(text string) Text
+```
+
+### <a id="Token" href="#Token">type Token interface{}</a>
+
+```
+searchKey: xml.Token
+tags: [interface]
+```
+
+```Go
+type Token interface{}
+```
+
+A Token is an interface holding one of the token types: StartElement, EndElement, CharData, Comment, ProcInst, or Directive. 
+
+#### <a id="CopyToken" href="#CopyToken">func CopyToken(t Token) Token</a>
+
+```
+searchKey: xml.CopyToken
+tags: [method]
+```
+
+```Go
+func CopyToken(t Token) Token
+```
+
+CopyToken returns a copy of a Token. 
+
+### <a id="TokenReader" href="#TokenReader">type TokenReader interface</a>
+
+```
+searchKey: xml.TokenReader
+tags: [interface]
+```
+
+```Go
+type TokenReader interface {
+	Token() (Token, error)
+}
+```
+
+A TokenReader is anything that can decode a stream of XML tokens, including a Decoder. 
+
+When Token encounters an error or end-of-file condition after successfully reading a token, it returns the token. It may return the (non-nil) error from the same call or return the error (and a nil token) from a subsequent call. An instance of this general case is that a TokenReader returning a non-nil token at the end of the token stream may return either io.EOF or a nil error. The next Read should return nil, io.EOF. 
+
+Implementations of Token are discouraged from returning a nil token with a nil error. Callers should treat a return of nil, nil as indicating that nothing happened; in particular it does not indicate EOF. 
+
+### <a id="Universe" href="#Universe">type Universe struct</a>
+
+```
+searchKey: xml.Universe
+tags: [struct private]
+```
+
+```Go
+type Universe struct {
+	XMLName struct{} `xml:"universe"`
+	Visible float64  `xml:",chardata"`
+}
+```
+
+### <a id="UnmarshalError" href="#UnmarshalError">type UnmarshalError string</a>
+
+```
+searchKey: xml.UnmarshalError
+tags: [string]
+```
+
+```Go
+type UnmarshalError string
+```
+
+An UnmarshalError represents an error in the unmarshaling process. 
+
+#### <a id="UnmarshalError.Error" href="#UnmarshalError.Error">func (e UnmarshalError) Error() string</a>
+
+```
+searchKey: xml.UnmarshalError.Error
+tags: [function]
+```
+
+```Go
+func (e UnmarshalError) Error() string
+```
+
+### <a id="Unmarshaler" href="#Unmarshaler">type Unmarshaler interface</a>
+
+```
+searchKey: xml.Unmarshaler
+tags: [interface]
+```
+
+```Go
+type Unmarshaler interface {
+	UnmarshalXML(d *Decoder, start StartElement) error
+}
+```
+
+Unmarshaler is the interface implemented by objects that can unmarshal an XML element description of themselves. 
+
+UnmarshalXML decodes a single XML element beginning with the given start element. If it returns an error, the outer call to Unmarshal stops and returns that error. UnmarshalXML must consume exactly one XML element. One common implementation strategy is to unmarshal into a separate value with a layout matching the expected XML using d.DecodeElement, and then to copy the data from that value into the receiver. Another common strategy is to use d.Token to process the XML object one token at a time. UnmarshalXML may not use d.RawToken. 
+
+### <a id="UnmarshalerAttr" href="#UnmarshalerAttr">type UnmarshalerAttr interface</a>
+
+```
+searchKey: xml.UnmarshalerAttr
+tags: [interface]
+```
+
+```Go
+type UnmarshalerAttr interface {
+	UnmarshalXMLAttr(attr Attr) error
+}
+```
+
+UnmarshalerAttr is the interface implemented by objects that can unmarshal an XML attribute description of themselves. 
+
+UnmarshalXMLAttr decodes a single XML attribute. If it returns an error, the outer call to Unmarshal stops and returns that error. UnmarshalXMLAttr is used only for struct fields with the "attr" option in the field tag. 
+
+### <a id="UnsupportedTypeError" href="#UnsupportedTypeError">type UnsupportedTypeError struct</a>
+
+```
+searchKey: xml.UnsupportedTypeError
+tags: [struct]
+```
+
+```Go
+type UnsupportedTypeError struct {
+	Type reflect.Type
+}
+```
+
+UnsupportedTypeError is returned when Marshal encounters a type that cannot be converted into XML. 
+
+#### <a id="UnsupportedTypeError.Error" href="#UnsupportedTypeError.Error">func (e *UnsupportedTypeError) Error() string</a>
+
+```
+searchKey: xml.UnsupportedTypeError.Error
+tags: [function]
+```
+
+```Go
+func (e *UnsupportedTypeError) Error() string
 ```
 
 ### <a id="WhitespaceAttrsParent" href="#WhitespaceAttrsParent">type WhitespaceAttrsParent struct</a>
 
 ```
 searchKey: xml.WhitespaceAttrsParent
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -4815,97 +4421,85 @@ type WhitespaceAttrsParent struct {
 }
 ```
 
-### <a id="toks" href="#toks">type toks struct</a>
+### <a id="WhitespaceValuesParent" href="#WhitespaceValuesParent">type WhitespaceValuesParent struct</a>
 
 ```
-searchKey: xml.toks
-tags: [private]
+searchKey: xml.WhitespaceValuesParent
+tags: [struct private]
 ```
 
 ```Go
-type toks struct {
-	earlyEOF bool
-	t        []Token
+type WhitespaceValuesParent struct {
+	BFalse bool
+	BTrue  bool
+	I      int
+	INeg   int
+	I8     int8
+	I8Neg  int8
+	I16    int16
+	I16Neg int16
+	I32    int32
+	I32Neg int32
+	I64    int64
+	I64Neg int64
+	UI     uint
+	UI8    uint8
+	UI16   uint16
+	UI32   uint32
+	UI64   uint64
+	F32    float32
+	F32Neg float32
+	F64    float64
+	F64Neg float64
 }
 ```
 
-#### <a id="toks.Token" href="#toks.Token">func (t *toks) Token() (Token, error)</a>
+### <a id="X" href="#X">type X struct</a>
 
 ```
-searchKey: xml.toks.Token
-tags: [private]
-```
-
-```Go
-func (t *toks) Token() (Token, error)
-```
-
-### <a id="toksNil" href="#toksNil">type toksNil struct</a>
-
-```
-searchKey: xml.toksNil
-tags: [private]
+searchKey: xml.X
+tags: [struct private]
 ```
 
 ```Go
-type toksNil struct {
-	returnEOF bool
-	t         []Token
+type X struct {
+	D string `xml:",comment"`
 }
 ```
 
-#### <a id="toksNil.Token" href="#toksNil.Token">func (t *toksNil) Token() (Token, error)</a>
+### <a id="XMLNameWithTag" href="#XMLNameWithTag">type XMLNameWithTag struct</a>
 
 ```
-searchKey: xml.toksNil.Token
-tags: [private]
-```
-
-```Go
-func (t *toksNil) Token() (Token, error)
-```
-
-### <a id="downCaser" href="#downCaser">type downCaser struct</a>
-
-```
-searchKey: xml.downCaser
-tags: [private]
+searchKey: xml.XMLNameWithTag
+tags: [struct private]
 ```
 
 ```Go
-type downCaser struct {
-	t *testing.T
-	r io.ByteReader
+type XMLNameWithTag struct {
+	XMLName Name   `xml:"InXMLNameTag"`
+	Value   string `xml:",chardata"`
 }
 ```
 
-#### <a id="downCaser.ReadByte" href="#downCaser.ReadByte">func (d *downCaser) ReadByte() (c byte, err error)</a>
+### <a id="XMLNameWithoutTag" href="#XMLNameWithoutTag">type XMLNameWithoutTag struct</a>
 
 ```
-searchKey: xml.downCaser.ReadByte
-tags: [private]
-```
-
-```Go
-func (d *downCaser) ReadByte() (c byte, err error)
-```
-
-#### <a id="downCaser.Read" href="#downCaser.Read">func (d *downCaser) Read(p []byte) (int, error)</a>
-
-```
-searchKey: xml.downCaser.Read
-tags: [private]
+searchKey: xml.XMLNameWithoutTag
+tags: [struct private]
 ```
 
 ```Go
-func (d *downCaser) Read(p []byte) (int, error)
+type XMLNameWithoutTag struct {
+	XMLName Name
+	Value   string `xml:",chardata"`
+}
 ```
 
 ### <a id="allScalars" href="#allScalars">type allScalars struct</a>
 
 ```
 searchKey: xml.allScalars
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -4932,16 +4526,53 @@ type allScalars struct {
 }
 ```
 
-### <a id="item" href="#item">type item struct</a>
+### <a id="downCaser" href="#downCaser">type downCaser struct</a>
 
 ```
-searchKey: xml.item
-tags: [private]
+searchKey: xml.downCaser
+tags: [struct private]
 ```
 
 ```Go
-type item struct {
-	FieldA string
+type downCaser struct {
+	t *testing.T
+	r io.ByteReader
+}
+```
+
+#### <a id="downCaser.Read" href="#downCaser.Read">func (d *downCaser) Read(p []byte) (int, error)</a>
+
+```
+searchKey: xml.downCaser.Read
+tags: [method private]
+```
+
+```Go
+func (d *downCaser) Read(p []byte) (int, error)
+```
+
+#### <a id="downCaser.ReadByte" href="#downCaser.ReadByte">func (d *downCaser) ReadByte() (c byte, err error)</a>
+
+```
+searchKey: xml.downCaser.ReadByte
+tags: [function private]
+```
+
+```Go
+func (d *downCaser) ReadByte() (c byte, err error)
+```
+
+### <a id="embedD" href="#embedD">type embedD struct</a>
+
+```
+searchKey: xml.embedD
+tags: [struct private]
+```
+
+```Go
+type embedD struct {
+	fieldD string
+	FieldE string // Promoted and visible when embedD is embedded.
 }
 ```
 
@@ -4949,7 +4580,7 @@ type item struct {
 
 ```
 searchKey: xml.errWriter
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -4962,18 +4593,125 @@ Writer whose Write method always returns an error.
 
 ```
 searchKey: xml.errWriter.Write
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (errWriter) Write(p []byte) (n int, err error)
 ```
 
+### <a id="fieldFlags" href="#fieldFlags">type fieldFlags int</a>
+
+```
+searchKey: xml.fieldFlags
+tags: [number private]
+```
+
+```Go
+type fieldFlags int
+```
+
+### <a id="fieldInfo" href="#fieldInfo">type fieldInfo struct</a>
+
+```
+searchKey: xml.fieldInfo
+tags: [struct private]
+```
+
+```Go
+type fieldInfo struct {
+	idx     []int
+	name    string
+	xmlns   string
+	flags   fieldFlags
+	parents []string
+}
+```
+
+fieldInfo holds details for the xml representation of a single field. 
+
+#### <a id="lookupXMLName" href="#lookupXMLName">func lookupXMLName(typ reflect.Type) (xmlname *fieldInfo)</a>
+
+```
+searchKey: xml.lookupXMLName
+tags: [method private]
+```
+
+```Go
+func lookupXMLName(typ reflect.Type) (xmlname *fieldInfo)
+```
+
+lookupXMLName returns the fieldInfo for typ's XMLName field in case it exists and has a valid xml field tag, otherwise it returns nil. 
+
+#### <a id="structFieldInfo" href="#structFieldInfo">func structFieldInfo(typ reflect.Type, f *reflect.StructField) (*fieldInfo, error)</a>
+
+```
+searchKey: xml.structFieldInfo
+tags: [method private]
+```
+
+```Go
+func structFieldInfo(typ reflect.Type, f *reflect.StructField) (*fieldInfo, error)
+```
+
+structFieldInfo builds and returns a fieldInfo for f. 
+
+#### <a id="fieldInfo.value" href="#fieldInfo.value">func (finfo *fieldInfo) value(v reflect.Value, shouldInitNilPointers bool) reflect.Value</a>
+
+```
+searchKey: xml.fieldInfo.value
+tags: [method private]
+```
+
+```Go
+func (finfo *fieldInfo) value(v reflect.Value, shouldInitNilPointers bool) reflect.Value
+```
+
+value returns v's field value corresponding to finfo. It's equivalent to v.FieldByIndex(finfo.idx), but when passed initNilPointers, it initializes and dereferences pointers as necessary. When passed dontInitNilPointers and a nil pointer is reached, the function returns a zero reflect.Value. 
+
+### <a id="item" href="#item">type item struct</a>
+
+```
+searchKey: xml.item
+tags: [struct private]
+```
+
+```Go
+type item struct {
+	FieldA string
+}
+```
+
+### <a id="limitedBytesWriter" href="#limitedBytesWriter">type limitedBytesWriter struct</a>
+
+```
+searchKey: xml.limitedBytesWriter
+tags: [struct private]
+```
+
+```Go
+type limitedBytesWriter struct {
+	w      io.Writer
+	remain int // until writes fail
+}
+```
+
+#### <a id="limitedBytesWriter.Write" href="#limitedBytesWriter.Write">func (lw *limitedBytesWriter) Write(p []byte) (n int, err error)</a>
+
+```
+searchKey: xml.limitedBytesWriter.Write
+tags: [method private]
+```
+
+```Go
+func (lw *limitedBytesWriter) Write(p []byte) (n int, err error)
+```
+
 ### <a id="mapper" href="#mapper">type mapper struct</a>
 
 ```
 searchKey: xml.mapper
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -4987,18 +4725,283 @@ type mapper struct {
 
 ```
 searchKey: xml.mapper.Token
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (m mapper) Token() (Token, error)
 ```
 
+### <a id="parentStack" href="#parentStack">type parentStack struct</a>
+
+```
+searchKey: xml.parentStack
+tags: [struct private]
+```
+
+```Go
+type parentStack struct {
+	p     *printer
+	stack []string
+}
+```
+
+#### <a id="parentStack.push" href="#parentStack.push">func (s *parentStack) push(parents []string) error</a>
+
+```
+searchKey: xml.parentStack.push
+tags: [method private]
+```
+
+```Go
+func (s *parentStack) push(parents []string) error
+```
+
+push adds parent elements to the stack and writes open tags. 
+
+#### <a id="parentStack.trim" href="#parentStack.trim">func (s *parentStack) trim(parents []string) error</a>
+
+```
+searchKey: xml.parentStack.trim
+tags: [method private]
+```
+
+```Go
+func (s *parentStack) trim(parents []string) error
+```
+
+trim updates the XML context to match the longest common prefix of the stack and the given parents. A closing tag will be written for every parent popped. Passing a zero slice or nil will close all the elements. 
+
+### <a id="printer" href="#printer">type printer struct</a>
+
+```
+searchKey: xml.printer
+tags: [struct private]
+```
+
+```Go
+type printer struct {
+	*bufio.Writer
+	encoder    *Encoder
+	seq        int
+	indent     string
+	prefix     string
+	depth      int
+	indentedIn bool
+	putNewline bool
+	attrNS     map[string]string // map prefix -> name space
+	attrPrefix map[string]string // map name space -> prefix
+	prefixes   []string
+	tags       []Name
+}
+```
+
+#### <a id="printer.EscapeString" href="#printer.EscapeString">func (p *printer) EscapeString(s string)</a>
+
+```
+searchKey: xml.printer.EscapeString
+tags: [method private]
+```
+
+```Go
+func (p *printer) EscapeString(s string)
+```
+
+EscapeString writes to p the properly escaped XML equivalent of the plain text data s. 
+
+#### <a id="printer.cachedWriteError" href="#printer.cachedWriteError">func (p *printer) cachedWriteError() error</a>
+
+```
+searchKey: xml.printer.cachedWriteError
+tags: [function private]
+```
+
+```Go
+func (p *printer) cachedWriteError() error
+```
+
+return the bufio Writer's cached write error 
+
+#### <a id="printer.createAttrPrefix" href="#printer.createAttrPrefix">func (p *printer) createAttrPrefix(url string) string</a>
+
+```
+searchKey: xml.printer.createAttrPrefix
+tags: [method private]
+```
+
+```Go
+func (p *printer) createAttrPrefix(url string) string
+```
+
+createAttrPrefix finds the name space prefix attribute to use for the given name space, defining a new prefix if necessary. It returns the prefix. 
+
+#### <a id="printer.deleteAttrPrefix" href="#printer.deleteAttrPrefix">func (p *printer) deleteAttrPrefix(prefix string)</a>
+
+```
+searchKey: xml.printer.deleteAttrPrefix
+tags: [method private]
+```
+
+```Go
+func (p *printer) deleteAttrPrefix(prefix string)
+```
+
+deleteAttrPrefix removes an attribute name space prefix. 
+
+#### <a id="printer.markPrefix" href="#printer.markPrefix">func (p *printer) markPrefix()</a>
+
+```
+searchKey: xml.printer.markPrefix
+tags: [function private]
+```
+
+```Go
+func (p *printer) markPrefix()
+```
+
+#### <a id="printer.marshalAttr" href="#printer.marshalAttr">func (p *printer) marshalAttr(start *StartElement, name Name, val reflect.Value) error</a>
+
+```
+searchKey: xml.printer.marshalAttr
+tags: [method private]
+```
+
+```Go
+func (p *printer) marshalAttr(start *StartElement, name Name, val reflect.Value) error
+```
+
+marshalAttr marshals an attribute with the given name and value, adding to start.Attr. 
+
+#### <a id="printer.marshalInterface" href="#printer.marshalInterface">func (p *printer) marshalInterface(val Marshaler, start StartElement) error</a>
+
+```
+searchKey: xml.printer.marshalInterface
+tags: [method private]
+```
+
+```Go
+func (p *printer) marshalInterface(val Marshaler, start StartElement) error
+```
+
+marshalInterface marshals a Marshaler interface value. 
+
+#### <a id="printer.marshalSimple" href="#printer.marshalSimple">func (p *printer) marshalSimple(typ reflect.Type, val reflect.Value) (string, []byte, error)</a>
+
+```
+searchKey: xml.printer.marshalSimple
+tags: [method private]
+```
+
+```Go
+func (p *printer) marshalSimple(typ reflect.Type, val reflect.Value) (string, []byte, error)
+```
+
+#### <a id="printer.marshalStruct" href="#printer.marshalStruct">func (p *printer) marshalStruct(tinfo *typeInfo, val reflect.Value) error</a>
+
+```
+searchKey: xml.printer.marshalStruct
+tags: [method private]
+```
+
+```Go
+func (p *printer) marshalStruct(tinfo *typeInfo, val reflect.Value) error
+```
+
+#### <a id="printer.marshalTextInterface" href="#printer.marshalTextInterface">func (p *printer) marshalTextInterface(val encoding.TextMarshaler, start StartElement) error</a>
+
+```
+searchKey: xml.printer.marshalTextInterface
+tags: [method private]
+```
+
+```Go
+func (p *printer) marshalTextInterface(val encoding.TextMarshaler, start StartElement) error
+```
+
+marshalTextInterface marshals a TextMarshaler interface value. 
+
+#### <a id="printer.marshalValue" href="#printer.marshalValue">func (p *printer) marshalValue(val reflect.Value, finfo *fieldInfo, startTemplate *StartElement) error</a>
+
+```
+searchKey: xml.printer.marshalValue
+tags: [method private]
+```
+
+```Go
+func (p *printer) marshalValue(val reflect.Value, finfo *fieldInfo, startTemplate *StartElement) error
+```
+
+marshalValue writes one or more XML elements representing val. If val was obtained from a struct field, finfo must have its details. 
+
+#### <a id="printer.popPrefix" href="#printer.popPrefix">func (p *printer) popPrefix()</a>
+
+```
+searchKey: xml.printer.popPrefix
+tags: [function private]
+```
+
+```Go
+func (p *printer) popPrefix()
+```
+
+#### <a id="printer.writeEnd" href="#printer.writeEnd">func (p *printer) writeEnd(name Name) error</a>
+
+```
+searchKey: xml.printer.writeEnd
+tags: [method private]
+```
+
+```Go
+func (p *printer) writeEnd(name Name) error
+```
+
+#### <a id="printer.writeIndent" href="#printer.writeIndent">func (p *printer) writeIndent(depthDelta int)</a>
+
+```
+searchKey: xml.printer.writeIndent
+tags: [method private]
+```
+
+```Go
+func (p *printer) writeIndent(depthDelta int)
+```
+
+#### <a id="printer.writeStart" href="#printer.writeStart">func (p *printer) writeStart(start *StartElement) error</a>
+
+```
+searchKey: xml.printer.writeStart
+tags: [method private]
+```
+
+```Go
+func (p *printer) writeStart(start *StartElement) error
+```
+
+writeStart writes the given start element. 
+
+### <a id="stack" href="#stack">type stack struct</a>
+
+```
+searchKey: xml.stack
+tags: [struct private]
+```
+
+```Go
+type stack struct {
+	next *stack
+	kind int
+	name Name
+	ok   bool
+}
+```
+
+Parsing state - stack holds old name space translations and the current set of open elements. The translations to pop when ending a given tag are *below* it on the stack, which is more work but forced on us by XML. 
+
 ### <a id="tokReader" href="#tokReader">type tokReader struct{}</a>
 
 ```
 searchKey: xml.tokReader
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -5009,41 +5012,151 @@ type tokReader struct{}
 
 ```
 searchKey: xml.tokReader.Token
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (tokReader) Token() (Token, error)
 ```
 
-### <a id="Failure" href="#Failure">type Failure struct{}</a>
+### <a id="toks" href="#toks">type toks struct</a>
 
 ```
-searchKey: xml.Failure
-tags: [private]
-```
-
-```Go
-type Failure struct{}
-```
-
-#### <a id="Failure.UnmarshalXML" href="#Failure.UnmarshalXML">func (Failure) UnmarshalXML(*Decoder, StartElement) error</a>
-
-```
-searchKey: xml.Failure.UnmarshalXML
-tags: [private]
+searchKey: xml.toks
+tags: [struct private]
 ```
 
 ```Go
-func (Failure) UnmarshalXML(*Decoder, StartElement) error
+type toks struct {
+	earlyEOF bool
+	t        []Token
+}
 ```
+
+#### <a id="toks.Token" href="#toks.Token">func (t *toks) Token() (Token, error)</a>
+
+```
+searchKey: xml.toks.Token
+tags: [function private]
+```
+
+```Go
+func (t *toks) Token() (Token, error)
+```
+
+### <a id="toksNil" href="#toksNil">type toksNil struct</a>
+
+```
+searchKey: xml.toksNil
+tags: [struct private]
+```
+
+```Go
+type toksNil struct {
+	returnEOF bool
+	t         []Token
+}
+```
+
+#### <a id="toksNil.Token" href="#toksNil.Token">func (t *toksNil) Token() (Token, error)</a>
+
+```
+searchKey: xml.toksNil.Token
+tags: [function private]
+```
+
+```Go
+func (t *toksNil) Token() (Token, error)
+```
+
+### <a id="typeInfo" href="#typeInfo">type typeInfo struct</a>
+
+```
+searchKey: xml.typeInfo
+tags: [struct private]
+```
+
+```Go
+type typeInfo struct {
+	xmlname *fieldInfo
+	fields  []fieldInfo
+}
+```
+
+typeInfo holds details for the xml representation of a type. 
+
+#### <a id="getTypeInfo" href="#getTypeInfo">func getTypeInfo(typ reflect.Type) (*typeInfo, error)</a>
+
+```
+searchKey: xml.getTypeInfo
+tags: [method private]
+```
+
+```Go
+func getTypeInfo(typ reflect.Type) (*typeInfo, error)
+```
+
+getTypeInfo returns the typeInfo structure with details necessary for marshaling and unmarshaling typ. 
 
 ## <a id="func" href="#func">Functions</a>
+
+```
+tags: [package]
+```
+
+### <a id="BenchmarkMarshal" href="#BenchmarkMarshal">func BenchmarkMarshal(b *testing.B)</a>
+
+```
+searchKey: xml.BenchmarkMarshal
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkMarshal(b *testing.B)
+```
+
+### <a id="BenchmarkUnmarshal" href="#BenchmarkUnmarshal">func BenchmarkUnmarshal(b *testing.B)</a>
+
+```
+searchKey: xml.BenchmarkUnmarshal
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkUnmarshal(b *testing.B)
+```
+
+### <a id="Escape" href="#Escape">func Escape(w io.Writer, s []byte)</a>
+
+```
+searchKey: xml.Escape
+tags: [method]
+```
+
+```Go
+func Escape(w io.Writer, s []byte)
+```
+
+Escape is like EscapeText but omits the error return value. It is provided for backwards compatibility with Go 1.0. Code targeting Go 1.1 or later should use EscapeText. 
+
+### <a id="EscapeText" href="#EscapeText">func EscapeText(w io.Writer, s []byte) error</a>
+
+```
+searchKey: xml.EscapeText
+tags: [method]
+```
+
+```Go
+func EscapeText(w io.Writer, s []byte) error
+```
+
+EscapeText writes to w the properly escaped XML equivalent of the plain text data s. 
 
 ### <a id="Marshal" href="#Marshal">func Marshal(v interface{}) ([]byte, error)</a>
 
 ```
 searchKey: xml.Marshal
+tags: [method]
 ```
 
 ```Go
@@ -5106,6 +5219,7 @@ Marshal will return an error if asked to marshal a channel, function, or map.
 
 ```
 searchKey: xml.MarshalIndent
+tags: [method]
 ```
 
 ```Go
@@ -5114,47 +5228,748 @@ func MarshalIndent(v interface{}, prefix, indent string) ([]byte, error)
 
 MarshalIndent works like Marshal, but each XML element begins on a new indented line that starts with prefix and is followed by one or more copies of indent according to the nesting depth. 
 
-### <a id="isValidDirective" href="#isValidDirective">func isValidDirective(dir Directive) bool</a>
+### <a id="ParseTime" href="#ParseTime">func ParseTime(str string) time.Time</a>
 
 ```
-searchKey: xml.isValidDirective
-tags: [private]
-```
-
-```Go
-func isValidDirective(dir Directive) bool
-```
-
-isValidDirective reports whether dir is a valid directive text, meaning angle brackets are matched, ignoring comments and strings. 
-
-### <a id="indirect" href="#indirect">func indirect(vf reflect.Value) reflect.Value</a>
-
-```
-searchKey: xml.indirect
-tags: [private]
+searchKey: xml.ParseTime
+tags: [method private]
 ```
 
 ```Go
-func indirect(vf reflect.Value) reflect.Value
+func ParseTime(str string) time.Time
 ```
 
-indirect drills into interfaces and pointers, returning the pointed-at value. If it encounters a nil interface or pointer, indirect returns that nil value. This can turn into an infinite loop given a cyclic chain, but it matches the Go 1 behavior. 
-
-### <a id="isEmptyValue" href="#isEmptyValue">func isEmptyValue(v reflect.Value) bool</a>
+### <a id="TestAllScalars" href="#TestAllScalars">func TestAllScalars(t *testing.T)</a>
 
 ```
-searchKey: xml.isEmptyValue
-tags: [private]
+searchKey: xml.TestAllScalars
+tags: [method private test]
 ```
 
 ```Go
-func isEmptyValue(v reflect.Value) bool
+func TestAllScalars(t *testing.T)
+```
+
+### <a id="TestCopyTokenCharData" href="#TestCopyTokenCharData">func TestCopyTokenCharData(t *testing.T)</a>
+
+```
+searchKey: xml.TestCopyTokenCharData
+tags: [method private test]
+```
+
+```Go
+func TestCopyTokenCharData(t *testing.T)
+```
+
+### <a id="TestCopyTokenStartElement" href="#TestCopyTokenStartElement">func TestCopyTokenStartElement(t *testing.T)</a>
+
+```
+searchKey: xml.TestCopyTokenStartElement
+tags: [method private test]
+```
+
+```Go
+func TestCopyTokenStartElement(t *testing.T)
+```
+
+### <a id="TestDecodeEOF" href="#TestDecodeEOF">func TestDecodeEOF(t *testing.T)</a>
+
+```
+searchKey: xml.TestDecodeEOF
+tags: [method private test]
+```
+
+```Go
+func TestDecodeEOF(t *testing.T)
+```
+
+### <a id="TestDecodeEncode" href="#TestDecodeEncode">func TestDecodeEncode(t *testing.T)</a>
+
+```
+searchKey: xml.TestDecodeEncode
+tags: [method private test]
+```
+
+```Go
+func TestDecodeEncode(t *testing.T)
+```
+
+### <a id="TestDecodeNilToken" href="#TestDecodeNilToken">func TestDecodeNilToken(t *testing.T)</a>
+
+```
+searchKey: xml.TestDecodeNilToken
+tags: [method private test]
+```
+
+```Go
+func TestDecodeNilToken(t *testing.T)
+```
+
+### <a id="TestDirectivesWithComments" href="#TestDirectivesWithComments">func TestDirectivesWithComments(t *testing.T)</a>
+
+```
+searchKey: xml.TestDirectivesWithComments
+tags: [method private test]
+```
+
+```Go
+func TestDirectivesWithComments(t *testing.T)
+```
+
+### <a id="TestDisallowedCharacters" href="#TestDisallowedCharacters">func TestDisallowedCharacters(t *testing.T)</a>
+
+```
+searchKey: xml.TestDisallowedCharacters
+tags: [method private test]
+```
+
+```Go
+func TestDisallowedCharacters(t *testing.T)
+```
+
+### <a id="TestEncodeToken" href="#TestEncodeToken">func TestEncodeToken(t *testing.T)</a>
+
+```
+searchKey: xml.TestEncodeToken
+tags: [method private test]
+```
+
+```Go
+func TestEncodeToken(t *testing.T)
+```
+
+### <a id="TestEntityInsideCDATA" href="#TestEntityInsideCDATA">func TestEntityInsideCDATA(t *testing.T)</a>
+
+```
+searchKey: xml.TestEntityInsideCDATA
+tags: [method private test]
+```
+
+```Go
+func TestEntityInsideCDATA(t *testing.T)
+```
+
+### <a id="TestEscapeTextIOErrors" href="#TestEscapeTextIOErrors">func TestEscapeTextIOErrors(t *testing.T)</a>
+
+```
+searchKey: xml.TestEscapeTextIOErrors
+tags: [method private test]
+```
+
+```Go
+func TestEscapeTextIOErrors(t *testing.T)
+```
+
+### <a id="TestEscapeTextInvalidChar" href="#TestEscapeTextInvalidChar">func TestEscapeTextInvalidChar(t *testing.T)</a>
+
+```
+searchKey: xml.TestEscapeTextInvalidChar
+tags: [method private test]
+```
+
+```Go
+func TestEscapeTextInvalidChar(t *testing.T)
+```
+
+### <a id="TestInvalidInnerXMLType" href="#TestInvalidInnerXMLType">func TestInvalidInnerXMLType(t *testing.T)</a>
+
+```
+searchKey: xml.TestInvalidInnerXMLType
+tags: [method private test]
+```
+
+```Go
+func TestInvalidInnerXMLType(t *testing.T)
+```
+
+Issue 15600. ",innerxml" on a field that can't hold it. 
+
+### <a id="TestInvalidXMLName" href="#TestInvalidXMLName">func TestInvalidXMLName(t *testing.T)</a>
+
+```
+searchKey: xml.TestInvalidXMLName
+tags: [method private test]
+```
+
+```Go
+func TestInvalidXMLName(t *testing.T)
+```
+
+### <a id="TestIsInCharacterRange" href="#TestIsInCharacterRange">func TestIsInCharacterRange(t *testing.T)</a>
+
+```
+searchKey: xml.TestIsInCharacterRange
+tags: [method private test]
+```
+
+```Go
+func TestIsInCharacterRange(t *testing.T)
+```
+
+### <a id="TestIsValidDirective" href="#TestIsValidDirective">func TestIsValidDirective(t *testing.T)</a>
+
+```
+searchKey: xml.TestIsValidDirective
+tags: [method private test]
+```
+
+```Go
+func TestIsValidDirective(t *testing.T)
+```
+
+### <a id="TestIssue11405" href="#TestIssue11405">func TestIssue11405(t *testing.T)</a>
+
+```
+searchKey: xml.TestIssue11405
+tags: [method private test]
+```
+
+```Go
+func TestIssue11405(t *testing.T)
+```
+
+### <a id="TestIssue12417" href="#TestIssue12417">func TestIssue12417(t *testing.T)</a>
+
+```
+searchKey: xml.TestIssue12417
+tags: [method private test]
+```
+
+```Go
+func TestIssue12417(t *testing.T)
+```
+
+### <a id="TestIssue16158" href="#TestIssue16158">func TestIssue16158(t *testing.T)</a>
+
+```
+searchKey: xml.TestIssue16158
+tags: [method private test]
+```
+
+```Go
+func TestIssue16158(t *testing.T)
+```
+
+Issue 16158. Decoder.unmarshalAttr ignores the return value of copyValue. 
+
+### <a id="TestIssue569" href="#TestIssue569">func TestIssue569(t *testing.T)</a>
+
+```
+searchKey: xml.TestIssue569
+tags: [method private test]
+```
+
+```Go
+func TestIssue569(t *testing.T)
+```
+
+### <a id="TestIssue5880" href="#TestIssue5880">func TestIssue5880(t *testing.T)</a>
+
+```
+searchKey: xml.TestIssue5880
+tags: [method private test]
+```
+
+```Go
+func TestIssue5880(t *testing.T)
+```
+
+### <a id="TestMalformedComment" href="#TestMalformedComment">func TestMalformedComment(t *testing.T)</a>
+
+```
+searchKey: xml.TestMalformedComment
+tags: [method private test]
+```
+
+```Go
+func TestMalformedComment(t *testing.T)
+```
+
+Issue 11112. Unmarshal must reject invalid comments. 
+
+### <a id="TestMarshal" href="#TestMarshal">func TestMarshal(t *testing.T)</a>
+
+```
+searchKey: xml.TestMarshal
+tags: [method private test]
+```
+
+```Go
+func TestMarshal(t *testing.T)
+```
+
+### <a id="TestMarshalErrors" href="#TestMarshalErrors">func TestMarshalErrors(t *testing.T)</a>
+
+```
+searchKey: xml.TestMarshalErrors
+tags: [method private test]
+```
+
+```Go
+func TestMarshalErrors(t *testing.T)
+```
+
+### <a id="TestMarshalFlush" href="#TestMarshalFlush">func TestMarshalFlush(t *testing.T)</a>
+
+```
+searchKey: xml.TestMarshalFlush
+tags: [method private test]
+```
+
+```Go
+func TestMarshalFlush(t *testing.T)
+```
+
+### <a id="TestMarshalIndent" href="#TestMarshalIndent">func TestMarshalIndent(t *testing.T)</a>
+
+```
+searchKey: xml.TestMarshalIndent
+tags: [method private test]
+```
+
+```Go
+func TestMarshalIndent(t *testing.T)
+```
+
+### <a id="TestMarshalNS" href="#TestMarshalNS">func TestMarshalNS(t *testing.T)</a>
+
+```
+searchKey: xml.TestMarshalNS
+tags: [method private test]
+```
+
+```Go
+func TestMarshalNS(t *testing.T)
+```
+
+### <a id="TestMarshalNSAttr" href="#TestMarshalNSAttr">func TestMarshalNSAttr(t *testing.T)</a>
+
+```
+searchKey: xml.TestMarshalNSAttr
+tags: [method private test]
+```
+
+```Go
+func TestMarshalNSAttr(t *testing.T)
+```
+
+### <a id="TestMarshalWriteErrors" href="#TestMarshalWriteErrors">func TestMarshalWriteErrors(t *testing.T)</a>
+
+```
+searchKey: xml.TestMarshalWriteErrors
+tags: [method private test]
+```
+
+```Go
+func TestMarshalWriteErrors(t *testing.T)
+```
+
+### <a id="TestMarshalWriteIOErrors" href="#TestMarshalWriteIOErrors">func TestMarshalWriteIOErrors(t *testing.T)</a>
+
+```
+searchKey: xml.TestMarshalWriteIOErrors
+tags: [method private test]
+```
+
+```Go
+func TestMarshalWriteIOErrors(t *testing.T)
+```
+
+### <a id="TestNestedDirectives" href="#TestNestedDirectives">func TestNestedDirectives(t *testing.T)</a>
+
+```
+searchKey: xml.TestNestedDirectives
+tags: [method private test]
+```
+
+```Go
+func TestNestedDirectives(t *testing.T)
+```
+
+### <a id="TestNewTokenDecoderIdempotent" href="#TestNewTokenDecoderIdempotent">func TestNewTokenDecoderIdempotent(t *testing.T)</a>
+
+```
+searchKey: xml.TestNewTokenDecoderIdempotent
+tags: [method private test]
+```
+
+```Go
+func TestNewTokenDecoderIdempotent(t *testing.T)
+```
+
+### <a id="TestNonStrictRawToken" href="#TestNonStrictRawToken">func TestNonStrictRawToken(t *testing.T)</a>
+
+```
+searchKey: xml.TestNonStrictRawToken
+tags: [method private test]
+```
+
+```Go
+func TestNonStrictRawToken(t *testing.T)
+```
+
+### <a id="TestProcInstEncodeToken" href="#TestProcInstEncodeToken">func TestProcInstEncodeToken(t *testing.T)</a>
+
+```
+searchKey: xml.TestProcInstEncodeToken
+tags: [method private test]
+```
+
+```Go
+func TestProcInstEncodeToken(t *testing.T)
+```
+
+### <a id="TestProcInstEncoding" href="#TestProcInstEncoding">func TestProcInstEncoding(t *testing.T)</a>
+
+```
+searchKey: xml.TestProcInstEncoding
+tags: [method private test]
+```
+
+```Go
+func TestProcInstEncoding(t *testing.T)
+```
+
+### <a id="TestRace9796" href="#TestRace9796">func TestRace9796(t *testing.T)</a>
+
+```
+searchKey: xml.TestRace9796
+tags: [method private test]
+```
+
+```Go
+func TestRace9796(t *testing.T)
+```
+
+Issue 9796. Used to fail with GORACE="halt_on_error=1" -race. 
+
+### <a id="TestRawToken" href="#TestRawToken">func TestRawToken(t *testing.T)</a>
+
+```
+searchKey: xml.TestRawToken
+tags: [method private test]
+```
+
+```Go
+func TestRawToken(t *testing.T)
+```
+
+### <a id="TestRawTokenAltEncoding" href="#TestRawTokenAltEncoding">func TestRawTokenAltEncoding(t *testing.T)</a>
+
+```
+searchKey: xml.TestRawTokenAltEncoding
+tags: [method private test]
+```
+
+```Go
+func TestRawTokenAltEncoding(t *testing.T)
+```
+
+### <a id="TestRawTokenAltEncodingNoConverter" href="#TestRawTokenAltEncodingNoConverter">func TestRawTokenAltEncodingNoConverter(t *testing.T)</a>
+
+```
+searchKey: xml.TestRawTokenAltEncodingNoConverter
+tags: [method private test]
+```
+
+```Go
+func TestRawTokenAltEncodingNoConverter(t *testing.T)
+```
+
+### <a id="TestRoundTrip" href="#TestRoundTrip">func TestRoundTrip(t *testing.T)</a>
+
+```
+searchKey: xml.TestRoundTrip
+tags: [method private test]
+```
+
+```Go
+func TestRoundTrip(t *testing.T)
+```
+
+### <a id="TestSimpleUseOfEncodeToken" href="#TestSimpleUseOfEncodeToken">func TestSimpleUseOfEncodeToken(t *testing.T)</a>
+
+```
+searchKey: xml.TestSimpleUseOfEncodeToken
+tags: [method private test]
+```
+
+```Go
+func TestSimpleUseOfEncodeToken(t *testing.T)
+```
+
+Issue 11719. EncodeToken used to silently eat tokens with an invalid type. 
+
+### <a id="TestStructPointerMarshal" href="#TestStructPointerMarshal">func TestStructPointerMarshal(t *testing.T)</a>
+
+```
+searchKey: xml.TestStructPointerMarshal
+tags: [method private test]
+```
+
+```Go
+func TestStructPointerMarshal(t *testing.T)
+```
+
+golang.org/issue/6556 
+
+### <a id="TestSyntax" href="#TestSyntax">func TestSyntax(t *testing.T)</a>
+
+```
+searchKey: xml.TestSyntax
+tags: [method private test]
+```
+
+```Go
+func TestSyntax(t *testing.T)
+```
+
+### <a id="TestSyntaxErrorLineNum" href="#TestSyntaxErrorLineNum">func TestSyntaxErrorLineNum(t *testing.T)</a>
+
+```
+searchKey: xml.TestSyntaxErrorLineNum
+tags: [method private test]
+```
+
+```Go
+func TestSyntaxErrorLineNum(t *testing.T)
+```
+
+### <a id="TestToken" href="#TestToken">func TestToken(t *testing.T)</a>
+
+```
+searchKey: xml.TestToken
+tags: [method private test]
+```
+
+```Go
+func TestToken(t *testing.T)
+```
+
+### <a id="TestTokenUnmarshaler" href="#TestTokenUnmarshaler">func TestTokenUnmarshaler(t *testing.T)</a>
+
+```
+searchKey: xml.TestTokenUnmarshaler
+tags: [method private test]
+```
+
+```Go
+func TestTokenUnmarshaler(t *testing.T)
+```
+
+### <a id="TestTrailingRawToken" href="#TestTrailingRawToken">func TestTrailingRawToken(t *testing.T)</a>
+
+```
+searchKey: xml.TestTrailingRawToken
+tags: [method private test]
+```
+
+```Go
+func TestTrailingRawToken(t *testing.T)
+```
+
+### <a id="TestTrailingToken" href="#TestTrailingToken">func TestTrailingToken(t *testing.T)</a>
+
+```
+searchKey: xml.TestTrailingToken
+tags: [method private test]
+```
+
+```Go
+func TestTrailingToken(t *testing.T)
+```
+
+### <a id="TestUnmarshal" href="#TestUnmarshal">func TestUnmarshal(t *testing.T)</a>
+
+```
+searchKey: xml.TestUnmarshal
+tags: [method private test]
+```
+
+```Go
+func TestUnmarshal(t *testing.T)
+```
+
+Do invertibility testing on the various structures that we test 
+
+### <a id="TestUnmarshalAttr" href="#TestUnmarshalAttr">func TestUnmarshalAttr(t *testing.T)</a>
+
+```
+searchKey: xml.TestUnmarshalAttr
+tags: [method private test]
+```
+
+```Go
+func TestUnmarshalAttr(t *testing.T)
+```
+
+### <a id="TestUnmarshalBadPaths" href="#TestUnmarshalBadPaths">func TestUnmarshalBadPaths(t *testing.T)</a>
+
+```
+searchKey: xml.TestUnmarshalBadPaths
+tags: [method private test]
+```
+
+```Go
+func TestUnmarshalBadPaths(t *testing.T)
+```
+
+### <a id="TestUnmarshalEmptyValues" href="#TestUnmarshalEmptyValues">func TestUnmarshalEmptyValues(t *testing.T)</a>
+
+```
+searchKey: xml.TestUnmarshalEmptyValues
+tags: [method private test]
+```
+
+```Go
+func TestUnmarshalEmptyValues(t *testing.T)
+```
+
+golang.org/issues/13417 
+
+### <a id="TestUnmarshalFeed" href="#TestUnmarshalFeed">func TestUnmarshalFeed(t *testing.T)</a>
+
+```
+searchKey: xml.TestUnmarshalFeed
+tags: [method private test]
+```
+
+```Go
+func TestUnmarshalFeed(t *testing.T)
+```
+
+### <a id="TestUnmarshalIntoInterface" href="#TestUnmarshalIntoInterface">func TestUnmarshalIntoInterface(t *testing.T)</a>
+
+```
+searchKey: xml.TestUnmarshalIntoInterface
+tags: [method private test]
+```
+
+```Go
+func TestUnmarshalIntoInterface(t *testing.T)
+```
+
+[https://golang.org/issue/6836](https://golang.org/issue/6836) 
+
+### <a id="TestUnmarshalNS" href="#TestUnmarshalNS">func TestUnmarshalNS(t *testing.T)</a>
+
+```
+searchKey: xml.TestUnmarshalNS
+tags: [method private test]
+```
+
+```Go
+func TestUnmarshalNS(t *testing.T)
+```
+
+### <a id="TestUnmarshalNSAttr" href="#TestUnmarshalNSAttr">func TestUnmarshalNSAttr(t *testing.T)</a>
+
+```
+searchKey: xml.TestUnmarshalNSAttr
+tags: [method private test]
+```
+
+```Go
+func TestUnmarshalNSAttr(t *testing.T)
+```
+
+### <a id="TestUnmarshalPaths" href="#TestUnmarshalPaths">func TestUnmarshalPaths(t *testing.T)</a>
+
+```
+searchKey: xml.TestUnmarshalPaths
+tags: [method private test]
+```
+
+```Go
+func TestUnmarshalPaths(t *testing.T)
+```
+
+### <a id="TestUnmarshalWhitespaceAttrs" href="#TestUnmarshalWhitespaceAttrs">func TestUnmarshalWhitespaceAttrs(t *testing.T)</a>
+
+```
+searchKey: xml.TestUnmarshalWhitespaceAttrs
+tags: [method private test]
+```
+
+```Go
+func TestUnmarshalWhitespaceAttrs(t *testing.T)
+```
+
+golang.org/issues/22146 
+
+### <a id="TestUnmarshalWhitespaceValues" href="#TestUnmarshalWhitespaceValues">func TestUnmarshalWhitespaceValues(t *testing.T)</a>
+
+```
+searchKey: xml.TestUnmarshalWhitespaceValues
+tags: [method private test]
+```
+
+```Go
+func TestUnmarshalWhitespaceValues(t *testing.T)
+```
+
+golang.org/issues/22146 
+
+### <a id="TestUnmarshalWithoutNameType" href="#TestUnmarshalWithoutNameType">func TestUnmarshalWithoutNameType(t *testing.T)</a>
+
+```
+searchKey: xml.TestUnmarshalWithoutNameType
+tags: [method private test]
+```
+
+```Go
+func TestUnmarshalWithoutNameType(t *testing.T)
+```
+
+### <a id="TestUnmarshaler" href="#TestUnmarshaler">func TestUnmarshaler(t *testing.T)</a>
+
+```
+searchKey: xml.TestUnmarshaler
+tags: [method private test]
+```
+
+```Go
+func TestUnmarshaler(t *testing.T)
+```
+
+### <a id="TestUnquotedAttrs" href="#TestUnquotedAttrs">func TestUnquotedAttrs(t *testing.T)</a>
+
+```
+searchKey: xml.TestUnquotedAttrs
+tags: [method private test]
+```
+
+```Go
+func TestUnquotedAttrs(t *testing.T)
+```
+
+### <a id="TestValuelessAttrs" href="#TestValuelessAttrs">func TestValuelessAttrs(t *testing.T)</a>
+
+```
+searchKey: xml.TestValuelessAttrs
+tags: [method private test]
+```
+
+```Go
+func TestValuelessAttrs(t *testing.T)
+```
+
+### <a id="TestWrapDecoder" href="#TestWrapDecoder">func TestWrapDecoder(t *testing.T)</a>
+
+```
+searchKey: xml.TestWrapDecoder
+tags: [method private test]
+```
+
+```Go
+func TestWrapDecoder(t *testing.T)
 ```
 
 ### <a id="Unmarshal" href="#Unmarshal">func Unmarshal(data []byte, v interface{}) error</a>
 
 ```
 searchKey: xml.Unmarshal
+tags: [method]
 ```
 
 ```Go
@@ -5246,46 +6061,11 @@ Unmarshal maps an XML element to a pointer by setting the pointer to a freshly a
 
 A missing element or empty attribute value will be unmarshaled as a zero value. If the field is a slice, a zero value will be appended to the field. Otherwise, the field will be set to its zero value. 
 
-### <a id="receiverType" href="#receiverType">func receiverType(val interface{}) string</a>
-
-```
-searchKey: xml.receiverType
-tags: [private]
-```
-
-```Go
-func receiverType(val interface{}) string
-```
-
-receiverType returns the receiver type to use in an expression like "%s.MethodName". 
-
-### <a id="copyValue" href="#copyValue">func copyValue(dst reflect.Value, src []byte) (err error)</a>
-
-```
-searchKey: xml.copyValue
-tags: [private]
-```
-
-```Go
-func copyValue(dst reflect.Value, src []byte) (err error)
-```
-
-### <a id="min" href="#min">func min(a, b int) int</a>
-
-```
-searchKey: xml.min
-tags: [private]
-```
-
-```Go
-func min(a, b int) int
-```
-
 ### <a id="addFieldInfo" href="#addFieldInfo">func addFieldInfo(typ reflect.Type, tinfo *typeInfo, newf *fieldInfo) error</a>
 
 ```
 searchKey: xml.addFieldInfo
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -5294,105 +6074,22 @@ func addFieldInfo(typ reflect.Type, tinfo *typeInfo, newf *fieldInfo) error
 
 addFieldInfo adds finfo to tinfo.fields if there are no conflicts, or if conflicts arise from previous fields that were obtained from deeper embedded structures than finfo. In the latter case, the conflicting entries are dropped. A conflict occurs when the path (parent + name) to a field is itself a prefix of another path, or when two paths match exactly. It is okay for field paths to share a common, shorter prefix. 
 
-### <a id="makeCopy" href="#makeCopy">func makeCopy(b []byte) []byte</a>
+### <a id="copyValue" href="#copyValue">func copyValue(dst reflect.Value, src []byte) (err error)</a>
 
 ```
-searchKey: xml.makeCopy
-tags: [private]
-```
-
-```Go
-func makeCopy(b []byte) []byte
-```
-
-### <a id="isInCharacterRange" href="#isInCharacterRange">func isInCharacterRange(r rune) (inrange bool)</a>
-
-```
-searchKey: xml.isInCharacterRange
-tags: [private]
+searchKey: xml.copyValue
+tags: [method private]
 ```
 
 ```Go
-func isInCharacterRange(r rune) (inrange bool)
+func copyValue(dst reflect.Value, src []byte) (err error)
 ```
-
-Decide whether the given rune is in the XML Character Range, per the Char production of [https://www.xml.com/axml/testaxml.htm](https://www.xml.com/axml/testaxml.htm), Section 2.2 Characters. 
-
-### <a id="isNameByte" href="#isNameByte">func isNameByte(c byte) bool</a>
-
-```
-searchKey: xml.isNameByte
-tags: [private]
-```
-
-```Go
-func isNameByte(c byte) bool
-```
-
-### <a id="isName" href="#isName">func isName(s []byte) bool</a>
-
-```
-searchKey: xml.isName
-tags: [private]
-```
-
-```Go
-func isName(s []byte) bool
-```
-
-### <a id="isNameString" href="#isNameString">func isNameString(s string) bool</a>
-
-```
-searchKey: xml.isNameString
-tags: [private]
-```
-
-```Go
-func isNameString(s string) bool
-```
-
-### <a id="EscapeText" href="#EscapeText">func EscapeText(w io.Writer, s []byte) error</a>
-
-```
-searchKey: xml.EscapeText
-```
-
-```Go
-func EscapeText(w io.Writer, s []byte) error
-```
-
-EscapeText writes to w the properly escaped XML equivalent of the plain text data s. 
-
-### <a id="escapeText" href="#escapeText">func escapeText(w io.Writer, s []byte, escapeNewline bool) error</a>
-
-```
-searchKey: xml.escapeText
-tags: [private]
-```
-
-```Go
-func escapeText(w io.Writer, s []byte, escapeNewline bool) error
-```
-
-escapeText writes to w the properly escaped XML equivalent of the plain text data s. If escapeNewline is true, newline characters will be escaped. 
-
-### <a id="Escape" href="#Escape">func Escape(w io.Writer, s []byte)</a>
-
-```
-searchKey: xml.Escape
-```
-
-```Go
-func Escape(w io.Writer, s []byte)
-```
-
-Escape is like EscapeText but omits the error return value. It is provided for backwards compatibility with Go 1.0. Code targeting Go 1.1 or later should use EscapeText. 
 
 ### <a id="emitCDATA" href="#emitCDATA">func emitCDATA(w io.Writer, s []byte) error</a>
 
 ```
 searchKey: xml.emitCDATA
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -5401,11 +6098,140 @@ func emitCDATA(w io.Writer, s []byte) error
 
 emitCDATA writes to w the CDATA-wrapped plain text data s. It escapes CDATA directives nested in s. 
 
+### <a id="escapeText" href="#escapeText">func escapeText(w io.Writer, s []byte, escapeNewline bool) error</a>
+
+```
+searchKey: xml.escapeText
+tags: [method private]
+```
+
+```Go
+func escapeText(w io.Writer, s []byte, escapeNewline bool) error
+```
+
+escapeText writes to w the properly escaped XML equivalent of the plain text data s. If escapeNewline is true, newline characters will be escaped. 
+
+### <a id="ifaceptr" href="#ifaceptr">func ifaceptr(x interface{}) interface{}</a>
+
+```
+searchKey: xml.ifaceptr
+tags: [method private]
+```
+
+```Go
+func ifaceptr(x interface{}) interface{}
+```
+
+### <a id="indirect" href="#indirect">func indirect(vf reflect.Value) reflect.Value</a>
+
+```
+searchKey: xml.indirect
+tags: [method private]
+```
+
+```Go
+func indirect(vf reflect.Value) reflect.Value
+```
+
+indirect drills into interfaces and pointers, returning the pointed-at value. If it encounters a nil interface or pointer, indirect returns that nil value. This can turn into an infinite loop given a cyclic chain, but it matches the Go 1 behavior. 
+
+### <a id="isEmptyValue" href="#isEmptyValue">func isEmptyValue(v reflect.Value) bool</a>
+
+```
+searchKey: xml.isEmptyValue
+tags: [method private]
+```
+
+```Go
+func isEmptyValue(v reflect.Value) bool
+```
+
+### <a id="isInCharacterRange" href="#isInCharacterRange">func isInCharacterRange(r rune) (inrange bool)</a>
+
+```
+searchKey: xml.isInCharacterRange
+tags: [method private]
+```
+
+```Go
+func isInCharacterRange(r rune) (inrange bool)
+```
+
+Decide whether the given rune is in the XML Character Range, per the Char production of [https://www.xml.com/axml/testaxml.htm](https://www.xml.com/axml/testaxml.htm), Section 2.2 Characters. 
+
+### <a id="isName" href="#isName">func isName(s []byte) bool</a>
+
+```
+searchKey: xml.isName
+tags: [method private]
+```
+
+```Go
+func isName(s []byte) bool
+```
+
+### <a id="isNameByte" href="#isNameByte">func isNameByte(c byte) bool</a>
+
+```
+searchKey: xml.isNameByte
+tags: [method private]
+```
+
+```Go
+func isNameByte(c byte) bool
+```
+
+### <a id="isNameString" href="#isNameString">func isNameString(s string) bool</a>
+
+```
+searchKey: xml.isNameString
+tags: [method private]
+```
+
+```Go
+func isNameString(s string) bool
+```
+
+### <a id="isValidDirective" href="#isValidDirective">func isValidDirective(dir Directive) bool</a>
+
+```
+searchKey: xml.isValidDirective
+tags: [method private]
+```
+
+```Go
+func isValidDirective(dir Directive) bool
+```
+
+isValidDirective reports whether dir is a valid directive text, meaning angle brackets are matched, ignoring comments and strings. 
+
+### <a id="makeCopy" href="#makeCopy">func makeCopy(b []byte) []byte</a>
+
+```
+searchKey: xml.makeCopy
+tags: [method private]
+```
+
+```Go
+func makeCopy(b []byte) []byte
+```
+
+### <a id="min" href="#min">func min(a, b int) int</a>
+
+```
+searchKey: xml.min
+tags: [method private]
+```
+
+```Go
+func min(a, b int) int
+```
+
 ### <a id="procInst" href="#procInst">func procInst(param, s string) string</a>
 
 ```
 searchKey: xml.procInst
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -5414,817 +6240,60 @@ func procInst(param, s string) string
 
 procInst parses the `param="..."` or `param='...'` value out of the provided string, returning "" if not found. 
 
-### <a id="ParseTime" href="#ParseTime">func ParseTime(str string) time.Time</a>
+### <a id="receiverType" href="#receiverType">func receiverType(val interface{}) string</a>
 
 ```
-searchKey: xml.ParseTime
-tags: [private]
-```
-
-```Go
-func ParseTime(str string) time.Time
-```
-
-### <a id="ifaceptr" href="#ifaceptr">func ifaceptr(x interface{}) interface{}</a>
-
-```
-searchKey: xml.ifaceptr
-tags: [private]
+searchKey: xml.receiverType
+tags: [method private]
 ```
 
 ```Go
-func ifaceptr(x interface{}) interface{}
+func receiverType(val interface{}) string
 ```
+
+receiverType returns the receiver type to use in an expression like "%s.MethodName". 
 
 ### <a id="stringptr" href="#stringptr">func stringptr(x string) *string</a>
 
 ```
 searchKey: xml.stringptr
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func stringptr(x string) *string
 ```
 
-### <a id="TestMarshal" href="#TestMarshal">func TestMarshal(t *testing.T)</a>
-
-```
-searchKey: xml.TestMarshal
-tags: [private]
-```
-
-```Go
-func TestMarshal(t *testing.T)
-```
-
-### <a id="TestMarshalErrors" href="#TestMarshalErrors">func TestMarshalErrors(t *testing.T)</a>
-
-```
-searchKey: xml.TestMarshalErrors
-tags: [private]
-```
-
-```Go
-func TestMarshalErrors(t *testing.T)
-```
-
-### <a id="TestUnmarshal" href="#TestUnmarshal">func TestUnmarshal(t *testing.T)</a>
-
-```
-searchKey: xml.TestUnmarshal
-tags: [private]
-```
-
-```Go
-func TestUnmarshal(t *testing.T)
-```
-
-Do invertibility testing on the various structures that we test 
-
-### <a id="TestMarshalIndent" href="#TestMarshalIndent">func TestMarshalIndent(t *testing.T)</a>
-
-```
-searchKey: xml.TestMarshalIndent
-tags: [private]
-```
-
-```Go
-func TestMarshalIndent(t *testing.T)
-```
-
-### <a id="TestMarshalWriteErrors" href="#TestMarshalWriteErrors">func TestMarshalWriteErrors(t *testing.T)</a>
-
-```
-searchKey: xml.TestMarshalWriteErrors
-tags: [private]
-```
-
-```Go
-func TestMarshalWriteErrors(t *testing.T)
-```
-
-### <a id="TestMarshalWriteIOErrors" href="#TestMarshalWriteIOErrors">func TestMarshalWriteIOErrors(t *testing.T)</a>
-
-```
-searchKey: xml.TestMarshalWriteIOErrors
-tags: [private]
-```
-
-```Go
-func TestMarshalWriteIOErrors(t *testing.T)
-```
-
-### <a id="TestMarshalFlush" href="#TestMarshalFlush">func TestMarshalFlush(t *testing.T)</a>
-
-```
-searchKey: xml.TestMarshalFlush
-tags: [private]
-```
-
-```Go
-func TestMarshalFlush(t *testing.T)
-```
-
-### <a id="BenchmarkMarshal" href="#BenchmarkMarshal">func BenchmarkMarshal(b *testing.B)</a>
-
-```
-searchKey: xml.BenchmarkMarshal
-tags: [private]
-```
-
-```Go
-func BenchmarkMarshal(b *testing.B)
-```
-
-### <a id="BenchmarkUnmarshal" href="#BenchmarkUnmarshal">func BenchmarkUnmarshal(b *testing.B)</a>
-
-```
-searchKey: xml.BenchmarkUnmarshal
-tags: [private]
-```
-
-```Go
-func BenchmarkUnmarshal(b *testing.B)
-```
-
-### <a id="TestStructPointerMarshal" href="#TestStructPointerMarshal">func TestStructPointerMarshal(t *testing.T)</a>
-
-```
-searchKey: xml.TestStructPointerMarshal
-tags: [private]
-```
-
-```Go
-func TestStructPointerMarshal(t *testing.T)
-```
-
-golang.org/issue/6556 
-
-### <a id="TestEncodeToken" href="#TestEncodeToken">func TestEncodeToken(t *testing.T)</a>
-
-```
-searchKey: xml.TestEncodeToken
-tags: [private]
-```
-
-```Go
-func TestEncodeToken(t *testing.T)
-```
-
-### <a id="TestProcInstEncodeToken" href="#TestProcInstEncodeToken">func TestProcInstEncodeToken(t *testing.T)</a>
-
-```
-searchKey: xml.TestProcInstEncodeToken
-tags: [private]
-```
-
-```Go
-func TestProcInstEncodeToken(t *testing.T)
-```
-
-### <a id="TestDecodeEncode" href="#TestDecodeEncode">func TestDecodeEncode(t *testing.T)</a>
-
-```
-searchKey: xml.TestDecodeEncode
-tags: [private]
-```
-
-```Go
-func TestDecodeEncode(t *testing.T)
-```
-
-### <a id="TestRace9796" href="#TestRace9796">func TestRace9796(t *testing.T)</a>
-
-```
-searchKey: xml.TestRace9796
-tags: [private]
-```
-
-```Go
-func TestRace9796(t *testing.T)
-```
-
-Issue 9796. Used to fail with GORACE="halt_on_error=1" -race. 
-
-### <a id="TestIsValidDirective" href="#TestIsValidDirective">func TestIsValidDirective(t *testing.T)</a>
-
-```
-searchKey: xml.TestIsValidDirective
-tags: [private]
-```
-
-```Go
-func TestIsValidDirective(t *testing.T)
-```
-
-### <a id="TestSimpleUseOfEncodeToken" href="#TestSimpleUseOfEncodeToken">func TestSimpleUseOfEncodeToken(t *testing.T)</a>
-
-```
-searchKey: xml.TestSimpleUseOfEncodeToken
-tags: [private]
-```
-
-```Go
-func TestSimpleUseOfEncodeToken(t *testing.T)
-```
-
-Issue 11719. EncodeToken used to silently eat tokens with an invalid type. 
-
-### <a id="TestIssue16158" href="#TestIssue16158">func TestIssue16158(t *testing.T)</a>
-
-```
-searchKey: xml.TestIssue16158
-tags: [private]
-```
-
-```Go
-func TestIssue16158(t *testing.T)
-```
-
-Issue 16158. Decoder.unmarshalAttr ignores the return value of copyValue. 
-
-### <a id="TestInvalidXMLName" href="#TestInvalidXMLName">func TestInvalidXMLName(t *testing.T)</a>
-
-```
-searchKey: xml.TestInvalidXMLName
-tags: [private]
-```
-
-```Go
-func TestInvalidXMLName(t *testing.T)
-```
-
-### <a id="TestUnmarshalFeed" href="#TestUnmarshalFeed">func TestUnmarshalFeed(t *testing.T)</a>
-
-```
-searchKey: xml.TestUnmarshalFeed
-tags: [private]
-```
-
-```Go
-func TestUnmarshalFeed(t *testing.T)
-```
-
-### <a id="TestUnmarshalPaths" href="#TestUnmarshalPaths">func TestUnmarshalPaths(t *testing.T)</a>
-
-```
-searchKey: xml.TestUnmarshalPaths
-tags: [private]
-```
-
-```Go
-func TestUnmarshalPaths(t *testing.T)
-```
-
-### <a id="TestUnmarshalBadPaths" href="#TestUnmarshalBadPaths">func TestUnmarshalBadPaths(t *testing.T)</a>
-
-```
-searchKey: xml.TestUnmarshalBadPaths
-tags: [private]
-```
-
-```Go
-func TestUnmarshalBadPaths(t *testing.T)
-```
-
-### <a id="TestUnmarshalWithoutNameType" href="#TestUnmarshalWithoutNameType">func TestUnmarshalWithoutNameType(t *testing.T)</a>
-
-```
-searchKey: xml.TestUnmarshalWithoutNameType
-tags: [private]
-```
-
-```Go
-func TestUnmarshalWithoutNameType(t *testing.T)
-```
-
-### <a id="TestUnmarshalAttr" href="#TestUnmarshalAttr">func TestUnmarshalAttr(t *testing.T)</a>
-
-```
-searchKey: xml.TestUnmarshalAttr
-tags: [private]
-```
-
-```Go
-func TestUnmarshalAttr(t *testing.T)
-```
-
-### <a id="TestUnmarshalNS" href="#TestUnmarshalNS">func TestUnmarshalNS(t *testing.T)</a>
-
-```
-searchKey: xml.TestUnmarshalNS
-tags: [private]
-```
-
-```Go
-func TestUnmarshalNS(t *testing.T)
-```
-
-### <a id="TestMarshalNS" href="#TestMarshalNS">func TestMarshalNS(t *testing.T)</a>
-
-```
-searchKey: xml.TestMarshalNS
-tags: [private]
-```
-
-```Go
-func TestMarshalNS(t *testing.T)
-```
-
-### <a id="TestUnmarshalNSAttr" href="#TestUnmarshalNSAttr">func TestUnmarshalNSAttr(t *testing.T)</a>
-
-```
-searchKey: xml.TestUnmarshalNSAttr
-tags: [private]
-```
-
-```Go
-func TestUnmarshalNSAttr(t *testing.T)
-```
-
-### <a id="TestMarshalNSAttr" href="#TestMarshalNSAttr">func TestMarshalNSAttr(t *testing.T)</a>
-
-```
-searchKey: xml.TestMarshalNSAttr
-tags: [private]
-```
-
-```Go
-func TestMarshalNSAttr(t *testing.T)
-```
-
-### <a id="TestUnmarshaler" href="#TestUnmarshaler">func TestUnmarshaler(t *testing.T)</a>
-
-```
-searchKey: xml.TestUnmarshaler
-tags: [private]
-```
-
-```Go
-func TestUnmarshaler(t *testing.T)
-```
-
-### <a id="TestUnmarshalIntoInterface" href="#TestUnmarshalIntoInterface">func TestUnmarshalIntoInterface(t *testing.T)</a>
-
-```
-searchKey: xml.TestUnmarshalIntoInterface
-tags: [private]
-```
-
-```Go
-func TestUnmarshalIntoInterface(t *testing.T)
-```
-
-[https://golang.org/issue/6836](https://golang.org/issue/6836) 
-
-### <a id="TestMalformedComment" href="#TestMalformedComment">func TestMalformedComment(t *testing.T)</a>
-
-```
-searchKey: xml.TestMalformedComment
-tags: [private]
-```
-
-```Go
-func TestMalformedComment(t *testing.T)
-```
-
-Issue 11112. Unmarshal must reject invalid comments. 
-
-### <a id="TestInvalidInnerXMLType" href="#TestInvalidInnerXMLType">func TestInvalidInnerXMLType(t *testing.T)</a>
-
-```
-searchKey: xml.TestInvalidInnerXMLType
-tags: [private]
-```
-
-```Go
-func TestInvalidInnerXMLType(t *testing.T)
-```
-
-Issue 15600. ",innerxml" on a field that can't hold it. 
-
-### <a id="TestUnmarshalEmptyValues" href="#TestUnmarshalEmptyValues">func TestUnmarshalEmptyValues(t *testing.T)</a>
-
-```
-searchKey: xml.TestUnmarshalEmptyValues
-tags: [private]
-```
-
-```Go
-func TestUnmarshalEmptyValues(t *testing.T)
-```
-
-golang.org/issues/13417 
-
-### <a id="TestUnmarshalWhitespaceValues" href="#TestUnmarshalWhitespaceValues">func TestUnmarshalWhitespaceValues(t *testing.T)</a>
-
-```
-searchKey: xml.TestUnmarshalWhitespaceValues
-tags: [private]
-```
-
-```Go
-func TestUnmarshalWhitespaceValues(t *testing.T)
-```
-
-golang.org/issues/22146 
-
-### <a id="TestUnmarshalWhitespaceAttrs" href="#TestUnmarshalWhitespaceAttrs">func TestUnmarshalWhitespaceAttrs(t *testing.T)</a>
-
-```
-searchKey: xml.TestUnmarshalWhitespaceAttrs
-tags: [private]
-```
-
-```Go
-func TestUnmarshalWhitespaceAttrs(t *testing.T)
-```
-
-golang.org/issues/22146 
-
-### <a id="TestDecodeEOF" href="#TestDecodeEOF">func TestDecodeEOF(t *testing.T)</a>
-
-```
-searchKey: xml.TestDecodeEOF
-tags: [private]
-```
-
-```Go
-func TestDecodeEOF(t *testing.T)
-```
-
-### <a id="TestDecodeNilToken" href="#TestDecodeNilToken">func TestDecodeNilToken(t *testing.T)</a>
-
-```
-searchKey: xml.TestDecodeNilToken
-tags: [private]
-```
-
-```Go
-func TestDecodeNilToken(t *testing.T)
-```
-
-### <a id="TestRawToken" href="#TestRawToken">func TestRawToken(t *testing.T)</a>
-
-```
-searchKey: xml.TestRawToken
-tags: [private]
-```
-
-```Go
-func TestRawToken(t *testing.T)
-```
-
-### <a id="TestNonStrictRawToken" href="#TestNonStrictRawToken">func TestNonStrictRawToken(t *testing.T)</a>
-
-```
-searchKey: xml.TestNonStrictRawToken
-tags: [private]
-```
-
-```Go
-func TestNonStrictRawToken(t *testing.T)
-```
-
-### <a id="TestRawTokenAltEncoding" href="#TestRawTokenAltEncoding">func TestRawTokenAltEncoding(t *testing.T)</a>
-
-```
-searchKey: xml.TestRawTokenAltEncoding
-tags: [private]
-```
-
-```Go
-func TestRawTokenAltEncoding(t *testing.T)
-```
-
-### <a id="TestRawTokenAltEncodingNoConverter" href="#TestRawTokenAltEncodingNoConverter">func TestRawTokenAltEncodingNoConverter(t *testing.T)</a>
-
-```
-searchKey: xml.TestRawTokenAltEncodingNoConverter
-tags: [private]
-```
-
-```Go
-func TestRawTokenAltEncodingNoConverter(t *testing.T)
-```
-
 ### <a id="testRawToken" href="#testRawToken">func testRawToken(t *testing.T, d *Decoder, raw string, rawTokens []Token)</a>
 
 ```
 searchKey: xml.testRawToken
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func testRawToken(t *testing.T, d *Decoder, raw string, rawTokens []Token)
 ```
 
-### <a id="TestNestedDirectives" href="#TestNestedDirectives">func TestNestedDirectives(t *testing.T)</a>
-
-```
-searchKey: xml.TestNestedDirectives
-tags: [private]
-```
-
-```Go
-func TestNestedDirectives(t *testing.T)
-```
-
-### <a id="TestToken" href="#TestToken">func TestToken(t *testing.T)</a>
-
-```
-searchKey: xml.TestToken
-tags: [private]
-```
-
-```Go
-func TestToken(t *testing.T)
-```
-
-### <a id="TestSyntax" href="#TestSyntax">func TestSyntax(t *testing.T)</a>
-
-```
-searchKey: xml.TestSyntax
-tags: [private]
-```
-
-```Go
-func TestSyntax(t *testing.T)
-```
-
-### <a id="TestAllScalars" href="#TestAllScalars">func TestAllScalars(t *testing.T)</a>
-
-```
-searchKey: xml.TestAllScalars
-tags: [private]
-```
-
-```Go
-func TestAllScalars(t *testing.T)
-```
-
-### <a id="TestIssue569" href="#TestIssue569">func TestIssue569(t *testing.T)</a>
-
-```
-searchKey: xml.TestIssue569
-tags: [private]
-```
-
-```Go
-func TestIssue569(t *testing.T)
-```
-
-### <a id="TestUnquotedAttrs" href="#TestUnquotedAttrs">func TestUnquotedAttrs(t *testing.T)</a>
-
-```
-searchKey: xml.TestUnquotedAttrs
-tags: [private]
-```
-
-```Go
-func TestUnquotedAttrs(t *testing.T)
-```
-
-### <a id="TestValuelessAttrs" href="#TestValuelessAttrs">func TestValuelessAttrs(t *testing.T)</a>
-
-```
-searchKey: xml.TestValuelessAttrs
-tags: [private]
-```
-
-```Go
-func TestValuelessAttrs(t *testing.T)
-```
-
-### <a id="TestCopyTokenCharData" href="#TestCopyTokenCharData">func TestCopyTokenCharData(t *testing.T)</a>
-
-```
-searchKey: xml.TestCopyTokenCharData
-tags: [private]
-```
-
-```Go
-func TestCopyTokenCharData(t *testing.T)
-```
-
-### <a id="TestCopyTokenStartElement" href="#TestCopyTokenStartElement">func TestCopyTokenStartElement(t *testing.T)</a>
-
-```
-searchKey: xml.TestCopyTokenStartElement
-tags: [private]
-```
-
-```Go
-func TestCopyTokenStartElement(t *testing.T)
-```
-
-### <a id="TestSyntaxErrorLineNum" href="#TestSyntaxErrorLineNum">func TestSyntaxErrorLineNum(t *testing.T)</a>
-
-```
-searchKey: xml.TestSyntaxErrorLineNum
-tags: [private]
-```
-
-```Go
-func TestSyntaxErrorLineNum(t *testing.T)
-```
-
-### <a id="TestTrailingRawToken" href="#TestTrailingRawToken">func TestTrailingRawToken(t *testing.T)</a>
-
-```
-searchKey: xml.TestTrailingRawToken
-tags: [private]
-```
-
-```Go
-func TestTrailingRawToken(t *testing.T)
-```
-
-### <a id="TestTrailingToken" href="#TestTrailingToken">func TestTrailingToken(t *testing.T)</a>
-
-```
-searchKey: xml.TestTrailingToken
-tags: [private]
-```
-
-```Go
-func TestTrailingToken(t *testing.T)
-```
-
-### <a id="TestEntityInsideCDATA" href="#TestEntityInsideCDATA">func TestEntityInsideCDATA(t *testing.T)</a>
-
-```
-searchKey: xml.TestEntityInsideCDATA
-tags: [private]
-```
-
-```Go
-func TestEntityInsideCDATA(t *testing.T)
-```
-
-### <a id="TestDisallowedCharacters" href="#TestDisallowedCharacters">func TestDisallowedCharacters(t *testing.T)</a>
-
-```
-searchKey: xml.TestDisallowedCharacters
-tags: [private]
-```
-
-```Go
-func TestDisallowedCharacters(t *testing.T)
-```
-
-### <a id="TestIsInCharacterRange" href="#TestIsInCharacterRange">func TestIsInCharacterRange(t *testing.T)</a>
-
-```
-searchKey: xml.TestIsInCharacterRange
-tags: [private]
-```
-
-```Go
-func TestIsInCharacterRange(t *testing.T)
-```
-
-### <a id="TestProcInstEncoding" href="#TestProcInstEncoding">func TestProcInstEncoding(t *testing.T)</a>
-
-```
-searchKey: xml.TestProcInstEncoding
-tags: [private]
-```
-
-```Go
-func TestProcInstEncoding(t *testing.T)
-```
-
-### <a id="TestDirectivesWithComments" href="#TestDirectivesWithComments">func TestDirectivesWithComments(t *testing.T)</a>
-
-```
-searchKey: xml.TestDirectivesWithComments
-tags: [private]
-```
-
-```Go
-func TestDirectivesWithComments(t *testing.T)
-```
-
-### <a id="TestEscapeTextIOErrors" href="#TestEscapeTextIOErrors">func TestEscapeTextIOErrors(t *testing.T)</a>
-
-```
-searchKey: xml.TestEscapeTextIOErrors
-tags: [private]
-```
-
-```Go
-func TestEscapeTextIOErrors(t *testing.T)
-```
-
-### <a id="TestEscapeTextInvalidChar" href="#TestEscapeTextInvalidChar">func TestEscapeTextInvalidChar(t *testing.T)</a>
-
-```
-searchKey: xml.TestEscapeTextInvalidChar
-tags: [private]
-```
-
-```Go
-func TestEscapeTextInvalidChar(t *testing.T)
-```
-
-### <a id="TestIssue5880" href="#TestIssue5880">func TestIssue5880(t *testing.T)</a>
-
-```
-searchKey: xml.TestIssue5880
-tags: [private]
-```
-
-```Go
-func TestIssue5880(t *testing.T)
-```
-
-### <a id="TestIssue11405" href="#TestIssue11405">func TestIssue11405(t *testing.T)</a>
-
-```
-searchKey: xml.TestIssue11405
-tags: [private]
-```
-
-```Go
-func TestIssue11405(t *testing.T)
-```
-
-### <a id="TestIssue12417" href="#TestIssue12417">func TestIssue12417(t *testing.T)</a>
-
-```
-searchKey: xml.TestIssue12417
-tags: [private]
-```
-
-```Go
-func TestIssue12417(t *testing.T)
-```
-
-### <a id="tokenMap" href="#tokenMap">func tokenMap(mapping func(t Token) Token) func(TokenReader) TokenReader</a>
-
-```
-searchKey: xml.tokenMap
-tags: [private]
-```
-
-```Go
-func tokenMap(mapping func(t Token) Token) func(TokenReader) TokenReader
-```
-
-### <a id="TestNewTokenDecoderIdempotent" href="#TestNewTokenDecoderIdempotent">func TestNewTokenDecoderIdempotent(t *testing.T)</a>
-
-```
-searchKey: xml.TestNewTokenDecoderIdempotent
-tags: [private]
-```
-
-```Go
-func TestNewTokenDecoderIdempotent(t *testing.T)
-```
-
-### <a id="TestWrapDecoder" href="#TestWrapDecoder">func TestWrapDecoder(t *testing.T)</a>
-
-```
-searchKey: xml.TestWrapDecoder
-tags: [private]
-```
-
-```Go
-func TestWrapDecoder(t *testing.T)
-```
-
-### <a id="TestTokenUnmarshaler" href="#TestTokenUnmarshaler">func TestTokenUnmarshaler(t *testing.T)</a>
-
-```
-searchKey: xml.TestTokenUnmarshaler
-tags: [private]
-```
-
-```Go
-func TestTokenUnmarshaler(t *testing.T)
-```
-
 ### <a id="testRoundTrip" href="#testRoundTrip">func testRoundTrip(t *testing.T, input string)</a>
 
 ```
 searchKey: xml.testRoundTrip
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func testRoundTrip(t *testing.T, input string)
 ```
 
-### <a id="TestRoundTrip" href="#TestRoundTrip">func TestRoundTrip(t *testing.T)</a>
+### <a id="tokenMap" href="#tokenMap">func tokenMap(mapping func(t Token) Token) func(TokenReader) TokenReader</a>
 
 ```
-searchKey: xml.TestRoundTrip
-tags: [private]
+searchKey: xml.tokenMap
+tags: [method private]
 ```
 
 ```Go
-func TestRoundTrip(t *testing.T)
+func tokenMap(mapping func(t Token) Token) func(TokenReader) TokenReader
 ```
 

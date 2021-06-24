@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "regexp_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,7 @@
                 "newPage": false,
                 "searchKey": "regexp_test.Example",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -67,6 +70,7 @@
                 "newPage": false,
                 "searchKey": "regexp_test.ExampleMatch",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -89,6 +93,7 @@
                 "newPage": false,
                 "searchKey": "regexp_test.ExampleMatchString",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -111,6 +116,7 @@
                 "newPage": false,
                 "searchKey": "regexp_test.ExampleQuoteMeta",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -127,496 +133,13 @@
           },
           {
             "node": {
-              "pathID": "/regexp_test#ExampleRegexp_Find",
-              "documentation": {
-                "identifier": "ExampleRegexp_Find",
-                "newPage": false,
-                "searchKey": "regexp_test.ExampleRegexp_Find",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRegexp_Find()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRegexp_Find()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/regexp_test#ExampleRegexp_FindAll",
-              "documentation": {
-                "identifier": "ExampleRegexp_FindAll",
-                "newPage": false,
-                "searchKey": "regexp_test.ExampleRegexp_FindAll",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRegexp_FindAll()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRegexp_FindAll()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/regexp_test#ExampleRegexp_FindAllSubmatch",
-              "documentation": {
-                "identifier": "ExampleRegexp_FindAllSubmatch",
-                "newPage": false,
-                "searchKey": "regexp_test.ExampleRegexp_FindAllSubmatch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRegexp_FindAllSubmatch()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRegexp_FindAllSubmatch()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/regexp_test#ExampleRegexp_FindSubmatch",
-              "documentation": {
-                "identifier": "ExampleRegexp_FindSubmatch",
-                "newPage": false,
-                "searchKey": "regexp_test.ExampleRegexp_FindSubmatch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRegexp_FindSubmatch()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRegexp_FindSubmatch()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/regexp_test#ExampleRegexp_Match",
-              "documentation": {
-                "identifier": "ExampleRegexp_Match",
-                "newPage": false,
-                "searchKey": "regexp_test.ExampleRegexp_Match",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRegexp_Match()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRegexp_Match()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/regexp_test#ExampleRegexp_FindString",
-              "documentation": {
-                "identifier": "ExampleRegexp_FindString",
-                "newPage": false,
-                "searchKey": "regexp_test.ExampleRegexp_FindString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRegexp_FindString()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRegexp_FindString()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/regexp_test#ExampleRegexp_FindStringIndex",
-              "documentation": {
-                "identifier": "ExampleRegexp_FindStringIndex",
-                "newPage": false,
-                "searchKey": "regexp_test.ExampleRegexp_FindStringIndex",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRegexp_FindStringIndex()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRegexp_FindStringIndex()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/regexp_test#ExampleRegexp_FindStringSubmatch",
-              "documentation": {
-                "identifier": "ExampleRegexp_FindStringSubmatch",
-                "newPage": false,
-                "searchKey": "regexp_test.ExampleRegexp_FindStringSubmatch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRegexp_FindStringSubmatch()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRegexp_FindStringSubmatch()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/regexp_test#ExampleRegexp_FindAllString",
-              "documentation": {
-                "identifier": "ExampleRegexp_FindAllString",
-                "newPage": false,
-                "searchKey": "regexp_test.ExampleRegexp_FindAllString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRegexp_FindAllString()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRegexp_FindAllString()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/regexp_test#ExampleRegexp_FindAllStringSubmatch",
-              "documentation": {
-                "identifier": "ExampleRegexp_FindAllStringSubmatch",
-                "newPage": false,
-                "searchKey": "regexp_test.ExampleRegexp_FindAllStringSubmatch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRegexp_FindAllStringSubmatch()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRegexp_FindAllStringSubmatch()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/regexp_test#ExampleRegexp_FindAllStringSubmatchIndex",
-              "documentation": {
-                "identifier": "ExampleRegexp_FindAllStringSubmatchIndex",
-                "newPage": false,
-                "searchKey": "regexp_test.ExampleRegexp_FindAllStringSubmatchIndex",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRegexp_FindAllStringSubmatchIndex()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRegexp_FindAllStringSubmatchIndex()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/regexp_test#ExampleRegexp_FindSubmatchIndex",
-              "documentation": {
-                "identifier": "ExampleRegexp_FindSubmatchIndex",
-                "newPage": false,
-                "searchKey": "regexp_test.ExampleRegexp_FindSubmatchIndex",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRegexp_FindSubmatchIndex()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRegexp_FindSubmatchIndex()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/regexp_test#ExampleRegexp_Longest",
-              "documentation": {
-                "identifier": "ExampleRegexp_Longest",
-                "newPage": false,
-                "searchKey": "regexp_test.ExampleRegexp_Longest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRegexp_Longest()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRegexp_Longest()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/regexp_test#ExampleRegexp_MatchString",
-              "documentation": {
-                "identifier": "ExampleRegexp_MatchString",
-                "newPage": false,
-                "searchKey": "regexp_test.ExampleRegexp_MatchString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRegexp_MatchString()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRegexp_MatchString()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/regexp_test#ExampleRegexp_NumSubexp",
-              "documentation": {
-                "identifier": "ExampleRegexp_NumSubexp",
-                "newPage": false,
-                "searchKey": "regexp_test.ExampleRegexp_NumSubexp",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRegexp_NumSubexp()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRegexp_NumSubexp()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/regexp_test#ExampleRegexp_ReplaceAll",
-              "documentation": {
-                "identifier": "ExampleRegexp_ReplaceAll",
-                "newPage": false,
-                "searchKey": "regexp_test.ExampleRegexp_ReplaceAll",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRegexp_ReplaceAll()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRegexp_ReplaceAll()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/regexp_test#ExampleRegexp_ReplaceAllLiteralString",
-              "documentation": {
-                "identifier": "ExampleRegexp_ReplaceAllLiteralString",
-                "newPage": false,
-                "searchKey": "regexp_test.ExampleRegexp_ReplaceAllLiteralString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRegexp_ReplaceAllLiteralString()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRegexp_ReplaceAllLiteralString()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/regexp_test#ExampleRegexp_ReplaceAllString",
-              "documentation": {
-                "identifier": "ExampleRegexp_ReplaceAllString",
-                "newPage": false,
-                "searchKey": "regexp_test.ExampleRegexp_ReplaceAllString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRegexp_ReplaceAllString()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRegexp_ReplaceAllString()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/regexp_test#ExampleRegexp_ReplaceAllStringFunc",
-              "documentation": {
-                "identifier": "ExampleRegexp_ReplaceAllStringFunc",
-                "newPage": false,
-                "searchKey": "regexp_test.ExampleRegexp_ReplaceAllStringFunc",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRegexp_ReplaceAllStringFunc()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRegexp_ReplaceAllStringFunc()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/regexp_test#ExampleRegexp_SubexpNames",
-              "documentation": {
-                "identifier": "ExampleRegexp_SubexpNames",
-                "newPage": false,
-                "searchKey": "regexp_test.ExampleRegexp_SubexpNames",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRegexp_SubexpNames()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRegexp_SubexpNames()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/regexp_test#ExampleRegexp_SubexpIndex",
-              "documentation": {
-                "identifier": "ExampleRegexp_SubexpIndex",
-                "newPage": false,
-                "searchKey": "regexp_test.ExampleRegexp_SubexpIndex",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRegexp_SubexpIndex()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRegexp_SubexpIndex()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/regexp_test#ExampleRegexp_Split",
-              "documentation": {
-                "identifier": "ExampleRegexp_Split",
-                "newPage": false,
-                "searchKey": "regexp_test.ExampleRegexp_Split",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRegexp_Split()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRegexp_Split()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/regexp_test#ExampleRegexp_Expand",
               "documentation": {
                 "identifier": "ExampleRegexp_Expand",
                 "newPage": false,
                 "searchKey": "regexp_test.ExampleRegexp_Expand",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -639,6 +162,7 @@
                 "newPage": false,
                 "searchKey": "regexp_test.ExampleRegexp_ExpandString",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -655,22 +179,161 @@
           },
           {
             "node": {
-              "pathID": "/regexp_test#ExampleRegexp_FindIndex",
+              "pathID": "/regexp_test#ExampleRegexp_Find",
               "documentation": {
-                "identifier": "ExampleRegexp_FindIndex",
+                "identifier": "ExampleRegexp_Find",
                 "newPage": false,
-                "searchKey": "regexp_test.ExampleRegexp_FindIndex",
+                "searchKey": "regexp_test.ExampleRegexp_Find",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func ExampleRegexp_FindIndex()"
+                "value": "func ExampleRegexp_Find()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc ExampleRegexp_FindIndex()\n```\n\n"
+                "value": "```Go\nfunc ExampleRegexp_Find()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/regexp_test#ExampleRegexp_FindAll",
+              "documentation": {
+                "identifier": "ExampleRegexp_FindAll",
+                "newPage": false,
+                "searchKey": "regexp_test.ExampleRegexp_FindAll",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRegexp_FindAll()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRegexp_FindAll()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/regexp_test#ExampleRegexp_FindAllIndex",
+              "documentation": {
+                "identifier": "ExampleRegexp_FindAllIndex",
+                "newPage": false,
+                "searchKey": "regexp_test.ExampleRegexp_FindAllIndex",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRegexp_FindAllIndex()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRegexp_FindAllIndex()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/regexp_test#ExampleRegexp_FindAllString",
+              "documentation": {
+                "identifier": "ExampleRegexp_FindAllString",
+                "newPage": false,
+                "searchKey": "regexp_test.ExampleRegexp_FindAllString",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRegexp_FindAllString()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRegexp_FindAllString()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/regexp_test#ExampleRegexp_FindAllStringSubmatch",
+              "documentation": {
+                "identifier": "ExampleRegexp_FindAllStringSubmatch",
+                "newPage": false,
+                "searchKey": "regexp_test.ExampleRegexp_FindAllStringSubmatch",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRegexp_FindAllStringSubmatch()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRegexp_FindAllStringSubmatch()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/regexp_test#ExampleRegexp_FindAllStringSubmatchIndex",
+              "documentation": {
+                "identifier": "ExampleRegexp_FindAllStringSubmatchIndex",
+                "newPage": false,
+                "searchKey": "regexp_test.ExampleRegexp_FindAllStringSubmatchIndex",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRegexp_FindAllStringSubmatchIndex()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRegexp_FindAllStringSubmatchIndex()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/regexp_test#ExampleRegexp_FindAllSubmatch",
+              "documentation": {
+                "identifier": "ExampleRegexp_FindAllSubmatch",
+                "newPage": false,
+                "searchKey": "regexp_test.ExampleRegexp_FindAllSubmatch",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRegexp_FindAllSubmatch()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRegexp_FindAllSubmatch()\n```\n\n"
               },
               "children": null
             }
@@ -683,6 +346,7 @@
                 "newPage": false,
                 "searchKey": "regexp_test.ExampleRegexp_FindAllSubmatchIndex",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -699,22 +363,391 @@
           },
           {
             "node": {
-              "pathID": "/regexp_test#ExampleRegexp_FindAllIndex",
+              "pathID": "/regexp_test#ExampleRegexp_FindIndex",
               "documentation": {
-                "identifier": "ExampleRegexp_FindAllIndex",
+                "identifier": "ExampleRegexp_FindIndex",
                 "newPage": false,
-                "searchKey": "regexp_test.ExampleRegexp_FindAllIndex",
+                "searchKey": "regexp_test.ExampleRegexp_FindIndex",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func ExampleRegexp_FindAllIndex()"
+                "value": "func ExampleRegexp_FindIndex()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc ExampleRegexp_FindAllIndex()\n```\n\n"
+                "value": "```Go\nfunc ExampleRegexp_FindIndex()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/regexp_test#ExampleRegexp_FindString",
+              "documentation": {
+                "identifier": "ExampleRegexp_FindString",
+                "newPage": false,
+                "searchKey": "regexp_test.ExampleRegexp_FindString",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRegexp_FindString()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRegexp_FindString()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/regexp_test#ExampleRegexp_FindStringIndex",
+              "documentation": {
+                "identifier": "ExampleRegexp_FindStringIndex",
+                "newPage": false,
+                "searchKey": "regexp_test.ExampleRegexp_FindStringIndex",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRegexp_FindStringIndex()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRegexp_FindStringIndex()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/regexp_test#ExampleRegexp_FindStringSubmatch",
+              "documentation": {
+                "identifier": "ExampleRegexp_FindStringSubmatch",
+                "newPage": false,
+                "searchKey": "regexp_test.ExampleRegexp_FindStringSubmatch",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRegexp_FindStringSubmatch()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRegexp_FindStringSubmatch()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/regexp_test#ExampleRegexp_FindSubmatch",
+              "documentation": {
+                "identifier": "ExampleRegexp_FindSubmatch",
+                "newPage": false,
+                "searchKey": "regexp_test.ExampleRegexp_FindSubmatch",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRegexp_FindSubmatch()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRegexp_FindSubmatch()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/regexp_test#ExampleRegexp_FindSubmatchIndex",
+              "documentation": {
+                "identifier": "ExampleRegexp_FindSubmatchIndex",
+                "newPage": false,
+                "searchKey": "regexp_test.ExampleRegexp_FindSubmatchIndex",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRegexp_FindSubmatchIndex()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRegexp_FindSubmatchIndex()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/regexp_test#ExampleRegexp_Longest",
+              "documentation": {
+                "identifier": "ExampleRegexp_Longest",
+                "newPage": false,
+                "searchKey": "regexp_test.ExampleRegexp_Longest",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRegexp_Longest()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRegexp_Longest()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/regexp_test#ExampleRegexp_Match",
+              "documentation": {
+                "identifier": "ExampleRegexp_Match",
+                "newPage": false,
+                "searchKey": "regexp_test.ExampleRegexp_Match",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRegexp_Match()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRegexp_Match()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/regexp_test#ExampleRegexp_MatchString",
+              "documentation": {
+                "identifier": "ExampleRegexp_MatchString",
+                "newPage": false,
+                "searchKey": "regexp_test.ExampleRegexp_MatchString",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRegexp_MatchString()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRegexp_MatchString()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/regexp_test#ExampleRegexp_NumSubexp",
+              "documentation": {
+                "identifier": "ExampleRegexp_NumSubexp",
+                "newPage": false,
+                "searchKey": "regexp_test.ExampleRegexp_NumSubexp",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRegexp_NumSubexp()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRegexp_NumSubexp()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/regexp_test#ExampleRegexp_ReplaceAll",
+              "documentation": {
+                "identifier": "ExampleRegexp_ReplaceAll",
+                "newPage": false,
+                "searchKey": "regexp_test.ExampleRegexp_ReplaceAll",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRegexp_ReplaceAll()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRegexp_ReplaceAll()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/regexp_test#ExampleRegexp_ReplaceAllLiteralString",
+              "documentation": {
+                "identifier": "ExampleRegexp_ReplaceAllLiteralString",
+                "newPage": false,
+                "searchKey": "regexp_test.ExampleRegexp_ReplaceAllLiteralString",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRegexp_ReplaceAllLiteralString()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRegexp_ReplaceAllLiteralString()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/regexp_test#ExampleRegexp_ReplaceAllString",
+              "documentation": {
+                "identifier": "ExampleRegexp_ReplaceAllString",
+                "newPage": false,
+                "searchKey": "regexp_test.ExampleRegexp_ReplaceAllString",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRegexp_ReplaceAllString()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRegexp_ReplaceAllString()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/regexp_test#ExampleRegexp_ReplaceAllStringFunc",
+              "documentation": {
+                "identifier": "ExampleRegexp_ReplaceAllStringFunc",
+                "newPage": false,
+                "searchKey": "regexp_test.ExampleRegexp_ReplaceAllStringFunc",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRegexp_ReplaceAllStringFunc()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRegexp_ReplaceAllStringFunc()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/regexp_test#ExampleRegexp_Split",
+              "documentation": {
+                "identifier": "ExampleRegexp_Split",
+                "newPage": false,
+                "searchKey": "regexp_test.ExampleRegexp_Split",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRegexp_Split()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRegexp_Split()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/regexp_test#ExampleRegexp_SubexpIndex",
+              "documentation": {
+                "identifier": "ExampleRegexp_SubexpIndex",
+                "newPage": false,
+                "searchKey": "regexp_test.ExampleRegexp_SubexpIndex",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRegexp_SubexpIndex()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRegexp_SubexpIndex()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/regexp_test#ExampleRegexp_SubexpNames",
+              "documentation": {
+                "identifier": "ExampleRegexp_SubexpNames",
+                "newPage": false,
+                "searchKey": "regexp_test.ExampleRegexp_SubexpNames",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRegexp_SubexpNames()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRegexp_SubexpNames()\n```\n\n"
               },
               "children": null
             }

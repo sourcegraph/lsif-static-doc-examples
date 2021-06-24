@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "go/internal/gccgoimporter",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,110 +41,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#armag",
+              "pathID": "/go/internal/gccgoimporter#aixbigafMagic",
               "documentation": {
-                "identifier": "armag",
+                "identifier": "aixbigafMagic",
                 "newPage": false,
-                "searchKey": "gccgoimporter.armag",
+                "searchKey": "gccgoimporter.aixbigafMagic",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const armag"
+                "value": "const aixbigafMagic"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst armag = \"!<arch>\\n\"\n```\n\nMagic strings for different archive file formats. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gccgoimporter#armagt",
-              "documentation": {
-                "identifier": "armagt",
-                "newPage": false,
-                "searchKey": "gccgoimporter.armagt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const armagt"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst armagt = \"!<thin>\\n\"\n```\n\nMagic strings for different archive file formats. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gccgoimporter#armagb",
-              "documentation": {
-                "identifier": "armagb",
-                "newPage": false,
-                "searchKey": "gccgoimporter.armagb",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const armagb"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst armagb = \"<bigaf>\\n\"\n```\n\nMagic strings for different archive file formats. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gccgoimporter#arNameOff",
-              "documentation": {
-                "identifier": "arNameOff",
-                "newPage": false,
-                "searchKey": "gccgoimporter.arNameOff",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const arNameOff"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst arNameOff = 0\n```\n\nOffsets and sizes for fields in a standard archive header. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gccgoimporter#arNameSize",
-              "documentation": {
-                "identifier": "arNameSize",
-                "newPage": false,
-                "searchKey": "gccgoimporter.arNameSize",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const arNameSize"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst arNameSize = 16\n```\n\nOffsets and sizes for fields in a standard archive header. \n\n"
+                "value": "```Go\nconst aixbigafMagic = \"<big\"\n```\n\n"
               },
               "children": null
             }
@@ -155,6 +71,8 @@
                 "newPage": false,
                 "searchKey": "gccgoimporter.arDateOff",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -177,6 +95,8 @@
                 "newPage": false,
                 "searchKey": "gccgoimporter.arDateSize",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -193,188 +113,14 @@
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#arUIDOff",
-              "documentation": {
-                "identifier": "arUIDOff",
-                "newPage": false,
-                "searchKey": "gccgoimporter.arUIDOff",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const arUIDOff"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst arUIDOff = arDateOff + arDateSize\n```\n\nOffsets and sizes for fields in a standard archive header. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gccgoimporter#arUIDSize",
-              "documentation": {
-                "identifier": "arUIDSize",
-                "newPage": false,
-                "searchKey": "gccgoimporter.arUIDSize",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const arUIDSize"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst arUIDSize = 6\n```\n\nOffsets and sizes for fields in a standard archive header. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gccgoimporter#arGIDOff",
-              "documentation": {
-                "identifier": "arGIDOff",
-                "newPage": false,
-                "searchKey": "gccgoimporter.arGIDOff",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const arGIDOff"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst arGIDOff = arUIDOff + arUIDSize\n```\n\nOffsets and sizes for fields in a standard archive header. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gccgoimporter#arGIDSize",
-              "documentation": {
-                "identifier": "arGIDSize",
-                "newPage": false,
-                "searchKey": "gccgoimporter.arGIDSize",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const arGIDSize"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst arGIDSize = 6\n```\n\nOffsets and sizes for fields in a standard archive header. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gccgoimporter#arModeOff",
-              "documentation": {
-                "identifier": "arModeOff",
-                "newPage": false,
-                "searchKey": "gccgoimporter.arModeOff",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const arModeOff"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst arModeOff = arGIDOff + arGIDSize\n```\n\nOffsets and sizes for fields in a standard archive header. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gccgoimporter#arModeSize",
-              "documentation": {
-                "identifier": "arModeSize",
-                "newPage": false,
-                "searchKey": "gccgoimporter.arModeSize",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const arModeSize"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst arModeSize = 8\n```\n\nOffsets and sizes for fields in a standard archive header. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gccgoimporter#arSizeOff",
-              "documentation": {
-                "identifier": "arSizeOff",
-                "newPage": false,
-                "searchKey": "gccgoimporter.arSizeOff",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const arSizeOff"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst arSizeOff = arModeOff + arModeSize\n```\n\nOffsets and sizes for fields in a standard archive header. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gccgoimporter#arSizeSize",
-              "documentation": {
-                "identifier": "arSizeSize",
-                "newPage": false,
-                "searchKey": "gccgoimporter.arSizeSize",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const arSizeSize"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst arSizeSize = 10\n```\n\nOffsets and sizes for fields in a standard archive header. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/internal/gccgoimporter#arFmagOff",
               "documentation": {
                 "identifier": "arFmagOff",
                 "newPage": false,
                 "searchKey": "gccgoimporter.arFmagOff",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -397,6 +143,8 @@
                 "newPage": false,
                 "searchKey": "gccgoimporter.arFmagSize",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -413,12 +161,62 @@
           },
           {
             "node": {
+              "pathID": "/go/internal/gccgoimporter#arGIDOff",
+              "documentation": {
+                "identifier": "arGIDOff",
+                "newPage": false,
+                "searchKey": "gccgoimporter.arGIDOff",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const arGIDOff"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst arGIDOff = arUIDOff + arUIDSize\n```\n\nOffsets and sizes for fields in a standard archive header. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gccgoimporter#arGIDSize",
+              "documentation": {
+                "identifier": "arGIDSize",
+                "newPage": false,
+                "searchKey": "gccgoimporter.arGIDSize",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const arGIDSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst arGIDSize = 6\n```\n\nOffsets and sizes for fields in a standard archive header. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/go/internal/gccgoimporter#arHdrSize",
               "documentation": {
                 "identifier": "arHdrSize",
                 "newPage": false,
                 "searchKey": "gccgoimporter.arHdrSize",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -435,110 +233,192 @@
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#arfmag",
+              "pathID": "/go/internal/gccgoimporter#arModeOff",
               "documentation": {
-                "identifier": "arfmag",
+                "identifier": "arModeOff",
                 "newPage": false,
-                "searchKey": "gccgoimporter.arfmag",
+                "searchKey": "gccgoimporter.arModeOff",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const arfmag"
+                "value": "const arModeOff"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst arfmag = \"`\\n\"\n```\n\nThe contents of the fmag field of a standard archive header. \n\n"
+                "value": "```Go\nconst arModeOff = arGIDOff + arGIDSize\n```\n\nOffsets and sizes for fields in a standard archive header. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#gccgov1Magic",
+              "pathID": "/go/internal/gccgoimporter#arModeSize",
               "documentation": {
-                "identifier": "gccgov1Magic",
+                "identifier": "arModeSize",
                 "newPage": false,
-                "searchKey": "gccgoimporter.gccgov1Magic",
+                "searchKey": "gccgoimporter.arModeSize",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const gccgov1Magic"
+                "value": "const arModeSize"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst gccgov1Magic = \"v1;\\n\"\n```\n\n"
+                "value": "```Go\nconst arModeSize = 8\n```\n\nOffsets and sizes for fields in a standard archive header. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#gccgov2Magic",
+              "pathID": "/go/internal/gccgoimporter#arNameOff",
               "documentation": {
-                "identifier": "gccgov2Magic",
+                "identifier": "arNameOff",
                 "newPage": false,
-                "searchKey": "gccgoimporter.gccgov2Magic",
+                "searchKey": "gccgoimporter.arNameOff",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const gccgov2Magic"
+                "value": "const arNameOff"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst gccgov2Magic = \"v2;\\n\"\n```\n\n"
+                "value": "```Go\nconst arNameOff = 0\n```\n\nOffsets and sizes for fields in a standard archive header. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#gccgov3Magic",
+              "pathID": "/go/internal/gccgoimporter#arNameSize",
               "documentation": {
-                "identifier": "gccgov3Magic",
+                "identifier": "arNameSize",
                 "newPage": false,
-                "searchKey": "gccgoimporter.gccgov3Magic",
+                "searchKey": "gccgoimporter.arNameSize",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const gccgov3Magic"
+                "value": "const arNameSize"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst gccgov3Magic = \"v3;\\n\"\n```\n\n"
+                "value": "```Go\nconst arNameSize = 16\n```\n\nOffsets and sizes for fields in a standard archive header. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#goimporterMagic",
+              "pathID": "/go/internal/gccgoimporter#arSizeOff",
               "documentation": {
-                "identifier": "goimporterMagic",
+                "identifier": "arSizeOff",
                 "newPage": false,
-                "searchKey": "gccgoimporter.goimporterMagic",
+                "searchKey": "gccgoimporter.arSizeOff",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const goimporterMagic"
+                "value": "const arSizeOff"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst goimporterMagic = \"\\n$$ \"\n```\n\n"
+                "value": "```Go\nconst arSizeOff = arModeOff + arModeSize\n```\n\nOffsets and sizes for fields in a standard archive header. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gccgoimporter#arSizeSize",
+              "documentation": {
+                "identifier": "arSizeSize",
+                "newPage": false,
+                "searchKey": "gccgoimporter.arSizeSize",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const arSizeSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst arSizeSize = 10\n```\n\nOffsets and sizes for fields in a standard archive header. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gccgoimporter#arUIDOff",
+              "documentation": {
+                "identifier": "arUIDOff",
+                "newPage": false,
+                "searchKey": "gccgoimporter.arUIDOff",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const arUIDOff"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst arUIDOff = arDateOff + arDateSize\n```\n\nOffsets and sizes for fields in a standard archive header. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gccgoimporter#arUIDSize",
+              "documentation": {
+                "identifier": "arUIDSize",
+                "newPage": false,
+                "searchKey": "gccgoimporter.arUIDSize",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const arUIDSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst arUIDSize = 6\n```\n\nOffsets and sizes for fields in a standard archive header. \n\n"
               },
               "children": null
             }
@@ -551,6 +431,8 @@
                 "newPage": false,
                 "searchKey": "gccgoimporter.archiveMagic",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -567,198 +449,216 @@
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#aixbigafMagic",
+              "pathID": "/go/internal/gccgoimporter#arfmag",
               "documentation": {
-                "identifier": "aixbigafMagic",
+                "identifier": "arfmag",
                 "newPage": false,
-                "searchKey": "gccgoimporter.aixbigafMagic",
+                "searchKey": "gccgoimporter.arfmag",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const aixbigafMagic"
+                "value": "const arfmag"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst aixbigafMagic = \"<big\"\n```\n\n"
+                "value": "```Go\nconst arfmag = \"`\\n\"\n```\n\nThe contents of the fmag field of a standard archive header. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinINT8",
+              "pathID": "/go/internal/gccgoimporter#armag",
               "documentation": {
-                "identifier": "gccgoBuiltinINT8",
+                "identifier": "armag",
                 "newPage": false,
-                "searchKey": "gccgoimporter.gccgoBuiltinINT8",
+                "searchKey": "gccgoimporter.armag",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const gccgoBuiltinINT8"
+                "value": "const armag"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst gccgoBuiltinINT8 = 1\n```\n\nFrom gofrontend/go/export.h Note that these values are negative in the gofrontend and have been made positive in the gccgoimporter. \n\n"
+                "value": "```Go\nconst armag = \"!<arch>\\n\"\n```\n\nMagic strings for different archive file formats. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinINT16",
+              "pathID": "/go/internal/gccgoimporter#armagb",
               "documentation": {
-                "identifier": "gccgoBuiltinINT16",
+                "identifier": "armagb",
                 "newPage": false,
-                "searchKey": "gccgoimporter.gccgoBuiltinINT16",
+                "searchKey": "gccgoimporter.armagb",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const gccgoBuiltinINT16"
+                "value": "const armagb"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst gccgoBuiltinINT16 = 2\n```\n\n"
+                "value": "```Go\nconst armagb = \"<bigaf>\\n\"\n```\n\nMagic strings for different archive file formats. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinINT32",
+              "pathID": "/go/internal/gccgoimporter#armagt",
               "documentation": {
-                "identifier": "gccgoBuiltinINT32",
+                "identifier": "armagt",
                 "newPage": false,
-                "searchKey": "gccgoimporter.gccgoBuiltinINT32",
+                "searchKey": "gccgoimporter.armagt",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const gccgoBuiltinINT32"
+                "value": "const armagt"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst gccgoBuiltinINT32 = 3\n```\n\n"
+                "value": "```Go\nconst armagt = \"!<thin>\\n\"\n```\n\nMagic strings for different archive file formats. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinINT64",
+              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinBOOL",
               "documentation": {
-                "identifier": "gccgoBuiltinINT64",
+                "identifier": "gccgoBuiltinBOOL",
                 "newPage": false,
-                "searchKey": "gccgoimporter.gccgoBuiltinINT64",
+                "searchKey": "gccgoimporter.gccgoBuiltinBOOL",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const gccgoBuiltinINT64"
+                "value": "const gccgoBuiltinBOOL"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst gccgoBuiltinINT64 = 4\n```\n\n"
+                "value": "```Go\nconst gccgoBuiltinBOOL = 15\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinUINT8",
+              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinBYTE",
               "documentation": {
-                "identifier": "gccgoBuiltinUINT8",
+                "identifier": "gccgoBuiltinBYTE",
                 "newPage": false,
-                "searchKey": "gccgoimporter.gccgoBuiltinUINT8",
+                "searchKey": "gccgoimporter.gccgoBuiltinBYTE",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const gccgoBuiltinUINT8"
+                "value": "const gccgoBuiltinBYTE"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst gccgoBuiltinUINT8 = 5\n```\n\n"
+                "value": "```Go\nconst gccgoBuiltinBYTE = 20\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinUINT16",
+              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinCOMPLEX128",
               "documentation": {
-                "identifier": "gccgoBuiltinUINT16",
+                "identifier": "gccgoBuiltinCOMPLEX128",
                 "newPage": false,
-                "searchKey": "gccgoimporter.gccgoBuiltinUINT16",
+                "searchKey": "gccgoimporter.gccgoBuiltinCOMPLEX128",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const gccgoBuiltinUINT16"
+                "value": "const gccgoBuiltinCOMPLEX128"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst gccgoBuiltinUINT16 = 6\n```\n\n"
+                "value": "```Go\nconst gccgoBuiltinCOMPLEX128 = 18\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinUINT32",
+              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinCOMPLEX64",
               "documentation": {
-                "identifier": "gccgoBuiltinUINT32",
+                "identifier": "gccgoBuiltinCOMPLEX64",
                 "newPage": false,
-                "searchKey": "gccgoimporter.gccgoBuiltinUINT32",
+                "searchKey": "gccgoimporter.gccgoBuiltinCOMPLEX64",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const gccgoBuiltinUINT32"
+                "value": "const gccgoBuiltinCOMPLEX64"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst gccgoBuiltinUINT32 = 7\n```\n\n"
+                "value": "```Go\nconst gccgoBuiltinCOMPLEX64 = 17\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinUINT64",
+              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinERROR",
               "documentation": {
-                "identifier": "gccgoBuiltinUINT64",
+                "identifier": "gccgoBuiltinERROR",
                 "newPage": false,
-                "searchKey": "gccgoimporter.gccgoBuiltinUINT64",
+                "searchKey": "gccgoimporter.gccgoBuiltinERROR",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const gccgoBuiltinUINT64"
+                "value": "const gccgoBuiltinERROR"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst gccgoBuiltinUINT64 = 8\n```\n\n"
+                "value": "```Go\nconst gccgoBuiltinERROR = 19\n```\n\n"
               },
               "children": null
             }
@@ -771,6 +671,8 @@
                 "newPage": false,
                 "searchKey": "gccgoimporter.gccgoBuiltinFLOAT32",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -793,6 +695,8 @@
                 "newPage": false,
                 "searchKey": "gccgoimporter.gccgoBuiltinFLOAT64",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -815,6 +719,8 @@
                 "newPage": false,
                 "searchKey": "gccgoimporter.gccgoBuiltinINT",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -831,66 +737,120 @@
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinUINT",
+              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinINT16",
               "documentation": {
-                "identifier": "gccgoBuiltinUINT",
+                "identifier": "gccgoBuiltinINT16",
                 "newPage": false,
-                "searchKey": "gccgoimporter.gccgoBuiltinUINT",
+                "searchKey": "gccgoimporter.gccgoBuiltinINT16",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const gccgoBuiltinUINT"
+                "value": "const gccgoBuiltinINT16"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst gccgoBuiltinUINT = 12\n```\n\n"
+                "value": "```Go\nconst gccgoBuiltinINT16 = 2\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinUINTPTR",
+              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinINT32",
               "documentation": {
-                "identifier": "gccgoBuiltinUINTPTR",
+                "identifier": "gccgoBuiltinINT32",
                 "newPage": false,
-                "searchKey": "gccgoimporter.gccgoBuiltinUINTPTR",
+                "searchKey": "gccgoimporter.gccgoBuiltinINT32",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const gccgoBuiltinUINTPTR"
+                "value": "const gccgoBuiltinINT32"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst gccgoBuiltinUINTPTR = 13\n```\n\n"
+                "value": "```Go\nconst gccgoBuiltinINT32 = 3\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinBOOL",
+              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinINT64",
               "documentation": {
-                "identifier": "gccgoBuiltinBOOL",
+                "identifier": "gccgoBuiltinINT64",
                 "newPage": false,
-                "searchKey": "gccgoimporter.gccgoBuiltinBOOL",
+                "searchKey": "gccgoimporter.gccgoBuiltinINT64",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const gccgoBuiltinBOOL"
+                "value": "const gccgoBuiltinINT64"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst gccgoBuiltinBOOL = 15\n```\n\n"
+                "value": "```Go\nconst gccgoBuiltinINT64 = 4\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinINT8",
+              "documentation": {
+                "identifier": "gccgoBuiltinINT8",
+                "newPage": false,
+                "searchKey": "gccgoimporter.gccgoBuiltinINT8",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const gccgoBuiltinINT8"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst gccgoBuiltinINT8 = 1\n```\n\nFrom gofrontend/go/export.h Note that these values are negative in the gofrontend and have been made positive in the gccgoimporter. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinRUNE",
+              "documentation": {
+                "identifier": "gccgoBuiltinRUNE",
+                "newPage": false,
+                "searchKey": "gccgoimporter.gccgoBuiltinRUNE",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const gccgoBuiltinRUNE"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst gccgoBuiltinRUNE = 21\n```\n\n"
               },
               "children": null
             }
@@ -903,6 +863,8 @@
                 "newPage": false,
                 "searchKey": "gccgoimporter.gccgoBuiltinSTRING",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -919,110 +881,240 @@
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinCOMPLEX64",
+              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinUINT",
               "documentation": {
-                "identifier": "gccgoBuiltinCOMPLEX64",
+                "identifier": "gccgoBuiltinUINT",
                 "newPage": false,
-                "searchKey": "gccgoimporter.gccgoBuiltinCOMPLEX64",
+                "searchKey": "gccgoimporter.gccgoBuiltinUINT",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const gccgoBuiltinCOMPLEX64"
+                "value": "const gccgoBuiltinUINT"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst gccgoBuiltinCOMPLEX64 = 17\n```\n\n"
+                "value": "```Go\nconst gccgoBuiltinUINT = 12\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinCOMPLEX128",
+              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinUINT16",
               "documentation": {
-                "identifier": "gccgoBuiltinCOMPLEX128",
+                "identifier": "gccgoBuiltinUINT16",
                 "newPage": false,
-                "searchKey": "gccgoimporter.gccgoBuiltinCOMPLEX128",
+                "searchKey": "gccgoimporter.gccgoBuiltinUINT16",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const gccgoBuiltinCOMPLEX128"
+                "value": "const gccgoBuiltinUINT16"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst gccgoBuiltinCOMPLEX128 = 18\n```\n\n"
+                "value": "```Go\nconst gccgoBuiltinUINT16 = 6\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinERROR",
+              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinUINT32",
               "documentation": {
-                "identifier": "gccgoBuiltinERROR",
+                "identifier": "gccgoBuiltinUINT32",
                 "newPage": false,
-                "searchKey": "gccgoimporter.gccgoBuiltinERROR",
+                "searchKey": "gccgoimporter.gccgoBuiltinUINT32",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const gccgoBuiltinERROR"
+                "value": "const gccgoBuiltinUINT32"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst gccgoBuiltinERROR = 19\n```\n\n"
+                "value": "```Go\nconst gccgoBuiltinUINT32 = 7\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinBYTE",
+              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinUINT64",
               "documentation": {
-                "identifier": "gccgoBuiltinBYTE",
+                "identifier": "gccgoBuiltinUINT64",
                 "newPage": false,
-                "searchKey": "gccgoimporter.gccgoBuiltinBYTE",
+                "searchKey": "gccgoimporter.gccgoBuiltinUINT64",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const gccgoBuiltinBYTE"
+                "value": "const gccgoBuiltinUINT64"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst gccgoBuiltinBYTE = 20\n```\n\n"
+                "value": "```Go\nconst gccgoBuiltinUINT64 = 8\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinRUNE",
+              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinUINT8",
               "documentation": {
-                "identifier": "gccgoBuiltinRUNE",
+                "identifier": "gccgoBuiltinUINT8",
                 "newPage": false,
-                "searchKey": "gccgoimporter.gccgoBuiltinRUNE",
+                "searchKey": "gccgoimporter.gccgoBuiltinUINT8",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const gccgoBuiltinRUNE"
+                "value": "const gccgoBuiltinUINT8"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst gccgoBuiltinRUNE = 21\n```\n\n"
+                "value": "```Go\nconst gccgoBuiltinUINT8 = 5\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gccgoimporter#gccgoBuiltinUINTPTR",
+              "documentation": {
+                "identifier": "gccgoBuiltinUINTPTR",
+                "newPage": false,
+                "searchKey": "gccgoimporter.gccgoBuiltinUINTPTR",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const gccgoBuiltinUINTPTR"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst gccgoBuiltinUINTPTR = 13\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gccgoimporter#gccgov1Magic",
+              "documentation": {
+                "identifier": "gccgov1Magic",
+                "newPage": false,
+                "searchKey": "gccgoimporter.gccgov1Magic",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const gccgov1Magic"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst gccgov1Magic = \"v1;\\n\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gccgoimporter#gccgov2Magic",
+              "documentation": {
+                "identifier": "gccgov2Magic",
+                "newPage": false,
+                "searchKey": "gccgoimporter.gccgov2Magic",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const gccgov2Magic"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst gccgov2Magic = \"v2;\\n\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gccgoimporter#gccgov3Magic",
+              "documentation": {
+                "identifier": "gccgov3Magic",
+                "newPage": false,
+                "searchKey": "gccgoimporter.gccgov3Magic",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const gccgov3Magic"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst gccgov3Magic = \"v3;\\n\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gccgoimporter#goimporterMagic",
+              "documentation": {
+                "identifier": "goimporterMagic",
+                "newPage": false,
+                "searchKey": "gccgoimporter.goimporterMagic",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const goimporterMagic"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst goimporterMagic = \"\\n$$ \"\n```\n\n"
               },
               "children": null
             }
@@ -1038,6 +1130,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -1052,34 +1145,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#reserved",
-              "documentation": {
-                "identifier": "reserved",
-                "newPage": false,
-                "searchKey": "gccgoimporter.reserved",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var reserved"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar reserved = new(struct{ types.Type })\n```\n\nreserved is a singleton type used to fill type map slots that have been reserved (i.e., for which a type number has been parsed) but which don't have their actual type yet. When the type map is updated, the actual type must replace a reserved entry (or we have an internal error). Used for self-verification only - not required for correctness. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/internal/gccgoimporter#importablePackages",
               "documentation": {
                 "identifier": "importablePackages",
                 "newPage": false,
                 "searchKey": "gccgoimporter.importablePackages",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
@@ -1102,6 +1176,9 @@
                 "newPage": false,
                 "searchKey": "gccgoimporter.importerTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -1118,12 +1195,39 @@
           },
           {
             "node": {
+              "pathID": "/go/internal/gccgoimporter#reserved",
+              "documentation": {
+                "identifier": "reserved",
+                "newPage": false,
+                "searchKey": "gccgoimporter.reserved",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var reserved"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar reserved = new(struct{ types.Type })\n```\n\nreserved is a singleton type used to fill type map slots that have been reserved (i.e., for which a type number has been parsed) but which don't have their actual type yet. When the type map is updated, the actual type must replace a reserved entry (or we have an internal error). Used for self-verification only - not required for correctness. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/go/internal/gccgoimporter#typeParserTests",
               "documentation": {
                 "identifier": "typeParserTests",
                 "newPage": false,
                 "searchKey": "gccgoimporter.typeParserTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -1149,6 +1253,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -1163,57 +1268,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#seekerReadAt",
-              "documentation": {
-                "identifier": "seekerReadAt",
-                "newPage": false,
-                "searchKey": "gccgoimporter.seekerReadAt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type seekerReadAt struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype seekerReadAt struct {\n\tseeker io.ReadSeeker\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#seekerReadAt.ReadAt",
-                    "documentation": {
-                      "identifier": "seekerReadAt.ReadAt",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.seekerReadAt.ReadAt",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (sra seekerReadAt) ReadAt(p []byte, off int64) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (sra seekerReadAt) ReadAt(p []byte, off int64) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/internal/gccgoimporter#GccgoInstallation",
               "documentation": {
                 "identifier": "GccgoInstallation",
                 "newPage": false,
                 "searchKey": "gccgoimporter.GccgoInstallation",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1226,12 +1288,36 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/go/internal/gccgoimporter#GccgoInstallation.GetImporter",
+                    "documentation": {
+                      "identifier": "GccgoInstallation.GetImporter",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.GccgoInstallation.GetImporter",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (inst *GccgoInstallation) GetImporter(incpaths []string, initmap map[*types.Package]InitData) Importer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (inst *GccgoInstallation) GetImporter(incpaths []string, initmap map[*types.Package]InitData) Importer\n```\n\nReturn an importer that searches incpaths followed by the gcc installation's built-in search paths and the current directory. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/go/internal/gccgoimporter#GccgoInstallation.InitFromDriver",
                     "documentation": {
                       "identifier": "GccgoInstallation.InitFromDriver",
                       "newPage": false,
                       "searchKey": "gccgoimporter.GccgoInstallation.InitFromDriver",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1251,7 +1337,9 @@
                       "identifier": "GccgoInstallation.SearchPaths",
                       "newPage": false,
                       "searchKey": "gccgoimporter.GccgoInstallation.SearchPaths",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1263,68 +1351,8 @@
                     },
                     "children": null
                   }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#GccgoInstallation.GetImporter",
-                    "documentation": {
-                      "identifier": "GccgoInstallation.GetImporter",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.GccgoInstallation.GetImporter",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (inst *GccgoInstallation) GetImporter(incpaths []string, initmap map[*types.Package]InitData) Importer"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (inst *GccgoInstallation) GetImporter(incpaths []string, initmap map[*types.Package]InitData) Importer\n```\n\nReturn an importer that searches incpaths followed by the gcc installation's built-in search paths and the current directory. \n\n"
-                    },
-                    "children": null
-                  }
                 }
               ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gccgoimporter#PackageInit",
-              "documentation": {
-                "identifier": "PackageInit",
-                "newPage": false,
-                "searchKey": "gccgoimporter.PackageInit",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type PackageInit struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype PackageInit struct {\n\tName     string // short package name\n\tInitFunc string // name of init function\n\tPriority int    // priority of init function, see InitData.Priority\n}\n```\n\nA PackageInit describes an imported package that needs initialization. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gccgoimporter#InitData",
-              "documentation": {
-                "identifier": "InitData",
-                "newPage": false,
-                "searchKey": "gccgoimporter.InitData",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type InitData struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype InitData struct {\n\t// Initialization priority of this package relative to other packages.\n\t// This is based on the maximum depth of the package's dependency graph;\n\t// it is guaranteed to be greater than that of its dependencies.\n\tPriority int\n\n\t// The list of packages which this package depends on to be initialized,\n\t// including itself if needed. This is the subset of the transitive closure of\n\t// the package's dependencies that need initialization.\n\tInits []PackageInit\n}\n```\n\nThe gccgo-specific init data for a package. \n\n"
-              },
-              "children": null
             }
           },
           {
@@ -1334,7 +1362,9 @@
                 "identifier": "Importer",
                 "newPage": false,
                 "searchKey": "gccgoimporter.Importer",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1352,7 +1382,9 @@
                       "identifier": "GetImporter",
                       "newPage": false,
                       "searchKey": "gccgoimporter.GetImporter",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1370,1103 +1402,46 @@
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#parser",
+              "pathID": "/go/internal/gccgoimporter#InitData",
               "documentation": {
-                "identifier": "parser",
+                "identifier": "InitData",
                 "newPage": false,
-                "searchKey": "gccgoimporter.parser",
+                "searchKey": "gccgoimporter.InitData",
                 "tags": [
-                  "private"
+                  "struct"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type parser struct"
+                "value": "type InitData struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype parser struct {\n\tscanner  *scanner.Scanner\n\tversion  string                    // format version\n\ttok      rune                      // current token\n\tlit      string                    // literal string; only valid for Ident, Int, String tokens\n\tpkgpath  string                    // package path of imported package\n\tpkgname  string                    // name of imported package\n\tpkg      *types.Package            // reference to imported package\n\timports  map[string]*types.Package // package path -> package object\n\ttypeList []types.Type              // type number -> type\n\ttypeData []string                  // unparsed type data (v3 and later)\n\tfixups   []fixupRecord             // fixups to apply at end of parsing\n\tinitdata InitData                  // package init priority data\n\taliases  map[int]string            // maps saved type number to alias name\n}\n```\n\n"
+                "value": "```Go\ntype InitData struct {\n\t// Initialization priority of this package relative to other packages.\n\t// This is based on the maximum depth of the package's dependency graph;\n\t// it is guaranteed to be greater than that of its dependencies.\n\tPriority int\n\n\t// The list of packages which this package depends on to be initialized,\n\t// including itself if needed. This is the subset of the transitive closure of\n\t// the package's dependencies that need initialization.\n\tInits []PackageInit\n}\n```\n\nThe gccgo-specific init data for a package. \n\n"
               },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.init.parser.go",
-                    "documentation": {
-                      "identifier": "parser.init.parser.go",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.init",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) init(filename string, src io.Reader, imports map[string]*types.Package)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) init(filename string, src io.Reader, imports map[string]*types.Package)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.initScanner",
-                    "documentation": {
-                      "identifier": "parser.initScanner",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.initScanner",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) initScanner(filename string, src io.Reader)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) initScanner(filename string, src io.Reader)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.error",
-                    "documentation": {
-                      "identifier": "parser.error",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.error",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) error(err interface{})"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) error(err interface{})\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.errorf",
-                    "documentation": {
-                      "identifier": "parser.errorf",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.errorf",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) errorf(format string, args ...interface{})"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) errorf(format string, args ...interface{})\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.expect",
-                    "documentation": {
-                      "identifier": "parser.expect",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.expect",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) expect(tok rune) string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) expect(tok rune) string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.expectEOL",
-                    "documentation": {
-                      "identifier": "parser.expectEOL",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.expectEOL",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) expectEOL()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) expectEOL()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.expectKeyword",
-                    "documentation": {
-                      "identifier": "parser.expectKeyword",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.expectKeyword",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) expectKeyword(keyword string)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) expectKeyword(keyword string)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseString",
-                    "documentation": {
-                      "identifier": "parser.parseString",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseString",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseString() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseString() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseUnquotedString",
-                    "documentation": {
-                      "identifier": "parser.parseUnquotedString",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseUnquotedString",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseUnquotedString() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseUnquotedString() string\n```\n\nunquotedString     = { unquotedStringChar } . unquotedStringChar = <neither a whitespace nor a ';' char> . \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.next",
-                    "documentation": {
-                      "identifier": "parser.next",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.next",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) next()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) next()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseQualifiedName",
-                    "documentation": {
-                      "identifier": "parser.parseQualifiedName",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseQualifiedName",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseQualifiedName() (path, name string)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseQualifiedName() (path, name string)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseUnquotedQualifiedName",
-                    "documentation": {
-                      "identifier": "parser.parseUnquotedQualifiedName",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseUnquotedQualifiedName",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseUnquotedQualifiedName() (path, name string)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseUnquotedQualifiedName() (path, name string)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseQualifiedNameStr",
-                    "documentation": {
-                      "identifier": "parser.parseQualifiedNameStr",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseQualifiedNameStr",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseQualifiedNameStr(unquotedName string) (pkgpath, name string)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseQualifiedNameStr(unquotedName string) (pkgpath, name string)\n```\n\nqualifiedName = [ [\".\"] unquotedString \".\" ] unquotedString . \n\nThe above production uses greedy matching. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.getPkg",
-                    "documentation": {
-                      "identifier": "parser.getPkg",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.getPkg",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) getPkg(pkgpath, name string) *types.Package"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) getPkg(pkgpath, name string) *types.Package\n```\n\ngetPkg returns the package for a given path. If the package is not found but we have a package name, create the package and add it to the p.imports map. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseExportedName",
-                    "documentation": {
-                      "identifier": "parser.parseExportedName",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseExportedName",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseExportedName() (pkg *types.Package, name string)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseExportedName() (pkg *types.Package, name string)\n```\n\nparseExportedName is like parseQualifiedName, but the package path is resolved to an imported *types.Package. \n\nExportedName = string [string] . \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseName",
-                    "documentation": {
-                      "identifier": "parser.parseName",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseName",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseName() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseName() string\n```\n\nName = QualifiedName | \"?\" . \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseField",
-                    "documentation": {
-                      "identifier": "parser.parseField",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseField",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseField(pkg *types.Package) (field *types.Var, tag string)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseField(pkg *types.Package) (field *types.Var, tag string)\n```\n\nField = Name Type [string] . \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseParam",
-                    "documentation": {
-                      "identifier": "parser.parseParam",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseParam",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseParam(pkg *types.Package) (param *types.Var, isVariadic bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseParam(pkg *types.Package) (param *types.Var, isVariadic bool)\n```\n\nParam = Name [\"...\"] Type . \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseVar",
-                    "documentation": {
-                      "identifier": "parser.parseVar",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseVar",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseVar(pkg *types.Package) *types.Var"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseVar(pkg *types.Package) *types.Var\n```\n\nVar = Name Type . \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseConversion",
-                    "documentation": {
-                      "identifier": "parser.parseConversion",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseConversion",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseConversion(pkg *types.Package) (val constant.Value, typ types.Type)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseConversion(pkg *types.Package) (val constant.Value, typ types.Type)\n```\n\nConversion = \"convert\" \"(\" Type \",\" ConstValue \")\" . \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseConstValue",
-                    "documentation": {
-                      "identifier": "parser.parseConstValue",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseConstValue",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseConstValue(pkg *types.Package) (val constant.Value, typ types.Type)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseConstValue(pkg *types.Package) (val constant.Value, typ types.Type)\n```\n\nConstValue     = string | \"false\" | \"true\" | [\"-\"] (int [\"'\"] | FloatOrComplex) | Conversion . FloatOrComplex = float [\"i\" | (\"+\"|\"-\") float \"i\"] . \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseConst",
-                    "documentation": {
-                      "identifier": "parser.parseConst",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseConst",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseConst(pkg *types.Package) *types.Const"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseConst(pkg *types.Package) *types.Const\n```\n\nConst = Name [Type] \"=\" ConstValue . \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.reserve",
-                    "documentation": {
-                      "identifier": "parser.reserve",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.reserve",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) reserve(n int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) reserve(n int)\n```\n\nreserve reserves the type map entry n for future use. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.update",
-                    "documentation": {
-                      "identifier": "parser.update",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.update",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) update(t types.Type, nlist []interface{})"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) update(t types.Type, nlist []interface{})\n```\n\nupdate sets the type map entries for the entries in nlist to t. An entry in nlist can be a type number in p.typeList, used to resolve named types, or it can be a *types.Pointer, used to resolve pointers to named types in case they are referenced by embedded fields. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseNamedType",
-                    "documentation": {
-                      "identifier": "parser.parseNamedType",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseNamedType",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseNamedType(nlist []interface{}) types.Type"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseNamedType(nlist []interface{}) types.Type\n```\n\nNamedType = TypeName [ \"=\" ] Type { Method } . TypeName  = ExportedName . Method    = \"func\" \"(\" Param \")\" Name ParamList ResultList [InlineBody] \";\" . \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseInt64",
-                    "documentation": {
-                      "identifier": "parser.parseInt64",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseInt64",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseInt64() int64"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseInt64() int64\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseInt",
-                    "documentation": {
-                      "identifier": "parser.parseInt",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseInt",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseInt() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseInt() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseArrayOrSliceType",
-                    "documentation": {
-                      "identifier": "parser.parseArrayOrSliceType",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseArrayOrSliceType",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseArrayOrSliceType(pkg *types.Package, nlist []interface{}) types.Type"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseArrayOrSliceType(pkg *types.Package, nlist []interface{}) types.Type\n```\n\nArrayOrSliceType = \"[\" [ int ] \"]\" Type . \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseMapType",
-                    "documentation": {
-                      "identifier": "parser.parseMapType",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseMapType",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseMapType(pkg *types.Package, nlist []interface{}) types.Type"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseMapType(pkg *types.Package, nlist []interface{}) types.Type\n```\n\nMapType = \"map\" \"[\" Type \"]\" Type . \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseChanType",
-                    "documentation": {
-                      "identifier": "parser.parseChanType",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseChanType",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseChanType(pkg *types.Package, nlist []interface{}) types.Type"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseChanType(pkg *types.Package, nlist []interface{}) types.Type\n```\n\nChanType = \"chan\" [\"<-\" | \"-<\"] Type . \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseStructType",
-                    "documentation": {
-                      "identifier": "parser.parseStructType",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseStructType",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseStructType(pkg *types.Package, nlist []interface{}) types.Type"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseStructType(pkg *types.Package, nlist []interface{}) types.Type\n```\n\nStructType = \"struct\" \"{\" { Field } \"}\" . \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseParamList",
-                    "documentation": {
-                      "identifier": "parser.parseParamList",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseParamList",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseParamList(pkg *types.Package) (*types.Tuple, bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseParamList(pkg *types.Package) (*types.Tuple, bool)\n```\n\nParamList = \"(\" [ { Parameter \",\" } Parameter ] \")\" . \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseResultList",
-                    "documentation": {
-                      "identifier": "parser.parseResultList",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseResultList",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseResultList(pkg *types.Package) *types.Tuple"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseResultList(pkg *types.Package) *types.Tuple\n```\n\nResultList = Type | ParamList . \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseFunctionType",
-                    "documentation": {
-                      "identifier": "parser.parseFunctionType",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseFunctionType",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseFunctionType(pkg *types.Package, nlist []interface{}) *types.Signature"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseFunctionType(pkg *types.Package, nlist []interface{}) *types.Signature\n```\n\nFunctionType = ParamList ResultList . \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseFunc",
-                    "documentation": {
-                      "identifier": "parser.parseFunc",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseFunc",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseFunc(pkg *types.Package) *types.Func"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseFunc(pkg *types.Package) *types.Func\n```\n\nFunc = Name FunctionType [InlineBody] . \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseInterfaceType",
-                    "documentation": {
-                      "identifier": "parser.parseInterfaceType",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseInterfaceType",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseInterfaceType(pkg *types.Package, nlist []interface{}) types.Type"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseInterfaceType(pkg *types.Package, nlist []interface{}) types.Type\n```\n\nInterfaceType = \"interface\" \"{\" { (\"?\" Type | Func) \";\" } \"}\" . \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parsePointerType",
-                    "documentation": {
-                      "identifier": "parser.parsePointerType",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parsePointerType",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parsePointerType(pkg *types.Package, nlist []interface{}) types.Type"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parsePointerType(pkg *types.Package, nlist []interface{}) types.Type\n```\n\nPointerType = \"*\" (\"any\" | Type) . \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseTypeSpec",
-                    "documentation": {
-                      "identifier": "parser.parseTypeSpec",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseTypeSpec",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseTypeSpec(pkg *types.Package, nlist []interface{}) types.Type"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseTypeSpec(pkg *types.Package, nlist []interface{}) types.Type\n```\n\nTypeSpec = NamedType | MapType | ChanType | StructType | InterfaceType | PointerType | ArrayOrSliceType | FunctionType . \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseType",
-                    "documentation": {
-                      "identifier": "parser.parseType",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseType",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseType(pkg *types.Package, n ...interface{}) types.Type"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseType(pkg *types.Package, n ...interface{}) types.Type\n```\n\nType = \"<\" \"type\" ( \"-\" int | int [ TypeSpec ] ) \">\" . \n\nparseType updates the type map to t for all type numbers n. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseTypeAfterAngle",
-                    "documentation": {
-                      "identifier": "parser.parseTypeAfterAngle",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseTypeAfterAngle",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseTypeAfterAngle(pkg *types.Package, n ...interface{}) (t types.Type, n1 int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseTypeAfterAngle(pkg *types.Package, n ...interface{}) (t types.Type, n1 int)\n```\n\n(*parser).Type after reading the \"<\". \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseTypeExtended",
-                    "documentation": {
-                      "identifier": "parser.parseTypeExtended",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseTypeExtended",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseTypeExtended(pkg *types.Package, n ...interface{}) (t types.Type, n1 int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseTypeExtended(pkg *types.Package, n ...interface{}) (t types.Type, n1 int)\n```\n\nparseTypeExtended is identical to parseType, but if the type in question is a saved type, returns the index as well as the type pointer (index returned is zero if we parsed a builtin). \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.skipInlineBody",
-                    "documentation": {
-                      "identifier": "parser.skipInlineBody",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.skipInlineBody",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) skipInlineBody()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) skipInlineBody()\n```\n\nInlineBody = \"<inl:NN>\" .{NN} Reports whether a body was skipped. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseTypes",
-                    "documentation": {
-                      "identifier": "parser.parseTypes",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseTypes",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseTypes(pkg *types.Package)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseTypes(pkg *types.Package)\n```\n\nTypes = \"types\" maxp1 exportedp1 (offset length)* . \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseSavedType",
-                    "documentation": {
-                      "identifier": "parser.parseSavedType",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseSavedType",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseSavedType(pkg *types.Package, i int, nlist []interface{})"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseSavedType(pkg *types.Package, i int, nlist []interface{})\n```\n\nparseSavedType parses one saved type definition. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parsePackageInit",
-                    "documentation": {
-                      "identifier": "parser.parsePackageInit",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parsePackageInit",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parsePackageInit() PackageInit"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parsePackageInit() PackageInit\n```\n\nPackageInit = unquotedString unquotedString int . \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.maybeCreatePackage",
-                    "documentation": {
-                      "identifier": "parser.maybeCreatePackage",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.maybeCreatePackage",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) maybeCreatePackage()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) maybeCreatePackage()\n```\n\nCreate the package if we have parsed both the package path and package name. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseInitDataDirective",
-                    "documentation": {
-                      "identifier": "parser.parseInitDataDirective",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseInitDataDirective",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseInitDataDirective()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseInitDataDirective()\n```\n\nInitDataDirective = ( \"v1\" | \"v2\" | \"v3\" ) \";\" | \n\n```\n\"priority\" int \";\" |\n\"init\" { PackageInit } \";\" |\n\"checksum\" unquotedString \";\" .\n\n```\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parseDirective",
-                    "documentation": {
-                      "identifier": "parser.parseDirective",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parseDirective",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parseDirective()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseDirective()\n```\n\nDirective = InitDataDirective | \n\n```\n\"package\" unquotedString [ unquotedString ] [ unquotedString ] \";\" |\n\"pkgpath\" unquotedString \";\" |\n\"prefix\" unquotedString \";\" |\n\"import\" unquotedString unquotedString string \";\" |\n\"indirectimport\" unquotedString unquotedstring \";\" |\n\"func\" Func \";\" |\n\"type\" Type \";\" |\n\"var\" Var \";\" |\n\"const\" Const \";\" .\n\n```\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gccgoimporter#parser.parsePackage",
-                    "documentation": {
-                      "identifier": "parser.parsePackage",
-                      "newPage": false,
-                      "searchKey": "gccgoimporter.parser.parsePackage",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) parsePackage() *types.Package"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parsePackage() *types.Package\n```\n\nPackage = { Directive } . \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gccgoimporter#PackageInit",
+              "documentation": {
+                "identifier": "PackageInit",
+                "newPage": false,
+                "searchKey": "gccgoimporter.PackageInit",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PackageInit struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PackageInit struct {\n\tName     string // short package name\n\tInitFunc string // name of init function\n\tPriority int    // priority of init function, see InitData.Priority\n}\n```\n\nA PackageInit describes an imported package that needs initialization. \n\n"
+              },
+              "children": null
             }
           },
           {
@@ -2477,6 +1452,7 @@
                 "newPage": false,
                 "searchKey": "gccgoimporter.fixupRecord",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -2499,6 +1475,7 @@
                 "newPage": false,
                 "searchKey": "gccgoimporter.importError",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -2519,6 +1496,7 @@
                       "newPage": false,
                       "searchKey": "gccgoimporter.importError.Error",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -2544,6 +1522,7 @@
                 "newPage": false,
                 "searchKey": "gccgoimporter.importerTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -2557,6 +1536,1204 @@
               },
               "children": null
             }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gccgoimporter#parser",
+              "documentation": {
+                "identifier": "parser",
+                "newPage": false,
+                "searchKey": "gccgoimporter.parser",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type parser struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype parser struct {\n\tscanner  *scanner.Scanner\n\tversion  string                    // format version\n\ttok      rune                      // current token\n\tlit      string                    // literal string; only valid for Ident, Int, String tokens\n\tpkgpath  string                    // package path of imported package\n\tpkgname  string                    // name of imported package\n\tpkg      *types.Package            // reference to imported package\n\timports  map[string]*types.Package // package path -> package object\n\ttypeList []types.Type              // type number -> type\n\ttypeData []string                  // unparsed type data (v3 and later)\n\tfixups   []fixupRecord             // fixups to apply at end of parsing\n\tinitdata InitData                  // package init priority data\n\taliases  map[int]string            // maps saved type number to alias name\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.error",
+                    "documentation": {
+                      "identifier": "parser.error",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.error",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) error(err interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) error(err interface{})\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.errorf",
+                    "documentation": {
+                      "identifier": "parser.errorf",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.errorf",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) errorf(format string, args ...interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) errorf(format string, args ...interface{})\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.expect",
+                    "documentation": {
+                      "identifier": "parser.expect",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.expect",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) expect(tok rune) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) expect(tok rune) string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.expectEOL",
+                    "documentation": {
+                      "identifier": "parser.expectEOL",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.expectEOL",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) expectEOL()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) expectEOL()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.expectKeyword",
+                    "documentation": {
+                      "identifier": "parser.expectKeyword",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.expectKeyword",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) expectKeyword(keyword string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) expectKeyword(keyword string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.getPkg",
+                    "documentation": {
+                      "identifier": "parser.getPkg",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.getPkg",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) getPkg(pkgpath, name string) *types.Package"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) getPkg(pkgpath, name string) *types.Package\n```\n\ngetPkg returns the package for a given path. If the package is not found but we have a package name, create the package and add it to the p.imports map. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.init.parser.go",
+                    "documentation": {
+                      "identifier": "parser.init.parser.go",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.init",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) init(filename string, src io.Reader, imports map[string]*types.Package)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) init(filename string, src io.Reader, imports map[string]*types.Package)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.initScanner",
+                    "documentation": {
+                      "identifier": "parser.initScanner",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.initScanner",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) initScanner(filename string, src io.Reader)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) initScanner(filename string, src io.Reader)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.maybeCreatePackage",
+                    "documentation": {
+                      "identifier": "parser.maybeCreatePackage",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.maybeCreatePackage",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) maybeCreatePackage()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) maybeCreatePackage()\n```\n\nCreate the package if we have parsed both the package path and package name. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.next",
+                    "documentation": {
+                      "identifier": "parser.next",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.next",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) next()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) next()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseArrayOrSliceType",
+                    "documentation": {
+                      "identifier": "parser.parseArrayOrSliceType",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseArrayOrSliceType",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseArrayOrSliceType(pkg *types.Package, nlist []interface{}) types.Type"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseArrayOrSliceType(pkg *types.Package, nlist []interface{}) types.Type\n```\n\nArrayOrSliceType = \"[\" [ int ] \"]\" Type . \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseChanType",
+                    "documentation": {
+                      "identifier": "parser.parseChanType",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseChanType",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseChanType(pkg *types.Package, nlist []interface{}) types.Type"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseChanType(pkg *types.Package, nlist []interface{}) types.Type\n```\n\nChanType = \"chan\" [\"<-\" | \"-<\"] Type . \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseConst",
+                    "documentation": {
+                      "identifier": "parser.parseConst",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseConst",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseConst(pkg *types.Package) *types.Const"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseConst(pkg *types.Package) *types.Const\n```\n\nConst = Name [Type] \"=\" ConstValue . \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseConstValue",
+                    "documentation": {
+                      "identifier": "parser.parseConstValue",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseConstValue",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseConstValue(pkg *types.Package) (val constant.Value, typ types.Type)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseConstValue(pkg *types.Package) (val constant.Value, typ types.Type)\n```\n\nConstValue     = string | \"false\" | \"true\" | [\"-\"] (int [\"'\"] | FloatOrComplex) | Conversion . FloatOrComplex = float [\"i\" | (\"+\"|\"-\") float \"i\"] . \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseConversion",
+                    "documentation": {
+                      "identifier": "parser.parseConversion",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseConversion",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseConversion(pkg *types.Package) (val constant.Value, typ types.Type)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseConversion(pkg *types.Package) (val constant.Value, typ types.Type)\n```\n\nConversion = \"convert\" \"(\" Type \",\" ConstValue \")\" . \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseDirective",
+                    "documentation": {
+                      "identifier": "parser.parseDirective",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseDirective",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseDirective()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseDirective()\n```\n\nDirective = InitDataDirective | \n\n```\n\"package\" unquotedString [ unquotedString ] [ unquotedString ] \";\" |\n\"pkgpath\" unquotedString \";\" |\n\"prefix\" unquotedString \";\" |\n\"import\" unquotedString unquotedString string \";\" |\n\"indirectimport\" unquotedString unquotedstring \";\" |\n\"func\" Func \";\" |\n\"type\" Type \";\" |\n\"var\" Var \";\" |\n\"const\" Const \";\" .\n\n```\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseExportedName",
+                    "documentation": {
+                      "identifier": "parser.parseExportedName",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseExportedName",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseExportedName() (pkg *types.Package, name string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseExportedName() (pkg *types.Package, name string)\n```\n\nparseExportedName is like parseQualifiedName, but the package path is resolved to an imported *types.Package. \n\nExportedName = string [string] . \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseField",
+                    "documentation": {
+                      "identifier": "parser.parseField",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseField",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseField(pkg *types.Package) (field *types.Var, tag string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseField(pkg *types.Package) (field *types.Var, tag string)\n```\n\nField = Name Type [string] . \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseFunc",
+                    "documentation": {
+                      "identifier": "parser.parseFunc",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseFunc",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseFunc(pkg *types.Package) *types.Func"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseFunc(pkg *types.Package) *types.Func\n```\n\nFunc = Name FunctionType [InlineBody] . \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseFunctionType",
+                    "documentation": {
+                      "identifier": "parser.parseFunctionType",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseFunctionType",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseFunctionType(pkg *types.Package, nlist []interface{}) *types.Signature"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseFunctionType(pkg *types.Package, nlist []interface{}) *types.Signature\n```\n\nFunctionType = ParamList ResultList . \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseInitDataDirective",
+                    "documentation": {
+                      "identifier": "parser.parseInitDataDirective",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseInitDataDirective",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseInitDataDirective()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseInitDataDirective()\n```\n\nInitDataDirective = ( \"v1\" | \"v2\" | \"v3\" ) \";\" | \n\n```\n\"priority\" int \";\" |\n\"init\" { PackageInit } \";\" |\n\"checksum\" unquotedString \";\" .\n\n```\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseInt",
+                    "documentation": {
+                      "identifier": "parser.parseInt",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseInt",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseInt() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseInt() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseInt64",
+                    "documentation": {
+                      "identifier": "parser.parseInt64",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseInt64",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseInt64() int64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseInt64() int64\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseInterfaceType",
+                    "documentation": {
+                      "identifier": "parser.parseInterfaceType",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseInterfaceType",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseInterfaceType(pkg *types.Package, nlist []interface{}) types.Type"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseInterfaceType(pkg *types.Package, nlist []interface{}) types.Type\n```\n\nInterfaceType = \"interface\" \"{\" { (\"?\" Type | Func) \";\" } \"}\" . \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseMapType",
+                    "documentation": {
+                      "identifier": "parser.parseMapType",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseMapType",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseMapType(pkg *types.Package, nlist []interface{}) types.Type"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseMapType(pkg *types.Package, nlist []interface{}) types.Type\n```\n\nMapType = \"map\" \"[\" Type \"]\" Type . \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseName",
+                    "documentation": {
+                      "identifier": "parser.parseName",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseName",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseName() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseName() string\n```\n\nName = QualifiedName | \"?\" . \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseNamedType",
+                    "documentation": {
+                      "identifier": "parser.parseNamedType",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseNamedType",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseNamedType(nlist []interface{}) types.Type"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseNamedType(nlist []interface{}) types.Type\n```\n\nNamedType = TypeName [ \"=\" ] Type { Method } . TypeName  = ExportedName . Method    = \"func\" \"(\" Param \")\" Name ParamList ResultList [InlineBody] \";\" . \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parsePackage",
+                    "documentation": {
+                      "identifier": "parser.parsePackage",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parsePackage",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parsePackage() *types.Package"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parsePackage() *types.Package\n```\n\nPackage = { Directive } . \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parsePackageInit",
+                    "documentation": {
+                      "identifier": "parser.parsePackageInit",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parsePackageInit",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parsePackageInit() PackageInit"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parsePackageInit() PackageInit\n```\n\nPackageInit = unquotedString unquotedString int . \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseParam",
+                    "documentation": {
+                      "identifier": "parser.parseParam",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseParam",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseParam(pkg *types.Package) (param *types.Var, isVariadic bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseParam(pkg *types.Package) (param *types.Var, isVariadic bool)\n```\n\nParam = Name [\"...\"] Type . \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseParamList",
+                    "documentation": {
+                      "identifier": "parser.parseParamList",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseParamList",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseParamList(pkg *types.Package) (*types.Tuple, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseParamList(pkg *types.Package) (*types.Tuple, bool)\n```\n\nParamList = \"(\" [ { Parameter \",\" } Parameter ] \")\" . \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parsePointerType",
+                    "documentation": {
+                      "identifier": "parser.parsePointerType",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parsePointerType",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parsePointerType(pkg *types.Package, nlist []interface{}) types.Type"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parsePointerType(pkg *types.Package, nlist []interface{}) types.Type\n```\n\nPointerType = \"*\" (\"any\" | Type) . \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseQualifiedName",
+                    "documentation": {
+                      "identifier": "parser.parseQualifiedName",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseQualifiedName",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseQualifiedName() (path, name string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseQualifiedName() (path, name string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseQualifiedNameStr",
+                    "documentation": {
+                      "identifier": "parser.parseQualifiedNameStr",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseQualifiedNameStr",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseQualifiedNameStr(unquotedName string) (pkgpath, name string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseQualifiedNameStr(unquotedName string) (pkgpath, name string)\n```\n\nqualifiedName = [ [\".\"] unquotedString \".\" ] unquotedString . \n\nThe above production uses greedy matching. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseResultList",
+                    "documentation": {
+                      "identifier": "parser.parseResultList",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseResultList",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseResultList(pkg *types.Package) *types.Tuple"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseResultList(pkg *types.Package) *types.Tuple\n```\n\nResultList = Type | ParamList . \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseSavedType",
+                    "documentation": {
+                      "identifier": "parser.parseSavedType",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseSavedType",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseSavedType(pkg *types.Package, i int, nlist []interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseSavedType(pkg *types.Package, i int, nlist []interface{})\n```\n\nparseSavedType parses one saved type definition. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseString",
+                    "documentation": {
+                      "identifier": "parser.parseString",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseString",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseStructType",
+                    "documentation": {
+                      "identifier": "parser.parseStructType",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseStructType",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseStructType(pkg *types.Package, nlist []interface{}) types.Type"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseStructType(pkg *types.Package, nlist []interface{}) types.Type\n```\n\nStructType = \"struct\" \"{\" { Field } \"}\" . \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseType",
+                    "documentation": {
+                      "identifier": "parser.parseType",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseType",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseType(pkg *types.Package, n ...interface{}) types.Type"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseType(pkg *types.Package, n ...interface{}) types.Type\n```\n\nType = \"<\" \"type\" ( \"-\" int | int [ TypeSpec ] ) \">\" . \n\nparseType updates the type map to t for all type numbers n. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseTypeAfterAngle",
+                    "documentation": {
+                      "identifier": "parser.parseTypeAfterAngle",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseTypeAfterAngle",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseTypeAfterAngle(pkg *types.Package, n ...interface{}) (t types.Type, n1 int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseTypeAfterAngle(pkg *types.Package, n ...interface{}) (t types.Type, n1 int)\n```\n\n(*parser).Type after reading the \"<\". \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseTypeExtended",
+                    "documentation": {
+                      "identifier": "parser.parseTypeExtended",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseTypeExtended",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseTypeExtended(pkg *types.Package, n ...interface{}) (t types.Type, n1 int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseTypeExtended(pkg *types.Package, n ...interface{}) (t types.Type, n1 int)\n```\n\nparseTypeExtended is identical to parseType, but if the type in question is a saved type, returns the index as well as the type pointer (index returned is zero if we parsed a builtin). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseTypeSpec",
+                    "documentation": {
+                      "identifier": "parser.parseTypeSpec",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseTypeSpec",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseTypeSpec(pkg *types.Package, nlist []interface{}) types.Type"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseTypeSpec(pkg *types.Package, nlist []interface{}) types.Type\n```\n\nTypeSpec = NamedType | MapType | ChanType | StructType | InterfaceType | PointerType | ArrayOrSliceType | FunctionType . \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseTypes",
+                    "documentation": {
+                      "identifier": "parser.parseTypes",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseTypes",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseTypes(pkg *types.Package)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseTypes(pkg *types.Package)\n```\n\nTypes = \"types\" maxp1 exportedp1 (offset length)* . \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseUnquotedQualifiedName",
+                    "documentation": {
+                      "identifier": "parser.parseUnquotedQualifiedName",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseUnquotedQualifiedName",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseUnquotedQualifiedName() (path, name string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseUnquotedQualifiedName() (path, name string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseUnquotedString",
+                    "documentation": {
+                      "identifier": "parser.parseUnquotedString",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseUnquotedString",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseUnquotedString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseUnquotedString() string\n```\n\nunquotedString     = { unquotedStringChar } . unquotedStringChar = <neither a whitespace nor a ';' char> . \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.parseVar",
+                    "documentation": {
+                      "identifier": "parser.parseVar",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.parseVar",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseVar(pkg *types.Package) *types.Var"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseVar(pkg *types.Package) *types.Var\n```\n\nVar = Name Type . \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.reserve",
+                    "documentation": {
+                      "identifier": "parser.reserve",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.reserve",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) reserve(n int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) reserve(n int)\n```\n\nreserve reserves the type map entry n for future use. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.skipInlineBody",
+                    "documentation": {
+                      "identifier": "parser.skipInlineBody",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.skipInlineBody",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) skipInlineBody()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) skipInlineBody()\n```\n\nInlineBody = \"<inl:NN>\" .{NN} Reports whether a body was skipped. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#parser.update",
+                    "documentation": {
+                      "identifier": "parser.update",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.parser.update",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) update(t types.Type, nlist []interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) update(t types.Type, nlist []interface{})\n```\n\nupdate sets the type map entries for the entries in nlist to t. An entry in nlist can be a type number in p.typeList, used to resolve named types, or it can be a *types.Pointer, used to resolve pointers to named types in case they are referenced by embedded fields. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gccgoimporter#seekerReadAt",
+              "documentation": {
+                "identifier": "seekerReadAt",
+                "newPage": false,
+                "searchKey": "gccgoimporter.seekerReadAt",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type seekerReadAt struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype seekerReadAt struct {\n\tseeker io.ReadSeeker\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/go/internal/gccgoimporter#seekerReadAt.ReadAt",
+                    "documentation": {
+                      "identifier": "seekerReadAt.ReadAt",
+                      "newPage": false,
+                      "searchKey": "gccgoimporter.seekerReadAt.ReadAt",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sra seekerReadAt) ReadAt(p []byte, off int64) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sra seekerReadAt) ReadAt(p []byte, off int64) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
           }
         ]
       }
@@ -2569,6 +2746,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -2583,66 +2761,96 @@
         "children": [
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#arExportData",
+              "pathID": "/go/internal/gccgoimporter#TestGoxImporter",
               "documentation": {
-                "identifier": "arExportData",
+                "identifier": "TestGoxImporter",
                 "newPage": false,
-                "searchKey": "gccgoimporter.arExportData",
+                "searchKey": "gccgoimporter.TestGoxImporter",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func arExportData(archive io.ReadSeeker) (io.ReadSeeker, error)"
+                "value": "func TestGoxImporter(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc arExportData(archive io.ReadSeeker) (io.ReadSeeker, error)\n```\n\narExportData takes an archive file and returns a ReadSeeker for the export data in that file. This assumes that there is only one object in the archive containing export data, which is not quite what gccgo does; gccgo concatenates together all the export data for all the objects in the file.  In practice that case does not arise. \n\n"
+                "value": "```Go\nfunc TestGoxImporter(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#standardArExportData",
+              "pathID": "/go/internal/gccgoimporter#TestInstallationImporter",
               "documentation": {
-                "identifier": "standardArExportData",
+                "identifier": "TestInstallationImporter",
                 "newPage": false,
-                "searchKey": "gccgoimporter.standardArExportData",
+                "searchKey": "gccgoimporter.TestInstallationImporter",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func standardArExportData(archive io.ReadSeeker) (io.ReadSeeker, error)"
+                "value": "func TestInstallationImporter(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc standardArExportData(archive io.ReadSeeker) (io.ReadSeeker, error)\n```\n\nstandardArExportData returns export data from a standard archive. \n\n"
+                "value": "```Go\nfunc TestInstallationImporter(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#elfFromAr",
+              "pathID": "/go/internal/gccgoimporter#TestObjImporter",
               "documentation": {
-                "identifier": "elfFromAr",
+                "identifier": "TestObjImporter",
                 "newPage": false,
-                "searchKey": "gccgoimporter.elfFromAr",
+                "searchKey": "gccgoimporter.TestObjImporter",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func elfFromAr(member *io.SectionReader) (io.ReadSeeker, error)"
+                "value": "func TestObjImporter(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc elfFromAr(member *io.SectionReader) (io.ReadSeeker, error)\n```\n\nelfFromAr tries to get export data from an archive member as an ELF file. If there is no export data, this returns nil, nil. \n\n"
+                "value": "```Go\nfunc TestObjImporter(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gccgoimporter#TestTypeParser",
+              "documentation": {
+                "identifier": "TestTypeParser",
+                "newPage": false,
+                "searchKey": "gccgoimporter.TestTypeParser",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTypeParser(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTypeParser(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -2655,6 +2863,7 @@
                 "newPage": false,
                 "searchKey": "gccgoimporter.aixBigArExportData",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2671,22 +2880,69 @@
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#readerAtFromSeeker",
+              "pathID": "/go/internal/gccgoimporter#arExportData",
               "documentation": {
-                "identifier": "readerAtFromSeeker",
+                "identifier": "arExportData",
                 "newPage": false,
-                "searchKey": "gccgoimporter.readerAtFromSeeker",
+                "searchKey": "gccgoimporter.arExportData",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func readerAtFromSeeker(rs io.ReadSeeker) io.ReaderAt"
+                "value": "func arExportData(archive io.ReadSeeker) (io.ReadSeeker, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc readerAtFromSeeker(rs io.ReadSeeker) io.ReaderAt\n```\n\nreaderAtFromSeeker turns an io.ReadSeeker into an io.ReaderAt. This is only safe because there won't be any concurrent seeks while this code is executing. \n\n"
+                "value": "```Go\nfunc arExportData(archive io.ReadSeeker) (io.ReadSeeker, error)\n```\n\narExportData takes an archive file and returns a ReadSeeker for the export data in that file. This assumes that there is only one object in the archive containing export data, which is not quite what gccgo does; gccgo concatenates together all the export data for all the objects in the file.  In practice that case does not arise. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gccgoimporter#deref",
+              "documentation": {
+                "identifier": "deref",
+                "newPage": false,
+                "searchKey": "gccgoimporter.deref",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func deref(typ types.Type) types.Type"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc deref(typ types.Type) types.Type\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gccgoimporter#elfFromAr",
+              "documentation": {
+                "identifier": "elfFromAr",
+                "newPage": false,
+                "searchKey": "gccgoimporter.elfFromAr",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func elfFromAr(member *io.SectionReader) (io.ReadSeeker, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc elfFromAr(member *io.SectionReader) (io.ReadSeeker, error)\n```\n\nelfFromAr tries to get export data from an archive member as an ELF file. If there is no export data, this returns nil, nil. \n\n"
               },
               "children": null
             }
@@ -2699,6 +2955,7 @@
                 "newPage": false,
                 "searchKey": "gccgoimporter.findExportFile",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2715,12 +2972,59 @@
           },
           {
             "node": {
+              "pathID": "/go/internal/gccgoimporter#gccgoPath",
+              "documentation": {
+                "identifier": "gccgoPath",
+                "newPage": false,
+                "searchKey": "gccgoimporter.gccgoPath",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func gccgoPath() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc gccgoPath() string\n```\n\ngccgoPath returns a path to gccgo if it is present (either in path or specified via GCCGO environment variable), or an empty string if no gccgo is available. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gccgoimporter#lookupBuiltinType",
+              "documentation": {
+                "identifier": "lookupBuiltinType",
+                "newPage": false,
+                "searchKey": "gccgoimporter.lookupBuiltinType",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func lookupBuiltinType(typ int) types.Type"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc lookupBuiltinType(typ int) types.Type\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/go/internal/gccgoimporter#openExportFile",
               "documentation": {
                 "identifier": "openExportFile",
                 "newPage": false,
                 "searchKey": "gccgoimporter.openExportFile",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2743,6 +3047,7 @@
                 "newPage": false,
                 "searchKey": "gccgoimporter.readMagic",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2759,66 +3064,23 @@
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#deref",
+              "pathID": "/go/internal/gccgoimporter#readerAtFromSeeker",
               "documentation": {
-                "identifier": "deref",
+                "identifier": "readerAtFromSeeker",
                 "newPage": false,
-                "searchKey": "gccgoimporter.deref",
+                "searchKey": "gccgoimporter.readerAtFromSeeker",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func deref(typ types.Type) types.Type"
+                "value": "func readerAtFromSeeker(rs io.ReadSeeker) io.ReaderAt"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc deref(typ types.Type) types.Type\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gccgoimporter#lookupBuiltinType",
-              "documentation": {
-                "identifier": "lookupBuiltinType",
-                "newPage": false,
-                "searchKey": "gccgoimporter.lookupBuiltinType",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func lookupBuiltinType(typ int) types.Type"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc lookupBuiltinType(typ int) types.Type\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gccgoimporter#TestInstallationImporter",
-              "documentation": {
-                "identifier": "TestInstallationImporter",
-                "newPage": false,
-                "searchKey": "gccgoimporter.TestInstallationImporter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestInstallationImporter(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestInstallationImporter(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc readerAtFromSeeker(rs io.ReadSeeker) io.ReaderAt\n```\n\nreaderAtFromSeeker turns an io.ReadSeeker into an io.ReaderAt. This is only safe because there won't be any concurrent seeks while this code is executing. \n\n"
               },
               "children": null
             }
@@ -2831,6 +3093,7 @@
                 "newPage": false,
                 "searchKey": "gccgoimporter.runImporterTest",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2847,88 +3110,23 @@
           },
           {
             "node": {
-              "pathID": "/go/internal/gccgoimporter#TestGoxImporter",
+              "pathID": "/go/internal/gccgoimporter#standardArExportData",
               "documentation": {
-                "identifier": "TestGoxImporter",
+                "identifier": "standardArExportData",
                 "newPage": false,
-                "searchKey": "gccgoimporter.TestGoxImporter",
+                "searchKey": "gccgoimporter.standardArExportData",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestGoxImporter(t *testing.T)"
+                "value": "func standardArExportData(archive io.ReadSeeker) (io.ReadSeeker, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestGoxImporter(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gccgoimporter#gccgoPath",
-              "documentation": {
-                "identifier": "gccgoPath",
-                "newPage": false,
-                "searchKey": "gccgoimporter.gccgoPath",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func gccgoPath() string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc gccgoPath() string\n```\n\ngccgoPath returns a path to gccgo if it is present (either in path or specified via GCCGO environment variable), or an empty string if no gccgo is available. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gccgoimporter#TestObjImporter",
-              "documentation": {
-                "identifier": "TestObjImporter",
-                "newPage": false,
-                "searchKey": "gccgoimporter.TestObjImporter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestObjImporter(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestObjImporter(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gccgoimporter#TestTypeParser",
-              "documentation": {
-                "identifier": "TestTypeParser",
-                "newPage": false,
-                "searchKey": "gccgoimporter.TestTypeParser",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTypeParser(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTypeParser(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc standardArExportData(archive io.ReadSeeker) (io.ReadSeeker, error)\n```\n\nstandardArExportData returns export data from a standard archive. \n\n"
               },
               "children": null
             }

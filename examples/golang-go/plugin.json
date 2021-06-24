@@ -4,7 +4,9 @@
     "identifier": "plugin",
     "newPage": true,
     "searchKey": "plugin",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,34 +39,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/plugin#pluginsMu",
-              "documentation": {
-                "identifier": "pluginsMu",
-                "newPage": false,
-                "searchKey": "plugin.pluginsMu",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var pluginsMu"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar pluginsMu sync.Mutex\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/plugin#plugins",
               "documentation": {
                 "identifier": "plugins",
                 "newPage": false,
                 "searchKey": "plugin.plugins",
                 "tags": [
+                  "variable",
+                  "object",
                   "private"
                 ]
               },
@@ -73,6 +57,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar plugins map[string]*Plugin\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/plugin#pluginsMu",
+              "documentation": {
+                "identifier": "pluginsMu",
+                "newPage": false,
+                "searchKey": "plugin.pluginsMu",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var pluginsMu"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar pluginsMu sync.Mutex\n```\n\n"
               },
               "children": null
             }
@@ -87,7 +95,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -105,7 +115,9 @@
                 "identifier": "Plugin",
                 "newPage": false,
                 "searchKey": "plugin.Plugin",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -123,7 +135,9 @@
                       "identifier": "Open",
                       "newPage": false,
                       "searchKey": "plugin.Open",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -144,6 +158,7 @@
                       "newPage": false,
                       "searchKey": "plugin.open",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -165,7 +180,9 @@
                       "identifier": "Plugin.Lookup",
                       "newPage": false,
                       "searchKey": "plugin.Plugin.Lookup",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -188,7 +205,9 @@
                 "identifier": "Symbol",
                 "newPage": false,
                 "searchKey": "plugin.Symbol",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -207,6 +226,7 @@
                       "newPage": false,
                       "searchKey": "plugin.lookup",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -234,7 +254,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -247,34 +269,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/plugin#lastmoduleinit",
-              "documentation": {
-                "identifier": "lastmoduleinit",
-                "newPage": false,
-                "searchKey": "plugin.lastmoduleinit",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func lastmoduleinit() (pluginpath string, syms map[string]interface{}, errstr string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc lastmoduleinit() (pluginpath string, syms map[string]interface{}, errstr string)\n```\n\nlastmoduleinit is defined in package runtime \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/plugin#doInit",
               "documentation": {
                 "identifier": "doInit",
                 "newPage": false,
                 "searchKey": "plugin.doInit",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -285,6 +286,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc doInit(t unsafe.Pointer)\n```\n\ndoInit is defined in package runtime \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/plugin#lastmoduleinit",
+              "documentation": {
+                "identifier": "lastmoduleinit",
+                "newPage": false,
+                "searchKey": "plugin.lastmoduleinit",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func lastmoduleinit() (pluginpath string, syms map[string]interface{}, errstr string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc lastmoduleinit() (pluginpath string, syms map[string]interface{}, errstr string)\n```\n\nlastmoduleinit is defined in package runtime \n\n"
               },
               "children": null
             }

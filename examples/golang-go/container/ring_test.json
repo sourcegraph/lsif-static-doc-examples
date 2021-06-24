@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "container/ring_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,12 +41,36 @@
         "children": [
           {
             "node": {
+              "pathID": "/container/ring_test#ExampleRing_Do",
+              "documentation": {
+                "identifier": "ExampleRing_Do",
+                "newPage": false,
+                "searchKey": "ring_test.ExampleRing_Do",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRing_Do()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRing_Do()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/container/ring_test#ExampleRing_Len",
               "documentation": {
                 "identifier": "ExampleRing_Len",
                 "newPage": false,
                 "searchKey": "ring_test.ExampleRing_Len",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -61,12 +87,59 @@
           },
           {
             "node": {
+              "pathID": "/container/ring_test#ExampleRing_Link",
+              "documentation": {
+                "identifier": "ExampleRing_Link",
+                "newPage": false,
+                "searchKey": "ring_test.ExampleRing_Link",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRing_Link()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRing_Link()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/container/ring_test#ExampleRing_Move",
+              "documentation": {
+                "identifier": "ExampleRing_Move",
+                "newPage": false,
+                "searchKey": "ring_test.ExampleRing_Move",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRing_Move()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRing_Move()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/container/ring_test#ExampleRing_Next",
               "documentation": {
                 "identifier": "ExampleRing_Next",
                 "newPage": false,
                 "searchKey": "ring_test.ExampleRing_Next",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -89,6 +162,7 @@
                 "newPage": false,
                 "searchKey": "ring_test.ExampleRing_Prev",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -105,78 +179,13 @@
           },
           {
             "node": {
-              "pathID": "/container/ring_test#ExampleRing_Do",
-              "documentation": {
-                "identifier": "ExampleRing_Do",
-                "newPage": false,
-                "searchKey": "ring_test.ExampleRing_Do",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRing_Do()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRing_Do()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/container/ring_test#ExampleRing_Move",
-              "documentation": {
-                "identifier": "ExampleRing_Move",
-                "newPage": false,
-                "searchKey": "ring_test.ExampleRing_Move",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRing_Move()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRing_Move()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/container/ring_test#ExampleRing_Link",
-              "documentation": {
-                "identifier": "ExampleRing_Link",
-                "newPage": false,
-                "searchKey": "ring_test.ExampleRing_Link",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRing_Link()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRing_Link()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/container/ring_test#ExampleRing_Unlink",
               "documentation": {
                 "identifier": "ExampleRing_Unlink",
                 "newPage": false,
                 "searchKey": "ring_test.ExampleRing_Unlink",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },

@@ -11,29 +11,33 @@ For example, a GitHub.com repository that also has Phabricator configured has ex
 * [Types](#type)
     * [type Resolver struct](#Resolver)
         * [func NewResolver(url, serviceType string) *Resolver](#NewResolver)
-        * [func (r *Resolver) URL() string](#Resolver.URL)
         * [func (r *Resolver) ServiceKind() *string](#Resolver.ServiceKind)
         * [func (r *Resolver) ServiceType() *string](#Resolver.ServiceType)
         * [func (r *Resolver) String() string](#Resolver.String)
+        * [func (r *Resolver) URL() string](#Resolver.URL)
 * [Functions](#func)
-    * [func Repository(ctx context.Context, db dbutil.DB, repo *types.Repo) (links []*Resolver, err error)](#Repository)
-    * [func FileOrDir(ctx context.Context, db dbutil.DB, repo *types.Repo, rev, path string, isDir bool) (links []*Resolver, err error)](#FileOrDir)
     * [func Commit(ctx context.Context, db dbutil.DB, repo *types.Repo, commitID api.CommitID) (links []*Resolver, err error)](#Commit)
-    * [func linksForRepository(ctx context.Context, db dbutil.DB, repo *types.Repo) (phabRepo *types.PhabricatorRepo, link *protocol.RepoLinks, serviceType string)](#linksForRepository)
-    * [func typeToMaybeEmptyKind(st string) string](#typeToMaybeEmptyKind)
-    * [func TestRepository(t *testing.T)](#TestRepository)
-    * [func TestFileOrDir(t *testing.T)](#TestFileOrDir)
+    * [func FileOrDir(ctx context.Context, db dbutil.DB, repo *types.Repo, rev, path string, isDir bool) (links []*Resolver, err error)](#FileOrDir)
+    * [func Repository(ctx context.Context, db dbutil.DB, repo *types.Repo) (links []*Resolver, err error)](#Repository)
     * [func TestCommit(t *testing.T)](#TestCommit)
+    * [func TestFileOrDir(t *testing.T)](#TestFileOrDir)
+    * [func TestRepository(t *testing.T)](#TestRepository)
+    * [func linksForRepository(ctx context.Context, db dbutil.DB, repo *types.Repo) (phabRepo *types.PhabricatorRepo, link *protocol.RepoLinks, serviceType string)](#linksForRepository)
     * [func resetMocks()](#resetMocks)
+    * [func typeToMaybeEmptyKind(st string) string](#typeToMaybeEmptyKind)
 
 
 ## <a id="var" href="#var">Variables</a>
+
+```
+tags: [package]
+```
 
 ### <a id="linksForRepositoryFailed" href="#linksForRepositoryFailed">var linksForRepositoryFailed</a>
 
 ```
 searchKey: externallink.linksForRepositoryFailed
-tags: [private]
+tags: [variable interface private]
 ```
 
 ```Go
@@ -42,10 +46,15 @@ var linksForRepositoryFailed = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [package]
+```
+
 ### <a id="Resolver" href="#Resolver">type Resolver struct</a>
 
 ```
 searchKey: externallink.Resolver
+tags: [struct]
 ```
 
 ```Go
@@ -64,26 +73,18 @@ For example, a repository might have 2 external links, one to its origin reposit
 
 ```
 searchKey: externallink.NewResolver
+tags: [method]
 ```
 
 ```Go
 func NewResolver(url, serviceType string) *Resolver
 ```
 
-#### <a id="Resolver.URL" href="#Resolver.URL">func (r *Resolver) URL() string</a>
-
-```
-searchKey: externallink.Resolver.URL
-```
-
-```Go
-func (r *Resolver) URL() string
-```
-
 #### <a id="Resolver.ServiceKind" href="#Resolver.ServiceKind">func (r *Resolver) ServiceKind() *string</a>
 
 ```
 searchKey: externallink.Resolver.ServiceKind
+tags: [function]
 ```
 
 ```Go
@@ -94,6 +95,7 @@ func (r *Resolver) ServiceKind() *string
 
 ```
 searchKey: externallink.Resolver.ServiceType
+tags: [function]
 ```
 
 ```Go
@@ -104,18 +106,61 @@ func (r *Resolver) ServiceType() *string
 
 ```
 searchKey: externallink.Resolver.String
+tags: [function]
 ```
 
 ```Go
 func (r *Resolver) String() string
 ```
 
+#### <a id="Resolver.URL" href="#Resolver.URL">func (r *Resolver) URL() string</a>
+
+```
+searchKey: externallink.Resolver.URL
+tags: [function]
+```
+
+```Go
+func (r *Resolver) URL() string
+```
+
 ## <a id="func" href="#func">Functions</a>
+
+```
+tags: [package]
+```
+
+### <a id="Commit" href="#Commit">func Commit(ctx context.Context, db dbutil.DB, repo *types.Repo, commitID api.CommitID) (links []*Resolver, err error)</a>
+
+```
+searchKey: externallink.Commit
+tags: [method]
+```
+
+```Go
+func Commit(ctx context.Context, db dbutil.DB, repo *types.Repo, commitID api.CommitID) (links []*Resolver, err error)
+```
+
+Commit returns the external links for a commit in a repository. 
+
+### <a id="FileOrDir" href="#FileOrDir">func FileOrDir(ctx context.Context, db dbutil.DB, repo *types.Repo, rev, path string, isDir bool) (links []*Resolver, err error)</a>
+
+```
+searchKey: externallink.FileOrDir
+tags: [method]
+```
+
+```Go
+func FileOrDir(ctx context.Context, db dbutil.DB, repo *types.Repo, rev, path string, isDir bool) (links []*Resolver, err error)
+```
+
+FileOrDir returns the external links for a file or directory in a repository. 
 
 ### <a id="Repository" href="#Repository">func Repository(ctx context.Context, db dbutil.DB, repo *types.Repo) (links []*Resolver, err error)</a>
 
 ```
 searchKey: externallink.Repository
+tags: [method]
 ```
 
 ```Go
@@ -126,35 +171,44 @@ Repository returns the external links for a repository.
 
 For example, a repository might have 2 external links, one to its origin repository on GitHub.com and one to the repository on Phabricator. 
 
-### <a id="FileOrDir" href="#FileOrDir">func FileOrDir(ctx context.Context, db dbutil.DB, repo *types.Repo, rev, path string, isDir bool) (links []*Resolver, err error)</a>
+### <a id="TestCommit" href="#TestCommit">func TestCommit(t *testing.T)</a>
 
 ```
-searchKey: externallink.FileOrDir
-```
-
-```Go
-func FileOrDir(ctx context.Context, db dbutil.DB, repo *types.Repo, rev, path string, isDir bool) (links []*Resolver, err error)
-```
-
-FileOrDir returns the external links for a file or directory in a repository. 
-
-### <a id="Commit" href="#Commit">func Commit(ctx context.Context, db dbutil.DB, repo *types.Repo, commitID api.CommitID) (links []*Resolver, err error)</a>
-
-```
-searchKey: externallink.Commit
+searchKey: externallink.TestCommit
+tags: [method private test]
 ```
 
 ```Go
-func Commit(ctx context.Context, db dbutil.DB, repo *types.Repo, commitID api.CommitID) (links []*Resolver, err error)
+func TestCommit(t *testing.T)
 ```
 
-Commit returns the external links for a commit in a repository. 
+### <a id="TestFileOrDir" href="#TestFileOrDir">func TestFileOrDir(t *testing.T)</a>
+
+```
+searchKey: externallink.TestFileOrDir
+tags: [method private test]
+```
+
+```Go
+func TestFileOrDir(t *testing.T)
+```
+
+### <a id="TestRepository" href="#TestRepository">func TestRepository(t *testing.T)</a>
+
+```
+searchKey: externallink.TestRepository
+tags: [method private test]
+```
+
+```Go
+func TestRepository(t *testing.T)
+```
 
 ### <a id="linksForRepository" href="#linksForRepository">func linksForRepository(ctx context.Context, db dbutil.DB, repo *types.Repo) (phabRepo *types.PhabricatorRepo, link *protocol.RepoLinks, serviceType string)</a>
 
 ```
 searchKey: externallink.linksForRepository
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -165,58 +219,25 @@ linksForRepository gets the information necessary to construct links to resource
 
 It logs errors to the trace but does not return errors, because external links are not worth failing any request for. 
 
-### <a id="typeToMaybeEmptyKind" href="#typeToMaybeEmptyKind">func typeToMaybeEmptyKind(st string) string</a>
-
-```
-searchKey: externallink.typeToMaybeEmptyKind
-tags: [private]
-```
-
-```Go
-func typeToMaybeEmptyKind(st string) string
-```
-
-### <a id="TestRepository" href="#TestRepository">func TestRepository(t *testing.T)</a>
-
-```
-searchKey: externallink.TestRepository
-tags: [private]
-```
-
-```Go
-func TestRepository(t *testing.T)
-```
-
-### <a id="TestFileOrDir" href="#TestFileOrDir">func TestFileOrDir(t *testing.T)</a>
-
-```
-searchKey: externallink.TestFileOrDir
-tags: [private]
-```
-
-```Go
-func TestFileOrDir(t *testing.T)
-```
-
-### <a id="TestCommit" href="#TestCommit">func TestCommit(t *testing.T)</a>
-
-```
-searchKey: externallink.TestCommit
-tags: [private]
-```
-
-```Go
-func TestCommit(t *testing.T)
-```
-
 ### <a id="resetMocks" href="#resetMocks">func resetMocks()</a>
 
 ```
 searchKey: externallink.resetMocks
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func resetMocks()
+```
+
+### <a id="typeToMaybeEmptyKind" href="#typeToMaybeEmptyKind">func typeToMaybeEmptyKind(st string) string</a>
+
+```
+searchKey: externallink.typeToMaybeEmptyKind
+tags: [method private]
+```
+
+```Go
+func typeToMaybeEmptyKind(st string) string
 ```
 

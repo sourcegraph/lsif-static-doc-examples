@@ -12,17 +12,21 @@
         * [func (c *Config) ServerOptions(queueOptions map[string]apiserver.QueueOptions) apiserver.Options](#Config.ServerOptions)
     * [type config interface](#config)
 * [Functions](#func)
-    * [func main()](#main)
     * [func connectToDatabase() *sql.DB](#connectToDatabase)
+    * [func main()](#main)
 
 
 ## <a id="const" href="#const">Constants</a>
+
+```
+tags: [package]
+```
 
 ### <a id="port" href="#port">const port</a>
 
 ```
 searchKey: main.port
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -31,10 +35,15 @@ const port = 3191
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [package]
+```
+
 ### <a id="Config" href="#Config">type Config struct</a>
 
 ```
 searchKey: main.Config
+tags: [struct]
 ```
 
 ```Go
@@ -52,6 +61,7 @@ type Config struct {
 
 ```
 searchKey: main.Config.Load
+tags: [function]
 ```
 
 ```Go
@@ -62,6 +72,7 @@ func (c *Config) Load()
 
 ```
 searchKey: main.Config.ServerOptions
+tags: [method]
 ```
 
 ```Go
@@ -72,7 +83,7 @@ func (c *Config) ServerOptions(queueOptions map[string]apiserver.QueueOptions) a
 
 ```
 searchKey: main.config
-tags: [private]
+tags: [interface private]
 ```
 
 ```Go
@@ -84,25 +95,29 @@ type config interface {
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="main" href="#main">func main()</a>
-
 ```
-searchKey: main.main
-tags: [private]
-```
-
-```Go
-func main()
+tags: [package]
 ```
 
 ### <a id="connectToDatabase" href="#connectToDatabase">func connectToDatabase() *sql.DB</a>
 
 ```
 searchKey: main.connectToDatabase
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func connectToDatabase() *sql.DB
+```
+
+### <a id="main" href="#main">func main()</a>
+
+```
+searchKey: main.main
+tags: [function private]
+```
+
+```Go
+func main()
 ```
 

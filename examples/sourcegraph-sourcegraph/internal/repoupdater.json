@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/repoupdater",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/repoupdater#requestMeter",
-              "documentation": {
-                "identifier": "requestMeter",
-                "newPage": false,
-                "searchKey": "repoupdater.requestMeter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var requestMeter"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar requestMeter = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/repoupdater#DefaultClient",
               "documentation": {
                 "identifier": "DefaultClient",
                 "newPage": false,
                 "searchKey": "repoupdater.DefaultClient",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -81,20 +64,23 @@
           },
           {
             "node": {
-              "pathID": "/internal/repoupdater#MockRepoLookup",
+              "pathID": "/internal/repoupdater#MockEnqueueChangesetSync",
               "documentation": {
-                "identifier": "MockRepoLookup",
+                "identifier": "MockEnqueueChangesetSync",
                 "newPage": false,
-                "searchKey": "repoupdater.MockRepoLookup",
-                "tags": null
+                "searchKey": "repoupdater.MockEnqueueChangesetSync",
+                "tags": [
+                  "variable",
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var MockRepoLookup"
+                "value": "var MockEnqueueChangesetSync"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar MockRepoLookup func(protocol.RepoLookupArgs) (*protocol.RepoLookupResult, error)\n```\n\nMockRepoLookup mocks (*Client).RepoLookup for tests. \n\n"
+                "value": "```Go\nvar MockEnqueueChangesetSync func(ctx context.Context, ids []int64) error\n```\n\nMockEnqueueChangesetSync mocks (*Client).EnqueueChangesetSync for tests. \n\n"
               },
               "children": null
             }
@@ -106,7 +92,10 @@
                 "identifier": "MockEnqueueRepoUpdate",
                 "newPage": false,
                 "searchKey": "repoupdater.MockEnqueueRepoUpdate",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -121,20 +110,47 @@
           },
           {
             "node": {
-              "pathID": "/internal/repoupdater#MockEnqueueChangesetSync",
+              "pathID": "/internal/repoupdater#MockRepoLookup",
               "documentation": {
-                "identifier": "MockEnqueueChangesetSync",
+                "identifier": "MockRepoLookup",
                 "newPage": false,
-                "searchKey": "repoupdater.MockEnqueueChangesetSync",
-                "tags": null
+                "searchKey": "repoupdater.MockRepoLookup",
+                "tags": [
+                  "variable",
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var MockEnqueueChangesetSync"
+                "value": "var MockRepoLookup"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar MockEnqueueChangesetSync func(ctx context.Context, ids []int64) error\n```\n\nMockEnqueueChangesetSync mocks (*Client).EnqueueChangesetSync for tests. \n\n"
+                "value": "```Go\nvar MockRepoLookup func(protocol.RepoLookupArgs) (*protocol.RepoLookupResult, error)\n```\n\nMockRepoLookup mocks (*Client).RepoLookup for tests. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repoupdater#requestMeter",
+              "documentation": {
+                "identifier": "requestMeter",
+                "newPage": false,
+                "searchKey": "repoupdater.requestMeter",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var requestMeter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar requestMeter = ...\n```\n\n"
               },
               "children": null
             }
@@ -150,6 +166,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -169,7 +186,9 @@
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "repoupdater.Client",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -187,7 +206,9 @@
                       "identifier": "NewClient",
                       "newPage": false,
                       "searchKey": "repoupdater.NewClient",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -202,72 +223,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/repoupdater#Client.RepoUpdateSchedulerInfo",
-                    "documentation": {
-                      "identifier": "Client.RepoUpdateSchedulerInfo",
-                      "newPage": false,
-                      "searchKey": "repoupdater.Client.RepoUpdateSchedulerInfo",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) RepoUpdateSchedulerInfo(ctx context.Context, args protocol.RepoUpdateSchedulerInfoArgs) (result *protocol.RepoUpdateSchedulerInfoResult, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) RepoUpdateSchedulerInfo(ctx context.Context, args protocol.RepoUpdateSchedulerInfoArgs) (result *protocol.RepoUpdateSchedulerInfoResult, err error)\n```\n\nRepoUpdateSchedulerInfo returns information about the state of the repo in the update scheduler. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/repoupdater#Client.RepoLookup",
-                    "documentation": {
-                      "identifier": "Client.RepoLookup",
-                      "newPage": false,
-                      "searchKey": "repoupdater.Client.RepoLookup",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) RepoLookup(ctx context.Context, args protocol.RepoLookupArgs) (result *protocol.RepoLookupResult, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) RepoLookup(ctx context.Context, args protocol.RepoLookupArgs) (result *protocol.RepoLookupResult, err error)\n```\n\nRepoLookup retrieves information about the repository on repoupdater. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/repoupdater#Client.EnqueueRepoUpdate",
-                    "documentation": {
-                      "identifier": "Client.EnqueueRepoUpdate",
-                      "newPage": false,
-                      "searchKey": "repoupdater.Client.EnqueueRepoUpdate",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) EnqueueRepoUpdate(ctx context.Context, repo api.RepoName) (*protocol.RepoUpdateResponse, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) EnqueueRepoUpdate(ctx context.Context, repo api.RepoName) (*protocol.RepoUpdateResponse, error)\n```\n\nEnqueueRepoUpdate requests that the named repository be updated in the near future. It does not wait for the update. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/repoupdater#Client.EnqueueChangesetSync",
                     "documentation": {
                       "identifier": "Client.EnqueueChangesetSync",
                       "newPage": false,
                       "searchKey": "repoupdater.Client.EnqueueChangesetSync",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -282,12 +245,102 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/repoupdater#Client.EnqueueRepoUpdate",
+                    "documentation": {
+                      "identifier": "Client.EnqueueRepoUpdate",
+                      "newPage": false,
+                      "searchKey": "repoupdater.Client.EnqueueRepoUpdate",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) EnqueueRepoUpdate(ctx context.Context, repo api.RepoName) (*protocol.RepoUpdateResponse, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) EnqueueRepoUpdate(ctx context.Context, repo api.RepoName) (*protocol.RepoUpdateResponse, error)\n```\n\nEnqueueRepoUpdate requests that the named repository be updated in the near future. It does not wait for the update. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/repoupdater#Client.RepoExternalServices",
+                    "documentation": {
+                      "identifier": "Client.RepoExternalServices",
+                      "newPage": false,
+                      "searchKey": "repoupdater.Client.RepoExternalServices",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) RepoExternalServices(ctx context.Context, id api.RepoID) ([]api.ExternalService, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) RepoExternalServices(ctx context.Context, id api.RepoID) ([]api.ExternalService, error)\n```\n\nRepoExternalServices requests the external services associated with a repository with the given id. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/repoupdater#Client.RepoLookup",
+                    "documentation": {
+                      "identifier": "Client.RepoLookup",
+                      "newPage": false,
+                      "searchKey": "repoupdater.Client.RepoLookup",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) RepoLookup(ctx context.Context, args protocol.RepoLookupArgs) (result *protocol.RepoLookupResult, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) RepoLookup(ctx context.Context, args protocol.RepoLookupArgs) (result *protocol.RepoLookupResult, err error)\n```\n\nRepoLookup retrieves information about the repository on repoupdater. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/repoupdater#Client.RepoUpdateSchedulerInfo",
+                    "documentation": {
+                      "identifier": "Client.RepoUpdateSchedulerInfo",
+                      "newPage": false,
+                      "searchKey": "repoupdater.Client.RepoUpdateSchedulerInfo",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) RepoUpdateSchedulerInfo(ctx context.Context, args protocol.RepoUpdateSchedulerInfoArgs) (result *protocol.RepoUpdateSchedulerInfoResult, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) RepoUpdateSchedulerInfo(ctx context.Context, args protocol.RepoUpdateSchedulerInfoArgs) (result *protocol.RepoUpdateSchedulerInfoResult, err error)\n```\n\nRepoUpdateSchedulerInfo returns information about the state of the repo in the update scheduler. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/repoupdater#Client.SchedulePermsSync",
                     "documentation": {
                       "identifier": "Client.SchedulePermsSync",
                       "newPage": false,
                       "searchKey": "repoupdater.Client.SchedulePermsSync",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -307,7 +360,9 @@
                       "identifier": "Client.SyncExternalService",
                       "newPage": false,
                       "searchKey": "repoupdater.Client.SyncExternalService",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -322,20 +377,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/repoupdater#Client.RepoExternalServices",
+                    "pathID": "/internal/repoupdater#Client.do",
                     "documentation": {
-                      "identifier": "Client.RepoExternalServices",
+                      "identifier": "Client.do",
                       "newPage": false,
-                      "searchKey": "repoupdater.Client.RepoExternalServices",
-                      "tags": null
+                      "searchKey": "repoupdater.Client.do",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (c *Client) RepoExternalServices(ctx context.Context, id api.RepoID) ([]api.ExternalService, error)"
+                      "value": "func (c *Client) do(ctx context.Context, req *http.Request) (_ *http.Response, err error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) RepoExternalServices(ctx context.Context, id api.RepoID) ([]api.ExternalService, error)\n```\n\nRepoExternalServices requests the external services associated with a repository with the given id. \n\n"
+                      "value": "```Go\nfunc (c *Client) do(ctx context.Context, req *http.Request) (_ *http.Response, err error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -348,6 +406,7 @@
                       "newPage": false,
                       "searchKey": "repoupdater.Client.httpPost",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -361,25 +420,204 @@
                     },
                     "children": null
                   }
-                },
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repoupdater#ErrNotFound",
+              "documentation": {
+                "identifier": "ErrNotFound",
+                "newPage": false,
+                "searchKey": "repoupdater.ErrNotFound",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ErrNotFound struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ErrNotFound struct {\n\tRepo       api.RepoName\n\tIsNotFound bool\n}\n```\n\nErrNotFound is an error that occurs when a Repo doesn't exist. \n\n"
+              },
+              "children": [
                 {
                   "node": {
-                    "pathID": "/internal/repoupdater#Client.do",
+                    "pathID": "/internal/repoupdater#ErrNotFound.Error",
                     "documentation": {
-                      "identifier": "Client.do",
+                      "identifier": "ErrNotFound.Error",
                       "newPage": false,
-                      "searchKey": "repoupdater.Client.do",
+                      "searchKey": "repoupdater.ErrNotFound.Error",
                       "tags": [
-                        "private"
+                        "function"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (c *Client) do(ctx context.Context, req *http.Request) (_ *http.Response, err error)"
+                      "value": "func (e *ErrNotFound) Error() string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) do(ctx context.Context, req *http.Request) (_ *http.Response, err error)\n```\n\n"
+                      "value": "```Go\nfunc (e *ErrNotFound) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/repoupdater#ErrNotFound.NotFound",
+                    "documentation": {
+                      "identifier": "ErrNotFound.NotFound",
+                      "newPage": false,
+                      "searchKey": "repoupdater.ErrNotFound.NotFound",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *ErrNotFound) NotFound() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *ErrNotFound) NotFound() bool\n```\n\nNotFound returns true if the repo does Not exist. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repoupdater#ErrTemporary",
+              "documentation": {
+                "identifier": "ErrTemporary",
+                "newPage": false,
+                "searchKey": "repoupdater.ErrTemporary",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ErrTemporary struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ErrTemporary struct {\n\tRepo        api.RepoName\n\tIsTemporary bool\n}\n```\n\nErrTemporary is an error that can be retried \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/repoupdater#ErrTemporary.Error",
+                    "documentation": {
+                      "identifier": "ErrTemporary.Error",
+                      "newPage": false,
+                      "searchKey": "repoupdater.ErrTemporary.Error",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *ErrTemporary) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *ErrTemporary) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/repoupdater#ErrTemporary.Temporary",
+                    "documentation": {
+                      "identifier": "ErrTemporary.Temporary",
+                      "newPage": false,
+                      "searchKey": "repoupdater.ErrTemporary.Temporary",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *ErrTemporary) Temporary() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *ErrTemporary) Temporary() bool\n```\n\nTemporary is when the repository was reported as being temporarily unavailable. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repoupdater#ErrUnauthorized",
+              "documentation": {
+                "identifier": "ErrUnauthorized",
+                "newPage": false,
+                "searchKey": "repoupdater.ErrUnauthorized",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ErrUnauthorized struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ErrUnauthorized struct {\n\tRepo    api.RepoName\n\tNoAuthz bool\n}\n```\n\nErrUnauthorized is an error that occurs when repo access is unauthorized. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/repoupdater#ErrUnauthorized.Error",
+                    "documentation": {
+                      "identifier": "ErrUnauthorized.Error",
+                      "newPage": false,
+                      "searchKey": "repoupdater.ErrUnauthorized.Error",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *ErrUnauthorized) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *ErrUnauthorized) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/repoupdater#ErrUnauthorized.Unauthorized",
+                    "documentation": {
+                      "identifier": "ErrUnauthorized.Unauthorized",
+                      "newPage": false,
+                      "searchKey": "repoupdater.ErrUnauthorized.Unauthorized",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *ErrUnauthorized) Unauthorized() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *ErrUnauthorized) Unauthorized() bool\n```\n\nUnauthorized returns true if repo access is unauthorized. \n\n"
                     },
                     "children": null
                   }
@@ -395,6 +633,7 @@
                 "newPage": false,
                 "searchKey": "repoupdater.repoNotFoundError",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -409,34 +648,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/repoupdater#repoNotFoundError.NotFound",
-                    "documentation": {
-                      "identifier": "repoNotFoundError.NotFound",
-                      "newPage": false,
-                      "searchKey": "repoupdater.repoNotFoundError.NotFound",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (repoNotFoundError) NotFound() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (repoNotFoundError) NotFound() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/repoupdater#repoNotFoundError.Error",
                     "documentation": {
                       "identifier": "repoNotFoundError.Error",
                       "newPage": false,
                       "searchKey": "repoupdater.repoNotFoundError.Error",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -450,186 +668,26 @@
                     },
                     "children": null
                   }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/repoupdater#ErrNotFound",
-              "documentation": {
-                "identifier": "ErrNotFound",
-                "newPage": false,
-                "searchKey": "repoupdater.ErrNotFound",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ErrNotFound struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ErrNotFound struct {\n\tRepo       api.RepoName\n\tIsNotFound bool\n}\n```\n\nErrNotFound is an error that occurs when a Repo doesn't exist. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/repoupdater#ErrNotFound.NotFound",
-                    "documentation": {
-                      "identifier": "ErrNotFound.NotFound",
-                      "newPage": false,
-                      "searchKey": "repoupdater.ErrNotFound.NotFound",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *ErrNotFound) NotFound() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *ErrNotFound) NotFound() bool\n```\n\nNotFound returns true if the repo does Not exist. \n\n"
-                    },
-                    "children": null
-                  }
                 },
                 {
                   "node": {
-                    "pathID": "/internal/repoupdater#ErrNotFound.Error",
+                    "pathID": "/internal/repoupdater#repoNotFoundError.NotFound",
                     "documentation": {
-                      "identifier": "ErrNotFound.Error",
+                      "identifier": "repoNotFoundError.NotFound",
                       "newPage": false,
-                      "searchKey": "repoupdater.ErrNotFound.Error",
-                      "tags": null
+                      "searchKey": "repoupdater.repoNotFoundError.NotFound",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (e *ErrNotFound) Error() string"
+                      "value": "func (repoNotFoundError) NotFound() bool"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (e *ErrNotFound) Error() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/repoupdater#ErrUnauthorized",
-              "documentation": {
-                "identifier": "ErrUnauthorized",
-                "newPage": false,
-                "searchKey": "repoupdater.ErrUnauthorized",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ErrUnauthorized struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ErrUnauthorized struct {\n\tRepo    api.RepoName\n\tNoAuthz bool\n}\n```\n\nErrUnauthorized is an error that occurs when repo access is unauthorized. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/repoupdater#ErrUnauthorized.Unauthorized",
-                    "documentation": {
-                      "identifier": "ErrUnauthorized.Unauthorized",
-                      "newPage": false,
-                      "searchKey": "repoupdater.ErrUnauthorized.Unauthorized",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *ErrUnauthorized) Unauthorized() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *ErrUnauthorized) Unauthorized() bool\n```\n\nUnauthorized returns true if repo access is unauthorized. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/repoupdater#ErrUnauthorized.Error",
-                    "documentation": {
-                      "identifier": "ErrUnauthorized.Error",
-                      "newPage": false,
-                      "searchKey": "repoupdater.ErrUnauthorized.Error",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *ErrUnauthorized) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *ErrUnauthorized) Error() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/repoupdater#ErrTemporary",
-              "documentation": {
-                "identifier": "ErrTemporary",
-                "newPage": false,
-                "searchKey": "repoupdater.ErrTemporary",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ErrTemporary struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ErrTemporary struct {\n\tRepo        api.RepoName\n\tIsTemporary bool\n}\n```\n\nErrTemporary is an error that can be retried \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/repoupdater#ErrTemporary.Temporary",
-                    "documentation": {
-                      "identifier": "ErrTemporary.Temporary",
-                      "newPage": false,
-                      "searchKey": "repoupdater.ErrTemporary.Temporary",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *ErrTemporary) Temporary() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *ErrTemporary) Temporary() bool\n```\n\nTemporary is when the repository was reported as being temporarily unavailable. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/repoupdater#ErrTemporary.Error",
-                    "documentation": {
-                      "identifier": "ErrTemporary.Error",
-                      "newPage": false,
-                      "searchKey": "repoupdater.ErrTemporary.Error",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *ErrTemporary) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *ErrTemporary) Error() string\n```\n\n"
+                      "value": "```Go\nfunc (repoNotFoundError) NotFound() bool\n```\n\n"
                     },
                     "children": null
                   }
@@ -648,6 +706,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -668,7 +727,9 @@
                 "newPage": false,
                 "searchKey": "repoupdater.TestNewClient",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {

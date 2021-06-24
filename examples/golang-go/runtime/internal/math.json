@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "runtime/internal/math",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,10 @@
                 "identifier": "MaxUintptr",
                 "newPage": false,
                 "searchKey": "math.MaxUintptr",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -68,6 +73,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -82,32 +88,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/runtime/internal/math#MulUintptr",
-              "documentation": {
-                "identifier": "MulUintptr",
-                "newPage": false,
-                "searchKey": "math.MulUintptr",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func MulUintptr(a, b uintptr) (uintptr, bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc MulUintptr(a, b uintptr) (uintptr, bool)\n```\n\nMulUintptr returns a * b and whether the multiplication overflowed. On supported platforms this is an intrinsic lowered by the compiler. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/runtime/internal/math#Mul64",
               "documentation": {
                 "identifier": "Mul64",
                 "newPage": false,
                 "searchKey": "math.Mul64",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -116,6 +104,28 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc Mul64(x, y uint64) (hi, lo uint64)\n```\n\nMul64 returns the 128-bit product of x and y: (hi, lo) = x * y with the product bits' upper half returned in hi and the lower half returned in lo. This is a copy from math/bits.Mul64 On supported platforms this is an intrinsic lowered by the compiler. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/math#MulUintptr",
+              "documentation": {
+                "identifier": "MulUintptr",
+                "newPage": false,
+                "searchKey": "math.MulUintptr",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MulUintptr(a, b uintptr) (uintptr, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MulUintptr(a, b uintptr) (uintptr, bool)\n```\n\nMulUintptr returns a * b and whether the multiplication overflowed. On supported platforms this is an intrinsic lowered by the compiler. \n\n"
               },
               "children": null
             }

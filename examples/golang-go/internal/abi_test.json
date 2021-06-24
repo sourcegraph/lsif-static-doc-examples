@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/abi_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,7 +47,9 @@
                 "newPage": false,
                 "searchKey": "abi_test.TestFuncPC",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -67,7 +71,9 @@
                 "newPage": false,
                 "searchKey": "abi_test.TestFuncPCCompileError",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {

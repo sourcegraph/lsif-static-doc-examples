@@ -9,120 +9,99 @@ See [https://en.wikipedia.org/wiki/Mathematics_of_cyclic_redundancy_checks#Rever
 ## Index
 
 * [Constants](#const)
-    * [const Size](#Size)
-    * [const IEEE](#IEEE)
     * [const Castagnoli](#Castagnoli)
+    * [const IEEE](#IEEE)
     * [const Koopman](#Koopman)
-    * [const magic](#magic)
-    * [const marshaledSize](#marshaledSize)
+    * [const Size](#Size)
     * [const castagnoliK1](#castagnoliK1)
     * [const castagnoliK2](#castagnoliK2)
+    * [const magic](#magic)
+    * [const marshaledSize](#marshaledSize)
     * [const slicing8Cutoff](#slicing8Cutoff)
 * [Variables](#var)
-    * [var castagnoliTable](#castagnoliTable)
-    * [var castagnoliTable8](#castagnoliTable8)
-    * [var castagnoliArchImpl](#castagnoliArchImpl)
-    * [var updateCastagnoli](#updateCastagnoli)
-    * [var castagnoliOnce](#castagnoliOnce)
-    * [var haveCastagnoli](#haveCastagnoli)
     * [var IEEETable](#IEEETable)
-    * [var ieeeTable8](#ieeeTable8)
-    * [var ieeeArchImpl](#ieeeArchImpl)
-    * [var updateIEEE](#updateIEEE)
-    * [var ieeeOnce](#ieeeOnce)
+    * [var archIeeeTable8](#archIeeeTable8)
+    * [var castagnoliArchImpl](#castagnoliArchImpl)
+    * [var castagnoliOnce](#castagnoliOnce)
     * [var castagnoliSSE42TableK1](#castagnoliSSE42TableK1)
     * [var castagnoliSSE42TableK2](#castagnoliSSE42TableK2)
-    * [var archIeeeTable8](#archIeeeTable8)
+    * [var castagnoliTable](#castagnoliTable)
+    * [var castagnoliTable8](#castagnoliTable8)
     * [var golden](#golden)
+    * [var haveCastagnoli](#haveCastagnoli)
+    * [var ieeeArchImpl](#ieeeArchImpl)
+    * [var ieeeOnce](#ieeeOnce)
+    * [var ieeeTable8](#ieeeTable8)
+    * [var updateCastagnoli](#updateCastagnoli)
+    * [var updateIEEE](#updateIEEE)
 * [Types](#type)
     * [type Table [256]uint32](#Table)
         * [func MakeTable(poly uint32) *Table](#MakeTable)
         * [func simpleMakeTable(poly uint32) *Table](#simpleMakeTable)
     * [type digest struct](#digest)
-        * [func (d *digest) Size() int](#digest.Size)
         * [func (d *digest) BlockSize() int](#digest.BlockSize)
-        * [func (d *digest) Reset()](#digest.Reset)
         * [func (d *digest) MarshalBinary() ([]byte, error)](#digest.MarshalBinary)
+        * [func (d *digest) Reset()](#digest.Reset)
+        * [func (d *digest) Size() int](#digest.Size)
+        * [func (d *digest) Sum(in []byte) []byte](#digest.Sum)
+        * [func (d *digest) Sum32() uint32](#digest.Sum32)
         * [func (d *digest) UnmarshalBinary(b []byte) error](#digest.UnmarshalBinary)
         * [func (d *digest) Write(p []byte) (n int, err error)](#digest.Write)
-        * [func (d *digest) Sum32() uint32](#digest.Sum32)
-        * [func (d *digest) Sum(in []byte) []byte](#digest.Sum)
-    * [type sse42Table [4]crc32.Table](#sse42Table)
     * [type slicing8Table [8]crc32.Table](#slicing8Table)
         * [func slicingMakeTable(poly uint32) *slicing8Table](#slicingMakeTable)
+    * [type sse42Table [4]crc32.Table](#sse42Table)
     * [type test struct](#test)
 * [Functions](#func)
-    * [func castagnoliInit()](#castagnoliInit)
-    * [func ieeeInit()](#ieeeInit)
-    * [func New(tab *Table) hash.Hash32](#New)
-    * [func NewIEEE() hash.Hash32](#NewIEEE)
-    * [func appendUint32(b []byte, x uint32) []byte](#appendUint32)
-    * [func readUint32(b []byte) uint32](#readUint32)
-    * [func Update(crc uint32, tab *Table, p []byte) uint32](#Update)
+    * [func BenchmarkCRC32(b *testing.B)](#BenchmarkCRC32)
     * [func Checksum(data []byte, tab *Table) uint32](#Checksum)
     * [func ChecksumIEEE(data []byte) uint32](#ChecksumIEEE)
-    * [func tableSum(t *Table) uint32](#tableSum)
+    * [func New(tab *Table) hash.Hash32](#New)
+    * [func NewIEEE() hash.Hash32](#NewIEEE)
+    * [func TestArchCastagnoli(t *testing.T)](#TestArchCastagnoli)
+    * [func TestArchIEEE(t *testing.T)](#TestArchIEEE)
+    * [func TestCastagnoliRace(t *testing.T)](#TestCastagnoliRace)
+    * [func TestGolden(t *testing.T)](#TestGolden)
+    * [func TestGoldenMarshal(t *testing.T)](#TestGoldenMarshal)
+    * [func TestMarshalTableMismatch(t *testing.T)](#TestMarshalTableMismatch)
+    * [func TestSimple(t *testing.T)](#TestSimple)
+    * [func TestSlicing(t *testing.T)](#TestSlicing)
+    * [func Update(crc uint32, tab *Table, p []byte) uint32](#Update)
+    * [func appendUint32(b []byte, x uint32) []byte](#appendUint32)
+    * [func archAvailableCastagnoli() bool](#archAvailableCastagnoli)
+    * [func archAvailableIEEE() bool](#archAvailableIEEE)
+    * [func archInitCastagnoli()](#archInitCastagnoli)
+    * [func archInitIEEE()](#archInitIEEE)
+    * [func archUpdateCastagnoli(crc uint32, p []byte) uint32](#archUpdateCastagnoli)
+    * [func archUpdateIEEE(crc uint32, p []byte) uint32](#archUpdateIEEE)
+    * [func benchmark(b *testing.B, h hash.Hash32, n, alignment int64)](#benchmark)
+    * [func benchmarkAll(h hash.Hash32) func(b *testing.B)](#benchmarkAll)
+    * [func castagnoliInit()](#castagnoliInit)
     * [func castagnoliSSE42(crc uint32, p []byte) uint32](#castagnoliSSE42)
     * [func castagnoliSSE42Triple(crcA, crcB, crcC uint32,...](#castagnoliSSE42Triple)
-    * [func ieeeCLMUL(crc uint32, p []byte) uint32](#ieeeCLMUL)
-    * [func archAvailableCastagnoli() bool](#archAvailableCastagnoli)
-    * [func archInitCastagnoli()](#archInitCastagnoli)
     * [func castagnoliShift(table *sse42Table, crc uint32) uint32](#castagnoliShift)
-    * [func archUpdateCastagnoli(crc uint32, p []byte) uint32](#archUpdateCastagnoli)
-    * [func archAvailableIEEE() bool](#archAvailableIEEE)
-    * [func archInitIEEE()](#archInitIEEE)
-    * [func archUpdateIEEE(crc uint32, p []byte) uint32](#archUpdateIEEE)
+    * [func ieeeCLMUL(crc uint32, p []byte) uint32](#ieeeCLMUL)
+    * [func ieeeInit()](#ieeeInit)
+    * [func readUint32(b []byte) uint32](#readUint32)
     * [func simplePopulateTable(poly uint32, t *Table)](#simplePopulateTable)
     * [func simpleUpdate(crc uint32, tab *Table, p []byte) uint32](#simpleUpdate)
     * [func slicingUpdate(crc uint32, tab *slicing8Table, p []byte) uint32](#slicingUpdate)
-    * [func TestCastagnoliRace(t *testing.T)](#TestCastagnoliRace)
-    * [func testGoldenIEEE(t *testing.T, crcFunc func(b []byte) uint32)](#testGoldenIEEE)
-    * [func testGoldenCastagnoli(t *testing.T, crcFunc func(b []byte) uint32)](#testGoldenCastagnoli)
+    * [func tableSum(t *Table) uint32](#tableSum)
     * [func testCrossCheck(t *testing.T, crcFunc1, crcFunc2 func(crc uint32, b []byte) uint32)](#testCrossCheck)
-    * [func TestSimple(t *testing.T)](#TestSimple)
-    * [func TestGoldenMarshal(t *testing.T)](#TestGoldenMarshal)
-    * [func TestMarshalTableMismatch(t *testing.T)](#TestMarshalTableMismatch)
-    * [func TestSlicing(t *testing.T)](#TestSlicing)
-    * [func TestArchIEEE(t *testing.T)](#TestArchIEEE)
-    * [func TestArchCastagnoli(t *testing.T)](#TestArchCastagnoli)
-    * [func TestGolden(t *testing.T)](#TestGolden)
-    * [func BenchmarkCRC32(b *testing.B)](#BenchmarkCRC32)
-    * [func benchmarkAll(h hash.Hash32) func(b *testing.B)](#benchmarkAll)
-    * [func benchmark(b *testing.B, h hash.Hash32, n, alignment int64)](#benchmark)
+    * [func testGoldenCastagnoli(t *testing.T, crcFunc func(b []byte) uint32)](#testGoldenCastagnoli)
+    * [func testGoldenIEEE(t *testing.T, crcFunc func(b []byte) uint32)](#testGoldenIEEE)
 
 
 ## <a id="const" href="#const">Constants</a>
 
-### <a id="Size" href="#Size">const Size</a>
-
 ```
-searchKey: crc32.Size
+tags: [package]
 ```
-
-```Go
-const Size = 4
-```
-
-The size of a CRC-32 checksum in bytes. 
-
-### <a id="IEEE" href="#IEEE">const IEEE</a>
-
-```
-searchKey: crc32.IEEE
-```
-
-```Go
-const IEEE = 0xedb88320
-```
-
-Predefined polynomials. 
-
-IEEE is by far and away the most common CRC-32 polynomial. Used by ethernet (IEEE 802.3), v.42, fddi, gzip, zip, png, ... 
 
 ### <a id="Castagnoli" href="#Castagnoli">const Castagnoli</a>
 
 ```
 searchKey: crc32.Castagnoli
+tags: [constant number]
 ```
 
 ```Go
@@ -133,10 +112,26 @@ Predefined polynomials.
 
 Castagnoli's polynomial, used in iSCSI. Has better error detection characteristics than IEEE. [https://dx.doi.org/10.1109/26.231911](https://dx.doi.org/10.1109/26.231911) 
 
+### <a id="IEEE" href="#IEEE">const IEEE</a>
+
+```
+searchKey: crc32.IEEE
+tags: [constant number]
+```
+
+```Go
+const IEEE = 0xedb88320
+```
+
+Predefined polynomials. 
+
+IEEE is by far and away the most common CRC-32 polynomial. Used by ethernet (IEEE 802.3), v.42, fddi, gzip, zip, png, ... 
+
 ### <a id="Koopman" href="#Koopman">const Koopman</a>
 
 ```
 searchKey: crc32.Koopman
+tags: [constant number]
 ```
 
 ```Go
@@ -147,33 +142,24 @@ Predefined polynomials.
 
 Koopman's polynomial. Also has better error detection characteristics than IEEE. [https://dx.doi.org/10.1109/DSN.2002.1028931](https://dx.doi.org/10.1109/DSN.2002.1028931) 
 
-### <a id="magic" href="#magic">const magic</a>
+### <a id="Size" href="#Size">const Size</a>
 
 ```
-searchKey: crc32.magic
-tags: [private]
-```
-
-```Go
-const magic = "crc\x01"
-```
-
-### <a id="marshaledSize" href="#marshaledSize">const marshaledSize</a>
-
-```
-searchKey: crc32.marshaledSize
-tags: [private]
+searchKey: crc32.Size
+tags: [constant number]
 ```
 
 ```Go
-const marshaledSize = len(magic) + 4 + 4
+const Size = 4
 ```
+
+The size of a CRC-32 checksum in bytes. 
 
 ### <a id="castagnoliK1" href="#castagnoliK1">const castagnoliK1</a>
 
 ```
 searchKey: crc32.castagnoliK1
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -184,18 +170,40 @@ const castagnoliK1 = 168
 
 ```
 searchKey: crc32.castagnoliK2
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
 const castagnoliK2 = 1344
 ```
 
+### <a id="magic" href="#magic">const magic</a>
+
+```
+searchKey: crc32.magic
+tags: [constant string private]
+```
+
+```Go
+const magic = "crc\x01"
+```
+
+### <a id="marshaledSize" href="#marshaledSize">const marshaledSize</a>
+
+```
+searchKey: crc32.marshaledSize
+tags: [constant number private]
+```
+
+```Go
+const marshaledSize = len(magic) + 4 + 4
+```
+
 ### <a id="slicing8Cutoff" href="#slicing8Cutoff">const slicing8Cutoff</a>
 
 ```
 searchKey: crc32.slicing8Cutoff
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -206,11 +214,83 @@ Use slicing-by-8 when payload >= this value.
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [package]
+```
+
+### <a id="IEEETable" href="#IEEETable">var IEEETable</a>
+
+```
+searchKey: crc32.IEEETable
+tags: [variable array number]
+```
+
+```Go
+var IEEETable = simpleMakeTable(IEEE)
+```
+
+IEEETable is the table for the IEEE polynomial. 
+
+### <a id="archIeeeTable8" href="#archIeeeTable8">var archIeeeTable8</a>
+
+```
+searchKey: crc32.archIeeeTable8
+tags: [variable array array number private]
+```
+
+```Go
+var archIeeeTable8 *slicing8Table
+```
+
+### <a id="castagnoliArchImpl" href="#castagnoliArchImpl">var castagnoliArchImpl</a>
+
+```
+searchKey: crc32.castagnoliArchImpl
+tags: [variable boolean private]
+```
+
+```Go
+var castagnoliArchImpl bool
+```
+
+### <a id="castagnoliOnce" href="#castagnoliOnce">var castagnoliOnce</a>
+
+```
+searchKey: crc32.castagnoliOnce
+tags: [variable struct private]
+```
+
+```Go
+var castagnoliOnce sync.Once
+```
+
+### <a id="castagnoliSSE42TableK1" href="#castagnoliSSE42TableK1">var castagnoliSSE42TableK1</a>
+
+```
+searchKey: crc32.castagnoliSSE42TableK1
+tags: [variable array array number private]
+```
+
+```Go
+var castagnoliSSE42TableK1 *sse42Table
+```
+
+### <a id="castagnoliSSE42TableK2" href="#castagnoliSSE42TableK2">var castagnoliSSE42TableK2</a>
+
+```
+searchKey: crc32.castagnoliSSE42TableK2
+tags: [variable array array number private]
+```
+
+```Go
+var castagnoliSSE42TableK2 *sse42Table
+```
+
 ### <a id="castagnoliTable" href="#castagnoliTable">var castagnoliTable</a>
 
 ```
 searchKey: crc32.castagnoliTable
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -223,74 +303,62 @@ castagnoliTable points to a lazily initialized Table for the Castagnoli polynomi
 
 ```
 searchKey: crc32.castagnoliTable8
-tags: [private]
+tags: [variable array array number private]
 ```
 
 ```Go
 var castagnoliTable8 *slicing8Table
 ```
 
-### <a id="castagnoliArchImpl" href="#castagnoliArchImpl">var castagnoliArchImpl</a>
+### <a id="golden" href="#golden">var golden</a>
 
 ```
-searchKey: crc32.castagnoliArchImpl
-tags: [private]
-```
-
-```Go
-var castagnoliArchImpl bool
-```
-
-### <a id="updateCastagnoli" href="#updateCastagnoli">var updateCastagnoli</a>
-
-```
-searchKey: crc32.updateCastagnoli
-tags: [private]
+searchKey: crc32.golden
+tags: [variable array struct private]
 ```
 
 ```Go
-var updateCastagnoli func(crc uint32, p []byte) uint32
-```
-
-### <a id="castagnoliOnce" href="#castagnoliOnce">var castagnoliOnce</a>
-
-```
-searchKey: crc32.castagnoliOnce
-tags: [private]
-```
-
-```Go
-var castagnoliOnce sync.Once
+var golden = ...
 ```
 
 ### <a id="haveCastagnoli" href="#haveCastagnoli">var haveCastagnoli</a>
 
 ```
 searchKey: crc32.haveCastagnoli
-tags: [private]
+tags: [variable number private]
 ```
 
 ```Go
 var haveCastagnoli uint32
 ```
 
-### <a id="IEEETable" href="#IEEETable">var IEEETable</a>
+### <a id="ieeeArchImpl" href="#ieeeArchImpl">var ieeeArchImpl</a>
 
 ```
-searchKey: crc32.IEEETable
+searchKey: crc32.ieeeArchImpl
+tags: [variable boolean private]
 ```
 
 ```Go
-var IEEETable = simpleMakeTable(IEEE)
+var ieeeArchImpl bool
 ```
 
-IEEETable is the table for the IEEE polynomial. 
+### <a id="ieeeOnce" href="#ieeeOnce">var ieeeOnce</a>
+
+```
+searchKey: crc32.ieeeOnce
+tags: [variable struct private]
+```
+
+```Go
+var ieeeOnce sync.Once
+```
 
 ### <a id="ieeeTable8" href="#ieeeTable8">var ieeeTable8</a>
 
 ```
 searchKey: crc32.ieeeTable8
-tags: [private]
+tags: [variable array array number private]
 ```
 
 ```Go
@@ -299,89 +367,39 @@ var ieeeTable8 *slicing8Table
 
 ieeeTable8 is the slicing8Table for IEEE 
 
-### <a id="ieeeArchImpl" href="#ieeeArchImpl">var ieeeArchImpl</a>
+### <a id="updateCastagnoli" href="#updateCastagnoli">var updateCastagnoli</a>
 
 ```
-searchKey: crc32.ieeeArchImpl
-tags: [private]
+searchKey: crc32.updateCastagnoli
+tags: [variable function private]
 ```
 
 ```Go
-var ieeeArchImpl bool
+var updateCastagnoli func(crc uint32, p []byte) uint32
 ```
 
 ### <a id="updateIEEE" href="#updateIEEE">var updateIEEE</a>
 
 ```
 searchKey: crc32.updateIEEE
-tags: [private]
+tags: [variable function private]
 ```
 
 ```Go
 var updateIEEE func(crc uint32, p []byte) uint32
 ```
 
-### <a id="ieeeOnce" href="#ieeeOnce">var ieeeOnce</a>
-
-```
-searchKey: crc32.ieeeOnce
-tags: [private]
-```
-
-```Go
-var ieeeOnce sync.Once
-```
-
-### <a id="castagnoliSSE42TableK1" href="#castagnoliSSE42TableK1">var castagnoliSSE42TableK1</a>
-
-```
-searchKey: crc32.castagnoliSSE42TableK1
-tags: [private]
-```
-
-```Go
-var castagnoliSSE42TableK1 *sse42Table
-```
-
-### <a id="castagnoliSSE42TableK2" href="#castagnoliSSE42TableK2">var castagnoliSSE42TableK2</a>
-
-```
-searchKey: crc32.castagnoliSSE42TableK2
-tags: [private]
-```
-
-```Go
-var castagnoliSSE42TableK2 *sse42Table
-```
-
-### <a id="archIeeeTable8" href="#archIeeeTable8">var archIeeeTable8</a>
-
-```
-searchKey: crc32.archIeeeTable8
-tags: [private]
-```
-
-```Go
-var archIeeeTable8 *slicing8Table
-```
-
-### <a id="golden" href="#golden">var golden</a>
-
-```
-searchKey: crc32.golden
-tags: [private]
-```
-
-```Go
-var golden = ...
-```
-
 ## <a id="type" href="#type">Types</a>
+
+```
+tags: [package]
+```
 
 ### <a id="Table" href="#Table">type Table [256]uint32</a>
 
 ```
 searchKey: crc32.Table
+tags: [array number]
 ```
 
 ```Go
@@ -394,6 +412,7 @@ Table is a 256-word table representing the polynomial for efficient processing.
 
 ```
 searchKey: crc32.MakeTable
+tags: [method]
 ```
 
 ```Go
@@ -406,7 +425,7 @@ MakeTable returns a Table constructed from the specified polynomial. The content
 
 ```
 searchKey: crc32.simpleMakeTable
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -419,7 +438,7 @@ simpleMakeTable allocates and constructs a Table for the specified polynomial. T
 
 ```
 searchKey: crc32.digest
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -431,55 +450,77 @@ type digest struct {
 
 digest represents the partial evaluation of a checksum. 
 
-#### <a id="digest.Size" href="#digest.Size">func (d *digest) Size() int</a>
-
-```
-searchKey: crc32.digest.Size
-tags: [private]
-```
-
-```Go
-func (d *digest) Size() int
-```
-
 #### <a id="digest.BlockSize" href="#digest.BlockSize">func (d *digest) BlockSize() int</a>
 
 ```
 searchKey: crc32.digest.BlockSize
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (d *digest) BlockSize() int
 ```
 
-#### <a id="digest.Reset" href="#digest.Reset">func (d *digest) Reset()</a>
-
-```
-searchKey: crc32.digest.Reset
-tags: [private]
-```
-
-```Go
-func (d *digest) Reset()
-```
-
 #### <a id="digest.MarshalBinary" href="#digest.MarshalBinary">func (d *digest) MarshalBinary() ([]byte, error)</a>
 
 ```
 searchKey: crc32.digest.MarshalBinary
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (d *digest) MarshalBinary() ([]byte, error)
 ```
 
+#### <a id="digest.Reset" href="#digest.Reset">func (d *digest) Reset()</a>
+
+```
+searchKey: crc32.digest.Reset
+tags: [function private]
+```
+
+```Go
+func (d *digest) Reset()
+```
+
+#### <a id="digest.Size" href="#digest.Size">func (d *digest) Size() int</a>
+
+```
+searchKey: crc32.digest.Size
+tags: [function private]
+```
+
+```Go
+func (d *digest) Size() int
+```
+
+#### <a id="digest.Sum" href="#digest.Sum">func (d *digest) Sum(in []byte) []byte</a>
+
+```
+searchKey: crc32.digest.Sum
+tags: [method private]
+```
+
+```Go
+func (d *digest) Sum(in []byte) []byte
+```
+
+#### <a id="digest.Sum32" href="#digest.Sum32">func (d *digest) Sum32() uint32</a>
+
+```
+searchKey: crc32.digest.Sum32
+tags: [function private]
+```
+
+```Go
+func (d *digest) Sum32() uint32
+```
+
 #### <a id="digest.UnmarshalBinary" href="#digest.UnmarshalBinary">func (d *digest) UnmarshalBinary(b []byte) error</a>
 
 ```
 searchKey: crc32.digest.UnmarshalBinary
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -490,51 +531,18 @@ func (d *digest) UnmarshalBinary(b []byte) error
 
 ```
 searchKey: crc32.digest.Write
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (d *digest) Write(p []byte) (n int, err error)
 ```
 
-#### <a id="digest.Sum32" href="#digest.Sum32">func (d *digest) Sum32() uint32</a>
-
-```
-searchKey: crc32.digest.Sum32
-tags: [private]
-```
-
-```Go
-func (d *digest) Sum32() uint32
-```
-
-#### <a id="digest.Sum" href="#digest.Sum">func (d *digest) Sum(in []byte) []byte</a>
-
-```
-searchKey: crc32.digest.Sum
-tags: [private]
-```
-
-```Go
-func (d *digest) Sum(in []byte) []byte
-```
-
-### <a id="sse42Table" href="#sse42Table">type sse42Table [4]crc32.Table</a>
-
-```
-searchKey: crc32.sse42Table
-tags: [private]
-```
-
-```Go
-type sse42Table [4]Table
-```
-
 ### <a id="slicing8Table" href="#slicing8Table">type slicing8Table [8]crc32.Table</a>
 
 ```
 searchKey: crc32.slicing8Table
-tags: [private]
+tags: [array array number private]
 ```
 
 ```Go
@@ -547,7 +555,7 @@ slicing8Table is array of 8 Tables, used by the slicing-by-8 algorithm.
 
 ```
 searchKey: crc32.slicingMakeTable
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -556,11 +564,22 @@ func slicingMakeTable(poly uint32) *slicing8Table
 
 slicingMakeTable constructs a slicing8Table for the specified polynomial. The table is suitable for use with the slicing-by-8 algorithm (slicingUpdate). 
 
+### <a id="sse42Table" href="#sse42Table">type sse42Table [4]crc32.Table</a>
+
+```
+searchKey: crc32.sse42Table
+tags: [array array number private]
+```
+
+```Go
+type sse42Table [4]Table
+```
+
 ### <a id="test" href="#test">type test struct</a>
 
 ```
 searchKey: crc32.test
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -574,90 +593,26 @@ type test struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="castagnoliInit" href="#castagnoliInit">func castagnoliInit()</a>
-
 ```
-searchKey: crc32.castagnoliInit
-tags: [private]
+tags: [package]
 ```
 
-```Go
-func castagnoliInit()
-```
-
-### <a id="ieeeInit" href="#ieeeInit">func ieeeInit()</a>
+### <a id="BenchmarkCRC32" href="#BenchmarkCRC32">func BenchmarkCRC32(b *testing.B)</a>
 
 ```
-searchKey: crc32.ieeeInit
-tags: [private]
+searchKey: crc32.BenchmarkCRC32
+tags: [method private benchmark]
 ```
 
 ```Go
-func ieeeInit()
+func BenchmarkCRC32(b *testing.B)
 ```
-
-### <a id="New" href="#New">func New(tab *Table) hash.Hash32</a>
-
-```
-searchKey: crc32.New
-```
-
-```Go
-func New(tab *Table) hash.Hash32
-```
-
-New creates a new hash.Hash32 computing the CRC-32 checksum using the polynomial represented by the Table. Its Sum method will lay the value out in big-endian byte order. The returned Hash32 also implements encoding.BinaryMarshaler and encoding.BinaryUnmarshaler to marshal and unmarshal the internal state of the hash. 
-
-### <a id="NewIEEE" href="#NewIEEE">func NewIEEE() hash.Hash32</a>
-
-```
-searchKey: crc32.NewIEEE
-```
-
-```Go
-func NewIEEE() hash.Hash32
-```
-
-NewIEEE creates a new hash.Hash32 computing the CRC-32 checksum using the IEEE polynomial. Its Sum method will lay the value out in big-endian byte order. The returned Hash32 also implements encoding.BinaryMarshaler and encoding.BinaryUnmarshaler to marshal and unmarshal the internal state of the hash. 
-
-### <a id="appendUint32" href="#appendUint32">func appendUint32(b []byte, x uint32) []byte</a>
-
-```
-searchKey: crc32.appendUint32
-tags: [private]
-```
-
-```Go
-func appendUint32(b []byte, x uint32) []byte
-```
-
-### <a id="readUint32" href="#readUint32">func readUint32(b []byte) uint32</a>
-
-```
-searchKey: crc32.readUint32
-tags: [private]
-```
-
-```Go
-func readUint32(b []byte) uint32
-```
-
-### <a id="Update" href="#Update">func Update(crc uint32, tab *Table, p []byte) uint32</a>
-
-```
-searchKey: crc32.Update
-```
-
-```Go
-func Update(crc uint32, tab *Table, p []byte) uint32
-```
-
-Update returns the result of adding the bytes in p to the crc. 
 
 ### <a id="Checksum" href="#Checksum">func Checksum(data []byte, tab *Table) uint32</a>
 
 ```
 searchKey: crc32.Checksum
+tags: [method]
 ```
 
 ```Go
@@ -670,6 +625,7 @@ Checksum returns the CRC-32 checksum of data using the polynomial represented by
 
 ```
 searchKey: crc32.ChecksumIEEE
+tags: [method]
 ```
 
 ```Go
@@ -678,24 +634,254 @@ func ChecksumIEEE(data []byte) uint32
 
 ChecksumIEEE returns the CRC-32 checksum of data using the IEEE polynomial. 
 
-### <a id="tableSum" href="#tableSum">func tableSum(t *Table) uint32</a>
+### <a id="New" href="#New">func New(tab *Table) hash.Hash32</a>
 
 ```
-searchKey: crc32.tableSum
-tags: [private]
+searchKey: crc32.New
+tags: [method]
 ```
 
 ```Go
-func tableSum(t *Table) uint32
+func New(tab *Table) hash.Hash32
 ```
 
-tableSum returns the IEEE checksum of table t. 
+New creates a new hash.Hash32 computing the CRC-32 checksum using the polynomial represented by the Table. Its Sum method will lay the value out in big-endian byte order. The returned Hash32 also implements encoding.BinaryMarshaler and encoding.BinaryUnmarshaler to marshal and unmarshal the internal state of the hash. 
+
+### <a id="NewIEEE" href="#NewIEEE">func NewIEEE() hash.Hash32</a>
+
+```
+searchKey: crc32.NewIEEE
+tags: [function]
+```
+
+```Go
+func NewIEEE() hash.Hash32
+```
+
+NewIEEE creates a new hash.Hash32 computing the CRC-32 checksum using the IEEE polynomial. Its Sum method will lay the value out in big-endian byte order. The returned Hash32 also implements encoding.BinaryMarshaler and encoding.BinaryUnmarshaler to marshal and unmarshal the internal state of the hash. 
+
+### <a id="TestArchCastagnoli" href="#TestArchCastagnoli">func TestArchCastagnoli(t *testing.T)</a>
+
+```
+searchKey: crc32.TestArchCastagnoli
+tags: [method private test]
+```
+
+```Go
+func TestArchCastagnoli(t *testing.T)
+```
+
+### <a id="TestArchIEEE" href="#TestArchIEEE">func TestArchIEEE(t *testing.T)</a>
+
+```
+searchKey: crc32.TestArchIEEE
+tags: [method private test]
+```
+
+```Go
+func TestArchIEEE(t *testing.T)
+```
+
+### <a id="TestCastagnoliRace" href="#TestCastagnoliRace">func TestCastagnoliRace(t *testing.T)</a>
+
+```
+searchKey: crc32.TestCastagnoliRace
+tags: [method private test]
+```
+
+```Go
+func TestCastagnoliRace(t *testing.T)
+```
+
+First test, so that it can be the one to initialize castagnoliTable. 
+
+### <a id="TestGolden" href="#TestGolden">func TestGolden(t *testing.T)</a>
+
+```
+searchKey: crc32.TestGolden
+tags: [method private test]
+```
+
+```Go
+func TestGolden(t *testing.T)
+```
+
+### <a id="TestGoldenMarshal" href="#TestGoldenMarshal">func TestGoldenMarshal(t *testing.T)</a>
+
+```
+searchKey: crc32.TestGoldenMarshal
+tags: [method private test]
+```
+
+```Go
+func TestGoldenMarshal(t *testing.T)
+```
+
+### <a id="TestMarshalTableMismatch" href="#TestMarshalTableMismatch">func TestMarshalTableMismatch(t *testing.T)</a>
+
+```
+searchKey: crc32.TestMarshalTableMismatch
+tags: [method private test]
+```
+
+```Go
+func TestMarshalTableMismatch(t *testing.T)
+```
+
+### <a id="TestSimple" href="#TestSimple">func TestSimple(t *testing.T)</a>
+
+```
+searchKey: crc32.TestSimple
+tags: [method private test]
+```
+
+```Go
+func TestSimple(t *testing.T)
+```
+
+TestSimple tests the simple generic algorithm. 
+
+### <a id="TestSlicing" href="#TestSlicing">func TestSlicing(t *testing.T)</a>
+
+```
+searchKey: crc32.TestSlicing
+tags: [method private test]
+```
+
+```Go
+func TestSlicing(t *testing.T)
+```
+
+TestSimple tests the slicing-by-8 algorithm. 
+
+### <a id="Update" href="#Update">func Update(crc uint32, tab *Table, p []byte) uint32</a>
+
+```
+searchKey: crc32.Update
+tags: [method]
+```
+
+```Go
+func Update(crc uint32, tab *Table, p []byte) uint32
+```
+
+Update returns the result of adding the bytes in p to the crc. 
+
+### <a id="appendUint32" href="#appendUint32">func appendUint32(b []byte, x uint32) []byte</a>
+
+```
+searchKey: crc32.appendUint32
+tags: [method private]
+```
+
+```Go
+func appendUint32(b []byte, x uint32) []byte
+```
+
+### <a id="archAvailableCastagnoli" href="#archAvailableCastagnoli">func archAvailableCastagnoli() bool</a>
+
+```
+searchKey: crc32.archAvailableCastagnoli
+tags: [function private]
+```
+
+```Go
+func archAvailableCastagnoli() bool
+```
+
+### <a id="archAvailableIEEE" href="#archAvailableIEEE">func archAvailableIEEE() bool</a>
+
+```
+searchKey: crc32.archAvailableIEEE
+tags: [function private]
+```
+
+```Go
+func archAvailableIEEE() bool
+```
+
+### <a id="archInitCastagnoli" href="#archInitCastagnoli">func archInitCastagnoli()</a>
+
+```
+searchKey: crc32.archInitCastagnoli
+tags: [function private]
+```
+
+```Go
+func archInitCastagnoli()
+```
+
+### <a id="archInitIEEE" href="#archInitIEEE">func archInitIEEE()</a>
+
+```
+searchKey: crc32.archInitIEEE
+tags: [function private]
+```
+
+```Go
+func archInitIEEE()
+```
+
+### <a id="archUpdateCastagnoli" href="#archUpdateCastagnoli">func archUpdateCastagnoli(crc uint32, p []byte) uint32</a>
+
+```
+searchKey: crc32.archUpdateCastagnoli
+tags: [method private]
+```
+
+```Go
+func archUpdateCastagnoli(crc uint32, p []byte) uint32
+```
+
+### <a id="archUpdateIEEE" href="#archUpdateIEEE">func archUpdateIEEE(crc uint32, p []byte) uint32</a>
+
+```
+searchKey: crc32.archUpdateIEEE
+tags: [method private]
+```
+
+```Go
+func archUpdateIEEE(crc uint32, p []byte) uint32
+```
+
+### <a id="benchmark" href="#benchmark">func benchmark(b *testing.B, h hash.Hash32, n, alignment int64)</a>
+
+```
+searchKey: crc32.benchmark
+tags: [method private]
+```
+
+```Go
+func benchmark(b *testing.B, h hash.Hash32, n, alignment int64)
+```
+
+### <a id="benchmarkAll" href="#benchmarkAll">func benchmarkAll(h hash.Hash32) func(b *testing.B)</a>
+
+```
+searchKey: crc32.benchmarkAll
+tags: [method private]
+```
+
+```Go
+func benchmarkAll(h hash.Hash32) func(b *testing.B)
+```
+
+### <a id="castagnoliInit" href="#castagnoliInit">func castagnoliInit()</a>
+
+```
+searchKey: crc32.castagnoliInit
+tags: [function private]
+```
+
+```Go
+func castagnoliInit()
+```
 
 ### <a id="castagnoliSSE42" href="#castagnoliSSE42">func castagnoliSSE42(crc uint32, p []byte) uint32</a>
 
 ```
 searchKey: crc32.castagnoliSSE42
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -708,7 +894,7 @@ castagnoliSSE42 is defined in crc32_amd64.s and uses the SSE 4.2 CRC32 instructi
 
 ```
 searchKey: crc32.castagnoliSSE42Triple
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -721,46 +907,11 @@ func castagnoliSSE42Triple(
 
 castagnoliSSE42Triple is defined in crc32_amd64.s and uses the SSE 4.2 CRC32 instruction. 
 
-### <a id="ieeeCLMUL" href="#ieeeCLMUL">func ieeeCLMUL(crc uint32, p []byte) uint32</a>
-
-```
-searchKey: crc32.ieeeCLMUL
-tags: [private]
-```
-
-```Go
-func ieeeCLMUL(crc uint32, p []byte) uint32
-```
-
-ieeeCLMUL is defined in crc_amd64.s and uses the PCLMULQDQ instruction as well as SSE 4.1. 
-
-### <a id="archAvailableCastagnoli" href="#archAvailableCastagnoli">func archAvailableCastagnoli() bool</a>
-
-```
-searchKey: crc32.archAvailableCastagnoli
-tags: [private]
-```
-
-```Go
-func archAvailableCastagnoli() bool
-```
-
-### <a id="archInitCastagnoli" href="#archInitCastagnoli">func archInitCastagnoli()</a>
-
-```
-searchKey: crc32.archInitCastagnoli
-tags: [private]
-```
-
-```Go
-func archInitCastagnoli()
-```
-
 ### <a id="castagnoliShift" href="#castagnoliShift">func castagnoliShift(table *sse42Table, crc uint32) uint32</a>
 
 ```
 searchKey: crc32.castagnoliShift
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -769,55 +920,46 @@ func castagnoliShift(table *sse42Table, crc uint32) uint32
 
 castagnoliShift computes the CRC32-C of K1 or K2 zeroes (depending on the table given) with the given initial crc value. This corresponds to CRC(crc, O) in the description in updateCastagnoli. 
 
-### <a id="archUpdateCastagnoli" href="#archUpdateCastagnoli">func archUpdateCastagnoli(crc uint32, p []byte) uint32</a>
+### <a id="ieeeCLMUL" href="#ieeeCLMUL">func ieeeCLMUL(crc uint32, p []byte) uint32</a>
 
 ```
-searchKey: crc32.archUpdateCastagnoli
-tags: [private]
-```
-
-```Go
-func archUpdateCastagnoli(crc uint32, p []byte) uint32
-```
-
-### <a id="archAvailableIEEE" href="#archAvailableIEEE">func archAvailableIEEE() bool</a>
-
-```
-searchKey: crc32.archAvailableIEEE
-tags: [private]
+searchKey: crc32.ieeeCLMUL
+tags: [method private]
 ```
 
 ```Go
-func archAvailableIEEE() bool
+func ieeeCLMUL(crc uint32, p []byte) uint32
 ```
 
-### <a id="archInitIEEE" href="#archInitIEEE">func archInitIEEE()</a>
+ieeeCLMUL is defined in crc_amd64.s and uses the PCLMULQDQ instruction as well as SSE 4.1. 
+
+### <a id="ieeeInit" href="#ieeeInit">func ieeeInit()</a>
 
 ```
-searchKey: crc32.archInitIEEE
-tags: [private]
-```
-
-```Go
-func archInitIEEE()
-```
-
-### <a id="archUpdateIEEE" href="#archUpdateIEEE">func archUpdateIEEE(crc uint32, p []byte) uint32</a>
-
-```
-searchKey: crc32.archUpdateIEEE
-tags: [private]
+searchKey: crc32.ieeeInit
+tags: [function private]
 ```
 
 ```Go
-func archUpdateIEEE(crc uint32, p []byte) uint32
+func ieeeInit()
+```
+
+### <a id="readUint32" href="#readUint32">func readUint32(b []byte) uint32</a>
+
+```
+searchKey: crc32.readUint32
+tags: [method private]
+```
+
+```Go
+func readUint32(b []byte) uint32
 ```
 
 ### <a id="simplePopulateTable" href="#simplePopulateTable">func simplePopulateTable(poly uint32, t *Table)</a>
 
 ```
 searchKey: crc32.simplePopulateTable
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -830,7 +972,7 @@ simplePopulateTable constructs a Table for the specified polynomial, suitable fo
 
 ```
 searchKey: crc32.simpleUpdate
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -843,7 +985,7 @@ simpleUpdate uses the simple algorithm to update the CRC, given a table that was
 
 ```
 searchKey: crc32.slicingUpdate
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -852,50 +994,24 @@ func slicingUpdate(crc uint32, tab *slicing8Table, p []byte) uint32
 
 slicingUpdate uses the slicing-by-8 algorithm to update the CRC, given a table that was previously computed using slicingMakeTable. 
 
-### <a id="TestCastagnoliRace" href="#TestCastagnoliRace">func TestCastagnoliRace(t *testing.T)</a>
+### <a id="tableSum" href="#tableSum">func tableSum(t *Table) uint32</a>
 
 ```
-searchKey: crc32.TestCastagnoliRace
-tags: [private]
-```
-
-```Go
-func TestCastagnoliRace(t *testing.T)
-```
-
-First test, so that it can be the one to initialize castagnoliTable. 
-
-### <a id="testGoldenIEEE" href="#testGoldenIEEE">func testGoldenIEEE(t *testing.T, crcFunc func(b []byte) uint32)</a>
-
-```
-searchKey: crc32.testGoldenIEEE
-tags: [private]
+searchKey: crc32.tableSum
+tags: [method private]
 ```
 
 ```Go
-func testGoldenIEEE(t *testing.T, crcFunc func(b []byte) uint32)
+func tableSum(t *Table) uint32
 ```
 
-testGoldenIEEE verifies that the given function returns correct IEEE checksums. 
-
-### <a id="testGoldenCastagnoli" href="#testGoldenCastagnoli">func testGoldenCastagnoli(t *testing.T, crcFunc func(b []byte) uint32)</a>
-
-```
-searchKey: crc32.testGoldenCastagnoli
-tags: [private]
-```
-
-```Go
-func testGoldenCastagnoli(t *testing.T, crcFunc func(b []byte) uint32)
-```
-
-testGoldenCastagnoli verifies that the given function returns correct IEEE checksums. 
+tableSum returns the IEEE checksum of table t. 
 
 ### <a id="testCrossCheck" href="#testCrossCheck">func testCrossCheck(t *testing.T, crcFunc1, crcFunc2 func(crc uint32, b []byte) uint32)</a>
 
 ```
 searchKey: crc32.testCrossCheck
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -904,117 +1020,29 @@ func testCrossCheck(t *testing.T, crcFunc1, crcFunc2 func(crc uint32, b []byte) 
 
 testCrossCheck generates random buffers of various lengths and verifies that the two "update" functions return the same result. 
 
-### <a id="TestSimple" href="#TestSimple">func TestSimple(t *testing.T)</a>
+### <a id="testGoldenCastagnoli" href="#testGoldenCastagnoli">func testGoldenCastagnoli(t *testing.T, crcFunc func(b []byte) uint32)</a>
 
 ```
-searchKey: crc32.TestSimple
-tags: [private]
-```
-
-```Go
-func TestSimple(t *testing.T)
-```
-
-TestSimple tests the simple generic algorithm. 
-
-### <a id="TestGoldenMarshal" href="#TestGoldenMarshal">func TestGoldenMarshal(t *testing.T)</a>
-
-```
-searchKey: crc32.TestGoldenMarshal
-tags: [private]
+searchKey: crc32.testGoldenCastagnoli
+tags: [method private]
 ```
 
 ```Go
-func TestGoldenMarshal(t *testing.T)
+func testGoldenCastagnoli(t *testing.T, crcFunc func(b []byte) uint32)
 ```
 
-### <a id="TestMarshalTableMismatch" href="#TestMarshalTableMismatch">func TestMarshalTableMismatch(t *testing.T)</a>
+testGoldenCastagnoli verifies that the given function returns correct IEEE checksums. 
+
+### <a id="testGoldenIEEE" href="#testGoldenIEEE">func testGoldenIEEE(t *testing.T, crcFunc func(b []byte) uint32)</a>
 
 ```
-searchKey: crc32.TestMarshalTableMismatch
-tags: [private]
-```
-
-```Go
-func TestMarshalTableMismatch(t *testing.T)
-```
-
-### <a id="TestSlicing" href="#TestSlicing">func TestSlicing(t *testing.T)</a>
-
-```
-searchKey: crc32.TestSlicing
-tags: [private]
+searchKey: crc32.testGoldenIEEE
+tags: [method private]
 ```
 
 ```Go
-func TestSlicing(t *testing.T)
+func testGoldenIEEE(t *testing.T, crcFunc func(b []byte) uint32)
 ```
 
-TestSimple tests the slicing-by-8 algorithm. 
-
-### <a id="TestArchIEEE" href="#TestArchIEEE">func TestArchIEEE(t *testing.T)</a>
-
-```
-searchKey: crc32.TestArchIEEE
-tags: [private]
-```
-
-```Go
-func TestArchIEEE(t *testing.T)
-```
-
-### <a id="TestArchCastagnoli" href="#TestArchCastagnoli">func TestArchCastagnoli(t *testing.T)</a>
-
-```
-searchKey: crc32.TestArchCastagnoli
-tags: [private]
-```
-
-```Go
-func TestArchCastagnoli(t *testing.T)
-```
-
-### <a id="TestGolden" href="#TestGolden">func TestGolden(t *testing.T)</a>
-
-```
-searchKey: crc32.TestGolden
-tags: [private]
-```
-
-```Go
-func TestGolden(t *testing.T)
-```
-
-### <a id="BenchmarkCRC32" href="#BenchmarkCRC32">func BenchmarkCRC32(b *testing.B)</a>
-
-```
-searchKey: crc32.BenchmarkCRC32
-tags: [private]
-```
-
-```Go
-func BenchmarkCRC32(b *testing.B)
-```
-
-### <a id="benchmarkAll" href="#benchmarkAll">func benchmarkAll(h hash.Hash32) func(b *testing.B)</a>
-
-```
-searchKey: crc32.benchmarkAll
-tags: [private]
-```
-
-```Go
-func benchmarkAll(h hash.Hash32) func(b *testing.B)
-```
-
-### <a id="benchmark" href="#benchmark">func benchmark(b *testing.B, h hash.Hash32, n, alignment int64)</a>
-
-```
-searchKey: crc32.benchmark
-tags: [private]
-```
-
-```Go
-func benchmark(b *testing.B, h hash.Hash32, n, alignment int64)
-```
+testGoldenIEEE verifies that the given function returns correct IEEE checksums. 
 

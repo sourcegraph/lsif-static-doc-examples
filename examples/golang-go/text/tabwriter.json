@@ -4,7 +4,9 @@
     "identifier": "tabwriter",
     "newPage": true,
     "searchKey": "text/tabwriter",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,12 +39,107 @@
         "children": [
           {
             "node": {
+              "pathID": "/text/tabwriter#AlignRight",
+              "documentation": {
+                "identifier": "AlignRight",
+                "newPage": false,
+                "searchKey": "tabwriter.AlignRight",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const AlignRight"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst AlignRight\n```\n\nFormatting can be controlled with these flags. \n\nForce right-alignment of cell content. Default is left-alignment. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/tabwriter#Debug",
+              "documentation": {
+                "identifier": "Debug",
+                "newPage": false,
+                "searchKey": "tabwriter.Debug",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Debug"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Debug\n```\n\nFormatting can be controlled with these flags. \n\nPrint a vertical bar ('|') between columns (after formatting). Discarded columns appear as zero-width columns (\"||\"). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/tabwriter#DiscardEmptyColumns",
+              "documentation": {
+                "identifier": "DiscardEmptyColumns",
+                "newPage": false,
+                "searchKey": "tabwriter.DiscardEmptyColumns",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const DiscardEmptyColumns"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst DiscardEmptyColumns\n```\n\nFormatting can be controlled with these flags. \n\nHandle empty columns as if they were not present in the input in the first place. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/tabwriter#Escape",
+              "documentation": {
+                "identifier": "Escape",
+                "newPage": false,
+                "searchKey": "tabwriter.Escape",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Escape"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Escape = '\\xff'\n```\n\nTo escape a text segment, bracket it with Escape characters. For instance, the tab in this string \"Ignore this tab: \\xff\\t\\xff\" does not terminate a cell and constitutes a single character of width one for formatting purposes. \n\nThe value 0xff was chosen because it cannot appear in a valid UTF-8 sequence. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/text/tabwriter#FilterHTML",
               "documentation": {
                 "identifier": "FilterHTML",
                 "newPage": false,
                 "searchKey": "tabwriter.FilterHTML",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +159,10 @@
                 "identifier": "StripEscape",
                 "newPage": false,
                 "searchKey": "tabwriter.StripEscape",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -75,52 +177,15 @@
           },
           {
             "node": {
-              "pathID": "/text/tabwriter#AlignRight",
-              "documentation": {
-                "identifier": "AlignRight",
-                "newPage": false,
-                "searchKey": "tabwriter.AlignRight",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const AlignRight"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst AlignRight\n```\n\nFormatting can be controlled with these flags. \n\nForce right-alignment of cell content. Default is left-alignment. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/text/tabwriter#DiscardEmptyColumns",
-              "documentation": {
-                "identifier": "DiscardEmptyColumns",
-                "newPage": false,
-                "searchKey": "tabwriter.DiscardEmptyColumns",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const DiscardEmptyColumns"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst DiscardEmptyColumns\n```\n\nFormatting can be controlled with these flags. \n\nHandle empty columns as if they were not present in the input in the first place. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/text/tabwriter#TabIndent",
               "documentation": {
                 "identifier": "TabIndent",
                 "newPage": false,
                 "searchKey": "tabwriter.TabIndent",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -129,46 +194,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst TabIndent\n```\n\nFormatting can be controlled with these flags. \n\nAlways use tabs for indentation columns (i.e., padding of leading empty cells on the left) independent of padchar. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/text/tabwriter#Debug",
-              "documentation": {
-                "identifier": "Debug",
-                "newPage": false,
-                "searchKey": "tabwriter.Debug",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const Debug"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst Debug\n```\n\nFormatting can be controlled with these flags. \n\nPrint a vertical bar ('|') between columns (after formatting). Discarded columns appear as zero-width columns (\"||\"). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/text/tabwriter#Escape",
-              "documentation": {
-                "identifier": "Escape",
-                "newPage": false,
-                "searchKey": "tabwriter.Escape",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const Escape"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst Escape = '\\xff'\n```\n\nTo escape a text segment, bracket it with Escape characters. For instance, the tab in this string \"Ignore this tab: \\xff\\t\\xff\" does not terminate a cell and constitutes a single character of width one for formatting purposes. \n\nThe value 0xff was chosen because it cannot appear in a valid UTF-8 sequence. \n\n"
               },
               "children": null
             }
@@ -183,7 +208,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -196,12 +223,40 @@
         "children": [
           {
             "node": {
+              "pathID": "/text/tabwriter#hbar",
+              "documentation": {
+                "identifier": "hbar",
+                "newPage": false,
+                "searchKey": "tabwriter.hbar",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var hbar"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar hbar = []byte(\"---\\n\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/text/tabwriter#newline",
               "documentation": {
                 "identifier": "newline",
                 "newPage": false,
                 "searchKey": "tabwriter.newline",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -224,6 +279,9 @@
                 "newPage": false,
                 "searchKey": "tabwriter.tabs",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -246,6 +304,9 @@
                 "newPage": false,
                 "searchKey": "tabwriter.vbar",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -256,28 +317,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar vbar = []byte{'|'}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/text/tabwriter#hbar",
-              "documentation": {
-                "identifier": "hbar",
-                "newPage": false,
-                "searchKey": "tabwriter.hbar",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var hbar"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar hbar = []byte(\"---\\n\")\n```\n\n"
               },
               "children": null
             }
@@ -292,7 +331,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -305,34 +346,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/text/tabwriter#cell",
-              "documentation": {
-                "identifier": "cell",
-                "newPage": false,
-                "searchKey": "tabwriter.cell",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type cell struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype cell struct {\n\tsize  int  // cell size in bytes\n\twidth int  // cell width in runes\n\thtab  bool // true if the cell is terminated by an htab ('\\t')\n}\n```\n\nA cell represents a segment of text terminated by tabs or line breaks. The text itself is stored in a separate buffer; cell only describes the segment's size in bytes, its width in runes, and whether it's an htab ('\\t') terminated cell. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/text/tabwriter#Writer",
               "documentation": {
                 "identifier": "Writer",
                 "newPage": false,
                 "searchKey": "tabwriter.Writer",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -350,7 +371,9 @@
                       "identifier": "NewWriter",
                       "newPage": false,
                       "searchKey": "tabwriter.NewWriter",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -365,12 +388,79 @@
                 },
                 {
                   "node": {
+                    "pathID": "/text/tabwriter#Writer.Flush",
+                    "documentation": {
+                      "identifier": "Writer.Flush",
+                      "newPage": false,
+                      "searchKey": "tabwriter.Writer.Flush",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Writer) Flush() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Writer) Flush() error\n```\n\nFlush should be called after the last call to Write to ensure that any data buffered in the Writer is written to output. Any incomplete escape sequence at the end is considered complete for formatting purposes. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/tabwriter#Writer.Init",
+                    "documentation": {
+                      "identifier": "Writer.Init",
+                      "newPage": false,
+                      "searchKey": "tabwriter.Writer.Init",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Writer) Init(output io.Writer, minwidth, tabwidth, padding int, padchar byte, flags uint) *Writer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Writer) Init(output io.Writer, minwidth, tabwidth, padding int, padchar byte, flags uint) *Writer\n```\n\nA Writer must be initialized with a call to Init. The first parameter (output) specifies the filter output. The remaining parameters control the formatting: \n\n```\nminwidth\tminimal cell width including any padding\ntabwidth\twidth of tab characters (equivalent number of spaces)\npadding\t\tpadding added to a cell before computing its width\npadchar\t\tASCII char used for padding\n\t\tif padchar == '\\t', the Writer will assume that the\n\t\twidth of a '\\t' in the formatted output is tabwidth,\n\t\tand cells are left-aligned independent of align_left\n\t\t(for correct-looking results, tabwidth must correspond\n\t\tto the tab width in the viewer displaying the result)\nflags\t\tformatting control\n\n```\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/tabwriter#Writer.Write",
+                    "documentation": {
+                      "identifier": "Writer.Write",
+                      "newPage": false,
+                      "searchKey": "tabwriter.Writer.Write",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Writer) Write(buf []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Writer) Write(buf []byte) (n int, err error)\n```\n\nWrite writes buf to the writer b. The only errors returned are ones encountered while writing to the underlying output stream. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/text/tabwriter#Writer.addLine",
                     "documentation": {
                       "identifier": "Writer.addLine",
                       "newPage": false,
                       "searchKey": "tabwriter.Writer.addLine",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -387,186 +477,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/text/tabwriter#Writer.reset",
-                    "documentation": {
-                      "identifier": "Writer.reset",
-                      "newPage": false,
-                      "searchKey": "tabwriter.Writer.reset",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Writer) reset()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Writer) reset()\n```\n\nReset the current state. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/text/tabwriter#Writer.Init",
-                    "documentation": {
-                      "identifier": "Writer.Init",
-                      "newPage": false,
-                      "searchKey": "tabwriter.Writer.Init",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Writer) Init(output io.Writer, minwidth, tabwidth, padding int, padchar byte, flags uint) *Writer"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Writer) Init(output io.Writer, minwidth, tabwidth, padding int, padchar byte, flags uint) *Writer\n```\n\nA Writer must be initialized with a call to Init. The first parameter (output) specifies the filter output. The remaining parameters control the formatting: \n\n```\nminwidth\tminimal cell width including any padding\ntabwidth\twidth of tab characters (equivalent number of spaces)\npadding\t\tpadding added to a cell before computing its width\npadchar\t\tASCII char used for padding\n\t\tif padchar == '\\t', the Writer will assume that the\n\t\twidth of a '\\t' in the formatted output is tabwidth,\n\t\tand cells are left-aligned independent of align_left\n\t\t(for correct-looking results, tabwidth must correspond\n\t\tto the tab width in the viewer displaying the result)\nflags\t\tformatting control\n\n```\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/text/tabwriter#Writer.dump",
-                    "documentation": {
-                      "identifier": "Writer.dump",
-                      "newPage": false,
-                      "searchKey": "tabwriter.Writer.dump",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Writer) dump()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Writer) dump()\n```\n\ndebugging support (keep code around) \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/text/tabwriter#Writer.write0",
-                    "documentation": {
-                      "identifier": "Writer.write0",
-                      "newPage": false,
-                      "searchKey": "tabwriter.Writer.write0",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Writer) write0(buf []byte)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Writer) write0(buf []byte)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/text/tabwriter#Writer.writeN",
-                    "documentation": {
-                      "identifier": "Writer.writeN",
-                      "newPage": false,
-                      "searchKey": "tabwriter.Writer.writeN",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Writer) writeN(src []byte, n int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Writer) writeN(src []byte, n int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/text/tabwriter#Writer.writePadding",
-                    "documentation": {
-                      "identifier": "Writer.writePadding",
-                      "newPage": false,
-                      "searchKey": "tabwriter.Writer.writePadding",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Writer) writePadding(textw, cellw int, useTabs bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Writer) writePadding(textw, cellw int, useTabs bool)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/text/tabwriter#Writer.writeLines",
-                    "documentation": {
-                      "identifier": "Writer.writeLines",
-                      "newPage": false,
-                      "searchKey": "tabwriter.Writer.writeLines",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Writer) writeLines(pos0 int, line0, line1 int) (pos int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Writer) writeLines(pos0 int, line0, line1 int) (pos int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/text/tabwriter#Writer.format",
-                    "documentation": {
-                      "identifier": "Writer.format",
-                      "newPage": false,
-                      "searchKey": "tabwriter.Writer.format",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Writer) format(pos0 int, line0, line1 int) (pos int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Writer) format(pos0 int, line0, line1 int) (pos int)\n```\n\nFormat the text between line0 and line1 (excluding line1); pos is the buffer position corresponding to the beginning of line0. Returns the buffer position corresponding to the beginning of line1 and an error, if any. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/text/tabwriter#Writer.append",
                     "documentation": {
                       "identifier": "Writer.append",
                       "newPage": false,
                       "searchKey": "tabwriter.Writer.append",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -583,44 +500,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/text/tabwriter#Writer.updateWidth",
+                    "pathID": "/text/tabwriter#Writer.dump",
                     "documentation": {
-                      "identifier": "Writer.updateWidth",
+                      "identifier": "Writer.dump",
                       "newPage": false,
-                      "searchKey": "tabwriter.Writer.updateWidth",
+                      "searchKey": "tabwriter.Writer.dump",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (b *Writer) updateWidth()"
+                      "value": "func (b *Writer) dump()"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (b *Writer) updateWidth()\n```\n\nUpdate the cell width. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/text/tabwriter#Writer.startEscape",
-                    "documentation": {
-                      "identifier": "Writer.startEscape",
-                      "newPage": false,
-                      "searchKey": "tabwriter.Writer.startEscape",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Writer) startEscape(ch byte)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Writer) startEscape(ch byte)\n```\n\nStart escaped mode. \n\n"
+                      "value": "```Go\nfunc (b *Writer) dump()\n```\n\ndebugging support (keep code around) \n\n"
                     },
                     "children": null
                   }
@@ -633,6 +529,7 @@
                       "newPage": false,
                       "searchKey": "tabwriter.Writer.endEscape",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -649,76 +546,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/text/tabwriter#Writer.terminateCell",
-                    "documentation": {
-                      "identifier": "Writer.terminateCell",
-                      "newPage": false,
-                      "searchKey": "tabwriter.Writer.terminateCell",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Writer) terminateCell(htab bool) int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Writer) terminateCell(htab bool) int\n```\n\nTerminate the current cell by adding it to the list of cells of the current line. Returns the number of cells in that line. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/text/tabwriter#Writer.handlePanic",
-                    "documentation": {
-                      "identifier": "Writer.handlePanic",
-                      "newPage": false,
-                      "searchKey": "tabwriter.Writer.handlePanic",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Writer) handlePanic(err *error, op string)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Writer) handlePanic(err *error, op string)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/text/tabwriter#Writer.Flush",
-                    "documentation": {
-                      "identifier": "Writer.Flush",
-                      "newPage": false,
-                      "searchKey": "tabwriter.Writer.Flush",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Writer) Flush() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Writer) Flush() error\n```\n\nFlush should be called after the last call to Write to ensure that any data buffered in the Writer is written to output. Any incomplete escape sequence at the end is considered complete for formatting purposes. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/text/tabwriter#Writer.flush",
                     "documentation": {
                       "identifier": "Writer.flush",
                       "newPage": false,
                       "searchKey": "tabwriter.Writer.flush",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -741,6 +575,7 @@
                       "newPage": false,
                       "searchKey": "tabwriter.Writer.flushNoDefers",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -757,25 +592,258 @@
                 },
                 {
                   "node": {
-                    "pathID": "/text/tabwriter#Writer.Write",
+                    "pathID": "/text/tabwriter#Writer.format",
                     "documentation": {
-                      "identifier": "Writer.Write",
+                      "identifier": "Writer.format",
                       "newPage": false,
-                      "searchKey": "tabwriter.Writer.Write",
-                      "tags": null
+                      "searchKey": "tabwriter.Writer.format",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (b *Writer) Write(buf []byte) (n int, err error)"
+                      "value": "func (b *Writer) format(pos0 int, line0, line1 int) (pos int)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (b *Writer) Write(buf []byte) (n int, err error)\n```\n\nWrite writes buf to the writer b. The only errors returned are ones encountered while writing to the underlying output stream. \n\n"
+                      "value": "```Go\nfunc (b *Writer) format(pos0 int, line0, line1 int) (pos int)\n```\n\nFormat the text between line0 and line1 (excluding line1); pos is the buffer position corresponding to the beginning of line0. Returns the buffer position corresponding to the beginning of line1 and an error, if any. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/tabwriter#Writer.handlePanic",
+                    "documentation": {
+                      "identifier": "Writer.handlePanic",
+                      "newPage": false,
+                      "searchKey": "tabwriter.Writer.handlePanic",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Writer) handlePanic(err *error, op string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Writer) handlePanic(err *error, op string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/tabwriter#Writer.reset",
+                    "documentation": {
+                      "identifier": "Writer.reset",
+                      "newPage": false,
+                      "searchKey": "tabwriter.Writer.reset",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Writer) reset()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Writer) reset()\n```\n\nReset the current state. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/tabwriter#Writer.startEscape",
+                    "documentation": {
+                      "identifier": "Writer.startEscape",
+                      "newPage": false,
+                      "searchKey": "tabwriter.Writer.startEscape",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Writer) startEscape(ch byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Writer) startEscape(ch byte)\n```\n\nStart escaped mode. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/tabwriter#Writer.terminateCell",
+                    "documentation": {
+                      "identifier": "Writer.terminateCell",
+                      "newPage": false,
+                      "searchKey": "tabwriter.Writer.terminateCell",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Writer) terminateCell(htab bool) int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Writer) terminateCell(htab bool) int\n```\n\nTerminate the current cell by adding it to the list of cells of the current line. Returns the number of cells in that line. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/tabwriter#Writer.updateWidth",
+                    "documentation": {
+                      "identifier": "Writer.updateWidth",
+                      "newPage": false,
+                      "searchKey": "tabwriter.Writer.updateWidth",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Writer) updateWidth()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Writer) updateWidth()\n```\n\nUpdate the cell width. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/tabwriter#Writer.write0",
+                    "documentation": {
+                      "identifier": "Writer.write0",
+                      "newPage": false,
+                      "searchKey": "tabwriter.Writer.write0",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Writer) write0(buf []byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Writer) write0(buf []byte)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/tabwriter#Writer.writeLines",
+                    "documentation": {
+                      "identifier": "Writer.writeLines",
+                      "newPage": false,
+                      "searchKey": "tabwriter.Writer.writeLines",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Writer) writeLines(pos0 int, line0, line1 int) (pos int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Writer) writeLines(pos0 int, line0, line1 int) (pos int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/tabwriter#Writer.writeN",
+                    "documentation": {
+                      "identifier": "Writer.writeN",
+                      "newPage": false,
+                      "searchKey": "tabwriter.Writer.writeN",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Writer) writeN(src []byte, n int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Writer) writeN(src []byte, n int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/tabwriter#Writer.writePadding",
+                    "documentation": {
+                      "identifier": "Writer.writePadding",
+                      "newPage": false,
+                      "searchKey": "tabwriter.Writer.writePadding",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Writer) writePadding(textw, cellw int, useTabs bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Writer) writePadding(textw, cellw int, useTabs bool)\n```\n\n"
                     },
                     "children": null
                   }
                 }
               ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/tabwriter#cell",
+              "documentation": {
+                "identifier": "cell",
+                "newPage": false,
+                "searchKey": "tabwriter.cell",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type cell struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype cell struct {\n\tsize  int  // cell size in bytes\n\twidth int  // cell width in runes\n\thtab  bool // true if the cell is terminated by an htab ('\\t')\n}\n```\n\nA cell represents a segment of text terminated by tabs or line breaks. The text itself is stored in a separate buffer; cell only describes the segment's size in bytes, its width in runes, and whether it's an htab ('\\t') terminated cell. \n\n"
+              },
+              "children": null
             }
           },
           {
@@ -786,6 +854,7 @@
                 "newPage": false,
                 "searchKey": "tabwriter.osError",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },

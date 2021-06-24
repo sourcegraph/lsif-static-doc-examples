@@ -7,11 +7,11 @@ Package query provides an expression tree structure which can be converted into 
 * [Types](#type)
     * [type Q interface{}](#Q)
         * [func And(children ...Q) Q](#And)
-        * [func Or(children ...Q) Q](#Or)
         * [func Not(child Q) Q](#Not)
+        * [func Or(children ...Q) Q](#Or)
     * [type and struct](#and)
-    * [type or struct](#or)
     * [type not struct](#not)
+    * [type or struct](#or)
     * [type printfBindVar struct{}](#printfBindVar)
         * [func (printfBindVar) BindVar(i int) string](#printfBindVar.BindVar)
 * [Functions](#func)
@@ -22,13 +22,14 @@ Package query provides an expression tree structure which can be converted into 
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Q" href="#Q">type Q interface{}</a>
 
 ```
 searchKey: query.Q
+tags: [interface]
 ```
 
 ```Go
@@ -41,6 +42,7 @@ Q is a query item. It is converted into a *sqlf.Query by Eval.
 
 ```
 searchKey: query.And
+tags: [method]
 ```
 
 ```Go
@@ -49,22 +51,11 @@ func And(children ...Q) Q
 
 And returns a Q which when evaluated will join the children by "AND". 
 
-#### <a id="Or" href="#Or">func Or(children ...Q) Q</a>
-
-```
-searchKey: query.Or
-```
-
-```Go
-func Or(children ...Q) Q
-```
-
-Or returns a Q which when evaluated will join the children by "OR". 
-
 #### <a id="Not" href="#Not">func Not(child Q) Q</a>
 
 ```
 searchKey: query.Not
+tags: [method]
 ```
 
 ```Go
@@ -73,11 +64,24 @@ func Not(child Q) Q
 
 Not returns a Q which when evaluated will wrap child with "NOT". 
 
+#### <a id="Or" href="#Or">func Or(children ...Q) Q</a>
+
+```
+searchKey: query.Or
+tags: [method]
+```
+
+```Go
+func Or(children ...Q) Q
+```
+
+Or returns a Q which when evaluated will join the children by "OR". 
+
 ### <a id="and" href="#and">type and struct</a>
 
 ```
 searchKey: query.and
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -86,24 +90,11 @@ type and struct {
 }
 ```
 
-### <a id="or" href="#or">type or struct</a>
-
-```
-searchKey: query.or
-tags: [private]
-```
-
-```Go
-type or struct {
-	Children []Q
-}
-```
-
 ### <a id="not" href="#not">type not struct</a>
 
 ```
 searchKey: query.not
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -112,11 +103,24 @@ type not struct {
 }
 ```
 
+### <a id="or" href="#or">type or struct</a>
+
+```
+searchKey: query.or
+tags: [struct private]
+```
+
+```Go
+type or struct {
+	Children []Q
+}
+```
+
 ### <a id="printfBindVar" href="#printfBindVar">type printfBindVar struct{}</a>
 
 ```
 searchKey: query.printfBindVar
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -127,7 +131,7 @@ type printfBindVar struct{}
 
 ```
 searchKey: query.printfBindVar.BindVar
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -137,13 +141,14 @@ func (printfBindVar) BindVar(i int) string
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Eval" href="#Eval">func Eval(q Q, atomToQueryFn func(q Q) (*sqlf.Query, error)) (*sqlf.Query, error)</a>
 
 ```
 searchKey: query.Eval
+tags: [method]
 ```
 
 ```Go
@@ -174,6 +179,7 @@ Typically we expect atomToQueryFn to return a SQL condition like "name LIKE $q".
 
 ```
 searchKey: query.Print
+tags: [method]
 ```
 
 ```Go

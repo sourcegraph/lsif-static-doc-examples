@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "cmd/symbols/internal/sqliteutil",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "sqliteutil.libSqlite3Pcre",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -89,7 +94,9 @@
                 "identifier": "MustRegisterSqlite3WithPcre",
                 "newPage": false,
                 "searchKey": "sqliteutil.MustRegisterSqlite3WithPcre",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -109,7 +116,9 @@
                 "identifier": "SetLocalLibpath",
                 "newPage": false,
                 "searchKey": "sqliteutil.SetLocalLibpath",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -4,7 +4,9 @@
     "identifier": "monitoring",
     "newPage": true,
     "searchKey": "monitoring",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,44 +39,23 @@
         "children": [
           {
             "node": {
-              "pathID": "/monitoring#optsFromEnv",
+              "pathID": "/monitoring#getEnvBool",
               "documentation": {
-                "identifier": "optsFromEnv",
+                "identifier": "getEnvBool",
                 "newPage": false,
-                "searchKey": "main.optsFromEnv",
+                "searchKey": "main.getEnvBool",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func optsFromEnv() monitoring.GenerateOptions"
+                "value": "func getEnvBool(key string, defaultValue bool) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc optsFromEnv() monitoring.GenerateOptions\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/monitoring#main",
-              "documentation": {
-                "identifier": "main",
-                "newPage": false,
-                "searchKey": "main.main",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func main()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc main()\n```\n\n"
+                "value": "```Go\nfunc getEnvBool(key string, defaultValue bool) bool\n```\n\n"
               },
               "children": null
             }
@@ -85,6 +68,7 @@
                 "newPage": false,
                 "searchKey": "main.getEnvStr",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -101,22 +85,46 @@
           },
           {
             "node": {
-              "pathID": "/monitoring#getEnvBool",
+              "pathID": "/monitoring#main",
               "documentation": {
-                "identifier": "getEnvBool",
+                "identifier": "main",
                 "newPage": false,
-                "searchKey": "main.getEnvBool",
+                "searchKey": "main.main",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func getEnvBool(key string, defaultValue bool) bool"
+                "value": "func main()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc getEnvBool(key string, defaultValue bool) bool\n```\n\n"
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring#optsFromEnv",
+              "documentation": {
+                "identifier": "optsFromEnv",
+                "newPage": false,
+                "searchKey": "main.optsFromEnv",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func optsFromEnv() monitoring.GenerateOptions"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc optsFromEnv() monitoring.GenerateOptions\n```\n\n"
               },
               "children": null
             }

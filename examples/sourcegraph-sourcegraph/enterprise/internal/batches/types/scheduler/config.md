@@ -15,24 +15,24 @@
         * [func (c *configuration) notify()](#configuration.notify)
 * [Functions](#func)
     * [func ActiveWindow() *window.Configuration](#ActiveWindow)
-    * [func Subscribe() chan *window.Configuration](#Subscribe)
-    * [func Unsubscribe(ch chan *window.Configuration)](#Unsubscribe)
     * [func Reset()](#Reset)
-    * [func sameConfiguration(prev, next *[]*schema.BatchChangeRolloutWindow) bool](#sameConfiguration)
+    * [func Subscribe() chan *window.Configuration](#Subscribe)
     * [func TestConfiguration(t *testing.T)](#TestConfiguration)
+    * [func Unsubscribe(ch chan *window.Configuration)](#Unsubscribe)
+    * [func sameConfiguration(prev, next *[]*schema.BatchChangeRolloutWindow) bool](#sameConfiguration)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="config" href="#config">var config</a>
 
 ```
 searchKey: config.config
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -45,7 +45,7 @@ This is a singleton because, well, the entire site configuration system essentia
 
 ```
 searchKey: config.mu
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -57,14 +57,14 @@ This is a singleton because, well, the entire site configuration system essentia
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="configuration" href="#configuration">type configuration struct</a>
 
 ```
 searchKey: config.configuration
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -82,7 +82,7 @@ configuration wraps window.Configuration in a thread-safe manner, while allowing
 
 ```
 searchKey: config.ensureConfig
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -95,7 +95,7 @@ ensureConfig grabs the current configuration, lazily constructing it if necessar
 
 ```
 searchKey: config.newConfiguration
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -106,7 +106,7 @@ func newConfiguration() *configuration
 
 ```
 searchKey: config.configuration.Active
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -117,7 +117,7 @@ func (c *configuration) Active() *window.Configuration
 
 ```
 searchKey: config.configuration.Subscribe
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -128,7 +128,7 @@ func (c *configuration) Subscribe() chan *window.Configuration
 
 ```
 searchKey: config.configuration.Unsubscribe
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -139,7 +139,7 @@ func (c *configuration) Unsubscribe(ch chan *window.Configuration)
 
 ```
 searchKey: config.configuration.notify
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -149,13 +149,14 @@ func (c *configuration) notify()
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="ActiveWindow" href="#ActiveWindow">func ActiveWindow() *window.Configuration</a>
 
 ```
 searchKey: config.ActiveWindow
+tags: [function]
 ```
 
 ```Go
@@ -164,34 +165,11 @@ func ActiveWindow() *window.Configuration
 
 ActiveWindow returns the window configuration in effect at the present time. This is not a live object, and may become outdated if held for long periods. 
 
-### <a id="Subscribe" href="#Subscribe">func Subscribe() chan *window.Configuration</a>
-
-```
-searchKey: config.Subscribe
-```
-
-```Go
-func Subscribe() chan *window.Configuration
-```
-
-Subscribe returns a channel that will receive a message with the new configuration each time it is updated. 
-
-### <a id="Unsubscribe" href="#Unsubscribe">func Unsubscribe(ch chan *window.Configuration)</a>
-
-```
-searchKey: config.Unsubscribe
-```
-
-```Go
-func Unsubscribe(ch chan *window.Configuration)
-```
-
-Unsubscribe removes a channel returned from Subscribe() from the notification list. 
-
 ### <a id="Reset" href="#Reset">func Reset()</a>
 
 ```
 searchKey: config.Reset
+tags: [function]
 ```
 
 ```Go
@@ -200,25 +178,51 @@ func Reset()
 
 Reset destroys the existing singleton and forces it to be reinitialised the next time Active() is called. This should never be used in non-testing code. 
 
-### <a id="sameConfiguration" href="#sameConfiguration">func sameConfiguration(prev, next *[]*schema.BatchChangeRolloutWindow) bool</a>
+### <a id="Subscribe" href="#Subscribe">func Subscribe() chan *window.Configuration</a>
 
 ```
-searchKey: config.sameConfiguration
-tags: [private]
+searchKey: config.Subscribe
+tags: [function]
 ```
 
 ```Go
-func sameConfiguration(prev, next *[]*schema.BatchChangeRolloutWindow) bool
+func Subscribe() chan *window.Configuration
 ```
+
+Subscribe returns a channel that will receive a message with the new configuration each time it is updated. 
 
 ### <a id="TestConfiguration" href="#TestConfiguration">func TestConfiguration(t *testing.T)</a>
 
 ```
 searchKey: config.TestConfiguration
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestConfiguration(t *testing.T)
+```
+
+### <a id="Unsubscribe" href="#Unsubscribe">func Unsubscribe(ch chan *window.Configuration)</a>
+
+```
+searchKey: config.Unsubscribe
+tags: [method]
+```
+
+```Go
+func Unsubscribe(ch chan *window.Configuration)
+```
+
+Unsubscribe removes a channel returned from Subscribe() from the notification list. 
+
+### <a id="sameConfiguration" href="#sameConfiguration">func sameConfiguration(prev, next *[]*schema.BatchChangeRolloutWindow) bool</a>
+
+```
+searchKey: config.sameConfiguration
+tags: [method private]
+```
+
+```Go
+func sameConfiguration(prev, next *[]*schema.BatchChangeRolloutWindow) bool
 ```
 

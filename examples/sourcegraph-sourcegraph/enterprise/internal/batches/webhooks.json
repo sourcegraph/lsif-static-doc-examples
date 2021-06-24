@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/internal/batches/webhooks",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/webhooks#githubEvents",
-              "documentation": {
-                "identifier": "githubEvents",
-                "newPage": false,
-                "searchKey": "webhooks.githubEvents",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var githubEvents"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar githubEvents = ...\n```\n\ngithubEvents is the set of events this webhook handler listens to you can find info about what these events contain here: [https://docs.github.com/en/free-pro-team](https://docs.github.com/en/free-pro-team)@latest/developers/webhooks-and-events/webhook-events-and-payloads \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/batches/webhooks#errExternalServiceNotFound",
               "documentation": {
                 "identifier": "errExternalServiceNotFound",
                 "newPage": false,
                 "searchKey": "webhooks.errExternalServiceNotFound",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -89,6 +71,8 @@
                 "newPage": false,
                 "searchKey": "webhooks.errExternalServiceWrongKind",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -111,6 +95,8 @@
                 "newPage": false,
                 "searchKey": "webhooks.errPipelineMissingMergeRequest",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -127,12 +113,39 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/batches/webhooks#githubEvents",
+              "documentation": {
+                "identifier": "githubEvents",
+                "newPage": false,
+                "searchKey": "webhooks.githubEvents",
+                "tags": [
+                  "variable",
+                  "array",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var githubEvents"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar githubEvents = ...\n```\n\ngithubEvents is the set of events this webhook handler listens to you can find info about what these events contain here: [https://docs.github.com/en/free-pro-team](https://docs.github.com/en/free-pro-team)@latest/developers/webhooks-and-events/webhook-events-and-payloads \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/batches/webhooks#update",
               "documentation": {
                 "identifier": "update",
                 "newPage": false,
                 "searchKey": "webhooks.update",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
@@ -158,6 +171,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -177,7 +191,9 @@
                 "identifier": "BitbucketServerWebhook",
                 "newPage": false,
                 "searchKey": "webhooks.BitbucketServerWebhook",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -195,7 +211,9 @@
                       "identifier": "NewBitbucketServerWebhook",
                       "newPage": false,
                       "searchKey": "webhooks.NewBitbucketServerWebhook",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -215,7 +233,9 @@
                       "identifier": "BitbucketServerWebhook.ServeHTTP",
                       "newPage": false,
                       "searchKey": "webhooks.BitbucketServerWebhook.ServeHTTP",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -230,34 +250,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/batches/webhooks#BitbucketServerWebhook.parseEvent",
-                    "documentation": {
-                      "identifier": "BitbucketServerWebhook.parseEvent",
-                      "newPage": false,
-                      "searchKey": "webhooks.BitbucketServerWebhook.parseEvent",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *BitbucketServerWebhook) parseEvent(r *http.Request) (interface{}, *types.ExternalService, *httpError)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *BitbucketServerWebhook) parseEvent(r *http.Request) (interface{}, *types.ExternalService, *httpError)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/internal/batches/webhooks#BitbucketServerWebhook.convertEvent",
                     "documentation": {
                       "identifier": "BitbucketServerWebhook.convertEvent",
                       "newPage": false,
                       "searchKey": "webhooks.BitbucketServerWebhook.convertEvent",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -268,6 +267,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (h *BitbucketServerWebhook) convertEvent(theirs interface{}) (prs []PR, ours keyer)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/webhooks#BitbucketServerWebhook.parseEvent",
+                    "documentation": {
+                      "identifier": "BitbucketServerWebhook.parseEvent",
+                      "newPage": false,
+                      "searchKey": "webhooks.BitbucketServerWebhook.parseEvent",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *BitbucketServerWebhook) parseEvent(r *http.Request) (interface{}, *types.ExternalService, *httpError)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *BitbucketServerWebhook) parseEvent(r *http.Request) (interface{}, *types.ExternalService, *httpError)\n```\n\n"
                     },
                     "children": null
                   }
@@ -282,7 +304,9 @@
                 "identifier": "GitHubWebhook",
                 "newPage": false,
                 "searchKey": "webhooks.GitHubWebhook",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -300,7 +324,9 @@
                       "identifier": "NewGitHubWebhook",
                       "newPage": false,
                       "searchKey": "webhooks.NewGitHubWebhook",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -320,7 +346,9 @@
                       "identifier": "GitHubWebhook.Register",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.Register",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -335,22 +363,115 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.handleGitHubWebhook",
+                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.assignedEvent",
                     "documentation": {
-                      "identifier": "GitHubWebhook.handleGitHubWebhook",
+                      "identifier": "GitHubWebhook.assignedEvent",
                       "newPage": false,
-                      "searchKey": "webhooks.GitHubWebhook.handleGitHubWebhook",
+                      "searchKey": "webhooks.GitHubWebhook.assignedEvent",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (h *GitHubWebhook) handleGitHubWebhook(ctx context.Context, extSvc *types.ExternalService, payload interface{}) error"
+                      "value": "func (*GitHubWebhook) assignedEvent(e *gh.PullRequestEvent) *github.AssignedEvent"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (h *GitHubWebhook) handleGitHubWebhook(ctx context.Context, extSvc *types.ExternalService, payload interface{}) error\n```\n\nhandleGithubWebhook is the entry point for webhooks from the webhook router, see the events it's registered to handle in GitHubWebhook.Register \n\n"
+                      "value": "```Go\nfunc (*GitHubWebhook) assignedEvent(e *gh.PullRequestEvent) *github.AssignedEvent\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.checkRunEvent",
+                    "documentation": {
+                      "identifier": "GitHubWebhook.checkRunEvent",
+                      "newPage": false,
+                      "searchKey": "webhooks.GitHubWebhook.checkRunEvent",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *GitHubWebhook) checkRunEvent(cr *gh.CheckRun) *github.CheckRun"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *GitHubWebhook) checkRunEvent(cr *gh.CheckRun) *github.CheckRun\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.checkSuiteEvent",
+                    "documentation": {
+                      "identifier": "GitHubWebhook.checkSuiteEvent",
+                      "newPage": false,
+                      "searchKey": "webhooks.GitHubWebhook.checkSuiteEvent",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *GitHubWebhook) checkSuiteEvent(cs *gh.CheckSuite) *github.CheckSuite"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *GitHubWebhook) checkSuiteEvent(cs *gh.CheckSuite) *github.CheckSuite\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.closedOrMergeEvent",
+                    "documentation": {
+                      "identifier": "GitHubWebhook.closedOrMergeEvent",
+                      "newPage": false,
+                      "searchKey": "webhooks.GitHubWebhook.closedOrMergeEvent",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*GitHubWebhook) closedOrMergeEvent(e *gh.PullRequestEvent) keyer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*GitHubWebhook) closedOrMergeEvent(e *gh.PullRequestEvent) keyer\n```\n\nclosed events from github have a 'merged flag which identifies them as merge events instead. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.commitStatusEvent",
+                    "documentation": {
+                      "identifier": "GitHubWebhook.commitStatusEvent",
+                      "newPage": false,
+                      "searchKey": "webhooks.GitHubWebhook.commitStatusEvent",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *GitHubWebhook) commitStatusEvent(e *gh.StatusEvent) *github.CommitStatus"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *GitHubWebhook) commitStatusEvent(e *gh.StatusEvent) *github.CommitStatus\n```\n\n"
                     },
                     "children": null
                   }
@@ -363,6 +484,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.convertEvent",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -379,12 +501,59 @@
                 },
                 {
                   "node": {
+                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.convertToDraftEvent",
+                    "documentation": {
+                      "identifier": "GitHubWebhook.convertToDraftEvent",
+                      "newPage": false,
+                      "searchKey": "webhooks.GitHubWebhook.convertToDraftEvent",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*GitHubWebhook) convertToDraftEvent(e *gh.PullRequestEvent) *github.ConvertToDraftEvent"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*GitHubWebhook) convertToDraftEvent(e *gh.PullRequestEvent) *github.ConvertToDraftEvent\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.handleGitHubWebhook",
+                    "documentation": {
+                      "identifier": "GitHubWebhook.handleGitHubWebhook",
+                      "newPage": false,
+                      "searchKey": "webhooks.GitHubWebhook.handleGitHubWebhook",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *GitHubWebhook) handleGitHubWebhook(ctx context.Context, extSvc *types.ExternalService, payload interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *GitHubWebhook) handleGitHubWebhook(ctx context.Context, extSvc *types.ExternalService, payload interface{}) error\n```\n\nhandleGithubWebhook is the entry point for webhooks from the webhook router, see the events it's registered to handle in GitHubWebhook.Register \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.issueComment",
                     "documentation": {
                       "identifier": "GitHubWebhook.issueComment",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.issueComment",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -407,6 +576,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.labeledEvent",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -423,232 +593,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.readyForReviewEvent",
-                    "documentation": {
-                      "identifier": "GitHubWebhook.readyForReviewEvent",
-                      "newPage": false,
-                      "searchKey": "webhooks.GitHubWebhook.readyForReviewEvent",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*GitHubWebhook) readyForReviewEvent(e *gh.PullRequestEvent) *github.ReadyForReviewEvent"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*GitHubWebhook) readyForReviewEvent(e *gh.PullRequestEvent) *github.ReadyForReviewEvent\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.convertToDraftEvent",
-                    "documentation": {
-                      "identifier": "GitHubWebhook.convertToDraftEvent",
-                      "newPage": false,
-                      "searchKey": "webhooks.GitHubWebhook.convertToDraftEvent",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*GitHubWebhook) convertToDraftEvent(e *gh.PullRequestEvent) *github.ConvertToDraftEvent"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*GitHubWebhook) convertToDraftEvent(e *gh.PullRequestEvent) *github.ConvertToDraftEvent\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.assignedEvent",
-                    "documentation": {
-                      "identifier": "GitHubWebhook.assignedEvent",
-                      "newPage": false,
-                      "searchKey": "webhooks.GitHubWebhook.assignedEvent",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*GitHubWebhook) assignedEvent(e *gh.PullRequestEvent) *github.AssignedEvent"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*GitHubWebhook) assignedEvent(e *gh.PullRequestEvent) *github.AssignedEvent\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.unassignedEvent",
-                    "documentation": {
-                      "identifier": "GitHubWebhook.unassignedEvent",
-                      "newPage": false,
-                      "searchKey": "webhooks.GitHubWebhook.unassignedEvent",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*GitHubWebhook) unassignedEvent(e *gh.PullRequestEvent) *github.UnassignedEvent"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*GitHubWebhook) unassignedEvent(e *gh.PullRequestEvent) *github.UnassignedEvent\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.reviewRequestedEvent",
-                    "documentation": {
-                      "identifier": "GitHubWebhook.reviewRequestedEvent",
-                      "newPage": false,
-                      "searchKey": "webhooks.GitHubWebhook.reviewRequestedEvent",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*GitHubWebhook) reviewRequestedEvent(e *gh.PullRequestEvent) *github.ReviewRequestedEvent"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*GitHubWebhook) reviewRequestedEvent(e *gh.PullRequestEvent) *github.ReviewRequestedEvent\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.reviewRequestRemovedEvent",
-                    "documentation": {
-                      "identifier": "GitHubWebhook.reviewRequestRemovedEvent",
-                      "newPage": false,
-                      "searchKey": "webhooks.GitHubWebhook.reviewRequestRemovedEvent",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*GitHubWebhook) reviewRequestRemovedEvent(e *gh.PullRequestEvent) *github.ReviewRequestRemovedEvent"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*GitHubWebhook) reviewRequestRemovedEvent(e *gh.PullRequestEvent) *github.ReviewRequestRemovedEvent\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.renamedTitleEvent",
-                    "documentation": {
-                      "identifier": "GitHubWebhook.renamedTitleEvent",
-                      "newPage": false,
-                      "searchKey": "webhooks.GitHubWebhook.renamedTitleEvent",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*GitHubWebhook) renamedTitleEvent(e *gh.PullRequestEvent) *github.RenamedTitleEvent"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*GitHubWebhook) renamedTitleEvent(e *gh.PullRequestEvent) *github.RenamedTitleEvent\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.closedOrMergeEvent",
-                    "documentation": {
-                      "identifier": "GitHubWebhook.closedOrMergeEvent",
-                      "newPage": false,
-                      "searchKey": "webhooks.GitHubWebhook.closedOrMergeEvent",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*GitHubWebhook) closedOrMergeEvent(e *gh.PullRequestEvent) keyer"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*GitHubWebhook) closedOrMergeEvent(e *gh.PullRequestEvent) keyer\n```\n\nclosed events from github have a 'merged flag which identifies them as merge events instead. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.reopenedEvent",
-                    "documentation": {
-                      "identifier": "GitHubWebhook.reopenedEvent",
-                      "newPage": false,
-                      "searchKey": "webhooks.GitHubWebhook.reopenedEvent",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*GitHubWebhook) reopenedEvent(e *gh.PullRequestEvent) *github.ReopenedEvent"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*GitHubWebhook) reopenedEvent(e *gh.PullRequestEvent) *github.ReopenedEvent\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.pullRequestReviewEvent",
-                    "documentation": {
-                      "identifier": "GitHubWebhook.pullRequestReviewEvent",
-                      "newPage": false,
-                      "searchKey": "webhooks.GitHubWebhook.pullRequestReviewEvent",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*GitHubWebhook) pullRequestReviewEvent(e *gh.PullRequestReviewEvent) *github.PullRequestReview"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*GitHubWebhook) pullRequestReviewEvent(e *gh.PullRequestReviewEvent) *github.PullRequestReview\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.pullRequestReviewCommentEvent",
                     "documentation": {
                       "identifier": "GitHubWebhook.pullRequestReviewCommentEvent",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.pullRequestReviewCommentEvent",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -665,66 +616,161 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.commitStatusEvent",
+                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.pullRequestReviewEvent",
                     "documentation": {
-                      "identifier": "GitHubWebhook.commitStatusEvent",
+                      "identifier": "GitHubWebhook.pullRequestReviewEvent",
                       "newPage": false,
-                      "searchKey": "webhooks.GitHubWebhook.commitStatusEvent",
+                      "searchKey": "webhooks.GitHubWebhook.pullRequestReviewEvent",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (h *GitHubWebhook) commitStatusEvent(e *gh.StatusEvent) *github.CommitStatus"
+                      "value": "func (*GitHubWebhook) pullRequestReviewEvent(e *gh.PullRequestReviewEvent) *github.PullRequestReview"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (h *GitHubWebhook) commitStatusEvent(e *gh.StatusEvent) *github.CommitStatus\n```\n\n"
+                      "value": "```Go\nfunc (*GitHubWebhook) pullRequestReviewEvent(e *gh.PullRequestReviewEvent) *github.PullRequestReview\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.checkSuiteEvent",
+                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.readyForReviewEvent",
                     "documentation": {
-                      "identifier": "GitHubWebhook.checkSuiteEvent",
+                      "identifier": "GitHubWebhook.readyForReviewEvent",
                       "newPage": false,
-                      "searchKey": "webhooks.GitHubWebhook.checkSuiteEvent",
+                      "searchKey": "webhooks.GitHubWebhook.readyForReviewEvent",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (h *GitHubWebhook) checkSuiteEvent(cs *gh.CheckSuite) *github.CheckSuite"
+                      "value": "func (*GitHubWebhook) readyForReviewEvent(e *gh.PullRequestEvent) *github.ReadyForReviewEvent"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (h *GitHubWebhook) checkSuiteEvent(cs *gh.CheckSuite) *github.CheckSuite\n```\n\n"
+                      "value": "```Go\nfunc (*GitHubWebhook) readyForReviewEvent(e *gh.PullRequestEvent) *github.ReadyForReviewEvent\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.checkRunEvent",
+                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.renamedTitleEvent",
                     "documentation": {
-                      "identifier": "GitHubWebhook.checkRunEvent",
+                      "identifier": "GitHubWebhook.renamedTitleEvent",
                       "newPage": false,
-                      "searchKey": "webhooks.GitHubWebhook.checkRunEvent",
+                      "searchKey": "webhooks.GitHubWebhook.renamedTitleEvent",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (h *GitHubWebhook) checkRunEvent(cr *gh.CheckRun) *github.CheckRun"
+                      "value": "func (*GitHubWebhook) renamedTitleEvent(e *gh.PullRequestEvent) *github.RenamedTitleEvent"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (h *GitHubWebhook) checkRunEvent(cr *gh.CheckRun) *github.CheckRun\n```\n\n"
+                      "value": "```Go\nfunc (*GitHubWebhook) renamedTitleEvent(e *gh.PullRequestEvent) *github.RenamedTitleEvent\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.reopenedEvent",
+                    "documentation": {
+                      "identifier": "GitHubWebhook.reopenedEvent",
+                      "newPage": false,
+                      "searchKey": "webhooks.GitHubWebhook.reopenedEvent",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*GitHubWebhook) reopenedEvent(e *gh.PullRequestEvent) *github.ReopenedEvent"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*GitHubWebhook) reopenedEvent(e *gh.PullRequestEvent) *github.ReopenedEvent\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.reviewRequestRemovedEvent",
+                    "documentation": {
+                      "identifier": "GitHubWebhook.reviewRequestRemovedEvent",
+                      "newPage": false,
+                      "searchKey": "webhooks.GitHubWebhook.reviewRequestRemovedEvent",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*GitHubWebhook) reviewRequestRemovedEvent(e *gh.PullRequestEvent) *github.ReviewRequestRemovedEvent"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*GitHubWebhook) reviewRequestRemovedEvent(e *gh.PullRequestEvent) *github.ReviewRequestRemovedEvent\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.reviewRequestedEvent",
+                    "documentation": {
+                      "identifier": "GitHubWebhook.reviewRequestedEvent",
+                      "newPage": false,
+                      "searchKey": "webhooks.GitHubWebhook.reviewRequestedEvent",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*GitHubWebhook) reviewRequestedEvent(e *gh.PullRequestEvent) *github.ReviewRequestedEvent"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*GitHubWebhook) reviewRequestedEvent(e *gh.PullRequestEvent) *github.ReviewRequestedEvent\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/webhooks#GitHubWebhook.unassignedEvent",
+                    "documentation": {
+                      "identifier": "GitHubWebhook.unassignedEvent",
+                      "newPage": false,
+                      "searchKey": "webhooks.GitHubWebhook.unassignedEvent",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*GitHubWebhook) unassignedEvent(e *gh.PullRequestEvent) *github.UnassignedEvent"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*GitHubWebhook) unassignedEvent(e *gh.PullRequestEvent) *github.UnassignedEvent\n```\n\n"
                     },
                     "children": null
                   }
@@ -739,7 +785,9 @@
                 "identifier": "GitLabWebhook",
                 "newPage": false,
                 "searchKey": "webhooks.GitLabWebhook",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -757,7 +805,9 @@
                       "identifier": "NewGitLabWebhook",
                       "newPage": false,
                       "searchKey": "webhooks.NewGitLabWebhook",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -777,7 +827,9 @@
                       "identifier": "GitLabWebhook.ServeHTTP",
                       "newPage": false,
                       "searchKey": "webhooks.GitLabWebhook.ServeHTTP",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -792,12 +844,59 @@
                 },
                 {
                   "node": {
+                    "pathID": "/enterprise/internal/batches/webhooks#GitLabWebhook.enqueueChangesetSyncFromEvent",
+                    "documentation": {
+                      "identifier": "GitLabWebhook.enqueueChangesetSyncFromEvent",
+                      "newPage": false,
+                      "searchKey": "webhooks.GitLabWebhook.enqueueChangesetSyncFromEvent",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *GitLabWebhook) enqueueChangesetSyncFromEvent(ctx context.Context, esID string, event *webhooks.MergeRequestEventCommon) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *GitLabWebhook) enqueueChangesetSyncFromEvent(ctx context.Context, esID string, event *webhooks.MergeRequestEventCommon) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/webhooks#GitLabWebhook.getChangesetForPR",
+                    "documentation": {
+                      "identifier": "GitLabWebhook.getChangesetForPR",
+                      "newPage": false,
+                      "searchKey": "webhooks.GitLabWebhook.getChangesetForPR",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *GitLabWebhook) getChangesetForPR(ctx context.Context, tx *store.Store, pr *PR, repo *types.Repo) (*btypes.Changeset, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *GitLabWebhook) getChangesetForPR(ctx context.Context, tx *store.Store, pr *PR, repo *types.Repo) (*btypes.Changeset, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/enterprise/internal/batches/webhooks#GitLabWebhook.getExternalServiceFromRawID",
                     "documentation": {
                       "identifier": "GitLabWebhook.getExternalServiceFromRawID",
                       "newPage": false,
                       "searchKey": "webhooks.GitLabWebhook.getExternalServiceFromRawID",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -820,6 +919,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.GitLabWebhook.handleEvent",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -836,34 +936,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/batches/webhooks#GitLabWebhook.enqueueChangesetSyncFromEvent",
-                    "documentation": {
-                      "identifier": "GitLabWebhook.enqueueChangesetSyncFromEvent",
-                      "newPage": false,
-                      "searchKey": "webhooks.GitLabWebhook.enqueueChangesetSyncFromEvent",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *GitLabWebhook) enqueueChangesetSyncFromEvent(ctx context.Context, esID string, event *webhooks.MergeRequestEventCommon) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *GitLabWebhook) enqueueChangesetSyncFromEvent(ctx context.Context, esID string, event *webhooks.MergeRequestEventCommon) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/internal/batches/webhooks#GitLabWebhook.handlePipelineEvent",
                     "documentation": {
                       "identifier": "GitLabWebhook.handlePipelineEvent",
                       "newPage": false,
                       "searchKey": "webhooks.GitLabWebhook.handlePipelineEvent",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -877,25 +956,49 @@
                     },
                     "children": null
                   }
-                },
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/webhooks#PR",
+              "documentation": {
+                "identifier": "PR",
+                "newPage": false,
+                "searchKey": "webhooks.PR",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PR struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PR struct {\n\tID             int64\n\tRepoExternalID string\n}\n```\n\n"
+              },
+              "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/batches/webhooks#GitLabWebhook.getChangesetForPR",
+                    "pathID": "/enterprise/internal/batches/webhooks#gitlabToPR",
                     "documentation": {
-                      "identifier": "GitLabWebhook.getChangesetForPR",
+                      "identifier": "gitlabToPR",
                       "newPage": false,
-                      "searchKey": "webhooks.GitLabWebhook.getChangesetForPR",
+                      "searchKey": "webhooks.gitlabToPR",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (h *GitLabWebhook) getChangesetForPR(ctx context.Context, tx *store.Store, pr *PR, repo *types.Repo) (*btypes.Changeset, error)"
+                      "value": "func gitlabToPR(project *gitlab.ProjectCommon, mr *gitlab.MergeRequest) PR"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (h *GitLabWebhook) getChangesetForPR(ctx context.Context, tx *store.Store, pr *PR, repo *types.Repo) (*btypes.Changeset, error)\n```\n\n"
+                      "value": "```Go\nfunc gitlabToPR(project *gitlab.ProjectCommon, mr *gitlab.MergeRequest) PR\n```\n\ngitlabToPR instantiates a new PR instance given fields that are commonly available in GitLab webhook payloads. \n\n"
                     },
                     "children": null
                   }
@@ -910,7 +1013,9 @@
                 "identifier": "Webhook",
                 "newPage": false,
                 "searchKey": "webhooks.Webhook",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -929,6 +1034,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.Webhook.getRepoForPR",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -951,6 +1057,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.Webhook.upsertChangesetEvent",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -970,122 +1077,13 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/webhooks#PR",
-              "documentation": {
-                "identifier": "PR",
-                "newPage": false,
-                "searchKey": "webhooks.PR",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type PR struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype PR struct {\n\tID             int64\n\tRepoExternalID string\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/webhooks#gitlabToPR",
-                    "documentation": {
-                      "identifier": "gitlabToPR",
-                      "newPage": false,
-                      "searchKey": "webhooks.gitlabToPR",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func gitlabToPR(project *gitlab.ProjectCommon, mr *gitlab.MergeRequest) PR"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc gitlabToPR(project *gitlab.ProjectCommon, mr *gitlab.MergeRequest) PR\n```\n\ngitlabToPR instantiates a new PR instance given fields that are commonly available in GitLab webhook payloads. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/webhooks#keyer",
-              "documentation": {
-                "identifier": "keyer",
-                "newPage": false,
-                "searchKey": "webhooks.keyer",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type keyer interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype keyer interface {\n\tKey() string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/webhooks#httpError",
-              "documentation": {
-                "identifier": "httpError",
-                "newPage": false,
-                "searchKey": "webhooks.httpError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type httpError struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype httpError struct {\n\tcode int\n\terr  error\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/webhooks#httpError.Error",
-                    "documentation": {
-                      "identifier": "httpError.Error",
-                      "newPage": false,
-                      "searchKey": "webhooks.httpError.Error",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e httpError) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e httpError) Error() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/batches/webhooks#brokenDB",
               "documentation": {
                 "identifier": "brokenDB",
                 "newPage": false,
                 "searchKey": "webhooks.brokenDB",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1100,34 +1098,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/batches/webhooks#brokenDB.QueryContext",
-                    "documentation": {
-                      "identifier": "brokenDB.QueryContext",
-                      "newPage": false,
-                      "searchKey": "webhooks.brokenDB.QueryContext",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (db *brokenDB) QueryContext(ctx context.Context, q string, args ...interface{}) (*sql.Rows, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (db *brokenDB) QueryContext(ctx context.Context, q string, args ...interface{}) (*sql.Rows, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/internal/batches/webhooks#brokenDB.ExecContext",
                     "documentation": {
                       "identifier": "brokenDB.ExecContext",
                       "newPage": false,
                       "searchKey": "webhooks.brokenDB.ExecContext",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1144,12 +1121,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/enterprise/internal/batches/webhooks#brokenDB.QueryContext",
+                    "documentation": {
+                      "identifier": "brokenDB.QueryContext",
+                      "newPage": false,
+                      "searchKey": "webhooks.brokenDB.QueryContext",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (db *brokenDB) QueryContext(ctx context.Context, q string, args ...interface{}) (*sql.Rows, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (db *brokenDB) QueryContext(ctx context.Context, q string, args ...interface{}) (*sql.Rows, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/enterprise/internal/batches/webhooks#brokenDB.QueryRowContext",
                     "documentation": {
                       "identifier": "brokenDB.QueryRowContext",
                       "newPage": false,
                       "searchKey": "webhooks.brokenDB.QueryRowContext",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1175,6 +1176,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.brokenReader",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1195,6 +1197,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.brokenReader.Close",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1217,6 +1220,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.brokenReader.Read",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1236,12 +1240,83 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/batches/webhooks#httpError",
+              "documentation": {
+                "identifier": "httpError",
+                "newPage": false,
+                "searchKey": "webhooks.httpError",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type httpError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype httpError struct {\n\tcode int\n\terr  error\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/webhooks#httpError.Error",
+                    "documentation": {
+                      "identifier": "httpError.Error",
+                      "newPage": false,
+                      "searchKey": "webhooks.httpError.Error",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e httpError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e httpError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/webhooks#keyer",
+              "documentation": {
+                "identifier": "keyer",
+                "newPage": false,
+                "searchKey": "webhooks.keyer",
+                "tags": [
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type keyer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype keyer interface {\n\tKey() string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/batches/webhooks#nestedTx",
               "documentation": {
                 "identifier": "nestedTx",
                 "newPage": false,
                 "searchKey": "webhooks.nestedTx",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1256,22 +1331,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/batches/webhooks#nestedTx.Rollback",
+                    "pathID": "/enterprise/internal/batches/webhooks#nestedTx.BeginTx",
                     "documentation": {
-                      "identifier": "nestedTx.Rollback",
+                      "identifier": "nestedTx.BeginTx",
                       "newPage": false,
-                      "searchKey": "webhooks.nestedTx.Rollback",
+                      "searchKey": "webhooks.nestedTx.BeginTx",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (ntx *nestedTx) Rollback() error"
+                      "value": "func (ntx *nestedTx) BeginTx(ctx context.Context, opts *sql.TxOptions) error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (ntx *nestedTx) Rollback() error\n```\n\n"
+                      "value": "```Go\nfunc (ntx *nestedTx) BeginTx(ctx context.Context, opts *sql.TxOptions) error\n```\n\n"
                     },
                     "children": null
                   }
@@ -1284,6 +1360,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.nestedTx.Commit",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1300,22 +1377,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/batches/webhooks#nestedTx.BeginTx",
+                    "pathID": "/enterprise/internal/batches/webhooks#nestedTx.Rollback",
                     "documentation": {
-                      "identifier": "nestedTx.BeginTx",
+                      "identifier": "nestedTx.Rollback",
                       "newPage": false,
-                      "searchKey": "webhooks.nestedTx.BeginTx",
+                      "searchKey": "webhooks.nestedTx.Rollback",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (ntx *nestedTx) BeginTx(ctx context.Context, opts *sql.TxOptions) error"
+                      "value": "func (ntx *nestedTx) Rollback() error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (ntx *nestedTx) BeginTx(ctx context.Context, opts *sql.TxOptions) error\n```\n\n"
+                      "value": "```Go\nfunc (ntx *nestedTx) Rollback() error\n```\n\n"
                     },
                     "children": null
                   }
@@ -1331,6 +1409,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.noNestingTx",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1351,6 +1430,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.noNestingTx.BeginTx",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1376,6 +1456,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.webhookTestCase",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1396,6 +1477,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.loadWebhookTestCase",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1424,6 +1506,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -1438,145 +1521,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/webhooks#validateGitLabSecret",
-              "documentation": {
-                "identifier": "validateGitLabSecret",
-                "newPage": false,
-                "searchKey": "webhooks.validateGitLabSecret",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func validateGitLabSecret(extSvc *types.ExternalService, secret string) (bool, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc validateGitLabSecret(extSvc *types.ExternalService, secret string) (bool, error)\n```\n\nvalidateGitLabSecret validates that the given secret matches one of the webhooks in the external service. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/webhooks#extractExternalServiceID",
-              "documentation": {
-                "identifier": "extractExternalServiceID",
-                "newPage": false,
-                "searchKey": "webhooks.extractExternalServiceID",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func extractExternalServiceID(extSvc *types.ExternalService) (string, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc extractExternalServiceID(extSvc *types.ExternalService) (string, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/webhooks#respond",
-              "documentation": {
-                "identifier": "respond",
-                "newPage": false,
-                "searchKey": "webhooks.respond",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func respond(w http.ResponseWriter, code int, v interface{})"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc respond(w http.ResponseWriter, code int, v interface{})\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/webhooks#testBitbucketWebhook",
-              "documentation": {
-                "identifier": "testBitbucketWebhook",
-                "newPage": false,
-                "searchKey": "webhooks.testBitbucketWebhook",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testBitbucketWebhook(db *sql.DB, userID int32) func(*testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testBitbucketWebhook(db *sql.DB, userID int32) func(*testing.T)\n```\n\nRun from integration_test.go \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/webhooks#testGitHubWebhook",
-              "documentation": {
-                "identifier": "testGitHubWebhook",
-                "newPage": false,
-                "searchKey": "webhooks.testGitHubWebhook",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testGitHubWebhook(db *sql.DB, userID int32) func(*testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testGitHubWebhook(db *sql.DB, userID int32) func(*testing.T)\n```\n\nRun from integration_test.go \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/webhooks#testGitLabWebhook",
-              "documentation": {
-                "identifier": "testGitLabWebhook",
-                "newPage": false,
-                "searchKey": "webhooks.testGitLabWebhook",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testGitLabWebhook(db *sql.DB, userID int32) func(*testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testGitLabWebhook(db *sql.DB, userID int32) func(*testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/batches/webhooks#TestValidateGitLabSecret",
               "documentation": {
                 "identifier": "TestValidateGitLabSecret",
                 "newPage": false,
                 "searchKey": "webhooks.TestValidateGitLabSecret",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1592,22 +1545,24 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/webhooks#gitLabTestSetup",
+              "pathID": "/enterprise/internal/batches/webhooks#TestWebhooksIntegration",
               "documentation": {
-                "identifier": "gitLabTestSetup",
+                "identifier": "TestWebhooksIntegration",
                 "newPage": false,
-                "searchKey": "webhooks.gitLabTestSetup",
+                "searchKey": "webhooks.TestWebhooksIntegration",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func gitLabTestSetup(t *testing.T, db *sql.DB) *store.Store"
+                "value": "func TestWebhooksIntegration(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc gitLabTestSetup(t *testing.T, db *sql.DB) *store.Store\n```\n\ngitLabTestSetup instantiates the stores and a clock for use within tests. Any changes made to the stores will be rolled back after the test is complete. \n\n"
+                "value": "```Go\nfunc TestWebhooksIntegration(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1620,6 +1575,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.assertBodyIncludes",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1642,6 +1598,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.assertChangesetEventForChangeset",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1658,12 +1615,36 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/batches/webhooks#createGitLabChangeset",
+              "documentation": {
+                "identifier": "createGitLabChangeset",
+                "newPage": false,
+                "searchKey": "webhooks.createGitLabChangeset",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func createGitLabChangeset(t *testing.T, ctx context.Context, store *store.Store, repo *types.Repo) *btypes.Changeset"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc createGitLabChangeset(t *testing.T, ctx context.Context, store *store.Store, repo *types.Repo) *btypes.Changeset\n```\n\ncreateGitLabChangeset creates a mock GitLab changeset. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/batches/webhooks#createGitLabExternalService",
               "documentation": {
                 "identifier": "createGitLabExternalService",
                 "newPage": false,
                 "searchKey": "webhooks.createGitLabExternalService",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1686,6 +1667,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.createGitLabRepo",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1702,34 +1684,13 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/webhooks#createGitLabChangeset",
-              "documentation": {
-                "identifier": "createGitLabChangeset",
-                "newPage": false,
-                "searchKey": "webhooks.createGitLabChangeset",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func createGitLabChangeset(t *testing.T, ctx context.Context, store *store.Store, repo *types.Repo) *btypes.Changeset"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc createGitLabChangeset(t *testing.T, ctx context.Context, store *store.Store, repo *types.Repo) *btypes.Changeset\n```\n\ncreateGitLabChangeset creates a mock GitLab changeset. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/batches/webhooks#createMergeRequestPayload",
               "documentation": {
                 "identifier": "createMergeRequestPayload",
                 "newPage": false,
                 "searchKey": "webhooks.createMergeRequestPayload",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1752,6 +1713,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.createPipelinePayload",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1768,12 +1730,36 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/batches/webhooks#extractExternalServiceID",
+              "documentation": {
+                "identifier": "extractExternalServiceID",
+                "newPage": false,
+                "searchKey": "webhooks.extractExternalServiceID",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func extractExternalServiceID(extSvc *types.ExternalService) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc extractExternalServiceID(extSvc *types.ExternalService) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/batches/webhooks#getSingleRepo",
               "documentation": {
                 "identifier": "getSingleRepo",
                 "newPage": false,
                 "searchKey": "webhooks.getSingleRepo",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1790,12 +1776,59 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/batches/webhooks#gitLabTestSetup",
+              "documentation": {
+                "identifier": "gitLabTestSetup",
+                "newPage": false,
+                "searchKey": "webhooks.gitLabTestSetup",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func gitLabTestSetup(t *testing.T, db *sql.DB) *store.Store"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc gitLabTestSetup(t *testing.T, db *sql.DB) *store.Store\n```\n\ngitLabTestSetup instantiates the stores and a clock for use within tests. Any changes made to the stores will be rolled back after the test is complete. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/webhooks#respond",
+              "documentation": {
+                "identifier": "respond",
+                "newPage": false,
+                "searchKey": "webhooks.respond",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func respond(w http.ResponseWriter, code int, v interface{})"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc respond(w http.ResponseWriter, code int, v interface{})\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/batches/webhooks#sign",
               "documentation": {
                 "identifier": "sign",
                 "newPage": false,
                 "searchKey": "webhooks.sign",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1812,22 +1845,92 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/webhooks#TestWebhooksIntegration",
+              "pathID": "/enterprise/internal/batches/webhooks#testBitbucketWebhook",
               "documentation": {
-                "identifier": "TestWebhooksIntegration",
+                "identifier": "testBitbucketWebhook",
                 "newPage": false,
-                "searchKey": "webhooks.TestWebhooksIntegration",
+                "searchKey": "webhooks.testBitbucketWebhook",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestWebhooksIntegration(t *testing.T)"
+                "value": "func testBitbucketWebhook(db *sql.DB, userID int32) func(*testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestWebhooksIntegration(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc testBitbucketWebhook(db *sql.DB, userID int32) func(*testing.T)\n```\n\nRun from integration_test.go \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/webhooks#testGitHubWebhook",
+              "documentation": {
+                "identifier": "testGitHubWebhook",
+                "newPage": false,
+                "searchKey": "webhooks.testGitHubWebhook",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testGitHubWebhook(db *sql.DB, userID int32) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testGitHubWebhook(db *sql.DB, userID int32) func(*testing.T)\n```\n\nRun from integration_test.go \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/webhooks#testGitLabWebhook",
+              "documentation": {
+                "identifier": "testGitLabWebhook",
+                "newPage": false,
+                "searchKey": "webhooks.testGitLabWebhook",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testGitLabWebhook(db *sql.DB, userID int32) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testGitLabWebhook(db *sql.DB, userID int32) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/webhooks#validateGitLabSecret",
+              "documentation": {
+                "identifier": "validateGitLabSecret",
+                "newPage": false,
+                "searchKey": "webhooks.validateGitLabSecret",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func validateGitLabSecret(extSvc *types.ExternalService, secret string) (bool, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc validateGitLabSecret(extSvc *types.ExternalService, secret string) (bool, error)\n```\n\nvalidateGitLabSecret validates that the given secret matches one of the webhooks in the external service. \n\n"
               },
               "children": null
             }

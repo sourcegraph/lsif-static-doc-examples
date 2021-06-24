@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "runtime/internal/sys",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,10 @@
                 "identifier": "AMD64",
                 "newPage": false,
                 "searchKey": "sys.AMD64",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +69,10 @@
                 "identifier": "ARM",
                 "newPage": false,
                 "searchKey": "sys.ARM",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +92,10 @@
                 "identifier": "ARM64",
                 "newPage": false,
                 "searchKey": "sys.ARM64",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -99,192 +110,15 @@
           },
           {
             "node": {
-              "pathID": "/runtime/internal/sys#I386",
-              "documentation": {
-                "identifier": "I386",
-                "newPage": false,
-                "searchKey": "sys.I386",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const I386"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst I386\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#MIPS",
-              "documentation": {
-                "identifier": "MIPS",
-                "newPage": false,
-                "searchKey": "sys.MIPS",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const MIPS"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst MIPS\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#MIPS64",
-              "documentation": {
-                "identifier": "MIPS64",
-                "newPage": false,
-                "searchKey": "sys.MIPS64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const MIPS64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst MIPS64\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#PPC64",
-              "documentation": {
-                "identifier": "PPC64",
-                "newPage": false,
-                "searchKey": "sys.PPC64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const PPC64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst PPC64\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#RISCV64",
-              "documentation": {
-                "identifier": "RISCV64",
-                "newPage": false,
-                "searchKey": "sys.RISCV64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const RISCV64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst RISCV64\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#S390X",
-              "documentation": {
-                "identifier": "S390X",
-                "newPage": false,
-                "searchKey": "sys.S390X",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const S390X"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst S390X\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#WASM",
-              "documentation": {
-                "identifier": "WASM",
-                "newPage": false,
-                "searchKey": "sys.WASM",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const WASM"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst WASM\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#PtrSize",
-              "documentation": {
-                "identifier": "PtrSize",
-                "newPage": false,
-                "searchKey": "sys.PtrSize",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const PtrSize"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst PtrSize = 4 << (^uintptr(0) >> 63)\n```\n\nPtrSize is the size of a pointer in bytes - unsafe.Sizeof(uintptr(0)) but as an ideal constant. It is also the size of the machine's native word size (that is, 4 on 32-bit systems, 8 on 64-bit). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#StackGuardMultiplier",
-              "documentation": {
-                "identifier": "StackGuardMultiplier",
-                "newPage": false,
-                "searchKey": "sys.StackGuardMultiplier",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const StackGuardMultiplier"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst StackGuardMultiplier = StackGuardMultiplierDefault*(1-GoosAix) + 2*GoosAix\n```\n\nAIX requires a larger stack for syscalls. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/runtime/internal/sys#ArchFamily",
               "documentation": {
                 "identifier": "ArchFamily",
                 "newPage": false,
                 "searchKey": "sys.ArchFamily",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -304,7 +138,10 @@
                 "identifier": "BigEndian",
                 "newPage": false,
                 "searchKey": "sys.BigEndian",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "boolean"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -324,7 +161,10 @@
                 "identifier": "DefaultPhysPageSize",
                 "newPage": false,
                 "searchKey": "sys.DefaultPhysPageSize",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -339,20 +179,989 @@
           },
           {
             "node": {
-              "pathID": "/runtime/internal/sys#PCQuantum",
+              "pathID": "/runtime/internal/sys#GOARCH",
               "documentation": {
-                "identifier": "PCQuantum",
+                "identifier": "GOARCH",
                 "newPage": false,
-                "searchKey": "sys.PCQuantum",
-                "tags": null
+                "searchKey": "sys.GOARCH",
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const PCQuantum"
+                "value": "const GOARCH"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst PCQuantum = _PCQuantum\n```\n\nPCQuantum is the minimal unit for a program counter (1 on x86, 4 on most other systems). The various PC tables record PC deltas pre-divided by PCQuantum. \n\n"
+                "value": "```Go\nconst GOARCH = `amd64`\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GOOS",
+              "documentation": {
+                "identifier": "GOOS",
+                "newPage": false,
+                "searchKey": "sys.GOOS",
+                "tags": [
+                  "constant",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GOOS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GOOS = `darwin`\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#Goarch386",
+              "documentation": {
+                "identifier": "Goarch386",
+                "newPage": false,
+                "searchKey": "sys.Goarch386",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Goarch386"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Goarch386 = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoarchAmd64",
+              "documentation": {
+                "identifier": "GoarchAmd64",
+                "newPage": false,
+                "searchKey": "sys.GoarchAmd64",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoarchAmd64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoarchAmd64 = 1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoarchAmd64p32",
+              "documentation": {
+                "identifier": "GoarchAmd64p32",
+                "newPage": false,
+                "searchKey": "sys.GoarchAmd64p32",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoarchAmd64p32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoarchAmd64p32 = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoarchArm",
+              "documentation": {
+                "identifier": "GoarchArm",
+                "newPage": false,
+                "searchKey": "sys.GoarchArm",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoarchArm"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoarchArm = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoarchArm64",
+              "documentation": {
+                "identifier": "GoarchArm64",
+                "newPage": false,
+                "searchKey": "sys.GoarchArm64",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoarchArm64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoarchArm64 = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoarchArm64be",
+              "documentation": {
+                "identifier": "GoarchArm64be",
+                "newPage": false,
+                "searchKey": "sys.GoarchArm64be",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoarchArm64be"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoarchArm64be = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoarchArmbe",
+              "documentation": {
+                "identifier": "GoarchArmbe",
+                "newPage": false,
+                "searchKey": "sys.GoarchArmbe",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoarchArmbe"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoarchArmbe = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoarchMips",
+              "documentation": {
+                "identifier": "GoarchMips",
+                "newPage": false,
+                "searchKey": "sys.GoarchMips",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoarchMips"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoarchMips = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoarchMips64",
+              "documentation": {
+                "identifier": "GoarchMips64",
+                "newPage": false,
+                "searchKey": "sys.GoarchMips64",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoarchMips64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoarchMips64 = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoarchMips64le",
+              "documentation": {
+                "identifier": "GoarchMips64le",
+                "newPage": false,
+                "searchKey": "sys.GoarchMips64le",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoarchMips64le"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoarchMips64le = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoarchMips64p32",
+              "documentation": {
+                "identifier": "GoarchMips64p32",
+                "newPage": false,
+                "searchKey": "sys.GoarchMips64p32",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoarchMips64p32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoarchMips64p32 = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoarchMips64p32le",
+              "documentation": {
+                "identifier": "GoarchMips64p32le",
+                "newPage": false,
+                "searchKey": "sys.GoarchMips64p32le",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoarchMips64p32le"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoarchMips64p32le = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoarchMipsle",
+              "documentation": {
+                "identifier": "GoarchMipsle",
+                "newPage": false,
+                "searchKey": "sys.GoarchMipsle",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoarchMipsle"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoarchMipsle = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoarchPpc",
+              "documentation": {
+                "identifier": "GoarchPpc",
+                "newPage": false,
+                "searchKey": "sys.GoarchPpc",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoarchPpc"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoarchPpc = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoarchPpc64",
+              "documentation": {
+                "identifier": "GoarchPpc64",
+                "newPage": false,
+                "searchKey": "sys.GoarchPpc64",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoarchPpc64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoarchPpc64 = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoarchPpc64le",
+              "documentation": {
+                "identifier": "GoarchPpc64le",
+                "newPage": false,
+                "searchKey": "sys.GoarchPpc64le",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoarchPpc64le"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoarchPpc64le = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoarchRiscv",
+              "documentation": {
+                "identifier": "GoarchRiscv",
+                "newPage": false,
+                "searchKey": "sys.GoarchRiscv",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoarchRiscv"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoarchRiscv = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoarchRiscv64",
+              "documentation": {
+                "identifier": "GoarchRiscv64",
+                "newPage": false,
+                "searchKey": "sys.GoarchRiscv64",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoarchRiscv64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoarchRiscv64 = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoarchS390",
+              "documentation": {
+                "identifier": "GoarchS390",
+                "newPage": false,
+                "searchKey": "sys.GoarchS390",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoarchS390"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoarchS390 = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoarchS390x",
+              "documentation": {
+                "identifier": "GoarchS390x",
+                "newPage": false,
+                "searchKey": "sys.GoarchS390x",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoarchS390x"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoarchS390x = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoarchSparc",
+              "documentation": {
+                "identifier": "GoarchSparc",
+                "newPage": false,
+                "searchKey": "sys.GoarchSparc",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoarchSparc"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoarchSparc = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoarchSparc64",
+              "documentation": {
+                "identifier": "GoarchSparc64",
+                "newPage": false,
+                "searchKey": "sys.GoarchSparc64",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoarchSparc64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoarchSparc64 = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoarchWasm",
+              "documentation": {
+                "identifier": "GoarchWasm",
+                "newPage": false,
+                "searchKey": "sys.GoarchWasm",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoarchWasm"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoarchWasm = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoosAix",
+              "documentation": {
+                "identifier": "GoosAix",
+                "newPage": false,
+                "searchKey": "sys.GoosAix",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoosAix"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoosAix = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoosAndroid",
+              "documentation": {
+                "identifier": "GoosAndroid",
+                "newPage": false,
+                "searchKey": "sys.GoosAndroid",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoosAndroid"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoosAndroid = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoosDarwin",
+              "documentation": {
+                "identifier": "GoosDarwin",
+                "newPage": false,
+                "searchKey": "sys.GoosDarwin",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoosDarwin"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoosDarwin = 1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoosDragonfly",
+              "documentation": {
+                "identifier": "GoosDragonfly",
+                "newPage": false,
+                "searchKey": "sys.GoosDragonfly",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoosDragonfly"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoosDragonfly = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoosFreebsd",
+              "documentation": {
+                "identifier": "GoosFreebsd",
+                "newPage": false,
+                "searchKey": "sys.GoosFreebsd",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoosFreebsd"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoosFreebsd = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoosHurd",
+              "documentation": {
+                "identifier": "GoosHurd",
+                "newPage": false,
+                "searchKey": "sys.GoosHurd",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoosHurd"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoosHurd = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoosIllumos",
+              "documentation": {
+                "identifier": "GoosIllumos",
+                "newPage": false,
+                "searchKey": "sys.GoosIllumos",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoosIllumos"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoosIllumos = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoosIos",
+              "documentation": {
+                "identifier": "GoosIos",
+                "newPage": false,
+                "searchKey": "sys.GoosIos",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoosIos"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoosIos = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoosJs",
+              "documentation": {
+                "identifier": "GoosJs",
+                "newPage": false,
+                "searchKey": "sys.GoosJs",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoosJs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoosJs = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoosLinux",
+              "documentation": {
+                "identifier": "GoosLinux",
+                "newPage": false,
+                "searchKey": "sys.GoosLinux",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoosLinux"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoosLinux = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoosNacl",
+              "documentation": {
+                "identifier": "GoosNacl",
+                "newPage": false,
+                "searchKey": "sys.GoosNacl",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoosNacl"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoosNacl = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoosNetbsd",
+              "documentation": {
+                "identifier": "GoosNetbsd",
+                "newPage": false,
+                "searchKey": "sys.GoosNetbsd",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoosNetbsd"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoosNetbsd = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoosOpenbsd",
+              "documentation": {
+                "identifier": "GoosOpenbsd",
+                "newPage": false,
+                "searchKey": "sys.GoosOpenbsd",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoosOpenbsd"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoosOpenbsd = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoosPlan9",
+              "documentation": {
+                "identifier": "GoosPlan9",
+                "newPage": false,
+                "searchKey": "sys.GoosPlan9",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoosPlan9"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoosPlan9 = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoosSolaris",
+              "documentation": {
+                "identifier": "GoosSolaris",
+                "newPage": false,
+                "searchKey": "sys.GoosSolaris",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoosSolaris"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoosSolaris = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoosWindows",
+              "documentation": {
+                "identifier": "GoosWindows",
+                "newPage": false,
+                "searchKey": "sys.GoosWindows",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoosWindows"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoosWindows = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#GoosZos",
+              "documentation": {
+                "identifier": "GoosZos",
+                "newPage": false,
+                "searchKey": "sys.GoosZos",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoosZos"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoosZos = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#I386",
+              "documentation": {
+                "identifier": "I386",
+                "newPage": false,
+                "searchKey": "sys.I386",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const I386"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst I386\n```\n\n"
               },
               "children": null
             }
@@ -364,7 +1173,10 @@
                 "identifier": "Int64Align",
                 "newPage": false,
                 "searchKey": "sys.Int64Align",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -379,12 +1191,61 @@
           },
           {
             "node": {
+              "pathID": "/runtime/internal/sys#MIPS",
+              "documentation": {
+                "identifier": "MIPS",
+                "newPage": false,
+                "searchKey": "sys.MIPS",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MIPS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MIPS\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#MIPS64",
+              "documentation": {
+                "identifier": "MIPS64",
+                "newPage": false,
+                "searchKey": "sys.MIPS64",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MIPS64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MIPS64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/runtime/internal/sys#MinFrameSize",
               "documentation": {
                 "identifier": "MinFrameSize",
                 "newPage": false,
                 "searchKey": "sys.MinFrameSize",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -399,12 +1260,130 @@
           },
           {
             "node": {
+              "pathID": "/runtime/internal/sys#PCQuantum",
+              "documentation": {
+                "identifier": "PCQuantum",
+                "newPage": false,
+                "searchKey": "sys.PCQuantum",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PCQuantum"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PCQuantum = _PCQuantum\n```\n\nPCQuantum is the minimal unit for a program counter (1 on x86, 4 on most other systems). The various PC tables record PC deltas pre-divided by PCQuantum. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#PPC64",
+              "documentation": {
+                "identifier": "PPC64",
+                "newPage": false,
+                "searchKey": "sys.PPC64",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PPC64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PPC64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#PtrSize",
+              "documentation": {
+                "identifier": "PtrSize",
+                "newPage": false,
+                "searchKey": "sys.PtrSize",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PtrSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PtrSize = 4 << (^uintptr(0) >> 63)\n```\n\nPtrSize is the size of a pointer in bytes - unsafe.Sizeof(uintptr(0)) but as an ideal constant. It is also the size of the machine's native word size (that is, 4 on 32-bit systems, 8 on 64-bit). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#RISCV64",
+              "documentation": {
+                "identifier": "RISCV64",
+                "newPage": false,
+                "searchKey": "sys.RISCV64",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RISCV64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RISCV64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#S390X",
+              "documentation": {
+                "identifier": "S390X",
+                "newPage": false,
+                "searchKey": "sys.S390X",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const S390X"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst S390X\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/runtime/internal/sys#StackAlign",
               "documentation": {
                 "identifier": "StackAlign",
                 "newPage": false,
                 "searchKey": "sys.StackAlign",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -419,132 +1398,45 @@
           },
           {
             "node": {
-              "pathID": "/runtime/internal/sys#_ArchFamily",
+              "pathID": "/runtime/internal/sys#StackGuardMultiplier",
               "documentation": {
-                "identifier": "_ArchFamily",
+                "identifier": "StackGuardMultiplier",
                 "newPage": false,
-                "searchKey": "sys._ArchFamily",
+                "searchKey": "sys.StackGuardMultiplier",
                 "tags": [
-                  "private"
+                  "constant"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const _ArchFamily"
+                "value": "const StackGuardMultiplier"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst _ArchFamily = AMD64\n```\n\n"
+                "value": "```Go\nconst StackGuardMultiplier = StackGuardMultiplierDefault*(1-GoosAix) + 2*GoosAix\n```\n\nAIX requires a larger stack for syscalls. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/runtime/internal/sys#_DefaultPhysPageSize",
+              "pathID": "/runtime/internal/sys#WASM",
               "documentation": {
-                "identifier": "_DefaultPhysPageSize",
+                "identifier": "WASM",
                 "newPage": false,
-                "searchKey": "sys._DefaultPhysPageSize",
+                "searchKey": "sys.WASM",
                 "tags": [
-                  "private"
+                  "constant",
+                  "number"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const _DefaultPhysPageSize"
+                "value": "const WASM"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst _DefaultPhysPageSize = 4096\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#_PCQuantum",
-              "documentation": {
-                "identifier": "_PCQuantum",
-                "newPage": false,
-                "searchKey": "sys._PCQuantum",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const _PCQuantum"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst _PCQuantum = 1\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#_MinFrameSize",
-              "documentation": {
-                "identifier": "_MinFrameSize",
-                "newPage": false,
-                "searchKey": "sys._MinFrameSize",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const _MinFrameSize"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst _MinFrameSize = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#_StackAlign",
-              "documentation": {
-                "identifier": "_StackAlign",
-                "newPage": false,
-                "searchKey": "sys._StackAlign",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const _StackAlign"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst _StackAlign = PtrSize\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#deBruijn64ctz",
-              "documentation": {
-                "identifier": "deBruijn64ctz",
-                "newPage": false,
-                "searchKey": "sys.deBruijn64ctz",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const deBruijn64ctz"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst deBruijn64ctz = 0x0218a392cd3d5dbf\n```\n\n"
+                "value": "```Go\nconst WASM\n```\n\n"
               },
               "children": null
             }
@@ -557,6 +1449,8 @@
                 "newPage": false,
                 "searchKey": "sys.deBruijn32ctz",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -573,12 +1467,62 @@
           },
           {
             "node": {
+              "pathID": "/runtime/internal/sys#deBruijn64",
+              "documentation": {
+                "identifier": "deBruijn64",
+                "newPage": false,
+                "searchKey": "sys.deBruijn64",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const deBruijn64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst deBruijn64 = 0x03f79d71b4ca8b09\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#deBruijn64ctz",
+              "documentation": {
+                "identifier": "deBruijn64ctz",
+                "newPage": false,
+                "searchKey": "sys.deBruijn64ctz",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const deBruijn64ctz"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst deBruijn64ctz = 0x0218a392cd3d5dbf\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/runtime/internal/sys#m0",
               "documentation": {
                 "identifier": "m0",
                 "newPage": false,
                 "searchKey": "sys.m0",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -601,6 +1545,8 @@
                 "newPage": false,
                 "searchKey": "sys.m1",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -623,6 +1569,8 @@
                 "newPage": false,
                 "searchKey": "sys.m2",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -639,862 +1587,120 @@
           },
           {
             "node": {
-              "pathID": "/runtime/internal/sys#deBruijn64",
+              "pathID": "/runtime/internal/sys#_ArchFamily",
               "documentation": {
-                "identifier": "deBruijn64",
+                "identifier": "_ArchFamily",
                 "newPage": false,
-                "searchKey": "sys.deBruijn64",
+                "searchKey": "sys._ArchFamily",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const deBruijn64"
+                "value": "const _ArchFamily"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst deBruijn64 = 0x03f79d71b4ca8b09\n```\n\n"
+                "value": "```Go\nconst _ArchFamily = AMD64\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/runtime/internal/sys#GOARCH",
+              "pathID": "/runtime/internal/sys#_DefaultPhysPageSize",
               "documentation": {
-                "identifier": "GOARCH",
+                "identifier": "_DefaultPhysPageSize",
                 "newPage": false,
-                "searchKey": "sys.GOARCH",
-                "tags": null
+                "searchKey": "sys._DefaultPhysPageSize",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const GOARCH"
+                "value": "const _DefaultPhysPageSize"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst GOARCH = `amd64`\n```\n\n"
+                "value": "```Go\nconst _DefaultPhysPageSize = 4096\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/runtime/internal/sys#Goarch386",
+              "pathID": "/runtime/internal/sys#_MinFrameSize",
               "documentation": {
-                "identifier": "Goarch386",
+                "identifier": "_MinFrameSize",
                 "newPage": false,
-                "searchKey": "sys.Goarch386",
-                "tags": null
+                "searchKey": "sys._MinFrameSize",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const Goarch386"
+                "value": "const _MinFrameSize"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst Goarch386 = 0\n```\n\n"
+                "value": "```Go\nconst _MinFrameSize = 0\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/runtime/internal/sys#GoarchAmd64",
+              "pathID": "/runtime/internal/sys#_PCQuantum",
               "documentation": {
-                "identifier": "GoarchAmd64",
+                "identifier": "_PCQuantum",
                 "newPage": false,
-                "searchKey": "sys.GoarchAmd64",
-                "tags": null
+                "searchKey": "sys._PCQuantum",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const GoarchAmd64"
+                "value": "const _PCQuantum"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst GoarchAmd64 = 1\n```\n\n"
+                "value": "```Go\nconst _PCQuantum = 1\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/runtime/internal/sys#GoarchAmd64p32",
+              "pathID": "/runtime/internal/sys#_StackAlign",
               "documentation": {
-                "identifier": "GoarchAmd64p32",
+                "identifier": "_StackAlign",
                 "newPage": false,
-                "searchKey": "sys.GoarchAmd64p32",
-                "tags": null
+                "searchKey": "sys._StackAlign",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const GoarchAmd64p32"
+                "value": "const _StackAlign"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst GoarchAmd64p32 = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoarchArm",
-              "documentation": {
-                "identifier": "GoarchArm",
-                "newPage": false,
-                "searchKey": "sys.GoarchArm",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoarchArm"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoarchArm = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoarchArmbe",
-              "documentation": {
-                "identifier": "GoarchArmbe",
-                "newPage": false,
-                "searchKey": "sys.GoarchArmbe",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoarchArmbe"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoarchArmbe = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoarchArm64",
-              "documentation": {
-                "identifier": "GoarchArm64",
-                "newPage": false,
-                "searchKey": "sys.GoarchArm64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoarchArm64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoarchArm64 = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoarchArm64be",
-              "documentation": {
-                "identifier": "GoarchArm64be",
-                "newPage": false,
-                "searchKey": "sys.GoarchArm64be",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoarchArm64be"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoarchArm64be = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoarchPpc64",
-              "documentation": {
-                "identifier": "GoarchPpc64",
-                "newPage": false,
-                "searchKey": "sys.GoarchPpc64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoarchPpc64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoarchPpc64 = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoarchPpc64le",
-              "documentation": {
-                "identifier": "GoarchPpc64le",
-                "newPage": false,
-                "searchKey": "sys.GoarchPpc64le",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoarchPpc64le"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoarchPpc64le = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoarchMips",
-              "documentation": {
-                "identifier": "GoarchMips",
-                "newPage": false,
-                "searchKey": "sys.GoarchMips",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoarchMips"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoarchMips = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoarchMipsle",
-              "documentation": {
-                "identifier": "GoarchMipsle",
-                "newPage": false,
-                "searchKey": "sys.GoarchMipsle",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoarchMipsle"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoarchMipsle = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoarchMips64",
-              "documentation": {
-                "identifier": "GoarchMips64",
-                "newPage": false,
-                "searchKey": "sys.GoarchMips64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoarchMips64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoarchMips64 = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoarchMips64le",
-              "documentation": {
-                "identifier": "GoarchMips64le",
-                "newPage": false,
-                "searchKey": "sys.GoarchMips64le",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoarchMips64le"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoarchMips64le = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoarchMips64p32",
-              "documentation": {
-                "identifier": "GoarchMips64p32",
-                "newPage": false,
-                "searchKey": "sys.GoarchMips64p32",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoarchMips64p32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoarchMips64p32 = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoarchMips64p32le",
-              "documentation": {
-                "identifier": "GoarchMips64p32le",
-                "newPage": false,
-                "searchKey": "sys.GoarchMips64p32le",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoarchMips64p32le"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoarchMips64p32le = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoarchPpc",
-              "documentation": {
-                "identifier": "GoarchPpc",
-                "newPage": false,
-                "searchKey": "sys.GoarchPpc",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoarchPpc"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoarchPpc = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoarchRiscv",
-              "documentation": {
-                "identifier": "GoarchRiscv",
-                "newPage": false,
-                "searchKey": "sys.GoarchRiscv",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoarchRiscv"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoarchRiscv = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoarchRiscv64",
-              "documentation": {
-                "identifier": "GoarchRiscv64",
-                "newPage": false,
-                "searchKey": "sys.GoarchRiscv64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoarchRiscv64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoarchRiscv64 = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoarchS390",
-              "documentation": {
-                "identifier": "GoarchS390",
-                "newPage": false,
-                "searchKey": "sys.GoarchS390",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoarchS390"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoarchS390 = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoarchS390x",
-              "documentation": {
-                "identifier": "GoarchS390x",
-                "newPage": false,
-                "searchKey": "sys.GoarchS390x",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoarchS390x"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoarchS390x = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoarchSparc",
-              "documentation": {
-                "identifier": "GoarchSparc",
-                "newPage": false,
-                "searchKey": "sys.GoarchSparc",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoarchSparc"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoarchSparc = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoarchSparc64",
-              "documentation": {
-                "identifier": "GoarchSparc64",
-                "newPage": false,
-                "searchKey": "sys.GoarchSparc64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoarchSparc64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoarchSparc64 = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoarchWasm",
-              "documentation": {
-                "identifier": "GoarchWasm",
-                "newPage": false,
-                "searchKey": "sys.GoarchWasm",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoarchWasm"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoarchWasm = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GOOS",
-              "documentation": {
-                "identifier": "GOOS",
-                "newPage": false,
-                "searchKey": "sys.GOOS",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GOOS"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GOOS = `darwin`\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoosAix",
-              "documentation": {
-                "identifier": "GoosAix",
-                "newPage": false,
-                "searchKey": "sys.GoosAix",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoosAix"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoosAix = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoosAndroid",
-              "documentation": {
-                "identifier": "GoosAndroid",
-                "newPage": false,
-                "searchKey": "sys.GoosAndroid",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoosAndroid"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoosAndroid = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoosDarwin",
-              "documentation": {
-                "identifier": "GoosDarwin",
-                "newPage": false,
-                "searchKey": "sys.GoosDarwin",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoosDarwin"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoosDarwin = 1\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoosDragonfly",
-              "documentation": {
-                "identifier": "GoosDragonfly",
-                "newPage": false,
-                "searchKey": "sys.GoosDragonfly",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoosDragonfly"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoosDragonfly = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoosFreebsd",
-              "documentation": {
-                "identifier": "GoosFreebsd",
-                "newPage": false,
-                "searchKey": "sys.GoosFreebsd",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoosFreebsd"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoosFreebsd = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoosHurd",
-              "documentation": {
-                "identifier": "GoosHurd",
-                "newPage": false,
-                "searchKey": "sys.GoosHurd",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoosHurd"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoosHurd = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoosIllumos",
-              "documentation": {
-                "identifier": "GoosIllumos",
-                "newPage": false,
-                "searchKey": "sys.GoosIllumos",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoosIllumos"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoosIllumos = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoosIos",
-              "documentation": {
-                "identifier": "GoosIos",
-                "newPage": false,
-                "searchKey": "sys.GoosIos",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoosIos"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoosIos = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoosJs",
-              "documentation": {
-                "identifier": "GoosJs",
-                "newPage": false,
-                "searchKey": "sys.GoosJs",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoosJs"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoosJs = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoosLinux",
-              "documentation": {
-                "identifier": "GoosLinux",
-                "newPage": false,
-                "searchKey": "sys.GoosLinux",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoosLinux"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoosLinux = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoosNacl",
-              "documentation": {
-                "identifier": "GoosNacl",
-                "newPage": false,
-                "searchKey": "sys.GoosNacl",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoosNacl"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoosNacl = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoosNetbsd",
-              "documentation": {
-                "identifier": "GoosNetbsd",
-                "newPage": false,
-                "searchKey": "sys.GoosNetbsd",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoosNetbsd"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoosNetbsd = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoosOpenbsd",
-              "documentation": {
-                "identifier": "GoosOpenbsd",
-                "newPage": false,
-                "searchKey": "sys.GoosOpenbsd",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoosOpenbsd"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoosOpenbsd = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoosPlan9",
-              "documentation": {
-                "identifier": "GoosPlan9",
-                "newPage": false,
-                "searchKey": "sys.GoosPlan9",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoosPlan9"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoosPlan9 = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoosSolaris",
-              "documentation": {
-                "identifier": "GoosSolaris",
-                "newPage": false,
-                "searchKey": "sys.GoosSolaris",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoosSolaris"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoosSolaris = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoosWindows",
-              "documentation": {
-                "identifier": "GoosWindows",
-                "newPage": false,
-                "searchKey": "sys.GoosWindows",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoosWindows"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoosWindows = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#GoosZos",
-              "documentation": {
-                "identifier": "GoosZos",
-                "newPage": false,
-                "searchKey": "sys.GoosZos",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const GoosZos"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst GoosZos = 0\n```\n\n"
+                "value": "```Go\nconst _StackAlign = PtrSize\n```\n\n"
               },
               "children": null
             }
@@ -1510,6 +1716,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -1524,22 +1731,25 @@
         "children": [
           {
             "node": {
-              "pathID": "/runtime/internal/sys#deBruijnIdx64ctz",
+              "pathID": "/runtime/internal/sys#deBruijn64tab",
               "documentation": {
-                "identifier": "deBruijnIdx64ctz",
+                "identifier": "deBruijn64tab",
                 "newPage": false,
-                "searchKey": "sys.deBruijnIdx64ctz",
+                "searchKey": "sys.deBruijn64tab",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var deBruijnIdx64ctz"
+                "value": "var deBruijn64tab"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar deBruijnIdx64ctz = ...\n```\n\n"
+                "value": "```Go\nvar deBruijn64tab = ...\n```\n\n"
               },
               "children": null
             }
@@ -1552,6 +1762,9 @@
                 "newPage": false,
                 "searchKey": "sys.deBruijnIdx32ctz",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -1568,12 +1781,40 @@
           },
           {
             "node": {
+              "pathID": "/runtime/internal/sys#deBruijnIdx64ctz",
+              "documentation": {
+                "identifier": "deBruijnIdx64ctz",
+                "newPage": false,
+                "searchKey": "sys.deBruijnIdx64ctz",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var deBruijnIdx64ctz"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar deBruijnIdx64ctz = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/runtime/internal/sys#len8tab",
               "documentation": {
                 "identifier": "len8tab",
                 "newPage": false,
                 "searchKey": "sys.len8tab",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -1596,6 +1837,9 @@
                 "newPage": false,
                 "searchKey": "sys.ntz8tab",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -1606,28 +1850,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar ntz8tab = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#deBruijn64tab",
-              "documentation": {
-                "identifier": "deBruijn64tab",
-                "newPage": false,
-                "searchKey": "sys.deBruijn64tab",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var deBruijn64tab"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar deBruijn64tab = ...\n```\n\n"
               },
               "children": null
             }
@@ -1643,6 +1865,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -1662,7 +1885,9 @@
                 "identifier": "ArchFamilyType",
                 "newPage": false,
                 "searchKey": "sys.ArchFamilyType",
-                "tags": null
+                "tags": [
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1686,6 +1911,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -1700,92 +1926,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/runtime/internal/sys#Ctz64",
-              "documentation": {
-                "identifier": "Ctz64",
-                "newPage": false,
-                "searchKey": "sys.Ctz64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Ctz64(x uint64) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Ctz64(x uint64) int\n```\n\nCtz64 counts trailing (low-order) zeroes, and if all are zero, then 64. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#Ctz32",
-              "documentation": {
-                "identifier": "Ctz32",
-                "newPage": false,
-                "searchKey": "sys.Ctz32",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Ctz32(x uint32) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Ctz32(x uint32) int\n```\n\nCtz32 counts trailing (low-order) zeroes, and if all are zero, then 32. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#Ctz8",
-              "documentation": {
-                "identifier": "Ctz8",
-                "newPage": false,
-                "searchKey": "sys.Ctz8",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Ctz8(x uint8) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Ctz8(x uint8) int\n```\n\nCtz8 returns the number of trailing zero bits in x; the result is 8 for x == 0. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys#Bswap64",
-              "documentation": {
-                "identifier": "Bswap64",
-                "newPage": false,
-                "searchKey": "sys.Bswap64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Bswap64(x uint64) uint64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Bswap64(x uint64) uint64\n```\n\nBswap64 returns its input with byte order reversed 0x0102030405060708 -> 0x0807060504030201 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/runtime/internal/sys#Bswap32",
               "documentation": {
                 "identifier": "Bswap32",
                 "newPage": false,
                 "searchKey": "sys.Bswap32",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1800,60 +1948,88 @@
           },
           {
             "node": {
-              "pathID": "/runtime/internal/sys#Len64",
+              "pathID": "/runtime/internal/sys#Bswap64",
               "documentation": {
-                "identifier": "Len64",
+                "identifier": "Bswap64",
                 "newPage": false,
-                "searchKey": "sys.Len64",
-                "tags": null
+                "searchKey": "sys.Bswap64",
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func Len64(x uint64) (n int)"
+                "value": "func Bswap64(x uint64) uint64"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc Len64(x uint64) (n int)\n```\n\nlen64 returns the minimum number of bits required to represent x; the result is 0 for x == 0. \n\n"
+                "value": "```Go\nfunc Bswap64(x uint64) uint64\n```\n\nBswap64 returns its input with byte order reversed 0x0102030405060708 -> 0x0807060504030201 \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/runtime/internal/sys#OnesCount64",
+              "pathID": "/runtime/internal/sys#Ctz32",
               "documentation": {
-                "identifier": "OnesCount64",
+                "identifier": "Ctz32",
                 "newPage": false,
-                "searchKey": "sys.OnesCount64",
-                "tags": null
+                "searchKey": "sys.Ctz32",
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func OnesCount64(x uint64) int"
+                "value": "func Ctz32(x uint32) int"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc OnesCount64(x uint64) int\n```\n\nOnesCount64 returns the number of one bits (\"population count\") in x. \n\n"
+                "value": "```Go\nfunc Ctz32(x uint32) int\n```\n\nCtz32 counts trailing (low-order) zeroes, and if all are zero, then 32. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/runtime/internal/sys#TrailingZeros64",
+              "pathID": "/runtime/internal/sys#Ctz64",
               "documentation": {
-                "identifier": "TrailingZeros64",
+                "identifier": "Ctz64",
                 "newPage": false,
-                "searchKey": "sys.TrailingZeros64",
-                "tags": null
+                "searchKey": "sys.Ctz64",
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TrailingZeros64(x uint64) int"
+                "value": "func Ctz64(x uint64) int"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TrailingZeros64(x uint64) int\n```\n\nTrailingZeros64 returns the number of trailing zero bits in x; the result is 64 for x == 0. \n\n"
+                "value": "```Go\nfunc Ctz64(x uint64) int\n```\n\nCtz64 counts trailing (low-order) zeroes, and if all are zero, then 64. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#Ctz8",
+              "documentation": {
+                "identifier": "Ctz8",
+                "newPage": false,
+                "searchKey": "sys.Ctz8",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Ctz8(x uint8) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Ctz8(x uint8) int\n```\n\nCtz8 returns the number of trailing zero bits in x; the result is 8 for x == 0. \n\n"
               },
               "children": null
             }
@@ -1865,7 +2041,9 @@
                 "identifier": "LeadingZeros64",
                 "newPage": false,
                 "searchKey": "sys.LeadingZeros64",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1885,7 +2063,9 @@
                 "identifier": "LeadingZeros8",
                 "newPage": false,
                 "searchKey": "sys.LeadingZeros8",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1900,20 +2080,22 @@
           },
           {
             "node": {
-              "pathID": "/runtime/internal/sys#TrailingZeros8",
+              "pathID": "/runtime/internal/sys#Len64",
               "documentation": {
-                "identifier": "TrailingZeros8",
+                "identifier": "Len64",
                 "newPage": false,
-                "searchKey": "sys.TrailingZeros8",
-                "tags": null
+                "searchKey": "sys.Len64",
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TrailingZeros8(x uint8) int"
+                "value": "func Len64(x uint64) (n int)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TrailingZeros8(x uint8) int\n```\n\nTrailingZeros8 returns the number of trailing zero bits in x; the result is 8 for x == 0. \n\n"
+                "value": "```Go\nfunc Len64(x uint64) (n int)\n```\n\nlen64 returns the minimum number of bits required to represent x; the result is 0 for x == 0. \n\n"
               },
               "children": null
             }
@@ -1925,7 +2107,9 @@
                 "identifier": "Len8",
                 "newPage": false,
                 "searchKey": "sys.Len8",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1934,6 +2118,72 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc Len8(x uint8) int\n```\n\nLen8 returns the minimum number of bits required to represent x; the result is 0 for x == 0. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#OnesCount64",
+              "documentation": {
+                "identifier": "OnesCount64",
+                "newPage": false,
+                "searchKey": "sys.OnesCount64",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func OnesCount64(x uint64) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc OnesCount64(x uint64) int\n```\n\nOnesCount64 returns the number of one bits (\"population count\") in x. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#TrailingZeros64",
+              "documentation": {
+                "identifier": "TrailingZeros64",
+                "newPage": false,
+                "searchKey": "sys.TrailingZeros64",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TrailingZeros64(x uint64) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TrailingZeros64(x uint64) int\n```\n\nTrailingZeros64 returns the number of trailing zero bits in x; the result is 64 for x == 0. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys#TrailingZeros8",
+              "documentation": {
+                "identifier": "TrailingZeros8",
+                "newPage": false,
+                "searchKey": "sys.TrailingZeros8",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TrailingZeros8(x uint8) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TrailingZeros8(x uint8) int\n```\n\nTrailingZeros8 returns the number of trailing zero bits in x; the result is 8 for x == 0. \n\n"
               },
               "children": null
             }

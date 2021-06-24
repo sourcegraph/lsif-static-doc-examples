@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "archive/zip_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/archive/zip_test#ExampleWriter",
-              "documentation": {
-                "identifier": "ExampleWriter",
-                "newPage": false,
-                "searchKey": "zip_test.ExampleWriter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleWriter()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleWriter()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/archive/zip_test#ExampleReader",
               "documentation": {
                 "identifier": "ExampleReader",
                 "newPage": false,
                 "searchKey": "zip_test.ExampleReader",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -83,12 +64,36 @@
           },
           {
             "node": {
+              "pathID": "/archive/zip_test#ExampleWriter",
+              "documentation": {
+                "identifier": "ExampleWriter",
+                "newPage": false,
+                "searchKey": "zip_test.ExampleWriter",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleWriter()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleWriter()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/archive/zip_test#ExampleWriter_RegisterCompressor",
               "documentation": {
                 "identifier": "ExampleWriter_RegisterCompressor",
                 "newPage": false,
                 "searchKey": "zip_test.ExampleWriter_RegisterCompressor",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },

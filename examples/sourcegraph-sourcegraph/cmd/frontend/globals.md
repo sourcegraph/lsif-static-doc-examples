@@ -5,119 +5,54 @@ Package globals contains global variables that should be set by the frontend's m
 ## Index
 
 * [Variables](#var)
-    * [var externalURLWatchers](#externalURLWatchers)
-    * [var defaultexternalURL](#defaultexternalURL)
-    * [var externalURL](#externalURL)
-    * [var defaultPermissionsUserMapping](#defaultPermissionsUserMapping)
-    * [var permissionsUserMapping](#permissionsUserMapping)
-    * [var permissionsUserMappingWatchers](#permissionsUserMappingWatchers)
-    * [var defaultBranding](#defaultBranding)
+    * [var ConfigurationServerFrontendOnly](#ConfigurationServerFrontendOnly)
     * [var branding](#branding)
     * [var brandingWatchers](#brandingWatchers)
-    * [var ConfigurationServerFrontendOnly](#ConfigurationServerFrontendOnly)
+    * [var defaultBranding](#defaultBranding)
+    * [var defaultPermissionsUserMapping](#defaultPermissionsUserMapping)
+    * [var defaultexternalURL](#defaultexternalURL)
+    * [var externalURL](#externalURL)
+    * [var externalURLWatchers](#externalURLWatchers)
+    * [var permissionsUserMapping](#permissionsUserMapping)
+    * [var permissionsUserMappingWatchers](#permissionsUserMappingWatchers)
 * [Functions](#func)
-    * [func WatchExternalURL(defaultURL *url.URL)](#WatchExternalURL)
+    * [func Branding() *schema.Branding](#Branding)
     * [func ExternalURL() *url.URL](#ExternalURL)
-    * [func SetExternalURL(u *url.URL)](#SetExternalURL)
-    * [func WatchPermissionsUserMapping()](#WatchPermissionsUserMapping)
     * [func PermissionsUserMapping() *schema.PermissionsUserMapping](#PermissionsUserMapping)
+    * [func SetBranding(u *schema.Branding)](#SetBranding)
+    * [func SetExternalURL(u *url.URL)](#SetExternalURL)
     * [func SetPermissionsUserMapping(u *schema.PermissionsUserMapping)](#SetPermissionsUserMapping)
     * [func WatchBranding(licenseChecker func() error)](#WatchBranding)
-    * [func Branding() *schema.Branding](#Branding)
-    * [func SetBranding(u *schema.Branding)](#SetBranding)
+    * [func WatchExternalURL(defaultURL *url.URL)](#WatchExternalURL)
+    * [func WatchPermissionsUserMapping()](#WatchPermissionsUserMapping)
 
 
 ## <a id="var" href="#var">Variables</a>
 
-### <a id="externalURLWatchers" href="#externalURLWatchers">var externalURLWatchers</a>
-
 ```
-searchKey: globals.externalURLWatchers
-tags: [private]
+tags: [package]
 ```
 
-```Go
-var externalURLWatchers uint32
-```
-
-### <a id="defaultexternalURL" href="#defaultexternalURL">var defaultexternalURL</a>
+### <a id="ConfigurationServerFrontendOnly" href="#ConfigurationServerFrontendOnly">var ConfigurationServerFrontendOnly</a>
 
 ```
-searchKey: globals.defaultexternalURL
-tags: [private]
+searchKey: globals.ConfigurationServerFrontendOnly
+tags: [variable struct]
 ```
 
 ```Go
-var defaultexternalURL = &url.URL{
-	Scheme: "http",
-	Host:   "example.com",
-}
+var ConfigurationServerFrontendOnly *conf.Server
 ```
 
-### <a id="externalURL" href="#externalURL">var externalURL</a>
+ConfigurationServerFrontendOnly provides the contents of the site configuration to other services and manages modifications to it. 
 
-```
-searchKey: globals.externalURL
-tags: [private]
-```
-
-```Go
-var externalURL = ...
-```
-
-### <a id="defaultPermissionsUserMapping" href="#defaultPermissionsUserMapping">var defaultPermissionsUserMapping</a>
-
-```
-searchKey: globals.defaultPermissionsUserMapping
-tags: [private]
-```
-
-```Go
-var defaultPermissionsUserMapping = ...
-```
-
-### <a id="permissionsUserMapping" href="#permissionsUserMapping">var permissionsUserMapping</a>
-
-```
-searchKey: globals.permissionsUserMapping
-tags: [private]
-```
-
-```Go
-var permissionsUserMapping = ...
-```
-
-permissionsUserMapping mirrors the value of `permissions.userMapping` in the site configuration. This variable is used to monitor configuration change via conf.Watch and must be operated atomically. 
-
-### <a id="permissionsUserMappingWatchers" href="#permissionsUserMappingWatchers">var permissionsUserMappingWatchers</a>
-
-```
-searchKey: globals.permissionsUserMappingWatchers
-tags: [private]
-```
-
-```Go
-var permissionsUserMappingWatchers uint32
-```
-
-### <a id="defaultBranding" href="#defaultBranding">var defaultBranding</a>
-
-```
-searchKey: globals.defaultBranding
-tags: [private]
-```
-
-```Go
-var defaultBranding = &schema.Branding{
-	BrandName: "Sourcegraph",
-}
-```
+Any another service that attempts to use this variable will panic. 
 
 ### <a id="branding" href="#branding">var branding</a>
 
 ```
 searchKey: globals.branding
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -134,45 +69,121 @@ branding mirrors the value of `branding` in the site configuration. This variabl
 
 ```
 searchKey: globals.brandingWatchers
-tags: [private]
+tags: [variable number private]
 ```
 
 ```Go
 var brandingWatchers uint32
 ```
 
-### <a id="ConfigurationServerFrontendOnly" href="#ConfigurationServerFrontendOnly">var ConfigurationServerFrontendOnly</a>
+### <a id="defaultBranding" href="#defaultBranding">var defaultBranding</a>
 
 ```
-searchKey: globals.ConfigurationServerFrontendOnly
+searchKey: globals.defaultBranding
+tags: [variable struct private]
 ```
 
 ```Go
-var ConfigurationServerFrontendOnly *conf.Server
+var defaultBranding = &schema.Branding{
+	BrandName: "Sourcegraph",
+}
 ```
 
-ConfigurationServerFrontendOnly provides the contents of the site configuration to other services and manages modifications to it. 
+### <a id="defaultPermissionsUserMapping" href="#defaultPermissionsUserMapping">var defaultPermissionsUserMapping</a>
 
-Any another service that attempts to use this variable will panic. 
+```
+searchKey: globals.defaultPermissionsUserMapping
+tags: [variable struct private]
+```
+
+```Go
+var defaultPermissionsUserMapping = ...
+```
+
+### <a id="defaultexternalURL" href="#defaultexternalURL">var defaultexternalURL</a>
+
+```
+searchKey: globals.defaultexternalURL
+tags: [variable struct private]
+```
+
+```Go
+var defaultexternalURL = &url.URL{
+	Scheme: "http",
+	Host:   "example.com",
+}
+```
+
+### <a id="externalURL" href="#externalURL">var externalURL</a>
+
+```
+searchKey: globals.externalURL
+tags: [variable struct private]
+```
+
+```Go
+var externalURL = ...
+```
+
+### <a id="externalURLWatchers" href="#externalURLWatchers">var externalURLWatchers</a>
+
+```
+searchKey: globals.externalURLWatchers
+tags: [variable number private]
+```
+
+```Go
+var externalURLWatchers uint32
+```
+
+### <a id="permissionsUserMapping" href="#permissionsUserMapping">var permissionsUserMapping</a>
+
+```
+searchKey: globals.permissionsUserMapping
+tags: [variable struct private]
+```
+
+```Go
+var permissionsUserMapping = ...
+```
+
+permissionsUserMapping mirrors the value of `permissions.userMapping` in the site configuration. This variable is used to monitor configuration change via conf.Watch and must be operated atomically. 
+
+### <a id="permissionsUserMappingWatchers" href="#permissionsUserMappingWatchers">var permissionsUserMappingWatchers</a>
+
+```
+searchKey: globals.permissionsUserMappingWatchers
+tags: [variable number private]
+```
+
+```Go
+var permissionsUserMappingWatchers uint32
+```
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="WatchExternalURL" href="#WatchExternalURL">func WatchExternalURL(defaultURL *url.URL)</a>
+```
+tags: [package]
+```
+
+### <a id="Branding" href="#Branding">func Branding() *schema.Branding</a>
 
 ```
-searchKey: globals.WatchExternalURL
+searchKey: globals.Branding
+tags: [function]
 ```
 
 ```Go
-func WatchExternalURL(defaultURL *url.URL)
+func Branding() *schema.Branding
 ```
 
-WatchExternalURL watches for changes in the `externalURL` site configuration so that changes are reflected in what is returned by the ExternalURL function. In case the setting is not set, defaultURL is used. This should only be called once and will panic otherwise. 
+Branding returns the last valid value of branding in the site configuration. Callers must not mutate the returned pointer. 
 
 ### <a id="ExternalURL" href="#ExternalURL">func ExternalURL() *url.URL</a>
 
 ```
 searchKey: globals.ExternalURL
+tags: [function]
 ```
 
 ```Go
@@ -181,34 +192,11 @@ func ExternalURL() *url.URL
 
 ExternalURL returns the fully-resolved, externally accessible frontend URL. Callers must not mutate the returned pointer. 
 
-### <a id="SetExternalURL" href="#SetExternalURL">func SetExternalURL(u *url.URL)</a>
-
-```
-searchKey: globals.SetExternalURL
-```
-
-```Go
-func SetExternalURL(u *url.URL)
-```
-
-SetExternalURL sets the fully-resolved, externally accessible frontend URL. 
-
-### <a id="WatchPermissionsUserMapping" href="#WatchPermissionsUserMapping">func WatchPermissionsUserMapping()</a>
-
-```
-searchKey: globals.WatchPermissionsUserMapping
-```
-
-```Go
-func WatchPermissionsUserMapping()
-```
-
-WatchPermissionsUserMapping watches for changes in the `permissions.userMapping` site configuration so that changes are reflected in what is returned by the PermissionsUserMapping function. This should only be called once and will panic otherwise. 
-
 ### <a id="PermissionsUserMapping" href="#PermissionsUserMapping">func PermissionsUserMapping() *schema.PermissionsUserMapping</a>
 
 ```
 searchKey: globals.PermissionsUserMapping
+tags: [function]
 ```
 
 ```Go
@@ -217,10 +205,37 @@ func PermissionsUserMapping() *schema.PermissionsUserMapping
 
 PermissionsUserMapping returns the last valid value of permissions user mapping in the site configuration. Callers must not mutate the returned pointer. 
 
+### <a id="SetBranding" href="#SetBranding">func SetBranding(u *schema.Branding)</a>
+
+```
+searchKey: globals.SetBranding
+tags: [method]
+```
+
+```Go
+func SetBranding(u *schema.Branding)
+```
+
+SetBranding sets a valid value for the branding. 
+
+### <a id="SetExternalURL" href="#SetExternalURL">func SetExternalURL(u *url.URL)</a>
+
+```
+searchKey: globals.SetExternalURL
+tags: [method]
+```
+
+```Go
+func SetExternalURL(u *url.URL)
+```
+
+SetExternalURL sets the fully-resolved, externally accessible frontend URL. 
+
 ### <a id="SetPermissionsUserMapping" href="#SetPermissionsUserMapping">func SetPermissionsUserMapping(u *schema.PermissionsUserMapping)</a>
 
 ```
 searchKey: globals.SetPermissionsUserMapping
+tags: [method]
 ```
 
 ```Go
@@ -233,6 +248,7 @@ SetPermissionsUserMapping sets a valid value for the permissions user mapping.
 
 ```
 searchKey: globals.WatchBranding
+tags: [method]
 ```
 
 ```Go
@@ -241,27 +257,29 @@ func WatchBranding(licenseChecker func() error)
 
 WatchBranding watches for changes in the `branding` site configuration so that changes are reflected in what is returned by the Branding function. This should only be called once and will panic otherwise. 
 
-### <a id="Branding" href="#Branding">func Branding() *schema.Branding</a>
+### <a id="WatchExternalURL" href="#WatchExternalURL">func WatchExternalURL(defaultURL *url.URL)</a>
 
 ```
-searchKey: globals.Branding
-```
-
-```Go
-func Branding() *schema.Branding
-```
-
-Branding returns the last valid value of branding in the site configuration. Callers must not mutate the returned pointer. 
-
-### <a id="SetBranding" href="#SetBranding">func SetBranding(u *schema.Branding)</a>
-
-```
-searchKey: globals.SetBranding
+searchKey: globals.WatchExternalURL
+tags: [method]
 ```
 
 ```Go
-func SetBranding(u *schema.Branding)
+func WatchExternalURL(defaultURL *url.URL)
 ```
 
-SetBranding sets a valid value for the branding. 
+WatchExternalURL watches for changes in the `externalURL` site configuration so that changes are reflected in what is returned by the ExternalURL function. In case the setting is not set, defaultURL is used. This should only be called once and will panic otherwise. 
+
+### <a id="WatchPermissionsUserMapping" href="#WatchPermissionsUserMapping">func WatchPermissionsUserMapping()</a>
+
+```
+searchKey: globals.WatchPermissionsUserMapping
+tags: [function]
+```
+
+```Go
+func WatchPermissionsUserMapping()
+```
+
+WatchPermissionsUserMapping watches for changes in the `permissions.userMapping` site configuration so that changes are reflected in what is returned by the PermissionsUserMapping function. This should only be called once and will panic otherwise. 
 

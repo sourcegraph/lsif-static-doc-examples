@@ -4,7 +4,9 @@
     "identifier": "repo-updater",
     "newPage": true,
     "searchKey": "enterprise/cmd/repo-updater",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -25,7 +27,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -38,34 +42,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/cmd/repo-updater#main",
-              "documentation": {
-                "identifier": "main",
-                "newPage": false,
-                "searchKey": "main.main",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func main()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc main()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/repo-updater#enterpriseInit",
               "documentation": {
                 "identifier": "enterpriseInit",
                 "newPage": false,
                 "searchKey": "main.enterpriseInit",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -82,12 +65,36 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/cmd/repo-updater#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/repo-updater#startBackgroundPermsSync",
               "documentation": {
                 "identifier": "startBackgroundPermsSync",
                 "newPage": false,
                 "searchKey": "main.startBackgroundPermsSync",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/ratelimit",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,10 @@
                 "identifier": "DefaultMonitorRegistry",
                 "newPage": false,
                 "searchKey": "ratelimit.DefaultMonitorRegistry",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +69,10 @@
                 "identifier": "DefaultRegistry",
                 "newPage": false,
                 "searchKey": "ratelimit.DefaultRegistry",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -88,6 +96,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -102,93 +111,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/ratelimit#MonitorRegistry",
-              "documentation": {
-                "identifier": "MonitorRegistry",
-                "newPage": false,
-                "searchKey": "ratelimit.MonitorRegistry",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type MonitorRegistry struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype MonitorRegistry struct {\n\tmu sync.Mutex\n\t// Monitor per code host / token tuple, keys are the normalized base URL for a\n\t// code host, plus the token hash.\n\tmonitors map[string]*Monitor\n}\n```\n\nMonitorRegistry keeps a mapping of external service URL to *Monitor. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/ratelimit#NewMonitorRegistry",
-                    "documentation": {
-                      "identifier": "NewMonitorRegistry",
-                      "newPage": false,
-                      "searchKey": "ratelimit.NewMonitorRegistry",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewMonitorRegistry() *MonitorRegistry"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewMonitorRegistry() *MonitorRegistry\n```\n\nNewMonitorRegistry creates a new empty registry. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/ratelimit#MonitorRegistry.GetOrSet",
-                    "documentation": {
-                      "identifier": "MonitorRegistry.GetOrSet",
-                      "newPage": false,
-                      "searchKey": "ratelimit.MonitorRegistry.GetOrSet",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *MonitorRegistry) GetOrSet(baseURL, authHash, resource string, monitor *Monitor) *Monitor"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *MonitorRegistry) GetOrSet(baseURL, authHash, resource string, monitor *Monitor) *Monitor\n```\n\nGetOrSet fetches the rate limit monitor associated with the given code host / token tuple and an optional resource key. If none has been configured yet, the provided monitor will be set. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/ratelimit#MonitorRegistry.Count",
-                    "documentation": {
-                      "identifier": "MonitorRegistry.Count",
-                      "newPage": false,
-                      "searchKey": "ratelimit.MonitorRegistry.Count",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *MonitorRegistry) Count() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *MonitorRegistry) Count() int\n```\n\nCount returns the total number of rate limiters in the registry \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/ratelimit#MetricsCollector",
               "documentation": {
                 "identifier": "MetricsCollector",
                 "newPage": false,
                 "searchKey": "ratelimit.MetricsCollector",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -208,7 +138,9 @@
                 "identifier": "Monitor",
                 "newPage": false,
                 "searchKey": "ratelimit.Monitor",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -226,7 +158,9 @@
                       "identifier": "Monitor.Get",
                       "newPage": false,
                       "searchKey": "ratelimit.Monitor.Get",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -246,7 +180,9 @@
                       "identifier": "Monitor.RecommendedWaitForBackgroundOp",
                       "newPage": false,
                       "searchKey": "ratelimit.Monitor.RecommendedWaitForBackgroundOp",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -261,32 +197,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/ratelimit#Monitor.Update",
-                    "documentation": {
-                      "identifier": "Monitor.Update",
-                      "newPage": false,
-                      "searchKey": "ratelimit.Monitor.Update",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Monitor) Update(h http.Header)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Monitor) Update(h http.Header)\n```\n\nUpdate updates the monitor's rate limit information based on the HTTP response headers. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/ratelimit#Monitor.SetCollector",
                     "documentation": {
                       "identifier": "Monitor.SetCollector",
                       "newPage": false,
                       "searchKey": "ratelimit.Monitor.SetCollector",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -301,12 +219,35 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/ratelimit#Monitor.Update",
+                    "documentation": {
+                      "identifier": "Monitor.Update",
+                      "newPage": false,
+                      "searchKey": "ratelimit.Monitor.Update",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Monitor) Update(h http.Header)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Monitor) Update(h http.Header)\n```\n\nUpdate updates the monitor's rate limit information based on the HTTP response headers. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/ratelimit#Monitor.now",
                     "documentation": {
                       "identifier": "Monitor.now",
                       "newPage": false,
                       "searchKey": "ratelimit.Monitor.now",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -326,12 +267,103 @@
           },
           {
             "node": {
+              "pathID": "/internal/ratelimit#MonitorRegistry",
+              "documentation": {
+                "identifier": "MonitorRegistry",
+                "newPage": false,
+                "searchKey": "ratelimit.MonitorRegistry",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MonitorRegistry struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MonitorRegistry struct {\n\tmu sync.Mutex\n\t// Monitor per code host / token tuple, keys are the normalized base URL for a\n\t// code host, plus the token hash.\n\tmonitors map[string]*Monitor\n}\n```\n\nMonitorRegistry keeps a mapping of external service URL to *Monitor. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/ratelimit#NewMonitorRegistry",
+                    "documentation": {
+                      "identifier": "NewMonitorRegistry",
+                      "newPage": false,
+                      "searchKey": "ratelimit.NewMonitorRegistry",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMonitorRegistry() *MonitorRegistry"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMonitorRegistry() *MonitorRegistry\n```\n\nNewMonitorRegistry creates a new empty registry. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/ratelimit#MonitorRegistry.Count",
+                    "documentation": {
+                      "identifier": "MonitorRegistry.Count",
+                      "newPage": false,
+                      "searchKey": "ratelimit.MonitorRegistry.Count",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *MonitorRegistry) Count() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *MonitorRegistry) Count() int\n```\n\nCount returns the total number of rate limiters in the registry \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/ratelimit#MonitorRegistry.GetOrSet",
+                    "documentation": {
+                      "identifier": "MonitorRegistry.GetOrSet",
+                      "newPage": false,
+                      "searchKey": "ratelimit.MonitorRegistry.GetOrSet",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *MonitorRegistry) GetOrSet(baseURL, authHash, resource string, monitor *Monitor) *Monitor"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *MonitorRegistry) GetOrSet(baseURL, authHash, resource string, monitor *Monitor) *Monitor\n```\n\nGetOrSet fetches the rate limit monitor associated with the given code host / token tuple and an optional resource key. If none has been configured yet, the provided monitor will be set. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/ratelimit#Registry",
               "documentation": {
                 "identifier": "Registry",
                 "newPage": false,
                 "searchKey": "ratelimit.Registry",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -349,7 +381,9 @@
                       "identifier": "NewRegistry",
                       "newPage": false,
                       "searchKey": "ratelimit.NewRegistry",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -364,12 +398,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/ratelimit#Registry.Count",
+                    "documentation": {
+                      "identifier": "Registry.Count",
+                      "newPage": false,
+                      "searchKey": "ratelimit.Registry.Count",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Registry) Count() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Registry) Count() int\n```\n\nCount returns the total number of rate limiters in the registry \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/ratelimit#Registry.Get",
                     "documentation": {
                       "identifier": "Registry.Get",
                       "newPage": false,
                       "searchKey": "ratelimit.Registry.Get",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -389,7 +447,9 @@
                       "identifier": "Registry.GetOrSet",
                       "newPage": false,
                       "searchKey": "ratelimit.Registry.GetOrSet",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -398,26 +458,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (r *Registry) GetOrSet(baseURL string, fallback *rate.Limiter) *rate.Limiter\n```\n\nGetOrSet fetches the rate limiter associated with the given code host. If none has been configured yet, the provided limiter will be set. A nil limiter will fall back to an infinite limiter. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/ratelimit#Registry.Count",
-                    "documentation": {
-                      "identifier": "Registry.Count",
-                      "newPage": false,
-                      "searchKey": "ratelimit.Registry.Count",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Registry) Count() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Registry) Count() int\n```\n\nCount returns the total number of rate limiters in the registry \n\n"
                     },
                     "children": null
                   }
@@ -436,6 +476,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -450,35 +491,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/ratelimit#normaliseURL",
-              "documentation": {
-                "identifier": "normaliseURL",
-                "newPage": false,
-                "searchKey": "ratelimit.normaliseURL",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func normaliseURL(rawURL string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc normaliseURL(rawURL string) string\n```\n\nnormaliseURL will attempt to normalise rawURL. If there is an error parsing it, we'll just return rawURL lower cased. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/ratelimit#TestMonitor_RecommendedWaitForBackgroundOp",
               "documentation": {
                 "identifier": "TestMonitor_RecommendedWaitForBackgroundOp",
                 "newPage": false,
                 "searchKey": "ratelimit.TestMonitor_RecommendedWaitForBackgroundOp",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -500,7 +521,9 @@
                 "newPage": false,
                 "searchKey": "ratelimit.TestMonitor_RecommendedWaitForBackgroundOp_RetryAfter",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -522,7 +545,9 @@
                 "newPage": false,
                 "searchKey": "ratelimit.TestMonitor_Update",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -532,6 +557,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc TestMonitor_Update(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/ratelimit#normaliseURL",
+              "documentation": {
+                "identifier": "normaliseURL",
+                "newPage": false,
+                "searchKey": "ratelimit.normaliseURL",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func normaliseURL(rawURL string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc normaliseURL(rawURL string) string\n```\n\nnormaliseURL will attempt to normalise rawURL. If there is an error parsing it, we'll just return rawURL lower cased. \n\n"
               },
               "children": null
             }

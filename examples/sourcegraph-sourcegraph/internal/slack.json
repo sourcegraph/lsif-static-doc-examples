@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/slack",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,12 +41,36 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/slack#Attachment",
+              "documentation": {
+                "identifier": "Attachment",
+                "newPage": false,
+                "searchKey": "slack.Attachment",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Attachment struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Attachment struct {\n\tAuthorIcon string   `json:\"author_icon,omitempty\"`\n\tAuthorLink string   `json:\"author_link,omitempty\"`\n\tAuthorName string   `json:\"author_name,omitempty\"`\n\tColor      string   `json:\"color\"`\n\tFallback   string   `json:\"fallback\"`\n\tFields     []*Field `json:\"fields\"`\n\tFooter     string   `json:\"footer\"`\n\tMarkdownIn []string `json:\"mrkdwn_in\"`\n\tThumbURL   string   `json:\"thumb_url\"`\n\tText       string   `json:\"text,omitempty\"`\n\tTimestamp  int64    `json:\"ts\"`\n\tTitle      string   `json:\"title\"`\n\tTitleLink  string   `json:\"title_link,omitempty\"`\n}\n```\n\nAttachment is a Slack message attachment, defined at: [https://api.slack.com/docs/message-attachments](https://api.slack.com/docs/message-attachments) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/slack#Client",
               "documentation": {
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "slack.Client",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +88,9 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "slack.New",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,7 +110,9 @@
                       "identifier": "Client.Post",
                       "newPage": false,
                       "searchKey": "slack.Client.Post",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -100,52 +130,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/slack#Payload",
-              "documentation": {
-                "identifier": "Payload",
-                "newPage": false,
-                "searchKey": "slack.Payload",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Payload struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Payload struct {\n\tUsername    string        `json:\"username,omitempty\"`\n\tIconEmoji   string        `json:\"icon_emoji,omitempty\"`\n\tUnfurlLinks bool          `json:\"unfurl_links,omitempty\"`\n\tUnfurlMedia bool          `json:\"unfurl_media,omitempty\"`\n\tText        string        `json:\"text,omitempty\"`\n\tAttachments []*Attachment `json:\"attachments,omitempty\"`\n}\n```\n\nPayload is the wrapper for a Slack message, defined at: [https://api.slack.com/docs/message-formatting](https://api.slack.com/docs/message-formatting) \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/slack#Attachment",
-              "documentation": {
-                "identifier": "Attachment",
-                "newPage": false,
-                "searchKey": "slack.Attachment",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Attachment struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Attachment struct {\n\tAuthorIcon string   `json:\"author_icon,omitempty\"`\n\tAuthorLink string   `json:\"author_link,omitempty\"`\n\tAuthorName string   `json:\"author_name,omitempty\"`\n\tColor      string   `json:\"color\"`\n\tFallback   string   `json:\"fallback\"`\n\tFields     []*Field `json:\"fields\"`\n\tFooter     string   `json:\"footer\"`\n\tMarkdownIn []string `json:\"mrkdwn_in\"`\n\tThumbURL   string   `json:\"thumb_url\"`\n\tText       string   `json:\"text,omitempty\"`\n\tTimestamp  int64    `json:\"ts\"`\n\tTitle      string   `json:\"title\"`\n\tTitleLink  string   `json:\"title_link,omitempty\"`\n}\n```\n\nAttachment is a Slack message attachment, defined at: [https://api.slack.com/docs/message-attachments](https://api.slack.com/docs/message-attachments) \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/slack#Field",
               "documentation": {
                 "identifier": "Field",
                 "newPage": false,
                 "searchKey": "slack.Field",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -154,6 +146,28 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\ntype Field struct {\n\tShort bool   `json:\"short\"`\n\tTitle string `json:\"title\"`\n\tValue string `json:\"value\"`\n}\n```\n\nField is a single item within an attachment, defined at: [https://api.slack.com/docs/message-attachments](https://api.slack.com/docs/message-attachments) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/slack#Payload",
+              "documentation": {
+                "identifier": "Payload",
+                "newPage": false,
+                "searchKey": "slack.Payload",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Payload struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Payload struct {\n\tUsername    string        `json:\"username,omitempty\"`\n\tIconEmoji   string        `json:\"icon_emoji,omitempty\"`\n\tUnfurlLinks bool          `json:\"unfurl_links,omitempty\"`\n\tUnfurlMedia bool          `json:\"unfurl_media,omitempty\"`\n\tText        string        `json:\"text,omitempty\"`\n\tAttachments []*Attachment `json:\"attachments,omitempty\"`\n}\n```\n\nPayload is the wrapper for a Slack message, defined at: [https://api.slack.com/docs/message-formatting](https://api.slack.com/docs/message-formatting) \n\n"
               },
               "children": null
             }

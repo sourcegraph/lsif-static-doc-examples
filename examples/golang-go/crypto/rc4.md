@@ -17,22 +17,26 @@ RC4 is cryptographically broken and should not be used for secure applications.
         * [func (k KeySizeError) Error() string](#KeySizeError.Error)
     * [type rc4Test struct](#rc4Test)
 * [Functions](#func)
-    * [func testEncrypt(t *testing.T, desc string, c *Cipher, src, expect []byte)](#testEncrypt)
-    * [func TestGolden(t *testing.T)](#TestGolden)
-    * [func TestBlock(t *testing.T)](#TestBlock)
-    * [func benchmark(b *testing.B, size int64)](#benchmark)
     * [func BenchmarkRC4_128(b *testing.B)](#BenchmarkRC4_128)
     * [func BenchmarkRC4_1K(b *testing.B)](#BenchmarkRC4_1K)
     * [func BenchmarkRC4_8K(b *testing.B)](#BenchmarkRC4_8K)
+    * [func TestBlock(t *testing.T)](#TestBlock)
+    * [func TestGolden(t *testing.T)](#TestGolden)
+    * [func benchmark(b *testing.B, size int64)](#benchmark)
+    * [func testEncrypt(t *testing.T, desc string, c *Cipher, src, expect []byte)](#testEncrypt)
 
 
 ## <a id="var" href="#var">Variables</a>
+
+```
+tags: [package]
+```
 
 ### <a id="golden" href="#golden">var golden</a>
 
 ```
 searchKey: rc4.golden
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
@@ -41,10 +45,15 @@ var golden = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [package]
+```
+
 ### <a id="Cipher" href="#Cipher">type Cipher struct</a>
 
 ```
 searchKey: rc4.Cipher
+tags: [struct]
 ```
 
 ```Go
@@ -60,6 +69,7 @@ A Cipher is an instance of RC4 using a particular key.
 
 ```
 searchKey: rc4.NewCipher
+tags: [method]
 ```
 
 ```Go
@@ -72,7 +82,7 @@ NewCipher creates and returns a new Cipher. The key argument should be the RC4 k
 
 ```
 searchKey: rc4.Cipher.Reset
-tags: [deprecated]
+tags: [function deprecated]
 ```
 
 ```Go
@@ -87,6 +97,7 @@ Deprecated: Reset can't guarantee that the key will be entirely removed from the
 
 ```
 searchKey: rc4.Cipher.XORKeyStream
+tags: [method]
 ```
 
 ```Go
@@ -99,6 +110,7 @@ XORKeyStream sets dst to the result of XORing src with the key stream. Dst and s
 
 ```
 searchKey: rc4.KeySizeError
+tags: [number]
 ```
 
 ```Go
@@ -109,6 +121,7 @@ type KeySizeError int
 
 ```
 searchKey: rc4.KeySizeError.Error
+tags: [function]
 ```
 
 ```Go
@@ -119,7 +132,7 @@ func (k KeySizeError) Error() string
 
 ```
 searchKey: rc4.rc4Test
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -130,55 +143,15 @@ type rc4Test struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="testEncrypt" href="#testEncrypt">func testEncrypt(t *testing.T, desc string, c *Cipher, src, expect []byte)</a>
-
 ```
-searchKey: rc4.testEncrypt
-tags: [private]
-```
-
-```Go
-func testEncrypt(t *testing.T, desc string, c *Cipher, src, expect []byte)
-```
-
-### <a id="TestGolden" href="#TestGolden">func TestGolden(t *testing.T)</a>
-
-```
-searchKey: rc4.TestGolden
-tags: [private]
-```
-
-```Go
-func TestGolden(t *testing.T)
-```
-
-### <a id="TestBlock" href="#TestBlock">func TestBlock(t *testing.T)</a>
-
-```
-searchKey: rc4.TestBlock
-tags: [private]
-```
-
-```Go
-func TestBlock(t *testing.T)
-```
-
-### <a id="benchmark" href="#benchmark">func benchmark(b *testing.B, size int64)</a>
-
-```
-searchKey: rc4.benchmark
-tags: [private]
-```
-
-```Go
-func benchmark(b *testing.B, size int64)
+tags: [package]
 ```
 
 ### <a id="BenchmarkRC4_128" href="#BenchmarkRC4_128">func BenchmarkRC4_128(b *testing.B)</a>
 
 ```
 searchKey: rc4.BenchmarkRC4_128
-tags: [private]
+tags: [method private benchmark]
 ```
 
 ```Go
@@ -189,7 +162,7 @@ func BenchmarkRC4_128(b *testing.B)
 
 ```
 searchKey: rc4.BenchmarkRC4_1K
-tags: [private]
+tags: [method private benchmark]
 ```
 
 ```Go
@@ -200,10 +173,54 @@ func BenchmarkRC4_1K(b *testing.B)
 
 ```
 searchKey: rc4.BenchmarkRC4_8K
-tags: [private]
+tags: [method private benchmark]
 ```
 
 ```Go
 func BenchmarkRC4_8K(b *testing.B)
+```
+
+### <a id="TestBlock" href="#TestBlock">func TestBlock(t *testing.T)</a>
+
+```
+searchKey: rc4.TestBlock
+tags: [method private test]
+```
+
+```Go
+func TestBlock(t *testing.T)
+```
+
+### <a id="TestGolden" href="#TestGolden">func TestGolden(t *testing.T)</a>
+
+```
+searchKey: rc4.TestGolden
+tags: [method private test]
+```
+
+```Go
+func TestGolden(t *testing.T)
+```
+
+### <a id="benchmark" href="#benchmark">func benchmark(b *testing.B, size int64)</a>
+
+```
+searchKey: rc4.benchmark
+tags: [method private]
+```
+
+```Go
+func benchmark(b *testing.B, size int64)
+```
+
+### <a id="testEncrypt" href="#testEncrypt">func testEncrypt(t *testing.T, desc string, c *Cipher, src, expect []byte)</a>
+
+```
+searchKey: rc4.testEncrypt
+tags: [method private]
+```
+
+```Go
+func testEncrypt(t *testing.T, desc string, c *Cipher, src, expect []byte)
 ```
 

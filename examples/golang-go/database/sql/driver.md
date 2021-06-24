@@ -19,145 +19,100 @@ Before a connection is returned to the connection pool after use, IsValid is cal
 ## Index
 
 * [Variables](#var)
-    * [var ErrSkip](#ErrSkip)
+    * [var Bool](#Bool)
+    * [var DefaultParameterConverter](#DefaultParameterConverter)
     * [var ErrBadConn](#ErrBadConn)
     * [var ErrRemoveArgument](#ErrRemoveArgument)
-    * [var ResultNoRows](#ResultNoRows)
-    * [var Bool](#Bool)
+    * [var ErrSkip](#ErrSkip)
     * [var Int32](#Int32)
+    * [var ResultNoRows](#ResultNoRows)
     * [var String](#String)
-    * [var DefaultParameterConverter](#DefaultParameterConverter)
-    * [var valuerReflectType](#valuerReflectType)
-    * [var now](#now)
     * [var answer](#answer)
+    * [var now](#now)
     * [var valueConverterTests](#valueConverterTests)
+    * [var valuerReflectType](#valuerReflectType)
 * [Types](#type)
-    * [type Value interface{}](#Value)
-        * [func callValuerValue(vr Valuer) (v Value, err error)](#callValuerValue)
-    * [type NamedValue struct](#NamedValue)
+    * [type ColumnConverter interface](#ColumnConverter)
+    * [type Conn interface](#Conn)
+    * [type ConnBeginTx interface](#ConnBeginTx)
+    * [type ConnPrepareContext interface](#ConnPrepareContext)
+    * [type Connector interface](#Connector)
     * [type Driver interface](#Driver)
     * [type DriverContext interface](#DriverContext)
-    * [type Connector interface](#Connector)
-    * [type Pinger interface](#Pinger)
     * [type Execer interface](#Execer)
     * [type ExecerContext interface](#ExecerContext)
+    * [type IsolationLevel int](#IsolationLevel)
+    * [type NamedValue struct](#NamedValue)
+    * [type NamedValueChecker interface](#NamedValueChecker)
+    * [type NotNull struct](#NotNull)
+        * [func (n NotNull) ConvertValue(v interface{}) (Value, error)](#NotNull.ConvertValue)
+    * [type Null struct](#Null)
+        * [func (n Null) ConvertValue(v interface{}) (Value, error)](#Null.ConvertValue)
+    * [type Pinger interface](#Pinger)
     * [type Queryer interface](#Queryer)
     * [type QueryerContext interface](#QueryerContext)
-    * [type Conn interface](#Conn)
-    * [type ConnPrepareContext interface](#ConnPrepareContext)
-    * [type IsolationLevel int](#IsolationLevel)
-    * [type TxOptions struct](#TxOptions)
-    * [type ConnBeginTx interface](#ConnBeginTx)
-    * [type SessionResetter interface](#SessionResetter)
-    * [type Validator interface](#Validator)
     * [type Result interface](#Result)
-    * [type Stmt interface](#Stmt)
-    * [type StmtExecContext interface](#StmtExecContext)
-    * [type StmtQueryContext interface](#StmtQueryContext)
-    * [type NamedValueChecker interface](#NamedValueChecker)
-    * [type ColumnConverter interface](#ColumnConverter)
     * [type Rows interface](#Rows)
-    * [type RowsNextResultSet interface](#RowsNextResultSet)
-    * [type RowsColumnTypeScanType interface](#RowsColumnTypeScanType)
+    * [type RowsAffected int64](#RowsAffected)
+        * [func (RowsAffected) LastInsertId() (int64, error)](#RowsAffected.LastInsertId)
+        * [func (v RowsAffected) RowsAffected() (int64, error)](#RowsAffected.RowsAffected)
     * [type RowsColumnTypeDatabaseTypeName interface](#RowsColumnTypeDatabaseTypeName)
     * [type RowsColumnTypeLength interface](#RowsColumnTypeLength)
     * [type RowsColumnTypeNullable interface](#RowsColumnTypeNullable)
     * [type RowsColumnTypePrecisionScale interface](#RowsColumnTypePrecisionScale)
+    * [type RowsColumnTypeScanType interface](#RowsColumnTypeScanType)
+    * [type RowsNextResultSet interface](#RowsNextResultSet)
+    * [type SessionResetter interface](#SessionResetter)
+    * [type Stmt interface](#Stmt)
+    * [type StmtExecContext interface](#StmtExecContext)
+    * [type StmtQueryContext interface](#StmtQueryContext)
     * [type Tx interface](#Tx)
-    * [type RowsAffected int64](#RowsAffected)
-        * [func (RowsAffected) LastInsertId() (int64, error)](#RowsAffected.LastInsertId)
-        * [func (v RowsAffected) RowsAffected() (int64, error)](#RowsAffected.RowsAffected)
+    * [type TxOptions struct](#TxOptions)
+    * [type Validator interface](#Validator)
+    * [type Value interface{}](#Value)
+        * [func callValuerValue(vr Valuer) (v Value, err error)](#callValuerValue)
+    * [type ValueConverter interface](#ValueConverter)
+    * [type Valuer interface](#Valuer)
+    * [type b bool](#b)
+    * [type boolType struct{}](#boolType)
+        * [func (boolType) ConvertValue(src interface{}) (Value, error)](#boolType.ConvertValue)
+        * [func (boolType) String() string](#boolType.String)
+    * [type bs []byte](#bs)
+    * [type dec struct](#dec)
+        * [func (d dec) Decompose(buf []byte) (form byte, negative bool, coefficient []byte, exponent int32)](#dec.Decompose)
+    * [type decimalDecompose interface](#decimalDecompose)
+    * [type defaultConverter struct{}](#defaultConverter)
+        * [func (defaultConverter) ConvertValue(v interface{}) (Value, error)](#defaultConverter.ConvertValue)
+    * [type f float64](#f)
+    * [type i int64](#i)
+    * [type int32Type struct{}](#int32Type)
+        * [func (int32Type) ConvertValue(v interface{}) (Value, error)](#int32Type.ConvertValue)
+    * [type is []int](#is)
     * [type noRows struct{}](#noRows)
         * [func (noRows) LastInsertId() (int64, error)](#noRows.LastInsertId)
         * [func (noRows) RowsAffected() (int64, error)](#noRows.RowsAffected)
-    * [type ValueConverter interface](#ValueConverter)
-    * [type Valuer interface](#Valuer)
-    * [type boolType struct{}](#boolType)
-        * [func (boolType) String() string](#boolType.String)
-        * [func (boolType) ConvertValue(src interface{}) (Value, error)](#boolType.ConvertValue)
-    * [type int32Type struct{}](#int32Type)
-        * [func (int32Type) ConvertValue(v interface{}) (Value, error)](#int32Type.ConvertValue)
+    * [type s string](#s)
     * [type stringType struct{}](#stringType)
         * [func (stringType) ConvertValue(v interface{}) (Value, error)](#stringType.ConvertValue)
-    * [type Null struct](#Null)
-        * [func (n Null) ConvertValue(v interface{}) (Value, error)](#Null.ConvertValue)
-    * [type NotNull struct](#NotNull)
-        * [func (n NotNull) ConvertValue(v interface{}) (Value, error)](#NotNull.ConvertValue)
-    * [type defaultConverter struct{}](#defaultConverter)
-        * [func (defaultConverter) ConvertValue(v interface{}) (Value, error)](#defaultConverter.ConvertValue)
-    * [type decimalDecompose interface](#decimalDecompose)
-    * [type valueConverterTest struct](#valueConverterTest)
-    * [type i int64](#i)
-    * [type f float64](#f)
-    * [type b bool](#b)
-    * [type bs []byte](#bs)
-    * [type s string](#s)
     * [type t time.Time](#t)
-    * [type is []int](#is)
-    * [type dec struct](#dec)
-        * [func (d dec) Decompose(buf []byte) (form byte, negative bool, coefficient []byte, exponent int32)](#dec.Decompose)
+    * [type valueConverterTest struct](#valueConverterTest)
 * [Functions](#func)
-    * [func IsValue(v interface{}) bool](#IsValue)
     * [func IsScanValue(v interface{}) bool](#IsScanValue)
+    * [func IsValue(v interface{}) bool](#IsValue)
     * [func TestValueConverters(t *testing.T)](#TestValueConverters)
 
 
 ## <a id="var" href="#var">Variables</a>
 
-### <a id="ErrSkip" href="#ErrSkip">var ErrSkip</a>
-
 ```
-searchKey: driver.ErrSkip
+tags: [package]
 ```
-
-```Go
-var ErrSkip = errors.New("driver: skip fast-path; continue as if unimplemented")
-```
-
-ErrSkip may be returned by some optional interfaces' methods to indicate at runtime that the fast path is unavailable and the sql package should continue as if the optional interface was not implemented. ErrSkip is only supported where explicitly documented. 
-
-### <a id="ErrBadConn" href="#ErrBadConn">var ErrBadConn</a>
-
-```
-searchKey: driver.ErrBadConn
-```
-
-```Go
-var ErrBadConn = errors.New("driver: bad connection")
-```
-
-ErrBadConn should be returned by a driver to signal to the sql package that a driver.Conn is in a bad state (such as the server having earlier closed the connection) and the sql package should retry on a new connection. 
-
-To prevent duplicate operations, ErrBadConn should NOT be returned if there's a possibility that the database server might have performed the operation. Even if the server sends back an error, you shouldn't return ErrBadConn. 
-
-### <a id="ErrRemoveArgument" href="#ErrRemoveArgument">var ErrRemoveArgument</a>
-
-```
-searchKey: driver.ErrRemoveArgument
-```
-
-```Go
-var ErrRemoveArgument = errors.New("driver: remove argument from query")
-```
-
-ErrRemoveArgument may be returned from NamedValueChecker to instruct the sql package to not pass the argument to the driver query interface. Return when accepting query specific options or structures that aren't SQL query arguments. 
-
-### <a id="ResultNoRows" href="#ResultNoRows">var ResultNoRows</a>
-
-```
-searchKey: driver.ResultNoRows
-```
-
-```Go
-var ResultNoRows noRows
-```
-
-ResultNoRows is a pre-defined Result for drivers to return when a DDL command (such as a CREATE TABLE) succeeds. It returns an error for both LastInsertId and RowsAffected. 
 
 ### <a id="Bool" href="#Bool">var Bool</a>
 
 ```
 searchKey: driver.Bool
+tags: [variable struct]
 ```
 
 ```Go
@@ -178,34 +133,11 @@ The conversion rules are:
 - all other types are an error
 
 ```
-### <a id="Int32" href="#Int32">var Int32</a>
-
-```
-searchKey: driver.Int32
-```
-
-```Go
-var Int32 int32Type
-```
-
-Int32 is a ValueConverter that converts input values to int64, respecting the limits of an int32 value. 
-
-### <a id="String" href="#String">var String</a>
-
-```
-searchKey: driver.String
-```
-
-```Go
-var String stringType
-```
-
-String is a ValueConverter that converts its input to a string. If the value is already a string or []byte, it's unchanged. If the value is of another type, conversion to string is done with fmt.Sprintf("%v", v). 
-
 ### <a id="DefaultParameterConverter" href="#DefaultParameterConverter">var DefaultParameterConverter</a>
 
 ```
 searchKey: driver.DefaultParameterConverter
+tags: [variable struct]
 ```
 
 ```Go
@@ -216,161 +148,243 @@ DefaultParameterConverter is the default implementation of ValueConverter that's
 
 DefaultParameterConverter returns its argument directly if IsValue(arg). Otherwise, if the argument implements Valuer, its Value method is used to return a Value. As a fallback, the provided argument's underlying type is used to convert it to a Value: underlying integer types are converted to int64, floats to float64, bool, string, and []byte to themselves. If the argument is a nil pointer, ConvertValue returns a nil Value. If the argument is a non-nil pointer, it is dereferenced and ConvertValue is called recursively. Other types are an error. 
 
-### <a id="valuerReflectType" href="#valuerReflectType">var valuerReflectType</a>
+### <a id="ErrBadConn" href="#ErrBadConn">var ErrBadConn</a>
 
 ```
-searchKey: driver.valuerReflectType
-tags: [private]
-```
-
-```Go
-var valuerReflectType = reflect.TypeOf((*Valuer)(nil)).Elem()
-```
-
-### <a id="now" href="#now">var now</a>
-
-```
-searchKey: driver.now
-tags: [private]
+searchKey: driver.ErrBadConn
+tags: [variable interface]
 ```
 
 ```Go
-var now = time.Now()
+var ErrBadConn = errors.New("driver: bad connection")
 ```
+
+ErrBadConn should be returned by a driver to signal to the sql package that a driver.Conn is in a bad state (such as the server having earlier closed the connection) and the sql package should retry on a new connection. 
+
+To prevent duplicate operations, ErrBadConn should NOT be returned if there's a possibility that the database server might have performed the operation. Even if the server sends back an error, you shouldn't return ErrBadConn. 
+
+### <a id="ErrRemoveArgument" href="#ErrRemoveArgument">var ErrRemoveArgument</a>
+
+```
+searchKey: driver.ErrRemoveArgument
+tags: [variable interface]
+```
+
+```Go
+var ErrRemoveArgument = errors.New("driver: remove argument from query")
+```
+
+ErrRemoveArgument may be returned from NamedValueChecker to instruct the sql package to not pass the argument to the driver query interface. Return when accepting query specific options or structures that aren't SQL query arguments. 
+
+### <a id="ErrSkip" href="#ErrSkip">var ErrSkip</a>
+
+```
+searchKey: driver.ErrSkip
+tags: [variable interface]
+```
+
+```Go
+var ErrSkip = errors.New("driver: skip fast-path; continue as if unimplemented")
+```
+
+ErrSkip may be returned by some optional interfaces' methods to indicate at runtime that the fast path is unavailable and the sql package should continue as if the optional interface was not implemented. ErrSkip is only supported where explicitly documented. 
+
+### <a id="Int32" href="#Int32">var Int32</a>
+
+```
+searchKey: driver.Int32
+tags: [variable struct]
+```
+
+```Go
+var Int32 int32Type
+```
+
+Int32 is a ValueConverter that converts input values to int64, respecting the limits of an int32 value. 
+
+### <a id="ResultNoRows" href="#ResultNoRows">var ResultNoRows</a>
+
+```
+searchKey: driver.ResultNoRows
+tags: [variable struct]
+```
+
+```Go
+var ResultNoRows noRows
+```
+
+ResultNoRows is a pre-defined Result for drivers to return when a DDL command (such as a CREATE TABLE) succeeds. It returns an error for both LastInsertId and RowsAffected. 
+
+### <a id="String" href="#String">var String</a>
+
+```
+searchKey: driver.String
+tags: [variable struct]
+```
+
+```Go
+var String stringType
+```
+
+String is a ValueConverter that converts its input to a string. If the value is already a string or []byte, it's unchanged. If the value is of another type, conversion to string is done with fmt.Sprintf("%v", v). 
 
 ### <a id="answer" href="#answer">var answer</a>
 
 ```
 searchKey: driver.answer
-tags: [private]
+tags: [variable number private]
 ```
 
 ```Go
 var answer int64 = 42
 ```
 
+### <a id="now" href="#now">var now</a>
+
+```
+searchKey: driver.now
+tags: [variable struct private]
+```
+
+```Go
+var now = time.Now()
+```
+
 ### <a id="valueConverterTests" href="#valueConverterTests">var valueConverterTests</a>
 
 ```
 searchKey: driver.valueConverterTests
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
 var valueConverterTests = ...
 ```
 
+### <a id="valuerReflectType" href="#valuerReflectType">var valuerReflectType</a>
+
+```
+searchKey: driver.valuerReflectType
+tags: [variable interface private]
+```
+
+```Go
+var valuerReflectType = reflect.TypeOf((*Valuer)(nil)).Elem()
+```
+
 ## <a id="type" href="#type">Types</a>
 
-### <a id="Value" href="#Value">type Value interface{}</a>
-
 ```
-searchKey: driver.Value
+tags: [package]
 ```
 
-```Go
-type Value interface{}
-```
-
-Value is a value that drivers must be able to handle. It is either nil, a type handled by a database driver's NamedValueChecker interface, or an instance of one of these types: 
+### <a id="ColumnConverter" href="#ColumnConverter">type ColumnConverter interface</a>
 
 ```
-int64
-float64
-bool
-[]byte
-string
-time.Time
-
-```
-If the driver supports cursors, a returned Value may also implement the Rows interface in this package. This is used, for example, when a user selects a cursor such as "select cursor(select * from my_table) from dual". If the Rows from the select is closed, the cursor Rows will also be closed. 
-
-#### <a id="callValuerValue" href="#callValuerValue">func callValuerValue(vr Valuer) (v Value, err error)</a>
-
-```
-searchKey: driver.callValuerValue
-tags: [private]
+searchKey: driver.ColumnConverter
+tags: [interface]
 ```
 
 ```Go
-func callValuerValue(vr Valuer) (v Value, err error)
-```
-
-callValuerValue returns vr.Value(), with one exception: If vr.Value is an auto-generated method on a pointer type and the pointer is nil, it would panic at runtime in the panicwrap method. Treat it like nil instead. Issue 8415. 
-
-This is so people can implement driver.Value on value types and still use nil pointers to those types to mean nil/NULL, just like string/*string. 
-
-This function is mirrored in the database/sql package. 
-
-### <a id="NamedValue" href="#NamedValue">type NamedValue struct</a>
-
-```
-searchKey: driver.NamedValue
-```
-
-```Go
-type NamedValue struct {
-	// If the Name is not empty it should be used for the parameter identifier and
-	// not the ordinal position.
-	//
-	// Name will not have a symbol prefix.
-	Name string
-
-	// Ordinal position of the parameter starting from one and is always set.
-	Ordinal int
-
-	// Value is the parameter value.
-	Value Value
+type ColumnConverter interface {
+	// ColumnConverter returns a ValueConverter for the provided
+	// column index. If the type of a specific column isn't known
+	// or shouldn't be handled specially, DefaultValueConverter
+	// can be returned.
+	ColumnConverter(idx int) ValueConverter
 }
 ```
 
-NamedValue holds both the value name and value. 
+ColumnConverter may be optionally implemented by Stmt if the statement is aware of its own columns' types and can convert from any type to a driver Value. 
 
-### <a id="Driver" href="#Driver">type Driver interface</a>
+Deprecated: Drivers should implement NamedValueChecker. 
 
-```
-searchKey: driver.Driver
-```
-
-```Go
-type Driver interface {
-	// Open returns a new connection to the database.
-	// The name is a string in a driver-specific format.
-	//
-	// Open may return a cached connection (one previously
-	// closed), but doing so is unnecessary; the sql package
-	// maintains a pool of idle connections for efficient re-use.
-	//
-	// The returned connection is only used by one goroutine at a
-	// time.
-	Open(name string) (Conn, error)
-}
-```
-
-Driver is the interface that must be implemented by a database driver. 
-
-Database drivers may implement DriverContext for access to contexts and to parse the name only once for a pool of connections, instead of once per connection. 
-
-### <a id="DriverContext" href="#DriverContext">type DriverContext interface</a>
+### <a id="Conn" href="#Conn">type Conn interface</a>
 
 ```
-searchKey: driver.DriverContext
+searchKey: driver.Conn
+tags: [interface]
 ```
 
 ```Go
-type DriverContext interface {
-	// OpenConnector must parse the name in the same format that Driver.Open
-	// parses the name parameter.
-	OpenConnector(name string) (Connector, error)
+type Conn interface {
+	// Prepare returns a prepared statement, bound to this connection.
+	Prepare(query string) (Stmt, error)
+
+	// Close invalidates and potentially stops any current
+	// prepared statements and transactions, marking this
+	// connection as no longer in use.
+	//
+	// Because the sql package maintains a free pool of
+	// connections and only calls Close when there's a surplus of
+	// idle connections, it shouldn't be necessary for drivers to
+	// do their own connection caching.
+	//
+	// Drivers must ensure all network calls made by Close
+	// do not block indefinitely (e.g. apply a timeout).
+	Close() error
+
+	// Begin starts and returns a new transaction.
+	//
+	// Deprecated: Drivers should implement ConnBeginTx instead (or additionally).
+	Begin() (Tx, error)
 }
 ```
 
-If a Driver implements DriverContext, then sql.DB will call OpenConnector to obtain a Connector and then invoke that Connector's Connect method to obtain each needed connection, instead of invoking the Driver's Open method for each connection. The two-step sequence allows drivers to parse the name just once and also provides access to per-Conn contexts. 
+Conn is a connection to a database. It is not used concurrently by multiple goroutines. 
+
+Conn is assumed to be stateful. 
+
+### <a id="ConnBeginTx" href="#ConnBeginTx">type ConnBeginTx interface</a>
+
+```
+searchKey: driver.ConnBeginTx
+tags: [interface]
+```
+
+```Go
+type ConnBeginTx interface {
+	// BeginTx starts and returns a new transaction.
+	// If the context is canceled by the user the sql package will
+	// call Tx.Rollback before discarding and closing the connection.
+	//
+	// This must check opts.Isolation to determine if there is a set
+	// isolation level. If the driver does not support a non-default
+	// level and one is set or if there is a non-default isolation level
+	// that is not supported, an error must be returned.
+	//
+	// This must also check opts.ReadOnly to determine if the read-only
+	// value is true to either set the read-only transaction property if supported
+	// or return an error if it is not supported.
+	BeginTx(ctx context.Context, opts TxOptions) (Tx, error)
+}
+```
+
+ConnBeginTx enhances the Conn interface with context and TxOptions. 
+
+### <a id="ConnPrepareContext" href="#ConnPrepareContext">type ConnPrepareContext interface</a>
+
+```
+searchKey: driver.ConnPrepareContext
+tags: [interface]
+```
+
+```Go
+type ConnPrepareContext interface {
+	// PrepareContext returns a prepared statement, bound to this connection.
+	// context is for the preparation of the statement,
+	// it must not store the context within the statement itself.
+	PrepareContext(ctx context.Context, query string) (Stmt, error)
+}
+```
+
+ConnPrepareContext enhances the Conn interface with context. 
 
 ### <a id="Connector" href="#Connector">type Connector interface</a>
 
 ```
 searchKey: driver.Connector
+tags: [interface]
 ```
 
 ```Go
@@ -403,28 +417,54 @@ A Connector can be passed to sql.OpenDB, to allow drivers to implement their own
 
 If a Connector implements io.Closer, the sql package's DB.Close method will call Close and return error (if any). 
 
-### <a id="Pinger" href="#Pinger">type Pinger interface</a>
+### <a id="Driver" href="#Driver">type Driver interface</a>
 
 ```
-searchKey: driver.Pinger
+searchKey: driver.Driver
+tags: [interface]
 ```
 
 ```Go
-type Pinger interface {
-	Ping(ctx context.Context) error
+type Driver interface {
+	// Open returns a new connection to the database.
+	// The name is a string in a driver-specific format.
+	//
+	// Open may return a cached connection (one previously
+	// closed), but doing so is unnecessary; the sql package
+	// maintains a pool of idle connections for efficient re-use.
+	//
+	// The returned connection is only used by one goroutine at a
+	// time.
+	Open(name string) (Conn, error)
 }
 ```
 
-Pinger is an optional interface that may be implemented by a Conn. 
+Driver is the interface that must be implemented by a database driver. 
 
-If a Conn does not implement Pinger, the sql package's DB.Ping and DB.PingContext will check if there is at least one Conn available. 
+Database drivers may implement DriverContext for access to contexts and to parse the name only once for a pool of connections, instead of once per connection. 
 
-If Conn.Ping returns ErrBadConn, DB.Ping and DB.PingContext will remove the Conn from pool. 
+### <a id="DriverContext" href="#DriverContext">type DriverContext interface</a>
+
+```
+searchKey: driver.DriverContext
+tags: [interface]
+```
+
+```Go
+type DriverContext interface {
+	// OpenConnector must parse the name in the same format that Driver.Open
+	// parses the name parameter.
+	OpenConnector(name string) (Connector, error)
+}
+```
+
+If a Driver implements DriverContext, then sql.DB will call OpenConnector to obtain a Connector and then invoke that Connector's Connect method to obtain each needed connection, instead of invoking the Driver's Open method for each connection. The two-step sequence allows drivers to parse the name just once and also provides access to per-Conn contexts. 
 
 ### <a id="Execer" href="#Execer">type Execer interface</a>
 
 ```
 searchKey: driver.Execer
+tags: [interface]
 ```
 
 ```Go
@@ -445,6 +485,7 @@ Deprecated: Drivers should implement ExecerContext instead.
 
 ```
 searchKey: driver.ExecerContext
+tags: [interface]
 ```
 
 ```Go
@@ -461,10 +502,146 @@ ExecerContext may return ErrSkip.
 
 ExecerContext must honor the context timeout and return when the context is canceled. 
 
+### <a id="IsolationLevel" href="#IsolationLevel">type IsolationLevel int</a>
+
+```
+searchKey: driver.IsolationLevel
+tags: [number]
+```
+
+```Go
+type IsolationLevel int
+```
+
+IsolationLevel is the transaction isolation level stored in TxOptions. 
+
+This type should be considered identical to sql.IsolationLevel along with any values defined on it. 
+
+### <a id="NamedValue" href="#NamedValue">type NamedValue struct</a>
+
+```
+searchKey: driver.NamedValue
+tags: [struct]
+```
+
+```Go
+type NamedValue struct {
+	// If the Name is not empty it should be used for the parameter identifier and
+	// not the ordinal position.
+	//
+	// Name will not have a symbol prefix.
+	Name string
+
+	// Ordinal position of the parameter starting from one and is always set.
+	Ordinal int
+
+	// Value is the parameter value.
+	Value Value
+}
+```
+
+NamedValue holds both the value name and value. 
+
+### <a id="NamedValueChecker" href="#NamedValueChecker">type NamedValueChecker interface</a>
+
+```
+searchKey: driver.NamedValueChecker
+tags: [interface]
+```
+
+```Go
+type NamedValueChecker interface {
+	// CheckNamedValue is called before passing arguments to the driver
+	// and is called in place of any ColumnConverter. CheckNamedValue must do type
+	// validation and conversion as appropriate for the driver.
+	CheckNamedValue(*NamedValue) error
+}
+```
+
+NamedValueChecker may be optionally implemented by Conn or Stmt. It provides the driver more control to handle Go and database types beyond the default Values types allowed. 
+
+The sql package checks for value checkers in the following order, stopping at the first found match: Stmt.NamedValueChecker, Conn.NamedValueChecker, Stmt.ColumnConverter, DefaultParameterConverter. 
+
+If CheckNamedValue returns ErrRemoveArgument, the NamedValue will not be included in the final query arguments. This may be used to pass special options to the query itself. 
+
+If ErrSkip is returned the column converter error checking path is used for the argument. Drivers may wish to return ErrSkip after they have exhausted their own special cases. 
+
+### <a id="NotNull" href="#NotNull">type NotNull struct</a>
+
+```
+searchKey: driver.NotNull
+tags: [struct]
+```
+
+```Go
+type NotNull struct {
+	Converter ValueConverter
+}
+```
+
+NotNull is a type that implements ValueConverter by disallowing nil values but otherwise delegating to another ValueConverter. 
+
+#### <a id="NotNull.ConvertValue" href="#NotNull.ConvertValue">func (n NotNull) ConvertValue(v interface{}) (Value, error)</a>
+
+```
+searchKey: driver.NotNull.ConvertValue
+tags: [method]
+```
+
+```Go
+func (n NotNull) ConvertValue(v interface{}) (Value, error)
+```
+
+### <a id="Null" href="#Null">type Null struct</a>
+
+```
+searchKey: driver.Null
+tags: [struct]
+```
+
+```Go
+type Null struct {
+	Converter ValueConverter
+}
+```
+
+Null is a type that implements ValueConverter by allowing nil values but otherwise delegating to another ValueConverter. 
+
+#### <a id="Null.ConvertValue" href="#Null.ConvertValue">func (n Null) ConvertValue(v interface{}) (Value, error)</a>
+
+```
+searchKey: driver.Null.ConvertValue
+tags: [method]
+```
+
+```Go
+func (n Null) ConvertValue(v interface{}) (Value, error)
+```
+
+### <a id="Pinger" href="#Pinger">type Pinger interface</a>
+
+```
+searchKey: driver.Pinger
+tags: [interface]
+```
+
+```Go
+type Pinger interface {
+	Ping(ctx context.Context) error
+}
+```
+
+Pinger is an optional interface that may be implemented by a Conn. 
+
+If a Conn does not implement Pinger, the sql package's DB.Ping and DB.PingContext will check if there is at least one Conn available. 
+
+If Conn.Ping returns ErrBadConn, DB.Ping and DB.PingContext will remove the Conn from pool. 
+
 ### <a id="Queryer" href="#Queryer">type Queryer interface</a>
 
 ```
 searchKey: driver.Queryer
+tags: [interface]
 ```
 
 ```Go
@@ -485,6 +662,7 @@ Deprecated: Drivers should implement QueryerContext instead.
 
 ```
 searchKey: driver.QueryerContext
+tags: [interface]
 ```
 
 ```Go
@@ -501,154 +679,11 @@ QueryerContext may return ErrSkip.
 
 QueryerContext must honor the context timeout and return when the context is canceled. 
 
-### <a id="Conn" href="#Conn">type Conn interface</a>
-
-```
-searchKey: driver.Conn
-```
-
-```Go
-type Conn interface {
-	// Prepare returns a prepared statement, bound to this connection.
-	Prepare(query string) (Stmt, error)
-
-	// Close invalidates and potentially stops any current
-	// prepared statements and transactions, marking this
-	// connection as no longer in use.
-	//
-	// Because the sql package maintains a free pool of
-	// connections and only calls Close when there's a surplus of
-	// idle connections, it shouldn't be necessary for drivers to
-	// do their own connection caching.
-	//
-	// Drivers must ensure all network calls made by Close
-	// do not block indefinitely (e.g. apply a timeout).
-	Close() error
-
-	// Begin starts and returns a new transaction.
-	//
-	// Deprecated: Drivers should implement ConnBeginTx instead (or additionally).
-	Begin() (Tx, error)
-}
-```
-
-Conn is a connection to a database. It is not used concurrently by multiple goroutines. 
-
-Conn is assumed to be stateful. 
-
-### <a id="ConnPrepareContext" href="#ConnPrepareContext">type ConnPrepareContext interface</a>
-
-```
-searchKey: driver.ConnPrepareContext
-```
-
-```Go
-type ConnPrepareContext interface {
-	// PrepareContext returns a prepared statement, bound to this connection.
-	// context is for the preparation of the statement,
-	// it must not store the context within the statement itself.
-	PrepareContext(ctx context.Context, query string) (Stmt, error)
-}
-```
-
-ConnPrepareContext enhances the Conn interface with context. 
-
-### <a id="IsolationLevel" href="#IsolationLevel">type IsolationLevel int</a>
-
-```
-searchKey: driver.IsolationLevel
-```
-
-```Go
-type IsolationLevel int
-```
-
-IsolationLevel is the transaction isolation level stored in TxOptions. 
-
-This type should be considered identical to sql.IsolationLevel along with any values defined on it. 
-
-### <a id="TxOptions" href="#TxOptions">type TxOptions struct</a>
-
-```
-searchKey: driver.TxOptions
-```
-
-```Go
-type TxOptions struct {
-	Isolation IsolationLevel
-	ReadOnly  bool
-}
-```
-
-TxOptions holds the transaction options. 
-
-This type should be considered identical to sql.TxOptions. 
-
-### <a id="ConnBeginTx" href="#ConnBeginTx">type ConnBeginTx interface</a>
-
-```
-searchKey: driver.ConnBeginTx
-```
-
-```Go
-type ConnBeginTx interface {
-	// BeginTx starts and returns a new transaction.
-	// If the context is canceled by the user the sql package will
-	// call Tx.Rollback before discarding and closing the connection.
-	//
-	// This must check opts.Isolation to determine if there is a set
-	// isolation level. If the driver does not support a non-default
-	// level and one is set or if there is a non-default isolation level
-	// that is not supported, an error must be returned.
-	//
-	// This must also check opts.ReadOnly to determine if the read-only
-	// value is true to either set the read-only transaction property if supported
-	// or return an error if it is not supported.
-	BeginTx(ctx context.Context, opts TxOptions) (Tx, error)
-}
-```
-
-ConnBeginTx enhances the Conn interface with context and TxOptions. 
-
-### <a id="SessionResetter" href="#SessionResetter">type SessionResetter interface</a>
-
-```
-searchKey: driver.SessionResetter
-```
-
-```Go
-type SessionResetter interface {
-	// ResetSession is called prior to executing a query on the connection
-	// if the connection has been used before. If the driver returns ErrBadConn
-	// the connection is discarded.
-	ResetSession(ctx context.Context) error
-}
-```
-
-SessionResetter may be implemented by Conn to allow drivers to reset the session state associated with the connection and to signal a bad connection. 
-
-### <a id="Validator" href="#Validator">type Validator interface</a>
-
-```
-searchKey: driver.Validator
-```
-
-```Go
-type Validator interface {
-	// IsValid is called prior to placing the connection into the
-	// connection pool. The connection will be discarded if false is returned.
-	IsValid() bool
-}
-```
-
-Validator may be implemented by Conn to allow drivers to signal if a connection is valid or if it should be discarded. 
-
-If implemented, drivers may return the underlying error from queries, even if the connection should be discarded by the connection pool. 
-
 ### <a id="Result" href="#Result">type Result interface</a>
 
 ```
 searchKey: driver.Result
+tags: [interface]
 ```
 
 ```Go
@@ -666,10 +701,217 @@ type Result interface {
 
 Result is the result of a query execution. 
 
+### <a id="Rows" href="#Rows">type Rows interface</a>
+
+```
+searchKey: driver.Rows
+tags: [interface]
+```
+
+```Go
+type Rows interface {
+	// Columns returns the names of the columns. The number of
+	// columns of the result is inferred from the length of the
+	// slice. If a particular column name isn't known, an empty
+	// string should be returned for that entry.
+	Columns() []string
+
+	// Close closes the rows iterator.
+	Close() error
+
+	// Next is called to populate the next row of data into
+	// the provided slice. The provided slice will be the same
+	// size as the Columns() are wide.
+	//
+	// Next should return io.EOF when there are no more rows.
+	//
+	// The dest should not be written to outside of Next. Care
+	// should be taken when closing Rows not to modify
+	// a buffer held in dest.
+	Next(dest []Value) error
+}
+```
+
+Rows is an iterator over an executed query's results. 
+
+### <a id="RowsAffected" href="#RowsAffected">type RowsAffected int64</a>
+
+```
+searchKey: driver.RowsAffected
+tags: [number]
+```
+
+```Go
+type RowsAffected int64
+```
+
+RowsAffected implements Result for an INSERT or UPDATE operation which mutates a number of rows. 
+
+#### <a id="RowsAffected.LastInsertId" href="#RowsAffected.LastInsertId">func (RowsAffected) LastInsertId() (int64, error)</a>
+
+```
+searchKey: driver.RowsAffected.LastInsertId
+tags: [function]
+```
+
+```Go
+func (RowsAffected) LastInsertId() (int64, error)
+```
+
+#### <a id="RowsAffected.RowsAffected" href="#RowsAffected.RowsAffected">func (v RowsAffected) RowsAffected() (int64, error)</a>
+
+```
+searchKey: driver.RowsAffected.RowsAffected
+tags: [function]
+```
+
+```Go
+func (v RowsAffected) RowsAffected() (int64, error)
+```
+
+### <a id="RowsColumnTypeDatabaseTypeName" href="#RowsColumnTypeDatabaseTypeName">type RowsColumnTypeDatabaseTypeName interface</a>
+
+```
+searchKey: driver.RowsColumnTypeDatabaseTypeName
+tags: [interface]
+```
+
+```Go
+type RowsColumnTypeDatabaseTypeName interface {
+	Rows
+	ColumnTypeDatabaseTypeName(index int) string
+}
+```
+
+RowsColumnTypeDatabaseTypeName may be implemented by Rows. It should return the database system type name without the length. Type names should be uppercase. Examples of returned types: "VARCHAR", "NVARCHAR", "VARCHAR2", "CHAR", "TEXT", "DECIMAL", "SMALLINT", "INT", "BIGINT", "BOOL", "[]BIGINT", "JSONB", "XML", "TIMESTAMP". 
+
+### <a id="RowsColumnTypeLength" href="#RowsColumnTypeLength">type RowsColumnTypeLength interface</a>
+
+```
+searchKey: driver.RowsColumnTypeLength
+tags: [interface]
+```
+
+```Go
+type RowsColumnTypeLength interface {
+	Rows
+	ColumnTypeLength(index int) (length int64, ok bool)
+}
+```
+
+RowsColumnTypeLength may be implemented by Rows. It should return the length of the column type if the column is a variable length type. If the column is not a variable length type ok should return false. If length is not limited other than system limits, it should return math.MaxInt64. The following are examples of returned values for various types: 
+
+```
+TEXT          (math.MaxInt64, true)
+varchar(10)   (10, true)
+nvarchar(10)  (10, true)
+decimal       (0, false)
+int           (0, false)
+bytea(30)     (30, true)
+
+```
+### <a id="RowsColumnTypeNullable" href="#RowsColumnTypeNullable">type RowsColumnTypeNullable interface</a>
+
+```
+searchKey: driver.RowsColumnTypeNullable
+tags: [interface]
+```
+
+```Go
+type RowsColumnTypeNullable interface {
+	Rows
+	ColumnTypeNullable(index int) (nullable, ok bool)
+}
+```
+
+RowsColumnTypeNullable may be implemented by Rows. The nullable value should be true if it is known the column may be null, or false if the column is known to be not nullable. If the column nullability is unknown, ok should be false. 
+
+### <a id="RowsColumnTypePrecisionScale" href="#RowsColumnTypePrecisionScale">type RowsColumnTypePrecisionScale interface</a>
+
+```
+searchKey: driver.RowsColumnTypePrecisionScale
+tags: [interface]
+```
+
+```Go
+type RowsColumnTypePrecisionScale interface {
+	Rows
+	ColumnTypePrecisionScale(index int) (precision, scale int64, ok bool)
+}
+```
+
+RowsColumnTypePrecisionScale may be implemented by Rows. It should return the precision and scale for decimal types. If not applicable, ok should be false. The following are examples of returned values for various types: 
+
+```
+decimal(38, 4)    (38, 4, true)
+int               (0, 0, false)
+decimal           (math.MaxInt64, math.MaxInt64, true)
+
+```
+### <a id="RowsColumnTypeScanType" href="#RowsColumnTypeScanType">type RowsColumnTypeScanType interface</a>
+
+```
+searchKey: driver.RowsColumnTypeScanType
+tags: [interface]
+```
+
+```Go
+type RowsColumnTypeScanType interface {
+	Rows
+	ColumnTypeScanType(index int) reflect.Type
+}
+```
+
+RowsColumnTypeScanType may be implemented by Rows. It should return the value type that can be used to scan types into. For example, the database column type "bigint" this should return "reflect.TypeOf(int64(0))". 
+
+### <a id="RowsNextResultSet" href="#RowsNextResultSet">type RowsNextResultSet interface</a>
+
+```
+searchKey: driver.RowsNextResultSet
+tags: [interface]
+```
+
+```Go
+type RowsNextResultSet interface {
+	Rows
+
+	// HasNextResultSet is called at the end of the current result set and
+	// reports whether there is another result set after the current one.
+	HasNextResultSet() bool
+
+	// NextResultSet advances the driver to the next result set even
+	// if there are remaining rows in the current result set.
+	//
+	// NextResultSet should return io.EOF when there are no more result sets.
+	NextResultSet() error
+}
+```
+
+RowsNextResultSet extends the Rows interface by providing a way to signal the driver to advance to the next result set. 
+
+### <a id="SessionResetter" href="#SessionResetter">type SessionResetter interface</a>
+
+```
+searchKey: driver.SessionResetter
+tags: [interface]
+```
+
+```Go
+type SessionResetter interface {
+	// ResetSession is called prior to executing a query on the connection
+	// if the connection has been used before. If the driver returns ErrBadConn
+	// the connection is discarded.
+	ResetSession(ctx context.Context) error
+}
+```
+
+SessionResetter may be implemented by Conn to allow drivers to reset the session state associated with the connection and to signal a bad connection. 
+
 ### <a id="Stmt" href="#Stmt">type Stmt interface</a>
 
 ```
 searchKey: driver.Stmt
+tags: [interface]
 ```
 
 ```Go
@@ -714,6 +956,7 @@ Stmt is a prepared statement. It is bound to a Conn and not used by multiple gor
 
 ```
 searchKey: driver.StmtExecContext
+tags: [interface]
 ```
 
 ```Go
@@ -732,6 +975,7 @@ StmtExecContext enhances the Stmt interface by providing Exec with context.
 
 ```
 searchKey: driver.StmtQueryContext
+tags: [interface]
 ```
 
 ```Go
@@ -746,199 +990,11 @@ type StmtQueryContext interface {
 
 StmtQueryContext enhances the Stmt interface by providing Query with context. 
 
-### <a id="NamedValueChecker" href="#NamedValueChecker">type NamedValueChecker interface</a>
-
-```
-searchKey: driver.NamedValueChecker
-```
-
-```Go
-type NamedValueChecker interface {
-	// CheckNamedValue is called before passing arguments to the driver
-	// and is called in place of any ColumnConverter. CheckNamedValue must do type
-	// validation and conversion as appropriate for the driver.
-	CheckNamedValue(*NamedValue) error
-}
-```
-
-NamedValueChecker may be optionally implemented by Conn or Stmt. It provides the driver more control to handle Go and database types beyond the default Values types allowed. 
-
-The sql package checks for value checkers in the following order, stopping at the first found match: Stmt.NamedValueChecker, Conn.NamedValueChecker, Stmt.ColumnConverter, DefaultParameterConverter. 
-
-If CheckNamedValue returns ErrRemoveArgument, the NamedValue will not be included in the final query arguments. This may be used to pass special options to the query itself. 
-
-If ErrSkip is returned the column converter error checking path is used for the argument. Drivers may wish to return ErrSkip after they have exhausted their own special cases. 
-
-### <a id="ColumnConverter" href="#ColumnConverter">type ColumnConverter interface</a>
-
-```
-searchKey: driver.ColumnConverter
-```
-
-```Go
-type ColumnConverter interface {
-	// ColumnConverter returns a ValueConverter for the provided
-	// column index. If the type of a specific column isn't known
-	// or shouldn't be handled specially, DefaultValueConverter
-	// can be returned.
-	ColumnConverter(idx int) ValueConverter
-}
-```
-
-ColumnConverter may be optionally implemented by Stmt if the statement is aware of its own columns' types and can convert from any type to a driver Value. 
-
-Deprecated: Drivers should implement NamedValueChecker. 
-
-### <a id="Rows" href="#Rows">type Rows interface</a>
-
-```
-searchKey: driver.Rows
-```
-
-```Go
-type Rows interface {
-	// Columns returns the names of the columns. The number of
-	// columns of the result is inferred from the length of the
-	// slice. If a particular column name isn't known, an empty
-	// string should be returned for that entry.
-	Columns() []string
-
-	// Close closes the rows iterator.
-	Close() error
-
-	// Next is called to populate the next row of data into
-	// the provided slice. The provided slice will be the same
-	// size as the Columns() are wide.
-	//
-	// Next should return io.EOF when there are no more rows.
-	//
-	// The dest should not be written to outside of Next. Care
-	// should be taken when closing Rows not to modify
-	// a buffer held in dest.
-	Next(dest []Value) error
-}
-```
-
-Rows is an iterator over an executed query's results. 
-
-### <a id="RowsNextResultSet" href="#RowsNextResultSet">type RowsNextResultSet interface</a>
-
-```
-searchKey: driver.RowsNextResultSet
-```
-
-```Go
-type RowsNextResultSet interface {
-	Rows
-
-	// HasNextResultSet is called at the end of the current result set and
-	// reports whether there is another result set after the current one.
-	HasNextResultSet() bool
-
-	// NextResultSet advances the driver to the next result set even
-	// if there are remaining rows in the current result set.
-	//
-	// NextResultSet should return io.EOF when there are no more result sets.
-	NextResultSet() error
-}
-```
-
-RowsNextResultSet extends the Rows interface by providing a way to signal the driver to advance to the next result set. 
-
-### <a id="RowsColumnTypeScanType" href="#RowsColumnTypeScanType">type RowsColumnTypeScanType interface</a>
-
-```
-searchKey: driver.RowsColumnTypeScanType
-```
-
-```Go
-type RowsColumnTypeScanType interface {
-	Rows
-	ColumnTypeScanType(index int) reflect.Type
-}
-```
-
-RowsColumnTypeScanType may be implemented by Rows. It should return the value type that can be used to scan types into. For example, the database column type "bigint" this should return "reflect.TypeOf(int64(0))". 
-
-### <a id="RowsColumnTypeDatabaseTypeName" href="#RowsColumnTypeDatabaseTypeName">type RowsColumnTypeDatabaseTypeName interface</a>
-
-```
-searchKey: driver.RowsColumnTypeDatabaseTypeName
-```
-
-```Go
-type RowsColumnTypeDatabaseTypeName interface {
-	Rows
-	ColumnTypeDatabaseTypeName(index int) string
-}
-```
-
-RowsColumnTypeDatabaseTypeName may be implemented by Rows. It should return the database system type name without the length. Type names should be uppercase. Examples of returned types: "VARCHAR", "NVARCHAR", "VARCHAR2", "CHAR", "TEXT", "DECIMAL", "SMALLINT", "INT", "BIGINT", "BOOL", "[]BIGINT", "JSONB", "XML", "TIMESTAMP". 
-
-### <a id="RowsColumnTypeLength" href="#RowsColumnTypeLength">type RowsColumnTypeLength interface</a>
-
-```
-searchKey: driver.RowsColumnTypeLength
-```
-
-```Go
-type RowsColumnTypeLength interface {
-	Rows
-	ColumnTypeLength(index int) (length int64, ok bool)
-}
-```
-
-RowsColumnTypeLength may be implemented by Rows. It should return the length of the column type if the column is a variable length type. If the column is not a variable length type ok should return false. If length is not limited other than system limits, it should return math.MaxInt64. The following are examples of returned values for various types: 
-
-```
-TEXT          (math.MaxInt64, true)
-varchar(10)   (10, true)
-nvarchar(10)  (10, true)
-decimal       (0, false)
-int           (0, false)
-bytea(30)     (30, true)
-
-```
-### <a id="RowsColumnTypeNullable" href="#RowsColumnTypeNullable">type RowsColumnTypeNullable interface</a>
-
-```
-searchKey: driver.RowsColumnTypeNullable
-```
-
-```Go
-type RowsColumnTypeNullable interface {
-	Rows
-	ColumnTypeNullable(index int) (nullable, ok bool)
-}
-```
-
-RowsColumnTypeNullable may be implemented by Rows. The nullable value should be true if it is known the column may be null, or false if the column is known to be not nullable. If the column nullability is unknown, ok should be false. 
-
-### <a id="RowsColumnTypePrecisionScale" href="#RowsColumnTypePrecisionScale">type RowsColumnTypePrecisionScale interface</a>
-
-```
-searchKey: driver.RowsColumnTypePrecisionScale
-```
-
-```Go
-type RowsColumnTypePrecisionScale interface {
-	Rows
-	ColumnTypePrecisionScale(index int) (precision, scale int64, ok bool)
-}
-```
-
-RowsColumnTypePrecisionScale may be implemented by Rows. It should return the precision and scale for decimal types. If not applicable, ok should be false. The following are examples of returned values for various types: 
-
-```
-decimal(38, 4)    (38, 4, true)
-int               (0, 0, false)
-decimal           (math.MaxInt64, math.MaxInt64, true)
-
-```
 ### <a id="Tx" href="#Tx">type Tx interface</a>
 
 ```
 searchKey: driver.Tx
+tags: [interface]
 ```
 
 ```Go
@@ -950,75 +1006,89 @@ type Tx interface {
 
 Tx is a transaction. 
 
-### <a id="RowsAffected" href="#RowsAffected">type RowsAffected int64</a>
+### <a id="TxOptions" href="#TxOptions">type TxOptions struct</a>
 
 ```
-searchKey: driver.RowsAffected
-```
-
-```Go
-type RowsAffected int64
-```
-
-RowsAffected implements Result for an INSERT or UPDATE operation which mutates a number of rows. 
-
-#### <a id="RowsAffected.LastInsertId" href="#RowsAffected.LastInsertId">func (RowsAffected) LastInsertId() (int64, error)</a>
-
-```
-searchKey: driver.RowsAffected.LastInsertId
+searchKey: driver.TxOptions
+tags: [struct]
 ```
 
 ```Go
-func (RowsAffected) LastInsertId() (int64, error)
+type TxOptions struct {
+	Isolation IsolationLevel
+	ReadOnly  bool
+}
 ```
 
-#### <a id="RowsAffected.RowsAffected" href="#RowsAffected.RowsAffected">func (v RowsAffected) RowsAffected() (int64, error)</a>
+TxOptions holds the transaction options. 
+
+This type should be considered identical to sql.TxOptions. 
+
+### <a id="Validator" href="#Validator">type Validator interface</a>
 
 ```
-searchKey: driver.RowsAffected.RowsAffected
-```
-
-```Go
-func (v RowsAffected) RowsAffected() (int64, error)
-```
-
-### <a id="noRows" href="#noRows">type noRows struct{}</a>
-
-```
-searchKey: driver.noRows
-tags: [private]
+searchKey: driver.Validator
+tags: [interface]
 ```
 
 ```Go
-type noRows struct{}
+type Validator interface {
+	// IsValid is called prior to placing the connection into the
+	// connection pool. The connection will be discarded if false is returned.
+	IsValid() bool
+}
 ```
 
-#### <a id="noRows.LastInsertId" href="#noRows.LastInsertId">func (noRows) LastInsertId() (int64, error)</a>
+Validator may be implemented by Conn to allow drivers to signal if a connection is valid or if it should be discarded. 
+
+If implemented, drivers may return the underlying error from queries, even if the connection should be discarded by the connection pool. 
+
+### <a id="Value" href="#Value">type Value interface{}</a>
 
 ```
-searchKey: driver.noRows.LastInsertId
-tags: [private]
-```
-
-```Go
-func (noRows) LastInsertId() (int64, error)
-```
-
-#### <a id="noRows.RowsAffected" href="#noRows.RowsAffected">func (noRows) RowsAffected() (int64, error)</a>
-
-```
-searchKey: driver.noRows.RowsAffected
-tags: [private]
+searchKey: driver.Value
+tags: [interface]
 ```
 
 ```Go
-func (noRows) RowsAffected() (int64, error)
+type Value interface{}
 ```
+
+Value is a value that drivers must be able to handle. It is either nil, a type handled by a database driver's NamedValueChecker interface, or an instance of one of these types: 
+
+```
+int64
+float64
+bool
+[]byte
+string
+time.Time
+
+```
+If the driver supports cursors, a returned Value may also implement the Rows interface in this package. This is used, for example, when a user selects a cursor such as "select cursor(select * from my_table) from dual". If the Rows from the select is closed, the cursor Rows will also be closed. 
+
+#### <a id="callValuerValue" href="#callValuerValue">func callValuerValue(vr Valuer) (v Value, err error)</a>
+
+```
+searchKey: driver.callValuerValue
+tags: [method private]
+```
+
+```Go
+func callValuerValue(vr Valuer) (v Value, err error)
+```
+
+callValuerValue returns vr.Value(), with one exception: If vr.Value is an auto-generated method on a pointer type and the pointer is nil, it would panic at runtime in the panicwrap method. Treat it like nil instead. Issue 8415. 
+
+This is so people can implement driver.Value on value types and still use nil pointers to those types to mean nil/NULL, just like string/*string. 
+
+This function is mirrored in the database/sql package. 
 
 ### <a id="ValueConverter" href="#ValueConverter">type ValueConverter interface</a>
 
 ```
 searchKey: driver.ValueConverter
+tags: [interface]
 ```
 
 ```Go
@@ -1049,6 +1119,7 @@ Various implementations of ValueConverter are provided by the driver package to 
 
 ```
 searchKey: driver.Valuer
+tags: [interface]
 ```
 
 ```Go
@@ -1063,267 +1134,66 @@ Valuer is the interface providing the Value method.
 
 Types implementing Valuer interface are able to convert themselves to a driver Value. 
 
-### <a id="boolType" href="#boolType">type boolType struct{}</a>
-
-```
-searchKey: driver.boolType
-tags: [private]
-```
-
-```Go
-type boolType struct{}
-```
-
-#### <a id="boolType.String" href="#boolType.String">func (boolType) String() string</a>
-
-```
-searchKey: driver.boolType.String
-tags: [private]
-```
-
-```Go
-func (boolType) String() string
-```
-
-#### <a id="boolType.ConvertValue" href="#boolType.ConvertValue">func (boolType) ConvertValue(src interface{}) (Value, error)</a>
-
-```
-searchKey: driver.boolType.ConvertValue
-tags: [private]
-```
-
-```Go
-func (boolType) ConvertValue(src interface{}) (Value, error)
-```
-
-### <a id="int32Type" href="#int32Type">type int32Type struct{}</a>
-
-```
-searchKey: driver.int32Type
-tags: [private]
-```
-
-```Go
-type int32Type struct{}
-```
-
-#### <a id="int32Type.ConvertValue" href="#int32Type.ConvertValue">func (int32Type) ConvertValue(v interface{}) (Value, error)</a>
-
-```
-searchKey: driver.int32Type.ConvertValue
-tags: [private]
-```
-
-```Go
-func (int32Type) ConvertValue(v interface{}) (Value, error)
-```
-
-### <a id="stringType" href="#stringType">type stringType struct{}</a>
-
-```
-searchKey: driver.stringType
-tags: [private]
-```
-
-```Go
-type stringType struct{}
-```
-
-#### <a id="stringType.ConvertValue" href="#stringType.ConvertValue">func (stringType) ConvertValue(v interface{}) (Value, error)</a>
-
-```
-searchKey: driver.stringType.ConvertValue
-tags: [private]
-```
-
-```Go
-func (stringType) ConvertValue(v interface{}) (Value, error)
-```
-
-### <a id="Null" href="#Null">type Null struct</a>
-
-```
-searchKey: driver.Null
-```
-
-```Go
-type Null struct {
-	Converter ValueConverter
-}
-```
-
-Null is a type that implements ValueConverter by allowing nil values but otherwise delegating to another ValueConverter. 
-
-#### <a id="Null.ConvertValue" href="#Null.ConvertValue">func (n Null) ConvertValue(v interface{}) (Value, error)</a>
-
-```
-searchKey: driver.Null.ConvertValue
-```
-
-```Go
-func (n Null) ConvertValue(v interface{}) (Value, error)
-```
-
-### <a id="NotNull" href="#NotNull">type NotNull struct</a>
-
-```
-searchKey: driver.NotNull
-```
-
-```Go
-type NotNull struct {
-	Converter ValueConverter
-}
-```
-
-NotNull is a type that implements ValueConverter by disallowing nil values but otherwise delegating to another ValueConverter. 
-
-#### <a id="NotNull.ConvertValue" href="#NotNull.ConvertValue">func (n NotNull) ConvertValue(v interface{}) (Value, error)</a>
-
-```
-searchKey: driver.NotNull.ConvertValue
-```
-
-```Go
-func (n NotNull) ConvertValue(v interface{}) (Value, error)
-```
-
-### <a id="defaultConverter" href="#defaultConverter">type defaultConverter struct{}</a>
-
-```
-searchKey: driver.defaultConverter
-tags: [private]
-```
-
-```Go
-type defaultConverter struct{}
-```
-
-#### <a id="defaultConverter.ConvertValue" href="#defaultConverter.ConvertValue">func (defaultConverter) ConvertValue(v interface{}) (Value, error)</a>
-
-```
-searchKey: driver.defaultConverter.ConvertValue
-tags: [private]
-```
-
-```Go
-func (defaultConverter) ConvertValue(v interface{}) (Value, error)
-```
-
-### <a id="decimalDecompose" href="#decimalDecompose">type decimalDecompose interface</a>
-
-```
-searchKey: driver.decimalDecompose
-tags: [private]
-```
-
-```Go
-type decimalDecompose interface {
-	// Decompose returns the internal decimal state into parts.
-	// If the provided buf has sufficient capacity, buf may be returned as the coefficient with
-	// the value set and length set as appropriate.
-	Decompose(buf []byte) (form byte, negative bool, coefficient []byte, exponent int32)
-}
-```
-
-### <a id="valueConverterTest" href="#valueConverterTest">type valueConverterTest struct</a>
-
-```
-searchKey: driver.valueConverterTest
-tags: [private]
-```
-
-```Go
-type valueConverterTest struct {
-	c   ValueConverter
-	in  interface{}
-	out interface{}
-	err string
-}
-```
-
-### <a id="i" href="#i">type i int64</a>
-
-```
-searchKey: driver.i
-tags: [private]
-```
-
-```Go
-type i int64
-```
-
-### <a id="f" href="#f">type f float64</a>
-
-```
-searchKey: driver.f
-tags: [private]
-```
-
-```Go
-type f float64
-```
-
 ### <a id="b" href="#b">type b bool</a>
 
 ```
 searchKey: driver.b
-tags: [private]
+tags: [boolean private]
 ```
 
 ```Go
 type b bool
 ```
 
+### <a id="boolType" href="#boolType">type boolType struct{}</a>
+
+```
+searchKey: driver.boolType
+tags: [struct private]
+```
+
+```Go
+type boolType struct{}
+```
+
+#### <a id="boolType.ConvertValue" href="#boolType.ConvertValue">func (boolType) ConvertValue(src interface{}) (Value, error)</a>
+
+```
+searchKey: driver.boolType.ConvertValue
+tags: [method private]
+```
+
+```Go
+func (boolType) ConvertValue(src interface{}) (Value, error)
+```
+
+#### <a id="boolType.String" href="#boolType.String">func (boolType) String() string</a>
+
+```
+searchKey: driver.boolType.String
+tags: [function private]
+```
+
+```Go
+func (boolType) String() string
+```
+
 ### <a id="bs" href="#bs">type bs []byte</a>
 
 ```
 searchKey: driver.bs
-tags: [private]
+tags: [array number private]
 ```
 
 ```Go
 type bs []byte
 ```
 
-### <a id="s" href="#s">type s string</a>
-
-```
-searchKey: driver.s
-tags: [private]
-```
-
-```Go
-type s string
-```
-
-### <a id="t" href="#t">type t time.Time</a>
-
-```
-searchKey: driver.t
-tags: [private]
-```
-
-```Go
-type t time.Time
-```
-
-### <a id="is" href="#is">type is []int</a>
-
-```
-searchKey: driver.is
-tags: [private]
-```
-
-```Go
-type is []int
-```
-
 ### <a id="dec" href="#dec">type dec struct</a>
 
 ```
 searchKey: driver.dec
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -1339,31 +1209,210 @@ type dec struct {
 
 ```
 searchKey: driver.dec.Decompose
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (d dec) Decompose(buf []byte) (form byte, negative bool, coefficient []byte, exponent int32)
 ```
 
-## <a id="func" href="#func">Functions</a>
-
-### <a id="IsValue" href="#IsValue">func IsValue(v interface{}) bool</a>
+### <a id="decimalDecompose" href="#decimalDecompose">type decimalDecompose interface</a>
 
 ```
-searchKey: driver.IsValue
+searchKey: driver.decimalDecompose
+tags: [interface private]
 ```
 
 ```Go
-func IsValue(v interface{}) bool
+type decimalDecompose interface {
+	// Decompose returns the internal decimal state into parts.
+	// If the provided buf has sufficient capacity, buf may be returned as the coefficient with
+	// the value set and length set as appropriate.
+	Decompose(buf []byte) (form byte, negative bool, coefficient []byte, exponent int32)
+}
 ```
 
-IsValue reports whether v is a valid Value parameter type. 
+### <a id="defaultConverter" href="#defaultConverter">type defaultConverter struct{}</a>
+
+```
+searchKey: driver.defaultConverter
+tags: [struct private]
+```
+
+```Go
+type defaultConverter struct{}
+```
+
+#### <a id="defaultConverter.ConvertValue" href="#defaultConverter.ConvertValue">func (defaultConverter) ConvertValue(v interface{}) (Value, error)</a>
+
+```
+searchKey: driver.defaultConverter.ConvertValue
+tags: [method private]
+```
+
+```Go
+func (defaultConverter) ConvertValue(v interface{}) (Value, error)
+```
+
+### <a id="f" href="#f">type f float64</a>
+
+```
+searchKey: driver.f
+tags: [number private]
+```
+
+```Go
+type f float64
+```
+
+### <a id="i" href="#i">type i int64</a>
+
+```
+searchKey: driver.i
+tags: [number private]
+```
+
+```Go
+type i int64
+```
+
+### <a id="int32Type" href="#int32Type">type int32Type struct{}</a>
+
+```
+searchKey: driver.int32Type
+tags: [struct private]
+```
+
+```Go
+type int32Type struct{}
+```
+
+#### <a id="int32Type.ConvertValue" href="#int32Type.ConvertValue">func (int32Type) ConvertValue(v interface{}) (Value, error)</a>
+
+```
+searchKey: driver.int32Type.ConvertValue
+tags: [method private]
+```
+
+```Go
+func (int32Type) ConvertValue(v interface{}) (Value, error)
+```
+
+### <a id="is" href="#is">type is []int</a>
+
+```
+searchKey: driver.is
+tags: [array number private]
+```
+
+```Go
+type is []int
+```
+
+### <a id="noRows" href="#noRows">type noRows struct{}</a>
+
+```
+searchKey: driver.noRows
+tags: [struct private]
+```
+
+```Go
+type noRows struct{}
+```
+
+#### <a id="noRows.LastInsertId" href="#noRows.LastInsertId">func (noRows) LastInsertId() (int64, error)</a>
+
+```
+searchKey: driver.noRows.LastInsertId
+tags: [function private]
+```
+
+```Go
+func (noRows) LastInsertId() (int64, error)
+```
+
+#### <a id="noRows.RowsAffected" href="#noRows.RowsAffected">func (noRows) RowsAffected() (int64, error)</a>
+
+```
+searchKey: driver.noRows.RowsAffected
+tags: [function private]
+```
+
+```Go
+func (noRows) RowsAffected() (int64, error)
+```
+
+### <a id="s" href="#s">type s string</a>
+
+```
+searchKey: driver.s
+tags: [string private]
+```
+
+```Go
+type s string
+```
+
+### <a id="stringType" href="#stringType">type stringType struct{}</a>
+
+```
+searchKey: driver.stringType
+tags: [struct private]
+```
+
+```Go
+type stringType struct{}
+```
+
+#### <a id="stringType.ConvertValue" href="#stringType.ConvertValue">func (stringType) ConvertValue(v interface{}) (Value, error)</a>
+
+```
+searchKey: driver.stringType.ConvertValue
+tags: [method private]
+```
+
+```Go
+func (stringType) ConvertValue(v interface{}) (Value, error)
+```
+
+### <a id="t" href="#t">type t time.Time</a>
+
+```
+searchKey: driver.t
+tags: [struct private]
+```
+
+```Go
+type t time.Time
+```
+
+### <a id="valueConverterTest" href="#valueConverterTest">type valueConverterTest struct</a>
+
+```
+searchKey: driver.valueConverterTest
+tags: [struct private]
+```
+
+```Go
+type valueConverterTest struct {
+	c   ValueConverter
+	in  interface{}
+	out interface{}
+	err string
+}
+```
+
+## <a id="func" href="#func">Functions</a>
+
+```
+tags: [package]
+```
 
 ### <a id="IsScanValue" href="#IsScanValue">func IsScanValue(v interface{}) bool</a>
 
 ```
 searchKey: driver.IsScanValue
+tags: [method]
 ```
 
 ```Go
@@ -1372,11 +1421,24 @@ func IsScanValue(v interface{}) bool
 
 IsScanValue is equivalent to IsValue. It exists for compatibility. 
 
+### <a id="IsValue" href="#IsValue">func IsValue(v interface{}) bool</a>
+
+```
+searchKey: driver.IsValue
+tags: [method]
+```
+
+```Go
+func IsValue(v interface{}) bool
+```
+
+IsValue reports whether v is a valid Value parameter type. 
+
 ### <a id="TestValueConverters" href="#TestValueConverters">func TestValueConverters(t *testing.T)</a>
 
 ```
 searchKey: driver.TestValueConverters
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go

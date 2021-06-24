@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/encryption/awskms",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "awskms.testKeyID",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -90,6 +95,8 @@
                 "newPage": false,
                 "searchKey": "awskms.shouldUpdate",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
@@ -115,6 +122,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -134,7 +142,9 @@
                 "identifier": "Key",
                 "newPage": false,
                 "searchKey": "awskms.Key",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -147,32 +157,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/encryption/awskms#Key.Version",
-                    "documentation": {
-                      "identifier": "Key.Version",
-                      "newPage": false,
-                      "searchKey": "awskms.Key.Version",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/encryption/awskms#Key.Decrypt",
                     "documentation": {
                       "identifier": "Key.Decrypt",
                       "newPage": false,
                       "searchKey": "awskms.Key.Decrypt",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -192,7 +184,9 @@
                       "identifier": "Key.Encrypt",
                       "newPage": false,
                       "searchKey": "awskms.Key.Encrypt",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -201,6 +195,28 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (k *Key) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)\n```\n\nEncrypt a secret, storing it as a base64 encoded string. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/encryption/awskms#Key.Version",
+                    "documentation": {
+                      "identifier": "Key.Version",
+                      "newPage": false,
+                      "searchKey": "awskms.Key.Version",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -216,6 +232,7 @@
                 "newPage": false,
                 "searchKey": "awskms.encryptedValue",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -241,6 +258,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -260,7 +278,9 @@
                 "identifier": "NewKey",
                 "newPage": false,
                 "searchKey": "awskms.NewKey",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -275,66 +295,24 @@
           },
           {
             "node": {
-              "pathID": "/internal/encryption/awskms#newKey",
+              "pathID": "/internal/encryption/awskms#TestRoundtrip",
               "documentation": {
-                "identifier": "newKey",
+                "identifier": "TestRoundtrip",
                 "newPage": false,
-                "searchKey": "awskms.newKey",
+                "searchKey": "awskms.TestRoundtrip",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func newKey(ctx context.Context, keyConfig schema.AWSKMSEncryptionKey, config aws.Config) (encryption.Key, error)"
+                "value": "func TestRoundtrip(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc newKey(ctx context.Context, keyConfig schema.AWSKMSEncryptionKey, config aws.Config) (encryption.Key, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/encryption/awskms#awsConfigOptsForKeyConfig",
-              "documentation": {
-                "identifier": "awsConfigOptsForKeyConfig",
-                "newPage": false,
-                "searchKey": "awskms.awsConfigOptsForKeyConfig",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func awsConfigOptsForKeyConfig(keyConfig schema.AWSKMSEncryptionKey) []func(*config.LoadOptions) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc awsConfigOptsForKeyConfig(keyConfig schema.AWSKMSEncryptionKey) []func(*config.LoadOptions) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/encryption/awskms#aesEncrypt",
-              "documentation": {
-                "identifier": "aesEncrypt",
-                "newPage": false,
-                "searchKey": "awskms.aesEncrypt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func aesEncrypt(plaintext, key []byte) ([]byte, []byte, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc aesEncrypt(plaintext, key []byte) ([]byte, []byte, error)\n```\n\n"
+                "value": "```Go\nfunc TestRoundtrip(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -347,6 +325,7 @@
                 "newPage": false,
                 "searchKey": "awskms.aesDecrypt",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -363,22 +342,46 @@
           },
           {
             "node": {
-              "pathID": "/internal/encryption/awskms#TestRoundtrip",
+              "pathID": "/internal/encryption/awskms#aesEncrypt",
               "documentation": {
-                "identifier": "TestRoundtrip",
+                "identifier": "aesEncrypt",
                 "newPage": false,
-                "searchKey": "awskms.TestRoundtrip",
+                "searchKey": "awskms.aesEncrypt",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestRoundtrip(t *testing.T)"
+                "value": "func aesEncrypt(plaintext, key []byte) ([]byte, []byte, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestRoundtrip(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc aesEncrypt(plaintext, key []byte) ([]byte, []byte, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption/awskms#awsConfigOptsForKeyConfig",
+              "documentation": {
+                "identifier": "awsConfigOptsForKeyConfig",
+                "newPage": false,
+                "searchKey": "awskms.awsConfigOptsForKeyConfig",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func awsConfigOptsForKeyConfig(keyConfig schema.AWSKMSEncryptionKey) []func(*config.LoadOptions) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc awsConfigOptsForKeyConfig(keyConfig schema.AWSKMSEncryptionKey) []func(*config.LoadOptions) error\n```\n\n"
               },
               "children": null
             }
@@ -391,6 +394,7 @@
                 "newPage": false,
                 "searchKey": "awskms.newClientFactory",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -407,12 +411,36 @@
           },
           {
             "node": {
+              "pathID": "/internal/encryption/awskms#newKey",
+              "documentation": {
+                "identifier": "newKey",
+                "newPage": false,
+                "searchKey": "awskms.newKey",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newKey(ctx context.Context, keyConfig schema.AWSKMSEncryptionKey, config aws.Config) (encryption.Key, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newKey(ctx context.Context, keyConfig schema.AWSKMSEncryptionKey, config aws.Config) (encryption.Key, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/encryption/awskms#newRecorder",
               "documentation": {
                 "identifier": "newRecorder",
                 "newPage": false,
                 "searchKey": "awskms.newRecorder",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -429,34 +457,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/encryption/awskms#save",
-              "documentation": {
-                "identifier": "save",
-                "newPage": false,
-                "searchKey": "awskms.save",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func save(t testing.TB, rec *recorder.Recorder)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc save(t testing.TB, rec *recorder.Recorder)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/encryption/awskms#readEnvFallback",
               "documentation": {
                 "identifier": "readEnvFallback",
                 "newPage": false,
                 "searchKey": "awskms.readEnvFallback",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -467,6 +474,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc readEnvFallback(key, fallback string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption/awskms#save",
+              "documentation": {
+                "identifier": "save",
+                "newPage": false,
+                "searchKey": "awskms.save",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func save(t testing.TB, rec *recorder.Recorder)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc save(t testing.TB, rec *recorder.Recorder)\n```\n\n"
               },
               "children": null
             }

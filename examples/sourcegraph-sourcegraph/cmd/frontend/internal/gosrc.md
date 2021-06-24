@@ -11,8 +11,8 @@
 * [Types](#type)
     * [type Directory struct](#Directory)
         * [func ResolveImportPath(client httpcli.Doer, importPath string) (*Directory, error)](#ResolveImportPath)
-        * [func resolveStaticImportPath(importPath string) (*Directory, error)](#resolveStaticImportPath)
         * [func resolveDynamicImportPath(client httpcli.Doer, importPath string) (*Directory, error)](#resolveDynamicImportPath)
+        * [func resolveStaticImportPath(importPath string) (*Directory, error)](#resolveStaticImportPath)
     * [type importMeta struct](#importMeta)
         * [func fetchMeta(client httpcli.Doer, importPath string) (scheme string, im *importMeta, sm *sourceMeta, err error)](#fetchMeta)
         * [func parseMeta(scheme, importPath string, r io.Reader) (im *importMeta, sm *sourceMeta, err error)](#parseMeta)
@@ -20,21 +20,22 @@
     * [type testTransport map[string]string](#testTransport)
         * [func (t testTransport) RoundTrip(req *http.Request) (*http.Response, error)](#testTransport.RoundTrip)
 * [Functions](#func)
-    * [func attrValue(attrs []xml.Attr, name string) string](#attrValue)
     * [func IsStdlibPkg(importPath string) bool](#IsStdlibPkg)
     * [func TestResolveImportPath(t *testing.T)](#TestResolveImportPath)
+    * [func attrValue(attrs []xml.Attr, name string) string](#attrValue)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="RuntimeVersion" href="#RuntimeVersion">var RuntimeVersion</a>
 
 ```
 searchKey: gosrc.RuntimeVersion
+tags: [variable string]
 ```
 
 ```Go
@@ -47,7 +48,7 @@ RuntimeVersion is the version of go stdlib to use. We allow it to be different t
 
 ```
 searchKey: gosrc.errNoMatch
-tags: [private]
+tags: [variable interface private]
 ```
 
 ```Go
@@ -58,7 +59,7 @@ var errNoMatch = errors.New("no match")
 
 ```
 searchKey: gosrc.gopkgSrcTemplate
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -71,7 +72,7 @@ gopkgSrcTemplate matches the go-source dir templates specified by the popular go
 
 ```
 searchKey: gosrc.stdlibInternalPackagePrefixes
-tags: [private]
+tags: [variable array string private]
 ```
 
 ```Go
@@ -84,7 +85,7 @@ find path/to/golang/source -name internal | awk -F '/' '{ print "\"" $2 "/\"," }
 
 ```
 searchKey: gosrc.stdlibPackagePaths
-tags: [private]
+tags: [variable object private]
 ```
 
 ```Go
@@ -96,13 +97,14 @@ go list std | awk '{ print "\"" $1 "\": struct{}{}," }'
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Directory" href="#Directory">type Directory struct</a>
 
 ```
 searchKey: gosrc.Directory
+tags: [struct]
 ```
 
 ```Go
@@ -120,39 +122,40 @@ type Directory struct {
 
 ```
 searchKey: gosrc.ResolveImportPath
+tags: [method]
 ```
 
 ```Go
 func ResolveImportPath(client httpcli.Doer, importPath string) (*Directory, error)
 ```
 
-#### <a id="resolveStaticImportPath" href="#resolveStaticImportPath">func resolveStaticImportPath(importPath string) (*Directory, error)</a>
-
-```
-searchKey: gosrc.resolveStaticImportPath
-tags: [private]
-```
-
-```Go
-func resolveStaticImportPath(importPath string) (*Directory, error)
-```
-
 #### <a id="resolveDynamicImportPath" href="#resolveDynamicImportPath">func resolveDynamicImportPath(client httpcli.Doer, importPath string) (*Directory, error)</a>
 
 ```
 searchKey: gosrc.resolveDynamicImportPath
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func resolveDynamicImportPath(client httpcli.Doer, importPath string) (*Directory, error)
 ```
 
+#### <a id="resolveStaticImportPath" href="#resolveStaticImportPath">func resolveStaticImportPath(importPath string) (*Directory, error)</a>
+
+```
+searchKey: gosrc.resolveStaticImportPath
+tags: [method private]
+```
+
+```Go
+func resolveStaticImportPath(importPath string) (*Directory, error)
+```
+
 ### <a id="importMeta" href="#importMeta">type importMeta struct</a>
 
 ```
 searchKey: gosrc.importMeta
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -171,7 +174,7 @@ See [https://golang.org/cmd/go/#hdr-Remote_import_paths](https://golang.org/cmd/
 
 ```
 searchKey: gosrc.fetchMeta
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -182,7 +185,7 @@ func fetchMeta(client httpcli.Doer, importPath string) (scheme string, im *impor
 
 ```
 searchKey: gosrc.parseMeta
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -193,7 +196,7 @@ func parseMeta(scheme, importPath string, r io.Reader) (im *importMeta, sm *sour
 
 ```
 searchKey: gosrc.sourceMeta
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -211,7 +214,7 @@ sourceMeta represents the values in a go-source meta tag.
 
 ```
 searchKey: gosrc.testTransport
-tags: [private]
+tags: [object private]
 ```
 
 ```Go
@@ -222,7 +225,7 @@ type testTransport map[string]string
 
 ```
 searchKey: gosrc.testTransport.RoundTrip
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -232,24 +235,14 @@ func (t testTransport) RoundTrip(req *http.Request) (*http.Response, error)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
-```
-
-### <a id="attrValue" href="#attrValue">func attrValue(attrs []xml.Attr, name string) string</a>
-
-```
-searchKey: gosrc.attrValue
-tags: [private]
-```
-
-```Go
-func attrValue(attrs []xml.Attr, name string) string
+tags: [package private]
 ```
 
 ### <a id="IsStdlibPkg" href="#IsStdlibPkg">func IsStdlibPkg(importPath string) bool</a>
 
 ```
 searchKey: gosrc.IsStdlibPkg
+tags: [method]
 ```
 
 ```Go
@@ -262,10 +255,21 @@ IsStdlibPkg returns true if the package path is part of the stdlib. This uses a 
 
 ```
 searchKey: gosrc.TestResolveImportPath
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestResolveImportPath(t *testing.T)
+```
+
+### <a id="attrValue" href="#attrValue">func attrValue(attrs []xml.Attr, name string) string</a>
+
+```
+searchKey: gosrc.attrValue
+tags: [method private]
+```
+
+```Go
+func attrValue(attrs []xml.Attr, name string) string
 ```
 

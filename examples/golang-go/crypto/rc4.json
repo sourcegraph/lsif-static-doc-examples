@@ -4,7 +4,9 @@
     "identifier": "rc4",
     "newPage": true,
     "searchKey": "crypto/rc4",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -41,6 +45,9 @@
                 "newPage": false,
                 "searchKey": "rc4.golden",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -65,7 +72,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -83,7 +92,9 @@
                 "identifier": "Cipher",
                 "newPage": false,
                 "searchKey": "rc4.Cipher",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -101,7 +112,9 @@
                       "identifier": "NewCipher",
                       "newPage": false,
                       "searchKey": "rc4.NewCipher",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -122,6 +135,7 @@
                       "newPage": false,
                       "searchKey": "rc4.Cipher.Reset",
                       "tags": [
+                        "function",
                         "deprecated"
                       ]
                     },
@@ -143,7 +157,9 @@
                       "identifier": "Cipher.XORKeyStream",
                       "newPage": false,
                       "searchKey": "rc4.Cipher.XORKeyStream",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -166,7 +182,9 @@
                 "identifier": "KeySizeError",
                 "newPage": false,
                 "searchKey": "rc4.KeySizeError",
-                "tags": null
+                "tags": [
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,7 +202,9 @@
                       "identifier": "KeySizeError.Error",
                       "newPage": false,
                       "searchKey": "rc4.KeySizeError.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -208,6 +228,7 @@
                 "newPage": false,
                 "searchKey": "rc4.rc4Test",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -232,7 +253,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -245,101 +268,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto/rc4#testEncrypt",
-              "documentation": {
-                "identifier": "testEncrypt",
-                "newPage": false,
-                "searchKey": "rc4.testEncrypt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testEncrypt(t *testing.T, desc string, c *Cipher, src, expect []byte)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testEncrypt(t *testing.T, desc string, c *Cipher, src, expect []byte)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/rc4#TestGolden",
-              "documentation": {
-                "identifier": "TestGolden",
-                "newPage": false,
-                "searchKey": "rc4.TestGolden",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGolden(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGolden(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/rc4#TestBlock",
-              "documentation": {
-                "identifier": "TestBlock",
-                "newPage": false,
-                "searchKey": "rc4.TestBlock",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestBlock(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestBlock(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/rc4#benchmark",
-              "documentation": {
-                "identifier": "benchmark",
-                "newPage": false,
-                "searchKey": "rc4.benchmark",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func benchmark(b *testing.B, size int64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc benchmark(b *testing.B, size int64)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/rc4#BenchmarkRC4_128",
               "documentation": {
                 "identifier": "BenchmarkRC4_128",
                 "newPage": false,
                 "searchKey": "rc4.BenchmarkRC4_128",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -361,7 +298,9 @@
                 "newPage": false,
                 "searchKey": "rc4.BenchmarkRC4_1K",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -383,7 +322,9 @@
                 "newPage": false,
                 "searchKey": "rc4.BenchmarkRC4_8K",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -393,6 +334,100 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc BenchmarkRC4_8K(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rc4#TestBlock",
+              "documentation": {
+                "identifier": "TestBlock",
+                "newPage": false,
+                "searchKey": "rc4.TestBlock",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBlock(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBlock(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rc4#TestGolden",
+              "documentation": {
+                "identifier": "TestGolden",
+                "newPage": false,
+                "searchKey": "rc4.TestGolden",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGolden(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGolden(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rc4#benchmark",
+              "documentation": {
+                "identifier": "benchmark",
+                "newPage": false,
+                "searchKey": "rc4.benchmark",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmark(b *testing.B, size int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmark(b *testing.B, size int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rc4#testEncrypt",
+              "documentation": {
+                "identifier": "testEncrypt",
+                "newPage": false,
+                "searchKey": "rc4.testEncrypt",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testEncrypt(t *testing.T, desc string, c *Cipher, src, expect []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testEncrypt(t *testing.T, desc string, c *Cipher, src, expect []byte)\n```\n\n"
               },
               "children": null
             }

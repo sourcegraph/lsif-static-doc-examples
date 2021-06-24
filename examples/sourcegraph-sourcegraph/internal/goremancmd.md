@@ -12,14 +12,14 @@ Command goremancmd exists for testing the internally vendored goreman that ./cmd
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="do" href="#do">func do() error</a>
 
 ```
 searchKey: main.do
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -30,7 +30,7 @@ func do() error
 
 ```
 searchKey: main.main
-tags: [private]
+tags: [function private]
 ```
 
 ```Go

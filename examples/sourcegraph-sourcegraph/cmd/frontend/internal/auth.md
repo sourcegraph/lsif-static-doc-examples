@@ -5,32 +5,43 @@
 * Subpages
   * [cmd/frontend/internal/auth/userpasswd](auth/userpasswd.md)
 * [Constants](#const)
+    * [const defaultUsername](#defaultUsername)
     * [const overrideSecretHeader](#overrideSecretHeader)
     * [const overrideUsernameHeader](#overrideUsernameHeader)
-    * [const defaultUsername](#defaultUsername)
 * [Variables](#var)
     * [var envOverrideAuthSecret](#envOverrideAuthSecret)
 * [Functions](#func)
-    * [func init()](#init.config.go)
-    * [func validateConfig(c conf.Unified) (problems conf.Problems)](#validateConfig)
     * [func ForbidAllRequestsMiddleware(next http.Handler) http.Handler](#ForbidAllRequestsMiddleware)
     * [func OverrideAuthMiddleware(next http.Handler) http.Handler](#OverrideAuthMiddleware)
-    * [func TestValidateCustom(t *testing.T)](#TestValidateCustom)
     * [func TestForbidAllMiddleware(t *testing.T)](#TestForbidAllMiddleware)
     * [func TestOverrideAuthMiddleware(t *testing.T)](#TestOverrideAuthMiddleware)
+    * [func TestValidateCustom(t *testing.T)](#TestValidateCustom)
+    * [func init()](#init.config.go)
+    * [func validateConfig(c conf.Unified) (problems conf.Problems)](#validateConfig)
 
 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
+tags: [package private]
+```
+
+### <a id="defaultUsername" href="#defaultUsername">const defaultUsername</a>
+
+```
+searchKey: auth.defaultUsername
+tags: [constant string private]
+```
+
+```Go
+const defaultUsername = "override-auth-user"
 ```
 
 ### <a id="overrideSecretHeader" href="#overrideSecretHeader">const overrideSecretHeader</a>
 
 ```
 searchKey: auth.overrideSecretHeader
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -41,35 +52,24 @@ const overrideSecretHeader = "X-Override-Auth-Secret"
 
 ```
 searchKey: auth.overrideUsernameHeader
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
 const overrideUsernameHeader = "X-Override-Auth-Username"
 ```
 
-### <a id="defaultUsername" href="#defaultUsername">const defaultUsername</a>
-
-```
-searchKey: auth.defaultUsername
-tags: [private]
-```
-
-```Go
-const defaultUsername = "override-auth-user"
-```
-
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="envOverrideAuthSecret" href="#envOverrideAuthSecret">var envOverrideAuthSecret</a>
 
 ```
 searchKey: auth.envOverrideAuthSecret
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
@@ -81,35 +81,14 @@ envOverrideAuthSecret (the env var OVERRIDE_AUTH_SECRET) is the preferred source
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
-```
-
-### <a id="init.config.go" href="#init.config.go">func init()</a>
-
-```
-searchKey: auth.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
-### <a id="validateConfig" href="#validateConfig">func validateConfig(c conf.Unified) (problems conf.Problems)</a>
-
-```
-searchKey: auth.validateConfig
-tags: [private]
-```
-
-```Go
-func validateConfig(c conf.Unified) (problems conf.Problems)
+tags: [package private]
 ```
 
 ### <a id="ForbidAllRequestsMiddleware" href="#ForbidAllRequestsMiddleware">func ForbidAllRequestsMiddleware(next http.Handler) http.Handler</a>
 
 ```
 searchKey: auth.ForbidAllRequestsMiddleware
+tags: [method]
 ```
 
 ```Go
@@ -122,6 +101,7 @@ ForbidAllRequestsMiddleware forbids all requests. It is used when no auth provid
 
 ```
 searchKey: auth.OverrideAuthMiddleware
+tags: [method]
 ```
 
 ```Go
@@ -132,22 +112,11 @@ OverrideAuthMiddleware is middleware that causes a new authenticated session (as
 
 It is used to enable our e2e tests to authenticate to [https://sourcegraph.sgdev.org](https://sourcegraph.sgdev.org) without needing to give them Google Workspace access. 
 
-### <a id="TestValidateCustom" href="#TestValidateCustom">func TestValidateCustom(t *testing.T)</a>
-
-```
-searchKey: auth.TestValidateCustom
-tags: [private]
-```
-
-```Go
-func TestValidateCustom(t *testing.T)
-```
-
 ### <a id="TestForbidAllMiddleware" href="#TestForbidAllMiddleware">func TestForbidAllMiddleware(t *testing.T)</a>
 
 ```
 searchKey: auth.TestForbidAllMiddleware
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -158,10 +127,43 @@ func TestForbidAllMiddleware(t *testing.T)
 
 ```
 searchKey: auth.TestOverrideAuthMiddleware
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestOverrideAuthMiddleware(t *testing.T)
+```
+
+### <a id="TestValidateCustom" href="#TestValidateCustom">func TestValidateCustom(t *testing.T)</a>
+
+```
+searchKey: auth.TestValidateCustom
+tags: [method private test]
+```
+
+```Go
+func TestValidateCustom(t *testing.T)
+```
+
+### <a id="init.config.go" href="#init.config.go">func init()</a>
+
+```
+searchKey: auth.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="validateConfig" href="#validateConfig">func validateConfig(c conf.Unified) (problems conf.Problems)</a>
+
+```
+searchKey: auth.validateConfig
+tags: [method private]
+```
+
+```Go
+func validateConfig(c conf.Unified) (problems conf.Problems)
 ```
 

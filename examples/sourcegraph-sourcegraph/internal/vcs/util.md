@@ -4,34 +4,35 @@
 
 * [Types](#type)
     * [type FileInfo struct](#FileInfo)
+        * [func (fi *FileInfo) IsDir() bool](#FileInfo.IsDir)
+        * [func (fi *FileInfo) ModTime() time.Time](#FileInfo.ModTime)
+        * [func (fi *FileInfo) Mode() os.FileMode](#FileInfo.Mode)
         * [func (fi *FileInfo) Name() string](#FileInfo.Name)
         * [func (fi *FileInfo) Size() int64](#FileInfo.Size)
-        * [func (fi *FileInfo) Mode() os.FileMode](#FileInfo.Mode)
-        * [func (fi *FileInfo) ModTime() time.Time](#FileInfo.ModTime)
-        * [func (fi *FileInfo) IsDir() bool](#FileInfo.IsDir)
         * [func (fi *FileInfo) Sys() interface{}](#FileInfo.Sys)
     * [type fileInfosByName []fs.FileInfo](#fileInfosByName)
         * [func (v fileInfosByName) Len() int](#fileInfosByName.Len)
         * [func (v fileInfosByName) Less(i, j int) bool](#fileInfosByName.Less)
         * [func (v fileInfosByName) Swap(i, j int)](#fileInfosByName.Swap)
 * [Functions](#func)
-    * [func SortFileInfosByName(fis []fs.FileInfo)](#SortFileInfosByName)
     * [func Rel(path string) string](#Rel)
     * [func ScriptFile(prefix string) (filePath string, rootPath string, err error)](#ScriptFile)
-    * [func WriteFileWithPermissions(file string, content []byte, perm os.FileMode) error](#WriteFileWithPermissions)
+    * [func SortFileInfosByName(fis []fs.FileInfo)](#SortFileInfosByName)
     * [func TestScriptFile(t *testing.T)](#TestScriptFile)
+    * [func WriteFileWithPermissions(file string, content []byte, perm os.FileMode) error](#WriteFileWithPermissions)
 
 
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="FileInfo" href="#FileInfo">type FileInfo struct</a>
 
 ```
 searchKey: util.FileInfo
+tags: [struct]
 ```
 
 ```Go
@@ -46,10 +47,44 @@ type FileInfo struct {
 
 FileInfo implements fs.FileInfo. 
 
+#### <a id="FileInfo.IsDir" href="#FileInfo.IsDir">func (fi *FileInfo) IsDir() bool</a>
+
+```
+searchKey: util.FileInfo.IsDir
+tags: [function]
+```
+
+```Go
+func (fi *FileInfo) IsDir() bool
+```
+
+#### <a id="FileInfo.ModTime" href="#FileInfo.ModTime">func (fi *FileInfo) ModTime() time.Time</a>
+
+```
+searchKey: util.FileInfo.ModTime
+tags: [function]
+```
+
+```Go
+func (fi *FileInfo) ModTime() time.Time
+```
+
+#### <a id="FileInfo.Mode" href="#FileInfo.Mode">func (fi *FileInfo) Mode() os.FileMode</a>
+
+```
+searchKey: util.FileInfo.Mode
+tags: [function]
+```
+
+```Go
+func (fi *FileInfo) Mode() os.FileMode
+```
+
 #### <a id="FileInfo.Name" href="#FileInfo.Name">func (fi *FileInfo) Name() string</a>
 
 ```
 searchKey: util.FileInfo.Name
+tags: [function]
 ```
 
 ```Go
@@ -60,46 +95,18 @@ func (fi *FileInfo) Name() string
 
 ```
 searchKey: util.FileInfo.Size
+tags: [function]
 ```
 
 ```Go
 func (fi *FileInfo) Size() int64
 ```
 
-#### <a id="FileInfo.Mode" href="#FileInfo.Mode">func (fi *FileInfo) Mode() os.FileMode</a>
-
-```
-searchKey: util.FileInfo.Mode
-```
-
-```Go
-func (fi *FileInfo) Mode() os.FileMode
-```
-
-#### <a id="FileInfo.ModTime" href="#FileInfo.ModTime">func (fi *FileInfo) ModTime() time.Time</a>
-
-```
-searchKey: util.FileInfo.ModTime
-```
-
-```Go
-func (fi *FileInfo) ModTime() time.Time
-```
-
-#### <a id="FileInfo.IsDir" href="#FileInfo.IsDir">func (fi *FileInfo) IsDir() bool</a>
-
-```
-searchKey: util.FileInfo.IsDir
-```
-
-```Go
-func (fi *FileInfo) IsDir() bool
-```
-
 #### <a id="FileInfo.Sys" href="#FileInfo.Sys">func (fi *FileInfo) Sys() interface{}</a>
 
 ```
 searchKey: util.FileInfo.Sys
+tags: [function]
 ```
 
 ```Go
@@ -110,7 +117,7 @@ func (fi *FileInfo) Sys() interface{}
 
 ```
 searchKey: util.fileInfosByName
-tags: [private]
+tags: [array interface private]
 ```
 
 ```Go
@@ -121,7 +128,7 @@ type fileInfosByName []fs.FileInfo
 
 ```
 searchKey: util.fileInfosByName.Len
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -132,7 +139,7 @@ func (v fileInfosByName) Len() int
 
 ```
 searchKey: util.fileInfosByName.Less
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -143,7 +150,7 @@ func (v fileInfosByName) Less(i, j int) bool
 
 ```
 searchKey: util.fileInfosByName.Swap
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -153,25 +160,14 @@ func (v fileInfosByName) Swap(i, j int)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
-
-### <a id="SortFileInfosByName" href="#SortFileInfosByName">func SortFileInfosByName(fis []fs.FileInfo)</a>
-
-```
-searchKey: util.SortFileInfosByName
-```
-
-```Go
-func SortFileInfosByName(fis []fs.FileInfo)
-```
-
-SortFileInfosByName sorts fis by name, alphabetically. 
 
 ### <a id="Rel" href="#Rel">func Rel(path string) string</a>
 
 ```
 searchKey: util.Rel
+tags: [method]
 ```
 
 ```Go
@@ -186,6 +182,7 @@ The elements in a file path are separated by slash ('/', U+002F) characters, reg
 
 ```
 searchKey: util.ScriptFile
+tags: [method]
 ```
 
 ```Go
@@ -194,10 +191,35 @@ func ScriptFile(prefix string) (filePath string, rootPath string, err error)
 
 Constructs platform-specific temporary script file with a given prefix On Windows such a file must have .bat extension Returns triplet where - filePath is a location of file - rootPath refers to temporary root directory the filePath is in (everything under the rootPath (including rootPath) should be removed when no longer needed) - error indicates possible error 
 
+### <a id="SortFileInfosByName" href="#SortFileInfosByName">func SortFileInfosByName(fis []fs.FileInfo)</a>
+
+```
+searchKey: util.SortFileInfosByName
+tags: [method]
+```
+
+```Go
+func SortFileInfosByName(fis []fs.FileInfo)
+```
+
+SortFileInfosByName sorts fis by name, alphabetically. 
+
+### <a id="TestScriptFile" href="#TestScriptFile">func TestScriptFile(t *testing.T)</a>
+
+```
+searchKey: util.TestScriptFile
+tags: [method private test]
+```
+
+```Go
+func TestScriptFile(t *testing.T)
+```
+
 ### <a id="WriteFileWithPermissions" href="#WriteFileWithPermissions">func WriteFileWithPermissions(file string, content []byte, perm os.FileMode) error</a>
 
 ```
 searchKey: util.WriteFileWithPermissions
+tags: [method]
 ```
 
 ```Go
@@ -205,15 +227,4 @@ func WriteFileWithPermissions(file string, content []byte, perm os.FileMode) err
 ```
 
 Wrapper around os.WriteFile that updates permissions regardless if file existed before 
-
-### <a id="TestScriptFile" href="#TestScriptFile">func TestScriptFile(t *testing.T)</a>
-
-```
-searchKey: util.TestScriptFile
-tags: [private]
-```
-
-```Go
-func TestScriptFile(t *testing.T)
-```
 

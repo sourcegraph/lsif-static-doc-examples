@@ -10,39 +10,40 @@
     * [type Handler interface](#Handler)
     * [type HandlerFunc func(ctx context.Context, store github.com/sourcegraph/sourcegraph/internal/workerutil/dbworker/store.Store, record github.com/sourcegraph/sourcegraph/internal/workerutil.Record) error](#HandlerFunc)
         * [func (f HandlerFunc) Handle(ctx context.Context, store store.Store, record workerutil.Record) error](#HandlerFunc.Handle)
-    * [type handlerShim struct](#handlerShim)
-        * [func (s *handlerShim) Handle(ctx context.Context, store workerutil.Store, record workerutil.Record) error](#handlerShim.Handle)
-        * [func (s *handlerShim) PreDequeue(ctx context.Context) (dequeueable bool, extraDequeueArguments interface{}, err error)](#handlerShim.PreDequeue)
-        * [func (s *handlerShim) PreHandle(ctx context.Context, record workerutil.Record)](#handlerShim.PreHandle)
-        * [func (s *handlerShim) PostHandle(ctx context.Context, record workerutil.Record)](#handlerShim.PostHandle)
     * [type Resetter struct](#Resetter)
         * [func NewResetter(store store.Store, options ResetterOptions) *Resetter](#NewResetter)
         * [func newResetter(store store.Store, options ResetterOptions, clock glock.Clock) *Resetter](#newResetter)
         * [func (r *Resetter) Start()](#Resetter.Start)
         * [func (r *Resetter) Stop()](#Resetter.Stop)
-    * [type ResetterOptions struct](#ResetterOptions)
     * [type ResetterMetrics struct](#ResetterMetrics)
+    * [type ResetterOptions struct](#ResetterOptions)
+    * [type handlerShim struct](#handlerShim)
+        * [func (s *handlerShim) Handle(ctx context.Context, store workerutil.Store, record workerutil.Record) error](#handlerShim.Handle)
+        * [func (s *handlerShim) PostHandle(ctx context.Context, record workerutil.Record)](#handlerShim.PostHandle)
+        * [func (s *handlerShim) PreDequeue(ctx context.Context) (dequeueable bool, extraDequeueArguments interface{}, err error)](#handlerShim.PreDequeue)
+        * [func (s *handlerShim) PreHandle(ctx context.Context, record workerutil.Record)](#handlerShim.PreHandle)
     * [type storeShim struct](#storeShim)
-        * [func (s *storeShim) QueuedCount(ctx context.Context, extraArguments interface{}) (int, error)](#storeShim.QueuedCount)
         * [func (s *storeShim) Dequeue(ctx context.Context, extraArguments interface{}) (workerutil.Record, workerutil.Store, bool, error)](#storeShim.Dequeue)
+        * [func (s *storeShim) QueuedCount(ctx context.Context, extraArguments interface{}) (int, error)](#storeShim.QueuedCount)
 * [Functions](#func)
-    * [func newHandlerShim(handler Handler) workerutil.Handler](#newHandlerShim)
-    * [func newStoreShim(store store.Store) workerutil.Store](#newStoreShim)
-    * [func convertArguments(v interface{}) ([]*sqlf.Query, error)](#convertArguments)
     * [func NewWorker(ctx context.Context, store store.Store, handler Handler, options workerutil.WorkerOptions) *workerutil.Worker](#NewWorker)
     * [func TestResetter(t *testing.T)](#TestResetter)
+    * [func convertArguments(v interface{}) ([]*sqlf.Query, error)](#convertArguments)
+    * [func newHandlerShim(handler Handler) workerutil.Handler](#newHandlerShim)
+    * [func newStoreShim(store store.Store) workerutil.Store](#newStoreShim)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="ErrNotConditions" href="#ErrNotConditions">var ErrNotConditions</a>
 
 ```
 searchKey: dbworker.ErrNotConditions
+tags: [variable interface]
 ```
 
 ```Go
@@ -54,13 +55,14 @@ ErrNotConditions occurs when a PreDequeue handler returns non-sql query extra ar
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Handler" href="#Handler">type Handler interface</a>
 
 ```
 searchKey: dbworker.Handler
+tags: [interface]
 ```
 
 ```Go
@@ -86,6 +88,7 @@ Handler is a version of workerutil.Handler that refines the store type.
 
 ```
 searchKey: dbworker.HandlerFunc
+tags: [function]
 ```
 
 ```Go
@@ -98,6 +101,7 @@ HandlerFunc is a function version of the Handler interface.
 
 ```
 searchKey: dbworker.HandlerFunc.Handle
+tags: [method]
 ```
 
 ```Go
@@ -106,77 +110,11 @@ func (f HandlerFunc) Handle(ctx context.Context, store store.Store, record worke
 
 Handle processes a single record. See the Handler interface for additional details. 
 
-### <a id="handlerShim" href="#handlerShim">type handlerShim struct</a>
-
-```
-searchKey: dbworker.handlerShim
-tags: [private]
-```
-
-```Go
-type handlerShim struct {
-	Handler
-}
-```
-
-handlerShim converts a Handler into a workerutil.Handler. 
-
-#### <a id="handlerShim.Handle" href="#handlerShim.Handle">func (s *handlerShim) Handle(ctx context.Context, store workerutil.Store, record workerutil.Record) error</a>
-
-```
-searchKey: dbworker.handlerShim.Handle
-tags: [private]
-```
-
-```Go
-func (s *handlerShim) Handle(ctx context.Context, store workerutil.Store, record workerutil.Record) error
-```
-
-Handle processes a single record. 
-
-#### <a id="handlerShim.PreDequeue" href="#handlerShim.PreDequeue">func (s *handlerShim) PreDequeue(ctx context.Context) (dequeueable bool, extraDequeueArguments interface{}, err error)</a>
-
-```
-searchKey: dbworker.handlerShim.PreDequeue
-tags: [private]
-```
-
-```Go
-func (s *handlerShim) PreDequeue(ctx context.Context) (dequeueable bool, extraDequeueArguments interface{}, err error)
-```
-
-PreDequeue calls into the inner handler if it implements the HandlerWithPreDequeue interface. 
-
-#### <a id="handlerShim.PreHandle" href="#handlerShim.PreHandle">func (s *handlerShim) PreHandle(ctx context.Context, record workerutil.Record)</a>
-
-```
-searchKey: dbworker.handlerShim.PreHandle
-tags: [private]
-```
-
-```Go
-func (s *handlerShim) PreHandle(ctx context.Context, record workerutil.Record)
-```
-
-PreHandle calls into the inner handler if it implements the HandlerWithHooks interface. 
-
-#### <a id="handlerShim.PostHandle" href="#handlerShim.PostHandle">func (s *handlerShim) PostHandle(ctx context.Context, record workerutil.Record)</a>
-
-```
-searchKey: dbworker.handlerShim.PostHandle
-tags: [private]
-```
-
-```Go
-func (s *handlerShim) PostHandle(ctx context.Context, record workerutil.Record)
-```
-
-PostHandle calls into the inner handler if it implements the HandlerWithHooks interface. 
-
 ### <a id="Resetter" href="#Resetter">type Resetter struct</a>
 
 ```
 searchKey: dbworker.Resetter
+tags: [struct]
 ```
 
 ```Go
@@ -198,6 +136,7 @@ An unlocked record signifies that it is not actively being processed and records
 
 ```
 searchKey: dbworker.NewResetter
+tags: [method]
 ```
 
 ```Go
@@ -208,7 +147,7 @@ func NewResetter(store store.Store, options ResetterOptions) *Resetter
 
 ```
 searchKey: dbworker.newResetter
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -219,6 +158,7 @@ func newResetter(store store.Store, options ResetterOptions, clock glock.Clock) 
 
 ```
 searchKey: dbworker.Resetter.Start
+tags: [function]
 ```
 
 ```Go
@@ -231,6 +171,7 @@ Start begins periodically calling reset stalled on the underlying store.
 
 ```
 searchKey: dbworker.Resetter.Stop
+tags: [function]
 ```
 
 ```Go
@@ -239,24 +180,11 @@ func (r *Resetter) Stop()
 
 Stop will cause the resetter loop to exit after the current iteration. 
 
-### <a id="ResetterOptions" href="#ResetterOptions">type ResetterOptions struct</a>
-
-```
-searchKey: dbworker.ResetterOptions
-```
-
-```Go
-type ResetterOptions struct {
-	Name     string
-	Interval time.Duration
-	Metrics  ResetterMetrics
-}
-```
-
 ### <a id="ResetterMetrics" href="#ResetterMetrics">type ResetterMetrics struct</a>
 
 ```
 searchKey: dbworker.ResetterMetrics
+tags: [struct]
 ```
 
 ```Go
@@ -267,11 +195,93 @@ type ResetterMetrics struct {
 }
 ```
 
+### <a id="ResetterOptions" href="#ResetterOptions">type ResetterOptions struct</a>
+
+```
+searchKey: dbworker.ResetterOptions
+tags: [struct]
+```
+
+```Go
+type ResetterOptions struct {
+	Name     string
+	Interval time.Duration
+	Metrics  ResetterMetrics
+}
+```
+
+### <a id="handlerShim" href="#handlerShim">type handlerShim struct</a>
+
+```
+searchKey: dbworker.handlerShim
+tags: [struct private]
+```
+
+```Go
+type handlerShim struct {
+	Handler
+}
+```
+
+handlerShim converts a Handler into a workerutil.Handler. 
+
+#### <a id="handlerShim.Handle" href="#handlerShim.Handle">func (s *handlerShim) Handle(ctx context.Context, store workerutil.Store, record workerutil.Record) error</a>
+
+```
+searchKey: dbworker.handlerShim.Handle
+tags: [method private]
+```
+
+```Go
+func (s *handlerShim) Handle(ctx context.Context, store workerutil.Store, record workerutil.Record) error
+```
+
+Handle processes a single record. 
+
+#### <a id="handlerShim.PostHandle" href="#handlerShim.PostHandle">func (s *handlerShim) PostHandle(ctx context.Context, record workerutil.Record)</a>
+
+```
+searchKey: dbworker.handlerShim.PostHandle
+tags: [method private]
+```
+
+```Go
+func (s *handlerShim) PostHandle(ctx context.Context, record workerutil.Record)
+```
+
+PostHandle calls into the inner handler if it implements the HandlerWithHooks interface. 
+
+#### <a id="handlerShim.PreDequeue" href="#handlerShim.PreDequeue">func (s *handlerShim) PreDequeue(ctx context.Context) (dequeueable bool, extraDequeueArguments interface{}, err error)</a>
+
+```
+searchKey: dbworker.handlerShim.PreDequeue
+tags: [method private]
+```
+
+```Go
+func (s *handlerShim) PreDequeue(ctx context.Context) (dequeueable bool, extraDequeueArguments interface{}, err error)
+```
+
+PreDequeue calls into the inner handler if it implements the HandlerWithPreDequeue interface. 
+
+#### <a id="handlerShim.PreHandle" href="#handlerShim.PreHandle">func (s *handlerShim) PreHandle(ctx context.Context, record workerutil.Record)</a>
+
+```
+searchKey: dbworker.handlerShim.PreHandle
+tags: [method private]
+```
+
+```Go
+func (s *handlerShim) PreHandle(ctx context.Context, record workerutil.Record)
+```
+
+PreHandle calls into the inner handler if it implements the HandlerWithHooks interface. 
+
 ### <a id="storeShim" href="#storeShim">type storeShim struct</a>
 
 ```
 searchKey: dbworker.storeShim
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -282,24 +292,11 @@ type storeShim struct {
 
 storeShim converts a store.Store into a workerutil.Store. 
 
-#### <a id="storeShim.QueuedCount" href="#storeShim.QueuedCount">func (s *storeShim) QueuedCount(ctx context.Context, extraArguments interface{}) (int, error)</a>
-
-```
-searchKey: dbworker.storeShim.QueuedCount
-tags: [private]
-```
-
-```Go
-func (s *storeShim) QueuedCount(ctx context.Context, extraArguments interface{}) (int, error)
-```
-
-QueuedCount calls into the inner store. 
-
 #### <a id="storeShim.Dequeue" href="#storeShim.Dequeue">func (s *storeShim) Dequeue(ctx context.Context, extraArguments interface{}) (workerutil.Record, workerutil.Store, bool, error)</a>
 
 ```
 searchKey: dbworker.storeShim.Dequeue
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -308,17 +305,65 @@ func (s *storeShim) Dequeue(ctx context.Context, extraArguments interface{}) (wo
 
 Dequeue calls into the inner store. 
 
+#### <a id="storeShim.QueuedCount" href="#storeShim.QueuedCount">func (s *storeShim) QueuedCount(ctx context.Context, extraArguments interface{}) (int, error)</a>
+
+```
+searchKey: dbworker.storeShim.QueuedCount
+tags: [method private]
+```
+
+```Go
+func (s *storeShim) QueuedCount(ctx context.Context, extraArguments interface{}) (int, error)
+```
+
+QueuedCount calls into the inner store. 
+
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
+
+### <a id="NewWorker" href="#NewWorker">func NewWorker(ctx context.Context, store store.Store, handler Handler, options workerutil.WorkerOptions) *workerutil.Worker</a>
+
+```
+searchKey: dbworker.NewWorker
+tags: [method]
+```
+
+```Go
+func NewWorker(ctx context.Context, store store.Store, handler Handler, options workerutil.WorkerOptions) *workerutil.Worker
+```
+
+### <a id="TestResetter" href="#TestResetter">func TestResetter(t *testing.T)</a>
+
+```
+searchKey: dbworker.TestResetter
+tags: [method private test]
+```
+
+```Go
+func TestResetter(t *testing.T)
+```
+
+### <a id="convertArguments" href="#convertArguments">func convertArguments(v interface{}) ([]*sqlf.Query, error)</a>
+
+```
+searchKey: dbworker.convertArguments
+tags: [method private]
+```
+
+```Go
+func convertArguments(v interface{}) ([]*sqlf.Query, error)
+```
+
+convertArguments converts the given interface value into a slice of *sqlf.Query values. 
 
 ### <a id="newHandlerShim" href="#newHandlerShim">func newHandlerShim(handler Handler) workerutil.Handler</a>
 
 ```
 searchKey: dbworker.newHandlerShim
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -331,7 +376,7 @@ newHandlerShim wraps the given handler in a shim.
 
 ```
 searchKey: dbworker.newStoreShim
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -339,38 +384,4 @@ func newStoreShim(store store.Store) workerutil.Store
 ```
 
 newStoreShim wraps the given store in a shim. 
-
-### <a id="convertArguments" href="#convertArguments">func convertArguments(v interface{}) ([]*sqlf.Query, error)</a>
-
-```
-searchKey: dbworker.convertArguments
-tags: [private]
-```
-
-```Go
-func convertArguments(v interface{}) ([]*sqlf.Query, error)
-```
-
-convertArguments converts the given interface value into a slice of *sqlf.Query values. 
-
-### <a id="NewWorker" href="#NewWorker">func NewWorker(ctx context.Context, store store.Store, handler Handler, options workerutil.WorkerOptions) *workerutil.Worker</a>
-
-```
-searchKey: dbworker.NewWorker
-```
-
-```Go
-func NewWorker(ctx context.Context, store store.Store, handler Handler, options workerutil.WorkerOptions) *workerutil.Worker
-```
-
-### <a id="TestResetter" href="#TestResetter">func TestResetter(t *testing.T)</a>
-
-```
-searchKey: dbworker.TestResetter
-tags: [private]
-```
-
-```Go
-func TestResetter(t *testing.T)
-```
 

@@ -4,7 +4,9 @@
     "identifier": "color",
     "newPage": true,
     "searchKey": "image/color",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,112 +39,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/image/color#RGBAModel",
-              "documentation": {
-                "identifier": "RGBAModel",
-                "newPage": false,
-                "searchKey": "color.RGBAModel",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var RGBAModel"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar RGBAModel Model = ModelFunc(rgbaModel)\n```\n\nModels for the standard color types. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#RGBA64Model",
-              "documentation": {
-                "identifier": "RGBA64Model",
-                "newPage": false,
-                "searchKey": "color.RGBA64Model",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var RGBA64Model"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar RGBA64Model Model = ModelFunc(rgba64Model)\n```\n\nModels for the standard color types. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#NRGBAModel",
-              "documentation": {
-                "identifier": "NRGBAModel",
-                "newPage": false,
-                "searchKey": "color.NRGBAModel",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var NRGBAModel"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar NRGBAModel Model = ModelFunc(nrgbaModel)\n```\n\nModels for the standard color types. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#NRGBA64Model",
-              "documentation": {
-                "identifier": "NRGBA64Model",
-                "newPage": false,
-                "searchKey": "color.NRGBA64Model",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var NRGBA64Model"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar NRGBA64Model Model = ModelFunc(nrgba64Model)\n```\n\nModels for the standard color types. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#AlphaModel",
-              "documentation": {
-                "identifier": "AlphaModel",
-                "newPage": false,
-                "searchKey": "color.AlphaModel",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var AlphaModel"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar AlphaModel Model = ModelFunc(alphaModel)\n```\n\nModels for the standard color types. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/image/color#Alpha16Model",
               "documentation": {
                 "identifier": "Alpha16Model",
                 "newPage": false,
                 "searchKey": "color.Alpha16Model",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -155,40 +62,23 @@
           },
           {
             "node": {
-              "pathID": "/image/color#GrayModel",
+              "pathID": "/image/color#AlphaModel",
               "documentation": {
-                "identifier": "GrayModel",
+                "identifier": "AlphaModel",
                 "newPage": false,
-                "searchKey": "color.GrayModel",
-                "tags": null
+                "searchKey": "color.AlphaModel",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var GrayModel"
+                "value": "var AlphaModel"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar GrayModel Model = ModelFunc(grayModel)\n```\n\nModels for the standard color types. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#Gray16Model",
-              "documentation": {
-                "identifier": "Gray16Model",
-                "newPage": false,
-                "searchKey": "color.Gray16Model",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var Gray16Model"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar Gray16Model Model = ModelFunc(gray16Model)\n```\n\nModels for the standard color types. \n\n"
+                "value": "```Go\nvar AlphaModel Model = ModelFunc(alphaModel)\n```\n\nModels for the standard color types. \n\n"
               },
               "children": null
             }
@@ -200,7 +90,10 @@
                 "identifier": "Black",
                 "newPage": false,
                 "searchKey": "color.Black",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -215,112 +108,15 @@
           },
           {
             "node": {
-              "pathID": "/image/color#White",
-              "documentation": {
-                "identifier": "White",
-                "newPage": false,
-                "searchKey": "color.White",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var White"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar White = Gray16{0xffff}\n```\n\nStandard colors. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#Transparent",
-              "documentation": {
-                "identifier": "Transparent",
-                "newPage": false,
-                "searchKey": "color.Transparent",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var Transparent"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar Transparent = Alpha16{0}\n```\n\nStandard colors. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#Opaque",
-              "documentation": {
-                "identifier": "Opaque",
-                "newPage": false,
-                "searchKey": "color.Opaque",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var Opaque"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar Opaque = Alpha16{0xffff}\n```\n\nStandard colors. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#YCbCrModel",
-              "documentation": {
-                "identifier": "YCbCrModel",
-                "newPage": false,
-                "searchKey": "color.YCbCrModel",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var YCbCrModel"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar YCbCrModel Model = ModelFunc(yCbCrModel)\n```\n\nYCbCrModel is the Model for Y'CbCr colors. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#NYCbCrAModel",
-              "documentation": {
-                "identifier": "NYCbCrAModel",
-                "newPage": false,
-                "searchKey": "color.NYCbCrAModel",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var NYCbCrAModel"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar NYCbCrAModel Model = ModelFunc(nYCbCrAModel)\n```\n\nNYCbCrAModel is the Model for non-alpha-premultiplied Y'CbCr-with-alpha colors. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/image/color#CMYKModel",
               "documentation": {
                 "identifier": "CMYKModel",
                 "newPage": false,
                 "searchKey": "color.CMYKModel",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -335,22 +131,253 @@
           },
           {
             "node": {
-              "pathID": "/image/color#sink8",
+              "pathID": "/image/color#Gray16Model",
               "documentation": {
-                "identifier": "sink8",
+                "identifier": "Gray16Model",
                 "newPage": false,
-                "searchKey": "color.sink8",
+                "searchKey": "color.Gray16Model",
                 "tags": [
-                  "private"
+                  "variable",
+                  "interface"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var sink8"
+                "value": "var Gray16Model"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar sink8 uint8\n```\n\n"
+                "value": "```Go\nvar Gray16Model Model = ModelFunc(gray16Model)\n```\n\nModels for the standard color types. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#GrayModel",
+              "documentation": {
+                "identifier": "GrayModel",
+                "newPage": false,
+                "searchKey": "color.GrayModel",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var GrayModel"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar GrayModel Model = ModelFunc(grayModel)\n```\n\nModels for the standard color types. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#NRGBA64Model",
+              "documentation": {
+                "identifier": "NRGBA64Model",
+                "newPage": false,
+                "searchKey": "color.NRGBA64Model",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var NRGBA64Model"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar NRGBA64Model Model = ModelFunc(nrgba64Model)\n```\n\nModels for the standard color types. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#NRGBAModel",
+              "documentation": {
+                "identifier": "NRGBAModel",
+                "newPage": false,
+                "searchKey": "color.NRGBAModel",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var NRGBAModel"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar NRGBAModel Model = ModelFunc(nrgbaModel)\n```\n\nModels for the standard color types. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#NYCbCrAModel",
+              "documentation": {
+                "identifier": "NYCbCrAModel",
+                "newPage": false,
+                "searchKey": "color.NYCbCrAModel",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var NYCbCrAModel"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar NYCbCrAModel Model = ModelFunc(nYCbCrAModel)\n```\n\nNYCbCrAModel is the Model for non-alpha-premultiplied Y'CbCr-with-alpha colors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#Opaque",
+              "documentation": {
+                "identifier": "Opaque",
+                "newPage": false,
+                "searchKey": "color.Opaque",
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Opaque"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Opaque = Alpha16{0xffff}\n```\n\nStandard colors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#RGBA64Model",
+              "documentation": {
+                "identifier": "RGBA64Model",
+                "newPage": false,
+                "searchKey": "color.RGBA64Model",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var RGBA64Model"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar RGBA64Model Model = ModelFunc(rgba64Model)\n```\n\nModels for the standard color types. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#RGBAModel",
+              "documentation": {
+                "identifier": "RGBAModel",
+                "newPage": false,
+                "searchKey": "color.RGBAModel",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var RGBAModel"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar RGBAModel Model = ModelFunc(rgbaModel)\n```\n\nModels for the standard color types. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#Transparent",
+              "documentation": {
+                "identifier": "Transparent",
+                "newPage": false,
+                "searchKey": "color.Transparent",
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Transparent"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Transparent = Alpha16{0}\n```\n\nStandard colors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#White",
+              "documentation": {
+                "identifier": "White",
+                "newPage": false,
+                "searchKey": "color.White",
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var White"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar White = Gray16{0xffff}\n```\n\nStandard colors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#YCbCrModel",
+              "documentation": {
+                "identifier": "YCbCrModel",
+                "newPage": false,
+                "searchKey": "color.YCbCrModel",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var YCbCrModel"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar YCbCrModel Model = ModelFunc(yCbCrModel)\n```\n\nYCbCrModel is the Model for Y'CbCr colors. \n\n"
               },
               "children": null
             }
@@ -363,6 +390,8 @@
                 "newPage": false,
                 "searchKey": "color.sink32",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -373,6 +402,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar sink32 uint32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#sink8",
+              "documentation": {
+                "identifier": "sink8",
+                "newPage": false,
+                "searchKey": "color.sink8",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sink8"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sink8 uint8\n```\n\n"
               },
               "children": null
             }
@@ -387,7 +440,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -400,439 +455,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/image/color#Color",
-              "documentation": {
-                "identifier": "Color",
-                "newPage": false,
-                "searchKey": "color.Color",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Color interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Color interface {\n\t// RGBA returns the alpha-premultiplied red, green, blue and alpha values\n\t// for the color. Each value ranges within [0, 0xffff], but is represented\n\t// by a uint32 so that multiplying by a blend factor up to 0xffff will not\n\t// overflow.\n\t//\n\t// An alpha-premultiplied color component c has been scaled by alpha (a),\n\t// so has valid values 0 <= c <= a.\n\tRGBA() (r, g, b, a uint32)\n}\n```\n\nColor can convert itself to alpha-premultiplied 16-bits per channel RGBA. The conversion may be lossy. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/image/color#rgbaModel",
-                    "documentation": {
-                      "identifier": "rgbaModel",
-                      "newPage": false,
-                      "searchKey": "color.rgbaModel",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func rgbaModel(c Color) Color"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc rgbaModel(c Color) Color\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/image/color#rgba64Model",
-                    "documentation": {
-                      "identifier": "rgba64Model",
-                      "newPage": false,
-                      "searchKey": "color.rgba64Model",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func rgba64Model(c Color) Color"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc rgba64Model(c Color) Color\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/image/color#nrgbaModel",
-                    "documentation": {
-                      "identifier": "nrgbaModel",
-                      "newPage": false,
-                      "searchKey": "color.nrgbaModel",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func nrgbaModel(c Color) Color"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc nrgbaModel(c Color) Color\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/image/color#nrgba64Model",
-                    "documentation": {
-                      "identifier": "nrgba64Model",
-                      "newPage": false,
-                      "searchKey": "color.nrgba64Model",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func nrgba64Model(c Color) Color"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc nrgba64Model(c Color) Color\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/image/color#alphaModel",
-                    "documentation": {
-                      "identifier": "alphaModel",
-                      "newPage": false,
-                      "searchKey": "color.alphaModel",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func alphaModel(c Color) Color"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc alphaModel(c Color) Color\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/image/color#alpha16Model",
-                    "documentation": {
-                      "identifier": "alpha16Model",
-                      "newPage": false,
-                      "searchKey": "color.alpha16Model",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func alpha16Model(c Color) Color"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc alpha16Model(c Color) Color\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/image/color#grayModel",
-                    "documentation": {
-                      "identifier": "grayModel",
-                      "newPage": false,
-                      "searchKey": "color.grayModel",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func grayModel(c Color) Color"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc grayModel(c Color) Color\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/image/color#gray16Model",
-                    "documentation": {
-                      "identifier": "gray16Model",
-                      "newPage": false,
-                      "searchKey": "color.gray16Model",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func gray16Model(c Color) Color"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc gray16Model(c Color) Color\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/image/color#yCbCrModel",
-                    "documentation": {
-                      "identifier": "yCbCrModel",
-                      "newPage": false,
-                      "searchKey": "color.yCbCrModel",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func yCbCrModel(c Color) Color"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc yCbCrModel(c Color) Color\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/image/color#nYCbCrAModel",
-                    "documentation": {
-                      "identifier": "nYCbCrAModel",
-                      "newPage": false,
-                      "searchKey": "color.nYCbCrAModel",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func nYCbCrAModel(c Color) Color"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc nYCbCrAModel(c Color) Color\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/image/color#cmykModel",
-                    "documentation": {
-                      "identifier": "cmykModel",
-                      "newPage": false,
-                      "searchKey": "color.cmykModel",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func cmykModel(c Color) Color"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc cmykModel(c Color) Color\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#RGBA",
-              "documentation": {
-                "identifier": "RGBA",
-                "newPage": false,
-                "searchKey": "color.RGBA",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RGBA struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RGBA struct {\n\tR, G, B, A uint8\n}\n```\n\nRGBA represents a traditional 32-bit alpha-premultiplied color, having 8 bits for each of red, green, blue and alpha. \n\nAn alpha-premultiplied color component C has been scaled by alpha (A), so has valid values 0 <= C <= A. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/image/color#RGBA.RGBA",
-                    "documentation": {
-                      "identifier": "RGBA.RGBA",
-                      "newPage": false,
-                      "searchKey": "color.RGBA.RGBA",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c RGBA) RGBA() (r, g, b, a uint32)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c RGBA) RGBA() (r, g, b, a uint32)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#RGBA64",
-              "documentation": {
-                "identifier": "RGBA64",
-                "newPage": false,
-                "searchKey": "color.RGBA64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RGBA64 struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RGBA64 struct {\n\tR, G, B, A uint16\n}\n```\n\nRGBA64 represents a 64-bit alpha-premultiplied color, having 16 bits for each of red, green, blue and alpha. \n\nAn alpha-premultiplied color component C has been scaled by alpha (A), so has valid values 0 <= C <= A. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/image/color#RGBA64.RGBA",
-                    "documentation": {
-                      "identifier": "RGBA64.RGBA",
-                      "newPage": false,
-                      "searchKey": "color.RGBA64.RGBA",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c RGBA64) RGBA() (r, g, b, a uint32)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c RGBA64) RGBA() (r, g, b, a uint32)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#NRGBA",
-              "documentation": {
-                "identifier": "NRGBA",
-                "newPage": false,
-                "searchKey": "color.NRGBA",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type NRGBA struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype NRGBA struct {\n\tR, G, B, A uint8\n}\n```\n\nNRGBA represents a non-alpha-premultiplied 32-bit color. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/image/color#NRGBA.RGBA",
-                    "documentation": {
-                      "identifier": "NRGBA.RGBA",
-                      "newPage": false,
-                      "searchKey": "color.NRGBA.RGBA",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c NRGBA) RGBA() (r, g, b, a uint32)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c NRGBA) RGBA() (r, g, b, a uint32)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#NRGBA64",
-              "documentation": {
-                "identifier": "NRGBA64",
-                "newPage": false,
-                "searchKey": "color.NRGBA64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type NRGBA64 struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype NRGBA64 struct {\n\tR, G, B, A uint16\n}\n```\n\nNRGBA64 represents a non-alpha-premultiplied 64-bit color, having 16 bits for each of red, green, blue and alpha. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/image/color#NRGBA64.RGBA",
-                    "documentation": {
-                      "identifier": "NRGBA64.RGBA",
-                      "newPage": false,
-                      "searchKey": "color.NRGBA64.RGBA",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c NRGBA64) RGBA() (r, g, b, a uint32)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c NRGBA64) RGBA() (r, g, b, a uint32)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/image/color#Alpha",
               "documentation": {
                 "identifier": "Alpha",
                 "newPage": false,
                 "searchKey": "color.Alpha",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -850,7 +480,9 @@
                       "identifier": "Alpha.RGBA",
                       "newPage": false,
                       "searchKey": "color.Alpha.RGBA",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -873,7 +505,9 @@
                 "identifier": "Alpha16",
                 "newPage": false,
                 "searchKey": "color.Alpha16",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -891,7 +525,9 @@
                       "identifier": "Alpha16.RGBA",
                       "newPage": false,
                       "searchKey": "color.Alpha16.RGBA",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -909,12 +545,335 @@
           },
           {
             "node": {
+              "pathID": "/image/color#CMYK",
+              "documentation": {
+                "identifier": "CMYK",
+                "newPage": false,
+                "searchKey": "color.CMYK",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CMYK struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CMYK struct {\n\tC, M, Y, K uint8\n}\n```\n\nCMYK represents a fully opaque CMYK color, having 8 bits for each of cyan, magenta, yellow and black. \n\nIt is not associated with any particular color profile. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/image/color#CMYK.RGBA",
+                    "documentation": {
+                      "identifier": "CMYK.RGBA",
+                      "newPage": false,
+                      "searchKey": "color.CMYK.RGBA",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c CMYK) RGBA() (uint32, uint32, uint32, uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c CMYK) RGBA() (uint32, uint32, uint32, uint32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#Color",
+              "documentation": {
+                "identifier": "Color",
+                "newPage": false,
+                "searchKey": "color.Color",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Color interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Color interface {\n\t// RGBA returns the alpha-premultiplied red, green, blue and alpha values\n\t// for the color. Each value ranges within [0, 0xffff], but is represented\n\t// by a uint32 so that multiplying by a blend factor up to 0xffff will not\n\t// overflow.\n\t//\n\t// An alpha-premultiplied color component c has been scaled by alpha (a),\n\t// so has valid values 0 <= c <= a.\n\tRGBA() (r, g, b, a uint32)\n}\n```\n\nColor can convert itself to alpha-premultiplied 16-bits per channel RGBA. The conversion may be lossy. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/image/color#alpha16Model",
+                    "documentation": {
+                      "identifier": "alpha16Model",
+                      "newPage": false,
+                      "searchKey": "color.alpha16Model",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func alpha16Model(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc alpha16Model(c Color) Color\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/image/color#alphaModel",
+                    "documentation": {
+                      "identifier": "alphaModel",
+                      "newPage": false,
+                      "searchKey": "color.alphaModel",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func alphaModel(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc alphaModel(c Color) Color\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/image/color#cmykModel",
+                    "documentation": {
+                      "identifier": "cmykModel",
+                      "newPage": false,
+                      "searchKey": "color.cmykModel",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func cmykModel(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc cmykModel(c Color) Color\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/image/color#gray16Model",
+                    "documentation": {
+                      "identifier": "gray16Model",
+                      "newPage": false,
+                      "searchKey": "color.gray16Model",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func gray16Model(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc gray16Model(c Color) Color\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/image/color#grayModel",
+                    "documentation": {
+                      "identifier": "grayModel",
+                      "newPage": false,
+                      "searchKey": "color.grayModel",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func grayModel(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc grayModel(c Color) Color\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/image/color#nYCbCrAModel",
+                    "documentation": {
+                      "identifier": "nYCbCrAModel",
+                      "newPage": false,
+                      "searchKey": "color.nYCbCrAModel",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func nYCbCrAModel(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc nYCbCrAModel(c Color) Color\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/image/color#nrgba64Model",
+                    "documentation": {
+                      "identifier": "nrgba64Model",
+                      "newPage": false,
+                      "searchKey": "color.nrgba64Model",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func nrgba64Model(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc nrgba64Model(c Color) Color\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/image/color#nrgbaModel",
+                    "documentation": {
+                      "identifier": "nrgbaModel",
+                      "newPage": false,
+                      "searchKey": "color.nrgbaModel",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func nrgbaModel(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc nrgbaModel(c Color) Color\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/image/color#rgba64Model",
+                    "documentation": {
+                      "identifier": "rgba64Model",
+                      "newPage": false,
+                      "searchKey": "color.rgba64Model",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func rgba64Model(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc rgba64Model(c Color) Color\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/image/color#rgbaModel",
+                    "documentation": {
+                      "identifier": "rgbaModel",
+                      "newPage": false,
+                      "searchKey": "color.rgbaModel",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func rgbaModel(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc rgbaModel(c Color) Color\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/image/color#yCbCrModel",
+                    "documentation": {
+                      "identifier": "yCbCrModel",
+                      "newPage": false,
+                      "searchKey": "color.yCbCrModel",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func yCbCrModel(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc yCbCrModel(c Color) Color\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/image/color#Gray",
               "documentation": {
                 "identifier": "Gray",
                 "newPage": false,
                 "searchKey": "color.Gray",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -932,7 +891,9 @@
                       "identifier": "Gray.RGBA",
                       "newPage": false,
                       "searchKey": "color.Gray.RGBA",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -955,7 +916,9 @@
                 "identifier": "Gray16",
                 "newPage": false,
                 "searchKey": "color.Gray16",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -973,7 +936,9 @@
                       "identifier": "Gray16.RGBA",
                       "newPage": false,
                       "searchKey": "color.Gray16.RGBA",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -996,7 +961,9 @@
                 "identifier": "Model",
                 "newPage": false,
                 "searchKey": "color.Model",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1014,7 +981,9 @@
                       "identifier": "ModelFunc",
                       "newPage": false,
                       "searchKey": "color.ModelFunc",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1032,12 +1001,351 @@
           },
           {
             "node": {
+              "pathID": "/image/color#NRGBA",
+              "documentation": {
+                "identifier": "NRGBA",
+                "newPage": false,
+                "searchKey": "color.NRGBA",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NRGBA struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NRGBA struct {\n\tR, G, B, A uint8\n}\n```\n\nNRGBA represents a non-alpha-premultiplied 32-bit color. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/image/color#NRGBA.RGBA",
+                    "documentation": {
+                      "identifier": "NRGBA.RGBA",
+                      "newPage": false,
+                      "searchKey": "color.NRGBA.RGBA",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c NRGBA) RGBA() (r, g, b, a uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c NRGBA) RGBA() (r, g, b, a uint32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#NRGBA64",
+              "documentation": {
+                "identifier": "NRGBA64",
+                "newPage": false,
+                "searchKey": "color.NRGBA64",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NRGBA64 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NRGBA64 struct {\n\tR, G, B, A uint16\n}\n```\n\nNRGBA64 represents a non-alpha-premultiplied 64-bit color, having 16 bits for each of red, green, blue and alpha. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/image/color#NRGBA64.RGBA",
+                    "documentation": {
+                      "identifier": "NRGBA64.RGBA",
+                      "newPage": false,
+                      "searchKey": "color.NRGBA64.RGBA",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c NRGBA64) RGBA() (r, g, b, a uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c NRGBA64) RGBA() (r, g, b, a uint32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#NYCbCrA",
+              "documentation": {
+                "identifier": "NYCbCrA",
+                "newPage": false,
+                "searchKey": "color.NYCbCrA",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NYCbCrA struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NYCbCrA struct {\n\tYCbCr\n\tA uint8\n}\n```\n\nNYCbCrA represents a non-alpha-premultiplied Y'CbCr-with-alpha color, having 8 bits each for one luma, two chroma and one alpha component. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/image/color#NYCbCrA.RGBA",
+                    "documentation": {
+                      "identifier": "NYCbCrA.RGBA",
+                      "newPage": false,
+                      "searchKey": "color.NYCbCrA.RGBA",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c NYCbCrA) RGBA() (uint32, uint32, uint32, uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c NYCbCrA) RGBA() (uint32, uint32, uint32, uint32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#Palette",
+              "documentation": {
+                "identifier": "Palette",
+                "newPage": false,
+                "searchKey": "color.Palette",
+                "tags": [
+                  "array",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Palette []color.Color"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Palette []Color\n```\n\nPalette is a palette of colors. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/image/color#Palette.Convert",
+                    "documentation": {
+                      "identifier": "Palette.Convert",
+                      "newPage": false,
+                      "searchKey": "color.Palette.Convert",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p Palette) Convert(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p Palette) Convert(c Color) Color\n```\n\nConvert returns the palette color closest to c in Euclidean R,G,B space. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/image/color#Palette.Index",
+                    "documentation": {
+                      "identifier": "Palette.Index",
+                      "newPage": false,
+                      "searchKey": "color.Palette.Index",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p Palette) Index(c Color) int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p Palette) Index(c Color) int\n```\n\nIndex returns the index of the palette color closest to c in Euclidean R,G,B,A space. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#RGBA",
+              "documentation": {
+                "identifier": "RGBA",
+                "newPage": false,
+                "searchKey": "color.RGBA",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RGBA struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RGBA struct {\n\tR, G, B, A uint8\n}\n```\n\nRGBA represents a traditional 32-bit alpha-premultiplied color, having 8 bits for each of red, green, blue and alpha. \n\nAn alpha-premultiplied color component C has been scaled by alpha (A), so has valid values 0 <= C <= A. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/image/color#RGBA.RGBA",
+                    "documentation": {
+                      "identifier": "RGBA.RGBA",
+                      "newPage": false,
+                      "searchKey": "color.RGBA.RGBA",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c RGBA) RGBA() (r, g, b, a uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c RGBA) RGBA() (r, g, b, a uint32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#RGBA64",
+              "documentation": {
+                "identifier": "RGBA64",
+                "newPage": false,
+                "searchKey": "color.RGBA64",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RGBA64 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RGBA64 struct {\n\tR, G, B, A uint16\n}\n```\n\nRGBA64 represents a 64-bit alpha-premultiplied color, having 16 bits for each of red, green, blue and alpha. \n\nAn alpha-premultiplied color component C has been scaled by alpha (A), so has valid values 0 <= C <= A. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/image/color#RGBA64.RGBA",
+                    "documentation": {
+                      "identifier": "RGBA64.RGBA",
+                      "newPage": false,
+                      "searchKey": "color.RGBA64.RGBA",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c RGBA64) RGBA() (r, g, b, a uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c RGBA64) RGBA() (r, g, b, a uint32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#YCbCr",
+              "documentation": {
+                "identifier": "YCbCr",
+                "newPage": false,
+                "searchKey": "color.YCbCr",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type YCbCr struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype YCbCr struct {\n\tY, Cb, Cr uint8\n}\n```\n\nYCbCr represents a fully opaque 24-bit Y'CbCr color, having 8 bits each for one luma and two chroma components. \n\nJPEG, VP8, the MPEG family and other codecs use this color model. Such codecs often use the terms YUV and Y'CbCr interchangeably, but strictly speaking, the term YUV applies only to analog video signals, and Y' (luma) is Y (luminance) after applying gamma correction. \n\nConversion between RGB and Y'CbCr is lossy and there are multiple, slightly different formulae for converting between the two. This package follows the JFIF specification at [https://www.w3.org/Graphics/JPEG/jfif3.pdf](https://www.w3.org/Graphics/JPEG/jfif3.pdf). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/image/color#YCbCr.RGBA",
+                    "documentation": {
+                      "identifier": "YCbCr.RGBA",
+                      "newPage": false,
+                      "searchKey": "color.YCbCr.RGBA",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c YCbCr) RGBA() (uint32, uint32, uint32, uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c YCbCr) RGBA() (uint32, uint32, uint32, uint32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/image/color#modelFunc",
               "documentation": {
                 "identifier": "modelFunc",
                 "newPage": false,
                 "searchKey": "color.modelFunc",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1058,6 +1366,7 @@
                       "newPage": false,
                       "searchKey": "color.modelFunc.Convert",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1068,190 +1377,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (m *modelFunc) Convert(c Color) Color\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#Palette",
-              "documentation": {
-                "identifier": "Palette",
-                "newPage": false,
-                "searchKey": "color.Palette",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Palette []color.Color"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Palette []Color\n```\n\nPalette is a palette of colors. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/image/color#Palette.Convert",
-                    "documentation": {
-                      "identifier": "Palette.Convert",
-                      "newPage": false,
-                      "searchKey": "color.Palette.Convert",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p Palette) Convert(c Color) Color"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p Palette) Convert(c Color) Color\n```\n\nConvert returns the palette color closest to c in Euclidean R,G,B space. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/image/color#Palette.Index",
-                    "documentation": {
-                      "identifier": "Palette.Index",
-                      "newPage": false,
-                      "searchKey": "color.Palette.Index",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p Palette) Index(c Color) int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p Palette) Index(c Color) int\n```\n\nIndex returns the index of the palette color closest to c in Euclidean R,G,B,A space. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#YCbCr",
-              "documentation": {
-                "identifier": "YCbCr",
-                "newPage": false,
-                "searchKey": "color.YCbCr",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type YCbCr struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype YCbCr struct {\n\tY, Cb, Cr uint8\n}\n```\n\nYCbCr represents a fully opaque 24-bit Y'CbCr color, having 8 bits each for one luma and two chroma components. \n\nJPEG, VP8, the MPEG family and other codecs use this color model. Such codecs often use the terms YUV and Y'CbCr interchangeably, but strictly speaking, the term YUV applies only to analog video signals, and Y' (luma) is Y (luminance) after applying gamma correction. \n\nConversion between RGB and Y'CbCr is lossy and there are multiple, slightly different formulae for converting between the two. This package follows the JFIF specification at [https://www.w3.org/Graphics/JPEG/jfif3.pdf](https://www.w3.org/Graphics/JPEG/jfif3.pdf). \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/image/color#YCbCr.RGBA",
-                    "documentation": {
-                      "identifier": "YCbCr.RGBA",
-                      "newPage": false,
-                      "searchKey": "color.YCbCr.RGBA",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c YCbCr) RGBA() (uint32, uint32, uint32, uint32)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c YCbCr) RGBA() (uint32, uint32, uint32, uint32)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#NYCbCrA",
-              "documentation": {
-                "identifier": "NYCbCrA",
-                "newPage": false,
-                "searchKey": "color.NYCbCrA",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type NYCbCrA struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype NYCbCrA struct {\n\tYCbCr\n\tA uint8\n}\n```\n\nNYCbCrA represents a non-alpha-premultiplied Y'CbCr-with-alpha color, having 8 bits each for one luma, two chroma and one alpha component. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/image/color#NYCbCrA.RGBA",
-                    "documentation": {
-                      "identifier": "NYCbCrA.RGBA",
-                      "newPage": false,
-                      "searchKey": "color.NYCbCrA.RGBA",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c NYCbCrA) RGBA() (uint32, uint32, uint32, uint32)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c NYCbCrA) RGBA() (uint32, uint32, uint32, uint32)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#CMYK",
-              "documentation": {
-                "identifier": "CMYK",
-                "newPage": false,
-                "searchKey": "color.CMYK",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type CMYK struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype CMYK struct {\n\tC, M, Y, K uint8\n}\n```\n\nCMYK represents a fully opaque CMYK color, having 8 bits for each of cyan, magenta, yellow and black. \n\nIt is not associated with any particular color profile. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/image/color#CMYK.RGBA",
-                    "documentation": {
-                      "identifier": "CMYK.RGBA",
-                      "newPage": false,
-                      "searchKey": "color.CMYK.RGBA",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c CMYK) RGBA() (uint32, uint32, uint32, uint32)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c CMYK) RGBA() (uint32, uint32, uint32, uint32)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1269,7 +1394,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1282,82 +1409,96 @@
         "children": [
           {
             "node": {
-              "pathID": "/image/color#sqDiff",
+              "pathID": "/image/color#BenchmarkNYCbCrAToRGBA",
               "documentation": {
-                "identifier": "sqDiff",
+                "identifier": "BenchmarkNYCbCrAToRGBA",
                 "newPage": false,
-                "searchKey": "color.sqDiff",
+                "searchKey": "color.BenchmarkNYCbCrAToRGBA",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func sqDiff(x, y uint32) uint32"
+                "value": "func BenchmarkNYCbCrAToRGBA(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc sqDiff(x, y uint32) uint32\n```\n\nsqDiff returns the squared-difference of x and y, shifted by 2 so that adding four of those won't overflow a uint32. \n\nx and y are both assumed to be in the range [0, 0xffff]. \n\n"
+                "value": "```Go\nfunc BenchmarkNYCbCrAToRGBA(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/image/color#RGBToYCbCr",
+              "pathID": "/image/color#BenchmarkRGBToYCbCr",
               "documentation": {
-                "identifier": "RGBToYCbCr",
+                "identifier": "BenchmarkRGBToYCbCr",
                 "newPage": false,
-                "searchKey": "color.RGBToYCbCr",
-                "tags": null
+                "searchKey": "color.BenchmarkRGBToYCbCr",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func RGBToYCbCr(r, g, b uint8) (uint8, uint8, uint8)"
+                "value": "func BenchmarkRGBToYCbCr(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc RGBToYCbCr(r, g, b uint8) (uint8, uint8, uint8)\n```\n\nRGBToYCbCr converts an RGB triple to a Y'CbCr triple. \n\n"
+                "value": "```Go\nfunc BenchmarkRGBToYCbCr(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/image/color#YCbCrToRGB",
+              "pathID": "/image/color#BenchmarkYCbCrToRGB",
               "documentation": {
-                "identifier": "YCbCrToRGB",
+                "identifier": "BenchmarkYCbCrToRGB",
                 "newPage": false,
-                "searchKey": "color.YCbCrToRGB",
-                "tags": null
+                "searchKey": "color.BenchmarkYCbCrToRGB",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func YCbCrToRGB(y, cb, cr uint8) (uint8, uint8, uint8)"
+                "value": "func BenchmarkYCbCrToRGB(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc YCbCrToRGB(y, cb, cr uint8) (uint8, uint8, uint8)\n```\n\nYCbCrToRGB converts a Y'CbCr triple to an RGB triple. \n\n"
+                "value": "```Go\nfunc BenchmarkYCbCrToRGB(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/image/color#RGBToCMYK",
+              "pathID": "/image/color#BenchmarkYCbCrToRGBA",
               "documentation": {
-                "identifier": "RGBToCMYK",
+                "identifier": "BenchmarkYCbCrToRGBA",
                 "newPage": false,
-                "searchKey": "color.RGBToCMYK",
-                "tags": null
+                "searchKey": "color.BenchmarkYCbCrToRGBA",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func RGBToCMYK(r, g, b uint8) (uint8, uint8, uint8, uint8)"
+                "value": "func BenchmarkYCbCrToRGBA(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc RGBToCMYK(r, g, b uint8) (uint8, uint8, uint8, uint8)\n```\n\nRGBToCMYK converts an RGB triple to a CMYK quadruple. \n\n"
+                "value": "```Go\nfunc BenchmarkYCbCrToRGBA(b *testing.B)\n```\n\n"
               },
               "children": null
             }
@@ -1369,7 +1510,9 @@
                 "identifier": "CMYKToRGB",
                 "newPage": false,
                 "searchKey": "color.CMYKToRGB",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1384,13 +1527,203 @@
           },
           {
             "node": {
+              "pathID": "/image/color#RGBToCMYK",
+              "documentation": {
+                "identifier": "RGBToCMYK",
+                "newPage": false,
+                "searchKey": "color.RGBToCMYK",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RGBToCMYK(r, g, b uint8) (uint8, uint8, uint8, uint8)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RGBToCMYK(r, g, b uint8) (uint8, uint8, uint8, uint8)\n```\n\nRGBToCMYK converts an RGB triple to a CMYK quadruple. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#RGBToYCbCr",
+              "documentation": {
+                "identifier": "RGBToYCbCr",
+                "newPage": false,
+                "searchKey": "color.RGBToYCbCr",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RGBToYCbCr(r, g, b uint8) (uint8, uint8, uint8)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RGBToYCbCr(r, g, b uint8) (uint8, uint8, uint8)\n```\n\nRGBToYCbCr converts an RGB triple to a Y'CbCr triple. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#TestCMYKGray",
+              "documentation": {
+                "identifier": "TestCMYKGray",
+                "newPage": false,
+                "searchKey": "color.TestCMYKGray",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCMYKGray(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCMYKGray(t *testing.T)\n```\n\nTestCMYKGray tests that CMYK colors are a superset of Gray colors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#TestCMYKRoundtrip",
+              "documentation": {
+                "identifier": "TestCMYKRoundtrip",
+                "newPage": false,
+                "searchKey": "color.TestCMYKRoundtrip",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCMYKRoundtrip(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCMYKRoundtrip(t *testing.T)\n```\n\nTestCMYKRoundtrip tests that a subset of RGB space can be converted to CMYK and back to within 1/256 tolerance. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#TestCMYKToRGBConsistency",
+              "documentation": {
+                "identifier": "TestCMYKToRGBConsistency",
+                "newPage": false,
+                "searchKey": "color.TestCMYKToRGBConsistency",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCMYKToRGBConsistency(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCMYKToRGBConsistency(t *testing.T)\n```\n\nTestCMYKToRGBConsistency tests that calling the RGBA method (16 bit color) then truncating to 8 bits is equivalent to calling the CMYKToRGB function (8 bit color). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#TestNYCbCrAAlpha",
+              "documentation": {
+                "identifier": "TestNYCbCrAAlpha",
+                "newPage": false,
+                "searchKey": "color.TestNYCbCrAAlpha",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNYCbCrAAlpha(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNYCbCrAAlpha(t *testing.T)\n```\n\nTestNYCbCrAAlpha tests that NYCbCrA colors are a superset of Alpha colors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#TestNYCbCrAYCbCr",
+              "documentation": {
+                "identifier": "TestNYCbCrAYCbCr",
+                "newPage": false,
+                "searchKey": "color.TestNYCbCrAYCbCr",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNYCbCrAYCbCr(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNYCbCrAYCbCr(t *testing.T)\n```\n\nTestNYCbCrAYCbCr tests that NYCbCrA colors are a superset of YCbCr colors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#TestPalette",
+              "documentation": {
+                "identifier": "TestPalette",
+                "newPage": false,
+                "searchKey": "color.TestPalette",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPalette(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPalette(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/image/color#TestSqDiff",
               "documentation": {
                 "identifier": "TestSqDiff",
                 "newPage": false,
                 "searchKey": "color.TestSqDiff",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1406,12 +1739,107 @@
           },
           {
             "node": {
+              "pathID": "/image/color#TestYCbCrGray",
+              "documentation": {
+                "identifier": "TestYCbCrGray",
+                "newPage": false,
+                "searchKey": "color.TestYCbCrGray",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestYCbCrGray(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestYCbCrGray(t *testing.T)\n```\n\nTestYCbCrGray tests that YCbCr colors are a superset of Gray colors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#TestYCbCrRoundtrip",
+              "documentation": {
+                "identifier": "TestYCbCrRoundtrip",
+                "newPage": false,
+                "searchKey": "color.TestYCbCrRoundtrip",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestYCbCrRoundtrip(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestYCbCrRoundtrip(t *testing.T)\n```\n\nTestYCbCrRoundtrip tests that a subset of RGB space can be converted to YCbCr and back to within 2/256 tolerance. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#TestYCbCrToRGBConsistency",
+              "documentation": {
+                "identifier": "TestYCbCrToRGBConsistency",
+                "newPage": false,
+                "searchKey": "color.TestYCbCrToRGBConsistency",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestYCbCrToRGBConsistency(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestYCbCrToRGBConsistency(t *testing.T)\n```\n\nTestYCbCrToRGBConsistency tests that calling the RGBA method (16 bit color) then truncating to 8 bits is equivalent to calling the YCbCrToRGB function (8 bit color). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color#YCbCrToRGB",
+              "documentation": {
+                "identifier": "YCbCrToRGB",
+                "newPage": false,
+                "searchKey": "color.YCbCrToRGB",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func YCbCrToRGB(y, cb, cr uint8) (uint8, uint8, uint8)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc YCbCrToRGB(y, cb, cr uint8) (uint8, uint8, uint8)\n```\n\nYCbCrToRGB converts a Y'CbCr triple to an RGB triple. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/image/color#delta",
               "documentation": {
                 "identifier": "delta",
                 "newPage": false,
                 "searchKey": "color.delta",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1434,6 +1862,7 @@
                 "newPage": false,
                 "searchKey": "color.eq",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1450,286 +1879,23 @@
           },
           {
             "node": {
-              "pathID": "/image/color#TestYCbCrRoundtrip",
+              "pathID": "/image/color#sqDiff",
               "documentation": {
-                "identifier": "TestYCbCrRoundtrip",
+                "identifier": "sqDiff",
                 "newPage": false,
-                "searchKey": "color.TestYCbCrRoundtrip",
+                "searchKey": "color.sqDiff",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestYCbCrRoundtrip(t *testing.T)"
+                "value": "func sqDiff(x, y uint32) uint32"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestYCbCrRoundtrip(t *testing.T)\n```\n\nTestYCbCrRoundtrip tests that a subset of RGB space can be converted to YCbCr and back to within 2/256 tolerance. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#TestYCbCrToRGBConsistency",
-              "documentation": {
-                "identifier": "TestYCbCrToRGBConsistency",
-                "newPage": false,
-                "searchKey": "color.TestYCbCrToRGBConsistency",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestYCbCrToRGBConsistency(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestYCbCrToRGBConsistency(t *testing.T)\n```\n\nTestYCbCrToRGBConsistency tests that calling the RGBA method (16 bit color) then truncating to 8 bits is equivalent to calling the YCbCrToRGB function (8 bit color). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#TestYCbCrGray",
-              "documentation": {
-                "identifier": "TestYCbCrGray",
-                "newPage": false,
-                "searchKey": "color.TestYCbCrGray",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestYCbCrGray(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestYCbCrGray(t *testing.T)\n```\n\nTestYCbCrGray tests that YCbCr colors are a superset of Gray colors. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#TestNYCbCrAAlpha",
-              "documentation": {
-                "identifier": "TestNYCbCrAAlpha",
-                "newPage": false,
-                "searchKey": "color.TestNYCbCrAAlpha",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestNYCbCrAAlpha(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestNYCbCrAAlpha(t *testing.T)\n```\n\nTestNYCbCrAAlpha tests that NYCbCrA colors are a superset of Alpha colors. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#TestNYCbCrAYCbCr",
-              "documentation": {
-                "identifier": "TestNYCbCrAYCbCr",
-                "newPage": false,
-                "searchKey": "color.TestNYCbCrAYCbCr",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestNYCbCrAYCbCr(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestNYCbCrAYCbCr(t *testing.T)\n```\n\nTestNYCbCrAYCbCr tests that NYCbCrA colors are a superset of YCbCr colors. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#TestCMYKRoundtrip",
-              "documentation": {
-                "identifier": "TestCMYKRoundtrip",
-                "newPage": false,
-                "searchKey": "color.TestCMYKRoundtrip",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCMYKRoundtrip(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCMYKRoundtrip(t *testing.T)\n```\n\nTestCMYKRoundtrip tests that a subset of RGB space can be converted to CMYK and back to within 1/256 tolerance. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#TestCMYKToRGBConsistency",
-              "documentation": {
-                "identifier": "TestCMYKToRGBConsistency",
-                "newPage": false,
-                "searchKey": "color.TestCMYKToRGBConsistency",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCMYKToRGBConsistency(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCMYKToRGBConsistency(t *testing.T)\n```\n\nTestCMYKToRGBConsistency tests that calling the RGBA method (16 bit color) then truncating to 8 bits is equivalent to calling the CMYKToRGB function (8 bit color). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#TestCMYKGray",
-              "documentation": {
-                "identifier": "TestCMYKGray",
-                "newPage": false,
-                "searchKey": "color.TestCMYKGray",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCMYKGray(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCMYKGray(t *testing.T)\n```\n\nTestCMYKGray tests that CMYK colors are a superset of Gray colors. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#TestPalette",
-              "documentation": {
-                "identifier": "TestPalette",
-                "newPage": false,
-                "searchKey": "color.TestPalette",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestPalette(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestPalette(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#BenchmarkYCbCrToRGB",
-              "documentation": {
-                "identifier": "BenchmarkYCbCrToRGB",
-                "newPage": false,
-                "searchKey": "color.BenchmarkYCbCrToRGB",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkYCbCrToRGB(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkYCbCrToRGB(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#BenchmarkRGBToYCbCr",
-              "documentation": {
-                "identifier": "BenchmarkRGBToYCbCr",
-                "newPage": false,
-                "searchKey": "color.BenchmarkRGBToYCbCr",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkRGBToYCbCr(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkRGBToYCbCr(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#BenchmarkYCbCrToRGBA",
-              "documentation": {
-                "identifier": "BenchmarkYCbCrToRGBA",
-                "newPage": false,
-                "searchKey": "color.BenchmarkYCbCrToRGBA",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkYCbCrToRGBA(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkYCbCrToRGBA(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/color#BenchmarkNYCbCrAToRGBA",
-              "documentation": {
-                "identifier": "BenchmarkNYCbCrAToRGBA",
-                "newPage": false,
-                "searchKey": "color.BenchmarkNYCbCrAToRGBA",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkNYCbCrAToRGBA(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkNYCbCrAToRGBA(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc sqDiff(x, y uint32) uint32\n```\n\nsqDiff returns the squared-difference of x and y, shifted by 2 so that adding four of those won't overflow a uint32. \n\nx and y are both assumed to be in the range [0, 0xffff]. \n\n"
               },
               "children": null
             }

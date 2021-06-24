@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "crypto/rand_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,7 @@
                 "newPage": false,
                 "searchKey": "rand_test.countingReader",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -65,6 +68,7 @@
                       "newPage": false,
                       "searchKey": "rand_test.countingReader.Read",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -93,6 +97,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -107,12 +112,37 @@
         "children": [
           {
             "node": {
+              "pathID": "/crypto/rand_test#BenchmarkPrime",
+              "documentation": {
+                "identifier": "BenchmarkPrime",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkPrime",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkPrime(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkPrime(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/rand_test#ExampleRead",
               "documentation": {
                 "identifier": "ExampleRead",
                 "newPage": false,
                 "searchKey": "rand_test.ExampleRead",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -129,57 +159,15 @@
           },
           {
             "node": {
-              "pathID": "/crypto/rand_test#TestPrimeSmall",
-              "documentation": {
-                "identifier": "TestPrimeSmall",
-                "newPage": false,
-                "searchKey": "rand_test.TestPrimeSmall",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestPrimeSmall(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestPrimeSmall(t *testing.T)\n```\n\n[https://golang.org/issue/6849](https://golang.org/issue/6849). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/rand_test#TestPrimeBitsLt2",
-              "documentation": {
-                "identifier": "TestPrimeBitsLt2",
-                "newPage": false,
-                "searchKey": "rand_test.TestPrimeBitsLt2",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestPrimeBitsLt2(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestPrimeBitsLt2(t *testing.T)\n```\n\nTest that passing bits < 2 causes Prime to return nil, error \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/rand_test#TestInt",
               "documentation": {
                 "identifier": "TestInt",
                 "newPage": false,
                 "searchKey": "rand_test.TestInt",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -195,79 +183,15 @@
           },
           {
             "node": {
-              "pathID": "/crypto/rand_test#TestIntReads",
-              "documentation": {
-                "identifier": "TestIntReads",
-                "newPage": false,
-                "searchKey": "rand_test.TestIntReads",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIntReads(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIntReads(t *testing.T)\n```\n\nTest that Int reads only the necessary number of bytes from the reader for max at each bit length \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/rand_test#TestIntMask",
-              "documentation": {
-                "identifier": "TestIntMask",
-                "newPage": false,
-                "searchKey": "rand_test.TestIntMask",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIntMask(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIntMask(t *testing.T)\n```\n\nTest that Int does not mask out valid return values \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/rand_test#testIntPanics",
-              "documentation": {
-                "identifier": "testIntPanics",
-                "newPage": false,
-                "searchKey": "rand_test.testIntPanics",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testIntPanics(t *testing.T, b *big.Int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testIntPanics(t *testing.T, b *big.Int)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/rand_test#TestIntEmptyMaxPanics",
               "documentation": {
                 "identifier": "TestIntEmptyMaxPanics",
                 "newPage": false,
                 "searchKey": "rand_test.TestIntEmptyMaxPanics",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -283,13 +207,39 @@
           },
           {
             "node": {
+              "pathID": "/crypto/rand_test#TestIntMask",
+              "documentation": {
+                "identifier": "TestIntMask",
+                "newPage": false,
+                "searchKey": "rand_test.TestIntMask",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIntMask(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIntMask(t *testing.T)\n```\n\nTest that Int does not mask out valid return values \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/rand_test#TestIntNegativeMaxPanics",
               "documentation": {
                 "identifier": "TestIntNegativeMaxPanics",
                 "newPage": false,
                 "searchKey": "rand_test.TestIntNegativeMaxPanics",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -305,22 +255,95 @@
           },
           {
             "node": {
-              "pathID": "/crypto/rand_test#BenchmarkPrime",
+              "pathID": "/crypto/rand_test#TestIntReads",
               "documentation": {
-                "identifier": "BenchmarkPrime",
+                "identifier": "TestIntReads",
                 "newPage": false,
-                "searchKey": "rand_test.BenchmarkPrime",
+                "searchKey": "rand_test.TestIntReads",
                 "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIntReads(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIntReads(t *testing.T)\n```\n\nTest that Int reads only the necessary number of bytes from the reader for max at each bit length \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rand_test#TestPrimeBitsLt2",
+              "documentation": {
+                "identifier": "TestPrimeBitsLt2",
+                "newPage": false,
+                "searchKey": "rand_test.TestPrimeBitsLt2",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPrimeBitsLt2(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPrimeBitsLt2(t *testing.T)\n```\n\nTest that passing bits < 2 causes Prime to return nil, error \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rand_test#TestPrimeSmall",
+              "documentation": {
+                "identifier": "TestPrimeSmall",
+                "newPage": false,
+                "searchKey": "rand_test.TestPrimeSmall",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPrimeSmall(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPrimeSmall(t *testing.T)\n```\n\n[https://golang.org/issue/6849](https://golang.org/issue/6849). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rand_test#testIntPanics",
+              "documentation": {
+                "identifier": "testIntPanics",
+                "newPage": false,
+                "searchKey": "rand_test.testIntPanics",
+                "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkPrime(b *testing.B)"
+                "value": "func testIntPanics(t *testing.T, b *big.Int)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkPrime(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc testIntPanics(t *testing.T, b *big.Int)\n```\n\n"
               },
               "children": null
             }

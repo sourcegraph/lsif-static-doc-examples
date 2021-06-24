@@ -4,7 +4,9 @@
     "identifier": "prom-wrapper",
     "newPage": true,
     "searchKey": "docker-images/prometheus/cmd/prom-wrapper",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,66 +39,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#alertmanagerPathPrefix",
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#alertSolutionsPagePath",
               "documentation": {
-                "identifier": "alertmanagerPathPrefix",
+                "identifier": "alertSolutionsPagePath",
                 "newPage": false,
-                "searchKey": "main.alertmanagerPathPrefix",
+                "searchKey": "main.alertSolutionsPagePath",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const alertmanagerPathPrefix"
+                "value": "const alertSolutionsPagePath"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst alertmanagerPathPrefix = \"alertmanager\"\n```\n\nPrefix to serve alertmanager on. If you change this, make sure you update prometheus.yml as well \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#alertmanagerNoopReceiver",
-              "documentation": {
-                "identifier": "alertmanagerNoopReceiver",
-                "newPage": false,
-                "searchKey": "main.alertmanagerNoopReceiver",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const alertmanagerNoopReceiver"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst alertmanagerNoopReceiver = \"src-noop-receiver\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#alertmanagerWarningReceiver",
-              "documentation": {
-                "identifier": "alertmanagerWarningReceiver",
-                "newPage": false,
-                "searchKey": "main.alertmanagerWarningReceiver",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const alertmanagerWarningReceiver"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst alertmanagerWarningReceiver = \"src-warning-receiver\"\n```\n\n"
+                "value": "```Go\nconst alertSolutionsPagePath = \"admin/observability/alert_solutions\"\n```\n\n"
               },
               "children": null
             }
@@ -107,6 +69,8 @@
                 "newPage": false,
                 "searchKey": "main.alertmanagerCriticalReceiver",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -123,22 +87,72 @@
           },
           {
             "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#colorWarning",
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#alertmanagerNoopReceiver",
               "documentation": {
-                "identifier": "colorWarning",
+                "identifier": "alertmanagerNoopReceiver",
                 "newPage": false,
-                "searchKey": "main.colorWarning",
+                "searchKey": "main.alertmanagerNoopReceiver",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const colorWarning"
+                "value": "const alertmanagerNoopReceiver"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst colorWarning = \"#FFFF00\" // yellow\n\n```\n\n"
+                "value": "```Go\nconst alertmanagerNoopReceiver = \"src-noop-receiver\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#alertmanagerPathPrefix",
+              "documentation": {
+                "identifier": "alertmanagerPathPrefix",
+                "newPage": false,
+                "searchKey": "main.alertmanagerPathPrefix",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const alertmanagerPathPrefix"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst alertmanagerPathPrefix = \"alertmanager\"\n```\n\nPrefix to serve alertmanager on. If you change this, make sure you update prometheus.yml as well \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#alertmanagerWarningReceiver",
+              "documentation": {
+                "identifier": "alertmanagerWarningReceiver",
+                "newPage": false,
+                "searchKey": "main.alertmanagerWarningReceiver",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const alertmanagerWarningReceiver"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst alertmanagerWarningReceiver = \"src-warning-receiver\"\n```\n\n"
               },
               "children": null
             }
@@ -151,6 +165,8 @@
                 "newPage": false,
                 "searchKey": "main.colorCritical",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -173,6 +189,8 @@
                 "newPage": false,
                 "searchKey": "main.colorGood",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -189,12 +207,38 @@
           },
           {
             "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#colorWarning",
+              "documentation": {
+                "identifier": "colorWarning",
+                "newPage": false,
+                "searchKey": "main.colorWarning",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const colorWarning"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst colorWarning = \"#FFFF00\" // yellow\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/docker-images/prometheus/cmd/prom-wrapper#docsURL",
               "documentation": {
                 "identifier": "docsURL",
                 "newPage": false,
                 "searchKey": "main.docsURL",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -211,34 +255,14 @@
           },
           {
             "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#alertSolutionsPagePath",
-              "documentation": {
-                "identifier": "alertSolutionsPagePath",
-                "newPage": false,
-                "searchKey": "main.alertSolutionsPagePath",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const alertSolutionsPagePath"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst alertSolutionsPagePath = \"admin/observability/alert_solutions\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/docker-images/prometheus/cmd/prom-wrapper#matcherRegexPrefix",
               "documentation": {
                 "identifier": "matcherRegexPrefix",
                 "newPage": false,
                 "searchKey": "main.matcherRegexPrefix",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -261,6 +285,8 @@
                 "newPage": false,
                 "searchKey": "main.matcherRegexSuffix",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -285,7 +311,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -298,110 +326,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#noConfig",
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#alertSolutionsURLTemplate",
               "documentation": {
-                "identifier": "noConfig",
+                "identifier": "alertSolutionsURLTemplate",
                 "newPage": false,
-                "searchKey": "main.noConfig",
+                "searchKey": "main.alertSolutionsURLTemplate",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var noConfig"
+                "value": "var alertSolutionsURLTemplate"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar noConfig = os.Getenv(\"DISABLE_SOURCEGRAPH_CONFIG\")\n```\n\nprom-wrapper configuration options \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#noAlertmanager",
-              "documentation": {
-                "identifier": "noAlertmanager",
-                "newPage": false,
-                "searchKey": "main.noAlertmanager",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var noAlertmanager"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar noAlertmanager = os.Getenv(\"DISABLE_ALERTMANAGER\")\n```\n\nprom-wrapper configuration options \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#exportPort",
-              "documentation": {
-                "identifier": "exportPort",
-                "newPage": false,
-                "searchKey": "main.exportPort",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var exportPort"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar exportPort = ...\n```\n\nprom-wrapper configuration options \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#prometheusPort",
-              "documentation": {
-                "identifier": "prometheusPort",
-                "newPage": false,
-                "searchKey": "main.prometheusPort",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var prometheusPort"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar prometheusPort = env.Get(\"PROMETHEUS_INTERNAL_PORT\", \"9092\", \"internal Prometheus port\")\n```\n\nprom-wrapper configuration options \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#alertmanagerPort",
-              "documentation": {
-                "identifier": "alertmanagerPort",
-                "newPage": false,
-                "searchKey": "main.alertmanagerPort",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var alertmanagerPort"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar alertmanagerPort = env.Get(\"ALERTMANAGER_INTERNAL_PORT\", \"9093\", \"internal Alertmanager port\")\n```\n\nprom-wrapper configuration options \n\n"
+                "value": "```Go\nvar alertSolutionsURLTemplate = ...\n```\n\nStatic alertmanager templates. Templating reference: [https://prometheus.io/docs/alerting/latest/notifications](https://prometheus.io/docs/alerting/latest/notifications) \n\nAll `.CommonLabels` labels used in these templates should be included in `route.GroupByStr` in order for them to be available. \n\n"
               },
               "children": null
             }
@@ -414,6 +356,8 @@
                 "newPage": false,
                 "searchKey": "main.alertmanagerConfigPath",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -436,6 +380,8 @@
                 "newPage": false,
                 "searchKey": "main.alertmanagerEnableCluster",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -452,22 +398,24 @@
           },
           {
             "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#opsGenieAPIKey",
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#alertmanagerPort",
               "documentation": {
-                "identifier": "opsGenieAPIKey",
+                "identifier": "alertmanagerPort",
                 "newPage": false,
-                "searchKey": "main.opsGenieAPIKey",
+                "searchKey": "main.alertmanagerPort",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var opsGenieAPIKey"
+                "value": "var alertmanagerPort"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar opsGenieAPIKey = os.Getenv(\"OPSGENIE_API_KEY\")\n```\n\nprom-wrapper configuration options \n\n"
+                "value": "```Go\nvar alertmanagerPort = env.Get(\"ALERTMANAGER_INTERNAL_PORT\", \"9093\", \"internal Alertmanager port\")\n```\n\nprom-wrapper configuration options \n\n"
               },
               "children": null
             }
@@ -480,6 +428,9 @@
                 "newPage": false,
                 "searchKey": "main.commonLabels",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
@@ -496,44 +447,24 @@
           },
           {
             "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#observableDocAnchorTemplate",
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#exportPort",
               "documentation": {
-                "identifier": "observableDocAnchorTemplate",
+                "identifier": "exportPort",
                 "newPage": false,
-                "searchKey": "main.observableDocAnchorTemplate",
+                "searchKey": "main.exportPort",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var observableDocAnchorTemplate"
+                "value": "var exportPort"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar observableDocAnchorTemplate = ...\n```\n\nStatic alertmanager templates. Templating reference: [https://prometheus.io/docs/alerting/latest/notifications](https://prometheus.io/docs/alerting/latest/notifications) \n\nAll `.CommonLabels` labels used in these templates should be included in `route.GroupByStr` in order for them to be available. \n\nobservableDocAnchorTemplate must match anchors generated in `monitoring/monitoring/documentation.go`. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#alertSolutionsURLTemplate",
-              "documentation": {
-                "identifier": "alertSolutionsURLTemplate",
-                "newPage": false,
-                "searchKey": "main.alertSolutionsURLTemplate",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var alertSolutionsURLTemplate"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar alertSolutionsURLTemplate = ...\n```\n\nStatic alertmanager templates. Templating reference: [https://prometheus.io/docs/alerting/latest/notifications](https://prometheus.io/docs/alerting/latest/notifications) \n\nAll `.CommonLabels` labels used in these templates should be included in `route.GroupByStr` in order for them to be available. \n\n"
+                "value": "```Go\nvar exportPort = ...\n```\n\nprom-wrapper configuration options \n\n"
               },
               "children": null
             }
@@ -546,6 +477,8 @@
                 "newPage": false,
                 "searchKey": "main.firingTitleTemplate",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -562,22 +495,48 @@
           },
           {
             "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#resolvedTitleTemplate",
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#noAlertmanager",
               "documentation": {
-                "identifier": "resolvedTitleTemplate",
+                "identifier": "noAlertmanager",
                 "newPage": false,
-                "searchKey": "main.resolvedTitleTemplate",
+                "searchKey": "main.noAlertmanager",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var resolvedTitleTemplate"
+                "value": "var noAlertmanager"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar resolvedTitleTemplate = \"[RESOLVED] {{ .CommonLabels.description }}\"\n```\n\nStatic alertmanager templates. Templating reference: [https://prometheus.io/docs/alerting/latest/notifications](https://prometheus.io/docs/alerting/latest/notifications) \n\nAll `.CommonLabels` labels used in these templates should be included in `route.GroupByStr` in order for them to be available. \n\n"
+                "value": "```Go\nvar noAlertmanager = os.Getenv(\"DISABLE_ALERTMANAGER\")\n```\n\nprom-wrapper configuration options \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#noConfig",
+              "documentation": {
+                "identifier": "noConfig",
+                "newPage": false,
+                "searchKey": "main.noConfig",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var noConfig"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar noConfig = os.Getenv(\"DISABLE_SOURCEGRAPH_CONFIG\")\n```\n\nprom-wrapper configuration options \n\n"
               },
               "children": null
             }
@@ -590,6 +549,8 @@
                 "newPage": false,
                 "searchKey": "main.notificationTitleTemplate",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -600,6 +561,102 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar notificationTitleTemplate = ...\n```\n\nStatic alertmanager templates. Templating reference: [https://prometheus.io/docs/alerting/latest/notifications](https://prometheus.io/docs/alerting/latest/notifications) \n\nAll `.CommonLabels` labels used in these templates should be included in `route.GroupByStr` in order for them to be available. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#observableDocAnchorTemplate",
+              "documentation": {
+                "identifier": "observableDocAnchorTemplate",
+                "newPage": false,
+                "searchKey": "main.observableDocAnchorTemplate",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var observableDocAnchorTemplate"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar observableDocAnchorTemplate = ...\n```\n\nStatic alertmanager templates. Templating reference: [https://prometheus.io/docs/alerting/latest/notifications](https://prometheus.io/docs/alerting/latest/notifications) \n\nAll `.CommonLabels` labels used in these templates should be included in `route.GroupByStr` in order for them to be available. \n\nobservableDocAnchorTemplate must match anchors generated in `monitoring/monitoring/documentation.go`. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#opsGenieAPIKey",
+              "documentation": {
+                "identifier": "opsGenieAPIKey",
+                "newPage": false,
+                "searchKey": "main.opsGenieAPIKey",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var opsGenieAPIKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar opsGenieAPIKey = os.Getenv(\"OPSGENIE_API_KEY\")\n```\n\nprom-wrapper configuration options \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#prometheusPort",
+              "documentation": {
+                "identifier": "prometheusPort",
+                "newPage": false,
+                "searchKey": "main.prometheusPort",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var prometheusPort"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar prometheusPort = env.Get(\"PROMETHEUS_INTERNAL_PORT\", \"9092\", \"internal Prometheus port\")\n```\n\nprom-wrapper configuration options \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#resolvedTitleTemplate",
+              "documentation": {
+                "identifier": "resolvedTitleTemplate",
+                "newPage": false,
+                "searchKey": "main.resolvedTitleTemplate",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var resolvedTitleTemplate"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar resolvedTitleTemplate = \"[RESOLVED] {{ .CommonLabels.description }}\"\n```\n\nStatic alertmanager templates. Templating reference: [https://prometheus.io/docs/alerting/latest/notifications](https://prometheus.io/docs/alerting/latest/notifications) \n\nAll `.CommonLabels` labels used in these templates should be included in `route.GroupByStr` in order for them to be available. \n\n"
               },
               "children": null
             }
@@ -614,7 +671,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -627,12 +686,103 @@
         "children": [
           {
             "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#AlertsStatusReporter",
+              "documentation": {
+                "identifier": "AlertsStatusReporter",
+                "newPage": false,
+                "searchKey": "main.AlertsStatusReporter",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AlertsStatusReporter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AlertsStatusReporter struct {\n\tlog          log15.Logger\n\talertmanager *amclient.Alertmanager\n\tprometheus   prometheus.API\n}\n```\n\nAlertsStatusReporter summarizes alert activity from Alertmanager \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/docker-images/prometheus/cmd/prom-wrapper#NewAlertsStatusReporter",
+                    "documentation": {
+                      "identifier": "NewAlertsStatusReporter",
+                      "newPage": false,
+                      "searchKey": "main.NewAlertsStatusReporter",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewAlertsStatusReporter(logger log15.Logger, alertmanager *amclient.Alertmanager, prom prometheus.API) *AlertsStatusReporter"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewAlertsStatusReporter(logger log15.Logger, alertmanager *amclient.Alertmanager, prom prometheus.API) *AlertsStatusReporter\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/docker-images/prometheus/cmd/prom-wrapper#AlertsStatusReporter.Handler",
+                    "documentation": {
+                      "identifier": "AlertsStatusReporter.Handler",
+                      "newPage": false,
+                      "searchKey": "main.AlertsStatusReporter.Handler",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *AlertsStatusReporter) Handler() http.Handler"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *AlertsStatusReporter) Handler() http.Handler\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#Change",
+              "documentation": {
+                "identifier": "Change",
+                "newPage": false,
+                "searchKey": "main.Change",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Change func(ctx context.Context, log github.com/inconshreveable/log15.Logger, change github.com/sourcegraph/sourcegraph/docker-images/prometheus/cmd/prom-wrapper.ChangeContext, newConfig *github.com/sourcegraph/sourcegraph/docker-images/prometheus/cmd/prom-wrapper.subscribedSiteConfig) (result github.com/sourcegraph/sourcegraph/docker-images/prometheus/cmd/prom-wrapper.ChangeResult)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Change func(ctx context.Context, log log15.Logger, change ChangeContext, newConfig *subscribedSiteConfig) (result ChangeResult)\n```\n\nChange implements a change to configuration \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/docker-images/prometheus/cmd/prom-wrapper#ChangeContext",
               "documentation": {
                 "identifier": "ChangeContext",
                 "newPage": false,
                 "searchKey": "main.ChangeContext",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -652,7 +802,9 @@
                 "identifier": "ChangeResult",
                 "newPage": false,
                 "searchKey": "main.ChangeResult",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -671,6 +823,7 @@
                       "newPage": false,
                       "searchKey": "main.changeReceivers",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -693,6 +846,7 @@
                       "newPage": false,
                       "searchKey": "main.changeSMTP",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -715,6 +869,7 @@
                       "newPage": false,
                       "searchKey": "main.changeSilences",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -734,20 +889,135 @@
           },
           {
             "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#Change",
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#SiteConfigSubscriber",
               "documentation": {
-                "identifier": "Change",
+                "identifier": "SiteConfigSubscriber",
                 "newPage": false,
-                "searchKey": "main.Change",
-                "tags": null
+                "searchKey": "main.SiteConfigSubscriber",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type Change func(ctx context.Context, log github.com/inconshreveable/log15.Logger, change github.com/sourcegraph/sourcegraph/docker-images/prometheus/cmd/prom-wrapper.ChangeContext, newConfig *github.com/sourcegraph/sourcegraph/docker-images/prometheus/cmd/prom-wrapper.subscribedSiteConfig) (result github.com/sourcegraph/sourcegraph/docker-images/prometheus/cmd/prom-wrapper.ChangeResult)"
+                "value": "type SiteConfigSubscriber struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype Change func(ctx context.Context, log log15.Logger, change ChangeContext, newConfig *subscribedSiteConfig) (result ChangeResult)\n```\n\nChange implements a change to configuration \n\n"
+                "value": "```Go\ntype SiteConfigSubscriber struct {\n\tlog          log15.Logger\n\talertmanager *amclient.Alertmanager\n\n\tmux      sync.RWMutex\n\tconfig   *subscribedSiteConfig\n\tproblems conf.Problems // exported by handler\n}\n```\n\nSiteConfigSubscriber is a sidecar service that subscribes to Sourcegraph site configuration and applies relevant (subscribedSiteConfig) changes to Grafana. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/docker-images/prometheus/cmd/prom-wrapper#NewSiteConfigSubscriber",
+                    "documentation": {
+                      "identifier": "NewSiteConfigSubscriber",
+                      "newPage": false,
+                      "searchKey": "main.NewSiteConfigSubscriber",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewSiteConfigSubscriber(logger log15.Logger, alertmanager *amclient.Alertmanager) *SiteConfigSubscriber"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewSiteConfigSubscriber(logger log15.Logger, alertmanager *amclient.Alertmanager) *SiteConfigSubscriber\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/docker-images/prometheus/cmd/prom-wrapper#SiteConfigSubscriber.Handler",
+                    "documentation": {
+                      "identifier": "SiteConfigSubscriber.Handler",
+                      "newPage": false,
+                      "searchKey": "main.SiteConfigSubscriber.Handler",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *SiteConfigSubscriber) Handler() http.Handler"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *SiteConfigSubscriber) Handler() http.Handler\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/docker-images/prometheus/cmd/prom-wrapper#SiteConfigSubscriber.Subscribe",
+                    "documentation": {
+                      "identifier": "SiteConfigSubscriber.Subscribe",
+                      "newPage": false,
+                      "searchKey": "main.SiteConfigSubscriber.Subscribe",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *SiteConfigSubscriber) Subscribe(ctx context.Context)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *SiteConfigSubscriber) Subscribe(ctx context.Context)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/docker-images/prometheus/cmd/prom-wrapper#SiteConfigSubscriber.execDiffs",
+                    "documentation": {
+                      "identifier": "SiteConfigSubscriber.execDiffs",
+                      "newPage": false,
+                      "searchKey": "main.SiteConfigSubscriber.execDiffs",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *SiteConfigSubscriber) execDiffs(ctx context.Context, newConfig *subscribedSiteConfig, diffs []siteConfigDiff)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *SiteConfigSubscriber) execDiffs(ctx context.Context, newConfig *subscribedSiteConfig, diffs []siteConfigDiff)\n```\n\nexecDiffs updates grafanaAlertsSubscriber state and writes it to disk. It never returns an error, instead all errors are reported as problems \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#siteConfigDiff",
+              "documentation": {
+                "identifier": "siteConfigDiff",
+                "newPage": false,
+                "searchKey": "main.siteConfigDiff",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type siteConfigDiff struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype siteConfigDiff struct {\n\tType   string\n\tchange Change\n}\n```\n\n"
               },
               "children": null
             }
@@ -760,6 +1030,7 @@
                 "newPage": false,
                 "searchKey": "main.siteEmailConfig",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -782,6 +1053,7 @@
                 "newPage": false,
                 "searchKey": "main.subscribedSiteConfig",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -802,6 +1074,7 @@
                       "newPage": false,
                       "searchKey": "main.newSubscribedSiteConfig",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -824,6 +1097,7 @@
                       "newPage": false,
                       "searchKey": "main.subscribedSiteConfig.Diff",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -834,192 +1108,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (c *subscribedSiteConfig) Diff(other *subscribedSiteConfig) []siteConfigDiff\n```\n\nDiff returns a set of changes to apply. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#siteConfigDiff",
-              "documentation": {
-                "identifier": "siteConfigDiff",
-                "newPage": false,
-                "searchKey": "main.siteConfigDiff",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type siteConfigDiff struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype siteConfigDiff struct {\n\tType   string\n\tchange Change\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#SiteConfigSubscriber",
-              "documentation": {
-                "identifier": "SiteConfigSubscriber",
-                "newPage": false,
-                "searchKey": "main.SiteConfigSubscriber",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type SiteConfigSubscriber struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype SiteConfigSubscriber struct {\n\tlog          log15.Logger\n\talertmanager *amclient.Alertmanager\n\n\tmux      sync.RWMutex\n\tconfig   *subscribedSiteConfig\n\tproblems conf.Problems // exported by handler\n}\n```\n\nSiteConfigSubscriber is a sidecar service that subscribes to Sourcegraph site configuration and applies relevant (subscribedSiteConfig) changes to Grafana. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/docker-images/prometheus/cmd/prom-wrapper#NewSiteConfigSubscriber",
-                    "documentation": {
-                      "identifier": "NewSiteConfigSubscriber",
-                      "newPage": false,
-                      "searchKey": "main.NewSiteConfigSubscriber",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewSiteConfigSubscriber(logger log15.Logger, alertmanager *amclient.Alertmanager) *SiteConfigSubscriber"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewSiteConfigSubscriber(logger log15.Logger, alertmanager *amclient.Alertmanager) *SiteConfigSubscriber\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/docker-images/prometheus/cmd/prom-wrapper#SiteConfigSubscriber.Handler",
-                    "documentation": {
-                      "identifier": "SiteConfigSubscriber.Handler",
-                      "newPage": false,
-                      "searchKey": "main.SiteConfigSubscriber.Handler",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *SiteConfigSubscriber) Handler() http.Handler"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *SiteConfigSubscriber) Handler() http.Handler\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/docker-images/prometheus/cmd/prom-wrapper#SiteConfigSubscriber.Subscribe",
-                    "documentation": {
-                      "identifier": "SiteConfigSubscriber.Subscribe",
-                      "newPage": false,
-                      "searchKey": "main.SiteConfigSubscriber.Subscribe",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *SiteConfigSubscriber) Subscribe(ctx context.Context)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *SiteConfigSubscriber) Subscribe(ctx context.Context)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/docker-images/prometheus/cmd/prom-wrapper#SiteConfigSubscriber.execDiffs",
-                    "documentation": {
-                      "identifier": "SiteConfigSubscriber.execDiffs",
-                      "newPage": false,
-                      "searchKey": "main.SiteConfigSubscriber.execDiffs",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *SiteConfigSubscriber) execDiffs(ctx context.Context, newConfig *subscribedSiteConfig, diffs []siteConfigDiff)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *SiteConfigSubscriber) execDiffs(ctx context.Context, newConfig *subscribedSiteConfig, diffs []siteConfigDiff)\n```\n\nexecDiffs updates grafanaAlertsSubscriber state and writes it to disk. It never returns an error, instead all errors are reported as problems \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#AlertsStatusReporter",
-              "documentation": {
-                "identifier": "AlertsStatusReporter",
-                "newPage": false,
-                "searchKey": "main.AlertsStatusReporter",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type AlertsStatusReporter struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype AlertsStatusReporter struct {\n\tlog          log15.Logger\n\talertmanager *amclient.Alertmanager\n\tprometheus   prometheus.API\n}\n```\n\nAlertsStatusReporter summarizes alert activity from Alertmanager \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/docker-images/prometheus/cmd/prom-wrapper#NewAlertsStatusReporter",
-                    "documentation": {
-                      "identifier": "NewAlertsStatusReporter",
-                      "newPage": false,
-                      "searchKey": "main.NewAlertsStatusReporter",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewAlertsStatusReporter(logger log15.Logger, alertmanager *amclient.Alertmanager, prom prometheus.API) *AlertsStatusReporter"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewAlertsStatusReporter(logger log15.Logger, alertmanager *amclient.Alertmanager, prom prometheus.API) *AlertsStatusReporter\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/docker-images/prometheus/cmd/prom-wrapper#AlertsStatusReporter.Handler",
-                    "documentation": {
-                      "identifier": "AlertsStatusReporter.Handler",
-                      "newPage": false,
-                      "searchKey": "main.AlertsStatusReporter.Handler",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *AlertsStatusReporter) Handler() http.Handler"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *AlertsStatusReporter) Handler() http.Handler\n```\n\n"
                     },
                     "children": null
                   }
@@ -1037,7 +1125,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1050,22 +1140,370 @@
         "children": [
           {
             "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#waitForAlertmanager",
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#NewAlertmanagerCmd",
               "documentation": {
-                "identifier": "waitForAlertmanager",
+                "identifier": "NewAlertmanagerCmd",
                 "newPage": false,
-                "searchKey": "main.waitForAlertmanager",
+                "searchKey": "main.NewAlertmanagerCmd",
                 "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewAlertmanagerCmd(configPath string) *exec.Cmd"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewAlertmanagerCmd(configPath string) *exec.Cmd\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#NewPrometheusCmd",
+              "documentation": {
+                "identifier": "NewPrometheusCmd",
+                "newPage": false,
+                "searchKey": "main.NewPrometheusCmd",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewPrometheusCmd(promArgs []string, promPort string) *exec.Cmd"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewPrometheusCmd(promArgs []string, promPort string) *exec.Cmd\n```\n\nNewPrometheusCmd instantiates a new command to run Prometheus. Parameter promArgs replicates \"$@\" \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#TestAlertSolutionsURL",
+              "documentation": {
+                "identifier": "TestAlertSolutionsURL",
+                "newPage": false,
+                "searchKey": "main.TestAlertSolutionsURL",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAlertSolutionsURL(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAlertSolutionsURL(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#TestAlertsStatusReporterHistory",
+              "documentation": {
+                "identifier": "TestAlertsStatusReporterHistory",
+                "newPage": false,
+                "searchKey": "main.TestAlertsStatusReporterHistory",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAlertsStatusReporterHistory(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAlertsStatusReporterHistory(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#TestMatchersAndSilences",
+              "documentation": {
+                "identifier": "TestMatchersAndSilences",
+                "newPage": false,
+                "searchKey": "main.TestMatchersAndSilences",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMatchersAndSilences(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMatchersAndSilences(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#TestNewRoutesAndReceivers",
+              "documentation": {
+                "identifier": "TestNewRoutesAndReceivers",
+                "newPage": false,
+                "searchKey": "main.TestNewRoutesAndReceivers",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNewRoutesAndReceivers(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNewRoutesAndReceivers(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#alertSolutionsURL",
+              "documentation": {
+                "identifier": "alertSolutionsURL",
+                "newPage": false,
+                "searchKey": "main.alertSolutionsURL",
+                "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func waitForAlertmanager(ctx context.Context, alertmanager *amclient.Alertmanager) error"
+                "value": "func alertSolutionsURL() string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc waitForAlertmanager(ctx context.Context, alertmanager *amclient.Alertmanager) error\n```\n\n"
+                "value": "```Go\nfunc alertSolutionsURL() string\n```\n\nalertSolutionsURL generates a link to the alert solutions page that embeds the appropriate version if it is available and it is a semantic version. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#applyConfiguration",
+              "documentation": {
+                "identifier": "applyConfiguration",
+                "newPage": false,
+                "searchKey": "main.applyConfiguration",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func applyConfiguration(ctx context.Context, cfg *amconfig.Config) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc applyConfiguration(ctx context.Context, cfg *amconfig.Config) error\n```\n\napplyConfiguration writes validates and writes the given Alertmanager configuration to disk, and triggers a reload. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#boolP",
+              "documentation": {
+                "identifier": "boolP",
+                "newPage": false,
+                "searchKey": "main.boolP",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func boolP(v bool) *bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc boolP(v bool) *bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#duration",
+              "documentation": {
+                "identifier": "duration",
+                "newPage": false,
+                "searchKey": "main.duration",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func duration(dur time.Duration) *model.Duration"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc duration(dur time.Duration) *model.Duration\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#init.siteconfig.go",
+              "documentation": {
+                "identifier": "init.siteconfig.go",
+                "newPage": false,
+                "searchKey": "main.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#newMatchersFromSilence",
+              "documentation": {
+                "identifier": "newMatchersFromSilence",
+                "newPage": false,
+                "searchKey": "main.newMatchersFromSilence",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newMatchersFromSilence(silence string) models.Matchers"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newMatchersFromSilence(silence string) models.Matchers\n```\n\nnewMatchersFromSilence creates Alertmanager alert matchers from a configured silence \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#newRootRoute",
+              "documentation": {
+                "identifier": "newRootRoute",
+                "newPage": false,
+                "searchKey": "main.newRootRoute",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newRootRoute(routes []*amconfig.Route) *amconfig.Route"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newRootRoute(routes []*amconfig.Route) *amconfig.Route\n```\n\nnewRootRoute generates a base Route required by Alertmanager to wrap all routes \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#newRoutesAndReceivers",
+              "documentation": {
+                "identifier": "newRoutesAndReceivers",
+                "newPage": false,
+                "searchKey": "main.newRoutesAndReceivers",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newRoutesAndReceivers(newAlerts []*schema.ObservabilityAlerts, externalURL string, newProblem func(error)) ([]*amconfig.Receiver, []*amconfig.Route)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newRoutesAndReceivers(newAlerts []*schema.ObservabilityAlerts, externalURL string, newProblem func(error)) ([]*amconfig.Receiver, []*amconfig.Route)\n```\n\nnewRoutesAndReceivers converts the given alerts from Sourcegraph site configuration into Alertmanager receivers and routes with the following strategy: \n\n* Each alert level has a receiver, which has configuration for all channels for that level. * Each alert level and owner combination has a receiver and route, which has configuration for all channels for that filter. * Additional routes can route alerts based on `alerts.on`, but all alerts still fall through to the per-level receivers. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#newSilenceFromMatchers",
+              "documentation": {
+                "identifier": "newSilenceFromMatchers",
+                "newPage": false,
+                "searchKey": "main.newSilenceFromMatchers",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newSilenceFromMatchers(matchers models.Matchers) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newSilenceFromMatchers(matchers models.Matchers) string\n```\n\nnewSilenceFromMatchers returns the silenced alert from Alertmanager alert matchers \n\n"
               },
               "children": null
             }
@@ -1078,6 +1516,7 @@
                 "newPage": false,
                 "searchKey": "main.reloadAlertmanager",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1100,6 +1539,7 @@
                 "newPage": false,
                 "searchKey": "main.renderConfiguration",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1116,56 +1556,13 @@
           },
           {
             "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#applyConfiguration",
-              "documentation": {
-                "identifier": "applyConfiguration",
-                "newPage": false,
-                "searchKey": "main.applyConfiguration",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func applyConfiguration(ctx context.Context, cfg *amconfig.Config) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc applyConfiguration(ctx context.Context, cfg *amconfig.Config) error\n```\n\napplyConfiguration writes validates and writes the given Alertmanager configuration to disk, and triggers a reload. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#duration",
-              "documentation": {
-                "identifier": "duration",
-                "newPage": false,
-                "searchKey": "main.duration",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func duration(dur time.Duration) *model.Duration"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc duration(dur time.Duration) *model.Duration\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/docker-images/prometheus/cmd/prom-wrapper#runCmd",
               "documentation": {
                 "identifier": "runCmd",
                 "newPage": false,
                 "searchKey": "main.runCmd",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1182,140 +1579,13 @@
           },
           {
             "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#NewPrometheusCmd",
-              "documentation": {
-                "identifier": "NewPrometheusCmd",
-                "newPage": false,
-                "searchKey": "main.NewPrometheusCmd",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func NewPrometheusCmd(promArgs []string, promPort string) *exec.Cmd"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc NewPrometheusCmd(promArgs []string, promPort string) *exec.Cmd\n```\n\nNewPrometheusCmd instantiates a new command to run Prometheus. Parameter promArgs replicates \"$@\" \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#NewAlertmanagerCmd",
-              "documentation": {
-                "identifier": "NewAlertmanagerCmd",
-                "newPage": false,
-                "searchKey": "main.NewAlertmanagerCmd",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func NewAlertmanagerCmd(configPath string) *exec.Cmd"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc NewAlertmanagerCmd(configPath string) *exec.Cmd\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#main",
-              "documentation": {
-                "identifier": "main",
-                "newPage": false,
-                "searchKey": "main.main",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func main()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc main()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#alertSolutionsURL",
-              "documentation": {
-                "identifier": "alertSolutionsURL",
-                "newPage": false,
-                "searchKey": "main.alertSolutionsURL",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func alertSolutionsURL() string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc alertSolutionsURL() string\n```\n\nalertSolutionsURL generates a link to the alert solutions page that embeds the appropriate version if it is available and it is a semantic version. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#newRoutesAndReceivers",
-              "documentation": {
-                "identifier": "newRoutesAndReceivers",
-                "newPage": false,
-                "searchKey": "main.newRoutesAndReceivers",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func newRoutesAndReceivers(newAlerts []*schema.ObservabilityAlerts, externalURL string, newProblem func(error)) ([]*amconfig.Receiver, []*amconfig.Route)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc newRoutesAndReceivers(newAlerts []*schema.ObservabilityAlerts, externalURL string, newProblem func(error)) ([]*amconfig.Receiver, []*amconfig.Route)\n```\n\nnewRoutesAndReceivers converts the given alerts from Sourcegraph site configuration into Alertmanager receivers and routes with the following strategy: \n\n* Each alert level has a receiver, which has configuration for all channels for that level. * Each alert level and owner combination has a receiver and route, which has configuration for all channels for that filter. * Additional routes can route alerts based on `alerts.on`, but all alerts still fall through to the per-level receivers. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#newRootRoute",
-              "documentation": {
-                "identifier": "newRootRoute",
-                "newPage": false,
-                "searchKey": "main.newRootRoute",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func newRootRoute(routes []*amconfig.Route) *amconfig.Route"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc newRootRoute(routes []*amconfig.Route) *amconfig.Route\n```\n\nnewRootRoute generates a base Route required by Alertmanager to wrap all routes \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/docker-images/prometheus/cmd/prom-wrapper#stringP",
               "documentation": {
                 "identifier": "stringP",
                 "newPage": false,
                 "searchKey": "main.stringP",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1332,176 +1602,23 @@
           },
           {
             "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#boolP",
+              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#waitForAlertmanager",
               "documentation": {
-                "identifier": "boolP",
+                "identifier": "waitForAlertmanager",
                 "newPage": false,
-                "searchKey": "main.boolP",
+                "searchKey": "main.waitForAlertmanager",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func boolP(v bool) *bool"
+                "value": "func waitForAlertmanager(ctx context.Context, alertmanager *amclient.Alertmanager) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc boolP(v bool) *bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#newMatchersFromSilence",
-              "documentation": {
-                "identifier": "newMatchersFromSilence",
-                "newPage": false,
-                "searchKey": "main.newMatchersFromSilence",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func newMatchersFromSilence(silence string) models.Matchers"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc newMatchersFromSilence(silence string) models.Matchers\n```\n\nnewMatchersFromSilence creates Alertmanager alert matchers from a configured silence \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#newSilenceFromMatchers",
-              "documentation": {
-                "identifier": "newSilenceFromMatchers",
-                "newPage": false,
-                "searchKey": "main.newSilenceFromMatchers",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func newSilenceFromMatchers(matchers models.Matchers) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc newSilenceFromMatchers(matchers models.Matchers) string\n```\n\nnewSilenceFromMatchers returns the silenced alert from Alertmanager alert matchers \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#init.siteconfig.go",
-              "documentation": {
-                "identifier": "init.siteconfig.go",
-                "newPage": false,
-                "searchKey": "main.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#TestAlertSolutionsURL",
-              "documentation": {
-                "identifier": "TestAlertSolutionsURL",
-                "newPage": false,
-                "searchKey": "main.TestAlertSolutionsURL",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAlertSolutionsURL(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAlertSolutionsURL(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#TestNewRoutesAndReceivers",
-              "documentation": {
-                "identifier": "TestNewRoutesAndReceivers",
-                "newPage": false,
-                "searchKey": "main.TestNewRoutesAndReceivers",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestNewRoutesAndReceivers(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestNewRoutesAndReceivers(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#TestMatchersAndSilences",
-              "documentation": {
-                "identifier": "TestMatchersAndSilences",
-                "newPage": false,
-                "searchKey": "main.TestMatchersAndSilences",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMatchersAndSilences(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMatchersAndSilences(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/docker-images/prometheus/cmd/prom-wrapper#TestAlertsStatusReporterHistory",
-              "documentation": {
-                "identifier": "TestAlertsStatusReporterHistory",
-                "newPage": false,
-                "searchKey": "main.TestAlertsStatusReporterHistory",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAlertsStatusReporterHistory(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAlertsStatusReporterHistory(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc waitForAlertmanager(ctx context.Context, alertmanager *amclient.Alertmanager) error\n```\n\n"
               },
               "children": null
             }

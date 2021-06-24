@@ -3,81 +3,58 @@
 ## Index
 
 * [Constants](#const)
-    * [const DocumentMatchLimit](#DocumentMatchLimit)
-    * [const ShardMatchLimit](#ShardMatchLimit)
     * [const DisplayLimit](#DisplayLimit)
-    * [const RepositoryLimit](#RepositoryLimit)
-    * [const ShardTimeout](#ShardTimeout)
-    * [const RepositoryCloning](#RepositoryCloning)
-    * [const RepositoryMissing](#RepositoryMissing)
-    * [const ExcludedFork](#ExcludedFork)
+    * [const DocumentMatchLimit](#DocumentMatchLimit)
     * [const ExcludedArchive](#ExcludedArchive)
+    * [const ExcludedFork](#ExcludedFork)
+    * [const RepositoryCloning](#RepositoryCloning)
+    * [const RepositoryLimit](#RepositoryLimit)
+    * [const RepositoryMissing](#RepositoryMissing)
     * [const SeverityInfo](#SeverityInfo)
     * [const SeverityWarn](#SeverityWarn)
+    * [const ShardMatchLimit](#ShardMatchLimit)
+    * [const ShardTimeout](#ShardTimeout)
 * [Variables](#var)
     * [var skippedHandlers](#skippedHandlers)
     * [var updateGolden](#updateGolden)
 * [Types](#type)
     * [type Namer interface](#Namer)
-    * [type ProgressStats struct](#ProgressStats)
     * [type Progress struct](#Progress)
         * [func BuildProgressEvent(stats ProgressStats) Progress](#BuildProgressEvent)
+    * [type ProgressStats struct](#ProgressStats)
     * [type Skipped struct](#Skipped)
-        * [func skippedReposHandler(repos []Namer, titleVerb, messageReason string, base Skipped) (Skipped, bool)](#skippedReposHandler)
+        * [func displayLimitHandler(resultsResolver ProgressStats) (Skipped, bool)](#displayLimitHandler)
+        * [func excludedArchiveHandler(resultsResolver ProgressStats) (Skipped, bool)](#excludedArchiveHandler)
+        * [func excludedForkHandler(resultsResolver ProgressStats) (Skipped, bool)](#excludedForkHandler)
         * [func repositoryCloningHandler(resultsResolver ProgressStats) (Skipped, bool)](#repositoryCloningHandler)
         * [func repositoryMissingHandler(resultsResolver ProgressStats) (Skipped, bool)](#repositoryMissingHandler)
-        * [func shardTimeoutHandler(resultsResolver ProgressStats) (Skipped, bool)](#shardTimeoutHandler)
-        * [func displayLimitHandler(resultsResolver ProgressStats) (Skipped, bool)](#displayLimitHandler)
         * [func shardMatchLimitHandler(resultsResolver ProgressStats) (Skipped, bool)](#shardMatchLimitHandler)
-        * [func excludedForkHandler(resultsResolver ProgressStats) (Skipped, bool)](#excludedForkHandler)
-        * [func excludedArchiveHandler(resultsResolver ProgressStats) (Skipped, bool)](#excludedArchiveHandler)
-    * [type SkippedSuggested struct](#SkippedSuggested)
+        * [func shardTimeoutHandler(resultsResolver ProgressStats) (Skipped, bool)](#shardTimeoutHandler)
+        * [func skippedReposHandler(repos []Namer, titleVerb, messageReason string, base Skipped) (Skipped, bool)](#skippedReposHandler)
     * [type SkippedReason string](#SkippedReason)
     * [type SkippedSeverity string](#SkippedSeverity)
+    * [type SkippedSuggested struct](#SkippedSuggested)
     * [type repo struct](#repo)
         * [func (r repo) Name() string](#repo.Name)
 * [Functions](#func)
+    * [func TestNumber(t *testing.T)](#TestNumber)
+    * [func TestSearchProgress(t *testing.T)](#TestSearchProgress)
+    * [func intPtr(i int) *int](#intPtr)
     * [func number(i int) string](#number)
     * [func plural(one, many string, n int) string](#plural)
-    * [func TestSearchProgress(t *testing.T)](#TestSearchProgress)
-    * [func TestNumber(t *testing.T)](#TestNumber)
-    * [func intPtr(i int) *int](#intPtr)
 
 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
-
-### <a id="DocumentMatchLimit" href="#DocumentMatchLimit">const DocumentMatchLimit</a>
-
-```
-searchKey: api.DocumentMatchLimit
-```
-
-```Go
-const DocumentMatchLimit SkippedReason = "document-match-limit"
-```
-
-DocumentMatchLimit is when we found too many matches in a document, so we stopped searching it. 
-
-### <a id="ShardMatchLimit" href="#ShardMatchLimit">const ShardMatchLimit</a>
-
-```
-searchKey: api.ShardMatchLimit
-```
-
-```Go
-const ShardMatchLimit SkippedReason = "shard-match-limit"
-```
-
-ShardMatchLimit is when we found too many matches in a shard/repository, so we stopped searching it. 
 
 ### <a id="DisplayLimit" href="#DisplayLimit">const DisplayLimit</a>
 
 ```
 searchKey: api.DisplayLimit
+tags: [constant string]
 ```
 
 ```Go
@@ -86,70 +63,24 @@ const DisplayLimit SkippedReason = "display"
 
 DisplayLimit is when we found too many matches during a search so we stopped displaying results. 
 
-### <a id="RepositoryLimit" href="#RepositoryLimit">const RepositoryLimit</a>
+### <a id="DocumentMatchLimit" href="#DocumentMatchLimit">const DocumentMatchLimit</a>
 
 ```
-searchKey: api.RepositoryLimit
-```
-
-```Go
-const RepositoryLimit SkippedReason = "repository-limit"
-```
-
-RepositoryLimit is when we did not search a repository because the set of repositories to search was too large. 
-
-### <a id="ShardTimeout" href="#ShardTimeout">const ShardTimeout</a>
-
-```
-searchKey: api.ShardTimeout
+searchKey: api.DocumentMatchLimit
+tags: [constant string]
 ```
 
 ```Go
-const ShardTimeout SkippedReason = "shard-timeout"
+const DocumentMatchLimit SkippedReason = "document-match-limit"
 ```
 
-ShardTimeout is when we ran out of time before searching a shard/repository. 
-
-### <a id="RepositoryCloning" href="#RepositoryCloning">const RepositoryCloning</a>
-
-```
-searchKey: api.RepositoryCloning
-```
-
-```Go
-const RepositoryCloning SkippedReason = "repository-cloning"
-```
-
-RepositoryCloning is when we could not search a repository because it is not cloned. 
-
-### <a id="RepositoryMissing" href="#RepositoryMissing">const RepositoryMissing</a>
-
-```
-searchKey: api.RepositoryMissing
-```
-
-```Go
-const RepositoryMissing SkippedReason = "repository-missing"
-```
-
-RepositoryMissing is when we could not search a repository because it is not cloned and we failed to find it on the remote code host. 
-
-### <a id="ExcludedFork" href="#ExcludedFork">const ExcludedFork</a>
-
-```
-searchKey: api.ExcludedFork
-```
-
-```Go
-const ExcludedFork SkippedReason = "repository-fork"
-```
-
-ExcludedFork is when we did not search a repository because it is a fork. 
+DocumentMatchLimit is when we found too many matches in a document, so we stopped searching it. 
 
 ### <a id="ExcludedArchive" href="#ExcludedArchive">const ExcludedArchive</a>
 
 ```
 searchKey: api.ExcludedArchive
+tags: [constant string]
 ```
 
 ```Go
@@ -158,10 +89,63 @@ const ExcludedArchive SkippedReason = "excluded-archive"
 
 ExcludedArchive is when we did not search a repository because it is archived. 
 
+### <a id="ExcludedFork" href="#ExcludedFork">const ExcludedFork</a>
+
+```
+searchKey: api.ExcludedFork
+tags: [constant string]
+```
+
+```Go
+const ExcludedFork SkippedReason = "repository-fork"
+```
+
+ExcludedFork is when we did not search a repository because it is a fork. 
+
+### <a id="RepositoryCloning" href="#RepositoryCloning">const RepositoryCloning</a>
+
+```
+searchKey: api.RepositoryCloning
+tags: [constant string]
+```
+
+```Go
+const RepositoryCloning SkippedReason = "repository-cloning"
+```
+
+RepositoryCloning is when we could not search a repository because it is not cloned. 
+
+### <a id="RepositoryLimit" href="#RepositoryLimit">const RepositoryLimit</a>
+
+```
+searchKey: api.RepositoryLimit
+tags: [constant string]
+```
+
+```Go
+const RepositoryLimit SkippedReason = "repository-limit"
+```
+
+RepositoryLimit is when we did not search a repository because the set of repositories to search was too large. 
+
+### <a id="RepositoryMissing" href="#RepositoryMissing">const RepositoryMissing</a>
+
+```
+searchKey: api.RepositoryMissing
+tags: [constant string]
+```
+
+```Go
+const RepositoryMissing SkippedReason = "repository-missing"
+```
+
+RepositoryMissing is when we could not search a repository because it is not cloned and we failed to find it on the remote code host. 
+
 ### <a id="SeverityInfo" href="#SeverityInfo">const SeverityInfo</a>
 
 ```
 searchKey: api.SeverityInfo
+tags: [constant string]
 ```
 
 ```Go
@@ -172,23 +156,50 @@ const SeverityInfo SkippedSeverity = "info"
 
 ```
 searchKey: api.SeverityWarn
+tags: [constant string]
 ```
 
 ```Go
 const SeverityWarn SkippedSeverity = "warn"
 ```
 
+### <a id="ShardMatchLimit" href="#ShardMatchLimit">const ShardMatchLimit</a>
+
+```
+searchKey: api.ShardMatchLimit
+tags: [constant string]
+```
+
+```Go
+const ShardMatchLimit SkippedReason = "shard-match-limit"
+```
+
+ShardMatchLimit is when we found too many matches in a shard/repository, so we stopped searching it. 
+
+### <a id="ShardTimeout" href="#ShardTimeout">const ShardTimeout</a>
+
+```
+searchKey: api.ShardTimeout
+tags: [constant string]
+```
+
+```Go
+const ShardTimeout SkippedReason = "shard-timeout"
+```
+
+ShardTimeout is when we ran out of time before searching a shard/repository. 
+
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="skippedHandlers" href="#skippedHandlers">var skippedHandlers</a>
 
 ```
 searchKey: api.skippedHandlers
-tags: [private]
+tags: [variable array function private]
 ```
 
 ```Go
@@ -201,7 +212,7 @@ TODO implement all skipped reasons
 
 ```
 searchKey: api.updateGolden
-tags: [private]
+tags: [variable boolean private]
 ```
 
 ```Go
@@ -211,13 +222,14 @@ var updateGolden = flag.Bool("update", false, "Updastdata goldens")
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Namer" href="#Namer">type Namer interface</a>
 
 ```
 searchKey: api.Namer
+tags: [interface]
 ```
 
 ```Go
@@ -226,39 +238,11 @@ type Namer interface {
 }
 ```
 
-### <a id="ProgressStats" href="#ProgressStats">type ProgressStats struct</a>
-
-```
-searchKey: api.ProgressStats
-```
-
-```Go
-type ProgressStats struct {
-	MatchCount          int
-	ElapsedMilliseconds int
-	RepositoriesCount   *int
-	ExcludedArchived    int
-	ExcludedForks       int
-
-	Timedout []Namer
-	Missing  []Namer
-	Cloning  []Namer
-
-	LimitHit bool
-
-	// SuggestedLimit is what to suggest to the user for count if needed.
-	SuggestedLimit int
-
-	Trace string // only filled if requested
-
-	DisplayLimit int
-}
-```
-
 ### <a id="Progress" href="#Progress">type Progress struct</a>
 
 ```
 searchKey: api.Progress
+tags: [struct]
 ```
 
 ```Go
@@ -295,6 +279,7 @@ Progress is an aggregate type representing a progress update.
 
 ```
 searchKey: api.BuildProgressEvent
+tags: [method]
 ```
 
 ```Go
@@ -303,10 +288,41 @@ func BuildProgressEvent(stats ProgressStats) Progress
 
 BuildProgressEvent builds a progress event from a final results resolver. 
 
+### <a id="ProgressStats" href="#ProgressStats">type ProgressStats struct</a>
+
+```
+searchKey: api.ProgressStats
+tags: [struct]
+```
+
+```Go
+type ProgressStats struct {
+	MatchCount          int
+	ElapsedMilliseconds int
+	RepositoriesCount   *int
+	ExcludedArchived    int
+	ExcludedForks       int
+
+	Timedout []Namer
+	Missing  []Namer
+	Cloning  []Namer
+
+	LimitHit bool
+
+	// SuggestedLimit is what to suggest to the user for count if needed.
+	SuggestedLimit int
+
+	Trace string // only filled if requested
+
+	DisplayLimit int
+}
+```
+
 ### <a id="Skipped" href="#Skipped">type Skipped struct</a>
 
 ```
 searchKey: api.Skipped
+tags: [struct]
 ```
 
 ```Go
@@ -327,22 +343,44 @@ type Skipped struct {
 
 Skipped is a description of shards or documents that were skipped. 
 
-#### <a id="skippedReposHandler" href="#skippedReposHandler">func skippedReposHandler(repos []Namer, titleVerb, messageReason string, base Skipped) (Skipped, bool)</a>
+#### <a id="displayLimitHandler" href="#displayLimitHandler">func displayLimitHandler(resultsResolver ProgressStats) (Skipped, bool)</a>
 
 ```
-searchKey: api.skippedReposHandler
-tags: [private]
+searchKey: api.displayLimitHandler
+tags: [method private]
 ```
 
 ```Go
-func skippedReposHandler(repos []Namer, titleVerb, messageReason string, base Skipped) (Skipped, bool)
+func displayLimitHandler(resultsResolver ProgressStats) (Skipped, bool)
+```
+
+#### <a id="excludedArchiveHandler" href="#excludedArchiveHandler">func excludedArchiveHandler(resultsResolver ProgressStats) (Skipped, bool)</a>
+
+```
+searchKey: api.excludedArchiveHandler
+tags: [method private]
+```
+
+```Go
+func excludedArchiveHandler(resultsResolver ProgressStats) (Skipped, bool)
+```
+
+#### <a id="excludedForkHandler" href="#excludedForkHandler">func excludedForkHandler(resultsResolver ProgressStats) (Skipped, bool)</a>
+
+```
+searchKey: api.excludedForkHandler
+tags: [method private]
+```
+
+```Go
+func excludedForkHandler(resultsResolver ProgressStats) (Skipped, bool)
 ```
 
 #### <a id="repositoryCloningHandler" href="#repositoryCloningHandler">func repositoryCloningHandler(resultsResolver ProgressStats) (Skipped, bool)</a>
 
 ```
 searchKey: api.repositoryCloningHandler
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -353,87 +391,51 @@ func repositoryCloningHandler(resultsResolver ProgressStats) (Skipped, bool)
 
 ```
 searchKey: api.repositoryMissingHandler
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func repositoryMissingHandler(resultsResolver ProgressStats) (Skipped, bool)
 ```
 
-#### <a id="shardTimeoutHandler" href="#shardTimeoutHandler">func shardTimeoutHandler(resultsResolver ProgressStats) (Skipped, bool)</a>
-
-```
-searchKey: api.shardTimeoutHandler
-tags: [private]
-```
-
-```Go
-func shardTimeoutHandler(resultsResolver ProgressStats) (Skipped, bool)
-```
-
-#### <a id="displayLimitHandler" href="#displayLimitHandler">func displayLimitHandler(resultsResolver ProgressStats) (Skipped, bool)</a>
-
-```
-searchKey: api.displayLimitHandler
-tags: [private]
-```
-
-```Go
-func displayLimitHandler(resultsResolver ProgressStats) (Skipped, bool)
-```
-
 #### <a id="shardMatchLimitHandler" href="#shardMatchLimitHandler">func shardMatchLimitHandler(resultsResolver ProgressStats) (Skipped, bool)</a>
 
 ```
 searchKey: api.shardMatchLimitHandler
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func shardMatchLimitHandler(resultsResolver ProgressStats) (Skipped, bool)
 ```
 
-#### <a id="excludedForkHandler" href="#excludedForkHandler">func excludedForkHandler(resultsResolver ProgressStats) (Skipped, bool)</a>
+#### <a id="shardTimeoutHandler" href="#shardTimeoutHandler">func shardTimeoutHandler(resultsResolver ProgressStats) (Skipped, bool)</a>
 
 ```
-searchKey: api.excludedForkHandler
-tags: [private]
-```
-
-```Go
-func excludedForkHandler(resultsResolver ProgressStats) (Skipped, bool)
-```
-
-#### <a id="excludedArchiveHandler" href="#excludedArchiveHandler">func excludedArchiveHandler(resultsResolver ProgressStats) (Skipped, bool)</a>
-
-```
-searchKey: api.excludedArchiveHandler
-tags: [private]
+searchKey: api.shardTimeoutHandler
+tags: [method private]
 ```
 
 ```Go
-func excludedArchiveHandler(resultsResolver ProgressStats) (Skipped, bool)
+func shardTimeoutHandler(resultsResolver ProgressStats) (Skipped, bool)
 ```
 
-### <a id="SkippedSuggested" href="#SkippedSuggested">type SkippedSuggested struct</a>
+#### <a id="skippedReposHandler" href="#skippedReposHandler">func skippedReposHandler(repos []Namer, titleVerb, messageReason string, base Skipped) (Skipped, bool)</a>
 
 ```
-searchKey: api.SkippedSuggested
+searchKey: api.skippedReposHandler
+tags: [method private]
 ```
 
 ```Go
-type SkippedSuggested struct {
-	Title           string `json:"title"`
-	QueryExpression string `json:"queryExpression"`
-}
+func skippedReposHandler(repos []Namer, titleVerb, messageReason string, base Skipped) (Skipped, bool)
 ```
-
-SkippedSuggested is a query to suggest to the user to resolve the reason for skipping. 
 
 ### <a id="SkippedReason" href="#SkippedReason">type SkippedReason string</a>
 
 ```
 searchKey: api.SkippedReason
+tags: [string]
 ```
 
 ```Go
@@ -446,6 +448,7 @@ SkippedReason is an enum for Skipped.Reason.
 
 ```
 searchKey: api.SkippedSeverity
+tags: [string]
 ```
 
 ```Go
@@ -454,11 +457,27 @@ type SkippedSeverity string
 
 SkippedSeverity is an enum for Skipped.Severity. 
 
+### <a id="SkippedSuggested" href="#SkippedSuggested">type SkippedSuggested struct</a>
+
+```
+searchKey: api.SkippedSuggested
+tags: [struct]
+```
+
+```Go
+type SkippedSuggested struct {
+	Title           string `json:"title"`
+	QueryExpression string `json:"queryExpression"`
+}
+```
+
+SkippedSuggested is a query to suggest to the user to resolve the reason for skipping. 
+
 ### <a id="repo" href="#repo">type repo struct</a>
 
 ```
 searchKey: api.repo
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -471,7 +490,7 @@ type repo struct {
 
 ```
 searchKey: api.repo.Name
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -481,14 +500,47 @@ func (r repo) Name() string
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
+```
+
+### <a id="TestNumber" href="#TestNumber">func TestNumber(t *testing.T)</a>
+
+```
+searchKey: api.TestNumber
+tags: [method private test]
+```
+
+```Go
+func TestNumber(t *testing.T)
+```
+
+### <a id="TestSearchProgress" href="#TestSearchProgress">func TestSearchProgress(t *testing.T)</a>
+
+```
+searchKey: api.TestSearchProgress
+tags: [method private test]
+```
+
+```Go
+func TestSearchProgress(t *testing.T)
+```
+
+### <a id="intPtr" href="#intPtr">func intPtr(i int) *int</a>
+
+```
+searchKey: api.intPtr
+tags: [method private]
+```
+
+```Go
+func intPtr(i int) *int
 ```
 
 ### <a id="number" href="#number">func number(i int) string</a>
 
 ```
 searchKey: api.number
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -499,43 +551,10 @@ func number(i int) string
 
 ```
 searchKey: api.plural
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func plural(one, many string, n int) string
-```
-
-### <a id="TestSearchProgress" href="#TestSearchProgress">func TestSearchProgress(t *testing.T)</a>
-
-```
-searchKey: api.TestSearchProgress
-tags: [private]
-```
-
-```Go
-func TestSearchProgress(t *testing.T)
-```
-
-### <a id="TestNumber" href="#TestNumber">func TestNumber(t *testing.T)</a>
-
-```
-searchKey: api.TestNumber
-tags: [private]
-```
-
-```Go
-func TestNumber(t *testing.T)
-```
-
-### <a id="intPtr" href="#intPtr">func intPtr(i int) *int</a>
-
-```
-searchKey: api.intPtr
-tags: [private]
-```
-
-```Go
-func intPtr(i int) *int
 ```
 

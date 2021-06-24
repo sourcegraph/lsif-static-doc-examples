@@ -285,239 +285,251 @@ Note: Fscan etc. can read one character (rune) past the input they return, which
 ## Index
 
 * [Constants](#const)
-    * [const ldigits](#ldigits)
-    * [const udigits](#udigits)
-    * [const signed](#signed)
-    * [const unsigned](#unsigned)
+    * [const badIndexString](#badIndexString)
+    * [const badPrecString](#badPrecString)
+    * [const badWidthString](#badWidthString)
+    * [const binaryDigits](#binaryDigits)
     * [const commaSpaceString](#commaSpaceString)
+    * [const decimalDigits](#decimalDigits)
+    * [const eof](#eof)
+    * [const exponent](#exponent)
+    * [const extraString](#extraString)
+    * [const floatVerbs](#floatVerbs)
+    * [const hexadecimalDigits](#hexadecimalDigits)
+    * [const hugeWid](#hugeWid)
+    * [const intBits](#intBits)
+    * [const invReflectString](#invReflectString)
+    * [const ldigits](#ldigits)
+    * [const mapString](#mapString)
+    * [const missingString](#missingString)
     * [const nilAngleString](#nilAngleString)
     * [const nilParenString](#nilParenString)
     * [const nilString](#nilString)
-    * [const mapString](#mapString)
-    * [const percentBangString](#percentBangString)
-    * [const missingString](#missingString)
-    * [const badIndexString](#badIndexString)
-    * [const panicString](#panicString)
-    * [const extraString](#extraString)
-    * [const badWidthString](#badWidthString)
-    * [const badPrecString](#badPrecString)
     * [const noVerbString](#noVerbString)
-    * [const invReflectString](#invReflectString)
-    * [const eof](#eof)
-    * [const binaryDigits](#binaryDigits)
     * [const octalDigits](#octalDigits)
-    * [const decimalDigits](#decimalDigits)
-    * [const hexadecimalDigits](#hexadecimalDigits)
-    * [const sign](#sign)
+    * [const panicString](#panicString)
+    * [const percentBangString](#percentBangString)
     * [const period](#period)
-    * [const exponent](#exponent)
-    * [const floatVerbs](#floatVerbs)
-    * [const hugeWid](#hugeWid)
-    * [const intBits](#intBits)
+    * [const sign](#sign)
+    * [const signed](#signed)
+    * [const udigits](#udigits)
     * [const uintptrBits](#uintptrBits)
+    * [const unsigned](#unsigned)
 * [Variables](#var)
+    * [var IsSpace](#IsSpace)
+    * [var Parsenum](#Parsenum)
+    * [var boolError](#boolError)
+    * [var complexError](#complexError)
     * [var ppFree](#ppFree)
     * [var space](#space)
     * [var ssFree](#ssFree)
-    * [var complexError](#complexError)
-    * [var boolError](#boolError)
-    * [var IsSpace](#IsSpace)
-    * [var Parsenum](#Parsenum)
 * [Types](#type)
-    * [type wrapError struct](#wrapError)
-        * [func (e *wrapError) Error() string](#wrapError.Error)
-        * [func (e *wrapError) Unwrap() error](#wrapError.Unwrap)
-    * [type fmtFlags struct](#fmtFlags)
-    * [type fmt struct](#fmt)
-        * [func (f *fmt) clearflags()](#fmt.clearflags)
-        * [func (f *fmt) init(buf *buffer)](#fmt.init.format.go)
-        * [func (f *fmt) writePadding(n int)](#fmt.writePadding)
-        * [func (f *fmt) pad(b []byte)](#fmt.pad)
-        * [func (f *fmt) padString(s string)](#fmt.padString)
-        * [func (f *fmt) fmtBoolean(v bool)](#fmt.fmtBoolean)
-        * [func (f *fmt) fmtUnicode(u uint64)](#fmt.fmtUnicode)
-        * [func (f *fmt) fmtInteger(u uint64, base int, isSigned bool, verb rune, digits string)](#fmt.fmtInteger)
-        * [func (f *fmt) truncateString(s string) string](#fmt.truncateString)
-        * [func (f *fmt) truncate(b []byte) []byte](#fmt.truncate)
-        * [func (f *fmt) fmtS(s string)](#fmt.fmtS)
-        * [func (f *fmt) fmtBs(b []byte)](#fmt.fmtBs)
-        * [func (f *fmt) fmtSbx(s string, b []byte, digits string)](#fmt.fmtSbx)
-        * [func (f *fmt) fmtSx(s, digits string)](#fmt.fmtSx)
-        * [func (f *fmt) fmtBx(b []byte, digits string)](#fmt.fmtBx)
-        * [func (f *fmt) fmtQ(s string)](#fmt.fmtQ)
-        * [func (f *fmt) fmtC(c uint64)](#fmt.fmtC)
-        * [func (f *fmt) fmtQc(c uint64)](#fmt.fmtQc)
-        * [func (f *fmt) fmtFloat(v float64, size int, verb rune, prec int)](#fmt.fmtFloat)
-    * [type State interface](#State)
     * [type Formatter interface](#Formatter)
-    * [type Stringer interface](#Stringer)
     * [type GoStringer interface](#GoStringer)
-    * [type buffer []byte](#buffer)
-        * [func (b *buffer) write(p []byte)](#buffer.write)
-        * [func (b *buffer) writeString(s string)](#buffer.writeString)
-        * [func (b *buffer) writeByte(c byte)](#buffer.writeByte)
-        * [func (bp *buffer) writeRune(r rune)](#buffer.writeRune)
-    * [type pp struct](#pp)
-        * [func newPrinter() *pp](#newPrinter)
-        * [func (p *pp) free()](#pp.free)
-        * [func (p *pp) Width() (wid int, ok bool)](#pp.Width)
-        * [func (p *pp) Precision() (prec int, ok bool)](#pp.Precision)
-        * [func (p *pp) Flag(b int) bool](#pp.Flag)
-        * [func (p *pp) Write(b []byte) (ret int, err error)](#pp.Write)
-        * [func (p *pp) WriteString(s string) (ret int, err error)](#pp.WriteString)
-        * [func (p *pp) unknownType(v reflect.Value)](#pp.unknownType)
-        * [func (p *pp) badVerb(verb rune)](#pp.badVerb)
-        * [func (p *pp) fmtBool(v bool, verb rune)](#pp.fmtBool)
-        * [func (p *pp) fmt0x64(v uint64, leading0x bool)](#pp.fmt0x64)
-        * [func (p *pp) fmtInteger(v uint64, isSigned bool, verb rune)](#pp.fmtInteger)
-        * [func (p *pp) fmtFloat(v float64, size int, verb rune)](#pp.fmtFloat)
-        * [func (p *pp) fmtComplex(v complex128, size int, verb rune)](#pp.fmtComplex)
-        * [func (p *pp) fmtString(v string, verb rune)](#pp.fmtString)
-        * [func (p *pp) fmtBytes(v []byte, verb rune, typeString string)](#pp.fmtBytes)
-        * [func (p *pp) fmtPointer(value reflect.Value, verb rune)](#pp.fmtPointer)
-        * [func (p *pp) catchPanic(arg interface{}, verb rune, method string)](#pp.catchPanic)
-        * [func (p *pp) handleMethods(verb rune) (handled bool)](#pp.handleMethods)
-        * [func (p *pp) printArg(arg interface{}, verb rune)](#pp.printArg)
-        * [func (p *pp) printValue(value reflect.Value, verb rune, depth int)](#pp.printValue)
-        * [func (p *pp) argNumber(argNum int, format string, i int, numArgs int) (newArgNum, newi int, found bool)](#pp.argNumber)
-        * [func (p *pp) badArgNum(verb rune)](#pp.badArgNum)
-        * [func (p *pp) missingArg(verb rune)](#pp.missingArg)
-        * [func (p *pp) doPrintf(format string, a []interface{})](#pp.doPrintf)
-        * [func (p *pp) doPrint(a []interface{})](#pp.doPrint)
-        * [func (p *pp) doPrintln(a []interface{})](#pp.doPrintln)
     * [type ScanState interface](#ScanState)
     * [type Scanner interface](#Scanner)
-    * [type stringReader string](#stringReader)
-        * [func (r *stringReader) Read(b []byte) (n int, err error)](#stringReader.Read)
+    * [type State interface](#State)
+    * [type Stringer interface](#Stringer)
+    * [type buffer []byte](#buffer)
+        * [func (b *buffer) write(p []byte)](#buffer.write)
+        * [func (b *buffer) writeByte(c byte)](#buffer.writeByte)
+        * [func (bp *buffer) writeRune(r rune)](#buffer.writeRune)
+        * [func (b *buffer) writeString(s string)](#buffer.writeString)
+    * [type fmt struct](#fmt)
+        * [func (f *fmt) clearflags()](#fmt.clearflags)
+        * [func (f *fmt) fmtBoolean(v bool)](#fmt.fmtBoolean)
+        * [func (f *fmt) fmtBs(b []byte)](#fmt.fmtBs)
+        * [func (f *fmt) fmtBx(b []byte, digits string)](#fmt.fmtBx)
+        * [func (f *fmt) fmtC(c uint64)](#fmt.fmtC)
+        * [func (f *fmt) fmtFloat(v float64, size int, verb rune, prec int)](#fmt.fmtFloat)
+        * [func (f *fmt) fmtInteger(u uint64, base int, isSigned bool, verb rune, digits string)](#fmt.fmtInteger)
+        * [func (f *fmt) fmtQ(s string)](#fmt.fmtQ)
+        * [func (f *fmt) fmtQc(c uint64)](#fmt.fmtQc)
+        * [func (f *fmt) fmtS(s string)](#fmt.fmtS)
+        * [func (f *fmt) fmtSbx(s string, b []byte, digits string)](#fmt.fmtSbx)
+        * [func (f *fmt) fmtSx(s, digits string)](#fmt.fmtSx)
+        * [func (f *fmt) fmtUnicode(u uint64)](#fmt.fmtUnicode)
+        * [func (f *fmt) init(buf *buffer)](#fmt.init.format.go)
+        * [func (f *fmt) pad(b []byte)](#fmt.pad)
+        * [func (f *fmt) padString(s string)](#fmt.padString)
+        * [func (f *fmt) truncate(b []byte) []byte](#fmt.truncate)
+        * [func (f *fmt) truncateString(s string) string](#fmt.truncateString)
+        * [func (f *fmt) writePadding(n int)](#fmt.writePadding)
+    * [type fmtFlags struct](#fmtFlags)
+    * [type pp struct](#pp)
+        * [func newPrinter() *pp](#newPrinter)
+        * [func (p *pp) Flag(b int) bool](#pp.Flag)
+        * [func (p *pp) Precision() (prec int, ok bool)](#pp.Precision)
+        * [func (p *pp) Width() (wid int, ok bool)](#pp.Width)
+        * [func (p *pp) Write(b []byte) (ret int, err error)](#pp.Write)
+        * [func (p *pp) WriteString(s string) (ret int, err error)](#pp.WriteString)
+        * [func (p *pp) argNumber(argNum int, format string, i int, numArgs int) (newArgNum, newi int, found bool)](#pp.argNumber)
+        * [func (p *pp) badArgNum(verb rune)](#pp.badArgNum)
+        * [func (p *pp) badVerb(verb rune)](#pp.badVerb)
+        * [func (p *pp) catchPanic(arg interface{}, verb rune, method string)](#pp.catchPanic)
+        * [func (p *pp) doPrint(a []interface{})](#pp.doPrint)
+        * [func (p *pp) doPrintf(format string, a []interface{})](#pp.doPrintf)
+        * [func (p *pp) doPrintln(a []interface{})](#pp.doPrintln)
+        * [func (p *pp) fmt0x64(v uint64, leading0x bool)](#pp.fmt0x64)
+        * [func (p *pp) fmtBool(v bool, verb rune)](#pp.fmtBool)
+        * [func (p *pp) fmtBytes(v []byte, verb rune, typeString string)](#pp.fmtBytes)
+        * [func (p *pp) fmtComplex(v complex128, size int, verb rune)](#pp.fmtComplex)
+        * [func (p *pp) fmtFloat(v float64, size int, verb rune)](#pp.fmtFloat)
+        * [func (p *pp) fmtInteger(v uint64, isSigned bool, verb rune)](#pp.fmtInteger)
+        * [func (p *pp) fmtPointer(value reflect.Value, verb rune)](#pp.fmtPointer)
+        * [func (p *pp) fmtString(v string, verb rune)](#pp.fmtString)
+        * [func (p *pp) free()](#pp.free)
+        * [func (p *pp) handleMethods(verb rune) (handled bool)](#pp.handleMethods)
+        * [func (p *pp) missingArg(verb rune)](#pp.missingArg)
+        * [func (p *pp) printArg(arg interface{}, verb rune)](#pp.printArg)
+        * [func (p *pp) printValue(value reflect.Value, verb rune, depth int)](#pp.printValue)
+        * [func (p *pp) unknownType(v reflect.Value)](#pp.unknownType)
+    * [type readRune struct](#readRune)
+        * [func (r *readRune) ReadRune() (rr rune, size int, err error)](#readRune.ReadRune)
+        * [func (r *readRune) UnreadRune() error](#readRune.UnreadRune)
+        * [func (r *readRune) readByte() (b byte, err error)](#readRune.readByte)
     * [type scanError struct](#scanError)
     * [type ss struct](#ss)
         * [func newScanState(r io.Reader, nlIsSpace, nlIsEnd bool) (s *ss, old ssave)](#newScanState)
         * [func (s *ss) Read(buf []byte) (n int, err error)](#ss.Read)
         * [func (s *ss) ReadRune() (r rune, size int, err error)](#ss.ReadRune)
-        * [func (s *ss) Width() (wid int, ok bool)](#ss.Width)
-        * [func (s *ss) getRune() (r rune)](#ss.getRune)
-        * [func (s *ss) mustReadRune() (r rune)](#ss.mustReadRune)
+        * [func (s *ss) SkipSpace()](#ss.SkipSpace)
+        * [func (s *ss) Token(skipSpace bool, f func(rune) bool) (tok []byte, err error)](#ss.Token)
         * [func (s *ss) UnreadRune() error](#ss.UnreadRune)
+        * [func (s *ss) Width() (wid int, ok bool)](#ss.Width)
+        * [func (s *ss) accept(ok string) bool](#ss.accept)
+        * [func (s *ss) advance(format string) (i int)](#ss.advance)
+        * [func (s *ss) complexTokens() (real, imag string)](#ss.complexTokens)
+        * [func (s *ss) consume(ok string, accept bool) bool](#ss.consume)
+        * [func (s *ss) convertFloat(str string, n int) float64](#ss.convertFloat)
+        * [func (s *ss) convertString(verb rune) (str string)](#ss.convertString)
+        * [func (s *ss) doScan(a []interface{}) (numProcessed int, err error)](#ss.doScan)
+        * [func (s *ss) doScanf(format string, a []interface{}) (numProcessed int, err error)](#ss.doScanf)
         * [func (s *ss) error(err error)](#ss.error)
         * [func (s *ss) errorString(err string)](#ss.errorString)
-        * [func (s *ss) Token(skipSpace bool, f func(rune) bool) (tok []byte, err error)](#ss.Token)
-        * [func (s *ss) free(old ssave)](#ss.free)
-        * [func (s *ss) SkipSpace()](#ss.SkipSpace)
-        * [func (s *ss) token(skipSpace bool, f func(rune) bool) []byte](#ss.token)
-        * [func (s *ss) consume(ok string, accept bool) bool](#ss.consume)
-        * [func (s *ss) peek(ok string) bool](#ss.peek)
-        * [func (s *ss) notEOF()](#ss.notEOF)
-        * [func (s *ss) accept(ok string) bool](#ss.accept)
-        * [func (s *ss) okVerb(verb rune, okVerbs, typ string) bool](#ss.okVerb)
-        * [func (s *ss) scanBool(verb rune) bool](#ss.scanBool)
-        * [func (s *ss) getBase(verb rune) (base int, digits string)](#ss.getBase)
-        * [func (s *ss) scanNumber(digits string, haveDigits bool) string](#ss.scanNumber)
-        * [func (s *ss) scanRune(bitSize int) int64](#ss.scanRune)
-        * [func (s *ss) scanBasePrefix() (base int, digits string, zeroFound bool)](#ss.scanBasePrefix)
-        * [func (s *ss) scanInt(verb rune, bitSize int) int64](#ss.scanInt)
-        * [func (s *ss) scanUint(verb rune, bitSize int) uint64](#ss.scanUint)
         * [func (s *ss) floatToken() string](#ss.floatToken)
-        * [func (s *ss) complexTokens() (real, imag string)](#ss.complexTokens)
-        * [func (s *ss) convertFloat(str string, n int) float64](#ss.convertFloat)
-        * [func (s *ss) scanComplex(verb rune, n int) complex128](#ss.scanComplex)
-        * [func (s *ss) convertString(verb rune) (str string)](#ss.convertString)
-        * [func (s *ss) quotedString() string](#ss.quotedString)
+        * [func (s *ss) free(old ssave)](#ss.free)
+        * [func (s *ss) getBase(verb rune) (base int, digits string)](#ss.getBase)
+        * [func (s *ss) getRune() (r rune)](#ss.getRune)
         * [func (s *ss) hexByte() (b byte, ok bool)](#ss.hexByte)
         * [func (s *ss) hexString() string](#ss.hexString)
-        * [func (s *ss) scanPercent()](#ss.scanPercent)
+        * [func (s *ss) mustReadRune() (r rune)](#ss.mustReadRune)
+        * [func (s *ss) notEOF()](#ss.notEOF)
+        * [func (s *ss) okVerb(verb rune, okVerbs, typ string) bool](#ss.okVerb)
+        * [func (s *ss) peek(ok string) bool](#ss.peek)
+        * [func (s *ss) quotedString() string](#ss.quotedString)
+        * [func (s *ss) scanBasePrefix() (base int, digits string, zeroFound bool)](#ss.scanBasePrefix)
+        * [func (s *ss) scanBool(verb rune) bool](#ss.scanBool)
+        * [func (s *ss) scanComplex(verb rune, n int) complex128](#ss.scanComplex)
+        * [func (s *ss) scanInt(verb rune, bitSize int) int64](#ss.scanInt)
+        * [func (s *ss) scanNumber(digits string, haveDigits bool) string](#ss.scanNumber)
         * [func (s *ss) scanOne(verb rune, arg interface{})](#ss.scanOne)
-        * [func (s *ss) doScan(a []interface{}) (numProcessed int, err error)](#ss.doScan)
-        * [func (s *ss) advance(format string) (i int)](#ss.advance)
-        * [func (s *ss) doScanf(format string, a []interface{}) (numProcessed int, err error)](#ss.doScanf)
+        * [func (s *ss) scanPercent()](#ss.scanPercent)
+        * [func (s *ss) scanRune(bitSize int) int64](#ss.scanRune)
+        * [func (s *ss) scanUint(verb rune, bitSize int) uint64](#ss.scanUint)
+        * [func (s *ss) token(skipSpace bool, f func(rune) bool) []byte](#ss.token)
     * [type ssave struct](#ssave)
-    * [type readRune struct](#readRune)
-        * [func (r *readRune) readByte() (b byte, err error)](#readRune.readByte)
-        * [func (r *readRune) ReadRune() (rr rune, size int, err error)](#readRune.ReadRune)
-        * [func (r *readRune) UnreadRune() error](#readRune.UnreadRune)
+    * [type stringReader string](#stringReader)
+        * [func (r *stringReader) Read(b []byte) (n int, err error)](#stringReader.Read)
+    * [type wrapError struct](#wrapError)
+        * [func (e *wrapError) Error() string](#wrapError.Error)
+        * [func (e *wrapError) Unwrap() error](#wrapError.Unwrap)
 * [Functions](#func)
     * [func Errorf(format string, a ...interface{}) error](#Errorf)
-    * [func Fprintf(w io.Writer, format string, a ...interface{}) (n int, err error)](#Fprintf)
-    * [func Printf(format string, a ...interface{}) (n int, err error)](#Printf)
-    * [func Sprintf(format string, a ...interface{}) string](#Sprintf)
     * [func Fprint(w io.Writer, a ...interface{}) (n int, err error)](#Fprint)
-    * [func Print(a ...interface{}) (n int, err error)](#Print)
-    * [func Sprint(a ...interface{}) string](#Sprint)
+    * [func Fprintf(w io.Writer, format string, a ...interface{}) (n int, err error)](#Fprintf)
     * [func Fprintln(w io.Writer, a ...interface{}) (n int, err error)](#Fprintln)
-    * [func Println(a ...interface{}) (n int, err error)](#Println)
-    * [func Sprintln(a ...interface{}) string](#Sprintln)
-    * [func getField(v reflect.Value, i int) reflect.Value](#getField)
-    * [func tooLarge(x int) bool](#tooLarge)
-    * [func parsenum(s string, start, end int) (num int, isnum bool, newi int)](#parsenum)
-    * [func intFromArg(a []interface{}, argNum int) (num int, isInt bool, newArgNum int)](#intFromArg)
-    * [func parseArgNumber(format string) (index int, wid int, ok bool)](#parseArgNumber)
-    * [func Scan(a ...interface{}) (n int, err error)](#Scan)
-    * [func Scanln(a ...interface{}) (n int, err error)](#Scanln)
-    * [func Scanf(format string, a ...interface{}) (n int, err error)](#Scanf)
-    * [func Sscan(str string, a ...interface{}) (n int, err error)](#Sscan)
-    * [func Sscanln(str string, a ...interface{}) (n int, err error)](#Sscanln)
-    * [func Sscanf(str string, format string, a ...interface{}) (n int, err error)](#Sscanf)
     * [func Fscan(r io.Reader, a ...interface{}) (n int, err error)](#Fscan)
-    * [func Fscanln(r io.Reader, a ...interface{}) (n int, err error)](#Fscanln)
     * [func Fscanf(r io.Reader, format string, a ...interface{}) (n int, err error)](#Fscanf)
-    * [func isSpace(r rune) bool](#isSpace)
-    * [func notSpace(r rune) bool](#notSpace)
-    * [func indexRune(s string, r rune) int](#indexRune)
+    * [func Fscanln(r io.Reader, a ...interface{}) (n int, err error)](#Fscanln)
+    * [func Print(a ...interface{}) (n int, err error)](#Print)
+    * [func Printf(format string, a ...interface{}) (n int, err error)](#Printf)
+    * [func Println(a ...interface{}) (n int, err error)](#Println)
+    * [func Scan(a ...interface{}) (n int, err error)](#Scan)
+    * [func Scanf(format string, a ...interface{}) (n int, err error)](#Scanf)
+    * [func Scanln(a ...interface{}) (n int, err error)](#Scanln)
+    * [func Sprint(a ...interface{}) string](#Sprint)
+    * [func Sprintf(format string, a ...interface{}) string](#Sprintf)
+    * [func Sprintln(a ...interface{}) string](#Sprintln)
+    * [func Sscan(str string, a ...interface{}) (n int, err error)](#Sscan)
+    * [func Sscanf(str string, format string, a ...interface{}) (n int, err error)](#Sscanf)
+    * [func Sscanln(str string, a ...interface{}) (n int, err error)](#Sscanln)
+    * [func errorHandler(errp *error)](#errorHandler)
+    * [func getField(v reflect.Value, i int) reflect.Value](#getField)
     * [func hasX(s string) bool](#hasX)
     * [func hexDigit(d rune) (int, bool)](#hexDigit)
-    * [func errorHandler(errp *error)](#errorHandler)
+    * [func indexRune(s string, r rune) int](#indexRune)
+    * [func intFromArg(a []interface{}, argNum int) (num int, isInt bool, newArgNum int)](#intFromArg)
+    * [func isSpace(r rune) bool](#isSpace)
+    * [func notSpace(r rune) bool](#notSpace)
+    * [func parseArgNumber(format string) (index int, wid int, ok bool)](#parseArgNumber)
+    * [func parsenum(s string, start, end int) (num int, isnum bool, newi int)](#parsenum)
+    * [func tooLarge(x int) bool](#tooLarge)
 
 
 ## <a id="const" href="#const">Constants</a>
 
-### <a id="ldigits" href="#ldigits">const ldigits</a>
-
 ```
-searchKey: fmt.ldigits
-tags: [private]
+tags: [package]
 ```
 
-```Go
-const ldigits = "0123456789abcdefx"
-```
-
-### <a id="udigits" href="#udigits">const udigits</a>
+### <a id="badIndexString" href="#badIndexString">const badIndexString</a>
 
 ```
-searchKey: fmt.udigits
-tags: [private]
+searchKey: fmt.badIndexString
+tags: [constant string private]
 ```
 
 ```Go
-const udigits = "0123456789ABCDEFX"
+const badIndexString = "(BADINDEX)"
 ```
 
-### <a id="signed" href="#signed">const signed</a>
+Strings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. 
+
+### <a id="badPrecString" href="#badPrecString">const badPrecString</a>
 
 ```
-searchKey: fmt.signed
-tags: [private]
-```
-
-```Go
-const signed = true
-```
-
-### <a id="unsigned" href="#unsigned">const unsigned</a>
-
-```
-searchKey: fmt.unsigned
-tags: [private]
+searchKey: fmt.badPrecString
+tags: [constant string private]
 ```
 
 ```Go
-const unsigned = false
+const badPrecString = "%!(BADPREC)"
 ```
+
+Strings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. 
+
+### <a id="badWidthString" href="#badWidthString">const badWidthString</a>
+
+```
+searchKey: fmt.badWidthString
+tags: [constant string private]
+```
+
+```Go
+const badWidthString = "%!(BADWIDTH)"
+```
+
+Strings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. 
+
+### <a id="binaryDigits" href="#binaryDigits">const binaryDigits</a>
+
+```
+searchKey: fmt.binaryDigits
+tags: [constant string private]
+```
+
+```Go
+const binaryDigits = "01"
+```
+
+Numerical elements 
 
 ### <a id="commaSpaceString" href="#commaSpaceString">const commaSpaceString</a>
 
 ```
 searchKey: fmt.commaSpaceString
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -526,11 +538,157 @@ const commaSpaceString = ", "
 
 Strings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. 
 
+### <a id="decimalDigits" href="#decimalDigits">const decimalDigits</a>
+
+```
+searchKey: fmt.decimalDigits
+tags: [constant string private]
+```
+
+```Go
+const decimalDigits = "0123456789"
+```
+
+Numerical elements 
+
+### <a id="eof" href="#eof">const eof</a>
+
+```
+searchKey: fmt.eof
+tags: [constant number private]
+```
+
+```Go
+const eof = -1
+```
+
+### <a id="exponent" href="#exponent">const exponent</a>
+
+```
+searchKey: fmt.exponent
+tags: [constant string private]
+```
+
+```Go
+const exponent = "eEpP"
+```
+
+Numerical elements 
+
+### <a id="extraString" href="#extraString">const extraString</a>
+
+```
+searchKey: fmt.extraString
+tags: [constant string private]
+```
+
+```Go
+const extraString = "%!(EXTRA "
+```
+
+Strings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. 
+
+### <a id="floatVerbs" href="#floatVerbs">const floatVerbs</a>
+
+```
+searchKey: fmt.floatVerbs
+tags: [constant string private]
+```
+
+```Go
+const floatVerbs = "beEfFgGv"
+```
+
+### <a id="hexadecimalDigits" href="#hexadecimalDigits">const hexadecimalDigits</a>
+
+```
+searchKey: fmt.hexadecimalDigits
+tags: [constant string private]
+```
+
+```Go
+const hexadecimalDigits = "0123456789aAbBcCdDeEfF"
+```
+
+Numerical elements 
+
+### <a id="hugeWid" href="#hugeWid">const hugeWid</a>
+
+```
+searchKey: fmt.hugeWid
+tags: [constant number private]
+```
+
+```Go
+const hugeWid = 1 << 30
+```
+
+### <a id="intBits" href="#intBits">const intBits</a>
+
+```
+searchKey: fmt.intBits
+tags: [constant number private]
+```
+
+```Go
+const intBits = 32 << (^uint(0) >> 63)
+```
+
+### <a id="invReflectString" href="#invReflectString">const invReflectString</a>
+
+```
+searchKey: fmt.invReflectString
+tags: [constant string private]
+```
+
+```Go
+const invReflectString = "<invalid reflect.Value>"
+```
+
+Strings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. 
+
+### <a id="ldigits" href="#ldigits">const ldigits</a>
+
+```
+searchKey: fmt.ldigits
+tags: [constant string private]
+```
+
+```Go
+const ldigits = "0123456789abcdefx"
+```
+
+### <a id="mapString" href="#mapString">const mapString</a>
+
+```
+searchKey: fmt.mapString
+tags: [constant string private]
+```
+
+```Go
+const mapString = "map["
+```
+
+Strings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. 
+
+### <a id="missingString" href="#missingString">const missingString</a>
+
+```
+searchKey: fmt.missingString
+tags: [constant string private]
+```
+
+```Go
+const missingString = "(MISSING)"
+```
+
+Strings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. 
+
 ### <a id="nilAngleString" href="#nilAngleString">const nilAngleString</a>
 
 ```
 searchKey: fmt.nilAngleString
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -543,7 +701,7 @@ Strings for use with buffer.WriteString. This is less overhead than using buffer
 
 ```
 searchKey: fmt.nilParenString
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -556,7 +714,7 @@ Strings for use with buffer.WriteString. This is less overhead than using buffer
 
 ```
 searchKey: fmt.nilString
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -565,115 +723,11 @@ const nilString = "nil"
 
 Strings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. 
 
-### <a id="mapString" href="#mapString">const mapString</a>
-
-```
-searchKey: fmt.mapString
-tags: [private]
-```
-
-```Go
-const mapString = "map["
-```
-
-Strings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. 
-
-### <a id="percentBangString" href="#percentBangString">const percentBangString</a>
-
-```
-searchKey: fmt.percentBangString
-tags: [private]
-```
-
-```Go
-const percentBangString = "%!"
-```
-
-Strings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. 
-
-### <a id="missingString" href="#missingString">const missingString</a>
-
-```
-searchKey: fmt.missingString
-tags: [private]
-```
-
-```Go
-const missingString = "(MISSING)"
-```
-
-Strings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. 
-
-### <a id="badIndexString" href="#badIndexString">const badIndexString</a>
-
-```
-searchKey: fmt.badIndexString
-tags: [private]
-```
-
-```Go
-const badIndexString = "(BADINDEX)"
-```
-
-Strings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. 
-
-### <a id="panicString" href="#panicString">const panicString</a>
-
-```
-searchKey: fmt.panicString
-tags: [private]
-```
-
-```Go
-const panicString = "(PANIC="
-```
-
-Strings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. 
-
-### <a id="extraString" href="#extraString">const extraString</a>
-
-```
-searchKey: fmt.extraString
-tags: [private]
-```
-
-```Go
-const extraString = "%!(EXTRA "
-```
-
-Strings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. 
-
-### <a id="badWidthString" href="#badWidthString">const badWidthString</a>
-
-```
-searchKey: fmt.badWidthString
-tags: [private]
-```
-
-```Go
-const badWidthString = "%!(BADWIDTH)"
-```
-
-Strings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. 
-
-### <a id="badPrecString" href="#badPrecString">const badPrecString</a>
-
-```
-searchKey: fmt.badPrecString
-tags: [private]
-```
-
-```Go
-const badPrecString = "%!(BADPREC)"
-```
-
-Strings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. 
-
 ### <a id="noVerbString" href="#noVerbString">const noVerbString</a>
 
 ```
 searchKey: fmt.noVerbString
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -682,48 +736,11 @@ const noVerbString = "%!(NOVERB)"
 
 Strings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. 
 
-### <a id="invReflectString" href="#invReflectString">const invReflectString</a>
-
-```
-searchKey: fmt.invReflectString
-tags: [private]
-```
-
-```Go
-const invReflectString = "<invalid reflect.Value>"
-```
-
-Strings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. 
-
-### <a id="eof" href="#eof">const eof</a>
-
-```
-searchKey: fmt.eof
-tags: [private]
-```
-
-```Go
-const eof = -1
-```
-
-### <a id="binaryDigits" href="#binaryDigits">const binaryDigits</a>
-
-```
-searchKey: fmt.binaryDigits
-tags: [private]
-```
-
-```Go
-const binaryDigits = "01"
-```
-
-Numerical elements 
-
 ### <a id="octalDigits" href="#octalDigits">const octalDigits</a>
 
 ```
 searchKey: fmt.octalDigits
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -732,50 +749,37 @@ const octalDigits = "01234567"
 
 Numerical elements 
 
-### <a id="decimalDigits" href="#decimalDigits">const decimalDigits</a>
+### <a id="panicString" href="#panicString">const panicString</a>
 
 ```
-searchKey: fmt.decimalDigits
-tags: [private]
-```
-
-```Go
-const decimalDigits = "0123456789"
-```
-
-Numerical elements 
-
-### <a id="hexadecimalDigits" href="#hexadecimalDigits">const hexadecimalDigits</a>
-
-```
-searchKey: fmt.hexadecimalDigits
-tags: [private]
+searchKey: fmt.panicString
+tags: [constant string private]
 ```
 
 ```Go
-const hexadecimalDigits = "0123456789aAbBcCdDeEfF"
+const panicString = "(PANIC="
 ```
 
-Numerical elements 
+Strings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. 
 
-### <a id="sign" href="#sign">const sign</a>
+### <a id="percentBangString" href="#percentBangString">const percentBangString</a>
 
 ```
-searchKey: fmt.sign
-tags: [private]
+searchKey: fmt.percentBangString
+tags: [constant string private]
 ```
 
 ```Go
-const sign = "+-"
+const percentBangString = "%!"
 ```
 
-Numerical elements 
+Strings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. 
 
 ### <a id="period" href="#period">const period</a>
 
 ```
 searchKey: fmt.period
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -784,70 +788,118 @@ const period = "."
 
 Numerical elements 
 
-### <a id="exponent" href="#exponent">const exponent</a>
+### <a id="sign" href="#sign">const sign</a>
 
 ```
-searchKey: fmt.exponent
-tags: [private]
+searchKey: fmt.sign
+tags: [constant string private]
 ```
 
 ```Go
-const exponent = "eEpP"
+const sign = "+-"
 ```
 
 Numerical elements 
 
-### <a id="floatVerbs" href="#floatVerbs">const floatVerbs</a>
+### <a id="signed" href="#signed">const signed</a>
 
 ```
-searchKey: fmt.floatVerbs
-tags: [private]
-```
-
-```Go
-const floatVerbs = "beEfFgGv"
-```
-
-### <a id="hugeWid" href="#hugeWid">const hugeWid</a>
-
-```
-searchKey: fmt.hugeWid
-tags: [private]
+searchKey: fmt.signed
+tags: [constant boolean private]
 ```
 
 ```Go
-const hugeWid = 1 << 30
+const signed = true
 ```
 
-### <a id="intBits" href="#intBits">const intBits</a>
+### <a id="udigits" href="#udigits">const udigits</a>
 
 ```
-searchKey: fmt.intBits
-tags: [private]
+searchKey: fmt.udigits
+tags: [constant string private]
 ```
 
 ```Go
-const intBits = 32 << (^uint(0) >> 63)
+const udigits = "0123456789ABCDEFX"
 ```
 
 ### <a id="uintptrBits" href="#uintptrBits">const uintptrBits</a>
 
 ```
 searchKey: fmt.uintptrBits
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
 const uintptrBits = 32 << (^uintptr(0) >> 63)
 ```
 
+### <a id="unsigned" href="#unsigned">const unsigned</a>
+
+```
+searchKey: fmt.unsigned
+tags: [constant boolean private]
+```
+
+```Go
+const unsigned = false
+```
+
 ## <a id="var" href="#var">Variables</a>
+
+```
+tags: [package]
+```
+
+### <a id="IsSpace" href="#IsSpace">var IsSpace</a>
+
+```
+searchKey: fmt.IsSpace
+tags: [variable function private]
+```
+
+```Go
+var IsSpace = isSpace
+```
+
+### <a id="Parsenum" href="#Parsenum">var Parsenum</a>
+
+```
+searchKey: fmt.Parsenum
+tags: [variable function private]
+```
+
+```Go
+var Parsenum = parsenum
+```
+
+### <a id="boolError" href="#boolError">var boolError</a>
+
+```
+searchKey: fmt.boolError
+tags: [variable interface private]
+```
+
+```Go
+var boolError = errors.New("syntax error scanning boolean")
+```
+
+### <a id="complexError" href="#complexError">var complexError</a>
+
+```
+searchKey: fmt.complexError
+tags: [variable interface private]
+```
+
+```Go
+var complexError = errors.New("syntax error scanning complex number")
+```
 
 ### <a id="ppFree" href="#ppFree">var ppFree</a>
 
 ```
 searchKey: fmt.ppFree
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -860,7 +912,7 @@ var ppFree = sync.Pool{
 
 ```
 searchKey: fmt.space
-tags: [private]
+tags: [variable array array number private]
 ```
 
 ```Go
@@ -873,7 +925,7 @@ space is a copy of the unicode.White_Space ranges, to avoid depending on package
 
 ```
 searchKey: fmt.ssFree
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -882,408 +934,17 @@ var ssFree = sync.Pool{
 }
 ```
 
-### <a id="complexError" href="#complexError">var complexError</a>
-
-```
-searchKey: fmt.complexError
-tags: [private]
-```
-
-```Go
-var complexError = errors.New("syntax error scanning complex number")
-```
-
-### <a id="boolError" href="#boolError">var boolError</a>
-
-```
-searchKey: fmt.boolError
-tags: [private]
-```
-
-```Go
-var boolError = errors.New("syntax error scanning boolean")
-```
-
-### <a id="IsSpace" href="#IsSpace">var IsSpace</a>
-
-```
-searchKey: fmt.IsSpace
-tags: [private]
-```
-
-```Go
-var IsSpace = isSpace
-```
-
-### <a id="Parsenum" href="#Parsenum">var Parsenum</a>
-
-```
-searchKey: fmt.Parsenum
-tags: [private]
-```
-
-```Go
-var Parsenum = parsenum
-```
-
 ## <a id="type" href="#type">Types</a>
 
-### <a id="wrapError" href="#wrapError">type wrapError struct</a>
-
 ```
-searchKey: fmt.wrapError
-tags: [private]
+tags: [package]
 ```
-
-```Go
-type wrapError struct {
-	msg string
-	err error
-}
-```
-
-#### <a id="wrapError.Error" href="#wrapError.Error">func (e *wrapError) Error() string</a>
-
-```
-searchKey: fmt.wrapError.Error
-tags: [private]
-```
-
-```Go
-func (e *wrapError) Error() string
-```
-
-#### <a id="wrapError.Unwrap" href="#wrapError.Unwrap">func (e *wrapError) Unwrap() error</a>
-
-```
-searchKey: fmt.wrapError.Unwrap
-tags: [private]
-```
-
-```Go
-func (e *wrapError) Unwrap() error
-```
-
-### <a id="fmtFlags" href="#fmtFlags">type fmtFlags struct</a>
-
-```
-searchKey: fmt.fmtFlags
-tags: [private]
-```
-
-```Go
-type fmtFlags struct {
-	widPresent  bool
-	precPresent bool
-	minus       bool
-	plus        bool
-	sharp       bool
-	space       bool
-	zero        bool
-
-	// For the formats %+v %#v, we set the plusV/sharpV flags
-	// and clear the plus/sharp flags since %+v and %#v are in effect
-	// different, flagless formats set at the top level.
-	plusV  bool
-	sharpV bool
-}
-```
-
-flags placed in a separate struct for easy clearing. 
-
-### <a id="fmt" href="#fmt">type fmt struct</a>
-
-```
-searchKey: fmt.fmt
-tags: [private]
-```
-
-```Go
-type fmt struct {
-	buf *buffer
-
-	fmtFlags
-
-	wid  int // width
-	prec int // precision
-
-	// intbuf is large enough to store %b of an int64 with a sign and
-	// avoids padding at the end of the struct on 32 bit architectures.
-	intbuf [68]byte
-}
-```
-
-A fmt is the raw formatter used by Printf etc. It prints into a buffer that must be set up separately. 
-
-#### <a id="fmt.clearflags" href="#fmt.clearflags">func (f *fmt) clearflags()</a>
-
-```
-searchKey: fmt.fmt.clearflags
-tags: [private]
-```
-
-```Go
-func (f *fmt) clearflags()
-```
-
-#### <a id="fmt.init.format.go" href="#fmt.init.format.go">func (f *fmt) init(buf *buffer)</a>
-
-```
-searchKey: fmt.fmt.init
-tags: [private]
-```
-
-```Go
-func (f *fmt) init(buf *buffer)
-```
-
-#### <a id="fmt.writePadding" href="#fmt.writePadding">func (f *fmt) writePadding(n int)</a>
-
-```
-searchKey: fmt.fmt.writePadding
-tags: [private]
-```
-
-```Go
-func (f *fmt) writePadding(n int)
-```
-
-writePadding generates n bytes of padding. 
-
-#### <a id="fmt.pad" href="#fmt.pad">func (f *fmt) pad(b []byte)</a>
-
-```
-searchKey: fmt.fmt.pad
-tags: [private]
-```
-
-```Go
-func (f *fmt) pad(b []byte)
-```
-
-pad appends b to f.buf, padded on left (!f.minus) or right (f.minus). 
-
-#### <a id="fmt.padString" href="#fmt.padString">func (f *fmt) padString(s string)</a>
-
-```
-searchKey: fmt.fmt.padString
-tags: [private]
-```
-
-```Go
-func (f *fmt) padString(s string)
-```
-
-padString appends s to f.buf, padded on left (!f.minus) or right (f.minus). 
-
-#### <a id="fmt.fmtBoolean" href="#fmt.fmtBoolean">func (f *fmt) fmtBoolean(v bool)</a>
-
-```
-searchKey: fmt.fmt.fmtBoolean
-tags: [private]
-```
-
-```Go
-func (f *fmt) fmtBoolean(v bool)
-```
-
-fmtBoolean formats a boolean. 
-
-#### <a id="fmt.fmtUnicode" href="#fmt.fmtUnicode">func (f *fmt) fmtUnicode(u uint64)</a>
-
-```
-searchKey: fmt.fmt.fmtUnicode
-tags: [private]
-```
-
-```Go
-func (f *fmt) fmtUnicode(u uint64)
-```
-
-fmtUnicode formats a uint64 as "U+0078" or with f.sharp set as "U+0078 'x'". 
-
-#### <a id="fmt.fmtInteger" href="#fmt.fmtInteger">func (f *fmt) fmtInteger(u uint64, base int, isSigned bool, verb rune, digits string)</a>
-
-```
-searchKey: fmt.fmt.fmtInteger
-tags: [private]
-```
-
-```Go
-func (f *fmt) fmtInteger(u uint64, base int, isSigned bool, verb rune, digits string)
-```
-
-fmtInteger formats signed and unsigned integers. 
-
-#### <a id="fmt.truncateString" href="#fmt.truncateString">func (f *fmt) truncateString(s string) string</a>
-
-```
-searchKey: fmt.fmt.truncateString
-tags: [private]
-```
-
-```Go
-func (f *fmt) truncateString(s string) string
-```
-
-truncateString truncates the string s to the specified precision, if present. 
-
-#### <a id="fmt.truncate" href="#fmt.truncate">func (f *fmt) truncate(b []byte) []byte</a>
-
-```
-searchKey: fmt.fmt.truncate
-tags: [private]
-```
-
-```Go
-func (f *fmt) truncate(b []byte) []byte
-```
-
-truncate truncates the byte slice b as a string of the specified precision, if present. 
-
-#### <a id="fmt.fmtS" href="#fmt.fmtS">func (f *fmt) fmtS(s string)</a>
-
-```
-searchKey: fmt.fmt.fmtS
-tags: [private]
-```
-
-```Go
-func (f *fmt) fmtS(s string)
-```
-
-fmtS formats a string. 
-
-#### <a id="fmt.fmtBs" href="#fmt.fmtBs">func (f *fmt) fmtBs(b []byte)</a>
-
-```
-searchKey: fmt.fmt.fmtBs
-tags: [private]
-```
-
-```Go
-func (f *fmt) fmtBs(b []byte)
-```
-
-fmtBs formats the byte slice b as if it was formatted as string with fmtS. 
-
-#### <a id="fmt.fmtSbx" href="#fmt.fmtSbx">func (f *fmt) fmtSbx(s string, b []byte, digits string)</a>
-
-```
-searchKey: fmt.fmt.fmtSbx
-tags: [private]
-```
-
-```Go
-func (f *fmt) fmtSbx(s string, b []byte, digits string)
-```
-
-fmtSbx formats a string or byte slice as a hexadecimal encoding of its bytes. 
-
-#### <a id="fmt.fmtSx" href="#fmt.fmtSx">func (f *fmt) fmtSx(s, digits string)</a>
-
-```
-searchKey: fmt.fmt.fmtSx
-tags: [private]
-```
-
-```Go
-func (f *fmt) fmtSx(s, digits string)
-```
-
-fmtSx formats a string as a hexadecimal encoding of its bytes. 
-
-#### <a id="fmt.fmtBx" href="#fmt.fmtBx">func (f *fmt) fmtBx(b []byte, digits string)</a>
-
-```
-searchKey: fmt.fmt.fmtBx
-tags: [private]
-```
-
-```Go
-func (f *fmt) fmtBx(b []byte, digits string)
-```
-
-fmtBx formats a byte slice as a hexadecimal encoding of its bytes. 
-
-#### <a id="fmt.fmtQ" href="#fmt.fmtQ">func (f *fmt) fmtQ(s string)</a>
-
-```
-searchKey: fmt.fmt.fmtQ
-tags: [private]
-```
-
-```Go
-func (f *fmt) fmtQ(s string)
-```
-
-fmtQ formats a string as a double-quoted, escaped Go string constant. If f.sharp is set a raw (backquoted) string may be returned instead if the string does not contain any control characters other than tab. 
-
-#### <a id="fmt.fmtC" href="#fmt.fmtC">func (f *fmt) fmtC(c uint64)</a>
-
-```
-searchKey: fmt.fmt.fmtC
-tags: [private]
-```
-
-```Go
-func (f *fmt) fmtC(c uint64)
-```
-
-fmtC formats an integer as a Unicode character. If the character is not valid Unicode, it will print '\ufffd'. 
-
-#### <a id="fmt.fmtQc" href="#fmt.fmtQc">func (f *fmt) fmtQc(c uint64)</a>
-
-```
-searchKey: fmt.fmt.fmtQc
-tags: [private]
-```
-
-```Go
-func (f *fmt) fmtQc(c uint64)
-```
-
-fmtQc formats an integer as a single-quoted, escaped Go character constant. If the character is not valid Unicode, it will print '\ufffd'. 
-
-#### <a id="fmt.fmtFloat" href="#fmt.fmtFloat">func (f *fmt) fmtFloat(v float64, size int, verb rune, prec int)</a>
-
-```
-searchKey: fmt.fmt.fmtFloat
-tags: [private]
-```
-
-```Go
-func (f *fmt) fmtFloat(v float64, size int, verb rune, prec int)
-```
-
-fmtFloat formats a float64. It assumes that verb is a valid format specifier for strconv.AppendFloat and therefore fits into a byte. 
-
-### <a id="State" href="#State">type State interface</a>
-
-```
-searchKey: fmt.State
-```
-
-```Go
-type State interface {
-	// Write is the function to call to emit formatted output to be printed.
-	Write(b []byte) (n int, err error)
-	// Width returns the value of the width option and whether it has been set.
-	Width() (wid int, ok bool)
-	// Precision returns the value of the precision option and whether it has been set.
-	Precision() (prec int, ok bool)
-
-	// Flag reports whether the flag c, a character, has been set.
-	Flag(c int) bool
-}
-```
-
-State represents the printer state passed to custom formatters. It provides access to the io.Writer interface plus information about the flags and options for the operand's format specifier. 
 
 ### <a id="Formatter" href="#Formatter">type Formatter interface</a>
 
 ```
 searchKey: fmt.Formatter
+tags: [interface]
 ```
 
 ```Go
@@ -1294,24 +955,11 @@ type Formatter interface {
 
 Formatter is implemented by any value that has a Format method. The implementation controls how State and rune are interpreted, and may call Sprint(f) or Fprint(f) etc. to generate its output. 
 
-### <a id="Stringer" href="#Stringer">type Stringer interface</a>
-
-```
-searchKey: fmt.Stringer
-```
-
-```Go
-type Stringer interface {
-	String() string
-}
-```
-
-Stringer is implemented by any value that has a String method, which defines the `native' format for that value. The String method is used to print values passed as an operand to any format that accepts a string or to an unformatted printer such as Print. 
-
 ### <a id="GoStringer" href="#GoStringer">type GoStringer interface</a>
 
 ```
 searchKey: fmt.GoStringer
+tags: [interface]
 ```
 
 ```Go
@@ -1322,423 +970,11 @@ type GoStringer interface {
 
 GoStringer is implemented by any value that has a GoString method, which defines the Go syntax for that value. The GoString method is used to print values passed as an operand to a %#v format. 
 
-### <a id="buffer" href="#buffer">type buffer []byte</a>
-
-```
-searchKey: fmt.buffer
-tags: [private]
-```
-
-```Go
-type buffer []byte
-```
-
-Use simple []byte instead of bytes.Buffer to avoid large dependency. 
-
-#### <a id="buffer.write" href="#buffer.write">func (b *buffer) write(p []byte)</a>
-
-```
-searchKey: fmt.buffer.write
-tags: [private]
-```
-
-```Go
-func (b *buffer) write(p []byte)
-```
-
-#### <a id="buffer.writeString" href="#buffer.writeString">func (b *buffer) writeString(s string)</a>
-
-```
-searchKey: fmt.buffer.writeString
-tags: [private]
-```
-
-```Go
-func (b *buffer) writeString(s string)
-```
-
-#### <a id="buffer.writeByte" href="#buffer.writeByte">func (b *buffer) writeByte(c byte)</a>
-
-```
-searchKey: fmt.buffer.writeByte
-tags: [private]
-```
-
-```Go
-func (b *buffer) writeByte(c byte)
-```
-
-#### <a id="buffer.writeRune" href="#buffer.writeRune">func (bp *buffer) writeRune(r rune)</a>
-
-```
-searchKey: fmt.buffer.writeRune
-tags: [private]
-```
-
-```Go
-func (bp *buffer) writeRune(r rune)
-```
-
-### <a id="pp" href="#pp">type pp struct</a>
-
-```
-searchKey: fmt.pp
-tags: [private]
-```
-
-```Go
-type pp struct {
-	buf buffer
-
-	// arg holds the current item, as an interface{}.
-	arg interface{}
-
-	// value is used instead of arg for reflect values.
-	value reflect.Value
-
-	// fmt is used to format basic items such as integers or strings.
-	fmt fmt
-
-	// reordered records whether the format string used argument reordering.
-	reordered bool
-	// goodArgNum records whether the most recent reordering directive was valid.
-	goodArgNum bool
-	// panicking is set by catchPanic to avoid infinite panic, recover, panic, ... recursion.
-	panicking bool
-	// erroring is set when printing an error string to guard against calling handleMethods.
-	erroring bool
-	// wrapErrs is set when the format string may contain a %w verb.
-	wrapErrs bool
-	// wrappedErr records the target of the %w verb.
-	wrappedErr error
-}
-```
-
-pp is used to store a printer's state and is reused with sync.Pool to avoid allocations. 
-
-#### <a id="newPrinter" href="#newPrinter">func newPrinter() *pp</a>
-
-```
-searchKey: fmt.newPrinter
-tags: [private]
-```
-
-```Go
-func newPrinter() *pp
-```
-
-newPrinter allocates a new pp struct or grabs a cached one. 
-
-#### <a id="pp.free" href="#pp.free">func (p *pp) free()</a>
-
-```
-searchKey: fmt.pp.free
-tags: [private]
-```
-
-```Go
-func (p *pp) free()
-```
-
-free saves used pp structs in ppFree; avoids an allocation per invocation. 
-
-#### <a id="pp.Width" href="#pp.Width">func (p *pp) Width() (wid int, ok bool)</a>
-
-```
-searchKey: fmt.pp.Width
-tags: [private]
-```
-
-```Go
-func (p *pp) Width() (wid int, ok bool)
-```
-
-#### <a id="pp.Precision" href="#pp.Precision">func (p *pp) Precision() (prec int, ok bool)</a>
-
-```
-searchKey: fmt.pp.Precision
-tags: [private]
-```
-
-```Go
-func (p *pp) Precision() (prec int, ok bool)
-```
-
-#### <a id="pp.Flag" href="#pp.Flag">func (p *pp) Flag(b int) bool</a>
-
-```
-searchKey: fmt.pp.Flag
-tags: [private]
-```
-
-```Go
-func (p *pp) Flag(b int) bool
-```
-
-#### <a id="pp.Write" href="#pp.Write">func (p *pp) Write(b []byte) (ret int, err error)</a>
-
-```
-searchKey: fmt.pp.Write
-tags: [private]
-```
-
-```Go
-func (p *pp) Write(b []byte) (ret int, err error)
-```
-
-Implement Write so we can call Fprintf on a pp (through State), for recursive use in custom verbs. 
-
-#### <a id="pp.WriteString" href="#pp.WriteString">func (p *pp) WriteString(s string) (ret int, err error)</a>
-
-```
-searchKey: fmt.pp.WriteString
-tags: [private]
-```
-
-```Go
-func (p *pp) WriteString(s string) (ret int, err error)
-```
-
-Implement WriteString so that we can call io.WriteString on a pp (through state), for efficiency. 
-
-#### <a id="pp.unknownType" href="#pp.unknownType">func (p *pp) unknownType(v reflect.Value)</a>
-
-```
-searchKey: fmt.pp.unknownType
-tags: [private]
-```
-
-```Go
-func (p *pp) unknownType(v reflect.Value)
-```
-
-#### <a id="pp.badVerb" href="#pp.badVerb">func (p *pp) badVerb(verb rune)</a>
-
-```
-searchKey: fmt.pp.badVerb
-tags: [private]
-```
-
-```Go
-func (p *pp) badVerb(verb rune)
-```
-
-#### <a id="pp.fmtBool" href="#pp.fmtBool">func (p *pp) fmtBool(v bool, verb rune)</a>
-
-```
-searchKey: fmt.pp.fmtBool
-tags: [private]
-```
-
-```Go
-func (p *pp) fmtBool(v bool, verb rune)
-```
-
-#### <a id="pp.fmt0x64" href="#pp.fmt0x64">func (p *pp) fmt0x64(v uint64, leading0x bool)</a>
-
-```
-searchKey: fmt.pp.fmt0x64
-tags: [private]
-```
-
-```Go
-func (p *pp) fmt0x64(v uint64, leading0x bool)
-```
-
-fmt0x64 formats a uint64 in hexadecimal and prefixes it with 0x or not, as requested, by temporarily setting the sharp flag. 
-
-#### <a id="pp.fmtInteger" href="#pp.fmtInteger">func (p *pp) fmtInteger(v uint64, isSigned bool, verb rune)</a>
-
-```
-searchKey: fmt.pp.fmtInteger
-tags: [private]
-```
-
-```Go
-func (p *pp) fmtInteger(v uint64, isSigned bool, verb rune)
-```
-
-fmtInteger formats a signed or unsigned integer. 
-
-#### <a id="pp.fmtFloat" href="#pp.fmtFloat">func (p *pp) fmtFloat(v float64, size int, verb rune)</a>
-
-```
-searchKey: fmt.pp.fmtFloat
-tags: [private]
-```
-
-```Go
-func (p *pp) fmtFloat(v float64, size int, verb rune)
-```
-
-fmtFloat formats a float. The default precision for each verb is specified as last argument in the call to fmt_float. 
-
-#### <a id="pp.fmtComplex" href="#pp.fmtComplex">func (p *pp) fmtComplex(v complex128, size int, verb rune)</a>
-
-```
-searchKey: fmt.pp.fmtComplex
-tags: [private]
-```
-
-```Go
-func (p *pp) fmtComplex(v complex128, size int, verb rune)
-```
-
-fmtComplex formats a complex number v with r = real(v) and j = imag(v) as (r+ji) using fmtFloat for r and j formatting. 
-
-#### <a id="pp.fmtString" href="#pp.fmtString">func (p *pp) fmtString(v string, verb rune)</a>
-
-```
-searchKey: fmt.pp.fmtString
-tags: [private]
-```
-
-```Go
-func (p *pp) fmtString(v string, verb rune)
-```
-
-#### <a id="pp.fmtBytes" href="#pp.fmtBytes">func (p *pp) fmtBytes(v []byte, verb rune, typeString string)</a>
-
-```
-searchKey: fmt.pp.fmtBytes
-tags: [private]
-```
-
-```Go
-func (p *pp) fmtBytes(v []byte, verb rune, typeString string)
-```
-
-#### <a id="pp.fmtPointer" href="#pp.fmtPointer">func (p *pp) fmtPointer(value reflect.Value, verb rune)</a>
-
-```
-searchKey: fmt.pp.fmtPointer
-tags: [private]
-```
-
-```Go
-func (p *pp) fmtPointer(value reflect.Value, verb rune)
-```
-
-#### <a id="pp.catchPanic" href="#pp.catchPanic">func (p *pp) catchPanic(arg interface{}, verb rune, method string)</a>
-
-```
-searchKey: fmt.pp.catchPanic
-tags: [private]
-```
-
-```Go
-func (p *pp) catchPanic(arg interface{}, verb rune, method string)
-```
-
-#### <a id="pp.handleMethods" href="#pp.handleMethods">func (p *pp) handleMethods(verb rune) (handled bool)</a>
-
-```
-searchKey: fmt.pp.handleMethods
-tags: [private]
-```
-
-```Go
-func (p *pp) handleMethods(verb rune) (handled bool)
-```
-
-#### <a id="pp.printArg" href="#pp.printArg">func (p *pp) printArg(arg interface{}, verb rune)</a>
-
-```
-searchKey: fmt.pp.printArg
-tags: [private]
-```
-
-```Go
-func (p *pp) printArg(arg interface{}, verb rune)
-```
-
-#### <a id="pp.printValue" href="#pp.printValue">func (p *pp) printValue(value reflect.Value, verb rune, depth int)</a>
-
-```
-searchKey: fmt.pp.printValue
-tags: [private]
-```
-
-```Go
-func (p *pp) printValue(value reflect.Value, verb rune, depth int)
-```
-
-printValue is similar to printArg but starts with a reflect value, not an interface{} value. It does not handle 'p' and 'T' verbs because these should have been already handled by printArg. 
-
-#### <a id="pp.argNumber" href="#pp.argNumber">func (p *pp) argNumber(argNum int, format string, i int, numArgs int) (newArgNum, newi int, found bool)</a>
-
-```
-searchKey: fmt.pp.argNumber
-tags: [private]
-```
-
-```Go
-func (p *pp) argNumber(argNum int, format string, i int, numArgs int) (newArgNum, newi int, found bool)
-```
-
-argNumber returns the next argument to evaluate, which is either the value of the passed-in argNum or the value of the bracketed integer that begins format[i:]. It also returns the new value of i, that is, the index of the next byte of the format to process. 
-
-#### <a id="pp.badArgNum" href="#pp.badArgNum">func (p *pp) badArgNum(verb rune)</a>
-
-```
-searchKey: fmt.pp.badArgNum
-tags: [private]
-```
-
-```Go
-func (p *pp) badArgNum(verb rune)
-```
-
-#### <a id="pp.missingArg" href="#pp.missingArg">func (p *pp) missingArg(verb rune)</a>
-
-```
-searchKey: fmt.pp.missingArg
-tags: [private]
-```
-
-```Go
-func (p *pp) missingArg(verb rune)
-```
-
-#### <a id="pp.doPrintf" href="#pp.doPrintf">func (p *pp) doPrintf(format string, a []interface{})</a>
-
-```
-searchKey: fmt.pp.doPrintf
-tags: [private]
-```
-
-```Go
-func (p *pp) doPrintf(format string, a []interface{})
-```
-
-#### <a id="pp.doPrint" href="#pp.doPrint">func (p *pp) doPrint(a []interface{})</a>
-
-```
-searchKey: fmt.pp.doPrint
-tags: [private]
-```
-
-```Go
-func (p *pp) doPrint(a []interface{})
-```
-
-#### <a id="pp.doPrintln" href="#pp.doPrintln">func (p *pp) doPrintln(a []interface{})</a>
-
-```
-searchKey: fmt.pp.doPrintln
-tags: [private]
-```
-
-```Go
-func (p *pp) doPrintln(a []interface{})
-```
-
-doPrintln is like doPrint but always adds a space between arguments and a newline after the last argument. 
-
 ### <a id="ScanState" href="#ScanState">type ScanState interface</a>
 
 ```
 searchKey: fmt.ScanState
+tags: [interface]
 ```
 
 ```Go
@@ -1779,6 +1015,7 @@ ScanState represents the scanner state passed to custom scanners. Scanners may d
 
 ```
 searchKey: fmt.Scanner
+tags: [interface]
 ```
 
 ```Go
@@ -1789,33 +1026,812 @@ type Scanner interface {
 
 Scanner is implemented by any value that has a Scan method, which scans the input for the representation of a value and stores the result in the receiver, which must be a pointer to be useful. The Scan method is called for any argument to Scan, Scanf, or Scanln that implements it. 
 
-### <a id="stringReader" href="#stringReader">type stringReader string</a>
+### <a id="State" href="#State">type State interface</a>
 
 ```
-searchKey: fmt.stringReader
-tags: [private]
-```
-
-```Go
-type stringReader string
-```
-
-#### <a id="stringReader.Read" href="#stringReader.Read">func (r *stringReader) Read(b []byte) (n int, err error)</a>
-
-```
-searchKey: fmt.stringReader.Read
-tags: [private]
+searchKey: fmt.State
+tags: [interface]
 ```
 
 ```Go
-func (r *stringReader) Read(b []byte) (n int, err error)
+type State interface {
+	// Write is the function to call to emit formatted output to be printed.
+	Write(b []byte) (n int, err error)
+	// Width returns the value of the width option and whether it has been set.
+	Width() (wid int, ok bool)
+	// Precision returns the value of the precision option and whether it has been set.
+	Precision() (prec int, ok bool)
+
+	// Flag reports whether the flag c, a character, has been set.
+	Flag(c int) bool
+}
 ```
+
+State represents the printer state passed to custom formatters. It provides access to the io.Writer interface plus information about the flags and options for the operand's format specifier. 
+
+### <a id="Stringer" href="#Stringer">type Stringer interface</a>
+
+```
+searchKey: fmt.Stringer
+tags: [interface]
+```
+
+```Go
+type Stringer interface {
+	String() string
+}
+```
+
+Stringer is implemented by any value that has a String method, which defines the `native' format for that value. The String method is used to print values passed as an operand to any format that accepts a string or to an unformatted printer such as Print. 
+
+### <a id="buffer" href="#buffer">type buffer []byte</a>
+
+```
+searchKey: fmt.buffer
+tags: [array number private]
+```
+
+```Go
+type buffer []byte
+```
+
+Use simple []byte instead of bytes.Buffer to avoid large dependency. 
+
+#### <a id="buffer.write" href="#buffer.write">func (b *buffer) write(p []byte)</a>
+
+```
+searchKey: fmt.buffer.write
+tags: [method private]
+```
+
+```Go
+func (b *buffer) write(p []byte)
+```
+
+#### <a id="buffer.writeByte" href="#buffer.writeByte">func (b *buffer) writeByte(c byte)</a>
+
+```
+searchKey: fmt.buffer.writeByte
+tags: [method private]
+```
+
+```Go
+func (b *buffer) writeByte(c byte)
+```
+
+#### <a id="buffer.writeRune" href="#buffer.writeRune">func (bp *buffer) writeRune(r rune)</a>
+
+```
+searchKey: fmt.buffer.writeRune
+tags: [method private]
+```
+
+```Go
+func (bp *buffer) writeRune(r rune)
+```
+
+#### <a id="buffer.writeString" href="#buffer.writeString">func (b *buffer) writeString(s string)</a>
+
+```
+searchKey: fmt.buffer.writeString
+tags: [method private]
+```
+
+```Go
+func (b *buffer) writeString(s string)
+```
+
+### <a id="fmt" href="#fmt">type fmt struct</a>
+
+```
+searchKey: fmt.fmt
+tags: [struct private]
+```
+
+```Go
+type fmt struct {
+	buf *buffer
+
+	fmtFlags
+
+	wid  int // width
+	prec int // precision
+
+	// intbuf is large enough to store %b of an int64 with a sign and
+	// avoids padding at the end of the struct on 32 bit architectures.
+	intbuf [68]byte
+}
+```
+
+A fmt is the raw formatter used by Printf etc. It prints into a buffer that must be set up separately. 
+
+#### <a id="fmt.clearflags" href="#fmt.clearflags">func (f *fmt) clearflags()</a>
+
+```
+searchKey: fmt.fmt.clearflags
+tags: [function private]
+```
+
+```Go
+func (f *fmt) clearflags()
+```
+
+#### <a id="fmt.fmtBoolean" href="#fmt.fmtBoolean">func (f *fmt) fmtBoolean(v bool)</a>
+
+```
+searchKey: fmt.fmt.fmtBoolean
+tags: [method private]
+```
+
+```Go
+func (f *fmt) fmtBoolean(v bool)
+```
+
+fmtBoolean formats a boolean. 
+
+#### <a id="fmt.fmtBs" href="#fmt.fmtBs">func (f *fmt) fmtBs(b []byte)</a>
+
+```
+searchKey: fmt.fmt.fmtBs
+tags: [method private]
+```
+
+```Go
+func (f *fmt) fmtBs(b []byte)
+```
+
+fmtBs formats the byte slice b as if it was formatted as string with fmtS. 
+
+#### <a id="fmt.fmtBx" href="#fmt.fmtBx">func (f *fmt) fmtBx(b []byte, digits string)</a>
+
+```
+searchKey: fmt.fmt.fmtBx
+tags: [method private]
+```
+
+```Go
+func (f *fmt) fmtBx(b []byte, digits string)
+```
+
+fmtBx formats a byte slice as a hexadecimal encoding of its bytes. 
+
+#### <a id="fmt.fmtC" href="#fmt.fmtC">func (f *fmt) fmtC(c uint64)</a>
+
+```
+searchKey: fmt.fmt.fmtC
+tags: [method private]
+```
+
+```Go
+func (f *fmt) fmtC(c uint64)
+```
+
+fmtC formats an integer as a Unicode character. If the character is not valid Unicode, it will print '\ufffd'. 
+
+#### <a id="fmt.fmtFloat" href="#fmt.fmtFloat">func (f *fmt) fmtFloat(v float64, size int, verb rune, prec int)</a>
+
+```
+searchKey: fmt.fmt.fmtFloat
+tags: [method private]
+```
+
+```Go
+func (f *fmt) fmtFloat(v float64, size int, verb rune, prec int)
+```
+
+fmtFloat formats a float64. It assumes that verb is a valid format specifier for strconv.AppendFloat and therefore fits into a byte. 
+
+#### <a id="fmt.fmtInteger" href="#fmt.fmtInteger">func (f *fmt) fmtInteger(u uint64, base int, isSigned bool, verb rune, digits string)</a>
+
+```
+searchKey: fmt.fmt.fmtInteger
+tags: [method private]
+```
+
+```Go
+func (f *fmt) fmtInteger(u uint64, base int, isSigned bool, verb rune, digits string)
+```
+
+fmtInteger formats signed and unsigned integers. 
+
+#### <a id="fmt.fmtQ" href="#fmt.fmtQ">func (f *fmt) fmtQ(s string)</a>
+
+```
+searchKey: fmt.fmt.fmtQ
+tags: [method private]
+```
+
+```Go
+func (f *fmt) fmtQ(s string)
+```
+
+fmtQ formats a string as a double-quoted, escaped Go string constant. If f.sharp is set a raw (backquoted) string may be returned instead if the string does not contain any control characters other than tab. 
+
+#### <a id="fmt.fmtQc" href="#fmt.fmtQc">func (f *fmt) fmtQc(c uint64)</a>
+
+```
+searchKey: fmt.fmt.fmtQc
+tags: [method private]
+```
+
+```Go
+func (f *fmt) fmtQc(c uint64)
+```
+
+fmtQc formats an integer as a single-quoted, escaped Go character constant. If the character is not valid Unicode, it will print '\ufffd'. 
+
+#### <a id="fmt.fmtS" href="#fmt.fmtS">func (f *fmt) fmtS(s string)</a>
+
+```
+searchKey: fmt.fmt.fmtS
+tags: [method private]
+```
+
+```Go
+func (f *fmt) fmtS(s string)
+```
+
+fmtS formats a string. 
+
+#### <a id="fmt.fmtSbx" href="#fmt.fmtSbx">func (f *fmt) fmtSbx(s string, b []byte, digits string)</a>
+
+```
+searchKey: fmt.fmt.fmtSbx
+tags: [method private]
+```
+
+```Go
+func (f *fmt) fmtSbx(s string, b []byte, digits string)
+```
+
+fmtSbx formats a string or byte slice as a hexadecimal encoding of its bytes. 
+
+#### <a id="fmt.fmtSx" href="#fmt.fmtSx">func (f *fmt) fmtSx(s, digits string)</a>
+
+```
+searchKey: fmt.fmt.fmtSx
+tags: [method private]
+```
+
+```Go
+func (f *fmt) fmtSx(s, digits string)
+```
+
+fmtSx formats a string as a hexadecimal encoding of its bytes. 
+
+#### <a id="fmt.fmtUnicode" href="#fmt.fmtUnicode">func (f *fmt) fmtUnicode(u uint64)</a>
+
+```
+searchKey: fmt.fmt.fmtUnicode
+tags: [method private]
+```
+
+```Go
+func (f *fmt) fmtUnicode(u uint64)
+```
+
+fmtUnicode formats a uint64 as "U+0078" or with f.sharp set as "U+0078 'x'". 
+
+#### <a id="fmt.init.format.go" href="#fmt.init.format.go">func (f *fmt) init(buf *buffer)</a>
+
+```
+searchKey: fmt.fmt.init
+tags: [method private]
+```
+
+```Go
+func (f *fmt) init(buf *buffer)
+```
+
+#### <a id="fmt.pad" href="#fmt.pad">func (f *fmt) pad(b []byte)</a>
+
+```
+searchKey: fmt.fmt.pad
+tags: [method private]
+```
+
+```Go
+func (f *fmt) pad(b []byte)
+```
+
+pad appends b to f.buf, padded on left (!f.minus) or right (f.minus). 
+
+#### <a id="fmt.padString" href="#fmt.padString">func (f *fmt) padString(s string)</a>
+
+```
+searchKey: fmt.fmt.padString
+tags: [method private]
+```
+
+```Go
+func (f *fmt) padString(s string)
+```
+
+padString appends s to f.buf, padded on left (!f.minus) or right (f.minus). 
+
+#### <a id="fmt.truncate" href="#fmt.truncate">func (f *fmt) truncate(b []byte) []byte</a>
+
+```
+searchKey: fmt.fmt.truncate
+tags: [method private]
+```
+
+```Go
+func (f *fmt) truncate(b []byte) []byte
+```
+
+truncate truncates the byte slice b as a string of the specified precision, if present. 
+
+#### <a id="fmt.truncateString" href="#fmt.truncateString">func (f *fmt) truncateString(s string) string</a>
+
+```
+searchKey: fmt.fmt.truncateString
+tags: [method private]
+```
+
+```Go
+func (f *fmt) truncateString(s string) string
+```
+
+truncateString truncates the string s to the specified precision, if present. 
+
+#### <a id="fmt.writePadding" href="#fmt.writePadding">func (f *fmt) writePadding(n int)</a>
+
+```
+searchKey: fmt.fmt.writePadding
+tags: [method private]
+```
+
+```Go
+func (f *fmt) writePadding(n int)
+```
+
+writePadding generates n bytes of padding. 
+
+### <a id="fmtFlags" href="#fmtFlags">type fmtFlags struct</a>
+
+```
+searchKey: fmt.fmtFlags
+tags: [struct private]
+```
+
+```Go
+type fmtFlags struct {
+	widPresent  bool
+	precPresent bool
+	minus       bool
+	plus        bool
+	sharp       bool
+	space       bool
+	zero        bool
+
+	// For the formats %+v %#v, we set the plusV/sharpV flags
+	// and clear the plus/sharp flags since %+v and %#v are in effect
+	// different, flagless formats set at the top level.
+	plusV  bool
+	sharpV bool
+}
+```
+
+flags placed in a separate struct for easy clearing. 
+
+### <a id="pp" href="#pp">type pp struct</a>
+
+```
+searchKey: fmt.pp
+tags: [struct private]
+```
+
+```Go
+type pp struct {
+	buf buffer
+
+	// arg holds the current item, as an interface{}.
+	arg interface{}
+
+	// value is used instead of arg for reflect values.
+	value reflect.Value
+
+	// fmt is used to format basic items such as integers or strings.
+	fmt fmt
+
+	// reordered records whether the format string used argument reordering.
+	reordered bool
+	// goodArgNum records whether the most recent reordering directive was valid.
+	goodArgNum bool
+	// panicking is set by catchPanic to avoid infinite panic, recover, panic, ... recursion.
+	panicking bool
+	// erroring is set when printing an error string to guard against calling handleMethods.
+	erroring bool
+	// wrapErrs is set when the format string may contain a %w verb.
+	wrapErrs bool
+	// wrappedErr records the target of the %w verb.
+	wrappedErr error
+}
+```
+
+pp is used to store a printer's state and is reused with sync.Pool to avoid allocations. 
+
+#### <a id="newPrinter" href="#newPrinter">func newPrinter() *pp</a>
+
+```
+searchKey: fmt.newPrinter
+tags: [function private]
+```
+
+```Go
+func newPrinter() *pp
+```
+
+newPrinter allocates a new pp struct or grabs a cached one. 
+
+#### <a id="pp.Flag" href="#pp.Flag">func (p *pp) Flag(b int) bool</a>
+
+```
+searchKey: fmt.pp.Flag
+tags: [method private]
+```
+
+```Go
+func (p *pp) Flag(b int) bool
+```
+
+#### <a id="pp.Precision" href="#pp.Precision">func (p *pp) Precision() (prec int, ok bool)</a>
+
+```
+searchKey: fmt.pp.Precision
+tags: [function private]
+```
+
+```Go
+func (p *pp) Precision() (prec int, ok bool)
+```
+
+#### <a id="pp.Width" href="#pp.Width">func (p *pp) Width() (wid int, ok bool)</a>
+
+```
+searchKey: fmt.pp.Width
+tags: [function private]
+```
+
+```Go
+func (p *pp) Width() (wid int, ok bool)
+```
+
+#### <a id="pp.Write" href="#pp.Write">func (p *pp) Write(b []byte) (ret int, err error)</a>
+
+```
+searchKey: fmt.pp.Write
+tags: [method private]
+```
+
+```Go
+func (p *pp) Write(b []byte) (ret int, err error)
+```
+
+Implement Write so we can call Fprintf on a pp (through State), for recursive use in custom verbs. 
+
+#### <a id="pp.WriteString" href="#pp.WriteString">func (p *pp) WriteString(s string) (ret int, err error)</a>
+
+```
+searchKey: fmt.pp.WriteString
+tags: [method private]
+```
+
+```Go
+func (p *pp) WriteString(s string) (ret int, err error)
+```
+
+Implement WriteString so that we can call io.WriteString on a pp (through state), for efficiency. 
+
+#### <a id="pp.argNumber" href="#pp.argNumber">func (p *pp) argNumber(argNum int, format string, i int, numArgs int) (newArgNum, newi int, found bool)</a>
+
+```
+searchKey: fmt.pp.argNumber
+tags: [method private]
+```
+
+```Go
+func (p *pp) argNumber(argNum int, format string, i int, numArgs int) (newArgNum, newi int, found bool)
+```
+
+argNumber returns the next argument to evaluate, which is either the value of the passed-in argNum or the value of the bracketed integer that begins format[i:]. It also returns the new value of i, that is, the index of the next byte of the format to process. 
+
+#### <a id="pp.badArgNum" href="#pp.badArgNum">func (p *pp) badArgNum(verb rune)</a>
+
+```
+searchKey: fmt.pp.badArgNum
+tags: [method private]
+```
+
+```Go
+func (p *pp) badArgNum(verb rune)
+```
+
+#### <a id="pp.badVerb" href="#pp.badVerb">func (p *pp) badVerb(verb rune)</a>
+
+```
+searchKey: fmt.pp.badVerb
+tags: [method private]
+```
+
+```Go
+func (p *pp) badVerb(verb rune)
+```
+
+#### <a id="pp.catchPanic" href="#pp.catchPanic">func (p *pp) catchPanic(arg interface{}, verb rune, method string)</a>
+
+```
+searchKey: fmt.pp.catchPanic
+tags: [method private]
+```
+
+```Go
+func (p *pp) catchPanic(arg interface{}, verb rune, method string)
+```
+
+#### <a id="pp.doPrint" href="#pp.doPrint">func (p *pp) doPrint(a []interface{})</a>
+
+```
+searchKey: fmt.pp.doPrint
+tags: [method private]
+```
+
+```Go
+func (p *pp) doPrint(a []interface{})
+```
+
+#### <a id="pp.doPrintf" href="#pp.doPrintf">func (p *pp) doPrintf(format string, a []interface{})</a>
+
+```
+searchKey: fmt.pp.doPrintf
+tags: [method private]
+```
+
+```Go
+func (p *pp) doPrintf(format string, a []interface{})
+```
+
+#### <a id="pp.doPrintln" href="#pp.doPrintln">func (p *pp) doPrintln(a []interface{})</a>
+
+```
+searchKey: fmt.pp.doPrintln
+tags: [method private]
+```
+
+```Go
+func (p *pp) doPrintln(a []interface{})
+```
+
+doPrintln is like doPrint but always adds a space between arguments and a newline after the last argument. 
+
+#### <a id="pp.fmt0x64" href="#pp.fmt0x64">func (p *pp) fmt0x64(v uint64, leading0x bool)</a>
+
+```
+searchKey: fmt.pp.fmt0x64
+tags: [method private]
+```
+
+```Go
+func (p *pp) fmt0x64(v uint64, leading0x bool)
+```
+
+fmt0x64 formats a uint64 in hexadecimal and prefixes it with 0x or not, as requested, by temporarily setting the sharp flag. 
+
+#### <a id="pp.fmtBool" href="#pp.fmtBool">func (p *pp) fmtBool(v bool, verb rune)</a>
+
+```
+searchKey: fmt.pp.fmtBool
+tags: [method private]
+```
+
+```Go
+func (p *pp) fmtBool(v bool, verb rune)
+```
+
+#### <a id="pp.fmtBytes" href="#pp.fmtBytes">func (p *pp) fmtBytes(v []byte, verb rune, typeString string)</a>
+
+```
+searchKey: fmt.pp.fmtBytes
+tags: [method private]
+```
+
+```Go
+func (p *pp) fmtBytes(v []byte, verb rune, typeString string)
+```
+
+#### <a id="pp.fmtComplex" href="#pp.fmtComplex">func (p *pp) fmtComplex(v complex128, size int, verb rune)</a>
+
+```
+searchKey: fmt.pp.fmtComplex
+tags: [method private]
+```
+
+```Go
+func (p *pp) fmtComplex(v complex128, size int, verb rune)
+```
+
+fmtComplex formats a complex number v with r = real(v) and j = imag(v) as (r+ji) using fmtFloat for r and j formatting. 
+
+#### <a id="pp.fmtFloat" href="#pp.fmtFloat">func (p *pp) fmtFloat(v float64, size int, verb rune)</a>
+
+```
+searchKey: fmt.pp.fmtFloat
+tags: [method private]
+```
+
+```Go
+func (p *pp) fmtFloat(v float64, size int, verb rune)
+```
+
+fmtFloat formats a float. The default precision for each verb is specified as last argument in the call to fmt_float. 
+
+#### <a id="pp.fmtInteger" href="#pp.fmtInteger">func (p *pp) fmtInteger(v uint64, isSigned bool, verb rune)</a>
+
+```
+searchKey: fmt.pp.fmtInteger
+tags: [method private]
+```
+
+```Go
+func (p *pp) fmtInteger(v uint64, isSigned bool, verb rune)
+```
+
+fmtInteger formats a signed or unsigned integer. 
+
+#### <a id="pp.fmtPointer" href="#pp.fmtPointer">func (p *pp) fmtPointer(value reflect.Value, verb rune)</a>
+
+```
+searchKey: fmt.pp.fmtPointer
+tags: [method private]
+```
+
+```Go
+func (p *pp) fmtPointer(value reflect.Value, verb rune)
+```
+
+#### <a id="pp.fmtString" href="#pp.fmtString">func (p *pp) fmtString(v string, verb rune)</a>
+
+```
+searchKey: fmt.pp.fmtString
+tags: [method private]
+```
+
+```Go
+func (p *pp) fmtString(v string, verb rune)
+```
+
+#### <a id="pp.free" href="#pp.free">func (p *pp) free()</a>
+
+```
+searchKey: fmt.pp.free
+tags: [function private]
+```
+
+```Go
+func (p *pp) free()
+```
+
+free saves used pp structs in ppFree; avoids an allocation per invocation. 
+
+#### <a id="pp.handleMethods" href="#pp.handleMethods">func (p *pp) handleMethods(verb rune) (handled bool)</a>
+
+```
+searchKey: fmt.pp.handleMethods
+tags: [method private]
+```
+
+```Go
+func (p *pp) handleMethods(verb rune) (handled bool)
+```
+
+#### <a id="pp.missingArg" href="#pp.missingArg">func (p *pp) missingArg(verb rune)</a>
+
+```
+searchKey: fmt.pp.missingArg
+tags: [method private]
+```
+
+```Go
+func (p *pp) missingArg(verb rune)
+```
+
+#### <a id="pp.printArg" href="#pp.printArg">func (p *pp) printArg(arg interface{}, verb rune)</a>
+
+```
+searchKey: fmt.pp.printArg
+tags: [method private]
+```
+
+```Go
+func (p *pp) printArg(arg interface{}, verb rune)
+```
+
+#### <a id="pp.printValue" href="#pp.printValue">func (p *pp) printValue(value reflect.Value, verb rune, depth int)</a>
+
+```
+searchKey: fmt.pp.printValue
+tags: [method private]
+```
+
+```Go
+func (p *pp) printValue(value reflect.Value, verb rune, depth int)
+```
+
+printValue is similar to printArg but starts with a reflect value, not an interface{} value. It does not handle 'p' and 'T' verbs because these should have been already handled by printArg. 
+
+#### <a id="pp.unknownType" href="#pp.unknownType">func (p *pp) unknownType(v reflect.Value)</a>
+
+```
+searchKey: fmt.pp.unknownType
+tags: [method private]
+```
+
+```Go
+func (p *pp) unknownType(v reflect.Value)
+```
+
+### <a id="readRune" href="#readRune">type readRune struct</a>
+
+```
+searchKey: fmt.readRune
+tags: [struct private]
+```
+
+```Go
+type readRune struct {
+	reader   io.Reader
+	buf      [utf8.UTFMax]byte // used only inside ReadRune
+	pending  int               // number of bytes in pendBuf; only >0 for bad UTF-8
+	pendBuf  [utf8.UTFMax]byte // bytes left over
+	peekRune rune              // if >=0 next rune; when <0 is ^(previous Rune)
+}
+```
+
+readRune is a structure to enable reading UTF-8 encoded code points from an io.Reader. It is used if the Reader given to the scanner does not already implement io.RuneScanner. 
+
+#### <a id="readRune.ReadRune" href="#readRune.ReadRune">func (r *readRune) ReadRune() (rr rune, size int, err error)</a>
+
+```
+searchKey: fmt.readRune.ReadRune
+tags: [function private]
+```
+
+```Go
+func (r *readRune) ReadRune() (rr rune, size int, err error)
+```
+
+ReadRune returns the next UTF-8 encoded code point from the io.Reader inside r. 
+
+#### <a id="readRune.UnreadRune" href="#readRune.UnreadRune">func (r *readRune) UnreadRune() error</a>
+
+```
+searchKey: fmt.readRune.UnreadRune
+tags: [function private]
+```
+
+```Go
+func (r *readRune) UnreadRune() error
+```
+
+#### <a id="readRune.readByte" href="#readRune.readByte">func (r *readRune) readByte() (b byte, err error)</a>
+
+```
+searchKey: fmt.readRune.readByte
+tags: [function private]
+```
+
+```Go
+func (r *readRune) readByte() (b byte, err error)
+```
+
+readByte returns the next byte from the input, which may be left over from a previous read if the UTF-8 was ill-formed. 
 
 ### <a id="scanError" href="#scanError">type scanError struct</a>
 
 ```
 searchKey: fmt.scanError
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -1830,7 +1846,7 @@ scanError represents an error generated by the scanning software. It's used as a
 
 ```
 searchKey: fmt.ss
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -1849,7 +1865,7 @@ ss is the internal implementation of ScanState.
 
 ```
 searchKey: fmt.newScanState
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1862,7 +1878,7 @@ newScanState allocates a new ss struct or grab a cached one.
 
 ```
 searchKey: fmt.ss.Read
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1875,66 +1891,168 @@ The Read method is only in ScanState so that ScanState satisfies io.Reader. It w
 
 ```
 searchKey: fmt.ss.ReadRune
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (s *ss) ReadRune() (r rune, size int, err error)
 ```
 
-#### <a id="ss.Width" href="#ss.Width">func (s *ss) Width() (wid int, ok bool)</a>
+#### <a id="ss.SkipSpace" href="#ss.SkipSpace">func (s *ss) SkipSpace()</a>
 
 ```
-searchKey: fmt.ss.Width
-tags: [private]
-```
-
-```Go
-func (s *ss) Width() (wid int, ok bool)
-```
-
-#### <a id="ss.getRune" href="#ss.getRune">func (s *ss) getRune() (r rune)</a>
-
-```
-searchKey: fmt.ss.getRune
-tags: [private]
+searchKey: fmt.ss.SkipSpace
+tags: [function private]
 ```
 
 ```Go
-func (s *ss) getRune() (r rune)
+func (s *ss) SkipSpace()
 ```
 
-The public method returns an error; this private one panics. If getRune reaches EOF, the return value is EOF (-1). 
+SkipSpace provides Scan methods the ability to skip space and newline characters in keeping with the current scanning mode set by format strings and Scan/Scanln. 
 
-#### <a id="ss.mustReadRune" href="#ss.mustReadRune">func (s *ss) mustReadRune() (r rune)</a>
+#### <a id="ss.Token" href="#ss.Token">func (s *ss) Token(skipSpace bool, f func(rune) bool) (tok []byte, err error)</a>
 
 ```
-searchKey: fmt.ss.mustReadRune
-tags: [private]
+searchKey: fmt.ss.Token
+tags: [method private]
 ```
 
 ```Go
-func (s *ss) mustReadRune() (r rune)
+func (s *ss) Token(skipSpace bool, f func(rune) bool) (tok []byte, err error)
 ```
-
-mustReadRune turns io.EOF into a panic(io.ErrUnexpectedEOF). It is called in cases such as string scanning where an EOF is a syntax error. 
 
 #### <a id="ss.UnreadRune" href="#ss.UnreadRune">func (s *ss) UnreadRune() error</a>
 
 ```
 searchKey: fmt.ss.UnreadRune
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (s *ss) UnreadRune() error
 ```
 
+#### <a id="ss.Width" href="#ss.Width">func (s *ss) Width() (wid int, ok bool)</a>
+
+```
+searchKey: fmt.ss.Width
+tags: [function private]
+```
+
+```Go
+func (s *ss) Width() (wid int, ok bool)
+```
+
+#### <a id="ss.accept" href="#ss.accept">func (s *ss) accept(ok string) bool</a>
+
+```
+searchKey: fmt.ss.accept
+tags: [method private]
+```
+
+```Go
+func (s *ss) accept(ok string) bool
+```
+
+accept checks the next rune in the input. If it's a byte (sic) in the string, it puts it in the buffer and returns true. Otherwise it return false. 
+
+#### <a id="ss.advance" href="#ss.advance">func (s *ss) advance(format string) (i int)</a>
+
+```
+searchKey: fmt.ss.advance
+tags: [method private]
+```
+
+```Go
+func (s *ss) advance(format string) (i int)
+```
+
+advance determines whether the next characters in the input match those of the format. It returns the number of bytes (sic) consumed in the format. All runs of space characters in either input or format behave as a single space. Newlines are special, though: newlines in the format must match those in the input and vice versa. This routine also handles the %% case. If the return value is zero, either format starts with a % (with no following %) or the input is empty. If it is negative, the input did not match the string. 
+
+#### <a id="ss.complexTokens" href="#ss.complexTokens">func (s *ss) complexTokens() (real, imag string)</a>
+
+```
+searchKey: fmt.ss.complexTokens
+tags: [function private]
+```
+
+```Go
+func (s *ss) complexTokens() (real, imag string)
+```
+
+complexTokens returns the real and imaginary parts of the complex number starting here. The number might be parenthesized and has the format (N+Ni) where N is a floating-point number and there are no spaces within. 
+
+#### <a id="ss.consume" href="#ss.consume">func (s *ss) consume(ok string, accept bool) bool</a>
+
+```
+searchKey: fmt.ss.consume
+tags: [method private]
+```
+
+```Go
+func (s *ss) consume(ok string, accept bool) bool
+```
+
+consume reads the next rune in the input and reports whether it is in the ok string. If accept is true, it puts the character into the input token. 
+
+#### <a id="ss.convertFloat" href="#ss.convertFloat">func (s *ss) convertFloat(str string, n int) float64</a>
+
+```
+searchKey: fmt.ss.convertFloat
+tags: [method private]
+```
+
+```Go
+func (s *ss) convertFloat(str string, n int) float64
+```
+
+convertFloat converts the string to a float64value. 
+
+#### <a id="ss.convertString" href="#ss.convertString">func (s *ss) convertString(verb rune) (str string)</a>
+
+```
+searchKey: fmt.ss.convertString
+tags: [method private]
+```
+
+```Go
+func (s *ss) convertString(verb rune) (str string)
+```
+
+convertString returns the string represented by the next input characters. The format of the input is determined by the verb. 
+
+#### <a id="ss.doScan" href="#ss.doScan">func (s *ss) doScan(a []interface{}) (numProcessed int, err error)</a>
+
+```
+searchKey: fmt.ss.doScan
+tags: [method private]
+```
+
+```Go
+func (s *ss) doScan(a []interface{}) (numProcessed int, err error)
+```
+
+doScan does the real work for scanning without a format string. 
+
+#### <a id="ss.doScanf" href="#ss.doScanf">func (s *ss) doScanf(format string, a []interface{}) (numProcessed int, err error)</a>
+
+```
+searchKey: fmt.ss.doScanf
+tags: [method private]
+```
+
+```Go
+func (s *ss) doScanf(format string, a []interface{}) (numProcessed int, err error)
+```
+
+doScanf does the real work when scanning with a format string. At the moment, it handles only pointers to basic types. 
+
 #### <a id="ss.error" href="#ss.error">func (s *ss) error(err error)</a>
 
 ```
 searchKey: fmt.ss.error
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1945,222 +2063,18 @@ func (s *ss) error(err error)
 
 ```
 searchKey: fmt.ss.errorString
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (s *ss) errorString(err string)
 ```
 
-#### <a id="ss.Token" href="#ss.Token">func (s *ss) Token(skipSpace bool, f func(rune) bool) (tok []byte, err error)</a>
-
-```
-searchKey: fmt.ss.Token
-tags: [private]
-```
-
-```Go
-func (s *ss) Token(skipSpace bool, f func(rune) bool) (tok []byte, err error)
-```
-
-#### <a id="ss.free" href="#ss.free">func (s *ss) free(old ssave)</a>
-
-```
-searchKey: fmt.ss.free
-tags: [private]
-```
-
-```Go
-func (s *ss) free(old ssave)
-```
-
-free saves used ss structs in ssFree; avoid an allocation per invocation. 
-
-#### <a id="ss.SkipSpace" href="#ss.SkipSpace">func (s *ss) SkipSpace()</a>
-
-```
-searchKey: fmt.ss.SkipSpace
-tags: [private]
-```
-
-```Go
-func (s *ss) SkipSpace()
-```
-
-SkipSpace provides Scan methods the ability to skip space and newline characters in keeping with the current scanning mode set by format strings and Scan/Scanln. 
-
-#### <a id="ss.token" href="#ss.token">func (s *ss) token(skipSpace bool, f func(rune) bool) []byte</a>
-
-```
-searchKey: fmt.ss.token
-tags: [private]
-```
-
-```Go
-func (s *ss) token(skipSpace bool, f func(rune) bool) []byte
-```
-
-token returns the next space-delimited string from the input. It skips white space. For Scanln, it stops at newlines. For Scan, newlines are treated as spaces. 
-
-#### <a id="ss.consume" href="#ss.consume">func (s *ss) consume(ok string, accept bool) bool</a>
-
-```
-searchKey: fmt.ss.consume
-tags: [private]
-```
-
-```Go
-func (s *ss) consume(ok string, accept bool) bool
-```
-
-consume reads the next rune in the input and reports whether it is in the ok string. If accept is true, it puts the character into the input token. 
-
-#### <a id="ss.peek" href="#ss.peek">func (s *ss) peek(ok string) bool</a>
-
-```
-searchKey: fmt.ss.peek
-tags: [private]
-```
-
-```Go
-func (s *ss) peek(ok string) bool
-```
-
-peek reports whether the next character is in the ok string, without consuming it. 
-
-#### <a id="ss.notEOF" href="#ss.notEOF">func (s *ss) notEOF()</a>
-
-```
-searchKey: fmt.ss.notEOF
-tags: [private]
-```
-
-```Go
-func (s *ss) notEOF()
-```
-
-#### <a id="ss.accept" href="#ss.accept">func (s *ss) accept(ok string) bool</a>
-
-```
-searchKey: fmt.ss.accept
-tags: [private]
-```
-
-```Go
-func (s *ss) accept(ok string) bool
-```
-
-accept checks the next rune in the input. If it's a byte (sic) in the string, it puts it in the buffer and returns true. Otherwise it return false. 
-
-#### <a id="ss.okVerb" href="#ss.okVerb">func (s *ss) okVerb(verb rune, okVerbs, typ string) bool</a>
-
-```
-searchKey: fmt.ss.okVerb
-tags: [private]
-```
-
-```Go
-func (s *ss) okVerb(verb rune, okVerbs, typ string) bool
-```
-
-okVerb verifies that the verb is present in the list, setting s.err appropriately if not. 
-
-#### <a id="ss.scanBool" href="#ss.scanBool">func (s *ss) scanBool(verb rune) bool</a>
-
-```
-searchKey: fmt.ss.scanBool
-tags: [private]
-```
-
-```Go
-func (s *ss) scanBool(verb rune) bool
-```
-
-scanBool returns the value of the boolean represented by the next token. 
-
-#### <a id="ss.getBase" href="#ss.getBase">func (s *ss) getBase(verb rune) (base int, digits string)</a>
-
-```
-searchKey: fmt.ss.getBase
-tags: [private]
-```
-
-```Go
-func (s *ss) getBase(verb rune) (base int, digits string)
-```
-
-getBase returns the numeric base represented by the verb and its digit string. 
-
-#### <a id="ss.scanNumber" href="#ss.scanNumber">func (s *ss) scanNumber(digits string, haveDigits bool) string</a>
-
-```
-searchKey: fmt.ss.scanNumber
-tags: [private]
-```
-
-```Go
-func (s *ss) scanNumber(digits string, haveDigits bool) string
-```
-
-scanNumber returns the numerical string with specified digits starting here. 
-
-#### <a id="ss.scanRune" href="#ss.scanRune">func (s *ss) scanRune(bitSize int) int64</a>
-
-```
-searchKey: fmt.ss.scanRune
-tags: [private]
-```
-
-```Go
-func (s *ss) scanRune(bitSize int) int64
-```
-
-scanRune returns the next rune value in the input. 
-
-#### <a id="ss.scanBasePrefix" href="#ss.scanBasePrefix">func (s *ss) scanBasePrefix() (base int, digits string, zeroFound bool)</a>
-
-```
-searchKey: fmt.ss.scanBasePrefix
-tags: [private]
-```
-
-```Go
-func (s *ss) scanBasePrefix() (base int, digits string, zeroFound bool)
-```
-
-scanBasePrefix reports whether the integer begins with a base prefix and returns the base, digit string, and whether a zero was found. It is called only if the verb is %v. 
-
-#### <a id="ss.scanInt" href="#ss.scanInt">func (s *ss) scanInt(verb rune, bitSize int) int64</a>
-
-```
-searchKey: fmt.ss.scanInt
-tags: [private]
-```
-
-```Go
-func (s *ss) scanInt(verb rune, bitSize int) int64
-```
-
-scanInt returns the value of the integer represented by the next token, checking for overflow. Any error is stored in s.err. 
-
-#### <a id="ss.scanUint" href="#ss.scanUint">func (s *ss) scanUint(verb rune, bitSize int) uint64</a>
-
-```
-searchKey: fmt.ss.scanUint
-tags: [private]
-```
-
-```Go
-func (s *ss) scanUint(verb rune, bitSize int) uint64
-```
-
-scanUint returns the value of the unsigned integer represented by the next token, checking for overflow. Any error is stored in s.err. 
-
 #### <a id="ss.floatToken" href="#ss.floatToken">func (s *ss) floatToken() string</a>
 
 ```
 searchKey: fmt.ss.floatToken
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -2169,76 +2083,50 @@ func (s *ss) floatToken() string
 
 floatToken returns the floating-point number starting here, no longer than swid if the width is specified. It's not rigorous about syntax because it doesn't check that we have at least some digits, but Atof will do that. 
 
-#### <a id="ss.complexTokens" href="#ss.complexTokens">func (s *ss) complexTokens() (real, imag string)</a>
+#### <a id="ss.free" href="#ss.free">func (s *ss) free(old ssave)</a>
 
 ```
-searchKey: fmt.ss.complexTokens
-tags: [private]
-```
-
-```Go
-func (s *ss) complexTokens() (real, imag string)
-```
-
-complexTokens returns the real and imaginary parts of the complex number starting here. The number might be parenthesized and has the format (N+Ni) where N is a floating-point number and there are no spaces within. 
-
-#### <a id="ss.convertFloat" href="#ss.convertFloat">func (s *ss) convertFloat(str string, n int) float64</a>
-
-```
-searchKey: fmt.ss.convertFloat
-tags: [private]
+searchKey: fmt.ss.free
+tags: [method private]
 ```
 
 ```Go
-func (s *ss) convertFloat(str string, n int) float64
+func (s *ss) free(old ssave)
 ```
 
-convertFloat converts the string to a float64value. 
+free saves used ss structs in ssFree; avoid an allocation per invocation. 
 
-#### <a id="ss.scanComplex" href="#ss.scanComplex">func (s *ss) scanComplex(verb rune, n int) complex128</a>
-
-```
-searchKey: fmt.ss.scanComplex
-tags: [private]
-```
-
-```Go
-func (s *ss) scanComplex(verb rune, n int) complex128
-```
-
-convertComplex converts the next token to a complex128 value. The atof argument is a type-specific reader for the underlying type. If we're reading complex64, atof will parse float32s and convert them to float64's to avoid reproducing this code for each complex type. 
-
-#### <a id="ss.convertString" href="#ss.convertString">func (s *ss) convertString(verb rune) (str string)</a>
+#### <a id="ss.getBase" href="#ss.getBase">func (s *ss) getBase(verb rune) (base int, digits string)</a>
 
 ```
-searchKey: fmt.ss.convertString
-tags: [private]
+searchKey: fmt.ss.getBase
+tags: [method private]
 ```
 
 ```Go
-func (s *ss) convertString(verb rune) (str string)
+func (s *ss) getBase(verb rune) (base int, digits string)
 ```
 
-convertString returns the string represented by the next input characters. The format of the input is determined by the verb. 
+getBase returns the numeric base represented by the verb and its digit string. 
 
-#### <a id="ss.quotedString" href="#ss.quotedString">func (s *ss) quotedString() string</a>
+#### <a id="ss.getRune" href="#ss.getRune">func (s *ss) getRune() (r rune)</a>
 
 ```
-searchKey: fmt.ss.quotedString
-tags: [private]
+searchKey: fmt.ss.getRune
+tags: [function private]
 ```
 
 ```Go
-func (s *ss) quotedString() string
+func (s *ss) getRune() (r rune)
 ```
 
-quotedString returns the double- or back-quoted string represented by the next input characters. 
+The public method returns an error; this private one panics. If getRune reaches EOF, the return value is EOF (-1). 
 
 #### <a id="ss.hexByte" href="#ss.hexByte">func (s *ss) hexByte() (b byte, ok bool)</a>
 
 ```
 searchKey: fmt.ss.hexByte
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -2251,7 +2139,7 @@ hexByte returns the next hex-encoded (two-character) byte from the input. It ret
 
 ```
 searchKey: fmt.ss.hexString
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -2260,24 +2148,139 @@ func (s *ss) hexString() string
 
 hexString returns the space-delimited hexpair-encoded string. 
 
-#### <a id="ss.scanPercent" href="#ss.scanPercent">func (s *ss) scanPercent()</a>
+#### <a id="ss.mustReadRune" href="#ss.mustReadRune">func (s *ss) mustReadRune() (r rune)</a>
 
 ```
-searchKey: fmt.ss.scanPercent
-tags: [private]
+searchKey: fmt.ss.mustReadRune
+tags: [function private]
 ```
 
 ```Go
-func (s *ss) scanPercent()
+func (s *ss) mustReadRune() (r rune)
 ```
 
-scanPercent scans a literal percent character. 
+mustReadRune turns io.EOF into a panic(io.ErrUnexpectedEOF). It is called in cases such as string scanning where an EOF is a syntax error. 
+
+#### <a id="ss.notEOF" href="#ss.notEOF">func (s *ss) notEOF()</a>
+
+```
+searchKey: fmt.ss.notEOF
+tags: [function private]
+```
+
+```Go
+func (s *ss) notEOF()
+```
+
+#### <a id="ss.okVerb" href="#ss.okVerb">func (s *ss) okVerb(verb rune, okVerbs, typ string) bool</a>
+
+```
+searchKey: fmt.ss.okVerb
+tags: [method private]
+```
+
+```Go
+func (s *ss) okVerb(verb rune, okVerbs, typ string) bool
+```
+
+okVerb verifies that the verb is present in the list, setting s.err appropriately if not. 
+
+#### <a id="ss.peek" href="#ss.peek">func (s *ss) peek(ok string) bool</a>
+
+```
+searchKey: fmt.ss.peek
+tags: [method private]
+```
+
+```Go
+func (s *ss) peek(ok string) bool
+```
+
+peek reports whether the next character is in the ok string, without consuming it. 
+
+#### <a id="ss.quotedString" href="#ss.quotedString">func (s *ss) quotedString() string</a>
+
+```
+searchKey: fmt.ss.quotedString
+tags: [function private]
+```
+
+```Go
+func (s *ss) quotedString() string
+```
+
+quotedString returns the double- or back-quoted string represented by the next input characters. 
+
+#### <a id="ss.scanBasePrefix" href="#ss.scanBasePrefix">func (s *ss) scanBasePrefix() (base int, digits string, zeroFound bool)</a>
+
+```
+searchKey: fmt.ss.scanBasePrefix
+tags: [function private]
+```
+
+```Go
+func (s *ss) scanBasePrefix() (base int, digits string, zeroFound bool)
+```
+
+scanBasePrefix reports whether the integer begins with a base prefix and returns the base, digit string, and whether a zero was found. It is called only if the verb is %v. 
+
+#### <a id="ss.scanBool" href="#ss.scanBool">func (s *ss) scanBool(verb rune) bool</a>
+
+```
+searchKey: fmt.ss.scanBool
+tags: [method private]
+```
+
+```Go
+func (s *ss) scanBool(verb rune) bool
+```
+
+scanBool returns the value of the boolean represented by the next token. 
+
+#### <a id="ss.scanComplex" href="#ss.scanComplex">func (s *ss) scanComplex(verb rune, n int) complex128</a>
+
+```
+searchKey: fmt.ss.scanComplex
+tags: [method private]
+```
+
+```Go
+func (s *ss) scanComplex(verb rune, n int) complex128
+```
+
+convertComplex converts the next token to a complex128 value. The atof argument is a type-specific reader for the underlying type. If we're reading complex64, atof will parse float32s and convert them to float64's to avoid reproducing this code for each complex type. 
+
+#### <a id="ss.scanInt" href="#ss.scanInt">func (s *ss) scanInt(verb rune, bitSize int) int64</a>
+
+```
+searchKey: fmt.ss.scanInt
+tags: [method private]
+```
+
+```Go
+func (s *ss) scanInt(verb rune, bitSize int) int64
+```
+
+scanInt returns the value of the integer represented by the next token, checking for overflow. Any error is stored in s.err. 
+
+#### <a id="ss.scanNumber" href="#ss.scanNumber">func (s *ss) scanNumber(digits string, haveDigits bool) string</a>
+
+```
+searchKey: fmt.ss.scanNumber
+tags: [method private]
+```
+
+```Go
+func (s *ss) scanNumber(digits string, haveDigits bool) string
+```
+
+scanNumber returns the numerical string with specified digits starting here. 
 
 #### <a id="ss.scanOne" href="#ss.scanOne">func (s *ss) scanOne(verb rune, arg interface{})</a>
 
 ```
 searchKey: fmt.ss.scanOne
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -2286,50 +2289,63 @@ func (s *ss) scanOne(verb rune, arg interface{})
 
 scanOne scans a single value, deriving the scanner from the type of the argument. 
 
-#### <a id="ss.doScan" href="#ss.doScan">func (s *ss) doScan(a []interface{}) (numProcessed int, err error)</a>
+#### <a id="ss.scanPercent" href="#ss.scanPercent">func (s *ss) scanPercent()</a>
 
 ```
-searchKey: fmt.ss.doScan
-tags: [private]
-```
-
-```Go
-func (s *ss) doScan(a []interface{}) (numProcessed int, err error)
-```
-
-doScan does the real work for scanning without a format string. 
-
-#### <a id="ss.advance" href="#ss.advance">func (s *ss) advance(format string) (i int)</a>
-
-```
-searchKey: fmt.ss.advance
-tags: [private]
+searchKey: fmt.ss.scanPercent
+tags: [function private]
 ```
 
 ```Go
-func (s *ss) advance(format string) (i int)
+func (s *ss) scanPercent()
 ```
 
-advance determines whether the next characters in the input match those of the format. It returns the number of bytes (sic) consumed in the format. All runs of space characters in either input or format behave as a single space. Newlines are special, though: newlines in the format must match those in the input and vice versa. This routine also handles the %% case. If the return value is zero, either format starts with a % (with no following %) or the input is empty. If it is negative, the input did not match the string. 
+scanPercent scans a literal percent character. 
 
-#### <a id="ss.doScanf" href="#ss.doScanf">func (s *ss) doScanf(format string, a []interface{}) (numProcessed int, err error)</a>
+#### <a id="ss.scanRune" href="#ss.scanRune">func (s *ss) scanRune(bitSize int) int64</a>
 
 ```
-searchKey: fmt.ss.doScanf
-tags: [private]
+searchKey: fmt.ss.scanRune
+tags: [method private]
 ```
 
 ```Go
-func (s *ss) doScanf(format string, a []interface{}) (numProcessed int, err error)
+func (s *ss) scanRune(bitSize int) int64
 ```
 
-doScanf does the real work when scanning with a format string. At the moment, it handles only pointers to basic types. 
+scanRune returns the next rune value in the input. 
+
+#### <a id="ss.scanUint" href="#ss.scanUint">func (s *ss) scanUint(verb rune, bitSize int) uint64</a>
+
+```
+searchKey: fmt.ss.scanUint
+tags: [method private]
+```
+
+```Go
+func (s *ss) scanUint(verb rune, bitSize int) uint64
+```
+
+scanUint returns the value of the unsigned integer represented by the next token, checking for overflow. Any error is stored in s.err. 
+
+#### <a id="ss.token" href="#ss.token">func (s *ss) token(skipSpace bool, f func(rune) bool) []byte</a>
+
+```
+searchKey: fmt.ss.token
+tags: [method private]
+```
+
+```Go
+func (s *ss) token(skipSpace bool, f func(rune) bool) []byte
+```
+
+token returns the next space-delimited string from the input. It skips white space. For Scanln, it stops at newlines. For Scan, newlines are treated as spaces. 
 
 ### <a id="ssave" href="#ssave">type ssave struct</a>
 
 ```
 searchKey: fmt.ssave
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -2345,68 +2361,75 @@ type ssave struct {
 
 ssave holds the parts of ss that need to be saved and restored on recursive scans. 
 
-### <a id="readRune" href="#readRune">type readRune struct</a>
+### <a id="stringReader" href="#stringReader">type stringReader string</a>
 
 ```
-searchKey: fmt.readRune
-tags: [private]
+searchKey: fmt.stringReader
+tags: [string private]
 ```
 
 ```Go
-type readRune struct {
-	reader   io.Reader
-	buf      [utf8.UTFMax]byte // used only inside ReadRune
-	pending  int               // number of bytes in pendBuf; only >0 for bad UTF-8
-	pendBuf  [utf8.UTFMax]byte // bytes left over
-	peekRune rune              // if >=0 next rune; when <0 is ^(previous Rune)
+type stringReader string
+```
+
+#### <a id="stringReader.Read" href="#stringReader.Read">func (r *stringReader) Read(b []byte) (n int, err error)</a>
+
+```
+searchKey: fmt.stringReader.Read
+tags: [method private]
+```
+
+```Go
+func (r *stringReader) Read(b []byte) (n int, err error)
+```
+
+### <a id="wrapError" href="#wrapError">type wrapError struct</a>
+
+```
+searchKey: fmt.wrapError
+tags: [struct private]
+```
+
+```Go
+type wrapError struct {
+	msg string
+	err error
 }
 ```
 
-readRune is a structure to enable reading UTF-8 encoded code points from an io.Reader. It is used if the Reader given to the scanner does not already implement io.RuneScanner. 
-
-#### <a id="readRune.readByte" href="#readRune.readByte">func (r *readRune) readByte() (b byte, err error)</a>
+#### <a id="wrapError.Error" href="#wrapError.Error">func (e *wrapError) Error() string</a>
 
 ```
-searchKey: fmt.readRune.readByte
-tags: [private]
+searchKey: fmt.wrapError.Error
+tags: [function private]
 ```
 
 ```Go
-func (r *readRune) readByte() (b byte, err error)
+func (e *wrapError) Error() string
 ```
 
-readByte returns the next byte from the input, which may be left over from a previous read if the UTF-8 was ill-formed. 
-
-#### <a id="readRune.ReadRune" href="#readRune.ReadRune">func (r *readRune) ReadRune() (rr rune, size int, err error)</a>
+#### <a id="wrapError.Unwrap" href="#wrapError.Unwrap">func (e *wrapError) Unwrap() error</a>
 
 ```
-searchKey: fmt.readRune.ReadRune
-tags: [private]
-```
-
-```Go
-func (r *readRune) ReadRune() (rr rune, size int, err error)
-```
-
-ReadRune returns the next UTF-8 encoded code point from the io.Reader inside r. 
-
-#### <a id="readRune.UnreadRune" href="#readRune.UnreadRune">func (r *readRune) UnreadRune() error</a>
-
-```
-searchKey: fmt.readRune.UnreadRune
-tags: [private]
+searchKey: fmt.wrapError.Unwrap
+tags: [function private]
 ```
 
 ```Go
-func (r *readRune) UnreadRune() error
+func (e *wrapError) Unwrap() error
 ```
 
 ## <a id="func" href="#func">Functions</a>
+
+```
+tags: [package]
+```
 
 ### <a id="Errorf" href="#Errorf">func Errorf(format string, a ...interface{}) error</a>
 
 ```
 searchKey: fmt.Errorf
+tags: [method]
 ```
 
 ```Go
@@ -2417,46 +2440,11 @@ Errorf formats according to a format specifier and returns the string as a value
 
 If the format specifier includes a %w verb with an error operand, the returned error will implement an Unwrap method returning the operand. It is invalid to include more than one %w verb or to supply it with an operand that does not implement the error interface. The %w verb is otherwise a synonym for %v. 
 
-### <a id="Fprintf" href="#Fprintf">func Fprintf(w io.Writer, format string, a ...interface{}) (n int, err error)</a>
-
-```
-searchKey: fmt.Fprintf
-```
-
-```Go
-func Fprintf(w io.Writer, format string, a ...interface{}) (n int, err error)
-```
-
-Fprintf formats according to a format specifier and writes to w. It returns the number of bytes written and any write error encountered. 
-
-### <a id="Printf" href="#Printf">func Printf(format string, a ...interface{}) (n int, err error)</a>
-
-```
-searchKey: fmt.Printf
-```
-
-```Go
-func Printf(format string, a ...interface{}) (n int, err error)
-```
-
-Printf formats according to a format specifier and writes to standard output. It returns the number of bytes written and any write error encountered. 
-
-### <a id="Sprintf" href="#Sprintf">func Sprintf(format string, a ...interface{}) string</a>
-
-```
-searchKey: fmt.Sprintf
-```
-
-```Go
-func Sprintf(format string, a ...interface{}) string
-```
-
-Sprintf formats according to a format specifier and returns the resulting string. 
-
 ### <a id="Fprint" href="#Fprint">func Fprint(w io.Writer, a ...interface{}) (n int, err error)</a>
 
 ```
 searchKey: fmt.Fprint
+tags: [method]
 ```
 
 ```Go
@@ -2465,34 +2453,24 @@ func Fprint(w io.Writer, a ...interface{}) (n int, err error)
 
 Fprint formats using the default formats for its operands and writes to w. Spaces are added between operands when neither is a string. It returns the number of bytes written and any write error encountered. 
 
-### <a id="Print" href="#Print">func Print(a ...interface{}) (n int, err error)</a>
+### <a id="Fprintf" href="#Fprintf">func Fprintf(w io.Writer, format string, a ...interface{}) (n int, err error)</a>
 
 ```
-searchKey: fmt.Print
-```
-
-```Go
-func Print(a ...interface{}) (n int, err error)
-```
-
-Print formats using the default formats for its operands and writes to standard output. Spaces are added between operands when neither is a string. It returns the number of bytes written and any write error encountered. 
-
-### <a id="Sprint" href="#Sprint">func Sprint(a ...interface{}) string</a>
-
-```
-searchKey: fmt.Sprint
+searchKey: fmt.Fprintf
+tags: [method]
 ```
 
 ```Go
-func Sprint(a ...interface{}) string
+func Fprintf(w io.Writer, format string, a ...interface{}) (n int, err error)
 ```
 
-Sprint formats using the default formats for its operands and returns the resulting string. Spaces are added between operands when neither is a string. 
+Fprintf formats according to a format specifier and writes to w. It returns the number of bytes written and any write error encountered. 
 
 ### <a id="Fprintln" href="#Fprintln">func Fprintln(w io.Writer, a ...interface{}) (n int, err error)</a>
 
 ```
 searchKey: fmt.Fprintln
+tags: [method]
 ```
 
 ```Go
@@ -2501,171 +2479,11 @@ func Fprintln(w io.Writer, a ...interface{}) (n int, err error)
 
 Fprintln formats using the default formats for its operands and writes to w. Spaces are always added between operands and a newline is appended. It returns the number of bytes written and any write error encountered. 
 
-### <a id="Println" href="#Println">func Println(a ...interface{}) (n int, err error)</a>
-
-```
-searchKey: fmt.Println
-```
-
-```Go
-func Println(a ...interface{}) (n int, err error)
-```
-
-Println formats using the default formats for its operands and writes to standard output. Spaces are always added between operands and a newline is appended. It returns the number of bytes written and any write error encountered. 
-
-### <a id="Sprintln" href="#Sprintln">func Sprintln(a ...interface{}) string</a>
-
-```
-searchKey: fmt.Sprintln
-```
-
-```Go
-func Sprintln(a ...interface{}) string
-```
-
-Sprintln formats using the default formats for its operands and returns the resulting string. Spaces are always added between operands and a newline is appended. 
-
-### <a id="getField" href="#getField">func getField(v reflect.Value, i int) reflect.Value</a>
-
-```
-searchKey: fmt.getField
-tags: [private]
-```
-
-```Go
-func getField(v reflect.Value, i int) reflect.Value
-```
-
-getField gets the i'th field of the struct value. If the field is itself is an interface, return a value for the thing inside the interface, not the interface itself. 
-
-### <a id="tooLarge" href="#tooLarge">func tooLarge(x int) bool</a>
-
-```
-searchKey: fmt.tooLarge
-tags: [private]
-```
-
-```Go
-func tooLarge(x int) bool
-```
-
-tooLarge reports whether the magnitude of the integer is too large to be used as a formatting width or precision. 
-
-### <a id="parsenum" href="#parsenum">func parsenum(s string, start, end int) (num int, isnum bool, newi int)</a>
-
-```
-searchKey: fmt.parsenum
-tags: [private]
-```
-
-```Go
-func parsenum(s string, start, end int) (num int, isnum bool, newi int)
-```
-
-parsenum converts ASCII to integer.  num is 0 (and isnum is false) if no number present. 
-
-### <a id="intFromArg" href="#intFromArg">func intFromArg(a []interface{}, argNum int) (num int, isInt bool, newArgNum int)</a>
-
-```
-searchKey: fmt.intFromArg
-tags: [private]
-```
-
-```Go
-func intFromArg(a []interface{}, argNum int) (num int, isInt bool, newArgNum int)
-```
-
-intFromArg gets the argNumth element of a. On return, isInt reports whether the argument has integer type. 
-
-### <a id="parseArgNumber" href="#parseArgNumber">func parseArgNumber(format string) (index int, wid int, ok bool)</a>
-
-```
-searchKey: fmt.parseArgNumber
-tags: [private]
-```
-
-```Go
-func parseArgNumber(format string) (index int, wid int, ok bool)
-```
-
-parseArgNumber returns the value of the bracketed number, minus 1 (explicit argument numbers are one-indexed but we want zero-indexed). The opening bracket is known to be present at format[0]. The returned values are the index, the number of bytes to consume up to the closing paren, if present, and whether the number parsed ok. The bytes to consume will be 1 if no closing paren is present. 
-
-### <a id="Scan" href="#Scan">func Scan(a ...interface{}) (n int, err error)</a>
-
-```
-searchKey: fmt.Scan
-```
-
-```Go
-func Scan(a ...interface{}) (n int, err error)
-```
-
-Scan scans text read from standard input, storing successive space-separated values into successive arguments. Newlines count as space. It returns the number of items successfully scanned. If that is less than the number of arguments, err will report why. 
-
-### <a id="Scanln" href="#Scanln">func Scanln(a ...interface{}) (n int, err error)</a>
-
-```
-searchKey: fmt.Scanln
-```
-
-```Go
-func Scanln(a ...interface{}) (n int, err error)
-```
-
-Scanln is similar to Scan, but stops scanning at a newline and after the final item there must be a newline or EOF. 
-
-### <a id="Scanf" href="#Scanf">func Scanf(format string, a ...interface{}) (n int, err error)</a>
-
-```
-searchKey: fmt.Scanf
-```
-
-```Go
-func Scanf(format string, a ...interface{}) (n int, err error)
-```
-
-Scanf scans text read from standard input, storing successive space-separated values into successive arguments as determined by the format. It returns the number of items successfully scanned. If that is less than the number of arguments, err will report why. Newlines in the input must match newlines in the format. The one exception: the verb %c always scans the next rune in the input, even if it is a space (or tab etc.) or newline. 
-
-### <a id="Sscan" href="#Sscan">func Sscan(str string, a ...interface{}) (n int, err error)</a>
-
-```
-searchKey: fmt.Sscan
-```
-
-```Go
-func Sscan(str string, a ...interface{}) (n int, err error)
-```
-
-Sscan scans the argument string, storing successive space-separated values into successive arguments. Newlines count as space. It returns the number of items successfully scanned. If that is less than the number of arguments, err will report why. 
-
-### <a id="Sscanln" href="#Sscanln">func Sscanln(str string, a ...interface{}) (n int, err error)</a>
-
-```
-searchKey: fmt.Sscanln
-```
-
-```Go
-func Sscanln(str string, a ...interface{}) (n int, err error)
-```
-
-Sscanln is similar to Sscan, but stops scanning at a newline and after the final item there must be a newline or EOF. 
-
-### <a id="Sscanf" href="#Sscanf">func Sscanf(str string, format string, a ...interface{}) (n int, err error)</a>
-
-```
-searchKey: fmt.Sscanf
-```
-
-```Go
-func Sscanf(str string, format string, a ...interface{}) (n int, err error)
-```
-
-Sscanf scans the argument string, storing successive space-separated values into successive arguments as determined by the format. It returns the number of items successfully parsed. Newlines in the input must match newlines in the format. 
-
 ### <a id="Fscan" href="#Fscan">func Fscan(r io.Reader, a ...interface{}) (n int, err error)</a>
 
 ```
 searchKey: fmt.Fscan
+tags: [method]
 ```
 
 ```Go
@@ -2674,22 +2492,11 @@ func Fscan(r io.Reader, a ...interface{}) (n int, err error)
 
 Fscan scans text read from r, storing successive space-separated values into successive arguments. Newlines count as space. It returns the number of items successfully scanned. If that is less than the number of arguments, err will report why. 
 
-### <a id="Fscanln" href="#Fscanln">func Fscanln(r io.Reader, a ...interface{}) (n int, err error)</a>
-
-```
-searchKey: fmt.Fscanln
-```
-
-```Go
-func Fscanln(r io.Reader, a ...interface{}) (n int, err error)
-```
-
-Fscanln is similar to Fscan, but stops scanning at a newline and after the final item there must be a newline or EOF. 
-
 ### <a id="Fscanf" href="#Fscanf">func Fscanf(r io.Reader, format string, a ...interface{}) (n int, err error)</a>
 
 ```
 searchKey: fmt.Fscanf
+tags: [method]
 ```
 
 ```Go
@@ -2698,46 +2505,206 @@ func Fscanf(r io.Reader, format string, a ...interface{}) (n int, err error)
 
 Fscanf scans text read from r, storing successive space-separated values into successive arguments as determined by the format. It returns the number of items successfully parsed. Newlines in the input must match newlines in the format. 
 
-### <a id="isSpace" href="#isSpace">func isSpace(r rune) bool</a>
+### <a id="Fscanln" href="#Fscanln">func Fscanln(r io.Reader, a ...interface{}) (n int, err error)</a>
 
 ```
-searchKey: fmt.isSpace
-tags: [private]
-```
-
-```Go
-func isSpace(r rune) bool
-```
-
-### <a id="notSpace" href="#notSpace">func notSpace(r rune) bool</a>
-
-```
-searchKey: fmt.notSpace
-tags: [private]
+searchKey: fmt.Fscanln
+tags: [method]
 ```
 
 ```Go
-func notSpace(r rune) bool
+func Fscanln(r io.Reader, a ...interface{}) (n int, err error)
 ```
 
-notSpace is the default scanning function used in Token. 
+Fscanln is similar to Fscan, but stops scanning at a newline and after the final item there must be a newline or EOF. 
 
-### <a id="indexRune" href="#indexRune">func indexRune(s string, r rune) int</a>
+### <a id="Print" href="#Print">func Print(a ...interface{}) (n int, err error)</a>
 
 ```
-searchKey: fmt.indexRune
-tags: [private]
+searchKey: fmt.Print
+tags: [method]
 ```
 
 ```Go
-func indexRune(s string, r rune) int
+func Print(a ...interface{}) (n int, err error)
 ```
+
+Print formats using the default formats for its operands and writes to standard output. Spaces are added between operands when neither is a string. It returns the number of bytes written and any write error encountered. 
+
+### <a id="Printf" href="#Printf">func Printf(format string, a ...interface{}) (n int, err error)</a>
+
+```
+searchKey: fmt.Printf
+tags: [method]
+```
+
+```Go
+func Printf(format string, a ...interface{}) (n int, err error)
+```
+
+Printf formats according to a format specifier and writes to standard output. It returns the number of bytes written and any write error encountered. 
+
+### <a id="Println" href="#Println">func Println(a ...interface{}) (n int, err error)</a>
+
+```
+searchKey: fmt.Println
+tags: [method]
+```
+
+```Go
+func Println(a ...interface{}) (n int, err error)
+```
+
+Println formats using the default formats for its operands and writes to standard output. Spaces are always added between operands and a newline is appended. It returns the number of bytes written and any write error encountered. 
+
+### <a id="Scan" href="#Scan">func Scan(a ...interface{}) (n int, err error)</a>
+
+```
+searchKey: fmt.Scan
+tags: [method]
+```
+
+```Go
+func Scan(a ...interface{}) (n int, err error)
+```
+
+Scan scans text read from standard input, storing successive space-separated values into successive arguments. Newlines count as space. It returns the number of items successfully scanned. If that is less than the number of arguments, err will report why. 
+
+### <a id="Scanf" href="#Scanf">func Scanf(format string, a ...interface{}) (n int, err error)</a>
+
+```
+searchKey: fmt.Scanf
+tags: [method]
+```
+
+```Go
+func Scanf(format string, a ...interface{}) (n int, err error)
+```
+
+Scanf scans text read from standard input, storing successive space-separated values into successive arguments as determined by the format. It returns the number of items successfully scanned. If that is less than the number of arguments, err will report why. Newlines in the input must match newlines in the format. The one exception: the verb %c always scans the next rune in the input, even if it is a space (or tab etc.) or newline. 
+
+### <a id="Scanln" href="#Scanln">func Scanln(a ...interface{}) (n int, err error)</a>
+
+```
+searchKey: fmt.Scanln
+tags: [method]
+```
+
+```Go
+func Scanln(a ...interface{}) (n int, err error)
+```
+
+Scanln is similar to Scan, but stops scanning at a newline and after the final item there must be a newline or EOF. 
+
+### <a id="Sprint" href="#Sprint">func Sprint(a ...interface{}) string</a>
+
+```
+searchKey: fmt.Sprint
+tags: [method]
+```
+
+```Go
+func Sprint(a ...interface{}) string
+```
+
+Sprint formats using the default formats for its operands and returns the resulting string. Spaces are added between operands when neither is a string. 
+
+### <a id="Sprintf" href="#Sprintf">func Sprintf(format string, a ...interface{}) string</a>
+
+```
+searchKey: fmt.Sprintf
+tags: [method]
+```
+
+```Go
+func Sprintf(format string, a ...interface{}) string
+```
+
+Sprintf formats according to a format specifier and returns the resulting string. 
+
+### <a id="Sprintln" href="#Sprintln">func Sprintln(a ...interface{}) string</a>
+
+```
+searchKey: fmt.Sprintln
+tags: [method]
+```
+
+```Go
+func Sprintln(a ...interface{}) string
+```
+
+Sprintln formats using the default formats for its operands and returns the resulting string. Spaces are always added between operands and a newline is appended. 
+
+### <a id="Sscan" href="#Sscan">func Sscan(str string, a ...interface{}) (n int, err error)</a>
+
+```
+searchKey: fmt.Sscan
+tags: [method]
+```
+
+```Go
+func Sscan(str string, a ...interface{}) (n int, err error)
+```
+
+Sscan scans the argument string, storing successive space-separated values into successive arguments. Newlines count as space. It returns the number of items successfully scanned. If that is less than the number of arguments, err will report why. 
+
+### <a id="Sscanf" href="#Sscanf">func Sscanf(str string, format string, a ...interface{}) (n int, err error)</a>
+
+```
+searchKey: fmt.Sscanf
+tags: [method]
+```
+
+```Go
+func Sscanf(str string, format string, a ...interface{}) (n int, err error)
+```
+
+Sscanf scans the argument string, storing successive space-separated values into successive arguments as determined by the format. It returns the number of items successfully parsed. Newlines in the input must match newlines in the format. 
+
+### <a id="Sscanln" href="#Sscanln">func Sscanln(str string, a ...interface{}) (n int, err error)</a>
+
+```
+searchKey: fmt.Sscanln
+tags: [method]
+```
+
+```Go
+func Sscanln(str string, a ...interface{}) (n int, err error)
+```
+
+Sscanln is similar to Sscan, but stops scanning at a newline and after the final item there must be a newline or EOF. 
+
+### <a id="errorHandler" href="#errorHandler">func errorHandler(errp *error)</a>
+
+```
+searchKey: fmt.errorHandler
+tags: [method private]
+```
+
+```Go
+func errorHandler(errp *error)
+```
+
+errorHandler turns local panics into error returns. 
+
+### <a id="getField" href="#getField">func getField(v reflect.Value, i int) reflect.Value</a>
+
+```
+searchKey: fmt.getField
+tags: [method private]
+```
+
+```Go
+func getField(v reflect.Value, i int) reflect.Value
+```
+
+getField gets the i'th field of the struct value. If the field is itself is an interface, return a value for the thing inside the interface, not the interface itself. 
 
 ### <a id="hasX" href="#hasX">func hasX(s string) bool</a>
 
 ```
 searchKey: fmt.hasX
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -2748,7 +2715,7 @@ func hasX(s string) bool
 
 ```
 searchKey: fmt.hexDigit
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -2757,16 +2724,90 @@ func hexDigit(d rune) (int, bool)
 
 hexDigit returns the value of the hexadecimal digit. 
 
-### <a id="errorHandler" href="#errorHandler">func errorHandler(errp *error)</a>
+### <a id="indexRune" href="#indexRune">func indexRune(s string, r rune) int</a>
 
 ```
-searchKey: fmt.errorHandler
-tags: [private]
+searchKey: fmt.indexRune
+tags: [method private]
 ```
 
 ```Go
-func errorHandler(errp *error)
+func indexRune(s string, r rune) int
 ```
 
-errorHandler turns local panics into error returns. 
+### <a id="intFromArg" href="#intFromArg">func intFromArg(a []interface{}, argNum int) (num int, isInt bool, newArgNum int)</a>
+
+```
+searchKey: fmt.intFromArg
+tags: [method private]
+```
+
+```Go
+func intFromArg(a []interface{}, argNum int) (num int, isInt bool, newArgNum int)
+```
+
+intFromArg gets the argNumth element of a. On return, isInt reports whether the argument has integer type. 
+
+### <a id="isSpace" href="#isSpace">func isSpace(r rune) bool</a>
+
+```
+searchKey: fmt.isSpace
+tags: [method private]
+```
+
+```Go
+func isSpace(r rune) bool
+```
+
+### <a id="notSpace" href="#notSpace">func notSpace(r rune) bool</a>
+
+```
+searchKey: fmt.notSpace
+tags: [method private]
+```
+
+```Go
+func notSpace(r rune) bool
+```
+
+notSpace is the default scanning function used in Token. 
+
+### <a id="parseArgNumber" href="#parseArgNumber">func parseArgNumber(format string) (index int, wid int, ok bool)</a>
+
+```
+searchKey: fmt.parseArgNumber
+tags: [method private]
+```
+
+```Go
+func parseArgNumber(format string) (index int, wid int, ok bool)
+```
+
+parseArgNumber returns the value of the bracketed number, minus 1 (explicit argument numbers are one-indexed but we want zero-indexed). The opening bracket is known to be present at format[0]. The returned values are the index, the number of bytes to consume up to the closing paren, if present, and whether the number parsed ok. The bytes to consume will be 1 if no closing paren is present. 
+
+### <a id="parsenum" href="#parsenum">func parsenum(s string, start, end int) (num int, isnum bool, newi int)</a>
+
+```
+searchKey: fmt.parsenum
+tags: [method private]
+```
+
+```Go
+func parsenum(s string, start, end int) (num int, isnum bool, newi int)
+```
+
+parsenum converts ASCII to integer.  num is 0 (and isnum is false) if no number present. 
+
+### <a id="tooLarge" href="#tooLarge">func tooLarge(x int) bool</a>
+
+```
+searchKey: fmt.tooLarge
+tags: [method private]
+```
+
+```Go
+func tooLarge(x int) bool
+```
+
+tooLarge reports whether the magnitude of the integer is too large to be used as a formatting width or precision. 
 

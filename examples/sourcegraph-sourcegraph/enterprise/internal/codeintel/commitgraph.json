@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/internal/codeintel/commitgraph",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,173 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/internal/codeintel/commitgraph#Graph",
-              "documentation": {
-                "identifier": "Graph",
-                "newPage": false,
-                "searchKey": "commitgraph.Graph",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Graph struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Graph struct {\n\tcommitGraphView *CommitGraphView\n\tgraph           map[string][]string\n\tcommits         []string\n\tancestorUploads map[string]map[string]UploadMeta\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/codeintel/commitgraph#NewGraph",
-                    "documentation": {
-                      "identifier": "NewGraph",
-                      "newPage": false,
-                      "searchKey": "commitgraph.NewGraph",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewGraph(commitGraph *gitserver.CommitGraph, commitGraphView *CommitGraphView) *Graph"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewGraph(commitGraph *gitserver.CommitGraph, commitGraphView *CommitGraphView) *Graph\n```\n\nNewGraph creates a commit graph decorated with the set of uploads visible from that commit based on the given commit graph and complete set of LSIF upload metadata. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/codeintel/commitgraph#Graph.UploadsVisibleAtCommit",
-                    "documentation": {
-                      "identifier": "Graph.UploadsVisibleAtCommit",
-                      "newPage": false,
-                      "searchKey": "commitgraph.Graph.UploadsVisibleAtCommit",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (g *Graph) UploadsVisibleAtCommit(commit string) []UploadMeta"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (g *Graph) UploadsVisibleAtCommit(commit string) []UploadMeta\n```\n\nUploadsVisibleAtCommit returns the set of uploads that are visible from the given commit. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/codeintel/commitgraph#Graph.Stream",
-                    "documentation": {
-                      "identifier": "Graph.Stream",
-                      "newPage": false,
-                      "searchKey": "commitgraph.Graph.Stream",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (g *Graph) Stream() <-chan Envelope"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (g *Graph) Stream() <-chan Envelope\n```\n\nStream returns a channel of envelope values which indicate either the set of visible uploads at a particular commit, or the nearest neighbors at a particular commit, depending on the value within the envelope. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/codeintel/commitgraph#Graph.Gather",
-                    "documentation": {
-                      "identifier": "Graph.Gather",
-                      "newPage": false,
-                      "searchKey": "commitgraph.Graph.Gather",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (g *Graph) Gather() (uploads map[string][]UploadMeta, links map[string]LinkRelationship)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (g *Graph) Gather() (uploads map[string][]UploadMeta, links map[string]LinkRelationship)\n```\n\nGather reads the graph's stream to completion and returns a map of the values. This method is only used for convenience and testing and should not be used in a hot path. It can be VERY memory intensive in production to have a reference to each commit's upload metadata concurrently. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/codeintel/commitgraph#Envelope",
-              "documentation": {
-                "identifier": "Envelope",
-                "newPage": false,
-                "searchKey": "commitgraph.Envelope",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Envelope struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Envelope struct {\n\tUploads *VisibilityRelationship\n\tLinks   *LinkRelationship\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/codeintel/commitgraph#VisibilityRelationship",
-              "documentation": {
-                "identifier": "VisibilityRelationship",
-                "newPage": false,
-                "searchKey": "commitgraph.VisibilityRelationship",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type VisibilityRelationship struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype VisibilityRelationship struct {\n\tCommit  string\n\tUploads []UploadMeta\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/codeintel/commitgraph#LinkRelationship",
-              "documentation": {
-                "identifier": "LinkRelationship",
-                "newPage": false,
-                "searchKey": "commitgraph.LinkRelationship",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type LinkRelationship struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype LinkRelationship struct {\n\tCommit         string\n\tAncestorCommit string\n\tDistance       uint32\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/codeintel/commitgraph#CommitGraphView",
               "documentation": {
                 "identifier": "CommitGraphView",
                 "newPage": false,
                 "searchKey": "commitgraph.CommitGraphView",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -223,7 +66,9 @@
                       "identifier": "NewCommitGraphView",
                       "newPage": false,
                       "searchKey": "commitgraph.NewCommitGraphView",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -244,6 +89,7 @@
                       "newPage": false,
                       "searchKey": "commitgraph.readBenchmarkCommitGraphView",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -265,7 +111,9 @@
                       "identifier": "CommitGraphView.Add",
                       "newPage": false,
                       "searchKey": "commitgraph.CommitGraphView.Add",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -283,12 +131,169 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/codeintel/commitgraph#Envelope",
+              "documentation": {
+                "identifier": "Envelope",
+                "newPage": false,
+                "searchKey": "commitgraph.Envelope",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Envelope struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Envelope struct {\n\tUploads *VisibilityRelationship\n\tLinks   *LinkRelationship\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/commitgraph#Graph",
+              "documentation": {
+                "identifier": "Graph",
+                "newPage": false,
+                "searchKey": "commitgraph.Graph",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Graph struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Graph struct {\n\tcommitGraphView *CommitGraphView\n\tgraph           map[string][]string\n\tcommits         []string\n\tancestorUploads map[string]map[string]UploadMeta\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/commitgraph#NewGraph",
+                    "documentation": {
+                      "identifier": "NewGraph",
+                      "newPage": false,
+                      "searchKey": "commitgraph.NewGraph",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewGraph(commitGraph *gitserver.CommitGraph, commitGraphView *CommitGraphView) *Graph"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewGraph(commitGraph *gitserver.CommitGraph, commitGraphView *CommitGraphView) *Graph\n```\n\nNewGraph creates a commit graph decorated with the set of uploads visible from that commit based on the given commit graph and complete set of LSIF upload metadata. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/commitgraph#Graph.Gather",
+                    "documentation": {
+                      "identifier": "Graph.Gather",
+                      "newPage": false,
+                      "searchKey": "commitgraph.Graph.Gather",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (g *Graph) Gather() (uploads map[string][]UploadMeta, links map[string]LinkRelationship)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (g *Graph) Gather() (uploads map[string][]UploadMeta, links map[string]LinkRelationship)\n```\n\nGather reads the graph's stream to completion and returns a map of the values. This method is only used for convenience and testing and should not be used in a hot path. It can be VERY memory intensive in production to have a reference to each commit's upload metadata concurrently. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/commitgraph#Graph.Stream",
+                    "documentation": {
+                      "identifier": "Graph.Stream",
+                      "newPage": false,
+                      "searchKey": "commitgraph.Graph.Stream",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (g *Graph) Stream() <-chan Envelope"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (g *Graph) Stream() <-chan Envelope\n```\n\nStream returns a channel of envelope values which indicate either the set of visible uploads at a particular commit, or the nearest neighbors at a particular commit, depending on the value within the envelope. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/commitgraph#Graph.UploadsVisibleAtCommit",
+                    "documentation": {
+                      "identifier": "Graph.UploadsVisibleAtCommit",
+                      "newPage": false,
+                      "searchKey": "commitgraph.Graph.UploadsVisibleAtCommit",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (g *Graph) UploadsVisibleAtCommit(commit string) []UploadMeta"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (g *Graph) UploadsVisibleAtCommit(commit string) []UploadMeta\n```\n\nUploadsVisibleAtCommit returns the set of uploads that are visible from the given commit. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/commitgraph#LinkRelationship",
+              "documentation": {
+                "identifier": "LinkRelationship",
+                "newPage": false,
+                "searchKey": "commitgraph.LinkRelationship",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type LinkRelationship struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype LinkRelationship struct {\n\tCommit         string\n\tAncestorCommit string\n\tDistance       uint32\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/codeintel/commitgraph#UploadMeta",
               "documentation": {
                 "identifier": "UploadMeta",
                 "newPage": false,
                 "searchKey": "commitgraph.UploadMeta",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -297,6 +302,28 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\ntype UploadMeta struct {\n\tUploadID int\n\tDistance uint32\n}\n```\n\nUploadMeta represents the visibility of an LSIF upload from a particular location on a repository's commit graph. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/commitgraph#VisibilityRelationship",
+              "documentation": {
+                "identifier": "VisibilityRelationship",
+                "newPage": false,
+                "searchKey": "commitgraph.VisibilityRelationship",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type VisibilityRelationship struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype VisibilityRelationship struct {\n\tCommit  string\n\tUploads []UploadMeta\n}\n```\n\n"
               },
               "children": null
             }
@@ -312,6 +339,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -326,22 +354,118 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/internal/codeintel/commitgraph#reverseGraph",
+              "pathID": "/enterprise/internal/codeintel/commitgraph#BenchmarkCalculateVisibleUploads",
               "documentation": {
-                "identifier": "reverseGraph",
+                "identifier": "BenchmarkCalculateVisibleUploads",
                 "newPage": false,
-                "searchKey": "commitgraph.reverseGraph",
+                "searchKey": "commitgraph.BenchmarkCalculateVisibleUploads",
                 "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkCalculateVisibleUploads(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkCalculateVisibleUploads(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/commitgraph#TestCalculateVisibleUploads",
+              "documentation": {
+                "identifier": "TestCalculateVisibleUploads",
+                "newPage": false,
+                "searchKey": "commitgraph.TestCalculateVisibleUploads",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCalculateVisibleUploads(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCalculateVisibleUploads(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/commitgraph#TestCalculateVisibleUploadsAlternateCommitGraph",
+              "documentation": {
+                "identifier": "TestCalculateVisibleUploadsAlternateCommitGraph",
+                "newPage": false,
+                "searchKey": "commitgraph.TestCalculateVisibleUploadsAlternateCommitGraph",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCalculateVisibleUploadsAlternateCommitGraph(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCalculateVisibleUploadsAlternateCommitGraph(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/commitgraph#adjustVisibleUploads",
+              "documentation": {
+                "identifier": "adjustVisibleUploads",
+                "newPage": false,
+                "searchKey": "commitgraph.adjustVisibleUploads",
+                "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func reverseGraph(graph map[string][]string) map[string][]string"
+                "value": "func adjustVisibleUploads(ancestorVisibleUploads map[string]UploadMeta, ancestorDistance uint32) []UploadMeta"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc reverseGraph(graph map[string][]string) map[string][]string\n```\n\nreverseGraph returns the reverse of the given graph by flipping all the edges. \n\n"
+                "value": "```Go\nfunc adjustVisibleUploads(ancestorVisibleUploads map[string]UploadMeta, ancestorDistance uint32) []UploadMeta\n```\n\nadjustVisibleUploads returns a copy of the given uploads map with the distance adjusted by the given amount. This returns the uploads \"inherited\" from a the nearest ancestor with commit data. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/commitgraph#makeTestGraph",
+              "documentation": {
+                "identifier": "makeTestGraph",
+                "newPage": false,
+                "searchKey": "commitgraph.makeTestGraph",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeTestGraph(commitGraph *gitserver.CommitGraph, commitGraphView *CommitGraphView) (uploads map[string][]UploadMeta, links map[string]LinkRelationship)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeTestGraph(commitGraph *gitserver.CommitGraph, commitGraphView *CommitGraphView) (uploads map[string][]UploadMeta, links map[string]LinkRelationship)\n```\n\nmakeTestGraph calls Gather on a new graph then sorts the uploads deterministically for easier comparison. Order of the upload list is not relevant to production flows. \n\n"
               },
               "children": null
             }
@@ -354,6 +478,7 @@
                 "newPage": false,
                 "searchKey": "commitgraph.populateUploadsByTraversal",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -376,6 +501,7 @@
                 "newPage": false,
                 "searchKey": "commitgraph.populateUploadsForCommit",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -392,166 +518,13 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/codeintel/commitgraph#traverseForUploads",
-              "documentation": {
-                "identifier": "traverseForUploads",
-                "newPage": false,
-                "searchKey": "commitgraph.traverseForUploads",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func traverseForUploads(graph map[string][]string, uploads map[string]map[string]UploadMeta, commit string) (map[string]UploadMeta, uint32)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc traverseForUploads(graph map[string][]string, uploads map[string]map[string]UploadMeta, commit string) (map[string]UploadMeta, uint32)\n```\n\ntraverseForUploads returns the value in the given uploads map whose key matches the first ancestor in the graph with a value present in the map. The distance in the graph between the original commit and the ancestor is also returned. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/codeintel/commitgraph#traverseForCommit",
-              "documentation": {
-                "identifier": "traverseForCommit",
-                "newPage": false,
-                "searchKey": "commitgraph.traverseForCommit",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func traverseForCommit(graph map[string][]string, uploads map[string]map[string]UploadMeta, commit string) (string, uint32, bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc traverseForCommit(graph map[string][]string, uploads map[string]map[string]UploadMeta, commit string) (string, uint32, bool)\n```\n\ntraverseForCommit returns the commit in the given uploads map matching the first ancestor in the graph with a value present in the map. The distance in the graph between the original commit and the ancestor is also returned. \n\nNOTE: We assume that each commit with multiple parents have been assigned data while walking the graph in topological order. If that is not the case, one parent will be chosen arbitrarily. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/codeintel/commitgraph#adjustVisibleUploads",
-              "documentation": {
-                "identifier": "adjustVisibleUploads",
-                "newPage": false,
-                "searchKey": "commitgraph.adjustVisibleUploads",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func adjustVisibleUploads(ancestorVisibleUploads map[string]UploadMeta, ancestorDistance uint32) []UploadMeta"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc adjustVisibleUploads(ancestorVisibleUploads map[string]UploadMeta, ancestorDistance uint32) []UploadMeta\n```\n\nadjustVisibleUploads returns a copy of the given uploads map with the distance adjusted by the given amount. This returns the uploads \"inherited\" from a the nearest ancestor with commit data. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/codeintel/commitgraph#replaces",
-              "documentation": {
-                "identifier": "replaces",
-                "newPage": false,
-                "searchKey": "commitgraph.replaces",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func replaces(upload1, upload2 UploadMeta) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc replaces(upload1, upload2 UploadMeta) bool\n```\n\nreplaces returns true if upload1 has a smaller distance than upload2. Ties are broken by the minimum upload identifier to remain determinstic. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/codeintel/commitgraph#TestCalculateVisibleUploads",
-              "documentation": {
-                "identifier": "TestCalculateVisibleUploads",
-                "newPage": false,
-                "searchKey": "commitgraph.TestCalculateVisibleUploads",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCalculateVisibleUploads(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCalculateVisibleUploads(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/codeintel/commitgraph#TestCalculateVisibleUploadsAlternateCommitGraph",
-              "documentation": {
-                "identifier": "TestCalculateVisibleUploadsAlternateCommitGraph",
-                "newPage": false,
-                "searchKey": "commitgraph.TestCalculateVisibleUploadsAlternateCommitGraph",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCalculateVisibleUploadsAlternateCommitGraph(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCalculateVisibleUploadsAlternateCommitGraph(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/codeintel/commitgraph#BenchmarkCalculateVisibleUploads",
-              "documentation": {
-                "identifier": "BenchmarkCalculateVisibleUploads",
-                "newPage": false,
-                "searchKey": "commitgraph.BenchmarkCalculateVisibleUploads",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkCalculateVisibleUploads(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkCalculateVisibleUploads(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/codeintel/commitgraph#readBenchmarkCommitGraph",
               "documentation": {
                 "identifier": "readBenchmarkCommitGraph",
                 "newPage": false,
                 "searchKey": "commitgraph.readBenchmarkCommitGraph",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -574,6 +547,7 @@
                 "newPage": false,
                 "searchKey": "commitgraph.readBenchmarkFile",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -590,22 +564,92 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/codeintel/commitgraph#makeTestGraph",
+              "pathID": "/enterprise/internal/codeintel/commitgraph#replaces",
               "documentation": {
-                "identifier": "makeTestGraph",
+                "identifier": "replaces",
                 "newPage": false,
-                "searchKey": "commitgraph.makeTestGraph",
+                "searchKey": "commitgraph.replaces",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func makeTestGraph(commitGraph *gitserver.CommitGraph, commitGraphView *CommitGraphView) (uploads map[string][]UploadMeta, links map[string]LinkRelationship)"
+                "value": "func replaces(upload1, upload2 UploadMeta) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc makeTestGraph(commitGraph *gitserver.CommitGraph, commitGraphView *CommitGraphView) (uploads map[string][]UploadMeta, links map[string]LinkRelationship)\n```\n\nmakeTestGraph calls Gather on a new graph then sorts the uploads deterministically for easier comparison. Order of the upload list is not relevant to production flows. \n\n"
+                "value": "```Go\nfunc replaces(upload1, upload2 UploadMeta) bool\n```\n\nreplaces returns true if upload1 has a smaller distance than upload2. Ties are broken by the minimum upload identifier to remain determinstic. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/commitgraph#reverseGraph",
+              "documentation": {
+                "identifier": "reverseGraph",
+                "newPage": false,
+                "searchKey": "commitgraph.reverseGraph",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func reverseGraph(graph map[string][]string) map[string][]string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc reverseGraph(graph map[string][]string) map[string][]string\n```\n\nreverseGraph returns the reverse of the given graph by flipping all the edges. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/commitgraph#traverseForCommit",
+              "documentation": {
+                "identifier": "traverseForCommit",
+                "newPage": false,
+                "searchKey": "commitgraph.traverseForCommit",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func traverseForCommit(graph map[string][]string, uploads map[string]map[string]UploadMeta, commit string) (string, uint32, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc traverseForCommit(graph map[string][]string, uploads map[string]map[string]UploadMeta, commit string) (string, uint32, bool)\n```\n\ntraverseForCommit returns the commit in the given uploads map matching the first ancestor in the graph with a value present in the map. The distance in the graph between the original commit and the ancestor is also returned. \n\nNOTE: We assume that each commit with multiple parents have been assigned data while walking the graph in topological order. If that is not the case, one parent will be chosen arbitrarily. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/commitgraph#traverseForUploads",
+              "documentation": {
+                "identifier": "traverseForUploads",
+                "newPage": false,
+                "searchKey": "commitgraph.traverseForUploads",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func traverseForUploads(graph map[string][]string, uploads map[string]map[string]UploadMeta, commit string) (map[string]UploadMeta, uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc traverseForUploads(graph map[string][]string, uploads map[string]map[string]UploadMeta, commit string) (map[string]UploadMeta, uint32)\n```\n\ntraverseForUploads returns the value in the given uploads map whose key matches the first ancestor in the graph with a value present in the map. The distance in the graph between the original commit and the ancestor is also returned. \n\n"
               },
               "children": null
             }

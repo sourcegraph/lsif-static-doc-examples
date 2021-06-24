@@ -4,7 +4,9 @@
     "identifier": "backend",
     "newPage": true,
     "searchKey": "cmd/frontend/backend",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -41,6 +45,8 @@
                 "newPage": false,
                 "searchKey": "backend.authzBypass",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -63,6 +69,8 @@
                 "newPage": false,
                 "searchKey": "backend.getFirstVersionQuery",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -85,6 +93,8 @@
                 "newPage": false,
                 "searchKey": "backend.getVersionQuery",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -107,6 +117,8 @@
                 "newPage": false,
                 "searchKey": "backend.upsertVersionQuery",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -131,7 +143,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -144,12 +158,84 @@
         "children": [
           {
             "node": {
+              "pathID": "/cmd/frontend/backend#ErrMustBeSiteAdmin",
+              "documentation": {
+                "identifier": "ErrMustBeSiteAdmin",
+                "newPage": false,
+                "searchKey": "backend.ErrMustBeSiteAdmin",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrMustBeSiteAdmin"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrMustBeSiteAdmin = errors.New(\"must be site admin\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#ErrNotAnOrgMember",
+              "documentation": {
+                "identifier": "ErrNotAnOrgMember",
+                "newPage": false,
+                "searchKey": "backend.ErrNotAnOrgMember",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrNotAnOrgMember"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrNotAnOrgMember = errors.New(\"current user is not an org member\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#ErrNotAuthenticated",
+              "documentation": {
+                "identifier": "ErrNotAuthenticated",
+                "newPage": false,
+                "searchKey": "backend.ErrNotAuthenticated",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrNotAuthenticated"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrNotAuthenticated = errors.New(\"not authenticated\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/backend#MockCountGoImporters",
               "documentation": {
                 "identifier": "MockCountGoImporters",
                 "newPage": false,
                 "searchKey": "backend.MockCountGoImporters",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -164,22 +250,115 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/backend#goImportersCountCache",
+              "pathID": "/cmd/frontend/backend#MockMakePasswordResetURL",
               "documentation": {
-                "identifier": "goImportersCountCache",
+                "identifier": "MockMakePasswordResetURL",
                 "newPage": false,
-                "searchKey": "backend.goImportersCountCache",
+                "searchKey": "backend.MockMakePasswordResetURL",
                 "tags": [
-                  "private"
+                  "variable",
+                  "function"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var goImportersCountCache"
+                "value": "var MockMakePasswordResetURL"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar goImportersCountCache = rcache.NewWithTTL(\"go-importers-count\", 14400) // 4 hours\n\n```\n\n"
+                "value": "```Go\nvar MockMakePasswordResetURL func(ctx context.Context, userID int32) (*url.URL, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#Mocks",
+              "documentation": {
+                "identifier": "Mocks",
+                "newPage": false,
+                "searchKey": "backend.Mocks",
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Mocks"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Mocks MockServices\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#Repos",
+              "documentation": {
+                "identifier": "Repos",
+                "newPage": false,
+                "searchKey": "backend.Repos",
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Repos"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Repos = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#Symbols",
+              "documentation": {
+                "identifier": "Symbols",
+                "newPage": false,
+                "searchKey": "backend.Symbols",
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Symbols"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Symbols = &symbols{}\n```\n\nSymbols backend. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#UserEmails",
+              "documentation": {
+                "identifier": "UserEmails",
+                "newPage": false,
+                "searchKey": "backend.UserEmails",
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var UserEmails"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar UserEmails = &userEmails{}\n```\n\nUserEmails contains backend methods related to user email addresses. \n\n"
               },
               "children": null
             }
@@ -192,6 +371,8 @@
                 "newPage": false,
                 "searchKey": "backend.countGoImportersHTTPClient",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -208,158 +389,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/backend#useEnhancedLanguageDetection",
-              "documentation": {
-                "identifier": "useEnhancedLanguageDetection",
-                "newPage": false,
-                "searchKey": "backend.useEnhancedLanguageDetection",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var useEnhancedLanguageDetection"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar useEnhancedLanguageDetection, _ = ...\n```\n\nFeature flag for enhanced (but much slower) language detection that uses file contents, not just filenames. Enabled by default. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#inventoryCache",
-              "documentation": {
-                "identifier": "inventoryCache",
-                "newPage": false,
-                "searchKey": "backend.inventoryCache",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var inventoryCache"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar inventoryCache = rcache.New(fmt.Sprintf(\"inv:v2:enhanced_%v\", useEnhancedLanguageDetection))\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#Mocks",
-              "documentation": {
-                "identifier": "Mocks",
-                "newPage": false,
-                "searchKey": "backend.Mocks",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var Mocks"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar Mocks MockServices\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#ErrNotAuthenticated",
-              "documentation": {
-                "identifier": "ErrNotAuthenticated",
-                "newPage": false,
-                "searchKey": "backend.ErrNotAuthenticated",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ErrNotAuthenticated"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ErrNotAuthenticated = errors.New(\"not authenticated\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#ErrNotAnOrgMember",
-              "documentation": {
-                "identifier": "ErrNotAnOrgMember",
-                "newPage": false,
-                "searchKey": "backend.ErrNotAnOrgMember",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ErrNotAnOrgMember"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ErrNotAnOrgMember = errors.New(\"current user is not an org member\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#Repos",
-              "documentation": {
-                "identifier": "Repos",
-                "newPage": false,
-                "searchKey": "backend.Repos",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var Repos"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar Repos = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#metricIsRepoCloneable",
-              "documentation": {
-                "identifier": "metricIsRepoCloneable",
-                "newPage": false,
-                "searchKey": "backend.metricIsRepoCloneable",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var metricIsRepoCloneable"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar metricIsRepoCloneable = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/backend#errRepoNotFound",
               "documentation": {
                 "identifier": "errRepoNotFound",
                 "newPage": false,
                 "searchKey": "backend.errRepoNotFound",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -376,40 +413,72 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/backend#ErrMustBeSiteAdmin",
+              "pathID": "/cmd/frontend/backend#goImportersCountCache",
               "documentation": {
-                "identifier": "ErrMustBeSiteAdmin",
+                "identifier": "goImportersCountCache",
                 "newPage": false,
-                "searchKey": "backend.ErrMustBeSiteAdmin",
-                "tags": null
+                "searchKey": "backend.goImportersCountCache",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var ErrMustBeSiteAdmin"
+                "value": "var goImportersCountCache"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar ErrMustBeSiteAdmin = errors.New(\"must be site admin\")\n```\n\n"
+                "value": "```Go\nvar goImportersCountCache = rcache.NewWithTTL(\"go-importers-count\", 14400) // 4 hours\n\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/backend#Symbols",
+              "pathID": "/cmd/frontend/backend#inventoryCache",
               "documentation": {
-                "identifier": "Symbols",
+                "identifier": "inventoryCache",
                 "newPage": false,
-                "searchKey": "backend.Symbols",
-                "tags": null
+                "searchKey": "backend.inventoryCache",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var Symbols"
+                "value": "var inventoryCache"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar Symbols = &symbols{}\n```\n\nSymbols backend. \n\n"
+                "value": "```Go\nvar inventoryCache = rcache.New(fmt.Sprintf(\"inv:v2:enhanced_%v\", useEnhancedLanguageDetection))\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#metricIsRepoCloneable",
+              "documentation": {
+                "identifier": "metricIsRepoCloneable",
+                "newPage": false,
+                "searchKey": "backend.metricIsRepoCloneable",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var metricIsRepoCloneable"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar metricIsRepoCloneable = ...\n```\n\n"
               },
               "children": null
             }
@@ -422,6 +491,9 @@
                 "newPage": false,
                 "searchKey": "backend.metricLabels",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
@@ -444,6 +516,8 @@
                 "newPage": false,
                 "searchKey": "backend.requestDuration",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -466,6 +540,8 @@
                 "newPage": false,
                 "searchKey": "backend.requestGauge",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -482,54 +558,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/backend#UserEmails",
-              "documentation": {
-                "identifier": "UserEmails",
-                "newPage": false,
-                "searchKey": "backend.UserEmails",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var UserEmails"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar UserEmails = &userEmails{}\n```\n\nUserEmails contains backend methods related to user email addresses. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#verifyEmailTemplates",
-              "documentation": {
-                "identifier": "verifyEmailTemplates",
-                "newPage": false,
-                "searchKey": "backend.verifyEmailTemplates",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var verifyEmailTemplates"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar verifyEmailTemplates = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/backend#updateAccountEmailTemplate",
               "documentation": {
                 "identifier": "updateAccountEmailTemplate",
                 "newPage": false,
                 "searchKey": "backend.updateAccountEmailTemplate",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -546,20 +582,48 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/backend#MockMakePasswordResetURL",
+              "pathID": "/cmd/frontend/backend#useEnhancedLanguageDetection",
               "documentation": {
-                "identifier": "MockMakePasswordResetURL",
+                "identifier": "useEnhancedLanguageDetection",
                 "newPage": false,
-                "searchKey": "backend.MockMakePasswordResetURL",
-                "tags": null
+                "searchKey": "backend.useEnhancedLanguageDetection",
+                "tags": [
+                  "variable",
+                  "boolean",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var MockMakePasswordResetURL"
+                "value": "var useEnhancedLanguageDetection"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar MockMakePasswordResetURL func(ctx context.Context, userID int32) (*url.URL, error)\n```\n\n"
+                "value": "```Go\nvar useEnhancedLanguageDetection, _ = ...\n```\n\nFeature flag for enhanced (but much slower) language detection that uses file contents, not just filenames. Enabled by default. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#verifyEmailTemplates",
+              "documentation": {
+                "identifier": "verifyEmailTemplates",
+                "newPage": false,
+                "searchKey": "backend.verifyEmailTemplates",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var verifyEmailTemplates"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar verifyEmailTemplates = ...\n```\n\n"
               },
               "children": null
             }
@@ -574,7 +638,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -587,32 +653,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/backend#MockServices",
-              "documentation": {
-                "identifier": "MockServices",
-                "newPage": false,
-                "searchKey": "backend.MockServices",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type MockServices struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype MockServices struct {\n\tRepos MockRepos\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/backend#ErrRepoSeeOther",
               "documentation": {
                 "identifier": "ErrRepoSeeOther",
                 "newPage": false,
                 "searchKey": "backend.ErrRepoSeeOther",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -630,7 +678,9 @@
                       "identifier": "ErrRepoSeeOther.Error",
                       "newPage": false,
                       "searchKey": "backend.ErrRepoSeeOther.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -648,12 +698,441 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/backend#InsufficientAuthorizationError",
+              "documentation": {
+                "identifier": "InsufficientAuthorizationError",
+                "newPage": false,
+                "searchKey": "backend.InsufficientAuthorizationError",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type InsufficientAuthorizationError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype InsufficientAuthorizationError struct {\n\tMessage string\n}\n```\n\nInsufficientAuthorizationError is an error that occurs when the authentication is technically valid (e.g., the token is not expired) but does not yield a user with privileges to perform a certain action. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/backend#InsufficientAuthorizationError.Error",
+                    "documentation": {
+                      "identifier": "InsufficientAuthorizationError.Error",
+                      "newPage": false,
+                      "searchKey": "backend.InsufficientAuthorizationError.Error",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *InsufficientAuthorizationError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *InsufficientAuthorizationError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/backend#InsufficientAuthorizationError.Unauthorized",
+                    "documentation": {
+                      "identifier": "InsufficientAuthorizationError.Unauthorized",
+                      "newPage": false,
+                      "searchKey": "backend.InsufficientAuthorizationError.Unauthorized",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *InsufficientAuthorizationError) Unauthorized() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *InsufficientAuthorizationError) Unauthorized() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#MockRepos",
+              "documentation": {
+                "identifier": "MockRepos",
+                "newPage": false,
+                "searchKey": "backend.MockRepos",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockRepos struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockRepos struct {\n\tGet          func(v0 context.Context, id api.RepoID) (*types.Repo, error)\n\tGetByName    func(v0 context.Context, name api.RepoName) (*types.Repo, error)\n\tList         func(v0 context.Context, v1 database.ReposListOptions) ([]*types.Repo, error)\n\tGetCommit    func(v0 context.Context, repo *types.Repo, commitID api.CommitID) (*git.Commit, error)\n\tResolveRev   func(v0 context.Context, repo *types.Repo, rev string) (api.CommitID, error)\n\tGetInventory func(v0 context.Context, repo *types.Repo, commitID api.CommitID) (*inventory.Inventory, error)\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/backend#MockRepos.MockGet",
+                    "documentation": {
+                      "identifier": "MockRepos.MockGet",
+                      "newPage": false,
+                      "searchKey": "backend.MockRepos.MockGet",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *MockRepos) MockGet(t *testing.T, wantRepo api.RepoID) (called *bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *MockRepos) MockGet(t *testing.T, wantRepo api.RepoID) (called *bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/backend#MockRepos.MockGetByName",
+                    "documentation": {
+                      "identifier": "MockRepos.MockGetByName",
+                      "newPage": false,
+                      "searchKey": "backend.MockRepos.MockGetByName",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *MockRepos) MockGetByName(t *testing.T, wantName api.RepoName, repo api.RepoID) (called *bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *MockRepos) MockGetByName(t *testing.T, wantName api.RepoName, repo api.RepoID) (called *bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/backend#MockRepos.MockGetCommit_Return_NoCheck",
+                    "documentation": {
+                      "identifier": "MockRepos.MockGetCommit_Return_NoCheck",
+                      "newPage": false,
+                      "searchKey": "backend.MockRepos.MockGetCommit_Return_NoCheck",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *MockRepos) MockGetCommit_Return_NoCheck(t *testing.T, commit *git.Commit) (called *bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *MockRepos) MockGetCommit_Return_NoCheck(t *testing.T, commit *git.Commit) (called *bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/backend#MockRepos.MockGet_Return",
+                    "documentation": {
+                      "identifier": "MockRepos.MockGet_Return",
+                      "newPage": false,
+                      "searchKey": "backend.MockRepos.MockGet_Return",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *MockRepos) MockGet_Return(t *testing.T, returns *types.Repo) (called *bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *MockRepos) MockGet_Return(t *testing.T, returns *types.Repo) (called *bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/backend#MockRepos.MockList",
+                    "documentation": {
+                      "identifier": "MockRepos.MockList",
+                      "newPage": false,
+                      "searchKey": "backend.MockRepos.MockList",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *MockRepos) MockList(t *testing.T, wantRepos ...api.RepoName) (called *bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *MockRepos) MockList(t *testing.T, wantRepos ...api.RepoName) (called *bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/backend#MockRepos.MockResolveRev_NoCheck",
+                    "documentation": {
+                      "identifier": "MockRepos.MockResolveRev_NoCheck",
+                      "newPage": false,
+                      "searchKey": "backend.MockRepos.MockResolveRev_NoCheck",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *MockRepos) MockResolveRev_NoCheck(t *testing.T, commitID api.CommitID) (called *bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *MockRepos) MockResolveRev_NoCheck(t *testing.T, commitID api.CommitID) (called *bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/backend#MockRepos.MockResolveRev_NotFound",
+                    "documentation": {
+                      "identifier": "MockRepos.MockResolveRev_NotFound",
+                      "newPage": false,
+                      "searchKey": "backend.MockRepos.MockResolveRev_NotFound",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *MockRepos) MockResolveRev_NotFound(t *testing.T, wantRepo api.RepoID, wantRev string) (called *bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *MockRepos) MockResolveRev_NotFound(t *testing.T, wantRepo api.RepoID, wantRev string) (called *bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#MockServices",
+              "documentation": {
+                "identifier": "MockServices",
+                "newPage": false,
+                "searchKey": "backend.MockServices",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockServices struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockServices struct {\n\tRepos MockRepos\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#UpgradeError",
+              "documentation": {
+                "identifier": "UpgradeError",
+                "newPage": false,
+                "searchKey": "backend.UpgradeError",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UpgradeError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UpgradeError struct {\n\tService  string\n\tPrevious *semver.Version\n\tLatest   *semver.Version\n}\n```\n\nUpgradeError is returned by UpdateServiceVersion when it faces an upgrade policy violation error. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/backend#UpgradeError.Error",
+                    "documentation": {
+                      "identifier": "UpgradeError.Error",
+                      "newPage": false,
+                      "searchKey": "backend.UpgradeError.Error",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e UpgradeError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e UpgradeError) Error() string\n```\n\nError implements the error interface. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#contextKey",
+              "documentation": {
+                "identifier": "contextKey",
+                "newPage": false,
+                "searchKey": "backend.contextKey",
+                "tags": [
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type contextKey int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype contextKey int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#gitObjectInfo",
+              "documentation": {
+                "identifier": "gitObjectInfo",
+                "newPage": false,
+                "searchKey": "backend.gitObjectInfo",
+                "tags": [
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type gitObjectInfo string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype gitObjectInfo string\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/backend#gitObjectInfo.OID",
+                    "documentation": {
+                      "identifier": "gitObjectInfo.OID",
+                      "newPage": false,
+                      "searchKey": "backend.gitObjectInfo.OID",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (oid gitObjectInfo) OID() git.OID"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (oid gitObjectInfo) OID() git.OID\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#mockRoundTripper",
+              "documentation": {
+                "identifier": "mockRoundTripper",
+                "newPage": false,
+                "searchKey": "backend.mockRoundTripper",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type mockRoundTripper struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype mockRoundTripper struct {\n\tresponse string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/backend#mockRoundTripper.RoundTrip",
+                    "documentation": {
+                      "identifier": "mockRoundTripper.RoundTrip",
+                      "newPage": false,
+                      "searchKey": "backend.mockRoundTripper.RoundTrip",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t mockRoundTripper) RoundTrip(req *http.Request) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t mockRoundTripper) RoundTrip(req *http.Request) (*http.Response, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/backend#repos",
               "documentation": {
                 "identifier": "repos",
                 "newPage": false,
                 "searchKey": "backend.repos",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -668,12 +1147,36 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/cmd/frontend/backend#repos.Add",
+                    "documentation": {
+                      "identifier": "repos.Add",
+                      "newPage": false,
+                      "searchKey": "backend.repos.Add",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *repos) Add(ctx context.Context, name api.RepoName) (addedName api.RepoName, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *repos) Add(ctx context.Context, name api.RepoName) (addedName api.RepoName, err error)\n```\n\nAdd adds the repository with the given name to the database by calling repo-updater when in sourcegraph.com mode. It's possible that the repo has been renamed on the code host in which case a different name may be returned. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/cmd/frontend/backend#repos.Get",
                     "documentation": {
                       "identifier": "repos.Get",
                       "newPage": false,
                       "searchKey": "backend.repos.Get",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -696,6 +1199,7 @@
                       "newPage": false,
                       "searchKey": "backend.repos.GetByName",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -712,88 +1216,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/cmd/frontend/backend#repos.Add",
+                    "pathID": "/cmd/frontend/backend#repos.GetCommit",
                     "documentation": {
-                      "identifier": "repos.Add",
+                      "identifier": "repos.GetCommit",
                       "newPage": false,
-                      "searchKey": "backend.repos.Add",
+                      "searchKey": "backend.repos.GetCommit",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (s *repos) Add(ctx context.Context, name api.RepoName) (addedName api.RepoName, err error)"
+                      "value": "func (s *repos) GetCommit(ctx context.Context, repo *types.Repo, commitID api.CommitID) (res *git.Commit, err error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (s *repos) Add(ctx context.Context, name api.RepoName) (addedName api.RepoName, err error)\n```\n\nAdd adds the repository with the given name to the database by calling repo-updater when in sourcegraph.com mode. It's possible that the repo has been renamed on the code host in which case a different name may be returned. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/backend#repos.List",
-                    "documentation": {
-                      "identifier": "repos.List",
-                      "newPage": false,
-                      "searchKey": "backend.repos.List",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *repos) List(ctx context.Context, opt database.ReposListOptions) (repos []*types.Repo, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *repos) List(ctx context.Context, opt database.ReposListOptions) (repos []*types.Repo, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/backend#repos.ListIndexable",
-                    "documentation": {
-                      "identifier": "repos.ListIndexable",
-                      "newPage": false,
-                      "searchKey": "backend.repos.ListIndexable",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *repos) ListIndexable(ctx context.Context) (repos []types.RepoName, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *repos) ListIndexable(ctx context.Context) (repos []types.RepoName, err error)\n```\n\nListIndexable calls database.DefaultRepos.List, with tracing. It lists ALL default repos which could include private user added repos. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/backend#repos.ListDefault",
-                    "documentation": {
-                      "identifier": "repos.ListDefault",
-                      "newPage": false,
-                      "searchKey": "backend.repos.ListDefault",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *repos) ListDefault(ctx context.Context) (repos []types.RepoName, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *repos) ListDefault(ctx context.Context) (repos []types.RepoName, err error)\n```\n\nListDefault calls database.DefaultRepos.ListPublic, with tracing. It lists all public default repos and also any private repos added by the current user. \n\n"
+                      "value": "```Go\nfunc (s *repos) GetCommit(ctx context.Context, repo *types.Repo, commitID api.CommitID) (res *git.Commit, err error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -806,6 +1245,7 @@
                       "newPage": false,
                       "searchKey": "backend.repos.GetInventory",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -822,12 +1262,82 @@
                 },
                 {
                   "node": {
+                    "pathID": "/cmd/frontend/backend#repos.List",
+                    "documentation": {
+                      "identifier": "repos.List",
+                      "newPage": false,
+                      "searchKey": "backend.repos.List",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *repos) List(ctx context.Context, opt database.ReposListOptions) (repos []*types.Repo, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *repos) List(ctx context.Context, opt database.ReposListOptions) (repos []*types.Repo, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/backend#repos.ListDefault",
+                    "documentation": {
+                      "identifier": "repos.ListDefault",
+                      "newPage": false,
+                      "searchKey": "backend.repos.ListDefault",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *repos) ListDefault(ctx context.Context) (repos []types.RepoName, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *repos) ListDefault(ctx context.Context) (repos []types.RepoName, err error)\n```\n\nListDefault calls database.DefaultRepos.ListPublic, with tracing. It lists all public default repos and also any private repos added by the current user. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/backend#repos.ListIndexable",
+                    "documentation": {
+                      "identifier": "repos.ListIndexable",
+                      "newPage": false,
+                      "searchKey": "backend.repos.ListIndexable",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *repos) ListIndexable(ctx context.Context) (repos []types.RepoName, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *repos) ListIndexable(ctx context.Context) (repos []types.RepoName, err error)\n```\n\nListIndexable calls database.DefaultRepos.List, with tracing. It lists ALL default repos which could include private user added repos. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/cmd/frontend/backend#repos.ResolveRev",
                     "documentation": {
                       "identifier": "repos.ResolveRev",
                       "newPage": false,
                       "searchKey": "backend.repos.ResolveRev",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -841,274 +1351,8 @@
                     },
                     "children": null
                   }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/backend#repos.GetCommit",
-                    "documentation": {
-                      "identifier": "repos.GetCommit",
-                      "newPage": false,
-                      "searchKey": "backend.repos.GetCommit",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *repos) GetCommit(ctx context.Context, repo *types.Repo, commitID api.CommitID) (res *git.Commit, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *repos) GetCommit(ctx context.Context, repo *types.Repo, commitID api.CommitID) (res *git.Commit, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
                 }
               ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#MockRepos",
-              "documentation": {
-                "identifier": "MockRepos",
-                "newPage": false,
-                "searchKey": "backend.MockRepos",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type MockRepos struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype MockRepos struct {\n\tGet          func(v0 context.Context, id api.RepoID) (*types.Repo, error)\n\tGetByName    func(v0 context.Context, name api.RepoName) (*types.Repo, error)\n\tList         func(v0 context.Context, v1 database.ReposListOptions) ([]*types.Repo, error)\n\tGetCommit    func(v0 context.Context, repo *types.Repo, commitID api.CommitID) (*git.Commit, error)\n\tResolveRev   func(v0 context.Context, repo *types.Repo, rev string) (api.CommitID, error)\n\tGetInventory func(v0 context.Context, repo *types.Repo, commitID api.CommitID) (*inventory.Inventory, error)\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/backend#MockRepos.MockGet",
-                    "documentation": {
-                      "identifier": "MockRepos.MockGet",
-                      "newPage": false,
-                      "searchKey": "backend.MockRepos.MockGet",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *MockRepos) MockGet(t *testing.T, wantRepo api.RepoID) (called *bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *MockRepos) MockGet(t *testing.T, wantRepo api.RepoID) (called *bool)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/backend#MockRepos.MockGetByName",
-                    "documentation": {
-                      "identifier": "MockRepos.MockGetByName",
-                      "newPage": false,
-                      "searchKey": "backend.MockRepos.MockGetByName",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *MockRepos) MockGetByName(t *testing.T, wantName api.RepoName, repo api.RepoID) (called *bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *MockRepos) MockGetByName(t *testing.T, wantName api.RepoName, repo api.RepoID) (called *bool)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/backend#MockRepos.MockGet_Return",
-                    "documentation": {
-                      "identifier": "MockRepos.MockGet_Return",
-                      "newPage": false,
-                      "searchKey": "backend.MockRepos.MockGet_Return",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *MockRepos) MockGet_Return(t *testing.T, returns *types.Repo) (called *bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *MockRepos) MockGet_Return(t *testing.T, returns *types.Repo) (called *bool)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/backend#MockRepos.MockList",
-                    "documentation": {
-                      "identifier": "MockRepos.MockList",
-                      "newPage": false,
-                      "searchKey": "backend.MockRepos.MockList",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *MockRepos) MockList(t *testing.T, wantRepos ...api.RepoName) (called *bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *MockRepos) MockList(t *testing.T, wantRepos ...api.RepoName) (called *bool)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/backend#MockRepos.MockResolveRev_NoCheck",
-                    "documentation": {
-                      "identifier": "MockRepos.MockResolveRev_NoCheck",
-                      "newPage": false,
-                      "searchKey": "backend.MockRepos.MockResolveRev_NoCheck",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *MockRepos) MockResolveRev_NoCheck(t *testing.T, commitID api.CommitID) (called *bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *MockRepos) MockResolveRev_NoCheck(t *testing.T, commitID api.CommitID) (called *bool)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/backend#MockRepos.MockResolveRev_NotFound",
-                    "documentation": {
-                      "identifier": "MockRepos.MockResolveRev_NotFound",
-                      "newPage": false,
-                      "searchKey": "backend.MockRepos.MockResolveRev_NotFound",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *MockRepos) MockResolveRev_NotFound(t *testing.T, wantRepo api.RepoID, wantRev string) (called *bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *MockRepos) MockResolveRev_NotFound(t *testing.T, wantRepo api.RepoID, wantRev string) (called *bool)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/backend#MockRepos.MockGetCommit_Return_NoCheck",
-                    "documentation": {
-                      "identifier": "MockRepos.MockGetCommit_Return_NoCheck",
-                      "newPage": false,
-                      "searchKey": "backend.MockRepos.MockGetCommit_Return_NoCheck",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *MockRepos) MockGetCommit_Return_NoCheck(t *testing.T, commit *git.Commit) (called *bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *MockRepos) MockGetCommit_Return_NoCheck(t *testing.T, commit *git.Commit) (called *bool)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#InsufficientAuthorizationError",
-              "documentation": {
-                "identifier": "InsufficientAuthorizationError",
-                "newPage": false,
-                "searchKey": "backend.InsufficientAuthorizationError",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type InsufficientAuthorizationError struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype InsufficientAuthorizationError struct {\n\tMessage string\n}\n```\n\nInsufficientAuthorizationError is an error that occurs when the authentication is technically valid (e.g., the token is not expired) but does not yield a user with privileges to perform a certain action. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/backend#InsufficientAuthorizationError.Error",
-                    "documentation": {
-                      "identifier": "InsufficientAuthorizationError.Error",
-                      "newPage": false,
-                      "searchKey": "backend.InsufficientAuthorizationError.Error",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *InsufficientAuthorizationError) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *InsufficientAuthorizationError) Error() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/backend#InsufficientAuthorizationError.Unauthorized",
-                    "documentation": {
-                      "identifier": "InsufficientAuthorizationError.Unauthorized",
-                      "newPage": false,
-                      "searchKey": "backend.InsufficientAuthorizationError.Unauthorized",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *InsufficientAuthorizationError) Unauthorized() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *InsufficientAuthorizationError) Unauthorized() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#contextKey",
-              "documentation": {
-                "identifier": "contextKey",
-                "newPage": false,
-                "searchKey": "backend.contextKey",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type contextKey int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype contextKey int\n```\n\n"
-              },
-              "children": null
             }
           },
           {
@@ -1119,6 +1363,7 @@
                 "newPage": false,
                 "searchKey": "backend.symbols",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1139,6 +1384,7 @@
                       "newPage": false,
                       "searchKey": "backend.symbols.ListTags",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1164,6 +1410,7 @@
                 "newPage": false,
                 "searchKey": "backend.userEmails",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1184,6 +1431,7 @@
                       "newPage": false,
                       "searchKey": "backend.userEmails.Add",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1206,6 +1454,7 @@
                       "newPage": false,
                       "searchKey": "backend.userEmails.SendUserEmailOnFieldUpdate",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1216,137 +1465,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (userEmails) SendUserEmailOnFieldUpdate(ctx context.Context, id int32, change string) error\n```\n\nSendUserEmailOnFieldUpdate sends the user an email that important account information has changed. The change is the information we want to provide the user about the change \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#UpgradeError",
-              "documentation": {
-                "identifier": "UpgradeError",
-                "newPage": false,
-                "searchKey": "backend.UpgradeError",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type UpgradeError struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype UpgradeError struct {\n\tService  string\n\tPrevious *semver.Version\n\tLatest   *semver.Version\n}\n```\n\nUpgradeError is returned by UpdateServiceVersion when it faces an upgrade policy violation error. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/backend#UpgradeError.Error",
-                    "documentation": {
-                      "identifier": "UpgradeError.Error",
-                      "newPage": false,
-                      "searchKey": "backend.UpgradeError.Error",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e UpgradeError) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e UpgradeError) Error() string\n```\n\nError implements the error interface. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#mockRoundTripper",
-              "documentation": {
-                "identifier": "mockRoundTripper",
-                "newPage": false,
-                "searchKey": "backend.mockRoundTripper",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type mockRoundTripper struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype mockRoundTripper struct {\n\tresponse string\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/backend#mockRoundTripper.RoundTrip",
-                    "documentation": {
-                      "identifier": "mockRoundTripper.RoundTrip",
-                      "newPage": false,
-                      "searchKey": "backend.mockRoundTripper.RoundTrip",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t mockRoundTripper) RoundTrip(req *http.Request) (*http.Response, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t mockRoundTripper) RoundTrip(req *http.Request) (*http.Response, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#gitObjectInfo",
-              "documentation": {
-                "identifier": "gitObjectInfo",
-                "newPage": false,
-                "searchKey": "backend.gitObjectInfo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type gitObjectInfo string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype gitObjectInfo string\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/backend#gitObjectInfo.OID",
-                    "documentation": {
-                      "identifier": "gitObjectInfo.OID",
-                      "newPage": false,
-                      "searchKey": "backend.gitObjectInfo.OID",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (oid gitObjectInfo) OID() git.OID"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (oid gitObjectInfo) OID() git.OID\n```\n\n"
                     },
                     "children": null
                   }
@@ -1364,7 +1482,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1377,126 +1497,22 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/backend#CountGoImporters",
+              "pathID": "/cmd/frontend/backend#CheckCurrentUserIsSiteAdmin",
               "documentation": {
-                "identifier": "CountGoImporters",
+                "identifier": "CheckCurrentUserIsSiteAdmin",
                 "newPage": false,
-                "searchKey": "backend.CountGoImporters",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func CountGoImporters(ctx context.Context, repo api.RepoName) (count int, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc CountGoImporters(ctx context.Context, repo api.RepoName) (count int, err error)\n```\n\nCountGoImporters returns the number of Go importers for the repository's Go subpackages. This is a special case used only on Sourcegraph.com for repository badges. \n\nTODO: The import path is not always the same as the repository name. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#listGoPackagesInRepoImprecise",
-              "documentation": {
-                "identifier": "listGoPackagesInRepoImprecise",
-                "newPage": false,
-                "searchKey": "backend.listGoPackagesInRepoImprecise",
+                "searchKey": "backend.CheckCurrentUserIsSiteAdmin",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func listGoPackagesInRepoImprecise(ctx context.Context, repoName api.RepoName) ([]string, error)"
+                "value": "func CheckCurrentUserIsSiteAdmin(ctx context.Context, db dbutil.DB) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc listGoPackagesInRepoImprecise(ctx context.Context, repoName api.RepoName) ([]string, error)\n```\n\nlistGoPackagesInRepoImprecise returns a list of import paths for all (probable) Go packages in the repository. It computes the list based solely on the repository name (as a prefix) and filenames in the repository; it does not parse or build the Go files to determine the list precisely. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#isPossibleExternallyImportableGoPackageDir",
-              "documentation": {
-                "identifier": "isPossibleExternallyImportableGoPackageDir",
-                "newPage": false,
-                "searchKey": "backend.isPossibleExternallyImportableGoPackageDir",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func isPossibleExternallyImportableGoPackageDir(dirPath string) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc isPossibleExternallyImportableGoPackageDir(dirPath string) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#InventoryContext",
-              "documentation": {
-                "identifier": "InventoryContext",
-                "newPage": false,
-                "searchKey": "backend.InventoryContext",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func InventoryContext(repo api.RepoName, commitID api.CommitID, forceEnhancedLanguageDetection bool) (inventory.Context, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc InventoryContext(repo api.RepoName, commitID api.CommitID, forceEnhancedLanguageDetection bool) (inventory.Context, error)\n```\n\nInventoryContext returns the inventory context for computing the inventory for the repository at the given commit. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#testContext",
-              "documentation": {
-                "identifier": "testContext",
-                "newPage": false,
-                "searchKey": "backend.testContext",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testContext() context.Context"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testContext() context.Context\n```\n\ntestContext creates a new context.Context for use by tests \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#CheckOrgAccessOrSiteAdmin",
-              "documentation": {
-                "identifier": "CheckOrgAccessOrSiteAdmin",
-                "newPage": false,
-                "searchKey": "backend.CheckOrgAccessOrSiteAdmin",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func CheckOrgAccessOrSiteAdmin(ctx context.Context, db dbutil.DB, orgID int32) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc CheckOrgAccessOrSiteAdmin(ctx context.Context, db dbutil.DB, orgID int32) error\n```\n\nCheckOrgAccessOrSiteAdmin returns an error if the user is NEITHER (1) a site admin NOR (2) a member of the organization with the specified ID. \n\nIt is used when an action on a user can be performed by site admins and the organization's members, but nobody else. \n\n"
+                "value": "```Go\nfunc CheckCurrentUserIsSiteAdmin(ctx context.Context, db dbutil.DB) error\n```\n\nCheckCurrentUserIsSiteAdmin returns an error if the current user is NOT a site admin. \n\n"
               },
               "children": null
             }
@@ -1508,7 +1524,9 @@
                 "identifier": "CheckOrgAccess",
                 "newPage": false,
                 "searchKey": "backend.CheckOrgAccess",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1523,12 +1541,822 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/backend#CheckOrgAccessOrSiteAdmin",
+              "documentation": {
+                "identifier": "CheckOrgAccessOrSiteAdmin",
+                "newPage": false,
+                "searchKey": "backend.CheckOrgAccessOrSiteAdmin",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CheckOrgAccessOrSiteAdmin(ctx context.Context, db dbutil.DB, orgID int32) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CheckOrgAccessOrSiteAdmin(ctx context.Context, db dbutil.DB, orgID int32) error\n```\n\nCheckOrgAccessOrSiteAdmin returns an error if the user is NEITHER (1) a site admin NOR (2) a member of the organization with the specified ID. \n\nIt is used when an action on a user can be performed by site admins and the organization's members, but nobody else. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#CheckSameUser",
+              "documentation": {
+                "identifier": "CheckSameUser",
+                "newPage": false,
+                "searchKey": "backend.CheckSameUser",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CheckSameUser(ctx context.Context, subjectUserID int32) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CheckSameUser(ctx context.Context, subjectUserID int32) error\n```\n\nCheckSameUser returns an error if the user is not the user specified by subjectUserID. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#CheckSiteAdminOrSameUser",
+              "documentation": {
+                "identifier": "CheckSiteAdminOrSameUser",
+                "newPage": false,
+                "searchKey": "backend.CheckSiteAdminOrSameUser",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CheckSiteAdminOrSameUser(ctx context.Context, db dbutil.DB, subjectUserID int32) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CheckSiteAdminOrSameUser(ctx context.Context, db dbutil.DB, subjectUserID int32) error\n```\n\nCheckSiteAdminOrSameUser returns an error if the user is NEITHER (1) a site admin NOR (2) the user specified by subjectUserID. \n\nIt is used when an action on a user can be performed by site admins and the user themselves, but nobody else. \n\nReturns an error containing the name of the given user. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#CheckUserIsSiteAdmin",
+              "documentation": {
+                "identifier": "CheckUserIsSiteAdmin",
+                "newPage": false,
+                "searchKey": "backend.CheckUserIsSiteAdmin",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CheckUserIsSiteAdmin(ctx context.Context, db dbutil.DB, userID int32) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CheckUserIsSiteAdmin(ctx context.Context, db dbutil.DB, userID int32) error\n```\n\nCheckUserIsSiteAdmin returns an error if the user is NOT a site admin. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#CountGoImporters",
+              "documentation": {
+                "identifier": "CountGoImporters",
+                "newPage": false,
+                "searchKey": "backend.CountGoImporters",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CountGoImporters(ctx context.Context, repo api.RepoName) (count int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CountGoImporters(ctx context.Context, repo api.RepoName) (count int, err error)\n```\n\nCountGoImporters returns the number of Go importers for the repository's Go subpackages. This is a special case used only on Sourcegraph.com for repository badges. \n\nTODO: The import path is not always the same as the repository name. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#CurrentUser",
+              "documentation": {
+                "identifier": "CurrentUser",
+                "newPage": false,
+                "searchKey": "backend.CurrentUser",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CurrentUser(ctx context.Context, db dbutil.DB) (*types.User, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CurrentUser(ctx context.Context, db dbutil.DB) (*types.User, error)\n```\n\nCurrentUser gets the current authenticated user It returns nil, nil if no user is found \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#GetFirstServiceVersion",
+              "documentation": {
+                "identifier": "GetFirstServiceVersion",
+                "newPage": false,
+                "searchKey": "backend.GetFirstServiceVersion",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetFirstServiceVersion(ctx context.Context, service string) (version string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetFirstServiceVersion(ctx context.Context, service string) (version string, err error)\n```\n\nGetFirstServiceVersion returns the first version registered for the given Sourcegraph service. This method will return an error if UpdateServiceVersion has never been called for the given service. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#InventoryContext",
+              "documentation": {
+                "identifier": "InventoryContext",
+                "newPage": false,
+                "searchKey": "backend.InventoryContext",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func InventoryContext(repo api.RepoName, commitID api.CommitID, forceEnhancedLanguageDetection bool) (inventory.Context, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc InventoryContext(repo api.RepoName, commitID api.CommitID, forceEnhancedLanguageDetection bool) (inventory.Context, error)\n```\n\nInventoryContext returns the inventory context for computing the inventory for the repository at the given commit. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#IsValidUpgrade",
+              "documentation": {
+                "identifier": "IsValidUpgrade",
+                "newPage": false,
+                "searchKey": "backend.IsValidUpgrade",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsValidUpgrade(previous, latest *semver.Version) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsValidUpgrade(previous, latest *semver.Version) bool\n```\n\nIsValidUpgrade returns true if the given previous and latest versions comply with our documented upgrade policy. All roll-backs or downgrades are supported. \n\n[https://docs.sourcegraph.com/#upgrading-sourcegraph](https://docs.sourcegraph.com/#upgrading-sourcegraph) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#MakeEmailVerificationCode",
+              "documentation": {
+                "identifier": "MakeEmailVerificationCode",
+                "newPage": false,
+                "searchKey": "backend.MakeEmailVerificationCode",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MakeEmailVerificationCode() (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MakeEmailVerificationCode() (string, error)\n```\n\nMakeEmailVerificationCode returns a random string that can be used as an email verification code. If there is not enough entropy to create a random string, it returns a non-nil error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#MakePasswordResetURL",
+              "documentation": {
+                "identifier": "MakePasswordResetURL",
+                "newPage": false,
+                "searchKey": "backend.MakePasswordResetURL",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MakePasswordResetURL(ctx context.Context, userID int32) (*url.URL, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MakePasswordResetURL(ctx context.Context, userID int32) (*url.URL, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#MakeRandomHardToGuessPassword",
+              "documentation": {
+                "identifier": "MakeRandomHardToGuessPassword",
+                "newPage": false,
+                "searchKey": "backend.MakeRandomHardToGuessPassword",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MakeRandomHardToGuessPassword() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MakeRandomHardToGuessPassword() string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#SendUserEmailVerificationEmail",
+              "documentation": {
+                "identifier": "SendUserEmailVerificationEmail",
+                "newPage": false,
+                "searchKey": "backend.SendUserEmailVerificationEmail",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SendUserEmailVerificationEmail(ctx context.Context, username, email, code string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SendUserEmailVerificationEmail(ctx context.Context, username, email, code string) error\n```\n\nSendUserEmailVerificationEmail sends an email to the user to verify the email address. The code is the verification code that the user must provide to verify their access to the email address. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#TestCheckEmailAbuse",
+              "documentation": {
+                "identifier": "TestCheckEmailAbuse",
+                "newPage": false,
+                "searchKey": "backend.TestCheckEmailAbuse",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCheckEmailAbuse(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCheckEmailAbuse(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#TestCountGoImporters",
+              "documentation": {
+                "identifier": "TestCountGoImporters",
+                "newPage": false,
+                "searchKey": "backend.TestCountGoImporters",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCountGoImporters(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCountGoImporters(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#TestGetFirstServiceVersion",
+              "documentation": {
+                "identifier": "TestGetFirstServiceVersion",
+                "newPage": false,
+                "searchKey": "backend.TestGetFirstServiceVersion",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetFirstServiceVersion(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetFirstServiceVersion(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#TestIsPossibleExternallyImportableGoPackageDir",
+              "documentation": {
+                "identifier": "TestIsPossibleExternallyImportableGoPackageDir",
+                "newPage": false,
+                "searchKey": "backend.TestIsPossibleExternallyImportableGoPackageDir",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIsPossibleExternallyImportableGoPackageDir(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIsPossibleExternallyImportableGoPackageDir(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#TestIsValidUpgrade",
+              "documentation": {
+                "identifier": "TestIsValidUpgrade",
+                "newPage": false,
+                "searchKey": "backend.TestIsValidUpgrade",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIsValidUpgrade(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIsValidUpgrade(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#TestListGoPackagesInRepoImprecise",
+              "documentation": {
+                "identifier": "TestListGoPackagesInRepoImprecise",
+                "newPage": false,
+                "searchKey": "backend.TestListGoPackagesInRepoImprecise",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestListGoPackagesInRepoImprecise(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestListGoPackagesInRepoImprecise(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#TestMain",
+              "documentation": {
+                "identifier": "TestMain",
+                "newPage": false,
+                "searchKey": "backend.TestMain",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMain(m *testing.M)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#TestReposGetInventory",
+              "documentation": {
+                "identifier": "TestReposGetInventory",
+                "newPage": false,
+                "searchKey": "backend.TestReposGetInventory",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReposGetInventory(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReposGetInventory(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#TestReposService_Get",
+              "documentation": {
+                "identifier": "TestReposService_Get",
+                "newPage": false,
+                "searchKey": "backend.TestReposService_Get",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReposService_Get(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReposService_Get(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#TestReposService_List",
+              "documentation": {
+                "identifier": "TestReposService_List",
+                "newPage": false,
+                "searchKey": "backend.TestReposService_List",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReposService_List(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReposService_List(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#TestRepos_Add",
+              "documentation": {
+                "identifier": "TestRepos_Add",
+                "newPage": false,
+                "searchKey": "backend.TestRepos_Add",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepos_Add(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepos_Add(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#TestRepos_GetCommit_repoupdaterError",
+              "documentation": {
+                "identifier": "TestRepos_GetCommit_repoupdaterError",
+                "newPage": false,
+                "searchKey": "backend.TestRepos_GetCommit_repoupdaterError",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepos_GetCommit_repoupdaterError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepos_GetCommit_repoupdaterError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#TestRepos_ResolveRev_commitIDSpecified_failsToResolve",
+              "documentation": {
+                "identifier": "TestRepos_ResolveRev_commitIDSpecified_failsToResolve",
+                "newPage": false,
+                "searchKey": "backend.TestRepos_ResolveRev_commitIDSpecified_failsToResolve",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepos_ResolveRev_commitIDSpecified_failsToResolve(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepos_ResolveRev_commitIDSpecified_failsToResolve(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#TestRepos_ResolveRev_commitIDSpecified_resolvesCommitID",
+              "documentation": {
+                "identifier": "TestRepos_ResolveRev_commitIDSpecified_resolvesCommitID",
+                "newPage": false,
+                "searchKey": "backend.TestRepos_ResolveRev_commitIDSpecified_resolvesCommitID",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepos_ResolveRev_commitIDSpecified_resolvesCommitID(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepos_ResolveRev_commitIDSpecified_resolvesCommitID(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#TestRepos_ResolveRev_noCommitIDSpecified_resolvesRev",
+              "documentation": {
+                "identifier": "TestRepos_ResolveRev_noCommitIDSpecified_resolvesRev",
+                "newPage": false,
+                "searchKey": "backend.TestRepos_ResolveRev_noCommitIDSpecified_resolvesRev",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepos_ResolveRev_noCommitIDSpecified_resolvesRev(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepos_ResolveRev_noCommitIDSpecified_resolvesRev(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#TestRepos_ResolveRev_noRevSpecified_getsDefaultBranch",
+              "documentation": {
+                "identifier": "TestRepos_ResolveRev_noRevSpecified_getsDefaultBranch",
+                "newPage": false,
+                "searchKey": "backend.TestRepos_ResolveRev_noRevSpecified_getsDefaultBranch",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepos_ResolveRev_noRevSpecified_getsDefaultBranch(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepos_ResolveRev_noRevSpecified_getsDefaultBranch(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#TestSendUserEmailOnFieldUpdate",
+              "documentation": {
+                "identifier": "TestSendUserEmailOnFieldUpdate",
+                "newPage": false,
+                "searchKey": "backend.TestSendUserEmailOnFieldUpdate",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSendUserEmailOnFieldUpdate(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSendUserEmailOnFieldUpdate(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#TestSendUserEmailVerificationEmail",
+              "documentation": {
+                "identifier": "TestSendUserEmailVerificationEmail",
+                "newPage": false,
+                "searchKey": "backend.TestSendUserEmailVerificationEmail",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSendUserEmailVerificationEmail(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSendUserEmailVerificationEmail(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#TestUpdateServiceVersion",
+              "documentation": {
+                "identifier": "TestUpdateServiceVersion",
+                "newPage": false,
+                "searchKey": "backend.TestUpdateServiceVersion",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUpdateServiceVersion(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUpdateServiceVersion(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#UpdateServiceVersion",
+              "documentation": {
+                "identifier": "UpdateServiceVersion",
+                "newPage": false,
+                "searchKey": "backend.UpdateServiceVersion",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func UpdateServiceVersion(ctx context.Context, service, version string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc UpdateServiceVersion(ctx context.Context, service, version string) error\n```\n\nUpdateServiceVersion updates the latest version for the given Sourcegraph service. It enforces our documented upgrade policy. [https://docs.sourcegraph.com/#upgrading-sourcegraph](https://docs.sourcegraph.com/#upgrading-sourcegraph) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#WithAuthzBypass",
+              "documentation": {
+                "identifier": "WithAuthzBypass",
+                "newPage": false,
+                "searchKey": "backend.WithAuthzBypass",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WithAuthzBypass(ctx context.Context) context.Context"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WithAuthzBypass(ctx context.Context) context.Context\n```\n\nWithAuthzBypass returns a context that backend.CheckXyz funcs report as being a site admin. It is used to bypass the backend.CheckXyz access control funcs when needed. \n\n🚨 SECURITY: The caller MUST ensure that it performs its own access controls or removal of sensitive data. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#checkEmailAbuse",
+              "documentation": {
+                "identifier": "checkEmailAbuse",
+                "newPage": false,
+                "searchKey": "backend.checkEmailAbuse",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkEmailAbuse(ctx context.Context, userID int32) (abused bool, reason string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkEmailAbuse(ctx context.Context, userID int32) (abused bool, reason string, err error)\n```\n\ncheckEmailAbuse performs abuse prevention checks to prevent email abuse, i.e. users using emails of other people whom they want to annoy. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/backend#checkOrgAccess",
               "documentation": {
                 "identifier": "checkOrgAccess",
                 "newPage": false,
                 "searchKey": "backend.checkOrgAccess",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1551,6 +2379,7 @@
                 "newPage": false,
                 "searchKey": "backend.checkUserIsOrgMember",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1567,154 +2396,13 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/backend#shouldRedirect",
-              "documentation": {
-                "identifier": "shouldRedirect",
-                "newPage": false,
-                "searchKey": "backend.shouldRedirect",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func shouldRedirect(name api.RepoName) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc shouldRedirect(name api.RepoName) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#CheckCurrentUserIsSiteAdmin",
-              "documentation": {
-                "identifier": "CheckCurrentUserIsSiteAdmin",
-                "newPage": false,
-                "searchKey": "backend.CheckCurrentUserIsSiteAdmin",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func CheckCurrentUserIsSiteAdmin(ctx context.Context, db dbutil.DB) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc CheckCurrentUserIsSiteAdmin(ctx context.Context, db dbutil.DB) error\n```\n\nCheckCurrentUserIsSiteAdmin returns an error if the current user is NOT a site admin. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#CheckUserIsSiteAdmin",
-              "documentation": {
-                "identifier": "CheckUserIsSiteAdmin",
-                "newPage": false,
-                "searchKey": "backend.CheckUserIsSiteAdmin",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func CheckUserIsSiteAdmin(ctx context.Context, db dbutil.DB, userID int32) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc CheckUserIsSiteAdmin(ctx context.Context, db dbutil.DB, userID int32) error\n```\n\nCheckUserIsSiteAdmin returns an error if the user is NOT a site admin. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#CheckSiteAdminOrSameUser",
-              "documentation": {
-                "identifier": "CheckSiteAdminOrSameUser",
-                "newPage": false,
-                "searchKey": "backend.CheckSiteAdminOrSameUser",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func CheckSiteAdminOrSameUser(ctx context.Context, db dbutil.DB, subjectUserID int32) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc CheckSiteAdminOrSameUser(ctx context.Context, db dbutil.DB, subjectUserID int32) error\n```\n\nCheckSiteAdminOrSameUser returns an error if the user is NEITHER (1) a site admin NOR (2) the user specified by subjectUserID. \n\nIt is used when an action on a user can be performed by site admins and the user themselves, but nobody else. \n\nReturns an error containing the name of the given user. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#CheckSameUser",
-              "documentation": {
-                "identifier": "CheckSameUser",
-                "newPage": false,
-                "searchKey": "backend.CheckSameUser",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func CheckSameUser(ctx context.Context, subjectUserID int32) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc CheckSameUser(ctx context.Context, subjectUserID int32) error\n```\n\nCheckSameUser returns an error if the user is not the user specified by subjectUserID. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#CurrentUser",
-              "documentation": {
-                "identifier": "CurrentUser",
-                "newPage": false,
-                "searchKey": "backend.CurrentUser",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func CurrentUser(ctx context.Context, db dbutil.DB) (*types.User, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc CurrentUser(ctx context.Context, db dbutil.DB) (*types.User, error)\n```\n\nCurrentUser gets the current authenticated user It returns nil, nil if no user is found \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#WithAuthzBypass",
-              "documentation": {
-                "identifier": "WithAuthzBypass",
-                "newPage": false,
-                "searchKey": "backend.WithAuthzBypass",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func WithAuthzBypass(ctx context.Context) context.Context"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc WithAuthzBypass(ctx context.Context) context.Context\n```\n\nWithAuthzBypass returns a context that backend.CheckXyz funcs report as being a site admin. It is used to bypass the backend.CheckXyz access control funcs when needed. \n\n🚨 SECURITY: The caller MUST ensure that it performs its own access controls or removal of sensitive data. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/backend#hasAuthzBypass",
               "documentation": {
                 "identifier": "hasAuthzBypass",
                 "newPage": false,
                 "searchKey": "backend.hasAuthzBypass",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1731,548 +2419,13 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/backend#trace",
-              "documentation": {
-                "identifier": "trace",
-                "newPage": false,
-                "searchKey": "backend.trace",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func trace(ctx context.Context, server, method string, arg interface{}, err *error) (context.Context, func())"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc trace(ctx context.Context, server, method string, arg interface{}, err *error) (context.Context, func())\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#checkEmailAbuse",
-              "documentation": {
-                "identifier": "checkEmailAbuse",
-                "newPage": false,
-                "searchKey": "backend.checkEmailAbuse",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func checkEmailAbuse(ctx context.Context, userID int32) (abused bool, reason string, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc checkEmailAbuse(ctx context.Context, userID int32) (abused bool, reason string, err error)\n```\n\ncheckEmailAbuse performs abuse prevention checks to prevent email abuse, i.e. users using emails of other people whom they want to annoy. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#MakeEmailVerificationCode",
-              "documentation": {
-                "identifier": "MakeEmailVerificationCode",
-                "newPage": false,
-                "searchKey": "backend.MakeEmailVerificationCode",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func MakeEmailVerificationCode() (string, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc MakeEmailVerificationCode() (string, error)\n```\n\nMakeEmailVerificationCode returns a random string that can be used as an email verification code. If there is not enough entropy to create a random string, it returns a non-nil error. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#SendUserEmailVerificationEmail",
-              "documentation": {
-                "identifier": "SendUserEmailVerificationEmail",
-                "newPage": false,
-                "searchKey": "backend.SendUserEmailVerificationEmail",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SendUserEmailVerificationEmail(ctx context.Context, username, email, code string) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SendUserEmailVerificationEmail(ctx context.Context, username, email, code string) error\n```\n\nSendUserEmailVerificationEmail sends an email to the user to verify the email address. The code is the verification code that the user must provide to verify their access to the email address. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#MakeRandomHardToGuessPassword",
-              "documentation": {
-                "identifier": "MakeRandomHardToGuessPassword",
-                "newPage": false,
-                "searchKey": "backend.MakeRandomHardToGuessPassword",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func MakeRandomHardToGuessPassword() string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc MakeRandomHardToGuessPassword() string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#MakePasswordResetURL",
-              "documentation": {
-                "identifier": "MakePasswordResetURL",
-                "newPage": false,
-                "searchKey": "backend.MakePasswordResetURL",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func MakePasswordResetURL(ctx context.Context, userID int32) (*url.URL, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc MakePasswordResetURL(ctx context.Context, userID int32) (*url.URL, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#GetFirstServiceVersion",
-              "documentation": {
-                "identifier": "GetFirstServiceVersion",
-                "newPage": false,
-                "searchKey": "backend.GetFirstServiceVersion",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetFirstServiceVersion(ctx context.Context, service string) (version string, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetFirstServiceVersion(ctx context.Context, service string) (version string, err error)\n```\n\nGetFirstServiceVersion returns the first version registered for the given Sourcegraph service. This method will return an error if UpdateServiceVersion has never been called for the given service. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#UpdateServiceVersion",
-              "documentation": {
-                "identifier": "UpdateServiceVersion",
-                "newPage": false,
-                "searchKey": "backend.UpdateServiceVersion",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func UpdateServiceVersion(ctx context.Context, service, version string) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc UpdateServiceVersion(ctx context.Context, service, version string) error\n```\n\nUpdateServiceVersion updates the latest version for the given Sourcegraph service. It enforces our documented upgrade policy. [https://docs.sourcegraph.com/#upgrading-sourcegraph](https://docs.sourcegraph.com/#upgrading-sourcegraph) \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#IsValidUpgrade",
-              "documentation": {
-                "identifier": "IsValidUpgrade",
-                "newPage": false,
-                "searchKey": "backend.IsValidUpgrade",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IsValidUpgrade(previous, latest *semver.Version) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IsValidUpgrade(previous, latest *semver.Version) bool\n```\n\nIsValidUpgrade returns true if the given previous and latest versions comply with our documented upgrade policy. All roll-backs or downgrades are supported. \n\n[https://docs.sourcegraph.com/#upgrading-sourcegraph](https://docs.sourcegraph.com/#upgrading-sourcegraph) \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#TestCountGoImporters",
-              "documentation": {
-                "identifier": "TestCountGoImporters",
-                "newPage": false,
-                "searchKey": "backend.TestCountGoImporters",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCountGoImporters(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCountGoImporters(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#TestListGoPackagesInRepoImprecise",
-              "documentation": {
-                "identifier": "TestListGoPackagesInRepoImprecise",
-                "newPage": false,
-                "searchKey": "backend.TestListGoPackagesInRepoImprecise",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestListGoPackagesInRepoImprecise(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestListGoPackagesInRepoImprecise(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#TestIsPossibleExternallyImportableGoPackageDir",
-              "documentation": {
-                "identifier": "TestIsPossibleExternallyImportableGoPackageDir",
-                "newPage": false,
-                "searchKey": "backend.TestIsPossibleExternallyImportableGoPackageDir",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIsPossibleExternallyImportableGoPackageDir(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIsPossibleExternallyImportableGoPackageDir(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#TestReposService_Get",
-              "documentation": {
-                "identifier": "TestReposService_Get",
-                "newPage": false,
-                "searchKey": "backend.TestReposService_Get",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReposService_Get(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReposService_Get(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#TestReposService_List",
-              "documentation": {
-                "identifier": "TestReposService_List",
-                "newPage": false,
-                "searchKey": "backend.TestReposService_List",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReposService_List(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReposService_List(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#TestRepos_Add",
-              "documentation": {
-                "identifier": "TestRepos_Add",
-                "newPage": false,
-                "searchKey": "backend.TestRepos_Add",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRepos_Add(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRepos_Add(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#TestReposGetInventory",
-              "documentation": {
-                "identifier": "TestReposGetInventory",
-                "newPage": false,
-                "searchKey": "backend.TestReposGetInventory",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReposGetInventory(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReposGetInventory(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#TestMain",
-              "documentation": {
-                "identifier": "TestMain",
-                "newPage": false,
-                "searchKey": "backend.TestMain",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMain(m *testing.M)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#TestRepos_ResolveRev_noRevSpecified_getsDefaultBranch",
-              "documentation": {
-                "identifier": "TestRepos_ResolveRev_noRevSpecified_getsDefaultBranch",
-                "newPage": false,
-                "searchKey": "backend.TestRepos_ResolveRev_noRevSpecified_getsDefaultBranch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRepos_ResolveRev_noRevSpecified_getsDefaultBranch(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRepos_ResolveRev_noRevSpecified_getsDefaultBranch(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#TestRepos_ResolveRev_noCommitIDSpecified_resolvesRev",
-              "documentation": {
-                "identifier": "TestRepos_ResolveRev_noCommitIDSpecified_resolvesRev",
-                "newPage": false,
-                "searchKey": "backend.TestRepos_ResolveRev_noCommitIDSpecified_resolvesRev",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRepos_ResolveRev_noCommitIDSpecified_resolvesRev(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRepos_ResolveRev_noCommitIDSpecified_resolvesRev(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#TestRepos_ResolveRev_commitIDSpecified_resolvesCommitID",
-              "documentation": {
-                "identifier": "TestRepos_ResolveRev_commitIDSpecified_resolvesCommitID",
-                "newPage": false,
-                "searchKey": "backend.TestRepos_ResolveRev_commitIDSpecified_resolvesCommitID",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRepos_ResolveRev_commitIDSpecified_resolvesCommitID(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRepos_ResolveRev_commitIDSpecified_resolvesCommitID(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#TestRepos_ResolveRev_commitIDSpecified_failsToResolve",
-              "documentation": {
-                "identifier": "TestRepos_ResolveRev_commitIDSpecified_failsToResolve",
-                "newPage": false,
-                "searchKey": "backend.TestRepos_ResolveRev_commitIDSpecified_failsToResolve",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRepos_ResolveRev_commitIDSpecified_failsToResolve(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRepos_ResolveRev_commitIDSpecified_failsToResolve(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#TestRepos_GetCommit_repoupdaterError",
-              "documentation": {
-                "identifier": "TestRepos_GetCommit_repoupdaterError",
-                "newPage": false,
-                "searchKey": "backend.TestRepos_GetCommit_repoupdaterError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRepos_GetCommit_repoupdaterError(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRepos_GetCommit_repoupdaterError(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#TestCheckEmailAbuse",
-              "documentation": {
-                "identifier": "TestCheckEmailAbuse",
-                "newPage": false,
-                "searchKey": "backend.TestCheckEmailAbuse",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCheckEmailAbuse(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCheckEmailAbuse(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#TestSendUserEmailVerificationEmail",
-              "documentation": {
-                "identifier": "TestSendUserEmailVerificationEmail",
-                "newPage": false,
-                "searchKey": "backend.TestSendUserEmailVerificationEmail",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSendUserEmailVerificationEmail(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSendUserEmailVerificationEmail(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/backend#TestSendUserEmailOnFieldUpdate",
-              "documentation": {
-                "identifier": "TestSendUserEmailOnFieldUpdate",
-                "newPage": false,
-                "searchKey": "backend.TestSendUserEmailOnFieldUpdate",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSendUserEmailOnFieldUpdate(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSendUserEmailOnFieldUpdate(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/backend#init.versions_test.go",
               "documentation": {
                 "identifier": "init.versions_test.go",
                 "newPage": false,
                 "searchKey": "backend.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -2289,66 +2442,115 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/backend#TestGetFirstServiceVersion",
+              "pathID": "/cmd/frontend/backend#isPossibleExternallyImportableGoPackageDir",
               "documentation": {
-                "identifier": "TestGetFirstServiceVersion",
+                "identifier": "isPossibleExternallyImportableGoPackageDir",
                 "newPage": false,
-                "searchKey": "backend.TestGetFirstServiceVersion",
+                "searchKey": "backend.isPossibleExternallyImportableGoPackageDir",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestGetFirstServiceVersion(t *testing.T)"
+                "value": "func isPossibleExternallyImportableGoPackageDir(dirPath string) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestGetFirstServiceVersion(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc isPossibleExternallyImportableGoPackageDir(dirPath string) bool\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/backend#TestUpdateServiceVersion",
+              "pathID": "/cmd/frontend/backend#listGoPackagesInRepoImprecise",
               "documentation": {
-                "identifier": "TestUpdateServiceVersion",
+                "identifier": "listGoPackagesInRepoImprecise",
                 "newPage": false,
-                "searchKey": "backend.TestUpdateServiceVersion",
+                "searchKey": "backend.listGoPackagesInRepoImprecise",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestUpdateServiceVersion(t *testing.T)"
+                "value": "func listGoPackagesInRepoImprecise(ctx context.Context, repoName api.RepoName) ([]string, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestUpdateServiceVersion(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc listGoPackagesInRepoImprecise(ctx context.Context, repoName api.RepoName) ([]string, error)\n```\n\nlistGoPackagesInRepoImprecise returns a list of import paths for all (probable) Go packages in the repository. It computes the list based solely on the repository name (as a prefix) and filenames in the repository; it does not parse or build the Go files to determine the list precisely. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/backend#TestIsValidUpgrade",
+              "pathID": "/cmd/frontend/backend#shouldRedirect",
               "documentation": {
-                "identifier": "TestIsValidUpgrade",
+                "identifier": "shouldRedirect",
                 "newPage": false,
-                "searchKey": "backend.TestIsValidUpgrade",
+                "searchKey": "backend.shouldRedirect",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestIsValidUpgrade(t *testing.T)"
+                "value": "func shouldRedirect(name api.RepoName) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestIsValidUpgrade(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc shouldRedirect(name api.RepoName) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#testContext",
+              "documentation": {
+                "identifier": "testContext",
+                "newPage": false,
+                "searchKey": "backend.testContext",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testContext() context.Context"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testContext() context.Context\n```\n\ntestContext creates a new context.Context for use by tests \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/backend#trace",
+              "documentation": {
+                "identifier": "trace",
+                "newPage": false,
+                "searchKey": "backend.trace",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func trace(ctx context.Context, server, method string, arg interface{}, err *error) (context.Context, func())"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc trace(ctx context.Context, server, method string, arg interface{}, err *error) (context.Context, func())\n```\n\n"
               },
               "children": null
             }

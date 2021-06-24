@@ -17,16 +17,11 @@
     * [var SettingsSchemaJSON](#SettingsSchemaJSON)
     * [var SiteSchemaJSON](#SiteSchemaJSON)
 * [Types](#type)
-    * [type SourcegraphExtensionManifest struct](#SourcegraphExtensionManifest)
-    * [type ExtensionRepository struct](#ExtensionRepository)
-    * [type Action struct](#Action)
-    * [type ActionItem struct](#ActionItem)
-    * [type Contributions struct](#Contributions)
-    * [type MenuItem struct](#MenuItem)
-    * [type Menus struct](#Menus)
     * [type AWSCodeCommitConnection struct](#AWSCodeCommitConnection)
     * [type AWSCodeCommitGitCredentials struct](#AWSCodeCommitGitCredentials)
     * [type AWSKMSEncryptionKey struct](#AWSKMSEncryptionKey)
+    * [type Action struct](#Action)
+    * [type ActionItem struct](#ActionItem)
     * [type AdditionalProperties struct](#AdditionalProperties)
     * [type ApiRatelimit struct](#ApiRatelimit)
     * [type AuthAccessTokens struct](#AuthAccessTokens)
@@ -55,6 +50,7 @@
     * [type ChangesetTemplate struct](#ChangesetTemplate)
     * [type CloneURLToRepositoryName struct](#CloneURLToRepositoryName)
     * [type CloudKMSEncryptionKey struct](#CloudKMSEncryptionKey)
+    * [type Contributions struct](#Contributions)
     * [type CustomGitFetchMapping struct](#CustomGitFetchMapping)
     * [type DebugLog struct](#DebugLog)
     * [type Dotcom struct](#Dotcom)
@@ -70,6 +66,7 @@
     * [type ExcludedGitoliteRepo struct](#ExcludedGitoliteRepo)
     * [type ExpandedGitCommitDescription struct](#ExpandedGitCommitDescription)
     * [type ExperimentalFeatures struct](#ExperimentalFeatures)
+    * [type ExtensionRepository struct](#ExtensionRepository)
     * [type Extensions struct](#Extensions)
     * [type ExternalIdentity struct](#ExternalIdentity)
     * [type GitCommitAuthor struct](#GitCommitAuthor)
@@ -97,6 +94,8 @@
     * [type Insight struct](#Insight)
     * [type InsightSeries struct](#InsightSeries)
     * [type Log struct](#Log)
+    * [type MenuItem struct](#MenuItem)
+    * [type Menus struct](#Menus)
     * [type MountedEncryptionKey struct](#MountedEncryptionKey)
     * [type NoOpEncryptionKey struct](#NoOpEncryptionKey)
     * [type Notice struct](#Notice)
@@ -136,6 +135,7 @@
     * [type Settings struct](#Settings)
     * [type SettingsExperimentalFeatures struct](#SettingsExperimentalFeatures)
     * [type SiteConfiguration struct](#SiteConfiguration)
+    * [type SourcegraphExtensionManifest struct](#SourcegraphExtensionManifest)
     * [type Step struct](#Step)
     * [type TlsExternal struct](#TlsExternal)
     * [type TransformChanges struct](#TransformChanges)
@@ -149,10 +149,15 @@
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [package]
+```
+
 ### <a id="AWSCodeCommitSchemaJSON" href="#AWSCodeCommitSchemaJSON">var AWSCodeCommitSchemaJSON</a>
 
 ```
 searchKey: schema.AWSCodeCommitSchemaJSON
+tags: [variable string]
 ```
 
 ```Go
@@ -165,6 +170,7 @@ AWSCodeCommitSchemaJSON is the content of the file "aws_codecommit.schema.json".
 
 ```
 searchKey: schema.BatchSpecSchemaJSON
+tags: [variable string]
 ```
 
 ```Go
@@ -177,6 +183,7 @@ BatchSpecSchemaJSON is the content of the file "batch_spec.schema.json".
 
 ```
 searchKey: schema.BitbucketCloudSchemaJSON
+tags: [variable string]
 ```
 
 ```Go
@@ -189,6 +196,7 @@ BitbucketCloudSchemaJSON is the content of the file "bitbucket_cloud.schema.json
 
 ```
 searchKey: schema.BitbucketServerSchemaJSON
+tags: [variable string]
 ```
 
 ```Go
@@ -201,6 +209,7 @@ BitbucketServerSchemaJSON is the content of the file "bitbucket_server.schema.js
 
 ```
 searchKey: schema.ChangesetSpecSchemaJSON
+tags: [variable string]
 ```
 
 ```Go
@@ -213,6 +222,7 @@ ChangesetSpecSchemaJSON is the content of the file "changeset_spec.schema.json".
 
 ```
 searchKey: schema.GitHubSchemaJSON
+tags: [variable string]
 ```
 
 ```Go
@@ -225,6 +235,7 @@ GitHubSchemaJSON is the content of the file "github.schema.json".
 
 ```
 searchKey: schema.GitLabSchemaJSON
+tags: [variable string]
 ```
 
 ```Go
@@ -237,6 +248,7 @@ GitLabSchemaJSON is the content of the file "gitlab.schema.json".
 
 ```
 searchKey: schema.GitoliteSchemaJSON
+tags: [variable string]
 ```
 
 ```Go
@@ -249,6 +261,7 @@ GitoliteSchemaJSON is the content of the file "gitolite.schema.json".
 
 ```
 searchKey: schema.OtherExternalServiceSchemaJSON
+tags: [variable string]
 ```
 
 ```Go
@@ -261,6 +274,7 @@ OtherExternalServiceSchemaJSON is the content of the file "other_external_servic
 
 ```
 searchKey: schema.PerforceSchemaJSON
+tags: [variable string]
 ```
 
 ```Go
@@ -273,6 +287,7 @@ PerforceSchemaJSON is the content of the file "perforce.schema.json".
 
 ```
 searchKey: schema.PhabricatorSchemaJSON
+tags: [variable string]
 ```
 
 ```Go
@@ -285,6 +300,7 @@ PhabricatorSchemaJSON is the content of the file "phabricator.schema.json".
 
 ```
 searchKey: schema.SettingsSchemaJSON
+tags: [variable string]
 ```
 
 ```Go
@@ -297,6 +313,7 @@ SettingsSchemaJSON is the content of the file "settings.schema.json".
 
 ```
 searchKey: schema.SiteSchemaJSON
+tags: [variable string]
 ```
 
 ```Go
@@ -307,127 +324,15 @@ SiteSchemaJSON is the content of the file "site.schema.json".
 
 ## <a id="type" href="#type">Types</a>
 
-### <a id="SourcegraphExtensionManifest" href="#SourcegraphExtensionManifest">type SourcegraphExtensionManifest struct</a>
-
 ```
-searchKey: schema.SourcegraphExtensionManifest
+tags: [package]
 ```
-
-```Go
-type SourcegraphExtensionManifest struct {
-	ActivationEvents []string                `json:"activationEvents"`
-	Args             *map[string]interface{} `json:"args,omitempty"`
-	Contributes      *Contributions          `json:"contributes,omitempty"`
-	Description      string                  `json:"description,omitempty"`
-	Icon             string                  `json:"icon,omitempty"`
-	Readme           string                  `json:"readme,omitempty"`
-	Repository       *ExtensionRepository    `json:"repository,omitempty"`
-	Wip              bool                    `json:"wip,omitempty"`
-	Url              string                  `json:"url"`
-}
-```
-
-SourcegraphExtensionManifest description: The Sourcegraph extension manifest describes the extension and the features it provides. 
-
-### <a id="ExtensionRepository" href="#ExtensionRepository">type ExtensionRepository struct</a>
-
-```
-searchKey: schema.ExtensionRepository
-```
-
-```Go
-type ExtensionRepository struct {
-	Type string `json:"type,omitempty"`
-	Url  string `json:"url"`
-}
-```
-
-ExtensionRepository description: The location of the version control repository for this extension. 
-
-### <a id="Action" href="#Action">type Action struct</a>
-
-```
-searchKey: schema.Action
-```
-
-```Go
-type Action struct {
-	ActionItem       *ActionItem   `json:"actionItem,omitempty"`
-	Category         string        `json:"category,omitempty"`
-	Command          string        `json:"command,omitempty"`
-	CommandArguments []interface{} `json:"commandArguments,omitempty"`
-	IconURL          string        `json:"iconURL,omitempty"`
-	Id               string        `json:"id,omitempty"`
-	Title            string        `json:"title,omitempty"`
-}
-```
-
-### <a id="ActionItem" href="#ActionItem">type ActionItem struct</a>
-
-```
-searchKey: schema.ActionItem
-```
-
-```Go
-type ActionItem struct {
-	Description string `json:"description,omitempty"`
-	IconURL     string `json:"iconURL,omitempty"`
-	Label       string `json:"label,omitempty"`
-}
-```
-
-ActionItem description: The action item. 
-
-### <a id="Contributions" href="#Contributions">type Contributions struct</a>
-
-```
-searchKey: schema.Contributions
-```
-
-```Go
-type Contributions struct {
-	Actions       []*Action          `json:"actions,omitempty"`
-	Configuration *jsonschema.Schema `json:"configuration,omitempty"`
-	Menus         *Menus             `json:"menus,omitempty"`
-}
-```
-
-Contributions description: Features contributed by this extension. Extensions may also register certain types of contributions dynamically. 
-
-### <a id="MenuItem" href="#MenuItem">type MenuItem struct</a>
-
-```
-searchKey: schema.MenuItem
-```
-
-```Go
-type MenuItem struct {
-	Action string `json:"action,omitempty"`
-	Alt    string `json:"alt,omitempty"`
-	When   string `json:"when,omitempty"`
-}
-```
-
-### <a id="Menus" href="#Menus">type Menus struct</a>
-
-```
-searchKey: schema.Menus
-```
-
-```Go
-type Menus struct {
-	CommandPalette []*MenuItem `json:"commandPalette,omitempty"`
-	EditorTitle    []*MenuItem `json:"editor/title,omitempty"`
-	Help           []*MenuItem `json:"help,omitempty"`
-}
-```
-
-Menus description: Describes where to place actions in menus. 
 
 ### <a id="AWSCodeCommitConnection" href="#AWSCodeCommitConnection">type AWSCodeCommitConnection struct</a>
 
 ```
 searchKey: schema.AWSCodeCommitConnection
+tags: [struct]
 ```
 
 ```Go
@@ -464,6 +369,7 @@ AWSCodeCommitConnection description: Configuration for a connection to AWS CodeC
 
 ```
 searchKey: schema.AWSCodeCommitGitCredentials
+tags: [struct]
 ```
 
 ```Go
@@ -483,6 +389,7 @@ See the AWS CodeCommit documentation on Git credentials for CodeCommit: [https:/
 
 ```
 searchKey: schema.AWSKMSEncryptionKey
+tags: [struct]
 ```
 
 ```Go
@@ -496,10 +403,47 @@ type AWSKMSEncryptionKey struct {
 
 AWSKMSEncryptionKey description: AWS KMS Encryption Key, used to encrypt data in AWS environments 
 
+### <a id="Action" href="#Action">type Action struct</a>
+
+```
+searchKey: schema.Action
+tags: [struct]
+```
+
+```Go
+type Action struct {
+	ActionItem       *ActionItem   `json:"actionItem,omitempty"`
+	Category         string        `json:"category,omitempty"`
+	Command          string        `json:"command,omitempty"`
+	CommandArguments []interface{} `json:"commandArguments,omitempty"`
+	IconURL          string        `json:"iconURL,omitempty"`
+	Id               string        `json:"id,omitempty"`
+	Title            string        `json:"title,omitempty"`
+}
+```
+
+### <a id="ActionItem" href="#ActionItem">type ActionItem struct</a>
+
+```
+searchKey: schema.ActionItem
+tags: [struct]
+```
+
+```Go
+type ActionItem struct {
+	Description string `json:"description,omitempty"`
+	IconURL     string `json:"iconURL,omitempty"`
+	Label       string `json:"label,omitempty"`
+}
+```
+
+ActionItem description: The action item. 
+
 ### <a id="AdditionalProperties" href="#AdditionalProperties">type AdditionalProperties struct</a>
 
 ```
 searchKey: schema.AdditionalProperties
+tags: [struct]
 ```
 
 ```Go
@@ -515,6 +459,7 @@ type AdditionalProperties struct {
 
 ```
 searchKey: schema.ApiRatelimit
+tags: [struct]
 ```
 
 ```Go
@@ -536,6 +481,7 @@ ApiRatelimit description: Configuration for API rate limiting
 
 ```
 searchKey: schema.AuthAccessTokens
+tags: [struct]
 ```
 
 ```Go
@@ -551,6 +497,7 @@ AuthAccessTokens description: Settings for access tokens, which enable external 
 
 ```
 searchKey: schema.AuthProviderCommon
+tags: [struct]
 ```
 
 ```Go
@@ -566,6 +513,7 @@ AuthProviderCommon description: Common properties for authentication providers.
 
 ```
 searchKey: schema.AuthProviders
+tags: [struct]
 ```
 
 ```Go
@@ -583,6 +531,7 @@ type AuthProviders struct {
 
 ```
 searchKey: schema.AuthProviders.MarshalJSON
+tags: [function]
 ```
 
 ```Go
@@ -593,6 +542,7 @@ func (v AuthProviders) MarshalJSON() ([]byte, error)
 
 ```
 searchKey: schema.AuthProviders.UnmarshalJSON
+tags: [method]
 ```
 
 ```Go
@@ -603,6 +553,7 @@ func (v *AuthProviders) UnmarshalJSON(data []byte) error
 
 ```
 searchKey: schema.BatchChangeRolloutWindow
+tags: [struct]
 ```
 
 ```Go
@@ -622,6 +573,7 @@ type BatchChangeRolloutWindow struct {
 
 ```
 searchKey: schema.BatchSpec
+tags: [struct]
 ```
 
 ```Go
@@ -651,6 +603,7 @@ BatchSpec description: A batch specification, which describes the batch change a
 
 ```
 searchKey: schema.BitbucketCloudConnection
+tags: [struct]
 ```
 
 ```Go
@@ -694,6 +647,7 @@ BitbucketCloudConnection description: Configuration for a connection to Bitbucke
 
 ```
 searchKey: schema.BitbucketCloudRateLimit
+tags: [struct]
 ```
 
 ```Go
@@ -711,6 +665,7 @@ BitbucketCloudRateLimit description: Rate limit applied when making background A
 
 ```
 searchKey: schema.BitbucketServerAuthorization
+tags: [struct]
 ```
 
 ```Go
@@ -728,6 +683,7 @@ BitbucketServerAuthorization description: If non-null, enforces Bitbucket Server
 
 ```
 searchKey: schema.BitbucketServerConnection
+tags: [struct]
 ```
 
 ```Go
@@ -793,6 +749,7 @@ BitbucketServerConnection description: Configuration for a connection to Bitbuck
 
 ```
 searchKey: schema.BitbucketServerConnection.WebhookSecret
+tags: [function]
 ```
 
 ```Go
@@ -805,6 +762,7 @@ WebhookSecret returns the webhook secret from a BBS config
 
 ```
 searchKey: schema.BitbucketServerIdentityProvider
+tags: [struct]
 ```
 
 ```Go
@@ -819,6 +777,7 @@ BitbucketServerIdentityProvider description: The source of identity to use when 
 
 ```
 searchKey: schema.BitbucketServerIdentityProvider.MarshalJSON
+tags: [function]
 ```
 
 ```Go
@@ -829,6 +788,7 @@ func (v BitbucketServerIdentityProvider) MarshalJSON() ([]byte, error)
 
 ```
 searchKey: schema.BitbucketServerIdentityProvider.UnmarshalJSON
+tags: [method]
 ```
 
 ```Go
@@ -839,6 +799,7 @@ func (v *BitbucketServerIdentityProvider) UnmarshalJSON(data []byte) error
 
 ```
 searchKey: schema.BitbucketServerOAuth
+tags: [struct]
 ```
 
 ```Go
@@ -856,6 +817,7 @@ BitbucketServerOAuth description: OAuth configuration specified when creating th
 
 ```
 searchKey: schema.BitbucketServerPlugin
+tags: [struct]
 ```
 
 ```Go
@@ -872,6 +834,7 @@ BitbucketServerPlugin description: Configuration for Bitbucket Server Sourcegrap
 
 ```
 searchKey: schema.BitbucketServerPluginWebhooks
+tags: [struct]
 ```
 
 ```Go
@@ -887,6 +850,7 @@ type BitbucketServerPluginWebhooks struct {
 
 ```
 searchKey: schema.BitbucketServerRateLimit
+tags: [struct]
 ```
 
 ```Go
@@ -904,6 +868,7 @@ BitbucketServerRateLimit description: Rate limit applied when making background 
 
 ```
 searchKey: schema.BitbucketServerUsernameIdentity
+tags: [struct]
 ```
 
 ```Go
@@ -916,6 +881,7 @@ type BitbucketServerUsernameIdentity struct {
 
 ```
 searchKey: schema.BrandAssets
+tags: [struct]
 ```
 
 ```Go
@@ -931,6 +897,7 @@ type BrandAssets struct {
 
 ```
 searchKey: schema.Branding
+tags: [struct]
 ```
 
 ```Go
@@ -954,6 +921,7 @@ Only available in Sourcegraph Enterprise.
 
 ```
 searchKey: schema.BuiltinAuthProvider
+tags: [struct]
 ```
 
 ```Go
@@ -972,6 +940,7 @@ BuiltinAuthProvider description: Configures the builtin username-password authen
 
 ```
 searchKey: schema.ChangesetTemplate
+tags: [struct]
 ```
 
 ```Go
@@ -995,6 +964,7 @@ ChangesetTemplate description: A template describing how to create (and update) 
 
 ```
 searchKey: schema.CloneURLToRepositoryName
+tags: [struct]
 ```
 
 ```Go
@@ -1012,6 +982,7 @@ CloneURLToRepositoryName description: Describes a mapping from clone URL to repo
 
 ```
 searchKey: schema.CloudKMSEncryptionKey
+tags: [struct]
 ```
 
 ```Go
@@ -1024,10 +995,28 @@ type CloudKMSEncryptionKey struct {
 
 CloudKMSEncryptionKey description: Google Cloud KMS Encryption Key, used to encrypt data in Google Cloud environments 
 
+### <a id="Contributions" href="#Contributions">type Contributions struct</a>
+
+```
+searchKey: schema.Contributions
+tags: [struct]
+```
+
+```Go
+type Contributions struct {
+	Actions       []*Action          `json:"actions,omitempty"`
+	Configuration *jsonschema.Schema `json:"configuration,omitempty"`
+	Menus         *Menus             `json:"menus,omitempty"`
+}
+```
+
+Contributions description: Features contributed by this extension. Extensions may also register certain types of contributions dynamically. 
+
 ### <a id="CustomGitFetchMapping" href="#CustomGitFetchMapping">type CustomGitFetchMapping struct</a>
 
 ```
 searchKey: schema.CustomGitFetchMapping
+tags: [struct]
 ```
 
 ```Go
@@ -1045,6 +1034,7 @@ CustomGitFetchMapping description: Mapping from Git clone URl domain/path to git
 
 ```
 searchKey: schema.DebugLog
+tags: [struct]
 ```
 
 ```Go
@@ -1060,6 +1050,7 @@ DebugLog description: Turns on debug logging for specific debugging scenarios.
 
 ```
 searchKey: schema.Dotcom
+tags: [struct]
 ```
 
 ```Go
@@ -1075,6 +1066,7 @@ Dotcom description: Configuration options for Sourcegraph.com only.
 
 ```
 searchKey: schema.EncryptionKey
+tags: [struct]
 ```
 
 ```Go
@@ -1092,6 +1084,7 @@ EncryptionKey description: Config for a key
 
 ```
 searchKey: schema.EncryptionKey.MarshalJSON
+tags: [function]
 ```
 
 ```Go
@@ -1102,6 +1095,7 @@ func (v EncryptionKey) MarshalJSON() ([]byte, error)
 
 ```
 searchKey: schema.EncryptionKey.UnmarshalJSON
+tags: [method]
 ```
 
 ```Go
@@ -1112,6 +1106,7 @@ func (v *EncryptionKey) UnmarshalJSON(data []byte) error
 
 ```
 searchKey: schema.EncryptionKeys
+tags: [struct]
 ```
 
 ```Go
@@ -1132,6 +1127,7 @@ EncryptionKeys description: Configuration for encryption keys used to encrypt da
 
 ```
 searchKey: schema.ExcludedAWSCodeCommitRepo
+tags: [struct]
 ```
 
 ```Go
@@ -1147,6 +1143,7 @@ type ExcludedAWSCodeCommitRepo struct {
 
 ```
 searchKey: schema.ExcludedBitbucketCloudRepo
+tags: [struct]
 ```
 
 ```Go
@@ -1164,6 +1161,7 @@ type ExcludedBitbucketCloudRepo struct {
 
 ```
 searchKey: schema.ExcludedBitbucketServerRepo
+tags: [struct]
 ```
 
 ```Go
@@ -1181,6 +1179,7 @@ type ExcludedBitbucketServerRepo struct {
 
 ```
 searchKey: schema.ExcludedGitHubRepo
+tags: [struct]
 ```
 
 ```Go
@@ -1202,6 +1201,7 @@ type ExcludedGitHubRepo struct {
 
 ```
 searchKey: schema.ExcludedGitLabProject
+tags: [struct]
 ```
 
 ```Go
@@ -1217,6 +1217,7 @@ type ExcludedGitLabProject struct {
 
 ```
 searchKey: schema.ExcludedGitoliteRepo
+tags: [struct]
 ```
 
 ```Go
@@ -1232,6 +1233,7 @@ type ExcludedGitoliteRepo struct {
 
 ```
 searchKey: schema.ExpandedGitCommitDescription
+tags: [struct]
 ```
 
 ```Go
@@ -1249,6 +1251,7 @@ ExpandedGitCommitDescription description: The Git commit to create with the chan
 
 ```
 searchKey: schema.ExperimentalFeatures
+tags: [struct]
 ```
 
 ```Go
@@ -1288,10 +1291,27 @@ type ExperimentalFeatures struct {
 
 ExperimentalFeatures description: Experimental features to enable or disable. Features that are now enabled by default are marked as deprecated. 
 
+### <a id="ExtensionRepository" href="#ExtensionRepository">type ExtensionRepository struct</a>
+
+```
+searchKey: schema.ExtensionRepository
+tags: [struct]
+```
+
+```Go
+type ExtensionRepository struct {
+	Type string `json:"type,omitempty"`
+	Url  string `json:"url"`
+}
+```
+
+ExtensionRepository description: The location of the version control repository for this extension. 
+
 ### <a id="Extensions" href="#Extensions">type Extensions struct</a>
 
 ```
 searchKey: schema.Extensions
+tags: [struct]
 ```
 
 ```Go
@@ -1313,6 +1333,7 @@ Extensions description: Configures Sourcegraph extensions.
 
 ```
 searchKey: schema.ExternalIdentity
+tags: [struct]
 ```
 
 ```Go
@@ -1331,6 +1352,7 @@ type ExternalIdentity struct {
 
 ```
 searchKey: schema.GitCommitAuthor
+tags: [struct]
 ```
 
 ```Go
@@ -1348,6 +1370,7 @@ GitCommitAuthor description: The author of the Git commit.
 
 ```
 searchKey: schema.GitCommitDescription
+tags: [struct]
 ```
 
 ```Go
@@ -1369,6 +1392,7 @@ GitCommitDescription description: The Git commit to create with the changes.
 
 ```
 searchKey: schema.GitHubAuthProvider
+tags: [struct]
 ```
 
 ```Go
@@ -1394,6 +1418,7 @@ GitHubAuthProvider description: Configures the GitHub (or GitHub Enterprise) OAu
 
 ```
 searchKey: schema.GitHubAuthorization
+tags: [struct]
 ```
 
 ```Go
@@ -1407,6 +1432,7 @@ GitHubAuthorization description: If non-null, enforces GitHub repository permiss
 
 ```
 searchKey: schema.GitHubConnection
+tags: [struct]
 ```
 
 ```Go
@@ -1477,6 +1503,7 @@ GitHubConnection description: Configuration for a connection to GitHub or GitHub
 
 ```
 searchKey: schema.GitHubConnection.SetRepos
+tags: [method]
 ```
 
 ```Go
@@ -1487,6 +1514,7 @@ func (c *GitHubConnection) SetRepos(all bool, repos []string) error
 
 ```
 searchKey: schema.GitHubRateLimit
+tags: [struct]
 ```
 
 ```Go
@@ -1504,6 +1532,7 @@ GitHubRateLimit description: Rate limit applied when making background API reque
 
 ```
 searchKey: schema.GitHubWebhook
+tags: [struct]
 ```
 
 ```Go
@@ -1519,6 +1548,7 @@ type GitHubWebhook struct {
 
 ```
 searchKey: schema.GitLabAuthProvider
+tags: [struct]
 ```
 
 ```Go
@@ -1540,6 +1570,7 @@ GitLabAuthProvider description: Configures the GitLab OAuth authentication provi
 
 ```
 searchKey: schema.GitLabAuthorization
+tags: [struct]
 ```
 
 ```Go
@@ -1555,6 +1586,7 @@ GitLabAuthorization description: If non-null, enforces GitLab repository permiss
 
 ```
 searchKey: schema.GitLabConnection
+tags: [struct]
 ```
 
 ```Go
@@ -1610,6 +1642,7 @@ GitLabConnection description: Configuration for a connection to GitLab (GitLab.c
 
 ```
 searchKey: schema.GitLabConnection.SetRepos
+tags: [method]
 ```
 
 ```Go
@@ -1620,6 +1653,7 @@ func (c *GitLabConnection) SetRepos(all bool, repos []string) error
 
 ```
 searchKey: schema.GitLabNameTransformation
+tags: [struct]
 ```
 
 ```Go
@@ -1635,6 +1669,7 @@ type GitLabNameTransformation struct {
 
 ```
 searchKey: schema.GitLabProject
+tags: [struct]
 ```
 
 ```Go
@@ -1650,6 +1685,7 @@ type GitLabProject struct {
 
 ```
 searchKey: schema.GitLabRateLimit
+tags: [struct]
 ```
 
 ```Go
@@ -1667,6 +1703,7 @@ GitLabRateLimit description: Rate limit applied when making background API reque
 
 ```
 searchKey: schema.GitLabWebhook
+tags: [struct]
 ```
 
 ```Go
@@ -1680,6 +1717,7 @@ type GitLabWebhook struct {
 
 ```
 searchKey: schema.GitoliteConnection
+tags: [struct]
 ```
 
 ```Go
@@ -1705,6 +1743,7 @@ GitoliteConnection description: Configuration for a connection to Gitolite.
 
 ```
 searchKey: schema.HTTPHeaderAuthProvider
+tags: [struct]
 ```
 
 ```Go
@@ -1725,6 +1764,7 @@ HTTPHeaderAuthProvider description: Configures the HTTP header authentication pr
 
 ```
 searchKey: schema.IdentityProvider
+tags: [struct]
 ```
 
 ```Go
@@ -1741,6 +1781,7 @@ IdentityProvider description: The source of identity to use when computing permi
 
 ```
 searchKey: schema.IdentityProvider.MarshalJSON
+tags: [function]
 ```
 
 ```Go
@@ -1751,6 +1792,7 @@ func (v IdentityProvider) MarshalJSON() ([]byte, error)
 
 ```
 searchKey: schema.IdentityProvider.UnmarshalJSON
+tags: [method]
 ```
 
 ```Go
@@ -1761,6 +1803,7 @@ func (v *IdentityProvider) UnmarshalJSON(data []byte) error
 
 ```
 searchKey: schema.ImportChangesets
+tags: [struct]
 ```
 
 ```Go
@@ -1776,6 +1819,7 @@ type ImportChangesets struct {
 
 ```
 searchKey: schema.Insight
+tags: [struct]
 ```
 
 ```Go
@@ -1793,6 +1837,7 @@ type Insight struct {
 
 ```
 searchKey: schema.InsightSeries
+tags: [struct]
 ```
 
 ```Go
@@ -1812,6 +1857,7 @@ type InsightSeries struct {
 
 ```
 searchKey: schema.Log
+tags: [struct]
 ```
 
 ```Go
@@ -1823,10 +1869,43 @@ type Log struct {
 
 Log description: Configuration for logging and alerting, including to external services. 
 
+### <a id="MenuItem" href="#MenuItem">type MenuItem struct</a>
+
+```
+searchKey: schema.MenuItem
+tags: [struct]
+```
+
+```Go
+type MenuItem struct {
+	Action string `json:"action,omitempty"`
+	Alt    string `json:"alt,omitempty"`
+	When   string `json:"when,omitempty"`
+}
+```
+
+### <a id="Menus" href="#Menus">type Menus struct</a>
+
+```
+searchKey: schema.Menus
+tags: [struct]
+```
+
+```Go
+type Menus struct {
+	CommandPalette []*MenuItem `json:"commandPalette,omitempty"`
+	EditorTitle    []*MenuItem `json:"editor/title,omitempty"`
+	Help           []*MenuItem `json:"help,omitempty"`
+}
+```
+
+Menus description: Describes where to place actions in menus. 
+
 ### <a id="MountedEncryptionKey" href="#MountedEncryptionKey">type MountedEncryptionKey struct</a>
 
 ```
 searchKey: schema.MountedEncryptionKey
+tags: [struct]
 ```
 
 ```Go
@@ -1845,6 +1924,7 @@ MountedEncryptionKey description: This encryption key is mounted from a given fi
 
 ```
 searchKey: schema.NoOpEncryptionKey
+tags: [struct]
 ```
 
 ```Go
@@ -1859,6 +1939,7 @@ NoOpEncryptionKey description: This encryption key is a no op, leaving your data
 
 ```
 searchKey: schema.Notice
+tags: [struct]
 ```
 
 ```Go
@@ -1876,6 +1957,7 @@ type Notice struct {
 
 ```
 searchKey: schema.Notifier
+tags: [struct]
 ```
 
 ```Go
@@ -1892,6 +1974,7 @@ type Notifier struct {
 
 ```
 searchKey: schema.Notifier.MarshalJSON
+tags: [function]
 ```
 
 ```Go
@@ -1902,6 +1985,7 @@ func (v Notifier) MarshalJSON() ([]byte, error)
 
 ```
 searchKey: schema.Notifier.UnmarshalJSON
+tags: [method]
 ```
 
 ```Go
@@ -1912,6 +1996,7 @@ func (v *Notifier) UnmarshalJSON(data []byte) error
 
 ```
 searchKey: schema.NotifierEmail
+tags: [struct]
 ```
 
 ```Go
@@ -1928,6 +2013,7 @@ NotifierEmail description: Email notifier
 
 ```
 searchKey: schema.NotifierOpsGenie
+tags: [struct]
 ```
 
 ```Go
@@ -1947,6 +2033,7 @@ NotifierOpsGenie description: OpsGenie notifier
 
 ```
 searchKey: schema.NotifierPagerduty
+tags: [struct]
 ```
 
 ```Go
@@ -1966,6 +2053,7 @@ NotifierPagerduty description: PagerDuty notifier
 
 ```
 searchKey: schema.NotifierSlack
+tags: [struct]
 ```
 
 ```Go
@@ -1990,6 +2078,7 @@ NotifierSlack description: Slack notifier
 
 ```
 searchKey: schema.NotifierWebhook
+tags: [struct]
 ```
 
 ```Go
@@ -2008,6 +2097,7 @@ NotifierWebhook description: Webhook notifier
 
 ```
 searchKey: schema.OAuthIdentity
+tags: [struct]
 ```
 
 ```Go
@@ -2020,6 +2110,7 @@ type OAuthIdentity struct {
 
 ```
 searchKey: schema.ObservabilityAlerts
+tags: [struct]
 ```
 
 ```Go
@@ -2038,6 +2129,7 @@ type ObservabilityAlerts struct {
 
 ```
 searchKey: schema.ObservabilityTracing
+tags: [struct]
 ```
 
 ```Go
@@ -2055,6 +2147,7 @@ ObservabilityTracing description: Controls the settings for distributed tracing.
 
 ```
 searchKey: schema.OnQuery
+tags: [struct]
 ```
 
 ```Go
@@ -2070,6 +2163,7 @@ OnQuery description: A Sourcegraph search query that matches a set of repositori
 
 ```
 searchKey: schema.OnRepository
+tags: [struct]
 ```
 
 ```Go
@@ -2087,6 +2181,7 @@ OnRepository description: A specific repository (and branch) that is added to th
 
 ```
 searchKey: schema.OpenIDConnectAuthProvider
+tags: [struct]
 ```
 
 ```Go
@@ -2118,6 +2213,7 @@ OpenIDConnectAuthProvider description: Configures the OpenID Connect authenticat
 
 ```
 searchKey: schema.OtherExternalServiceConnection
+tags: [struct]
 ```
 
 ```Go
@@ -2139,6 +2235,7 @@ OtherExternalServiceConnection description: Configuration for a Connection to Gi
 
 ```
 searchKey: schema.Overrides
+tags: [struct]
 ```
 
 ```Go
@@ -2154,6 +2251,7 @@ type Overrides struct {
 
 ```
 searchKey: schema.ParentSourcegraph
+tags: [struct]
 ```
 
 ```Go
@@ -2168,6 +2266,7 @@ ParentSourcegraph description: URL to fetch unreachable repository details from.
 
 ```
 searchKey: schema.PerforceAuthorization
+tags: [struct]
 ```
 
 ```Go
@@ -2181,6 +2280,7 @@ PerforceAuthorization description: If non-null, enforces Perforce depot permissi
 
 ```
 searchKey: schema.PerforceConnection
+tags: [struct]
 ```
 
 ```Go
@@ -2214,6 +2314,7 @@ PerforceConnection description: Configuration for a connection to Perforce Serve
 
 ```
 searchKey: schema.PerforceRateLimit
+tags: [struct]
 ```
 
 ```Go
@@ -2231,6 +2332,7 @@ PerforceRateLimit description: Rate limit applied when making background API req
 
 ```
 searchKey: schema.PermissionsUserMapping
+tags: [struct]
 ```
 
 ```Go
@@ -2248,6 +2350,7 @@ PermissionsUserMapping description: Settings for Sourcegraph permissions, which 
 
 ```
 searchKey: schema.Phabricator
+tags: [struct]
 ```
 
 ```Go
@@ -2265,6 +2368,7 @@ Phabricator description: Phabricator instance that integrates with this Gitolite
 
 ```
 searchKey: schema.PhabricatorConnection
+tags: [struct]
 ```
 
 ```Go
@@ -2284,6 +2388,7 @@ PhabricatorConnection description: Configuration for a connection to Phabricator
 
 ```
 searchKey: schema.QuickLink
+tags: [struct]
 ```
 
 ```Go
@@ -2301,6 +2406,7 @@ type QuickLink struct {
 
 ```
 searchKey: schema.Ranking
+tags: [struct]
 ```
 
 ```Go
@@ -2316,6 +2422,7 @@ Ranking description: Experimental search result ranking options.
 
 ```
 searchKey: schema.Repos
+tags: [struct]
 ```
 
 ```Go
@@ -2331,6 +2438,7 @@ type Repos struct {
 
 ```
 searchKey: schema.Responders
+tags: [struct]
 ```
 
 ```Go
@@ -2346,6 +2454,7 @@ type Responders struct {
 
 ```
 searchKey: schema.SAMLAuthProvider
+tags: [struct]
 ```
 
 ```Go
@@ -2383,6 +2492,7 @@ Note: if you are using IdP-initiated login, you must have *at most one* SAMLAuth
 
 ```
 searchKey: schema.SMTPServerConfig
+tags: [struct]
 ```
 
 ```Go
@@ -2412,6 +2522,7 @@ SMTPServerConfig description: The SMTP server used to send transactional emails 
 
 ```
 searchKey: schema.SearchLimits
+tags: [struct]
 ```
 
 ```Go
@@ -2433,6 +2544,7 @@ SearchLimits description: Limits that search applies for number of repositories 
 
 ```
 searchKey: schema.SearchSavedQueries
+tags: [struct]
 ```
 
 ```Go
@@ -2456,6 +2568,7 @@ type SearchSavedQueries struct {
 
 ```
 searchKey: schema.SearchScope
+tags: [struct]
 ```
 
 ```Go
@@ -2471,6 +2584,7 @@ type SearchScope struct {
 
 ```
 searchKey: schema.Sentry
+tags: [struct]
 ```
 
 ```Go
@@ -2488,6 +2602,7 @@ Sentry description: Configuration for Sentry
 
 ```
 searchKey: schema.Settings
+tags: [struct]
 ```
 
 ```Go
@@ -2560,6 +2675,7 @@ Settings description: Configuration settings for users and organizations on Sour
 
 ```
 searchKey: schema.SettingsExperimentalFeatures
+tags: [struct]
 ```
 
 ```Go
@@ -2613,6 +2729,7 @@ SettingsExperimentalFeatures description: Experimental features to enable or dis
 
 ```
 searchKey: schema.SiteConfiguration
+tags: [struct]
 ```
 
 ```Go
@@ -2778,10 +2895,34 @@ type SiteConfiguration struct {
 
 SiteConfiguration description: Configuration for a Sourcegraph site. 
 
+### <a id="SourcegraphExtensionManifest" href="#SourcegraphExtensionManifest">type SourcegraphExtensionManifest struct</a>
+
+```
+searchKey: schema.SourcegraphExtensionManifest
+tags: [struct]
+```
+
+```Go
+type SourcegraphExtensionManifest struct {
+	ActivationEvents []string                `json:"activationEvents"`
+	Args             *map[string]interface{} `json:"args,omitempty"`
+	Contributes      *Contributions          `json:"contributes,omitempty"`
+	Description      string                  `json:"description,omitempty"`
+	Icon             string                  `json:"icon,omitempty"`
+	Readme           string                  `json:"readme,omitempty"`
+	Repository       *ExtensionRepository    `json:"repository,omitempty"`
+	Wip              bool                    `json:"wip,omitempty"`
+	Url              string                  `json:"url"`
+}
+```
+
+SourcegraphExtensionManifest description: The Sourcegraph extension manifest describes the extension and the features it provides. 
+
 ### <a id="Step" href="#Step">type Step struct</a>
 
 ```
 searchKey: schema.Step
+tags: [struct]
 ```
 
 ```Go
@@ -2807,6 +2948,7 @@ Step description: A command to run (as part of a sequence) in a repository branc
 
 ```
 searchKey: schema.TlsExternal
+tags: [struct]
 ```
 
 ```Go
@@ -2825,6 +2967,7 @@ TlsExternal description: Global TLS/SSL settings for Sourcegraph to use when com
 
 ```
 searchKey: schema.TransformChanges
+tags: [struct]
 ```
 
 ```Go
@@ -2840,6 +2983,7 @@ TransformChanges description: Optional transformations to apply to the changes p
 
 ```
 searchKey: schema.UpdateIntervalRule
+tags: [struct]
 ```
 
 ```Go
@@ -2855,6 +2999,7 @@ type UpdateIntervalRule struct {
 
 ```
 searchKey: schema.UsernameIdentity
+tags: [struct]
 ```
 
 ```Go
@@ -2867,6 +3012,7 @@ type UsernameIdentity struct {
 
 ```
 searchKey: schema.VersionContext
+tags: [struct]
 ```
 
 ```Go
@@ -2886,6 +3032,7 @@ VersionContext description: Configuration of the version context
 
 ```
 searchKey: schema.VersionContextRevision
+tags: [struct]
 ```
 
 ```Go
@@ -2903,6 +3050,7 @@ VersionContextRevision description: Description of the chosen repository and rev
 
 ```
 searchKey: schema.Webhooks
+tags: [struct]
 ```
 
 ```Go
@@ -2918,6 +3066,7 @@ Webhooks description: DEPRECATED: Switch to "plugin.webhooks"
 
 ```
 searchKey: schema.WorkspaceConfiguration
+tags: [struct]
 ```
 
 ```Go

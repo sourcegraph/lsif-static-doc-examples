@@ -7,107 +7,301 @@ By default, a Scanner skips white space and Go comments and recognizes all liter
 ## Index
 
 * [Constants](#const)
-    * [const ScanIdents](#ScanIdents)
-    * [const ScanInts](#ScanInts)
-    * [const ScanFloats](#ScanFloats)
-    * [const ScanChars](#ScanChars)
-    * [const ScanStrings](#ScanStrings)
-    * [const ScanRawStrings](#ScanRawStrings)
-    * [const ScanComments](#ScanComments)
-    * [const SkipComments](#SkipComments)
-    * [const GoTokens](#GoTokens)
+    * [const Char](#Char)
+    * [const Comment](#Comment)
     * [const EOF](#EOF)
+    * [const Float](#Float)
+    * [const GoTokens](#GoTokens)
+    * [const GoWhitespace](#GoWhitespace)
     * [const Ident](#Ident)
     * [const Int](#Int)
-    * [const Float](#Float)
-    * [const Char](#Char)
-    * [const String](#String)
     * [const RawString](#RawString)
-    * [const Comment](#Comment)
-    * [const skipComment](#skipComment)
-    * [const GoWhitespace](#GoWhitespace)
+    * [const ScanChars](#ScanChars)
+    * [const ScanComments](#ScanComments)
+    * [const ScanFloats](#ScanFloats)
+    * [const ScanIdents](#ScanIdents)
+    * [const ScanInts](#ScanInts)
+    * [const ScanRawStrings](#ScanRawStrings)
+    * [const ScanStrings](#ScanStrings)
+    * [const SkipComments](#SkipComments)
+    * [const String](#String)
     * [const bufLen](#bufLen)
+    * [const skipComment](#skipComment)
 * [Variables](#var)
-    * [var tokenString](#tokenString)
-    * [var segmentList](#segmentList)
     * [var f100](#f100)
+    * [var segmentList](#segmentList)
     * [var tokenList](#tokenList)
+    * [var tokenString](#tokenString)
 * [Types](#type)
     * [type Position struct](#Position)
         * [func (pos *Position) IsValid() bool](#Position.IsValid)
         * [func (pos Position) String() string](#Position.String)
     * [type Scanner struct](#Scanner)
         * [func (s *Scanner) Init(src io.Reader) *Scanner](#Scanner.Init)
-        * [func (s *Scanner) next() rune](#Scanner.next)
         * [func (s *Scanner) Next() rune](#Scanner.Next)
         * [func (s *Scanner) Peek() rune](#Scanner.Peek)
+        * [func (s *Scanner) Pos() (pos Position)](#Scanner.Pos)
+        * [func (s *Scanner) Scan() rune](#Scanner.Scan)
+        * [func (s *Scanner) TokenText() string](#Scanner.TokenText)
+        * [func (s *Scanner) digits(ch0 rune, base int, invalid *rune) (ch rune, digsep int)](#Scanner.digits)
         * [func (s *Scanner) error(msg string)](#Scanner.error)
         * [func (s *Scanner) errorf(format string, args ...interface{})](#Scanner.errorf)
         * [func (s *Scanner) isIdentRune(ch rune, i int) bool](#Scanner.isIdentRune)
-        * [func (s *Scanner) scanIdentifier() rune](#Scanner.scanIdentifier)
-        * [func (s *Scanner) digits(ch0 rune, base int, invalid *rune) (ch rune, digsep int)](#Scanner.digits)
-        * [func (s *Scanner) scanNumber(ch rune, seenDot bool) (rune, rune)](#Scanner.scanNumber)
-        * [func (s *Scanner) scanDigits(ch rune, base, n int) rune](#Scanner.scanDigits)
-        * [func (s *Scanner) scanEscape(quote rune) rune](#Scanner.scanEscape)
-        * [func (s *Scanner) scanString(quote rune) (n int)](#Scanner.scanString)
-        * [func (s *Scanner) scanRawString()](#Scanner.scanRawString)
+        * [func (s *Scanner) next() rune](#Scanner.next)
         * [func (s *Scanner) scanChar()](#Scanner.scanChar)
         * [func (s *Scanner) scanComment(ch rune) rune](#Scanner.scanComment)
-        * [func (s *Scanner) Scan() rune](#Scanner.Scan)
-        * [func (s *Scanner) Pos() (pos Position)](#Scanner.Pos)
-        * [func (s *Scanner) TokenText() string](#Scanner.TokenText)
+        * [func (s *Scanner) scanDigits(ch rune, base, n int) rune](#Scanner.scanDigits)
+        * [func (s *Scanner) scanEscape(quote rune) rune](#Scanner.scanEscape)
+        * [func (s *Scanner) scanIdentifier() rune](#Scanner.scanIdentifier)
+        * [func (s *Scanner) scanNumber(ch rune, seenDot bool) (rune, rune)](#Scanner.scanNumber)
+        * [func (s *Scanner) scanRawString()](#Scanner.scanRawString)
+        * [func (s *Scanner) scanString(quote rune) (n int)](#Scanner.scanString)
     * [type StringReader struct](#StringReader)
         * [func (r *StringReader) Read(p []byte) (n int, err error)](#StringReader.Read)
-    * [type token struct](#token)
-    * [type errReader struct{}](#errReader)
-        * [func (errReader) Read(b []byte) (int, error)](#errReader.Read)
     * [type countReader int](#countReader)
         * [func (r *countReader) Read([]byte) (int, error)](#countReader.Read)
+    * [type errReader struct{}](#errReader)
+        * [func (errReader) Read(b []byte) (int, error)](#errReader.Read)
+    * [type token struct](#token)
 * [Functions](#func)
-    * [func TokenString(tok rune) string](#TokenString)
-    * [func lower(ch rune) rune](#lower)
-    * [func isDecimal(ch rune) bool](#isDecimal)
-    * [func isHex(ch rune) bool](#isHex)
-    * [func litname(prefix rune) string](#litname)
-    * [func invalidSep(x string) int](#invalidSep)
-    * [func digitVal(ch rune) int](#digitVal)
-    * [func readRuneSegments(t *testing.T, segments []string)](#readRuneSegments)
+    * [func TestError(t *testing.T)](#TestError)
+    * [func TestIOError(t *testing.T)](#TestIOError)
+    * [func TestInvalidExponent(t *testing.T)](#TestInvalidExponent)
+    * [func TestIssue29723(t *testing.T)](#TestIssue29723)
+    * [func TestIssue30320(t *testing.T)](#TestIssue30320)
     * [func TestNext(t *testing.T)](#TestNext)
-    * [func makeSource(pattern string) *bytes.Buffer](#makeSource)
+    * [func TestNextEOFHandling(t *testing.T)](#TestNextEOFHandling)
+    * [func TestNumbers(t *testing.T)](#TestNumbers)
+    * [func TestPos(t *testing.T)](#TestPos)
+    * [func TestPosition(t *testing.T)](#TestPosition)
+    * [func TestScan(t *testing.T)](#TestScan)
+    * [func TestScanCustomIdent(t *testing.T)](#TestScanCustomIdent)
+    * [func TestScanEOFHandling(t *testing.T)](#TestScanEOFHandling)
+    * [func TestScanNext(t *testing.T)](#TestScanNext)
+    * [func TestScanSelectedMask(t *testing.T)](#TestScanSelectedMask)
+    * [func TestScanWhitespace(t *testing.T)](#TestScanWhitespace)
+    * [func TestScanZeroMode(t *testing.T)](#TestScanZeroMode)
+    * [func TokenString(tok rune) string](#TokenString)
+    * [func checkNextPos(t *testing.T, s *Scanner, offset, line, column int, char rune)](#checkNextPos)
+    * [func checkPos(t *testing.T, got, want Position)](#checkPos)
+    * [func checkScanPos(t *testing.T, s *Scanner, offset, line, column int, char rune)](#checkScanPos)
     * [func checkTok(t *testing.T, s *Scanner, line int, got, want rune, text string)](#checkTok)
     * [func checkTokErr(t *testing.T, s *Scanner, line int, want rune, text string)](#checkTokErr)
     * [func countNewlines(s string) int](#countNewlines)
-    * [func testScan(t *testing.T, mode uint)](#testScan)
-    * [func TestScan(t *testing.T)](#TestScan)
-    * [func TestInvalidExponent(t *testing.T)](#TestInvalidExponent)
-    * [func TestPosition(t *testing.T)](#TestPosition)
-    * [func TestScanZeroMode(t *testing.T)](#TestScanZeroMode)
-    * [func testScanSelectedMode(t *testing.T, mode uint, class rune)](#testScanSelectedMode)
-    * [func TestScanSelectedMask(t *testing.T)](#TestScanSelectedMask)
-    * [func TestScanCustomIdent(t *testing.T)](#TestScanCustomIdent)
-    * [func TestScanNext(t *testing.T)](#TestScanNext)
-    * [func TestScanWhitespace(t *testing.T)](#TestScanWhitespace)
-    * [func testError(t *testing.T, src, pos, msg string, tok rune)](#testError)
-    * [func TestError(t *testing.T)](#TestError)
-    * [func TestIOError(t *testing.T)](#TestIOError)
-    * [func checkPos(t *testing.T, got, want Position)](#checkPos)
-    * [func checkNextPos(t *testing.T, s *Scanner, offset, line, column int, char rune)](#checkNextPos)
-    * [func checkScanPos(t *testing.T, s *Scanner, offset, line, column int, char rune)](#checkScanPos)
-    * [func TestPos(t *testing.T)](#TestPos)
-    * [func TestNextEOFHandling(t *testing.T)](#TestNextEOFHandling)
-    * [func TestScanEOFHandling(t *testing.T)](#TestScanEOFHandling)
-    * [func TestIssue29723(t *testing.T)](#TestIssue29723)
-    * [func TestNumbers(t *testing.T)](#TestNumbers)
-    * [func TestIssue30320(t *testing.T)](#TestIssue30320)
+    * [func digitVal(ch rune) int](#digitVal)
     * [func extractInts(t string, mode uint) (res string)](#extractInts)
+    * [func invalidSep(x string) int](#invalidSep)
+    * [func isDecimal(ch rune) bool](#isDecimal)
+    * [func isHex(ch rune) bool](#isHex)
+    * [func litname(prefix rune) string](#litname)
+    * [func lower(ch rune) rune](#lower)
+    * [func makeSource(pattern string) *bytes.Buffer](#makeSource)
+    * [func readRuneSegments(t *testing.T, segments []string)](#readRuneSegments)
+    * [func testError(t *testing.T, src, pos, msg string, tok rune)](#testError)
+    * [func testScan(t *testing.T, mode uint)](#testScan)
+    * [func testScanSelectedMode(t *testing.T, mode uint, class rune)](#testScanSelectedMode)
 
 
 ## <a id="const" href="#const">Constants</a>
+
+```
+tags: [package]
+```
+
+### <a id="Char" href="#Char">const Char</a>
+
+```
+searchKey: scanner.Char
+tags: [constant number]
+```
+
+```Go
+const Char
+```
+
+The result of Scan is one of these tokens or a Unicode character. 
+
+### <a id="Comment" href="#Comment">const Comment</a>
+
+```
+searchKey: scanner.Comment
+tags: [constant number]
+```
+
+```Go
+const Comment
+```
+
+The result of Scan is one of these tokens or a Unicode character. 
+
+### <a id="EOF" href="#EOF">const EOF</a>
+
+```
+searchKey: scanner.EOF
+tags: [constant number]
+```
+
+```Go
+const EOF = -(iota + 1)
+```
+
+The result of Scan is one of these tokens or a Unicode character. 
+
+### <a id="Float" href="#Float">const Float</a>
+
+```
+searchKey: scanner.Float
+tags: [constant number]
+```
+
+```Go
+const Float
+```
+
+The result of Scan is one of these tokens or a Unicode character. 
+
+### <a id="GoTokens" href="#GoTokens">const GoTokens</a>
+
+```
+searchKey: scanner.GoTokens
+tags: [constant number]
+```
+
+```Go
+const GoTokens = ...
+```
+
+Predefined mode bits to control recognition of tokens. For instance, to configure a Scanner such that it only recognizes (Go) identifiers, integers, and skips comments, set the Scanner's Mode field to: 
+
+```
+ScanIdents | ScanInts | SkipComments
+
+```
+With the exceptions of comments, which are skipped if SkipComments is set, unrecognized tokens are not ignored. Instead, the scanner simply returns the respective individual characters (or possibly sub-tokens). For instance, if the mode is ScanIdents (not ScanStrings), the string "foo" is scanned as the token sequence '"' Ident '"'. 
+
+Use GoTokens to configure the Scanner such that it accepts all Go literal tokens including Go identifiers. Comments will be skipped. 
+
+### <a id="GoWhitespace" href="#GoWhitespace">const GoWhitespace</a>
+
+```
+searchKey: scanner.GoWhitespace
+tags: [constant number]
+```
+
+```Go
+const GoWhitespace = 1<<'\t' | 1<<'\n' | 1<<'\r' | 1<<' '
+```
+
+GoWhitespace is the default value for the Scanner's Whitespace field. Its value selects Go's white space characters. 
+
+### <a id="Ident" href="#Ident">const Ident</a>
+
+```
+searchKey: scanner.Ident
+tags: [constant number]
+```
+
+```Go
+const Ident
+```
+
+The result of Scan is one of these tokens or a Unicode character. 
+
+### <a id="Int" href="#Int">const Int</a>
+
+```
+searchKey: scanner.Int
+tags: [constant number]
+```
+
+```Go
+const Int
+```
+
+The result of Scan is one of these tokens or a Unicode character. 
+
+### <a id="RawString" href="#RawString">const RawString</a>
+
+```
+searchKey: scanner.RawString
+tags: [constant number]
+```
+
+```Go
+const RawString
+```
+
+The result of Scan is one of these tokens or a Unicode character. 
+
+### <a id="ScanChars" href="#ScanChars">const ScanChars</a>
+
+```
+searchKey: scanner.ScanChars
+tags: [constant number]
+```
+
+```Go
+const ScanChars = 1 << -Char
+```
+
+Predefined mode bits to control recognition of tokens. For instance, to configure a Scanner such that it only recognizes (Go) identifiers, integers, and skips comments, set the Scanner's Mode field to: 
+
+```
+ScanIdents | ScanInts | SkipComments
+
+```
+With the exceptions of comments, which are skipped if SkipComments is set, unrecognized tokens are not ignored. Instead, the scanner simply returns the respective individual characters (or possibly sub-tokens). For instance, if the mode is ScanIdents (not ScanStrings), the string "foo" is scanned as the token sequence '"' Ident '"'. 
+
+Use GoTokens to configure the Scanner such that it accepts all Go literal tokens including Go identifiers. Comments will be skipped. 
+
+### <a id="ScanComments" href="#ScanComments">const ScanComments</a>
+
+```
+searchKey: scanner.ScanComments
+tags: [constant number]
+```
+
+```Go
+const ScanComments = 1 << -Comment
+```
+
+Predefined mode bits to control recognition of tokens. For instance, to configure a Scanner such that it only recognizes (Go) identifiers, integers, and skips comments, set the Scanner's Mode field to: 
+
+```
+ScanIdents | ScanInts | SkipComments
+
+```
+With the exceptions of comments, which are skipped if SkipComments is set, unrecognized tokens are not ignored. Instead, the scanner simply returns the respective individual characters (or possibly sub-tokens). For instance, if the mode is ScanIdents (not ScanStrings), the string "foo" is scanned as the token sequence '"' Ident '"'. 
+
+Use GoTokens to configure the Scanner such that it accepts all Go literal tokens including Go identifiers. Comments will be skipped. 
+
+### <a id="ScanFloats" href="#ScanFloats">const ScanFloats</a>
+
+```
+searchKey: scanner.ScanFloats
+tags: [constant number]
+```
+
+```Go
+const ScanFloats = 1 << -Float // includes Ints and hexadecimal floats
+
+```
+
+Predefined mode bits to control recognition of tokens. For instance, to configure a Scanner such that it only recognizes (Go) identifiers, integers, and skips comments, set the Scanner's Mode field to: 
+
+```
+ScanIdents | ScanInts | SkipComments
+
+```
+With the exceptions of comments, which are skipped if SkipComments is set, unrecognized tokens are not ignored. Instead, the scanner simply returns the respective individual characters (or possibly sub-tokens). For instance, if the mode is ScanIdents (not ScanStrings), the string "foo" is scanned as the token sequence '"' Ident '"'. 
+
+Use GoTokens to configure the Scanner such that it accepts all Go literal tokens including Go identifiers. Comments will be skipped. 
 
 ### <a id="ScanIdents" href="#ScanIdents">const ScanIdents</a>
 
 ```
 searchKey: scanner.ScanIdents
+tags: [constant number]
 ```
 
 ```Go
@@ -128,6 +322,7 @@ Use GoTokens to configure the Scanner such that it accepts all Go literal tokens
 
 ```
 searchKey: scanner.ScanInts
+tags: [constant number]
 ```
 
 ```Go
@@ -144,71 +339,11 @@ With the exceptions of comments, which are skipped if SkipComments is set, unrec
 
 Use GoTokens to configure the Scanner such that it accepts all Go literal tokens including Go identifiers. Comments will be skipped. 
 
-### <a id="ScanFloats" href="#ScanFloats">const ScanFloats</a>
-
-```
-searchKey: scanner.ScanFloats
-```
-
-```Go
-const ScanFloats = 1 << -Float // includes Ints and hexadecimal floats
-
-```
-
-Predefined mode bits to control recognition of tokens. For instance, to configure a Scanner such that it only recognizes (Go) identifiers, integers, and skips comments, set the Scanner's Mode field to: 
-
-```
-ScanIdents | ScanInts | SkipComments
-
-```
-With the exceptions of comments, which are skipped if SkipComments is set, unrecognized tokens are not ignored. Instead, the scanner simply returns the respective individual characters (or possibly sub-tokens). For instance, if the mode is ScanIdents (not ScanStrings), the string "foo" is scanned as the token sequence '"' Ident '"'. 
-
-Use GoTokens to configure the Scanner such that it accepts all Go literal tokens including Go identifiers. Comments will be skipped. 
-
-### <a id="ScanChars" href="#ScanChars">const ScanChars</a>
-
-```
-searchKey: scanner.ScanChars
-```
-
-```Go
-const ScanChars = 1 << -Char
-```
-
-Predefined mode bits to control recognition of tokens. For instance, to configure a Scanner such that it only recognizes (Go) identifiers, integers, and skips comments, set the Scanner's Mode field to: 
-
-```
-ScanIdents | ScanInts | SkipComments
-
-```
-With the exceptions of comments, which are skipped if SkipComments is set, unrecognized tokens are not ignored. Instead, the scanner simply returns the respective individual characters (or possibly sub-tokens). For instance, if the mode is ScanIdents (not ScanStrings), the string "foo" is scanned as the token sequence '"' Ident '"'. 
-
-Use GoTokens to configure the Scanner such that it accepts all Go literal tokens including Go identifiers. Comments will be skipped. 
-
-### <a id="ScanStrings" href="#ScanStrings">const ScanStrings</a>
-
-```
-searchKey: scanner.ScanStrings
-```
-
-```Go
-const ScanStrings = 1 << -String
-```
-
-Predefined mode bits to control recognition of tokens. For instance, to configure a Scanner such that it only recognizes (Go) identifiers, integers, and skips comments, set the Scanner's Mode field to: 
-
-```
-ScanIdents | ScanInts | SkipComments
-
-```
-With the exceptions of comments, which are skipped if SkipComments is set, unrecognized tokens are not ignored. Instead, the scanner simply returns the respective individual characters (or possibly sub-tokens). For instance, if the mode is ScanIdents (not ScanStrings), the string "foo" is scanned as the token sequence '"' Ident '"'. 
-
-Use GoTokens to configure the Scanner such that it accepts all Go literal tokens including Go identifiers. Comments will be skipped. 
-
 ### <a id="ScanRawStrings" href="#ScanRawStrings">const ScanRawStrings</a>
 
 ```
 searchKey: scanner.ScanRawStrings
+tags: [constant number]
 ```
 
 ```Go
@@ -225,14 +360,15 @@ With the exceptions of comments, which are skipped if SkipComments is set, unrec
 
 Use GoTokens to configure the Scanner such that it accepts all Go literal tokens including Go identifiers. Comments will be skipped. 
 
-### <a id="ScanComments" href="#ScanComments">const ScanComments</a>
+### <a id="ScanStrings" href="#ScanStrings">const ScanStrings</a>
 
 ```
-searchKey: scanner.ScanComments
+searchKey: scanner.ScanStrings
+tags: [constant number]
 ```
 
 ```Go
-const ScanComments = 1 << -Comment
+const ScanStrings = 1 << -String
 ```
 
 Predefined mode bits to control recognition of tokens. For instance, to configure a Scanner such that it only recognizes (Go) identifiers, integers, and skips comments, set the Scanner's Mode field to: 
@@ -249,6 +385,7 @@ Use GoTokens to configure the Scanner such that it accepts all Go literal tokens
 
 ```
 searchKey: scanner.SkipComments
+tags: [constant number]
 ```
 
 ```Go
@@ -266,90 +403,11 @@ With the exceptions of comments, which are skipped if SkipComments is set, unrec
 
 Use GoTokens to configure the Scanner such that it accepts all Go literal tokens including Go identifiers. Comments will be skipped. 
 
-### <a id="GoTokens" href="#GoTokens">const GoTokens</a>
-
-```
-searchKey: scanner.GoTokens
-```
-
-```Go
-const GoTokens = ...
-```
-
-Predefined mode bits to control recognition of tokens. For instance, to configure a Scanner such that it only recognizes (Go) identifiers, integers, and skips comments, set the Scanner's Mode field to: 
-
-```
-ScanIdents | ScanInts | SkipComments
-
-```
-With the exceptions of comments, which are skipped if SkipComments is set, unrecognized tokens are not ignored. Instead, the scanner simply returns the respective individual characters (or possibly sub-tokens). For instance, if the mode is ScanIdents (not ScanStrings), the string "foo" is scanned as the token sequence '"' Ident '"'. 
-
-Use GoTokens to configure the Scanner such that it accepts all Go literal tokens including Go identifiers. Comments will be skipped. 
-
-### <a id="EOF" href="#EOF">const EOF</a>
-
-```
-searchKey: scanner.EOF
-```
-
-```Go
-const EOF = -(iota + 1)
-```
-
-The result of Scan is one of these tokens or a Unicode character. 
-
-### <a id="Ident" href="#Ident">const Ident</a>
-
-```
-searchKey: scanner.Ident
-```
-
-```Go
-const Ident
-```
-
-The result of Scan is one of these tokens or a Unicode character. 
-
-### <a id="Int" href="#Int">const Int</a>
-
-```
-searchKey: scanner.Int
-```
-
-```Go
-const Int
-```
-
-The result of Scan is one of these tokens or a Unicode character. 
-
-### <a id="Float" href="#Float">const Float</a>
-
-```
-searchKey: scanner.Float
-```
-
-```Go
-const Float
-```
-
-The result of Scan is one of these tokens or a Unicode character. 
-
-### <a id="Char" href="#Char">const Char</a>
-
-```
-searchKey: scanner.Char
-```
-
-```Go
-const Char
-```
-
-The result of Scan is one of these tokens or a Unicode character. 
-
 ### <a id="String" href="#String">const String</a>
 
 ```
 searchKey: scanner.String
+tags: [constant number]
 ```
 
 ```Go
@@ -358,35 +416,23 @@ const String
 
 The result of Scan is one of these tokens or a Unicode character. 
 
-### <a id="RawString" href="#RawString">const RawString</a>
+### <a id="bufLen" href="#bufLen">const bufLen</a>
 
 ```
-searchKey: scanner.RawString
-```
-
-```Go
-const RawString
-```
-
-The result of Scan is one of these tokens or a Unicode character. 
-
-### <a id="Comment" href="#Comment">const Comment</a>
-
-```
-searchKey: scanner.Comment
+searchKey: scanner.bufLen
+tags: [constant number private]
 ```
 
 ```Go
-const Comment
-```
+const bufLen = 1024 // at least utf8.UTFMax
 
-The result of Scan is one of these tokens or a Unicode character. 
+```
 
 ### <a id="skipComment" href="#skipComment">const skipComment</a>
 
 ```
 searchKey: scanner.skipComment
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -397,82 +443,67 @@ The result of Scan is one of these tokens or a Unicode character.
 
 internal use only 
 
-### <a id="GoWhitespace" href="#GoWhitespace">const GoWhitespace</a>
-
-```
-searchKey: scanner.GoWhitespace
-```
-
-```Go
-const GoWhitespace = 1<<'\t' | 1<<'\n' | 1<<'\r' | 1<<' '
-```
-
-GoWhitespace is the default value for the Scanner's Whitespace field. Its value selects Go's white space characters. 
-
-### <a id="bufLen" href="#bufLen">const bufLen</a>
-
-```
-searchKey: scanner.bufLen
-tags: [private]
-```
-
-```Go
-const bufLen = 1024 // at least utf8.UTFMax
-
-```
-
 ## <a id="var" href="#var">Variables</a>
 
-### <a id="tokenString" href="#tokenString">var tokenString</a>
-
 ```
-searchKey: scanner.tokenString
-tags: [private]
-```
-
-```Go
-var tokenString = ...
-```
-
-### <a id="segmentList" href="#segmentList">var segmentList</a>
-
-```
-searchKey: scanner.segmentList
-tags: [private]
-```
-
-```Go
-var segmentList = ...
+tags: [package]
 ```
 
 ### <a id="f100" href="#f100">var f100</a>
 
 ```
 searchKey: scanner.f100
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
 var f100 = ...
 ```
 
+### <a id="segmentList" href="#segmentList">var segmentList</a>
+
+```
+searchKey: scanner.segmentList
+tags: [variable array array string private]
+```
+
+```Go
+var segmentList = ...
+```
+
 ### <a id="tokenList" href="#tokenList">var tokenList</a>
 
 ```
 searchKey: scanner.tokenList
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
 var tokenList = ...
 ```
 
+### <a id="tokenString" href="#tokenString">var tokenString</a>
+
+```
+searchKey: scanner.tokenString
+tags: [variable object private]
+```
+
+```Go
+var tokenString = ...
+```
+
 ## <a id="type" href="#type">Types</a>
+
+```
+tags: [package]
+```
 
 ### <a id="Position" href="#Position">type Position struct</a>
 
 ```
 searchKey: scanner.Position
+tags: [struct]
 ```
 
 ```Go
@@ -490,6 +521,7 @@ A source position is represented by a Position value. A position is valid if Lin
 
 ```
 searchKey: scanner.Position.IsValid
+tags: [function]
 ```
 
 ```Go
@@ -502,6 +534,7 @@ IsValid reports whether the position is valid.
 
 ```
 searchKey: scanner.Position.String
+tags: [function]
 ```
 
 ```Go
@@ -512,6 +545,7 @@ func (pos Position) String() string
 
 ```
 searchKey: scanner.Scanner
+tags: [struct]
 ```
 
 ```Go
@@ -584,6 +618,7 @@ A Scanner implements reading of Unicode characters and tokens from an io.Reader.
 
 ```
 searchKey: scanner.Scanner.Init
+tags: [method]
 ```
 
 ```Go
@@ -592,23 +627,11 @@ func (s *Scanner) Init(src io.Reader) *Scanner
 
 Init initializes a Scanner with a new source and returns s. Error is set to nil, ErrorCount is set to 0, Mode is set to GoTokens, and Whitespace is set to GoWhitespace. 
 
-#### <a id="Scanner.next" href="#Scanner.next">func (s *Scanner) next() rune</a>
-
-```
-searchKey: scanner.Scanner.next
-tags: [private]
-```
-
-```Go
-func (s *Scanner) next() rune
-```
-
-next reads and returns the next Unicode character. It is designed such that only a minimal amount of work needs to be done in the common ASCII case (one test to check for both ASCII and end-of-buffer, and one test to check for newlines). 
-
 #### <a id="Scanner.Next" href="#Scanner.Next">func (s *Scanner) Next() rune</a>
 
 ```
 searchKey: scanner.Scanner.Next
+tags: [function]
 ```
 
 ```Go
@@ -621,6 +644,7 @@ Next reads and returns the next Unicode character. It returns EOF at the end of 
 
 ```
 searchKey: scanner.Scanner.Peek
+tags: [function]
 ```
 
 ```Go
@@ -629,11 +653,63 @@ func (s *Scanner) Peek() rune
 
 Peek returns the next Unicode character in the source without advancing the scanner. It returns EOF if the scanner's position is at the last character of the source. 
 
+#### <a id="Scanner.Pos" href="#Scanner.Pos">func (s *Scanner) Pos() (pos Position)</a>
+
+```
+searchKey: scanner.Scanner.Pos
+tags: [function]
+```
+
+```Go
+func (s *Scanner) Pos() (pos Position)
+```
+
+Pos returns the position of the character immediately after the character or token returned by the last call to Next or Scan. Use the Scanner's Position field for the start position of the most recently scanned token. 
+
+#### <a id="Scanner.Scan" href="#Scanner.Scan">func (s *Scanner) Scan() rune</a>
+
+```
+searchKey: scanner.Scanner.Scan
+tags: [function]
+```
+
+```Go
+func (s *Scanner) Scan() rune
+```
+
+Scan reads the next token or Unicode character from source and returns it. It only recognizes tokens t for which the respective Mode bit (1<<-t) is set. It returns EOF at the end of the source. It reports scanner errors (read and token errors) by calling s.Error, if not nil; otherwise it prints an error message to os.Stderr. 
+
+#### <a id="Scanner.TokenText" href="#Scanner.TokenText">func (s *Scanner) TokenText() string</a>
+
+```
+searchKey: scanner.Scanner.TokenText
+tags: [function]
+```
+
+```Go
+func (s *Scanner) TokenText() string
+```
+
+TokenText returns the string corresponding to the most recently scanned token. Valid after calling Scan and in calls of Scanner.Error. 
+
+#### <a id="Scanner.digits" href="#Scanner.digits">func (s *Scanner) digits(ch0 rune, base int, invalid *rune) (ch rune, digsep int)</a>
+
+```
+searchKey: scanner.Scanner.digits
+tags: [method private]
+```
+
+```Go
+func (s *Scanner) digits(ch0 rune, base int, invalid *rune) (ch rune, digsep int)
+```
+
+digits accepts the sequence { digit | '_' } starting with ch0. If base <= 10, digits accepts any decimal digit but records the first invalid digit >= base in *invalid if *invalid == 0. digits returns the first rune that is not part of the sequence anymore, and a bitset describing whether the sequence contained digits (bit 0 is set), or separators '_' (bit 1 is set). 
+
 #### <a id="Scanner.error" href="#Scanner.error">func (s *Scanner) error(msg string)</a>
 
 ```
 searchKey: scanner.Scanner.error
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -644,7 +720,7 @@ func (s *Scanner) error(msg string)
 
 ```
 searchKey: scanner.Scanner.errorf
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -655,97 +731,31 @@ func (s *Scanner) errorf(format string, args ...interface{})
 
 ```
 searchKey: scanner.Scanner.isIdentRune
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (s *Scanner) isIdentRune(ch rune, i int) bool
 ```
 
-#### <a id="Scanner.scanIdentifier" href="#Scanner.scanIdentifier">func (s *Scanner) scanIdentifier() rune</a>
+#### <a id="Scanner.next" href="#Scanner.next">func (s *Scanner) next() rune</a>
 
 ```
-searchKey: scanner.Scanner.scanIdentifier
-tags: [private]
-```
-
-```Go
-func (s *Scanner) scanIdentifier() rune
-```
-
-#### <a id="Scanner.digits" href="#Scanner.digits">func (s *Scanner) digits(ch0 rune, base int, invalid *rune) (ch rune, digsep int)</a>
-
-```
-searchKey: scanner.Scanner.digits
-tags: [private]
+searchKey: scanner.Scanner.next
+tags: [function private]
 ```
 
 ```Go
-func (s *Scanner) digits(ch0 rune, base int, invalid *rune) (ch rune, digsep int)
+func (s *Scanner) next() rune
 ```
 
-digits accepts the sequence { digit | '_' } starting with ch0. If base <= 10, digits accepts any decimal digit but records the first invalid digit >= base in *invalid if *invalid == 0. digits returns the first rune that is not part of the sequence anymore, and a bitset describing whether the sequence contained digits (bit 0 is set), or separators '_' (bit 1 is set). 
-
-#### <a id="Scanner.scanNumber" href="#Scanner.scanNumber">func (s *Scanner) scanNumber(ch rune, seenDot bool) (rune, rune)</a>
-
-```
-searchKey: scanner.Scanner.scanNumber
-tags: [private]
-```
-
-```Go
-func (s *Scanner) scanNumber(ch rune, seenDot bool) (rune, rune)
-```
-
-#### <a id="Scanner.scanDigits" href="#Scanner.scanDigits">func (s *Scanner) scanDigits(ch rune, base, n int) rune</a>
-
-```
-searchKey: scanner.Scanner.scanDigits
-tags: [private]
-```
-
-```Go
-func (s *Scanner) scanDigits(ch rune, base, n int) rune
-```
-
-#### <a id="Scanner.scanEscape" href="#Scanner.scanEscape">func (s *Scanner) scanEscape(quote rune) rune</a>
-
-```
-searchKey: scanner.Scanner.scanEscape
-tags: [private]
-```
-
-```Go
-func (s *Scanner) scanEscape(quote rune) rune
-```
-
-#### <a id="Scanner.scanString" href="#Scanner.scanString">func (s *Scanner) scanString(quote rune) (n int)</a>
-
-```
-searchKey: scanner.Scanner.scanString
-tags: [private]
-```
-
-```Go
-func (s *Scanner) scanString(quote rune) (n int)
-```
-
-#### <a id="Scanner.scanRawString" href="#Scanner.scanRawString">func (s *Scanner) scanRawString()</a>
-
-```
-searchKey: scanner.Scanner.scanRawString
-tags: [private]
-```
-
-```Go
-func (s *Scanner) scanRawString()
-```
+next reads and returns the next Unicode character. It is designed such that only a minimal amount of work needs to be done in the common ASCII case (one test to check for both ASCII and end-of-buffer, and one test to check for newlines). 
 
 #### <a id="Scanner.scanChar" href="#Scanner.scanChar">func (s *Scanner) scanChar()</a>
 
 ```
 searchKey: scanner.Scanner.scanChar
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -756,54 +766,84 @@ func (s *Scanner) scanChar()
 
 ```
 searchKey: scanner.Scanner.scanComment
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (s *Scanner) scanComment(ch rune) rune
 ```
 
-#### <a id="Scanner.Scan" href="#Scanner.Scan">func (s *Scanner) Scan() rune</a>
+#### <a id="Scanner.scanDigits" href="#Scanner.scanDigits">func (s *Scanner) scanDigits(ch rune, base, n int) rune</a>
 
 ```
-searchKey: scanner.Scanner.Scan
-```
-
-```Go
-func (s *Scanner) Scan() rune
-```
-
-Scan reads the next token or Unicode character from source and returns it. It only recognizes tokens t for which the respective Mode bit (1<<-t) is set. It returns EOF at the end of the source. It reports scanner errors (read and token errors) by calling s.Error, if not nil; otherwise it prints an error message to os.Stderr. 
-
-#### <a id="Scanner.Pos" href="#Scanner.Pos">func (s *Scanner) Pos() (pos Position)</a>
-
-```
-searchKey: scanner.Scanner.Pos
+searchKey: scanner.Scanner.scanDigits
+tags: [method private]
 ```
 
 ```Go
-func (s *Scanner) Pos() (pos Position)
+func (s *Scanner) scanDigits(ch rune, base, n int) rune
 ```
 
-Pos returns the position of the character immediately after the character or token returned by the last call to Next or Scan. Use the Scanner's Position field for the start position of the most recently scanned token. 
-
-#### <a id="Scanner.TokenText" href="#Scanner.TokenText">func (s *Scanner) TokenText() string</a>
+#### <a id="Scanner.scanEscape" href="#Scanner.scanEscape">func (s *Scanner) scanEscape(quote rune) rune</a>
 
 ```
-searchKey: scanner.Scanner.TokenText
+searchKey: scanner.Scanner.scanEscape
+tags: [method private]
 ```
 
 ```Go
-func (s *Scanner) TokenText() string
+func (s *Scanner) scanEscape(quote rune) rune
 ```
 
-TokenText returns the string corresponding to the most recently scanned token. Valid after calling Scan and in calls of Scanner.Error. 
+#### <a id="Scanner.scanIdentifier" href="#Scanner.scanIdentifier">func (s *Scanner) scanIdentifier() rune</a>
+
+```
+searchKey: scanner.Scanner.scanIdentifier
+tags: [function private]
+```
+
+```Go
+func (s *Scanner) scanIdentifier() rune
+```
+
+#### <a id="Scanner.scanNumber" href="#Scanner.scanNumber">func (s *Scanner) scanNumber(ch rune, seenDot bool) (rune, rune)</a>
+
+```
+searchKey: scanner.Scanner.scanNumber
+tags: [method private]
+```
+
+```Go
+func (s *Scanner) scanNumber(ch rune, seenDot bool) (rune, rune)
+```
+
+#### <a id="Scanner.scanRawString" href="#Scanner.scanRawString">func (s *Scanner) scanRawString()</a>
+
+```
+searchKey: scanner.Scanner.scanRawString
+tags: [function private]
+```
+
+```Go
+func (s *Scanner) scanRawString()
+```
+
+#### <a id="Scanner.scanString" href="#Scanner.scanString">func (s *Scanner) scanString(quote rune) (n int)</a>
+
+```
+searchKey: scanner.Scanner.scanString
+tags: [method private]
+```
+
+```Go
+func (s *Scanner) scanString(quote rune) (n int)
+```
 
 ### <a id="StringReader" href="#StringReader">type StringReader struct</a>
 
 ```
 searchKey: scanner.StringReader
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -819,32 +859,40 @@ A StringReader delivers its data one string segment at a time via Read.
 
 ```
 searchKey: scanner.StringReader.Read
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (r *StringReader) Read(p []byte) (n int, err error)
 ```
 
-### <a id="token" href="#token">type token struct</a>
+### <a id="countReader" href="#countReader">type countReader int</a>
 
 ```
-searchKey: scanner.token
-tags: [private]
+searchKey: scanner.countReader
+tags: [number private]
 ```
 
 ```Go
-type token struct {
-	tok  rune
-	text string
-}
+type countReader int
+```
+
+#### <a id="countReader.Read" href="#countReader.Read">func (r *countReader) Read([]byte) (int, error)</a>
+
+```
+searchKey: scanner.countReader.Read
+tags: [method private]
+```
+
+```Go
+func (r *countReader) Read([]byte) (int, error)
 ```
 
 ### <a id="errReader" href="#errReader">type errReader struct{}</a>
 
 ```
 searchKey: scanner.errReader
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -857,309 +905,38 @@ An errReader returns (0, err) where err is not io.EOF.
 
 ```
 searchKey: scanner.errReader.Read
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (errReader) Read(b []byte) (int, error)
 ```
 
-### <a id="countReader" href="#countReader">type countReader int</a>
+### <a id="token" href="#token">type token struct</a>
 
 ```
-searchKey: scanner.countReader
-tags: [private]
-```
-
-```Go
-type countReader int
-```
-
-#### <a id="countReader.Read" href="#countReader.Read">func (r *countReader) Read([]byte) (int, error)</a>
-
-```
-searchKey: scanner.countReader.Read
-tags: [private]
+searchKey: scanner.token
+tags: [struct private]
 ```
 
 ```Go
-func (r *countReader) Read([]byte) (int, error)
+type token struct {
+	tok  rune
+	text string
+}
 ```
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="TokenString" href="#TokenString">func TokenString(tok rune) string</a>
-
 ```
-searchKey: scanner.TokenString
-```
-
-```Go
-func TokenString(tok rune) string
-```
-
-TokenString returns a printable string for a token or Unicode character. 
-
-### <a id="lower" href="#lower">func lower(ch rune) rune</a>
-
-```
-searchKey: scanner.lower
-tags: [private]
-```
-
-```Go
-func lower(ch rune) rune
-```
-
-### <a id="isDecimal" href="#isDecimal">func isDecimal(ch rune) bool</a>
-
-```
-searchKey: scanner.isDecimal
-tags: [private]
-```
-
-```Go
-func isDecimal(ch rune) bool
-```
-
-### <a id="isHex" href="#isHex">func isHex(ch rune) bool</a>
-
-```
-searchKey: scanner.isHex
-tags: [private]
-```
-
-```Go
-func isHex(ch rune) bool
-```
-
-### <a id="litname" href="#litname">func litname(prefix rune) string</a>
-
-```
-searchKey: scanner.litname
-tags: [private]
-```
-
-```Go
-func litname(prefix rune) string
-```
-
-### <a id="invalidSep" href="#invalidSep">func invalidSep(x string) int</a>
-
-```
-searchKey: scanner.invalidSep
-tags: [private]
-```
-
-```Go
-func invalidSep(x string) int
-```
-
-invalidSep returns the index of the first invalid separator in x, or -1. 
-
-### <a id="digitVal" href="#digitVal">func digitVal(ch rune) int</a>
-
-```
-searchKey: scanner.digitVal
-tags: [private]
-```
-
-```Go
-func digitVal(ch rune) int
-```
-
-### <a id="readRuneSegments" href="#readRuneSegments">func readRuneSegments(t *testing.T, segments []string)</a>
-
-```
-searchKey: scanner.readRuneSegments
-tags: [private]
-```
-
-```Go
-func readRuneSegments(t *testing.T, segments []string)
-```
-
-### <a id="TestNext" href="#TestNext">func TestNext(t *testing.T)</a>
-
-```
-searchKey: scanner.TestNext
-tags: [private]
-```
-
-```Go
-func TestNext(t *testing.T)
-```
-
-### <a id="makeSource" href="#makeSource">func makeSource(pattern string) *bytes.Buffer</a>
-
-```
-searchKey: scanner.makeSource
-tags: [private]
-```
-
-```Go
-func makeSource(pattern string) *bytes.Buffer
-```
-
-### <a id="checkTok" href="#checkTok">func checkTok(t *testing.T, s *Scanner, line int, got, want rune, text string)</a>
-
-```
-searchKey: scanner.checkTok
-tags: [private]
-```
-
-```Go
-func checkTok(t *testing.T, s *Scanner, line int, got, want rune, text string)
-```
-
-### <a id="checkTokErr" href="#checkTokErr">func checkTokErr(t *testing.T, s *Scanner, line int, want rune, text string)</a>
-
-```
-searchKey: scanner.checkTokErr
-tags: [private]
-```
-
-```Go
-func checkTokErr(t *testing.T, s *Scanner, line int, want rune, text string)
-```
-
-### <a id="countNewlines" href="#countNewlines">func countNewlines(s string) int</a>
-
-```
-searchKey: scanner.countNewlines
-tags: [private]
-```
-
-```Go
-func countNewlines(s string) int
-```
-
-### <a id="testScan" href="#testScan">func testScan(t *testing.T, mode uint)</a>
-
-```
-searchKey: scanner.testScan
-tags: [private]
-```
-
-```Go
-func testScan(t *testing.T, mode uint)
-```
-
-### <a id="TestScan" href="#TestScan">func TestScan(t *testing.T)</a>
-
-```
-searchKey: scanner.TestScan
-tags: [private]
-```
-
-```Go
-func TestScan(t *testing.T)
-```
-
-### <a id="TestInvalidExponent" href="#TestInvalidExponent">func TestInvalidExponent(t *testing.T)</a>
-
-```
-searchKey: scanner.TestInvalidExponent
-tags: [private]
-```
-
-```Go
-func TestInvalidExponent(t *testing.T)
-```
-
-### <a id="TestPosition" href="#TestPosition">func TestPosition(t *testing.T)</a>
-
-```
-searchKey: scanner.TestPosition
-tags: [private]
-```
-
-```Go
-func TestPosition(t *testing.T)
-```
-
-### <a id="TestScanZeroMode" href="#TestScanZeroMode">func TestScanZeroMode(t *testing.T)</a>
-
-```
-searchKey: scanner.TestScanZeroMode
-tags: [private]
-```
-
-```Go
-func TestScanZeroMode(t *testing.T)
-```
-
-### <a id="testScanSelectedMode" href="#testScanSelectedMode">func testScanSelectedMode(t *testing.T, mode uint, class rune)</a>
-
-```
-searchKey: scanner.testScanSelectedMode
-tags: [private]
-```
-
-```Go
-func testScanSelectedMode(t *testing.T, mode uint, class rune)
-```
-
-### <a id="TestScanSelectedMask" href="#TestScanSelectedMask">func TestScanSelectedMask(t *testing.T)</a>
-
-```
-searchKey: scanner.TestScanSelectedMask
-tags: [private]
-```
-
-```Go
-func TestScanSelectedMask(t *testing.T)
-```
-
-### <a id="TestScanCustomIdent" href="#TestScanCustomIdent">func TestScanCustomIdent(t *testing.T)</a>
-
-```
-searchKey: scanner.TestScanCustomIdent
-tags: [private]
-```
-
-```Go
-func TestScanCustomIdent(t *testing.T)
-```
-
-### <a id="TestScanNext" href="#TestScanNext">func TestScanNext(t *testing.T)</a>
-
-```
-searchKey: scanner.TestScanNext
-tags: [private]
-```
-
-```Go
-func TestScanNext(t *testing.T)
-```
-
-### <a id="TestScanWhitespace" href="#TestScanWhitespace">func TestScanWhitespace(t *testing.T)</a>
-
-```
-searchKey: scanner.TestScanWhitespace
-tags: [private]
-```
-
-```Go
-func TestScanWhitespace(t *testing.T)
-```
-
-### <a id="testError" href="#testError">func testError(t *testing.T, src, pos, msg string, tok rune)</a>
-
-```
-searchKey: scanner.testError
-tags: [private]
-```
-
-```Go
-func testError(t *testing.T, src, pos, msg string, tok rune)
+tags: [package]
 ```
 
 ### <a id="TestError" href="#TestError">func TestError(t *testing.T)</a>
 
 ```
 searchKey: scanner.TestError
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -1170,120 +947,388 @@ func TestError(t *testing.T)
 
 ```
 searchKey: scanner.TestIOError
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestIOError(t *testing.T)
 ```
 
-### <a id="checkPos" href="#checkPos">func checkPos(t *testing.T, got, want Position)</a>
+### <a id="TestInvalidExponent" href="#TestInvalidExponent">func TestInvalidExponent(t *testing.T)</a>
 
 ```
-searchKey: scanner.checkPos
-tags: [private]
-```
-
-```Go
-func checkPos(t *testing.T, got, want Position)
-```
-
-### <a id="checkNextPos" href="#checkNextPos">func checkNextPos(t *testing.T, s *Scanner, offset, line, column int, char rune)</a>
-
-```
-searchKey: scanner.checkNextPos
-tags: [private]
+searchKey: scanner.TestInvalidExponent
+tags: [method private test]
 ```
 
 ```Go
-func checkNextPos(t *testing.T, s *Scanner, offset, line, column int, char rune)
-```
-
-### <a id="checkScanPos" href="#checkScanPos">func checkScanPos(t *testing.T, s *Scanner, offset, line, column int, char rune)</a>
-
-```
-searchKey: scanner.checkScanPos
-tags: [private]
-```
-
-```Go
-func checkScanPos(t *testing.T, s *Scanner, offset, line, column int, char rune)
-```
-
-### <a id="TestPos" href="#TestPos">func TestPos(t *testing.T)</a>
-
-```
-searchKey: scanner.TestPos
-tags: [private]
-```
-
-```Go
-func TestPos(t *testing.T)
-```
-
-### <a id="TestNextEOFHandling" href="#TestNextEOFHandling">func TestNextEOFHandling(t *testing.T)</a>
-
-```
-searchKey: scanner.TestNextEOFHandling
-tags: [private]
-```
-
-```Go
-func TestNextEOFHandling(t *testing.T)
-```
-
-### <a id="TestScanEOFHandling" href="#TestScanEOFHandling">func TestScanEOFHandling(t *testing.T)</a>
-
-```
-searchKey: scanner.TestScanEOFHandling
-tags: [private]
-```
-
-```Go
-func TestScanEOFHandling(t *testing.T)
+func TestInvalidExponent(t *testing.T)
 ```
 
 ### <a id="TestIssue29723" href="#TestIssue29723">func TestIssue29723(t *testing.T)</a>
 
 ```
 searchKey: scanner.TestIssue29723
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestIssue29723(t *testing.T)
 ```
 
-### <a id="TestNumbers" href="#TestNumbers">func TestNumbers(t *testing.T)</a>
-
-```
-searchKey: scanner.TestNumbers
-tags: [private]
-```
-
-```Go
-func TestNumbers(t *testing.T)
-```
-
 ### <a id="TestIssue30320" href="#TestIssue30320">func TestIssue30320(t *testing.T)</a>
 
 ```
 searchKey: scanner.TestIssue30320
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestIssue30320(t *testing.T)
 ```
 
+### <a id="TestNext" href="#TestNext">func TestNext(t *testing.T)</a>
+
+```
+searchKey: scanner.TestNext
+tags: [method private test]
+```
+
+```Go
+func TestNext(t *testing.T)
+```
+
+### <a id="TestNextEOFHandling" href="#TestNextEOFHandling">func TestNextEOFHandling(t *testing.T)</a>
+
+```
+searchKey: scanner.TestNextEOFHandling
+tags: [method private test]
+```
+
+```Go
+func TestNextEOFHandling(t *testing.T)
+```
+
+### <a id="TestNumbers" href="#TestNumbers">func TestNumbers(t *testing.T)</a>
+
+```
+searchKey: scanner.TestNumbers
+tags: [method private test]
+```
+
+```Go
+func TestNumbers(t *testing.T)
+```
+
+### <a id="TestPos" href="#TestPos">func TestPos(t *testing.T)</a>
+
+```
+searchKey: scanner.TestPos
+tags: [method private test]
+```
+
+```Go
+func TestPos(t *testing.T)
+```
+
+### <a id="TestPosition" href="#TestPosition">func TestPosition(t *testing.T)</a>
+
+```
+searchKey: scanner.TestPosition
+tags: [method private test]
+```
+
+```Go
+func TestPosition(t *testing.T)
+```
+
+### <a id="TestScan" href="#TestScan">func TestScan(t *testing.T)</a>
+
+```
+searchKey: scanner.TestScan
+tags: [method private test]
+```
+
+```Go
+func TestScan(t *testing.T)
+```
+
+### <a id="TestScanCustomIdent" href="#TestScanCustomIdent">func TestScanCustomIdent(t *testing.T)</a>
+
+```
+searchKey: scanner.TestScanCustomIdent
+tags: [method private test]
+```
+
+```Go
+func TestScanCustomIdent(t *testing.T)
+```
+
+### <a id="TestScanEOFHandling" href="#TestScanEOFHandling">func TestScanEOFHandling(t *testing.T)</a>
+
+```
+searchKey: scanner.TestScanEOFHandling
+tags: [method private test]
+```
+
+```Go
+func TestScanEOFHandling(t *testing.T)
+```
+
+### <a id="TestScanNext" href="#TestScanNext">func TestScanNext(t *testing.T)</a>
+
+```
+searchKey: scanner.TestScanNext
+tags: [method private test]
+```
+
+```Go
+func TestScanNext(t *testing.T)
+```
+
+### <a id="TestScanSelectedMask" href="#TestScanSelectedMask">func TestScanSelectedMask(t *testing.T)</a>
+
+```
+searchKey: scanner.TestScanSelectedMask
+tags: [method private test]
+```
+
+```Go
+func TestScanSelectedMask(t *testing.T)
+```
+
+### <a id="TestScanWhitespace" href="#TestScanWhitespace">func TestScanWhitespace(t *testing.T)</a>
+
+```
+searchKey: scanner.TestScanWhitespace
+tags: [method private test]
+```
+
+```Go
+func TestScanWhitespace(t *testing.T)
+```
+
+### <a id="TestScanZeroMode" href="#TestScanZeroMode">func TestScanZeroMode(t *testing.T)</a>
+
+```
+searchKey: scanner.TestScanZeroMode
+tags: [method private test]
+```
+
+```Go
+func TestScanZeroMode(t *testing.T)
+```
+
+### <a id="TokenString" href="#TokenString">func TokenString(tok rune) string</a>
+
+```
+searchKey: scanner.TokenString
+tags: [method]
+```
+
+```Go
+func TokenString(tok rune) string
+```
+
+TokenString returns a printable string for a token or Unicode character. 
+
+### <a id="checkNextPos" href="#checkNextPos">func checkNextPos(t *testing.T, s *Scanner, offset, line, column int, char rune)</a>
+
+```
+searchKey: scanner.checkNextPos
+tags: [method private]
+```
+
+```Go
+func checkNextPos(t *testing.T, s *Scanner, offset, line, column int, char rune)
+```
+
+### <a id="checkPos" href="#checkPos">func checkPos(t *testing.T, got, want Position)</a>
+
+```
+searchKey: scanner.checkPos
+tags: [method private]
+```
+
+```Go
+func checkPos(t *testing.T, got, want Position)
+```
+
+### <a id="checkScanPos" href="#checkScanPos">func checkScanPos(t *testing.T, s *Scanner, offset, line, column int, char rune)</a>
+
+```
+searchKey: scanner.checkScanPos
+tags: [method private]
+```
+
+```Go
+func checkScanPos(t *testing.T, s *Scanner, offset, line, column int, char rune)
+```
+
+### <a id="checkTok" href="#checkTok">func checkTok(t *testing.T, s *Scanner, line int, got, want rune, text string)</a>
+
+```
+searchKey: scanner.checkTok
+tags: [method private]
+```
+
+```Go
+func checkTok(t *testing.T, s *Scanner, line int, got, want rune, text string)
+```
+
+### <a id="checkTokErr" href="#checkTokErr">func checkTokErr(t *testing.T, s *Scanner, line int, want rune, text string)</a>
+
+```
+searchKey: scanner.checkTokErr
+tags: [method private]
+```
+
+```Go
+func checkTokErr(t *testing.T, s *Scanner, line int, want rune, text string)
+```
+
+### <a id="countNewlines" href="#countNewlines">func countNewlines(s string) int</a>
+
+```
+searchKey: scanner.countNewlines
+tags: [method private]
+```
+
+```Go
+func countNewlines(s string) int
+```
+
+### <a id="digitVal" href="#digitVal">func digitVal(ch rune) int</a>
+
+```
+searchKey: scanner.digitVal
+tags: [method private]
+```
+
+```Go
+func digitVal(ch rune) int
+```
+
 ### <a id="extractInts" href="#extractInts">func extractInts(t string, mode uint) (res string)</a>
 
 ```
 searchKey: scanner.extractInts
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func extractInts(t string, mode uint) (res string)
+```
+
+### <a id="invalidSep" href="#invalidSep">func invalidSep(x string) int</a>
+
+```
+searchKey: scanner.invalidSep
+tags: [method private]
+```
+
+```Go
+func invalidSep(x string) int
+```
+
+invalidSep returns the index of the first invalid separator in x, or -1. 
+
+### <a id="isDecimal" href="#isDecimal">func isDecimal(ch rune) bool</a>
+
+```
+searchKey: scanner.isDecimal
+tags: [method private]
+```
+
+```Go
+func isDecimal(ch rune) bool
+```
+
+### <a id="isHex" href="#isHex">func isHex(ch rune) bool</a>
+
+```
+searchKey: scanner.isHex
+tags: [method private]
+```
+
+```Go
+func isHex(ch rune) bool
+```
+
+### <a id="litname" href="#litname">func litname(prefix rune) string</a>
+
+```
+searchKey: scanner.litname
+tags: [method private]
+```
+
+```Go
+func litname(prefix rune) string
+```
+
+### <a id="lower" href="#lower">func lower(ch rune) rune</a>
+
+```
+searchKey: scanner.lower
+tags: [method private]
+```
+
+```Go
+func lower(ch rune) rune
+```
+
+### <a id="makeSource" href="#makeSource">func makeSource(pattern string) *bytes.Buffer</a>
+
+```
+searchKey: scanner.makeSource
+tags: [method private]
+```
+
+```Go
+func makeSource(pattern string) *bytes.Buffer
+```
+
+### <a id="readRuneSegments" href="#readRuneSegments">func readRuneSegments(t *testing.T, segments []string)</a>
+
+```
+searchKey: scanner.readRuneSegments
+tags: [method private]
+```
+
+```Go
+func readRuneSegments(t *testing.T, segments []string)
+```
+
+### <a id="testError" href="#testError">func testError(t *testing.T, src, pos, msg string, tok rune)</a>
+
+```
+searchKey: scanner.testError
+tags: [method private]
+```
+
+```Go
+func testError(t *testing.T, src, pos, msg string, tok rune)
+```
+
+### <a id="testScan" href="#testScan">func testScan(t *testing.T, mode uint)</a>
+
+```
+searchKey: scanner.testScan
+tags: [method private]
+```
+
+```Go
+func testScan(t *testing.T, mode uint)
+```
+
+### <a id="testScanSelectedMode" href="#testScanSelectedMode">func testScanSelectedMode(t *testing.T, mode uint, class rune)</a>
+
+```
+searchKey: scanner.testScanSelectedMode
+tags: [method private]
+```
+
+```Go
+func testScanSelectedMode(t *testing.T, mode uint, class rune)
 ```
 

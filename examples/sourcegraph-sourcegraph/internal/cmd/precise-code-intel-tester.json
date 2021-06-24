@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/cmd/precise-code-intel-tester",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#uploadQueryFragment",
-              "documentation": {
-                "identifier": "uploadQueryFragment",
-                "newPage": false,
-                "searchKey": "main.uploadQueryFragment",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const uploadQueryFragment"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst uploadQueryFragment = `\n\tu%d: node(id: \"%s\") {\n\t\t... on LSIFUpload { state }\n\t}\n`\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/cmd/precise-code-intel-tester#repositoryQueryFragment",
               "documentation": {
                 "identifier": "repositoryQueryFragment",
                 "newPage": false,
                 "searchKey": "main.repositoryQueryFragment",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -77,6 +59,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst repositoryQueryFragment = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#uploadQueryFragment",
+              "documentation": {
+                "identifier": "uploadQueryFragment",
+                "newPage": false,
+                "searchKey": "main.uploadQueryFragment",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const uploadQueryFragment"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst uploadQueryFragment = `\n\tu%d: node(id: \"%s\") {\n\t\t... on LSIFUpload { state }\n\t}\n`\n```\n\n"
               },
               "children": null
             }
@@ -92,6 +98,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -106,110 +113,23 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#endpoint",
+              "pathID": "/internal/cmd/precise-code-intel-tester#ErrProcessingFailed",
               "documentation": {
-                "identifier": "endpoint",
+                "identifier": "ErrProcessingFailed",
                 "newPage": false,
-                "searchKey": "main.endpoint",
+                "searchKey": "main.ErrProcessingFailed",
                 "tags": [
-                  "private"
+                  "variable",
+                  "interface"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var endpoint"
+                "value": "var ErrProcessingFailed"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar endpoint = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#token",
-              "documentation": {
-                "identifier": "token",
-                "newPage": false,
-                "searchKey": "main.token",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var token"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar token = env.Get(\"SOURCEGRAPH_SUDO_TOKEN\", \"\", \"Access token\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#indexDir",
-              "documentation": {
-                "identifier": "indexDir",
-                "newPage": false,
-                "searchKey": "main.indexDir",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var indexDir"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar indexDir string\n```\n\nFlags \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#numConcurrentUploads",
-              "documentation": {
-                "identifier": "numConcurrentUploads",
-                "newPage": false,
-                "searchKey": "main.numConcurrentUploads",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var numConcurrentUploads"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar numConcurrentUploads int\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#numConcurrentRequests",
-              "documentation": {
-                "identifier": "numConcurrentRequests",
-                "newPage": false,
-                "searchKey": "main.numConcurrentRequests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var numConcurrentRequests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar numConcurrentRequests int\n```\n\n"
+                "value": "```Go\nvar ErrProcessingFailed = errors.New(\"processing failed\")\n```\n\nErrProcessingFailed occurs when an upload enters the ERRORED state. \n\n"
               },
               "children": null
             }
@@ -222,6 +142,8 @@
                 "newPage": false,
                 "searchKey": "main.checkQueryResult",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
@@ -238,34 +160,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#queryReferencesOfReferences",
-              "documentation": {
-                "identifier": "queryReferencesOfReferences",
-                "newPage": false,
-                "searchKey": "main.queryReferencesOfReferences",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var queryReferencesOfReferences"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar queryReferencesOfReferences bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/cmd/precise-code-intel-tester#commands",
               "documentation": {
                 "identifier": "commands",
                 "newPage": false,
                 "searchKey": "main.commands",
                 "tags": [
+                  "variable",
+                  "object",
                   "private"
                 ]
               },
@@ -282,44 +184,48 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#queryGenerators",
+              "pathID": "/internal/cmd/precise-code-intel-tester#endpoint",
               "documentation": {
-                "identifier": "queryGenerators",
+                "identifier": "endpoint",
                 "newPage": false,
-                "searchKey": "main.queryGenerators",
+                "searchKey": "main.endpoint",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var queryGenerators"
+                "value": "var endpoint"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar queryGenerators = ...\n```\n\nqueryGenerators is the list of functions that create query test functions. \n\n"
+                "value": "```Go\nvar endpoint = ...\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#testCases",
+              "pathID": "/internal/cmd/precise-code-intel-tester#indexDir",
               "documentation": {
-                "identifier": "testCases",
+                "identifier": "indexDir",
                 "newPage": false,
-                "searchKey": "main.testCases",
+                "searchKey": "main.indexDir",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var testCases"
+                "value": "var indexDir"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar testCases = ...\n```\n\n"
+                "value": "```Go\nvar indexDir string\n```\n\nFlags \n\n"
               },
               "children": null
             }
@@ -332,6 +238,8 @@
                 "newPage": false,
                 "searchKey": "main.indexFilenamePattern",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -348,20 +256,146 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#ErrProcessingFailed",
+              "pathID": "/internal/cmd/precise-code-intel-tester#numConcurrentRequests",
               "documentation": {
-                "identifier": "ErrProcessingFailed",
+                "identifier": "numConcurrentRequests",
                 "newPage": false,
-                "searchKey": "main.ErrProcessingFailed",
-                "tags": null
+                "searchKey": "main.numConcurrentRequests",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var ErrProcessingFailed"
+                "value": "var numConcurrentRequests"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar ErrProcessingFailed = errors.New(\"processing failed\")\n```\n\nErrProcessingFailed occurs when an upload enters the ERRORED state. \n\n"
+                "value": "```Go\nvar numConcurrentRequests int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#numConcurrentUploads",
+              "documentation": {
+                "identifier": "numConcurrentUploads",
+                "newPage": false,
+                "searchKey": "main.numConcurrentUploads",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var numConcurrentUploads"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar numConcurrentUploads int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#queryGenerators",
+              "documentation": {
+                "identifier": "queryGenerators",
+                "newPage": false,
+                "searchKey": "main.queryGenerators",
+                "tags": [
+                  "variable",
+                  "array",
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var queryGenerators"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar queryGenerators = ...\n```\n\nqueryGenerators is the list of functions that create query test functions. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#queryReferencesOfReferences",
+              "documentation": {
+                "identifier": "queryReferencesOfReferences",
+                "newPage": false,
+                "searchKey": "main.queryReferencesOfReferences",
+                "tags": [
+                  "variable",
+                  "boolean",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var queryReferencesOfReferences"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar queryReferencesOfReferences bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#testCases",
+              "documentation": {
+                "identifier": "testCases",
+                "newPage": false,
+                "searchKey": "main.testCases",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testCases"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testCases = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#token",
+              "documentation": {
+                "identifier": "token",
+                "newPage": false,
+                "searchKey": "main.token",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var token"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar token = env.Get(\"SOURCEGRAPH_SUDO_TOKEN\", \"\", \"Access token\")\n```\n\n"
               },
               "children": null
             }
@@ -374,6 +408,8 @@
                 "newPage": false,
                 "searchKey": "main.uploadIDPattern",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -399,6 +435,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -413,12 +450,146 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#Commit",
+              "documentation": {
+                "identifier": "Commit",
+                "newPage": false,
+                "searchKey": "main.Commit",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Commit struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Commit struct {\n\tOid string `json:\"oid\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#Definitions",
+              "documentation": {
+                "identifier": "Definitions",
+                "newPage": false,
+                "searchKey": "main.Definitions",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Definitions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Definitions struct {\n\tNodes []Node `json:\"nodes\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#Location",
+              "documentation": {
+                "identifier": "Location",
+                "newPage": false,
+                "searchKey": "main.Location",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Location struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Location struct {\n\tRepo      string\n\tRev       string\n\tPath      string\n\tLine      int\n\tCharacter int\n}\n```\n\nLocation specifies the first position in a source range. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#Node",
+              "documentation": {
+                "identifier": "Node",
+                "newPage": false,
+                "searchKey": "main.Node",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Node struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Node struct {\n\tResource `json:\"resource\"`\n\tRange    `json:\"range\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#PageInfo",
+              "documentation": {
+                "identifier": "PageInfo",
+                "newPage": false,
+                "searchKey": "main.PageInfo",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PageInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PageInfo struct {\n\tEndCursor string `json:\"endCursor\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#Position",
+              "documentation": {
+                "identifier": "Position",
+                "newPage": false,
+                "searchKey": "main.Position",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Position struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Position struct {\n\tLine      int `json:\"line\"`\n\tCharacter int `json:\"character\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/cmd/precise-code-intel-tester#QueryFunc",
               "documentation": {
                 "identifier": "QueryFunc",
                 "newPage": false,
                 "searchKey": "main.QueryFunc",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -438,7 +609,9 @@
                 "identifier": "QueryResponse",
                 "newPage": false,
                 "searchKey": "main.QueryResponse",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -453,132 +626,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#Definitions",
-              "documentation": {
-                "identifier": "Definitions",
-                "newPage": false,
-                "searchKey": "main.Definitions",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Definitions struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Definitions struct {\n\tNodes []Node `json:\"nodes\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#References",
-              "documentation": {
-                "identifier": "References",
-                "newPage": false,
-                "searchKey": "main.References",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type References struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype References struct {\n\tNodes    []Node   `json:\"nodes\"`\n\tPageInfo PageInfo `json:\"pageInfo\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#Node",
-              "documentation": {
-                "identifier": "Node",
-                "newPage": false,
-                "searchKey": "main.Node",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Node struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Node struct {\n\tResource `json:\"resource\"`\n\tRange    `json:\"range\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#Resource",
-              "documentation": {
-                "identifier": "Resource",
-                "newPage": false,
-                "searchKey": "main.Resource",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Resource struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Resource struct {\n\tPath       string     `json:\"path\"`\n\tRepository Repository `json:\"repository\"`\n\tCommit     Commit     `json:\"commit\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#Repository",
-              "documentation": {
-                "identifier": "Repository",
-                "newPage": false,
-                "searchKey": "main.Repository",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Repository struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Repository struct {\n\tName string `json:\"name\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#Commit",
-              "documentation": {
-                "identifier": "Commit",
-                "newPage": false,
-                "searchKey": "main.Commit",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Commit struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Commit struct {\n\tOid string `json:\"oid\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/cmd/precise-code-intel-tester#Range",
               "documentation": {
                 "identifier": "Range",
                 "newPage": false,
                 "searchKey": "main.Range",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -593,60 +648,66 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#Position",
+              "pathID": "/internal/cmd/precise-code-intel-tester#References",
               "documentation": {
-                "identifier": "Position",
+                "identifier": "References",
                 "newPage": false,
-                "searchKey": "main.Position",
-                "tags": null
+                "searchKey": "main.References",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type Position struct"
+                "value": "type References struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype Position struct {\n\tLine      int `json:\"line\"`\n\tCharacter int `json:\"character\"`\n}\n```\n\n"
+                "value": "```Go\ntype References struct {\n\tNodes    []Node   `json:\"nodes\"`\n\tPageInfo PageInfo `json:\"pageInfo\"`\n}\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#PageInfo",
+              "pathID": "/internal/cmd/precise-code-intel-tester#Repository",
               "documentation": {
-                "identifier": "PageInfo",
+                "identifier": "Repository",
                 "newPage": false,
-                "searchKey": "main.PageInfo",
-                "tags": null
+                "searchKey": "main.Repository",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type PageInfo struct"
+                "value": "type Repository struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype PageInfo struct {\n\tEndCursor string `json:\"endCursor\"`\n}\n```\n\n"
+                "value": "```Go\ntype Repository struct {\n\tName string `json:\"name\"`\n}\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#Location",
+              "pathID": "/internal/cmd/precise-code-intel-tester#Resource",
               "documentation": {
-                "identifier": "Location",
+                "identifier": "Resource",
                 "newPage": false,
-                "searchKey": "main.Location",
-                "tags": null
+                "searchKey": "main.Resource",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type Location struct"
+                "value": "type Resource struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype Location struct {\n\tRepo      string\n\tRev       string\n\tPath      string\n\tLine      int\n\tCharacter int\n}\n```\n\nLocation specifies the first position in a source range. \n\n"
+                "value": "```Go\ntype Resource struct {\n\tPath       string     `json:\"path\"`\n\tRepository Repository `json:\"repository\"`\n\tCommit     Commit     `json:\"commit\"`\n}\n```\n\n"
               },
               "children": null
             }
@@ -658,7 +719,9 @@
                 "identifier": "Upload",
                 "newPage": false,
                 "searchKey": "main.Upload",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -679,6 +742,7 @@
                 "newPage": false,
                 "searchKey": "main.refreshState",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -704,6 +768,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -718,34 +783,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#main",
-              "documentation": {
-                "identifier": "main",
-                "newPage": false,
-                "searchKey": "main.main",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func main()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc main()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/cmd/precise-code-intel-tester#commandNameList",
               "documentation": {
                 "identifier": "commandNameList",
                 "newPage": false,
                 "searchKey": "main.commandNameList",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -762,188 +806,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#queryCommand",
-              "documentation": {
-                "identifier": "queryCommand",
-                "newPage": false,
-                "searchKey": "main.queryCommand",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func queryCommand() error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc queryCommand() error\n```\n\nqueryCommand runs the \"query\" command. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#referencesFromDefinitionsQueries",
-              "documentation": {
-                "identifier": "referencesFromDefinitionsQueries",
-                "newPage": false,
-                "searchKey": "main.referencesFromDefinitionsQueries",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func referencesFromDefinitionsQueries() []util.ParallelFn"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc referencesFromDefinitionsQueries() []util.ParallelFn\n```\n\nreferencesFromDefinitionsQueries returns a list of test functions that queries the references of all the test cases definitions. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#definitionsFromReferencesQueries",
-              "documentation": {
-                "identifier": "definitionsFromReferencesQueries",
-                "newPage": false,
-                "searchKey": "main.definitionsFromReferencesQueries",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func definitionsFromReferencesQueries() []util.ParallelFn"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc definitionsFromReferencesQueries() []util.ParallelFn\n```\n\ndefinitionsFromReferencesQueries returns a list of test functions that queries the definitions of all the test cases references. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#referencesFromReferencesQueries",
-              "documentation": {
-                "identifier": "referencesFromReferencesQueries",
-                "newPage": false,
-                "searchKey": "main.referencesFromReferencesQueries",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func referencesFromReferencesQueries() []util.ParallelFn"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc referencesFromReferencesQueries() []util.ParallelFn\n```\n\nreferencesFromReferencesQueries returns a list of test functions that queries the references of all the test cases references. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#makeTestQueryFunction",
-              "documentation": {
-                "identifier": "makeTestQueryFunction",
-                "newPage": false,
-                "searchKey": "main.makeTestQueryFunction",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func makeTestQueryFunction(name string, location Location, expectedLocations []Location, f QueryFunc) util.ParallelFn"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc makeTestQueryFunction(name string, location Location, expectedLocations []Location, f QueryFunc) util.ParallelFn\n```\n\nmakeTestQueryFunction constructs a function for RunParallel that invokes the given query function and checks the returned locations against the given expected locations. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#queryDefinitions",
-              "documentation": {
-                "identifier": "queryDefinitions",
-                "newPage": false,
-                "searchKey": "main.queryDefinitions",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func queryDefinitions(ctx context.Context, location Location) (locations []Location, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc queryDefinitions(ctx context.Context, location Location) (locations []Location, err error)\n```\n\nqueryDefinitions returns all of the LSIF definitions for the given location. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#queryReferences",
-              "documentation": {
-                "identifier": "queryReferences",
-                "newPage": false,
-                "searchKey": "main.queryReferences",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func queryReferences(ctx context.Context, location Location) (locations []Location, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc queryReferences(ctx context.Context, location Location) (locations []Location, err error)\n```\n\nqueryReferences returns all of the LSIF references for the given location. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#sortLocations",
-              "documentation": {
-                "identifier": "sortLocations",
-                "newPage": false,
-                "searchKey": "main.sortLocations",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func sortLocations(locations []Location)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc sortLocations(locations []Location)\n```\n\nsortLocations sorts a slice of Locations by repo, rev, path, line, then character. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/cmd/precise-code-intel-tester#compareLocations",
               "documentation": {
                 "identifier": "compareLocations",
                 "newPage": false,
                 "searchKey": "main.compareLocations",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -960,78 +829,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#uploadCommand",
-              "documentation": {
-                "identifier": "uploadCommand",
-                "newPage": false,
-                "searchKey": "main.uploadCommand",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func uploadCommand() error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc uploadCommand() error\n```\n\nuploadCommand runs the \"upload\" command. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#uploadIndexes",
-              "documentation": {
-                "identifier": "uploadIndexes",
-                "newPage": false,
-                "searchKey": "main.uploadIndexes",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func uploadIndexes(ctx context.Context) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc uploadIndexes(ctx context.Context) error\n```\n\nuploadIndexes uploads each file in the index directory and blocks until each upload has been successfully processed. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#readRevsByRepo",
-              "documentation": {
-                "identifier": "readRevsByRepo",
-                "newPage": false,
-                "searchKey": "main.readRevsByRepo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func readRevsByRepo() (map[string][]string, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc readRevsByRepo() (map[string][]string, error)\n```\n\nreadRevsByRepo returns a list of revisions by repository names for which there is an index file. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/cmd/precise-code-intel-tester#countRevs",
               "documentation": {
                 "identifier": "countRevs",
                 "newPage": false,
                 "searchKey": "main.countRevs",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1048,12 +852,59 @@
           },
           {
             "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#definitionsFromReferencesQueries",
+              "documentation": {
+                "identifier": "definitionsFromReferencesQueries",
+                "newPage": false,
+                "searchKey": "main.definitionsFromReferencesQueries",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func definitionsFromReferencesQueries() []util.ParallelFn"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc definitionsFromReferencesQueries() []util.ParallelFn\n```\n\ndefinitionsFromReferencesQueries returns a list of test functions that queries the definitions of all the test cases references. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/cmd/precise-code-intel-tester#makeProcessedSignals",
               "documentation": {
                 "identifier": "makeProcessedSignals",
                 "newPage": false,
                 "searchKey": "main.makeProcessedSignals",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1076,6 +927,7 @@
                 "newPage": false,
                 "searchKey": "main.makeRefreshedSignals",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1092,44 +944,23 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#watchStateChanges",
+              "pathID": "/internal/cmd/precise-code-intel-tester#makeTestQueryFunction",
               "documentation": {
-                "identifier": "watchStateChanges",
+                "identifier": "makeTestQueryFunction",
                 "newPage": false,
-                "searchKey": "main.watchStateChanges",
+                "searchKey": "main.makeTestQueryFunction",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func watchStateChanges(ctx context.Context,..."
+                "value": "func makeTestQueryFunction(name string, location Location, expectedLocations []Location, f QueryFunc) util.ParallelFn"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc watchStateChanges(\n\tctx context.Context,\n\tuploaded chan Upload,\n\tprocessedSignals map[string]map[string]chan error,\n\trefreshedSignals map[string]chan refreshState,\n)\n```\n\nwatchStateChanges maintains a list of uploaded but nonterminal upload records. This function polls the API and signals the worker when their upload has been processed. If an upload fails to process, the error will be sent to the worker. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester#uploadStates",
-              "documentation": {
-                "identifier": "uploadStates",
-                "newPage": false,
-                "searchKey": "main.uploadStates",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func uploadStates(ctx context.Context, ids, names []string) (stateByUpload map[string]string, staleCommitGraphByRepo map[string]bool, _ error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc uploadStates(ctx context.Context, ids, names []string) (stateByUpload map[string]string, staleCommitGraphByRepo map[string]bool, _ error)\n```\n\nuploadStates returns a map from upload identifier to its current state. \n\n"
+                "value": "```Go\nfunc makeTestQueryFunction(name string, location Location, expectedLocations []Location, f QueryFunc) util.ParallelFn\n```\n\nmakeTestQueryFunction constructs a function for RunParallel that invokes the given query function and checks the returned locations against the given expected locations. \n\n"
               },
               "children": null
             }
@@ -1142,6 +973,7 @@
                 "newPage": false,
                 "searchKey": "main.makeTestUploadForRepositoryFunction",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1158,12 +990,174 @@
           },
           {
             "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#queryCommand",
+              "documentation": {
+                "identifier": "queryCommand",
+                "newPage": false,
+                "searchKey": "main.queryCommand",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func queryCommand() error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc queryCommand() error\n```\n\nqueryCommand runs the \"query\" command. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#queryDefinitions",
+              "documentation": {
+                "identifier": "queryDefinitions",
+                "newPage": false,
+                "searchKey": "main.queryDefinitions",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func queryDefinitions(ctx context.Context, location Location) (locations []Location, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc queryDefinitions(ctx context.Context, location Location) (locations []Location, err error)\n```\n\nqueryDefinitions returns all of the LSIF definitions for the given location. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#queryReferences",
+              "documentation": {
+                "identifier": "queryReferences",
+                "newPage": false,
+                "searchKey": "main.queryReferences",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func queryReferences(ctx context.Context, location Location) (locations []Location, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc queryReferences(ctx context.Context, location Location) (locations []Location, err error)\n```\n\nqueryReferences returns all of the LSIF references for the given location. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#readRevsByRepo",
+              "documentation": {
+                "identifier": "readRevsByRepo",
+                "newPage": false,
+                "searchKey": "main.readRevsByRepo",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readRevsByRepo() (map[string][]string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readRevsByRepo() (map[string][]string, error)\n```\n\nreadRevsByRepo returns a list of revisions by repository names for which there is an index file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#referencesFromDefinitionsQueries",
+              "documentation": {
+                "identifier": "referencesFromDefinitionsQueries",
+                "newPage": false,
+                "searchKey": "main.referencesFromDefinitionsQueries",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func referencesFromDefinitionsQueries() []util.ParallelFn"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc referencesFromDefinitionsQueries() []util.ParallelFn\n```\n\nreferencesFromDefinitionsQueries returns a list of test functions that queries the references of all the test cases definitions. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#referencesFromReferencesQueries",
+              "documentation": {
+                "identifier": "referencesFromReferencesQueries",
+                "newPage": false,
+                "searchKey": "main.referencesFromReferencesQueries",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func referencesFromReferencesQueries() []util.ParallelFn"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc referencesFromReferencesQueries() []util.ParallelFn\n```\n\nreferencesFromReferencesQueries returns a list of test functions that queries the references of all the test cases references. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#sortLocations",
+              "documentation": {
+                "identifier": "sortLocations",
+                "newPage": false,
+                "searchKey": "main.sortLocations",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sortLocations(locations []Location)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sortLocations(locations []Location)\n```\n\nsortLocations sorts a slice of Locations by repo, rev, path, line, then character. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/cmd/precise-code-intel-tester#upload",
               "documentation": {
                 "identifier": "upload",
                 "newPage": false,
                 "searchKey": "main.upload",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1174,6 +1168,98 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc upload(ctx context.Context, name string, index int, rev string, limiter *util.Limiter) (string, error)\n```\n\nupload invokes the `src lsif upload` command. This requires that src is installed on the current user's $PATH and is relatively up to date. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#uploadCommand",
+              "documentation": {
+                "identifier": "uploadCommand",
+                "newPage": false,
+                "searchKey": "main.uploadCommand",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func uploadCommand() error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc uploadCommand() error\n```\n\nuploadCommand runs the \"upload\" command. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#uploadIndexes",
+              "documentation": {
+                "identifier": "uploadIndexes",
+                "newPage": false,
+                "searchKey": "main.uploadIndexes",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func uploadIndexes(ctx context.Context) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc uploadIndexes(ctx context.Context) error\n```\n\nuploadIndexes uploads each file in the index directory and blocks until each upload has been successfully processed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#uploadStates",
+              "documentation": {
+                "identifier": "uploadStates",
+                "newPage": false,
+                "searchKey": "main.uploadStates",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func uploadStates(ctx context.Context, ids, names []string) (stateByUpload map[string]string, staleCommitGraphByRepo map[string]bool, _ error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc uploadStates(ctx context.Context, ids, names []string) (stateByUpload map[string]string, staleCommitGraphByRepo map[string]bool, _ error)\n```\n\nuploadStates returns a map from upload identifier to its current state. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester#watchStateChanges",
+              "documentation": {
+                "identifier": "watchStateChanges",
+                "newPage": false,
+                "searchKey": "main.watchStateChanges",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func watchStateChanges(ctx context.Context,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc watchStateChanges(\n\tctx context.Context,\n\tuploaded chan Upload,\n\tprocessedSignals map[string]map[string]chan error,\n\trefreshedSignals map[string]chan refreshState,\n)\n```\n\nwatchStateChanges maintains a list of uploaded but nonterminal upload records. This function polls the API and signals the worker when their upload has been processed. If an upload fails to process, the error will be sent to the worker. \n\n"
               },
               "children": null
             }

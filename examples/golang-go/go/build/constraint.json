@@ -4,7 +4,9 @@
     "identifier": "constraint",
     "newPage": true,
     "searchKey": "go/build/constraint",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,22 +39,25 @@
         "children": [
           {
             "node": {
-              "pathID": "/go/build/constraint#errNotConstraint",
+              "pathID": "/go/build/constraint#constraintTests",
               "documentation": {
-                "identifier": "errNotConstraint",
+                "identifier": "constraintTests",
                 "newPage": false,
-                "searchKey": "constraint.errNotConstraint",
+                "searchKey": "constraint.constraintTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var errNotConstraint"
+                "value": "var constraintTests"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar errNotConstraint = errors.New(\"not a build constraint\")\n```\n\n"
+                "value": "```Go\nvar constraintTests = ...\n```\n\n"
               },
               "children": null
             }
@@ -63,6 +70,8 @@
                 "newPage": false,
                 "searchKey": "constraint.errComplex",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -79,12 +88,64 @@
           },
           {
             "node": {
+              "pathID": "/go/build/constraint#errNotConstraint",
+              "documentation": {
+                "identifier": "errNotConstraint",
+                "newPage": false,
+                "searchKey": "constraint.errNotConstraint",
+                "tags": [
+                  "variable",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errNotConstraint"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errNotConstraint = errors.New(\"not a build constraint\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build/constraint#exprEvalTests",
+              "documentation": {
+                "identifier": "exprEvalTests",
+                "newPage": false,
+                "searchKey": "constraint.exprEvalTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var exprEvalTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar exprEvalTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/go/build/constraint#exprStringTests",
               "documentation": {
                 "identifier": "exprStringTests",
                 "newPage": false,
                 "searchKey": "constraint.exprStringTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -107,6 +168,9 @@
                 "newPage": false,
                 "searchKey": "constraint.lexTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -123,34 +187,15 @@
           },
           {
             "node": {
-              "pathID": "/go/build/constraint#parseExprTests",
-              "documentation": {
-                "identifier": "parseExprTests",
-                "newPage": false,
-                "searchKey": "constraint.parseExprTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var parseExprTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar parseExprTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/build/constraint#parseExprErrorTests",
               "documentation": {
                 "identifier": "parseExprErrorTests",
                 "newPage": false,
                 "searchKey": "constraint.parseExprErrorTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -167,22 +212,25 @@
           },
           {
             "node": {
-              "pathID": "/go/build/constraint#exprEvalTests",
+              "pathID": "/go/build/constraint#parseExprTests",
               "documentation": {
-                "identifier": "exprEvalTests",
+                "identifier": "parseExprTests",
                 "newPage": false,
-                "searchKey": "constraint.exprEvalTests",
+                "searchKey": "constraint.parseExprTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var exprEvalTests"
+                "value": "var parseExprTests"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar exprEvalTests = ...\n```\n\n"
+                "value": "```Go\nvar parseExprTests = ...\n```\n\n"
               },
               "children": null
             }
@@ -195,6 +243,9 @@
                 "newPage": false,
                 "searchKey": "constraint.parsePlusBuildExprTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -211,34 +262,15 @@
           },
           {
             "node": {
-              "pathID": "/go/build/constraint#constraintTests",
-              "documentation": {
-                "identifier": "constraintTests",
-                "newPage": false,
-                "searchKey": "constraint.constraintTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var constraintTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar constraintTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/build/constraint#plusBuildLinesTests",
               "documentation": {
                 "identifier": "plusBuildLinesTests",
                 "newPage": false,
                 "searchKey": "constraint.plusBuildLinesTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -263,7 +295,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -276,12 +310,104 @@
         "children": [
           {
             "node": {
+              "pathID": "/go/build/constraint#AndExpr",
+              "documentation": {
+                "identifier": "AndExpr",
+                "newPage": false,
+                "searchKey": "constraint.AndExpr",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AndExpr struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AndExpr struct {\n\tX, Y Expr\n}\n```\n\nAn AndExpr represents the expression X && Y. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/go/build/constraint#AndExpr.Eval",
+                    "documentation": {
+                      "identifier": "AndExpr.Eval",
+                      "newPage": false,
+                      "searchKey": "constraint.AndExpr.Eval",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x *AndExpr) Eval(ok func(tag string) bool) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x *AndExpr) Eval(ok func(tag string) bool) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build/constraint#AndExpr.String",
+                    "documentation": {
+                      "identifier": "AndExpr.String",
+                      "newPage": false,
+                      "searchKey": "constraint.AndExpr.String",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x *AndExpr) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x *AndExpr) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build/constraint#AndExpr.isExpr",
+                    "documentation": {
+                      "identifier": "AndExpr.isExpr",
+                      "newPage": false,
+                      "searchKey": "constraint.AndExpr.isExpr",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x *AndExpr) isExpr()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x *AndExpr) isExpr()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/go/build/constraint#Expr",
               "documentation": {
                 "identifier": "Expr",
                 "newPage": false,
                 "searchKey": "constraint.Expr",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -294,44 +420,22 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/go/build/constraint#tag",
+                    "pathID": "/go/build/constraint#Parse",
                     "documentation": {
-                      "identifier": "tag",
+                      "identifier": "Parse",
                       "newPage": false,
-                      "searchKey": "constraint.tag",
+                      "searchKey": "constraint.Parse",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func tag(tag string) Expr"
+                      "value": "func Parse(line string) (Expr, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc tag(tag string) Expr\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/build/constraint#not",
-                    "documentation": {
-                      "identifier": "not",
-                      "newPage": false,
-                      "searchKey": "constraint.not",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func not(x Expr) Expr"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc not(x Expr) Expr\n```\n\n"
+                      "value": "```Go\nfunc Parse(line string) (Expr, error)\n```\n\nParse parses a single build constraint line of the form “//go:build ...” or “// +build ...” and returns the corresponding boolean expression. \n\n"
                     },
                     "children": null
                   }
@@ -344,6 +448,7 @@
                       "newPage": false,
                       "searchKey": "constraint.and",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -360,12 +465,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/go/build/constraint#not",
+                    "documentation": {
+                      "identifier": "not",
+                      "newPage": false,
+                      "searchKey": "constraint.not",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func not(x Expr) Expr"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc not(x Expr) Expr\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/go/build/constraint#or",
                     "documentation": {
                       "identifier": "or",
                       "newPage": false,
                       "searchKey": "constraint.or",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -382,32 +511,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/go/build/constraint#Parse",
-                    "documentation": {
-                      "identifier": "Parse",
-                      "newPage": false,
-                      "searchKey": "constraint.Parse",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func Parse(line string) (Expr, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc Parse(line string) (Expr, error)\n```\n\nParse parses a single build constraint line of the form “//go:build ...” or “// +build ...” and returns the corresponding boolean expression. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/go/build/constraint#parseExpr",
                     "documentation": {
                       "identifier": "parseExpr",
                       "newPage": false,
                       "searchKey": "constraint.parseExpr",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -430,6 +540,7 @@
                       "newPage": false,
                       "searchKey": "constraint.parsePlusBuildExpr",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -452,6 +563,7 @@
                       "newPage": false,
                       "searchKey": "constraint.pushNot",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -465,86 +577,26 @@
                     },
                     "children": null
                   }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/build/constraint#TagExpr",
-              "documentation": {
-                "identifier": "TagExpr",
-                "newPage": false,
-                "searchKey": "constraint.TagExpr",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type TagExpr struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype TagExpr struct {\n\tTag string // for example, “linux” or “cgo”\n}\n```\n\nA TagExpr is an Expr for the single tag Tag. \n\n"
-              },
-              "children": [
+                },
                 {
                   "node": {
-                    "pathID": "/go/build/constraint#TagExpr.isExpr",
+                    "pathID": "/go/build/constraint#tag",
                     "documentation": {
-                      "identifier": "TagExpr.isExpr",
+                      "identifier": "tag",
                       "newPage": false,
-                      "searchKey": "constraint.TagExpr.isExpr",
+                      "searchKey": "constraint.tag",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (x *TagExpr) isExpr()"
+                      "value": "func tag(tag string) Expr"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (x *TagExpr) isExpr()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/build/constraint#TagExpr.Eval",
-                    "documentation": {
-                      "identifier": "TagExpr.Eval",
-                      "newPage": false,
-                      "searchKey": "constraint.TagExpr.Eval",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (x *TagExpr) Eval(ok func(tag string) bool) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (x *TagExpr) Eval(ok func(tag string) bool) bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/build/constraint#TagExpr.String",
-                    "documentation": {
-                      "identifier": "TagExpr.String",
-                      "newPage": false,
-                      "searchKey": "constraint.TagExpr.String",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (x *TagExpr) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (x *TagExpr) String() string\n```\n\n"
+                      "value": "```Go\nfunc tag(tag string) Expr\n```\n\n"
                     },
                     "children": null
                   }
@@ -559,7 +611,9 @@
                 "identifier": "NotExpr",
                 "newPage": false,
                 "searchKey": "constraint.NotExpr",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -572,34 +626,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/go/build/constraint#NotExpr.isExpr",
-                    "documentation": {
-                      "identifier": "NotExpr.isExpr",
-                      "newPage": false,
-                      "searchKey": "constraint.NotExpr.isExpr",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (x *NotExpr) isExpr()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (x *NotExpr) isExpr()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/go/build/constraint#NotExpr.Eval",
                     "documentation": {
                       "identifier": "NotExpr.Eval",
                       "newPage": false,
                       "searchKey": "constraint.NotExpr.Eval",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -619,7 +653,9 @@
                       "identifier": "NotExpr.String",
                       "newPage": false,
                       "searchKey": "constraint.NotExpr.String",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -631,86 +667,26 @@
                     },
                     "children": null
                   }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/build/constraint#AndExpr",
-              "documentation": {
-                "identifier": "AndExpr",
-                "newPage": false,
-                "searchKey": "constraint.AndExpr",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type AndExpr struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype AndExpr struct {\n\tX, Y Expr\n}\n```\n\nAn AndExpr represents the expression X && Y. \n\n"
-              },
-              "children": [
+                },
                 {
                   "node": {
-                    "pathID": "/go/build/constraint#AndExpr.isExpr",
+                    "pathID": "/go/build/constraint#NotExpr.isExpr",
                     "documentation": {
-                      "identifier": "AndExpr.isExpr",
+                      "identifier": "NotExpr.isExpr",
                       "newPage": false,
-                      "searchKey": "constraint.AndExpr.isExpr",
+                      "searchKey": "constraint.NotExpr.isExpr",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (x *AndExpr) isExpr()"
+                      "value": "func (x *NotExpr) isExpr()"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (x *AndExpr) isExpr()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/build/constraint#AndExpr.Eval",
-                    "documentation": {
-                      "identifier": "AndExpr.Eval",
-                      "newPage": false,
-                      "searchKey": "constraint.AndExpr.Eval",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (x *AndExpr) Eval(ok func(tag string) bool) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (x *AndExpr) Eval(ok func(tag string) bool) bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/build/constraint#AndExpr.String",
-                    "documentation": {
-                      "identifier": "AndExpr.String",
-                      "newPage": false,
-                      "searchKey": "constraint.AndExpr.String",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (x *AndExpr) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (x *AndExpr) String() string\n```\n\n"
+                      "value": "```Go\nfunc (x *NotExpr) isExpr()\n```\n\n"
                     },
                     "children": null
                   }
@@ -725,7 +701,9 @@
                 "identifier": "OrExpr",
                 "newPage": false,
                 "searchKey": "constraint.OrExpr",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -738,34 +716,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/go/build/constraint#OrExpr.isExpr",
-                    "documentation": {
-                      "identifier": "OrExpr.isExpr",
-                      "newPage": false,
-                      "searchKey": "constraint.OrExpr.isExpr",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (x *OrExpr) isExpr()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (x *OrExpr) isExpr()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/go/build/constraint#OrExpr.Eval",
                     "documentation": {
                       "identifier": "OrExpr.Eval",
                       "newPage": false,
                       "searchKey": "constraint.OrExpr.Eval",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -785,7 +743,9 @@
                       "identifier": "OrExpr.String",
                       "newPage": false,
                       "searchKey": "constraint.OrExpr.String",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -794,6 +754,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (x *OrExpr) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build/constraint#OrExpr.isExpr",
+                    "documentation": {
+                      "identifier": "OrExpr.isExpr",
+                      "newPage": false,
+                      "searchKey": "constraint.OrExpr.isExpr",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x *OrExpr) isExpr()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x *OrExpr) isExpr()\n```\n\n"
                     },
                     "children": null
                   }
@@ -808,7 +791,9 @@
                 "identifier": "SyntaxError",
                 "newPage": false,
                 "searchKey": "constraint.SyntaxError",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -826,7 +811,9 @@
                       "identifier": "SyntaxError.Error",
                       "newPage": false,
                       "searchKey": "constraint.SyntaxError.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -844,12 +831,103 @@
           },
           {
             "node": {
+              "pathID": "/go/build/constraint#TagExpr",
+              "documentation": {
+                "identifier": "TagExpr",
+                "newPage": false,
+                "searchKey": "constraint.TagExpr",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TagExpr struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TagExpr struct {\n\tTag string // for example, “linux” or “cgo”\n}\n```\n\nA TagExpr is an Expr for the single tag Tag. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/go/build/constraint#TagExpr.Eval",
+                    "documentation": {
+                      "identifier": "TagExpr.Eval",
+                      "newPage": false,
+                      "searchKey": "constraint.TagExpr.Eval",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x *TagExpr) Eval(ok func(tag string) bool) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x *TagExpr) Eval(ok func(tag string) bool) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build/constraint#TagExpr.String",
+                    "documentation": {
+                      "identifier": "TagExpr.String",
+                      "newPage": false,
+                      "searchKey": "constraint.TagExpr.String",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x *TagExpr) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x *TagExpr) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build/constraint#TagExpr.isExpr",
+                    "documentation": {
+                      "identifier": "TagExpr.isExpr",
+                      "newPage": false,
+                      "searchKey": "constraint.TagExpr.isExpr",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x *TagExpr) isExpr()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x *TagExpr) isExpr()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/go/build/constraint#exprParser",
               "documentation": {
                 "identifier": "exprParser",
                 "newPage": false,
                 "searchKey": "constraint.exprParser",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -864,34 +942,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/go/build/constraint#exprParser.or",
-                    "documentation": {
-                      "identifier": "exprParser.or",
-                      "newPage": false,
-                      "searchKey": "constraint.exprParser.or",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *exprParser) or() Expr"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *exprParser) or() Expr\n```\n\nor parses a sequence of || expressions. On entry, the next input token has not yet been lexed. On exit, the next input token has been lexed and is in p.tok. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/go/build/constraint#exprParser.and",
                     "documentation": {
                       "identifier": "exprParser.and",
                       "newPage": false,
                       "searchKey": "constraint.exprParser.and",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -908,34 +965,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/go/build/constraint#exprParser.not",
-                    "documentation": {
-                      "identifier": "exprParser.not",
-                      "newPage": false,
-                      "searchKey": "constraint.exprParser.not",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *exprParser) not() Expr"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *exprParser) not() Expr\n```\n\nnot parses a ! expression. On entry, the next input token has not yet been lexed. On exit, the next input token has been lexed and is in p.tok. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/go/build/constraint#exprParser.atom",
                     "documentation": {
                       "identifier": "exprParser.atom",
                       "newPage": false,
                       "searchKey": "constraint.exprParser.atom",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -958,6 +994,7 @@
                       "newPage": false,
                       "searchKey": "constraint.exprParser.lex",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -968,6 +1005,52 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (p *exprParser) lex()\n```\n\nlex finds and consumes the next token in the input stream. On return, p.tok is set to the token text, p.isTag reports whether the token was a tag, and p.pos records the byte offset of the start of the token in the input stream. If lex reaches the end of the input, p.tok is set to the empty string. For any other syntax error, lex panics with a SyntaxError. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build/constraint#exprParser.not",
+                    "documentation": {
+                      "identifier": "exprParser.not",
+                      "newPage": false,
+                      "searchKey": "constraint.exprParser.not",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *exprParser) not() Expr"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *exprParser) not() Expr\n```\n\nnot parses a ! expression. On entry, the next input token has not yet been lexed. On exit, the next input token has been lexed and is in p.tok. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build/constraint#exprParser.or",
+                    "documentation": {
+                      "identifier": "exprParser.or",
+                      "newPage": false,
+                      "searchKey": "constraint.exprParser.or",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *exprParser) or() Expr"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *exprParser) or() Expr\n```\n\nor parses a sequence of || expressions. On entry, the next input token has not yet been lexed. On exit, the next input token has been lexed and is in p.tok. \n\n"
                     },
                     "children": null
                   }
@@ -985,7 +1068,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -998,12 +1083,271 @@
         "children": [
           {
             "node": {
+              "pathID": "/go/build/constraint#IsGoBuild",
+              "documentation": {
+                "identifier": "IsGoBuild",
+                "newPage": false,
+                "searchKey": "constraint.IsGoBuild",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsGoBuild(line string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsGoBuild(line string) bool\n```\n\nIsGoBuild reports whether the line of text is a “//go:build” constraint. It only checks the prefix of the text, not that the expression itself parses. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build/constraint#IsPlusBuild",
+              "documentation": {
+                "identifier": "IsPlusBuild",
+                "newPage": false,
+                "searchKey": "constraint.IsPlusBuild",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsPlusBuild(line string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsPlusBuild(line string) bool\n```\n\nIsPlusBuild reports whether the line of text is a “// +build” constraint. It only checks the prefix of the text, not that the expression itself parses. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build/constraint#PlusBuildLines",
+              "documentation": {
+                "identifier": "PlusBuildLines",
+                "newPage": false,
+                "searchKey": "constraint.PlusBuildLines",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func PlusBuildLines(x Expr) ([]string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc PlusBuildLines(x Expr) ([]string, error)\n```\n\nPlusBuildLines returns a sequence of “// +build” lines that evaluate to the build expression x. If the expression is too complex to convert directly to “// +build” lines, PlusBuildLines returns an error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build/constraint#TestExprEval",
+              "documentation": {
+                "identifier": "TestExprEval",
+                "newPage": false,
+                "searchKey": "constraint.TestExprEval",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExprEval(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExprEval(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build/constraint#TestExprString",
+              "documentation": {
+                "identifier": "TestExprString",
+                "newPage": false,
+                "searchKey": "constraint.TestExprString",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExprString(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExprString(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build/constraint#TestLex",
+              "documentation": {
+                "identifier": "TestLex",
+                "newPage": false,
+                "searchKey": "constraint.TestLex",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLex(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLex(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build/constraint#TestParse",
+              "documentation": {
+                "identifier": "TestParse",
+                "newPage": false,
+                "searchKey": "constraint.TestParse",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParse(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParse(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build/constraint#TestParseError",
+              "documentation": {
+                "identifier": "TestParseError",
+                "newPage": false,
+                "searchKey": "constraint.TestParseError",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build/constraint#TestParseExpr",
+              "documentation": {
+                "identifier": "TestParseExpr",
+                "newPage": false,
+                "searchKey": "constraint.TestParseExpr",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseExpr(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseExpr(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build/constraint#TestParsePlusBuildExpr",
+              "documentation": {
+                "identifier": "TestParsePlusBuildExpr",
+                "newPage": false,
+                "searchKey": "constraint.TestParsePlusBuildExpr",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParsePlusBuildExpr(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParsePlusBuildExpr(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build/constraint#TestPlusBuildLines",
+              "documentation": {
+                "identifier": "TestPlusBuildLines",
+                "newPage": false,
+                "searchKey": "constraint.TestPlusBuildLines",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPlusBuildLines(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPlusBuildLines(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/go/build/constraint#andArg",
               "documentation": {
                 "identifier": "andArg",
                 "newPage": false,
                 "searchKey": "constraint.andArg",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1020,160 +1364,13 @@
           },
           {
             "node": {
-              "pathID": "/go/build/constraint#orArg",
-              "documentation": {
-                "identifier": "orArg",
-                "newPage": false,
-                "searchKey": "constraint.orArg",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func orArg(x Expr) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc orArg(x Expr) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/build/constraint#IsGoBuild",
-              "documentation": {
-                "identifier": "IsGoBuild",
-                "newPage": false,
-                "searchKey": "constraint.IsGoBuild",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IsGoBuild(line string) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IsGoBuild(line string) bool\n```\n\nIsGoBuild reports whether the line of text is a “//go:build” constraint. It only checks the prefix of the text, not that the expression itself parses. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/build/constraint#splitGoBuild",
-              "documentation": {
-                "identifier": "splitGoBuild",
-                "newPage": false,
-                "searchKey": "constraint.splitGoBuild",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func splitGoBuild(line string) (expr string, ok bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc splitGoBuild(line string) (expr string, ok bool)\n```\n\nsplitGoBuild splits apart the leading //go:build prefix in line from the build expression itself. It returns \"\", false if the input is not a //go:build line or if the input contains multiple lines. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/build/constraint#IsPlusBuild",
-              "documentation": {
-                "identifier": "IsPlusBuild",
-                "newPage": false,
-                "searchKey": "constraint.IsPlusBuild",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IsPlusBuild(line string) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IsPlusBuild(line string) bool\n```\n\nIsPlusBuild reports whether the line of text is a “// +build” constraint. It only checks the prefix of the text, not that the expression itself parses. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/build/constraint#splitPlusBuild",
-              "documentation": {
-                "identifier": "splitPlusBuild",
-                "newPage": false,
-                "searchKey": "constraint.splitPlusBuild",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func splitPlusBuild(line string) (expr string, ok bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc splitPlusBuild(line string) (expr string, ok bool)\n```\n\nsplitPlusBuild splits apart the leading // +build prefix in line from the build expression itself. It returns \"\", false if the input is not a // +build line or if the input contains multiple lines. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/build/constraint#isValidTag",
-              "documentation": {
-                "identifier": "isValidTag",
-                "newPage": false,
-                "searchKey": "constraint.isValidTag",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func isValidTag(word string) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc isValidTag(word string) bool\n```\n\nisValidTag reports whether the word is a valid build tag. Tags must be letters, digits, underscores or dots. Unlike in Go identifiers, all digits are fine (e.g., \"386\"). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/build/constraint#PlusBuildLines",
-              "documentation": {
-                "identifier": "PlusBuildLines",
-                "newPage": false,
-                "searchKey": "constraint.PlusBuildLines",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func PlusBuildLines(x Expr) ([]string, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc PlusBuildLines(x Expr) ([]string, error)\n```\n\nPlusBuildLines returns a sequence of “// +build” lines that evaluate to the build expression x. If the expression is too complex to convert directly to “// +build” lines, PlusBuildLines returns an error. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/build/constraint#appendSplitAnd",
               "documentation": {
                 "identifier": "appendSplitAnd",
                 "newPage": false,
                 "searchKey": "constraint.appendSplitAnd",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1196,6 +1393,7 @@
                 "newPage": false,
                 "searchKey": "constraint.appendSplitOr",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1212,44 +1410,23 @@
           },
           {
             "node": {
-              "pathID": "/go/build/constraint#TestExprString",
+              "pathID": "/go/build/constraint#isValidTag",
               "documentation": {
-                "identifier": "TestExprString",
+                "identifier": "isValidTag",
                 "newPage": false,
-                "searchKey": "constraint.TestExprString",
+                "searchKey": "constraint.isValidTag",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestExprString(t *testing.T)"
+                "value": "func isValidTag(word string) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestExprString(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/build/constraint#TestLex",
-              "documentation": {
-                "identifier": "TestLex",
-                "newPage": false,
-                "searchKey": "constraint.TestLex",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestLex(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestLex(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc isValidTag(word string) bool\n```\n\nisValidTag reports whether the word is a valid build tag. Tags must be letters, digits, underscores or dots. Unlike in Go identifiers, all digits are fine (e.g., \"386\"). \n\n"
               },
               "children": null
             }
@@ -1262,6 +1439,7 @@
                 "newPage": false,
                 "searchKey": "constraint.lexHelp",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1278,132 +1456,69 @@
           },
           {
             "node": {
-              "pathID": "/go/build/constraint#TestParseExpr",
+              "pathID": "/go/build/constraint#orArg",
               "documentation": {
-                "identifier": "TestParseExpr",
+                "identifier": "orArg",
                 "newPage": false,
-                "searchKey": "constraint.TestParseExpr",
+                "searchKey": "constraint.orArg",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestParseExpr(t *testing.T)"
+                "value": "func orArg(x Expr) string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestParseExpr(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc orArg(x Expr) string\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/build/constraint#TestParseError",
+              "pathID": "/go/build/constraint#splitGoBuild",
               "documentation": {
-                "identifier": "TestParseError",
+                "identifier": "splitGoBuild",
                 "newPage": false,
-                "searchKey": "constraint.TestParseError",
+                "searchKey": "constraint.splitGoBuild",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestParseError(t *testing.T)"
+                "value": "func splitGoBuild(line string) (expr string, ok bool)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestParseError(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc splitGoBuild(line string) (expr string, ok bool)\n```\n\nsplitGoBuild splits apart the leading //go:build prefix in line from the build expression itself. It returns \"\", false if the input is not a //go:build line or if the input contains multiple lines. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/build/constraint#TestExprEval",
+              "pathID": "/go/build/constraint#splitPlusBuild",
               "documentation": {
-                "identifier": "TestExprEval",
+                "identifier": "splitPlusBuild",
                 "newPage": false,
-                "searchKey": "constraint.TestExprEval",
+                "searchKey": "constraint.splitPlusBuild",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestExprEval(t *testing.T)"
+                "value": "func splitPlusBuild(line string) (expr string, ok bool)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestExprEval(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/build/constraint#TestParsePlusBuildExpr",
-              "documentation": {
-                "identifier": "TestParsePlusBuildExpr",
-                "newPage": false,
-                "searchKey": "constraint.TestParsePlusBuildExpr",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestParsePlusBuildExpr(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestParsePlusBuildExpr(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/build/constraint#TestParse",
-              "documentation": {
-                "identifier": "TestParse",
-                "newPage": false,
-                "searchKey": "constraint.TestParse",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestParse(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestParse(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/build/constraint#TestPlusBuildLines",
-              "documentation": {
-                "identifier": "TestPlusBuildLines",
-                "newPage": false,
-                "searchKey": "constraint.TestPlusBuildLines",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestPlusBuildLines(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestPlusBuildLines(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc splitPlusBuild(line string) (expr string, ok bool)\n```\n\nsplitPlusBuild splits apart the leading // +build prefix in line from the build expression itself. It returns \"\", false if the input is not a // +build line or if the input contains multiple lines. \n\n"
               },
               "children": null
             }

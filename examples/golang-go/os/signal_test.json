@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "os/signal_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,7 @@
                 "newPage": false,
                 "searchKey": "signal_test.ExampleNotify",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -61,34 +64,13 @@
           },
           {
             "node": {
-              "pathID": "/os/signal_test#ExampleNotify_allSignals",
-              "documentation": {
-                "identifier": "ExampleNotify_allSignals",
-                "newPage": false,
-                "searchKey": "signal_test.ExampleNotify_allSignals",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleNotify_allSignals()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleNotify_allSignals()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/os/signal_test#ExampleNotifyContext",
               "documentation": {
                 "identifier": "ExampleNotifyContext",
                 "newPage": false,
                 "searchKey": "signal_test.ExampleNotifyContext",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -105,13 +87,38 @@
           },
           {
             "node": {
+              "pathID": "/os/signal_test#ExampleNotify_allSignals",
+              "documentation": {
+                "identifier": "ExampleNotify_allSignals",
+                "newPage": false,
+                "searchKey": "signal_test.ExampleNotify_allSignals",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleNotify_allSignals()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleNotify_allSignals()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/os/signal_test#TestTerminalSignal",
               "documentation": {
                 "identifier": "TestTerminalSignal",
                 "newPage": false,
                 "searchKey": "signal_test.TestTerminalSignal",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {

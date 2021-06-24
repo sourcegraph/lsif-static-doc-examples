@@ -3,57 +3,24 @@
 ## Index
 
 * [Functions](#func)
-    * [func ExampleWordEncoder_Encode()](#ExampleWordEncoder_Encode)
-    * [func ExampleWordDecoder_Decode()](#ExampleWordDecoder_Decode)
-    * [func ExampleWordDecoder_DecodeHeader()](#ExampleWordDecoder_DecodeHeader)
     * [func ExampleFormatMediaType()](#ExampleFormatMediaType)
     * [func ExampleParseMediaType()](#ExampleParseMediaType)
+    * [func ExampleWordDecoder_Decode()](#ExampleWordDecoder_Decode)
+    * [func ExampleWordDecoder_DecodeHeader()](#ExampleWordDecoder_DecodeHeader)
+    * [func ExampleWordEncoder_Encode()](#ExampleWordEncoder_Encode)
 
 
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
-```
-
-### <a id="ExampleWordEncoder_Encode" href="#ExampleWordEncoder_Encode">func ExampleWordEncoder_Encode()</a>
-
-```
-searchKey: mime_test.ExampleWordEncoder_Encode
-tags: [private]
-```
-
-```Go
-func ExampleWordEncoder_Encode()
-```
-
-### <a id="ExampleWordDecoder_Decode" href="#ExampleWordDecoder_Decode">func ExampleWordDecoder_Decode()</a>
-
-```
-searchKey: mime_test.ExampleWordDecoder_Decode
-tags: [private]
-```
-
-```Go
-func ExampleWordDecoder_Decode()
-```
-
-### <a id="ExampleWordDecoder_DecodeHeader" href="#ExampleWordDecoder_DecodeHeader">func ExampleWordDecoder_DecodeHeader()</a>
-
-```
-searchKey: mime_test.ExampleWordDecoder_DecodeHeader
-tags: [private]
-```
-
-```Go
-func ExampleWordDecoder_DecodeHeader()
+tags: [package private]
 ```
 
 ### <a id="ExampleFormatMediaType" href="#ExampleFormatMediaType">func ExampleFormatMediaType()</a>
 
 ```
 searchKey: mime_test.ExampleFormatMediaType
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -64,10 +31,43 @@ func ExampleFormatMediaType()
 
 ```
 searchKey: mime_test.ExampleParseMediaType
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func ExampleParseMediaType()
+```
+
+### <a id="ExampleWordDecoder_Decode" href="#ExampleWordDecoder_Decode">func ExampleWordDecoder_Decode()</a>
+
+```
+searchKey: mime_test.ExampleWordDecoder_Decode
+tags: [function private]
+```
+
+```Go
+func ExampleWordDecoder_Decode()
+```
+
+### <a id="ExampleWordDecoder_DecodeHeader" href="#ExampleWordDecoder_DecodeHeader">func ExampleWordDecoder_DecodeHeader()</a>
+
+```
+searchKey: mime_test.ExampleWordDecoder_DecodeHeader
+tags: [function private]
+```
+
+```Go
+func ExampleWordDecoder_DecodeHeader()
+```
+
+### <a id="ExampleWordEncoder_Encode" href="#ExampleWordEncoder_Encode">func ExampleWordEncoder_Encode()</a>
+
+```
+searchKey: mime_test.ExampleWordEncoder_Encode
+tags: [function private]
+```
+
+```Go
+func ExampleWordEncoder_Encode()
 ```
 

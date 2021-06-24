@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "cmd/frontend/internal/cloneurls",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,9 @@
                 "identifier": "ReposourceCloneURLToRepoName",
                 "newPage": false,
                 "searchKey": "cloneurls.ReposourceCloneURLToRepoName",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -65,7 +69,9 @@
                 "newPage": false,
                 "searchKey": "cloneurls.TestReposourceCloneURLToRepoName",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {

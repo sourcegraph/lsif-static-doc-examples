@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/extsvc",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,12 +41,38 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/extsvc#IDParam",
+              "documentation": {
+                "identifier": "IDParam",
+                "newPage": false,
+                "searchKey": "extsvc.IDParam",
+                "tags": [
+                  "constant",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IDParam"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IDParam = \"externalServiceID\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/extsvc#KindAWSCodeCommit",
               "documentation": {
                 "identifier": "KindAWSCodeCommit",
                 "newPage": false,
                 "searchKey": "extsvc.KindAWSCodeCommit",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -59,32 +87,15 @@
           },
           {
             "node": {
-              "pathID": "/internal/extsvc#KindBitbucketServer",
-              "documentation": {
-                "identifier": "KindBitbucketServer",
-                "newPage": false,
-                "searchKey": "extsvc.KindBitbucketServer",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const KindBitbucketServer"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst KindBitbucketServer = \"BITBUCKETSERVER\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/extsvc#KindBitbucketCloud",
               "documentation": {
                 "identifier": "KindBitbucketCloud",
                 "newPage": false,
                 "searchKey": "extsvc.KindBitbucketCloud",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -99,12 +110,38 @@
           },
           {
             "node": {
+              "pathID": "/internal/extsvc#KindBitbucketServer",
+              "documentation": {
+                "identifier": "KindBitbucketServer",
+                "newPage": false,
+                "searchKey": "extsvc.KindBitbucketServer",
+                "tags": [
+                  "constant",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const KindBitbucketServer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst KindBitbucketServer = \"BITBUCKETSERVER\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/extsvc#KindGitHub",
               "documentation": {
                 "identifier": "KindGitHub",
                 "newPage": false,
                 "searchKey": "extsvc.KindGitHub",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +161,10 @@
                 "identifier": "KindGitLab",
                 "newPage": false,
                 "searchKey": "extsvc.KindGitLab",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,7 +184,10 @@
                 "identifier": "KindGitolite",
                 "newPage": false,
                 "searchKey": "extsvc.KindGitolite",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -159,12 +202,38 @@
           },
           {
             "node": {
+              "pathID": "/internal/extsvc#KindOther",
+              "documentation": {
+                "identifier": "KindOther",
+                "newPage": false,
+                "searchKey": "extsvc.KindOther",
+                "tags": [
+                  "constant",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const KindOther"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst KindOther = \"OTHER\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/extsvc#KindPerforce",
               "documentation": {
                 "identifier": "KindPerforce",
                 "newPage": false,
                 "searchKey": "extsvc.KindPerforce",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,7 +253,10 @@
                 "identifier": "KindPhabricator",
                 "newPage": false,
                 "searchKey": "extsvc.KindPhabricator",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -199,32 +271,15 @@
           },
           {
             "node": {
-              "pathID": "/internal/extsvc#KindOther",
-              "documentation": {
-                "identifier": "KindOther",
-                "newPage": false,
-                "searchKey": "extsvc.KindOther",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const KindOther"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst KindOther = \"OTHER\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/extsvc#TypeAWSCodeCommit",
               "documentation": {
                 "identifier": "TypeAWSCodeCommit",
                 "newPage": false,
                 "searchKey": "extsvc.TypeAWSCodeCommit",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -239,32 +294,15 @@
           },
           {
             "node": {
-              "pathID": "/internal/extsvc#TypeBitbucketServer",
-              "documentation": {
-                "identifier": "TypeBitbucketServer",
-                "newPage": false,
-                "searchKey": "extsvc.TypeBitbucketServer",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const TypeBitbucketServer"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst TypeBitbucketServer = \"bitbucketServer\"\n```\n\nTypeBitbucketServer is the (api.ExternalRepoSpec).ServiceType value for Bitbucket Server projects. The ServiceID value is the base URL to the Bitbucket Server instance. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/extsvc#TypeBitbucketCloud",
               "documentation": {
                 "identifier": "TypeBitbucketCloud",
                 "newPage": false,
                 "searchKey": "extsvc.TypeBitbucketCloud",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -279,12 +317,38 @@
           },
           {
             "node": {
+              "pathID": "/internal/extsvc#TypeBitbucketServer",
+              "documentation": {
+                "identifier": "TypeBitbucketServer",
+                "newPage": false,
+                "searchKey": "extsvc.TypeBitbucketServer",
+                "tags": [
+                  "constant",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TypeBitbucketServer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TypeBitbucketServer = \"bitbucketServer\"\n```\n\nTypeBitbucketServer is the (api.ExternalRepoSpec).ServiceType value for Bitbucket Server projects. The ServiceID value is the base URL to the Bitbucket Server instance. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/extsvc#TypeGitHub",
               "documentation": {
                 "identifier": "TypeGitHub",
                 "newPage": false,
                 "searchKey": "extsvc.TypeGitHub",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -304,7 +368,10 @@
                 "identifier": "TypeGitLab",
                 "newPage": false,
                 "searchKey": "extsvc.TypeGitLab",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -324,7 +391,10 @@
                 "identifier": "TypeGitolite",
                 "newPage": false,
                 "searchKey": "extsvc.TypeGitolite",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -339,12 +409,38 @@
           },
           {
             "node": {
+              "pathID": "/internal/extsvc#TypeOther",
+              "documentation": {
+                "identifier": "TypeOther",
+                "newPage": false,
+                "searchKey": "extsvc.TypeOther",
+                "tags": [
+                  "constant",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TypeOther"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TypeOther = \"other\"\n```\n\nTypeOther is the (api.ExternalRepoSpec).ServiceType value for other projects. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/extsvc#TypePerforce",
               "documentation": {
                 "identifier": "TypePerforce",
                 "newPage": false,
                 "searchKey": "extsvc.TypePerforce",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -364,7 +460,10 @@
                 "identifier": "TypePhabricator",
                 "newPage": false,
                 "searchKey": "extsvc.TypePhabricator",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -373,46 +472,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst TypePhabricator = \"phabricator\"\n```\n\nTypePhabricator is the (api.ExternalRepoSpec).ServiceType value for Phabricator projects. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc#TypeOther",
-              "documentation": {
-                "identifier": "TypeOther",
-                "newPage": false,
-                "searchKey": "extsvc.TypeOther",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const TypeOther"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst TypeOther = \"other\"\n```\n\nTypeOther is the (api.ExternalRepoSpec).ServiceType value for other projects. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc#IDParam",
-              "documentation": {
-                "identifier": "IDParam",
-                "newPage": false,
-                "searchKey": "extsvc.IDParam",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const IDParam"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst IDParam = \"externalServiceID\"\n```\n\n"
               },
               "children": null
             }
@@ -428,6 +487,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -442,32 +502,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/extsvc#GitHubDotComURL",
-              "documentation": {
-                "identifier": "GitHubDotComURL",
-                "newPage": false,
-                "searchKey": "extsvc.GitHubDotComURL",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var GitHubDotComURL"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar GitHubDotComURL = mustParseURL(\"https://github.com\")\n```\n\nKnown public code hosts and their URLs \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/extsvc#GitHubDotCom",
               "documentation": {
                 "identifier": "GitHubDotCom",
                 "newPage": false,
                 "searchKey": "extsvc.GitHubDotCom",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -482,20 +525,23 @@
           },
           {
             "node": {
-              "pathID": "/internal/extsvc#GitLabDotComURL",
+              "pathID": "/internal/extsvc#GitHubDotComURL",
               "documentation": {
-                "identifier": "GitLabDotComURL",
+                "identifier": "GitHubDotComURL",
                 "newPage": false,
-                "searchKey": "extsvc.GitLabDotComURL",
-                "tags": null
+                "searchKey": "extsvc.GitHubDotComURL",
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var GitLabDotComURL"
+                "value": "var GitHubDotComURL"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar GitLabDotComURL = mustParseURL(\"https://gitlab.com\")\n```\n\nKnown public code hosts and their URLs \n\n"
+                "value": "```Go\nvar GitHubDotComURL = mustParseURL(\"https://github.com\")\n```\n\nKnown public code hosts and their URLs \n\n"
               },
               "children": null
             }
@@ -507,7 +553,10 @@
                 "identifier": "GitLabDotCom",
                 "newPage": false,
                 "searchKey": "extsvc.GitLabDotCom",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -522,12 +571,39 @@
           },
           {
             "node": {
+              "pathID": "/internal/extsvc#GitLabDotComURL",
+              "documentation": {
+                "identifier": "GitLabDotComURL",
+                "newPage": false,
+                "searchKey": "extsvc.GitLabDotComURL",
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var GitLabDotComURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar GitLabDotComURL = mustParseURL(\"https://gitlab.com\")\n```\n\nKnown public code hosts and their URLs \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/extsvc#PublicCodeHosts",
               "documentation": {
                 "identifier": "PublicCodeHosts",
                 "newPage": false,
                 "searchKey": "extsvc.PublicCodeHosts",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -542,34 +618,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/extsvc#bbsLower",
-              "documentation": {
-                "identifier": "bbsLower",
-                "newPage": false,
-                "searchKey": "extsvc.bbsLower",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var bbsLower"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar bbsLower = strings.ToLower(TypeBitbucketServer)\n```\n\nPrecompute these for use in ParseServiceType below since the constants are mixed case \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/extsvc#bbcLower",
               "documentation": {
                 "identifier": "bbcLower",
                 "newPage": false,
                 "searchKey": "extsvc.bbcLower",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -580,6 +636,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar bbcLower = strings.ToLower(TypeBitbucketCloud)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#bbsLower",
+              "documentation": {
+                "identifier": "bbsLower",
+                "newPage": false,
+                "searchKey": "extsvc.bbsLower",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var bbsLower"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar bbsLower = strings.ToLower(TypeBitbucketServer)\n```\n\nPrecompute these for use in ParseServiceType below since the constants are mixed case \n\n"
               },
               "children": null
             }
@@ -595,6 +675,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -609,95 +690,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/extsvc#CodeHost",
-              "documentation": {
-                "identifier": "CodeHost",
-                "newPage": false,
-                "searchKey": "extsvc.CodeHost",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type CodeHost struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype CodeHost struct {\n\tServiceID   string\n\tServiceType string\n\tBaseURL     *url.URL\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/extsvc#NewCodeHost",
-                    "documentation": {
-                      "identifier": "NewCodeHost",
-                      "newPage": false,
-                      "searchKey": "extsvc.NewCodeHost",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewCodeHost(baseURL *url.URL, serviceType string) *CodeHost"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewCodeHost(baseURL *url.URL, serviceType string) *CodeHost\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/extsvc#CodeHostOf",
-                    "documentation": {
-                      "identifier": "CodeHostOf",
-                      "newPage": false,
-                      "searchKey": "extsvc.CodeHostOf",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func CodeHostOf(name api.RepoName, codehosts ...*CodeHost) *CodeHost"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc CodeHostOf(name api.RepoName, codehosts ...*CodeHost) *CodeHost\n```\n\nCodeHostOf returns the CodeHost of the given repo, if any, as determined by a common prefix between the repo name and the code hosts' URL hostname component. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc#jsonError",
-              "documentation": {
-                "identifier": "jsonError",
-                "newPage": false,
-                "searchKey": "extsvc.jsonError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type jsonError struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype jsonError struct {\n\tError string `json:\"__jsonError\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/extsvc#Account",
               "documentation": {
                 "identifier": "Account",
                 "newPage": false,
                 "searchKey": "extsvc.Account",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -712,32 +712,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/extsvc#AccountSpec",
-              "documentation": {
-                "identifier": "AccountSpec",
-                "newPage": false,
-                "searchKey": "extsvc.AccountSpec",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type AccountSpec struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype AccountSpec struct {\n\tServiceType string\n\tServiceID   string\n\tClientID    string\n\tAccountID   string\n}\n```\n\nAccountSpec specifies a user external account by its external identifier (i.e., by the identifier provided by the account's owner service), instead of by our database's serial ID. See the GraphQL API's corresponding fields in \"ExternalAccount\" for documentation. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/extsvc#AccountData",
               "documentation": {
                 "identifier": "AccountData",
                 "newPage": false,
                 "searchKey": "extsvc.AccountData",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -750,52 +732,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/extsvc#AccountData.SetAccountData",
-                    "documentation": {
-                      "identifier": "AccountData.SetAccountData",
-                      "newPage": false,
-                      "searchKey": "extsvc.AccountData.SetAccountData",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *AccountData) SetAccountData(v interface{})"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *AccountData) SetAccountData(v interface{})\n```\n\nSetAccountData sets the Data field to the (JSON-encoded) value. If an error occurs during JSON encoding, a JSON object describing the error is written to the field, instead. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/extsvc#AccountData.SetAuthData",
-                    "documentation": {
-                      "identifier": "AccountData.SetAuthData",
-                      "newPage": false,
-                      "searchKey": "extsvc.AccountData.SetAuthData",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *AccountData) SetAuthData(v interface{})"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *AccountData) SetAuthData(v interface{})\n```\n\nSetAuthData sets the AuthData field to the (JSON-encoded) value. If an error occurs during JSON encoding, a JSON object describing the error is written to the field, instead. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/extsvc#AccountData.GetAccountData",
                     "documentation": {
                       "identifier": "AccountData.GetAccountData",
                       "newPage": false,
                       "searchKey": "extsvc.AccountData.GetAccountData",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -815,7 +759,9 @@
                       "identifier": "AccountData.GetAuthData",
                       "newPage": false,
                       "searchKey": "extsvc.AccountData.GetAuthData",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -827,26 +773,94 @@
                     },
                     "children": null
                   }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc#AccountData.SetAccountData",
+                    "documentation": {
+                      "identifier": "AccountData.SetAccountData",
+                      "newPage": false,
+                      "searchKey": "extsvc.AccountData.SetAccountData",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *AccountData) SetAccountData(v interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *AccountData) SetAccountData(v interface{})\n```\n\nSetAccountData sets the Data field to the (JSON-encoded) value. If an error occurs during JSON encoding, a JSON object describing the error is written to the field, instead. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc#AccountData.SetAuthData",
+                    "documentation": {
+                      "identifier": "AccountData.SetAuthData",
+                      "newPage": false,
+                      "searchKey": "extsvc.AccountData.SetAuthData",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *AccountData) SetAuthData(v interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *AccountData) SetAuthData(v interface{})\n```\n\nSetAuthData sets the AuthData field to the (JSON-encoded) value. If an error occurs during JSON encoding, a JSON object describing the error is written to the field, instead. \n\n"
+                    },
+                    "children": null
+                  }
                 }
               ]
             }
           },
           {
             "node": {
-              "pathID": "/internal/extsvc#Repository",
+              "pathID": "/internal/extsvc#AccountID",
               "documentation": {
-                "identifier": "Repository",
+                "identifier": "AccountID",
                 "newPage": false,
-                "searchKey": "extsvc.Repository",
-                "tags": null
+                "searchKey": "extsvc.AccountID",
+                "tags": [
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type Repository struct"
+                "value": "type AccountID string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype Repository struct {\n\t// URI is the full name for this repository, e.g. \"github.com/user/repo\".\n\tURI string\n\tapi.ExternalRepoSpec\n}\n```\n\nRepository contains necessary information to identify an external repository on the code host. \n\n"
+                "value": "```Go\ntype AccountID string\n```\n\nAccountID is a descriptive type for the external identifier of an external account on the code host. It can be the string representation of an integer (e.g. GitLab), a GraphQL ID (e.g. GitHub), or a username (e.g. Bitbucket Server) depends on the code host type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#AccountSpec",
+              "documentation": {
+                "identifier": "AccountSpec",
+                "newPage": false,
+                "searchKey": "extsvc.AccountSpec",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AccountSpec struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AccountSpec struct {\n\tServiceType string\n\tServiceID   string\n\tClientID    string\n\tAccountID   string\n}\n```\n\nAccountSpec specifies a user external account by its external identifier (i.e., by the identifier provided by the account's owner service), instead of by our database's serial ID. See the GraphQL API's corresponding fields in \"ExternalAccount\" for documentation. \n\n"
               },
               "children": null
             }
@@ -858,7 +872,9 @@
                 "identifier": "Accounts",
                 "newPage": false,
                 "searchKey": "extsvc.Accounts",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -876,7 +892,9 @@
                       "identifier": "Accounts.TracingFields",
                       "newPage": false,
                       "searchKey": "extsvc.Accounts.TracingFields",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -894,118 +912,64 @@
           },
           {
             "node": {
-              "pathID": "/internal/extsvc#AccountID",
+              "pathID": "/internal/extsvc#CodeHost",
               "documentation": {
-                "identifier": "AccountID",
+                "identifier": "CodeHost",
                 "newPage": false,
-                "searchKey": "extsvc.AccountID",
-                "tags": null
+                "searchKey": "extsvc.CodeHost",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type AccountID string"
+                "value": "type CodeHost struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype AccountID string\n```\n\nAccountID is a descriptive type for the external identifier of an external account on the code host. It can be the string representation of an integer (e.g. GitLab), a GraphQL ID (e.g. GitHub), or a username (e.g. Bitbucket Server) depends on the code host type. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc#RepoID",
-              "documentation": {
-                "identifier": "RepoID",
-                "newPage": false,
-                "searchKey": "extsvc.RepoID",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RepoID string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RepoID string\n```\n\nRepoID is a descriptive type for the external identifier of an external repository on the code host. It can be the string representation of an integer (e.g. GitLab and Bitbucket Server) or a GraphQL ID (e.g. GitHub) depends on the code host type. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc#RepoIDType",
-              "documentation": {
-                "identifier": "RepoIDType",
-                "newPage": false,
-                "searchKey": "extsvc.RepoIDType",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RepoIDType string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RepoIDType string\n```\n\nRepoIDType indicates the type of the RepoID. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc#RateLimitConfig",
-              "documentation": {
-                "identifier": "RateLimitConfig",
-                "newPage": false,
-                "searchKey": "extsvc.RateLimitConfig",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RateLimitConfig struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RateLimitConfig struct {\n\tBaseURL     string\n\tDisplayName string\n\tLimit       rate.Limit\n\tIsDefault   bool\n}\n```\n\nRateLimitConfig represents the internal rate limit configured for an external service \n\n"
+                "value": "```Go\ntype CodeHost struct {\n\tServiceID   string\n\tServiceType string\n\tBaseURL     *url.URL\n}\n```\n\n"
               },
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/extsvc#ExtractRateLimitConfig",
+                    "pathID": "/internal/extsvc#CodeHostOf",
                     "documentation": {
-                      "identifier": "ExtractRateLimitConfig",
+                      "identifier": "CodeHostOf",
                       "newPage": false,
-                      "searchKey": "extsvc.ExtractRateLimitConfig",
-                      "tags": null
+                      "searchKey": "extsvc.CodeHostOf",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func ExtractRateLimitConfig(config, kind, displayName string) (RateLimitConfig, error)"
+                      "value": "func CodeHostOf(name api.RepoName, codehosts ...*CodeHost) *CodeHost"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc ExtractRateLimitConfig(config, kind, displayName string) (RateLimitConfig, error)\n```\n\nExtractRateLimitConfig extracts the rate limit config from the given args. If rate limiting is not supported the error returned will be an ErrRateLimitUnsupported. \n\n"
+                      "value": "```Go\nfunc CodeHostOf(name api.RepoName, codehosts ...*CodeHost) *CodeHost\n```\n\nCodeHostOf returns the CodeHost of the given repo, if any, as determined by a common prefix between the repo name and the code hosts' URL hostname component. \n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/internal/extsvc#GetLimitFromConfig",
+                    "pathID": "/internal/extsvc#NewCodeHost",
                     "documentation": {
-                      "identifier": "GetLimitFromConfig",
+                      "identifier": "NewCodeHost",
                       "newPage": false,
-                      "searchKey": "extsvc.GetLimitFromConfig",
-                      "tags": null
+                      "searchKey": "extsvc.NewCodeHost",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func GetLimitFromConfig(kind string, config interface{}) (rlc RateLimitConfig, err error)"
+                      "value": "func NewCodeHost(baseURL *url.URL, serviceType string) *CodeHost"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc GetLimitFromConfig(kind string, config interface{}) (rlc RateLimitConfig, err error)\n```\n\nGetLimitFromConfig gets RateLimitConfig from an already parsed config schema. \n\n"
+                      "value": "```Go\nfunc NewCodeHost(baseURL *url.URL, serviceType string) *CodeHost\n```\n\n"
                     },
                     "children": null
                   }
@@ -1020,7 +984,9 @@
                 "identifier": "ErrRateLimitUnsupported",
                 "newPage": false,
                 "searchKey": "extsvc.ErrRateLimitUnsupported",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1038,7 +1004,9 @@
                       "identifier": "ErrRateLimitUnsupported.Error",
                       "newPage": false,
                       "searchKey": "extsvc.ErrRateLimitUnsupported.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1061,7 +1029,9 @@
                 "identifier": "OtherRepoMetadata",
                 "newPage": false,
                 "searchKey": "extsvc.OtherRepoMetadata",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1070,6 +1040,162 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\ntype OtherRepoMetadata struct {\n\t// RelativePath is relative to ServiceID which is usually the host URL.\n\t// Joining them gives you the clone url.\n\tRelativePath string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#RateLimitConfig",
+              "documentation": {
+                "identifier": "RateLimitConfig",
+                "newPage": false,
+                "searchKey": "extsvc.RateLimitConfig",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RateLimitConfig struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RateLimitConfig struct {\n\tBaseURL     string\n\tDisplayName string\n\tLimit       rate.Limit\n\tIsDefault   bool\n}\n```\n\nRateLimitConfig represents the internal rate limit configured for an external service \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc#ExtractRateLimitConfig",
+                    "documentation": {
+                      "identifier": "ExtractRateLimitConfig",
+                      "newPage": false,
+                      "searchKey": "extsvc.ExtractRateLimitConfig",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ExtractRateLimitConfig(config, kind, displayName string) (RateLimitConfig, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ExtractRateLimitConfig(config, kind, displayName string) (RateLimitConfig, error)\n```\n\nExtractRateLimitConfig extracts the rate limit config from the given args. If rate limiting is not supported the error returned will be an ErrRateLimitUnsupported. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc#GetLimitFromConfig",
+                    "documentation": {
+                      "identifier": "GetLimitFromConfig",
+                      "newPage": false,
+                      "searchKey": "extsvc.GetLimitFromConfig",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func GetLimitFromConfig(kind string, config interface{}) (rlc RateLimitConfig, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc GetLimitFromConfig(kind string, config interface{}) (rlc RateLimitConfig, err error)\n```\n\nGetLimitFromConfig gets RateLimitConfig from an already parsed config schema. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#RepoID",
+              "documentation": {
+                "identifier": "RepoID",
+                "newPage": false,
+                "searchKey": "extsvc.RepoID",
+                "tags": [
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoID string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoID string\n```\n\nRepoID is a descriptive type for the external identifier of an external repository on the code host. It can be the string representation of an integer (e.g. GitLab and Bitbucket Server) or a GraphQL ID (e.g. GitHub) depends on the code host type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#RepoIDType",
+              "documentation": {
+                "identifier": "RepoIDType",
+                "newPage": false,
+                "searchKey": "extsvc.RepoIDType",
+                "tags": [
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoIDType string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoIDType string\n```\n\nRepoIDType indicates the type of the RepoID. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#Repository",
+              "documentation": {
+                "identifier": "Repository",
+                "newPage": false,
+                "searchKey": "extsvc.Repository",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Repository struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Repository struct {\n\t// URI is the full name for this repository, e.g. \"github.com/user/repo\".\n\tURI string\n\tapi.ExternalRepoSpec\n}\n```\n\nRepository contains necessary information to identify an external repository on the code host. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#jsonError",
+              "documentation": {
+                "identifier": "jsonError",
+                "newPage": false,
+                "searchKey": "extsvc.jsonError",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type jsonError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype jsonError struct {\n\tError string `json:\"__jsonError\"`\n}\n```\n\n"
               },
               "children": null
             }
@@ -1085,6 +1211,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -1099,20 +1226,22 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/extsvc#IsHostOfRepo",
+              "pathID": "/internal/extsvc#DecodeURN",
               "documentation": {
-                "identifier": "IsHostOfRepo",
+                "identifier": "DecodeURN",
                 "newPage": false,
-                "searchKey": "extsvc.IsHostOfRepo",
-                "tags": null
+                "searchKey": "extsvc.DecodeURN",
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func IsHostOfRepo(c *CodeHost, repo *api.ExternalRepoSpec) bool"
+                "value": "func DecodeURN(urn string) (kind string, id int64)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc IsHostOfRepo(c *CodeHost, repo *api.ExternalRepoSpec) bool\n```\n\nIsHostOfRepo returns true if the repository belongs to given code host. \n\n"
+                "value": "```Go\nfunc DecodeURN(urn string) (kind string, id int64)\n```\n\nDecodeURN returns the kind of the external service and its ID. \n\n"
               },
               "children": null
             }
@@ -1124,7 +1253,9 @@
                 "identifier": "IsHostOfAccount",
                 "newPage": false,
                 "searchKey": "extsvc.IsHostOfAccount",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1139,12 +1270,58 @@
           },
           {
             "node": {
+              "pathID": "/internal/extsvc#IsHostOfRepo",
+              "documentation": {
+                "identifier": "IsHostOfRepo",
+                "newPage": false,
+                "searchKey": "extsvc.IsHostOfRepo",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsHostOfRepo(c *CodeHost, repo *api.ExternalRepoSpec) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsHostOfRepo(c *CodeHost, repo *api.ExternalRepoSpec) bool\n```\n\nIsHostOfRepo returns true if the repository belongs to given code host. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#KindToType",
+              "documentation": {
+                "identifier": "KindToType",
+                "newPage": false,
+                "searchKey": "extsvc.KindToType",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func KindToType(kind string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc KindToType(kind string) string\n```\n\nKindToType returns a Type constants given a Kind It will panic when given an unknown kind \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/extsvc#NormalizeBaseURL",
               "documentation": {
                 "identifier": "NormalizeBaseURL",
                 "newPage": false,
                 "searchKey": "extsvc.NormalizeBaseURL",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1159,12 +1336,287 @@
           },
           {
             "node": {
+              "pathID": "/internal/extsvc#ParseConfig",
+              "documentation": {
+                "identifier": "ParseConfig",
+                "newPage": false,
+                "searchKey": "extsvc.ParseConfig",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ParseConfig(kind, config string) (cfg interface{}, _ error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ParseConfig(kind, config string) (cfg interface{}, _ error)\n```\n\nParseConfig attempts to unmarshal the given JSON config into a configuration struct defined in the schema package. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#ParseServiceKind",
+              "documentation": {
+                "identifier": "ParseServiceKind",
+                "newPage": false,
+                "searchKey": "extsvc.ParseServiceKind",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ParseServiceKind(s string) (string, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ParseServiceKind(s string) (string, bool)\n```\n\nParseServiceKind will return a ServiceKind constant after doing a case insensitive match on s. It returns (\"\", false) if no match was found. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#ParseServiceType",
+              "documentation": {
+                "identifier": "ParseServiceType",
+                "newPage": false,
+                "searchKey": "extsvc.ParseServiceType",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ParseServiceType(s string) (string, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ParseServiceType(s string) (string, bool)\n```\n\nParseServiceType will return a ServiceType constant after doing a case insensitive match on s. It returns (\"\", false) if no match was found. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#TestCodeHostOf",
+              "documentation": {
+                "identifier": "TestCodeHostOf",
+                "newPage": false,
+                "searchKey": "extsvc.TestCodeHostOf",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCodeHostOf(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCodeHostOf(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#TestDecodeURN",
+              "documentation": {
+                "identifier": "TestDecodeURN",
+                "newPage": false,
+                "searchKey": "extsvc.TestDecodeURN",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecodeURN(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecodeURN(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#TestEncodeURN",
+              "documentation": {
+                "identifier": "TestEncodeURN",
+                "newPage": false,
+                "searchKey": "extsvc.TestEncodeURN",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncodeURN(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncodeURN(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#TestExtractRateLimitConfig",
+              "documentation": {
+                "identifier": "TestExtractRateLimitConfig",
+                "newPage": false,
+                "searchKey": "extsvc.TestExtractRateLimitConfig",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExtractRateLimitConfig(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExtractRateLimitConfig(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#TypeToKind",
+              "documentation": {
+                "identifier": "TypeToKind",
+                "newPage": false,
+                "searchKey": "extsvc.TypeToKind",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TypeToKind(t string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TypeToKind(t string) string\n```\n\nTypeToKind returns a Kind constants given a Type It will panic when given an unknown type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#URN",
+              "documentation": {
+                "identifier": "URN",
+                "newPage": false,
+                "searchKey": "extsvc.URN",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func URN(kind string, id int64) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc URN(kind string, id int64) string\n```\n\nURN returns a unique resource identifier of an external service by given kind and ID. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#WebhookURL",
+              "documentation": {
+                "identifier": "WebhookURL",
+                "newPage": false,
+                "searchKey": "extsvc.WebhookURL",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WebhookURL(kind string, externalServiceID int64, externalURL string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WebhookURL(kind string, externalServiceID int64, externalURL string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#getJSONOrError",
+              "documentation": {
+                "identifier": "getJSONOrError",
+                "newPage": false,
+                "searchKey": "extsvc.getJSONOrError",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getJSONOrError(field *json.RawMessage, v interface{}) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getJSONOrError(field *json.RawMessage, v interface{}) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#limitOrInf",
+              "documentation": {
+                "identifier": "limitOrInf",
+                "newPage": false,
+                "searchKey": "extsvc.limitOrInf",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func limitOrInf(enabled bool, perHour float64) rate.Limit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc limitOrInf(enabled bool, perHour float64) rate.Limit\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/extsvc#mustParseURL",
               "documentation": {
                 "identifier": "mustParseURL",
                 "newPage": false,
                 "searchKey": "extsvc.mustParseURL",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1187,6 +1639,7 @@
                 "newPage": false,
                 "searchKey": "extsvc.setJSONOrError",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1197,298 +1650,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc setJSONOrError(field **json.RawMessage, value interface{})\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc#getJSONOrError",
-              "documentation": {
-                "identifier": "getJSONOrError",
-                "newPage": false,
-                "searchKey": "extsvc.getJSONOrError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func getJSONOrError(field *json.RawMessage, v interface{}) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc getJSONOrError(field *json.RawMessage, v interface{}) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc#KindToType",
-              "documentation": {
-                "identifier": "KindToType",
-                "newPage": false,
-                "searchKey": "extsvc.KindToType",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func KindToType(kind string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc KindToType(kind string) string\n```\n\nKindToType returns a Type constants given a Kind It will panic when given an unknown kind \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc#TypeToKind",
-              "documentation": {
-                "identifier": "TypeToKind",
-                "newPage": false,
-                "searchKey": "extsvc.TypeToKind",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TypeToKind(t string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TypeToKind(t string) string\n```\n\nTypeToKind returns a Kind constants given a Type It will panic when given an unknown type. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc#ParseServiceType",
-              "documentation": {
-                "identifier": "ParseServiceType",
-                "newPage": false,
-                "searchKey": "extsvc.ParseServiceType",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ParseServiceType(s string) (string, bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ParseServiceType(s string) (string, bool)\n```\n\nParseServiceType will return a ServiceType constant after doing a case insensitive match on s. It returns (\"\", false) if no match was found. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc#ParseServiceKind",
-              "documentation": {
-                "identifier": "ParseServiceKind",
-                "newPage": false,
-                "searchKey": "extsvc.ParseServiceKind",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ParseServiceKind(s string) (string, bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ParseServiceKind(s string) (string, bool)\n```\n\nParseServiceKind will return a ServiceKind constant after doing a case insensitive match on s. It returns (\"\", false) if no match was found. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc#ParseConfig",
-              "documentation": {
-                "identifier": "ParseConfig",
-                "newPage": false,
-                "searchKey": "extsvc.ParseConfig",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ParseConfig(kind, config string) (cfg interface{}, _ error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ParseConfig(kind, config string) (cfg interface{}, _ error)\n```\n\nParseConfig attempts to unmarshal the given JSON config into a configuration struct defined in the schema package. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc#WebhookURL",
-              "documentation": {
-                "identifier": "WebhookURL",
-                "newPage": false,
-                "searchKey": "extsvc.WebhookURL",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func WebhookURL(kind string, externalServiceID int64, externalURL string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc WebhookURL(kind string, externalServiceID int64, externalURL string) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc#limitOrInf",
-              "documentation": {
-                "identifier": "limitOrInf",
-                "newPage": false,
-                "searchKey": "extsvc.limitOrInf",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func limitOrInf(enabled bool, perHour float64) rate.Limit"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc limitOrInf(enabled bool, perHour float64) rate.Limit\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc#URN",
-              "documentation": {
-                "identifier": "URN",
-                "newPage": false,
-                "searchKey": "extsvc.URN",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func URN(kind string, id int64) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc URN(kind string, id int64) string\n```\n\nURN returns a unique resource identifier of an external service by given kind and ID. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc#DecodeURN",
-              "documentation": {
-                "identifier": "DecodeURN",
-                "newPage": false,
-                "searchKey": "extsvc.DecodeURN",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func DecodeURN(urn string) (kind string, id int64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc DecodeURN(urn string) (kind string, id int64)\n```\n\nDecodeURN returns the kind of the external service and its ID. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc#TestCodeHostOf",
-              "documentation": {
-                "identifier": "TestCodeHostOf",
-                "newPage": false,
-                "searchKey": "extsvc.TestCodeHostOf",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCodeHostOf(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCodeHostOf(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc#TestExtractRateLimitConfig",
-              "documentation": {
-                "identifier": "TestExtractRateLimitConfig",
-                "newPage": false,
-                "searchKey": "extsvc.TestExtractRateLimitConfig",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestExtractRateLimitConfig(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestExtractRateLimitConfig(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc#TestEncodeURN",
-              "documentation": {
-                "identifier": "TestEncodeURN",
-                "newPage": false,
-                "searchKey": "extsvc.TestEncodeURN",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEncodeURN(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEncodeURN(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc#TestDecodeURN",
-              "documentation": {
-                "identifier": "TestDecodeURN",
-                "newPage": false,
-                "searchKey": "extsvc.TestDecodeURN",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDecodeURN(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDecodeURN(t *testing.T)\n```\n\n"
               },
               "children": null
             }

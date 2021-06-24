@@ -4,7 +4,9 @@
     "identifier": "httptrace",
     "newPage": true,
     "searchKey": "net/http/httptrace",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,34 +39,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/net/http/httptrace#clientEventContextKey",
-              "documentation": {
-                "identifier": "clientEventContextKey",
-                "newPage": false,
-                "searchKey": "httptrace.clientEventContextKey",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type clientEventContextKey struct{}"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype clientEventContextKey struct{}\n```\n\nunique type to prevent assignment. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/http/httptrace#ClientTrace",
               "documentation": {
                 "identifier": "ClientTrace",
                 "newPage": false,
                 "searchKey": "httptrace.ClientTrace",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +64,9 @@
                       "identifier": "ContextClientTrace",
                       "newPage": false,
                       "searchKey": "httptrace.ContextClientTrace",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -101,6 +87,7 @@
                       "newPage": false,
                       "searchKey": "httptrace.ClientTrace.compose",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -123,6 +110,7 @@
                       "newPage": false,
                       "searchKey": "httptrace.ClientTrace.hasNetHooks",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -142,52 +130,14 @@
           },
           {
             "node": {
-              "pathID": "/net/http/httptrace#WroteRequestInfo",
-              "documentation": {
-                "identifier": "WroteRequestInfo",
-                "newPage": false,
-                "searchKey": "httptrace.WroteRequestInfo",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type WroteRequestInfo struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype WroteRequestInfo struct {\n\t// Err is any error encountered while writing the Request.\n\tErr error\n}\n```\n\nWroteRequestInfo contains information provided to the WroteRequest hook. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httptrace#DNSStartInfo",
-              "documentation": {
-                "identifier": "DNSStartInfo",
-                "newPage": false,
-                "searchKey": "httptrace.DNSStartInfo",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type DNSStartInfo struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype DNSStartInfo struct {\n\tHost string\n}\n```\n\nDNSStartInfo contains information about a DNS request. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/http/httptrace#DNSDoneInfo",
               "documentation": {
                 "identifier": "DNSDoneInfo",
                 "newPage": false,
                 "searchKey": "httptrace.DNSDoneInfo",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -202,12 +152,36 @@
           },
           {
             "node": {
+              "pathID": "/net/http/httptrace#DNSStartInfo",
+              "documentation": {
+                "identifier": "DNSStartInfo",
+                "newPage": false,
+                "searchKey": "httptrace.DNSStartInfo",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DNSStartInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DNSStartInfo struct {\n\tHost string\n}\n```\n\nDNSStartInfo contains information about a DNS request. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/net/http/httptrace#GotConnInfo",
               "documentation": {
                 "identifier": "GotConnInfo",
                 "newPage": false,
                 "searchKey": "httptrace.GotConnInfo",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -216,6 +190,51 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\ntype GotConnInfo struct {\n\t// Conn is the connection that was obtained. It is owned by\n\t// the http.Transport and should not be read, written or\n\t// closed by users of ClientTrace.\n\tConn net.Conn\n\n\t// Reused is whether this connection has been previously\n\t// used for another HTTP request.\n\tReused bool\n\n\t// WasIdle is whether this connection was obtained from an\n\t// idle pool.\n\tWasIdle bool\n\n\t// IdleTime reports how long the connection was previously\n\t// idle, if WasIdle is true.\n\tIdleTime time.Duration\n}\n```\n\nGotConnInfo is the argument to the ClientTrace.GotConn function and contains information about the obtained connection. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptrace#WroteRequestInfo",
+              "documentation": {
+                "identifier": "WroteRequestInfo",
+                "newPage": false,
+                "searchKey": "httptrace.WroteRequestInfo",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type WroteRequestInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype WroteRequestInfo struct {\n\t// Err is any error encountered while writing the Request.\n\tErr error\n}\n```\n\nWroteRequestInfo contains information provided to the WroteRequest hook. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptrace#clientEventContextKey",
+              "documentation": {
+                "identifier": "clientEventContextKey",
+                "newPage": false,
+                "searchKey": "httptrace.clientEventContextKey",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type clientEventContextKey struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype clientEventContextKey struct{}\n```\n\nunique type to prevent assignment. \n\n"
               },
               "children": null
             }
@@ -230,7 +249,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -243,20 +264,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/net/http/httptrace#WithClientTrace",
+              "pathID": "/net/http/httptrace#TestCompose",
               "documentation": {
-                "identifier": "WithClientTrace",
+                "identifier": "TestCompose",
                 "newPage": false,
-                "searchKey": "httptrace.WithClientTrace",
-                "tags": null
+                "searchKey": "httptrace.TestCompose",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func WithClientTrace(ctx context.Context, trace *ClientTrace) context.Context"
+                "value": "func TestCompose(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc WithClientTrace(ctx context.Context, trace *ClientTrace) context.Context\n```\n\nWithClientTrace returns a new context based on the provided parent ctx. HTTP client requests made with the returned context will use the provided trace hooks, in addition to any previous hooks registered with ctx. Any hooks defined in the provided trace will be called first. \n\n"
+                "value": "```Go\nfunc TestCompose(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -269,7 +294,9 @@
                 "newPage": false,
                 "searchKey": "httptrace.TestWithClientTrace",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -285,22 +312,22 @@
           },
           {
             "node": {
-              "pathID": "/net/http/httptrace#TestCompose",
+              "pathID": "/net/http/httptrace#WithClientTrace",
               "documentation": {
-                "identifier": "TestCompose",
+                "identifier": "WithClientTrace",
                 "newPage": false,
-                "searchKey": "httptrace.TestCompose",
+                "searchKey": "httptrace.WithClientTrace",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestCompose(t *testing.T)"
+                "value": "func WithClientTrace(ctx context.Context, trace *ClientTrace) context.Context"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestCompose(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc WithClientTrace(ctx context.Context, trace *ClientTrace) context.Context\n```\n\nWithClientTrace returns a new context based on the provided parent ctx. HTTP client requests made with the returned context will use the provided trace hooks, in addition to any previous hooks registered with ctx. Any hooks defined in the provided trace will be called first. \n\n"
               },
               "children": null
             }

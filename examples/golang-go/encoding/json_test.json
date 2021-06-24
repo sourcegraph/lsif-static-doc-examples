@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "encoding/json_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/encoding/json_test#Unknown",
-              "documentation": {
-                "identifier": "Unknown",
-                "newPage": false,
-                "searchKey": "json_test.Unknown",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const Unknown"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst Unknown Animal = iota\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/encoding/json_test#Gopher",
               "documentation": {
                 "identifier": "Gopher",
                 "newPage": false,
                 "searchKey": "json_test.Gopher",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -83,44 +65,24 @@
           },
           {
             "node": {
-              "pathID": "/encoding/json_test#Zebra",
+              "pathID": "/encoding/json_test#Large",
               "documentation": {
-                "identifier": "Zebra",
+                "identifier": "Large",
                 "newPage": false,
-                "searchKey": "json_test.Zebra",
+                "searchKey": "json_test.Large",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const Zebra"
+                "value": "const Large"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst Zebra\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/json_test#Unrecognized",
-              "documentation": {
-                "identifier": "Unrecognized",
-                "newPage": false,
-                "searchKey": "json_test.Unrecognized",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const Unrecognized"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst Unrecognized Size = iota\n```\n\n"
+                "value": "```Go\nconst Large\n```\n\n"
               },
               "children": null
             }
@@ -133,6 +95,8 @@
                 "newPage": false,
                 "searchKey": "json_test.Small",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -149,22 +113,72 @@
           },
           {
             "node": {
-              "pathID": "/encoding/json_test#Large",
+              "pathID": "/encoding/json_test#Unknown",
               "documentation": {
-                "identifier": "Large",
+                "identifier": "Unknown",
                 "newPage": false,
-                "searchKey": "json_test.Large",
+                "searchKey": "json_test.Unknown",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const Large"
+                "value": "const Unknown"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst Large\n```\n\n"
+                "value": "```Go\nconst Unknown Animal = iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/json_test#Unrecognized",
+              "documentation": {
+                "identifier": "Unrecognized",
+                "newPage": false,
+                "searchKey": "json_test.Unrecognized",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Unrecognized"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Unrecognized Size = iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/json_test#Zebra",
+              "documentation": {
+                "identifier": "Zebra",
+                "newPage": false,
+                "searchKey": "json_test.Zebra",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Zebra"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Zebra\n```\n\n"
               },
               "children": null
             }
@@ -180,6 +194,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -200,6 +215,7 @@
                 "newPage": false,
                 "searchKey": "json_test.Animal",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -214,34 +230,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/encoding/json_test#Animal.UnmarshalJSON",
-                    "documentation": {
-                      "identifier": "Animal.UnmarshalJSON",
-                      "newPage": false,
-                      "searchKey": "json_test.Animal.UnmarshalJSON",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (a *Animal) UnmarshalJSON(b []byte) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (a *Animal) UnmarshalJSON(b []byte) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/encoding/json_test#Animal.MarshalJSON",
                     "documentation": {
                       "identifier": "Animal.MarshalJSON",
                       "newPage": false,
                       "searchKey": "json_test.Animal.MarshalJSON",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -252,6 +247,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (a Animal) MarshalJSON() ([]byte, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/json_test#Animal.UnmarshalJSON",
+                    "documentation": {
+                      "identifier": "Animal.UnmarshalJSON",
+                      "newPage": false,
+                      "searchKey": "json_test.Animal.UnmarshalJSON",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *Animal) UnmarshalJSON(b []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *Animal) UnmarshalJSON(b []byte) error\n```\n\n"
                     },
                     "children": null
                   }
@@ -267,6 +285,7 @@
                 "newPage": false,
                 "searchKey": "json_test.Size",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -281,34 +300,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/encoding/json_test#Size.UnmarshalText",
-                    "documentation": {
-                      "identifier": "Size.UnmarshalText",
-                      "newPage": false,
-                      "searchKey": "json_test.Size.UnmarshalText",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Size) UnmarshalText(text []byte) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Size) UnmarshalText(text []byte) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/encoding/json_test#Size.MarshalText",
                     "documentation": {
                       "identifier": "Size.MarshalText",
                       "newPage": false,
                       "searchKey": "json_test.Size.MarshalText",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -319,6 +317,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (s Size) MarshalText() ([]byte, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/json_test#Size.UnmarshalText",
+                    "documentation": {
+                      "identifier": "Size.UnmarshalText",
+                      "newPage": false,
+                      "searchKey": "json_test.Size.UnmarshalText",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Size) UnmarshalText(text []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Size) UnmarshalText(text []byte) error\n```\n\n"
                     },
                     "children": null
                   }
@@ -337,6 +358,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -351,78 +373,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/encoding/json_test#Example_customMarshalJSON",
-              "documentation": {
-                "identifier": "Example_customMarshalJSON",
-                "newPage": false,
-                "searchKey": "json_test.Example_customMarshalJSON",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Example_customMarshalJSON()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Example_customMarshalJSON()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/json_test#ExampleMarshal",
-              "documentation": {
-                "identifier": "ExampleMarshal",
-                "newPage": false,
-                "searchKey": "json_test.ExampleMarshal",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleMarshal()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleMarshal()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/json_test#ExampleUnmarshal",
-              "documentation": {
-                "identifier": "ExampleUnmarshal",
-                "newPage": false,
-                "searchKey": "json_test.ExampleUnmarshal",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleUnmarshal()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleUnmarshal()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/encoding/json_test#ExampleDecoder",
               "documentation": {
                 "identifier": "ExampleDecoder",
                 "newPage": false,
                 "searchKey": "json_test.ExampleDecoder",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -439,34 +396,13 @@
           },
           {
             "node": {
-              "pathID": "/encoding/json_test#ExampleDecoder_Token",
-              "documentation": {
-                "identifier": "ExampleDecoder_Token",
-                "newPage": false,
-                "searchKey": "json_test.ExampleDecoder_Token",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleDecoder_Token()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleDecoder_Token()\n```\n\nThis example uses a Decoder to decode a stream of distinct JSON values. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/encoding/json_test#ExampleDecoder_Decode_stream",
               "documentation": {
                 "identifier": "ExampleDecoder_Decode_stream",
                 "newPage": false,
                 "searchKey": "json_test.ExampleDecoder_Decode_stream",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -483,110 +419,23 @@
           },
           {
             "node": {
-              "pathID": "/encoding/json_test#ExampleRawMessage_unmarshal",
+              "pathID": "/encoding/json_test#ExampleDecoder_Token",
               "documentation": {
-                "identifier": "ExampleRawMessage_unmarshal",
+                "identifier": "ExampleDecoder_Token",
                 "newPage": false,
-                "searchKey": "json_test.ExampleRawMessage_unmarshal",
+                "searchKey": "json_test.ExampleDecoder_Token",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func ExampleRawMessage_unmarshal()"
+                "value": "func ExampleDecoder_Token()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc ExampleRawMessage_unmarshal()\n```\n\nThis example uses RawMessage to delay parsing part of a JSON message. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/json_test#ExampleRawMessage_marshal",
-              "documentation": {
-                "identifier": "ExampleRawMessage_marshal",
-                "newPage": false,
-                "searchKey": "json_test.ExampleRawMessage_marshal",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRawMessage_marshal()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRawMessage_marshal()\n```\n\nThis example uses RawMessage to use a precomputed JSON during marshal. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/json_test#ExampleIndent",
-              "documentation": {
-                "identifier": "ExampleIndent",
-                "newPage": false,
-                "searchKey": "json_test.ExampleIndent",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleIndent()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleIndent()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/json_test#ExampleMarshalIndent",
-              "documentation": {
-                "identifier": "ExampleMarshalIndent",
-                "newPage": false,
-                "searchKey": "json_test.ExampleMarshalIndent",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleMarshalIndent()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleMarshalIndent()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/json_test#ExampleValid",
-              "documentation": {
-                "identifier": "ExampleValid",
-                "newPage": false,
-                "searchKey": "json_test.ExampleValid",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleValid()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleValid()\n```\n\n"
+                "value": "```Go\nfunc ExampleDecoder_Token()\n```\n\nThis example uses a Decoder to decode a stream of distinct JSON values. \n\n"
               },
               "children": null
             }
@@ -599,6 +448,7 @@
                 "newPage": false,
                 "searchKey": "json_test.ExampleHTMLEscape",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -615,12 +465,197 @@
           },
           {
             "node": {
+              "pathID": "/encoding/json_test#ExampleIndent",
+              "documentation": {
+                "identifier": "ExampleIndent",
+                "newPage": false,
+                "searchKey": "json_test.ExampleIndent",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleIndent()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleIndent()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/json_test#ExampleMarshal",
+              "documentation": {
+                "identifier": "ExampleMarshal",
+                "newPage": false,
+                "searchKey": "json_test.ExampleMarshal",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleMarshal()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleMarshal()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/json_test#ExampleMarshalIndent",
+              "documentation": {
+                "identifier": "ExampleMarshalIndent",
+                "newPage": false,
+                "searchKey": "json_test.ExampleMarshalIndent",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleMarshalIndent()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleMarshalIndent()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/json_test#ExampleRawMessage_marshal",
+              "documentation": {
+                "identifier": "ExampleRawMessage_marshal",
+                "newPage": false,
+                "searchKey": "json_test.ExampleRawMessage_marshal",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRawMessage_marshal()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRawMessage_marshal()\n```\n\nThis example uses RawMessage to use a precomputed JSON during marshal. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/json_test#ExampleRawMessage_unmarshal",
+              "documentation": {
+                "identifier": "ExampleRawMessage_unmarshal",
+                "newPage": false,
+                "searchKey": "json_test.ExampleRawMessage_unmarshal",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRawMessage_unmarshal()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRawMessage_unmarshal()\n```\n\nThis example uses RawMessage to delay parsing part of a JSON message. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/json_test#ExampleUnmarshal",
+              "documentation": {
+                "identifier": "ExampleUnmarshal",
+                "newPage": false,
+                "searchKey": "json_test.ExampleUnmarshal",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleUnmarshal()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleUnmarshal()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/json_test#ExampleValid",
+              "documentation": {
+                "identifier": "ExampleValid",
+                "newPage": false,
+                "searchKey": "json_test.ExampleValid",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleValid()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleValid()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/json_test#Example_customMarshalJSON",
+              "documentation": {
+                "identifier": "Example_customMarshalJSON",
+                "newPage": false,
+                "searchKey": "json_test.Example_customMarshalJSON",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_customMarshalJSON()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_customMarshalJSON()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/encoding/json_test#Example_textMarshalJSON",
               "documentation": {
                 "identifier": "Example_textMarshalJSON",
                 "newPage": false,
                 "searchKey": "json_test.Example_textMarshalJSON",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },

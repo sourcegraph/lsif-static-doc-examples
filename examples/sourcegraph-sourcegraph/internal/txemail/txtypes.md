@@ -4,20 +4,21 @@
 
 * [Types](#type)
     * [type Message struct](#Message)
-    * [type Templates struct](#Templates)
     * [type ParsedTemplates struct](#ParsedTemplates)
+    * [type Templates struct](#Templates)
 
 
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Message" href="#Message">type Message struct</a>
 
 ```
 searchKey: txtypes.Message
+tags: [struct]
 ```
 
 ```Go
@@ -35,26 +36,11 @@ type Message struct {
 
 Message describes an email message to be sent. 
 
-### <a id="Templates" href="#Templates">type Templates struct</a>
-
-```
-searchKey: txtypes.Templates
-```
-
-```Go
-type Templates struct {
-	Subject string // text/template subject template
-	Text    string // text/template text body template
-	HTML    string //  html/template HTML body template
-}
-```
-
-Templates contains the text and HTML templates for an email. 
-
 ### <a id="ParsedTemplates" href="#ParsedTemplates">type ParsedTemplates struct</a>
 
 ```
 searchKey: txtypes.ParsedTemplates
+tags: [struct]
 ```
 
 ```Go
@@ -66,4 +52,21 @@ type ParsedTemplates struct {
 ```
 
 ParsedTemplates contains parsed text and HTML email templates. 
+
+### <a id="Templates" href="#Templates">type Templates struct</a>
+
+```
+searchKey: txtypes.Templates
+tags: [struct]
+```
+
+```Go
+type Templates struct {
+	Subject string // text/template subject template
+	Text    string // text/template text body template
+	HTML    string //  html/template HTML body template
+}
+```
+
+Templates contains the text and HTML templates for an email. 
 

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/sentry",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "sentry.sentryDebug",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -84,54 +89,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/sentry#Init",
-              "documentation": {
-                "identifier": "Init",
-                "newPage": false,
-                "searchKey": "sentry.Init",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Init()\n```\n\nInit initializes the default Sentry client that uses SENTRY_DSN_BACKEND environment variable as the DSN. It then watches site configuration for any subsequent changes. SENTRY_DEBUG can be set as a boolean to print debug messages. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/sentry#captureError",
-              "documentation": {
-                "identifier": "captureError",
-                "newPage": false,
-                "searchKey": "sentry.captureError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func captureError(err error, level sentry.Level, tags map[string]string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc captureError(err error, level sentry.Level, tags map[string]string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/sentry#CaptureError",
               "documentation": {
                 "identifier": "CaptureError",
                 "newPage": false,
                 "searchKey": "sentry.CaptureError",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -151,7 +116,9 @@
                 "identifier": "CapturePanic",
                 "newPage": false,
                 "searchKey": "sentry.CapturePanic",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -166,12 +133,36 @@
           },
           {
             "node": {
+              "pathID": "/internal/sentry#Init",
+              "documentation": {
+                "identifier": "Init",
+                "newPage": false,
+                "searchKey": "sentry.Init",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Init()\n```\n\nInit initializes the default Sentry client that uses SENTRY_DSN_BACKEND environment variable as the DSN. It then watches site configuration for any subsequent changes. SENTRY_DEBUG can be set as a boolean to print debug messages. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/sentry#Recoverer",
               "documentation": {
                 "identifier": "Recoverer",
                 "newPage": false,
                 "searchKey": "sentry.Recoverer",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -180,6 +171,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc Recoverer(handler http.Handler) http.Handler\n```\n\nRecovery handler to wrap the stdlib net/http Mux. Example: \n\n```\n mux := http.NewServeMux\n ...\n\thttp.Handle(\"/\", sentry.Recoverer(mux))\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/sentry#captureError",
+              "documentation": {
+                "identifier": "captureError",
+                "newPage": false,
+                "searchKey": "sentry.captureError",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func captureError(err error, level sentry.Level, tags map[string]string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc captureError(err error, level sentry.Level, tags map[string]string)\n```\n\n"
               },
               "children": null
             }

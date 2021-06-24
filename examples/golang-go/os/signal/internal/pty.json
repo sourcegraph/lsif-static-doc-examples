@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "os/signal/internal/pty",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,9 @@
                 "identifier": "PtyError",
                 "newPage": false,
                 "searchKey": "pty.PtyError",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,6 +67,7 @@
                       "newPage": false,
                       "searchKey": "pty.ptyError",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -84,7 +89,9 @@
                       "identifier": "PtyError.Error",
                       "newPage": false,
                       "searchKey": "pty.PtyError.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -104,7 +111,9 @@
                       "identifier": "PtyError.Unwrap",
                       "newPage": false,
                       "searchKey": "pty.PtyError.Unwrap",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -131,6 +140,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -150,7 +160,9 @@
                 "identifier": "Open",
                 "newPage": false,
                 "searchKey": "pty.Open",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",

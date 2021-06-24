@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/lazyregexp",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "lazyregexp.inTest",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -89,7 +94,9 @@
                 "identifier": "Regexp",
                 "newPage": false,
                 "searchKey": "lazyregexp.Regexp",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -107,7 +114,9 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "lazyregexp.New",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -122,64 +131,44 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/lazyregexp#Regexp.re",
+                    "pathID": "/internal/lazyregexp#Regexp.FindAllString",
                     "documentation": {
-                      "identifier": "Regexp.re",
+                      "identifier": "Regexp.FindAllString",
                       "newPage": false,
-                      "searchKey": "lazyregexp.Regexp.re",
+                      "searchKey": "lazyregexp.Regexp.FindAllString",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (r *Regexp) re() *regexp.Regexp"
+                      "value": "func (r *Regexp) FindAllString(s string, n int) []string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (r *Regexp) re() *regexp.Regexp\n```\n\n"
+                      "value": "```Go\nfunc (r *Regexp) FindAllString(s string, n int) []string\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/internal/lazyregexp#Regexp.build",
+                    "pathID": "/internal/lazyregexp#Regexp.FindString",
                     "documentation": {
-                      "identifier": "Regexp.build",
+                      "identifier": "Regexp.FindString",
                       "newPage": false,
-                      "searchKey": "lazyregexp.Regexp.build",
+                      "searchKey": "lazyregexp.Regexp.FindString",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (r *Regexp) build()"
+                      "value": "func (r *Regexp) FindString(s string) string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (r *Regexp) build()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/lazyregexp#Regexp.FindSubmatch",
-                    "documentation": {
-                      "identifier": "Regexp.FindSubmatch",
-                      "newPage": false,
-                      "searchKey": "lazyregexp.Regexp.FindSubmatch",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Regexp) FindSubmatch(s []byte) [][]byte"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Regexp) FindSubmatch(s []byte) [][]byte\n```\n\n"
+                      "value": "```Go\nfunc (r *Regexp) FindString(s string) string\n```\n\n"
                     },
                     "children": null
                   }
@@ -191,7 +180,9 @@
                       "identifier": "Regexp.FindStringSubmatch",
                       "newPage": false,
                       "searchKey": "lazyregexp.Regexp.FindStringSubmatch",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -211,7 +202,9 @@
                       "identifier": "Regexp.FindStringSubmatchIndex",
                       "newPage": false,
                       "searchKey": "lazyregexp.Regexp.FindStringSubmatchIndex",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -226,60 +219,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/lazyregexp#Regexp.ReplaceAllString",
+                    "pathID": "/internal/lazyregexp#Regexp.FindSubmatch",
                     "documentation": {
-                      "identifier": "Regexp.ReplaceAllString",
+                      "identifier": "Regexp.FindSubmatch",
                       "newPage": false,
-                      "searchKey": "lazyregexp.Regexp.ReplaceAllString",
-                      "tags": null
+                      "searchKey": "lazyregexp.Regexp.FindSubmatch",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (r *Regexp) ReplaceAllString(src, repl string) string"
+                      "value": "func (r *Regexp) FindSubmatch(s []byte) [][]byte"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (r *Regexp) ReplaceAllString(src, repl string) string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/lazyregexp#Regexp.FindString",
-                    "documentation": {
-                      "identifier": "Regexp.FindString",
-                      "newPage": false,
-                      "searchKey": "lazyregexp.Regexp.FindString",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Regexp) FindString(s string) string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Regexp) FindString(s string) string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/lazyregexp#Regexp.FindAllString",
-                    "documentation": {
-                      "identifier": "Regexp.FindAllString",
-                      "newPage": false,
-                      "searchKey": "lazyregexp.Regexp.FindAllString",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Regexp) FindAllString(s string, n int) []string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Regexp) FindAllString(s string, n int) []string\n```\n\n"
+                      "value": "```Go\nfunc (r *Regexp) FindSubmatch(s []byte) [][]byte\n```\n\n"
                     },
                     "children": null
                   }
@@ -291,7 +246,9 @@
                       "identifier": "Regexp.MatchString",
                       "newPage": false,
                       "searchKey": "lazyregexp.Regexp.MatchString",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -306,12 +263,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/lazyregexp#Regexp.ReplaceAllString",
+                    "documentation": {
+                      "identifier": "Regexp.ReplaceAllString",
+                      "newPage": false,
+                      "searchKey": "lazyregexp.Regexp.ReplaceAllString",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Regexp) ReplaceAllString(src, repl string) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Regexp) ReplaceAllString(src, repl string) string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/lazyregexp#Regexp.SubexpNames",
                     "documentation": {
                       "identifier": "Regexp.SubexpNames",
                       "newPage": false,
                       "searchKey": "lazyregexp.Regexp.SubexpNames",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -320,6 +301,52 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (r *Regexp) SubexpNames() []string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/lazyregexp#Regexp.build",
+                    "documentation": {
+                      "identifier": "Regexp.build",
+                      "newPage": false,
+                      "searchKey": "lazyregexp.Regexp.build",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Regexp) build()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Regexp) build()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/lazyregexp#Regexp.re",
+                    "documentation": {
+                      "identifier": "Regexp.re",
+                      "newPage": false,
+                      "searchKey": "lazyregexp.Regexp.re",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Regexp) re() *regexp.Regexp"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Regexp) re() *regexp.Regexp\n```\n\n"
                     },
                     "children": null
                   }

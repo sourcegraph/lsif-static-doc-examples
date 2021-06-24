@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/extsvc/perforce",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,9 @@
                 "identifier": "AccountData",
                 "newPage": false,
                 "searchKey": "perforce.AccountData",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +66,9 @@
                       "identifier": "GetExternalAccountData",
                       "newPage": false,
                       "searchKey": "perforce.GetExternalAccountData",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -85,7 +91,9 @@
                 "identifier": "Depot",
                 "newPage": false,
                 "searchKey": "perforce.Depot",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",

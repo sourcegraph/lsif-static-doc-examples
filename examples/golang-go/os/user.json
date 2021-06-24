@@ -4,7 +4,9 @@
     "identifier": "user",
     "newPage": true,
     "searchKey": "os/user",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,34 +39,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/os/user#userBuffer",
-              "documentation": {
-                "identifier": "userBuffer",
-                "newPage": false,
-                "searchKey": "user.userBuffer",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const userBuffer"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst userBuffer = bufferKind((_Ciconst__SC_GETPW_R_SIZE_MAX))\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/os/user#groupBuffer",
               "documentation": {
                 "identifier": "groupBuffer",
                 "newPage": false,
                 "searchKey": "user.groupBuffer",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -85,6 +69,8 @@
                 "newPage": false,
                 "searchKey": "user.maxBufferSize",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -107,6 +93,8 @@
                 "newPage": false,
                 "searchKey": "user.maxGroups",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -117,6 +105,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst maxGroups = 2048\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/user#userBuffer",
+              "documentation": {
+                "identifier": "userBuffer",
+                "newPage": false,
+                "searchKey": "user.userBuffer",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const userBuffer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst userBuffer = bufferKind((_Ciconst__SC_GETPW_R_SIZE_MAX))\n```\n\n"
               },
               "children": null
             }
@@ -131,7 +143,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -150,6 +164,8 @@
                 "newPage": false,
                 "searchKey": "user.cache",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -166,34 +182,14 @@
           },
           {
             "node": {
-              "pathID": "/os/user#userImplemented",
-              "documentation": {
-                "identifier": "userImplemented",
-                "newPage": false,
-                "searchKey": "user.userImplemented",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var userImplemented"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar userImplemented = true // set to false by lookup_stubs.go's init\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/os/user#groupImplemented",
               "documentation": {
                 "identifier": "groupImplemented",
                 "newPage": false,
                 "searchKey": "user.groupImplemented",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
@@ -204,6 +200,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar groupImplemented = true // set to false by lookup_stubs.go's init\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/user#userImplemented",
+              "documentation": {
+                "identifier": "userImplemented",
+                "newPage": false,
+                "searchKey": "user.userImplemented",
+                "tags": [
+                  "variable",
+                  "boolean",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var userImplemented"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar userImplemented = true // set to false by lookup_stubs.go's init\n\n```\n\n"
               },
               "children": null
             }
@@ -218,7 +238,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -231,223 +253,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/os/user#User",
-              "documentation": {
-                "identifier": "User",
-                "newPage": false,
-                "searchKey": "user.User",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type User struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype User struct {\n\t// Uid is the user ID.\n\t// On POSIX systems, this is a decimal number representing the uid.\n\t// On Windows, this is a security identifier (SID) in a string format.\n\t// On Plan 9, this is the contents of /dev/user.\n\tUid string\n\t// Gid is the primary group ID.\n\t// On POSIX systems, this is a decimal number representing the gid.\n\t// On Windows, this is a SID in a string format.\n\t// On Plan 9, this is the contents of /dev/user.\n\tGid string\n\t// Username is the login name.\n\tUsername string\n\t// Name is the user's real or display name.\n\t// It might be blank.\n\t// On POSIX systems, this is the first (or only) entry in the GECOS field\n\t// list.\n\t// On Windows, this is the user's display name.\n\t// On Plan 9, this is the contents of /dev/user.\n\tName string\n\t// HomeDir is the path to the user's home directory (if they have one).\n\tHomeDir string\n}\n```\n\nUser represents a user account. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/os/user#Current",
-                    "documentation": {
-                      "identifier": "Current",
-                      "newPage": false,
-                      "searchKey": "user.Current",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func Current() (*User, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc Current() (*User, error)\n```\n\nCurrent returns the current user. \n\nThe first call will cache the current user information. Subsequent calls will return the cached value and will not reflect changes to the current user. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/os/user#Lookup",
-                    "documentation": {
-                      "identifier": "Lookup",
-                      "newPage": false,
-                      "searchKey": "user.Lookup",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func Lookup(username string) (*User, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc Lookup(username string) (*User, error)\n```\n\nLookup looks up a user by username. If the user cannot be found, the returned error is of type UnknownUserError. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/os/user#LookupId",
-                    "documentation": {
-                      "identifier": "LookupId",
-                      "newPage": false,
-                      "searchKey": "user.LookupId",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func LookupId(uid string) (*User, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc LookupId(uid string) (*User, error)\n```\n\nLookupId looks up a user by userid. If the user cannot be found, the returned error is of type UnknownUserIdError. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/os/user#current",
-                    "documentation": {
-                      "identifier": "current",
-                      "newPage": false,
-                      "searchKey": "user.current",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func current() (*User, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc current() (*User, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/os/user#lookupUser",
-                    "documentation": {
-                      "identifier": "lookupUser",
-                      "newPage": false,
-                      "searchKey": "user.lookupUser",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func lookupUser(username string) (*User, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc lookupUser(username string) (*User, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/os/user#lookupUserId",
-                    "documentation": {
-                      "identifier": "lookupUserId",
-                      "newPage": false,
-                      "searchKey": "user.lookupUserId",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func lookupUserId(uid string) (*User, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc lookupUserId(uid string) (*User, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/os/user#lookupUnixUid",
-                    "documentation": {
-                      "identifier": "lookupUnixUid",
-                      "newPage": false,
-                      "searchKey": "user.lookupUnixUid",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func lookupUnixUid(uid int) (*User, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc lookupUnixUid(uid int) (*User, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/os/user#buildUser",
-                    "documentation": {
-                      "identifier": "buildUser",
-                      "newPage": false,
-                      "searchKey": "user.buildUser",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func buildUser(pwd *_Ctype_struct_passwd) *User"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc buildUser(pwd *_Ctype_struct_passwd) *User\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/os/user#User.GroupIds",
-                    "documentation": {
-                      "identifier": "User.GroupIds",
-                      "newPage": false,
-                      "searchKey": "user.User.GroupIds",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (u *User) GroupIds() ([]string, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (u *User) GroupIds() ([]string, error)\n```\n\nGroupIds returns the list of group IDs that the user is a member of. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/os/user#Group",
               "documentation": {
                 "identifier": "Group",
                 "newPage": false,
                 "searchKey": "user.Group",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -465,7 +278,9 @@
                       "identifier": "LookupGroup",
                       "newPage": false,
                       "searchKey": "user.LookupGroup",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -485,7 +300,9 @@
                       "identifier": "LookupGroupId",
                       "newPage": false,
                       "searchKey": "user.LookupGroupId",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -500,12 +317,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/os/user#buildGroup",
+                    "documentation": {
+                      "identifier": "buildGroup",
+                      "newPage": false,
+                      "searchKey": "user.buildGroup",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func buildGroup(grp *_Ctype_struct_group) *Group"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc buildGroup(grp *_Ctype_struct_group) *Group\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/os/user#lookupGroup",
                     "documentation": {
                       "identifier": "lookupGroup",
                       "newPage": false,
                       "searchKey": "user.lookupGroup",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -528,6 +369,7 @@
                       "newPage": false,
                       "searchKey": "user.lookupGroupId",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -550,6 +392,7 @@
                       "newPage": false,
                       "searchKey": "user.lookupUnixGid",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -560,151 +403,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc lookupUnixGid(gid int) (*Group, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/os/user#buildGroup",
-                    "documentation": {
-                      "identifier": "buildGroup",
-                      "newPage": false,
-                      "searchKey": "user.buildGroup",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func buildGroup(grp *_Ctype_struct_group) *Group"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc buildGroup(grp *_Ctype_struct_group) *Group\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/os/user#UnknownUserIdError",
-              "documentation": {
-                "identifier": "UnknownUserIdError",
-                "newPage": false,
-                "searchKey": "user.UnknownUserIdError",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type UnknownUserIdError int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype UnknownUserIdError int\n```\n\nUnknownUserIdError is returned by LookupId when a user cannot be found. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/os/user#UnknownUserIdError.Error",
-                    "documentation": {
-                      "identifier": "UnknownUserIdError.Error",
-                      "newPage": false,
-                      "searchKey": "user.UnknownUserIdError.Error",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e UnknownUserIdError) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e UnknownUserIdError) Error() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/os/user#UnknownUserError",
-              "documentation": {
-                "identifier": "UnknownUserError",
-                "newPage": false,
-                "searchKey": "user.UnknownUserError",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type UnknownUserError string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype UnknownUserError string\n```\n\nUnknownUserError is returned by Lookup when a user cannot be found. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/os/user#UnknownUserError.Error",
-                    "documentation": {
-                      "identifier": "UnknownUserError.Error",
-                      "newPage": false,
-                      "searchKey": "user.UnknownUserError.Error",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e UnknownUserError) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e UnknownUserError) Error() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/os/user#UnknownGroupIdError",
-              "documentation": {
-                "identifier": "UnknownGroupIdError",
-                "newPage": false,
-                "searchKey": "user.UnknownGroupIdError",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type UnknownGroupIdError string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype UnknownGroupIdError string\n```\n\nUnknownGroupIdError is returned by LookupGroupId when a group cannot be found. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/os/user#UnknownGroupIdError.Error",
-                    "documentation": {
-                      "identifier": "UnknownGroupIdError.Error",
-                      "newPage": false,
-                      "searchKey": "user.UnknownGroupIdError.Error",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e UnknownGroupIdError) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e UnknownGroupIdError) Error() string\n```\n\n"
                     },
                     "children": null
                   }
@@ -719,7 +417,9 @@
                 "identifier": "UnknownGroupError",
                 "newPage": false,
                 "searchKey": "user.UnknownGroupError",
-                "tags": null
+                "tags": [
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -737,7 +437,9 @@
                       "identifier": "UnknownGroupError.Error",
                       "newPage": false,
                       "searchKey": "user.UnknownGroupError.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -755,12 +457,374 @@
           },
           {
             "node": {
+              "pathID": "/os/user#UnknownGroupIdError",
+              "documentation": {
+                "identifier": "UnknownGroupIdError",
+                "newPage": false,
+                "searchKey": "user.UnknownGroupIdError",
+                "tags": [
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UnknownGroupIdError string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UnknownGroupIdError string\n```\n\nUnknownGroupIdError is returned by LookupGroupId when a group cannot be found. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/os/user#UnknownGroupIdError.Error",
+                    "documentation": {
+                      "identifier": "UnknownGroupIdError.Error",
+                      "newPage": false,
+                      "searchKey": "user.UnknownGroupIdError.Error",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e UnknownGroupIdError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e UnknownGroupIdError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/user#UnknownUserError",
+              "documentation": {
+                "identifier": "UnknownUserError",
+                "newPage": false,
+                "searchKey": "user.UnknownUserError",
+                "tags": [
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UnknownUserError string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UnknownUserError string\n```\n\nUnknownUserError is returned by Lookup when a user cannot be found. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/os/user#UnknownUserError.Error",
+                    "documentation": {
+                      "identifier": "UnknownUserError.Error",
+                      "newPage": false,
+                      "searchKey": "user.UnknownUserError.Error",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e UnknownUserError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e UnknownUserError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/user#UnknownUserIdError",
+              "documentation": {
+                "identifier": "UnknownUserIdError",
+                "newPage": false,
+                "searchKey": "user.UnknownUserIdError",
+                "tags": [
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UnknownUserIdError int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UnknownUserIdError int\n```\n\nUnknownUserIdError is returned by LookupId when a user cannot be found. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/os/user#UnknownUserIdError.Error",
+                    "documentation": {
+                      "identifier": "UnknownUserIdError.Error",
+                      "newPage": false,
+                      "searchKey": "user.UnknownUserIdError.Error",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e UnknownUserIdError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e UnknownUserIdError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/user#User",
+              "documentation": {
+                "identifier": "User",
+                "newPage": false,
+                "searchKey": "user.User",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type User struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype User struct {\n\t// Uid is the user ID.\n\t// On POSIX systems, this is a decimal number representing the uid.\n\t// On Windows, this is a security identifier (SID) in a string format.\n\t// On Plan 9, this is the contents of /dev/user.\n\tUid string\n\t// Gid is the primary group ID.\n\t// On POSIX systems, this is a decimal number representing the gid.\n\t// On Windows, this is a SID in a string format.\n\t// On Plan 9, this is the contents of /dev/user.\n\tGid string\n\t// Username is the login name.\n\tUsername string\n\t// Name is the user's real or display name.\n\t// It might be blank.\n\t// On POSIX systems, this is the first (or only) entry in the GECOS field\n\t// list.\n\t// On Windows, this is the user's display name.\n\t// On Plan 9, this is the contents of /dev/user.\n\tName string\n\t// HomeDir is the path to the user's home directory (if they have one).\n\tHomeDir string\n}\n```\n\nUser represents a user account. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/os/user#Current",
+                    "documentation": {
+                      "identifier": "Current",
+                      "newPage": false,
+                      "searchKey": "user.Current",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Current() (*User, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Current() (*User, error)\n```\n\nCurrent returns the current user. \n\nThe first call will cache the current user information. Subsequent calls will return the cached value and will not reflect changes to the current user. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/os/user#Lookup",
+                    "documentation": {
+                      "identifier": "Lookup",
+                      "newPage": false,
+                      "searchKey": "user.Lookup",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Lookup(username string) (*User, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Lookup(username string) (*User, error)\n```\n\nLookup looks up a user by username. If the user cannot be found, the returned error is of type UnknownUserError. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/os/user#LookupId",
+                    "documentation": {
+                      "identifier": "LookupId",
+                      "newPage": false,
+                      "searchKey": "user.LookupId",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func LookupId(uid string) (*User, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc LookupId(uid string) (*User, error)\n```\n\nLookupId looks up a user by userid. If the user cannot be found, the returned error is of type UnknownUserIdError. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/os/user#buildUser",
+                    "documentation": {
+                      "identifier": "buildUser",
+                      "newPage": false,
+                      "searchKey": "user.buildUser",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func buildUser(pwd *_Ctype_struct_passwd) *User"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc buildUser(pwd *_Ctype_struct_passwd) *User\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/os/user#current",
+                    "documentation": {
+                      "identifier": "current",
+                      "newPage": false,
+                      "searchKey": "user.current",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func current() (*User, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc current() (*User, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/os/user#lookupUnixUid",
+                    "documentation": {
+                      "identifier": "lookupUnixUid",
+                      "newPage": false,
+                      "searchKey": "user.lookupUnixUid",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func lookupUnixUid(uid int) (*User, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc lookupUnixUid(uid int) (*User, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/os/user#lookupUser",
+                    "documentation": {
+                      "identifier": "lookupUser",
+                      "newPage": false,
+                      "searchKey": "user.lookupUser",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func lookupUser(username string) (*User, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc lookupUser(username string) (*User, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/os/user#lookupUserId",
+                    "documentation": {
+                      "identifier": "lookupUserId",
+                      "newPage": false,
+                      "searchKey": "user.lookupUserId",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func lookupUserId(uid string) (*User, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc lookupUserId(uid string) (*User, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/os/user#User.GroupIds",
+                    "documentation": {
+                      "identifier": "User.GroupIds",
+                      "newPage": false,
+                      "searchKey": "user.User.GroupIds",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (u *User) GroupIds() ([]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (u *User) GroupIds() ([]string, error)\n```\n\nGroupIds returns the list of group IDs that the user is a member of. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/os/user#bufferKind",
               "documentation": {
                 "identifier": "bufferKind",
                 "newPage": false,
                 "searchKey": "user.bufferKind",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -781,6 +845,7 @@
                       "newPage": false,
                       "searchKey": "user.bufferKind.initialSize",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -806,6 +871,7 @@
                 "newPage": false,
                 "searchKey": "user.memBuffer",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -826,6 +892,7 @@
                       "newPage": false,
                       "searchKey": "user.alloc",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -842,34 +909,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/os/user#memBuffer.resize",
-                    "documentation": {
-                      "identifier": "memBuffer.resize",
-                      "newPage": false,
-                      "searchKey": "user.memBuffer.resize",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (mb *memBuffer) resize(newSize _Ctype_size_t)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (mb *memBuffer) resize(newSize _Ctype_size_t)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/os/user#memBuffer.free",
                     "documentation": {
                       "identifier": "memBuffer.free",
                       "newPage": false,
                       "searchKey": "user.memBuffer.free",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -880,6 +926,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (mb *memBuffer) free()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/os/user#memBuffer.resize",
+                    "documentation": {
+                      "identifier": "memBuffer.resize",
+                      "newPage": false,
+                      "searchKey": "user.memBuffer.resize",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (mb *memBuffer) resize(newSize _Ctype_size_t)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (mb *memBuffer) resize(newSize _Ctype_size_t)\n```\n\n"
                     },
                     "children": null
                   }
@@ -897,7 +966,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -910,79 +981,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/os/user#TestNegativeUid",
-              "documentation": {
-                "identifier": "TestNegativeUid",
-                "newPage": false,
-                "searchKey": "user.TestNegativeUid",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestNegativeUid(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestNegativeUid(t *testing.T)\n```\n\nIssue 22739 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/os/user#checkUser",
-              "documentation": {
-                "identifier": "checkUser",
-                "newPage": false,
-                "searchKey": "user.checkUser",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func checkUser(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc checkUser(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/os/user#TestCurrent",
-              "documentation": {
-                "identifier": "TestCurrent",
-                "newPage": false,
-                "searchKey": "user.TestCurrent",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCurrent(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCurrent(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/os/user#BenchmarkCurrent",
               "documentation": {
                 "identifier": "BenchmarkCurrent",
                 "newPage": false,
                 "searchKey": "user.BenchmarkCurrent",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -998,22 +1005,48 @@
           },
           {
             "node": {
-              "pathID": "/os/user#compare",
+              "pathID": "/os/user#TestCurrent",
               "documentation": {
-                "identifier": "compare",
+                "identifier": "TestCurrent",
                 "newPage": false,
-                "searchKey": "user.compare",
+                "searchKey": "user.TestCurrent",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func compare(t *testing.T, want, got *User)"
+                "value": "func TestCurrent(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc compare(t *testing.T, want, got *User)\n```\n\n"
+                "value": "```Go\nfunc TestCurrent(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/user#TestGroupIds",
+              "documentation": {
+                "identifier": "TestGroupIds",
+                "newPage": false,
+                "searchKey": "user.TestGroupIds",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGroupIds(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGroupIds(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1026,7 +1059,9 @@
                 "newPage": false,
                 "searchKey": "user.TestLookup",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1042,13 +1077,39 @@
           },
           {
             "node": {
+              "pathID": "/os/user#TestLookupGroup",
+              "documentation": {
+                "identifier": "TestLookupGroup",
+                "newPage": false,
+                "searchKey": "user.TestLookupGroup",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLookupGroup(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLookupGroup(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/os/user#TestLookupId",
               "documentation": {
                 "identifier": "TestLookupId",
                 "newPage": false,
                 "searchKey": "user.TestLookupId",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1064,12 +1125,37 @@
           },
           {
             "node": {
+              "pathID": "/os/user#TestNegativeUid",
+              "documentation": {
+                "identifier": "TestNegativeUid",
+                "newPage": false,
+                "searchKey": "user.TestNegativeUid",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNegativeUid(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNegativeUid(t *testing.T)\n```\n\nIssue 22739 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/os/user#checkGroup",
               "documentation": {
                 "identifier": "checkGroup",
                 "newPage": false,
                 "searchKey": "user.checkGroup",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1086,44 +1172,46 @@
           },
           {
             "node": {
-              "pathID": "/os/user#TestLookupGroup",
+              "pathID": "/os/user#checkUser",
               "documentation": {
-                "identifier": "TestLookupGroup",
+                "identifier": "checkUser",
                 "newPage": false,
-                "searchKey": "user.TestLookupGroup",
+                "searchKey": "user.checkUser",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestLookupGroup(t *testing.T)"
+                "value": "func checkUser(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestLookupGroup(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc checkUser(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/os/user#TestGroupIds",
+              "pathID": "/os/user#compare",
               "documentation": {
-                "identifier": "TestGroupIds",
+                "identifier": "compare",
                 "newPage": false,
-                "searchKey": "user.TestGroupIds",
+                "searchKey": "user.compare",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestGroupIds(t *testing.T)"
+                "value": "func compare(t *testing.T, want, got *User)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestGroupIds(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc compare(t *testing.T, want, got *User)\n```\n\n"
               },
               "children": null
             }
@@ -1136,6 +1224,7 @@
                 "newPage": false,
                 "searchKey": "user.containsID",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1152,78 +1241,13 @@
           },
           {
             "node": {
-              "pathID": "/os/user#retryWithBuffer",
-              "documentation": {
-                "identifier": "retryWithBuffer",
-                "newPage": false,
-                "searchKey": "user.retryWithBuffer",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func retryWithBuffer(buf *memBuffer, f func() syscall.Errno) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc retryWithBuffer(buf *memBuffer, f func() syscall.Errno) error\n```\n\nretryWithBuffer repeatedly calls f(), increasing the size of the buffer each time, until f succeeds, fails with a non-ERANGE error, or the buffer exceeds a reasonable limit. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/os/user#isSizeReasonable",
-              "documentation": {
-                "identifier": "isSizeReasonable",
-                "newPage": false,
-                "searchKey": "user.isSizeReasonable",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func isSizeReasonable(sz int64) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc isSizeReasonable(sz int64) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/os/user#structPasswdForNegativeTest",
-              "documentation": {
-                "identifier": "structPasswdForNegativeTest",
-                "newPage": false,
-                "searchKey": "user.structPasswdForNegativeTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func structPasswdForNegativeTest() _Ctype_struct_passwd"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc structPasswdForNegativeTest() _Ctype_struct_passwd\n```\n\nBecause we can't use cgo in tests: \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/os/user#getGroupList",
               "documentation": {
                 "identifier": "getGroupList",
                 "newPage": false,
                 "searchKey": "user.getGroupList",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1246,6 +1270,7 @@
                 "newPage": false,
                 "searchKey": "user.groupRetry",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1262,12 +1287,36 @@
           },
           {
             "node": {
+              "pathID": "/os/user#isSizeReasonable",
+              "documentation": {
+                "identifier": "isSizeReasonable",
+                "newPage": false,
+                "searchKey": "user.isSizeReasonable",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isSizeReasonable(sz int64) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isSizeReasonable(sz int64) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/os/user#listGroups",
               "documentation": {
                 "identifier": "listGroups",
                 "newPage": false,
                 "searchKey": "user.listGroups",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1278,6 +1327,52 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc listGroups(u *User) ([]string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/user#retryWithBuffer",
+              "documentation": {
+                "identifier": "retryWithBuffer",
+                "newPage": false,
+                "searchKey": "user.retryWithBuffer",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func retryWithBuffer(buf *memBuffer, f func() syscall.Errno) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc retryWithBuffer(buf *memBuffer, f func() syscall.Errno) error\n```\n\nretryWithBuffer repeatedly calls f(), increasing the size of the buffer each time, until f succeeds, fails with a non-ERANGE error, or the buffer exceeds a reasonable limit. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/user#structPasswdForNegativeTest",
+              "documentation": {
+                "identifier": "structPasswdForNegativeTest",
+                "newPage": false,
+                "searchKey": "user.structPasswdForNegativeTest",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func structPasswdForNegativeTest() _Ctype_struct_passwd"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc structPasswdForNegativeTest() _Ctype_struct_passwd\n```\n\nBecause we can't use cgo in tests: \n\n"
               },
               "children": null
             }

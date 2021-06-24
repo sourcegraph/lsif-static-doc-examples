@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/repos_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/repos_test#errRollback",
-              "documentation": {
-                "identifier": "errRollback",
-                "newPage": false,
-                "searchKey": "repos_test.errRollback",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var errRollback"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar errRollback = errors.New(\"tx: rollback\")\n```\n\nThis error is passed to txstore.Done in order to always roll-back the transaction a test case executes in. This is meant to ensure each test case has a clean slate. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/repos_test#dsn",
               "documentation": {
                 "identifier": "dsn",
                 "newPage": false,
                 "searchKey": "repos_test.dsn",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -77,6 +59,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar dsn = flag.String(\"dsn\", \"\", \"Database connection string to use in integration tests\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repos_test#errRollback",
+              "documentation": {
+                "identifier": "errRollback",
+                "newPage": false,
+                "searchKey": "repos_test.errRollback",
+                "tags": [
+                  "variable",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errRollback"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errRollback = errors.New(\"tx: rollback\")\n```\n\nThis error is passed to txstore.Done in order to always roll-back the transaction a test case executes in. This is meant to ensure each test case has a clean slate. \n\n"
               },
               "children": null
             }
@@ -92,6 +98,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -112,6 +119,7 @@
                 "newPage": false,
                 "searchKey": "repos_test.fakeRepoSyncHandler",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -132,6 +140,7 @@
                       "newPage": false,
                       "searchKey": "repos_test.fakeRepoSyncHandler.Handle",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -160,6 +169,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -174,13 +184,39 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/repos_test#TestDiff",
+              "documentation": {
+                "identifier": "TestDiff",
+                "newPage": false,
+                "searchKey": "repos_test.TestDiff",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDiff(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDiff(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/repos_test#TestIntegration",
               "documentation": {
                 "identifier": "TestIntegration",
                 "newPage": false,
                 "searchKey": "repos_test.TestIntegration",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -196,12 +232,151 @@
           },
           {
             "node": {
+              "pathID": "/internal/repos_test#assertDeletedRepoCount",
+              "documentation": {
+                "identifier": "assertDeletedRepoCount",
+                "newPage": false,
+                "searchKey": "repos_test.assertDeletedRepoCount",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func assertDeletedRepoCount(ctx context.Context, t *testing.T, db *sql.DB, want int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc assertDeletedRepoCount(ctx context.Context, t *testing.T, db *sql.DB, want int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repos_test#assertSourceCount",
+              "documentation": {
+                "identifier": "assertSourceCount",
+                "newPage": false,
+                "searchKey": "repos_test.assertSourceCount",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func assertSourceCount(ctx context.Context, t *testing.T, db *sql.DB, want int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc assertSourceCount(ctx context.Context, t *testing.T, db *sql.DB, want int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repos_test#createExternalServices",
+              "documentation": {
+                "identifier": "createExternalServices",
+                "newPage": false,
+                "searchKey": "repos_test.createExternalServices",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func createExternalServices(t *testing.T, store *repos.Store) map[string]*types.ExternalService"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc createExternalServices(t *testing.T, store *repos.Store) map[string]*types.ExternalService\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repos_test#generateExternalServices",
+              "documentation": {
+                "identifier": "generateExternalServices",
+                "newPage": false,
+                "searchKey": "repos_test.generateExternalServices",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func generateExternalServices(n int, base ...*types.ExternalService) types.ExternalServices"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc generateExternalServices(n int, base ...*types.ExternalService) types.ExternalServices\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repos_test#hasID",
+              "documentation": {
+                "identifier": "hasID",
+                "newPage": false,
+                "searchKey": "repos_test.hasID",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hasID(ids ...api.RepoID) func(r *types.Repo) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hasID(ids ...api.RepoID) func(r *types.Repo) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repos_test#hasNoID",
+              "documentation": {
+                "identifier": "hasNoID",
+                "newPage": false,
+                "searchKey": "repos_test.hasNoID",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hasNoID(r *types.Repo) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hasNoID(r *types.Repo) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/repos_test#insertTestUser",
               "documentation": {
                 "identifier": "insertTestUser",
                 "newPage": false,
                 "searchKey": "repos_test.insertTestUser",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -218,12 +393,312 @@
           },
           {
             "node": {
+              "pathID": "/internal/repos_test#mkExternalServices",
+              "documentation": {
+                "identifier": "mkExternalServices",
+                "newPage": false,
+                "searchKey": "repos_test.mkExternalServices",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mkExternalServices(now time.Time) types.ExternalServices"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mkExternalServices(now time.Time) types.ExternalServices\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repos_test#mkRepos",
+              "documentation": {
+                "identifier": "mkRepos",
+                "newPage": false,
+                "searchKey": "repos_test.mkRepos",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mkRepos(n int, base ...*types.Repo) types.Repos"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mkRepos(n int, base ...*types.Repo) types.Repos\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repos_test#testConflictingSyncers",
+              "documentation": {
+                "identifier": "testConflictingSyncers",
+                "newPage": false,
+                "searchKey": "repos_test.testConflictingSyncers",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testConflictingSyncers(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testConflictingSyncers(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repos_test#testDeleteExternalService",
+              "documentation": {
+                "identifier": "testDeleteExternalService",
+                "newPage": false,
+                "searchKey": "repos_test.testDeleteExternalService",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testDeleteExternalService(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testDeleteExternalService(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repos_test#testNameOnConflictDiscardNew",
+              "documentation": {
+                "identifier": "testNameOnConflictDiscardNew",
+                "newPage": false,
+                "searchKey": "repos_test.testNameOnConflictDiscardNew",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testNameOnConflictDiscardNew(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testNameOnConflictDiscardNew(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repos_test#testNameOnConflictDiscardOld",
+              "documentation": {
+                "identifier": "testNameOnConflictDiscardOld",
+                "newPage": false,
+                "searchKey": "repos_test.testNameOnConflictDiscardOld",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testNameOnConflictDiscardOld(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testNameOnConflictDiscardOld(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repos_test#testNameOnConflictOnRename",
+              "documentation": {
+                "identifier": "testNameOnConflictOnRename",
+                "newPage": false,
+                "searchKey": "repos_test.testNameOnConflictOnRename",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testNameOnConflictOnRename(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testNameOnConflictOnRename(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repos_test#testOrphanedRepo",
+              "documentation": {
+                "identifier": "testOrphanedRepo",
+                "newPage": false,
+                "searchKey": "repos_test.testOrphanedRepo",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testOrphanedRepo(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testOrphanedRepo(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repos_test#testStoreCountNotClonedRepos",
+              "documentation": {
+                "identifier": "testStoreCountNotClonedRepos",
+                "newPage": false,
+                "searchKey": "repos_test.testStoreCountNotClonedRepos",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testStoreCountNotClonedRepos(t *testing.T, store *repos.Store) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testStoreCountNotClonedRepos(t *testing.T, store *repos.Store) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repos_test#testStoreEnqueueSingleSyncJob",
+              "documentation": {
+                "identifier": "testStoreEnqueueSingleSyncJob",
+                "newPage": false,
+                "searchKey": "repos_test.testStoreEnqueueSingleSyncJob",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testStoreEnqueueSingleSyncJob(db *sql.DB) func(t *testing.T, store *repos.Store) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testStoreEnqueueSingleSyncJob(db *sql.DB) func(t *testing.T, store *repos.Store) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repos_test#testStoreEnqueueSyncJobs",
+              "documentation": {
+                "identifier": "testStoreEnqueueSyncJobs",
+                "newPage": false,
+                "searchKey": "repos_test.testStoreEnqueueSyncJobs",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testStoreEnqueueSyncJobs(db *sql.DB, store *repos.Store) func(t *testing.T, store *repos.Store) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testStoreEnqueueSyncJobs(db *sql.DB, store *repos.Store) func(t *testing.T, store *repos.Store) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repos_test#testStoreListExternalRepoSpecs",
+              "documentation": {
+                "identifier": "testStoreListExternalRepoSpecs",
+                "newPage": false,
+                "searchKey": "repos_test.testStoreListExternalRepoSpecs",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testStoreListExternalRepoSpecs(db *sql.DB) func(t *testing.T, repoStore *repos.Store) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testStoreListExternalRepoSpecs(db *sql.DB) func(t *testing.T, repoStore *repos.Store) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repos_test#testStoreSetClonedRepos",
+              "documentation": {
+                "identifier": "testStoreSetClonedRepos",
+                "newPage": false,
+                "searchKey": "repos_test.testStoreSetClonedRepos",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testStoreSetClonedRepos(t *testing.T, store *repos.Store) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testStoreSetClonedRepos(t *testing.T, store *repos.Store) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/repos_test#testStoreUpsertRepos",
               "documentation": {
                 "identifier": "testStoreUpsertRepos",
                 "newPage": false,
                 "searchKey": "repos_test.testStoreUpsertRepos",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -246,6 +721,7 @@
                 "newPage": false,
                 "searchKey": "repos_test.testStoreUpsertSources",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -262,122 +738,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/repos_test#testStoreSetClonedRepos",
-              "documentation": {
-                "identifier": "testStoreSetClonedRepos",
-                "newPage": false,
-                "searchKey": "repos_test.testStoreSetClonedRepos",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testStoreSetClonedRepos(t *testing.T, store *repos.Store) func(*testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testStoreSetClonedRepos(t *testing.T, store *repos.Store) func(*testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/repos_test#testStoreCountNotClonedRepos",
-              "documentation": {
-                "identifier": "testStoreCountNotClonedRepos",
-                "newPage": false,
-                "searchKey": "repos_test.testStoreCountNotClonedRepos",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testStoreCountNotClonedRepos(t *testing.T, store *repos.Store) func(*testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testStoreCountNotClonedRepos(t *testing.T, store *repos.Store) func(*testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/repos_test#hasNoID",
-              "documentation": {
-                "identifier": "hasNoID",
-                "newPage": false,
-                "searchKey": "repos_test.hasNoID",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func hasNoID(r *types.Repo) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc hasNoID(r *types.Repo) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/repos_test#hasID",
-              "documentation": {
-                "identifier": "hasID",
-                "newPage": false,
-                "searchKey": "repos_test.hasID",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func hasID(ids ...api.RepoID) func(r *types.Repo) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc hasID(ids ...api.RepoID) func(r *types.Repo) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/repos_test#testStoreListExternalRepoSpecs",
-              "documentation": {
-                "identifier": "testStoreListExternalRepoSpecs",
-                "newPage": false,
-                "searchKey": "repos_test.testStoreListExternalRepoSpecs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testStoreListExternalRepoSpecs(db *sql.DB) func(t *testing.T, repoStore *repos.Store) func(*testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testStoreListExternalRepoSpecs(db *sql.DB) func(t *testing.T, repoStore *repos.Store) func(*testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/repos_test#testSyncRateLimiters",
               "documentation": {
                 "identifier": "testSyncRateLimiters",
                 "newPage": false,
                 "searchKey": "repos_test.testSyncRateLimiters",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -394,210 +761,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/repos_test#testStoreEnqueueSyncJobs",
-              "documentation": {
-                "identifier": "testStoreEnqueueSyncJobs",
-                "newPage": false,
-                "searchKey": "repos_test.testStoreEnqueueSyncJobs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testStoreEnqueueSyncJobs(db *sql.DB, store *repos.Store) func(t *testing.T, store *repos.Store) func(*testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testStoreEnqueueSyncJobs(db *sql.DB, store *repos.Store) func(t *testing.T, store *repos.Store) func(*testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/repos_test#testStoreEnqueueSingleSyncJob",
-              "documentation": {
-                "identifier": "testStoreEnqueueSingleSyncJob",
-                "newPage": false,
-                "searchKey": "repos_test.testStoreEnqueueSingleSyncJob",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testStoreEnqueueSingleSyncJob(db *sql.DB) func(t *testing.T, store *repos.Store) func(*testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testStoreEnqueueSingleSyncJob(db *sql.DB) func(t *testing.T, store *repos.Store) func(*testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/repos_test#mkRepos",
-              "documentation": {
-                "identifier": "mkRepos",
-                "newPage": false,
-                "searchKey": "repos_test.mkRepos",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func mkRepos(n int, base ...*types.Repo) types.Repos"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc mkRepos(n int, base ...*types.Repo) types.Repos\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/repos_test#generateExternalServices",
-              "documentation": {
-                "identifier": "generateExternalServices",
-                "newPage": false,
-                "searchKey": "repos_test.generateExternalServices",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func generateExternalServices(n int, base ...*types.ExternalService) types.ExternalServices"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc generateExternalServices(n int, base ...*types.ExternalService) types.ExternalServices\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/repos_test#transact",
-              "documentation": {
-                "identifier": "transact",
-                "newPage": false,
-                "searchKey": "repos_test.transact",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func transact(ctx context.Context, s *repos.Store, test func(testing.TB, *repos.Store)) func(*testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc transact(ctx context.Context, s *repos.Store, test func(testing.TB, *repos.Store)) func(*testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/repos_test#createExternalServices",
-              "documentation": {
-                "identifier": "createExternalServices",
-                "newPage": false,
-                "searchKey": "repos_test.createExternalServices",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func createExternalServices(t *testing.T, store *repos.Store) map[string]*types.ExternalService"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc createExternalServices(t *testing.T, store *repos.Store) map[string]*types.ExternalService\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/repos_test#mkExternalServices",
-              "documentation": {
-                "identifier": "mkExternalServices",
-                "newPage": false,
-                "searchKey": "repos_test.mkExternalServices",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func mkExternalServices(now time.Time) types.ExternalServices"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc mkExternalServices(now time.Time) types.ExternalServices\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/repos_test#testSyncWorkerPlumbing",
-              "documentation": {
-                "identifier": "testSyncWorkerPlumbing",
-                "newPage": false,
-                "searchKey": "repos_test.testSyncWorkerPlumbing",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testSyncWorkerPlumbing(db *sql.DB) func(t *testing.T, repoStore *repos.Store) func(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testSyncWorkerPlumbing(db *sql.DB) func(t *testing.T, repoStore *repos.Store) func(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/repos_test#testSyncerSync",
-              "documentation": {
-                "identifier": "testSyncerSync",
-                "newPage": false,
-                "searchKey": "repos_test.testSyncerSync",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testSyncerSync(t *testing.T, s *repos.Store) func(*testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testSyncerSync(t *testing.T, s *repos.Store) func(*testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/repos_test#testSyncRepo",
               "documentation": {
                 "identifier": "testSyncRepo",
                 "newPage": false,
                 "searchKey": "repos_test.testSyncRepo",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -614,122 +784,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/repos_test#TestDiff",
-              "documentation": {
-                "identifier": "TestDiff",
-                "newPage": false,
-                "searchKey": "repos_test.TestDiff",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDiff(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDiff(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/repos_test#testSyncRun",
-              "documentation": {
-                "identifier": "testSyncRun",
-                "newPage": false,
-                "searchKey": "repos_test.testSyncRun",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testSyncRun(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testSyncRun(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/repos_test#testSyncer",
-              "documentation": {
-                "identifier": "testSyncer",
-                "newPage": false,
-                "searchKey": "repos_test.testSyncer",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testSyncer(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testSyncer(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/repos_test#testOrphanedRepo",
-              "documentation": {
-                "identifier": "testOrphanedRepo",
-                "newPage": false,
-                "searchKey": "repos_test.testOrphanedRepo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testOrphanedRepo(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testOrphanedRepo(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/repos_test#testConflictingSyncers",
-              "documentation": {
-                "identifier": "testConflictingSyncers",
-                "newPage": false,
-                "searchKey": "repos_test.testConflictingSyncers",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testConflictingSyncers(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testConflictingSyncers(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/repos_test#testSyncRepoMaintainsOtherSources",
               "documentation": {
                 "identifier": "testSyncRepoMaintainsOtherSources",
                 "newPage": false,
                 "searchKey": "repos_test.testSyncRepoMaintainsOtherSources",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -746,12 +807,105 @@
           },
           {
             "node": {
+              "pathID": "/internal/repos_test#testSyncRun",
+              "documentation": {
+                "identifier": "testSyncRun",
+                "newPage": false,
+                "searchKey": "repos_test.testSyncRun",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testSyncRun(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testSyncRun(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repos_test#testSyncWorkerPlumbing",
+              "documentation": {
+                "identifier": "testSyncWorkerPlumbing",
+                "newPage": false,
+                "searchKey": "repos_test.testSyncWorkerPlumbing",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testSyncWorkerPlumbing(db *sql.DB) func(t *testing.T, repoStore *repos.Store) func(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testSyncWorkerPlumbing(db *sql.DB) func(t *testing.T, repoStore *repos.Store) func(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repos_test#testSyncer",
+              "documentation": {
+                "identifier": "testSyncer",
+                "newPage": false,
+                "searchKey": "repos_test.testSyncer",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testSyncer(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testSyncer(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repos_test#testSyncerSync",
+              "documentation": {
+                "identifier": "testSyncerSync",
+                "newPage": false,
+                "searchKey": "repos_test.testSyncerSync",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testSyncerSync(t *testing.T, s *repos.Store) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testSyncerSync(t *testing.T, s *repos.Store) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/repos_test#testUserAddedRepos",
               "documentation": {
                 "identifier": "testUserAddedRepos",
                 "newPage": false,
                 "searchKey": "repos_test.testUserAddedRepos",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -768,132 +922,23 @@
           },
           {
             "node": {
-              "pathID": "/internal/repos_test#testNameOnConflictDiscardOld",
+              "pathID": "/internal/repos_test#transact",
               "documentation": {
-                "identifier": "testNameOnConflictDiscardOld",
+                "identifier": "transact",
                 "newPage": false,
-                "searchKey": "repos_test.testNameOnConflictDiscardOld",
+                "searchKey": "repos_test.transact",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func testNameOnConflictDiscardOld(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)"
+                "value": "func transact(ctx context.Context, s *repos.Store, test func(testing.TB, *repos.Store)) func(*testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc testNameOnConflictDiscardOld(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/repos_test#testNameOnConflictDiscardNew",
-              "documentation": {
-                "identifier": "testNameOnConflictDiscardNew",
-                "newPage": false,
-                "searchKey": "repos_test.testNameOnConflictDiscardNew",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testNameOnConflictDiscardNew(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testNameOnConflictDiscardNew(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/repos_test#testNameOnConflictOnRename",
-              "documentation": {
-                "identifier": "testNameOnConflictOnRename",
-                "newPage": false,
-                "searchKey": "repos_test.testNameOnConflictOnRename",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testNameOnConflictOnRename(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testNameOnConflictOnRename(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/repos_test#testDeleteExternalService",
-              "documentation": {
-                "identifier": "testDeleteExternalService",
-                "newPage": false,
-                "searchKey": "repos_test.testDeleteExternalService",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testDeleteExternalService(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testDeleteExternalService(db *sql.DB) func(t *testing.T, store *repos.Store) func(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/repos_test#assertSourceCount",
-              "documentation": {
-                "identifier": "assertSourceCount",
-                "newPage": false,
-                "searchKey": "repos_test.assertSourceCount",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func assertSourceCount(ctx context.Context, t *testing.T, db *sql.DB, want int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc assertSourceCount(ctx context.Context, t *testing.T, db *sql.DB, want int)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/repos_test#assertDeletedRepoCount",
-              "documentation": {
-                "identifier": "assertDeletedRepoCount",
-                "newPage": false,
-                "searchKey": "repos_test.assertDeletedRepoCount",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func assertDeletedRepoCount(ctx context.Context, t *testing.T, db *sql.DB, want int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc assertDeletedRepoCount(ctx context.Context, t *testing.T, db *sql.DB, want int)\n```\n\n"
+                "value": "```Go\nfunc transact(ctx context.Context, s *repos.Store, test func(testing.TB, *repos.Store)) func(*testing.T)\n```\n\n"
               },
               "children": null
             }

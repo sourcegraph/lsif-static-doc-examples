@@ -4,7 +4,9 @@
     "identifier": "worker",
     "newPage": true,
     "searchKey": "enterprise/cmd/worker",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -25,7 +27,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -44,6 +48,7 @@
                 "newPage": false,
                 "searchKey": "main.main",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -66,6 +71,7 @@
                 "newPage": false,
                 "searchKey": "main.setAuthzProviders",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },

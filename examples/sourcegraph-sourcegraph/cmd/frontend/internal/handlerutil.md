@@ -7,34 +7,34 @@ Package handlerutil contains common helper functions used by both the app and AP
 * [Variables](#var)
     * [var ravenClient](#ravenClient)
 * [Types](#type)
-    * [type URLMovedError struct](#URLMovedError)
-        * [func (e *URLMovedError) Error() string](#URLMovedError.Error)
     * [type HandlerWithErrorReturn struct](#HandlerWithErrorReturn)
         * [func (h HandlerWithErrorReturn) ServeHTTP(w http.ResponseWriter, r *http.Request)](#HandlerWithErrorReturn.ServeHTTP)
+    * [type URLMovedError struct](#URLMovedError)
+        * [func (e *URLMovedError) Error() string](#URLMovedError.Error)
 * [Functions](#func)
-    * [func init()](#init.error_reporting.go)
-    * [func reportError(r *http.Request, status int, err error, panicked bool)](#reportError)
-    * [func httpErrCode(r *http.Request, err error) int](#httpErrCode)
-    * [func collapseMultipleErrors(err error) error](#collapseMultipleErrors)
     * [func CSRFMiddleware(next http.Handler, isSecure func() bool) http.Handler](#CSRFMiddleware)
     * [func GetRepo(ctx context.Context, vars map[string]string) (*types.Repo, error)](#GetRepo)
-    * [func getRepoRev(ctx context.Context, vars map[string]string, repoID api.RepoID) (api.RepoID, api.CommitID, error)](#getRepoRev)
     * [func GetRepoAndRev(ctx context.Context, vars map[string]string) (*types.Repo, api.CommitID, error)](#GetRepoAndRev)
     * [func RedirectToNewRepoName(w http.ResponseWriter, r *http.Request, newRepoName api.RepoName) error](#RedirectToNewRepoName)
     * [func TestGetRepo(t *testing.T)](#TestGetRepo)
+    * [func collapseMultipleErrors(err error) error](#collapseMultipleErrors)
+    * [func getRepoRev(ctx context.Context, vars map[string]string, repoID api.RepoID) (api.RepoID, api.CommitID, error)](#getRepoRev)
+    * [func httpErrCode(r *http.Request, err error) int](#httpErrCode)
+    * [func init()](#init.error_reporting.go)
+    * [func reportError(r *http.Request, status int, err error, panicked bool)](#reportError)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="ravenClient" href="#ravenClient">var ravenClient</a>
 
 ```
 searchKey: handlerutil.ravenClient
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -44,37 +44,14 @@ var ravenClient *raven.Client
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
-```
-
-### <a id="URLMovedError" href="#URLMovedError">type URLMovedError struct</a>
-
-```
-searchKey: handlerutil.URLMovedError
-```
-
-```Go
-type URLMovedError struct {
-	NewRepo api.RepoName `json:"RedirectTo"`
-}
-```
-
-URLMovedError should be returned when a requested resource has moved to a new address. 
-
-#### <a id="URLMovedError.Error" href="#URLMovedError.Error">func (e *URLMovedError) Error() string</a>
-
-```
-searchKey: handlerutil.URLMovedError.Error
-```
-
-```Go
-func (e *URLMovedError) Error() string
+tags: [package private]
 ```
 
 ### <a id="HandlerWithErrorReturn" href="#HandlerWithErrorReturn">type HandlerWithErrorReturn struct</a>
 
 ```
 searchKey: handlerutil.HandlerWithErrorReturn
+tags: [struct]
 ```
 
 ```Go
@@ -94,72 +71,50 @@ Error must never panic. If it has to execute something that may panic (for examp
 
 ```
 searchKey: handlerutil.HandlerWithErrorReturn.ServeHTTP
+tags: [method]
 ```
 
 ```Go
 func (h HandlerWithErrorReturn) ServeHTTP(w http.ResponseWriter, r *http.Request)
 ```
 
+### <a id="URLMovedError" href="#URLMovedError">type URLMovedError struct</a>
+
+```
+searchKey: handlerutil.URLMovedError
+tags: [struct]
+```
+
+```Go
+type URLMovedError struct {
+	NewRepo api.RepoName `json:"RedirectTo"`
+}
+```
+
+URLMovedError should be returned when a requested resource has moved to a new address. 
+
+#### <a id="URLMovedError.Error" href="#URLMovedError.Error">func (e *URLMovedError) Error() string</a>
+
+```
+searchKey: handlerutil.URLMovedError.Error
+tags: [function]
+```
+
+```Go
+func (e *URLMovedError) Error() string
+```
+
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
-
-### <a id="init.error_reporting.go" href="#init.error_reporting.go">func init()</a>
-
-```
-searchKey: handlerutil.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
-### <a id="reportError" href="#reportError">func reportError(r *http.Request, status int, err error, panicked bool)</a>
-
-```
-searchKey: handlerutil.reportError
-tags: [private]
-```
-
-```Go
-func reportError(r *http.Request, status int, err error, panicked bool)
-```
-
-reportError reports an error to Sentry. 
-
-### <a id="httpErrCode" href="#httpErrCode">func httpErrCode(r *http.Request, err error) int</a>
-
-```
-searchKey: handlerutil.httpErrCode
-tags: [private]
-```
-
-```Go
-func httpErrCode(r *http.Request, err error) int
-```
-
-httpErrCode maps an error to a status code. If the client canceled the request we return the non-standard "499 Client Closed Request" used by nginx. 
-
-### <a id="collapseMultipleErrors" href="#collapseMultipleErrors">func collapseMultipleErrors(err error) error</a>
-
-```
-searchKey: handlerutil.collapseMultipleErrors
-tags: [private]
-```
-
-```Go
-func collapseMultipleErrors(err error) error
-```
-
-collapseMultipleErrors returns the first err if err is a parallel.Errors list of length 1. Otherwise it returns err unchanged. This lets us return the proper HTTP status code for single errors. 
 
 ### <a id="CSRFMiddleware" href="#CSRFMiddleware">func CSRFMiddleware(next http.Handler, isSecure func() bool) http.Handler</a>
 
 ```
 searchKey: handlerutil.CSRFMiddleware
+tags: [method]
 ```
 
 ```Go
@@ -172,6 +127,7 @@ CSRFMiddleware is HTTP middleware that helps prevent cross-site request forgery.
 
 ```
 searchKey: handlerutil.GetRepo
+tags: [method]
 ```
 
 ```Go
@@ -180,23 +136,11 @@ func GetRepo(ctx context.Context, vars map[string]string) (*types.Repo, error)
 
 GetRepo gets the repo (from the reposSvc) specified in the URL's Repo route param. Callers should ideally check for a return error of type URLMovedError and handle this scenario by warning or redirecting the user. 
 
-### <a id="getRepoRev" href="#getRepoRev">func getRepoRev(ctx context.Context, vars map[string]string, repoID api.RepoID) (api.RepoID, api.CommitID, error)</a>
-
-```
-searchKey: handlerutil.getRepoRev
-tags: [private]
-```
-
-```Go
-func getRepoRev(ctx context.Context, vars map[string]string, repoID api.RepoID) (api.RepoID, api.CommitID, error)
-```
-
-getRepoRev resolves the repository and commit specified in the route vars. 
-
 ### <a id="GetRepoAndRev" href="#GetRepoAndRev">func GetRepoAndRev(ctx context.Context, vars map[string]string) (*types.Repo, api.CommitID, error)</a>
 
 ```
 searchKey: handlerutil.GetRepoAndRev
+tags: [method]
 ```
 
 ```Go
@@ -209,6 +153,7 @@ GetRepoAndRev returns the repo object and the commit ID for a repository. It may
 
 ```
 searchKey: handlerutil.RedirectToNewRepoName
+tags: [method]
 ```
 
 ```Go
@@ -221,10 +166,73 @@ RedirectToNewRepoName writes an HTTP redirect response with a Location that matc
 
 ```
 searchKey: handlerutil.TestGetRepo
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestGetRepo(t *testing.T)
 ```
+
+### <a id="collapseMultipleErrors" href="#collapseMultipleErrors">func collapseMultipleErrors(err error) error</a>
+
+```
+searchKey: handlerutil.collapseMultipleErrors
+tags: [method private]
+```
+
+```Go
+func collapseMultipleErrors(err error) error
+```
+
+collapseMultipleErrors returns the first err if err is a parallel.Errors list of length 1. Otherwise it returns err unchanged. This lets us return the proper HTTP status code for single errors. 
+
+### <a id="getRepoRev" href="#getRepoRev">func getRepoRev(ctx context.Context, vars map[string]string, repoID api.RepoID) (api.RepoID, api.CommitID, error)</a>
+
+```
+searchKey: handlerutil.getRepoRev
+tags: [method private]
+```
+
+```Go
+func getRepoRev(ctx context.Context, vars map[string]string, repoID api.RepoID) (api.RepoID, api.CommitID, error)
+```
+
+getRepoRev resolves the repository and commit specified in the route vars. 
+
+### <a id="httpErrCode" href="#httpErrCode">func httpErrCode(r *http.Request, err error) int</a>
+
+```
+searchKey: handlerutil.httpErrCode
+tags: [method private]
+```
+
+```Go
+func httpErrCode(r *http.Request, err error) int
+```
+
+httpErrCode maps an error to a status code. If the client canceled the request we return the non-standard "499 Client Closed Request" used by nginx. 
+
+### <a id="init.error_reporting.go" href="#init.error_reporting.go">func init()</a>
+
+```
+searchKey: handlerutil.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="reportError" href="#reportError">func reportError(r *http.Request, status int, err error, panicked bool)</a>
+
+```
+searchKey: handlerutil.reportError
+tags: [method private]
+```
+
+```Go
+func reportError(r *http.Request, status int, err error, panicked bool)
+```
+
+reportError reports an error to Sentry. 
 

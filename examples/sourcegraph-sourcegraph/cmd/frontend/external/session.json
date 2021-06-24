@@ -4,7 +4,9 @@
     "identifier": "session",
     "newPage": true,
     "searchKey": "cmd/frontend/external/session",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,72 +39,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/external/session#ResetMockSessionStore",
-              "documentation": {
-                "identifier": "ResetMockSessionStore",
-                "newPage": false,
-                "searchKey": "session.ResetMockSessionStore",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ResetMockSessionStore"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ResetMockSessionStore = session.ResetMockSessionStore\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/external/session#SetActor",
-              "documentation": {
-                "identifier": "SetActor",
-                "newPage": false,
-                "searchKey": "session.SetActor",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var SetActor"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar SetActor = session.SetActor\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/external/session#SetData",
-              "documentation": {
-                "identifier": "SetData",
-                "newPage": false,
-                "searchKey": "session.SetData",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var SetData"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar SetData = session.SetData\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/external/session#GetData",
               "documentation": {
                 "identifier": "GetData",
                 "newPage": false,
                 "searchKey": "session.GetData",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -120,7 +67,10 @@
                 "identifier": "InvalidateSessionsByID",
                 "newPage": false,
                 "searchKey": "session.InvalidateSessionsByID",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -129,6 +79,75 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar InvalidateSessionsByID = session.InvalidateSessionsByID\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/external/session#ResetMockSessionStore",
+              "documentation": {
+                "identifier": "ResetMockSessionStore",
+                "newPage": false,
+                "searchKey": "session.ResetMockSessionStore",
+                "tags": [
+                  "variable",
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ResetMockSessionStore"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ResetMockSessionStore = session.ResetMockSessionStore\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/external/session#SetActor",
+              "documentation": {
+                "identifier": "SetActor",
+                "newPage": false,
+                "searchKey": "session.SetActor",
+                "tags": [
+                  "variable",
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var SetActor"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar SetActor = session.SetActor\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/external/session#SetData",
+              "documentation": {
+                "identifier": "SetData",
+                "newPage": false,
+                "searchKey": "session.SetData",
+                "tags": [
+                  "variable",
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var SetData"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar SetData = session.SetData\n```\n\n"
               },
               "children": null
             }

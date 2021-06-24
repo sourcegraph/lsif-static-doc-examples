@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "database/sql_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/database/sql_test#pool",
-              "documentation": {
-                "identifier": "pool",
-                "newPage": false,
-                "searchKey": "sql_test.pool",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var pool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar pool *sql.DB // Database connection pool.\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/database/sql_test#ctx",
               "documentation": {
                 "identifier": "ctx",
                 "newPage": false,
                 "searchKey": "sql_test.ctx",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -89,6 +71,8 @@
                 "newPage": false,
                 "searchKey": "sql_test.db",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -99,6 +83,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar db *sql.DB\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql_test#pool",
+              "documentation": {
+                "identifier": "pool",
+                "newPage": false,
+                "searchKey": "sql_test.pool",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var pool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar pool *sql.DB // Database connection pool.\n\n```\n\n"
               },
               "children": null
             }
@@ -114,6 +122,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -134,6 +143,7 @@
                 "newPage": false,
                 "searchKey": "sql_test.Service",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -154,6 +164,7 @@
                       "newPage": false,
                       "searchKey": "sql_test.Service.ServeHTTP",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -182,6 +193,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -196,132 +208,46 @@
         "children": [
           {
             "node": {
-              "pathID": "/database/sql_test#Example_openDBCLI",
+              "pathID": "/database/sql_test#ExampleConn_ExecContext",
               "documentation": {
-                "identifier": "Example_openDBCLI",
+                "identifier": "ExampleConn_ExecContext",
                 "newPage": false,
-                "searchKey": "sql_test.Example_openDBCLI",
+                "searchKey": "sql_test.ExampleConn_ExecContext",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func Example_openDBCLI()"
+                "value": "func ExampleConn_ExecContext()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc Example_openDBCLI()\n```\n\n"
+                "value": "```Go\nfunc ExampleConn_ExecContext()\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/database/sql_test#Ping",
+              "pathID": "/database/sql_test#ExampleDB_BeginTx",
               "documentation": {
-                "identifier": "Ping",
+                "identifier": "ExampleDB_BeginTx",
                 "newPage": false,
-                "searchKey": "sql_test.Ping",
+                "searchKey": "sql_test.ExampleDB_BeginTx",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func Ping(ctx context.Context)"
+                "value": "func ExampleDB_BeginTx()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc Ping(ctx context.Context)\n```\n\nPing the database to verify DSN provided by the user is valid and the server accessible. If the ping fails exit the program with an error. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql_test#Query",
-              "documentation": {
-                "identifier": "Query",
-                "newPage": false,
-                "searchKey": "sql_test.Query",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Query(ctx context.Context, id int64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Query(ctx context.Context, id int64)\n```\n\nQuery the database for the information requested and prints the results. If the query fails exit the program with an error. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql_test#Example_openDBService",
-              "documentation": {
-                "identifier": "Example_openDBService",
-                "newPage": false,
-                "searchKey": "sql_test.Example_openDBService",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Example_openDBService()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Example_openDBService()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql_test#ExampleDB_QueryContext",
-              "documentation": {
-                "identifier": "ExampleDB_QueryContext",
-                "newPage": false,
-                "searchKey": "sql_test.ExampleDB_QueryContext",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleDB_QueryContext()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleDB_QueryContext()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql_test#ExampleDB_QueryRowContext",
-              "documentation": {
-                "identifier": "ExampleDB_QueryRowContext",
-                "newPage": false,
-                "searchKey": "sql_test.ExampleDB_QueryRowContext",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleDB_QueryRowContext()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleDB_QueryRowContext()\n```\n\n"
+                "value": "```Go\nfunc ExampleDB_BeginTx()\n```\n\n"
               },
               "children": null
             }
@@ -334,6 +260,7 @@
                 "newPage": false,
                 "searchKey": "sql_test.ExampleDB_ExecContext",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -350,34 +277,13 @@
           },
           {
             "node": {
-              "pathID": "/database/sql_test#ExampleDB_Query_multipleResultSets",
-              "documentation": {
-                "identifier": "ExampleDB_Query_multipleResultSets",
-                "newPage": false,
-                "searchKey": "sql_test.ExampleDB_Query_multipleResultSets",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleDB_Query_multipleResultSets()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleDB_Query_multipleResultSets()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/database/sql_test#ExampleDB_PingContext",
               "documentation": {
                 "identifier": "ExampleDB_PingContext",
                 "newPage": false,
                 "searchKey": "sql_test.ExampleDB_PingContext",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -400,6 +306,7 @@
                 "newPage": false,
                 "searchKey": "sql_test.ExampleDB_Prepare",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -416,110 +323,92 @@
           },
           {
             "node": {
-              "pathID": "/database/sql_test#ExampleTx_Prepare",
+              "pathID": "/database/sql_test#ExampleDB_QueryContext",
               "documentation": {
-                "identifier": "ExampleTx_Prepare",
+                "identifier": "ExampleDB_QueryContext",
                 "newPage": false,
-                "searchKey": "sql_test.ExampleTx_Prepare",
+                "searchKey": "sql_test.ExampleDB_QueryContext",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func ExampleTx_Prepare()"
+                "value": "func ExampleDB_QueryContext()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc ExampleTx_Prepare()\n```\n\n"
+                "value": "```Go\nfunc ExampleDB_QueryContext()\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/database/sql_test#ExampleDB_BeginTx",
+              "pathID": "/database/sql_test#ExampleDB_QueryRowContext",
               "documentation": {
-                "identifier": "ExampleDB_BeginTx",
+                "identifier": "ExampleDB_QueryRowContext",
                 "newPage": false,
-                "searchKey": "sql_test.ExampleDB_BeginTx",
+                "searchKey": "sql_test.ExampleDB_QueryRowContext",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func ExampleDB_BeginTx()"
+                "value": "func ExampleDB_QueryRowContext()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc ExampleDB_BeginTx()\n```\n\n"
+                "value": "```Go\nfunc ExampleDB_QueryRowContext()\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/database/sql_test#ExampleConn_ExecContext",
+              "pathID": "/database/sql_test#ExampleDB_Query_multipleResultSets",
               "documentation": {
-                "identifier": "ExampleConn_ExecContext",
+                "identifier": "ExampleDB_Query_multipleResultSets",
                 "newPage": false,
-                "searchKey": "sql_test.ExampleConn_ExecContext",
+                "searchKey": "sql_test.ExampleDB_Query_multipleResultSets",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func ExampleConn_ExecContext()"
+                "value": "func ExampleDB_Query_multipleResultSets()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc ExampleConn_ExecContext()\n```\n\n"
+                "value": "```Go\nfunc ExampleDB_Query_multipleResultSets()\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/database/sql_test#ExampleTx_ExecContext",
+              "pathID": "/database/sql_test#ExampleRows",
               "documentation": {
-                "identifier": "ExampleTx_ExecContext",
+                "identifier": "ExampleRows",
                 "newPage": false,
-                "searchKey": "sql_test.ExampleTx_ExecContext",
+                "searchKey": "sql_test.ExampleRows",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func ExampleTx_ExecContext()"
+                "value": "func ExampleRows()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc ExampleTx_ExecContext()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql_test#ExampleTx_Rollback",
-              "documentation": {
-                "identifier": "ExampleTx_Rollback",
-                "newPage": false,
-                "searchKey": "sql_test.ExampleTx_Rollback",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleTx_Rollback()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleTx_Rollback()\n```\n\n"
+                "value": "```Go\nfunc ExampleRows()\n```\n\n"
               },
               "children": null
             }
@@ -532,6 +421,7 @@
                 "newPage": false,
                 "searchKey": "sql_test.ExampleStmt",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -554,6 +444,7 @@
                 "newPage": false,
                 "searchKey": "sql_test.ExampleStmt_QueryRowContext",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -570,22 +461,161 @@
           },
           {
             "node": {
-              "pathID": "/database/sql_test#ExampleRows",
+              "pathID": "/database/sql_test#ExampleTx_ExecContext",
               "documentation": {
-                "identifier": "ExampleRows",
+                "identifier": "ExampleTx_ExecContext",
                 "newPage": false,
-                "searchKey": "sql_test.ExampleRows",
+                "searchKey": "sql_test.ExampleTx_ExecContext",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func ExampleRows()"
+                "value": "func ExampleTx_ExecContext()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc ExampleRows()\n```\n\n"
+                "value": "```Go\nfunc ExampleTx_ExecContext()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql_test#ExampleTx_Prepare",
+              "documentation": {
+                "identifier": "ExampleTx_Prepare",
+                "newPage": false,
+                "searchKey": "sql_test.ExampleTx_Prepare",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTx_Prepare()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTx_Prepare()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql_test#ExampleTx_Rollback",
+              "documentation": {
+                "identifier": "ExampleTx_Rollback",
+                "newPage": false,
+                "searchKey": "sql_test.ExampleTx_Rollback",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTx_Rollback()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTx_Rollback()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql_test#Example_openDBCLI",
+              "documentation": {
+                "identifier": "Example_openDBCLI",
+                "newPage": false,
+                "searchKey": "sql_test.Example_openDBCLI",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_openDBCLI()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_openDBCLI()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql_test#Example_openDBService",
+              "documentation": {
+                "identifier": "Example_openDBService",
+                "newPage": false,
+                "searchKey": "sql_test.Example_openDBService",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_openDBService()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_openDBService()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql_test#Ping",
+              "documentation": {
+                "identifier": "Ping",
+                "newPage": false,
+                "searchKey": "sql_test.Ping",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Ping(ctx context.Context)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Ping(ctx context.Context)\n```\n\nPing the database to verify DSN provided by the user is valid and the server accessible. If the ping fails exit the program with an error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql_test#Query",
+              "documentation": {
+                "identifier": "Query",
+                "newPage": false,
+                "searchKey": "sql_test.Query",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Query(ctx context.Context, id int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Query(ctx context.Context, id int64)\n```\n\nQuery the database for the information requested and prints the results. If the query fails exit the program with an error. \n\n"
               },
               "children": null
             }

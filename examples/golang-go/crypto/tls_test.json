@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "crypto/tls_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,7 @@
                 "newPage": false,
                 "searchKey": "tls_test.zeroSource",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -65,6 +68,7 @@
                       "newPage": false,
                       "searchKey": "tls_test.zeroSource.Read",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -93,6 +97,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -107,34 +112,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto/tls_test#ExampleDial",
-              "documentation": {
-                "identifier": "ExampleDial",
-                "newPage": false,
-                "searchKey": "tls_test.ExampleDial",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleDial()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleDial()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/tls_test#ExampleConfig_keyLogWriter",
               "documentation": {
                 "identifier": "ExampleConfig_keyLogWriter",
                 "newPage": false,
                 "searchKey": "tls_test.ExampleConfig_keyLogWriter",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -151,12 +135,59 @@
           },
           {
             "node": {
+              "pathID": "/crypto/tls_test#ExampleConfig_verifyConnection",
+              "documentation": {
+                "identifier": "ExampleConfig_verifyConnection",
+                "newPage": false,
+                "searchKey": "tls_test.ExampleConfig_verifyConnection",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleConfig_verifyConnection()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleConfig_verifyConnection()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/tls_test#ExampleDial",
+              "documentation": {
+                "identifier": "ExampleDial",
+                "newPage": false,
+                "searchKey": "tls_test.ExampleDial",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleDial()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleDial()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/tls_test#ExampleLoadX509KeyPair",
               "documentation": {
                 "identifier": "ExampleLoadX509KeyPair",
                 "newPage": false,
                 "searchKey": "tls_test.ExampleLoadX509KeyPair",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -179,6 +210,7 @@
                 "newPage": false,
                 "searchKey": "tls_test.ExampleX509KeyPair",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -201,6 +233,7 @@
                 "newPage": false,
                 "searchKey": "tls_test.ExampleX509KeyPair_httpServer",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -211,28 +244,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc ExampleX509KeyPair_httpServer()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/tls_test#ExampleConfig_verifyConnection",
-              "documentation": {
-                "identifier": "ExampleConfig_verifyConnection",
-                "newPage": false,
-                "searchKey": "tls_test.ExampleConfig_verifyConnection",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleConfig_verifyConnection()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleConfig_verifyConnection()\n```\n\n"
               },
               "children": null
             }

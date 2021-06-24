@@ -11,65 +11,70 @@ The TIFF file format uses a similar but incompatible version of the LZW algorith
 * [Constants](#const)
     * [const LSB](#LSB)
     * [const MSB](#MSB)
-    * [const maxWidth](#maxWidth)
     * [const decoderInvalidCode](#decoderInvalidCode)
     * [const flushBuffer](#flushBuffer)
-    * [const maxCode](#maxCode)
     * [const invalidCode](#invalidCode)
-    * [const tableSize](#tableSize)
-    * [const tableMask](#tableMask)
     * [const invalidEntry](#invalidEntry)
+    * [const maxCode](#maxCode)
+    * [const maxWidth](#maxWidth)
+    * [const tableMask](#tableMask)
+    * [const tableSize](#tableSize)
 * [Variables](#var)
     * [var errClosed](#errClosed)
     * [var errOutOfCodes](#errOutOfCodes)
-    * [var lzwTests](#lzwTests)
     * [var filenames](#filenames)
+    * [var lzwTests](#lzwTests)
 * [Types](#type)
     * [type Order int](#Order)
     * [type Reader struct](#Reader)
         * [func newReader(src io.Reader, order Order, litWidth int) *Reader](#newReader)
+        * [func (r *Reader) Close() error](#Reader.Close)
+        * [func (r *Reader) Read(b []byte) (int, error)](#Reader.Read)
+        * [func (r *Reader) Reset(src io.Reader, order Order, litWidth int)](#Reader.Reset)
+        * [func (r *Reader) decode()](#Reader.decode)
+        * [func (r *Reader) init(src io.Reader, order Order, litWidth int)](#Reader.init.reader.go)
         * [func (r *Reader) readLSB() (uint16, error)](#Reader.readLSB)
         * [func (r *Reader) readMSB() (uint16, error)](#Reader.readMSB)
-        * [func (r *Reader) Read(b []byte) (int, error)](#Reader.Read)
-        * [func (r *Reader) decode()](#Reader.decode)
-        * [func (r *Reader) Close() error](#Reader.Close)
-        * [func (r *Reader) Reset(src io.Reader, order Order, litWidth int)](#Reader.Reset)
-        * [func (r *Reader) init(src io.Reader, order Order, litWidth int)](#Reader.init.reader.go)
-    * [type writer interface](#writer)
     * [type Writer struct](#Writer)
         * [func newWriter(dst io.Writer, order Order, litWidth int) *Writer](#newWriter)
-        * [func (w *Writer) writeLSB(c uint32) error](#Writer.writeLSB)
-        * [func (w *Writer) writeMSB(c uint32) error](#Writer.writeMSB)
-        * [func (w *Writer) incHi() error](#Writer.incHi)
-        * [func (w *Writer) Write(p []byte) (n int, err error)](#Writer.Write)
         * [func (w *Writer) Close() error](#Writer.Close)
         * [func (w *Writer) Reset(dst io.Writer, order Order, litWidth int)](#Writer.Reset)
+        * [func (w *Writer) Write(p []byte) (n int, err error)](#Writer.Write)
+        * [func (w *Writer) incHi() error](#Writer.incHi)
         * [func (w *Writer) init(dst io.Writer, order Order, litWidth int)](#Writer.init.writer.go)
-    * [type lzwTest struct](#lzwTest)
+        * [func (w *Writer) writeLSB(c uint32) error](#Writer.writeLSB)
+        * [func (w *Writer) writeMSB(c uint32) error](#Writer.writeMSB)
     * [type devZero struct{}](#devZero)
         * [func (devZero) Read(p []byte) (int, error)](#devZero.Read)
+    * [type lzwTest struct](#lzwTest)
+    * [type writer interface](#writer)
 * [Functions](#func)
+    * [func BenchmarkDecoder(b *testing.B)](#BenchmarkDecoder)
+    * [func BenchmarkEncoder(b *testing.B)](#BenchmarkEncoder)
     * [func NewReader(r io.Reader, order Order, litWidth int) io.ReadCloser](#NewReader)
     * [func NewWriter(w io.Writer, order Order, litWidth int) io.WriteCloser](#NewWriter)
-    * [func TestReader(t *testing.T)](#TestReader)
-    * [func TestReaderReset(t *testing.T)](#TestReaderReset)
     * [func TestHiCodeDoesNotOverflow(t *testing.T)](#TestHiCodeDoesNotOverflow)
     * [func TestNoLongerSavingPriorExpansions(t *testing.T)](#TestNoLongerSavingPriorExpansions)
-    * [func BenchmarkDecoder(b *testing.B)](#BenchmarkDecoder)
-    * [func testFile(t *testing.T, fn string, order Order, litWidth int)](#testFile)
+    * [func TestReader(t *testing.T)](#TestReader)
+    * [func TestReaderReset(t *testing.T)](#TestReaderReset)
+    * [func TestSmallLitWidth(t *testing.T)](#TestSmallLitWidth)
     * [func TestWriter(t *testing.T)](#TestWriter)
     * [func TestWriterReset(t *testing.T)](#TestWriterReset)
     * [func TestWriterReturnValues(t *testing.T)](#TestWriterReturnValues)
-    * [func TestSmallLitWidth(t *testing.T)](#TestSmallLitWidth)
-    * [func BenchmarkEncoder(b *testing.B)](#BenchmarkEncoder)
+    * [func testFile(t *testing.T, fn string, order Order, litWidth int)](#testFile)
 
 
 ## <a id="const" href="#const">Constants</a>
+
+```
+tags: [package]
+```
 
 ### <a id="LSB" href="#LSB">const LSB</a>
 
 ```
 searchKey: lzw.LSB
+tags: [constant number]
 ```
 
 ```Go
@@ -82,6 +87,7 @@ LSB means Least Significant Bits first, as used in the GIF file format.
 
 ```
 searchKey: lzw.MSB
+tags: [constant number]
 ```
 
 ```Go
@@ -90,22 +96,11 @@ const MSB
 
 MSB means Most Significant Bits first, as used in the TIFF and PDF file formats. 
 
-### <a id="maxWidth" href="#maxWidth">const maxWidth</a>
-
-```
-searchKey: lzw.maxWidth
-tags: [private]
-```
-
-```Go
-const maxWidth = 12
-```
-
 ### <a id="decoderInvalidCode" href="#decoderInvalidCode">const decoderInvalidCode</a>
 
 ```
 searchKey: lzw.decoderInvalidCode
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -116,66 +111,29 @@ const decoderInvalidCode = 0xffff
 
 ```
 searchKey: lzw.flushBuffer
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
 const flushBuffer = 1 << maxWidth
 ```
 
-### <a id="maxCode" href="#maxCode">const maxCode</a>
-
-```
-searchKey: lzw.maxCode
-tags: [private]
-```
-
-```Go
-const maxCode = 1<<12 - 1
-```
-
-A code is a 12 bit value, stored as a uint32 when encoding to avoid type conversions when shifting bits. 
-
 ### <a id="invalidCode" href="#invalidCode">const invalidCode</a>
 
 ```
 searchKey: lzw.invalidCode
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
 const invalidCode = 1<<32 - 1
 ```
 
-### <a id="tableSize" href="#tableSize">const tableSize</a>
-
-```
-searchKey: lzw.tableSize
-tags: [private]
-```
-
-```Go
-const tableSize = 4 * 1 << 12
-```
-
-There are 1<<12 possible codes, which is an upper bound on the number of valid hash table entries at any given point in time. tableSize is 4x that. 
-
-### <a id="tableMask" href="#tableMask">const tableMask</a>
-
-```
-searchKey: lzw.tableMask
-tags: [private]
-```
-
-```Go
-const tableMask = tableSize - 1
-```
-
 ### <a id="invalidEntry" href="#invalidEntry">const invalidEntry</a>
 
 ```
 searchKey: lzw.invalidEntry
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -184,13 +142,65 @@ const invalidEntry = 0
 
 A hash table entry is a uint32. Zero is an invalid entry since the lower 12 bits of a valid entry must be a non-literal code. 
 
+### <a id="maxCode" href="#maxCode">const maxCode</a>
+
+```
+searchKey: lzw.maxCode
+tags: [constant number private]
+```
+
+```Go
+const maxCode = 1<<12 - 1
+```
+
+A code is a 12 bit value, stored as a uint32 when encoding to avoid type conversions when shifting bits. 
+
+### <a id="maxWidth" href="#maxWidth">const maxWidth</a>
+
+```
+searchKey: lzw.maxWidth
+tags: [constant number private]
+```
+
+```Go
+const maxWidth = 12
+```
+
+### <a id="tableMask" href="#tableMask">const tableMask</a>
+
+```
+searchKey: lzw.tableMask
+tags: [constant number private]
+```
+
+```Go
+const tableMask = tableSize - 1
+```
+
+### <a id="tableSize" href="#tableSize">const tableSize</a>
+
+```
+searchKey: lzw.tableSize
+tags: [constant number private]
+```
+
+```Go
+const tableSize = 4 * 1 << 12
+```
+
+There are 1<<12 possible codes, which is an upper bound on the number of valid hash table entries at any given point in time. tableSize is 4x that. 
+
 ## <a id="var" href="#var">Variables</a>
+
+```
+tags: [package]
+```
 
 ### <a id="errClosed" href="#errClosed">var errClosed</a>
 
 ```
 searchKey: lzw.errClosed
-tags: [private]
+tags: [variable interface private]
 ```
 
 ```Go
@@ -201,7 +211,7 @@ var errClosed = errors.New("lzw: reader/writer is closed")
 
 ```
 searchKey: lzw.errOutOfCodes
-tags: [private]
+tags: [variable interface private]
 ```
 
 ```Go
@@ -210,34 +220,39 @@ var errOutOfCodes = errors.New("lzw: out of codes")
 
 errOutOfCodes is an internal error that means that the writer has run out of unused codes and a clear code needs to be sent next. 
 
-### <a id="lzwTests" href="#lzwTests">var lzwTests</a>
-
-```
-searchKey: lzw.lzwTests
-tags: [private]
-```
-
-```Go
-var lzwTests = ...
-```
-
 ### <a id="filenames" href="#filenames">var filenames</a>
 
 ```
 searchKey: lzw.filenames
-tags: [private]
+tags: [variable array string private]
 ```
 
 ```Go
 var filenames = ...
 ```
 
+### <a id="lzwTests" href="#lzwTests">var lzwTests</a>
+
+```
+searchKey: lzw.lzwTests
+tags: [variable array struct private]
+```
+
+```Go
+var lzwTests = ...
+```
+
 ## <a id="type" href="#type">Types</a>
+
+```
+tags: [package]
+```
 
 ### <a id="Order" href="#Order">type Order int</a>
 
 ```
 searchKey: lzw.Order
+tags: [number]
 ```
 
 ```Go
@@ -250,6 +265,7 @@ Order specifies the bit ordering in an LZW data stream.
 
 ```
 searchKey: lzw.Reader
+tags: [struct]
 ```
 
 ```Go
@@ -302,18 +318,81 @@ Reader is an io.Reader which can be used to read compressed data in the LZW form
 
 ```
 searchKey: lzw.newReader
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func newReader(src io.Reader, order Order, litWidth int) *Reader
 ```
 
+#### <a id="Reader.Close" href="#Reader.Close">func (r *Reader) Close() error</a>
+
+```
+searchKey: lzw.Reader.Close
+tags: [function]
+```
+
+```Go
+func (r *Reader) Close() error
+```
+
+Close closes the Reader and returns an error for any future read operation. It does not close the underlying io.Reader. 
+
+#### <a id="Reader.Read" href="#Reader.Read">func (r *Reader) Read(b []byte) (int, error)</a>
+
+```
+searchKey: lzw.Reader.Read
+tags: [method]
+```
+
+```Go
+func (r *Reader) Read(b []byte) (int, error)
+```
+
+Read implements io.Reader, reading uncompressed bytes from its underlying Reader. 
+
+#### <a id="Reader.Reset" href="#Reader.Reset">func (r *Reader) Reset(src io.Reader, order Order, litWidth int)</a>
+
+```
+searchKey: lzw.Reader.Reset
+tags: [method]
+```
+
+```Go
+func (r *Reader) Reset(src io.Reader, order Order, litWidth int)
+```
+
+Reset clears the Reader's state and allows it to be reused again as a new Reader. 
+
+#### <a id="Reader.decode" href="#Reader.decode">func (r *Reader) decode()</a>
+
+```
+searchKey: lzw.Reader.decode
+tags: [function private]
+```
+
+```Go
+func (r *Reader) decode()
+```
+
+decode decompresses bytes from r and leaves them in d.toRead. read specifies how to decode bytes into codes. litWidth is the width in bits of literal codes. 
+
+#### <a id="Reader.init.reader.go" href="#Reader.init.reader.go">func (r *Reader) init(src io.Reader, order Order, litWidth int)</a>
+
+```
+searchKey: lzw.Reader.init
+tags: [method private]
+```
+
+```Go
+func (r *Reader) init(src io.Reader, order Order, litWidth int)
+```
+
 #### <a id="Reader.readLSB" href="#Reader.readLSB">func (r *Reader) readLSB() (uint16, error)</a>
 
 ```
 searchKey: lzw.Reader.readLSB
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -326,7 +405,7 @@ readLSB returns the next code for "Least Significant Bits first" data.
 
 ```
 searchKey: lzw.Reader.readMSB
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -335,86 +414,11 @@ func (r *Reader) readMSB() (uint16, error)
 
 readMSB returns the next code for "Most Significant Bits first" data. 
 
-#### <a id="Reader.Read" href="#Reader.Read">func (r *Reader) Read(b []byte) (int, error)</a>
-
-```
-searchKey: lzw.Reader.Read
-```
-
-```Go
-func (r *Reader) Read(b []byte) (int, error)
-```
-
-Read implements io.Reader, reading uncompressed bytes from its underlying Reader. 
-
-#### <a id="Reader.decode" href="#Reader.decode">func (r *Reader) decode()</a>
-
-```
-searchKey: lzw.Reader.decode
-tags: [private]
-```
-
-```Go
-func (r *Reader) decode()
-```
-
-decode decompresses bytes from r and leaves them in d.toRead. read specifies how to decode bytes into codes. litWidth is the width in bits of literal codes. 
-
-#### <a id="Reader.Close" href="#Reader.Close">func (r *Reader) Close() error</a>
-
-```
-searchKey: lzw.Reader.Close
-```
-
-```Go
-func (r *Reader) Close() error
-```
-
-Close closes the Reader and returns an error for any future read operation. It does not close the underlying io.Reader. 
-
-#### <a id="Reader.Reset" href="#Reader.Reset">func (r *Reader) Reset(src io.Reader, order Order, litWidth int)</a>
-
-```
-searchKey: lzw.Reader.Reset
-```
-
-```Go
-func (r *Reader) Reset(src io.Reader, order Order, litWidth int)
-```
-
-Reset clears the Reader's state and allows it to be reused again as a new Reader. 
-
-#### <a id="Reader.init.reader.go" href="#Reader.init.reader.go">func (r *Reader) init(src io.Reader, order Order, litWidth int)</a>
-
-```
-searchKey: lzw.Reader.init
-tags: [private]
-```
-
-```Go
-func (r *Reader) init(src io.Reader, order Order, litWidth int)
-```
-
-### <a id="writer" href="#writer">type writer interface</a>
-
-```
-searchKey: lzw.writer
-tags: [private]
-```
-
-```Go
-type writer interface {
-	io.ByteWriter
-	Flush() error
-}
-```
-
-A writer is a buffered, flushable writer. 
-
 ### <a id="Writer" href="#Writer">type Writer struct</a>
 
 ```
 searchKey: lzw.Writer
+tags: [struct]
 ```
 
 ```Go
@@ -453,68 +457,18 @@ Writer is an LZW compressor. It writes the compressed form of the data to an und
 
 ```
 searchKey: lzw.newWriter
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func newWriter(dst io.Writer, order Order, litWidth int) *Writer
 ```
 
-#### <a id="Writer.writeLSB" href="#Writer.writeLSB">func (w *Writer) writeLSB(c uint32) error</a>
-
-```
-searchKey: lzw.Writer.writeLSB
-tags: [private]
-```
-
-```Go
-func (w *Writer) writeLSB(c uint32) error
-```
-
-writeLSB writes the code c for "Least Significant Bits first" data. 
-
-#### <a id="Writer.writeMSB" href="#Writer.writeMSB">func (w *Writer) writeMSB(c uint32) error</a>
-
-```
-searchKey: lzw.Writer.writeMSB
-tags: [private]
-```
-
-```Go
-func (w *Writer) writeMSB(c uint32) error
-```
-
-writeMSB writes the code c for "Most Significant Bits first" data. 
-
-#### <a id="Writer.incHi" href="#Writer.incHi">func (w *Writer) incHi() error</a>
-
-```
-searchKey: lzw.Writer.incHi
-tags: [private]
-```
-
-```Go
-func (w *Writer) incHi() error
-```
-
-incHi increments e.hi and checks for both overflow and running out of unused codes. In the latter case, incHi sends a clear code, resets the writer state and returns errOutOfCodes. 
-
-#### <a id="Writer.Write" href="#Writer.Write">func (w *Writer) Write(p []byte) (n int, err error)</a>
-
-```
-searchKey: lzw.Writer.Write
-```
-
-```Go
-func (w *Writer) Write(p []byte) (n int, err error)
-```
-
-Write writes a compressed representation of p to w's underlying writer. 
-
 #### <a id="Writer.Close" href="#Writer.Close">func (w *Writer) Close() error</a>
 
 ```
 searchKey: lzw.Writer.Close
+tags: [function]
 ```
 
 ```Go
@@ -527,6 +481,7 @@ Close closes the Writer, flushing any pending output. It does not close w's unde
 
 ```
 searchKey: lzw.Writer.Reset
+tags: [method]
 ```
 
 ```Go
@@ -535,22 +490,96 @@ func (w *Writer) Reset(dst io.Writer, order Order, litWidth int)
 
 Reset clears the Writer's state and allows it to be reused again as a new Writer. 
 
+#### <a id="Writer.Write" href="#Writer.Write">func (w *Writer) Write(p []byte) (n int, err error)</a>
+
+```
+searchKey: lzw.Writer.Write
+tags: [method]
+```
+
+```Go
+func (w *Writer) Write(p []byte) (n int, err error)
+```
+
+Write writes a compressed representation of p to w's underlying writer. 
+
+#### <a id="Writer.incHi" href="#Writer.incHi">func (w *Writer) incHi() error</a>
+
+```
+searchKey: lzw.Writer.incHi
+tags: [function private]
+```
+
+```Go
+func (w *Writer) incHi() error
+```
+
+incHi increments e.hi and checks for both overflow and running out of unused codes. In the latter case, incHi sends a clear code, resets the writer state and returns errOutOfCodes. 
+
 #### <a id="Writer.init.writer.go" href="#Writer.init.writer.go">func (w *Writer) init(dst io.Writer, order Order, litWidth int)</a>
 
 ```
 searchKey: lzw.Writer.init
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (w *Writer) init(dst io.Writer, order Order, litWidth int)
 ```
 
+#### <a id="Writer.writeLSB" href="#Writer.writeLSB">func (w *Writer) writeLSB(c uint32) error</a>
+
+```
+searchKey: lzw.Writer.writeLSB
+tags: [method private]
+```
+
+```Go
+func (w *Writer) writeLSB(c uint32) error
+```
+
+writeLSB writes the code c for "Least Significant Bits first" data. 
+
+#### <a id="Writer.writeMSB" href="#Writer.writeMSB">func (w *Writer) writeMSB(c uint32) error</a>
+
+```
+searchKey: lzw.Writer.writeMSB
+tags: [method private]
+```
+
+```Go
+func (w *Writer) writeMSB(c uint32) error
+```
+
+writeMSB writes the code c for "Most Significant Bits first" data. 
+
+### <a id="devZero" href="#devZero">type devZero struct{}</a>
+
+```
+searchKey: lzw.devZero
+tags: [struct private]
+```
+
+```Go
+type devZero struct{}
+```
+
+#### <a id="devZero.Read" href="#devZero.Read">func (devZero) Read(p []byte) (int, error)</a>
+
+```
+searchKey: lzw.devZero.Read
+tags: [method private]
+```
+
+```Go
+func (devZero) Read(p []byte) (int, error)
+```
+
 ### <a id="lzwTest" href="#lzwTest">type lzwTest struct</a>
 
 ```
 searchKey: lzw.lzwTest
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -562,34 +591,55 @@ type lzwTest struct {
 }
 ```
 
-### <a id="devZero" href="#devZero">type devZero struct{}</a>
+### <a id="writer" href="#writer">type writer interface</a>
 
 ```
-searchKey: lzw.devZero
-tags: [private]
-```
-
-```Go
-type devZero struct{}
-```
-
-#### <a id="devZero.Read" href="#devZero.Read">func (devZero) Read(p []byte) (int, error)</a>
-
-```
-searchKey: lzw.devZero.Read
-tags: [private]
+searchKey: lzw.writer
+tags: [interface private]
 ```
 
 ```Go
-func (devZero) Read(p []byte) (int, error)
+type writer interface {
+	io.ByteWriter
+	Flush() error
+}
 ```
+
+A writer is a buffered, flushable writer. 
 
 ## <a id="func" href="#func">Functions</a>
+
+```
+tags: [package]
+```
+
+### <a id="BenchmarkDecoder" href="#BenchmarkDecoder">func BenchmarkDecoder(b *testing.B)</a>
+
+```
+searchKey: lzw.BenchmarkDecoder
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkDecoder(b *testing.B)
+```
+
+### <a id="BenchmarkEncoder" href="#BenchmarkEncoder">func BenchmarkEncoder(b *testing.B)</a>
+
+```
+searchKey: lzw.BenchmarkEncoder
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkEncoder(b *testing.B)
+```
 
 ### <a id="NewReader" href="#NewReader">func NewReader(r io.Reader, order Order, litWidth int) io.ReadCloser</a>
 
 ```
 searchKey: lzw.NewReader
+tags: [method]
 ```
 
 ```Go
@@ -604,6 +654,7 @@ It is guaranteed that the underlying type of the returned io.ReadCloser is a *Re
 
 ```
 searchKey: lzw.NewWriter
+tags: [method]
 ```
 
 ```Go
@@ -614,33 +665,11 @@ NewWriter creates a new io.WriteCloser. Writes to the returned io.WriteCloser ar
 
 It is guaranteed that the underlying type of the returned io.WriteCloser is a *Writer. 
 
-### <a id="TestReader" href="#TestReader">func TestReader(t *testing.T)</a>
-
-```
-searchKey: lzw.TestReader
-tags: [private]
-```
-
-```Go
-func TestReader(t *testing.T)
-```
-
-### <a id="TestReaderReset" href="#TestReaderReset">func TestReaderReset(t *testing.T)</a>
-
-```
-searchKey: lzw.TestReaderReset
-tags: [private]
-```
-
-```Go
-func TestReaderReset(t *testing.T)
-```
-
 ### <a id="TestHiCodeDoesNotOverflow" href="#TestHiCodeDoesNotOverflow">func TestHiCodeDoesNotOverflow(t *testing.T)</a>
 
 ```
 searchKey: lzw.TestHiCodeDoesNotOverflow
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -651,7 +680,7 @@ func TestHiCodeDoesNotOverflow(t *testing.T)
 
 ```
 searchKey: lzw.TestNoLongerSavingPriorExpansions
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -660,35 +689,44 @@ func TestNoLongerSavingPriorExpansions(t *testing.T)
 
 TestNoLongerSavingPriorExpansions tests the decoder state when codes other than clear codes continue to be seen after decoder.hi and decoder.width reach their maximum values (4095 and 12), i.e. after we no longer save prior expansions. In particular, it tests seeing the highest possible code, 4095. 
 
-### <a id="BenchmarkDecoder" href="#BenchmarkDecoder">func BenchmarkDecoder(b *testing.B)</a>
+### <a id="TestReader" href="#TestReader">func TestReader(t *testing.T)</a>
 
 ```
-searchKey: lzw.BenchmarkDecoder
-tags: [private]
-```
-
-```Go
-func BenchmarkDecoder(b *testing.B)
-```
-
-### <a id="testFile" href="#testFile">func testFile(t *testing.T, fn string, order Order, litWidth int)</a>
-
-```
-searchKey: lzw.testFile
-tags: [private]
+searchKey: lzw.TestReader
+tags: [method private test]
 ```
 
 ```Go
-func testFile(t *testing.T, fn string, order Order, litWidth int)
+func TestReader(t *testing.T)
 ```
 
-testFile tests that compressing and then decompressing the given file with the given options yields equivalent bytes to the original file. 
+### <a id="TestReaderReset" href="#TestReaderReset">func TestReaderReset(t *testing.T)</a>
+
+```
+searchKey: lzw.TestReaderReset
+tags: [method private test]
+```
+
+```Go
+func TestReaderReset(t *testing.T)
+```
+
+### <a id="TestSmallLitWidth" href="#TestSmallLitWidth">func TestSmallLitWidth(t *testing.T)</a>
+
+```
+searchKey: lzw.TestSmallLitWidth
+tags: [method private test]
+```
+
+```Go
+func TestSmallLitWidth(t *testing.T)
+```
 
 ### <a id="TestWriter" href="#TestWriter">func TestWriter(t *testing.T)</a>
 
 ```
 searchKey: lzw.TestWriter
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -699,7 +737,7 @@ func TestWriter(t *testing.T)
 
 ```
 searchKey: lzw.TestWriterReset
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -710,32 +748,23 @@ func TestWriterReset(t *testing.T)
 
 ```
 searchKey: lzw.TestWriterReturnValues
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestWriterReturnValues(t *testing.T)
 ```
 
-### <a id="TestSmallLitWidth" href="#TestSmallLitWidth">func TestSmallLitWidth(t *testing.T)</a>
+### <a id="testFile" href="#testFile">func testFile(t *testing.T, fn string, order Order, litWidth int)</a>
 
 ```
-searchKey: lzw.TestSmallLitWidth
-tags: [private]
-```
-
-```Go
-func TestSmallLitWidth(t *testing.T)
-```
-
-### <a id="BenchmarkEncoder" href="#BenchmarkEncoder">func BenchmarkEncoder(b *testing.B)</a>
-
-```
-searchKey: lzw.BenchmarkEncoder
-tags: [private]
+searchKey: lzw.testFile
+tags: [method private]
 ```
 
 ```Go
-func BenchmarkEncoder(b *testing.B)
+func testFile(t *testing.T, fn string, order Order, litWidth int)
 ```
+
+testFile tests that compressing and then decompressing the given file with the given options yields equivalent bytes to the original file. 
 

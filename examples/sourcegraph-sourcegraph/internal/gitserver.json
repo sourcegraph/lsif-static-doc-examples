@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/gitserver",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,56 +41,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/gitserver#requestMeter",
-              "documentation": {
-                "identifier": "requestMeter",
-                "newPage": false,
-                "searchKey": "gitserver.requestMeter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var requestMeter"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar requestMeter = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/gitserver#defaultTransport",
-              "documentation": {
-                "identifier": "defaultTransport",
-                "newPage": false,
-                "searchKey": "gitserver.defaultTransport",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var defaultTransport"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar defaultTransport = ...\n```\n\ndefaultTransport is the default transport used in the default client and the default reverse proxy. ot.Transport will propagate opentracing spans. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/gitserver#DefaultClient",
               "documentation": {
                 "identifier": "DefaultClient",
                 "newPage": false,
                 "searchKey": "gitserver.DefaultClient",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -103,12 +64,60 @@
           },
           {
             "node": {
+              "pathID": "/internal/gitserver#DefaultReverseProxy",
+              "documentation": {
+                "identifier": "DefaultReverseProxy",
+                "newPage": false,
+                "searchKey": "gitserver.DefaultReverseProxy",
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var DefaultReverseProxy"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar DefaultReverseProxy = NewReverseProxy(defaultTransport, DefaultClient.HTTPLimiter)\n```\n\nDefaultReverseProxy is the default ReverseProxy. It uses the same transport and HTTP limiter as the default client. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver#MockIsRepoCloneable",
+              "documentation": {
+                "identifier": "MockIsRepoCloneable",
+                "newPage": false,
+                "searchKey": "gitserver.MockIsRepoCloneable",
+                "tags": [
+                  "variable",
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockIsRepoCloneable"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockIsRepoCloneable func(api.RepoName) error\n```\n\nMockIsRepoCloneable mocks (*Client).IsRepoCloneable for tests. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/gitserver#deadlineExceededCounter",
               "documentation": {
                 "identifier": "deadlineExceededCounter",
                 "newPage": false,
                 "searchKey": "gitserver.deadlineExceededCounter",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -125,40 +134,48 @@
           },
           {
             "node": {
-              "pathID": "/internal/gitserver#MockIsRepoCloneable",
+              "pathID": "/internal/gitserver#defaultTransport",
               "documentation": {
-                "identifier": "MockIsRepoCloneable",
+                "identifier": "defaultTransport",
                 "newPage": false,
-                "searchKey": "gitserver.MockIsRepoCloneable",
-                "tags": null
+                "searchKey": "gitserver.defaultTransport",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var MockIsRepoCloneable"
+                "value": "var defaultTransport"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar MockIsRepoCloneable func(api.RepoName) error\n```\n\nMockIsRepoCloneable mocks (*Client).IsRepoCloneable for tests. \n\n"
+                "value": "```Go\nvar defaultTransport = ...\n```\n\ndefaultTransport is the default transport used in the default client and the default reverse proxy. ot.Transport will propagate opentracing spans. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/gitserver#DefaultReverseProxy",
+              "pathID": "/internal/gitserver#requestMeter",
               "documentation": {
-                "identifier": "DefaultReverseProxy",
+                "identifier": "requestMeter",
                 "newPage": false,
-                "searchKey": "gitserver.DefaultReverseProxy",
-                "tags": null
+                "searchKey": "gitserver.requestMeter",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var DefaultReverseProxy"
+                "value": "var requestMeter"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar DefaultReverseProxy = NewReverseProxy(defaultTransport, DefaultClient.HTTPLimiter)\n```\n\nDefaultReverseProxy is the default ReverseProxy. It uses the same transport and HTTP limiter as the default client. \n\n"
+                "value": "```Go\nvar requestMeter = ...\n```\n\n"
               },
               "children": null
             }
@@ -174,6 +191,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -188,12 +206,36 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/gitserver#ArchiveOptions",
+              "documentation": {
+                "identifier": "ArchiveOptions",
+                "newPage": false,
+                "searchKey": "gitserver.ArchiveOptions",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ArchiveOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ArchiveOptions struct {\n\tTreeish string   // the tree or commit to produce an archive for\n\tFormat  string   // format of the resulting archive (usually \"tar\" or \"zip\")\n\tPaths   []string // if nonempty, only include these paths\n}\n```\n\nArchiveOptions contains options for the Archive func. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/gitserver#Client",
               "documentation": {
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "gitserver.Client",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -211,7 +253,9 @@
                       "identifier": "NewClient",
                       "newPage": false,
                       "searchKey": "gitserver.NewClient",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -231,7 +275,9 @@
                       "identifier": "Client.AddrForRepo",
                       "newPage": false,
                       "searchKey": "gitserver.Client.AddrForRepo",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -246,54 +292,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/gitserver#Client.addrForKey",
-                    "documentation": {
-                      "identifier": "Client.addrForKey",
-                      "newPage": false,
-                      "searchKey": "gitserver.Client.addrForKey",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) addrForKey(key string) string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) addrForKey(key string) string\n```\n\naddrForKey returns the gitserver address to use for the given string key, which is hashed for sharding purposes. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/gitserver#Client.ArchiveURL",
-                    "documentation": {
-                      "identifier": "Client.ArchiveURL",
-                      "newPage": false,
-                      "searchKey": "gitserver.Client.ArchiveURL",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) ArchiveURL(repo api.RepoName, opt ArchiveOptions) *url.URL"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) ArchiveURL(repo api.RepoName, opt ArchiveOptions) *url.URL\n```\n\nArchiveURL returns a URL from which an archive of the given Git repository can be downloaded from. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/gitserver#Client.Archive",
                     "documentation": {
                       "identifier": "Client.Archive",
                       "newPage": false,
                       "searchKey": "gitserver.Client.Archive",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -308,20 +314,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/gitserver#Client.P4Exec",
+                    "pathID": "/internal/gitserver#Client.ArchiveURL",
                     "documentation": {
-                      "identifier": "Client.P4Exec",
+                      "identifier": "Client.ArchiveURL",
                       "newPage": false,
-                      "searchKey": "gitserver.Client.P4Exec",
-                      "tags": null
+                      "searchKey": "gitserver.Client.ArchiveURL",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (c *Client) P4Exec(ctx context.Context, host, user, password string, args ...string) (_ io.ReadCloser, _ http.Header, errRes error)"
+                      "value": "func (c *Client) ArchiveURL(repo api.RepoName, opt ArchiveOptions) *url.URL"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) P4Exec(ctx context.Context, host, user, password string, args ...string) (_ io.ReadCloser, _ http.Header, errRes error)\n```\n\nP4Exec sends a p4 command with given arguments and returns an io.ReadCloser for the output. \n\n"
+                      "value": "```Go\nfunc (c *Client) ArchiveURL(repo api.RepoName, opt ArchiveOptions) *url.URL\n```\n\nArchiveURL returns a URL from which an archive of the given Git repository can be downloaded from. \n\n"
                     },
                     "children": null
                   }
@@ -333,7 +341,9 @@
                       "identifier": "Client.Command",
                       "newPage": false,
                       "searchKey": "gitserver.Client.Command",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -348,104 +358,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/gitserver#Client.WaitForGitServers",
+                    "pathID": "/internal/gitserver#Client.CreateCommitFromPatch",
                     "documentation": {
-                      "identifier": "Client.WaitForGitServers",
+                      "identifier": "Client.CreateCommitFromPatch",
                       "newPage": false,
-                      "searchKey": "gitserver.Client.WaitForGitServers",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) WaitForGitServers(ctx context.Context) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) WaitForGitServers(ctx context.Context) error\n```\n\nWaitForGitServers retries a noop request to all gitserver instances until getting back a successful response. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/gitserver#Client.pingAll",
-                    "documentation": {
-                      "identifier": "Client.pingAll",
-                      "newPage": false,
-                      "searchKey": "gitserver.Client.pingAll",
+                      "searchKey": "gitserver.Client.CreateCommitFromPatch",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (c *Client) pingAll(ctx context.Context) []error"
+                      "value": "func (c *Client) CreateCommitFromPatch(ctx context.Context, req protocol.CreateCommitFromPatchRequest) (string, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) pingAll(ctx context.Context) []error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/gitserver#Client.ping",
-                    "documentation": {
-                      "identifier": "Client.ping",
-                      "newPage": false,
-                      "searchKey": "gitserver.Client.ping",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) ping(ctx context.Context, addr string) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) ping(ctx context.Context, addr string) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/gitserver#Client.ListGitolite",
-                    "documentation": {
-                      "identifier": "Client.ListGitolite",
-                      "newPage": false,
-                      "searchKey": "gitserver.Client.ListGitolite",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) ListGitolite(ctx context.Context, gitoliteHost string) (list []*gitolite.Repo, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) ListGitolite(ctx context.Context, gitoliteHost string) (list []*gitolite.Repo, err error)\n```\n\nListGitolite lists Gitolite repositories. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/gitserver#Client.ListCloned",
-                    "documentation": {
-                      "identifier": "Client.ListCloned",
-                      "newPage": false,
-                      "searchKey": "gitserver.Client.ListCloned",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) ListCloned(ctx context.Context) ([]string, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) ListCloned(ctx context.Context) ([]string, error)\n```\n\nListCloned lists all cloned repositories \n\n"
+                      "value": "```Go\nfunc (c *Client) CreateCommitFromPatch(ctx context.Context, req protocol.CreateCommitFromPatchRequest) (string, error)\n```\n\nCreateCommitFromPatch will attempt to create a commit from a patch If possible, the error returned will be of type protocol.CreateCommitFromPatchError \n\n"
                     },
                     "children": null
                   }
@@ -457,7 +385,9 @@
                       "identifier": "Client.GetGitolitePhabricatorMetadata",
                       "newPage": false,
                       "searchKey": "gitserver.Client.GetGitolitePhabricatorMetadata",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -472,54 +402,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/gitserver#Client.doListOne",
-                    "documentation": {
-                      "identifier": "Client.doListOne",
-                      "newPage": false,
-                      "searchKey": "gitserver.Client.doListOne",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) doListOne(ctx context.Context, urlSuffix, addr string) ([]string, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) doListOne(ctx context.Context, urlSuffix, addr string) ([]string, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/gitserver#Client.RequestRepoUpdate",
-                    "documentation": {
-                      "identifier": "Client.RequestRepoUpdate",
-                      "newPage": false,
-                      "searchKey": "gitserver.Client.RequestRepoUpdate",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) RequestRepoUpdate(ctx context.Context, repo api.RepoName, since time.Duration) (*protocol.RepoUpdateResponse, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) RequestRepoUpdate(ctx context.Context, repo api.RepoName, since time.Duration) (*protocol.RepoUpdateResponse, error)\n```\n\nRequestRepoUpdate is the new protocol endpoint for synchronous requests with more detailed responses. Do not use this if you are not repo-updater. \n\nRepo updates are not guaranteed to occur. If a repo has been updated recently (within the Since duration specified in the request), the update won't happen. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/gitserver#Client.IsRepoCloneable",
                     "documentation": {
                       "identifier": "Client.IsRepoCloneable",
                       "newPage": false,
                       "searchKey": "gitserver.Client.IsRepoCloneable",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -539,7 +429,9 @@
                       "identifier": "Client.IsRepoCloned",
                       "newPage": false,
                       "searchKey": "gitserver.Client.IsRepoCloned",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -554,12 +446,102 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/gitserver#Client.ListCloned",
+                    "documentation": {
+                      "identifier": "Client.ListCloned",
+                      "newPage": false,
+                      "searchKey": "gitserver.Client.ListCloned",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) ListCloned(ctx context.Context) ([]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) ListCloned(ctx context.Context) ([]string, error)\n```\n\nListCloned lists all cloned repositories \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gitserver#Client.ListGitolite",
+                    "documentation": {
+                      "identifier": "Client.ListGitolite",
+                      "newPage": false,
+                      "searchKey": "gitserver.Client.ListGitolite",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) ListGitolite(ctx context.Context, gitoliteHost string) (list []*gitolite.Repo, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) ListGitolite(ctx context.Context, gitoliteHost string) (list []*gitolite.Repo, err error)\n```\n\nListGitolite lists Gitolite repositories. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gitserver#Client.P4Exec",
+                    "documentation": {
+                      "identifier": "Client.P4Exec",
+                      "newPage": false,
+                      "searchKey": "gitserver.Client.P4Exec",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) P4Exec(ctx context.Context, host, user, password string, args ...string) (_ io.ReadCloser, _ http.Header, errRes error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) P4Exec(ctx context.Context, host, user, password string, args ...string) (_ io.ReadCloser, _ http.Header, errRes error)\n```\n\nP4Exec sends a p4 command with given arguments and returns an io.ReadCloser for the output. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gitserver#Client.Remove",
+                    "documentation": {
+                      "identifier": "Client.Remove",
+                      "newPage": false,
+                      "searchKey": "gitserver.Client.Remove",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) Remove(ctx context.Context, repo api.RepoName) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) Remove(ctx context.Context, repo api.RepoName) error\n```\n\nRemove removes the repository clone from gitserver. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/gitserver#Client.RepoCloneProgress",
                     "documentation": {
                       "identifier": "Client.RepoCloneProgress",
                       "newPage": false,
                       "searchKey": "gitserver.Client.RepoCloneProgress",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -579,7 +561,9 @@
                       "identifier": "Client.RepoInfo",
                       "newPage": false,
                       "searchKey": "gitserver.Client.RepoInfo",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -599,7 +583,9 @@
                       "identifier": "Client.ReposStats",
                       "newPage": false,
                       "searchKey": "gitserver.Client.ReposStats",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -614,64 +600,67 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/gitserver#Client.doReposStats",
+                    "pathID": "/internal/gitserver#Client.RequestRepoUpdate",
                     "documentation": {
-                      "identifier": "Client.doReposStats",
+                      "identifier": "Client.RequestRepoUpdate",
                       "newPage": false,
-                      "searchKey": "gitserver.Client.doReposStats",
+                      "searchKey": "gitserver.Client.RequestRepoUpdate",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (c *Client) doReposStats(ctx context.Context, addr string) (*protocol.ReposStats, error)"
+                      "value": "func (c *Client) RequestRepoUpdate(ctx context.Context, repo api.RepoName, since time.Duration) (*protocol.RepoUpdateResponse, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) doReposStats(ctx context.Context, addr string) (*protocol.ReposStats, error)\n```\n\n"
+                      "value": "```Go\nfunc (c *Client) RequestRepoUpdate(ctx context.Context, repo api.RepoName, since time.Duration) (*protocol.RepoUpdateResponse, error)\n```\n\nRequestRepoUpdate is the new protocol endpoint for synchronous requests with more detailed responses. Do not use this if you are not repo-updater. \n\nRepo updates are not guaranteed to occur. If a repo has been updated recently (within the Since duration specified in the request), the update won't happen. \n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/internal/gitserver#Client.Remove",
+                    "pathID": "/internal/gitserver#Client.WaitForGitServers",
                     "documentation": {
-                      "identifier": "Client.Remove",
+                      "identifier": "Client.WaitForGitServers",
                       "newPage": false,
-                      "searchKey": "gitserver.Client.Remove",
-                      "tags": null
+                      "searchKey": "gitserver.Client.WaitForGitServers",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (c *Client) Remove(ctx context.Context, repo api.RepoName) error"
+                      "value": "func (c *Client) WaitForGitServers(ctx context.Context) error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) Remove(ctx context.Context, repo api.RepoName) error\n```\n\nRemove removes the repository clone from gitserver. \n\n"
+                      "value": "```Go\nfunc (c *Client) WaitForGitServers(ctx context.Context) error\n```\n\nWaitForGitServers retries a noop request to all gitserver instances until getting back a successful response. \n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/internal/gitserver#Client.httpPost",
+                    "pathID": "/internal/gitserver#Client.addrForKey",
                     "documentation": {
-                      "identifier": "Client.httpPost",
+                      "identifier": "Client.addrForKey",
                       "newPage": false,
-                      "searchKey": "gitserver.Client.httpPost",
+                      "searchKey": "gitserver.Client.addrForKey",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (c *Client) httpPost(ctx context.Context, repo api.RepoName, op string, payload interface{}) (resp *http.Response, err error)"
+                      "value": "func (c *Client) addrForKey(key string) string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) httpPost(ctx context.Context, repo api.RepoName, op string, payload interface{}) (resp *http.Response, err error)\n```\n\n"
+                      "value": "```Go\nfunc (c *Client) addrForKey(key string) string\n```\n\naddrForKey returns the gitserver address to use for the given string key, which is hashed for sharding purposes. \n\n"
                     },
                     "children": null
                   }
@@ -684,6 +673,7 @@
                       "newPage": false,
                       "searchKey": "gitserver.Client.do",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -700,20 +690,115 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/gitserver#Client.CreateCommitFromPatch",
+                    "pathID": "/internal/gitserver#Client.doListOne",
                     "documentation": {
-                      "identifier": "Client.CreateCommitFromPatch",
+                      "identifier": "Client.doListOne",
                       "newPage": false,
-                      "searchKey": "gitserver.Client.CreateCommitFromPatch",
-                      "tags": null
+                      "searchKey": "gitserver.Client.doListOne",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (c *Client) CreateCommitFromPatch(ctx context.Context, req protocol.CreateCommitFromPatchRequest) (string, error)"
+                      "value": "func (c *Client) doListOne(ctx context.Context, urlSuffix, addr string) ([]string, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) CreateCommitFromPatch(ctx context.Context, req protocol.CreateCommitFromPatchRequest) (string, error)\n```\n\nCreateCommitFromPatch will attempt to create a commit from a patch If possible, the error returned will be of type protocol.CreateCommitFromPatchError \n\n"
+                      "value": "```Go\nfunc (c *Client) doListOne(ctx context.Context, urlSuffix, addr string) ([]string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gitserver#Client.doReposStats",
+                    "documentation": {
+                      "identifier": "Client.doReposStats",
+                      "newPage": false,
+                      "searchKey": "gitserver.Client.doReposStats",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) doReposStats(ctx context.Context, addr string) (*protocol.ReposStats, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) doReposStats(ctx context.Context, addr string) (*protocol.ReposStats, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gitserver#Client.httpPost",
+                    "documentation": {
+                      "identifier": "Client.httpPost",
+                      "newPage": false,
+                      "searchKey": "gitserver.Client.httpPost",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) httpPost(ctx context.Context, repo api.RepoName, op string, payload interface{}) (resp *http.Response, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) httpPost(ctx context.Context, repo api.RepoName, op string, payload interface{}) (resp *http.Response, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gitserver#Client.ping",
+                    "documentation": {
+                      "identifier": "Client.ping",
+                      "newPage": false,
+                      "searchKey": "gitserver.Client.ping",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) ping(ctx context.Context, addr string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) ping(ctx context.Context, addr string) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gitserver#Client.pingAll",
+                    "documentation": {
+                      "identifier": "Client.pingAll",
+                      "newPage": false,
+                      "searchKey": "gitserver.Client.pingAll",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) pingAll(ctx context.Context) []error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) pingAll(ctx context.Context) []error\n```\n\n"
                     },
                     "children": null
                   }
@@ -723,22 +808,381 @@
           },
           {
             "node": {
-              "pathID": "/internal/gitserver#ArchiveOptions",
+              "pathID": "/internal/gitserver#Cmd",
               "documentation": {
-                "identifier": "ArchiveOptions",
+                "identifier": "Cmd",
                 "newPage": false,
-                "searchKey": "gitserver.ArchiveOptions",
-                "tags": null
+                "searchKey": "gitserver.Cmd",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type ArchiveOptions struct"
+                "value": "type Cmd struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype ArchiveOptions struct {\n\tTreeish string   // the tree or commit to produce an archive for\n\tFormat  string   // format of the resulting archive (usually \"tar\" or \"zip\")\n\tPaths   []string // if nonempty, only include these paths\n}\n```\n\nArchiveOptions contains options for the Archive func. \n\n"
+                "value": "```Go\ntype Cmd struct {\n\tclient *Client\n\n\tArgs           []string\n\tRepo           api.RepoName // the repository to execute the command in\n\tEnsureRevision string\n\tExitStatus     int\n}\n```\n\nCmd represents a command to be executed remotely. \n\n"
               },
-              "children": null
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/gitserver#Cmd.CombinedOutput",
+                    "documentation": {
+                      "identifier": "Cmd.CombinedOutput",
+                      "newPage": false,
+                      "searchKey": "gitserver.Cmd.CombinedOutput",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Cmd) CombinedOutput(ctx context.Context) ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Cmd) CombinedOutput(ctx context.Context) ([]byte, error)\n```\n\nCombinedOutput runs the command and returns its combined standard output and standard error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gitserver#Cmd.DividedOutput",
+                    "documentation": {
+                      "identifier": "Cmd.DividedOutput",
+                      "newPage": false,
+                      "searchKey": "gitserver.Cmd.DividedOutput",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Cmd) DividedOutput(ctx context.Context) ([]byte, []byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Cmd) DividedOutput(ctx context.Context) ([]byte, []byte, error)\n```\n\nDividedOutput runs the command and returns its standard output and standard error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gitserver#Cmd.Output",
+                    "documentation": {
+                      "identifier": "Cmd.Output",
+                      "newPage": false,
+                      "searchKey": "gitserver.Cmd.Output",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Cmd) Output(ctx context.Context) ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Cmd) Output(ctx context.Context) ([]byte, error)\n```\n\nOutput runs the command and returns its standard output. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gitserver#Cmd.Run",
+                    "documentation": {
+                      "identifier": "Cmd.Run",
+                      "newPage": false,
+                      "searchKey": "gitserver.Cmd.Run",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Cmd) Run(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Cmd) Run(ctx context.Context) error\n```\n\nRun starts the specified command and waits for it to complete. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gitserver#Cmd.String",
+                    "documentation": {
+                      "identifier": "Cmd.String",
+                      "newPage": false,
+                      "searchKey": "gitserver.Cmd.String",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Cmd) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Cmd) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gitserver#Cmd.sendExec",
+                    "documentation": {
+                      "identifier": "Cmd.sendExec",
+                      "newPage": false,
+                      "searchKey": "gitserver.Cmd.sendExec",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Cmd) sendExec(ctx context.Context) (_ io.ReadCloser, _ http.Header, errRes error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Cmd) sendExec(ctx context.Context) (_ io.ReadCloser, _ http.Header, errRes error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver#RepoNotCloneableErr",
+              "documentation": {
+                "identifier": "RepoNotCloneableErr",
+                "newPage": false,
+                "searchKey": "gitserver.RepoNotCloneableErr",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoNotCloneableErr struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoNotCloneableErr struct {\n\trepo     api.RepoName\n\treason   string\n\tnotFound bool\n}\n```\n\nRepoNotCloneableErr is the error that happens when a repository can not be cloned. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/gitserver#RepoNotCloneableErr.Error",
+                    "documentation": {
+                      "identifier": "RepoNotCloneableErr.Error",
+                      "newPage": false,
+                      "searchKey": "gitserver.RepoNotCloneableErr.Error",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *RepoNotCloneableErr) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *RepoNotCloneableErr) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gitserver#RepoNotCloneableErr.NotFound",
+                    "documentation": {
+                      "identifier": "RepoNotCloneableErr.NotFound",
+                      "newPage": false,
+                      "searchKey": "gitserver.RepoNotCloneableErr.NotFound",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *RepoNotCloneableErr) NotFound() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *RepoNotCloneableErr) NotFound() bool\n```\n\nNotFound returns true if the repo could not be cloned because it wasn't found. This may be because the repo doesn't exist, or because the repo is private and there are insufficient permissions. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver#ReverseProxy",
+              "documentation": {
+                "identifier": "ReverseProxy",
+                "newPage": false,
+                "searchKey": "gitserver.ReverseProxy",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ReverseProxy struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ReverseProxy struct {\n\tTransport http.RoundTripper\n\n\t// Limits concurrency of outstanding HTTP posts\n\tHTTPLimiter *parallel.Run\n}\n```\n\nReverseProxy is a gitserver reverse proxy. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/gitserver#NewReverseProxy",
+                    "documentation": {
+                      "identifier": "NewReverseProxy",
+                      "newPage": false,
+                      "searchKey": "gitserver.NewReverseProxy",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewReverseProxy(transport http.RoundTripper, httpLimiter *parallel.Run) *ReverseProxy"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewReverseProxy(transport http.RoundTripper, httpLimiter *parallel.Run) *ReverseProxy\n```\n\nNewReverseProxy returns a new gitserver.ReverseProxy instantiated with the given transport and HTTP limiter. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gitserver#ReverseProxy.ServeHTTP",
+                    "documentation": {
+                      "identifier": "ReverseProxy.ServeHTTP",
+                      "newPage": false,
+                      "searchKey": "gitserver.ReverseProxy.ServeHTTP",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *ReverseProxy) ServeHTTP(repo api.RepoName, method, op string, director func(req *http.Request), res http.ResponseWriter, req *http.Request)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *ReverseProxy) ServeHTTP(repo api.RepoName, method, op string, director func(req *http.Request), res http.ResponseWriter, req *http.Request)\n```\n\nServeHTTP creates a one-shot proxy with the given director and proxies the given request to gitserver. The director must rewrite the request to the correct gitserver address, which should be obtained via a gitserver client's AddrForRepo method. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver#RevisionNotFoundError",
+              "documentation": {
+                "identifier": "RevisionNotFoundError",
+                "newPage": false,
+                "searchKey": "gitserver.RevisionNotFoundError",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RevisionNotFoundError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RevisionNotFoundError struct {\n\tRepo api.RepoName\n\tSpec string\n}\n```\n\nRevisionNotFoundError is an error that reports a revision doesn't exist. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/gitserver#RevisionNotFoundError.Error",
+                    "documentation": {
+                      "identifier": "RevisionNotFoundError.Error",
+                      "newPage": false,
+                      "searchKey": "gitserver.RevisionNotFoundError.Error",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *RevisionNotFoundError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *RevisionNotFoundError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gitserver#RevisionNotFoundError.HTTPStatusCode",
+                    "documentation": {
+                      "identifier": "RevisionNotFoundError.HTTPStatusCode",
+                      "newPage": false,
+                      "searchKey": "gitserver.RevisionNotFoundError.HTTPStatusCode",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *RevisionNotFoundError) HTTPStatusCode() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *RevisionNotFoundError) HTTPStatusCode() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gitserver#RevisionNotFoundError.NotFound",
+                    "documentation": {
+                      "identifier": "RevisionNotFoundError.NotFound",
+                      "newPage": false,
+                      "searchKey": "gitserver.RevisionNotFoundError.NotFound",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (RevisionNotFoundError) NotFound() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (RevisionNotFoundError) NotFound() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
             }
           },
           {
@@ -749,6 +1193,7 @@
                 "newPage": false,
                 "searchKey": "gitserver.archiveReader",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -763,34 +1208,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/gitserver#archiveReader.Read",
-                    "documentation": {
-                      "identifier": "archiveReader.Read",
-                      "newPage": false,
-                      "searchKey": "gitserver.archiveReader.Read",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (a *archiveReader) Read(p []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (a *archiveReader) Read(p []byte) (int, error)\n```\n\nRead checks the known output behavior of the StdoutReader. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/gitserver#archiveReader.Close",
                     "documentation": {
                       "identifier": "archiveReader.Close",
                       "newPage": false,
                       "searchKey": "gitserver.archiveReader.Close",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -801,6 +1225,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (a *archiveReader) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gitserver#archiveReader.Read",
+                    "documentation": {
+                      "identifier": "archiveReader.Read",
+                      "newPage": false,
+                      "searchKey": "gitserver.archiveReader.Read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *archiveReader) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *archiveReader) Read(p []byte) (int, error)\n```\n\nRead checks the known output behavior of the StdoutReader. \n\n"
                     },
                     "children": null
                   }
@@ -816,6 +1263,7 @@
                 "newPage": false,
                 "searchKey": "gitserver.badRequestError",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -836,6 +1284,7 @@
                       "newPage": false,
                       "searchKey": "gitserver.badRequestError.BadRequest",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -855,155 +1304,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/gitserver#Cmd",
-              "documentation": {
-                "identifier": "Cmd",
-                "newPage": false,
-                "searchKey": "gitserver.Cmd",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Cmd struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Cmd struct {\n\tclient *Client\n\n\tArgs           []string\n\tRepo           api.RepoName // the repository to execute the command in\n\tEnsureRevision string\n\tExitStatus     int\n}\n```\n\nCmd represents a command to be executed remotely. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/gitserver#Cmd.sendExec",
-                    "documentation": {
-                      "identifier": "Cmd.sendExec",
-                      "newPage": false,
-                      "searchKey": "gitserver.Cmd.sendExec",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Cmd) sendExec(ctx context.Context) (_ io.ReadCloser, _ http.Header, errRes error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Cmd) sendExec(ctx context.Context) (_ io.ReadCloser, _ http.Header, errRes error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/gitserver#Cmd.DividedOutput",
-                    "documentation": {
-                      "identifier": "Cmd.DividedOutput",
-                      "newPage": false,
-                      "searchKey": "gitserver.Cmd.DividedOutput",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Cmd) DividedOutput(ctx context.Context) ([]byte, []byte, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Cmd) DividedOutput(ctx context.Context) ([]byte, []byte, error)\n```\n\nDividedOutput runs the command and returns its standard output and standard error. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/gitserver#Cmd.Run",
-                    "documentation": {
-                      "identifier": "Cmd.Run",
-                      "newPage": false,
-                      "searchKey": "gitserver.Cmd.Run",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Cmd) Run(ctx context.Context) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Cmd) Run(ctx context.Context) error\n```\n\nRun starts the specified command and waits for it to complete. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/gitserver#Cmd.Output",
-                    "documentation": {
-                      "identifier": "Cmd.Output",
-                      "newPage": false,
-                      "searchKey": "gitserver.Cmd.Output",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Cmd) Output(ctx context.Context) ([]byte, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Cmd) Output(ctx context.Context) ([]byte, error)\n```\n\nOutput runs the command and returns its standard output. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/gitserver#Cmd.CombinedOutput",
-                    "documentation": {
-                      "identifier": "Cmd.CombinedOutput",
-                      "newPage": false,
-                      "searchKey": "gitserver.Cmd.CombinedOutput",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Cmd) CombinedOutput(ctx context.Context) ([]byte, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Cmd) CombinedOutput(ctx context.Context) ([]byte, error)\n```\n\nCombinedOutput runs the command and returns its combined standard output and standard error. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/gitserver#Cmd.String",
-                    "documentation": {
-                      "identifier": "Cmd.String",
-                      "newPage": false,
-                      "searchKey": "gitserver.Cmd.String",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Cmd) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Cmd) String() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/gitserver#cmdReader",
               "documentation": {
                 "identifier": "cmdReader",
                 "newPage": false,
                 "searchKey": "gitserver.cmdReader",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1018,34 +1325,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/gitserver#cmdReader.Read",
-                    "documentation": {
-                      "identifier": "cmdReader.Read",
-                      "newPage": false,
-                      "searchKey": "gitserver.cmdReader.Read",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *cmdReader) Read(p []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *cmdReader) Read(p []byte) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/gitserver#cmdReader.Close",
                     "documentation": {
                       "identifier": "cmdReader.Close",
                       "newPage": false,
                       "searchKey": "gitserver.cmdReader.Close",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1059,206 +1345,26 @@
                     },
                     "children": null
                   }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/gitserver#RepoNotCloneableErr",
-              "documentation": {
-                "identifier": "RepoNotCloneableErr",
-                "newPage": false,
-                "searchKey": "gitserver.RepoNotCloneableErr",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RepoNotCloneableErr struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RepoNotCloneableErr struct {\n\trepo     api.RepoName\n\treason   string\n\tnotFound bool\n}\n```\n\nRepoNotCloneableErr is the error that happens when a repository can not be cloned. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/gitserver#RepoNotCloneableErr.NotFound",
-                    "documentation": {
-                      "identifier": "RepoNotCloneableErr.NotFound",
-                      "newPage": false,
-                      "searchKey": "gitserver.RepoNotCloneableErr.NotFound",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *RepoNotCloneableErr) NotFound() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *RepoNotCloneableErr) NotFound() bool\n```\n\nNotFound returns true if the repo could not be cloned because it wasn't found. This may be because the repo doesn't exist, or because the repo is private and there are insufficient permissions. \n\n"
-                    },
-                    "children": null
-                  }
                 },
                 {
                   "node": {
-                    "pathID": "/internal/gitserver#RepoNotCloneableErr.Error",
+                    "pathID": "/internal/gitserver#cmdReader.Read",
                     "documentation": {
-                      "identifier": "RepoNotCloneableErr.Error",
+                      "identifier": "cmdReader.Read",
                       "newPage": false,
-                      "searchKey": "gitserver.RepoNotCloneableErr.Error",
-                      "tags": null
+                      "searchKey": "gitserver.cmdReader.Read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (e *RepoNotCloneableErr) Error() string"
+                      "value": "func (c *cmdReader) Read(p []byte) (int, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (e *RepoNotCloneableErr) Error() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/gitserver#RevisionNotFoundError",
-              "documentation": {
-                "identifier": "RevisionNotFoundError",
-                "newPage": false,
-                "searchKey": "gitserver.RevisionNotFoundError",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RevisionNotFoundError struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RevisionNotFoundError struct {\n\tRepo api.RepoName\n\tSpec string\n}\n```\n\nRevisionNotFoundError is an error that reports a revision doesn't exist. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/gitserver#RevisionNotFoundError.Error",
-                    "documentation": {
-                      "identifier": "RevisionNotFoundError.Error",
-                      "newPage": false,
-                      "searchKey": "gitserver.RevisionNotFoundError.Error",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *RevisionNotFoundError) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *RevisionNotFoundError) Error() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/gitserver#RevisionNotFoundError.HTTPStatusCode",
-                    "documentation": {
-                      "identifier": "RevisionNotFoundError.HTTPStatusCode",
-                      "newPage": false,
-                      "searchKey": "gitserver.RevisionNotFoundError.HTTPStatusCode",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *RevisionNotFoundError) HTTPStatusCode() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *RevisionNotFoundError) HTTPStatusCode() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/gitserver#RevisionNotFoundError.NotFound",
-                    "documentation": {
-                      "identifier": "RevisionNotFoundError.NotFound",
-                      "newPage": false,
-                      "searchKey": "gitserver.RevisionNotFoundError.NotFound",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (RevisionNotFoundError) NotFound() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (RevisionNotFoundError) NotFound() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/gitserver#ReverseProxy",
-              "documentation": {
-                "identifier": "ReverseProxy",
-                "newPage": false,
-                "searchKey": "gitserver.ReverseProxy",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ReverseProxy struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ReverseProxy struct {\n\tTransport http.RoundTripper\n\n\t// Limits concurrency of outstanding HTTP posts\n\tHTTPLimiter *parallel.Run\n}\n```\n\nReverseProxy is a gitserver reverse proxy. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/gitserver#NewReverseProxy",
-                    "documentation": {
-                      "identifier": "NewReverseProxy",
-                      "newPage": false,
-                      "searchKey": "gitserver.NewReverseProxy",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewReverseProxy(transport http.RoundTripper, httpLimiter *parallel.Run) *ReverseProxy"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewReverseProxy(transport http.RoundTripper, httpLimiter *parallel.Run) *ReverseProxy\n```\n\nNewReverseProxy returns a new gitserver.ReverseProxy instantiated with the given transport and HTTP limiter. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/gitserver#ReverseProxy.ServeHTTP",
-                    "documentation": {
-                      "identifier": "ReverseProxy.ServeHTTP",
-                      "newPage": false,
-                      "searchKey": "gitserver.ReverseProxy.ServeHTTP",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *ReverseProxy) ServeHTTP(repo api.RepoName, method, op string, director func(req *http.Request), res http.ResponseWriter, req *http.Request)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *ReverseProxy) ServeHTTP(repo api.RepoName, method, op string, director func(req *http.Request), res http.ResponseWriter, req *http.Request)\n```\n\nServeHTTP creates a one-shot proxy with the given director and proxies the given request to gitserver. The director must rewrite the request to the correct gitserver address, which should be obtained via a gitserver client's AddrForRepo method. \n\n"
+                      "value": "```Go\nfunc (c *cmdReader) Read(p []byte) (int, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1277,6 +1383,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -1296,7 +1403,9 @@
                 "identifier": "AddrForRepo",
                 "newPage": false,
                 "searchKey": "gitserver.AddrForRepo",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1311,12 +1420,57 @@
           },
           {
             "node": {
+              "pathID": "/internal/gitserver#IsRevisionNotFound",
+              "documentation": {
+                "identifier": "IsRevisionNotFound",
+                "newPage": false,
+                "searchKey": "gitserver.IsRevisionNotFound",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsRevisionNotFound(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsRevisionNotFound(err error) bool\n```\n\nIsRevisionNotFound reports if err is a RevisionNotFoundError. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver#StdoutReader",
+              "documentation": {
+                "identifier": "StdoutReader",
+                "newPage": false,
+                "searchKey": "gitserver.StdoutReader",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func StdoutReader(ctx context.Context, c *Cmd) (io.ReadCloser, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc StdoutReader(ctx context.Context, c *Cmd) (io.ReadCloser, error)\n```\n\nStdoutReader returns an io.ReadCloser of stdout of c. If the command has a non-zero return value, Read returns a non io.EOF error. Do not pass in a started command. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/gitserver#addrForKey",
               "documentation": {
                 "identifier": "addrForKey",
                 "newPage": false,
                 "searchKey": "gitserver.addrForKey",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1333,32 +1487,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/gitserver#StdoutReader",
-              "documentation": {
-                "identifier": "StdoutReader",
-                "newPage": false,
-                "searchKey": "gitserver.StdoutReader",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func StdoutReader(ctx context.Context, c *Cmd) (io.ReadCloser, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc StdoutReader(ctx context.Context, c *Cmd) (io.ReadCloser, error)\n```\n\nStdoutReader returns an io.ReadCloser of stdout of c. If the command has a non-zero return value, Read returns a non io.EOF error. Do not pass in a started command. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/gitserver#userFromContext",
               "documentation": {
                 "identifier": "userFromContext",
                 "newPage": false,
                 "searchKey": "gitserver.userFromContext",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1369,26 +1504,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc userFromContext(ctx context.Context) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/gitserver#IsRevisionNotFound",
-              "documentation": {
-                "identifier": "IsRevisionNotFound",
-                "newPage": false,
-                "searchKey": "gitserver.IsRevisionNotFound",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IsRevisionNotFound(err error) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IsRevisionNotFound(err error) bool\n```\n\nIsRevisionNotFound reports if err is a RevisionNotFoundError. \n\n"
               },
               "children": null
             }

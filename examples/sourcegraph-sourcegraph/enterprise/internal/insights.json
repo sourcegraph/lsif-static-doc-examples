@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/internal/insights",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,32 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/internal/insights#IsEnabled",
-              "documentation": {
-                "identifier": "IsEnabled",
-                "newPage": false,
-                "searchKey": "insights.IsEnabled",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IsEnabled() bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IsEnabled() bool\n```\n\nIsEnabled tells if code insights are enabled or not. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/insights#Init",
               "documentation": {
                 "identifier": "Init",
                 "newPage": false,
                 "searchKey": "insights.Init",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +68,9 @@
                 "identifier": "InitializeCodeInsightsDB",
                 "newPage": false,
                 "searchKey": "insights.InitializeCodeInsightsDB",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -93,6 +79,28 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc InitializeCodeInsightsDB() (*sql.DB, error)\n```\n\nInitializeCodeInsightsDB connects to and initializes the Code Insights Timescale DB, running database migrations before returning. It is safe to call from multiple services/containers (in which case, one's migration will win and the other caller will receive an error and should exit and restart until the other finishes.) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights#IsEnabled",
+              "documentation": {
+                "identifier": "IsEnabled",
+                "newPage": false,
+                "searchKey": "insights.IsEnabled",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsEnabled() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsEnabled() bool\n```\n\nIsEnabled tells if code insights are enabled or not. \n\n"
               },
               "children": null
             }

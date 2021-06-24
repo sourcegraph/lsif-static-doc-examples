@@ -10,14 +10,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="ExampleLogger" href="#ExampleLogger">func ExampleLogger()</a>
 
 ```
 searchKey: log_test.ExampleLogger
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -28,7 +28,7 @@ func ExampleLogger()
 
 ```
 searchKey: log_test.ExampleLogger_Output
-tags: [private]
+tags: [function private]
 ```
 
 ```Go

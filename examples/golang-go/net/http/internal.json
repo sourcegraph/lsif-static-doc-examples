@@ -4,7 +4,9 @@
     "identifier": "internal",
     "newPage": true,
     "searchKey": "net/http/internal",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -41,6 +45,8 @@
                 "newPage": false,
                 "searchKey": "internal.maxLineLength",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -65,7 +71,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -83,7 +91,10 @@
                 "identifier": "ErrLineTooLong",
                 "newPage": false,
                 "searchKey": "internal.ErrLineTooLong",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -106,7 +117,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -119,12 +132,35 @@
         "children": [
           {
             "node": {
+              "pathID": "/net/http/internal#FlushAfterChunkWriter",
+              "documentation": {
+                "identifier": "FlushAfterChunkWriter",
+                "newPage": false,
+                "searchKey": "internal.FlushAfterChunkWriter",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FlushAfterChunkWriter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FlushAfterChunkWriter struct {\n\t*bufio.Writer\n}\n```\n\nFlushAfterChunkWriter signals from the caller of NewChunkedWriter that each chunk should be followed by a flush. It is used by the http.Transport code to keep the buffering behavior for headers and trailers, but flush out chunks aggressively in the middle for request bodies which may be generated slowly. See Issue 6574. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/net/http/internal#chunkedReader",
               "documentation": {
                 "identifier": "chunkedReader",
                 "newPage": false,
                 "searchKey": "internal.chunkedReader",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -139,12 +175,36 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/net/http/internal#chunkedReader.Read",
+                    "documentation": {
+                      "identifier": "chunkedReader.Read",
+                      "newPage": false,
+                      "searchKey": "internal.chunkedReader.Read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (cr *chunkedReader) Read(b []uint8) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (cr *chunkedReader) Read(b []uint8) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/net/http/internal#chunkedReader.beginChunk",
                     "documentation": {
                       "identifier": "chunkedReader.beginChunk",
                       "newPage": false,
                       "searchKey": "internal.chunkedReader.beginChunk",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -167,6 +227,7 @@
                       "newPage": false,
                       "searchKey": "internal.chunkedReader.chunkHeaderAvailable",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -177,28 +238,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (cr *chunkedReader) chunkHeaderAvailable() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/http/internal#chunkedReader.Read",
-                    "documentation": {
-                      "identifier": "chunkedReader.Read",
-                      "newPage": false,
-                      "searchKey": "internal.chunkedReader.Read",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (cr *chunkedReader) Read(b []uint8) (n int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (cr *chunkedReader) Read(b []uint8) (n int, err error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -214,6 +253,7 @@
                 "newPage": false,
                 "searchKey": "internal.chunkedWriter",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -228,34 +268,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/net/http/internal#chunkedWriter.Write",
-                    "documentation": {
-                      "identifier": "chunkedWriter.Write",
-                      "newPage": false,
-                      "searchKey": "internal.chunkedWriter.Write",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (cw *chunkedWriter) Write(data []byte) (n int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (cw *chunkedWriter) Write(data []byte) (n int, err error)\n```\n\nWrite the contents of data as one chunk to Wire. NOTE: Note that the corresponding chunk-writing procedure in Conn.Write has a bug since it does not check for success of io.WriteString \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/net/http/internal#chunkedWriter.Close",
                     "documentation": {
                       "identifier": "chunkedWriter.Close",
                       "newPage": false,
                       "searchKey": "internal.chunkedWriter.Close",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -269,28 +288,31 @@
                     },
                     "children": null
                   }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/internal#chunkedWriter.Write",
+                    "documentation": {
+                      "identifier": "chunkedWriter.Write",
+                      "newPage": false,
+                      "searchKey": "internal.chunkedWriter.Write",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (cw *chunkedWriter) Write(data []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (cw *chunkedWriter) Write(data []byte) (n int, err error)\n```\n\nWrite the contents of data as one chunk to Wire. NOTE: Note that the corresponding chunk-writing procedure in Conn.Write has a bug since it does not check for success of io.WriteString \n\n"
+                    },
+                    "children": null
+                  }
                 }
               ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/internal#FlushAfterChunkWriter",
-              "documentation": {
-                "identifier": "FlushAfterChunkWriter",
-                "newPage": false,
-                "searchKey": "internal.FlushAfterChunkWriter",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type FlushAfterChunkWriter struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype FlushAfterChunkWriter struct {\n\t*bufio.Writer\n}\n```\n\nFlushAfterChunkWriter signals from the caller of NewChunkedWriter that each chunk should be followed by a flush. It is used by the http.Transport code to keep the buffering behavior for headers and trailers, but flush out chunks aggressively in the middle for request bodies which may be generated slowly. See Issue 6574. \n\n"
-              },
-              "children": null
             }
           }
         ]
@@ -303,7 +325,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -321,7 +345,9 @@
                 "identifier": "NewChunkedReader",
                 "newPage": false,
                 "searchKey": "internal.NewChunkedReader",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -336,100 +362,14 @@
           },
           {
             "node": {
-              "pathID": "/net/http/internal#readChunkLine",
-              "documentation": {
-                "identifier": "readChunkLine",
-                "newPage": false,
-                "searchKey": "internal.readChunkLine",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func readChunkLine(b *bufio.Reader) ([]byte, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc readChunkLine(b *bufio.Reader) ([]byte, error)\n```\n\nRead a line of bytes (up to \\n) from b. Give up if the line exceeds maxLineLength. The returned bytes are owned by the bufio.Reader so they are only valid until the next bufio read. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/internal#trimTrailingWhitespace",
-              "documentation": {
-                "identifier": "trimTrailingWhitespace",
-                "newPage": false,
-                "searchKey": "internal.trimTrailingWhitespace",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func trimTrailingWhitespace(b []byte) []byte"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc trimTrailingWhitespace(b []byte) []byte\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/internal#isASCIISpace",
-              "documentation": {
-                "identifier": "isASCIISpace",
-                "newPage": false,
-                "searchKey": "internal.isASCIISpace",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func isASCIISpace(b byte) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc isASCIISpace(b byte) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/internal#removeChunkExtension",
-              "documentation": {
-                "identifier": "removeChunkExtension",
-                "newPage": false,
-                "searchKey": "internal.removeChunkExtension",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func removeChunkExtension(p []byte) ([]byte, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc removeChunkExtension(p []byte) ([]byte, error)\n```\n\nremoveChunkExtension removes any chunk-extension from p. For example, \n\n```\n\"0\" => \"0\"\n\"0;token\" => \"0\"\n\"0;token=val\" => \"0\"\n`0;token=\"quoted string\"` => \"0\"\n\n```\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/http/internal#NewChunkedWriter",
               "documentation": {
                 "identifier": "NewChunkedWriter",
                 "newPage": false,
                 "searchKey": "internal.NewChunkedWriter",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -444,35 +384,15 @@
           },
           {
             "node": {
-              "pathID": "/net/http/internal#parseHexUint",
-              "documentation": {
-                "identifier": "parseHexUint",
-                "newPage": false,
-                "searchKey": "internal.parseHexUint",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func parseHexUint(v []byte) (n uint64, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc parseHexUint(v []byte) (n uint64, err error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/http/internal#TestChunk",
               "documentation": {
                 "identifier": "TestChunk",
                 "newPage": false,
                 "searchKey": "internal.TestChunk",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -494,7 +414,9 @@
                 "newPage": false,
                 "searchKey": "internal.TestChunkReadMultiple",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -510,13 +432,39 @@
           },
           {
             "node": {
+              "pathID": "/net/http/internal#TestChunkReadPartial",
+              "documentation": {
+                "identifier": "TestChunkReadPartial",
+                "newPage": false,
+                "searchKey": "internal.TestChunkReadPartial",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestChunkReadPartial(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestChunkReadPartial(t *testing.T)\n```\n\nIssue 17355: ChunkedReader shouldn't block waiting for more data if it can return something. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/net/http/internal#TestChunkReaderAllocs",
               "documentation": {
                 "identifier": "TestChunkReaderAllocs",
                 "newPage": false,
                 "searchKey": "internal.TestChunkReaderAllocs",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -532,35 +480,15 @@
           },
           {
             "node": {
-              "pathID": "/net/http/internal#TestParseHexUint",
-              "documentation": {
-                "identifier": "TestParseHexUint",
-                "newPage": false,
-                "searchKey": "internal.TestParseHexUint",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestParseHexUint(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestParseHexUint(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/http/internal#TestChunkReadingIgnoresExtensions",
               "documentation": {
                 "identifier": "TestChunkReadingIgnoresExtensions",
                 "newPage": false,
                 "searchKey": "internal.TestChunkReadingIgnoresExtensions",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -576,22 +504,139 @@
           },
           {
             "node": {
-              "pathID": "/net/http/internal#TestChunkReadPartial",
+              "pathID": "/net/http/internal#TestParseHexUint",
               "documentation": {
-                "identifier": "TestChunkReadPartial",
+                "identifier": "TestParseHexUint",
                 "newPage": false,
-                "searchKey": "internal.TestChunkReadPartial",
+                "searchKey": "internal.TestParseHexUint",
                 "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseHexUint(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseHexUint(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/internal#isASCIISpace",
+              "documentation": {
+                "identifier": "isASCIISpace",
+                "newPage": false,
+                "searchKey": "internal.isASCIISpace",
+                "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestChunkReadPartial(t *testing.T)"
+                "value": "func isASCIISpace(b byte) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestChunkReadPartial(t *testing.T)\n```\n\nIssue 17355: ChunkedReader shouldn't block waiting for more data if it can return something. \n\n"
+                "value": "```Go\nfunc isASCIISpace(b byte) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/internal#parseHexUint",
+              "documentation": {
+                "identifier": "parseHexUint",
+                "newPage": false,
+                "searchKey": "internal.parseHexUint",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseHexUint(v []byte) (n uint64, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseHexUint(v []byte) (n uint64, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/internal#readChunkLine",
+              "documentation": {
+                "identifier": "readChunkLine",
+                "newPage": false,
+                "searchKey": "internal.readChunkLine",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readChunkLine(b *bufio.Reader) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readChunkLine(b *bufio.Reader) ([]byte, error)\n```\n\nRead a line of bytes (up to \\n) from b. Give up if the line exceeds maxLineLength. The returned bytes are owned by the bufio.Reader so they are only valid until the next bufio read. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/internal#removeChunkExtension",
+              "documentation": {
+                "identifier": "removeChunkExtension",
+                "newPage": false,
+                "searchKey": "internal.removeChunkExtension",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func removeChunkExtension(p []byte) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc removeChunkExtension(p []byte) ([]byte, error)\n```\n\nremoveChunkExtension removes any chunk-extension from p. For example, \n\n```\n\"0\" => \"0\"\n\"0;token\" => \"0\"\n\"0;token=val\" => \"0\"\n`0;token=\"quoted string\"` => \"0\"\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/internal#trimTrailingWhitespace",
+              "documentation": {
+                "identifier": "trimTrailingWhitespace",
+                "newPage": false,
+                "searchKey": "internal.trimTrailingWhitespace",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func trimTrailingWhitespace(b []byte) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc trimTrailingWhitespace(b []byte) []byte\n```\n\n"
               },
               "children": null
             }

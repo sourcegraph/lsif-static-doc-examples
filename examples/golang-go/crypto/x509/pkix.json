@@ -4,7 +4,9 @@
     "identifier": "pkix",
     "newPage": true,
     "searchKey": "crypto/x509/pkix",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -41,6 +45,8 @@
                 "newPage": false,
                 "searchKey": "pkix.attributeTypeNames",
                 "tags": [
+                  "variable",
+                  "object",
                   "private"
                 ]
               },
@@ -57,12 +63,40 @@
           },
           {
             "node": {
+              "pathID": "/crypto/x509/pkix#oidCommonName",
+              "documentation": {
+                "identifier": "oidCommonName",
+                "newPage": false,
+                "searchKey": "pkix.oidCommonName",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var oidCommonName"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar oidCommonName = []int{2, 5, 4, 3}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/x509/pkix#oidCountry",
               "documentation": {
                 "identifier": "oidCountry",
                 "newPage": false,
                 "searchKey": "pkix.oidCountry",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -79,12 +113,40 @@
           },
           {
             "node": {
+              "pathID": "/crypto/x509/pkix#oidLocality",
+              "documentation": {
+                "identifier": "oidLocality",
+                "newPage": false,
+                "searchKey": "pkix.oidLocality",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var oidLocality"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar oidLocality = []int{2, 5, 4, 7}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/x509/pkix#oidOrganization",
               "documentation": {
                 "identifier": "oidOrganization",
                 "newPage": false,
                 "searchKey": "pkix.oidOrganization",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -107,6 +169,9 @@
                 "newPage": false,
                 "searchKey": "pkix.oidOrganizationalUnit",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -123,66 +188,25 @@
           },
           {
             "node": {
-              "pathID": "/crypto/x509/pkix#oidCommonName",
+              "pathID": "/crypto/x509/pkix#oidPostalCode",
               "documentation": {
-                "identifier": "oidCommonName",
+                "identifier": "oidPostalCode",
                 "newPage": false,
-                "searchKey": "pkix.oidCommonName",
+                "searchKey": "pkix.oidPostalCode",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var oidCommonName"
+                "value": "var oidPostalCode"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar oidCommonName = []int{2, 5, 4, 3}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/x509/pkix#oidSerialNumber",
-              "documentation": {
-                "identifier": "oidSerialNumber",
-                "newPage": false,
-                "searchKey": "pkix.oidSerialNumber",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var oidSerialNumber"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar oidSerialNumber = []int{2, 5, 4, 5}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/x509/pkix#oidLocality",
-              "documentation": {
-                "identifier": "oidLocality",
-                "newPage": false,
-                "searchKey": "pkix.oidLocality",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var oidLocality"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar oidLocality = []int{2, 5, 4, 7}\n```\n\n"
+                "value": "```Go\nvar oidPostalCode = []int{2, 5, 4, 17}\n```\n\n"
               },
               "children": null
             }
@@ -195,6 +219,9 @@
                 "newPage": false,
                 "searchKey": "pkix.oidProvince",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -211,12 +238,40 @@
           },
           {
             "node": {
+              "pathID": "/crypto/x509/pkix#oidSerialNumber",
+              "documentation": {
+                "identifier": "oidSerialNumber",
+                "newPage": false,
+                "searchKey": "pkix.oidSerialNumber",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var oidSerialNumber"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar oidSerialNumber = []int{2, 5, 4, 5}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/x509/pkix#oidStreetAddress",
               "documentation": {
                 "identifier": "oidStreetAddress",
                 "newPage": false,
                 "searchKey": "pkix.oidStreetAddress",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -227,28 +282,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar oidStreetAddress = []int{2, 5, 4, 9}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/x509/pkix#oidPostalCode",
-              "documentation": {
-                "identifier": "oidPostalCode",
-                "newPage": false,
-                "searchKey": "pkix.oidPostalCode",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var oidPostalCode"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar oidPostalCode = []int{2, 5, 4, 17}\n```\n\n"
               },
               "children": null
             }
@@ -263,7 +296,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -281,7 +316,9 @@
                 "identifier": "AlgorithmIdentifier",
                 "newPage": false,
                 "searchKey": "pkix.AlgorithmIdentifier",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -296,12 +333,239 @@
           },
           {
             "node": {
+              "pathID": "/crypto/x509/pkix#AttributeTypeAndValue",
+              "documentation": {
+                "identifier": "AttributeTypeAndValue",
+                "newPage": false,
+                "searchKey": "pkix.AttributeTypeAndValue",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AttributeTypeAndValue struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AttributeTypeAndValue struct {\n\tType  asn1.ObjectIdentifier\n\tValue interface{}\n}\n```\n\nAttributeTypeAndValue mirrors the ASN.1 structure of the same name in RFC 5280, Section 4.1.2.4. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/x509/pkix#AttributeTypeAndValueSET",
+              "documentation": {
+                "identifier": "AttributeTypeAndValueSET",
+                "newPage": false,
+                "searchKey": "pkix.AttributeTypeAndValueSET",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AttributeTypeAndValueSET struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AttributeTypeAndValueSET struct {\n\tType  asn1.ObjectIdentifier\n\tValue [][]AttributeTypeAndValue `asn1:\"set\"`\n}\n```\n\nAttributeTypeAndValueSET represents a set of ASN.1 sequences of AttributeTypeAndValue sequences from RFC 2986 (PKCS #10). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/x509/pkix#CertificateList",
+              "documentation": {
+                "identifier": "CertificateList",
+                "newPage": false,
+                "searchKey": "pkix.CertificateList",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CertificateList struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CertificateList struct {\n\tTBSCertList        TBSCertificateList\n\tSignatureAlgorithm AlgorithmIdentifier\n\tSignatureValue     asn1.BitString\n}\n```\n\nCertificateList represents the ASN.1 structure of the same name. See RFC 5280, section 5.1. Use Certificate.CheckCRLSignature to verify the signature. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/crypto/x509/pkix#CertificateList.HasExpired",
+                    "documentation": {
+                      "identifier": "CertificateList.HasExpired",
+                      "newPage": false,
+                      "searchKey": "pkix.CertificateList.HasExpired",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (certList *CertificateList) HasExpired(now time.Time) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (certList *CertificateList) HasExpired(now time.Time) bool\n```\n\nHasExpired reports whether certList should have been updated by now. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/x509/pkix#Extension",
+              "documentation": {
+                "identifier": "Extension",
+                "newPage": false,
+                "searchKey": "pkix.Extension",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Extension struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Extension struct {\n\tId       asn1.ObjectIdentifier\n\tCritical bool `asn1:\"optional\"`\n\tValue    []byte\n}\n```\n\nExtension represents the ASN.1 structure of the same name. See RFC 5280, section 4.2. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/x509/pkix#Name",
+              "documentation": {
+                "identifier": "Name",
+                "newPage": false,
+                "searchKey": "pkix.Name",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Name struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Name struct {\n\tCountry, Organization, OrganizationalUnit []string\n\tLocality, Province                        []string\n\tStreetAddress, PostalCode                 []string\n\tSerialNumber, CommonName                  string\n\n\t// Names contains all parsed attributes. When parsing distinguished names,\n\t// this can be used to extract non-standard attributes that are not parsed\n\t// by this package. When marshaling to RDNSequences, the Names field is\n\t// ignored, see ExtraNames.\n\tNames []AttributeTypeAndValue\n\n\t// ExtraNames contains attributes to be copied, raw, into any marshaled\n\t// distinguished names. Values override any attributes with the same OID.\n\t// The ExtraNames field is not populated when parsing, see Names.\n\tExtraNames []AttributeTypeAndValue\n}\n```\n\nName represents an X.509 distinguished name. This only includes the common elements of a DN. Note that Name is only an approximation of the X.509 structure. If an accurate representation is needed, asn1.Unmarshal the raw subject or issuer as an RDNSequence. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/crypto/x509/pkix#Name.FillFromRDNSequence",
+                    "documentation": {
+                      "identifier": "Name.FillFromRDNSequence",
+                      "newPage": false,
+                      "searchKey": "pkix.Name.FillFromRDNSequence",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n *Name) FillFromRDNSequence(rdns *RDNSequence)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n *Name) FillFromRDNSequence(rdns *RDNSequence)\n```\n\nFillFromRDNSequence populates n from the provided RDNSequence. Multi-entry RDNs are flattened, all entries are added to the relevant n fields, and the grouping is not preserved. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/x509/pkix#Name.String",
+                    "documentation": {
+                      "identifier": "Name.String",
+                      "newPage": false,
+                      "searchKey": "pkix.Name.String",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n Name) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n Name) String() string\n```\n\nString returns the string form of n, roughly following the RFC 2253 Distinguished Names syntax. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/x509/pkix#Name.ToRDNSequence",
+                    "documentation": {
+                      "identifier": "Name.ToRDNSequence",
+                      "newPage": false,
+                      "searchKey": "pkix.Name.ToRDNSequence",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n Name) ToRDNSequence() (ret RDNSequence)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n Name) ToRDNSequence() (ret RDNSequence)\n```\n\nToRDNSequence converts n into a single RDNSequence. The following attributes are encoded as multi-value RDNs: \n\n```\n- Country\n- Organization\n- OrganizationalUnit\n- Locality\n- Province\n- StreetAddress\n- PostalCode\n\n```\nEach ExtraNames entry is encoded as an individual RDN. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/x509/pkix#Name.appendRDNs",
+                    "documentation": {
+                      "identifier": "Name.appendRDNs",
+                      "newPage": false,
+                      "searchKey": "pkix.Name.appendRDNs",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n Name) appendRDNs(in RDNSequence, values []string, oid asn1.ObjectIdentifier) RDNSequence"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n Name) appendRDNs(in RDNSequence, values []string, oid asn1.ObjectIdentifier) RDNSequence\n```\n\nappendRDNs appends a relativeDistinguishedNameSET to the given RDNSequence and returns the new value. The relativeDistinguishedNameSET contains an attributeTypeAndValue for each of the given values. See RFC 5280, A.1, and search for AttributeTypeAndValue. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/x509/pkix#RDNSequence",
               "documentation": {
                 "identifier": "RDNSequence",
                 "newPage": false,
                 "searchKey": "pkix.RDNSequence",
-                "tags": null
+                "tags": [
+                  "array",
+                  "array",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -319,7 +583,9 @@
                       "identifier": "RDNSequence.String",
                       "newPage": false,
                       "searchKey": "pkix.RDNSequence.String",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -342,7 +608,10 @@
                 "identifier": "RelativeDistinguishedNameSET",
                 "newPage": false,
                 "searchKey": "pkix.RelativeDistinguishedNameSET",
-                "tags": null
+                "tags": [
+                  "array",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -357,206 +626,24 @@
           },
           {
             "node": {
-              "pathID": "/crypto/x509/pkix#AttributeTypeAndValue",
+              "pathID": "/crypto/x509/pkix#RevokedCertificate",
               "documentation": {
-                "identifier": "AttributeTypeAndValue",
+                "identifier": "RevokedCertificate",
                 "newPage": false,
-                "searchKey": "pkix.AttributeTypeAndValue",
-                "tags": null
+                "searchKey": "pkix.RevokedCertificate",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type AttributeTypeAndValue struct"
+                "value": "type RevokedCertificate struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype AttributeTypeAndValue struct {\n\tType  asn1.ObjectIdentifier\n\tValue interface{}\n}\n```\n\nAttributeTypeAndValue mirrors the ASN.1 structure of the same name in RFC 5280, Section 4.1.2.4. \n\n"
+                "value": "```Go\ntype RevokedCertificate struct {\n\tSerialNumber   *big.Int\n\tRevocationTime time.Time\n\tExtensions     []Extension `asn1:\"optional\"`\n}\n```\n\nRevokedCertificate represents the ASN.1 structure of the same name. See RFC 5280, section 5.1. \n\n"
               },
               "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/x509/pkix#AttributeTypeAndValueSET",
-              "documentation": {
-                "identifier": "AttributeTypeAndValueSET",
-                "newPage": false,
-                "searchKey": "pkix.AttributeTypeAndValueSET",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type AttributeTypeAndValueSET struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype AttributeTypeAndValueSET struct {\n\tType  asn1.ObjectIdentifier\n\tValue [][]AttributeTypeAndValue `asn1:\"set\"`\n}\n```\n\nAttributeTypeAndValueSET represents a set of ASN.1 sequences of AttributeTypeAndValue sequences from RFC 2986 (PKCS #10). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/x509/pkix#Extension",
-              "documentation": {
-                "identifier": "Extension",
-                "newPage": false,
-                "searchKey": "pkix.Extension",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Extension struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Extension struct {\n\tId       asn1.ObjectIdentifier\n\tCritical bool `asn1:\"optional\"`\n\tValue    []byte\n}\n```\n\nExtension represents the ASN.1 structure of the same name. See RFC 5280, section 4.2. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/x509/pkix#Name",
-              "documentation": {
-                "identifier": "Name",
-                "newPage": false,
-                "searchKey": "pkix.Name",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Name struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Name struct {\n\tCountry, Organization, OrganizationalUnit []string\n\tLocality, Province                        []string\n\tStreetAddress, PostalCode                 []string\n\tSerialNumber, CommonName                  string\n\n\t// Names contains all parsed attributes. When parsing distinguished names,\n\t// this can be used to extract non-standard attributes that are not parsed\n\t// by this package. When marshaling to RDNSequences, the Names field is\n\t// ignored, see ExtraNames.\n\tNames []AttributeTypeAndValue\n\n\t// ExtraNames contains attributes to be copied, raw, into any marshaled\n\t// distinguished names. Values override any attributes with the same OID.\n\t// The ExtraNames field is not populated when parsing, see Names.\n\tExtraNames []AttributeTypeAndValue\n}\n```\n\nName represents an X.509 distinguished name. This only includes the common elements of a DN. Note that Name is only an approximation of the X.509 structure. If an accurate representation is needed, asn1.Unmarshal the raw subject or issuer as an RDNSequence. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/crypto/x509/pkix#Name.FillFromRDNSequence",
-                    "documentation": {
-                      "identifier": "Name.FillFromRDNSequence",
-                      "newPage": false,
-                      "searchKey": "pkix.Name.FillFromRDNSequence",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (n *Name) FillFromRDNSequence(rdns *RDNSequence)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (n *Name) FillFromRDNSequence(rdns *RDNSequence)\n```\n\nFillFromRDNSequence populates n from the provided RDNSequence. Multi-entry RDNs are flattened, all entries are added to the relevant n fields, and the grouping is not preserved. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/x509/pkix#Name.appendRDNs",
-                    "documentation": {
-                      "identifier": "Name.appendRDNs",
-                      "newPage": false,
-                      "searchKey": "pkix.Name.appendRDNs",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (n Name) appendRDNs(in RDNSequence, values []string, oid asn1.ObjectIdentifier) RDNSequence"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (n Name) appendRDNs(in RDNSequence, values []string, oid asn1.ObjectIdentifier) RDNSequence\n```\n\nappendRDNs appends a relativeDistinguishedNameSET to the given RDNSequence and returns the new value. The relativeDistinguishedNameSET contains an attributeTypeAndValue for each of the given values. See RFC 5280, A.1, and search for AttributeTypeAndValue. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/x509/pkix#Name.ToRDNSequence",
-                    "documentation": {
-                      "identifier": "Name.ToRDNSequence",
-                      "newPage": false,
-                      "searchKey": "pkix.Name.ToRDNSequence",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (n Name) ToRDNSequence() (ret RDNSequence)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (n Name) ToRDNSequence() (ret RDNSequence)\n```\n\nToRDNSequence converts n into a single RDNSequence. The following attributes are encoded as multi-value RDNs: \n\n```\n- Country\n- Organization\n- OrganizationalUnit\n- Locality\n- Province\n- StreetAddress\n- PostalCode\n\n```\nEach ExtraNames entry is encoded as an individual RDN. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/x509/pkix#Name.String",
-                    "documentation": {
-                      "identifier": "Name.String",
-                      "newPage": false,
-                      "searchKey": "pkix.Name.String",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (n Name) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (n Name) String() string\n```\n\nString returns the string form of n, roughly following the RFC 2253 Distinguished Names syntax. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/x509/pkix#CertificateList",
-              "documentation": {
-                "identifier": "CertificateList",
-                "newPage": false,
-                "searchKey": "pkix.CertificateList",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type CertificateList struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype CertificateList struct {\n\tTBSCertList        TBSCertificateList\n\tSignatureAlgorithm AlgorithmIdentifier\n\tSignatureValue     asn1.BitString\n}\n```\n\nCertificateList represents the ASN.1 structure of the same name. See RFC 5280, section 5.1. Use Certificate.CheckCRLSignature to verify the signature. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/crypto/x509/pkix#CertificateList.HasExpired",
-                    "documentation": {
-                      "identifier": "CertificateList.HasExpired",
-                      "newPage": false,
-                      "searchKey": "pkix.CertificateList.HasExpired",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (certList *CertificateList) HasExpired(now time.Time) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (certList *CertificateList) HasExpired(now time.Time) bool\n```\n\nHasExpired reports whether certList should have been updated by now. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
             }
           },
           {
@@ -566,7 +653,9 @@
                 "identifier": "TBSCertificateList",
                 "newPage": false,
                 "searchKey": "pkix.TBSCertificateList",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -575,26 +664,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\ntype TBSCertificateList struct {\n\tRaw                 asn1.RawContent\n\tVersion             int `asn1:\"optional,default:0\"`\n\tSignature           AlgorithmIdentifier\n\tIssuer              RDNSequence\n\tThisUpdate          time.Time\n\tNextUpdate          time.Time            `asn1:\"optional\"`\n\tRevokedCertificates []RevokedCertificate `asn1:\"optional\"`\n\tExtensions          []Extension          `asn1:\"tag:0,optional,explicit\"`\n}\n```\n\nTBSCertificateList represents the ASN.1 structure of the same name. See RFC 5280, section 5.1. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/x509/pkix#RevokedCertificate",
-              "documentation": {
-                "identifier": "RevokedCertificate",
-                "newPage": false,
-                "searchKey": "pkix.RevokedCertificate",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RevokedCertificate struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RevokedCertificate struct {\n\tSerialNumber   *big.Int\n\tRevocationTime time.Time\n\tExtensions     []Extension `asn1:\"optional\"`\n}\n```\n\nRevokedCertificate represents the ASN.1 structure of the same name. See RFC 5280, section 5.1. \n\n"
               },
               "children": null
             }
@@ -609,7 +678,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -628,6 +699,7 @@
                 "newPage": false,
                 "searchKey": "pkix.oidInAttributeTypeAndValue",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },

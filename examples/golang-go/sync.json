@@ -4,7 +4,9 @@
     "identifier": "sync",
     "newPage": true,
     "searchKey": "sync",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,122 +39,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/sync#mutexLocked",
-              "documentation": {
-                "identifier": "mutexLocked",
-                "newPage": false,
-                "searchKey": "sync.mutexLocked",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const mutexLocked"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst mutexLocked = 1 << iota // mutex is locked\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync#mutexWoken",
-              "documentation": {
-                "identifier": "mutexWoken",
-                "newPage": false,
-                "searchKey": "sync.mutexWoken",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const mutexWoken"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst mutexWoken\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync#mutexStarving",
-              "documentation": {
-                "identifier": "mutexStarving",
-                "newPage": false,
-                "searchKey": "sync.mutexStarving",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const mutexStarving"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst mutexStarving\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync#mutexWaiterShift",
-              "documentation": {
-                "identifier": "mutexWaiterShift",
-                "newPage": false,
-                "searchKey": "sync.mutexWaiterShift",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const mutexWaiterShift"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst mutexWaiterShift = iota\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync#starvationThresholdNs",
-              "documentation": {
-                "identifier": "starvationThresholdNs",
-                "newPage": false,
-                "searchKey": "sync.starvationThresholdNs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const starvationThresholdNs"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst starvationThresholdNs = 1e6\n```\n\nMutex fairness. \n\nMutex can be in 2 modes of operations: normal and starvation. In normal mode waiters are queued in FIFO order, but a woken up waiter does not own the mutex and competes with new arriving goroutines over the ownership. New arriving goroutines have an advantage -- they are already running on CPU and there can be lots of them, so a woken up waiter has good chances of losing. In such case it is queued at front of the wait queue. If a waiter fails to acquire the mutex for more than 1ms, it switches mutex to the starvation mode. \n\nIn starvation mode ownership of the mutex is directly handed off from the unlocking goroutine to the waiter at the front of the queue. New arriving goroutines don't try to acquire the mutex even if it appears to be unlocked, and don't try to spin. Instead they queue themselves at the tail of the wait queue. \n\nIf a waiter receives ownership of the mutex and sees that either (1) it is the last waiter in the queue, or (2) it waited for less than 1 ms, it switches mutex back to normal operation mode. \n\nNormal mode has considerably better performance as a goroutine can acquire a mutex several times in a row even if there are blocked waiters. Starvation mode is important to prevent pathological cases of tail latency. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/sync#dequeueBits",
               "documentation": {
                 "identifier": "dequeueBits",
                 "newPage": false,
                 "searchKey": "sync.dequeueBits",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -173,6 +69,8 @@
                 "newPage": false,
                 "searchKey": "sync.dequeueLimit",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -189,12 +87,110 @@
           },
           {
             "node": {
+              "pathID": "/sync#mutexLocked",
+              "documentation": {
+                "identifier": "mutexLocked",
+                "newPage": false,
+                "searchKey": "sync.mutexLocked",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const mutexLocked"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst mutexLocked = 1 << iota // mutex is locked\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#mutexStarving",
+              "documentation": {
+                "identifier": "mutexStarving",
+                "newPage": false,
+                "searchKey": "sync.mutexStarving",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const mutexStarving"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst mutexStarving\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#mutexWaiterShift",
+              "documentation": {
+                "identifier": "mutexWaiterShift",
+                "newPage": false,
+                "searchKey": "sync.mutexWaiterShift",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const mutexWaiterShift"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst mutexWaiterShift = iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#mutexWoken",
+              "documentation": {
+                "identifier": "mutexWoken",
+                "newPage": false,
+                "searchKey": "sync.mutexWoken",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const mutexWoken"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst mutexWoken\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/sync#rwmutexMaxReaders",
               "documentation": {
                 "identifier": "rwmutexMaxReaders",
                 "newPage": false,
                 "searchKey": "sync.rwmutexMaxReaders",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -205,6 +201,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst rwmutexMaxReaders = 1 << 30\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#starvationThresholdNs",
+              "documentation": {
+                "identifier": "starvationThresholdNs",
+                "newPage": false,
+                "searchKey": "sync.starvationThresholdNs",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const starvationThresholdNs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst starvationThresholdNs = 1e6\n```\n\nMutex fairness. \n\nMutex can be in 2 modes of operations: normal and starvation. In normal mode waiters are queued in FIFO order, but a woken up waiter does not own the mutex and competes with new arriving goroutines over the ownership. New arriving goroutines have an advantage -- they are already running on CPU and there can be lots of them, so a woken up waiter has good chances of losing. In such case it is queued at front of the wait queue. If a waiter fails to acquire the mutex for more than 1ms, it switches mutex to the starvation mode. \n\nIn starvation mode ownership of the mutex is directly handed off from the unlocking goroutine to the waiter at the front of the queue. New arriving goroutines don't try to acquire the mutex even if it appears to be unlocked, and don't try to spin. Instead they queue themselves at the tail of the wait queue. \n\nIf a waiter receives ownership of the mutex and sees that either (1) it is the last waiter in the queue, or (2) it waited for less than 1 ms, it switches mutex back to normal operation mode. \n\nNormal mode has considerably better performance as a goroutine can acquire a mutex several times in a row even if there are blocked waiters. Starvation mode is important to prevent pathological cases of tail latency. \n\n"
               },
               "children": null
             }
@@ -219,7 +239,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -232,122 +254,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/sync#expunged",
-              "documentation": {
-                "identifier": "expunged",
-                "newPage": false,
-                "searchKey": "sync.expunged",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var expunged"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar expunged = unsafe.Pointer(new(interface{}))\n```\n\nexpunged is an arbitrary pointer that marks entries which have been deleted from the dirty map. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync#poolRaceHash",
-              "documentation": {
-                "identifier": "poolRaceHash",
-                "newPage": false,
-                "searchKey": "sync.poolRaceHash",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var poolRaceHash"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar poolRaceHash [128]uint64\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync#allPoolsMu",
-              "documentation": {
-                "identifier": "allPoolsMu",
-                "newPage": false,
-                "searchKey": "sync.allPoolsMu",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var allPoolsMu"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar allPoolsMu Mutex\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync#allPools",
-              "documentation": {
-                "identifier": "allPools",
-                "newPage": false,
-                "searchKey": "sync.allPools",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var allPools"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar allPools []*Pool\n```\n\nallPools is the set of pools that have non-empty primary caches. Protected by either 1) allPoolsMu and pinning or 2) STW. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync#oldPools",
-              "documentation": {
-                "identifier": "oldPools",
-                "newPage": false,
-                "searchKey": "sync.oldPools",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var oldPools"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar oldPools []*Pool\n```\n\noldPools is the set of pools that may have non-empty victim caches. Protected by STW. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/sync#Runtime_Semacquire",
               "documentation": {
                 "identifier": "Runtime_Semacquire",
                 "newPage": false,
                 "searchKey": "sync.Runtime_Semacquire",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
@@ -370,6 +284,8 @@
                 "newPage": false,
                 "searchKey": "sync.Runtime_Semrelease",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
@@ -392,6 +308,8 @@
                 "newPage": false,
                 "searchKey": "sync.Runtime_procPin",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
@@ -414,6 +332,8 @@
                 "newPage": false,
                 "searchKey": "sync.Runtime_procUnpin",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
@@ -424,6 +344,129 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar Runtime_procUnpin = runtime_procUnpin\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#allPools",
+              "documentation": {
+                "identifier": "allPools",
+                "newPage": false,
+                "searchKey": "sync.allPools",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var allPools"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar allPools []*Pool\n```\n\nallPools is the set of pools that have non-empty primary caches. Protected by either 1) allPoolsMu and pinning or 2) STW. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#allPoolsMu",
+              "documentation": {
+                "identifier": "allPoolsMu",
+                "newPage": false,
+                "searchKey": "sync.allPoolsMu",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var allPoolsMu"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar allPoolsMu Mutex\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#expunged",
+              "documentation": {
+                "identifier": "expunged",
+                "newPage": false,
+                "searchKey": "sync.expunged",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var expunged"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar expunged = unsafe.Pointer(new(interface{}))\n```\n\nexpunged is an arbitrary pointer that marks entries which have been deleted from the dirty map. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#oldPools",
+              "documentation": {
+                "identifier": "oldPools",
+                "newPage": false,
+                "searchKey": "sync.oldPools",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var oldPools"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar oldPools []*Pool\n```\n\noldPools is the set of pools that may have non-empty victim caches. Protected by STW. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#poolRaceHash",
+              "documentation": {
+                "identifier": "poolRaceHash",
+                "newPage": false,
+                "searchKey": "sync.poolRaceHash",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var poolRaceHash"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar poolRaceHash [128]uint64\n```\n\n"
               },
               "children": null
             }
@@ -438,7 +481,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -456,7 +501,9 @@
                 "identifier": "Cond",
                 "newPage": false,
                 "searchKey": "sync.Cond",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -474,7 +521,9 @@
                       "identifier": "NewCond",
                       "newPage": false,
                       "searchKey": "sync.NewCond",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -489,20 +538,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/sync#Cond.Wait",
+                    "pathID": "/sync#Cond.Broadcast",
                     "documentation": {
-                      "identifier": "Cond.Wait",
+                      "identifier": "Cond.Broadcast",
                       "newPage": false,
-                      "searchKey": "sync.Cond.Wait",
-                      "tags": null
+                      "searchKey": "sync.Cond.Broadcast",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (c *Cond) Wait()"
+                      "value": "func (c *Cond) Broadcast()"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (c *Cond) Wait()\n```\n\nWait atomically unlocks c.L and suspends execution of the calling goroutine. After later resuming execution, Wait locks c.L before returning. Unlike in other systems, Wait cannot return unless awoken by Broadcast or Signal. \n\nBecause c.L is not locked when Wait first resumes, the caller typically cannot assume that the condition is true when Wait returns. Instead, the caller should Wait in a loop: \n\n```\nc.L.Lock()\nfor !condition() {\n    c.Wait()\n}\n... make use of condition ...\nc.L.Unlock()\n\n```\n"
+                      "value": "```Go\nfunc (c *Cond) Broadcast()\n```\n\nBroadcast wakes all goroutines waiting on c. \n\nIt is allowed but not required for the caller to hold c.L during the call. \n\n"
                     },
                     "children": null
                   }
@@ -514,7 +565,9 @@
                       "identifier": "Cond.Signal",
                       "newPage": false,
                       "searchKey": "sync.Cond.Signal",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -529,20 +582,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/sync#Cond.Broadcast",
+                    "pathID": "/sync#Cond.Wait",
                     "documentation": {
-                      "identifier": "Cond.Broadcast",
+                      "identifier": "Cond.Wait",
                       "newPage": false,
-                      "searchKey": "sync.Cond.Broadcast",
-                      "tags": null
+                      "searchKey": "sync.Cond.Wait",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (c *Cond) Broadcast()"
+                      "value": "func (c *Cond) Wait()"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (c *Cond) Broadcast()\n```\n\nBroadcast wakes all goroutines waiting on c. \n\nIt is allowed but not required for the caller to hold c.L during the call. \n\n"
+                      "value": "```Go\nfunc (c *Cond) Wait()\n```\n\nWait atomically unlocks c.L and suspends execution of the calling goroutine. After later resuming execution, Wait locks c.L before returning. Unlike in other systems, Wait cannot return unless awoken by Broadcast or Signal. \n\nBecause c.L is not locked when Wait first resumes, the caller typically cannot assume that the condition is true when Wait returns. Instead, the caller should Wait in a loop: \n\n```\nc.L.Lock()\nfor !condition() {\n    c.Wait()\n}\n... make use of condition ...\nc.L.Unlock()\n\n```\n"
                     },
                     "children": null
                   }
@@ -552,114 +607,24 @@
           },
           {
             "node": {
-              "pathID": "/sync#copyChecker",
+              "pathID": "/sync#Locker",
               "documentation": {
-                "identifier": "copyChecker",
+                "identifier": "Locker",
                 "newPage": false,
-                "searchKey": "sync.copyChecker",
+                "searchKey": "sync.Locker",
                 "tags": [
-                  "private"
+                  "interface"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type copyChecker uintptr"
+                "value": "type Locker interface"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype copyChecker uintptr\n```\n\ncopyChecker holds back pointer to itself to detect object copying. \n\n"
+                "value": "```Go\ntype Locker interface {\n\tLock()\n\tUnlock()\n}\n```\n\nA Locker represents an object that can be locked and unlocked. \n\n"
               },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/sync#copyChecker.check",
-                    "documentation": {
-                      "identifier": "copyChecker.check",
-                      "newPage": false,
-                      "searchKey": "sync.copyChecker.check",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *copyChecker) check()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *copyChecker) check()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync#noCopy",
-              "documentation": {
-                "identifier": "noCopy",
-                "newPage": false,
-                "searchKey": "sync.noCopy",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type noCopy struct{}"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype noCopy struct{}\n```\n\nnoCopy may be embedded into structs which must not be copied after the first use. \n\nSee [https://golang.org/issues/8005#issuecomment-190753527](https://golang.org/issues/8005#issuecomment-190753527) for details. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/sync#noCopy.Lock",
-                    "documentation": {
-                      "identifier": "noCopy.Lock",
-                      "newPage": false,
-                      "searchKey": "sync.noCopy.Lock",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*noCopy) Lock()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*noCopy) Lock()\n```\n\nLock is a no-op used by -copylocks checker from `go vet`. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync#noCopy.Unlock",
-                    "documentation": {
-                      "identifier": "noCopy.Unlock",
-                      "newPage": false,
-                      "searchKey": "sync.noCopy.Unlock",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*noCopy) Unlock()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*noCopy) Unlock()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
+              "children": null
             }
           },
           {
@@ -669,7 +634,9 @@
                 "identifier": "Map",
                 "newPage": false,
                 "searchKey": "sync.Map",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -682,92 +649,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/sync#Map.Load",
-                    "documentation": {
-                      "identifier": "Map.Load",
-                      "newPage": false,
-                      "searchKey": "sync.Map.Load",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *Map) Load(key interface{}) (value interface{}, ok bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *Map) Load(key interface{}) (value interface{}, ok bool)\n```\n\nLoad returns the value stored in the map for a key, or nil if no value is present. The ok result indicates whether value was found in the map. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync#Map.Store",
-                    "documentation": {
-                      "identifier": "Map.Store",
-                      "newPage": false,
-                      "searchKey": "sync.Map.Store",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *Map) Store(key, value interface{})"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *Map) Store(key, value interface{})\n```\n\nStore sets the value for a key. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync#Map.LoadOrStore",
-                    "documentation": {
-                      "identifier": "Map.LoadOrStore",
-                      "newPage": false,
-                      "searchKey": "sync.Map.LoadOrStore",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *Map) LoadOrStore(key, value interface{}) (actual interface{}, loaded bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *Map) LoadOrStore(key, value interface{}) (actual interface{}, loaded bool)\n```\n\nLoadOrStore returns the existing value for the key if present. Otherwise, it stores and returns the given value. The loaded result is true if the value was loaded, false if stored. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync#Map.LoadAndDelete",
-                    "documentation": {
-                      "identifier": "Map.LoadAndDelete",
-                      "newPage": false,
-                      "searchKey": "sync.Map.LoadAndDelete",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *Map) LoadAndDelete(key interface{}) (value interface{}, loaded bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *Map) LoadAndDelete(key interface{}) (value interface{}, loaded bool)\n```\n\nLoadAndDelete deletes the value for a key, returning the previous value if any. The loaded result reports whether the key was present. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/sync#Map.Delete",
                     "documentation": {
                       "identifier": "Map.Delete",
                       "newPage": false,
                       "searchKey": "sync.Map.Delete",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -782,12 +671,80 @@
                 },
                 {
                   "node": {
+                    "pathID": "/sync#Map.Load",
+                    "documentation": {
+                      "identifier": "Map.Load",
+                      "newPage": false,
+                      "searchKey": "sync.Map.Load",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *Map) Load(key interface{}) (value interface{}, ok bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *Map) Load(key interface{}) (value interface{}, ok bool)\n```\n\nLoad returns the value stored in the map for a key, or nil if no value is present. The ok result indicates whether value was found in the map. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#Map.LoadAndDelete",
+                    "documentation": {
+                      "identifier": "Map.LoadAndDelete",
+                      "newPage": false,
+                      "searchKey": "sync.Map.LoadAndDelete",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *Map) LoadAndDelete(key interface{}) (value interface{}, loaded bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *Map) LoadAndDelete(key interface{}) (value interface{}, loaded bool)\n```\n\nLoadAndDelete deletes the value for a key, returning the previous value if any. The loaded result reports whether the key was present. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#Map.LoadOrStore",
+                    "documentation": {
+                      "identifier": "Map.LoadOrStore",
+                      "newPage": false,
+                      "searchKey": "sync.Map.LoadOrStore",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *Map) LoadOrStore(key, value interface{}) (actual interface{}, loaded bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *Map) LoadOrStore(key, value interface{}) (actual interface{}, loaded bool)\n```\n\nLoadOrStore returns the existing value for the key if present. Otherwise, it stores and returns the given value. The loaded result is true if the value was loaded, false if stored. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/sync#Map.Range",
                     "documentation": {
                       "identifier": "Map.Range",
                       "newPage": false,
                       "searchKey": "sync.Map.Range",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -802,22 +759,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/sync#Map.missLocked",
+                    "pathID": "/sync#Map.Store",
                     "documentation": {
-                      "identifier": "Map.missLocked",
+                      "identifier": "Map.Store",
                       "newPage": false,
-                      "searchKey": "sync.Map.missLocked",
+                      "searchKey": "sync.Map.Store",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (m *Map) missLocked()"
+                      "value": "func (m *Map) Store(key, value interface{})"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (m *Map) missLocked()\n```\n\n"
+                      "value": "```Go\nfunc (m *Map) Store(key, value interface{})\n```\n\nStore sets the value for a key. \n\n"
                     },
                     "children": null
                   }
@@ -830,6 +787,7 @@
                       "newPage": false,
                       "searchKey": "sync.Map.dirtyLocked",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -843,224 +801,26 @@
                     },
                     "children": null
                   }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync#readOnly",
-              "documentation": {
-                "identifier": "readOnly",
-                "newPage": false,
-                "searchKey": "sync.readOnly",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type readOnly struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype readOnly struct {\n\tm       map[interface{}]*entry\n\tamended bool // true if the dirty map contains some key not in m.\n}\n```\n\nreadOnly is an immutable struct stored atomically in the Map.read field. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync#entry",
-              "documentation": {
-                "identifier": "entry",
-                "newPage": false,
-                "searchKey": "sync.entry",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type entry struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype entry struct {\n\t// p points to the interface{} value stored for the entry.\n\t//\n\t// If p == nil, the entry has been deleted, and either m.dirty == nil or\n\t// m.dirty[key] is e.\n\t//\n\t// If p == expunged, the entry has been deleted, m.dirty != nil, and the entry\n\t// is missing from m.dirty.\n\t//\n\t// Otherwise, the entry is valid and recorded in m.read.m[key] and, if m.dirty\n\t// != nil, in m.dirty[key].\n\t//\n\t// An entry can be deleted by atomic replacement with nil: when m.dirty is\n\t// next created, it will atomically replace nil with expunged and leave\n\t// m.dirty[key] unset.\n\t//\n\t// An entry's associated value can be updated by atomic replacement, provided\n\t// p != expunged. If p == expunged, an entry's associated value can be updated\n\t// only after first setting m.dirty[key] = e so that lookups using the dirty\n\t// map find the entry.\n\tp unsafe.Pointer // *interface{}\n}\n```\n\nAn entry is a slot in the map corresponding to a particular key. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/sync#newEntry",
-                    "documentation": {
-                      "identifier": "newEntry",
-                      "newPage": false,
-                      "searchKey": "sync.newEntry",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func newEntry(i interface{}) *entry"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc newEntry(i interface{}) *entry\n```\n\n"
-                    },
-                    "children": null
-                  }
                 },
                 {
                   "node": {
-                    "pathID": "/sync#entry.load",
+                    "pathID": "/sync#Map.missLocked",
                     "documentation": {
-                      "identifier": "entry.load",
+                      "identifier": "Map.missLocked",
                       "newPage": false,
-                      "searchKey": "sync.entry.load",
+                      "searchKey": "sync.Map.missLocked",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (e *entry) load() (value interface{}, ok bool)"
+                      "value": "func (m *Map) missLocked()"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (e *entry) load() (value interface{}, ok bool)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync#entry.tryStore",
-                    "documentation": {
-                      "identifier": "entry.tryStore",
-                      "newPage": false,
-                      "searchKey": "sync.entry.tryStore",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *entry) tryStore(i *interface{}) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *entry) tryStore(i *interface{}) bool\n```\n\ntryStore stores a value if the entry has not been expunged. \n\nIf the entry is expunged, tryStore returns false and leaves the entry unchanged. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync#entry.unexpungeLocked",
-                    "documentation": {
-                      "identifier": "entry.unexpungeLocked",
-                      "newPage": false,
-                      "searchKey": "sync.entry.unexpungeLocked",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *entry) unexpungeLocked() (wasExpunged bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *entry) unexpungeLocked() (wasExpunged bool)\n```\n\nunexpungeLocked ensures that the entry is not marked as expunged. \n\nIf the entry was previously expunged, it must be added to the dirty map before m.mu is unlocked. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync#entry.storeLocked",
-                    "documentation": {
-                      "identifier": "entry.storeLocked",
-                      "newPage": false,
-                      "searchKey": "sync.entry.storeLocked",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *entry) storeLocked(i *interface{})"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *entry) storeLocked(i *interface{})\n```\n\nstoreLocked unconditionally stores a value to the entry. \n\nThe entry must be known not to be expunged. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync#entry.tryLoadOrStore",
-                    "documentation": {
-                      "identifier": "entry.tryLoadOrStore",
-                      "newPage": false,
-                      "searchKey": "sync.entry.tryLoadOrStore",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *entry) tryLoadOrStore(i interface{}) (actual interface{}, loaded, ok bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *entry) tryLoadOrStore(i interface{}) (actual interface{}, loaded, ok bool)\n```\n\ntryLoadOrStore atomically loads or stores a value if the entry is not expunged. \n\nIf the entry is expunged, tryLoadOrStore leaves the entry unchanged and returns with ok==false. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync#entry.delete",
-                    "documentation": {
-                      "identifier": "entry.delete",
-                      "newPage": false,
-                      "searchKey": "sync.entry.delete",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *entry) delete() (value interface{}, ok bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *entry) delete() (value interface{}, ok bool)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync#entry.tryExpungeLocked",
-                    "documentation": {
-                      "identifier": "entry.tryExpungeLocked",
-                      "newPage": false,
-                      "searchKey": "sync.entry.tryExpungeLocked",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *entry) tryExpungeLocked() (isExpunged bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *entry) tryExpungeLocked() (isExpunged bool)\n```\n\n"
+                      "value": "```Go\nfunc (m *Map) missLocked()\n```\n\n"
                     },
                     "children": null
                   }
@@ -1075,7 +835,9 @@
                 "identifier": "Mutex",
                 "newPage": false,
                 "searchKey": "sync.Mutex",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1093,7 +855,9 @@
                       "identifier": "Mutex.Lock",
                       "newPage": false,
                       "searchKey": "sync.Mutex.Lock",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1108,12 +872,35 @@
                 },
                 {
                   "node": {
+                    "pathID": "/sync#Mutex.Unlock",
+                    "documentation": {
+                      "identifier": "Mutex.Unlock",
+                      "newPage": false,
+                      "searchKey": "sync.Mutex.Unlock",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *Mutex) Unlock()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *Mutex) Unlock()\n```\n\nUnlock unlocks m. It is a run-time error if m is not locked on entry to Unlock. \n\nA locked Mutex is not associated with a particular goroutine. It is allowed for one goroutine to lock a Mutex and then arrange for another goroutine to unlock it. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/sync#Mutex.lockSlow",
                     "documentation": {
                       "identifier": "Mutex.lockSlow",
                       "newPage": false,
                       "searchKey": "sync.Mutex.lockSlow",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1130,32 +917,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/sync#Mutex.Unlock",
-                    "documentation": {
-                      "identifier": "Mutex.Unlock",
-                      "newPage": false,
-                      "searchKey": "sync.Mutex.Unlock",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *Mutex) Unlock()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *Mutex) Unlock()\n```\n\nUnlock unlocks m. It is a run-time error if m is not locked on entry to Unlock. \n\nA locked Mutex is not associated with a particular goroutine. It is allowed for one goroutine to lock a Mutex and then arrange for another goroutine to unlock it. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/sync#Mutex.unlockSlow",
                     "documentation": {
                       "identifier": "Mutex.unlockSlow",
                       "newPage": false,
                       "searchKey": "sync.Mutex.unlockSlow",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1175,32 +943,14 @@
           },
           {
             "node": {
-              "pathID": "/sync#Locker",
-              "documentation": {
-                "identifier": "Locker",
-                "newPage": false,
-                "searchKey": "sync.Locker",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Locker interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Locker interface {\n\tLock()\n\tUnlock()\n}\n```\n\nA Locker represents an object that can be locked and unlocked. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/sync#Once",
               "documentation": {
                 "identifier": "Once",
                 "newPage": false,
                 "searchKey": "sync.Once",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1218,7 +968,9 @@
                       "identifier": "Once.Do",
                       "newPage": false,
                       "searchKey": "sync.Once.Do",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1239,6 +991,7 @@
                       "newPage": false,
                       "searchKey": "sync.Once.doSlow",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1263,7 +1016,9 @@
                 "identifier": "Pool",
                 "newPage": false,
                 "searchKey": "sync.Pool",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1276,32 +1031,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/sync#Pool.Put",
-                    "documentation": {
-                      "identifier": "Pool.Put",
-                      "newPage": false,
-                      "searchKey": "sync.Pool.Put",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *Pool) Put(x interface{})"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *Pool) Put(x interface{})\n```\n\nPut adds x to the pool. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/sync#Pool.Get",
                     "documentation": {
                       "identifier": "Pool.Get",
                       "newPage": false,
                       "searchKey": "sync.Pool.Get",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1316,12 +1053,35 @@
                 },
                 {
                   "node": {
+                    "pathID": "/sync#Pool.Put",
+                    "documentation": {
+                      "identifier": "Pool.Put",
+                      "newPage": false,
+                      "searchKey": "sync.Pool.Put",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Pool) Put(x interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Pool) Put(x interface{})\n```\n\nPut adds x to the pool. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/sync#Pool.getSlow",
                     "documentation": {
                       "identifier": "Pool.getSlow",
                       "newPage": false,
                       "searchKey": "sync.Pool.getSlow",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1344,6 +1104,7 @@
                       "newPage": false,
                       "searchKey": "sync.Pool.pin",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1366,6 +1127,7 @@
                       "newPage": false,
                       "searchKey": "sync.Pool.pinSlow",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1385,64 +1147,67 @@
           },
           {
             "node": {
-              "pathID": "/sync#poolLocalInternal",
+              "pathID": "/sync#PoolDequeue",
               "documentation": {
-                "identifier": "poolLocalInternal",
+                "identifier": "PoolDequeue",
                 "newPage": false,
-                "searchKey": "sync.poolLocalInternal",
+                "searchKey": "sync.PoolDequeue",
                 "tags": [
+                  "interface",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type poolLocalInternal struct"
+                "value": "type PoolDequeue interface"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype poolLocalInternal struct {\n\tprivate interface{} // Can be used only by the respective P.\n\tshared  poolChain   // Local P can pushHead/popHead; any P can popTail.\n}\n```\n\nLocal per-P Pool appendix. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync#poolLocal",
-              "documentation": {
-                "identifier": "poolLocal",
-                "newPage": false,
-                "searchKey": "sync.poolLocal",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type poolLocal struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype poolLocal struct {\n\tpoolLocalInternal\n\n\t// Prevents false sharing on widespread platforms with\n\t// 128 mod (cache line size) = 0 .\n\tpad [128 - unsafe.Sizeof(poolLocalInternal{})%128]byte\n}\n```\n\n"
+                "value": "```Go\ntype PoolDequeue interface {\n\tPushHead(val interface{}) bool\n\tPopHead() (interface{}, bool)\n\tPopTail() (interface{}, bool)\n}\n```\n\npoolDequeue testing. \n\n"
               },
               "children": [
                 {
                   "node": {
-                    "pathID": "/sync#indexLocal",
+                    "pathID": "/sync#NewPoolChain",
                     "documentation": {
-                      "identifier": "indexLocal",
+                      "identifier": "NewPoolChain",
                       "newPage": false,
-                      "searchKey": "sync.indexLocal",
+                      "searchKey": "sync.NewPoolChain",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func indexLocal(l unsafe.Pointer, i int) *poolLocal"
+                      "value": "func NewPoolChain() PoolDequeue"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc indexLocal(l unsafe.Pointer, i int) *poolLocal\n```\n\n"
+                      "value": "```Go\nfunc NewPoolChain() PoolDequeue\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#NewPoolDequeue",
+                    "documentation": {
+                      "identifier": "NewPoolDequeue",
+                      "newPage": false,
+                      "searchKey": "sync.NewPoolDequeue",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewPoolDequeue(n int) PoolDequeue"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewPoolDequeue(n int) PoolDequeue\n```\n\n"
                     },
                     "children": null
                   }
@@ -1452,196 +1217,153 @@
           },
           {
             "node": {
-              "pathID": "/sync#poolDequeue",
+              "pathID": "/sync#RWMutex",
               "documentation": {
-                "identifier": "poolDequeue",
+                "identifier": "RWMutex",
                 "newPage": false,
-                "searchKey": "sync.poolDequeue",
+                "searchKey": "sync.RWMutex",
                 "tags": [
-                  "private"
+                  "struct"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type poolDequeue struct"
+                "value": "type RWMutex struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype poolDequeue struct {\n\t// headTail packs together a 32-bit head index and a 32-bit\n\t// tail index. Both are indexes into vals modulo len(vals)-1.\n\t//\n\t// tail = index of oldest data in queue\n\t// head = index of next slot to fill\n\t//\n\t// Slots in the range [tail, head) are owned by consumers.\n\t// A consumer continues to own a slot outside this range until\n\t// it nils the slot, at which point ownership passes to the\n\t// producer.\n\t//\n\t// The head index is stored in the most-significant bits so\n\t// that we can atomically add to it and the overflow is\n\t// harmless.\n\theadTail uint64\n\n\t// vals is a ring buffer of interface{} values stored in this\n\t// dequeue. The size of this must be a power of 2.\n\t//\n\t// vals[i].typ is nil if the slot is empty and non-nil\n\t// otherwise. A slot is still in use until *both* the tail\n\t// index has moved beyond it and typ has been set to nil. This\n\t// is set to nil atomically by the consumer and read\n\t// atomically by the producer.\n\tvals []eface\n}\n```\n\npoolDequeue is a lock-free fixed-size single-producer, multi-consumer queue. The single producer can both push and pop from the head, and consumers can pop from the tail. \n\nIt has the added feature that it nils out unused slots to avoid unnecessary retention of objects. This is important for sync.Pool, but not typically a property considered in the literature. \n\n"
+                "value": "```Go\ntype RWMutex struct {\n\tw           Mutex  // held if there are pending writers\n\twriterSem   uint32 // semaphore for writers to wait for completing readers\n\treaderSem   uint32 // semaphore for readers to wait for completing writers\n\treaderCount int32  // number of pending readers\n\treaderWait  int32  // number of departing readers\n}\n```\n\nA RWMutex is a reader/writer mutual exclusion lock. The lock can be held by an arbitrary number of readers or a single writer. The zero value for a RWMutex is an unlocked mutex. \n\nA RWMutex must not be copied after first use. \n\nIf a goroutine holds a RWMutex for reading and another goroutine might call Lock, no goroutine should expect to be able to acquire a read lock until the initial read lock is released. In particular, this prohibits recursive read locking. This is to ensure that the lock eventually becomes available; a blocked Lock call excludes new readers from acquiring the lock. \n\n"
               },
               "children": [
                 {
                   "node": {
-                    "pathID": "/sync#poolDequeue.unpack",
+                    "pathID": "/sync#RWMutex.Lock",
                     "documentation": {
-                      "identifier": "poolDequeue.unpack",
+                      "identifier": "RWMutex.Lock",
                       "newPage": false,
-                      "searchKey": "sync.poolDequeue.unpack",
+                      "searchKey": "sync.RWMutex.Lock",
                       "tags": [
-                        "private"
+                        "function"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (d *poolDequeue) unpack(ptrs uint64) (head, tail uint32)"
+                      "value": "func (rw *RWMutex) Lock()"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (d *poolDequeue) unpack(ptrs uint64) (head, tail uint32)\n```\n\n"
+                      "value": "```Go\nfunc (rw *RWMutex) Lock()\n```\n\nLock locks rw for writing. If the lock is already locked for reading or writing, Lock blocks until the lock is available. \n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/sync#poolDequeue.pack",
+                    "pathID": "/sync#RWMutex.RLock",
                     "documentation": {
-                      "identifier": "poolDequeue.pack",
+                      "identifier": "RWMutex.RLock",
                       "newPage": false,
-                      "searchKey": "sync.poolDequeue.pack",
+                      "searchKey": "sync.RWMutex.RLock",
                       "tags": [
-                        "private"
+                        "function"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (d *poolDequeue) pack(head, tail uint32) uint64"
+                      "value": "func (rw *RWMutex) RLock()"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (d *poolDequeue) pack(head, tail uint32) uint64\n```\n\n"
+                      "value": "```Go\nfunc (rw *RWMutex) RLock()\n```\n\nRLock locks rw for reading. \n\nIt should not be used for recursive read locking; a blocked Lock call excludes new readers from acquiring the lock. See the documentation on the RWMutex type. \n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/sync#poolDequeue.pushHead",
+                    "pathID": "/sync#RWMutex.RLocker",
                     "documentation": {
-                      "identifier": "poolDequeue.pushHead",
+                      "identifier": "RWMutex.RLocker",
                       "newPage": false,
-                      "searchKey": "sync.poolDequeue.pushHead",
+                      "searchKey": "sync.RWMutex.RLocker",
                       "tags": [
-                        "private"
+                        "function"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (d *poolDequeue) pushHead(val interface{}) bool"
+                      "value": "func (rw *RWMutex) RLocker() Locker"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (d *poolDequeue) pushHead(val interface{}) bool\n```\n\npushHead adds val at the head of the queue. It returns false if the queue is full. It must only be called by a single producer. \n\n"
+                      "value": "```Go\nfunc (rw *RWMutex) RLocker() Locker\n```\n\nRLocker returns a Locker interface that implements the Lock and Unlock methods by calling rw.RLock and rw.RUnlock. \n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/sync#poolDequeue.popHead",
+                    "pathID": "/sync#RWMutex.RUnlock",
                     "documentation": {
-                      "identifier": "poolDequeue.popHead",
+                      "identifier": "RWMutex.RUnlock",
                       "newPage": false,
-                      "searchKey": "sync.poolDequeue.popHead",
+                      "searchKey": "sync.RWMutex.RUnlock",
                       "tags": [
-                        "private"
+                        "function"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (d *poolDequeue) popHead() (interface{}, bool)"
+                      "value": "func (rw *RWMutex) RUnlock()"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (d *poolDequeue) popHead() (interface{}, bool)\n```\n\npopHead removes and returns the element at the head of the queue. It returns false if the queue is empty. It must only be called by a single producer. \n\n"
+                      "value": "```Go\nfunc (rw *RWMutex) RUnlock()\n```\n\nRUnlock undoes a single RLock call; it does not affect other simultaneous readers. It is a run-time error if rw is not locked for reading on entry to RUnlock. \n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/sync#poolDequeue.popTail",
+                    "pathID": "/sync#RWMutex.Unlock",
                     "documentation": {
-                      "identifier": "poolDequeue.popTail",
+                      "identifier": "RWMutex.Unlock",
                       "newPage": false,
-                      "searchKey": "sync.poolDequeue.popTail",
+                      "searchKey": "sync.RWMutex.Unlock",
                       "tags": [
-                        "private"
+                        "function"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (d *poolDequeue) popTail() (interface{}, bool)"
+                      "value": "func (rw *RWMutex) Unlock()"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (d *poolDequeue) popTail() (interface{}, bool)\n```\n\npopTail removes and returns the element at the tail of the queue. It returns false if the queue is empty. It may be called by any number of consumers. \n\n"
+                      "value": "```Go\nfunc (rw *RWMutex) Unlock()\n```\n\nUnlock unlocks rw for writing. It is a run-time error if rw is not locked for writing on entry to Unlock. \n\nAs with Mutexes, a locked RWMutex is not associated with a particular goroutine. One goroutine may RLock (Lock) a RWMutex and then arrange for another goroutine to RUnlock (Unlock) it. \n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/sync#poolDequeue.PushHead",
+                    "pathID": "/sync#RWMutex.rUnlockSlow",
                     "documentation": {
-                      "identifier": "poolDequeue.PushHead",
+                      "identifier": "RWMutex.rUnlockSlow",
                       "newPage": false,
-                      "searchKey": "sync.poolDequeue.PushHead",
+                      "searchKey": "sync.RWMutex.rUnlockSlow",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (d *poolDequeue) PushHead(val interface{}) bool"
+                      "value": "func (rw *RWMutex) rUnlockSlow(r int32)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (d *poolDequeue) PushHead(val interface{}) bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync#poolDequeue.PopHead",
-                    "documentation": {
-                      "identifier": "poolDequeue.PopHead",
-                      "newPage": false,
-                      "searchKey": "sync.poolDequeue.PopHead",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *poolDequeue) PopHead() (interface{}, bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *poolDequeue) PopHead() (interface{}, bool)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync#poolDequeue.PopTail",
-                    "documentation": {
-                      "identifier": "poolDequeue.PopTail",
-                      "newPage": false,
-                      "searchKey": "sync.poolDequeue.PopTail",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *poolDequeue) PopTail() (interface{}, bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *poolDequeue) PopTail() (interface{}, bool)\n```\n\n"
+                      "value": "```Go\nfunc (rw *RWMutex) rUnlockSlow(r int32)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1651,24 +1373,161 @@
           },
           {
             "node": {
-              "pathID": "/sync#eface",
+              "pathID": "/sync#WaitGroup",
               "documentation": {
-                "identifier": "eface",
+                "identifier": "WaitGroup",
                 "newPage": false,
-                "searchKey": "sync.eface",
+                "searchKey": "sync.WaitGroup",
                 "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type WaitGroup struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype WaitGroup struct {\n\tnoCopy noCopy\n\n\t// 64-bit value: high 32 bits are counter, low 32 bits are waiter count.\n\t// 64-bit atomic operations require 64-bit alignment, but 32-bit\n\t// compilers do not ensure it. So we allocate 12 bytes and then use\n\t// the aligned 8 bytes in them as state, and the other 4 as storage\n\t// for the sema.\n\tstate1 [3]uint32\n}\n```\n\nA WaitGroup waits for a collection of goroutines to finish. The main goroutine calls Add to set the number of goroutines to wait for. Then each of the goroutines runs and calls Done when finished. At the same time, Wait can be used to block until all goroutines have finished. \n\nA WaitGroup must not be copied after first use. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/sync#WaitGroup.Add",
+                    "documentation": {
+                      "identifier": "WaitGroup.Add",
+                      "newPage": false,
+                      "searchKey": "sync.WaitGroup.Add",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (wg *WaitGroup) Add(delta int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (wg *WaitGroup) Add(delta int)\n```\n\nAdd adds delta, which may be negative, to the WaitGroup counter. If the counter becomes zero, all goroutines blocked on Wait are released. If the counter goes negative, Add panics. \n\nNote that calls with a positive delta that occur when the counter is zero must happen before a Wait. Calls with a negative delta, or calls with a positive delta that start when the counter is greater than zero, may happen at any time. Typically this means the calls to Add should execute before the statement creating the goroutine or other event to be waited for. If a WaitGroup is reused to wait for several independent sets of events, new Add calls must happen after all previous Wait calls have returned. See the WaitGroup example. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#WaitGroup.Done",
+                    "documentation": {
+                      "identifier": "WaitGroup.Done",
+                      "newPage": false,
+                      "searchKey": "sync.WaitGroup.Done",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (wg *WaitGroup) Done()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (wg *WaitGroup) Done()\n```\n\nDone decrements the WaitGroup counter by one. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#WaitGroup.Wait",
+                    "documentation": {
+                      "identifier": "WaitGroup.Wait",
+                      "newPage": false,
+                      "searchKey": "sync.WaitGroup.Wait",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (wg *WaitGroup) Wait()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (wg *WaitGroup) Wait()\n```\n\nWait blocks until the WaitGroup counter is zero. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#WaitGroup.state",
+                    "documentation": {
+                      "identifier": "WaitGroup.state",
+                      "newPage": false,
+                      "searchKey": "sync.WaitGroup.state",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (wg *WaitGroup) state() (statep *uint64, semap *uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (wg *WaitGroup) state() (statep *uint64, semap *uint32)\n```\n\nstate returns pointers to the state and sema fields stored within wg.state1. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#copyChecker",
+              "documentation": {
+                "identifier": "copyChecker",
+                "newPage": false,
+                "searchKey": "sync.copyChecker",
+                "tags": [
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type eface struct"
+                "value": "type copyChecker uintptr"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype eface struct {\n\ttyp, val unsafe.Pointer\n}\n```\n\n"
+                "value": "```Go\ntype copyChecker uintptr\n```\n\ncopyChecker holds back pointer to itself to detect object copying. \n\n"
               },
-              "children": null
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/sync#copyChecker.check",
+                    "documentation": {
+                      "identifier": "copyChecker.check",
+                      "newPage": false,
+                      "searchKey": "sync.copyChecker.check",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *copyChecker) check()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *copyChecker) check()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
             }
           },
           {
@@ -1679,6 +1538,7 @@
                 "newPage": false,
                 "searchKey": "sync.dequeueNil",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1695,12 +1555,337 @@
           },
           {
             "node": {
+              "pathID": "/sync#eface",
+              "documentation": {
+                "identifier": "eface",
+                "newPage": false,
+                "searchKey": "sync.eface",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type eface struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype eface struct {\n\ttyp, val unsafe.Pointer\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#entry",
+              "documentation": {
+                "identifier": "entry",
+                "newPage": false,
+                "searchKey": "sync.entry",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type entry struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype entry struct {\n\t// p points to the interface{} value stored for the entry.\n\t//\n\t// If p == nil, the entry has been deleted, and either m.dirty == nil or\n\t// m.dirty[key] is e.\n\t//\n\t// If p == expunged, the entry has been deleted, m.dirty != nil, and the entry\n\t// is missing from m.dirty.\n\t//\n\t// Otherwise, the entry is valid and recorded in m.read.m[key] and, if m.dirty\n\t// != nil, in m.dirty[key].\n\t//\n\t// An entry can be deleted by atomic replacement with nil: when m.dirty is\n\t// next created, it will atomically replace nil with expunged and leave\n\t// m.dirty[key] unset.\n\t//\n\t// An entry's associated value can be updated by atomic replacement, provided\n\t// p != expunged. If p == expunged, an entry's associated value can be updated\n\t// only after first setting m.dirty[key] = e so that lookups using the dirty\n\t// map find the entry.\n\tp unsafe.Pointer // *interface{}\n}\n```\n\nAn entry is a slot in the map corresponding to a particular key. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/sync#newEntry",
+                    "documentation": {
+                      "identifier": "newEntry",
+                      "newPage": false,
+                      "searchKey": "sync.newEntry",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newEntry(i interface{}) *entry"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newEntry(i interface{}) *entry\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#entry.delete",
+                    "documentation": {
+                      "identifier": "entry.delete",
+                      "newPage": false,
+                      "searchKey": "sync.entry.delete",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *entry) delete() (value interface{}, ok bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *entry) delete() (value interface{}, ok bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#entry.load",
+                    "documentation": {
+                      "identifier": "entry.load",
+                      "newPage": false,
+                      "searchKey": "sync.entry.load",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *entry) load() (value interface{}, ok bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *entry) load() (value interface{}, ok bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#entry.storeLocked",
+                    "documentation": {
+                      "identifier": "entry.storeLocked",
+                      "newPage": false,
+                      "searchKey": "sync.entry.storeLocked",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *entry) storeLocked(i *interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *entry) storeLocked(i *interface{})\n```\n\nstoreLocked unconditionally stores a value to the entry. \n\nThe entry must be known not to be expunged. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#entry.tryExpungeLocked",
+                    "documentation": {
+                      "identifier": "entry.tryExpungeLocked",
+                      "newPage": false,
+                      "searchKey": "sync.entry.tryExpungeLocked",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *entry) tryExpungeLocked() (isExpunged bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *entry) tryExpungeLocked() (isExpunged bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#entry.tryLoadOrStore",
+                    "documentation": {
+                      "identifier": "entry.tryLoadOrStore",
+                      "newPage": false,
+                      "searchKey": "sync.entry.tryLoadOrStore",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *entry) tryLoadOrStore(i interface{}) (actual interface{}, loaded, ok bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *entry) tryLoadOrStore(i interface{}) (actual interface{}, loaded, ok bool)\n```\n\ntryLoadOrStore atomically loads or stores a value if the entry is not expunged. \n\nIf the entry is expunged, tryLoadOrStore leaves the entry unchanged and returns with ok==false. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#entry.tryStore",
+                    "documentation": {
+                      "identifier": "entry.tryStore",
+                      "newPage": false,
+                      "searchKey": "sync.entry.tryStore",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *entry) tryStore(i *interface{}) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *entry) tryStore(i *interface{}) bool\n```\n\ntryStore stores a value if the entry has not been expunged. \n\nIf the entry is expunged, tryStore returns false and leaves the entry unchanged. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#entry.unexpungeLocked",
+                    "documentation": {
+                      "identifier": "entry.unexpungeLocked",
+                      "newPage": false,
+                      "searchKey": "sync.entry.unexpungeLocked",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *entry) unexpungeLocked() (wasExpunged bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *entry) unexpungeLocked() (wasExpunged bool)\n```\n\nunexpungeLocked ensures that the entry is not marked as expunged. \n\nIf the entry was previously expunged, it must be added to the dirty map before m.mu is unlocked. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#noCopy",
+              "documentation": {
+                "identifier": "noCopy",
+                "newPage": false,
+                "searchKey": "sync.noCopy",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type noCopy struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype noCopy struct{}\n```\n\nnoCopy may be embedded into structs which must not be copied after the first use. \n\nSee [https://golang.org/issues/8005#issuecomment-190753527](https://golang.org/issues/8005#issuecomment-190753527) for details. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/sync#noCopy.Lock",
+                    "documentation": {
+                      "identifier": "noCopy.Lock",
+                      "newPage": false,
+                      "searchKey": "sync.noCopy.Lock",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*noCopy) Lock()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*noCopy) Lock()\n```\n\nLock is a no-op used by -copylocks checker from `go vet`. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#noCopy.Unlock",
+                    "documentation": {
+                      "identifier": "noCopy.Unlock",
+                      "newPage": false,
+                      "searchKey": "sync.noCopy.Unlock",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*noCopy) Unlock()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*noCopy) Unlock()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#notifyList",
+              "documentation": {
+                "identifier": "notifyList",
+                "newPage": false,
+                "searchKey": "sync.notifyList",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type notifyList struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype notifyList struct {\n\twait   uint32\n\tnotify uint32\n\tlock   uintptr // key field of the mutex\n\thead   unsafe.Pointer\n\ttail   unsafe.Pointer\n}\n```\n\nApproximation of notifyList in runtime/sema.go. Size and alignment must agree. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/sync#poolChain",
               "documentation": {
                 "identifier": "poolChain",
                 "newPage": false,
                 "searchKey": "sync.poolChain",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1715,100 +1900,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/sync#poolChain.pushHead",
-                    "documentation": {
-                      "identifier": "poolChain.pushHead",
-                      "newPage": false,
-                      "searchKey": "sync.poolChain.pushHead",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *poolChain) pushHead(val interface{})"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *poolChain) pushHead(val interface{})\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync#poolChain.popHead",
-                    "documentation": {
-                      "identifier": "poolChain.popHead",
-                      "newPage": false,
-                      "searchKey": "sync.poolChain.popHead",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *poolChain) popHead() (interface{}, bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *poolChain) popHead() (interface{}, bool)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync#poolChain.popTail",
-                    "documentation": {
-                      "identifier": "poolChain.popTail",
-                      "newPage": false,
-                      "searchKey": "sync.poolChain.popTail",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *poolChain) popTail() (interface{}, bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *poolChain) popTail() (interface{}, bool)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync#poolChain.PushHead",
-                    "documentation": {
-                      "identifier": "poolChain.PushHead",
-                      "newPage": false,
-                      "searchKey": "sync.poolChain.PushHead",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *poolChain) PushHead(val interface{}) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *poolChain) PushHead(val interface{}) bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/sync#poolChain.PopHead",
                     "documentation": {
                       "identifier": "poolChain.PopHead",
                       "newPage": false,
                       "searchKey": "sync.poolChain.PopHead",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1831,6 +1929,7 @@
                       "newPage": false,
                       "searchKey": "sync.poolChain.PopTail",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1841,6 +1940,98 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (c *poolChain) PopTail() (interface{}, bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#poolChain.PushHead",
+                    "documentation": {
+                      "identifier": "poolChain.PushHead",
+                      "newPage": false,
+                      "searchKey": "sync.poolChain.PushHead",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *poolChain) PushHead(val interface{}) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *poolChain) PushHead(val interface{}) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#poolChain.popHead",
+                    "documentation": {
+                      "identifier": "poolChain.popHead",
+                      "newPage": false,
+                      "searchKey": "sync.poolChain.popHead",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *poolChain) popHead() (interface{}, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *poolChain) popHead() (interface{}, bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#poolChain.popTail",
+                    "documentation": {
+                      "identifier": "poolChain.popTail",
+                      "newPage": false,
+                      "searchKey": "sync.poolChain.popTail",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *poolChain) popTail() (interface{}, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *poolChain) popTail() (interface{}, bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#poolChain.pushHead",
+                    "documentation": {
+                      "identifier": "poolChain.pushHead",
+                      "newPage": false,
+                      "searchKey": "sync.poolChain.pushHead",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *poolChain) pushHead(val interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *poolChain) pushHead(val interface{})\n```\n\n"
                     },
                     "children": null
                   }
@@ -1856,6 +2047,7 @@
                 "newPage": false,
                 "searchKey": "sync.poolChainElt",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1876,6 +2068,7 @@
                       "newPage": false,
                       "searchKey": "sync.loadPoolChainElt",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1895,167 +2088,303 @@
           },
           {
             "node": {
-              "pathID": "/sync#notifyList",
+              "pathID": "/sync#poolDequeue",
               "documentation": {
-                "identifier": "notifyList",
+                "identifier": "poolDequeue",
                 "newPage": false,
-                "searchKey": "sync.notifyList",
+                "searchKey": "sync.poolDequeue",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type notifyList struct"
+                "value": "type poolDequeue struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype notifyList struct {\n\twait   uint32\n\tnotify uint32\n\tlock   uintptr // key field of the mutex\n\thead   unsafe.Pointer\n\ttail   unsafe.Pointer\n}\n```\n\nApproximation of notifyList in runtime/sema.go. Size and alignment must agree. \n\n"
+                "value": "```Go\ntype poolDequeue struct {\n\t// headTail packs together a 32-bit head index and a 32-bit\n\t// tail index. Both are indexes into vals modulo len(vals)-1.\n\t//\n\t// tail = index of oldest data in queue\n\t// head = index of next slot to fill\n\t//\n\t// Slots in the range [tail, head) are owned by consumers.\n\t// A consumer continues to own a slot outside this range until\n\t// it nils the slot, at which point ownership passes to the\n\t// producer.\n\t//\n\t// The head index is stored in the most-significant bits so\n\t// that we can atomically add to it and the overflow is\n\t// harmless.\n\theadTail uint64\n\n\t// vals is a ring buffer of interface{} values stored in this\n\t// dequeue. The size of this must be a power of 2.\n\t//\n\t// vals[i].typ is nil if the slot is empty and non-nil\n\t// otherwise. A slot is still in use until *both* the tail\n\t// index has moved beyond it and typ has been set to nil. This\n\t// is set to nil atomically by the consumer and read\n\t// atomically by the producer.\n\tvals []eface\n}\n```\n\npoolDequeue is a lock-free fixed-size single-producer, multi-consumer queue. The single producer can both push and pop from the head, and consumers can pop from the tail. \n\nIt has the added feature that it nils out unused slots to avoid unnecessary retention of objects. This is important for sync.Pool, but not typically a property considered in the literature. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/sync#poolDequeue.PopHead",
+                    "documentation": {
+                      "identifier": "poolDequeue.PopHead",
+                      "newPage": false,
+                      "searchKey": "sync.poolDequeue.PopHead",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *poolDequeue) PopHead() (interface{}, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *poolDequeue) PopHead() (interface{}, bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#poolDequeue.PopTail",
+                    "documentation": {
+                      "identifier": "poolDequeue.PopTail",
+                      "newPage": false,
+                      "searchKey": "sync.poolDequeue.PopTail",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *poolDequeue) PopTail() (interface{}, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *poolDequeue) PopTail() (interface{}, bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#poolDequeue.PushHead",
+                    "documentation": {
+                      "identifier": "poolDequeue.PushHead",
+                      "newPage": false,
+                      "searchKey": "sync.poolDequeue.PushHead",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *poolDequeue) PushHead(val interface{}) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *poolDequeue) PushHead(val interface{}) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#poolDequeue.pack",
+                    "documentation": {
+                      "identifier": "poolDequeue.pack",
+                      "newPage": false,
+                      "searchKey": "sync.poolDequeue.pack",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *poolDequeue) pack(head, tail uint32) uint64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *poolDequeue) pack(head, tail uint32) uint64\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#poolDequeue.popHead",
+                    "documentation": {
+                      "identifier": "poolDequeue.popHead",
+                      "newPage": false,
+                      "searchKey": "sync.poolDequeue.popHead",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *poolDequeue) popHead() (interface{}, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *poolDequeue) popHead() (interface{}, bool)\n```\n\npopHead removes and returns the element at the head of the queue. It returns false if the queue is empty. It must only be called by a single producer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#poolDequeue.popTail",
+                    "documentation": {
+                      "identifier": "poolDequeue.popTail",
+                      "newPage": false,
+                      "searchKey": "sync.poolDequeue.popTail",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *poolDequeue) popTail() (interface{}, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *poolDequeue) popTail() (interface{}, bool)\n```\n\npopTail removes and returns the element at the tail of the queue. It returns false if the queue is empty. It may be called by any number of consumers. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#poolDequeue.pushHead",
+                    "documentation": {
+                      "identifier": "poolDequeue.pushHead",
+                      "newPage": false,
+                      "searchKey": "sync.poolDequeue.pushHead",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *poolDequeue) pushHead(val interface{}) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *poolDequeue) pushHead(val interface{}) bool\n```\n\npushHead adds val at the head of the queue. It returns false if the queue is full. It must only be called by a single producer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sync#poolDequeue.unpack",
+                    "documentation": {
+                      "identifier": "poolDequeue.unpack",
+                      "newPage": false,
+                      "searchKey": "sync.poolDequeue.unpack",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *poolDequeue) unpack(ptrs uint64) (head, tail uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *poolDequeue) unpack(ptrs uint64) (head, tail uint32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#poolLocal",
+              "documentation": {
+                "identifier": "poolLocal",
+                "newPage": false,
+                "searchKey": "sync.poolLocal",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type poolLocal struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype poolLocal struct {\n\tpoolLocalInternal\n\n\t// Prevents false sharing on widespread platforms with\n\t// 128 mod (cache line size) = 0 .\n\tpad [128 - unsafe.Sizeof(poolLocalInternal{})%128]byte\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/sync#indexLocal",
+                    "documentation": {
+                      "identifier": "indexLocal",
+                      "newPage": false,
+                      "searchKey": "sync.indexLocal",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func indexLocal(l unsafe.Pointer, i int) *poolLocal"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc indexLocal(l unsafe.Pointer, i int) *poolLocal\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#poolLocalInternal",
+              "documentation": {
+                "identifier": "poolLocalInternal",
+                "newPage": false,
+                "searchKey": "sync.poolLocalInternal",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type poolLocalInternal struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype poolLocalInternal struct {\n\tprivate interface{} // Can be used only by the respective P.\n\tshared  poolChain   // Local P can pushHead/popHead; any P can popTail.\n}\n```\n\nLocal per-P Pool appendix. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/sync#RWMutex",
+              "pathID": "/sync#readOnly",
               "documentation": {
-                "identifier": "RWMutex",
+                "identifier": "readOnly",
                 "newPage": false,
-                "searchKey": "sync.RWMutex",
-                "tags": null
+                "searchKey": "sync.readOnly",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type RWMutex struct"
+                "value": "type readOnly struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype RWMutex struct {\n\tw           Mutex  // held if there are pending writers\n\twriterSem   uint32 // semaphore for writers to wait for completing readers\n\treaderSem   uint32 // semaphore for readers to wait for completing writers\n\treaderCount int32  // number of pending readers\n\treaderWait  int32  // number of departing readers\n}\n```\n\nA RWMutex is a reader/writer mutual exclusion lock. The lock can be held by an arbitrary number of readers or a single writer. The zero value for a RWMutex is an unlocked mutex. \n\nA RWMutex must not be copied after first use. \n\nIf a goroutine holds a RWMutex for reading and another goroutine might call Lock, no goroutine should expect to be able to acquire a read lock until the initial read lock is released. In particular, this prohibits recursive read locking. This is to ensure that the lock eventually becomes available; a blocked Lock call excludes new readers from acquiring the lock. \n\n"
+                "value": "```Go\ntype readOnly struct {\n\tm       map[interface{}]*entry\n\tamended bool // true if the dirty map contains some key not in m.\n}\n```\n\nreadOnly is an immutable struct stored atomically in the Map.read field. \n\n"
               },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/sync#RWMutex.RLock",
-                    "documentation": {
-                      "identifier": "RWMutex.RLock",
-                      "newPage": false,
-                      "searchKey": "sync.RWMutex.RLock",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (rw *RWMutex) RLock()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (rw *RWMutex) RLock()\n```\n\nRLock locks rw for reading. \n\nIt should not be used for recursive read locking; a blocked Lock call excludes new readers from acquiring the lock. See the documentation on the RWMutex type. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync#RWMutex.RUnlock",
-                    "documentation": {
-                      "identifier": "RWMutex.RUnlock",
-                      "newPage": false,
-                      "searchKey": "sync.RWMutex.RUnlock",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (rw *RWMutex) RUnlock()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (rw *RWMutex) RUnlock()\n```\n\nRUnlock undoes a single RLock call; it does not affect other simultaneous readers. It is a run-time error if rw is not locked for reading on entry to RUnlock. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync#RWMutex.rUnlockSlow",
-                    "documentation": {
-                      "identifier": "RWMutex.rUnlockSlow",
-                      "newPage": false,
-                      "searchKey": "sync.RWMutex.rUnlockSlow",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (rw *RWMutex) rUnlockSlow(r int32)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (rw *RWMutex) rUnlockSlow(r int32)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync#RWMutex.Lock",
-                    "documentation": {
-                      "identifier": "RWMutex.Lock",
-                      "newPage": false,
-                      "searchKey": "sync.RWMutex.Lock",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (rw *RWMutex) Lock()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (rw *RWMutex) Lock()\n```\n\nLock locks rw for writing. If the lock is already locked for reading or writing, Lock blocks until the lock is available. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync#RWMutex.Unlock",
-                    "documentation": {
-                      "identifier": "RWMutex.Unlock",
-                      "newPage": false,
-                      "searchKey": "sync.RWMutex.Unlock",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (rw *RWMutex) Unlock()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (rw *RWMutex) Unlock()\n```\n\nUnlock unlocks rw for writing. It is a run-time error if rw is not locked for writing on entry to Unlock. \n\nAs with Mutexes, a locked RWMutex is not associated with a particular goroutine. One goroutine may RLock (Lock) a RWMutex and then arrange for another goroutine to RUnlock (Unlock) it. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync#RWMutex.RLocker",
-                    "documentation": {
-                      "identifier": "RWMutex.RLocker",
-                      "newPage": false,
-                      "searchKey": "sync.RWMutex.RLocker",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (rw *RWMutex) RLocker() Locker"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (rw *RWMutex) RLocker() Locker\n```\n\nRLocker returns a Locker interface that implements the Lock and Unlock methods by calling rw.RLock and rw.RUnlock. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
+              "children": null
             }
           },
           {
@@ -2066,6 +2395,7 @@
                 "newPage": false,
                 "searchKey": "sync.rlocker",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -2086,6 +2416,7 @@
                       "newPage": false,
                       "searchKey": "sync.rlocker.Lock",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -2108,6 +2439,7 @@
                       "newPage": false,
                       "searchKey": "sync.rlocker.Unlock",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -2118,176 +2450,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (r *rlocker) Unlock()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync#WaitGroup",
-              "documentation": {
-                "identifier": "WaitGroup",
-                "newPage": false,
-                "searchKey": "sync.WaitGroup",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type WaitGroup struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype WaitGroup struct {\n\tnoCopy noCopy\n\n\t// 64-bit value: high 32 bits are counter, low 32 bits are waiter count.\n\t// 64-bit atomic operations require 64-bit alignment, but 32-bit\n\t// compilers do not ensure it. So we allocate 12 bytes and then use\n\t// the aligned 8 bytes in them as state, and the other 4 as storage\n\t// for the sema.\n\tstate1 [3]uint32\n}\n```\n\nA WaitGroup waits for a collection of goroutines to finish. The main goroutine calls Add to set the number of goroutines to wait for. Then each of the goroutines runs and calls Done when finished. At the same time, Wait can be used to block until all goroutines have finished. \n\nA WaitGroup must not be copied after first use. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/sync#WaitGroup.state",
-                    "documentation": {
-                      "identifier": "WaitGroup.state",
-                      "newPage": false,
-                      "searchKey": "sync.WaitGroup.state",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (wg *WaitGroup) state() (statep *uint64, semap *uint32)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (wg *WaitGroup) state() (statep *uint64, semap *uint32)\n```\n\nstate returns pointers to the state and sema fields stored within wg.state1. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync#WaitGroup.Add",
-                    "documentation": {
-                      "identifier": "WaitGroup.Add",
-                      "newPage": false,
-                      "searchKey": "sync.WaitGroup.Add",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (wg *WaitGroup) Add(delta int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (wg *WaitGroup) Add(delta int)\n```\n\nAdd adds delta, which may be negative, to the WaitGroup counter. If the counter becomes zero, all goroutines blocked on Wait are released. If the counter goes negative, Add panics. \n\nNote that calls with a positive delta that occur when the counter is zero must happen before a Wait. Calls with a negative delta, or calls with a positive delta that start when the counter is greater than zero, may happen at any time. Typically this means the calls to Add should execute before the statement creating the goroutine or other event to be waited for. If a WaitGroup is reused to wait for several independent sets of events, new Add calls must happen after all previous Wait calls have returned. See the WaitGroup example. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync#WaitGroup.Done",
-                    "documentation": {
-                      "identifier": "WaitGroup.Done",
-                      "newPage": false,
-                      "searchKey": "sync.WaitGroup.Done",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (wg *WaitGroup) Done()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (wg *WaitGroup) Done()\n```\n\nDone decrements the WaitGroup counter by one. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync#WaitGroup.Wait",
-                    "documentation": {
-                      "identifier": "WaitGroup.Wait",
-                      "newPage": false,
-                      "searchKey": "sync.WaitGroup.Wait",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (wg *WaitGroup) Wait()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (wg *WaitGroup) Wait()\n```\n\nWait blocks until the WaitGroup counter is zero. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync#PoolDequeue",
-              "documentation": {
-                "identifier": "PoolDequeue",
-                "newPage": false,
-                "searchKey": "sync.PoolDequeue",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type PoolDequeue interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype PoolDequeue interface {\n\tPushHead(val interface{}) bool\n\tPopHead() (interface{}, bool)\n\tPopTail() (interface{}, bool)\n}\n```\n\npoolDequeue testing. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/sync#NewPoolDequeue",
-                    "documentation": {
-                      "identifier": "NewPoolDequeue",
-                      "newPage": false,
-                      "searchKey": "sync.NewPoolDequeue",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewPoolDequeue(n int) PoolDequeue"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewPoolDequeue(n int) PoolDequeue\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync#NewPoolChain",
-                    "documentation": {
-                      "identifier": "NewPoolChain",
-                      "newPage": false,
-                      "searchKey": "sync.NewPoolChain",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewPoolChain() PoolDequeue"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewPoolChain() PoolDequeue\n```\n\n"
                     },
                     "children": null
                   }
@@ -2305,7 +2467,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -2318,34 +2482,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/sync#throw",
-              "documentation": {
-                "identifier": "throw",
-                "newPage": false,
-                "searchKey": "sync.throw",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func throw(string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc throw(string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/sync#fastrand",
               "documentation": {
                 "identifier": "fastrand",
                 "newPage": false,
                 "searchKey": "sync.fastrand",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -2362,56 +2505,13 @@
           },
           {
             "node": {
-              "pathID": "/sync#poolRaceAddr",
-              "documentation": {
-                "identifier": "poolRaceAddr",
-                "newPage": false,
-                "searchKey": "sync.poolRaceAddr",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func poolRaceAddr(x interface{}) unsafe.Pointer"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc poolRaceAddr(x interface{}) unsafe.Pointer\n```\n\npoolRaceAddr returns an address to use as the synchronization point for race detector logic. We don't use the actual pointer stored in x directly, for fear of conflicting with other synchronization on that address. Instead, we hash the pointer to get an index into poolRaceHash. See discussion on golang.org/cl/31589. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync#poolCleanup",
-              "documentation": {
-                "identifier": "poolCleanup",
-                "newPage": false,
-                "searchKey": "sync.poolCleanup",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func poolCleanup()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc poolCleanup()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/sync#init.pool.go",
               "documentation": {
                 "identifier": "init.pool.go",
                 "newPage": false,
                 "searchKey": "sync.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -2428,66 +2528,69 @@
           },
           {
             "node": {
-              "pathID": "/sync#runtime_registerPoolCleanup",
+              "pathID": "/sync#init.runtime.go",
               "documentation": {
-                "identifier": "runtime_registerPoolCleanup",
+                "identifier": "init.runtime.go",
                 "newPage": false,
-                "searchKey": "sync.runtime_registerPoolCleanup",
+                "searchKey": "sync.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func runtime_registerPoolCleanup(cleanup func())"
+                "value": "func init()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc runtime_registerPoolCleanup(cleanup func())\n```\n\nImplemented in runtime. \n\n"
+                "value": "```Go\nfunc init()\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/sync#runtime_procPin",
+              "pathID": "/sync#poolCleanup",
               "documentation": {
-                "identifier": "runtime_procPin",
+                "identifier": "poolCleanup",
                 "newPage": false,
-                "searchKey": "sync.runtime_procPin",
+                "searchKey": "sync.poolCleanup",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func runtime_procPin() int"
+                "value": "func poolCleanup()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc runtime_procPin() int\n```\n\n"
+                "value": "```Go\nfunc poolCleanup()\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/sync#runtime_procUnpin",
+              "pathID": "/sync#poolRaceAddr",
               "documentation": {
-                "identifier": "runtime_procUnpin",
+                "identifier": "poolRaceAddr",
                 "newPage": false,
-                "searchKey": "sync.runtime_procUnpin",
+                "searchKey": "sync.poolRaceAddr",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func runtime_procUnpin()"
+                "value": "func poolRaceAddr(x interface{}) unsafe.Pointer"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc runtime_procUnpin()\n```\n\n"
+                "value": "```Go\nfunc poolRaceAddr(x interface{}) unsafe.Pointer\n```\n\npoolRaceAddr returns an address to use as the synchronization point for race detector logic. We don't use the actual pointer stored in x directly, for fear of conflicting with other synchronization on that address. Instead, we hash the pointer to get an index into poolRaceHash. See discussion on golang.org/cl/31589. \n\n"
               },
               "children": null
             }
@@ -2500,6 +2603,7 @@
                 "newPage": false,
                 "searchKey": "sync.runtime_LoadAcquintptr",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2516,56 +2620,13 @@
           },
           {
             "node": {
-              "pathID": "/sync#runtime_StoreReluintptr",
-              "documentation": {
-                "identifier": "runtime_StoreReluintptr",
-                "newPage": false,
-                "searchKey": "sync.runtime_StoreReluintptr",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func runtime_StoreReluintptr(ptr *uintptr, val uintptr) uintptr"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc runtime_StoreReluintptr(ptr *uintptr, val uintptr) uintptr\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync#storePoolChainElt",
-              "documentation": {
-                "identifier": "storePoolChainElt",
-                "newPage": false,
-                "searchKey": "sync.storePoolChainElt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func storePoolChainElt(pp **poolChainElt, v *poolChainElt)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc storePoolChainElt(pp **poolChainElt, v *poolChainElt)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/sync#runtime_Semacquire",
               "documentation": {
                 "identifier": "runtime_Semacquire",
                 "newPage": false,
                 "searchKey": "sync.runtime_Semacquire",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2588,6 +2649,7 @@
                 "newPage": false,
                 "searchKey": "sync.runtime_SemacquireMutex",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2610,6 +2672,7 @@
                 "newPage": false,
                 "searchKey": "sync.runtime_Semrelease",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2626,132 +2689,23 @@
           },
           {
             "node": {
-              "pathID": "/sync#runtime_notifyListAdd",
+              "pathID": "/sync#runtime_StoreReluintptr",
               "documentation": {
-                "identifier": "runtime_notifyListAdd",
+                "identifier": "runtime_StoreReluintptr",
                 "newPage": false,
-                "searchKey": "sync.runtime_notifyListAdd",
+                "searchKey": "sync.runtime_StoreReluintptr",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func runtime_notifyListAdd(l *notifyList) uint32"
+                "value": "func runtime_StoreReluintptr(ptr *uintptr, val uintptr) uintptr"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc runtime_notifyListAdd(l *notifyList) uint32\n```\n\nSee runtime/sema.go for documentation. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync#runtime_notifyListWait",
-              "documentation": {
-                "identifier": "runtime_notifyListWait",
-                "newPage": false,
-                "searchKey": "sync.runtime_notifyListWait",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func runtime_notifyListWait(l *notifyList, t uint32)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc runtime_notifyListWait(l *notifyList, t uint32)\n```\n\nSee runtime/sema.go for documentation. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync#runtime_notifyListNotifyAll",
-              "documentation": {
-                "identifier": "runtime_notifyListNotifyAll",
-                "newPage": false,
-                "searchKey": "sync.runtime_notifyListNotifyAll",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func runtime_notifyListNotifyAll(l *notifyList)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc runtime_notifyListNotifyAll(l *notifyList)\n```\n\nSee runtime/sema.go for documentation. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync#runtime_notifyListNotifyOne",
-              "documentation": {
-                "identifier": "runtime_notifyListNotifyOne",
-                "newPage": false,
-                "searchKey": "sync.runtime_notifyListNotifyOne",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func runtime_notifyListNotifyOne(l *notifyList)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc runtime_notifyListNotifyOne(l *notifyList)\n```\n\nSee runtime/sema.go for documentation. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync#runtime_notifyListCheck",
-              "documentation": {
-                "identifier": "runtime_notifyListCheck",
-                "newPage": false,
-                "searchKey": "sync.runtime_notifyListCheck",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func runtime_notifyListCheck(size uintptr)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc runtime_notifyListCheck(size uintptr)\n```\n\nEnsure that sync and runtime agree on size of notifyList. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync#init.runtime.go",
-              "documentation": {
-                "identifier": "init.runtime.go",
-                "newPage": false,
-                "searchKey": "sync.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
+                "value": "```Go\nfunc runtime_StoreReluintptr(ptr *uintptr, val uintptr) uintptr\n```\n\n"
               },
               "children": null
             }
@@ -2764,6 +2718,7 @@
                 "newPage": false,
                 "searchKey": "sync.runtime_canSpin",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2786,6 +2741,7 @@
                 "newPage": false,
                 "searchKey": "sync.runtime_doSpin",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -2808,6 +2764,7 @@
                 "newPage": false,
                 "searchKey": "sync.runtime_nanotime",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -2818,6 +2775,236 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc runtime_nanotime() int64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#runtime_notifyListAdd",
+              "documentation": {
+                "identifier": "runtime_notifyListAdd",
+                "newPage": false,
+                "searchKey": "sync.runtime_notifyListAdd",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runtime_notifyListAdd(l *notifyList) uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runtime_notifyListAdd(l *notifyList) uint32\n```\n\nSee runtime/sema.go for documentation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#runtime_notifyListCheck",
+              "documentation": {
+                "identifier": "runtime_notifyListCheck",
+                "newPage": false,
+                "searchKey": "sync.runtime_notifyListCheck",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runtime_notifyListCheck(size uintptr)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runtime_notifyListCheck(size uintptr)\n```\n\nEnsure that sync and runtime agree on size of notifyList. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#runtime_notifyListNotifyAll",
+              "documentation": {
+                "identifier": "runtime_notifyListNotifyAll",
+                "newPage": false,
+                "searchKey": "sync.runtime_notifyListNotifyAll",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runtime_notifyListNotifyAll(l *notifyList)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runtime_notifyListNotifyAll(l *notifyList)\n```\n\nSee runtime/sema.go for documentation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#runtime_notifyListNotifyOne",
+              "documentation": {
+                "identifier": "runtime_notifyListNotifyOne",
+                "newPage": false,
+                "searchKey": "sync.runtime_notifyListNotifyOne",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runtime_notifyListNotifyOne(l *notifyList)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runtime_notifyListNotifyOne(l *notifyList)\n```\n\nSee runtime/sema.go for documentation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#runtime_notifyListWait",
+              "documentation": {
+                "identifier": "runtime_notifyListWait",
+                "newPage": false,
+                "searchKey": "sync.runtime_notifyListWait",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runtime_notifyListWait(l *notifyList, t uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runtime_notifyListWait(l *notifyList, t uint32)\n```\n\nSee runtime/sema.go for documentation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#runtime_procPin",
+              "documentation": {
+                "identifier": "runtime_procPin",
+                "newPage": false,
+                "searchKey": "sync.runtime_procPin",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runtime_procPin() int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runtime_procPin() int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#runtime_procUnpin",
+              "documentation": {
+                "identifier": "runtime_procUnpin",
+                "newPage": false,
+                "searchKey": "sync.runtime_procUnpin",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runtime_procUnpin()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runtime_procUnpin()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#runtime_registerPoolCleanup",
+              "documentation": {
+                "identifier": "runtime_registerPoolCleanup",
+                "newPage": false,
+                "searchKey": "sync.runtime_registerPoolCleanup",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runtime_registerPoolCleanup(cleanup func())"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runtime_registerPoolCleanup(cleanup func())\n```\n\nImplemented in runtime. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#storePoolChainElt",
+              "documentation": {
+                "identifier": "storePoolChainElt",
+                "newPage": false,
+                "searchKey": "sync.storePoolChainElt",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func storePoolChainElt(pp **poolChainElt, v *poolChainElt)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc storePoolChainElt(pp **poolChainElt, v *poolChainElt)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync#throw",
+              "documentation": {
+                "identifier": "throw",
+                "newPage": false,
+                "searchKey": "sync.throw",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func throw(string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc throw(string)\n```\n\n"
               },
               "children": null
             }

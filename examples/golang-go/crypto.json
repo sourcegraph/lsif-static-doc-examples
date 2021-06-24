@@ -4,7 +4,9 @@
     "identifier": "crypto",
     "newPage": true,
     "searchKey": "crypto",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -25,7 +27,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -38,332 +42,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto#MD4",
-              "documentation": {
-                "identifier": "MD4",
-                "newPage": false,
-                "searchKey": "crypto.MD4",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const MD4"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst MD4 Hash = 1 + iota // import golang.org/x/crypto/md4\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto#MD5",
-              "documentation": {
-                "identifier": "MD5",
-                "newPage": false,
-                "searchKey": "crypto.MD5",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const MD5"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst MD5 // import crypto/md5\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto#SHA1",
-              "documentation": {
-                "identifier": "SHA1",
-                "newPage": false,
-                "searchKey": "crypto.SHA1",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const SHA1"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst SHA1 // import crypto/sha1\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto#SHA224",
-              "documentation": {
-                "identifier": "SHA224",
-                "newPage": false,
-                "searchKey": "crypto.SHA224",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const SHA224"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst SHA224 // import crypto/sha256\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto#SHA256",
-              "documentation": {
-                "identifier": "SHA256",
-                "newPage": false,
-                "searchKey": "crypto.SHA256",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const SHA256"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst SHA256 // import crypto/sha256\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto#SHA384",
-              "documentation": {
-                "identifier": "SHA384",
-                "newPage": false,
-                "searchKey": "crypto.SHA384",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const SHA384"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst SHA384 // import crypto/sha512\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto#SHA512",
-              "documentation": {
-                "identifier": "SHA512",
-                "newPage": false,
-                "searchKey": "crypto.SHA512",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const SHA512"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst SHA512 // import crypto/sha512\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto#MD5SHA1",
-              "documentation": {
-                "identifier": "MD5SHA1",
-                "newPage": false,
-                "searchKey": "crypto.MD5SHA1",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const MD5SHA1"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst MD5SHA1 // no implementation; MD5+SHA1 used for TLS RSA\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto#RIPEMD160",
-              "documentation": {
-                "identifier": "RIPEMD160",
-                "newPage": false,
-                "searchKey": "crypto.RIPEMD160",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const RIPEMD160"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst RIPEMD160 // import golang.org/x/crypto/ripemd160\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto#SHA3_224",
-              "documentation": {
-                "identifier": "SHA3_224",
-                "newPage": false,
-                "searchKey": "crypto.SHA3_224",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const SHA3_224"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst SHA3_224 // import golang.org/x/crypto/sha3\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto#SHA3_256",
-              "documentation": {
-                "identifier": "SHA3_256",
-                "newPage": false,
-                "searchKey": "crypto.SHA3_256",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const SHA3_256"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst SHA3_256 // import golang.org/x/crypto/sha3\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto#SHA3_384",
-              "documentation": {
-                "identifier": "SHA3_384",
-                "newPage": false,
-                "searchKey": "crypto.SHA3_384",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const SHA3_384"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst SHA3_384 // import golang.org/x/crypto/sha3\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto#SHA3_512",
-              "documentation": {
-                "identifier": "SHA3_512",
-                "newPage": false,
-                "searchKey": "crypto.SHA3_512",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const SHA3_512"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst SHA3_512 // import golang.org/x/crypto/sha3\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto#SHA512_224",
-              "documentation": {
-                "identifier": "SHA512_224",
-                "newPage": false,
-                "searchKey": "crypto.SHA512_224",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const SHA512_224"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst SHA512_224 // import crypto/sha512\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto#SHA512_256",
-              "documentation": {
-                "identifier": "SHA512_256",
-                "newPage": false,
-                "searchKey": "crypto.SHA512_256",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const SHA512_256"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst SHA512_256 // import crypto/sha512\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto#BLAKE2s_256",
-              "documentation": {
-                "identifier": "BLAKE2s_256",
-                "newPage": false,
-                "searchKey": "crypto.BLAKE2s_256",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const BLAKE2s_256"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst BLAKE2s_256 // import golang.org/x/crypto/blake2s\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto#BLAKE2b_256",
               "documentation": {
                 "identifier": "BLAKE2b_256",
                 "newPage": false,
                 "searchKey": "crypto.BLAKE2b_256",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -383,7 +70,10 @@
                 "identifier": "BLAKE2b_384",
                 "newPage": false,
                 "searchKey": "crypto.BLAKE2b_384",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -403,7 +93,10 @@
                 "identifier": "BLAKE2b_512",
                 "newPage": false,
                 "searchKey": "crypto.BLAKE2b_512",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -418,12 +111,382 @@
           },
           {
             "node": {
+              "pathID": "/crypto#BLAKE2s_256",
+              "documentation": {
+                "identifier": "BLAKE2s_256",
+                "newPage": false,
+                "searchKey": "crypto.BLAKE2s_256",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const BLAKE2s_256"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst BLAKE2s_256 // import golang.org/x/crypto/blake2s\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto#MD4",
+              "documentation": {
+                "identifier": "MD4",
+                "newPage": false,
+                "searchKey": "crypto.MD4",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MD4"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MD4 Hash = 1 + iota // import golang.org/x/crypto/md4\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto#MD5",
+              "documentation": {
+                "identifier": "MD5",
+                "newPage": false,
+                "searchKey": "crypto.MD5",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MD5"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MD5 // import crypto/md5\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto#MD5SHA1",
+              "documentation": {
+                "identifier": "MD5SHA1",
+                "newPage": false,
+                "searchKey": "crypto.MD5SHA1",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MD5SHA1"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MD5SHA1 // no implementation; MD5+SHA1 used for TLS RSA\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto#RIPEMD160",
+              "documentation": {
+                "identifier": "RIPEMD160",
+                "newPage": false,
+                "searchKey": "crypto.RIPEMD160",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RIPEMD160"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RIPEMD160 // import golang.org/x/crypto/ripemd160\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto#SHA1",
+              "documentation": {
+                "identifier": "SHA1",
+                "newPage": false,
+                "searchKey": "crypto.SHA1",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SHA1"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SHA1 // import crypto/sha1\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto#SHA224",
+              "documentation": {
+                "identifier": "SHA224",
+                "newPage": false,
+                "searchKey": "crypto.SHA224",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SHA224"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SHA224 // import crypto/sha256\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto#SHA256",
+              "documentation": {
+                "identifier": "SHA256",
+                "newPage": false,
+                "searchKey": "crypto.SHA256",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SHA256"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SHA256 // import crypto/sha256\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto#SHA384",
+              "documentation": {
+                "identifier": "SHA384",
+                "newPage": false,
+                "searchKey": "crypto.SHA384",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SHA384"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SHA384 // import crypto/sha512\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto#SHA3_224",
+              "documentation": {
+                "identifier": "SHA3_224",
+                "newPage": false,
+                "searchKey": "crypto.SHA3_224",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SHA3_224"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SHA3_224 // import golang.org/x/crypto/sha3\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto#SHA3_256",
+              "documentation": {
+                "identifier": "SHA3_256",
+                "newPage": false,
+                "searchKey": "crypto.SHA3_256",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SHA3_256"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SHA3_256 // import golang.org/x/crypto/sha3\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto#SHA3_384",
+              "documentation": {
+                "identifier": "SHA3_384",
+                "newPage": false,
+                "searchKey": "crypto.SHA3_384",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SHA3_384"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SHA3_384 // import golang.org/x/crypto/sha3\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto#SHA3_512",
+              "documentation": {
+                "identifier": "SHA3_512",
+                "newPage": false,
+                "searchKey": "crypto.SHA3_512",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SHA3_512"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SHA3_512 // import golang.org/x/crypto/sha3\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto#SHA512",
+              "documentation": {
+                "identifier": "SHA512",
+                "newPage": false,
+                "searchKey": "crypto.SHA512",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SHA512"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SHA512 // import crypto/sha512\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto#SHA512_224",
+              "documentation": {
+                "identifier": "SHA512_224",
+                "newPage": false,
+                "searchKey": "crypto.SHA512_224",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SHA512_224"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SHA512_224 // import crypto/sha512\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto#SHA512_256",
+              "documentation": {
+                "identifier": "SHA512_256",
+                "newPage": false,
+                "searchKey": "crypto.SHA512_256",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SHA512_256"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SHA512_256 // import crypto/sha512\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto#maxHash",
               "documentation": {
                 "identifier": "maxHash",
                 "newPage": false,
                 "searchKey": "crypto.maxHash",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -448,7 +511,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -467,6 +532,9 @@
                 "newPage": false,
                 "searchKey": "crypto.digestSizes",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -489,6 +557,9 @@
                 "newPage": false,
                 "searchKey": "crypto.hashes",
                 "tags": [
+                  "variable",
+                  "array",
+                  "function",
                   "private"
                 ]
               },
@@ -513,7 +584,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -526,213 +599,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto#Hash",
-              "documentation": {
-                "identifier": "Hash",
-                "newPage": false,
-                "searchKey": "crypto.Hash",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Hash uint"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Hash uint\n```\n\nHash identifies a cryptographic hash function that is implemented in another package. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/crypto#Hash.HashFunc",
-                    "documentation": {
-                      "identifier": "Hash.HashFunc",
-                      "newPage": false,
-                      "searchKey": "crypto.Hash.HashFunc",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h Hash) HashFunc() Hash"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h Hash) HashFunc() Hash\n```\n\nHashFunc simply returns the value of h so that Hash implements SignerOpts. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto#Hash.String",
-                    "documentation": {
-                      "identifier": "Hash.String",
-                      "newPage": false,
-                      "searchKey": "crypto.Hash.String",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h Hash) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h Hash) String() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto#Hash.Size",
-                    "documentation": {
-                      "identifier": "Hash.Size",
-                      "newPage": false,
-                      "searchKey": "crypto.Hash.Size",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h Hash) Size() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h Hash) Size() int\n```\n\nSize returns the length, in bytes, of a digest resulting from the given hash function. It doesn't require that the hash function in question be linked into the program. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto#Hash.New",
-                    "documentation": {
-                      "identifier": "Hash.New",
-                      "newPage": false,
-                      "searchKey": "crypto.Hash.New",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h Hash) New() hash.Hash"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h Hash) New() hash.Hash\n```\n\nNew returns a new hash.Hash calculating the given hash function. New panics if the hash function is not linked into the binary. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto#Hash.Available",
-                    "documentation": {
-                      "identifier": "Hash.Available",
-                      "newPage": false,
-                      "searchKey": "crypto.Hash.Available",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h Hash) Available() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h Hash) Available() bool\n```\n\nAvailable reports whether the given hash function is linked into the binary. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto#PublicKey",
-              "documentation": {
-                "identifier": "PublicKey",
-                "newPage": false,
-                "searchKey": "crypto.PublicKey",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type PublicKey interface{}"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype PublicKey interface{}\n```\n\nPublicKey represents a public key using an unspecified algorithm. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto#PrivateKey",
-              "documentation": {
-                "identifier": "PrivateKey",
-                "newPage": false,
-                "searchKey": "crypto.PrivateKey",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type PrivateKey interface{}"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype PrivateKey interface{}\n```\n\nPrivateKey represents a private key using an unspecified algorithm. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto#Signer",
-              "documentation": {
-                "identifier": "Signer",
-                "newPage": false,
-                "searchKey": "crypto.Signer",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Signer interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Signer interface {\n\t// Public returns the public key corresponding to the opaque,\n\t// private key.\n\tPublic() PublicKey\n\n\t// Sign signs digest with the private key, possibly using entropy from\n\t// rand. For an RSA key, the resulting signature should be either a\n\t// PKCS #1 v1.5 or PSS signature (as indicated by opts). For an (EC)DSA\n\t// key, it should be a DER-serialised, ASN.1 signature structure.\n\t//\n\t// Hash implements the SignerOpts interface and, in most cases, one can\n\t// simply pass in the hash function used as opts. Sign may also attempt\n\t// to type assert opts to other types in order to obtain algorithm\n\t// specific values. See the documentation in each package for details.\n\t//\n\t// Note that when a signature of a hash of a larger message is needed,\n\t// the caller is responsible for hashing the larger message and passing\n\t// the hash (as digest) and the hash function (as opts) to Sign.\n\tSign(rand io.Reader, digest []byte, opts SignerOpts) (signature []byte, err error)\n}\n```\n\nSigner is an interface for an opaque private key that can be used for signing operations. For example, an RSA key kept in a hardware module. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto#SignerOpts",
-              "documentation": {
-                "identifier": "SignerOpts",
-                "newPage": false,
-                "searchKey": "crypto.SignerOpts",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type SignerOpts interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype SignerOpts interface {\n\t// HashFunc returns an identifier for the hash function used to produce\n\t// the message passed to Signer.Sign, or else zero to indicate that no\n\t// hashing was done.\n\tHashFunc() Hash\n}\n```\n\nSignerOpts contains options for signing with a Signer. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto#Decrypter",
               "documentation": {
                 "identifier": "Decrypter",
                 "newPage": false,
                 "searchKey": "crypto.Decrypter",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -752,7 +626,9 @@
                 "identifier": "DecrypterOpts",
                 "newPage": false,
                 "searchKey": "crypto.DecrypterOpts",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -761,6 +637,227 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\ntype DecrypterOpts interface{}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto#Hash",
+              "documentation": {
+                "identifier": "Hash",
+                "newPage": false,
+                "searchKey": "crypto.Hash",
+                "tags": [
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Hash uint"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Hash uint\n```\n\nHash identifies a cryptographic hash function that is implemented in another package. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/crypto#Hash.Available",
+                    "documentation": {
+                      "identifier": "Hash.Available",
+                      "newPage": false,
+                      "searchKey": "crypto.Hash.Available",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h Hash) Available() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h Hash) Available() bool\n```\n\nAvailable reports whether the given hash function is linked into the binary. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto#Hash.HashFunc",
+                    "documentation": {
+                      "identifier": "Hash.HashFunc",
+                      "newPage": false,
+                      "searchKey": "crypto.Hash.HashFunc",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h Hash) HashFunc() Hash"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h Hash) HashFunc() Hash\n```\n\nHashFunc simply returns the value of h so that Hash implements SignerOpts. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto#Hash.New",
+                    "documentation": {
+                      "identifier": "Hash.New",
+                      "newPage": false,
+                      "searchKey": "crypto.Hash.New",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h Hash) New() hash.Hash"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h Hash) New() hash.Hash\n```\n\nNew returns a new hash.Hash calculating the given hash function. New panics if the hash function is not linked into the binary. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto#Hash.Size",
+                    "documentation": {
+                      "identifier": "Hash.Size",
+                      "newPage": false,
+                      "searchKey": "crypto.Hash.Size",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h Hash) Size() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h Hash) Size() int\n```\n\nSize returns the length, in bytes, of a digest resulting from the given hash function. It doesn't require that the hash function in question be linked into the program. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto#Hash.String",
+                    "documentation": {
+                      "identifier": "Hash.String",
+                      "newPage": false,
+                      "searchKey": "crypto.Hash.String",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h Hash) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h Hash) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto#PrivateKey",
+              "documentation": {
+                "identifier": "PrivateKey",
+                "newPage": false,
+                "searchKey": "crypto.PrivateKey",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PrivateKey interface{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PrivateKey interface{}\n```\n\nPrivateKey represents a private key using an unspecified algorithm. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto#PublicKey",
+              "documentation": {
+                "identifier": "PublicKey",
+                "newPage": false,
+                "searchKey": "crypto.PublicKey",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PublicKey interface{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PublicKey interface{}\n```\n\nPublicKey represents a public key using an unspecified algorithm. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto#Signer",
+              "documentation": {
+                "identifier": "Signer",
+                "newPage": false,
+                "searchKey": "crypto.Signer",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Signer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Signer interface {\n\t// Public returns the public key corresponding to the opaque,\n\t// private key.\n\tPublic() PublicKey\n\n\t// Sign signs digest with the private key, possibly using entropy from\n\t// rand. For an RSA key, the resulting signature should be either a\n\t// PKCS #1 v1.5 or PSS signature (as indicated by opts). For an (EC)DSA\n\t// key, it should be a DER-serialised, ASN.1 signature structure.\n\t//\n\t// Hash implements the SignerOpts interface and, in most cases, one can\n\t// simply pass in the hash function used as opts. Sign may also attempt\n\t// to type assert opts to other types in order to obtain algorithm\n\t// specific values. See the documentation in each package for details.\n\t//\n\t// Note that when a signature of a hash of a larger message is needed,\n\t// the caller is responsible for hashing the larger message and passing\n\t// the hash (as digest) and the hash function (as opts) to Sign.\n\tSign(rand io.Reader, digest []byte, opts SignerOpts) (signature []byte, err error)\n}\n```\n\nSigner is an interface for an opaque private key that can be used for signing operations. For example, an RSA key kept in a hardware module. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto#SignerOpts",
+              "documentation": {
+                "identifier": "SignerOpts",
+                "newPage": false,
+                "searchKey": "crypto.SignerOpts",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SignerOpts interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SignerOpts interface {\n\t// HashFunc returns an identifier for the hash function used to produce\n\t// the message passed to Signer.Sign, or else zero to indicate that no\n\t// hashing was done.\n\tHashFunc() Hash\n}\n```\n\nSignerOpts contains options for signing with a Signer. \n\n"
               },
               "children": null
             }
@@ -775,7 +872,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -793,7 +892,9 @@
                 "identifier": "RegisterHash",
                 "newPage": false,
                 "searchKey": "crypto.RegisterHash",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -808,22 +909,48 @@
           },
           {
             "node": {
-              "pathID": "/crypto#TestRC4OutOfBoundsWrite",
+              "pathID": "/crypto#TestCFBDecryptOutOfBoundsWrite",
               "documentation": {
-                "identifier": "TestRC4OutOfBoundsWrite",
+                "identifier": "TestCFBDecryptOutOfBoundsWrite",
                 "newPage": false,
-                "searchKey": "crypto.TestRC4OutOfBoundsWrite",
+                "searchKey": "crypto.TestCFBDecryptOutOfBoundsWrite",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestRC4OutOfBoundsWrite(t *testing.T)"
+                "value": "func TestCFBDecryptOutOfBoundsWrite(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestRC4OutOfBoundsWrite(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestCFBDecryptOutOfBoundsWrite(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto#TestCFBEncryptOutOfBoundsWrite",
+              "documentation": {
+                "identifier": "TestCFBEncryptOutOfBoundsWrite",
+                "newPage": false,
+                "searchKey": "crypto.TestCFBEncryptOutOfBoundsWrite",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCFBEncryptOutOfBoundsWrite(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCFBEncryptOutOfBoundsWrite(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -836,7 +963,9 @@
                 "newPage": false,
                 "searchKey": "crypto.TestCTROutOfBoundsWrite",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -858,7 +987,9 @@
                 "newPage": false,
                 "searchKey": "crypto.TestOFBOutOfBoundsWrite",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -874,66 +1005,24 @@
           },
           {
             "node": {
-              "pathID": "/crypto#TestCFBEncryptOutOfBoundsWrite",
+              "pathID": "/crypto#TestRC4OutOfBoundsWrite",
               "documentation": {
-                "identifier": "TestCFBEncryptOutOfBoundsWrite",
+                "identifier": "TestRC4OutOfBoundsWrite",
                 "newPage": false,
-                "searchKey": "crypto.TestCFBEncryptOutOfBoundsWrite",
+                "searchKey": "crypto.TestRC4OutOfBoundsWrite",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestCFBEncryptOutOfBoundsWrite(t *testing.T)"
+                "value": "func TestRC4OutOfBoundsWrite(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestCFBEncryptOutOfBoundsWrite(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto#TestCFBDecryptOutOfBoundsWrite",
-              "documentation": {
-                "identifier": "TestCFBDecryptOutOfBoundsWrite",
-                "newPage": false,
-                "searchKey": "crypto.TestCFBDecryptOutOfBoundsWrite",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCFBDecryptOutOfBoundsWrite(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCFBDecryptOutOfBoundsWrite(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto#testBlock",
-              "documentation": {
-                "identifier": "testBlock",
-                "newPage": false,
-                "searchKey": "crypto.testBlock",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testBlock(t *testing.T, name string, newCipher func(cipher.Block, []byte) cipher.Stream)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testBlock(t *testing.T, name string, newCipher func(cipher.Block, []byte) cipher.Stream)\n```\n\n"
+                "value": "```Go\nfunc TestRC4OutOfBoundsWrite(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -946,6 +1035,7 @@
                 "newPage": false,
                 "searchKey": "crypto.test",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -956,6 +1046,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc test(t *testing.T, name string, cipherText []byte, xor func([]byte, []byte))\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto#testBlock",
+              "documentation": {
+                "identifier": "testBlock",
+                "newPage": false,
+                "searchKey": "crypto.testBlock",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testBlock(t *testing.T, name string, newCipher func(cipher.Block, []byte) cipher.Stream)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testBlock(t *testing.T, name string, newCipher func(cipher.Block, []byte) cipher.Stream)\n```\n\n"
               },
               "children": null
             }

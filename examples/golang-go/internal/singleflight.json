@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/singleflight",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/singleflight#call",
-              "documentation": {
-                "identifier": "call",
-                "newPage": false,
-                "searchKey": "singleflight.call",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type call struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype call struct {\n\twg sync.WaitGroup\n\n\t// These fields are written once before the WaitGroup is done\n\t// and are only read after the WaitGroup is done.\n\tval interface{}\n\terr error\n\n\t// These fields are read and written with the singleflight\n\t// mutex held before the WaitGroup is done, and are read but\n\t// not written after the WaitGroup is done.\n\tdups  int\n\tchans []chan<- Result\n}\n```\n\ncall is an in-flight or completed singleflight.Do call \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/singleflight#Group",
               "documentation": {
                 "identifier": "Group",
                 "newPage": false,
                 "searchKey": "singleflight.Group",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +66,9 @@
                       "identifier": "Group.Do",
                       "newPage": false,
                       "searchKey": "singleflight.Group.Do",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -104,7 +88,9 @@
                       "identifier": "Group.DoChan",
                       "newPage": false,
                       "searchKey": "singleflight.Group.DoChan",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -119,12 +105,35 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/singleflight#Group.ForgetUnshared",
+                    "documentation": {
+                      "identifier": "Group.ForgetUnshared",
+                      "newPage": false,
+                      "searchKey": "singleflight.Group.ForgetUnshared",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (g *Group) ForgetUnshared(key string) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (g *Group) ForgetUnshared(key string) bool\n```\n\nForgetUnshared tells the singleflight to forget about a key if it is not shared with any other goroutines. Future calls to Do for a forgotten key will call the function rather than waiting for an earlier call to complete. Returns whether the key was forgotten or unknown--that is, whether no other goroutines are waiting for the result. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/singleflight#Group.doCall",
                     "documentation": {
                       "identifier": "Group.doCall",
                       "newPage": false,
                       "searchKey": "singleflight.Group.doCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -135,26 +144,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (g *Group) doCall(c *call, key string, fn func() (interface{}, error))\n```\n\ndoCall handles the single call for a key. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/singleflight#Group.ForgetUnshared",
-                    "documentation": {
-                      "identifier": "Group.ForgetUnshared",
-                      "newPage": false,
-                      "searchKey": "singleflight.Group.ForgetUnshared",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (g *Group) ForgetUnshared(key string) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (g *Group) ForgetUnshared(key string) bool\n```\n\nForgetUnshared tells the singleflight to forget about a key if it is not shared with any other goroutines. Future calls to Do for a forgotten key will call the function rather than waiting for an earlier call to complete. Returns whether the key was forgotten or unknown--that is, whether no other goroutines are waiting for the result. \n\n"
                     },
                     "children": null
                   }
@@ -169,7 +158,9 @@
                 "identifier": "Result",
                 "newPage": false,
                 "searchKey": "singleflight.Result",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -178,6 +169,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\ntype Result struct {\n\tVal    interface{}\n\tErr    error\n\tShared bool\n}\n```\n\nResult holds the results of Do, so they can be passed on a channel. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/singleflight#call",
+              "documentation": {
+                "identifier": "call",
+                "newPage": false,
+                "searchKey": "singleflight.call",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type call struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype call struct {\n\twg sync.WaitGroup\n\n\t// These fields are written once before the WaitGroup is done\n\t// and are only read after the WaitGroup is done.\n\tval interface{}\n\terr error\n\n\t// These fields are read and written with the singleflight\n\t// mutex held before the WaitGroup is done, and are read but\n\t// not written after the WaitGroup is done.\n\tdups  int\n\tchans []chan<- Result\n}\n```\n\ncall is an in-flight or completed singleflight.Do call \n\n"
               },
               "children": null
             }
@@ -193,6 +207,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -213,7 +228,9 @@
                 "newPage": false,
                 "searchKey": "singleflight.TestDo",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -229,35 +246,15 @@
           },
           {
             "node": {
-              "pathID": "/internal/singleflight#TestDoErr",
-              "documentation": {
-                "identifier": "TestDoErr",
-                "newPage": false,
-                "searchKey": "singleflight.TestDoErr",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDoErr(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDoErr(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/singleflight#TestDoDupSuppress",
               "documentation": {
                 "identifier": "TestDoDupSuppress",
                 "newPage": false,
                 "searchKey": "singleflight.TestDoDupSuppress",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -267,6 +264,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc TestDoDupSuppress(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/singleflight#TestDoErr",
+              "documentation": {
+                "identifier": "TestDoErr",
+                "newPage": false,
+                "searchKey": "singleflight.TestDoErr",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDoErr(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDoErr(t *testing.T)\n```\n\n"
               },
               "children": null
             }

@@ -12,14 +12,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Example" href="#Example">func Example()</a>
 
 ```
 searchKey: scanner_test.Example
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -30,7 +30,7 @@ func Example()
 
 ```
 searchKey: scanner_test.Example_isIdentRune
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -41,7 +41,7 @@ func Example_isIdentRune()
 
 ```
 searchKey: scanner_test.Example_mode
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -52,7 +52,7 @@ func Example_mode()
 
 ```
 searchKey: scanner_test.Example_whitespace
-tags: [private]
+tags: [function private]
 ```
 
 ```Go

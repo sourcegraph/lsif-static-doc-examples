@@ -4,7 +4,9 @@
     "identifier": "csv",
     "newPage": true,
     "searchKey": "encoding/csv",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -41,6 +45,8 @@
                 "newPage": false,
                 "searchKey": "csv.benchmarkCSVData",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -65,7 +71,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -78,32 +86,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/encoding/csv#ErrTrailingComma",
-              "documentation": {
-                "identifier": "ErrTrailingComma",
-                "newPage": false,
-                "searchKey": "csv.ErrTrailingComma",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ErrTrailingComma"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ErrTrailingComma = errors.New(\"extra delimiter at end of line\") // Deprecated: No longer used.\n\n```\n\nThese are the errors that can be returned in ParseError.Err. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/encoding/csv#ErrBareQuote",
               "documentation": {
                 "identifier": "ErrBareQuote",
                 "newPage": false,
                 "searchKey": "csv.ErrBareQuote",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -118,32 +109,15 @@
           },
           {
             "node": {
-              "pathID": "/encoding/csv#ErrQuote",
-              "documentation": {
-                "identifier": "ErrQuote",
-                "newPage": false,
-                "searchKey": "csv.ErrQuote",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ErrQuote"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ErrQuote = errors.New(\"extraneous or missing \\\" in quoted-field\")\n```\n\nThese are the errors that can be returned in ParseError.Err. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/encoding/csv#ErrFieldCount",
               "documentation": {
                 "identifier": "ErrFieldCount",
                 "newPage": false,
                 "searchKey": "csv.ErrFieldCount",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -158,12 +132,86 @@
           },
           {
             "node": {
+              "pathID": "/encoding/csv#ErrQuote",
+              "documentation": {
+                "identifier": "ErrQuote",
+                "newPage": false,
+                "searchKey": "csv.ErrQuote",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrQuote"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrQuote = errors.New(\"extraneous or missing \\\" in quoted-field\")\n```\n\nThese are the errors that can be returned in ParseError.Err. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/csv#ErrTrailingComma",
+              "documentation": {
+                "identifier": "ErrTrailingComma",
+                "newPage": false,
+                "searchKey": "csv.ErrTrailingComma",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrTrailingComma"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrTrailingComma = errors.New(\"extra delimiter at end of line\") // Deprecated: No longer used.\n\n```\n\nThese are the errors that can be returned in ParseError.Err. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/csv#benchmarkWriteData",
+              "documentation": {
+                "identifier": "benchmarkWriteData",
+                "newPage": false,
+                "searchKey": "csv.benchmarkWriteData",
+                "tags": [
+                  "variable",
+                  "array",
+                  "array",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var benchmarkWriteData"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar benchmarkWriteData = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/encoding/csv#errInvalidDelim",
               "documentation": {
                 "identifier": "errInvalidDelim",
                 "newPage": false,
                 "searchKey": "csv.errInvalidDelim",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -186,6 +234,9 @@
                 "newPage": false,
                 "searchKey": "csv.readTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -208,6 +259,9 @@
                 "newPage": false,
                 "searchKey": "csv.writeTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -218,28 +272,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar writeTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/csv#benchmarkWriteData",
-              "documentation": {
-                "identifier": "benchmarkWriteData",
-                "newPage": false,
-                "searchKey": "csv.benchmarkWriteData",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var benchmarkWriteData"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar benchmarkWriteData = ...\n```\n\n"
               },
               "children": null
             }
@@ -254,7 +286,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -272,7 +306,9 @@
                 "identifier": "ParseError",
                 "newPage": false,
                 "searchKey": "csv.ParseError",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -290,7 +326,9 @@
                       "identifier": "ParseError.Error",
                       "newPage": false,
                       "searchKey": "csv.ParseError.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -310,7 +348,9 @@
                       "identifier": "ParseError.Unwrap",
                       "newPage": false,
                       "searchKey": "csv.ParseError.Unwrap",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -333,7 +373,9 @@
                 "identifier": "Reader",
                 "newPage": false,
                 "searchKey": "csv.Reader",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -351,7 +393,9 @@
                       "identifier": "NewReader",
                       "newPage": false,
                       "searchKey": "csv.NewReader",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -366,32 +410,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/encoding/csv#Reader.Read",
-                    "documentation": {
-                      "identifier": "Reader.Read",
-                      "newPage": false,
-                      "searchKey": "csv.Reader.Read",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Reader) Read() (record []string, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Reader) Read() (record []string, err error)\n```\n\nRead reads one record (a slice of fields) from r. If the record has an unexpected number of fields, Read returns the record along with the error ErrFieldCount. Except for that case, Read always returns either a non-nil record or a non-nil error, but not both. If there is no data left to be read, Read returns nil, io.EOF. If ReuseRecord is true, the returned slice may be shared between multiple calls to Read. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/encoding/csv#Reader.FieldPos",
                     "documentation": {
                       "identifier": "Reader.FieldPos",
                       "newPage": false,
                       "searchKey": "csv.Reader.FieldPos",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -406,12 +432,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/encoding/csv#Reader.Read",
+                    "documentation": {
+                      "identifier": "Reader.Read",
+                      "newPage": false,
+                      "searchKey": "csv.Reader.Read",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) Read() (record []string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) Read() (record []string, err error)\n```\n\nRead reads one record (a slice of fields) from r. If the record has an unexpected number of fields, Read returns the record along with the error ErrFieldCount. Except for that case, Read always returns either a non-nil record or a non-nil error, but not both. If there is no data left to be read, Read returns nil, io.EOF. If ReuseRecord is true, the returned slice may be shared between multiple calls to Read. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/encoding/csv#Reader.ReadAll",
                     "documentation": {
                       "identifier": "Reader.ReadAll",
                       "newPage": false,
                       "searchKey": "csv.Reader.ReadAll",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -432,6 +482,7 @@
                       "newPage": false,
                       "searchKey": "csv.Reader.readLine",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -454,6 +505,7 @@
                       "newPage": false,
                       "searchKey": "csv.Reader.readRecord",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -473,34 +525,14 @@
           },
           {
             "node": {
-              "pathID": "/encoding/csv#position",
-              "documentation": {
-                "identifier": "position",
-                "newPage": false,
-                "searchKey": "csv.position",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type position struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype position struct {\n\tline, col int\n}\n```\n\npos holds the position of a field in the current line. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/encoding/csv#Writer",
               "documentation": {
                 "identifier": "Writer",
                 "newPage": false,
                 "searchKey": "csv.Writer",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -518,7 +550,9 @@
                       "identifier": "NewWriter",
                       "newPage": false,
                       "searchKey": "csv.NewWriter",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -533,52 +567,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/encoding/csv#Writer.Write",
-                    "documentation": {
-                      "identifier": "Writer.Write",
-                      "newPage": false,
-                      "searchKey": "csv.Writer.Write",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (w *Writer) Write(record []string) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (w *Writer) Write(record []string) error\n```\n\nWrite writes a single CSV record to w along with any necessary quoting. A record is a slice of strings with each string being one field. Writes are buffered, so Flush must eventually be called to ensure that the record is written to the underlying io.Writer. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/encoding/csv#Writer.Flush",
-                    "documentation": {
-                      "identifier": "Writer.Flush",
-                      "newPage": false,
-                      "searchKey": "csv.Writer.Flush",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (w *Writer) Flush()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (w *Writer) Flush()\n```\n\nFlush writes any buffered data to the underlying io.Writer. To check if an error occurred during the Flush, call Error. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/encoding/csv#Writer.Error",
                     "documentation": {
                       "identifier": "Writer.Error",
                       "newPage": false,
                       "searchKey": "csv.Writer.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -593,12 +589,58 @@
                 },
                 {
                   "node": {
+                    "pathID": "/encoding/csv#Writer.Flush",
+                    "documentation": {
+                      "identifier": "Writer.Flush",
+                      "newPage": false,
+                      "searchKey": "csv.Writer.Flush",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) Flush()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) Flush()\n```\n\nFlush writes any buffered data to the underlying io.Writer. To check if an error occurred during the Flush, call Error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/csv#Writer.Write",
+                    "documentation": {
+                      "identifier": "Writer.Write",
+                      "newPage": false,
+                      "searchKey": "csv.Writer.Write",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) Write(record []string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) Write(record []string) error\n```\n\nWrite writes a single CSV record to w along with any necessary quoting. A record is a slice of strings with each string being one field. Writes are buffered, so Flush must eventually be called to ensure that the record is written to the underlying io.Writer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/encoding/csv#Writer.WriteAll",
                     "documentation": {
                       "identifier": "Writer.WriteAll",
                       "newPage": false,
                       "searchKey": "csv.Writer.WriteAll",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -619,6 +661,7 @@
                       "newPage": false,
                       "searchKey": "csv.Writer.fieldNeedsQuotes",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -638,79 +681,13 @@
           },
           {
             "node": {
-              "pathID": "/encoding/csv#readTest",
-              "documentation": {
-                "identifier": "readTest",
-                "newPage": false,
-                "searchKey": "csv.readTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type readTest struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype readTest struct {\n\tName      string\n\tInput     string\n\tOutput    [][]string\n\tPositions [][][2]int\n\tErrors    []error\n\n\t// These fields are copied into the Reader\n\tComma              rune\n\tComment            rune\n\tUseFieldsPerRecord bool // false (default) means FieldsPerRecord is -1\n\tFieldsPerRecord    int\n\tLazyQuotes         bool\n\tTrimLeadingSpace   bool\n\tReuseRecord        bool\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/csv#nTimes",
-              "documentation": {
-                "identifier": "nTimes",
-                "newPage": false,
-                "searchKey": "csv.nTimes",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type nTimes struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype nTimes struct {\n\ts   string\n\tn   int\n\toff int\n}\n```\n\nnTimes is an io.Reader which yields the string s n times. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/encoding/csv#nTimes.Read",
-                    "documentation": {
-                      "identifier": "nTimes.Read",
-                      "newPage": false,
-                      "searchKey": "csv.nTimes.Read",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *nTimes) Read(p []byte) (n int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *nTimes) Read(p []byte) (n int, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/encoding/csv#errorWriter",
               "documentation": {
                 "identifier": "errorWriter",
                 "newPage": false,
                 "searchKey": "csv.errorWriter",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -731,6 +708,7 @@
                       "newPage": false,
                       "searchKey": "csv.errorWriter.Write",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -747,6 +725,99 @@
                 }
               ]
             }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/csv#nTimes",
+              "documentation": {
+                "identifier": "nTimes",
+                "newPage": false,
+                "searchKey": "csv.nTimes",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type nTimes struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype nTimes struct {\n\ts   string\n\tn   int\n\toff int\n}\n```\n\nnTimes is an io.Reader which yields the string s n times. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/encoding/csv#nTimes.Read",
+                    "documentation": {
+                      "identifier": "nTimes.Read",
+                      "newPage": false,
+                      "searchKey": "csv.nTimes.Read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *nTimes) Read(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *nTimes) Read(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/csv#position",
+              "documentation": {
+                "identifier": "position",
+                "newPage": false,
+                "searchKey": "csv.position",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type position struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype position struct {\n\tline, col int\n}\n```\n\npos holds the position of a field in the current line. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/csv#readTest",
+              "documentation": {
+                "identifier": "readTest",
+                "newPage": false,
+                "searchKey": "csv.readTest",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type readTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype readTest struct {\n\tName      string\n\tInput     string\n\tOutput    [][]string\n\tPositions [][][2]int\n\tErrors    []error\n\n\t// These fields are copied into the Reader\n\tComma              rune\n\tComment            rune\n\tUseFieldsPerRecord bool // false (default) means FieldsPerRecord is -1\n\tFieldsPerRecord    int\n\tLazyQuotes         bool\n\tTrimLeadingSpace   bool\n\tReuseRecord        bool\n}\n```\n\n"
+              },
+              "children": null
+            }
           }
         ]
       }
@@ -758,7 +829,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -771,189 +844,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/encoding/csv#validDelim",
-              "documentation": {
-                "identifier": "validDelim",
-                "newPage": false,
-                "searchKey": "csv.validDelim",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func validDelim(r rune) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc validDelim(r rune) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/csv#lengthNL",
-              "documentation": {
-                "identifier": "lengthNL",
-                "newPage": false,
-                "searchKey": "csv.lengthNL",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func lengthNL(b []byte) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc lengthNL(b []byte) int\n```\n\nlengthNL reports the number of bytes for the trailing \\n. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/csv#nextRune",
-              "documentation": {
-                "identifier": "nextRune",
-                "newPage": false,
-                "searchKey": "csv.nextRune",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func nextRune(b []byte) rune"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc nextRune(b []byte) rune\n```\n\nnextRune returns the next rune in b or utf8.RuneError. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/csv#TestRead",
-              "documentation": {
-                "identifier": "TestRead",
-                "newPage": false,
-                "searchKey": "csv.TestRead",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRead(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRead(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/csv#firstError",
-              "documentation": {
-                "identifier": "firstError",
-                "newPage": false,
-                "searchKey": "csv.firstError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func firstError(errs []error, positions [][][2]int, errPositions map[int][2]int) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc firstError(errs []error, positions [][][2]int, errPositions map[int][2]int) error\n```\n\nfirstError returns the first non-nil error in errs, with the position adjusted according to the error's index inside positions. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/csv#errorWithPosition",
-              "documentation": {
-                "identifier": "errorWithPosition",
-                "newPage": false,
-                "searchKey": "csv.errorWithPosition",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func errorWithPosition(err error, recNum int, positions [][][2]int, errPositions map[int][2]int) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc errorWithPosition(err error, recNum int, positions [][][2]int, errPositions map[int][2]int) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/csv#makePositions",
-              "documentation": {
-                "identifier": "makePositions",
-                "newPage": false,
-                "searchKey": "csv.makePositions",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func makePositions(text string) ([][][2]int, map[int][2]int, string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc makePositions(text string) ([][][2]int, map[int][2]int, string)\n```\n\nmakePositions returns the expected field positions of all the fields in text, the positions of any errors, and the text with the position markers removed. \n\nThe start of each field is marked with a § symbol; CSV lines are separated by ¶ symbols; Error positions are marked with ∑ symbols. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/csv#benchmarkRead",
-              "documentation": {
-                "identifier": "benchmarkRead",
-                "newPage": false,
-                "searchKey": "csv.benchmarkRead",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func benchmarkRead(b *testing.B, initReader func(*Reader), rows string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc benchmarkRead(b *testing.B, initReader func(*Reader), rows string)\n```\n\nbenchmarkRead measures reading the provided CSV rows data. initReader, if non-nil, modifies the Reader before it's used. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/encoding/csv#BenchmarkRead",
               "documentation": {
                 "identifier": "BenchmarkRead",
                 "newPage": false,
                 "searchKey": "csv.BenchmarkRead",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -969,57 +868,15 @@
           },
           {
             "node": {
-              "pathID": "/encoding/csv#BenchmarkReadWithFieldsPerRecord",
-              "documentation": {
-                "identifier": "BenchmarkReadWithFieldsPerRecord",
-                "newPage": false,
-                "searchKey": "csv.BenchmarkReadWithFieldsPerRecord",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkReadWithFieldsPerRecord(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkReadWithFieldsPerRecord(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/csv#BenchmarkReadWithoutFieldsPerRecord",
-              "documentation": {
-                "identifier": "BenchmarkReadWithoutFieldsPerRecord",
-                "newPage": false,
-                "searchKey": "csv.BenchmarkReadWithoutFieldsPerRecord",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkReadWithoutFieldsPerRecord(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkReadWithoutFieldsPerRecord(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/encoding/csv#BenchmarkReadLargeFields",
               "documentation": {
                 "identifier": "BenchmarkReadLargeFields",
                 "newPage": false,
                 "searchKey": "csv.BenchmarkReadLargeFields",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -1041,7 +898,9 @@
                 "newPage": false,
                 "searchKey": "csv.BenchmarkReadReuseRecord",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -1057,13 +916,39 @@
           },
           {
             "node": {
+              "pathID": "/encoding/csv#BenchmarkReadReuseRecordLargeFields",
+              "documentation": {
+                "identifier": "BenchmarkReadReuseRecordLargeFields",
+                "newPage": false,
+                "searchKey": "csv.BenchmarkReadReuseRecordLargeFields",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkReadReuseRecordLargeFields(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkReadReuseRecordLargeFields(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/encoding/csv#BenchmarkReadReuseRecordWithFieldsPerRecord",
               "documentation": {
                 "identifier": "BenchmarkReadReuseRecordWithFieldsPerRecord",
                 "newPage": false,
                 "searchKey": "csv.BenchmarkReadReuseRecordWithFieldsPerRecord",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -1085,7 +970,9 @@
                 "newPage": false,
                 "searchKey": "csv.BenchmarkReadReuseRecordWithoutFieldsPerRecord",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -1101,44 +988,72 @@
           },
           {
             "node": {
-              "pathID": "/encoding/csv#BenchmarkReadReuseRecordLargeFields",
+              "pathID": "/encoding/csv#BenchmarkReadWithFieldsPerRecord",
               "documentation": {
-                "identifier": "BenchmarkReadReuseRecordLargeFields",
+                "identifier": "BenchmarkReadWithFieldsPerRecord",
                 "newPage": false,
-                "searchKey": "csv.BenchmarkReadReuseRecordLargeFields",
+                "searchKey": "csv.BenchmarkReadWithFieldsPerRecord",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkReadReuseRecordLargeFields(b *testing.B)"
+                "value": "func BenchmarkReadWithFieldsPerRecord(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkReadReuseRecordLargeFields(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc BenchmarkReadWithFieldsPerRecord(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/encoding/csv#TestWrite",
+              "pathID": "/encoding/csv#BenchmarkReadWithoutFieldsPerRecord",
               "documentation": {
-                "identifier": "TestWrite",
+                "identifier": "BenchmarkReadWithoutFieldsPerRecord",
                 "newPage": false,
-                "searchKey": "csv.TestWrite",
+                "searchKey": "csv.BenchmarkReadWithoutFieldsPerRecord",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestWrite(t *testing.T)"
+                "value": "func BenchmarkReadWithoutFieldsPerRecord(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestWrite(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc BenchmarkReadWithoutFieldsPerRecord(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/csv#BenchmarkWrite",
+              "documentation": {
+                "identifier": "BenchmarkWrite",
+                "newPage": false,
+                "searchKey": "csv.BenchmarkWrite",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkWrite(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkWrite(b *testing.B)\n```\n\n"
               },
               "children": null
             }
@@ -1151,7 +1066,9 @@
                 "newPage": false,
                 "searchKey": "csv.TestError",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1167,22 +1084,209 @@
           },
           {
             "node": {
-              "pathID": "/encoding/csv#BenchmarkWrite",
+              "pathID": "/encoding/csv#TestRead",
               "documentation": {
-                "identifier": "BenchmarkWrite",
+                "identifier": "TestRead",
                 "newPage": false,
-                "searchKey": "csv.BenchmarkWrite",
+                "searchKey": "csv.TestRead",
                 "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRead(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRead(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/csv#TestWrite",
+              "documentation": {
+                "identifier": "TestWrite",
+                "newPage": false,
+                "searchKey": "csv.TestWrite",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWrite(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWrite(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/csv#benchmarkRead",
+              "documentation": {
+                "identifier": "benchmarkRead",
+                "newPage": false,
+                "searchKey": "csv.benchmarkRead",
+                "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkWrite(b *testing.B)"
+                "value": "func benchmarkRead(b *testing.B, initReader func(*Reader), rows string)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkWrite(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc benchmarkRead(b *testing.B, initReader func(*Reader), rows string)\n```\n\nbenchmarkRead measures reading the provided CSV rows data. initReader, if non-nil, modifies the Reader before it's used. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/csv#errorWithPosition",
+              "documentation": {
+                "identifier": "errorWithPosition",
+                "newPage": false,
+                "searchKey": "csv.errorWithPosition",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func errorWithPosition(err error, recNum int, positions [][][2]int, errPositions map[int][2]int) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc errorWithPosition(err error, recNum int, positions [][][2]int, errPositions map[int][2]int) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/csv#firstError",
+              "documentation": {
+                "identifier": "firstError",
+                "newPage": false,
+                "searchKey": "csv.firstError",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func firstError(errs []error, positions [][][2]int, errPositions map[int][2]int) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc firstError(errs []error, positions [][][2]int, errPositions map[int][2]int) error\n```\n\nfirstError returns the first non-nil error in errs, with the position adjusted according to the error's index inside positions. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/csv#lengthNL",
+              "documentation": {
+                "identifier": "lengthNL",
+                "newPage": false,
+                "searchKey": "csv.lengthNL",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func lengthNL(b []byte) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc lengthNL(b []byte) int\n```\n\nlengthNL reports the number of bytes for the trailing \\n. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/csv#makePositions",
+              "documentation": {
+                "identifier": "makePositions",
+                "newPage": false,
+                "searchKey": "csv.makePositions",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makePositions(text string) ([][][2]int, map[int][2]int, string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makePositions(text string) ([][][2]int, map[int][2]int, string)\n```\n\nmakePositions returns the expected field positions of all the fields in text, the positions of any errors, and the text with the position markers removed. \n\nThe start of each field is marked with a § symbol; CSV lines are separated by ¶ symbols; Error positions are marked with ∑ symbols. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/csv#nextRune",
+              "documentation": {
+                "identifier": "nextRune",
+                "newPage": false,
+                "searchKey": "csv.nextRune",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func nextRune(b []byte) rune"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc nextRune(b []byte) rune\n```\n\nnextRune returns the next rune in b or utf8.RuneError. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/csv#validDelim",
+              "documentation": {
+                "identifier": "validDelim",
+                "newPage": false,
+                "searchKey": "csv.validDelim",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func validDelim(r rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc validDelim(r rune) bool\n```\n\n"
               },
               "children": null
             }

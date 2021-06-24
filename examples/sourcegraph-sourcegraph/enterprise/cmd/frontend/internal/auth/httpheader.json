@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/auth/httpheader",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "httpheader.providerType",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -89,7 +94,10 @@
                 "identifier": "Middleware",
                 "newPage": false,
                 "searchKey": "httpheader.Middleware",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -113,6 +121,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -133,6 +142,7 @@
                 "newPage": false,
                 "searchKey": "httpheader.provider",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -147,22 +157,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#provider.ConfigID",
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#provider.CachedInfo",
                     "documentation": {
-                      "identifier": "provider.ConfigID",
+                      "identifier": "provider.CachedInfo",
                       "newPage": false,
-                      "searchKey": "httpheader.provider.ConfigID",
+                      "searchKey": "httpheader.provider.CachedInfo",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (provider) ConfigID() providers.ConfigID"
+                      "value": "func (p provider) CachedInfo() *providers.Info"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (provider) ConfigID() providers.ConfigID\n```\n\nConfigID implements providers.Provider. \n\n"
+                      "value": "```Go\nfunc (p provider) CachedInfo() *providers.Info\n```\n\nCachedInfo implements providers.Provider. \n\n"
                     },
                     "children": null
                   }
@@ -175,6 +186,7 @@
                       "newPage": false,
                       "searchKey": "httpheader.provider.Config",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -191,12 +203,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#provider.ConfigID",
+                    "documentation": {
+                      "identifier": "provider.ConfigID",
+                      "newPage": false,
+                      "searchKey": "httpheader.provider.ConfigID",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (provider) ConfigID() providers.ConfigID"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (provider) ConfigID() providers.ConfigID\n```\n\nConfigID implements providers.Provider. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#provider.Refresh",
                     "documentation": {
                       "identifier": "provider.Refresh",
                       "newPage": false,
                       "searchKey": "httpheader.provider.Refresh",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -207,28 +243,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (p provider) Refresh(context.Context) error\n```\n\nRefresh implements providers.Provider. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#provider.CachedInfo",
-                    "documentation": {
-                      "identifier": "provider.CachedInfo",
-                      "newPage": false,
-                      "searchKey": "httpheader.provider.CachedInfo",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p provider) CachedInfo() *providers.Info"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p provider) CachedInfo() *providers.Info\n```\n\nCachedInfo implements providers.Provider. \n\n"
                     },
                     "children": null
                   }
@@ -247,6 +261,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -261,12 +276,85 @@
         "children": [
           {
             "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#TestMiddleware",
+              "documentation": {
+                "identifier": "TestMiddleware",
+                "newPage": false,
+                "searchKey": "httpheader.TestMiddleware",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMiddleware(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMiddleware(t *testing.T)\n```\n\nSEE ALSO FOR MANUAL TESTING: See the Middleware docstring for information about the testproxy helper program, which helps with manual testing of the HTTP auth proxy behavior. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#TestMiddleware_stripPrefix",
+              "documentation": {
+                "identifier": "TestMiddleware_stripPrefix",
+                "newPage": false,
+                "searchKey": "httpheader.TestMiddleware_stripPrefix",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMiddleware_stripPrefix(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMiddleware_stripPrefix(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#TestValidateCustom",
+              "documentation": {
+                "identifier": "TestValidateCustom",
+                "newPage": false,
+                "searchKey": "httpheader.TestValidateCustom",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestValidateCustom(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestValidateCustom(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#getProviderConfig",
               "documentation": {
                 "identifier": "getProviderConfig",
                 "newPage": false,
                 "searchKey": "httpheader.getProviderConfig",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -289,6 +377,7 @@
                 "newPage": false,
                 "searchKey": "httpheader.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -305,34 +394,13 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#validateConfig",
-              "documentation": {
-                "identifier": "validateConfig",
-                "newPage": false,
-                "searchKey": "httpheader.validateConfig",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func validateConfig(c conf.Unified) (problems conf.Problems)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc validateConfig(c conf.Unified) (problems conf.Problems)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#init.config_watch.go",
               "documentation": {
                 "identifier": "init.config_watch.go",
                 "newPage": false,
                 "searchKey": "httpheader.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -355,6 +423,7 @@
                 "newPage": false,
                 "searchKey": "httpheader.middleware",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -371,66 +440,23 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#TestValidateCustom",
+              "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#validateConfig",
               "documentation": {
-                "identifier": "TestValidateCustom",
+                "identifier": "validateConfig",
                 "newPage": false,
-                "searchKey": "httpheader.TestValidateCustom",
+                "searchKey": "httpheader.validateConfig",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestValidateCustom(t *testing.T)"
+                "value": "func validateConfig(c conf.Unified) (problems conf.Problems)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestValidateCustom(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#TestMiddleware",
-              "documentation": {
-                "identifier": "TestMiddleware",
-                "newPage": false,
-                "searchKey": "httpheader.TestMiddleware",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMiddleware(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMiddleware(t *testing.T)\n```\n\nSEE ALSO FOR MANUAL TESTING: See the Middleware docstring for information about the testproxy helper program, which helps with manual testing of the HTTP auth proxy behavior. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#TestMiddleware_stripPrefix",
-              "documentation": {
-                "identifier": "TestMiddleware_stripPrefix",
-                "newPage": false,
-                "searchKey": "httpheader.TestMiddleware_stripPrefix",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMiddleware_stripPrefix(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMiddleware_stripPrefix(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc validateConfig(c conf.Unified) (problems conf.Problems)\n```\n\n"
               },
               "children": null
             }

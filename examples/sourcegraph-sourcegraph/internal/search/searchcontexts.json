@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/search/searchcontexts",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,10 @@
                 "identifier": "GlobalSearchContextName",
                 "newPage": false,
                 "searchKey": "searchcontexts.GlobalSearchContextName",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -59,44 +64,24 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/searchcontexts#searchContextSpecPrefix",
+              "pathID": "/internal/search/searchcontexts#maxRevisionLength",
               "documentation": {
-                "identifier": "searchContextSpecPrefix",
+                "identifier": "maxRevisionLength",
                 "newPage": false,
-                "searchKey": "searchcontexts.searchContextSpecPrefix",
+                "searchKey": "searchcontexts.maxRevisionLength",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const searchContextSpecPrefix"
+                "value": "const maxRevisionLength"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst searchContextSpecPrefix = \"@\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/searchcontexts#maxSearchContextNameLength",
-              "documentation": {
-                "identifier": "maxSearchContextNameLength",
-                "newPage": false,
-                "searchKey": "searchcontexts.maxSearchContextNameLength",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const maxSearchContextNameLength"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst maxSearchContextNameLength = 32\n```\n\n"
+                "value": "```Go\nconst maxRevisionLength = 255\n```\n\n"
               },
               "children": null
             }
@@ -109,6 +94,8 @@
                 "newPage": false,
                 "searchKey": "searchcontexts.maxSearchContextDescriptionLength",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -125,22 +112,48 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/searchcontexts#maxRevisionLength",
+              "pathID": "/internal/search/searchcontexts#maxSearchContextNameLength",
               "documentation": {
-                "identifier": "maxRevisionLength",
+                "identifier": "maxSearchContextNameLength",
                 "newPage": false,
-                "searchKey": "searchcontexts.maxRevisionLength",
+                "searchKey": "searchcontexts.maxSearchContextNameLength",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const maxRevisionLength"
+                "value": "const maxSearchContextNameLength"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst maxRevisionLength = 255\n```\n\n"
+                "value": "```Go\nconst maxSearchContextNameLength = 32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/searchcontexts#searchContextSpecPrefix",
+              "documentation": {
+                "identifier": "searchContextSpecPrefix",
+                "newPage": false,
+                "searchKey": "searchcontexts.searchContextSpecPrefix",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const searchContextSpecPrefix"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst searchContextSpecPrefix = \"@\"\n```\n\n"
               },
               "children": null
             }
@@ -156,6 +169,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -170,34 +184,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/search/searchcontexts#validateSearchContextNameRegexp",
-              "documentation": {
-                "identifier": "validateSearchContextNameRegexp",
-                "newPage": false,
-                "searchKey": "searchcontexts.validateSearchContextNameRegexp",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var validateSearchContextNameRegexp"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar validateSearchContextNameRegexp = lazyregexp.New(`^[a-zA-Z0-9_\\-\\/\\.]+$`)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/search/searchcontexts#namespacedSearchContextSpecRegexp",
               "documentation": {
                 "identifier": "namespacedSearchContextSpecRegexp",
                 "newPage": false,
                 "searchKey": "searchcontexts.namespacedSearchContextSpecRegexp",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -208,6 +202,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar namespacedSearchContextSpecRegexp = lazyregexp.New(searchContextSpecPrefix + `(.*?)\\/(.*)`)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/searchcontexts#validateSearchContextNameRegexp",
+              "documentation": {
+                "identifier": "validateSearchContextNameRegexp",
+                "newPage": false,
+                "searchKey": "searchcontexts.validateSearchContextNameRegexp",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var validateSearchContextNameRegexp"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar validateSearchContextNameRegexp = lazyregexp.New(`^[a-zA-Z0-9_\\-\\/\\.]+$`)\n```\n\n"
               },
               "children": null
             }
@@ -223,6 +241,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -242,7 +261,9 @@
                 "identifier": "ParsedSearchContextSpec",
                 "newPage": false,
                 "searchKey": "searchcontexts.ParsedSearchContextSpec",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -260,7 +281,9 @@
                       "identifier": "ParseSearchContextSpec",
                       "newPage": false,
                       "searchKey": "searchcontexts.ParseSearchContextSpec",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -287,6 +310,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -301,128 +325,22 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/search/searchcontexts#ResolveSearchContextSpec",
+              "pathID": "/internal/search/searchcontexts#ConvertVersionContextToSearchContext",
               "documentation": {
-                "identifier": "ResolveSearchContextSpec",
+                "identifier": "ConvertVersionContextToSearchContext",
                 "newPage": false,
-                "searchKey": "searchcontexts.ResolveSearchContextSpec",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ResolveSearchContextSpec(ctx context.Context, db dbutil.DB, searchContextSpec string) (*types.SearchContext, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ResolveSearchContextSpec(ctx context.Context, db dbutil.DB, searchContextSpec string) (*types.SearchContext, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/searchcontexts#ValidateSearchContextWriteAccessForCurrentUser",
-              "documentation": {
-                "identifier": "ValidateSearchContextWriteAccessForCurrentUser",
-                "newPage": false,
-                "searchKey": "searchcontexts.ValidateSearchContextWriteAccessForCurrentUser",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ValidateSearchContextWriteAccessForCurrentUser(ctx context.Context, db dbutil.DB, namespaceUserID, namespaceOrgID int32, public bool) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ValidateSearchContextWriteAccessForCurrentUser(ctx context.Context, db dbutil.DB, namespaceUserID, namespaceOrgID int32, public bool) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/searchcontexts#validateSearchContextName",
-              "documentation": {
-                "identifier": "validateSearchContextName",
-                "newPage": false,
-                "searchKey": "searchcontexts.validateSearchContextName",
+                "searchKey": "searchcontexts.ConvertVersionContextToSearchContext",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func validateSearchContextName(name string) error"
+                "value": "func ConvertVersionContextToSearchContext(ctx context.Context, db dbutil.DB, versionContext *schema.VersionContext) (*types.SearchContext, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc validateSearchContextName(name string) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/searchcontexts#validateSearchContextDescription",
-              "documentation": {
-                "identifier": "validateSearchContextDescription",
-                "newPage": false,
-                "searchKey": "searchcontexts.validateSearchContextDescription",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func validateSearchContextDescription(description string) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc validateSearchContextDescription(description string) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/searchcontexts#validateSearchContextRepositoryRevisions",
-              "documentation": {
-                "identifier": "validateSearchContextRepositoryRevisions",
-                "newPage": false,
-                "searchKey": "searchcontexts.validateSearchContextRepositoryRevisions",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func validateSearchContextRepositoryRevisions(repositoryRevisions []*types.SearchContextRepositoryRevisions) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc validateSearchContextRepositoryRevisions(repositoryRevisions []*types.SearchContextRepositoryRevisions) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/searchcontexts#validateSearchContextDoesNotExist",
-              "documentation": {
-                "identifier": "validateSearchContextDoesNotExist",
-                "newPage": false,
-                "searchKey": "searchcontexts.validateSearchContextDoesNotExist",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func validateSearchContextDoesNotExist(ctx context.Context, db dbutil.DB, searchContext *types.SearchContext) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc validateSearchContextDoesNotExist(ctx context.Context, db dbutil.DB, searchContext *types.SearchContext) error\n```\n\n"
+                "value": "```Go\nfunc ConvertVersionContextToSearchContext(ctx context.Context, db dbutil.DB, versionContext *schema.VersionContext) (*types.SearchContext, error)\n```\n\n"
               },
               "children": null
             }
@@ -434,7 +352,9 @@
                 "identifier": "CreateSearchContextWithRepositoryRevisions",
                 "newPage": false,
                 "searchKey": "searchcontexts.CreateSearchContextWithRepositoryRevisions",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -449,32 +369,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/searchcontexts#UpdateSearchContextWithRepositoryRevisions",
-              "documentation": {
-                "identifier": "UpdateSearchContextWithRepositoryRevisions",
-                "newPage": false,
-                "searchKey": "searchcontexts.UpdateSearchContextWithRepositoryRevisions",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func UpdateSearchContextWithRepositoryRevisions(ctx context.Context, db dbutil.DB, searchContext *types.SearchContext, repositoryRevisions []*types.SearchContextRepositoryRevisions) (*types.SearchContext, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc UpdateSearchContextWithRepositoryRevisions(ctx context.Context, db dbutil.DB, searchContext *types.SearchContext, repositoryRevisions []*types.SearchContextRepositoryRevisions) (*types.SearchContext, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/search/searchcontexts#DeleteSearchContext",
               "documentation": {
                 "identifier": "DeleteSearchContext",
                 "newPage": false,
                 "searchKey": "searchcontexts.DeleteSearchContext",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -494,7 +396,9 @@
                 "identifier": "GetAutoDefinedSearchContexts",
                 "newPage": false,
                 "searchKey": "searchcontexts.GetAutoDefinedSearchContexts",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -509,132 +413,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/searchcontexts#GetRepositoryRevisions",
-              "documentation": {
-                "identifier": "GetRepositoryRevisions",
-                "newPage": false,
-                "searchKey": "searchcontexts.GetRepositoryRevisions",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetRepositoryRevisions(ctx context.Context, db dbutil.DB, searchContextID int64) ([]*search.RepositoryRevisions, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetRepositoryRevisions(ctx context.Context, db dbutil.DB, searchContextID int64) ([]*search.RepositoryRevisions, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/searchcontexts#IsAutoDefinedSearchContext",
-              "documentation": {
-                "identifier": "IsAutoDefinedSearchContext",
-                "newPage": false,
-                "searchKey": "searchcontexts.IsAutoDefinedSearchContext",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IsAutoDefinedSearchContext(searchContext *types.SearchContext) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IsAutoDefinedSearchContext(searchContext *types.SearchContext) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/searchcontexts#IsInstanceLevelSearchContext",
-              "documentation": {
-                "identifier": "IsInstanceLevelSearchContext",
-                "newPage": false,
-                "searchKey": "searchcontexts.IsInstanceLevelSearchContext",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IsInstanceLevelSearchContext(searchContext *types.SearchContext) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IsInstanceLevelSearchContext(searchContext *types.SearchContext) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/searchcontexts#IsGlobalSearchContextSpec",
-              "documentation": {
-                "identifier": "IsGlobalSearchContextSpec",
-                "newPage": false,
-                "searchKey": "searchcontexts.IsGlobalSearchContextSpec",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IsGlobalSearchContextSpec(searchContextSpec string) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IsGlobalSearchContextSpec(searchContextSpec string) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/searchcontexts#IsGlobalSearchContext",
-              "documentation": {
-                "identifier": "IsGlobalSearchContext",
-                "newPage": false,
-                "searchKey": "searchcontexts.IsGlobalSearchContext",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IsGlobalSearchContext(searchContext *types.SearchContext) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IsGlobalSearchContext(searchContext *types.SearchContext) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/searchcontexts#GetUserSearchContext",
-              "documentation": {
-                "identifier": "GetUserSearchContext",
-                "newPage": false,
-                "searchKey": "searchcontexts.GetUserSearchContext",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetUserSearchContext(name string, userID int32) *types.SearchContext"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetUserSearchContext(name string, userID int32) *types.SearchContext\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/search/searchcontexts#GetGlobalSearchContext",
               "documentation": {
                 "identifier": "GetGlobalSearchContext",
                 "newPage": false,
                 "searchKey": "searchcontexts.GetGlobalSearchContext",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -649,12 +435,36 @@
           },
           {
             "node": {
+              "pathID": "/internal/search/searchcontexts#GetRepositoryRevisions",
+              "documentation": {
+                "identifier": "GetRepositoryRevisions",
+                "newPage": false,
+                "searchKey": "searchcontexts.GetRepositoryRevisions",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetRepositoryRevisions(ctx context.Context, db dbutil.DB, searchContextID int64) ([]*search.RepositoryRevisions, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetRepositoryRevisions(ctx context.Context, db dbutil.DB, searchContextID int64) ([]*search.RepositoryRevisions, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/search/searchcontexts#GetSearchContextSpec",
               "documentation": {
                 "identifier": "GetSearchContextSpec",
                 "newPage": false,
                 "searchKey": "searchcontexts.GetSearchContextSpec",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -669,130 +479,132 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/searchcontexts#getVersionContextRepositoryRevisions",
+              "pathID": "/internal/search/searchcontexts#GetUserSearchContext",
               "documentation": {
-                "identifier": "getVersionContextRepositoryRevisions",
+                "identifier": "GetUserSearchContext",
                 "newPage": false,
-                "searchKey": "searchcontexts.getVersionContextRepositoryRevisions",
+                "searchKey": "searchcontexts.GetUserSearchContext",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func getVersionContextRepositoryRevisions(ctx context.Context, db dbutil.DB, versionContext *schema.VersionContext) ([]*types.SearchContextRepositoryRevisions, error)"
+                "value": "func GetUserSearchContext(name string, userID int32) *types.SearchContext"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc getVersionContextRepositoryRevisions(ctx context.Context, db dbutil.DB, versionContext *schema.VersionContext) ([]*types.SearchContextRepositoryRevisions, error)\n```\n\n"
+                "value": "```Go\nfunc GetUserSearchContext(name string, userID int32) *types.SearchContext\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/search/searchcontexts#getSearchContextFromVersionContext",
+              "pathID": "/internal/search/searchcontexts#IsAutoDefinedSearchContext",
               "documentation": {
-                "identifier": "getSearchContextFromVersionContext",
+                "identifier": "IsAutoDefinedSearchContext",
                 "newPage": false,
-                "searchKey": "searchcontexts.getSearchContextFromVersionContext",
+                "searchKey": "searchcontexts.IsAutoDefinedSearchContext",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func getSearchContextFromVersionContext(versionContext *schema.VersionContext) *types.SearchContext"
+                "value": "func IsAutoDefinedSearchContext(searchContext *types.SearchContext) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc getSearchContextFromVersionContext(versionContext *schema.VersionContext) *types.SearchContext\n```\n\n"
+                "value": "```Go\nfunc IsAutoDefinedSearchContext(searchContext *types.SearchContext) bool\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/search/searchcontexts#ConvertVersionContextToSearchContext",
+              "pathID": "/internal/search/searchcontexts#IsGlobalSearchContext",
               "documentation": {
-                "identifier": "ConvertVersionContextToSearchContext",
+                "identifier": "IsGlobalSearchContext",
                 "newPage": false,
-                "searchKey": "searchcontexts.ConvertVersionContextToSearchContext",
-                "tags": null
+                "searchKey": "searchcontexts.IsGlobalSearchContext",
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func ConvertVersionContextToSearchContext(ctx context.Context, db dbutil.DB, versionContext *schema.VersionContext) (*types.SearchContext, error)"
+                "value": "func IsGlobalSearchContext(searchContext *types.SearchContext) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc ConvertVersionContextToSearchContext(ctx context.Context, db dbutil.DB, versionContext *schema.VersionContext) (*types.SearchContext, error)\n```\n\n"
+                "value": "```Go\nfunc IsGlobalSearchContext(searchContext *types.SearchContext) bool\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/search/searchcontexts#init.search_contexts_test.go",
+              "pathID": "/internal/search/searchcontexts#IsGlobalSearchContextSpec",
               "documentation": {
-                "identifier": "init.search_contexts_test.go",
+                "identifier": "IsGlobalSearchContextSpec",
                 "newPage": false,
-                "searchKey": "searchcontexts.init",
+                "searchKey": "searchcontexts.IsGlobalSearchContextSpec",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func init()"
+                "value": "func IsGlobalSearchContextSpec(searchContextSpec string) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
+                "value": "```Go\nfunc IsGlobalSearchContextSpec(searchContextSpec string) bool\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/search/searchcontexts#TestResolvingValidSearchContextSpecs",
+              "pathID": "/internal/search/searchcontexts#IsInstanceLevelSearchContext",
               "documentation": {
-                "identifier": "TestResolvingValidSearchContextSpecs",
+                "identifier": "IsInstanceLevelSearchContext",
                 "newPage": false,
-                "searchKey": "searchcontexts.TestResolvingValidSearchContextSpecs",
+                "searchKey": "searchcontexts.IsInstanceLevelSearchContext",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestResolvingValidSearchContextSpecs(t *testing.T)"
+                "value": "func IsInstanceLevelSearchContext(searchContext *types.SearchContext) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestResolvingValidSearchContextSpecs(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc IsInstanceLevelSearchContext(searchContext *types.SearchContext) bool\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/search/searchcontexts#TestResolvingInvalidSearchContextSpecs",
+              "pathID": "/internal/search/searchcontexts#ResolveSearchContextSpec",
               "documentation": {
-                "identifier": "TestResolvingInvalidSearchContextSpecs",
+                "identifier": "ResolveSearchContextSpec",
                 "newPage": false,
-                "searchKey": "searchcontexts.TestResolvingInvalidSearchContextSpecs",
+                "searchKey": "searchcontexts.ResolveSearchContextSpec",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestResolvingInvalidSearchContextSpecs(t *testing.T)"
+                "value": "func ResolveSearchContextSpec(ctx context.Context, db dbutil.DB, searchContextSpec string) (*types.SearchContext, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestResolvingInvalidSearchContextSpecs(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc ResolveSearchContextSpec(ctx context.Context, db dbutil.DB, searchContextSpec string) (*types.SearchContext, error)\n```\n\n"
               },
               "children": null
             }
@@ -805,7 +617,9 @@
                 "newPage": false,
                 "searchKey": "searchcontexts.TestConstructingSearchContextSpecs",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -821,13 +635,87 @@
           },
           {
             "node": {
+              "pathID": "/internal/search/searchcontexts#TestConvertingVersionContextToSearchContext",
+              "documentation": {
+                "identifier": "TestConvertingVersionContextToSearchContext",
+                "newPage": false,
+                "searchKey": "searchcontexts.TestConvertingVersionContextToSearchContext",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestConvertingVersionContextToSearchContext(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestConvertingVersionContextToSearchContext(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/searchcontexts#TestCreatingSearchContexts",
+              "documentation": {
+                "identifier": "TestCreatingSearchContexts",
+                "newPage": false,
+                "searchKey": "searchcontexts.TestCreatingSearchContexts",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCreatingSearchContexts(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCreatingSearchContexts(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/searchcontexts#TestDeletingAutoDefinedSearchContext",
+              "documentation": {
+                "identifier": "TestDeletingAutoDefinedSearchContext",
+                "newPage": false,
+                "searchKey": "searchcontexts.TestDeletingAutoDefinedSearchContext",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDeletingAutoDefinedSearchContext(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDeletingAutoDefinedSearchContext(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/search/searchcontexts#TestGettingSearchContextFromVersionContext",
               "documentation": {
                 "identifier": "TestGettingSearchContextFromVersionContext",
                 "newPage": false,
                 "searchKey": "searchcontexts.TestGettingSearchContextFromVersionContext",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -843,12 +731,177 @@
           },
           {
             "node": {
+              "pathID": "/internal/search/searchcontexts#TestResolvingInvalidSearchContextSpecs",
+              "documentation": {
+                "identifier": "TestResolvingInvalidSearchContextSpecs",
+                "newPage": false,
+                "searchKey": "searchcontexts.TestResolvingInvalidSearchContextSpecs",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestResolvingInvalidSearchContextSpecs(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestResolvingInvalidSearchContextSpecs(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/searchcontexts#TestResolvingSearchContextRepoNames",
+              "documentation": {
+                "identifier": "TestResolvingSearchContextRepoNames",
+                "newPage": false,
+                "searchKey": "searchcontexts.TestResolvingSearchContextRepoNames",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestResolvingSearchContextRepoNames(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestResolvingSearchContextRepoNames(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/searchcontexts#TestResolvingValidSearchContextSpecs",
+              "documentation": {
+                "identifier": "TestResolvingValidSearchContextSpecs",
+                "newPage": false,
+                "searchKey": "searchcontexts.TestResolvingValidSearchContextSpecs",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestResolvingValidSearchContextSpecs(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestResolvingValidSearchContextSpecs(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/searchcontexts#TestSearchContextWriteAccessValidation",
+              "documentation": {
+                "identifier": "TestSearchContextWriteAccessValidation",
+                "newPage": false,
+                "searchKey": "searchcontexts.TestSearchContextWriteAccessValidation",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSearchContextWriteAccessValidation(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSearchContextWriteAccessValidation(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/searchcontexts#TestUpdatingSearchContexts",
+              "documentation": {
+                "identifier": "TestUpdatingSearchContexts",
+                "newPage": false,
+                "searchKey": "searchcontexts.TestUpdatingSearchContexts",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUpdatingSearchContexts(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUpdatingSearchContexts(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/searchcontexts#UpdateSearchContextWithRepositoryRevisions",
+              "documentation": {
+                "identifier": "UpdateSearchContextWithRepositoryRevisions",
+                "newPage": false,
+                "searchKey": "searchcontexts.UpdateSearchContextWithRepositoryRevisions",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func UpdateSearchContextWithRepositoryRevisions(ctx context.Context, db dbutil.DB, searchContext *types.SearchContext, repositoryRevisions []*types.SearchContextRepositoryRevisions) (*types.SearchContext, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc UpdateSearchContextWithRepositoryRevisions(ctx context.Context, db dbutil.DB, searchContext *types.SearchContext, repositoryRevisions []*types.SearchContextRepositoryRevisions) (*types.SearchContext, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/searchcontexts#ValidateSearchContextWriteAccessForCurrentUser",
+              "documentation": {
+                "identifier": "ValidateSearchContextWriteAccessForCurrentUser",
+                "newPage": false,
+                "searchKey": "searchcontexts.ValidateSearchContextWriteAccessForCurrentUser",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ValidateSearchContextWriteAccessForCurrentUser(ctx context.Context, db dbutil.DB, namespaceUserID, namespaceOrgID int32, public bool) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ValidateSearchContextWriteAccessForCurrentUser(ctx context.Context, db dbutil.DB, namespaceUserID, namespaceOrgID int32, public bool) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/search/searchcontexts#createRepos",
               "documentation": {
                 "identifier": "createRepos",
                 "newPage": false,
                 "searchKey": "searchcontexts.createRepos",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -865,132 +918,161 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/searchcontexts#TestConvertingVersionContextToSearchContext",
+              "pathID": "/internal/search/searchcontexts#getSearchContextFromVersionContext",
               "documentation": {
-                "identifier": "TestConvertingVersionContextToSearchContext",
+                "identifier": "getSearchContextFromVersionContext",
                 "newPage": false,
-                "searchKey": "searchcontexts.TestConvertingVersionContextToSearchContext",
+                "searchKey": "searchcontexts.getSearchContextFromVersionContext",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestConvertingVersionContextToSearchContext(t *testing.T)"
+                "value": "func getSearchContextFromVersionContext(versionContext *schema.VersionContext) *types.SearchContext"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestConvertingVersionContextToSearchContext(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc getSearchContextFromVersionContext(versionContext *schema.VersionContext) *types.SearchContext\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/search/searchcontexts#TestResolvingSearchContextRepoNames",
+              "pathID": "/internal/search/searchcontexts#getVersionContextRepositoryRevisions",
               "documentation": {
-                "identifier": "TestResolvingSearchContextRepoNames",
+                "identifier": "getVersionContextRepositoryRevisions",
                 "newPage": false,
-                "searchKey": "searchcontexts.TestResolvingSearchContextRepoNames",
+                "searchKey": "searchcontexts.getVersionContextRepositoryRevisions",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestResolvingSearchContextRepoNames(t *testing.T)"
+                "value": "func getVersionContextRepositoryRevisions(ctx context.Context, db dbutil.DB, versionContext *schema.VersionContext) ([]*types.SearchContextRepositoryRevisions, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestResolvingSearchContextRepoNames(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc getVersionContextRepositoryRevisions(ctx context.Context, db dbutil.DB, versionContext *schema.VersionContext) ([]*types.SearchContextRepositoryRevisions, error)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/search/searchcontexts#TestSearchContextWriteAccessValidation",
+              "pathID": "/internal/search/searchcontexts#init.search_contexts_test.go",
               "documentation": {
-                "identifier": "TestSearchContextWriteAccessValidation",
+                "identifier": "init.search_contexts_test.go",
                 "newPage": false,
-                "searchKey": "searchcontexts.TestSearchContextWriteAccessValidation",
+                "searchKey": "searchcontexts.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestSearchContextWriteAccessValidation(t *testing.T)"
+                "value": "func init()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestSearchContextWriteAccessValidation(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc init()\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/search/searchcontexts#TestCreatingSearchContexts",
+              "pathID": "/internal/search/searchcontexts#validateSearchContextDescription",
               "documentation": {
-                "identifier": "TestCreatingSearchContexts",
+                "identifier": "validateSearchContextDescription",
                 "newPage": false,
-                "searchKey": "searchcontexts.TestCreatingSearchContexts",
+                "searchKey": "searchcontexts.validateSearchContextDescription",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestCreatingSearchContexts(t *testing.T)"
+                "value": "func validateSearchContextDescription(description string) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestCreatingSearchContexts(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc validateSearchContextDescription(description string) error\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/search/searchcontexts#TestUpdatingSearchContexts",
+              "pathID": "/internal/search/searchcontexts#validateSearchContextDoesNotExist",
               "documentation": {
-                "identifier": "TestUpdatingSearchContexts",
+                "identifier": "validateSearchContextDoesNotExist",
                 "newPage": false,
-                "searchKey": "searchcontexts.TestUpdatingSearchContexts",
+                "searchKey": "searchcontexts.validateSearchContextDoesNotExist",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestUpdatingSearchContexts(t *testing.T)"
+                "value": "func validateSearchContextDoesNotExist(ctx context.Context, db dbutil.DB, searchContext *types.SearchContext) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestUpdatingSearchContexts(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc validateSearchContextDoesNotExist(ctx context.Context, db dbutil.DB, searchContext *types.SearchContext) error\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/search/searchcontexts#TestDeletingAutoDefinedSearchContext",
+              "pathID": "/internal/search/searchcontexts#validateSearchContextName",
               "documentation": {
-                "identifier": "TestDeletingAutoDefinedSearchContext",
+                "identifier": "validateSearchContextName",
                 "newPage": false,
-                "searchKey": "searchcontexts.TestDeletingAutoDefinedSearchContext",
+                "searchKey": "searchcontexts.validateSearchContextName",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestDeletingAutoDefinedSearchContext(t *testing.T)"
+                "value": "func validateSearchContextName(name string) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestDeletingAutoDefinedSearchContext(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc validateSearchContextName(name string) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/searchcontexts#validateSearchContextRepositoryRevisions",
+              "documentation": {
+                "identifier": "validateSearchContextRepositoryRevisions",
+                "newPage": false,
+                "searchKey": "searchcontexts.validateSearchContextRepositoryRevisions",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func validateSearchContextRepositoryRevisions(repositoryRevisions []*types.SearchContextRepositoryRevisions) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc validateSearchContextRepositoryRevisions(repositoryRevisions []*types.SearchContextRepositoryRevisions) error\n```\n\n"
               },
               "children": null
             }

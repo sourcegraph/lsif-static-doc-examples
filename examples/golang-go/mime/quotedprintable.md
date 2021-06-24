@@ -8,48 +8,52 @@ Package quotedprintable implements quoted-printable encoding as specified by RFC
     * [const lineMaxLen](#lineMaxLen)
     * [const upperhex](#upperhex)
 * [Variables](#var)
+    * [var badSoftRx](#badSoftRx)
     * [var crlf](#crlf)
     * [var lf](#lf)
     * [var softSuffix](#softSuffix)
-    * [var useQprint](#useQprint)
-    * [var badSoftRx](#badSoftRx)
     * [var testMsg](#testMsg)
+    * [var useQprint](#useQprint)
 * [Types](#type)
     * [type Reader struct](#Reader)
         * [func NewReader(r io.Reader) *Reader](#NewReader)
         * [func (r *Reader) Read(p []byte) (n int, err error)](#Reader.Read)
     * [type Writer struct](#Writer)
         * [func NewWriter(w io.Writer) *Writer](#NewWriter)
-        * [func (w *Writer) Write(p []byte) (n int, err error)](#Writer.Write)
         * [func (w *Writer) Close() error](#Writer.Close)
-        * [func (w *Writer) write(p []byte) error](#Writer.write)
-        * [func (w *Writer) encode(b byte) error](#Writer.encode)
+        * [func (w *Writer) Write(p []byte) (n int, err error)](#Writer.Write)
         * [func (w *Writer) checkLastByte() error](#Writer.checkLastByte)
-        * [func (w *Writer) insertSoftLineBreak() error](#Writer.insertSoftLineBreak)
-        * [func (w *Writer) insertCRLF() error](#Writer.insertCRLF)
+        * [func (w *Writer) encode(b byte) error](#Writer.encode)
         * [func (w *Writer) flush() error](#Writer.flush)
+        * [func (w *Writer) insertCRLF() error](#Writer.insertCRLF)
+        * [func (w *Writer) insertSoftLineBreak() error](#Writer.insertSoftLineBreak)
+        * [func (w *Writer) write(p []byte) error](#Writer.write)
 * [Functions](#func)
-    * [func fromHex(b byte) (byte, error)](#fromHex)
-    * [func readHexByte(v []byte) (b byte, err error)](#readHexByte)
-    * [func isQPDiscardWhitespace(r rune) bool](#isQPDiscardWhitespace)
-    * [func isWhitespace(b byte) bool](#isWhitespace)
-    * [func TestReader(t *testing.T)](#TestReader)
-    * [func everySequence(base, alpha string, length int, fn func(string))](#everySequence)
+    * [func BenchmarkWriter(b *testing.B)](#BenchmarkWriter)
     * [func TestExhaustive(t *testing.T)](#TestExhaustive)
+    * [func TestReader(t *testing.T)](#TestReader)
+    * [func TestRoundTrip(t *testing.T)](#TestRoundTrip)
     * [func TestWriter(t *testing.T)](#TestWriter)
     * [func TestWriterBinary(t *testing.T)](#TestWriterBinary)
+    * [func everySequence(base, alpha string, length int, fn func(string))](#everySequence)
+    * [func fromHex(b byte) (byte, error)](#fromHex)
+    * [func isQPDiscardWhitespace(r rune) bool](#isQPDiscardWhitespace)
+    * [func isWhitespace(b byte) bool](#isWhitespace)
+    * [func readHexByte(v []byte) (b byte, err error)](#readHexByte)
     * [func testWriter(t *testing.T, binary bool)](#testWriter)
-    * [func TestRoundTrip(t *testing.T)](#TestRoundTrip)
-    * [func BenchmarkWriter(b *testing.B)](#BenchmarkWriter)
 
 
 ## <a id="const" href="#const">Constants</a>
+
+```
+tags: [package]
+```
 
 ### <a id="lineMaxLen" href="#lineMaxLen">const lineMaxLen</a>
 
 ```
 searchKey: quotedprintable.lineMaxLen
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -60,7 +64,7 @@ const lineMaxLen = 76
 
 ```
 searchKey: quotedprintable.upperhex
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -69,11 +73,26 @@ const upperhex = "0123456789ABCDEF"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [package]
+```
+
+### <a id="badSoftRx" href="#badSoftRx">var badSoftRx</a>
+
+```
+searchKey: quotedprintable.badSoftRx
+tags: [variable struct private]
+```
+
+```Go
+var badSoftRx = regexp.MustCompile(`=([^\r\n]+?\n)|([^\r\n]+$)|(\r$)|(\r[^\n]+\n)|( \r\n)`)
+```
+
 ### <a id="crlf" href="#crlf">var crlf</a>
 
 ```
 searchKey: quotedprintable.crlf
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -84,7 +103,7 @@ var crlf = []byte("\r\n")
 
 ```
 searchKey: quotedprintable.lf
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -95,40 +114,18 @@ var lf = []byte("\n")
 
 ```
 searchKey: quotedprintable.softSuffix
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
 var softSuffix = []byte("=")
 ```
 
-### <a id="useQprint" href="#useQprint">var useQprint</a>
-
-```
-searchKey: quotedprintable.useQprint
-tags: [private]
-```
-
-```Go
-var useQprint = flag.Bool("qprint", false, "Compare against the 'qprint' program.")
-```
-
-### <a id="badSoftRx" href="#badSoftRx">var badSoftRx</a>
-
-```
-searchKey: quotedprintable.badSoftRx
-tags: [private]
-```
-
-```Go
-var badSoftRx = regexp.MustCompile(`=([^\r\n]+?\n)|([^\r\n]+$)|(\r$)|(\r[^\n]+\n)|( \r\n)`)
-```
-
 ### <a id="testMsg" href="#testMsg">var testMsg</a>
 
 ```
 searchKey: quotedprintable.testMsg
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -137,12 +134,28 @@ var testMsg = ...
 
 From [https://fr.wikipedia.org/wiki/Quoted-Printable](https://fr.wikipedia.org/wiki/Quoted-Printable) 
 
+### <a id="useQprint" href="#useQprint">var useQprint</a>
+
+```
+searchKey: quotedprintable.useQprint
+tags: [variable boolean private]
+```
+
+```Go
+var useQprint = flag.Bool("qprint", false, "Compare against the 'qprint' program.")
+```
+
 ## <a id="type" href="#type">Types</a>
+
+```
+tags: [package]
+```
 
 ### <a id="Reader" href="#Reader">type Reader struct</a>
 
 ```
 searchKey: quotedprintable.Reader
+tags: [struct]
 ```
 
 ```Go
@@ -159,6 +172,7 @@ Reader is a quoted-printable decoder.
 
 ```
 searchKey: quotedprintable.NewReader
+tags: [method]
 ```
 
 ```Go
@@ -171,6 +185,7 @@ NewReader returns a quoted-printable reader, decoding from r.
 
 ```
 searchKey: quotedprintable.Reader.Read
+tags: [method]
 ```
 
 ```Go
@@ -183,6 +198,7 @@ Read reads and decodes quoted-printable data from the underlying reader.
 
 ```
 searchKey: quotedprintable.Writer
+tags: [struct]
 ```
 
 ```Go
@@ -204,6 +220,7 @@ A Writer is a quoted-printable writer that implements io.WriteCloser.
 
 ```
 searchKey: quotedprintable.NewWriter
+tags: [method]
 ```
 
 ```Go
@@ -212,22 +229,11 @@ func NewWriter(w io.Writer) *Writer
 
 NewWriter returns a new Writer that writes to w. 
 
-#### <a id="Writer.Write" href="#Writer.Write">func (w *Writer) Write(p []byte) (n int, err error)</a>
-
-```
-searchKey: quotedprintable.Writer.Write
-```
-
-```Go
-func (w *Writer) Write(p []byte) (n int, err error)
-```
-
-Write encodes p using quoted-printable encoding and writes it to the underlying io.Writer. It limits line length to 76 characters. The encoded bytes are not necessarily flushed until the Writer is closed. 
-
 #### <a id="Writer.Close" href="#Writer.Close">func (w *Writer) Close() error</a>
 
 ```
 searchKey: quotedprintable.Writer.Close
+tags: [function]
 ```
 
 ```Go
@@ -236,35 +242,24 @@ func (w *Writer) Close() error
 
 Close closes the Writer, flushing any unwritten data to the underlying io.Writer, but does not close the underlying io.Writer. 
 
-#### <a id="Writer.write" href="#Writer.write">func (w *Writer) write(p []byte) error</a>
+#### <a id="Writer.Write" href="#Writer.Write">func (w *Writer) Write(p []byte) (n int, err error)</a>
 
 ```
-searchKey: quotedprintable.Writer.write
-tags: [private]
-```
-
-```Go
-func (w *Writer) write(p []byte) error
-```
-
-write limits text encoded in quoted-printable to 76 characters per line. 
-
-#### <a id="Writer.encode" href="#Writer.encode">func (w *Writer) encode(b byte) error</a>
-
-```
-searchKey: quotedprintable.Writer.encode
-tags: [private]
+searchKey: quotedprintable.Writer.Write
+tags: [method]
 ```
 
 ```Go
-func (w *Writer) encode(b byte) error
+func (w *Writer) Write(p []byte) (n int, err error)
 ```
+
+Write encodes p using quoted-printable encoding and writes it to the underlying io.Writer. It limits line length to 76 characters. The encoded bytes are not necessarily flushed until the Writer is closed. 
 
 #### <a id="Writer.checkLastByte" href="#Writer.checkLastByte">func (w *Writer) checkLastByte() error</a>
 
 ```
 searchKey: quotedprintable.Writer.checkLastByte
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -273,123 +268,118 @@ func (w *Writer) checkLastByte() error
 
 checkLastByte encodes the last buffered byte if it is a space or a tab. 
 
-#### <a id="Writer.insertSoftLineBreak" href="#Writer.insertSoftLineBreak">func (w *Writer) insertSoftLineBreak() error</a>
+#### <a id="Writer.encode" href="#Writer.encode">func (w *Writer) encode(b byte) error</a>
 
 ```
-searchKey: quotedprintable.Writer.insertSoftLineBreak
-tags: [private]
-```
-
-```Go
-func (w *Writer) insertSoftLineBreak() error
-```
-
-#### <a id="Writer.insertCRLF" href="#Writer.insertCRLF">func (w *Writer) insertCRLF() error</a>
-
-```
-searchKey: quotedprintable.Writer.insertCRLF
-tags: [private]
+searchKey: quotedprintable.Writer.encode
+tags: [method private]
 ```
 
 ```Go
-func (w *Writer) insertCRLF() error
+func (w *Writer) encode(b byte) error
 ```
 
 #### <a id="Writer.flush" href="#Writer.flush">func (w *Writer) flush() error</a>
 
 ```
 searchKey: quotedprintable.Writer.flush
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (w *Writer) flush() error
 ```
 
+#### <a id="Writer.insertCRLF" href="#Writer.insertCRLF">func (w *Writer) insertCRLF() error</a>
+
+```
+searchKey: quotedprintable.Writer.insertCRLF
+tags: [function private]
+```
+
+```Go
+func (w *Writer) insertCRLF() error
+```
+
+#### <a id="Writer.insertSoftLineBreak" href="#Writer.insertSoftLineBreak">func (w *Writer) insertSoftLineBreak() error</a>
+
+```
+searchKey: quotedprintable.Writer.insertSoftLineBreak
+tags: [function private]
+```
+
+```Go
+func (w *Writer) insertSoftLineBreak() error
+```
+
+#### <a id="Writer.write" href="#Writer.write">func (w *Writer) write(p []byte) error</a>
+
+```
+searchKey: quotedprintable.Writer.write
+tags: [method private]
+```
+
+```Go
+func (w *Writer) write(p []byte) error
+```
+
+write limits text encoded in quoted-printable to 76 characters per line. 
+
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="fromHex" href="#fromHex">func fromHex(b byte) (byte, error)</a>
-
 ```
-searchKey: quotedprintable.fromHex
-tags: [private]
+tags: [package]
 ```
 
-```Go
-func fromHex(b byte) (byte, error)
-```
-
-### <a id="readHexByte" href="#readHexByte">func readHexByte(v []byte) (b byte, err error)</a>
+### <a id="BenchmarkWriter" href="#BenchmarkWriter">func BenchmarkWriter(b *testing.B)</a>
 
 ```
-searchKey: quotedprintable.readHexByte
-tags: [private]
+searchKey: quotedprintable.BenchmarkWriter
+tags: [method private benchmark]
 ```
 
 ```Go
-func readHexByte(v []byte) (b byte, err error)
-```
-
-### <a id="isQPDiscardWhitespace" href="#isQPDiscardWhitespace">func isQPDiscardWhitespace(r rune) bool</a>
-
-```
-searchKey: quotedprintable.isQPDiscardWhitespace
-tags: [private]
-```
-
-```Go
-func isQPDiscardWhitespace(r rune) bool
-```
-
-### <a id="isWhitespace" href="#isWhitespace">func isWhitespace(b byte) bool</a>
-
-```
-searchKey: quotedprintable.isWhitespace
-tags: [private]
-```
-
-```Go
-func isWhitespace(b byte) bool
-```
-
-### <a id="TestReader" href="#TestReader">func TestReader(t *testing.T)</a>
-
-```
-searchKey: quotedprintable.TestReader
-tags: [private]
-```
-
-```Go
-func TestReader(t *testing.T)
-```
-
-### <a id="everySequence" href="#everySequence">func everySequence(base, alpha string, length int, fn func(string))</a>
-
-```
-searchKey: quotedprintable.everySequence
-tags: [private]
-```
-
-```Go
-func everySequence(base, alpha string, length int, fn func(string))
+func BenchmarkWriter(b *testing.B)
 ```
 
 ### <a id="TestExhaustive" href="#TestExhaustive">func TestExhaustive(t *testing.T)</a>
 
 ```
 searchKey: quotedprintable.TestExhaustive
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestExhaustive(t *testing.T)
 ```
 
+### <a id="TestReader" href="#TestReader">func TestReader(t *testing.T)</a>
+
+```
+searchKey: quotedprintable.TestReader
+tags: [method private test]
+```
+
+```Go
+func TestReader(t *testing.T)
+```
+
+### <a id="TestRoundTrip" href="#TestRoundTrip">func TestRoundTrip(t *testing.T)</a>
+
+```
+searchKey: quotedprintable.TestRoundTrip
+tags: [method private test]
+```
+
+```Go
+func TestRoundTrip(t *testing.T)
+```
+
 ### <a id="TestWriter" href="#TestWriter">func TestWriter(t *testing.T)</a>
 
 ```
 searchKey: quotedprintable.TestWriter
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -400,43 +390,76 @@ func TestWriter(t *testing.T)
 
 ```
 searchKey: quotedprintable.TestWriterBinary
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestWriterBinary(t *testing.T)
 ```
 
+### <a id="everySequence" href="#everySequence">func everySequence(base, alpha string, length int, fn func(string))</a>
+
+```
+searchKey: quotedprintable.everySequence
+tags: [method private]
+```
+
+```Go
+func everySequence(base, alpha string, length int, fn func(string))
+```
+
+### <a id="fromHex" href="#fromHex">func fromHex(b byte) (byte, error)</a>
+
+```
+searchKey: quotedprintable.fromHex
+tags: [method private]
+```
+
+```Go
+func fromHex(b byte) (byte, error)
+```
+
+### <a id="isQPDiscardWhitespace" href="#isQPDiscardWhitespace">func isQPDiscardWhitespace(r rune) bool</a>
+
+```
+searchKey: quotedprintable.isQPDiscardWhitespace
+tags: [method private]
+```
+
+```Go
+func isQPDiscardWhitespace(r rune) bool
+```
+
+### <a id="isWhitespace" href="#isWhitespace">func isWhitespace(b byte) bool</a>
+
+```
+searchKey: quotedprintable.isWhitespace
+tags: [method private]
+```
+
+```Go
+func isWhitespace(b byte) bool
+```
+
+### <a id="readHexByte" href="#readHexByte">func readHexByte(v []byte) (b byte, err error)</a>
+
+```
+searchKey: quotedprintable.readHexByte
+tags: [method private]
+```
+
+```Go
+func readHexByte(v []byte) (b byte, err error)
+```
+
 ### <a id="testWriter" href="#testWriter">func testWriter(t *testing.T, binary bool)</a>
 
 ```
 searchKey: quotedprintable.testWriter
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func testWriter(t *testing.T, binary bool)
-```
-
-### <a id="TestRoundTrip" href="#TestRoundTrip">func TestRoundTrip(t *testing.T)</a>
-
-```
-searchKey: quotedprintable.TestRoundTrip
-tags: [private]
-```
-
-```Go
-func TestRoundTrip(t *testing.T)
-```
-
-### <a id="BenchmarkWriter" href="#BenchmarkWriter">func BenchmarkWriter(b *testing.B)</a>
-
-```
-searchKey: quotedprintable.BenchmarkWriter
-tags: [private]
-```
-
-```Go
-func BenchmarkWriter(b *testing.B)
 ```
 

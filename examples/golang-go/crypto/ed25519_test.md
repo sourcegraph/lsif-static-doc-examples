@@ -4,21 +4,21 @@
 
 * [Functions](#func)
     * [func TestEd25519Vectors(t *testing.T)](#TestEd25519Vectors)
-    * [func downloadEd25519Vectors(t *testing.T) []byte](#downloadEd25519Vectors)
     * [func decodeHex(t *testing.T, s string) []byte](#decodeHex)
+    * [func downloadEd25519Vectors(t *testing.T) []byte](#downloadEd25519Vectors)
 
 
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="TestEd25519Vectors" href="#TestEd25519Vectors">func TestEd25519Vectors(t *testing.T)</a>
 
 ```
 searchKey: ed25519_test.TestEd25519Vectors
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -33,25 +33,25 @@ Note that although we test for these edge cases, they are not covered by the Go 
 
 See [https://hdevalence.ca/blog/2020-10-04-its-25519am](https://hdevalence.ca/blog/2020-10-04-its-25519am) for more details. 
 
-### <a id="downloadEd25519Vectors" href="#downloadEd25519Vectors">func downloadEd25519Vectors(t *testing.T) []byte</a>
-
-```
-searchKey: ed25519_test.downloadEd25519Vectors
-tags: [private]
-```
-
-```Go
-func downloadEd25519Vectors(t *testing.T) []byte
-```
-
 ### <a id="decodeHex" href="#decodeHex">func decodeHex(t *testing.T, s string) []byte</a>
 
 ```
 searchKey: ed25519_test.decodeHex
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func decodeHex(t *testing.T, s string) []byte
+```
+
+### <a id="downloadEd25519Vectors" href="#downloadEd25519Vectors">func downloadEd25519Vectors(t *testing.T) []byte</a>
+
+```
+searchKey: ed25519_test.downloadEd25519Vectors
+tags: [method private]
+```
+
+```Go
+func downloadEd25519Vectors(t *testing.T) []byte
 ```
 

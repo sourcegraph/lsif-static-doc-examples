@@ -10,13 +10,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="ReposourceCloneURLToRepoName" href="#ReposourceCloneURLToRepoName">func ReposourceCloneURLToRepoName(ctx context.Context, cloneURL string) (repoName api.RepoName, err error)</a>
 
 ```
 searchKey: cloneurls.ReposourceCloneURLToRepoName
+tags: [method]
 ```
 
 ```Go
@@ -29,7 +30,7 @@ ReposourceCloneURLToRepoName maps a Git clone URL (format documented here: [http
 
 ```
 searchKey: cloneurls.TestReposourceCloneURLToRepoName
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go

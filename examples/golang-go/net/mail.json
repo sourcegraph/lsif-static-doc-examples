@@ -4,7 +4,9 @@
     "identifier": "mail",
     "newPage": true,
     "searchKey": "net/mail",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,44 +39,23 @@
         "children": [
           {
             "node": {
-              "pathID": "/net/mail#debug",
+              "pathID": "/net/mail#ErrHeaderNotPresent",
               "documentation": {
-                "identifier": "debug",
+                "identifier": "ErrHeaderNotPresent",
                 "newPage": false,
-                "searchKey": "mail.debug",
+                "searchKey": "mail.ErrHeaderNotPresent",
                 "tags": [
-                  "private"
+                  "variable",
+                  "interface"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var debug"
+                "value": "var ErrHeaderNotPresent"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar debug = debugT(false)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/mail#dateLayoutsBuildOnce",
-              "documentation": {
-                "identifier": "dateLayoutsBuildOnce",
-                "newPage": false,
-                "searchKey": "mail.dateLayoutsBuildOnce",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var dateLayoutsBuildOnce"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar dateLayoutsBuildOnce sync.Once\n```\n\nLayouts suitable for passing to time.Parse. These are tried in order. \n\n"
+                "value": "```Go\nvar ErrHeaderNotPresent = errors.New(\"mail: header not in message\")\n```\n\n"
               },
               "children": null
             }
@@ -85,6 +68,9 @@
                 "newPage": false,
                 "searchKey": "mail.dateLayouts",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
@@ -101,42 +87,48 @@
           },
           {
             "node": {
-              "pathID": "/net/mail#ErrHeaderNotPresent",
+              "pathID": "/net/mail#dateLayoutsBuildOnce",
               "documentation": {
-                "identifier": "ErrHeaderNotPresent",
+                "identifier": "dateLayoutsBuildOnce",
                 "newPage": false,
-                "searchKey": "mail.ErrHeaderNotPresent",
-                "tags": null
+                "searchKey": "mail.dateLayoutsBuildOnce",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var ErrHeaderNotPresent"
+                "value": "var dateLayoutsBuildOnce"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar ErrHeaderNotPresent = errors.New(\"mail: header not in message\")\n```\n\n"
+                "value": "```Go\nvar dateLayoutsBuildOnce sync.Once\n```\n\nLayouts suitable for passing to time.Parse. These are tried in order. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/net/mail#rfc2047Decoder",
+              "pathID": "/net/mail#debug",
               "documentation": {
-                "identifier": "rfc2047Decoder",
+                "identifier": "debug",
                 "newPage": false,
-                "searchKey": "mail.rfc2047Decoder",
+                "searchKey": "mail.debug",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var rfc2047Decoder"
+                "value": "var debug"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar rfc2047Decoder = ...\n```\n\n"
+                "value": "```Go\nvar debug = debugT(false)\n```\n\n"
               },
               "children": null
             }
@@ -149,6 +141,9 @@
                 "newPage": false,
                 "searchKey": "mail.parseTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -159,6 +154,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar parseTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/mail#rfc2047Decoder",
+              "documentation": {
+                "identifier": "rfc2047Decoder",
+                "newPage": false,
+                "searchKey": "mail.rfc2047Decoder",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var rfc2047Decoder"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar rfc2047Decoder = ...\n```\n\n"
               },
               "children": null
             }
@@ -173,7 +192,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -186,179 +207,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/net/mail#debugT",
-              "documentation": {
-                "identifier": "debugT",
-                "newPage": false,
-                "searchKey": "mail.debugT",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type debugT bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype debugT bool\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/net/mail#debugT.Printf",
-                    "documentation": {
-                      "identifier": "debugT.Printf",
-                      "newPage": false,
-                      "searchKey": "mail.debugT.Printf",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d debugT) Printf(format string, args ...interface{})"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d debugT) Printf(format string, args ...interface{})\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/mail#Message",
-              "documentation": {
-                "identifier": "Message",
-                "newPage": false,
-                "searchKey": "mail.Message",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Message struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Message struct {\n\tHeader Header\n\tBody   io.Reader\n}\n```\n\nA Message represents a parsed mail message. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/net/mail#ReadMessage",
-                    "documentation": {
-                      "identifier": "ReadMessage",
-                      "newPage": false,
-                      "searchKey": "mail.ReadMessage",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func ReadMessage(r io.Reader) (msg *Message, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc ReadMessage(r io.Reader) (msg *Message, err error)\n```\n\nReadMessage reads a message from r. The headers are parsed, and the body of the message will be available for reading from msg.Body. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/mail#Header",
-              "documentation": {
-                "identifier": "Header",
-                "newPage": false,
-                "searchKey": "mail.Header",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Header map[string][]string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Header map[string][]string\n```\n\nA Header represents the key-value pairs in a mail message header. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/net/mail#Header.Get",
-                    "documentation": {
-                      "identifier": "Header.Get",
-                      "newPage": false,
-                      "searchKey": "mail.Header.Get",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h Header) Get(key string) string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h Header) Get(key string) string\n```\n\nGet gets the first value associated with the given key. It is case insensitive; CanonicalMIMEHeaderKey is used to canonicalize the provided key. If there are no values associated with the key, Get returns \"\". To access multiple values of a key, or to use non-canonical keys, access the map directly. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/mail#Header.Date",
-                    "documentation": {
-                      "identifier": "Header.Date",
-                      "newPage": false,
-                      "searchKey": "mail.Header.Date",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h Header) Date() (time.Time, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h Header) Date() (time.Time, error)\n```\n\nDate parses the Date header field. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/mail#Header.AddressList",
-                    "documentation": {
-                      "identifier": "Header.AddressList",
-                      "newPage": false,
-                      "searchKey": "mail.Header.AddressList",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h Header) AddressList(key string) ([]*Address, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h Header) AddressList(key string) ([]*Address, error)\n```\n\nAddressList parses the named header field as a list of addresses. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/mail#Address",
               "documentation": {
                 "identifier": "Address",
                 "newPage": false,
                 "searchKey": "mail.Address",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -376,7 +232,9 @@
                       "identifier": "ParseAddress",
                       "newPage": false,
                       "searchKey": "mail.ParseAddress",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -396,7 +254,9 @@
                       "identifier": "Address.String",
                       "newPage": false,
                       "searchKey": "mail.Address.String",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -419,7 +279,9 @@
                 "identifier": "AddressParser",
                 "newPage": false,
                 "searchKey": "mail.AddressParser",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -437,7 +299,9 @@
                       "identifier": "AddressParser.Parse",
                       "newPage": false,
                       "searchKey": "mail.AddressParser.Parse",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -457,7 +321,9 @@
                       "identifier": "AddressParser.ParseList",
                       "newPage": false,
                       "searchKey": "mail.AddressParser.ParseList",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -475,12 +341,147 @@
           },
           {
             "node": {
+              "pathID": "/net/mail#Header",
+              "documentation": {
+                "identifier": "Header",
+                "newPage": false,
+                "searchKey": "mail.Header",
+                "tags": [
+                  "object"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Header map[string][]string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Header map[string][]string\n```\n\nA Header represents the key-value pairs in a mail message header. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/mail#Header.AddressList",
+                    "documentation": {
+                      "identifier": "Header.AddressList",
+                      "newPage": false,
+                      "searchKey": "mail.Header.AddressList",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h Header) AddressList(key string) ([]*Address, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h Header) AddressList(key string) ([]*Address, error)\n```\n\nAddressList parses the named header field as a list of addresses. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/mail#Header.Date",
+                    "documentation": {
+                      "identifier": "Header.Date",
+                      "newPage": false,
+                      "searchKey": "mail.Header.Date",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h Header) Date() (time.Time, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h Header) Date() (time.Time, error)\n```\n\nDate parses the Date header field. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/mail#Header.Get",
+                    "documentation": {
+                      "identifier": "Header.Get",
+                      "newPage": false,
+                      "searchKey": "mail.Header.Get",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h Header) Get(key string) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h Header) Get(key string) string\n```\n\nGet gets the first value associated with the given key. It is case insensitive; CanonicalMIMEHeaderKey is used to canonicalize the provided key. If there are no values associated with the key, Get returns \"\". To access multiple values of a key, or to use non-canonical keys, access the map directly. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/mail#Message",
+              "documentation": {
+                "identifier": "Message",
+                "newPage": false,
+                "searchKey": "mail.Message",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Message struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Message struct {\n\tHeader Header\n\tBody   io.Reader\n}\n```\n\nA Message represents a parsed mail message. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/mail#ReadMessage",
+                    "documentation": {
+                      "identifier": "ReadMessage",
+                      "newPage": false,
+                      "searchKey": "mail.ReadMessage",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ReadMessage(r io.Reader) (msg *Message, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ReadMessage(r io.Reader) (msg *Message, err error)\n```\n\nReadMessage reads a message from r. The headers are parsed, and the body of the message will be available for reading from msg.Body. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/net/mail#addrParser",
               "documentation": {
                 "identifier": "addrParser",
                 "newPage": false,
                 "searchKey": "mail.addrParser",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -495,88 +496,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/net/mail#addrParser.parseAddressList",
+                    "pathID": "/net/mail#addrParser.consume",
                     "documentation": {
-                      "identifier": "addrParser.parseAddressList",
+                      "identifier": "addrParser.consume",
                       "newPage": false,
-                      "searchKey": "mail.addrParser.parseAddressList",
+                      "searchKey": "mail.addrParser.consume",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (p *addrParser) parseAddressList() ([]*Address, error)"
+                      "value": "func (p *addrParser) consume(c byte) bool"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (p *addrParser) parseAddressList() ([]*Address, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/mail#addrParser.parseSingleAddress",
-                    "documentation": {
-                      "identifier": "addrParser.parseSingleAddress",
-                      "newPage": false,
-                      "searchKey": "mail.addrParser.parseSingleAddress",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *addrParser) parseSingleAddress() (*Address, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *addrParser) parseSingleAddress() (*Address, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/mail#addrParser.parseAddress",
-                    "documentation": {
-                      "identifier": "addrParser.parseAddress",
-                      "newPage": false,
-                      "searchKey": "mail.addrParser.parseAddress",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *addrParser) parseAddress(handleGroup bool) ([]*Address, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *addrParser) parseAddress(handleGroup bool) ([]*Address, error)\n```\n\nparseAddress parses a single RFC 5322 address at the start of p. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/mail#addrParser.consumeGroupList",
-                    "documentation": {
-                      "identifier": "addrParser.consumeGroupList",
-                      "newPage": false,
-                      "searchKey": "mail.addrParser.consumeGroupList",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *addrParser) consumeGroupList() ([]*Address, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *addrParser) consumeGroupList() ([]*Address, error)\n```\n\n"
+                      "value": "```Go\nfunc (p *addrParser) consume(c byte) bool\n```\n\n"
                     },
                     "children": null
                   }
@@ -589,6 +525,7 @@
                       "newPage": false,
                       "searchKey": "mail.addrParser.consumeAddrSpec",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -605,12 +542,105 @@
                 },
                 {
                   "node": {
+                    "pathID": "/net/mail#addrParser.consumeAtom",
+                    "documentation": {
+                      "identifier": "addrParser.consumeAtom",
+                      "newPage": false,
+                      "searchKey": "mail.addrParser.consumeAtom",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *addrParser) consumeAtom(dot bool, permissive bool) (atom string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *addrParser) consumeAtom(dot bool, permissive bool) (atom string, err error)\n```\n\nconsumeAtom parses an RFC 5322 atom at the start of p. If dot is true, consumeAtom parses an RFC 5322 dot-atom instead. If permissive is true, consumeAtom will not fail on: - leading/trailing/double dots in the atom (see golang.org/issue/4938) - special characters (RFC 5322 3.2.3) except '<', '>', ':' and '\"' (see golang.org/issue/21018) \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/mail#addrParser.consumeComment",
+                    "documentation": {
+                      "identifier": "addrParser.consumeComment",
+                      "newPage": false,
+                      "searchKey": "mail.addrParser.consumeComment",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *addrParser) consumeComment() (string, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *addrParser) consumeComment() (string, bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/mail#addrParser.consumeDisplayNameComment",
+                    "documentation": {
+                      "identifier": "addrParser.consumeDisplayNameComment",
+                      "newPage": false,
+                      "searchKey": "mail.addrParser.consumeDisplayNameComment",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *addrParser) consumeDisplayNameComment() (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *addrParser) consumeDisplayNameComment() (string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/mail#addrParser.consumeGroupList",
+                    "documentation": {
+                      "identifier": "addrParser.consumeGroupList",
+                      "newPage": false,
+                      "searchKey": "mail.addrParser.consumeGroupList",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *addrParser) consumeGroupList() ([]*Address, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *addrParser) consumeGroupList() ([]*Address, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/net/mail#addrParser.consumePhrase",
                     "documentation": {
                       "identifier": "addrParser.consumePhrase",
                       "newPage": false,
                       "searchKey": "mail.addrParser.consumePhrase",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -633,6 +663,7 @@
                       "newPage": false,
                       "searchKey": "mail.addrParser.consumeQuotedString",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -649,110 +680,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/net/mail#addrParser.consumeAtom",
+                    "pathID": "/net/mail#addrParser.decodeRFC2047Word",
                     "documentation": {
-                      "identifier": "addrParser.consumeAtom",
+                      "identifier": "addrParser.decodeRFC2047Word",
                       "newPage": false,
-                      "searchKey": "mail.addrParser.consumeAtom",
+                      "searchKey": "mail.addrParser.decodeRFC2047Word",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (p *addrParser) consumeAtom(dot bool, permissive bool) (atom string, err error)"
+                      "value": "func (p *addrParser) decodeRFC2047Word(s string) (word string, isEncoded bool, err error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (p *addrParser) consumeAtom(dot bool, permissive bool) (atom string, err error)\n```\n\nconsumeAtom parses an RFC 5322 atom at the start of p. If dot is true, consumeAtom parses an RFC 5322 dot-atom instead. If permissive is true, consumeAtom will not fail on: - leading/trailing/double dots in the atom (see golang.org/issue/4938) - special characters (RFC 5322 3.2.3) except '<', '>', ':' and '\"' (see golang.org/issue/21018) \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/mail#addrParser.consumeDisplayNameComment",
-                    "documentation": {
-                      "identifier": "addrParser.consumeDisplayNameComment",
-                      "newPage": false,
-                      "searchKey": "mail.addrParser.consumeDisplayNameComment",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *addrParser) consumeDisplayNameComment() (string, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *addrParser) consumeDisplayNameComment() (string, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/mail#addrParser.consume",
-                    "documentation": {
-                      "identifier": "addrParser.consume",
-                      "newPage": false,
-                      "searchKey": "mail.addrParser.consume",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *addrParser) consume(c byte) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *addrParser) consume(c byte) bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/mail#addrParser.skipSpace",
-                    "documentation": {
-                      "identifier": "addrParser.skipSpace",
-                      "newPage": false,
-                      "searchKey": "mail.addrParser.skipSpace",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *addrParser) skipSpace()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *addrParser) skipSpace()\n```\n\nskipSpace skips the leading space and tab characters. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/mail#addrParser.peek",
-                    "documentation": {
-                      "identifier": "addrParser.peek",
-                      "newPage": false,
-                      "searchKey": "mail.addrParser.peek",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *addrParser) peek() byte"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *addrParser) peek() byte\n```\n\n"
+                      "value": "```Go\nfunc (p *addrParser) decodeRFC2047Word(s string) (word string, isEncoded bool, err error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -765,6 +709,7 @@
                       "newPage": false,
                       "searchKey": "mail.addrParser.empty",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -787,6 +732,7 @@
                       "newPage": false,
                       "searchKey": "mail.addrParser.len",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -803,12 +749,105 @@
                 },
                 {
                   "node": {
+                    "pathID": "/net/mail#addrParser.parseAddress",
+                    "documentation": {
+                      "identifier": "addrParser.parseAddress",
+                      "newPage": false,
+                      "searchKey": "mail.addrParser.parseAddress",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *addrParser) parseAddress(handleGroup bool) ([]*Address, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *addrParser) parseAddress(handleGroup bool) ([]*Address, error)\n```\n\nparseAddress parses a single RFC 5322 address at the start of p. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/mail#addrParser.parseAddressList",
+                    "documentation": {
+                      "identifier": "addrParser.parseAddressList",
+                      "newPage": false,
+                      "searchKey": "mail.addrParser.parseAddressList",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *addrParser) parseAddressList() ([]*Address, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *addrParser) parseAddressList() ([]*Address, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/mail#addrParser.parseSingleAddress",
+                    "documentation": {
+                      "identifier": "addrParser.parseSingleAddress",
+                      "newPage": false,
+                      "searchKey": "mail.addrParser.parseSingleAddress",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *addrParser) parseSingleAddress() (*Address, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *addrParser) parseSingleAddress() (*Address, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/mail#addrParser.peek",
+                    "documentation": {
+                      "identifier": "addrParser.peek",
+                      "newPage": false,
+                      "searchKey": "mail.addrParser.peek",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *addrParser) peek() byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *addrParser) peek() byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/net/mail#addrParser.skipCFWS",
                     "documentation": {
                       "identifier": "addrParser.skipCFWS",
                       "newPage": false,
                       "searchKey": "mail.addrParser.skipCFWS",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -825,44 +864,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/net/mail#addrParser.consumeComment",
+                    "pathID": "/net/mail#addrParser.skipSpace",
                     "documentation": {
-                      "identifier": "addrParser.consumeComment",
+                      "identifier": "addrParser.skipSpace",
                       "newPage": false,
-                      "searchKey": "mail.addrParser.consumeComment",
+                      "searchKey": "mail.addrParser.skipSpace",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (p *addrParser) consumeComment() (string, bool)"
+                      "value": "func (p *addrParser) skipSpace()"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (p *addrParser) consumeComment() (string, bool)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/mail#addrParser.decodeRFC2047Word",
-                    "documentation": {
-                      "identifier": "addrParser.decodeRFC2047Word",
-                      "newPage": false,
-                      "searchKey": "mail.addrParser.decodeRFC2047Word",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *addrParser) decodeRFC2047Word(s string) (word string, isEncoded bool, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *addrParser) decodeRFC2047Word(s string) (word string, isEncoded bool, err error)\n```\n\n"
+                      "value": "```Go\nfunc (p *addrParser) skipSpace()\n```\n\nskipSpace skips the leading space and tab characters. \n\n"
                     },
                     "children": null
                   }
@@ -878,6 +896,7 @@
                 "newPage": false,
                 "searchKey": "mail.charsetError",
                 "tags": [
+                  "string",
                   "private"
                 ]
               },
@@ -898,6 +917,7 @@
                       "newPage": false,
                       "searchKey": "mail.charsetError.Error",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -908,6 +928,53 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (e charsetError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/mail#debugT",
+              "documentation": {
+                "identifier": "debugT",
+                "newPage": false,
+                "searchKey": "mail.debugT",
+                "tags": [
+                  "boolean",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type debugT bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype debugT bool\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/mail#debugT.Printf",
+                    "documentation": {
+                      "identifier": "debugT.Printf",
+                      "newPage": false,
+                      "searchKey": "mail.debugT.Printf",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d debugT) Printf(format string, args ...interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d debugT) Printf(format string, args ...interface{})\n```\n\n"
                     },
                     "children": null
                   }
@@ -925,7 +992,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -938,54 +1007,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/net/mail#buildDateLayouts",
-              "documentation": {
-                "identifier": "buildDateLayouts",
-                "newPage": false,
-                "searchKey": "mail.buildDateLayouts",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func buildDateLayouts()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc buildDateLayouts()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/mail#ParseDate",
-              "documentation": {
-                "identifier": "ParseDate",
-                "newPage": false,
-                "searchKey": "mail.ParseDate",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ParseDate(date string) (time.Time, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ParseDate(date string) (time.Time, error)\n```\n\nParseDate parses an RFC 5322 date string. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/mail#ParseAddressList",
               "documentation": {
                 "identifier": "ParseAddressList",
                 "newPage": false,
                 "searchKey": "mail.ParseAddressList",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1000,176 +1029,166 @@
           },
           {
             "node": {
-              "pathID": "/net/mail#isAtext",
+              "pathID": "/net/mail#ParseDate",
               "documentation": {
-                "identifier": "isAtext",
+                "identifier": "ParseDate",
                 "newPage": false,
-                "searchKey": "mail.isAtext",
+                "searchKey": "mail.ParseDate",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func isAtext(r rune, dot, permissive bool) bool"
+                "value": "func ParseDate(date string) (time.Time, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc isAtext(r rune, dot, permissive bool) bool\n```\n\nisAtext reports whether r is an RFC 5322 atext character. If dot is true, period is included. If permissive is true, RFC 5322 3.2.3 specials is included, except '<', '>', ':' and '\"'. \n\n"
+                "value": "```Go\nfunc ParseDate(date string) (time.Time, error)\n```\n\nParseDate parses an RFC 5322 date string. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/net/mail#isQtext",
+              "pathID": "/net/mail#TestAddressFormattingAndParsing",
               "documentation": {
-                "identifier": "isQtext",
+                "identifier": "TestAddressFormattingAndParsing",
                 "newPage": false,
-                "searchKey": "mail.isQtext",
+                "searchKey": "mail.TestAddressFormattingAndParsing",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func isQtext(r rune) bool"
+                "value": "func TestAddressFormattingAndParsing(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc isQtext(r rune) bool\n```\n\nisQtext reports whether r is an RFC 5322 qtext character. \n\n"
+                "value": "```Go\nfunc TestAddressFormattingAndParsing(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/net/mail#quoteString",
+              "pathID": "/net/mail#TestAddressParser",
               "documentation": {
-                "identifier": "quoteString",
+                "identifier": "TestAddressParser",
                 "newPage": false,
-                "searchKey": "mail.quoteString",
+                "searchKey": "mail.TestAddressParser",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func quoteString(s string) string"
+                "value": "func TestAddressParser(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc quoteString(s string) string\n```\n\nquoteString renders a string as an RFC 5322 quoted-string. \n\n"
+                "value": "```Go\nfunc TestAddressParser(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/net/mail#isVchar",
+              "pathID": "/net/mail#TestAddressParsing",
               "documentation": {
-                "identifier": "isVchar",
+                "identifier": "TestAddressParsing",
                 "newPage": false,
-                "searchKey": "mail.isVchar",
+                "searchKey": "mail.TestAddressParsing",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func isVchar(r rune) bool"
+                "value": "func TestAddressParsing(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc isVchar(r rune) bool\n```\n\nisVchar reports whether r is an RFC 5322 VCHAR character. \n\n"
+                "value": "```Go\nfunc TestAddressParsing(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/net/mail#isMultibyte",
+              "pathID": "/net/mail#TestAddressParsingAndFormatting",
               "documentation": {
-                "identifier": "isMultibyte",
+                "identifier": "TestAddressParsingAndFormatting",
                 "newPage": false,
-                "searchKey": "mail.isMultibyte",
+                "searchKey": "mail.TestAddressParsingAndFormatting",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func isMultibyte(r rune) bool"
+                "value": "func TestAddressParsingAndFormatting(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc isMultibyte(r rune) bool\n```\n\nisMultibyte reports whether r is a multi-byte UTF-8 character as supported by RFC 6532 \n\n"
+                "value": "```Go\nfunc TestAddressParsingAndFormatting(t *testing.T)\n```\n\nCheck if all valid addresses can be parsed, formatted and parsed again \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/net/mail#isWSP",
+              "pathID": "/net/mail#TestAddressParsingError",
               "documentation": {
-                "identifier": "isWSP",
+                "identifier": "TestAddressParsingError",
                 "newPage": false,
-                "searchKey": "mail.isWSP",
+                "searchKey": "mail.TestAddressParsingError",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func isWSP(r rune) bool"
+                "value": "func TestAddressParsingError(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc isWSP(r rune) bool\n```\n\nisWSP reports whether r is a WSP (white space). WSP is a space or horizontal tab (RFC 5234 Appendix B). \n\n"
+                "value": "```Go\nfunc TestAddressParsingError(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/net/mail#TestParsing",
+              "pathID": "/net/mail#TestAddressString",
               "documentation": {
-                "identifier": "TestParsing",
+                "identifier": "TestAddressString",
                 "newPage": false,
-                "searchKey": "mail.TestParsing",
+                "searchKey": "mail.TestAddressString",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestParsing(t *testing.T)"
+                "value": "func TestAddressString(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestParsing(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/mail#headerEq",
-              "documentation": {
-                "identifier": "headerEq",
-                "newPage": false,
-                "searchKey": "mail.headerEq",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func headerEq(a, b Header) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc headerEq(a, b Header) bool\n```\n\n"
+                "value": "```Go\nfunc TestAddressString(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1182,7 +1201,9 @@
                 "newPage": false,
                 "searchKey": "mail.TestDateParsing",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1204,7 +1225,9 @@
                 "newPage": false,
                 "searchKey": "mail.TestDateParsingCFWS",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1220,145 +1243,15 @@
           },
           {
             "node": {
-              "pathID": "/net/mail#TestAddressParsingError",
-              "documentation": {
-                "identifier": "TestAddressParsingError",
-                "newPage": false,
-                "searchKey": "mail.TestAddressParsingError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAddressParsingError(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAddressParsingError(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/mail#TestAddressParsing",
-              "documentation": {
-                "identifier": "TestAddressParsing",
-                "newPage": false,
-                "searchKey": "mail.TestAddressParsing",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAddressParsing(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAddressParsing(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/mail#TestAddressParser",
-              "documentation": {
-                "identifier": "TestAddressParser",
-                "newPage": false,
-                "searchKey": "mail.TestAddressParser",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAddressParser(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAddressParser(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/mail#TestAddressString",
-              "documentation": {
-                "identifier": "TestAddressString",
-                "newPage": false,
-                "searchKey": "mail.TestAddressString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAddressString(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAddressString(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/mail#TestAddressParsingAndFormatting",
-              "documentation": {
-                "identifier": "TestAddressParsingAndFormatting",
-                "newPage": false,
-                "searchKey": "mail.TestAddressParsingAndFormatting",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAddressParsingAndFormatting(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAddressParsingAndFormatting(t *testing.T)\n```\n\nCheck if all valid addresses can be parsed, formatted and parsed again \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/mail#TestAddressFormattingAndParsing",
-              "documentation": {
-                "identifier": "TestAddressFormattingAndParsing",
-                "newPage": false,
-                "searchKey": "mail.TestAddressFormattingAndParsing",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAddressFormattingAndParsing(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAddressFormattingAndParsing(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/mail#TestEmptyAddress",
               "documentation": {
                 "identifier": "TestEmptyAddress",
                 "newPage": false,
                 "searchKey": "mail.TestEmptyAddress",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1368,6 +1261,214 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc TestEmptyAddress(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/mail#TestParsing",
+              "documentation": {
+                "identifier": "TestParsing",
+                "newPage": false,
+                "searchKey": "mail.TestParsing",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParsing(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParsing(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/mail#buildDateLayouts",
+              "documentation": {
+                "identifier": "buildDateLayouts",
+                "newPage": false,
+                "searchKey": "mail.buildDateLayouts",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func buildDateLayouts()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc buildDateLayouts()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/mail#headerEq",
+              "documentation": {
+                "identifier": "headerEq",
+                "newPage": false,
+                "searchKey": "mail.headerEq",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func headerEq(a, b Header) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc headerEq(a, b Header) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/mail#isAtext",
+              "documentation": {
+                "identifier": "isAtext",
+                "newPage": false,
+                "searchKey": "mail.isAtext",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isAtext(r rune, dot, permissive bool) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isAtext(r rune, dot, permissive bool) bool\n```\n\nisAtext reports whether r is an RFC 5322 atext character. If dot is true, period is included. If permissive is true, RFC 5322 3.2.3 specials is included, except '<', '>', ':' and '\"'. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/mail#isMultibyte",
+              "documentation": {
+                "identifier": "isMultibyte",
+                "newPage": false,
+                "searchKey": "mail.isMultibyte",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isMultibyte(r rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isMultibyte(r rune) bool\n```\n\nisMultibyte reports whether r is a multi-byte UTF-8 character as supported by RFC 6532 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/mail#isQtext",
+              "documentation": {
+                "identifier": "isQtext",
+                "newPage": false,
+                "searchKey": "mail.isQtext",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isQtext(r rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isQtext(r rune) bool\n```\n\nisQtext reports whether r is an RFC 5322 qtext character. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/mail#isVchar",
+              "documentation": {
+                "identifier": "isVchar",
+                "newPage": false,
+                "searchKey": "mail.isVchar",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isVchar(r rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isVchar(r rune) bool\n```\n\nisVchar reports whether r is an RFC 5322 VCHAR character. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/mail#isWSP",
+              "documentation": {
+                "identifier": "isWSP",
+                "newPage": false,
+                "searchKey": "mail.isWSP",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isWSP(r rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isWSP(r rune) bool\n```\n\nisWSP reports whether r is a WSP (white space). WSP is a space or horizontal tab (RFC 5234 Appendix B). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/mail#quoteString",
+              "documentation": {
+                "identifier": "quoteString",
+                "newPage": false,
+                "searchKey": "mail.quoteString",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func quoteString(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc quoteString(s string) string\n```\n\nquoteString renders a string as an RFC 5322 quoted-string. \n\n"
               },
               "children": null
             }

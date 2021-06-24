@@ -11,17 +11,21 @@
     * [type scheduler interface](#scheduler)
 * [Functions](#func)
     * [func Main(enterpriseInit EnterpriseInit)](#Main)
-    * [func watchSyncer(ctx context.Context, syncer *repos.Syncer, sched scheduler, gps *repos.GitolitePhabricatorMetadataSyncer)](#watchSyncer)
     * [func syncScheduler(ctx context.Context, sched scheduler, gitserverClient *gitserver.Client, store *repos.Store)](#syncScheduler)
+    * [func watchSyncer(ctx context.Context, syncer *repos.Syncer, sched scheduler, gps *repos.GitolitePhabricatorMetadataSyncer)](#watchSyncer)
 
 
 ## <a id="const" href="#const">Constants</a>
+
+```
+tags: [package]
+```
 
 ### <a id="port" href="#port">const port</a>
 
 ```
 searchKey: shared.port
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -30,11 +34,15 @@ const port = "3182"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [package]
+```
+
 ### <a id="stateHTMLTemplate" href="#stateHTMLTemplate">var stateHTMLTemplate</a>
 
 ```
 searchKey: shared.stateHTMLTemplate
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
@@ -43,10 +51,15 @@ var stateHTMLTemplate string
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [package]
+```
+
 ### <a id="EnterpriseInit" href="#EnterpriseInit">type EnterpriseInit func(db *database/sql.DB, store *github.com/sourcegraph/sourcegraph/internal/repos.Store, keyring github.com/sourcegraph/sourcegraph/internal/encryption/keyring.Ring, cf *github.com/sourcegraph/sourcegraph/internal/httpcli.Factory, server *github.com/sourcegraph/sourcegraph/cmd/repo-updater/repoupdater.Server) []github.com/sourcegraph/sourcegraph/internal/debugserver.Dumper</a>
 
 ```
 searchKey: shared.EnterpriseInit
+tags: [function]
 ```
 
 ```Go
@@ -59,7 +72,7 @@ EnterpriseInit is a function that allows enterprise code to be triggered when de
 
 ```
 searchKey: shared.scheduler
-tags: [private]
+tags: [interface private]
 ```
 
 ```Go
@@ -77,32 +90,26 @@ type scheduler interface {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [package]
+```
+
 ### <a id="Main" href="#Main">func Main(enterpriseInit EnterpriseInit)</a>
 
 ```
 searchKey: shared.Main
+tags: [method]
 ```
 
 ```Go
 func Main(enterpriseInit EnterpriseInit)
 ```
 
-### <a id="watchSyncer" href="#watchSyncer">func watchSyncer(ctx context.Context, syncer *repos.Syncer, sched scheduler, gps *repos.GitolitePhabricatorMetadataSyncer)</a>
-
-```
-searchKey: shared.watchSyncer
-tags: [private]
-```
-
-```Go
-func watchSyncer(ctx context.Context, syncer *repos.Syncer, sched scheduler, gps *repos.GitolitePhabricatorMetadataSyncer)
-```
-
 ### <a id="syncScheduler" href="#syncScheduler">func syncScheduler(ctx context.Context, sched scheduler, gitserverClient *gitserver.Client, store *repos.Store)</a>
 
 ```
 searchKey: shared.syncScheduler
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -110,4 +117,15 @@ func syncScheduler(ctx context.Context, sched scheduler, gitserverClient *gitser
 ```
 
 syncScheduler will periodically list the cloned repositories on gitserver and update the scheduler with the list. It also ensures that if any of our default repos are missing from the cloned list they will be added for cloning ASAP. 
+
+### <a id="watchSyncer" href="#watchSyncer">func watchSyncer(ctx context.Context, syncer *repos.Syncer, sched scheduler, gps *repos.GitolitePhabricatorMetadataSyncer)</a>
+
+```
+searchKey: shared.watchSyncer
+tags: [method private]
+```
+
+```Go
+func watchSyncer(ctx context.Context, syncer *repos.Syncer, sched scheduler, gps *repos.GitolitePhabricatorMetadataSyncer)
+```
 

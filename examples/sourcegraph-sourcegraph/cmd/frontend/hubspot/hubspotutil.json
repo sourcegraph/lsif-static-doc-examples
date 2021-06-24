@@ -4,7 +4,9 @@
     "identifier": "hubspotutil",
     "newPage": true,
     "searchKey": "cmd/frontend/hubspot/hubspotutil",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,12 +39,38 @@
         "children": [
           {
             "node": {
+              "pathID": "/cmd/frontend/hubspot/hubspotutil#HappinessFeedbackFormID",
+              "documentation": {
+                "identifier": "HappinessFeedbackFormID",
+                "newPage": false,
+                "searchKey": "hubspotutil.HappinessFeedbackFormID",
+                "tags": [
+                  "variable",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var HappinessFeedbackFormID"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar HappinessFeedbackFormID = \"417ec50b-39b4-41fa-a267-75da6f56a7cf\"\n```\n\nHappinessFeedbackFormID is the ID for a Happiness survey. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/hubspot/hubspotutil#HubSpotHAPIKey",
               "documentation": {
                 "identifier": "HubSpotHAPIKey",
                 "newPage": false,
                 "searchKey": "hubspotutil.HubSpotHAPIKey",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -55,12 +85,61 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/hubspot/hubspotutil#SelfHostedSiteInitEventID",
+              "documentation": {
+                "identifier": "SelfHostedSiteInitEventID",
+                "newPage": false,
+                "searchKey": "hubspotutil.SelfHostedSiteInitEventID",
+                "tags": [
+                  "variable",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var SelfHostedSiteInitEventID"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar SelfHostedSiteInitEventID = \"000010399089\"\n```\n\nSelfHostedSiteInitEventID is the Hubstpot Event ID for when a new site is created in /site-admin/sites \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/hubspot/hubspotutil#SignupEventID",
+              "documentation": {
+                "identifier": "SignupEventID",
+                "newPage": false,
+                "searchKey": "hubspotutil.SignupEventID",
+                "tags": [
+                  "variable",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var SignupEventID"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar SignupEventID = \"000001776813\"\n```\n\nSignupEventID is the HubSpot ID for signup events. HubSpot Events and IDs are all defined in HubSpot \"Events\" web console: [https://app.hubspot.com/reports/2762526/events](https://app.hubspot.com/reports/2762526/events) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/hubspot/hubspotutil#SurveyFormID",
               "documentation": {
                 "identifier": "SurveyFormID",
                 "newPage": false,
                 "searchKey": "hubspotutil.SurveyFormID",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +159,10 @@
                 "identifier": "TrialFormID",
                 "newPage": false,
                 "searchKey": "hubspotutil.TrialFormID",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -95,72 +177,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/hubspot/hubspotutil#HappinessFeedbackFormID",
-              "documentation": {
-                "identifier": "HappinessFeedbackFormID",
-                "newPage": false,
-                "searchKey": "hubspotutil.HappinessFeedbackFormID",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var HappinessFeedbackFormID"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar HappinessFeedbackFormID = \"417ec50b-39b4-41fa-a267-75da6f56a7cf\"\n```\n\nHappinessFeedbackFormID is the ID for a Happiness survey. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/hubspot/hubspotutil#SignupEventID",
-              "documentation": {
-                "identifier": "SignupEventID",
-                "newPage": false,
-                "searchKey": "hubspotutil.SignupEventID",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var SignupEventID"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar SignupEventID = \"000001776813\"\n```\n\nSignupEventID is the HubSpot ID for signup events. HubSpot Events and IDs are all defined in HubSpot \"Events\" web console: [https://app.hubspot.com/reports/2762526/events](https://app.hubspot.com/reports/2762526/events) \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/hubspot/hubspotutil#SelfHostedSiteInitEventID",
-              "documentation": {
-                "identifier": "SelfHostedSiteInitEventID",
-                "newPage": false,
-                "searchKey": "hubspotutil.SelfHostedSiteInitEventID",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var SelfHostedSiteInitEventID"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar SelfHostedSiteInitEventID = \"000010399089\"\n```\n\nSelfHostedSiteInitEventID is the Hubstpot Event ID for when a new site is created in /site-admin/sites \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/hubspot/hubspotutil#client",
               "documentation": {
                 "identifier": "client",
                 "newPage": false,
                 "searchKey": "hubspotutil.client",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -185,7 +209,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -198,12 +224,36 @@
         "children": [
           {
             "node": {
+              "pathID": "/cmd/frontend/hubspot/hubspotutil#Client",
+              "documentation": {
+                "identifier": "Client",
+                "newPage": false,
+                "searchKey": "hubspotutil.Client",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Client() *hubspot.Client"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Client() *hubspot.Client\n```\n\nClient returns a hubspot client \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/hubspot/hubspotutil#HasAPIKey",
               "documentation": {
                 "identifier": "HasAPIKey",
                 "newPage": false,
                 "searchKey": "hubspotutil.HasAPIKey",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -218,12 +268,35 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/hubspot/hubspotutil#SyncUser",
+              "documentation": {
+                "identifier": "SyncUser",
+                "newPage": false,
+                "searchKey": "hubspotutil.SyncUser",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SyncUser(email, eventID string, contactParams *hubspot.ContactProperties)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SyncUser(email, eventID string, contactParams *hubspot.ContactProperties)\n```\n\nSyncUser handles creating or syncing a user profile in HubSpot, and if provided, logs a user event. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/hubspot/hubspotutil#init.hubspotutil.go",
               "documentation": {
                 "identifier": "init.hubspotutil.go",
                 "newPage": false,
                 "searchKey": "hubspotutil.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -240,52 +313,13 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/hubspot/hubspotutil#Client",
-              "documentation": {
-                "identifier": "Client",
-                "newPage": false,
-                "searchKey": "hubspotutil.Client",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Client() *hubspot.Client"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Client() *hubspot.Client\n```\n\nClient returns a hubspot client \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/hubspot/hubspotutil#SyncUser",
-              "documentation": {
-                "identifier": "SyncUser",
-                "newPage": false,
-                "searchKey": "hubspotutil.SyncUser",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SyncUser(email, eventID string, contactParams *hubspot.ContactProperties)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SyncUser(email, eventID string, contactParams *hubspot.ContactProperties)\n```\n\nSyncUser handles creating or syncing a user profile in HubSpot, and if provided, logs a user event. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/hubspot/hubspotutil#syncHubSpotContact",
               "documentation": {
                 "identifier": "syncHubSpotContact",
                 "newPage": false,
                 "searchKey": "hubspotutil.syncHubSpotContact",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },

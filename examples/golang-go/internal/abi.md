@@ -3,57 +3,34 @@
 ## Index
 
 * [Constants](#const)
-    * [const IntArgRegs](#IntArgRegs)
-    * [const FloatArgRegs](#FloatArgRegs)
     * [const EffectiveFloatRegSize](#EffectiveFloatRegSize)
+    * [const FloatArgRegs](#FloatArgRegs)
+    * [const IntArgRegs](#IntArgRegs)
 * [Variables](#var)
     * [var FuncPCTestFnAddr](#FuncPCTestFnAddr)
 * [Types](#type)
-    * [type RegArgs struct](#RegArgs)
     * [type IntArgRegBitmap [0]uint8](#IntArgRegBitmap)
-        * [func (b *IntArgRegBitmap) Set(i int)](#IntArgRegBitmap.Set)
         * [func (b *IntArgRegBitmap) Get(i int) bool](#IntArgRegBitmap.Get)
+        * [func (b *IntArgRegBitmap) Set(i int)](#IntArgRegBitmap.Set)
+    * [type RegArgs struct](#RegArgs)
 * [Functions](#func)
     * [func FuncPCABI0(f interface{}) uintptr](#FuncPCABI0)
     * [func FuncPCABIInternal(f interface{}) uintptr](#FuncPCABIInternal)
-    * [func FuncPCTestFn()](#FuncPCTestFn)
     * [func FuncPCTest() uintptr](#FuncPCTest)
+    * [func FuncPCTestFn()](#FuncPCTestFn)
 
 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
-
-### <a id="IntArgRegs" href="#IntArgRegs">const IntArgRegs</a>
-
-```
-searchKey: abi.IntArgRegs
-```
-
-```Go
-const IntArgRegs = 0
-```
-
-IntArgRegs is the number of registers dedicated to passing integer argument values. Result registers are identical to argument registers, so this number is used for those too. 
-
-### <a id="FloatArgRegs" href="#FloatArgRegs">const FloatArgRegs</a>
-
-```
-searchKey: abi.FloatArgRegs
-```
-
-```Go
-const FloatArgRegs = 0
-```
-
-FloatArgRegs is the number of registers dedicated to passing floating-point argument values. Result registers are identical to argument registers, so this number is used for those too. 
 
 ### <a id="EffectiveFloatRegSize" href="#EffectiveFloatRegSize">const EffectiveFloatRegSize</a>
 
 ```
 searchKey: abi.EffectiveFloatRegSize
+tags: [constant number]
 ```
 
 ```Go
@@ -66,17 +43,43 @@ Since Go only supports 32-bit and 64-bit floating point primitives, this number 
 
 For platforms that support larger floating point register widths, such as x87's 80-bit "registers" (not that we support x87 currently), use 8. 
 
+### <a id="FloatArgRegs" href="#FloatArgRegs">const FloatArgRegs</a>
+
+```
+searchKey: abi.FloatArgRegs
+tags: [constant number]
+```
+
+```Go
+const FloatArgRegs = 0
+```
+
+FloatArgRegs is the number of registers dedicated to passing floating-point argument values. Result registers are identical to argument registers, so this number is used for those too. 
+
+### <a id="IntArgRegs" href="#IntArgRegs">const IntArgRegs</a>
+
+```
+searchKey: abi.IntArgRegs
+tags: [constant number]
+```
+
+```Go
+const IntArgRegs = 0
+```
+
+IntArgRegs is the number of registers dedicated to passing integer argument values. Result registers are identical to argument registers, so this number is used for those too. 
+
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="FuncPCTestFnAddr" href="#FuncPCTestFnAddr">var FuncPCTestFnAddr</a>
 
 ```
 searchKey: abi.FuncPCTestFnAddr
-tags: [private]
+tags: [variable number private]
 ```
 
 ```Go
@@ -87,13 +90,55 @@ var FuncPCTestFnAddr uintptr // address of FuncPCTestFn, directly retrieved from
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
+
+### <a id="IntArgRegBitmap" href="#IntArgRegBitmap">type IntArgRegBitmap [0]uint8</a>
+
+```
+searchKey: abi.IntArgRegBitmap
+tags: [array number]
+```
+
+```Go
+type IntArgRegBitmap [(IntArgRegs + 7) / 8]uint8
+```
+
+IntArgRegBitmap is a bitmap large enough to hold one bit per integer argument/return register. 
+
+#### <a id="IntArgRegBitmap.Get" href="#IntArgRegBitmap.Get">func (b *IntArgRegBitmap) Get(i int) bool</a>
+
+```
+searchKey: abi.IntArgRegBitmap.Get
+tags: [method]
+```
+
+```Go
+func (b *IntArgRegBitmap) Get(i int) bool
+```
+
+Get returns whether the i'th bit of the bitmap is set. 
+
+nosplit because it's called in extremely sensitive contexts, like on the reflectcall return path. 
+
+#### <a id="IntArgRegBitmap.Set" href="#IntArgRegBitmap.Set">func (b *IntArgRegBitmap) Set(i int)</a>
+
+```
+searchKey: abi.IntArgRegBitmap.Set
+tags: [method]
+```
+
+```Go
+func (b *IntArgRegBitmap) Set(i int)
+```
+
+Set sets the i'th bit of the bitmap to 1. 
 
 ### <a id="RegArgs" href="#RegArgs">type RegArgs struct</a>
 
 ```
 searchKey: abi.RegArgs
+tags: [struct]
 ```
 
 ```Go
@@ -120,54 +165,17 @@ Assembly code knows the layout of the first two fields of RegArgs.
 
 RegArgs also contains additional space to hold pointers when it may not be safe to keep them only in the integer register space otherwise. 
 
-### <a id="IntArgRegBitmap" href="#IntArgRegBitmap">type IntArgRegBitmap [0]uint8</a>
-
-```
-searchKey: abi.IntArgRegBitmap
-```
-
-```Go
-type IntArgRegBitmap [(IntArgRegs + 7) / 8]uint8
-```
-
-IntArgRegBitmap is a bitmap large enough to hold one bit per integer argument/return register. 
-
-#### <a id="IntArgRegBitmap.Set" href="#IntArgRegBitmap.Set">func (b *IntArgRegBitmap) Set(i int)</a>
-
-```
-searchKey: abi.IntArgRegBitmap.Set
-```
-
-```Go
-func (b *IntArgRegBitmap) Set(i int)
-```
-
-Set sets the i'th bit of the bitmap to 1. 
-
-#### <a id="IntArgRegBitmap.Get" href="#IntArgRegBitmap.Get">func (b *IntArgRegBitmap) Get(i int) bool</a>
-
-```
-searchKey: abi.IntArgRegBitmap.Get
-```
-
-```Go
-func (b *IntArgRegBitmap) Get(i int) bool
-```
-
-Get returns whether the i'th bit of the bitmap is set. 
-
-nosplit because it's called in extremely sensitive contexts, like on the reflectcall return path. 
-
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="FuncPCABI0" href="#FuncPCABI0">func FuncPCABI0(f interface{}) uintptr</a>
 
 ```
 searchKey: abi.FuncPCABI0
+tags: [method]
 ```
 
 ```Go
@@ -182,6 +190,7 @@ Implemented as a compile intrinsic.
 
 ```
 searchKey: abi.FuncPCABIInternal
+tags: [method]
 ```
 
 ```Go
@@ -192,25 +201,25 @@ FuncPCABIInternal returns the entry PC of the function f. If f is a direct refer
 
 Implemented as a compile intrinsic. 
 
-### <a id="FuncPCTestFn" href="#FuncPCTestFn">func FuncPCTestFn()</a>
-
-```
-searchKey: abi.FuncPCTestFn
-tags: [private]
-```
-
-```Go
-func FuncPCTestFn()
-```
-
 ### <a id="FuncPCTest" href="#FuncPCTest">func FuncPCTest() uintptr</a>
 
 ```
 searchKey: abi.FuncPCTest
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func FuncPCTest() uintptr
+```
+
+### <a id="FuncPCTestFn" href="#FuncPCTestFn">func FuncPCTestFn()</a>
+
+```
+searchKey: abi.FuncPCTestFn
+tags: [function private]
+```
+
+```Go
+func FuncPCTestFn()
 ```
 

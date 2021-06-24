@@ -9,14 +9,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="ExampleScanner_Scan" href="#ExampleScanner_Scan">func ExampleScanner_Scan()</a>
 
 ```
 searchKey: scanner_test.ExampleScanner_Scan
-tags: [private]
+tags: [function private]
 ```
 
 ```Go

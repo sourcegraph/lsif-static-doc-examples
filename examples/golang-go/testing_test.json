@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "testing_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/testing_test#global",
-              "documentation": {
-                "identifier": "global",
-                "newPage": false,
-                "searchKey": "testing_test.global",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var global"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar global interface{}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/testing_test#allocsPerRunTests",
               "documentation": {
                 "identifier": "allocsPerRunTests",
                 "newPage": false,
                 "searchKey": "testing_test.allocsPerRunTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -83,12 +66,39 @@
           },
           {
             "node": {
+              "pathID": "/testing_test#global",
+              "documentation": {
+                "identifier": "global",
+                "newPage": false,
+                "searchKey": "testing_test.global",
+                "tags": [
+                  "variable",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var global"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar global interface{}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/testing_test#prettyPrintTests",
               "documentation": {
                 "identifier": "prettyPrintTests",
                 "newPage": false,
                 "searchKey": "testing_test.prettyPrintTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -105,56 +115,14 @@
           },
           {
             "node": {
-              "pathID": "/testing_test#testPanicTest",
-              "documentation": {
-                "identifier": "testPanicTest",
-                "newPage": false,
-                "searchKey": "testing_test.testPanicTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var testPanicTest"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar testPanicTest = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing_test#testPanicParallel",
-              "documentation": {
-                "identifier": "testPanicParallel",
-                "newPage": false,
-                "searchKey": "testing_test.testPanicParallel",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var testPanicParallel"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar testPanicParallel = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/testing_test#testPanicCleanup",
               "documentation": {
                 "identifier": "testPanicCleanup",
                 "newPage": false,
                 "searchKey": "testing_test.testPanicCleanup",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
@@ -177,6 +145,8 @@
                 "newPage": false,
                 "searchKey": "testing_test.testPanicCleanupPanic",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -187,6 +157,54 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar testPanicCleanupPanic = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing_test#testPanicParallel",
+              "documentation": {
+                "identifier": "testPanicParallel",
+                "newPage": false,
+                "searchKey": "testing_test.testPanicParallel",
+                "tags": [
+                  "variable",
+                  "boolean",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testPanicParallel"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testPanicParallel = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing_test#testPanicTest",
+              "documentation": {
+                "identifier": "testPanicTest",
+                "newPage": false,
+                "searchKey": "testing_test.testPanicTest",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testPanicTest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testPanicTest = ...\n```\n\n"
               },
               "children": null
             }
@@ -202,6 +220,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -216,13 +235,61 @@
         "children": [
           {
             "node": {
+              "pathID": "/testing_test#ExampleB_ReportMetric",
+              "documentation": {
+                "identifier": "ExampleB_ReportMetric",
+                "newPage": false,
+                "searchKey": "testing_test.ExampleB_ReportMetric",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleB_ReportMetric()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleB_ReportMetric()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing_test#ExampleB_RunParallel",
+              "documentation": {
+                "identifier": "ExampleB_RunParallel",
+                "newPage": false,
+                "searchKey": "testing_test.ExampleB_RunParallel",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleB_RunParallel()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleB_RunParallel()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/testing_test#TestAllocsPerRun",
               "documentation": {
                 "identifier": "TestAllocsPerRun",
                 "newPage": false,
                 "searchKey": "testing_test.TestAllocsPerRun",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -238,13 +305,87 @@
           },
           {
             "node": {
+              "pathID": "/testing_test#TestMain",
+              "documentation": {
+                "identifier": "TestMain",
+                "newPage": false,
+                "searchKey": "testing_test.TestMain",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMain(m *testing.M)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing_test#TestPanic",
+              "documentation": {
+                "identifier": "TestPanic",
+                "newPage": false,
+                "searchKey": "testing_test.TestPanic",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPanic(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPanic(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing_test#TestPanicHelper",
+              "documentation": {
+                "identifier": "TestPanicHelper",
+                "newPage": false,
+                "searchKey": "testing_test.TestPanicHelper",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPanicHelper(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPanicHelper(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/testing_test#TestPrettyPrint",
               "documentation": {
                 "identifier": "TestPrettyPrint",
                 "newPage": false,
                 "searchKey": "testing_test.TestPrettyPrint",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -260,13 +401,39 @@
           },
           {
             "node": {
+              "pathID": "/testing_test#TestReportMetric",
+              "documentation": {
+                "identifier": "TestReportMetric",
+                "newPage": false,
+                "searchKey": "testing_test.TestReportMetric",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReportMetric(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReportMetric(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/testing_test#TestResultString",
               "documentation": {
                 "identifier": "TestResultString",
                 "newPage": false,
                 "searchKey": "testing_test.TestResultString",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -288,7 +455,9 @@
                 "newPage": false,
                 "searchKey": "testing_test.TestRunParallel",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -310,7 +479,9 @@
                 "newPage": false,
                 "searchKey": "testing_test.TestRunParallelFail",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -332,7 +503,9 @@
                 "newPage": false,
                 "searchKey": "testing_test.TestRunParallelFatal",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -354,7 +527,9 @@
                 "newPage": false,
                 "searchKey": "testing_test.TestRunParallelSkipNow",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -370,255 +545,15 @@
           },
           {
             "node": {
-              "pathID": "/testing_test#ExampleB_RunParallel",
-              "documentation": {
-                "identifier": "ExampleB_RunParallel",
-                "newPage": false,
-                "searchKey": "testing_test.ExampleB_RunParallel",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleB_RunParallel()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleB_RunParallel()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing_test#TestReportMetric",
-              "documentation": {
-                "identifier": "TestReportMetric",
-                "newPage": false,
-                "searchKey": "testing_test.TestReportMetric",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReportMetric(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReportMetric(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing_test#ExampleB_ReportMetric",
-              "documentation": {
-                "identifier": "ExampleB_ReportMetric",
-                "newPage": false,
-                "searchKey": "testing_test.ExampleB_ReportMetric",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleB_ReportMetric()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleB_ReportMetric()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing_test#TestPanic",
-              "documentation": {
-                "identifier": "TestPanic",
-                "newPage": false,
-                "searchKey": "testing_test.TestPanic",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestPanic(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestPanic(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing_test#makeRegexp",
-              "documentation": {
-                "identifier": "makeRegexp",
-                "newPage": false,
-                "searchKey": "testing_test.makeRegexp",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func makeRegexp(s string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc makeRegexp(s string) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing_test#TestPanicHelper",
-              "documentation": {
-                "identifier": "TestPanicHelper",
-                "newPage": false,
-                "searchKey": "testing_test.TestPanicHelper",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestPanicHelper(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestPanicHelper(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing_test#TestMain",
-              "documentation": {
-                "identifier": "TestMain",
-                "newPage": false,
-                "searchKey": "testing_test.TestMain",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMain(m *testing.M)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing_test#TestTempDirInCleanup",
-              "documentation": {
-                "identifier": "TestTempDirInCleanup",
-                "newPage": false,
-                "searchKey": "testing_test.TestTempDirInCleanup",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTempDirInCleanup(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTempDirInCleanup(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing_test#TestTempDirInBenchmark",
-              "documentation": {
-                "identifier": "TestTempDirInBenchmark",
-                "newPage": false,
-                "searchKey": "testing_test.TestTempDirInBenchmark",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTempDirInBenchmark(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTempDirInBenchmark(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing_test#TestTempDir",
-              "documentation": {
-                "identifier": "TestTempDir",
-                "newPage": false,
-                "searchKey": "testing_test.TestTempDir",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTempDir(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTempDir(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing_test#testTempDir",
-              "documentation": {
-                "identifier": "testTempDir",
-                "newPage": false,
-                "searchKey": "testing_test.testTempDir",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testTempDir(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testTempDir(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/testing_test#TestSetenv",
               "documentation": {
                 "identifier": "TestSetenv",
                 "newPage": false,
                 "searchKey": "testing_test.TestSetenv",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -640,7 +575,9 @@
                 "newPage": false,
                 "searchKey": "testing_test.TestSetenvWithParallelAfterSetenv",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -662,7 +599,9 @@
                 "newPage": false,
                 "searchKey": "testing_test.TestSetenvWithParallelBeforeSetenv",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -672,6 +611,124 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc TestSetenvWithParallelBeforeSetenv(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing_test#TestTempDir",
+              "documentation": {
+                "identifier": "TestTempDir",
+                "newPage": false,
+                "searchKey": "testing_test.TestTempDir",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTempDir(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTempDir(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing_test#TestTempDirInBenchmark",
+              "documentation": {
+                "identifier": "TestTempDirInBenchmark",
+                "newPage": false,
+                "searchKey": "testing_test.TestTempDirInBenchmark",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTempDirInBenchmark(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTempDirInBenchmark(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing_test#TestTempDirInCleanup",
+              "documentation": {
+                "identifier": "TestTempDirInCleanup",
+                "newPage": false,
+                "searchKey": "testing_test.TestTempDirInCleanup",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTempDirInCleanup(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTempDirInCleanup(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing_test#makeRegexp",
+              "documentation": {
+                "identifier": "makeRegexp",
+                "newPage": false,
+                "searchKey": "testing_test.makeRegexp",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeRegexp(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeRegexp(s string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing_test#testTempDir",
+              "documentation": {
+                "identifier": "testTempDir",
+                "newPage": false,
+                "searchKey": "testing_test.testTempDir",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testTempDir(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testTempDir(t *testing.T)\n```\n\n"
               },
               "children": null
             }

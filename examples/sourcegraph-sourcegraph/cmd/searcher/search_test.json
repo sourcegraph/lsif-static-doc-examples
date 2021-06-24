@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "cmd/searcher/search_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,101 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/searcher/search_test#sortByPath",
-              "documentation": {
-                "identifier": "sortByPath",
-                "newPage": false,
-                "searchKey": "search_test.sortByPath",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type sortByPath []protocol.FileMatch"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype sortByPath []protocol.FileMatch\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/searcher/search_test#sortByPath.Len",
-                    "documentation": {
-                      "identifier": "sortByPath.Len",
-                      "newPage": false,
-                      "searchKey": "search_test.sortByPath.Len",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m sortByPath) Len() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m sortByPath) Len() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/searcher/search_test#sortByPath.Less",
-                    "documentation": {
-                      "identifier": "sortByPath.Less",
-                      "newPage": false,
-                      "searchKey": "search_test.sortByPath.Less",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m sortByPath) Less(i, j int) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m sortByPath) Less(i, j int) bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/searcher/search_test#sortByPath.Swap",
-                    "documentation": {
-                      "identifier": "sortByPath.Swap",
-                      "newPage": false,
-                      "searchKey": "search_test.sortByPath.Swap",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m sortByPath) Swap(i, j int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m sortByPath) Swap(i, j int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/searcher/search_test#sortByLineNumber",
               "documentation": {
                 "identifier": "sortByLineNumber",
                 "newPage": false,
                 "searchKey": "search_test.sortByLineNumber",
                 "tags": [
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -154,6 +69,7 @@
                       "newPage": false,
                       "searchKey": "search_test.sortByLineNumber.Len",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -176,6 +92,7 @@
                       "newPage": false,
                       "searchKey": "search_test.sortByLineNumber.Less",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -198,6 +115,7 @@
                       "newPage": false,
                       "searchKey": "search_test.sortByLineNumber.Swap",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -208,6 +126,100 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (m sortByLineNumber) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search_test#sortByPath",
+              "documentation": {
+                "identifier": "sortByPath",
+                "newPage": false,
+                "searchKey": "search_test.sortByPath",
+                "tags": [
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type sortByPath []protocol.FileMatch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype sortByPath []protocol.FileMatch\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/searcher/search_test#sortByPath.Len",
+                    "documentation": {
+                      "identifier": "sortByPath.Len",
+                      "newPage": false,
+                      "searchKey": "search_test.sortByPath.Len",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m sortByPath) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m sortByPath) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/searcher/search_test#sortByPath.Less",
+                    "documentation": {
+                      "identifier": "sortByPath.Less",
+                      "newPage": false,
+                      "searchKey": "search_test.sortByPath.Less",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m sortByPath) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m sortByPath) Less(i, j int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/searcher/search_test#sortByPath.Swap",
+                    "documentation": {
+                      "identifier": "sortByPath.Swap",
+                      "newPage": false,
+                      "searchKey": "search_test.sortByPath.Swap",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m sortByPath) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m sortByPath) Swap(i, j int)\n```\n\n"
                     },
                     "children": null
                   }
@@ -226,6 +238,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -240,35 +253,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/searcher/search_test#addpaxheader",
-              "documentation": {
-                "identifier": "addpaxheader",
-                "newPage": false,
-                "searchKey": "search_test.addpaxheader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func addpaxheader(w *tar.Writer, body string) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc addpaxheader(w *tar.Writer, body string) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/searcher/search_test#TestSearch",
               "documentation": {
                 "identifier": "TestSearch",
                 "newPage": false,
                 "searchKey": "search_test.TestSearch",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -290,7 +283,9 @@
                 "newPage": false,
                 "searchKey": "search_test.TestSearch_badrequest",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -306,12 +301,36 @@
           },
           {
             "node": {
+              "pathID": "/cmd/searcher/search_test#addpaxheader",
+              "documentation": {
+                "identifier": "addpaxheader",
+                "newPage": false,
+                "searchKey": "search_test.addpaxheader",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addpaxheader(w *tar.Writer, body string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addpaxheader(w *tar.Writer, body string) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/searcher/search_test#doSearch",
               "documentation": {
                 "identifier": "doSearch",
                 "newPage": false,
                 "searchKey": "search_test.doSearch",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -334,6 +353,7 @@
                 "newPage": false,
                 "searchKey": "search_test.newStore",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -350,34 +370,13 @@
           },
           {
             "node": {
-              "pathID": "/cmd/searcher/search_test#toString",
-              "documentation": {
-                "identifier": "toString",
-                "newPage": false,
-                "searchKey": "search_test.toString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func toString(m []protocol.FileMatch) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc toString(m []protocol.FileMatch) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/searcher/search_test#sanityCheckSorted",
               "documentation": {
                 "identifier": "sanityCheckSorted",
                 "newPage": false,
                 "searchKey": "search_test.sanityCheckSorted",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -388,6 +387,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc sanityCheckSorted(m []protocol.FileMatch) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search_test#toString",
+              "documentation": {
+                "identifier": "toString",
+                "newPage": false,
+                "searchKey": "search_test.toString",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func toString(m []protocol.FileMatch) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc toString(m []protocol.FileMatch) string\n```\n\n"
               },
               "children": null
             }

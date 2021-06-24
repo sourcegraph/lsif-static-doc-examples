@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "mime_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,78 +41,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/mime_test#ExampleWordEncoder_Encode",
-              "documentation": {
-                "identifier": "ExampleWordEncoder_Encode",
-                "newPage": false,
-                "searchKey": "mime_test.ExampleWordEncoder_Encode",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleWordEncoder_Encode()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleWordEncoder_Encode()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime_test#ExampleWordDecoder_Decode",
-              "documentation": {
-                "identifier": "ExampleWordDecoder_Decode",
-                "newPage": false,
-                "searchKey": "mime_test.ExampleWordDecoder_Decode",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleWordDecoder_Decode()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleWordDecoder_Decode()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime_test#ExampleWordDecoder_DecodeHeader",
-              "documentation": {
-                "identifier": "ExampleWordDecoder_DecodeHeader",
-                "newPage": false,
-                "searchKey": "mime_test.ExampleWordDecoder_DecodeHeader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleWordDecoder_DecodeHeader()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleWordDecoder_DecodeHeader()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/mime_test#ExampleFormatMediaType",
               "documentation": {
                 "identifier": "ExampleFormatMediaType",
                 "newPage": false,
                 "searchKey": "mime_test.ExampleFormatMediaType",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -133,6 +70,7 @@
                 "newPage": false,
                 "searchKey": "mime_test.ExampleParseMediaType",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -143,6 +81,75 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc ExampleParseMediaType()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime_test#ExampleWordDecoder_Decode",
+              "documentation": {
+                "identifier": "ExampleWordDecoder_Decode",
+                "newPage": false,
+                "searchKey": "mime_test.ExampleWordDecoder_Decode",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleWordDecoder_Decode()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleWordDecoder_Decode()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime_test#ExampleWordDecoder_DecodeHeader",
+              "documentation": {
+                "identifier": "ExampleWordDecoder_DecodeHeader",
+                "newPage": false,
+                "searchKey": "mime_test.ExampleWordDecoder_DecodeHeader",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleWordDecoder_DecodeHeader()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleWordDecoder_DecodeHeader()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime_test#ExampleWordEncoder_Encode",
+              "documentation": {
+                "identifier": "ExampleWordEncoder_Encode",
+                "newPage": false,
+                "searchKey": "mime_test.ExampleWordEncoder_Encode",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleWordEncoder_Encode()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleWordEncoder_Encode()\n```\n\n"
               },
               "children": null
             }

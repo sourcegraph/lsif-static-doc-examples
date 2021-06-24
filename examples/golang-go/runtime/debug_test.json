@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "runtime/debug_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,9 @@
                 "newPage": false,
                 "searchKey": "debug_test.big",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -67,6 +72,8 @@
                 "newPage": false,
                 "searchKey": "debug_test.setGCPercentBallast",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -89,6 +96,8 @@
                 "newPage": false,
                 "searchKey": "debug_test.setGCPercentSink",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -114,6 +123,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -134,6 +144,7 @@
                 "newPage": false,
                 "searchKey": "debug_test.Obj",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -156,6 +167,7 @@
                 "newPage": false,
                 "searchKey": "debug_test.T",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -170,34 +182,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/runtime/debug_test#T.ptrmethod",
-                    "documentation": {
-                      "identifier": "T.ptrmethod",
-                      "newPage": false,
-                      "searchKey": "debug_test.T.ptrmethod",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t *T) ptrmethod() []byte"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t *T) ptrmethod() []byte\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/runtime/debug_test#T.method",
                     "documentation": {
                       "identifier": "T.method",
                       "newPage": false,
                       "searchKey": "debug_test.T.method",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -208,6 +199,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (t T) method() []byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/runtime/debug_test#T.ptrmethod",
+                    "documentation": {
+                      "identifier": "T.ptrmethod",
+                      "newPage": false,
+                      "searchKey": "debug_test.T.ptrmethod",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *T) ptrmethod() []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *T) ptrmethod() []byte\n```\n\n"
                     },
                     "children": null
                   }
@@ -226,6 +240,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -240,35 +255,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/runtime/debug_test#TestReadGCStats",
-              "documentation": {
-                "identifier": "TestReadGCStats",
-                "newPage": false,
-                "searchKey": "debug_test.TestReadGCStats",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReadGCStats(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReadGCStats(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/runtime/debug_test#TestFreeOSMemory",
               "documentation": {
                 "identifier": "TestFreeOSMemory",
                 "newPage": false,
                 "searchKey": "debug_test.TestFreeOSMemory",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -284,13 +279,63 @@
           },
           {
             "node": {
+              "pathID": "/runtime/debug_test#TestPanicOnFault",
+              "documentation": {
+                "identifier": "TestPanicOnFault",
+                "newPage": false,
+                "searchKey": "debug_test.TestPanicOnFault",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPanicOnFault(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPanicOnFault(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/debug_test#TestReadGCStats",
+              "documentation": {
+                "identifier": "TestReadGCStats",
+                "newPage": false,
+                "searchKey": "debug_test.TestReadGCStats",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadGCStats(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadGCStats(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/runtime/debug_test#TestSetGCPercent",
               "documentation": {
                 "identifier": "TestSetGCPercent",
                 "newPage": false,
                 "searchKey": "debug_test.TestSetGCPercent",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -306,12 +351,109 @@
           },
           {
             "node": {
+              "pathID": "/runtime/debug_test#TestSetMaxThreadsOvf",
+              "documentation": {
+                "identifier": "TestSetMaxThreadsOvf",
+                "newPage": false,
+                "searchKey": "debug_test.TestSetMaxThreadsOvf",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSetMaxThreadsOvf(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSetMaxThreadsOvf(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/debug_test#TestStack",
+              "documentation": {
+                "identifier": "TestStack",
+                "newPage": false,
+                "searchKey": "debug_test.TestStack",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStack(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStack(t *testing.T)\n```\n\nThe traceback should look something like this, modulo line numbers and hex constants. Don't worry much about the base levels, but check the ones in our own package. \n\n```\ngoroutine 10 [running]:\nruntime/debug.Stack(0x0, 0x0, 0x0)\n\t/Users/r/go/src/runtime/debug/stack.go:28 +0x80\nruntime/debug.(*T).ptrmethod(0xc82005ee70, 0x0, 0x0, 0x0)\n\t/Users/r/go/src/runtime/debug/stack_test.go:15 +0x29\nruntime/debug.T.method(0x0, 0x0, 0x0, 0x0)\n\t/Users/r/go/src/runtime/debug/stack_test.go:18 +0x32\nruntime/debug.TestStack(0xc8201ce000)\n\t/Users/r/go/src/runtime/debug/stack_test.go:37 +0x38\ntesting.tRunner(0xc8201ce000, 0x664b58)\n\t/Users/r/go/src/testing/testing.go:456 +0x98\ncreated by testing.RunTests\n\t/Users/r/go/src/testing/testing.go:561 +0x86d\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/debug_test#TestWriteHeapDumpFinalizers",
+              "documentation": {
+                "identifier": "TestWriteHeapDumpFinalizers",
+                "newPage": false,
+                "searchKey": "debug_test.TestWriteHeapDumpFinalizers",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteHeapDumpFinalizers(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteHeapDumpFinalizers(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/debug_test#TestWriteHeapDumpNonempty",
+              "documentation": {
+                "identifier": "TestWriteHeapDumpNonempty",
+                "newPage": false,
+                "searchKey": "debug_test.TestWriteHeapDumpNonempty",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteHeapDumpNonempty(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteHeapDumpNonempty(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/runtime/debug_test#abs64",
               "documentation": {
                 "identifier": "abs64",
                 "newPage": false,
                 "searchKey": "debug_test.abs64",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -328,44 +470,23 @@
           },
           {
             "node": {
-              "pathID": "/runtime/debug_test#TestSetMaxThreadsOvf",
+              "pathID": "/runtime/debug_test#check",
               "documentation": {
-                "identifier": "TestSetMaxThreadsOvf",
+                "identifier": "check",
                 "newPage": false,
-                "searchKey": "debug_test.TestSetMaxThreadsOvf",
+                "searchKey": "debug_test.check",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestSetMaxThreadsOvf(t *testing.T)"
+                "value": "func check(t *testing.T, line, has string)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestSetMaxThreadsOvf(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/debug_test#TestWriteHeapDumpNonempty",
-              "documentation": {
-                "identifier": "TestWriteHeapDumpNonempty",
-                "newPage": false,
-                "searchKey": "debug_test.TestWriteHeapDumpNonempty",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestWriteHeapDumpNonempty(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestWriteHeapDumpNonempty(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc check(t *testing.T, line, has string)\n```\n\n"
               },
               "children": null
             }
@@ -378,6 +499,7 @@
                 "newPage": false,
                 "searchKey": "debug_test.objfin",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -388,94 +510,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc objfin(x *Obj)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/debug_test#TestWriteHeapDumpFinalizers",
-              "documentation": {
-                "identifier": "TestWriteHeapDumpFinalizers",
-                "newPage": false,
-                "searchKey": "debug_test.TestWriteHeapDumpFinalizers",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestWriteHeapDumpFinalizers(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestWriteHeapDumpFinalizers(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/debug_test#TestPanicOnFault",
-              "documentation": {
-                "identifier": "TestPanicOnFault",
-                "newPage": false,
-                "searchKey": "debug_test.TestPanicOnFault",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestPanicOnFault(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestPanicOnFault(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/debug_test#TestStack",
-              "documentation": {
-                "identifier": "TestStack",
-                "newPage": false,
-                "searchKey": "debug_test.TestStack",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestStack(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestStack(t *testing.T)\n```\n\nThe traceback should look something like this, modulo line numbers and hex constants. Don't worry much about the base levels, but check the ones in our own package. \n\n```\ngoroutine 10 [running]:\nruntime/debug.Stack(0x0, 0x0, 0x0)\n\t/Users/r/go/src/runtime/debug/stack.go:28 +0x80\nruntime/debug.(*T).ptrmethod(0xc82005ee70, 0x0, 0x0, 0x0)\n\t/Users/r/go/src/runtime/debug/stack_test.go:15 +0x29\nruntime/debug.T.method(0x0, 0x0, 0x0, 0x0)\n\t/Users/r/go/src/runtime/debug/stack_test.go:18 +0x32\nruntime/debug.TestStack(0xc8201ce000)\n\t/Users/r/go/src/runtime/debug/stack_test.go:37 +0x38\ntesting.tRunner(0xc8201ce000, 0x664b58)\n\t/Users/r/go/src/testing/testing.go:456 +0x98\ncreated by testing.RunTests\n\t/Users/r/go/src/testing/testing.go:561 +0x86d\n\n```\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/debug_test#check",
-              "documentation": {
-                "identifier": "check",
-                "newPage": false,
-                "searchKey": "debug_test.check",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func check(t *testing.T, line, has string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc check(t *testing.T, line, has string)\n```\n\n"
               },
               "children": null
             }

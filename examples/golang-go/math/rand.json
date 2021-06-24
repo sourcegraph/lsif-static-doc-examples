@@ -4,7 +4,9 @@
     "identifier": "rand",
     "newPage": true,
     "searchKey": "math/rand",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,12 +39,38 @@
         "children": [
           {
             "node": {
+              "pathID": "/math/rand#int32max",
+              "documentation": {
+                "identifier": "int32max",
+                "newPage": false,
+                "searchKey": "rand.int32max",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const int32max"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst int32max = (1 << 31) - 1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/rand#re",
               "documentation": {
                 "identifier": "re",
                 "newPage": false,
                 "searchKey": "rand.re",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -63,6 +93,8 @@
                 "newPage": false,
                 "searchKey": "rand.rn",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -85,6 +117,8 @@
                 "newPage": false,
                 "searchKey": "rand.rngLen",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -101,56 +135,14 @@
           },
           {
             "node": {
-              "pathID": "/math/rand#rngTap",
-              "documentation": {
-                "identifier": "rngTap",
-                "newPage": false,
-                "searchKey": "rand.rngTap",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const rngTap"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst rngTap = 273\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand#rngMax",
-              "documentation": {
-                "identifier": "rngMax",
-                "newPage": false,
-                "searchKey": "rand.rngMax",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const rngMax"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst rngMax = 1 << 63\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/math/rand#rngMask",
               "documentation": {
                 "identifier": "rngMask",
                 "newPage": false,
                 "searchKey": "rand.rngMask",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -167,22 +159,48 @@
           },
           {
             "node": {
-              "pathID": "/math/rand#int32max",
+              "pathID": "/math/rand#rngMax",
               "documentation": {
-                "identifier": "int32max",
+                "identifier": "rngMax",
                 "newPage": false,
-                "searchKey": "rand.int32max",
+                "searchKey": "rand.rngMax",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const int32max"
+                "value": "const rngMax"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst int32max = (1 << 31) - 1\n```\n\n"
+                "value": "```Go\nconst rngMax = 1 << 63\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand#rngTap",
+              "documentation": {
+                "identifier": "rngTap",
+                "newPage": false,
+                "searchKey": "rand.rngTap",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const rngTap"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst rngTap = 273\n```\n\n"
               },
               "children": null
             }
@@ -197,7 +215,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -210,56 +230,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/math/rand#ke",
-              "documentation": {
-                "identifier": "ke",
-                "newPage": false,
-                "searchKey": "rand.ke",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ke"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ke = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand#we",
-              "documentation": {
-                "identifier": "we",
-                "newPage": false,
-                "searchKey": "rand.we",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var we"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar we = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/math/rand#fe",
               "documentation": {
                 "identifier": "fe",
                 "newPage": false,
                 "searchKey": "rand.fe",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -276,56 +255,15 @@
           },
           {
             "node": {
-              "pathID": "/math/rand#kn",
-              "documentation": {
-                "identifier": "kn",
-                "newPage": false,
-                "searchKey": "rand.kn",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var kn"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar kn = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand#wn",
-              "documentation": {
-                "identifier": "wn",
-                "newPage": false,
-                "searchKey": "rand.wn",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var wn"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar wn = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/math/rand#fn",
               "documentation": {
                 "identifier": "fn",
                 "newPage": false,
                 "searchKey": "rand.fn",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -348,6 +286,8 @@
                 "newPage": false,
                 "searchKey": "rand.globalRand",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -364,12 +304,65 @@
           },
           {
             "node": {
+              "pathID": "/math/rand#ke",
+              "documentation": {
+                "identifier": "ke",
+                "newPage": false,
+                "searchKey": "rand.ke",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ke"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ke = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand#kn",
+              "documentation": {
+                "identifier": "kn",
+                "newPage": false,
+                "searchKey": "rand.kn",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var kn"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar kn = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/rand#rngCooked",
               "documentation": {
                 "identifier": "rngCooked",
                 "newPage": false,
                 "searchKey": "rand.rngCooked",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -380,6 +373,56 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar rngCooked [rngLen]int64 = ...\n```\n\nrngCooked used for seeding. See gen_cooked.go for details. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand#we",
+              "documentation": {
+                "identifier": "we",
+                "newPage": false,
+                "searchKey": "rand.we",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var we"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar we = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand#wn",
+              "documentation": {
+                "identifier": "wn",
+                "newPage": false,
+                "searchKey": "rand.wn",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var wn"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar wn = ...\n```\n\n"
               },
               "children": null
             }
@@ -394,7 +437,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -407,12 +452,434 @@
         "children": [
           {
             "node": {
+              "pathID": "/math/rand#Rand",
+              "documentation": {
+                "identifier": "Rand",
+                "newPage": false,
+                "searchKey": "rand.Rand",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Rand struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Rand struct {\n\tsrc Source\n\ts64 Source64 // non-nil if src is source64\n\n\t// readVal contains remainder of 63-bit integer used for bytes\n\t// generation during most recent Read call.\n\t// It is saved so next Read call can start where the previous\n\t// one finished.\n\treadVal int64\n\t// readPos indicates the number of low-order bytes of readVal\n\t// that are still valid.\n\treadPos int8\n}\n```\n\nA Rand is a source of random numbers. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/math/rand#New",
+                    "documentation": {
+                      "identifier": "New",
+                      "newPage": false,
+                      "searchKey": "rand.New",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func New(src Source) *Rand"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc New(src Source) *Rand\n```\n\nNew returns a new Rand that uses random values from src to generate other random values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/math/rand#Rand.ExpFloat64",
+                    "documentation": {
+                      "identifier": "Rand.ExpFloat64",
+                      "newPage": false,
+                      "searchKey": "rand.Rand.ExpFloat64",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Rand) ExpFloat64() float64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Rand) ExpFloat64() float64\n```\n\nExpFloat64 returns an exponentially distributed float64 in the range (0, +math.MaxFloat64] with an exponential distribution whose rate parameter (lambda) is 1 and whose mean is 1/lambda (1). To produce a distribution with a different rate parameter, callers can adjust the output using: \n\n```\nsample = ExpFloat64() / desiredRateParameter\n\n```\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/math/rand#Rand.Float32",
+                    "documentation": {
+                      "identifier": "Rand.Float32",
+                      "newPage": false,
+                      "searchKey": "rand.Rand.Float32",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Rand) Float32() float32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Rand) Float32() float32\n```\n\nFloat32 returns, as a float32, a pseudo-random number in the half-open interval [0.0,1.0). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/math/rand#Rand.Float64",
+                    "documentation": {
+                      "identifier": "Rand.Float64",
+                      "newPage": false,
+                      "searchKey": "rand.Rand.Float64",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Rand) Float64() float64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Rand) Float64() float64\n```\n\nFloat64 returns, as a float64, a pseudo-random number in the half-open interval [0.0,1.0). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/math/rand#Rand.Int",
+                    "documentation": {
+                      "identifier": "Rand.Int",
+                      "newPage": false,
+                      "searchKey": "rand.Rand.Int",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Rand) Int() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Rand) Int() int\n```\n\nInt returns a non-negative pseudo-random int. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/math/rand#Rand.Int31",
+                    "documentation": {
+                      "identifier": "Rand.Int31",
+                      "newPage": false,
+                      "searchKey": "rand.Rand.Int31",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Rand) Int31() int32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Rand) Int31() int32\n```\n\nInt31 returns a non-negative pseudo-random 31-bit integer as an int32. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/math/rand#Rand.Int31n",
+                    "documentation": {
+                      "identifier": "Rand.Int31n",
+                      "newPage": false,
+                      "searchKey": "rand.Rand.Int31n",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Rand) Int31n(n int32) int32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Rand) Int31n(n int32) int32\n```\n\nInt31n returns, as an int32, a non-negative pseudo-random number in the half-open interval [0,n). It panics if n <= 0. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/math/rand#Rand.Int63",
+                    "documentation": {
+                      "identifier": "Rand.Int63",
+                      "newPage": false,
+                      "searchKey": "rand.Rand.Int63",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Rand) Int63() int64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Rand) Int63() int64\n```\n\nInt63 returns a non-negative pseudo-random 63-bit integer as an int64. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/math/rand#Rand.Int63n",
+                    "documentation": {
+                      "identifier": "Rand.Int63n",
+                      "newPage": false,
+                      "searchKey": "rand.Rand.Int63n",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Rand) Int63n(n int64) int64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Rand) Int63n(n int64) int64\n```\n\nInt63n returns, as an int64, a non-negative pseudo-random number in the half-open interval [0,n). It panics if n <= 0. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/math/rand#Rand.Intn",
+                    "documentation": {
+                      "identifier": "Rand.Intn",
+                      "newPage": false,
+                      "searchKey": "rand.Rand.Intn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Rand) Intn(n int) int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Rand) Intn(n int) int\n```\n\nIntn returns, as an int, a non-negative pseudo-random number in the half-open interval [0,n). It panics if n <= 0. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/math/rand#Rand.NormFloat64",
+                    "documentation": {
+                      "identifier": "Rand.NormFloat64",
+                      "newPage": false,
+                      "searchKey": "rand.Rand.NormFloat64",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Rand) NormFloat64() float64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Rand) NormFloat64() float64\n```\n\nNormFloat64 returns a normally distributed float64 in the range -math.MaxFloat64 through +math.MaxFloat64 inclusive, with standard normal distribution (mean = 0, stddev = 1). To produce a different normal distribution, callers can adjust the output using: \n\n```\nsample = NormFloat64() * desiredStdDev + desiredMean\n\n```\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/math/rand#Rand.Perm",
+                    "documentation": {
+                      "identifier": "Rand.Perm",
+                      "newPage": false,
+                      "searchKey": "rand.Rand.Perm",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Rand) Perm(n int) []int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Rand) Perm(n int) []int\n```\n\nPerm returns, as a slice of n ints, a pseudo-random permutation of the integers in the half-open interval [0,n). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/math/rand#Rand.Read",
+                    "documentation": {
+                      "identifier": "Rand.Read",
+                      "newPage": false,
+                      "searchKey": "rand.Rand.Read",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Rand) Read(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Rand) Read(p []byte) (n int, err error)\n```\n\nRead generates len(p) random bytes and writes them into p. It always returns len(p) and a nil error. Read should not be called concurrently with any other Rand method. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/math/rand#Rand.Seed",
+                    "documentation": {
+                      "identifier": "Rand.Seed",
+                      "newPage": false,
+                      "searchKey": "rand.Rand.Seed",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Rand) Seed(seed int64)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Rand) Seed(seed int64)\n```\n\nSeed uses the provided seed value to initialize the generator to a deterministic state. Seed should not be called concurrently with any other Rand method. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/math/rand#Rand.Shuffle",
+                    "documentation": {
+                      "identifier": "Rand.Shuffle",
+                      "newPage": false,
+                      "searchKey": "rand.Rand.Shuffle",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Rand) Shuffle(n int, swap func(i, j int))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Rand) Shuffle(n int, swap func(i, j int))\n```\n\nShuffle pseudo-randomizes the order of elements. n is the number of elements. Shuffle panics if n < 0. swap swaps the elements with indexes i and j. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/math/rand#Rand.Uint32",
+                    "documentation": {
+                      "identifier": "Rand.Uint32",
+                      "newPage": false,
+                      "searchKey": "rand.Rand.Uint32",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Rand) Uint32() uint32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Rand) Uint32() uint32\n```\n\nUint32 returns a pseudo-random 32-bit value as a uint32. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/math/rand#Rand.Uint64",
+                    "documentation": {
+                      "identifier": "Rand.Uint64",
+                      "newPage": false,
+                      "searchKey": "rand.Rand.Uint64",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Rand) Uint64() uint64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Rand) Uint64() uint64\n```\n\nUint64 returns a pseudo-random 64-bit value as a uint64. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/math/rand#Rand.int31n",
+                    "documentation": {
+                      "identifier": "Rand.int31n",
+                      "newPage": false,
+                      "searchKey": "rand.Rand.int31n",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Rand) int31n(n int32) int32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Rand) int31n(n int32) int32\n```\n\nint31n returns, as an int32, a non-negative pseudo-random number in the half-open interval [0,n). n must be > 0, but int31n does not check this; the caller must ensure it. int31n exists because Int31n is inefficient, but Go 1 compatibility requires that the stream of values produced by math/rand remain unchanged. int31n can thus only be used internally, by newly introduced APIs. \n\nFor implementation details, see: [https://lemire.me/blog/2016/06/27/a-fast-alternative-to-the-modulo-reduction](https://lemire.me/blog/2016/06/27/a-fast-alternative-to-the-modulo-reduction) [https://lemire.me/blog/2016/06/30/fast-random-shuffling](https://lemire.me/blog/2016/06/30/fast-random-shuffling) \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/rand#Source",
               "documentation": {
                 "identifier": "Source",
                 "newPage": false,
                 "searchKey": "rand.Source",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -430,7 +897,9 @@
                       "identifier": "NewSource",
                       "newPage": false,
                       "searchKey": "rand.NewSource",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -453,7 +922,9 @@
                 "identifier": "Source64",
                 "newPage": false,
                 "searchKey": "rand.Source64",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -468,617 +939,14 @@
           },
           {
             "node": {
-              "pathID": "/math/rand#Rand",
-              "documentation": {
-                "identifier": "Rand",
-                "newPage": false,
-                "searchKey": "rand.Rand",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Rand struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Rand struct {\n\tsrc Source\n\ts64 Source64 // non-nil if src is source64\n\n\t// readVal contains remainder of 63-bit integer used for bytes\n\t// generation during most recent Read call.\n\t// It is saved so next Read call can start where the previous\n\t// one finished.\n\treadVal int64\n\t// readPos indicates the number of low-order bytes of readVal\n\t// that are still valid.\n\treadPos int8\n}\n```\n\nA Rand is a source of random numbers. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/math/rand#New",
-                    "documentation": {
-                      "identifier": "New",
-                      "newPage": false,
-                      "searchKey": "rand.New",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func New(src Source) *Rand"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc New(src Source) *Rand\n```\n\nNew returns a new Rand that uses random values from src to generate other random values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/math/rand#Rand.ExpFloat64",
-                    "documentation": {
-                      "identifier": "Rand.ExpFloat64",
-                      "newPage": false,
-                      "searchKey": "rand.Rand.ExpFloat64",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Rand) ExpFloat64() float64"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Rand) ExpFloat64() float64\n```\n\nExpFloat64 returns an exponentially distributed float64 in the range (0, +math.MaxFloat64] with an exponential distribution whose rate parameter (lambda) is 1 and whose mean is 1/lambda (1). To produce a distribution with a different rate parameter, callers can adjust the output using: \n\n```\nsample = ExpFloat64() / desiredRateParameter\n\n```\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/math/rand#Rand.NormFloat64",
-                    "documentation": {
-                      "identifier": "Rand.NormFloat64",
-                      "newPage": false,
-                      "searchKey": "rand.Rand.NormFloat64",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Rand) NormFloat64() float64"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Rand) NormFloat64() float64\n```\n\nNormFloat64 returns a normally distributed float64 in the range -math.MaxFloat64 through +math.MaxFloat64 inclusive, with standard normal distribution (mean = 0, stddev = 1). To produce a different normal distribution, callers can adjust the output using: \n\n```\nsample = NormFloat64() * desiredStdDev + desiredMean\n\n```\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/math/rand#Rand.Seed",
-                    "documentation": {
-                      "identifier": "Rand.Seed",
-                      "newPage": false,
-                      "searchKey": "rand.Rand.Seed",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Rand) Seed(seed int64)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Rand) Seed(seed int64)\n```\n\nSeed uses the provided seed value to initialize the generator to a deterministic state. Seed should not be called concurrently with any other Rand method. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/math/rand#Rand.Int63",
-                    "documentation": {
-                      "identifier": "Rand.Int63",
-                      "newPage": false,
-                      "searchKey": "rand.Rand.Int63",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Rand) Int63() int64"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Rand) Int63() int64\n```\n\nInt63 returns a non-negative pseudo-random 63-bit integer as an int64. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/math/rand#Rand.Uint32",
-                    "documentation": {
-                      "identifier": "Rand.Uint32",
-                      "newPage": false,
-                      "searchKey": "rand.Rand.Uint32",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Rand) Uint32() uint32"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Rand) Uint32() uint32\n```\n\nUint32 returns a pseudo-random 32-bit value as a uint32. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/math/rand#Rand.Uint64",
-                    "documentation": {
-                      "identifier": "Rand.Uint64",
-                      "newPage": false,
-                      "searchKey": "rand.Rand.Uint64",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Rand) Uint64() uint64"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Rand) Uint64() uint64\n```\n\nUint64 returns a pseudo-random 64-bit value as a uint64. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/math/rand#Rand.Int31",
-                    "documentation": {
-                      "identifier": "Rand.Int31",
-                      "newPage": false,
-                      "searchKey": "rand.Rand.Int31",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Rand) Int31() int32"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Rand) Int31() int32\n```\n\nInt31 returns a non-negative pseudo-random 31-bit integer as an int32. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/math/rand#Rand.Int",
-                    "documentation": {
-                      "identifier": "Rand.Int",
-                      "newPage": false,
-                      "searchKey": "rand.Rand.Int",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Rand) Int() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Rand) Int() int\n```\n\nInt returns a non-negative pseudo-random int. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/math/rand#Rand.Int63n",
-                    "documentation": {
-                      "identifier": "Rand.Int63n",
-                      "newPage": false,
-                      "searchKey": "rand.Rand.Int63n",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Rand) Int63n(n int64) int64"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Rand) Int63n(n int64) int64\n```\n\nInt63n returns, as an int64, a non-negative pseudo-random number in the half-open interval [0,n). It panics if n <= 0. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/math/rand#Rand.Int31n",
-                    "documentation": {
-                      "identifier": "Rand.Int31n",
-                      "newPage": false,
-                      "searchKey": "rand.Rand.Int31n",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Rand) Int31n(n int32) int32"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Rand) Int31n(n int32) int32\n```\n\nInt31n returns, as an int32, a non-negative pseudo-random number in the half-open interval [0,n). It panics if n <= 0. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/math/rand#Rand.int31n",
-                    "documentation": {
-                      "identifier": "Rand.int31n",
-                      "newPage": false,
-                      "searchKey": "rand.Rand.int31n",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Rand) int31n(n int32) int32"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Rand) int31n(n int32) int32\n```\n\nint31n returns, as an int32, a non-negative pseudo-random number in the half-open interval [0,n). n must be > 0, but int31n does not check this; the caller must ensure it. int31n exists because Int31n is inefficient, but Go 1 compatibility requires that the stream of values produced by math/rand remain unchanged. int31n can thus only be used internally, by newly introduced APIs. \n\nFor implementation details, see: [https://lemire.me/blog/2016/06/27/a-fast-alternative-to-the-modulo-reduction](https://lemire.me/blog/2016/06/27/a-fast-alternative-to-the-modulo-reduction) [https://lemire.me/blog/2016/06/30/fast-random-shuffling](https://lemire.me/blog/2016/06/30/fast-random-shuffling) \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/math/rand#Rand.Intn",
-                    "documentation": {
-                      "identifier": "Rand.Intn",
-                      "newPage": false,
-                      "searchKey": "rand.Rand.Intn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Rand) Intn(n int) int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Rand) Intn(n int) int\n```\n\nIntn returns, as an int, a non-negative pseudo-random number in the half-open interval [0,n). It panics if n <= 0. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/math/rand#Rand.Float64",
-                    "documentation": {
-                      "identifier": "Rand.Float64",
-                      "newPage": false,
-                      "searchKey": "rand.Rand.Float64",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Rand) Float64() float64"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Rand) Float64() float64\n```\n\nFloat64 returns, as a float64, a pseudo-random number in the half-open interval [0.0,1.0). \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/math/rand#Rand.Float32",
-                    "documentation": {
-                      "identifier": "Rand.Float32",
-                      "newPage": false,
-                      "searchKey": "rand.Rand.Float32",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Rand) Float32() float32"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Rand) Float32() float32\n```\n\nFloat32 returns, as a float32, a pseudo-random number in the half-open interval [0.0,1.0). \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/math/rand#Rand.Perm",
-                    "documentation": {
-                      "identifier": "Rand.Perm",
-                      "newPage": false,
-                      "searchKey": "rand.Rand.Perm",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Rand) Perm(n int) []int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Rand) Perm(n int) []int\n```\n\nPerm returns, as a slice of n ints, a pseudo-random permutation of the integers in the half-open interval [0,n). \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/math/rand#Rand.Shuffle",
-                    "documentation": {
-                      "identifier": "Rand.Shuffle",
-                      "newPage": false,
-                      "searchKey": "rand.Rand.Shuffle",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Rand) Shuffle(n int, swap func(i, j int))"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Rand) Shuffle(n int, swap func(i, j int))\n```\n\nShuffle pseudo-randomizes the order of elements. n is the number of elements. Shuffle panics if n < 0. swap swaps the elements with indexes i and j. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/math/rand#Rand.Read",
-                    "documentation": {
-                      "identifier": "Rand.Read",
-                      "newPage": false,
-                      "searchKey": "rand.Rand.Read",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Rand) Read(p []byte) (n int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Rand) Read(p []byte) (n int, err error)\n```\n\nRead generates len(p) random bytes and writes them into p. It always returns len(p) and a nil error. Read should not be called concurrently with any other Rand method. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand#lockedSource",
-              "documentation": {
-                "identifier": "lockedSource",
-                "newPage": false,
-                "searchKey": "rand.lockedSource",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type lockedSource struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype lockedSource struct {\n\tlk  sync.Mutex\n\tsrc *rngSource\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/math/rand#lockedSource.Int63",
-                    "documentation": {
-                      "identifier": "lockedSource.Int63",
-                      "newPage": false,
-                      "searchKey": "rand.lockedSource.Int63",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *lockedSource) Int63() (n int64)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *lockedSource) Int63() (n int64)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/math/rand#lockedSource.Uint64",
-                    "documentation": {
-                      "identifier": "lockedSource.Uint64",
-                      "newPage": false,
-                      "searchKey": "rand.lockedSource.Uint64",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *lockedSource) Uint64() (n uint64)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *lockedSource) Uint64() (n uint64)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/math/rand#lockedSource.Seed",
-                    "documentation": {
-                      "identifier": "lockedSource.Seed",
-                      "newPage": false,
-                      "searchKey": "rand.lockedSource.Seed",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *lockedSource) Seed(seed int64)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *lockedSource) Seed(seed int64)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/math/rand#lockedSource.seedPos",
-                    "documentation": {
-                      "identifier": "lockedSource.seedPos",
-                      "newPage": false,
-                      "searchKey": "rand.lockedSource.seedPos",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *lockedSource) seedPos(seed int64, readPos *int8)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *lockedSource) seedPos(seed int64, readPos *int8)\n```\n\nseedPos implements Seed for a lockedSource without a race condition. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/math/rand#lockedSource.read",
-                    "documentation": {
-                      "identifier": "lockedSource.read",
-                      "newPage": false,
-                      "searchKey": "rand.lockedSource.read",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *lockedSource) read(p []byte, readVal *int64, readPos *int8) (n int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *lockedSource) read(p []byte, readVal *int64, readPos *int8) (n int, err error)\n```\n\nread implements Read for a lockedSource without a race condition. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand#rngSource",
-              "documentation": {
-                "identifier": "rngSource",
-                "newPage": false,
-                "searchKey": "rand.rngSource",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type rngSource struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype rngSource struct {\n\ttap  int           // index into vec\n\tfeed int           // index into vec\n\tvec  [rngLen]int64 // current feedback register\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/math/rand#rngSource.Seed",
-                    "documentation": {
-                      "identifier": "rngSource.Seed",
-                      "newPage": false,
-                      "searchKey": "rand.rngSource.Seed",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (rng *rngSource) Seed(seed int64)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (rng *rngSource) Seed(seed int64)\n```\n\nSeed uses the provided seed value to initialize the generator to a deterministic state. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/math/rand#rngSource.Int63",
-                    "documentation": {
-                      "identifier": "rngSource.Int63",
-                      "newPage": false,
-                      "searchKey": "rand.rngSource.Int63",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (rng *rngSource) Int63() int64"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (rng *rngSource) Int63() int64\n```\n\nInt63 returns a non-negative pseudo-random 63-bit integer as an int64. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/math/rand#rngSource.Uint64",
-                    "documentation": {
-                      "identifier": "rngSource.Uint64",
-                      "newPage": false,
-                      "searchKey": "rand.rngSource.Uint64",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (rng *rngSource) Uint64() uint64"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (rng *rngSource) Uint64() uint64\n```\n\nUint64 returns a non-negative pseudo-random 64-bit integer as an uint64. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/math/rand#Zipf",
               "documentation": {
                 "identifier": "Zipf",
                 "newPage": false,
                 "searchKey": "rand.Zipf",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1096,7 +964,9 @@
                       "identifier": "NewZipf",
                       "newPage": false,
                       "searchKey": "rand.NewZipf",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1111,12 +981,35 @@
                 },
                 {
                   "node": {
+                    "pathID": "/math/rand#Zipf.Uint64",
+                    "documentation": {
+                      "identifier": "Zipf.Uint64",
+                      "newPage": false,
+                      "searchKey": "rand.Zipf.Uint64",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (z *Zipf) Uint64() uint64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (z *Zipf) Uint64() uint64\n```\n\nUint64 returns a value drawn from the Zipf distribution described by the Zipf object. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/math/rand#Zipf.h",
                     "documentation": {
                       "identifier": "Zipf.h",
                       "newPage": false,
                       "searchKey": "rand.Zipf.h",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1139,6 +1032,7 @@
                       "newPage": false,
                       "searchKey": "rand.Zipf.hinv",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1152,23 +1046,235 @@
                     },
                     "children": null
                   }
-                },
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand#lockedSource",
+              "documentation": {
+                "identifier": "lockedSource",
+                "newPage": false,
+                "searchKey": "rand.lockedSource",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type lockedSource struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype lockedSource struct {\n\tlk  sync.Mutex\n\tsrc *rngSource\n}\n```\n\n"
+              },
+              "children": [
                 {
                   "node": {
-                    "pathID": "/math/rand#Zipf.Uint64",
+                    "pathID": "/math/rand#lockedSource.Int63",
                     "documentation": {
-                      "identifier": "Zipf.Uint64",
+                      "identifier": "lockedSource.Int63",
                       "newPage": false,
-                      "searchKey": "rand.Zipf.Uint64",
-                      "tags": null
+                      "searchKey": "rand.lockedSource.Int63",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (z *Zipf) Uint64() uint64"
+                      "value": "func (r *lockedSource) Int63() (n int64)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (z *Zipf) Uint64() uint64\n```\n\nUint64 returns a value drawn from the Zipf distribution described by the Zipf object. \n\n"
+                      "value": "```Go\nfunc (r *lockedSource) Int63() (n int64)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/math/rand#lockedSource.Seed",
+                    "documentation": {
+                      "identifier": "lockedSource.Seed",
+                      "newPage": false,
+                      "searchKey": "rand.lockedSource.Seed",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *lockedSource) Seed(seed int64)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *lockedSource) Seed(seed int64)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/math/rand#lockedSource.Uint64",
+                    "documentation": {
+                      "identifier": "lockedSource.Uint64",
+                      "newPage": false,
+                      "searchKey": "rand.lockedSource.Uint64",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *lockedSource) Uint64() (n uint64)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *lockedSource) Uint64() (n uint64)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/math/rand#lockedSource.read",
+                    "documentation": {
+                      "identifier": "lockedSource.read",
+                      "newPage": false,
+                      "searchKey": "rand.lockedSource.read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *lockedSource) read(p []byte, readVal *int64, readPos *int8) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *lockedSource) read(p []byte, readVal *int64, readPos *int8) (n int, err error)\n```\n\nread implements Read for a lockedSource without a race condition. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/math/rand#lockedSource.seedPos",
+                    "documentation": {
+                      "identifier": "lockedSource.seedPos",
+                      "newPage": false,
+                      "searchKey": "rand.lockedSource.seedPos",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *lockedSource) seedPos(seed int64, readPos *int8)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *lockedSource) seedPos(seed int64, readPos *int8)\n```\n\nseedPos implements Seed for a lockedSource without a race condition. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand#rngSource",
+              "documentation": {
+                "identifier": "rngSource",
+                "newPage": false,
+                "searchKey": "rand.rngSource",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type rngSource struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype rngSource struct {\n\ttap  int           // index into vec\n\tfeed int           // index into vec\n\tvec  [rngLen]int64 // current feedback register\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/math/rand#rngSource.Int63",
+                    "documentation": {
+                      "identifier": "rngSource.Int63",
+                      "newPage": false,
+                      "searchKey": "rand.rngSource.Int63",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rng *rngSource) Int63() int64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rng *rngSource) Int63() int64\n```\n\nInt63 returns a non-negative pseudo-random 63-bit integer as an int64. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/math/rand#rngSource.Seed",
+                    "documentation": {
+                      "identifier": "rngSource.Seed",
+                      "newPage": false,
+                      "searchKey": "rand.rngSource.Seed",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rng *rngSource) Seed(seed int64)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rng *rngSource) Seed(seed int64)\n```\n\nSeed uses the provided seed value to initialize the generator to a deterministic state. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/math/rand#rngSource.Uint64",
+                    "documentation": {
+                      "identifier": "rngSource.Uint64",
+                      "newPage": false,
+                      "searchKey": "rand.rngSource.Uint64",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rng *rngSource) Uint64() uint64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rng *rngSource) Uint64() uint64\n```\n\nUint64 returns a non-negative pseudo-random 64-bit integer as an uint64. \n\n"
                     },
                     "children": null
                   }
@@ -1186,7 +1292,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1199,12 +1307,434 @@
         "children": [
           {
             "node": {
+              "pathID": "/math/rand#ExpFloat64",
+              "documentation": {
+                "identifier": "ExpFloat64",
+                "newPage": false,
+                "searchKey": "rand.ExpFloat64",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExpFloat64() float64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExpFloat64() float64\n```\n\nExpFloat64 returns an exponentially distributed float64 in the range (0, +math.MaxFloat64] with an exponential distribution whose rate parameter (lambda) is 1 and whose mean is 1/lambda (1) from the default Source. To produce a distribution with a different rate parameter, callers can adjust the output using: \n\n```\nsample = ExpFloat64() / desiredRateParameter\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand#Float32",
+              "documentation": {
+                "identifier": "Float32",
+                "newPage": false,
+                "searchKey": "rand.Float32",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Float32() float32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Float32() float32\n```\n\nFloat32 returns, as a float32, a pseudo-random number in the half-open interval [0.0,1.0) from the default Source. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand#Float64",
+              "documentation": {
+                "identifier": "Float64",
+                "newPage": false,
+                "searchKey": "rand.Float64",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Float64() float64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Float64() float64\n```\n\nFloat64 returns, as a float64, a pseudo-random number in the half-open interval [0.0,1.0) from the default Source. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand#GetExponentialDistributionParameters",
+              "documentation": {
+                "identifier": "GetExponentialDistributionParameters",
+                "newPage": false,
+                "searchKey": "rand.GetExponentialDistributionParameters",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetExponentialDistributionParameters() (float64, [256]uint32, [256]float32, [256]float32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetExponentialDistributionParameters() (float64, [256]uint32, [256]float32, [256]float32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand#GetNormalDistributionParameters",
+              "documentation": {
+                "identifier": "GetNormalDistributionParameters",
+                "newPage": false,
+                "searchKey": "rand.GetNormalDistributionParameters",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetNormalDistributionParameters() (float64, [128]uint32, [128]float32, [128]float32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetNormalDistributionParameters() (float64, [128]uint32, [128]float32, [128]float32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand#Int",
+              "documentation": {
+                "identifier": "Int",
+                "newPage": false,
+                "searchKey": "rand.Int",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Int() int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Int() int\n```\n\nInt returns a non-negative pseudo-random int from the default Source. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand#Int31",
+              "documentation": {
+                "identifier": "Int31",
+                "newPage": false,
+                "searchKey": "rand.Int31",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Int31() int32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Int31() int32\n```\n\nInt31 returns a non-negative pseudo-random 31-bit integer as an int32 from the default Source. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand#Int31n",
+              "documentation": {
+                "identifier": "Int31n",
+                "newPage": false,
+                "searchKey": "rand.Int31n",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Int31n(n int32) int32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Int31n(n int32) int32\n```\n\nInt31n returns, as an int32, a non-negative pseudo-random number in the half-open interval [0,n) from the default Source. It panics if n <= 0. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand#Int31nForTest",
+              "documentation": {
+                "identifier": "Int31nForTest",
+                "newPage": false,
+                "searchKey": "rand.Int31nForTest",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Int31nForTest(r *Rand, n int32) int32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Int31nForTest(r *Rand, n int32) int32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand#Int63",
+              "documentation": {
+                "identifier": "Int63",
+                "newPage": false,
+                "searchKey": "rand.Int63",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Int63() int64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Int63() int64\n```\n\nInt63 returns a non-negative pseudo-random 63-bit integer as an int64 from the default Source. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand#Int63n",
+              "documentation": {
+                "identifier": "Int63n",
+                "newPage": false,
+                "searchKey": "rand.Int63n",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Int63n(n int64) int64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Int63n(n int64) int64\n```\n\nInt63n returns, as an int64, a non-negative pseudo-random number in the half-open interval [0,n) from the default Source. It panics if n <= 0. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand#Intn",
+              "documentation": {
+                "identifier": "Intn",
+                "newPage": false,
+                "searchKey": "rand.Intn",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Intn(n int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Intn(n int) int\n```\n\nIntn returns, as an int, a non-negative pseudo-random number in the half-open interval [0,n) from the default Source. It panics if n <= 0. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand#NormFloat64",
+              "documentation": {
+                "identifier": "NormFloat64",
+                "newPage": false,
+                "searchKey": "rand.NormFloat64",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NormFloat64() float64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NormFloat64() float64\n```\n\nNormFloat64 returns a normally distributed float64 in the range [-math.MaxFloat64, +math.MaxFloat64] with standard normal distribution (mean = 0, stddev = 1) from the default Source. To produce a different normal distribution, callers can adjust the output using: \n\n```\nsample = NormFloat64() * desiredStdDev + desiredMean\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand#Perm",
+              "documentation": {
+                "identifier": "Perm",
+                "newPage": false,
+                "searchKey": "rand.Perm",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Perm(n int) []int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Perm(n int) []int\n```\n\nPerm returns, as a slice of n ints, a pseudo-random permutation of the integers in the half-open interval [0,n) from the default Source. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand#Read",
+              "documentation": {
+                "identifier": "Read",
+                "newPage": false,
+                "searchKey": "rand.Read",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Read(p []byte) (n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Read(p []byte) (n int, err error)\n```\n\nRead generates len(p) random bytes from the default Source and writes them into p. It always returns len(p) and a nil error. Read, unlike the Rand.Read method, is safe for concurrent use. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand#Seed",
+              "documentation": {
+                "identifier": "Seed",
+                "newPage": false,
+                "searchKey": "rand.Seed",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Seed(seed int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Seed(seed int64)\n```\n\nSeed uses the provided seed value to initialize the default Source to a deterministic state. If Seed is not called, the generator behaves as if seeded by Seed(1). Seed values that have the same remainder when divided by 2³¹-1 generate the same pseudo-random sequence. Seed, unlike the Rand.Seed method, is safe for concurrent use. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand#Shuffle",
+              "documentation": {
+                "identifier": "Shuffle",
+                "newPage": false,
+                "searchKey": "rand.Shuffle",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Shuffle(n int, swap func(i, j int))"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Shuffle(n int, swap func(i, j int))\n```\n\nShuffle pseudo-randomizes the order of elements using the default Source. n is the number of elements. Shuffle panics if n < 0. swap swaps the elements with indexes i and j. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand#Uint32",
+              "documentation": {
+                "identifier": "Uint32",
+                "newPage": false,
+                "searchKey": "rand.Uint32",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Uint32() uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Uint32() uint32\n```\n\nUint32 returns a pseudo-random 32-bit value as a uint32 from the default Source. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand#Uint64",
+              "documentation": {
+                "identifier": "Uint64",
+                "newPage": false,
+                "searchKey": "rand.Uint64",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Uint64() uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Uint64() uint64\n```\n\nUint64 returns a pseudo-random 64-bit value as a uint64 from the default Source. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/rand#absInt32",
               "documentation": {
                 "identifier": "absInt32",
                 "newPage": false,
                 "searchKey": "rand.absInt32",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1227,6 +1757,7 @@
                 "newPage": false,
                 "searchKey": "rand.read",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1243,332 +1774,13 @@
           },
           {
             "node": {
-              "pathID": "/math/rand#Seed",
-              "documentation": {
-                "identifier": "Seed",
-                "newPage": false,
-                "searchKey": "rand.Seed",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Seed(seed int64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Seed(seed int64)\n```\n\nSeed uses the provided seed value to initialize the default Source to a deterministic state. If Seed is not called, the generator behaves as if seeded by Seed(1). Seed values that have the same remainder when divided by 2³¹-1 generate the same pseudo-random sequence. Seed, unlike the Rand.Seed method, is safe for concurrent use. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand#Int63",
-              "documentation": {
-                "identifier": "Int63",
-                "newPage": false,
-                "searchKey": "rand.Int63",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Int63() int64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Int63() int64\n```\n\nInt63 returns a non-negative pseudo-random 63-bit integer as an int64 from the default Source. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand#Uint32",
-              "documentation": {
-                "identifier": "Uint32",
-                "newPage": false,
-                "searchKey": "rand.Uint32",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Uint32() uint32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Uint32() uint32\n```\n\nUint32 returns a pseudo-random 32-bit value as a uint32 from the default Source. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand#Uint64",
-              "documentation": {
-                "identifier": "Uint64",
-                "newPage": false,
-                "searchKey": "rand.Uint64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Uint64() uint64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Uint64() uint64\n```\n\nUint64 returns a pseudo-random 64-bit value as a uint64 from the default Source. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand#Int31",
-              "documentation": {
-                "identifier": "Int31",
-                "newPage": false,
-                "searchKey": "rand.Int31",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Int31() int32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Int31() int32\n```\n\nInt31 returns a non-negative pseudo-random 31-bit integer as an int32 from the default Source. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand#Int",
-              "documentation": {
-                "identifier": "Int",
-                "newPage": false,
-                "searchKey": "rand.Int",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Int() int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Int() int\n```\n\nInt returns a non-negative pseudo-random int from the default Source. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand#Int63n",
-              "documentation": {
-                "identifier": "Int63n",
-                "newPage": false,
-                "searchKey": "rand.Int63n",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Int63n(n int64) int64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Int63n(n int64) int64\n```\n\nInt63n returns, as an int64, a non-negative pseudo-random number in the half-open interval [0,n) from the default Source. It panics if n <= 0. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand#Int31n",
-              "documentation": {
-                "identifier": "Int31n",
-                "newPage": false,
-                "searchKey": "rand.Int31n",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Int31n(n int32) int32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Int31n(n int32) int32\n```\n\nInt31n returns, as an int32, a non-negative pseudo-random number in the half-open interval [0,n) from the default Source. It panics if n <= 0. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand#Intn",
-              "documentation": {
-                "identifier": "Intn",
-                "newPage": false,
-                "searchKey": "rand.Intn",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Intn(n int) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Intn(n int) int\n```\n\nIntn returns, as an int, a non-negative pseudo-random number in the half-open interval [0,n) from the default Source. It panics if n <= 0. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand#Float64",
-              "documentation": {
-                "identifier": "Float64",
-                "newPage": false,
-                "searchKey": "rand.Float64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Float64() float64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Float64() float64\n```\n\nFloat64 returns, as a float64, a pseudo-random number in the half-open interval [0.0,1.0) from the default Source. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand#Float32",
-              "documentation": {
-                "identifier": "Float32",
-                "newPage": false,
-                "searchKey": "rand.Float32",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Float32() float32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Float32() float32\n```\n\nFloat32 returns, as a float32, a pseudo-random number in the half-open interval [0.0,1.0) from the default Source. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand#Perm",
-              "documentation": {
-                "identifier": "Perm",
-                "newPage": false,
-                "searchKey": "rand.Perm",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Perm(n int) []int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Perm(n int) []int\n```\n\nPerm returns, as a slice of n ints, a pseudo-random permutation of the integers in the half-open interval [0,n) from the default Source. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand#Shuffle",
-              "documentation": {
-                "identifier": "Shuffle",
-                "newPage": false,
-                "searchKey": "rand.Shuffle",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Shuffle(n int, swap func(i, j int))"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Shuffle(n int, swap func(i, j int))\n```\n\nShuffle pseudo-randomizes the order of elements using the default Source. n is the number of elements. Shuffle panics if n < 0. swap swaps the elements with indexes i and j. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand#Read",
-              "documentation": {
-                "identifier": "Read",
-                "newPage": false,
-                "searchKey": "rand.Read",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Read(p []byte) (n int, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Read(p []byte) (n int, err error)\n```\n\nRead generates len(p) random bytes from the default Source and writes them into p. It always returns len(p) and a nil error. Read, unlike the Rand.Read method, is safe for concurrent use. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand#NormFloat64",
-              "documentation": {
-                "identifier": "NormFloat64",
-                "newPage": false,
-                "searchKey": "rand.NormFloat64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func NormFloat64() float64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc NormFloat64() float64\n```\n\nNormFloat64 returns a normally distributed float64 in the range [-math.MaxFloat64, +math.MaxFloat64] with standard normal distribution (mean = 0, stddev = 1) from the default Source. To produce a different normal distribution, callers can adjust the output using: \n\n```\nsample = NormFloat64() * desiredStdDev + desiredMean\n\n```\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand#ExpFloat64",
-              "documentation": {
-                "identifier": "ExpFloat64",
-                "newPage": false,
-                "searchKey": "rand.ExpFloat64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExpFloat64() float64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExpFloat64() float64\n```\n\nExpFloat64 returns an exponentially distributed float64 in the range (0, +math.MaxFloat64] with an exponential distribution whose rate parameter (lambda) is 1 and whose mean is 1/lambda (1) from the default Source. To produce a distribution with a different rate parameter, callers can adjust the output using: \n\n```\nsample = ExpFloat64() / desiredRateParameter\n\n```\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/math/rand#seedrand",
               "documentation": {
                 "identifier": "seedrand",
                 "newPage": false,
                 "searchKey": "rand.seedrand",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1579,72 +1791,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc seedrand(x int32) int32\n```\n\nseed rng x[n+1] = 48271 * x[n] mod (2**31 - 1) \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand#Int31nForTest",
-              "documentation": {
-                "identifier": "Int31nForTest",
-                "newPage": false,
-                "searchKey": "rand.Int31nForTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Int31nForTest(r *Rand, n int32) int32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Int31nForTest(r *Rand, n int32) int32\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand#GetNormalDistributionParameters",
-              "documentation": {
-                "identifier": "GetNormalDistributionParameters",
-                "newPage": false,
-                "searchKey": "rand.GetNormalDistributionParameters",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetNormalDistributionParameters() (float64, [128]uint32, [128]float32, [128]float32)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetNormalDistributionParameters() (float64, [128]uint32, [128]float32, [128]float32)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand#GetExponentialDistributionParameters",
-              "documentation": {
-                "identifier": "GetExponentialDistributionParameters",
-                "newPage": false,
-                "searchKey": "rand.GetExponentialDistributionParameters",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetExponentialDistributionParameters() (float64, [256]uint32, [256]float32, [256]float32)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetExponentialDistributionParameters() (float64, [256]uint32, [256]float32, [256]float32)\n```\n\n"
               },
               "children": null
             }

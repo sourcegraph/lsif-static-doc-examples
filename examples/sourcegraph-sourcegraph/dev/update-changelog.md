@@ -5,27 +5,31 @@
 * [Variables](#var)
     * [var newVersion](#newVersion)
 * [Types](#type)
-    * [type changeSubset struct](#changeSubset)
-        * [func parseSubset(sec [][]byte, lineCount int) (*changeSubset, error)](#parseSubset)
-        * [func (css *changeSubset) String() string](#changeSubset.String)
-        * [func (css *changeSubset) any() bool](#changeSubset.any)
+    * [type changeLog struct](#changeLog)
     * [type changeSet struct](#changeSet)
         * [func parseSet(sec [][]byte, lineCount int) (*changeSet, error)](#parseSet)
         * [func (cs *changeSet) String() string](#changeSet.String)
         * [func (cs *changeSet) any() bool](#changeSet.any)
-    * [type changeLog struct](#changeLog)
+    * [type changeSubset struct](#changeSubset)
+        * [func parseSubset(sec [][]byte, lineCount int) (*changeSubset, error)](#parseSubset)
+        * [func (css *changeSubset) String() string](#changeSubset.String)
+        * [func (css *changeSubset) any() bool](#changeSubset.any)
 * [Functions](#func)
-    * [func readLines(path string) ([][]byte, error)](#readLines)
     * [func main()](#main)
+    * [func readLines(path string) ([][]byte, error)](#readLines)
 
 
 ## <a id="var" href="#var">Variables</a>
+
+```
+tags: [package]
+```
 
 ### <a id="newVersion" href="#newVersion">var newVersion</a>
 
 ```
 searchKey: main.newVersion
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
@@ -34,60 +38,31 @@ var newVersion string
 
 ## <a id="type" href="#type">Types</a>
 
-### <a id="changeSubset" href="#changeSubset">type changeSubset struct</a>
+```
+tags: [package]
+```
+
+### <a id="changeLog" href="#changeLog">type changeLog struct</a>
 
 ```
-searchKey: main.changeSubset
-tags: [private]
+searchKey: main.changeLog
+tags: [struct private]
 ```
 
 ```Go
-type changeSubset struct {
-	heading string
-	changes [][]byte
+type changeLog struct {
+	header     [][]byte
+	changeSets []*changeSet
 }
 ```
 
-#### <a id="parseSubset" href="#parseSubset">func parseSubset(sec [][]byte, lineCount int) (*changeSubset, error)</a>
-
-```
-searchKey: main.parseSubset
-tags: [private]
-```
-
-```Go
-func parseSubset(sec [][]byte, lineCount int) (*changeSubset, error)
-```
-
-parseSubset tries to read a change subset, which is a ### header followed by a list of changes. 
-
-#### <a id="changeSubset.String" href="#changeSubset.String">func (css *changeSubset) String() string</a>
-
-```
-searchKey: main.changeSubset.String
-tags: [private]
-```
-
-```Go
-func (css *changeSubset) String() string
-```
-
-#### <a id="changeSubset.any" href="#changeSubset.any">func (css *changeSubset) any() bool</a>
-
-```
-searchKey: main.changeSubset.any
-tags: [private]
-```
-
-```Go
-func (css *changeSubset) any() bool
-```
+a representation of a changeLog in the format we use, which is ## headers per release, roughly. 
 
 ### <a id="changeSet" href="#changeSet">type changeSet struct</a>
 
 ```
 searchKey: main.changeSet
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -102,7 +77,7 @@ type changeSet struct {
 
 ```
 searchKey: main.parseSet
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -113,7 +88,7 @@ func parseSet(sec [][]byte, lineCount int) (*changeSet, error)
 
 ```
 searchKey: main.changeSet.String
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -124,36 +99,84 @@ func (cs *changeSet) String() string
 
 ```
 searchKey: main.changeSet.any
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (cs *changeSet) any() bool
 ```
 
-### <a id="changeLog" href="#changeLog">type changeLog struct</a>
+### <a id="changeSubset" href="#changeSubset">type changeSubset struct</a>
 
 ```
-searchKey: main.changeLog
-tags: [private]
+searchKey: main.changeSubset
+tags: [struct private]
 ```
 
 ```Go
-type changeLog struct {
-	header     [][]byte
-	changeSets []*changeSet
+type changeSubset struct {
+	heading string
+	changes [][]byte
 }
 ```
 
-a representation of a changeLog in the format we use, which is ## headers per release, roughly. 
+#### <a id="parseSubset" href="#parseSubset">func parseSubset(sec [][]byte, lineCount int) (*changeSubset, error)</a>
+
+```
+searchKey: main.parseSubset
+tags: [method private]
+```
+
+```Go
+func parseSubset(sec [][]byte, lineCount int) (*changeSubset, error)
+```
+
+parseSubset tries to read a change subset, which is a ### header followed by a list of changes. 
+
+#### <a id="changeSubset.String" href="#changeSubset.String">func (css *changeSubset) String() string</a>
+
+```
+searchKey: main.changeSubset.String
+tags: [function private]
+```
+
+```Go
+func (css *changeSubset) String() string
+```
+
+#### <a id="changeSubset.any" href="#changeSubset.any">func (css *changeSubset) any() bool</a>
+
+```
+searchKey: main.changeSubset.any
+tags: [function private]
+```
+
+```Go
+func (css *changeSubset) any() bool
+```
 
 ## <a id="func" href="#func">Functions</a>
+
+```
+tags: [package]
+```
+
+### <a id="main" href="#main">func main()</a>
+
+```
+searchKey: main.main
+tags: [function private]
+```
+
+```Go
+func main()
+```
 
 ### <a id="readLines" href="#readLines">func readLines(path string) ([][]byte, error)</a>
 
 ```
 searchKey: main.readLines
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -161,15 +184,4 @@ func readLines(path string) ([][]byte, error)
 ```
 
 readLines() yields the lines of the file as a slice of byte-slices 
-
-### <a id="main" href="#main">func main()</a>
-
-```
-searchKey: main.main
-tags: [private]
-```
-
-```Go
-func main()
-```
 

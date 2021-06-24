@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "cmd/frontend/internal/vfsutil",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,32 +41,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/vfsutil#ArchiveFormatZip",
-              "documentation": {
-                "identifier": "ArchiveFormatZip",
-                "newPage": false,
-                "searchKey": "vfsutil.ArchiveFormatZip",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const ArchiveFormatZip"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst ArchiveFormatZip ArchiveFormat = \"zip\"\n```\n\nArchiveFormatZip indicates a zip archive is desired. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/vfsutil#ArchiveFormatTar",
               "documentation": {
                 "identifier": "ArchiveFormatTar",
                 "newPage": false,
                 "searchKey": "vfsutil.ArchiveFormatTar",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -73,6 +58,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst ArchiveFormatTar ArchiveFormat = \"tar\"\n```\n\nArchiveFormatTar indicates a tar archive is desired. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/vfsutil#ArchiveFormatZip",
+              "documentation": {
+                "identifier": "ArchiveFormatZip",
+                "newPage": false,
+                "searchKey": "vfsutil.ArchiveFormatZip",
+                "tags": [
+                  "constant",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ArchiveFormatZip"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ArchiveFormatZip ArchiveFormat = \"zip\"\n```\n\nArchiveFormatZip indicates a zip archive is desired. \n\n"
               },
               "children": null
             }
@@ -88,6 +96,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -107,7 +116,10 @@
                 "identifier": "ArchiveCacheDir",
                 "newPage": false,
                 "searchKey": "vfsutil.ArchiveCacheDir",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -122,34 +134,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/vfsutil#initOnce",
-              "documentation": {
-                "identifier": "initOnce",
-                "newPage": false,
-                "searchKey": "vfsutil.initOnce",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var initOnce"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar initOnce sync.Once\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/vfsutil#cachedFileEvict",
               "documentation": {
                 "identifier": "cachedFileEvict",
                 "newPage": false,
                 "searchKey": "vfsutil.cachedFileEvict",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -166,34 +158,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/vfsutil#githubRepoRx",
-              "documentation": {
-                "identifier": "githubRepoRx",
-                "newPage": false,
-                "searchKey": "vfsutil.githubRepoRx",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var githubRepoRx"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar githubRepoRx = lazyregexp.New(`^github\\.com/[\\w.-]{1,100}/[\\w.-]{1,100}$`)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/vfsutil#ghFetch",
               "documentation": {
                 "identifier": "ghFetch",
                 "newPage": false,
                 "searchKey": "vfsutil.ghFetch",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -216,6 +188,8 @@
                 "newPage": false,
                 "searchKey": "vfsutil.ghFetchFailed",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -232,12 +206,62 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/vfsutil#githubRepoRx",
+              "documentation": {
+                "identifier": "githubRepoRx",
+                "newPage": false,
+                "searchKey": "vfsutil.githubRepoRx",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var githubRepoRx"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar githubRepoRx = lazyregexp.New(`^github\\.com/[\\w.-]{1,100}/[\\w.-]{1,100}$`)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/vfsutil#gitserverFetchFailedTotal",
+              "documentation": {
+                "identifier": "gitserverFetchFailedTotal",
+                "newPage": false,
+                "searchKey": "vfsutil.gitserverFetchFailedTotal",
+                "tags": [
+                  "variable",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var gitserverFetchFailedTotal"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar gitserverFetchFailedTotal = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/vfsutil#gitserverFetchTotal",
               "documentation": {
                 "identifier": "gitserverFetchTotal",
                 "newPage": false,
                 "searchKey": "vfsutil.gitserverFetchTotal",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -254,22 +278,24 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/vfsutil#gitserverFetchFailedTotal",
+              "pathID": "/cmd/frontend/internal/vfsutil#initOnce",
               "documentation": {
-                "identifier": "gitserverFetchFailedTotal",
+                "identifier": "initOnce",
                 "newPage": false,
-                "searchKey": "vfsutil.gitserverFetchFailedTotal",
+                "searchKey": "vfsutil.initOnce",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var gitserverFetchFailedTotal"
+                "value": "var initOnce"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar gitserverFetchFailedTotal = ...\n```\n\n"
+                "value": "```Go\nvar initOnce sync.Once\n```\n\n"
               },
               "children": null
             }
@@ -285,6 +311,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -299,34 +326,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/vfsutil#archiveReader",
-              "documentation": {
-                "identifier": "archiveReader",
-                "newPage": false,
-                "searchKey": "vfsutil.archiveReader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type archiveReader struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype archiveReader struct {\n\t*zip.Reader\n\tio.Closer\n\tEvicter\n\n\t// StripTopLevelDir specifies whether or not to strip the top level\n\t// directory in the zip archive (e.g. GitHub archives always have 1 top\n\t// level directory \"{repobasename}-{sha}/\").\n\tStripTopLevelDir bool\n\n\t// prefix is the name of the directory that was stripped from the archive\n\t// (or \"\" if nothing was stripped).\n\tprefix string\n}\n```\n\narchiveReader is like zip.ReadCloser, but it allows us to use a custom closer. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/vfsutil#ArchiveFS",
               "documentation": {
                 "identifier": "ArchiveFS",
                 "newPage": false,
                 "searchKey": "vfsutil.ArchiveFS",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -344,7 +351,9 @@
                       "identifier": "NewGitHubRepoVFS",
                       "newPage": false,
                       "searchKey": "vfsutil.NewGitHubRepoVFS",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -364,7 +373,9 @@
                       "identifier": "NewGitServer",
                       "newPage": false,
                       "searchKey": "vfsutil.NewGitServer",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -384,7 +395,9 @@
                       "identifier": "NewZipVFS",
                       "newPage": false,
                       "searchKey": "vfsutil.NewZipVFS",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -399,134 +412,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/cmd/frontend/internal/vfsutil#ArchiveFS.fetchOrWait",
-                    "documentation": {
-                      "identifier": "ArchiveFS.fetchOrWait",
-                      "newPage": false,
-                      "searchKey": "vfsutil.ArchiveFS.fetchOrWait",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (fs *ArchiveFS) fetchOrWait(ctx context.Context) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (fs *ArchiveFS) fetchOrWait(ctx context.Context) error\n```\n\nfetchOrWait initiates the fetch if it has not yet started. Otherwise it waits for it to finish. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/internal/vfsutil#ArchiveFS.Open",
-                    "documentation": {
-                      "identifier": "ArchiveFS.Open",
-                      "newPage": false,
-                      "searchKey": "vfsutil.ArchiveFS.Open",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (fs *ArchiveFS) Open(ctx context.Context, name string) (ctxvfs.ReadSeekCloser, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (fs *ArchiveFS) Open(ctx context.Context, name string) (ctxvfs.ReadSeekCloser, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/internal/vfsutil#ArchiveFS.Lstat",
-                    "documentation": {
-                      "identifier": "ArchiveFS.Lstat",
-                      "newPage": false,
-                      "searchKey": "vfsutil.ArchiveFS.Lstat",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (fs *ArchiveFS) Lstat(ctx context.Context, path string) (fs.FileInfo, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (fs *ArchiveFS) Lstat(ctx context.Context, path string) (fs.FileInfo, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/internal/vfsutil#ArchiveFS.Stat",
-                    "documentation": {
-                      "identifier": "ArchiveFS.Stat",
-                      "newPage": false,
-                      "searchKey": "vfsutil.ArchiveFS.Stat",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (fs *ArchiveFS) Stat(ctx context.Context, path string) (fs.FileInfo, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (fs *ArchiveFS) Stat(ctx context.Context, path string) (fs.FileInfo, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/internal/vfsutil#ArchiveFS.ReadDir",
-                    "documentation": {
-                      "identifier": "ArchiveFS.ReadDir",
-                      "newPage": false,
-                      "searchKey": "vfsutil.ArchiveFS.ReadDir",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (fs *ArchiveFS) ReadDir(ctx context.Context, path string) ([]fs.FileInfo, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (fs *ArchiveFS) ReadDir(ctx context.Context, path string) ([]fs.FileInfo, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/internal/vfsutil#ArchiveFS.ListAllFiles",
-                    "documentation": {
-                      "identifier": "ArchiveFS.ListAllFiles",
-                      "newPage": false,
-                      "searchKey": "vfsutil.ArchiveFS.ListAllFiles",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (fs *ArchiveFS) ListAllFiles(ctx context.Context) ([]string, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (fs *ArchiveFS) ListAllFiles(ctx context.Context) ([]string, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/cmd/frontend/internal/vfsutil#ArchiveFS.Close",
                     "documentation": {
                       "identifier": "ArchiveFS.Close",
                       "newPage": false,
                       "searchKey": "vfsutil.ArchiveFS.Close",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -541,12 +434,124 @@
                 },
                 {
                   "node": {
+                    "pathID": "/cmd/frontend/internal/vfsutil#ArchiveFS.ListAllFiles",
+                    "documentation": {
+                      "identifier": "ArchiveFS.ListAllFiles",
+                      "newPage": false,
+                      "searchKey": "vfsutil.ArchiveFS.ListAllFiles",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fs *ArchiveFS) ListAllFiles(ctx context.Context) ([]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fs *ArchiveFS) ListAllFiles(ctx context.Context) ([]string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/vfsutil#ArchiveFS.Lstat",
+                    "documentation": {
+                      "identifier": "ArchiveFS.Lstat",
+                      "newPage": false,
+                      "searchKey": "vfsutil.ArchiveFS.Lstat",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fs *ArchiveFS) Lstat(ctx context.Context, path string) (fs.FileInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fs *ArchiveFS) Lstat(ctx context.Context, path string) (fs.FileInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/vfsutil#ArchiveFS.Open",
+                    "documentation": {
+                      "identifier": "ArchiveFS.Open",
+                      "newPage": false,
+                      "searchKey": "vfsutil.ArchiveFS.Open",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fs *ArchiveFS) Open(ctx context.Context, name string) (ctxvfs.ReadSeekCloser, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fs *ArchiveFS) Open(ctx context.Context, name string) (ctxvfs.ReadSeekCloser, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/vfsutil#ArchiveFS.ReadDir",
+                    "documentation": {
+                      "identifier": "ArchiveFS.ReadDir",
+                      "newPage": false,
+                      "searchKey": "vfsutil.ArchiveFS.ReadDir",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fs *ArchiveFS) ReadDir(ctx context.Context, path string) ([]fs.FileInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fs *ArchiveFS) ReadDir(ctx context.Context, path string) ([]fs.FileInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/vfsutil#ArchiveFS.Stat",
+                    "documentation": {
+                      "identifier": "ArchiveFS.Stat",
+                      "newPage": false,
+                      "searchKey": "vfsutil.ArchiveFS.Stat",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fs *ArchiveFS) Stat(ctx context.Context, path string) (fs.FileInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fs *ArchiveFS) Stat(ctx context.Context, path string) (fs.FileInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/cmd/frontend/internal/vfsutil#ArchiveFS.String",
                     "documentation": {
                       "identifier": "ArchiveFS.String",
                       "newPage": false,
                       "searchKey": "vfsutil.ArchiveFS.String",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -555,6 +560,97 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (fs *ArchiveFS) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/vfsutil#ArchiveFS.fetchOrWait",
+                    "documentation": {
+                      "identifier": "ArchiveFS.fetchOrWait",
+                      "newPage": false,
+                      "searchKey": "vfsutil.ArchiveFS.fetchOrWait",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fs *ArchiveFS) fetchOrWait(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fs *ArchiveFS) fetchOrWait(ctx context.Context) error\n```\n\nfetchOrWait initiates the fetch if it has not yet started. Otherwise it waits for it to finish. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/vfsutil#ArchiveFormat",
+              "documentation": {
+                "identifier": "ArchiveFormat",
+                "newPage": false,
+                "searchKey": "vfsutil.ArchiveFormat",
+                "tags": [
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ArchiveFormat string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ArchiveFormat string\n```\n\nArchiveFormat represents an archive format (zip, tar, etc). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/vfsutil#ArchiveOpts",
+              "documentation": {
+                "identifier": "ArchiveOpts",
+                "newPage": false,
+                "searchKey": "vfsutil.ArchiveOpts",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ArchiveOpts struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ArchiveOpts struct {\n\t// Repo is the repository whose contents should be fetched.\n\tRepo api.RepoName\n\n\t// Commit is the commit whose contents should be fetched.\n\tCommit api.CommitID\n\n\t// Format indicates the desired archive format.\n\tFormat ArchiveFormat\n\n\t// RelativePath indicates the path of the repository that should be archived.\n\tRelativePath string\n}\n```\n\nArchiveOpts describes options for fetching a repository archive. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/vfsutil#ArchiveOpts.cacheKey",
+                    "documentation": {
+                      "identifier": "ArchiveOpts.cacheKey",
+                      "newPage": false,
+                      "searchKey": "vfsutil.ArchiveOpts.cacheKey",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (opts *ArchiveOpts) cacheKey() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (opts *ArchiveOpts) cacheKey() string\n```\n\n"
                     },
                     "children": null
                   }
@@ -569,7 +665,9 @@
                 "identifier": "Evicter",
                 "newPage": false,
                 "searchKey": "vfsutil.Evicter",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -587,7 +685,9 @@
                       "identifier": "GitServerFetchArchive",
                       "newPage": false,
                       "searchKey": "vfsutil.GitServerFetchArchive",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -605,12 +705,36 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/vfsutil#archiveReader",
+              "documentation": {
+                "identifier": "archiveReader",
+                "newPage": false,
+                "searchKey": "vfsutil.archiveReader",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type archiveReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype archiveReader struct {\n\t*zip.Reader\n\tio.Closer\n\tEvicter\n\n\t// StripTopLevelDir specifies whether or not to strip the top level\n\t// directory in the zip archive (e.g. GitHub archives always have 1 top\n\t// level directory \"{repobasename}-{sha}/\").\n\tStripTopLevelDir bool\n\n\t// prefix is the name of the directory that was stripped from the archive\n\t// (or \"\" if nothing was stripped).\n\tprefix string\n}\n```\n\narchiveReader is like zip.ReadCloser, but it allows us to use a custom closer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/vfsutil#cachedFile",
               "documentation": {
                 "identifier": "cachedFile",
                 "newPage": false,
                 "searchKey": "vfsutil.cachedFile",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -631,6 +755,7 @@
                       "newPage": false,
                       "searchKey": "vfsutil.cachedFetch",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -653,6 +778,7 @@
                       "newPage": false,
                       "searchKey": "vfsutil.cachedFile.Evict",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -663,69 +789,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (f *cachedFile) Evict()\n```\n\nEvict will remove the file from the cache. It does not close File. It also does not protect against other open readers or concurrent fetches. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/vfsutil#ArchiveFormat",
-              "documentation": {
-                "identifier": "ArchiveFormat",
-                "newPage": false,
-                "searchKey": "vfsutil.ArchiveFormat",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ArchiveFormat string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ArchiveFormat string\n```\n\nArchiveFormat represents an archive format (zip, tar, etc). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/vfsutil#ArchiveOpts",
-              "documentation": {
-                "identifier": "ArchiveOpts",
-                "newPage": false,
-                "searchKey": "vfsutil.ArchiveOpts",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ArchiveOpts struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ArchiveOpts struct {\n\t// Repo is the repository whose contents should be fetched.\n\tRepo api.RepoName\n\n\t// Commit is the commit whose contents should be fetched.\n\tCommit api.CommitID\n\n\t// Format indicates the desired archive format.\n\tFormat ArchiveFormat\n\n\t// RelativePath indicates the path of the repository that should be archived.\n\tRelativePath string\n}\n```\n\nArchiveOpts describes options for fetching a repository archive. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/internal/vfsutil#ArchiveOpts.cacheKey",
-                    "documentation": {
-                      "identifier": "ArchiveOpts.cacheKey",
-                      "newPage": false,
-                      "searchKey": "vfsutil.ArchiveOpts.cacheKey",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (opts *ArchiveOpts) cacheKey() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (opts *ArchiveOpts) cacheKey() string\n```\n\n"
                     },
                     "children": null
                   }
@@ -744,6 +807,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -758,22 +822,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/vfsutil#zipNewFileReader",
+              "pathID": "/cmd/frontend/internal/vfsutil#TestGitHubRepoVFS",
               "documentation": {
-                "identifier": "zipNewFileReader",
+                "identifier": "TestGitHubRepoVFS",
                 "newPage": false,
-                "searchKey": "vfsutil.zipNewFileReader",
+                "searchKey": "vfsutil.TestGitHubRepoVFS",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func zipNewFileReader(f *os.File) (*zip.Reader, error)"
+                "value": "func TestGitHubRepoVFS(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc zipNewFileReader(f *os.File) (*zip.Reader, error)\n```\n\n"
+                "value": "```Go\nfunc TestGitHubRepoVFS(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -786,6 +852,7 @@
                 "newPage": false,
                 "searchKey": "vfsutil.initArchiveCacheDir",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -802,22 +869,23 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/vfsutil#TestGitHubRepoVFS",
+              "pathID": "/cmd/frontend/internal/vfsutil#testVFS",
               "documentation": {
-                "identifier": "TestGitHubRepoVFS",
+                "identifier": "testVFS",
                 "newPage": false,
-                "searchKey": "vfsutil.TestGitHubRepoVFS",
+                "searchKey": "vfsutil.testVFS",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestGitHubRepoVFS(t *testing.T)"
+                "value": "func testVFS(t *testing.T, fs ctxvfs.FileSystem, want map[string]string)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestGitHubRepoVFS(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc testVFS(t *testing.T, fs ctxvfs.FileSystem, want map[string]string)\n```\n\n"
               },
               "children": null
             }
@@ -830,6 +898,7 @@
                 "newPage": false,
                 "searchKey": "vfsutil.useEmptyArchiveCacheDir",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -846,22 +915,23 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/vfsutil#testVFS",
+              "pathID": "/cmd/frontend/internal/vfsutil#zipNewFileReader",
               "documentation": {
-                "identifier": "testVFS",
+                "identifier": "zipNewFileReader",
                 "newPage": false,
-                "searchKey": "vfsutil.testVFS",
+                "searchKey": "vfsutil.zipNewFileReader",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func testVFS(t *testing.T, fs ctxvfs.FileSystem, want map[string]string)"
+                "value": "func zipNewFileReader(f *os.File) (*zip.Reader, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc testVFS(t *testing.T, fs ctxvfs.FileSystem, want map[string]string)\n```\n\n"
+                "value": "```Go\nfunc zipNewFileReader(f *os.File) (*zip.Reader, error)\n```\n\n"
               },
               "children": null
             }

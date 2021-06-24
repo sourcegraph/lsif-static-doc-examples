@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/jsonc",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,10 @@
                 "identifier": "DefaultFormatOptions",
                 "newPage": false,
                 "searchKey": "jsonc.DefaultFormatOptions",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -68,6 +73,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -82,92 +88,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/jsonc#Unmarshal",
-              "documentation": {
-                "identifier": "Unmarshal",
-                "newPage": false,
-                "searchKey": "jsonc.Unmarshal",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Unmarshal(text string, v interface{}) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Unmarshal(text string, v interface{}) error\n```\n\nUnmarshal unmarshals the JSON using a fault-tolerant parser that allows comments and trailing commas. If any unrecoverable faults are found, an error is returned. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/jsonc#Parse",
-              "documentation": {
-                "identifier": "Parse",
-                "newPage": false,
-                "searchKey": "jsonc.Parse",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Parse(text string) ([]byte, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Parse(text string) ([]byte, error)\n```\n\nParse converts JSON with comments, trailing commas, and some types of syntax errors into standard JSON. If there is an error that it can't unambiguously resolve, it returns the error. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/jsonc#Normalize",
-              "documentation": {
-                "identifier": "Normalize",
-                "newPage": false,
-                "searchKey": "jsonc.Normalize",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Normalize(input string) []byte"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Normalize(input string) []byte\n```\n\nNormalize is like Parse, except it ignores errors and always returns valid JSON, even if that JSON is a subset of the input. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/jsonc#Remove",
-              "documentation": {
-                "identifier": "Remove",
-                "newPage": false,
-                "searchKey": "jsonc.Remove",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Remove(input string, path ...string) (string, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Remove(input string, path ...string) (string, error)\n```\n\nRemove returns the input JSON with the given path removed. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/jsonc#Edit",
               "documentation": {
                 "identifier": "Edit",
                 "newPage": false,
                 "searchKey": "jsonc.Edit",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -182,32 +110,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/jsonc#ReadProperty",
-              "documentation": {
-                "identifier": "ReadProperty",
-                "newPage": false,
-                "searchKey": "jsonc.ReadProperty",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ReadProperty(input, path string) (interface{}, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ReadProperty(input, path string) (interface{}, error)\n```\n\nReadProperty attempts to read the value of the specified path, ignoring parse errors. it will only error if the path doesn't exist \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/jsonc#Format",
               "documentation": {
                 "identifier": "Format",
                 "newPage": false,
                 "searchKey": "jsonc.Format",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -222,13 +132,127 @@
           },
           {
             "node": {
+              "pathID": "/internal/jsonc#Normalize",
+              "documentation": {
+                "identifier": "Normalize",
+                "newPage": false,
+                "searchKey": "jsonc.Normalize",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Normalize(input string) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Normalize(input string) []byte\n```\n\nNormalize is like Parse, except it ignores errors and always returns valid JSON, even if that JSON is a subset of the input. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/jsonc#Parse",
+              "documentation": {
+                "identifier": "Parse",
+                "newPage": false,
+                "searchKey": "jsonc.Parse",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Parse(text string) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Parse(text string) ([]byte, error)\n```\n\nParse converts JSON with comments, trailing commas, and some types of syntax errors into standard JSON. If there is an error that it can't unambiguously resolve, it returns the error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/jsonc#ReadProperty",
+              "documentation": {
+                "identifier": "ReadProperty",
+                "newPage": false,
+                "searchKey": "jsonc.ReadProperty",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ReadProperty(input, path string) (interface{}, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ReadProperty(input, path string) (interface{}, error)\n```\n\nReadProperty attempts to read the value of the specified path, ignoring parse errors. it will only error if the path doesn't exist \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/jsonc#Remove",
+              "documentation": {
+                "identifier": "Remove",
+                "newPage": false,
+                "searchKey": "jsonc.Remove",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Remove(input string, path ...string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Remove(input string, path ...string) (string, error)\n```\n\nRemove returns the input JSON with the given path removed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/jsonc#TestNormalize",
+              "documentation": {
+                "identifier": "TestNormalize",
+                "newPage": false,
+                "searchKey": "jsonc.TestNormalize",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNormalize(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNormalize(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/jsonc#TestUnmarshal",
               "documentation": {
                 "identifier": "TestUnmarshal",
                 "newPage": false,
                 "searchKey": "jsonc.TestUnmarshal",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -244,22 +268,22 @@
           },
           {
             "node": {
-              "pathID": "/internal/jsonc#TestNormalize",
+              "pathID": "/internal/jsonc#Unmarshal",
               "documentation": {
-                "identifier": "TestNormalize",
+                "identifier": "Unmarshal",
                 "newPage": false,
-                "searchKey": "jsonc.TestNormalize",
+                "searchKey": "jsonc.Unmarshal",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestNormalize(t *testing.T)"
+                "value": "func Unmarshal(text string, v interface{}) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestNormalize(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc Unmarshal(text string, v interface{}) error\n```\n\nUnmarshal unmarshals the JSON using a fault-tolerant parser that allows comments and trailing commas. If any unrecoverable faults are found, an error is returned. \n\n"
               },
               "children": null
             }

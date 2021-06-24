@@ -5,49 +5,24 @@ Package session exports symbols from frontend/internal/session. See the parent p
 ## Index
 
 * [Variables](#var)
+    * [var GetData](#GetData)
+    * [var InvalidateSessionsByID](#InvalidateSessionsByID)
     * [var ResetMockSessionStore](#ResetMockSessionStore)
     * [var SetActor](#SetActor)
     * [var SetData](#SetData)
-    * [var GetData](#GetData)
-    * [var InvalidateSessionsByID](#InvalidateSessionsByID)
 
 
 ## <a id="var" href="#var">Variables</a>
 
-### <a id="ResetMockSessionStore" href="#ResetMockSessionStore">var ResetMockSessionStore</a>
-
 ```
-searchKey: session.ResetMockSessionStore
-```
-
-```Go
-var ResetMockSessionStore = session.ResetMockSessionStore
-```
-
-### <a id="SetActor" href="#SetActor">var SetActor</a>
-
-```
-searchKey: session.SetActor
-```
-
-```Go
-var SetActor = session.SetActor
-```
-
-### <a id="SetData" href="#SetData">var SetData</a>
-
-```
-searchKey: session.SetData
-```
-
-```Go
-var SetData = session.SetData
+tags: [package]
 ```
 
 ### <a id="GetData" href="#GetData">var GetData</a>
 
 ```
 searchKey: session.GetData
+tags: [variable function]
 ```
 
 ```Go
@@ -58,9 +33,43 @@ var GetData = session.GetData
 
 ```
 searchKey: session.InvalidateSessionsByID
+tags: [variable function]
 ```
 
 ```Go
 var InvalidateSessionsByID = session.InvalidateSessionsByID
+```
+
+### <a id="ResetMockSessionStore" href="#ResetMockSessionStore">var ResetMockSessionStore</a>
+
+```
+searchKey: session.ResetMockSessionStore
+tags: [variable function]
+```
+
+```Go
+var ResetMockSessionStore = session.ResetMockSessionStore
+```
+
+### <a id="SetActor" href="#SetActor">var SetActor</a>
+
+```
+searchKey: session.SetActor
+tags: [variable function]
+```
+
+```Go
+var SetActor = session.SetActor
+```
+
+### <a id="SetData" href="#SetData">var SetData</a>
+
+```
+searchKey: session.SetData
+tags: [variable function]
+```
+
+```Go
+var SetData = session.SetData
 ```
 

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "compress/gzip_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/compress/gzip_test#Example_writerReader",
-              "documentation": {
-                "identifier": "Example_writerReader",
-                "newPage": false,
-                "searchKey": "gzip_test.Example_writerReader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Example_writerReader()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Example_writerReader()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/compress/gzip_test#ExampleReader_Multistream",
               "documentation": {
                 "identifier": "ExampleReader_Multistream",
                 "newPage": false,
                 "searchKey": "gzip_test.ExampleReader_Multistream",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -77,6 +58,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc ExampleReader_Multistream()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/compress/gzip_test#Example_writerReader",
+              "documentation": {
+                "identifier": "Example_writerReader",
+                "newPage": false,
+                "searchKey": "gzip_test.Example_writerReader",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_writerReader()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_writerReader()\n```\n\n"
               },
               "children": null
             }

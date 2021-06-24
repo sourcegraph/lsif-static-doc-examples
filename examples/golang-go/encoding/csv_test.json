@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "encoding/csv_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,7 @@
                 "newPage": false,
                 "searchKey": "csv_test.ExampleReader",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -61,34 +64,13 @@
           },
           {
             "node": {
-              "pathID": "/encoding/csv_test#ExampleReader_options",
-              "documentation": {
-                "identifier": "ExampleReader_options",
-                "newPage": false,
-                "searchKey": "csv_test.ExampleReader_options",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleReader_options()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleReader_options()\n```\n\nThis example shows how csv.Reader can be configured to handle other types of CSV files. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/encoding/csv_test#ExampleReader_ReadAll",
               "documentation": {
                 "identifier": "ExampleReader_ReadAll",
                 "newPage": false,
                 "searchKey": "csv_test.ExampleReader_ReadAll",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -105,12 +87,36 @@
           },
           {
             "node": {
+              "pathID": "/encoding/csv_test#ExampleReader_options",
+              "documentation": {
+                "identifier": "ExampleReader_options",
+                "newPage": false,
+                "searchKey": "csv_test.ExampleReader_options",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleReader_options()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleReader_options()\n```\n\nThis example shows how csv.Reader can be configured to handle other types of CSV files. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/encoding/csv_test#ExampleWriter",
               "documentation": {
                 "identifier": "ExampleWriter",
                 "newPage": false,
                 "searchKey": "csv_test.ExampleWriter",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -133,6 +139,7 @@
                 "newPage": false,
                 "searchKey": "csv_test.ExampleWriter_WriteAll",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "cmd/frontend/internal/cli",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "cli.corsAllowHeader",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -67,6 +71,8 @@
                 "newPage": false,
                 "searchKey": "cli.logoColor",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -89,6 +95,8 @@
                 "newPage": false,
                 "searchKey": "cli.skipSysReqsEnvVar",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -114,6 +122,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -128,132 +137,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/cli#metricConfigOverrideUpdates",
+              "pathID": "/cmd/frontend/internal/cli#devExtension",
               "documentation": {
-                "identifier": "metricConfigOverrideUpdates",
+                "identifier": "devExtension",
                 "newPage": false,
-                "searchKey": "cli.metricConfigOverrideUpdates",
+                "searchKey": "cli.devExtension",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var metricConfigOverrideUpdates"
+                "value": "var devExtension"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar metricConfigOverrideUpdates = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/cli#serviceConnectionsVal",
-              "documentation": {
-                "identifier": "serviceConnectionsVal",
-                "newPage": false,
-                "searchKey": "cli.serviceConnectionsVal",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var serviceConnectionsVal"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar serviceConnectionsVal conftypes.ServiceConnections\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/cli#serviceConnectionsOnce",
-              "documentation": {
-                "identifier": "serviceConnectionsOnce",
-                "newPage": false,
-                "searchKey": "cli.serviceConnectionsOnce",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var serviceConnectionsOnce"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar serviceConnectionsOnce sync.Once\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/cli#traceFields",
-              "documentation": {
-                "identifier": "traceFields",
-                "newPage": false,
-                "searchKey": "cli.traceFields",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var traceFields"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar traceFields = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/cli#traceThreshold",
-              "documentation": {
-                "identifier": "traceThreshold",
-                "newPage": false,
-                "searchKey": "cli.traceThreshold",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var traceThreshold"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar traceThreshold = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/cli#printLogo",
-              "documentation": {
-                "identifier": "printLogo",
-                "newPage": false,
-                "searchKey": "cli.printLogo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var printLogo"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar printLogo, _ = ...\n```\n\n"
+                "value": "```Go\nvar devExtension = \"chrome-extension://bmfbcejdknlknpncfpeloejonjoledha\"\n```\n\ndev browser browser extension ID. You can find this by going to chrome://extensions \n\n"
               },
               "children": null
             }
@@ -266,6 +167,8 @@
                 "newPage": false,
                 "searchKey": "cli.httpAddr",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -288,6 +191,8 @@
                 "newPage": false,
                 "searchKey": "cli.httpAddrInternal",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -304,12 +209,38 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/cli#metricConfigOverrideUpdates",
+              "documentation": {
+                "identifier": "metricConfigOverrideUpdates",
+                "newPage": false,
+                "searchKey": "cli.metricConfigOverrideUpdates",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var metricConfigOverrideUpdates"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar metricConfigOverrideUpdates = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/cli#nginxAddr",
               "documentation": {
                 "identifier": "nginxAddr",
                 "newPage": false,
                 "searchKey": "cli.nginxAddr",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -326,22 +257,24 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/cli#devExtension",
+              "pathID": "/cmd/frontend/internal/cli#printLogo",
               "documentation": {
-                "identifier": "devExtension",
+                "identifier": "printLogo",
                 "newPage": false,
-                "searchKey": "cli.devExtension",
+                "searchKey": "cli.printLogo",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var devExtension"
+                "value": "var printLogo"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar devExtension = \"chrome-extension://bmfbcejdknlknpncfpeloejonjoledha\"\n```\n\ndev browser browser extension ID. You can find this by going to chrome://extensions \n\n"
+                "value": "```Go\nvar printLogo, _ = ...\n```\n\n"
               },
               "children": null
             }
@@ -354,6 +287,8 @@
                 "newPage": false,
                 "searchKey": "cli.prodExtension",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -370,12 +305,62 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/cli#serviceConnectionsOnce",
+              "documentation": {
+                "identifier": "serviceConnectionsOnce",
+                "newPage": false,
+                "searchKey": "cli.serviceConnectionsOnce",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var serviceConnectionsOnce"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar serviceConnectionsOnce sync.Once\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli#serviceConnectionsVal",
+              "documentation": {
+                "identifier": "serviceConnectionsVal",
+                "newPage": false,
+                "searchKey": "cli.serviceConnectionsVal",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var serviceConnectionsVal"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar serviceConnectionsVal conftypes.ServiceConnections\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/cli#skipSysReqsEnv",
               "documentation": {
                 "identifier": "skipSysReqsEnv",
                 "newPage": false,
                 "searchKey": "cli.skipSysReqsEnv",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -386,6 +371,54 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar skipSysReqsEnv = env.Get(skipSysReqsEnvVar, \"false\", \"skip system requirement checks\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli#traceFields",
+              "documentation": {
+                "identifier": "traceFields",
+                "newPage": false,
+                "searchKey": "cli.traceFields",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var traceFields"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar traceFields = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli#traceThreshold",
+              "documentation": {
+                "identifier": "traceThreshold",
+                "newPage": false,
+                "searchKey": "cli.traceThreshold",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var traceThreshold"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar traceThreshold = ...\n```\n\n"
               },
               "children": null
             }
@@ -401,6 +434,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -421,6 +455,7 @@
                 "newPage": false,
                 "searchKey": "cli.configurationSource",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -441,6 +476,7 @@
                       "newPage": false,
                       "searchKey": "cli.configurationSource.Read",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -463,6 +499,7 @@
                       "newPage": false,
                       "searchKey": "cli.configurationSource.Write",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -491,6 +528,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -505,430 +543,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/cli#printConfigValidation",
-              "documentation": {
-                "identifier": "printConfigValidation",
-                "newPage": false,
-                "searchKey": "cli.printConfigValidation",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func printConfigValidation()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc printConfigValidation()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/cli#overrideSiteConfig",
-              "documentation": {
-                "identifier": "overrideSiteConfig",
-                "newPage": false,
-                "searchKey": "cli.overrideSiteConfig",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func overrideSiteConfig(ctx context.Context) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc overrideSiteConfig(ctx context.Context) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/cli#overrideGlobalSettings",
-              "documentation": {
-                "identifier": "overrideGlobalSettings",
-                "newPage": false,
-                "searchKey": "cli.overrideGlobalSettings",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func overrideGlobalSettings(ctx context.Context, db dbutil.DB) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc overrideGlobalSettings(ctx context.Context, db dbutil.DB) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/cli#overrideExtSvcConfig",
-              "documentation": {
-                "identifier": "overrideExtSvcConfig",
-                "newPage": false,
-                "searchKey": "cli.overrideExtSvcConfig",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func overrideExtSvcConfig(ctx context.Context, db dbutil.DB) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc overrideExtSvcConfig(ctx context.Context, db dbutil.DB) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/cli#watchUpdate",
-              "documentation": {
-                "identifier": "watchUpdate",
-                "newPage": false,
-                "searchKey": "cli.watchUpdate",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func watchUpdate(ctx context.Context, path string, update func(context.Context) error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc watchUpdate(ctx context.Context, path string, update func(context.Context) error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/cli#watchPaths",
-              "documentation": {
-                "identifier": "watchPaths",
-                "newPage": false,
-                "searchKey": "cli.watchPaths",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func watchPaths(ctx context.Context, paths ...string) (<-chan error, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc watchPaths(ctx context.Context, paths ...string) (<-chan error, error)\n```\n\nwatchPaths returns a channel which watches the non-empty paths. Whenever any path changes a nil error is sent down chan. If an error occurs it is sent. chan is closed when ctx is Done. \n\nNote: This can send many events even if the file content hasn't changed. For example chmod events are sent. Another is a rename is two events for watcher (remove and create). Additionally if a file is removed the watch is removed. Even if a file with the same name is created in its place later. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/cli#serviceConnections",
-              "documentation": {
-                "identifier": "serviceConnections",
-                "newPage": false,
-                "searchKey": "cli.serviceConnections",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func serviceConnections() conftypes.ServiceConnections"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc serviceConnections() conftypes.ServiceConnections\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/cli#gitServers",
-              "documentation": {
-                "identifier": "gitServers",
-                "newPage": false,
-                "searchKey": "cli.gitServers",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func gitServers() []string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc gitServers() []string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/cli#comparePostgresDSNs",
-              "documentation": {
-                "identifier": "comparePostgresDSNs",
-                "newPage": false,
-                "searchKey": "cli.comparePostgresDSNs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func comparePostgresDSNs(dsn1, dsn2 string) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc comparePostgresDSNs(dsn1, dsn2 string) error\n```\n\ncomparePostgresDSNs returns an error if one of the given Postgres DSN values are not a valid URL, or if they are both valid URLs but point to the same database. We consider two DSNs to be the same when they specify the same host, port, and path. It's possible that different hosts/ports map to the same physical machine, so we could conceivably return false negatives here and the tricksy site-admin may have pulled the wool over our eyes. This shouldn't actually affect anything operationally in the near-term, but may just make migrations harder when we need to have them manually separate the data. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/cli#newExternalHTTPHandler",
-              "documentation": {
-                "identifier": "newExternalHTTPHandler",
-                "newPage": false,
-                "searchKey": "cli.newExternalHTTPHandler",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func newExternalHTTPHandler(db dbutil.DB, schema *graphql.Schema, gitHubWebhook webhooks.Registerer, gitLabWebhook, bitbucketServerWebhook http.Handler, newCodeIntelUploadHandler enterprise.NewCodeIntelUploadHandler, newExecutorProxyHandler enterprise.NewExecutorProxyHandler, rateLimitWatcher graphqlbackend.LimitWatcher) (http.Handler, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc newExternalHTTPHandler(db dbutil.DB, schema *graphql.Schema, gitHubWebhook webhooks.Registerer, gitLabWebhook, bitbucketServerWebhook http.Handler, newCodeIntelUploadHandler enterprise.NewCodeIntelUploadHandler, newExecutorProxyHandler enterprise.NewExecutorProxyHandler, rateLimitWatcher graphqlbackend.LimitWatcher) (http.Handler, error)\n```\n\nnewExternalHTTPHandler creates and returns the HTTP handler that serves the app and API pages to external clients. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/cli#healthCheckMiddleware",
-              "documentation": {
-                "identifier": "healthCheckMiddleware",
-                "newPage": false,
-                "searchKey": "cli.healthCheckMiddleware",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func healthCheckMiddleware(next http.Handler) http.Handler"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc healthCheckMiddleware(next http.Handler) http.Handler\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/cli#newInternalHTTPHandler",
-              "documentation": {
-                "identifier": "newInternalHTTPHandler",
-                "newPage": false,
-                "searchKey": "cli.newInternalHTTPHandler",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func newInternalHTTPHandler(schema *graphql.Schema, db dbutil.DB, newCodeIntelUploadHandler enterprise.NewCodeIntelUploadHandler, rateLimitWatcher graphqlbackend.LimitWatcher) http.Handler"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc newInternalHTTPHandler(schema *graphql.Schema, db dbutil.DB, newCodeIntelUploadHandler enterprise.NewCodeIntelUploadHandler, rateLimitWatcher graphqlbackend.LimitWatcher) http.Handler\n```\n\nnewInternalHTTPHandler creates and returns the HTTP handler for the internal API (accessible to other internal services). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/cli#withInternalActor",
-              "documentation": {
-                "identifier": "withInternalActor",
-                "newPage": false,
-                "searchKey": "cli.withInternalActor",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func withInternalActor(h http.Handler) http.Handler"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc withInternalActor(h http.Handler) http.Handler\n```\n\nwithInternalActor wraps an existing HTTP handler by setting an internal actor in the HTTP request context. \n\n🚨 SECURITY: This should *never* be called to wrap externally accessible handlers (i.e., only use for the internal endpoint), because internal requests will bypass repository permissions checks. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/cli#secureHeadersMiddleware",
-              "documentation": {
-                "identifier": "secureHeadersMiddleware",
-                "newPage": false,
-                "searchKey": "cli.secureHeadersMiddleware",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func secureHeadersMiddleware(next http.Handler) http.Handler"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc secureHeadersMiddleware(next http.Handler) http.Handler\n```\n\nsecureHeadersMiddleware adds and checks for HTTP security-related headers. \n\n🚨 SECURITY: This handler is served to all clients, even on private servers to clients who have not authenticated. It must not reveal any sensitive information. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/cli#isTrustedOrigin",
-              "documentation": {
-                "identifier": "isTrustedOrigin",
-                "newPage": false,
-                "searchKey": "cli.isTrustedOrigin",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func isTrustedOrigin(r *http.Request) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc isTrustedOrigin(r *http.Request) bool\n```\n\nisTrustedOrigin returns whether the HTTP request's Origin is trusted to initiate authenticated cross-origin requests. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/cli#newOutOfBandMigrationRunner",
-              "documentation": {
-                "identifier": "newOutOfBandMigrationRunner",
-                "newPage": false,
-                "searchKey": "cli.newOutOfBandMigrationRunner",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func newOutOfBandMigrationRunner(ctx context.Context, db *sql.DB) *oobmigration.Runner"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc newOutOfBandMigrationRunner(ctx context.Context, db *sql.DB) *oobmigration.Runner\n```\n\nnewOutOfBandMigrationRunner creates and validates an out of band migrator instance. This method may issue a `log.Fatal` when there are migrations left in an unexpected state for the current application version. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/cli#validateOutOfBandMigrationRunner",
-              "documentation": {
-                "identifier": "validateOutOfBandMigrationRunner",
-                "newPage": false,
-                "searchKey": "cli.validateOutOfBandMigrationRunner",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func validateOutOfBandMigrationRunner(ctx context.Context, outOfBandMigrationRunner *oobmigration.Runner)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc validateOutOfBandMigrationRunner(ctx context.Context, outOfBandMigrationRunner *oobmigration.Runner)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/cli#init.serve_cmd.go",
-              "documentation": {
-                "identifier": "init.serve_cmd.go",
-                "newPage": false,
-                "searchKey": "cli.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/cli#defaultExternalURL",
-              "documentation": {
-                "identifier": "defaultExternalURL",
-                "newPage": false,
-                "searchKey": "cli.defaultExternalURL",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func defaultExternalURL(nginxAddr, httpAddr string) *url.URL"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc defaultExternalURL(nginxAddr, httpAddr string) *url.URL\n```\n\ndefaultExternalURL returns the default external URL of the application. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/cli#InitDB",
               "documentation": {
                 "identifier": "InitDB",
                 "newPage": false,
                 "searchKey": "cli.InitDB",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -948,7 +570,9 @@
                 "identifier": "Main",
                 "newPage": false,
                 "searchKey": "cli.Main",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -963,12 +587,221 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/cli#TestServiceConnections",
+              "documentation": {
+                "identifier": "TestServiceConnections",
+                "newPage": false,
+                "searchKey": "cli.TestServiceConnections",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestServiceConnections(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestServiceConnections(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli#checkSysReqs",
+              "documentation": {
+                "identifier": "checkSysReqs",
+                "newPage": false,
+                "searchKey": "cli.checkSysReqs",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkSysReqs(ctx context.Context, w io.Writer) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkSysReqs(ctx context.Context, w io.Writer) error\n```\n\ncheckSysReqs uses package sysreq to check for the presence of system requirements. If any are missing, it prints a message to w and returns a non-nil error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli#comparePostgresDSNs",
+              "documentation": {
+                "identifier": "comparePostgresDSNs",
+                "newPage": false,
+                "searchKey": "cli.comparePostgresDSNs",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func comparePostgresDSNs(dsn1, dsn2 string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc comparePostgresDSNs(dsn1, dsn2 string) error\n```\n\ncomparePostgresDSNs returns an error if one of the given Postgres DSN values are not a valid URL, or if they are both valid URLs but point to the same database. We consider two DSNs to be the same when they specify the same host, port, and path. It's possible that different hosts/ports map to the same physical machine, so we could conceivably return false negatives here and the tricksy site-admin may have pulled the wool over our eyes. This shouldn't actually affect anything operationally in the near-term, but may just make migrations harder when we need to have them manually separate the data. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli#defaultExternalURL",
+              "documentation": {
+                "identifier": "defaultExternalURL",
+                "newPage": false,
+                "searchKey": "cli.defaultExternalURL",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func defaultExternalURL(nginxAddr, httpAddr string) *url.URL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc defaultExternalURL(nginxAddr, httpAddr string) *url.URL\n```\n\ndefaultExternalURL returns the default external URL of the application. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli#gitServers",
+              "documentation": {
+                "identifier": "gitServers",
+                "newPage": false,
+                "searchKey": "cli.gitServers",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func gitServers() []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc gitServers() []string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli#healthCheckMiddleware",
+              "documentation": {
+                "identifier": "healthCheckMiddleware",
+                "newPage": false,
+                "searchKey": "cli.healthCheckMiddleware",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func healthCheckMiddleware(next http.Handler) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc healthCheckMiddleware(next http.Handler) http.Handler\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli#init.serve_cmd.go",
+              "documentation": {
+                "identifier": "init.serve_cmd.go",
+                "newPage": false,
+                "searchKey": "cli.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli#isAllowedOrigin",
+              "documentation": {
+                "identifier": "isAllowedOrigin",
+                "newPage": false,
+                "searchKey": "cli.isAllowedOrigin",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isAllowedOrigin(origin string, allowedOrigins []string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isAllowedOrigin(origin string, allowedOrigins []string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli#isTrustedOrigin",
+              "documentation": {
+                "identifier": "isTrustedOrigin",
+                "newPage": false,
+                "searchKey": "cli.isTrustedOrigin",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isTrustedOrigin(r *http.Request) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isTrustedOrigin(r *http.Request) bool\n```\n\nisTrustedOrigin returns whether the HTTP request's Origin is trusted to initiate authenticated cross-origin requests. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/cli#makeExternalAPI",
               "documentation": {
                 "identifier": "makeExternalAPI",
                 "newPage": false,
                 "searchKey": "cli.makeExternalAPI",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -991,6 +824,7 @@
                 "newPage": false,
                 "searchKey": "cli.makeInternalAPI",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1007,34 +841,13 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/cli#isAllowedOrigin",
-              "documentation": {
-                "identifier": "isAllowedOrigin",
-                "newPage": false,
-                "searchKey": "cli.isAllowedOrigin",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func isAllowedOrigin(origin string, allowedOrigins []string) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc isAllowedOrigin(origin string, allowedOrigins []string) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/cli#makeRateLimitWatcher",
               "documentation": {
                 "identifier": "makeRateLimitWatcher",
                 "newPage": false,
                 "searchKey": "cli.makeRateLimitWatcher",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1051,12 +864,220 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/cli#newExternalHTTPHandler",
+              "documentation": {
+                "identifier": "newExternalHTTPHandler",
+                "newPage": false,
+                "searchKey": "cli.newExternalHTTPHandler",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newExternalHTTPHandler(db dbutil.DB, schema *graphql.Schema, gitHubWebhook webhooks.Registerer, gitLabWebhook, bitbucketServerWebhook http.Handler, newCodeIntelUploadHandler enterprise.NewCodeIntelUploadHandler, newExecutorProxyHandler enterprise.NewExecutorProxyHandler, rateLimitWatcher graphqlbackend.LimitWatcher) (http.Handler, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newExternalHTTPHandler(db dbutil.DB, schema *graphql.Schema, gitHubWebhook webhooks.Registerer, gitLabWebhook, bitbucketServerWebhook http.Handler, newCodeIntelUploadHandler enterprise.NewCodeIntelUploadHandler, newExecutorProxyHandler enterprise.NewExecutorProxyHandler, rateLimitWatcher graphqlbackend.LimitWatcher) (http.Handler, error)\n```\n\nnewExternalHTTPHandler creates and returns the HTTP handler that serves the app and API pages to external clients. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli#newInternalHTTPHandler",
+              "documentation": {
+                "identifier": "newInternalHTTPHandler",
+                "newPage": false,
+                "searchKey": "cli.newInternalHTTPHandler",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newInternalHTTPHandler(schema *graphql.Schema, db dbutil.DB, newCodeIntelUploadHandler enterprise.NewCodeIntelUploadHandler, rateLimitWatcher graphqlbackend.LimitWatcher) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newInternalHTTPHandler(schema *graphql.Schema, db dbutil.DB, newCodeIntelUploadHandler enterprise.NewCodeIntelUploadHandler, rateLimitWatcher graphqlbackend.LimitWatcher) http.Handler\n```\n\nnewInternalHTTPHandler creates and returns the HTTP handler for the internal API (accessible to other internal services). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli#newOutOfBandMigrationRunner",
+              "documentation": {
+                "identifier": "newOutOfBandMigrationRunner",
+                "newPage": false,
+                "searchKey": "cli.newOutOfBandMigrationRunner",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newOutOfBandMigrationRunner(ctx context.Context, db *sql.DB) *oobmigration.Runner"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newOutOfBandMigrationRunner(ctx context.Context, db *sql.DB) *oobmigration.Runner\n```\n\nnewOutOfBandMigrationRunner creates and validates an out of band migrator instance. This method may issue a `log.Fatal` when there are migrations left in an unexpected state for the current application version. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli#overrideExtSvcConfig",
+              "documentation": {
+                "identifier": "overrideExtSvcConfig",
+                "newPage": false,
+                "searchKey": "cli.overrideExtSvcConfig",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func overrideExtSvcConfig(ctx context.Context, db dbutil.DB) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc overrideExtSvcConfig(ctx context.Context, db dbutil.DB) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli#overrideGlobalSettings",
+              "documentation": {
+                "identifier": "overrideGlobalSettings",
+                "newPage": false,
+                "searchKey": "cli.overrideGlobalSettings",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func overrideGlobalSettings(ctx context.Context, db dbutil.DB) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc overrideGlobalSettings(ctx context.Context, db dbutil.DB) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli#overrideSiteConfig",
+              "documentation": {
+                "identifier": "overrideSiteConfig",
+                "newPage": false,
+                "searchKey": "cli.overrideSiteConfig",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func overrideSiteConfig(ctx context.Context) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc overrideSiteConfig(ctx context.Context) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli#printConfigValidation",
+              "documentation": {
+                "identifier": "printConfigValidation",
+                "newPage": false,
+                "searchKey": "cli.printConfigValidation",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func printConfigValidation()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc printConfigValidation()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli#secureHeadersMiddleware",
+              "documentation": {
+                "identifier": "secureHeadersMiddleware",
+                "newPage": false,
+                "searchKey": "cli.secureHeadersMiddleware",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func secureHeadersMiddleware(next http.Handler) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc secureHeadersMiddleware(next http.Handler) http.Handler\n```\n\nsecureHeadersMiddleware adds and checks for HTTP security-related headers. \n\n🚨 SECURITY: This handler is served to all clients, even on private servers to clients who have not authenticated. It must not reveal any sensitive information. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli#serviceConnections",
+              "documentation": {
+                "identifier": "serviceConnections",
+                "newPage": false,
+                "searchKey": "cli.serviceConnections",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serviceConnections() conftypes.ServiceConnections"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serviceConnections() conftypes.ServiceConnections\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/cli#skippedSysReqs",
               "documentation": {
                 "identifier": "skippedSysReqs",
                 "newPage": false,
                 "searchKey": "cli.skippedSysReqs",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1073,44 +1094,92 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/cli#checkSysReqs",
+              "pathID": "/cmd/frontend/internal/cli#validateOutOfBandMigrationRunner",
               "documentation": {
-                "identifier": "checkSysReqs",
+                "identifier": "validateOutOfBandMigrationRunner",
                 "newPage": false,
-                "searchKey": "cli.checkSysReqs",
+                "searchKey": "cli.validateOutOfBandMigrationRunner",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func checkSysReqs(ctx context.Context, w io.Writer) error"
+                "value": "func validateOutOfBandMigrationRunner(ctx context.Context, outOfBandMigrationRunner *oobmigration.Runner)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc checkSysReqs(ctx context.Context, w io.Writer) error\n```\n\ncheckSysReqs uses package sysreq to check for the presence of system requirements. If any are missing, it prints a message to w and returns a non-nil error. \n\n"
+                "value": "```Go\nfunc validateOutOfBandMigrationRunner(ctx context.Context, outOfBandMigrationRunner *oobmigration.Runner)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/cli#TestServiceConnections",
+              "pathID": "/cmd/frontend/internal/cli#watchPaths",
               "documentation": {
-                "identifier": "TestServiceConnections",
+                "identifier": "watchPaths",
                 "newPage": false,
-                "searchKey": "cli.TestServiceConnections",
+                "searchKey": "cli.watchPaths",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestServiceConnections(t *testing.T)"
+                "value": "func watchPaths(ctx context.Context, paths ...string) (<-chan error, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestServiceConnections(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc watchPaths(ctx context.Context, paths ...string) (<-chan error, error)\n```\n\nwatchPaths returns a channel which watches the non-empty paths. Whenever any path changes a nil error is sent down chan. If an error occurs it is sent. chan is closed when ctx is Done. \n\nNote: This can send many events even if the file content hasn't changed. For example chmod events are sent. Another is a rename is two events for watcher (remove and create). Additionally if a file is removed the watch is removed. Even if a file with the same name is created in its place later. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli#watchUpdate",
+              "documentation": {
+                "identifier": "watchUpdate",
+                "newPage": false,
+                "searchKey": "cli.watchUpdate",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func watchUpdate(ctx context.Context, path string, update func(context.Context) error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc watchUpdate(ctx context.Context, path string, update func(context.Context) error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli#withInternalActor",
+              "documentation": {
+                "identifier": "withInternalActor",
+                "newPage": false,
+                "searchKey": "cli.withInternalActor",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func withInternalActor(h http.Handler) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc withInternalActor(h http.Handler) http.Handler\n```\n\nwithInternalActor wraps an existing HTTP handler by setting an internal actor in the HTTP request context. \n\n🚨 SECURITY: This should *never* be called to wrap externally accessible handlers (i.e., only use for the internal endpoint), because internal requests will bypass repository permissions checks. \n\n"
               },
               "children": null
             }

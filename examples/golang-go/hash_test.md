@@ -6,21 +6,21 @@
     * [var marshalTests](#marshalTests)
 * [Functions](#func)
     * [func Example_binaryMarshaler()](#Example_binaryMarshaler)
-    * [func fromHex(s string) []byte](#fromHex)
     * [func TestMarshalHash(t *testing.T)](#TestMarshalHash)
+    * [func fromHex(s string) []byte](#fromHex)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="marshalTests" href="#marshalTests">var marshalTests</a>
 
 ```
 searchKey: hash_test.marshalTests
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
@@ -30,39 +30,39 @@ var marshalTests = ...
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Example_binaryMarshaler" href="#Example_binaryMarshaler">func Example_binaryMarshaler()</a>
 
 ```
 searchKey: hash_test.Example_binaryMarshaler
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func Example_binaryMarshaler()
 ```
 
-### <a id="fromHex" href="#fromHex">func fromHex(s string) []byte</a>
-
-```
-searchKey: hash_test.fromHex
-tags: [private]
-```
-
-```Go
-func fromHex(s string) []byte
-```
-
 ### <a id="TestMarshalHash" href="#TestMarshalHash">func TestMarshalHash(t *testing.T)</a>
 
 ```
 searchKey: hash_test.TestMarshalHash
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestMarshalHash(t *testing.T)
+```
+
+### <a id="fromHex" href="#fromHex">func fromHex(s string) []byte</a>
+
+```
+searchKey: hash_test.fromHex
+tags: [method private]
+```
+
+```Go
+func fromHex(s string) []byte
 ```
 

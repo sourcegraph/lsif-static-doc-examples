@@ -4,7 +4,9 @@
     "identifier": "precise-code-intel-worker",
     "newPage": true,
     "searchKey": "enterprise/cmd/precise-code-intel-worker",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -25,7 +27,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -44,6 +48,8 @@
                 "newPage": false,
                 "searchKey": "main.addr",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -68,7 +74,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -86,7 +94,9 @@
                 "identifier": "Config",
                 "newPage": false,
                 "searchKey": "main.Config",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +114,9 @@
                       "identifier": "Config.Load",
                       "newPage": false,
                       "searchKey": "main.Config.Load",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -130,7 +142,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -143,122 +157,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/cmd/precise-code-intel-worker#main",
-              "documentation": {
-                "identifier": "main",
-                "newPage": false,
-                "searchKey": "main.main",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func main()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc main()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/precise-code-intel-worker#mustInitializeDB",
-              "documentation": {
-                "identifier": "mustInitializeDB",
-                "newPage": false,
-                "searchKey": "main.mustInitializeDB",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func mustInitializeDB() *sql.DB"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc mustInitializeDB() *sql.DB\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/precise-code-intel-worker#mustInitializeCodeIntelDB",
-              "documentation": {
-                "identifier": "mustInitializeCodeIntelDB",
-                "newPage": false,
-                "searchKey": "main.mustInitializeCodeIntelDB",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func mustInitializeCodeIntelDB() *sql.DB"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc mustInitializeCodeIntelDB() *sql.DB\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/precise-code-intel-worker#mustRegisterQueueMetric",
-              "documentation": {
-                "identifier": "mustRegisterQueueMetric",
-                "newPage": false,
-                "searchKey": "main.mustRegisterQueueMetric",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func mustRegisterQueueMetric(observationContext *observation.Context, workerStore dbworkerstore.Store)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc mustRegisterQueueMetric(observationContext *observation.Context, workerStore dbworkerstore.Store)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/precise-code-intel-worker#makeWorkerMetrics",
-              "documentation": {
-                "identifier": "makeWorkerMetrics",
-                "newPage": false,
-                "searchKey": "main.makeWorkerMetrics",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func makeWorkerMetrics(observationContext *observation.Context) workerutil.WorkerMetrics"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc makeWorkerMetrics(observationContext *observation.Context) workerutil.WorkerMetrics\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/precise-code-intel-worker#initializeUploadStore",
               "documentation": {
                 "identifier": "initializeUploadStore",
                 "newPage": false,
                 "searchKey": "main.initializeUploadStore",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -281,6 +186,7 @@
                 "newPage": false,
                 "searchKey": "main.isRequestError",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -291,6 +197,121 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc isRequestError(err error) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/precise-code-intel-worker#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/precise-code-intel-worker#makeWorkerMetrics",
+              "documentation": {
+                "identifier": "makeWorkerMetrics",
+                "newPage": false,
+                "searchKey": "main.makeWorkerMetrics",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeWorkerMetrics(observationContext *observation.Context) workerutil.WorkerMetrics"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeWorkerMetrics(observationContext *observation.Context) workerutil.WorkerMetrics\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/precise-code-intel-worker#mustInitializeCodeIntelDB",
+              "documentation": {
+                "identifier": "mustInitializeCodeIntelDB",
+                "newPage": false,
+                "searchKey": "main.mustInitializeCodeIntelDB",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustInitializeCodeIntelDB() *sql.DB"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustInitializeCodeIntelDB() *sql.DB\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/precise-code-intel-worker#mustInitializeDB",
+              "documentation": {
+                "identifier": "mustInitializeDB",
+                "newPage": false,
+                "searchKey": "main.mustInitializeDB",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustInitializeDB() *sql.DB"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustInitializeDB() *sql.DB\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/precise-code-intel-worker#mustRegisterQueueMetric",
+              "documentation": {
+                "identifier": "mustRegisterQueueMetric",
+                "newPage": false,
+                "searchKey": "main.mustRegisterQueueMetric",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustRegisterQueueMetric(observationContext *observation.Context, workerStore dbworkerstore.Store)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustRegisterQueueMetric(observationContext *observation.Context, workerStore dbworkerstore.Store)\n```\n\n"
               },
               "children": null
             }

@@ -10,14 +10,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="ExampleNewReader" href="#ExampleNewReader">func ExampleNewReader()</a>
 
 ```
 searchKey: quotedprintable_test.ExampleNewReader
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -28,7 +28,7 @@ func ExampleNewReader()
 
 ```
 searchKey: quotedprintable_test.ExampleNewWriter
-tags: [private]
+tags: [function private]
 ```
 
 ```Go

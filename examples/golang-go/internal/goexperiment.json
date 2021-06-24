@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/goexperiment",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,10 @@
                 "identifier": "FieldTrack",
                 "newPage": false,
                 "searchKey": "goexperiment.FieldTrack",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "boolean"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +69,10 @@
                 "identifier": "FieldTrackInt",
                 "newPage": false,
                 "searchKey": "goexperiment.FieldTrackInt",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +92,10 @@
                 "identifier": "PreemptibleLoops",
                 "newPage": false,
                 "searchKey": "goexperiment.PreemptibleLoops",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "boolean"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +115,10 @@
                 "identifier": "PreemptibleLoopsInt",
                 "newPage": false,
                 "searchKey": "goexperiment.PreemptibleLoopsInt",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +138,10 @@
                 "identifier": "Regabi",
                 "newPage": false,
                 "searchKey": "goexperiment.Regabi",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "boolean"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -139,32 +156,15 @@
           },
           {
             "node": {
-              "pathID": "/internal/goexperiment#RegabiInt",
-              "documentation": {
-                "identifier": "RegabiInt",
-                "newPage": false,
-                "searchKey": "goexperiment.RegabiInt",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const RegabiInt"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst RegabiInt = 0\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/goexperiment#RegabiArgs",
               "documentation": {
                 "identifier": "RegabiArgs",
                 "newPage": false,
                 "searchKey": "goexperiment.RegabiArgs",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "boolean"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,7 +184,10 @@
                 "identifier": "RegabiArgsInt",
                 "newPage": false,
                 "searchKey": "goexperiment.RegabiArgsInt",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -204,7 +207,10 @@
                 "identifier": "RegabiDefer",
                 "newPage": false,
                 "searchKey": "goexperiment.RegabiDefer",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "boolean"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -224,7 +230,10 @@
                 "identifier": "RegabiDeferInt",
                 "newPage": false,
                 "searchKey": "goexperiment.RegabiDeferInt",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -244,7 +253,10 @@
                 "identifier": "RegabiG",
                 "newPage": false,
                 "searchKey": "goexperiment.RegabiG",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "boolean"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -264,7 +276,10 @@
                 "identifier": "RegabiGInt",
                 "newPage": false,
                 "searchKey": "goexperiment.RegabiGInt",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -279,12 +294,38 @@
           },
           {
             "node": {
+              "pathID": "/internal/goexperiment#RegabiInt",
+              "documentation": {
+                "identifier": "RegabiInt",
+                "newPage": false,
+                "searchKey": "goexperiment.RegabiInt",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RegabiInt"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RegabiInt = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/goexperiment#RegabiReflect",
               "documentation": {
                 "identifier": "RegabiReflect",
                 "newPage": false,
                 "searchKey": "goexperiment.RegabiReflect",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "boolean"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -304,7 +345,10 @@
                 "identifier": "RegabiReflectInt",
                 "newPage": false,
                 "searchKey": "goexperiment.RegabiReflectInt",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -324,7 +368,10 @@
                 "identifier": "RegabiWrappers",
                 "newPage": false,
                 "searchKey": "goexperiment.RegabiWrappers",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "boolean"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -344,7 +391,10 @@
                 "identifier": "RegabiWrappersInt",
                 "newPage": false,
                 "searchKey": "goexperiment.RegabiWrappersInt",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -364,7 +414,10 @@
                 "identifier": "StaticLockRanking",
                 "newPage": false,
                 "searchKey": "goexperiment.StaticLockRanking",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "boolean"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -384,7 +437,10 @@
                 "identifier": "StaticLockRankingInt",
                 "newPage": false,
                 "searchKey": "goexperiment.StaticLockRankingInt",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -408,6 +464,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -427,7 +484,9 @@
                 "identifier": "Flags",
                 "newPage": false,
                 "searchKey": "goexperiment.Flags",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",

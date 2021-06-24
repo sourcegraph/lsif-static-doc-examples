@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "io_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,9 @@
                 "newPage": false,
                 "searchKey": "io_test.pipeTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -70,6 +75,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -90,6 +96,7 @@
                 "newPage": false,
                 "searchKey": "io_test.Buffer",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -106,484 +113,13 @@
           },
           {
             "node": {
-              "pathID": "/io_test#writeToChecker",
-              "documentation": {
-                "identifier": "writeToChecker",
-                "newPage": false,
-                "searchKey": "io_test.writeToChecker",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type writeToChecker struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype writeToChecker struct {\n\tbytes.Buffer\n\twriteToCalled bool\n}\n```\n\nVersion of bytes.Buffer that checks whether WriteTo was called or not \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/io_test#writeToChecker.WriteTo",
-                    "documentation": {
-                      "identifier": "writeToChecker.WriteTo",
-                      "newPage": false,
-                      "searchKey": "io_test.writeToChecker.WriteTo",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (wt *writeToChecker) WriteTo(w Writer) (int64, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (wt *writeToChecker) WriteTo(w Writer) (int64, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#zeroErrReader",
-              "documentation": {
-                "identifier": "zeroErrReader",
-                "newPage": false,
-                "searchKey": "io_test.zeroErrReader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type zeroErrReader struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype zeroErrReader struct {\n\terr error\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/io_test#zeroErrReader.Read",
-                    "documentation": {
-                      "identifier": "zeroErrReader.Read",
-                      "newPage": false,
-                      "searchKey": "io_test.zeroErrReader.Read",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r zeroErrReader) Read(p []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r zeroErrReader) Read(p []byte) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#errWriter",
-              "documentation": {
-                "identifier": "errWriter",
-                "newPage": false,
-                "searchKey": "io_test.errWriter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type errWriter struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype errWriter struct {\n\terr error\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/io_test#errWriter.Write",
-                    "documentation": {
-                      "identifier": "errWriter.Write",
-                      "newPage": false,
-                      "searchKey": "io_test.errWriter.Write",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (w errWriter) Write([]byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (w errWriter) Write([]byte) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#noReadFrom",
-              "documentation": {
-                "identifier": "noReadFrom",
-                "newPage": false,
-                "searchKey": "io_test.noReadFrom",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type noReadFrom struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype noReadFrom struct {\n\tw Writer\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/io_test#noReadFrom.Write",
-                    "documentation": {
-                      "identifier": "noReadFrom.Write",
-                      "newPage": false,
-                      "searchKey": "io_test.noReadFrom.Write",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (w *noReadFrom) Write(p []byte) (n int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (w *noReadFrom) Write(p []byte) (n int, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#wantedAndErrReader",
-              "documentation": {
-                "identifier": "wantedAndErrReader",
-                "newPage": false,
-                "searchKey": "io_test.wantedAndErrReader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type wantedAndErrReader struct{}"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype wantedAndErrReader struct{}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/io_test#wantedAndErrReader.Read",
-                    "documentation": {
-                      "identifier": "wantedAndErrReader.Read",
-                      "newPage": false,
-                      "searchKey": "io_test.wantedAndErrReader.Read",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (wantedAndErrReader) Read(p []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (wantedAndErrReader) Read(p []byte) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#dataAndErrorBuffer",
-              "documentation": {
-                "identifier": "dataAndErrorBuffer",
-                "newPage": false,
-                "searchKey": "io_test.dataAndErrorBuffer",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type dataAndErrorBuffer struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype dataAndErrorBuffer struct {\n\terr error\n\tbytes.Buffer\n}\n```\n\nA version of bytes.Buffer that returns n > 0, err on Read when the input is exhausted. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/io_test#dataAndErrorBuffer.Read",
-                    "documentation": {
-                      "identifier": "dataAndErrorBuffer.Read",
-                      "newPage": false,
-                      "searchKey": "io_test.dataAndErrorBuffer.Read",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *dataAndErrorBuffer) Read(p []byte) (n int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *dataAndErrorBuffer) Read(p []byte) (n int, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#largeWriter",
-              "documentation": {
-                "identifier": "largeWriter",
-                "newPage": false,
-                "searchKey": "io_test.largeWriter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type largeWriter struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype largeWriter struct {\n\terr error\n}\n```\n\nlargeWriter returns an invalid count that is larger than the number of bytes provided (issue 39978). \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/io_test#largeWriter.Write",
-                    "documentation": {
-                      "identifier": "largeWriter.Write",
-                      "newPage": false,
-                      "searchKey": "io_test.largeWriter.Write",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (w largeWriter) Write(p []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (w largeWriter) Write(p []byte) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#writeStringChecker",
-              "documentation": {
-                "identifier": "writeStringChecker",
-                "newPage": false,
-                "searchKey": "io_test.writeStringChecker",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type writeStringChecker struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype writeStringChecker struct{ called bool }\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/io_test#writeStringChecker.WriteString",
-                    "documentation": {
-                      "identifier": "writeStringChecker.WriteString",
-                      "newPage": false,
-                      "searchKey": "io_test.writeStringChecker.WriteString",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *writeStringChecker) WriteString(s string) (n int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *writeStringChecker) WriteString(s string) (n int, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/io_test#writeStringChecker.Write",
-                    "documentation": {
-                      "identifier": "writeStringChecker.Write",
-                      "newPage": false,
-                      "searchKey": "io_test.writeStringChecker.Write",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *writeStringChecker) Write(p []byte) (n int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *writeStringChecker) Write(p []byte) (n int, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#writerFunc",
-              "documentation": {
-                "identifier": "writerFunc",
-                "newPage": false,
-                "searchKey": "io_test.writerFunc",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type writerFunc func(p []byte) (int, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype writerFunc func(p []byte) (int, error)\n```\n\nwriterFunc is an Writer implemented by the underlying func. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/io_test#writerFunc.Write",
-                    "documentation": {
-                      "identifier": "writerFunc.Write",
-                      "newPage": false,
-                      "searchKey": "io_test.writerFunc.Write",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f writerFunc) Write(p []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f writerFunc) Write(p []byte) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#readerFunc",
-              "documentation": {
-                "identifier": "readerFunc",
-                "newPage": false,
-                "searchKey": "io_test.readerFunc",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type readerFunc func(p []byte) (int, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype readerFunc func(p []byte) (int, error)\n```\n\nreaderFunc is an Reader implemented by the underlying func. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/io_test#readerFunc.Read",
-                    "documentation": {
-                      "identifier": "readerFunc.Read",
-                      "newPage": false,
-                      "searchKey": "io_test.readerFunc.Read",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f readerFunc) Read(p []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f readerFunc) Read(p []byte) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/io_test#byteAndEOFReader",
               "documentation": {
                 "identifier": "byteAndEOFReader",
                 "newPage": false,
                 "searchKey": "io_test.byteAndEOFReader",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -604,6 +140,7 @@
                       "newPage": false,
                       "searchKey": "io_test.byteAndEOFReader.Read",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -623,34 +160,13 @@
           },
           {
             "node": {
-              "pathID": "/io_test#pipeReturn",
-              "documentation": {
-                "identifier": "pipeReturn",
-                "newPage": false,
-                "searchKey": "io_test.pipeReturn",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type pipeReturn struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype pipeReturn struct {\n\tn   int\n\terr error\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/io_test#closer",
               "documentation": {
                 "identifier": "closer",
                 "newPage": false,
                 "searchKey": "io_test.closer",
                 "tags": [
+                  "interface",
                   "private"
                 ]
               },
@@ -667,12 +183,224 @@
           },
           {
             "node": {
+              "pathID": "/io_test#dataAndErrorBuffer",
+              "documentation": {
+                "identifier": "dataAndErrorBuffer",
+                "newPage": false,
+                "searchKey": "io_test.dataAndErrorBuffer",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type dataAndErrorBuffer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype dataAndErrorBuffer struct {\n\terr error\n\tbytes.Buffer\n}\n```\n\nA version of bytes.Buffer that returns n > 0, err on Read when the input is exhausted. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io_test#dataAndErrorBuffer.Read",
+                    "documentation": {
+                      "identifier": "dataAndErrorBuffer.Read",
+                      "newPage": false,
+                      "searchKey": "io_test.dataAndErrorBuffer.Read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *dataAndErrorBuffer) Read(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *dataAndErrorBuffer) Read(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#errWriter",
+              "documentation": {
+                "identifier": "errWriter",
+                "newPage": false,
+                "searchKey": "io_test.errWriter",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type errWriter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype errWriter struct {\n\terr error\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io_test#errWriter.Write",
+                    "documentation": {
+                      "identifier": "errWriter.Write",
+                      "newPage": false,
+                      "searchKey": "io_test.errWriter.Write",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w errWriter) Write([]byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w errWriter) Write([]byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#largeWriter",
+              "documentation": {
+                "identifier": "largeWriter",
+                "newPage": false,
+                "searchKey": "io_test.largeWriter",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type largeWriter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype largeWriter struct {\n\terr error\n}\n```\n\nlargeWriter returns an invalid count that is larger than the number of bytes provided (issue 39978). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io_test#largeWriter.Write",
+                    "documentation": {
+                      "identifier": "largeWriter.Write",
+                      "newPage": false,
+                      "searchKey": "io_test.largeWriter.Write",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w largeWriter) Write(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w largeWriter) Write(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#noReadFrom",
+              "documentation": {
+                "identifier": "noReadFrom",
+                "newPage": false,
+                "searchKey": "io_test.noReadFrom",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type noReadFrom struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype noReadFrom struct {\n\tw Writer\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io_test#noReadFrom.Write",
+                    "documentation": {
+                      "identifier": "noReadFrom.Write",
+                      "newPage": false,
+                      "searchKey": "io_test.noReadFrom.Write",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *noReadFrom) Write(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *noReadFrom) Write(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#pipeReturn",
+              "documentation": {
+                "identifier": "pipeReturn",
+                "newPage": false,
+                "searchKey": "io_test.pipeReturn",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type pipeReturn struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype pipeReturn struct {\n\tn   int\n\terr error\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/io_test#pipeTest",
               "documentation": {
                 "identifier": "pipeTest",
                 "newPage": false,
                 "searchKey": "io_test.pipeTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -693,6 +421,7 @@
                       "newPage": false,
                       "searchKey": "io_test.pipeTest.String",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -703,6 +432,311 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (p pipeTest) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#readerFunc",
+              "documentation": {
+                "identifier": "readerFunc",
+                "newPage": false,
+                "searchKey": "io_test.readerFunc",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type readerFunc func(p []byte) (int, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype readerFunc func(p []byte) (int, error)\n```\n\nreaderFunc is an Reader implemented by the underlying func. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io_test#readerFunc.Read",
+                    "documentation": {
+                      "identifier": "readerFunc.Read",
+                      "newPage": false,
+                      "searchKey": "io_test.readerFunc.Read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f readerFunc) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f readerFunc) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#wantedAndErrReader",
+              "documentation": {
+                "identifier": "wantedAndErrReader",
+                "newPage": false,
+                "searchKey": "io_test.wantedAndErrReader",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type wantedAndErrReader struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype wantedAndErrReader struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io_test#wantedAndErrReader.Read",
+                    "documentation": {
+                      "identifier": "wantedAndErrReader.Read",
+                      "newPage": false,
+                      "searchKey": "io_test.wantedAndErrReader.Read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (wantedAndErrReader) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (wantedAndErrReader) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#writeStringChecker",
+              "documentation": {
+                "identifier": "writeStringChecker",
+                "newPage": false,
+                "searchKey": "io_test.writeStringChecker",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type writeStringChecker struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype writeStringChecker struct{ called bool }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io_test#writeStringChecker.Write",
+                    "documentation": {
+                      "identifier": "writeStringChecker.Write",
+                      "newPage": false,
+                      "searchKey": "io_test.writeStringChecker.Write",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *writeStringChecker) Write(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *writeStringChecker) Write(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io_test#writeStringChecker.WriteString",
+                    "documentation": {
+                      "identifier": "writeStringChecker.WriteString",
+                      "newPage": false,
+                      "searchKey": "io_test.writeStringChecker.WriteString",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *writeStringChecker) WriteString(s string) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *writeStringChecker) WriteString(s string) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#writeToChecker",
+              "documentation": {
+                "identifier": "writeToChecker",
+                "newPage": false,
+                "searchKey": "io_test.writeToChecker",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type writeToChecker struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype writeToChecker struct {\n\tbytes.Buffer\n\twriteToCalled bool\n}\n```\n\nVersion of bytes.Buffer that checks whether WriteTo was called or not \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io_test#writeToChecker.WriteTo",
+                    "documentation": {
+                      "identifier": "writeToChecker.WriteTo",
+                      "newPage": false,
+                      "searchKey": "io_test.writeToChecker.WriteTo",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (wt *writeToChecker) WriteTo(w Writer) (int64, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (wt *writeToChecker) WriteTo(w Writer) (int64, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#writerFunc",
+              "documentation": {
+                "identifier": "writerFunc",
+                "newPage": false,
+                "searchKey": "io_test.writerFunc",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type writerFunc func(p []byte) (int, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype writerFunc func(p []byte) (int, error)\n```\n\nwriterFunc is an Writer implemented by the underlying func. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io_test#writerFunc.Write",
+                    "documentation": {
+                      "identifier": "writerFunc.Write",
+                      "newPage": false,
+                      "searchKey": "io_test.writerFunc.Write",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f writerFunc) Write(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f writerFunc) Write(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#zeroErrReader",
+              "documentation": {
+                "identifier": "zeroErrReader",
+                "newPage": false,
+                "searchKey": "io_test.zeroErrReader",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type zeroErrReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype zeroErrReader struct {\n\terr error\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io_test#zeroErrReader.Read",
+                    "documentation": {
+                      "identifier": "zeroErrReader.Read",
+                      "newPage": false,
+                      "searchKey": "io_test.zeroErrReader.Read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r zeroErrReader) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r zeroErrReader) Read(p []byte) (int, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -721,6 +755,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -735,12 +770,61 @@
         "children": [
           {
             "node": {
+              "pathID": "/io_test#BenchmarkCopyNLarge",
+              "documentation": {
+                "identifier": "BenchmarkCopyNLarge",
+                "newPage": false,
+                "searchKey": "io_test.BenchmarkCopyNLarge",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkCopyNLarge(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkCopyNLarge(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#BenchmarkCopyNSmall",
+              "documentation": {
+                "identifier": "BenchmarkCopyNSmall",
+                "newPage": false,
+                "searchKey": "io_test.BenchmarkCopyNSmall",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkCopyNSmall(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkCopyNSmall(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/io_test#ExampleCopy",
               "documentation": {
                 "identifier": "ExampleCopy",
                 "newPage": false,
                 "searchKey": "io_test.ExampleCopy",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -763,6 +847,7 @@
                 "newPage": false,
                 "searchKey": "io_test.ExampleCopyBuffer",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -785,6 +870,7 @@
                 "newPage": false,
                 "searchKey": "io_test.ExampleCopyN",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -801,78 +887,13 @@
           },
           {
             "node": {
-              "pathID": "/io_test#ExampleReadAtLeast",
-              "documentation": {
-                "identifier": "ExampleReadAtLeast",
-                "newPage": false,
-                "searchKey": "io_test.ExampleReadAtLeast",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleReadAtLeast()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleReadAtLeast()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#ExampleReadFull",
-              "documentation": {
-                "identifier": "ExampleReadFull",
-                "newPage": false,
-                "searchKey": "io_test.ExampleReadFull",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleReadFull()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleReadFull()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#ExampleWriteString",
-              "documentation": {
-                "identifier": "ExampleWriteString",
-                "newPage": false,
-                "searchKey": "io_test.ExampleWriteString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleWriteString()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleWriteString()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/io_test#ExampleLimitReader",
               "documentation": {
                 "identifier": "ExampleLimitReader",
                 "newPage": false,
                 "searchKey": "io_test.ExampleLimitReader",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -895,6 +916,7 @@
                 "newPage": false,
                 "searchKey": "io_test.ExampleMultiReader",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -911,122 +933,13 @@
           },
           {
             "node": {
-              "pathID": "/io_test#ExampleTeeReader",
-              "documentation": {
-                "identifier": "ExampleTeeReader",
-                "newPage": false,
-                "searchKey": "io_test.ExampleTeeReader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleTeeReader()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleTeeReader()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#ExampleSectionReader",
-              "documentation": {
-                "identifier": "ExampleSectionReader",
-                "newPage": false,
-                "searchKey": "io_test.ExampleSectionReader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleSectionReader()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleSectionReader()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#ExampleSectionReader_ReadAt",
-              "documentation": {
-                "identifier": "ExampleSectionReader_ReadAt",
-                "newPage": false,
-                "searchKey": "io_test.ExampleSectionReader_ReadAt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleSectionReader_ReadAt()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleSectionReader_ReadAt()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#ExampleSectionReader_Seek",
-              "documentation": {
-                "identifier": "ExampleSectionReader_Seek",
-                "newPage": false,
-                "searchKey": "io_test.ExampleSectionReader_Seek",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleSectionReader_Seek()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleSectionReader_Seek()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#ExampleSeeker_Seek",
-              "documentation": {
-                "identifier": "ExampleSeeker_Seek",
-                "newPage": false,
-                "searchKey": "io_test.ExampleSeeker_Seek",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleSeeker_Seek()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleSeeker_Seek()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/io_test#ExampleMultiWriter",
               "documentation": {
                 "identifier": "ExampleMultiWriter",
                 "newPage": false,
                 "searchKey": "io_test.ExampleMultiWriter",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1049,6 +962,7 @@
                 "newPage": false,
                 "searchKey": "io_test.ExamplePipe",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1071,6 +985,7 @@
                 "newPage": false,
                 "searchKey": "io_test.ExampleReadAll",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1087,13 +1002,199 @@
           },
           {
             "node": {
+              "pathID": "/io_test#ExampleReadAtLeast",
+              "documentation": {
+                "identifier": "ExampleReadAtLeast",
+                "newPage": false,
+                "searchKey": "io_test.ExampleReadAtLeast",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleReadAtLeast()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleReadAtLeast()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#ExampleReadFull",
+              "documentation": {
+                "identifier": "ExampleReadFull",
+                "newPage": false,
+                "searchKey": "io_test.ExampleReadFull",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleReadFull()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleReadFull()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#ExampleSectionReader",
+              "documentation": {
+                "identifier": "ExampleSectionReader",
+                "newPage": false,
+                "searchKey": "io_test.ExampleSectionReader",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleSectionReader()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleSectionReader()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#ExampleSectionReader_ReadAt",
+              "documentation": {
+                "identifier": "ExampleSectionReader_ReadAt",
+                "newPage": false,
+                "searchKey": "io_test.ExampleSectionReader_ReadAt",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleSectionReader_ReadAt()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleSectionReader_ReadAt()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#ExampleSectionReader_Seek",
+              "documentation": {
+                "identifier": "ExampleSectionReader_Seek",
+                "newPage": false,
+                "searchKey": "io_test.ExampleSectionReader_Seek",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleSectionReader_Seek()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleSectionReader_Seek()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#ExampleSeeker_Seek",
+              "documentation": {
+                "identifier": "ExampleSeeker_Seek",
+                "newPage": false,
+                "searchKey": "io_test.ExampleSeeker_Seek",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleSeeker_Seek()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleSeeker_Seek()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#ExampleTeeReader",
+              "documentation": {
+                "identifier": "ExampleTeeReader",
+                "newPage": false,
+                "searchKey": "io_test.ExampleTeeReader",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTeeReader()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTeeReader()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#ExampleWriteString",
+              "documentation": {
+                "identifier": "ExampleWriteString",
+                "newPage": false,
+                "searchKey": "io_test.ExampleWriteString",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleWriteString()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleWriteString()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/io_test#TestCopy",
               "documentation": {
                 "identifier": "TestCopy",
                 "newPage": false,
                 "searchKey": "io_test.TestCopy",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1109,35 +1210,15 @@
           },
           {
             "node": {
-              "pathID": "/io_test#TestCopyNegative",
-              "documentation": {
-                "identifier": "TestCopyNegative",
-                "newPage": false,
-                "searchKey": "io_test.TestCopyNegative",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCopyNegative(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCopyNegative(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/io_test#TestCopyBuffer",
               "documentation": {
                 "identifier": "TestCopyBuffer",
                 "newPage": false,
                 "searchKey": "io_test.TestCopyBuffer",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1159,7 +1240,9 @@
                 "newPage": false,
                 "searchKey": "io_test.TestCopyBufferNil",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1175,88 +1258,24 @@
           },
           {
             "node": {
-              "pathID": "/io_test#TestCopyReadFrom",
+              "pathID": "/io_test#TestCopyLargeWriter",
               "documentation": {
-                "identifier": "TestCopyReadFrom",
+                "identifier": "TestCopyLargeWriter",
                 "newPage": false,
-                "searchKey": "io_test.TestCopyReadFrom",
+                "searchKey": "io_test.TestCopyLargeWriter",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestCopyReadFrom(t *testing.T)"
+                "value": "func TestCopyLargeWriter(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestCopyReadFrom(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestCopyWriteTo",
-              "documentation": {
-                "identifier": "TestCopyWriteTo",
-                "newPage": false,
-                "searchKey": "io_test.TestCopyWriteTo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCopyWriteTo(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCopyWriteTo(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestCopyPriority",
-              "documentation": {
-                "identifier": "TestCopyPriority",
-                "newPage": false,
-                "searchKey": "io_test.TestCopyPriority",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCopyPriority(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCopyPriority(t *testing.T)\n```\n\nIt's preferable to choose WriterTo over ReaderFrom, since a WriterTo can issue one large write, while the ReaderFrom must read until EOF, potentially allocating when running out of buffer. Make sure that we choose WriterTo when both are implemented. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestCopyReadErrWriteErr",
-              "documentation": {
-                "identifier": "TestCopyReadErrWriteErr",
-                "newPage": false,
-                "searchKey": "io_test.TestCopyReadErrWriteErr",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCopyReadErrWriteErr(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCopyReadErrWriteErr(t *testing.T)\n```\n\nIn case a Read results in an error with non-zero bytes read, and the subsequent Write also results in an error, the error from Write is returned, as it is the one that prevented progressing further. \n\n"
+                "value": "```Go\nfunc TestCopyLargeWriter(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1269,7 +1288,9 @@
                 "newPage": false,
                 "searchKey": "io_test.TestCopyN",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1285,13 +1306,39 @@
           },
           {
             "node": {
+              "pathID": "/io_test#TestCopyNEOF",
+              "documentation": {
+                "identifier": "TestCopyNEOF",
+                "newPage": false,
+                "searchKey": "io_test.TestCopyNEOF",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCopyNEOF(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCopyNEOF(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/io_test#TestCopyNReadFrom",
               "documentation": {
                 "identifier": "TestCopyNReadFrom",
                 "newPage": false,
                 "searchKey": "io_test.TestCopyNReadFrom",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1313,7 +1360,9 @@
                 "newPage": false,
                 "searchKey": "io_test.TestCopyNWriteTo",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1329,594 +1378,120 @@
           },
           {
             "node": {
-              "pathID": "/io_test#BenchmarkCopyNSmall",
+              "pathID": "/io_test#TestCopyNegative",
               "documentation": {
-                "identifier": "BenchmarkCopyNSmall",
+                "identifier": "TestCopyNegative",
                 "newPage": false,
-                "searchKey": "io_test.BenchmarkCopyNSmall",
+                "searchKey": "io_test.TestCopyNegative",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkCopyNSmall(b *testing.B)"
+                "value": "func TestCopyNegative(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkCopyNSmall(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc TestCopyNegative(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/io_test#BenchmarkCopyNLarge",
+              "pathID": "/io_test#TestCopyPriority",
               "documentation": {
-                "identifier": "BenchmarkCopyNLarge",
+                "identifier": "TestCopyPriority",
                 "newPage": false,
-                "searchKey": "io_test.BenchmarkCopyNLarge",
+                "searchKey": "io_test.TestCopyPriority",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkCopyNLarge(b *testing.B)"
+                "value": "func TestCopyPriority(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkCopyNLarge(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc TestCopyPriority(t *testing.T)\n```\n\nIt's preferable to choose WriterTo over ReaderFrom, since a WriterTo can issue one large write, while the ReaderFrom must read until EOF, potentially allocating when running out of buffer. Make sure that we choose WriterTo when both are implemented. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/io_test#TestCopyNEOF",
+              "pathID": "/io_test#TestCopyReadErrWriteErr",
               "documentation": {
-                "identifier": "TestCopyNEOF",
+                "identifier": "TestCopyReadErrWriteErr",
                 "newPage": false,
-                "searchKey": "io_test.TestCopyNEOF",
+                "searchKey": "io_test.TestCopyReadErrWriteErr",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestCopyNEOF(t *testing.T)"
+                "value": "func TestCopyReadErrWriteErr(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestCopyNEOF(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestCopyReadErrWriteErr(t *testing.T)\n```\n\nIn case a Read results in an error with non-zero bytes read, and the subsequent Write also results in an error, the error from Write is returned, as it is the one that prevented progressing further. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/io_test#TestReadAtLeast",
+              "pathID": "/io_test#TestCopyReadFrom",
               "documentation": {
-                "identifier": "TestReadAtLeast",
+                "identifier": "TestCopyReadFrom",
                 "newPage": false,
-                "searchKey": "io_test.TestReadAtLeast",
+                "searchKey": "io_test.TestCopyReadFrom",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestReadAtLeast(t *testing.T)"
+                "value": "func TestCopyReadFrom(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestReadAtLeast(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestCopyReadFrom(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/io_test#TestReadAtLeastWithDataAndEOF",
+              "pathID": "/io_test#TestCopyWriteTo",
               "documentation": {
-                "identifier": "TestReadAtLeastWithDataAndEOF",
+                "identifier": "TestCopyWriteTo",
                 "newPage": false,
-                "searchKey": "io_test.TestReadAtLeastWithDataAndEOF",
+                "searchKey": "io_test.TestCopyWriteTo",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestReadAtLeastWithDataAndEOF(t *testing.T)"
+                "value": "func TestCopyWriteTo(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestReadAtLeastWithDataAndEOF(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestReadAtLeastWithDataAndError",
-              "documentation": {
-                "identifier": "TestReadAtLeastWithDataAndError",
-                "newPage": false,
-                "searchKey": "io_test.TestReadAtLeastWithDataAndError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReadAtLeastWithDataAndError(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReadAtLeastWithDataAndError(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#testReadAtLeast",
-              "documentation": {
-                "identifier": "testReadAtLeast",
-                "newPage": false,
-                "searchKey": "io_test.testReadAtLeast",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testReadAtLeast(t *testing.T, rb ReadWriter)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testReadAtLeast(t *testing.T, rb ReadWriter)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestTeeReader",
-              "documentation": {
-                "identifier": "TestTeeReader",
-                "newPage": false,
-                "searchKey": "io_test.TestTeeReader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTeeReader(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTeeReader(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestSectionReader_ReadAt",
-              "documentation": {
-                "identifier": "TestSectionReader_ReadAt",
-                "newPage": false,
-                "searchKey": "io_test.TestSectionReader_ReadAt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSectionReader_ReadAt(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSectionReader_ReadAt(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestSectionReader_Seek",
-              "documentation": {
-                "identifier": "TestSectionReader_Seek",
-                "newPage": false,
-                "searchKey": "io_test.TestSectionReader_Seek",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSectionReader_Seek(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSectionReader_Seek(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestSectionReader_Size",
-              "documentation": {
-                "identifier": "TestSectionReader_Size",
-                "newPage": false,
-                "searchKey": "io_test.TestSectionReader_Size",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSectionReader_Size(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSectionReader_Size(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestCopyLargeWriter",
-              "documentation": {
-                "identifier": "TestCopyLargeWriter",
-                "newPage": false,
-                "searchKey": "io_test.TestCopyLargeWriter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCopyLargeWriter(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCopyLargeWriter(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestMultiReader",
-              "documentation": {
-                "identifier": "TestMultiReader",
-                "newPage": false,
-                "searchKey": "io_test.TestMultiReader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMultiReader(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMultiReader(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestMultiWriter",
-              "documentation": {
-                "identifier": "TestMultiWriter",
-                "newPage": false,
-                "searchKey": "io_test.TestMultiWriter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMultiWriter(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMultiWriter(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestMultiWriter_String",
-              "documentation": {
-                "identifier": "TestMultiWriter_String",
-                "newPage": false,
-                "searchKey": "io_test.TestMultiWriter_String",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMultiWriter_String(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMultiWriter_String(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestMultiWriter_WriteStringSingleAlloc",
-              "documentation": {
-                "identifier": "TestMultiWriter_WriteStringSingleAlloc",
-                "newPage": false,
-                "searchKey": "io_test.TestMultiWriter_WriteStringSingleAlloc",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMultiWriter_WriteStringSingleAlloc(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMultiWriter_WriteStringSingleAlloc(t *testing.T)\n```\n\nTest that a multiWriter.WriteString calls results in at most 1 allocation, even if multiple targets don't support WriteString. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestMultiWriter_StringCheckCall",
-              "documentation": {
-                "identifier": "TestMultiWriter_StringCheckCall",
-                "newPage": false,
-                "searchKey": "io_test.TestMultiWriter_StringCheckCall",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMultiWriter_StringCheckCall(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMultiWriter_StringCheckCall(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#testMultiWriter",
-              "documentation": {
-                "identifier": "testMultiWriter",
-                "newPage": false,
-                "searchKey": "io_test.testMultiWriter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testMultiWriter(t *testing.T, sink interface {..."
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testMultiWriter(t *testing.T, sink interface {\n\tWriter\n\tfmt.Stringer\n})\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestMultiWriterSingleChainFlatten",
-              "documentation": {
-                "identifier": "TestMultiWriterSingleChainFlatten",
-                "newPage": false,
-                "searchKey": "io_test.TestMultiWriterSingleChainFlatten",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMultiWriterSingleChainFlatten(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMultiWriterSingleChainFlatten(t *testing.T)\n```\n\nTest that MultiWriter properly flattens chained multiWriters. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestMultiWriterError",
-              "documentation": {
-                "identifier": "TestMultiWriterError",
-                "newPage": false,
-                "searchKey": "io_test.TestMultiWriterError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMultiWriterError(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMultiWriterError(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestMultiReaderCopy",
-              "documentation": {
-                "identifier": "TestMultiReaderCopy",
-                "newPage": false,
-                "searchKey": "io_test.TestMultiReaderCopy",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMultiReaderCopy(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMultiReaderCopy(t *testing.T)\n```\n\nTest that MultiReader copies the input slice and is insulated from future modification. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestMultiWriterCopy",
-              "documentation": {
-                "identifier": "TestMultiWriterCopy",
-                "newPage": false,
-                "searchKey": "io_test.TestMultiWriterCopy",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMultiWriterCopy(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMultiWriterCopy(t *testing.T)\n```\n\nTest that MultiWriter copies the input slice and is insulated from future modification. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#callDepth",
-              "documentation": {
-                "identifier": "callDepth",
-                "newPage": false,
-                "searchKey": "io_test.callDepth",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func callDepth(callers []uintptr) (depth int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc callDepth(callers []uintptr) (depth int)\n```\n\ncallDepth returns the logical call depth for the given PCs. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestMultiReaderFlatten",
-              "documentation": {
-                "identifier": "TestMultiReaderFlatten",
-                "newPage": false,
-                "searchKey": "io_test.TestMultiReaderFlatten",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMultiReaderFlatten(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMultiReaderFlatten(t *testing.T)\n```\n\nTest that MultiReader properly flattens chained multiReaders when Read is called \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestMultiReaderSingleByteWithEOF",
-              "documentation": {
-                "identifier": "TestMultiReaderSingleByteWithEOF",
-                "newPage": false,
-                "searchKey": "io_test.TestMultiReaderSingleByteWithEOF",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMultiReaderSingleByteWithEOF(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMultiReaderSingleByteWithEOF(t *testing.T)\n```\n\nThis used to yield bytes forever; issue 16795. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestMultiReaderFinalEOF",
-              "documentation": {
-                "identifier": "TestMultiReaderFinalEOF",
-                "newPage": false,
-                "searchKey": "io_test.TestMultiReaderFinalEOF",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMultiReaderFinalEOF(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMultiReaderFinalEOF(t *testing.T)\n```\n\nTest that a reader returning (n, EOF) at the end of a MultiReader chain continues to return EOF on its final read, rather than yielding a (0, EOF). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestMultiReaderFreesExhaustedReaders",
-              "documentation": {
-                "identifier": "TestMultiReaderFreesExhaustedReaders",
-                "newPage": false,
-                "searchKey": "io_test.TestMultiReaderFreesExhaustedReaders",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMultiReaderFreesExhaustedReaders(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMultiReaderFreesExhaustedReaders(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestCopyWriteTo(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1929,7 +1504,9 @@
                 "newPage": false,
                 "searchKey": "io_test.TestInterleavedMultiReader",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1945,22 +1522,312 @@
           },
           {
             "node": {
-              "pathID": "/io_test#checkWrite",
+              "pathID": "/io_test#TestMultiReader",
               "documentation": {
-                "identifier": "checkWrite",
+                "identifier": "TestMultiReader",
                 "newPage": false,
-                "searchKey": "io_test.checkWrite",
+                "searchKey": "io_test.TestMultiReader",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func checkWrite(t *testing.T, w Writer, data []byte, c chan int)"
+                "value": "func TestMultiReader(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc checkWrite(t *testing.T, w Writer, data []byte, c chan int)\n```\n\n"
+                "value": "```Go\nfunc TestMultiReader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestMultiReaderCopy",
+              "documentation": {
+                "identifier": "TestMultiReaderCopy",
+                "newPage": false,
+                "searchKey": "io_test.TestMultiReaderCopy",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMultiReaderCopy(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMultiReaderCopy(t *testing.T)\n```\n\nTest that MultiReader copies the input slice and is insulated from future modification. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestMultiReaderFinalEOF",
+              "documentation": {
+                "identifier": "TestMultiReaderFinalEOF",
+                "newPage": false,
+                "searchKey": "io_test.TestMultiReaderFinalEOF",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMultiReaderFinalEOF(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMultiReaderFinalEOF(t *testing.T)\n```\n\nTest that a reader returning (n, EOF) at the end of a MultiReader chain continues to return EOF on its final read, rather than yielding a (0, EOF). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestMultiReaderFlatten",
+              "documentation": {
+                "identifier": "TestMultiReaderFlatten",
+                "newPage": false,
+                "searchKey": "io_test.TestMultiReaderFlatten",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMultiReaderFlatten(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMultiReaderFlatten(t *testing.T)\n```\n\nTest that MultiReader properly flattens chained multiReaders when Read is called \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestMultiReaderFreesExhaustedReaders",
+              "documentation": {
+                "identifier": "TestMultiReaderFreesExhaustedReaders",
+                "newPage": false,
+                "searchKey": "io_test.TestMultiReaderFreesExhaustedReaders",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMultiReaderFreesExhaustedReaders(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMultiReaderFreesExhaustedReaders(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestMultiReaderSingleByteWithEOF",
+              "documentation": {
+                "identifier": "TestMultiReaderSingleByteWithEOF",
+                "newPage": false,
+                "searchKey": "io_test.TestMultiReaderSingleByteWithEOF",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMultiReaderSingleByteWithEOF(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMultiReaderSingleByteWithEOF(t *testing.T)\n```\n\nThis used to yield bytes forever; issue 16795. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestMultiWriter",
+              "documentation": {
+                "identifier": "TestMultiWriter",
+                "newPage": false,
+                "searchKey": "io_test.TestMultiWriter",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMultiWriter(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMultiWriter(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestMultiWriterCopy",
+              "documentation": {
+                "identifier": "TestMultiWriterCopy",
+                "newPage": false,
+                "searchKey": "io_test.TestMultiWriterCopy",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMultiWriterCopy(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMultiWriterCopy(t *testing.T)\n```\n\nTest that MultiWriter copies the input slice and is insulated from future modification. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestMultiWriterError",
+              "documentation": {
+                "identifier": "TestMultiWriterError",
+                "newPage": false,
+                "searchKey": "io_test.TestMultiWriterError",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMultiWriterError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMultiWriterError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestMultiWriterSingleChainFlatten",
+              "documentation": {
+                "identifier": "TestMultiWriterSingleChainFlatten",
+                "newPage": false,
+                "searchKey": "io_test.TestMultiWriterSingleChainFlatten",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMultiWriterSingleChainFlatten(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMultiWriterSingleChainFlatten(t *testing.T)\n```\n\nTest that MultiWriter properly flattens chained multiWriters. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestMultiWriter_String",
+              "documentation": {
+                "identifier": "TestMultiWriter_String",
+                "newPage": false,
+                "searchKey": "io_test.TestMultiWriter_String",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMultiWriter_String(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMultiWriter_String(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestMultiWriter_StringCheckCall",
+              "documentation": {
+                "identifier": "TestMultiWriter_StringCheckCall",
+                "newPage": false,
+                "searchKey": "io_test.TestMultiWriter_StringCheckCall",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMultiWriter_StringCheckCall(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMultiWriter_StringCheckCall(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestMultiWriter_WriteStringSingleAlloc",
+              "documentation": {
+                "identifier": "TestMultiWriter_WriteStringSingleAlloc",
+                "newPage": false,
+                "searchKey": "io_test.TestMultiWriter_WriteStringSingleAlloc",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMultiWriter_WriteStringSingleAlloc(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMultiWriter_WriteStringSingleAlloc(t *testing.T)\n```\n\nTest that a multiWriter.WriteString calls results in at most 1 allocation, even if multiple targets don't support WriteString. \n\n"
               },
               "children": null
             }
@@ -1973,7 +1840,9 @@
                 "newPage": false,
                 "searchKey": "io_test.TestPipe1",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1989,35 +1858,15 @@
           },
           {
             "node": {
-              "pathID": "/io_test#reader",
-              "documentation": {
-                "identifier": "reader",
-                "newPage": false,
-                "searchKey": "io_test.reader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func reader(t *testing.T, r Reader, c chan int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc reader(t *testing.T, r Reader, c chan int)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/io_test#TestPipe2",
               "documentation": {
                 "identifier": "TestPipe2",
                 "newPage": false,
                 "searchKey": "io_test.TestPipe2",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2033,35 +1882,15 @@
           },
           {
             "node": {
-              "pathID": "/io_test#writer",
-              "documentation": {
-                "identifier": "writer",
-                "newPage": false,
-                "searchKey": "io_test.writer",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func writer(w WriteCloser, buf []byte, c chan pipeReturn)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc writer(w WriteCloser, buf []byte, c chan pipeReturn)\n```\n\nTest a large write that requires multiple reads to satisfy. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/io_test#TestPipe3",
               "documentation": {
                 "identifier": "TestPipe3",
                 "newPage": false,
                 "searchKey": "io_test.TestPipe3",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2077,189 +1906,15 @@
           },
           {
             "node": {
-              "pathID": "/io_test#delayClose",
-              "documentation": {
-                "identifier": "delayClose",
-                "newPage": false,
-                "searchKey": "io_test.delayClose",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func delayClose(t *testing.T, cl closer, ch chan int, tt pipeTest)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc delayClose(t *testing.T, cl closer, ch chan int, tt pipeTest)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestPipeReadClose",
-              "documentation": {
-                "identifier": "TestPipeReadClose",
-                "newPage": false,
-                "searchKey": "io_test.TestPipeReadClose",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestPipeReadClose(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestPipeReadClose(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestPipeReadClose2",
-              "documentation": {
-                "identifier": "TestPipeReadClose2",
-                "newPage": false,
-                "searchKey": "io_test.TestPipeReadClose2",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestPipeReadClose2(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestPipeReadClose2(t *testing.T)\n```\n\nTest close on Read side during Read. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestPipeWriteClose",
-              "documentation": {
-                "identifier": "TestPipeWriteClose",
-                "newPage": false,
-                "searchKey": "io_test.TestPipeWriteClose",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestPipeWriteClose(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestPipeWriteClose(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestPipeWriteClose2",
-              "documentation": {
-                "identifier": "TestPipeWriteClose2",
-                "newPage": false,
-                "searchKey": "io_test.TestPipeWriteClose2",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestPipeWriteClose2(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestPipeWriteClose2(t *testing.T)\n```\n\nTest close on Write side during Write. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestWriteEmpty",
-              "documentation": {
-                "identifier": "TestWriteEmpty",
-                "newPage": false,
-                "searchKey": "io_test.TestWriteEmpty",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestWriteEmpty(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestWriteEmpty(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestWriteNil",
-              "documentation": {
-                "identifier": "TestWriteNil",
-                "newPage": false,
-                "searchKey": "io_test.TestWriteNil",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestWriteNil(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestWriteNil(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io_test#TestWriteAfterWriterClose",
-              "documentation": {
-                "identifier": "TestWriteAfterWriterClose",
-                "newPage": false,
-                "searchKey": "io_test.TestWriteAfterWriterClose",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestWriteAfterWriterClose(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestWriteAfterWriterClose(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/io_test#TestPipeCloseError",
               "documentation": {
                 "identifier": "TestPipeCloseError",
                 "newPage": false,
                 "searchKey": "io_test.TestPipeCloseError",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2281,7 +1936,9 @@
                 "newPage": false,
                 "searchKey": "io_test.TestPipeConcurrent",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2297,12 +1954,441 @@
           },
           {
             "node": {
+              "pathID": "/io_test#TestPipeReadClose",
+              "documentation": {
+                "identifier": "TestPipeReadClose",
+                "newPage": false,
+                "searchKey": "io_test.TestPipeReadClose",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPipeReadClose(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPipeReadClose(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestPipeReadClose2",
+              "documentation": {
+                "identifier": "TestPipeReadClose2",
+                "newPage": false,
+                "searchKey": "io_test.TestPipeReadClose2",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPipeReadClose2(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPipeReadClose2(t *testing.T)\n```\n\nTest close on Read side during Read. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestPipeWriteClose",
+              "documentation": {
+                "identifier": "TestPipeWriteClose",
+                "newPage": false,
+                "searchKey": "io_test.TestPipeWriteClose",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPipeWriteClose(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPipeWriteClose(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestPipeWriteClose2",
+              "documentation": {
+                "identifier": "TestPipeWriteClose2",
+                "newPage": false,
+                "searchKey": "io_test.TestPipeWriteClose2",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPipeWriteClose2(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPipeWriteClose2(t *testing.T)\n```\n\nTest close on Write side during Write. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestReadAtLeast",
+              "documentation": {
+                "identifier": "TestReadAtLeast",
+                "newPage": false,
+                "searchKey": "io_test.TestReadAtLeast",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadAtLeast(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadAtLeast(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestReadAtLeastWithDataAndEOF",
+              "documentation": {
+                "identifier": "TestReadAtLeastWithDataAndEOF",
+                "newPage": false,
+                "searchKey": "io_test.TestReadAtLeastWithDataAndEOF",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadAtLeastWithDataAndEOF(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadAtLeastWithDataAndEOF(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestReadAtLeastWithDataAndError",
+              "documentation": {
+                "identifier": "TestReadAtLeastWithDataAndError",
+                "newPage": false,
+                "searchKey": "io_test.TestReadAtLeastWithDataAndError",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadAtLeastWithDataAndError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadAtLeastWithDataAndError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestSectionReader_ReadAt",
+              "documentation": {
+                "identifier": "TestSectionReader_ReadAt",
+                "newPage": false,
+                "searchKey": "io_test.TestSectionReader_ReadAt",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSectionReader_ReadAt(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSectionReader_ReadAt(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestSectionReader_Seek",
+              "documentation": {
+                "identifier": "TestSectionReader_Seek",
+                "newPage": false,
+                "searchKey": "io_test.TestSectionReader_Seek",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSectionReader_Seek(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSectionReader_Seek(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestSectionReader_Size",
+              "documentation": {
+                "identifier": "TestSectionReader_Size",
+                "newPage": false,
+                "searchKey": "io_test.TestSectionReader_Size",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSectionReader_Size(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSectionReader_Size(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestTeeReader",
+              "documentation": {
+                "identifier": "TestTeeReader",
+                "newPage": false,
+                "searchKey": "io_test.TestTeeReader",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTeeReader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTeeReader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestWriteAfterWriterClose",
+              "documentation": {
+                "identifier": "TestWriteAfterWriterClose",
+                "newPage": false,
+                "searchKey": "io_test.TestWriteAfterWriterClose",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteAfterWriterClose(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteAfterWriterClose(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestWriteEmpty",
+              "documentation": {
+                "identifier": "TestWriteEmpty",
+                "newPage": false,
+                "searchKey": "io_test.TestWriteEmpty",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteEmpty(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteEmpty(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#TestWriteNil",
+              "documentation": {
+                "identifier": "TestWriteNil",
+                "newPage": false,
+                "searchKey": "io_test.TestWriteNil",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteNil(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteNil(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#callDepth",
+              "documentation": {
+                "identifier": "callDepth",
+                "newPage": false,
+                "searchKey": "io_test.callDepth",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func callDepth(callers []uintptr) (depth int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc callDepth(callers []uintptr) (depth int)\n```\n\ncallDepth returns the logical call depth for the given PCs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#checkWrite",
+              "documentation": {
+                "identifier": "checkWrite",
+                "newPage": false,
+                "searchKey": "io_test.checkWrite",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkWrite(t *testing.T, w Writer, data []byte, c chan int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkWrite(t *testing.T, w Writer, data []byte, c chan int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#delayClose",
+              "documentation": {
+                "identifier": "delayClose",
+                "newPage": false,
+                "searchKey": "io_test.delayClose",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func delayClose(t *testing.T, cl closer, ch chan int, tt pipeTest)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc delayClose(t *testing.T, cl closer, ch chan int, tt pipeTest)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#reader",
+              "documentation": {
+                "identifier": "reader",
+                "newPage": false,
+                "searchKey": "io_test.reader",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func reader(t *testing.T, r Reader, c chan int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc reader(t *testing.T, r Reader, c chan int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/io_test#sortBytesInGroups",
               "documentation": {
                 "identifier": "sortBytesInGroups",
                 "newPage": false,
                 "searchKey": "io_test.sortBytesInGroups",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2313,6 +2399,75 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc sortBytesInGroups(b []byte, n int) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#testMultiWriter",
+              "documentation": {
+                "identifier": "testMultiWriter",
+                "newPage": false,
+                "searchKey": "io_test.testMultiWriter",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testMultiWriter(t *testing.T, sink interface {..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testMultiWriter(t *testing.T, sink interface {\n\tWriter\n\tfmt.Stringer\n})\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#testReadAtLeast",
+              "documentation": {
+                "identifier": "testReadAtLeast",
+                "newPage": false,
+                "searchKey": "io_test.testReadAtLeast",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testReadAtLeast(t *testing.T, rb ReadWriter)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testReadAtLeast(t *testing.T, rb ReadWriter)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io_test#writer",
+              "documentation": {
+                "identifier": "writer",
+                "newPage": false,
+                "searchKey": "io_test.writer",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func writer(w WriteCloser, buf []byte, c chan pipeReturn)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc writer(w WriteCloser, buf []byte, c chan pipeReturn)\n```\n\nTest a large write that requires multiple reads to satisfy. \n\n"
               },
               "children": null
             }

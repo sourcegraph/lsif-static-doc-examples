@@ -7,27 +7,14 @@ package search is search specific logic for the frontend. Also see github.com/so
 * Subpages
   * [cmd/frontend/internal/search/logs](search/logs.md)
 * [Constants](#const)
+    * [const commitMatch](#commitMatch)
     * [const fileMatch](#fileMatch)
     * [const repoMatch](#repoMatch)
     * [const symbolMatch](#symbolMatch)
-    * [const commitMatch](#commitMatch)
 * [Variables](#var)
     * [var metricLatency](#metricLatency)
     * [var searchBlitzUserAgentRegexp](#searchBlitzUserAgentRegexp)
 * [Types](#type)
-    * [type progressAggregator struct](#progressAggregator)
-        * [func (p *progressAggregator) Update(event streaming.SearchEvent)](#progressAggregator.Update)
-        * [func (p *progressAggregator) currentStats() api.ProgressStats](#progressAggregator.currentStats)
-        * [func (p *progressAggregator) Current() api.Progress](#progressAggregator.Current)
-        * [func (p *progressAggregator) Final() api.Progress](#progressAggregator.Final)
-    * [type namerFunc string](#namerFunc)
-        * [func (n namerFunc) Name() string](#namerFunc.Name)
-    * [type streamHandler struct](#streamHandler)
-        * [func (h *streamHandler) ServeHTTP(w http.ResponseWriter, r *http.Request)](#streamHandler.ServeHTTP)
-        * [func (h *streamHandler) getEventRepoMetadata(ctx context.Context, event streaming.SearchEvent) map[api.RepoID]*types.Repo](#streamHandler.getEventRepoMetadata)
-        * [func (h *streamHandler) startSearch(ctx context.Context, a *args) (events <-chan streaming.SearchEvent, inputs run.SearchInputs, results func() (*graphqlbackend.SearchResultsResolver, error))](#streamHandler.startSearch)
-    * [type searchResolver interface](#searchResolver)
-        * [func defaultNewSearchResolver(ctx context.Context, db dbutil.DB, args *graphqlbackend.SearchArgs) (searchResolver, error)](#defaultNewSearchResolver)
     * [type args struct](#args)
         * [func parseURLQuery(q url.Values) (*args, error)](#parseURLQuery)
     * [type jsonArrayBuf struct](#jsonArrayBuf)
@@ -37,41 +24,65 @@ package search is search specific logic for the frontend. Also see github.com/so
     * [type matchType int](#matchType)
         * [func (t matchType) MarshalJSON() ([]byte, error)](#matchType.MarshalJSON)
     * [type mockSearchResolver struct](#mockSearchResolver)
-        * [func (h *mockSearchResolver) Results(ctx context.Context) (*graphqlbackend.SearchResultsResolver, error)](#mockSearchResolver.Results)
         * [func (h *mockSearchResolver) Close()](#mockSearchResolver.Close)
         * [func (h *mockSearchResolver) Inputs() run.SearchInputs](#mockSearchResolver.Inputs)
+        * [func (h *mockSearchResolver) Results(ctx context.Context) (*graphqlbackend.SearchResultsResolver, error)](#mockSearchResolver.Results)
+    * [type namerFunc string](#namerFunc)
+        * [func (n namerFunc) Name() string](#namerFunc.Name)
+    * [type progressAggregator struct](#progressAggregator)
+        * [func (p *progressAggregator) Current() api.Progress](#progressAggregator.Current)
+        * [func (p *progressAggregator) Final() api.Progress](#progressAggregator.Final)
+        * [func (p *progressAggregator) Update(event streaming.SearchEvent)](#progressAggregator.Update)
+        * [func (p *progressAggregator) currentStats() api.ProgressStats](#progressAggregator.currentStats)
+    * [type searchResolver interface](#searchResolver)
+        * [func defaultNewSearchResolver(ctx context.Context, db dbutil.DB, args *graphqlbackend.SearchArgs) (searchResolver, error)](#defaultNewSearchResolver)
+    * [type streamHandler struct](#streamHandler)
+        * [func (h *streamHandler) ServeHTTP(w http.ResponseWriter, r *http.Request)](#streamHandler.ServeHTTP)
+        * [func (h *streamHandler) getEventRepoMetadata(ctx context.Context, event streaming.SearchEvent) map[api.RepoID]*types.Repo](#streamHandler.getEventRepoMetadata)
+        * [func (h *streamHandler) startSearch(ctx context.Context, a *args) (events <-chan streaming.SearchEvent, inputs run.SearchInputs, results func() (*graphqlbackend.SearchResultsResolver, error))](#streamHandler.startSearch)
 * [Functions](#func)
-    * [func getNames(stats streaming.Stats, status searchshared.RepoStatus) []api.Namer](#getNames)
-    * [func intPtr(i int) *int](#intPtr)
-    * [func StreamHandler(db dbutil.DB) http.Handler](#StreamHandler)
-    * [func strPtr(s string) *string](#strPtr)
-    * [func fromStrPtr(s *string) string](#fromStrPtr)
-    * [func fromMatch(match result.Match, repoCache map[api.RepoID]*types.Repo) streamhttp.EventMatch](#fromMatch)
-    * [func fromFileMatch(fm *result.FileMatch, repoCache map[api.RepoID]*types.Repo) streamhttp.EventMatch](#fromFileMatch)
-    * [func fromSymbolMatch(fm *result.FileMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventSymbolMatch](#fromSymbolMatch)
-    * [func fromRepository(rm *result.RepoMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventRepoMatch](#fromRepository)
-    * [func fromCommit(commit *result.CommitMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventCommitMatch](#fromCommit)
-    * [func eventStreamOTHook(log func(...otlog.Field)) func(streamhttp.WriterStat)](#eventStreamOTHook)
     * [func GuessSource(r *http.Request) trace.SourceType](#GuessSource)
-    * [func batchEvents(source <-chan streaming.SearchEvent, delay time.Duration) <-chan streaming.SearchEvent](#batchEvents)
-    * [func repoIDs(results []result.Match) []api.RepoID](#repoIDs)
-    * [func TestServeStream_empty(t *testing.T)](#TestServeStream_empty)
+    * [func StreamHandler(db dbutil.DB) http.Handler](#StreamHandler)
     * [func TestDefaultNewSearchResolver(t *testing.T)](#TestDefaultNewSearchResolver)
     * [func TestDisplayLimit(t *testing.T)](#TestDisplayLimit)
+    * [func TestServeStream_empty(t *testing.T)](#TestServeStream_empty)
+    * [func batchEvents(source <-chan streaming.SearchEvent, delay time.Duration) <-chan streaming.SearchEvent](#batchEvents)
+    * [func eventStreamOTHook(log func(...otlog.Field)) func(streamhttp.WriterStat)](#eventStreamOTHook)
+    * [func fromCommit(commit *result.CommitMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventCommitMatch](#fromCommit)
+    * [func fromFileMatch(fm *result.FileMatch, repoCache map[api.RepoID]*types.Repo) streamhttp.EventMatch](#fromFileMatch)
+    * [func fromMatch(match result.Match, repoCache map[api.RepoID]*types.Repo) streamhttp.EventMatch](#fromMatch)
+    * [func fromRepository(rm *result.RepoMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventRepoMatch](#fromRepository)
+    * [func fromStrPtr(s *string) string](#fromStrPtr)
+    * [func fromSymbolMatch(fm *result.FileMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventSymbolMatch](#fromSymbolMatch)
+    * [func getNames(stats streaming.Stats, status searchshared.RepoStatus) []api.Namer](#getNames)
+    * [func intPtr(i int) *int](#intPtr)
     * [func mkRepoMatch(id int) *result.RepoMatch](#mkRepoMatch)
+    * [func repoIDs(results []result.Match) []api.RepoID](#repoIDs)
+    * [func strPtr(s string) *string](#strPtr)
 
 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
+tags: [package private]
+```
+
+### <a id="commitMatch" href="#commitMatch">const commitMatch</a>
+
+```
+searchKey: search.commitMatch
+tags: [constant number private]
+```
+
+```Go
+const commitMatch
 ```
 
 ### <a id="fileMatch" href="#fileMatch">const fileMatch</a>
 
 ```
 searchKey: search.fileMatch
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -82,7 +93,7 @@ const fileMatch matchType = iota
 
 ```
 searchKey: search.repoMatch
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -93,35 +104,24 @@ const repoMatch
 
 ```
 searchKey: search.symbolMatch
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
 const symbolMatch
 ```
 
-### <a id="commitMatch" href="#commitMatch">const commitMatch</a>
-
-```
-searchKey: search.commitMatch
-tags: [private]
-```
-
-```Go
-const commitMatch
-```
-
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="metricLatency" href="#metricLatency">var metricLatency</a>
 
 ```
 searchKey: search.metricLatency
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -132,7 +132,7 @@ var metricLatency = ...
 
 ```
 searchKey: search.searchBlitzUserAgentRegexp
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -142,181 +142,14 @@ var searchBlitzUserAgentRegexp = lazyregexp.New(`^SearchBlitz \(([^\)]+)\)$`)
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
-```
-
-### <a id="progressAggregator" href="#progressAggregator">type progressAggregator struct</a>
-
-```
-searchKey: search.progressAggregator
-tags: [private]
-```
-
-```Go
-type progressAggregator struct {
-	Start        time.Time
-	MatchCount   int
-	Stats        streaming.Stats
-	Limit        int
-	DisplayLimit int
-	Trace        string // may be empty
-
-	// Dirty is true if p has changed since the last call to Current.
-	Dirty bool
-}
-```
-
-#### <a id="progressAggregator.Update" href="#progressAggregator.Update">func (p *progressAggregator) Update(event streaming.SearchEvent)</a>
-
-```
-searchKey: search.progressAggregator.Update
-tags: [private]
-```
-
-```Go
-func (p *progressAggregator) Update(event streaming.SearchEvent)
-```
-
-#### <a id="progressAggregator.currentStats" href="#progressAggregator.currentStats">func (p *progressAggregator) currentStats() api.ProgressStats</a>
-
-```
-searchKey: search.progressAggregator.currentStats
-tags: [private]
-```
-
-```Go
-func (p *progressAggregator) currentStats() api.ProgressStats
-```
-
-#### <a id="progressAggregator.Current" href="#progressAggregator.Current">func (p *progressAggregator) Current() api.Progress</a>
-
-```
-searchKey: search.progressAggregator.Current
-tags: [private]
-```
-
-```Go
-func (p *progressAggregator) Current() api.Progress
-```
-
-Current returns the current progress event. 
-
-#### <a id="progressAggregator.Final" href="#progressAggregator.Final">func (p *progressAggregator) Final() api.Progress</a>
-
-```
-searchKey: search.progressAggregator.Final
-tags: [private]
-```
-
-```Go
-func (p *progressAggregator) Final() api.Progress
-```
-
-Final returns the current progress event, but with final fields set to indicate it is the last progress event. 
-
-### <a id="namerFunc" href="#namerFunc">type namerFunc string</a>
-
-```
-searchKey: search.namerFunc
-tags: [private]
-```
-
-```Go
-type namerFunc string
-```
-
-#### <a id="namerFunc.Name" href="#namerFunc.Name">func (n namerFunc) Name() string</a>
-
-```
-searchKey: search.namerFunc.Name
-tags: [private]
-```
-
-```Go
-func (n namerFunc) Name() string
-```
-
-### <a id="streamHandler" href="#streamHandler">type streamHandler struct</a>
-
-```
-searchKey: search.streamHandler
-tags: [private]
-```
-
-```Go
-type streamHandler struct {
-	db                  dbutil.DB
-	newSearchResolver   func(context.Context, dbutil.DB, *graphqlbackend.SearchArgs) (searchResolver, error)
-	flushTickerInternal time.Duration
-	pingTickerInterval  time.Duration
-}
-```
-
-#### <a id="streamHandler.ServeHTTP" href="#streamHandler.ServeHTTP">func (h *streamHandler) ServeHTTP(w http.ResponseWriter, r *http.Request)</a>
-
-```
-searchKey: search.streamHandler.ServeHTTP
-tags: [private]
-```
-
-```Go
-func (h *streamHandler) ServeHTTP(w http.ResponseWriter, r *http.Request)
-```
-
-#### <a id="streamHandler.getEventRepoMetadata" href="#streamHandler.getEventRepoMetadata">func (h *streamHandler) getEventRepoMetadata(ctx context.Context, event streaming.SearchEvent) map[api.RepoID]*types.Repo</a>
-
-```
-searchKey: search.streamHandler.getEventRepoMetadata
-tags: [private]
-```
-
-```Go
-func (h *streamHandler) getEventRepoMetadata(ctx context.Context, event streaming.SearchEvent) map[api.RepoID]*types.Repo
-```
-
-#### <a id="streamHandler.startSearch" href="#streamHandler.startSearch">func (h *streamHandler) startSearch(ctx context.Context, a *args) (events <-chan streaming.SearchEvent, inputs run.SearchInputs, results func() (*graphqlbackend.SearchResultsResolver, error))</a>
-
-```
-searchKey: search.streamHandler.startSearch
-tags: [private]
-```
-
-```Go
-func (h *streamHandler) startSearch(ctx context.Context, a *args) (events <-chan streaming.SearchEvent, inputs run.SearchInputs, results func() (*graphqlbackend.SearchResultsResolver, error))
-```
-
-startSearch will start a search. It returns the events channel which streams out search events. Once events is closed you can call results which will return the results resolver and error. 
-
-### <a id="searchResolver" href="#searchResolver">type searchResolver interface</a>
-
-```
-searchKey: search.searchResolver
-tags: [private]
-```
-
-```Go
-type searchResolver interface {
-	Results(context.Context) (*graphqlbackend.SearchResultsResolver, error)
-	Inputs() run.SearchInputs
-}
-```
-
-#### <a id="defaultNewSearchResolver" href="#defaultNewSearchResolver">func defaultNewSearchResolver(ctx context.Context, db dbutil.DB, args *graphqlbackend.SearchArgs) (searchResolver, error)</a>
-
-```
-searchKey: search.defaultNewSearchResolver
-tags: [private]
-```
-
-```Go
-func defaultNewSearchResolver(ctx context.Context, db dbutil.DB, args *graphqlbackend.SearchArgs) (searchResolver, error)
+tags: [package private]
 ```
 
 ### <a id="args" href="#args">type args struct</a>
 
 ```
 searchKey: search.args
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -333,7 +166,7 @@ type args struct {
 
 ```
 searchKey: search.parseURLQuery
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -344,7 +177,7 @@ func parseURLQuery(q url.Values) (*args, error)
 
 ```
 searchKey: search.jsonArrayBuf
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -362,7 +195,7 @@ jsonArrayBuf builds up a JSON array by marshalling per item. Once the array has 
 
 ```
 searchKey: search.jsonArrayBuf.Append
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -375,7 +208,7 @@ Append marshals v and adds it to the json array buffer. If the size of the buffe
 
 ```
 searchKey: search.jsonArrayBuf.Flush
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -388,7 +221,7 @@ Flush writes and resets the buffer if there is data to write.
 
 ```
 searchKey: search.jsonArrayBuf.Len
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -399,7 +232,7 @@ func (j *jsonArrayBuf) Len() int
 
 ```
 searchKey: search.matchType
-tags: [private]
+tags: [number private]
 ```
 
 ```Go
@@ -410,7 +243,7 @@ type matchType int
 
 ```
 searchKey: search.matchType.MarshalJSON
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -421,7 +254,7 @@ func (t matchType) MarshalJSON() ([]byte, error)
 
 ```
 searchKey: search.mockSearchResolver
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -432,22 +265,11 @@ type mockSearchResolver struct {
 }
 ```
 
-#### <a id="mockSearchResolver.Results" href="#mockSearchResolver.Results">func (h *mockSearchResolver) Results(ctx context.Context) (*graphqlbackend.SearchResultsResolver, error)</a>
-
-```
-searchKey: search.mockSearchResolver.Results
-tags: [private]
-```
-
-```Go
-func (h *mockSearchResolver) Results(ctx context.Context) (*graphqlbackend.SearchResultsResolver, error)
-```
-
 #### <a id="mockSearchResolver.Close" href="#mockSearchResolver.Close">func (h *mockSearchResolver) Close()</a>
 
 ```
 searchKey: search.mockSearchResolver.Close
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -458,147 +280,202 @@ func (h *mockSearchResolver) Close()
 
 ```
 searchKey: search.mockSearchResolver.Inputs
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (h *mockSearchResolver) Inputs() run.SearchInputs
 ```
 
+#### <a id="mockSearchResolver.Results" href="#mockSearchResolver.Results">func (h *mockSearchResolver) Results(ctx context.Context) (*graphqlbackend.SearchResultsResolver, error)</a>
+
+```
+searchKey: search.mockSearchResolver.Results
+tags: [method private]
+```
+
+```Go
+func (h *mockSearchResolver) Results(ctx context.Context) (*graphqlbackend.SearchResultsResolver, error)
+```
+
+### <a id="namerFunc" href="#namerFunc">type namerFunc string</a>
+
+```
+searchKey: search.namerFunc
+tags: [string private]
+```
+
+```Go
+type namerFunc string
+```
+
+#### <a id="namerFunc.Name" href="#namerFunc.Name">func (n namerFunc) Name() string</a>
+
+```
+searchKey: search.namerFunc.Name
+tags: [function private]
+```
+
+```Go
+func (n namerFunc) Name() string
+```
+
+### <a id="progressAggregator" href="#progressAggregator">type progressAggregator struct</a>
+
+```
+searchKey: search.progressAggregator
+tags: [struct private]
+```
+
+```Go
+type progressAggregator struct {
+	Start        time.Time
+	MatchCount   int
+	Stats        streaming.Stats
+	Limit        int
+	DisplayLimit int
+	Trace        string // may be empty
+
+	// Dirty is true if p has changed since the last call to Current.
+	Dirty bool
+}
+```
+
+#### <a id="progressAggregator.Current" href="#progressAggregator.Current">func (p *progressAggregator) Current() api.Progress</a>
+
+```
+searchKey: search.progressAggregator.Current
+tags: [function private]
+```
+
+```Go
+func (p *progressAggregator) Current() api.Progress
+```
+
+Current returns the current progress event. 
+
+#### <a id="progressAggregator.Final" href="#progressAggregator.Final">func (p *progressAggregator) Final() api.Progress</a>
+
+```
+searchKey: search.progressAggregator.Final
+tags: [function private]
+```
+
+```Go
+func (p *progressAggregator) Final() api.Progress
+```
+
+Final returns the current progress event, but with final fields set to indicate it is the last progress event. 
+
+#### <a id="progressAggregator.Update" href="#progressAggregator.Update">func (p *progressAggregator) Update(event streaming.SearchEvent)</a>
+
+```
+searchKey: search.progressAggregator.Update
+tags: [method private]
+```
+
+```Go
+func (p *progressAggregator) Update(event streaming.SearchEvent)
+```
+
+#### <a id="progressAggregator.currentStats" href="#progressAggregator.currentStats">func (p *progressAggregator) currentStats() api.ProgressStats</a>
+
+```
+searchKey: search.progressAggregator.currentStats
+tags: [function private]
+```
+
+```Go
+func (p *progressAggregator) currentStats() api.ProgressStats
+```
+
+### <a id="searchResolver" href="#searchResolver">type searchResolver interface</a>
+
+```
+searchKey: search.searchResolver
+tags: [interface private]
+```
+
+```Go
+type searchResolver interface {
+	Results(context.Context) (*graphqlbackend.SearchResultsResolver, error)
+	Inputs() run.SearchInputs
+}
+```
+
+#### <a id="defaultNewSearchResolver" href="#defaultNewSearchResolver">func defaultNewSearchResolver(ctx context.Context, db dbutil.DB, args *graphqlbackend.SearchArgs) (searchResolver, error)</a>
+
+```
+searchKey: search.defaultNewSearchResolver
+tags: [method private]
+```
+
+```Go
+func defaultNewSearchResolver(ctx context.Context, db dbutil.DB, args *graphqlbackend.SearchArgs) (searchResolver, error)
+```
+
+### <a id="streamHandler" href="#streamHandler">type streamHandler struct</a>
+
+```
+searchKey: search.streamHandler
+tags: [struct private]
+```
+
+```Go
+type streamHandler struct {
+	db                  dbutil.DB
+	newSearchResolver   func(context.Context, dbutil.DB, *graphqlbackend.SearchArgs) (searchResolver, error)
+	flushTickerInternal time.Duration
+	pingTickerInterval  time.Duration
+}
+```
+
+#### <a id="streamHandler.ServeHTTP" href="#streamHandler.ServeHTTP">func (h *streamHandler) ServeHTTP(w http.ResponseWriter, r *http.Request)</a>
+
+```
+searchKey: search.streamHandler.ServeHTTP
+tags: [method private]
+```
+
+```Go
+func (h *streamHandler) ServeHTTP(w http.ResponseWriter, r *http.Request)
+```
+
+#### <a id="streamHandler.getEventRepoMetadata" href="#streamHandler.getEventRepoMetadata">func (h *streamHandler) getEventRepoMetadata(ctx context.Context, event streaming.SearchEvent) map[api.RepoID]*types.Repo</a>
+
+```
+searchKey: search.streamHandler.getEventRepoMetadata
+tags: [method private]
+```
+
+```Go
+func (h *streamHandler) getEventRepoMetadata(ctx context.Context, event streaming.SearchEvent) map[api.RepoID]*types.Repo
+```
+
+#### <a id="streamHandler.startSearch" href="#streamHandler.startSearch">func (h *streamHandler) startSearch(ctx context.Context, a *args) (events <-chan streaming.SearchEvent, inputs run.SearchInputs, results func() (*graphqlbackend.SearchResultsResolver, error))</a>
+
+```
+searchKey: search.streamHandler.startSearch
+tags: [method private]
+```
+
+```Go
+func (h *streamHandler) startSearch(ctx context.Context, a *args) (events <-chan streaming.SearchEvent, inputs run.SearchInputs, results func() (*graphqlbackend.SearchResultsResolver, error))
+```
+
+startSearch will start a search. It returns the events channel which streams out search events. Once events is closed you can call results which will return the results resolver and error. 
+
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
-
-### <a id="getNames" href="#getNames">func getNames(stats streaming.Stats, status searchshared.RepoStatus) []api.Namer</a>
-
-```
-searchKey: search.getNames
-tags: [private]
-```
-
-```Go
-func getNames(stats streaming.Stats, status searchshared.RepoStatus) []api.Namer
-```
-
-### <a id="intPtr" href="#intPtr">func intPtr(i int) *int</a>
-
-```
-searchKey: search.intPtr
-tags: [private]
-```
-
-```Go
-func intPtr(i int) *int
-```
-
-### <a id="StreamHandler" href="#StreamHandler">func StreamHandler(db dbutil.DB) http.Handler</a>
-
-```
-searchKey: search.StreamHandler
-```
-
-```Go
-func StreamHandler(db dbutil.DB) http.Handler
-```
-
-StreamHandler is an http handler which streams back search results. 
-
-### <a id="strPtr" href="#strPtr">func strPtr(s string) *string</a>
-
-```
-searchKey: search.strPtr
-tags: [private]
-```
-
-```Go
-func strPtr(s string) *string
-```
-
-### <a id="fromStrPtr" href="#fromStrPtr">func fromStrPtr(s *string) string</a>
-
-```
-searchKey: search.fromStrPtr
-tags: [private]
-```
-
-```Go
-func fromStrPtr(s *string) string
-```
-
-### <a id="fromMatch" href="#fromMatch">func fromMatch(match result.Match, repoCache map[api.RepoID]*types.Repo) streamhttp.EventMatch</a>
-
-```
-searchKey: search.fromMatch
-tags: [private]
-```
-
-```Go
-func fromMatch(match result.Match, repoCache map[api.RepoID]*types.Repo) streamhttp.EventMatch
-```
-
-### <a id="fromFileMatch" href="#fromFileMatch">func fromFileMatch(fm *result.FileMatch, repoCache map[api.RepoID]*types.Repo) streamhttp.EventMatch</a>
-
-```
-searchKey: search.fromFileMatch
-tags: [private]
-```
-
-```Go
-func fromFileMatch(fm *result.FileMatch, repoCache map[api.RepoID]*types.Repo) streamhttp.EventMatch
-```
-
-### <a id="fromSymbolMatch" href="#fromSymbolMatch">func fromSymbolMatch(fm *result.FileMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventSymbolMatch</a>
-
-```
-searchKey: search.fromSymbolMatch
-tags: [private]
-```
-
-```Go
-func fromSymbolMatch(fm *result.FileMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventSymbolMatch
-```
-
-### <a id="fromRepository" href="#fromRepository">func fromRepository(rm *result.RepoMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventRepoMatch</a>
-
-```
-searchKey: search.fromRepository
-tags: [private]
-```
-
-```Go
-func fromRepository(rm *result.RepoMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventRepoMatch
-```
-
-### <a id="fromCommit" href="#fromCommit">func fromCommit(commit *result.CommitMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventCommitMatch</a>
-
-```
-searchKey: search.fromCommit
-tags: [private]
-```
-
-```Go
-func fromCommit(commit *result.CommitMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventCommitMatch
-```
-
-### <a id="eventStreamOTHook" href="#eventStreamOTHook">func eventStreamOTHook(log func(...otlog.Field)) func(streamhttp.WriterStat)</a>
-
-```
-searchKey: search.eventStreamOTHook
-tags: [private]
-```
-
-```Go
-func eventStreamOTHook(log func(...otlog.Field)) func(streamhttp.WriterStat)
-```
-
-eventStreamOTHook returns a StatHook which logs to log. 
 
 ### <a id="GuessSource" href="#GuessSource">func GuessSource(r *http.Request) trace.SourceType</a>
 
 ```
 searchKey: search.GuessSource
+tags: [method]
 ```
 
 ```Go
@@ -607,46 +484,24 @@ func GuessSource(r *http.Request) trace.SourceType
 
 GuessSource guesses the source the request came from (browser, other HTTP client, etc.) 
 
-### <a id="batchEvents" href="#batchEvents">func batchEvents(source <-chan streaming.SearchEvent, delay time.Duration) <-chan streaming.SearchEvent</a>
+### <a id="StreamHandler" href="#StreamHandler">func StreamHandler(db dbutil.DB) http.Handler</a>
 
 ```
-searchKey: search.batchEvents
-tags: [private]
-```
-
-```Go
-func batchEvents(source <-chan streaming.SearchEvent, delay time.Duration) <-chan streaming.SearchEvent
-```
-
-batchEvents takes an event stream and merges events that come through close in time into a single event. This makes downstream database and network operations more efficient by enabling batch reads. 
-
-### <a id="repoIDs" href="#repoIDs">func repoIDs(results []result.Match) []api.RepoID</a>
-
-```
-searchKey: search.repoIDs
-tags: [private]
+searchKey: search.StreamHandler
+tags: [method]
 ```
 
 ```Go
-func repoIDs(results []result.Match) []api.RepoID
+func StreamHandler(db dbutil.DB) http.Handler
 ```
 
-### <a id="TestServeStream_empty" href="#TestServeStream_empty">func TestServeStream_empty(t *testing.T)</a>
-
-```
-searchKey: search.TestServeStream_empty
-tags: [private]
-```
-
-```Go
-func TestServeStream_empty(t *testing.T)
-```
+StreamHandler is an http handler which streams back search results. 
 
 ### <a id="TestDefaultNewSearchResolver" href="#TestDefaultNewSearchResolver">func TestDefaultNewSearchResolver(t *testing.T)</a>
 
 ```
 searchKey: search.TestDefaultNewSearchResolver
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -659,21 +514,168 @@ Ensures graphqlbackend matches the interface we expect
 
 ```
 searchKey: search.TestDisplayLimit
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestDisplayLimit(t *testing.T)
 ```
 
+### <a id="TestServeStream_empty" href="#TestServeStream_empty">func TestServeStream_empty(t *testing.T)</a>
+
+```
+searchKey: search.TestServeStream_empty
+tags: [method private test]
+```
+
+```Go
+func TestServeStream_empty(t *testing.T)
+```
+
+### <a id="batchEvents" href="#batchEvents">func batchEvents(source <-chan streaming.SearchEvent, delay time.Duration) <-chan streaming.SearchEvent</a>
+
+```
+searchKey: search.batchEvents
+tags: [method private]
+```
+
+```Go
+func batchEvents(source <-chan streaming.SearchEvent, delay time.Duration) <-chan streaming.SearchEvent
+```
+
+batchEvents takes an event stream and merges events that come through close in time into a single event. This makes downstream database and network operations more efficient by enabling batch reads. 
+
+### <a id="eventStreamOTHook" href="#eventStreamOTHook">func eventStreamOTHook(log func(...otlog.Field)) func(streamhttp.WriterStat)</a>
+
+```
+searchKey: search.eventStreamOTHook
+tags: [method private]
+```
+
+```Go
+func eventStreamOTHook(log func(...otlog.Field)) func(streamhttp.WriterStat)
+```
+
+eventStreamOTHook returns a StatHook which logs to log. 
+
+### <a id="fromCommit" href="#fromCommit">func fromCommit(commit *result.CommitMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventCommitMatch</a>
+
+```
+searchKey: search.fromCommit
+tags: [method private]
+```
+
+```Go
+func fromCommit(commit *result.CommitMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventCommitMatch
+```
+
+### <a id="fromFileMatch" href="#fromFileMatch">func fromFileMatch(fm *result.FileMatch, repoCache map[api.RepoID]*types.Repo) streamhttp.EventMatch</a>
+
+```
+searchKey: search.fromFileMatch
+tags: [method private]
+```
+
+```Go
+func fromFileMatch(fm *result.FileMatch, repoCache map[api.RepoID]*types.Repo) streamhttp.EventMatch
+```
+
+### <a id="fromMatch" href="#fromMatch">func fromMatch(match result.Match, repoCache map[api.RepoID]*types.Repo) streamhttp.EventMatch</a>
+
+```
+searchKey: search.fromMatch
+tags: [method private]
+```
+
+```Go
+func fromMatch(match result.Match, repoCache map[api.RepoID]*types.Repo) streamhttp.EventMatch
+```
+
+### <a id="fromRepository" href="#fromRepository">func fromRepository(rm *result.RepoMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventRepoMatch</a>
+
+```
+searchKey: search.fromRepository
+tags: [method private]
+```
+
+```Go
+func fromRepository(rm *result.RepoMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventRepoMatch
+```
+
+### <a id="fromStrPtr" href="#fromStrPtr">func fromStrPtr(s *string) string</a>
+
+```
+searchKey: search.fromStrPtr
+tags: [method private]
+```
+
+```Go
+func fromStrPtr(s *string) string
+```
+
+### <a id="fromSymbolMatch" href="#fromSymbolMatch">func fromSymbolMatch(fm *result.FileMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventSymbolMatch</a>
+
+```
+searchKey: search.fromSymbolMatch
+tags: [method private]
+```
+
+```Go
+func fromSymbolMatch(fm *result.FileMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventSymbolMatch
+```
+
+### <a id="getNames" href="#getNames">func getNames(stats streaming.Stats, status searchshared.RepoStatus) []api.Namer</a>
+
+```
+searchKey: search.getNames
+tags: [method private]
+```
+
+```Go
+func getNames(stats streaming.Stats, status searchshared.RepoStatus) []api.Namer
+```
+
+### <a id="intPtr" href="#intPtr">func intPtr(i int) *int</a>
+
+```
+searchKey: search.intPtr
+tags: [method private]
+```
+
+```Go
+func intPtr(i int) *int
+```
+
 ### <a id="mkRepoMatch" href="#mkRepoMatch">func mkRepoMatch(id int) *result.RepoMatch</a>
 
 ```
 searchKey: search.mkRepoMatch
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func mkRepoMatch(id int) *result.RepoMatch
+```
+
+### <a id="repoIDs" href="#repoIDs">func repoIDs(results []result.Match) []api.RepoID</a>
+
+```
+searchKey: search.repoIDs
+tags: [method private]
+```
+
+```Go
+func repoIDs(results []result.Match) []api.RepoID
+```
+
+### <a id="strPtr" href="#strPtr">func strPtr(s string) *string</a>
+
+```
+searchKey: search.strPtr
+tags: [method private]
+```
+
+```Go
+func strPtr(s string) *string
 ```
 

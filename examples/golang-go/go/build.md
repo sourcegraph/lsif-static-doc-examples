@@ -66,197 +66,189 @@ The source code could include additional Go code. That code was never compiled b
 * Subpages
   * [go/build/constraint](build/constraint.md)
 * [Constants](#const)
-    * [const FindOnly](#FindOnly)
     * [const AllowBinary](#AllowBinary)
-    * [const ImportComment](#ImportComment)
+    * [const FindOnly](#FindOnly)
     * [const IgnoreVendor](#IgnoreVendor)
-    * [const safeString](#safeString)
-    * [const goosList](#goosList)
+    * [const ImportComment](#ImportComment)
     * [const goarchList](#goarchList)
+    * [const goosList](#goosList)
     * [const quote](#quote)
+    * [const safeString](#safeString)
 * [Variables](#var)
     * [var Default](#Default)
-    * [var defaultToolTags](#defaultToolTags)
+    * [var ToolDir](#ToolDir)
+    * [var bPlusBuild](#bPlusBuild)
+    * [var bSlashSlash](#bSlashSlash)
+    * [var bSlashStar](#bSlashStar)
+    * [var bStarSlash](#bStarSlash)
+    * [var binaryOnlyComment](#binaryOnlyComment)
+    * [var bom](#bom)
+    * [var buildIgnore](#buildIgnore)
+    * [var ctxtAndroid](#ctxtAndroid)
+    * [var ctxtP9](#ctxtP9)
     * [var defaultReleaseTags](#defaultReleaseTags)
+    * [var defaultToolTags](#defaultToolTags)
+    * [var depsRules](#depsRules)
+    * [var dummyPkg](#dummyPkg)
+    * [var errGoBuildWithoutBuild](#errGoBuildWithoutBuild)
+    * [var errMultipleGoBuild](#errMultipleGoBuild)
+    * [var errNUL](#errNUL)
     * [var errNoModules](#errNoModules)
+    * [var errSyntax](#errSyntax)
+    * [var expandSrcDirPath](#expandSrcDirPath)
+    * [var expandSrcDirTests](#expandSrcDirTests)
+    * [var goBuildComment](#goBuildComment)
+    * [var goEmbed](#goEmbed)
+    * [var knownArch](#knownArch)
+    * [var knownOS](#knownOS)
+    * [var matchFileTests](#matchFileTests)
+    * [var newline](#newline)
+    * [var otherArch](#otherArch)
+    * [var otherOS](#otherOS)
+    * [var readCommentsTests](#readCommentsTests)
+    * [var readEmbedTests](#readEmbedTests)
+    * [var readFailuresTests](#readFailuresTests)
+    * [var readGoInfoTests](#readGoInfoTests)
+    * [var shouldBuildTests](#shouldBuildTests)
     * [var slashSlash](#slashSlash)
     * [var slashStar](#slashStar)
     * [var starSlash](#starSlash)
-    * [var newline](#newline)
-    * [var dummyPkg](#dummyPkg)
-    * [var bSlashSlash](#bSlashSlash)
-    * [var bStarSlash](#bStarSlash)
-    * [var bSlashStar](#bSlashStar)
-    * [var bPlusBuild](#bPlusBuild)
-    * [var goBuildComment](#goBuildComment)
-    * [var errGoBuildWithoutBuild](#errGoBuildWithoutBuild)
-    * [var errMultipleGoBuild](#errMultipleGoBuild)
-    * [var binaryOnlyComment](#binaryOnlyComment)
-    * [var knownOS](#knownOS)
-    * [var knownArch](#knownArch)
-    * [var ToolDir](#ToolDir)
-    * [var bom](#bom)
-    * [var errSyntax](#errSyntax)
-    * [var errNUL](#errNUL)
-    * [var goEmbed](#goEmbed)
-    * [var shouldBuildTests](#shouldBuildTests)
-    * [var ctxtP9](#ctxtP9)
-    * [var ctxtAndroid](#ctxtAndroid)
-    * [var matchFileTests](#matchFileTests)
-    * [var expandSrcDirPath](#expandSrcDirPath)
-    * [var expandSrcDirTests](#expandSrcDirTests)
-    * [var depsRules](#depsRules)
-    * [var buildIgnore](#buildIgnore)
-    * [var readGoInfoTests](#readGoInfoTests)
-    * [var readCommentsTests](#readCommentsTests)
-    * [var readFailuresTests](#readFailuresTests)
-    * [var readEmbedTests](#readEmbedTests)
-    * [var thisOS](#thisOS)
-    * [var thisArch](#thisArch)
-    * [var otherOS](#otherOS)
-    * [var otherArch](#otherArch)
     * [var tests](#tests)
+    * [var thisArch](#thisArch)
+    * [var thisOS](#thisOS)
 * [Types](#type)
     * [type Context struct](#Context)
         * [func defaultContext() Context](#defaultContext)
-        * [func (ctxt *Context) joinPath(elem ...string) string](#Context.joinPath)
-        * [func (ctxt *Context) splitPathList(s string) []string](#Context.splitPathList)
+        * [func (ctxt *Context) Import(path string, srcDir string, mode ImportMode) (*Package, error)](#Context.Import)
+        * [func (ctxt *Context) ImportDir(dir string, mode ImportMode) (*Package, error)](#Context.ImportDir)
+        * [func (ctxt *Context) MatchFile(dir, name string) (match bool, err error)](#Context.MatchFile)
+        * [func (ctxt *Context) SrcDirs() []string](#Context.SrcDirs)
+        * [func (ctxt *Context) eval(x constraint.Expr, allTags map[string]bool) bool](#Context.eval)
+        * [func (ctxt *Context) goodOSArchFile(name string, allTags map[string]bool) bool](#Context.goodOSArchFile)
+        * [func (ctxt *Context) gopath() []string](#Context.gopath)
+        * [func (ctxt *Context) hasSubdir(root, dir string) (rel string, ok bool)](#Context.hasSubdir)
+        * [func (ctxt *Context) importGo(p *Package, path, srcDir string, mode ImportMode) error](#Context.importGo)
         * [func (ctxt *Context) isAbsPath(path string) bool](#Context.isAbsPath)
         * [func (ctxt *Context) isDir(path string) bool](#Context.isDir)
-        * [func (ctxt *Context) hasSubdir(root, dir string) (rel string, ok bool)](#Context.hasSubdir)
-        * [func (ctxt *Context) readDir(path string) ([]fs.FileInfo, error)](#Context.readDir)
-        * [func (ctxt *Context) openFile(path string) (io.ReadCloser, error)](#Context.openFile)
         * [func (ctxt *Context) isFile(path string) bool](#Context.isFile)
-        * [func (ctxt *Context) gopath() []string](#Context.gopath)
-        * [func (ctxt *Context) SrcDirs() []string](#Context.SrcDirs)
-        * [func (ctxt *Context) ImportDir(dir string, mode ImportMode) (*Package, error)](#Context.ImportDir)
-        * [func (ctxt *Context) Import(path string, srcDir string, mode ImportMode) (*Package, error)](#Context.Import)
-        * [func (ctxt *Context) importGo(p *Package, path, srcDir string, mode ImportMode) error](#Context.importGo)
-        * [func (ctxt *Context) MatchFile(dir, name string) (match bool, err error)](#Context.MatchFile)
-        * [func (ctxt *Context) matchFile(dir, name string, allTags map[string]bool, binaryOnly *bool, fset *token.FileSet) (*fileInfo, error)](#Context.matchFile)
-        * [func (ctxt *Context) shouldBuild(content []byte, allTags map[string]bool) (shouldBuild, binaryOnly bool, err error)](#Context.shouldBuild)
-        * [func (ctxt *Context) saveCgo(filename string, di *Package, cg *ast.CommentGroup) error](#Context.saveCgo)
+        * [func (ctxt *Context) joinPath(elem ...string) string](#Context.joinPath)
         * [func (ctxt *Context) makePathsAbsolute(args []string, srcDir string)](#Context.makePathsAbsolute)
         * [func (ctxt *Context) matchAuto(text string, allTags map[string]bool) bool](#Context.matchAuto)
-        * [func (ctxt *Context) eval(x constraint.Expr, allTags map[string]bool) bool](#Context.eval)
+        * [func (ctxt *Context) matchFile(dir, name string, allTags map[string]bool, binaryOnly *bool, fset *token.FileSet) (*fileInfo, error)](#Context.matchFile)
         * [func (ctxt *Context) matchTag(name string, allTags map[string]bool) bool](#Context.matchTag)
-        * [func (ctxt *Context) goodOSArchFile(name string, allTags map[string]bool) bool](#Context.goodOSArchFile)
+        * [func (ctxt *Context) openFile(path string) (io.ReadCloser, error)](#Context.openFile)
+        * [func (ctxt *Context) readDir(path string) ([]fs.FileInfo, error)](#Context.readDir)
+        * [func (ctxt *Context) saveCgo(filename string, di *Package, cg *ast.CommentGroup) error](#Context.saveCgo)
+        * [func (ctxt *Context) shouldBuild(content []byte, allTags map[string]bool) (shouldBuild, binaryOnly bool, err error)](#Context.shouldBuild)
+        * [func (ctxt *Context) splitPathList(s string) []string](#Context.splitPathList)
+    * [type GoodFileTest struct](#GoodFileTest)
     * [type ImportMode uint](#ImportMode)
+    * [type MultiplePackageError struct](#MultiplePackageError)
+        * [func (e *MultiplePackageError) Error() string](#MultiplePackageError.Error)
+    * [type NoGoError struct](#NoGoError)
+        * [func (e *NoGoError) Error() string](#NoGoError.Error)
     * [type Package struct](#Package)
         * [func Import(path, srcDir string, mode ImportMode) (*Package, error)](#Import)
         * [func ImportDir(dir string, mode ImportMode) (*Package, error)](#ImportDir)
         * [func (p *Package) IsCommand() bool](#Package.IsCommand)
-    * [type NoGoError struct](#NoGoError)
-        * [func (e *NoGoError) Error() string](#NoGoError.Error)
-    * [type MultiplePackageError struct](#MultiplePackageError)
-        * [func (e *MultiplePackageError) Error() string](#MultiplePackageError.Error)
-    * [type fileInfo struct](#fileInfo)
-    * [type fileImport struct](#fileImport)
-    * [type fileEmbed struct](#fileEmbed)
-    * [type importReader struct](#importReader)
-        * [func newImportReader(name string, r io.Reader) *importReader](#newImportReader)
-        * [func (r *importReader) syntaxError()](#importReader.syntaxError)
-        * [func (r *importReader) readByte() byte](#importReader.readByte)
-        * [func (r *importReader) readByteNoBuf() byte](#importReader.readByteNoBuf)
-        * [func (r *importReader) peekByte(skipSpace bool) byte](#importReader.peekByte)
-        * [func (r *importReader) nextByte(skipSpace bool) byte](#importReader.nextByte)
-        * [func (r *importReader) findEmbed(first bool) bool](#importReader.findEmbed)
-        * [func (r *importReader) readKeyword(kw string)](#importReader.readKeyword)
-        * [func (r *importReader) readIdent()](#importReader.readIdent)
-        * [func (r *importReader) readString()](#importReader.readString)
-        * [func (r *importReader) readImport()](#importReader.readImport)
-    * [type readNopCloser struct](#readNopCloser)
-        * [func (r readNopCloser) Close() error](#readNopCloser.Close)
     * [type depsParser struct](#depsParser)
-        * [func (p *depsParser) syntaxError(msg string)](#depsParser.syntaxError)
         * [func (p *depsParser) nextList() (list []string, token string)](#depsParser.nextList)
         * [func (p *depsParser) nextToken() string](#depsParser.nextToken)
+        * [func (p *depsParser) syntaxError(msg string)](#depsParser.syntaxError)
+    * [type fileEmbed struct](#fileEmbed)
+    * [type fileImport struct](#fileImport)
+    * [type fileInfo struct](#fileInfo)
+    * [type importReader struct](#importReader)
+        * [func newImportReader(name string, r io.Reader) *importReader](#newImportReader)
+        * [func (r *importReader) findEmbed(first bool) bool](#importReader.findEmbed)
+        * [func (r *importReader) nextByte(skipSpace bool) byte](#importReader.nextByte)
+        * [func (r *importReader) peekByte(skipSpace bool) byte](#importReader.peekByte)
+        * [func (r *importReader) readByte() byte](#importReader.readByte)
+        * [func (r *importReader) readByteNoBuf() byte](#importReader.readByteNoBuf)
+        * [func (r *importReader) readIdent()](#importReader.readIdent)
+        * [func (r *importReader) readImport()](#importReader.readImport)
+        * [func (r *importReader) readKeyword(kw string)](#importReader.readKeyword)
+        * [func (r *importReader) readString()](#importReader.readString)
+        * [func (r *importReader) syntaxError()](#importReader.syntaxError)
+    * [type readNopCloser struct](#readNopCloser)
+        * [func (r readNopCloser) Close() error](#readNopCloser.Close)
     * [type readTest struct](#readTest)
-    * [type GoodFileTest struct](#GoodFileTest)
 * [Functions](#func)
-    * [func hasSubdir(root, dir string) (rel string, ok bool)](#hasSubdir)
-    * [func defaultGOPATH() string](#defaultGOPATH)
-    * [func envOr(name, def string) string](#envOr)
-    * [func nameExt(name string) string](#nameExt)
-    * [func fileListForExt(p *Package, ext string) *[]string](#fileListForExt)
-    * [func uniq(list []string) []string](#uniq)
-    * [func equal(x, y []string) bool](#equal)
-    * [func hasGoFiles(ctxt *Context, dir string) bool](#hasGoFiles)
-    * [func findImportComment(data []byte) (s string, line int)](#findImportComment)
-    * [func skipSpaceOrComment(data []byte) []byte](#skipSpaceOrComment)
-    * [func parseWord(data []byte) (word, rest []byte)](#parseWord)
-    * [func cleanDecls(m map[string][]token.Position) ([]string, map[string][]token.Position)](#cleanDecls)
-    * [func isGoBuildComment(line []byte) bool](#isGoBuildComment)
-    * [func parseFileHeader(content []byte) (trimmed, goBuild []byte, sawBinaryOnly bool, err error)](#parseFileHeader)
-    * [func expandSrcDir(str string, srcdir string) (string, bool)](#expandSrcDir)
-    * [func safeCgoName(s string) bool](#safeCgoName)
-    * [func splitQuoted(s string) (r []string, err error)](#splitQuoted)
-    * [func init()](#init.build.go)
-    * [func IsLocalImport(path string) bool](#IsLocalImport)
     * [func ArchChar(goarch string) (string, error)](#ArchChar)
-    * [func getToolDir() string](#getToolDir)
-    * [func isIdent(c byte) bool](#isIdent)
-    * [func readComments(f io.Reader) ([]byte, error)](#readComments)
-    * [func readGoInfo(f io.Reader, info *fileInfo) error](#readGoInfo)
-    * [func parseGoEmbed(args string, pos token.Position) ([]fileEmbed, error)](#parseGoEmbed)
-    * [func TestMain(m *testing.M)](#TestMain)
-    * [func TestMatch(t *testing.T)](#TestMatch)
+    * [func IsLocalImport(path string) bool](#IsLocalImport)
+    * [func TestCgoImportsIgnored(t *testing.T)](#TestCgoImportsIgnored)
+    * [func TestDependencies(t *testing.T)](#TestDependencies)
     * [func TestDotSlashImport(t *testing.T)](#TestDotSlashImport)
-    * [func TestEmptyImport(t *testing.T)](#TestEmptyImport)
     * [func TestEmptyFolderImport(t *testing.T)](#TestEmptyFolderImport)
-    * [func TestMultiplePackageImport(t *testing.T)](#TestMultiplePackageImport)
-    * [func TestLocalDirectory(t *testing.T)](#TestLocalDirectory)
-    * [func TestShouldBuild(t *testing.T)](#TestShouldBuild)
-    * [func TestGoodOSArchFile(t *testing.T)](#TestGoodOSArchFile)
-    * [func TestMatchFile(t *testing.T)](#TestMatchFile)
-    * [func TestImportCmd(t *testing.T)](#TestImportCmd)
+    * [func TestEmptyImport(t *testing.T)](#TestEmptyImport)
     * [func TestExpandSrcDir(t *testing.T)](#TestExpandSrcDir)
-    * [func TestShellSafety(t *testing.T)](#TestShellSafety)
+    * [func TestFindImports(t *testing.T)](#TestFindImports)
+    * [func TestGoodOSArch(t *testing.T)](#TestGoodOSArch)
+    * [func TestGoodOSArchFile(t *testing.T)](#TestGoodOSArchFile)
+    * [func TestImportCmd(t *testing.T)](#TestImportCmd)
     * [func TestImportDirNotExist(t *testing.T)](#TestImportDirNotExist)
+    * [func TestImportDirTarget(t *testing.T)](#TestImportDirTarget)
+    * [func TestImportPackageOutsideModule(t *testing.T)](#TestImportPackageOutsideModule)
     * [func TestImportVendor(t *testing.T)](#TestImportVendor)
     * [func TestImportVendorFailure(t *testing.T)](#TestImportVendorFailure)
     * [func TestImportVendorParentFailure(t *testing.T)](#TestImportVendorParentFailure)
-    * [func TestImportPackageOutsideModule(t *testing.T)](#TestImportPackageOutsideModule)
-    * [func TestImportDirTarget(t *testing.T)](#TestImportDirTarget)
     * [func TestIssue23594(t *testing.T)](#TestIssue23594)
+    * [func TestLocalDirectory(t *testing.T)](#TestLocalDirectory)
+    * [func TestMain(m *testing.M)](#TestMain)
+    * [func TestMatch(t *testing.T)](#TestMatch)
+    * [func TestMatchFile(t *testing.T)](#TestMatchFile)
     * [func TestMissingImportErrorRepetition(t *testing.T)](#TestMissingImportErrorRepetition)
-    * [func TestCgoImportsIgnored(t *testing.T)](#TestCgoImportsIgnored)
-    * [func listStdPkgs(goroot string) ([]string, error)](#listStdPkgs)
-    * [func TestDependencies(t *testing.T)](#TestDependencies)
-    * [func findImports(pkg string) ([]string, error)](#findImports)
-    * [func depsPolicy(t *testing.T) map[string]map[string]bool](#depsPolicy)
-    * [func parseDepsRules(t *testing.T, save func(deps []string, op string, users []string))](#parseDepsRules)
-    * [func TestStdlibLowercase(t *testing.T)](#TestStdlibLowercase)
-    * [func TestFindImports(t *testing.T)](#TestFindImports)
-    * [func testRead(t *testing.T, tests []readTest, read func(io.Reader) ([]byte, error))](#testRead)
-    * [func TestReadGoInfo(t *testing.T)](#TestReadGoInfo)
+    * [func TestMultiplePackageImport(t *testing.T)](#TestMultiplePackageImport)
     * [func TestReadComments(t *testing.T)](#TestReadComments)
-    * [func TestReadFailuresIgnored(t *testing.T)](#TestReadFailuresIgnored)
     * [func TestReadEmbed(t *testing.T)](#TestReadEmbed)
-    * [func anotherOS() string](#anotherOS)
+    * [func TestReadFailuresIgnored(t *testing.T)](#TestReadFailuresIgnored)
+    * [func TestReadGoInfo(t *testing.T)](#TestReadGoInfo)
+    * [func TestShellSafety(t *testing.T)](#TestShellSafety)
+    * [func TestShouldBuild(t *testing.T)](#TestShouldBuild)
+    * [func TestStdlibLowercase(t *testing.T)](#TestStdlibLowercase)
     * [func anotherArch() string](#anotherArch)
-    * [func TestGoodOSArch(t *testing.T)](#TestGoodOSArch)
+    * [func anotherOS() string](#anotherOS)
+    * [func cleanDecls(m map[string][]token.Position) ([]string, map[string][]token.Position)](#cleanDecls)
+    * [func defaultGOPATH() string](#defaultGOPATH)
+    * [func depsPolicy(t *testing.T) map[string]map[string]bool](#depsPolicy)
+    * [func envOr(name, def string) string](#envOr)
+    * [func equal(x, y []string) bool](#equal)
+    * [func expandSrcDir(str string, srcdir string) (string, bool)](#expandSrcDir)
+    * [func fileListForExt(p *Package, ext string) *[]string](#fileListForExt)
+    * [func findImportComment(data []byte) (s string, line int)](#findImportComment)
+    * [func findImports(pkg string) ([]string, error)](#findImports)
+    * [func getToolDir() string](#getToolDir)
+    * [func hasGoFiles(ctxt *Context, dir string) bool](#hasGoFiles)
+    * [func hasSubdir(root, dir string) (rel string, ok bool)](#hasSubdir)
+    * [func init()](#init.build.go)
+    * [func isGoBuildComment(line []byte) bool](#isGoBuildComment)
+    * [func isIdent(c byte) bool](#isIdent)
+    * [func listStdPkgs(goroot string) ([]string, error)](#listStdPkgs)
+    * [func nameExt(name string) string](#nameExt)
+    * [func parseDepsRules(t *testing.T, save func(deps []string, op string, users []string))](#parseDepsRules)
+    * [func parseFileHeader(content []byte) (trimmed, goBuild []byte, sawBinaryOnly bool, err error)](#parseFileHeader)
+    * [func parseGoEmbed(args string, pos token.Position) ([]fileEmbed, error)](#parseGoEmbed)
+    * [func parseWord(data []byte) (word, rest []byte)](#parseWord)
+    * [func readComments(f io.Reader) ([]byte, error)](#readComments)
+    * [func readGoInfo(f io.Reader, info *fileInfo) error](#readGoInfo)
+    * [func safeCgoName(s string) bool](#safeCgoName)
+    * [func skipSpaceOrComment(data []byte) []byte](#skipSpaceOrComment)
+    * [func splitQuoted(s string) (r []string, err error)](#splitQuoted)
+    * [func testRead(t *testing.T, tests []readTest, read func(io.Reader) ([]byte, error))](#testRead)
+    * [func uniq(list []string) []string](#uniq)
 
 
 ## <a id="const" href="#const">Constants</a>
 
-### <a id="FindOnly" href="#FindOnly">const FindOnly</a>
-
 ```
-searchKey: build.FindOnly
+tags: [package]
 ```
-
-```Go
-const FindOnly ImportMode = 1 << iota
-```
-
-If FindOnly is set, Import stops after locating the directory that should contain the sources for a package. It does not read any files in the directory. 
 
 ### <a id="AllowBinary" href="#AllowBinary">const AllowBinary</a>
 
 ```
 searchKey: build.AllowBinary
-tags: [deprecated]
+tags: [constant number deprecated]
 ```
 
 ```Go
@@ -267,22 +259,24 @@ If AllowBinary is set, Import can be satisfied by a compiled package object with
 
 Deprecated: The supported way to create a compiled-only package is to write source code containing a //go:binary-only-package comment at the top of the file. Such a package will be recognized regardless of this flag setting (because it has source code) and will have BinaryOnly set to true in the returned Package. 
 
-### <a id="ImportComment" href="#ImportComment">const ImportComment</a>
+### <a id="FindOnly" href="#FindOnly">const FindOnly</a>
 
 ```
-searchKey: build.ImportComment
+searchKey: build.FindOnly
+tags: [constant number]
 ```
 
 ```Go
-const ImportComment
+const FindOnly ImportMode = 1 << iota
 ```
 
-If ImportComment is set, parse import comments on package statements. Import returns an error if it finds a comment it cannot understand or finds conflicting comments in multiple source files. See golang.org/s/go14customimport for more information. 
+If FindOnly is set, Import stops after locating the directory that should contain the sources for a package. It does not read any files in the directory. 
 
 ### <a id="IgnoreVendor" href="#IgnoreVendor">const IgnoreVendor</a>
 
 ```
 searchKey: build.IgnoreVendor
+tags: [constant number]
 ```
 
 ```Go
@@ -295,11 +289,57 @@ Setting IgnoreVendor ignores vendor directories.
 
 In contrast to the package's ImportPath, the returned package's Imports, TestImports, and XTestImports are always the exact import paths from the source files: Import makes no attempt to resolve or check those paths. 
 
+### <a id="ImportComment" href="#ImportComment">const ImportComment</a>
+
+```
+searchKey: build.ImportComment
+tags: [constant number]
+```
+
+```Go
+const ImportComment
+```
+
+If ImportComment is set, parse import comments on package statements. Import returns an error if it finds a comment it cannot understand or finds conflicting comments in multiple source files. See golang.org/s/go14customimport for more information. 
+
+### <a id="goarchList" href="#goarchList">const goarchList</a>
+
+```
+searchKey: build.goarchList
+tags: [constant string private]
+```
+
+```Go
+const goarchList = ...
+```
+
+### <a id="goosList" href="#goosList">const goosList</a>
+
+```
+searchKey: build.goosList
+tags: [constant string private]
+```
+
+```Go
+const goosList = ...
+```
+
+### <a id="quote" href="#quote">const quote</a>
+
+```
+searchKey: build.quote
+tags: [constant string private]
+```
+
+```Go
+const quote = "`"
+```
+
 ### <a id="safeString" href="#safeString">const safeString</a>
 
 ```
 searchKey: build.safeString
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -308,45 +348,17 @@ const safeString = "+-.,/0123456789=ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopq
 
 NOTE: $ is not safe for the shell, but it is allowed here because of linker options like -Wl,$ORIGIN. We never pass these arguments to a shell (just to programs we construct argv for), so this should be okay. See golang.org/issue/6038. The @ is for OS X. See golang.org/issue/13720. The % is for Jenkins. See golang.org/issue/16959. The ! is because module paths may use them. See golang.org/issue/26716. The ~ and ^ are for sr.ht. See golang.org/issue/32260. 
 
-### <a id="goosList" href="#goosList">const goosList</a>
-
-```
-searchKey: build.goosList
-tags: [private]
-```
-
-```Go
-const goosList = ...
-```
-
-### <a id="goarchList" href="#goarchList">const goarchList</a>
-
-```
-searchKey: build.goarchList
-tags: [private]
-```
-
-```Go
-const goarchList = ...
-```
-
-### <a id="quote" href="#quote">const quote</a>
-
-```
-searchKey: build.quote
-tags: [private]
-```
-
-```Go
-const quote = "`"
-```
-
 ## <a id="var" href="#var">Variables</a>
+
+```
+tags: [package]
+```
 
 ### <a id="Default" href="#Default">var Default</a>
 
 ```
 searchKey: build.Default
+tags: [variable struct]
 ```
 
 ```Go
@@ -355,210 +367,11 @@ var Default Context = defaultContext()
 
 Default is the default Context for builds. It uses the GOARCH, GOOS, GOROOT, and GOPATH environment variables if set, or else the compiled code's GOARCH, GOOS, and GOROOT. 
 
-### <a id="defaultToolTags" href="#defaultToolTags">var defaultToolTags</a>
-
-```
-searchKey: build.defaultToolTags
-tags: [private]
-```
-
-```Go
-var defaultToolTags, defaultReleaseTags []string
-```
-
-### <a id="defaultReleaseTags" href="#defaultReleaseTags">var defaultReleaseTags</a>
-
-```
-searchKey: build.defaultReleaseTags
-tags: [private]
-```
-
-```Go
-var defaultToolTags, defaultReleaseTags []string
-```
-
-### <a id="errNoModules" href="#errNoModules">var errNoModules</a>
-
-```
-searchKey: build.errNoModules
-tags: [private]
-```
-
-```Go
-var errNoModules = errors.New("not using modules")
-```
-
-### <a id="slashSlash" href="#slashSlash">var slashSlash</a>
-
-```
-searchKey: build.slashSlash
-tags: [private]
-```
-
-```Go
-var slashSlash = []byte("//")
-```
-
-### <a id="slashStar" href="#slashStar">var slashStar</a>
-
-```
-searchKey: build.slashStar
-tags: [private]
-```
-
-```Go
-var slashStar = []byte("/*")
-```
-
-### <a id="starSlash" href="#starSlash">var starSlash</a>
-
-```
-searchKey: build.starSlash
-tags: [private]
-```
-
-```Go
-var starSlash = []byte("*/")
-```
-
-### <a id="newline" href="#newline">var newline</a>
-
-```
-searchKey: build.newline
-tags: [private]
-```
-
-```Go
-var newline = []byte("\n")
-```
-
-### <a id="dummyPkg" href="#dummyPkg">var dummyPkg</a>
-
-```
-searchKey: build.dummyPkg
-tags: [private]
-```
-
-```Go
-var dummyPkg Package
-```
-
-### <a id="bSlashSlash" href="#bSlashSlash">var bSlashSlash</a>
-
-```
-searchKey: build.bSlashSlash
-tags: [private]
-```
-
-```Go
-var bSlashSlash = []byte(slashSlash)
-```
-
-### <a id="bStarSlash" href="#bStarSlash">var bStarSlash</a>
-
-```
-searchKey: build.bStarSlash
-tags: [private]
-```
-
-```Go
-var bStarSlash = []byte(starSlash)
-```
-
-### <a id="bSlashStar" href="#bSlashStar">var bSlashStar</a>
-
-```
-searchKey: build.bSlashStar
-tags: [private]
-```
-
-```Go
-var bSlashStar = []byte(slashStar)
-```
-
-### <a id="bPlusBuild" href="#bPlusBuild">var bPlusBuild</a>
-
-```
-searchKey: build.bPlusBuild
-tags: [private]
-```
-
-```Go
-var bPlusBuild = []byte("+build")
-```
-
-### <a id="goBuildComment" href="#goBuildComment">var goBuildComment</a>
-
-```
-searchKey: build.goBuildComment
-tags: [private]
-```
-
-```Go
-var goBuildComment = []byte("//go:build")
-```
-
-### <a id="errGoBuildWithoutBuild" href="#errGoBuildWithoutBuild">var errGoBuildWithoutBuild</a>
-
-```
-searchKey: build.errGoBuildWithoutBuild
-tags: [private]
-```
-
-```Go
-var errGoBuildWithoutBuild = errors.New("//go:build comment without // +build comment")
-```
-
-### <a id="errMultipleGoBuild" href="#errMultipleGoBuild">var errMultipleGoBuild</a>
-
-```
-searchKey: build.errMultipleGoBuild
-tags: [private]
-```
-
-```Go
-var errMultipleGoBuild = errors.New("multiple //go:build comments")
-```
-
-### <a id="binaryOnlyComment" href="#binaryOnlyComment">var binaryOnlyComment</a>
-
-```
-searchKey: build.binaryOnlyComment
-tags: [private]
-```
-
-```Go
-var binaryOnlyComment = []byte("//go:binary-only-package")
-```
-
-Special comment denoting a binary-only package. See [https://golang.org/design/2775-binary-only-packages](https://golang.org/design/2775-binary-only-packages) for more about the design of binary-only packages. 
-
-### <a id="knownOS" href="#knownOS">var knownOS</a>
-
-```
-searchKey: build.knownOS
-tags: [private]
-```
-
-```Go
-var knownOS = make(map[string]bool)
-```
-
-### <a id="knownArch" href="#knownArch">var knownArch</a>
-
-```
-searchKey: build.knownArch
-tags: [private]
-```
-
-```Go
-var knownArch = make(map[string]bool)
-```
-
 ### <a id="ToolDir" href="#ToolDir">var ToolDir</a>
 
 ```
 searchKey: build.ToolDir
+tags: [variable string]
 ```
 
 ```Go
@@ -567,121 +380,134 @@ var ToolDir = getToolDir()
 
 ToolDir is the directory containing build tools. 
 
+### <a id="bPlusBuild" href="#bPlusBuild">var bPlusBuild</a>
+
+```
+searchKey: build.bPlusBuild
+tags: [variable array number private]
+```
+
+```Go
+var bPlusBuild = []byte("+build")
+```
+
+### <a id="bSlashSlash" href="#bSlashSlash">var bSlashSlash</a>
+
+```
+searchKey: build.bSlashSlash
+tags: [variable array number private]
+```
+
+```Go
+var bSlashSlash = []byte(slashSlash)
+```
+
+### <a id="bSlashStar" href="#bSlashStar">var bSlashStar</a>
+
+```
+searchKey: build.bSlashStar
+tags: [variable array number private]
+```
+
+```Go
+var bSlashStar = []byte(slashStar)
+```
+
+### <a id="bStarSlash" href="#bStarSlash">var bStarSlash</a>
+
+```
+searchKey: build.bStarSlash
+tags: [variable array number private]
+```
+
+```Go
+var bStarSlash = []byte(starSlash)
+```
+
+### <a id="binaryOnlyComment" href="#binaryOnlyComment">var binaryOnlyComment</a>
+
+```
+searchKey: build.binaryOnlyComment
+tags: [variable array number private]
+```
+
+```Go
+var binaryOnlyComment = []byte("//go:binary-only-package")
+```
+
+Special comment denoting a binary-only package. See [https://golang.org/design/2775-binary-only-packages](https://golang.org/design/2775-binary-only-packages) for more about the design of binary-only packages. 
+
 ### <a id="bom" href="#bom">var bom</a>
 
 ```
 searchKey: build.bom
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
 var bom = []byte{0xef, 0xbb, 0xbf}
 ```
 
-### <a id="errSyntax" href="#errSyntax">var errSyntax</a>
+### <a id="buildIgnore" href="#buildIgnore">var buildIgnore</a>
 
 ```
-searchKey: build.errSyntax
-tags: [private]
-```
-
-```Go
-var errSyntax = errors.New("syntax error")
-```
-
-### <a id="errNUL" href="#errNUL">var errNUL</a>
-
-```
-searchKey: build.errNUL
-tags: [private]
+searchKey: build.buildIgnore
+tags: [variable array number private]
 ```
 
 ```Go
-var errNUL = errors.New("unexpected NUL in input")
-```
-
-### <a id="goEmbed" href="#goEmbed">var goEmbed</a>
-
-```
-searchKey: build.goEmbed
-tags: [private]
-```
-
-```Go
-var goEmbed = []byte("go:embed")
-```
-
-### <a id="shouldBuildTests" href="#shouldBuildTests">var shouldBuildTests</a>
-
-```
-searchKey: build.shouldBuildTests
-tags: [private]
-```
-
-```Go
-var shouldBuildTests = ...
-```
-
-### <a id="ctxtP9" href="#ctxtP9">var ctxtP9</a>
-
-```
-searchKey: build.ctxtP9
-tags: [private]
-```
-
-```Go
-var ctxtP9 = Context{GOARCH: "arm", GOOS: "plan9"}
+var buildIgnore = []byte("\n// +build ignore")
 ```
 
 ### <a id="ctxtAndroid" href="#ctxtAndroid">var ctxtAndroid</a>
 
 ```
 searchKey: build.ctxtAndroid
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
 var ctxtAndroid = Context{GOARCH: "arm", GOOS: "android"}
 ```
 
-### <a id="matchFileTests" href="#matchFileTests">var matchFileTests</a>
+### <a id="ctxtP9" href="#ctxtP9">var ctxtP9</a>
 
 ```
-searchKey: build.matchFileTests
-tags: [private]
-```
-
-```Go
-var matchFileTests = ...
-```
-
-### <a id="expandSrcDirPath" href="#expandSrcDirPath">var expandSrcDirPath</a>
-
-```
-searchKey: build.expandSrcDirPath
-tags: [private]
+searchKey: build.ctxtP9
+tags: [variable struct private]
 ```
 
 ```Go
-var expandSrcDirPath = filepath.Join(string(filepath.Separator)+"projects", "src", "add")
+var ctxtP9 = Context{GOARCH: "arm", GOOS: "plan9"}
 ```
 
-### <a id="expandSrcDirTests" href="#expandSrcDirTests">var expandSrcDirTests</a>
+### <a id="defaultReleaseTags" href="#defaultReleaseTags">var defaultReleaseTags</a>
 
 ```
-searchKey: build.expandSrcDirTests
-tags: [private]
+searchKey: build.defaultReleaseTags
+tags: [variable array string private]
 ```
 
 ```Go
-var expandSrcDirTests = ...
+var defaultToolTags, defaultReleaseTags []string
+```
+
+### <a id="defaultToolTags" href="#defaultToolTags">var defaultToolTags</a>
+
+```
+searchKey: build.defaultToolTags
+tags: [variable array string private]
+```
+
+```Go
+var defaultToolTags, defaultReleaseTags []string
 ```
 
 ### <a id="depsRules" href="#depsRules">var depsRules</a>
 
 ```
 searchKey: build.depsRules
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
@@ -727,122 +553,314 @@ Comments begin with #.
 
 All-caps names are pseudo-names for specific points in the dependency lattice. 
 
-### <a id="buildIgnore" href="#buildIgnore">var buildIgnore</a>
+### <a id="dummyPkg" href="#dummyPkg">var dummyPkg</a>
 
 ```
-searchKey: build.buildIgnore
-tags: [private]
-```
-
-```Go
-var buildIgnore = []byte("\n// +build ignore")
-```
-
-### <a id="readGoInfoTests" href="#readGoInfoTests">var readGoInfoTests</a>
-
-```
-searchKey: build.readGoInfoTests
-tags: [private]
+searchKey: build.dummyPkg
+tags: [variable struct private]
 ```
 
 ```Go
-var readGoInfoTests = ...
+var dummyPkg Package
 ```
 
-### <a id="readCommentsTests" href="#readCommentsTests">var readCommentsTests</a>
+### <a id="errGoBuildWithoutBuild" href="#errGoBuildWithoutBuild">var errGoBuildWithoutBuild</a>
 
 ```
-searchKey: build.readCommentsTests
-tags: [private]
-```
-
-```Go
-var readCommentsTests = ...
-```
-
-### <a id="readFailuresTests" href="#readFailuresTests">var readFailuresTests</a>
-
-```
-searchKey: build.readFailuresTests
-tags: [private]
+searchKey: build.errGoBuildWithoutBuild
+tags: [variable interface private]
 ```
 
 ```Go
-var readFailuresTests = ...
+var errGoBuildWithoutBuild = errors.New("//go:build comment without // +build comment")
 ```
 
-### <a id="readEmbedTests" href="#readEmbedTests">var readEmbedTests</a>
+### <a id="errMultipleGoBuild" href="#errMultipleGoBuild">var errMultipleGoBuild</a>
 
 ```
-searchKey: build.readEmbedTests
-tags: [private]
-```
-
-```Go
-var readEmbedTests = ...
-```
-
-### <a id="thisOS" href="#thisOS">var thisOS</a>
-
-```
-searchKey: build.thisOS
-tags: [private]
+searchKey: build.errMultipleGoBuild
+tags: [variable interface private]
 ```
 
 ```Go
-var thisOS = runtime.GOOS
+var errMultipleGoBuild = errors.New("multiple //go:build comments")
 ```
 
-### <a id="thisArch" href="#thisArch">var thisArch</a>
+### <a id="errNUL" href="#errNUL">var errNUL</a>
 
 ```
-searchKey: build.thisArch
-tags: [private]
-```
-
-```Go
-var thisArch = runtime.GOARCH
-```
-
-### <a id="otherOS" href="#otherOS">var otherOS</a>
-
-```
-searchKey: build.otherOS
-tags: [private]
+searchKey: build.errNUL
+tags: [variable interface private]
 ```
 
 ```Go
-var otherOS = anotherOS()
+var errNUL = errors.New("unexpected NUL in input")
+```
+
+### <a id="errNoModules" href="#errNoModules">var errNoModules</a>
+
+```
+searchKey: build.errNoModules
+tags: [variable interface private]
+```
+
+```Go
+var errNoModules = errors.New("not using modules")
+```
+
+### <a id="errSyntax" href="#errSyntax">var errSyntax</a>
+
+```
+searchKey: build.errSyntax
+tags: [variable interface private]
+```
+
+```Go
+var errSyntax = errors.New("syntax error")
+```
+
+### <a id="expandSrcDirPath" href="#expandSrcDirPath">var expandSrcDirPath</a>
+
+```
+searchKey: build.expandSrcDirPath
+tags: [variable string private]
+```
+
+```Go
+var expandSrcDirPath = filepath.Join(string(filepath.Separator)+"projects", "src", "add")
+```
+
+### <a id="expandSrcDirTests" href="#expandSrcDirTests">var expandSrcDirTests</a>
+
+```
+searchKey: build.expandSrcDirTests
+tags: [variable array struct private]
+```
+
+```Go
+var expandSrcDirTests = ...
+```
+
+### <a id="goBuildComment" href="#goBuildComment">var goBuildComment</a>
+
+```
+searchKey: build.goBuildComment
+tags: [variable array number private]
+```
+
+```Go
+var goBuildComment = []byte("//go:build")
+```
+
+### <a id="goEmbed" href="#goEmbed">var goEmbed</a>
+
+```
+searchKey: build.goEmbed
+tags: [variable array number private]
+```
+
+```Go
+var goEmbed = []byte("go:embed")
+```
+
+### <a id="knownArch" href="#knownArch">var knownArch</a>
+
+```
+searchKey: build.knownArch
+tags: [variable object private]
+```
+
+```Go
+var knownArch = make(map[string]bool)
+```
+
+### <a id="knownOS" href="#knownOS">var knownOS</a>
+
+```
+searchKey: build.knownOS
+tags: [variable object private]
+```
+
+```Go
+var knownOS = make(map[string]bool)
+```
+
+### <a id="matchFileTests" href="#matchFileTests">var matchFileTests</a>
+
+```
+searchKey: build.matchFileTests
+tags: [variable array struct private]
+```
+
+```Go
+var matchFileTests = ...
+```
+
+### <a id="newline" href="#newline">var newline</a>
+
+```
+searchKey: build.newline
+tags: [variable array number private]
+```
+
+```Go
+var newline = []byte("\n")
 ```
 
 ### <a id="otherArch" href="#otherArch">var otherArch</a>
 
 ```
 searchKey: build.otherArch
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
 var otherArch = anotherArch()
 ```
 
+### <a id="otherOS" href="#otherOS">var otherOS</a>
+
+```
+searchKey: build.otherOS
+tags: [variable string private]
+```
+
+```Go
+var otherOS = anotherOS()
+```
+
+### <a id="readCommentsTests" href="#readCommentsTests">var readCommentsTests</a>
+
+```
+searchKey: build.readCommentsTests
+tags: [variable array struct private]
+```
+
+```Go
+var readCommentsTests = ...
+```
+
+### <a id="readEmbedTests" href="#readEmbedTests">var readEmbedTests</a>
+
+```
+searchKey: build.readEmbedTests
+tags: [variable array struct private]
+```
+
+```Go
+var readEmbedTests = ...
+```
+
+### <a id="readFailuresTests" href="#readFailuresTests">var readFailuresTests</a>
+
+```
+searchKey: build.readFailuresTests
+tags: [variable array struct private]
+```
+
+```Go
+var readFailuresTests = ...
+```
+
+### <a id="readGoInfoTests" href="#readGoInfoTests">var readGoInfoTests</a>
+
+```
+searchKey: build.readGoInfoTests
+tags: [variable array struct private]
+```
+
+```Go
+var readGoInfoTests = ...
+```
+
+### <a id="shouldBuildTests" href="#shouldBuildTests">var shouldBuildTests</a>
+
+```
+searchKey: build.shouldBuildTests
+tags: [variable array struct private]
+```
+
+```Go
+var shouldBuildTests = ...
+```
+
+### <a id="slashSlash" href="#slashSlash">var slashSlash</a>
+
+```
+searchKey: build.slashSlash
+tags: [variable array number private]
+```
+
+```Go
+var slashSlash = []byte("//")
+```
+
+### <a id="slashStar" href="#slashStar">var slashStar</a>
+
+```
+searchKey: build.slashStar
+tags: [variable array number private]
+```
+
+```Go
+var slashStar = []byte("/*")
+```
+
+### <a id="starSlash" href="#starSlash">var starSlash</a>
+
+```
+searchKey: build.starSlash
+tags: [variable array number private]
+```
+
+```Go
+var starSlash = []byte("*/")
+```
+
 ### <a id="tests" href="#tests">var tests</a>
 
 ```
 searchKey: build.tests
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
 var tests = ...
 ```
 
+### <a id="thisArch" href="#thisArch">var thisArch</a>
+
+```
+searchKey: build.thisArch
+tags: [variable string private]
+```
+
+```Go
+var thisArch = runtime.GOARCH
+```
+
+### <a id="thisOS" href="#thisOS">var thisOS</a>
+
+```
+searchKey: build.thisOS
+tags: [variable string private]
+```
+
+```Go
+var thisOS = runtime.GOOS
+```
+
 ## <a id="type" href="#type">Types</a>
+
+```
+tags: [package]
+```
 
 ### <a id="Context" href="#Context">type Context struct</a>
 
 ```
 searchKey: build.Context
+tags: [struct]
 ```
 
 ```Go
@@ -928,158 +946,18 @@ A Context specifies the supporting context for a build.
 
 ```
 searchKey: build.defaultContext
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func defaultContext() Context
 ```
 
-#### <a id="Context.joinPath" href="#Context.joinPath">func (ctxt *Context) joinPath(elem ...string) string</a>
-
-```
-searchKey: build.Context.joinPath
-tags: [private]
-```
-
-```Go
-func (ctxt *Context) joinPath(elem ...string) string
-```
-
-joinPath calls ctxt.JoinPath (if not nil) or else filepath.Join. 
-
-#### <a id="Context.splitPathList" href="#Context.splitPathList">func (ctxt *Context) splitPathList(s string) []string</a>
-
-```
-searchKey: build.Context.splitPathList
-tags: [private]
-```
-
-```Go
-func (ctxt *Context) splitPathList(s string) []string
-```
-
-splitPathList calls ctxt.SplitPathList (if not nil) or else filepath.SplitList. 
-
-#### <a id="Context.isAbsPath" href="#Context.isAbsPath">func (ctxt *Context) isAbsPath(path string) bool</a>
-
-```
-searchKey: build.Context.isAbsPath
-tags: [private]
-```
-
-```Go
-func (ctxt *Context) isAbsPath(path string) bool
-```
-
-isAbsPath calls ctxt.IsAbsPath (if not nil) or else filepath.IsAbs. 
-
-#### <a id="Context.isDir" href="#Context.isDir">func (ctxt *Context) isDir(path string) bool</a>
-
-```
-searchKey: build.Context.isDir
-tags: [private]
-```
-
-```Go
-func (ctxt *Context) isDir(path string) bool
-```
-
-isDir calls ctxt.IsDir (if not nil) or else uses os.Stat. 
-
-#### <a id="Context.hasSubdir" href="#Context.hasSubdir">func (ctxt *Context) hasSubdir(root, dir string) (rel string, ok bool)</a>
-
-```
-searchKey: build.Context.hasSubdir
-tags: [private]
-```
-
-```Go
-func (ctxt *Context) hasSubdir(root, dir string) (rel string, ok bool)
-```
-
-hasSubdir calls ctxt.HasSubdir (if not nil) or else uses the local file system to answer the question. 
-
-#### <a id="Context.readDir" href="#Context.readDir">func (ctxt *Context) readDir(path string) ([]fs.FileInfo, error)</a>
-
-```
-searchKey: build.Context.readDir
-tags: [private]
-```
-
-```Go
-func (ctxt *Context) readDir(path string) ([]fs.FileInfo, error)
-```
-
-readDir calls ctxt.ReadDir (if not nil) or else ioutil.ReadDir. 
-
-#### <a id="Context.openFile" href="#Context.openFile">func (ctxt *Context) openFile(path string) (io.ReadCloser, error)</a>
-
-```
-searchKey: build.Context.openFile
-tags: [private]
-```
-
-```Go
-func (ctxt *Context) openFile(path string) (io.ReadCloser, error)
-```
-
-openFile calls ctxt.OpenFile (if not nil) or else os.Open. 
-
-#### <a id="Context.isFile" href="#Context.isFile">func (ctxt *Context) isFile(path string) bool</a>
-
-```
-searchKey: build.Context.isFile
-tags: [private]
-```
-
-```Go
-func (ctxt *Context) isFile(path string) bool
-```
-
-isFile determines whether path is a file by trying to open it. It reuses openFile instead of adding another function to the list in Context. 
-
-#### <a id="Context.gopath" href="#Context.gopath">func (ctxt *Context) gopath() []string</a>
-
-```
-searchKey: build.Context.gopath
-tags: [private]
-```
-
-```Go
-func (ctxt *Context) gopath() []string
-```
-
-gopath returns the list of Go path directories. 
-
-#### <a id="Context.SrcDirs" href="#Context.SrcDirs">func (ctxt *Context) SrcDirs() []string</a>
-
-```
-searchKey: build.Context.SrcDirs
-```
-
-```Go
-func (ctxt *Context) SrcDirs() []string
-```
-
-SrcDirs returns a list of package source root directories. It draws from the current Go root and Go path but omits directories that do not exist. 
-
-#### <a id="Context.ImportDir" href="#Context.ImportDir">func (ctxt *Context) ImportDir(dir string, mode ImportMode) (*Package, error)</a>
-
-```
-searchKey: build.Context.ImportDir
-```
-
-```Go
-func (ctxt *Context) ImportDir(dir string, mode ImportMode) (*Package, error)
-```
-
-ImportDir is like Import but processes the Go package found in the named directory. 
-
 #### <a id="Context.Import" href="#Context.Import">func (ctxt *Context) Import(path string, srcDir string, mode ImportMode) (*Package, error)</a>
 
 ```
 searchKey: build.Context.Import
+tags: [method]
 ```
 
 ```Go
@@ -1098,23 +976,24 @@ In the directory containing the package, .go, .c, .h, and .s files are considere
 ```
 If an error occurs, Import returns a non-nil error and a non-nil *Package containing partial information. 
 
-#### <a id="Context.importGo" href="#Context.importGo">func (ctxt *Context) importGo(p *Package, path, srcDir string, mode ImportMode) error</a>
+#### <a id="Context.ImportDir" href="#Context.ImportDir">func (ctxt *Context) ImportDir(dir string, mode ImportMode) (*Package, error)</a>
 
 ```
-searchKey: build.Context.importGo
-tags: [private]
+searchKey: build.Context.ImportDir
+tags: [method]
 ```
 
 ```Go
-func (ctxt *Context) importGo(p *Package, path, srcDir string, mode ImportMode) error
+func (ctxt *Context) ImportDir(dir string, mode ImportMode) (*Package, error)
 ```
 
-importGo checks whether it can use the go command to find the directory for path. If using the go command is not appropriate, importGo returns errNoModules. Otherwise, importGo tries using the go command and reports whether that succeeded. Using the go command lets build.Import and build.Context.Import find code in Go modules. In the long term we want tools to use go/packages (currently golang.org/x/tools/go/packages), which will also use the go command. Invoking the go command here is not very efficient in that it computes information about the requested package and all dependencies and then only reports about the requested package. Then we reinvoke it for every dependency. But this is still better than not working at all. See golang.org/issue/26504. 
+ImportDir is like Import but processes the Go package found in the named directory. 
 
 #### <a id="Context.MatchFile" href="#Context.MatchFile">func (ctxt *Context) MatchFile(dir, name string) (match bool, err error)</a>
 
 ```
 searchKey: build.Context.MatchFile
+tags: [method]
 ```
 
 ```Go
@@ -1125,66 +1004,150 @@ MatchFile reports whether the file with the given name in the given directory ma
 
 MatchFile considers the name of the file and may use ctxt.OpenFile to read some or all of the file's content. 
 
-#### <a id="Context.matchFile" href="#Context.matchFile">func (ctxt *Context) matchFile(dir, name string, allTags map[string]bool, binaryOnly *bool, fset *token.FileSet) (*fileInfo, error)</a>
+#### <a id="Context.SrcDirs" href="#Context.SrcDirs">func (ctxt *Context) SrcDirs() []string</a>
 
 ```
-searchKey: build.Context.matchFile
-tags: [private]
-```
-
-```Go
-func (ctxt *Context) matchFile(dir, name string, allTags map[string]bool, binaryOnly *bool, fset *token.FileSet) (*fileInfo, error)
-```
-
-matchFile determines whether the file with the given name in the given directory should be included in the package being constructed. If the file should be included, matchFile returns a non-nil *fileInfo (and a nil error). Non-nil errors are reserved for unexpected problems. 
-
-If name denotes a Go program, matchFile reads until the end of the imports and returns that section of the file in the fileInfo's header field, even though it only considers text until the first non-comment for +build lines. 
-
-If allTags is non-nil, matchFile records any encountered build tag by setting allTags[tag] = true. 
-
-#### <a id="Context.shouldBuild" href="#Context.shouldBuild">func (ctxt *Context) shouldBuild(content []byte, allTags map[string]bool) (shouldBuild, binaryOnly bool, err error)</a>
-
-```
-searchKey: build.Context.shouldBuild
-tags: [private]
+searchKey: build.Context.SrcDirs
+tags: [function]
 ```
 
 ```Go
-func (ctxt *Context) shouldBuild(content []byte, allTags map[string]bool) (shouldBuild, binaryOnly bool, err error)
+func (ctxt *Context) SrcDirs() []string
 ```
 
-shouldBuild reports whether it is okay to use this file, The rule is that in the file's leading run of // comments and blank lines, which must be followed by a blank line (to avoid including a Go package clause doc comment), lines beginning with '// +build' are taken as build directives. 
+SrcDirs returns a list of package source root directories. It draws from the current Go root and Go path but omits directories that do not exist. 
 
-The file is accepted only if each such line lists something matching the file. For example: 
-
-```
-// +build windows linux
+#### <a id="Context.eval" href="#Context.eval">func (ctxt *Context) eval(x constraint.Expr, allTags map[string]bool) bool</a>
 
 ```
-marks the file as applicable only on Windows and Linux. 
-
-For each build tag it consults, shouldBuild sets allTags[tag] = true. 
-
-shouldBuild reports whether the file should be built and whether a //go:binary-only-package comment was found. 
-
-#### <a id="Context.saveCgo" href="#Context.saveCgo">func (ctxt *Context) saveCgo(filename string, di *Package, cg *ast.CommentGroup) error</a>
-
-```
-searchKey: build.Context.saveCgo
-tags: [private]
+searchKey: build.Context.eval
+tags: [method private]
 ```
 
 ```Go
-func (ctxt *Context) saveCgo(filename string, di *Package, cg *ast.CommentGroup) error
+func (ctxt *Context) eval(x constraint.Expr, allTags map[string]bool) bool
 ```
 
-saveCgo saves the information from the #cgo lines in the import "C" comment. These lines set CFLAGS, CPPFLAGS, CXXFLAGS and LDFLAGS and pkg-config directives that affect the way cgo's C code is built. 
+#### <a id="Context.goodOSArchFile" href="#Context.goodOSArchFile">func (ctxt *Context) goodOSArchFile(name string, allTags map[string]bool) bool</a>
+
+```
+searchKey: build.Context.goodOSArchFile
+tags: [method private]
+```
+
+```Go
+func (ctxt *Context) goodOSArchFile(name string, allTags map[string]bool) bool
+```
+
+goodOSArchFile returns false if the name contains a $GOOS or $GOARCH suffix which does not match the current system. The recognized name formats are: 
+
+```
+name_$(GOOS).*
+name_$(GOARCH).*
+name_$(GOOS)_$(GOARCH).*
+name_$(GOOS)_test.*
+name_$(GOARCH)_test.*
+name_$(GOOS)_$(GOARCH)_test.*
+
+```
+Exceptions: if GOOS=android, then files with GOOS=linux are also matched. if GOOS=illumos, then files with GOOS=solaris are also matched. if GOOS=ios, then files with GOOS=darwin are also matched. 
+
+#### <a id="Context.gopath" href="#Context.gopath">func (ctxt *Context) gopath() []string</a>
+
+```
+searchKey: build.Context.gopath
+tags: [function private]
+```
+
+```Go
+func (ctxt *Context) gopath() []string
+```
+
+gopath returns the list of Go path directories. 
+
+#### <a id="Context.hasSubdir" href="#Context.hasSubdir">func (ctxt *Context) hasSubdir(root, dir string) (rel string, ok bool)</a>
+
+```
+searchKey: build.Context.hasSubdir
+tags: [method private]
+```
+
+```Go
+func (ctxt *Context) hasSubdir(root, dir string) (rel string, ok bool)
+```
+
+hasSubdir calls ctxt.HasSubdir (if not nil) or else uses the local file system to answer the question. 
+
+#### <a id="Context.importGo" href="#Context.importGo">func (ctxt *Context) importGo(p *Package, path, srcDir string, mode ImportMode) error</a>
+
+```
+searchKey: build.Context.importGo
+tags: [method private]
+```
+
+```Go
+func (ctxt *Context) importGo(p *Package, path, srcDir string, mode ImportMode) error
+```
+
+importGo checks whether it can use the go command to find the directory for path. If using the go command is not appropriate, importGo returns errNoModules. Otherwise, importGo tries using the go command and reports whether that succeeded. Using the go command lets build.Import and build.Context.Import find code in Go modules. In the long term we want tools to use go/packages (currently golang.org/x/tools/go/packages), which will also use the go command. Invoking the go command here is not very efficient in that it computes information about the requested package and all dependencies and then only reports about the requested package. Then we reinvoke it for every dependency. But this is still better than not working at all. See golang.org/issue/26504. 
+
+#### <a id="Context.isAbsPath" href="#Context.isAbsPath">func (ctxt *Context) isAbsPath(path string) bool</a>
+
+```
+searchKey: build.Context.isAbsPath
+tags: [method private]
+```
+
+```Go
+func (ctxt *Context) isAbsPath(path string) bool
+```
+
+isAbsPath calls ctxt.IsAbsPath (if not nil) or else filepath.IsAbs. 
+
+#### <a id="Context.isDir" href="#Context.isDir">func (ctxt *Context) isDir(path string) bool</a>
+
+```
+searchKey: build.Context.isDir
+tags: [method private]
+```
+
+```Go
+func (ctxt *Context) isDir(path string) bool
+```
+
+isDir calls ctxt.IsDir (if not nil) or else uses os.Stat. 
+
+#### <a id="Context.isFile" href="#Context.isFile">func (ctxt *Context) isFile(path string) bool</a>
+
+```
+searchKey: build.Context.isFile
+tags: [method private]
+```
+
+```Go
+func (ctxt *Context) isFile(path string) bool
+```
+
+isFile determines whether path is a file by trying to open it. It reuses openFile instead of adding another function to the list in Context. 
+
+#### <a id="Context.joinPath" href="#Context.joinPath">func (ctxt *Context) joinPath(elem ...string) string</a>
+
+```
+searchKey: build.Context.joinPath
+tags: [method private]
+```
+
+```Go
+func (ctxt *Context) joinPath(elem ...string) string
+```
+
+joinPath calls ctxt.JoinPath (if not nil) or else filepath.Join. 
 
 #### <a id="Context.makePathsAbsolute" href="#Context.makePathsAbsolute">func (ctxt *Context) makePathsAbsolute(args []string, srcDir string)</a>
 
 ```
 searchKey: build.Context.makePathsAbsolute
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1199,7 +1162,7 @@ Using filepath.IsAbs and filepath.Join here means the results will be different 
 
 ```
 searchKey: build.Context.matchAuto
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1210,22 +1173,28 @@ matchAuto interprets text as either a +build or //go:build expression (whichever
 
 matchAuto is only used for testing of tag evaluation and in #cgo lines, which accept either syntax. 
 
-#### <a id="Context.eval" href="#Context.eval">func (ctxt *Context) eval(x constraint.Expr, allTags map[string]bool) bool</a>
+#### <a id="Context.matchFile" href="#Context.matchFile">func (ctxt *Context) matchFile(dir, name string, allTags map[string]bool, binaryOnly *bool, fset *token.FileSet) (*fileInfo, error)</a>
 
 ```
-searchKey: build.Context.eval
-tags: [private]
+searchKey: build.Context.matchFile
+tags: [method private]
 ```
 
 ```Go
-func (ctxt *Context) eval(x constraint.Expr, allTags map[string]bool) bool
+func (ctxt *Context) matchFile(dir, name string, allTags map[string]bool, binaryOnly *bool, fset *token.FileSet) (*fileInfo, error)
 ```
+
+matchFile determines whether the file with the given name in the given directory should be included in the package being constructed. If the file should be included, matchFile returns a non-nil *fileInfo (and a nil error). Non-nil errors are reserved for unexpected problems. 
+
+If name denotes a Go program, matchFile reads until the end of the imports and returns that section of the file in the fileInfo's header field, even though it only considers text until the first non-comment for +build lines. 
+
+If allTags is non-nil, matchFile records any encountered build tag by setting allTags[tag] = true. 
 
 #### <a id="Context.matchTag" href="#Context.matchTag">func (ctxt *Context) matchTag(name string, allTags map[string]bool) bool</a>
 
 ```
 searchKey: build.Context.matchTag
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1246,34 +1215,102 @@ tag (if tag is listed in ctxt.BuildTags or ctxt.ReleaseTags)
 ```
 It records all consulted tags in allTags. 
 
-#### <a id="Context.goodOSArchFile" href="#Context.goodOSArchFile">func (ctxt *Context) goodOSArchFile(name string, allTags map[string]bool) bool</a>
+#### <a id="Context.openFile" href="#Context.openFile">func (ctxt *Context) openFile(path string) (io.ReadCloser, error)</a>
 
 ```
-searchKey: build.Context.goodOSArchFile
-tags: [private]
+searchKey: build.Context.openFile
+tags: [method private]
 ```
 
 ```Go
-func (ctxt *Context) goodOSArchFile(name string, allTags map[string]bool) bool
+func (ctxt *Context) openFile(path string) (io.ReadCloser, error)
 ```
 
-goodOSArchFile returns false if the name contains a $GOOS or $GOARCH suffix which does not match the current system. The recognized name formats are: 
+openFile calls ctxt.OpenFile (if not nil) or else os.Open. 
+
+#### <a id="Context.readDir" href="#Context.readDir">func (ctxt *Context) readDir(path string) ([]fs.FileInfo, error)</a>
 
 ```
-name_$(GOOS).*
-name_$(GOARCH).*
-name_$(GOOS)_$(GOARCH).*
-name_$(GOOS)_test.*
-name_$(GOARCH)_test.*
-name_$(GOOS)_$(GOARCH)_test.*
+searchKey: build.Context.readDir
+tags: [method private]
+```
+
+```Go
+func (ctxt *Context) readDir(path string) ([]fs.FileInfo, error)
+```
+
+readDir calls ctxt.ReadDir (if not nil) or else ioutil.ReadDir. 
+
+#### <a id="Context.saveCgo" href="#Context.saveCgo">func (ctxt *Context) saveCgo(filename string, di *Package, cg *ast.CommentGroup) error</a>
 
 ```
-Exceptions: if GOOS=android, then files with GOOS=linux are also matched. if GOOS=illumos, then files with GOOS=solaris are also matched. if GOOS=ios, then files with GOOS=darwin are also matched. 
+searchKey: build.Context.saveCgo
+tags: [method private]
+```
+
+```Go
+func (ctxt *Context) saveCgo(filename string, di *Package, cg *ast.CommentGroup) error
+```
+
+saveCgo saves the information from the #cgo lines in the import "C" comment. These lines set CFLAGS, CPPFLAGS, CXXFLAGS and LDFLAGS and pkg-config directives that affect the way cgo's C code is built. 
+
+#### <a id="Context.shouldBuild" href="#Context.shouldBuild">func (ctxt *Context) shouldBuild(content []byte, allTags map[string]bool) (shouldBuild, binaryOnly bool, err error)</a>
+
+```
+searchKey: build.Context.shouldBuild
+tags: [method private]
+```
+
+```Go
+func (ctxt *Context) shouldBuild(content []byte, allTags map[string]bool) (shouldBuild, binaryOnly bool, err error)
+```
+
+shouldBuild reports whether it is okay to use this file, The rule is that in the file's leading run of // comments and blank lines, which must be followed by a blank line (to avoid including a Go package clause doc comment), lines beginning with '// +build' are taken as build directives. 
+
+The file is accepted only if each such line lists something matching the file. For example: 
+
+```
+// +build windows linux
+
+```
+marks the file as applicable only on Windows and Linux. 
+
+For each build tag it consults, shouldBuild sets allTags[tag] = true. 
+
+shouldBuild reports whether the file should be built and whether a //go:binary-only-package comment was found. 
+
+#### <a id="Context.splitPathList" href="#Context.splitPathList">func (ctxt *Context) splitPathList(s string) []string</a>
+
+```
+searchKey: build.Context.splitPathList
+tags: [method private]
+```
+
+```Go
+func (ctxt *Context) splitPathList(s string) []string
+```
+
+splitPathList calls ctxt.SplitPathList (if not nil) or else filepath.SplitList. 
+
+### <a id="GoodFileTest" href="#GoodFileTest">type GoodFileTest struct</a>
+
+```
+searchKey: build.GoodFileTest
+tags: [struct private]
+```
+
+```Go
+type GoodFileTest struct {
+	name   string
+	result bool
+}
+```
 
 ### <a id="ImportMode" href="#ImportMode">type ImportMode uint</a>
 
 ```
 searchKey: build.ImportMode
+tags: [number]
 ```
 
 ```Go
@@ -1282,10 +1319,65 @@ type ImportMode uint
 
 An ImportMode controls the behavior of the Import method. 
 
+### <a id="MultiplePackageError" href="#MultiplePackageError">type MultiplePackageError struct</a>
+
+```
+searchKey: build.MultiplePackageError
+tags: [struct]
+```
+
+```Go
+type MultiplePackageError struct {
+	Dir      string   // directory containing files
+	Packages []string // package names found
+	Files    []string // corresponding files: Files[i] declares package Packages[i]
+}
+```
+
+MultiplePackageError describes a directory containing multiple buildable Go source files for multiple packages. 
+
+#### <a id="MultiplePackageError.Error" href="#MultiplePackageError.Error">func (e *MultiplePackageError) Error() string</a>
+
+```
+searchKey: build.MultiplePackageError.Error
+tags: [function]
+```
+
+```Go
+func (e *MultiplePackageError) Error() string
+```
+
+### <a id="NoGoError" href="#NoGoError">type NoGoError struct</a>
+
+```
+searchKey: build.NoGoError
+tags: [struct]
+```
+
+```Go
+type NoGoError struct {
+	Dir string
+}
+```
+
+NoGoError is the error used by Import to describe a directory containing no buildable Go source files. (It may still contain test files, files hidden by build tags, and so on.) 
+
+#### <a id="NoGoError.Error" href="#NoGoError.Error">func (e *NoGoError) Error() string</a>
+
+```
+searchKey: build.NoGoError.Error
+tags: [function]
+```
+
+```Go
+func (e *NoGoError) Error() string
+```
+
 ### <a id="Package" href="#Package">type Package struct</a>
 
 ```
 searchKey: build.Package
+tags: [struct]
 ```
 
 ```Go
@@ -1362,6 +1454,7 @@ A Package describes the Go package found in a directory.
 
 ```
 searchKey: build.Import
+tags: [method]
 ```
 
 ```Go
@@ -1374,6 +1467,7 @@ Import is shorthand for Default.Import.
 
 ```
 searchKey: build.ImportDir
+tags: [method]
 ```
 
 ```Go
@@ -1386,6 +1480,7 @@ ImportDir is shorthand for Default.ImportDir.
 
 ```
 searchKey: build.Package.IsCommand
+tags: [function]
 ```
 
 ```Go
@@ -1394,61 +1489,97 @@ func (p *Package) IsCommand() bool
 
 IsCommand reports whether the package is considered a command to be installed (not just a library). Packages named "main" are treated as commands. 
 
-### <a id="NoGoError" href="#NoGoError">type NoGoError struct</a>
+### <a id="depsParser" href="#depsParser">type depsParser struct</a>
 
 ```
-searchKey: build.NoGoError
+searchKey: build.depsParser
+tags: [struct private]
 ```
 
 ```Go
-type NoGoError struct {
-	Dir string
+type depsParser struct {
+	t        *testing.T
+	lineno   int
+	lastWord string
+	text     string
 }
 ```
 
-NoGoError is the error used by Import to describe a directory containing no buildable Go source files. (It may still contain test files, files hidden by build tags, and so on.) 
+A depsParser parses the depsRules syntax described above. 
 
-#### <a id="NoGoError.Error" href="#NoGoError.Error">func (e *NoGoError) Error() string</a>
-
-```
-searchKey: build.NoGoError.Error
-```
-
-```Go
-func (e *NoGoError) Error() string
-```
-
-### <a id="MultiplePackageError" href="#MultiplePackageError">type MultiplePackageError struct</a>
+#### <a id="depsParser.nextList" href="#depsParser.nextList">func (p *depsParser) nextList() (list []string, token string)</a>
 
 ```
-searchKey: build.MultiplePackageError
+searchKey: build.depsParser.nextList
+tags: [function private]
 ```
 
 ```Go
-type MultiplePackageError struct {
-	Dir      string   // directory containing files
-	Packages []string // package names found
-	Files    []string // corresponding files: Files[i] declares package Packages[i]
+func (p *depsParser) nextList() (list []string, token string)
+```
+
+nextList parses and returns a comma-separated list of names. 
+
+#### <a id="depsParser.nextToken" href="#depsParser.nextToken">func (p *depsParser) nextToken() string</a>
+
+```
+searchKey: build.depsParser.nextToken
+tags: [function private]
+```
+
+```Go
+func (p *depsParser) nextToken() string
+```
+
+nextToken returns the next token in the deps rules, one of ";" "," "<" "!<" or a name. 
+
+#### <a id="depsParser.syntaxError" href="#depsParser.syntaxError">func (p *depsParser) syntaxError(msg string)</a>
+
+```
+searchKey: build.depsParser.syntaxError
+tags: [method private]
+```
+
+```Go
+func (p *depsParser) syntaxError(msg string)
+```
+
+syntaxError reports a parsing error. 
+
+### <a id="fileEmbed" href="#fileEmbed">type fileEmbed struct</a>
+
+```
+searchKey: build.fileEmbed
+tags: [struct private]
+```
+
+```Go
+type fileEmbed struct {
+	pattern string
+	pos     token.Position
 }
 ```
 
-MultiplePackageError describes a directory containing multiple buildable Go source files for multiple packages. 
-
-#### <a id="MultiplePackageError.Error" href="#MultiplePackageError.Error">func (e *MultiplePackageError) Error() string</a>
+### <a id="fileImport" href="#fileImport">type fileImport struct</a>
 
 ```
-searchKey: build.MultiplePackageError.Error
+searchKey: build.fileImport
+tags: [struct private]
 ```
 
 ```Go
-func (e *MultiplePackageError) Error() string
+type fileImport struct {
+	path string
+	pos  token.Pos
+	doc  *ast.CommentGroup
+}
 ```
 
 ### <a id="fileInfo" href="#fileInfo">type fileInfo struct</a>
 
 ```
 searchKey: build.fileInfo
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -1466,40 +1597,11 @@ type fileInfo struct {
 
 fileInfo records information learned about a file included in a build. 
 
-### <a id="fileImport" href="#fileImport">type fileImport struct</a>
-
-```
-searchKey: build.fileImport
-tags: [private]
-```
-
-```Go
-type fileImport struct {
-	path string
-	pos  token.Pos
-	doc  *ast.CommentGroup
-}
-```
-
-### <a id="fileEmbed" href="#fileEmbed">type fileEmbed struct</a>
-
-```
-searchKey: build.fileEmbed
-tags: [private]
-```
-
-```Go
-type fileEmbed struct {
-	pattern string
-	pos     token.Position
-}
-```
-
 ### <a id="importReader" href="#importReader">type importReader struct</a>
 
 ```
 searchKey: build.importReader
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -1518,31 +1620,57 @@ type importReader struct {
 
 ```
 searchKey: build.newImportReader
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func newImportReader(name string, r io.Reader) *importReader
 ```
 
-#### <a id="importReader.syntaxError" href="#importReader.syntaxError">func (r *importReader) syntaxError()</a>
+#### <a id="importReader.findEmbed" href="#importReader.findEmbed">func (r *importReader) findEmbed(first bool) bool</a>
 
 ```
-searchKey: build.importReader.syntaxError
-tags: [private]
+searchKey: build.importReader.findEmbed
+tags: [method private]
 ```
 
 ```Go
-func (r *importReader) syntaxError()
+func (r *importReader) findEmbed(first bool) bool
 ```
 
-syntaxError records a syntax error, but only if an I/O error has not already been recorded. 
+findEmbed advances the input reader to the next //go:embed comment. It reports whether it found a comment. (Otherwise it found an error or EOF.) 
+
+#### <a id="importReader.nextByte" href="#importReader.nextByte">func (r *importReader) nextByte(skipSpace bool) byte</a>
+
+```
+searchKey: build.importReader.nextByte
+tags: [method private]
+```
+
+```Go
+func (r *importReader) nextByte(skipSpace bool) byte
+```
+
+nextByte is like peekByte but advances beyond the returned byte. 
+
+#### <a id="importReader.peekByte" href="#importReader.peekByte">func (r *importReader) peekByte(skipSpace bool) byte</a>
+
+```
+searchKey: build.importReader.peekByte
+tags: [method private]
+```
+
+```Go
+func (r *importReader) peekByte(skipSpace bool) byte
+```
+
+peekByte returns the next byte from the input reader but does not advance beyond it. If skipSpace is set, peekByte skips leading spaces and comments. 
 
 #### <a id="importReader.readByte" href="#importReader.readByte">func (r *importReader) readByte() byte</a>
 
 ```
 searchKey: build.importReader.readByte
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -1555,7 +1683,7 @@ readByte reads the next byte from the input, saves it in buf, and returns it. If
 
 ```
 searchKey: build.importReader.readByteNoBuf
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -1564,63 +1692,11 @@ func (r *importReader) readByteNoBuf() byte
 
 readByteNoBuf is like readByte but doesn't buffer the byte. It exhausts r.buf before reading from r.b. 
 
-#### <a id="importReader.peekByte" href="#importReader.peekByte">func (r *importReader) peekByte(skipSpace bool) byte</a>
-
-```
-searchKey: build.importReader.peekByte
-tags: [private]
-```
-
-```Go
-func (r *importReader) peekByte(skipSpace bool) byte
-```
-
-peekByte returns the next byte from the input reader but does not advance beyond it. If skipSpace is set, peekByte skips leading spaces and comments. 
-
-#### <a id="importReader.nextByte" href="#importReader.nextByte">func (r *importReader) nextByte(skipSpace bool) byte</a>
-
-```
-searchKey: build.importReader.nextByte
-tags: [private]
-```
-
-```Go
-func (r *importReader) nextByte(skipSpace bool) byte
-```
-
-nextByte is like peekByte but advances beyond the returned byte. 
-
-#### <a id="importReader.findEmbed" href="#importReader.findEmbed">func (r *importReader) findEmbed(first bool) bool</a>
-
-```
-searchKey: build.importReader.findEmbed
-tags: [private]
-```
-
-```Go
-func (r *importReader) findEmbed(first bool) bool
-```
-
-findEmbed advances the input reader to the next //go:embed comment. It reports whether it found a comment. (Otherwise it found an error or EOF.) 
-
-#### <a id="importReader.readKeyword" href="#importReader.readKeyword">func (r *importReader) readKeyword(kw string)</a>
-
-```
-searchKey: build.importReader.readKeyword
-tags: [private]
-```
-
-```Go
-func (r *importReader) readKeyword(kw string)
-```
-
-readKeyword reads the given keyword from the input. If the keyword is not present, readKeyword records a syntax error. 
-
 #### <a id="importReader.readIdent" href="#importReader.readIdent">func (r *importReader) readIdent()</a>
 
 ```
 searchKey: build.importReader.readIdent
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -1629,24 +1705,11 @@ func (r *importReader) readIdent()
 
 readIdent reads an identifier from the input. If an identifier is not present, readIdent records a syntax error. 
 
-#### <a id="importReader.readString" href="#importReader.readString">func (r *importReader) readString()</a>
-
-```
-searchKey: build.importReader.readString
-tags: [private]
-```
-
-```Go
-func (r *importReader) readString()
-```
-
-readString reads a quoted string literal from the input. If an identifier is not present, readString records a syntax error. 
-
 #### <a id="importReader.readImport" href="#importReader.readImport">func (r *importReader) readImport()</a>
 
 ```
 searchKey: build.importReader.readImport
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -1655,11 +1718,50 @@ func (r *importReader) readImport()
 
 readImport reads an import clause - optional identifier followed by quoted string - from the input. 
 
+#### <a id="importReader.readKeyword" href="#importReader.readKeyword">func (r *importReader) readKeyword(kw string)</a>
+
+```
+searchKey: build.importReader.readKeyword
+tags: [method private]
+```
+
+```Go
+func (r *importReader) readKeyword(kw string)
+```
+
+readKeyword reads the given keyword from the input. If the keyword is not present, readKeyword records a syntax error. 
+
+#### <a id="importReader.readString" href="#importReader.readString">func (r *importReader) readString()</a>
+
+```
+searchKey: build.importReader.readString
+tags: [function private]
+```
+
+```Go
+func (r *importReader) readString()
+```
+
+readString reads a quoted string literal from the input. If an identifier is not present, readString records a syntax error. 
+
+#### <a id="importReader.syntaxError" href="#importReader.syntaxError">func (r *importReader) syntaxError()</a>
+
+```
+searchKey: build.importReader.syntaxError
+tags: [function private]
+```
+
+```Go
+func (r *importReader) syntaxError()
+```
+
+syntaxError records a syntax error, but only if an I/O error has not already been recorded. 
+
 ### <a id="readNopCloser" href="#readNopCloser">type readNopCloser struct</a>
 
 ```
 searchKey: build.readNopCloser
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -1672,75 +1774,18 @@ type readNopCloser struct {
 
 ```
 searchKey: build.readNopCloser.Close
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (r readNopCloser) Close() error
 ```
 
-### <a id="depsParser" href="#depsParser">type depsParser struct</a>
-
-```
-searchKey: build.depsParser
-tags: [private]
-```
-
-```Go
-type depsParser struct {
-	t        *testing.T
-	lineno   int
-	lastWord string
-	text     string
-}
-```
-
-A depsParser parses the depsRules syntax described above. 
-
-#### <a id="depsParser.syntaxError" href="#depsParser.syntaxError">func (p *depsParser) syntaxError(msg string)</a>
-
-```
-searchKey: build.depsParser.syntaxError
-tags: [private]
-```
-
-```Go
-func (p *depsParser) syntaxError(msg string)
-```
-
-syntaxError reports a parsing error. 
-
-#### <a id="depsParser.nextList" href="#depsParser.nextList">func (p *depsParser) nextList() (list []string, token string)</a>
-
-```
-searchKey: build.depsParser.nextList
-tags: [private]
-```
-
-```Go
-func (p *depsParser) nextList() (list []string, token string)
-```
-
-nextList parses and returns a comma-separated list of names. 
-
-#### <a id="depsParser.nextToken" href="#depsParser.nextToken">func (p *depsParser) nextToken() string</a>
-
-```
-searchKey: build.depsParser.nextToken
-tags: [private]
-```
-
-```Go
-func (p *depsParser) nextToken() string
-```
-
-nextToken returns the next token in the deps rules, one of ";" "," "<" "!<" or a name. 
-
 ### <a id="readTest" href="#readTest">type readTest struct</a>
 
 ```
 searchKey: build.readTest
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -1751,189 +1796,466 @@ type readTest struct {
 }
 ```
 
-### <a id="GoodFileTest" href="#GoodFileTest">type GoodFileTest struct</a>
-
-```
-searchKey: build.GoodFileTest
-tags: [private]
-```
-
-```Go
-type GoodFileTest struct {
-	name   string
-	result bool
-}
-```
-
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="hasSubdir" href="#hasSubdir">func hasSubdir(root, dir string) (rel string, ok bool)</a>
-
 ```
-searchKey: build.hasSubdir
-tags: [private]
+tags: [package]
 ```
 
-```Go
-func hasSubdir(root, dir string) (rel string, ok bool)
-```
-
-hasSubdir reports if dir is within root by performing lexical analysis only. 
-
-### <a id="defaultGOPATH" href="#defaultGOPATH">func defaultGOPATH() string</a>
+### <a id="ArchChar" href="#ArchChar">func ArchChar(goarch string) (string, error)</a>
 
 ```
-searchKey: build.defaultGOPATH
-tags: [private]
+searchKey: build.ArchChar
+tags: [method]
 ```
 
 ```Go
-func defaultGOPATH() string
+func ArchChar(goarch string) (string, error)
 ```
 
-### <a id="envOr" href="#envOr">func envOr(name, def string) string</a>
+ArchChar returns "?" and an error. In earlier versions of Go, the returned string was used to derive the compiler and linker tool names, the default object file suffix, and the default linker output name. As of Go 1.5, those strings no longer vary by architecture; they are compile, link, .o, and a.out, respectively. 
+
+### <a id="IsLocalImport" href="#IsLocalImport">func IsLocalImport(path string) bool</a>
 
 ```
-searchKey: build.envOr
-tags: [private]
-```
-
-```Go
-func envOr(name, def string) string
-```
-
-### <a id="nameExt" href="#nameExt">func nameExt(name string) string</a>
-
-```
-searchKey: build.nameExt
-tags: [private]
+searchKey: build.IsLocalImport
+tags: [method]
 ```
 
 ```Go
-func nameExt(name string) string
+func IsLocalImport(path string) bool
 ```
 
-### <a id="fileListForExt" href="#fileListForExt">func fileListForExt(p *Package, ext string) *[]string</a>
+IsLocalImport reports whether the import path is a local import path, like ".", "..", "./foo", or "../foo". 
+
+### <a id="TestCgoImportsIgnored" href="#TestCgoImportsIgnored">func TestCgoImportsIgnored(t *testing.T)</a>
 
 ```
-searchKey: build.fileListForExt
-tags: [private]
-```
-
-```Go
-func fileListForExt(p *Package, ext string) *[]string
-```
-
-### <a id="uniq" href="#uniq">func uniq(list []string) []string</a>
-
-```
-searchKey: build.uniq
-tags: [private]
+searchKey: build.TestCgoImportsIgnored
+tags: [method private test]
 ```
 
 ```Go
-func uniq(list []string) []string
+func TestCgoImportsIgnored(t *testing.T)
 ```
 
-### <a id="equal" href="#equal">func equal(x, y []string) bool</a>
+TestCgoImportsIgnored checks that imports in cgo files are not included in the imports list when cgo is disabled. Verifies golang.org/issue/35946. 
+
+### <a id="TestDependencies" href="#TestDependencies">func TestDependencies(t *testing.T)</a>
 
 ```
-searchKey: build.equal
-tags: [private]
-```
-
-```Go
-func equal(x, y []string) bool
-```
-
-### <a id="hasGoFiles" href="#hasGoFiles">func hasGoFiles(ctxt *Context, dir string) bool</a>
-
-```
-searchKey: build.hasGoFiles
-tags: [private]
+searchKey: build.TestDependencies
+tags: [method private test]
 ```
 
 ```Go
-func hasGoFiles(ctxt *Context, dir string) bool
+func TestDependencies(t *testing.T)
 ```
 
-hasGoFiles reports whether dir contains any files with names ending in .go. For a vendor check we must exclude directories that contain no .go files. Otherwise it is not possible to vendor just a/b/c and still import the non-vendored a/b. See golang.org/issue/13832. 
-
-### <a id="findImportComment" href="#findImportComment">func findImportComment(data []byte) (s string, line int)</a>
+### <a id="TestDotSlashImport" href="#TestDotSlashImport">func TestDotSlashImport(t *testing.T)</a>
 
 ```
-searchKey: build.findImportComment
-tags: [private]
-```
-
-```Go
-func findImportComment(data []byte) (s string, line int)
-```
-
-### <a id="skipSpaceOrComment" href="#skipSpaceOrComment">func skipSpaceOrComment(data []byte) []byte</a>
-
-```
-searchKey: build.skipSpaceOrComment
-tags: [private]
+searchKey: build.TestDotSlashImport
+tags: [method private test]
 ```
 
 ```Go
-func skipSpaceOrComment(data []byte) []byte
+func TestDotSlashImport(t *testing.T)
 ```
 
-skipSpaceOrComment returns data with any leading spaces or comments removed. 
-
-### <a id="parseWord" href="#parseWord">func parseWord(data []byte) (word, rest []byte)</a>
+### <a id="TestEmptyFolderImport" href="#TestEmptyFolderImport">func TestEmptyFolderImport(t *testing.T)</a>
 
 ```
-searchKey: build.parseWord
-tags: [private]
+searchKey: build.TestEmptyFolderImport
+tags: [method private test]
 ```
 
 ```Go
-func parseWord(data []byte) (word, rest []byte)
+func TestEmptyFolderImport(t *testing.T)
 ```
 
-parseWord skips any leading spaces or comments in data and then parses the beginning of data as an identifier or keyword, returning that word and what remains after the word. 
+### <a id="TestEmptyImport" href="#TestEmptyImport">func TestEmptyImport(t *testing.T)</a>
+
+```
+searchKey: build.TestEmptyImport
+tags: [method private test]
+```
+
+```Go
+func TestEmptyImport(t *testing.T)
+```
+
+### <a id="TestExpandSrcDir" href="#TestExpandSrcDir">func TestExpandSrcDir(t *testing.T)</a>
+
+```
+searchKey: build.TestExpandSrcDir
+tags: [method private test]
+```
+
+```Go
+func TestExpandSrcDir(t *testing.T)
+```
+
+### <a id="TestFindImports" href="#TestFindImports">func TestFindImports(t *testing.T)</a>
+
+```
+searchKey: build.TestFindImports
+tags: [method private test]
+```
+
+```Go
+func TestFindImports(t *testing.T)
+```
+
+TestFindImports tests that findImports works.  See #43249. 
+
+### <a id="TestGoodOSArch" href="#TestGoodOSArch">func TestGoodOSArch(t *testing.T)</a>
+
+```
+searchKey: build.TestGoodOSArch
+tags: [method private test]
+```
+
+```Go
+func TestGoodOSArch(t *testing.T)
+```
+
+### <a id="TestGoodOSArchFile" href="#TestGoodOSArchFile">func TestGoodOSArchFile(t *testing.T)</a>
+
+```
+searchKey: build.TestGoodOSArchFile
+tags: [method private test]
+```
+
+```Go
+func TestGoodOSArchFile(t *testing.T)
+```
+
+### <a id="TestImportCmd" href="#TestImportCmd">func TestImportCmd(t *testing.T)</a>
+
+```
+searchKey: build.TestImportCmd
+tags: [method private test]
+```
+
+```Go
+func TestImportCmd(t *testing.T)
+```
+
+### <a id="TestImportDirNotExist" href="#TestImportDirNotExist">func TestImportDirNotExist(t *testing.T)</a>
+
+```
+searchKey: build.TestImportDirNotExist
+tags: [method private test]
+```
+
+```Go
+func TestImportDirNotExist(t *testing.T)
+```
+
+Want to get a "cannot find package" error when directory for package does not exist. There should be valid partial information in the returned non-nil *Package. 
+
+### <a id="TestImportDirTarget" href="#TestImportDirTarget">func TestImportDirTarget(t *testing.T)</a>
+
+```
+searchKey: build.TestImportDirTarget
+tags: [method private test]
+```
+
+```Go
+func TestImportDirTarget(t *testing.T)
+```
+
+### <a id="TestImportPackageOutsideModule" href="#TestImportPackageOutsideModule">func TestImportPackageOutsideModule(t *testing.T)</a>
+
+```
+searchKey: build.TestImportPackageOutsideModule
+tags: [method private test]
+```
+
+```Go
+func TestImportPackageOutsideModule(t *testing.T)
+```
+
+Check that a package is loaded in module mode if GO111MODULE=on, even when no go.mod file is present. It should fail to resolve packages outside std. Verifies golang.org/issue/34669. 
+
+### <a id="TestImportVendor" href="#TestImportVendor">func TestImportVendor(t *testing.T)</a>
+
+```
+searchKey: build.TestImportVendor
+tags: [method private test]
+```
+
+```Go
+func TestImportVendor(t *testing.T)
+```
+
+### <a id="TestImportVendorFailure" href="#TestImportVendorFailure">func TestImportVendorFailure(t *testing.T)</a>
+
+```
+searchKey: build.TestImportVendorFailure
+tags: [method private test]
+```
+
+```Go
+func TestImportVendorFailure(t *testing.T)
+```
+
+### <a id="TestImportVendorParentFailure" href="#TestImportVendorParentFailure">func TestImportVendorParentFailure(t *testing.T)</a>
+
+```
+searchKey: build.TestImportVendorParentFailure
+tags: [method private test]
+```
+
+```Go
+func TestImportVendorParentFailure(t *testing.T)
+```
+
+### <a id="TestIssue23594" href="#TestIssue23594">func TestIssue23594(t *testing.T)</a>
+
+```
+searchKey: build.TestIssue23594
+tags: [method private test]
+```
+
+```Go
+func TestIssue23594(t *testing.T)
+```
+
+TestIssue23594 prevents go/build from regressing and populating Package.Doc from comments in test files. 
+
+### <a id="TestLocalDirectory" href="#TestLocalDirectory">func TestLocalDirectory(t *testing.T)</a>
+
+```
+searchKey: build.TestLocalDirectory
+tags: [method private test]
+```
+
+```Go
+func TestLocalDirectory(t *testing.T)
+```
+
+### <a id="TestMain" href="#TestMain">func TestMain(m *testing.M)</a>
+
+```
+searchKey: build.TestMain
+tags: [method private test]
+```
+
+```Go
+func TestMain(m *testing.M)
+```
+
+### <a id="TestMatch" href="#TestMatch">func TestMatch(t *testing.T)</a>
+
+```
+searchKey: build.TestMatch
+tags: [method private test]
+```
+
+```Go
+func TestMatch(t *testing.T)
+```
+
+### <a id="TestMatchFile" href="#TestMatchFile">func TestMatchFile(t *testing.T)</a>
+
+```
+searchKey: build.TestMatchFile
+tags: [method private test]
+```
+
+```Go
+func TestMatchFile(t *testing.T)
+```
+
+### <a id="TestMissingImportErrorRepetition" href="#TestMissingImportErrorRepetition">func TestMissingImportErrorRepetition(t *testing.T)</a>
+
+```
+searchKey: build.TestMissingImportErrorRepetition
+tags: [method private test]
+```
+
+```Go
+func TestMissingImportErrorRepetition(t *testing.T)
+```
+
+TestMissingImportErrorRepetition checks that when an unknown package is imported, the package path is only shown once in the error. Verifies golang.org/issue/34752. 
+
+### <a id="TestMultiplePackageImport" href="#TestMultiplePackageImport">func TestMultiplePackageImport(t *testing.T)</a>
+
+```
+searchKey: build.TestMultiplePackageImport
+tags: [method private test]
+```
+
+```Go
+func TestMultiplePackageImport(t *testing.T)
+```
+
+### <a id="TestReadComments" href="#TestReadComments">func TestReadComments(t *testing.T)</a>
+
+```
+searchKey: build.TestReadComments
+tags: [method private test]
+```
+
+```Go
+func TestReadComments(t *testing.T)
+```
+
+### <a id="TestReadEmbed" href="#TestReadEmbed">func TestReadEmbed(t *testing.T)</a>
+
+```
+searchKey: build.TestReadEmbed
+tags: [method private test]
+```
+
+```Go
+func TestReadEmbed(t *testing.T)
+```
+
+### <a id="TestReadFailuresIgnored" href="#TestReadFailuresIgnored">func TestReadFailuresIgnored(t *testing.T)</a>
+
+```
+searchKey: build.TestReadFailuresIgnored
+tags: [method private test]
+```
+
+```Go
+func TestReadFailuresIgnored(t *testing.T)
+```
+
+### <a id="TestReadGoInfo" href="#TestReadGoInfo">func TestReadGoInfo(t *testing.T)</a>
+
+```
+searchKey: build.TestReadGoInfo
+tags: [method private test]
+```
+
+```Go
+func TestReadGoInfo(t *testing.T)
+```
+
+### <a id="TestShellSafety" href="#TestShellSafety">func TestShellSafety(t *testing.T)</a>
+
+```
+searchKey: build.TestShellSafety
+tags: [method private test]
+```
+
+```Go
+func TestShellSafety(t *testing.T)
+```
+
+### <a id="TestShouldBuild" href="#TestShouldBuild">func TestShouldBuild(t *testing.T)</a>
+
+```
+searchKey: build.TestShouldBuild
+tags: [method private test]
+```
+
+```Go
+func TestShouldBuild(t *testing.T)
+```
+
+### <a id="TestStdlibLowercase" href="#TestStdlibLowercase">func TestStdlibLowercase(t *testing.T)</a>
+
+```
+searchKey: build.TestStdlibLowercase
+tags: [method private test]
+```
+
+```Go
+func TestStdlibLowercase(t *testing.T)
+```
+
+TestStdlibLowercase tests that all standard library package names are lowercase. See Issue 40065. 
+
+### <a id="anotherArch" href="#anotherArch">func anotherArch() string</a>
+
+```
+searchKey: build.anotherArch
+tags: [function private]
+```
+
+```Go
+func anotherArch() string
+```
+
+### <a id="anotherOS" href="#anotherOS">func anotherOS() string</a>
+
+```
+searchKey: build.anotherOS
+tags: [function private]
+```
+
+```Go
+func anotherOS() string
+```
 
 ### <a id="cleanDecls" href="#cleanDecls">func cleanDecls(m map[string][]token.Position) ([]string, map[string][]token.Position)</a>
 
 ```
 searchKey: build.cleanDecls
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func cleanDecls(m map[string][]token.Position) ([]string, map[string][]token.Position)
 ```
 
-### <a id="isGoBuildComment" href="#isGoBuildComment">func isGoBuildComment(line []byte) bool</a>
+### <a id="defaultGOPATH" href="#defaultGOPATH">func defaultGOPATH() string</a>
 
 ```
-searchKey: build.isGoBuildComment
-tags: [private]
-```
-
-```Go
-func isGoBuildComment(line []byte) bool
-```
-
-### <a id="parseFileHeader" href="#parseFileHeader">func parseFileHeader(content []byte) (trimmed, goBuild []byte, sawBinaryOnly bool, err error)</a>
-
-```
-searchKey: build.parseFileHeader
-tags: [private]
+searchKey: build.defaultGOPATH
+tags: [function private]
 ```
 
 ```Go
-func parseFileHeader(content []byte) (trimmed, goBuild []byte, sawBinaryOnly bool, err error)
+func defaultGOPATH() string
+```
+
+### <a id="depsPolicy" href="#depsPolicy">func depsPolicy(t *testing.T) map[string]map[string]bool</a>
+
+```
+searchKey: build.depsPolicy
+tags: [method private]
+```
+
+```Go
+func depsPolicy(t *testing.T) map[string]map[string]bool
+```
+
+depsPolicy returns a map m such that m[p][d] == true when p can import d. 
+
+### <a id="envOr" href="#envOr">func envOr(name, def string) string</a>
+
+```
+searchKey: build.envOr
+tags: [method private]
+```
+
+```Go
+func envOr(name, def string) string
+```
+
+### <a id="equal" href="#equal">func equal(x, y []string) bool</a>
+
+```
+searchKey: build.equal
+tags: [method private]
+```
+
+```Go
+func equal(x, y []string) bool
 ```
 
 ### <a id="expandSrcDir" href="#expandSrcDir">func expandSrcDir(str string, srcdir string) (string, bool)</a>
 
 ```
 searchKey: build.expandSrcDir
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1942,22 +2264,242 @@ func expandSrcDir(str string, srcdir string) (string, bool)
 
 expandSrcDir expands any occurrence of ${SRCDIR}, making sure the result is safe for the shell. 
 
+### <a id="fileListForExt" href="#fileListForExt">func fileListForExt(p *Package, ext string) *[]string</a>
+
+```
+searchKey: build.fileListForExt
+tags: [method private]
+```
+
+```Go
+func fileListForExt(p *Package, ext string) *[]string
+```
+
+### <a id="findImportComment" href="#findImportComment">func findImportComment(data []byte) (s string, line int)</a>
+
+```
+searchKey: build.findImportComment
+tags: [method private]
+```
+
+```Go
+func findImportComment(data []byte) (s string, line int)
+```
+
+### <a id="findImports" href="#findImports">func findImports(pkg string) ([]string, error)</a>
+
+```
+searchKey: build.findImports
+tags: [method private]
+```
+
+```Go
+func findImports(pkg string) ([]string, error)
+```
+
+### <a id="getToolDir" href="#getToolDir">func getToolDir() string</a>
+
+```
+searchKey: build.getToolDir
+tags: [function private]
+```
+
+```Go
+func getToolDir() string
+```
+
+getToolDir returns the default value of ToolDir. 
+
+### <a id="hasGoFiles" href="#hasGoFiles">func hasGoFiles(ctxt *Context, dir string) bool</a>
+
+```
+searchKey: build.hasGoFiles
+tags: [method private]
+```
+
+```Go
+func hasGoFiles(ctxt *Context, dir string) bool
+```
+
+hasGoFiles reports whether dir contains any files with names ending in .go. For a vendor check we must exclude directories that contain no .go files. Otherwise it is not possible to vendor just a/b/c and still import the non-vendored a/b. See golang.org/issue/13832. 
+
+### <a id="hasSubdir" href="#hasSubdir">func hasSubdir(root, dir string) (rel string, ok bool)</a>
+
+```
+searchKey: build.hasSubdir
+tags: [method private]
+```
+
+```Go
+func hasSubdir(root, dir string) (rel string, ok bool)
+```
+
+hasSubdir reports if dir is within root by performing lexical analysis only. 
+
+### <a id="init.build.go" href="#init.build.go">func init()</a>
+
+```
+searchKey: build.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="isGoBuildComment" href="#isGoBuildComment">func isGoBuildComment(line []byte) bool</a>
+
+```
+searchKey: build.isGoBuildComment
+tags: [method private]
+```
+
+```Go
+func isGoBuildComment(line []byte) bool
+```
+
+### <a id="isIdent" href="#isIdent">func isIdent(c byte) bool</a>
+
+```
+searchKey: build.isIdent
+tags: [method private]
+```
+
+```Go
+func isIdent(c byte) bool
+```
+
+### <a id="listStdPkgs" href="#listStdPkgs">func listStdPkgs(goroot string) ([]string, error)</a>
+
+```
+searchKey: build.listStdPkgs
+tags: [method private]
+```
+
+```Go
+func listStdPkgs(goroot string) ([]string, error)
+```
+
+listStdPkgs returns the same list of packages as "go list std". 
+
+### <a id="nameExt" href="#nameExt">func nameExt(name string) string</a>
+
+```
+searchKey: build.nameExt
+tags: [method private]
+```
+
+```Go
+func nameExt(name string) string
+```
+
+### <a id="parseDepsRules" href="#parseDepsRules">func parseDepsRules(t *testing.T, save func(deps []string, op string, users []string))</a>
+
+```
+searchKey: build.parseDepsRules
+tags: [method private]
+```
+
+```Go
+func parseDepsRules(t *testing.T, save func(deps []string, op string, users []string))
+```
+
+parseDepsRules parses depsRules, calling save(deps, op, users) for each deps < users or deps !< users rule (op is "<" or "!<"). 
+
+### <a id="parseFileHeader" href="#parseFileHeader">func parseFileHeader(content []byte) (trimmed, goBuild []byte, sawBinaryOnly bool, err error)</a>
+
+```
+searchKey: build.parseFileHeader
+tags: [method private]
+```
+
+```Go
+func parseFileHeader(content []byte) (trimmed, goBuild []byte, sawBinaryOnly bool, err error)
+```
+
+### <a id="parseGoEmbed" href="#parseGoEmbed">func parseGoEmbed(args string, pos token.Position) ([]fileEmbed, error)</a>
+
+```
+searchKey: build.parseGoEmbed
+tags: [method private]
+```
+
+```Go
+func parseGoEmbed(args string, pos token.Position) ([]fileEmbed, error)
+```
+
+parseGoEmbed parses the text following "//go:embed" to extract the glob patterns. It accepts unquoted space-separated patterns as well as double-quoted and back-quoted Go strings. This is based on a similar function in cmd/compile/internal/gc/noder.go; this version calculates position information as well. 
+
+### <a id="parseWord" href="#parseWord">func parseWord(data []byte) (word, rest []byte)</a>
+
+```
+searchKey: build.parseWord
+tags: [method private]
+```
+
+```Go
+func parseWord(data []byte) (word, rest []byte)
+```
+
+parseWord skips any leading spaces or comments in data and then parses the beginning of data as an identifier or keyword, returning that word and what remains after the word. 
+
+### <a id="readComments" href="#readComments">func readComments(f io.Reader) ([]byte, error)</a>
+
+```
+searchKey: build.readComments
+tags: [method private]
+```
+
+```Go
+func readComments(f io.Reader) ([]byte, error)
+```
+
+readComments is like io.ReadAll, except that it only reads the leading block of comments in the file. 
+
+### <a id="readGoInfo" href="#readGoInfo">func readGoInfo(f io.Reader, info *fileInfo) error</a>
+
+```
+searchKey: build.readGoInfo
+tags: [method private]
+```
+
+```Go
+func readGoInfo(f io.Reader, info *fileInfo) error
+```
+
+readGoInfo expects a Go file as input and reads the file up to and including the import section. It records what it learned in *info. If info.fset is non-nil, readGoInfo parses the file and sets info.parsed, info.parseErr, info.imports, info.embeds, and info.embedErr. 
+
+It only returns an error if there are problems reading the file, not for syntax errors in the file itself. 
+
 ### <a id="safeCgoName" href="#safeCgoName">func safeCgoName(s string) bool</a>
 
 ```
 searchKey: build.safeCgoName
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func safeCgoName(s string) bool
 ```
 
+### <a id="skipSpaceOrComment" href="#skipSpaceOrComment">func skipSpaceOrComment(data []byte) []byte</a>
+
+```
+searchKey: build.skipSpaceOrComment
+tags: [method private]
+```
+
+```Go
+func skipSpaceOrComment(data []byte) []byte
+```
+
+skipSpaceOrComment returns data with any leading spaces or comments removed. 
+
 ### <a id="splitQuoted" href="#splitQuoted">func splitQuoted(s string) (r []string, err error)</a>
 
 ```
 searchKey: build.splitQuoted
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1978,530 +2520,25 @@ Would be parsed as:
 []string{"a", "b:c d", "ef", `g"`}
 
 ```
-### <a id="init.build.go" href="#init.build.go">func init()</a>
-
-```
-searchKey: build.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
-### <a id="IsLocalImport" href="#IsLocalImport">func IsLocalImport(path string) bool</a>
-
-```
-searchKey: build.IsLocalImport
-```
-
-```Go
-func IsLocalImport(path string) bool
-```
-
-IsLocalImport reports whether the import path is a local import path, like ".", "..", "./foo", or "../foo". 
-
-### <a id="ArchChar" href="#ArchChar">func ArchChar(goarch string) (string, error)</a>
-
-```
-searchKey: build.ArchChar
-```
-
-```Go
-func ArchChar(goarch string) (string, error)
-```
-
-ArchChar returns "?" and an error. In earlier versions of Go, the returned string was used to derive the compiler and linker tool names, the default object file suffix, and the default linker output name. As of Go 1.5, those strings no longer vary by architecture; they are compile, link, .o, and a.out, respectively. 
-
-### <a id="getToolDir" href="#getToolDir">func getToolDir() string</a>
-
-```
-searchKey: build.getToolDir
-tags: [private]
-```
-
-```Go
-func getToolDir() string
-```
-
-getToolDir returns the default value of ToolDir. 
-
-### <a id="isIdent" href="#isIdent">func isIdent(c byte) bool</a>
-
-```
-searchKey: build.isIdent
-tags: [private]
-```
-
-```Go
-func isIdent(c byte) bool
-```
-
-### <a id="readComments" href="#readComments">func readComments(f io.Reader) ([]byte, error)</a>
-
-```
-searchKey: build.readComments
-tags: [private]
-```
-
-```Go
-func readComments(f io.Reader) ([]byte, error)
-```
-
-readComments is like io.ReadAll, except that it only reads the leading block of comments in the file. 
-
-### <a id="readGoInfo" href="#readGoInfo">func readGoInfo(f io.Reader, info *fileInfo) error</a>
-
-```
-searchKey: build.readGoInfo
-tags: [private]
-```
-
-```Go
-func readGoInfo(f io.Reader, info *fileInfo) error
-```
-
-readGoInfo expects a Go file as input and reads the file up to and including the import section. It records what it learned in *info. If info.fset is non-nil, readGoInfo parses the file and sets info.parsed, info.parseErr, info.imports, info.embeds, and info.embedErr. 
-
-It only returns an error if there are problems reading the file, not for syntax errors in the file itself. 
-
-### <a id="parseGoEmbed" href="#parseGoEmbed">func parseGoEmbed(args string, pos token.Position) ([]fileEmbed, error)</a>
-
-```
-searchKey: build.parseGoEmbed
-tags: [private]
-```
-
-```Go
-func parseGoEmbed(args string, pos token.Position) ([]fileEmbed, error)
-```
-
-parseGoEmbed parses the text following "//go:embed" to extract the glob patterns. It accepts unquoted space-separated patterns as well as double-quoted and back-quoted Go strings. This is based on a similar function in cmd/compile/internal/gc/noder.go; this version calculates position information as well. 
-
-### <a id="TestMain" href="#TestMain">func TestMain(m *testing.M)</a>
-
-```
-searchKey: build.TestMain
-tags: [private]
-```
-
-```Go
-func TestMain(m *testing.M)
-```
-
-### <a id="TestMatch" href="#TestMatch">func TestMatch(t *testing.T)</a>
-
-```
-searchKey: build.TestMatch
-tags: [private]
-```
-
-```Go
-func TestMatch(t *testing.T)
-```
-
-### <a id="TestDotSlashImport" href="#TestDotSlashImport">func TestDotSlashImport(t *testing.T)</a>
-
-```
-searchKey: build.TestDotSlashImport
-tags: [private]
-```
-
-```Go
-func TestDotSlashImport(t *testing.T)
-```
-
-### <a id="TestEmptyImport" href="#TestEmptyImport">func TestEmptyImport(t *testing.T)</a>
-
-```
-searchKey: build.TestEmptyImport
-tags: [private]
-```
-
-```Go
-func TestEmptyImport(t *testing.T)
-```
-
-### <a id="TestEmptyFolderImport" href="#TestEmptyFolderImport">func TestEmptyFolderImport(t *testing.T)</a>
-
-```
-searchKey: build.TestEmptyFolderImport
-tags: [private]
-```
-
-```Go
-func TestEmptyFolderImport(t *testing.T)
-```
-
-### <a id="TestMultiplePackageImport" href="#TestMultiplePackageImport">func TestMultiplePackageImport(t *testing.T)</a>
-
-```
-searchKey: build.TestMultiplePackageImport
-tags: [private]
-```
-
-```Go
-func TestMultiplePackageImport(t *testing.T)
-```
-
-### <a id="TestLocalDirectory" href="#TestLocalDirectory">func TestLocalDirectory(t *testing.T)</a>
-
-```
-searchKey: build.TestLocalDirectory
-tags: [private]
-```
-
-```Go
-func TestLocalDirectory(t *testing.T)
-```
-
-### <a id="TestShouldBuild" href="#TestShouldBuild">func TestShouldBuild(t *testing.T)</a>
-
-```
-searchKey: build.TestShouldBuild
-tags: [private]
-```
-
-```Go
-func TestShouldBuild(t *testing.T)
-```
-
-### <a id="TestGoodOSArchFile" href="#TestGoodOSArchFile">func TestGoodOSArchFile(t *testing.T)</a>
-
-```
-searchKey: build.TestGoodOSArchFile
-tags: [private]
-```
-
-```Go
-func TestGoodOSArchFile(t *testing.T)
-```
-
-### <a id="TestMatchFile" href="#TestMatchFile">func TestMatchFile(t *testing.T)</a>
-
-```
-searchKey: build.TestMatchFile
-tags: [private]
-```
-
-```Go
-func TestMatchFile(t *testing.T)
-```
-
-### <a id="TestImportCmd" href="#TestImportCmd">func TestImportCmd(t *testing.T)</a>
-
-```
-searchKey: build.TestImportCmd
-tags: [private]
-```
-
-```Go
-func TestImportCmd(t *testing.T)
-```
-
-### <a id="TestExpandSrcDir" href="#TestExpandSrcDir">func TestExpandSrcDir(t *testing.T)</a>
-
-```
-searchKey: build.TestExpandSrcDir
-tags: [private]
-```
-
-```Go
-func TestExpandSrcDir(t *testing.T)
-```
-
-### <a id="TestShellSafety" href="#TestShellSafety">func TestShellSafety(t *testing.T)</a>
-
-```
-searchKey: build.TestShellSafety
-tags: [private]
-```
-
-```Go
-func TestShellSafety(t *testing.T)
-```
-
-### <a id="TestImportDirNotExist" href="#TestImportDirNotExist">func TestImportDirNotExist(t *testing.T)</a>
-
-```
-searchKey: build.TestImportDirNotExist
-tags: [private]
-```
-
-```Go
-func TestImportDirNotExist(t *testing.T)
-```
-
-Want to get a "cannot find package" error when directory for package does not exist. There should be valid partial information in the returned non-nil *Package. 
-
-### <a id="TestImportVendor" href="#TestImportVendor">func TestImportVendor(t *testing.T)</a>
-
-```
-searchKey: build.TestImportVendor
-tags: [private]
-```
-
-```Go
-func TestImportVendor(t *testing.T)
-```
-
-### <a id="TestImportVendorFailure" href="#TestImportVendorFailure">func TestImportVendorFailure(t *testing.T)</a>
-
-```
-searchKey: build.TestImportVendorFailure
-tags: [private]
-```
-
-```Go
-func TestImportVendorFailure(t *testing.T)
-```
-
-### <a id="TestImportVendorParentFailure" href="#TestImportVendorParentFailure">func TestImportVendorParentFailure(t *testing.T)</a>
-
-```
-searchKey: build.TestImportVendorParentFailure
-tags: [private]
-```
-
-```Go
-func TestImportVendorParentFailure(t *testing.T)
-```
-
-### <a id="TestImportPackageOutsideModule" href="#TestImportPackageOutsideModule">func TestImportPackageOutsideModule(t *testing.T)</a>
-
-```
-searchKey: build.TestImportPackageOutsideModule
-tags: [private]
-```
-
-```Go
-func TestImportPackageOutsideModule(t *testing.T)
-```
-
-Check that a package is loaded in module mode if GO111MODULE=on, even when no go.mod file is present. It should fail to resolve packages outside std. Verifies golang.org/issue/34669. 
-
-### <a id="TestImportDirTarget" href="#TestImportDirTarget">func TestImportDirTarget(t *testing.T)</a>
-
-```
-searchKey: build.TestImportDirTarget
-tags: [private]
-```
-
-```Go
-func TestImportDirTarget(t *testing.T)
-```
-
-### <a id="TestIssue23594" href="#TestIssue23594">func TestIssue23594(t *testing.T)</a>
-
-```
-searchKey: build.TestIssue23594
-tags: [private]
-```
-
-```Go
-func TestIssue23594(t *testing.T)
-```
-
-TestIssue23594 prevents go/build from regressing and populating Package.Doc from comments in test files. 
-
-### <a id="TestMissingImportErrorRepetition" href="#TestMissingImportErrorRepetition">func TestMissingImportErrorRepetition(t *testing.T)</a>
-
-```
-searchKey: build.TestMissingImportErrorRepetition
-tags: [private]
-```
-
-```Go
-func TestMissingImportErrorRepetition(t *testing.T)
-```
-
-TestMissingImportErrorRepetition checks that when an unknown package is imported, the package path is only shown once in the error. Verifies golang.org/issue/34752. 
-
-### <a id="TestCgoImportsIgnored" href="#TestCgoImportsIgnored">func TestCgoImportsIgnored(t *testing.T)</a>
-
-```
-searchKey: build.TestCgoImportsIgnored
-tags: [private]
-```
-
-```Go
-func TestCgoImportsIgnored(t *testing.T)
-```
-
-TestCgoImportsIgnored checks that imports in cgo files are not included in the imports list when cgo is disabled. Verifies golang.org/issue/35946. 
-
-### <a id="listStdPkgs" href="#listStdPkgs">func listStdPkgs(goroot string) ([]string, error)</a>
-
-```
-searchKey: build.listStdPkgs
-tags: [private]
-```
-
-```Go
-func listStdPkgs(goroot string) ([]string, error)
-```
-
-listStdPkgs returns the same list of packages as "go list std". 
-
-### <a id="TestDependencies" href="#TestDependencies">func TestDependencies(t *testing.T)</a>
-
-```
-searchKey: build.TestDependencies
-tags: [private]
-```
-
-```Go
-func TestDependencies(t *testing.T)
-```
-
-### <a id="findImports" href="#findImports">func findImports(pkg string) ([]string, error)</a>
-
-```
-searchKey: build.findImports
-tags: [private]
-```
-
-```Go
-func findImports(pkg string) ([]string, error)
-```
-
-### <a id="depsPolicy" href="#depsPolicy">func depsPolicy(t *testing.T) map[string]map[string]bool</a>
-
-```
-searchKey: build.depsPolicy
-tags: [private]
-```
-
-```Go
-func depsPolicy(t *testing.T) map[string]map[string]bool
-```
-
-depsPolicy returns a map m such that m[p][d] == true when p can import d. 
-
-### <a id="parseDepsRules" href="#parseDepsRules">func parseDepsRules(t *testing.T, save func(deps []string, op string, users []string))</a>
-
-```
-searchKey: build.parseDepsRules
-tags: [private]
-```
-
-```Go
-func parseDepsRules(t *testing.T, save func(deps []string, op string, users []string))
-```
-
-parseDepsRules parses depsRules, calling save(deps, op, users) for each deps < users or deps !< users rule (op is "<" or "!<"). 
-
-### <a id="TestStdlibLowercase" href="#TestStdlibLowercase">func TestStdlibLowercase(t *testing.T)</a>
-
-```
-searchKey: build.TestStdlibLowercase
-tags: [private]
-```
-
-```Go
-func TestStdlibLowercase(t *testing.T)
-```
-
-TestStdlibLowercase tests that all standard library package names are lowercase. See Issue 40065. 
-
-### <a id="TestFindImports" href="#TestFindImports">func TestFindImports(t *testing.T)</a>
-
-```
-searchKey: build.TestFindImports
-tags: [private]
-```
-
-```Go
-func TestFindImports(t *testing.T)
-```
-
-TestFindImports tests that findImports works.  See #43249. 
-
 ### <a id="testRead" href="#testRead">func testRead(t *testing.T, tests []readTest, read func(io.Reader) ([]byte, error))</a>
 
 ```
 searchKey: build.testRead
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func testRead(t *testing.T, tests []readTest, read func(io.Reader) ([]byte, error))
 ```
 
-### <a id="TestReadGoInfo" href="#TestReadGoInfo">func TestReadGoInfo(t *testing.T)</a>
+### <a id="uniq" href="#uniq">func uniq(list []string) []string</a>
 
 ```
-searchKey: build.TestReadGoInfo
-tags: [private]
-```
-
-```Go
-func TestReadGoInfo(t *testing.T)
-```
-
-### <a id="TestReadComments" href="#TestReadComments">func TestReadComments(t *testing.T)</a>
-
-```
-searchKey: build.TestReadComments
-tags: [private]
+searchKey: build.uniq
+tags: [method private]
 ```
 
 ```Go
-func TestReadComments(t *testing.T)
-```
-
-### <a id="TestReadFailuresIgnored" href="#TestReadFailuresIgnored">func TestReadFailuresIgnored(t *testing.T)</a>
-
-```
-searchKey: build.TestReadFailuresIgnored
-tags: [private]
-```
-
-```Go
-func TestReadFailuresIgnored(t *testing.T)
-```
-
-### <a id="TestReadEmbed" href="#TestReadEmbed">func TestReadEmbed(t *testing.T)</a>
-
-```
-searchKey: build.TestReadEmbed
-tags: [private]
-```
-
-```Go
-func TestReadEmbed(t *testing.T)
-```
-
-### <a id="anotherOS" href="#anotherOS">func anotherOS() string</a>
-
-```
-searchKey: build.anotherOS
-tags: [private]
-```
-
-```Go
-func anotherOS() string
-```
-
-### <a id="anotherArch" href="#anotherArch">func anotherArch() string</a>
-
-```
-searchKey: build.anotherArch
-tags: [private]
-```
-
-```Go
-func anotherArch() string
-```
-
-### <a id="TestGoodOSArch" href="#TestGoodOSArch">func TestGoodOSArch(t *testing.T)</a>
-
-```
-searchKey: build.TestGoodOSArch
-tags: [private]
-```
-
-```Go
-func TestGoodOSArch(t *testing.T)
+func uniq(list []string) []string
 ```
 

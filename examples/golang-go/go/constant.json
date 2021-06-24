@@ -4,7 +4,9 @@
     "identifier": "constant",
     "newPage": true,
     "searchKey": "go/constant",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,32 +39,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/go/constant#Unknown",
-              "documentation": {
-                "identifier": "Unknown",
-                "newPage": false,
-                "searchKey": "constant.Unknown",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const Unknown"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst Unknown Kind = iota\n```\n\nunknown values \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/constant#Bool",
               "documentation": {
                 "identifier": "Bool",
                 "newPage": false,
                 "searchKey": "constant.Bool",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -75,72 +62,15 @@
           },
           {
             "node": {
-              "pathID": "/go/constant#String",
-              "documentation": {
-                "identifier": "String",
-                "newPage": false,
-                "searchKey": "constant.String",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const String"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst String\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#Int",
-              "documentation": {
-                "identifier": "Int",
-                "newPage": false,
-                "searchKey": "constant.Int",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const Int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst Int\n```\n\nnumeric values \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#Float",
-              "documentation": {
-                "identifier": "Float",
-                "newPage": false,
-                "searchKey": "constant.Float",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const Float"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst Float\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/constant#Complex",
               "documentation": {
                 "identifier": "Complex",
                 "newPage": false,
                 "searchKey": "constant.Complex",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -155,22 +85,92 @@
           },
           {
             "node": {
-              "pathID": "/go/constant#prec",
+              "pathID": "/go/constant#Float",
               "documentation": {
-                "identifier": "prec",
+                "identifier": "Float",
                 "newPage": false,
-                "searchKey": "constant.prec",
+                "searchKey": "constant.Float",
                 "tags": [
-                  "private"
+                  "constant",
+                  "number"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const prec"
+                "value": "const Float"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst prec = 512\n```\n\nMaximum supported mantissa precision. The spec requires at least 256 bits; typical implementations use 512 bits. \n\n"
+                "value": "```Go\nconst Float\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#Int",
+              "documentation": {
+                "identifier": "Int",
+                "newPage": false,
+                "searchKey": "constant.Int",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Int\n```\n\nnumeric values \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#String",
+              "documentation": {
+                "identifier": "String",
+                "newPage": false,
+                "searchKey": "constant.String",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const String"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst String\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#Unknown",
+              "documentation": {
+                "identifier": "Unknown",
+                "newPage": false,
+                "searchKey": "constant.Unknown",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Unknown"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Unknown Kind = iota\n```\n\nunknown values \n\n"
               },
               "children": null
             }
@@ -183,6 +183,8 @@
                 "newPage": false,
                 "searchKey": "constant.maxExp",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -199,22 +201,48 @@
           },
           {
             "node": {
-              "pathID": "/go/constant#_m",
+              "pathID": "/go/constant#prec",
               "documentation": {
-                "identifier": "_m",
+                "identifier": "prec",
                 "newPage": false,
-                "searchKey": "constant._m",
+                "searchKey": "constant.prec",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const _m"
+                "value": "const prec"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst _m = ^big.Word(0)\n```\n\nCompute the size of a Word in bytes. \n\n"
+                "value": "```Go\nconst prec = 512\n```\n\nMaximum supported mantissa precision. The spec requires at least 256 bits; typical implementations use 512 bits. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#wordSize",
+              "documentation": {
+                "identifier": "wordSize",
+                "newPage": false,
+                "searchKey": "constant.wordSize",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const wordSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst wordSize = 1 << _log\n```\n\n"
               },
               "children": null
             }
@@ -227,6 +255,8 @@
                 "newPage": false,
                 "searchKey": "constant._log",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -243,22 +273,24 @@
           },
           {
             "node": {
-              "pathID": "/go/constant#wordSize",
+              "pathID": "/go/constant#_m",
               "documentation": {
-                "identifier": "wordSize",
+                "identifier": "_m",
                 "newPage": false,
-                "searchKey": "constant.wordSize",
+                "searchKey": "constant._m",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const wordSize"
+                "value": "const _m"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst wordSize = 1 << _log\n```\n\n"
+                "value": "```Go\nconst _m = ^big.Word(0)\n```\n\nCompute the size of a Word in bytes. \n\n"
               },
               "children": null
             }
@@ -273,7 +305,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -286,220 +320,25 @@
         "children": [
           {
             "node": {
-              "pathID": "/go/constant#floatVal0",
+              "pathID": "/go/constant#bitLenTests",
               "documentation": {
-                "identifier": "floatVal0",
+                "identifier": "bitLenTests",
                 "newPage": false,
-                "searchKey": "constant.floatVal0",
+                "searchKey": "constant.bitLenTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var floatVal0"
+                "value": "var bitLenTests"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar floatVal0 = floatVal{newFloat()}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#intTests",
-              "documentation": {
-                "identifier": "intTests",
-                "newPage": false,
-                "searchKey": "constant.intTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var intTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar intTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#floatTests",
-              "documentation": {
-                "identifier": "floatTests",
-                "newPage": false,
-                "searchKey": "constant.floatTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var floatTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar floatTests = ...\n```\n\nThe RHS operand may be a floating-point quotient n/d of two integer values n and d. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#imagTests",
-              "documentation": {
-                "identifier": "imagTests",
-                "newPage": false,
-                "searchKey": "constant.imagTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var imagTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar imagTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#opTests",
-              "documentation": {
-                "identifier": "opTests",
-                "newPage": false,
-                "searchKey": "constant.opTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var opTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar opTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#xxx",
-              "documentation": {
-                "identifier": "xxx",
-                "newPage": false,
-                "searchKey": "constant.xxx",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var xxx"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar xxx = strings.Repeat(\"x\", 68)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#issue14262",
-              "documentation": {
-                "identifier": "issue14262",
-                "newPage": false,
-                "searchKey": "constant.issue14262",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var issue14262"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar issue14262 = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#stringTests",
-              "documentation": {
-                "identifier": "stringTests",
-                "newPage": false,
-                "searchKey": "constant.stringTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var stringTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar stringTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#optab",
-              "documentation": {
-                "identifier": "optab",
-                "newPage": false,
-                "searchKey": "constant.optab",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var optab"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar optab = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#fracTests",
-              "documentation": {
-                "identifier": "fracTests",
-                "newPage": false,
-                "searchKey": "constant.fracTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var fracTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar fracTests = ...\n```\n\n"
+                "value": "```Go\nvar bitLenTests = ...\n```\n\n"
               },
               "children": null
             }
@@ -512,6 +351,9 @@
                 "newPage": false,
                 "searchKey": "constant.bytesTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
@@ -528,22 +370,246 @@
           },
           {
             "node": {
-              "pathID": "/go/constant#bitLenTests",
+              "pathID": "/go/constant#floatTests",
               "documentation": {
-                "identifier": "bitLenTests",
+                "identifier": "floatTests",
                 "newPage": false,
-                "searchKey": "constant.bitLenTests",
+                "searchKey": "constant.floatTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var bitLenTests"
+                "value": "var floatTests"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar bitLenTests = ...\n```\n\n"
+                "value": "```Go\nvar floatTests = ...\n```\n\nThe RHS operand may be a floating-point quotient n/d of two integer values n and d. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#floatVal0",
+              "documentation": {
+                "identifier": "floatVal0",
+                "newPage": false,
+                "searchKey": "constant.floatVal0",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var floatVal0"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar floatVal0 = floatVal{newFloat()}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#fracTests",
+              "documentation": {
+                "identifier": "fracTests",
+                "newPage": false,
+                "searchKey": "constant.fracTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var fracTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar fracTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#imagTests",
+              "documentation": {
+                "identifier": "imagTests",
+                "newPage": false,
+                "searchKey": "constant.imagTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var imagTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar imagTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#intTests",
+              "documentation": {
+                "identifier": "intTests",
+                "newPage": false,
+                "searchKey": "constant.intTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var intTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar intTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#issue14262",
+              "documentation": {
+                "identifier": "issue14262",
+                "newPage": false,
+                "searchKey": "constant.issue14262",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var issue14262"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar issue14262 = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#opTests",
+              "documentation": {
+                "identifier": "opTests",
+                "newPage": false,
+                "searchKey": "constant.opTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var opTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar opTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#optab",
+              "documentation": {
+                "identifier": "optab",
+                "newPage": false,
+                "searchKey": "constant.optab",
+                "tags": [
+                  "variable",
+                  "object",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var optab"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar optab = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#stringTests",
+              "documentation": {
+                "identifier": "stringTests",
+                "newPage": false,
+                "searchKey": "constant.stringTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var stringTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar stringTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#xxx",
+              "documentation": {
+                "identifier": "xxx",
+                "newPage": false,
+                "searchKey": "constant.xxx",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var xxx"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar xxx = strings.Repeat(\"x\", 68)\n```\n\n"
               },
               "children": null
             }
@@ -558,7 +624,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -576,7 +644,9 @@
                 "identifier": "Kind",
                 "newPage": false,
                 "searchKey": "constant.Kind",
-                "tags": null
+                "tags": [
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -596,7 +666,9 @@
                 "identifier": "Value",
                 "newPage": false,
                 "searchKey": "constant.Value",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -609,12 +681,568 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/go/constant#BinaryOp",
+                    "documentation": {
+                      "identifier": "BinaryOp",
+                      "newPage": false,
+                      "searchKey": "constant.BinaryOp",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func BinaryOp(x_ Value, op token.Token, y_ Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc BinaryOp(x_ Value, op token.Token, y_ Value) Value\n```\n\nBinaryOp returns the result of the binary expression x op y. The operation must be defined for the operands. If one of the operands is Unknown, the result is Unknown. BinaryOp doesn't handle comparisons or shifts; use Compare or Shift instead. \n\nTo force integer division of Int operands, use op == token.QUO_ASSIGN instead of token.QUO; the result is guaranteed to be Int in this case. Division by zero leads to a run-time panic. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#Denom",
+                    "documentation": {
+                      "identifier": "Denom",
+                      "newPage": false,
+                      "searchKey": "constant.Denom",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Denom(x Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Denom(x Value) Value\n```\n\nDenom returns the denominator of x; x must be Int, Float, or Unknown. If x is Unknown, or if it is too large or small to represent as a fraction, the result is Unknown. Otherwise the result is an Int >= 1. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#Imag",
+                    "documentation": {
+                      "identifier": "Imag",
+                      "newPage": false,
+                      "searchKey": "constant.Imag",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Imag(x Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Imag(x Value) Value\n```\n\nImag returns the imaginary part of x, which must be a numeric or unknown value. If x is Unknown, the result is Unknown. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#Make",
+                    "documentation": {
+                      "identifier": "Make",
+                      "newPage": false,
+                      "searchKey": "constant.Make",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Make(x interface{}) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Make(x interface{}) Value\n```\n\nMake returns the Value for x. \n\n```\ntype of x        result Kind\n----------------------------\nbool             Bool\nstring           String\nint64            Int\n*big.Int         Int\n*big.Float       Float\n*big.Rat         Float\nanything else    Unknown\n\n```\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#MakeBool",
+                    "documentation": {
+                      "identifier": "MakeBool",
+                      "newPage": false,
+                      "searchKey": "constant.MakeBool",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func MakeBool(b bool) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc MakeBool(b bool) Value\n```\n\nMakeBool returns the Bool value for b. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#MakeFloat64",
+                    "documentation": {
+                      "identifier": "MakeFloat64",
+                      "newPage": false,
+                      "searchKey": "constant.MakeFloat64",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func MakeFloat64(x float64) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc MakeFloat64(x float64) Value\n```\n\nMakeFloat64 returns the Float value for x. If x is -0.0, the result is 0.0. If x is not finite, the result is an Unknown. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#MakeFromBytes",
+                    "documentation": {
+                      "identifier": "MakeFromBytes",
+                      "newPage": false,
+                      "searchKey": "constant.MakeFromBytes",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func MakeFromBytes(bytes []byte) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc MakeFromBytes(bytes []byte) Value\n```\n\nMakeFromBytes returns the Int value given the bytes of its little-endian binary representation. An empty byte slice argument represents 0. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#MakeFromLiteral",
+                    "documentation": {
+                      "identifier": "MakeFromLiteral",
+                      "newPage": false,
+                      "searchKey": "constant.MakeFromLiteral",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func MakeFromLiteral(lit string, tok token.Token, zero uint) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc MakeFromLiteral(lit string, tok token.Token, zero uint) Value\n```\n\nMakeFromLiteral returns the corresponding integer, floating-point, imaginary, character, or string value for a Go literal string. The tok value must be one of token.INT, token.FLOAT, token.IMAG, token.CHAR, or token.STRING. The final argument must be zero. If the literal string syntax is invalid, the result is an Unknown. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#MakeImag",
+                    "documentation": {
+                      "identifier": "MakeImag",
+                      "newPage": false,
+                      "searchKey": "constant.MakeImag",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func MakeImag(x Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc MakeImag(x Value) Value\n```\n\nMakeImag returns the Complex value x*i; x must be Int, Float, or Unknown. If x is Unknown, the result is Unknown. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#MakeInt64",
+                    "documentation": {
+                      "identifier": "MakeInt64",
+                      "newPage": false,
+                      "searchKey": "constant.MakeInt64",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func MakeInt64(x int64) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc MakeInt64(x int64) Value\n```\n\nMakeInt64 returns the Int value for x. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#MakeString",
+                    "documentation": {
+                      "identifier": "MakeString",
+                      "newPage": false,
+                      "searchKey": "constant.MakeString",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func MakeString(s string) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc MakeString(s string) Value\n```\n\nMakeString returns the String value for s. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#MakeUint64",
+                    "documentation": {
+                      "identifier": "MakeUint64",
+                      "newPage": false,
+                      "searchKey": "constant.MakeUint64",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func MakeUint64(x uint64) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc MakeUint64(x uint64) Value\n```\n\nMakeUint64 returns the Int value for x. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#MakeUnknown",
+                    "documentation": {
+                      "identifier": "MakeUnknown",
+                      "newPage": false,
+                      "searchKey": "constant.MakeUnknown",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func MakeUnknown() Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc MakeUnknown() Value\n```\n\nMakeUnknown returns the Unknown value. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#Num",
+                    "documentation": {
+                      "identifier": "Num",
+                      "newPage": false,
+                      "searchKey": "constant.Num",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Num(x Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Num(x Value) Value\n```\n\nNum returns the numerator of x; x must be Int, Float, or Unknown. If x is Unknown, or if it is too large or small to represent as a fraction, the result is Unknown. Otherwise the result is an Int with the same sign as x. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#Real",
+                    "documentation": {
+                      "identifier": "Real",
+                      "newPage": false,
+                      "searchKey": "constant.Real",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Real(x Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Real(x Value) Value\n```\n\nReal returns the real part of x, which must be a numeric or unknown value. If x is Unknown, the result is Unknown. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#Shift",
+                    "documentation": {
+                      "identifier": "Shift",
+                      "newPage": false,
+                      "searchKey": "constant.Shift",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Shift(x Value, op token.Token, s uint) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Shift(x Value, op token.Token, s uint) Value\n```\n\nShift returns the result of the shift expression x op s with op == token.SHL or token.SHR (<< or >>). x must be an Int or an Unknown. If x is Unknown, the result is x. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#ToComplex",
+                    "documentation": {
+                      "identifier": "ToComplex",
+                      "newPage": false,
+                      "searchKey": "constant.ToComplex",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ToComplex(x Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ToComplex(x Value) Value\n```\n\nToComplex converts x to a Complex value if x is representable as a Complex. Otherwise it returns an Unknown. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#ToFloat",
+                    "documentation": {
+                      "identifier": "ToFloat",
+                      "newPage": false,
+                      "searchKey": "constant.ToFloat",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ToFloat(x Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ToFloat(x Value) Value\n```\n\nToFloat converts x to a Float value if x is representable as a Float. Otherwise it returns an Unknown. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#ToInt",
+                    "documentation": {
+                      "identifier": "ToInt",
+                      "newPage": false,
+                      "searchKey": "constant.ToInt",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ToInt(x Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ToInt(x Value) Value\n```\n\nToInt converts x to an Int value if x is representable as an Int. Otherwise it returns an Unknown. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#UnaryOp",
+                    "documentation": {
+                      "identifier": "UnaryOp",
+                      "newPage": false,
+                      "searchKey": "constant.UnaryOp",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func UnaryOp(op token.Token, y Value, prec uint) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc UnaryOp(op token.Token, y Value, prec uint) Value\n```\n\nUnaryOp returns the result of the unary expression op y. The operation must be defined for the operand. If prec > 0 it specifies the ^ (xor) result size in bits. If y is Unknown, the result is Unknown. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#add",
+                    "documentation": {
+                      "identifier": "add",
+                      "newPage": false,
+                      "searchKey": "constant.add",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func add(x, y Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc add(x, y Value) Value\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#doOp",
+                    "documentation": {
+                      "identifier": "doOp",
+                      "newPage": false,
+                      "searchKey": "constant.doOp",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func doOp(x Value, op token.Token, y Value) (z Value)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc doOp(x Value, op token.Token, y Value) (z Value)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#makeComplex",
+                    "documentation": {
+                      "identifier": "makeComplex",
+                      "newPage": false,
+                      "searchKey": "constant.makeComplex",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func makeComplex(re, im Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc makeComplex(re, im Value) Value\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#makeFloat",
+                    "documentation": {
+                      "identifier": "makeFloat",
+                      "newPage": false,
+                      "searchKey": "constant.makeFloat",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func makeFloat(x *big.Float) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc makeFloat(x *big.Float) Value\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#makeFloatFromLiteral",
+                    "documentation": {
+                      "identifier": "makeFloatFromLiteral",
+                      "newPage": false,
+                      "searchKey": "constant.makeFloatFromLiteral",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func makeFloatFromLiteral(lit string) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc makeFloatFromLiteral(lit string) Value\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/go/constant#makeInt",
                     "documentation": {
                       "identifier": "makeInt",
                       "newPage": false,
                       "searchKey": "constant.makeInt",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -637,6 +1265,7 @@
                       "newPage": false,
                       "searchKey": "constant.makeRat",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -653,438 +1282,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/go/constant#makeFloat",
-                    "documentation": {
-                      "identifier": "makeFloat",
-                      "newPage": false,
-                      "searchKey": "constant.makeFloat",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func makeFloat(x *big.Float) Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc makeFloat(x *big.Float) Value\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#makeComplex",
-                    "documentation": {
-                      "identifier": "makeComplex",
-                      "newPage": false,
-                      "searchKey": "constant.makeComplex",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func makeComplex(re, im Value) Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc makeComplex(re, im Value) Value\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#makeFloatFromLiteral",
-                    "documentation": {
-                      "identifier": "makeFloatFromLiteral",
-                      "newPage": false,
-                      "searchKey": "constant.makeFloatFromLiteral",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func makeFloatFromLiteral(lit string) Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc makeFloatFromLiteral(lit string) Value\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#MakeUnknown",
-                    "documentation": {
-                      "identifier": "MakeUnknown",
-                      "newPage": false,
-                      "searchKey": "constant.MakeUnknown",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func MakeUnknown() Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc MakeUnknown() Value\n```\n\nMakeUnknown returns the Unknown value. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#MakeBool",
-                    "documentation": {
-                      "identifier": "MakeBool",
-                      "newPage": false,
-                      "searchKey": "constant.MakeBool",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func MakeBool(b bool) Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc MakeBool(b bool) Value\n```\n\nMakeBool returns the Bool value for b. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#MakeString",
-                    "documentation": {
-                      "identifier": "MakeString",
-                      "newPage": false,
-                      "searchKey": "constant.MakeString",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func MakeString(s string) Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc MakeString(s string) Value\n```\n\nMakeString returns the String value for s. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#MakeInt64",
-                    "documentation": {
-                      "identifier": "MakeInt64",
-                      "newPage": false,
-                      "searchKey": "constant.MakeInt64",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func MakeInt64(x int64) Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc MakeInt64(x int64) Value\n```\n\nMakeInt64 returns the Int value for x. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#MakeUint64",
-                    "documentation": {
-                      "identifier": "MakeUint64",
-                      "newPage": false,
-                      "searchKey": "constant.MakeUint64",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func MakeUint64(x uint64) Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc MakeUint64(x uint64) Value\n```\n\nMakeUint64 returns the Int value for x. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#MakeFloat64",
-                    "documentation": {
-                      "identifier": "MakeFloat64",
-                      "newPage": false,
-                      "searchKey": "constant.MakeFloat64",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func MakeFloat64(x float64) Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc MakeFloat64(x float64) Value\n```\n\nMakeFloat64 returns the Float value for x. If x is -0.0, the result is 0.0. If x is not finite, the result is an Unknown. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#MakeFromLiteral",
-                    "documentation": {
-                      "identifier": "MakeFromLiteral",
-                      "newPage": false,
-                      "searchKey": "constant.MakeFromLiteral",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func MakeFromLiteral(lit string, tok token.Token, zero uint) Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc MakeFromLiteral(lit string, tok token.Token, zero uint) Value\n```\n\nMakeFromLiteral returns the corresponding integer, floating-point, imaginary, character, or string value for a Go literal string. The tok value must be one of token.INT, token.FLOAT, token.IMAG, token.CHAR, or token.STRING. The final argument must be zero. If the literal string syntax is invalid, the result is an Unknown. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#Make",
-                    "documentation": {
-                      "identifier": "Make",
-                      "newPage": false,
-                      "searchKey": "constant.Make",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func Make(x interface{}) Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc Make(x interface{}) Value\n```\n\nMake returns the Value for x. \n\n```\ntype of x        result Kind\n----------------------------\nbool             Bool\nstring           String\nint64            Int\n*big.Int         Int\n*big.Float       Float\n*big.Rat         Float\nanything else    Unknown\n\n```\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#MakeFromBytes",
-                    "documentation": {
-                      "identifier": "MakeFromBytes",
-                      "newPage": false,
-                      "searchKey": "constant.MakeFromBytes",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func MakeFromBytes(bytes []byte) Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc MakeFromBytes(bytes []byte) Value\n```\n\nMakeFromBytes returns the Int value given the bytes of its little-endian binary representation. An empty byte slice argument represents 0. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#Num",
-                    "documentation": {
-                      "identifier": "Num",
-                      "newPage": false,
-                      "searchKey": "constant.Num",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func Num(x Value) Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc Num(x Value) Value\n```\n\nNum returns the numerator of x; x must be Int, Float, or Unknown. If x is Unknown, or if it is too large or small to represent as a fraction, the result is Unknown. Otherwise the result is an Int with the same sign as x. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#Denom",
-                    "documentation": {
-                      "identifier": "Denom",
-                      "newPage": false,
-                      "searchKey": "constant.Denom",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func Denom(x Value) Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc Denom(x Value) Value\n```\n\nDenom returns the denominator of x; x must be Int, Float, or Unknown. If x is Unknown, or if it is too large or small to represent as a fraction, the result is Unknown. Otherwise the result is an Int >= 1. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#MakeImag",
-                    "documentation": {
-                      "identifier": "MakeImag",
-                      "newPage": false,
-                      "searchKey": "constant.MakeImag",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func MakeImag(x Value) Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc MakeImag(x Value) Value\n```\n\nMakeImag returns the Complex value x*i; x must be Int, Float, or Unknown. If x is Unknown, the result is Unknown. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#Real",
-                    "documentation": {
-                      "identifier": "Real",
-                      "newPage": false,
-                      "searchKey": "constant.Real",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func Real(x Value) Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc Real(x Value) Value\n```\n\nReal returns the real part of x, which must be a numeric or unknown value. If x is Unknown, the result is Unknown. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#Imag",
-                    "documentation": {
-                      "identifier": "Imag",
-                      "newPage": false,
-                      "searchKey": "constant.Imag",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func Imag(x Value) Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc Imag(x Value) Value\n```\n\nImag returns the imaginary part of x, which must be a numeric or unknown value. If x is Unknown, the result is Unknown. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#ToInt",
-                    "documentation": {
-                      "identifier": "ToInt",
-                      "newPage": false,
-                      "searchKey": "constant.ToInt",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func ToInt(x Value) Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc ToInt(x Value) Value\n```\n\nToInt converts x to an Int value if x is representable as an Int. Otherwise it returns an Unknown. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#ToFloat",
-                    "documentation": {
-                      "identifier": "ToFloat",
-                      "newPage": false,
-                      "searchKey": "constant.ToFloat",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func ToFloat(x Value) Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc ToFloat(x Value) Value\n```\n\nToFloat converts x to a Float value if x is representable as a Float. Otherwise it returns an Unknown. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#ToComplex",
-                    "documentation": {
-                      "identifier": "ToComplex",
-                      "newPage": false,
-                      "searchKey": "constant.ToComplex",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func ToComplex(x Value) Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc ToComplex(x Value) Value\n```\n\nToComplex converts x to a Complex value if x is representable as a Complex. Otherwise it returns an Unknown. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#UnaryOp",
-                    "documentation": {
-                      "identifier": "UnaryOp",
-                      "newPage": false,
-                      "searchKey": "constant.UnaryOp",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func UnaryOp(op token.Token, y Value, prec uint) Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc UnaryOp(op token.Token, y Value, prec uint) Value\n```\n\nUnaryOp returns the result of the unary expression op y. The operation must be defined for the operand. If prec > 0 it specifies the ^ (xor) result size in bits. If y is Unknown, the result is Unknown. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/go/constant#match",
                     "documentation": {
                       "identifier": "match",
                       "newPage": false,
                       "searchKey": "constant.match",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1107,6 +1311,7 @@
                       "newPage": false,
                       "searchKey": "constant.match0",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1123,76 +1328,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/go/constant#BinaryOp",
-                    "documentation": {
-                      "identifier": "BinaryOp",
-                      "newPage": false,
-                      "searchKey": "constant.BinaryOp",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func BinaryOp(x_ Value, op token.Token, y_ Value) Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc BinaryOp(x_ Value, op token.Token, y_ Value) Value\n```\n\nBinaryOp returns the result of the binary expression x op y. The operation must be defined for the operands. If one of the operands is Unknown, the result is Unknown. BinaryOp doesn't handle comparisons or shifts; use Compare or Shift instead. \n\nTo force integer division of Int operands, use op == token.QUO_ASSIGN instead of token.QUO; the result is guaranteed to be Int in this case. Division by zero leads to a run-time panic. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#add",
-                    "documentation": {
-                      "identifier": "add",
-                      "newPage": false,
-                      "searchKey": "constant.add",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func add(x, y Value) Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc add(x, y Value) Value\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#sub",
-                    "documentation": {
-                      "identifier": "sub",
-                      "newPage": false,
-                      "searchKey": "constant.sub",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func sub(x, y Value) Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc sub(x, y Value) Value\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/go/constant#mul",
                     "documentation": {
                       "identifier": "mul",
                       "newPage": false,
                       "searchKey": "constant.mul",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1215,6 +1357,7 @@
                       "newPage": false,
                       "searchKey": "constant.quo",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1231,20 +1374,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/go/constant#Shift",
+                    "pathID": "/go/constant#sub",
                     "documentation": {
-                      "identifier": "Shift",
+                      "identifier": "sub",
                       "newPage": false,
-                      "searchKey": "constant.Shift",
-                      "tags": null
+                      "searchKey": "constant.sub",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func Shift(x Value, op token.Token, s uint) Value"
+                      "value": "func sub(x, y Value) Value"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc Shift(x Value, op token.Token, s uint) Value\n```\n\nShift returns the result of the shift expression x op s with op == token.SHL or token.SHR (<< or >>). x must be an Int or an Unknown. If x is Unknown, the result is x. \n\n"
+                      "value": "```Go\nfunc sub(x, y Value) Value\n```\n\n"
                     },
                     "children": null
                   }
@@ -1257,6 +1403,7 @@
                       "newPage": false,
                       "searchKey": "constant.val",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1267,139 +1414,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc val(lit string) Value\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#doOp",
-                    "documentation": {
-                      "identifier": "doOp",
-                      "newPage": false,
-                      "searchKey": "constant.doOp",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func doOp(x Value, op token.Token, y Value) (z Value)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc doOp(x Value, op token.Token, y Value) (z Value)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#unknownVal",
-              "documentation": {
-                "identifier": "unknownVal",
-                "newPage": false,
-                "searchKey": "constant.unknownVal",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type unknownVal struct{}"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype unknownVal struct{}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/go/constant#unknownVal.Kind",
-                    "documentation": {
-                      "identifier": "unknownVal.Kind",
-                      "newPage": false,
-                      "searchKey": "constant.unknownVal.Kind",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (unknownVal) Kind() Kind"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (unknownVal) Kind() Kind\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#unknownVal.String",
-                    "documentation": {
-                      "identifier": "unknownVal.String",
-                      "newPage": false,
-                      "searchKey": "constant.unknownVal.String",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (unknownVal) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (unknownVal) String() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#unknownVal.ExactString",
-                    "documentation": {
-                      "identifier": "unknownVal.ExactString",
-                      "newPage": false,
-                      "searchKey": "constant.unknownVal.ExactString",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (x unknownVal) ExactString() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (x unknownVal) ExactString() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#unknownVal.implementsValue",
-                    "documentation": {
-                      "identifier": "unknownVal.implementsValue",
-                      "newPage": false,
-                      "searchKey": "constant.unknownVal.implementsValue",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (unknownVal) implementsValue()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (unknownVal) implementsValue()\n```\n\n"
                     },
                     "children": null
                   }
@@ -1415,6 +1429,7 @@
                 "newPage": false,
                 "searchKey": "constant.boolVal",
                 "tags": [
+                  "boolean",
                   "private"
                 ]
               },
@@ -1429,12 +1444,36 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/go/constant#boolVal.ExactString",
+                    "documentation": {
+                      "identifier": "boolVal.ExactString",
+                      "newPage": false,
+                      "searchKey": "constant.boolVal.ExactString",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x boolVal) ExactString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x boolVal) ExactString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/go/constant#boolVal.Kind",
                     "documentation": {
                       "identifier": "boolVal.Kind",
                       "newPage": false,
                       "searchKey": "constant.boolVal.Kind",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1457,6 +1496,7 @@
                       "newPage": false,
                       "searchKey": "constant.boolVal.String",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1473,34 +1513,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/go/constant#boolVal.ExactString",
-                    "documentation": {
-                      "identifier": "boolVal.ExactString",
-                      "newPage": false,
-                      "searchKey": "constant.boolVal.ExactString",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (x boolVal) ExactString() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (x boolVal) ExactString() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/go/constant#boolVal.implementsValue",
                     "documentation": {
                       "identifier": "boolVal.implementsValue",
                       "newPage": false,
                       "searchKey": "constant.boolVal.implementsValue",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1520,152 +1539,321 @@
           },
           {
             "node": {
-              "pathID": "/go/constant#stringVal",
+              "pathID": "/go/constant#complexVal",
               "documentation": {
-                "identifier": "stringVal",
+                "identifier": "complexVal",
                 "newPage": false,
-                "searchKey": "constant.stringVal",
+                "searchKey": "constant.complexVal",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type stringVal struct"
+                "value": "type complexVal struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype stringVal struct {\n\t// Lazy value: either a string (l,r==nil) or an addition (l,r!=nil).\n\tmu   sync.Mutex\n\ts    string\n\tl, r *stringVal\n}\n```\n\n"
+                "value": "```Go\ntype complexVal struct{ re, im Value }\n```\n\n"
               },
               "children": [
                 {
                   "node": {
-                    "pathID": "/go/constant#stringVal.Kind",
+                    "pathID": "/go/constant#vtoc",
                     "documentation": {
-                      "identifier": "stringVal.Kind",
+                      "identifier": "vtoc",
                       "newPage": false,
-                      "searchKey": "constant.stringVal.Kind",
+                      "searchKey": "constant.vtoc",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (*stringVal) Kind() Kind"
+                      "value": "func vtoc(x Value) complexVal"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (*stringVal) Kind() Kind\n```\n\n"
+                      "value": "```Go\nfunc vtoc(x Value) complexVal\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/go/constant#stringVal.String",
+                    "pathID": "/go/constant#complexVal.ExactString",
                     "documentation": {
-                      "identifier": "stringVal.String",
+                      "identifier": "complexVal.ExactString",
                       "newPage": false,
-                      "searchKey": "constant.stringVal.String",
+                      "searchKey": "constant.complexVal.ExactString",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (x *stringVal) String() string"
+                      "value": "func (x complexVal) ExactString() string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (x *stringVal) String() string\n```\n\nString returns a possibly shortened quoted form of the String value. \n\n"
+                      "value": "```Go\nfunc (x complexVal) ExactString() string\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/go/constant#stringVal.string",
+                    "pathID": "/go/constant#complexVal.Kind",
                     "documentation": {
-                      "identifier": "stringVal.string",
+                      "identifier": "complexVal.Kind",
                       "newPage": false,
-                      "searchKey": "constant.stringVal.string",
+                      "searchKey": "constant.complexVal.Kind",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (x *stringVal) string() string"
+                      "value": "func (complexVal) Kind() Kind"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (x *stringVal) string() string\n```\n\nstring constructs and returns the actual string literal value. If x represents an addition, then it rewrites x to be a single string, to speed future calls. This lazy construction avoids building different string values for all subpieces of a large concatenation. See golang.org/issue/23348. \n\n"
+                      "value": "```Go\nfunc (complexVal) Kind() Kind\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/go/constant#stringVal.appendReverse",
+                    "pathID": "/go/constant#complexVal.String",
                     "documentation": {
-                      "identifier": "stringVal.appendReverse",
+                      "identifier": "complexVal.String",
                       "newPage": false,
-                      "searchKey": "constant.stringVal.appendReverse",
+                      "searchKey": "constant.complexVal.String",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (x *stringVal) appendReverse(list []string) []string"
+                      "value": "func (x complexVal) String() string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (x *stringVal) appendReverse(list []string) []string\n```\n\nappendReverse appends to list all of x's subpieces, but in reverse, and returns the result. Appending the reversal allows processing the right side in a recursive call and the left side in a loop. Because a chain like a + b + c + d + e is actually represented as ((((a + b) + c) + d) + e), the left-side loop avoids deep recursion. x must be locked. \n\n"
+                      "value": "```Go\nfunc (x complexVal) String() string\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/go/constant#stringVal.ExactString",
+                    "pathID": "/go/constant#complexVal.implementsValue",
                     "documentation": {
-                      "identifier": "stringVal.ExactString",
+                      "identifier": "complexVal.implementsValue",
                       "newPage": false,
-                      "searchKey": "constant.stringVal.ExactString",
+                      "searchKey": "constant.complexVal.implementsValue",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (x *stringVal) ExactString() string"
+                      "value": "func (complexVal) implementsValue()"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (x *stringVal) ExactString() string\n```\n\n"
+                      "value": "```Go\nfunc (complexVal) implementsValue()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#floatVal",
+              "documentation": {
+                "identifier": "floatVal",
+                "newPage": false,
+                "searchKey": "constant.floatVal",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type floatVal struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype floatVal struct{ val *big.Float } // Float values not representable as a fraction\n\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/go/constant#i64tof",
+                    "documentation": {
+                      "identifier": "i64tof",
+                      "newPage": false,
+                      "searchKey": "constant.i64tof",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func i64tof(x int64Val) floatVal"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc i64tof(x int64Val) floatVal\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/go/constant#stringVal.implementsValue",
+                    "pathID": "/go/constant#itof",
                     "documentation": {
-                      "identifier": "stringVal.implementsValue",
+                      "identifier": "itof",
                       "newPage": false,
-                      "searchKey": "constant.stringVal.implementsValue",
+                      "searchKey": "constant.itof",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (*stringVal) implementsValue()"
+                      "value": "func itof(x intVal) floatVal"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (*stringVal) implementsValue()\n```\n\n"
+                      "value": "```Go\nfunc itof(x intVal) floatVal\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#rtof",
+                    "documentation": {
+                      "identifier": "rtof",
+                      "newPage": false,
+                      "searchKey": "constant.rtof",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func rtof(x ratVal) floatVal"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc rtof(x ratVal) floatVal\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#floatVal.ExactString",
+                    "documentation": {
+                      "identifier": "floatVal.ExactString",
+                      "newPage": false,
+                      "searchKey": "constant.floatVal.ExactString",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x floatVal) ExactString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x floatVal) ExactString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#floatVal.Kind",
+                    "documentation": {
+                      "identifier": "floatVal.Kind",
+                      "newPage": false,
+                      "searchKey": "constant.floatVal.Kind",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (floatVal) Kind() Kind"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (floatVal) Kind() Kind\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#floatVal.String",
+                    "documentation": {
+                      "identifier": "floatVal.String",
+                      "newPage": false,
+                      "searchKey": "constant.floatVal.String",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x floatVal) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x floatVal) String() string\n```\n\nString returns a decimal approximation of the Float value. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/constant#floatVal.implementsValue",
+                    "documentation": {
+                      "identifier": "floatVal.implementsValue",
+                      "newPage": false,
+                      "searchKey": "constant.floatVal.implementsValue",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (floatVal) implementsValue()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (floatVal) implementsValue()\n```\n\n"
                     },
                     "children": null
                   }
@@ -1681,6 +1869,7 @@
                 "newPage": false,
                 "searchKey": "constant.int64Val",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -1695,12 +1884,36 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/go/constant#int64Val.ExactString",
+                    "documentation": {
+                      "identifier": "int64Val.ExactString",
+                      "newPage": false,
+                      "searchKey": "constant.int64Val.ExactString",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x int64Val) ExactString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x int64Val) ExactString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/go/constant#int64Val.Kind",
                     "documentation": {
                       "identifier": "int64Val.Kind",
                       "newPage": false,
                       "searchKey": "constant.int64Val.Kind",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1723,6 +1936,7 @@
                       "newPage": false,
                       "searchKey": "constant.int64Val.String",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1739,34 +1953,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/go/constant#int64Val.ExactString",
-                    "documentation": {
-                      "identifier": "int64Val.ExactString",
-                      "newPage": false,
-                      "searchKey": "constant.int64Val.ExactString",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (x int64Val) ExactString() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (x int64Val) ExactString() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/go/constant#int64Val.implementsValue",
                     "documentation": {
                       "identifier": "int64Val.implementsValue",
                       "newPage": false,
                       "searchKey": "constant.int64Val.implementsValue",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1792,6 +1985,7 @@
                 "newPage": false,
                 "searchKey": "constant.intVal",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1812,6 +2006,7 @@
                       "newPage": false,
                       "searchKey": "constant.i64toi",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1828,12 +2023,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/go/constant#intVal.ExactString",
+                    "documentation": {
+                      "identifier": "intVal.ExactString",
+                      "newPage": false,
+                      "searchKey": "constant.intVal.ExactString",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x intVal) ExactString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x intVal) ExactString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/go/constant#intVal.Kind",
                     "documentation": {
                       "identifier": "intVal.Kind",
                       "newPage": false,
                       "searchKey": "constant.intVal.Kind",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1856,6 +2075,7 @@
                       "newPage": false,
                       "searchKey": "constant.intVal.String",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1872,34 +2092,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/go/constant#intVal.ExactString",
-                    "documentation": {
-                      "identifier": "intVal.ExactString",
-                      "newPage": false,
-                      "searchKey": "constant.intVal.ExactString",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (x intVal) ExactString() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (x intVal) ExactString() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/go/constant#intVal.implementsValue",
                     "documentation": {
                       "identifier": "intVal.implementsValue",
                       "newPage": false,
                       "searchKey": "constant.intVal.implementsValue",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1919,12 +2118,60 @@
           },
           {
             "node": {
+              "pathID": "/go/constant#makeTestCase",
+              "documentation": {
+                "identifier": "makeTestCase",
+                "newPage": false,
+                "searchKey": "constant.makeTestCase",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type makeTestCase struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype makeTestCase struct {\n\tkind      Kind\n\targ, want interface{}\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/go/constant#dup",
+                    "documentation": {
+                      "identifier": "dup",
+                      "newPage": false,
+                      "searchKey": "constant.dup",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func dup(k Kind, x interface{}) makeTestCase"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc dup(k Kind, x interface{}) makeTestCase\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/go/constant#ratVal",
               "documentation": {
                 "identifier": "ratVal",
                 "newPage": false,
                 "searchKey": "constant.ratVal",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1945,6 +2192,7 @@
                       "newPage": false,
                       "searchKey": "constant.i64tor",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1967,6 +2215,7 @@
                       "newPage": false,
                       "searchKey": "constant.itor",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1983,12 +2232,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/go/constant#ratVal.ExactString",
+                    "documentation": {
+                      "identifier": "ratVal.ExactString",
+                      "newPage": false,
+                      "searchKey": "constant.ratVal.ExactString",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x ratVal) ExactString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x ratVal) ExactString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/go/constant#ratVal.Kind",
                     "documentation": {
                       "identifier": "ratVal.Kind",
                       "newPage": false,
                       "searchKey": "constant.ratVal.Kind",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -2011,6 +2284,7 @@
                       "newPage": false,
                       "searchKey": "constant.ratVal.String",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -2027,34 +2301,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/go/constant#ratVal.ExactString",
-                    "documentation": {
-                      "identifier": "ratVal.ExactString",
-                      "newPage": false,
-                      "searchKey": "constant.ratVal.ExactString",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (x ratVal) ExactString() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (x ratVal) ExactString() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/go/constant#ratVal.implementsValue",
                     "documentation": {
                       "identifier": "ratVal.implementsValue",
                       "newPage": false,
                       "searchKey": "constant.ratVal.implementsValue",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -2074,174 +2327,159 @@
           },
           {
             "node": {
-              "pathID": "/go/constant#floatVal",
+              "pathID": "/go/constant#stringVal",
               "documentation": {
-                "identifier": "floatVal",
+                "identifier": "stringVal",
                 "newPage": false,
-                "searchKey": "constant.floatVal",
+                "searchKey": "constant.stringVal",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type floatVal struct"
+                "value": "type stringVal struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype floatVal struct{ val *big.Float } // Float values not representable as a fraction\n\n```\n\n"
+                "value": "```Go\ntype stringVal struct {\n\t// Lazy value: either a string (l,r==nil) or an addition (l,r!=nil).\n\tmu   sync.Mutex\n\ts    string\n\tl, r *stringVal\n}\n```\n\n"
               },
               "children": [
                 {
                   "node": {
-                    "pathID": "/go/constant#i64tof",
+                    "pathID": "/go/constant#stringVal.ExactString",
                     "documentation": {
-                      "identifier": "i64tof",
+                      "identifier": "stringVal.ExactString",
                       "newPage": false,
-                      "searchKey": "constant.i64tof",
+                      "searchKey": "constant.stringVal.ExactString",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func i64tof(x int64Val) floatVal"
+                      "value": "func (x *stringVal) ExactString() string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc i64tof(x int64Val) floatVal\n```\n\n"
+                      "value": "```Go\nfunc (x *stringVal) ExactString() string\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/go/constant#itof",
+                    "pathID": "/go/constant#stringVal.Kind",
                     "documentation": {
-                      "identifier": "itof",
+                      "identifier": "stringVal.Kind",
                       "newPage": false,
-                      "searchKey": "constant.itof",
+                      "searchKey": "constant.stringVal.Kind",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func itof(x intVal) floatVal"
+                      "value": "func (*stringVal) Kind() Kind"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc itof(x intVal) floatVal\n```\n\n"
+                      "value": "```Go\nfunc (*stringVal) Kind() Kind\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/go/constant#rtof",
+                    "pathID": "/go/constant#stringVal.String",
                     "documentation": {
-                      "identifier": "rtof",
+                      "identifier": "stringVal.String",
                       "newPage": false,
-                      "searchKey": "constant.rtof",
+                      "searchKey": "constant.stringVal.String",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func rtof(x ratVal) floatVal"
+                      "value": "func (x *stringVal) String() string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc rtof(x ratVal) floatVal\n```\n\n"
+                      "value": "```Go\nfunc (x *stringVal) String() string\n```\n\nString returns a possibly shortened quoted form of the String value. \n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/go/constant#floatVal.Kind",
+                    "pathID": "/go/constant#stringVal.appendReverse",
                     "documentation": {
-                      "identifier": "floatVal.Kind",
+                      "identifier": "stringVal.appendReverse",
                       "newPage": false,
-                      "searchKey": "constant.floatVal.Kind",
+                      "searchKey": "constant.stringVal.appendReverse",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (floatVal) Kind() Kind"
+                      "value": "func (x *stringVal) appendReverse(list []string) []string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (floatVal) Kind() Kind\n```\n\n"
+                      "value": "```Go\nfunc (x *stringVal) appendReverse(list []string) []string\n```\n\nappendReverse appends to list all of x's subpieces, but in reverse, and returns the result. Appending the reversal allows processing the right side in a recursive call and the left side in a loop. Because a chain like a + b + c + d + e is actually represented as ((((a + b) + c) + d) + e), the left-side loop avoids deep recursion. x must be locked. \n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/go/constant#floatVal.String",
+                    "pathID": "/go/constant#stringVal.implementsValue",
                     "documentation": {
-                      "identifier": "floatVal.String",
+                      "identifier": "stringVal.implementsValue",
                       "newPage": false,
-                      "searchKey": "constant.floatVal.String",
+                      "searchKey": "constant.stringVal.implementsValue",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (x floatVal) String() string"
+                      "value": "func (*stringVal) implementsValue()"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (x floatVal) String() string\n```\n\nString returns a decimal approximation of the Float value. \n\n"
+                      "value": "```Go\nfunc (*stringVal) implementsValue()\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/go/constant#floatVal.ExactString",
+                    "pathID": "/go/constant#stringVal.string",
                     "documentation": {
-                      "identifier": "floatVal.ExactString",
+                      "identifier": "stringVal.string",
                       "newPage": false,
-                      "searchKey": "constant.floatVal.ExactString",
+                      "searchKey": "constant.stringVal.string",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (x floatVal) ExactString() string"
+                      "value": "func (x *stringVal) string() string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (x floatVal) ExactString() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#floatVal.implementsValue",
-                    "documentation": {
-                      "identifier": "floatVal.implementsValue",
-                      "newPage": false,
-                      "searchKey": "constant.floatVal.implementsValue",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (floatVal) implementsValue()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (floatVal) implementsValue()\n```\n\n"
+                      "value": "```Go\nfunc (x *stringVal) string() string\n```\n\nstring constructs and returns the actual string literal value. If x represents an addition, then it rewrites x to be a single string, to speed future calls. This lazy construction avoids building different string values for all subpieces of a large concatenation. See golang.org/issue/23348. \n\n"
                     },
                     "children": null
                   }
@@ -2251,175 +2489,113 @@
           },
           {
             "node": {
-              "pathID": "/go/constant#complexVal",
+              "pathID": "/go/constant#unknownVal",
               "documentation": {
-                "identifier": "complexVal",
+                "identifier": "unknownVal",
                 "newPage": false,
-                "searchKey": "constant.complexVal",
+                "searchKey": "constant.unknownVal",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type complexVal struct"
+                "value": "type unknownVal struct{}"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype complexVal struct{ re, im Value }\n```\n\n"
+                "value": "```Go\ntype unknownVal struct{}\n```\n\n"
               },
               "children": [
                 {
                   "node": {
-                    "pathID": "/go/constant#vtoc",
+                    "pathID": "/go/constant#unknownVal.ExactString",
                     "documentation": {
-                      "identifier": "vtoc",
+                      "identifier": "unknownVal.ExactString",
                       "newPage": false,
-                      "searchKey": "constant.vtoc",
+                      "searchKey": "constant.unknownVal.ExactString",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func vtoc(x Value) complexVal"
+                      "value": "func (x unknownVal) ExactString() string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc vtoc(x Value) complexVal\n```\n\n"
+                      "value": "```Go\nfunc (x unknownVal) ExactString() string\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/go/constant#complexVal.Kind",
+                    "pathID": "/go/constant#unknownVal.Kind",
                     "documentation": {
-                      "identifier": "complexVal.Kind",
+                      "identifier": "unknownVal.Kind",
                       "newPage": false,
-                      "searchKey": "constant.complexVal.Kind",
+                      "searchKey": "constant.unknownVal.Kind",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (complexVal) Kind() Kind"
+                      "value": "func (unknownVal) Kind() Kind"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (complexVal) Kind() Kind\n```\n\n"
+                      "value": "```Go\nfunc (unknownVal) Kind() Kind\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/go/constant#complexVal.String",
+                    "pathID": "/go/constant#unknownVal.String",
                     "documentation": {
-                      "identifier": "complexVal.String",
+                      "identifier": "unknownVal.String",
                       "newPage": false,
-                      "searchKey": "constant.complexVal.String",
+                      "searchKey": "constant.unknownVal.String",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (x complexVal) String() string"
+                      "value": "func (unknownVal) String() string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (x complexVal) String() string\n```\n\n"
+                      "value": "```Go\nfunc (unknownVal) String() string\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/go/constant#complexVal.ExactString",
+                    "pathID": "/go/constant#unknownVal.implementsValue",
                     "documentation": {
-                      "identifier": "complexVal.ExactString",
+                      "identifier": "unknownVal.implementsValue",
                       "newPage": false,
-                      "searchKey": "constant.complexVal.ExactString",
+                      "searchKey": "constant.unknownVal.implementsValue",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (x complexVal) ExactString() string"
+                      "value": "func (unknownVal) implementsValue()"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (x complexVal) ExactString() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/constant#complexVal.implementsValue",
-                    "documentation": {
-                      "identifier": "complexVal.implementsValue",
-                      "newPage": false,
-                      "searchKey": "constant.complexVal.implementsValue",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (complexVal) implementsValue()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (complexVal) implementsValue()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#makeTestCase",
-              "documentation": {
-                "identifier": "makeTestCase",
-                "newPage": false,
-                "searchKey": "constant.makeTestCase",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type makeTestCase struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype makeTestCase struct {\n\tkind      Kind\n\targ, want interface{}\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/go/constant#dup",
-                    "documentation": {
-                      "identifier": "dup",
-                      "newPage": false,
-                      "searchKey": "constant.dup",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func dup(k Kind, x interface{}) makeTestCase"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc dup(k Kind, x interface{}) makeTestCase\n```\n\n"
+                      "value": "```Go\nfunc (unknownVal) implementsValue()\n```\n\n"
                     },
                     "children": null
                   }
@@ -2437,7 +2613,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -2450,154 +2628,46 @@
         "children": [
           {
             "node": {
-              "pathID": "/go/constant#reverse",
+              "pathID": "/go/constant#BenchmarkStringAdd",
               "documentation": {
-                "identifier": "reverse",
+                "identifier": "BenchmarkStringAdd",
                 "newPage": false,
-                "searchKey": "constant.reverse",
+                "searchKey": "constant.BenchmarkStringAdd",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func reverse(x []string) []string"
+                "value": "func BenchmarkStringAdd(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc reverse(x []string) []string\n```\n\nreverse reverses x in place and returns it. \n\n"
+                "value": "```Go\nfunc BenchmarkStringAdd(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/constant#newInt",
+              "pathID": "/go/constant#BitLen",
               "documentation": {
-                "identifier": "newInt",
+                "identifier": "BitLen",
                 "newPage": false,
-                "searchKey": "constant.newInt",
+                "searchKey": "constant.BitLen",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func newInt() *big.Int"
+                "value": "func BitLen(x Value) int"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc newInt() *big.Int\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#newRat",
-              "documentation": {
-                "identifier": "newRat",
-                "newPage": false,
-                "searchKey": "constant.newRat",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func newRat() *big.Rat"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc newRat() *big.Rat\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#newFloat",
-              "documentation": {
-                "identifier": "newFloat",
-                "newPage": false,
-                "searchKey": "constant.newFloat",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func newFloat() *big.Float"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc newFloat() *big.Float\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#smallInt",
-              "documentation": {
-                "identifier": "smallInt",
-                "newPage": false,
-                "searchKey": "constant.smallInt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func smallInt(x *big.Int) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc smallInt(x *big.Int) bool\n```\n\nsmallInt reports whether x would lead to \"reasonably\"-sized fraction if converted to a *big.Rat. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#smallFloat64",
-              "documentation": {
-                "identifier": "smallFloat64",
-                "newPage": false,
-                "searchKey": "constant.smallFloat64",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func smallFloat64(x float64) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc smallFloat64(x float64) bool\n```\n\nsmallFloat64 reports whether x would lead to \"reasonably\"-sized fraction if converted to a *big.Rat. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#smallFloat",
-              "documentation": {
-                "identifier": "smallFloat",
-                "newPage": false,
-                "searchKey": "constant.smallFloat",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func smallFloat(x *big.Float) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc smallFloat(x *big.Float) bool\n```\n\nsmallFloat reports whether x would lead to \"reasonably\"-sized fraction if converted to a *big.Rat. \n\n"
+                "value": "```Go\nfunc BitLen(x Value) int\n```\n\nBitLen returns the number of bits required to represent the absolute value x in binary representation; x must be an Int or an Unknown. If x is Unknown, the result is 0. \n\n"
               },
               "children": null
             }
@@ -2609,7 +2679,9 @@
                 "identifier": "BoolVal",
                 "newPage": false,
                 "searchKey": "constant.BoolVal",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2624,60 +2696,44 @@
           },
           {
             "node": {
-              "pathID": "/go/constant#StringVal",
+              "pathID": "/go/constant#Bytes",
               "documentation": {
-                "identifier": "StringVal",
+                "identifier": "Bytes",
                 "newPage": false,
-                "searchKey": "constant.StringVal",
-                "tags": null
+                "searchKey": "constant.Bytes",
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func StringVal(x Value) string"
+                "value": "func Bytes(x Value) []byte"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc StringVal(x Value) string\n```\n\nStringVal returns the Go string value of x, which must be a String or an Unknown. If x is Unknown, the result is \"\". \n\n"
+                "value": "```Go\nfunc Bytes(x Value) []byte\n```\n\nBytes returns the bytes for the absolute value of x in little- endian binary representation; x must be an Int. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/constant#Int64Val",
+              "pathID": "/go/constant#Compare",
               "documentation": {
-                "identifier": "Int64Val",
+                "identifier": "Compare",
                 "newPage": false,
-                "searchKey": "constant.Int64Val",
-                "tags": null
+                "searchKey": "constant.Compare",
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func Int64Val(x Value) (int64, bool)"
+                "value": "func Compare(x_ Value, op token.Token, y_ Value) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc Int64Val(x Value) (int64, bool)\n```\n\nInt64Val returns the Go int64 value of x and whether the result is exact; x must be an Int or an Unknown. If the result is not exact, its value is undefined. If x is Unknown, the result is (0, false). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#Uint64Val",
-              "documentation": {
-                "identifier": "Uint64Val",
-                "newPage": false,
-                "searchKey": "constant.Uint64Val",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Uint64Val(x Value) (uint64, bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Uint64Val(x Value) (uint64, bool)\n```\n\nUint64Val returns the Go uint64 value of x and whether the result is exact; x must be an Int or an Unknown. If the result is not exact, its value is undefined. If x is Unknown, the result is (0, false). \n\n"
+                "value": "```Go\nfunc Compare(x_ Value, op token.Token, y_ Value) bool\n```\n\nCompare returns the result of the comparison x op y. The comparison must be defined for the operands. If one of the operands is Unknown, the result is false. \n\n"
               },
               "children": null
             }
@@ -2689,7 +2745,9 @@
                 "identifier": "Float32Val",
                 "newPage": false,
                 "searchKey": "constant.Float32Val",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2709,7 +2767,9 @@
                 "identifier": "Float64Val",
                 "newPage": false,
                 "searchKey": "constant.Float64Val",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2724,40 +2784,22 @@
           },
           {
             "node": {
-              "pathID": "/go/constant#Val",
+              "pathID": "/go/constant#Int64Val",
               "documentation": {
-                "identifier": "Val",
+                "identifier": "Int64Val",
                 "newPage": false,
-                "searchKey": "constant.Val",
-                "tags": null
+                "searchKey": "constant.Int64Val",
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func Val(x Value) interface{}"
+                "value": "func Int64Val(x Value) (int64, bool)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc Val(x Value) interface{}\n```\n\nVal returns the underlying value for a given constant. Since it returns an interface, it is up to the caller to type assert the result to the expected type. The possible dynamic return types are: \n\n```\nx Kind             type of result\n-----------------------------------------\nBool               bool\nString             string\nInt                int64 or *big.Int\nFloat              *big.Float or *big.Rat\neverything else    nil\n\n```\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#BitLen",
-              "documentation": {
-                "identifier": "BitLen",
-                "newPage": false,
-                "searchKey": "constant.BitLen",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BitLen(x Value) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BitLen(x Value) int\n```\n\nBitLen returns the number of bits required to represent the absolute value x in binary representation; x must be an Int or an Unknown. If x is Unknown, the result is 0. \n\n"
+                "value": "```Go\nfunc Int64Val(x Value) (int64, bool)\n```\n\nInt64Val returns the Go int64 value of x and whether the result is exact; x must be an Int or an Unknown. If the result is not exact, its value is undefined. If x is Unknown, the result is (0, false). \n\n"
               },
               "children": null
             }
@@ -2769,7 +2811,9 @@
                 "identifier": "Sign",
                 "newPage": false,
                 "searchKey": "constant.Sign",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2784,20 +2828,328 @@
           },
           {
             "node": {
-              "pathID": "/go/constant#Bytes",
+              "pathID": "/go/constant#StringVal",
               "documentation": {
-                "identifier": "Bytes",
+                "identifier": "StringVal",
                 "newPage": false,
-                "searchKey": "constant.Bytes",
-                "tags": null
+                "searchKey": "constant.StringVal",
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func Bytes(x Value) []byte"
+                "value": "func StringVal(x Value) string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc Bytes(x Value) []byte\n```\n\nBytes returns the bytes for the absolute value of x in little- endian binary representation; x must be an Int. \n\n"
+                "value": "```Go\nfunc StringVal(x Value) string\n```\n\nStringVal returns the Go string value of x, which must be a String or an Unknown. If x is Unknown, the result is \"\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#TestBitLen",
+              "documentation": {
+                "identifier": "TestBitLen",
+                "newPage": false,
+                "searchKey": "constant.TestBitLen",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBitLen(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBitLen(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#TestBytes",
+              "documentation": {
+                "identifier": "TestBytes",
+                "newPage": false,
+                "searchKey": "constant.TestBytes",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBytes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBytes(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#TestFractions",
+              "documentation": {
+                "identifier": "TestFractions",
+                "newPage": false,
+                "searchKey": "constant.TestFractions",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFractions(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFractions(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#TestMake",
+              "documentation": {
+                "identifier": "TestMake",
+                "newPage": false,
+                "searchKey": "constant.TestMake",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMake(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMake(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#TestMakeFloat64",
+              "documentation": {
+                "identifier": "TestMakeFloat64",
+                "newPage": false,
+                "searchKey": "constant.TestMakeFloat64",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMakeFloat64(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMakeFloat64(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#TestNumbers",
+              "documentation": {
+                "identifier": "TestNumbers",
+                "newPage": false,
+                "searchKey": "constant.TestNumbers",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNumbers(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNumbers(t *testing.T)\n```\n\nTestNumbers verifies that differently written literals representing the same number do have the same value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#TestOps",
+              "documentation": {
+                "identifier": "TestOps",
+                "newPage": false,
+                "searchKey": "constant.TestOps",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOps(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOps(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#TestString",
+              "documentation": {
+                "identifier": "TestString",
+                "newPage": false,
+                "searchKey": "constant.TestString",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestString(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestString(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#TestUnknown",
+              "documentation": {
+                "identifier": "TestUnknown",
+                "newPage": false,
+                "searchKey": "constant.TestUnknown",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnknown(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnknown(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#Uint64Val",
+              "documentation": {
+                "identifier": "Uint64Val",
+                "newPage": false,
+                "searchKey": "constant.Uint64Val",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Uint64Val(x Value) (uint64, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Uint64Val(x Value) (uint64, bool)\n```\n\nUint64Val returns the Go uint64 value of x and whether the result is exact; x must be an Int or an Unknown. If the result is not exact, its value is undefined. If x is Unknown, the result is (0, false). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#Val",
+              "documentation": {
+                "identifier": "Val",
+                "newPage": false,
+                "searchKey": "constant.Val",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Val(x Value) interface{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Val(x Value) interface{}\n```\n\nVal returns the underlying value for a given constant. Since it returns an interface, it is up to the caller to type assert the result to the expected type. The possible dynamic return types are: \n\n```\nx Kind             type of result\n-----------------------------------------\nBool               bool\nString             string\nInt                int64 or *big.Int\nFloat              *big.Float or *big.Rat\neverything else    nil\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#cmpZero",
+              "documentation": {
+                "identifier": "cmpZero",
+                "newPage": false,
+                "searchKey": "constant.cmpZero",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func cmpZero(x int, op token.Token) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc cmpZero(x int, op token.Token) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#eql",
+              "documentation": {
+                "identifier": "eql",
+                "newPage": false,
+                "searchKey": "constant.eql",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func eql(x, y Value) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc eql(x, y Value) bool\n```\n\n"
               },
               "children": null
             }
@@ -2810,6 +3162,7 @@
                 "newPage": false,
                 "searchKey": "constant.is32bit",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2832,6 +3185,7 @@
                 "newPage": false,
                 "searchKey": "constant.is63bit",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2848,12 +3202,82 @@
           },
           {
             "node": {
+              "pathID": "/go/constant#newFloat",
+              "documentation": {
+                "identifier": "newFloat",
+                "newPage": false,
+                "searchKey": "constant.newFloat",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newFloat() *big.Float"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newFloat() *big.Float\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#newInt",
+              "documentation": {
+                "identifier": "newInt",
+                "newPage": false,
+                "searchKey": "constant.newInt",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newInt() *big.Int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newInt() *big.Int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant#newRat",
+              "documentation": {
+                "identifier": "newRat",
+                "newPage": false,
+                "searchKey": "constant.newRat",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newRat() *big.Rat"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newRat() *big.Rat\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/go/constant#ord",
               "documentation": {
                 "identifier": "ord",
                 "newPage": false,
                 "searchKey": "constant.ord",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2870,164 +3294,13 @@
           },
           {
             "node": {
-              "pathID": "/go/constant#cmpZero",
-              "documentation": {
-                "identifier": "cmpZero",
-                "newPage": false,
-                "searchKey": "constant.cmpZero",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func cmpZero(x int, op token.Token) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc cmpZero(x int, op token.Token) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#Compare",
-              "documentation": {
-                "identifier": "Compare",
-                "newPage": false,
-                "searchKey": "constant.Compare",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Compare(x_ Value, op token.Token, y_ Value) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Compare(x_ Value, op token.Token, y_ Value) bool\n```\n\nCompare returns the result of the comparison x op y. The comparison must be defined for the operands. If one of the operands is Unknown, the result is false. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#testNumbers",
-              "documentation": {
-                "identifier": "testNumbers",
-                "newPage": false,
-                "searchKey": "constant.testNumbers",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testNumbers(t *testing.T, kind token.Token, tests []string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testNumbers(t *testing.T, kind token.Token, tests []string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#TestNumbers",
-              "documentation": {
-                "identifier": "TestNumbers",
-                "newPage": false,
-                "searchKey": "constant.TestNumbers",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestNumbers(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestNumbers(t *testing.T)\n```\n\nTestNumbers verifies that differently written literals representing the same number do have the same value. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#TestOps",
-              "documentation": {
-                "identifier": "TestOps",
-                "newPage": false,
-                "searchKey": "constant.TestOps",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestOps(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestOps(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#eql",
-              "documentation": {
-                "identifier": "eql",
-                "newPage": false,
-                "searchKey": "constant.eql",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func eql(x, y Value) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc eql(x, y Value) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#TestString",
-              "documentation": {
-                "identifier": "TestString",
-                "newPage": false,
-                "searchKey": "constant.TestString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestString(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestString(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/constant#panicHandler",
               "documentation": {
                 "identifier": "panicHandler",
                 "newPage": false,
                 "searchKey": "constant.panicHandler",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -3044,154 +3317,115 @@
           },
           {
             "node": {
-              "pathID": "/go/constant#TestFractions",
+              "pathID": "/go/constant#reverse",
               "documentation": {
-                "identifier": "TestFractions",
+                "identifier": "reverse",
                 "newPage": false,
-                "searchKey": "constant.TestFractions",
+                "searchKey": "constant.reverse",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestFractions(t *testing.T)"
+                "value": "func reverse(x []string) []string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestFractions(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc reverse(x []string) []string\n```\n\nreverse reverses x in place and returns it. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/constant#TestBytes",
+              "pathID": "/go/constant#smallFloat",
               "documentation": {
-                "identifier": "TestBytes",
+                "identifier": "smallFloat",
                 "newPage": false,
-                "searchKey": "constant.TestBytes",
+                "searchKey": "constant.smallFloat",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestBytes(t *testing.T)"
+                "value": "func smallFloat(x *big.Float) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestBytes(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc smallFloat(x *big.Float) bool\n```\n\nsmallFloat reports whether x would lead to \"reasonably\"-sized fraction if converted to a *big.Rat. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/constant#TestUnknown",
+              "pathID": "/go/constant#smallFloat64",
               "documentation": {
-                "identifier": "TestUnknown",
+                "identifier": "smallFloat64",
                 "newPage": false,
-                "searchKey": "constant.TestUnknown",
+                "searchKey": "constant.smallFloat64",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestUnknown(t *testing.T)"
+                "value": "func smallFloat64(x float64) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestUnknown(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc smallFloat64(x float64) bool\n```\n\nsmallFloat64 reports whether x would lead to \"reasonably\"-sized fraction if converted to a *big.Rat. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/constant#TestMakeFloat64",
+              "pathID": "/go/constant#smallInt",
               "documentation": {
-                "identifier": "TestMakeFloat64",
+                "identifier": "smallInt",
                 "newPage": false,
-                "searchKey": "constant.TestMakeFloat64",
+                "searchKey": "constant.smallInt",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestMakeFloat64(t *testing.T)"
+                "value": "func smallInt(x *big.Int) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestMakeFloat64(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc smallInt(x *big.Int) bool\n```\n\nsmallInt reports whether x would lead to \"reasonably\"-sized fraction if converted to a *big.Rat. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/constant#TestMake",
+              "pathID": "/go/constant#testNumbers",
               "documentation": {
-                "identifier": "TestMake",
+                "identifier": "testNumbers",
                 "newPage": false,
-                "searchKey": "constant.TestMake",
+                "searchKey": "constant.testNumbers",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestMake(t *testing.T)"
+                "value": "func testNumbers(t *testing.T, kind token.Token, tests []string)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestMake(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#BenchmarkStringAdd",
-              "documentation": {
-                "identifier": "BenchmarkStringAdd",
-                "newPage": false,
-                "searchKey": "constant.BenchmarkStringAdd",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkStringAdd(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkStringAdd(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/constant#TestBitLen",
-              "documentation": {
-                "identifier": "TestBitLen",
-                "newPage": false,
-                "searchKey": "constant.TestBitLen",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestBitLen(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestBitLen(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc testNumbers(t *testing.T, kind token.Token, tests []string)\n```\n\n"
               },
               "children": null
             }

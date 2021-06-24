@@ -10,14 +10,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="ExampleCertificate_Verify" href="#ExampleCertificate_Verify">func ExampleCertificate_Verify()</a>
 
 ```
 searchKey: x509_test.ExampleCertificate_Verify
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -28,7 +28,7 @@ func ExampleCertificate_Verify()
 
 ```
 searchKey: x509_test.ExampleParsePKIXPublicKey
-tags: [private]
+tags: [function private]
 ```
 
 ```Go

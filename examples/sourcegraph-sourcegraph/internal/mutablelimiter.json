@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/mutablelimiter",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,9 @@
                 "identifier": "Limiter",
                 "newPage": false,
                 "searchKey": "mutablelimiter.Limiter",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +66,9 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "mutablelimiter.New",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -77,52 +83,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/mutablelimiter#Limiter.SetLimit",
-                    "documentation": {
-                      "identifier": "Limiter.SetLimit",
-                      "newPage": false,
-                      "searchKey": "mutablelimiter.Limiter.SetLimit",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (l *Limiter) SetLimit(limit int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (l *Limiter) SetLimit(limit int)\n```\n\nSetLimit adjusts the limit. If we currently have more than limit context acquired, then contexts are canceled until we are within limit. Contexts are canceled such that the older contexts are canceled. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/mutablelimiter#Limiter.GetLimit",
-                    "documentation": {
-                      "identifier": "Limiter.GetLimit",
-                      "newPage": false,
-                      "searchKey": "mutablelimiter.Limiter.GetLimit",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (l Limiter) GetLimit() (cap, len int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (l Limiter) GetLimit() (cap, len int)\n```\n\nGetLimit reports the current state of the limiter, returning the capacity and length (maximum and currently-in-use). \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/mutablelimiter#Limiter.Acquire",
                     "documentation": {
                       "identifier": "Limiter.Acquire",
                       "newPage": false,
                       "searchKey": "mutablelimiter.Limiter.Acquire",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -137,12 +105,57 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/mutablelimiter#Limiter.GetLimit",
+                    "documentation": {
+                      "identifier": "Limiter.GetLimit",
+                      "newPage": false,
+                      "searchKey": "mutablelimiter.Limiter.GetLimit",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l Limiter) GetLimit() (cap, len int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l Limiter) GetLimit() (cap, len int)\n```\n\nGetLimit reports the current state of the limiter, returning the capacity and length (maximum and currently-in-use). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/mutablelimiter#Limiter.SetLimit",
+                    "documentation": {
+                      "identifier": "Limiter.SetLimit",
+                      "newPage": false,
+                      "searchKey": "mutablelimiter.Limiter.SetLimit",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *Limiter) SetLimit(limit int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *Limiter) SetLimit(limit int)\n```\n\nSetLimit adjusts the limit. If we currently have more than limit context acquired, then contexts are canceled until we are within limit. Contexts are canceled such that the older contexts are canceled. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/mutablelimiter#Limiter.do",
                     "documentation": {
                       "identifier": "Limiter.do",
                       "newPage": false,
                       "searchKey": "mutablelimiter.Limiter.do",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -162,34 +175,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/mutablelimiter#acquireResponse",
-              "documentation": {
-                "identifier": "acquireResponse",
-                "newPage": false,
-                "searchKey": "mutablelimiter.acquireResponse",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type acquireResponse struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype acquireResponse struct {\n\tctx    context.Context\n\tcancel context.CancelFunc\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/mutablelimiter#acquireRequest",
               "documentation": {
                 "identifier": "acquireRequest",
                 "newPage": false,
                 "searchKey": "mutablelimiter.acquireRequest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -200,6 +192,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\ntype acquireRequest struct {\n\tctx  context.Context\n\tresp chan<- acquireResponse\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/mutablelimiter#acquireResponse",
+              "documentation": {
+                "identifier": "acquireResponse",
+                "newPage": false,
+                "searchKey": "mutablelimiter.acquireResponse",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type acquireResponse struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype acquireResponse struct {\n\tctx    context.Context\n\tcancel context.CancelFunc\n}\n```\n\n"
               },
               "children": null
             }
@@ -215,6 +230,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -235,7 +251,9 @@
                 "newPage": false,
                 "searchKey": "mutablelimiter.TestLimiter",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {

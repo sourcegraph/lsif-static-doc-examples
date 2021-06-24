@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "cmd/frontend/internal/httpapi/webhookhandlers",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/httpapi/webhookhandlers#repoGetter",
-              "documentation": {
-                "identifier": "repoGetter",
-                "newPage": false,
-                "searchKey": "webhookhandlers.repoGetter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type repoGetter interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype repoGetter interface {\n\tGetRepo() *gh.Repository\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/httpapi/webhookhandlers#memberGetter",
               "documentation": {
                 "identifier": "memberGetter",
                 "newPage": false,
                 "searchKey": "webhookhandlers.memberGetter",
                 "tags": [
+                  "interface",
                   "private"
                 ]
               },
@@ -89,6 +70,7 @@
                 "newPage": false,
                 "searchKey": "webhookhandlers.membershipGetter",
                 "tags": [
+                  "interface",
                   "private"
                 ]
               },
@@ -99,6 +81,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\ntype membershipGetter interface {\n\tGetMembership() *gh.Membership\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/webhookhandlers#repoGetter",
+              "documentation": {
+                "identifier": "repoGetter",
+                "newPage": false,
+                "searchKey": "webhookhandlers.repoGetter",
+                "tags": [
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type repoGetter interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype repoGetter interface {\n\tGetRepo() *gh.Repository\n}\n```\n\n"
               },
               "children": null
             }
@@ -114,6 +119,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -128,12 +134,35 @@
         "children": [
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/webhookhandlers#Init",
+              "documentation": {
+                "identifier": "Init",
+                "newPage": false,
+                "searchKey": "webhookhandlers.Init",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Init(w *webhooks.GitHubWebhook)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Init(w *webhooks.GitHubWebhook)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/httpapi/webhookhandlers#handleGitHubRepoAuthzEvent",
               "documentation": {
                 "identifier": "handleGitHubRepoAuthzEvent",
                 "newPage": false,
                 "searchKey": "webhookhandlers.handleGitHubRepoAuthzEvent",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -150,34 +179,13 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/httpapi/webhookhandlers#scheduleRepoUpdate",
-              "documentation": {
-                "identifier": "scheduleRepoUpdate",
-                "newPage": false,
-                "searchKey": "webhookhandlers.scheduleRepoUpdate",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func scheduleRepoUpdate(ctx context.Context, repo *gh.Repository) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc scheduleRepoUpdate(ctx context.Context, repo *gh.Repository) error\n```\n\nscheduleRepoUpdate finds an internal repo from a github repo, and posts it to repo-updater to schedule a permissions update 🚨 SECURITY: we want to be able to find any private repo here, so the DB call uses internal actor \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/httpapi/webhookhandlers#handleGitHubUserAuthzEvent",
               "documentation": {
                 "identifier": "handleGitHubUserAuthzEvent",
                 "newPage": false,
                 "searchKey": "webhookhandlers.handleGitHubUserAuthzEvent",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -194,12 +202,36 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/webhookhandlers#scheduleRepoUpdate",
+              "documentation": {
+                "identifier": "scheduleRepoUpdate",
+                "newPage": false,
+                "searchKey": "webhookhandlers.scheduleRepoUpdate",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func scheduleRepoUpdate(ctx context.Context, repo *gh.Repository) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc scheduleRepoUpdate(ctx context.Context, repo *gh.Repository) error\n```\n\nscheduleRepoUpdate finds an internal repo from a github repo, and posts it to repo-updater to schedule a permissions update 🚨 SECURITY: we want to be able to find any private repo here, so the DB call uses internal actor \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/httpapi/webhookhandlers#scheduleUserUpdate",
               "documentation": {
                 "identifier": "scheduleUserUpdate",
                 "newPage": false,
                 "searchKey": "webhookhandlers.scheduleUserUpdate",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -210,26 +242,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc scheduleUserUpdate(ctx context.Context, extSvc *types.ExternalService, githubUser *gh.User) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/httpapi/webhookhandlers#Init",
-              "documentation": {
-                "identifier": "Init",
-                "newPage": false,
-                "searchKey": "webhookhandlers.Init",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Init(w *webhooks.GitHubWebhook)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Init(w *webhooks.GitHubWebhook)\n```\n\n"
               },
               "children": null
             }

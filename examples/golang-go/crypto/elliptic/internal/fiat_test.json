@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "crypto/elliptic/internal/fiat_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,12 +41,37 @@
         "children": [
           {
             "node": {
+              "pathID": "/crypto/elliptic/internal/fiat_test#TestP521Invert",
+              "documentation": {
+                "identifier": "TestP521Invert",
+                "newPage": false,
+                "searchKey": "fiat_test.TestP521Invert",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestP521Invert(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestP521Invert(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/elliptic/internal/fiat_test#p521Random",
               "documentation": {
                 "identifier": "p521Random",
                 "newPage": false,
                 "searchKey": "fiat_test.p521Random",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -55,28 +82,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc p521Random(t *testing.T) *fiat.P521Element\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic/internal/fiat_test#TestP521Invert",
-              "documentation": {
-                "identifier": "TestP521Invert",
-                "newPage": false,
-                "searchKey": "fiat_test.TestP521Invert",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestP521Invert(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestP521Invert(t *testing.T)\n```\n\n"
               },
               "children": null
             }

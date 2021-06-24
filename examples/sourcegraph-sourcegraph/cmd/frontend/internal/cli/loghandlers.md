@@ -8,27 +8,27 @@ Package loghandlers contains log15 handlers/filters used by the sourcegraph cli
     * [var noiseyRPC](#noiseyRPC)
     * [var traces](#traces)
 * [Functions](#func)
-    * [func Trace(types []string, threshold time.Duration) func(*log15.Record) bool](#Trace)
     * [func NotNoisey(r *log15.Record) bool](#NotNoisey)
     * [func TestNotNoisey(t *testing.T)](#TestNotNoisey)
     * [func TestTrace_All(t *testing.T)](#TestTrace_All)
     * [func TestTrace_None(t *testing.T)](#TestTrace_None)
     * [func TestTrace_Specific(t *testing.T)](#TestTrace_Specific)
     * [func TestTrace_Threshold(t *testing.T)](#TestTrace_Threshold)
+    * [func Trace(types []string, threshold time.Duration) func(*log15.Record) bool](#Trace)
     * [func mkRecord(lvl log15.Lvl, msg string, ctx ...interface{}) log15.Record](#mkRecord)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="noiseyRPC" href="#noiseyRPC">var noiseyRPC</a>
 
 ```
 searchKey: loghandlers.noiseyRPC
-tags: [private]
+tags: [variable array string private]
 ```
 
 ```Go
@@ -39,7 +39,7 @@ var noiseyRPC = []string{"MirrorRepos.RefreshVCS"}
 
 ```
 searchKey: loghandlers.traces
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
@@ -49,25 +49,14 @@ var traces = ...
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
-
-### <a id="Trace" href="#Trace">func Trace(types []string, threshold time.Duration) func(*log15.Record) bool</a>
-
-```
-searchKey: loghandlers.Trace
-```
-
-```Go
-func Trace(types []string, threshold time.Duration) func(*log15.Record) bool
-```
-
-Trace returns a filter for the given traces that run longer than threshold 
 
 ### <a id="NotNoisey" href="#NotNoisey">func NotNoisey(r *log15.Record) bool</a>
 
 ```
 searchKey: loghandlers.NotNoisey
+tags: [method]
 ```
 
 ```Go
@@ -80,7 +69,7 @@ NotNoisey filters out high firing and low signal debug logs
 
 ```
 searchKey: loghandlers.TestNotNoisey
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -91,7 +80,7 @@ func TestNotNoisey(t *testing.T)
 
 ```
 searchKey: loghandlers.TestTrace_All
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -102,7 +91,7 @@ func TestTrace_All(t *testing.T)
 
 ```
 searchKey: loghandlers.TestTrace_None
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -113,7 +102,7 @@ func TestTrace_None(t *testing.T)
 
 ```
 searchKey: loghandlers.TestTrace_Specific
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -124,18 +113,31 @@ func TestTrace_Specific(t *testing.T)
 
 ```
 searchKey: loghandlers.TestTrace_Threshold
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestTrace_Threshold(t *testing.T)
 ```
 
+### <a id="Trace" href="#Trace">func Trace(types []string, threshold time.Duration) func(*log15.Record) bool</a>
+
+```
+searchKey: loghandlers.Trace
+tags: [method]
+```
+
+```Go
+func Trace(types []string, threshold time.Duration) func(*log15.Record) bool
+```
+
+Trace returns a filter for the given traces that run longer than threshold 
+
 ### <a id="mkRecord" href="#mkRecord">func mkRecord(lvl log15.Lvl, msg string, ctx ...interface{}) log15.Record</a>
 
 ```
 searchKey: loghandlers.mkRecord
-tags: [private]
+tags: [method private]
 ```
 
 ```Go

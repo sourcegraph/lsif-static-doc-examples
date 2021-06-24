@@ -4,7 +4,9 @@
     "identifier": "pprof",
     "newPage": true,
     "searchKey": "net/http/pprof",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,56 +39,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/net/http/pprof#profileSupportsDelta",
-              "documentation": {
-                "identifier": "profileSupportsDelta",
-                "newPage": false,
-                "searchKey": "pprof.profileSupportsDelta",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var profileSupportsDelta"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar profileSupportsDelta = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/pprof#profileDescriptions",
-              "documentation": {
-                "identifier": "profileDescriptions",
-                "newPage": false,
-                "searchKey": "pprof.profileDescriptions",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var profileDescriptions"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar profileDescriptions = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/http/pprof#Sink",
               "documentation": {
                 "identifier": "Sink",
                 "newPage": false,
                 "searchKey": "pprof.Sink",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -101,12 +63,62 @@
           },
           {
             "node": {
+              "pathID": "/net/http/pprof#profileDescriptions",
+              "documentation": {
+                "identifier": "profileDescriptions",
+                "newPage": false,
+                "searchKey": "pprof.profileDescriptions",
+                "tags": [
+                  "variable",
+                  "object",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var profileDescriptions"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar profileDescriptions = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/pprof#profileSupportsDelta",
+              "documentation": {
+                "identifier": "profileSupportsDelta",
+                "newPage": false,
+                "searchKey": "pprof.profileSupportsDelta",
+                "tags": [
+                  "variable",
+                  "object",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var profileSupportsDelta"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar profileSupportsDelta = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/net/http/pprof#srv",
               "documentation": {
                 "identifier": "srv",
                 "newPage": false,
                 "searchKey": "pprof.srv",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -131,7 +143,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -150,6 +164,7 @@
                 "newPage": false,
                 "searchKey": "pprof.handler",
                 "tags": [
+                  "string",
                   "private"
                 ]
               },
@@ -170,6 +185,7 @@
                       "newPage": false,
                       "searchKey": "pprof.handler.ServeHTTP",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -192,6 +208,7 @@
                       "newPage": false,
                       "searchKey": "pprof.handler.serveDeltaProfile",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -217,6 +234,7 @@
                 "newPage": false,
                 "searchKey": "pprof.profileEntry",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -241,7 +259,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -254,34 +274,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/net/http/pprof#init.pprof.go",
-              "documentation": {
-                "identifier": "init.pprof.go",
-                "newPage": false,
-                "searchKey": "pprof.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/http/pprof#Cmdline",
               "documentation": {
                 "identifier": "Cmdline",
                 "newPage": false,
                 "searchKey": "pprof.Cmdline",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -296,138 +296,14 @@
           },
           {
             "node": {
-              "pathID": "/net/http/pprof#sleep",
-              "documentation": {
-                "identifier": "sleep",
-                "newPage": false,
-                "searchKey": "pprof.sleep",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func sleep(r *http.Request, d time.Duration)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc sleep(r *http.Request, d time.Duration)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/pprof#durationExceedsWriteTimeout",
-              "documentation": {
-                "identifier": "durationExceedsWriteTimeout",
-                "newPage": false,
-                "searchKey": "pprof.durationExceedsWriteTimeout",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func durationExceedsWriteTimeout(r *http.Request, seconds float64) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc durationExceedsWriteTimeout(r *http.Request, seconds float64) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/pprof#serveError",
-              "documentation": {
-                "identifier": "serveError",
-                "newPage": false,
-                "searchKey": "pprof.serveError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func serveError(w http.ResponseWriter, status int, txt string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc serveError(w http.ResponseWriter, status int, txt string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/pprof#Profile",
-              "documentation": {
-                "identifier": "Profile",
-                "newPage": false,
-                "searchKey": "pprof.Profile",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Profile(w http.ResponseWriter, r *http.Request)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Profile(w http.ResponseWriter, r *http.Request)\n```\n\nProfile responds with the pprof-formatted cpu profile. Profiling lasts for duration specified in seconds GET parameter, or for 30 seconds if not specified. The package initialization registers it as /debug/pprof/profile. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/pprof#Trace",
-              "documentation": {
-                "identifier": "Trace",
-                "newPage": false,
-                "searchKey": "pprof.Trace",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Trace(w http.ResponseWriter, r *http.Request)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Trace(w http.ResponseWriter, r *http.Request)\n```\n\nTrace responds with the execution trace in binary form. Tracing lasts for duration specified in seconds GET parameter, or for 1 second if not specified. The package initialization registers it as /debug/pprof/trace. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/pprof#Symbol",
-              "documentation": {
-                "identifier": "Symbol",
-                "newPage": false,
-                "searchKey": "pprof.Symbol",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Symbol(w http.ResponseWriter, r *http.Request)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Symbol(w http.ResponseWriter, r *http.Request)\n```\n\nSymbol looks up the program counters listed in the request, responding with a table mapping program counters to function names. The package initialization registers it as /debug/pprof/symbol. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/http/pprof#Handler",
               "documentation": {
                 "identifier": "Handler",
                 "newPage": false,
                 "searchKey": "pprof.Handler",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -442,34 +318,14 @@
           },
           {
             "node": {
-              "pathID": "/net/http/pprof#collectProfile",
-              "documentation": {
-                "identifier": "collectProfile",
-                "newPage": false,
-                "searchKey": "pprof.collectProfile",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func collectProfile(p *pprof.Profile) (*profile.Profile, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc collectProfile(p *pprof.Profile) (*profile.Profile, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/http/pprof#Index",
               "documentation": {
                 "identifier": "Index",
                 "newPage": false,
                 "searchKey": "pprof.Index",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -484,22 +340,68 @@
           },
           {
             "node": {
-              "pathID": "/net/http/pprof#indexTmplExecute",
+              "pathID": "/net/http/pprof#Profile",
               "documentation": {
-                "identifier": "indexTmplExecute",
+                "identifier": "Profile",
                 "newPage": false,
-                "searchKey": "pprof.indexTmplExecute",
+                "searchKey": "pprof.Profile",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func indexTmplExecute(w io.Writer, profiles []profileEntry) error"
+                "value": "func Profile(w http.ResponseWriter, r *http.Request)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc indexTmplExecute(w io.Writer, profiles []profileEntry) error\n```\n\n"
+                "value": "```Go\nfunc Profile(w http.ResponseWriter, r *http.Request)\n```\n\nProfile responds with the pprof-formatted cpu profile. Profiling lasts for duration specified in seconds GET parameter, or for 30 seconds if not specified. The package initialization registers it as /debug/pprof/profile. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/pprof#Symbol",
+              "documentation": {
+                "identifier": "Symbol",
+                "newPage": false,
+                "searchKey": "pprof.Symbol",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Symbol(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Symbol(w http.ResponseWriter, r *http.Request)\n```\n\nSymbol looks up the program counters listed in the request, responding with a table mapping program counters to function names. The package initialization registers it as /debug/pprof/symbol. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/pprof#TestDeltaProfile",
+              "documentation": {
+                "identifier": "TestDeltaProfile",
+                "newPage": false,
+                "searchKey": "pprof.TestDeltaProfile",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDeltaProfile(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDeltaProfile(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -512,7 +414,9 @@
                 "newPage": false,
                 "searchKey": "pprof.TestDescriptions",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -534,7 +438,9 @@
                 "newPage": false,
                 "searchKey": "pprof.TestHandlers",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -550,12 +456,150 @@
           },
           {
             "node": {
+              "pathID": "/net/http/pprof#Trace",
+              "documentation": {
+                "identifier": "Trace",
+                "newPage": false,
+                "searchKey": "pprof.Trace",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Trace(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Trace(w http.ResponseWriter, r *http.Request)\n```\n\nTrace responds with the execution trace in binary form. Tracing lasts for duration specified in seconds GET parameter, or for 1 second if not specified. The package initialization registers it as /debug/pprof/trace. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/pprof#collectProfile",
+              "documentation": {
+                "identifier": "collectProfile",
+                "newPage": false,
+                "searchKey": "pprof.collectProfile",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func collectProfile(p *pprof.Profile) (*profile.Profile, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc collectProfile(p *pprof.Profile) (*profile.Profile, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/pprof#durationExceedsWriteTimeout",
+              "documentation": {
+                "identifier": "durationExceedsWriteTimeout",
+                "newPage": false,
+                "searchKey": "pprof.durationExceedsWriteTimeout",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func durationExceedsWriteTimeout(r *http.Request, seconds float64) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc durationExceedsWriteTimeout(r *http.Request, seconds float64) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/pprof#indexTmplExecute",
+              "documentation": {
+                "identifier": "indexTmplExecute",
+                "newPage": false,
+                "searchKey": "pprof.indexTmplExecute",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func indexTmplExecute(w io.Writer, profiles []profileEntry) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc indexTmplExecute(w io.Writer, profiles []profileEntry) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/pprof#init.pprof.go",
+              "documentation": {
+                "identifier": "init.pprof.go",
+                "newPage": false,
+                "searchKey": "pprof.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/pprof#mutexHog",
+              "documentation": {
+                "identifier": "mutexHog",
+                "newPage": false,
+                "searchKey": "pprof.mutexHog",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mutexHog(duration time.Duration, hogger func(mu1, mu2 *sync.Mutex, start time.Time, dt time.Duration))"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mutexHog(duration time.Duration, hogger func(mu1, mu2 *sync.Mutex, start time.Time, dt time.Duration))\n```\n\nmutexHog starts multiple goroutines that runs the given hogger function for the specified duration. The hogger function will be given two mutexes to lock & unlock. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/net/http/pprof#mutexHog1",
               "documentation": {
                 "identifier": "mutexHog1",
                 "newPage": false,
                 "searchKey": "pprof.mutexHog1",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -578,6 +622,7 @@
                 "newPage": false,
                 "searchKey": "pprof.mutexHog2",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -594,56 +639,13 @@
           },
           {
             "node": {
-              "pathID": "/net/http/pprof#mutexHog",
-              "documentation": {
-                "identifier": "mutexHog",
-                "newPage": false,
-                "searchKey": "pprof.mutexHog",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func mutexHog(duration time.Duration, hogger func(mu1, mu2 *sync.Mutex, start time.Time, dt time.Duration))"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc mutexHog(duration time.Duration, hogger func(mu1, mu2 *sync.Mutex, start time.Time, dt time.Duration))\n```\n\nmutexHog starts multiple goroutines that runs the given hogger function for the specified duration. The hogger function will be given two mutexes to lock & unlock. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/pprof#TestDeltaProfile",
-              "documentation": {
-                "identifier": "TestDeltaProfile",
-                "newPage": false,
-                "searchKey": "pprof.TestDeltaProfile",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDeltaProfile(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDeltaProfile(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/http/pprof#query",
               "documentation": {
                 "identifier": "query",
                 "newPage": false,
                 "searchKey": "pprof.query",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -666,6 +668,7 @@
                 "newPage": false,
                 "searchKey": "pprof.seen",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -676,6 +679,52 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc seen(p *profile.Profile, fname string) bool\n```\n\nseen returns true if the profile includes samples whose stacks include the specified function name (fname). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/pprof#serveError",
+              "documentation": {
+                "identifier": "serveError",
+                "newPage": false,
+                "searchKey": "pprof.serveError",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveError(w http.ResponseWriter, status int, txt string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveError(w http.ResponseWriter, status int, txt string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/pprof#sleep",
+              "documentation": {
+                "identifier": "sleep",
+                "newPage": false,
+                "searchKey": "pprof.sleep",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sleep(r *http.Request, d time.Duration)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sleep(r *http.Request, d time.Duration)\n```\n\n"
               },
               "children": null
             }

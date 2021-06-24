@@ -6,52 +6,53 @@ Package routevar contains routines for parsing and generating URL route variable
 
 * [Constants](#const)
     * [const Def](#Def)
-    * [const RepoPattern](#RepoPattern)
     * [const RepoPathDelim](#RepoPathDelim)
-    * [const pathComponentNotDelim](#pathComponentNotDelim)
+    * [const RepoPattern](#RepoPattern)
     * [const RevPattern](#RevPattern)
+    * [const pathComponentNotDelim](#pathComponentNotDelim)
 * [Variables](#var)
-    * [var namedCaptureGroup](#namedCaptureGroup)
     * [var Repo](#Repo)
-    * [var Rev](#Rev)
     * [var RepoRevSuffix](#RepoRevSuffix)
+    * [var Rev](#Rev)
+    * [var namedCaptureGroup](#namedCaptureGroup)
     * [var repoPattern](#repoPattern)
 * [Types](#type)
     * [type DefAtRev struct](#DefAtRev)
         * [func ToDefAtRev(routeVars map[string]string) DefAtRev](#ToDefAtRev)
-    * [type RepoRev struct](#RepoRev)
-        * [func ToRepoRev(routeVars map[string]string) RepoRev](#ToRepoRev)
     * [type InvalidError struct](#InvalidError)
         * [func (e InvalidError) Error() string](#InvalidError.Error)
+    * [type RepoRev struct](#RepoRev)
+        * [func ToRepoRev(routeVars map[string]string) RepoRev](#ToRepoRev)
 * [Functions](#func)
-    * [func defURLPathToKeyPath(s string) string](#defURLPathToKeyPath)
     * [func DefRouteVars(s DefAtRev) map[string]string](#DefRouteVars)
-    * [func namedToNonCapturingGroups(pat string) string](#namedToNonCapturingGroups)
     * [func ParseRepo(spec string) (repo api.RepoName, err error)](#ParseRepo)
-    * [func RepoRouteVars(repo api.RepoName) map[string]string](#RepoRouteVars)
-    * [func ToRepo(routeVars map[string]string) api.RepoName](#ToRepo)
     * [func RepoRevRouteVars(s RepoRev) map[string]string](#RepoRevRouteVars)
-    * [func pathUnescape(p string) string](#pathUnescape)
+    * [func RepoRouteVars(repo api.RepoName) map[string]string](#RepoRouteVars)
     * [func TestDefRouteVars(t *testing.T)](#TestDefRouteVars)
-    * [func pairs(m map[string]string) []string](#pairs)
     * [func TestNamedToNonCapturingGroups(t *testing.T)](#TestNamedToNonCapturingGroups)
-    * [func TestRepoPattern(t *testing.T)](#TestRepoPattern)
-    * [func TestRevPattern(t *testing.T)](#TestRevPattern)
     * [func TestRepo(t *testing.T)](#TestRepo)
-    * [func TestRev(t *testing.T)](#TestRev)
+    * [func TestRepoPattern(t *testing.T)](#TestRepoPattern)
     * [func TestRepoRevSpec(t *testing.T)](#TestRepoRevSpec)
+    * [func TestRev(t *testing.T)](#TestRev)
+    * [func TestRevPattern(t *testing.T)](#TestRevPattern)
+    * [func ToRepo(routeVars map[string]string) api.RepoName](#ToRepo)
+    * [func defURLPathToKeyPath(s string) string](#defURLPathToKeyPath)
+    * [func namedToNonCapturingGroups(pat string) string](#namedToNonCapturingGroups)
+    * [func pairs(m map[string]string) []string](#pairs)
+    * [func pathUnescape(p string) string](#pathUnescape)
 
 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Def" href="#Def">const Def</a>
 
 ```
 searchKey: routevar.Def
+tags: [constant string]
 ```
 
 ```Go
@@ -60,10 +61,22 @@ const Def = "{UnitType}/{Unit:.+?}/-/{Path:.*?}"
 
 Def captures def paths in URL routes. 
 
+### <a id="RepoPathDelim" href="#RepoPathDelim">const RepoPathDelim</a>
+
+```
+searchKey: routevar.RepoPathDelim
+tags: [constant string]
+```
+
+```Go
+const RepoPathDelim = "-"
+```
+
 ### <a id="RepoPattern" href="#RepoPattern">const RepoPattern</a>
 
 ```
 searchKey: routevar.RepoPattern
+tags: [constant string]
 ```
 
 ```Go
@@ -72,31 +85,11 @@ const RepoPattern = `(?P<repo>(?:` + pathComponentNotDelim + `/)*` + pathCompone
 
 RepoPattern is the regexp pattern that matches repo path strings ("repo" or "domain.com/repo" or "domain.com/path/to/repo"). 
 
-### <a id="RepoPathDelim" href="#RepoPathDelim">const RepoPathDelim</a>
-
-```
-searchKey: routevar.RepoPathDelim
-```
-
-```Go
-const RepoPathDelim = "-"
-```
-
-### <a id="pathComponentNotDelim" href="#pathComponentNotDelim">const pathComponentNotDelim</a>
-
-```
-searchKey: routevar.pathComponentNotDelim
-tags: [private]
-```
-
-```Go
-const pathComponentNotDelim = `(?:[^@/` + RepoPathDelim + `]|(?:[^/@]{2,}))`
-```
-
 ### <a id="RevPattern" href="#RevPattern">const RevPattern</a>
 
 ```
 searchKey: routevar.RevPattern
+tags: [constant string]
 ```
 
 ```Go
@@ -105,17 +98,61 @@ const RevPattern = `(?P<rev>(?:` + pathComponentNotDelim + `/)*` + pathComponent
 
 RevPattern is the regexp pattern that matches a VCS revision specifier (e.g., "master" or "my/branch~1", or a full 40-char commit ID). 
 
+### <a id="pathComponentNotDelim" href="#pathComponentNotDelim">const pathComponentNotDelim</a>
+
+```
+searchKey: routevar.pathComponentNotDelim
+tags: [constant string private]
+```
+
+```Go
+const pathComponentNotDelim = `(?:[^@/` + RepoPathDelim + `]|(?:[^/@]{2,}))`
+```
+
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
+```
+
+### <a id="Repo" href="#Repo">var Repo</a>
+
+```
+searchKey: routevar.Repo
+tags: [variable string]
+```
+
+```Go
+var Repo = `{Repo:` + namedToNonCapturingGroups(RepoPattern) + `}`
+```
+
+### <a id="RepoRevSuffix" href="#RepoRevSuffix">var RepoRevSuffix</a>
+
+```
+searchKey: routevar.RepoRevSuffix
+tags: [variable string]
+```
+
+```Go
+var RepoRevSuffix = `{Rev:` + namedToNonCapturingGroups(`(?:@`+RevPattern+`)?`) + `}`
+```
+
+### <a id="Rev" href="#Rev">var Rev</a>
+
+```
+searchKey: routevar.Rev
+tags: [variable string]
+```
+
+```Go
+var Rev = `{Rev:` + namedToNonCapturingGroups(RevPattern) + `}`
 ```
 
 ### <a id="namedCaptureGroup" href="#namedCaptureGroup">var namedCaptureGroup</a>
 
 ```
 searchKey: routevar.namedCaptureGroup
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -124,41 +161,11 @@ var namedCaptureGroup = lazyregexp.New(`\(\?P<[^>]+>`)
 
 namedCaptureGroup matches the syntax for the opening of a regexp named capture group (`(?P<name>`). 
 
-### <a id="Repo" href="#Repo">var Repo</a>
-
-```
-searchKey: routevar.Repo
-```
-
-```Go
-var Repo = `{Repo:` + namedToNonCapturingGroups(RepoPattern) + `}`
-```
-
-### <a id="Rev" href="#Rev">var Rev</a>
-
-```
-searchKey: routevar.Rev
-```
-
-```Go
-var Rev = `{Rev:` + namedToNonCapturingGroups(RevPattern) + `}`
-```
-
-### <a id="RepoRevSuffix" href="#RepoRevSuffix">var RepoRevSuffix</a>
-
-```
-searchKey: routevar.RepoRevSuffix
-```
-
-```Go
-var RepoRevSuffix = `{Rev:` + namedToNonCapturingGroups(`(?:@`+RevPattern+`)?`) + `}`
-```
-
 ### <a id="repoPattern" href="#repoPattern">var repoPattern</a>
 
 ```
 searchKey: routevar.repoPattern
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -168,13 +175,14 @@ var repoPattern = lazyregexp.New("^" + RepoPattern + "$")
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="DefAtRev" href="#DefAtRev">type DefAtRev struct</a>
 
 ```
 searchKey: routevar.DefAtRev
+tags: [struct]
 ```
 
 ```Go
@@ -190,43 +198,18 @@ DefAtRev refers to a def at a non-absolute commit ID (unlike DefSpec/DefKey, whi
 
 ```
 searchKey: routevar.ToDefAtRev
+tags: [method]
 ```
 
 ```Go
 func ToDefAtRev(routeVars map[string]string) DefAtRev
 ```
 
-### <a id="RepoRev" href="#RepoRev">type RepoRev struct</a>
-
-```
-searchKey: routevar.RepoRev
-```
-
-```Go
-type RepoRev struct {
-	Repo api.RepoName // a repo path
-	Rev  string       // a VCS revision specifier (branch, "master~7", commit ID, etc.)
-}
-```
-
-A RepoRev specifies a repo at a revision. The revision need not be an absolute commit ID. This RepoRev type is appropriate for user input (e.g., from a URL), where it is convenient to allow users to specify non-absolute commit IDs that the server can resolve. 
-
-#### <a id="ToRepoRev" href="#ToRepoRev">func ToRepoRev(routeVars map[string]string) RepoRev</a>
-
-```
-searchKey: routevar.ToRepoRev
-```
-
-```Go
-func ToRepoRev(routeVars map[string]string) RepoRev
-```
-
-ToRepoRev marshals a map containing route variables generated by (RepoRevSpec).RouteVars() and returns the equivalent RepoRevSpec struct. 
-
 ### <a id="InvalidError" href="#InvalidError">type InvalidError struct</a>
 
 ```
 searchKey: routevar.InvalidError
+tags: [struct]
 ```
 
 ```Go
@@ -243,56 +226,64 @@ InvalidError occurs when a spec string is invalid.
 
 ```
 searchKey: routevar.InvalidError.Error
+tags: [function]
 ```
 
 ```Go
 func (e InvalidError) Error() string
 ```
 
-## <a id="func" href="#func">Functions</a>
+### <a id="RepoRev" href="#RepoRev">type RepoRev struct</a>
 
 ```
-tags: [private]
-```
-
-### <a id="defURLPathToKeyPath" href="#defURLPathToKeyPath">func defURLPathToKeyPath(s string) string</a>
-
-```
-searchKey: routevar.defURLPathToKeyPath
-tags: [private]
+searchKey: routevar.RepoRev
+tags: [struct]
 ```
 
 ```Go
-func defURLPathToKeyPath(s string) string
+type RepoRev struct {
+	Repo api.RepoName // a repo path
+	Rev  string       // a VCS revision specifier (branch, "master~7", commit ID, etc.)
+}
+```
+
+A RepoRev specifies a repo at a revision. The revision need not be an absolute commit ID. This RepoRev type is appropriate for user input (e.g., from a URL), where it is convenient to allow users to specify non-absolute commit IDs that the server can resolve. 
+
+#### <a id="ToRepoRev" href="#ToRepoRev">func ToRepoRev(routeVars map[string]string) RepoRev</a>
+
+```
+searchKey: routevar.ToRepoRev
+tags: [method]
+```
+
+```Go
+func ToRepoRev(routeVars map[string]string) RepoRev
+```
+
+ToRepoRev marshals a map containing route variables generated by (RepoRevSpec).RouteVars() and returns the equivalent RepoRevSpec struct. 
+
+## <a id="func" href="#func">Functions</a>
+
+```
+tags: [package private]
 ```
 
 ### <a id="DefRouteVars" href="#DefRouteVars">func DefRouteVars(s DefAtRev) map[string]string</a>
 
 ```
 searchKey: routevar.DefRouteVars
+tags: [method]
 ```
 
 ```Go
 func DefRouteVars(s DefAtRev) map[string]string
 ```
 
-### <a id="namedToNonCapturingGroups" href="#namedToNonCapturingGroups">func namedToNonCapturingGroups(pat string) string</a>
-
-```
-searchKey: routevar.namedToNonCapturingGroups
-tags: [private]
-```
-
-```Go
-func namedToNonCapturingGroups(pat string) string
-```
-
-namedToNonCapturingGroups converts named capturing groups `(?P<myname>...)` to non-capturing groups `(?:...)` for use in mux route declarations (which assume that the route patterns do not have any capturing groups). 
-
 ### <a id="ParseRepo" href="#ParseRepo">func ParseRepo(spec string) (repo api.RepoName, err error)</a>
 
 ```
 searchKey: routevar.ParseRepo
+tags: [method]
 ```
 
 ```Go
@@ -301,34 +292,11 @@ func ParseRepo(spec string) (repo api.RepoName, err error)
 
 ParseRepo parses a repo path string. If spec is invalid, an InvalidError is returned. 
 
-### <a id="RepoRouteVars" href="#RepoRouteVars">func RepoRouteVars(repo api.RepoName) map[string]string</a>
-
-```
-searchKey: routevar.RepoRouteVars
-```
-
-```Go
-func RepoRouteVars(repo api.RepoName) map[string]string
-```
-
-RepoRouteVars returns route variables for constructing repository routes. 
-
-### <a id="ToRepo" href="#ToRepo">func ToRepo(routeVars map[string]string) api.RepoName</a>
-
-```
-searchKey: routevar.ToRepo
-```
-
-```Go
-func ToRepo(routeVars map[string]string) api.RepoName
-```
-
-ToRepo returns the repo path string from a map containing route variables. 
-
 ### <a id="RepoRevRouteVars" href="#RepoRevRouteVars">func RepoRevRouteVars(s RepoRev) map[string]string</a>
 
 ```
 searchKey: routevar.RepoRevRouteVars
+tags: [method]
 ```
 
 ```Go
@@ -337,35 +305,138 @@ func RepoRevRouteVars(s RepoRev) map[string]string
 
 RepoRevRouteVars returns route variables for constructing routes to a repository revision. 
 
-### <a id="pathUnescape" href="#pathUnescape">func pathUnescape(p string) string</a>
+### <a id="RepoRouteVars" href="#RepoRouteVars">func RepoRouteVars(repo api.RepoName) map[string]string</a>
 
 ```
-searchKey: routevar.pathUnescape
-tags: [private]
+searchKey: routevar.RepoRouteVars
+tags: [method]
 ```
 
 ```Go
-func pathUnescape(p string) string
+func RepoRouteVars(repo api.RepoName) map[string]string
 ```
 
-pathUnescape is a limited version of url.QueryEscape that only unescapes '?'. 
+RepoRouteVars returns route variables for constructing repository routes. 
 
 ### <a id="TestDefRouteVars" href="#TestDefRouteVars">func TestDefRouteVars(t *testing.T)</a>
 
 ```
 searchKey: routevar.TestDefRouteVars
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestDefRouteVars(t *testing.T)
 ```
 
+### <a id="TestNamedToNonCapturingGroups" href="#TestNamedToNonCapturingGroups">func TestNamedToNonCapturingGroups(t *testing.T)</a>
+
+```
+searchKey: routevar.TestNamedToNonCapturingGroups
+tags: [method private test]
+```
+
+```Go
+func TestNamedToNonCapturingGroups(t *testing.T)
+```
+
+### <a id="TestRepo" href="#TestRepo">func TestRepo(t *testing.T)</a>
+
+```
+searchKey: routevar.TestRepo
+tags: [method private test]
+```
+
+```Go
+func TestRepo(t *testing.T)
+```
+
+### <a id="TestRepoPattern" href="#TestRepoPattern">func TestRepoPattern(t *testing.T)</a>
+
+```
+searchKey: routevar.TestRepoPattern
+tags: [method private test]
+```
+
+```Go
+func TestRepoPattern(t *testing.T)
+```
+
+### <a id="TestRepoRevSpec" href="#TestRepoRevSpec">func TestRepoRevSpec(t *testing.T)</a>
+
+```
+searchKey: routevar.TestRepoRevSpec
+tags: [method private test]
+```
+
+```Go
+func TestRepoRevSpec(t *testing.T)
+```
+
+### <a id="TestRev" href="#TestRev">func TestRev(t *testing.T)</a>
+
+```
+searchKey: routevar.TestRev
+tags: [method private test]
+```
+
+```Go
+func TestRev(t *testing.T)
+```
+
+### <a id="TestRevPattern" href="#TestRevPattern">func TestRevPattern(t *testing.T)</a>
+
+```
+searchKey: routevar.TestRevPattern
+tags: [method private test]
+```
+
+```Go
+func TestRevPattern(t *testing.T)
+```
+
+### <a id="ToRepo" href="#ToRepo">func ToRepo(routeVars map[string]string) api.RepoName</a>
+
+```
+searchKey: routevar.ToRepo
+tags: [method]
+```
+
+```Go
+func ToRepo(routeVars map[string]string) api.RepoName
+```
+
+ToRepo returns the repo path string from a map containing route variables. 
+
+### <a id="defURLPathToKeyPath" href="#defURLPathToKeyPath">func defURLPathToKeyPath(s string) string</a>
+
+```
+searchKey: routevar.defURLPathToKeyPath
+tags: [method private]
+```
+
+```Go
+func defURLPathToKeyPath(s string) string
+```
+
+### <a id="namedToNonCapturingGroups" href="#namedToNonCapturingGroups">func namedToNonCapturingGroups(pat string) string</a>
+
+```
+searchKey: routevar.namedToNonCapturingGroups
+tags: [method private]
+```
+
+```Go
+func namedToNonCapturingGroups(pat string) string
+```
+
+namedToNonCapturingGroups converts named capturing groups `(?P<myname>...)` to non-capturing groups `(?:...)` for use in mux route declarations (which assume that the route patterns do not have any capturing groups). 
+
 ### <a id="pairs" href="#pairs">func pairs(m map[string]string) []string</a>
 
 ```
 searchKey: routevar.pairs
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -374,69 +445,16 @@ func pairs(m map[string]string) []string
 
 pairs converts map's keys and values to a slice of []string{key1, value1, key2, value2, ...}. 
 
-### <a id="TestNamedToNonCapturingGroups" href="#TestNamedToNonCapturingGroups">func TestNamedToNonCapturingGroups(t *testing.T)</a>
+### <a id="pathUnescape" href="#pathUnescape">func pathUnescape(p string) string</a>
 
 ```
-searchKey: routevar.TestNamedToNonCapturingGroups
-tags: [private]
-```
-
-```Go
-func TestNamedToNonCapturingGroups(t *testing.T)
-```
-
-### <a id="TestRepoPattern" href="#TestRepoPattern">func TestRepoPattern(t *testing.T)</a>
-
-```
-searchKey: routevar.TestRepoPattern
-tags: [private]
+searchKey: routevar.pathUnescape
+tags: [method private]
 ```
 
 ```Go
-func TestRepoPattern(t *testing.T)
+func pathUnescape(p string) string
 ```
 
-### <a id="TestRevPattern" href="#TestRevPattern">func TestRevPattern(t *testing.T)</a>
-
-```
-searchKey: routevar.TestRevPattern
-tags: [private]
-```
-
-```Go
-func TestRevPattern(t *testing.T)
-```
-
-### <a id="TestRepo" href="#TestRepo">func TestRepo(t *testing.T)</a>
-
-```
-searchKey: routevar.TestRepo
-tags: [private]
-```
-
-```Go
-func TestRepo(t *testing.T)
-```
-
-### <a id="TestRev" href="#TestRev">func TestRev(t *testing.T)</a>
-
-```
-searchKey: routevar.TestRev
-tags: [private]
-```
-
-```Go
-func TestRev(t *testing.T)
-```
-
-### <a id="TestRepoRevSpec" href="#TestRepoRevSpec">func TestRepoRevSpec(t *testing.T)</a>
-
-```
-searchKey: routevar.TestRepoRevSpec
-tags: [private]
-```
-
-```Go
-func TestRepoRevSpec(t *testing.T)
-```
+pathUnescape is a limited version of url.QueryEscape that only unescapes '?'. 
 

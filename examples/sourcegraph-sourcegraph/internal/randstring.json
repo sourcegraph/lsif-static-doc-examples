@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/randstring",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,9 @@
                 "newPage": false,
                 "searchKey": "randstring.stdChars",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -70,6 +75,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -89,7 +95,9 @@
                 "identifier": "NewLen",
                 "newPage": false,
                 "searchKey": "randstring.NewLen",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -109,7 +117,9 @@
                 "identifier": "NewLenChars",
                 "newPage": false,
                 "searchKey": "randstring.NewLenChars",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,57 +134,15 @@
           },
           {
             "node": {
-              "pathID": "/internal/randstring#validateChars",
-              "documentation": {
-                "identifier": "validateChars",
-                "newPage": false,
-                "searchKey": "randstring.validateChars",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func validateChars(t *testing.T, u string, chars []byte)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc validateChars(t *testing.T, u string, chars []byte)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/randstring#TestNew_unique",
-              "documentation": {
-                "identifier": "TestNew_unique",
-                "newPage": false,
-                "searchKey": "randstring.TestNew_unique",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestNew_unique(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestNew_unique(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/randstring#TestNewLen",
               "documentation": {
                 "identifier": "TestNewLen",
                 "newPage": false,
                 "searchKey": "randstring.TestNewLen",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -196,7 +164,9 @@
                 "newPage": false,
                 "searchKey": "randstring.TestNewLenChars",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -218,7 +188,9 @@
                 "newPage": false,
                 "searchKey": "randstring.TestNewLenCharsMaxLength",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -228,6 +200,53 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc TestNewLenCharsMaxLength(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/randstring#TestNew_unique",
+              "documentation": {
+                "identifier": "TestNew_unique",
+                "newPage": false,
+                "searchKey": "randstring.TestNew_unique",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNew_unique(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNew_unique(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/randstring#validateChars",
+              "documentation": {
+                "identifier": "validateChars",
+                "newPage": false,
+                "searchKey": "randstring.validateChars",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func validateChars(t *testing.T, u string, chars []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc validateChars(t *testing.T, u string, chars []byte)\n```\n\n"
               },
               "children": null
             }

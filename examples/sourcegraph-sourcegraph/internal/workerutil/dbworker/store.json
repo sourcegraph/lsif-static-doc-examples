@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/workerutil/dbworker/store",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,122 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/workerutil/dbworker/store#queuedCountQuery",
-              "documentation": {
-                "identifier": "queuedCountQuery",
-                "newPage": false,
-                "searchKey": "store.queuedCountQuery",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const queuedCountQuery"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst queuedCountQuery = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker/store#selectCandidateQuery",
-              "documentation": {
-                "identifier": "selectCandidateQuery",
-                "newPage": false,
-                "searchKey": "store.selectCandidateQuery",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const selectCandidateQuery"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst selectCandidateQuery = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker/store#lockQuery",
-              "documentation": {
-                "identifier": "lockQuery",
-                "newPage": false,
-                "searchKey": "store.lockQuery",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const lockQuery"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst lockQuery = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker/store#selectRecordQuery",
-              "documentation": {
-                "identifier": "selectRecordQuery",
-                "newPage": false,
-                "searchKey": "store.selectRecordQuery",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const selectRecordQuery"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst selectRecordQuery = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker/store#requeueQuery",
-              "documentation": {
-                "identifier": "requeueQuery",
-                "newPage": false,
-                "searchKey": "store.requeueQuery",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const requeueQuery"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst requeueQuery = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/workerutil/dbworker/store#addExecutionLogEntryQuery",
               "documentation": {
                 "identifier": "addExecutionLogEntryQuery",
                 "newPage": false,
                 "searchKey": "store.addExecutionLogEntryQuery",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -171,12 +65,38 @@
           },
           {
             "node": {
+              "pathID": "/internal/workerutil/dbworker/store#lockQuery",
+              "documentation": {
+                "identifier": "lockQuery",
+                "newPage": false,
+                "searchKey": "store.lockQuery",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const lockQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst lockQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/workerutil/dbworker/store#markCompleteQuery",
               "documentation": {
                 "identifier": "markCompleteQuery",
                 "newPage": false,
                 "searchKey": "store.markCompleteQuery",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -199,6 +119,8 @@
                 "newPage": false,
                 "searchKey": "store.markErroredQuery",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -221,6 +143,8 @@
                 "newPage": false,
                 "searchKey": "store.markFailedQuery",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -237,12 +161,86 @@
           },
           {
             "node": {
+              "pathID": "/internal/workerutil/dbworker/store#queuedCountQuery",
+              "documentation": {
+                "identifier": "queuedCountQuery",
+                "newPage": false,
+                "searchKey": "store.queuedCountQuery",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const queuedCountQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst queuedCountQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store#requeueQuery",
+              "documentation": {
+                "identifier": "requeueQuery",
+                "newPage": false,
+                "searchKey": "store.requeueQuery",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const requeueQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst requeueQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store#resetStalledMaxResetsQuery",
+              "documentation": {
+                "identifier": "resetStalledMaxResetsQuery",
+                "newPage": false,
+                "searchKey": "store.resetStalledMaxResetsQuery",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const resetStalledMaxResetsQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst resetStalledMaxResetsQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/workerutil/dbworker/store#resetStalledQuery",
               "documentation": {
                 "identifier": "resetStalledQuery",
                 "newPage": false,
                 "searchKey": "store.resetStalledQuery",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -259,22 +257,48 @@
           },
           {
             "node": {
-              "pathID": "/internal/workerutil/dbworker/store#resetStalledMaxResetsQuery",
+              "pathID": "/internal/workerutil/dbworker/store#selectCandidateQuery",
               "documentation": {
-                "identifier": "resetStalledMaxResetsQuery",
+                "identifier": "selectCandidateQuery",
                 "newPage": false,
-                "searchKey": "store.resetStalledMaxResetsQuery",
+                "searchKey": "store.selectCandidateQuery",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const resetStalledMaxResetsQuery"
+                "value": "const selectCandidateQuery"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst resetStalledMaxResetsQuery = ...\n```\n\n"
+                "value": "```Go\nconst selectCandidateQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store#selectRecordQuery",
+              "documentation": {
+                "identifier": "selectRecordQuery",
+                "newPage": false,
+                "searchKey": "store.selectRecordQuery",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const selectRecordQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst selectRecordQuery = ...\n```\n\n"
               },
               "children": null
             }
@@ -290,6 +314,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -304,32 +329,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/workerutil/dbworker/store#ErrDequeueTransaction",
-              "documentation": {
-                "identifier": "ErrDequeueTransaction",
-                "newPage": false,
-                "searchKey": "store.ErrDequeueTransaction",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ErrDequeueTransaction"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ErrDequeueTransaction = errors.New(\"unexpected transaction\")\n```\n\nErrDequeueTransaction occurs when Dequeue is called from inside a transaction. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/workerutil/dbworker/store#ErrDequeueRace",
               "documentation": {
                 "identifier": "ErrDequeueRace",
                 "newPage": false,
                 "searchKey": "store.ErrDequeueRace",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -344,12 +352,38 @@
           },
           {
             "node": {
+              "pathID": "/internal/workerutil/dbworker/store#ErrDequeueTransaction",
+              "documentation": {
+                "identifier": "ErrDequeueTransaction",
+                "newPage": false,
+                "searchKey": "store.ErrDequeueTransaction",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrDequeueTransaction"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrDequeueTransaction = errors.New(\"unexpected transaction\")\n```\n\nErrDequeueTransaction occurs when Dequeue is called from inside a transaction. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/workerutil/dbworker/store#ErrNoRecord",
               "documentation": {
                 "identifier": "ErrNoRecord",
                 "newPage": false,
                 "searchKey": "store.ErrNoRecord",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -370,6 +404,9 @@
                 "newPage": false,
                 "searchKey": "store.columnNames",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
@@ -392,6 +429,8 @@
                 "newPage": false,
                 "searchKey": "store.defaultTestStoreOptions",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -417,6 +456,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -431,12 +471,332 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/workerutil/dbworker/store#ExecutionLogEntry",
+              "documentation": {
+                "identifier": "ExecutionLogEntry",
+                "newPage": false,
+                "searchKey": "store.ExecutionLogEntry",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ExecutionLogEntry workerutil.ExecutionLogEntry"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ExecutionLogEntry workerutil.ExecutionLogEntry\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store#ExecutionLogEntry.Scan",
+                    "documentation": {
+                      "identifier": "ExecutionLogEntry.Scan",
+                      "newPage": false,
+                      "searchKey": "store.ExecutionLogEntry.Scan",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *ExecutionLogEntry) Scan(value interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *ExecutionLogEntry) Scan(value interface{}) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store#ExecutionLogEntry.Value",
+                    "documentation": {
+                      "identifier": "ExecutionLogEntry.Value",
+                      "newPage": false,
+                      "searchKey": "store.ExecutionLogEntry.Value",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e ExecutionLogEntry) Value() (driver.Value, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e ExecutionLogEntry) Value() (driver.Value, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store#Options",
+              "documentation": {
+                "identifier": "Options",
+                "newPage": false,
+                "searchKey": "store.Options",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Options struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Options struct {\n\t// Name denotes the name of the store used to distinguish log messages and emitted metrics. The\n\t// store constructor will fail if this field is not supplied.\n\tName string\n\n\t// TableName is the name of the table containing work records.\n\t//\n\t// The target table (and the target view referenced by `ViewName`) must have the following columns\n\t// and types:\n\t//\n\t//   - id: integer primary key\n\t//   - state: text (may be updated to `queued`, `processing`, `errored`, or `failed`)\n\t//   - failure_message: text\n\t//   - started_at: timestamp with time zone\n\t//   - finished_at: timestamp with time zone\n\t//   - process_after: timestamp with time zone\n\t//   - num_resets: integer not null\n\t//   - num_failures: integer not null\n\t//   - execution_logs: json[] (each entry has the form of `ExecutionLogEntry`)\n\t//\n\t// The names of these columns may be customized based on the table name by adding a replacement\n\t// pair in the AlternateColumnNames mapping.\n\t//\n\t// It's recommended to put an index or (or partial index) on the state column for more efficient\n\t// dequeue operations.\n\tTableName string\n\n\t// AlternateColumnNames is a map from expected column names to actual column names in the target\n\t// table. This allows existing tables to be more easily retrofitted into the expected record\n\t// shape.\n\tAlternateColumnNames map[string]string\n\n\t// ViewName is an optional name of a view on top of the table containing work records to query when\n\t// selecting a candidate and when selecting the record after it has been locked. If this value is\n\t// not supplied, `TableName` will be used. The value supplied may also indicate a table alias, which\n\t// can be referenced in `OrderByExpression`, `ColumnExpressions`, and the conditions supplied to\n\t// `Dequeue`.\n\t//\n\t// The target of this column must be a view on top of the configured table with the same column\n\t// requirements as the base table described above.\n\t//\n\t// Example use case:\n\t// The processor for LSIF uploads supplies `lsif_uploads_with_repository_name`, a view on top of the\n\t// `lsif_uploads` table that joins work records with the `repo` table and adds an additional repository\n\t// name column. This allows `Dequeue` to return a record with additional data so that a second query\n\t// is not necessary by the caller.\n\tViewName string\n\n\t// Scan is the function used to convert a rows object into a record of the expected shape.\n\tScan RecordScanFn\n\n\t// OrderByExpression is the SQL expression used to order candidate records when selecting the next\n\t// batch of work to perform. This expression may use the alias provided in `ViewName`, if one was\n\t// supplied.\n\tOrderByExpression *sqlf.Query\n\n\t// ColumnExpressions are the target columns provided to the query when selecting a locked record.\n\t// These expressions may use the alias provided in `ViewName`, if one was supplied.\n\tColumnExpressions []*sqlf.Query\n\n\t// StalledMaxAge is the maximum allow duration between updating the state of a record as \"processing\"\n\t// and locking the record row during processing. An unlocked row that is marked as processing likely\n\t// indicates that the worker that dequeued the record has died. There should be a nearly-zero delay\n\t// between these states during normal operation.\n\tStalledMaxAge time.Duration\n\n\t// MaxNumResets is the maximum number of times a record can be implicitly reset back to the queued\n\t// state (via `ResetStalled`). If a record's reset attempts counter reaches this threshold, it will\n\t// be moved into the errored state rather than queued on its next reset to prevent an infinite retry\n\t// cycle of the same input.\n\tMaxNumResets int\n\n\t// RetryAfter determines whether the store dequeues jobs that have errored more than RetryAfter ago.\n\t// Setting this value to zero will disable retries entirely.\n\t//\n\t// If RetryAfter is a non-zero duration, the store dequeues records where:\n\t//\n\t//   - the state is 'errored'\n\t//   - the failed attempts counter hasn't reached MaxNumRetries\n\t//   - the finished_at timestamp was more than RetryAfter ago\n\tRetryAfter time.Duration\n\n\t// MaxNumRetries is the maximum number of times a record can be retried after an explicit failure.\n\t// Setting this value to zero will disable retries entirely.\n\tMaxNumRetries int\n}\n```\n\nOptions configure the behavior of Store over a particular set of tables, columns, and expressions. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store#RecordScanFn",
+              "documentation": {
+                "identifier": "RecordScanFn",
+                "newPage": false,
+                "searchKey": "store.RecordScanFn",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RecordScanFn func(rows *database/sql.Rows, err error) (github.com/sourcegraph/sourcegraph/internal/workerutil.Record, bool, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RecordScanFn func(rows *sql.Rows, err error) (workerutil.Record, bool, error)\n```\n\nRecordScanFn is a function that interprets row values as a particular record. This function should return a false-valued flag if the given result set was empty. This function must close the rows value if the given error value is nil. \n\nSee the `CloseRows` function in the store/base package for suggested implementation details. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store#Store",
+              "documentation": {
+                "identifier": "Store",
+                "newPage": false,
+                "searchKey": "store.Store",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Store interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Store interface {\n\tbasestore.ShareableStore\n\n\t// Done performs a commit or rollback of the underlying transaction/savepoint depending\n\t// returned from the Dequeue method. See basestore.Store#Done for additional documentation.\n\tDone(err error) error\n\n\t// QueuedCount returns the number of records in the queued state matching the given conditions.\n\tQueuedCount(ctx context.Context, conditions []*sqlf.Query) (int, error)\n\n\t// Dequeue selects the first unlocked record matching the given conditions and locks it in a new transaction that\n\t// should be held by the worker process. If there is such a record, it is returned along with a new store instance\n\t// that wraps the transaction. The resulting transaction must be closed by the caller, and the transaction should\n\t// include a state transition of the record into a terminal state. If there is no such unlocked record, a nil record\n\t// and a nil store will be returned along with a false-valued flag. This method must not be called from within a\n\t// transaction.\n\t//\n\t// The supplied conditions may use the alias provided in `ViewName`, if one was supplied.\n\tDequeue(ctx context.Context, conditions []*sqlf.Query) (record workerutil.Record, tx Store, exists bool, err error)\n\n\t// DequeueWithIndependentTransactionContext is like Dequeue, but will use a context.Background() for the underlying\n\t// transaction context. This method allows the transaction to lexically outlive the code in which it was created. This\n\t// is useful if a longer-running transaction is managed explicitly between multiple goroutines.\n\tDequeueWithIndependentTransactionContext(ctx context.Context, conditions []*sqlf.Query) (workerutil.Record, Store, bool, error)\n\n\t// Requeue updates the state of the record with the given identifier to queued and adds a processing delay before\n\t// the next dequeue of this record can be performed.\n\tRequeue(ctx context.Context, id int, after time.Time) error\n\n\t// AddExecutionLogEntry adds an executor log entry to the record.\n\tAddExecutionLogEntry(ctx context.Context, id int, entry workerutil.ExecutionLogEntry) error\n\n\t// MarkComplete attempts to update the state of the record to complete. If this record has already been moved from\n\t// the processing state to a terminal state, this method will have no effect. This method returns a boolean flag\n\t// indicating if the record was updated.\n\tMarkComplete(ctx context.Context, id int) (bool, error)\n\n\t// MarkErrored attempts to update the state of the record to errored. This method will only have an effect\n\t// if the current state of the record is processing or completed. A requeued record or a record already marked\n\t// with an error will not be updated. This method returns a boolean flag indicating if the record was updated.\n\tMarkErrored(ctx context.Context, id int, failureMessage string) (bool, error)\n\n\t// MarkFailed attempts to update the state of the record to failed. This method will only have an effect\n\t// if the current state of the record is processing or completed. A requeued record or a record already marked\n\t// with an error will not be updated. This method returns a boolean flag indicating if the record was updated.\n\tMarkFailed(ctx context.Context, id int, failureMessage string) (bool, error)\n\n\t// ResetStalled moves all unlocked records in the processing state for more than `StalledMaxAge` back to the queued\n\t// state. In order to prevent input that continually crashes worker instances, records that have been reset more\n\t// than `MaxNumResets` times will be marked as errored. This method returns a list of record identifiers that have\n\t// been reset and a list of record identifiers that have been marked as errored.\n\tResetStalled(ctx context.Context) (resetIDs, erroredIDs []int, err error)\n}\n```\n\nStore is the persistence layer for the dbworker package that handles worker-side operations backed by a Postgres database. See Options for details on the required shape of the database tables (e.g. table column names/types). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store#New",
+                    "documentation": {
+                      "identifier": "New",
+                      "newPage": false,
+                      "searchKey": "store.New",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func New(handle *basestore.TransactableHandle, options Options) Store"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc New(handle *basestore.TransactableHandle, options Options) Store\n```\n\nNew creates a new store with the given database handle and options. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store#NewWithMetrics",
+                    "documentation": {
+                      "identifier": "NewWithMetrics",
+                      "newPage": false,
+                      "searchKey": "store.NewWithMetrics",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewWithMetrics(handle *basestore.TransactableHandle, options Options, observationContext *observation.Context) Store"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewWithMetrics(handle *basestore.TransactableHandle, options Options, observationContext *observation.Context) Store\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store#TestRecord",
+              "documentation": {
+                "identifier": "TestRecord",
+                "newPage": false,
+                "searchKey": "store.TestRecord",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TestRecord struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TestRecord struct {\n\tID    int\n\tState string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store#TestRecord.RecordID",
+                    "documentation": {
+                      "identifier": "TestRecord.RecordID",
+                      "newPage": false,
+                      "searchKey": "store.TestRecord.RecordID",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v TestRecord) RecordID() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v TestRecord) RecordID() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store#TestRecordRetry",
+              "documentation": {
+                "identifier": "TestRecordRetry",
+                "newPage": false,
+                "searchKey": "store.TestRecordRetry",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TestRecordRetry struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TestRecordRetry struct {\n\tID        int\n\tState     string\n\tNumResets int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store#TestRecordRetry.RecordID",
+                    "documentation": {
+                      "identifier": "TestRecordRetry.RecordID",
+                      "newPage": false,
+                      "searchKey": "store.TestRecordRetry.RecordID",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v TestRecordRetry) RecordID() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v TestRecordRetry) RecordID() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store#TestRecordView",
+              "documentation": {
+                "identifier": "TestRecordView",
+                "newPage": false,
+                "searchKey": "store.TestRecordView",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TestRecordView struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TestRecordView struct {\n\tID       int\n\tState    string\n\tNewField int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store#TestRecordView.RecordID",
+                    "documentation": {
+                      "identifier": "TestRecordView.RecordID",
+                      "newPage": false,
+                      "searchKey": "store.TestRecordView.RecordID",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v TestRecordView) RecordID() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v TestRecordView) RecordID() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/workerutil/dbworker/store#operations",
               "documentation": {
                 "identifier": "operations",
                 "newPage": false,
                 "searchKey": "store.operations",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -457,6 +817,7 @@
                       "newPage": false,
                       "searchKey": "store.newOperations",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -476,134 +837,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/workerutil/dbworker/store#Store",
-              "documentation": {
-                "identifier": "Store",
-                "newPage": false,
-                "searchKey": "store.Store",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Store interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Store interface {\n\tbasestore.ShareableStore\n\n\t// Done performs a commit or rollback of the underlying transaction/savepoint depending\n\t// returned from the Dequeue method. See basestore.Store#Done for additional documentation.\n\tDone(err error) error\n\n\t// QueuedCount returns the number of records in the queued state matching the given conditions.\n\tQueuedCount(ctx context.Context, conditions []*sqlf.Query) (int, error)\n\n\t// Dequeue selects the first unlocked record matching the given conditions and locks it in a new transaction that\n\t// should be held by the worker process. If there is such a record, it is returned along with a new store instance\n\t// that wraps the transaction. The resulting transaction must be closed by the caller, and the transaction should\n\t// include a state transition of the record into a terminal state. If there is no such unlocked record, a nil record\n\t// and a nil store will be returned along with a false-valued flag. This method must not be called from within a\n\t// transaction.\n\t//\n\t// The supplied conditions may use the alias provided in `ViewName`, if one was supplied.\n\tDequeue(ctx context.Context, conditions []*sqlf.Query) (record workerutil.Record, tx Store, exists bool, err error)\n\n\t// DequeueWithIndependentTransactionContext is like Dequeue, but will use a context.Background() for the underlying\n\t// transaction context. This method allows the transaction to lexically outlive the code in which it was created. This\n\t// is useful if a longer-running transaction is managed explicitly between multiple goroutines.\n\tDequeueWithIndependentTransactionContext(ctx context.Context, conditions []*sqlf.Query) (workerutil.Record, Store, bool, error)\n\n\t// Requeue updates the state of the record with the given identifier to queued and adds a processing delay before\n\t// the next dequeue of this record can be performed.\n\tRequeue(ctx context.Context, id int, after time.Time) error\n\n\t// AddExecutionLogEntry adds an executor log entry to the record.\n\tAddExecutionLogEntry(ctx context.Context, id int, entry workerutil.ExecutionLogEntry) error\n\n\t// MarkComplete attempts to update the state of the record to complete. If this record has already been moved from\n\t// the processing state to a terminal state, this method will have no effect. This method returns a boolean flag\n\t// indicating if the record was updated.\n\tMarkComplete(ctx context.Context, id int) (bool, error)\n\n\t// MarkErrored attempts to update the state of the record to errored. This method will only have an effect\n\t// if the current state of the record is processing or completed. A requeued record or a record already marked\n\t// with an error will not be updated. This method returns a boolean flag indicating if the record was updated.\n\tMarkErrored(ctx context.Context, id int, failureMessage string) (bool, error)\n\n\t// MarkFailed attempts to update the state of the record to failed. This method will only have an effect\n\t// if the current state of the record is processing or completed. A requeued record or a record already marked\n\t// with an error will not be updated. This method returns a boolean flag indicating if the record was updated.\n\tMarkFailed(ctx context.Context, id int, failureMessage string) (bool, error)\n\n\t// ResetStalled moves all unlocked records in the processing state for more than `StalledMaxAge` back to the queued\n\t// state. In order to prevent input that continually crashes worker instances, records that have been reset more\n\t// than `MaxNumResets` times will be marked as errored. This method returns a list of record identifiers that have\n\t// been reset and a list of record identifiers that have been marked as errored.\n\tResetStalled(ctx context.Context) (resetIDs, erroredIDs []int, err error)\n}\n```\n\nStore is the persistence layer for the dbworker package that handles worker-side operations backed by a Postgres database. See Options for details on the required shape of the database tables (e.g. table column names/types). \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil/dbworker/store#New",
-                    "documentation": {
-                      "identifier": "New",
-                      "newPage": false,
-                      "searchKey": "store.New",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func New(handle *basestore.TransactableHandle, options Options) Store"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc New(handle *basestore.TransactableHandle, options Options) Store\n```\n\nNew creates a new store with the given database handle and options. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil/dbworker/store#NewWithMetrics",
-                    "documentation": {
-                      "identifier": "NewWithMetrics",
-                      "newPage": false,
-                      "searchKey": "store.NewWithMetrics",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewWithMetrics(handle *basestore.TransactableHandle, options Options, observationContext *observation.Context) Store"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewWithMetrics(handle *basestore.TransactableHandle, options Options, observationContext *observation.Context) Store\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker/store#ExecutionLogEntry",
-              "documentation": {
-                "identifier": "ExecutionLogEntry",
-                "newPage": false,
-                "searchKey": "store.ExecutionLogEntry",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ExecutionLogEntry workerutil.ExecutionLogEntry"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ExecutionLogEntry workerutil.ExecutionLogEntry\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil/dbworker/store#ExecutionLogEntry.Scan",
-                    "documentation": {
-                      "identifier": "ExecutionLogEntry.Scan",
-                      "newPage": false,
-                      "searchKey": "store.ExecutionLogEntry.Scan",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *ExecutionLogEntry) Scan(value interface{}) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *ExecutionLogEntry) Scan(value interface{}) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil/dbworker/store#ExecutionLogEntry.Value",
-                    "documentation": {
-                      "identifier": "ExecutionLogEntry.Value",
-                      "newPage": false,
-                      "searchKey": "store.ExecutionLogEntry.Value",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e ExecutionLogEntry) Value() (driver.Value, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e ExecutionLogEntry) Value() (driver.Value, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/workerutil/dbworker/store#store",
               "documentation": {
                 "identifier": "store",
                 "newPage": false,
                 "searchKey": "store.store",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -624,6 +864,7 @@
                       "newPage": false,
                       "searchKey": "store.newStore",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -646,6 +887,7 @@
                       "newPage": false,
                       "searchKey": "store.testStore",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -662,44 +904,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store#store.Transact",
+                    "pathID": "/internal/workerutil/dbworker/store#store.AddExecutionLogEntry",
                     "documentation": {
-                      "identifier": "store.Transact",
+                      "identifier": "store.AddExecutionLogEntry",
                       "newPage": false,
-                      "searchKey": "store.store.Transact",
+                      "searchKey": "store.store.AddExecutionLogEntry",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (s *store) Transact(ctx context.Context) (*store, error)"
+                      "value": "func (s *store) AddExecutionLogEntry(ctx context.Context, id int, entry workerutil.ExecutionLogEntry) (err error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (s *store) Transact(ctx context.Context) (*store, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil/dbworker/store#store.QueuedCount",
-                    "documentation": {
-                      "identifier": "store.QueuedCount",
-                      "newPage": false,
-                      "searchKey": "store.store.QueuedCount",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *store) QueuedCount(ctx context.Context, conditions []*sqlf.Query) (_ int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *store) QueuedCount(ctx context.Context, conditions []*sqlf.Query) (_ int, err error)\n```\n\nQueuedCount returns the number of records in the queued state matching the given conditions. \n\n"
+                      "value": "```Go\nfunc (s *store) AddExecutionLogEntry(ctx context.Context, id int, entry workerutil.ExecutionLogEntry) (err error)\n```\n\nAddExecutionLogEntry adds an executor log entry to the record. \n\n"
                     },
                     "children": null
                   }
@@ -712,6 +933,7 @@
                       "newPage": false,
                       "searchKey": "store.store.Dequeue",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -734,6 +956,7 @@
                       "newPage": false,
                       "searchKey": "store.store.DequeueWithIndependentTransactionContext",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -750,78 +973,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store#store.dequeue",
-                    "documentation": {
-                      "identifier": "store.dequeue",
-                      "newPage": false,
-                      "searchKey": "store.store.dequeue",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *store) dequeue(ctx context.Context, conditions []*sqlf.Query, independentTxCtx bool) (record workerutil.Record, _ Store, exists bool, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *store) dequeue(ctx context.Context, conditions []*sqlf.Query, independentTxCtx bool) (record workerutil.Record, _ Store, exists bool, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil/dbworker/store#store.Requeue",
-                    "documentation": {
-                      "identifier": "store.Requeue",
-                      "newPage": false,
-                      "searchKey": "store.store.Requeue",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *store) Requeue(ctx context.Context, id int, after time.Time) (err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *store) Requeue(ctx context.Context, id int, after time.Time) (err error)\n```\n\nRequeue updates the state of the record with the given identifier to queued and adds a processing delay before the next dequeue of this record can be performed. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil/dbworker/store#store.AddExecutionLogEntry",
-                    "documentation": {
-                      "identifier": "store.AddExecutionLogEntry",
-                      "newPage": false,
-                      "searchKey": "store.store.AddExecutionLogEntry",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *store) AddExecutionLogEntry(ctx context.Context, id int, entry workerutil.ExecutionLogEntry) (err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *store) AddExecutionLogEntry(ctx context.Context, id int, entry workerutil.ExecutionLogEntry) (err error)\n```\n\nAddExecutionLogEntry adds an executor log entry to the record. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/workerutil/dbworker/store#store.MarkComplete",
                     "documentation": {
                       "identifier": "store.MarkComplete",
                       "newPage": false,
                       "searchKey": "store.store.MarkComplete",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -844,6 +1002,7 @@
                       "newPage": false,
                       "searchKey": "store.store.MarkErrored",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -866,6 +1025,7 @@
                       "newPage": false,
                       "searchKey": "store.store.MarkFailed",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -882,12 +1042,59 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/workerutil/dbworker/store#store.QueuedCount",
+                    "documentation": {
+                      "identifier": "store.QueuedCount",
+                      "newPage": false,
+                      "searchKey": "store.store.QueuedCount",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *store) QueuedCount(ctx context.Context, conditions []*sqlf.Query) (_ int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *store) QueuedCount(ctx context.Context, conditions []*sqlf.Query) (_ int, err error)\n```\n\nQueuedCount returns the number of records in the queued state matching the given conditions. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store#store.Requeue",
+                    "documentation": {
+                      "identifier": "store.Requeue",
+                      "newPage": false,
+                      "searchKey": "store.store.Requeue",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *store) Requeue(ctx context.Context, id int, after time.Time) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *store) Requeue(ctx context.Context, id int, after time.Time) (err error)\n```\n\nRequeue updates the state of the record with the given identifier to queued and adds a processing delay before the next dequeue of this record can be performed. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/workerutil/dbworker/store#store.ResetStalled",
                     "documentation": {
                       "identifier": "store.ResetStalled",
                       "newPage": false,
                       "searchKey": "store.store.ResetStalled",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -904,22 +1111,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store#store.resetStalled",
+                    "pathID": "/internal/workerutil/dbworker/store#store.Transact",
                     "documentation": {
-                      "identifier": "store.resetStalled",
+                      "identifier": "store.Transact",
                       "newPage": false,
-                      "searchKey": "store.store.resetStalled",
+                      "searchKey": "store.store.Transact",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (s *store) resetStalled(ctx context.Context, q string) ([]int, error)"
+                      "value": "func (s *store) Transact(ctx context.Context) (*store, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (s *store) resetStalled(ctx context.Context, q string) ([]int, error)\n```\n\n"
+                      "value": "```Go\nfunc (s *store) Transact(ctx context.Context) (*store, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store#store.dequeue",
+                    "documentation": {
+                      "identifier": "store.dequeue",
+                      "newPage": false,
+                      "searchKey": "store.store.dequeue",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *store) dequeue(ctx context.Context, conditions []*sqlf.Query, independentTxCtx bool) (record workerutil.Record, _ Store, exists bool, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *store) dequeue(ctx context.Context, conditions []*sqlf.Query, independentTxCtx bool) (record workerutil.Record, _ Store, exists bool, err error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -932,6 +1163,7 @@
                       "newPage": false,
                       "searchKey": "store.store.formatQuery",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -945,178 +1177,26 @@
                     },
                     "children": null
                   }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker/store#Options",
-              "documentation": {
-                "identifier": "Options",
-                "newPage": false,
-                "searchKey": "store.Options",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Options struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Options struct {\n\t// Name denotes the name of the store used to distinguish log messages and emitted metrics. The\n\t// store constructor will fail if this field is not supplied.\n\tName string\n\n\t// TableName is the name of the table containing work records.\n\t//\n\t// The target table (and the target view referenced by `ViewName`) must have the following columns\n\t// and types:\n\t//\n\t//   - id: integer primary key\n\t//   - state: text (may be updated to `queued`, `processing`, `errored`, or `failed`)\n\t//   - failure_message: text\n\t//   - started_at: timestamp with time zone\n\t//   - finished_at: timestamp with time zone\n\t//   - process_after: timestamp with time zone\n\t//   - num_resets: integer not null\n\t//   - num_failures: integer not null\n\t//   - execution_logs: json[] (each entry has the form of `ExecutionLogEntry`)\n\t//\n\t// The names of these columns may be customized based on the table name by adding a replacement\n\t// pair in the AlternateColumnNames mapping.\n\t//\n\t// It's recommended to put an index or (or partial index) on the state column for more efficient\n\t// dequeue operations.\n\tTableName string\n\n\t// AlternateColumnNames is a map from expected column names to actual column names in the target\n\t// table. This allows existing tables to be more easily retrofitted into the expected record\n\t// shape.\n\tAlternateColumnNames map[string]string\n\n\t// ViewName is an optional name of a view on top of the table containing work records to query when\n\t// selecting a candidate and when selecting the record after it has been locked. If this value is\n\t// not supplied, `TableName` will be used. The value supplied may also indicate a table alias, which\n\t// can be referenced in `OrderByExpression`, `ColumnExpressions`, and the conditions supplied to\n\t// `Dequeue`.\n\t//\n\t// The target of this column must be a view on top of the configured table with the same column\n\t// requirements as the base table described above.\n\t//\n\t// Example use case:\n\t// The processor for LSIF uploads supplies `lsif_uploads_with_repository_name`, a view on top of the\n\t// `lsif_uploads` table that joins work records with the `repo` table and adds an additional repository\n\t// name column. This allows `Dequeue` to return a record with additional data so that a second query\n\t// is not necessary by the caller.\n\tViewName string\n\n\t// Scan is the function used to convert a rows object into a record of the expected shape.\n\tScan RecordScanFn\n\n\t// OrderByExpression is the SQL expression used to order candidate records when selecting the next\n\t// batch of work to perform. This expression may use the alias provided in `ViewName`, if one was\n\t// supplied.\n\tOrderByExpression *sqlf.Query\n\n\t// ColumnExpressions are the target columns provided to the query when selecting a locked record.\n\t// These expressions may use the alias provided in `ViewName`, if one was supplied.\n\tColumnExpressions []*sqlf.Query\n\n\t// StalledMaxAge is the maximum allow duration between updating the state of a record as \"processing\"\n\t// and locking the record row during processing. An unlocked row that is marked as processing likely\n\t// indicates that the worker that dequeued the record has died. There should be a nearly-zero delay\n\t// between these states during normal operation.\n\tStalledMaxAge time.Duration\n\n\t// MaxNumResets is the maximum number of times a record can be implicitly reset back to the queued\n\t// state (via `ResetStalled`). If a record's reset attempts counter reaches this threshold, it will\n\t// be moved into the errored state rather than queued on its next reset to prevent an infinite retry\n\t// cycle of the same input.\n\tMaxNumResets int\n\n\t// RetryAfter determines whether the store dequeues jobs that have errored more than RetryAfter ago.\n\t// Setting this value to zero will disable retries entirely.\n\t//\n\t// If RetryAfter is a non-zero duration, the store dequeues records where:\n\t//\n\t//   - the state is 'errored'\n\t//   - the failed attempts counter hasn't reached MaxNumRetries\n\t//   - the finished_at timestamp was more than RetryAfter ago\n\tRetryAfter time.Duration\n\n\t// MaxNumRetries is the maximum number of times a record can be retried after an explicit failure.\n\t// Setting this value to zero will disable retries entirely.\n\tMaxNumRetries int\n}\n```\n\nOptions configure the behavior of Store over a particular set of tables, columns, and expressions. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker/store#RecordScanFn",
-              "documentation": {
-                "identifier": "RecordScanFn",
-                "newPage": false,
-                "searchKey": "store.RecordScanFn",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RecordScanFn func(rows *database/sql.Rows, err error) (github.com/sourcegraph/sourcegraph/internal/workerutil.Record, bool, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RecordScanFn func(rows *sql.Rows, err error) (workerutil.Record, bool, error)\n```\n\nRecordScanFn is a function that interprets row values as a particular record. This function should return a false-valued flag if the given result set was empty. This function must close the rows value if the given error value is nil. \n\nSee the `CloseRows` function in the store/base package for suggested implementation details. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker/store#TestRecord",
-              "documentation": {
-                "identifier": "TestRecord",
-                "newPage": false,
-                "searchKey": "store.TestRecord",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type TestRecord struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype TestRecord struct {\n\tID    int\n\tState string\n}\n```\n\n"
-              },
-              "children": [
+                },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store#TestRecord.RecordID",
+                    "pathID": "/internal/workerutil/dbworker/store#store.resetStalled",
                     "documentation": {
-                      "identifier": "TestRecord.RecordID",
+                      "identifier": "store.resetStalled",
                       "newPage": false,
-                      "searchKey": "store.TestRecord.RecordID",
+                      "searchKey": "store.store.resetStalled",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (v TestRecord) RecordID() int"
+                      "value": "func (s *store) resetStalled(ctx context.Context, q string) ([]int, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (v TestRecord) RecordID() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker/store#TestRecordView",
-              "documentation": {
-                "identifier": "TestRecordView",
-                "newPage": false,
-                "searchKey": "store.TestRecordView",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type TestRecordView struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype TestRecordView struct {\n\tID       int\n\tState    string\n\tNewField int\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil/dbworker/store#TestRecordView.RecordID",
-                    "documentation": {
-                      "identifier": "TestRecordView.RecordID",
-                      "newPage": false,
-                      "searchKey": "store.TestRecordView.RecordID",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v TestRecordView) RecordID() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v TestRecordView) RecordID() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker/store#TestRecordRetry",
-              "documentation": {
-                "identifier": "TestRecordRetry",
-                "newPage": false,
-                "searchKey": "store.TestRecordRetry",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type TestRecordRetry struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype TestRecordRetry struct {\n\tID        int\n\tState     string\n\tNumResets int\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil/dbworker/store#TestRecordRetry.RecordID",
-                    "documentation": {
-                      "identifier": "TestRecordRetry.RecordID",
-                      "newPage": false,
-                      "searchKey": "store.TestRecordRetry.RecordID",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v TestRecordRetry) RecordID() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v TestRecordRetry) RecordID() int\n```\n\n"
+                      "value": "```Go\nfunc (s *store) resetStalled(ctx context.Context, q string) ([]int, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1135,6 +1215,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -1149,32 +1230,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/workerutil/dbworker/store#ExecutionLogEntries",
-              "documentation": {
-                "identifier": "ExecutionLogEntries",
-                "newPage": false,
-                "searchKey": "store.ExecutionLogEntries",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExecutionLogEntries(raw []workerutil.ExecutionLogEntry) (entries []ExecutionLogEntry)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExecutionLogEntries(raw []workerutil.ExecutionLogEntry) (entries []ExecutionLogEntry)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/workerutil/dbworker/store#DefaultColumnExpressions",
               "documentation": {
                 "identifier": "DefaultColumnExpressions",
                 "newPage": false,
                 "searchKey": "store.DefaultColumnExpressions",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1189,352 +1252,70 @@
           },
           {
             "node": {
-              "pathID": "/internal/workerutil/dbworker/store#quote",
+              "pathID": "/internal/workerutil/dbworker/store#ExecutionLogEntries",
               "documentation": {
-                "identifier": "quote",
+                "identifier": "ExecutionLogEntries",
                 "newPage": false,
-                "searchKey": "store.quote",
+                "searchKey": "store.ExecutionLogEntries",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func quote(s string) *sqlf.Query"
+                "value": "func ExecutionLogEntries(raw []workerutil.ExecutionLogEntry) (entries []ExecutionLogEntry)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc quote(s string) *sqlf.Query\n```\n\nquote wraps the given string in a *sqlf.Query so that it is not passed to the database as a parameter. It is necessary to quote things such as table names, columns, and other expressions that are not simple values. \n\n"
+                "value": "```Go\nfunc ExecutionLogEntries(raw []workerutil.ExecutionLogEntry) (entries []ExecutionLogEntry)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/workerutil/dbworker/store#makeConditionSuffix",
+              "pathID": "/internal/workerutil/dbworker/store#TestStoreAddExecutionLogEntry",
               "documentation": {
-                "identifier": "makeConditionSuffix",
+                "identifier": "TestStoreAddExecutionLogEntry",
                 "newPage": false,
-                "searchKey": "store.makeConditionSuffix",
+                "searchKey": "store.TestStoreAddExecutionLogEntry",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func makeConditionSuffix(conditions []*sqlf.Query) *sqlf.Query"
+                "value": "func TestStoreAddExecutionLogEntry(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc makeConditionSuffix(conditions []*sqlf.Query) *sqlf.Query\n```\n\nmakeConditionSuffix returns a *sqlf.Query containing \"AND {c1 AND c2 AND ...}\" when the given set of conditions is non-empty, and an empty string otherwise. \n\n"
+                "value": "```Go\nfunc TestStoreAddExecutionLogEntry(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/workerutil/dbworker/store#testScanFirstRecord",
+              "pathID": "/internal/workerutil/dbworker/store#TestStoreDequeueConcurrent",
               "documentation": {
-                "identifier": "testScanFirstRecord",
+                "identifier": "TestStoreDequeueConcurrent",
                 "newPage": false,
-                "searchKey": "store.testScanFirstRecord",
+                "searchKey": "store.TestStoreDequeueConcurrent",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func testScanFirstRecord(rows *sql.Rows, queryErr error) (v workerutil.Record, _ bool, err error)"
+                "value": "func TestStoreDequeueConcurrent(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc testScanFirstRecord(rows *sql.Rows, queryErr error) (v workerutil.Record, _ bool, err error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker/store#testScanFirstRecordView",
-              "documentation": {
-                "identifier": "testScanFirstRecordView",
-                "newPage": false,
-                "searchKey": "store.testScanFirstRecordView",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testScanFirstRecordView(rows *sql.Rows, queryErr error) (v workerutil.Record, exists bool, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testScanFirstRecordView(rows *sql.Rows, queryErr error) (v workerutil.Record, exists bool, err error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker/store#testScanFirstRecordRetry",
-              "documentation": {
-                "identifier": "testScanFirstRecordRetry",
-                "newPage": false,
-                "searchKey": "store.testScanFirstRecordRetry",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testScanFirstRecordRetry(rows *sql.Rows, queryErr error) (v workerutil.Record, exists bool, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testScanFirstRecordRetry(rows *sql.Rows, queryErr error) (v workerutil.Record, exists bool, err error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker/store#setupStoreTest",
-              "documentation": {
-                "identifier": "setupStoreTest",
-                "newPage": false,
-                "searchKey": "store.setupStoreTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func setupStoreTest(t *testing.T) dbutil.DB"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc setupStoreTest(t *testing.T) dbutil.DB\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker/store#assertDequeueRecordResult",
-              "documentation": {
-                "identifier": "assertDequeueRecordResult",
-                "newPage": false,
-                "searchKey": "store.assertDequeueRecordResult",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func assertDequeueRecordResult(t *testing.T, expectedID int, record interface{}, tx Store, ok bool, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc assertDequeueRecordResult(t *testing.T, expectedID int, record interface{}, tx Store, ok bool, err error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker/store#assertDequeueRecordViewResult",
-              "documentation": {
-                "identifier": "assertDequeueRecordViewResult",
-                "newPage": false,
-                "searchKey": "store.assertDequeueRecordViewResult",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func assertDequeueRecordViewResult(t *testing.T, expectedID, expectedNewField int, record interface{}, tx Store, ok bool, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc assertDequeueRecordViewResult(t *testing.T, expectedID, expectedNewField int, record interface{}, tx Store, ok bool, err error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker/store#assertDequeueRecordRetryResult",
-              "documentation": {
-                "identifier": "assertDequeueRecordRetryResult",
-                "newPage": false,
-                "searchKey": "store.assertDequeueRecordRetryResult",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func assertDequeueRecordRetryResult(t *testing.T, expectedID, record interface{}, tx Store, ok bool, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc assertDequeueRecordRetryResult(t *testing.T, expectedID, record interface{}, tx Store, ok bool, err error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker/store#testNow",
-              "documentation": {
-                "identifier": "testNow",
-                "newPage": false,
-                "searchKey": "store.testNow",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testNow() time.Time"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testNow() time.Time\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker/store#init.main_test.go",
-              "documentation": {
-                "identifier": "init.main_test.go",
-                "newPage": false,
-                "searchKey": "store.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker/store#TestStoreQueuedCount",
-              "documentation": {
-                "identifier": "TestStoreQueuedCount",
-                "newPage": false,
-                "searchKey": "store.TestStoreQueuedCount",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestStoreQueuedCount(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestStoreQueuedCount(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker/store#TestStoreQueuedCountFailed",
-              "documentation": {
-                "identifier": "TestStoreQueuedCountFailed",
-                "newPage": false,
-                "searchKey": "store.TestStoreQueuedCountFailed",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestStoreQueuedCountFailed(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestStoreQueuedCountFailed(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker/store#TestStoreQueuedCountConditions",
-              "documentation": {
-                "identifier": "TestStoreQueuedCountConditions",
-                "newPage": false,
-                "searchKey": "store.TestStoreQueuedCountConditions",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestStoreQueuedCountConditions(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestStoreQueuedCountConditions(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker/store#TestStoreDequeueState",
-              "documentation": {
-                "identifier": "TestStoreDequeueState",
-                "newPage": false,
-                "searchKey": "store.TestStoreDequeueState",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestStoreDequeueState(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestStoreDequeueState(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker/store#TestStoreDequeueOrder",
-              "documentation": {
-                "identifier": "TestStoreDequeueOrder",
-                "newPage": false,
-                "searchKey": "store.TestStoreDequeueOrder",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestStoreDequeueOrder(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestStoreDequeueOrder(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestStoreDequeueConcurrent(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1547,7 +1328,9 @@
                 "newPage": false,
                 "searchKey": "store.TestStoreDequeueConditions",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1569,7 +1352,9 @@
                 "newPage": false,
                 "searchKey": "store.TestStoreDequeueDelay",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1585,44 +1370,24 @@
           },
           {
             "node": {
-              "pathID": "/internal/workerutil/dbworker/store#TestStoreDequeueView",
+              "pathID": "/internal/workerutil/dbworker/store#TestStoreDequeueOrder",
               "documentation": {
-                "identifier": "TestStoreDequeueView",
+                "identifier": "TestStoreDequeueOrder",
                 "newPage": false,
-                "searchKey": "store.TestStoreDequeueView",
+                "searchKey": "store.TestStoreDequeueOrder",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestStoreDequeueView(t *testing.T)"
+                "value": "func TestStoreDequeueOrder(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestStoreDequeueView(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil/dbworker/store#TestStoreDequeueConcurrent",
-              "documentation": {
-                "identifier": "TestStoreDequeueConcurrent",
-                "newPage": false,
-                "searchKey": "store.TestStoreDequeueConcurrent",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestStoreDequeueConcurrent(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestStoreDequeueConcurrent(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestStoreDequeueOrder(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1635,7 +1400,9 @@
                 "newPage": false,
                 "searchKey": "store.TestStoreDequeueRetryAfter",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1657,7 +1424,9 @@
                 "newPage": false,
                 "searchKey": "store.TestStoreDequeueRetryAfterDisabled",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1673,44 +1442,48 @@
           },
           {
             "node": {
-              "pathID": "/internal/workerutil/dbworker/store#TestStoreRequeue",
+              "pathID": "/internal/workerutil/dbworker/store#TestStoreDequeueState",
               "documentation": {
-                "identifier": "TestStoreRequeue",
+                "identifier": "TestStoreDequeueState",
                 "newPage": false,
-                "searchKey": "store.TestStoreRequeue",
+                "searchKey": "store.TestStoreDequeueState",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestStoreRequeue(t *testing.T)"
+                "value": "func TestStoreDequeueState(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestStoreRequeue(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestStoreDequeueState(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/workerutil/dbworker/store#TestStoreAddExecutionLogEntry",
+              "pathID": "/internal/workerutil/dbworker/store#TestStoreDequeueView",
               "documentation": {
-                "identifier": "TestStoreAddExecutionLogEntry",
+                "identifier": "TestStoreDequeueView",
                 "newPage": false,
-                "searchKey": "store.TestStoreAddExecutionLogEntry",
+                "searchKey": "store.TestStoreDequeueView",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestStoreAddExecutionLogEntry(t *testing.T)"
+                "value": "func TestStoreDequeueView(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestStoreAddExecutionLogEntry(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestStoreDequeueView(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1723,7 +1496,9 @@
                 "newPage": false,
                 "searchKey": "store.TestStoreMarkComplete",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1745,7 +1520,9 @@
                 "newPage": false,
                 "searchKey": "store.TestStoreMarkCompleteNotProcessing",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1767,7 +1544,9 @@
                 "newPage": false,
                 "searchKey": "store.TestStoreMarkErrored",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1783,35 +1562,15 @@
           },
           {
             "node": {
-              "pathID": "/internal/workerutil/dbworker/store#TestStoreMarkFailed",
-              "documentation": {
-                "identifier": "TestStoreMarkFailed",
-                "newPage": false,
-                "searchKey": "store.TestStoreMarkFailed",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestStoreMarkFailed(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestStoreMarkFailed(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/workerutil/dbworker/store#TestStoreMarkErroredAlreadyCompleted",
               "documentation": {
                 "identifier": "TestStoreMarkErroredAlreadyCompleted",
                 "newPage": false,
                 "searchKey": "store.TestStoreMarkErroredAlreadyCompleted",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1833,7 +1592,9 @@
                 "newPage": false,
                 "searchKey": "store.TestStoreMarkErroredAlreadyErrored",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1855,7 +1616,9 @@
                 "newPage": false,
                 "searchKey": "store.TestStoreMarkErroredRetriesExhausted",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1871,13 +1634,135 @@
           },
           {
             "node": {
+              "pathID": "/internal/workerutil/dbworker/store#TestStoreMarkFailed",
+              "documentation": {
+                "identifier": "TestStoreMarkFailed",
+                "newPage": false,
+                "searchKey": "store.TestStoreMarkFailed",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStoreMarkFailed(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStoreMarkFailed(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store#TestStoreQueuedCount",
+              "documentation": {
+                "identifier": "TestStoreQueuedCount",
+                "newPage": false,
+                "searchKey": "store.TestStoreQueuedCount",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStoreQueuedCount(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStoreQueuedCount(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store#TestStoreQueuedCountConditions",
+              "documentation": {
+                "identifier": "TestStoreQueuedCountConditions",
+                "newPage": false,
+                "searchKey": "store.TestStoreQueuedCountConditions",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStoreQueuedCountConditions(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStoreQueuedCountConditions(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store#TestStoreQueuedCountFailed",
+              "documentation": {
+                "identifier": "TestStoreQueuedCountFailed",
+                "newPage": false,
+                "searchKey": "store.TestStoreQueuedCountFailed",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStoreQueuedCountFailed(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStoreQueuedCountFailed(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store#TestStoreRequeue",
+              "documentation": {
+                "identifier": "TestStoreRequeue",
+                "newPage": false,
+                "searchKey": "store.TestStoreRequeue",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStoreRequeue(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStoreRequeue(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/workerutil/dbworker/store#TestStoreResetStalled",
               "documentation": {
                 "identifier": "TestStoreResetStalled",
                 "newPage": false,
                 "searchKey": "store.TestStoreResetStalled",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1887,6 +1772,259 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc TestStoreResetStalled(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store#assertDequeueRecordResult",
+              "documentation": {
+                "identifier": "assertDequeueRecordResult",
+                "newPage": false,
+                "searchKey": "store.assertDequeueRecordResult",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func assertDequeueRecordResult(t *testing.T, expectedID int, record interface{}, tx Store, ok bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc assertDequeueRecordResult(t *testing.T, expectedID int, record interface{}, tx Store, ok bool, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store#assertDequeueRecordRetryResult",
+              "documentation": {
+                "identifier": "assertDequeueRecordRetryResult",
+                "newPage": false,
+                "searchKey": "store.assertDequeueRecordRetryResult",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func assertDequeueRecordRetryResult(t *testing.T, expectedID, record interface{}, tx Store, ok bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc assertDequeueRecordRetryResult(t *testing.T, expectedID, record interface{}, tx Store, ok bool, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store#assertDequeueRecordViewResult",
+              "documentation": {
+                "identifier": "assertDequeueRecordViewResult",
+                "newPage": false,
+                "searchKey": "store.assertDequeueRecordViewResult",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func assertDequeueRecordViewResult(t *testing.T, expectedID, expectedNewField int, record interface{}, tx Store, ok bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc assertDequeueRecordViewResult(t *testing.T, expectedID, expectedNewField int, record interface{}, tx Store, ok bool, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store#init.main_test.go",
+              "documentation": {
+                "identifier": "init.main_test.go",
+                "newPage": false,
+                "searchKey": "store.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store#makeConditionSuffix",
+              "documentation": {
+                "identifier": "makeConditionSuffix",
+                "newPage": false,
+                "searchKey": "store.makeConditionSuffix",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeConditionSuffix(conditions []*sqlf.Query) *sqlf.Query"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeConditionSuffix(conditions []*sqlf.Query) *sqlf.Query\n```\n\nmakeConditionSuffix returns a *sqlf.Query containing \"AND {c1 AND c2 AND ...}\" when the given set of conditions is non-empty, and an empty string otherwise. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store#quote",
+              "documentation": {
+                "identifier": "quote",
+                "newPage": false,
+                "searchKey": "store.quote",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func quote(s string) *sqlf.Query"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc quote(s string) *sqlf.Query\n```\n\nquote wraps the given string in a *sqlf.Query so that it is not passed to the database as a parameter. It is necessary to quote things such as table names, columns, and other expressions that are not simple values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store#setupStoreTest",
+              "documentation": {
+                "identifier": "setupStoreTest",
+                "newPage": false,
+                "searchKey": "store.setupStoreTest",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func setupStoreTest(t *testing.T) dbutil.DB"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc setupStoreTest(t *testing.T) dbutil.DB\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store#testNow",
+              "documentation": {
+                "identifier": "testNow",
+                "newPage": false,
+                "searchKey": "store.testNow",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testNow() time.Time"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testNow() time.Time\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store#testScanFirstRecord",
+              "documentation": {
+                "identifier": "testScanFirstRecord",
+                "newPage": false,
+                "searchKey": "store.testScanFirstRecord",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testScanFirstRecord(rows *sql.Rows, queryErr error) (v workerutil.Record, _ bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testScanFirstRecord(rows *sql.Rows, queryErr error) (v workerutil.Record, _ bool, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store#testScanFirstRecordRetry",
+              "documentation": {
+                "identifier": "testScanFirstRecordRetry",
+                "newPage": false,
+                "searchKey": "store.testScanFirstRecordRetry",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testScanFirstRecordRetry(rows *sql.Rows, queryErr error) (v workerutil.Record, exists bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testScanFirstRecordRetry(rows *sql.Rows, queryErr error) (v workerutil.Record, exists bool, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store#testScanFirstRecordView",
+              "documentation": {
+                "identifier": "testScanFirstRecordView",
+                "newPage": false,
+                "searchKey": "store.testScanFirstRecordView",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testScanFirstRecordView(rows *sql.Rows, queryErr error) (v workerutil.Record, exists bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testScanFirstRecordView(rows *sql.Rows, queryErr error) (v workerutil.Record, exists bool, err error)\n```\n\n"
               },
               "children": null
             }

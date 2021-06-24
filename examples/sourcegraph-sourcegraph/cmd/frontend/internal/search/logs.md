@@ -10,13 +10,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="LogSlowSearchesThreshold" href="#LogSlowSearchesThreshold">func LogSlowSearchesThreshold() time.Duration</a>
 
 ```
 searchKey: logs.LogSlowSearchesThreshold
+tags: [function]
 ```
 
 ```Go
@@ -29,6 +30,7 @@ LogSlowSearchesThreshold returns the minimum duration configured in site setting
 
 ```
 searchKey: logs.MapToLog15Ctx
+tags: [method]
 ```
 
 ```Go

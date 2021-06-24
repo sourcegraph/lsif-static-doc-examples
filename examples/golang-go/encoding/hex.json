@@ -4,7 +4,9 @@
     "identifier": "hex",
     "newPage": true,
     "searchKey": "encoding/hex",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,34 +39,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/encoding/hex#hextable",
-              "documentation": {
-                "identifier": "hextable",
-                "newPage": false,
-                "searchKey": "hex.hextable",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const hextable"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst hextable = \"0123456789abcdef\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/encoding/hex#bufferSize",
               "documentation": {
                 "identifier": "bufferSize",
                 "newPage": false,
                 "searchKey": "hex.bufferSize",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -73,6 +57,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst bufferSize = 1024\n```\n\nbufferSize is the number of hexadecimal characters to buffer in encoder and decoder. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#hextable",
+              "documentation": {
+                "identifier": "hextable",
+                "newPage": false,
+                "searchKey": "hex.hextable",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const hextable"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst hextable = \"0123456789abcdef\"\n```\n\n"
               },
               "children": null
             }
@@ -87,7 +95,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -105,7 +115,10 @@
                 "identifier": "ErrLength",
                 "newPage": false,
                 "searchKey": "hex.ErrLength",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -126,6 +139,9 @@
                 "newPage": false,
                 "searchKey": "hex.encDecTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -148,6 +164,9 @@
                 "newPage": false,
                 "searchKey": "hex.errTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -170,6 +189,9 @@
                 "newPage": false,
                 "searchKey": "hex.expectedHexDump",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -192,6 +214,9 @@
                 "newPage": false,
                 "searchKey": "hex.sink",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -216,7 +241,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -234,7 +261,9 @@
                 "identifier": "InvalidByteError",
                 "newPage": false,
                 "searchKey": "hex.InvalidByteError",
-                "tags": null
+                "tags": [
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -252,7 +281,9 @@
                       "identifier": "InvalidByteError.Error",
                       "newPage": false,
                       "searchKey": "hex.InvalidByteError.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -270,57 +301,13 @@
           },
           {
             "node": {
-              "pathID": "/encoding/hex#encoder",
-              "documentation": {
-                "identifier": "encoder",
-                "newPage": false,
-                "searchKey": "hex.encoder",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type encoder struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype encoder struct {\n\tw   io.Writer\n\terr error\n\tout [bufferSize]byte // output buffer\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/encoding/hex#encoder.Write",
-                    "documentation": {
-                      "identifier": "encoder.Write",
-                      "newPage": false,
-                      "searchKey": "hex.encoder.Write",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *encoder) Write(p []byte) (n int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *encoder) Write(p []byte) (n int, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/encoding/hex#decoder",
               "documentation": {
                 "identifier": "decoder",
                 "newPage": false,
                 "searchKey": "hex.decoder",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -341,6 +328,7 @@
                       "newPage": false,
                       "searchKey": "hex.decoder.Read",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -366,6 +354,7 @@
                 "newPage": false,
                 "searchKey": "hex.dumper",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -380,34 +369,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/encoding/hex#dumper.Write",
-                    "documentation": {
-                      "identifier": "dumper.Write",
-                      "newPage": false,
-                      "searchKey": "hex.dumper.Write",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *dumper) Write(data []byte) (n int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *dumper) Write(data []byte) (n int, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/encoding/hex#dumper.Close",
                     "documentation": {
                       "identifier": "dumper.Close",
                       "newPage": false,
                       "searchKey": "hex.dumper.Close",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -418,6 +386,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (h *dumper) Close() (err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/hex#dumper.Write",
+                    "documentation": {
+                      "identifier": "dumper.Write",
+                      "newPage": false,
+                      "searchKey": "hex.dumper.Write",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *dumper) Write(data []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *dumper) Write(data []byte) (n int, err error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -433,6 +424,7 @@
                 "newPage": false,
                 "searchKey": "hex.encDecTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -446,6 +438,53 @@
               },
               "children": null
             }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#encoder",
+              "documentation": {
+                "identifier": "encoder",
+                "newPage": false,
+                "searchKey": "hex.encoder",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type encoder struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype encoder struct {\n\tw   io.Writer\n\terr error\n\tout [bufferSize]byte // output buffer\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/encoding/hex#encoder.Write",
+                    "documentation": {
+                      "identifier": "encoder.Write",
+                      "newPage": false,
+                      "searchKey": "hex.encoder.Write",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) Write(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) Write(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
           }
         ]
       }
@@ -457,7 +496,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -470,543 +511,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/encoding/hex#EncodedLen",
-              "documentation": {
-                "identifier": "EncodedLen",
-                "newPage": false,
-                "searchKey": "hex.EncodedLen",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func EncodedLen(n int) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc EncodedLen(n int) int\n```\n\nEncodedLen returns the length of an encoding of n source bytes. Specifically, it returns n * 2. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/hex#Encode",
-              "documentation": {
-                "identifier": "Encode",
-                "newPage": false,
-                "searchKey": "hex.Encode",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Encode(dst, src []byte) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Encode(dst, src []byte) int\n```\n\nEncode encodes src into EncodedLen(len(src)) bytes of dst. As a convenience, it returns the number of bytes written to dst, but this value is always EncodedLen(len(src)). Encode implements hexadecimal encoding. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/hex#DecodedLen",
-              "documentation": {
-                "identifier": "DecodedLen",
-                "newPage": false,
-                "searchKey": "hex.DecodedLen",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func DecodedLen(x int) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc DecodedLen(x int) int\n```\n\nDecodedLen returns the length of a decoding of x source bytes. Specifically, it returns x / 2. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/hex#Decode",
-              "documentation": {
-                "identifier": "Decode",
-                "newPage": false,
-                "searchKey": "hex.Decode",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Decode(dst, src []byte) (int, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Decode(dst, src []byte) (int, error)\n```\n\nDecode decodes src into DecodedLen(len(src)) bytes, returning the actual number of bytes written to dst. \n\nDecode expects that src contains only hexadecimal characters and that src has even length. If the input is malformed, Decode returns the number of bytes decoded before the error. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/hex#fromHexChar",
-              "documentation": {
-                "identifier": "fromHexChar",
-                "newPage": false,
-                "searchKey": "hex.fromHexChar",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func fromHexChar(c byte) (byte, bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc fromHexChar(c byte) (byte, bool)\n```\n\nfromHexChar converts a hex character into its value and a success flag. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/hex#EncodeToString",
-              "documentation": {
-                "identifier": "EncodeToString",
-                "newPage": false,
-                "searchKey": "hex.EncodeToString",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func EncodeToString(src []byte) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc EncodeToString(src []byte) string\n```\n\nEncodeToString returns the hexadecimal encoding of src. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/hex#DecodeString",
-              "documentation": {
-                "identifier": "DecodeString",
-                "newPage": false,
-                "searchKey": "hex.DecodeString",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func DecodeString(s string) ([]byte, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc DecodeString(s string) ([]byte, error)\n```\n\nDecodeString returns the bytes represented by the hexadecimal string s. \n\nDecodeString expects that src contains only hexadecimal characters and that src has even length. If the input is malformed, DecodeString returns the bytes decoded before the error. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/hex#Dump",
-              "documentation": {
-                "identifier": "Dump",
-                "newPage": false,
-                "searchKey": "hex.Dump",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Dump(data []byte) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Dump(data []byte) string\n```\n\nDump returns a string that contains a hex dump of the given data. The format of the hex dump matches the output of `hexdump -C` on the command line. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/hex#NewEncoder",
-              "documentation": {
-                "identifier": "NewEncoder",
-                "newPage": false,
-                "searchKey": "hex.NewEncoder",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func NewEncoder(w io.Writer) io.Writer"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc NewEncoder(w io.Writer) io.Writer\n```\n\nNewEncoder returns an io.Writer that writes lowercase hexadecimal characters to w. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/hex#NewDecoder",
-              "documentation": {
-                "identifier": "NewDecoder",
-                "newPage": false,
-                "searchKey": "hex.NewDecoder",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func NewDecoder(r io.Reader) io.Reader"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc NewDecoder(r io.Reader) io.Reader\n```\n\nNewDecoder returns an io.Reader that decodes hexadecimal characters from r. NewDecoder expects that r contain only an even number of hexadecimal characters. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/hex#Dumper",
-              "documentation": {
-                "identifier": "Dumper",
-                "newPage": false,
-                "searchKey": "hex.Dumper",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Dumper(w io.Writer) io.WriteCloser"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Dumper(w io.Writer) io.WriteCloser\n```\n\nDumper returns a WriteCloser that writes a hex dump of all written data to w. The format of the dump matches the output of `hexdump -C` on the command line. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/hex#toChar",
-              "documentation": {
-                "identifier": "toChar",
-                "newPage": false,
-                "searchKey": "hex.toChar",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func toChar(b byte) byte"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc toChar(b byte) byte\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/hex#TestEncode",
-              "documentation": {
-                "identifier": "TestEncode",
-                "newPage": false,
-                "searchKey": "hex.TestEncode",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEncode(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEncode(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/hex#TestDecode",
-              "documentation": {
-                "identifier": "TestDecode",
-                "newPage": false,
-                "searchKey": "hex.TestDecode",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDecode(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDecode(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/hex#TestEncodeToString",
-              "documentation": {
-                "identifier": "TestEncodeToString",
-                "newPage": false,
-                "searchKey": "hex.TestEncodeToString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEncodeToString(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEncodeToString(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/hex#TestDecodeString",
-              "documentation": {
-                "identifier": "TestDecodeString",
-                "newPage": false,
-                "searchKey": "hex.TestDecodeString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDecodeString(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDecodeString(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/hex#TestDecodeErr",
-              "documentation": {
-                "identifier": "TestDecodeErr",
-                "newPage": false,
-                "searchKey": "hex.TestDecodeErr",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDecodeErr(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDecodeErr(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/hex#TestDecodeStringErr",
-              "documentation": {
-                "identifier": "TestDecodeStringErr",
-                "newPage": false,
-                "searchKey": "hex.TestDecodeStringErr",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDecodeStringErr(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDecodeStringErr(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/hex#TestEncoderDecoder",
-              "documentation": {
-                "identifier": "TestEncoderDecoder",
-                "newPage": false,
-                "searchKey": "hex.TestEncoderDecoder",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEncoderDecoder(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEncoderDecoder(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/hex#TestDecoderErr",
-              "documentation": {
-                "identifier": "TestDecoderErr",
-                "newPage": false,
-                "searchKey": "hex.TestDecoderErr",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDecoderErr(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDecoderErr(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/hex#TestDumper",
-              "documentation": {
-                "identifier": "TestDumper",
-                "newPage": false,
-                "searchKey": "hex.TestDumper",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDumper(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDumper(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/hex#TestDumper_doubleclose",
-              "documentation": {
-                "identifier": "TestDumper_doubleclose",
-                "newPage": false,
-                "searchKey": "hex.TestDumper_doubleclose",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDumper_doubleclose(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDumper_doubleclose(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/hex#TestDumper_earlyclose",
-              "documentation": {
-                "identifier": "TestDumper_earlyclose",
-                "newPage": false,
-                "searchKey": "hex.TestDumper_earlyclose",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDumper_earlyclose(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDumper_earlyclose(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/hex#TestDump",
-              "documentation": {
-                "identifier": "TestDump",
-                "newPage": false,
-                "searchKey": "hex.TestDump",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDump(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDump(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/hex#BenchmarkEncode",
-              "documentation": {
-                "identifier": "BenchmarkEncode",
-                "newPage": false,
-                "searchKey": "hex.BenchmarkEncode",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkEncode(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkEncode(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/encoding/hex#BenchmarkDecode",
               "documentation": {
                 "identifier": "BenchmarkDecode",
                 "newPage": false,
                 "searchKey": "hex.BenchmarkDecode",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -1028,7 +541,9 @@
                 "newPage": false,
                 "searchKey": "hex.BenchmarkDump",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -1038,6 +553,584 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc BenchmarkDump(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#BenchmarkEncode",
+              "documentation": {
+                "identifier": "BenchmarkEncode",
+                "newPage": false,
+                "searchKey": "hex.BenchmarkEncode",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEncode(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEncode(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#Decode",
+              "documentation": {
+                "identifier": "Decode",
+                "newPage": false,
+                "searchKey": "hex.Decode",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Decode(dst, src []byte) (int, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Decode(dst, src []byte) (int, error)\n```\n\nDecode decodes src into DecodedLen(len(src)) bytes, returning the actual number of bytes written to dst. \n\nDecode expects that src contains only hexadecimal characters and that src has even length. If the input is malformed, Decode returns the number of bytes decoded before the error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#DecodeString",
+              "documentation": {
+                "identifier": "DecodeString",
+                "newPage": false,
+                "searchKey": "hex.DecodeString",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DecodeString(s string) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DecodeString(s string) ([]byte, error)\n```\n\nDecodeString returns the bytes represented by the hexadecimal string s. \n\nDecodeString expects that src contains only hexadecimal characters and that src has even length. If the input is malformed, DecodeString returns the bytes decoded before the error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#DecodedLen",
+              "documentation": {
+                "identifier": "DecodedLen",
+                "newPage": false,
+                "searchKey": "hex.DecodedLen",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DecodedLen(x int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DecodedLen(x int) int\n```\n\nDecodedLen returns the length of a decoding of x source bytes. Specifically, it returns x / 2. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#Dump",
+              "documentation": {
+                "identifier": "Dump",
+                "newPage": false,
+                "searchKey": "hex.Dump",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Dump(data []byte) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Dump(data []byte) string\n```\n\nDump returns a string that contains a hex dump of the given data. The format of the hex dump matches the output of `hexdump -C` on the command line. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#Dumper",
+              "documentation": {
+                "identifier": "Dumper",
+                "newPage": false,
+                "searchKey": "hex.Dumper",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Dumper(w io.Writer) io.WriteCloser"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Dumper(w io.Writer) io.WriteCloser\n```\n\nDumper returns a WriteCloser that writes a hex dump of all written data to w. The format of the dump matches the output of `hexdump -C` on the command line. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#Encode",
+              "documentation": {
+                "identifier": "Encode",
+                "newPage": false,
+                "searchKey": "hex.Encode",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Encode(dst, src []byte) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Encode(dst, src []byte) int\n```\n\nEncode encodes src into EncodedLen(len(src)) bytes of dst. As a convenience, it returns the number of bytes written to dst, but this value is always EncodedLen(len(src)). Encode implements hexadecimal encoding. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#EncodeToString",
+              "documentation": {
+                "identifier": "EncodeToString",
+                "newPage": false,
+                "searchKey": "hex.EncodeToString",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func EncodeToString(src []byte) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc EncodeToString(src []byte) string\n```\n\nEncodeToString returns the hexadecimal encoding of src. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#EncodedLen",
+              "documentation": {
+                "identifier": "EncodedLen",
+                "newPage": false,
+                "searchKey": "hex.EncodedLen",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func EncodedLen(n int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc EncodedLen(n int) int\n```\n\nEncodedLen returns the length of an encoding of n source bytes. Specifically, it returns n * 2. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#NewDecoder",
+              "documentation": {
+                "identifier": "NewDecoder",
+                "newPage": false,
+                "searchKey": "hex.NewDecoder",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewDecoder(r io.Reader) io.Reader"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewDecoder(r io.Reader) io.Reader\n```\n\nNewDecoder returns an io.Reader that decodes hexadecimal characters from r. NewDecoder expects that r contain only an even number of hexadecimal characters. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#NewEncoder",
+              "documentation": {
+                "identifier": "NewEncoder",
+                "newPage": false,
+                "searchKey": "hex.NewEncoder",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewEncoder(w io.Writer) io.Writer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewEncoder(w io.Writer) io.Writer\n```\n\nNewEncoder returns an io.Writer that writes lowercase hexadecimal characters to w. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#TestDecode",
+              "documentation": {
+                "identifier": "TestDecode",
+                "newPage": false,
+                "searchKey": "hex.TestDecode",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecode(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecode(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#TestDecodeErr",
+              "documentation": {
+                "identifier": "TestDecodeErr",
+                "newPage": false,
+                "searchKey": "hex.TestDecodeErr",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecodeErr(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecodeErr(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#TestDecodeString",
+              "documentation": {
+                "identifier": "TestDecodeString",
+                "newPage": false,
+                "searchKey": "hex.TestDecodeString",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecodeString(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecodeString(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#TestDecodeStringErr",
+              "documentation": {
+                "identifier": "TestDecodeStringErr",
+                "newPage": false,
+                "searchKey": "hex.TestDecodeStringErr",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecodeStringErr(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecodeStringErr(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#TestDecoderErr",
+              "documentation": {
+                "identifier": "TestDecoderErr",
+                "newPage": false,
+                "searchKey": "hex.TestDecoderErr",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecoderErr(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecoderErr(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#TestDump",
+              "documentation": {
+                "identifier": "TestDump",
+                "newPage": false,
+                "searchKey": "hex.TestDump",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDump(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDump(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#TestDumper",
+              "documentation": {
+                "identifier": "TestDumper",
+                "newPage": false,
+                "searchKey": "hex.TestDumper",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDumper(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDumper(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#TestDumper_doubleclose",
+              "documentation": {
+                "identifier": "TestDumper_doubleclose",
+                "newPage": false,
+                "searchKey": "hex.TestDumper_doubleclose",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDumper_doubleclose(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDumper_doubleclose(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#TestDumper_earlyclose",
+              "documentation": {
+                "identifier": "TestDumper_earlyclose",
+                "newPage": false,
+                "searchKey": "hex.TestDumper_earlyclose",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDumper_earlyclose(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDumper_earlyclose(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#TestEncode",
+              "documentation": {
+                "identifier": "TestEncode",
+                "newPage": false,
+                "searchKey": "hex.TestEncode",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncode(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncode(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#TestEncodeToString",
+              "documentation": {
+                "identifier": "TestEncodeToString",
+                "newPage": false,
+                "searchKey": "hex.TestEncodeToString",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncodeToString(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncodeToString(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#TestEncoderDecoder",
+              "documentation": {
+                "identifier": "TestEncoderDecoder",
+                "newPage": false,
+                "searchKey": "hex.TestEncoderDecoder",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncoderDecoder(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncoderDecoder(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#fromHexChar",
+              "documentation": {
+                "identifier": "fromHexChar",
+                "newPage": false,
+                "searchKey": "hex.fromHexChar",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fromHexChar(c byte) (byte, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fromHexChar(c byte) (byte, bool)\n```\n\nfromHexChar converts a hex character into its value and a success flag. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/hex#toChar",
+              "documentation": {
+                "identifier": "toChar",
+                "newPage": false,
+                "searchKey": "hex.toChar",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func toChar(b byte) byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc toChar(b byte) byte\n```\n\n"
               },
               "children": null
             }

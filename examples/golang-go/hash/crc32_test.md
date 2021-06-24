@@ -9,14 +9,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="ExampleMakeTable" href="#ExampleMakeTable">func ExampleMakeTable()</a>
 
 ```
 searchKey: crc32_test.ExampleMakeTable
-tags: [private]
+tags: [function private]
 ```
 
 ```Go

@@ -4,7 +4,9 @@
     "identifier": "debug",
     "newPage": true,
     "searchKey": "runtime/debug",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,32 +39,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/runtime/debug#GCStats",
-              "documentation": {
-                "identifier": "GCStats",
-                "newPage": false,
-                "searchKey": "debug.GCStats",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type GCStats struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype GCStats struct {\n\tLastGC         time.Time       // time of last collection\n\tNumGC          int64           // number of garbage collections\n\tPauseTotal     time.Duration   // total pause for all collections\n\tPause          []time.Duration // pause history, most recent first\n\tPauseEnd       []time.Time     // pause end times history, most recent first\n\tPauseQuantiles []time.Duration\n}\n```\n\nGCStats collect information about recent garbage collections. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/runtime/debug#BuildInfo",
               "documentation": {
                 "identifier": "BuildInfo",
                 "newPage": false,
                 "searchKey": "debug.BuildInfo",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -78,7 +64,9 @@
                       "identifier": "ReadBuildInfo",
                       "newPage": false,
                       "searchKey": "debug.ReadBuildInfo",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -99,6 +87,7 @@
                       "newPage": false,
                       "searchKey": "debug.readBuildInfo",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -118,12 +107,36 @@
           },
           {
             "node": {
+              "pathID": "/runtime/debug#GCStats",
+              "documentation": {
+                "identifier": "GCStats",
+                "newPage": false,
+                "searchKey": "debug.GCStats",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GCStats struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GCStats struct {\n\tLastGC         time.Time       // time of last collection\n\tNumGC          int64           // number of garbage collections\n\tPauseTotal     time.Duration   // total pause for all collections\n\tPause          []time.Duration // pause history, most recent first\n\tPauseEnd       []time.Time     // pause end times history, most recent first\n\tPauseQuantiles []time.Duration\n}\n```\n\nGCStats collect information about recent garbage collections. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/runtime/debug#Module",
               "documentation": {
                 "identifier": "Module",
                 "newPage": false,
                 "searchKey": "debug.Module",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -146,7 +159,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -159,12 +174,58 @@
         "children": [
           {
             "node": {
+              "pathID": "/runtime/debug#FreeOSMemory",
+              "documentation": {
+                "identifier": "FreeOSMemory",
+                "newPage": false,
+                "searchKey": "debug.FreeOSMemory",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func FreeOSMemory()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc FreeOSMemory()\n```\n\nFreeOSMemory forces a garbage collection followed by an attempt to return as much memory to the operating system as possible. (Even if this is not called, the runtime gradually returns memory to the operating system in a background task.) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/debug#PrintStack",
+              "documentation": {
+                "identifier": "PrintStack",
+                "newPage": false,
+                "searchKey": "debug.PrintStack",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func PrintStack()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc PrintStack()\n```\n\nPrintStack prints to standard error the stack trace returned by runtime.Stack. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/runtime/debug#ReadGCStats",
               "documentation": {
                 "identifier": "ReadGCStats",
                 "newPage": false,
                 "searchKey": "debug.ReadGCStats",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -184,7 +245,9 @@
                 "identifier": "SetGCPercent",
                 "newPage": false,
                 "searchKey": "debug.SetGCPercent",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -199,32 +262,14 @@
           },
           {
             "node": {
-              "pathID": "/runtime/debug#FreeOSMemory",
-              "documentation": {
-                "identifier": "FreeOSMemory",
-                "newPage": false,
-                "searchKey": "debug.FreeOSMemory",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func FreeOSMemory()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc FreeOSMemory()\n```\n\nFreeOSMemory forces a garbage collection followed by an attempt to return as much memory to the operating system as possible. (Even if this is not called, the runtime gradually returns memory to the operating system in a background task.) \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/runtime/debug#SetMaxStack",
               "documentation": {
                 "identifier": "SetMaxStack",
                 "newPage": false,
                 "searchKey": "debug.SetMaxStack",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -244,7 +289,9 @@
                 "identifier": "SetMaxThreads",
                 "newPage": false,
                 "searchKey": "debug.SetMaxThreads",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -264,7 +311,9 @@
                 "identifier": "SetPanicOnFault",
                 "newPage": false,
                 "searchKey": "debug.SetPanicOnFault",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -279,32 +328,14 @@
           },
           {
             "node": {
-              "pathID": "/runtime/debug#WriteHeapDump",
-              "documentation": {
-                "identifier": "WriteHeapDump",
-                "newPage": false,
-                "searchKey": "debug.WriteHeapDump",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func WriteHeapDump(fd uintptr)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc WriteHeapDump(fd uintptr)\n```\n\nWriteHeapDump writes a description of the heap and the objects in it to the given file descriptor. \n\nWriteHeapDump suspends the execution of all goroutines until the heap dump is completely written.  Thus, the file descriptor must not be connected to a pipe or socket whose other end is in the same Go process; instead, use a temporary file or network socket. \n\nThe heap dump format is defined at [https://golang.org/s/go15heapdump](https://golang.org/s/go15heapdump). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/runtime/debug#SetTraceback",
               "documentation": {
                 "identifier": "SetTraceback",
                 "newPage": false,
                 "searchKey": "debug.SetTraceback",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -319,54 +350,14 @@
           },
           {
             "node": {
-              "pathID": "/runtime/debug#modinfo",
-              "documentation": {
-                "identifier": "modinfo",
-                "newPage": false,
-                "searchKey": "debug.modinfo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func modinfo() string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc modinfo() string\n```\n\nexported from runtime \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/debug#PrintStack",
-              "documentation": {
-                "identifier": "PrintStack",
-                "newPage": false,
-                "searchKey": "debug.PrintStack",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func PrintStack()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc PrintStack()\n```\n\nPrintStack prints to standard error the stack trace returned by runtime.Stack. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/runtime/debug#Stack",
               "documentation": {
                 "identifier": "Stack",
                 "newPage": false,
                 "searchKey": "debug.Stack",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -381,22 +372,22 @@
           },
           {
             "node": {
-              "pathID": "/runtime/debug#readGCStats",
+              "pathID": "/runtime/debug#WriteHeapDump",
               "documentation": {
-                "identifier": "readGCStats",
+                "identifier": "WriteHeapDump",
                 "newPage": false,
-                "searchKey": "debug.readGCStats",
+                "searchKey": "debug.WriteHeapDump",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func readGCStats(*[]time.Duration)"
+                "value": "func WriteHeapDump(fd uintptr)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc readGCStats(*[]time.Duration)\n```\n\nImplemented in package runtime. \n\n"
+                "value": "```Go\nfunc WriteHeapDump(fd uintptr)\n```\n\nWriteHeapDump writes a description of the heap and the objects in it to the given file descriptor. \n\nWriteHeapDump suspends the execution of all goroutines until the heap dump is completely written.  Thus, the file descriptor must not be connected to a pipe or socket whose other end is in the same Go process; instead, use a temporary file or network socket. \n\nThe heap dump format is defined at [https://golang.org/s/go15heapdump](https://golang.org/s/go15heapdump). \n\n"
               },
               "children": null
             }
@@ -409,6 +400,7 @@
                 "newPage": false,
                 "searchKey": "debug.freeOSMemory",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -425,22 +417,46 @@
           },
           {
             "node": {
-              "pathID": "/runtime/debug#setMaxStack",
+              "pathID": "/runtime/debug#modinfo",
               "documentation": {
-                "identifier": "setMaxStack",
+                "identifier": "modinfo",
                 "newPage": false,
-                "searchKey": "debug.setMaxStack",
+                "searchKey": "debug.modinfo",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func setMaxStack(int) int"
+                "value": "func modinfo() string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc setMaxStack(int) int\n```\n\n"
+                "value": "```Go\nfunc modinfo() string\n```\n\nexported from runtime \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/debug#readGCStats",
+              "documentation": {
+                "identifier": "readGCStats",
+                "newPage": false,
+                "searchKey": "debug.readGCStats",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readGCStats(*[]time.Duration)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readGCStats(*[]time.Duration)\n```\n\nImplemented in package runtime. \n\n"
               },
               "children": null
             }
@@ -453,6 +469,7 @@
                 "newPage": false,
                 "searchKey": "debug.setGCPercent",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -469,22 +486,23 @@
           },
           {
             "node": {
-              "pathID": "/runtime/debug#setPanicOnFault",
+              "pathID": "/runtime/debug#setMaxStack",
               "documentation": {
-                "identifier": "setPanicOnFault",
+                "identifier": "setMaxStack",
                 "newPage": false,
-                "searchKey": "debug.setPanicOnFault",
+                "searchKey": "debug.setMaxStack",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func setPanicOnFault(bool) bool"
+                "value": "func setMaxStack(int) int"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc setPanicOnFault(bool) bool\n```\n\n"
+                "value": "```Go\nfunc setMaxStack(int) int\n```\n\n"
               },
               "children": null
             }
@@ -497,6 +515,7 @@
                 "newPage": false,
                 "searchKey": "debug.setMaxThreads",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -507,6 +526,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc setMaxThreads(int) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/debug#setPanicOnFault",
+              "documentation": {
+                "identifier": "setPanicOnFault",
+                "newPage": false,
+                "searchKey": "debug.setPanicOnFault",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func setPanicOnFault(bool) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc setPanicOnFault(bool) bool\n```\n\n"
               },
               "children": null
             }

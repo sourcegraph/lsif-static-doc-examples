@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/cmd/tracking-issue",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,122 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/cmd/tracking-issue#costPerSearch",
-              "documentation": {
-                "identifier": "costPerSearch",
-                "newPage": false,
-                "searchKey": "main.costPerSearch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const costPerSearch"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst costPerSearch = 30\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#maxCostPerRequest",
-              "documentation": {
-                "identifier": "maxCostPerRequest",
-                "newPage": false,
-                "searchKey": "main.maxCostPerRequest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const maxCostPerRequest"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst maxCostPerRequest = 1000\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#queriesPerLoadRequest",
-              "documentation": {
-                "identifier": "queriesPerLoadRequest",
-                "newPage": false,
-                "searchKey": "main.queriesPerLoadRequest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const queriesPerLoadRequest"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst queriesPerLoadRequest = 10\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#beginWorkMarker",
-              "documentation": {
-                "identifier": "beginWorkMarker",
-                "newPage": false,
-                "searchKey": "main.beginWorkMarker",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const beginWorkMarker"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst beginWorkMarker = \"<!-- BEGIN WORK -->\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#endWorkMarker",
-              "documentation": {
-                "identifier": "endWorkMarker",
-                "newPage": false,
-                "searchKey": "main.endWorkMarker",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const endWorkMarker"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst endWorkMarker = \"<!-- END WORK -->\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/cmd/tracking-issue#beginAssigneeMarkerFmt",
               "documentation": {
                 "identifier": "beginAssigneeMarkerFmt",
                 "newPage": false,
                 "searchKey": "main.beginAssigneeMarkerFmt",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -171,12 +65,62 @@
           },
           {
             "node": {
+              "pathID": "/internal/cmd/tracking-issue#beginWorkMarker",
+              "documentation": {
+                "identifier": "beginWorkMarker",
+                "newPage": false,
+                "searchKey": "main.beginWorkMarker",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const beginWorkMarker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst beginWorkMarker = \"<!-- BEGIN WORK -->\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#costPerSearch",
+              "documentation": {
+                "identifier": "costPerSearch",
+                "newPage": false,
+                "searchKey": "main.costPerSearch",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const costPerSearch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst costPerSearch = 30\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/cmd/tracking-issue#endAssigneeMarker",
               "documentation": {
                 "identifier": "endAssigneeMarker",
                 "newPage": false,
                 "searchKey": "main.endAssigneeMarker",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -193,12 +137,38 @@
           },
           {
             "node": {
+              "pathID": "/internal/cmd/tracking-issue#endWorkMarker",
+              "documentation": {
+                "identifier": "endWorkMarker",
+                "newPage": false,
+                "searchKey": "main.endWorkMarker",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const endWorkMarker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst endWorkMarker = \"<!-- END WORK -->\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/cmd/tracking-issue#issueFields",
               "documentation": {
                 "identifier": "issueFields",
                 "newPage": false,
                 "searchKey": "main.issueFields",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -215,12 +185,38 @@
           },
           {
             "node": {
+              "pathID": "/internal/cmd/tracking-issue#maxCostPerRequest",
+              "documentation": {
+                "identifier": "maxCostPerRequest",
+                "newPage": false,
+                "searchKey": "main.maxCostPerRequest",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxCostPerRequest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxCostPerRequest = 1000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/cmd/tracking-issue#pullRequestFields",
               "documentation": {
                 "identifier": "pullRequestFields",
                 "newPage": false,
                 "searchKey": "main.pullRequestFields",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -231,6 +227,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst pullRequestFields = issueFields + `\n\tcommits(first: 1) { nodes { commit { authoredDate } } }\n`\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#queriesPerLoadRequest",
+              "documentation": {
+                "identifier": "queriesPerLoadRequest",
+                "newPage": false,
+                "searchKey": "main.queriesPerLoadRequest",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const queriesPerLoadRequest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst queriesPerLoadRequest = 10\n```\n\n"
               },
               "children": null
             }
@@ -246,6 +266,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -266,6 +287,9 @@
                 "newPage": false,
                 "searchKey": "main.categorizers",
                 "tags": [
+                  "variable",
+                  "array",
+                  "function",
                   "private"
                 ]
               },
@@ -288,6 +312,8 @@
                 "newPage": false,
                 "searchKey": "main.customerMatcher",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -310,6 +336,8 @@
                 "newPage": false,
                 "searchKey": "main.emojis",
                 "tags": [
+                  "variable",
+                  "object",
                   "private"
                 ]
               },
@@ -332,6 +360,8 @@
                 "newPage": false,
                 "searchKey": "main.issueOrPullRequestMatcher",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -354,6 +384,8 @@
                 "newPage": false,
                 "searchKey": "main.now",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
@@ -370,12 +402,39 @@
           },
           {
             "node": {
+              "pathID": "/internal/cmd/tracking-issue#testIssues",
+              "documentation": {
+                "identifier": "testIssues",
+                "newPage": false,
+                "searchKey": "main.testIssues",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testIssues"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testIssues = []int{\n\t13675,\n\t13987,\n\t13988,\n\t14166,\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/cmd/tracking-issue#testUpdate",
               "documentation": {
                 "identifier": "testUpdate",
                 "newPage": false,
                 "searchKey": "main.testUpdate",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
@@ -398,6 +457,8 @@
                 "newPage": false,
                 "searchKey": "main.testUpdateFixture",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
@@ -408,28 +469,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar testUpdateFixture = flag.Bool(\"update.fixture\", false, \"update testdata API response\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#testIssues",
-              "documentation": {
-                "identifier": "testIssues",
-                "newPage": false,
-                "searchKey": "main.testIssues",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var testIssues"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar testIssues = []int{\n\t13675,\n\t13987,\n\t13988,\n\t14166,\n}\n```\n\n"
               },
               "children": null
             }
@@ -445,6 +484,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -459,58 +499,409 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/cmd/tracking-issue#IssueContext",
+              "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer",
               "documentation": {
-                "identifier": "IssueContext",
+                "identifier": "AssigneeRenderer",
                 "newPage": false,
-                "searchKey": "main.IssueContext",
-                "tags": null
+                "searchKey": "main.AssigneeRenderer",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type IssueContext struct"
+                "value": "type AssigneeRenderer struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype IssueContext struct {\n\ttrackingIssue  *Issue\n\ttrackingIssues []*Issue\n\tissues         []*Issue\n\tpullRequests   []*PullRequest\n}\n```\n\nIssueContext tracks a visible set of issues, tracking issues, and pull requests with respect to a given tracking issue. The visible set of issues and pull requests can be refined with additional restrictions. \n\n"
+                "value": "```Go\ntype AssigneeRenderer struct {\n\tcontext              IssueContext\n\tassignee             string\n\tissueDisplayed       []bool\n\tpullRequestDisplayed []bool\n}\n```\n\n"
               },
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/cmd/tracking-issue#NewIssueContext",
+                    "pathID": "/internal/cmd/tracking-issue#NewAssigneeRenderer",
                     "documentation": {
-                      "identifier": "NewIssueContext",
+                      "identifier": "NewAssigneeRenderer",
                       "newPage": false,
-                      "searchKey": "main.NewIssueContext",
-                      "tags": null
+                      "searchKey": "main.NewAssigneeRenderer",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func NewIssueContext(trackingIssue *Issue, trackingIssues []*Issue, issues []*Issue, pullRequests []*PullRequest) IssueContext"
+                      "value": "func NewAssigneeRenderer(context IssueContext, assignee string) *AssigneeRenderer"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc NewIssueContext(trackingIssue *Issue, trackingIssues []*Issue, issues []*Issue, pullRequests []*PullRequest) IssueContext\n```\n\nNewIssueContext creates  anew issue context with the given visible issues, tracking issues, and pull requests. \n\n"
+                      "value": "```Go\nfunc NewAssigneeRenderer(context IssueContext, assignee string) *AssigneeRenderer\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/internal/cmd/tracking-issue#IssueContext.Match",
+                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.Render",
                     "documentation": {
-                      "identifier": "IssueContext.Match",
+                      "identifier": "AssigneeRenderer.Render",
                       "newPage": false,
-                      "searchKey": "main.IssueContext.Match",
-                      "tags": null
+                      "searchKey": "main.AssigneeRenderer.Render",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (context IssueContext) Match(matcher *Matcher) IssueContext"
+                      "value": "func (ar *AssigneeRenderer) Render() string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (context IssueContext) Match(matcher *Matcher) IssueContext\n```\n\nMatch will return a new issue context where all visible issues and pull requests match the given matcher. \n\n"
+                      "value": "```Go\nfunc (ar *AssigneeRenderer) Render() string\n```\n\nRender returns the assignee section of the configured tracking issue for the configured assignee. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.doRenderIssue",
+                    "documentation": {
+                      "identifier": "AssigneeRenderer.doRenderIssue",
+                      "newPage": false,
+                      "searchKey": "main.AssigneeRenderer.doRenderIssue",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ar *AssigneeRenderer) doRenderIssue(issue *Issue, milestone string) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ar *AssigneeRenderer) doRenderIssue(issue *Issue, milestone string) string\n```\n\ndoRenderIssue returns the given issue rendered in markdown. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.findIssue",
+                    "documentation": {
+                      "identifier": "AssigneeRenderer.findIssue",
+                      "newPage": false,
+                      "searchKey": "main.AssigneeRenderer.findIssue",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ar *AssigneeRenderer) findIssue(v *Issue) (int, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ar *AssigneeRenderer) findIssue(v *Issue) (int, bool)\n```\n\nfindIssue returns the index of the given issue in the current context. If the issue does not exist then a false-valued flag is returned. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.findPullRequest",
+                    "documentation": {
+                      "identifier": "AssigneeRenderer.findPullRequest",
+                      "newPage": false,
+                      "searchKey": "main.AssigneeRenderer.findPullRequest",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ar *AssigneeRenderer) findPullRequest(v *PullRequest) (int, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ar *AssigneeRenderer) findPullRequest(v *PullRequest) (int, bool)\n```\n\nfindPullRequest returns the index of the given pull request in the current context. If the pull request does not exist then a false-valued flag is returned. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.readTrackingIssueURLs",
+                    "documentation": {
+                      "identifier": "AssigneeRenderer.readTrackingIssueURLs",
+                      "newPage": false,
+                      "searchKey": "main.AssigneeRenderer.readTrackingIssueURLs",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ar *AssigneeRenderer) readTrackingIssueURLs() (urls []string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ar *AssigneeRenderer) readTrackingIssueURLs() (urls []string)\n```\n\nreadTrackingIssueURLs reads each line of the current tracking issue body and extracts issue and pull request references. The order of the output slice is the order in which each URL is first referenced and is used to maintain a stable ordering in the GitHub UI. \n\nNote: We use the fact that rendered work items always reference themselves first, and any additional issue or pull request URLs on that line are only references. By parsing line-by-line and pulling the first URL we see, we should get an accurate ordering. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.renderCompletedIssues",
+                    "documentation": {
+                      "identifier": "AssigneeRenderer.renderCompletedIssues",
+                      "newPage": false,
+                      "searchKey": "main.AssigneeRenderer.renderCompletedIssues",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ar *AssigneeRenderer) renderCompletedIssues() (completedParts []MarkdownByIntegerKeyPair)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ar *AssigneeRenderer) renderCompletedIssues() (completedParts []MarkdownByIntegerKeyPair)\n```\n\nrenderCompletedIssues returns a rendered list of closed issues along with that issue's closed-at time and that issue's number for later reordering of the resulting list. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.renderCompletedPullRequests",
+                    "documentation": {
+                      "identifier": "AssigneeRenderer.renderCompletedPullRequests",
+                      "newPage": false,
+                      "searchKey": "main.AssigneeRenderer.renderCompletedPullRequests",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ar *AssigneeRenderer) renderCompletedPullRequests() (completedParts []MarkdownByIntegerKeyPair)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ar *AssigneeRenderer) renderCompletedPullRequests() (completedParts []MarkdownByIntegerKeyPair)\n```\n\nrenderCompletedPullRequests returns a rendered list of closed pull request along with that pull request's closed-at time and that pull request's number for later reordering of the resulting list. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.renderCompletedTrackingIssues",
+                    "documentation": {
+                      "identifier": "AssigneeRenderer.renderCompletedTrackingIssues",
+                      "newPage": false,
+                      "searchKey": "main.AssigneeRenderer.renderCompletedTrackingIssues",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ar *AssigneeRenderer) renderCompletedTrackingIssues() (completedParts []MarkdownByIntegerKeyPair)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ar *AssigneeRenderer) renderCompletedTrackingIssues() (completedParts []MarkdownByIntegerKeyPair)\n```\n\nrenderCompletedTrackingIsssues returns a rendered list of closed tracking issues along with that issue's closed-at time and that issue's number for later reordering of the resulting list. This will also set the completed flag on all tracked issues and pull requests. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.renderCompletedWork",
+                    "documentation": {
+                      "identifier": "AssigneeRenderer.renderCompletedWork",
+                      "newPage": false,
+                      "searchKey": "main.AssigneeRenderer.renderCompletedWork",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ar *AssigneeRenderer) renderCompletedWork() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ar *AssigneeRenderer) renderCompletedWork() string\n```\n\nrenderCompletedWork returns a list of completed work items rendered in markdown. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.renderIssue",
+                    "documentation": {
+                      "identifier": "AssigneeRenderer.renderIssue",
+                      "newPage": false,
+                      "searchKey": "main.AssigneeRenderer.renderIssue",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ar *AssigneeRenderer) renderIssue(issue *Issue) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ar *AssigneeRenderer) renderIssue(issue *Issue) string\n```\n\nrenderIssue returns the given issue rendered as markdown. This will also set the displayed flag on this issue as well as all linked pull requests. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.renderPendingIssues",
+                    "documentation": {
+                      "identifier": "AssigneeRenderer.renderPendingIssues",
+                      "newPage": false,
+                      "searchKey": "main.AssigneeRenderer.renderPendingIssues",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ar *AssigneeRenderer) renderPendingIssues() (parts []MarkdownByStringKey)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ar *AssigneeRenderer) renderPendingIssues() (parts []MarkdownByStringKey)\n```\n\nrenderPendingIssues returns a rendered list of unclosed issues along with that issue's URL for later reordering of the resulting list. The resulting list does not include any issue that was already rendered by renderPendingTrackingIssues. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.renderPendingPullRequests",
+                    "documentation": {
+                      "identifier": "AssigneeRenderer.renderPendingPullRequests",
+                      "newPage": false,
+                      "searchKey": "main.AssigneeRenderer.renderPendingPullRequests",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ar *AssigneeRenderer) renderPendingPullRequests() (parts []MarkdownByStringKey)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ar *AssigneeRenderer) renderPendingPullRequests() (parts []MarkdownByStringKey)\n```\n\nrenderPendingPullRequests returns a rendered list of unclosed pull requests along with that issue's URL for later reordering of the resulting list. The resulting list does not include any pull request that was already rendered by renderPendingTrackingIssues or renderPendingIssues. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.renderPendingTrackingIssues",
+                    "documentation": {
+                      "identifier": "AssigneeRenderer.renderPendingTrackingIssues",
+                      "newPage": false,
+                      "searchKey": "main.AssigneeRenderer.renderPendingTrackingIssues",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ar *AssigneeRenderer) renderPendingTrackingIssues() (parts []MarkdownByStringKey)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ar *AssigneeRenderer) renderPendingTrackingIssues() (parts []MarkdownByStringKey)\n```\n\nrenderPendingTrackingIssues returns a rendered list of tracking issues (with rendered children) along with that tracking issue's URL for later reordering of the resulting list. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.renderPendingWork",
+                    "documentation": {
+                      "identifier": "AssigneeRenderer.renderPendingWork",
+                      "newPage": false,
+                      "searchKey": "main.AssigneeRenderer.renderPendingWork",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ar *AssigneeRenderer) renderPendingWork() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ar *AssigneeRenderer) renderPendingWork() string\n```\n\nrenderPendingWork returns a list of pending work items rendered in markdown. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.renderPullRequest",
+                    "documentation": {
+                      "identifier": "AssigneeRenderer.renderPullRequest",
+                      "newPage": false,
+                      "searchKey": "main.AssigneeRenderer.renderPullRequest",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ar *AssigneeRenderer) renderPullRequest(pullRequest *PullRequest) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ar *AssigneeRenderer) renderPullRequest(pullRequest *PullRequest) string\n```\n\nrenderPullRequest returns the given pull request rendered as markdown. This will also set the displayed flag on the pull request. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.resetDisplayFlags",
+                    "documentation": {
+                      "identifier": "AssigneeRenderer.resetDisplayFlags",
+                      "newPage": false,
+                      "searchKey": "main.AssigneeRenderer.resetDisplayFlags",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ar *AssigneeRenderer) resetDisplayFlags()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ar *AssigneeRenderer) resetDisplayFlags()\n```\n\nresetDisplayFlags unsets the displayed flag for all issues and pull requests. \n\n"
                     },
                     "children": null
                   }
@@ -520,12 +911,37 @@
           },
           {
             "node": {
+              "pathID": "/internal/cmd/tracking-issue#FixturePayload",
+              "documentation": {
+                "identifier": "FixturePayload",
+                "newPage": false,
+                "searchKey": "main.FixturePayload",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FixturePayload struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FixturePayload struct {\n\tTrackingIssues []*Issue\n\tIssues         []*Issue\n\tPullRequests   []*PullRequest\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/cmd/tracking-issue#Issue",
               "documentation": {
                 "identifier": "Issue",
                 "newPage": false,
                 "searchKey": "main.Issue",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -544,6 +960,7 @@
                       "newPage": false,
                       "searchKey": "main.unmarshalIssue",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -565,7 +982,9 @@
                       "identifier": "Issue.Closed",
                       "newPage": false,
                       "searchKey": "main.Issue.Closed",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -580,32 +999,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/cmd/tracking-issue#Issue.SafeTitle",
-                    "documentation": {
-                      "identifier": "Issue.SafeTitle",
-                      "newPage": false,
-                      "searchKey": "main.Issue.SafeTitle",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (issue *Issue) SafeTitle() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (issue *Issue) SafeTitle() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/cmd/tracking-issue#Issue.SafeLabels",
                     "documentation": {
                       "identifier": "Issue.SafeLabels",
                       "newPage": false,
                       "searchKey": "main.Issue.SafeLabels",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -620,12 +1021,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/cmd/tracking-issue#Issue.SafeTitle",
+                    "documentation": {
+                      "identifier": "Issue.SafeTitle",
+                      "newPage": false,
+                      "searchKey": "main.Issue.SafeTitle",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (issue *Issue) SafeTitle() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (issue *Issue) SafeTitle() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/cmd/tracking-issue#Issue.UpdateBody",
                     "documentation": {
                       "identifier": "Issue.UpdateBody",
                       "newPage": false,
                       "searchKey": "main.Issue.UpdateBody",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -643,12 +1068,81 @@
           },
           {
             "node": {
+              "pathID": "/internal/cmd/tracking-issue#IssueContext",
+              "documentation": {
+                "identifier": "IssueContext",
+                "newPage": false,
+                "searchKey": "main.IssueContext",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type IssueContext struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype IssueContext struct {\n\ttrackingIssue  *Issue\n\ttrackingIssues []*Issue\n\tissues         []*Issue\n\tpullRequests   []*PullRequest\n}\n```\n\nIssueContext tracks a visible set of issues, tracking issues, and pull requests with respect to a given tracking issue. The visible set of issues and pull requests can be refined with additional restrictions. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/tracking-issue#NewIssueContext",
+                    "documentation": {
+                      "identifier": "NewIssueContext",
+                      "newPage": false,
+                      "searchKey": "main.NewIssueContext",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewIssueContext(trackingIssue *Issue, trackingIssues []*Issue, issues []*Issue, pullRequests []*PullRequest) IssueContext"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewIssueContext(trackingIssue *Issue, trackingIssues []*Issue, issues []*Issue, pullRequests []*PullRequest) IssueContext\n```\n\nNewIssueContext creates  anew issue context with the given visible issues, tracking issues, and pull requests. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/tracking-issue#IssueContext.Match",
+                    "documentation": {
+                      "identifier": "IssueContext.Match",
+                      "newPage": false,
+                      "searchKey": "main.IssueContext.Match",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (context IssueContext) Match(matcher *Matcher) IssueContext"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (context IssueContext) Match(matcher *Matcher) IssueContext\n```\n\nMatch will return a new issue context where all visible issues and pull requests match the given matcher. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/cmd/tracking-issue#IssueLoader",
               "documentation": {
                 "identifier": "IssueLoader",
                 "newPage": false,
                 "searchKey": "main.IssueLoader",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -666,7 +1160,9 @@
                       "identifier": "NewIssueLoader",
                       "newPage": false,
                       "searchKey": "main.NewIssueLoader",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -686,7 +1182,9 @@
                       "identifier": "IssueLoader.Load",
                       "newPage": false,
                       "searchKey": "main.IssueLoader.Load",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -707,6 +1205,7 @@
                       "newPage": false,
                       "searchKey": "main.IssueLoader.makeNextRequest",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -729,6 +1228,7 @@
                       "newPage": false,
                       "searchKey": "main.IssueLoader.performRequest",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -748,12 +1248,58 @@
           },
           {
             "node": {
+              "pathID": "/internal/cmd/tracking-issue#MarkdownByIntegerKeyPair",
+              "documentation": {
+                "identifier": "MarkdownByIntegerKeyPair",
+                "newPage": false,
+                "searchKey": "main.MarkdownByIntegerKeyPair",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MarkdownByIntegerKeyPair struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MarkdownByIntegerKeyPair struct {\n\tmarkdown string\n\tkey1     int64\n\tkey2     int64\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#MarkdownByStringKey",
+              "documentation": {
+                "identifier": "MarkdownByStringKey",
+                "newPage": false,
+                "searchKey": "main.MarkdownByStringKey",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MarkdownByStringKey struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MarkdownByStringKey struct {\n\tmarkdown string\n\tkey      string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/cmd/tracking-issue#Matcher",
               "documentation": {
                 "identifier": "Matcher",
                 "newPage": false,
                 "searchKey": "main.Matcher",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -771,7 +1317,9 @@
                       "identifier": "NewMatcher",
                       "newPage": false,
                       "searchKey": "main.NewMatcher",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -791,7 +1339,9 @@
                       "identifier": "Matcher.Issue",
                       "newPage": false,
                       "searchKey": "main.Matcher.Issue",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -811,7 +1361,9 @@
                       "identifier": "Matcher.PullRequest",
                       "newPage": false,
                       "searchKey": "main.Matcher.PullRequest",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -832,6 +1384,7 @@
                       "newPage": false,
                       "searchKey": "main.Matcher.testAssignee",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -854,6 +1407,7 @@
                       "newPage": false,
                       "searchKey": "main.Matcher.testLabels",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -876,6 +1430,7 @@
                       "newPage": false,
                       "searchKey": "main.Matcher.testMilestone",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -900,7 +1455,9 @@
                 "identifier": "PullRequest",
                 "newPage": false,
                 "searchKey": "main.PullRequest",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -919,6 +1476,7 @@
                       "newPage": false,
                       "searchKey": "main.unmarshalPullRequest",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -940,7 +1498,9 @@
                       "identifier": "PullRequest.Closed",
                       "newPage": false,
                       "searchKey": "main.PullRequest.Closed",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -955,32 +1515,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/cmd/tracking-issue#PullRequest.Merged",
-                    "documentation": {
-                      "identifier": "PullRequest.Merged",
-                      "newPage": false,
-                      "searchKey": "main.PullRequest.Merged",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (pullRequest *PullRequest) Merged() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (pullRequest *PullRequest) Merged() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/cmd/tracking-issue#PullRequest.Done",
                     "documentation": {
                       "identifier": "PullRequest.Done",
                       "newPage": false,
                       "searchKey": "main.PullRequest.Done",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -995,20 +1537,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/cmd/tracking-issue#PullRequest.SafeTitle",
+                    "pathID": "/internal/cmd/tracking-issue#PullRequest.Merged",
                     "documentation": {
-                      "identifier": "PullRequest.SafeTitle",
+                      "identifier": "PullRequest.Merged",
                       "newPage": false,
-                      "searchKey": "main.PullRequest.SafeTitle",
-                      "tags": null
+                      "searchKey": "main.PullRequest.Merged",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (pullRequest *PullRequest) SafeTitle() string"
+                      "value": "func (pullRequest *PullRequest) Merged() bool"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (pullRequest *PullRequest) SafeTitle() string\n```\n\n"
+                      "value": "```Go\nfunc (pullRequest *PullRequest) Merged() bool\n```\n\n"
                     },
                     "children": null
                   }
@@ -1020,7 +1564,9 @@
                       "identifier": "PullRequest.SafeLabels",
                       "newPage": false,
                       "searchKey": "main.PullRequest.SafeLabels",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1032,459 +1578,30 @@
                     },
                     "children": null
                   }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer",
-              "documentation": {
-                "identifier": "AssigneeRenderer",
-                "newPage": false,
-                "searchKey": "main.AssigneeRenderer",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type AssigneeRenderer struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype AssigneeRenderer struct {\n\tcontext              IssueContext\n\tassignee             string\n\tissueDisplayed       []bool\n\tpullRequestDisplayed []bool\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/tracking-issue#NewAssigneeRenderer",
-                    "documentation": {
-                      "identifier": "NewAssigneeRenderer",
-                      "newPage": false,
-                      "searchKey": "main.NewAssigneeRenderer",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewAssigneeRenderer(context IssueContext, assignee string) *AssigneeRenderer"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewAssigneeRenderer(context IssueContext, assignee string) *AssigneeRenderer\n```\n\n"
-                    },
-                    "children": null
-                  }
                 },
                 {
                   "node": {
-                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.Render",
+                    "pathID": "/internal/cmd/tracking-issue#PullRequest.SafeTitle",
                     "documentation": {
-                      "identifier": "AssigneeRenderer.Render",
+                      "identifier": "PullRequest.SafeTitle",
                       "newPage": false,
-                      "searchKey": "main.AssigneeRenderer.Render",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (ar *AssigneeRenderer) Render() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (ar *AssigneeRenderer) Render() string\n```\n\nRender returns the assignee section of the configured tracking issue for the configured assignee. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.renderPendingWork",
-                    "documentation": {
-                      "identifier": "AssigneeRenderer.renderPendingWork",
-                      "newPage": false,
-                      "searchKey": "main.AssigneeRenderer.renderPendingWork",
+                      "searchKey": "main.PullRequest.SafeTitle",
                       "tags": [
-                        "private"
+                        "function"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (ar *AssigneeRenderer) renderPendingWork() string"
+                      "value": "func (pullRequest *PullRequest) SafeTitle() string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (ar *AssigneeRenderer) renderPendingWork() string\n```\n\nrenderPendingWork returns a list of pending work items rendered in markdown. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.renderPendingTrackingIssues",
-                    "documentation": {
-                      "identifier": "AssigneeRenderer.renderPendingTrackingIssues",
-                      "newPage": false,
-                      "searchKey": "main.AssigneeRenderer.renderPendingTrackingIssues",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (ar *AssigneeRenderer) renderPendingTrackingIssues() (parts []MarkdownByStringKey)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (ar *AssigneeRenderer) renderPendingTrackingIssues() (parts []MarkdownByStringKey)\n```\n\nrenderPendingTrackingIssues returns a rendered list of tracking issues (with rendered children) along with that tracking issue's URL for later reordering of the resulting list. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.renderPendingIssues",
-                    "documentation": {
-                      "identifier": "AssigneeRenderer.renderPendingIssues",
-                      "newPage": false,
-                      "searchKey": "main.AssigneeRenderer.renderPendingIssues",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (ar *AssigneeRenderer) renderPendingIssues() (parts []MarkdownByStringKey)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (ar *AssigneeRenderer) renderPendingIssues() (parts []MarkdownByStringKey)\n```\n\nrenderPendingIssues returns a rendered list of unclosed issues along with that issue's URL for later reordering of the resulting list. The resulting list does not include any issue that was already rendered by renderPendingTrackingIssues. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.renderPendingPullRequests",
-                    "documentation": {
-                      "identifier": "AssigneeRenderer.renderPendingPullRequests",
-                      "newPage": false,
-                      "searchKey": "main.AssigneeRenderer.renderPendingPullRequests",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (ar *AssigneeRenderer) renderPendingPullRequests() (parts []MarkdownByStringKey)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (ar *AssigneeRenderer) renderPendingPullRequests() (parts []MarkdownByStringKey)\n```\n\nrenderPendingPullRequests returns a rendered list of unclosed pull requests along with that issue's URL for later reordering of the resulting list. The resulting list does not include any pull request that was already rendered by renderPendingTrackingIssues or renderPendingIssues. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.renderCompletedWork",
-                    "documentation": {
-                      "identifier": "AssigneeRenderer.renderCompletedWork",
-                      "newPage": false,
-                      "searchKey": "main.AssigneeRenderer.renderCompletedWork",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (ar *AssigneeRenderer) renderCompletedWork() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (ar *AssigneeRenderer) renderCompletedWork() string\n```\n\nrenderCompletedWork returns a list of completed work items rendered in markdown. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.renderCompletedTrackingIssues",
-                    "documentation": {
-                      "identifier": "AssigneeRenderer.renderCompletedTrackingIssues",
-                      "newPage": false,
-                      "searchKey": "main.AssigneeRenderer.renderCompletedTrackingIssues",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (ar *AssigneeRenderer) renderCompletedTrackingIssues() (completedParts []MarkdownByIntegerKeyPair)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (ar *AssigneeRenderer) renderCompletedTrackingIssues() (completedParts []MarkdownByIntegerKeyPair)\n```\n\nrenderCompletedTrackingIsssues returns a rendered list of closed tracking issues along with that issue's closed-at time and that issue's number for later reordering of the resulting list. This will also set the completed flag on all tracked issues and pull requests. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.renderCompletedIssues",
-                    "documentation": {
-                      "identifier": "AssigneeRenderer.renderCompletedIssues",
-                      "newPage": false,
-                      "searchKey": "main.AssigneeRenderer.renderCompletedIssues",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (ar *AssigneeRenderer) renderCompletedIssues() (completedParts []MarkdownByIntegerKeyPair)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (ar *AssigneeRenderer) renderCompletedIssues() (completedParts []MarkdownByIntegerKeyPair)\n```\n\nrenderCompletedIssues returns a rendered list of closed issues along with that issue's closed-at time and that issue's number for later reordering of the resulting list. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.renderCompletedPullRequests",
-                    "documentation": {
-                      "identifier": "AssigneeRenderer.renderCompletedPullRequests",
-                      "newPage": false,
-                      "searchKey": "main.AssigneeRenderer.renderCompletedPullRequests",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (ar *AssigneeRenderer) renderCompletedPullRequests() (completedParts []MarkdownByIntegerKeyPair)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (ar *AssigneeRenderer) renderCompletedPullRequests() (completedParts []MarkdownByIntegerKeyPair)\n```\n\nrenderCompletedPullRequests returns a rendered list of closed pull request along with that pull request's closed-at time and that pull request's number for later reordering of the resulting list. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.renderIssue",
-                    "documentation": {
-                      "identifier": "AssigneeRenderer.renderIssue",
-                      "newPage": false,
-                      "searchKey": "main.AssigneeRenderer.renderIssue",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (ar *AssigneeRenderer) renderIssue(issue *Issue) string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (ar *AssigneeRenderer) renderIssue(issue *Issue) string\n```\n\nrenderIssue returns the given issue rendered as markdown. This will also set the displayed flag on this issue as well as all linked pull requests. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.renderPullRequest",
-                    "documentation": {
-                      "identifier": "AssigneeRenderer.renderPullRequest",
-                      "newPage": false,
-                      "searchKey": "main.AssigneeRenderer.renderPullRequest",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (ar *AssigneeRenderer) renderPullRequest(pullRequest *PullRequest) string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (ar *AssigneeRenderer) renderPullRequest(pullRequest *PullRequest) string\n```\n\nrenderPullRequest returns the given pull request rendered as markdown. This will also set the displayed flag on the pull request. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.findIssue",
-                    "documentation": {
-                      "identifier": "AssigneeRenderer.findIssue",
-                      "newPage": false,
-                      "searchKey": "main.AssigneeRenderer.findIssue",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (ar *AssigneeRenderer) findIssue(v *Issue) (int, bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (ar *AssigneeRenderer) findIssue(v *Issue) (int, bool)\n```\n\nfindIssue returns the index of the given issue in the current context. If the issue does not exist then a false-valued flag is returned. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.findPullRequest",
-                    "documentation": {
-                      "identifier": "AssigneeRenderer.findPullRequest",
-                      "newPage": false,
-                      "searchKey": "main.AssigneeRenderer.findPullRequest",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (ar *AssigneeRenderer) findPullRequest(v *PullRequest) (int, bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (ar *AssigneeRenderer) findPullRequest(v *PullRequest) (int, bool)\n```\n\nfindPullRequest returns the index of the given pull request in the current context. If the pull request does not exist then a false-valued flag is returned. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.readTrackingIssueURLs",
-                    "documentation": {
-                      "identifier": "AssigneeRenderer.readTrackingIssueURLs",
-                      "newPage": false,
-                      "searchKey": "main.AssigneeRenderer.readTrackingIssueURLs",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (ar *AssigneeRenderer) readTrackingIssueURLs() (urls []string)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (ar *AssigneeRenderer) readTrackingIssueURLs() (urls []string)\n```\n\nreadTrackingIssueURLs reads each line of the current tracking issue body and extracts issue and pull request references. The order of the output slice is the order in which each URL is first referenced and is used to maintain a stable ordering in the GitHub UI. \n\nNote: We use the fact that rendered work items always reference themselves first, and any additional issue or pull request URLs on that line are only references. By parsing line-by-line and pulling the first URL we see, we should get an accurate ordering. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.resetDisplayFlags",
-                    "documentation": {
-                      "identifier": "AssigneeRenderer.resetDisplayFlags",
-                      "newPage": false,
-                      "searchKey": "main.AssigneeRenderer.resetDisplayFlags",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (ar *AssigneeRenderer) resetDisplayFlags()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (ar *AssigneeRenderer) resetDisplayFlags()\n```\n\nresetDisplayFlags unsets the displayed flag for all issues and pull requests. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/tracking-issue#AssigneeRenderer.doRenderIssue",
-                    "documentation": {
-                      "identifier": "AssigneeRenderer.doRenderIssue",
-                      "newPage": false,
-                      "searchKey": "main.AssigneeRenderer.doRenderIssue",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (ar *AssigneeRenderer) doRenderIssue(issue *Issue, milestone string) string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (ar *AssigneeRenderer) doRenderIssue(issue *Issue, milestone string) string\n```\n\ndoRenderIssue returns the given issue rendered in markdown. \n\n"
+                      "value": "```Go\nfunc (pullRequest *PullRequest) SafeTitle() string\n```\n\n"
                     },
                     "children": null
                   }
                 }
               ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#MarkdownByStringKey",
-              "documentation": {
-                "identifier": "MarkdownByStringKey",
-                "newPage": false,
-                "searchKey": "main.MarkdownByStringKey",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type MarkdownByStringKey struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype MarkdownByStringKey struct {\n\tmarkdown string\n\tkey      string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#MarkdownByIntegerKeyPair",
-              "documentation": {
-                "identifier": "MarkdownByIntegerKeyPair",
-                "newPage": false,
-                "searchKey": "main.MarkdownByIntegerKeyPair",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type MarkdownByIntegerKeyPair struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype MarkdownByIntegerKeyPair struct {\n\tmarkdown string\n\tkey1     int64\n\tkey2     int64\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#SearchResult",
-              "documentation": {
-                "identifier": "SearchResult",
-                "newPage": false,
-                "searchKey": "main.SearchResult",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type SearchResult struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype SearchResult struct {\n\tNodes    []SearchNode\n\tPageInfo struct {\n\t\tEndCursor   string\n\t\tHasNextPage bool\n\t}\n}\n```\n\n"
-              },
-              "children": null
             }
           },
           {
@@ -1494,7 +1611,9 @@
                 "identifier": "SearchNode",
                 "newPage": false,
                 "searchKey": "main.SearchNode",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1509,22 +1628,22 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/tracking-issue#FixturePayload",
+              "pathID": "/internal/cmd/tracking-issue#SearchResult",
               "documentation": {
-                "identifier": "FixturePayload",
+                "identifier": "SearchResult",
                 "newPage": false,
-                "searchKey": "main.FixturePayload",
+                "searchKey": "main.SearchResult",
                 "tags": [
-                  "private"
+                  "struct"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type FixturePayload struct"
+                "value": "type SearchResult struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype FixturePayload struct {\n\tTrackingIssues []*Issue\n\tIssues         []*Issue\n\tPullRequests   []*PullRequest\n}\n```\n\n"
+                "value": "```Go\ntype SearchResult struct {\n\tNodes    []SearchNode\n\tPageInfo struct {\n\t\tEndCursor   string\n\t\tHasNextPage bool\n\t}\n}\n```\n\n"
               },
               "children": null
             }
@@ -1540,6 +1659,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -1554,184 +1674,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/cmd/tracking-issue#ListTrackingIssues",
-              "documentation": {
-                "identifier": "ListTrackingIssues",
-                "newPage": false,
-                "searchKey": "main.ListTrackingIssues",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ListTrackingIssues(ctx context.Context, cli *graphql.Client, org string) ([]*Issue, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ListTrackingIssues(ctx context.Context, cli *graphql.Client, org string) ([]*Issue, error)\n```\n\nListTrackingIssues returns all issues with the `tracking` label (and at least one other label) in the given organization. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#LoadTrackingIssues",
-              "documentation": {
-                "identifier": "LoadTrackingIssues",
-                "newPage": false,
-                "searchKey": "main.LoadTrackingIssues",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func LoadTrackingIssues(ctx context.Context, cli *graphql.Client, org string, trackingIssues []*Issue) ([]*Issue, []*PullRequest, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc LoadTrackingIssues(ctx context.Context, cli *graphql.Client, org string, trackingIssues []*Issue) ([]*Issue, []*PullRequest, error)\n```\n\nLoadTrackingIssues returns all issues and pull requests which are relevant to the given set of tracking issues in the given organization. The result of this function may be a superset of objects that should be rendered for the tracking issue. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#makeQueries",
-              "documentation": {
-                "identifier": "makeQueries",
-                "newPage": false,
-                "searchKey": "main.makeQueries",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func makeQueries(org string, trackingIssues []*Issue) (queries []string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc makeQueries(org string, trackingIssues []*Issue) (queries []string)\n```\n\nmakeQueries returns a set of search queries that, when queried together, should return all of the relevant issue and pull requests for the given tracking issues. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#matchingIssues",
-              "documentation": {
-                "identifier": "matchingIssues",
-                "newPage": false,
-                "searchKey": "main.matchingIssues",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func matchingIssues(trackingIssue *Issue, issues []*Issue, matcher *Matcher) (matchingIssues []*Issue)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc matchingIssues(trackingIssue *Issue, issues []*Issue, matcher *Matcher) (matchingIssues []*Issue)\n```\n\nmatchingIssues returns the given issues that match the given matcher. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#matchingPullRequests",
-              "documentation": {
-                "identifier": "matchingPullRequests",
-                "newPage": false,
-                "searchKey": "main.matchingPullRequests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func matchingPullRequests(pullRequests []*PullRequest, matcher *Matcher) (matchingPullRequests []*PullRequest)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc matchingPullRequests(pullRequests []*PullRequest, matcher *Matcher) (matchingPullRequests []*PullRequest)\n```\n\nmatchingPullRequests returns the given pull requests that match the given matcher. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#matchingTrackingIssues",
-              "documentation": {
-                "identifier": "matchingTrackingIssues",
-                "newPage": false,
-                "searchKey": "main.matchingTrackingIssues",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func matchingTrackingIssues(trackingIssue *Issue, issues []*Issue, pullRequests []*PullRequest, matcher *Matcher) (matchingTrackingIssues []*Issue)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc matchingTrackingIssues(trackingIssue *Issue, issues []*Issue, pullRequests []*PullRequest, matcher *Matcher) (matchingTrackingIssues []*Issue)\n```\n\nmatchingTrackingIssues returns the given tracking issues that match the matcher and do not track only a `team/*` label. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#deduplicateIssues",
-              "documentation": {
-                "identifier": "deduplicateIssues",
-                "newPage": false,
-                "searchKey": "main.deduplicateIssues",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func deduplicateIssues(issues []*Issue) (deduplicated []*Issue)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc deduplicateIssues(issues []*Issue) (deduplicated []*Issue)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#deduplicatePullRequests",
-              "documentation": {
-                "identifier": "deduplicatePullRequests",
-                "newPage": false,
-                "searchKey": "main.deduplicatePullRequests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func deduplicatePullRequests(pullRequests []*PullRequest) (deduplicated []*PullRequest)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc deduplicatePullRequests(pullRequests []*PullRequest) (deduplicated []*PullRequest)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/cmd/tracking-issue#Emojis",
               "documentation": {
                 "identifier": "Emojis",
                 "newPage": false,
                 "searchKey": "main.Emojis",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1746,22 +1696,156 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/tracking-issue#categorizeSecurityIssue",
+              "pathID": "/internal/cmd/tracking-issue#ListTrackingIssues",
               "documentation": {
-                "identifier": "categorizeSecurityIssue",
+                "identifier": "ListTrackingIssues",
                 "newPage": false,
-                "searchKey": "main.categorizeSecurityIssue",
+                "searchKey": "main.ListTrackingIssues",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func categorizeSecurityIssue(labels []string, repository, body string, categories map[string]string)"
+                "value": "func ListTrackingIssues(ctx context.Context, cli *graphql.Client, org string) ([]*Issue, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc categorizeSecurityIssue(labels []string, repository, body string, categories map[string]string)\n```\n\ncategorizeSecurityIssue adds a security emoji if the repository matches sourcegraph/security-issues. \n\n"
+                "value": "```Go\nfunc ListTrackingIssues(ctx context.Context, cli *graphql.Client, org string) ([]*Issue, error)\n```\n\nListTrackingIssues returns all issues with the `tracking` label (and at least one other label) in the given organization. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#LoadIssues",
+              "documentation": {
+                "identifier": "LoadIssues",
+                "newPage": false,
+                "searchKey": "main.LoadIssues",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func LoadIssues(ctx context.Context, cli *graphql.Client, queries []string) (issues []*Issue, pullRequests []*PullRequest, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc LoadIssues(ctx context.Context, cli *graphql.Client, queries []string) (issues []*Issue, pullRequests []*PullRequest, err error)\n```\n\nLoadIssues will load all issues and pull requests matching the configured queries by making multiple queries in parallel and merging and deduplicating the result. Tracking issues are filtered out of the resulting issues list. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#LoadTrackingIssues",
+              "documentation": {
+                "identifier": "LoadTrackingIssues",
+                "newPage": false,
+                "searchKey": "main.LoadTrackingIssues",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func LoadTrackingIssues(ctx context.Context, cli *graphql.Client, org string, trackingIssues []*Issue) ([]*Issue, []*PullRequest, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc LoadTrackingIssues(ctx context.Context, cli *graphql.Client, org string, trackingIssues []*Issue) ([]*Issue, []*PullRequest, error)\n```\n\nLoadTrackingIssues returns all issues and pull requests which are relevant to the given set of tracking issues in the given organization. The result of this function may be a superset of objects that should be rendered for the tracking issue. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#RenderTrackingIssue",
+              "documentation": {
+                "identifier": "RenderTrackingIssue",
+                "newPage": false,
+                "searchKey": "main.RenderTrackingIssue",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RenderTrackingIssue(context IssueContext) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RenderTrackingIssue(context IssueContext) string\n```\n\nRenderTrackingIssue renders the work section of the given tracking issue. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#Resolve",
+              "documentation": {
+                "identifier": "Resolve",
+                "newPage": false,
+                "searchKey": "main.Resolve",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Resolve(trackingIssues, issues []*Issue, pullRequests []*PullRequest) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Resolve(trackingIssues, issues []*Issue, pullRequests []*PullRequest) error\n```\n\nResolve will populate the relationship fields of the registered issues and pull requests objects. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#SortByIntegerKeyPair",
+              "documentation": {
+                "identifier": "SortByIntegerKeyPair",
+                "newPage": false,
+                "searchKey": "main.SortByIntegerKeyPair",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SortByIntegerKeyPair(parts []MarkdownByIntegerKeyPair) (markdown []string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SortByIntegerKeyPair(parts []MarkdownByIntegerKeyPair) (markdown []string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#TestIntegration",
+              "documentation": {
+                "identifier": "TestIntegration",
+                "newPage": false,
+                "searchKey": "main.TestIntegration",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIntegration(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIntegration(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1774,6 +1858,7 @@
                 "newPage": false,
                 "searchKey": "main.categorizeCustomerIssue",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1796,6 +1881,7 @@
                 "newPage": false,
                 "searchKey": "main.categorizeLabels",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1812,20 +1898,46 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/tracking-issue#LoadIssues",
+              "pathID": "/internal/cmd/tracking-issue#categorizeSecurityIssue",
               "documentation": {
-                "identifier": "LoadIssues",
+                "identifier": "categorizeSecurityIssue",
                 "newPage": false,
-                "searchKey": "main.LoadIssues",
-                "tags": null
+                "searchKey": "main.categorizeSecurityIssue",
+                "tags": [
+                  "method",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func LoadIssues(ctx context.Context, cli *graphql.Client, queries []string) (issues []*Issue, pullRequests []*PullRequest, err error)"
+                "value": "func categorizeSecurityIssue(labels []string, repository, body string, categories map[string]string)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc LoadIssues(ctx context.Context, cli *graphql.Client, queries []string) (issues []*Issue, pullRequests []*PullRequest, err error)\n```\n\nLoadIssues will load all issues and pull requests matching the configured queries by making multiple queries in parallel and merging and deduplicating the result. Tracking issues are filtered out of the resulting issues list. \n\n"
+                "value": "```Go\nfunc categorizeSecurityIssue(labels []string, repository, body string, categories map[string]string)\n```\n\ncategorizeSecurityIssue adds a security emoji if the repository matches sourcegraph/security-issues. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#checkForCycles",
+              "documentation": {
+                "identifier": "checkForCycles",
+                "newPage": false,
+                "searchKey": "main.checkForCycles",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkForCycles(trackingIssues, issues []*Issue, pullRequests []*PullRequest) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkForCycles(trackingIssues, issues []*Issue, pullRequests []*PullRequest) error\n```\n\ncheckForCycles checks for a cycle over the tracked issues relationship in the set of resolved issues. We currently check this condition because the rendering pass does not check for cycles and can create an infinite loop. \n\n"
               },
               "children": null
             }
@@ -1838,6 +1950,7 @@
                 "newPage": false,
                 "searchKey": "main.chunkQueries",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1854,56 +1967,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/tracking-issue#loadIssues",
-              "documentation": {
-                "identifier": "loadIssues",
-                "newPage": false,
-                "searchKey": "main.loadIssues",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func loadIssues(ctx context.Context, cli *graphql.Client, queries []string) (issues []*Issue, pullRequests []*PullRequest, _ error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc loadIssues(ctx context.Context, cli *graphql.Client, queries []string) (issues []*Issue, pullRequests []*PullRequest, _ error)\n```\n\nloadIssues will load all issues and pull requests matching the configured queries. Tracking issues are filtered out of the resulting issues list. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#makeFragmentArgs",
-              "documentation": {
-                "identifier": "makeFragmentArgs",
-                "newPage": false,
-                "searchKey": "main.makeFragmentArgs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func makeFragmentArgs(n int) (fragments []string, args [][]string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc makeFragmentArgs(n int) (fragments []string, args [][]string)\n```\n\nmakeFragmentArgs makes `n` named GraphQL fragment and an associated set of variables. This is used to later construct a GraphQL request with a subset of these queries. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/cmd/tracking-issue#contains",
               "documentation": {
                 "identifier": "contains",
                 "newPage": false,
                 "searchKey": "main.contains",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1920,216 +1990,46 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/tracking-issue#nonTrackingLabels",
+              "pathID": "/internal/cmd/tracking-issue#deduplicateIssues",
               "documentation": {
-                "identifier": "nonTrackingLabels",
+                "identifier": "deduplicateIssues",
                 "newPage": false,
-                "searchKey": "main.nonTrackingLabels",
+                "searchKey": "main.deduplicateIssues",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func nonTrackingLabels(labels []string) (filtered []string)"
+                "value": "func deduplicateIssues(issues []*Issue) (deduplicated []*Issue)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc nonTrackingLabels(labels []string) (filtered []string)\n```\n\n"
+                "value": "```Go\nfunc deduplicateIssues(issues []*Issue) (deduplicated []*Issue)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/cmd/tracking-issue#redactLabels",
+              "pathID": "/internal/cmd/tracking-issue#deduplicatePullRequests",
               "documentation": {
-                "identifier": "redactLabels",
+                "identifier": "deduplicatePullRequests",
                 "newPage": false,
-                "searchKey": "main.redactLabels",
+                "searchKey": "main.deduplicatePullRequests",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func redactLabels(labels []string) (redacted []string)"
+                "value": "func deduplicatePullRequests(pullRequests []*PullRequest) (deduplicated []*PullRequest)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc redactLabels(labels []string) (redacted []string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#main",
-              "documentation": {
-                "identifier": "main",
-                "newPage": false,
-                "searchKey": "main.main",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func main()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc main()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#run",
-              "documentation": {
-                "identifier": "run",
-                "newPage": false,
-                "searchKey": "main.run",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func run(token, org string, dry, verbose bool) (err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc run(token, org string, dry, verbose bool) (err error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#testAll",
-              "documentation": {
-                "identifier": "testAll",
-                "newPage": false,
-                "searchKey": "main.testAll",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testAll(tests ...bool) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testAll(tests ...bool) bool\n```\n\ntestAll returns true if all of the given values are true. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#RenderTrackingIssue",
-              "documentation": {
-                "identifier": "RenderTrackingIssue",
-                "newPage": false,
-                "searchKey": "main.RenderTrackingIssue",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func RenderTrackingIssue(context IssueContext) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc RenderTrackingIssue(context IssueContext) string\n```\n\nRenderTrackingIssue renders the work section of the given tracking issue. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#findAssignees",
-              "documentation": {
-                "identifier": "findAssignees",
-                "newPage": false,
-                "searchKey": "main.findAssignees",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func findAssignees(context IssueContext) (assignees []string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc findAssignees(context IssueContext) (assignees []string)\n```\n\nfindAssignees returns the list of assignees for the given tracking issue. A user is an assignee for a tracking issue if there is a _leaf_ (non-tracking) issue or a pull request with that user as the assignee or author, respectively. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#SortByIntegerKeyPair",
-              "documentation": {
-                "identifier": "SortByIntegerKeyPair",
-                "newPage": false,
-                "searchKey": "main.SortByIntegerKeyPair",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SortByIntegerKeyPair(parts []MarkdownByIntegerKeyPair) (markdown []string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SortByIntegerKeyPair(parts []MarkdownByIntegerKeyPair) (markdown []string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#renderPullRequest",
-              "documentation": {
-                "identifier": "renderPullRequest",
-                "newPage": false,
-                "searchKey": "main.renderPullRequest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func renderPullRequest(pullRequest *PullRequest) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc renderPullRequest(pullRequest *PullRequest) string\n```\n\nrenderPullRequest returns the given pull request rendered in markdown. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#estimateFromLabelSets",
-              "documentation": {
-                "identifier": "estimateFromLabelSets",
-                "newPage": false,
-                "searchKey": "main.estimateFromLabelSets",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func estimateFromLabelSets(labels [][]string) (days float64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc estimateFromLabelSets(labels [][]string) (days float64)\n```\n\nestimateFromLabelSets returns the sum of `estimate/` labels in the given label sets. \n\n"
+                "value": "```Go\nfunc deduplicatePullRequests(pullRequests []*PullRequest) (deduplicated []*PullRequest)\n```\n\n"
               },
               "children": null
             }
@@ -2142,6 +2042,7 @@
                 "newPage": false,
                 "searchKey": "main.estimateFromLabelSet",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2158,20 +2059,115 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/tracking-issue#Resolve",
+              "pathID": "/internal/cmd/tracking-issue#estimateFromLabelSets",
               "documentation": {
-                "identifier": "Resolve",
+                "identifier": "estimateFromLabelSets",
                 "newPage": false,
-                "searchKey": "main.Resolve",
-                "tags": null
+                "searchKey": "main.estimateFromLabelSets",
+                "tags": [
+                  "method",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func Resolve(trackingIssues, issues []*Issue, pullRequests []*PullRequest) error"
+                "value": "func estimateFromLabelSets(labels [][]string) (days float64)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc Resolve(trackingIssues, issues []*Issue, pullRequests []*PullRequest) error\n```\n\nResolve will populate the relationship fields of the registered issues and pull requests objects. \n\n"
+                "value": "```Go\nfunc estimateFromLabelSets(labels [][]string) (days float64)\n```\n\nestimateFromLabelSets returns the sum of `estimate/` labels in the given label sets. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#findAssignees",
+              "documentation": {
+                "identifier": "findAssignees",
+                "newPage": false,
+                "searchKey": "main.findAssignees",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func findAssignees(context IssueContext) (assignees []string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc findAssignees(context IssueContext) (assignees []string)\n```\n\nfindAssignees returns the list of assignees for the given tracking issue. A user is an assignee for a tracking issue if there is a _leaf_ (non-tracking) issue or a pull request with that user as the assignee or author, respectively. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#formatTimeSince",
+              "documentation": {
+                "identifier": "formatTimeSince",
+                "newPage": false,
+                "searchKey": "main.formatTimeSince",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func formatTimeSince(t time.Time) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc formatTimeSince(t time.Time) string\n```\n\nformatTimeSince will return a string containing the number of days since the given time. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#getOrUpdateLastUpdateTime",
+              "documentation": {
+                "identifier": "getOrUpdateLastUpdateTime",
+                "newPage": false,
+                "searchKey": "main.getOrUpdateLastUpdateTime",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getOrUpdateLastUpdateTime(update bool) (time.Time, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getOrUpdateLastUpdateTime(update bool) (time.Time, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#indexOf",
+              "documentation": {
+                "identifier": "indexOf",
+                "newPage": false,
+                "searchKey": "main.indexOf",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func indexOf(s, marker string) (int, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc indexOf(s, marker string) (int, bool)\n```\n\n"
               },
               "children": null
             }
@@ -2184,6 +2180,7 @@
                 "newPage": false,
                 "searchKey": "main.linkPullRequestsAndIssues",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2206,6 +2203,7 @@
                 "newPage": false,
                 "searchKey": "main.linkTrackingIssues",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2222,44 +2220,92 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/tracking-issue#checkForCycles",
+              "pathID": "/internal/cmd/tracking-issue#loadIssues",
               "documentation": {
-                "identifier": "checkForCycles",
+                "identifier": "loadIssues",
                 "newPage": false,
-                "searchKey": "main.checkForCycles",
+                "searchKey": "main.loadIssues",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func checkForCycles(trackingIssues, issues []*Issue, pullRequests []*PullRequest) error"
+                "value": "func loadIssues(ctx context.Context, cli *graphql.Client, queries []string) (issues []*Issue, pullRequests []*PullRequest, _ error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc checkForCycles(trackingIssues, issues []*Issue, pullRequests []*PullRequest) error\n```\n\ncheckForCycles checks for a cycle over the tracked issues relationship in the set of resolved issues. We currently check this condition because the rendering pass does not check for cycles and can create an infinite loop. \n\n"
+                "value": "```Go\nfunc loadIssues(ctx context.Context, cli *graphql.Client, queries []string) (issues []*Issue, pullRequests []*PullRequest, _ error)\n```\n\nloadIssues will load all issues and pull requests matching the configured queries. Tracking issues are filtered out of the resulting issues list. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/cmd/tracking-issue#visitNode",
+              "pathID": "/internal/cmd/tracking-issue#main",
               "documentation": {
-                "identifier": "visitNode",
+                "identifier": "main",
                 "newPage": false,
-                "searchKey": "main.visitNode",
+                "searchKey": "main.main",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func visitNode(issue *Issue, visited map[string]struct{}) bool"
+                "value": "func main()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc visitNode(issue *Issue, visited map[string]struct{}) bool\n```\n\nvisitNode performs a depth-first-search over tracked issues relationships. This function will return false if the traversal encounters a node that has already been visited. \n\n"
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#makeFragmentArgs",
+              "documentation": {
+                "identifier": "makeFragmentArgs",
+                "newPage": false,
+                "searchKey": "main.makeFragmentArgs",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeFragmentArgs(n int) (fragments []string, args [][]string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeFragmentArgs(n int) (fragments []string, args [][]string)\n```\n\nmakeFragmentArgs makes `n` named GraphQL fragment and an associated set of variables. This is used to later construct a GraphQL request with a subset of these queries. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#makeQueries",
+              "documentation": {
+                "identifier": "makeQueries",
+                "newPage": false,
+                "searchKey": "main.makeQueries",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeQueries(org string, trackingIssues []*Issue) (queries []string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeQueries(org string, trackingIssues []*Issue) (queries []string)\n```\n\nmakeQueries returns a set of search queries that, when queried together, should return all of the relevant issue and pull requests for the given tracking issues. \n\n"
               },
               "children": null
             }
@@ -2272,6 +2318,7 @@
                 "newPage": false,
                 "searchKey": "main.makeSearchQuery",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2288,154 +2335,69 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/tracking-issue#unmarshalSearchNodes",
+              "pathID": "/internal/cmd/tracking-issue#matchingIssues",
               "documentation": {
-                "identifier": "unmarshalSearchNodes",
+                "identifier": "matchingIssues",
                 "newPage": false,
-                "searchKey": "main.unmarshalSearchNodes",
+                "searchKey": "main.matchingIssues",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func unmarshalSearchNodes(nodes []SearchNode) (issues []*Issue, prs []*PullRequest)"
+                "value": "func matchingIssues(trackingIssue *Issue, issues []*Issue, matcher *Matcher) (matchingIssues []*Issue)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc unmarshalSearchNodes(nodes []SearchNode) (issues []*Issue, prs []*PullRequest)\n```\n\nunmarshalSearchNodes unmarshals the given nodes into a list of issues and a list of pull requests. \n\n"
+                "value": "```Go\nfunc matchingIssues(trackingIssue *Issue, issues []*Issue, matcher *Matcher) (matchingIssues []*Issue)\n```\n\nmatchingIssues returns the given issues that match the given matcher. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/cmd/tracking-issue#partition",
+              "pathID": "/internal/cmd/tracking-issue#matchingPullRequests",
               "documentation": {
-                "identifier": "partition",
+                "identifier": "matchingPullRequests",
                 "newPage": false,
-                "searchKey": "main.partition",
+                "searchKey": "main.matchingPullRequests",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func partition(s, beginMarker, endMarker string) (string, string, string, bool)"
+                "value": "func matchingPullRequests(pullRequests []*PullRequest, matcher *Matcher) (matchingPullRequests []*PullRequest)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc partition(s, beginMarker, endMarker string) (string, string, string, bool)\n```\n\n"
+                "value": "```Go\nfunc matchingPullRequests(pullRequests []*PullRequest, matcher *Matcher) (matchingPullRequests []*PullRequest)\n```\n\nmatchingPullRequests returns the given pull requests that match the given matcher. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/cmd/tracking-issue#indexOf",
+              "pathID": "/internal/cmd/tracking-issue#matchingTrackingIssues",
               "documentation": {
-                "identifier": "indexOf",
+                "identifier": "matchingTrackingIssues",
                 "newPage": false,
-                "searchKey": "main.indexOf",
+                "searchKey": "main.matchingTrackingIssues",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func indexOf(s, marker string) (int, bool)"
+                "value": "func matchingTrackingIssues(trackingIssue *Issue, issues []*Issue, pullRequests []*PullRequest, matcher *Matcher) (matchingTrackingIssues []*Issue)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc indexOf(s, marker string) (int, bool)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#formatTimeSince",
-              "documentation": {
-                "identifier": "formatTimeSince",
-                "newPage": false,
-                "searchKey": "main.formatTimeSince",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func formatTimeSince(t time.Time) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc formatTimeSince(t time.Time) string\n```\n\nformatTimeSince will return a string containing the number of days since the given time. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#updateIssues",
-              "documentation": {
-                "identifier": "updateIssues",
-                "newPage": false,
-                "searchKey": "main.updateIssues",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func updateIssues(ctx context.Context, cli *graphql.Client, issues []*Issue) (err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc updateIssues(ctx context.Context, cli *graphql.Client, issues []*Issue) (err error)\n```\n\nupdateIssues will update the body of each of the given issues. Each issue update is performed as a separate GraphQL query over multiple goroutines (one per logical processor). The returned error value, if any, will be an aggregate of errors over all requests. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#updateIssue",
-              "documentation": {
-                "identifier": "updateIssue",
-                "newPage": false,
-                "searchKey": "main.updateIssue",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func updateIssue(ctx context.Context, cli *graphql.Client, issue *Issue) (err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc updateIssue(ctx context.Context, cli *graphql.Client, issue *Issue) (err error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#TestIntegration",
-              "documentation": {
-                "identifier": "TestIntegration",
-                "newPage": false,
-                "searchKey": "main.TestIntegration",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIntegration(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIntegration(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc matchingTrackingIssues(trackingIssue *Issue, issues []*Issue, pullRequests []*PullRequest, matcher *Matcher) (matchingTrackingIssues []*Issue)\n```\n\nmatchingTrackingIssues returns the given tracking issues that match the matcher and do not track only a `team/*` label. \n\n"
               },
               "children": null
             }
@@ -2448,6 +2410,7 @@
                 "newPage": false,
                 "searchKey": "main.mockLastUpdate",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2464,66 +2427,46 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/tracking-issue#getOrUpdateLastUpdateTime",
+              "pathID": "/internal/cmd/tracking-issue#nonTrackingLabels",
               "documentation": {
-                "identifier": "getOrUpdateLastUpdateTime",
+                "identifier": "nonTrackingLabels",
                 "newPage": false,
-                "searchKey": "main.getOrUpdateLastUpdateTime",
+                "searchKey": "main.nonTrackingLabels",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func getOrUpdateLastUpdateTime(update bool) (time.Time, error)"
+                "value": "func nonTrackingLabels(labels []string) (filtered []string)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc getOrUpdateLastUpdateTime(update bool) (time.Time, error)\n```\n\n"
+                "value": "```Go\nfunc nonTrackingLabels(labels []string) (filtered []string)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/cmd/tracking-issue#testFixtures",
+              "pathID": "/internal/cmd/tracking-issue#partition",
               "documentation": {
-                "identifier": "testFixtures",
+                "identifier": "partition",
                 "newPage": false,
-                "searchKey": "main.testFixtures",
+                "searchKey": "main.partition",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func testFixtures() (trackingIssues []*Issue, issues []*Issue, pullRequests []*PullRequest, _ error)"
+                "value": "func partition(s, beginMarker, endMarker string) (string, string, string, bool)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc testFixtures() (trackingIssues []*Issue, issues []*Issue, pullRequests []*PullRequest, _ error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/tracking-issue#updateTestFixtures",
-              "documentation": {
-                "identifier": "updateTestFixtures",
-                "newPage": false,
-                "searchKey": "main.updateTestFixtures",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func updateTestFixtures() (trackingIssues []*Issue, issues []*Issue, pullRequests []*PullRequest, _ error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc updateTestFixtures() (trackingIssues []*Issue, issues []*Issue, pullRequests []*PullRequest, _ error)\n```\n\n"
+                "value": "```Go\nfunc partition(s, beginMarker, endMarker string) (string, string, string, bool)\n```\n\n"
               },
               "children": null
             }
@@ -2536,6 +2479,7 @@
                 "newPage": false,
                 "searchKey": "main.readFixturesFile",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -2552,12 +2496,243 @@
           },
           {
             "node": {
+              "pathID": "/internal/cmd/tracking-issue#redactLabels",
+              "documentation": {
+                "identifier": "redactLabels",
+                "newPage": false,
+                "searchKey": "main.redactLabels",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func redactLabels(labels []string) (redacted []string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc redactLabels(labels []string) (redacted []string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#renderPullRequest",
+              "documentation": {
+                "identifier": "renderPullRequest",
+                "newPage": false,
+                "searchKey": "main.renderPullRequest",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func renderPullRequest(pullRequest *PullRequest) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc renderPullRequest(pullRequest *PullRequest) string\n```\n\nrenderPullRequest returns the given pull request rendered in markdown. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#run",
+              "documentation": {
+                "identifier": "run",
+                "newPage": false,
+                "searchKey": "main.run",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func run(token, org string, dry, verbose bool) (err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc run(token, org string, dry, verbose bool) (err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#testAll",
+              "documentation": {
+                "identifier": "testAll",
+                "newPage": false,
+                "searchKey": "main.testAll",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testAll(tests ...bool) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testAll(tests ...bool) bool\n```\n\ntestAll returns true if all of the given values are true. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#testFixtures",
+              "documentation": {
+                "identifier": "testFixtures",
+                "newPage": false,
+                "searchKey": "main.testFixtures",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testFixtures() (trackingIssues []*Issue, issues []*Issue, pullRequests []*PullRequest, _ error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testFixtures() (trackingIssues []*Issue, issues []*Issue, pullRequests []*PullRequest, _ error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#unmarshalSearchNodes",
+              "documentation": {
+                "identifier": "unmarshalSearchNodes",
+                "newPage": false,
+                "searchKey": "main.unmarshalSearchNodes",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func unmarshalSearchNodes(nodes []SearchNode) (issues []*Issue, prs []*PullRequest)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc unmarshalSearchNodes(nodes []SearchNode) (issues []*Issue, prs []*PullRequest)\n```\n\nunmarshalSearchNodes unmarshals the given nodes into a list of issues and a list of pull requests. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#updateIssue",
+              "documentation": {
+                "identifier": "updateIssue",
+                "newPage": false,
+                "searchKey": "main.updateIssue",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func updateIssue(ctx context.Context, cli *graphql.Client, issue *Issue) (err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc updateIssue(ctx context.Context, cli *graphql.Client, issue *Issue) (err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#updateIssues",
+              "documentation": {
+                "identifier": "updateIssues",
+                "newPage": false,
+                "searchKey": "main.updateIssues",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func updateIssues(ctx context.Context, cli *graphql.Client, issues []*Issue) (err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc updateIssues(ctx context.Context, cli *graphql.Client, issues []*Issue) (err error)\n```\n\nupdateIssues will update the body of each of the given issues. Each issue update is performed as a separate GraphQL query over multiple goroutines (one per logical processor). The returned error value, if any, will be an aggregate of errors over all requests. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#updateTestFixtures",
+              "documentation": {
+                "identifier": "updateTestFixtures",
+                "newPage": false,
+                "searchKey": "main.updateTestFixtures",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func updateTestFixtures() (trackingIssues []*Issue, issues []*Issue, pullRequests []*PullRequest, _ error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc updateTestFixtures() (trackingIssues []*Issue, issues []*Issue, pullRequests []*PullRequest, _ error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/tracking-issue#visitNode",
+              "documentation": {
+                "identifier": "visitNode",
+                "newPage": false,
+                "searchKey": "main.visitNode",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func visitNode(issue *Issue, visited map[string]struct{}) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc visitNode(issue *Issue, visited map[string]struct{}) bool\n```\n\nvisitNode performs a depth-first-search over tracked issues relationships. This function will return false if the traversal encounters a node that has already been visited. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/cmd/tracking-issue#writeFixturesFile",
               "documentation": {
                 "identifier": "writeFixturesFile",
                 "newPage": false,
                 "searchKey": "main.writeFixturesFile",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },

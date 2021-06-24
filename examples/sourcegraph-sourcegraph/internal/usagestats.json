@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/usagestats",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,86 +41,23 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/usagestats#keyPrefix",
+              "pathID": "/internal/usagestats#All",
               "documentation": {
-                "identifier": "keyPrefix",
+                "identifier": "All",
                 "newPage": false,
-                "searchKey": "usagestats.keyPrefix",
+                "searchKey": "usagestats.All",
                 "tags": [
-                  "private"
+                  "constant",
+                  "string"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const keyPrefix"
+                "value": "const All"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst keyPrefix = \"user_activity:\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#fSearchOccurred",
-              "documentation": {
-                "identifier": "fSearchOccurred",
-                "newPage": false,
-                "searchKey": "usagestats.fSearchOccurred",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const fSearchOccurred"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst fSearchOccurred = \"searchoccurred\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#fFindRefsOccurred",
-              "documentation": {
-                "identifier": "fFindRefsOccurred",
-                "newPage": false,
-                "searchKey": "usagestats.fFindRefsOccurred",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const fFindRefsOccurred"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst fFindRefsOccurred = \"findrefsoccurred\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#Hour",
-              "documentation": {
-                "identifier": "Hour",
-                "newPage": false,
-                "searchKey": "usagestats.Hour",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const Hour"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst Hour TimeWindow = \"hour\"\n```\n\n"
+                "value": "```Go\nconst All SettingFilter = \"all\"\n```\n\n"
               },
               "children": null
             }
@@ -130,7 +69,10 @@
                 "identifier": "Day",
                 "newPage": false,
                 "searchKey": "usagestats.Day",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -145,20 +87,23 @@
           },
           {
             "node": {
-              "pathID": "/internal/usagestats#Week",
+              "pathID": "/internal/usagestats#Hour",
               "documentation": {
-                "identifier": "Week",
+                "identifier": "Hour",
                 "newPage": false,
-                "searchKey": "usagestats.Week",
-                "tags": null
+                "searchKey": "usagestats.Hour",
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const Week"
+                "value": "const Hour"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst Week TimeWindow = \"week\"\n```\n\n"
+                "value": "```Go\nconst Hour TimeWindow = \"hour\"\n```\n\n"
               },
               "children": null
             }
@@ -170,7 +115,10 @@
                 "identifier": "Month",
                 "newPage": false,
                 "searchKey": "usagestats.Month",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -185,54 +133,15 @@
           },
           {
             "node": {
-              "pathID": "/internal/usagestats#Year",
-              "documentation": {
-                "identifier": "Year",
-                "newPage": false,
-                "searchKey": "usagestats.Year",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const Year"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst Year TimeWindow = \"year\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#templatePingQueryStr",
-              "documentation": {
-                "identifier": "templatePingQueryStr",
-                "newPage": false,
-                "searchKey": "usagestats.templatePingQueryStr",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const templatePingQueryStr"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst templatePingQueryStr = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/usagestats#Org",
               "documentation": {
                 "identifier": "Org",
                 "newPage": false,
                 "searchKey": "usagestats.Org",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -252,7 +161,10 @@
                 "identifier": "User",
                 "newPage": false,
                 "searchKey": "usagestats.User",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -267,20 +179,46 @@
           },
           {
             "node": {
-              "pathID": "/internal/usagestats#All",
+              "pathID": "/internal/usagestats#Week",
               "documentation": {
-                "identifier": "All",
+                "identifier": "Week",
                 "newPage": false,
-                "searchKey": "usagestats.All",
-                "tags": null
+                "searchKey": "usagestats.Week",
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const All"
+                "value": "const Week"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst All SettingFilter = \"all\"\n```\n\n"
+                "value": "```Go\nconst Week TimeWindow = \"week\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#Year",
+              "documentation": {
+                "identifier": "Year",
+                "newPage": false,
+                "searchKey": "usagestats.Year",
+                "tags": [
+                  "constant",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Year"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Year TimeWindow = \"year\"\n```\n\n"
               },
               "children": null
             }
@@ -293,6 +231,8 @@
                 "newPage": false,
                 "searchKey": "usagestats.defaultDays",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -309,34 +249,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/usagestats#defaultWeeks",
-              "documentation": {
-                "identifier": "defaultWeeks",
-                "newPage": false,
-                "searchKey": "usagestats.defaultWeeks",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const defaultWeeks"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst defaultWeeks = 10\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/usagestats#defaultMonths",
               "documentation": {
                 "identifier": "defaultMonths",
                 "newPage": false,
                 "searchKey": "usagestats.defaultMonths",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -353,22 +273,72 @@
           },
           {
             "node": {
-              "pathID": "/internal/usagestats#maxStorageDays",
+              "pathID": "/internal/usagestats#defaultWeeks",
               "documentation": {
-                "identifier": "maxStorageDays",
+                "identifier": "defaultWeeks",
                 "newPage": false,
-                "searchKey": "usagestats.maxStorageDays",
+                "searchKey": "usagestats.defaultWeeks",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const maxStorageDays"
+                "value": "const defaultWeeks"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst maxStorageDays = 93\n```\n\n"
+                "value": "```Go\nconst defaultWeeks = 10\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#fFindRefsOccurred",
+              "documentation": {
+                "identifier": "fFindRefsOccurred",
+                "newPage": false,
+                "searchKey": "usagestats.fFindRefsOccurred",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fFindRefsOccurred"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fFindRefsOccurred = \"findrefsoccurred\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#fSearchOccurred",
+              "documentation": {
+                "identifier": "fSearchOccurred",
+                "newPage": false,
+                "searchKey": "usagestats.fSearchOccurred",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fSearchOccurred"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fSearchOccurred = \"searchoccurred\"\n```\n\n"
               },
               "children": null
             }
@@ -381,6 +351,8 @@
                 "newPage": false,
                 "searchKey": "usagestats.getHomepagePanelsQuery",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -397,56 +369,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/usagestats#insightSettingSimple",
-              "documentation": {
-                "identifier": "insightSettingSimple",
-                "newPage": false,
-                "searchKey": "usagestats.insightSettingSimple",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const insightSettingSimple"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst insightSettingSimple = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#insightSettingMulti",
-              "documentation": {
-                "identifier": "insightSettingMulti",
-                "newPage": false,
-                "searchKey": "usagestats.insightSettingMulti",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const insightSettingMulti"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst insightSettingMulti = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/usagestats#insightAloneSettingStr",
               "documentation": {
                 "identifier": "insightAloneSettingStr",
                 "newPage": false,
                 "searchKey": "usagestats.insightAloneSettingStr",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -469,6 +399,8 @@
                 "newPage": false,
                 "searchKey": "usagestats.insightInlineSettingStr",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -485,12 +417,86 @@
           },
           {
             "node": {
+              "pathID": "/internal/usagestats#insightSettingMulti",
+              "documentation": {
+                "identifier": "insightSettingMulti",
+                "newPage": false,
+                "searchKey": "usagestats.insightSettingMulti",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const insightSettingMulti"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst insightSettingMulti = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#insightSettingSimple",
+              "documentation": {
+                "identifier": "insightSettingSimple",
+                "newPage": false,
+                "searchKey": "usagestats.insightSettingSimple",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const insightSettingSimple"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst insightSettingSimple = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#keyPrefix",
+              "documentation": {
+                "identifier": "keyPrefix",
+                "newPage": false,
+                "searchKey": "usagestats.keyPrefix",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const keyPrefix"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst keyPrefix = \"user_activity:\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/usagestats#langStatsInsightSettingStr",
               "documentation": {
                 "identifier": "langStatsInsightSettingStr",
                 "newPage": false,
                 "searchKey": "usagestats.langStatsInsightSettingStr",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -501,6 +507,54 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst langStatsInsightSettingStr = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#maxStorageDays",
+              "documentation": {
+                "identifier": "maxStorageDays",
+                "newPage": false,
+                "searchKey": "usagestats.maxStorageDays",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxStorageDays"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxStorageDays = 93\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#templatePingQueryStr",
+              "documentation": {
+                "identifier": "templatePingQueryStr",
+                "newPage": false,
+                "searchKey": "usagestats.templatePingQueryStr",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const templatePingQueryStr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst templatePingQueryStr = ...\n```\n\n"
               },
               "children": null
             }
@@ -516,6 +570,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -530,12 +585,37 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/usagestats#MockGetByUserID",
+              "documentation": {
+                "identifier": "MockGetByUserID",
+                "newPage": false,
+                "searchKey": "usagestats.MockGetByUserID",
+                "tags": [
+                  "variable",
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockGetByUserID"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockGetByUserID func(userID int32) (*types.UserUsageStatistics, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/usagestats#actionMap",
               "documentation": {
                 "identifier": "actionMap",
                 "newPage": false,
                 "searchKey": "usagestats.actionMap",
                 "tags": [
+                  "variable",
+                  "object",
                   "private"
                 ]
               },
@@ -552,122 +632,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/usagestats#sourceMap",
-              "documentation": {
-                "identifier": "sourceMap",
-                "newPage": false,
-                "searchKey": "usagestats.sourceMap",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var sourceMap"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar sourceMap = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#searchLatencyExtractors",
-              "documentation": {
-                "identifier": "searchLatencyExtractors",
-                "newPage": false,
-                "searchKey": "usagestats.searchLatencyExtractors",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var searchLatencyExtractors"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar searchLatencyExtractors = ...\n```\n\nutility functions that resolve a SearchEventStatistics value for a given event name for some SearchUsagePeriod. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#searchFilterCountExtractors",
-              "documentation": {
-                "identifier": "searchFilterCountExtractors",
-                "newPage": false,
-                "searchKey": "usagestats.searchFilterCountExtractors",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var searchFilterCountExtractors"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar searchFilterCountExtractors = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#pool",
-              "documentation": {
-                "identifier": "pool",
-                "newPage": false,
-                "searchKey": "usagestats.pool",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var pool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar pool = redispool.Store\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#searchOccurred",
-              "documentation": {
-                "identifier": "searchOccurred",
-                "newPage": false,
-                "searchKey": "usagestats.searchOccurred",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var searchOccurred"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar searchOccurred int32\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/usagestats#findRefsOccurred",
               "documentation": {
                 "identifier": "findRefsOccurred",
                 "newPage": false,
                 "searchKey": "usagestats.findRefsOccurred",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -684,12 +656,38 @@
           },
           {
             "node": {
+              "pathID": "/internal/usagestats#pool",
+              "documentation": {
+                "identifier": "pool",
+                "newPage": false,
+                "searchKey": "usagestats.pool",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var pool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar pool = redispool.Store\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/usagestats#pubSubDotComEventsTopicID",
               "documentation": {
                 "identifier": "pubSubDotComEventsTopicID",
                 "newPage": false,
                 "searchKey": "usagestats.pubSubDotComEventsTopicID",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -706,12 +704,110 @@
           },
           {
             "node": {
+              "pathID": "/internal/usagestats#searchFilterCountExtractors",
+              "documentation": {
+                "identifier": "searchFilterCountExtractors",
+                "newPage": false,
+                "searchKey": "usagestats.searchFilterCountExtractors",
+                "tags": [
+                  "variable",
+                  "object",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var searchFilterCountExtractors"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar searchFilterCountExtractors = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#searchLatencyExtractors",
+              "documentation": {
+                "identifier": "searchLatencyExtractors",
+                "newPage": false,
+                "searchKey": "usagestats.searchLatencyExtractors",
+                "tags": [
+                  "variable",
+                  "object",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var searchLatencyExtractors"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar searchLatencyExtractors = ...\n```\n\nutility functions that resolve a SearchEventStatistics value for a given event name for some SearchUsagePeriod. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#searchOccurred",
+              "documentation": {
+                "identifier": "searchOccurred",
+                "newPage": false,
+                "searchKey": "usagestats.searchOccurred",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var searchOccurred"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar searchOccurred int32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#sourceMap",
+              "documentation": {
+                "identifier": "sourceMap",
+                "newPage": false,
+                "searchKey": "usagestats.sourceMap",
+                "tags": [
+                  "variable",
+                  "object",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sourceMap"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sourceMap = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/usagestats#timeNow",
               "documentation": {
                 "identifier": "timeNow",
                 "newPage": false,
                 "searchKey": "usagestats.timeNow",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
@@ -722,26 +818,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar timeNow = time.Now\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#MockGetByUserID",
-              "documentation": {
-                "identifier": "MockGetByUserID",
-                "newPage": false,
-                "searchKey": "usagestats.MockGetByUserID",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var MockGetByUserID"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar MockGetByUserID func(userID int32) (*types.UserUsageStatistics, error)\n```\n\n"
               },
               "children": null
             }
@@ -757,6 +833,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -771,12 +848,80 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/usagestats#Event",
+              "documentation": {
+                "identifier": "Event",
+                "newPage": false,
+                "searchKey": "usagestats.Event",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Event struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Event struct {\n\tEventName    string\n\tUserID       int32\n\tUserCookieID string\n\t// FirstSourceURL is only measured for Cloud events; therefore, this only goes to the BigQuery database\n\t// and does not go to the Postgres DB.\n\tFirstSourceURL *string\n\tURL            string\n\tSource         string\n\tFeatureFlags   featureflag.FlagSet\n\tCohortID       *string\n\tArgument       json.RawMessage\n}\n```\n\nEvent represents a request to log telemetry. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#Interval",
+              "documentation": {
+                "identifier": "Interval",
+                "newPage": false,
+                "searchKey": "usagestats.Interval",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Interval struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Interval struct {\n\tYears  *int\n\tMonths *int\n\tWeeks  *int\n\tDays   *int\n\tHours  *int\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#LangStatsInsight",
+              "documentation": {
+                "identifier": "LangStatsInsight",
+                "newPage": false,
+                "searchKey": "usagestats.LangStatsInsight",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type LangStatsInsight struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype LangStatsInsight struct {\n\tID             string\n\tTitle          string\n\tRepository     string\n\tOtherThreshold float32\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/usagestats#PingQueryBuilder",
               "documentation": {
                 "identifier": "PingQueryBuilder",
                 "newPage": false,
                 "searchKey": "usagestats.PingQueryBuilder",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -789,12 +934,35 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/internal/usagestats#NewPingBuilder",
+                    "documentation": {
+                      "identifier": "NewPingBuilder",
+                      "newPage": false,
+                      "searchKey": "usagestats.NewPingBuilder",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewPingBuilder(timeWindow TimeWindow, timeSupplier func() time.Time) PingQueryBuilder"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewPingBuilder(timeWindow TimeWindow, timeSupplier func() time.Time) PingQueryBuilder\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/usagestats#creationPagesPingBuilder",
                     "documentation": {
                       "identifier": "creationPagesPingBuilder",
                       "newPage": false,
                       "searchKey": "usagestats.creationPagesPingBuilder",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -811,40 +979,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/usagestats#NewPingBuilder",
+                    "pathID": "/internal/usagestats#PingQueryBuilder.Sample",
                     "documentation": {
-                      "identifier": "NewPingBuilder",
+                      "identifier": "PingQueryBuilder.Sample",
                       "newPage": false,
-                      "searchKey": "usagestats.NewPingBuilder",
-                      "tags": null
+                      "searchKey": "usagestats.PingQueryBuilder.Sample",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func NewPingBuilder(timeWindow TimeWindow, timeSupplier func() time.Time) PingQueryBuilder"
+                      "value": "func (b *PingQueryBuilder) Sample(ctx context.Context, db dbutil.DB) ([]types.AggregatedPingStats, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc NewPingBuilder(timeWindow TimeWindow, timeSupplier func() time.Time) PingQueryBuilder\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/usagestats#PingQueryBuilder.WithAll",
-                    "documentation": {
-                      "identifier": "PingQueryBuilder.WithAll",
-                      "newPage": false,
-                      "searchKey": "usagestats.PingQueryBuilder.WithAll",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *PingQueryBuilder) WithAll(pings []types.PingName) *PingQueryBuilder"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *PingQueryBuilder) WithAll(pings []types.PingName) *PingQueryBuilder\n```\n\nWithAll adds multiple pings by name to this builder \n\n"
+                      "value": "```Go\nfunc (b *PingQueryBuilder) Sample(ctx context.Context, db dbutil.DB) ([]types.AggregatedPingStats, error)\n```\n\nSample executes the derived query generated by this builder and returns a sample at the current time \n\n"
                     },
                     "children": null
                   }
@@ -856,7 +1006,9 @@
                       "identifier": "PingQueryBuilder.With",
                       "newPage": false,
                       "searchKey": "usagestats.PingQueryBuilder.With",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -871,20 +1023,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/usagestats#PingQueryBuilder.Sample",
+                    "pathID": "/internal/usagestats#PingQueryBuilder.WithAll",
                     "documentation": {
-                      "identifier": "PingQueryBuilder.Sample",
+                      "identifier": "PingQueryBuilder.WithAll",
                       "newPage": false,
-                      "searchKey": "usagestats.PingQueryBuilder.Sample",
-                      "tags": null
+                      "searchKey": "usagestats.PingQueryBuilder.WithAll",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (b *PingQueryBuilder) Sample(ctx context.Context, db dbutil.DB) ([]types.AggregatedPingStats, error)"
+                      "value": "func (b *PingQueryBuilder) WithAll(pings []types.PingName) *PingQueryBuilder"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (b *PingQueryBuilder) Sample(ctx context.Context, db dbutil.DB) ([]types.AggregatedPingStats, error)\n```\n\nSample executes the derived query generated by this builder and returns a sample at the current time \n\n"
+                      "value": "```Go\nfunc (b *PingQueryBuilder) WithAll(pings []types.PingName) *PingQueryBuilder\n```\n\nWithAll adds multiple pings by name to this builder \n\n"
                     },
                     "children": null
                   }
@@ -894,174 +1048,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/usagestats#TimeWindow",
-              "documentation": {
-                "identifier": "TimeWindow",
-                "newPage": false,
-                "searchKey": "usagestats.TimeWindow",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type TimeWindow string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype TimeWindow string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#TimeSeries",
-              "documentation": {
-                "identifier": "TimeSeries",
-                "newPage": false,
-                "searchKey": "usagestats.TimeSeries",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type TimeSeries struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype TimeSeries struct {\n\tName   string\n\tStroke string\n\tQuery  string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#Interval",
-              "documentation": {
-                "identifier": "Interval",
-                "newPage": false,
-                "searchKey": "usagestats.Interval",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Interval struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Interval struct {\n\tYears  *int\n\tMonths *int\n\tWeeks  *int\n\tDays   *int\n\tHours  *int\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#SearchInsight",
-              "documentation": {
-                "identifier": "SearchInsight",
-                "newPage": false,
-                "searchKey": "usagestats.SearchInsight",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type SearchInsight struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype SearchInsight struct {\n\tID           string\n\tTitle        string\n\tRepositories []string\n\tSeries       []TimeSeries\n\tStep         Interval\n\tVisibility   string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#LangStatsInsight",
-              "documentation": {
-                "identifier": "LangStatsInsight",
-                "newPage": false,
-                "searchKey": "usagestats.LangStatsInsight",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type LangStatsInsight struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype LangStatsInsight struct {\n\tID             string\n\tTitle          string\n\tRepository     string\n\tOtherThreshold float32\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#SettingFilter",
-              "documentation": {
-                "identifier": "SettingFilter",
-                "newPage": false,
-                "searchKey": "usagestats.SettingFilter",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type SettingFilter string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype SettingFilter string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#Event",
-              "documentation": {
-                "identifier": "Event",
-                "newPage": false,
-                "searchKey": "usagestats.Event",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Event struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Event struct {\n\tEventName    string\n\tUserID       int32\n\tUserCookieID string\n\t// FirstSourceURL is only measured for Cloud events; therefore, this only goes to the BigQuery database\n\t// and does not go to the Postgres DB.\n\tFirstSourceURL *string\n\tURL            string\n\tSource         string\n\tFeatureFlags   featureflag.FlagSet\n\tCohortID       *string\n\tArgument       json.RawMessage\n}\n```\n\nEvent represents a request to log telemetry. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#bigQueryEvent",
-              "documentation": {
-                "identifier": "bigQueryEvent",
-                "newPage": false,
-                "searchKey": "usagestats.bigQueryEvent",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type bigQueryEvent struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype bigQueryEvent struct {\n\tEventName       string  `json:\"name\"`\n\tAnonymousUserID string  `json:\"anonymous_user_id\"`\n\tFirstSourceURL  string  `json:\"first_source_url\"`\n\tUserID          int     `json:\"user_id\"`\n\tSource          string  `json:\"source\"`\n\tTimestamp       string  `json:\"timestamp\"`\n\tVersion         string  `json:\"version\"`\n\tFeatureFlags    string  `json:\"feature_flags\"`\n\tCohortID        *string `json:\"cohort_id,omitempty\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/usagestats#Repositories",
               "documentation": {
                 "identifier": "Repositories",
                 "newPage": false,
                 "searchKey": "usagestats.Repositories",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1079,7 +1073,9 @@
                       "identifier": "GetRepositories",
                       "newPage": false,
                       "searchKey": "usagestats.GetRepositories",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1097,12 +1093,58 @@
           },
           {
             "node": {
+              "pathID": "/internal/usagestats#SearchInsight",
+              "documentation": {
+                "identifier": "SearchInsight",
+                "newPage": false,
+                "searchKey": "usagestats.SearchInsight",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SearchInsight struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SearchInsight struct {\n\tID           string\n\tTitle        string\n\tRepositories []string\n\tSeries       []TimeSeries\n\tStep         Interval\n\tVisibility   string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#SettingFilter",
+              "documentation": {
+                "identifier": "SettingFilter",
+                "newPage": false,
+                "searchKey": "usagestats.SettingFilter",
+                "tags": [
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SettingFilter string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SettingFilter string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/usagestats#SiteUsageStatisticsOptions",
               "documentation": {
                 "identifier": "SiteUsageStatisticsOptions",
                 "newPage": false,
                 "searchKey": "usagestats.SiteUsageStatisticsOptions",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1111,6 +1153,73 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\ntype SiteUsageStatisticsOptions struct {\n\tDayPeriods   *int\n\tWeekPeriods  *int\n\tMonthPeriods *int\n}\n```\n\nSiteUsageStatisticsOptions contains options for the number of daily, weekly, and monthly periods in which to calculate the number of unique users (i.e., how many days of Daily Active Users, or DAUs, how many weeks of Weekly Active Users, or WAUs, and how many months of Monthly Active Users, or MAUs). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#TimeSeries",
+              "documentation": {
+                "identifier": "TimeSeries",
+                "newPage": false,
+                "searchKey": "usagestats.TimeSeries",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TimeSeries struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TimeSeries struct {\n\tName   string\n\tStroke string\n\tQuery  string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#TimeWindow",
+              "documentation": {
+                "identifier": "TimeWindow",
+                "newPage": false,
+                "searchKey": "usagestats.TimeWindow",
+                "tags": [
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TimeWindow string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TimeWindow string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#bigQueryEvent",
+              "documentation": {
+                "identifier": "bigQueryEvent",
+                "newPage": false,
+                "searchKey": "usagestats.bigQueryEvent",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type bigQueryEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype bigQueryEvent struct {\n\tEventName       string  `json:\"name\"`\n\tAnonymousUserID string  `json:\"anonymous_user_id\"`\n\tFirstSourceURL  string  `json:\"first_source_url\"`\n\tUserID          int     `json:\"user_id\"`\n\tSource          string  `json:\"source\"`\n\tTimestamp       string  `json:\"timestamp\"`\n\tVersion         string  `json:\"version\"`\n\tFeatureFlags    string  `json:\"feature_flags\"`\n\tCohortID        *string `json:\"cohort_id,omitempty\"`\n}\n```\n\n"
               },
               "children": null
             }
@@ -1126,6 +1235,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -1140,42 +1250,22 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/usagestats#GetSiteUsageStats",
+              "pathID": "/internal/usagestats#FilterSettingJson",
               "documentation": {
-                "identifier": "GetSiteUsageStats",
+                "identifier": "FilterSettingJson",
                 "newPage": false,
-                "searchKey": "usagestats.GetSiteUsageStats",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetSiteUsageStats(ctx context.Context, db dbutil.DB, monthsOnly bool) (*types.SiteUsageStatistics, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetSiteUsageStats(ctx context.Context, db dbutil.DB, monthsOnly bool) (*types.SiteUsageStatistics, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#groupSiteUsageStats",
-              "documentation": {
-                "identifier": "groupSiteUsageStats",
-                "newPage": false,
-                "searchKey": "usagestats.groupSiteUsageStats",
+                "searchKey": "usagestats.FilterSettingJson",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func groupSiteUsageStats(summary types.SiteUsageSummary, monthsOnly bool) *types.SiteUsageStatistics"
+                "value": "func FilterSettingJson(settingJson string, prefix string) (map[string]json.RawMessage, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc groupSiteUsageStats(summary types.SiteUsageSummary, monthsOnly bool) *types.SiteUsageStatistics\n```\n\n"
+                "value": "```Go\nfunc FilterSettingJson(settingJson string, prefix string) (map[string]json.RawMessage, error)\n```\n\nFilterSettingJson will return a json map that only contains keys that match a prefix string, mapped to the keyed contents. \n\n"
               },
               "children": null
             }
@@ -1187,7 +1277,9 @@
                 "identifier": "GetAggregatedCodeIntelStats",
                 "newPage": false,
                 "searchKey": "usagestats.GetAggregatedCodeIntelStats",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1202,12 +1294,1203 @@
           },
           {
             "node": {
+              "pathID": "/internal/usagestats#GetAggregatedSearchStats",
+              "documentation": {
+                "identifier": "GetAggregatedSearchStats",
+                "newPage": false,
+                "searchKey": "usagestats.GetAggregatedSearchStats",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetAggregatedSearchStats(ctx context.Context, db dbutil.DB) (*types.SearchUsageStatistics, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetAggregatedSearchStats(ctx context.Context, db dbutil.DB) (*types.SearchUsageStatistics, error)\n```\n\nGetAggregatedSearchStats queries the database for search usage and returns the aggregates statistics in the format of our BigQuery schema. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#GetArchive",
+              "documentation": {
+                "identifier": "GetArchive",
+                "newPage": false,
+                "searchKey": "usagestats.GetArchive",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetArchive(ctx context.Context, db dbutil.DB) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetArchive(ctx context.Context, db dbutil.DB) ([]byte, error)\n```\n\nGetArchive generates and returns a usage statistics ZIP archive containing the CSV files defined in RFC 145, or an error in case of failure. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#GetBatchChangesUsageStatistics",
+              "documentation": {
+                "identifier": "GetBatchChangesUsageStatistics",
+                "newPage": false,
+                "searchKey": "usagestats.GetBatchChangesUsageStatistics",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetBatchChangesUsageStatistics(ctx context.Context, db dbutil.DB) (*types.BatchChangesUsageStatistics, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetBatchChangesUsageStatistics(ctx context.Context, db dbutil.DB) (*types.BatchChangesUsageStatistics, error)\n```\n\nGetBatchChangesUsageStatistics returns the current site's batch changes usage. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#GetByUserID",
+              "documentation": {
+                "identifier": "GetByUserID",
+                "newPage": false,
+                "searchKey": "usagestats.GetByUserID",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetByUserID(ctx context.Context, db dbutil.DB, userID int32) (*types.UserUsageStatistics, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetByUserID(ctx context.Context, db dbutil.DB, userID int32) (*types.UserUsageStatistics, error)\n```\n\nGetByUserID returns a single user's UserUsageStatistics. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#GetCodeInsightsUsageStatistics",
+              "documentation": {
+                "identifier": "GetCodeInsightsUsageStatistics",
+                "newPage": false,
+                "searchKey": "usagestats.GetCodeInsightsUsageStatistics",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetCodeInsightsUsageStatistics(ctx context.Context, db dbutil.DB) (*types.CodeInsightsUsageStatistics, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetCodeInsightsUsageStatistics(ctx context.Context, db dbutil.DB) (*types.CodeInsightsUsageStatistics, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#GetCodeMonitoringUsageStatistics",
+              "documentation": {
+                "identifier": "GetCodeMonitoringUsageStatistics",
+                "newPage": false,
+                "searchKey": "usagestats.GetCodeMonitoringUsageStatistics",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetCodeMonitoringUsageStatistics(ctx context.Context, db dbutil.DB) (*types.CodeMonitoringUsageStatistics, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetCodeMonitoringUsageStatistics(ctx context.Context, db dbutil.DB) (*types.CodeMonitoringUsageStatistics, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#GetCreationViewUsage",
+              "documentation": {
+                "identifier": "GetCreationViewUsage",
+                "newPage": false,
+                "searchKey": "usagestats.GetCreationViewUsage",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetCreationViewUsage(ctx context.Context, db dbutil.DB, timeSupplier func() time.Time) ([]types.AggregatedPingStats, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetCreationViewUsage(ctx context.Context, db dbutil.DB, timeSupplier func() time.Time) ([]types.AggregatedPingStats, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#GetExtensionsUsageStatistics",
+              "documentation": {
+                "identifier": "GetExtensionsUsageStatistics",
+                "newPage": false,
+                "searchKey": "usagestats.GetExtensionsUsageStatistics",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetExtensionsUsageStatistics(ctx context.Context, db dbutil.DB) (*types.ExtensionsUsageStatistics, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetExtensionsUsageStatistics(ctx context.Context, db dbutil.DB) (*types.ExtensionsUsageStatistics, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#GetGrowthStatistics",
+              "documentation": {
+                "identifier": "GetGrowthStatistics",
+                "newPage": false,
+                "searchKey": "usagestats.GetGrowthStatistics",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetGrowthStatistics(ctx context.Context, db dbutil.DB) (*types.GrowthStatistics, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetGrowthStatistics(ctx context.Context, db dbutil.DB) (*types.GrowthStatistics, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#GetHomepagePanels",
+              "documentation": {
+                "identifier": "GetHomepagePanels",
+                "newPage": false,
+                "searchKey": "usagestats.GetHomepagePanels",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetHomepagePanels(ctx context.Context, db dbutil.DB) (*types.HomepagePanels, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetHomepagePanels(ctx context.Context, db dbutil.DB) (*types.HomepagePanels, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#GetLangStatsInsights",
+              "documentation": {
+                "identifier": "GetLangStatsInsights",
+                "newPage": false,
+                "searchKey": "usagestats.GetLangStatsInsights",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetLangStatsInsights(ctx context.Context, db dbutil.DB, filter SettingFilter) ([]LangStatsInsight, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetLangStatsInsights(ctx context.Context, db dbutil.DB, filter SettingFilter) ([]LangStatsInsight, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#GetOrgInsightCounts",
+              "documentation": {
+                "identifier": "GetOrgInsightCounts",
+                "newPage": false,
+                "searchKey": "usagestats.GetOrgInsightCounts",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetOrgInsightCounts(ctx context.Context, db dbutil.DB) ([]types.OrgVisibleInsightPing, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetOrgInsightCounts(ctx context.Context, db dbutil.DB) ([]types.OrgVisibleInsightPing, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#GetRetentionStatistics",
+              "documentation": {
+                "identifier": "GetRetentionStatistics",
+                "newPage": false,
+                "searchKey": "usagestats.GetRetentionStatistics",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetRetentionStatistics(ctx context.Context, db dbutil.DB) (*types.RetentionStats, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetRetentionStatistics(ctx context.Context, db dbutil.DB) (*types.RetentionStats, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#GetSavedSearches",
+              "documentation": {
+                "identifier": "GetSavedSearches",
+                "newPage": false,
+                "searchKey": "usagestats.GetSavedSearches",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetSavedSearches(ctx context.Context, db dbutil.DB) (*types.SavedSearches, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetSavedSearches(ctx context.Context, db dbutil.DB) (*types.SavedSearches, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#GetSearchInsights",
+              "documentation": {
+                "identifier": "GetSearchInsights",
+                "newPage": false,
+                "searchKey": "usagestats.GetSearchInsights",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetSearchInsights(ctx context.Context, db dbutil.DB, filter SettingFilter) ([]SearchInsight, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetSearchInsights(ctx context.Context, db dbutil.DB, filter SettingFilter) ([]SearchInsight, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#GetSearchOnboarding",
+              "documentation": {
+                "identifier": "GetSearchOnboarding",
+                "newPage": false,
+                "searchKey": "usagestats.GetSearchOnboarding",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetSearchOnboarding(ctx context.Context, db dbutil.DB) (*types.SearchOnboarding, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetSearchOnboarding(ctx context.Context, db dbutil.DB) (*types.SearchOnboarding, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#GetSettings",
+              "documentation": {
+                "identifier": "GetSettings",
+                "newPage": false,
+                "searchKey": "usagestats.GetSettings",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetSettings(ctx context.Context, db dbutil.DB, filter SettingFilter, prefix string) ([]*api.Settings, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetSettings(ctx context.Context, db dbutil.DB, filter SettingFilter, prefix string) ([]*api.Settings, error)\n```\n\nGetSettings returns all settings on the Sourcegraph installation that can be filtered by a type. This is useful for generating aggregates for code insights which are currently stored in the settings. 🚨 SECURITY: This method bypasses any user permissions to fetch a list of all settings on the Sourcegraph installation. It is used for generating aggregated analytics that require an accurate view across all settings, such as for code insights🚨 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#GetSiteUsageStatistics",
+              "documentation": {
+                "identifier": "GetSiteUsageStatistics",
+                "newPage": false,
+                "searchKey": "usagestats.GetSiteUsageStatistics",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetSiteUsageStatistics(ctx context.Context, db dbutil.DB, opt *SiteUsageStatisticsOptions) (*types.SiteUsageStatistics, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetSiteUsageStatistics(ctx context.Context, db dbutil.DB, opt *SiteUsageStatisticsOptions) (*types.SiteUsageStatistics, error)\n```\n\nGetSiteUsageStatistics returns the current site's SiteActivity. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#GetSiteUsageStats",
+              "documentation": {
+                "identifier": "GetSiteUsageStats",
+                "newPage": false,
+                "searchKey": "usagestats.GetSiteUsageStats",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetSiteUsageStats(ctx context.Context, db dbutil.DB, monthsOnly bool) (*types.SiteUsageStatistics, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetSiteUsageStats(ctx context.Context, db dbutil.DB, monthsOnly bool) (*types.SiteUsageStatistics, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#GetTimeStepCounts",
+              "documentation": {
+                "identifier": "GetTimeStepCounts",
+                "newPage": false,
+                "searchKey": "usagestats.GetTimeStepCounts",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetTimeStepCounts(ctx context.Context, db dbutil.DB) ([]types.InsightTimeIntervalPing, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetTimeStepCounts(ctx context.Context, db dbutil.DB) ([]types.InsightTimeIntervalPing, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#GetUsersActiveTodayCount",
+              "documentation": {
+                "identifier": "GetUsersActiveTodayCount",
+                "newPage": false,
+                "searchKey": "usagestats.GetUsersActiveTodayCount",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetUsersActiveTodayCount(ctx context.Context, db dbutil.DB) (int, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetUsersActiveTodayCount(ctx context.Context, db dbutil.DB) (int, error)\n```\n\nGetUsersActiveTodayCount returns a count of users that have been active today. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#HasFindRefsOccurred",
+              "documentation": {
+                "identifier": "HasFindRefsOccurred",
+                "newPage": false,
+                "searchKey": "usagestats.HasFindRefsOccurred",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HasFindRefsOccurred(ctx context.Context) (bool, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HasFindRefsOccurred(ctx context.Context) (bool, error)\n```\n\nHasFindRefsOccurred indicates whether a find-refs has ever occurred on this instance. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#HasSearchOccurred",
+              "documentation": {
+                "identifier": "HasSearchOccurred",
+                "newPage": false,
+                "searchKey": "usagestats.HasSearchOccurred",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HasSearchOccurred(ctx context.Context) (bool, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HasSearchOccurred(ctx context.Context) (bool, error)\n```\n\nHasSearchOccurred indicates whether a search has ever occurred on this instance. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#ListRegisteredUsersThisMonth",
+              "documentation": {
+                "identifier": "ListRegisteredUsersThisMonth",
+                "newPage": false,
+                "searchKey": "usagestats.ListRegisteredUsersThisMonth",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ListRegisteredUsersThisMonth(ctx context.Context, db dbutil.DB) ([]int32, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ListRegisteredUsersThisMonth(ctx context.Context, db dbutil.DB) ([]int32, error)\n```\n\nListRegisteredUsersThisMonth returns a list of the registered users that were active this month. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#ListRegisteredUsersThisWeek",
+              "documentation": {
+                "identifier": "ListRegisteredUsersThisWeek",
+                "newPage": false,
+                "searchKey": "usagestats.ListRegisteredUsersThisWeek",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ListRegisteredUsersThisWeek(ctx context.Context, db dbutil.DB) ([]int32, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ListRegisteredUsersThisWeek(ctx context.Context, db dbutil.DB) ([]int32, error)\n```\n\nListRegisteredUsersThisWeek returns a list of the registered users that were active this week. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#ListRegisteredUsersToday",
+              "documentation": {
+                "identifier": "ListRegisteredUsersToday",
+                "newPage": false,
+                "searchKey": "usagestats.ListRegisteredUsersToday",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ListRegisteredUsersToday(ctx context.Context, db dbutil.DB) ([]int32, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ListRegisteredUsersToday(ctx context.Context, db dbutil.DB) ([]int32, error)\n```\n\nListRegisteredUsersToday returns a list of the registered users that were active today. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#LogBackendEvent",
+              "documentation": {
+                "identifier": "LogBackendEvent",
+                "newPage": false,
+                "searchKey": "usagestats.LogBackendEvent",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func LogBackendEvent(db dbutil.DB, userID int32, eventName string, argument json.RawMessage, featureFlags featureflag.FlagSet, cohortID *string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc LogBackendEvent(db dbutil.DB, userID int32, eventName string, argument json.RawMessage, featureFlags featureflag.FlagSet, cohortID *string) error\n```\n\nLogBackendEvent is a convenience function for logging backend events. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#LogEvent",
+              "documentation": {
+                "identifier": "LogEvent",
+                "newPage": false,
+                "searchKey": "usagestats.LogEvent",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func LogEvent(ctx context.Context, db dbutil.DB, args Event) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc LogEvent(ctx context.Context, db dbutil.DB, args Event) error\n```\n\nLogEvent logs an event. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#TestCodeInsightsUsageStatistics",
+              "documentation": {
+                "identifier": "TestCodeInsightsUsageStatistics",
+                "newPage": false,
+                "searchKey": "usagestats.TestCodeInsightsUsageStatistics",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCodeInsightsUsageStatistics(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCodeInsightsUsageStatistics(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#TestCodeMonitoringUsageStatistics",
+              "documentation": {
+                "identifier": "TestCodeMonitoringUsageStatistics",
+                "newPage": false,
+                "searchKey": "usagestats.TestCodeMonitoringUsageStatistics",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCodeMonitoringUsageStatistics(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCodeMonitoringUsageStatistics(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#TestExtensionsUsageStatistics",
+              "documentation": {
+                "identifier": "TestExtensionsUsageStatistics",
+                "newPage": false,
+                "searchKey": "usagestats.TestExtensionsUsageStatistics",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExtensionsUsageStatistics(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExtensionsUsageStatistics(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#TestFilterSettingJson",
+              "documentation": {
+                "identifier": "TestFilterSettingJson",
+                "newPage": false,
+                "searchKey": "usagestats.TestFilterSettingJson",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFilterSettingJson(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFilterSettingJson(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#TestGetArchive",
+              "documentation": {
+                "identifier": "TestGetArchive",
+                "newPage": false,
+                "searchKey": "usagestats.TestGetArchive",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetArchive(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetArchive(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#TestGetBatchChangesUsageStatistics",
+              "documentation": {
+                "identifier": "TestGetBatchChangesUsageStatistics",
+                "newPage": false,
+                "searchKey": "usagestats.TestGetBatchChangesUsageStatistics",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetBatchChangesUsageStatistics(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetBatchChangesUsageStatistics(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#TestGetLangStatsInsights",
+              "documentation": {
+                "identifier": "TestGetLangStatsInsights",
+                "newPage": false,
+                "searchKey": "usagestats.TestGetLangStatsInsights",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetLangStatsInsights(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetLangStatsInsights(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#TestGetSearchInsights",
+              "documentation": {
+                "identifier": "TestGetSearchInsights",
+                "newPage": false,
+                "searchKey": "usagestats.TestGetSearchInsights",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetSearchInsights(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetSearchInsights(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#TestGroupAggregateSearchStats",
+              "documentation": {
+                "identifier": "TestGroupAggregateSearchStats",
+                "newPage": false,
+                "searchKey": "usagestats.TestGroupAggregateSearchStats",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGroupAggregateSearchStats(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGroupAggregateSearchStats(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#TestGroupAggregatedCodeIntelStats",
+              "documentation": {
+                "identifier": "TestGroupAggregatedCodeIntelStats",
+                "newPage": false,
+                "searchKey": "usagestats.TestGroupAggregatedCodeIntelStats",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGroupAggregatedCodeIntelStats(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGroupAggregatedCodeIntelStats(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#TestGroupSiteUsageStats",
+              "documentation": {
+                "identifier": "TestGroupSiteUsageStats",
+                "newPage": false,
+                "searchKey": "usagestats.TestGroupSiteUsageStats",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGroupSiteUsageStats(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGroupSiteUsageStats(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#TestGroupSiteUsageStatsMonthsOnly",
+              "documentation": {
+                "identifier": "TestGroupSiteUsageStatsMonthsOnly",
+                "newPage": false,
+                "searchKey": "usagestats.TestGroupSiteUsageStatsMonthsOnly",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGroupSiteUsageStatsMonthsOnly(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGroupSiteUsageStatsMonthsOnly(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#TestMain",
+              "documentation": {
+                "identifier": "TestMain",
+                "newPage": false,
+                "searchKey": "usagestats.TestMain",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMain(m *testing.M)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#TestRetentionUsageStatistics",
+              "documentation": {
+                "identifier": "TestRetentionUsageStatistics",
+                "newPage": false,
+                "searchKey": "usagestats.TestRetentionUsageStatistics",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRetentionUsageStatistics(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRetentionUsageStatistics(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#TestUserUsageStatistics_DAUs_WAUs_MAUs",
+              "documentation": {
+                "identifier": "TestUserUsageStatistics_DAUs_WAUs_MAUs",
+                "newPage": false,
+                "searchKey": "usagestats.TestUserUsageStatistics_DAUs_WAUs_MAUs",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUserUsageStatistics_DAUs_WAUs_MAUs(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUserUsageStatistics_DAUs_WAUs_MAUs(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#TestUserUsageStatistics_LogCodeHostIntegrationUsage",
+              "documentation": {
+                "identifier": "TestUserUsageStatistics_LogCodeHostIntegrationUsage",
+                "newPage": false,
+                "searchKey": "usagestats.TestUserUsageStatistics_LogCodeHostIntegrationUsage",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUserUsageStatistics_LogCodeHostIntegrationUsage(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUserUsageStatistics_LogCodeHostIntegrationUsage(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#TestUserUsageStatistics_LogCodeIntelAction",
+              "documentation": {
+                "identifier": "TestUserUsageStatistics_LogCodeIntelAction",
+                "newPage": false,
+                "searchKey": "usagestats.TestUserUsageStatistics_LogCodeIntelAction",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUserUsageStatistics_LogCodeIntelAction(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUserUsageStatistics_LogCodeIntelAction(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#TestUserUsageStatistics_LogPageView",
+              "documentation": {
+                "identifier": "TestUserUsageStatistics_LogPageView",
+                "newPage": false,
+                "searchKey": "usagestats.TestUserUsageStatistics_LogPageView",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUserUsageStatistics_LogPageView(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUserUsageStatistics_LogPageView(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#TestUserUsageStatistics_LogSearchQuery",
+              "documentation": {
+                "identifier": "TestUserUsageStatistics_LogSearchQuery",
+                "newPage": false,
+                "searchKey": "usagestats.TestUserUsageStatistics_LogSearchQuery",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUserUsageStatistics_LogSearchQuery(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUserUsageStatistics_LogSearchQuery(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#TestUserUsageStatistics_None",
+              "documentation": {
+                "identifier": "TestUserUsageStatistics_None",
+                "newPage": false,
+                "searchKey": "usagestats.TestUserUsageStatistics_None",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUserUsageStatistics_None(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUserUsageStatistics_None(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#TestUserUsageStatistics_getUsersActiveToday",
+              "documentation": {
+                "identifier": "TestUserUsageStatistics_getUsersActiveToday",
+                "newPage": false,
+                "searchKey": "usagestats.TestUserUsageStatistics_getUsersActiveToday",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUserUsageStatistics_getUsersActiveToday(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUserUsageStatistics_getUsersActiveToday(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#TestWithCreationPings",
+              "documentation": {
+                "identifier": "TestWithCreationPings",
+                "newPage": false,
+                "searchKey": "usagestats.TestWithCreationPings",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWithCreationPings(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWithCreationPings(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#activeUsers",
+              "documentation": {
+                "identifier": "activeUsers",
+                "newPage": false,
+                "searchKey": "usagestats.activeUsers",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func activeUsers(ctx context.Context, db dbutil.DB, periodType database.PeriodType, periods int) ([]*types.SiteActivityPeriod, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc activeUsers(ctx context.Context, db dbutil.DB, periodType database.PeriodType, periods int) ([]*types.SiteActivityPeriod, error)\n```\n\nactiveUsers returns counts of active users in the given number of days, weeks, or months, as selected (including the current, partially completed period). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#convertStepToDays",
+              "documentation": {
+                "identifier": "convertStepToDays",
+                "newPage": false,
+                "searchKey": "usagestats.convertStepToDays",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func convertStepToDays(insight SearchInsight) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc convertStepToDays(insight SearchInsight) int\n```\n\nconvertStepToDays converts the step interval defined in the insight settings to days, rounded down \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/usagestats#groupAggregatedCodeIntelStats",
               "documentation": {
                 "identifier": "groupAggregatedCodeIntelStats",
                 "newPage": false,
                 "searchKey": "usagestats.groupAggregatedCodeIntelStats",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1224,32 +2507,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/usagestats#GetAggregatedSearchStats",
-              "documentation": {
-                "identifier": "GetAggregatedSearchStats",
-                "newPage": false,
-                "searchKey": "usagestats.GetAggregatedSearchStats",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetAggregatedSearchStats(ctx context.Context, db dbutil.DB) (*types.SearchUsageStatistics, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetAggregatedSearchStats(ctx context.Context, db dbutil.DB) (*types.SearchUsageStatistics, error)\n```\n\nGetAggregatedSearchStats queries the database for search usage and returns the aggregates statistics in the format of our BigQuery schema. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/usagestats#groupAggregatedSearchStats",
               "documentation": {
                 "identifier": "groupAggregatedSearchStats",
                 "newPage": false,
                 "searchKey": "usagestats.groupAggregatedSearchStats",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1266,44 +2530,207 @@
           },
           {
             "node": {
-              "pathID": "/internal/usagestats#populateSearchEventStatistics",
+              "pathID": "/internal/usagestats#groupSiteUsageStats",
               "documentation": {
-                "identifier": "populateSearchEventStatistics",
+                "identifier": "groupSiteUsageStats",
                 "newPage": false,
-                "searchKey": "usagestats.populateSearchEventStatistics",
+                "searchKey": "usagestats.groupSiteUsageStats",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func populateSearchEventStatistics(event types.SearchAggregatedEvent, statistics *types.SearchUsageStatistics)"
+                "value": "func groupSiteUsageStats(summary types.SiteUsageSummary, monthsOnly bool) *types.SiteUsageStatistics"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc populateSearchEventStatistics(event types.SearchAggregatedEvent, statistics *types.SearchUsageStatistics)\n```\n\npopulateSearchEventStatistics is a side-effecting function that populates the `statistics` object. The `statistics` event value is our target output type. \n\nOverview how it works: (1) To populate the `statistics` object, we expect an event to have a supported event.Name. \n\n(2) Create a SearchUsagePeriod target object based on the event's period (i.e., Month, Week, Day). \n\n(3) Use the SearchUsagePeriod object as an argument for the utility functions above, to get a handle on the (currently zero-valued) SearchEventStatistics value that it contains that corresponds to that event type. \n\n(4) Populate that SearchEventStatistics object in the SearchUsagePeriod object with usage stats (latencies, etc). \n\n"
+                "value": "```Go\nfunc groupSiteUsageStats(summary types.SiteUsageSummary, monthsOnly bool) *types.SiteUsageStatistics\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/usagestats#populateSearchFilterCountStatistics",
+              "pathID": "/internal/usagestats#init.main_test.go",
               "documentation": {
-                "identifier": "populateSearchFilterCountStatistics",
+                "identifier": "init.main_test.go",
                 "newPage": false,
-                "searchKey": "usagestats.populateSearchFilterCountStatistics",
+                "searchKey": "usagestats.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func populateSearchFilterCountStatistics(event types.SearchAggregatedEvent, statistics *types.SearchUsageStatistics)"
+                "value": "func init()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc populateSearchFilterCountStatistics(event types.SearchAggregatedEvent, statistics *types.SearchUsageStatistics)\n```\n\n"
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#int32Ptr",
+              "documentation": {
+                "identifier": "int32Ptr",
+                "newPage": false,
+                "searchKey": "usagestats.int32Ptr",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func int32Ptr(v int) *int32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc int32Ptr(v int) *int32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#logLocalEvent",
+              "documentation": {
+                "identifier": "logLocalEvent",
+                "newPage": false,
+                "searchKey": "usagestats.logLocalEvent",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func logLocalEvent(ctx context.Context, db dbutil.DB, name, url string, userID int32, userCookieID, source string, argument json.RawMessage, featureFlags featureflag.FlagSet, cohortID *string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc logLocalEvent(ctx context.Context, db dbutil.DB, name, url string, userID int32, userCookieID, source string, argument json.RawMessage, featureFlags featureflag.FlagSet, cohortID *string) error\n```\n\nlogLocalEvent logs users events. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#logSiteFindRefsOccurred",
+              "documentation": {
+                "identifier": "logSiteFindRefsOccurred",
+                "newPage": false,
+                "searchKey": "usagestats.logSiteFindRefsOccurred",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func logSiteFindRefsOccurred() error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc logSiteFindRefsOccurred() error\n```\n\nlogSiteFindRefsOccurred records that a search has occurred on the Sourcegraph instance. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#logSiteSearchOccurred",
+              "documentation": {
+                "identifier": "logSiteSearchOccurred",
+                "newPage": false,
+                "searchKey": "usagestats.logSiteSearchOccurred",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func logSiteSearchOccurred() error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc logSiteSearchOccurred() error\n```\n\nlogSiteSearchOccurred records that a search has occurred on the Sourcegraph instance. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#minIntOrZero",
+              "documentation": {
+                "identifier": "minIntOrZero",
+                "newPage": false,
+                "searchKey": "usagestats.minIntOrZero",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func minIntOrZero(a, b int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc minIntOrZero(a, b int) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#mockTimeNow",
+              "documentation": {
+                "identifier": "mockTimeNow",
+                "newPage": false,
+                "searchKey": "usagestats.mockTimeNow",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mockTimeNow(t time.Time)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mockTimeNow(t time.Time)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#newSearchCountStatistics",
+              "documentation": {
+                "identifier": "newSearchCountStatistics",
+                "newPage": false,
+                "searchKey": "usagestats.newSearchCountStatistics",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newSearchCountStatistics() *types.SearchCountStatistics"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newSearchCountStatistics() *types.SearchCountStatistics\n```\n\n"
               },
               "children": null
             }
@@ -1316,6 +2743,7 @@
                 "newPage": false,
                 "searchKey": "usagestats.newSearchEventPeriod",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1338,6 +2766,7 @@
                 "newPage": false,
                 "searchKey": "usagestats.newSearchEventStatistics",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1354,34 +2783,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/usagestats#newSearchCountStatistics",
-              "documentation": {
-                "identifier": "newSearchCountStatistics",
-                "newPage": false,
-                "searchKey": "usagestats.newSearchCountStatistics",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func newSearchCountStatistics() *types.SearchCountStatistics"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc newSearchCountStatistics() *types.SearchCountStatistics\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/usagestats#newSearchModeUsageStatistics",
               "documentation": {
                 "identifier": "newSearchModeUsageStatistics",
                 "newPage": false,
                 "searchKey": "usagestats.newSearchModeUsageStatistics",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1398,794 +2806,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/usagestats#int32Ptr",
-              "documentation": {
-                "identifier": "int32Ptr",
-                "newPage": false,
-                "searchKey": "usagestats.int32Ptr",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func int32Ptr(v int) *int32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc int32Ptr(v int) *int32\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#logSiteSearchOccurred",
-              "documentation": {
-                "identifier": "logSiteSearchOccurred",
-                "newPage": false,
-                "searchKey": "usagestats.logSiteSearchOccurred",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func logSiteSearchOccurred() error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc logSiteSearchOccurred() error\n```\n\nlogSiteSearchOccurred records that a search has occurred on the Sourcegraph instance. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#logSiteFindRefsOccurred",
-              "documentation": {
-                "identifier": "logSiteFindRefsOccurred",
-                "newPage": false,
-                "searchKey": "usagestats.logSiteFindRefsOccurred",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func logSiteFindRefsOccurred() error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc logSiteFindRefsOccurred() error\n```\n\nlogSiteFindRefsOccurred records that a search has occurred on the Sourcegraph instance. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#HasSearchOccurred",
-              "documentation": {
-                "identifier": "HasSearchOccurred",
-                "newPage": false,
-                "searchKey": "usagestats.HasSearchOccurred",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func HasSearchOccurred(ctx context.Context) (bool, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc HasSearchOccurred(ctx context.Context) (bool, error)\n```\n\nHasSearchOccurred indicates whether a search has ever occurred on this instance. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#HasFindRefsOccurred",
-              "documentation": {
-                "identifier": "HasFindRefsOccurred",
-                "newPage": false,
-                "searchKey": "usagestats.HasFindRefsOccurred",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func HasFindRefsOccurred(ctx context.Context) (bool, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc HasFindRefsOccurred(ctx context.Context) (bool, error)\n```\n\nHasFindRefsOccurred indicates whether a find-refs has ever occurred on this instance. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#GetBatchChangesUsageStatistics",
-              "documentation": {
-                "identifier": "GetBatchChangesUsageStatistics",
-                "newPage": false,
-                "searchKey": "usagestats.GetBatchChangesUsageStatistics",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetBatchChangesUsageStatistics(ctx context.Context, db dbutil.DB) (*types.BatchChangesUsageStatistics, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetBatchChangesUsageStatistics(ctx context.Context, db dbutil.DB) (*types.BatchChangesUsageStatistics, error)\n```\n\nGetBatchChangesUsageStatistics returns the current site's batch changes usage. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#GetCodeInsightsUsageStatistics",
-              "documentation": {
-                "identifier": "GetCodeInsightsUsageStatistics",
-                "newPage": false,
-                "searchKey": "usagestats.GetCodeInsightsUsageStatistics",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetCodeInsightsUsageStatistics(ctx context.Context, db dbutil.DB) (*types.CodeInsightsUsageStatistics, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetCodeInsightsUsageStatistics(ctx context.Context, db dbutil.DB) (*types.CodeInsightsUsageStatistics, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#GetTimeStepCounts",
-              "documentation": {
-                "identifier": "GetTimeStepCounts",
-                "newPage": false,
-                "searchKey": "usagestats.GetTimeStepCounts",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetTimeStepCounts(ctx context.Context, db dbutil.DB) ([]types.InsightTimeIntervalPing, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetTimeStepCounts(ctx context.Context, db dbutil.DB) ([]types.InsightTimeIntervalPing, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#convertStepToDays",
-              "documentation": {
-                "identifier": "convertStepToDays",
-                "newPage": false,
-                "searchKey": "usagestats.convertStepToDays",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func convertStepToDays(insight SearchInsight) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc convertStepToDays(insight SearchInsight) int\n```\n\nconvertStepToDays converts the step interval defined in the insight settings to days, rounded down \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#GetOrgInsightCounts",
-              "documentation": {
-                "identifier": "GetOrgInsightCounts",
-                "newPage": false,
-                "searchKey": "usagestats.GetOrgInsightCounts",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetOrgInsightCounts(ctx context.Context, db dbutil.DB) ([]types.OrgVisibleInsightPing, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetOrgInsightCounts(ctx context.Context, db dbutil.DB) ([]types.OrgVisibleInsightPing, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#GetCreationViewUsage",
-              "documentation": {
-                "identifier": "GetCreationViewUsage",
-                "newPage": false,
-                "searchKey": "usagestats.GetCreationViewUsage",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetCreationViewUsage(ctx context.Context, db dbutil.DB, timeSupplier func() time.Time) ([]types.AggregatedPingStats, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetCreationViewUsage(ctx context.Context, db dbutil.DB, timeSupplier func() time.Time) ([]types.AggregatedPingStats, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#GetSettings",
-              "documentation": {
-                "identifier": "GetSettings",
-                "newPage": false,
-                "searchKey": "usagestats.GetSettings",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetSettings(ctx context.Context, db dbutil.DB, filter SettingFilter, prefix string) ([]*api.Settings, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetSettings(ctx context.Context, db dbutil.DB, filter SettingFilter, prefix string) ([]*api.Settings, error)\n```\n\nGetSettings returns all settings on the Sourcegraph installation that can be filtered by a type. This is useful for generating aggregates for code insights which are currently stored in the settings. 🚨 SECURITY: This method bypasses any user permissions to fetch a list of all settings on the Sourcegraph installation. It is used for generating aggregated analytics that require an accurate view across all settings, such as for code insights🚨 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#FilterSettingJson",
-              "documentation": {
-                "identifier": "FilterSettingJson",
-                "newPage": false,
-                "searchKey": "usagestats.FilterSettingJson",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func FilterSettingJson(settingJson string, prefix string) (map[string]json.RawMessage, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc FilterSettingJson(settingJson string, prefix string) (map[string]json.RawMessage, error)\n```\n\nFilterSettingJson will return a json map that only contains keys that match a prefix string, mapped to the keyed contents. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#GetSearchInsights",
-              "documentation": {
-                "identifier": "GetSearchInsights",
-                "newPage": false,
-                "searchKey": "usagestats.GetSearchInsights",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetSearchInsights(ctx context.Context, db dbutil.DB, filter SettingFilter) ([]SearchInsight, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetSearchInsights(ctx context.Context, db dbutil.DB, filter SettingFilter) ([]SearchInsight, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#GetLangStatsInsights",
-              "documentation": {
-                "identifier": "GetLangStatsInsights",
-                "newPage": false,
-                "searchKey": "usagestats.GetLangStatsInsights",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetLangStatsInsights(ctx context.Context, db dbutil.DB, filter SettingFilter) ([]LangStatsInsight, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetLangStatsInsights(ctx context.Context, db dbutil.DB, filter SettingFilter) ([]LangStatsInsight, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#GetCodeMonitoringUsageStatistics",
-              "documentation": {
-                "identifier": "GetCodeMonitoringUsageStatistics",
-                "newPage": false,
-                "searchKey": "usagestats.GetCodeMonitoringUsageStatistics",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetCodeMonitoringUsageStatistics(ctx context.Context, db dbutil.DB) (*types.CodeMonitoringUsageStatistics, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetCodeMonitoringUsageStatistics(ctx context.Context, db dbutil.DB) (*types.CodeMonitoringUsageStatistics, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#LogBackendEvent",
-              "documentation": {
-                "identifier": "LogBackendEvent",
-                "newPage": false,
-                "searchKey": "usagestats.LogBackendEvent",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func LogBackendEvent(db dbutil.DB, userID int32, eventName string, argument json.RawMessage, featureFlags featureflag.FlagSet, cohortID *string) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc LogBackendEvent(db dbutil.DB, userID int32, eventName string, argument json.RawMessage, featureFlags featureflag.FlagSet, cohortID *string) error\n```\n\nLogBackendEvent is a convenience function for logging backend events. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#LogEvent",
-              "documentation": {
-                "identifier": "LogEvent",
-                "newPage": false,
-                "searchKey": "usagestats.LogEvent",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func LogEvent(ctx context.Context, db dbutil.DB, args Event) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc LogEvent(ctx context.Context, db dbutil.DB, args Event) error\n```\n\nLogEvent logs an event. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#publishSourcegraphDotComEvent",
-              "documentation": {
-                "identifier": "publishSourcegraphDotComEvent",
-                "newPage": false,
-                "searchKey": "usagestats.publishSourcegraphDotComEvent",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func publishSourcegraphDotComEvent(args Event) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc publishSourcegraphDotComEvent(args Event) error\n```\n\npublishSourcegraphDotComEvent publishes Sourcegraph.com events to BigQuery. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#logLocalEvent",
-              "documentation": {
-                "identifier": "logLocalEvent",
-                "newPage": false,
-                "searchKey": "usagestats.logLocalEvent",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func logLocalEvent(ctx context.Context, db dbutil.DB, name, url string, userID int32, userCookieID, source string, argument json.RawMessage, featureFlags featureflag.FlagSet, cohortID *string) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc logLocalEvent(ctx context.Context, db dbutil.DB, name, url string, userID int32, userCookieID, source string, argument json.RawMessage, featureFlags featureflag.FlagSet, cohortID *string) error\n```\n\nlogLocalEvent logs users events. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#GetExtensionsUsageStatistics",
-              "documentation": {
-                "identifier": "GetExtensionsUsageStatistics",
-                "newPage": false,
-                "searchKey": "usagestats.GetExtensionsUsageStatistics",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetExtensionsUsageStatistics(ctx context.Context, db dbutil.DB) (*types.ExtensionsUsageStatistics, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetExtensionsUsageStatistics(ctx context.Context, db dbutil.DB) (*types.ExtensionsUsageStatistics, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#GetGrowthStatistics",
-              "documentation": {
-                "identifier": "GetGrowthStatistics",
-                "newPage": false,
-                "searchKey": "usagestats.GetGrowthStatistics",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetGrowthStatistics(ctx context.Context, db dbutil.DB) (*types.GrowthStatistics, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetGrowthStatistics(ctx context.Context, db dbutil.DB) (*types.GrowthStatistics, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#GetHomepagePanels",
-              "documentation": {
-                "identifier": "GetHomepagePanels",
-                "newPage": false,
-                "searchKey": "usagestats.GetHomepagePanels",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetHomepagePanels(ctx context.Context, db dbutil.DB) (*types.HomepagePanels, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetHomepagePanels(ctx context.Context, db dbutil.DB) (*types.HomepagePanels, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#GetRetentionStatistics",
-              "documentation": {
-                "identifier": "GetRetentionStatistics",
-                "newPage": false,
-                "searchKey": "usagestats.GetRetentionStatistics",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetRetentionStatistics(ctx context.Context, db dbutil.DB) (*types.RetentionStats, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetRetentionStatistics(ctx context.Context, db dbutil.DB) (*types.RetentionStats, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#GetSavedSearches",
-              "documentation": {
-                "identifier": "GetSavedSearches",
-                "newPage": false,
-                "searchKey": "usagestats.GetSavedSearches",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetSavedSearches(ctx context.Context, db dbutil.DB) (*types.SavedSearches, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetSavedSearches(ctx context.Context, db dbutil.DB) (*types.SavedSearches, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#GetSearchOnboarding",
-              "documentation": {
-                "identifier": "GetSearchOnboarding",
-                "newPage": false,
-                "searchKey": "usagestats.GetSearchOnboarding",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetSearchOnboarding(ctx context.Context, db dbutil.DB) (*types.SearchOnboarding, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetSearchOnboarding(ctx context.Context, db dbutil.DB) (*types.SearchOnboarding, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#GetArchive",
-              "documentation": {
-                "identifier": "GetArchive",
-                "newPage": false,
-                "searchKey": "usagestats.GetArchive",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetArchive(ctx context.Context, db dbutil.DB) ([]byte, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetArchive(ctx context.Context, db dbutil.DB) ([]byte, error)\n```\n\nGetArchive generates and returns a usage statistics ZIP archive containing the CSV files defined in RFC 145, or an error in case of failure. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#GetByUserID",
-              "documentation": {
-                "identifier": "GetByUserID",
-                "newPage": false,
-                "searchKey": "usagestats.GetByUserID",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetByUserID(ctx context.Context, db dbutil.DB, userID int32) (*types.UserUsageStatistics, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetByUserID(ctx context.Context, db dbutil.DB, userID int32) (*types.UserUsageStatistics, error)\n```\n\nGetByUserID returns a single user's UserUsageStatistics. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#GetUsersActiveTodayCount",
-              "documentation": {
-                "identifier": "GetUsersActiveTodayCount",
-                "newPage": false,
-                "searchKey": "usagestats.GetUsersActiveTodayCount",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetUsersActiveTodayCount(ctx context.Context, db dbutil.DB) (int, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetUsersActiveTodayCount(ctx context.Context, db dbutil.DB) (int, error)\n```\n\nGetUsersActiveTodayCount returns a count of users that have been active today. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#ListRegisteredUsersToday",
-              "documentation": {
-                "identifier": "ListRegisteredUsersToday",
-                "newPage": false,
-                "searchKey": "usagestats.ListRegisteredUsersToday",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ListRegisteredUsersToday(ctx context.Context, db dbutil.DB) ([]int32, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ListRegisteredUsersToday(ctx context.Context, db dbutil.DB) ([]int32, error)\n```\n\nListRegisteredUsersToday returns a list of the registered users that were active today. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#ListRegisteredUsersThisWeek",
-              "documentation": {
-                "identifier": "ListRegisteredUsersThisWeek",
-                "newPage": false,
-                "searchKey": "usagestats.ListRegisteredUsersThisWeek",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ListRegisteredUsersThisWeek(ctx context.Context, db dbutil.DB) ([]int32, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ListRegisteredUsersThisWeek(ctx context.Context, db dbutil.DB) ([]int32, error)\n```\n\nListRegisteredUsersThisWeek returns a list of the registered users that were active this week. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#ListRegisteredUsersThisMonth",
-              "documentation": {
-                "identifier": "ListRegisteredUsersThisMonth",
-                "newPage": false,
-                "searchKey": "usagestats.ListRegisteredUsersThisMonth",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ListRegisteredUsersThisMonth(ctx context.Context, db dbutil.DB) ([]int32, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ListRegisteredUsersThisMonth(ctx context.Context, db dbutil.DB) ([]int32, error)\n```\n\nListRegisteredUsersThisMonth returns a list of the registered users that were active this month. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#GetSiteUsageStatistics",
-              "documentation": {
-                "identifier": "GetSiteUsageStatistics",
-                "newPage": false,
-                "searchKey": "usagestats.GetSiteUsageStatistics",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetSiteUsageStatistics(ctx context.Context, db dbutil.DB, opt *SiteUsageStatisticsOptions) (*types.SiteUsageStatistics, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetSiteUsageStatistics(ctx context.Context, db dbutil.DB, opt *SiteUsageStatisticsOptions) (*types.SiteUsageStatistics, error)\n```\n\nGetSiteUsageStatistics returns the current site's SiteActivity. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#activeUsers",
-              "documentation": {
-                "identifier": "activeUsers",
-                "newPage": false,
-                "searchKey": "usagestats.activeUsers",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func activeUsers(ctx context.Context, db dbutil.DB, periodType database.PeriodType, periods int) ([]*types.SiteActivityPeriod, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc activeUsers(ctx context.Context, db dbutil.DB, periodType database.PeriodType, periods int) ([]*types.SiteActivityPeriod, error)\n```\n\nactiveUsers returns counts of active users in the given number of days, weeks, or months, as selected (including the current, partially completed period). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#minIntOrZero",
-              "documentation": {
-                "identifier": "minIntOrZero",
-                "newPage": false,
-                "searchKey": "usagestats.minIntOrZero",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func minIntOrZero(a, b int) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc minIntOrZero(a, b int) int\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#TestGroupSiteUsageStats",
-              "documentation": {
-                "identifier": "TestGroupSiteUsageStats",
-                "newPage": false,
-                "searchKey": "usagestats.TestGroupSiteUsageStats",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGroupSiteUsageStats(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGroupSiteUsageStats(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#TestGroupSiteUsageStatsMonthsOnly",
-              "documentation": {
-                "identifier": "TestGroupSiteUsageStatsMonthsOnly",
-                "newPage": false,
-                "searchKey": "usagestats.TestGroupSiteUsageStatsMonthsOnly",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGroupSiteUsageStatsMonthsOnly(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGroupSiteUsageStatsMonthsOnly(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#newSearchUsagePeriod",
-              "documentation": {
-                "identifier": "newSearchUsagePeriod",
-                "newPage": false,
-                "searchKey": "usagestats.newSearchUsagePeriod",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func newSearchUsagePeriod(t time.Time, structuralEvent, commitEvent *types.SearchEventStatistics) []*types.SearchUsagePeriod"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc newSearchUsagePeriod(t time.Time, structuralEvent, commitEvent *types.SearchEventStatistics) []*types.SearchUsagePeriod\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/usagestats#newSearchTestEvent",
               "documentation": {
                 "identifier": "newSearchTestEvent",
                 "newPage": false,
                 "searchKey": "usagestats.newSearchTestEvent",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2202,462 +2829,92 @@
           },
           {
             "node": {
-              "pathID": "/internal/usagestats#TestGroupAggregateSearchStats",
+              "pathID": "/internal/usagestats#newSearchUsagePeriod",
               "documentation": {
-                "identifier": "TestGroupAggregateSearchStats",
+                "identifier": "newSearchUsagePeriod",
                 "newPage": false,
-                "searchKey": "usagestats.TestGroupAggregateSearchStats",
+                "searchKey": "usagestats.newSearchUsagePeriod",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestGroupAggregateSearchStats(t *testing.T)"
+                "value": "func newSearchUsagePeriod(t time.Time, structuralEvent, commitEvent *types.SearchEventStatistics) []*types.SearchUsagePeriod"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestGroupAggregateSearchStats(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc newSearchUsagePeriod(t time.Time, structuralEvent, commitEvent *types.SearchEventStatistics) []*types.SearchUsagePeriod\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/usagestats#TestGroupAggregatedCodeIntelStats",
+              "pathID": "/internal/usagestats#populateSearchEventStatistics",
               "documentation": {
-                "identifier": "TestGroupAggregatedCodeIntelStats",
+                "identifier": "populateSearchEventStatistics",
                 "newPage": false,
-                "searchKey": "usagestats.TestGroupAggregatedCodeIntelStats",
+                "searchKey": "usagestats.populateSearchEventStatistics",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestGroupAggregatedCodeIntelStats(t *testing.T)"
+                "value": "func populateSearchEventStatistics(event types.SearchAggregatedEvent, statistics *types.SearchUsageStatistics)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestGroupAggregatedCodeIntelStats(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc populateSearchEventStatistics(event types.SearchAggregatedEvent, statistics *types.SearchUsageStatistics)\n```\n\npopulateSearchEventStatistics is a side-effecting function that populates the `statistics` object. The `statistics` event value is our target output type. \n\nOverview how it works: (1) To populate the `statistics` object, we expect an event to have a supported event.Name. \n\n(2) Create a SearchUsagePeriod target object based on the event's period (i.e., Month, Week, Day). \n\n(3) Use the SearchUsagePeriod object as an argument for the utility functions above, to get a handle on the (currently zero-valued) SearchEventStatistics value that it contains that corresponds to that event type. \n\n(4) Populate that SearchEventStatistics object in the SearchUsagePeriod object with usage stats (latencies, etc). \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/usagestats#TestGetBatchChangesUsageStatistics",
+              "pathID": "/internal/usagestats#populateSearchFilterCountStatistics",
               "documentation": {
-                "identifier": "TestGetBatchChangesUsageStatistics",
+                "identifier": "populateSearchFilterCountStatistics",
                 "newPage": false,
-                "searchKey": "usagestats.TestGetBatchChangesUsageStatistics",
+                "searchKey": "usagestats.populateSearchFilterCountStatistics",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestGetBatchChangesUsageStatistics(t *testing.T)"
+                "value": "func populateSearchFilterCountStatistics(event types.SearchAggregatedEvent, statistics *types.SearchUsageStatistics)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestGetBatchChangesUsageStatistics(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc populateSearchFilterCountStatistics(event types.SearchAggregatedEvent, statistics *types.SearchUsageStatistics)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/usagestats#TestCodeInsightsUsageStatistics",
+              "pathID": "/internal/usagestats#publishSourcegraphDotComEvent",
               "documentation": {
-                "identifier": "TestCodeInsightsUsageStatistics",
+                "identifier": "publishSourcegraphDotComEvent",
                 "newPage": false,
-                "searchKey": "usagestats.TestCodeInsightsUsageStatistics",
+                "searchKey": "usagestats.publishSourcegraphDotComEvent",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestCodeInsightsUsageStatistics(t *testing.T)"
+                "value": "func publishSourcegraphDotComEvent(args Event) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestCodeInsightsUsageStatistics(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#TestWithCreationPings",
-              "documentation": {
-                "identifier": "TestWithCreationPings",
-                "newPage": false,
-                "searchKey": "usagestats.TestWithCreationPings",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestWithCreationPings(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestWithCreationPings(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#TestFilterSettingJson",
-              "documentation": {
-                "identifier": "TestFilterSettingJson",
-                "newPage": false,
-                "searchKey": "usagestats.TestFilterSettingJson",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestFilterSettingJson(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestFilterSettingJson(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#TestGetSearchInsights",
-              "documentation": {
-                "identifier": "TestGetSearchInsights",
-                "newPage": false,
-                "searchKey": "usagestats.TestGetSearchInsights",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGetSearchInsights(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGetSearchInsights(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#TestGetLangStatsInsights",
-              "documentation": {
-                "identifier": "TestGetLangStatsInsights",
-                "newPage": false,
-                "searchKey": "usagestats.TestGetLangStatsInsights",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGetLangStatsInsights(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGetLangStatsInsights(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#TestCodeMonitoringUsageStatistics",
-              "documentation": {
-                "identifier": "TestCodeMonitoringUsageStatistics",
-                "newPage": false,
-                "searchKey": "usagestats.TestCodeMonitoringUsageStatistics",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCodeMonitoringUsageStatistics(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCodeMonitoringUsageStatistics(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#TestExtensionsUsageStatistics",
-              "documentation": {
-                "identifier": "TestExtensionsUsageStatistics",
-                "newPage": false,
-                "searchKey": "usagestats.TestExtensionsUsageStatistics",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestExtensionsUsageStatistics(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestExtensionsUsageStatistics(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#init.main_test.go",
-              "documentation": {
-                "identifier": "init.main_test.go",
-                "newPage": false,
-                "searchKey": "usagestats.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#TestMain",
-              "documentation": {
-                "identifier": "TestMain",
-                "newPage": false,
-                "searchKey": "usagestats.TestMain",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMain(m *testing.M)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#TestRetentionUsageStatistics",
-              "documentation": {
-                "identifier": "TestRetentionUsageStatistics",
-                "newPage": false,
-                "searchKey": "usagestats.TestRetentionUsageStatistics",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRetentionUsageStatistics(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRetentionUsageStatistics(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#TestGetArchive",
-              "documentation": {
-                "identifier": "TestGetArchive",
-                "newPage": false,
-                "searchKey": "usagestats.TestGetArchive",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGetArchive(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGetArchive(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#TestUserUsageStatistics_None",
-              "documentation": {
-                "identifier": "TestUserUsageStatistics_None",
-                "newPage": false,
-                "searchKey": "usagestats.TestUserUsageStatistics_None",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUserUsageStatistics_None(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUserUsageStatistics_None(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#TestUserUsageStatistics_LogPageView",
-              "documentation": {
-                "identifier": "TestUserUsageStatistics_LogPageView",
-                "newPage": false,
-                "searchKey": "usagestats.TestUserUsageStatistics_LogPageView",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUserUsageStatistics_LogPageView(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUserUsageStatistics_LogPageView(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#TestUserUsageStatistics_LogSearchQuery",
-              "documentation": {
-                "identifier": "TestUserUsageStatistics_LogSearchQuery",
-                "newPage": false,
-                "searchKey": "usagestats.TestUserUsageStatistics_LogSearchQuery",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUserUsageStatistics_LogSearchQuery(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUserUsageStatistics_LogSearchQuery(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#TestUserUsageStatistics_LogCodeIntelAction",
-              "documentation": {
-                "identifier": "TestUserUsageStatistics_LogCodeIntelAction",
-                "newPage": false,
-                "searchKey": "usagestats.TestUserUsageStatistics_LogCodeIntelAction",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUserUsageStatistics_LogCodeIntelAction(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUserUsageStatistics_LogCodeIntelAction(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#TestUserUsageStatistics_LogCodeHostIntegrationUsage",
-              "documentation": {
-                "identifier": "TestUserUsageStatistics_LogCodeHostIntegrationUsage",
-                "newPage": false,
-                "searchKey": "usagestats.TestUserUsageStatistics_LogCodeHostIntegrationUsage",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUserUsageStatistics_LogCodeHostIntegrationUsage(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUserUsageStatistics_LogCodeHostIntegrationUsage(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#TestUserUsageStatistics_getUsersActiveToday",
-              "documentation": {
-                "identifier": "TestUserUsageStatistics_getUsersActiveToday",
-                "newPage": false,
-                "searchKey": "usagestats.TestUserUsageStatistics_getUsersActiveToday",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUserUsageStatistics_getUsersActiveToday(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUserUsageStatistics_getUsersActiveToday(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/usagestats#TestUserUsageStatistics_DAUs_WAUs_MAUs",
-              "documentation": {
-                "identifier": "TestUserUsageStatistics_DAUs_WAUs_MAUs",
-                "newPage": false,
-                "searchKey": "usagestats.TestUserUsageStatistics_DAUs_WAUs_MAUs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUserUsageStatistics_DAUs_WAUs_MAUs(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUserUsageStatistics_DAUs_WAUs_MAUs(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc publishSourcegraphDotComEvent(args Event) error\n```\n\npublishSourcegraphDotComEvent publishes Sourcegraph.com events to BigQuery. \n\n"
               },
               "children": null
             }
@@ -2670,6 +2927,7 @@
                 "newPage": false,
                 "searchKey": "usagestats.setupForTest",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2686,34 +2944,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/usagestats#mockTimeNow",
-              "documentation": {
-                "identifier": "mockTimeNow",
-                "newPage": false,
-                "searchKey": "usagestats.mockTimeNow",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func mockTimeNow(t time.Time)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc mockTimeNow(t time.Time)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/usagestats#siteActivityCompare",
               "documentation": {
                 "identifier": "siteActivityCompare",
                 "newPage": false,
                 "searchKey": "usagestats.siteActivityCompare",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2730,34 +2967,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/usagestats#siteActivityPeriodSliceCompare",
-              "documentation": {
-                "identifier": "siteActivityPeriodSliceCompare",
-                "newPage": false,
-                "searchKey": "usagestats.siteActivityPeriodSliceCompare",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func siteActivityPeriodSliceCompare(label string, got, want []*types.SiteActivityPeriod) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc siteActivityPeriodSliceCompare(label string, got, want []*types.SiteActivityPeriod) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/usagestats#siteActivityPeriodCompare",
               "documentation": {
                 "identifier": "siteActivityPeriodCompare",
                 "newPage": false,
                 "searchKey": "usagestats.siteActivityPeriodCompare",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2768,6 +2984,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc siteActivityPeriodCompare(label string, got, want *types.SiteActivityPeriod) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/usagestats#siteActivityPeriodSliceCompare",
+              "documentation": {
+                "identifier": "siteActivityPeriodSliceCompare",
+                "newPage": false,
+                "searchKey": "usagestats.siteActivityPeriodSliceCompare",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func siteActivityPeriodSliceCompare(label string, got, want []*types.SiteActivityPeriod) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc siteActivityPeriodSliceCompare(label string, got, want []*types.SiteActivityPeriod) error\n```\n\n"
               },
               "children": null
             }

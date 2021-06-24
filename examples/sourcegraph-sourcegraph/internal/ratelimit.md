@@ -6,39 +6,40 @@
     * [var DefaultMonitorRegistry](#DefaultMonitorRegistry)
     * [var DefaultRegistry](#DefaultRegistry)
 * [Types](#type)
-    * [type MonitorRegistry struct](#MonitorRegistry)
-        * [func NewMonitorRegistry() *MonitorRegistry](#NewMonitorRegistry)
-        * [func (r *MonitorRegistry) GetOrSet(baseURL, authHash, resource string, monitor *Monitor) *Monitor](#MonitorRegistry.GetOrSet)
-        * [func (r *MonitorRegistry) Count() int](#MonitorRegistry.Count)
     * [type MetricsCollector struct](#MetricsCollector)
     * [type Monitor struct](#Monitor)
         * [func (c *Monitor) Get() (remaining int, reset, retry time.Duration, known bool)](#Monitor.Get)
         * [func (c *Monitor) RecommendedWaitForBackgroundOp(cost int) (timeRemaining time.Duration)](#Monitor.RecommendedWaitForBackgroundOp)
-        * [func (c *Monitor) Update(h http.Header)](#Monitor.Update)
         * [func (c *Monitor) SetCollector(collector *MetricsCollector)](#Monitor.SetCollector)
+        * [func (c *Monitor) Update(h http.Header)](#Monitor.Update)
         * [func (c *Monitor) now() time.Time](#Monitor.now)
+    * [type MonitorRegistry struct](#MonitorRegistry)
+        * [func NewMonitorRegistry() *MonitorRegistry](#NewMonitorRegistry)
+        * [func (r *MonitorRegistry) Count() int](#MonitorRegistry.Count)
+        * [func (r *MonitorRegistry) GetOrSet(baseURL, authHash, resource string, monitor *Monitor) *Monitor](#MonitorRegistry.GetOrSet)
     * [type Registry struct](#Registry)
         * [func NewRegistry() *Registry](#NewRegistry)
+        * [func (r *Registry) Count() int](#Registry.Count)
         * [func (r *Registry) Get(baseURL string) *rate.Limiter](#Registry.Get)
         * [func (r *Registry) GetOrSet(baseURL string, fallback *rate.Limiter) *rate.Limiter](#Registry.GetOrSet)
-        * [func (r *Registry) Count() int](#Registry.Count)
 * [Functions](#func)
-    * [func normaliseURL(rawURL string) string](#normaliseURL)
     * [func TestMonitor_RecommendedWaitForBackgroundOp(t *testing.T)](#TestMonitor_RecommendedWaitForBackgroundOp)
     * [func TestMonitor_RecommendedWaitForBackgroundOp_RetryAfter(t *testing.T)](#TestMonitor_RecommendedWaitForBackgroundOp_RetryAfter)
     * [func TestMonitor_Update(t *testing.T)](#TestMonitor_Update)
+    * [func normaliseURL(rawURL string) string](#normaliseURL)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="DefaultMonitorRegistry" href="#DefaultMonitorRegistry">var DefaultMonitorRegistry</a>
 
 ```
 searchKey: ratelimit.DefaultMonitorRegistry
+tags: [variable struct]
 ```
 
 ```Go
@@ -51,6 +52,7 @@ DefaultMonitorRegistry is the default global rate limit monitor registry. It wil
 
 ```
 searchKey: ratelimit.DefaultRegistry
+tags: [variable struct]
 ```
 
 ```Go
@@ -62,66 +64,14 @@ DefaultRegistry is the default global rate limit registry. It will hold rate lim
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
-
-### <a id="MonitorRegistry" href="#MonitorRegistry">type MonitorRegistry struct</a>
-
-```
-searchKey: ratelimit.MonitorRegistry
-```
-
-```Go
-type MonitorRegistry struct {
-	mu sync.Mutex
-	// Monitor per code host / token tuple, keys are the normalized base URL for a
-	// code host, plus the token hash.
-	monitors map[string]*Monitor
-}
-```
-
-MonitorRegistry keeps a mapping of external service URL to *Monitor. 
-
-#### <a id="NewMonitorRegistry" href="#NewMonitorRegistry">func NewMonitorRegistry() *MonitorRegistry</a>
-
-```
-searchKey: ratelimit.NewMonitorRegistry
-```
-
-```Go
-func NewMonitorRegistry() *MonitorRegistry
-```
-
-NewMonitorRegistry creates a new empty registry. 
-
-#### <a id="MonitorRegistry.GetOrSet" href="#MonitorRegistry.GetOrSet">func (r *MonitorRegistry) GetOrSet(baseURL, authHash, resource string, monitor *Monitor) *Monitor</a>
-
-```
-searchKey: ratelimit.MonitorRegistry.GetOrSet
-```
-
-```Go
-func (r *MonitorRegistry) GetOrSet(baseURL, authHash, resource string, monitor *Monitor) *Monitor
-```
-
-GetOrSet fetches the rate limit monitor associated with the given code host / token tuple and an optional resource key. If none has been configured yet, the provided monitor will be set. 
-
-#### <a id="MonitorRegistry.Count" href="#MonitorRegistry.Count">func (r *MonitorRegistry) Count() int</a>
-
-```
-searchKey: ratelimit.MonitorRegistry.Count
-```
-
-```Go
-func (r *MonitorRegistry) Count() int
-```
-
-Count returns the total number of rate limiters in the registry 
 
 ### <a id="MetricsCollector" href="#MetricsCollector">type MetricsCollector struct</a>
 
 ```
 searchKey: ratelimit.MetricsCollector
+tags: [struct]
 ```
 
 ```Go
@@ -137,6 +87,7 @@ MetricsCollector is used so that we can inject metric collection functions for d
 
 ```
 searchKey: ratelimit.Monitor
+tags: [struct]
 ```
 
 ```Go
@@ -163,6 +114,7 @@ It is intended to be embedded in an API client struct.
 
 ```
 searchKey: ratelimit.Monitor.Get
+tags: [function]
 ```
 
 ```Go
@@ -175,6 +127,7 @@ Get reports the client's rate limit status (as of the last API response it recei
 
 ```
 searchKey: ratelimit.Monitor.RecommendedWaitForBackgroundOp
+tags: [method]
 ```
 
 ```Go
@@ -197,22 +150,11 @@ A small constant additional wait is added to account for other simultaneous oper
 
 See [https://developer.github.com/v4/guides/resource-limitations/#rate-limit](https://developer.github.com/v4/guides/resource-limitations/#rate-limit). 
 
-#### <a id="Monitor.Update" href="#Monitor.Update">func (c *Monitor) Update(h http.Header)</a>
-
-```
-searchKey: ratelimit.Monitor.Update
-```
-
-```Go
-func (c *Monitor) Update(h http.Header)
-```
-
-Update updates the monitor's rate limit information based on the HTTP response headers. 
-
 #### <a id="Monitor.SetCollector" href="#Monitor.SetCollector">func (c *Monitor) SetCollector(collector *MetricsCollector)</a>
 
 ```
 searchKey: ratelimit.Monitor.SetCollector
+tags: [method]
 ```
 
 ```Go
@@ -221,21 +163,92 @@ func (c *Monitor) SetCollector(collector *MetricsCollector)
 
 SetCollector sets the metric collector. 
 
+#### <a id="Monitor.Update" href="#Monitor.Update">func (c *Monitor) Update(h http.Header)</a>
+
+```
+searchKey: ratelimit.Monitor.Update
+tags: [method]
+```
+
+```Go
+func (c *Monitor) Update(h http.Header)
+```
+
+Update updates the monitor's rate limit information based on the HTTP response headers. 
+
 #### <a id="Monitor.now" href="#Monitor.now">func (c *Monitor) now() time.Time</a>
 
 ```
 searchKey: ratelimit.Monitor.now
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (c *Monitor) now() time.Time
 ```
 
+### <a id="MonitorRegistry" href="#MonitorRegistry">type MonitorRegistry struct</a>
+
+```
+searchKey: ratelimit.MonitorRegistry
+tags: [struct]
+```
+
+```Go
+type MonitorRegistry struct {
+	mu sync.Mutex
+	// Monitor per code host / token tuple, keys are the normalized base URL for a
+	// code host, plus the token hash.
+	monitors map[string]*Monitor
+}
+```
+
+MonitorRegistry keeps a mapping of external service URL to *Monitor. 
+
+#### <a id="NewMonitorRegistry" href="#NewMonitorRegistry">func NewMonitorRegistry() *MonitorRegistry</a>
+
+```
+searchKey: ratelimit.NewMonitorRegistry
+tags: [function]
+```
+
+```Go
+func NewMonitorRegistry() *MonitorRegistry
+```
+
+NewMonitorRegistry creates a new empty registry. 
+
+#### <a id="MonitorRegistry.Count" href="#MonitorRegistry.Count">func (r *MonitorRegistry) Count() int</a>
+
+```
+searchKey: ratelimit.MonitorRegistry.Count
+tags: [function]
+```
+
+```Go
+func (r *MonitorRegistry) Count() int
+```
+
+Count returns the total number of rate limiters in the registry 
+
+#### <a id="MonitorRegistry.GetOrSet" href="#MonitorRegistry.GetOrSet">func (r *MonitorRegistry) GetOrSet(baseURL, authHash, resource string, monitor *Monitor) *Monitor</a>
+
+```
+searchKey: ratelimit.MonitorRegistry.GetOrSet
+tags: [method]
+```
+
+```Go
+func (r *MonitorRegistry) GetOrSet(baseURL, authHash, resource string, monitor *Monitor) *Monitor
+```
+
+GetOrSet fetches the rate limit monitor associated with the given code host / token tuple and an optional resource key. If none has been configured yet, the provided monitor will be set. 
+
 ### <a id="Registry" href="#Registry">type Registry struct</a>
 
 ```
 searchKey: ratelimit.Registry
+tags: [struct]
 ```
 
 ```Go
@@ -253,6 +266,7 @@ Registry keeps a mapping of external service URL to *rate.Limiter. By default an
 
 ```
 searchKey: ratelimit.NewRegistry
+tags: [function]
 ```
 
 ```Go
@@ -261,10 +275,24 @@ func NewRegistry() *Registry
 
 NewRegistry creates a new empty registry. 
 
+#### <a id="Registry.Count" href="#Registry.Count">func (r *Registry) Count() int</a>
+
+```
+searchKey: ratelimit.Registry.Count
+tags: [function]
+```
+
+```Go
+func (r *Registry) Count() int
+```
+
+Count returns the total number of rate limiters in the registry 
+
 #### <a id="Registry.Get" href="#Registry.Get">func (r *Registry) Get(baseURL string) *rate.Limiter</a>
 
 ```
 searchKey: ratelimit.Registry.Get
+tags: [method]
 ```
 
 ```Go
@@ -277,6 +305,7 @@ Get fetches the rate limiter associated with the given code host. If none has be
 
 ```
 searchKey: ratelimit.Registry.GetOrSet
+tags: [method]
 ```
 
 ```Go
@@ -285,42 +314,17 @@ func (r *Registry) GetOrSet(baseURL string, fallback *rate.Limiter) *rate.Limite
 
 GetOrSet fetches the rate limiter associated with the given code host. If none has been configured yet, the provided limiter will be set. A nil limiter will fall back to an infinite limiter. 
 
-#### <a id="Registry.Count" href="#Registry.Count">func (r *Registry) Count() int</a>
-
-```
-searchKey: ratelimit.Registry.Count
-```
-
-```Go
-func (r *Registry) Count() int
-```
-
-Count returns the total number of rate limiters in the registry 
-
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
-
-### <a id="normaliseURL" href="#normaliseURL">func normaliseURL(rawURL string) string</a>
-
-```
-searchKey: ratelimit.normaliseURL
-tags: [private]
-```
-
-```Go
-func normaliseURL(rawURL string) string
-```
-
-normaliseURL will attempt to normalise rawURL. If there is an error parsing it, we'll just return rawURL lower cased. 
 
 ### <a id="TestMonitor_RecommendedWaitForBackgroundOp" href="#TestMonitor_RecommendedWaitForBackgroundOp">func TestMonitor_RecommendedWaitForBackgroundOp(t *testing.T)</a>
 
 ```
 searchKey: ratelimit.TestMonitor_RecommendedWaitForBackgroundOp
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -331,7 +335,7 @@ func TestMonitor_RecommendedWaitForBackgroundOp(t *testing.T)
 
 ```
 searchKey: ratelimit.TestMonitor_RecommendedWaitForBackgroundOp_RetryAfter
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -342,10 +346,23 @@ func TestMonitor_RecommendedWaitForBackgroundOp_RetryAfter(t *testing.T)
 
 ```
 searchKey: ratelimit.TestMonitor_Update
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestMonitor_Update(t *testing.T)
 ```
+
+### <a id="normaliseURL" href="#normaliseURL">func normaliseURL(rawURL string) string</a>
+
+```
+searchKey: ratelimit.normaliseURL
+tags: [method private]
+```
+
+```Go
+func normaliseURL(rawURL string) string
+```
+
+normaliseURL will attempt to normalise rawURL. If there is an error parsing it, we'll just return rawURL lower cased. 
 

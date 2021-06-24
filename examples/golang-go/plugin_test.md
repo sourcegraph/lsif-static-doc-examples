@@ -9,14 +9,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="TestPlugin" href="#TestPlugin">func TestPlugin(t *testing.T)</a>
 
 ```
 searchKey: plugin_test.TestPlugin
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go

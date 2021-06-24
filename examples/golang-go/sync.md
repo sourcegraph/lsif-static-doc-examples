@@ -10,144 +10,174 @@ Values containing the types defined in this package should not be copied.
   * [sync/atomic](sync/atomic.md)
   * [sync/atomic_test](sync/atomic_test.md)
 * [Constants](#const)
-    * [const mutexLocked](#mutexLocked)
-    * [const mutexWoken](#mutexWoken)
-    * [const mutexStarving](#mutexStarving)
-    * [const mutexWaiterShift](#mutexWaiterShift)
-    * [const starvationThresholdNs](#starvationThresholdNs)
     * [const dequeueBits](#dequeueBits)
     * [const dequeueLimit](#dequeueLimit)
+    * [const mutexLocked](#mutexLocked)
+    * [const mutexStarving](#mutexStarving)
+    * [const mutexWaiterShift](#mutexWaiterShift)
+    * [const mutexWoken](#mutexWoken)
     * [const rwmutexMaxReaders](#rwmutexMaxReaders)
+    * [const starvationThresholdNs](#starvationThresholdNs)
 * [Variables](#var)
-    * [var expunged](#expunged)
-    * [var poolRaceHash](#poolRaceHash)
-    * [var allPoolsMu](#allPoolsMu)
-    * [var allPools](#allPools)
-    * [var oldPools](#oldPools)
     * [var Runtime_Semacquire](#Runtime_Semacquire)
     * [var Runtime_Semrelease](#Runtime_Semrelease)
     * [var Runtime_procPin](#Runtime_procPin)
     * [var Runtime_procUnpin](#Runtime_procUnpin)
+    * [var allPools](#allPools)
+    * [var allPoolsMu](#allPoolsMu)
+    * [var expunged](#expunged)
+    * [var oldPools](#oldPools)
+    * [var poolRaceHash](#poolRaceHash)
 * [Types](#type)
     * [type Cond struct](#Cond)
         * [func NewCond(l Locker) *Cond](#NewCond)
-        * [func (c *Cond) Wait()](#Cond.Wait)
-        * [func (c *Cond) Signal()](#Cond.Signal)
         * [func (c *Cond) Broadcast()](#Cond.Broadcast)
-    * [type copyChecker uintptr](#copyChecker)
-        * [func (c *copyChecker) check()](#copyChecker.check)
-    * [type noCopy struct{}](#noCopy)
-        * [func (*noCopy) Lock()](#noCopy.Lock)
-        * [func (*noCopy) Unlock()](#noCopy.Unlock)
+        * [func (c *Cond) Signal()](#Cond.Signal)
+        * [func (c *Cond) Wait()](#Cond.Wait)
+    * [type Locker interface](#Locker)
     * [type Map struct](#Map)
-        * [func (m *Map) Load(key interface{}) (value interface{}, ok bool)](#Map.Load)
-        * [func (m *Map) Store(key, value interface{})](#Map.Store)
-        * [func (m *Map) LoadOrStore(key, value interface{}) (actual interface{}, loaded bool)](#Map.LoadOrStore)
-        * [func (m *Map) LoadAndDelete(key interface{}) (value interface{}, loaded bool)](#Map.LoadAndDelete)
         * [func (m *Map) Delete(key interface{})](#Map.Delete)
+        * [func (m *Map) Load(key interface{}) (value interface{}, ok bool)](#Map.Load)
+        * [func (m *Map) LoadAndDelete(key interface{}) (value interface{}, loaded bool)](#Map.LoadAndDelete)
+        * [func (m *Map) LoadOrStore(key, value interface{}) (actual interface{}, loaded bool)](#Map.LoadOrStore)
         * [func (m *Map) Range(f func(key, value interface{}) bool)](#Map.Range)
-        * [func (m *Map) missLocked()](#Map.missLocked)
+        * [func (m *Map) Store(key, value interface{})](#Map.Store)
         * [func (m *Map) dirtyLocked()](#Map.dirtyLocked)
-    * [type readOnly struct](#readOnly)
-    * [type entry struct](#entry)
-        * [func newEntry(i interface{}) *entry](#newEntry)
-        * [func (e *entry) load() (value interface{}, ok bool)](#entry.load)
-        * [func (e *entry) tryStore(i *interface{}) bool](#entry.tryStore)
-        * [func (e *entry) unexpungeLocked() (wasExpunged bool)](#entry.unexpungeLocked)
-        * [func (e *entry) storeLocked(i *interface{})](#entry.storeLocked)
-        * [func (e *entry) tryLoadOrStore(i interface{}) (actual interface{}, loaded, ok bool)](#entry.tryLoadOrStore)
-        * [func (e *entry) delete() (value interface{}, ok bool)](#entry.delete)
-        * [func (e *entry) tryExpungeLocked() (isExpunged bool)](#entry.tryExpungeLocked)
+        * [func (m *Map) missLocked()](#Map.missLocked)
     * [type Mutex struct](#Mutex)
         * [func (m *Mutex) Lock()](#Mutex.Lock)
-        * [func (m *Mutex) lockSlow()](#Mutex.lockSlow)
         * [func (m *Mutex) Unlock()](#Mutex.Unlock)
+        * [func (m *Mutex) lockSlow()](#Mutex.lockSlow)
         * [func (m *Mutex) unlockSlow(new int32)](#Mutex.unlockSlow)
-    * [type Locker interface](#Locker)
     * [type Once struct](#Once)
         * [func (o *Once) Do(f func())](#Once.Do)
         * [func (o *Once) doSlow(f func())](#Once.doSlow)
     * [type Pool struct](#Pool)
-        * [func (p *Pool) Put(x interface{})](#Pool.Put)
         * [func (p *Pool) Get() interface{}](#Pool.Get)
+        * [func (p *Pool) Put(x interface{})](#Pool.Put)
         * [func (p *Pool) getSlow(pid int) interface{}](#Pool.getSlow)
         * [func (p *Pool) pin() (*poolLocal, int)](#Pool.pin)
         * [func (p *Pool) pinSlow() (*poolLocal, int)](#Pool.pinSlow)
-    * [type poolLocalInternal struct](#poolLocalInternal)
-    * [type poolLocal struct](#poolLocal)
-        * [func indexLocal(l unsafe.Pointer, i int) *poolLocal](#indexLocal)
-    * [type poolDequeue struct](#poolDequeue)
-        * [func (d *poolDequeue) unpack(ptrs uint64) (head, tail uint32)](#poolDequeue.unpack)
-        * [func (d *poolDequeue) pack(head, tail uint32) uint64](#poolDequeue.pack)
-        * [func (d *poolDequeue) pushHead(val interface{}) bool](#poolDequeue.pushHead)
-        * [func (d *poolDequeue) popHead() (interface{}, bool)](#poolDequeue.popHead)
-        * [func (d *poolDequeue) popTail() (interface{}, bool)](#poolDequeue.popTail)
-        * [func (d *poolDequeue) PushHead(val interface{}) bool](#poolDequeue.PushHead)
-        * [func (d *poolDequeue) PopHead() (interface{}, bool)](#poolDequeue.PopHead)
-        * [func (d *poolDequeue) PopTail() (interface{}, bool)](#poolDequeue.PopTail)
-    * [type eface struct](#eface)
-    * [type dequeueNil *struct{}](#dequeueNil)
-    * [type poolChain struct](#poolChain)
-        * [func (c *poolChain) pushHead(val interface{})](#poolChain.pushHead)
-        * [func (c *poolChain) popHead() (interface{}, bool)](#poolChain.popHead)
-        * [func (c *poolChain) popTail() (interface{}, bool)](#poolChain.popTail)
-        * [func (c *poolChain) PushHead(val interface{}) bool](#poolChain.PushHead)
-        * [func (c *poolChain) PopHead() (interface{}, bool)](#poolChain.PopHead)
-        * [func (c *poolChain) PopTail() (interface{}, bool)](#poolChain.PopTail)
-    * [type poolChainElt struct](#poolChainElt)
-        * [func loadPoolChainElt(pp **poolChainElt) *poolChainElt](#loadPoolChainElt)
-    * [type notifyList struct](#notifyList)
+    * [type PoolDequeue interface](#PoolDequeue)
+        * [func NewPoolChain() PoolDequeue](#NewPoolChain)
+        * [func NewPoolDequeue(n int) PoolDequeue](#NewPoolDequeue)
     * [type RWMutex struct](#RWMutex)
-        * [func (rw *RWMutex) RLock()](#RWMutex.RLock)
-        * [func (rw *RWMutex) RUnlock()](#RWMutex.RUnlock)
-        * [func (rw *RWMutex) rUnlockSlow(r int32)](#RWMutex.rUnlockSlow)
         * [func (rw *RWMutex) Lock()](#RWMutex.Lock)
-        * [func (rw *RWMutex) Unlock()](#RWMutex.Unlock)
+        * [func (rw *RWMutex) RLock()](#RWMutex.RLock)
         * [func (rw *RWMutex) RLocker() Locker](#RWMutex.RLocker)
-    * [type rlocker sync.RWMutex](#rlocker)
-        * [func (r *rlocker) Lock()](#rlocker.Lock)
-        * [func (r *rlocker) Unlock()](#rlocker.Unlock)
+        * [func (rw *RWMutex) RUnlock()](#RWMutex.RUnlock)
+        * [func (rw *RWMutex) Unlock()](#RWMutex.Unlock)
+        * [func (rw *RWMutex) rUnlockSlow(r int32)](#RWMutex.rUnlockSlow)
     * [type WaitGroup struct](#WaitGroup)
-        * [func (wg *WaitGroup) state() (statep *uint64, semap *uint32)](#WaitGroup.state)
         * [func (wg *WaitGroup) Add(delta int)](#WaitGroup.Add)
         * [func (wg *WaitGroup) Done()](#WaitGroup.Done)
         * [func (wg *WaitGroup) Wait()](#WaitGroup.Wait)
-    * [type PoolDequeue interface](#PoolDequeue)
-        * [func NewPoolDequeue(n int) PoolDequeue](#NewPoolDequeue)
-        * [func NewPoolChain() PoolDequeue](#NewPoolChain)
+        * [func (wg *WaitGroup) state() (statep *uint64, semap *uint32)](#WaitGroup.state)
+    * [type copyChecker uintptr](#copyChecker)
+        * [func (c *copyChecker) check()](#copyChecker.check)
+    * [type dequeueNil *struct{}](#dequeueNil)
+    * [type eface struct](#eface)
+    * [type entry struct](#entry)
+        * [func newEntry(i interface{}) *entry](#newEntry)
+        * [func (e *entry) delete() (value interface{}, ok bool)](#entry.delete)
+        * [func (e *entry) load() (value interface{}, ok bool)](#entry.load)
+        * [func (e *entry) storeLocked(i *interface{})](#entry.storeLocked)
+        * [func (e *entry) tryExpungeLocked() (isExpunged bool)](#entry.tryExpungeLocked)
+        * [func (e *entry) tryLoadOrStore(i interface{}) (actual interface{}, loaded, ok bool)](#entry.tryLoadOrStore)
+        * [func (e *entry) tryStore(i *interface{}) bool](#entry.tryStore)
+        * [func (e *entry) unexpungeLocked() (wasExpunged bool)](#entry.unexpungeLocked)
+    * [type noCopy struct{}](#noCopy)
+        * [func (*noCopy) Lock()](#noCopy.Lock)
+        * [func (*noCopy) Unlock()](#noCopy.Unlock)
+    * [type notifyList struct](#notifyList)
+    * [type poolChain struct](#poolChain)
+        * [func (c *poolChain) PopHead() (interface{}, bool)](#poolChain.PopHead)
+        * [func (c *poolChain) PopTail() (interface{}, bool)](#poolChain.PopTail)
+        * [func (c *poolChain) PushHead(val interface{}) bool](#poolChain.PushHead)
+        * [func (c *poolChain) popHead() (interface{}, bool)](#poolChain.popHead)
+        * [func (c *poolChain) popTail() (interface{}, bool)](#poolChain.popTail)
+        * [func (c *poolChain) pushHead(val interface{})](#poolChain.pushHead)
+    * [type poolChainElt struct](#poolChainElt)
+        * [func loadPoolChainElt(pp **poolChainElt) *poolChainElt](#loadPoolChainElt)
+    * [type poolDequeue struct](#poolDequeue)
+        * [func (d *poolDequeue) PopHead() (interface{}, bool)](#poolDequeue.PopHead)
+        * [func (d *poolDequeue) PopTail() (interface{}, bool)](#poolDequeue.PopTail)
+        * [func (d *poolDequeue) PushHead(val interface{}) bool](#poolDequeue.PushHead)
+        * [func (d *poolDequeue) pack(head, tail uint32) uint64](#poolDequeue.pack)
+        * [func (d *poolDequeue) popHead() (interface{}, bool)](#poolDequeue.popHead)
+        * [func (d *poolDequeue) popTail() (interface{}, bool)](#poolDequeue.popTail)
+        * [func (d *poolDequeue) pushHead(val interface{}) bool](#poolDequeue.pushHead)
+        * [func (d *poolDequeue) unpack(ptrs uint64) (head, tail uint32)](#poolDequeue.unpack)
+    * [type poolLocal struct](#poolLocal)
+        * [func indexLocal(l unsafe.Pointer, i int) *poolLocal](#indexLocal)
+    * [type poolLocalInternal struct](#poolLocalInternal)
+    * [type readOnly struct](#readOnly)
+    * [type rlocker sync.RWMutex](#rlocker)
+        * [func (r *rlocker) Lock()](#rlocker.Lock)
+        * [func (r *rlocker) Unlock()](#rlocker.Unlock)
 * [Functions](#func)
-    * [func throw(string)](#throw)
     * [func fastrand() uint32](#fastrand)
-    * [func poolRaceAddr(x interface{}) unsafe.Pointer](#poolRaceAddr)
-    * [func poolCleanup()](#poolCleanup)
     * [func init()](#init.pool.go)
-    * [func runtime_registerPoolCleanup(cleanup func())](#runtime_registerPoolCleanup)
-    * [func runtime_procPin() int](#runtime_procPin)
-    * [func runtime_procUnpin()](#runtime_procUnpin)
+    * [func init()](#init.runtime.go)
+    * [func poolCleanup()](#poolCleanup)
+    * [func poolRaceAddr(x interface{}) unsafe.Pointer](#poolRaceAddr)
     * [func runtime_LoadAcquintptr(ptr *uintptr) uintptr](#runtime_LoadAcquintptr)
-    * [func runtime_StoreReluintptr(ptr *uintptr, val uintptr) uintptr](#runtime_StoreReluintptr)
-    * [func storePoolChainElt(pp **poolChainElt, v *poolChainElt)](#storePoolChainElt)
     * [func runtime_Semacquire(s *uint32)](#runtime_Semacquire)
     * [func runtime_SemacquireMutex(s *uint32, lifo bool, skipframes int)](#runtime_SemacquireMutex)
     * [func runtime_Semrelease(s *uint32, handoff bool, skipframes int)](#runtime_Semrelease)
-    * [func runtime_notifyListAdd(l *notifyList) uint32](#runtime_notifyListAdd)
-    * [func runtime_notifyListWait(l *notifyList, t uint32)](#runtime_notifyListWait)
-    * [func runtime_notifyListNotifyAll(l *notifyList)](#runtime_notifyListNotifyAll)
-    * [func runtime_notifyListNotifyOne(l *notifyList)](#runtime_notifyListNotifyOne)
-    * [func runtime_notifyListCheck(size uintptr)](#runtime_notifyListCheck)
-    * [func init()](#init.runtime.go)
+    * [func runtime_StoreReluintptr(ptr *uintptr, val uintptr) uintptr](#runtime_StoreReluintptr)
     * [func runtime_canSpin(i int) bool](#runtime_canSpin)
     * [func runtime_doSpin()](#runtime_doSpin)
     * [func runtime_nanotime() int64](#runtime_nanotime)
+    * [func runtime_notifyListAdd(l *notifyList) uint32](#runtime_notifyListAdd)
+    * [func runtime_notifyListCheck(size uintptr)](#runtime_notifyListCheck)
+    * [func runtime_notifyListNotifyAll(l *notifyList)](#runtime_notifyListNotifyAll)
+    * [func runtime_notifyListNotifyOne(l *notifyList)](#runtime_notifyListNotifyOne)
+    * [func runtime_notifyListWait(l *notifyList, t uint32)](#runtime_notifyListWait)
+    * [func runtime_procPin() int](#runtime_procPin)
+    * [func runtime_procUnpin()](#runtime_procUnpin)
+    * [func runtime_registerPoolCleanup(cleanup func())](#runtime_registerPoolCleanup)
+    * [func storePoolChainElt(pp **poolChainElt, v *poolChainElt)](#storePoolChainElt)
+    * [func throw(string)](#throw)
 
 
 ## <a id="const" href="#const">Constants</a>
+
+```
+tags: [package]
+```
+
+### <a id="dequeueBits" href="#dequeueBits">const dequeueBits</a>
+
+```
+searchKey: sync.dequeueBits
+tags: [constant number private]
+```
+
+```Go
+const dequeueBits = 32
+```
+
+### <a id="dequeueLimit" href="#dequeueLimit">const dequeueLimit</a>
+
+```
+searchKey: sync.dequeueLimit
+tags: [constant number private]
+```
+
+```Go
+const dequeueLimit = (1 << dequeueBits) / 4
+```
+
+dequeueLimit is the maximum size of a poolDequeue. 
+
+This must be at most (1<<dequeueBits)/2 because detecting fullness depends on wrapping around the ring buffer without wrapping around the index. We divide by 4 so this fits in an int on 32-bit. 
 
 ### <a id="mutexLocked" href="#mutexLocked">const mutexLocked</a>
 
 ```
 searchKey: sync.mutexLocked
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -155,22 +185,11 @@ const mutexLocked = 1 << iota // mutex is locked
 
 ```
 
-### <a id="mutexWoken" href="#mutexWoken">const mutexWoken</a>
-
-```
-searchKey: sync.mutexWoken
-tags: [private]
-```
-
-```Go
-const mutexWoken
-```
-
 ### <a id="mutexStarving" href="#mutexStarving">const mutexStarving</a>
 
 ```
 searchKey: sync.mutexStarving
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -181,18 +200,40 @@ const mutexStarving
 
 ```
 searchKey: sync.mutexWaiterShift
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
 const mutexWaiterShift = iota
 ```
 
+### <a id="mutexWoken" href="#mutexWoken">const mutexWoken</a>
+
+```
+searchKey: sync.mutexWoken
+tags: [constant number private]
+```
+
+```Go
+const mutexWoken
+```
+
+### <a id="rwmutexMaxReaders" href="#rwmutexMaxReaders">const rwmutexMaxReaders</a>
+
+```
+searchKey: sync.rwmutexMaxReaders
+tags: [constant number private]
+```
+
+```Go
+const rwmutexMaxReaders = 1 << 30
+```
+
 ### <a id="starvationThresholdNs" href="#starvationThresholdNs">const starvationThresholdNs</a>
 
 ```
 searchKey: sync.starvationThresholdNs
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -209,111 +250,17 @@ If a waiter receives ownership of the mutex and sees that either (1) it is the l
 
 Normal mode has considerably better performance as a goroutine can acquire a mutex several times in a row even if there are blocked waiters. Starvation mode is important to prevent pathological cases of tail latency. 
 
-### <a id="dequeueBits" href="#dequeueBits">const dequeueBits</a>
-
-```
-searchKey: sync.dequeueBits
-tags: [private]
-```
-
-```Go
-const dequeueBits = 32
-```
-
-### <a id="dequeueLimit" href="#dequeueLimit">const dequeueLimit</a>
-
-```
-searchKey: sync.dequeueLimit
-tags: [private]
-```
-
-```Go
-const dequeueLimit = (1 << dequeueBits) / 4
-```
-
-dequeueLimit is the maximum size of a poolDequeue. 
-
-This must be at most (1<<dequeueBits)/2 because detecting fullness depends on wrapping around the ring buffer without wrapping around the index. We divide by 4 so this fits in an int on 32-bit. 
-
-### <a id="rwmutexMaxReaders" href="#rwmutexMaxReaders">const rwmutexMaxReaders</a>
-
-```
-searchKey: sync.rwmutexMaxReaders
-tags: [private]
-```
-
-```Go
-const rwmutexMaxReaders = 1 << 30
-```
-
 ## <a id="var" href="#var">Variables</a>
 
-### <a id="expunged" href="#expunged">var expunged</a>
-
 ```
-searchKey: sync.expunged
-tags: [private]
+tags: [package]
 ```
-
-```Go
-var expunged = unsafe.Pointer(new(interface{}))
-```
-
-expunged is an arbitrary pointer that marks entries which have been deleted from the dirty map. 
-
-### <a id="poolRaceHash" href="#poolRaceHash">var poolRaceHash</a>
-
-```
-searchKey: sync.poolRaceHash
-tags: [private]
-```
-
-```Go
-var poolRaceHash [128]uint64
-```
-
-### <a id="allPoolsMu" href="#allPoolsMu">var allPoolsMu</a>
-
-```
-searchKey: sync.allPoolsMu
-tags: [private]
-```
-
-```Go
-var allPoolsMu Mutex
-```
-
-### <a id="allPools" href="#allPools">var allPools</a>
-
-```
-searchKey: sync.allPools
-tags: [private]
-```
-
-```Go
-var allPools []*Pool
-```
-
-allPools is the set of pools that have non-empty primary caches. Protected by either 1) allPoolsMu and pinning or 2) STW. 
-
-### <a id="oldPools" href="#oldPools">var oldPools</a>
-
-```
-searchKey: sync.oldPools
-tags: [private]
-```
-
-```Go
-var oldPools []*Pool
-```
-
-oldPools is the set of pools that may have non-empty victim caches. Protected by STW. 
 
 ### <a id="Runtime_Semacquire" href="#Runtime_Semacquire">var Runtime_Semacquire</a>
 
 ```
 searchKey: sync.Runtime_Semacquire
-tags: [private]
+tags: [variable function private]
 ```
 
 ```Go
@@ -326,7 +273,7 @@ Export for testing.
 
 ```
 searchKey: sync.Runtime_Semrelease
-tags: [private]
+tags: [variable function private]
 ```
 
 ```Go
@@ -337,7 +284,7 @@ var Runtime_Semrelease = runtime_Semrelease
 
 ```
 searchKey: sync.Runtime_procPin
-tags: [private]
+tags: [variable function private]
 ```
 
 ```Go
@@ -348,19 +295,85 @@ var Runtime_procPin = runtime_procPin
 
 ```
 searchKey: sync.Runtime_procUnpin
-tags: [private]
+tags: [variable function private]
 ```
 
 ```Go
 var Runtime_procUnpin = runtime_procUnpin
 ```
 
+### <a id="allPools" href="#allPools">var allPools</a>
+
+```
+searchKey: sync.allPools
+tags: [variable array struct private]
+```
+
+```Go
+var allPools []*Pool
+```
+
+allPools is the set of pools that have non-empty primary caches. Protected by either 1) allPoolsMu and pinning or 2) STW. 
+
+### <a id="allPoolsMu" href="#allPoolsMu">var allPoolsMu</a>
+
+```
+searchKey: sync.allPoolsMu
+tags: [variable struct private]
+```
+
+```Go
+var allPoolsMu Mutex
+```
+
+### <a id="expunged" href="#expunged">var expunged</a>
+
+```
+searchKey: sync.expunged
+tags: [variable number private]
+```
+
+```Go
+var expunged = unsafe.Pointer(new(interface{}))
+```
+
+expunged is an arbitrary pointer that marks entries which have been deleted from the dirty map. 
+
+### <a id="oldPools" href="#oldPools">var oldPools</a>
+
+```
+searchKey: sync.oldPools
+tags: [variable array struct private]
+```
+
+```Go
+var oldPools []*Pool
+```
+
+oldPools is the set of pools that may have non-empty victim caches. Protected by STW. 
+
+### <a id="poolRaceHash" href="#poolRaceHash">var poolRaceHash</a>
+
+```
+searchKey: sync.poolRaceHash
+tags: [variable array number private]
+```
+
+```Go
+var poolRaceHash [128]uint64
+```
+
 ## <a id="type" href="#type">Types</a>
+
+```
+tags: [package]
+```
 
 ### <a id="Cond" href="#Cond">type Cond struct</a>
 
 ```
 searchKey: sync.Cond
+tags: [struct]
 ```
 
 ```Go
@@ -385,6 +398,7 @@ A Cond must not be copied after first use.
 
 ```
 searchKey: sync.NewCond
+tags: [method]
 ```
 
 ```Go
@@ -393,10 +407,41 @@ func NewCond(l Locker) *Cond
 
 NewCond returns a new Cond with Locker l. 
 
+#### <a id="Cond.Broadcast" href="#Cond.Broadcast">func (c *Cond) Broadcast()</a>
+
+```
+searchKey: sync.Cond.Broadcast
+tags: [function]
+```
+
+```Go
+func (c *Cond) Broadcast()
+```
+
+Broadcast wakes all goroutines waiting on c. 
+
+It is allowed but not required for the caller to hold c.L during the call. 
+
+#### <a id="Cond.Signal" href="#Cond.Signal">func (c *Cond) Signal()</a>
+
+```
+searchKey: sync.Cond.Signal
+tags: [function]
+```
+
+```Go
+func (c *Cond) Signal()
+```
+
+Signal wakes one goroutine waiting on c, if there is any. 
+
+It is allowed but not required for the caller to hold c.L during the call. 
+
 #### <a id="Cond.Wait" href="#Cond.Wait">func (c *Cond) Wait()</a>
 
 ```
 searchKey: sync.Cond.Wait
+tags: [function]
 ```
 
 ```Go
@@ -416,101 +461,27 @@ for !condition() {
 c.L.Unlock()
 
 ```
-#### <a id="Cond.Signal" href="#Cond.Signal">func (c *Cond) Signal()</a>
+### <a id="Locker" href="#Locker">type Locker interface</a>
 
 ```
-searchKey: sync.Cond.Signal
-```
-
-```Go
-func (c *Cond) Signal()
-```
-
-Signal wakes one goroutine waiting on c, if there is any. 
-
-It is allowed but not required for the caller to hold c.L during the call. 
-
-#### <a id="Cond.Broadcast" href="#Cond.Broadcast">func (c *Cond) Broadcast()</a>
-
-```
-searchKey: sync.Cond.Broadcast
+searchKey: sync.Locker
+tags: [interface]
 ```
 
 ```Go
-func (c *Cond) Broadcast()
+type Locker interface {
+	Lock()
+	Unlock()
+}
 ```
 
-Broadcast wakes all goroutines waiting on c. 
-
-It is allowed but not required for the caller to hold c.L during the call. 
-
-### <a id="copyChecker" href="#copyChecker">type copyChecker uintptr</a>
-
-```
-searchKey: sync.copyChecker
-tags: [private]
-```
-
-```Go
-type copyChecker uintptr
-```
-
-copyChecker holds back pointer to itself to detect object copying. 
-
-#### <a id="copyChecker.check" href="#copyChecker.check">func (c *copyChecker) check()</a>
-
-```
-searchKey: sync.copyChecker.check
-tags: [private]
-```
-
-```Go
-func (c *copyChecker) check()
-```
-
-### <a id="noCopy" href="#noCopy">type noCopy struct{}</a>
-
-```
-searchKey: sync.noCopy
-tags: [private]
-```
-
-```Go
-type noCopy struct{}
-```
-
-noCopy may be embedded into structs which must not be copied after the first use. 
-
-See [https://golang.org/issues/8005#issuecomment-190753527](https://golang.org/issues/8005#issuecomment-190753527) for details. 
-
-#### <a id="noCopy.Lock" href="#noCopy.Lock">func (*noCopy) Lock()</a>
-
-```
-searchKey: sync.noCopy.Lock
-tags: [private]
-```
-
-```Go
-func (*noCopy) Lock()
-```
-
-Lock is a no-op used by -copylocks checker from `go vet`. 
-
-#### <a id="noCopy.Unlock" href="#noCopy.Unlock">func (*noCopy) Unlock()</a>
-
-```
-searchKey: sync.noCopy.Unlock
-tags: [private]
-```
-
-```Go
-func (*noCopy) Unlock()
-```
+A Locker represents an object that can be locked and unlocked. 
 
 ### <a id="Map" href="#Map">type Map struct</a>
 
 ```
 searchKey: sync.Map
+tags: [struct]
 ```
 
 ```Go
@@ -558,58 +529,11 @@ The Map type is optimized for two common use cases: (1) when the entry for a giv
 
 The zero Map is empty and ready for use. A Map must not be copied after first use. 
 
-#### <a id="Map.Load" href="#Map.Load">func (m *Map) Load(key interface{}) (value interface{}, ok bool)</a>
-
-```
-searchKey: sync.Map.Load
-```
-
-```Go
-func (m *Map) Load(key interface{}) (value interface{}, ok bool)
-```
-
-Load returns the value stored in the map for a key, or nil if no value is present. The ok result indicates whether value was found in the map. 
-
-#### <a id="Map.Store" href="#Map.Store">func (m *Map) Store(key, value interface{})</a>
-
-```
-searchKey: sync.Map.Store
-```
-
-```Go
-func (m *Map) Store(key, value interface{})
-```
-
-Store sets the value for a key. 
-
-#### <a id="Map.LoadOrStore" href="#Map.LoadOrStore">func (m *Map) LoadOrStore(key, value interface{}) (actual interface{}, loaded bool)</a>
-
-```
-searchKey: sync.Map.LoadOrStore
-```
-
-```Go
-func (m *Map) LoadOrStore(key, value interface{}) (actual interface{}, loaded bool)
-```
-
-LoadOrStore returns the existing value for the key if present. Otherwise, it stores and returns the given value. The loaded result is true if the value was loaded, false if stored. 
-
-#### <a id="Map.LoadAndDelete" href="#Map.LoadAndDelete">func (m *Map) LoadAndDelete(key interface{}) (value interface{}, loaded bool)</a>
-
-```
-searchKey: sync.Map.LoadAndDelete
-```
-
-```Go
-func (m *Map) LoadAndDelete(key interface{}) (value interface{}, loaded bool)
-```
-
-LoadAndDelete deletes the value for a key, returning the previous value if any. The loaded result reports whether the key was present. 
-
 #### <a id="Map.Delete" href="#Map.Delete">func (m *Map) Delete(key interface{})</a>
 
 ```
 searchKey: sync.Map.Delete
+tags: [method]
 ```
 
 ```Go
@@ -618,10 +542,50 @@ func (m *Map) Delete(key interface{})
 
 Delete deletes the value for a key. 
 
+#### <a id="Map.Load" href="#Map.Load">func (m *Map) Load(key interface{}) (value interface{}, ok bool)</a>
+
+```
+searchKey: sync.Map.Load
+tags: [method]
+```
+
+```Go
+func (m *Map) Load(key interface{}) (value interface{}, ok bool)
+```
+
+Load returns the value stored in the map for a key, or nil if no value is present. The ok result indicates whether value was found in the map. 
+
+#### <a id="Map.LoadAndDelete" href="#Map.LoadAndDelete">func (m *Map) LoadAndDelete(key interface{}) (value interface{}, loaded bool)</a>
+
+```
+searchKey: sync.Map.LoadAndDelete
+tags: [method]
+```
+
+```Go
+func (m *Map) LoadAndDelete(key interface{}) (value interface{}, loaded bool)
+```
+
+LoadAndDelete deletes the value for a key, returning the previous value if any. The loaded result reports whether the key was present. 
+
+#### <a id="Map.LoadOrStore" href="#Map.LoadOrStore">func (m *Map) LoadOrStore(key, value interface{}) (actual interface{}, loaded bool)</a>
+
+```
+searchKey: sync.Map.LoadOrStore
+tags: [method]
+```
+
+```Go
+func (m *Map) LoadOrStore(key, value interface{}) (actual interface{}, loaded bool)
+```
+
+LoadOrStore returns the existing value for the key if present. Otherwise, it stores and returns the given value. The loaded result is true if the value was loaded, false if stored. 
+
 #### <a id="Map.Range" href="#Map.Range">func (m *Map) Range(f func(key, value interface{}) bool)</a>
 
 ```
 searchKey: sync.Map.Range
+tags: [method]
 ```
 
 ```Go
@@ -634,186 +598,46 @@ Range does not necessarily correspond to any consistent snapshot of the Map's co
 
 Range may be O(N) with the number of elements in the map even if f returns false after a constant number of calls. 
 
-#### <a id="Map.missLocked" href="#Map.missLocked">func (m *Map) missLocked()</a>
+#### <a id="Map.Store" href="#Map.Store">func (m *Map) Store(key, value interface{})</a>
 
 ```
-searchKey: sync.Map.missLocked
-tags: [private]
+searchKey: sync.Map.Store
+tags: [method]
 ```
 
 ```Go
-func (m *Map) missLocked()
+func (m *Map) Store(key, value interface{})
 ```
+
+Store sets the value for a key. 
 
 #### <a id="Map.dirtyLocked" href="#Map.dirtyLocked">func (m *Map) dirtyLocked()</a>
 
 ```
 searchKey: sync.Map.dirtyLocked
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (m *Map) dirtyLocked()
 ```
 
-### <a id="readOnly" href="#readOnly">type readOnly struct</a>
+#### <a id="Map.missLocked" href="#Map.missLocked">func (m *Map) missLocked()</a>
 
 ```
-searchKey: sync.readOnly
-tags: [private]
-```
-
-```Go
-type readOnly struct {
-	m       map[interface{}]*entry
-	amended bool // true if the dirty map contains some key not in m.
-}
-```
-
-readOnly is an immutable struct stored atomically in the Map.read field. 
-
-### <a id="entry" href="#entry">type entry struct</a>
-
-```
-searchKey: sync.entry
-tags: [private]
+searchKey: sync.Map.missLocked
+tags: [function private]
 ```
 
 ```Go
-type entry struct {
-	// p points to the interface{} value stored for the entry.
-	//
-	// If p == nil, the entry has been deleted, and either m.dirty == nil or
-	// m.dirty[key] is e.
-	//
-	// If p == expunged, the entry has been deleted, m.dirty != nil, and the entry
-	// is missing from m.dirty.
-	//
-	// Otherwise, the entry is valid and recorded in m.read.m[key] and, if m.dirty
-	// != nil, in m.dirty[key].
-	//
-	// An entry can be deleted by atomic replacement with nil: when m.dirty is
-	// next created, it will atomically replace nil with expunged and leave
-	// m.dirty[key] unset.
-	//
-	// An entry's associated value can be updated by atomic replacement, provided
-	// p != expunged. If p == expunged, an entry's associated value can be updated
-	// only after first setting m.dirty[key] = e so that lookups using the dirty
-	// map find the entry.
-	p unsafe.Pointer // *interface{}
-}
-```
-
-An entry is a slot in the map corresponding to a particular key. 
-
-#### <a id="newEntry" href="#newEntry">func newEntry(i interface{}) *entry</a>
-
-```
-searchKey: sync.newEntry
-tags: [private]
-```
-
-```Go
-func newEntry(i interface{}) *entry
-```
-
-#### <a id="entry.load" href="#entry.load">func (e *entry) load() (value interface{}, ok bool)</a>
-
-```
-searchKey: sync.entry.load
-tags: [private]
-```
-
-```Go
-func (e *entry) load() (value interface{}, ok bool)
-```
-
-#### <a id="entry.tryStore" href="#entry.tryStore">func (e *entry) tryStore(i *interface{}) bool</a>
-
-```
-searchKey: sync.entry.tryStore
-tags: [private]
-```
-
-```Go
-func (e *entry) tryStore(i *interface{}) bool
-```
-
-tryStore stores a value if the entry has not been expunged. 
-
-If the entry is expunged, tryStore returns false and leaves the entry unchanged. 
-
-#### <a id="entry.unexpungeLocked" href="#entry.unexpungeLocked">func (e *entry) unexpungeLocked() (wasExpunged bool)</a>
-
-```
-searchKey: sync.entry.unexpungeLocked
-tags: [private]
-```
-
-```Go
-func (e *entry) unexpungeLocked() (wasExpunged bool)
-```
-
-unexpungeLocked ensures that the entry is not marked as expunged. 
-
-If the entry was previously expunged, it must be added to the dirty map before m.mu is unlocked. 
-
-#### <a id="entry.storeLocked" href="#entry.storeLocked">func (e *entry) storeLocked(i *interface{})</a>
-
-```
-searchKey: sync.entry.storeLocked
-tags: [private]
-```
-
-```Go
-func (e *entry) storeLocked(i *interface{})
-```
-
-storeLocked unconditionally stores a value to the entry. 
-
-The entry must be known not to be expunged. 
-
-#### <a id="entry.tryLoadOrStore" href="#entry.tryLoadOrStore">func (e *entry) tryLoadOrStore(i interface{}) (actual interface{}, loaded, ok bool)</a>
-
-```
-searchKey: sync.entry.tryLoadOrStore
-tags: [private]
-```
-
-```Go
-func (e *entry) tryLoadOrStore(i interface{}) (actual interface{}, loaded, ok bool)
-```
-
-tryLoadOrStore atomically loads or stores a value if the entry is not expunged. 
-
-If the entry is expunged, tryLoadOrStore leaves the entry unchanged and returns with ok==false. 
-
-#### <a id="entry.delete" href="#entry.delete">func (e *entry) delete() (value interface{}, ok bool)</a>
-
-```
-searchKey: sync.entry.delete
-tags: [private]
-```
-
-```Go
-func (e *entry) delete() (value interface{}, ok bool)
-```
-
-#### <a id="entry.tryExpungeLocked" href="#entry.tryExpungeLocked">func (e *entry) tryExpungeLocked() (isExpunged bool)</a>
-
-```
-searchKey: sync.entry.tryExpungeLocked
-tags: [private]
-```
-
-```Go
-func (e *entry) tryExpungeLocked() (isExpunged bool)
+func (m *Map) missLocked()
 ```
 
 ### <a id="Mutex" href="#Mutex">type Mutex struct</a>
 
 ```
 searchKey: sync.Mutex
+tags: [struct]
 ```
 
 ```Go
@@ -831,6 +655,7 @@ A Mutex must not be copied after first use.
 
 ```
 searchKey: sync.Mutex.Lock
+tags: [function]
 ```
 
 ```Go
@@ -839,21 +664,11 @@ func (m *Mutex) Lock()
 
 Lock locks m. If the lock is already in use, the calling goroutine blocks until the mutex is available. 
 
-#### <a id="Mutex.lockSlow" href="#Mutex.lockSlow">func (m *Mutex) lockSlow()</a>
-
-```
-searchKey: sync.Mutex.lockSlow
-tags: [private]
-```
-
-```Go
-func (m *Mutex) lockSlow()
-```
-
 #### <a id="Mutex.Unlock" href="#Mutex.Unlock">func (m *Mutex) Unlock()</a>
 
 ```
 searchKey: sync.Mutex.Unlock
+tags: [function]
 ```
 
 ```Go
@@ -864,36 +679,33 @@ Unlock unlocks m. It is a run-time error if m is not locked on entry to Unlock.
 
 A locked Mutex is not associated with a particular goroutine. It is allowed for one goroutine to lock a Mutex and then arrange for another goroutine to unlock it. 
 
+#### <a id="Mutex.lockSlow" href="#Mutex.lockSlow">func (m *Mutex) lockSlow()</a>
+
+```
+searchKey: sync.Mutex.lockSlow
+tags: [function private]
+```
+
+```Go
+func (m *Mutex) lockSlow()
+```
+
 #### <a id="Mutex.unlockSlow" href="#Mutex.unlockSlow">func (m *Mutex) unlockSlow(new int32)</a>
 
 ```
 searchKey: sync.Mutex.unlockSlow
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (m *Mutex) unlockSlow(new int32)
 ```
 
-### <a id="Locker" href="#Locker">type Locker interface</a>
-
-```
-searchKey: sync.Locker
-```
-
-```Go
-type Locker interface {
-	Lock()
-	Unlock()
-}
-```
-
-A Locker represents an object that can be locked and unlocked. 
-
 ### <a id="Once" href="#Once">type Once struct</a>
 
 ```
 searchKey: sync.Once
+tags: [struct]
 ```
 
 ```Go
@@ -916,6 +728,7 @@ A Once must not be copied after first use.
 
 ```
 searchKey: sync.Once.Do
+tags: [method]
 ```
 
 ```Go
@@ -944,7 +757,7 @@ If f panics, Do considers it to have returned; future calls of Do return without
 
 ```
 searchKey: sync.Once.doSlow
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -955,6 +768,7 @@ func (o *Once) doSlow(f func())
 
 ```
 searchKey: sync.Pool
+tags: [struct]
 ```
 
 ```Go
@@ -990,22 +804,11 @@ On the other hand, a free list maintained as part of a short-lived object is not
 
 A Pool must not be copied after first use. 
 
-#### <a id="Pool.Put" href="#Pool.Put">func (p *Pool) Put(x interface{})</a>
-
-```
-searchKey: sync.Pool.Put
-```
-
-```Go
-func (p *Pool) Put(x interface{})
-```
-
-Put adds x to the pool. 
-
 #### <a id="Pool.Get" href="#Pool.Get">func (p *Pool) Get() interface{}</a>
 
 ```
 searchKey: sync.Pool.Get
+tags: [function]
 ```
 
 ```Go
@@ -1016,11 +819,24 @@ Get selects an arbitrary item from the Pool, removes it from the Pool, and retur
 
 If Get would otherwise return nil and p.New is non-nil, Get returns the result of calling p.New. 
 
+#### <a id="Pool.Put" href="#Pool.Put">func (p *Pool) Put(x interface{})</a>
+
+```
+searchKey: sync.Pool.Put
+tags: [method]
+```
+
+```Go
+func (p *Pool) Put(x interface{})
+```
+
+Put adds x to the pool. 
+
 #### <a id="Pool.getSlow" href="#Pool.getSlow">func (p *Pool) getSlow(pid int) interface{}</a>
 
 ```
 searchKey: sync.Pool.getSlow
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1031,7 +847,7 @@ func (p *Pool) getSlow(pid int) interface{}
 
 ```
 searchKey: sync.Pool.pin
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -1044,62 +860,609 @@ pin pins the current goroutine to P, disables preemption and returns poolLocal p
 
 ```
 searchKey: sync.Pool.pinSlow
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (p *Pool) pinSlow() (*poolLocal, int)
 ```
 
-### <a id="poolLocalInternal" href="#poolLocalInternal">type poolLocalInternal struct</a>
+### <a id="PoolDequeue" href="#PoolDequeue">type PoolDequeue interface</a>
 
 ```
-searchKey: sync.poolLocalInternal
-tags: [private]
+searchKey: sync.PoolDequeue
+tags: [interface private]
 ```
 
 ```Go
-type poolLocalInternal struct {
-	private interface{} // Can be used only by the respective P.
-	shared  poolChain   // Local P can pushHead/popHead; any P can popTail.
+type PoolDequeue interface {
+	PushHead(val interface{}) bool
+	PopHead() (interface{}, bool)
+	PopTail() (interface{}, bool)
 }
 ```
 
-Local per-P Pool appendix. 
+poolDequeue testing. 
 
-### <a id="poolLocal" href="#poolLocal">type poolLocal struct</a>
+#### <a id="NewPoolChain" href="#NewPoolChain">func NewPoolChain() PoolDequeue</a>
 
 ```
-searchKey: sync.poolLocal
-tags: [private]
+searchKey: sync.NewPoolChain
+tags: [function private]
 ```
 
 ```Go
-type poolLocal struct {
-	poolLocalInternal
+func NewPoolChain() PoolDequeue
+```
 
-	// Prevents false sharing on widespread platforms with
-	// 128 mod (cache line size) = 0 .
-	pad [128 - unsafe.Sizeof(poolLocalInternal{})%128]byte
+#### <a id="NewPoolDequeue" href="#NewPoolDequeue">func NewPoolDequeue(n int) PoolDequeue</a>
+
+```
+searchKey: sync.NewPoolDequeue
+tags: [method private]
+```
+
+```Go
+func NewPoolDequeue(n int) PoolDequeue
+```
+
+### <a id="RWMutex" href="#RWMutex">type RWMutex struct</a>
+
+```
+searchKey: sync.RWMutex
+tags: [struct]
+```
+
+```Go
+type RWMutex struct {
+	w           Mutex  // held if there are pending writers
+	writerSem   uint32 // semaphore for writers to wait for completing readers
+	readerSem   uint32 // semaphore for readers to wait for completing writers
+	readerCount int32  // number of pending readers
+	readerWait  int32  // number of departing readers
 }
 ```
 
-#### <a id="indexLocal" href="#indexLocal">func indexLocal(l unsafe.Pointer, i int) *poolLocal</a>
+A RWMutex is a reader/writer mutual exclusion lock. The lock can be held by an arbitrary number of readers or a single writer. The zero value for a RWMutex is an unlocked mutex. 
+
+A RWMutex must not be copied after first use. 
+
+If a goroutine holds a RWMutex for reading and another goroutine might call Lock, no goroutine should expect to be able to acquire a read lock until the initial read lock is released. In particular, this prohibits recursive read locking. This is to ensure that the lock eventually becomes available; a blocked Lock call excludes new readers from acquiring the lock. 
+
+#### <a id="RWMutex.Lock" href="#RWMutex.Lock">func (rw *RWMutex) Lock()</a>
 
 ```
-searchKey: sync.indexLocal
-tags: [private]
+searchKey: sync.RWMutex.Lock
+tags: [function]
 ```
 
 ```Go
-func indexLocal(l unsafe.Pointer, i int) *poolLocal
+func (rw *RWMutex) Lock()
+```
+
+Lock locks rw for writing. If the lock is already locked for reading or writing, Lock blocks until the lock is available. 
+
+#### <a id="RWMutex.RLock" href="#RWMutex.RLock">func (rw *RWMutex) RLock()</a>
+
+```
+searchKey: sync.RWMutex.RLock
+tags: [function]
+```
+
+```Go
+func (rw *RWMutex) RLock()
+```
+
+RLock locks rw for reading. 
+
+It should not be used for recursive read locking; a blocked Lock call excludes new readers from acquiring the lock. See the documentation on the RWMutex type. 
+
+#### <a id="RWMutex.RLocker" href="#RWMutex.RLocker">func (rw *RWMutex) RLocker() Locker</a>
+
+```
+searchKey: sync.RWMutex.RLocker
+tags: [function]
+```
+
+```Go
+func (rw *RWMutex) RLocker() Locker
+```
+
+RLocker returns a Locker interface that implements the Lock and Unlock methods by calling rw.RLock and rw.RUnlock. 
+
+#### <a id="RWMutex.RUnlock" href="#RWMutex.RUnlock">func (rw *RWMutex) RUnlock()</a>
+
+```
+searchKey: sync.RWMutex.RUnlock
+tags: [function]
+```
+
+```Go
+func (rw *RWMutex) RUnlock()
+```
+
+RUnlock undoes a single RLock call; it does not affect other simultaneous readers. It is a run-time error if rw is not locked for reading on entry to RUnlock. 
+
+#### <a id="RWMutex.Unlock" href="#RWMutex.Unlock">func (rw *RWMutex) Unlock()</a>
+
+```
+searchKey: sync.RWMutex.Unlock
+tags: [function]
+```
+
+```Go
+func (rw *RWMutex) Unlock()
+```
+
+Unlock unlocks rw for writing. It is a run-time error if rw is not locked for writing on entry to Unlock. 
+
+As with Mutexes, a locked RWMutex is not associated with a particular goroutine. One goroutine may RLock (Lock) a RWMutex and then arrange for another goroutine to RUnlock (Unlock) it. 
+
+#### <a id="RWMutex.rUnlockSlow" href="#RWMutex.rUnlockSlow">func (rw *RWMutex) rUnlockSlow(r int32)</a>
+
+```
+searchKey: sync.RWMutex.rUnlockSlow
+tags: [method private]
+```
+
+```Go
+func (rw *RWMutex) rUnlockSlow(r int32)
+```
+
+### <a id="WaitGroup" href="#WaitGroup">type WaitGroup struct</a>
+
+```
+searchKey: sync.WaitGroup
+tags: [struct]
+```
+
+```Go
+type WaitGroup struct {
+	noCopy noCopy
+
+	// 64-bit value: high 32 bits are counter, low 32 bits are waiter count.
+	// 64-bit atomic operations require 64-bit alignment, but 32-bit
+	// compilers do not ensure it. So we allocate 12 bytes and then use
+	// the aligned 8 bytes in them as state, and the other 4 as storage
+	// for the sema.
+	state1 [3]uint32
+}
+```
+
+A WaitGroup waits for a collection of goroutines to finish. The main goroutine calls Add to set the number of goroutines to wait for. Then each of the goroutines runs and calls Done when finished. At the same time, Wait can be used to block until all goroutines have finished. 
+
+A WaitGroup must not be copied after first use. 
+
+#### <a id="WaitGroup.Add" href="#WaitGroup.Add">func (wg *WaitGroup) Add(delta int)</a>
+
+```
+searchKey: sync.WaitGroup.Add
+tags: [method]
+```
+
+```Go
+func (wg *WaitGroup) Add(delta int)
+```
+
+Add adds delta, which may be negative, to the WaitGroup counter. If the counter becomes zero, all goroutines blocked on Wait are released. If the counter goes negative, Add panics. 
+
+Note that calls with a positive delta that occur when the counter is zero must happen before a Wait. Calls with a negative delta, or calls with a positive delta that start when the counter is greater than zero, may happen at any time. Typically this means the calls to Add should execute before the statement creating the goroutine or other event to be waited for. If a WaitGroup is reused to wait for several independent sets of events, new Add calls must happen after all previous Wait calls have returned. See the WaitGroup example. 
+
+#### <a id="WaitGroup.Done" href="#WaitGroup.Done">func (wg *WaitGroup) Done()</a>
+
+```
+searchKey: sync.WaitGroup.Done
+tags: [function]
+```
+
+```Go
+func (wg *WaitGroup) Done()
+```
+
+Done decrements the WaitGroup counter by one. 
+
+#### <a id="WaitGroup.Wait" href="#WaitGroup.Wait">func (wg *WaitGroup) Wait()</a>
+
+```
+searchKey: sync.WaitGroup.Wait
+tags: [function]
+```
+
+```Go
+func (wg *WaitGroup) Wait()
+```
+
+Wait blocks until the WaitGroup counter is zero. 
+
+#### <a id="WaitGroup.state" href="#WaitGroup.state">func (wg *WaitGroup) state() (statep *uint64, semap *uint32)</a>
+
+```
+searchKey: sync.WaitGroup.state
+tags: [function private]
+```
+
+```Go
+func (wg *WaitGroup) state() (statep *uint64, semap *uint32)
+```
+
+state returns pointers to the state and sema fields stored within wg.state1. 
+
+### <a id="copyChecker" href="#copyChecker">type copyChecker uintptr</a>
+
+```
+searchKey: sync.copyChecker
+tags: [number private]
+```
+
+```Go
+type copyChecker uintptr
+```
+
+copyChecker holds back pointer to itself to detect object copying. 
+
+#### <a id="copyChecker.check" href="#copyChecker.check">func (c *copyChecker) check()</a>
+
+```
+searchKey: sync.copyChecker.check
+tags: [function private]
+```
+
+```Go
+func (c *copyChecker) check()
+```
+
+### <a id="dequeueNil" href="#dequeueNil">type dequeueNil *struct{}</a>
+
+```
+searchKey: sync.dequeueNil
+tags: [struct private]
+```
+
+```Go
+type dequeueNil *struct{}
+```
+
+dequeueNil is used in poolDequeue to represent interface{}(nil). Since we use nil to represent empty slots, we need a sentinel value to represent nil. 
+
+### <a id="eface" href="#eface">type eface struct</a>
+
+```
+searchKey: sync.eface
+tags: [struct private]
+```
+
+```Go
+type eface struct {
+	typ, val unsafe.Pointer
+}
+```
+
+### <a id="entry" href="#entry">type entry struct</a>
+
+```
+searchKey: sync.entry
+tags: [struct private]
+```
+
+```Go
+type entry struct {
+	// p points to the interface{} value stored for the entry.
+	//
+	// If p == nil, the entry has been deleted, and either m.dirty == nil or
+	// m.dirty[key] is e.
+	//
+	// If p == expunged, the entry has been deleted, m.dirty != nil, and the entry
+	// is missing from m.dirty.
+	//
+	// Otherwise, the entry is valid and recorded in m.read.m[key] and, if m.dirty
+	// != nil, in m.dirty[key].
+	//
+	// An entry can be deleted by atomic replacement with nil: when m.dirty is
+	// next created, it will atomically replace nil with expunged and leave
+	// m.dirty[key] unset.
+	//
+	// An entry's associated value can be updated by atomic replacement, provided
+	// p != expunged. If p == expunged, an entry's associated value can be updated
+	// only after first setting m.dirty[key] = e so that lookups using the dirty
+	// map find the entry.
+	p unsafe.Pointer // *interface{}
+}
+```
+
+An entry is a slot in the map corresponding to a particular key. 
+
+#### <a id="newEntry" href="#newEntry">func newEntry(i interface{}) *entry</a>
+
+```
+searchKey: sync.newEntry
+tags: [method private]
+```
+
+```Go
+func newEntry(i interface{}) *entry
+```
+
+#### <a id="entry.delete" href="#entry.delete">func (e *entry) delete() (value interface{}, ok bool)</a>
+
+```
+searchKey: sync.entry.delete
+tags: [function private]
+```
+
+```Go
+func (e *entry) delete() (value interface{}, ok bool)
+```
+
+#### <a id="entry.load" href="#entry.load">func (e *entry) load() (value interface{}, ok bool)</a>
+
+```
+searchKey: sync.entry.load
+tags: [function private]
+```
+
+```Go
+func (e *entry) load() (value interface{}, ok bool)
+```
+
+#### <a id="entry.storeLocked" href="#entry.storeLocked">func (e *entry) storeLocked(i *interface{})</a>
+
+```
+searchKey: sync.entry.storeLocked
+tags: [method private]
+```
+
+```Go
+func (e *entry) storeLocked(i *interface{})
+```
+
+storeLocked unconditionally stores a value to the entry. 
+
+The entry must be known not to be expunged. 
+
+#### <a id="entry.tryExpungeLocked" href="#entry.tryExpungeLocked">func (e *entry) tryExpungeLocked() (isExpunged bool)</a>
+
+```
+searchKey: sync.entry.tryExpungeLocked
+tags: [function private]
+```
+
+```Go
+func (e *entry) tryExpungeLocked() (isExpunged bool)
+```
+
+#### <a id="entry.tryLoadOrStore" href="#entry.tryLoadOrStore">func (e *entry) tryLoadOrStore(i interface{}) (actual interface{}, loaded, ok bool)</a>
+
+```
+searchKey: sync.entry.tryLoadOrStore
+tags: [method private]
+```
+
+```Go
+func (e *entry) tryLoadOrStore(i interface{}) (actual interface{}, loaded, ok bool)
+```
+
+tryLoadOrStore atomically loads or stores a value if the entry is not expunged. 
+
+If the entry is expunged, tryLoadOrStore leaves the entry unchanged and returns with ok==false. 
+
+#### <a id="entry.tryStore" href="#entry.tryStore">func (e *entry) tryStore(i *interface{}) bool</a>
+
+```
+searchKey: sync.entry.tryStore
+tags: [method private]
+```
+
+```Go
+func (e *entry) tryStore(i *interface{}) bool
+```
+
+tryStore stores a value if the entry has not been expunged. 
+
+If the entry is expunged, tryStore returns false and leaves the entry unchanged. 
+
+#### <a id="entry.unexpungeLocked" href="#entry.unexpungeLocked">func (e *entry) unexpungeLocked() (wasExpunged bool)</a>
+
+```
+searchKey: sync.entry.unexpungeLocked
+tags: [function private]
+```
+
+```Go
+func (e *entry) unexpungeLocked() (wasExpunged bool)
+```
+
+unexpungeLocked ensures that the entry is not marked as expunged. 
+
+If the entry was previously expunged, it must be added to the dirty map before m.mu is unlocked. 
+
+### <a id="noCopy" href="#noCopy">type noCopy struct{}</a>
+
+```
+searchKey: sync.noCopy
+tags: [struct private]
+```
+
+```Go
+type noCopy struct{}
+```
+
+noCopy may be embedded into structs which must not be copied after the first use. 
+
+See [https://golang.org/issues/8005#issuecomment-190753527](https://golang.org/issues/8005#issuecomment-190753527) for details. 
+
+#### <a id="noCopy.Lock" href="#noCopy.Lock">func (*noCopy) Lock()</a>
+
+```
+searchKey: sync.noCopy.Lock
+tags: [function private]
+```
+
+```Go
+func (*noCopy) Lock()
+```
+
+Lock is a no-op used by -copylocks checker from `go vet`. 
+
+#### <a id="noCopy.Unlock" href="#noCopy.Unlock">func (*noCopy) Unlock()</a>
+
+```
+searchKey: sync.noCopy.Unlock
+tags: [function private]
+```
+
+```Go
+func (*noCopy) Unlock()
+```
+
+### <a id="notifyList" href="#notifyList">type notifyList struct</a>
+
+```
+searchKey: sync.notifyList
+tags: [struct private]
+```
+
+```Go
+type notifyList struct {
+	wait   uint32
+	notify uint32
+	lock   uintptr // key field of the mutex
+	head   unsafe.Pointer
+	tail   unsafe.Pointer
+}
+```
+
+Approximation of notifyList in runtime/sema.go. Size and alignment must agree. 
+
+### <a id="poolChain" href="#poolChain">type poolChain struct</a>
+
+```
+searchKey: sync.poolChain
+tags: [struct private]
+```
+
+```Go
+type poolChain struct {
+	// head is the poolDequeue to push to. This is only accessed
+	// by the producer, so doesn't need to be synchronized.
+	head *poolChainElt
+
+	// tail is the poolDequeue to popTail from. This is accessed
+	// by consumers, so reads and writes must be atomic.
+	tail *poolChainElt
+}
+```
+
+poolChain is a dynamically-sized version of poolDequeue. 
+
+This is implemented as a doubly-linked list queue of poolDequeues where each dequeue is double the size of the previous one. Once a dequeue fills up, this allocates a new one and only ever pushes to the latest dequeue. Pops happen from the other end of the list and once a dequeue is exhausted, it gets removed from the list. 
+
+#### <a id="poolChain.PopHead" href="#poolChain.PopHead">func (c *poolChain) PopHead() (interface{}, bool)</a>
+
+```
+searchKey: sync.poolChain.PopHead
+tags: [function private]
+```
+
+```Go
+func (c *poolChain) PopHead() (interface{}, bool)
+```
+
+#### <a id="poolChain.PopTail" href="#poolChain.PopTail">func (c *poolChain) PopTail() (interface{}, bool)</a>
+
+```
+searchKey: sync.poolChain.PopTail
+tags: [function private]
+```
+
+```Go
+func (c *poolChain) PopTail() (interface{}, bool)
+```
+
+#### <a id="poolChain.PushHead" href="#poolChain.PushHead">func (c *poolChain) PushHead(val interface{}) bool</a>
+
+```
+searchKey: sync.poolChain.PushHead
+tags: [method private]
+```
+
+```Go
+func (c *poolChain) PushHead(val interface{}) bool
+```
+
+#### <a id="poolChain.popHead" href="#poolChain.popHead">func (c *poolChain) popHead() (interface{}, bool)</a>
+
+```
+searchKey: sync.poolChain.popHead
+tags: [function private]
+```
+
+```Go
+func (c *poolChain) popHead() (interface{}, bool)
+```
+
+#### <a id="poolChain.popTail" href="#poolChain.popTail">func (c *poolChain) popTail() (interface{}, bool)</a>
+
+```
+searchKey: sync.poolChain.popTail
+tags: [function private]
+```
+
+```Go
+func (c *poolChain) popTail() (interface{}, bool)
+```
+
+#### <a id="poolChain.pushHead" href="#poolChain.pushHead">func (c *poolChain) pushHead(val interface{})</a>
+
+```
+searchKey: sync.poolChain.pushHead
+tags: [method private]
+```
+
+```Go
+func (c *poolChain) pushHead(val interface{})
+```
+
+### <a id="poolChainElt" href="#poolChainElt">type poolChainElt struct</a>
+
+```
+searchKey: sync.poolChainElt
+tags: [struct private]
+```
+
+```Go
+type poolChainElt struct {
+	poolDequeue
+
+	// next and prev link to the adjacent poolChainElts in this
+	// poolChain.
+	//
+	// next is written atomically by the producer and read
+	// atomically by the consumer. It only transitions from nil to
+	// non-nil.
+	//
+	// prev is written atomically by the consumer and read
+	// atomically by the producer. It only transitions from
+	// non-nil to nil.
+	next, prev *poolChainElt
+}
+```
+
+#### <a id="loadPoolChainElt" href="#loadPoolChainElt">func loadPoolChainElt(pp **poolChainElt) *poolChainElt</a>
+
+```
+searchKey: sync.loadPoolChainElt
+tags: [method private]
+```
+
+```Go
+func loadPoolChainElt(pp **poolChainElt) *poolChainElt
 ```
 
 ### <a id="poolDequeue" href="#poolDequeue">type poolDequeue struct</a>
 
 ```
 searchKey: sync.poolDequeue
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -1136,46 +1499,55 @@ poolDequeue is a lock-free fixed-size single-producer, multi-consumer queue. The
 
 It has the added feature that it nils out unused slots to avoid unnecessary retention of objects. This is important for sync.Pool, but not typically a property considered in the literature. 
 
-#### <a id="poolDequeue.unpack" href="#poolDequeue.unpack">func (d *poolDequeue) unpack(ptrs uint64) (head, tail uint32)</a>
+#### <a id="poolDequeue.PopHead" href="#poolDequeue.PopHead">func (d *poolDequeue) PopHead() (interface{}, bool)</a>
 
 ```
-searchKey: sync.poolDequeue.unpack
-tags: [private]
+searchKey: sync.poolDequeue.PopHead
+tags: [function private]
 ```
 
 ```Go
-func (d *poolDequeue) unpack(ptrs uint64) (head, tail uint32)
+func (d *poolDequeue) PopHead() (interface{}, bool)
+```
+
+#### <a id="poolDequeue.PopTail" href="#poolDequeue.PopTail">func (d *poolDequeue) PopTail() (interface{}, bool)</a>
+
+```
+searchKey: sync.poolDequeue.PopTail
+tags: [function private]
+```
+
+```Go
+func (d *poolDequeue) PopTail() (interface{}, bool)
+```
+
+#### <a id="poolDequeue.PushHead" href="#poolDequeue.PushHead">func (d *poolDequeue) PushHead(val interface{}) bool</a>
+
+```
+searchKey: sync.poolDequeue.PushHead
+tags: [method private]
+```
+
+```Go
+func (d *poolDequeue) PushHead(val interface{}) bool
 ```
 
 #### <a id="poolDequeue.pack" href="#poolDequeue.pack">func (d *poolDequeue) pack(head, tail uint32) uint64</a>
 
 ```
 searchKey: sync.poolDequeue.pack
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (d *poolDequeue) pack(head, tail uint32) uint64
 ```
 
-#### <a id="poolDequeue.pushHead" href="#poolDequeue.pushHead">func (d *poolDequeue) pushHead(val interface{}) bool</a>
-
-```
-searchKey: sync.poolDequeue.pushHead
-tags: [private]
-```
-
-```Go
-func (d *poolDequeue) pushHead(val interface{}) bool
-```
-
-pushHead adds val at the head of the queue. It returns false if the queue is full. It must only be called by a single producer. 
-
 #### <a id="poolDequeue.popHead" href="#poolDequeue.popHead">func (d *poolDequeue) popHead() (interface{}, bool)</a>
 
 ```
 searchKey: sync.poolDequeue.popHead
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -1188,7 +1560,7 @@ popHead removes and returns the element at the head of the queue. It returns fal
 
 ```
 searchKey: sync.poolDequeue.popTail
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -1197,311 +1569,95 @@ func (d *poolDequeue) popTail() (interface{}, bool)
 
 popTail removes and returns the element at the tail of the queue. It returns false if the queue is empty. It may be called by any number of consumers. 
 
-#### <a id="poolDequeue.PushHead" href="#poolDequeue.PushHead">func (d *poolDequeue) PushHead(val interface{}) bool</a>
+#### <a id="poolDequeue.pushHead" href="#poolDequeue.pushHead">func (d *poolDequeue) pushHead(val interface{}) bool</a>
 
 ```
-searchKey: sync.poolDequeue.PushHead
-tags: [private]
-```
-
-```Go
-func (d *poolDequeue) PushHead(val interface{}) bool
-```
-
-#### <a id="poolDequeue.PopHead" href="#poolDequeue.PopHead">func (d *poolDequeue) PopHead() (interface{}, bool)</a>
-
-```
-searchKey: sync.poolDequeue.PopHead
-tags: [private]
+searchKey: sync.poolDequeue.pushHead
+tags: [method private]
 ```
 
 ```Go
-func (d *poolDequeue) PopHead() (interface{}, bool)
+func (d *poolDequeue) pushHead(val interface{}) bool
 ```
 
-#### <a id="poolDequeue.PopTail" href="#poolDequeue.PopTail">func (d *poolDequeue) PopTail() (interface{}, bool)</a>
+pushHead adds val at the head of the queue. It returns false if the queue is full. It must only be called by a single producer. 
+
+#### <a id="poolDequeue.unpack" href="#poolDequeue.unpack">func (d *poolDequeue) unpack(ptrs uint64) (head, tail uint32)</a>
 
 ```
-searchKey: sync.poolDequeue.PopTail
-tags: [private]
-```
-
-```Go
-func (d *poolDequeue) PopTail() (interface{}, bool)
-```
-
-### <a id="eface" href="#eface">type eface struct</a>
-
-```
-searchKey: sync.eface
-tags: [private]
+searchKey: sync.poolDequeue.unpack
+tags: [method private]
 ```
 
 ```Go
-type eface struct {
-	typ, val unsafe.Pointer
+func (d *poolDequeue) unpack(ptrs uint64) (head, tail uint32)
+```
+
+### <a id="poolLocal" href="#poolLocal">type poolLocal struct</a>
+
+```
+searchKey: sync.poolLocal
+tags: [struct private]
+```
+
+```Go
+type poolLocal struct {
+	poolLocalInternal
+
+	// Prevents false sharing on widespread platforms with
+	// 128 mod (cache line size) = 0 .
+	pad [128 - unsafe.Sizeof(poolLocalInternal{})%128]byte
 }
 ```
 
-### <a id="dequeueNil" href="#dequeueNil">type dequeueNil *struct{}</a>
+#### <a id="indexLocal" href="#indexLocal">func indexLocal(l unsafe.Pointer, i int) *poolLocal</a>
 
 ```
-searchKey: sync.dequeueNil
-tags: [private]
-```
-
-```Go
-type dequeueNil *struct{}
-```
-
-dequeueNil is used in poolDequeue to represent interface{}(nil). Since we use nil to represent empty slots, we need a sentinel value to represent nil. 
-
-### <a id="poolChain" href="#poolChain">type poolChain struct</a>
-
-```
-searchKey: sync.poolChain
-tags: [private]
+searchKey: sync.indexLocal
+tags: [method private]
 ```
 
 ```Go
-type poolChain struct {
-	// head is the poolDequeue to push to. This is only accessed
-	// by the producer, so doesn't need to be synchronized.
-	head *poolChainElt
+func indexLocal(l unsafe.Pointer, i int) *poolLocal
+```
 
-	// tail is the poolDequeue to popTail from. This is accessed
-	// by consumers, so reads and writes must be atomic.
-	tail *poolChainElt
+### <a id="poolLocalInternal" href="#poolLocalInternal">type poolLocalInternal struct</a>
+
+```
+searchKey: sync.poolLocalInternal
+tags: [struct private]
+```
+
+```Go
+type poolLocalInternal struct {
+	private interface{} // Can be used only by the respective P.
+	shared  poolChain   // Local P can pushHead/popHead; any P can popTail.
 }
 ```
 
-poolChain is a dynamically-sized version of poolDequeue. 
+Local per-P Pool appendix. 
 
-This is implemented as a doubly-linked list queue of poolDequeues where each dequeue is double the size of the previous one. Once a dequeue fills up, this allocates a new one and only ever pushes to the latest dequeue. Pops happen from the other end of the list and once a dequeue is exhausted, it gets removed from the list. 
-
-#### <a id="poolChain.pushHead" href="#poolChain.pushHead">func (c *poolChain) pushHead(val interface{})</a>
+### <a id="readOnly" href="#readOnly">type readOnly struct</a>
 
 ```
-searchKey: sync.poolChain.pushHead
-tags: [private]
+searchKey: sync.readOnly
+tags: [struct private]
 ```
 
 ```Go
-func (c *poolChain) pushHead(val interface{})
-```
-
-#### <a id="poolChain.popHead" href="#poolChain.popHead">func (c *poolChain) popHead() (interface{}, bool)</a>
-
-```
-searchKey: sync.poolChain.popHead
-tags: [private]
-```
-
-```Go
-func (c *poolChain) popHead() (interface{}, bool)
-```
-
-#### <a id="poolChain.popTail" href="#poolChain.popTail">func (c *poolChain) popTail() (interface{}, bool)</a>
-
-```
-searchKey: sync.poolChain.popTail
-tags: [private]
-```
-
-```Go
-func (c *poolChain) popTail() (interface{}, bool)
-```
-
-#### <a id="poolChain.PushHead" href="#poolChain.PushHead">func (c *poolChain) PushHead(val interface{}) bool</a>
-
-```
-searchKey: sync.poolChain.PushHead
-tags: [private]
-```
-
-```Go
-func (c *poolChain) PushHead(val interface{}) bool
-```
-
-#### <a id="poolChain.PopHead" href="#poolChain.PopHead">func (c *poolChain) PopHead() (interface{}, bool)</a>
-
-```
-searchKey: sync.poolChain.PopHead
-tags: [private]
-```
-
-```Go
-func (c *poolChain) PopHead() (interface{}, bool)
-```
-
-#### <a id="poolChain.PopTail" href="#poolChain.PopTail">func (c *poolChain) PopTail() (interface{}, bool)</a>
-
-```
-searchKey: sync.poolChain.PopTail
-tags: [private]
-```
-
-```Go
-func (c *poolChain) PopTail() (interface{}, bool)
-```
-
-### <a id="poolChainElt" href="#poolChainElt">type poolChainElt struct</a>
-
-```
-searchKey: sync.poolChainElt
-tags: [private]
-```
-
-```Go
-type poolChainElt struct {
-	poolDequeue
-
-	// next and prev link to the adjacent poolChainElts in this
-	// poolChain.
-	//
-	// next is written atomically by the producer and read
-	// atomically by the consumer. It only transitions from nil to
-	// non-nil.
-	//
-	// prev is written atomically by the consumer and read
-	// atomically by the producer. It only transitions from
-	// non-nil to nil.
-	next, prev *poolChainElt
+type readOnly struct {
+	m       map[interface{}]*entry
+	amended bool // true if the dirty map contains some key not in m.
 }
 ```
 
-#### <a id="loadPoolChainElt" href="#loadPoolChainElt">func loadPoolChainElt(pp **poolChainElt) *poolChainElt</a>
-
-```
-searchKey: sync.loadPoolChainElt
-tags: [private]
-```
-
-```Go
-func loadPoolChainElt(pp **poolChainElt) *poolChainElt
-```
-
-### <a id="notifyList" href="#notifyList">type notifyList struct</a>
-
-```
-searchKey: sync.notifyList
-tags: [private]
-```
-
-```Go
-type notifyList struct {
-	wait   uint32
-	notify uint32
-	lock   uintptr // key field of the mutex
-	head   unsafe.Pointer
-	tail   unsafe.Pointer
-}
-```
-
-Approximation of notifyList in runtime/sema.go. Size and alignment must agree. 
-
-### <a id="RWMutex" href="#RWMutex">type RWMutex struct</a>
-
-```
-searchKey: sync.RWMutex
-```
-
-```Go
-type RWMutex struct {
-	w           Mutex  // held if there are pending writers
-	writerSem   uint32 // semaphore for writers to wait for completing readers
-	readerSem   uint32 // semaphore for readers to wait for completing writers
-	readerCount int32  // number of pending readers
-	readerWait  int32  // number of departing readers
-}
-```
-
-A RWMutex is a reader/writer mutual exclusion lock. The lock can be held by an arbitrary number of readers or a single writer. The zero value for a RWMutex is an unlocked mutex. 
-
-A RWMutex must not be copied after first use. 
-
-If a goroutine holds a RWMutex for reading and another goroutine might call Lock, no goroutine should expect to be able to acquire a read lock until the initial read lock is released. In particular, this prohibits recursive read locking. This is to ensure that the lock eventually becomes available; a blocked Lock call excludes new readers from acquiring the lock. 
-
-#### <a id="RWMutex.RLock" href="#RWMutex.RLock">func (rw *RWMutex) RLock()</a>
-
-```
-searchKey: sync.RWMutex.RLock
-```
-
-```Go
-func (rw *RWMutex) RLock()
-```
-
-RLock locks rw for reading. 
-
-It should not be used for recursive read locking; a blocked Lock call excludes new readers from acquiring the lock. See the documentation on the RWMutex type. 
-
-#### <a id="RWMutex.RUnlock" href="#RWMutex.RUnlock">func (rw *RWMutex) RUnlock()</a>
-
-```
-searchKey: sync.RWMutex.RUnlock
-```
-
-```Go
-func (rw *RWMutex) RUnlock()
-```
-
-RUnlock undoes a single RLock call; it does not affect other simultaneous readers. It is a run-time error if rw is not locked for reading on entry to RUnlock. 
-
-#### <a id="RWMutex.rUnlockSlow" href="#RWMutex.rUnlockSlow">func (rw *RWMutex) rUnlockSlow(r int32)</a>
-
-```
-searchKey: sync.RWMutex.rUnlockSlow
-tags: [private]
-```
-
-```Go
-func (rw *RWMutex) rUnlockSlow(r int32)
-```
-
-#### <a id="RWMutex.Lock" href="#RWMutex.Lock">func (rw *RWMutex) Lock()</a>
-
-```
-searchKey: sync.RWMutex.Lock
-```
-
-```Go
-func (rw *RWMutex) Lock()
-```
-
-Lock locks rw for writing. If the lock is already locked for reading or writing, Lock blocks until the lock is available. 
-
-#### <a id="RWMutex.Unlock" href="#RWMutex.Unlock">func (rw *RWMutex) Unlock()</a>
-
-```
-searchKey: sync.RWMutex.Unlock
-```
-
-```Go
-func (rw *RWMutex) Unlock()
-```
-
-Unlock unlocks rw for writing. It is a run-time error if rw is not locked for writing on entry to Unlock. 
-
-As with Mutexes, a locked RWMutex is not associated with a particular goroutine. One goroutine may RLock (Lock) a RWMutex and then arrange for another goroutine to RUnlock (Unlock) it. 
-
-#### <a id="RWMutex.RLocker" href="#RWMutex.RLocker">func (rw *RWMutex) RLocker() Locker</a>
-
-```
-searchKey: sync.RWMutex.RLocker
-```
-
-```Go
-func (rw *RWMutex) RLocker() Locker
-```
-
-RLocker returns a Locker interface that implements the Lock and Unlock methods by calling rw.RLock and rw.RUnlock. 
+readOnly is an immutable struct stored atomically in the Map.read field. 
 
 ### <a id="rlocker" href="#rlocker">type rlocker sync.RWMutex</a>
 
 ```
 searchKey: sync.rlocker
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -1512,7 +1668,7 @@ type rlocker RWMutex
 
 ```
 searchKey: sync.rlocker.Lock
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -1523,144 +1679,24 @@ func (r *rlocker) Lock()
 
 ```
 searchKey: sync.rlocker.Unlock
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (r *rlocker) Unlock()
 ```
 
-### <a id="WaitGroup" href="#WaitGroup">type WaitGroup struct</a>
-
-```
-searchKey: sync.WaitGroup
-```
-
-```Go
-type WaitGroup struct {
-	noCopy noCopy
-
-	// 64-bit value: high 32 bits are counter, low 32 bits are waiter count.
-	// 64-bit atomic operations require 64-bit alignment, but 32-bit
-	// compilers do not ensure it. So we allocate 12 bytes and then use
-	// the aligned 8 bytes in them as state, and the other 4 as storage
-	// for the sema.
-	state1 [3]uint32
-}
-```
-
-A WaitGroup waits for a collection of goroutines to finish. The main goroutine calls Add to set the number of goroutines to wait for. Then each of the goroutines runs and calls Done when finished. At the same time, Wait can be used to block until all goroutines have finished. 
-
-A WaitGroup must not be copied after first use. 
-
-#### <a id="WaitGroup.state" href="#WaitGroup.state">func (wg *WaitGroup) state() (statep *uint64, semap *uint32)</a>
-
-```
-searchKey: sync.WaitGroup.state
-tags: [private]
-```
-
-```Go
-func (wg *WaitGroup) state() (statep *uint64, semap *uint32)
-```
-
-state returns pointers to the state and sema fields stored within wg.state1. 
-
-#### <a id="WaitGroup.Add" href="#WaitGroup.Add">func (wg *WaitGroup) Add(delta int)</a>
-
-```
-searchKey: sync.WaitGroup.Add
-```
-
-```Go
-func (wg *WaitGroup) Add(delta int)
-```
-
-Add adds delta, which may be negative, to the WaitGroup counter. If the counter becomes zero, all goroutines blocked on Wait are released. If the counter goes negative, Add panics. 
-
-Note that calls with a positive delta that occur when the counter is zero must happen before a Wait. Calls with a negative delta, or calls with a positive delta that start when the counter is greater than zero, may happen at any time. Typically this means the calls to Add should execute before the statement creating the goroutine or other event to be waited for. If a WaitGroup is reused to wait for several independent sets of events, new Add calls must happen after all previous Wait calls have returned. See the WaitGroup example. 
-
-#### <a id="WaitGroup.Done" href="#WaitGroup.Done">func (wg *WaitGroup) Done()</a>
-
-```
-searchKey: sync.WaitGroup.Done
-```
-
-```Go
-func (wg *WaitGroup) Done()
-```
-
-Done decrements the WaitGroup counter by one. 
-
-#### <a id="WaitGroup.Wait" href="#WaitGroup.Wait">func (wg *WaitGroup) Wait()</a>
-
-```
-searchKey: sync.WaitGroup.Wait
-```
-
-```Go
-func (wg *WaitGroup) Wait()
-```
-
-Wait blocks until the WaitGroup counter is zero. 
-
-### <a id="PoolDequeue" href="#PoolDequeue">type PoolDequeue interface</a>
-
-```
-searchKey: sync.PoolDequeue
-tags: [private]
-```
-
-```Go
-type PoolDequeue interface {
-	PushHead(val interface{}) bool
-	PopHead() (interface{}, bool)
-	PopTail() (interface{}, bool)
-}
-```
-
-poolDequeue testing. 
-
-#### <a id="NewPoolDequeue" href="#NewPoolDequeue">func NewPoolDequeue(n int) PoolDequeue</a>
-
-```
-searchKey: sync.NewPoolDequeue
-tags: [private]
-```
-
-```Go
-func NewPoolDequeue(n int) PoolDequeue
-```
-
-#### <a id="NewPoolChain" href="#NewPoolChain">func NewPoolChain() PoolDequeue</a>
-
-```
-searchKey: sync.NewPoolChain
-tags: [private]
-```
-
-```Go
-func NewPoolChain() PoolDequeue
-```
-
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="throw" href="#throw">func throw(string)</a>
-
 ```
-searchKey: sync.throw
-tags: [private]
-```
-
-```Go
-func throw(string)
+tags: [package]
 ```
 
 ### <a id="fastrand" href="#fastrand">func fastrand() uint32</a>
 
 ```
 searchKey: sync.fastrand
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -1669,11 +1705,44 @@ func fastrand() uint32
 
 from runtime 
 
+### <a id="init.pool.go" href="#init.pool.go">func init()</a>
+
+```
+searchKey: sync.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="init.runtime.go" href="#init.runtime.go">func init()</a>
+
+```
+searchKey: sync.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="poolCleanup" href="#poolCleanup">func poolCleanup()</a>
+
+```
+searchKey: sync.poolCleanup
+tags: [function private]
+```
+
+```Go
+func poolCleanup()
+```
+
 ### <a id="poolRaceAddr" href="#poolRaceAddr">func poolRaceAddr(x interface{}) unsafe.Pointer</a>
 
 ```
 searchKey: sync.poolRaceAddr
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1682,101 +1751,22 @@ func poolRaceAddr(x interface{}) unsafe.Pointer
 
 poolRaceAddr returns an address to use as the synchronization point for race detector logic. We don't use the actual pointer stored in x directly, for fear of conflicting with other synchronization on that address. Instead, we hash the pointer to get an index into poolRaceHash. See discussion on golang.org/cl/31589. 
 
-### <a id="poolCleanup" href="#poolCleanup">func poolCleanup()</a>
-
-```
-searchKey: sync.poolCleanup
-tags: [private]
-```
-
-```Go
-func poolCleanup()
-```
-
-### <a id="init.pool.go" href="#init.pool.go">func init()</a>
-
-```
-searchKey: sync.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
-### <a id="runtime_registerPoolCleanup" href="#runtime_registerPoolCleanup">func runtime_registerPoolCleanup(cleanup func())</a>
-
-```
-searchKey: sync.runtime_registerPoolCleanup
-tags: [private]
-```
-
-```Go
-func runtime_registerPoolCleanup(cleanup func())
-```
-
-Implemented in runtime. 
-
-### <a id="runtime_procPin" href="#runtime_procPin">func runtime_procPin() int</a>
-
-```
-searchKey: sync.runtime_procPin
-tags: [private]
-```
-
-```Go
-func runtime_procPin() int
-```
-
-### <a id="runtime_procUnpin" href="#runtime_procUnpin">func runtime_procUnpin()</a>
-
-```
-searchKey: sync.runtime_procUnpin
-tags: [private]
-```
-
-```Go
-func runtime_procUnpin()
-```
-
 ### <a id="runtime_LoadAcquintptr" href="#runtime_LoadAcquintptr">func runtime_LoadAcquintptr(ptr *uintptr) uintptr</a>
 
 ```
 searchKey: sync.runtime_LoadAcquintptr
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func runtime_LoadAcquintptr(ptr *uintptr) uintptr
 ```
 
-### <a id="runtime_StoreReluintptr" href="#runtime_StoreReluintptr">func runtime_StoreReluintptr(ptr *uintptr, val uintptr) uintptr</a>
-
-```
-searchKey: sync.runtime_StoreReluintptr
-tags: [private]
-```
-
-```Go
-func runtime_StoreReluintptr(ptr *uintptr, val uintptr) uintptr
-```
-
-### <a id="storePoolChainElt" href="#storePoolChainElt">func storePoolChainElt(pp **poolChainElt, v *poolChainElt)</a>
-
-```
-searchKey: sync.storePoolChainElt
-tags: [private]
-```
-
-```Go
-func storePoolChainElt(pp **poolChainElt, v *poolChainElt)
-```
-
 ### <a id="runtime_Semacquire" href="#runtime_Semacquire">func runtime_Semacquire(s *uint32)</a>
 
 ```
 searchKey: sync.runtime_Semacquire
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1789,7 +1779,7 @@ Semacquire waits until *s > 0 and then atomically decrements it. It is intended 
 
 ```
 searchKey: sync.runtime_SemacquireMutex
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1802,7 +1792,7 @@ SemacquireMutex is like Semacquire, but for profiling contended Mutexes. If lifo
 
 ```
 searchKey: sync.runtime_Semrelease
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1811,87 +1801,22 @@ func runtime_Semrelease(s *uint32, handoff bool, skipframes int)
 
 Semrelease atomically increments *s and notifies a waiting goroutine if one is blocked in Semacquire. It is intended as a simple wakeup primitive for use by the synchronization library and should not be used directly. If handoff is true, pass count directly to the first waiter. skipframes is the number of frames to omit during tracing, counting from runtime_Semrelease's caller. 
 
-### <a id="runtime_notifyListAdd" href="#runtime_notifyListAdd">func runtime_notifyListAdd(l *notifyList) uint32</a>
+### <a id="runtime_StoreReluintptr" href="#runtime_StoreReluintptr">func runtime_StoreReluintptr(ptr *uintptr, val uintptr) uintptr</a>
 
 ```
-searchKey: sync.runtime_notifyListAdd
-tags: [private]
-```
-
-```Go
-func runtime_notifyListAdd(l *notifyList) uint32
-```
-
-See runtime/sema.go for documentation. 
-
-### <a id="runtime_notifyListWait" href="#runtime_notifyListWait">func runtime_notifyListWait(l *notifyList, t uint32)</a>
-
-```
-searchKey: sync.runtime_notifyListWait
-tags: [private]
+searchKey: sync.runtime_StoreReluintptr
+tags: [method private]
 ```
 
 ```Go
-func runtime_notifyListWait(l *notifyList, t uint32)
-```
-
-See runtime/sema.go for documentation. 
-
-### <a id="runtime_notifyListNotifyAll" href="#runtime_notifyListNotifyAll">func runtime_notifyListNotifyAll(l *notifyList)</a>
-
-```
-searchKey: sync.runtime_notifyListNotifyAll
-tags: [private]
-```
-
-```Go
-func runtime_notifyListNotifyAll(l *notifyList)
-```
-
-See runtime/sema.go for documentation. 
-
-### <a id="runtime_notifyListNotifyOne" href="#runtime_notifyListNotifyOne">func runtime_notifyListNotifyOne(l *notifyList)</a>
-
-```
-searchKey: sync.runtime_notifyListNotifyOne
-tags: [private]
-```
-
-```Go
-func runtime_notifyListNotifyOne(l *notifyList)
-```
-
-See runtime/sema.go for documentation. 
-
-### <a id="runtime_notifyListCheck" href="#runtime_notifyListCheck">func runtime_notifyListCheck(size uintptr)</a>
-
-```
-searchKey: sync.runtime_notifyListCheck
-tags: [private]
-```
-
-```Go
-func runtime_notifyListCheck(size uintptr)
-```
-
-Ensure that sync and runtime agree on size of notifyList. 
-
-### <a id="init.runtime.go" href="#init.runtime.go">func init()</a>
-
-```
-searchKey: sync.init
-tags: [private]
-```
-
-```Go
-func init()
+func runtime_StoreReluintptr(ptr *uintptr, val uintptr) uintptr
 ```
 
 ### <a id="runtime_canSpin" href="#runtime_canSpin">func runtime_canSpin(i int) bool</a>
 
 ```
 searchKey: sync.runtime_canSpin
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1904,7 +1829,7 @@ Active spinning runtime support. runtime_canSpin reports whether spinning makes 
 
 ```
 searchKey: sync.runtime_doSpin
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -1917,10 +1842,132 @@ runtime_doSpin does active spinning.
 
 ```
 searchKey: sync.runtime_nanotime
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func runtime_nanotime() int64
+```
+
+### <a id="runtime_notifyListAdd" href="#runtime_notifyListAdd">func runtime_notifyListAdd(l *notifyList) uint32</a>
+
+```
+searchKey: sync.runtime_notifyListAdd
+tags: [method private]
+```
+
+```Go
+func runtime_notifyListAdd(l *notifyList) uint32
+```
+
+See runtime/sema.go for documentation. 
+
+### <a id="runtime_notifyListCheck" href="#runtime_notifyListCheck">func runtime_notifyListCheck(size uintptr)</a>
+
+```
+searchKey: sync.runtime_notifyListCheck
+tags: [method private]
+```
+
+```Go
+func runtime_notifyListCheck(size uintptr)
+```
+
+Ensure that sync and runtime agree on size of notifyList. 
+
+### <a id="runtime_notifyListNotifyAll" href="#runtime_notifyListNotifyAll">func runtime_notifyListNotifyAll(l *notifyList)</a>
+
+```
+searchKey: sync.runtime_notifyListNotifyAll
+tags: [method private]
+```
+
+```Go
+func runtime_notifyListNotifyAll(l *notifyList)
+```
+
+See runtime/sema.go for documentation. 
+
+### <a id="runtime_notifyListNotifyOne" href="#runtime_notifyListNotifyOne">func runtime_notifyListNotifyOne(l *notifyList)</a>
+
+```
+searchKey: sync.runtime_notifyListNotifyOne
+tags: [method private]
+```
+
+```Go
+func runtime_notifyListNotifyOne(l *notifyList)
+```
+
+See runtime/sema.go for documentation. 
+
+### <a id="runtime_notifyListWait" href="#runtime_notifyListWait">func runtime_notifyListWait(l *notifyList, t uint32)</a>
+
+```
+searchKey: sync.runtime_notifyListWait
+tags: [method private]
+```
+
+```Go
+func runtime_notifyListWait(l *notifyList, t uint32)
+```
+
+See runtime/sema.go for documentation. 
+
+### <a id="runtime_procPin" href="#runtime_procPin">func runtime_procPin() int</a>
+
+```
+searchKey: sync.runtime_procPin
+tags: [function private]
+```
+
+```Go
+func runtime_procPin() int
+```
+
+### <a id="runtime_procUnpin" href="#runtime_procUnpin">func runtime_procUnpin()</a>
+
+```
+searchKey: sync.runtime_procUnpin
+tags: [function private]
+```
+
+```Go
+func runtime_procUnpin()
+```
+
+### <a id="runtime_registerPoolCleanup" href="#runtime_registerPoolCleanup">func runtime_registerPoolCleanup(cleanup func())</a>
+
+```
+searchKey: sync.runtime_registerPoolCleanup
+tags: [method private]
+```
+
+```Go
+func runtime_registerPoolCleanup(cleanup func())
+```
+
+Implemented in runtime. 
+
+### <a id="storePoolChainElt" href="#storePoolChainElt">func storePoolChainElt(pp **poolChainElt, v *poolChainElt)</a>
+
+```
+searchKey: sync.storePoolChainElt
+tags: [method private]
+```
+
+```Go
+func storePoolChainElt(pp **poolChainElt, v *poolChainElt)
+```
+
+### <a id="throw" href="#throw">func throw(string)</a>
+
+```
+searchKey: sync.throw
+tags: [method private]
+```
+
+```Go
+func throw(string)
 ```
 

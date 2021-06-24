@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "html/template_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,7 @@
                 "newPage": false,
                 "searchKey": "template_test.templateFile",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -67,6 +70,7 @@
                 "newPage": false,
                 "searchKey": "template_test.testCase",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -87,6 +91,7 @@
                       "newPage": false,
                       "searchKey": "template_test.newTestCase",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -109,6 +114,7 @@
                       "newPage": false,
                       "searchKey": "template_test.testCase.lookup",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -125,22 +131,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/html/template_test#testCase.mustParse",
+                    "pathID": "/html/template_test#testCase.mustExecute",
                     "documentation": {
-                      "identifier": "testCase.mustParse",
+                      "identifier": "testCase.mustExecute",
                       "newPage": false,
-                      "searchKey": "template_test.testCase.mustParse",
+                      "searchKey": "template_test.testCase.mustExecute",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (c *testCase) mustParse(t *Template, text string)"
+                      "value": "func (c *testCase) mustExecute(t *Template, val interface{}, want string)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (c *testCase) mustParse(t *Template, text string)\n```\n\n"
+                      "value": "```Go\nfunc (c *testCase) mustExecute(t *Template, val interface{}, want string)\n```\n\n"
                     },
                     "children": null
                   }
@@ -153,6 +160,7 @@
                       "newPage": false,
                       "searchKey": "template_test.testCase.mustNotParse",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -169,22 +177,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/html/template_test#testCase.mustExecute",
+                    "pathID": "/html/template_test#testCase.mustParse",
                     "documentation": {
-                      "identifier": "testCase.mustExecute",
+                      "identifier": "testCase.mustParse",
                       "newPage": false,
-                      "searchKey": "template_test.testCase.mustExecute",
+                      "searchKey": "template_test.testCase.mustParse",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (c *testCase) mustExecute(t *Template, val interface{}, want string)"
+                      "value": "func (c *testCase) mustParse(t *Template, text string)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (c *testCase) mustExecute(t *Template, val interface{}, want string)\n```\n\n"
+                      "value": "```Go\nfunc (c *testCase) mustParse(t *Template, text string)\n```\n\n"
                     },
                     "children": null
                   }
@@ -203,6 +212,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -223,6 +233,7 @@
                 "newPage": false,
                 "searchKey": "template_test.Example",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -239,56 +250,13 @@
           },
           {
             "node": {
-              "pathID": "/html/template_test#Example_autoescaping",
-              "documentation": {
-                "identifier": "Example_autoescaping",
-                "newPage": false,
-                "searchKey": "template_test.Example_autoescaping",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Example_autoescaping()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Example_autoescaping()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/html/template_test#Example_escape",
-              "documentation": {
-                "identifier": "Example_escape",
-                "newPage": false,
-                "searchKey": "template_test.Example_escape",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Example_escape()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Example_escape()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/html/template_test#ExampleTemplate_Delims",
               "documentation": {
                 "identifier": "ExampleTemplate_Delims",
                 "newPage": false,
                 "searchKey": "template_test.ExampleTemplate_Delims",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -311,6 +279,7 @@
                 "newPage": false,
                 "searchKey": "template_test.ExampleTemplate_block",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -327,34 +296,13 @@
           },
           {
             "node": {
-              "pathID": "/html/template_test#createTestDir",
-              "documentation": {
-                "identifier": "createTestDir",
-                "newPage": false,
-                "searchKey": "template_test.createTestDir",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func createTestDir(files []templateFile) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc createTestDir(files []templateFile) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/html/template_test#ExampleTemplate_glob",
               "documentation": {
                 "identifier": "ExampleTemplate_glob",
                 "newPage": false,
                 "searchKey": "template_test.ExampleTemplate_glob",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -371,34 +319,13 @@
           },
           {
             "node": {
-              "pathID": "/html/template_test#ExampleTemplate_parsefiles",
-              "documentation": {
-                "identifier": "ExampleTemplate_parsefiles",
-                "newPage": false,
-                "searchKey": "template_test.ExampleTemplate_parsefiles",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleTemplate_parsefiles()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleTemplate_parsefiles()\n```\n\nHere we demonstrate loading a set of templates from files in different directories \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/html/template_test#ExampleTemplate_helpers",
               "documentation": {
                 "identifier": "ExampleTemplate_helpers",
                 "newPage": false,
                 "searchKey": "template_test.ExampleTemplate_helpers",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -415,12 +342,36 @@
           },
           {
             "node": {
+              "pathID": "/html/template_test#ExampleTemplate_parsefiles",
+              "documentation": {
+                "identifier": "ExampleTemplate_parsefiles",
+                "newPage": false,
+                "searchKey": "template_test.ExampleTemplate_parsefiles",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTemplate_parsefiles()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTemplate_parsefiles()\n```\n\nHere we demonstrate loading a set of templates from files in different directories \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/html/template_test#ExampleTemplate_share",
               "documentation": {
                 "identifier": "ExampleTemplate_share",
                 "newPage": false,
                 "searchKey": "template_test.ExampleTemplate_share",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -437,88 +388,70 @@
           },
           {
             "node": {
-              "pathID": "/html/template_test#TestTemplateClone",
+              "pathID": "/html/template_test#Example_autoescaping",
               "documentation": {
-                "identifier": "TestTemplateClone",
+                "identifier": "Example_autoescaping",
                 "newPage": false,
-                "searchKey": "template_test.TestTemplateClone",
+                "searchKey": "template_test.Example_autoescaping",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestTemplateClone(t *testing.T)"
+                "value": "func Example_autoescaping()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestTemplateClone(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc Example_autoescaping()\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/html/template_test#TestRedefineNonEmptyAfterExecution",
+              "pathID": "/html/template_test#Example_escape",
               "documentation": {
-                "identifier": "TestRedefineNonEmptyAfterExecution",
+                "identifier": "Example_escape",
                 "newPage": false,
-                "searchKey": "template_test.TestRedefineNonEmptyAfterExecution",
+                "searchKey": "template_test.Example_escape",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestRedefineNonEmptyAfterExecution(t *testing.T)"
+                "value": "func Example_escape()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestRedefineNonEmptyAfterExecution(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc Example_escape()\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/html/template_test#TestRedefineEmptyAfterExecution",
+              "pathID": "/html/template_test#TestNumbers",
               "documentation": {
-                "identifier": "TestRedefineEmptyAfterExecution",
+                "identifier": "TestNumbers",
                 "newPage": false,
-                "searchKey": "template_test.TestRedefineEmptyAfterExecution",
+                "searchKey": "template_test.TestNumbers",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestRedefineEmptyAfterExecution(t *testing.T)"
+                "value": "func TestNumbers(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestRedefineEmptyAfterExecution(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/html/template_test#TestRedefineAfterNonExecution",
-              "documentation": {
-                "identifier": "TestRedefineAfterNonExecution",
-                "newPage": false,
-                "searchKey": "template_test.TestRedefineAfterNonExecution",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRedefineAfterNonExecution(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRedefineAfterNonExecution(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestNumbers(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -531,7 +464,9 @@
                 "newPage": false,
                 "searchKey": "template_test.TestRedefineAfterNamedExecution",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -547,13 +482,63 @@
           },
           {
             "node": {
+              "pathID": "/html/template_test#TestRedefineAfterNonExecution",
+              "documentation": {
+                "identifier": "TestRedefineAfterNonExecution",
+                "newPage": false,
+                "searchKey": "template_test.TestRedefineAfterNonExecution",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRedefineAfterNonExecution(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRedefineAfterNonExecution(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html/template_test#TestRedefineEmptyAfterExecution",
+              "documentation": {
+                "identifier": "TestRedefineEmptyAfterExecution",
+                "newPage": false,
+                "searchKey": "template_test.TestRedefineEmptyAfterExecution",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRedefineEmptyAfterExecution(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRedefineEmptyAfterExecution(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/html/template_test#TestRedefineNestedByNameAfterExecution",
               "documentation": {
                 "identifier": "TestRedefineNestedByNameAfterExecution",
                 "newPage": false,
                 "searchKey": "template_test.TestRedefineNestedByNameAfterExecution",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -575,7 +560,9 @@
                 "newPage": false,
                 "searchKey": "template_test.TestRedefineNestedByTemplateAfterExecution",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -591,13 +578,63 @@
           },
           {
             "node": {
+              "pathID": "/html/template_test#TestRedefineNonEmptyAfterExecution",
+              "documentation": {
+                "identifier": "TestRedefineNonEmptyAfterExecution",
+                "newPage": false,
+                "searchKey": "template_test.TestRedefineNonEmptyAfterExecution",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRedefineNonEmptyAfterExecution(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRedefineNonEmptyAfterExecution(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html/template_test#TestRedefineOtherParsers",
+              "documentation": {
+                "identifier": "TestRedefineOtherParsers",
+                "newPage": false,
+                "searchKey": "template_test.TestRedefineOtherParsers",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRedefineOtherParsers(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRedefineOtherParsers(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/html/template_test#TestRedefineSafety",
               "documentation": {
                 "identifier": "TestRedefineSafety",
                 "newPage": false,
                 "searchKey": "template_test.TestRedefineSafety",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -619,7 +656,9 @@
                 "newPage": false,
                 "searchKey": "template_test.TestRedefineTopUse",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -635,44 +674,24 @@
           },
           {
             "node": {
-              "pathID": "/html/template_test#TestRedefineOtherParsers",
+              "pathID": "/html/template_test#TestSkipEscapeComments",
               "documentation": {
-                "identifier": "TestRedefineOtherParsers",
+                "identifier": "TestSkipEscapeComments",
                 "newPage": false,
-                "searchKey": "template_test.TestRedefineOtherParsers",
+                "searchKey": "template_test.TestSkipEscapeComments",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestRedefineOtherParsers(t *testing.T)"
+                "value": "func TestSkipEscapeComments(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestRedefineOtherParsers(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/html/template_test#TestNumbers",
-              "documentation": {
-                "identifier": "TestNumbers",
-                "newPage": false,
-                "searchKey": "template_test.TestNumbers",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestNumbers(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestNumbers(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestSkipEscapeComments(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -685,7 +704,9 @@
                 "newPage": false,
                 "searchKey": "template_test.TestStringsInScriptsWithJsonContentTypeAreCorrectlyEscaped",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -701,22 +722,47 @@
           },
           {
             "node": {
-              "pathID": "/html/template_test#TestSkipEscapeComments",
+              "pathID": "/html/template_test#TestTemplateClone",
               "documentation": {
-                "identifier": "TestSkipEscapeComments",
+                "identifier": "TestTemplateClone",
                 "newPage": false,
-                "searchKey": "template_test.TestSkipEscapeComments",
+                "searchKey": "template_test.TestTemplateClone",
                 "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTemplateClone(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTemplateClone(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html/template_test#createTestDir",
+              "documentation": {
+                "identifier": "createTestDir",
+                "newPage": false,
+                "searchKey": "template_test.createTestDir",
+                "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestSkipEscapeComments(t *testing.T)"
+                "value": "func createTestDir(files []templateFile) string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestSkipEscapeComments(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc createTestDir(files []templateFile) string\n```\n\n"
               },
               "children": null
             }

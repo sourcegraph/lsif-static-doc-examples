@@ -8,197 +8,87 @@ Package log implements a simple logging package. It defines a type, Logger, with
   * [log/syslog](log/syslog.md)
   * [log/syslog_test](log/syslog_test.md)
 * [Constants](#const)
-    * [const Ldate](#Ldate)
-    * [const Ltime](#Ltime)
-    * [const Lmicroseconds](#Lmicroseconds)
-    * [const Llongfile](#Llongfile)
-    * [const Lshortfile](#Lshortfile)
     * [const LUTC](#LUTC)
+    * [const Ldate](#Ldate)
+    * [const Llongfile](#Llongfile)
+    * [const Lmicroseconds](#Lmicroseconds)
     * [const Lmsgprefix](#Lmsgprefix)
+    * [const Lshortfile](#Lshortfile)
     * [const LstdFlags](#LstdFlags)
+    * [const Ltime](#Ltime)
     * [const Rdate](#Rdate)
-    * [const Rtime](#Rtime)
-    * [const Rmicroseconds](#Rmicroseconds)
     * [const Rline](#Rline)
     * [const Rlongfile](#Rlongfile)
+    * [const Rmicroseconds](#Rmicroseconds)
     * [const Rshortfile](#Rshortfile)
+    * [const Rtime](#Rtime)
 * [Variables](#var)
     * [var std](#std)
     * [var tests](#tests)
 * [Types](#type)
     * [type Logger struct](#Logger)
-        * [func New(out io.Writer, prefix string, flag int) *Logger](#New)
         * [func Default() *Logger](#Default)
-        * [func (l *Logger) SetOutput(w io.Writer)](#Logger.SetOutput)
-        * [func (l *Logger) formatHeader(buf *[]byte, t time.Time, file string, line int)](#Logger.formatHeader)
-        * [func (l *Logger) Output(calldepth int, s string) error](#Logger.Output)
-        * [func (l *Logger) Printf(format string, v ...interface{})](#Logger.Printf)
-        * [func (l *Logger) Print(v ...interface{})](#Logger.Print)
-        * [func (l *Logger) Println(v ...interface{})](#Logger.Println)
+        * [func New(out io.Writer, prefix string, flag int) *Logger](#New)
         * [func (l *Logger) Fatal(v ...interface{})](#Logger.Fatal)
         * [func (l *Logger) Fatalf(format string, v ...interface{})](#Logger.Fatalf)
         * [func (l *Logger) Fatalln(v ...interface{})](#Logger.Fatalln)
+        * [func (l *Logger) Flags() int](#Logger.Flags)
+        * [func (l *Logger) Output(calldepth int, s string) error](#Logger.Output)
         * [func (l *Logger) Panic(v ...interface{})](#Logger.Panic)
         * [func (l *Logger) Panicf(format string, v ...interface{})](#Logger.Panicf)
         * [func (l *Logger) Panicln(v ...interface{})](#Logger.Panicln)
-        * [func (l *Logger) Flags() int](#Logger.Flags)
-        * [func (l *Logger) SetFlags(flag int)](#Logger.SetFlags)
         * [func (l *Logger) Prefix() string](#Logger.Prefix)
+        * [func (l *Logger) Print(v ...interface{})](#Logger.Print)
+        * [func (l *Logger) Printf(format string, v ...interface{})](#Logger.Printf)
+        * [func (l *Logger) Println(v ...interface{})](#Logger.Println)
+        * [func (l *Logger) SetFlags(flag int)](#Logger.SetFlags)
+        * [func (l *Logger) SetOutput(w io.Writer)](#Logger.SetOutput)
         * [func (l *Logger) SetPrefix(prefix string)](#Logger.SetPrefix)
         * [func (l *Logger) Writer() io.Writer](#Logger.Writer)
+        * [func (l *Logger) formatHeader(buf *[]byte, t time.Time, file string, line int)](#Logger.formatHeader)
     * [type tester struct](#tester)
 * [Functions](#func)
-    * [func itoa(buf *[]byte, i int, wid int)](#itoa)
-    * [func SetOutput(w io.Writer)](#SetOutput)
-    * [func Flags() int](#Flags)
-    * [func SetFlags(flag int)](#SetFlags)
-    * [func Prefix() string](#Prefix)
-    * [func SetPrefix(prefix string)](#SetPrefix)
-    * [func Writer() io.Writer](#Writer)
-    * [func Print(v ...interface{})](#Print)
-    * [func Printf(format string, v ...interface{})](#Printf)
-    * [func Println(v ...interface{})](#Println)
-    * [func Fatal(v ...interface{})](#Fatal)
-    * [func Fatalf(format string, v ...interface{})](#Fatalf)
-    * [func Fatalln(v ...interface{})](#Fatalln)
-    * [func Panic(v ...interface{})](#Panic)
-    * [func Panicf(format string, v ...interface{})](#Panicf)
-    * [func Panicln(v ...interface{})](#Panicln)
-    * [func Output(calldepth int, s string) error](#Output)
-    * [func testPrint(t *testing.T, flag int, prefix string, pattern string, useFormat bool)](#testPrint)
-    * [func TestDefault(t *testing.T)](#TestDefault)
-    * [func TestAll(t *testing.T)](#TestAll)
-    * [func TestOutput(t *testing.T)](#TestOutput)
-    * [func TestOutputRace(t *testing.T)](#TestOutputRace)
-    * [func TestFlagAndPrefixSetting(t *testing.T)](#TestFlagAndPrefixSetting)
-    * [func TestUTCFlag(t *testing.T)](#TestUTCFlag)
-    * [func TestEmptyPrintCreatesLine(t *testing.T)](#TestEmptyPrintCreatesLine)
     * [func BenchmarkItoa(b *testing.B)](#BenchmarkItoa)
     * [func BenchmarkPrintln(b *testing.B)](#BenchmarkPrintln)
     * [func BenchmarkPrintlnNoFlags(b *testing.B)](#BenchmarkPrintlnNoFlags)
+    * [func Fatal(v ...interface{})](#Fatal)
+    * [func Fatalf(format string, v ...interface{})](#Fatalf)
+    * [func Fatalln(v ...interface{})](#Fatalln)
+    * [func Flags() int](#Flags)
+    * [func Output(calldepth int, s string) error](#Output)
+    * [func Panic(v ...interface{})](#Panic)
+    * [func Panicf(format string, v ...interface{})](#Panicf)
+    * [func Panicln(v ...interface{})](#Panicln)
+    * [func Prefix() string](#Prefix)
+    * [func Print(v ...interface{})](#Print)
+    * [func Printf(format string, v ...interface{})](#Printf)
+    * [func Println(v ...interface{})](#Println)
+    * [func SetFlags(flag int)](#SetFlags)
+    * [func SetOutput(w io.Writer)](#SetOutput)
+    * [func SetPrefix(prefix string)](#SetPrefix)
+    * [func TestAll(t *testing.T)](#TestAll)
+    * [func TestDefault(t *testing.T)](#TestDefault)
+    * [func TestEmptyPrintCreatesLine(t *testing.T)](#TestEmptyPrintCreatesLine)
+    * [func TestFlagAndPrefixSetting(t *testing.T)](#TestFlagAndPrefixSetting)
+    * [func TestOutput(t *testing.T)](#TestOutput)
+    * [func TestOutputRace(t *testing.T)](#TestOutputRace)
+    * [func TestUTCFlag(t *testing.T)](#TestUTCFlag)
+    * [func Writer() io.Writer](#Writer)
+    * [func itoa(buf *[]byte, i int, wid int)](#itoa)
+    * [func testPrint(t *testing.T, flag int, prefix string, pattern string, useFormat bool)](#testPrint)
 
 
 ## <a id="const" href="#const">Constants</a>
 
-### <a id="Ldate" href="#Ldate">const Ldate</a>
-
 ```
-searchKey: log.Ldate
+tags: [package]
 ```
 
-```Go
-const Ldate = 1 << iota // the date in the local time zone: 2009/01/23
-
-```
-
-These flags define which text to prefix to each log entry generated by the Logger. Bits are or'ed together to control what's printed. With the exception of the Lmsgprefix flag, there is no control over the order they appear (the order listed here) or the format they present (as described in the comments). The prefix is followed by a colon only when Llongfile or Lshortfile is specified. For example, flags Ldate | Ltime (or LstdFlags) produce, 
-
-```
-2009/01/23 01:23:23 message
-
-```
-while flags Ldate | Ltime | Lmicroseconds | Llongfile produce, 
-
-```
-2009/01/23 01:23:23.123123 /a/b/c/d.go:23: message
-
-```
-### <a id="Ltime" href="#Ltime">const Ltime</a>
-
-```
-searchKey: log.Ltime
-```
-
-```Go
-const Ltime // the time in the local time zone: 01:23:23
-
-```
-
-These flags define which text to prefix to each log entry generated by the Logger. Bits are or'ed together to control what's printed. With the exception of the Lmsgprefix flag, there is no control over the order they appear (the order listed here) or the format they present (as described in the comments). The prefix is followed by a colon only when Llongfile or Lshortfile is specified. For example, flags Ldate | Ltime (or LstdFlags) produce, 
-
-```
-2009/01/23 01:23:23 message
-
-```
-while flags Ldate | Ltime | Lmicroseconds | Llongfile produce, 
-
-```
-2009/01/23 01:23:23.123123 /a/b/c/d.go:23: message
-
-```
-### <a id="Lmicroseconds" href="#Lmicroseconds">const Lmicroseconds</a>
-
-```
-searchKey: log.Lmicroseconds
-```
-
-```Go
-const Lmicroseconds // microsecond resolution: 01:23:23.123123.  assumes Ltime.
-
-```
-
-These flags define which text to prefix to each log entry generated by the Logger. Bits are or'ed together to control what's printed. With the exception of the Lmsgprefix flag, there is no control over the order they appear (the order listed here) or the format they present (as described in the comments). The prefix is followed by a colon only when Llongfile or Lshortfile is specified. For example, flags Ldate | Ltime (or LstdFlags) produce, 
-
-```
-2009/01/23 01:23:23 message
-
-```
-while flags Ldate | Ltime | Lmicroseconds | Llongfile produce, 
-
-```
-2009/01/23 01:23:23.123123 /a/b/c/d.go:23: message
-
-```
-### <a id="Llongfile" href="#Llongfile">const Llongfile</a>
-
-```
-searchKey: log.Llongfile
-```
-
-```Go
-const Llongfile // full file name and line number: /a/b/c/d.go:23
-
-```
-
-These flags define which text to prefix to each log entry generated by the Logger. Bits are or'ed together to control what's printed. With the exception of the Lmsgprefix flag, there is no control over the order they appear (the order listed here) or the format they present (as described in the comments). The prefix is followed by a colon only when Llongfile or Lshortfile is specified. For example, flags Ldate | Ltime (or LstdFlags) produce, 
-
-```
-2009/01/23 01:23:23 message
-
-```
-while flags Ldate | Ltime | Lmicroseconds | Llongfile produce, 
-
-```
-2009/01/23 01:23:23.123123 /a/b/c/d.go:23: message
-
-```
-### <a id="Lshortfile" href="#Lshortfile">const Lshortfile</a>
-
-```
-searchKey: log.Lshortfile
-```
-
-```Go
-const Lshortfile // final file name element and line number: d.go:23. overrides Llongfile
-
-```
-
-These flags define which text to prefix to each log entry generated by the Logger. Bits are or'ed together to control what's printed. With the exception of the Lmsgprefix flag, there is no control over the order they appear (the order listed here) or the format they present (as described in the comments). The prefix is followed by a colon only when Llongfile or Lshortfile is specified. For example, flags Ldate | Ltime (or LstdFlags) produce, 
-
-```
-2009/01/23 01:23:23 message
-
-```
-while flags Ldate | Ltime | Lmicroseconds | Llongfile produce, 
-
-```
-2009/01/23 01:23:23.123123 /a/b/c/d.go:23: message
-
-```
 ### <a id="LUTC" href="#LUTC">const LUTC</a>
 
 ```
 searchKey: log.LUTC
+tags: [constant number]
 ```
 
 ```Go
@@ -218,10 +108,83 @@ while flags Ldate | Ltime | Lmicroseconds | Llongfile produce,
 2009/01/23 01:23:23.123123 /a/b/c/d.go:23: message
 
 ```
+### <a id="Ldate" href="#Ldate">const Ldate</a>
+
+```
+searchKey: log.Ldate
+tags: [constant number]
+```
+
+```Go
+const Ldate = 1 << iota // the date in the local time zone: 2009/01/23
+
+```
+
+These flags define which text to prefix to each log entry generated by the Logger. Bits are or'ed together to control what's printed. With the exception of the Lmsgprefix flag, there is no control over the order they appear (the order listed here) or the format they present (as described in the comments). The prefix is followed by a colon only when Llongfile or Lshortfile is specified. For example, flags Ldate | Ltime (or LstdFlags) produce, 
+
+```
+2009/01/23 01:23:23 message
+
+```
+while flags Ldate | Ltime | Lmicroseconds | Llongfile produce, 
+
+```
+2009/01/23 01:23:23.123123 /a/b/c/d.go:23: message
+
+```
+### <a id="Llongfile" href="#Llongfile">const Llongfile</a>
+
+```
+searchKey: log.Llongfile
+tags: [constant number]
+```
+
+```Go
+const Llongfile // full file name and line number: /a/b/c/d.go:23
+
+```
+
+These flags define which text to prefix to each log entry generated by the Logger. Bits are or'ed together to control what's printed. With the exception of the Lmsgprefix flag, there is no control over the order they appear (the order listed here) or the format they present (as described in the comments). The prefix is followed by a colon only when Llongfile or Lshortfile is specified. For example, flags Ldate | Ltime (or LstdFlags) produce, 
+
+```
+2009/01/23 01:23:23 message
+
+```
+while flags Ldate | Ltime | Lmicroseconds | Llongfile produce, 
+
+```
+2009/01/23 01:23:23.123123 /a/b/c/d.go:23: message
+
+```
+### <a id="Lmicroseconds" href="#Lmicroseconds">const Lmicroseconds</a>
+
+```
+searchKey: log.Lmicroseconds
+tags: [constant number]
+```
+
+```Go
+const Lmicroseconds // microsecond resolution: 01:23:23.123123.  assumes Ltime.
+
+```
+
+These flags define which text to prefix to each log entry generated by the Logger. Bits are or'ed together to control what's printed. With the exception of the Lmsgprefix flag, there is no control over the order they appear (the order listed here) or the format they present (as described in the comments). The prefix is followed by a colon only when Llongfile or Lshortfile is specified. For example, flags Ldate | Ltime (or LstdFlags) produce, 
+
+```
+2009/01/23 01:23:23 message
+
+```
+while flags Ldate | Ltime | Lmicroseconds | Llongfile produce, 
+
+```
+2009/01/23 01:23:23.123123 /a/b/c/d.go:23: message
+
+```
 ### <a id="Lmsgprefix" href="#Lmsgprefix">const Lmsgprefix</a>
 
 ```
 searchKey: log.Lmsgprefix
+tags: [constant number]
 ```
 
 ```Go
@@ -241,10 +204,35 @@ while flags Ldate | Ltime | Lmicroseconds | Llongfile produce,
 2009/01/23 01:23:23.123123 /a/b/c/d.go:23: message
 
 ```
+### <a id="Lshortfile" href="#Lshortfile">const Lshortfile</a>
+
+```
+searchKey: log.Lshortfile
+tags: [constant number]
+```
+
+```Go
+const Lshortfile // final file name element and line number: d.go:23. overrides Llongfile
+
+```
+
+These flags define which text to prefix to each log entry generated by the Logger. Bits are or'ed together to control what's printed. With the exception of the Lmsgprefix flag, there is no control over the order they appear (the order listed here) or the format they present (as described in the comments). The prefix is followed by a colon only when Llongfile or Lshortfile is specified. For example, flags Ldate | Ltime (or LstdFlags) produce, 
+
+```
+2009/01/23 01:23:23 message
+
+```
+while flags Ldate | Ltime | Lmicroseconds | Llongfile produce, 
+
+```
+2009/01/23 01:23:23.123123 /a/b/c/d.go:23: message
+
+```
 ### <a id="LstdFlags" href="#LstdFlags">const LstdFlags</a>
 
 ```
 searchKey: log.LstdFlags
+tags: [constant number]
 ```
 
 ```Go
@@ -264,44 +252,46 @@ while flags Ldate | Ltime | Lmicroseconds | Llongfile produce,
 2009/01/23 01:23:23.123123 /a/b/c/d.go:23: message
 
 ```
+### <a id="Ltime" href="#Ltime">const Ltime</a>
+
+```
+searchKey: log.Ltime
+tags: [constant number]
+```
+
+```Go
+const Ltime // the time in the local time zone: 01:23:23
+
+```
+
+These flags define which text to prefix to each log entry generated by the Logger. Bits are or'ed together to control what's printed. With the exception of the Lmsgprefix flag, there is no control over the order they appear (the order listed here) or the format they present (as described in the comments). The prefix is followed by a colon only when Llongfile or Lshortfile is specified. For example, flags Ldate | Ltime (or LstdFlags) produce, 
+
+```
+2009/01/23 01:23:23 message
+
+```
+while flags Ldate | Ltime | Lmicroseconds | Llongfile produce, 
+
+```
+2009/01/23 01:23:23.123123 /a/b/c/d.go:23: message
+
+```
 ### <a id="Rdate" href="#Rdate">const Rdate</a>
 
 ```
 searchKey: log.Rdate
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
 const Rdate = `[0-9][0-9][0-9][0-9]/[0-9][0-9]/[0-9][0-9]`
 ```
 
-### <a id="Rtime" href="#Rtime">const Rtime</a>
-
-```
-searchKey: log.Rtime
-tags: [private]
-```
-
-```Go
-const Rtime = `[0-9][0-9]:[0-9][0-9]:[0-9][0-9]`
-```
-
-### <a id="Rmicroseconds" href="#Rmicroseconds">const Rmicroseconds</a>
-
-```
-searchKey: log.Rmicroseconds
-tags: [private]
-```
-
-```Go
-const Rmicroseconds = `\.[0-9][0-9][0-9][0-9][0-9][0-9]`
-```
-
 ### <a id="Rline" href="#Rline">const Rline</a>
 
 ```
 searchKey: log.Rline
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -313,31 +303,57 @@ const Rline = `(60|62):` // must update if the calls to l.Printf / l.Print below
 
 ```
 searchKey: log.Rlongfile
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
 const Rlongfile = `.*/[A-Za-z0-9_\-]+\.go:` + Rline
 ```
 
+### <a id="Rmicroseconds" href="#Rmicroseconds">const Rmicroseconds</a>
+
+```
+searchKey: log.Rmicroseconds
+tags: [constant string private]
+```
+
+```Go
+const Rmicroseconds = `\.[0-9][0-9][0-9][0-9][0-9][0-9]`
+```
+
 ### <a id="Rshortfile" href="#Rshortfile">const Rshortfile</a>
 
 ```
 searchKey: log.Rshortfile
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
 const Rshortfile = `[A-Za-z0-9_\-]+\.go:` + Rline
 ```
 
+### <a id="Rtime" href="#Rtime">const Rtime</a>
+
+```
+searchKey: log.Rtime
+tags: [constant string private]
+```
+
+```Go
+const Rtime = `[0-9][0-9]:[0-9][0-9]:[0-9][0-9]`
+```
+
 ## <a id="var" href="#var">Variables</a>
+
+```
+tags: [package]
+```
 
 ### <a id="std" href="#std">var std</a>
 
 ```
 searchKey: log.std
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -348,7 +364,7 @@ var std = New(os.Stderr, "", LstdFlags)
 
 ```
 searchKey: log.tests
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
@@ -357,10 +373,15 @@ var tests = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [package]
+```
+
 ### <a id="Logger" href="#Logger">type Logger struct</a>
 
 ```
 searchKey: log.Logger
+tags: [struct]
 ```
 
 ```Go
@@ -375,22 +396,11 @@ type Logger struct {
 
 A Logger represents an active logging object that generates lines of output to an io.Writer. Each logging operation makes a single call to the Writer's Write method. A Logger can be used simultaneously from multiple goroutines; it guarantees to serialize access to the Writer. 
 
-#### <a id="New" href="#New">func New(out io.Writer, prefix string, flag int) *Logger</a>
-
-```
-searchKey: log.New
-```
-
-```Go
-func New(out io.Writer, prefix string, flag int) *Logger
-```
-
-New creates a new Logger. The out variable sets the destination to which log data will be written. The prefix appears at the beginning of each generated log line, or after the log header if the Lmsgprefix flag is provided. The flag argument defines the logging properties. 
-
 #### <a id="Default" href="#Default">func Default() *Logger</a>
 
 ```
 searchKey: log.Default
+tags: [function]
 ```
 
 ```Go
@@ -399,10 +409,193 @@ func Default() *Logger
 
 Default returns the standard logger used by the package-level output functions. 
 
+#### <a id="New" href="#New">func New(out io.Writer, prefix string, flag int) *Logger</a>
+
+```
+searchKey: log.New
+tags: [method]
+```
+
+```Go
+func New(out io.Writer, prefix string, flag int) *Logger
+```
+
+New creates a new Logger. The out variable sets the destination to which log data will be written. The prefix appears at the beginning of each generated log line, or after the log header if the Lmsgprefix flag is provided. The flag argument defines the logging properties. 
+
+#### <a id="Logger.Fatal" href="#Logger.Fatal">func (l *Logger) Fatal(v ...interface{})</a>
+
+```
+searchKey: log.Logger.Fatal
+tags: [method]
+```
+
+```Go
+func (l *Logger) Fatal(v ...interface{})
+```
+
+Fatal is equivalent to l.Print() followed by a call to os.Exit(1). 
+
+#### <a id="Logger.Fatalf" href="#Logger.Fatalf">func (l *Logger) Fatalf(format string, v ...interface{})</a>
+
+```
+searchKey: log.Logger.Fatalf
+tags: [method]
+```
+
+```Go
+func (l *Logger) Fatalf(format string, v ...interface{})
+```
+
+Fatalf is equivalent to l.Printf() followed by a call to os.Exit(1). 
+
+#### <a id="Logger.Fatalln" href="#Logger.Fatalln">func (l *Logger) Fatalln(v ...interface{})</a>
+
+```
+searchKey: log.Logger.Fatalln
+tags: [method]
+```
+
+```Go
+func (l *Logger) Fatalln(v ...interface{})
+```
+
+Fatalln is equivalent to l.Println() followed by a call to os.Exit(1). 
+
+#### <a id="Logger.Flags" href="#Logger.Flags">func (l *Logger) Flags() int</a>
+
+```
+searchKey: log.Logger.Flags
+tags: [function]
+```
+
+```Go
+func (l *Logger) Flags() int
+```
+
+Flags returns the output flags for the logger. The flag bits are Ldate, Ltime, and so on. 
+
+#### <a id="Logger.Output" href="#Logger.Output">func (l *Logger) Output(calldepth int, s string) error</a>
+
+```
+searchKey: log.Logger.Output
+tags: [method]
+```
+
+```Go
+func (l *Logger) Output(calldepth int, s string) error
+```
+
+Output writes the output for a logging event. The string s contains the text to print after the prefix specified by the flags of the Logger. A newline is appended if the last character of s is not already a newline. Calldepth is used to recover the PC and is provided for generality, although at the moment on all pre-defined paths it will be 2. 
+
+#### <a id="Logger.Panic" href="#Logger.Panic">func (l *Logger) Panic(v ...interface{})</a>
+
+```
+searchKey: log.Logger.Panic
+tags: [method]
+```
+
+```Go
+func (l *Logger) Panic(v ...interface{})
+```
+
+Panic is equivalent to l.Print() followed by a call to panic(). 
+
+#### <a id="Logger.Panicf" href="#Logger.Panicf">func (l *Logger) Panicf(format string, v ...interface{})</a>
+
+```
+searchKey: log.Logger.Panicf
+tags: [method]
+```
+
+```Go
+func (l *Logger) Panicf(format string, v ...interface{})
+```
+
+Panicf is equivalent to l.Printf() followed by a call to panic(). 
+
+#### <a id="Logger.Panicln" href="#Logger.Panicln">func (l *Logger) Panicln(v ...interface{})</a>
+
+```
+searchKey: log.Logger.Panicln
+tags: [method]
+```
+
+```Go
+func (l *Logger) Panicln(v ...interface{})
+```
+
+Panicln is equivalent to l.Println() followed by a call to panic(). 
+
+#### <a id="Logger.Prefix" href="#Logger.Prefix">func (l *Logger) Prefix() string</a>
+
+```
+searchKey: log.Logger.Prefix
+tags: [function]
+```
+
+```Go
+func (l *Logger) Prefix() string
+```
+
+Prefix returns the output prefix for the logger. 
+
+#### <a id="Logger.Print" href="#Logger.Print">func (l *Logger) Print(v ...interface{})</a>
+
+```
+searchKey: log.Logger.Print
+tags: [method]
+```
+
+```Go
+func (l *Logger) Print(v ...interface{})
+```
+
+Print calls l.Output to print to the logger. Arguments are handled in the manner of fmt.Print. 
+
+#### <a id="Logger.Printf" href="#Logger.Printf">func (l *Logger) Printf(format string, v ...interface{})</a>
+
+```
+searchKey: log.Logger.Printf
+tags: [method]
+```
+
+```Go
+func (l *Logger) Printf(format string, v ...interface{})
+```
+
+Printf calls l.Output to print to the logger. Arguments are handled in the manner of fmt.Printf. 
+
+#### <a id="Logger.Println" href="#Logger.Println">func (l *Logger) Println(v ...interface{})</a>
+
+```
+searchKey: log.Logger.Println
+tags: [method]
+```
+
+```Go
+func (l *Logger) Println(v ...interface{})
+```
+
+Println calls l.Output to print to the logger. Arguments are handled in the manner of fmt.Println. 
+
+#### <a id="Logger.SetFlags" href="#Logger.SetFlags">func (l *Logger) SetFlags(flag int)</a>
+
+```
+searchKey: log.Logger.SetFlags
+tags: [method]
+```
+
+```Go
+func (l *Logger) SetFlags(flag int)
+```
+
+SetFlags sets the output flags for the logger. The flag bits are Ldate, Ltime, and so on. 
+
 #### <a id="Logger.SetOutput" href="#Logger.SetOutput">func (l *Logger) SetOutput(w io.Writer)</a>
 
 ```
 searchKey: log.Logger.SetOutput
+tags: [method]
 ```
 
 ```Go
@@ -411,11 +604,37 @@ func (l *Logger) SetOutput(w io.Writer)
 
 SetOutput sets the output destination for the logger. 
 
+#### <a id="Logger.SetPrefix" href="#Logger.SetPrefix">func (l *Logger) SetPrefix(prefix string)</a>
+
+```
+searchKey: log.Logger.SetPrefix
+tags: [method]
+```
+
+```Go
+func (l *Logger) SetPrefix(prefix string)
+```
+
+SetPrefix sets the output prefix for the logger. 
+
+#### <a id="Logger.Writer" href="#Logger.Writer">func (l *Logger) Writer() io.Writer</a>
+
+```
+searchKey: log.Logger.Writer
+tags: [function]
+```
+
+```Go
+func (l *Logger) Writer() io.Writer
+```
+
+Writer returns the output destination for the logger. 
+
 #### <a id="Logger.formatHeader" href="#Logger.formatHeader">func (l *Logger) formatHeader(buf *[]byte, t time.Time, file string, line int)</a>
 
 ```
 searchKey: log.Logger.formatHeader
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -431,191 +650,11 @@ formatHeader writes log header to buf in following order:
 * l.prefix (if it's not blank and Lmsgprefix is set).
 
 ```
-#### <a id="Logger.Output" href="#Logger.Output">func (l *Logger) Output(calldepth int, s string) error</a>
-
-```
-searchKey: log.Logger.Output
-```
-
-```Go
-func (l *Logger) Output(calldepth int, s string) error
-```
-
-Output writes the output for a logging event. The string s contains the text to print after the prefix specified by the flags of the Logger. A newline is appended if the last character of s is not already a newline. Calldepth is used to recover the PC and is provided for generality, although at the moment on all pre-defined paths it will be 2. 
-
-#### <a id="Logger.Printf" href="#Logger.Printf">func (l *Logger) Printf(format string, v ...interface{})</a>
-
-```
-searchKey: log.Logger.Printf
-```
-
-```Go
-func (l *Logger) Printf(format string, v ...interface{})
-```
-
-Printf calls l.Output to print to the logger. Arguments are handled in the manner of fmt.Printf. 
-
-#### <a id="Logger.Print" href="#Logger.Print">func (l *Logger) Print(v ...interface{})</a>
-
-```
-searchKey: log.Logger.Print
-```
-
-```Go
-func (l *Logger) Print(v ...interface{})
-```
-
-Print calls l.Output to print to the logger. Arguments are handled in the manner of fmt.Print. 
-
-#### <a id="Logger.Println" href="#Logger.Println">func (l *Logger) Println(v ...interface{})</a>
-
-```
-searchKey: log.Logger.Println
-```
-
-```Go
-func (l *Logger) Println(v ...interface{})
-```
-
-Println calls l.Output to print to the logger. Arguments are handled in the manner of fmt.Println. 
-
-#### <a id="Logger.Fatal" href="#Logger.Fatal">func (l *Logger) Fatal(v ...interface{})</a>
-
-```
-searchKey: log.Logger.Fatal
-```
-
-```Go
-func (l *Logger) Fatal(v ...interface{})
-```
-
-Fatal is equivalent to l.Print() followed by a call to os.Exit(1). 
-
-#### <a id="Logger.Fatalf" href="#Logger.Fatalf">func (l *Logger) Fatalf(format string, v ...interface{})</a>
-
-```
-searchKey: log.Logger.Fatalf
-```
-
-```Go
-func (l *Logger) Fatalf(format string, v ...interface{})
-```
-
-Fatalf is equivalent to l.Printf() followed by a call to os.Exit(1). 
-
-#### <a id="Logger.Fatalln" href="#Logger.Fatalln">func (l *Logger) Fatalln(v ...interface{})</a>
-
-```
-searchKey: log.Logger.Fatalln
-```
-
-```Go
-func (l *Logger) Fatalln(v ...interface{})
-```
-
-Fatalln is equivalent to l.Println() followed by a call to os.Exit(1). 
-
-#### <a id="Logger.Panic" href="#Logger.Panic">func (l *Logger) Panic(v ...interface{})</a>
-
-```
-searchKey: log.Logger.Panic
-```
-
-```Go
-func (l *Logger) Panic(v ...interface{})
-```
-
-Panic is equivalent to l.Print() followed by a call to panic(). 
-
-#### <a id="Logger.Panicf" href="#Logger.Panicf">func (l *Logger) Panicf(format string, v ...interface{})</a>
-
-```
-searchKey: log.Logger.Panicf
-```
-
-```Go
-func (l *Logger) Panicf(format string, v ...interface{})
-```
-
-Panicf is equivalent to l.Printf() followed by a call to panic(). 
-
-#### <a id="Logger.Panicln" href="#Logger.Panicln">func (l *Logger) Panicln(v ...interface{})</a>
-
-```
-searchKey: log.Logger.Panicln
-```
-
-```Go
-func (l *Logger) Panicln(v ...interface{})
-```
-
-Panicln is equivalent to l.Println() followed by a call to panic(). 
-
-#### <a id="Logger.Flags" href="#Logger.Flags">func (l *Logger) Flags() int</a>
-
-```
-searchKey: log.Logger.Flags
-```
-
-```Go
-func (l *Logger) Flags() int
-```
-
-Flags returns the output flags for the logger. The flag bits are Ldate, Ltime, and so on. 
-
-#### <a id="Logger.SetFlags" href="#Logger.SetFlags">func (l *Logger) SetFlags(flag int)</a>
-
-```
-searchKey: log.Logger.SetFlags
-```
-
-```Go
-func (l *Logger) SetFlags(flag int)
-```
-
-SetFlags sets the output flags for the logger. The flag bits are Ldate, Ltime, and so on. 
-
-#### <a id="Logger.Prefix" href="#Logger.Prefix">func (l *Logger) Prefix() string</a>
-
-```
-searchKey: log.Logger.Prefix
-```
-
-```Go
-func (l *Logger) Prefix() string
-```
-
-Prefix returns the output prefix for the logger. 
-
-#### <a id="Logger.SetPrefix" href="#Logger.SetPrefix">func (l *Logger) SetPrefix(prefix string)</a>
-
-```
-searchKey: log.Logger.SetPrefix
-```
-
-```Go
-func (l *Logger) SetPrefix(prefix string)
-```
-
-SetPrefix sets the output prefix for the logger. 
-
-#### <a id="Logger.Writer" href="#Logger.Writer">func (l *Logger) Writer() io.Writer</a>
-
-```
-searchKey: log.Logger.Writer
-```
-
-```Go
-func (l *Logger) Writer() io.Writer
-```
-
-Writer returns the output destination for the logger. 
-
 ### <a id="tester" href="#tester">type tester struct</a>
 
 ```
 searchKey: log.tester
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -628,131 +667,48 @@ type tester struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="itoa" href="#itoa">func itoa(buf *[]byte, i int, wid int)</a>
-
 ```
-searchKey: log.itoa
-tags: [private]
+tags: [package]
 ```
 
-```Go
-func itoa(buf *[]byte, i int, wid int)
-```
-
-Cheap integer to fixed-width decimal ASCII. Give a negative width to avoid zero-padding. 
-
-### <a id="SetOutput" href="#SetOutput">func SetOutput(w io.Writer)</a>
+### <a id="BenchmarkItoa" href="#BenchmarkItoa">func BenchmarkItoa(b *testing.B)</a>
 
 ```
-searchKey: log.SetOutput
+searchKey: log.BenchmarkItoa
+tags: [method private benchmark]
 ```
 
 ```Go
-func SetOutput(w io.Writer)
+func BenchmarkItoa(b *testing.B)
 ```
 
-SetOutput sets the output destination for the standard logger. 
-
-### <a id="Flags" href="#Flags">func Flags() int</a>
+### <a id="BenchmarkPrintln" href="#BenchmarkPrintln">func BenchmarkPrintln(b *testing.B)</a>
 
 ```
-searchKey: log.Flags
-```
-
-```Go
-func Flags() int
-```
-
-Flags returns the output flags for the standard logger. The flag bits are Ldate, Ltime, and so on. 
-
-### <a id="SetFlags" href="#SetFlags">func SetFlags(flag int)</a>
-
-```
-searchKey: log.SetFlags
+searchKey: log.BenchmarkPrintln
+tags: [method private benchmark]
 ```
 
 ```Go
-func SetFlags(flag int)
+func BenchmarkPrintln(b *testing.B)
 ```
 
-SetFlags sets the output flags for the standard logger. The flag bits are Ldate, Ltime, and so on. 
-
-### <a id="Prefix" href="#Prefix">func Prefix() string</a>
+### <a id="BenchmarkPrintlnNoFlags" href="#BenchmarkPrintlnNoFlags">func BenchmarkPrintlnNoFlags(b *testing.B)</a>
 
 ```
-searchKey: log.Prefix
-```
-
-```Go
-func Prefix() string
-```
-
-Prefix returns the output prefix for the standard logger. 
-
-### <a id="SetPrefix" href="#SetPrefix">func SetPrefix(prefix string)</a>
-
-```
-searchKey: log.SetPrefix
+searchKey: log.BenchmarkPrintlnNoFlags
+tags: [method private benchmark]
 ```
 
 ```Go
-func SetPrefix(prefix string)
+func BenchmarkPrintlnNoFlags(b *testing.B)
 ```
-
-SetPrefix sets the output prefix for the standard logger. 
-
-### <a id="Writer" href="#Writer">func Writer() io.Writer</a>
-
-```
-searchKey: log.Writer
-```
-
-```Go
-func Writer() io.Writer
-```
-
-Writer returns the output destination for the standard logger. 
-
-### <a id="Print" href="#Print">func Print(v ...interface{})</a>
-
-```
-searchKey: log.Print
-```
-
-```Go
-func Print(v ...interface{})
-```
-
-Print calls Output to print to the standard logger. Arguments are handled in the manner of fmt.Print. 
-
-### <a id="Printf" href="#Printf">func Printf(format string, v ...interface{})</a>
-
-```
-searchKey: log.Printf
-```
-
-```Go
-func Printf(format string, v ...interface{})
-```
-
-Printf calls Output to print to the standard logger. Arguments are handled in the manner of fmt.Printf. 
-
-### <a id="Println" href="#Println">func Println(v ...interface{})</a>
-
-```
-searchKey: log.Println
-```
-
-```Go
-func Println(v ...interface{})
-```
-
-Println calls Output to print to the standard logger. Arguments are handled in the manner of fmt.Println. 
 
 ### <a id="Fatal" href="#Fatal">func Fatal(v ...interface{})</a>
 
 ```
 searchKey: log.Fatal
+tags: [method]
 ```
 
 ```Go
@@ -765,6 +721,7 @@ Fatal is equivalent to Print() followed by a call to os.Exit(1).
 
 ```
 searchKey: log.Fatalf
+tags: [method]
 ```
 
 ```Go
@@ -777,6 +734,7 @@ Fatalf is equivalent to Printf() followed by a call to os.Exit(1).
 
 ```
 searchKey: log.Fatalln
+tags: [method]
 ```
 
 ```Go
@@ -785,10 +743,37 @@ func Fatalln(v ...interface{})
 
 Fatalln is equivalent to Println() followed by a call to os.Exit(1). 
 
+### <a id="Flags" href="#Flags">func Flags() int</a>
+
+```
+searchKey: log.Flags
+tags: [function]
+```
+
+```Go
+func Flags() int
+```
+
+Flags returns the output flags for the standard logger. The flag bits are Ldate, Ltime, and so on. 
+
+### <a id="Output" href="#Output">func Output(calldepth int, s string) error</a>
+
+```
+searchKey: log.Output
+tags: [method]
+```
+
+```Go
+func Output(calldepth int, s string) error
+```
+
+Output writes the output for a logging event. The string s contains the text to print after the prefix specified by the flags of the Logger. A newline is appended if the last character of s is not already a newline. Calldepth is the count of the number of frames to skip when computing the file name and line number if Llongfile or Lshortfile is set; a value of 1 will print the details for the caller of Output. 
+
 ### <a id="Panic" href="#Panic">func Panic(v ...interface{})</a>
 
 ```
 searchKey: log.Panic
+tags: [method]
 ```
 
 ```Go
@@ -801,6 +786,7 @@ Panic is equivalent to Print() followed by a call to panic().
 
 ```
 searchKey: log.Panicf
+tags: [method]
 ```
 
 ```Go
@@ -813,6 +799,7 @@ Panicf is equivalent to Printf() followed by a call to panic().
 
 ```
 searchKey: log.Panicln
+tags: [method]
 ```
 
 ```Go
@@ -821,58 +808,146 @@ func Panicln(v ...interface{})
 
 Panicln is equivalent to Println() followed by a call to panic(). 
 
-### <a id="Output" href="#Output">func Output(calldepth int, s string) error</a>
+### <a id="Prefix" href="#Prefix">func Prefix() string</a>
 
 ```
-searchKey: log.Output
-```
-
-```Go
-func Output(calldepth int, s string) error
-```
-
-Output writes the output for a logging event. The string s contains the text to print after the prefix specified by the flags of the Logger. A newline is appended if the last character of s is not already a newline. Calldepth is the count of the number of frames to skip when computing the file name and line number if Llongfile or Lshortfile is set; a value of 1 will print the details for the caller of Output. 
-
-### <a id="testPrint" href="#testPrint">func testPrint(t *testing.T, flag int, prefix string, pattern string, useFormat bool)</a>
-
-```
-searchKey: log.testPrint
-tags: [private]
+searchKey: log.Prefix
+tags: [function]
 ```
 
 ```Go
-func testPrint(t *testing.T, flag int, prefix string, pattern string, useFormat bool)
+func Prefix() string
 ```
 
-Test using Println("hello", 23, "world") or using Printf("hello %d world", 23) 
+Prefix returns the output prefix for the standard logger. 
 
-### <a id="TestDefault" href="#TestDefault">func TestDefault(t *testing.T)</a>
+### <a id="Print" href="#Print">func Print(v ...interface{})</a>
 
 ```
-searchKey: log.TestDefault
-tags: [private]
+searchKey: log.Print
+tags: [method]
 ```
 
 ```Go
-func TestDefault(t *testing.T)
+func Print(v ...interface{})
 ```
+
+Print calls Output to print to the standard logger. Arguments are handled in the manner of fmt.Print. 
+
+### <a id="Printf" href="#Printf">func Printf(format string, v ...interface{})</a>
+
+```
+searchKey: log.Printf
+tags: [method]
+```
+
+```Go
+func Printf(format string, v ...interface{})
+```
+
+Printf calls Output to print to the standard logger. Arguments are handled in the manner of fmt.Printf. 
+
+### <a id="Println" href="#Println">func Println(v ...interface{})</a>
+
+```
+searchKey: log.Println
+tags: [method]
+```
+
+```Go
+func Println(v ...interface{})
+```
+
+Println calls Output to print to the standard logger. Arguments are handled in the manner of fmt.Println. 
+
+### <a id="SetFlags" href="#SetFlags">func SetFlags(flag int)</a>
+
+```
+searchKey: log.SetFlags
+tags: [method]
+```
+
+```Go
+func SetFlags(flag int)
+```
+
+SetFlags sets the output flags for the standard logger. The flag bits are Ldate, Ltime, and so on. 
+
+### <a id="SetOutput" href="#SetOutput">func SetOutput(w io.Writer)</a>
+
+```
+searchKey: log.SetOutput
+tags: [method]
+```
+
+```Go
+func SetOutput(w io.Writer)
+```
+
+SetOutput sets the output destination for the standard logger. 
+
+### <a id="SetPrefix" href="#SetPrefix">func SetPrefix(prefix string)</a>
+
+```
+searchKey: log.SetPrefix
+tags: [method]
+```
+
+```Go
+func SetPrefix(prefix string)
+```
+
+SetPrefix sets the output prefix for the standard logger. 
 
 ### <a id="TestAll" href="#TestAll">func TestAll(t *testing.T)</a>
 
 ```
 searchKey: log.TestAll
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestAll(t *testing.T)
 ```
 
+### <a id="TestDefault" href="#TestDefault">func TestDefault(t *testing.T)</a>
+
+```
+searchKey: log.TestDefault
+tags: [method private test]
+```
+
+```Go
+func TestDefault(t *testing.T)
+```
+
+### <a id="TestEmptyPrintCreatesLine" href="#TestEmptyPrintCreatesLine">func TestEmptyPrintCreatesLine(t *testing.T)</a>
+
+```
+searchKey: log.TestEmptyPrintCreatesLine
+tags: [method private test]
+```
+
+```Go
+func TestEmptyPrintCreatesLine(t *testing.T)
+```
+
+### <a id="TestFlagAndPrefixSetting" href="#TestFlagAndPrefixSetting">func TestFlagAndPrefixSetting(t *testing.T)</a>
+
+```
+searchKey: log.TestFlagAndPrefixSetting
+tags: [method private test]
+```
+
+```Go
+func TestFlagAndPrefixSetting(t *testing.T)
+```
+
 ### <a id="TestOutput" href="#TestOutput">func TestOutput(t *testing.T)</a>
 
 ```
 searchKey: log.TestOutput
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -883,76 +958,60 @@ func TestOutput(t *testing.T)
 
 ```
 searchKey: log.TestOutputRace
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestOutputRace(t *testing.T)
 ```
 
-### <a id="TestFlagAndPrefixSetting" href="#TestFlagAndPrefixSetting">func TestFlagAndPrefixSetting(t *testing.T)</a>
-
-```
-searchKey: log.TestFlagAndPrefixSetting
-tags: [private]
-```
-
-```Go
-func TestFlagAndPrefixSetting(t *testing.T)
-```
-
 ### <a id="TestUTCFlag" href="#TestUTCFlag">func TestUTCFlag(t *testing.T)</a>
 
 ```
 searchKey: log.TestUTCFlag
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestUTCFlag(t *testing.T)
 ```
 
-### <a id="TestEmptyPrintCreatesLine" href="#TestEmptyPrintCreatesLine">func TestEmptyPrintCreatesLine(t *testing.T)</a>
+### <a id="Writer" href="#Writer">func Writer() io.Writer</a>
 
 ```
-searchKey: log.TestEmptyPrintCreatesLine
-tags: [private]
-```
-
-```Go
-func TestEmptyPrintCreatesLine(t *testing.T)
-```
-
-### <a id="BenchmarkItoa" href="#BenchmarkItoa">func BenchmarkItoa(b *testing.B)</a>
-
-```
-searchKey: log.BenchmarkItoa
-tags: [private]
+searchKey: log.Writer
+tags: [function]
 ```
 
 ```Go
-func BenchmarkItoa(b *testing.B)
+func Writer() io.Writer
 ```
 
-### <a id="BenchmarkPrintln" href="#BenchmarkPrintln">func BenchmarkPrintln(b *testing.B)</a>
+Writer returns the output destination for the standard logger. 
+
+### <a id="itoa" href="#itoa">func itoa(buf *[]byte, i int, wid int)</a>
 
 ```
-searchKey: log.BenchmarkPrintln
-tags: [private]
-```
-
-```Go
-func BenchmarkPrintln(b *testing.B)
-```
-
-### <a id="BenchmarkPrintlnNoFlags" href="#BenchmarkPrintlnNoFlags">func BenchmarkPrintlnNoFlags(b *testing.B)</a>
-
-```
-searchKey: log.BenchmarkPrintlnNoFlags
-tags: [private]
+searchKey: log.itoa
+tags: [method private]
 ```
 
 ```Go
-func BenchmarkPrintlnNoFlags(b *testing.B)
+func itoa(buf *[]byte, i int, wid int)
 ```
+
+Cheap integer to fixed-width decimal ASCII. Give a negative width to avoid zero-padding. 
+
+### <a id="testPrint" href="#testPrint">func testPrint(t *testing.T, flag int, prefix string, pattern string, useFormat bool)</a>
+
+```
+searchKey: log.testPrint
+tags: [method private]
+```
+
+```Go
+func testPrint(t *testing.T, flag int, prefix string, pattern string, useFormat bool)
+```
+
+Test using Println("hello", 23, "world") or using Printf("hello %d world", 23) 
 

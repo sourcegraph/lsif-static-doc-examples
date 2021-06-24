@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/testenv",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "testenv.execPaths",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -61,34 +65,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/testenv#haveCGO",
-              "documentation": {
-                "identifier": "haveCGO",
-                "newPage": false,
-                "searchKey": "testenv.haveCGO",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var haveCGO"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar haveCGO bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/testenv#flaky",
               "documentation": {
                 "identifier": "flaky",
                 "newPage": false,
                 "searchKey": "testenv.flaky",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
@@ -99,6 +83,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar flaky = flag.Bool(\"flaky\", false, \"run known-flaky tests too\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/testenv#haveCGO",
+              "documentation": {
+                "identifier": "haveCGO",
+                "newPage": false,
+                "searchKey": "testenv.haveCGO",
+                "tags": [
+                  "variable",
+                  "boolean",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var haveCGO"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar haveCGO bool\n```\n\n"
               },
               "children": null
             }
@@ -114,6 +122,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -133,7 +142,9 @@
                 "identifier": "Builder",
                 "newPage": false,
                 "searchKey": "testenv.Builder",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -148,100 +159,66 @@
           },
           {
             "node": {
-              "pathID": "/internal/testenv#HasGoBuild",
+              "pathID": "/internal/testenv#CPUIsSlow",
               "documentation": {
-                "identifier": "HasGoBuild",
+                "identifier": "CPUIsSlow",
                 "newPage": false,
-                "searchKey": "testenv.HasGoBuild",
-                "tags": null
+                "searchKey": "testenv.CPUIsSlow",
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func HasGoBuild() bool"
+                "value": "func CPUIsSlow() bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc HasGoBuild() bool\n```\n\nHasGoBuild reports whether the current system can build programs with `go build' and then run them with os.StartProcess or exec.Command. \n\n"
+                "value": "```Go\nfunc CPUIsSlow() bool\n```\n\nCPUIsSlow reports whether the CPU running the test is suspected to be slow. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/testenv#MustHaveGoBuild",
+              "pathID": "/internal/testenv#CanInternalLink",
               "documentation": {
-                "identifier": "MustHaveGoBuild",
+                "identifier": "CanInternalLink",
                 "newPage": false,
-                "searchKey": "testenv.MustHaveGoBuild",
-                "tags": null
+                "searchKey": "testenv.CanInternalLink",
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func MustHaveGoBuild(t testing.TB)"
+                "value": "func CanInternalLink() bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc MustHaveGoBuild(t testing.TB)\n```\n\nMustHaveGoBuild checks that the current system can build programs with `go build' and then run them with os.StartProcess or exec.Command. If not, MustHaveGoBuild calls t.Skip with an explanation. \n\n"
+                "value": "```Go\nfunc CanInternalLink() bool\n```\n\nCanInternalLink reports whether the current system can link programs with internal linking. (This is the opposite of cmd/internal/sys.MustLinkExternal. Keep them in sync.) \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/testenv#HasGoRun",
+              "pathID": "/internal/testenv#CleanCmdEnv",
               "documentation": {
-                "identifier": "HasGoRun",
+                "identifier": "CleanCmdEnv",
                 "newPage": false,
-                "searchKey": "testenv.HasGoRun",
-                "tags": null
+                "searchKey": "testenv.CleanCmdEnv",
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func HasGoRun() bool"
+                "value": "func CleanCmdEnv(cmd *exec.Cmd) *exec.Cmd"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc HasGoRun() bool\n```\n\nHasGoRun reports whether the current system can run programs with `go run.' \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/testenv#MustHaveGoRun",
-              "documentation": {
-                "identifier": "MustHaveGoRun",
-                "newPage": false,
-                "searchKey": "testenv.MustHaveGoRun",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func MustHaveGoRun(t testing.TB)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc MustHaveGoRun(t testing.TB)\n```\n\nMustHaveGoRun checks that the current system can run programs with `go run.' If not, MustHaveGoRun calls t.Skip with an explanation. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/testenv#GoToolPath",
-              "documentation": {
-                "identifier": "GoToolPath",
-                "newPage": false,
-                "searchKey": "testenv.GoToolPath",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GoToolPath(t testing.TB) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GoToolPath(t testing.TB) string\n```\n\nGoToolPath reports the path to the Go tool. It is a convenience wrapper around GoTool. If the tool is unavailable GoToolPath calls t.Skip. If the tool should be available and isn't, GoToolPath calls t.Fatal. \n\n"
+                "value": "```Go\nfunc CleanCmdEnv(cmd *exec.Cmd) *exec.Cmd\n```\n\nCleanCmdEnv will fill cmd.Env with the environment, excluding certain variables that could modify the behavior of the Go tools such as GODEBUG and GOTRACEBACK. \n\n"
               },
               "children": null
             }
@@ -253,7 +230,9 @@
                 "identifier": "GoTool",
                 "newPage": false,
                 "searchKey": "testenv.GoTool",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -268,12 +247,58 @@
           },
           {
             "node": {
+              "pathID": "/internal/testenv#GoToolPath",
+              "documentation": {
+                "identifier": "GoToolPath",
+                "newPage": false,
+                "searchKey": "testenv.GoToolPath",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GoToolPath(t testing.TB) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GoToolPath(t testing.TB) string\n```\n\nGoToolPath reports the path to the Go tool. It is a convenience wrapper around GoTool. If the tool is unavailable GoToolPath calls t.Skip. If the tool should be available and isn't, GoToolPath calls t.Fatal. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/testenv#HasCGO",
+              "documentation": {
+                "identifier": "HasCGO",
+                "newPage": false,
+                "searchKey": "testenv.HasCGO",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HasCGO() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HasCGO() bool\n```\n\nHasCGO reports whether the current system can use cgo. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/testenv#HasExec",
               "documentation": {
                 "identifier": "HasExec",
                 "newPage": false,
                 "searchKey": "testenv.HasExec",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -288,12 +313,102 @@
           },
           {
             "node": {
+              "pathID": "/internal/testenv#HasExternalNetwork",
+              "documentation": {
+                "identifier": "HasExternalNetwork",
+                "newPage": false,
+                "searchKey": "testenv.HasExternalNetwork",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HasExternalNetwork() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HasExternalNetwork() bool\n```\n\nHasExternalNetwork reports whether the current system can use external (non-localhost) networks. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/testenv#HasGoBuild",
+              "documentation": {
+                "identifier": "HasGoBuild",
+                "newPage": false,
+                "searchKey": "testenv.HasGoBuild",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HasGoBuild() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HasGoBuild() bool\n```\n\nHasGoBuild reports whether the current system can build programs with `go build' and then run them with os.StartProcess or exec.Command. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/testenv#HasGoRun",
+              "documentation": {
+                "identifier": "HasGoRun",
+                "newPage": false,
+                "searchKey": "testenv.HasGoRun",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HasGoRun() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HasGoRun() bool\n```\n\nHasGoRun reports whether the current system can run programs with `go run.' \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/testenv#HasLink",
+              "documentation": {
+                "identifier": "HasLink",
+                "newPage": false,
+                "searchKey": "testenv.HasLink",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HasLink() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HasLink() bool\n```\n\nHasLink reports whether the current system can use os.Link. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/testenv#HasSrc",
               "documentation": {
                 "identifier": "HasSrc",
                 "newPage": false,
                 "searchKey": "testenv.HasSrc",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -308,12 +423,58 @@
           },
           {
             "node": {
+              "pathID": "/internal/testenv#HasSymlink",
+              "documentation": {
+                "identifier": "HasSymlink",
+                "newPage": false,
+                "searchKey": "testenv.HasSymlink",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HasSymlink() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HasSymlink() bool\n```\n\nHasSymlink reports whether the current system can use os.Symlink. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/testenv#MustHaveCGO",
+              "documentation": {
+                "identifier": "MustHaveCGO",
+                "newPage": false,
+                "searchKey": "testenv.MustHaveCGO",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MustHaveCGO(t testing.TB)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MustHaveCGO(t testing.TB)\n```\n\nMustHaveCGO calls t.Skip if cgo is not available. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/testenv#MustHaveExec",
               "documentation": {
                 "identifier": "MustHaveExec",
                 "newPage": false,
                 "searchKey": "testenv.MustHaveExec",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -333,7 +494,9 @@
                 "identifier": "MustHaveExecPath",
                 "newPage": false,
                 "searchKey": "testenv.MustHaveExecPath",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -348,32 +511,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/testenv#HasExternalNetwork",
-              "documentation": {
-                "identifier": "HasExternalNetwork",
-                "newPage": false,
-                "searchKey": "testenv.HasExternalNetwork",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func HasExternalNetwork() bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc HasExternalNetwork() bool\n```\n\nHasExternalNetwork reports whether the current system can use external (non-localhost) networks. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/testenv#MustHaveExternalNetwork",
               "documentation": {
                 "identifier": "MustHaveExternalNetwork",
                 "newPage": false,
                 "searchKey": "testenv.MustHaveExternalNetwork",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -388,140 +533,44 @@
           },
           {
             "node": {
-              "pathID": "/internal/testenv#HasCGO",
+              "pathID": "/internal/testenv#MustHaveGoBuild",
               "documentation": {
-                "identifier": "HasCGO",
+                "identifier": "MustHaveGoBuild",
                 "newPage": false,
-                "searchKey": "testenv.HasCGO",
-                "tags": null
+                "searchKey": "testenv.MustHaveGoBuild",
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func HasCGO() bool"
+                "value": "func MustHaveGoBuild(t testing.TB)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc HasCGO() bool\n```\n\nHasCGO reports whether the current system can use cgo. \n\n"
+                "value": "```Go\nfunc MustHaveGoBuild(t testing.TB)\n```\n\nMustHaveGoBuild checks that the current system can build programs with `go build' and then run them with os.StartProcess or exec.Command. If not, MustHaveGoBuild calls t.Skip with an explanation. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/testenv#MustHaveCGO",
+              "pathID": "/internal/testenv#MustHaveGoRun",
               "documentation": {
-                "identifier": "MustHaveCGO",
+                "identifier": "MustHaveGoRun",
                 "newPage": false,
-                "searchKey": "testenv.MustHaveCGO",
-                "tags": null
+                "searchKey": "testenv.MustHaveGoRun",
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func MustHaveCGO(t testing.TB)"
+                "value": "func MustHaveGoRun(t testing.TB)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc MustHaveCGO(t testing.TB)\n```\n\nMustHaveCGO calls t.Skip if cgo is not available. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/testenv#CanInternalLink",
-              "documentation": {
-                "identifier": "CanInternalLink",
-                "newPage": false,
-                "searchKey": "testenv.CanInternalLink",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func CanInternalLink() bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc CanInternalLink() bool\n```\n\nCanInternalLink reports whether the current system can link programs with internal linking. (This is the opposite of cmd/internal/sys.MustLinkExternal. Keep them in sync.) \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/testenv#MustInternalLink",
-              "documentation": {
-                "identifier": "MustInternalLink",
-                "newPage": false,
-                "searchKey": "testenv.MustInternalLink",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func MustInternalLink(t testing.TB)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc MustInternalLink(t testing.TB)\n```\n\nMustInternalLink checks that the current system can link programs with internal linking. If not, MustInternalLink calls t.Skip with an explanation. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/testenv#HasSymlink",
-              "documentation": {
-                "identifier": "HasSymlink",
-                "newPage": false,
-                "searchKey": "testenv.HasSymlink",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func HasSymlink() bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc HasSymlink() bool\n```\n\nHasSymlink reports whether the current system can use os.Symlink. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/testenv#MustHaveSymlink",
-              "documentation": {
-                "identifier": "MustHaveSymlink",
-                "newPage": false,
-                "searchKey": "testenv.MustHaveSymlink",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func MustHaveSymlink(t testing.TB)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc MustHaveSymlink(t testing.TB)\n```\n\nMustHaveSymlink reports whether the current system can use os.Symlink. If not, MustHaveSymlink calls t.Skip with an explanation. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/testenv#HasLink",
-              "documentation": {
-                "identifier": "HasLink",
-                "newPage": false,
-                "searchKey": "testenv.HasLink",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func HasLink() bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc HasLink() bool\n```\n\nHasLink reports whether the current system can use os.Link. \n\n"
+                "value": "```Go\nfunc MustHaveGoRun(t testing.TB)\n```\n\nMustHaveGoRun checks that the current system can run programs with `go run.' If not, MustHaveGoRun calls t.Skip with an explanation. \n\n"
               },
               "children": null
             }
@@ -533,7 +582,9 @@
                 "identifier": "MustHaveLink",
                 "newPage": false,
                 "searchKey": "testenv.MustHaveLink",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -548,12 +599,58 @@
           },
           {
             "node": {
+              "pathID": "/internal/testenv#MustHaveSymlink",
+              "documentation": {
+                "identifier": "MustHaveSymlink",
+                "newPage": false,
+                "searchKey": "testenv.MustHaveSymlink",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MustHaveSymlink(t testing.TB)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MustHaveSymlink(t testing.TB)\n```\n\nMustHaveSymlink reports whether the current system can use os.Symlink. If not, MustHaveSymlink calls t.Skip with an explanation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/testenv#MustInternalLink",
+              "documentation": {
+                "identifier": "MustInternalLink",
+                "newPage": false,
+                "searchKey": "testenv.MustInternalLink",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MustInternalLink(t testing.TB)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MustInternalLink(t testing.TB)\n```\n\nMustInternalLink checks that the current system can link programs with internal linking. If not, MustInternalLink calls t.Skip with an explanation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/testenv#SkipFlaky",
               "documentation": {
                 "identifier": "SkipFlaky",
                 "newPage": false,
                 "searchKey": "testenv.SkipFlaky",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -573,7 +670,9 @@
                 "identifier": "SkipFlakyNet",
                 "newPage": false,
                 "searchKey": "testenv.SkipFlakyNet",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -588,52 +687,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/testenv#CleanCmdEnv",
-              "documentation": {
-                "identifier": "CleanCmdEnv",
-                "newPage": false,
-                "searchKey": "testenv.CleanCmdEnv",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func CleanCmdEnv(cmd *exec.Cmd) *exec.Cmd"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc CleanCmdEnv(cmd *exec.Cmd) *exec.Cmd\n```\n\nCleanCmdEnv will fill cmd.Env with the environment, excluding certain variables that could modify the behavior of the Go tools such as GODEBUG and GOTRACEBACK. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/testenv#CPUIsSlow",
-              "documentation": {
-                "identifier": "CPUIsSlow",
-                "newPage": false,
-                "searchKey": "testenv.CPUIsSlow",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func CPUIsSlow() bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc CPUIsSlow() bool\n```\n\nCPUIsSlow reports whether the CPU running the test is suspected to be slow. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/testenv#SkipIfShortAndSlow",
               "documentation": {
                 "identifier": "SkipIfShortAndSlow",
                 "newPage": false,
                 "searchKey": "testenv.SkipIfShortAndSlow",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -648,34 +709,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/testenv#init.testenv_cgo.go",
-              "documentation": {
-                "identifier": "init.testenv_cgo.go",
-                "newPage": false,
-                "searchKey": "testenv.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/testenv#hasSymlink",
               "documentation": {
                 "identifier": "hasSymlink",
                 "newPage": false,
                 "searchKey": "testenv.hasSymlink",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -686,6 +726,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc hasSymlink() (ok bool, reason string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/testenv#init.testenv_cgo.go",
+              "documentation": {
+                "identifier": "init.testenv_cgo.go",
+                "newPage": false,
+                "searchKey": "testenv.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
               },
               "children": null
             }

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "encoding/xml_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/encoding/xml_test#Unknown",
-              "documentation": {
-                "identifier": "Unknown",
-                "newPage": false,
-                "searchKey": "xml_test.Unknown",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const Unknown"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst Unknown Animal = iota\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/encoding/xml_test#Gopher",
               "documentation": {
                 "identifier": "Gopher",
                 "newPage": false,
                 "searchKey": "xml_test.Gopher",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -83,44 +65,24 @@
           },
           {
             "node": {
-              "pathID": "/encoding/xml_test#Zebra",
+              "pathID": "/encoding/xml_test#Large",
               "documentation": {
-                "identifier": "Zebra",
+                "identifier": "Large",
                 "newPage": false,
-                "searchKey": "xml_test.Zebra",
+                "searchKey": "xml_test.Large",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const Zebra"
+                "value": "const Large"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst Zebra\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/xml_test#Unrecognized",
-              "documentation": {
-                "identifier": "Unrecognized",
-                "newPage": false,
-                "searchKey": "xml_test.Unrecognized",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const Unrecognized"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst Unrecognized Size = iota\n```\n\n"
+                "value": "```Go\nconst Large\n```\n\n"
               },
               "children": null
             }
@@ -133,6 +95,8 @@
                 "newPage": false,
                 "searchKey": "xml_test.Small",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -149,22 +113,72 @@
           },
           {
             "node": {
-              "pathID": "/encoding/xml_test#Large",
+              "pathID": "/encoding/xml_test#Unknown",
               "documentation": {
-                "identifier": "Large",
+                "identifier": "Unknown",
                 "newPage": false,
-                "searchKey": "xml_test.Large",
+                "searchKey": "xml_test.Unknown",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const Large"
+                "value": "const Unknown"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst Large\n```\n\n"
+                "value": "```Go\nconst Unknown Animal = iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/xml_test#Unrecognized",
+              "documentation": {
+                "identifier": "Unrecognized",
+                "newPage": false,
+                "searchKey": "xml_test.Unrecognized",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Unrecognized"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Unrecognized Size = iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/xml_test#Zebra",
+              "documentation": {
+                "identifier": "Zebra",
+                "newPage": false,
+                "searchKey": "xml_test.Zebra",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Zebra"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Zebra\n```\n\n"
               },
               "children": null
             }
@@ -180,6 +194,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -200,6 +215,7 @@
                 "newPage": false,
                 "searchKey": "xml_test.Animal",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -214,34 +230,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/encoding/xml_test#Animal.UnmarshalXML",
-                    "documentation": {
-                      "identifier": "Animal.UnmarshalXML",
-                      "newPage": false,
-                      "searchKey": "xml_test.Animal.UnmarshalXML",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (a *Animal) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (a *Animal) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/encoding/xml_test#Animal.MarshalXML",
                     "documentation": {
                       "identifier": "Animal.MarshalXML",
                       "newPage": false,
                       "searchKey": "xml_test.Animal.MarshalXML",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -252,6 +247,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (a Animal) MarshalXML(e *xml.Encoder, start xml.StartElement) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/xml_test#Animal.UnmarshalXML",
+                    "documentation": {
+                      "identifier": "Animal.UnmarshalXML",
+                      "newPage": false,
+                      "searchKey": "xml_test.Animal.UnmarshalXML",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *Animal) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *Animal) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error\n```\n\n"
                     },
                     "children": null
                   }
@@ -267,6 +285,7 @@
                 "newPage": false,
                 "searchKey": "xml_test.Size",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -281,34 +300,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/encoding/xml_test#Size.UnmarshalText",
-                    "documentation": {
-                      "identifier": "Size.UnmarshalText",
-                      "newPage": false,
-                      "searchKey": "xml_test.Size.UnmarshalText",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Size) UnmarshalText(text []byte) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Size) UnmarshalText(text []byte) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/encoding/xml_test#Size.MarshalText",
                     "documentation": {
                       "identifier": "Size.MarshalText",
                       "newPage": false,
                       "searchKey": "xml_test.Size.MarshalText",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -319,6 +317,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (s Size) MarshalText() ([]byte, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/xml_test#Size.UnmarshalText",
+                    "documentation": {
+                      "identifier": "Size.UnmarshalText",
+                      "newPage": false,
+                      "searchKey": "xml_test.Size.UnmarshalText",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Size) UnmarshalText(text []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Size) UnmarshalText(text []byte) error\n```\n\n"
                     },
                     "children": null
                   }
@@ -337,6 +358,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -351,56 +373,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/encoding/xml_test#Example_customMarshalXML",
-              "documentation": {
-                "identifier": "Example_customMarshalXML",
-                "newPage": false,
-                "searchKey": "xml_test.Example_customMarshalXML",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Example_customMarshalXML()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Example_customMarshalXML()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/xml_test#ExampleMarshalIndent",
-              "documentation": {
-                "identifier": "ExampleMarshalIndent",
-                "newPage": false,
-                "searchKey": "xml_test.ExampleMarshalIndent",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleMarshalIndent()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleMarshalIndent()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/encoding/xml_test#ExampleEncoder",
               "documentation": {
                 "identifier": "ExampleEncoder",
                 "newPage": false,
                 "searchKey": "xml_test.ExampleEncoder",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -417,12 +396,36 @@
           },
           {
             "node": {
+              "pathID": "/encoding/xml_test#ExampleMarshalIndent",
+              "documentation": {
+                "identifier": "ExampleMarshalIndent",
+                "newPage": false,
+                "searchKey": "xml_test.ExampleMarshalIndent",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleMarshalIndent()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleMarshalIndent()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/encoding/xml_test#ExampleUnmarshal",
               "documentation": {
                 "identifier": "ExampleUnmarshal",
                 "newPage": false,
                 "searchKey": "xml_test.ExampleUnmarshal",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -439,12 +442,36 @@
           },
           {
             "node": {
+              "pathID": "/encoding/xml_test#Example_customMarshalXML",
+              "documentation": {
+                "identifier": "Example_customMarshalXML",
+                "newPage": false,
+                "searchKey": "xml_test.Example_customMarshalXML",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_customMarshalXML()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_customMarshalXML()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/encoding/xml_test#Example_textMarshalXML",
               "documentation": {
                 "identifier": "Example_textMarshalXML",
                 "newPage": false,
                 "searchKey": "xml_test.Example_textMarshalXML",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },

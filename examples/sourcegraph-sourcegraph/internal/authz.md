@@ -10,103 +10,119 @@ Package authz contains common logic and interfaces for authorization to external
   * [internal/authz/gitlab](authz/gitlab.md)
   * [internal/authz/perforce](authz/perforce.md)
 * [Constants](#const)
-    * [const SourcegraphServiceType](#SourcegraphServiceType)
-    * [const SourcegraphServiceID](#SourcegraphServiceID)
+    * [const None](#None)
+    * [const PermRepos](#PermRepos)
+    * [const Read](#Read)
     * [const SchemeToken](#SchemeToken)
     * [const SchemeTokenSudo](#SchemeTokenSudo)
-    * [const None](#None)
-    * [const Read](#Read)
-    * [const Write](#Write)
-    * [const PermRepos](#PermRepos)
-    * [const ScopeUserAll](#ScopeUserAll)
     * [const ScopeSiteAdminSudo](#ScopeSiteAdminSudo)
+    * [const ScopeUserAll](#ScopeUserAll)
+    * [const SourcegraphServiceID](#SourcegraphServiceID)
+    * [const SourcegraphServiceType](#SourcegraphServiceType)
+    * [const Write](#Write)
 * [Variables](#var)
-    * [var errUnrecognizedScheme](#errUnrecognizedScheme)
-    * [var errHTTPAuthParamsDuplicateKey](#errHTTPAuthParamsDuplicateKey)
-    * [var errHTTPAuthParamsNoEquals](#errHTTPAuthParamsNoEquals)
+    * [var AllScopes](#AllScopes)
     * [var ErrPermsNotFound](#ErrPermsNotFound)
     * [var allowAccessByDefault](#allowAccessByDefault)
-    * [var authzProvidersReadyOnce](#authzProvidersReadyOnce)
-    * [var authzProvidersReady](#authzProvidersReady)
-    * [var authzProviders](#authzProviders)
     * [var authzMu](#authzMu)
+    * [var authzProviders](#authzProviders)
+    * [var authzProvidersReady](#authzProvidersReady)
+    * [var authzProvidersReadyOnce](#authzProvidersReadyOnce)
+    * [var errHTTPAuthParamsDuplicateKey](#errHTTPAuthParamsDuplicateKey)
+    * [var errHTTPAuthParamsNoEquals](#errHTTPAuthParamsNoEquals)
+    * [var errUnrecognizedScheme](#errUnrecognizedScheme)
     * [var isTest](#isTest)
-    * [var AllScopes](#AllScopes)
 * [Types](#type)
+    * [type ErrStalePermissions struct](#ErrStalePermissions)
+        * [func (e ErrStalePermissions) Error() string](#ErrStalePermissions.Error)
     * [type ExternalUserPermissions struct](#ExternalUserPermissions)
-    * [type Provider interface](#Provider)
-    * [type RepoPerms struct](#RepoPerms)
+    * [type PermType string](#PermType)
     * [type Perms uint32](#Perms)
         * [func (p Perms) Include(other Perms) bool](#Perms.Include)
         * [func (p Perms) String() string](#Perms.String)
-    * [type PermType string](#PermType)
-    * [type RepoPermsSort []authz.RepoPerms](#RepoPermsSort)
-        * [func (s RepoPermsSort) Len() int](#RepoPermsSort.Len)
-        * [func (s RepoPermsSort) Swap(i, j int)](#RepoPermsSort.Swap)
-        * [func (s RepoPermsSort) Less(i, j int) bool](#RepoPermsSort.Less)
-    * [type ErrStalePermissions struct](#ErrStalePermissions)
-        * [func (e ErrStalePermissions) Error() string](#ErrStalePermissions.Error)
-    * [type UserPermissions struct](#UserPermissions)
-        * [func (p *UserPermissions) Expired(ttl time.Duration, now time.Time) bool](#UserPermissions.Expired)
-        * [func (p *UserPermissions) AuthorizedRepos(repos []*types.Repo) []RepoPerms](#UserPermissions.AuthorizedRepos)
-        * [func (p *UserPermissions) TracingFields() []otlog.Field](#UserPermissions.TracingFields)
+    * [type Provider interface](#Provider)
     * [type RepoPermissions struct](#RepoPermissions)
         * [func (p *RepoPermissions) Expired(ttl time.Duration, now time.Time) bool](#RepoPermissions.Expired)
         * [func (p *RepoPermissions) TracingFields() []otlog.Field](#RepoPermissions.TracingFields)
+    * [type RepoPerms struct](#RepoPerms)
+    * [type RepoPermsSort []authz.RepoPerms](#RepoPermsSort)
+        * [func (s RepoPermsSort) Len() int](#RepoPermsSort.Len)
+        * [func (s RepoPermsSort) Less(i, j int) bool](#RepoPermsSort.Less)
+        * [func (s RepoPermsSort) Swap(i, j int)](#RepoPermsSort.Swap)
     * [type UserPendingPermissions struct](#UserPendingPermissions)
         * [func (p *UserPendingPermissions) TracingFields() []otlog.Field](#UserPendingPermissions.TracingFields)
+    * [type UserPermissions struct](#UserPermissions)
+        * [func (p *UserPermissions) AuthorizedRepos(repos []*types.Repo) []RepoPerms](#UserPermissions.AuthorizedRepos)
+        * [func (p *UserPermissions) Expired(ttl time.Duration, now time.Time) bool](#UserPermissions.Expired)
+        * [func (p *UserPermissions) TracingFields() []otlog.Field](#UserPermissions.TracingFields)
 * [Functions](#func)
+    * [func BenchmarkPermsInclude(b *testing.B)](#BenchmarkPermsInclude)
+    * [func BenchmarkPermsString(b *testing.B)](#BenchmarkPermsString)
+    * [func GetProviders() (authzAllowByDefault bool, providers []Provider)](#GetProviders)
     * [func IsUnrecognizedScheme(err error) bool](#IsUnrecognizedScheme)
     * [func ParseAuthorizationHeader(headerValue string) (token, sudoUser string, err error)](#ParseAuthorizationHeader)
-    * [func parseHTTPCredentials(credentials string) (scheme, token68 string, params map[string]string, err error)](#parseHTTPCredentials)
-    * [func parseHTTPAuthParams(value string) (params map[string]string, err error)](#parseHTTPAuthParams)
-    * [func parseHTTPHeaderList(value string) []string](#parseHTTPHeaderList)
     * [func SetProviders(authzAllowByDefault bool, z []Provider)](#SetProviders)
-    * [func GetProviders() (authzAllowByDefault bool, providers []Provider)](#GetProviders)
     * [func TestParseAuthorizationHeader(t *testing.T)](#TestParseAuthorizationHeader)
     * [func TestParseHTTPCredentials(t *testing.T)](#TestParseHTTPCredentials)
     * [func TestPermsInclude(t *testing.T)](#TestPermsInclude)
-    * [func BenchmarkPermsInclude(b *testing.B)](#BenchmarkPermsInclude)
     * [func TestPermsString(t *testing.T)](#TestPermsString)
-    * [func BenchmarkPermsString(b *testing.B)](#BenchmarkPermsString)
-    * [func bitmap(ids ...uint32) *roaring.Bitmap](#bitmap)
     * [func TestUserPermissions_AuthorizedRepos(t *testing.T)](#TestUserPermissions_AuthorizedRepos)
+    * [func bitmap(ids ...uint32) *roaring.Bitmap](#bitmap)
+    * [func parseHTTPAuthParams(value string) (params map[string]string, err error)](#parseHTTPAuthParams)
+    * [func parseHTTPCredentials(credentials string) (scheme, token68 string, params map[string]string, err error)](#parseHTTPCredentials)
+    * [func parseHTTPHeaderList(value string) []string](#parseHTTPHeaderList)
 
 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
-### <a id="SourcegraphServiceType" href="#SourcegraphServiceType">const SourcegraphServiceType</a>
+### <a id="None" href="#None">const None</a>
 
 ```
-searchKey: authz.SourcegraphServiceType
-```
-
-```Go
-const SourcegraphServiceType = "sourcegraph"
-```
-
-The service type and service ID for explicit repository permissions APIs (aka Sourcegraph authz provider). 
-
-### <a id="SourcegraphServiceID" href="#SourcegraphServiceID">const SourcegraphServiceID</a>
-
-```
-searchKey: authz.SourcegraphServiceID
+searchKey: authz.None
+tags: [constant number]
 ```
 
 ```Go
-const SourcegraphServiceID = "https://sourcegraph.com/"
+const None Perms = 0
 ```
 
-The service type and service ID for explicit repository permissions APIs (aka Sourcegraph authz provider). 
+Perm constants. 
+
+### <a id="PermRepos" href="#PermRepos">const PermRepos</a>
+
+```
+searchKey: authz.PermRepos
+tags: [constant string]
+```
+
+```Go
+const PermRepos PermType = "repos"
+```
+
+PermRepos is the list of available user permission types. 
+
+### <a id="Read" href="#Read">const Read</a>
+
+```
+searchKey: authz.Read
+tags: [constant number]
+```
+
+```Go
+const Read Perms = 1 << iota
+```
+
+Perm constants. 
 
 ### <a id="SchemeToken" href="#SchemeToken">const SchemeToken</a>
 
 ```
 searchKey: authz.SchemeToken
+tags: [constant string]
 ```
 
 ```Go
@@ -118,6 +134,7 @@ const SchemeToken = "token" // Scheme for Authorization header with only an acce
 
 ```
 searchKey: authz.SchemeTokenSudo
+tags: [constant string]
 ```
 
 ```Go
@@ -125,58 +142,23 @@ const SchemeTokenSudo // Scheme for Authorization header with access token and s
  = ...
 ```
 
-### <a id="None" href="#None">const None</a>
+### <a id="ScopeSiteAdminSudo" href="#ScopeSiteAdminSudo">const ScopeSiteAdminSudo</a>
 
 ```
-searchKey: authz.None
-```
-
-```Go
-const None Perms = 0
-```
-
-Perm constants. 
-
-### <a id="Read" href="#Read">const Read</a>
-
-```
-searchKey: authz.Read
+searchKey: authz.ScopeSiteAdminSudo
+tags: [constant string]
 ```
 
 ```Go
-const Read Perms = 1 << iota
-```
-
-Perm constants. 
-
-### <a id="Write" href="#Write">const Write</a>
+const ScopeSiteAdminSudo = "site-admin:sudo" // Ability to perform any action as any other user.
 
 ```
-searchKey: authz.Write
-```
-
-```Go
-const Write
-```
-
-Perm constants. 
-
-### <a id="PermRepos" href="#PermRepos">const PermRepos</a>
-
-```
-searchKey: authz.PermRepos
-```
-
-```Go
-const PermRepos PermType = "repos"
-```
-
-PermRepos is the list of available user permission types. 
 
 ### <a id="ScopeUserAll" href="#ScopeUserAll">const ScopeUserAll</a>
 
 ```
 searchKey: authz.ScopeUserAll
+tags: [constant string]
 ```
 
 ```Go
@@ -186,146 +168,56 @@ const ScopeUserAll = "user:all" // Full control of all resources accessible to t
 
 Access token scopes. 
 
-### <a id="ScopeSiteAdminSudo" href="#ScopeSiteAdminSudo">const ScopeSiteAdminSudo</a>
+### <a id="SourcegraphServiceID" href="#SourcegraphServiceID">const SourcegraphServiceID</a>
 
 ```
-searchKey: authz.ScopeSiteAdminSudo
+searchKey: authz.SourcegraphServiceID
+tags: [constant string]
 ```
 
 ```Go
-const ScopeSiteAdminSudo = "site-admin:sudo" // Ability to perform any action as any other user.
+const SourcegraphServiceID = "https://sourcegraph.com/"
+```
+
+The service type and service ID for explicit repository permissions APIs (aka Sourcegraph authz provider). 
+
+### <a id="SourcegraphServiceType" href="#SourcegraphServiceType">const SourcegraphServiceType</a>
 
 ```
+searchKey: authz.SourcegraphServiceType
+tags: [constant string]
+```
+
+```Go
+const SourcegraphServiceType = "sourcegraph"
+```
+
+The service type and service ID for explicit repository permissions APIs (aka Sourcegraph authz provider). 
+
+### <a id="Write" href="#Write">const Write</a>
+
+```
+searchKey: authz.Write
+tags: [constant number]
+```
+
+```Go
+const Write
+```
+
+Perm constants. 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
-```
-
-### <a id="errUnrecognizedScheme" href="#errUnrecognizedScheme">var errUnrecognizedScheme</a>
-
-```
-searchKey: authz.errUnrecognizedScheme
-tags: [private]
-```
-
-```Go
-var errUnrecognizedScheme = ...
-```
-
-errUnrecognizedScheme occurs when the Authorization header scheme (the first token) is not recognized. 
-
-### <a id="errHTTPAuthParamsDuplicateKey" href="#errHTTPAuthParamsDuplicateKey">var errHTTPAuthParamsDuplicateKey</a>
-
-```
-searchKey: authz.errHTTPAuthParamsDuplicateKey
-tags: [private]
-```
-
-```Go
-var errHTTPAuthParamsDuplicateKey = errors.New("duplicate key in HTTP auth-params")
-```
-
-### <a id="errHTTPAuthParamsNoEquals" href="#errHTTPAuthParamsNoEquals">var errHTTPAuthParamsNoEquals</a>
-
-```
-searchKey: authz.errHTTPAuthParamsNoEquals
-tags: [private]
-```
-
-```Go
-var errHTTPAuthParamsNoEquals = errors.New("invalid HTTP auth-params list (parameter has no value)")
-```
-
-### <a id="ErrPermsNotFound" href="#ErrPermsNotFound">var ErrPermsNotFound</a>
-
-```
-searchKey: authz.ErrPermsNotFound
-```
-
-```Go
-var ErrPermsNotFound = errors.New("permissions not found")
-```
-
-### <a id="allowAccessByDefault" href="#allowAccessByDefault">var allowAccessByDefault</a>
-
-```
-searchKey: authz.allowAccessByDefault
-tags: [private]
-```
-
-```Go
-var allowAccessByDefault = true
-```
-
-allowAccessByDefault, if set to true, grants all users access to repositories that are not matched by any authz provider. The default value is true. It is only set to false in error modes (when the configuration is in a state where interpreting it literally could lead to leakage of private repositories). 
-
-### <a id="authzProvidersReadyOnce" href="#authzProvidersReadyOnce">var authzProvidersReadyOnce</a>
-
-```
-searchKey: authz.authzProvidersReadyOnce
-tags: [private]
-```
-
-```Go
-var authzProvidersReadyOnce sync.Once
-```
-
-authzProvidersReady and authzProvidersReadyOnce together indicate when GetProviders should no longer block. It should block until SetProviders is called at least once. 
-
-### <a id="authzProvidersReady" href="#authzProvidersReady">var authzProvidersReady</a>
-
-```
-searchKey: authz.authzProvidersReady
-tags: [private]
-```
-
-```Go
-var authzProvidersReady = make(chan struct{})
-```
-
-### <a id="authzProviders" href="#authzProviders">var authzProviders</a>
-
-```
-searchKey: authz.authzProviders
-tags: [private]
-```
-
-```Go
-var authzProviders []Provider
-```
-
-authzProviders is the currently registered list of authorization providers. 
-
-### <a id="authzMu" href="#authzMu">var authzMu</a>
-
-```
-searchKey: authz.authzMu
-tags: [private]
-```
-
-```Go
-var authzMu sync.RWMutex
-```
-
-authzMu protects access to both allowAccessByDefault and authzProviders 
-
-### <a id="isTest" href="#isTest">var isTest</a>
-
-```
-searchKey: authz.isTest
-tags: [private]
-```
-
-```Go
-var isTest = ...
+tags: [package private]
 ```
 
 ### <a id="AllScopes" href="#AllScopes">var AllScopes</a>
 
 ```
 searchKey: authz.AllScopes
+tags: [variable array string]
 ```
 
 ```Go
@@ -337,16 +229,167 @@ var AllScopes = []string{
 
 AllScopes is a list of all known access token scopes. 
 
+### <a id="ErrPermsNotFound" href="#ErrPermsNotFound">var ErrPermsNotFound</a>
+
+```
+searchKey: authz.ErrPermsNotFound
+tags: [variable interface]
+```
+
+```Go
+var ErrPermsNotFound = errors.New("permissions not found")
+```
+
+### <a id="allowAccessByDefault" href="#allowAccessByDefault">var allowAccessByDefault</a>
+
+```
+searchKey: authz.allowAccessByDefault
+tags: [variable boolean private]
+```
+
+```Go
+var allowAccessByDefault = true
+```
+
+allowAccessByDefault, if set to true, grants all users access to repositories that are not matched by any authz provider. The default value is true. It is only set to false in error modes (when the configuration is in a state where interpreting it literally could lead to leakage of private repositories). 
+
+### <a id="authzMu" href="#authzMu">var authzMu</a>
+
+```
+searchKey: authz.authzMu
+tags: [variable struct private]
+```
+
+```Go
+var authzMu sync.RWMutex
+```
+
+authzMu protects access to both allowAccessByDefault and authzProviders 
+
+### <a id="authzProviders" href="#authzProviders">var authzProviders</a>
+
+```
+searchKey: authz.authzProviders
+tags: [variable array interface private]
+```
+
+```Go
+var authzProviders []Provider
+```
+
+authzProviders is the currently registered list of authorization providers. 
+
+### <a id="authzProvidersReady" href="#authzProvidersReady">var authzProvidersReady</a>
+
+```
+searchKey: authz.authzProvidersReady
+tags: [variable private]
+```
+
+```Go
+var authzProvidersReady = make(chan struct{})
+```
+
+### <a id="authzProvidersReadyOnce" href="#authzProvidersReadyOnce">var authzProvidersReadyOnce</a>
+
+```
+searchKey: authz.authzProvidersReadyOnce
+tags: [variable struct private]
+```
+
+```Go
+var authzProvidersReadyOnce sync.Once
+```
+
+authzProvidersReady and authzProvidersReadyOnce together indicate when GetProviders should no longer block. It should block until SetProviders is called at least once. 
+
+### <a id="errHTTPAuthParamsDuplicateKey" href="#errHTTPAuthParamsDuplicateKey">var errHTTPAuthParamsDuplicateKey</a>
+
+```
+searchKey: authz.errHTTPAuthParamsDuplicateKey
+tags: [variable interface private]
+```
+
+```Go
+var errHTTPAuthParamsDuplicateKey = errors.New("duplicate key in HTTP auth-params")
+```
+
+### <a id="errHTTPAuthParamsNoEquals" href="#errHTTPAuthParamsNoEquals">var errHTTPAuthParamsNoEquals</a>
+
+```
+searchKey: authz.errHTTPAuthParamsNoEquals
+tags: [variable interface private]
+```
+
+```Go
+var errHTTPAuthParamsNoEquals = errors.New("invalid HTTP auth-params list (parameter has no value)")
+```
+
+### <a id="errUnrecognizedScheme" href="#errUnrecognizedScheme">var errUnrecognizedScheme</a>
+
+```
+searchKey: authz.errUnrecognizedScheme
+tags: [variable interface private]
+```
+
+```Go
+var errUnrecognizedScheme = ...
+```
+
+errUnrecognizedScheme occurs when the Authorization header scheme (the first token) is not recognized. 
+
+### <a id="isTest" href="#isTest">var isTest</a>
+
+```
+searchKey: authz.isTest
+tags: [variable boolean private]
+```
+
+```Go
+var isTest = ...
+```
+
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
+
+### <a id="ErrStalePermissions" href="#ErrStalePermissions">type ErrStalePermissions struct</a>
+
+```
+searchKey: authz.ErrStalePermissions
+tags: [struct]
+```
+
+```Go
+type ErrStalePermissions struct {
+	UserID int32
+	Perm   Perms
+	Type   PermType
+}
+```
+
+ErrStalePermissions is returned by LoadPermissions when the stored permissions are stale (e.g. the first time a user needs them and they haven't been fetched yet). Callers should pass this error up to the user and show a more friendly prompt message in the UI. 
+
+#### <a id="ErrStalePermissions.Error" href="#ErrStalePermissions.Error">func (e ErrStalePermissions) Error() string</a>
+
+```
+searchKey: authz.ErrStalePermissions.Error
+tags: [function]
+```
+
+```Go
+func (e ErrStalePermissions) Error() string
+```
+
+Error implements the error interface. 
 
 ### <a id="ExternalUserPermissions" href="#ExternalUserPermissions">type ExternalUserPermissions struct</a>
 
 ```
 searchKey: authz.ExternalUserPermissions
+tags: [struct]
 ```
 
 ```Go
@@ -361,10 +404,63 @@ ExternalUserPermissions is a collection of accessible repository/project IDs (on
 
 🚨 SECURITY: Every call site should evaluate all fields of this struct to have a complete set of IDs. 
 
+### <a id="PermType" href="#PermType">type PermType string</a>
+
+```
+searchKey: authz.PermType
+tags: [string]
+```
+
+```Go
+type PermType string
+```
+
+PermType is the object type of the user permissions. 
+
+### <a id="Perms" href="#Perms">type Perms uint32</a>
+
+```
+searchKey: authz.Perms
+tags: [number]
+```
+
+```Go
+type Perms uint32
+```
+
+Perms is a permission set represented as bitset. 
+
+#### <a id="Perms.Include" href="#Perms.Include">func (p Perms) Include(other Perms) bool</a>
+
+```
+searchKey: authz.Perms.Include
+tags: [method]
+```
+
+```Go
+func (p Perms) Include(other Perms) bool
+```
+
+Include is a convenience method to test if Perms includes all the other Perms. 
+
+#### <a id="Perms.String" href="#Perms.String">func (p Perms) String() string</a>
+
+```
+searchKey: authz.Perms.String
+tags: [function]
+```
+
+```Go
+func (p Perms) String() string
+```
+
+String implements the fmt.Stringer interface. 
+
 ### <a id="Provider" href="#Provider">type Provider interface</a>
 
 ```
 searchKey: authz.Provider
+tags: [interface]
 ```
 
 ```Go
@@ -429,198 +525,11 @@ Provider defines a source of truth of which repositories a user is authorized to
 
 In most cases, an authz provider represents a code host, because it is the source of truth for repository permissions. 
 
-### <a id="RepoPerms" href="#RepoPerms">type RepoPerms struct</a>
-
-```
-searchKey: authz.RepoPerms
-```
-
-```Go
-type RepoPerms struct {
-	Repo  *types.Repo
-	Perms Perms
-}
-```
-
-RepoPerms contains a repo and the permissions a given user has associated with it. 
-
-### <a id="Perms" href="#Perms">type Perms uint32</a>
-
-```
-searchKey: authz.Perms
-```
-
-```Go
-type Perms uint32
-```
-
-Perms is a permission set represented as bitset. 
-
-#### <a id="Perms.Include" href="#Perms.Include">func (p Perms) Include(other Perms) bool</a>
-
-```
-searchKey: authz.Perms.Include
-```
-
-```Go
-func (p Perms) Include(other Perms) bool
-```
-
-Include is a convenience method to test if Perms includes all the other Perms. 
-
-#### <a id="Perms.String" href="#Perms.String">func (p Perms) String() string</a>
-
-```
-searchKey: authz.Perms.String
-```
-
-```Go
-func (p Perms) String() string
-```
-
-String implements the fmt.Stringer interface. 
-
-### <a id="PermType" href="#PermType">type PermType string</a>
-
-```
-searchKey: authz.PermType
-```
-
-```Go
-type PermType string
-```
-
-PermType is the object type of the user permissions. 
-
-### <a id="RepoPermsSort" href="#RepoPermsSort">type RepoPermsSort []authz.RepoPerms</a>
-
-```
-searchKey: authz.RepoPermsSort
-```
-
-```Go
-type RepoPermsSort []RepoPerms
-```
-
-RepoPermsSort sorts a slice of RepoPerms to guarantee a stable ordering. 
-
-#### <a id="RepoPermsSort.Len" href="#RepoPermsSort.Len">func (s RepoPermsSort) Len() int</a>
-
-```
-searchKey: authz.RepoPermsSort.Len
-```
-
-```Go
-func (s RepoPermsSort) Len() int
-```
-
-#### <a id="RepoPermsSort.Swap" href="#RepoPermsSort.Swap">func (s RepoPermsSort) Swap(i, j int)</a>
-
-```
-searchKey: authz.RepoPermsSort.Swap
-```
-
-```Go
-func (s RepoPermsSort) Swap(i, j int)
-```
-
-#### <a id="RepoPermsSort.Less" href="#RepoPermsSort.Less">func (s RepoPermsSort) Less(i, j int) bool</a>
-
-```
-searchKey: authz.RepoPermsSort.Less
-```
-
-```Go
-func (s RepoPermsSort) Less(i, j int) bool
-```
-
-### <a id="ErrStalePermissions" href="#ErrStalePermissions">type ErrStalePermissions struct</a>
-
-```
-searchKey: authz.ErrStalePermissions
-```
-
-```Go
-type ErrStalePermissions struct {
-	UserID int32
-	Perm   Perms
-	Type   PermType
-}
-```
-
-ErrStalePermissions is returned by LoadPermissions when the stored permissions are stale (e.g. the first time a user needs them and they haven't been fetched yet). Callers should pass this error up to the user and show a more friendly prompt message in the UI. 
-
-#### <a id="ErrStalePermissions.Error" href="#ErrStalePermissions.Error">func (e ErrStalePermissions) Error() string</a>
-
-```
-searchKey: authz.ErrStalePermissions.Error
-```
-
-```Go
-func (e ErrStalePermissions) Error() string
-```
-
-Error implements the error interface. 
-
-### <a id="UserPermissions" href="#UserPermissions">type UserPermissions struct</a>
-
-```
-searchKey: authz.UserPermissions
-```
-
-```Go
-type UserPermissions struct {
-	UserID    int32           // The internal database ID of a user
-	Perm      Perms           // The permission set
-	Type      PermType        // The type of the permissions
-	IDs       *roaring.Bitmap // The object IDs
-	UpdatedAt time.Time       // The last updated time
-	SyncedAt  time.Time       // The last user-centric synced time
-}
-```
-
-UserPermissions are the permissions of a user to perform an action on the given set of object IDs of the defined type. 
-
-#### <a id="UserPermissions.Expired" href="#UserPermissions.Expired">func (p *UserPermissions) Expired(ttl time.Duration, now time.Time) bool</a>
-
-```
-searchKey: authz.UserPermissions.Expired
-```
-
-```Go
-func (p *UserPermissions) Expired(ttl time.Duration, now time.Time) bool
-```
-
-Expired returns true if these UserPermissions have elapsed the given ttl. 
-
-#### <a id="UserPermissions.AuthorizedRepos" href="#UserPermissions.AuthorizedRepos">func (p *UserPermissions) AuthorizedRepos(repos []*types.Repo) []RepoPerms</a>
-
-```
-searchKey: authz.UserPermissions.AuthorizedRepos
-```
-
-```Go
-func (p *UserPermissions) AuthorizedRepos(repos []*types.Repo) []RepoPerms
-```
-
-AuthorizedRepos returns the intersection of the given repository IDs with the authorized IDs. 
-
-#### <a id="UserPermissions.TracingFields" href="#UserPermissions.TracingFields">func (p *UserPermissions) TracingFields() []otlog.Field</a>
-
-```
-searchKey: authz.UserPermissions.TracingFields
-```
-
-```Go
-func (p *UserPermissions) TracingFields() []otlog.Field
-```
-
-TracingFields returns tracing fields for the opentracing log. 
-
 ### <a id="RepoPermissions" href="#RepoPermissions">type RepoPermissions struct</a>
 
 ```
 searchKey: authz.RepoPermissions
+tags: [struct]
 ```
 
 ```Go
@@ -639,6 +548,7 @@ RepoPermissions declares which users have access to a given repository
 
 ```
 searchKey: authz.RepoPermissions.Expired
+tags: [method]
 ```
 
 ```Go
@@ -651,6 +561,7 @@ Expired returns true if these RepoPermissions have elapsed the given ttl.
 
 ```
 searchKey: authz.RepoPermissions.TracingFields
+tags: [function]
 ```
 
 ```Go
@@ -659,10 +570,73 @@ func (p *RepoPermissions) TracingFields() []otlog.Field
 
 TracingFields returns tracing fields for the opentracing log. 
 
+### <a id="RepoPerms" href="#RepoPerms">type RepoPerms struct</a>
+
+```
+searchKey: authz.RepoPerms
+tags: [struct]
+```
+
+```Go
+type RepoPerms struct {
+	Repo  *types.Repo
+	Perms Perms
+}
+```
+
+RepoPerms contains a repo and the permissions a given user has associated with it. 
+
+### <a id="RepoPermsSort" href="#RepoPermsSort">type RepoPermsSort []authz.RepoPerms</a>
+
+```
+searchKey: authz.RepoPermsSort
+tags: [array struct]
+```
+
+```Go
+type RepoPermsSort []RepoPerms
+```
+
+RepoPermsSort sorts a slice of RepoPerms to guarantee a stable ordering. 
+
+#### <a id="RepoPermsSort.Len" href="#RepoPermsSort.Len">func (s RepoPermsSort) Len() int</a>
+
+```
+searchKey: authz.RepoPermsSort.Len
+tags: [function]
+```
+
+```Go
+func (s RepoPermsSort) Len() int
+```
+
+#### <a id="RepoPermsSort.Less" href="#RepoPermsSort.Less">func (s RepoPermsSort) Less(i, j int) bool</a>
+
+```
+searchKey: authz.RepoPermsSort.Less
+tags: [method]
+```
+
+```Go
+func (s RepoPermsSort) Less(i, j int) bool
+```
+
+#### <a id="RepoPermsSort.Swap" href="#RepoPermsSort.Swap">func (s RepoPermsSort) Swap(i, j int)</a>
+
+```
+searchKey: authz.RepoPermsSort.Swap
+tags: [method]
+```
+
+```Go
+func (s RepoPermsSort) Swap(i, j int)
+```
+
 ### <a id="UserPendingPermissions" href="#UserPendingPermissions">type UserPendingPermissions struct</a>
 
 ```
 searchKey: authz.UserPendingPermissions
+tags: [struct]
 ```
 
 ```Go
@@ -699,6 +673,7 @@ UserPendingPermissions defines permissions that a not-yet-created user has to pe
 
 ```
 searchKey: authz.UserPendingPermissions.TracingFields
+tags: [function]
 ```
 
 ```Go
@@ -707,16 +682,113 @@ func (p *UserPendingPermissions) TracingFields() []otlog.Field
 
 TracingFields returns tracing fields for the opentracing log. 
 
+### <a id="UserPermissions" href="#UserPermissions">type UserPermissions struct</a>
+
+```
+searchKey: authz.UserPermissions
+tags: [struct]
+```
+
+```Go
+type UserPermissions struct {
+	UserID    int32           // The internal database ID of a user
+	Perm      Perms           // The permission set
+	Type      PermType        // The type of the permissions
+	IDs       *roaring.Bitmap // The object IDs
+	UpdatedAt time.Time       // The last updated time
+	SyncedAt  time.Time       // The last user-centric synced time
+}
+```
+
+UserPermissions are the permissions of a user to perform an action on the given set of object IDs of the defined type. 
+
+#### <a id="UserPermissions.AuthorizedRepos" href="#UserPermissions.AuthorizedRepos">func (p *UserPermissions) AuthorizedRepos(repos []*types.Repo) []RepoPerms</a>
+
+```
+searchKey: authz.UserPermissions.AuthorizedRepos
+tags: [method]
+```
+
+```Go
+func (p *UserPermissions) AuthorizedRepos(repos []*types.Repo) []RepoPerms
+```
+
+AuthorizedRepos returns the intersection of the given repository IDs with the authorized IDs. 
+
+#### <a id="UserPermissions.Expired" href="#UserPermissions.Expired">func (p *UserPermissions) Expired(ttl time.Duration, now time.Time) bool</a>
+
+```
+searchKey: authz.UserPermissions.Expired
+tags: [method]
+```
+
+```Go
+func (p *UserPermissions) Expired(ttl time.Duration, now time.Time) bool
+```
+
+Expired returns true if these UserPermissions have elapsed the given ttl. 
+
+#### <a id="UserPermissions.TracingFields" href="#UserPermissions.TracingFields">func (p *UserPermissions) TracingFields() []otlog.Field</a>
+
+```
+searchKey: authz.UserPermissions.TracingFields
+tags: [function]
+```
+
+```Go
+func (p *UserPermissions) TracingFields() []otlog.Field
+```
+
+TracingFields returns tracing fields for the opentracing log. 
+
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
+
+### <a id="BenchmarkPermsInclude" href="#BenchmarkPermsInclude">func BenchmarkPermsInclude(b *testing.B)</a>
+
+```
+searchKey: authz.BenchmarkPermsInclude
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkPermsInclude(b *testing.B)
+```
+
+### <a id="BenchmarkPermsString" href="#BenchmarkPermsString">func BenchmarkPermsString(b *testing.B)</a>
+
+```
+searchKey: authz.BenchmarkPermsString
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkPermsString(b *testing.B)
+```
+
+### <a id="GetProviders" href="#GetProviders">func GetProviders() (authzAllowByDefault bool, providers []Provider)</a>
+
+```
+searchKey: authz.GetProviders
+tags: [function]
+```
+
+```Go
+func GetProviders() (authzAllowByDefault bool, providers []Provider)
+```
+
+GetProviders returns the current authz parameters. It is concurrency-safe. 
+
+It blocks until SetProviders has been called at least once. 
 
 ### <a id="IsUnrecognizedScheme" href="#IsUnrecognizedScheme">func IsUnrecognizedScheme(err error) bool</a>
 
 ```
 searchKey: authz.IsUnrecognizedScheme
+tags: [method]
 ```
 
 ```Go
@@ -729,6 +801,7 @@ IsUnrecognizedScheme reports whether err indicates that the request's Authorizat
 
 ```
 searchKey: authz.ParseAuthorizationHeader
+tags: [method]
 ```
 
 ```Go
@@ -747,51 +820,11 @@ Two forms of the Authorization header's "credentials" token are supported (see [
 ```
 The returned values are derived directly from user input and have not been validated or authenticated. 
 
-### <a id="parseHTTPCredentials" href="#parseHTTPCredentials">func parseHTTPCredentials(credentials string) (scheme, token68 string, params map[string]string, err error)</a>
-
-```
-searchKey: authz.parseHTTPCredentials
-tags: [private]
-```
-
-```Go
-func parseHTTPCredentials(credentials string) (scheme, token68 string, params map[string]string, err error)
-```
-
-parseHTTPCredentials parses the "credentials" token as defined in [RFC 7235 Appendix C]([https://tools.ietf.org/html/rfc7235#appendix-C](https://tools.ietf.org/html/rfc7235#appendix-C)). 
-
-### <a id="parseHTTPAuthParams" href="#parseHTTPAuthParams">func parseHTTPAuthParams(value string) (params map[string]string, err error)</a>
-
-```
-searchKey: authz.parseHTTPAuthParams
-tags: [private]
-```
-
-```Go
-func parseHTTPAuthParams(value string) (params map[string]string, err error)
-```
-
-parseHTTPAuthParams extracts key/value pairs from a comma-separated list of auth-params as defined in [RFC 7235, Appendix C]([https://tools.ietf.org/html/rfc7235#appendix-C](https://tools.ietf.org/html/rfc7235#appendix-C)) and returns a map. 
-
-The resulting values are unquoted. The keys are matched case-insensitively, and each key MUST only occur once per challenge (according to [RFC 7235, Section 2.1]([https://tools.ietf.org/html/rfc7235#section-2.1](https://tools.ietf.org/html/rfc7235#section-2.1))). 
-
-### <a id="parseHTTPHeaderList" href="#parseHTTPHeaderList">func parseHTTPHeaderList(value string) []string</a>
-
-```
-searchKey: authz.parseHTTPHeaderList
-tags: [private]
-```
-
-```Go
-func parseHTTPHeaderList(value string) []string
-```
-
-parseHTTPHeaderList parses a "#rule" as defined in [RFC 2068 Section 2.1]([https://tools.ietf.org/html/rfc2068#section-2.1](https://tools.ietf.org/html/rfc2068#section-2.1)). 
-
 ### <a id="SetProviders" href="#SetProviders">func SetProviders(authzAllowByDefault bool, z []Provider)</a>
 
 ```
 searchKey: authz.SetProviders
+tags: [method]
 ```
 
 ```Go
@@ -800,25 +833,11 @@ func SetProviders(authzAllowByDefault bool, z []Provider)
 
 SetProviders sets the current authz parameters. It is concurrency-safe. 
 
-### <a id="GetProviders" href="#GetProviders">func GetProviders() (authzAllowByDefault bool, providers []Provider)</a>
-
-```
-searchKey: authz.GetProviders
-```
-
-```Go
-func GetProviders() (authzAllowByDefault bool, providers []Provider)
-```
-
-GetProviders returns the current authz parameters. It is concurrency-safe. 
-
-It blocks until SetProviders has been called at least once. 
-
 ### <a id="TestParseAuthorizationHeader" href="#TestParseAuthorizationHeader">func TestParseAuthorizationHeader(t *testing.T)</a>
 
 ```
 searchKey: authz.TestParseAuthorizationHeader
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -829,7 +848,7 @@ func TestParseAuthorizationHeader(t *testing.T)
 
 ```
 searchKey: authz.TestParseHTTPCredentials
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -840,65 +859,84 @@ func TestParseHTTPCredentials(t *testing.T)
 
 ```
 searchKey: authz.TestPermsInclude
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestPermsInclude(t *testing.T)
 ```
 
-### <a id="BenchmarkPermsInclude" href="#BenchmarkPermsInclude">func BenchmarkPermsInclude(b *testing.B)</a>
-
-```
-searchKey: authz.BenchmarkPermsInclude
-tags: [private]
-```
-
-```Go
-func BenchmarkPermsInclude(b *testing.B)
-```
-
 ### <a id="TestPermsString" href="#TestPermsString">func TestPermsString(t *testing.T)</a>
 
 ```
 searchKey: authz.TestPermsString
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestPermsString(t *testing.T)
 ```
 
-### <a id="BenchmarkPermsString" href="#BenchmarkPermsString">func BenchmarkPermsString(b *testing.B)</a>
+### <a id="TestUserPermissions_AuthorizedRepos" href="#TestUserPermissions_AuthorizedRepos">func TestUserPermissions_AuthorizedRepos(t *testing.T)</a>
 
 ```
-searchKey: authz.BenchmarkPermsString
-tags: [private]
+searchKey: authz.TestUserPermissions_AuthorizedRepos
+tags: [method private test]
 ```
 
 ```Go
-func BenchmarkPermsString(b *testing.B)
+func TestUserPermissions_AuthorizedRepos(t *testing.T)
 ```
 
 ### <a id="bitmap" href="#bitmap">func bitmap(ids ...uint32) *roaring.Bitmap</a>
 
 ```
 searchKey: authz.bitmap
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func bitmap(ids ...uint32) *roaring.Bitmap
 ```
 
-### <a id="TestUserPermissions_AuthorizedRepos" href="#TestUserPermissions_AuthorizedRepos">func TestUserPermissions_AuthorizedRepos(t *testing.T)</a>
+### <a id="parseHTTPAuthParams" href="#parseHTTPAuthParams">func parseHTTPAuthParams(value string) (params map[string]string, err error)</a>
 
 ```
-searchKey: authz.TestUserPermissions_AuthorizedRepos
-tags: [private]
+searchKey: authz.parseHTTPAuthParams
+tags: [method private]
 ```
 
 ```Go
-func TestUserPermissions_AuthorizedRepos(t *testing.T)
+func parseHTTPAuthParams(value string) (params map[string]string, err error)
 ```
+
+parseHTTPAuthParams extracts key/value pairs from a comma-separated list of auth-params as defined in [RFC 7235, Appendix C]([https://tools.ietf.org/html/rfc7235#appendix-C](https://tools.ietf.org/html/rfc7235#appendix-C)) and returns a map. 
+
+The resulting values are unquoted. The keys are matched case-insensitively, and each key MUST only occur once per challenge (according to [RFC 7235, Section 2.1]([https://tools.ietf.org/html/rfc7235#section-2.1](https://tools.ietf.org/html/rfc7235#section-2.1))). 
+
+### <a id="parseHTTPCredentials" href="#parseHTTPCredentials">func parseHTTPCredentials(credentials string) (scheme, token68 string, params map[string]string, err error)</a>
+
+```
+searchKey: authz.parseHTTPCredentials
+tags: [method private]
+```
+
+```Go
+func parseHTTPCredentials(credentials string) (scheme, token68 string, params map[string]string, err error)
+```
+
+parseHTTPCredentials parses the "credentials" token as defined in [RFC 7235 Appendix C]([https://tools.ietf.org/html/rfc7235#appendix-C](https://tools.ietf.org/html/rfc7235#appendix-C)). 
+
+### <a id="parseHTTPHeaderList" href="#parseHTTPHeaderList">func parseHTTPHeaderList(value string) []string</a>
+
+```
+searchKey: authz.parseHTTPHeaderList
+tags: [method private]
+```
+
+```Go
+func parseHTTPHeaderList(value string) []string
+```
+
+parseHTTPHeaderList parses a "#rule" as defined in [RFC 2068 Section 2.1]([https://tools.ietf.org/html/rfc2068#section-2.1](https://tools.ietf.org/html/rfc2068#section-2.1)). 
 

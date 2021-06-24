@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/src-prometheus",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,10 @@
                 "identifier": "EndpointAlertsStatus",
                 "newPage": false,
                 "searchKey": "srcprometheus.EndpointAlertsStatus",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +69,10 @@
                 "identifier": "EndpointAlertsStatusHistory",
                 "newPage": false,
                 "searchKey": "srcprometheus.EndpointAlertsStatusHistory",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +92,10 @@
                 "identifier": "EndpointConfigSubscriber",
                 "newPage": false,
                 "searchKey": "srcprometheus.EndpointConfigSubscriber",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -108,6 +119,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -127,7 +139,10 @@
                 "identifier": "ErrPrometheusUnavailable",
                 "newPage": false,
                 "searchKey": "srcprometheus.ErrPrometheusUnavailable",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -147,7 +162,10 @@
                 "identifier": "PrometheusURL",
                 "newPage": false,
                 "searchKey": "srcprometheus.PrometheusURL",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -171,6 +189,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -185,12 +204,58 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/src-prometheus#AlertsHistory",
+              "documentation": {
+                "identifier": "AlertsHistory",
+                "newPage": false,
+                "searchKey": "srcprometheus.AlertsHistory",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AlertsHistory struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AlertsHistory struct {\n\tAlerts MonitoringAlerts `json:\"alerts\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/src-prometheus#AlertsStatus",
+              "documentation": {
+                "identifier": "AlertsStatus",
+                "newPage": false,
+                "searchKey": "srcprometheus.AlertsStatus",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AlertsStatus struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AlertsStatus struct {\n\tWarning          int `json:\"warning\"`\n\tSilenced         int `json:\"silenced\"`\n\tCritical         int `json:\"critical\"`\n\tServicesCritical int `json:\"services_critical\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/src-prometheus#Client",
               "documentation": {
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "srcprometheus.Client",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -208,7 +273,9 @@
                       "identifier": "NewClient",
                       "newPage": false,
                       "searchKey": "srcprometheus.NewClient",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -226,12 +293,147 @@
           },
           {
             "node": {
+              "pathID": "/internal/src-prometheus#ConfigStatus",
+              "documentation": {
+                "identifier": "ConfigStatus",
+                "newPage": false,
+                "searchKey": "srcprometheus.ConfigStatus",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ConfigStatus struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ConfigStatus struct {\n\tProblems conf.Problems `json:\"problems\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/src-prometheus#MonitoringAlert",
+              "documentation": {
+                "identifier": "MonitoringAlert",
+                "newPage": false,
+                "searchKey": "srcprometheus.MonitoringAlert",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MonitoringAlert struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MonitoringAlert struct {\n\tTimestampValue   time.Time `json:\"timestamp\"`\n\tNameValue        string    `json:\"name\"`\n\tServiceNameValue string    `json:\"service_name\"`\n\tOwnerValue       string    `json:\"owner\"`\n\t// AverageValue indicates average over past 12 hours, see alertsHistoryQuery and GraphQL schema docs for MonitoringAlert\n\tAverageValue float64 `json:\"average\"`\n}\n```\n\nMonitoringAlert implements the GraphQL type MonitoringAlert. \n\nInternal fields named to accomodate GraphQL getters and setters, see grapqhlbackend.MonitoringAlert \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/src-prometheus#MonitoringAlerts",
+              "documentation": {
+                "identifier": "MonitoringAlerts",
+                "newPage": false,
+                "searchKey": "srcprometheus.MonitoringAlerts",
+                "tags": [
+                  "array",
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MonitoringAlerts []*srcprometheus.MonitoringAlert"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MonitoringAlerts []*MonitoringAlert\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/src-prometheus#MonitoringAlerts.Len",
+                    "documentation": {
+                      "identifier": "MonitoringAlerts.Len",
+                      "newPage": false,
+                      "searchKey": "srcprometheus.MonitoringAlerts.Len",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a MonitoringAlerts) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a MonitoringAlerts) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/src-prometheus#MonitoringAlerts.Less",
+                    "documentation": {
+                      "identifier": "MonitoringAlerts.Less",
+                      "newPage": false,
+                      "searchKey": "srcprometheus.MonitoringAlerts.Less",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a MonitoringAlerts) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a MonitoringAlerts) Less(i, j int) bool\n```\n\nLess determined by timestamp -> serviceName -> alert name \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/src-prometheus#MonitoringAlerts.Swap",
+                    "documentation": {
+                      "identifier": "MonitoringAlerts.Swap",
+                      "newPage": false,
+                      "searchKey": "srcprometheus.MonitoringAlerts.Swap",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a MonitoringAlerts) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a MonitoringAlerts) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/src-prometheus#client",
               "documentation": {
                 "identifier": "client",
                 "newPage": false,
                 "searchKey": "srcprometheus.client",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -246,78 +448,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/src-prometheus#client.newRequest",
-                    "documentation": {
-                      "identifier": "client.newRequest",
-                      "newPage": false,
-                      "searchKey": "srcprometheus.client.newRequest",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *client) newRequest(endpoint string, query url.Values) (*http.Request, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *client) newRequest(endpoint string, query url.Values) (*http.Request, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/src-prometheus#client.do",
-                    "documentation": {
-                      "identifier": "client.do",
-                      "newPage": false,
-                      "searchKey": "srcprometheus.client.do",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *client) do(ctx context.Context, req *http.Request) (*http.Response, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *client) do(ctx context.Context, req *http.Request) (*http.Response, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/src-prometheus#client.GetAlertsStatus",
-                    "documentation": {
-                      "identifier": "client.GetAlertsStatus",
-                      "newPage": false,
-                      "searchKey": "srcprometheus.client.GetAlertsStatus",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *client) GetAlertsStatus(ctx context.Context) (*AlertsStatus, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *client) GetAlertsStatus(ctx context.Context) (*AlertsStatus, error)\n```\n\nGetAlertsStatus retrieves an overview of current alerts \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/src-prometheus#client.GetAlertsHistory",
                     "documentation": {
                       "identifier": "client.GetAlertsHistory",
                       "newPage": false,
                       "searchKey": "srcprometheus.client.GetAlertsHistory",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -334,12 +471,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/src-prometheus#client.GetAlertsStatus",
+                    "documentation": {
+                      "identifier": "client.GetAlertsStatus",
+                      "newPage": false,
+                      "searchKey": "srcprometheus.client.GetAlertsStatus",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *client) GetAlertsStatus(ctx context.Context) (*AlertsStatus, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *client) GetAlertsStatus(ctx context.Context) (*AlertsStatus, error)\n```\n\nGetAlertsStatus retrieves an overview of current alerts \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/src-prometheus#client.GetConfigStatus",
                     "documentation": {
                       "identifier": "client.GetConfigStatus",
                       "newPage": false,
                       "searchKey": "srcprometheus.client.GetConfigStatus",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -350,6 +511,52 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (c *client) GetConfigStatus(ctx context.Context) (*ConfigStatus, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/src-prometheus#client.do",
+                    "documentation": {
+                      "identifier": "client.do",
+                      "newPage": false,
+                      "searchKey": "srcprometheus.client.do",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *client) do(ctx context.Context, req *http.Request) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *client) do(ctx context.Context, req *http.Request) (*http.Response, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/src-prometheus#client.newRequest",
+                    "documentation": {
+                      "identifier": "client.newRequest",
+                      "newPage": false,
+                      "searchKey": "srcprometheus.client.newRequest",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *client) newRequest(endpoint string, query url.Values) (*http.Request, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *client) newRequest(endpoint string, query url.Values) (*http.Request, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -365,6 +572,7 @@
                 "newPage": false,
                 "searchKey": "srcprometheus.roundTripper",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -385,6 +593,7 @@
                       "newPage": false,
                       "searchKey": "srcprometheus.roundTripper.RoundTrip",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -401,167 +610,6 @@
                 }
               ]
             }
-          },
-          {
-            "node": {
-              "pathID": "/internal/src-prometheus#AlertsStatus",
-              "documentation": {
-                "identifier": "AlertsStatus",
-                "newPage": false,
-                "searchKey": "srcprometheus.AlertsStatus",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type AlertsStatus struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype AlertsStatus struct {\n\tWarning          int `json:\"warning\"`\n\tSilenced         int `json:\"silenced\"`\n\tCritical         int `json:\"critical\"`\n\tServicesCritical int `json:\"services_critical\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/src-prometheus#MonitoringAlert",
-              "documentation": {
-                "identifier": "MonitoringAlert",
-                "newPage": false,
-                "searchKey": "srcprometheus.MonitoringAlert",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type MonitoringAlert struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype MonitoringAlert struct {\n\tTimestampValue   time.Time `json:\"timestamp\"`\n\tNameValue        string    `json:\"name\"`\n\tServiceNameValue string    `json:\"service_name\"`\n\tOwnerValue       string    `json:\"owner\"`\n\t// AverageValue indicates average over past 12 hours, see alertsHistoryQuery and GraphQL schema docs for MonitoringAlert\n\tAverageValue float64 `json:\"average\"`\n}\n```\n\nMonitoringAlert implements the GraphQL type MonitoringAlert. \n\nInternal fields named to accomodate GraphQL getters and setters, see grapqhlbackend.MonitoringAlert \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/src-prometheus#MonitoringAlerts",
-              "documentation": {
-                "identifier": "MonitoringAlerts",
-                "newPage": false,
-                "searchKey": "srcprometheus.MonitoringAlerts",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type MonitoringAlerts []*srcprometheus.MonitoringAlert"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype MonitoringAlerts []*MonitoringAlert\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/src-prometheus#MonitoringAlerts.Less",
-                    "documentation": {
-                      "identifier": "MonitoringAlerts.Less",
-                      "newPage": false,
-                      "searchKey": "srcprometheus.MonitoringAlerts.Less",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (a MonitoringAlerts) Less(i, j int) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (a MonitoringAlerts) Less(i, j int) bool\n```\n\nLess determined by timestamp -> serviceName -> alert name \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/src-prometheus#MonitoringAlerts.Swap",
-                    "documentation": {
-                      "identifier": "MonitoringAlerts.Swap",
-                      "newPage": false,
-                      "searchKey": "srcprometheus.MonitoringAlerts.Swap",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (a MonitoringAlerts) Swap(i, j int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (a MonitoringAlerts) Swap(i, j int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/src-prometheus#MonitoringAlerts.Len",
-                    "documentation": {
-                      "identifier": "MonitoringAlerts.Len",
-                      "newPage": false,
-                      "searchKey": "srcprometheus.MonitoringAlerts.Len",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (a MonitoringAlerts) Len() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (a MonitoringAlerts) Len() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/src-prometheus#AlertsHistory",
-              "documentation": {
-                "identifier": "AlertsHistory",
-                "newPage": false,
-                "searchKey": "srcprometheus.AlertsHistory",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type AlertsHistory struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype AlertsHistory struct {\n\tAlerts MonitoringAlerts `json:\"alerts\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/src-prometheus#ConfigStatus",
-              "documentation": {
-                "identifier": "ConfigStatus",
-                "newPage": false,
-                "searchKey": "srcprometheus.ConfigStatus",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ConfigStatus struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ConfigStatus struct {\n\tProblems conf.Problems `json:\"problems\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
           }
         ]
       }
@@ -574,6 +622,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -594,7 +643,9 @@
                 "newPage": false,
                 "searchKey": "srcprometheus.Test_roundTripper_PrometheusUnavailable",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {

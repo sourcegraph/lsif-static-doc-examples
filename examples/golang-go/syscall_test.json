@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "syscall_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/syscall_test#MNT_WAIT",
-              "documentation": {
-                "identifier": "MNT_WAIT",
-                "newPage": false,
-                "searchKey": "syscall_test.MNT_WAIT",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const MNT_WAIT"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst MNT_WAIT = 1\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/syscall_test#MNT_NOWAIT",
               "documentation": {
                 "identifier": "MNT_NOWAIT",
                 "newPage": false,
                 "searchKey": "syscall_test.MNT_NOWAIT",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -77,6 +59,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst MNT_NOWAIT = 2\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/syscall_test#MNT_WAIT",
+              "documentation": {
+                "identifier": "MNT_WAIT",
+                "newPage": false,
+                "searchKey": "syscall_test.MNT_WAIT",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MNT_WAIT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MNT_WAIT = 1\n```\n\n"
               },
               "children": null
             }
@@ -92,6 +98,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -112,6 +119,7 @@
                 "newPage": false,
                 "searchKey": "syscall_test.command",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -132,6 +140,7 @@
                       "newPage": false,
                       "searchKey": "syscall_test.create",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -154,6 +163,7 @@
                       "newPage": false,
                       "searchKey": "syscall_test.command.Info",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -176,6 +186,7 @@
                       "newPage": false,
                       "searchKey": "syscall_test.command.Start",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -198,6 +209,7 @@
                       "newPage": false,
                       "searchKey": "syscall_test.command.Stop",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -226,6 +238,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -246,7 +259,9 @@
                 "newPage": false,
                 "searchKey": "syscall_test.TestDirent",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -268,7 +283,9 @@
                 "newPage": false,
                 "searchKey": "syscall_test.TestDirentRepeat",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -284,88 +301,168 @@
           },
           {
             "node": {
-              "pathID": "/syscall_test#parent",
+              "pathID": "/syscall_test#TestENFILETemporary",
               "documentation": {
-                "identifier": "parent",
+                "identifier": "TestENFILETemporary",
                 "newPage": false,
-                "searchKey": "syscall_test.parent",
+                "searchKey": "syscall_test.TestENFILETemporary",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func parent() (pid, pgrp int)"
+                "value": "func TestENFILETemporary(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc parent() (pid, pgrp int)\n```\n\n"
+                "value": "```Go\nfunc TestENFILETemporary(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/syscall_test#TestZeroSysProcAttr",
+              "pathID": "/syscall_test#TestEnv",
               "documentation": {
-                "identifier": "TestZeroSysProcAttr",
+                "identifier": "TestEnv",
                 "newPage": false,
-                "searchKey": "syscall_test.TestZeroSysProcAttr",
+                "searchKey": "syscall_test.TestEnv",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestZeroSysProcAttr(t *testing.T)"
+                "value": "func TestEnv(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestZeroSysProcAttr(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestEnv(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/syscall_test#TestSetpgid",
+              "pathID": "/syscall_test#TestExec",
               "documentation": {
-                "identifier": "TestSetpgid",
+                "identifier": "TestExec",
                 "newPage": false,
-                "searchKey": "syscall_test.TestSetpgid",
+                "searchKey": "syscall_test.TestExec",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestSetpgid(t *testing.T)"
+                "value": "func TestExec(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestSetpgid(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestExec(t *testing.T)\n```\n\nTestExec is for issue #41702. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/syscall_test#TestPgid",
+              "pathID": "/syscall_test#TestExecErrPermutedFds",
               "documentation": {
-                "identifier": "TestPgid",
+                "identifier": "TestExecErrPermutedFds",
                 "newPage": false,
-                "searchKey": "syscall_test.TestPgid",
+                "searchKey": "syscall_test.TestExecErrPermutedFds",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestPgid(t *testing.T)"
+                "value": "func TestExecErrPermutedFds(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestPgid(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestExecErrPermutedFds(t *testing.T)\n```\n\nCheck that permuting child process fds doesn't interfere with reporting of fork/exec status. See Issue 14979. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/syscall_test#TestExecHelper",
+              "documentation": {
+                "identifier": "TestExecHelper",
+                "newPage": false,
+                "searchKey": "syscall_test.TestExecHelper",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExecHelper(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExecHelper(t *testing.T)\n```\n\nTestExecHelper is used by TestExec. It does nothing by itself. In testing on macOS 10.14, this used to fail with \"signal: illegal instruction\" more than half the time. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/syscall_test#TestExecPtrace",
+              "documentation": {
+                "identifier": "TestExecPtrace",
+                "newPage": false,
+                "searchKey": "syscall_test.TestExecPtrace",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExecPtrace(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExecPtrace(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/syscall_test#TestFcntlFlock",
+              "documentation": {
+                "identifier": "TestFcntlFlock",
+                "newPage": false,
+                "searchKey": "syscall_test.TestFcntlFlock",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFcntlFlock(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFcntlFlock(t *testing.T)\n```\n\nTestFcntlFlock tests whether the file locking structure matches the calling convention of each kernel. On some Linux systems, glibc uses another set of values for the commands and translates them to the correct value that the kernel expects just before the actual fcntl syscall. As Go uses raw syscalls directly, it must use the real value, not the glibc value. Thus this test also verifies that the Flock_t structure can be roundtripped with F_SETLK and F_GETLK. \n\n"
               },
               "children": null
             }
@@ -378,7 +475,9 @@
                 "newPage": false,
                 "searchKey": "syscall_test.TestForeground",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -400,7 +499,9 @@
                 "newPage": false,
                 "searchKey": "syscall_test.TestForegroundSignal",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -416,79 +517,15 @@
           },
           {
             "node": {
-              "pathID": "/syscall_test#TestInvalidExec",
-              "documentation": {
-                "identifier": "TestInvalidExec",
-                "newPage": false,
-                "searchKey": "syscall_test.TestInvalidExec",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestInvalidExec(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestInvalidExec(t *testing.T)\n```\n\nTest a couple of cases that SysProcAttr can't handle. Issue 29458. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/syscall_test#TestExec",
-              "documentation": {
-                "identifier": "TestExec",
-                "newPage": false,
-                "searchKey": "syscall_test.TestExec",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestExec(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestExec(t *testing.T)\n```\n\nTestExec is for issue #41702. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/syscall_test#TestExecHelper",
-              "documentation": {
-                "identifier": "TestExecHelper",
-                "newPage": false,
-                "searchKey": "syscall_test.TestExecHelper",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestExecHelper(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestExecHelper(t *testing.T)\n```\n\nTestExecHelper is used by TestExec. It does nothing by itself. In testing on macOS 10.14, this used to fail with \"signal: illegal instruction\" more than half the time. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/syscall_test#TestGetdirentries",
               "documentation": {
                 "identifier": "TestGetdirentries",
                 "newPage": false,
                 "searchKey": "syscall_test.TestGetdirentries",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -504,57 +541,15 @@
           },
           {
             "node": {
-              "pathID": "/syscall_test#testGetdirentries",
-              "documentation": {
-                "identifier": "testGetdirentries",
-                "newPage": false,
-                "searchKey": "syscall_test.testGetdirentries",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testGetdirentries(t *testing.T, count int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testGetdirentries(t *testing.T, count int)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/syscall_test#TestMmap",
-              "documentation": {
-                "identifier": "TestMmap",
-                "newPage": false,
-                "searchKey": "syscall_test.TestMmap",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMmap(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMmap(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/syscall_test#TestGetfsstat",
               "documentation": {
                 "identifier": "TestGetfsstat",
                 "newPage": false,
                 "searchKey": "syscall_test.TestGetfsstat",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -570,101 +565,15 @@
           },
           {
             "node": {
-              "pathID": "/syscall_test#TestExecPtrace",
-              "documentation": {
-                "identifier": "TestExecPtrace",
-                "newPage": false,
-                "searchKey": "syscall_test.TestExecPtrace",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestExecPtrace(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestExecPtrace(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/syscall_test#testSetGetenv",
-              "documentation": {
-                "identifier": "testSetGetenv",
-                "newPage": false,
-                "searchKey": "syscall_test.testSetGetenv",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testSetGetenv(t *testing.T, key, value string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testSetGetenv(t *testing.T, key, value string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/syscall_test#TestEnv",
-              "documentation": {
-                "identifier": "TestEnv",
-                "newPage": false,
-                "searchKey": "syscall_test.TestEnv",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEnv(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEnv(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/syscall_test#TestExecErrPermutedFds",
-              "documentation": {
-                "identifier": "TestExecErrPermutedFds",
-                "newPage": false,
-                "searchKey": "syscall_test.TestExecErrPermutedFds",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestExecErrPermutedFds(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestExecErrPermutedFds(t *testing.T)\n```\n\nCheck that permuting child process fds doesn't interfere with reporting of fork/exec status. See Issue 14979. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/syscall_test#TestGettimeofday",
               "documentation": {
                 "identifier": "TestGettimeofday",
                 "newPage": false,
                 "searchKey": "syscall_test.TestGettimeofday",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -680,22 +589,48 @@
           },
           {
             "node": {
-              "pathID": "/syscall_test#TestFcntlFlock",
+              "pathID": "/syscall_test#TestInvalidExec",
               "documentation": {
-                "identifier": "TestFcntlFlock",
+                "identifier": "TestInvalidExec",
                 "newPage": false,
-                "searchKey": "syscall_test.TestFcntlFlock",
+                "searchKey": "syscall_test.TestInvalidExec",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestFcntlFlock(t *testing.T)"
+                "value": "func TestInvalidExec(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestFcntlFlock(t *testing.T)\n```\n\nTestFcntlFlock tests whether the file locking structure matches the calling convention of each kernel. On some Linux systems, glibc uses another set of values for the commands and translates them to the correct value that the kernel expects just before the actual fcntl syscall. As Go uses raw syscalls directly, it must use the real value, not the glibc value. Thus this test also verifies that the Flock_t structure can be roundtripped with F_SETLK and F_GETLK. \n\n"
+                "value": "```Go\nfunc TestInvalidExec(t *testing.T)\n```\n\nTest a couple of cases that SysProcAttr can't handle. Issue 29458. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/syscall_test#TestMmap",
+              "documentation": {
+                "identifier": "TestMmap",
+                "newPage": false,
+                "searchKey": "syscall_test.TestMmap",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMmap(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMmap(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -708,7 +643,9 @@
                 "newPage": false,
                 "searchKey": "syscall_test.TestPassFD",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -724,44 +661,24 @@
           },
           {
             "node": {
-              "pathID": "/syscall_test#passFDChild",
+              "pathID": "/syscall_test#TestPgid",
               "documentation": {
-                "identifier": "passFDChild",
+                "identifier": "TestPgid",
                 "newPage": false,
-                "searchKey": "syscall_test.passFDChild",
+                "searchKey": "syscall_test.TestPgid",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func passFDChild()"
+                "value": "func TestPgid(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc passFDChild()\n```\n\npassFDChild is the child process used by TestPassFD. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/syscall_test#TestUnixRightsRoundtrip",
-              "documentation": {
-                "identifier": "TestUnixRightsRoundtrip",
-                "newPage": false,
-                "searchKey": "syscall_test.TestUnixRightsRoundtrip",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUnixRightsRoundtrip(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUnixRightsRoundtrip(t *testing.T)\n```\n\nTestUnixRightsRoundtrip tests that UnixRights, ParseSocketControlMessage, and ParseUnixRights are able to successfully round-trip lists of file descriptors. \n\n"
+                "value": "```Go\nfunc TestPgid(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -774,7 +691,9 @@
                 "newPage": false,
                 "searchKey": "syscall_test.TestRlimit",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -796,7 +715,9 @@
                 "newPage": false,
                 "searchKey": "syscall_test.TestSeekFailure",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -812,13 +733,39 @@
           },
           {
             "node": {
+              "pathID": "/syscall_test#TestSetpgid",
+              "documentation": {
+                "identifier": "TestSetpgid",
+                "newPage": false,
+                "searchKey": "syscall_test.TestSetpgid",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSetpgid(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSetpgid(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/syscall_test#TestSetsockoptString",
               "documentation": {
                 "identifier": "TestSetsockoptString",
                 "newPage": false,
                 "searchKey": "syscall_test.TestSetsockoptString",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -834,22 +781,140 @@
           },
           {
             "node": {
-              "pathID": "/syscall_test#TestENFILETemporary",
+              "pathID": "/syscall_test#TestUnixRightsRoundtrip",
               "documentation": {
-                "identifier": "TestENFILETemporary",
+                "identifier": "TestUnixRightsRoundtrip",
                 "newPage": false,
-                "searchKey": "syscall_test.TestENFILETemporary",
+                "searchKey": "syscall_test.TestUnixRightsRoundtrip",
                 "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnixRightsRoundtrip(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnixRightsRoundtrip(t *testing.T)\n```\n\nTestUnixRightsRoundtrip tests that UnixRights, ParseSocketControlMessage, and ParseUnixRights are able to successfully round-trip lists of file descriptors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/syscall_test#TestZeroSysProcAttr",
+              "documentation": {
+                "identifier": "TestZeroSysProcAttr",
+                "newPage": false,
+                "searchKey": "syscall_test.TestZeroSysProcAttr",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestZeroSysProcAttr(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestZeroSysProcAttr(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/syscall_test#parent",
+              "documentation": {
+                "identifier": "parent",
+                "newPage": false,
+                "searchKey": "syscall_test.parent",
+                "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestENFILETemporary(t *testing.T)"
+                "value": "func parent() (pid, pgrp int)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestENFILETemporary(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc parent() (pid, pgrp int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/syscall_test#passFDChild",
+              "documentation": {
+                "identifier": "passFDChild",
+                "newPage": false,
+                "searchKey": "syscall_test.passFDChild",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func passFDChild()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc passFDChild()\n```\n\npassFDChild is the child process used by TestPassFD. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/syscall_test#testGetdirentries",
+              "documentation": {
+                "identifier": "testGetdirentries",
+                "newPage": false,
+                "searchKey": "syscall_test.testGetdirentries",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testGetdirentries(t *testing.T, count int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testGetdirentries(t *testing.T, count int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/syscall_test#testSetGetenv",
+              "documentation": {
+                "identifier": "testSetGetenv",
+                "newPage": false,
+                "searchKey": "syscall_test.testSetGetenv",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testSetGetenv(t *testing.T, key, value string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testSetGetenv(t *testing.T, key, value string)\n```\n\n"
               },
               "children": null
             }

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/internal/batches/rewirer",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,9 @@
                 "identifier": "ChangesetRewirer",
                 "newPage": false,
                 "searchKey": "rewirer.ChangesetRewirer",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +66,9 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "rewirer.New",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,7 +88,9 @@
                       "identifier": "ChangesetRewirer.Rewire",
                       "newPage": false,
                       "searchKey": "rewirer.ChangesetRewirer.Rewire",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -97,78 +105,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/batches/rewirer#ChangesetRewirer.createChangesetForSpec",
-                    "documentation": {
-                      "identifier": "ChangesetRewirer.createChangesetForSpec",
-                      "newPage": false,
-                      "searchKey": "rewirer.ChangesetRewirer.createChangesetForSpec",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *ChangesetRewirer) createChangesetForSpec(repo *types.Repo, spec *btypes.ChangesetSpec) *btypes.Changeset"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *ChangesetRewirer) createChangesetForSpec(repo *types.Repo, spec *btypes.ChangesetSpec) *btypes.Changeset\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/rewirer#ChangesetRewirer.updateChangesetToNewSpec",
-                    "documentation": {
-                      "identifier": "ChangesetRewirer.updateChangesetToNewSpec",
-                      "newPage": false,
-                      "searchKey": "rewirer.ChangesetRewirer.updateChangesetToNewSpec",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *ChangesetRewirer) updateChangesetToNewSpec(c *btypes.Changeset, spec *btypes.ChangesetSpec)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *ChangesetRewirer) updateChangesetToNewSpec(c *btypes.Changeset, spec *btypes.ChangesetSpec)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/rewirer#ChangesetRewirer.createTrackingChangeset",
-                    "documentation": {
-                      "identifier": "ChangesetRewirer.createTrackingChangeset",
-                      "newPage": false,
-                      "searchKey": "rewirer.ChangesetRewirer.createTrackingChangeset",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *ChangesetRewirer) createTrackingChangeset(repo *types.Repo, externalID string) *btypes.Changeset"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *ChangesetRewirer) createTrackingChangeset(repo *types.Repo, externalID string) *btypes.Changeset\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/internal/batches/rewirer#ChangesetRewirer.attachTrackingChangeset",
                     "documentation": {
                       "identifier": "ChangesetRewirer.attachTrackingChangeset",
                       "newPage": false,
                       "searchKey": "rewirer.ChangesetRewirer.attachTrackingChangeset",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -191,6 +134,7 @@
                       "newPage": false,
                       "searchKey": "rewirer.ChangesetRewirer.closeChangeset",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -201,6 +145,75 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (r *ChangesetRewirer) closeChangeset(changeset *btypes.Changeset)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/rewirer#ChangesetRewirer.createChangesetForSpec",
+                    "documentation": {
+                      "identifier": "ChangesetRewirer.createChangesetForSpec",
+                      "newPage": false,
+                      "searchKey": "rewirer.ChangesetRewirer.createChangesetForSpec",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *ChangesetRewirer) createChangesetForSpec(repo *types.Repo, spec *btypes.ChangesetSpec) *btypes.Changeset"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *ChangesetRewirer) createChangesetForSpec(repo *types.Repo, spec *btypes.ChangesetSpec) *btypes.Changeset\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/rewirer#ChangesetRewirer.createTrackingChangeset",
+                    "documentation": {
+                      "identifier": "ChangesetRewirer.createTrackingChangeset",
+                      "newPage": false,
+                      "searchKey": "rewirer.ChangesetRewirer.createTrackingChangeset",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *ChangesetRewirer) createTrackingChangeset(repo *types.Repo, externalID string) *btypes.Changeset"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *ChangesetRewirer) createTrackingChangeset(repo *types.Repo, externalID string) *btypes.Changeset\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/rewirer#ChangesetRewirer.updateChangesetToNewSpec",
+                    "documentation": {
+                      "identifier": "ChangesetRewirer.updateChangesetToNewSpec",
+                      "newPage": false,
+                      "searchKey": "rewirer.ChangesetRewirer.updateChangesetToNewSpec",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *ChangesetRewirer) updateChangesetToNewSpec(c *btypes.Changeset, spec *btypes.ChangesetSpec)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *ChangesetRewirer) updateChangesetToNewSpec(c *btypes.Changeset, spec *btypes.ChangesetSpec)\n```\n\n"
                     },
                     "children": null
                   }
@@ -215,7 +228,9 @@
                 "identifier": "ErrRepoNotSupported",
                 "newPage": false,
                 "searchKey": "rewirer.ErrRepoNotSupported",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -233,7 +248,9 @@
                       "identifier": "ErrRepoNotSupported.Error",
                       "newPage": false,
                       "searchKey": "rewirer.ErrRepoNotSupported.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -260,6 +277,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -274,35 +292,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/rewirer#checkRepoSupported",
-              "documentation": {
-                "identifier": "checkRepoSupported",
-                "newPage": false,
-                "searchKey": "rewirer.checkRepoSupported",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func checkRepoSupported(repo *types.Repo) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc checkRepoSupported(repo *types.Repo) error\n```\n\ncheckRepoSupported checks whether the given repository is supported by batch changes and if not it returns an error. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/batches/rewirer#TestRewirer_Rewire",
               "documentation": {
                 "identifier": "TestRewirer_Rewire",
                 "newPage": false,
                 "searchKey": "rewirer.TestRewirer_Rewire",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -324,6 +322,7 @@
                 "newPage": false,
                 "searchKey": "rewirer.assertResetReconcilerState",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -334,6 +333,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc assertResetReconcilerState(a ct.ChangesetAssertions) ct.ChangesetAssertions\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/rewirer#checkRepoSupported",
+              "documentation": {
+                "identifier": "checkRepoSupported",
+                "newPage": false,
+                "searchKey": "rewirer.checkRepoSupported",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkRepoSupported(repo *types.Repo) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkRepoSupported(repo *types.Repo) error\n```\n\ncheckRepoSupported checks whether the given repository is supported by batch changes and if not it returns an error. \n\n"
               },
               "children": null
             }

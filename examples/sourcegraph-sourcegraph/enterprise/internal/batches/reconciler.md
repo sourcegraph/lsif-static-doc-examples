@@ -6,95 +6,95 @@
     * [var internalClient](#internalClient)
     * [var operationPrecedence](#operationPrecedence)
 * [Types](#type)
-    * [type executor struct](#executor)
-        * [func (e *executor) Run(ctx context.Context, plan *Plan) (err error)](#executor.Run)
-        * [func (e *executor) pushChangesetPatch(ctx context.Context) (err error)](#executor.pushChangesetPatch)
-        * [func (e *executor) publishChangeset(ctx context.Context, asDraft bool) (err error)](#executor.publishChangeset)
-        * [func (e *executor) syncChangeset(ctx context.Context) error](#executor.syncChangeset)
-        * [func (e *executor) importChangeset(ctx context.Context) error](#executor.importChangeset)
-        * [func (e *executor) loadChangeset(ctx context.Context) error](#executor.loadChangeset)
-        * [func (e *executor) updateChangeset(ctx context.Context) (err error)](#executor.updateChangeset)
-        * [func (e *executor) reopenChangeset(ctx context.Context) (err error)](#executor.reopenChangeset)
-        * [func (e *executor) detachChangeset()](#executor.detachChangeset)
-        * [func (e *executor) archiveChangeset()](#executor.archiveChangeset)
-        * [func (e *executor) closeChangeset(ctx context.Context) (err error)](#executor.closeChangeset)
-        * [func (e *executor) undraftChangeset(ctx context.Context) (err error)](#executor.undraftChangeset)
-        * [func (e *executor) sleep()](#executor.sleep)
-        * [func (e *executor) pushCommit(ctx context.Context, opts protocol.CreateCommitFromPatchRequest) error](#executor.pushCommit)
-    * [type getBatchChanger interface](#getBatchChanger)
-    * [type getNamespacer interface](#getNamespacer)
-    * [type errPublishSameBranch struct{}](#errPublishSameBranch)
-        * [func (e errPublishSameBranch) Error() string](#errPublishSameBranch.Error)
-        * [func (e errPublishSameBranch) NonRetryable() bool](#errPublishSameBranch.NonRetryable)
-    * [type errNoSSHCredential struct{}](#errNoSSHCredential)
-        * [func (e errNoSSHCredential) Error() string](#errNoSSHCredential.Error)
-        * [func (e errNoSSHCredential) NonRetryable() bool](#errNoSSHCredential.NonRetryable)
-    * [type errMissingCredentials struct](#errMissingCredentials)
-        * [func (e errMissingCredentials) Error() string](#errMissingCredentials.Error)
-        * [func (e errMissingCredentials) NonRetryable() bool](#errMissingCredentials.NonRetryable)
-        * [func (e errMissingCredentials) Is(target error) bool](#errMissingCredentials.Is)
-    * [type errNoPushCredentials struct](#errNoPushCredentials)
-        * [func (e errNoPushCredentials) Error() string](#errNoPushCredentials.Error)
-        * [func (e errNoPushCredentials) NonRetryable() bool](#errNoPushCredentials.NonRetryable)
+    * [type ChangesetSpecDelta struct](#ChangesetSpecDelta)
+        * [func compareChangesetSpecs(previous, current *btypes.ChangesetSpec) (*ChangesetSpecDelta, error)](#compareChangesetSpecs)
+        * [func (d *ChangesetSpecDelta) AttributesChanged() bool](#ChangesetSpecDelta.AttributesChanged)
+        * [func (d *ChangesetSpecDelta) NeedCodeHostUpdate() bool](#ChangesetSpecDelta.NeedCodeHostUpdate)
+        * [func (d *ChangesetSpecDelta) NeedCommitUpdate() bool](#ChangesetSpecDelta.NeedCommitUpdate)
+        * [func (d *ChangesetSpecDelta) String() string](#ChangesetSpecDelta.String)
+    * [type FakeStore struct](#FakeStore)
+        * [func (fs *FakeStore) GetBatchChange(ctx context.Context, opts store.GetBatchChangeOpts) (*btypes.BatchChange, error)](#FakeStore.GetBatchChange)
+    * [type GitserverClient interface](#GitserverClient)
     * [type Operations []types.ReconcilerOperation](#Operations)
-        * [func (ops Operations) IsNone() bool](#Operations.IsNone)
         * [func (ops Operations) Equal(b Operations) bool](#Operations.Equal)
-        * [func (ops Operations) String() string](#Operations.String)
         * [func (ops Operations) ExecutionOrder() []btypes.ReconcilerOperation](#Operations.ExecutionOrder)
+        * [func (ops Operations) IsNone() bool](#Operations.IsNone)
+        * [func (ops Operations) String() string](#Operations.String)
     * [type Plan struct](#Plan)
         * [func DeterminePlan(previousSpec, currentSpec *btypes.ChangesetSpec, ch *btypes.Changeset) (*Plan, error)](#DeterminePlan)
         * [func (p *Plan) AddOp(op btypes.ReconcilerOperation)](#Plan.AddOp)
         * [func (p *Plan) SetOp(op btypes.ReconcilerOperation)](#Plan.SetOp)
-    * [type ChangesetSpecDelta struct](#ChangesetSpecDelta)
-        * [func compareChangesetSpecs(previous, current *btypes.ChangesetSpec) (*ChangesetSpecDelta, error)](#compareChangesetSpecs)
-        * [func (d *ChangesetSpecDelta) String() string](#ChangesetSpecDelta.String)
-        * [func (d *ChangesetSpecDelta) NeedCommitUpdate() bool](#ChangesetSpecDelta.NeedCommitUpdate)
-        * [func (d *ChangesetSpecDelta) NeedCodeHostUpdate() bool](#ChangesetSpecDelta.NeedCodeHostUpdate)
-        * [func (d *ChangesetSpecDelta) AttributesChanged() bool](#ChangesetSpecDelta.AttributesChanged)
-    * [type GitserverClient interface](#GitserverClient)
     * [type Reconciler struct](#Reconciler)
         * [func New(gitClient GitserverClient, sourcer sources.Sourcer, store *store.Store) *Reconciler](#New)
         * [func (r *Reconciler) HandlerFunc() dbworker.HandlerFunc](#Reconciler.HandlerFunc)
         * [func (r *Reconciler) process(ctx context.Context, tx *store.Store, ch *btypes.Changeset) error](#Reconciler.process)
+    * [type errMissingCredentials struct](#errMissingCredentials)
+        * [func (e errMissingCredentials) Error() string](#errMissingCredentials.Error)
+        * [func (e errMissingCredentials) Is(target error) bool](#errMissingCredentials.Is)
+        * [func (e errMissingCredentials) NonRetryable() bool](#errMissingCredentials.NonRetryable)
+    * [type errNoPushCredentials struct](#errNoPushCredentials)
+        * [func (e errNoPushCredentials) Error() string](#errNoPushCredentials.Error)
+        * [func (e errNoPushCredentials) NonRetryable() bool](#errNoPushCredentials.NonRetryable)
+    * [type errNoSSHCredential struct{}](#errNoSSHCredential)
+        * [func (e errNoSSHCredential) Error() string](#errNoSSHCredential.Error)
+        * [func (e errNoSSHCredential) NonRetryable() bool](#errNoSSHCredential.NonRetryable)
+    * [type errPublishSameBranch struct{}](#errPublishSameBranch)
+        * [func (e errPublishSameBranch) Error() string](#errPublishSameBranch.Error)
+        * [func (e errPublishSameBranch) NonRetryable() bool](#errPublishSameBranch.NonRetryable)
+    * [type executor struct](#executor)
+        * [func (e *executor) Run(ctx context.Context, plan *Plan) (err error)](#executor.Run)
+        * [func (e *executor) archiveChangeset()](#executor.archiveChangeset)
+        * [func (e *executor) closeChangeset(ctx context.Context) (err error)](#executor.closeChangeset)
+        * [func (e *executor) detachChangeset()](#executor.detachChangeset)
+        * [func (e *executor) importChangeset(ctx context.Context) error](#executor.importChangeset)
+        * [func (e *executor) loadChangeset(ctx context.Context) error](#executor.loadChangeset)
+        * [func (e *executor) publishChangeset(ctx context.Context, asDraft bool) (err error)](#executor.publishChangeset)
+        * [func (e *executor) pushChangesetPatch(ctx context.Context) (err error)](#executor.pushChangesetPatch)
+        * [func (e *executor) pushCommit(ctx context.Context, opts protocol.CreateCommitFromPatchRequest) error](#executor.pushCommit)
+        * [func (e *executor) reopenChangeset(ctx context.Context) (err error)](#executor.reopenChangeset)
+        * [func (e *executor) sleep()](#executor.sleep)
+        * [func (e *executor) syncChangeset(ctx context.Context) error](#executor.syncChangeset)
+        * [func (e *executor) undraftChangeset(ctx context.Context) (err error)](#executor.undraftChangeset)
+        * [func (e *executor) updateChangeset(ctx context.Context) (err error)](#executor.updateChangeset)
+    * [type getBatchChanger interface](#getBatchChanger)
+    * [type getNamespacer interface](#getNamespacer)
     * [type mockInternalClient struct](#mockInternalClient)
         * [func (c *mockInternalClient) ExternalURL(ctx context.Context) (string, error)](#mockInternalClient.ExternalURL)
     * [type mockMissingErr struct](#mockMissingErr)
         * [func (e mockMissingErr) Error() string](#mockMissingErr.Error)
-    * [type FakeStore struct](#FakeStore)
-        * [func (fs *FakeStore) GetBatchChange(ctx context.Context, opts store.GetBatchChangeOpts) (*btypes.BatchChange, error)](#FakeStore.GetBatchChange)
 * [Functions](#func)
-    * [func executePlan(ctx context.Context, gitserverClient GitserverClient, sourcer sources.Sourcer, noSleepBeforeSync bool, tx *store.Store, plan *Plan) (err error)](#executePlan)
-    * [func loadChangesetSource(ctx context.Context, s *store.Store, sourcer sources.Sourcer, ch *btypes.Changeset, repo *types.Repo) (sources.ChangesetSource, error)](#loadChangesetSource)
-    * [func buildCommitOpts(repo *types.Repo, spec *btypes.ChangesetSpec, pushOpts *protocol.PushConfig) (opts protocol.CreateCommitFromPatchRequest, err error)](#buildCommitOpts)
-    * [func loadBatchChange(ctx context.Context, tx getBatchChanger, id int64) (*btypes.BatchChange, error)](#loadBatchChange)
-    * [func decorateChangesetBody(ctx context.Context, tx getBatchChanger, nsStore getNamespacer, cs *sources.Changeset) error](#decorateChangesetBody)
-    * [func batchChangeURL(ctx context.Context, ns *database.Namespace, c *btypes.BatchChange) (string, error)](#batchChangeURL)
-    * [func namespaceURL(ns *database.Namespace) string](#namespaceURL)
-    * [func reopenAfterDetach(ch *btypes.Changeset) bool](#reopenAfterDetach)
-    * [func loadChangesetSpecs(ctx context.Context, tx *store.Store, ch *btypes.Changeset) (prev, curr *btypes.ChangesetSpec, err error)](#loadChangesetSpecs)
+    * [func TestBatchChangeURL(t *testing.T)](#TestBatchChangeURL)
+    * [func TestDecorateChangesetBody(t *testing.T)](#TestDecorateChangesetBody)
+    * [func TestDetermineReconcilerPlan(t *testing.T)](#TestDetermineReconcilerPlan)
     * [func TestExecutor_ExecutePlan(t *testing.T)](#TestExecutor_ExecutePlan)
     * [func TestExecutor_ExecutePlan_PublishedChangesetDuplicateBranch(t *testing.T)](#TestExecutor_ExecutePlan_PublishedChangesetDuplicateBranch)
-    * [func TestLoadChangesetSource(t *testing.T)](#TestLoadChangesetSource)
     * [func TestExecutor_UserCredentialsForGitserver(t *testing.T)](#TestExecutor_UserCredentialsForGitserver)
-    * [func TestDecorateChangesetBody(t *testing.T)](#TestDecorateChangesetBody)
-    * [func TestBatchChangeURL(t *testing.T)](#TestBatchChangeURL)
+    * [func TestLoadChangesetSource(t *testing.T)](#TestLoadChangesetSource)
     * [func TestNamespaceURL(t *testing.T)](#TestNamespaceURL)
-    * [func buildGithubPR(now time.Time, externalState btypes.ChangesetExternalState) *github.PullRequest](#buildGithubPR)
-    * [func TestDetermineReconcilerPlan(t *testing.T)](#TestDetermineReconcilerPlan)
     * [func TestReconcilerProcess_IntegrationTest(t *testing.T)](#TestReconcilerProcess_IntegrationTest)
+    * [func batchChangeURL(ctx context.Context, ns *database.Namespace, c *btypes.BatchChange) (string, error)](#batchChangeURL)
+    * [func buildCommitOpts(repo *types.Repo, spec *btypes.ChangesetSpec, pushOpts *protocol.PushConfig) (opts protocol.CreateCommitFromPatchRequest, err error)](#buildCommitOpts)
+    * [func buildGithubPR(now time.Time, externalState btypes.ChangesetExternalState) *github.PullRequest](#buildGithubPR)
+    * [func decorateChangesetBody(ctx context.Context, tx getBatchChanger, nsStore getNamespacer, cs *sources.Changeset) error](#decorateChangesetBody)
+    * [func executePlan(ctx context.Context, gitserverClient GitserverClient, sourcer sources.Sourcer, noSleepBeforeSync bool, tx *store.Store, plan *Plan) (err error)](#executePlan)
+    * [func loadBatchChange(ctx context.Context, tx getBatchChanger, id int64) (*btypes.BatchChange, error)](#loadBatchChange)
+    * [func loadChangesetSource(ctx context.Context, s *store.Store, sourcer sources.Sourcer, ch *btypes.Changeset, repo *types.Repo) (sources.ChangesetSource, error)](#loadChangesetSource)
+    * [func loadChangesetSpecs(ctx context.Context, tx *store.Store, ch *btypes.Changeset) (prev, curr *btypes.ChangesetSpec, err error)](#loadChangesetSpecs)
+    * [func namespaceURL(ns *database.Namespace) string](#namespaceURL)
+    * [func reopenAfterDetach(ch *btypes.Changeset) bool](#reopenAfterDetach)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="internalClient" href="#internalClient">var internalClient</a>
 
 ```
 searchKey: reconciler.internalClient
-tags: [private]
+tags: [variable interface private]
 ```
 
 ```Go
@@ -109,7 +109,7 @@ internalClient is here for mocking reasons.
 
 ```
 searchKey: reconciler.operationPrecedence
-tags: [private]
+tags: [variable object private]
 ```
 
 ```Go
@@ -119,432 +119,181 @@ var operationPrecedence = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
-### <a id="executor" href="#executor">type executor struct</a>
+### <a id="ChangesetSpecDelta" href="#ChangesetSpecDelta">type ChangesetSpecDelta struct</a>
 
 ```
-searchKey: reconciler.executor
-tags: [private]
+searchKey: reconciler.ChangesetSpecDelta
+tags: [struct]
 ```
 
 ```Go
-type executor struct {
-	gitserverClient   GitserverClient
-	sourcer           sources.Sourcer
-	noSleepBeforeSync bool
-	tx                *store.Store
-	ch                *btypes.Changeset
-	spec              *btypes.ChangesetSpec
-	delta             *ChangesetSpecDelta
-
-	css  sources.ChangesetSource
-	repo *types.Repo
+type ChangesetSpecDelta struct {
+	TitleChanged         bool
+	BodyChanged          bool
+	Undraft              bool
+	BaseRefChanged       bool
+	DiffChanged          bool
+	CommitMessageChanged bool
+	AuthorNameChanged    bool
+	AuthorEmailChanged   bool
 }
 ```
 
-#### <a id="executor.Run" href="#executor.Run">func (e *executor) Run(ctx context.Context, plan *Plan) (err error)</a>
+#### <a id="compareChangesetSpecs" href="#compareChangesetSpecs">func compareChangesetSpecs(previous, current *btypes.ChangesetSpec) (*ChangesetSpecDelta, error)</a>
 
 ```
-searchKey: reconciler.executor.Run
-tags: [private]
-```
-
-```Go
-func (e *executor) Run(ctx context.Context, plan *Plan) (err error)
-```
-
-#### <a id="executor.pushChangesetPatch" href="#executor.pushChangesetPatch">func (e *executor) pushChangesetPatch(ctx context.Context) (err error)</a>
-
-```
-searchKey: reconciler.executor.pushChangesetPatch
-tags: [private]
+searchKey: reconciler.compareChangesetSpecs
+tags: [method private]
 ```
 
 ```Go
-func (e *executor) pushChangesetPatch(ctx context.Context) (err error)
+func compareChangesetSpecs(previous, current *btypes.ChangesetSpec) (*ChangesetSpecDelta, error)
 ```
 
-pushChangesetPatch creates the commits for the changeset on its codehost. 
-
-#### <a id="executor.publishChangeset" href="#executor.publishChangeset">func (e *executor) publishChangeset(ctx context.Context, asDraft bool) (err error)</a>
+#### <a id="ChangesetSpecDelta.AttributesChanged" href="#ChangesetSpecDelta.AttributesChanged">func (d *ChangesetSpecDelta) AttributesChanged() bool</a>
 
 ```
-searchKey: reconciler.executor.publishChangeset
-tags: [private]
-```
-
-```Go
-func (e *executor) publishChangeset(ctx context.Context, asDraft bool) (err error)
-```
-
-publishChangeset creates the given changeset on its code host. 
-
-#### <a id="executor.syncChangeset" href="#executor.syncChangeset">func (e *executor) syncChangeset(ctx context.Context) error</a>
-
-```
-searchKey: reconciler.executor.syncChangeset
-tags: [private]
+searchKey: reconciler.ChangesetSpecDelta.AttributesChanged
+tags: [function]
 ```
 
 ```Go
-func (e *executor) syncChangeset(ctx context.Context) error
+func (d *ChangesetSpecDelta) AttributesChanged() bool
 ```
 
-#### <a id="executor.importChangeset" href="#executor.importChangeset">func (e *executor) importChangeset(ctx context.Context) error</a>
+#### <a id="ChangesetSpecDelta.NeedCodeHostUpdate" href="#ChangesetSpecDelta.NeedCodeHostUpdate">func (d *ChangesetSpecDelta) NeedCodeHostUpdate() bool</a>
 
 ```
-searchKey: reconciler.executor.importChangeset
-tags: [private]
-```
-
-```Go
-func (e *executor) importChangeset(ctx context.Context) error
-```
-
-#### <a id="executor.loadChangeset" href="#executor.loadChangeset">func (e *executor) loadChangeset(ctx context.Context) error</a>
-
-```
-searchKey: reconciler.executor.loadChangeset
-tags: [private]
+searchKey: reconciler.ChangesetSpecDelta.NeedCodeHostUpdate
+tags: [function]
 ```
 
 ```Go
-func (e *executor) loadChangeset(ctx context.Context) error
+func (d *ChangesetSpecDelta) NeedCodeHostUpdate() bool
 ```
 
-#### <a id="executor.updateChangeset" href="#executor.updateChangeset">func (e *executor) updateChangeset(ctx context.Context) (err error)</a>
+#### <a id="ChangesetSpecDelta.NeedCommitUpdate" href="#ChangesetSpecDelta.NeedCommitUpdate">func (d *ChangesetSpecDelta) NeedCommitUpdate() bool</a>
 
 ```
-searchKey: reconciler.executor.updateChangeset
-tags: [private]
-```
-
-```Go
-func (e *executor) updateChangeset(ctx context.Context) (err error)
-```
-
-updateChangeset updates the given changeset's attribute on the code host according to its ChangesetSpec and the delta previously computed. 
-
-#### <a id="executor.reopenChangeset" href="#executor.reopenChangeset">func (e *executor) reopenChangeset(ctx context.Context) (err error)</a>
-
-```
-searchKey: reconciler.executor.reopenChangeset
-tags: [private]
+searchKey: reconciler.ChangesetSpecDelta.NeedCommitUpdate
+tags: [function]
 ```
 
 ```Go
-func (e *executor) reopenChangeset(ctx context.Context) (err error)
+func (d *ChangesetSpecDelta) NeedCommitUpdate() bool
 ```
 
-reopenChangeset reopens the given changeset attribute on the code host. 
-
-#### <a id="executor.detachChangeset" href="#executor.detachChangeset">func (e *executor) detachChangeset()</a>
+#### <a id="ChangesetSpecDelta.String" href="#ChangesetSpecDelta.String">func (d *ChangesetSpecDelta) String() string</a>
 
 ```
-searchKey: reconciler.executor.detachChangeset
-tags: [private]
-```
-
-```Go
-func (e *executor) detachChangeset()
-```
-
-#### <a id="executor.archiveChangeset" href="#executor.archiveChangeset">func (e *executor) archiveChangeset()</a>
-
-```
-searchKey: reconciler.executor.archiveChangeset
-tags: [private]
+searchKey: reconciler.ChangesetSpecDelta.String
+tags: [function]
 ```
 
 ```Go
-func (e *executor) archiveChangeset()
+func (d *ChangesetSpecDelta) String() string
 ```
 
-archiveChangeset sets all associations to archived that are marked as "to-be-archived". 
-
-#### <a id="executor.closeChangeset" href="#executor.closeChangeset">func (e *executor) closeChangeset(ctx context.Context) (err error)</a>
+### <a id="FakeStore" href="#FakeStore">type FakeStore struct</a>
 
 ```
-searchKey: reconciler.executor.closeChangeset
-tags: [private]
-```
-
-```Go
-func (e *executor) closeChangeset(ctx context.Context) (err error)
-```
-
-closeChangeset closes the given changeset on its code host if its ExternalState is OPEN or DRAFT. 
-
-#### <a id="executor.undraftChangeset" href="#executor.undraftChangeset">func (e *executor) undraftChangeset(ctx context.Context) (err error)</a>
-
-```
-searchKey: reconciler.executor.undraftChangeset
-tags: [private]
+searchKey: reconciler.FakeStore
+tags: [struct private]
 ```
 
 ```Go
-func (e *executor) undraftChangeset(ctx context.Context) (err error)
-```
-
-undraftChangeset marks the given changeset on its code host as ready for review. 
-
-#### <a id="executor.sleep" href="#executor.sleep">func (e *executor) sleep()</a>
-
-```
-searchKey: reconciler.executor.sleep
-tags: [private]
-```
-
-```Go
-func (e *executor) sleep()
-```
-
-sleep sleeps for 3 seconds. 
-
-#### <a id="executor.pushCommit" href="#executor.pushCommit">func (e *executor) pushCommit(ctx context.Context, opts protocol.CreateCommitFromPatchRequest) error</a>
-
-```
-searchKey: reconciler.executor.pushCommit
-tags: [private]
-```
-
-```Go
-func (e *executor) pushCommit(ctx context.Context, opts protocol.CreateCommitFromPatchRequest) error
-```
-
-### <a id="getBatchChanger" href="#getBatchChanger">type getBatchChanger interface</a>
-
-```
-searchKey: reconciler.getBatchChanger
-tags: [private]
-```
-
-```Go
-type getBatchChanger interface {
-	GetBatchChange(ctx context.Context, opts store.GetBatchChangeOpts) (*btypes.BatchChange, error)
+type FakeStore struct {
+	GetBatchChangeMock func(context.Context, store.GetBatchChangeOpts) (*btypes.BatchChange, error)
 }
 ```
 
-### <a id="getNamespacer" href="#getNamespacer">type getNamespacer interface</a>
+#### <a id="FakeStore.GetBatchChange" href="#FakeStore.GetBatchChange">func (fs *FakeStore) GetBatchChange(ctx context.Context, opts store.GetBatchChangeOpts) (*btypes.BatchChange, error)</a>
 
 ```
-searchKey: reconciler.getNamespacer
-tags: [private]
+searchKey: reconciler.FakeStore.GetBatchChange
+tags: [method private]
 ```
 
 ```Go
-type getNamespacer interface {
-	GetByID(ctx context.Context, orgID, userID int32) (*database.Namespace, error)
+func (fs *FakeStore) GetBatchChange(ctx context.Context, opts store.GetBatchChangeOpts) (*btypes.BatchChange, error)
+```
+
+### <a id="GitserverClient" href="#GitserverClient">type GitserverClient interface</a>
+
+```
+searchKey: reconciler.GitserverClient
+tags: [interface]
+```
+
+```Go
+type GitserverClient interface {
+	CreateCommitFromPatch(ctx context.Context, req protocol.CreateCommitFromPatchRequest) (string, error)
 }
-```
-
-### <a id="errPublishSameBranch" href="#errPublishSameBranch">type errPublishSameBranch struct{}</a>
-
-```
-searchKey: reconciler.errPublishSameBranch
-tags: [private]
-```
-
-```Go
-type errPublishSameBranch struct{}
-```
-
-errPublishSameBranch is returned by publish changeset if a changeset with the same external branch already exists in the database and is owned by another batch change. It is a terminal error that won't be fixed by retrying to publish the changeset with the same spec. 
-
-#### <a id="errPublishSameBranch.Error" href="#errPublishSameBranch.Error">func (e errPublishSameBranch) Error() string</a>
-
-```
-searchKey: reconciler.errPublishSameBranch.Error
-tags: [private]
-```
-
-```Go
-func (e errPublishSameBranch) Error() string
-```
-
-#### <a id="errPublishSameBranch.NonRetryable" href="#errPublishSameBranch.NonRetryable">func (e errPublishSameBranch) NonRetryable() bool</a>
-
-```
-searchKey: reconciler.errPublishSameBranch.NonRetryable
-tags: [private]
-```
-
-```Go
-func (e errPublishSameBranch) NonRetryable() bool
-```
-
-### <a id="errNoSSHCredential" href="#errNoSSHCredential">type errNoSSHCredential struct{}</a>
-
-```
-searchKey: reconciler.errNoSSHCredential
-tags: [private]
-```
-
-```Go
-type errNoSSHCredential struct{}
-```
-
-errNoSSHCredential is returned, if the  clone URL of the repository uses the ssh:// scheme, but the authenticator doesn't support SSH pushes. 
-
-#### <a id="errNoSSHCredential.Error" href="#errNoSSHCredential.Error">func (e errNoSSHCredential) Error() string</a>
-
-```
-searchKey: reconciler.errNoSSHCredential.Error
-tags: [private]
-```
-
-```Go
-func (e errNoSSHCredential) Error() string
-```
-
-#### <a id="errNoSSHCredential.NonRetryable" href="#errNoSSHCredential.NonRetryable">func (e errNoSSHCredential) NonRetryable() bool</a>
-
-```
-searchKey: reconciler.errNoSSHCredential.NonRetryable
-tags: [private]
-```
-
-```Go
-func (e errNoSSHCredential) NonRetryable() bool
-```
-
-### <a id="errMissingCredentials" href="#errMissingCredentials">type errMissingCredentials struct</a>
-
-```
-searchKey: reconciler.errMissingCredentials
-tags: [private]
-```
-
-```Go
-type errMissingCredentials struct{ repo string }
-```
-
-errMissingCredentials is returned if the user that applied the last batch change /changeset spec doesn't have a user credential for the given repository and is not a site-admin (so no fallback to the global credentials is possible). 
-
-#### <a id="errMissingCredentials.Error" href="#errMissingCredentials.Error">func (e errMissingCredentials) Error() string</a>
-
-```
-searchKey: reconciler.errMissingCredentials.Error
-tags: [private]
-```
-
-```Go
-func (e errMissingCredentials) Error() string
-```
-
-#### <a id="errMissingCredentials.NonRetryable" href="#errMissingCredentials.NonRetryable">func (e errMissingCredentials) NonRetryable() bool</a>
-
-```
-searchKey: reconciler.errMissingCredentials.NonRetryable
-tags: [private]
-```
-
-```Go
-func (e errMissingCredentials) NonRetryable() bool
-```
-
-#### <a id="errMissingCredentials.Is" href="#errMissingCredentials.Is">func (e errMissingCredentials) Is(target error) bool</a>
-
-```
-searchKey: reconciler.errMissingCredentials.Is
-tags: [private]
-```
-
-```Go
-func (e errMissingCredentials) Is(target error) bool
-```
-
-### <a id="errNoPushCredentials" href="#errNoPushCredentials">type errNoPushCredentials struct</a>
-
-```
-searchKey: reconciler.errNoPushCredentials
-tags: [private]
-```
-
-```Go
-type errNoPushCredentials struct{ credentialsType string }
-```
-
-errNoPushCredentials is returned if the authenticator cannot be used by git to authenticate a `git push`. 
-
-#### <a id="errNoPushCredentials.Error" href="#errNoPushCredentials.Error">func (e errNoPushCredentials) Error() string</a>
-
-```
-searchKey: reconciler.errNoPushCredentials.Error
-tags: [private]
-```
-
-```Go
-func (e errNoPushCredentials) Error() string
-```
-
-#### <a id="errNoPushCredentials.NonRetryable" href="#errNoPushCredentials.NonRetryable">func (e errNoPushCredentials) NonRetryable() bool</a>
-
-```
-searchKey: reconciler.errNoPushCredentials.NonRetryable
-tags: [private]
-```
-
-```Go
-func (e errNoPushCredentials) NonRetryable() bool
 ```
 
 ### <a id="Operations" href="#Operations">type Operations []types.ReconcilerOperation</a>
 
 ```
 searchKey: reconciler.Operations
+tags: [array string]
 ```
 
 ```Go
 type Operations []btypes.ReconcilerOperation
 ```
 
-#### <a id="Operations.IsNone" href="#Operations.IsNone">func (ops Operations) IsNone() bool</a>
-
-```
-searchKey: reconciler.Operations.IsNone
-```
-
-```Go
-func (ops Operations) IsNone() bool
-```
-
 #### <a id="Operations.Equal" href="#Operations.Equal">func (ops Operations) Equal(b Operations) bool</a>
 
 ```
 searchKey: reconciler.Operations.Equal
+tags: [method]
 ```
 
 ```Go
 func (ops Operations) Equal(b Operations) bool
 ```
 
-#### <a id="Operations.String" href="#Operations.String">func (ops Operations) String() string</a>
-
-```
-searchKey: reconciler.Operations.String
-```
-
-```Go
-func (ops Operations) String() string
-```
-
 #### <a id="Operations.ExecutionOrder" href="#Operations.ExecutionOrder">func (ops Operations) ExecutionOrder() []btypes.ReconcilerOperation</a>
 
 ```
 searchKey: reconciler.Operations.ExecutionOrder
+tags: [function]
 ```
 
 ```Go
 func (ops Operations) ExecutionOrder() []btypes.ReconcilerOperation
 ```
 
+#### <a id="Operations.IsNone" href="#Operations.IsNone">func (ops Operations) IsNone() bool</a>
+
+```
+searchKey: reconciler.Operations.IsNone
+tags: [function]
+```
+
+```Go
+func (ops Operations) IsNone() bool
+```
+
+#### <a id="Operations.String" href="#Operations.String">func (ops Operations) String() string</a>
+
+```
+searchKey: reconciler.Operations.String
+tags: [function]
+```
+
+```Go
+func (ops Operations) String() string
+```
+
 ### <a id="Plan" href="#Plan">type Plan struct</a>
 
 ```
 searchKey: reconciler.Plan
+tags: [struct]
 ```
 
 ```Go
@@ -570,6 +319,7 @@ Plan represents the possible operations the reconciler needs to do to reconcile 
 
 ```
 searchKey: reconciler.DeterminePlan
+tags: [method]
 ```
 
 ```Go
@@ -582,6 +332,7 @@ DeterminePlan looks at the given changeset to determine what action the reconcil
 
 ```
 searchKey: reconciler.Plan.AddOp
+tags: [method]
 ```
 
 ```Go
@@ -592,98 +343,18 @@ func (p *Plan) AddOp(op btypes.ReconcilerOperation)
 
 ```
 searchKey: reconciler.Plan.SetOp
+tags: [method]
 ```
 
 ```Go
 func (p *Plan) SetOp(op btypes.ReconcilerOperation)
 ```
 
-### <a id="ChangesetSpecDelta" href="#ChangesetSpecDelta">type ChangesetSpecDelta struct</a>
-
-```
-searchKey: reconciler.ChangesetSpecDelta
-```
-
-```Go
-type ChangesetSpecDelta struct {
-	TitleChanged         bool
-	BodyChanged          bool
-	Undraft              bool
-	BaseRefChanged       bool
-	DiffChanged          bool
-	CommitMessageChanged bool
-	AuthorNameChanged    bool
-	AuthorEmailChanged   bool
-}
-```
-
-#### <a id="compareChangesetSpecs" href="#compareChangesetSpecs">func compareChangesetSpecs(previous, current *btypes.ChangesetSpec) (*ChangesetSpecDelta, error)</a>
-
-```
-searchKey: reconciler.compareChangesetSpecs
-tags: [private]
-```
-
-```Go
-func compareChangesetSpecs(previous, current *btypes.ChangesetSpec) (*ChangesetSpecDelta, error)
-```
-
-#### <a id="ChangesetSpecDelta.String" href="#ChangesetSpecDelta.String">func (d *ChangesetSpecDelta) String() string</a>
-
-```
-searchKey: reconciler.ChangesetSpecDelta.String
-```
-
-```Go
-func (d *ChangesetSpecDelta) String() string
-```
-
-#### <a id="ChangesetSpecDelta.NeedCommitUpdate" href="#ChangesetSpecDelta.NeedCommitUpdate">func (d *ChangesetSpecDelta) NeedCommitUpdate() bool</a>
-
-```
-searchKey: reconciler.ChangesetSpecDelta.NeedCommitUpdate
-```
-
-```Go
-func (d *ChangesetSpecDelta) NeedCommitUpdate() bool
-```
-
-#### <a id="ChangesetSpecDelta.NeedCodeHostUpdate" href="#ChangesetSpecDelta.NeedCodeHostUpdate">func (d *ChangesetSpecDelta) NeedCodeHostUpdate() bool</a>
-
-```
-searchKey: reconciler.ChangesetSpecDelta.NeedCodeHostUpdate
-```
-
-```Go
-func (d *ChangesetSpecDelta) NeedCodeHostUpdate() bool
-```
-
-#### <a id="ChangesetSpecDelta.AttributesChanged" href="#ChangesetSpecDelta.AttributesChanged">func (d *ChangesetSpecDelta) AttributesChanged() bool</a>
-
-```
-searchKey: reconciler.ChangesetSpecDelta.AttributesChanged
-```
-
-```Go
-func (d *ChangesetSpecDelta) AttributesChanged() bool
-```
-
-### <a id="GitserverClient" href="#GitserverClient">type GitserverClient interface</a>
-
-```
-searchKey: reconciler.GitserverClient
-```
-
-```Go
-type GitserverClient interface {
-	CreateCommitFromPatch(ctx context.Context, req protocol.CreateCommitFromPatchRequest) (string, error)
-}
-```
-
 ### <a id="Reconciler" href="#Reconciler">type Reconciler struct</a>
 
 ```
 searchKey: reconciler.Reconciler
+tags: [struct]
 ```
 
 ```Go
@@ -704,6 +375,7 @@ Reconciler processes changesets and reconciles their current state — in Source
 
 ```
 searchKey: reconciler.New
+tags: [method]
 ```
 
 ```Go
@@ -714,6 +386,7 @@ func New(gitClient GitserverClient, sourcer sources.Sourcer, store *store.Store)
 
 ```
 searchKey: reconciler.Reconciler.HandlerFunc
+tags: [function]
 ```
 
 ```Go
@@ -726,7 +399,7 @@ HandlerFunc returns a dbworker.HandlerFunc that can be passed to a workerutil.Wo
 
 ```
 searchKey: reconciler.Reconciler.process
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -741,11 +414,380 @@ To do that, the reconciler looks at the changeset's current state (publication s
 
 If an error is returned, the workerutil.Worker that called this function (through the HandlerFunc) will set the changeset's ReconcilerState to errored and set its FailureMessage to the error. 
 
+### <a id="errMissingCredentials" href="#errMissingCredentials">type errMissingCredentials struct</a>
+
+```
+searchKey: reconciler.errMissingCredentials
+tags: [struct private]
+```
+
+```Go
+type errMissingCredentials struct{ repo string }
+```
+
+errMissingCredentials is returned if the user that applied the last batch change /changeset spec doesn't have a user credential for the given repository and is not a site-admin (so no fallback to the global credentials is possible). 
+
+#### <a id="errMissingCredentials.Error" href="#errMissingCredentials.Error">func (e errMissingCredentials) Error() string</a>
+
+```
+searchKey: reconciler.errMissingCredentials.Error
+tags: [function private]
+```
+
+```Go
+func (e errMissingCredentials) Error() string
+```
+
+#### <a id="errMissingCredentials.Is" href="#errMissingCredentials.Is">func (e errMissingCredentials) Is(target error) bool</a>
+
+```
+searchKey: reconciler.errMissingCredentials.Is
+tags: [method private]
+```
+
+```Go
+func (e errMissingCredentials) Is(target error) bool
+```
+
+#### <a id="errMissingCredentials.NonRetryable" href="#errMissingCredentials.NonRetryable">func (e errMissingCredentials) NonRetryable() bool</a>
+
+```
+searchKey: reconciler.errMissingCredentials.NonRetryable
+tags: [function private]
+```
+
+```Go
+func (e errMissingCredentials) NonRetryable() bool
+```
+
+### <a id="errNoPushCredentials" href="#errNoPushCredentials">type errNoPushCredentials struct</a>
+
+```
+searchKey: reconciler.errNoPushCredentials
+tags: [struct private]
+```
+
+```Go
+type errNoPushCredentials struct{ credentialsType string }
+```
+
+errNoPushCredentials is returned if the authenticator cannot be used by git to authenticate a `git push`. 
+
+#### <a id="errNoPushCredentials.Error" href="#errNoPushCredentials.Error">func (e errNoPushCredentials) Error() string</a>
+
+```
+searchKey: reconciler.errNoPushCredentials.Error
+tags: [function private]
+```
+
+```Go
+func (e errNoPushCredentials) Error() string
+```
+
+#### <a id="errNoPushCredentials.NonRetryable" href="#errNoPushCredentials.NonRetryable">func (e errNoPushCredentials) NonRetryable() bool</a>
+
+```
+searchKey: reconciler.errNoPushCredentials.NonRetryable
+tags: [function private]
+```
+
+```Go
+func (e errNoPushCredentials) NonRetryable() bool
+```
+
+### <a id="errNoSSHCredential" href="#errNoSSHCredential">type errNoSSHCredential struct{}</a>
+
+```
+searchKey: reconciler.errNoSSHCredential
+tags: [struct private]
+```
+
+```Go
+type errNoSSHCredential struct{}
+```
+
+errNoSSHCredential is returned, if the  clone URL of the repository uses the ssh:// scheme, but the authenticator doesn't support SSH pushes. 
+
+#### <a id="errNoSSHCredential.Error" href="#errNoSSHCredential.Error">func (e errNoSSHCredential) Error() string</a>
+
+```
+searchKey: reconciler.errNoSSHCredential.Error
+tags: [function private]
+```
+
+```Go
+func (e errNoSSHCredential) Error() string
+```
+
+#### <a id="errNoSSHCredential.NonRetryable" href="#errNoSSHCredential.NonRetryable">func (e errNoSSHCredential) NonRetryable() bool</a>
+
+```
+searchKey: reconciler.errNoSSHCredential.NonRetryable
+tags: [function private]
+```
+
+```Go
+func (e errNoSSHCredential) NonRetryable() bool
+```
+
+### <a id="errPublishSameBranch" href="#errPublishSameBranch">type errPublishSameBranch struct{}</a>
+
+```
+searchKey: reconciler.errPublishSameBranch
+tags: [struct private]
+```
+
+```Go
+type errPublishSameBranch struct{}
+```
+
+errPublishSameBranch is returned by publish changeset if a changeset with the same external branch already exists in the database and is owned by another batch change. It is a terminal error that won't be fixed by retrying to publish the changeset with the same spec. 
+
+#### <a id="errPublishSameBranch.Error" href="#errPublishSameBranch.Error">func (e errPublishSameBranch) Error() string</a>
+
+```
+searchKey: reconciler.errPublishSameBranch.Error
+tags: [function private]
+```
+
+```Go
+func (e errPublishSameBranch) Error() string
+```
+
+#### <a id="errPublishSameBranch.NonRetryable" href="#errPublishSameBranch.NonRetryable">func (e errPublishSameBranch) NonRetryable() bool</a>
+
+```
+searchKey: reconciler.errPublishSameBranch.NonRetryable
+tags: [function private]
+```
+
+```Go
+func (e errPublishSameBranch) NonRetryable() bool
+```
+
+### <a id="executor" href="#executor">type executor struct</a>
+
+```
+searchKey: reconciler.executor
+tags: [struct private]
+```
+
+```Go
+type executor struct {
+	gitserverClient   GitserverClient
+	sourcer           sources.Sourcer
+	noSleepBeforeSync bool
+	tx                *store.Store
+	ch                *btypes.Changeset
+	spec              *btypes.ChangesetSpec
+	delta             *ChangesetSpecDelta
+
+	css  sources.ChangesetSource
+	repo *types.Repo
+}
+```
+
+#### <a id="executor.Run" href="#executor.Run">func (e *executor) Run(ctx context.Context, plan *Plan) (err error)</a>
+
+```
+searchKey: reconciler.executor.Run
+tags: [method private]
+```
+
+```Go
+func (e *executor) Run(ctx context.Context, plan *Plan) (err error)
+```
+
+#### <a id="executor.archiveChangeset" href="#executor.archiveChangeset">func (e *executor) archiveChangeset()</a>
+
+```
+searchKey: reconciler.executor.archiveChangeset
+tags: [function private]
+```
+
+```Go
+func (e *executor) archiveChangeset()
+```
+
+archiveChangeset sets all associations to archived that are marked as "to-be-archived". 
+
+#### <a id="executor.closeChangeset" href="#executor.closeChangeset">func (e *executor) closeChangeset(ctx context.Context) (err error)</a>
+
+```
+searchKey: reconciler.executor.closeChangeset
+tags: [method private]
+```
+
+```Go
+func (e *executor) closeChangeset(ctx context.Context) (err error)
+```
+
+closeChangeset closes the given changeset on its code host if its ExternalState is OPEN or DRAFT. 
+
+#### <a id="executor.detachChangeset" href="#executor.detachChangeset">func (e *executor) detachChangeset()</a>
+
+```
+searchKey: reconciler.executor.detachChangeset
+tags: [function private]
+```
+
+```Go
+func (e *executor) detachChangeset()
+```
+
+#### <a id="executor.importChangeset" href="#executor.importChangeset">func (e *executor) importChangeset(ctx context.Context) error</a>
+
+```
+searchKey: reconciler.executor.importChangeset
+tags: [method private]
+```
+
+```Go
+func (e *executor) importChangeset(ctx context.Context) error
+```
+
+#### <a id="executor.loadChangeset" href="#executor.loadChangeset">func (e *executor) loadChangeset(ctx context.Context) error</a>
+
+```
+searchKey: reconciler.executor.loadChangeset
+tags: [method private]
+```
+
+```Go
+func (e *executor) loadChangeset(ctx context.Context) error
+```
+
+#### <a id="executor.publishChangeset" href="#executor.publishChangeset">func (e *executor) publishChangeset(ctx context.Context, asDraft bool) (err error)</a>
+
+```
+searchKey: reconciler.executor.publishChangeset
+tags: [method private]
+```
+
+```Go
+func (e *executor) publishChangeset(ctx context.Context, asDraft bool) (err error)
+```
+
+publishChangeset creates the given changeset on its code host. 
+
+#### <a id="executor.pushChangesetPatch" href="#executor.pushChangesetPatch">func (e *executor) pushChangesetPatch(ctx context.Context) (err error)</a>
+
+```
+searchKey: reconciler.executor.pushChangesetPatch
+tags: [method private]
+```
+
+```Go
+func (e *executor) pushChangesetPatch(ctx context.Context) (err error)
+```
+
+pushChangesetPatch creates the commits for the changeset on its codehost. 
+
+#### <a id="executor.pushCommit" href="#executor.pushCommit">func (e *executor) pushCommit(ctx context.Context, opts protocol.CreateCommitFromPatchRequest) error</a>
+
+```
+searchKey: reconciler.executor.pushCommit
+tags: [method private]
+```
+
+```Go
+func (e *executor) pushCommit(ctx context.Context, opts protocol.CreateCommitFromPatchRequest) error
+```
+
+#### <a id="executor.reopenChangeset" href="#executor.reopenChangeset">func (e *executor) reopenChangeset(ctx context.Context) (err error)</a>
+
+```
+searchKey: reconciler.executor.reopenChangeset
+tags: [method private]
+```
+
+```Go
+func (e *executor) reopenChangeset(ctx context.Context) (err error)
+```
+
+reopenChangeset reopens the given changeset attribute on the code host. 
+
+#### <a id="executor.sleep" href="#executor.sleep">func (e *executor) sleep()</a>
+
+```
+searchKey: reconciler.executor.sleep
+tags: [function private]
+```
+
+```Go
+func (e *executor) sleep()
+```
+
+sleep sleeps for 3 seconds. 
+
+#### <a id="executor.syncChangeset" href="#executor.syncChangeset">func (e *executor) syncChangeset(ctx context.Context) error</a>
+
+```
+searchKey: reconciler.executor.syncChangeset
+tags: [method private]
+```
+
+```Go
+func (e *executor) syncChangeset(ctx context.Context) error
+```
+
+#### <a id="executor.undraftChangeset" href="#executor.undraftChangeset">func (e *executor) undraftChangeset(ctx context.Context) (err error)</a>
+
+```
+searchKey: reconciler.executor.undraftChangeset
+tags: [method private]
+```
+
+```Go
+func (e *executor) undraftChangeset(ctx context.Context) (err error)
+```
+
+undraftChangeset marks the given changeset on its code host as ready for review. 
+
+#### <a id="executor.updateChangeset" href="#executor.updateChangeset">func (e *executor) updateChangeset(ctx context.Context) (err error)</a>
+
+```
+searchKey: reconciler.executor.updateChangeset
+tags: [method private]
+```
+
+```Go
+func (e *executor) updateChangeset(ctx context.Context) (err error)
+```
+
+updateChangeset updates the given changeset's attribute on the code host according to its ChangesetSpec and the delta previously computed. 
+
+### <a id="getBatchChanger" href="#getBatchChanger">type getBatchChanger interface</a>
+
+```
+searchKey: reconciler.getBatchChanger
+tags: [interface private]
+```
+
+```Go
+type getBatchChanger interface {
+	GetBatchChange(ctx context.Context, opts store.GetBatchChangeOpts) (*btypes.BatchChange, error)
+}
+```
+
+### <a id="getNamespacer" href="#getNamespacer">type getNamespacer interface</a>
+
+```
+searchKey: reconciler.getNamespacer
+tags: [interface private]
+```
+
+```Go
+type getNamespacer interface {
+	GetByID(ctx context.Context, orgID, userID int32) (*database.Namespace, error)
+}
+```
+
 ### <a id="mockInternalClient" href="#mockInternalClient">type mockInternalClient struct</a>
 
 ```
 searchKey: reconciler.mockInternalClient
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -759,7 +801,7 @@ type mockInternalClient struct {
 
 ```
 searchKey: reconciler.mockInternalClient.ExternalURL
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -770,7 +812,7 @@ func (c *mockInternalClient) ExternalURL(ctx context.Context) (string, error)
 
 ```
 searchKey: reconciler.mockMissingErr
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -783,149 +825,57 @@ type mockMissingErr struct {
 
 ```
 searchKey: reconciler.mockMissingErr.Error
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (e mockMissingErr) Error() string
 ```
 
-### <a id="FakeStore" href="#FakeStore">type FakeStore struct</a>
-
-```
-searchKey: reconciler.FakeStore
-tags: [private]
-```
-
-```Go
-type FakeStore struct {
-	GetBatchChangeMock func(context.Context, store.GetBatchChangeOpts) (*btypes.BatchChange, error)
-}
-```
-
-#### <a id="FakeStore.GetBatchChange" href="#FakeStore.GetBatchChange">func (fs *FakeStore) GetBatchChange(ctx context.Context, opts store.GetBatchChangeOpts) (*btypes.BatchChange, error)</a>
-
-```
-searchKey: reconciler.FakeStore.GetBatchChange
-tags: [private]
-```
-
-```Go
-func (fs *FakeStore) GetBatchChange(ctx context.Context, opts store.GetBatchChangeOpts) (*btypes.BatchChange, error)
-```
-
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
-### <a id="executePlan" href="#executePlan">func executePlan(ctx context.Context, gitserverClient GitserverClient, sourcer sources.Sourcer, noSleepBeforeSync bool, tx *store.Store, plan *Plan) (err error)</a>
+### <a id="TestBatchChangeURL" href="#TestBatchChangeURL">func TestBatchChangeURL(t *testing.T)</a>
 
 ```
-searchKey: reconciler.executePlan
-tags: [private]
-```
-
-```Go
-func executePlan(ctx context.Context, gitserverClient GitserverClient, sourcer sources.Sourcer, noSleepBeforeSync bool, tx *store.Store, plan *Plan) (err error)
-```
-
-executePlan executes the given reconciler plan. 
-
-### <a id="loadChangesetSource" href="#loadChangesetSource">func loadChangesetSource(ctx context.Context, s *store.Store, sourcer sources.Sourcer, ch *btypes.Changeset, repo *types.Repo) (sources.ChangesetSource, error)</a>
-
-```
-searchKey: reconciler.loadChangesetSource
-tags: [private]
+searchKey: reconciler.TestBatchChangeURL
+tags: [method private test]
 ```
 
 ```Go
-func loadChangesetSource(ctx context.Context, s *store.Store, sourcer sources.Sourcer, ch *btypes.Changeset, repo *types.Repo) (sources.ChangesetSource, error)
+func TestBatchChangeURL(t *testing.T)
 ```
 
-### <a id="buildCommitOpts" href="#buildCommitOpts">func buildCommitOpts(repo *types.Repo, spec *btypes.ChangesetSpec, pushOpts *protocol.PushConfig) (opts protocol.CreateCommitFromPatchRequest, err error)</a>
+### <a id="TestDecorateChangesetBody" href="#TestDecorateChangesetBody">func TestDecorateChangesetBody(t *testing.T)</a>
 
 ```
-searchKey: reconciler.buildCommitOpts
-tags: [private]
-```
-
-```Go
-func buildCommitOpts(repo *types.Repo, spec *btypes.ChangesetSpec, pushOpts *protocol.PushConfig) (opts protocol.CreateCommitFromPatchRequest, err error)
-```
-
-### <a id="loadBatchChange" href="#loadBatchChange">func loadBatchChange(ctx context.Context, tx getBatchChanger, id int64) (*btypes.BatchChange, error)</a>
-
-```
-searchKey: reconciler.loadBatchChange
-tags: [private]
+searchKey: reconciler.TestDecorateChangesetBody
+tags: [method private test]
 ```
 
 ```Go
-func loadBatchChange(ctx context.Context, tx getBatchChanger, id int64) (*btypes.BatchChange, error)
+func TestDecorateChangesetBody(t *testing.T)
 ```
 
-### <a id="decorateChangesetBody" href="#decorateChangesetBody">func decorateChangesetBody(ctx context.Context, tx getBatchChanger, nsStore getNamespacer, cs *sources.Changeset) error</a>
+### <a id="TestDetermineReconcilerPlan" href="#TestDetermineReconcilerPlan">func TestDetermineReconcilerPlan(t *testing.T)</a>
 
 ```
-searchKey: reconciler.decorateChangesetBody
-tags: [private]
-```
-
-```Go
-func decorateChangesetBody(ctx context.Context, tx getBatchChanger, nsStore getNamespacer, cs *sources.Changeset) error
-```
-
-### <a id="batchChangeURL" href="#batchChangeURL">func batchChangeURL(ctx context.Context, ns *database.Namespace, c *btypes.BatchChange) (string, error)</a>
-
-```
-searchKey: reconciler.batchChangeURL
-tags: [private]
+searchKey: reconciler.TestDetermineReconcilerPlan
+tags: [method private test]
 ```
 
 ```Go
-func batchChangeURL(ctx context.Context, ns *database.Namespace, c *btypes.BatchChange) (string, error)
-```
-
-### <a id="namespaceURL" href="#namespaceURL">func namespaceURL(ns *database.Namespace) string</a>
-
-```
-searchKey: reconciler.namespaceURL
-tags: [private]
-```
-
-```Go
-func namespaceURL(ns *database.Namespace) string
-```
-
-### <a id="reopenAfterDetach" href="#reopenAfterDetach">func reopenAfterDetach(ch *btypes.Changeset) bool</a>
-
-```
-searchKey: reconciler.reopenAfterDetach
-tags: [private]
-```
-
-```Go
-func reopenAfterDetach(ch *btypes.Changeset) bool
-```
-
-### <a id="loadChangesetSpecs" href="#loadChangesetSpecs">func loadChangesetSpecs(ctx context.Context, tx *store.Store, ch *btypes.Changeset) (prev, curr *btypes.ChangesetSpec, err error)</a>
-
-```
-searchKey: reconciler.loadChangesetSpecs
-tags: [private]
-```
-
-```Go
-func loadChangesetSpecs(ctx context.Context, tx *store.Store, ch *btypes.Changeset) (prev, curr *btypes.ChangesetSpec, err error)
+func TestDetermineReconcilerPlan(t *testing.T)
 ```
 
 ### <a id="TestExecutor_ExecutePlan" href="#TestExecutor_ExecutePlan">func TestExecutor_ExecutePlan(t *testing.T)</a>
 
 ```
 searchKey: reconciler.TestExecutor_ExecutePlan
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -936,98 +886,166 @@ func TestExecutor_ExecutePlan(t *testing.T)
 
 ```
 searchKey: reconciler.TestExecutor_ExecutePlan_PublishedChangesetDuplicateBranch
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestExecutor_ExecutePlan_PublishedChangesetDuplicateBranch(t *testing.T)
 ```
 
-### <a id="TestLoadChangesetSource" href="#TestLoadChangesetSource">func TestLoadChangesetSource(t *testing.T)</a>
-
-```
-searchKey: reconciler.TestLoadChangesetSource
-tags: [private]
-```
-
-```Go
-func TestLoadChangesetSource(t *testing.T)
-```
-
 ### <a id="TestExecutor_UserCredentialsForGitserver" href="#TestExecutor_UserCredentialsForGitserver">func TestExecutor_UserCredentialsForGitserver(t *testing.T)</a>
 
 ```
 searchKey: reconciler.TestExecutor_UserCredentialsForGitserver
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestExecutor_UserCredentialsForGitserver(t *testing.T)
 ```
 
-### <a id="TestDecorateChangesetBody" href="#TestDecorateChangesetBody">func TestDecorateChangesetBody(t *testing.T)</a>
+### <a id="TestLoadChangesetSource" href="#TestLoadChangesetSource">func TestLoadChangesetSource(t *testing.T)</a>
 
 ```
-searchKey: reconciler.TestDecorateChangesetBody
-tags: [private]
-```
-
-```Go
-func TestDecorateChangesetBody(t *testing.T)
-```
-
-### <a id="TestBatchChangeURL" href="#TestBatchChangeURL">func TestBatchChangeURL(t *testing.T)</a>
-
-```
-searchKey: reconciler.TestBatchChangeURL
-tags: [private]
+searchKey: reconciler.TestLoadChangesetSource
+tags: [method private test]
 ```
 
 ```Go
-func TestBatchChangeURL(t *testing.T)
+func TestLoadChangesetSource(t *testing.T)
 ```
 
 ### <a id="TestNamespaceURL" href="#TestNamespaceURL">func TestNamespaceURL(t *testing.T)</a>
 
 ```
 searchKey: reconciler.TestNamespaceURL
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestNamespaceURL(t *testing.T)
 ```
 
+### <a id="TestReconcilerProcess_IntegrationTest" href="#TestReconcilerProcess_IntegrationTest">func TestReconcilerProcess_IntegrationTest(t *testing.T)</a>
+
+```
+searchKey: reconciler.TestReconcilerProcess_IntegrationTest
+tags: [method private test]
+```
+
+```Go
+func TestReconcilerProcess_IntegrationTest(t *testing.T)
+```
+
+### <a id="batchChangeURL" href="#batchChangeURL">func batchChangeURL(ctx context.Context, ns *database.Namespace, c *btypes.BatchChange) (string, error)</a>
+
+```
+searchKey: reconciler.batchChangeURL
+tags: [method private]
+```
+
+```Go
+func batchChangeURL(ctx context.Context, ns *database.Namespace, c *btypes.BatchChange) (string, error)
+```
+
+### <a id="buildCommitOpts" href="#buildCommitOpts">func buildCommitOpts(repo *types.Repo, spec *btypes.ChangesetSpec, pushOpts *protocol.PushConfig) (opts protocol.CreateCommitFromPatchRequest, err error)</a>
+
+```
+searchKey: reconciler.buildCommitOpts
+tags: [method private]
+```
+
+```Go
+func buildCommitOpts(repo *types.Repo, spec *btypes.ChangesetSpec, pushOpts *protocol.PushConfig) (opts protocol.CreateCommitFromPatchRequest, err error)
+```
+
 ### <a id="buildGithubPR" href="#buildGithubPR">func buildGithubPR(now time.Time, externalState btypes.ChangesetExternalState) *github.PullRequest</a>
 
 ```
 searchKey: reconciler.buildGithubPR
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func buildGithubPR(now time.Time, externalState btypes.ChangesetExternalState) *github.PullRequest
 ```
 
-### <a id="TestDetermineReconcilerPlan" href="#TestDetermineReconcilerPlan">func TestDetermineReconcilerPlan(t *testing.T)</a>
+### <a id="decorateChangesetBody" href="#decorateChangesetBody">func decorateChangesetBody(ctx context.Context, tx getBatchChanger, nsStore getNamespacer, cs *sources.Changeset) error</a>
 
 ```
-searchKey: reconciler.TestDetermineReconcilerPlan
-tags: [private]
-```
-
-```Go
-func TestDetermineReconcilerPlan(t *testing.T)
-```
-
-### <a id="TestReconcilerProcess_IntegrationTest" href="#TestReconcilerProcess_IntegrationTest">func TestReconcilerProcess_IntegrationTest(t *testing.T)</a>
-
-```
-searchKey: reconciler.TestReconcilerProcess_IntegrationTest
-tags: [private]
+searchKey: reconciler.decorateChangesetBody
+tags: [method private]
 ```
 
 ```Go
-func TestReconcilerProcess_IntegrationTest(t *testing.T)
+func decorateChangesetBody(ctx context.Context, tx getBatchChanger, nsStore getNamespacer, cs *sources.Changeset) error
+```
+
+### <a id="executePlan" href="#executePlan">func executePlan(ctx context.Context, gitserverClient GitserverClient, sourcer sources.Sourcer, noSleepBeforeSync bool, tx *store.Store, plan *Plan) (err error)</a>
+
+```
+searchKey: reconciler.executePlan
+tags: [method private]
+```
+
+```Go
+func executePlan(ctx context.Context, gitserverClient GitserverClient, sourcer sources.Sourcer, noSleepBeforeSync bool, tx *store.Store, plan *Plan) (err error)
+```
+
+executePlan executes the given reconciler plan. 
+
+### <a id="loadBatchChange" href="#loadBatchChange">func loadBatchChange(ctx context.Context, tx getBatchChanger, id int64) (*btypes.BatchChange, error)</a>
+
+```
+searchKey: reconciler.loadBatchChange
+tags: [method private]
+```
+
+```Go
+func loadBatchChange(ctx context.Context, tx getBatchChanger, id int64) (*btypes.BatchChange, error)
+```
+
+### <a id="loadChangesetSource" href="#loadChangesetSource">func loadChangesetSource(ctx context.Context, s *store.Store, sourcer sources.Sourcer, ch *btypes.Changeset, repo *types.Repo) (sources.ChangesetSource, error)</a>
+
+```
+searchKey: reconciler.loadChangesetSource
+tags: [method private]
+```
+
+```Go
+func loadChangesetSource(ctx context.Context, s *store.Store, sourcer sources.Sourcer, ch *btypes.Changeset, repo *types.Repo) (sources.ChangesetSource, error)
+```
+
+### <a id="loadChangesetSpecs" href="#loadChangesetSpecs">func loadChangesetSpecs(ctx context.Context, tx *store.Store, ch *btypes.Changeset) (prev, curr *btypes.ChangesetSpec, err error)</a>
+
+```
+searchKey: reconciler.loadChangesetSpecs
+tags: [method private]
+```
+
+```Go
+func loadChangesetSpecs(ctx context.Context, tx *store.Store, ch *btypes.Changeset) (prev, curr *btypes.ChangesetSpec, err error)
+```
+
+### <a id="namespaceURL" href="#namespaceURL">func namespaceURL(ns *database.Namespace) string</a>
+
+```
+searchKey: reconciler.namespaceURL
+tags: [method private]
+```
+
+```Go
+func namespaceURL(ns *database.Namespace) string
+```
+
+### <a id="reopenAfterDetach" href="#reopenAfterDetach">func reopenAfterDetach(ch *btypes.Changeset) bool</a>
+
+```
+searchKey: reconciler.reopenAfterDetach
+tags: [method private]
+```
+
+```Go
+func reopenAfterDetach(ch *btypes.Changeset) bool
 ```
 

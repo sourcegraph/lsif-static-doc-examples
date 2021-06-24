@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/internal/licensing/resolvers",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,9 @@
                 "identifier": "LicenseResolver",
                 "newPage": false,
                 "searchKey": "resolvers.LicenseResolver",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +66,9 @@
                       "identifier": "LicenseResolver.EnterpriseLicenseHasFeature",
                       "newPage": false,
                       "searchKey": "resolvers.LicenseResolver.EnterpriseLicenseHasFeature",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -89,6 +95,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -109,7 +116,9 @@
                 "newPage": false,
                 "searchKey": "resolvers.TestEnterpriseLicenseHasFeature",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {

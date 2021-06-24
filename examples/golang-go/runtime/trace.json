@@ -4,7 +4,9 @@
     "identifier": "trace",
     "newPage": true,
     "searchKey": "runtime/trace",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,34 +39,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/runtime/trace#regionStartCode",
-              "documentation": {
-                "identifier": "regionStartCode",
-                "newPage": false,
-                "searchKey": "trace.regionStartCode",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const regionStartCode"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst regionStartCode = uint64(0)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/runtime/trace#regionEndCode",
               "documentation": {
                 "identifier": "regionEndCode",
                 "newPage": false,
                 "searchKey": "trace.regionEndCode",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -73,6 +57,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst regionEndCode = uint64(1)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/trace#regionStartCode",
+              "documentation": {
+                "identifier": "regionStartCode",
+                "newPage": false,
+                "searchKey": "trace.regionStartCode",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const regionStartCode"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst regionStartCode = uint64(0)\n```\n\n"
               },
               "children": null
             }
@@ -87,7 +95,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -100,34 +110,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/runtime/trace#lastTaskID",
-              "documentation": {
-                "identifier": "lastTaskID",
-                "newPage": false,
-                "searchKey": "trace.lastTaskID",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var lastTaskID"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar lastTaskID uint64 = 0 // task id issued last time\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/runtime/trace#bgTask",
               "documentation": {
                 "identifier": "bgTask",
                 "newPage": false,
                 "searchKey": "trace.bgTask",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -144,12 +134,38 @@
           },
           {
             "node": {
+              "pathID": "/runtime/trace#lastTaskID",
+              "documentation": {
+                "identifier": "lastTaskID",
+                "newPage": false,
+                "searchKey": "trace.lastTaskID",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var lastTaskID"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar lastTaskID uint64 = 0 // task id issued last time\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/runtime/trace#noopRegion",
               "documentation": {
                 "identifier": "noopRegion",
                 "newPage": false,
                 "searchKey": "trace.noopRegion",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -172,6 +188,8 @@
                 "newPage": false,
                 "searchKey": "trace.tracing",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -196,7 +214,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -209,24 +229,69 @@
         "children": [
           {
             "node": {
-              "pathID": "/runtime/trace#traceContextKey",
+              "pathID": "/runtime/trace#Region",
               "documentation": {
-                "identifier": "traceContextKey",
+                "identifier": "Region",
                 "newPage": false,
-                "searchKey": "trace.traceContextKey",
+                "searchKey": "trace.Region",
                 "tags": [
-                  "private"
+                  "struct"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type traceContextKey struct{}"
+                "value": "type Region struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype traceContextKey struct{}\n```\n\n"
+                "value": "```Go\ntype Region struct {\n\tid         uint64\n\tregionType string\n}\n```\n\nRegion is a region of code whose execution time interval is traced. \n\n"
               },
-              "children": null
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/runtime/trace#StartRegion",
+                    "documentation": {
+                      "identifier": "StartRegion",
+                      "newPage": false,
+                      "searchKey": "trace.StartRegion",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func StartRegion(ctx context.Context, regionType string) *Region"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc StartRegion(ctx context.Context, regionType string) *Region\n```\n\nStartRegion starts a region and returns a function for marking the end of the region. The returned Region's End function must be called from the same goroutine where the region was started. Within each goroutine, regions must nest. That is, regions started after this region must be ended before this region can be ended. Recommended usage is \n\n```\ndefer trace.StartRegion(ctx, \"myTracedRegion\").End()\n\n```\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/runtime/trace#Region.End",
+                    "documentation": {
+                      "identifier": "Region.End",
+                      "newPage": false,
+                      "searchKey": "trace.Region.End",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Region) End()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Region) End()\n```\n\nEnd marks the end of the traced code region. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
             }
           },
           {
@@ -236,7 +301,9 @@
                 "identifier": "Task",
                 "newPage": false,
                 "searchKey": "trace.Task",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -254,7 +321,9 @@
                       "identifier": "NewTask",
                       "newPage": false,
                       "searchKey": "trace.NewTask",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -275,6 +344,7 @@
                       "newPage": false,
                       "searchKey": "trace.fromContext",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -296,7 +366,9 @@
                       "identifier": "Task.End",
                       "newPage": false,
                       "searchKey": "trace.Task.End",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -314,63 +386,25 @@
           },
           {
             "node": {
-              "pathID": "/runtime/trace#Region",
+              "pathID": "/runtime/trace#traceContextKey",
               "documentation": {
-                "identifier": "Region",
+                "identifier": "traceContextKey",
                 "newPage": false,
-                "searchKey": "trace.Region",
-                "tags": null
+                "searchKey": "trace.traceContextKey",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type Region struct"
+                "value": "type traceContextKey struct{}"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype Region struct {\n\tid         uint64\n\tregionType string\n}\n```\n\nRegion is a region of code whose execution time interval is traced. \n\n"
+                "value": "```Go\ntype traceContextKey struct{}\n```\n\n"
               },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/runtime/trace#StartRegion",
-                    "documentation": {
-                      "identifier": "StartRegion",
-                      "newPage": false,
-                      "searchKey": "trace.StartRegion",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func StartRegion(ctx context.Context, regionType string) *Region"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc StartRegion(ctx context.Context, regionType string) *Region\n```\n\nStartRegion starts a region and returns a function for marking the end of the region. The returned Region's End function must be called from the same goroutine where the region was started. Within each goroutine, regions must nest. That is, regions started after this region must be ended before this region can be ended. Recommended usage is \n\n```\ndefer trace.StartRegion(ctx, \"myTracedRegion\").End()\n\n```\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/runtime/trace#Region.End",
-                    "documentation": {
-                      "identifier": "Region.End",
-                      "newPage": false,
-                      "searchKey": "trace.Region.End",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Region) End()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Region) End()\n```\n\nEnd marks the end of the traced code region. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
+              "children": null
             }
           }
         ]
@@ -383,7 +417,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -396,22 +432,22 @@
         "children": [
           {
             "node": {
-              "pathID": "/runtime/trace#newID",
+              "pathID": "/runtime/trace#IsEnabled",
               "documentation": {
-                "identifier": "newID",
+                "identifier": "IsEnabled",
                 "newPage": false,
-                "searchKey": "trace.newID",
+                "searchKey": "trace.IsEnabled",
                 "tags": [
-                  "private"
+                  "function"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func newID() uint64"
+                "value": "func IsEnabled() bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc newID() uint64\n```\n\n"
+                "value": "```Go\nfunc IsEnabled() bool\n```\n\nIsEnabled reports whether tracing is enabled. The information is advisory only. The tracing status may have changed by the time this function returns. \n\n"
               },
               "children": null
             }
@@ -423,7 +459,9 @@
                 "identifier": "Log",
                 "newPage": false,
                 "searchKey": "trace.Log",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -443,7 +481,9 @@
                 "identifier": "Logf",
                 "newPage": false,
                 "searchKey": "trace.Logf",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -458,12 +498,58 @@
           },
           {
             "node": {
+              "pathID": "/runtime/trace#Start",
+              "documentation": {
+                "identifier": "Start",
+                "newPage": false,
+                "searchKey": "trace.Start",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Start(w io.Writer) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Start(w io.Writer) error\n```\n\nStart enables tracing for the current program. While tracing, the trace will be buffered and written to w. Start returns an error if tracing is already enabled. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/trace#Stop",
+              "documentation": {
+                "identifier": "Stop",
+                "newPage": false,
+                "searchKey": "trace.Stop",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Stop()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Stop()\n```\n\nStop stops the current tracing, if any. Stop only returns after all the writes for the trace have completed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/runtime/trace#WithRegion",
               "documentation": {
                 "identifier": "WithRegion",
                 "newPage": false,
                 "searchKey": "trace.WithRegion",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -478,20 +564,69 @@
           },
           {
             "node": {
-              "pathID": "/runtime/trace#IsEnabled",
+              "pathID": "/runtime/trace#newID",
               "documentation": {
-                "identifier": "IsEnabled",
+                "identifier": "newID",
                 "newPage": false,
-                "searchKey": "trace.IsEnabled",
-                "tags": null
+                "searchKey": "trace.newID",
+                "tags": [
+                  "function",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func IsEnabled() bool"
+                "value": "func newID() uint64"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc IsEnabled() bool\n```\n\nIsEnabled reports whether tracing is enabled. The information is advisory only. The tracing status may have changed by the time this function returns. \n\n"
+                "value": "```Go\nfunc newID() uint64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/trace#userLog",
+              "documentation": {
+                "identifier": "userLog",
+                "newPage": false,
+                "searchKey": "trace.userLog",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func userLog(id uint64, category, message string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc userLog(id uint64, category, message string)\n```\n\nemits UserLog event. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/trace#userRegion",
+              "documentation": {
+                "identifier": "userRegion",
+                "newPage": false,
+                "searchKey": "trace.userRegion",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func userRegion(id, mode uint64, regionType string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc userRegion(id, mode uint64, regionType string)\n```\n\nemits UserRegion event. \n\n"
               },
               "children": null
             }
@@ -504,6 +639,7 @@
                 "newPage": false,
                 "searchKey": "trace.userTaskCreate",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -526,6 +662,7 @@
                 "newPage": false,
                 "searchKey": "trace.userTaskEnd",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -536,90 +673,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc userTaskEnd(id uint64)\n```\n\nemits UserTaskEnd event. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/trace#userRegion",
-              "documentation": {
-                "identifier": "userRegion",
-                "newPage": false,
-                "searchKey": "trace.userRegion",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func userRegion(id, mode uint64, regionType string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc userRegion(id, mode uint64, regionType string)\n```\n\nemits UserRegion event. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/trace#userLog",
-              "documentation": {
-                "identifier": "userLog",
-                "newPage": false,
-                "searchKey": "trace.userLog",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func userLog(id uint64, category, message string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc userLog(id uint64, category, message string)\n```\n\nemits UserLog event. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/trace#Start",
-              "documentation": {
-                "identifier": "Start",
-                "newPage": false,
-                "searchKey": "trace.Start",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Start(w io.Writer) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Start(w io.Writer) error\n```\n\nStart enables tracing for the current program. While tracing, the trace will be buffered and written to w. Start returns an error if tracing is already enabled. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/trace#Stop",
-              "documentation": {
-                "identifier": "Stop",
-                "newPage": false,
-                "searchKey": "trace.Stop",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Stop()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Stop()\n```\n\nStop stops the current tracing, if any. Stop only returns after all the writes for the trace have completed. \n\n"
               },
               "children": null
             }

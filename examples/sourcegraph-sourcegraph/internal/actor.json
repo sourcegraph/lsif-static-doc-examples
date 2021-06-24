@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/actor",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "actor.actorKey",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -89,7 +94,9 @@
                 "identifier": "Actor",
                 "newPage": false,
                 "searchKey": "actor.Actor",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -102,32 +109,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/actor#FromUser",
-                    "documentation": {
-                      "identifier": "FromUser",
-                      "newPage": false,
-                      "searchKey": "actor.FromUser",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func FromUser(uid int32) *Actor"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc FromUser(uid int32) *Actor\n```\n\nFromUser returns an actor corresponding to a user \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/actor#FromContext",
                     "documentation": {
                       "identifier": "FromContext",
                       "newPage": false,
                       "searchKey": "actor.FromContext",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -142,20 +131,44 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/actor#Actor.UIDString",
+                    "pathID": "/internal/actor#FromUser",
                     "documentation": {
-                      "identifier": "Actor.UIDString",
+                      "identifier": "FromUser",
                       "newPage": false,
-                      "searchKey": "actor.Actor.UIDString",
-                      "tags": null
+                      "searchKey": "actor.FromUser",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (a *Actor) UIDString() string"
+                      "value": "func FromUser(uid int32) *Actor"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (a *Actor) UIDString() string\n```\n\nUIDString is a helper method that returns the UID as a string. \n\n"
+                      "value": "```Go\nfunc FromUser(uid int32) *Actor\n```\n\nFromUser returns an actor corresponding to a user \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/actor#Actor.IsAuthenticated",
+                    "documentation": {
+                      "identifier": "Actor.IsAuthenticated",
+                      "newPage": false,
+                      "searchKey": "actor.Actor.IsAuthenticated",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *Actor) IsAuthenticated() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *Actor) IsAuthenticated() bool\n```\n\nIsAuthenticated returns true if the Actor is derived from an authenticated user. \n\n"
                     },
                     "children": null
                   }
@@ -167,7 +180,9 @@
                       "identifier": "Actor.String",
                       "newPage": false,
                       "searchKey": "actor.Actor.String",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -182,20 +197,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/actor#Actor.IsAuthenticated",
+                    "pathID": "/internal/actor#Actor.UIDString",
                     "documentation": {
-                      "identifier": "Actor.IsAuthenticated",
+                      "identifier": "Actor.UIDString",
                       "newPage": false,
-                      "searchKey": "actor.Actor.IsAuthenticated",
-                      "tags": null
+                      "searchKey": "actor.Actor.UIDString",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (a *Actor) IsAuthenticated() bool"
+                      "value": "func (a *Actor) UIDString() string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (a *Actor) IsAuthenticated() bool\n```\n\nIsAuthenticated returns true if the Actor is derived from an authenticated user. \n\n"
+                      "value": "```Go\nfunc (a *Actor) UIDString() string\n```\n\nUIDString is a helper method that returns the UID as a string. \n\n"
                     },
                     "children": null
                   }
@@ -211,6 +228,7 @@
                 "newPage": false,
                 "searchKey": "actor.key",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -236,6 +254,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -255,7 +274,9 @@
                 "identifier": "WithActor",
                 "newPage": false,
                 "searchKey": "actor.WithActor",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -275,7 +296,9 @@
                 "identifier": "WithInternalActor",
                 "newPage": false,
                 "searchKey": "actor.WithInternalActor",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",

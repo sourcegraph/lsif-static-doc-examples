@@ -4,7 +4,9 @@
     "identifier": "github-proxy",
     "newPage": true,
     "searchKey": "cmd/github-proxy",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -41,6 +45,8 @@
                 "newPage": false,
                 "searchKey": "main.port",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -65,7 +71,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -78,12 +86,38 @@
         "children": [
           {
             "node": {
+              "pathID": "/cmd/github-proxy#hopHeaders",
+              "documentation": {
+                "identifier": "hopHeaders",
+                "newPage": false,
+                "searchKey": "main.hopHeaders",
+                "tags": [
+                  "variable",
+                  "object",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var hopHeaders"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar hopHeaders = ...\n```\n\nlist obtained from httputil of headers not to forward. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/github-proxy#logRequests",
               "documentation": {
                 "identifier": "logRequests",
                 "newPage": false,
                 "searchKey": "main.logRequests",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
@@ -100,34 +134,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/github-proxy#requestMu",
-              "documentation": {
-                "identifier": "requestMu",
-                "newPage": false,
-                "searchKey": "main.requestMu",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var requestMu"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar requestMu sync.Mutex\n```\n\nrequestMu ensures we only do one request at a time to prevent tripping abuse detection. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/github-proxy#metricWaitingRequestsGauge",
               "documentation": {
                 "identifier": "metricWaitingRequestsGauge",
                 "newPage": false,
                 "searchKey": "main.metricWaitingRequestsGauge",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -144,22 +158,24 @@
           },
           {
             "node": {
-              "pathID": "/cmd/github-proxy#hopHeaders",
+              "pathID": "/cmd/github-proxy#requestMu",
               "documentation": {
-                "identifier": "hopHeaders",
+                "identifier": "requestMu",
                 "newPage": false,
-                "searchKey": "main.hopHeaders",
+                "searchKey": "main.requestMu",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var hopHeaders"
+                "value": "var requestMu"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar hopHeaders = ...\n```\n\nlist obtained from httputil of headers not to forward. \n\n"
+                "value": "```Go\nvar requestMu sync.Mutex\n```\n\nrequestMu ensures we only do one request at a time to prevent tripping abuse detection. \n\n"
               },
               "children": null
             }
@@ -174,7 +190,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -187,22 +205,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/github-proxy#main",
+              "pathID": "/cmd/github-proxy#TestInstrumentHandler",
               "documentation": {
-                "identifier": "main",
+                "identifier": "TestInstrumentHandler",
                 "newPage": false,
-                "searchKey": "main.main",
+                "searchKey": "main.TestInstrumentHandler",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func main()"
+                "value": "func TestInstrumentHandler(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc main()\n```\n\n"
+                "value": "```Go\nfunc TestInstrumentHandler(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -215,6 +235,7 @@
                 "newPage": false,
                 "searchKey": "main.instrumentHandler",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -231,22 +252,23 @@
           },
           {
             "node": {
-              "pathID": "/cmd/github-proxy#TestInstrumentHandler",
+              "pathID": "/cmd/github-proxy#main",
               "documentation": {
-                "identifier": "TestInstrumentHandler",
+                "identifier": "main",
                 "newPage": false,
-                "searchKey": "main.TestInstrumentHandler",
+                "searchKey": "main.main",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestInstrumentHandler(t *testing.T)"
+                "value": "func main()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestInstrumentHandler(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc main()\n```\n\n"
               },
               "children": null
             }

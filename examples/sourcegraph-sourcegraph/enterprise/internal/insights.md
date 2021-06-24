@@ -10,33 +10,22 @@
   * [enterprise/internal/insights/resolvers](insights/resolvers.md)
   * [enterprise/internal/insights/store](insights/store.md)
 * [Functions](#func)
-    * [func IsEnabled() bool](#IsEnabled)
     * [func Init(ctx context.Context, postgres dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner, enterpriseServices *enterprise.Services) error](#Init)
     * [func InitializeCodeInsightsDB() (*sql.DB, error)](#InitializeCodeInsightsDB)
+    * [func IsEnabled() bool](#IsEnabled)
 
 
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
-
-### <a id="IsEnabled" href="#IsEnabled">func IsEnabled() bool</a>
-
-```
-searchKey: insights.IsEnabled
-```
-
-```Go
-func IsEnabled() bool
-```
-
-IsEnabled tells if code insights are enabled or not. 
 
 ### <a id="Init" href="#Init">func Init(ctx context.Context, postgres dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner, enterpriseServices *enterprise.Services) error</a>
 
 ```
 searchKey: insights.Init
+tags: [method]
 ```
 
 ```Go
@@ -49,6 +38,7 @@ Init initializes the given enterpriseServices to include the required resolvers 
 
 ```
 searchKey: insights.InitializeCodeInsightsDB
+tags: [function]
 ```
 
 ```Go
@@ -56,4 +46,17 @@ func InitializeCodeInsightsDB() (*sql.DB, error)
 ```
 
 InitializeCodeInsightsDB connects to and initializes the Code Insights Timescale DB, running database migrations before returning. It is safe to call from multiple services/containers (in which case, one's migration will win and the other caller will receive an error and should exit and restart until the other finishes.) 
+
+### <a id="IsEnabled" href="#IsEnabled">func IsEnabled() bool</a>
+
+```
+searchKey: insights.IsEnabled
+tags: [function]
+```
+
+```Go
+func IsEnabled() bool
+```
+
+IsEnabled tells if code insights are enabled or not. 
 

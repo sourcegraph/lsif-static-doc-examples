@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "testing/internal/testdeps",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,12 +41,61 @@
         "children": [
           {
             "node": {
+              "pathID": "/testing/internal/testdeps#ImportPath",
+              "documentation": {
+                "identifier": "ImportPath",
+                "newPage": false,
+                "searchKey": "testdeps.ImportPath",
+                "tags": [
+                  "variable",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ImportPath"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ImportPath string\n```\n\nImportPath is the import path of the testing binary, set by the generated main function. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing/internal/testdeps#log",
+              "documentation": {
+                "identifier": "log",
+                "newPage": false,
+                "searchKey": "testdeps.log",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var log"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar log testLog\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/testing/internal/testdeps#matchPat",
               "documentation": {
                 "identifier": "matchPat",
                 "newPage": false,
                 "searchKey": "testdeps.matchPat",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -67,6 +118,8 @@
                 "newPage": false,
                 "searchKey": "testdeps.matchRe",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -77,48 +130,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar matchRe *regexp.Regexp\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing/internal/testdeps#ImportPath",
-              "documentation": {
-                "identifier": "ImportPath",
-                "newPage": false,
-                "searchKey": "testdeps.ImportPath",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ImportPath"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ImportPath string\n```\n\nImportPath is the import path of the testing binary, set by the generated main function. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing/internal/testdeps#log",
-              "documentation": {
-                "identifier": "log",
-                "newPage": false,
-                "searchKey": "testdeps.log",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var log"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar log testLog\n```\n\n"
               },
               "children": null
             }
@@ -134,6 +145,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -153,7 +165,9 @@
                 "identifier": "TestDeps",
                 "newPage": false,
                 "searchKey": "testdeps.TestDeps",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -166,92 +180,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/testing/internal/testdeps#TestDeps.MatchString",
-                    "documentation": {
-                      "identifier": "TestDeps.MatchString",
-                      "newPage": false,
-                      "searchKey": "testdeps.TestDeps.MatchString",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (TestDeps) MatchString(pat, str string) (result bool, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (TestDeps) MatchString(pat, str string) (result bool, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/testing/internal/testdeps#TestDeps.StartCPUProfile",
-                    "documentation": {
-                      "identifier": "TestDeps.StartCPUProfile",
-                      "newPage": false,
-                      "searchKey": "testdeps.TestDeps.StartCPUProfile",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (TestDeps) StartCPUProfile(w io.Writer) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (TestDeps) StartCPUProfile(w io.Writer) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/testing/internal/testdeps#TestDeps.StopCPUProfile",
-                    "documentation": {
-                      "identifier": "TestDeps.StopCPUProfile",
-                      "newPage": false,
-                      "searchKey": "testdeps.TestDeps.StopCPUProfile",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (TestDeps) StopCPUProfile()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (TestDeps) StopCPUProfile()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/testing/internal/testdeps#TestDeps.WriteProfileTo",
-                    "documentation": {
-                      "identifier": "TestDeps.WriteProfileTo",
-                      "newPage": false,
-                      "searchKey": "testdeps.TestDeps.WriteProfileTo",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (TestDeps) WriteProfileTo(name string, w io.Writer, debug int) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (TestDeps) WriteProfileTo(name string, w io.Writer, debug int) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/testing/internal/testdeps#TestDeps.ImportPath",
                     "documentation": {
                       "identifier": "TestDeps.ImportPath",
                       "newPage": false,
                       "searchKey": "testdeps.TestDeps.ImportPath",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -266,12 +202,80 @@
                 },
                 {
                   "node": {
+                    "pathID": "/testing/internal/testdeps#TestDeps.MatchString",
+                    "documentation": {
+                      "identifier": "TestDeps.MatchString",
+                      "newPage": false,
+                      "searchKey": "testdeps.TestDeps.MatchString",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (TestDeps) MatchString(pat, str string) (result bool, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (TestDeps) MatchString(pat, str string) (result bool, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/testing/internal/testdeps#TestDeps.SetPanicOnExit0",
+                    "documentation": {
+                      "identifier": "TestDeps.SetPanicOnExit0",
+                      "newPage": false,
+                      "searchKey": "testdeps.TestDeps.SetPanicOnExit0",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (TestDeps) SetPanicOnExit0(v bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (TestDeps) SetPanicOnExit0(v bool)\n```\n\nSetPanicOnExit0 tells the os package whether to panic on os.Exit(0). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/testing/internal/testdeps#TestDeps.StartCPUProfile",
+                    "documentation": {
+                      "identifier": "TestDeps.StartCPUProfile",
+                      "newPage": false,
+                      "searchKey": "testdeps.TestDeps.StartCPUProfile",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (TestDeps) StartCPUProfile(w io.Writer) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (TestDeps) StartCPUProfile(w io.Writer) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/testing/internal/testdeps#TestDeps.StartTestLog",
                     "documentation": {
                       "identifier": "TestDeps.StartTestLog",
                       "newPage": false,
                       "searchKey": "testdeps.TestDeps.StartTestLog",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -286,12 +290,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/testing/internal/testdeps#TestDeps.StopCPUProfile",
+                    "documentation": {
+                      "identifier": "TestDeps.StopCPUProfile",
+                      "newPage": false,
+                      "searchKey": "testdeps.TestDeps.StopCPUProfile",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (TestDeps) StopCPUProfile()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (TestDeps) StopCPUProfile()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/testing/internal/testdeps#TestDeps.StopTestLog",
                     "documentation": {
                       "identifier": "TestDeps.StopTestLog",
                       "newPage": false,
                       "searchKey": "testdeps.TestDeps.StopTestLog",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -306,20 +334,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/testing/internal/testdeps#TestDeps.SetPanicOnExit0",
+                    "pathID": "/testing/internal/testdeps#TestDeps.WriteProfileTo",
                     "documentation": {
-                      "identifier": "TestDeps.SetPanicOnExit0",
+                      "identifier": "TestDeps.WriteProfileTo",
                       "newPage": false,
-                      "searchKey": "testdeps.TestDeps.SetPanicOnExit0",
-                      "tags": null
+                      "searchKey": "testdeps.TestDeps.WriteProfileTo",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (TestDeps) SetPanicOnExit0(v bool)"
+                      "value": "func (TestDeps) WriteProfileTo(name string, w io.Writer, debug int) error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (TestDeps) SetPanicOnExit0(v bool)\n```\n\nSetPanicOnExit0 tells the os package whether to panic on os.Exit(0). \n\n"
+                      "value": "```Go\nfunc (TestDeps) WriteProfileTo(name string, w io.Writer, debug int) error\n```\n\n"
                     },
                     "children": null
                   }
@@ -335,6 +365,7 @@
                 "newPage": false,
                 "searchKey": "testdeps.testLog",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -349,12 +380,36 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/testing/internal/testdeps#testLog.Chdir",
+                    "documentation": {
+                      "identifier": "testLog.Chdir",
+                      "newPage": false,
+                      "searchKey": "testdeps.testLog.Chdir",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *testLog) Chdir(name string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *testLog) Chdir(name string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/testing/internal/testdeps#testLog.Getenv",
                     "documentation": {
                       "identifier": "testLog.Getenv",
                       "newPage": false,
                       "searchKey": "testdeps.testLog.Getenv",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -377,6 +432,7 @@
                       "newPage": false,
                       "searchKey": "testdeps.testLog.Open",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -399,6 +455,7 @@
                       "newPage": false,
                       "searchKey": "testdeps.testLog.Stat",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -415,34 +472,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/testing/internal/testdeps#testLog.Chdir",
-                    "documentation": {
-                      "identifier": "testLog.Chdir",
-                      "newPage": false,
-                      "searchKey": "testdeps.testLog.Chdir",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (l *testLog) Chdir(name string)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (l *testLog) Chdir(name string)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/testing/internal/testdeps#testLog.add",
                     "documentation": {
                       "identifier": "testLog.add",
                       "newPage": false,
                       "searchKey": "testdeps.testLog.add",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },

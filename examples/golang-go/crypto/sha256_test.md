@@ -3,33 +3,22 @@
 ## Index
 
 * [Functions](#func)
-    * [func ExampleSum256()](#ExampleSum256)
     * [func ExampleNew()](#ExampleNew)
     * [func ExampleNew_file()](#ExampleNew_file)
+    * [func ExampleSum256()](#ExampleSum256)
 
 
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
-```
-
-### <a id="ExampleSum256" href="#ExampleSum256">func ExampleSum256()</a>
-
-```
-searchKey: sha256_test.ExampleSum256
-tags: [private]
-```
-
-```Go
-func ExampleSum256()
+tags: [package private]
 ```
 
 ### <a id="ExampleNew" href="#ExampleNew">func ExampleNew()</a>
 
 ```
 searchKey: sha256_test.ExampleNew
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -40,10 +29,21 @@ func ExampleNew()
 
 ```
 searchKey: sha256_test.ExampleNew_file
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func ExampleNew_file()
+```
+
+### <a id="ExampleSum256" href="#ExampleSum256">func ExampleSum256()</a>
+
+```
+searchKey: sha256_test.ExampleSum256
+tags: [function private]
+```
+
+```Go
+func ExampleSum256()
 ```
 

@@ -9,13 +9,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="TimescaleDB" href="#TimescaleDB">func TimescaleDB(t testing.TB) (db *sql.DB, cleanup func())</a>
 
 ```
 searchKey: dbtesting.TimescaleDB
+tags: [method]
 ```
 
 ```Go

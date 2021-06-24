@@ -4,7 +4,9 @@
     "identifier": "fnv",
     "newPage": true,
     "searchKey": "hash/fnv",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,276 +39,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/hash/fnv#offset32",
-              "documentation": {
-                "identifier": "offset32",
-                "newPage": false,
-                "searchKey": "fnv.offset32",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const offset32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst offset32 = 2166136261\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#offset64",
-              "documentation": {
-                "identifier": "offset64",
-                "newPage": false,
-                "searchKey": "fnv.offset64",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const offset64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst offset64 = 14695981039346656037\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#offset128Lower",
-              "documentation": {
-                "identifier": "offset128Lower",
-                "newPage": false,
-                "searchKey": "fnv.offset128Lower",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const offset128Lower"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst offset128Lower = 0x62b821756295c58d\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#offset128Higher",
-              "documentation": {
-                "identifier": "offset128Higher",
-                "newPage": false,
-                "searchKey": "fnv.offset128Higher",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const offset128Higher"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst offset128Higher = 0x6c62272e07bb0142\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#prime32",
-              "documentation": {
-                "identifier": "prime32",
-                "newPage": false,
-                "searchKey": "fnv.prime32",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const prime32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst prime32 = 16777619\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#prime64",
-              "documentation": {
-                "identifier": "prime64",
-                "newPage": false,
-                "searchKey": "fnv.prime64",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const prime64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst prime64 = 1099511628211\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#prime128Lower",
-              "documentation": {
-                "identifier": "prime128Lower",
-                "newPage": false,
-                "searchKey": "fnv.prime128Lower",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const prime128Lower"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst prime128Lower = 0x13b\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#prime128Shift",
-              "documentation": {
-                "identifier": "prime128Shift",
-                "newPage": false,
-                "searchKey": "fnv.prime128Shift",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const prime128Shift"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst prime128Shift = 24\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#magic32",
-              "documentation": {
-                "identifier": "magic32",
-                "newPage": false,
-                "searchKey": "fnv.magic32",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const magic32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst magic32 = \"fnv\\x01\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#magic32a",
-              "documentation": {
-                "identifier": "magic32a",
-                "newPage": false,
-                "searchKey": "fnv.magic32a",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const magic32a"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst magic32a = \"fnv\\x02\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#magic64",
-              "documentation": {
-                "identifier": "magic64",
-                "newPage": false,
-                "searchKey": "fnv.magic64",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const magic64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst magic64 = \"fnv\\x03\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#magic64a",
-              "documentation": {
-                "identifier": "magic64a",
-                "newPage": false,
-                "searchKey": "fnv.magic64a",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const magic64a"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst magic64a = \"fnv\\x04\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/hash/fnv#magic128",
               "documentation": {
                 "identifier": "magic128",
                 "newPage": false,
                 "searchKey": "fnv.magic128",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -327,6 +69,8 @@
                 "newPage": false,
                 "searchKey": "fnv.magic128a",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -343,12 +87,134 @@
           },
           {
             "node": {
+              "pathID": "/hash/fnv#magic32",
+              "documentation": {
+                "identifier": "magic32",
+                "newPage": false,
+                "searchKey": "fnv.magic32",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const magic32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst magic32 = \"fnv\\x01\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#magic32a",
+              "documentation": {
+                "identifier": "magic32a",
+                "newPage": false,
+                "searchKey": "fnv.magic32a",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const magic32a"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst magic32a = \"fnv\\x02\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#magic64",
+              "documentation": {
+                "identifier": "magic64",
+                "newPage": false,
+                "searchKey": "fnv.magic64",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const magic64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst magic64 = \"fnv\\x03\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#magic64a",
+              "documentation": {
+                "identifier": "magic64a",
+                "newPage": false,
+                "searchKey": "fnv.magic64a",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const magic64a"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst magic64a = \"fnv\\x04\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#marshaledSize128",
+              "documentation": {
+                "identifier": "marshaledSize128",
+                "newPage": false,
+                "searchKey": "fnv.marshaledSize128",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const marshaledSize128"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst marshaledSize128 = len(magic128) + 8*2\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/hash/fnv#marshaledSize32",
               "documentation": {
                 "identifier": "marshaledSize32",
                 "newPage": false,
                 "searchKey": "fnv.marshaledSize32",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -371,6 +237,8 @@
                 "newPage": false,
                 "searchKey": "fnv.marshaledSize64",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -387,22 +255,192 @@
           },
           {
             "node": {
-              "pathID": "/hash/fnv#marshaledSize128",
+              "pathID": "/hash/fnv#offset128Higher",
               "documentation": {
-                "identifier": "marshaledSize128",
+                "identifier": "offset128Higher",
                 "newPage": false,
-                "searchKey": "fnv.marshaledSize128",
+                "searchKey": "fnv.offset128Higher",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const marshaledSize128"
+                "value": "const offset128Higher"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst marshaledSize128 = len(magic128) + 8*2\n```\n\n"
+                "value": "```Go\nconst offset128Higher = 0x6c62272e07bb0142\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#offset128Lower",
+              "documentation": {
+                "identifier": "offset128Lower",
+                "newPage": false,
+                "searchKey": "fnv.offset128Lower",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const offset128Lower"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst offset128Lower = 0x62b821756295c58d\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#offset32",
+              "documentation": {
+                "identifier": "offset32",
+                "newPage": false,
+                "searchKey": "fnv.offset32",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const offset32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst offset32 = 2166136261\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#offset64",
+              "documentation": {
+                "identifier": "offset64",
+                "newPage": false,
+                "searchKey": "fnv.offset64",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const offset64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst offset64 = 14695981039346656037\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#prime128Lower",
+              "documentation": {
+                "identifier": "prime128Lower",
+                "newPage": false,
+                "searchKey": "fnv.prime128Lower",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const prime128Lower"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst prime128Lower = 0x13b\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#prime128Shift",
+              "documentation": {
+                "identifier": "prime128Shift",
+                "newPage": false,
+                "searchKey": "fnv.prime128Shift",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const prime128Shift"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst prime128Shift = 24\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#prime32",
+              "documentation": {
+                "identifier": "prime32",
+                "newPage": false,
+                "searchKey": "fnv.prime32",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const prime32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst prime32 = 16777619\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#prime64",
+              "documentation": {
+                "identifier": "prime64",
+                "newPage": false,
+                "searchKey": "fnv.prime64",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const prime64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst prime64 = 1099511628211\n```\n\n"
               },
               "children": null
             }
@@ -417,7 +455,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -430,100 +470,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/hash/fnv#golden32",
-              "documentation": {
-                "identifier": "golden32",
-                "newPage": false,
-                "searchKey": "fnv.golden32",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var golden32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar golden32 = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#golden32a",
-              "documentation": {
-                "identifier": "golden32a",
-                "newPage": false,
-                "searchKey": "fnv.golden32a",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var golden32a"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar golden32a = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#golden64",
-              "documentation": {
-                "identifier": "golden64",
-                "newPage": false,
-                "searchKey": "fnv.golden64",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var golden64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar golden64 = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#golden64a",
-              "documentation": {
-                "identifier": "golden64a",
-                "newPage": false,
-                "searchKey": "fnv.golden64a",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var golden64a"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar golden64a = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/hash/fnv#golden128",
               "documentation": {
                 "identifier": "golden128",
                 "newPage": false,
                 "searchKey": "fnv.golden128",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -546,6 +501,9 @@
                 "newPage": false,
                 "searchKey": "fnv.golden128a",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -556,6 +514,106 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar golden128a = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#golden32",
+              "documentation": {
+                "identifier": "golden32",
+                "newPage": false,
+                "searchKey": "fnv.golden32",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var golden32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar golden32 = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#golden32a",
+              "documentation": {
+                "identifier": "golden32a",
+                "newPage": false,
+                "searchKey": "fnv.golden32a",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var golden32a"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar golden32a = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#golden64",
+              "documentation": {
+                "identifier": "golden64",
+                "newPage": false,
+                "searchKey": "fnv.golden64",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var golden64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar golden64 = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#golden64a",
+              "documentation": {
+                "identifier": "golden64a",
+                "newPage": false,
+                "searchKey": "fnv.golden64a",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var golden64a"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar golden64a = ...\n```\n\n"
               },
               "children": null
             }
@@ -570,7 +628,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -583,798 +643,25 @@
         "children": [
           {
             "node": {
-              "pathID": "/hash/fnv#sum32",
+              "pathID": "/hash/fnv#golden",
               "documentation": {
-                "identifier": "sum32",
+                "identifier": "golden",
                 "newPage": false,
-                "searchKey": "fnv.sum32",
+                "searchKey": "fnv.golden",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type sum32 uint32"
+                "value": "type golden struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype sum32 uint32\n```\n\n"
+                "value": "```Go\ntype golden struct {\n\tout       []byte\n\tin        string\n\thalfState string // marshaled hash state after first half of in written, used by TestGoldenMarshal\n}\n```\n\n"
               },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum32.Reset",
-                    "documentation": {
-                      "identifier": "sum32.Reset",
-                      "newPage": false,
-                      "searchKey": "fnv.sum32.Reset",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum32) Reset()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum32) Reset()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum32.Sum32",
-                    "documentation": {
-                      "identifier": "sum32.Sum32",
-                      "newPage": false,
-                      "searchKey": "fnv.sum32.Sum32",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum32) Sum32() uint32"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum32) Sum32() uint32\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum32.Write",
-                    "documentation": {
-                      "identifier": "sum32.Write",
-                      "newPage": false,
-                      "searchKey": "fnv.sum32.Write",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum32) Write(data []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum32) Write(data []byte) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum32.Size",
-                    "documentation": {
-                      "identifier": "sum32.Size",
-                      "newPage": false,
-                      "searchKey": "fnv.sum32.Size",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum32) Size() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum32) Size() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum32.BlockSize",
-                    "documentation": {
-                      "identifier": "sum32.BlockSize",
-                      "newPage": false,
-                      "searchKey": "fnv.sum32.BlockSize",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum32) BlockSize() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum32) BlockSize() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum32.Sum",
-                    "documentation": {
-                      "identifier": "sum32.Sum",
-                      "newPage": false,
-                      "searchKey": "fnv.sum32.Sum",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum32) Sum(in []byte) []byte"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum32) Sum(in []byte) []byte\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum32.MarshalBinary",
-                    "documentation": {
-                      "identifier": "sum32.MarshalBinary",
-                      "newPage": false,
-                      "searchKey": "fnv.sum32.MarshalBinary",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum32) MarshalBinary() ([]byte, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum32) MarshalBinary() ([]byte, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum32.UnmarshalBinary",
-                    "documentation": {
-                      "identifier": "sum32.UnmarshalBinary",
-                      "newPage": false,
-                      "searchKey": "fnv.sum32.UnmarshalBinary",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum32) UnmarshalBinary(b []byte) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum32) UnmarshalBinary(b []byte) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#sum32a",
-              "documentation": {
-                "identifier": "sum32a",
-                "newPage": false,
-                "searchKey": "fnv.sum32a",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type sum32a uint32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype sum32a uint32\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum32a.Reset",
-                    "documentation": {
-                      "identifier": "sum32a.Reset",
-                      "newPage": false,
-                      "searchKey": "fnv.sum32a.Reset",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum32a) Reset()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum32a) Reset()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum32a.Sum32",
-                    "documentation": {
-                      "identifier": "sum32a.Sum32",
-                      "newPage": false,
-                      "searchKey": "fnv.sum32a.Sum32",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum32a) Sum32() uint32"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum32a) Sum32() uint32\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum32a.Write",
-                    "documentation": {
-                      "identifier": "sum32a.Write",
-                      "newPage": false,
-                      "searchKey": "fnv.sum32a.Write",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum32a) Write(data []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum32a) Write(data []byte) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum32a.Size",
-                    "documentation": {
-                      "identifier": "sum32a.Size",
-                      "newPage": false,
-                      "searchKey": "fnv.sum32a.Size",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum32a) Size() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum32a) Size() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum32a.BlockSize",
-                    "documentation": {
-                      "identifier": "sum32a.BlockSize",
-                      "newPage": false,
-                      "searchKey": "fnv.sum32a.BlockSize",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum32a) BlockSize() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum32a) BlockSize() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum32a.Sum",
-                    "documentation": {
-                      "identifier": "sum32a.Sum",
-                      "newPage": false,
-                      "searchKey": "fnv.sum32a.Sum",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum32a) Sum(in []byte) []byte"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum32a) Sum(in []byte) []byte\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum32a.MarshalBinary",
-                    "documentation": {
-                      "identifier": "sum32a.MarshalBinary",
-                      "newPage": false,
-                      "searchKey": "fnv.sum32a.MarshalBinary",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum32a) MarshalBinary() ([]byte, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum32a) MarshalBinary() ([]byte, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum32a.UnmarshalBinary",
-                    "documentation": {
-                      "identifier": "sum32a.UnmarshalBinary",
-                      "newPage": false,
-                      "searchKey": "fnv.sum32a.UnmarshalBinary",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum32a) UnmarshalBinary(b []byte) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum32a) UnmarshalBinary(b []byte) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#sum64",
-              "documentation": {
-                "identifier": "sum64",
-                "newPage": false,
-                "searchKey": "fnv.sum64",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type sum64 uint64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype sum64 uint64\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum64.Reset",
-                    "documentation": {
-                      "identifier": "sum64.Reset",
-                      "newPage": false,
-                      "searchKey": "fnv.sum64.Reset",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum64) Reset()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum64) Reset()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum64.Sum64",
-                    "documentation": {
-                      "identifier": "sum64.Sum64",
-                      "newPage": false,
-                      "searchKey": "fnv.sum64.Sum64",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum64) Sum64() uint64"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum64) Sum64() uint64\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum64.Write",
-                    "documentation": {
-                      "identifier": "sum64.Write",
-                      "newPage": false,
-                      "searchKey": "fnv.sum64.Write",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum64) Write(data []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum64) Write(data []byte) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum64.Size",
-                    "documentation": {
-                      "identifier": "sum64.Size",
-                      "newPage": false,
-                      "searchKey": "fnv.sum64.Size",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum64) Size() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum64) Size() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum64.BlockSize",
-                    "documentation": {
-                      "identifier": "sum64.BlockSize",
-                      "newPage": false,
-                      "searchKey": "fnv.sum64.BlockSize",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum64) BlockSize() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum64) BlockSize() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum64.Sum",
-                    "documentation": {
-                      "identifier": "sum64.Sum",
-                      "newPage": false,
-                      "searchKey": "fnv.sum64.Sum",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum64) Sum(in []byte) []byte"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum64) Sum(in []byte) []byte\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum64.MarshalBinary",
-                    "documentation": {
-                      "identifier": "sum64.MarshalBinary",
-                      "newPage": false,
-                      "searchKey": "fnv.sum64.MarshalBinary",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum64) MarshalBinary() ([]byte, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum64) MarshalBinary() ([]byte, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum64.UnmarshalBinary",
-                    "documentation": {
-                      "identifier": "sum64.UnmarshalBinary",
-                      "newPage": false,
-                      "searchKey": "fnv.sum64.UnmarshalBinary",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum64) UnmarshalBinary(b []byte) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum64) UnmarshalBinary(b []byte) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#sum64a",
-              "documentation": {
-                "identifier": "sum64a",
-                "newPage": false,
-                "searchKey": "fnv.sum64a",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type sum64a uint64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype sum64a uint64\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum64a.Reset",
-                    "documentation": {
-                      "identifier": "sum64a.Reset",
-                      "newPage": false,
-                      "searchKey": "fnv.sum64a.Reset",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum64a) Reset()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum64a) Reset()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum64a.Sum64",
-                    "documentation": {
-                      "identifier": "sum64a.Sum64",
-                      "newPage": false,
-                      "searchKey": "fnv.sum64a.Sum64",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum64a) Sum64() uint64"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum64a) Sum64() uint64\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum64a.Write",
-                    "documentation": {
-                      "identifier": "sum64a.Write",
-                      "newPage": false,
-                      "searchKey": "fnv.sum64a.Write",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum64a) Write(data []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum64a) Write(data []byte) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum64a.Size",
-                    "documentation": {
-                      "identifier": "sum64a.Size",
-                      "newPage": false,
-                      "searchKey": "fnv.sum64a.Size",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum64a) Size() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum64a) Size() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum64a.BlockSize",
-                    "documentation": {
-                      "identifier": "sum64a.BlockSize",
-                      "newPage": false,
-                      "searchKey": "fnv.sum64a.BlockSize",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum64a) BlockSize() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum64a) BlockSize() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum64a.Sum",
-                    "documentation": {
-                      "identifier": "sum64a.Sum",
-                      "newPage": false,
-                      "searchKey": "fnv.sum64a.Sum",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum64a) Sum(in []byte) []byte"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum64a) Sum(in []byte) []byte\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum64a.MarshalBinary",
-                    "documentation": {
-                      "identifier": "sum64a.MarshalBinary",
-                      "newPage": false,
-                      "searchKey": "fnv.sum64a.MarshalBinary",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum64a) MarshalBinary() ([]byte, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum64a) MarshalBinary() ([]byte, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum64a.UnmarshalBinary",
-                    "documentation": {
-                      "identifier": "sum64a.UnmarshalBinary",
-                      "newPage": false,
-                      "searchKey": "fnv.sum64a.UnmarshalBinary",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum64a) UnmarshalBinary(b []byte) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum64a) UnmarshalBinary(b []byte) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
+              "children": null
             }
           },
           {
@@ -1385,6 +672,8 @@
                 "newPage": false,
                 "searchKey": "fnv.sum128",
                 "tags": [
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -1399,78 +688,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/hash/fnv#sum128.Reset",
-                    "documentation": {
-                      "identifier": "sum128.Reset",
-                      "newPage": false,
-                      "searchKey": "fnv.sum128.Reset",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum128) Reset()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum128) Reset()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum128.Write",
-                    "documentation": {
-                      "identifier": "sum128.Write",
-                      "newPage": false,
-                      "searchKey": "fnv.sum128.Write",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum128) Write(data []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum128) Write(data []byte) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum128.Size",
-                    "documentation": {
-                      "identifier": "sum128.Size",
-                      "newPage": false,
-                      "searchKey": "fnv.sum128.Size",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum128) Size() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum128) Size() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/hash/fnv#sum128.BlockSize",
                     "documentation": {
                       "identifier": "sum128.BlockSize",
                       "newPage": false,
                       "searchKey": "fnv.sum128.BlockSize",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1487,34 +711,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/hash/fnv#sum128.Sum",
-                    "documentation": {
-                      "identifier": "sum128.Sum",
-                      "newPage": false,
-                      "searchKey": "fnv.sum128.Sum",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum128) Sum(in []byte) []byte"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum128) Sum(in []byte) []byte\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/hash/fnv#sum128.MarshalBinary",
                     "documentation": {
                       "identifier": "sum128.MarshalBinary",
                       "newPage": false,
                       "searchKey": "fnv.sum128.MarshalBinary",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1531,12 +734,82 @@
                 },
                 {
                   "node": {
+                    "pathID": "/hash/fnv#sum128.Reset",
+                    "documentation": {
+                      "identifier": "sum128.Reset",
+                      "newPage": false,
+                      "searchKey": "fnv.sum128.Reset",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum128) Reset()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum128) Reset()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum128.Size",
+                    "documentation": {
+                      "identifier": "sum128.Size",
+                      "newPage": false,
+                      "searchKey": "fnv.sum128.Size",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum128) Size() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum128) Size() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum128.Sum",
+                    "documentation": {
+                      "identifier": "sum128.Sum",
+                      "newPage": false,
+                      "searchKey": "fnv.sum128.Sum",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum128) Sum(in []byte) []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum128) Sum(in []byte) []byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/hash/fnv#sum128.UnmarshalBinary",
                     "documentation": {
                       "identifier": "sum128.UnmarshalBinary",
                       "newPage": false,
                       "searchKey": "fnv.sum128.UnmarshalBinary",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1547,6 +820,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (s *sum128) UnmarshalBinary(b []byte) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum128.Write",
+                    "documentation": {
+                      "identifier": "sum128.Write",
+                      "newPage": false,
+                      "searchKey": "fnv.sum128.Write",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum128) Write(data []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum128) Write(data []byte) (int, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1562,6 +858,8 @@
                 "newPage": false,
                 "searchKey": "fnv.sum128a",
                 "tags": [
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -1576,78 +874,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/hash/fnv#sum128a.Reset",
-                    "documentation": {
-                      "identifier": "sum128a.Reset",
-                      "newPage": false,
-                      "searchKey": "fnv.sum128a.Reset",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum128a) Reset()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum128a) Reset()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum128a.Write",
-                    "documentation": {
-                      "identifier": "sum128a.Write",
-                      "newPage": false,
-                      "searchKey": "fnv.sum128a.Write",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum128a) Write(data []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum128a) Write(data []byte) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/fnv#sum128a.Size",
-                    "documentation": {
-                      "identifier": "sum128a.Size",
-                      "newPage": false,
-                      "searchKey": "fnv.sum128a.Size",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum128a) Size() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum128a) Size() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/hash/fnv#sum128a.BlockSize",
                     "documentation": {
                       "identifier": "sum128a.BlockSize",
                       "newPage": false,
                       "searchKey": "fnv.sum128a.BlockSize",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1664,34 +897,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/hash/fnv#sum128a.Sum",
-                    "documentation": {
-                      "identifier": "sum128a.Sum",
-                      "newPage": false,
-                      "searchKey": "fnv.sum128a.Sum",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sum128a) Sum(in []byte) []byte"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sum128a) Sum(in []byte) []byte\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/hash/fnv#sum128a.MarshalBinary",
                     "documentation": {
                       "identifier": "sum128a.MarshalBinary",
                       "newPage": false,
                       "searchKey": "fnv.sum128a.MarshalBinary",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1708,12 +920,82 @@
                 },
                 {
                   "node": {
+                    "pathID": "/hash/fnv#sum128a.Reset",
+                    "documentation": {
+                      "identifier": "sum128a.Reset",
+                      "newPage": false,
+                      "searchKey": "fnv.sum128a.Reset",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum128a) Reset()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum128a) Reset()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum128a.Size",
+                    "documentation": {
+                      "identifier": "sum128a.Size",
+                      "newPage": false,
+                      "searchKey": "fnv.sum128a.Size",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum128a) Size() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum128a) Size() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum128a.Sum",
+                    "documentation": {
+                      "identifier": "sum128a.Sum",
+                      "newPage": false,
+                      "searchKey": "fnv.sum128a.Sum",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum128a) Sum(in []byte) []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum128a) Sum(in []byte) []byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/hash/fnv#sum128a.UnmarshalBinary",
                     "documentation": {
                       "identifier": "sum128a.UnmarshalBinary",
                       "newPage": false,
                       "searchKey": "fnv.sum128a.UnmarshalBinary",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1727,30 +1009,863 @@
                     },
                     "children": null
                   }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum128a.Write",
+                    "documentation": {
+                      "identifier": "sum128a.Write",
+                      "newPage": false,
+                      "searchKey": "fnv.sum128a.Write",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum128a) Write(data []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum128a) Write(data []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
                 }
               ]
             }
           },
           {
             "node": {
-              "pathID": "/hash/fnv#golden",
+              "pathID": "/hash/fnv#sum32",
               "documentation": {
-                "identifier": "golden",
+                "identifier": "sum32",
                 "newPage": false,
-                "searchKey": "fnv.golden",
+                "searchKey": "fnv.sum32",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type golden struct"
+                "value": "type sum32 uint32"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype golden struct {\n\tout       []byte\n\tin        string\n\thalfState string // marshaled hash state after first half of in written, used by TestGoldenMarshal\n}\n```\n\n"
+                "value": "```Go\ntype sum32 uint32\n```\n\n"
               },
-              "children": null
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum32.BlockSize",
+                    "documentation": {
+                      "identifier": "sum32.BlockSize",
+                      "newPage": false,
+                      "searchKey": "fnv.sum32.BlockSize",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum32) BlockSize() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum32) BlockSize() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum32.MarshalBinary",
+                    "documentation": {
+                      "identifier": "sum32.MarshalBinary",
+                      "newPage": false,
+                      "searchKey": "fnv.sum32.MarshalBinary",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum32) MarshalBinary() ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum32) MarshalBinary() ([]byte, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum32.Reset",
+                    "documentation": {
+                      "identifier": "sum32.Reset",
+                      "newPage": false,
+                      "searchKey": "fnv.sum32.Reset",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum32) Reset()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum32) Reset()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum32.Size",
+                    "documentation": {
+                      "identifier": "sum32.Size",
+                      "newPage": false,
+                      "searchKey": "fnv.sum32.Size",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum32) Size() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum32) Size() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum32.Sum",
+                    "documentation": {
+                      "identifier": "sum32.Sum",
+                      "newPage": false,
+                      "searchKey": "fnv.sum32.Sum",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum32) Sum(in []byte) []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum32) Sum(in []byte) []byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum32.Sum32",
+                    "documentation": {
+                      "identifier": "sum32.Sum32",
+                      "newPage": false,
+                      "searchKey": "fnv.sum32.Sum32",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum32) Sum32() uint32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum32) Sum32() uint32\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum32.UnmarshalBinary",
+                    "documentation": {
+                      "identifier": "sum32.UnmarshalBinary",
+                      "newPage": false,
+                      "searchKey": "fnv.sum32.UnmarshalBinary",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum32) UnmarshalBinary(b []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum32) UnmarshalBinary(b []byte) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum32.Write",
+                    "documentation": {
+                      "identifier": "sum32.Write",
+                      "newPage": false,
+                      "searchKey": "fnv.sum32.Write",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum32) Write(data []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum32) Write(data []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#sum32a",
+              "documentation": {
+                "identifier": "sum32a",
+                "newPage": false,
+                "searchKey": "fnv.sum32a",
+                "tags": [
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type sum32a uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype sum32a uint32\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum32a.BlockSize",
+                    "documentation": {
+                      "identifier": "sum32a.BlockSize",
+                      "newPage": false,
+                      "searchKey": "fnv.sum32a.BlockSize",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum32a) BlockSize() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum32a) BlockSize() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum32a.MarshalBinary",
+                    "documentation": {
+                      "identifier": "sum32a.MarshalBinary",
+                      "newPage": false,
+                      "searchKey": "fnv.sum32a.MarshalBinary",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum32a) MarshalBinary() ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum32a) MarshalBinary() ([]byte, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum32a.Reset",
+                    "documentation": {
+                      "identifier": "sum32a.Reset",
+                      "newPage": false,
+                      "searchKey": "fnv.sum32a.Reset",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum32a) Reset()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum32a) Reset()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum32a.Size",
+                    "documentation": {
+                      "identifier": "sum32a.Size",
+                      "newPage": false,
+                      "searchKey": "fnv.sum32a.Size",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum32a) Size() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum32a) Size() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum32a.Sum",
+                    "documentation": {
+                      "identifier": "sum32a.Sum",
+                      "newPage": false,
+                      "searchKey": "fnv.sum32a.Sum",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum32a) Sum(in []byte) []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum32a) Sum(in []byte) []byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum32a.Sum32",
+                    "documentation": {
+                      "identifier": "sum32a.Sum32",
+                      "newPage": false,
+                      "searchKey": "fnv.sum32a.Sum32",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum32a) Sum32() uint32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum32a) Sum32() uint32\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum32a.UnmarshalBinary",
+                    "documentation": {
+                      "identifier": "sum32a.UnmarshalBinary",
+                      "newPage": false,
+                      "searchKey": "fnv.sum32a.UnmarshalBinary",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum32a) UnmarshalBinary(b []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum32a) UnmarshalBinary(b []byte) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum32a.Write",
+                    "documentation": {
+                      "identifier": "sum32a.Write",
+                      "newPage": false,
+                      "searchKey": "fnv.sum32a.Write",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum32a) Write(data []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum32a) Write(data []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#sum64",
+              "documentation": {
+                "identifier": "sum64",
+                "newPage": false,
+                "searchKey": "fnv.sum64",
+                "tags": [
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type sum64 uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype sum64 uint64\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum64.BlockSize",
+                    "documentation": {
+                      "identifier": "sum64.BlockSize",
+                      "newPage": false,
+                      "searchKey": "fnv.sum64.BlockSize",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum64) BlockSize() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum64) BlockSize() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum64.MarshalBinary",
+                    "documentation": {
+                      "identifier": "sum64.MarshalBinary",
+                      "newPage": false,
+                      "searchKey": "fnv.sum64.MarshalBinary",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum64) MarshalBinary() ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum64) MarshalBinary() ([]byte, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum64.Reset",
+                    "documentation": {
+                      "identifier": "sum64.Reset",
+                      "newPage": false,
+                      "searchKey": "fnv.sum64.Reset",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum64) Reset()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum64) Reset()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum64.Size",
+                    "documentation": {
+                      "identifier": "sum64.Size",
+                      "newPage": false,
+                      "searchKey": "fnv.sum64.Size",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum64) Size() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum64) Size() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum64.Sum",
+                    "documentation": {
+                      "identifier": "sum64.Sum",
+                      "newPage": false,
+                      "searchKey": "fnv.sum64.Sum",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum64) Sum(in []byte) []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum64) Sum(in []byte) []byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum64.Sum64",
+                    "documentation": {
+                      "identifier": "sum64.Sum64",
+                      "newPage": false,
+                      "searchKey": "fnv.sum64.Sum64",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum64) Sum64() uint64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum64) Sum64() uint64\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum64.UnmarshalBinary",
+                    "documentation": {
+                      "identifier": "sum64.UnmarshalBinary",
+                      "newPage": false,
+                      "searchKey": "fnv.sum64.UnmarshalBinary",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum64) UnmarshalBinary(b []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum64) UnmarshalBinary(b []byte) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum64.Write",
+                    "documentation": {
+                      "identifier": "sum64.Write",
+                      "newPage": false,
+                      "searchKey": "fnv.sum64.Write",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum64) Write(data []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum64) Write(data []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#sum64a",
+              "documentation": {
+                "identifier": "sum64a",
+                "newPage": false,
+                "searchKey": "fnv.sum64a",
+                "tags": [
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type sum64a uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype sum64a uint64\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum64a.BlockSize",
+                    "documentation": {
+                      "identifier": "sum64a.BlockSize",
+                      "newPage": false,
+                      "searchKey": "fnv.sum64a.BlockSize",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum64a) BlockSize() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum64a) BlockSize() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum64a.MarshalBinary",
+                    "documentation": {
+                      "identifier": "sum64a.MarshalBinary",
+                      "newPage": false,
+                      "searchKey": "fnv.sum64a.MarshalBinary",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum64a) MarshalBinary() ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum64a) MarshalBinary() ([]byte, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum64a.Reset",
+                    "documentation": {
+                      "identifier": "sum64a.Reset",
+                      "newPage": false,
+                      "searchKey": "fnv.sum64a.Reset",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum64a) Reset()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum64a) Reset()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum64a.Size",
+                    "documentation": {
+                      "identifier": "sum64a.Size",
+                      "newPage": false,
+                      "searchKey": "fnv.sum64a.Size",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum64a) Size() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum64a) Size() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum64a.Sum",
+                    "documentation": {
+                      "identifier": "sum64a.Sum",
+                      "newPage": false,
+                      "searchKey": "fnv.sum64a.Sum",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum64a) Sum(in []byte) []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum64a) Sum(in []byte) []byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum64a.Sum64",
+                    "documentation": {
+                      "identifier": "sum64a.Sum64",
+                      "newPage": false,
+                      "searchKey": "fnv.sum64a.Sum64",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum64a) Sum64() uint64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum64a) Sum64() uint64\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum64a.UnmarshalBinary",
+                    "documentation": {
+                      "identifier": "sum64a.UnmarshalBinary",
+                      "newPage": false,
+                      "searchKey": "fnv.sum64a.UnmarshalBinary",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum64a) UnmarshalBinary(b []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum64a) UnmarshalBinary(b []byte) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/fnv#sum64a.Write",
+                    "documentation": {
+                      "identifier": "sum64a.Write",
+                      "newPage": false,
+                      "searchKey": "fnv.sum64a.Write",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sum64a) Write(data []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sum64a) Write(data []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
             }
           }
         ]
@@ -1763,7 +1878,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1776,80 +1893,144 @@
         "children": [
           {
             "node": {
-              "pathID": "/hash/fnv#New32",
+              "pathID": "/hash/fnv#BenchmarkFnv128KB",
               "documentation": {
-                "identifier": "New32",
+                "identifier": "BenchmarkFnv128KB",
                 "newPage": false,
-                "searchKey": "fnv.New32",
-                "tags": null
+                "searchKey": "fnv.BenchmarkFnv128KB",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func New32() hash.Hash32"
+                "value": "func BenchmarkFnv128KB(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc New32() hash.Hash32\n```\n\nNew32 returns a new 32-bit FNV-1 hash.Hash. Its Sum method will lay the value out in big-endian byte order. \n\n"
+                "value": "```Go\nfunc BenchmarkFnv128KB(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/hash/fnv#New32a",
+              "pathID": "/hash/fnv#BenchmarkFnv128aKB",
               "documentation": {
-                "identifier": "New32a",
+                "identifier": "BenchmarkFnv128aKB",
                 "newPage": false,
-                "searchKey": "fnv.New32a",
-                "tags": null
+                "searchKey": "fnv.BenchmarkFnv128aKB",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func New32a() hash.Hash32"
+                "value": "func BenchmarkFnv128aKB(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc New32a() hash.Hash32\n```\n\nNew32a returns a new 32-bit FNV-1a hash.Hash. Its Sum method will lay the value out in big-endian byte order. \n\n"
+                "value": "```Go\nfunc BenchmarkFnv128aKB(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/hash/fnv#New64",
+              "pathID": "/hash/fnv#BenchmarkFnv32KB",
               "documentation": {
-                "identifier": "New64",
+                "identifier": "BenchmarkFnv32KB",
                 "newPage": false,
-                "searchKey": "fnv.New64",
-                "tags": null
+                "searchKey": "fnv.BenchmarkFnv32KB",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func New64() hash.Hash64"
+                "value": "func BenchmarkFnv32KB(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc New64() hash.Hash64\n```\n\nNew64 returns a new 64-bit FNV-1 hash.Hash. Its Sum method will lay the value out in big-endian byte order. \n\n"
+                "value": "```Go\nfunc BenchmarkFnv32KB(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/hash/fnv#New64a",
+              "pathID": "/hash/fnv#BenchmarkFnv32aKB",
               "documentation": {
-                "identifier": "New64a",
+                "identifier": "BenchmarkFnv32aKB",
                 "newPage": false,
-                "searchKey": "fnv.New64a",
-                "tags": null
+                "searchKey": "fnv.BenchmarkFnv32aKB",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func New64a() hash.Hash64"
+                "value": "func BenchmarkFnv32aKB(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc New64a() hash.Hash64\n```\n\nNew64a returns a new 64-bit FNV-1a hash.Hash. Its Sum method will lay the value out in big-endian byte order. \n\n"
+                "value": "```Go\nfunc BenchmarkFnv32aKB(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#BenchmarkFnv64KB",
+              "documentation": {
+                "identifier": "BenchmarkFnv64KB",
+                "newPage": false,
+                "searchKey": "fnv.BenchmarkFnv64KB",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkFnv64KB(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkFnv64KB(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#BenchmarkFnv64aKB",
+              "documentation": {
+                "identifier": "BenchmarkFnv64aKB",
+                "newPage": false,
+                "searchKey": "fnv.BenchmarkFnv64aKB",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkFnv64aKB(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkFnv64aKB(b *testing.B)\n```\n\n"
               },
               "children": null
             }
@@ -1861,7 +2042,9 @@
                 "identifier": "New128",
                 "newPage": false,
                 "searchKey": "fnv.New128",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1881,7 +2064,9 @@
                 "identifier": "New128a",
                 "newPage": false,
                 "searchKey": "fnv.New128a",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1896,22 +2081,400 @@
           },
           {
             "node": {
-              "pathID": "/hash/fnv#readUint32",
+              "pathID": "/hash/fnv#New32",
               "documentation": {
-                "identifier": "readUint32",
+                "identifier": "New32",
                 "newPage": false,
-                "searchKey": "fnv.readUint32",
+                "searchKey": "fnv.New32",
                 "tags": [
-                  "private"
+                  "function"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func readUint32(b []byte) uint32"
+                "value": "func New32() hash.Hash32"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc readUint32(b []byte) uint32\n```\n\n"
+                "value": "```Go\nfunc New32() hash.Hash32\n```\n\nNew32 returns a new 32-bit FNV-1 hash.Hash. Its Sum method will lay the value out in big-endian byte order. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#New32a",
+              "documentation": {
+                "identifier": "New32a",
+                "newPage": false,
+                "searchKey": "fnv.New32a",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func New32a() hash.Hash32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc New32a() hash.Hash32\n```\n\nNew32a returns a new 32-bit FNV-1a hash.Hash. Its Sum method will lay the value out in big-endian byte order. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#New64",
+              "documentation": {
+                "identifier": "New64",
+                "newPage": false,
+                "searchKey": "fnv.New64",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func New64() hash.Hash64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc New64() hash.Hash64\n```\n\nNew64 returns a new 64-bit FNV-1 hash.Hash. Its Sum method will lay the value out in big-endian byte order. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#New64a",
+              "documentation": {
+                "identifier": "New64a",
+                "newPage": false,
+                "searchKey": "fnv.New64a",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func New64a() hash.Hash64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc New64a() hash.Hash64\n```\n\nNew64a returns a new 64-bit FNV-1a hash.Hash. Its Sum method will lay the value out in big-endian byte order. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#TestGolden128",
+              "documentation": {
+                "identifier": "TestGolden128",
+                "newPage": false,
+                "searchKey": "fnv.TestGolden128",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGolden128(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGolden128(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#TestGolden128a",
+              "documentation": {
+                "identifier": "TestGolden128a",
+                "newPage": false,
+                "searchKey": "fnv.TestGolden128a",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGolden128a(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGolden128a(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#TestGolden32",
+              "documentation": {
+                "identifier": "TestGolden32",
+                "newPage": false,
+                "searchKey": "fnv.TestGolden32",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGolden32(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGolden32(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#TestGolden32a",
+              "documentation": {
+                "identifier": "TestGolden32a",
+                "newPage": false,
+                "searchKey": "fnv.TestGolden32a",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGolden32a(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGolden32a(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#TestGolden64",
+              "documentation": {
+                "identifier": "TestGolden64",
+                "newPage": false,
+                "searchKey": "fnv.TestGolden64",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGolden64(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGolden64(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#TestGolden64a",
+              "documentation": {
+                "identifier": "TestGolden64a",
+                "newPage": false,
+                "searchKey": "fnv.TestGolden64a",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGolden64a(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGolden64a(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#TestGoldenMarshal",
+              "documentation": {
+                "identifier": "TestGoldenMarshal",
+                "newPage": false,
+                "searchKey": "fnv.TestGoldenMarshal",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGoldenMarshal(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGoldenMarshal(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#TestIntegrity128",
+              "documentation": {
+                "identifier": "TestIntegrity128",
+                "newPage": false,
+                "searchKey": "fnv.TestIntegrity128",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIntegrity128(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIntegrity128(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#TestIntegrity128a",
+              "documentation": {
+                "identifier": "TestIntegrity128a",
+                "newPage": false,
+                "searchKey": "fnv.TestIntegrity128a",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIntegrity128a(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIntegrity128a(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#TestIntegrity32",
+              "documentation": {
+                "identifier": "TestIntegrity32",
+                "newPage": false,
+                "searchKey": "fnv.TestIntegrity32",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIntegrity32(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIntegrity32(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#TestIntegrity32a",
+              "documentation": {
+                "identifier": "TestIntegrity32a",
+                "newPage": false,
+                "searchKey": "fnv.TestIntegrity32a",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIntegrity32a(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIntegrity32a(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#TestIntegrity64",
+              "documentation": {
+                "identifier": "TestIntegrity64",
+                "newPage": false,
+                "searchKey": "fnv.TestIntegrity64",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIntegrity64(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIntegrity64(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#TestIntegrity64a",
+              "documentation": {
+                "identifier": "TestIntegrity64a",
+                "newPage": false,
+                "searchKey": "fnv.TestIntegrity64a",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIntegrity64a(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIntegrity64a(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1924,6 +2487,7 @@
                 "newPage": false,
                 "searchKey": "fnv.appendUint32",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1946,6 +2510,7 @@
                 "newPage": false,
                 "searchKey": "fnv.appendUint64",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1962,12 +2527,59 @@
           },
           {
             "node": {
+              "pathID": "/hash/fnv#benchmarkKB",
+              "documentation": {
+                "identifier": "benchmarkKB",
+                "newPage": false,
+                "searchKey": "fnv.benchmarkKB",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmarkKB(b *testing.B, h hash.Hash)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmarkKB(b *testing.B, h hash.Hash)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/fnv#readUint32",
+              "documentation": {
+                "identifier": "readUint32",
+                "newPage": false,
+                "searchKey": "fnv.readUint32",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readUint32(b []byte) uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readUint32(b []byte) uint32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/hash/fnv#readUint64",
               "documentation": {
                 "identifier": "readUint64",
                 "newPage": false,
                 "searchKey": "fnv.readUint64",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1984,144 +2596,13 @@
           },
           {
             "node": {
-              "pathID": "/hash/fnv#TestGolden32",
-              "documentation": {
-                "identifier": "TestGolden32",
-                "newPage": false,
-                "searchKey": "fnv.TestGolden32",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGolden32(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGolden32(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#TestGolden32a",
-              "documentation": {
-                "identifier": "TestGolden32a",
-                "newPage": false,
-                "searchKey": "fnv.TestGolden32a",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGolden32a(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGolden32a(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#TestGolden64",
-              "documentation": {
-                "identifier": "TestGolden64",
-                "newPage": false,
-                "searchKey": "fnv.TestGolden64",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGolden64(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGolden64(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#TestGolden64a",
-              "documentation": {
-                "identifier": "TestGolden64a",
-                "newPage": false,
-                "searchKey": "fnv.TestGolden64a",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGolden64a(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGolden64a(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#TestGolden128",
-              "documentation": {
-                "identifier": "TestGolden128",
-                "newPage": false,
-                "searchKey": "fnv.TestGolden128",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGolden128(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGolden128(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#TestGolden128a",
-              "documentation": {
-                "identifier": "TestGolden128a",
-                "newPage": false,
-                "searchKey": "fnv.TestGolden128a",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGolden128a(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGolden128a(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/hash/fnv#testGolden",
               "documentation": {
                 "identifier": "testGolden",
                 "newPage": false,
                 "searchKey": "fnv.testGolden",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2138,166 +2619,13 @@
           },
           {
             "node": {
-              "pathID": "/hash/fnv#TestGoldenMarshal",
-              "documentation": {
-                "identifier": "TestGoldenMarshal",
-                "newPage": false,
-                "searchKey": "fnv.TestGoldenMarshal",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGoldenMarshal(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGoldenMarshal(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#TestIntegrity32",
-              "documentation": {
-                "identifier": "TestIntegrity32",
-                "newPage": false,
-                "searchKey": "fnv.TestIntegrity32",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIntegrity32(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIntegrity32(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#TestIntegrity32a",
-              "documentation": {
-                "identifier": "TestIntegrity32a",
-                "newPage": false,
-                "searchKey": "fnv.TestIntegrity32a",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIntegrity32a(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIntegrity32a(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#TestIntegrity64",
-              "documentation": {
-                "identifier": "TestIntegrity64",
-                "newPage": false,
-                "searchKey": "fnv.TestIntegrity64",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIntegrity64(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIntegrity64(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#TestIntegrity64a",
-              "documentation": {
-                "identifier": "TestIntegrity64a",
-                "newPage": false,
-                "searchKey": "fnv.TestIntegrity64a",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIntegrity64a(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIntegrity64a(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#TestIntegrity128",
-              "documentation": {
-                "identifier": "TestIntegrity128",
-                "newPage": false,
-                "searchKey": "fnv.TestIntegrity128",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIntegrity128(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIntegrity128(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#TestIntegrity128a",
-              "documentation": {
-                "identifier": "TestIntegrity128a",
-                "newPage": false,
-                "searchKey": "fnv.TestIntegrity128a",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIntegrity128a(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIntegrity128a(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/hash/fnv#testIntegrity",
               "documentation": {
                 "identifier": "testIntegrity",
                 "newPage": false,
                 "searchKey": "fnv.testIntegrity",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2308,160 +2636,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc testIntegrity(t *testing.T, h hash.Hash)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#BenchmarkFnv32KB",
-              "documentation": {
-                "identifier": "BenchmarkFnv32KB",
-                "newPage": false,
-                "searchKey": "fnv.BenchmarkFnv32KB",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkFnv32KB(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkFnv32KB(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#BenchmarkFnv32aKB",
-              "documentation": {
-                "identifier": "BenchmarkFnv32aKB",
-                "newPage": false,
-                "searchKey": "fnv.BenchmarkFnv32aKB",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkFnv32aKB(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkFnv32aKB(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#BenchmarkFnv64KB",
-              "documentation": {
-                "identifier": "BenchmarkFnv64KB",
-                "newPage": false,
-                "searchKey": "fnv.BenchmarkFnv64KB",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkFnv64KB(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkFnv64KB(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#BenchmarkFnv64aKB",
-              "documentation": {
-                "identifier": "BenchmarkFnv64aKB",
-                "newPage": false,
-                "searchKey": "fnv.BenchmarkFnv64aKB",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkFnv64aKB(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkFnv64aKB(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#BenchmarkFnv128KB",
-              "documentation": {
-                "identifier": "BenchmarkFnv128KB",
-                "newPage": false,
-                "searchKey": "fnv.BenchmarkFnv128KB",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkFnv128KB(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkFnv128KB(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#BenchmarkFnv128aKB",
-              "documentation": {
-                "identifier": "BenchmarkFnv128aKB",
-                "newPage": false,
-                "searchKey": "fnv.BenchmarkFnv128aKB",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkFnv128aKB(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkFnv128aKB(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/fnv#benchmarkKB",
-              "documentation": {
-                "identifier": "benchmarkKB",
-                "newPage": false,
-                "searchKey": "fnv.benchmarkKB",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func benchmarkKB(b *testing.B, h hash.Hash)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc benchmarkKB(b *testing.B, h hash.Hash)\n```\n\n"
               },
               "children": null
             }

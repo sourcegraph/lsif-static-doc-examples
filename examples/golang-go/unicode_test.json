@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "unicode_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,210 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/unicode_test#testDigit",
-              "documentation": {
-                "identifier": "testDigit",
-                "newPage": false,
-                "searchKey": "unicode_test.testDigit",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var testDigit"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar testDigit = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode_test#testLetter",
-              "documentation": {
-                "identifier": "testLetter",
-                "newPage": false,
-                "searchKey": "unicode_test.testLetter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var testLetter"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar testLetter = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode_test#upperTest",
-              "documentation": {
-                "identifier": "upperTest",
-                "newPage": false,
-                "searchKey": "unicode_test.upperTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var upperTest"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar upperTest = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode_test#notupperTest",
-              "documentation": {
-                "identifier": "notupperTest",
-                "newPage": false,
-                "searchKey": "unicode_test.notupperTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var notupperTest"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar notupperTest = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode_test#letterTest",
-              "documentation": {
-                "identifier": "letterTest",
-                "newPage": false,
-                "searchKey": "unicode_test.letterTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var letterTest"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar letterTest = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode_test#notletterTest",
-              "documentation": {
-                "identifier": "notletterTest",
-                "newPage": false,
-                "searchKey": "unicode_test.notletterTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var notletterTest"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar notletterTest = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode_test#spaceTest",
-              "documentation": {
-                "identifier": "spaceTest",
-                "newPage": false,
-                "searchKey": "unicode_test.spaceTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var spaceTest"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar spaceTest = []rune{\n\t0x09,\n\t0x0a,\n\t0x0b,\n\t0x0c,\n\t0x0d,\n\t0x20,\n\t0x85,\n\t0xA0,\n\t0x2000,\n\t0x3000,\n}\n```\n\nContains all the special cased Latin-1 chars. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode_test#caseTest",
-              "documentation": {
-                "identifier": "caseTest",
-                "newPage": false,
-                "searchKey": "unicode_test.caseTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var caseTest"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar caseTest = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode_test#simpleFoldTests",
-              "documentation": {
-                "identifier": "simpleFoldTests",
-                "newPage": false,
-                "searchKey": "unicode_test.simpleFoldTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var simpleFoldTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar simpleFoldTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/unicode_test#calibrate",
               "documentation": {
                 "identifier": "calibrate",
                 "newPage": false,
                 "searchKey": "unicode_test.calibrate",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
@@ -259,12 +65,40 @@
           },
           {
             "node": {
+              "pathID": "/unicode_test#caseTest",
+              "documentation": {
+                "identifier": "caseTest",
+                "newPage": false,
+                "searchKey": "unicode_test.caseTest",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var caseTest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar caseTest = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/unicode_test#inCategoryTest",
               "documentation": {
                 "identifier": "inCategoryTest",
                 "newPage": false,
                 "searchKey": "unicode_test.inCategoryTest",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -287,6 +121,9 @@
                 "newPage": false,
                 "searchKey": "unicode_test.inPropTest",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -297,6 +134,206 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar inPropTest = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode_test#letterTest",
+              "documentation": {
+                "identifier": "letterTest",
+                "newPage": false,
+                "searchKey": "unicode_test.letterTest",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var letterTest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar letterTest = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode_test#notletterTest",
+              "documentation": {
+                "identifier": "notletterTest",
+                "newPage": false,
+                "searchKey": "unicode_test.notletterTest",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var notletterTest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar notletterTest = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode_test#notupperTest",
+              "documentation": {
+                "identifier": "notupperTest",
+                "newPage": false,
+                "searchKey": "unicode_test.notupperTest",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var notupperTest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar notupperTest = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode_test#simpleFoldTests",
+              "documentation": {
+                "identifier": "simpleFoldTests",
+                "newPage": false,
+                "searchKey": "unicode_test.simpleFoldTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var simpleFoldTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar simpleFoldTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode_test#spaceTest",
+              "documentation": {
+                "identifier": "spaceTest",
+                "newPage": false,
+                "searchKey": "unicode_test.spaceTest",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var spaceTest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar spaceTest = []rune{\n\t0x09,\n\t0x0a,\n\t0x0b,\n\t0x0c,\n\t0x0d,\n\t0x20,\n\t0x85,\n\t0xA0,\n\t0x2000,\n\t0x3000,\n}\n```\n\nContains all the special cased Latin-1 chars. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode_test#testDigit",
+              "documentation": {
+                "identifier": "testDigit",
+                "newPage": false,
+                "searchKey": "unicode_test.testDigit",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testDigit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testDigit = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode_test#testLetter",
+              "documentation": {
+                "identifier": "testLetter",
+                "newPage": false,
+                "searchKey": "unicode_test.testLetter",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testLetter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testLetter = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode_test#upperTest",
+              "documentation": {
+                "identifier": "upperTest",
+                "newPage": false,
+                "searchKey": "unicode_test.upperTest",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var upperTest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar upperTest = ...\n```\n\n"
               },
               "children": null
             }
@@ -312,6 +349,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -326,34 +364,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/unicode_test#caseT",
-              "documentation": {
-                "identifier": "caseT",
-                "newPage": false,
-                "searchKey": "unicode_test.caseT",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type caseT struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype caseT struct {\n\tcas     int\n\tin, out rune\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/unicode_test#T",
               "documentation": {
                 "identifier": "T",
                 "newPage": false,
                 "searchKey": "unicode_test.T",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -364,6 +381,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\ntype T struct {\n\trune   rune\n\tscript string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode_test#caseT",
+              "documentation": {
+                "identifier": "caseT",
+                "newPage": false,
+                "searchKey": "unicode_test.caseT",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type caseT struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype caseT struct {\n\tcas     int\n\tin, out rune\n}\n```\n\n"
               },
               "children": null
             }
@@ -379,6 +419,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -393,78 +434,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/unicode_test#TestDigit",
-              "documentation": {
-                "identifier": "TestDigit",
-                "newPage": false,
-                "searchKey": "unicode_test.TestDigit",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDigit(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDigit(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode_test#TestDigitOptimization",
-              "documentation": {
-                "identifier": "TestDigitOptimization",
-                "newPage": false,
-                "searchKey": "unicode_test.TestDigitOptimization",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDigitOptimization(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDigitOptimization(t *testing.T)\n```\n\nTest that the special case in IsDigit agrees with the table \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode_test#Example_is",
-              "documentation": {
-                "identifier": "Example_is",
-                "newPage": false,
-                "searchKey": "unicode_test.Example_is",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Example_is()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Example_is()\n```\n\nFunctions starting with \"Is\" can be used to inspect which table of range a rune belongs to. Note that runes may fit into more than one range. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/unicode_test#ExampleSimpleFold",
               "documentation": {
                 "identifier": "ExampleSimpleFold",
                 "newPage": false,
                 "searchKey": "unicode_test.ExampleSimpleFold",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -481,12 +457,36 @@
           },
           {
             "node": {
+              "pathID": "/unicode_test#ExampleSpecialCase",
+              "documentation": {
+                "identifier": "ExampleSpecialCase",
+                "newPage": false,
+                "searchKey": "unicode_test.ExampleSpecialCase",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleSpecialCase()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleSpecialCase()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/unicode_test#ExampleTo",
               "documentation": {
                 "identifier": "ExampleTo",
                 "newPage": false,
                 "searchKey": "unicode_test.ExampleTo",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -509,6 +509,7 @@
                 "newPage": false,
                 "searchKey": "unicode_test.ExampleToLower",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -531,6 +532,7 @@
                 "newPage": false,
                 "searchKey": "unicode_test.ExampleToTitle",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -553,6 +555,7 @@
                 "newPage": false,
                 "searchKey": "unicode_test.ExampleToUpper",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -569,22 +572,119 @@
           },
           {
             "node": {
-              "pathID": "/unicode_test#ExampleSpecialCase",
+              "pathID": "/unicode_test#Example_is",
               "documentation": {
-                "identifier": "ExampleSpecialCase",
+                "identifier": "Example_is",
                 "newPage": false,
-                "searchKey": "unicode_test.ExampleSpecialCase",
+                "searchKey": "unicode_test.Example_is",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func ExampleSpecialCase()"
+                "value": "func Example_is()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc ExampleSpecialCase()\n```\n\n"
+                "value": "```Go\nfunc Example_is()\n```\n\nFunctions starting with \"Is\" can be used to inspect which table of range a rune belongs to. Note that runes may fit into more than one range. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode_test#TestCalibrate",
+              "documentation": {
+                "identifier": "TestCalibrate",
+                "newPage": false,
+                "searchKey": "unicode_test.TestCalibrate",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCalibrate(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCalibrate(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode_test#TestCategories",
+              "documentation": {
+                "identifier": "TestCategories",
+                "newPage": false,
+                "searchKey": "unicode_test.TestCategories",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCategories(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCategories(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode_test#TestDigit",
+              "documentation": {
+                "identifier": "TestDigit",
+                "newPage": false,
+                "searchKey": "unicode_test.TestDigit",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDigit(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDigit(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode_test#TestDigitOptimization",
+              "documentation": {
+                "identifier": "TestDigitOptimization",
+                "newPage": false,
+                "searchKey": "unicode_test.TestDigitOptimization",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDigitOptimization(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDigitOptimization(t *testing.T)\n```\n\nTest that the special case in IsDigit agrees with the table \n\n"
               },
               "children": null
             }
@@ -597,7 +697,9 @@
                 "newPage": false,
                 "searchKey": "unicode_test.TestIsControlLatin1",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -613,123 +715,15 @@
           },
           {
             "node": {
-              "pathID": "/unicode_test#TestIsLetterLatin1",
-              "documentation": {
-                "identifier": "TestIsLetterLatin1",
-                "newPage": false,
-                "searchKey": "unicode_test.TestIsLetterLatin1",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIsLetterLatin1(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIsLetterLatin1(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode_test#TestIsUpperLatin1",
-              "documentation": {
-                "identifier": "TestIsUpperLatin1",
-                "newPage": false,
-                "searchKey": "unicode_test.TestIsUpperLatin1",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIsUpperLatin1(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIsUpperLatin1(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode_test#TestIsLowerLatin1",
-              "documentation": {
-                "identifier": "TestIsLowerLatin1",
-                "newPage": false,
-                "searchKey": "unicode_test.TestIsLowerLatin1",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIsLowerLatin1(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIsLowerLatin1(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode_test#TestNumberLatin1",
-              "documentation": {
-                "identifier": "TestNumberLatin1",
-                "newPage": false,
-                "searchKey": "unicode_test.TestNumberLatin1",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestNumberLatin1(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestNumberLatin1(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode_test#TestIsPrintLatin1",
-              "documentation": {
-                "identifier": "TestIsPrintLatin1",
-                "newPage": false,
-                "searchKey": "unicode_test.TestIsPrintLatin1",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIsPrintLatin1(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIsPrintLatin1(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/unicode_test#TestIsGraphicLatin1",
               "documentation": {
                 "identifier": "TestIsGraphicLatin1",
                 "newPage": false,
                 "searchKey": "unicode_test.TestIsGraphicLatin1",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -745,13 +739,111 @@
           },
           {
             "node": {
+              "pathID": "/unicode_test#TestIsLetter",
+              "documentation": {
+                "identifier": "TestIsLetter",
+                "newPage": false,
+                "searchKey": "unicode_test.TestIsLetter",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIsLetter(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIsLetter(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode_test#TestIsLetterLatin1",
+              "documentation": {
+                "identifier": "TestIsLetterLatin1",
+                "newPage": false,
+                "searchKey": "unicode_test.TestIsLetterLatin1",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIsLetterLatin1(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIsLetterLatin1(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode_test#TestIsLowerLatin1",
+              "documentation": {
+                "identifier": "TestIsLowerLatin1",
+                "newPage": false,
+                "searchKey": "unicode_test.TestIsLowerLatin1",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIsLowerLatin1(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIsLowerLatin1(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode_test#TestIsPrintLatin1",
+              "documentation": {
+                "identifier": "TestIsPrintLatin1",
+                "newPage": false,
+                "searchKey": "unicode_test.TestIsPrintLatin1",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIsPrintLatin1(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIsPrintLatin1(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/unicode_test#TestIsPunctLatin1",
               "documentation": {
                 "identifier": "TestIsPunctLatin1",
                 "newPage": false,
                 "searchKey": "unicode_test.TestIsPunctLatin1",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -767,13 +859,39 @@
           },
           {
             "node": {
+              "pathID": "/unicode_test#TestIsSpace",
+              "documentation": {
+                "identifier": "TestIsSpace",
+                "newPage": false,
+                "searchKey": "unicode_test.TestIsSpace",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIsSpace(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIsSpace(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/unicode_test#TestIsSpaceLatin1",
               "documentation": {
                 "identifier": "TestIsSpaceLatin1",
                 "newPage": false,
                 "searchKey": "unicode_test.TestIsSpaceLatin1",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -795,7 +913,9 @@
                 "newPage": false,
                 "searchKey": "unicode_test.TestIsSymbolLatin1",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -811,35 +931,15 @@
           },
           {
             "node": {
-              "pathID": "/unicode_test#TestIsLetter",
-              "documentation": {
-                "identifier": "TestIsLetter",
-                "newPage": false,
-                "searchKey": "unicode_test.TestIsLetter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIsLetter(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIsLetter(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/unicode_test#TestIsUpper",
               "documentation": {
                 "identifier": "TestIsUpper",
                 "newPage": false,
                 "searchKey": "unicode_test.TestIsUpper",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -855,22 +955,192 @@
           },
           {
             "node": {
-              "pathID": "/unicode_test#caseString",
+              "pathID": "/unicode_test#TestIsUpperLatin1",
               "documentation": {
-                "identifier": "caseString",
+                "identifier": "TestIsUpperLatin1",
                 "newPage": false,
-                "searchKey": "unicode_test.caseString",
+                "searchKey": "unicode_test.TestIsUpperLatin1",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func caseString(c int) string"
+                "value": "func TestIsUpperLatin1(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc caseString(c int) string\n```\n\n"
+                "value": "```Go\nfunc TestIsUpperLatin1(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode_test#TestLatinOffset",
+              "documentation": {
+                "identifier": "TestLatinOffset",
+                "newPage": false,
+                "searchKey": "unicode_test.TestLatinOffset",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLatinOffset(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLatinOffset(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode_test#TestLetterOptimizations",
+              "documentation": {
+                "identifier": "TestLetterOptimizations",
+                "newPage": false,
+                "searchKey": "unicode_test.TestLetterOptimizations",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLetterOptimizations(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLetterOptimizations(t *testing.T)\n```\n\nCheck that the optimizations for IsLetter etc. agree with the tables. We only need to check the Latin-1 range. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode_test#TestNegativeRune",
+              "documentation": {
+                "identifier": "TestNegativeRune",
+                "newPage": false,
+                "searchKey": "unicode_test.TestNegativeRune",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNegativeRune(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNegativeRune(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode_test#TestNumberLatin1",
+              "documentation": {
+                "identifier": "TestNumberLatin1",
+                "newPage": false,
+                "searchKey": "unicode_test.TestNumberLatin1",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNumberLatin1(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNumberLatin1(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode_test#TestProperties",
+              "documentation": {
+                "identifier": "TestProperties",
+                "newPage": false,
+                "searchKey": "unicode_test.TestProperties",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestProperties(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestProperties(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode_test#TestSimpleFold",
+              "documentation": {
+                "identifier": "TestSimpleFold",
+                "newPage": false,
+                "searchKey": "unicode_test.TestSimpleFold",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSimpleFold(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSimpleFold(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode_test#TestSpecialCaseNoMapping",
+              "documentation": {
+                "identifier": "TestSpecialCaseNoMapping",
+                "newPage": false,
+                "searchKey": "unicode_test.TestSpecialCaseNoMapping",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSpecialCaseNoMapping(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSpecialCaseNoMapping(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -883,7 +1153,9 @@
                 "newPage": false,
                 "searchKey": "unicode_test.TestTo",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -899,35 +1171,15 @@
           },
           {
             "node": {
-              "pathID": "/unicode_test#TestToUpperCase",
-              "documentation": {
-                "identifier": "TestToUpperCase",
-                "newPage": false,
-                "searchKey": "unicode_test.TestToUpperCase",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestToUpperCase(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestToUpperCase(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/unicode_test#TestToLowerCase",
               "documentation": {
                 "identifier": "TestToLowerCase",
                 "newPage": false,
                 "searchKey": "unicode_test.TestToLowerCase",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -949,7 +1201,9 @@
                 "newPage": false,
                 "searchKey": "unicode_test.TestToTitleCase",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -965,44 +1219,24 @@
           },
           {
             "node": {
-              "pathID": "/unicode_test#TestIsSpace",
+              "pathID": "/unicode_test#TestToUpperCase",
               "documentation": {
-                "identifier": "TestIsSpace",
+                "identifier": "TestToUpperCase",
                 "newPage": false,
-                "searchKey": "unicode_test.TestIsSpace",
+                "searchKey": "unicode_test.TestToUpperCase",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestIsSpace(t *testing.T)"
+                "value": "func TestToUpperCase(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestIsSpace(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode_test#TestLetterOptimizations",
-              "documentation": {
-                "identifier": "TestLetterOptimizations",
-                "newPage": false,
-                "searchKey": "unicode_test.TestLetterOptimizations",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestLetterOptimizations(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestLetterOptimizations(t *testing.T)\n```\n\nCheck that the optimizations for IsLetter etc. agree with the tables. We only need to check the Latin-1 range. \n\n"
+                "value": "```Go\nfunc TestToUpperCase(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1015,7 +1249,9 @@
                 "newPage": false,
                 "searchKey": "unicode_test.TestTurkishCase",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1031,44 +1267,46 @@
           },
           {
             "node": {
-              "pathID": "/unicode_test#TestSimpleFold",
+              "pathID": "/unicode_test#binary",
               "documentation": {
-                "identifier": "TestSimpleFold",
+                "identifier": "binary",
                 "newPage": false,
-                "searchKey": "unicode_test.TestSimpleFold",
+                "searchKey": "unicode_test.binary",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestSimpleFold(t *testing.T)"
+                "value": "func binary(ranges []Range16, r uint16) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestSimpleFold(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc binary(ranges []Range16, r uint16) bool\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/unicode_test#TestCalibrate",
+              "pathID": "/unicode_test#caseString",
               "documentation": {
-                "identifier": "TestCalibrate",
+                "identifier": "caseString",
                 "newPage": false,
-                "searchKey": "unicode_test.TestCalibrate",
+                "searchKey": "unicode_test.caseString",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestCalibrate(t *testing.T)"
+                "value": "func caseString(c int) string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestCalibrate(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc caseString(c int) string\n```\n\n"
               },
               "children": null
             }
@@ -1081,6 +1319,7 @@
                 "newPage": false,
                 "searchKey": "unicode_test.fakeTable",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1103,6 +1342,7 @@
                 "newPage": false,
                 "searchKey": "unicode_test.linear",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1113,138 +1353,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc linear(ranges []Range16, r uint16) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode_test#binary",
-              "documentation": {
-                "identifier": "binary",
-                "newPage": false,
-                "searchKey": "unicode_test.binary",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func binary(ranges []Range16, r uint16) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc binary(ranges []Range16, r uint16) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode_test#TestLatinOffset",
-              "documentation": {
-                "identifier": "TestLatinOffset",
-                "newPage": false,
-                "searchKey": "unicode_test.TestLatinOffset",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestLatinOffset(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestLatinOffset(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode_test#TestSpecialCaseNoMapping",
-              "documentation": {
-                "identifier": "TestSpecialCaseNoMapping",
-                "newPage": false,
-                "searchKey": "unicode_test.TestSpecialCaseNoMapping",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSpecialCaseNoMapping(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSpecialCaseNoMapping(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode_test#TestNegativeRune",
-              "documentation": {
-                "identifier": "TestNegativeRune",
-                "newPage": false,
-                "searchKey": "unicode_test.TestNegativeRune",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestNegativeRune(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestNegativeRune(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode_test#TestCategories",
-              "documentation": {
-                "identifier": "TestCategories",
-                "newPage": false,
-                "searchKey": "unicode_test.TestCategories",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCategories(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCategories(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode_test#TestProperties",
-              "documentation": {
-                "identifier": "TestProperties",
-                "newPage": false,
-                "searchKey": "unicode_test.TestProperties",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestProperties(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestProperties(t *testing.T)\n```\n\n"
               },
               "children": null
             }

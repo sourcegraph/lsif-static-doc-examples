@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/internal/batches",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,9 @@
                 "identifier": "InitBackgroundJobs",
                 "newPage": false,
                 "searchKey": "batches.InitBackgroundJobs",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +68,9 @@
                 "identifier": "InitFrontend",
                 "newPage": false,
                 "searchKey": "batches.InitFrontend",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",

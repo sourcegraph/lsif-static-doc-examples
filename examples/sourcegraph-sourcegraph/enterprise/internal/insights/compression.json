@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/internal/insights/compression",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,12 +41,38 @@
         "children": [
           {
             "node": {
+              "pathID": "/enterprise/internal/insights/compression#getCommitIndexMetadataStr",
+              "documentation": {
+                "identifier": "getCommitIndexMetadataStr",
+                "newPage": false,
+                "searchKey": "compression.getCommitIndexMetadataStr",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const getCommitIndexMetadataStr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst getCommitIndexMetadataStr = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/insights/compression#getCommitsInRangeStr",
               "documentation": {
                 "identifier": "getCommitsInRangeStr",
                 "newPage": false,
                 "searchKey": "compression.getCommitsInRangeStr",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -67,6 +95,8 @@
                 "newPage": false,
                 "searchKey": "compression.insertCommitIndexStr",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -83,34 +113,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/insights/compression#getCommitIndexMetadataStr",
-              "documentation": {
-                "identifier": "getCommitIndexMetadataStr",
-                "newPage": false,
-                "searchKey": "compression.getCommitIndexMetadataStr",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const getCommitIndexMetadataStr"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst getCommitIndexMetadataStr = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/insights/compression#upsertCommitIndexMetadataStampStr",
               "documentation": {
                 "identifier": "upsertCommitIndexMetadataStampStr",
                 "newPage": false,
                 "searchKey": "compression.upsertCommitIndexMetadataStampStr",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -136,6 +146,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -150,233 +161,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/internal/insights/compression#DBCommitStore",
-              "documentation": {
-                "identifier": "DBCommitStore",
-                "newPage": false,
-                "searchKey": "compression.DBCommitStore",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type DBCommitStore struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype DBCommitStore struct {\n\t*basestore.Store\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#NewCommitStore",
-                    "documentation": {
-                      "identifier": "NewCommitStore",
-                      "newPage": false,
-                      "searchKey": "compression.NewCommitStore",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewCommitStore(db dbutil.DB) *DBCommitStore"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewCommitStore(db dbutil.DB) *DBCommitStore\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#DBCommitStore.With",
-                    "documentation": {
-                      "identifier": "DBCommitStore.With",
-                      "newPage": false,
-                      "searchKey": "compression.DBCommitStore.With",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *DBCommitStore) With(other basestore.ShareableStore) *DBCommitStore"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *DBCommitStore) With(other basestore.ShareableStore) *DBCommitStore\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#DBCommitStore.Transact",
-                    "documentation": {
-                      "identifier": "DBCommitStore.Transact",
-                      "newPage": false,
-                      "searchKey": "compression.DBCommitStore.Transact",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *DBCommitStore) Transact(ctx context.Context) (*DBCommitStore, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *DBCommitStore) Transact(ctx context.Context) (*DBCommitStore, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#DBCommitStore.Save",
-                    "documentation": {
-                      "identifier": "DBCommitStore.Save",
-                      "newPage": false,
-                      "searchKey": "compression.DBCommitStore.Save",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *DBCommitStore) Save(ctx context.Context, id api.RepoID, commit *git.Commit) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *DBCommitStore) Save(ctx context.Context, id api.RepoID, commit *git.Commit) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#DBCommitStore.InsertCommits",
-                    "documentation": {
-                      "identifier": "DBCommitStore.InsertCommits",
-                      "newPage": false,
-                      "searchKey": "compression.DBCommitStore.InsertCommits",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *DBCommitStore) InsertCommits(ctx context.Context, id api.RepoID, commits []*git.Commit) (err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *DBCommitStore) InsertCommits(ctx context.Context, id api.RepoID, commits []*git.Commit) (err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#DBCommitStore.Get",
-                    "documentation": {
-                      "identifier": "DBCommitStore.Get",
-                      "newPage": false,
-                      "searchKey": "compression.DBCommitStore.Get",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *DBCommitStore) Get(ctx context.Context, id api.RepoID, start time.Time, end time.Time) (_ []CommitStamp, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *DBCommitStore) Get(ctx context.Context, id api.RepoID, start time.Time, end time.Time) (_ []CommitStamp, err error)\n```\n\nGet Fetch all commits that occur for a specific repository and fall in a specific time range. The time range is start inclusive and end exclusive [start, end) \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#DBCommitStore.GetMetadata",
-                    "documentation": {
-                      "identifier": "DBCommitStore.GetMetadata",
-                      "newPage": false,
-                      "searchKey": "compression.DBCommitStore.GetMetadata",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *DBCommitStore) GetMetadata(ctx context.Context, id api.RepoID) (CommitIndexMetadata, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *DBCommitStore) GetMetadata(ctx context.Context, id api.RepoID) (CommitIndexMetadata, error)\n```\n\nGetMetadata Returns commit index metadata for a given repository \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#DBCommitStore.UpsertMetadataStamp",
-                    "documentation": {
-                      "identifier": "DBCommitStore.UpsertMetadataStamp",
-                      "newPage": false,
-                      "searchKey": "compression.DBCommitStore.UpsertMetadataStamp",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *DBCommitStore) UpsertMetadataStamp(ctx context.Context, id api.RepoID) (CommitIndexMetadata, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *DBCommitStore) UpsertMetadataStamp(ctx context.Context, id api.RepoID) (CommitIndexMetadata, error)\n```\n\nUpsertMetadataStamp inserts (or updates, if the row already exists) the index metadata timestamp for a given repository \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/compression#CommitStore",
-              "documentation": {
-                "identifier": "CommitStore",
-                "newPage": false,
-                "searchKey": "compression.CommitStore",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type CommitStore interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype CommitStore interface {\n\tSave(ctx context.Context, id api.RepoID, commit *git.Commit) error\n\tGet(ctx context.Context, id api.RepoID, start time.Time, end time.Time) ([]CommitStamp, error)\n\tGetMetadata(ctx context.Context, id api.RepoID) (CommitIndexMetadata, error)\n\tUpsertMetadataStamp(ctx context.Context, id api.RepoID) (CommitIndexMetadata, error)\n\tInsertCommits(ctx context.Context, id api.RepoID, commits []*git.Commit) error\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/compression#CommitStamp",
-              "documentation": {
-                "identifier": "CommitStamp",
-                "newPage": false,
-                "searchKey": "compression.CommitStamp",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type CommitStamp struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype CommitStamp struct {\n\tRepoID      int\n\tCommit      dbutil.CommitBytea\n\tCommittedAt time.Time\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/insights/compression#CommitIndexMetadata",
               "documentation": {
                 "identifier": "CommitIndexMetadata",
                 "newPage": false,
                 "searchKey": "compression.CommitIndexMetadata",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -395,6 +187,7 @@
                       "newPage": false,
                       "searchKey": "compression.getMetadata",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -414,1323 +207,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/insights/compression#MockCommitStore",
-              "documentation": {
-                "identifier": "MockCommitStore",
-                "newPage": false,
-                "searchKey": "compression.MockCommitStore",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type MockCommitStore struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype MockCommitStore struct {\n\t// GetFunc is an instance of a mock function object controlling the\n\t// behavior of the method Get.\n\tGetFunc *CommitStoreGetFunc\n\t// GetMetadataFunc is an instance of a mock function object controlling\n\t// the behavior of the method GetMetadata.\n\tGetMetadataFunc *CommitStoreGetMetadataFunc\n\t// InsertCommitsFunc is an instance of a mock function object\n\t// controlling the behavior of the method InsertCommits.\n\tInsertCommitsFunc *CommitStoreInsertCommitsFunc\n\t// SaveFunc is an instance of a mock function object controlling the\n\t// behavior of the method Save.\n\tSaveFunc *CommitStoreSaveFunc\n\t// UpsertMetadataStampFunc is an instance of a mock function object\n\t// controlling the behavior of the method UpsertMetadataStamp.\n\tUpsertMetadataStampFunc *CommitStoreUpsertMetadataStampFunc\n}\n```\n\nMockCommitStore is a mock implementation of the CommitStore interface (from the package github.com/sourcegraph/sourcegraph/enterprise/internal/insights/compression) used for unit testing. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#NewMockCommitStore",
-                    "documentation": {
-                      "identifier": "NewMockCommitStore",
-                      "newPage": false,
-                      "searchKey": "compression.NewMockCommitStore",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewMockCommitStore() *MockCommitStore"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewMockCommitStore() *MockCommitStore\n```\n\nNewMockCommitStore creates a new mock of the CommitStore interface. All methods return zero values for all results, unless overwritten. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#NewMockCommitStoreFrom",
-                    "documentation": {
-                      "identifier": "NewMockCommitStoreFrom",
-                      "newPage": false,
-                      "searchKey": "compression.NewMockCommitStoreFrom",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewMockCommitStoreFrom(i CommitStore) *MockCommitStore"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewMockCommitStoreFrom(i CommitStore) *MockCommitStore\n```\n\nNewMockCommitStoreFrom creates a new mock of the MockCommitStore interface. All methods delegate to the given implementation, unless overwritten. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#MockCommitStore.Get",
-                    "documentation": {
-                      "identifier": "MockCommitStore.Get",
-                      "newPage": false,
-                      "searchKey": "compression.MockCommitStore.Get",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *MockCommitStore) Get(v0 context.Context, v1 api.RepoID, v2 time.Time, v3 time.Time) ([]CommitStamp, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *MockCommitStore) Get(v0 context.Context, v1 api.RepoID, v2 time.Time, v3 time.Time) ([]CommitStamp, error)\n```\n\nGet delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#MockCommitStore.GetMetadata",
-                    "documentation": {
-                      "identifier": "MockCommitStore.GetMetadata",
-                      "newPage": false,
-                      "searchKey": "compression.MockCommitStore.GetMetadata",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *MockCommitStore) GetMetadata(v0 context.Context, v1 api.RepoID) (CommitIndexMetadata, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *MockCommitStore) GetMetadata(v0 context.Context, v1 api.RepoID) (CommitIndexMetadata, error)\n```\n\nGetMetadata delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#MockCommitStore.InsertCommits",
-                    "documentation": {
-                      "identifier": "MockCommitStore.InsertCommits",
-                      "newPage": false,
-                      "searchKey": "compression.MockCommitStore.InsertCommits",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *MockCommitStore) InsertCommits(v0 context.Context, v1 api.RepoID, v2 []*git.Commit) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *MockCommitStore) InsertCommits(v0 context.Context, v1 api.RepoID, v2 []*git.Commit) error\n```\n\nInsertCommits delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#MockCommitStore.Save",
-                    "documentation": {
-                      "identifier": "MockCommitStore.Save",
-                      "newPage": false,
-                      "searchKey": "compression.MockCommitStore.Save",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *MockCommitStore) Save(v0 context.Context, v1 api.RepoID, v2 *git.Commit) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *MockCommitStore) Save(v0 context.Context, v1 api.RepoID, v2 *git.Commit) error\n```\n\nSave delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#MockCommitStore.UpsertMetadataStamp",
-                    "documentation": {
-                      "identifier": "MockCommitStore.UpsertMetadataStamp",
-                      "newPage": false,
-                      "searchKey": "compression.MockCommitStore.UpsertMetadataStamp",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *MockCommitStore) UpsertMetadataStamp(v0 context.Context, v1 api.RepoID) (CommitIndexMetadata, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *MockCommitStore) UpsertMetadataStamp(v0 context.Context, v1 api.RepoID) (CommitIndexMetadata, error)\n```\n\nUpsertMetadataStamp delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/compression#CommitStoreGetFunc",
-              "documentation": {
-                "identifier": "CommitStoreGetFunc",
-                "newPage": false,
-                "searchKey": "compression.CommitStoreGetFunc",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type CommitStoreGetFunc struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype CommitStoreGetFunc struct {\n\tdefaultHook func(context.Context, api.RepoID, time.Time, time.Time) ([]CommitStamp, error)\n\thooks       []func(context.Context, api.RepoID, time.Time, time.Time) ([]CommitStamp, error)\n\thistory     []CommitStoreGetFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nCommitStoreGetFunc describes the behavior when the Get method of the parent MockCommitStore instance is invoked. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetFunc.SetDefaultHook",
-                    "documentation": {
-                      "identifier": "CommitStoreGetFunc.SetDefaultHook",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreGetFunc.SetDefaultHook",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreGetFunc) SetDefaultHook(hook func(context.Context, api.RepoID, time.Time, time.Time) ([]CommitStamp, error))"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreGetFunc) SetDefaultHook(hook func(context.Context, api.RepoID, time.Time, time.Time) ([]CommitStamp, error))\n```\n\nSetDefaultHook sets function that is called when the Get method of the parent MockCommitStore instance is invoked and the hook queue is empty. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetFunc.PushHook",
-                    "documentation": {
-                      "identifier": "CommitStoreGetFunc.PushHook",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreGetFunc.PushHook",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreGetFunc) PushHook(hook func(context.Context, api.RepoID, time.Time, time.Time) ([]CommitStamp, error))"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreGetFunc) PushHook(hook func(context.Context, api.RepoID, time.Time, time.Time) ([]CommitStamp, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Get method of the parent MockCommitStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "CommitStoreGetFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreGetFunc.SetDefaultReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreGetFunc) SetDefaultReturn(r0 []CommitStamp, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreGetFunc) SetDefaultReturn(r0 []CommitStamp, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetFunc.PushReturn",
-                    "documentation": {
-                      "identifier": "CommitStoreGetFunc.PushReturn",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreGetFunc.PushReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreGetFunc) PushReturn(r0 []CommitStamp, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreGetFunc) PushReturn(r0 []CommitStamp, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetFunc.nextHook",
-                    "documentation": {
-                      "identifier": "CommitStoreGetFunc.nextHook",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreGetFunc.nextHook",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreGetFunc) nextHook() func(context.Context, api.RepoID, time.Time, time.Time) ([]CommitStamp, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreGetFunc) nextHook() func(context.Context, api.RepoID, time.Time, time.Time) ([]CommitStamp, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetFunc.appendCall",
-                    "documentation": {
-                      "identifier": "CommitStoreGetFunc.appendCall",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreGetFunc.appendCall",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreGetFunc) appendCall(r0 CommitStoreGetFuncCall)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreGetFunc) appendCall(r0 CommitStoreGetFuncCall)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetFunc.History",
-                    "documentation": {
-                      "identifier": "CommitStoreGetFunc.History",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreGetFunc.History",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreGetFunc) History() []CommitStoreGetFuncCall"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreGetFunc) History() []CommitStoreGetFuncCall\n```\n\nHistory returns a sequence of CommitStoreGetFuncCall objects describing the invocations of this function. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/compression#CommitStoreGetFuncCall",
-              "documentation": {
-                "identifier": "CommitStoreGetFuncCall",
-                "newPage": false,
-                "searchKey": "compression.CommitStoreGetFuncCall",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type CommitStoreGetFuncCall struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype CommitStoreGetFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 api.RepoID\n\t// Arg2 is the value of the 3rd argument passed to this method\n\t// invocation.\n\tArg2 time.Time\n\t// Arg3 is the value of the 4th argument passed to this method\n\t// invocation.\n\tArg3 time.Time\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 []CommitStamp\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nCommitStoreGetFuncCall is an object that describes an invocation of method Get on an instance of MockCommitStore. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetFuncCall.Args",
-                    "documentation": {
-                      "identifier": "CommitStoreGetFuncCall.Args",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreGetFuncCall.Args",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c CommitStoreGetFuncCall) Args() []interface{}"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c CommitStoreGetFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetFuncCall.Results",
-                    "documentation": {
-                      "identifier": "CommitStoreGetFuncCall.Results",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreGetFuncCall.Results",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c CommitStoreGetFuncCall) Results() []interface{}"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c CommitStoreGetFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/compression#CommitStoreGetMetadataFunc",
-              "documentation": {
-                "identifier": "CommitStoreGetMetadataFunc",
-                "newPage": false,
-                "searchKey": "compression.CommitStoreGetMetadataFunc",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type CommitStoreGetMetadataFunc struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype CommitStoreGetMetadataFunc struct {\n\tdefaultHook func(context.Context, api.RepoID) (CommitIndexMetadata, error)\n\thooks       []func(context.Context, api.RepoID) (CommitIndexMetadata, error)\n\thistory     []CommitStoreGetMetadataFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nCommitStoreGetMetadataFunc describes the behavior when the GetMetadata method of the parent MockCommitStore instance is invoked. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetMetadataFunc.SetDefaultHook",
-                    "documentation": {
-                      "identifier": "CommitStoreGetMetadataFunc.SetDefaultHook",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreGetMetadataFunc.SetDefaultHook",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreGetMetadataFunc) SetDefaultHook(hook func(context.Context, api.RepoID) (CommitIndexMetadata, error))"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreGetMetadataFunc) SetDefaultHook(hook func(context.Context, api.RepoID) (CommitIndexMetadata, error))\n```\n\nSetDefaultHook sets function that is called when the GetMetadata method of the parent MockCommitStore instance is invoked and the hook queue is empty. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetMetadataFunc.PushHook",
-                    "documentation": {
-                      "identifier": "CommitStoreGetMetadataFunc.PushHook",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreGetMetadataFunc.PushHook",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreGetMetadataFunc) PushHook(hook func(context.Context, api.RepoID) (CommitIndexMetadata, error))"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreGetMetadataFunc) PushHook(hook func(context.Context, api.RepoID) (CommitIndexMetadata, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the GetMetadata method of the parent MockCommitStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetMetadataFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "CommitStoreGetMetadataFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreGetMetadataFunc.SetDefaultReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreGetMetadataFunc) SetDefaultReturn(r0 CommitIndexMetadata, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreGetMetadataFunc) SetDefaultReturn(r0 CommitIndexMetadata, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetMetadataFunc.PushReturn",
-                    "documentation": {
-                      "identifier": "CommitStoreGetMetadataFunc.PushReturn",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreGetMetadataFunc.PushReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreGetMetadataFunc) PushReturn(r0 CommitIndexMetadata, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreGetMetadataFunc) PushReturn(r0 CommitIndexMetadata, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetMetadataFunc.nextHook",
-                    "documentation": {
-                      "identifier": "CommitStoreGetMetadataFunc.nextHook",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreGetMetadataFunc.nextHook",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreGetMetadataFunc) nextHook() func(context.Context, api.RepoID) (CommitIndexMetadata, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreGetMetadataFunc) nextHook() func(context.Context, api.RepoID) (CommitIndexMetadata, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetMetadataFunc.appendCall",
-                    "documentation": {
-                      "identifier": "CommitStoreGetMetadataFunc.appendCall",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreGetMetadataFunc.appendCall",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreGetMetadataFunc) appendCall(r0 CommitStoreGetMetadataFuncCall)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreGetMetadataFunc) appendCall(r0 CommitStoreGetMetadataFuncCall)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetMetadataFunc.History",
-                    "documentation": {
-                      "identifier": "CommitStoreGetMetadataFunc.History",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreGetMetadataFunc.History",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreGetMetadataFunc) History() []CommitStoreGetMetadataFuncCall"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreGetMetadataFunc) History() []CommitStoreGetMetadataFuncCall\n```\n\nHistory returns a sequence of CommitStoreGetMetadataFuncCall objects describing the invocations of this function. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/compression#CommitStoreGetMetadataFuncCall",
-              "documentation": {
-                "identifier": "CommitStoreGetMetadataFuncCall",
-                "newPage": false,
-                "searchKey": "compression.CommitStoreGetMetadataFuncCall",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type CommitStoreGetMetadataFuncCall struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype CommitStoreGetMetadataFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 api.RepoID\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 CommitIndexMetadata\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nCommitStoreGetMetadataFuncCall is an object that describes an invocation of method GetMetadata on an instance of MockCommitStore. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetMetadataFuncCall.Args",
-                    "documentation": {
-                      "identifier": "CommitStoreGetMetadataFuncCall.Args",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreGetMetadataFuncCall.Args",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c CommitStoreGetMetadataFuncCall) Args() []interface{}"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c CommitStoreGetMetadataFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetMetadataFuncCall.Results",
-                    "documentation": {
-                      "identifier": "CommitStoreGetMetadataFuncCall.Results",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreGetMetadataFuncCall.Results",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c CommitStoreGetMetadataFuncCall) Results() []interface{}"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c CommitStoreGetMetadataFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/compression#CommitStoreInsertCommitsFunc",
-              "documentation": {
-                "identifier": "CommitStoreInsertCommitsFunc",
-                "newPage": false,
-                "searchKey": "compression.CommitStoreInsertCommitsFunc",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type CommitStoreInsertCommitsFunc struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype CommitStoreInsertCommitsFunc struct {\n\tdefaultHook func(context.Context, api.RepoID, []*git.Commit) error\n\thooks       []func(context.Context, api.RepoID, []*git.Commit) error\n\thistory     []CommitStoreInsertCommitsFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nCommitStoreInsertCommitsFunc describes the behavior when the InsertCommits method of the parent MockCommitStore instance is invoked. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreInsertCommitsFunc.SetDefaultHook",
-                    "documentation": {
-                      "identifier": "CommitStoreInsertCommitsFunc.SetDefaultHook",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreInsertCommitsFunc.SetDefaultHook",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreInsertCommitsFunc) SetDefaultHook(hook func(context.Context, api.RepoID, []*git.Commit) error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreInsertCommitsFunc) SetDefaultHook(hook func(context.Context, api.RepoID, []*git.Commit) error)\n```\n\nSetDefaultHook sets function that is called when the InsertCommits method of the parent MockCommitStore instance is invoked and the hook queue is empty. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreInsertCommitsFunc.PushHook",
-                    "documentation": {
-                      "identifier": "CommitStoreInsertCommitsFunc.PushHook",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreInsertCommitsFunc.PushHook",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreInsertCommitsFunc) PushHook(hook func(context.Context, api.RepoID, []*git.Commit) error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreInsertCommitsFunc) PushHook(hook func(context.Context, api.RepoID, []*git.Commit) error)\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the InsertCommits method of the parent MockCommitStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreInsertCommitsFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "CommitStoreInsertCommitsFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreInsertCommitsFunc.SetDefaultReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreInsertCommitsFunc) SetDefaultReturn(r0 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreInsertCommitsFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreInsertCommitsFunc.PushReturn",
-                    "documentation": {
-                      "identifier": "CommitStoreInsertCommitsFunc.PushReturn",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreInsertCommitsFunc.PushReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreInsertCommitsFunc) PushReturn(r0 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreInsertCommitsFunc) PushReturn(r0 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreInsertCommitsFunc.nextHook",
-                    "documentation": {
-                      "identifier": "CommitStoreInsertCommitsFunc.nextHook",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreInsertCommitsFunc.nextHook",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreInsertCommitsFunc) nextHook() func(context.Context, api.RepoID, []*git.Commit) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreInsertCommitsFunc) nextHook() func(context.Context, api.RepoID, []*git.Commit) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreInsertCommitsFunc.appendCall",
-                    "documentation": {
-                      "identifier": "CommitStoreInsertCommitsFunc.appendCall",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreInsertCommitsFunc.appendCall",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreInsertCommitsFunc) appendCall(r0 CommitStoreInsertCommitsFuncCall)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreInsertCommitsFunc) appendCall(r0 CommitStoreInsertCommitsFuncCall)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreInsertCommitsFunc.History",
-                    "documentation": {
-                      "identifier": "CommitStoreInsertCommitsFunc.History",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreInsertCommitsFunc.History",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreInsertCommitsFunc) History() []CommitStoreInsertCommitsFuncCall"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreInsertCommitsFunc) History() []CommitStoreInsertCommitsFuncCall\n```\n\nHistory returns a sequence of CommitStoreInsertCommitsFuncCall objects describing the invocations of this function. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/compression#CommitStoreInsertCommitsFuncCall",
-              "documentation": {
-                "identifier": "CommitStoreInsertCommitsFuncCall",
-                "newPage": false,
-                "searchKey": "compression.CommitStoreInsertCommitsFuncCall",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type CommitStoreInsertCommitsFuncCall struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype CommitStoreInsertCommitsFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 api.RepoID\n\t// Arg2 is the value of the 3rd argument passed to this method\n\t// invocation.\n\tArg2 []*git.Commit\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 error\n}\n```\n\nCommitStoreInsertCommitsFuncCall is an object that describes an invocation of method InsertCommits on an instance of MockCommitStore. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreInsertCommitsFuncCall.Args",
-                    "documentation": {
-                      "identifier": "CommitStoreInsertCommitsFuncCall.Args",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreInsertCommitsFuncCall.Args",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c CommitStoreInsertCommitsFuncCall) Args() []interface{}"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c CommitStoreInsertCommitsFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreInsertCommitsFuncCall.Results",
-                    "documentation": {
-                      "identifier": "CommitStoreInsertCommitsFuncCall.Results",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreInsertCommitsFuncCall.Results",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c CommitStoreInsertCommitsFuncCall) Results() []interface{}"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c CommitStoreInsertCommitsFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/compression#CommitStoreSaveFunc",
-              "documentation": {
-                "identifier": "CommitStoreSaveFunc",
-                "newPage": false,
-                "searchKey": "compression.CommitStoreSaveFunc",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type CommitStoreSaveFunc struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype CommitStoreSaveFunc struct {\n\tdefaultHook func(context.Context, api.RepoID, *git.Commit) error\n\thooks       []func(context.Context, api.RepoID, *git.Commit) error\n\thistory     []CommitStoreSaveFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nCommitStoreSaveFunc describes the behavior when the Save method of the parent MockCommitStore instance is invoked. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreSaveFunc.SetDefaultHook",
-                    "documentation": {
-                      "identifier": "CommitStoreSaveFunc.SetDefaultHook",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreSaveFunc.SetDefaultHook",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreSaveFunc) SetDefaultHook(hook func(context.Context, api.RepoID, *git.Commit) error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreSaveFunc) SetDefaultHook(hook func(context.Context, api.RepoID, *git.Commit) error)\n```\n\nSetDefaultHook sets function that is called when the Save method of the parent MockCommitStore instance is invoked and the hook queue is empty. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreSaveFunc.PushHook",
-                    "documentation": {
-                      "identifier": "CommitStoreSaveFunc.PushHook",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreSaveFunc.PushHook",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreSaveFunc) PushHook(hook func(context.Context, api.RepoID, *git.Commit) error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreSaveFunc) PushHook(hook func(context.Context, api.RepoID, *git.Commit) error)\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Save method of the parent MockCommitStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreSaveFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "CommitStoreSaveFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreSaveFunc.SetDefaultReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreSaveFunc) SetDefaultReturn(r0 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreSaveFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreSaveFunc.PushReturn",
-                    "documentation": {
-                      "identifier": "CommitStoreSaveFunc.PushReturn",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreSaveFunc.PushReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreSaveFunc) PushReturn(r0 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreSaveFunc) PushReturn(r0 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreSaveFunc.nextHook",
-                    "documentation": {
-                      "identifier": "CommitStoreSaveFunc.nextHook",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreSaveFunc.nextHook",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreSaveFunc) nextHook() func(context.Context, api.RepoID, *git.Commit) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreSaveFunc) nextHook() func(context.Context, api.RepoID, *git.Commit) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreSaveFunc.appendCall",
-                    "documentation": {
-                      "identifier": "CommitStoreSaveFunc.appendCall",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreSaveFunc.appendCall",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreSaveFunc) appendCall(r0 CommitStoreSaveFuncCall)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreSaveFunc) appendCall(r0 CommitStoreSaveFuncCall)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreSaveFunc.History",
-                    "documentation": {
-                      "identifier": "CommitStoreSaveFunc.History",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreSaveFunc.History",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreSaveFunc) History() []CommitStoreSaveFuncCall"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreSaveFunc) History() []CommitStoreSaveFuncCall\n```\n\nHistory returns a sequence of CommitStoreSaveFuncCall objects describing the invocations of this function. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/compression#CommitStoreSaveFuncCall",
-              "documentation": {
-                "identifier": "CommitStoreSaveFuncCall",
-                "newPage": false,
-                "searchKey": "compression.CommitStoreSaveFuncCall",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type CommitStoreSaveFuncCall struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype CommitStoreSaveFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 api.RepoID\n\t// Arg2 is the value of the 3rd argument passed to this method\n\t// invocation.\n\tArg2 *git.Commit\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 error\n}\n```\n\nCommitStoreSaveFuncCall is an object that describes an invocation of method Save on an instance of MockCommitStore. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreSaveFuncCall.Args",
-                    "documentation": {
-                      "identifier": "CommitStoreSaveFuncCall.Args",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreSaveFuncCall.Args",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c CommitStoreSaveFuncCall) Args() []interface{}"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c CommitStoreSaveFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreSaveFuncCall.Results",
-                    "documentation": {
-                      "identifier": "CommitStoreSaveFuncCall.Results",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreSaveFuncCall.Results",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c CommitStoreSaveFuncCall) Results() []interface{}"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c CommitStoreSaveFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/compression#CommitStoreUpsertMetadataStampFunc",
-              "documentation": {
-                "identifier": "CommitStoreUpsertMetadataStampFunc",
-                "newPage": false,
-                "searchKey": "compression.CommitStoreUpsertMetadataStampFunc",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type CommitStoreUpsertMetadataStampFunc struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype CommitStoreUpsertMetadataStampFunc struct {\n\tdefaultHook func(context.Context, api.RepoID) (CommitIndexMetadata, error)\n\thooks       []func(context.Context, api.RepoID) (CommitIndexMetadata, error)\n\thistory     []CommitStoreUpsertMetadataStampFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nCommitStoreUpsertMetadataStampFunc describes the behavior when the UpsertMetadataStamp method of the parent MockCommitStore instance is invoked. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreUpsertMetadataStampFunc.SetDefaultHook",
-                    "documentation": {
-                      "identifier": "CommitStoreUpsertMetadataStampFunc.SetDefaultHook",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreUpsertMetadataStampFunc.SetDefaultHook",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreUpsertMetadataStampFunc) SetDefaultHook(hook func(context.Context, api.RepoID) (CommitIndexMetadata, error))"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreUpsertMetadataStampFunc) SetDefaultHook(hook func(context.Context, api.RepoID) (CommitIndexMetadata, error))\n```\n\nSetDefaultHook sets function that is called when the UpsertMetadataStamp method of the parent MockCommitStore instance is invoked and the hook queue is empty. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreUpsertMetadataStampFunc.PushHook",
-                    "documentation": {
-                      "identifier": "CommitStoreUpsertMetadataStampFunc.PushHook",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreUpsertMetadataStampFunc.PushHook",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreUpsertMetadataStampFunc) PushHook(hook func(context.Context, api.RepoID) (CommitIndexMetadata, error))"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreUpsertMetadataStampFunc) PushHook(hook func(context.Context, api.RepoID) (CommitIndexMetadata, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the UpsertMetadataStamp method of the parent MockCommitStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreUpsertMetadataStampFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "CommitStoreUpsertMetadataStampFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreUpsertMetadataStampFunc.SetDefaultReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreUpsertMetadataStampFunc) SetDefaultReturn(r0 CommitIndexMetadata, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreUpsertMetadataStampFunc) SetDefaultReturn(r0 CommitIndexMetadata, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreUpsertMetadataStampFunc.PushReturn",
-                    "documentation": {
-                      "identifier": "CommitStoreUpsertMetadataStampFunc.PushReturn",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreUpsertMetadataStampFunc.PushReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreUpsertMetadataStampFunc) PushReturn(r0 CommitIndexMetadata, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreUpsertMetadataStampFunc) PushReturn(r0 CommitIndexMetadata, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreUpsertMetadataStampFunc.nextHook",
-                    "documentation": {
-                      "identifier": "CommitStoreUpsertMetadataStampFunc.nextHook",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreUpsertMetadataStampFunc.nextHook",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreUpsertMetadataStampFunc) nextHook() func(context.Context, api.RepoID) (CommitIndexMetadata, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreUpsertMetadataStampFunc) nextHook() func(context.Context, api.RepoID) (CommitIndexMetadata, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreUpsertMetadataStampFunc.appendCall",
-                    "documentation": {
-                      "identifier": "CommitStoreUpsertMetadataStampFunc.appendCall",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreUpsertMetadataStampFunc.appendCall",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreUpsertMetadataStampFunc) appendCall(r0 CommitStoreUpsertMetadataStampFuncCall)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreUpsertMetadataStampFunc) appendCall(r0 CommitStoreUpsertMetadataStampFuncCall)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreUpsertMetadataStampFunc.History",
-                    "documentation": {
-                      "identifier": "CommitStoreUpsertMetadataStampFunc.History",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreUpsertMetadataStampFunc.History",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *CommitStoreUpsertMetadataStampFunc) History() []CommitStoreUpsertMetadataStampFuncCall"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *CommitStoreUpsertMetadataStampFunc) History() []CommitStoreUpsertMetadataStampFuncCall\n```\n\nHistory returns a sequence of CommitStoreUpsertMetadataStampFuncCall objects describing the invocations of this function. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/compression#CommitStoreUpsertMetadataStampFuncCall",
-              "documentation": {
-                "identifier": "CommitStoreUpsertMetadataStampFuncCall",
-                "newPage": false,
-                "searchKey": "compression.CommitStoreUpsertMetadataStampFuncCall",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type CommitStoreUpsertMetadataStampFuncCall struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype CommitStoreUpsertMetadataStampFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 api.RepoID\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 CommitIndexMetadata\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nCommitStoreUpsertMetadataStampFuncCall is an object that describes an invocation of method UpsertMetadataStamp on an instance of MockCommitStore. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreUpsertMetadataStampFuncCall.Args",
-                    "documentation": {
-                      "identifier": "CommitStoreUpsertMetadataStampFuncCall.Args",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreUpsertMetadataStampFuncCall.Args",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c CommitStoreUpsertMetadataStampFuncCall) Args() []interface{}"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c CommitStoreUpsertMetadataStampFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitStoreUpsertMetadataStampFuncCall.Results",
-                    "documentation": {
-                      "identifier": "CommitStoreUpsertMetadataStampFuncCall.Results",
-                      "newPage": false,
-                      "searchKey": "compression.CommitStoreUpsertMetadataStampFuncCall.Results",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c CommitStoreUpsertMetadataStampFuncCall) Results() []interface{}"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c CommitStoreUpsertMetadataStampFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/compression#RepoStore",
-              "documentation": {
-                "identifier": "RepoStore",
-                "newPage": false,
-                "searchKey": "compression.RepoStore",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RepoStore interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RepoStore interface {\n\tGetByName(ctx context.Context, repoName api.RepoName) ([]*types.Repo, error)\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/insights/compression#CommitIndexer",
               "documentation": {
                 "identifier": "CommitIndexer",
                 "newPage": false,
                 "searchKey": "compression.CommitIndexer",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1748,7 +232,9 @@
                       "identifier": "NewCommitIndexer",
                       "newPage": false,
                       "searchKey": "compression.NewCommitIndexer",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1768,7 +254,9 @@
                       "identifier": "CommitIndexer.Handler",
                       "newPage": false,
                       "searchKey": "compression.CommitIndexer.Handler",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1783,12 +271,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitIndexer.index",
+                    "documentation": {
+                      "identifier": "CommitIndexer.index",
+                      "newPage": false,
+                      "searchKey": "compression.CommitIndexer.index",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i *CommitIndexer) index(name string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i *CommitIndexer) index(name string) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/enterprise/internal/insights/compression#CommitIndexer.indexAll",
                     "documentation": {
                       "identifier": "CommitIndexer.indexAll",
                       "newPage": false,
                       "searchKey": "compression.CommitIndexer.indexAll",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1811,6 +323,7 @@
                       "newPage": false,
                       "searchKey": "compression.CommitIndexer.indexRepository",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1824,30 +337,1680 @@
                     },
                     "children": null
                   }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/compression#CommitStamp",
+              "documentation": {
+                "identifier": "CommitStamp",
+                "newPage": false,
+                "searchKey": "compression.CommitStamp",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommitStamp struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommitStamp struct {\n\tRepoID      int\n\tCommit      dbutil.CommitBytea\n\tCommittedAt time.Time\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/compression#CommitStore",
+              "documentation": {
+                "identifier": "CommitStore",
+                "newPage": false,
+                "searchKey": "compression.CommitStore",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommitStore interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommitStore interface {\n\tSave(ctx context.Context, id api.RepoID, commit *git.Commit) error\n\tGet(ctx context.Context, id api.RepoID, start time.Time, end time.Time) ([]CommitStamp, error)\n\tGetMetadata(ctx context.Context, id api.RepoID) (CommitIndexMetadata, error)\n\tUpsertMetadataStamp(ctx context.Context, id api.RepoID) (CommitIndexMetadata, error)\n\tInsertCommits(ctx context.Context, id api.RepoID, commits []*git.Commit) error\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/compression#CommitStoreGetFunc",
+              "documentation": {
+                "identifier": "CommitStoreGetFunc",
+                "newPage": false,
+                "searchKey": "compression.CommitStoreGetFunc",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommitStoreGetFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommitStoreGetFunc struct {\n\tdefaultHook func(context.Context, api.RepoID, time.Time, time.Time) ([]CommitStamp, error)\n\thooks       []func(context.Context, api.RepoID, time.Time, time.Time) ([]CommitStamp, error)\n\thistory     []CommitStoreGetFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nCommitStoreGetFunc describes the behavior when the Get method of the parent MockCommitStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetFunc.History",
+                    "documentation": {
+                      "identifier": "CommitStoreGetFunc.History",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreGetFunc.History",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreGetFunc) History() []CommitStoreGetFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreGetFunc) History() []CommitStoreGetFuncCall\n```\n\nHistory returns a sequence of CommitStoreGetFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/compression#CommitIndexer.index",
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetFunc.PushHook",
                     "documentation": {
-                      "identifier": "CommitIndexer.index",
+                      "identifier": "CommitStoreGetFunc.PushHook",
                       "newPage": false,
-                      "searchKey": "compression.CommitIndexer.index",
+                      "searchKey": "compression.CommitStoreGetFunc.PushHook",
                       "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreGetFunc) PushHook(hook func(context.Context, api.RepoID, time.Time, time.Time) ([]CommitStamp, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreGetFunc) PushHook(hook func(context.Context, api.RepoID, time.Time, time.Time) ([]CommitStamp, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Get method of the parent MockCommitStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "CommitStoreGetFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreGetFunc.PushReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreGetFunc) PushReturn(r0 []CommitStamp, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreGetFunc) PushReturn(r0 []CommitStamp, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "CommitStoreGetFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreGetFunc.SetDefaultHook",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreGetFunc) SetDefaultHook(hook func(context.Context, api.RepoID, time.Time, time.Time) ([]CommitStamp, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreGetFunc) SetDefaultHook(hook func(context.Context, api.RepoID, time.Time, time.Time) ([]CommitStamp, error))\n```\n\nSetDefaultHook sets function that is called when the Get method of the parent MockCommitStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "CommitStoreGetFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreGetFunc.SetDefaultReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreGetFunc) SetDefaultReturn(r0 []CommitStamp, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreGetFunc) SetDefaultReturn(r0 []CommitStamp, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetFunc.appendCall",
+                    "documentation": {
+                      "identifier": "CommitStoreGetFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreGetFunc.appendCall",
+                      "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (i *CommitIndexer) index(name string) error"
+                      "value": "func (f *CommitStoreGetFunc) appendCall(r0 CommitStoreGetFuncCall)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (i *CommitIndexer) index(name string) error\n```\n\n"
+                      "value": "```Go\nfunc (f *CommitStoreGetFunc) appendCall(r0 CommitStoreGetFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetFunc.nextHook",
+                    "documentation": {
+                      "identifier": "CommitStoreGetFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreGetFunc.nextHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreGetFunc) nextHook() func(context.Context, api.RepoID, time.Time, time.Time) ([]CommitStamp, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreGetFunc) nextHook() func(context.Context, api.RepoID, time.Time, time.Time) ([]CommitStamp, error)\n```\n\n"
                     },
                     "children": null
                   }
                 }
               ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/compression#CommitStoreGetFuncCall",
+              "documentation": {
+                "identifier": "CommitStoreGetFuncCall",
+                "newPage": false,
+                "searchKey": "compression.CommitStoreGetFuncCall",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommitStoreGetFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommitStoreGetFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 api.RepoID\n\t// Arg2 is the value of the 3rd argument passed to this method\n\t// invocation.\n\tArg2 time.Time\n\t// Arg3 is the value of the 4th argument passed to this method\n\t// invocation.\n\tArg3 time.Time\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 []CommitStamp\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nCommitStoreGetFuncCall is an object that describes an invocation of method Get on an instance of MockCommitStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetFuncCall.Args",
+                    "documentation": {
+                      "identifier": "CommitStoreGetFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreGetFuncCall.Args",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c CommitStoreGetFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c CommitStoreGetFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetFuncCall.Results",
+                    "documentation": {
+                      "identifier": "CommitStoreGetFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreGetFuncCall.Results",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c CommitStoreGetFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c CommitStoreGetFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/compression#CommitStoreGetMetadataFunc",
+              "documentation": {
+                "identifier": "CommitStoreGetMetadataFunc",
+                "newPage": false,
+                "searchKey": "compression.CommitStoreGetMetadataFunc",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommitStoreGetMetadataFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommitStoreGetMetadataFunc struct {\n\tdefaultHook func(context.Context, api.RepoID) (CommitIndexMetadata, error)\n\thooks       []func(context.Context, api.RepoID) (CommitIndexMetadata, error)\n\thistory     []CommitStoreGetMetadataFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nCommitStoreGetMetadataFunc describes the behavior when the GetMetadata method of the parent MockCommitStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetMetadataFunc.History",
+                    "documentation": {
+                      "identifier": "CommitStoreGetMetadataFunc.History",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreGetMetadataFunc.History",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreGetMetadataFunc) History() []CommitStoreGetMetadataFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreGetMetadataFunc) History() []CommitStoreGetMetadataFuncCall\n```\n\nHistory returns a sequence of CommitStoreGetMetadataFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetMetadataFunc.PushHook",
+                    "documentation": {
+                      "identifier": "CommitStoreGetMetadataFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreGetMetadataFunc.PushHook",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreGetMetadataFunc) PushHook(hook func(context.Context, api.RepoID) (CommitIndexMetadata, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreGetMetadataFunc) PushHook(hook func(context.Context, api.RepoID) (CommitIndexMetadata, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the GetMetadata method of the parent MockCommitStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetMetadataFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "CommitStoreGetMetadataFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreGetMetadataFunc.PushReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreGetMetadataFunc) PushReturn(r0 CommitIndexMetadata, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreGetMetadataFunc) PushReturn(r0 CommitIndexMetadata, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetMetadataFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "CommitStoreGetMetadataFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreGetMetadataFunc.SetDefaultHook",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreGetMetadataFunc) SetDefaultHook(hook func(context.Context, api.RepoID) (CommitIndexMetadata, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreGetMetadataFunc) SetDefaultHook(hook func(context.Context, api.RepoID) (CommitIndexMetadata, error))\n```\n\nSetDefaultHook sets function that is called when the GetMetadata method of the parent MockCommitStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetMetadataFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "CommitStoreGetMetadataFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreGetMetadataFunc.SetDefaultReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreGetMetadataFunc) SetDefaultReturn(r0 CommitIndexMetadata, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreGetMetadataFunc) SetDefaultReturn(r0 CommitIndexMetadata, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetMetadataFunc.appendCall",
+                    "documentation": {
+                      "identifier": "CommitStoreGetMetadataFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreGetMetadataFunc.appendCall",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreGetMetadataFunc) appendCall(r0 CommitStoreGetMetadataFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreGetMetadataFunc) appendCall(r0 CommitStoreGetMetadataFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetMetadataFunc.nextHook",
+                    "documentation": {
+                      "identifier": "CommitStoreGetMetadataFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreGetMetadataFunc.nextHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreGetMetadataFunc) nextHook() func(context.Context, api.RepoID) (CommitIndexMetadata, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreGetMetadataFunc) nextHook() func(context.Context, api.RepoID) (CommitIndexMetadata, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/compression#CommitStoreGetMetadataFuncCall",
+              "documentation": {
+                "identifier": "CommitStoreGetMetadataFuncCall",
+                "newPage": false,
+                "searchKey": "compression.CommitStoreGetMetadataFuncCall",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommitStoreGetMetadataFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommitStoreGetMetadataFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 api.RepoID\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 CommitIndexMetadata\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nCommitStoreGetMetadataFuncCall is an object that describes an invocation of method GetMetadata on an instance of MockCommitStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetMetadataFuncCall.Args",
+                    "documentation": {
+                      "identifier": "CommitStoreGetMetadataFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreGetMetadataFuncCall.Args",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c CommitStoreGetMetadataFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c CommitStoreGetMetadataFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreGetMetadataFuncCall.Results",
+                    "documentation": {
+                      "identifier": "CommitStoreGetMetadataFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreGetMetadataFuncCall.Results",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c CommitStoreGetMetadataFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c CommitStoreGetMetadataFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/compression#CommitStoreInsertCommitsFunc",
+              "documentation": {
+                "identifier": "CommitStoreInsertCommitsFunc",
+                "newPage": false,
+                "searchKey": "compression.CommitStoreInsertCommitsFunc",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommitStoreInsertCommitsFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommitStoreInsertCommitsFunc struct {\n\tdefaultHook func(context.Context, api.RepoID, []*git.Commit) error\n\thooks       []func(context.Context, api.RepoID, []*git.Commit) error\n\thistory     []CommitStoreInsertCommitsFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nCommitStoreInsertCommitsFunc describes the behavior when the InsertCommits method of the parent MockCommitStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreInsertCommitsFunc.History",
+                    "documentation": {
+                      "identifier": "CommitStoreInsertCommitsFunc.History",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreInsertCommitsFunc.History",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreInsertCommitsFunc) History() []CommitStoreInsertCommitsFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreInsertCommitsFunc) History() []CommitStoreInsertCommitsFuncCall\n```\n\nHistory returns a sequence of CommitStoreInsertCommitsFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreInsertCommitsFunc.PushHook",
+                    "documentation": {
+                      "identifier": "CommitStoreInsertCommitsFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreInsertCommitsFunc.PushHook",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreInsertCommitsFunc) PushHook(hook func(context.Context, api.RepoID, []*git.Commit) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreInsertCommitsFunc) PushHook(hook func(context.Context, api.RepoID, []*git.Commit) error)\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the InsertCommits method of the parent MockCommitStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreInsertCommitsFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "CommitStoreInsertCommitsFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreInsertCommitsFunc.PushReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreInsertCommitsFunc) PushReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreInsertCommitsFunc) PushReturn(r0 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreInsertCommitsFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "CommitStoreInsertCommitsFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreInsertCommitsFunc.SetDefaultHook",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreInsertCommitsFunc) SetDefaultHook(hook func(context.Context, api.RepoID, []*git.Commit) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreInsertCommitsFunc) SetDefaultHook(hook func(context.Context, api.RepoID, []*git.Commit) error)\n```\n\nSetDefaultHook sets function that is called when the InsertCommits method of the parent MockCommitStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreInsertCommitsFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "CommitStoreInsertCommitsFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreInsertCommitsFunc.SetDefaultReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreInsertCommitsFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreInsertCommitsFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreInsertCommitsFunc.appendCall",
+                    "documentation": {
+                      "identifier": "CommitStoreInsertCommitsFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreInsertCommitsFunc.appendCall",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreInsertCommitsFunc) appendCall(r0 CommitStoreInsertCommitsFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreInsertCommitsFunc) appendCall(r0 CommitStoreInsertCommitsFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreInsertCommitsFunc.nextHook",
+                    "documentation": {
+                      "identifier": "CommitStoreInsertCommitsFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreInsertCommitsFunc.nextHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreInsertCommitsFunc) nextHook() func(context.Context, api.RepoID, []*git.Commit) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreInsertCommitsFunc) nextHook() func(context.Context, api.RepoID, []*git.Commit) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/compression#CommitStoreInsertCommitsFuncCall",
+              "documentation": {
+                "identifier": "CommitStoreInsertCommitsFuncCall",
+                "newPage": false,
+                "searchKey": "compression.CommitStoreInsertCommitsFuncCall",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommitStoreInsertCommitsFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommitStoreInsertCommitsFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 api.RepoID\n\t// Arg2 is the value of the 3rd argument passed to this method\n\t// invocation.\n\tArg2 []*git.Commit\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 error\n}\n```\n\nCommitStoreInsertCommitsFuncCall is an object that describes an invocation of method InsertCommits on an instance of MockCommitStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreInsertCommitsFuncCall.Args",
+                    "documentation": {
+                      "identifier": "CommitStoreInsertCommitsFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreInsertCommitsFuncCall.Args",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c CommitStoreInsertCommitsFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c CommitStoreInsertCommitsFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreInsertCommitsFuncCall.Results",
+                    "documentation": {
+                      "identifier": "CommitStoreInsertCommitsFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreInsertCommitsFuncCall.Results",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c CommitStoreInsertCommitsFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c CommitStoreInsertCommitsFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/compression#CommitStoreSaveFunc",
+              "documentation": {
+                "identifier": "CommitStoreSaveFunc",
+                "newPage": false,
+                "searchKey": "compression.CommitStoreSaveFunc",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommitStoreSaveFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommitStoreSaveFunc struct {\n\tdefaultHook func(context.Context, api.RepoID, *git.Commit) error\n\thooks       []func(context.Context, api.RepoID, *git.Commit) error\n\thistory     []CommitStoreSaveFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nCommitStoreSaveFunc describes the behavior when the Save method of the parent MockCommitStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreSaveFunc.History",
+                    "documentation": {
+                      "identifier": "CommitStoreSaveFunc.History",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreSaveFunc.History",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreSaveFunc) History() []CommitStoreSaveFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreSaveFunc) History() []CommitStoreSaveFuncCall\n```\n\nHistory returns a sequence of CommitStoreSaveFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreSaveFunc.PushHook",
+                    "documentation": {
+                      "identifier": "CommitStoreSaveFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreSaveFunc.PushHook",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreSaveFunc) PushHook(hook func(context.Context, api.RepoID, *git.Commit) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreSaveFunc) PushHook(hook func(context.Context, api.RepoID, *git.Commit) error)\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Save method of the parent MockCommitStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreSaveFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "CommitStoreSaveFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreSaveFunc.PushReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreSaveFunc) PushReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreSaveFunc) PushReturn(r0 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreSaveFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "CommitStoreSaveFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreSaveFunc.SetDefaultHook",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreSaveFunc) SetDefaultHook(hook func(context.Context, api.RepoID, *git.Commit) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreSaveFunc) SetDefaultHook(hook func(context.Context, api.RepoID, *git.Commit) error)\n```\n\nSetDefaultHook sets function that is called when the Save method of the parent MockCommitStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreSaveFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "CommitStoreSaveFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreSaveFunc.SetDefaultReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreSaveFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreSaveFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreSaveFunc.appendCall",
+                    "documentation": {
+                      "identifier": "CommitStoreSaveFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreSaveFunc.appendCall",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreSaveFunc) appendCall(r0 CommitStoreSaveFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreSaveFunc) appendCall(r0 CommitStoreSaveFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreSaveFunc.nextHook",
+                    "documentation": {
+                      "identifier": "CommitStoreSaveFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreSaveFunc.nextHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreSaveFunc) nextHook() func(context.Context, api.RepoID, *git.Commit) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreSaveFunc) nextHook() func(context.Context, api.RepoID, *git.Commit) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/compression#CommitStoreSaveFuncCall",
+              "documentation": {
+                "identifier": "CommitStoreSaveFuncCall",
+                "newPage": false,
+                "searchKey": "compression.CommitStoreSaveFuncCall",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommitStoreSaveFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommitStoreSaveFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 api.RepoID\n\t// Arg2 is the value of the 3rd argument passed to this method\n\t// invocation.\n\tArg2 *git.Commit\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 error\n}\n```\n\nCommitStoreSaveFuncCall is an object that describes an invocation of method Save on an instance of MockCommitStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreSaveFuncCall.Args",
+                    "documentation": {
+                      "identifier": "CommitStoreSaveFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreSaveFuncCall.Args",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c CommitStoreSaveFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c CommitStoreSaveFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreSaveFuncCall.Results",
+                    "documentation": {
+                      "identifier": "CommitStoreSaveFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreSaveFuncCall.Results",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c CommitStoreSaveFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c CommitStoreSaveFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/compression#CommitStoreUpsertMetadataStampFunc",
+              "documentation": {
+                "identifier": "CommitStoreUpsertMetadataStampFunc",
+                "newPage": false,
+                "searchKey": "compression.CommitStoreUpsertMetadataStampFunc",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommitStoreUpsertMetadataStampFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommitStoreUpsertMetadataStampFunc struct {\n\tdefaultHook func(context.Context, api.RepoID) (CommitIndexMetadata, error)\n\thooks       []func(context.Context, api.RepoID) (CommitIndexMetadata, error)\n\thistory     []CommitStoreUpsertMetadataStampFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nCommitStoreUpsertMetadataStampFunc describes the behavior when the UpsertMetadataStamp method of the parent MockCommitStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreUpsertMetadataStampFunc.History",
+                    "documentation": {
+                      "identifier": "CommitStoreUpsertMetadataStampFunc.History",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreUpsertMetadataStampFunc.History",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreUpsertMetadataStampFunc) History() []CommitStoreUpsertMetadataStampFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreUpsertMetadataStampFunc) History() []CommitStoreUpsertMetadataStampFuncCall\n```\n\nHistory returns a sequence of CommitStoreUpsertMetadataStampFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreUpsertMetadataStampFunc.PushHook",
+                    "documentation": {
+                      "identifier": "CommitStoreUpsertMetadataStampFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreUpsertMetadataStampFunc.PushHook",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreUpsertMetadataStampFunc) PushHook(hook func(context.Context, api.RepoID) (CommitIndexMetadata, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreUpsertMetadataStampFunc) PushHook(hook func(context.Context, api.RepoID) (CommitIndexMetadata, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the UpsertMetadataStamp method of the parent MockCommitStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreUpsertMetadataStampFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "CommitStoreUpsertMetadataStampFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreUpsertMetadataStampFunc.PushReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreUpsertMetadataStampFunc) PushReturn(r0 CommitIndexMetadata, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreUpsertMetadataStampFunc) PushReturn(r0 CommitIndexMetadata, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreUpsertMetadataStampFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "CommitStoreUpsertMetadataStampFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreUpsertMetadataStampFunc.SetDefaultHook",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreUpsertMetadataStampFunc) SetDefaultHook(hook func(context.Context, api.RepoID) (CommitIndexMetadata, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreUpsertMetadataStampFunc) SetDefaultHook(hook func(context.Context, api.RepoID) (CommitIndexMetadata, error))\n```\n\nSetDefaultHook sets function that is called when the UpsertMetadataStamp method of the parent MockCommitStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreUpsertMetadataStampFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "CommitStoreUpsertMetadataStampFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreUpsertMetadataStampFunc.SetDefaultReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreUpsertMetadataStampFunc) SetDefaultReturn(r0 CommitIndexMetadata, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreUpsertMetadataStampFunc) SetDefaultReturn(r0 CommitIndexMetadata, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreUpsertMetadataStampFunc.appendCall",
+                    "documentation": {
+                      "identifier": "CommitStoreUpsertMetadataStampFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreUpsertMetadataStampFunc.appendCall",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreUpsertMetadataStampFunc) appendCall(r0 CommitStoreUpsertMetadataStampFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreUpsertMetadataStampFunc) appendCall(r0 CommitStoreUpsertMetadataStampFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreUpsertMetadataStampFunc.nextHook",
+                    "documentation": {
+                      "identifier": "CommitStoreUpsertMetadataStampFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreUpsertMetadataStampFunc.nextHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *CommitStoreUpsertMetadataStampFunc) nextHook() func(context.Context, api.RepoID) (CommitIndexMetadata, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *CommitStoreUpsertMetadataStampFunc) nextHook() func(context.Context, api.RepoID) (CommitIndexMetadata, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/compression#CommitStoreUpsertMetadataStampFuncCall",
+              "documentation": {
+                "identifier": "CommitStoreUpsertMetadataStampFuncCall",
+                "newPage": false,
+                "searchKey": "compression.CommitStoreUpsertMetadataStampFuncCall",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommitStoreUpsertMetadataStampFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommitStoreUpsertMetadataStampFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 api.RepoID\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 CommitIndexMetadata\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nCommitStoreUpsertMetadataStampFuncCall is an object that describes an invocation of method UpsertMetadataStamp on an instance of MockCommitStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreUpsertMetadataStampFuncCall.Args",
+                    "documentation": {
+                      "identifier": "CommitStoreUpsertMetadataStampFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreUpsertMetadataStampFuncCall.Args",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c CommitStoreUpsertMetadataStampFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c CommitStoreUpsertMetadataStampFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#CommitStoreUpsertMetadataStampFuncCall.Results",
+                    "documentation": {
+                      "identifier": "CommitStoreUpsertMetadataStampFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "compression.CommitStoreUpsertMetadataStampFuncCall.Results",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c CommitStoreUpsertMetadataStampFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c CommitStoreUpsertMetadataStampFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/compression#DBCommitStore",
+              "documentation": {
+                "identifier": "DBCommitStore",
+                "newPage": false,
+                "searchKey": "compression.DBCommitStore",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DBCommitStore struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DBCommitStore struct {\n\t*basestore.Store\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#NewCommitStore",
+                    "documentation": {
+                      "identifier": "NewCommitStore",
+                      "newPage": false,
+                      "searchKey": "compression.NewCommitStore",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewCommitStore(db dbutil.DB) *DBCommitStore"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewCommitStore(db dbutil.DB) *DBCommitStore\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#DBCommitStore.Get",
+                    "documentation": {
+                      "identifier": "DBCommitStore.Get",
+                      "newPage": false,
+                      "searchKey": "compression.DBCommitStore.Get",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *DBCommitStore) Get(ctx context.Context, id api.RepoID, start time.Time, end time.Time) (_ []CommitStamp, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *DBCommitStore) Get(ctx context.Context, id api.RepoID, start time.Time, end time.Time) (_ []CommitStamp, err error)\n```\n\nGet Fetch all commits that occur for a specific repository and fall in a specific time range. The time range is start inclusive and end exclusive [start, end) \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#DBCommitStore.GetMetadata",
+                    "documentation": {
+                      "identifier": "DBCommitStore.GetMetadata",
+                      "newPage": false,
+                      "searchKey": "compression.DBCommitStore.GetMetadata",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *DBCommitStore) GetMetadata(ctx context.Context, id api.RepoID) (CommitIndexMetadata, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *DBCommitStore) GetMetadata(ctx context.Context, id api.RepoID) (CommitIndexMetadata, error)\n```\n\nGetMetadata Returns commit index metadata for a given repository \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#DBCommitStore.InsertCommits",
+                    "documentation": {
+                      "identifier": "DBCommitStore.InsertCommits",
+                      "newPage": false,
+                      "searchKey": "compression.DBCommitStore.InsertCommits",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *DBCommitStore) InsertCommits(ctx context.Context, id api.RepoID, commits []*git.Commit) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *DBCommitStore) InsertCommits(ctx context.Context, id api.RepoID, commits []*git.Commit) (err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#DBCommitStore.Save",
+                    "documentation": {
+                      "identifier": "DBCommitStore.Save",
+                      "newPage": false,
+                      "searchKey": "compression.DBCommitStore.Save",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *DBCommitStore) Save(ctx context.Context, id api.RepoID, commit *git.Commit) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *DBCommitStore) Save(ctx context.Context, id api.RepoID, commit *git.Commit) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#DBCommitStore.Transact",
+                    "documentation": {
+                      "identifier": "DBCommitStore.Transact",
+                      "newPage": false,
+                      "searchKey": "compression.DBCommitStore.Transact",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *DBCommitStore) Transact(ctx context.Context) (*DBCommitStore, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *DBCommitStore) Transact(ctx context.Context) (*DBCommitStore, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#DBCommitStore.UpsertMetadataStamp",
+                    "documentation": {
+                      "identifier": "DBCommitStore.UpsertMetadataStamp",
+                      "newPage": false,
+                      "searchKey": "compression.DBCommitStore.UpsertMetadataStamp",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *DBCommitStore) UpsertMetadataStamp(ctx context.Context, id api.RepoID) (CommitIndexMetadata, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *DBCommitStore) UpsertMetadataStamp(ctx context.Context, id api.RepoID) (CommitIndexMetadata, error)\n```\n\nUpsertMetadataStamp inserts (or updates, if the row already exists) the index metadata timestamp for a given repository \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#DBCommitStore.With",
+                    "documentation": {
+                      "identifier": "DBCommitStore.With",
+                      "newPage": false,
+                      "searchKey": "compression.DBCommitStore.With",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *DBCommitStore) With(other basestore.ShareableStore) *DBCommitStore"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *DBCommitStore) With(other basestore.ShareableStore) *DBCommitStore\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/compression#MockCommitStore",
+              "documentation": {
+                "identifier": "MockCommitStore",
+                "newPage": false,
+                "searchKey": "compression.MockCommitStore",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockCommitStore struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockCommitStore struct {\n\t// GetFunc is an instance of a mock function object controlling the\n\t// behavior of the method Get.\n\tGetFunc *CommitStoreGetFunc\n\t// GetMetadataFunc is an instance of a mock function object controlling\n\t// the behavior of the method GetMetadata.\n\tGetMetadataFunc *CommitStoreGetMetadataFunc\n\t// InsertCommitsFunc is an instance of a mock function object\n\t// controlling the behavior of the method InsertCommits.\n\tInsertCommitsFunc *CommitStoreInsertCommitsFunc\n\t// SaveFunc is an instance of a mock function object controlling the\n\t// behavior of the method Save.\n\tSaveFunc *CommitStoreSaveFunc\n\t// UpsertMetadataStampFunc is an instance of a mock function object\n\t// controlling the behavior of the method UpsertMetadataStamp.\n\tUpsertMetadataStampFunc *CommitStoreUpsertMetadataStampFunc\n}\n```\n\nMockCommitStore is a mock implementation of the CommitStore interface (from the package github.com/sourcegraph/sourcegraph/enterprise/internal/insights/compression) used for unit testing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#NewMockCommitStore",
+                    "documentation": {
+                      "identifier": "NewMockCommitStore",
+                      "newPage": false,
+                      "searchKey": "compression.NewMockCommitStore",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockCommitStore() *MockCommitStore"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockCommitStore() *MockCommitStore\n```\n\nNewMockCommitStore creates a new mock of the CommitStore interface. All methods return zero values for all results, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#NewMockCommitStoreFrom",
+                    "documentation": {
+                      "identifier": "NewMockCommitStoreFrom",
+                      "newPage": false,
+                      "searchKey": "compression.NewMockCommitStoreFrom",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockCommitStoreFrom(i CommitStore) *MockCommitStore"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockCommitStoreFrom(i CommitStore) *MockCommitStore\n```\n\nNewMockCommitStoreFrom creates a new mock of the MockCommitStore interface. All methods delegate to the given implementation, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#MockCommitStore.Get",
+                    "documentation": {
+                      "identifier": "MockCommitStore.Get",
+                      "newPage": false,
+                      "searchKey": "compression.MockCommitStore.Get",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockCommitStore) Get(v0 context.Context, v1 api.RepoID, v2 time.Time, v3 time.Time) ([]CommitStamp, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockCommitStore) Get(v0 context.Context, v1 api.RepoID, v2 time.Time, v3 time.Time) ([]CommitStamp, error)\n```\n\nGet delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#MockCommitStore.GetMetadata",
+                    "documentation": {
+                      "identifier": "MockCommitStore.GetMetadata",
+                      "newPage": false,
+                      "searchKey": "compression.MockCommitStore.GetMetadata",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockCommitStore) GetMetadata(v0 context.Context, v1 api.RepoID) (CommitIndexMetadata, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockCommitStore) GetMetadata(v0 context.Context, v1 api.RepoID) (CommitIndexMetadata, error)\n```\n\nGetMetadata delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#MockCommitStore.InsertCommits",
+                    "documentation": {
+                      "identifier": "MockCommitStore.InsertCommits",
+                      "newPage": false,
+                      "searchKey": "compression.MockCommitStore.InsertCommits",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockCommitStore) InsertCommits(v0 context.Context, v1 api.RepoID, v2 []*git.Commit) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockCommitStore) InsertCommits(v0 context.Context, v1 api.RepoID, v2 []*git.Commit) error\n```\n\nInsertCommits delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#MockCommitStore.Save",
+                    "documentation": {
+                      "identifier": "MockCommitStore.Save",
+                      "newPage": false,
+                      "searchKey": "compression.MockCommitStore.Save",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockCommitStore) Save(v0 context.Context, v1 api.RepoID, v2 *git.Commit) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockCommitStore) Save(v0 context.Context, v1 api.RepoID, v2 *git.Commit) error\n```\n\nSave delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/compression#MockCommitStore.UpsertMetadataStamp",
+                    "documentation": {
+                      "identifier": "MockCommitStore.UpsertMetadataStamp",
+                      "newPage": false,
+                      "searchKey": "compression.MockCommitStore.UpsertMetadataStamp",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockCommitStore) UpsertMetadataStamp(v0 context.Context, v1 api.RepoID) (CommitIndexMetadata, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockCommitStore) UpsertMetadataStamp(v0 context.Context, v1 api.RepoID) (CommitIndexMetadata, error)\n```\n\nUpsertMetadataStamp delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/compression#RepoStore",
+              "documentation": {
+                "identifier": "RepoStore",
+                "newPage": false,
+                "searchKey": "compression.RepoStore",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoStore interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoStore interface {\n\tGetByName(ctx context.Context, repoName api.RepoName) ([]*types.Repo, error)\n}\n```\n\n"
+              },
+              "children": null
             }
           }
         ]
@@ -1861,6 +2024,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -1880,7 +2044,9 @@
                 "identifier": "NewCommitIndexerWorker",
                 "newPage": false,
                 "searchKey": "compression.NewCommitIndexerWorker",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1895,12 +2061,108 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/insights/compression#TestCommitIndexer_indexAll",
+              "documentation": {
+                "identifier": "TestCommitIndexer_indexAll",
+                "newPage": false,
+                "searchKey": "compression.TestCommitIndexer_indexAll",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCommitIndexer_indexAll(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCommitIndexer_indexAll(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/compression#Test_getMetadata_InsertNewRecord",
+              "documentation": {
+                "identifier": "Test_getMetadata_InsertNewRecord",
+                "newPage": false,
+                "searchKey": "compression.Test_getMetadata_InsertNewRecord",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Test_getMetadata_InsertNewRecord(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Test_getMetadata_InsertNewRecord(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/compression#Test_getMetadata_NoInsertRequired",
+              "documentation": {
+                "identifier": "Test_getMetadata_NoInsertRequired",
+                "newPage": false,
+                "searchKey": "compression.Test_getMetadata_NoInsertRequired",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Test_getMetadata_NoInsertRequired(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Test_getMetadata_NoInsertRequired(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/compression#commit",
+              "documentation": {
+                "identifier": "commit",
+                "newPage": false,
+                "searchKey": "compression.commit",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func commit(ref string, commitTime string) *git.Commit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc commit(ref string, commitTime string) *git.Commit\n```\n\ncommit build a fake commit for test scenarios \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/insights/compression#getCommits",
               "documentation": {
                 "identifier": "getCommits",
                 "newPage": false,
                 "searchKey": "compression.getCommits",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1923,6 +2185,7 @@
                 "newPage": false,
                 "searchKey": "compression.max",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1939,122 +2202,13 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/insights/compression#TestCommitIndexer_indexAll",
-              "documentation": {
-                "identifier": "TestCommitIndexer_indexAll",
-                "newPage": false,
-                "searchKey": "compression.TestCommitIndexer_indexAll",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCommitIndexer_indexAll(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCommitIndexer_indexAll(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/compression#Test_getMetadata_InsertNewRecord",
-              "documentation": {
-                "identifier": "Test_getMetadata_InsertNewRecord",
-                "newPage": false,
-                "searchKey": "compression.Test_getMetadata_InsertNewRecord",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Test_getMetadata_InsertNewRecord(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Test_getMetadata_InsertNewRecord(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/compression#Test_getMetadata_NoInsertRequired",
-              "documentation": {
-                "identifier": "Test_getMetadata_NoInsertRequired",
-                "newPage": false,
-                "searchKey": "compression.Test_getMetadata_NoInsertRequired",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Test_getMetadata_NoInsertRequired(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Test_getMetadata_NoInsertRequired(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/compression#mockIterator",
-              "documentation": {
-                "identifier": "mockIterator",
-                "newPage": false,
-                "searchKey": "compression.mockIterator",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func mockIterator(repos []string) func(ctx context.Context, each func(repoName string) error) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc mockIterator(repos []string) func(ctx context.Context, each func(repoName string) error) error\n```\n\nmockIterator generates iterator methods given a list of repo names for test scenarios \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/compression#commit",
-              "documentation": {
-                "identifier": "commit",
-                "newPage": false,
-                "searchKey": "compression.commit",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func commit(ref string, commitTime string) *git.Commit"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc commit(ref string, commitTime string) *git.Commit\n```\n\ncommit build a fake commit for test scenarios \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/insights/compression#mockCommits",
               "documentation": {
                 "identifier": "mockCommits",
                 "newPage": false,
                 "searchKey": "compression.mockCommits",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2077,6 +2231,7 @@
                 "newPage": false,
                 "searchKey": "compression.mockIds",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2087,6 +2242,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc mockIds(ids map[string]int) func(ctx context.Context, name api.RepoName) (*types.Repo, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/compression#mockIterator",
+              "documentation": {
+                "identifier": "mockIterator",
+                "newPage": false,
+                "searchKey": "compression.mockIterator",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mockIterator(repos []string) func(ctx context.Context, each func(repoName string) error) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mockIterator(repos []string) func(ctx context.Context, each func(repoName string) error) error\n```\n\nmockIterator generates iterator methods given a list of repo names for test scenarios \n\n"
               },
               "children": null
             }

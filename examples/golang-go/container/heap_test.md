@@ -10,16 +10,16 @@ This example demonstrates a priority queue built using the heap interface.
     * [type IntHeap []int](#IntHeap)
         * [func (h IntHeap) Len() int](#IntHeap.Len)
         * [func (h IntHeap) Less(i, j int) bool](#IntHeap.Less)
-        * [func (h IntHeap) Swap(i, j int)](#IntHeap.Swap)
-        * [func (h *IntHeap) Push(x interface{})](#IntHeap.Push)
         * [func (h *IntHeap) Pop() interface{}](#IntHeap.Pop)
+        * [func (h *IntHeap) Push(x interface{})](#IntHeap.Push)
+        * [func (h IntHeap) Swap(i, j int)](#IntHeap.Swap)
     * [type Item struct](#Item)
     * [type PriorityQueue []*heap_test.Item](#PriorityQueue)
         * [func (pq PriorityQueue) Len() int](#PriorityQueue.Len)
         * [func (pq PriorityQueue) Less(i, j int) bool](#PriorityQueue.Less)
-        * [func (pq PriorityQueue) Swap(i, j int)](#PriorityQueue.Swap)
-        * [func (pq *PriorityQueue) Push(x interface{})](#PriorityQueue.Push)
         * [func (pq *PriorityQueue) Pop() interface{}](#PriorityQueue.Pop)
+        * [func (pq *PriorityQueue) Push(x interface{})](#PriorityQueue.Push)
+        * [func (pq PriorityQueue) Swap(i, j int)](#PriorityQueue.Swap)
         * [func (pq *PriorityQueue) update(item *Item, value string, priority int)](#PriorityQueue.update)
 * [Functions](#func)
     * [func Example_intHeap()](#Example_intHeap)
@@ -29,14 +29,14 @@ This example demonstrates a priority queue built using the heap interface.
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="IntHeap" href="#IntHeap">type IntHeap []int</a>
 
 ```
 searchKey: heap_test.IntHeap
-tags: [private]
+tags: [array number private]
 ```
 
 ```Go
@@ -49,7 +49,7 @@ An IntHeap is a min-heap of ints.
 
 ```
 searchKey: heap_test.IntHeap.Len
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -60,51 +60,51 @@ func (h IntHeap) Len() int
 
 ```
 searchKey: heap_test.IntHeap.Less
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (h IntHeap) Less(i, j int) bool
 ```
 
-#### <a id="IntHeap.Swap" href="#IntHeap.Swap">func (h IntHeap) Swap(i, j int)</a>
-
-```
-searchKey: heap_test.IntHeap.Swap
-tags: [private]
-```
-
-```Go
-func (h IntHeap) Swap(i, j int)
-```
-
-#### <a id="IntHeap.Push" href="#IntHeap.Push">func (h *IntHeap) Push(x interface{})</a>
-
-```
-searchKey: heap_test.IntHeap.Push
-tags: [private]
-```
-
-```Go
-func (h *IntHeap) Push(x interface{})
-```
-
 #### <a id="IntHeap.Pop" href="#IntHeap.Pop">func (h *IntHeap) Pop() interface{}</a>
 
 ```
 searchKey: heap_test.IntHeap.Pop
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (h *IntHeap) Pop() interface{}
 ```
 
+#### <a id="IntHeap.Push" href="#IntHeap.Push">func (h *IntHeap) Push(x interface{})</a>
+
+```
+searchKey: heap_test.IntHeap.Push
+tags: [method private]
+```
+
+```Go
+func (h *IntHeap) Push(x interface{})
+```
+
+#### <a id="IntHeap.Swap" href="#IntHeap.Swap">func (h IntHeap) Swap(i, j int)</a>
+
+```
+searchKey: heap_test.IntHeap.Swap
+tags: [method private]
+```
+
+```Go
+func (h IntHeap) Swap(i, j int)
+```
+
 ### <a id="Item" href="#Item">type Item struct</a>
 
 ```
 searchKey: heap_test.Item
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -122,7 +122,7 @@ An Item is something we manage in a priority queue.
 
 ```
 searchKey: heap_test.PriorityQueue
-tags: [private]
+tags: [array struct private]
 ```
 
 ```Go
@@ -135,7 +135,7 @@ A PriorityQueue implements heap.Interface and holds Items.
 
 ```
 searchKey: heap_test.PriorityQueue.Len
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -146,51 +146,51 @@ func (pq PriorityQueue) Len() int
 
 ```
 searchKey: heap_test.PriorityQueue.Less
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (pq PriorityQueue) Less(i, j int) bool
 ```
 
-#### <a id="PriorityQueue.Swap" href="#PriorityQueue.Swap">func (pq PriorityQueue) Swap(i, j int)</a>
-
-```
-searchKey: heap_test.PriorityQueue.Swap
-tags: [private]
-```
-
-```Go
-func (pq PriorityQueue) Swap(i, j int)
-```
-
-#### <a id="PriorityQueue.Push" href="#PriorityQueue.Push">func (pq *PriorityQueue) Push(x interface{})</a>
-
-```
-searchKey: heap_test.PriorityQueue.Push
-tags: [private]
-```
-
-```Go
-func (pq *PriorityQueue) Push(x interface{})
-```
-
 #### <a id="PriorityQueue.Pop" href="#PriorityQueue.Pop">func (pq *PriorityQueue) Pop() interface{}</a>
 
 ```
 searchKey: heap_test.PriorityQueue.Pop
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (pq *PriorityQueue) Pop() interface{}
 ```
 
+#### <a id="PriorityQueue.Push" href="#PriorityQueue.Push">func (pq *PriorityQueue) Push(x interface{})</a>
+
+```
+searchKey: heap_test.PriorityQueue.Push
+tags: [method private]
+```
+
+```Go
+func (pq *PriorityQueue) Push(x interface{})
+```
+
+#### <a id="PriorityQueue.Swap" href="#PriorityQueue.Swap">func (pq PriorityQueue) Swap(i, j int)</a>
+
+```
+searchKey: heap_test.PriorityQueue.Swap
+tags: [method private]
+```
+
+```Go
+func (pq PriorityQueue) Swap(i, j int)
+```
+
 #### <a id="PriorityQueue.update" href="#PriorityQueue.update">func (pq *PriorityQueue) update(item *Item, value string, priority int)</a>
 
 ```
 searchKey: heap_test.PriorityQueue.update
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -202,14 +202,14 @@ update modifies the priority and value of an Item in the queue.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Example_intHeap" href="#Example_intHeap">func Example_intHeap()</a>
 
 ```
 searchKey: heap_test.Example_intHeap
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -222,7 +222,7 @@ This example inserts several ints into an IntHeap, checks the minimum, and remov
 
 ```
 searchKey: heap_test.Example_priorityQueue
-tags: [private]
+tags: [function private]
 ```
 
 ```Go

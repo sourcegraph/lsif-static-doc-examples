@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "embed/internal/embedtest_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,88 +41,25 @@
         "children": [
           {
             "node": {
-              "pathID": "/embed/internal/embedtest_test#global2",
+              "pathID": "/embed/internal/embedtest_test#bbig",
               "documentation": {
-                "identifier": "global2",
+                "identifier": "bbig",
                 "newPage": false,
-                "searchKey": "embedtest_test.global2",
+                "searchKey": "embedtest_test.bbig",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var global2"
+                "value": "var bbig"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar global2 = global\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/embed/internal/embedtest_test#concurrency2",
-              "documentation": {
-                "identifier": "concurrency2",
-                "newPage": false,
-                "searchKey": "embedtest_test.concurrency2",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var concurrency2"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar concurrency2 = concurrency\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/embed/internal/embedtest_test#glass2",
-              "documentation": {
-                "identifier": "glass2",
-                "newPage": false,
-                "searchKey": "embedtest_test.glass2",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var glass2"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar glass2 = glass\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/embed/internal/embedtest_test#sbig2",
-              "documentation": {
-                "identifier": "sbig2",
-                "newPage": false,
-                "searchKey": "embedtest_test.sbig2",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var sbig2"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar sbig2 = sbig\n```\n\n"
+                "value": "```Go\nvar bbig []byte\n```\n\n"
               },
               "children": null
             }
@@ -133,6 +72,9 @@
                 "newPage": false,
                 "searchKey": "embedtest_test.bbig2",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -149,34 +91,14 @@
           },
           {
             "node": {
-              "pathID": "/embed/internal/embedtest_test#global",
-              "documentation": {
-                "identifier": "global",
-                "newPage": false,
-                "searchKey": "embedtest_test.global",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var global"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar global embed.FS\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/embed/internal/embedtest_test#concurrency",
               "documentation": {
                 "identifier": "concurrency",
                 "newPage": false,
                 "searchKey": "embedtest_test.concurrency",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -193,12 +115,39 @@
           },
           {
             "node": {
+              "pathID": "/embed/internal/embedtest_test#concurrency2",
+              "documentation": {
+                "identifier": "concurrency2",
+                "newPage": false,
+                "searchKey": "embedtest_test.concurrency2",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var concurrency2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar concurrency2 = concurrency\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/embed/internal/embedtest_test#glass",
               "documentation": {
                 "identifier": "glass",
                 "newPage": false,
                 "searchKey": "embedtest_test.glass",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -215,12 +164,87 @@
           },
           {
             "node": {
+              "pathID": "/embed/internal/embedtest_test#glass2",
+              "documentation": {
+                "identifier": "glass2",
+                "newPage": false,
+                "searchKey": "embedtest_test.glass2",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var glass2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar glass2 = glass\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/embed/internal/embedtest_test#global",
+              "documentation": {
+                "identifier": "global",
+                "newPage": false,
+                "searchKey": "embedtest_test.global",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var global"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar global embed.FS\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/embed/internal/embedtest_test#global2",
+              "documentation": {
+                "identifier": "global2",
+                "newPage": false,
+                "searchKey": "embedtest_test.global2",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var global2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar global2 = global\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/embed/internal/embedtest_test#sbig",
               "documentation": {
                 "identifier": "sbig",
                 "newPage": false,
                 "searchKey": "embedtest_test.sbig",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -237,22 +261,24 @@
           },
           {
             "node": {
-              "pathID": "/embed/internal/embedtest_test#bbig",
+              "pathID": "/embed/internal/embedtest_test#sbig2",
               "documentation": {
-                "identifier": "bbig",
+                "identifier": "sbig2",
                 "newPage": false,
-                "searchKey": "embedtest_test.bbig",
+                "searchKey": "embedtest_test.sbig2",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var bbig"
+                "value": "var sbig2"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar bbig []byte\n```\n\n"
+                "value": "```Go\nvar sbig2 = sbig\n```\n\n"
               },
               "children": null
             }
@@ -268,6 +294,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -282,12 +309,37 @@
         "children": [
           {
             "node": {
+              "pathID": "/embed/internal/embedtest_test#TestXGlobal",
+              "documentation": {
+                "identifier": "TestXGlobal",
+                "newPage": false,
+                "searchKey": "embedtest_test.TestXGlobal",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestXGlobal(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestXGlobal(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/embed/internal/embedtest_test#testFiles",
               "documentation": {
                 "identifier": "testFiles",
                 "newPage": false,
                 "searchKey": "embedtest_test.testFiles",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -310,6 +362,7 @@
                 "newPage": false,
                 "searchKey": "embedtest_test.testString",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -320,28 +373,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc testString(t *testing.T, s, name, data string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/embed/internal/embedtest_test#TestXGlobal",
-              "documentation": {
-                "identifier": "TestXGlobal",
-                "newPage": false,
-                "searchKey": "embedtest_test.TestXGlobal",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestXGlobal(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestXGlobal(t *testing.T)\n```\n\n"
               },
               "children": null
             }

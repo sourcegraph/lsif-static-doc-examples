@@ -4,7 +4,9 @@
     "identifier": "multipart",
     "newPage": true,
     "searchKey": "mime/multipart",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,22 +39,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/mime/multipart#peekBufferSize",
+              "pathID": "/mime/multipart#boundary",
               "documentation": {
-                "identifier": "peekBufferSize",
+                "identifier": "boundary",
                 "newPage": false,
-                "searchKey": "multipart.peekBufferSize",
+                "searchKey": "multipart.boundary",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const peekBufferSize"
+                "value": "const boundary"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst peekBufferSize = 4096\n```\n\nThis constant needs to be at least 76 for this package to work correctly. This is because \\r\\n--separator_of_len_70- would fill the buffer and it wouldn't be safe to consume a single byte from it. \n\n"
+                "value": "```Go\nconst boundary = `MyBoundary`\n```\n\n"
               },
               "children": null
             }
@@ -63,6 +69,8 @@
                 "newPage": false,
                 "searchKey": "multipart.fileaContents",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -85,6 +93,8 @@
                 "newPage": false,
                 "searchKey": "multipart.filebContents",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -101,66 +111,48 @@
           },
           {
             "node": {
-              "pathID": "/mime/multipart#textaValue",
+              "pathID": "/mime/multipart#maxReadThreshold",
               "documentation": {
-                "identifier": "textaValue",
+                "identifier": "maxReadThreshold",
                 "newPage": false,
-                "searchKey": "multipart.textaValue",
+                "searchKey": "multipart.maxReadThreshold",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const textaValue"
+                "value": "const maxReadThreshold"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst textaValue = \"foo\"\n```\n\n"
+                "value": "```Go\nconst maxReadThreshold = 1 << 20\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/mime/multipart#textbValue",
+              "pathID": "/mime/multipart#message",
               "documentation": {
-                "identifier": "textbValue",
+                "identifier": "message",
                 "newPage": false,
-                "searchKey": "multipart.textbValue",
+                "searchKey": "multipart.message",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const textbValue"
+                "value": "const message"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst textbValue = \"bar\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/multipart#boundary",
-              "documentation": {
-                "identifier": "boundary",
-                "newPage": false,
-                "searchKey": "multipart.boundary",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const boundary"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst boundary = `MyBoundary`\n```\n\n"
+                "value": "```Go\nconst message = ...\n```\n\n"
               },
               "children": null
             }
@@ -173,6 +165,8 @@
                 "newPage": false,
                 "searchKey": "multipart.messageWithFileWithoutName",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -195,6 +189,8 @@
                 "newPage": false,
                 "searchKey": "multipart.messageWithTextContentType",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -211,44 +207,72 @@
           },
           {
             "node": {
-              "pathID": "/mime/multipart#message",
+              "pathID": "/mime/multipart#peekBufferSize",
               "documentation": {
-                "identifier": "message",
+                "identifier": "peekBufferSize",
                 "newPage": false,
-                "searchKey": "multipart.message",
+                "searchKey": "multipart.peekBufferSize",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const message"
+                "value": "const peekBufferSize"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst message = ...\n```\n\n"
+                "value": "```Go\nconst peekBufferSize = 4096\n```\n\nThis constant needs to be at least 76 for this package to work correctly. This is because \\r\\n--separator_of_len_70- would fill the buffer and it wouldn't be safe to consume a single byte from it. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/mime/multipart#maxReadThreshold",
+              "pathID": "/mime/multipart#textaValue",
               "documentation": {
-                "identifier": "maxReadThreshold",
+                "identifier": "textaValue",
                 "newPage": false,
-                "searchKey": "multipart.maxReadThreshold",
+                "searchKey": "multipart.textaValue",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const maxReadThreshold"
+                "value": "const textaValue"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst maxReadThreshold = 1 << 20\n```\n\n"
+                "value": "```Go\nconst textaValue = \"foo\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/multipart#textbValue",
+              "documentation": {
+                "identifier": "textbValue",
+                "newPage": false,
+                "searchKey": "multipart.textbValue",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const textbValue"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst textbValue = \"bar\"\n```\n\n"
               },
               "children": null
             }
@@ -263,7 +287,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -281,7 +307,10 @@
                 "identifier": "ErrMessageTooLarge",
                 "newPage": false,
                 "searchKey": "multipart.ErrMessageTooLarge",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -302,6 +331,8 @@
                 "newPage": false,
                 "searchKey": "multipart.emptyParams",
                 "tags": [
+                  "variable",
+                  "object",
                   "private"
                 ]
               },
@@ -318,34 +349,14 @@
           },
           {
             "node": {
-              "pathID": "/mime/multipart#quoteEscaper",
-              "documentation": {
-                "identifier": "quoteEscaper",
-                "newPage": false,
-                "searchKey": "multipart.quoteEscaper",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var quoteEscaper"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar quoteEscaper = strings.NewReplacer(\"\\\\\", \"\\\\\\\\\", `\"`, \"\\\\\\\"\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/mime/multipart#longLine",
               "documentation": {
                 "identifier": "longLine",
                 "newPage": false,
                 "searchKey": "multipart.longLine",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -368,6 +379,9 @@
                 "newPage": false,
                 "searchKey": "multipart.parseTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -378,6 +392,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar parseTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/multipart#quoteEscaper",
+              "documentation": {
+                "identifier": "quoteEscaper",
+                "newPage": false,
+                "searchKey": "multipart.quoteEscaper",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var quoteEscaper"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar quoteEscaper = strings.NewReplacer(\"\\\\\", \"\\\\\\\\\", `\"`, \"\\\\\\\"\")\n```\n\n"
               },
               "children": null
             }
@@ -392,7 +430,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -405,94 +445,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/mime/multipart#Form",
-              "documentation": {
-                "identifier": "Form",
-                "newPage": false,
-                "searchKey": "multipart.Form",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Form struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Form struct {\n\tValue map[string][]string\n\tFile  map[string][]*FileHeader\n}\n```\n\nForm is a parsed multipart form. Its File parts are stored either in memory or on disk, and are accessible via the *FileHeader's Open method. Its Value parts are stored as strings. Both are keyed by field name. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/mime/multipart#Form.RemoveAll",
-                    "documentation": {
-                      "identifier": "Form.RemoveAll",
-                      "newPage": false,
-                      "searchKey": "multipart.Form.RemoveAll",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *Form) RemoveAll() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *Form) RemoveAll() error\n```\n\nRemoveAll removes any temporary files associated with a Form. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/multipart#FileHeader",
-              "documentation": {
-                "identifier": "FileHeader",
-                "newPage": false,
-                "searchKey": "multipart.FileHeader",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type FileHeader struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype FileHeader struct {\n\tFilename string\n\tHeader   textproto.MIMEHeader\n\tSize     int64\n\n\tcontent []byte\n\ttmpfile string\n}\n```\n\nA FileHeader describes a file part of a multipart request. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/mime/multipart#FileHeader.Open",
-                    "documentation": {
-                      "identifier": "FileHeader.Open",
-                      "newPage": false,
-                      "searchKey": "multipart.FileHeader.Open",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (fh *FileHeader) Open() (File, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (fh *FileHeader) Open() (File, error)\n```\n\nOpen opens and returns the FileHeader's associated File. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/mime/multipart#File",
               "documentation": {
                 "identifier": "File",
                 "newPage": false,
                 "searchKey": "multipart.File",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -511,6 +471,7 @@
                       "newPage": false,
                       "searchKey": "multipart.testFile",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -530,42 +491,87 @@
           },
           {
             "node": {
-              "pathID": "/mime/multipart#sectionReadCloser",
+              "pathID": "/mime/multipart#FileHeader",
               "documentation": {
-                "identifier": "sectionReadCloser",
+                "identifier": "FileHeader",
                 "newPage": false,
-                "searchKey": "multipart.sectionReadCloser",
+                "searchKey": "multipart.FileHeader",
                 "tags": [
-                  "private"
+                  "struct"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type sectionReadCloser struct"
+                "value": "type FileHeader struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype sectionReadCloser struct {\n\t*io.SectionReader\n}\n```\n\n"
+                "value": "```Go\ntype FileHeader struct {\n\tFilename string\n\tHeader   textproto.MIMEHeader\n\tSize     int64\n\n\tcontent []byte\n\ttmpfile string\n}\n```\n\nA FileHeader describes a file part of a multipart request. \n\n"
               },
               "children": [
                 {
                   "node": {
-                    "pathID": "/mime/multipart#sectionReadCloser.Close",
+                    "pathID": "/mime/multipart#FileHeader.Open",
                     "documentation": {
-                      "identifier": "sectionReadCloser.Close",
+                      "identifier": "FileHeader.Open",
                       "newPage": false,
-                      "searchKey": "multipart.sectionReadCloser.Close",
+                      "searchKey": "multipart.FileHeader.Open",
                       "tags": [
-                        "private"
+                        "function"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (rc sectionReadCloser) Close() error"
+                      "value": "func (fh *FileHeader) Open() (File, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (rc sectionReadCloser) Close() error\n```\n\n"
+                      "value": "```Go\nfunc (fh *FileHeader) Open() (File, error)\n```\n\nOpen opens and returns the FileHeader's associated File. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/multipart#Form",
+              "documentation": {
+                "identifier": "Form",
+                "newPage": false,
+                "searchKey": "multipart.Form",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Form struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Form struct {\n\tValue map[string][]string\n\tFile  map[string][]*FileHeader\n}\n```\n\nForm is a parsed multipart form. Its File parts are stored either in memory or on disk, and are accessible via the *FileHeader's Open method. Its Value parts are stored as strings. Both are keyed by field name. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/mime/multipart#Form.RemoveAll",
+                    "documentation": {
+                      "identifier": "Form.RemoveAll",
+                      "newPage": false,
+                      "searchKey": "multipart.Form.RemoveAll",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *Form) RemoveAll() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *Form) RemoveAll() error\n```\n\nRemoveAll removes any temporary files associated with a Form. \n\n"
                     },
                     "children": null
                   }
@@ -580,7 +586,9 @@
                 "identifier": "Part",
                 "newPage": false,
                 "searchKey": "multipart.Part",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -599,6 +607,7 @@
                       "newPage": false,
                       "searchKey": "multipart.newPart",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -615,20 +624,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/mime/multipart#Part.FormName",
+                    "pathID": "/mime/multipart#Part.Close",
                     "documentation": {
-                      "identifier": "Part.FormName",
+                      "identifier": "Part.Close",
                       "newPage": false,
-                      "searchKey": "multipart.Part.FormName",
-                      "tags": null
+                      "searchKey": "multipart.Part.Close",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (p *Part) FormName() string"
+                      "value": "func (p *Part) Close() error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (p *Part) FormName() string\n```\n\nFormName returns the name parameter if p has a Content-Disposition of type \"form-data\".  Otherwise it returns the empty string. \n\n"
+                      "value": "```Go\nfunc (p *Part) Close() error\n```\n\n"
                     },
                     "children": null
                   }
@@ -640,7 +651,9 @@
                       "identifier": "Part.FileName",
                       "newPage": false,
                       "searchKey": "multipart.Part.FileName",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -655,12 +668,57 @@
                 },
                 {
                   "node": {
+                    "pathID": "/mime/multipart#Part.FormName",
+                    "documentation": {
+                      "identifier": "Part.FormName",
+                      "newPage": false,
+                      "searchKey": "multipart.Part.FormName",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Part) FormName() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Part) FormName() string\n```\n\nFormName returns the name parameter if p has a Content-Disposition of type \"form-data\".  Otherwise it returns the empty string. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/mime/multipart#Part.Read",
+                    "documentation": {
+                      "identifier": "Part.Read",
+                      "newPage": false,
+                      "searchKey": "multipart.Part.Read",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Part) Read(d []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Part) Read(d []byte) (n int, err error)\n```\n\nRead reads the body of a part, after its headers and before the next part (if any) begins. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/mime/multipart#Part.parseContentDisposition",
                     "documentation": {
                       "identifier": "Part.parseContentDisposition",
                       "newPage": false,
                       "searchKey": "multipart.Part.parseContentDisposition",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -683,6 +741,7 @@
                       "newPage": false,
                       "searchKey": "multipart.Part.populateHeaders",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -693,136 +752,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (bp *Part) populateHeaders() error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/mime/multipart#Part.Read",
-                    "documentation": {
-                      "identifier": "Part.Read",
-                      "newPage": false,
-                      "searchKey": "multipart.Part.Read",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *Part) Read(d []byte) (n int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *Part) Read(d []byte) (n int, err error)\n```\n\nRead reads the body of a part, after its headers and before the next part (if any) begins. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/mime/multipart#Part.Close",
-                    "documentation": {
-                      "identifier": "Part.Close",
-                      "newPage": false,
-                      "searchKey": "multipart.Part.Close",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *Part) Close() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *Part) Close() error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/multipart#stickyErrorReader",
-              "documentation": {
-                "identifier": "stickyErrorReader",
-                "newPage": false,
-                "searchKey": "multipart.stickyErrorReader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type stickyErrorReader struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype stickyErrorReader struct {\n\tr   io.Reader\n\terr error\n}\n```\n\nstickyErrorReader is an io.Reader which never calls Read on its underlying Reader once an error has been seen. (the io.Reader interface's contract promises nothing about the return values of Read calls after an error, yet this package does do multiple Reads after error) \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/mime/multipart#stickyErrorReader.Read",
-                    "documentation": {
-                      "identifier": "stickyErrorReader.Read",
-                      "newPage": false,
-                      "searchKey": "multipart.stickyErrorReader.Read",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *stickyErrorReader) Read(p []byte) (n int, _ error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *stickyErrorReader) Read(p []byte) (n int, _ error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/multipart#partReader",
-              "documentation": {
-                "identifier": "partReader",
-                "newPage": false,
-                "searchKey": "multipart.partReader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type partReader struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype partReader struct {\n\tp *Part\n}\n```\n\npartReader implements io.Reader by reading raw bytes directly from the wrapped *Part, without doing any Transfer-Encoding decoding. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/mime/multipart#partReader.Read",
-                    "documentation": {
-                      "identifier": "partReader.Read",
-                      "newPage": false,
-                      "searchKey": "multipart.partReader.Read",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (pr partReader) Read(d []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (pr partReader) Read(d []byte) (int, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -837,7 +766,9 @@
                 "identifier": "Reader",
                 "newPage": false,
                 "searchKey": "multipart.Reader",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -855,7 +786,9 @@
                       "identifier": "NewReader",
                       "newPage": false,
                       "searchKey": "multipart.NewReader",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -870,54 +803,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/mime/multipart#Reader.ReadForm",
-                    "documentation": {
-                      "identifier": "Reader.ReadForm",
-                      "newPage": false,
-                      "searchKey": "multipart.Reader.ReadForm",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Reader) ReadForm(maxMemory int64) (*Form, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Reader) ReadForm(maxMemory int64) (*Form, error)\n```\n\nReadForm parses an entire multipart message whose parts have a Content-Disposition of \"form-data\". It stores up to maxMemory bytes + 10MB (reserved for non-file parts) in memory. File parts which can't be stored in memory will be stored on disk in temporary files. It returns ErrMessageTooLarge if all non-file parts can't be stored in memory. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/mime/multipart#Reader.readForm",
-                    "documentation": {
-                      "identifier": "Reader.readForm",
-                      "newPage": false,
-                      "searchKey": "multipart.Reader.readForm",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Reader) readForm(maxMemory int64) (_ *Form, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Reader) readForm(maxMemory int64) (_ *Form, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/mime/multipart#Reader.NextPart",
                     "documentation": {
                       "identifier": "Reader.NextPart",
                       "newPage": false,
                       "searchKey": "multipart.Reader.NextPart",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -937,7 +830,9 @@
                       "identifier": "Reader.NextRawPart",
                       "newPage": false,
                       "searchKey": "multipart.Reader.NextRawPart",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -952,22 +847,45 @@
                 },
                 {
                   "node": {
-                    "pathID": "/mime/multipart#Reader.nextPart",
+                    "pathID": "/mime/multipart#Reader.ReadForm",
                     "documentation": {
-                      "identifier": "Reader.nextPart",
+                      "identifier": "Reader.ReadForm",
                       "newPage": false,
-                      "searchKey": "multipart.Reader.nextPart",
+                      "searchKey": "multipart.Reader.ReadForm",
                       "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) ReadForm(maxMemory int64) (*Form, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) ReadForm(maxMemory int64) (*Form, error)\n```\n\nReadForm parses an entire multipart message whose parts have a Content-Disposition of \"form-data\". It stores up to maxMemory bytes + 10MB (reserved for non-file parts) in memory. File parts which can't be stored in memory will be stored on disk in temporary files. It returns ErrMessageTooLarge if all non-file parts can't be stored in memory. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/mime/multipart#Reader.isBoundaryDelimiterLine",
+                    "documentation": {
+                      "identifier": "Reader.isBoundaryDelimiterLine",
+                      "newPage": false,
+                      "searchKey": "multipart.Reader.isBoundaryDelimiterLine",
+                      "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (r *Reader) nextPart(rawPart bool) (*Part, error)"
+                      "value": "func (mr *Reader) isBoundaryDelimiterLine(line []byte) (ret bool)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (r *Reader) nextPart(rawPart bool) (*Part, error)\n```\n\n"
+                      "value": "```Go\nfunc (mr *Reader) isBoundaryDelimiterLine(line []byte) (ret bool)\n```\n\n"
                     },
                     "children": null
                   }
@@ -980,6 +898,7 @@
                       "newPage": false,
                       "searchKey": "multipart.Reader.isFinalBoundary",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -996,22 +915,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/mime/multipart#Reader.isBoundaryDelimiterLine",
+                    "pathID": "/mime/multipart#Reader.nextPart",
                     "documentation": {
-                      "identifier": "Reader.isBoundaryDelimiterLine",
+                      "identifier": "Reader.nextPart",
                       "newPage": false,
-                      "searchKey": "multipart.Reader.isBoundaryDelimiterLine",
+                      "searchKey": "multipart.Reader.nextPart",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (mr *Reader) isBoundaryDelimiterLine(line []byte) (ret bool)"
+                      "value": "func (r *Reader) nextPart(rawPart bool) (*Part, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (mr *Reader) isBoundaryDelimiterLine(line []byte) (ret bool)\n```\n\n"
+                      "value": "```Go\nfunc (r *Reader) nextPart(rawPart bool) (*Part, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/mime/multipart#Reader.readForm",
+                    "documentation": {
+                      "identifier": "Reader.readForm",
+                      "newPage": false,
+                      "searchKey": "multipart.Reader.readForm",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) readForm(maxMemory int64) (_ *Form, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) readForm(maxMemory int64) (_ *Form, err error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1026,7 +969,9 @@
                 "identifier": "Writer",
                 "newPage": false,
                 "searchKey": "multipart.Writer",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1044,7 +989,9 @@
                       "identifier": "NewWriter",
                       "newPage": false,
                       "searchKey": "multipart.NewWriter",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1064,7 +1011,9 @@
                       "identifier": "Writer.Boundary",
                       "newPage": false,
                       "searchKey": "multipart.Writer.Boundary",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1079,80 +1028,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/mime/multipart#Writer.SetBoundary",
+                    "pathID": "/mime/multipart#Writer.Close",
                     "documentation": {
-                      "identifier": "Writer.SetBoundary",
+                      "identifier": "Writer.Close",
                       "newPage": false,
-                      "searchKey": "multipart.Writer.SetBoundary",
-                      "tags": null
+                      "searchKey": "multipart.Writer.Close",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (w *Writer) SetBoundary(boundary string) error"
+                      "value": "func (w *Writer) Close() error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (w *Writer) SetBoundary(boundary string) error\n```\n\nSetBoundary overrides the Writer's default randomly-generated boundary separator with an explicit value. \n\nSetBoundary must be called before any parts are created, may only contain certain ASCII characters, and must be non-empty and at most 70 bytes long. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/mime/multipart#Writer.FormDataContentType",
-                    "documentation": {
-                      "identifier": "Writer.FormDataContentType",
-                      "newPage": false,
-                      "searchKey": "multipart.Writer.FormDataContentType",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (w *Writer) FormDataContentType() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (w *Writer) FormDataContentType() string\n```\n\nFormDataContentType returns the Content-Type for an HTTP multipart/form-data with this Writer's Boundary. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/mime/multipart#Writer.CreatePart",
-                    "documentation": {
-                      "identifier": "Writer.CreatePart",
-                      "newPage": false,
-                      "searchKey": "multipart.Writer.CreatePart",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (w *Writer) CreatePart(header textproto.MIMEHeader) (io.Writer, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (w *Writer) CreatePart(header textproto.MIMEHeader) (io.Writer, error)\n```\n\nCreatePart creates a new multipart section with the provided header. The body of the part should be written to the returned Writer. After calling CreatePart, any previous part may no longer be written to. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/mime/multipart#Writer.CreateFormFile",
-                    "documentation": {
-                      "identifier": "Writer.CreateFormFile",
-                      "newPage": false,
-                      "searchKey": "multipart.Writer.CreateFormFile",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (w *Writer) CreateFormFile(fieldname, filename string) (io.Writer, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (w *Writer) CreateFormFile(fieldname, filename string) (io.Writer, error)\n```\n\nCreateFormFile is a convenience wrapper around CreatePart. It creates a new form-data header with the provided field name and file name. \n\n"
+                      "value": "```Go\nfunc (w *Writer) Close() error\n```\n\nClose finishes the multipart message and writes the trailing boundary end line to the output. \n\n"
                     },
                     "children": null
                   }
@@ -1164,7 +1055,9 @@
                       "identifier": "Writer.CreateFormField",
                       "newPage": false,
                       "searchKey": "multipart.Writer.CreateFormField",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1179,12 +1072,102 @@
                 },
                 {
                   "node": {
+                    "pathID": "/mime/multipart#Writer.CreateFormFile",
+                    "documentation": {
+                      "identifier": "Writer.CreateFormFile",
+                      "newPage": false,
+                      "searchKey": "multipart.Writer.CreateFormFile",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) CreateFormFile(fieldname, filename string) (io.Writer, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) CreateFormFile(fieldname, filename string) (io.Writer, error)\n```\n\nCreateFormFile is a convenience wrapper around CreatePart. It creates a new form-data header with the provided field name and file name. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/mime/multipart#Writer.CreatePart",
+                    "documentation": {
+                      "identifier": "Writer.CreatePart",
+                      "newPage": false,
+                      "searchKey": "multipart.Writer.CreatePart",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) CreatePart(header textproto.MIMEHeader) (io.Writer, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) CreatePart(header textproto.MIMEHeader) (io.Writer, error)\n```\n\nCreatePart creates a new multipart section with the provided header. The body of the part should be written to the returned Writer. After calling CreatePart, any previous part may no longer be written to. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/mime/multipart#Writer.FormDataContentType",
+                    "documentation": {
+                      "identifier": "Writer.FormDataContentType",
+                      "newPage": false,
+                      "searchKey": "multipart.Writer.FormDataContentType",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) FormDataContentType() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) FormDataContentType() string\n```\n\nFormDataContentType returns the Content-Type for an HTTP multipart/form-data with this Writer's Boundary. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/mime/multipart#Writer.SetBoundary",
+                    "documentation": {
+                      "identifier": "Writer.SetBoundary",
+                      "newPage": false,
+                      "searchKey": "multipart.Writer.SetBoundary",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) SetBoundary(boundary string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) SetBoundary(boundary string) error\n```\n\nSetBoundary overrides the Writer's default randomly-generated boundary separator with an explicit value. \n\nSetBoundary must be called before any parts are created, may only contain certain ASCII characters, and must be non-empty and at most 70 bytes long. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/mime/multipart#Writer.WriteField",
                     "documentation": {
                       "identifier": "Writer.WriteField",
                       "newPage": false,
                       "searchKey": "multipart.Writer.WriteField",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1193,93 +1176,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (w *Writer) WriteField(fieldname, value string) error\n```\n\nWriteField calls CreateFormField and then writes the given value. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/mime/multipart#Writer.Close",
-                    "documentation": {
-                      "identifier": "Writer.Close",
-                      "newPage": false,
-                      "searchKey": "multipart.Writer.Close",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (w *Writer) Close() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (w *Writer) Close() error\n```\n\nClose finishes the multipart message and writes the trailing boundary end line to the output. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/multipart#part",
-              "documentation": {
-                "identifier": "part",
-                "newPage": false,
-                "searchKey": "multipart.part",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type part struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype part struct {\n\tmw     *Writer\n\tclosed bool\n\twe     error // last error that occurred writing\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/mime/multipart#part.close",
-                    "documentation": {
-                      "identifier": "part.close",
-                      "newPage": false,
-                      "searchKey": "multipart.part.close",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *part) close() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *part) close() error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/mime/multipart#part.Write",
-                    "documentation": {
-                      "identifier": "part.Write",
-                      "newPage": false,
-                      "searchKey": "multipart.part.Write",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *part) Write(d []byte) (n int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *part) Write(d []byte) (n int, err error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1295,6 +1191,7 @@
                 "newPage": false,
                 "searchKey": "multipart.failOnReadAfterErrorReader",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1315,6 +1212,7 @@
                       "newPage": false,
                       "searchKey": "multipart.failOnReadAfterErrorReader.Read",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1334,147 +1232,13 @@
           },
           {
             "node": {
-              "pathID": "/mime/multipart#maliciousReader",
-              "documentation": {
-                "identifier": "maliciousReader",
-                "newPage": false,
-                "searchKey": "multipart.maliciousReader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type maliciousReader struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype maliciousReader struct {\n\tt *testing.T\n\tn int\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/mime/multipart#maliciousReader.Read",
-                    "documentation": {
-                      "identifier": "maliciousReader.Read",
-                      "newPage": false,
-                      "searchKey": "multipart.maliciousReader.Read",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (mr *maliciousReader) Read(b []byte) (n int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (mr *maliciousReader) Read(b []byte) (n int, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/multipart#slowReader",
-              "documentation": {
-                "identifier": "slowReader",
-                "newPage": false,
-                "searchKey": "multipart.slowReader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type slowReader struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype slowReader struct {\n\tr io.Reader\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/mime/multipart#slowReader.Read",
-                    "documentation": {
-                      "identifier": "slowReader.Read",
-                      "newPage": false,
-                      "searchKey": "multipart.slowReader.Read",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *slowReader) Read(p []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *slowReader) Read(p []byte) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/multipart#sentinelReader",
-              "documentation": {
-                "identifier": "sentinelReader",
-                "newPage": false,
-                "searchKey": "multipart.sentinelReader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type sentinelReader struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype sentinelReader struct {\n\t// done is closed when this reader is read from.\n\tdone chan struct{}\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/mime/multipart#sentinelReader.Read",
-                    "documentation": {
-                      "identifier": "sentinelReader.Read",
-                      "newPage": false,
-                      "searchKey": "multipart.sentinelReader.Read",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *sentinelReader) Read([]byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *sentinelReader) Read([]byte) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/mime/multipart#headerBody",
               "documentation": {
                 "identifier": "headerBody",
                 "newPage": false,
                 "searchKey": "multipart.headerBody",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1495,6 +1259,7 @@
                       "newPage": false,
                       "searchKey": "multipart.formData",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1514,12 +1279,60 @@
           },
           {
             "node": {
+              "pathID": "/mime/multipart#maliciousReader",
+              "documentation": {
+                "identifier": "maliciousReader",
+                "newPage": false,
+                "searchKey": "multipart.maliciousReader",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type maliciousReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype maliciousReader struct {\n\tt *testing.T\n\tn int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/mime/multipart#maliciousReader.Read",
+                    "documentation": {
+                      "identifier": "maliciousReader.Read",
+                      "newPage": false,
+                      "searchKey": "multipart.maliciousReader.Read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (mr *maliciousReader) Read(b []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (mr *maliciousReader) Read(b []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/mime/multipart#parseTest",
               "documentation": {
                 "identifier": "parseTest",
                 "newPage": false,
                 "searchKey": "multipart.parseTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1540,6 +1353,7 @@
                       "newPage": false,
                       "searchKey": "multipart.roundTripParseTest",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1550,6 +1364,311 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc roundTripParseTest() parseTest\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/multipart#part",
+              "documentation": {
+                "identifier": "part",
+                "newPage": false,
+                "searchKey": "multipart.part",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type part struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype part struct {\n\tmw     *Writer\n\tclosed bool\n\twe     error // last error that occurred writing\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/mime/multipart#part.Write",
+                    "documentation": {
+                      "identifier": "part.Write",
+                      "newPage": false,
+                      "searchKey": "multipart.part.Write",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *part) Write(d []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *part) Write(d []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/mime/multipart#part.close",
+                    "documentation": {
+                      "identifier": "part.close",
+                      "newPage": false,
+                      "searchKey": "multipart.part.close",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *part) close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *part) close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/multipart#partReader",
+              "documentation": {
+                "identifier": "partReader",
+                "newPage": false,
+                "searchKey": "multipart.partReader",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type partReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype partReader struct {\n\tp *Part\n}\n```\n\npartReader implements io.Reader by reading raw bytes directly from the wrapped *Part, without doing any Transfer-Encoding decoding. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/mime/multipart#partReader.Read",
+                    "documentation": {
+                      "identifier": "partReader.Read",
+                      "newPage": false,
+                      "searchKey": "multipart.partReader.Read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pr partReader) Read(d []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pr partReader) Read(d []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/multipart#sectionReadCloser",
+              "documentation": {
+                "identifier": "sectionReadCloser",
+                "newPage": false,
+                "searchKey": "multipart.sectionReadCloser",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type sectionReadCloser struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype sectionReadCloser struct {\n\t*io.SectionReader\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/mime/multipart#sectionReadCloser.Close",
+                    "documentation": {
+                      "identifier": "sectionReadCloser.Close",
+                      "newPage": false,
+                      "searchKey": "multipart.sectionReadCloser.Close",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rc sectionReadCloser) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rc sectionReadCloser) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/multipart#sentinelReader",
+              "documentation": {
+                "identifier": "sentinelReader",
+                "newPage": false,
+                "searchKey": "multipart.sentinelReader",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type sentinelReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype sentinelReader struct {\n\t// done is closed when this reader is read from.\n\tdone chan struct{}\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/mime/multipart#sentinelReader.Read",
+                    "documentation": {
+                      "identifier": "sentinelReader.Read",
+                      "newPage": false,
+                      "searchKey": "multipart.sentinelReader.Read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sentinelReader) Read([]byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sentinelReader) Read([]byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/multipart#slowReader",
+              "documentation": {
+                "identifier": "slowReader",
+                "newPage": false,
+                "searchKey": "multipart.slowReader",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type slowReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype slowReader struct {\n\tr io.Reader\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/mime/multipart#slowReader.Read",
+                    "documentation": {
+                      "identifier": "slowReader.Read",
+                      "newPage": false,
+                      "searchKey": "multipart.slowReader.Read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *slowReader) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *slowReader) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/multipart#stickyErrorReader",
+              "documentation": {
+                "identifier": "stickyErrorReader",
+                "newPage": false,
+                "searchKey": "multipart.stickyErrorReader",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type stickyErrorReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype stickyErrorReader struct {\n\tr   io.Reader\n\terr error\n}\n```\n\nstickyErrorReader is an io.Reader which never calls Read on its underlying Reader once an error has been seen. (the io.Reader interface's contract promises nothing about the return values of Read calls after an error, yet this package does do multiple Reads after error) \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/mime/multipart#stickyErrorReader.Read",
+                    "documentation": {
+                      "identifier": "stickyErrorReader.Read",
+                      "newPage": false,
+                      "searchKey": "multipart.stickyErrorReader.Read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *stickyErrorReader) Read(p []byte) (n int, _ error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *stickyErrorReader) Read(p []byte) (n int, _ error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1567,7 +1686,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1580,110 +1701,360 @@
         "children": [
           {
             "node": {
-              "pathID": "/mime/multipart#scanUntilBoundary",
+              "pathID": "/mime/multipart#TestBoundaryLine",
               "documentation": {
-                "identifier": "scanUntilBoundary",
+                "identifier": "TestBoundaryLine",
                 "newPage": false,
-                "searchKey": "multipart.scanUntilBoundary",
+                "searchKey": "multipart.TestBoundaryLine",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func scanUntilBoundary(buf, dashBoundary, nlDashBoundary []byte, total int64, readErr error) (int, error)"
+                "value": "func TestBoundaryLine(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc scanUntilBoundary(buf, dashBoundary, nlDashBoundary []byte, total int64, readErr error) (int, error)\n```\n\nscanUntilBoundary scans buf to identify how much of it can be safely returned as part of the Part body. dashBoundary is \"--boundary\". nlDashBoundary is \"\\r\\n--boundary\" or \"\\n--boundary\", depending on what mode we are in. The comments below (and the name) assume \"\\n--boundary\", but either is accepted. total is the number of bytes read out so far. If total == 0, then a leading \"--boundary\" is recognized. readErr is the read error, if any, that followed reading the bytes in buf. scanUntilBoundary returns the number of data bytes from buf that can be returned as part of the Part body and also the error to return (if any) once those data bytes are done. \n\n"
+                "value": "```Go\nfunc TestBoundaryLine(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/mime/multipart#matchAfterPrefix",
+              "pathID": "/mime/multipart#TestLineContinuation",
               "documentation": {
-                "identifier": "matchAfterPrefix",
+                "identifier": "TestLineContinuation",
                 "newPage": false,
-                "searchKey": "multipart.matchAfterPrefix",
+                "searchKey": "multipart.TestLineContinuation",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func matchAfterPrefix(buf, prefix []byte, readErr error) int"
+                "value": "func TestLineContinuation(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc matchAfterPrefix(buf, prefix []byte, readErr error) int\n```\n\nmatchAfterPrefix checks whether buf should be considered to match the boundary. The prefix is \"--boundary\" or \"\\r\\n--boundary\" or \"\\n--boundary\", and the caller has verified already that bytes.HasPrefix(buf, prefix) is true. \n\nmatchAfterPrefix returns +1 if the buffer does match the boundary, meaning the prefix is followed by a dash, space, tab, cr, nl, or end of input. It returns -1 if the buffer definitely does NOT match the boundary, meaning the prefix is followed by some other character. For example, \"--foobar\" does not match \"--foo\". It returns 0 more input needs to be read to make the decision, meaning that len(buf) == len(prefix) and readErr == nil. \n\n"
+                "value": "```Go\nfunc TestLineContinuation(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/mime/multipart#skipLWSPChar",
+              "pathID": "/mime/multipart#TestLineLimit",
               "documentation": {
-                "identifier": "skipLWSPChar",
+                "identifier": "TestLineLimit",
                 "newPage": false,
-                "searchKey": "multipart.skipLWSPChar",
+                "searchKey": "multipart.TestLineLimit",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func skipLWSPChar(b []byte) []byte"
+                "value": "func TestLineLimit(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc skipLWSPChar(b []byte) []byte\n```\n\nskipLWSPChar returns b with leading spaces and tabs removed. RFC 822 defines: \n\n```\nLWSP-char = SPACE / HTAB\n\n```\n"
+                "value": "```Go\nfunc TestLineLimit(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/mime/multipart#randomBoundary",
+              "pathID": "/mime/multipart#TestMultipart",
               "documentation": {
-                "identifier": "randomBoundary",
+                "identifier": "TestMultipart",
                 "newPage": false,
-                "searchKey": "multipart.randomBoundary",
+                "searchKey": "multipart.TestMultipart",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func randomBoundary() string"
+                "value": "func TestMultipart(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc randomBoundary() string\n```\n\n"
+                "value": "```Go\nfunc TestMultipart(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/mime/multipart#escapeQuotes",
+              "pathID": "/mime/multipart#TestMultipartOnlyNewlines",
               "documentation": {
-                "identifier": "escapeQuotes",
+                "identifier": "TestMultipartOnlyNewlines",
                 "newPage": false,
-                "searchKey": "multipart.escapeQuotes",
+                "searchKey": "multipart.TestMultipartOnlyNewlines",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func escapeQuotes(s string) string"
+                "value": "func TestMultipartOnlyNewlines(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc escapeQuotes(s string) string\n```\n\n"
+                "value": "```Go\nfunc TestMultipartOnlyNewlines(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/multipart#TestMultipartSlowInput",
+              "documentation": {
+                "identifier": "TestMultipartSlowInput",
+                "newPage": false,
+                "searchKey": "multipart.TestMultipartSlowInput",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMultipartSlowInput(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMultipartSlowInput(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/multipart#TestMultipartStreamReadahead",
+              "documentation": {
+                "identifier": "TestMultipartStreamReadahead",
+                "newPage": false,
+                "searchKey": "multipart.TestMultipartStreamReadahead",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMultipartStreamReadahead(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMultipartStreamReadahead(t *testing.T)\n```\n\nTestMultipartStreamReadahead tests that PartReader does not block on reading past the end of a part, ensuring that it can be used on a stream like multipart/x-mixed-replace. See golang.org/issue/15431 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/multipart#TestMultipartTruncated",
+              "documentation": {
+                "identifier": "TestMultipartTruncated",
+                "newPage": false,
+                "searchKey": "multipart.TestMultipartTruncated",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMultipartTruncated(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMultipartTruncated(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/multipart#TestNameAccessors",
+              "documentation": {
+                "identifier": "TestNameAccessors",
+                "newPage": false,
+                "searchKey": "multipart.TestNameAccessors",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNameAccessors(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNameAccessors(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/multipart#TestNested",
+              "documentation": {
+                "identifier": "TestNested",
+                "newPage": false,
+                "searchKey": "multipart.TestNested",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNested(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNested(t *testing.T)\n```\n\nTest parsing an image attachment from gmail, which previously failed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/multipart#TestNoBoundary",
+              "documentation": {
+                "identifier": "TestNoBoundary",
+                "newPage": false,
+                "searchKey": "multipart.TestNoBoundary",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNoBoundary(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNoBoundary(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/multipart#TestParse",
+              "documentation": {
+                "identifier": "TestParse",
+                "newPage": false,
+                "searchKey": "multipart.TestParse",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParse(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParse(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/multipart#TestParseAllSizes",
+              "documentation": {
+                "identifier": "TestParseAllSizes",
+                "newPage": false,
+                "searchKey": "multipart.TestParseAllSizes",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseAllSizes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseAllSizes(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/multipart#TestQuotedPrintableEncoding",
+              "documentation": {
+                "identifier": "TestQuotedPrintableEncoding",
+                "newPage": false,
+                "searchKey": "multipart.TestQuotedPrintableEncoding",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestQuotedPrintableEncoding(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestQuotedPrintableEncoding(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/multipart#TestRawPart",
+              "documentation": {
+                "identifier": "TestRawPart",
+                "newPage": false,
+                "searchKey": "multipart.TestRawPart",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRawPart(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRawPart(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1696,7 +2067,9 @@
                 "newPage": false,
                 "searchKey": "multipart.TestReadForm",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1712,35 +2085,15 @@
           },
           {
             "node": {
-              "pathID": "/mime/multipart#TestReadFormWithNamelessFile",
-              "documentation": {
-                "identifier": "TestReadFormWithNamelessFile",
-                "newPage": false,
-                "searchKey": "multipart.TestReadFormWithNamelessFile",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReadFormWithNamelessFile(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReadFormWithNamelessFile(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/mime/multipart#TestReadFormMaxMemoryOverflow",
               "documentation": {
                 "identifier": "TestReadFormMaxMemoryOverflow",
                 "newPage": false,
                 "searchKey": "multipart.TestReadFormMaxMemoryOverflow",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1756,13 +2109,39 @@
           },
           {
             "node": {
+              "pathID": "/mime/multipart#TestReadFormWithNamelessFile",
+              "documentation": {
+                "identifier": "TestReadFormWithNamelessFile",
+                "newPage": false,
+                "searchKey": "multipart.TestReadFormWithNamelessFile",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadFormWithNamelessFile(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadFormWithNamelessFile(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/mime/multipart#TestReadFormWithTextContentType",
               "documentation": {
                 "identifier": "TestReadFormWithTextContentType",
                 "newPage": false,
                 "searchKey": "multipart.TestReadFormWithTextContentType",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1784,7 +2163,9 @@
                 "newPage": false,
                 "searchKey": "multipart.TestReadForm_NoReadAfterEOF",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1806,7 +2187,9 @@
                 "newPage": false,
                 "searchKey": "multipart.TestReadForm_NonFileMaxMemory",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1822,22 +2205,143 @@
           },
           {
             "node": {
-              "pathID": "/mime/multipart#TestBoundaryLine",
+              "pathID": "/mime/multipart#TestSortedHeader",
               "documentation": {
-                "identifier": "TestBoundaryLine",
+                "identifier": "TestSortedHeader",
                 "newPage": false,
-                "searchKey": "multipart.TestBoundaryLine",
+                "searchKey": "multipart.TestSortedHeader",
                 "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSortedHeader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSortedHeader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/multipart#TestVariousTextLineEndings",
+              "documentation": {
+                "identifier": "TestVariousTextLineEndings",
+                "newPage": false,
+                "searchKey": "multipart.TestVariousTextLineEndings",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestVariousTextLineEndings(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestVariousTextLineEndings(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/multipart#TestWriter",
+              "documentation": {
+                "identifier": "TestWriter",
+                "newPage": false,
+                "searchKey": "multipart.TestWriter",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriter(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriter(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/multipart#TestWriterBoundaryGoroutines",
+              "documentation": {
+                "identifier": "TestWriterBoundaryGoroutines",
+                "newPage": false,
+                "searchKey": "multipart.TestWriterBoundaryGoroutines",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriterBoundaryGoroutines(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriterBoundaryGoroutines(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/multipart#TestWriterSetBoundary",
+              "documentation": {
+                "identifier": "TestWriterSetBoundary",
+                "newPage": false,
+                "searchKey": "multipart.TestWriterSetBoundary",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriterSetBoundary(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriterSetBoundary(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mime/multipart#escapeQuotes",
+              "documentation": {
+                "identifier": "escapeQuotes",
+                "newPage": false,
+                "searchKey": "multipart.escapeQuotes",
+                "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestBoundaryLine(t *testing.T)"
+                "value": "func escapeQuotes(s string) string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestBoundaryLine(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc escapeQuotes(s string) string\n```\n\n"
               },
               "children": null
             }
@@ -1850,6 +2354,7 @@
                 "newPage": false,
                 "searchKey": "multipart.escapeString",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1872,6 +2377,7 @@
                 "newPage": false,
                 "searchKey": "multipart.expectEq",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1888,352 +2394,23 @@
           },
           {
             "node": {
-              "pathID": "/mime/multipart#TestNameAccessors",
+              "pathID": "/mime/multipart#matchAfterPrefix",
               "documentation": {
-                "identifier": "TestNameAccessors",
+                "identifier": "matchAfterPrefix",
                 "newPage": false,
-                "searchKey": "multipart.TestNameAccessors",
+                "searchKey": "multipart.matchAfterPrefix",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestNameAccessors(t *testing.T)"
+                "value": "func matchAfterPrefix(buf, prefix []byte, readErr error) int"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestNameAccessors(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/multipart#testMultipartBody",
-              "documentation": {
-                "identifier": "testMultipartBody",
-                "newPage": false,
-                "searchKey": "multipart.testMultipartBody",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testMultipartBody(sep string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testMultipartBody(sep string) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/multipart#TestMultipart",
-              "documentation": {
-                "identifier": "TestMultipart",
-                "newPage": false,
-                "searchKey": "multipart.TestMultipart",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMultipart(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMultipart(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/multipart#TestMultipartOnlyNewlines",
-              "documentation": {
-                "identifier": "TestMultipartOnlyNewlines",
-                "newPage": false,
-                "searchKey": "multipart.TestMultipartOnlyNewlines",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMultipartOnlyNewlines(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMultipartOnlyNewlines(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/multipart#TestMultipartSlowInput",
-              "documentation": {
-                "identifier": "TestMultipartSlowInput",
-                "newPage": false,
-                "searchKey": "multipart.TestMultipartSlowInput",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMultipartSlowInput(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMultipartSlowInput(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/multipart#testMultipart",
-              "documentation": {
-                "identifier": "testMultipart",
-                "newPage": false,
-                "searchKey": "multipart.testMultipart",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testMultipart(t *testing.T, r io.Reader, onlyNewlines bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testMultipart(t *testing.T, r io.Reader, onlyNewlines bool)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/multipart#TestVariousTextLineEndings",
-              "documentation": {
-                "identifier": "TestVariousTextLineEndings",
-                "newPage": false,
-                "searchKey": "multipart.TestVariousTextLineEndings",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestVariousTextLineEndings(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestVariousTextLineEndings(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/multipart#TestLineLimit",
-              "documentation": {
-                "identifier": "TestLineLimit",
-                "newPage": false,
-                "searchKey": "multipart.TestLineLimit",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestLineLimit(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestLineLimit(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/multipart#TestMultipartTruncated",
-              "documentation": {
-                "identifier": "TestMultipartTruncated",
-                "newPage": false,
-                "searchKey": "multipart.TestMultipartTruncated",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMultipartTruncated(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMultipartTruncated(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/multipart#TestMultipartStreamReadahead",
-              "documentation": {
-                "identifier": "TestMultipartStreamReadahead",
-                "newPage": false,
-                "searchKey": "multipart.TestMultipartStreamReadahead",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMultipartStreamReadahead(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMultipartStreamReadahead(t *testing.T)\n```\n\nTestMultipartStreamReadahead tests that PartReader does not block on reading past the end of a part, ensuring that it can be used on a stream like multipart/x-mixed-replace. See golang.org/issue/15431 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/multipart#TestLineContinuation",
-              "documentation": {
-                "identifier": "TestLineContinuation",
-                "newPage": false,
-                "searchKey": "multipart.TestLineContinuation",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestLineContinuation(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestLineContinuation(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/multipart#TestQuotedPrintableEncoding",
-              "documentation": {
-                "identifier": "TestQuotedPrintableEncoding",
-                "newPage": false,
-                "searchKey": "multipart.TestQuotedPrintableEncoding",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestQuotedPrintableEncoding(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestQuotedPrintableEncoding(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/multipart#testQuotedPrintableEncoding",
-              "documentation": {
-                "identifier": "testQuotedPrintableEncoding",
-                "newPage": false,
-                "searchKey": "multipart.testQuotedPrintableEncoding",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testQuotedPrintableEncoding(t *testing.T, cte string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testQuotedPrintableEncoding(t *testing.T, cte string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/multipart#TestRawPart",
-              "documentation": {
-                "identifier": "TestRawPart",
-                "newPage": false,
-                "searchKey": "multipart.TestRawPart",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRawPart(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRawPart(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/multipart#TestNested",
-              "documentation": {
-                "identifier": "TestNested",
-                "newPage": false,
-                "searchKey": "multipart.TestNested",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestNested(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestNested(t *testing.T)\n```\n\nTest parsing an image attachment from gmail, which previously failed. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/mime/multipart#TestParse",
-              "documentation": {
-                "identifier": "TestParse",
-                "newPage": false,
-                "searchKey": "multipart.TestParse",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestParse(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestParse(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc matchAfterPrefix(buf, prefix []byte, readErr error) int\n```\n\nmatchAfterPrefix checks whether buf should be considered to match the boundary. The prefix is \"--boundary\" or \"\\r\\n--boundary\" or \"\\n--boundary\", and the caller has verified already that bytes.HasPrefix(buf, prefix) is true. \n\nmatchAfterPrefix returns +1 if the buffer does match the boundary, meaning the prefix is followed by a dash, space, tab, cr, nl, or end of input. It returns -1 if the buffer definitely does NOT match the boundary, meaning the prefix is followed by some other character. For example, \"--foobar\" does not match \"--foo\". It returns 0 more input needs to be read to make the decision, meaning that len(buf) == len(prefix) and readErr == nil. \n\n"
               },
               "children": null
             }
@@ -2246,6 +2423,7 @@
                 "newPage": false,
                 "searchKey": "multipart.partsFromReader",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2262,132 +2440,138 @@
           },
           {
             "node": {
-              "pathID": "/mime/multipart#TestParseAllSizes",
+              "pathID": "/mime/multipart#randomBoundary",
               "documentation": {
-                "identifier": "TestParseAllSizes",
+                "identifier": "randomBoundary",
                 "newPage": false,
-                "searchKey": "multipart.TestParseAllSizes",
+                "searchKey": "multipart.randomBoundary",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestParseAllSizes(t *testing.T)"
+                "value": "func randomBoundary() string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestParseAllSizes(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc randomBoundary() string\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/mime/multipart#TestNoBoundary",
+              "pathID": "/mime/multipart#scanUntilBoundary",
               "documentation": {
-                "identifier": "TestNoBoundary",
+                "identifier": "scanUntilBoundary",
                 "newPage": false,
-                "searchKey": "multipart.TestNoBoundary",
+                "searchKey": "multipart.scanUntilBoundary",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestNoBoundary(t *testing.T)"
+                "value": "func scanUntilBoundary(buf, dashBoundary, nlDashBoundary []byte, total int64, readErr error) (int, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestNoBoundary(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc scanUntilBoundary(buf, dashBoundary, nlDashBoundary []byte, total int64, readErr error) (int, error)\n```\n\nscanUntilBoundary scans buf to identify how much of it can be safely returned as part of the Part body. dashBoundary is \"--boundary\". nlDashBoundary is \"\\r\\n--boundary\" or \"\\n--boundary\", depending on what mode we are in. The comments below (and the name) assume \"\\n--boundary\", but either is accepted. total is the number of bytes read out so far. If total == 0, then a leading \"--boundary\" is recognized. readErr is the read error, if any, that followed reading the bytes in buf. scanUntilBoundary returns the number of data bytes from buf that can be returned as part of the Part body and also the error to return (if any) once those data bytes are done. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/mime/multipart#TestWriter",
+              "pathID": "/mime/multipart#skipLWSPChar",
               "documentation": {
-                "identifier": "TestWriter",
+                "identifier": "skipLWSPChar",
                 "newPage": false,
-                "searchKey": "multipart.TestWriter",
+                "searchKey": "multipart.skipLWSPChar",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestWriter(t *testing.T)"
+                "value": "func skipLWSPChar(b []byte) []byte"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestWriter(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc skipLWSPChar(b []byte) []byte\n```\n\nskipLWSPChar returns b with leading spaces and tabs removed. RFC 822 defines: \n\n```\nLWSP-char = SPACE / HTAB\n\n```\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/mime/multipart#TestWriterSetBoundary",
+              "pathID": "/mime/multipart#testMultipart",
               "documentation": {
-                "identifier": "TestWriterSetBoundary",
+                "identifier": "testMultipart",
                 "newPage": false,
-                "searchKey": "multipart.TestWriterSetBoundary",
+                "searchKey": "multipart.testMultipart",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestWriterSetBoundary(t *testing.T)"
+                "value": "func testMultipart(t *testing.T, r io.Reader, onlyNewlines bool)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestWriterSetBoundary(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc testMultipart(t *testing.T, r io.Reader, onlyNewlines bool)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/mime/multipart#TestWriterBoundaryGoroutines",
+              "pathID": "/mime/multipart#testMultipartBody",
               "documentation": {
-                "identifier": "TestWriterBoundaryGoroutines",
+                "identifier": "testMultipartBody",
                 "newPage": false,
-                "searchKey": "multipart.TestWriterBoundaryGoroutines",
+                "searchKey": "multipart.testMultipartBody",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestWriterBoundaryGoroutines(t *testing.T)"
+                "value": "func testMultipartBody(sep string) string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestWriterBoundaryGoroutines(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc testMultipartBody(sep string) string\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/mime/multipart#TestSortedHeader",
+              "pathID": "/mime/multipart#testQuotedPrintableEncoding",
               "documentation": {
-                "identifier": "TestSortedHeader",
+                "identifier": "testQuotedPrintableEncoding",
                 "newPage": false,
-                "searchKey": "multipart.TestSortedHeader",
+                "searchKey": "multipart.testQuotedPrintableEncoding",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestSortedHeader(t *testing.T)"
+                "value": "func testQuotedPrintableEncoding(t *testing.T, cte string)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestSortedHeader(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc testQuotedPrintableEncoding(t *testing.T, cte string)\n```\n\n"
               },
               "children": null
             }

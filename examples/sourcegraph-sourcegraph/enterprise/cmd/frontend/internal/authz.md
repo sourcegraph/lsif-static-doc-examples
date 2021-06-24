@@ -14,14 +14,14 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="clock" href="#clock">var clock</a>
 
 ```
 searchKey: authz.clock
-tags: [private]
+tags: [variable function private]
 ```
 
 ```Go
@@ -31,13 +31,14 @@ var clock = timeutil.Now
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Init" href="#Init">func Init(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner, enterpriseServices *enterprise.Services) error</a>
 
 ```
 searchKey: authz.Init
+tags: [method]
 ```
 
 ```Go
@@ -48,7 +49,7 @@ func Init(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigrat
 
 ```
 searchKey: authz.init
-tags: [private]
+tags: [function private]
 ```
 
 ```Go

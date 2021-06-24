@@ -106,43 +106,47 @@ To support tools that analyze Go packages, the patterns found in //go:embed line
     * [var dotFile](#dotFile)
 * [Types](#type)
     * [type FS struct](#FS)
-        * [func (f FS) lookup(name string) *file](#FS.lookup)
-        * [func (f FS) readDir(dir string) []file](#FS.readDir)
         * [func (f FS) Open(name string) (fs.File, error)](#FS.Open)
         * [func (f FS) ReadDir(name string) ([]fs.DirEntry, error)](#FS.ReadDir)
         * [func (f FS) ReadFile(name string) ([]byte, error)](#FS.ReadFile)
+        * [func (f FS) lookup(name string) *file](#FS.lookup)
+        * [func (f FS) readDir(dir string) []file](#FS.readDir)
     * [type file struct](#file)
+        * [func (f *file) Info() (fs.FileInfo, error)](#file.Info)
+        * [func (f *file) IsDir() bool](#file.IsDir)
+        * [func (f *file) ModTime() time.Time](#file.ModTime)
+        * [func (f *file) Mode() fs.FileMode](#file.Mode)
         * [func (f *file) Name() string](#file.Name)
         * [func (f *file) Size() int64](#file.Size)
-        * [func (f *file) ModTime() time.Time](#file.ModTime)
-        * [func (f *file) IsDir() bool](#file.IsDir)
         * [func (f *file) Sys() interface{}](#file.Sys)
         * [func (f *file) Type() fs.FileMode](#file.Type)
-        * [func (f *file) Info() (fs.FileInfo, error)](#file.Info)
-        * [func (f *file) Mode() fs.FileMode](#file.Mode)
-    * [type openFile struct](#openFile)
-        * [func (f *openFile) Close() error](#openFile.Close)
-        * [func (f *openFile) Stat() (fs.FileInfo, error)](#openFile.Stat)
-        * [func (f *openFile) Read(b []byte) (int, error)](#openFile.Read)
-        * [func (f *openFile) Seek(offset int64, whence int) (int64, error)](#openFile.Seek)
     * [type openDir struct](#openDir)
         * [func (d *openDir) Close() error](#openDir.Close)
-        * [func (d *openDir) Stat() (fs.FileInfo, error)](#openDir.Stat)
         * [func (d *openDir) Read([]byte) (int, error)](#openDir.Read)
         * [func (d *openDir) ReadDir(count int) ([]fs.DirEntry, error)](#openDir.ReadDir)
+        * [func (d *openDir) Stat() (fs.FileInfo, error)](#openDir.Stat)
+    * [type openFile struct](#openFile)
+        * [func (f *openFile) Close() error](#openFile.Close)
+        * [func (f *openFile) Read(b []byte) (int, error)](#openFile.Read)
+        * [func (f *openFile) Seek(offset int64, whence int) (int64, error)](#openFile.Seek)
+        * [func (f *openFile) Stat() (fs.FileInfo, error)](#openFile.Stat)
 * [Functions](#func)
+    * [func sortSearch(n int, f func(int) bool) int](#sortSearch)
     * [func split(name string) (dir, elem string, isDir bool)](#split)
     * [func trimSlash(name string) string](#trimSlash)
-    * [func sortSearch(n int, f func(int) bool) int](#sortSearch)
 
 
 ## <a id="var" href="#var">Variables</a>
+
+```
+tags: [package]
+```
 
 ### <a id="dotFile" href="#dotFile">var dotFile</a>
 
 ```
 searchKey: embed.dotFile
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -153,10 +157,15 @@ dotFile is a file for the root directory, which is omitted from the files list i
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [package]
+```
+
 ### <a id="FS" href="#FS">type FS struct</a>
 
 ```
 searchKey: embed.FS
+tags: [struct]
 ```
 
 ```Go
@@ -205,36 +214,11 @@ FS implements fs.FS, so it can be used with any package that understands file sy
 
 See the package documentation for more details about initializing an FS. 
 
-#### <a id="FS.lookup" href="#FS.lookup">func (f FS) lookup(name string) *file</a>
-
-```
-searchKey: embed.FS.lookup
-tags: [private]
-```
-
-```Go
-func (f FS) lookup(name string) *file
-```
-
-lookup returns the named file, or nil if it is not present. 
-
-#### <a id="FS.readDir" href="#FS.readDir">func (f FS) readDir(dir string) []file</a>
-
-```
-searchKey: embed.FS.readDir
-tags: [private]
-```
-
-```Go
-func (f FS) readDir(dir string) []file
-```
-
-readDir returns the list of files corresponding to the directory dir. 
-
 #### <a id="FS.Open" href="#FS.Open">func (f FS) Open(name string) (fs.File, error)</a>
 
 ```
 searchKey: embed.FS.Open
+tags: [method]
 ```
 
 ```Go
@@ -247,6 +231,7 @@ Open opens the named file for reading and returns it as an fs.File.
 
 ```
 searchKey: embed.FS.ReadDir
+tags: [method]
 ```
 
 ```Go
@@ -259,6 +244,7 @@ ReadDir reads and returns the entire named directory.
 
 ```
 searchKey: embed.FS.ReadFile
+tags: [method]
 ```
 
 ```Go
@@ -267,11 +253,37 @@ func (f FS) ReadFile(name string) ([]byte, error)
 
 ReadFile reads and returns the content of the named file. 
 
+#### <a id="FS.lookup" href="#FS.lookup">func (f FS) lookup(name string) *file</a>
+
+```
+searchKey: embed.FS.lookup
+tags: [method private]
+```
+
+```Go
+func (f FS) lookup(name string) *file
+```
+
+lookup returns the named file, or nil if it is not present. 
+
+#### <a id="FS.readDir" href="#FS.readDir">func (f FS) readDir(dir string) []file</a>
+
+```
+searchKey: embed.FS.readDir
+tags: [method private]
+```
+
+```Go
+func (f FS) readDir(dir string) []file
+```
+
+readDir returns the list of files corresponding to the directory dir. 
+
 ### <a id="file" href="#file">type file struct</a>
 
 ```
 searchKey: embed.file
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -286,11 +298,55 @@ type file struct {
 
 A file is a single file in the FS. It implements fs.FileInfo and fs.DirEntry. 
 
+#### <a id="file.Info" href="#file.Info">func (f *file) Info() (fs.FileInfo, error)</a>
+
+```
+searchKey: embed.file.Info
+tags: [function private]
+```
+
+```Go
+func (f *file) Info() (fs.FileInfo, error)
+```
+
+#### <a id="file.IsDir" href="#file.IsDir">func (f *file) IsDir() bool</a>
+
+```
+searchKey: embed.file.IsDir
+tags: [function private]
+```
+
+```Go
+func (f *file) IsDir() bool
+```
+
+#### <a id="file.ModTime" href="#file.ModTime">func (f *file) ModTime() time.Time</a>
+
+```
+searchKey: embed.file.ModTime
+tags: [function private]
+```
+
+```Go
+func (f *file) ModTime() time.Time
+```
+
+#### <a id="file.Mode" href="#file.Mode">func (f *file) Mode() fs.FileMode</a>
+
+```
+searchKey: embed.file.Mode
+tags: [function private]
+```
+
+```Go
+func (f *file) Mode() fs.FileMode
+```
+
 #### <a id="file.Name" href="#file.Name">func (f *file) Name() string</a>
 
 ```
 searchKey: embed.file.Name
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -301,40 +357,18 @@ func (f *file) Name() string
 
 ```
 searchKey: embed.file.Size
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (f *file) Size() int64
 ```
 
-#### <a id="file.ModTime" href="#file.ModTime">func (f *file) ModTime() time.Time</a>
-
-```
-searchKey: embed.file.ModTime
-tags: [private]
-```
-
-```Go
-func (f *file) ModTime() time.Time
-```
-
-#### <a id="file.IsDir" href="#file.IsDir">func (f *file) IsDir() bool</a>
-
-```
-searchKey: embed.file.IsDir
-tags: [private]
-```
-
-```Go
-func (f *file) IsDir() bool
-```
-
 #### <a id="file.Sys" href="#file.Sys">func (f *file) Sys() interface{}</a>
 
 ```
 searchKey: embed.file.Sys
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -345,100 +379,18 @@ func (f *file) Sys() interface{}
 
 ```
 searchKey: embed.file.Type
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (f *file) Type() fs.FileMode
 ```
 
-#### <a id="file.Info" href="#file.Info">func (f *file) Info() (fs.FileInfo, error)</a>
-
-```
-searchKey: embed.file.Info
-tags: [private]
-```
-
-```Go
-func (f *file) Info() (fs.FileInfo, error)
-```
-
-#### <a id="file.Mode" href="#file.Mode">func (f *file) Mode() fs.FileMode</a>
-
-```
-searchKey: embed.file.Mode
-tags: [private]
-```
-
-```Go
-func (f *file) Mode() fs.FileMode
-```
-
-### <a id="openFile" href="#openFile">type openFile struct</a>
-
-```
-searchKey: embed.openFile
-tags: [private]
-```
-
-```Go
-type openFile struct {
-	f      *file // the file itself
-	offset int64 // current read offset
-}
-```
-
-An openFile is a regular file open for reading. 
-
-#### <a id="openFile.Close" href="#openFile.Close">func (f *openFile) Close() error</a>
-
-```
-searchKey: embed.openFile.Close
-tags: [private]
-```
-
-```Go
-func (f *openFile) Close() error
-```
-
-#### <a id="openFile.Stat" href="#openFile.Stat">func (f *openFile) Stat() (fs.FileInfo, error)</a>
-
-```
-searchKey: embed.openFile.Stat
-tags: [private]
-```
-
-```Go
-func (f *openFile) Stat() (fs.FileInfo, error)
-```
-
-#### <a id="openFile.Read" href="#openFile.Read">func (f *openFile) Read(b []byte) (int, error)</a>
-
-```
-searchKey: embed.openFile.Read
-tags: [private]
-```
-
-```Go
-func (f *openFile) Read(b []byte) (int, error)
-```
-
-#### <a id="openFile.Seek" href="#openFile.Seek">func (f *openFile) Seek(offset int64, whence int) (int64, error)</a>
-
-```
-searchKey: embed.openFile.Seek
-tags: [private]
-```
-
-```Go
-func (f *openFile) Seek(offset int64, whence int) (int64, error)
-```
-
 ### <a id="openDir" href="#openDir">type openDir struct</a>
 
 ```
 searchKey: embed.openDir
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -455,29 +407,18 @@ An openDir is a directory open for reading.
 
 ```
 searchKey: embed.openDir.Close
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (d *openDir) Close() error
 ```
 
-#### <a id="openDir.Stat" href="#openDir.Stat">func (d *openDir) Stat() (fs.FileInfo, error)</a>
-
-```
-searchKey: embed.openDir.Stat
-tags: [private]
-```
-
-```Go
-func (d *openDir) Stat() (fs.FileInfo, error)
-```
-
 #### <a id="openDir.Read" href="#openDir.Read">func (d *openDir) Read([]byte) (int, error)</a>
 
 ```
 searchKey: embed.openDir.Read
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -488,20 +429,108 @@ func (d *openDir) Read([]byte) (int, error)
 
 ```
 searchKey: embed.openDir.ReadDir
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (d *openDir) ReadDir(count int) ([]fs.DirEntry, error)
 ```
 
+#### <a id="openDir.Stat" href="#openDir.Stat">func (d *openDir) Stat() (fs.FileInfo, error)</a>
+
+```
+searchKey: embed.openDir.Stat
+tags: [function private]
+```
+
+```Go
+func (d *openDir) Stat() (fs.FileInfo, error)
+```
+
+### <a id="openFile" href="#openFile">type openFile struct</a>
+
+```
+searchKey: embed.openFile
+tags: [struct private]
+```
+
+```Go
+type openFile struct {
+	f      *file // the file itself
+	offset int64 // current read offset
+}
+```
+
+An openFile is a regular file open for reading. 
+
+#### <a id="openFile.Close" href="#openFile.Close">func (f *openFile) Close() error</a>
+
+```
+searchKey: embed.openFile.Close
+tags: [function private]
+```
+
+```Go
+func (f *openFile) Close() error
+```
+
+#### <a id="openFile.Read" href="#openFile.Read">func (f *openFile) Read(b []byte) (int, error)</a>
+
+```
+searchKey: embed.openFile.Read
+tags: [method private]
+```
+
+```Go
+func (f *openFile) Read(b []byte) (int, error)
+```
+
+#### <a id="openFile.Seek" href="#openFile.Seek">func (f *openFile) Seek(offset int64, whence int) (int64, error)</a>
+
+```
+searchKey: embed.openFile.Seek
+tags: [method private]
+```
+
+```Go
+func (f *openFile) Seek(offset int64, whence int) (int64, error)
+```
+
+#### <a id="openFile.Stat" href="#openFile.Stat">func (f *openFile) Stat() (fs.FileInfo, error)</a>
+
+```
+searchKey: embed.openFile.Stat
+tags: [function private]
+```
+
+```Go
+func (f *openFile) Stat() (fs.FileInfo, error)
+```
+
 ## <a id="func" href="#func">Functions</a>
+
+```
+tags: [package]
+```
+
+### <a id="sortSearch" href="#sortSearch">func sortSearch(n int, f func(int) bool) int</a>
+
+```
+searchKey: embed.sortSearch
+tags: [method private]
+```
+
+```Go
+func sortSearch(n int, f func(int) bool) int
+```
+
+sortSearch is like sort.Search, avoiding an import. 
 
 ### <a id="split" href="#split">func split(name string) (dir, elem string, isDir bool)</a>
 
 ```
 searchKey: embed.split
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -514,7 +543,7 @@ split splits the name into dir and elem as described in the comment in the FS st
 
 ```
 searchKey: embed.trimSlash
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -522,17 +551,4 @@ func trimSlash(name string) string
 ```
 
 trimSlash trims a trailing slash from name, if present, returning the possibly shortened name. 
-
-### <a id="sortSearch" href="#sortSearch">func sortSearch(n int, f func(int) bool) int</a>
-
-```
-searchKey: embed.sortSearch
-tags: [private]
-```
-
-```Go
-func sortSearch(n int, f func(int) bool) int
-```
-
-sortSearch is like sort.Search, avoiding an import. 
 

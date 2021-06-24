@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "net/smtp_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "smtp_test.from",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -67,6 +71,9 @@
                 "newPage": false,
                 "searchKey": "smtp_test.msg",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -89,6 +96,9 @@
                 "newPage": false,
                 "searchKey": "smtp_test.recipients",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
@@ -114,6 +124,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -134,6 +145,7 @@
                 "newPage": false,
                 "searchKey": "smtp_test.Example",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -156,6 +168,7 @@
                 "newPage": false,
                 "searchKey": "smtp_test.ExamplePlainAuth",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -178,6 +191,7 @@
                 "newPage": false,
                 "searchKey": "smtp_test.ExampleSendMail",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/fmtsort_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,12 +41,40 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/fmtsort_test#chans",
+              "documentation": {
+                "identifier": "chans",
+                "newPage": false,
+                "searchKey": "fmtsort_test.chans",
+                "tags": [
+                  "variable",
+                  "array",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var chans"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar chans = [3]chan int{make(chan int), make(chan int), make(chan int)}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/fmtsort_test#compareTests",
               "documentation": {
                 "identifier": "compareTests",
                 "newPage": false,
                 "searchKey": "fmtsort_test.compareTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -67,6 +97,8 @@
                 "newPage": false,
                 "searchKey": "fmtsort_test.iFace",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -83,34 +115,15 @@
           },
           {
             "node": {
-              "pathID": "/internal/fmtsort_test#sortTests",
-              "documentation": {
-                "identifier": "sortTests",
-                "newPage": false,
-                "searchKey": "fmtsort_test.sortTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var sortTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar sortTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/fmtsort_test#ints",
               "documentation": {
                 "identifier": "ints",
                 "newPage": false,
                 "searchKey": "fmtsort_test.ints",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -127,22 +140,25 @@
           },
           {
             "node": {
-              "pathID": "/internal/fmtsort_test#chans",
+              "pathID": "/internal/fmtsort_test#sortTests",
               "documentation": {
-                "identifier": "chans",
+                "identifier": "sortTests",
                 "newPage": false,
-                "searchKey": "fmtsort_test.chans",
+                "searchKey": "fmtsort_test.sortTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var chans"
+                "value": "var sortTests"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar chans = [3]chan int{make(chan int), make(chan int), make(chan int)}\n```\n\n"
+                "value": "```Go\nvar sortTests = ...\n```\n\n"
               },
               "children": null
             }
@@ -158,6 +174,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -178,6 +195,7 @@
                 "newPage": false,
                 "searchKey": "fmtsort_test.sortTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -200,6 +218,7 @@
                 "newPage": false,
                 "searchKey": "fmtsort_test.toy",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -225,6 +244,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -239,12 +259,108 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/fmtsort_test#TestCompare",
+              "documentation": {
+                "identifier": "TestCompare",
+                "newPage": false,
+                "searchKey": "fmtsort_test.TestCompare",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCompare(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCompare(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/fmtsort_test#TestInterface",
+              "documentation": {
+                "identifier": "TestInterface",
+                "newPage": false,
+                "searchKey": "fmtsort_test.TestInterface",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInterface(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInterface(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/fmtsort_test#TestOrder",
+              "documentation": {
+                "identifier": "TestOrder",
+                "newPage": false,
+                "searchKey": "fmtsort_test.TestOrder",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOrder(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOrder(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/fmtsort_test#chanMap",
+              "documentation": {
+                "identifier": "chanMap",
+                "newPage": false,
+                "searchKey": "fmtsort_test.chanMap",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func chanMap() map[chan int]string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc chanMap() map[chan int]string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/fmtsort_test#ct",
               "documentation": {
                 "identifier": "ct",
                 "newPage": false,
                 "searchKey": "fmtsort_test.ct",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -261,22 +377,23 @@
           },
           {
             "node": {
-              "pathID": "/internal/fmtsort_test#TestCompare",
+              "pathID": "/internal/fmtsort_test#pointerMap",
               "documentation": {
-                "identifier": "TestCompare",
+                "identifier": "pointerMap",
                 "newPage": false,
-                "searchKey": "fmtsort_test.TestCompare",
+                "searchKey": "fmtsort_test.pointerMap",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestCompare(t *testing.T)"
+                "value": "func pointerMap() map[*int]string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestCompare(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc pointerMap() map[*int]string\n```\n\n"
               },
               "children": null
             }
@@ -289,6 +406,7 @@
                 "newPage": false,
                 "searchKey": "fmtsort_test.sprint",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -311,6 +429,7 @@
                 "newPage": false,
                 "searchKey": "fmtsort_test.sprintKey",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -327,34 +446,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/fmtsort_test#pointerMap",
-              "documentation": {
-                "identifier": "pointerMap",
-                "newPage": false,
-                "searchKey": "fmtsort_test.pointerMap",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func pointerMap() map[*int]string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc pointerMap() map[*int]string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/fmtsort_test#unsafePointerMap",
               "documentation": {
                 "identifier": "unsafePointerMap",
                 "newPage": false,
                 "searchKey": "fmtsort_test.unsafePointerMap",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -365,72 +463,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc unsafePointerMap() map[unsafe.Pointer]string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/fmtsort_test#chanMap",
-              "documentation": {
-                "identifier": "chanMap",
-                "newPage": false,
-                "searchKey": "fmtsort_test.chanMap",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func chanMap() map[chan int]string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc chanMap() map[chan int]string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/fmtsort_test#TestOrder",
-              "documentation": {
-                "identifier": "TestOrder",
-                "newPage": false,
-                "searchKey": "fmtsort_test.TestOrder",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestOrder(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestOrder(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/fmtsort_test#TestInterface",
-              "documentation": {
-                "identifier": "TestInterface",
-                "newPage": false,
-                "searchKey": "fmtsort_test.TestInterface",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestInterface(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestInterface(t *testing.T)\n```\n\n"
               },
               "children": null
             }

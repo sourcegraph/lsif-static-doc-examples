@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/database/dbtesting",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,52 +41,16 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/database/dbtesting#MockHashPassword",
-              "documentation": {
-                "identifier": "MockHashPassword",
-                "newPage": false,
-                "searchKey": "dbtesting.MockHashPassword",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var MockHashPassword"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar MockHashPassword func(password string) (sql.NullString, error)\n```\n\nMockHashPassword if non-nil is used instead of database.hashPassword. This is useful when running tests since we can use a faster implementation. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/dbtesting#MockValidPassword",
-              "documentation": {
-                "identifier": "MockValidPassword",
-                "newPage": false,
-                "searchKey": "dbtesting.MockValidPassword",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var MockValidPassword"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar MockValidPassword func(hash, password string) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/database/dbtesting#BeforeTest",
               "documentation": {
                 "identifier": "BeforeTest",
                 "newPage": false,
                 "searchKey": "dbtesting.BeforeTest",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "array",
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +70,10 @@
                 "identifier": "DBNameSuffix",
                 "newPage": false,
                 "searchKey": "dbtesting.DBNameSuffix",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -119,22 +88,46 @@
           },
           {
             "node": {
-              "pathID": "/internal/database/dbtesting#connectOnce",
+              "pathID": "/internal/database/dbtesting#MockHashPassword",
               "documentation": {
-                "identifier": "connectOnce",
+                "identifier": "MockHashPassword",
                 "newPage": false,
-                "searchKey": "dbtesting.connectOnce",
+                "searchKey": "dbtesting.MockHashPassword",
                 "tags": [
-                  "private"
+                  "variable",
+                  "function"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var connectOnce"
+                "value": "var MockHashPassword"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar connectOnce sync.Once\n```\n\n"
+                "value": "```Go\nvar MockHashPassword func(password string) (sql.NullString, error)\n```\n\nMockHashPassword if non-nil is used instead of database.hashPassword. This is useful when running tests since we can use a faster implementation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbtesting#MockValidPassword",
+              "documentation": {
+                "identifier": "MockValidPassword",
+                "newPage": false,
+                "searchKey": "dbtesting.MockValidPassword",
+                "tags": [
+                  "variable",
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockValidPassword"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockValidPassword func(hash, password string) bool\n```\n\n"
               },
               "children": null
             }
@@ -147,6 +140,8 @@
                 "newPage": false,
                 "searchKey": "dbtesting.connectErr",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -157,6 +152,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar connectErr error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbtesting#connectOnce",
+              "documentation": {
+                "identifier": "connectOnce",
+                "newPage": false,
+                "searchKey": "dbtesting.connectOnce",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var connectOnce"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar connectOnce sync.Once\n```\n\n"
               },
               "children": null
             }
@@ -172,6 +191,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -191,7 +211,9 @@
                 "identifier": "MockDB",
                 "newPage": false,
                 "searchKey": "dbtesting.MockDB",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -204,32 +226,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/database/dbtesting#MockDB.QueryContext",
-                    "documentation": {
-                      "identifier": "MockDB.QueryContext",
-                      "newPage": false,
-                      "searchKey": "dbtesting.MockDB.QueryContext",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (db *MockDB) QueryContext(ctx context.Context, q string, args ...interface{}) (*sql.Rows, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (db *MockDB) QueryContext(ctx context.Context, q string, args ...interface{}) (*sql.Rows, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/database/dbtesting#MockDB.ExecContext",
                     "documentation": {
                       "identifier": "MockDB.ExecContext",
                       "newPage": false,
                       "searchKey": "dbtesting.MockDB.ExecContext",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -244,12 +248,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/database/dbtesting#MockDB.QueryContext",
+                    "documentation": {
+                      "identifier": "MockDB.QueryContext",
+                      "newPage": false,
+                      "searchKey": "dbtesting.MockDB.QueryContext",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (db *MockDB) QueryContext(ctx context.Context, q string, args ...interface{}) (*sql.Rows, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (db *MockDB) QueryContext(ctx context.Context, q string, args ...interface{}) (*sql.Rows, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/database/dbtesting#MockDB.QueryRowContext",
                     "documentation": {
                       "identifier": "MockDB.QueryRowContext",
                       "newPage": false,
                       "searchKey": "dbtesting.MockDB.QueryRowContext",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -276,6 +304,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -290,54 +319,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/database/dbtesting#useFastPasswordMocks",
-              "documentation": {
-                "identifier": "useFastPasswordMocks",
-                "newPage": false,
-                "searchKey": "dbtesting.useFastPasswordMocks",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func useFastPasswordMocks()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc useFastPasswordMocks()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/dbtesting#SetupGlobalTestDB",
-              "documentation": {
-                "identifier": "SetupGlobalTestDB",
-                "newPage": false,
-                "searchKey": "dbtesting.SetupGlobalTestDB",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SetupGlobalTestDB(t testing.TB)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SetupGlobalTestDB(t testing.TB)\n```\n\nSetupGlobalTestDB creates a temporary test DB handle, sets `dbconn.Global` to it and setups other test configuration. \n\nCallers (other than github.com/sourcegraph/sourcegraph/internal/database) must set a name in this package's DBNameSuffix var that is unique among all other test packages that call SetupGlobalTestDB, so that each package's tests run in separate DBs and do not conflict. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/database/dbtesting#GetDB",
               "documentation": {
                 "identifier": "GetDB",
                 "newPage": false,
                 "searchKey": "dbtesting.GetDB",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -352,12 +341,35 @@
           },
           {
             "node": {
+              "pathID": "/internal/database/dbtesting#SetupGlobalTestDB",
+              "documentation": {
+                "identifier": "SetupGlobalTestDB",
+                "newPage": false,
+                "searchKey": "dbtesting.SetupGlobalTestDB",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SetupGlobalTestDB(t testing.TB)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SetupGlobalTestDB(t testing.TB)\n```\n\nSetupGlobalTestDB creates a temporary test DB handle, sets `dbconn.Global` to it and setups other test configuration. \n\nCallers (other than github.com/sourcegraph/sourcegraph/internal/database) must set a name in this package's DBNameSuffix var that is unique among all other test packages that call SetupGlobalTestDB, so that each package's tests run in separate DBs and do not conflict. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/database/dbtesting#emptyDBPreserveSchema",
               "documentation": {
                 "identifier": "emptyDBPreserveSchema",
                 "newPage": false,
                 "searchKey": "dbtesting.emptyDBPreserveSchema",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -380,6 +392,7 @@
                 "newPage": false,
                 "searchKey": "dbtesting.initTest",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -390,6 +403,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc initTest(nameSuffix string) error\n```\n\ninitTest creates a test database, named with the given suffix (dropping it if it already exists), and configures this package to use it. It is called by integration tests (in a package init func) that need to use a real database. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbtesting#useFastPasswordMocks",
+              "documentation": {
+                "identifier": "useFastPasswordMocks",
+                "newPage": false,
+                "searchKey": "dbtesting.useFastPasswordMocks",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func useFastPasswordMocks()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc useFastPasswordMocks()\n```\n\n"
               },
               "children": null
             }

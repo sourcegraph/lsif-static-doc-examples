@@ -4,7 +4,9 @@
     "identifier": "queryrunnerapi",
     "newPage": true,
     "searchKey": "cmd/query-runner/queryrunnerapi",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,10 @@
                 "identifier": "PathSavedQueryWasCreatedOrUpdated",
                 "newPage": false,
                 "searchKey": "queryrunnerapi.PathSavedQueryWasCreatedOrUpdated",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +67,10 @@
                 "identifier": "PathSavedQueryWasDeleted",
                 "newPage": false,
                 "searchKey": "queryrunnerapi.PathSavedQueryWasDeleted",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +90,10 @@
                 "identifier": "PathTestNotification",
                 "newPage": false,
                 "searchKey": "queryrunnerapi.PathTestNotification",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -103,7 +116,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -116,12 +131,37 @@
         "children": [
           {
             "node": {
+              "pathID": "/cmd/query-runner/queryrunnerapi#Client",
+              "documentation": {
+                "identifier": "Client",
+                "newPage": false,
+                "searchKey": "queryrunnerapi.Client",
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Client"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Client = &client{\n\tclient: &http.Client{\n\t\tTimeout: 5 * time.Second,\n\t},\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/query-runner/queryrunnerapi#queryRunnerURL",
               "documentation": {
                 "identifier": "queryRunnerURL",
                 "newPage": false,
                 "searchKey": "queryrunnerapi.queryRunnerURL",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -132,26 +172,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar queryRunnerURL = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/query-runner/queryrunnerapi#Client",
-              "documentation": {
-                "identifier": "Client",
-                "newPage": false,
-                "searchKey": "queryrunnerapi.Client",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var Client"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar Client = &client{\n\tclient: &http.Client{\n\t\tTimeout: 5 * time.Second,\n\t},\n}\n```\n\n"
               },
               "children": null
             }
@@ -166,7 +186,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -179,32 +201,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/query-runner/queryrunnerapi#SubjectAndConfig",
-              "documentation": {
-                "identifier": "SubjectAndConfig",
-                "newPage": false,
-                "searchKey": "queryrunnerapi.SubjectAndConfig",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type SubjectAndConfig struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype SubjectAndConfig struct {\n\tSubject api.SettingsSubject\n\tConfig  api.PartialConfigSavedQueries\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/query-runner/queryrunnerapi#ErrorResponse",
               "documentation": {
                 "identifier": "ErrorResponse",
                 "newPage": false,
                 "searchKey": "queryrunnerapi.ErrorResponse",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -219,12 +223,101 @@
           },
           {
             "node": {
+              "pathID": "/cmd/query-runner/queryrunnerapi#SavedQueryWasCreatedOrUpdatedArgs",
+              "documentation": {
+                "identifier": "SavedQueryWasCreatedOrUpdatedArgs",
+                "newPage": false,
+                "searchKey": "queryrunnerapi.SavedQueryWasCreatedOrUpdatedArgs",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SavedQueryWasCreatedOrUpdatedArgs struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SavedQueryWasCreatedOrUpdatedArgs struct {\n\tSubjectAndConfig                 *SubjectAndConfig\n\tDisableSubscriptionNotifications bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner/queryrunnerapi#SavedQueryWasDeletedArgs",
+              "documentation": {
+                "identifier": "SavedQueryWasDeletedArgs",
+                "newPage": false,
+                "searchKey": "queryrunnerapi.SavedQueryWasDeletedArgs",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SavedQueryWasDeletedArgs struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SavedQueryWasDeletedArgs struct {\n\tSpec                             api.SavedQueryIDSpec\n\tDisableSubscriptionNotifications bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner/queryrunnerapi#SubjectAndConfig",
+              "documentation": {
+                "identifier": "SubjectAndConfig",
+                "newPage": false,
+                "searchKey": "queryrunnerapi.SubjectAndConfig",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SubjectAndConfig struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SubjectAndConfig struct {\n\tSubject api.SettingsSubject\n\tConfig  api.PartialConfigSavedQueries\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner/queryrunnerapi#TestNotificationArgs",
+              "documentation": {
+                "identifier": "TestNotificationArgs",
+                "newPage": false,
+                "searchKey": "queryrunnerapi.TestNotificationArgs",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TestNotificationArgs struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TestNotificationArgs struct {\n\tSavedSearch api.SavedQuerySpecAndConfig\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/query-runner/queryrunnerapi#client",
               "documentation": {
                 "identifier": "client",
                 "newPage": false,
                 "searchKey": "queryrunnerapi.client",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -245,6 +338,7 @@
                       "newPage": false,
                       "searchKey": "queryrunnerapi.client.SavedQueryWasCreatedOrUpdated",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -267,6 +361,7 @@
                       "newPage": false,
                       "searchKey": "queryrunnerapi.client.SavedQueryWasDeleted",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -289,6 +384,7 @@
                       "newPage": false,
                       "searchKey": "queryrunnerapi.client.TestNotification",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -311,6 +407,7 @@
                       "newPage": false,
                       "searchKey": "queryrunnerapi.client.post",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -326,66 +423,6 @@
                   }
                 }
               ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/query-runner/queryrunnerapi#SavedQueryWasCreatedOrUpdatedArgs",
-              "documentation": {
-                "identifier": "SavedQueryWasCreatedOrUpdatedArgs",
-                "newPage": false,
-                "searchKey": "queryrunnerapi.SavedQueryWasCreatedOrUpdatedArgs",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type SavedQueryWasCreatedOrUpdatedArgs struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype SavedQueryWasCreatedOrUpdatedArgs struct {\n\tSubjectAndConfig                 *SubjectAndConfig\n\tDisableSubscriptionNotifications bool\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/query-runner/queryrunnerapi#SavedQueryWasDeletedArgs",
-              "documentation": {
-                "identifier": "SavedQueryWasDeletedArgs",
-                "newPage": false,
-                "searchKey": "queryrunnerapi.SavedQueryWasDeletedArgs",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type SavedQueryWasDeletedArgs struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype SavedQueryWasDeletedArgs struct {\n\tSpec                             api.SavedQueryIDSpec\n\tDisableSubscriptionNotifications bool\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/query-runner/queryrunnerapi#TestNotificationArgs",
-              "documentation": {
-                "identifier": "TestNotificationArgs",
-                "newPage": false,
-                "searchKey": "queryrunnerapi.TestNotificationArgs",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type TestNotificationArgs struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype TestNotificationArgs struct {\n\tSavedSearch api.SavedQuerySpecAndConfig\n}\n```\n\n"
-              },
-              "children": null
             }
           }
         ]

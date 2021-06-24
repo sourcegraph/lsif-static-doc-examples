@@ -4,7 +4,9 @@
     "identifier": "aes",
     "newPage": true,
     "searchKey": "crypto/aes",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,12 +39,37 @@
         "children": [
           {
             "node": {
+              "pathID": "/crypto/aes#BlockSize",
+              "documentation": {
+                "identifier": "BlockSize",
+                "newPage": false,
+                "searchKey": "aes.BlockSize",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const BlockSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst BlockSize = 16\n```\n\nThe AES block size in bytes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/aes#gcmBlockSize",
               "documentation": {
                 "identifier": "gcmBlockSize",
                 "newPage": false,
                 "searchKey": "aes.gcmBlockSize",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -57,34 +86,14 @@
           },
           {
             "node": {
-              "pathID": "/crypto/aes#gcmTagSize",
-              "documentation": {
-                "identifier": "gcmTagSize",
-                "newPage": false,
-                "searchKey": "aes.gcmTagSize",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const gcmTagSize"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst gcmTagSize = 16\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/aes#gcmMinimumTagSize",
               "documentation": {
                 "identifier": "gcmMinimumTagSize",
                 "newPage": false,
                 "searchKey": "aes.gcmMinimumTagSize",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -107,6 +116,8 @@
                 "newPage": false,
                 "searchKey": "aes.gcmStandardNonceSize",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -123,20 +134,24 @@
           },
           {
             "node": {
-              "pathID": "/crypto/aes#BlockSize",
+              "pathID": "/crypto/aes#gcmTagSize",
               "documentation": {
-                "identifier": "BlockSize",
+                "identifier": "gcmTagSize",
                 "newPage": false,
-                "searchKey": "aes.BlockSize",
-                "tags": null
+                "searchKey": "aes.gcmTagSize",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const BlockSize"
+                "value": "const gcmTagSize"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst BlockSize = 16\n```\n\nThe AES block size in bytes. \n\n"
+                "value": "```Go\nconst gcmTagSize = 16\n```\n\n"
               },
               "children": null
             }
@@ -149,6 +164,8 @@
                 "newPage": false,
                 "searchKey": "aes.poly",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -173,7 +190,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -186,12 +205,39 @@
         "children": [
           {
             "node": {
+              "pathID": "/crypto/aes#encryptTests",
+              "documentation": {
+                "identifier": "encryptTests",
+                "newPage": false,
+                "searchKey": "aes.encryptTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var encryptTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar encryptTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/aes#errOpen",
               "documentation": {
                 "identifier": "errOpen",
                 "newPage": false,
                 "searchKey": "aes.errOpen",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -208,44 +254,25 @@
           },
           {
             "node": {
-              "pathID": "/crypto/aes#supportsAES",
+              "pathID": "/crypto/aes#keyTests",
               "documentation": {
-                "identifier": "supportsAES",
+                "identifier": "keyTests",
                 "newPage": false,
-                "searchKey": "aes.supportsAES",
+                "searchKey": "aes.keyTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var supportsAES"
+                "value": "var keyTests"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar supportsAES = cpu.X86.HasAES || cpu.ARM64.HasAES\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#supportsGFMUL",
-              "documentation": {
-                "identifier": "supportsGFMUL",
-                "newPage": false,
-                "searchKey": "aes.supportsGFMUL",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var supportsGFMUL"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar supportsGFMUL = cpu.X86.HasPCLMULQDQ || cpu.ARM64.HasPMULL\n```\n\n"
+                "value": "```Go\nvar keyTests = ...\n```\n\n"
               },
               "children": null
             }
@@ -258,6 +285,9 @@
                 "newPage": false,
                 "searchKey": "aes.powx",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -280,6 +310,9 @@
                 "newPage": false,
                 "searchKey": "aes.sbox0",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -302,6 +335,9 @@
                 "newPage": false,
                 "searchKey": "aes.sbox1",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -318,88 +354,48 @@
           },
           {
             "node": {
-              "pathID": "/crypto/aes#te0",
+              "pathID": "/crypto/aes#supportsAES",
               "documentation": {
-                "identifier": "te0",
+                "identifier": "supportsAES",
                 "newPage": false,
-                "searchKey": "aes.te0",
+                "searchKey": "aes.supportsAES",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var te0"
+                "value": "var supportsAES"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar te0 = ...\n```\n\n"
+                "value": "```Go\nvar supportsAES = cpu.X86.HasAES || cpu.ARM64.HasAES\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/aes#te1",
+              "pathID": "/crypto/aes#supportsGFMUL",
               "documentation": {
-                "identifier": "te1",
+                "identifier": "supportsGFMUL",
                 "newPage": false,
-                "searchKey": "aes.te1",
+                "searchKey": "aes.supportsGFMUL",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var te1"
+                "value": "var supportsGFMUL"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar te1 = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#te2",
-              "documentation": {
-                "identifier": "te2",
-                "newPage": false,
-                "searchKey": "aes.te2",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var te2"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar te2 = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#te3",
-              "documentation": {
-                "identifier": "te3",
-                "newPage": false,
-                "searchKey": "aes.te3",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var te3"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar te3 = ...\n```\n\n"
+                "value": "```Go\nvar supportsGFMUL = cpu.X86.HasPCLMULQDQ || cpu.ARM64.HasPMULL\n```\n\n"
               },
               "children": null
             }
@@ -412,6 +408,9 @@
                 "newPage": false,
                 "searchKey": "aes.td0",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -434,6 +433,9 @@
                 "newPage": false,
                 "searchKey": "aes.td1",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -456,6 +458,9 @@
                 "newPage": false,
                 "searchKey": "aes.td2",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -478,6 +483,9 @@
                 "newPage": false,
                 "searchKey": "aes.td3",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -494,44 +502,100 @@
           },
           {
             "node": {
-              "pathID": "/crypto/aes#keyTests",
+              "pathID": "/crypto/aes#te0",
               "documentation": {
-                "identifier": "keyTests",
+                "identifier": "te0",
                 "newPage": false,
-                "searchKey": "aes.keyTests",
+                "searchKey": "aes.te0",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var keyTests"
+                "value": "var te0"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar keyTests = ...\n```\n\n"
+                "value": "```Go\nvar te0 = ...\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/aes#encryptTests",
+              "pathID": "/crypto/aes#te1",
               "documentation": {
-                "identifier": "encryptTests",
+                "identifier": "te1",
                 "newPage": false,
-                "searchKey": "aes.encryptTests",
+                "searchKey": "aes.te1",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var encryptTests"
+                "value": "var te1"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar encryptTests = ...\n```\n\n"
+                "value": "```Go\nvar te1 = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#te2",
+              "documentation": {
+                "identifier": "te2",
+                "newPage": false,
+                "searchKey": "aes.te2",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var te2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar te2 = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#te3",
+              "documentation": {
+                "identifier": "te3",
+                "newPage": false,
+                "searchKey": "aes.te3",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var te3"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar te3 = ...\n```\n\n"
               },
               "children": null
             }
@@ -546,7 +610,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -559,12 +625,290 @@
         "children": [
           {
             "node": {
+              "pathID": "/crypto/aes#CryptTest",
+              "documentation": {
+                "identifier": "CryptTest",
+                "newPage": false,
+                "searchKey": "aes.CryptTest",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CryptTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CryptTest struct {\n\tkey []byte\n\tin  []byte\n\tout []byte\n}\n```\n\nAppendix B, C of FIPS 197: Cipher examples, Example vectors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#KeySizeError",
+              "documentation": {
+                "identifier": "KeySizeError",
+                "newPage": false,
+                "searchKey": "aes.KeySizeError",
+                "tags": [
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type KeySizeError int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype KeySizeError int\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/crypto/aes#KeySizeError.Error",
+                    "documentation": {
+                      "identifier": "KeySizeError.Error",
+                      "newPage": false,
+                      "searchKey": "aes.KeySizeError.Error",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k KeySizeError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k KeySizeError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#KeyTest",
+              "documentation": {
+                "identifier": "KeyTest",
+                "newPage": false,
+                "searchKey": "aes.KeyTest",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type KeyTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype KeyTest struct {\n\tkey []byte\n\tenc []uint32\n\tdec []uint32 // decryption expansion; not in FIPS 197, computed from C implementation.\n}\n```\n\nAppendix A of FIPS 197: Key expansion examples \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#aesCipher",
+              "documentation": {
+                "identifier": "aesCipher",
+                "newPage": false,
+                "searchKey": "aes.aesCipher",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type aesCipher struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype aesCipher struct {\n\tenc []uint32\n\tdec []uint32\n}\n```\n\nA cipher is an instance of AES encryption using a particular key. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/crypto/aes#aesCipher.BlockSize",
+                    "documentation": {
+                      "identifier": "aesCipher.BlockSize",
+                      "newPage": false,
+                      "searchKey": "aes.aesCipher.BlockSize",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *aesCipher) BlockSize() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *aesCipher) BlockSize() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/aes#aesCipher.Decrypt",
+                    "documentation": {
+                      "identifier": "aesCipher.Decrypt",
+                      "newPage": false,
+                      "searchKey": "aes.aesCipher.Decrypt",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *aesCipher) Decrypt(dst, src []byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *aesCipher) Decrypt(dst, src []byte)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/aes#aesCipher.Encrypt",
+                    "documentation": {
+                      "identifier": "aesCipher.Encrypt",
+                      "newPage": false,
+                      "searchKey": "aes.aesCipher.Encrypt",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *aesCipher) Encrypt(dst, src []byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *aesCipher) Encrypt(dst, src []byte)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#aesCipherAsm",
+              "documentation": {
+                "identifier": "aesCipherAsm",
+                "newPage": false,
+                "searchKey": "aes.aesCipherAsm",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type aesCipherAsm struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype aesCipherAsm struct {\n\taesCipher\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/crypto/aes#aesCipherAsm.BlockSize",
+                    "documentation": {
+                      "identifier": "aesCipherAsm.BlockSize",
+                      "newPage": false,
+                      "searchKey": "aes.aesCipherAsm.BlockSize",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *aesCipherAsm) BlockSize() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *aesCipherAsm) BlockSize() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/aes#aesCipherAsm.Decrypt",
+                    "documentation": {
+                      "identifier": "aesCipherAsm.Decrypt",
+                      "newPage": false,
+                      "searchKey": "aes.aesCipherAsm.Decrypt",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *aesCipherAsm) Decrypt(dst, src []byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *aesCipherAsm) Decrypt(dst, src []byte)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/aes#aesCipherAsm.Encrypt",
+                    "documentation": {
+                      "identifier": "aesCipherAsm.Encrypt",
+                      "newPage": false,
+                      "searchKey": "aes.aesCipherAsm.Encrypt",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *aesCipherAsm) Encrypt(dst, src []byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *aesCipherAsm) Encrypt(dst, src []byte)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/aes#aesCipherGCM",
               "documentation": {
                 "identifier": "aesCipherGCM",
                 "newPage": false,
                 "searchKey": "aes.aesCipherGCM",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -585,6 +929,7 @@
                       "newPage": false,
                       "searchKey": "aes.aesCipherGCM.NewGCM",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -604,12 +949,105 @@
           },
           {
             "node": {
+              "pathID": "/crypto/aes#cbcDecAble",
+              "documentation": {
+                "identifier": "cbcDecAble",
+                "newPage": false,
+                "searchKey": "aes.cbcDecAble",
+                "tags": [
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type cbcDecAble interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype cbcDecAble interface {\n\tNewCBCDecrypter(iv []byte) cipher.BlockMode\n}\n```\n\ncbcDecAble is implemented by cipher.Blocks that can provide an optimized implementation of CBC decryption through the cipher.BlockMode interface. See crypto/cipher/cbc.go. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#cbcEncAble",
+              "documentation": {
+                "identifier": "cbcEncAble",
+                "newPage": false,
+                "searchKey": "aes.cbcEncAble",
+                "tags": [
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type cbcEncAble interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype cbcEncAble interface {\n\tNewCBCEncrypter(iv []byte) cipher.BlockMode\n}\n```\n\ncbcEncAble is implemented by cipher.Blocks that can provide an optimized implementation of CBC encryption through the cipher.BlockMode interface. See crypto/cipher/cbc.go. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#ctrAble",
+              "documentation": {
+                "identifier": "ctrAble",
+                "newPage": false,
+                "searchKey": "aes.ctrAble",
+                "tags": [
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ctrAble interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ctrAble interface {\n\tNewCTR(iv []byte) cipher.Stream\n}\n```\n\nctrAble is implemented by cipher.Blocks that can provide an optimized implementation of CTR through the cipher.Stream interface. See crypto/cipher/ctr.go. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#gcmAble",
+              "documentation": {
+                "identifier": "gcmAble",
+                "newPage": false,
+                "searchKey": "aes.gcmAble",
+                "tags": [
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type gcmAble interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype gcmAble interface {\n\tNewGCM(nonceSize, tagSize int) (cipher.AEAD, error)\n}\n```\n\ngcmAble is implemented by cipher.Blocks that can provide an optimized implementation of GCM through the AEAD interface. See crypto/cipher/gcm.go. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/aes#gcmAsm",
               "documentation": {
                 "identifier": "gcmAsm",
                 "newPage": false,
                 "searchKey": "aes.gcmAsm",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -630,6 +1068,7 @@
                       "newPage": false,
                       "searchKey": "aes.gcmAsm.NonceSize",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -646,12 +1085,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/crypto/aes#gcmAsm.Open",
+                    "documentation": {
+                      "identifier": "gcmAsm.Open",
+                      "newPage": false,
+                      "searchKey": "aes.gcmAsm.Open",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (g *gcmAsm) Open(dst, nonce, ciphertext, data []byte) ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (g *gcmAsm) Open(dst, nonce, ciphertext, data []byte) ([]byte, error)\n```\n\nOpen authenticates and decrypts ciphertext. See the cipher.AEAD interface for details. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/crypto/aes#gcmAsm.Overhead",
                     "documentation": {
                       "identifier": "gcmAsm.Overhead",
                       "newPage": false,
                       "searchKey": "aes.gcmAsm.Overhead",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -674,6 +1137,7 @@
                       "newPage": false,
                       "searchKey": "aes.gcmAsm.Seal",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -684,578 +1148,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (g *gcmAsm) Seal(dst, nonce, plaintext, data []byte) []byte\n```\n\nSeal encrypts and authenticates plaintext. See the cipher.AEAD interface for details. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/aes#gcmAsm.Open",
-                    "documentation": {
-                      "identifier": "gcmAsm.Open",
-                      "newPage": false,
-                      "searchKey": "aes.gcmAsm.Open",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (g *gcmAsm) Open(dst, nonce, ciphertext, data []byte) ([]byte, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (g *gcmAsm) Open(dst, nonce, ciphertext, data []byte) ([]byte, error)\n```\n\nOpen authenticates and decrypts ciphertext. See the cipher.AEAD interface for details. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#aesCipher",
-              "documentation": {
-                "identifier": "aesCipher",
-                "newPage": false,
-                "searchKey": "aes.aesCipher",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type aesCipher struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype aesCipher struct {\n\tenc []uint32\n\tdec []uint32\n}\n```\n\nA cipher is an instance of AES encryption using a particular key. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/crypto/aes#aesCipher.BlockSize",
-                    "documentation": {
-                      "identifier": "aesCipher.BlockSize",
-                      "newPage": false,
-                      "searchKey": "aes.aesCipher.BlockSize",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *aesCipher) BlockSize() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *aesCipher) BlockSize() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/aes#aesCipher.Encrypt",
-                    "documentation": {
-                      "identifier": "aesCipher.Encrypt",
-                      "newPage": false,
-                      "searchKey": "aes.aesCipher.Encrypt",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *aesCipher) Encrypt(dst, src []byte)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *aesCipher) Encrypt(dst, src []byte)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/aes#aesCipher.Decrypt",
-                    "documentation": {
-                      "identifier": "aesCipher.Decrypt",
-                      "newPage": false,
-                      "searchKey": "aes.aesCipher.Decrypt",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *aesCipher) Decrypt(dst, src []byte)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *aesCipher) Decrypt(dst, src []byte)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#KeySizeError",
-              "documentation": {
-                "identifier": "KeySizeError",
-                "newPage": false,
-                "searchKey": "aes.KeySizeError",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type KeySizeError int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype KeySizeError int\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/crypto/aes#KeySizeError.Error",
-                    "documentation": {
-                      "identifier": "KeySizeError.Error",
-                      "newPage": false,
-                      "searchKey": "aes.KeySizeError.Error",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (k KeySizeError) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (k KeySizeError) Error() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#aesCipherAsm",
-              "documentation": {
-                "identifier": "aesCipherAsm",
-                "newPage": false,
-                "searchKey": "aes.aesCipherAsm",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type aesCipherAsm struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype aesCipherAsm struct {\n\taesCipher\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/crypto/aes#aesCipherAsm.BlockSize",
-                    "documentation": {
-                      "identifier": "aesCipherAsm.BlockSize",
-                      "newPage": false,
-                      "searchKey": "aes.aesCipherAsm.BlockSize",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *aesCipherAsm) BlockSize() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *aesCipherAsm) BlockSize() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/aes#aesCipherAsm.Encrypt",
-                    "documentation": {
-                      "identifier": "aesCipherAsm.Encrypt",
-                      "newPage": false,
-                      "searchKey": "aes.aesCipherAsm.Encrypt",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *aesCipherAsm) Encrypt(dst, src []byte)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *aesCipherAsm) Encrypt(dst, src []byte)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/aes#aesCipherAsm.Decrypt",
-                    "documentation": {
-                      "identifier": "aesCipherAsm.Decrypt",
-                      "newPage": false,
-                      "searchKey": "aes.aesCipherAsm.Decrypt",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *aesCipherAsm) Decrypt(dst, src []byte)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *aesCipherAsm) Decrypt(dst, src []byte)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#gcmAble",
-              "documentation": {
-                "identifier": "gcmAble",
-                "newPage": false,
-                "searchKey": "aes.gcmAble",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type gcmAble interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype gcmAble interface {\n\tNewGCM(nonceSize, tagSize int) (cipher.AEAD, error)\n}\n```\n\ngcmAble is implemented by cipher.Blocks that can provide an optimized implementation of GCM through the AEAD interface. See crypto/cipher/gcm.go. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#cbcEncAble",
-              "documentation": {
-                "identifier": "cbcEncAble",
-                "newPage": false,
-                "searchKey": "aes.cbcEncAble",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type cbcEncAble interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype cbcEncAble interface {\n\tNewCBCEncrypter(iv []byte) cipher.BlockMode\n}\n```\n\ncbcEncAble is implemented by cipher.Blocks that can provide an optimized implementation of CBC encryption through the cipher.BlockMode interface. See crypto/cipher/cbc.go. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#cbcDecAble",
-              "documentation": {
-                "identifier": "cbcDecAble",
-                "newPage": false,
-                "searchKey": "aes.cbcDecAble",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type cbcDecAble interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype cbcDecAble interface {\n\tNewCBCDecrypter(iv []byte) cipher.BlockMode\n}\n```\n\ncbcDecAble is implemented by cipher.Blocks that can provide an optimized implementation of CBC decryption through the cipher.BlockMode interface. See crypto/cipher/cbc.go. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#ctrAble",
-              "documentation": {
-                "identifier": "ctrAble",
-                "newPage": false,
-                "searchKey": "aes.ctrAble",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ctrAble interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ctrAble interface {\n\tNewCTR(iv []byte) cipher.Stream\n}\n```\n\nctrAble is implemented by cipher.Blocks that can provide an optimized implementation of CTR through the cipher.Stream interface. See crypto/cipher/ctr.go. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#KeyTest",
-              "documentation": {
-                "identifier": "KeyTest",
-                "newPage": false,
-                "searchKey": "aes.KeyTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type KeyTest struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype KeyTest struct {\n\tkey []byte\n\tenc []uint32\n\tdec []uint32 // decryption expansion; not in FIPS 197, computed from C implementation.\n}\n```\n\nAppendix A of FIPS 197: Key expansion examples \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#CryptTest",
-              "documentation": {
-                "identifier": "CryptTest",
-                "newPage": false,
-                "searchKey": "aes.CryptTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type CryptTest struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype CryptTest struct {\n\tkey []byte\n\tin  []byte\n\tout []byte\n}\n```\n\nAppendix B, C of FIPS 197: Cipher examples, Example vectors. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#testInterface",
-              "documentation": {
-                "identifier": "testInterface",
-                "newPage": false,
-                "searchKey": "aes.testInterface",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type testInterface interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype testInterface interface {\n\tInAESPackage() bool\n}\n```\n\ntestInterface can be asserted to check that a type originates from this test group. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#testBlock",
-              "documentation": {
-                "identifier": "testBlock",
-                "newPage": false,
-                "searchKey": "aes.testBlock",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type testBlock struct{}"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype testBlock struct{}\n```\n\ntestBlock implements the cipher.Block interface and any *Able interfaces that need to be tested. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/crypto/aes#testBlock.BlockSize",
-                    "documentation": {
-                      "identifier": "testBlock.BlockSize",
-                      "newPage": false,
-                      "searchKey": "aes.testBlock.BlockSize",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*testBlock) BlockSize() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*testBlock) BlockSize() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/aes#testBlock.Encrypt",
-                    "documentation": {
-                      "identifier": "testBlock.Encrypt",
-                      "newPage": false,
-                      "searchKey": "aes.testBlock.Encrypt",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*testBlock) Encrypt(a, b []byte)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*testBlock) Encrypt(a, b []byte)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/aes#testBlock.Decrypt",
-                    "documentation": {
-                      "identifier": "testBlock.Decrypt",
-                      "newPage": false,
-                      "searchKey": "aes.testBlock.Decrypt",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*testBlock) Decrypt(a, b []byte)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*testBlock) Decrypt(a, b []byte)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/aes#testBlock.NewGCM",
-                    "documentation": {
-                      "identifier": "testBlock.NewGCM",
-                      "newPage": false,
-                      "searchKey": "aes.testBlock.NewGCM",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*testBlock) NewGCM(int, int) (cipher.AEAD, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*testBlock) NewGCM(int, int) (cipher.AEAD, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/aes#testBlock.NewCBCEncrypter",
-                    "documentation": {
-                      "identifier": "testBlock.NewCBCEncrypter",
-                      "newPage": false,
-                      "searchKey": "aes.testBlock.NewCBCEncrypter",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*testBlock) NewCBCEncrypter([]byte) cipher.BlockMode"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*testBlock) NewCBCEncrypter([]byte) cipher.BlockMode\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/aes#testBlock.NewCBCDecrypter",
-                    "documentation": {
-                      "identifier": "testBlock.NewCBCDecrypter",
-                      "newPage": false,
-                      "searchKey": "aes.testBlock.NewCBCDecrypter",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*testBlock) NewCBCDecrypter([]byte) cipher.BlockMode"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*testBlock) NewCBCDecrypter([]byte) cipher.BlockMode\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/aes#testBlock.NewCTR",
-                    "documentation": {
-                      "identifier": "testBlock.NewCTR",
-                      "newPage": false,
-                      "searchKey": "aes.testBlock.NewCTR",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*testBlock) NewCTR([]byte) cipher.Stream"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*testBlock) NewCTR([]byte) cipher.Stream\n```\n\n"
                     },
                     "children": null
                   }
@@ -1271,6 +1163,7 @@
                 "newPage": false,
                 "searchKey": "aes.testAEAD",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1285,12 +1178,36 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/crypto/aes#testAEAD.InAESPackage",
+                    "documentation": {
+                      "identifier": "testAEAD.InAESPackage",
+                      "newPage": false,
+                      "searchKey": "aes.testAEAD.InAESPackage",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*testAEAD) InAESPackage() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*testAEAD) InAESPackage() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/crypto/aes#testAEAD.NonceSize",
                     "documentation": {
                       "identifier": "testAEAD.NonceSize",
                       "newPage": false,
                       "searchKey": "aes.testAEAD.NonceSize",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1307,12 +1224,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/crypto/aes#testAEAD.Open",
+                    "documentation": {
+                      "identifier": "testAEAD.Open",
+                      "newPage": false,
+                      "searchKey": "aes.testAEAD.Open",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*testAEAD) Open(a, b, c, d []byte) ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*testAEAD) Open(a, b, c, d []byte) ([]byte, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/crypto/aes#testAEAD.Overhead",
                     "documentation": {
                       "identifier": "testAEAD.Overhead",
                       "newPage": false,
                       "searchKey": "aes.testAEAD.Overhead",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1335,6 +1276,7 @@
                       "newPage": false,
                       "searchKey": "aes.testAEAD.Seal",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1348,47 +1290,188 @@
                     },
                     "children": null
                   }
-                },
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#testBlock",
+              "documentation": {
+                "identifier": "testBlock",
+                "newPage": false,
+                "searchKey": "aes.testBlock",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type testBlock struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype testBlock struct{}\n```\n\ntestBlock implements the cipher.Block interface and any *Able interfaces that need to be tested. \n\n"
+              },
+              "children": [
                 {
                   "node": {
-                    "pathID": "/crypto/aes#testAEAD.Open",
+                    "pathID": "/crypto/aes#testBlock.BlockSize",
                     "documentation": {
-                      "identifier": "testAEAD.Open",
+                      "identifier": "testBlock.BlockSize",
                       "newPage": false,
-                      "searchKey": "aes.testAEAD.Open",
+                      "searchKey": "aes.testBlock.BlockSize",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (*testAEAD) Open(a, b, c, d []byte) ([]byte, error)"
+                      "value": "func (*testBlock) BlockSize() int"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (*testAEAD) Open(a, b, c, d []byte) ([]byte, error)\n```\n\n"
+                      "value": "```Go\nfunc (*testBlock) BlockSize() int\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/crypto/aes#testAEAD.InAESPackage",
+                    "pathID": "/crypto/aes#testBlock.Decrypt",
                     "documentation": {
-                      "identifier": "testAEAD.InAESPackage",
+                      "identifier": "testBlock.Decrypt",
                       "newPage": false,
-                      "searchKey": "aes.testAEAD.InAESPackage",
+                      "searchKey": "aes.testBlock.Decrypt",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (*testAEAD) InAESPackage() bool"
+                      "value": "func (*testBlock) Decrypt(a, b []byte)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (*testAEAD) InAESPackage() bool\n```\n\n"
+                      "value": "```Go\nfunc (*testBlock) Decrypt(a, b []byte)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/aes#testBlock.Encrypt",
+                    "documentation": {
+                      "identifier": "testBlock.Encrypt",
+                      "newPage": false,
+                      "searchKey": "aes.testBlock.Encrypt",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*testBlock) Encrypt(a, b []byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*testBlock) Encrypt(a, b []byte)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/aes#testBlock.NewCBCDecrypter",
+                    "documentation": {
+                      "identifier": "testBlock.NewCBCDecrypter",
+                      "newPage": false,
+                      "searchKey": "aes.testBlock.NewCBCDecrypter",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*testBlock) NewCBCDecrypter([]byte) cipher.BlockMode"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*testBlock) NewCBCDecrypter([]byte) cipher.BlockMode\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/aes#testBlock.NewCBCEncrypter",
+                    "documentation": {
+                      "identifier": "testBlock.NewCBCEncrypter",
+                      "newPage": false,
+                      "searchKey": "aes.testBlock.NewCBCEncrypter",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*testBlock) NewCBCEncrypter([]byte) cipher.BlockMode"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*testBlock) NewCBCEncrypter([]byte) cipher.BlockMode\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/aes#testBlock.NewCTR",
+                    "documentation": {
+                      "identifier": "testBlock.NewCTR",
+                      "newPage": false,
+                      "searchKey": "aes.testBlock.NewCTR",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*testBlock) NewCTR([]byte) cipher.Stream"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*testBlock) NewCTR([]byte) cipher.Stream\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/aes#testBlock.NewGCM",
+                    "documentation": {
+                      "identifier": "testBlock.NewGCM",
+                      "newPage": false,
+                      "searchKey": "aes.testBlock.NewGCM",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*testBlock) NewGCM(int, int) (cipher.AEAD, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*testBlock) NewGCM(int, int) (cipher.AEAD, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1404,6 +1487,7 @@
                 "newPage": false,
                 "searchKey": "aes.testBlockMode",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1424,6 +1508,7 @@
                       "newPage": false,
                       "searchKey": "aes.testBlockMode.BlockSize",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1446,6 +1531,7 @@
                       "newPage": false,
                       "searchKey": "aes.testBlockMode.CryptBlocks",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1468,6 +1554,7 @@
                       "newPage": false,
                       "searchKey": "aes.testBlockMode.InAESPackage",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1487,12 +1574,36 @@
           },
           {
             "node": {
+              "pathID": "/crypto/aes#testInterface",
+              "documentation": {
+                "identifier": "testInterface",
+                "newPage": false,
+                "searchKey": "aes.testInterface",
+                "tags": [
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type testInterface interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype testInterface interface {\n\tInAESPackage() bool\n}\n```\n\ntestInterface can be asserted to check that a type originates from this test group. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/aes#testStream",
               "documentation": {
                 "identifier": "testStream",
                 "newPage": false,
                 "searchKey": "aes.testStream",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1507,34 +1618,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/crypto/aes#testStream.XORKeyStream",
-                    "documentation": {
-                      "identifier": "testStream.XORKeyStream",
-                      "newPage": false,
-                      "searchKey": "aes.testStream.XORKeyStream",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*testStream) XORKeyStream(a, b []byte)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*testStream) XORKeyStream(a, b []byte)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/crypto/aes#testStream.InAESPackage",
                     "documentation": {
                       "identifier": "testStream.InAESPackage",
                       "newPage": false,
                       "searchKey": "aes.testStream.InAESPackage",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1545,6 +1635,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (*testStream) InAESPackage() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/aes#testStream.XORKeyStream",
+                    "documentation": {
+                      "identifier": "testStream.XORKeyStream",
+                      "newPage": false,
+                      "searchKey": "aes.testStream.XORKeyStream",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*testStream) XORKeyStream(a, b []byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*testStream) XORKeyStream(a, b []byte)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1562,7 +1675,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1575,242 +1690,72 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto/aes#gcmAesInit",
+              "pathID": "/crypto/aes#BenchmarkDecrypt",
               "documentation": {
-                "identifier": "gcmAesInit",
+                "identifier": "BenchmarkDecrypt",
                 "newPage": false,
-                "searchKey": "aes.gcmAesInit",
+                "searchKey": "aes.BenchmarkDecrypt",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func gcmAesInit(productTable *[256]byte, ks []uint32)"
+                "value": "func BenchmarkDecrypt(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc gcmAesInit(productTable *[256]byte, ks []uint32)\n```\n\n"
+                "value": "```Go\nfunc BenchmarkDecrypt(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/aes#gcmAesData",
+              "pathID": "/crypto/aes#BenchmarkEncrypt",
               "documentation": {
-                "identifier": "gcmAesData",
+                "identifier": "BenchmarkEncrypt",
                 "newPage": false,
-                "searchKey": "aes.gcmAesData",
+                "searchKey": "aes.BenchmarkEncrypt",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func gcmAesData(productTable *[256]byte, data []byte, T *[16]byte)"
+                "value": "func BenchmarkEncrypt(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc gcmAesData(productTable *[256]byte, data []byte, T *[16]byte)\n```\n\n"
+                "value": "```Go\nfunc BenchmarkEncrypt(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/aes#gcmAesEnc",
+              "pathID": "/crypto/aes#BenchmarkExpand",
               "documentation": {
-                "identifier": "gcmAesEnc",
+                "identifier": "BenchmarkExpand",
                 "newPage": false,
-                "searchKey": "aes.gcmAesEnc",
+                "searchKey": "aes.BenchmarkExpand",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func gcmAesEnc(productTable *[256]byte, dst, src []byte, ctr, T *[16]byte, ks []uint32)"
+                "value": "func BenchmarkExpand(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc gcmAesEnc(productTable *[256]byte, dst, src []byte, ctr, T *[16]byte, ks []uint32)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#gcmAesDec",
-              "documentation": {
-                "identifier": "gcmAesDec",
-                "newPage": false,
-                "searchKey": "aes.gcmAesDec",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func gcmAesDec(productTable *[256]byte, dst, src []byte, ctr, T *[16]byte, ks []uint32)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc gcmAesDec(productTable *[256]byte, dst, src []byte, ctr, T *[16]byte, ks []uint32)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#gcmAesFinish",
-              "documentation": {
-                "identifier": "gcmAesFinish",
-                "newPage": false,
-                "searchKey": "aes.gcmAesFinish",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func gcmAesFinish(productTable *[256]byte, tagMask, T *[16]byte, pLen, dLen uint64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc gcmAesFinish(productTable *[256]byte, tagMask, T *[16]byte, pLen, dLen uint64)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#sliceForAppend",
-              "documentation": {
-                "identifier": "sliceForAppend",
-                "newPage": false,
-                "searchKey": "aes.sliceForAppend",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func sliceForAppend(in []byte, n int) (head, tail []byte)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc sliceForAppend(in []byte, n int) (head, tail []byte)\n```\n\nsliceForAppend takes a slice and a requested number of bytes. It returns a slice with the contents of the given slice followed by that many bytes and a second slice that aliases into it and contains only the extra bytes. If the original slice has sufficient capacity then no allocation is performed. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#encryptBlockGo",
-              "documentation": {
-                "identifier": "encryptBlockGo",
-                "newPage": false,
-                "searchKey": "aes.encryptBlockGo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func encryptBlockGo(xk []uint32, dst, src []byte)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc encryptBlockGo(xk []uint32, dst, src []byte)\n```\n\nEncrypt one block from src into dst, using the expanded key xk. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#decryptBlockGo",
-              "documentation": {
-                "identifier": "decryptBlockGo",
-                "newPage": false,
-                "searchKey": "aes.decryptBlockGo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func decryptBlockGo(xk []uint32, dst, src []byte)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc decryptBlockGo(xk []uint32, dst, src []byte)\n```\n\nDecrypt one block from src into dst, using the expanded key xk. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#subw",
-              "documentation": {
-                "identifier": "subw",
-                "newPage": false,
-                "searchKey": "aes.subw",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func subw(w uint32) uint32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc subw(w uint32) uint32\n```\n\nApply sbox0 to each byte in w. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#rotw",
-              "documentation": {
-                "identifier": "rotw",
-                "newPage": false,
-                "searchKey": "aes.rotw",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func rotw(w uint32) uint32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc rotw(w uint32) uint32\n```\n\nRotate \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#expandKeyGo",
-              "documentation": {
-                "identifier": "expandKeyGo",
-                "newPage": false,
-                "searchKey": "aes.expandKeyGo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func expandKeyGo(key []byte, enc, dec []uint32)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc expandKeyGo(key []byte, enc, dec []uint32)\n```\n\nKey expansion algorithm. See FIPS-197, Figure 11. Their rcon[i] is our powx[i-1] << 24. \n\n"
+                "value": "```Go\nfunc BenchmarkExpand(b *testing.B)\n```\n\n"
               },
               "children": null
             }
@@ -1822,7 +1767,9 @@
                 "identifier": "NewCipher",
                 "newPage": false,
                 "searchKey": "aes.NewCipher",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1837,44 +1784,312 @@
           },
           {
             "node": {
-              "pathID": "/crypto/aes#newCipherGeneric",
+              "pathID": "/crypto/aes#TestCBCDecAble",
               "documentation": {
-                "identifier": "newCipherGeneric",
+                "identifier": "TestCBCDecAble",
                 "newPage": false,
-                "searchKey": "aes.newCipherGeneric",
+                "searchKey": "aes.TestCBCDecAble",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func newCipherGeneric(key []byte) (cipher.Block, error)"
+                "value": "func TestCBCDecAble(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc newCipherGeneric(key []byte) (cipher.Block, error)\n```\n\nnewCipherGeneric creates and returns a new cipher.Block implemented in pure Go. \n\n"
+                "value": "```Go\nfunc TestCBCDecAble(t *testing.T)\n```\n\nTest the cbcDecAble interface is detected correctly by the cipher package. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/aes#encryptBlockAsm",
+              "pathID": "/crypto/aes#TestCBCEncAble",
               "documentation": {
-                "identifier": "encryptBlockAsm",
+                "identifier": "TestCBCEncAble",
                 "newPage": false,
-                "searchKey": "aes.encryptBlockAsm",
+                "searchKey": "aes.TestCBCEncAble",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func encryptBlockAsm(nr int, xk *uint32, dst, src *byte)"
+                "value": "func TestCBCEncAble(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc encryptBlockAsm(nr int, xk *uint32, dst, src *byte)\n```\n\n"
+                "value": "```Go\nfunc TestCBCEncAble(t *testing.T)\n```\n\nTest the cbcEncAble interface is detected correctly by the cipher package. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#TestCTRAble",
+              "documentation": {
+                "identifier": "TestCTRAble",
+                "newPage": false,
+                "searchKey": "aes.TestCTRAble",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCTRAble(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCTRAble(t *testing.T)\n```\n\nTest the ctrAble interface is detected correctly by the cipher package. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#TestCipherDecrypt",
+              "documentation": {
+                "identifier": "TestCipherDecrypt",
+                "newPage": false,
+                "searchKey": "aes.TestCipherDecrypt",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCipherDecrypt(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCipherDecrypt(t *testing.T)\n```\n\nTest Cipher Decrypt against FIPS 197 examples. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#TestCipherEncrypt",
+              "documentation": {
+                "identifier": "TestCipherEncrypt",
+                "newPage": false,
+                "searchKey": "aes.TestCipherEncrypt",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCipherEncrypt(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCipherEncrypt(t *testing.T)\n```\n\nTest Cipher Encrypt method against FIPS 197 examples. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#TestExpandKey",
+              "documentation": {
+                "identifier": "TestExpandKey",
+                "newPage": false,
+                "searchKey": "aes.TestExpandKey",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExpandKey(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExpandKey(t *testing.T)\n```\n\nTest key expansion against FIPS 197 examples. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#TestGCMAble",
+              "documentation": {
+                "identifier": "TestGCMAble",
+                "newPage": false,
+                "searchKey": "aes.TestGCMAble",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGCMAble(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGCMAble(t *testing.T)\n```\n\nTest the gcmAble interface is detected correctly by the cipher package. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#TestMul",
+              "documentation": {
+                "identifier": "TestMul",
+                "newPage": false,
+                "searchKey": "aes.TestMul",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMul(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMul(t *testing.T)\n```\n\nTest all mul inputs against bit-by-bit n² algorithm. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#TestPowx",
+              "documentation": {
+                "identifier": "TestPowx",
+                "newPage": false,
+                "searchKey": "aes.TestPowx",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPowx(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPowx(t *testing.T)\n```\n\nTest that powx is initialized correctly. (Can adapt this code to generate it too.) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#TestSboxes",
+              "documentation": {
+                "identifier": "TestSboxes",
+                "newPage": false,
+                "searchKey": "aes.TestSboxes",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSboxes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSboxes(t *testing.T)\n```\n\nCheck that S-boxes are inverses of each other. They have more structure that we could test, but if this sanity check passes, we'll assume the cut and paste from the FIPS PDF worked. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#TestShortBlocks",
+              "documentation": {
+                "identifier": "TestShortBlocks",
+                "newPage": false,
+                "searchKey": "aes.TestShortBlocks",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestShortBlocks(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestShortBlocks(t *testing.T)\n```\n\nTest short input/output. Assembly used to not notice. See issue 7928. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#TestTd",
+              "documentation": {
+                "identifier": "TestTd",
+                "newPage": false,
+                "searchKey": "aes.TestTd",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTd(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTd(t *testing.T)\n```\n\nTest that decryption tables are correct. (Can adapt this code to generate them too.) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#TestTe",
+              "documentation": {
+                "identifier": "TestTe",
+                "newPage": false,
+                "searchKey": "aes.TestTe",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTe(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTe(t *testing.T)\n```\n\nTest that encryption tables are correct. (Can adapt this code to generate them too.) \n\n"
               },
               "children": null
             }
@@ -1887,6 +2102,7 @@
                 "newPage": false,
                 "searchKey": "aes.decryptBlockAsm",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1903,44 +2119,69 @@
           },
           {
             "node": {
-              "pathID": "/crypto/aes#expandKeyAsm",
+              "pathID": "/crypto/aes#decryptBlockGo",
               "documentation": {
-                "identifier": "expandKeyAsm",
+                "identifier": "decryptBlockGo",
                 "newPage": false,
-                "searchKey": "aes.expandKeyAsm",
+                "searchKey": "aes.decryptBlockGo",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func expandKeyAsm(nr int, key *byte, enc *uint32, dec *uint32)"
+                "value": "func decryptBlockGo(xk []uint32, dst, src []byte)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc expandKeyAsm(nr int, key *byte, enc *uint32, dec *uint32)\n```\n\n"
+                "value": "```Go\nfunc decryptBlockGo(xk []uint32, dst, src []byte)\n```\n\nDecrypt one block from src into dst, using the expanded key xk. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/aes#newCipher",
+              "pathID": "/crypto/aes#encryptBlockAsm",
               "documentation": {
-                "identifier": "newCipher",
+                "identifier": "encryptBlockAsm",
                 "newPage": false,
-                "searchKey": "aes.newCipher",
+                "searchKey": "aes.encryptBlockAsm",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func newCipher(key []byte) (cipher.Block, error)"
+                "value": "func encryptBlockAsm(nr int, xk *uint32, dst, src *byte)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc newCipher(key []byte) (cipher.Block, error)\n```\n\n"
+                "value": "```Go\nfunc encryptBlockAsm(nr int, xk *uint32, dst, src *byte)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#encryptBlockGo",
+              "documentation": {
+                "identifier": "encryptBlockGo",
+                "newPage": false,
+                "searchKey": "aes.encryptBlockGo",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func encryptBlockGo(xk []uint32, dst, src []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc encryptBlockGo(xk []uint32, dst, src []byte)\n```\n\nEncrypt one block from src into dst, using the expanded key xk. \n\n"
               },
               "children": null
             }
@@ -1953,6 +2194,7 @@
                 "newPage": false,
                 "searchKey": "aes.expandKey",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1969,22 +2211,161 @@
           },
           {
             "node": {
-              "pathID": "/crypto/aes#TestPowx",
+              "pathID": "/crypto/aes#expandKeyAsm",
               "documentation": {
-                "identifier": "TestPowx",
+                "identifier": "expandKeyAsm",
                 "newPage": false,
-                "searchKey": "aes.TestPowx",
+                "searchKey": "aes.expandKeyAsm",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestPowx(t *testing.T)"
+                "value": "func expandKeyAsm(nr int, key *byte, enc *uint32, dec *uint32)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestPowx(t *testing.T)\n```\n\nTest that powx is initialized correctly. (Can adapt this code to generate it too.) \n\n"
+                "value": "```Go\nfunc expandKeyAsm(nr int, key *byte, enc *uint32, dec *uint32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#expandKeyGo",
+              "documentation": {
+                "identifier": "expandKeyGo",
+                "newPage": false,
+                "searchKey": "aes.expandKeyGo",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func expandKeyGo(key []byte, enc, dec []uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc expandKeyGo(key []byte, enc, dec []uint32)\n```\n\nKey expansion algorithm. See FIPS-197, Figure 11. Their rcon[i] is our powx[i-1] << 24. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#gcmAesData",
+              "documentation": {
+                "identifier": "gcmAesData",
+                "newPage": false,
+                "searchKey": "aes.gcmAesData",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func gcmAesData(productTable *[256]byte, data []byte, T *[16]byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc gcmAesData(productTable *[256]byte, data []byte, T *[16]byte)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#gcmAesDec",
+              "documentation": {
+                "identifier": "gcmAesDec",
+                "newPage": false,
+                "searchKey": "aes.gcmAesDec",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func gcmAesDec(productTable *[256]byte, dst, src []byte, ctr, T *[16]byte, ks []uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc gcmAesDec(productTable *[256]byte, dst, src []byte, ctr, T *[16]byte, ks []uint32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#gcmAesEnc",
+              "documentation": {
+                "identifier": "gcmAesEnc",
+                "newPage": false,
+                "searchKey": "aes.gcmAesEnc",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func gcmAesEnc(productTable *[256]byte, dst, src []byte, ctr, T *[16]byte, ks []uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc gcmAesEnc(productTable *[256]byte, dst, src []byte, ctr, T *[16]byte, ks []uint32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#gcmAesFinish",
+              "documentation": {
+                "identifier": "gcmAesFinish",
+                "newPage": false,
+                "searchKey": "aes.gcmAesFinish",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func gcmAesFinish(productTable *[256]byte, tagMask, T *[16]byte, pLen, dLen uint64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc gcmAesFinish(productTable *[256]byte, tagMask, T *[16]byte, pLen, dLen uint64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/aes#gcmAesInit",
+              "documentation": {
+                "identifier": "gcmAesInit",
+                "newPage": false,
+                "searchKey": "aes.gcmAesInit",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func gcmAesInit(productTable *[256]byte, ks []uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc gcmAesInit(productTable *[256]byte, ks []uint32)\n```\n\n"
               },
               "children": null
             }
@@ -1997,6 +2378,7 @@
                 "newPage": false,
                 "searchKey": "aes.mul",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2013,188 +2395,13 @@
           },
           {
             "node": {
-              "pathID": "/crypto/aes#TestMul",
-              "documentation": {
-                "identifier": "TestMul",
-                "newPage": false,
-                "searchKey": "aes.TestMul",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMul(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMul(t *testing.T)\n```\n\nTest all mul inputs against bit-by-bit n² algorithm. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#TestSboxes",
-              "documentation": {
-                "identifier": "TestSboxes",
-                "newPage": false,
-                "searchKey": "aes.TestSboxes",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSboxes(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSboxes(t *testing.T)\n```\n\nCheck that S-boxes are inverses of each other. They have more structure that we could test, but if this sanity check passes, we'll assume the cut and paste from the FIPS PDF worked. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#TestTe",
-              "documentation": {
-                "identifier": "TestTe",
-                "newPage": false,
-                "searchKey": "aes.TestTe",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTe(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTe(t *testing.T)\n```\n\nTest that encryption tables are correct. (Can adapt this code to generate them too.) \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#TestTd",
-              "documentation": {
-                "identifier": "TestTd",
-                "newPage": false,
-                "searchKey": "aes.TestTd",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTd(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTd(t *testing.T)\n```\n\nTest that decryption tables are correct. (Can adapt this code to generate them too.) \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#TestExpandKey",
-              "documentation": {
-                "identifier": "TestExpandKey",
-                "newPage": false,
-                "searchKey": "aes.TestExpandKey",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestExpandKey(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestExpandKey(t *testing.T)\n```\n\nTest key expansion against FIPS 197 examples. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#TestCipherEncrypt",
-              "documentation": {
-                "identifier": "TestCipherEncrypt",
-                "newPage": false,
-                "searchKey": "aes.TestCipherEncrypt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCipherEncrypt(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCipherEncrypt(t *testing.T)\n```\n\nTest Cipher Encrypt method against FIPS 197 examples. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#TestCipherDecrypt",
-              "documentation": {
-                "identifier": "TestCipherDecrypt",
-                "newPage": false,
-                "searchKey": "aes.TestCipherDecrypt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCipherDecrypt(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCipherDecrypt(t *testing.T)\n```\n\nTest Cipher Decrypt against FIPS 197 examples. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#TestShortBlocks",
-              "documentation": {
-                "identifier": "TestShortBlocks",
-                "newPage": false,
-                "searchKey": "aes.TestShortBlocks",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestShortBlocks(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestShortBlocks(t *testing.T)\n```\n\nTest short input/output. Assembly used to not notice. See issue 7928. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/aes#mustPanic",
               "documentation": {
                 "identifier": "mustPanic",
                 "newPage": false,
                 "searchKey": "aes.mustPanic",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2211,154 +2418,115 @@
           },
           {
             "node": {
-              "pathID": "/crypto/aes#BenchmarkEncrypt",
+              "pathID": "/crypto/aes#newCipher",
               "documentation": {
-                "identifier": "BenchmarkEncrypt",
+                "identifier": "newCipher",
                 "newPage": false,
-                "searchKey": "aes.BenchmarkEncrypt",
+                "searchKey": "aes.newCipher",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkEncrypt(b *testing.B)"
+                "value": "func newCipher(key []byte) (cipher.Block, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkEncrypt(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc newCipher(key []byte) (cipher.Block, error)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/aes#BenchmarkDecrypt",
+              "pathID": "/crypto/aes#newCipherGeneric",
               "documentation": {
-                "identifier": "BenchmarkDecrypt",
+                "identifier": "newCipherGeneric",
                 "newPage": false,
-                "searchKey": "aes.BenchmarkDecrypt",
+                "searchKey": "aes.newCipherGeneric",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkDecrypt(b *testing.B)"
+                "value": "func newCipherGeneric(key []byte) (cipher.Block, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkDecrypt(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc newCipherGeneric(key []byte) (cipher.Block, error)\n```\n\nnewCipherGeneric creates and returns a new cipher.Block implemented in pure Go. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/aes#BenchmarkExpand",
+              "pathID": "/crypto/aes#rotw",
               "documentation": {
-                "identifier": "BenchmarkExpand",
+                "identifier": "rotw",
                 "newPage": false,
-                "searchKey": "aes.BenchmarkExpand",
+                "searchKey": "aes.rotw",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkExpand(b *testing.B)"
+                "value": "func rotw(w uint32) uint32"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkExpand(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc rotw(w uint32) uint32\n```\n\nRotate \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/aes#TestGCMAble",
+              "pathID": "/crypto/aes#sliceForAppend",
               "documentation": {
-                "identifier": "TestGCMAble",
+                "identifier": "sliceForAppend",
                 "newPage": false,
-                "searchKey": "aes.TestGCMAble",
+                "searchKey": "aes.sliceForAppend",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestGCMAble(t *testing.T)"
+                "value": "func sliceForAppend(in []byte, n int) (head, tail []byte)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestGCMAble(t *testing.T)\n```\n\nTest the gcmAble interface is detected correctly by the cipher package. \n\n"
+                "value": "```Go\nfunc sliceForAppend(in []byte, n int) (head, tail []byte)\n```\n\nsliceForAppend takes a slice and a requested number of bytes. It returns a slice with the contents of the given slice followed by that many bytes and a second slice that aliases into it and contains only the extra bytes. If the original slice has sufficient capacity then no allocation is performed. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/aes#TestCBCEncAble",
+              "pathID": "/crypto/aes#subw",
               "documentation": {
-                "identifier": "TestCBCEncAble",
+                "identifier": "subw",
                 "newPage": false,
-                "searchKey": "aes.TestCBCEncAble",
+                "searchKey": "aes.subw",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestCBCEncAble(t *testing.T)"
+                "value": "func subw(w uint32) uint32"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestCBCEncAble(t *testing.T)\n```\n\nTest the cbcEncAble interface is detected correctly by the cipher package. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#TestCBCDecAble",
-              "documentation": {
-                "identifier": "TestCBCDecAble",
-                "newPage": false,
-                "searchKey": "aes.TestCBCDecAble",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCBCDecAble(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCBCDecAble(t *testing.T)\n```\n\nTest the cbcDecAble interface is detected correctly by the cipher package. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/aes#TestCTRAble",
-              "documentation": {
-                "identifier": "TestCTRAble",
-                "newPage": false,
-                "searchKey": "aes.TestCTRAble",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCTRAble(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCTRAble(t *testing.T)\n```\n\nTest the ctrAble interface is detected correctly by the cipher package. \n\n"
+                "value": "```Go\nfunc subw(w uint32) uint32\n```\n\nApply sbox0 to each byte in w. \n\n"
               },
               "children": null
             }

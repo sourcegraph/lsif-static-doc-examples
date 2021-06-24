@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "crypto/internal/randutil",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto/internal/randutil#closedChanOnce",
-              "documentation": {
-                "identifier": "closedChanOnce",
-                "newPage": false,
-                "searchKey": "randutil.closedChanOnce",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var closedChanOnce"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar closedChanOnce sync.Once\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/internal/randutil#closedChan",
               "documentation": {
                 "identifier": "closedChan",
                 "newPage": false,
                 "searchKey": "randutil.closedChan",
                 "tags": [
+                  "variable",
                   "private"
                 ]
               },
@@ -77,6 +58,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar closedChan chan struct{}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/internal/randutil#closedChanOnce",
+              "documentation": {
+                "identifier": "closedChanOnce",
+                "newPage": false,
+                "searchKey": "randutil.closedChanOnce",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var closedChanOnce"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar closedChanOnce sync.Once\n```\n\n"
               },
               "children": null
             }
@@ -92,6 +97,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -111,7 +117,9 @@
                 "identifier": "MaybeReadByte",
                 "newPage": false,
                 "searchKey": "randutil.MaybeReadByte",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",

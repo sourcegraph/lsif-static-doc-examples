@@ -16,13 +16,14 @@ Package pty is a simple pseudo-terminal package for Unix systems, implemented by
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="PtyError" href="#PtyError">type PtyError struct</a>
 
 ```
 searchKey: pty.PtyError
+tags: [struct]
 ```
 
 ```Go
@@ -37,7 +38,7 @@ type PtyError struct {
 
 ```
 searchKey: pty.ptyError
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -48,6 +49,7 @@ func ptyError(name string, err error) *PtyError
 
 ```
 searchKey: pty.PtyError.Error
+tags: [function]
 ```
 
 ```Go
@@ -58,6 +60,7 @@ func (e *PtyError) Error() string
 
 ```
 searchKey: pty.PtyError.Unwrap
+tags: [function]
 ```
 
 ```Go
@@ -67,13 +70,14 @@ func (e *PtyError) Unwrap() error
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Open" href="#Open">func Open() (pty *os.File, processTTY string, err error)</a>
 
 ```
 searchKey: pty.Open
+tags: [function]
 ```
 
 ```Go

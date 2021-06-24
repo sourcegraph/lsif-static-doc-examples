@@ -12,87 +12,91 @@ The hash functions are not cryptographically secure. (See crypto/sha256 and cryp
 * [Variables](#var)
     * [var fixedSeed](#fixedSeed)
 * [Types](#type)
-    * [type Seed struct](#Seed)
-        * [func MakeSeed() Seed](#MakeSeed)
     * [type Hash struct](#Hash)
-        * [func (h *Hash) initSeed()](#Hash.initSeed)
-        * [func (h *Hash) WriteByte(b byte) error](#Hash.WriteByte)
-        * [func (h *Hash) Write(b []byte) (int, error)](#Hash.Write)
-        * [func (h *Hash) WriteString(s string) (int, error)](#Hash.WriteString)
+        * [func (h *Hash) BlockSize() int](#Hash.BlockSize)
+        * [func (h *Hash) Reset()](#Hash.Reset)
         * [func (h *Hash) Seed() Seed](#Hash.Seed)
         * [func (h *Hash) SetSeed(seed Seed)](#Hash.SetSeed)
-        * [func (h *Hash) Reset()](#Hash.Reset)
-        * [func (h *Hash) flush()](#Hash.flush)
-        * [func (h *Hash) Sum64() uint64](#Hash.Sum64)
-        * [func (h *Hash) Sum(b []byte) []byte](#Hash.Sum)
         * [func (h *Hash) Size() int](#Hash.Size)
-        * [func (h *Hash) BlockSize() int](#Hash.BlockSize)
-    * [type hashSet struct](#hashSet)
-        * [func newHashSet() *hashSet](#newHashSet)
-        * [func (s *hashSet) add(h uint64)](#hashSet.add)
-        * [func (s *hashSet) addS(x string)](#hashSet.addS)
-        * [func (s *hashSet) addB(x []byte)](#hashSet.addB)
-        * [func (s *hashSet) addS_seed(x string, seed Seed)](#hashSet.addS_seed)
-        * [func (s *hashSet) check(t *testing.T)](#hashSet.check)
-    * [type key interface](#key)
+        * [func (h *Hash) Sum(b []byte) []byte](#Hash.Sum)
+        * [func (h *Hash) Sum64() uint64](#Hash.Sum64)
+        * [func (h *Hash) Write(b []byte) (int, error)](#Hash.Write)
+        * [func (h *Hash) WriteByte(b byte) error](#Hash.WriteByte)
+        * [func (h *Hash) WriteString(s string) (int, error)](#Hash.WriteString)
+        * [func (h *Hash) flush()](#Hash.flush)
+        * [func (h *Hash) initSeed()](#Hash.initSeed)
+    * [type Seed struct](#Seed)
+        * [func MakeSeed() Seed](#MakeSeed)
     * [type bytesKey struct](#bytesKey)
-        * [func (k *bytesKey) clear()](#bytesKey.clear)
-        * [func (k *bytesKey) random(r *rand.Rand)](#bytesKey.random)
         * [func (k *bytesKey) bits() int](#bytesKey.bits)
+        * [func (k *bytesKey) clear()](#bytesKey.clear)
         * [func (k *bytesKey) flipBit(i int)](#bytesKey.flipBit)
         * [func (k *bytesKey) hash() uint64](#bytesKey.hash)
         * [func (k *bytesKey) name() string](#bytesKey.name)
+        * [func (k *bytesKey) random(r *rand.Rand)](#bytesKey.random)
+    * [type hashSet struct](#hashSet)
+        * [func newHashSet() *hashSet](#newHashSet)
+        * [func (s *hashSet) add(h uint64)](#hashSet.add)
+        * [func (s *hashSet) addB(x []byte)](#hashSet.addB)
+        * [func (s *hashSet) addS(x string)](#hashSet.addS)
+        * [func (s *hashSet) addS_seed(x string, seed Seed)](#hashSet.addS_seed)
+        * [func (s *hashSet) check(t *testing.T)](#hashSet.check)
+    * [type key interface](#key)
 * [Functions](#func)
-    * [func runtime_fastrand() uint32](#runtime_fastrand)
-    * [func rthash(ptr *byte, len int, seed uint64) uint64](#rthash)
-    * [func runtime_memhash(p unsafe.Pointer, seed, s uintptr) uintptr](#runtime_memhash)
-    * [func TestUnseededHash(t *testing.T)](#TestUnseededHash)
-    * [func TestSeededHash(t *testing.T)](#TestSeededHash)
-    * [func TestHashGrouping(t *testing.T)](#TestHashGrouping)
+    * [func BenchmarkHash1K(b *testing.B)](#BenchmarkHash1K)
+    * [func BenchmarkHash320Bytes(b *testing.B)](#BenchmarkHash320Bytes)
+    * [func BenchmarkHash8Bytes(b *testing.B)](#BenchmarkHash8Bytes)
+    * [func BenchmarkHash8K(b *testing.B)](#BenchmarkHash8K)
     * [func TestHashBytesVsString(t *testing.T)](#TestHashBytesVsString)
+    * [func TestHashGrouping(t *testing.T)](#TestHashGrouping)
     * [func TestHashHighBytes(t *testing.T)](#TestHashHighBytes)
     * [func TestRepeat(t *testing.T)](#TestRepeat)
-    * [func TestSeedFromSum64(t *testing.T)](#TestSeedFromSum64)
-    * [func TestSeedFromSeed(t *testing.T)](#TestSeedFromSeed)
     * [func TestSeedFromFlush(t *testing.T)](#TestSeedFromFlush)
     * [func TestSeedFromReset(t *testing.T)](#TestSeedFromReset)
-    * [func benchmarkSize(b *testing.B, size int)](#benchmarkSize)
-    * [func BenchmarkHash8Bytes(b *testing.B)](#BenchmarkHash8Bytes)
-    * [func BenchmarkHash320Bytes(b *testing.B)](#BenchmarkHash320Bytes)
-    * [func BenchmarkHash1K(b *testing.B)](#BenchmarkHash1K)
-    * [func BenchmarkHash8K(b *testing.B)](#BenchmarkHash8K)
-    * [func TestSmhasherSanity(t *testing.T)](#TestSmhasherSanity)
-    * [func bytesHash(b []byte) uint64](#bytesHash)
-    * [func stringHash(s string) uint64](#stringHash)
-    * [func randBytes(r *rand.Rand, b []byte)](#randBytes)
+    * [func TestSeedFromSeed(t *testing.T)](#TestSeedFromSeed)
+    * [func TestSeedFromSum64(t *testing.T)](#TestSeedFromSum64)
+    * [func TestSeededHash(t *testing.T)](#TestSeededHash)
     * [func TestSmhasherAppendedZeros(t *testing.T)](#TestSmhasherAppendedZeros)
-    * [func TestSmhasherSmallKeys(t *testing.T)](#TestSmhasherSmallKeys)
-    * [func TestSmhasherZeros(t *testing.T)](#TestSmhasherZeros)
-    * [func TestSmhasherTwoNonzero(t *testing.T)](#TestSmhasherTwoNonzero)
-    * [func twoNonZero(h *hashSet, n int)](#twoNonZero)
-    * [func TestSmhasherCyclic(t *testing.T)](#TestSmhasherCyclic)
-    * [func TestSmhasherSparse(t *testing.T)](#TestSmhasherSparse)
-    * [func sparse(t *testing.T, n int, k int)](#sparse)
-    * [func setbits(h *hashSet, b []byte, i int, k int)](#setbits)
-    * [func TestSmhasherPermutation(t *testing.T)](#TestSmhasherPermutation)
-    * [func permutation(t *testing.T, s []uint32, n int)](#permutation)
-    * [func genPerm(h *hashSet, b []byte, s []uint32, n int)](#genPerm)
     * [func TestSmhasherAvalanche(t *testing.T)](#TestSmhasherAvalanche)
-    * [func avalancheTest1(t *testing.T, k key)](#avalancheTest1)
-    * [func TestSmhasherWindowed(t *testing.T)](#TestSmhasherWindowed)
-    * [func windowed(t *testing.T, k key)](#windowed)
-    * [func TestSmhasherText(t *testing.T)](#TestSmhasherText)
-    * [func text(t *testing.T, prefix, suffix string)](#text)
+    * [func TestSmhasherCyclic(t *testing.T)](#TestSmhasherCyclic)
+    * [func TestSmhasherPermutation(t *testing.T)](#TestSmhasherPermutation)
+    * [func TestSmhasherSanity(t *testing.T)](#TestSmhasherSanity)
     * [func TestSmhasherSeed(t *testing.T)](#TestSmhasherSeed)
+    * [func TestSmhasherSmallKeys(t *testing.T)](#TestSmhasherSmallKeys)
+    * [func TestSmhasherSparse(t *testing.T)](#TestSmhasherSparse)
+    * [func TestSmhasherText(t *testing.T)](#TestSmhasherText)
+    * [func TestSmhasherTwoNonzero(t *testing.T)](#TestSmhasherTwoNonzero)
+    * [func TestSmhasherWindowed(t *testing.T)](#TestSmhasherWindowed)
+    * [func TestSmhasherZeros(t *testing.T)](#TestSmhasherZeros)
+    * [func TestUnseededHash(t *testing.T)](#TestUnseededHash)
+    * [func avalancheTest1(t *testing.T, k key)](#avalancheTest1)
+    * [func benchmarkSize(b *testing.B, size int)](#benchmarkSize)
+    * [func bytesHash(b []byte) uint64](#bytesHash)
+    * [func genPerm(h *hashSet, b []byte, s []uint32, n int)](#genPerm)
+    * [func permutation(t *testing.T, s []uint32, n int)](#permutation)
+    * [func randBytes(r *rand.Rand, b []byte)](#randBytes)
+    * [func rthash(ptr *byte, len int, seed uint64) uint64](#rthash)
+    * [func runtime_fastrand() uint32](#runtime_fastrand)
+    * [func runtime_memhash(p unsafe.Pointer, seed, s uintptr) uintptr](#runtime_memhash)
+    * [func setbits(h *hashSet, b []byte, i int, k int)](#setbits)
+    * [func sparse(t *testing.T, n int, k int)](#sparse)
+    * [func stringHash(s string) uint64](#stringHash)
+    * [func text(t *testing.T, prefix, suffix string)](#text)
+    * [func twoNonZero(h *hashSet, n int)](#twoNonZero)
+    * [func windowed(t *testing.T, k key)](#windowed)
 
 
 ## <a id="const" href="#const">Constants</a>
+
+```
+tags: [package]
+```
 
 ### <a id="bufSize" href="#bufSize">const bufSize</a>
 
 ```
 searchKey: maphash.bufSize
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -105,7 +109,7 @@ bufSize is the size of the Hash write buffer. The buffer ensures that writes dep
 
 ```
 searchKey: maphash.hashSize
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -114,11 +118,15 @@ const hashSize = 64
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [package]
+```
+
 ### <a id="fixedSeed" href="#fixedSeed">var fixedSeed</a>
 
 ```
 searchKey: maphash.fixedSeed
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -127,40 +135,15 @@ var fixedSeed = MakeSeed()
 
 ## <a id="type" href="#type">Types</a>
 
-### <a id="Seed" href="#Seed">type Seed struct</a>
-
 ```
-searchKey: maphash.Seed
+tags: [package]
 ```
-
-```Go
-type Seed struct {
-	s uint64
-}
-```
-
-A Seed is a random value that selects the specific hash function computed by a Hash. If two Hashes use the same Seeds, they will compute the same hash values for any given input. If two Hashes use different Seeds, they are very likely to compute distinct hash values for any given input. 
-
-A Seed must be initialized by calling MakeSeed. The zero seed is uninitialized and not valid for use with Hash's SetSeed method. 
-
-Each Seed value is local to a single process and cannot be serialized or otherwise recreated in a different process. 
-
-#### <a id="MakeSeed" href="#MakeSeed">func MakeSeed() Seed</a>
-
-```
-searchKey: maphash.MakeSeed
-```
-
-```Go
-func MakeSeed() Seed
-```
-
-MakeSeed returns a new random seed. 
 
 ### <a id="Hash" href="#Hash">type Hash struct</a>
 
 ```
 searchKey: maphash.Hash
+tags: [struct]
 ```
 
 ```Go
@@ -191,59 +174,37 @@ Hashes are intended to be collision-resistant, even for situations where an adve
 
 A Hash is not safe for concurrent use by multiple goroutines, but a Seed is. If multiple goroutines must compute the same seeded hash, each can declare its own Hash and call SetSeed with a common Seed. 
 
-#### <a id="Hash.initSeed" href="#Hash.initSeed">func (h *Hash) initSeed()</a>
+#### <a id="Hash.BlockSize" href="#Hash.BlockSize">func (h *Hash) BlockSize() int</a>
 
 ```
-searchKey: maphash.Hash.initSeed
-tags: [private]
-```
-
-```Go
-func (h *Hash) initSeed()
-```
-
-initSeed seeds the hash if necessary. initSeed is called lazily before any operation that actually uses h.seed/h.state. Note that this does not include Write/WriteByte/WriteString in the case where they only add to h.buf. (If they write too much, they call h.flush, which does call h.initSeed.) 
-
-#### <a id="Hash.WriteByte" href="#Hash.WriteByte">func (h *Hash) WriteByte(b byte) error</a>
-
-```
-searchKey: maphash.Hash.WriteByte
+searchKey: maphash.Hash.BlockSize
+tags: [function]
 ```
 
 ```Go
-func (h *Hash) WriteByte(b byte) error
+func (h *Hash) BlockSize() int
 ```
 
-WriteByte adds b to the sequence of bytes hashed by h. It never fails; the error result is for implementing io.ByteWriter. 
+BlockSize returns h's block size. 
 
-#### <a id="Hash.Write" href="#Hash.Write">func (h *Hash) Write(b []byte) (int, error)</a>
-
-```
-searchKey: maphash.Hash.Write
-```
-
-```Go
-func (h *Hash) Write(b []byte) (int, error)
-```
-
-Write adds b to the sequence of bytes hashed by h. It always writes all of b and never fails; the count and error result are for implementing io.Writer. 
-
-#### <a id="Hash.WriteString" href="#Hash.WriteString">func (h *Hash) WriteString(s string) (int, error)</a>
+#### <a id="Hash.Reset" href="#Hash.Reset">func (h *Hash) Reset()</a>
 
 ```
-searchKey: maphash.Hash.WriteString
+searchKey: maphash.Hash.Reset
+tags: [function]
 ```
 
 ```Go
-func (h *Hash) WriteString(s string) (int, error)
+func (h *Hash) Reset()
 ```
 
-WriteString adds the bytes of s to the sequence of bytes hashed by h. It always writes all of s and never fails; the count and error result are for implementing io.StringWriter. 
+Reset discards all bytes added to h. (The seed remains the same.) 
 
 #### <a id="Hash.Seed" href="#Hash.Seed">func (h *Hash) Seed() Seed</a>
 
 ```
 searchKey: maphash.Hash.Seed
+tags: [function]
 ```
 
 ```Go
@@ -256,6 +217,7 @@ Seed returns h's seed value.
 
 ```
 searchKey: maphash.Hash.SetSeed
+tags: [method]
 ```
 
 ```Go
@@ -264,35 +226,37 @@ func (h *Hash) SetSeed(seed Seed)
 
 SetSeed sets h to use seed, which must have been returned by MakeSeed or by another Hash's Seed method. Two Hash objects with the same seed behave identically. Two Hash objects with different seeds will very likely behave differently. Any bytes added to h before this call will be discarded. 
 
-#### <a id="Hash.Reset" href="#Hash.Reset">func (h *Hash) Reset()</a>
+#### <a id="Hash.Size" href="#Hash.Size">func (h *Hash) Size() int</a>
 
 ```
-searchKey: maphash.Hash.Reset
-```
-
-```Go
-func (h *Hash) Reset()
-```
-
-Reset discards all bytes added to h. (The seed remains the same.) 
-
-#### <a id="Hash.flush" href="#Hash.flush">func (h *Hash) flush()</a>
-
-```
-searchKey: maphash.Hash.flush
-tags: [private]
+searchKey: maphash.Hash.Size
+tags: [function]
 ```
 
 ```Go
-func (h *Hash) flush()
+func (h *Hash) Size() int
 ```
 
-precondition: buffer is full. 
+Size returns h's hash value size, 8 bytes. 
+
+#### <a id="Hash.Sum" href="#Hash.Sum">func (h *Hash) Sum(b []byte) []byte</a>
+
+```
+searchKey: maphash.Hash.Sum
+tags: [method]
+```
+
+```Go
+func (h *Hash) Sum(b []byte) []byte
+```
+
+Sum appends the hash's current 64-bit value to b. It exists for implementing hash.Hash. For direct calls, it is more efficient to use Sum64. 
 
 #### <a id="Hash.Sum64" href="#Hash.Sum64">func (h *Hash) Sum64() uint64</a>
 
 ```
 searchKey: maphash.Hash.Sum64
+tags: [function]
 ```
 
 ```Go
@@ -303,47 +267,187 @@ Sum64 returns h's current 64-bit value, which depends on h's seed and the sequen
 
 All bits of the Sum64 result are close to uniformly and independently distributed, so it can be safely reduced by using bit masking, shifting, or modular arithmetic. 
 
-#### <a id="Hash.Sum" href="#Hash.Sum">func (h *Hash) Sum(b []byte) []byte</a>
+#### <a id="Hash.Write" href="#Hash.Write">func (h *Hash) Write(b []byte) (int, error)</a>
 
 ```
-searchKey: maphash.Hash.Sum
-```
-
-```Go
-func (h *Hash) Sum(b []byte) []byte
-```
-
-Sum appends the hash's current 64-bit value to b. It exists for implementing hash.Hash. For direct calls, it is more efficient to use Sum64. 
-
-#### <a id="Hash.Size" href="#Hash.Size">func (h *Hash) Size() int</a>
-
-```
-searchKey: maphash.Hash.Size
+searchKey: maphash.Hash.Write
+tags: [method]
 ```
 
 ```Go
-func (h *Hash) Size() int
+func (h *Hash) Write(b []byte) (int, error)
 ```
 
-Size returns h's hash value size, 8 bytes. 
+Write adds b to the sequence of bytes hashed by h. It always writes all of b and never fails; the count and error result are for implementing io.Writer. 
 
-#### <a id="Hash.BlockSize" href="#Hash.BlockSize">func (h *Hash) BlockSize() int</a>
+#### <a id="Hash.WriteByte" href="#Hash.WriteByte">func (h *Hash) WriteByte(b byte) error</a>
 
 ```
-searchKey: maphash.Hash.BlockSize
+searchKey: maphash.Hash.WriteByte
+tags: [method]
 ```
 
 ```Go
-func (h *Hash) BlockSize() int
+func (h *Hash) WriteByte(b byte) error
 ```
 
-BlockSize returns h's block size. 
+WriteByte adds b to the sequence of bytes hashed by h. It never fails; the error result is for implementing io.ByteWriter. 
+
+#### <a id="Hash.WriteString" href="#Hash.WriteString">func (h *Hash) WriteString(s string) (int, error)</a>
+
+```
+searchKey: maphash.Hash.WriteString
+tags: [method]
+```
+
+```Go
+func (h *Hash) WriteString(s string) (int, error)
+```
+
+WriteString adds the bytes of s to the sequence of bytes hashed by h. It always writes all of s and never fails; the count and error result are for implementing io.StringWriter. 
+
+#### <a id="Hash.flush" href="#Hash.flush">func (h *Hash) flush()</a>
+
+```
+searchKey: maphash.Hash.flush
+tags: [function private]
+```
+
+```Go
+func (h *Hash) flush()
+```
+
+precondition: buffer is full. 
+
+#### <a id="Hash.initSeed" href="#Hash.initSeed">func (h *Hash) initSeed()</a>
+
+```
+searchKey: maphash.Hash.initSeed
+tags: [function private]
+```
+
+```Go
+func (h *Hash) initSeed()
+```
+
+initSeed seeds the hash if necessary. initSeed is called lazily before any operation that actually uses h.seed/h.state. Note that this does not include Write/WriteByte/WriteString in the case where they only add to h.buf. (If they write too much, they call h.flush, which does call h.initSeed.) 
+
+### <a id="Seed" href="#Seed">type Seed struct</a>
+
+```
+searchKey: maphash.Seed
+tags: [struct]
+```
+
+```Go
+type Seed struct {
+	s uint64
+}
+```
+
+A Seed is a random value that selects the specific hash function computed by a Hash. If two Hashes use the same Seeds, they will compute the same hash values for any given input. If two Hashes use different Seeds, they are very likely to compute distinct hash values for any given input. 
+
+A Seed must be initialized by calling MakeSeed. The zero seed is uninitialized and not valid for use with Hash's SetSeed method. 
+
+Each Seed value is local to a single process and cannot be serialized or otherwise recreated in a different process. 
+
+#### <a id="MakeSeed" href="#MakeSeed">func MakeSeed() Seed</a>
+
+```
+searchKey: maphash.MakeSeed
+tags: [function]
+```
+
+```Go
+func MakeSeed() Seed
+```
+
+MakeSeed returns a new random seed. 
+
+### <a id="bytesKey" href="#bytesKey">type bytesKey struct</a>
+
+```
+searchKey: maphash.bytesKey
+tags: [struct private]
+```
+
+```Go
+type bytesKey struct {
+	b []byte
+}
+```
+
+#### <a id="bytesKey.bits" href="#bytesKey.bits">func (k *bytesKey) bits() int</a>
+
+```
+searchKey: maphash.bytesKey.bits
+tags: [function private]
+```
+
+```Go
+func (k *bytesKey) bits() int
+```
+
+#### <a id="bytesKey.clear" href="#bytesKey.clear">func (k *bytesKey) clear()</a>
+
+```
+searchKey: maphash.bytesKey.clear
+tags: [function private]
+```
+
+```Go
+func (k *bytesKey) clear()
+```
+
+#### <a id="bytesKey.flipBit" href="#bytesKey.flipBit">func (k *bytesKey) flipBit(i int)</a>
+
+```
+searchKey: maphash.bytesKey.flipBit
+tags: [method private]
+```
+
+```Go
+func (k *bytesKey) flipBit(i int)
+```
+
+#### <a id="bytesKey.hash" href="#bytesKey.hash">func (k *bytesKey) hash() uint64</a>
+
+```
+searchKey: maphash.bytesKey.hash
+tags: [function private]
+```
+
+```Go
+func (k *bytesKey) hash() uint64
+```
+
+#### <a id="bytesKey.name" href="#bytesKey.name">func (k *bytesKey) name() string</a>
+
+```
+searchKey: maphash.bytesKey.name
+tags: [function private]
+```
+
+```Go
+func (k *bytesKey) name() string
+```
+
+#### <a id="bytesKey.random" href="#bytesKey.random">func (k *bytesKey) random(r *rand.Rand)</a>
+
+```
+searchKey: maphash.bytesKey.random
+tags: [method private]
+```
+
+```Go
+func (k *bytesKey) random(r *rand.Rand)
+```
 
 ### <a id="hashSet" href="#hashSet">type hashSet struct</a>
 
 ```
 searchKey: maphash.hashSet
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -359,7 +463,7 @@ A hashSet measures the frequency of hash collisions.
 
 ```
 searchKey: maphash.newHashSet
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -370,40 +474,40 @@ func newHashSet() *hashSet
 
 ```
 searchKey: maphash.hashSet.add
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (s *hashSet) add(h uint64)
 ```
 
-#### <a id="hashSet.addS" href="#hashSet.addS">func (s *hashSet) addS(x string)</a>
-
-```
-searchKey: maphash.hashSet.addS
-tags: [private]
-```
-
-```Go
-func (s *hashSet) addS(x string)
-```
-
 #### <a id="hashSet.addB" href="#hashSet.addB">func (s *hashSet) addB(x []byte)</a>
 
 ```
 searchKey: maphash.hashSet.addB
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (s *hashSet) addB(x []byte)
 ```
 
+#### <a id="hashSet.addS" href="#hashSet.addS">func (s *hashSet) addS(x string)</a>
+
+```
+searchKey: maphash.hashSet.addS
+tags: [method private]
+```
+
+```Go
+func (s *hashSet) addS(x string)
+```
+
 #### <a id="hashSet.addS_seed" href="#hashSet.addS_seed">func (s *hashSet) addS_seed(x string, seed Seed)</a>
 
 ```
 searchKey: maphash.hashSet.addS_seed
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -414,7 +518,7 @@ func (s *hashSet) addS_seed(x string, seed Seed)
 
 ```
 searchKey: maphash.hashSet.check
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -425,7 +529,7 @@ func (s *hashSet) check(t *testing.T)
 
 ```
 searchKey: maphash.key
-tags: [private]
+tags: [interface private]
 ```
 
 ```Go
@@ -439,169 +543,83 @@ type key interface {
 }
 ```
 
-### <a id="bytesKey" href="#bytesKey">type bytesKey struct</a>
-
-```
-searchKey: maphash.bytesKey
-tags: [private]
-```
-
-```Go
-type bytesKey struct {
-	b []byte
-}
-```
-
-#### <a id="bytesKey.clear" href="#bytesKey.clear">func (k *bytesKey) clear()</a>
-
-```
-searchKey: maphash.bytesKey.clear
-tags: [private]
-```
-
-```Go
-func (k *bytesKey) clear()
-```
-
-#### <a id="bytesKey.random" href="#bytesKey.random">func (k *bytesKey) random(r *rand.Rand)</a>
-
-```
-searchKey: maphash.bytesKey.random
-tags: [private]
-```
-
-```Go
-func (k *bytesKey) random(r *rand.Rand)
-```
-
-#### <a id="bytesKey.bits" href="#bytesKey.bits">func (k *bytesKey) bits() int</a>
-
-```
-searchKey: maphash.bytesKey.bits
-tags: [private]
-```
-
-```Go
-func (k *bytesKey) bits() int
-```
-
-#### <a id="bytesKey.flipBit" href="#bytesKey.flipBit">func (k *bytesKey) flipBit(i int)</a>
-
-```
-searchKey: maphash.bytesKey.flipBit
-tags: [private]
-```
-
-```Go
-func (k *bytesKey) flipBit(i int)
-```
-
-#### <a id="bytesKey.hash" href="#bytesKey.hash">func (k *bytesKey) hash() uint64</a>
-
-```
-searchKey: maphash.bytesKey.hash
-tags: [private]
-```
-
-```Go
-func (k *bytesKey) hash() uint64
-```
-
-#### <a id="bytesKey.name" href="#bytesKey.name">func (k *bytesKey) name() string</a>
-
-```
-searchKey: maphash.bytesKey.name
-tags: [private]
-```
-
-```Go
-func (k *bytesKey) name() string
-```
-
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="runtime_fastrand" href="#runtime_fastrand">func runtime_fastrand() uint32</a>
-
 ```
-searchKey: maphash.runtime_fastrand
-tags: [private]
+tags: [package]
 ```
 
-```Go
-func runtime_fastrand() uint32
-```
-
-### <a id="rthash" href="#rthash">func rthash(ptr *byte, len int, seed uint64) uint64</a>
+### <a id="BenchmarkHash1K" href="#BenchmarkHash1K">func BenchmarkHash1K(b *testing.B)</a>
 
 ```
-searchKey: maphash.rthash
-tags: [private]
+searchKey: maphash.BenchmarkHash1K
+tags: [method private benchmark]
 ```
 
 ```Go
-func rthash(ptr *byte, len int, seed uint64) uint64
+func BenchmarkHash1K(b *testing.B)
 ```
 
-### <a id="runtime_memhash" href="#runtime_memhash">func runtime_memhash(p unsafe.Pointer, seed, s uintptr) uintptr</a>
+### <a id="BenchmarkHash320Bytes" href="#BenchmarkHash320Bytes">func BenchmarkHash320Bytes(b *testing.B)</a>
 
 ```
-searchKey: maphash.runtime_memhash
-tags: [private]
-```
-
-```Go
-func runtime_memhash(p unsafe.Pointer, seed, s uintptr) uintptr
-```
-
-### <a id="TestUnseededHash" href="#TestUnseededHash">func TestUnseededHash(t *testing.T)</a>
-
-```
-searchKey: maphash.TestUnseededHash
-tags: [private]
+searchKey: maphash.BenchmarkHash320Bytes
+tags: [method private benchmark]
 ```
 
 ```Go
-func TestUnseededHash(t *testing.T)
+func BenchmarkHash320Bytes(b *testing.B)
 ```
 
-### <a id="TestSeededHash" href="#TestSeededHash">func TestSeededHash(t *testing.T)</a>
+### <a id="BenchmarkHash8Bytes" href="#BenchmarkHash8Bytes">func BenchmarkHash8Bytes(b *testing.B)</a>
 
 ```
-searchKey: maphash.TestSeededHash
-tags: [private]
-```
-
-```Go
-func TestSeededHash(t *testing.T)
-```
-
-### <a id="TestHashGrouping" href="#TestHashGrouping">func TestHashGrouping(t *testing.T)</a>
-
-```
-searchKey: maphash.TestHashGrouping
-tags: [private]
+searchKey: maphash.BenchmarkHash8Bytes
+tags: [method private benchmark]
 ```
 
 ```Go
-func TestHashGrouping(t *testing.T)
+func BenchmarkHash8Bytes(b *testing.B)
+```
+
+### <a id="BenchmarkHash8K" href="#BenchmarkHash8K">func BenchmarkHash8K(b *testing.B)</a>
+
+```
+searchKey: maphash.BenchmarkHash8K
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkHash8K(b *testing.B)
 ```
 
 ### <a id="TestHashBytesVsString" href="#TestHashBytesVsString">func TestHashBytesVsString(t *testing.T)</a>
 
 ```
 searchKey: maphash.TestHashBytesVsString
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestHashBytesVsString(t *testing.T)
 ```
 
+### <a id="TestHashGrouping" href="#TestHashGrouping">func TestHashGrouping(t *testing.T)</a>
+
+```
+searchKey: maphash.TestHashGrouping
+tags: [method private test]
+```
+
+```Go
+func TestHashGrouping(t *testing.T)
+```
+
 ### <a id="TestHashHighBytes" href="#TestHashHighBytes">func TestHashHighBytes(t *testing.T)</a>
 
 ```
 searchKey: maphash.TestHashHighBytes
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -612,40 +630,18 @@ func TestHashHighBytes(t *testing.T)
 
 ```
 searchKey: maphash.TestRepeat
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestRepeat(t *testing.T)
 ```
 
-### <a id="TestSeedFromSum64" href="#TestSeedFromSum64">func TestSeedFromSum64(t *testing.T)</a>
-
-```
-searchKey: maphash.TestSeedFromSum64
-tags: [private]
-```
-
-```Go
-func TestSeedFromSum64(t *testing.T)
-```
-
-### <a id="TestSeedFromSeed" href="#TestSeedFromSeed">func TestSeedFromSeed(t *testing.T)</a>
-
-```
-searchKey: maphash.TestSeedFromSeed
-tags: [private]
-```
-
-```Go
-func TestSeedFromSeed(t *testing.T)
-```
-
 ### <a id="TestSeedFromFlush" href="#TestSeedFromFlush">func TestSeedFromFlush(t *testing.T)</a>
 
 ```
 searchKey: maphash.TestSeedFromFlush
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -656,119 +652,51 @@ func TestSeedFromFlush(t *testing.T)
 
 ```
 searchKey: maphash.TestSeedFromReset
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestSeedFromReset(t *testing.T)
 ```
 
-### <a id="benchmarkSize" href="#benchmarkSize">func benchmarkSize(b *testing.B, size int)</a>
+### <a id="TestSeedFromSeed" href="#TestSeedFromSeed">func TestSeedFromSeed(t *testing.T)</a>
 
 ```
-searchKey: maphash.benchmarkSize
-tags: [private]
-```
-
-```Go
-func benchmarkSize(b *testing.B, size int)
-```
-
-### <a id="BenchmarkHash8Bytes" href="#BenchmarkHash8Bytes">func BenchmarkHash8Bytes(b *testing.B)</a>
-
-```
-searchKey: maphash.BenchmarkHash8Bytes
-tags: [private]
+searchKey: maphash.TestSeedFromSeed
+tags: [method private test]
 ```
 
 ```Go
-func BenchmarkHash8Bytes(b *testing.B)
+func TestSeedFromSeed(t *testing.T)
 ```
 
-### <a id="BenchmarkHash320Bytes" href="#BenchmarkHash320Bytes">func BenchmarkHash320Bytes(b *testing.B)</a>
+### <a id="TestSeedFromSum64" href="#TestSeedFromSum64">func TestSeedFromSum64(t *testing.T)</a>
 
 ```
-searchKey: maphash.BenchmarkHash320Bytes
-tags: [private]
-```
-
-```Go
-func BenchmarkHash320Bytes(b *testing.B)
-```
-
-### <a id="BenchmarkHash1K" href="#BenchmarkHash1K">func BenchmarkHash1K(b *testing.B)</a>
-
-```
-searchKey: maphash.BenchmarkHash1K
-tags: [private]
+searchKey: maphash.TestSeedFromSum64
+tags: [method private test]
 ```
 
 ```Go
-func BenchmarkHash1K(b *testing.B)
+func TestSeedFromSum64(t *testing.T)
 ```
 
-### <a id="BenchmarkHash8K" href="#BenchmarkHash8K">func BenchmarkHash8K(b *testing.B)</a>
+### <a id="TestSeededHash" href="#TestSeededHash">func TestSeededHash(t *testing.T)</a>
 
 ```
-searchKey: maphash.BenchmarkHash8K
-tags: [private]
-```
-
-```Go
-func BenchmarkHash8K(b *testing.B)
-```
-
-### <a id="TestSmhasherSanity" href="#TestSmhasherSanity">func TestSmhasherSanity(t *testing.T)</a>
-
-```
-searchKey: maphash.TestSmhasherSanity
-tags: [private]
+searchKey: maphash.TestSeededHash
+tags: [method private test]
 ```
 
 ```Go
-func TestSmhasherSanity(t *testing.T)
-```
-
-Sanity checks. hash should not depend on values outside key. hash should not depend on alignment. 
-
-### <a id="bytesHash" href="#bytesHash">func bytesHash(b []byte) uint64</a>
-
-```
-searchKey: maphash.bytesHash
-tags: [private]
-```
-
-```Go
-func bytesHash(b []byte) uint64
-```
-
-### <a id="stringHash" href="#stringHash">func stringHash(s string) uint64</a>
-
-```
-searchKey: maphash.stringHash
-tags: [private]
-```
-
-```Go
-func stringHash(s string) uint64
-```
-
-### <a id="randBytes" href="#randBytes">func randBytes(r *rand.Rand, b []byte)</a>
-
-```
-searchKey: maphash.randBytes
-tags: [private]
-```
-
-```Go
-func randBytes(r *rand.Rand, b []byte)
+func TestSeededHash(t *testing.T)
 ```
 
 ### <a id="TestSmhasherAppendedZeros" href="#TestSmhasherAppendedZeros">func TestSmhasherAppendedZeros(t *testing.T)</a>
 
 ```
 searchKey: maphash.TestSmhasherAppendedZeros
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -777,146 +705,11 @@ func TestSmhasherAppendedZeros(t *testing.T)
 
 a string plus adding zeros must make distinct hashes 
 
-### <a id="TestSmhasherSmallKeys" href="#TestSmhasherSmallKeys">func TestSmhasherSmallKeys(t *testing.T)</a>
-
-```
-searchKey: maphash.TestSmhasherSmallKeys
-tags: [private]
-```
-
-```Go
-func TestSmhasherSmallKeys(t *testing.T)
-```
-
-All 0-3 byte strings have distinct hashes. 
-
-### <a id="TestSmhasherZeros" href="#TestSmhasherZeros">func TestSmhasherZeros(t *testing.T)</a>
-
-```
-searchKey: maphash.TestSmhasherZeros
-tags: [private]
-```
-
-```Go
-func TestSmhasherZeros(t *testing.T)
-```
-
-Different length strings of all zeros have distinct hashes. 
-
-### <a id="TestSmhasherTwoNonzero" href="#TestSmhasherTwoNonzero">func TestSmhasherTwoNonzero(t *testing.T)</a>
-
-```
-searchKey: maphash.TestSmhasherTwoNonzero
-tags: [private]
-```
-
-```Go
-func TestSmhasherTwoNonzero(t *testing.T)
-```
-
-Strings with up to two nonzero bytes all have distinct hashes. 
-
-### <a id="twoNonZero" href="#twoNonZero">func twoNonZero(h *hashSet, n int)</a>
-
-```
-searchKey: maphash.twoNonZero
-tags: [private]
-```
-
-```Go
-func twoNonZero(h *hashSet, n int)
-```
-
-### <a id="TestSmhasherCyclic" href="#TestSmhasherCyclic">func TestSmhasherCyclic(t *testing.T)</a>
-
-```
-searchKey: maphash.TestSmhasherCyclic
-tags: [private]
-```
-
-```Go
-func TestSmhasherCyclic(t *testing.T)
-```
-
-Test strings with repeats, like "abcdabcdabcdabcd..." 
-
-### <a id="TestSmhasherSparse" href="#TestSmhasherSparse">func TestSmhasherSparse(t *testing.T)</a>
-
-```
-searchKey: maphash.TestSmhasherSparse
-tags: [private]
-```
-
-```Go
-func TestSmhasherSparse(t *testing.T)
-```
-
-Test strings with only a few bits set 
-
-### <a id="sparse" href="#sparse">func sparse(t *testing.T, n int, k int)</a>
-
-```
-searchKey: maphash.sparse
-tags: [private]
-```
-
-```Go
-func sparse(t *testing.T, n int, k int)
-```
-
-### <a id="setbits" href="#setbits">func setbits(h *hashSet, b []byte, i int, k int)</a>
-
-```
-searchKey: maphash.setbits
-tags: [private]
-```
-
-```Go
-func setbits(h *hashSet, b []byte, i int, k int)
-```
-
-set up to k bits at index i and greater 
-
-### <a id="TestSmhasherPermutation" href="#TestSmhasherPermutation">func TestSmhasherPermutation(t *testing.T)</a>
-
-```
-searchKey: maphash.TestSmhasherPermutation
-tags: [private]
-```
-
-```Go
-func TestSmhasherPermutation(t *testing.T)
-```
-
-Test all possible combinations of n blocks from the set s. "permutation" is a bad name here, but it is what Smhasher uses. 
-
-### <a id="permutation" href="#permutation">func permutation(t *testing.T, s []uint32, n int)</a>
-
-```
-searchKey: maphash.permutation
-tags: [private]
-```
-
-```Go
-func permutation(t *testing.T, s []uint32, n int)
-```
-
-### <a id="genPerm" href="#genPerm">func genPerm(h *hashSet, b []byte, s []uint32, n int)</a>
-
-```
-searchKey: maphash.genPerm
-tags: [private]
-```
-
-```Go
-func genPerm(h *hashSet, b []byte, s []uint32, n int)
-```
-
 ### <a id="TestSmhasherAvalanche" href="#TestSmhasherAvalanche">func TestSmhasherAvalanche(t *testing.T)</a>
 
 ```
 searchKey: maphash.TestSmhasherAvalanche
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -925,46 +718,89 @@ func TestSmhasherAvalanche(t *testing.T)
 
 Flipping a single bit of a key should flip each output bit with 50% probability. 
 
-### <a id="avalancheTest1" href="#avalancheTest1">func avalancheTest1(t *testing.T, k key)</a>
+### <a id="TestSmhasherCyclic" href="#TestSmhasherCyclic">func TestSmhasherCyclic(t *testing.T)</a>
 
 ```
-searchKey: maphash.avalancheTest1
-tags: [private]
-```
-
-```Go
-func avalancheTest1(t *testing.T, k key)
-```
-
-### <a id="TestSmhasherWindowed" href="#TestSmhasherWindowed">func TestSmhasherWindowed(t *testing.T)</a>
-
-```
-searchKey: maphash.TestSmhasherWindowed
-tags: [private]
+searchKey: maphash.TestSmhasherCyclic
+tags: [method private test]
 ```
 
 ```Go
-func TestSmhasherWindowed(t *testing.T)
+func TestSmhasherCyclic(t *testing.T)
 ```
 
-All bit rotations of a set of distinct keys 
+Test strings with repeats, like "abcdabcdabcdabcd..." 
 
-### <a id="windowed" href="#windowed">func windowed(t *testing.T, k key)</a>
+### <a id="TestSmhasherPermutation" href="#TestSmhasherPermutation">func TestSmhasherPermutation(t *testing.T)</a>
 
 ```
-searchKey: maphash.windowed
-tags: [private]
+searchKey: maphash.TestSmhasherPermutation
+tags: [method private test]
 ```
 
 ```Go
-func windowed(t *testing.T, k key)
+func TestSmhasherPermutation(t *testing.T)
 ```
+
+Test all possible combinations of n blocks from the set s. "permutation" is a bad name here, but it is what Smhasher uses. 
+
+### <a id="TestSmhasherSanity" href="#TestSmhasherSanity">func TestSmhasherSanity(t *testing.T)</a>
+
+```
+searchKey: maphash.TestSmhasherSanity
+tags: [method private test]
+```
+
+```Go
+func TestSmhasherSanity(t *testing.T)
+```
+
+Sanity checks. hash should not depend on values outside key. hash should not depend on alignment. 
+
+### <a id="TestSmhasherSeed" href="#TestSmhasherSeed">func TestSmhasherSeed(t *testing.T)</a>
+
+```
+searchKey: maphash.TestSmhasherSeed
+tags: [method private test]
+```
+
+```Go
+func TestSmhasherSeed(t *testing.T)
+```
+
+Make sure different seed values generate different hashes. 
+
+### <a id="TestSmhasherSmallKeys" href="#TestSmhasherSmallKeys">func TestSmhasherSmallKeys(t *testing.T)</a>
+
+```
+searchKey: maphash.TestSmhasherSmallKeys
+tags: [method private test]
+```
+
+```Go
+func TestSmhasherSmallKeys(t *testing.T)
+```
+
+All 0-3 byte strings have distinct hashes. 
+
+### <a id="TestSmhasherSparse" href="#TestSmhasherSparse">func TestSmhasherSparse(t *testing.T)</a>
+
+```
+searchKey: maphash.TestSmhasherSparse
+tags: [method private test]
+```
+
+```Go
+func TestSmhasherSparse(t *testing.T)
+```
+
+Test strings with only a few bits set 
 
 ### <a id="TestSmhasherText" href="#TestSmhasherText">func TestSmhasherText(t *testing.T)</a>
 
 ```
 searchKey: maphash.TestSmhasherText
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -973,27 +809,220 @@ func TestSmhasherText(t *testing.T)
 
 All keys of the form prefix + [A-Za-z0-9]*N + suffix. 
 
+### <a id="TestSmhasherTwoNonzero" href="#TestSmhasherTwoNonzero">func TestSmhasherTwoNonzero(t *testing.T)</a>
+
+```
+searchKey: maphash.TestSmhasherTwoNonzero
+tags: [method private test]
+```
+
+```Go
+func TestSmhasherTwoNonzero(t *testing.T)
+```
+
+Strings with up to two nonzero bytes all have distinct hashes. 
+
+### <a id="TestSmhasherWindowed" href="#TestSmhasherWindowed">func TestSmhasherWindowed(t *testing.T)</a>
+
+```
+searchKey: maphash.TestSmhasherWindowed
+tags: [method private test]
+```
+
+```Go
+func TestSmhasherWindowed(t *testing.T)
+```
+
+All bit rotations of a set of distinct keys 
+
+### <a id="TestSmhasherZeros" href="#TestSmhasherZeros">func TestSmhasherZeros(t *testing.T)</a>
+
+```
+searchKey: maphash.TestSmhasherZeros
+tags: [method private test]
+```
+
+```Go
+func TestSmhasherZeros(t *testing.T)
+```
+
+Different length strings of all zeros have distinct hashes. 
+
+### <a id="TestUnseededHash" href="#TestUnseededHash">func TestUnseededHash(t *testing.T)</a>
+
+```
+searchKey: maphash.TestUnseededHash
+tags: [method private test]
+```
+
+```Go
+func TestUnseededHash(t *testing.T)
+```
+
+### <a id="avalancheTest1" href="#avalancheTest1">func avalancheTest1(t *testing.T, k key)</a>
+
+```
+searchKey: maphash.avalancheTest1
+tags: [method private]
+```
+
+```Go
+func avalancheTest1(t *testing.T, k key)
+```
+
+### <a id="benchmarkSize" href="#benchmarkSize">func benchmarkSize(b *testing.B, size int)</a>
+
+```
+searchKey: maphash.benchmarkSize
+tags: [method private]
+```
+
+```Go
+func benchmarkSize(b *testing.B, size int)
+```
+
+### <a id="bytesHash" href="#bytesHash">func bytesHash(b []byte) uint64</a>
+
+```
+searchKey: maphash.bytesHash
+tags: [method private]
+```
+
+```Go
+func bytesHash(b []byte) uint64
+```
+
+### <a id="genPerm" href="#genPerm">func genPerm(h *hashSet, b []byte, s []uint32, n int)</a>
+
+```
+searchKey: maphash.genPerm
+tags: [method private]
+```
+
+```Go
+func genPerm(h *hashSet, b []byte, s []uint32, n int)
+```
+
+### <a id="permutation" href="#permutation">func permutation(t *testing.T, s []uint32, n int)</a>
+
+```
+searchKey: maphash.permutation
+tags: [method private]
+```
+
+```Go
+func permutation(t *testing.T, s []uint32, n int)
+```
+
+### <a id="randBytes" href="#randBytes">func randBytes(r *rand.Rand, b []byte)</a>
+
+```
+searchKey: maphash.randBytes
+tags: [method private]
+```
+
+```Go
+func randBytes(r *rand.Rand, b []byte)
+```
+
+### <a id="rthash" href="#rthash">func rthash(ptr *byte, len int, seed uint64) uint64</a>
+
+```
+searchKey: maphash.rthash
+tags: [method private]
+```
+
+```Go
+func rthash(ptr *byte, len int, seed uint64) uint64
+```
+
+### <a id="runtime_fastrand" href="#runtime_fastrand">func runtime_fastrand() uint32</a>
+
+```
+searchKey: maphash.runtime_fastrand
+tags: [function private]
+```
+
+```Go
+func runtime_fastrand() uint32
+```
+
+### <a id="runtime_memhash" href="#runtime_memhash">func runtime_memhash(p unsafe.Pointer, seed, s uintptr) uintptr</a>
+
+```
+searchKey: maphash.runtime_memhash
+tags: [method private]
+```
+
+```Go
+func runtime_memhash(p unsafe.Pointer, seed, s uintptr) uintptr
+```
+
+### <a id="setbits" href="#setbits">func setbits(h *hashSet, b []byte, i int, k int)</a>
+
+```
+searchKey: maphash.setbits
+tags: [method private]
+```
+
+```Go
+func setbits(h *hashSet, b []byte, i int, k int)
+```
+
+set up to k bits at index i and greater 
+
+### <a id="sparse" href="#sparse">func sparse(t *testing.T, n int, k int)</a>
+
+```
+searchKey: maphash.sparse
+tags: [method private]
+```
+
+```Go
+func sparse(t *testing.T, n int, k int)
+```
+
+### <a id="stringHash" href="#stringHash">func stringHash(s string) uint64</a>
+
+```
+searchKey: maphash.stringHash
+tags: [method private]
+```
+
+```Go
+func stringHash(s string) uint64
+```
+
 ### <a id="text" href="#text">func text(t *testing.T, prefix, suffix string)</a>
 
 ```
 searchKey: maphash.text
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func text(t *testing.T, prefix, suffix string)
 ```
 
-### <a id="TestSmhasherSeed" href="#TestSmhasherSeed">func TestSmhasherSeed(t *testing.T)</a>
+### <a id="twoNonZero" href="#twoNonZero">func twoNonZero(h *hashSet, n int)</a>
 
 ```
-searchKey: maphash.TestSmhasherSeed
-tags: [private]
+searchKey: maphash.twoNonZero
+tags: [method private]
 ```
 
 ```Go
-func TestSmhasherSeed(t *testing.T)
+func twoNonZero(h *hashSet, n int)
 ```
 
-Make sure different seed values generate different hashes. 
+### <a id="windowed" href="#windowed">func windowed(t *testing.T, k key)</a>
+
+```
+searchKey: maphash.windowed
+tags: [method private]
+```
+
+```Go
+func windowed(t *testing.T, k key)
+```
 

@@ -4,7 +4,9 @@
     "identifier": "importer",
     "newPage": true,
     "searchKey": "go/importer",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "Lookup",
                 "newPage": false,
                 "searchKey": "importer.Lookup",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -55,79 +61,13 @@
           },
           {
             "node": {
-              "pathID": "/go/importer#gcimports",
-              "documentation": {
-                "identifier": "gcimports",
-                "newPage": false,
-                "searchKey": "importer.gcimports",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type gcimports struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype gcimports struct {\n\tfset     *token.FileSet\n\tpackages map[string]*types.Package\n\tlookup   Lookup\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/go/importer#gcimports.Import",
-                    "documentation": {
-                      "identifier": "gcimports.Import",
-                      "newPage": false,
-                      "searchKey": "importer.gcimports.Import",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *gcimports) Import(path string) (*types.Package, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *gcimports) Import(path string) (*types.Package, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/importer#gcimports.ImportFrom",
-                    "documentation": {
-                      "identifier": "gcimports.ImportFrom",
-                      "newPage": false,
-                      "searchKey": "importer.gcimports.ImportFrom",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *gcimports) ImportFrom(path, srcDir string, mode types.ImportMode) (*types.Package, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *gcimports) ImportFrom(path, srcDir string, mode types.ImportMode) (*types.Package, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/importer#gccgoimports",
               "documentation": {
                 "identifier": "gccgoimports",
                 "newPage": false,
                 "searchKey": "importer.gccgoimports",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -148,6 +88,7 @@
                       "newPage": false,
                       "searchKey": "importer.gccgoimports.Import",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -170,6 +111,7 @@
                       "newPage": false,
                       "searchKey": "importer.gccgoimports.ImportFrom",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -180,6 +122,76 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (m *gccgoimports) ImportFrom(path, srcDir string, mode types.ImportMode) (*types.Package, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/importer#gcimports",
+              "documentation": {
+                "identifier": "gcimports",
+                "newPage": false,
+                "searchKey": "importer.gcimports",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type gcimports struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype gcimports struct {\n\tfset     *token.FileSet\n\tpackages map[string]*types.Package\n\tlookup   Lookup\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/go/importer#gcimports.Import",
+                    "documentation": {
+                      "identifier": "gcimports.Import",
+                      "newPage": false,
+                      "searchKey": "importer.gcimports.Import",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *gcimports) Import(path string) (*types.Package, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *gcimports) Import(path string) (*types.Package, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/importer#gcimports.ImportFrom",
+                    "documentation": {
+                      "identifier": "gcimports.ImportFrom",
+                      "newPage": false,
+                      "searchKey": "importer.gcimports.ImportFrom",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *gcimports) ImportFrom(path, srcDir string, mode types.ImportMode) (*types.Package, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *gcimports) ImportFrom(path, srcDir string, mode types.ImportMode) (*types.Package, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -197,7 +209,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -210,22 +224,22 @@
         "children": [
           {
             "node": {
-              "pathID": "/go/importer#ForCompiler",
+              "pathID": "/go/importer#Default",
               "documentation": {
-                "identifier": "ForCompiler",
+                "identifier": "Default",
                 "newPage": false,
-                "searchKey": "importer.ForCompiler",
+                "searchKey": "importer.Default",
                 "tags": [
-                  "deprecated"
+                  "function"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func ForCompiler(fset *token.FileSet, compiler string, lookup Lookup) types.Importer"
+                "value": "func Default() types.Importer"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc ForCompiler(fset *token.FileSet, compiler string, lookup Lookup) types.Importer\n```\n\nForCompiler returns an Importer for importing from installed packages for the compilers \"gc\" and \"gccgo\", or for importing directly from the source if the compiler argument is \"source\". In this latter case, importing may fail under circumstances where the exported API is not entirely defined in pure Go source code (if the package API depends on cgo-defined entities, the type checker won't have access to those). \n\nThe lookup function is called each time the resulting importer needs to resolve an import path. In this mode the importer can only be invoked with canonical import paths (not relative or absolute ones); it is assumed that the translation to canonical import paths is being done by the client of the importer. \n\nA lookup function must be provided for correct module-aware operation. Deprecated: If lookup is nil, for backwards-compatibility, the importer will attempt to resolve imports in the $GOPATH workspace. \n\n"
+                "value": "```Go\nfunc Default() types.Importer\n```\n\nDefault returns an Importer for the compiler that built the running binary. If available, the result implements types.ImporterFrom. \n\n"
               },
               "children": null
             }
@@ -238,6 +252,7 @@
                 "newPage": false,
                 "searchKey": "importer.For",
                 "tags": [
+                  "method",
                   "deprecated"
                 ]
               },
@@ -254,20 +269,23 @@
           },
           {
             "node": {
-              "pathID": "/go/importer#Default",
+              "pathID": "/go/importer#ForCompiler",
               "documentation": {
-                "identifier": "Default",
+                "identifier": "ForCompiler",
                 "newPage": false,
-                "searchKey": "importer.Default",
-                "tags": null
+                "searchKey": "importer.ForCompiler",
+                "tags": [
+                  "method",
+                  "deprecated"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func Default() types.Importer"
+                "value": "func ForCompiler(fset *token.FileSet, compiler string, lookup Lookup) types.Importer"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc Default() types.Importer\n```\n\nDefault returns an Importer for the compiler that built the running binary. If available, the result implements types.ImporterFrom. \n\n"
+                "value": "```Go\nfunc ForCompiler(fset *token.FileSet, compiler string, lookup Lookup) types.Importer\n```\n\nForCompiler returns an Importer for importing from installed packages for the compilers \"gc\" and \"gccgo\", or for importing directly from the source if the compiler argument is \"source\". In this latter case, importing may fail under circumstances where the exported API is not entirely defined in pure Go source code (if the package API depends on cgo-defined entities, the type checker won't have access to those). \n\nThe lookup function is called each time the resulting importer needs to resolve an import path. In this mode the importer can only be invoked with canonical import paths (not relative or absolute ones); it is assumed that the translation to canonical import paths is being done by the client of the importer. \n\nA lookup function must be provided for correct module-aware operation. Deprecated: If lookup is nil, for backwards-compatibility, the importer will attempt to resolve imports in the $GOPATH workspace. \n\n"
               },
               "children": null
             }
@@ -280,7 +298,9 @@
                 "newPage": false,
                 "searchKey": "importer.TestForCompiler",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {

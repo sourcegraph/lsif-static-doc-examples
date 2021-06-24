@@ -3,33 +3,111 @@
 ## Index
 
 * [Types](#type)
-    * [type Vector struct](#Vector)
-        * [func (v Vector) MarshalBinary() ([]byte, error)](#Vector.MarshalBinary)
-        * [func (v *Vector) UnmarshalBinary(data []byte) error](#Vector.UnmarshalBinary)
+    * [type P struct](#P)
     * [type Point struct](#Point)
         * [func (p Point) Hypotenuse() float64](#Point.Hypotenuse)
     * [type Pythagoras interface](#Pythagoras)
         * [func interfaceDecode(dec *gob.Decoder) Pythagoras](#interfaceDecode)
-    * [type P struct](#P)
     * [type Q struct](#Q)
+    * [type Vector struct](#Vector)
+        * [func (v Vector) MarshalBinary() ([]byte, error)](#Vector.MarshalBinary)
+        * [func (v *Vector) UnmarshalBinary(data []byte) error](#Vector.UnmarshalBinary)
 * [Functions](#func)
+    * [func Example_basic()](#Example_basic)
     * [func Example_encodeDecode()](#Example_encodeDecode)
     * [func Example_interface()](#Example_interface)
     * [func interfaceEncode(enc *gob.Encoder, p Pythagoras)](#interfaceEncode)
-    * [func Example_basic()](#Example_basic)
 
 
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
+```
+
+### <a id="P" href="#P">type P struct</a>
+
+```
+searchKey: gob_test.P
+tags: [struct private]
+```
+
+```Go
+type P struct {
+	X, Y, Z int
+	Name    string
+}
+```
+
+### <a id="Point" href="#Point">type Point struct</a>
+
+```
+searchKey: gob_test.Point
+tags: [struct private]
+```
+
+```Go
+type Point struct {
+	X, Y int
+}
+```
+
+#### <a id="Point.Hypotenuse" href="#Point.Hypotenuse">func (p Point) Hypotenuse() float64</a>
+
+```
+searchKey: gob_test.Point.Hypotenuse
+tags: [function private]
+```
+
+```Go
+func (p Point) Hypotenuse() float64
+```
+
+### <a id="Pythagoras" href="#Pythagoras">type Pythagoras interface</a>
+
+```
+searchKey: gob_test.Pythagoras
+tags: [interface private]
+```
+
+```Go
+type Pythagoras interface {
+	Hypotenuse() float64
+}
+```
+
+#### <a id="interfaceDecode" href="#interfaceDecode">func interfaceDecode(dec *gob.Decoder) Pythagoras</a>
+
+```
+searchKey: gob_test.interfaceDecode
+tags: [method private]
+```
+
+```Go
+func interfaceDecode(dec *gob.Decoder) Pythagoras
+```
+
+interfaceDecode decodes the next interface value from the stream and returns it. 
+
+### <a id="Q" href="#Q">type Q struct</a>
+
+```
+searchKey: gob_test.Q
+tags: [struct private]
+```
+
+```Go
+type Q struct {
+	X, Y *int32
+	Name string
+}
 ```
 
 ### <a id="Vector" href="#Vector">type Vector struct</a>
 
 ```
 searchKey: gob_test.Vector
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -44,7 +122,7 @@ The Vector type has unexported fields, which the package cannot access. We there
 
 ```
 searchKey: gob_test.Vector.MarshalBinary
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -55,7 +133,7 @@ func (v Vector) MarshalBinary() ([]byte, error)
 
 ```
 searchKey: gob_test.Vector.UnmarshalBinary
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -64,95 +142,30 @@ func (v *Vector) UnmarshalBinary(data []byte) error
 
 UnmarshalBinary modifies the receiver so it must take a pointer receiver. 
 
-### <a id="Point" href="#Point">type Point struct</a>
-
-```
-searchKey: gob_test.Point
-tags: [private]
-```
-
-```Go
-type Point struct {
-	X, Y int
-}
-```
-
-#### <a id="Point.Hypotenuse" href="#Point.Hypotenuse">func (p Point) Hypotenuse() float64</a>
-
-```
-searchKey: gob_test.Point.Hypotenuse
-tags: [private]
-```
-
-```Go
-func (p Point) Hypotenuse() float64
-```
-
-### <a id="Pythagoras" href="#Pythagoras">type Pythagoras interface</a>
-
-```
-searchKey: gob_test.Pythagoras
-tags: [private]
-```
-
-```Go
-type Pythagoras interface {
-	Hypotenuse() float64
-}
-```
-
-#### <a id="interfaceDecode" href="#interfaceDecode">func interfaceDecode(dec *gob.Decoder) Pythagoras</a>
-
-```
-searchKey: gob_test.interfaceDecode
-tags: [private]
-```
-
-```Go
-func interfaceDecode(dec *gob.Decoder) Pythagoras
-```
-
-interfaceDecode decodes the next interface value from the stream and returns it. 
-
-### <a id="P" href="#P">type P struct</a>
-
-```
-searchKey: gob_test.P
-tags: [private]
-```
-
-```Go
-type P struct {
-	X, Y, Z int
-	Name    string
-}
-```
-
-### <a id="Q" href="#Q">type Q struct</a>
-
-```
-searchKey: gob_test.Q
-tags: [private]
-```
-
-```Go
-type Q struct {
-	X, Y *int32
-	Name string
-}
-```
-
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
+
+### <a id="Example_basic" href="#Example_basic">func Example_basic()</a>
+
+```
+searchKey: gob_test.Example_basic
+tags: [function private]
+```
+
+```Go
+func Example_basic()
+```
+
+This example shows the basic usage of the package: Create an encoder, transmit some values, receive them with a decoder. 
 
 ### <a id="Example_encodeDecode" href="#Example_encodeDecode">func Example_encodeDecode()</a>
 
 ```
 searchKey: gob_test.Example_encodeDecode
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -165,7 +178,7 @@ This example transmits a value that implements the custom encoding and decoding 
 
 ```
 searchKey: gob_test.Example_interface
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -178,7 +191,7 @@ This example shows how to encode an interface value. The key distinction from re
 
 ```
 searchKey: gob_test.interfaceEncode
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -186,17 +199,4 @@ func interfaceEncode(enc *gob.Encoder, p Pythagoras)
 ```
 
 interfaceEncode encodes the interface value into the encoder. 
-
-### <a id="Example_basic" href="#Example_basic">func Example_basic()</a>
-
-```
-searchKey: gob_test.Example_basic
-tags: [private]
-```
-
-```Go
-func Example_basic()
-```
-
-This example shows the basic usage of the package: Create an encoder, transmit some values, receive them with a decoder. 
 

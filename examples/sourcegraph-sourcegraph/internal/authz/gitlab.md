@@ -8,74 +8,75 @@
 * [Types](#type)
     * [type OAuthProvider struct](#OAuthProvider)
         * [func newOAuthProvider(op OAuthProviderOp, cli httpcli.Doer) *OAuthProvider](#newOAuthProvider)
-        * [func (p *OAuthProvider) Validate() (problems []string)](#OAuthProvider.Validate)
-        * [func (p *OAuthProvider) URN() string](#OAuthProvider.URN)
+        * [func (p *OAuthProvider) FetchAccount(context.Context, *types.User, []*extsvc.Account, []string) (mine *extsvc.Account, err error)](#OAuthProvider.FetchAccount)
+        * [func (p *OAuthProvider) FetchRepoPerms(ctx context.Context, repo *extsvc.Repository) ([]extsvc.AccountID, error)](#OAuthProvider.FetchRepoPerms)
+        * [func (p *OAuthProvider) FetchUserPerms(ctx context.Context, account *extsvc.Account) (*authz.ExternalUserPermissions, error)](#OAuthProvider.FetchUserPerms)
         * [func (p *OAuthProvider) ServiceID() string](#OAuthProvider.ServiceID)
         * [func (p *OAuthProvider) ServiceType() string](#OAuthProvider.ServiceType)
-        * [func (p *OAuthProvider) FetchAccount(context.Context, *types.User, []*extsvc.Account, []string) (mine *extsvc.Account, err error)](#OAuthProvider.FetchAccount)
-        * [func (p *OAuthProvider) FetchUserPerms(ctx context.Context, account *extsvc.Account) (*authz.ExternalUserPermissions, error)](#OAuthProvider.FetchUserPerms)
-        * [func (p *OAuthProvider) FetchRepoPerms(ctx context.Context, repo *extsvc.Repository) ([]extsvc.AccountID, error)](#OAuthProvider.FetchRepoPerms)
+        * [func (p *OAuthProvider) URN() string](#OAuthProvider.URN)
+        * [func (p *OAuthProvider) Validate() (problems []string)](#OAuthProvider.Validate)
     * [type OAuthProviderOp struct](#OAuthProviderOp)
     * [type SudoProvider struct](#SudoProvider)
         * [func newSudoProvider(op SudoProviderOp, cli httpcli.Doer) *SudoProvider](#newSudoProvider)
-        * [func (p *SudoProvider) Validate() (problems []string)](#SudoProvider.Validate)
-        * [func (p *SudoProvider) URN() string](#SudoProvider.URN)
+        * [func (p *SudoProvider) FetchAccount(ctx context.Context, user *types.User, current []*extsvc.Account, _ []string) (mine *extsvc.Account, err error)](#SudoProvider.FetchAccount)
+        * [func (p *SudoProvider) FetchRepoPerms(ctx context.Context, repo *extsvc.Repository) ([]extsvc.AccountID, error)](#SudoProvider.FetchRepoPerms)
+        * [func (p *SudoProvider) FetchUserPerms(ctx context.Context, account *extsvc.Account) (*authz.ExternalUserPermissions, error)](#SudoProvider.FetchUserPerms)
         * [func (p *SudoProvider) ServiceID() string](#SudoProvider.ServiceID)
         * [func (p *SudoProvider) ServiceType() string](#SudoProvider.ServiceType)
-        * [func (p *SudoProvider) FetchAccount(ctx context.Context, user *types.User, current []*extsvc.Account, _ []string) (mine *extsvc.Account, err error)](#SudoProvider.FetchAccount)
+        * [func (p *SudoProvider) URN() string](#SudoProvider.URN)
+        * [func (p *SudoProvider) Validate() (problems []string)](#SudoProvider.Validate)
         * [func (p *SudoProvider) fetchAccountByExternalUID(ctx context.Context, uid string) (*gitlab.User, error)](#SudoProvider.fetchAccountByExternalUID)
         * [func (p *SudoProvider) fetchAccountByUsername(ctx context.Context, username string) (*gitlab.User, error)](#SudoProvider.fetchAccountByUsername)
-        * [func (p *SudoProvider) FetchUserPerms(ctx context.Context, account *extsvc.Account) (*authz.ExternalUserPermissions, error)](#SudoProvider.FetchUserPerms)
-        * [func (p *SudoProvider) FetchRepoPerms(ctx context.Context, repo *extsvc.Repository) ([]extsvc.AccountID, error)](#SudoProvider.FetchRepoPerms)
     * [type SudoProviderOp struct](#SudoProviderOp)
+    * [type mockAuthnProvider struct](#mockAuthnProvider)
+        * [func (m mockAuthnProvider) CachedInfo() *providers.Info](#mockAuthnProvider.CachedInfo)
+        * [func (m mockAuthnProvider) Config() schema.AuthProviders](#mockAuthnProvider.Config)
+        * [func (m mockAuthnProvider) ConfigID() providers.ConfigID](#mockAuthnProvider.ConfigID)
+        * [func (m mockAuthnProvider) Refresh(ctx context.Context) error](#mockAuthnProvider.Refresh)
+    * [type mockDoer struct](#mockDoer)
+        * [func (c *mockDoer) Do(r *http.Request) (*http.Response, error)](#mockDoer.Do)
     * [type mockGitLab struct](#mockGitLab)
         * [func newMockGitLab(op mockGitLabOp) mockGitLab](#newMockGitLab)
         * [func (m *mockGitLab) GetProject(c *gitlab.Client, ctx context.Context, op gitlab.GetProjectOp) (*gitlab.Project, error)](#mockGitLab.GetProject)
         * [func (m *mockGitLab) ListProjects(c *gitlab.Client, ctx context.Context, urlStr string) (projs []*gitlab.Project, nextPageURL *string, err error)](#mockGitLab.ListProjects)
         * [func (m *mockGitLab) ListTree(c *gitlab.Client, ctx context.Context, op gitlab.ListTreeOp) ([]*gitlab.Tree, error)](#mockGitLab.ListTree)
-        * [func (m *mockGitLab) isClientAuthenticated(c *gitlab.Client) bool](#mockGitLab.isClientAuthenticated)
-        * [func (m *mockGitLab) getAcctID(c *gitlab.Client) int32](#mockGitLab.getAcctID)
         * [func (m *mockGitLab) ListUsers(c *gitlab.Client, ctx context.Context, urlStr string) (users []*gitlab.User, nextPageURL *string, err error)](#mockGitLab.ListUsers)
+        * [func (m *mockGitLab) getAcctID(c *gitlab.Client) int32](#mockGitLab.getAcctID)
+        * [func (m *mockGitLab) isClientAuthenticated(c *gitlab.Client) bool](#mockGitLab.isClientAuthenticated)
     * [type mockGitLabOp struct](#mockGitLabOp)
-    * [type mockAuthnProvider struct](#mockAuthnProvider)
-        * [func (m mockAuthnProvider) ConfigID() providers.ConfigID](#mockAuthnProvider.ConfigID)
-        * [func (m mockAuthnProvider) Config() schema.AuthProviders](#mockAuthnProvider.Config)
-        * [func (m mockAuthnProvider) CachedInfo() *providers.Info](#mockAuthnProvider.CachedInfo)
-        * [func (m mockAuthnProvider) Refresh(ctx context.Context) error](#mockAuthnProvider.Refresh)
     * [type projSort []*gitlab.Project](#projSort)
         * [func (p projSort) Len() int](#projSort.Len)
         * [func (p projSort) Less(i, j int) bool](#projSort.Less)
         * [func (p projSort) Swap(i, j int)](#projSort.Swap)
-    * [type mockDoer struct](#mockDoer)
-        * [func (c *mockDoer) Do(r *http.Request) (*http.Response, error)](#mockDoer.Do)
 * [Functions](#func)
     * [func NewAuthzProviders(cfg *conf.Unified,...](#NewAuthzProviders)
-    * [func newAuthzProvider(urn string, a *schema.GitLabAuthorization, instanceURL, token string, tokenType gitlab.TokenType, ps []schema.AuthProviders) (authz.Provider, error)](#newAuthzProvider)
-    * [func ValidateAuthz(cfg *schema.GitLabConnection, ps []schema.AuthProviders) error](#ValidateAuthz)
-    * [func listProjects(ctx context.Context, client *gitlab.Client) (*authz.ExternalUserPermissions, error)](#listProjects)
-    * [func listMembers(ctx context.Context, client *gitlab.Client, repoID string) ([]extsvc.AccountID, error)](#listMembers)
-    * [func init()](#init.common_test.go)
-    * [func acct(t *testing.T, userID int32, serviceType, serviceID, accountID, oauthTok string) *extsvc.Account](#acct)
-    * [func mustURL(t *testing.T, u string) *url.URL](#mustURL)
-    * [func getIntOrDefault(str string, def int) (int, error)](#getIntOrDefault)
     * [func TestMain(m *testing.M)](#TestMain)
-    * [func TestOAuthProvider_FetchUserPerms(t *testing.T)](#TestOAuthProvider_FetchUserPerms)
     * [func TestOAuthProvider_FetchRepoPerms(t *testing.T)](#TestOAuthProvider_FetchRepoPerms)
-    * [func Test_GitLab_FetchAccount(t *testing.T)](#Test_GitLab_FetchAccount)
-    * [func TestSudoProvider_FetchUserPerms(t *testing.T)](#TestSudoProvider_FetchUserPerms)
+    * [func TestOAuthProvider_FetchUserPerms(t *testing.T)](#TestOAuthProvider_FetchUserPerms)
     * [func TestSudoProvider_FetchRepoPerms(t *testing.T)](#TestSudoProvider_FetchRepoPerms)
+    * [func TestSudoProvider_FetchUserPerms(t *testing.T)](#TestSudoProvider_FetchUserPerms)
+    * [func Test_GitLab_FetchAccount(t *testing.T)](#Test_GitLab_FetchAccount)
+    * [func ValidateAuthz(cfg *schema.GitLabConnection, ps []schema.AuthProviders) error](#ValidateAuthz)
+    * [func acct(t *testing.T, userID int32, serviceType, serviceID, accountID, oauthTok string) *extsvc.Account](#acct)
+    * [func getIntOrDefault(str string, def int) (int, error)](#getIntOrDefault)
+    * [func init()](#init.common_test.go)
+    * [func listMembers(ctx context.Context, client *gitlab.Client, repoID string) ([]extsvc.AccountID, error)](#listMembers)
+    * [func listProjects(ctx context.Context, client *gitlab.Client) (*authz.ExternalUserPermissions, error)](#listProjects)
+    * [func mustURL(t *testing.T, u string) *url.URL](#mustURL)
+    * [func newAuthzProvider(urn string, a *schema.GitLabAuthorization, instanceURL, token string, tokenType gitlab.TokenType, ps []schema.AuthProviders) (authz.Provider, error)](#newAuthzProvider)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="NewOAuthProvider" href="#NewOAuthProvider">var NewOAuthProvider</a>
 
 ```
 searchKey: gitlab.NewOAuthProvider
+tags: [variable function]
 ```
 
 ```Go
@@ -90,6 +91,7 @@ NewOAuthProvider is a mockable constructor for new OAuthProvider instances.
 
 ```
 searchKey: gitlab.NewSudoProvider
+tags: [variable function]
 ```
 
 ```Go
@@ -103,13 +105,14 @@ NewSudoProvider is a mockable constructor for new SudoProvider instances.
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="OAuthProvider" href="#OAuthProvider">type OAuthProvider struct</a>
 
 ```
 searchKey: gitlab.OAuthProvider
+tags: [struct]
 ```
 
 ```Go
@@ -130,83 +133,29 @@ type OAuthProvider struct {
 
 ```
 searchKey: gitlab.newOAuthProvider
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func newOAuthProvider(op OAuthProviderOp, cli httpcli.Doer) *OAuthProvider
 ```
 
-#### <a id="OAuthProvider.Validate" href="#OAuthProvider.Validate">func (p *OAuthProvider) Validate() (problems []string)</a>
-
-```
-searchKey: gitlab.OAuthProvider.Validate
-```
-
-```Go
-func (p *OAuthProvider) Validate() (problems []string)
-```
-
-#### <a id="OAuthProvider.URN" href="#OAuthProvider.URN">func (p *OAuthProvider) URN() string</a>
-
-```
-searchKey: gitlab.OAuthProvider.URN
-```
-
-```Go
-func (p *OAuthProvider) URN() string
-```
-
-#### <a id="OAuthProvider.ServiceID" href="#OAuthProvider.ServiceID">func (p *OAuthProvider) ServiceID() string</a>
-
-```
-searchKey: gitlab.OAuthProvider.ServiceID
-```
-
-```Go
-func (p *OAuthProvider) ServiceID() string
-```
-
-#### <a id="OAuthProvider.ServiceType" href="#OAuthProvider.ServiceType">func (p *OAuthProvider) ServiceType() string</a>
-
-```
-searchKey: gitlab.OAuthProvider.ServiceType
-```
-
-```Go
-func (p *OAuthProvider) ServiceType() string
-```
-
 #### <a id="OAuthProvider.FetchAccount" href="#OAuthProvider.FetchAccount">func (p *OAuthProvider) FetchAccount(context.Context, *types.User, []*extsvc.Account, []string) (mine *extsvc.Account, err error)</a>
 
 ```
 searchKey: gitlab.OAuthProvider.FetchAccount
+tags: [method]
 ```
 
 ```Go
 func (p *OAuthProvider) FetchAccount(context.Context, *types.User, []*extsvc.Account, []string) (mine *extsvc.Account, err error)
 ```
 
-#### <a id="OAuthProvider.FetchUserPerms" href="#OAuthProvider.FetchUserPerms">func (p *OAuthProvider) FetchUserPerms(ctx context.Context, account *extsvc.Account) (*authz.ExternalUserPermissions, error)</a>
-
-```
-searchKey: gitlab.OAuthProvider.FetchUserPerms
-```
-
-```Go
-func (p *OAuthProvider) FetchUserPerms(ctx context.Context, account *extsvc.Account) (*authz.ExternalUserPermissions, error)
-```
-
-FetchUserPerms returns a list of private project IDs (on code host) that the given account has read access to. The project ID has the same value as it would be used as api.ExternalRepoSpec.ID. The returned list only includes private project IDs. 
-
-This method may return partial but valid results in case of error, and it is up to callers to decide whether to discard. 
-
-API docs: [https://docs.gitlab.com/ee/api/projects.html#list-all-projects](https://docs.gitlab.com/ee/api/projects.html#list-all-projects) 
-
 #### <a id="OAuthProvider.FetchRepoPerms" href="#OAuthProvider.FetchRepoPerms">func (p *OAuthProvider) FetchRepoPerms(ctx context.Context, repo *extsvc.Repository) ([]extsvc.AccountID, error)</a>
 
 ```
 searchKey: gitlab.OAuthProvider.FetchRepoPerms
+tags: [method]
 ```
 
 ```Go
@@ -219,10 +168,72 @@ This method may return partial but valid results in case of error, and it is up 
 
 API docs: [https://docs.gitlab.com/ee/api/members.html#list-all-members-of-a-group-or-project-including-inherited-members](https://docs.gitlab.com/ee/api/members.html#list-all-members-of-a-group-or-project-including-inherited-members) 
 
+#### <a id="OAuthProvider.FetchUserPerms" href="#OAuthProvider.FetchUserPerms">func (p *OAuthProvider) FetchUserPerms(ctx context.Context, account *extsvc.Account) (*authz.ExternalUserPermissions, error)</a>
+
+```
+searchKey: gitlab.OAuthProvider.FetchUserPerms
+tags: [method]
+```
+
+```Go
+func (p *OAuthProvider) FetchUserPerms(ctx context.Context, account *extsvc.Account) (*authz.ExternalUserPermissions, error)
+```
+
+FetchUserPerms returns a list of private project IDs (on code host) that the given account has read access to. The project ID has the same value as it would be used as api.ExternalRepoSpec.ID. The returned list only includes private project IDs. 
+
+This method may return partial but valid results in case of error, and it is up to callers to decide whether to discard. 
+
+API docs: [https://docs.gitlab.com/ee/api/projects.html#list-all-projects](https://docs.gitlab.com/ee/api/projects.html#list-all-projects) 
+
+#### <a id="OAuthProvider.ServiceID" href="#OAuthProvider.ServiceID">func (p *OAuthProvider) ServiceID() string</a>
+
+```
+searchKey: gitlab.OAuthProvider.ServiceID
+tags: [function]
+```
+
+```Go
+func (p *OAuthProvider) ServiceID() string
+```
+
+#### <a id="OAuthProvider.ServiceType" href="#OAuthProvider.ServiceType">func (p *OAuthProvider) ServiceType() string</a>
+
+```
+searchKey: gitlab.OAuthProvider.ServiceType
+tags: [function]
+```
+
+```Go
+func (p *OAuthProvider) ServiceType() string
+```
+
+#### <a id="OAuthProvider.URN" href="#OAuthProvider.URN">func (p *OAuthProvider) URN() string</a>
+
+```
+searchKey: gitlab.OAuthProvider.URN
+tags: [function]
+```
+
+```Go
+func (p *OAuthProvider) URN() string
+```
+
+#### <a id="OAuthProvider.Validate" href="#OAuthProvider.Validate">func (p *OAuthProvider) Validate() (problems []string)</a>
+
+```
+searchKey: gitlab.OAuthProvider.Validate
+tags: [function]
+```
+
+```Go
+func (p *OAuthProvider) Validate() (problems []string)
+```
+
 ### <a id="OAuthProviderOp" href="#OAuthProviderOp">type OAuthProviderOp struct</a>
 
 ```
 searchKey: gitlab.OAuthProviderOp
+tags: [struct]
 ```
 
 ```Go
@@ -247,6 +258,7 @@ type OAuthProviderOp struct {
 
 ```
 searchKey: gitlab.SudoProvider
+tags: [struct]
 ```
 
 ```Go
@@ -271,57 +283,18 @@ SudoProvider is an implementation of AuthzProvider that provides repository perm
 
 ```
 searchKey: gitlab.newSudoProvider
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func newSudoProvider(op SudoProviderOp, cli httpcli.Doer) *SudoProvider
 ```
 
-#### <a id="SudoProvider.Validate" href="#SudoProvider.Validate">func (p *SudoProvider) Validate() (problems []string)</a>
-
-```
-searchKey: gitlab.SudoProvider.Validate
-```
-
-```Go
-func (p *SudoProvider) Validate() (problems []string)
-```
-
-#### <a id="SudoProvider.URN" href="#SudoProvider.URN">func (p *SudoProvider) URN() string</a>
-
-```
-searchKey: gitlab.SudoProvider.URN
-```
-
-```Go
-func (p *SudoProvider) URN() string
-```
-
-#### <a id="SudoProvider.ServiceID" href="#SudoProvider.ServiceID">func (p *SudoProvider) ServiceID() string</a>
-
-```
-searchKey: gitlab.SudoProvider.ServiceID
-```
-
-```Go
-func (p *SudoProvider) ServiceID() string
-```
-
-#### <a id="SudoProvider.ServiceType" href="#SudoProvider.ServiceType">func (p *SudoProvider) ServiceType() string</a>
-
-```
-searchKey: gitlab.SudoProvider.ServiceType
-```
-
-```Go
-func (p *SudoProvider) ServiceType() string
-```
-
 #### <a id="SudoProvider.FetchAccount" href="#SudoProvider.FetchAccount">func (p *SudoProvider) FetchAccount(ctx context.Context, user *types.User, current []*extsvc.Account, _ []string) (mine *extsvc.Account, err error)</a>
 
 ```
 searchKey: gitlab.SudoProvider.FetchAccount
+tags: [method]
 ```
 
 ```Go
@@ -330,48 +303,11 @@ func (p *SudoProvider) FetchAccount(ctx context.Context, user *types.User, curre
 
 FetchAccount satisfies the authz.Provider interface. It iterates through the current list of linked external accounts, find the one (if it exists) that matches the authn provider specified in the SudoProvider struct, and fetches the user account from the GitLab API using that identity. 
 
-#### <a id="SudoProvider.fetchAccountByExternalUID" href="#SudoProvider.fetchAccountByExternalUID">func (p *SudoProvider) fetchAccountByExternalUID(ctx context.Context, uid string) (*gitlab.User, error)</a>
-
-```
-searchKey: gitlab.SudoProvider.fetchAccountByExternalUID
-tags: [private]
-```
-
-```Go
-func (p *SudoProvider) fetchAccountByExternalUID(ctx context.Context, uid string) (*gitlab.User, error)
-```
-
-#### <a id="SudoProvider.fetchAccountByUsername" href="#SudoProvider.fetchAccountByUsername">func (p *SudoProvider) fetchAccountByUsername(ctx context.Context, username string) (*gitlab.User, error)</a>
-
-```
-searchKey: gitlab.SudoProvider.fetchAccountByUsername
-tags: [private]
-```
-
-```Go
-func (p *SudoProvider) fetchAccountByUsername(ctx context.Context, username string) (*gitlab.User, error)
-```
-
-#### <a id="SudoProvider.FetchUserPerms" href="#SudoProvider.FetchUserPerms">func (p *SudoProvider) FetchUserPerms(ctx context.Context, account *extsvc.Account) (*authz.ExternalUserPermissions, error)</a>
-
-```
-searchKey: gitlab.SudoProvider.FetchUserPerms
-```
-
-```Go
-func (p *SudoProvider) FetchUserPerms(ctx context.Context, account *extsvc.Account) (*authz.ExternalUserPermissions, error)
-```
-
-FetchUserPerms returns a list of project IDs (on code host) that the given account has read access on the code host. The project ID has the same value as it would be used as api.ExternalRepoSpec.ID. The returned list only includes private project IDs. 
-
-This method may return partial but valid results in case of error, and it is up to callers to decide whether to discard. 
-
-API docs: [https://docs.gitlab.com/ee/api/projects.html#list-all-projects](https://docs.gitlab.com/ee/api/projects.html#list-all-projects) 
-
 #### <a id="SudoProvider.FetchRepoPerms" href="#SudoProvider.FetchRepoPerms">func (p *SudoProvider) FetchRepoPerms(ctx context.Context, repo *extsvc.Repository) ([]extsvc.AccountID, error)</a>
 
 ```
 searchKey: gitlab.SudoProvider.FetchRepoPerms
+tags: [method]
 ```
 
 ```Go
@@ -384,10 +320,94 @@ This method may return partial but valid results in case of error, and it is up 
 
 API docs: [https://docs.gitlab.com/ee/api/members.html#list-all-members-of-a-group-or-project-including-inherited-members](https://docs.gitlab.com/ee/api/members.html#list-all-members-of-a-group-or-project-including-inherited-members) 
 
+#### <a id="SudoProvider.FetchUserPerms" href="#SudoProvider.FetchUserPerms">func (p *SudoProvider) FetchUserPerms(ctx context.Context, account *extsvc.Account) (*authz.ExternalUserPermissions, error)</a>
+
+```
+searchKey: gitlab.SudoProvider.FetchUserPerms
+tags: [method]
+```
+
+```Go
+func (p *SudoProvider) FetchUserPerms(ctx context.Context, account *extsvc.Account) (*authz.ExternalUserPermissions, error)
+```
+
+FetchUserPerms returns a list of project IDs (on code host) that the given account has read access on the code host. The project ID has the same value as it would be used as api.ExternalRepoSpec.ID. The returned list only includes private project IDs. 
+
+This method may return partial but valid results in case of error, and it is up to callers to decide whether to discard. 
+
+API docs: [https://docs.gitlab.com/ee/api/projects.html#list-all-projects](https://docs.gitlab.com/ee/api/projects.html#list-all-projects) 
+
+#### <a id="SudoProvider.ServiceID" href="#SudoProvider.ServiceID">func (p *SudoProvider) ServiceID() string</a>
+
+```
+searchKey: gitlab.SudoProvider.ServiceID
+tags: [function]
+```
+
+```Go
+func (p *SudoProvider) ServiceID() string
+```
+
+#### <a id="SudoProvider.ServiceType" href="#SudoProvider.ServiceType">func (p *SudoProvider) ServiceType() string</a>
+
+```
+searchKey: gitlab.SudoProvider.ServiceType
+tags: [function]
+```
+
+```Go
+func (p *SudoProvider) ServiceType() string
+```
+
+#### <a id="SudoProvider.URN" href="#SudoProvider.URN">func (p *SudoProvider) URN() string</a>
+
+```
+searchKey: gitlab.SudoProvider.URN
+tags: [function]
+```
+
+```Go
+func (p *SudoProvider) URN() string
+```
+
+#### <a id="SudoProvider.Validate" href="#SudoProvider.Validate">func (p *SudoProvider) Validate() (problems []string)</a>
+
+```
+searchKey: gitlab.SudoProvider.Validate
+tags: [function]
+```
+
+```Go
+func (p *SudoProvider) Validate() (problems []string)
+```
+
+#### <a id="SudoProvider.fetchAccountByExternalUID" href="#SudoProvider.fetchAccountByExternalUID">func (p *SudoProvider) fetchAccountByExternalUID(ctx context.Context, uid string) (*gitlab.User, error)</a>
+
+```
+searchKey: gitlab.SudoProvider.fetchAccountByExternalUID
+tags: [method private]
+```
+
+```Go
+func (p *SudoProvider) fetchAccountByExternalUID(ctx context.Context, uid string) (*gitlab.User, error)
+```
+
+#### <a id="SudoProvider.fetchAccountByUsername" href="#SudoProvider.fetchAccountByUsername">func (p *SudoProvider) fetchAccountByUsername(ctx context.Context, username string) (*gitlab.User, error)</a>
+
+```
+searchKey: gitlab.SudoProvider.fetchAccountByUsername
+tags: [method private]
+```
+
+```Go
+func (p *SudoProvider) fetchAccountByUsername(ctx context.Context, username string) (*gitlab.User, error)
+```
+
 ### <a id="SudoProviderOp" href="#SudoProviderOp">type SudoProviderOp struct</a>
 
 ```
 searchKey: gitlab.SudoProviderOp
+tags: [struct]
 ```
 
 ```Go
@@ -418,11 +438,93 @@ type SudoProviderOp struct {
 }
 ```
 
+### <a id="mockAuthnProvider" href="#mockAuthnProvider">type mockAuthnProvider struct</a>
+
+```
+searchKey: gitlab.mockAuthnProvider
+tags: [struct private]
+```
+
+```Go
+type mockAuthnProvider struct {
+	configID  providers.ConfigID
+	serviceID string
+}
+```
+
+#### <a id="mockAuthnProvider.CachedInfo" href="#mockAuthnProvider.CachedInfo">func (m mockAuthnProvider) CachedInfo() *providers.Info</a>
+
+```
+searchKey: gitlab.mockAuthnProvider.CachedInfo
+tags: [function private]
+```
+
+```Go
+func (m mockAuthnProvider) CachedInfo() *providers.Info
+```
+
+#### <a id="mockAuthnProvider.Config" href="#mockAuthnProvider.Config">func (m mockAuthnProvider) Config() schema.AuthProviders</a>
+
+```
+searchKey: gitlab.mockAuthnProvider.Config
+tags: [function private]
+```
+
+```Go
+func (m mockAuthnProvider) Config() schema.AuthProviders
+```
+
+#### <a id="mockAuthnProvider.ConfigID" href="#mockAuthnProvider.ConfigID">func (m mockAuthnProvider) ConfigID() providers.ConfigID</a>
+
+```
+searchKey: gitlab.mockAuthnProvider.ConfigID
+tags: [function private]
+```
+
+```Go
+func (m mockAuthnProvider) ConfigID() providers.ConfigID
+```
+
+#### <a id="mockAuthnProvider.Refresh" href="#mockAuthnProvider.Refresh">func (m mockAuthnProvider) Refresh(ctx context.Context) error</a>
+
+```
+searchKey: gitlab.mockAuthnProvider.Refresh
+tags: [method private]
+```
+
+```Go
+func (m mockAuthnProvider) Refresh(ctx context.Context) error
+```
+
+### <a id="mockDoer" href="#mockDoer">type mockDoer struct</a>
+
+```
+searchKey: gitlab.mockDoer
+tags: [struct private]
+```
+
+```Go
+type mockDoer struct {
+	do func(*http.Request) (*http.Response, error)
+}
+```
+
+#### <a id="mockDoer.Do" href="#mockDoer.Do">func (c *mockDoer) Do(r *http.Request) (*http.Response, error)</a>
+
+```
+searchKey: gitlab.mockDoer.Do
+tags: [method private]
+```
+
+```Go
+func (c *mockDoer) Do(r *http.Request) (*http.Response, error)
+```
+
 ### <a id="mockGitLab" href="#mockGitLab">type mockGitLab struct</a>
 
 ```
 searchKey: gitlab.mockGitLab
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -470,7 +572,7 @@ We prefer to do it this way, instead of defining an interface for the GitLab cli
 
 ```
 searchKey: gitlab.newMockGitLab
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -483,7 +585,7 @@ newMockGitLab returns a new mockGitLab instance
 
 ```
 searchKey: gitlab.mockGitLab.GetProject
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -494,7 +596,7 @@ func (m *mockGitLab) GetProject(c *gitlab.Client, ctx context.Context, op gitlab
 
 ```
 searchKey: gitlab.mockGitLab.ListProjects
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -505,18 +607,40 @@ func (m *mockGitLab) ListProjects(c *gitlab.Client, ctx context.Context, urlStr 
 
 ```
 searchKey: gitlab.mockGitLab.ListTree
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (m *mockGitLab) ListTree(c *gitlab.Client, ctx context.Context, op gitlab.ListTreeOp) ([]*gitlab.Tree, error)
 ```
 
+#### <a id="mockGitLab.ListUsers" href="#mockGitLab.ListUsers">func (m *mockGitLab) ListUsers(c *gitlab.Client, ctx context.Context, urlStr string) (users []*gitlab.User, nextPageURL *string, err error)</a>
+
+```
+searchKey: gitlab.mockGitLab.ListUsers
+tags: [method private]
+```
+
+```Go
+func (m *mockGitLab) ListUsers(c *gitlab.Client, ctx context.Context, urlStr string) (users []*gitlab.User, nextPageURL *string, err error)
+```
+
+#### <a id="mockGitLab.getAcctID" href="#mockGitLab.getAcctID">func (m *mockGitLab) getAcctID(c *gitlab.Client) int32</a>
+
+```
+searchKey: gitlab.mockGitLab.getAcctID
+tags: [method private]
+```
+
+```Go
+func (m *mockGitLab) getAcctID(c *gitlab.Client) int32
+```
+
 #### <a id="mockGitLab.isClientAuthenticated" href="#mockGitLab.isClientAuthenticated">func (m *mockGitLab) isClientAuthenticated(c *gitlab.Client) bool</a>
 
 ```
 searchKey: gitlab.mockGitLab.isClientAuthenticated
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -525,33 +649,11 @@ func (m *mockGitLab) isClientAuthenticated(c *gitlab.Client) bool
 
 isClientAuthenticated returns true if the client is authenticated. User is authenticated if OAuth token is non-empty (note: this mock impl doesn't verify validity of the OAuth token) or if the personal access token is non-empty (note: this mock impl requires that the PAT be equivalent to the mock GitLab sudo token). 
 
-#### <a id="mockGitLab.getAcctID" href="#mockGitLab.getAcctID">func (m *mockGitLab) getAcctID(c *gitlab.Client) int32</a>
-
-```
-searchKey: gitlab.mockGitLab.getAcctID
-tags: [private]
-```
-
-```Go
-func (m *mockGitLab) getAcctID(c *gitlab.Client) int32
-```
-
-#### <a id="mockGitLab.ListUsers" href="#mockGitLab.ListUsers">func (m *mockGitLab) ListUsers(c *gitlab.Client, ctx context.Context, urlStr string) (users []*gitlab.User, nextPageURL *string, err error)</a>
-
-```
-searchKey: gitlab.mockGitLab.ListUsers
-tags: [private]
-```
-
-```Go
-func (m *mockGitLab) ListUsers(c *gitlab.Client, ctx context.Context, urlStr string) (users []*gitlab.User, nextPageURL *string, err error)
-```
-
 ### <a id="mockGitLabOp" href="#mockGitLabOp">type mockGitLabOp struct</a>
 
 ```
 searchKey: gitlab.mockGitLabOp
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -581,69 +683,11 @@ type mockGitLabOp struct {
 }
 ```
 
-### <a id="mockAuthnProvider" href="#mockAuthnProvider">type mockAuthnProvider struct</a>
-
-```
-searchKey: gitlab.mockAuthnProvider
-tags: [private]
-```
-
-```Go
-type mockAuthnProvider struct {
-	configID  providers.ConfigID
-	serviceID string
-}
-```
-
-#### <a id="mockAuthnProvider.ConfigID" href="#mockAuthnProvider.ConfigID">func (m mockAuthnProvider) ConfigID() providers.ConfigID</a>
-
-```
-searchKey: gitlab.mockAuthnProvider.ConfigID
-tags: [private]
-```
-
-```Go
-func (m mockAuthnProvider) ConfigID() providers.ConfigID
-```
-
-#### <a id="mockAuthnProvider.Config" href="#mockAuthnProvider.Config">func (m mockAuthnProvider) Config() schema.AuthProviders</a>
-
-```
-searchKey: gitlab.mockAuthnProvider.Config
-tags: [private]
-```
-
-```Go
-func (m mockAuthnProvider) Config() schema.AuthProviders
-```
-
-#### <a id="mockAuthnProvider.CachedInfo" href="#mockAuthnProvider.CachedInfo">func (m mockAuthnProvider) CachedInfo() *providers.Info</a>
-
-```
-searchKey: gitlab.mockAuthnProvider.CachedInfo
-tags: [private]
-```
-
-```Go
-func (m mockAuthnProvider) CachedInfo() *providers.Info
-```
-
-#### <a id="mockAuthnProvider.Refresh" href="#mockAuthnProvider.Refresh">func (m mockAuthnProvider) Refresh(ctx context.Context) error</a>
-
-```
-searchKey: gitlab.mockAuthnProvider.Refresh
-tags: [private]
-```
-
-```Go
-func (m mockAuthnProvider) Refresh(ctx context.Context) error
-```
-
 ### <a id="projSort" href="#projSort">type projSort []*gitlab.Project</a>
 
 ```
 searchKey: gitlab.projSort
-tags: [private]
+tags: [array struct private]
 ```
 
 ```Go
@@ -656,7 +700,7 @@ projSort sorts Projects in order of ID
 
 ```
 searchKey: gitlab.projSort.Len
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -667,7 +711,7 @@ func (p projSort) Len() int
 
 ```
 searchKey: gitlab.projSort.Less
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -678,47 +722,24 @@ func (p projSort) Less(i, j int) bool
 
 ```
 searchKey: gitlab.projSort.Swap
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (p projSort) Swap(i, j int)
 ```
 
-### <a id="mockDoer" href="#mockDoer">type mockDoer struct</a>
-
-```
-searchKey: gitlab.mockDoer
-tags: [private]
-```
-
-```Go
-type mockDoer struct {
-	do func(*http.Request) (*http.Response, error)
-}
-```
-
-#### <a id="mockDoer.Do" href="#mockDoer.Do">func (c *mockDoer) Do(r *http.Request) (*http.Response, error)</a>
-
-```
-searchKey: gitlab.mockDoer.Do
-tags: [private]
-```
-
-```Go
-func (c *mockDoer) Do(r *http.Request) (*http.Response, error)
-```
-
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="NewAuthzProviders" href="#NewAuthzProviders">func NewAuthzProviders(cfg *conf.Unified,...</a>
 
 ```
 searchKey: gitlab.NewAuthzProviders
+tags: [method]
 ```
 
 ```Go
@@ -730,21 +751,77 @@ func NewAuthzProviders(
 
 NewAuthzProviders returns the set of GitLab authz providers derived from the connections. It also returns any validation problems with the config, separating these into "serious problems" and "warnings". "Serious problems" are those that should make Sourcegraph set authz.allowAccessByDefault to false. "Warnings" are all other validation problems. 
 
-### <a id="newAuthzProvider" href="#newAuthzProvider">func newAuthzProvider(urn string, a *schema.GitLabAuthorization, instanceURL, token string, tokenType gitlab.TokenType, ps []schema.AuthProviders) (authz.Provider, error)</a>
+### <a id="TestMain" href="#TestMain">func TestMain(m *testing.M)</a>
 
 ```
-searchKey: gitlab.newAuthzProvider
-tags: [private]
+searchKey: gitlab.TestMain
+tags: [method private test]
 ```
 
 ```Go
-func newAuthzProvider(urn string, a *schema.GitLabAuthorization, instanceURL, token string, tokenType gitlab.TokenType, ps []schema.AuthProviders) (authz.Provider, error)
+func TestMain(m *testing.M)
+```
+
+### <a id="TestOAuthProvider_FetchRepoPerms" href="#TestOAuthProvider_FetchRepoPerms">func TestOAuthProvider_FetchRepoPerms(t *testing.T)</a>
+
+```
+searchKey: gitlab.TestOAuthProvider_FetchRepoPerms
+tags: [method private test]
+```
+
+```Go
+func TestOAuthProvider_FetchRepoPerms(t *testing.T)
+```
+
+### <a id="TestOAuthProvider_FetchUserPerms" href="#TestOAuthProvider_FetchUserPerms">func TestOAuthProvider_FetchUserPerms(t *testing.T)</a>
+
+```
+searchKey: gitlab.TestOAuthProvider_FetchUserPerms
+tags: [method private test]
+```
+
+```Go
+func TestOAuthProvider_FetchUserPerms(t *testing.T)
+```
+
+### <a id="TestSudoProvider_FetchRepoPerms" href="#TestSudoProvider_FetchRepoPerms">func TestSudoProvider_FetchRepoPerms(t *testing.T)</a>
+
+```
+searchKey: gitlab.TestSudoProvider_FetchRepoPerms
+tags: [method private test]
+```
+
+```Go
+func TestSudoProvider_FetchRepoPerms(t *testing.T)
+```
+
+### <a id="TestSudoProvider_FetchUserPerms" href="#TestSudoProvider_FetchUserPerms">func TestSudoProvider_FetchUserPerms(t *testing.T)</a>
+
+```
+searchKey: gitlab.TestSudoProvider_FetchUserPerms
+tags: [method private test]
+```
+
+```Go
+func TestSudoProvider_FetchUserPerms(t *testing.T)
+```
+
+### <a id="Test_GitLab_FetchAccount" href="#Test_GitLab_FetchAccount">func Test_GitLab_FetchAccount(t *testing.T)</a>
+
+```
+searchKey: gitlab.Test_GitLab_FetchAccount
+tags: [method private test]
+```
+
+```Go
+func Test_GitLab_FetchAccount(t *testing.T)
 ```
 
 ### <a id="ValidateAuthz" href="#ValidateAuthz">func ValidateAuthz(cfg *schema.GitLabConnection, ps []schema.AuthProviders) error</a>
 
 ```
 searchKey: gitlab.ValidateAuthz
+tags: [method]
 ```
 
 ```Go
@@ -753,24 +830,44 @@ func ValidateAuthz(cfg *schema.GitLabConnection, ps []schema.AuthProviders) erro
 
 ValidateAuthz validates the authorization fields of the given GitLab external service config. 
 
-### <a id="listProjects" href="#listProjects">func listProjects(ctx context.Context, client *gitlab.Client) (*authz.ExternalUserPermissions, error)</a>
+### <a id="acct" href="#acct">func acct(t *testing.T, userID int32, serviceType, serviceID, accountID, oauthTok string) *extsvc.Account</a>
 
 ```
-searchKey: gitlab.listProjects
-tags: [private]
+searchKey: gitlab.acct
+tags: [method private]
 ```
 
 ```Go
-func listProjects(ctx context.Context, client *gitlab.Client) (*authz.ExternalUserPermissions, error)
+func acct(t *testing.T, userID int32, serviceType, serviceID, accountID, oauthTok string) *extsvc.Account
 ```
 
-listProjects is a helper function to request for all private projects that are accessible (access level: 20 => Reporter access) by the authenticated or impersonated user in the client. It may return partial but valid results in case of error, and it is up to callers to decide whether to discard. 
+### <a id="getIntOrDefault" href="#getIntOrDefault">func getIntOrDefault(str string, def int) (int, error)</a>
+
+```
+searchKey: gitlab.getIntOrDefault
+tags: [method private]
+```
+
+```Go
+func getIntOrDefault(str string, def int) (int, error)
+```
+
+### <a id="init.common_test.go" href="#init.common_test.go">func init()</a>
+
+```
+searchKey: gitlab.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
 
 ### <a id="listMembers" href="#listMembers">func listMembers(ctx context.Context, client *gitlab.Client, repoID string) ([]extsvc.AccountID, error)</a>
 
 ```
 searchKey: gitlab.listMembers
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -779,113 +876,38 @@ func listMembers(ctx context.Context, client *gitlab.Client, repoID string) ([]e
 
 listMembers is a helper function to request for all users who has read access (access level: 20 => Reporter access) to given project on the code host, including both direct access and inherited from the group membership. It may return partial but valid results in case of error, and it is up to callers to decide whether to discard. 
 
-### <a id="init.common_test.go" href="#init.common_test.go">func init()</a>
+### <a id="listProjects" href="#listProjects">func listProjects(ctx context.Context, client *gitlab.Client) (*authz.ExternalUserPermissions, error)</a>
 
 ```
-searchKey: gitlab.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
-### <a id="acct" href="#acct">func acct(t *testing.T, userID int32, serviceType, serviceID, accountID, oauthTok string) *extsvc.Account</a>
-
-```
-searchKey: gitlab.acct
-tags: [private]
+searchKey: gitlab.listProjects
+tags: [method private]
 ```
 
 ```Go
-func acct(t *testing.T, userID int32, serviceType, serviceID, accountID, oauthTok string) *extsvc.Account
+func listProjects(ctx context.Context, client *gitlab.Client) (*authz.ExternalUserPermissions, error)
 ```
+
+listProjects is a helper function to request for all private projects that are accessible (access level: 20 => Reporter access) by the authenticated or impersonated user in the client. It may return partial but valid results in case of error, and it is up to callers to decide whether to discard. 
 
 ### <a id="mustURL" href="#mustURL">func mustURL(t *testing.T, u string) *url.URL</a>
 
 ```
 searchKey: gitlab.mustURL
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func mustURL(t *testing.T, u string) *url.URL
 ```
 
-### <a id="getIntOrDefault" href="#getIntOrDefault">func getIntOrDefault(str string, def int) (int, error)</a>
+### <a id="newAuthzProvider" href="#newAuthzProvider">func newAuthzProvider(urn string, a *schema.GitLabAuthorization, instanceURL, token string, tokenType gitlab.TokenType, ps []schema.AuthProviders) (authz.Provider, error)</a>
 
 ```
-searchKey: gitlab.getIntOrDefault
-tags: [private]
-```
-
-```Go
-func getIntOrDefault(str string, def int) (int, error)
-```
-
-### <a id="TestMain" href="#TestMain">func TestMain(m *testing.M)</a>
-
-```
-searchKey: gitlab.TestMain
-tags: [private]
+searchKey: gitlab.newAuthzProvider
+tags: [method private]
 ```
 
 ```Go
-func TestMain(m *testing.M)
-```
-
-### <a id="TestOAuthProvider_FetchUserPerms" href="#TestOAuthProvider_FetchUserPerms">func TestOAuthProvider_FetchUserPerms(t *testing.T)</a>
-
-```
-searchKey: gitlab.TestOAuthProvider_FetchUserPerms
-tags: [private]
-```
-
-```Go
-func TestOAuthProvider_FetchUserPerms(t *testing.T)
-```
-
-### <a id="TestOAuthProvider_FetchRepoPerms" href="#TestOAuthProvider_FetchRepoPerms">func TestOAuthProvider_FetchRepoPerms(t *testing.T)</a>
-
-```
-searchKey: gitlab.TestOAuthProvider_FetchRepoPerms
-tags: [private]
-```
-
-```Go
-func TestOAuthProvider_FetchRepoPerms(t *testing.T)
-```
-
-### <a id="Test_GitLab_FetchAccount" href="#Test_GitLab_FetchAccount">func Test_GitLab_FetchAccount(t *testing.T)</a>
-
-```
-searchKey: gitlab.Test_GitLab_FetchAccount
-tags: [private]
-```
-
-```Go
-func Test_GitLab_FetchAccount(t *testing.T)
-```
-
-### <a id="TestSudoProvider_FetchUserPerms" href="#TestSudoProvider_FetchUserPerms">func TestSudoProvider_FetchUserPerms(t *testing.T)</a>
-
-```
-searchKey: gitlab.TestSudoProvider_FetchUserPerms
-tags: [private]
-```
-
-```Go
-func TestSudoProvider_FetchUserPerms(t *testing.T)
-```
-
-### <a id="TestSudoProvider_FetchRepoPerms" href="#TestSudoProvider_FetchRepoPerms">func TestSudoProvider_FetchRepoPerms(t *testing.T)</a>
-
-```
-searchKey: gitlab.TestSudoProvider_FetchRepoPerms
-tags: [private]
-```
-
-```Go
-func TestSudoProvider_FetchRepoPerms(t *testing.T)
+func newAuthzProvider(urn string, a *schema.GitLabAuthorization, instanceURL, token string, tokenType gitlab.TokenType, ps []schema.AuthProviders) (authz.Provider, error)
 ```
 

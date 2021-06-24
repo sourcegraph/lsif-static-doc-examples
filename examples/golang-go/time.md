@@ -37,371 +37,633 @@ For debugging, the result of t.String does include the monotonic clock reading i
 * Subpages
   * [time/tzdata](time/tzdata.md)
 * [Constants](#const)
-    * [const Layout](#Layout)
     * [const ANSIC](#ANSIC)
-    * [const UnixDate](#UnixDate)
-    * [const RubyDate](#RubyDate)
-    * [const RFC822](#RFC822)
-    * [const RFC822Z](#RFC822Z)
-    * [const RFC850](#RFC850)
+    * [const April](#April)
+    * [const August](#August)
+    * [const December](#December)
+    * [const February](#February)
+    * [const Friday](#Friday)
+    * [const Hour](#Hour)
+    * [const January](#January)
+    * [const July](#July)
+    * [const June](#June)
+    * [const Kitchen](#Kitchen)
+    * [const Layout](#Layout)
+    * [const March](#March)
+    * [const May](#May)
+    * [const Microsecond](#Microsecond)
+    * [const Millisecond](#Millisecond)
+    * [const Minute](#Minute)
+    * [const Monday](#Monday)
+    * [const Nanosecond](#Nanosecond)
+    * [const November](#November)
+    * [const October](#October)
     * [const RFC1123](#RFC1123)
     * [const RFC1123Z](#RFC1123Z)
     * [const RFC3339](#RFC3339)
     * [const RFC3339Nano](#RFC3339Nano)
-    * [const Kitchen](#Kitchen)
+    * [const RFC822](#RFC822)
+    * [const RFC822Z](#RFC822Z)
+    * [const RFC850](#RFC850)
+    * [const RubyDate](#RubyDate)
+    * [const RuleDOY](#RuleDOY)
+    * [const RuleJulian](#RuleJulian)
+    * [const RuleMonthWeekDay](#RuleMonthWeekDay)
+    * [const Saturday](#Saturday)
+    * [const Second](#Second)
+    * [const September](#September)
     * [const Stamp](#Stamp)
-    * [const StampMilli](#StampMilli)
     * [const StampMicro](#StampMicro)
+    * [const StampMilli](#StampMilli)
     * [const StampNano](#StampNano)
-    * [const stdLongMonth](#stdLongMonth)
-    * [const stdMonth](#stdMonth)
-    * [const stdNumMonth](#stdNumMonth)
-    * [const stdZeroMonth](#stdZeroMonth)
-    * [const stdLongWeekDay](#stdLongWeekDay)
-    * [const stdWeekDay](#stdWeekDay)
-    * [const stdDay](#stdDay)
-    * [const stdUnderDay](#stdUnderDay)
-    * [const stdZeroDay](#stdZeroDay)
-    * [const stdUnderYearDay](#stdUnderYearDay)
-    * [const stdZeroYearDay](#stdZeroYearDay)
-    * [const stdHour](#stdHour)
-    * [const stdHour12](#stdHour12)
-    * [const stdZeroHour12](#stdZeroHour12)
-    * [const stdMinute](#stdMinute)
-    * [const stdZeroMinute](#stdZeroMinute)
-    * [const stdSecond](#stdSecond)
-    * [const stdZeroSecond](#stdZeroSecond)
-    * [const stdLongYear](#stdLongYear)
-    * [const stdYear](#stdYear)
-    * [const stdPM](#stdPM)
-    * [const stdpm](#stdpm)
-    * [const stdTZ](#stdTZ)
-    * [const stdISO8601TZ](#stdISO8601TZ)
-    * [const stdISO8601SecondsTZ](#stdISO8601SecondsTZ)
-    * [const stdISO8601ShortTZ](#stdISO8601ShortTZ)
-    * [const stdISO8601ColonTZ](#stdISO8601ColonTZ)
-    * [const stdISO8601ColonSecondsTZ](#stdISO8601ColonSecondsTZ)
-    * [const stdNumTZ](#stdNumTZ)
-    * [const stdNumSecondsTz](#stdNumSecondsTz)
-    * [const stdNumShortTZ](#stdNumShortTZ)
-    * [const stdNumColonTZ](#stdNumColonTZ)
-    * [const stdNumColonSecondsTZ](#stdNumColonSecondsTZ)
-    * [const stdFracSecond0](#stdFracSecond0)
-    * [const stdFracSecond9](#stdFracSecond9)
-    * [const stdNeedDate](#stdNeedDate)
-    * [const stdNeedClock](#stdNeedClock)
-    * [const stdArgShift](#stdArgShift)
-    * [const stdMask](#stdMask)
-    * [const runeSelf](#runeSelf)
-    * [const lowerhex](#lowerhex)
+    * [const Sunday](#Sunday)
+    * [const Thursday](#Thursday)
+    * [const Tuesday](#Tuesday)
+    * [const UnixDate](#UnixDate)
+    * [const UnixToInternal](#UnixToInternal)
+    * [const Wednesday](#Wednesday)
+    * [const absoluteToInternal](#absoluteToInternal)
+    * [const absoluteZeroYear](#absoluteZeroYear)
+    * [const alpha](#alpha)
+    * [const daysPer100Years](#daysPer100Years)
+    * [const daysPer400Years](#daysPer400Years)
+    * [const daysPer4Years](#daysPer4Years)
     * [const hasMonotonic](#hasMonotonic)
+    * [const internalToAbsolute](#internalToAbsolute)
+    * [const internalToUnix](#internalToUnix)
+    * [const internalToWall](#internalToWall)
+    * [const internalYear](#internalYear)
+    * [const lowerhex](#lowerhex)
+    * [const maxDuration](#maxDuration)
+    * [const maxFileSize](#maxFileSize)
     * [const maxWall](#maxWall)
+    * [const minDuration](#minDuration)
     * [const minWall](#minWall)
     * [const nsecMask](#nsecMask)
     * [const nsecShift](#nsecShift)
-    * [const January](#January)
-    * [const February](#February)
-    * [const March](#March)
-    * [const April](#April)
-    * [const May](#May)
-    * [const June](#June)
-    * [const July](#July)
-    * [const August](#August)
-    * [const September](#September)
-    * [const October](#October)
-    * [const November](#November)
-    * [const December](#December)
-    * [const Sunday](#Sunday)
-    * [const Monday](#Monday)
-    * [const Tuesday](#Tuesday)
-    * [const Wednesday](#Wednesday)
-    * [const Thursday](#Thursday)
-    * [const Friday](#Friday)
-    * [const Saturday](#Saturday)
-    * [const absoluteZeroYear](#absoluteZeroYear)
-    * [const internalYear](#internalYear)
-    * [const absoluteToInternal](#absoluteToInternal)
-    * [const internalToAbsolute](#internalToAbsolute)
-    * [const unixToInternal](#unixToInternal)
-    * [const internalToUnix](#internalToUnix)
-    * [const wallToInternal](#wallToInternal)
-    * [const internalToWall](#internalToWall)
-    * [const minDuration](#minDuration)
-    * [const maxDuration](#maxDuration)
-    * [const Nanosecond](#Nanosecond)
-    * [const Microsecond](#Microsecond)
-    * [const Millisecond](#Millisecond)
-    * [const Second](#Second)
-    * [const Minute](#Minute)
-    * [const Hour](#Hour)
-    * [const secondsPerMinute](#secondsPerMinute)
-    * [const secondsPerHour](#secondsPerHour)
-    * [const secondsPerDay](#secondsPerDay)
-    * [const secondsPerWeek](#secondsPerWeek)
-    * [const daysPer400Years](#daysPer400Years)
-    * [const daysPer100Years](#daysPer100Years)
-    * [const daysPer4Years](#daysPer4Years)
-    * [const timeBinaryVersion](#timeBinaryVersion)
-    * [const alpha](#alpha)
     * [const omega](#omega)
-    * [const ruleJulian](#ruleJulian)
     * [const ruleDOY](#ruleDOY)
+    * [const ruleJulian](#ruleJulian)
     * [const ruleMonthWeekDay](#ruleMonthWeekDay)
-    * [const maxFileSize](#maxFileSize)
-    * [const seekStart](#seekStart)
+    * [const runeSelf](#runeSelf)
+    * [const secondsPerDay](#secondsPerDay)
+    * [const secondsPerHour](#secondsPerHour)
+    * [const secondsPerMinute](#secondsPerMinute)
+    * [const secondsPerWeek](#secondsPerWeek)
     * [const seekCurrent](#seekCurrent)
     * [const seekEnd](#seekEnd)
-    * [const RuleJulian](#RuleJulian)
-    * [const RuleDOY](#RuleDOY)
-    * [const RuleMonthWeekDay](#RuleMonthWeekDay)
-    * [const UnixToInternal](#UnixToInternal)
+    * [const seekStart](#seekStart)
+    * [const stdArgShift](#stdArgShift)
+    * [const stdDay](#stdDay)
+    * [const stdFracSecond0](#stdFracSecond0)
+    * [const stdFracSecond9](#stdFracSecond9)
+    * [const stdHour](#stdHour)
+    * [const stdHour12](#stdHour12)
+    * [const stdISO8601ColonSecondsTZ](#stdISO8601ColonSecondsTZ)
+    * [const stdISO8601ColonTZ](#stdISO8601ColonTZ)
+    * [const stdISO8601SecondsTZ](#stdISO8601SecondsTZ)
+    * [const stdISO8601ShortTZ](#stdISO8601ShortTZ)
+    * [const stdISO8601TZ](#stdISO8601TZ)
+    * [const stdLongMonth](#stdLongMonth)
+    * [const stdLongWeekDay](#stdLongWeekDay)
+    * [const stdLongYear](#stdLongYear)
+    * [const stdMask](#stdMask)
+    * [const stdMinute](#stdMinute)
+    * [const stdMonth](#stdMonth)
+    * [const stdNeedClock](#stdNeedClock)
+    * [const stdNeedDate](#stdNeedDate)
+    * [const stdNumColonSecondsTZ](#stdNumColonSecondsTZ)
+    * [const stdNumColonTZ](#stdNumColonTZ)
+    * [const stdNumMonth](#stdNumMonth)
+    * [const stdNumSecondsTz](#stdNumSecondsTz)
+    * [const stdNumShortTZ](#stdNumShortTZ)
+    * [const stdNumTZ](#stdNumTZ)
+    * [const stdPM](#stdPM)
+    * [const stdSecond](#stdSecond)
+    * [const stdTZ](#stdTZ)
+    * [const stdUnderDay](#stdUnderDay)
+    * [const stdUnderYearDay](#stdUnderYearDay)
+    * [const stdWeekDay](#stdWeekDay)
+    * [const stdYear](#stdYear)
+    * [const stdZeroDay](#stdZeroDay)
+    * [const stdZeroHour12](#stdZeroHour12)
+    * [const stdZeroMinute](#stdZeroMinute)
+    * [const stdZeroMonth](#stdZeroMonth)
+    * [const stdZeroSecond](#stdZeroSecond)
+    * [const stdZeroYearDay](#stdZeroYearDay)
+    * [const stdpm](#stdpm)
+    * [const timeBinaryVersion](#timeBinaryVersion)
+    * [const unixToInternal](#unixToInternal)
+    * [const wallToInternal](#wallToInternal)
 * [Variables](#var)
-    * [var std0x](#std0x)
-    * [var longDayNames](#longDayNames)
-    * [var shortDayNames](#shortDayNames)
-    * [var shortMonthNames](#shortMonthNames)
-    * [var longMonthNames](#longMonthNames)
-    * [var atoiError](#atoiError)
-    * [var errBad](#errBad)
-    * [var errLeadingInt](#errLeadingInt)
-    * [var unitMap](#unitMap)
-    * [var daysBefore](#daysBefore)
-    * [var startNano](#startNano)
-    * [var UTC](#UTC)
-    * [var utcLoc](#utcLoc)
-    * [var Local](#Local)
-    * [var localLoc](#localLoc)
-    * [var localOnce](#localOnce)
-    * [var errLocation](#errLocation)
-    * [var zoneinfo](#zoneinfo)
-    * [var zoneinfoOnce](#zoneinfoOnce)
-    * [var loadFromEmbeddedTZData](#loadFromEmbeddedTZData)
-    * [var badData](#badData)
-    * [var loadTzinfoFromTzdata](#loadTzinfoFromTzdata)
-    * [var zoneSources](#zoneSources)
-    * [var ForceZipFileForTesting](#ForceZipFileForTesting)
-    * [var ParseTimeZone](#ParseTimeZone)
-    * [var SetMono](#SetMono)
-    * [var GetMono](#GetMono)
+    * [var DaysIn](#DaysIn)
     * [var ErrLocation](#ErrLocation)
-    * [var ReadFile](#ReadFile)
+    * [var ForceZipFileForTesting](#ForceZipFileForTesting)
+    * [var GetMono](#GetMono)
+    * [var Interrupt](#Interrupt)
     * [var LoadTzinfo](#LoadTzinfo)
+    * [var Local](#Local)
+    * [var MaxMonoTime](#MaxMonoTime)
+    * [var MinMonoTime](#MinMonoTime)
     * [var NextStdChunk](#NextStdChunk)
+    * [var NotMonoNegativeTime](#NotMonoNegativeTime)
+    * [var OrigZoneSources](#OrigZoneSources)
+    * [var ParseTimeZone](#ParseTimeZone)
+    * [var Quote](#Quote)
+    * [var ReadFile](#ReadFile)
+    * [var SetMono](#SetMono)
+    * [var StdChunkNames](#StdChunkNames)
     * [var Tzset](#Tzset)
     * [var TzsetName](#TzsetName)
     * [var TzsetOffset](#TzsetOffset)
-    * [var StdChunkNames](#StdChunkNames)
-    * [var Quote](#Quote)
-    * [var OrigZoneSources](#OrigZoneSources)
-    * [var Interrupt](#Interrupt)
-    * [var DaysIn](#DaysIn)
-    * [var MinMonoTime](#MinMonoTime)
-    * [var MaxMonoTime](#MaxMonoTime)
-    * [var NotMonoNegativeTime](#NotMonoNegativeTime)
+    * [var UTC](#UTC)
+    * [var atoiError](#atoiError)
+    * [var badData](#badData)
+    * [var daysBefore](#daysBefore)
+    * [var errBad](#errBad)
+    * [var errLeadingInt](#errLeadingInt)
+    * [var errLocation](#errLocation)
+    * [var loadFromEmbeddedTZData](#loadFromEmbeddedTZData)
+    * [var loadTzinfoFromTzdata](#loadTzinfoFromTzdata)
+    * [var localLoc](#localLoc)
+    * [var localOnce](#localOnce)
+    * [var longDayNames](#longDayNames)
+    * [var longMonthNames](#longMonthNames)
+    * [var shortDayNames](#shortDayNames)
+    * [var shortMonthNames](#shortMonthNames)
+    * [var startNano](#startNano)
+    * [var std0x](#std0x)
+    * [var unitMap](#unitMap)
+    * [var utcLoc](#utcLoc)
+    * [var zoneSources](#zoneSources)
+    * [var zoneinfo](#zoneinfo)
+    * [var zoneinfoOnce](#zoneinfoOnce)
 * [Types](#type)
-    * [type ParseError struct](#ParseError)
-        * [func (e *ParseError) Error() string](#ParseError.Error)
-    * [type runtimeTimer struct](#runtimeTimer)
-    * [type Timer struct](#Timer)
-        * [func NewTimer(d Duration) *Timer](#NewTimer)
-        * [func AfterFunc(d Duration, f func()) *Timer](#AfterFunc)
-        * [func (t *Timer) Stop() bool](#Timer.Stop)
-        * [func (t *Timer) Reset(d Duration) bool](#Timer.Reset)
-    * [type Ticker struct](#Ticker)
-        * [func NewTicker(d Duration) *Ticker](#NewTicker)
-        * [func (t *Ticker) Stop()](#Ticker.Stop)
-        * [func (t *Ticker) Reset(d Duration)](#Ticker.Reset)
-    * [type Time struct](#Time)
-        * [func Parse(layout, value string) (Time, error)](#Parse)
-        * [func ParseInLocation(layout, value string, loc *Location) (Time, error)](#ParseInLocation)
-        * [func parse(layout, value string, defaultLocation, local *Location) (Time, error)](#parse)
-        * [func Now() Time](#Now)
-        * [func unixTime(sec int64, nsec int32) Time](#unixTime)
-        * [func Unix(sec int64, nsec int64) Time](#Unix)
-        * [func UnixMilli(msec int64) Time](#UnixMilli)
-        * [func UnixMicro(usec int64) Time](#UnixMicro)
-        * [func Date(year int, month Month, day, hour, min, sec, nsec int, loc *Location) Time](#Date)
-        * [func (t Time) String() string](#Time.String)
-        * [func (t Time) GoString() string](#Time.GoString)
-        * [func (t Time) Format(layout string) string](#Time.Format)
-        * [func (t Time) AppendFormat(b []byte, layout string) []byte](#Time.AppendFormat)
-        * [func (t *Time) nsec() int32](#Time.nsec)
-        * [func (t *Time) sec() int64](#Time.sec)
-        * [func (t *Time) unixSec() int64](#Time.unixSec)
-        * [func (t *Time) addSec(d int64)](#Time.addSec)
-        * [func (t *Time) setLoc(loc *Location)](#Time.setLoc)
-        * [func (t *Time) stripMono()](#Time.stripMono)
-        * [func (t *Time) setMono(m int64)](#Time.setMono)
-        * [func (t *Time) mono() int64](#Time.mono)
-        * [func (t Time) After(u Time) bool](#Time.After)
-        * [func (t Time) Before(u Time) bool](#Time.Before)
-        * [func (t Time) Equal(u Time) bool](#Time.Equal)
-        * [func (t Time) IsZero() bool](#Time.IsZero)
-        * [func (t Time) abs() uint64](#Time.abs)
-        * [func (t Time) locabs() (name string, offset int, abs uint64)](#Time.locabs)
-        * [func (t Time) Date() (year int, month Month, day int)](#Time.Date)
-        * [func (t Time) Year() int](#Time.Year)
-        * [func (t Time) Month() Month](#Time.Month)
-        * [func (t Time) Day() int](#Time.Day)
-        * [func (t Time) Weekday() Weekday](#Time.Weekday)
-        * [func (t Time) ISOWeek() (year, week int)](#Time.ISOWeek)
-        * [func (t Time) Clock() (hour, min, sec int)](#Time.Clock)
-        * [func (t Time) Hour() int](#Time.Hour)
-        * [func (t Time) Minute() int](#Time.Minute)
-        * [func (t Time) Second() int](#Time.Second)
-        * [func (t Time) Nanosecond() int](#Time.Nanosecond)
-        * [func (t Time) YearDay() int](#Time.YearDay)
-        * [func (t Time) Add(d Duration) Time](#Time.Add)
-        * [func (t Time) Sub(u Time) Duration](#Time.Sub)
-        * [func (t Time) AddDate(years int, months int, days int) Time](#Time.AddDate)
-        * [func (t Time) date(full bool) (year int, month Month, day int, yday int)](#Time.date)
-        * [func (t Time) UTC() Time](#Time.UTC)
-        * [func (t Time) Local() Time](#Time.Local)
-        * [func (t Time) In(loc *Location) Time](#Time.In)
-        * [func (t Time) Location() *Location](#Time.Location)
-        * [func (t Time) Zone() (name string, offset int)](#Time.Zone)
-        * [func (t Time) Unix() int64](#Time.Unix)
-        * [func (t Time) UnixMilli() int64](#Time.UnixMilli)
-        * [func (t Time) UnixMicro() int64](#Time.UnixMicro)
-        * [func (t Time) UnixNano() int64](#Time.UnixNano)
-        * [func (t Time) MarshalBinary() ([]byte, error)](#Time.MarshalBinary)
-        * [func (t *Time) UnmarshalBinary(data []byte) error](#Time.UnmarshalBinary)
-        * [func (t Time) GobEncode() ([]byte, error)](#Time.GobEncode)
-        * [func (t *Time) GobDecode(data []byte) error](#Time.GobDecode)
-        * [func (t Time) MarshalJSON() ([]byte, error)](#Time.MarshalJSON)
-        * [func (t *Time) UnmarshalJSON(data []byte) error](#Time.UnmarshalJSON)
-        * [func (t Time) MarshalText() ([]byte, error)](#Time.MarshalText)
-        * [func (t *Time) UnmarshalText(data []byte) error](#Time.UnmarshalText)
-        * [func (t Time) IsDST() bool](#Time.IsDST)
-        * [func (t Time) Truncate(d Duration) Time](#Time.Truncate)
-        * [func (t Time) Round(d Duration) Time](#Time.Round)
-    * [type Month int](#Month)
-        * [func absDate(abs uint64, full bool) (year int, month Month, day int, yday int)](#absDate)
-        * [func (m Month) String() string](#Month.String)
-    * [type Weekday int](#Weekday)
-        * [func absWeekday(abs uint64) Weekday](#absWeekday)
-        * [func (d Weekday) String() string](#Weekday.String)
     * [type Duration int64](#Duration)
         * [func ParseDuration(s string) (Duration, error)](#ParseDuration)
         * [func Since(t Time) Duration](#Since)
         * [func Until(t Time) Duration](#Until)
         * [func div(t Time, d Duration) (qmod2 int, r Duration)](#div)
-        * [func (d Duration) String() string](#Duration.String)
-        * [func (d Duration) Nanoseconds() int64](#Duration.Nanoseconds)
+        * [func (d Duration) Hours() float64](#Duration.Hours)
         * [func (d Duration) Microseconds() int64](#Duration.Microseconds)
         * [func (d Duration) Milliseconds() int64](#Duration.Milliseconds)
-        * [func (d Duration) Seconds() float64](#Duration.Seconds)
         * [func (d Duration) Minutes() float64](#Duration.Minutes)
-        * [func (d Duration) Hours() float64](#Duration.Hours)
-        * [func (d Duration) Truncate(m Duration) Duration](#Duration.Truncate)
+        * [func (d Duration) Nanoseconds() int64](#Duration.Nanoseconds)
         * [func (d Duration) Round(m Duration) Duration](#Duration.Round)
+        * [func (d Duration) Seconds() float64](#Duration.Seconds)
+        * [func (d Duration) String() string](#Duration.String)
+        * [func (d Duration) Truncate(m Duration) Duration](#Duration.Truncate)
     * [type Location struct](#Location)
         * [func FixedZone(name string, offset int) *Location](#FixedZone)
         * [func LoadLocation(name string) (*Location, error)](#LoadLocation)
         * [func LoadLocationFromTZData(name string, data []byte) (*Location, error)](#LoadLocationFromTZData)
         * [func loadLocation(name string, sources []string) (z *Location, firstErr error)](#loadLocation)
-        * [func (l *Location) get() *Location](#Location.get)
         * [func (l *Location) String() string](#Location.String)
+        * [func (l *Location) firstZoneUsed() bool](#Location.firstZoneUsed)
+        * [func (l *Location) get() *Location](#Location.get)
         * [func (l *Location) lookup(sec int64) (name string, offset int, start, end int64, isDST bool)](#Location.lookup)
         * [func (l *Location) lookupFirstZone() int](#Location.lookupFirstZone)
-        * [func (l *Location) firstZoneUsed() bool](#Location.firstZoneUsed)
         * [func (l *Location) lookupName(name string, unix int64) (offset int, ok bool)](#Location.lookupName)
-    * [type zone struct](#zone)
-    * [type zoneTrans struct](#zoneTrans)
-    * [type ruleKind int](#ruleKind)
-    * [type rule struct](#rule)
-        * [func tzsetRule(s string) (rule, string, bool)](#tzsetRule)
-    * [type fileSizeError string](#fileSizeError)
-        * [func (f fileSizeError) Error() string](#fileSizeError.Error)
+    * [type Month int](#Month)
+        * [func absDate(abs uint64, full bool) (year int, month Month, day int, yday int)](#absDate)
+        * [func (m Month) String() string](#Month.String)
+    * [type ParseError struct](#ParseError)
+        * [func (e *ParseError) Error() string](#ParseError.Error)
+    * [type Rule struct](#Rule)
+        * [func TzsetRule(s string) (Rule, string, bool)](#TzsetRule)
+    * [type RuleKind int](#RuleKind)
+    * [type Ticker struct](#Ticker)
+        * [func NewTicker(d Duration) *Ticker](#NewTicker)
+        * [func (t *Ticker) Reset(d Duration)](#Ticker.Reset)
+        * [func (t *Ticker) Stop()](#Ticker.Stop)
+    * [type Time struct](#Time)
+        * [func Date(year int, month Month, day, hour, min, sec, nsec int, loc *Location) Time](#Date)
+        * [func Now() Time](#Now)
+        * [func Parse(layout, value string) (Time, error)](#Parse)
+        * [func ParseInLocation(layout, value string, loc *Location) (Time, error)](#ParseInLocation)
+        * [func Unix(sec int64, nsec int64) Time](#Unix)
+        * [func UnixMicro(usec int64) Time](#UnixMicro)
+        * [func UnixMilli(msec int64) Time](#UnixMilli)
+        * [func parse(layout, value string, defaultLocation, local *Location) (Time, error)](#parse)
+        * [func unixTime(sec int64, nsec int32) Time](#unixTime)
+        * [func (t Time) Add(d Duration) Time](#Time.Add)
+        * [func (t Time) AddDate(years int, months int, days int) Time](#Time.AddDate)
+        * [func (t Time) After(u Time) bool](#Time.After)
+        * [func (t Time) AppendFormat(b []byte, layout string) []byte](#Time.AppendFormat)
+        * [func (t Time) Before(u Time) bool](#Time.Before)
+        * [func (t Time) Clock() (hour, min, sec int)](#Time.Clock)
+        * [func (t Time) Date() (year int, month Month, day int)](#Time.Date)
+        * [func (t Time) Day() int](#Time.Day)
+        * [func (t Time) Equal(u Time) bool](#Time.Equal)
+        * [func (t Time) Format(layout string) string](#Time.Format)
+        * [func (t Time) GoString() string](#Time.GoString)
+        * [func (t *Time) GobDecode(data []byte) error](#Time.GobDecode)
+        * [func (t Time) GobEncode() ([]byte, error)](#Time.GobEncode)
+        * [func (t Time) Hour() int](#Time.Hour)
+        * [func (t Time) ISOWeek() (year, week int)](#Time.ISOWeek)
+        * [func (t Time) In(loc *Location) Time](#Time.In)
+        * [func (t Time) IsDST() bool](#Time.IsDST)
+        * [func (t Time) IsZero() bool](#Time.IsZero)
+        * [func (t Time) Local() Time](#Time.Local)
+        * [func (t Time) Location() *Location](#Time.Location)
+        * [func (t Time) MarshalBinary() ([]byte, error)](#Time.MarshalBinary)
+        * [func (t Time) MarshalJSON() ([]byte, error)](#Time.MarshalJSON)
+        * [func (t Time) MarshalText() ([]byte, error)](#Time.MarshalText)
+        * [func (t Time) Minute() int](#Time.Minute)
+        * [func (t Time) Month() Month](#Time.Month)
+        * [func (t Time) Nanosecond() int](#Time.Nanosecond)
+        * [func (t Time) Round(d Duration) Time](#Time.Round)
+        * [func (t Time) Second() int](#Time.Second)
+        * [func (t Time) String() string](#Time.String)
+        * [func (t Time) Sub(u Time) Duration](#Time.Sub)
+        * [func (t Time) Truncate(d Duration) Time](#Time.Truncate)
+        * [func (t Time) UTC() Time](#Time.UTC)
+        * [func (t Time) Unix() int64](#Time.Unix)
+        * [func (t Time) UnixMicro() int64](#Time.UnixMicro)
+        * [func (t Time) UnixMilli() int64](#Time.UnixMilli)
+        * [func (t Time) UnixNano() int64](#Time.UnixNano)
+        * [func (t *Time) UnmarshalBinary(data []byte) error](#Time.UnmarshalBinary)
+        * [func (t *Time) UnmarshalJSON(data []byte) error](#Time.UnmarshalJSON)
+        * [func (t *Time) UnmarshalText(data []byte) error](#Time.UnmarshalText)
+        * [func (t Time) Weekday() Weekday](#Time.Weekday)
+        * [func (t Time) Year() int](#Time.Year)
+        * [func (t Time) YearDay() int](#Time.YearDay)
+        * [func (t Time) Zone() (name string, offset int)](#Time.Zone)
+        * [func (t Time) abs() uint64](#Time.abs)
+        * [func (t *Time) addSec(d int64)](#Time.addSec)
+        * [func (t Time) date(full bool) (year int, month Month, day int, yday int)](#Time.date)
+        * [func (t Time) locabs() (name string, offset int, abs uint64)](#Time.locabs)
+        * [func (t *Time) mono() int64](#Time.mono)
+        * [func (t *Time) nsec() int32](#Time.nsec)
+        * [func (t *Time) sec() int64](#Time.sec)
+        * [func (t *Time) setLoc(loc *Location)](#Time.setLoc)
+        * [func (t *Time) setMono(m int64)](#Time.setMono)
+        * [func (t *Time) stripMono()](#Time.stripMono)
+        * [func (t *Time) unixSec() int64](#Time.unixSec)
+    * [type Timer struct](#Timer)
+        * [func AfterFunc(d Duration, f func()) *Timer](#AfterFunc)
+        * [func NewTimer(d Duration) *Timer](#NewTimer)
+        * [func (t *Timer) Reset(d Duration) bool](#Timer.Reset)
+        * [func (t *Timer) Stop() bool](#Timer.Stop)
+    * [type Weekday int](#Weekday)
+        * [func absWeekday(abs uint64) Weekday](#absWeekday)
+        * [func (d Weekday) String() string](#Weekday.String)
     * [type dataIO struct](#dataIO)
-        * [func (d *dataIO) read(n int) []byte](#dataIO.read)
         * [func (d *dataIO) big4() (n uint32, ok bool)](#dataIO.big4)
         * [func (d *dataIO) big8() (n uint64, ok bool)](#dataIO.big8)
         * [func (d *dataIO) byte() (n byte, ok bool)](#dataIO.byte)
+        * [func (d *dataIO) read(n int) []byte](#dataIO.read)
         * [func (d *dataIO) rest() []byte](#dataIO.rest)
-    * [type RuleKind int](#RuleKind)
-    * [type Rule struct](#Rule)
-        * [func TzsetRule(s string) (Rule, string, bool)](#TzsetRule)
+    * [type fileSizeError string](#fileSizeError)
+        * [func (f fileSizeError) Error() string](#fileSizeError.Error)
+    * [type rule struct](#rule)
+        * [func tzsetRule(s string) (rule, string, bool)](#tzsetRule)
+    * [type ruleKind int](#ruleKind)
+    * [type runtimeTimer struct](#runtimeTimer)
+    * [type zone struct](#zone)
+    * [type zoneTrans struct](#zoneTrans)
 * [Functions](#func)
-    * [func startsWithLowerCase(str string) bool](#startsWithLowerCase)
-    * [func nextStdChunk(layout string) (prefix string, std int, suffix string)](#nextStdChunk)
-    * [func match(s1, s2 string) bool](#match)
-    * [func lookup(tab []string, val string) (int, string, error)](#lookup)
+    * [func After(d Duration) <-chan Time](#After)
+    * [func CheckRuntimeTimerPeriodOverflow()](#CheckRuntimeTimerPeriodOverflow)
+    * [func ForceUSPacificForTesting()](#ForceUSPacificForTesting)
+    * [func LoadFromEmbeddedTZData(zone string) (string, error)](#LoadFromEmbeddedTZData)
+    * [func ResetLocalOnceForTest()](#ResetLocalOnceForTest)
+    * [func ResetZoneinfoForTesting()](#ResetZoneinfoForTesting)
+    * [func Sleep(d Duration)](#Sleep)
+    * [func Tick(d Duration) <-chan Time](#Tick)
+    * [func ZoneinfoForTesting() *string](#ZoneinfoForTesting)
+    * [func absClock(abs uint64) (hour, min, sec int)](#absClock)
     * [func appendInt(b []byte, x int, width int) []byte](#appendInt)
     * [func atoi(s string) (x int, err error)](#atoi)
-    * [func formatNano(b []byte, nanosec uint, n int, trim bool) []byte](#formatNano)
-    * [func quote(s string) string](#quote)
-    * [func isDigit(s string, i int) bool](#isDigit)
-    * [func getnum(s string, fixed bool) (int, string, error)](#getnum)
-    * [func getnum3(s string, fixed bool) (int, string, error)](#getnum3)
-    * [func cutspace(s string) string](#cutspace)
-    * [func skip(value, prefix string) (string, error)](#skip)
-    * [func parseTimeZone(value string) (length int, ok bool)](#parseTimeZone)
-    * [func parseGMT(value string) int](#parseGMT)
-    * [func parseSignedOffset(value string) int](#parseSignedOffset)
-    * [func commaOrPeriod(b byte) bool](#commaOrPeriod)
-    * [func parseNanoseconds(value string, nbytes int) (ns int, rangeErrString string, err error)](#parseNanoseconds)
-    * [func leadingInt(s string) (x int64, rem string, err error)](#leadingInt)
-    * [func leadingFraction(s string) (x int64, scale float64, rem string)](#leadingFraction)
-    * [func Sleep(d Duration)](#Sleep)
-    * [func when(d Duration) int64](#when)
-    * [func startTimer(*runtimeTimer)](#startTimer)
-    * [func stopTimer(*runtimeTimer) bool](#stopTimer)
-    * [func resetTimer(*runtimeTimer, int64) bool](#resetTimer)
-    * [func modTimer(t *runtimeTimer, when, period int64, f func(interface{}, uintptr), arg interface{}, seq uintptr)](#modTimer)
-    * [func sendTime(c interface{}, seq uintptr)](#sendTime)
-    * [func After(d Duration) <-chan Time](#After)
-    * [func goFunc(arg interface{}, seq uintptr)](#goFunc)
-    * [func interrupt()](#interrupt)
-    * [func open(name string) (uintptr, error)](#open)
-    * [func read(fd uintptr, buf []byte) (int, error)](#read)
+    * [func byteString(p []byte) string](#byteString)
     * [func closefd(fd uintptr)](#closefd)
-    * [func preadn(fd uintptr, buf []byte, off int) error](#preadn)
-    * [func Tick(d Duration) <-chan Time](#Tick)
-    * [func absClock(abs uint64) (hour, min, sec int)](#absClock)
-    * [func fmtFrac(buf []byte, v uint64, prec int) (nw int, nv uint64)](#fmtFrac)
-    * [func fmtInt(buf []byte, v uint64) int](#fmtInt)
-    * [func lessThanHalf(x, y Duration) bool](#lessThanHalf)
+    * [func commaOrPeriod(b byte) bool](#commaOrPeriod)
+    * [func containsDotDot(s string) bool](#containsDotDot)
+    * [func cutspace(s string) string](#cutspace)
     * [func daysIn(m Month, year int) int](#daysIn)
     * [func daysSinceEpoch(year int) uint64](#daysSinceEpoch)
-    * [func now() (sec int64, nsec int32, mono int64)](#now)
-    * [func runtimeNano() int64](#runtimeNano)
+    * [func empty(arg interface{}, seq uintptr)](#empty)
+    * [func findZone(zones []zone, name string, offset int, isDST bool) int](#findZone)
+    * [func fmtFrac(buf []byte, v uint64, prec int) (nw int, nv uint64)](#fmtFrac)
+    * [func fmtInt(buf []byte, v uint64) int](#fmtInt)
+    * [func forceZipFileForTesting(zipOnly bool)](#forceZipFileForTesting)
+    * [func formatNano(b []byte, nanosec uint, n int, trim bool) []byte](#formatNano)
+    * [func get2(b []byte) int](#get2)
+    * [func get4(b []byte) int](#get4)
+    * [func getnum(s string, fixed bool) (int, string, error)](#getnum)
+    * [func getnum3(s string, fixed bool) (int, string, error)](#getnum3)
+    * [func goFunc(arg interface{}, seq uintptr)](#goFunc)
+    * [func init()](#init.internal_test.go)
+    * [func initLocal()](#initLocal)
+    * [func initTestingZone()](#initTestingZone)
+    * [func interrupt()](#interrupt)
+    * [func isDigit(s string, i int) bool](#isDigit)
     * [func isLeap(year int) bool](#isLeap)
+    * [func leadingFraction(s string) (x int64, scale float64, rem string)](#leadingFraction)
+    * [func leadingInt(s string) (x int64, rem string, err error)](#leadingInt)
+    * [func lessThanHalf(x, y Duration) bool](#lessThanHalf)
+    * [func loadTzinfo(name string, source string) ([]byte, error)](#loadTzinfo)
+    * [func loadTzinfoFromDirOrZip(dir, name string) ([]byte, error)](#loadTzinfoFromDirOrZip)
+    * [func loadTzinfoFromZip(zipfile, name string) ([]byte, error)](#loadTzinfoFromZip)
+    * [func lookup(tab []string, val string) (int, string, error)](#lookup)
+    * [func match(s1, s2 string) bool](#match)
+    * [func modTimer(t *runtimeTimer, when, period int64, f func(interface{}, uintptr), arg interface{}, seq uintptr)](#modTimer)
+    * [func nextStdChunk(layout string) (prefix string, std int, suffix string)](#nextStdChunk)
     * [func norm(hi, lo, base int) (nhi, nlo int)](#norm)
+    * [func now() (sec int64, nsec int32, mono int64)](#now)
+    * [func open(name string) (uintptr, error)](#open)
+    * [func parseGMT(value string) int](#parseGMT)
+    * [func parseNanoseconds(value string, nbytes int) (ns int, rangeErrString string, err error)](#parseNanoseconds)
+    * [func parseSignedOffset(value string) int](#parseSignedOffset)
+    * [func parseTimeZone(value string) (length int, ok bool)](#parseTimeZone)
+    * [func preadn(fd uintptr, buf []byte, off int) error](#preadn)
+    * [func quote(s string) string](#quote)
+    * [func read(fd uintptr, buf []byte) (int, error)](#read)
+    * [func readFile(name string) ([]byte, error)](#readFile)
+    * [func registerLoadFromEmbeddedTZData(f func(string) (string, error))](#registerLoadFromEmbeddedTZData)
+    * [func resetTimer(*runtimeTimer, int64) bool](#resetTimer)
+    * [func runtimeNano() int64](#runtimeNano)
+    * [func sendTime(c interface{}, seq uintptr)](#sendTime)
+    * [func skip(value, prefix string) (string, error)](#skip)
+    * [func startTimer(*runtimeTimer)](#startTimer)
+    * [func startsWithLowerCase(str string) bool](#startsWithLowerCase)
+    * [func stopTimer(*runtimeTimer) bool](#stopTimer)
+    * [func tzruleTime(year int, r rule, off int) int](#tzruleTime)
     * [func tzset(s string, initEnd, sec int64) (name string, offset int, start, end int64, isDST, ok bool)](#tzset)
     * [func tzsetName(s string) (string, string, bool)](#tzsetName)
-    * [func tzsetOffset(s string) (offset int, rest string, ok bool)](#tzsetOffset)
     * [func tzsetNum(s string, min, max int) (num int, rest string, ok bool)](#tzsetNum)
-    * [func tzruleTime(year int, r rule, off int) int](#tzruleTime)
-    * [func containsDotDot(s string) bool](#containsDotDot)
-    * [func registerLoadFromEmbeddedTZData(f func(string) (string, error))](#registerLoadFromEmbeddedTZData)
-    * [func byteString(p []byte) string](#byteString)
-    * [func findZone(zones []zone, name string, offset int, isDST bool) int](#findZone)
-    * [func loadTzinfoFromDirOrZip(dir, name string) ([]byte, error)](#loadTzinfoFromDirOrZip)
-    * [func get4(b []byte) int](#get4)
-    * [func get2(b []byte) int](#get2)
-    * [func loadTzinfoFromZip(zipfile, name string) ([]byte, error)](#loadTzinfoFromZip)
-    * [func loadTzinfo(name string, source string) ([]byte, error)](#loadTzinfo)
-    * [func readFile(name string) ([]byte, error)](#readFile)
-    * [func initLocal()](#initLocal)
-    * [func ResetLocalOnceForTest()](#ResetLocalOnceForTest)
-    * [func ForceUSPacificForTesting()](#ForceUSPacificForTesting)
-    * [func ZoneinfoForTesting() *string](#ZoneinfoForTesting)
-    * [func ResetZoneinfoForTesting()](#ResetZoneinfoForTesting)
-    * [func LoadFromEmbeddedTZData(zone string) (string, error)](#LoadFromEmbeddedTZData)
-    * [func init()](#init.internal_test.go)
-    * [func initTestingZone()](#initTestingZone)
-    * [func forceZipFileForTesting(zipOnly bool)](#forceZipFileForTesting)
-    * [func empty(arg interface{}, seq uintptr)](#empty)
-    * [func CheckRuntimeTimerPeriodOverflow()](#CheckRuntimeTimerPeriodOverflow)
+    * [func tzsetOffset(s string) (offset int, rest string, ok bool)](#tzsetOffset)
+    * [func when(d Duration) int64](#when)
 
 
 ## <a id="const" href="#const">Constants</a>
+
+```
+tags: [package]
+```
+
+### <a id="ANSIC" href="#ANSIC">const ANSIC</a>
+
+```
+searchKey: time.ANSIC
+tags: [constant string]
+```
+
+```Go
+const ANSIC = "Mon Jan _2 15:04:05 2006"
+```
+
+These are predefined layouts for use in Time.Format and time.Parse. The reference time used in these layouts is the specific time stamp: 
+
+```
+01/02 03:04:05PM '06 -0700
+
+```
+(January 2, 15:04:05, 2006, in time zone seven hours west of GMT). That value is recorded as the constant named Layout, listed below. As a Unix time, this is 1136239445. Since MST is GMT-0700, the reference would be printed by the Unix date command as: 
+
+```
+Mon Jan 2 15:04:05 MST 2006
+
+```
+It is a regrettable historic error that the date uses the American convention of putting the numerical month before the day. 
+
+The example for Time.Format demonstrates the working of the layout string in detail and is a good reference. 
+
+Note that the RFC822, RFC850, and RFC1123 formats should be applied only to local times. Applying them to UTC times will use "UTC" as the time zone abbreviation, while strictly speaking those RFCs require the use of "GMT" in that case. In general RFC1123Z should be used instead of RFC1123 for servers that insist on that format, and RFC3339 should be preferred for new protocols. RFC3339, RFC822, RFC822Z, RFC1123, and RFC1123Z are useful for formatting; when used with time.Parse they do not accept all the time formats permitted by the RFCs and they do accept time formats not formally defined. The RFC3339Nano format removes trailing zeros from the seconds field and thus may not sort correctly once formatted. 
+
+Most programs can use one of the defined constants as the layout passed to Format or Parse. The rest of this comment can be ignored unless you are creating a custom layout string. 
+
+To define your own format, write down what the reference time would look like formatted your way; see the values of constants like ANSIC, StampMicro or Kitchen for examples. The model is to demonstrate what the reference time looks like so that the Format and Parse methods can apply the same transformation to a general time value. 
+
+Here is a summary of the components of a layout string. Each element shows by example the formatting of an element of the reference time. Only these values are recognized. Text in the layout string that is not recognized as part of the reference time is echoed verbatim during Format and expected to appear verbatim in the input to Parse. 
+
+```
+Year: "2006" "06"
+Month: "Jan" "January"
+Textual day of the week: "Mon" "Monday"
+Numeric day of the month: "2" "_2" "02"
+Numeric day of the year: "__2" "002"
+Hour: "15" "3" "03" (PM or AM)
+Minute: "4" "04"
+Second: "5" "05"
+AM/PM mark: "PM"
+
+```
+Numeric time zone offsets format as follows: 
+
+```
+"-0700"  ±hhmm
+"-07:00" ±hh:mm
+"-07"    ±hh
+
+```
+Replacing the sign in the format with a Z triggers the ISO 8601 behavior of printing Z instead of an offset for the UTC zone. Thus: 
+
+```
+"Z0700"  Z or ±hhmm
+"Z07:00" Z or ±hh:mm
+"Z07"    Z or ±hh
+
+```
+Within the format string, the underscores in "_2" and "__2" represent spaces that may be replaced by digits if the following number has multiple digits, for compatibility with fixed-width Unix time formats. A leading zero represents a zero-padded value. 
+
+The formats  and 002 are space-padded and zero-padded three-character day of year; there is no unpadded day of year format. 
+
+A decimal point followed by one or more zeros represents a fractional second, printed to the given number of decimal places. Either a comma or decimal point followed by one or more nines represents a fractional second, printed to the given number of decimal places, with trailing zeros removed. For example "15:04:05,000" or "15:04:05.000" formats or parses with millisecond precision. 
+
+Some valid layouts are invalid time values for time.Parse, due to formats such as _ for space padding and Z for zone information. 
+
+### <a id="April" href="#April">const April</a>
+
+```
+searchKey: time.April
+tags: [constant number]
+```
+
+```Go
+const April
+```
+
+### <a id="August" href="#August">const August</a>
+
+```
+searchKey: time.August
+tags: [constant number]
+```
+
+```Go
+const August
+```
+
+### <a id="December" href="#December">const December</a>
+
+```
+searchKey: time.December
+tags: [constant number]
+```
+
+```Go
+const December
+```
+
+### <a id="February" href="#February">const February</a>
+
+```
+searchKey: time.February
+tags: [constant number]
+```
+
+```Go
+const February
+```
+
+### <a id="Friday" href="#Friday">const Friday</a>
+
+```
+searchKey: time.Friday
+tags: [constant number]
+```
+
+```Go
+const Friday
+```
+
+### <a id="Hour" href="#Hour">const Hour</a>
+
+```
+searchKey: time.Hour
+tags: [constant number]
+```
+
+```Go
+const Hour = 60 * Minute
+```
+
+Common durations. There is no definition for units of Day or larger to avoid confusion across daylight savings time zone transitions. 
+
+To count the number of units in a Duration, divide: 
+
+```
+second := time.Second
+fmt.Print(int64(second/time.Millisecond)) // prints 1000
+
+```
+To convert an integer number of units to a Duration, multiply: 
+
+```
+seconds := 10
+fmt.Print(time.Duration(seconds)*time.Second) // prints 10s
+
+```
+### <a id="January" href="#January">const January</a>
+
+```
+searchKey: time.January
+tags: [constant number]
+```
+
+```Go
+const January Month = 1 + iota
+```
+
+### <a id="July" href="#July">const July</a>
+
+```
+searchKey: time.July
+tags: [constant number]
+```
+
+```Go
+const July
+```
+
+### <a id="June" href="#June">const June</a>
+
+```
+searchKey: time.June
+tags: [constant number]
+```
+
+```Go
+const June
+```
+
+### <a id="Kitchen" href="#Kitchen">const Kitchen</a>
+
+```
+searchKey: time.Kitchen
+tags: [constant string]
+```
+
+```Go
+const Kitchen = "3:04PM"
+```
+
+These are predefined layouts for use in Time.Format and time.Parse. The reference time used in these layouts is the specific time stamp: 
+
+```
+01/02 03:04:05PM '06 -0700
+
+```
+(January 2, 15:04:05, 2006, in time zone seven hours west of GMT). That value is recorded as the constant named Layout, listed below. As a Unix time, this is 1136239445. Since MST is GMT-0700, the reference would be printed by the Unix date command as: 
+
+```
+Mon Jan 2 15:04:05 MST 2006
+
+```
+It is a regrettable historic error that the date uses the American convention of putting the numerical month before the day. 
+
+The example for Time.Format demonstrates the working of the layout string in detail and is a good reference. 
+
+Note that the RFC822, RFC850, and RFC1123 formats should be applied only to local times. Applying them to UTC times will use "UTC" as the time zone abbreviation, while strictly speaking those RFCs require the use of "GMT" in that case. In general RFC1123Z should be used instead of RFC1123 for servers that insist on that format, and RFC3339 should be preferred for new protocols. RFC3339, RFC822, RFC822Z, RFC1123, and RFC1123Z are useful for formatting; when used with time.Parse they do not accept all the time formats permitted by the RFCs and they do accept time formats not formally defined. The RFC3339Nano format removes trailing zeros from the seconds field and thus may not sort correctly once formatted. 
+
+Most programs can use one of the defined constants as the layout passed to Format or Parse. The rest of this comment can be ignored unless you are creating a custom layout string. 
+
+To define your own format, write down what the reference time would look like formatted your way; see the values of constants like ANSIC, StampMicro or Kitchen for examples. The model is to demonstrate what the reference time looks like so that the Format and Parse methods can apply the same transformation to a general time value. 
+
+Here is a summary of the components of a layout string. Each element shows by example the formatting of an element of the reference time. Only these values are recognized. Text in the layout string that is not recognized as part of the reference time is echoed verbatim during Format and expected to appear verbatim in the input to Parse. 
+
+```
+Year: "2006" "06"
+Month: "Jan" "January"
+Textual day of the week: "Mon" "Monday"
+Numeric day of the month: "2" "_2" "02"
+Numeric day of the year: "__2" "002"
+Hour: "15" "3" "03" (PM or AM)
+Minute: "4" "04"
+Second: "5" "05"
+AM/PM mark: "PM"
+
+```
+Numeric time zone offsets format as follows: 
+
+```
+"-0700"  ±hhmm
+"-07:00" ±hh:mm
+"-07"    ±hh
+
+```
+Replacing the sign in the format with a Z triggers the ISO 8601 behavior of printing Z instead of an offset for the UTC zone. Thus: 
+
+```
+"Z0700"  Z or ±hhmm
+"Z07:00" Z or ±hh:mm
+"Z07"    Z or ±hh
+
+```
+Within the format string, the underscores in "_2" and "__2" represent spaces that may be replaced by digits if the following number has multiple digits, for compatibility with fixed-width Unix time formats. A leading zero represents a zero-padded value. 
+
+The formats  and 002 are space-padded and zero-padded three-character day of year; there is no unpadded day of year format. 
+
+A decimal point followed by one or more zeros represents a fractional second, printed to the given number of decimal places. Either a comma or decimal point followed by one or more nines represents a fractional second, printed to the given number of decimal places, with trailing zeros removed. For example "15:04:05,000" or "15:04:05.000" formats or parses with millisecond precision. 
+
+Some valid layouts are invalid time values for time.Parse, due to formats such as _ for space padding and Z for zone information. 
 
 ### <a id="Layout" href="#Layout">const Layout</a>
 
 ```
 searchKey: time.Layout
+tags: [constant string]
 ```
 
 ```Go
@@ -469,431 +731,174 @@ A decimal point followed by one or more zeros represents a fractional second, pr
 
 Some valid layouts are invalid time values for time.Parse, due to formats such as _ for space padding and Z for zone information. 
 
-### <a id="ANSIC" href="#ANSIC">const ANSIC</a>
+### <a id="March" href="#March">const March</a>
 
 ```
-searchKey: time.ANSIC
-```
-
-```Go
-const ANSIC = "Mon Jan _2 15:04:05 2006"
-```
-
-These are predefined layouts for use in Time.Format and time.Parse. The reference time used in these layouts is the specific time stamp: 
-
-```
-01/02 03:04:05PM '06 -0700
-
-```
-(January 2, 15:04:05, 2006, in time zone seven hours west of GMT). That value is recorded as the constant named Layout, listed below. As a Unix time, this is 1136239445. Since MST is GMT-0700, the reference would be printed by the Unix date command as: 
-
-```
-Mon Jan 2 15:04:05 MST 2006
-
-```
-It is a regrettable historic error that the date uses the American convention of putting the numerical month before the day. 
-
-The example for Time.Format demonstrates the working of the layout string in detail and is a good reference. 
-
-Note that the RFC822, RFC850, and RFC1123 formats should be applied only to local times. Applying them to UTC times will use "UTC" as the time zone abbreviation, while strictly speaking those RFCs require the use of "GMT" in that case. In general RFC1123Z should be used instead of RFC1123 for servers that insist on that format, and RFC3339 should be preferred for new protocols. RFC3339, RFC822, RFC822Z, RFC1123, and RFC1123Z are useful for formatting; when used with time.Parse they do not accept all the time formats permitted by the RFCs and they do accept time formats not formally defined. The RFC3339Nano format removes trailing zeros from the seconds field and thus may not sort correctly once formatted. 
-
-Most programs can use one of the defined constants as the layout passed to Format or Parse. The rest of this comment can be ignored unless you are creating a custom layout string. 
-
-To define your own format, write down what the reference time would look like formatted your way; see the values of constants like ANSIC, StampMicro or Kitchen for examples. The model is to demonstrate what the reference time looks like so that the Format and Parse methods can apply the same transformation to a general time value. 
-
-Here is a summary of the components of a layout string. Each element shows by example the formatting of an element of the reference time. Only these values are recognized. Text in the layout string that is not recognized as part of the reference time is echoed verbatim during Format and expected to appear verbatim in the input to Parse. 
-
-```
-Year: "2006" "06"
-Month: "Jan" "January"
-Textual day of the week: "Mon" "Monday"
-Numeric day of the month: "2" "_2" "02"
-Numeric day of the year: "__2" "002"
-Hour: "15" "3" "03" (PM or AM)
-Minute: "4" "04"
-Second: "5" "05"
-AM/PM mark: "PM"
-
-```
-Numeric time zone offsets format as follows: 
-
-```
-"-0700"  ±hhmm
-"-07:00" ±hh:mm
-"-07"    ±hh
-
-```
-Replacing the sign in the format with a Z triggers the ISO 8601 behavior of printing Z instead of an offset for the UTC zone. Thus: 
-
-```
-"Z0700"  Z or ±hhmm
-"Z07:00" Z or ±hh:mm
-"Z07"    Z or ±hh
-
-```
-Within the format string, the underscores in "_2" and "__2" represent spaces that may be replaced by digits if the following number has multiple digits, for compatibility with fixed-width Unix time formats. A leading zero represents a zero-padded value. 
-
-The formats  and 002 are space-padded and zero-padded three-character day of year; there is no unpadded day of year format. 
-
-A decimal point followed by one or more zeros represents a fractional second, printed to the given number of decimal places. Either a comma or decimal point followed by one or more nines represents a fractional second, printed to the given number of decimal places, with trailing zeros removed. For example "15:04:05,000" or "15:04:05.000" formats or parses with millisecond precision. 
-
-Some valid layouts are invalid time values for time.Parse, due to formats such as _ for space padding and Z for zone information. 
-
-### <a id="UnixDate" href="#UnixDate">const UnixDate</a>
-
-```
-searchKey: time.UnixDate
+searchKey: time.March
+tags: [constant number]
 ```
 
 ```Go
-const UnixDate = "Mon Jan _2 15:04:05 MST 2006"
+const March
 ```
 
-These are predefined layouts for use in Time.Format and time.Parse. The reference time used in these layouts is the specific time stamp: 
+### <a id="May" href="#May">const May</a>
 
 ```
-01/02 03:04:05PM '06 -0700
-
-```
-(January 2, 15:04:05, 2006, in time zone seven hours west of GMT). That value is recorded as the constant named Layout, listed below. As a Unix time, this is 1136239445. Since MST is GMT-0700, the reference would be printed by the Unix date command as: 
-
-```
-Mon Jan 2 15:04:05 MST 2006
-
-```
-It is a regrettable historic error that the date uses the American convention of putting the numerical month before the day. 
-
-The example for Time.Format demonstrates the working of the layout string in detail and is a good reference. 
-
-Note that the RFC822, RFC850, and RFC1123 formats should be applied only to local times. Applying them to UTC times will use "UTC" as the time zone abbreviation, while strictly speaking those RFCs require the use of "GMT" in that case. In general RFC1123Z should be used instead of RFC1123 for servers that insist on that format, and RFC3339 should be preferred for new protocols. RFC3339, RFC822, RFC822Z, RFC1123, and RFC1123Z are useful for formatting; when used with time.Parse they do not accept all the time formats permitted by the RFCs and they do accept time formats not formally defined. The RFC3339Nano format removes trailing zeros from the seconds field and thus may not sort correctly once formatted. 
-
-Most programs can use one of the defined constants as the layout passed to Format or Parse. The rest of this comment can be ignored unless you are creating a custom layout string. 
-
-To define your own format, write down what the reference time would look like formatted your way; see the values of constants like ANSIC, StampMicro or Kitchen for examples. The model is to demonstrate what the reference time looks like so that the Format and Parse methods can apply the same transformation to a general time value. 
-
-Here is a summary of the components of a layout string. Each element shows by example the formatting of an element of the reference time. Only these values are recognized. Text in the layout string that is not recognized as part of the reference time is echoed verbatim during Format and expected to appear verbatim in the input to Parse. 
-
-```
-Year: "2006" "06"
-Month: "Jan" "January"
-Textual day of the week: "Mon" "Monday"
-Numeric day of the month: "2" "_2" "02"
-Numeric day of the year: "__2" "002"
-Hour: "15" "3" "03" (PM or AM)
-Minute: "4" "04"
-Second: "5" "05"
-AM/PM mark: "PM"
-
-```
-Numeric time zone offsets format as follows: 
-
-```
-"-0700"  ±hhmm
-"-07:00" ±hh:mm
-"-07"    ±hh
-
-```
-Replacing the sign in the format with a Z triggers the ISO 8601 behavior of printing Z instead of an offset for the UTC zone. Thus: 
-
-```
-"Z0700"  Z or ±hhmm
-"Z07:00" Z or ±hh:mm
-"Z07"    Z or ±hh
-
-```
-Within the format string, the underscores in "_2" and "__2" represent spaces that may be replaced by digits if the following number has multiple digits, for compatibility with fixed-width Unix time formats. A leading zero represents a zero-padded value. 
-
-The formats  and 002 are space-padded and zero-padded three-character day of year; there is no unpadded day of year format. 
-
-A decimal point followed by one or more zeros represents a fractional second, printed to the given number of decimal places. Either a comma or decimal point followed by one or more nines represents a fractional second, printed to the given number of decimal places, with trailing zeros removed. For example "15:04:05,000" or "15:04:05.000" formats or parses with millisecond precision. 
-
-Some valid layouts are invalid time values for time.Parse, due to formats such as _ for space padding and Z for zone information. 
-
-### <a id="RubyDate" href="#RubyDate">const RubyDate</a>
-
-```
-searchKey: time.RubyDate
+searchKey: time.May
+tags: [constant number]
 ```
 
 ```Go
-const RubyDate = "Mon Jan 02 15:04:05 -0700 2006"
+const May
 ```
 
-These are predefined layouts for use in Time.Format and time.Parse. The reference time used in these layouts is the specific time stamp: 
+### <a id="Microsecond" href="#Microsecond">const Microsecond</a>
 
 ```
-01/02 03:04:05PM '06 -0700
-
-```
-(January 2, 15:04:05, 2006, in time zone seven hours west of GMT). That value is recorded as the constant named Layout, listed below. As a Unix time, this is 1136239445. Since MST is GMT-0700, the reference would be printed by the Unix date command as: 
-
-```
-Mon Jan 2 15:04:05 MST 2006
-
-```
-It is a regrettable historic error that the date uses the American convention of putting the numerical month before the day. 
-
-The example for Time.Format demonstrates the working of the layout string in detail and is a good reference. 
-
-Note that the RFC822, RFC850, and RFC1123 formats should be applied only to local times. Applying them to UTC times will use "UTC" as the time zone abbreviation, while strictly speaking those RFCs require the use of "GMT" in that case. In general RFC1123Z should be used instead of RFC1123 for servers that insist on that format, and RFC3339 should be preferred for new protocols. RFC3339, RFC822, RFC822Z, RFC1123, and RFC1123Z are useful for formatting; when used with time.Parse they do not accept all the time formats permitted by the RFCs and they do accept time formats not formally defined. The RFC3339Nano format removes trailing zeros from the seconds field and thus may not sort correctly once formatted. 
-
-Most programs can use one of the defined constants as the layout passed to Format or Parse. The rest of this comment can be ignored unless you are creating a custom layout string. 
-
-To define your own format, write down what the reference time would look like formatted your way; see the values of constants like ANSIC, StampMicro or Kitchen for examples. The model is to demonstrate what the reference time looks like so that the Format and Parse methods can apply the same transformation to a general time value. 
-
-Here is a summary of the components of a layout string. Each element shows by example the formatting of an element of the reference time. Only these values are recognized. Text in the layout string that is not recognized as part of the reference time is echoed verbatim during Format and expected to appear verbatim in the input to Parse. 
-
-```
-Year: "2006" "06"
-Month: "Jan" "January"
-Textual day of the week: "Mon" "Monday"
-Numeric day of the month: "2" "_2" "02"
-Numeric day of the year: "__2" "002"
-Hour: "15" "3" "03" (PM or AM)
-Minute: "4" "04"
-Second: "5" "05"
-AM/PM mark: "PM"
-
-```
-Numeric time zone offsets format as follows: 
-
-```
-"-0700"  ±hhmm
-"-07:00" ±hh:mm
-"-07"    ±hh
-
-```
-Replacing the sign in the format with a Z triggers the ISO 8601 behavior of printing Z instead of an offset for the UTC zone. Thus: 
-
-```
-"Z0700"  Z or ±hhmm
-"Z07:00" Z or ±hh:mm
-"Z07"    Z or ±hh
-
-```
-Within the format string, the underscores in "_2" and "__2" represent spaces that may be replaced by digits if the following number has multiple digits, for compatibility with fixed-width Unix time formats. A leading zero represents a zero-padded value. 
-
-The formats  and 002 are space-padded and zero-padded three-character day of year; there is no unpadded day of year format. 
-
-A decimal point followed by one or more zeros represents a fractional second, printed to the given number of decimal places. Either a comma or decimal point followed by one or more nines represents a fractional second, printed to the given number of decimal places, with trailing zeros removed. For example "15:04:05,000" or "15:04:05.000" formats or parses with millisecond precision. 
-
-Some valid layouts are invalid time values for time.Parse, due to formats such as _ for space padding and Z for zone information. 
-
-### <a id="RFC822" href="#RFC822">const RFC822</a>
-
-```
-searchKey: time.RFC822
+searchKey: time.Microsecond
+tags: [constant number]
 ```
 
 ```Go
-const RFC822 = "02 Jan 06 15:04 MST"
+const Microsecond = 1000 * Nanosecond
 ```
 
-These are predefined layouts for use in Time.Format and time.Parse. The reference time used in these layouts is the specific time stamp: 
+Common durations. There is no definition for units of Day or larger to avoid confusion across daylight savings time zone transitions. 
+
+To count the number of units in a Duration, divide: 
 
 ```
-01/02 03:04:05PM '06 -0700
+second := time.Second
+fmt.Print(int64(second/time.Millisecond)) // prints 1000
 
 ```
-(January 2, 15:04:05, 2006, in time zone seven hours west of GMT). That value is recorded as the constant named Layout, listed below. As a Unix time, this is 1136239445. Since MST is GMT-0700, the reference would be printed by the Unix date command as: 
+To convert an integer number of units to a Duration, multiply: 
 
 ```
-Mon Jan 2 15:04:05 MST 2006
+seconds := 10
+fmt.Print(time.Duration(seconds)*time.Second) // prints 10s
 
 ```
-It is a regrettable historic error that the date uses the American convention of putting the numerical month before the day. 
-
-The example for Time.Format demonstrates the working of the layout string in detail and is a good reference. 
-
-Note that the RFC822, RFC850, and RFC1123 formats should be applied only to local times. Applying them to UTC times will use "UTC" as the time zone abbreviation, while strictly speaking those RFCs require the use of "GMT" in that case. In general RFC1123Z should be used instead of RFC1123 for servers that insist on that format, and RFC3339 should be preferred for new protocols. RFC3339, RFC822, RFC822Z, RFC1123, and RFC1123Z are useful for formatting; when used with time.Parse they do not accept all the time formats permitted by the RFCs and they do accept time formats not formally defined. The RFC3339Nano format removes trailing zeros from the seconds field and thus may not sort correctly once formatted. 
-
-Most programs can use one of the defined constants as the layout passed to Format or Parse. The rest of this comment can be ignored unless you are creating a custom layout string. 
-
-To define your own format, write down what the reference time would look like formatted your way; see the values of constants like ANSIC, StampMicro or Kitchen for examples. The model is to demonstrate what the reference time looks like so that the Format and Parse methods can apply the same transformation to a general time value. 
-
-Here is a summary of the components of a layout string. Each element shows by example the formatting of an element of the reference time. Only these values are recognized. Text in the layout string that is not recognized as part of the reference time is echoed verbatim during Format and expected to appear verbatim in the input to Parse. 
+### <a id="Millisecond" href="#Millisecond">const Millisecond</a>
 
 ```
-Year: "2006" "06"
-Month: "Jan" "January"
-Textual day of the week: "Mon" "Monday"
-Numeric day of the month: "2" "_2" "02"
-Numeric day of the year: "__2" "002"
-Hour: "15" "3" "03" (PM or AM)
-Minute: "4" "04"
-Second: "5" "05"
-AM/PM mark: "PM"
-
-```
-Numeric time zone offsets format as follows: 
-
-```
-"-0700"  ±hhmm
-"-07:00" ±hh:mm
-"-07"    ±hh
-
-```
-Replacing the sign in the format with a Z triggers the ISO 8601 behavior of printing Z instead of an offset for the UTC zone. Thus: 
-
-```
-"Z0700"  Z or ±hhmm
-"Z07:00" Z or ±hh:mm
-"Z07"    Z or ±hh
-
-```
-Within the format string, the underscores in "_2" and "__2" represent spaces that may be replaced by digits if the following number has multiple digits, for compatibility with fixed-width Unix time formats. A leading zero represents a zero-padded value. 
-
-The formats  and 002 are space-padded and zero-padded three-character day of year; there is no unpadded day of year format. 
-
-A decimal point followed by one or more zeros represents a fractional second, printed to the given number of decimal places. Either a comma or decimal point followed by one or more nines represents a fractional second, printed to the given number of decimal places, with trailing zeros removed. For example "15:04:05,000" or "15:04:05.000" formats or parses with millisecond precision. 
-
-Some valid layouts are invalid time values for time.Parse, due to formats such as _ for space padding and Z for zone information. 
-
-### <a id="RFC822Z" href="#RFC822Z">const RFC822Z</a>
-
-```
-searchKey: time.RFC822Z
+searchKey: time.Millisecond
+tags: [constant number]
 ```
 
 ```Go
-const RFC822Z = "02 Jan 06 15:04 -0700" // RFC822 with numeric zone
-
+const Millisecond = 1000 * Microsecond
 ```
 
-These are predefined layouts for use in Time.Format and time.Parse. The reference time used in these layouts is the specific time stamp: 
+Common durations. There is no definition for units of Day or larger to avoid confusion across daylight savings time zone transitions. 
+
+To count the number of units in a Duration, divide: 
 
 ```
-01/02 03:04:05PM '06 -0700
+second := time.Second
+fmt.Print(int64(second/time.Millisecond)) // prints 1000
 
 ```
-(January 2, 15:04:05, 2006, in time zone seven hours west of GMT). That value is recorded as the constant named Layout, listed below. As a Unix time, this is 1136239445. Since MST is GMT-0700, the reference would be printed by the Unix date command as: 
+To convert an integer number of units to a Duration, multiply: 
 
 ```
-Mon Jan 2 15:04:05 MST 2006
+seconds := 10
+fmt.Print(time.Duration(seconds)*time.Second) // prints 10s
 
 ```
-It is a regrettable historic error that the date uses the American convention of putting the numerical month before the day. 
-
-The example for Time.Format demonstrates the working of the layout string in detail and is a good reference. 
-
-Note that the RFC822, RFC850, and RFC1123 formats should be applied only to local times. Applying them to UTC times will use "UTC" as the time zone abbreviation, while strictly speaking those RFCs require the use of "GMT" in that case. In general RFC1123Z should be used instead of RFC1123 for servers that insist on that format, and RFC3339 should be preferred for new protocols. RFC3339, RFC822, RFC822Z, RFC1123, and RFC1123Z are useful for formatting; when used with time.Parse they do not accept all the time formats permitted by the RFCs and they do accept time formats not formally defined. The RFC3339Nano format removes trailing zeros from the seconds field and thus may not sort correctly once formatted. 
-
-Most programs can use one of the defined constants as the layout passed to Format or Parse. The rest of this comment can be ignored unless you are creating a custom layout string. 
-
-To define your own format, write down what the reference time would look like formatted your way; see the values of constants like ANSIC, StampMicro or Kitchen for examples. The model is to demonstrate what the reference time looks like so that the Format and Parse methods can apply the same transformation to a general time value. 
-
-Here is a summary of the components of a layout string. Each element shows by example the formatting of an element of the reference time. Only these values are recognized. Text in the layout string that is not recognized as part of the reference time is echoed verbatim during Format and expected to appear verbatim in the input to Parse. 
+### <a id="Minute" href="#Minute">const Minute</a>
 
 ```
-Year: "2006" "06"
-Month: "Jan" "January"
-Textual day of the week: "Mon" "Monday"
-Numeric day of the month: "2" "_2" "02"
-Numeric day of the year: "__2" "002"
-Hour: "15" "3" "03" (PM or AM)
-Minute: "4" "04"
-Second: "5" "05"
-AM/PM mark: "PM"
-
-```
-Numeric time zone offsets format as follows: 
-
-```
-"-0700"  ±hhmm
-"-07:00" ±hh:mm
-"-07"    ±hh
-
-```
-Replacing the sign in the format with a Z triggers the ISO 8601 behavior of printing Z instead of an offset for the UTC zone. Thus: 
-
-```
-"Z0700"  Z or ±hhmm
-"Z07:00" Z or ±hh:mm
-"Z07"    Z or ±hh
-
-```
-Within the format string, the underscores in "_2" and "__2" represent spaces that may be replaced by digits if the following number has multiple digits, for compatibility with fixed-width Unix time formats. A leading zero represents a zero-padded value. 
-
-The formats  and 002 are space-padded and zero-padded three-character day of year; there is no unpadded day of year format. 
-
-A decimal point followed by one or more zeros represents a fractional second, printed to the given number of decimal places. Either a comma or decimal point followed by one or more nines represents a fractional second, printed to the given number of decimal places, with trailing zeros removed. For example "15:04:05,000" or "15:04:05.000" formats or parses with millisecond precision. 
-
-Some valid layouts are invalid time values for time.Parse, due to formats such as _ for space padding and Z for zone information. 
-
-### <a id="RFC850" href="#RFC850">const RFC850</a>
-
-```
-searchKey: time.RFC850
+searchKey: time.Minute
+tags: [constant number]
 ```
 
 ```Go
-const RFC850 = "Monday, 02-Jan-06 15:04:05 MST"
+const Minute = 60 * Second
 ```
 
-These are predefined layouts for use in Time.Format and time.Parse. The reference time used in these layouts is the specific time stamp: 
+Common durations. There is no definition for units of Day or larger to avoid confusion across daylight savings time zone transitions. 
+
+To count the number of units in a Duration, divide: 
 
 ```
-01/02 03:04:05PM '06 -0700
+second := time.Second
+fmt.Print(int64(second/time.Millisecond)) // prints 1000
 
 ```
-(January 2, 15:04:05, 2006, in time zone seven hours west of GMT). That value is recorded as the constant named Layout, listed below. As a Unix time, this is 1136239445. Since MST is GMT-0700, the reference would be printed by the Unix date command as: 
+To convert an integer number of units to a Duration, multiply: 
 
 ```
-Mon Jan 2 15:04:05 MST 2006
+seconds := 10
+fmt.Print(time.Duration(seconds)*time.Second) // prints 10s
 
 ```
-It is a regrettable historic error that the date uses the American convention of putting the numerical month before the day. 
-
-The example for Time.Format demonstrates the working of the layout string in detail and is a good reference. 
-
-Note that the RFC822, RFC850, and RFC1123 formats should be applied only to local times. Applying them to UTC times will use "UTC" as the time zone abbreviation, while strictly speaking those RFCs require the use of "GMT" in that case. In general RFC1123Z should be used instead of RFC1123 for servers that insist on that format, and RFC3339 should be preferred for new protocols. RFC3339, RFC822, RFC822Z, RFC1123, and RFC1123Z are useful for formatting; when used with time.Parse they do not accept all the time formats permitted by the RFCs and they do accept time formats not formally defined. The RFC3339Nano format removes trailing zeros from the seconds field and thus may not sort correctly once formatted. 
-
-Most programs can use one of the defined constants as the layout passed to Format or Parse. The rest of this comment can be ignored unless you are creating a custom layout string. 
-
-To define your own format, write down what the reference time would look like formatted your way; see the values of constants like ANSIC, StampMicro or Kitchen for examples. The model is to demonstrate what the reference time looks like so that the Format and Parse methods can apply the same transformation to a general time value. 
-
-Here is a summary of the components of a layout string. Each element shows by example the formatting of an element of the reference time. Only these values are recognized. Text in the layout string that is not recognized as part of the reference time is echoed verbatim during Format and expected to appear verbatim in the input to Parse. 
+### <a id="Monday" href="#Monday">const Monday</a>
 
 ```
-Year: "2006" "06"
-Month: "Jan" "January"
-Textual day of the week: "Mon" "Monday"
-Numeric day of the month: "2" "_2" "02"
-Numeric day of the year: "__2" "002"
-Hour: "15" "3" "03" (PM or AM)
-Minute: "4" "04"
-Second: "5" "05"
-AM/PM mark: "PM"
+searchKey: time.Monday
+tags: [constant number]
+```
+
+```Go
+const Monday
+```
+
+### <a id="Nanosecond" href="#Nanosecond">const Nanosecond</a>
 
 ```
-Numeric time zone offsets format as follows: 
+searchKey: time.Nanosecond
+tags: [constant number]
+```
+
+```Go
+const Nanosecond Duration = 1
+```
+
+Common durations. There is no definition for units of Day or larger to avoid confusion across daylight savings time zone transitions. 
+
+To count the number of units in a Duration, divide: 
 
 ```
-"-0700"  ±hhmm
-"-07:00" ±hh:mm
-"-07"    ±hh
+second := time.Second
+fmt.Print(int64(second/time.Millisecond)) // prints 1000
 
 ```
-Replacing the sign in the format with a Z triggers the ISO 8601 behavior of printing Z instead of an offset for the UTC zone. Thus: 
+To convert an integer number of units to a Duration, multiply: 
 
 ```
-"Z0700"  Z or ±hhmm
-"Z07:00" Z or ±hh:mm
-"Z07"    Z or ±hh
+seconds := 10
+fmt.Print(time.Duration(seconds)*time.Second) // prints 10s
 
 ```
-Within the format string, the underscores in "_2" and "__2" represent spaces that may be replaced by digits if the following number has multiple digits, for compatibility with fixed-width Unix time formats. A leading zero represents a zero-padded value. 
+### <a id="November" href="#November">const November</a>
 
-The formats  and 002 are space-padded and zero-padded three-character day of year; there is no unpadded day of year format. 
+```
+searchKey: time.November
+tags: [constant number]
+```
 
-A decimal point followed by one or more zeros represents a fractional second, printed to the given number of decimal places. Either a comma or decimal point followed by one or more nines represents a fractional second, printed to the given number of decimal places, with trailing zeros removed. For example "15:04:05,000" or "15:04:05.000" formats or parses with millisecond precision. 
+```Go
+const November
+```
 
-Some valid layouts are invalid time values for time.Parse, due to formats such as _ for space padding and Z for zone information. 
+### <a id="October" href="#October">const October</a>
+
+```
+searchKey: time.October
+tags: [constant number]
+```
+
+```Go
+const October
+```
 
 ### <a id="RFC1123" href="#RFC1123">const RFC1123</a>
 
 ```
 searchKey: time.RFC1123
+tags: [constant string]
 ```
 
 ```Go
@@ -964,6 +969,7 @@ Some valid layouts are invalid time values for time.Parse, due to formats such a
 
 ```
 searchKey: time.RFC1123Z
+tags: [constant string]
 ```
 
 ```Go
@@ -1035,6 +1041,7 @@ Some valid layouts are invalid time values for time.Parse, due to formats such a
 
 ```
 searchKey: time.RFC3339
+tags: [constant string]
 ```
 
 ```Go
@@ -1105,6 +1112,7 @@ Some valid layouts are invalid time values for time.Parse, due to formats such a
 
 ```
 searchKey: time.RFC3339Nano
+tags: [constant string]
 ```
 
 ```Go
@@ -1171,14 +1179,15 @@ A decimal point followed by one or more zeros represents a fractional second, pr
 
 Some valid layouts are invalid time values for time.Parse, due to formats such as _ for space padding and Z for zone information. 
 
-### <a id="Kitchen" href="#Kitchen">const Kitchen</a>
+### <a id="RFC822" href="#RFC822">const RFC822</a>
 
 ```
-searchKey: time.Kitchen
+searchKey: time.RFC822
+tags: [constant string]
 ```
 
 ```Go
-const Kitchen = "3:04PM"
+const RFC822 = "02 Jan 06 15:04 MST"
 ```
 
 These are predefined layouts for use in Time.Format and time.Parse. The reference time used in these layouts is the specific time stamp: 
@@ -1241,10 +1250,307 @@ A decimal point followed by one or more zeros represents a fractional second, pr
 
 Some valid layouts are invalid time values for time.Parse, due to formats such as _ for space padding and Z for zone information. 
 
+### <a id="RFC822Z" href="#RFC822Z">const RFC822Z</a>
+
+```
+searchKey: time.RFC822Z
+tags: [constant string]
+```
+
+```Go
+const RFC822Z = "02 Jan 06 15:04 -0700" // RFC822 with numeric zone
+
+```
+
+These are predefined layouts for use in Time.Format and time.Parse. The reference time used in these layouts is the specific time stamp: 
+
+```
+01/02 03:04:05PM '06 -0700
+
+```
+(January 2, 15:04:05, 2006, in time zone seven hours west of GMT). That value is recorded as the constant named Layout, listed below. As a Unix time, this is 1136239445. Since MST is GMT-0700, the reference would be printed by the Unix date command as: 
+
+```
+Mon Jan 2 15:04:05 MST 2006
+
+```
+It is a regrettable historic error that the date uses the American convention of putting the numerical month before the day. 
+
+The example for Time.Format demonstrates the working of the layout string in detail and is a good reference. 
+
+Note that the RFC822, RFC850, and RFC1123 formats should be applied only to local times. Applying them to UTC times will use "UTC" as the time zone abbreviation, while strictly speaking those RFCs require the use of "GMT" in that case. In general RFC1123Z should be used instead of RFC1123 for servers that insist on that format, and RFC3339 should be preferred for new protocols. RFC3339, RFC822, RFC822Z, RFC1123, and RFC1123Z are useful for formatting; when used with time.Parse they do not accept all the time formats permitted by the RFCs and they do accept time formats not formally defined. The RFC3339Nano format removes trailing zeros from the seconds field and thus may not sort correctly once formatted. 
+
+Most programs can use one of the defined constants as the layout passed to Format or Parse. The rest of this comment can be ignored unless you are creating a custom layout string. 
+
+To define your own format, write down what the reference time would look like formatted your way; see the values of constants like ANSIC, StampMicro or Kitchen for examples. The model is to demonstrate what the reference time looks like so that the Format and Parse methods can apply the same transformation to a general time value. 
+
+Here is a summary of the components of a layout string. Each element shows by example the formatting of an element of the reference time. Only these values are recognized. Text in the layout string that is not recognized as part of the reference time is echoed verbatim during Format and expected to appear verbatim in the input to Parse. 
+
+```
+Year: "2006" "06"
+Month: "Jan" "January"
+Textual day of the week: "Mon" "Monday"
+Numeric day of the month: "2" "_2" "02"
+Numeric day of the year: "__2" "002"
+Hour: "15" "3" "03" (PM or AM)
+Minute: "4" "04"
+Second: "5" "05"
+AM/PM mark: "PM"
+
+```
+Numeric time zone offsets format as follows: 
+
+```
+"-0700"  ±hhmm
+"-07:00" ±hh:mm
+"-07"    ±hh
+
+```
+Replacing the sign in the format with a Z triggers the ISO 8601 behavior of printing Z instead of an offset for the UTC zone. Thus: 
+
+```
+"Z0700"  Z or ±hhmm
+"Z07:00" Z or ±hh:mm
+"Z07"    Z or ±hh
+
+```
+Within the format string, the underscores in "_2" and "__2" represent spaces that may be replaced by digits if the following number has multiple digits, for compatibility with fixed-width Unix time formats. A leading zero represents a zero-padded value. 
+
+The formats  and 002 are space-padded and zero-padded three-character day of year; there is no unpadded day of year format. 
+
+A decimal point followed by one or more zeros represents a fractional second, printed to the given number of decimal places. Either a comma or decimal point followed by one or more nines represents a fractional second, printed to the given number of decimal places, with trailing zeros removed. For example "15:04:05,000" or "15:04:05.000" formats or parses with millisecond precision. 
+
+Some valid layouts are invalid time values for time.Parse, due to formats such as _ for space padding and Z for zone information. 
+
+### <a id="RFC850" href="#RFC850">const RFC850</a>
+
+```
+searchKey: time.RFC850
+tags: [constant string]
+```
+
+```Go
+const RFC850 = "Monday, 02-Jan-06 15:04:05 MST"
+```
+
+These are predefined layouts for use in Time.Format and time.Parse. The reference time used in these layouts is the specific time stamp: 
+
+```
+01/02 03:04:05PM '06 -0700
+
+```
+(January 2, 15:04:05, 2006, in time zone seven hours west of GMT). That value is recorded as the constant named Layout, listed below. As a Unix time, this is 1136239445. Since MST is GMT-0700, the reference would be printed by the Unix date command as: 
+
+```
+Mon Jan 2 15:04:05 MST 2006
+
+```
+It is a regrettable historic error that the date uses the American convention of putting the numerical month before the day. 
+
+The example for Time.Format demonstrates the working of the layout string in detail and is a good reference. 
+
+Note that the RFC822, RFC850, and RFC1123 formats should be applied only to local times. Applying them to UTC times will use "UTC" as the time zone abbreviation, while strictly speaking those RFCs require the use of "GMT" in that case. In general RFC1123Z should be used instead of RFC1123 for servers that insist on that format, and RFC3339 should be preferred for new protocols. RFC3339, RFC822, RFC822Z, RFC1123, and RFC1123Z are useful for formatting; when used with time.Parse they do not accept all the time formats permitted by the RFCs and they do accept time formats not formally defined. The RFC3339Nano format removes trailing zeros from the seconds field and thus may not sort correctly once formatted. 
+
+Most programs can use one of the defined constants as the layout passed to Format or Parse. The rest of this comment can be ignored unless you are creating a custom layout string. 
+
+To define your own format, write down what the reference time would look like formatted your way; see the values of constants like ANSIC, StampMicro or Kitchen for examples. The model is to demonstrate what the reference time looks like so that the Format and Parse methods can apply the same transformation to a general time value. 
+
+Here is a summary of the components of a layout string. Each element shows by example the formatting of an element of the reference time. Only these values are recognized. Text in the layout string that is not recognized as part of the reference time is echoed verbatim during Format and expected to appear verbatim in the input to Parse. 
+
+```
+Year: "2006" "06"
+Month: "Jan" "January"
+Textual day of the week: "Mon" "Monday"
+Numeric day of the month: "2" "_2" "02"
+Numeric day of the year: "__2" "002"
+Hour: "15" "3" "03" (PM or AM)
+Minute: "4" "04"
+Second: "5" "05"
+AM/PM mark: "PM"
+
+```
+Numeric time zone offsets format as follows: 
+
+```
+"-0700"  ±hhmm
+"-07:00" ±hh:mm
+"-07"    ±hh
+
+```
+Replacing the sign in the format with a Z triggers the ISO 8601 behavior of printing Z instead of an offset for the UTC zone. Thus: 
+
+```
+"Z0700"  Z or ±hhmm
+"Z07:00" Z or ±hh:mm
+"Z07"    Z or ±hh
+
+```
+Within the format string, the underscores in "_2" and "__2" represent spaces that may be replaced by digits if the following number has multiple digits, for compatibility with fixed-width Unix time formats. A leading zero represents a zero-padded value. 
+
+The formats  and 002 are space-padded and zero-padded three-character day of year; there is no unpadded day of year format. 
+
+A decimal point followed by one or more zeros represents a fractional second, printed to the given number of decimal places. Either a comma or decimal point followed by one or more nines represents a fractional second, printed to the given number of decimal places, with trailing zeros removed. For example "15:04:05,000" or "15:04:05.000" formats or parses with millisecond precision. 
+
+Some valid layouts are invalid time values for time.Parse, due to formats such as _ for space padding and Z for zone information. 
+
+### <a id="RubyDate" href="#RubyDate">const RubyDate</a>
+
+```
+searchKey: time.RubyDate
+tags: [constant string]
+```
+
+```Go
+const RubyDate = "Mon Jan 02 15:04:05 -0700 2006"
+```
+
+These are predefined layouts for use in Time.Format and time.Parse. The reference time used in these layouts is the specific time stamp: 
+
+```
+01/02 03:04:05PM '06 -0700
+
+```
+(January 2, 15:04:05, 2006, in time zone seven hours west of GMT). That value is recorded as the constant named Layout, listed below. As a Unix time, this is 1136239445. Since MST is GMT-0700, the reference would be printed by the Unix date command as: 
+
+```
+Mon Jan 2 15:04:05 MST 2006
+
+```
+It is a regrettable historic error that the date uses the American convention of putting the numerical month before the day. 
+
+The example for Time.Format demonstrates the working of the layout string in detail and is a good reference. 
+
+Note that the RFC822, RFC850, and RFC1123 formats should be applied only to local times. Applying them to UTC times will use "UTC" as the time zone abbreviation, while strictly speaking those RFCs require the use of "GMT" in that case. In general RFC1123Z should be used instead of RFC1123 for servers that insist on that format, and RFC3339 should be preferred for new protocols. RFC3339, RFC822, RFC822Z, RFC1123, and RFC1123Z are useful for formatting; when used with time.Parse they do not accept all the time formats permitted by the RFCs and they do accept time formats not formally defined. The RFC3339Nano format removes trailing zeros from the seconds field and thus may not sort correctly once formatted. 
+
+Most programs can use one of the defined constants as the layout passed to Format or Parse. The rest of this comment can be ignored unless you are creating a custom layout string. 
+
+To define your own format, write down what the reference time would look like formatted your way; see the values of constants like ANSIC, StampMicro or Kitchen for examples. The model is to demonstrate what the reference time looks like so that the Format and Parse methods can apply the same transformation to a general time value. 
+
+Here is a summary of the components of a layout string. Each element shows by example the formatting of an element of the reference time. Only these values are recognized. Text in the layout string that is not recognized as part of the reference time is echoed verbatim during Format and expected to appear verbatim in the input to Parse. 
+
+```
+Year: "2006" "06"
+Month: "Jan" "January"
+Textual day of the week: "Mon" "Monday"
+Numeric day of the month: "2" "_2" "02"
+Numeric day of the year: "__2" "002"
+Hour: "15" "3" "03" (PM or AM)
+Minute: "4" "04"
+Second: "5" "05"
+AM/PM mark: "PM"
+
+```
+Numeric time zone offsets format as follows: 
+
+```
+"-0700"  ±hhmm
+"-07:00" ±hh:mm
+"-07"    ±hh
+
+```
+Replacing the sign in the format with a Z triggers the ISO 8601 behavior of printing Z instead of an offset for the UTC zone. Thus: 
+
+```
+"Z0700"  Z or ±hhmm
+"Z07:00" Z or ±hh:mm
+"Z07"    Z or ±hh
+
+```
+Within the format string, the underscores in "_2" and "__2" represent spaces that may be replaced by digits if the following number has multiple digits, for compatibility with fixed-width Unix time formats. A leading zero represents a zero-padded value. 
+
+The formats  and 002 are space-padded and zero-padded three-character day of year; there is no unpadded day of year format. 
+
+A decimal point followed by one or more zeros represents a fractional second, printed to the given number of decimal places. Either a comma or decimal point followed by one or more nines represents a fractional second, printed to the given number of decimal places, with trailing zeros removed. For example "15:04:05,000" or "15:04:05.000" formats or parses with millisecond precision. 
+
+Some valid layouts are invalid time values for time.Parse, due to formats such as _ for space padding and Z for zone information. 
+
+### <a id="RuleDOY" href="#RuleDOY">const RuleDOY</a>
+
+```
+searchKey: time.RuleDOY
+tags: [constant number private]
+```
+
+```Go
+const RuleDOY = RuleKind(ruleDOY)
+```
+
+### <a id="RuleJulian" href="#RuleJulian">const RuleJulian</a>
+
+```
+searchKey: time.RuleJulian
+tags: [constant number private]
+```
+
+```Go
+const RuleJulian = RuleKind(ruleJulian)
+```
+
+### <a id="RuleMonthWeekDay" href="#RuleMonthWeekDay">const RuleMonthWeekDay</a>
+
+```
+searchKey: time.RuleMonthWeekDay
+tags: [constant number private]
+```
+
+```Go
+const RuleMonthWeekDay = RuleKind(ruleMonthWeekDay)
+```
+
+### <a id="Saturday" href="#Saturday">const Saturday</a>
+
+```
+searchKey: time.Saturday
+tags: [constant number]
+```
+
+```Go
+const Saturday
+```
+
+### <a id="Second" href="#Second">const Second</a>
+
+```
+searchKey: time.Second
+tags: [constant number]
+```
+
+```Go
+const Second = 1000 * Millisecond
+```
+
+Common durations. There is no definition for units of Day or larger to avoid confusion across daylight savings time zone transitions. 
+
+To count the number of units in a Duration, divide: 
+
+```
+second := time.Second
+fmt.Print(int64(second/time.Millisecond)) // prints 1000
+
+```
+To convert an integer number of units to a Duration, multiply: 
+
+```
+seconds := 10
+fmt.Print(time.Duration(seconds)*time.Second) // prints 10s
+
+```
+### <a id="September" href="#September">const September</a>
+
+```
+searchKey: time.September
+tags: [constant number]
+```
+
+```Go
+const September
+```
+
 ### <a id="Stamp" href="#Stamp">const Stamp</a>
 
 ```
 searchKey: time.Stamp
+tags: [constant string]
 ```
 
 ```Go
@@ -1313,80 +1619,11 @@ Some valid layouts are invalid time values for time.Parse, due to formats such a
 
 Handy time stamps. 
 
-### <a id="StampMilli" href="#StampMilli">const StampMilli</a>
-
-```
-searchKey: time.StampMilli
-```
-
-```Go
-const StampMilli = "Jan _2 15:04:05.000"
-```
-
-These are predefined layouts for use in Time.Format and time.Parse. The reference time used in these layouts is the specific time stamp: 
-
-```
-01/02 03:04:05PM '06 -0700
-
-```
-(January 2, 15:04:05, 2006, in time zone seven hours west of GMT). That value is recorded as the constant named Layout, listed below. As a Unix time, this is 1136239445. Since MST is GMT-0700, the reference would be printed by the Unix date command as: 
-
-```
-Mon Jan 2 15:04:05 MST 2006
-
-```
-It is a regrettable historic error that the date uses the American convention of putting the numerical month before the day. 
-
-The example for Time.Format demonstrates the working of the layout string in detail and is a good reference. 
-
-Note that the RFC822, RFC850, and RFC1123 formats should be applied only to local times. Applying them to UTC times will use "UTC" as the time zone abbreviation, while strictly speaking those RFCs require the use of "GMT" in that case. In general RFC1123Z should be used instead of RFC1123 for servers that insist on that format, and RFC3339 should be preferred for new protocols. RFC3339, RFC822, RFC822Z, RFC1123, and RFC1123Z are useful for formatting; when used with time.Parse they do not accept all the time formats permitted by the RFCs and they do accept time formats not formally defined. The RFC3339Nano format removes trailing zeros from the seconds field and thus may not sort correctly once formatted. 
-
-Most programs can use one of the defined constants as the layout passed to Format or Parse. The rest of this comment can be ignored unless you are creating a custom layout string. 
-
-To define your own format, write down what the reference time would look like formatted your way; see the values of constants like ANSIC, StampMicro or Kitchen for examples. The model is to demonstrate what the reference time looks like so that the Format and Parse methods can apply the same transformation to a general time value. 
-
-Here is a summary of the components of a layout string. Each element shows by example the formatting of an element of the reference time. Only these values are recognized. Text in the layout string that is not recognized as part of the reference time is echoed verbatim during Format and expected to appear verbatim in the input to Parse. 
-
-```
-Year: "2006" "06"
-Month: "Jan" "January"
-Textual day of the week: "Mon" "Monday"
-Numeric day of the month: "2" "_2" "02"
-Numeric day of the year: "__2" "002"
-Hour: "15" "3" "03" (PM or AM)
-Minute: "4" "04"
-Second: "5" "05"
-AM/PM mark: "PM"
-
-```
-Numeric time zone offsets format as follows: 
-
-```
-"-0700"  ±hhmm
-"-07:00" ±hh:mm
-"-07"    ±hh
-
-```
-Replacing the sign in the format with a Z triggers the ISO 8601 behavior of printing Z instead of an offset for the UTC zone. Thus: 
-
-```
-"Z0700"  Z or ±hhmm
-"Z07:00" Z or ±hh:mm
-"Z07"    Z or ±hh
-
-```
-Within the format string, the underscores in "_2" and "__2" represent spaces that may be replaced by digits if the following number has multiple digits, for compatibility with fixed-width Unix time formats. A leading zero represents a zero-padded value. 
-
-The formats  and 002 are space-padded and zero-padded three-character day of year; there is no unpadded day of year format. 
-
-A decimal point followed by one or more zeros represents a fractional second, printed to the given number of decimal places. Either a comma or decimal point followed by one or more nines represents a fractional second, printed to the given number of decimal places, with trailing zeros removed. For example "15:04:05,000" or "15:04:05.000" formats or parses with millisecond precision. 
-
-Some valid layouts are invalid time values for time.Parse, due to formats such as _ for space padding and Z for zone information. 
-
 ### <a id="StampMicro" href="#StampMicro">const StampMicro</a>
 
 ```
 searchKey: time.StampMicro
+tags: [constant string]
 ```
 
 ```Go
@@ -1453,10 +1690,82 @@ A decimal point followed by one or more zeros represents a fractional second, pr
 
 Some valid layouts are invalid time values for time.Parse, due to formats such as _ for space padding and Z for zone information. 
 
+### <a id="StampMilli" href="#StampMilli">const StampMilli</a>
+
+```
+searchKey: time.StampMilli
+tags: [constant string]
+```
+
+```Go
+const StampMilli = "Jan _2 15:04:05.000"
+```
+
+These are predefined layouts for use in Time.Format and time.Parse. The reference time used in these layouts is the specific time stamp: 
+
+```
+01/02 03:04:05PM '06 -0700
+
+```
+(January 2, 15:04:05, 2006, in time zone seven hours west of GMT). That value is recorded as the constant named Layout, listed below. As a Unix time, this is 1136239445. Since MST is GMT-0700, the reference would be printed by the Unix date command as: 
+
+```
+Mon Jan 2 15:04:05 MST 2006
+
+```
+It is a regrettable historic error that the date uses the American convention of putting the numerical month before the day. 
+
+The example for Time.Format demonstrates the working of the layout string in detail and is a good reference. 
+
+Note that the RFC822, RFC850, and RFC1123 formats should be applied only to local times. Applying them to UTC times will use "UTC" as the time zone abbreviation, while strictly speaking those RFCs require the use of "GMT" in that case. In general RFC1123Z should be used instead of RFC1123 for servers that insist on that format, and RFC3339 should be preferred for new protocols. RFC3339, RFC822, RFC822Z, RFC1123, and RFC1123Z are useful for formatting; when used with time.Parse they do not accept all the time formats permitted by the RFCs and they do accept time formats not formally defined. The RFC3339Nano format removes trailing zeros from the seconds field and thus may not sort correctly once formatted. 
+
+Most programs can use one of the defined constants as the layout passed to Format or Parse. The rest of this comment can be ignored unless you are creating a custom layout string. 
+
+To define your own format, write down what the reference time would look like formatted your way; see the values of constants like ANSIC, StampMicro or Kitchen for examples. The model is to demonstrate what the reference time looks like so that the Format and Parse methods can apply the same transformation to a general time value. 
+
+Here is a summary of the components of a layout string. Each element shows by example the formatting of an element of the reference time. Only these values are recognized. Text in the layout string that is not recognized as part of the reference time is echoed verbatim during Format and expected to appear verbatim in the input to Parse. 
+
+```
+Year: "2006" "06"
+Month: "Jan" "January"
+Textual day of the week: "Mon" "Monday"
+Numeric day of the month: "2" "_2" "02"
+Numeric day of the year: "__2" "002"
+Hour: "15" "3" "03" (PM or AM)
+Minute: "4" "04"
+Second: "5" "05"
+AM/PM mark: "PM"
+
+```
+Numeric time zone offsets format as follows: 
+
+```
+"-0700"  ±hhmm
+"-07:00" ±hh:mm
+"-07"    ±hh
+
+```
+Replacing the sign in the format with a Z triggers the ISO 8601 behavior of printing Z instead of an offset for the UTC zone. Thus: 
+
+```
+"Z0700"  Z or ±hhmm
+"Z07:00" Z or ±hh:mm
+"Z07"    Z or ±hh
+
+```
+Within the format string, the underscores in "_2" and "__2" represent spaces that may be replaced by digits if the following number has multiple digits, for compatibility with fixed-width Unix time formats. A leading zero represents a zero-padded value. 
+
+The formats  and 002 are space-padded and zero-padded three-character day of year; there is no unpadded day of year format. 
+
+A decimal point followed by one or more zeros represents a fractional second, printed to the given number of decimal places. Either a comma or decimal point followed by one or more nines represents a fractional second, printed to the given number of decimal places, with trailing zeros removed. For example "15:04:05,000" or "15:04:05.000" formats or parses with millisecond precision. 
+
+Some valid layouts are invalid time values for time.Parse, due to formats such as _ for space padding and Z for zone information. 
+
 ### <a id="StampNano" href="#StampNano">const StampNano</a>
 
 ```
 searchKey: time.StampNano
+tags: [constant string]
 ```
 
 ```Go
@@ -1523,514 +1832,302 @@ A decimal point followed by one or more zeros represents a fractional second, pr
 
 Some valid layouts are invalid time values for time.Parse, due to formats such as _ for space padding and Z for zone information. 
 
-### <a id="stdLongMonth" href="#stdLongMonth">const stdLongMonth</a>
+### <a id="Sunday" href="#Sunday">const Sunday</a>
 
 ```
-searchKey: time.stdLongMonth
-tags: [private]
-```
-
-```Go
-const stdLongMonth = iota + stdNeedDate // "January"
-
-```
-
-### <a id="stdMonth" href="#stdMonth">const stdMonth</a>
-
-```
-searchKey: time.stdMonth
-tags: [private]
+searchKey: time.Sunday
+tags: [constant number]
 ```
 
 ```Go
-const stdMonth // "Jan"
-
+const Sunday Weekday = iota
 ```
 
-### <a id="stdNumMonth" href="#stdNumMonth">const stdNumMonth</a>
+### <a id="Thursday" href="#Thursday">const Thursday</a>
 
 ```
-searchKey: time.stdNumMonth
-tags: [private]
-```
-
-```Go
-const stdNumMonth // "1"
-
-```
-
-### <a id="stdZeroMonth" href="#stdZeroMonth">const stdZeroMonth</a>
-
-```
-searchKey: time.stdZeroMonth
-tags: [private]
+searchKey: time.Thursday
+tags: [constant number]
 ```
 
 ```Go
-const stdZeroMonth // "01"
-
+const Thursday
 ```
 
-### <a id="stdLongWeekDay" href="#stdLongWeekDay">const stdLongWeekDay</a>
+### <a id="Tuesday" href="#Tuesday">const Tuesday</a>
 
 ```
-searchKey: time.stdLongWeekDay
-tags: [private]
-```
-
-```Go
-const stdLongWeekDay // "Monday"
-
-```
-
-### <a id="stdWeekDay" href="#stdWeekDay">const stdWeekDay</a>
-
-```
-searchKey: time.stdWeekDay
-tags: [private]
+searchKey: time.Tuesday
+tags: [constant number]
 ```
 
 ```Go
-const stdWeekDay // "Mon"
-
+const Tuesday
 ```
 
-### <a id="stdDay" href="#stdDay">const stdDay</a>
+### <a id="UnixDate" href="#UnixDate">const UnixDate</a>
 
 ```
-searchKey: time.stdDay
-tags: [private]
-```
-
-```Go
-const stdDay // "2"
-
-```
-
-### <a id="stdUnderDay" href="#stdUnderDay">const stdUnderDay</a>
-
-```
-searchKey: time.stdUnderDay
-tags: [private]
+searchKey: time.UnixDate
+tags: [constant string]
 ```
 
 ```Go
-const stdUnderDay // "_2"
-
+const UnixDate = "Mon Jan _2 15:04:05 MST 2006"
 ```
 
-### <a id="stdZeroDay" href="#stdZeroDay">const stdZeroDay</a>
+These are predefined layouts for use in Time.Format and time.Parse. The reference time used in these layouts is the specific time stamp: 
 
 ```
-searchKey: time.stdZeroDay
-tags: [private]
-```
-
-```Go
-const stdZeroDay // "02"
+01/02 03:04:05PM '06 -0700
 
 ```
-
-### <a id="stdUnderYearDay" href="#stdUnderYearDay">const stdUnderYearDay</a>
-
-```
-searchKey: time.stdUnderYearDay
-tags: [private]
-```
-
-```Go
-const stdUnderYearDay // "__2"
+(January 2, 15:04:05, 2006, in time zone seven hours west of GMT). That value is recorded as the constant named Layout, listed below. As a Unix time, this is 1136239445. Since MST is GMT-0700, the reference would be printed by the Unix date command as: 
 
 ```
-
-### <a id="stdZeroYearDay" href="#stdZeroYearDay">const stdZeroYearDay</a>
-
-```
-searchKey: time.stdZeroYearDay
-tags: [private]
-```
-
-```Go
-const stdZeroYearDay // "002"
+Mon Jan 2 15:04:05 MST 2006
 
 ```
+It is a regrettable historic error that the date uses the American convention of putting the numerical month before the day. 
 
-### <a id="stdHour" href="#stdHour">const stdHour</a>
+The example for Time.Format demonstrates the working of the layout string in detail and is a good reference. 
 
-```
-searchKey: time.stdHour
-tags: [private]
-```
+Note that the RFC822, RFC850, and RFC1123 formats should be applied only to local times. Applying them to UTC times will use "UTC" as the time zone abbreviation, while strictly speaking those RFCs require the use of "GMT" in that case. In general RFC1123Z should be used instead of RFC1123 for servers that insist on that format, and RFC3339 should be preferred for new protocols. RFC3339, RFC822, RFC822Z, RFC1123, and RFC1123Z are useful for formatting; when used with time.Parse they do not accept all the time formats permitted by the RFCs and they do accept time formats not formally defined. The RFC3339Nano format removes trailing zeros from the seconds field and thus may not sort correctly once formatted. 
 
-```Go
-const stdHour = iota + stdNeedClock // "15"
+Most programs can use one of the defined constants as the layout passed to Format or Parse. The rest of this comment can be ignored unless you are creating a custom layout string. 
 
-```
+To define your own format, write down what the reference time would look like formatted your way; see the values of constants like ANSIC, StampMicro or Kitchen for examples. The model is to demonstrate what the reference time looks like so that the Format and Parse methods can apply the same transformation to a general time value. 
 
-### <a id="stdHour12" href="#stdHour12">const stdHour12</a>
+Here is a summary of the components of a layout string. Each element shows by example the formatting of an element of the reference time. Only these values are recognized. Text in the layout string that is not recognized as part of the reference time is echoed verbatim during Format and expected to appear verbatim in the input to Parse. 
 
 ```
-searchKey: time.stdHour12
-tags: [private]
-```
-
-```Go
-const stdHour12 // "3"
-
-```
-
-### <a id="stdZeroHour12" href="#stdZeroHour12">const stdZeroHour12</a>
-
-```
-searchKey: time.stdZeroHour12
-tags: [private]
-```
-
-```Go
-const stdZeroHour12 // "03"
+Year: "2006" "06"
+Month: "Jan" "January"
+Textual day of the week: "Mon" "Monday"
+Numeric day of the month: "2" "_2" "02"
+Numeric day of the year: "__2" "002"
+Hour: "15" "3" "03" (PM or AM)
+Minute: "4" "04"
+Second: "5" "05"
+AM/PM mark: "PM"
 
 ```
-
-### <a id="stdMinute" href="#stdMinute">const stdMinute</a>
+Numeric time zone offsets format as follows: 
 
 ```
-searchKey: time.stdMinute
-tags: [private]
+"-0700"  ±hhmm
+"-07:00" ±hh:mm
+"-07"    ±hh
+
+```
+Replacing the sign in the format with a Z triggers the ISO 8601 behavior of printing Z instead of an offset for the UTC zone. Thus: 
+
+```
+"Z0700"  Z or ±hhmm
+"Z07:00" Z or ±hh:mm
+"Z07"    Z or ±hh
+
+```
+Within the format string, the underscores in "_2" and "__2" represent spaces that may be replaced by digits if the following number has multiple digits, for compatibility with fixed-width Unix time formats. A leading zero represents a zero-padded value. 
+
+The formats  and 002 are space-padded and zero-padded three-character day of year; there is no unpadded day of year format. 
+
+A decimal point followed by one or more zeros represents a fractional second, printed to the given number of decimal places. Either a comma or decimal point followed by one or more nines represents a fractional second, printed to the given number of decimal places, with trailing zeros removed. For example "15:04:05,000" or "15:04:05.000" formats or parses with millisecond precision. 
+
+Some valid layouts are invalid time values for time.Parse, due to formats such as _ for space padding and Z for zone information. 
+
+### <a id="UnixToInternal" href="#UnixToInternal">const UnixToInternal</a>
+
+```
+searchKey: time.UnixToInternal
+tags: [constant number private]
 ```
 
 ```Go
-const stdMinute // "4"
-
+const UnixToInternal = unixToInternal
 ```
 
-### <a id="stdZeroMinute" href="#stdZeroMinute">const stdZeroMinute</a>
+### <a id="Wednesday" href="#Wednesday">const Wednesday</a>
 
 ```
-searchKey: time.stdZeroMinute
-tags: [private]
-```
-
-```Go
-const stdZeroMinute // "04"
-
-```
-
-### <a id="stdSecond" href="#stdSecond">const stdSecond</a>
-
-```
-searchKey: time.stdSecond
-tags: [private]
+searchKey: time.Wednesday
+tags: [constant number]
 ```
 
 ```Go
-const stdSecond // "5"
-
+const Wednesday
 ```
 
-### <a id="stdZeroSecond" href="#stdZeroSecond">const stdZeroSecond</a>
+### <a id="absoluteToInternal" href="#absoluteToInternal">const absoluteToInternal</a>
 
 ```
-searchKey: time.stdZeroSecond
-tags: [private]
-```
-
-```Go
-const stdZeroSecond // "05"
-
-```
-
-### <a id="stdLongYear" href="#stdLongYear">const stdLongYear</a>
-
-```
-searchKey: time.stdLongYear
-tags: [private]
+searchKey: time.absoluteToInternal
+tags: [constant number private]
 ```
 
 ```Go
-const stdLongYear = iota + stdNeedDate // "2006"
-
+const absoluteToInternal int64 = (absoluteZeroYear - internalYear) * 365.2425 * secondsPerDay
 ```
 
-### <a id="stdYear" href="#stdYear">const stdYear</a>
+Offsets to convert between internal and absolute or Unix times. 
+
+### <a id="absoluteZeroYear" href="#absoluteZeroYear">const absoluteZeroYear</a>
 
 ```
-searchKey: time.stdYear
-tags: [private]
-```
-
-```Go
-const stdYear // "06"
-
-```
-
-### <a id="stdPM" href="#stdPM">const stdPM</a>
-
-```
-searchKey: time.stdPM
-tags: [private]
+searchKey: time.absoluteZeroYear
+tags: [constant number private]
 ```
 
 ```Go
-const stdPM = iota + stdNeedClock // "PM"
-
+const absoluteZeroYear = -292277022399
 ```
 
-### <a id="stdpm" href="#stdpm">const stdpm</a>
+The unsigned zero year for internal calculations. Must be 1 mod 400, and times before it will not compute correctly, but otherwise can be changed at will. 
+
+### <a id="alpha" href="#alpha">const alpha</a>
 
 ```
-searchKey: time.stdpm
-tags: [private]
-```
-
-```Go
-const stdpm // "pm"
-
-```
-
-### <a id="stdTZ" href="#stdTZ">const stdTZ</a>
-
-```
-searchKey: time.stdTZ
-tags: [private]
+searchKey: time.alpha
+tags: [constant number private]
 ```
 
 ```Go
-const stdTZ = iota // "MST"
+const alpha = -1 << 63 // math.MinInt64
 
 ```
 
-### <a id="stdISO8601TZ" href="#stdISO8601TZ">const stdISO8601TZ</a>
+alpha and omega are the beginning and end of time for zone transitions. 
+
+### <a id="daysPer100Years" href="#daysPer100Years">const daysPer100Years</a>
 
 ```
-searchKey: time.stdISO8601TZ
-tags: [private]
-```
-
-```Go
-const stdISO8601TZ // "Z0700"  // prints Z for UTC
-
-```
-
-### <a id="stdISO8601SecondsTZ" href="#stdISO8601SecondsTZ">const stdISO8601SecondsTZ</a>
-
-```
-searchKey: time.stdISO8601SecondsTZ
-tags: [private]
+searchKey: time.daysPer100Years
+tags: [constant number private]
 ```
 
 ```Go
-const stdISO8601SecondsTZ // "Z070000"
-
+const daysPer100Years = 365*100 + 24
 ```
 
-### <a id="stdISO8601ShortTZ" href="#stdISO8601ShortTZ">const stdISO8601ShortTZ</a>
+### <a id="daysPer400Years" href="#daysPer400Years">const daysPer400Years</a>
 
 ```
-searchKey: time.stdISO8601ShortTZ
-tags: [private]
-```
-
-```Go
-const stdISO8601ShortTZ // "Z07"
-
-```
-
-### <a id="stdISO8601ColonTZ" href="#stdISO8601ColonTZ">const stdISO8601ColonTZ</a>
-
-```
-searchKey: time.stdISO8601ColonTZ
-tags: [private]
+searchKey: time.daysPer400Years
+tags: [constant number private]
 ```
 
 ```Go
-const stdISO8601ColonTZ // "Z07:00" // prints Z for UTC
-
+const daysPer400Years = 365*400 + 97
 ```
 
-### <a id="stdISO8601ColonSecondsTZ" href="#stdISO8601ColonSecondsTZ">const stdISO8601ColonSecondsTZ</a>
+### <a id="daysPer4Years" href="#daysPer4Years">const daysPer4Years</a>
 
 ```
-searchKey: time.stdISO8601ColonSecondsTZ
-tags: [private]
-```
-
-```Go
-const stdISO8601ColonSecondsTZ // "Z07:00:00"
-
-```
-
-### <a id="stdNumTZ" href="#stdNumTZ">const stdNumTZ</a>
-
-```
-searchKey: time.stdNumTZ
-tags: [private]
+searchKey: time.daysPer4Years
+tags: [constant number private]
 ```
 
 ```Go
-const stdNumTZ // "-0700"  // always numeric
-
-```
-
-### <a id="stdNumSecondsTz" href="#stdNumSecondsTz">const stdNumSecondsTz</a>
-
-```
-searchKey: time.stdNumSecondsTz
-tags: [private]
-```
-
-```Go
-const stdNumSecondsTz // "-070000"
-
-```
-
-### <a id="stdNumShortTZ" href="#stdNumShortTZ">const stdNumShortTZ</a>
-
-```
-searchKey: time.stdNumShortTZ
-tags: [private]
-```
-
-```Go
-const stdNumShortTZ // "-07"    // always numeric
-
-```
-
-### <a id="stdNumColonTZ" href="#stdNumColonTZ">const stdNumColonTZ</a>
-
-```
-searchKey: time.stdNumColonTZ
-tags: [private]
-```
-
-```Go
-const stdNumColonTZ // "-07:00" // always numeric
-
-```
-
-### <a id="stdNumColonSecondsTZ" href="#stdNumColonSecondsTZ">const stdNumColonSecondsTZ</a>
-
-```
-searchKey: time.stdNumColonSecondsTZ
-tags: [private]
-```
-
-```Go
-const stdNumColonSecondsTZ // "-07:00:00"
-
-```
-
-### <a id="stdFracSecond0" href="#stdFracSecond0">const stdFracSecond0</a>
-
-```
-searchKey: time.stdFracSecond0
-tags: [private]
-```
-
-```Go
-const stdFracSecond0 // ".0", ".00", ... , trailing zeros included
-
-```
-
-### <a id="stdFracSecond9" href="#stdFracSecond9">const stdFracSecond9</a>
-
-```
-searchKey: time.stdFracSecond9
-tags: [private]
-```
-
-```Go
-const stdFracSecond9 // ".9", ".99", ..., trailing zeros omitted
-
-```
-
-### <a id="stdNeedDate" href="#stdNeedDate">const stdNeedDate</a>
-
-```
-searchKey: time.stdNeedDate
-tags: [private]
-```
-
-```Go
-const stdNeedDate = 1 << 8 // need month, day, year
-
-```
-
-### <a id="stdNeedClock" href="#stdNeedClock">const stdNeedClock</a>
-
-```
-searchKey: time.stdNeedClock
-tags: [private]
-```
-
-```Go
-const stdNeedClock = 2 << 8 // need hour, minute, second
-
-```
-
-### <a id="stdArgShift" href="#stdArgShift">const stdArgShift</a>
-
-```
-searchKey: time.stdArgShift
-tags: [private]
-```
-
-```Go
-const stdArgShift = 16 // extra argument in high bits, above low stdArgShift
-
-```
-
-### <a id="stdMask" href="#stdMask">const stdMask</a>
-
-```
-searchKey: time.stdMask
-tags: [private]
-```
-
-```Go
-const stdMask = 1<<stdArgShift - 1 // mask out argument
-
-```
-
-### <a id="runeSelf" href="#runeSelf">const runeSelf</a>
-
-```
-searchKey: time.runeSelf
-tags: [private]
-```
-
-```Go
-const runeSelf = 0x80
-```
-
-These are borrowed from unicode/utf8 and strconv and replicate behavior in that package, since we can't take a dependency on either. 
-
-### <a id="lowerhex" href="#lowerhex">const lowerhex</a>
-
-```
-searchKey: time.lowerhex
-tags: [private]
-```
-
-```Go
-const lowerhex = "0123456789abcdef"
+const daysPer4Years = 365*4 + 1
 ```
 
 ### <a id="hasMonotonic" href="#hasMonotonic">const hasMonotonic</a>
 
 ```
 searchKey: time.hasMonotonic
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
 const hasMonotonic = 1 << 63
 ```
 
+### <a id="internalToAbsolute" href="#internalToAbsolute">const internalToAbsolute</a>
+
+```
+searchKey: time.internalToAbsolute
+tags: [constant number private]
+```
+
+```Go
+const internalToAbsolute = -absoluteToInternal
+```
+
+### <a id="internalToUnix" href="#internalToUnix">const internalToUnix</a>
+
+```
+searchKey: time.internalToUnix
+tags: [constant number private]
+```
+
+```Go
+const internalToUnix int64 = -unixToInternal
+```
+
+### <a id="internalToWall" href="#internalToWall">const internalToWall</a>
+
+```
+searchKey: time.internalToWall
+tags: [constant number private]
+```
+
+```Go
+const internalToWall int64 = -wallToInternal
+```
+
+### <a id="internalYear" href="#internalYear">const internalYear</a>
+
+```
+searchKey: time.internalYear
+tags: [constant number private]
+```
+
+```Go
+const internalYear = 1
+```
+
+The year of the zero Time. Assumed by the unixToInternal computation below. 
+
+### <a id="lowerhex" href="#lowerhex">const lowerhex</a>
+
+```
+searchKey: time.lowerhex
+tags: [constant string private]
+```
+
+```Go
+const lowerhex = "0123456789abcdef"
+```
+
+### <a id="maxDuration" href="#maxDuration">const maxDuration</a>
+
+```
+searchKey: time.maxDuration
+tags: [constant number private]
+```
+
+```Go
+const maxDuration Duration = 1<<63 - 1
+```
+
+### <a id="maxFileSize" href="#maxFileSize">const maxFileSize</a>
+
+```
+searchKey: time.maxFileSize
+tags: [constant number private]
+```
+
+```Go
+const maxFileSize = 10 << 20
+```
+
+maxFileSize is the max permitted size of files read by readFile. As reference, the zoneinfo.zip distributed by Go is ~350 KB, so 10MB is overkill. 
+
 ### <a id="maxWall" href="#maxWall">const maxWall</a>
 
 ```
 searchKey: time.maxWall
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -2038,11 +2135,22 @@ const maxWall = wallToInternal + (1<<33 - 1) // year 2157
 
 ```
 
+### <a id="minDuration" href="#minDuration">const minDuration</a>
+
+```
+searchKey: time.minDuration
+tags: [constant number private]
+```
+
+```Go
+const minDuration Duration = -1 << 63
+```
+
 ### <a id="minWall" href="#minWall">const minWall</a>
 
 ```
 searchKey: time.minWall
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -2054,7 +2162,7 @@ const minWall = wallToInternal // year 1885
 
 ```
 searchKey: time.nsecMask
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -2065,582 +2173,18 @@ const nsecMask = 1<<30 - 1
 
 ```
 searchKey: time.nsecShift
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
 const nsecShift = 30
 ```
 
-### <a id="January" href="#January">const January</a>
-
-```
-searchKey: time.January
-```
-
-```Go
-const January Month = 1 + iota
-```
-
-### <a id="February" href="#February">const February</a>
-
-```
-searchKey: time.February
-```
-
-```Go
-const February
-```
-
-### <a id="March" href="#March">const March</a>
-
-```
-searchKey: time.March
-```
-
-```Go
-const March
-```
-
-### <a id="April" href="#April">const April</a>
-
-```
-searchKey: time.April
-```
-
-```Go
-const April
-```
-
-### <a id="May" href="#May">const May</a>
-
-```
-searchKey: time.May
-```
-
-```Go
-const May
-```
-
-### <a id="June" href="#June">const June</a>
-
-```
-searchKey: time.June
-```
-
-```Go
-const June
-```
-
-### <a id="July" href="#July">const July</a>
-
-```
-searchKey: time.July
-```
-
-```Go
-const July
-```
-
-### <a id="August" href="#August">const August</a>
-
-```
-searchKey: time.August
-```
-
-```Go
-const August
-```
-
-### <a id="September" href="#September">const September</a>
-
-```
-searchKey: time.September
-```
-
-```Go
-const September
-```
-
-### <a id="October" href="#October">const October</a>
-
-```
-searchKey: time.October
-```
-
-```Go
-const October
-```
-
-### <a id="November" href="#November">const November</a>
-
-```
-searchKey: time.November
-```
-
-```Go
-const November
-```
-
-### <a id="December" href="#December">const December</a>
-
-```
-searchKey: time.December
-```
-
-```Go
-const December
-```
-
-### <a id="Sunday" href="#Sunday">const Sunday</a>
-
-```
-searchKey: time.Sunday
-```
-
-```Go
-const Sunday Weekday = iota
-```
-
-### <a id="Monday" href="#Monday">const Monday</a>
-
-```
-searchKey: time.Monday
-```
-
-```Go
-const Monday
-```
-
-### <a id="Tuesday" href="#Tuesday">const Tuesday</a>
-
-```
-searchKey: time.Tuesday
-```
-
-```Go
-const Tuesday
-```
-
-### <a id="Wednesday" href="#Wednesday">const Wednesday</a>
-
-```
-searchKey: time.Wednesday
-```
-
-```Go
-const Wednesday
-```
-
-### <a id="Thursday" href="#Thursday">const Thursday</a>
-
-```
-searchKey: time.Thursday
-```
-
-```Go
-const Thursday
-```
-
-### <a id="Friday" href="#Friday">const Friday</a>
-
-```
-searchKey: time.Friday
-```
-
-```Go
-const Friday
-```
-
-### <a id="Saturday" href="#Saturday">const Saturday</a>
-
-```
-searchKey: time.Saturday
-```
-
-```Go
-const Saturday
-```
-
-### <a id="absoluteZeroYear" href="#absoluteZeroYear">const absoluteZeroYear</a>
-
-```
-searchKey: time.absoluteZeroYear
-tags: [private]
-```
-
-```Go
-const absoluteZeroYear = -292277022399
-```
-
-The unsigned zero year for internal calculations. Must be 1 mod 400, and times before it will not compute correctly, but otherwise can be changed at will. 
-
-### <a id="internalYear" href="#internalYear">const internalYear</a>
-
-```
-searchKey: time.internalYear
-tags: [private]
-```
-
-```Go
-const internalYear = 1
-```
-
-The year of the zero Time. Assumed by the unixToInternal computation below. 
-
-### <a id="absoluteToInternal" href="#absoluteToInternal">const absoluteToInternal</a>
-
-```
-searchKey: time.absoluteToInternal
-tags: [private]
-```
-
-```Go
-const absoluteToInternal int64 = (absoluteZeroYear - internalYear) * 365.2425 * secondsPerDay
-```
-
-Offsets to convert between internal and absolute or Unix times. 
-
-### <a id="internalToAbsolute" href="#internalToAbsolute">const internalToAbsolute</a>
-
-```
-searchKey: time.internalToAbsolute
-tags: [private]
-```
-
-```Go
-const internalToAbsolute = -absoluteToInternal
-```
-
-### <a id="unixToInternal" href="#unixToInternal">const unixToInternal</a>
-
-```
-searchKey: time.unixToInternal
-tags: [private]
-```
-
-```Go
-const unixToInternal int64 = (1969*365 + 1969/4 - 1969/100 + 1969/400) * secondsPerDay
-```
-
-### <a id="internalToUnix" href="#internalToUnix">const internalToUnix</a>
-
-```
-searchKey: time.internalToUnix
-tags: [private]
-```
-
-```Go
-const internalToUnix int64 = -unixToInternal
-```
-
-### <a id="wallToInternal" href="#wallToInternal">const wallToInternal</a>
-
-```
-searchKey: time.wallToInternal
-tags: [private]
-```
-
-```Go
-const wallToInternal int64 = (1884*365 + 1884/4 - 1884/100 + 1884/400) * secondsPerDay
-```
-
-### <a id="internalToWall" href="#internalToWall">const internalToWall</a>
-
-```
-searchKey: time.internalToWall
-tags: [private]
-```
-
-```Go
-const internalToWall int64 = -wallToInternal
-```
-
-### <a id="minDuration" href="#minDuration">const minDuration</a>
-
-```
-searchKey: time.minDuration
-tags: [private]
-```
-
-```Go
-const minDuration Duration = -1 << 63
-```
-
-### <a id="maxDuration" href="#maxDuration">const maxDuration</a>
-
-```
-searchKey: time.maxDuration
-tags: [private]
-```
-
-```Go
-const maxDuration Duration = 1<<63 - 1
-```
-
-### <a id="Nanosecond" href="#Nanosecond">const Nanosecond</a>
-
-```
-searchKey: time.Nanosecond
-```
-
-```Go
-const Nanosecond Duration = 1
-```
-
-Common durations. There is no definition for units of Day or larger to avoid confusion across daylight savings time zone transitions. 
-
-To count the number of units in a Duration, divide: 
-
-```
-second := time.Second
-fmt.Print(int64(second/time.Millisecond)) // prints 1000
-
-```
-To convert an integer number of units to a Duration, multiply: 
-
-```
-seconds := 10
-fmt.Print(time.Duration(seconds)*time.Second) // prints 10s
-
-```
-### <a id="Microsecond" href="#Microsecond">const Microsecond</a>
-
-```
-searchKey: time.Microsecond
-```
-
-```Go
-const Microsecond = 1000 * Nanosecond
-```
-
-Common durations. There is no definition for units of Day or larger to avoid confusion across daylight savings time zone transitions. 
-
-To count the number of units in a Duration, divide: 
-
-```
-second := time.Second
-fmt.Print(int64(second/time.Millisecond)) // prints 1000
-
-```
-To convert an integer number of units to a Duration, multiply: 
-
-```
-seconds := 10
-fmt.Print(time.Duration(seconds)*time.Second) // prints 10s
-
-```
-### <a id="Millisecond" href="#Millisecond">const Millisecond</a>
-
-```
-searchKey: time.Millisecond
-```
-
-```Go
-const Millisecond = 1000 * Microsecond
-```
-
-Common durations. There is no definition for units of Day or larger to avoid confusion across daylight savings time zone transitions. 
-
-To count the number of units in a Duration, divide: 
-
-```
-second := time.Second
-fmt.Print(int64(second/time.Millisecond)) // prints 1000
-
-```
-To convert an integer number of units to a Duration, multiply: 
-
-```
-seconds := 10
-fmt.Print(time.Duration(seconds)*time.Second) // prints 10s
-
-```
-### <a id="Second" href="#Second">const Second</a>
-
-```
-searchKey: time.Second
-```
-
-```Go
-const Second = 1000 * Millisecond
-```
-
-Common durations. There is no definition for units of Day or larger to avoid confusion across daylight savings time zone transitions. 
-
-To count the number of units in a Duration, divide: 
-
-```
-second := time.Second
-fmt.Print(int64(second/time.Millisecond)) // prints 1000
-
-```
-To convert an integer number of units to a Duration, multiply: 
-
-```
-seconds := 10
-fmt.Print(time.Duration(seconds)*time.Second) // prints 10s
-
-```
-### <a id="Minute" href="#Minute">const Minute</a>
-
-```
-searchKey: time.Minute
-```
-
-```Go
-const Minute = 60 * Second
-```
-
-Common durations. There is no definition for units of Day or larger to avoid confusion across daylight savings time zone transitions. 
-
-To count the number of units in a Duration, divide: 
-
-```
-second := time.Second
-fmt.Print(int64(second/time.Millisecond)) // prints 1000
-
-```
-To convert an integer number of units to a Duration, multiply: 
-
-```
-seconds := 10
-fmt.Print(time.Duration(seconds)*time.Second) // prints 10s
-
-```
-### <a id="Hour" href="#Hour">const Hour</a>
-
-```
-searchKey: time.Hour
-```
-
-```Go
-const Hour = 60 * Minute
-```
-
-Common durations. There is no definition for units of Day or larger to avoid confusion across daylight savings time zone transitions. 
-
-To count the number of units in a Duration, divide: 
-
-```
-second := time.Second
-fmt.Print(int64(second/time.Millisecond)) // prints 1000
-
-```
-To convert an integer number of units to a Duration, multiply: 
-
-```
-seconds := 10
-fmt.Print(time.Duration(seconds)*time.Second) // prints 10s
-
-```
-### <a id="secondsPerMinute" href="#secondsPerMinute">const secondsPerMinute</a>
-
-```
-searchKey: time.secondsPerMinute
-tags: [private]
-```
-
-```Go
-const secondsPerMinute = 60
-```
-
-### <a id="secondsPerHour" href="#secondsPerHour">const secondsPerHour</a>
-
-```
-searchKey: time.secondsPerHour
-tags: [private]
-```
-
-```Go
-const secondsPerHour = 60 * secondsPerMinute
-```
-
-### <a id="secondsPerDay" href="#secondsPerDay">const secondsPerDay</a>
-
-```
-searchKey: time.secondsPerDay
-tags: [private]
-```
-
-```Go
-const secondsPerDay = 24 * secondsPerHour
-```
-
-### <a id="secondsPerWeek" href="#secondsPerWeek">const secondsPerWeek</a>
-
-```
-searchKey: time.secondsPerWeek
-tags: [private]
-```
-
-```Go
-const secondsPerWeek = 7 * secondsPerDay
-```
-
-### <a id="daysPer400Years" href="#daysPer400Years">const daysPer400Years</a>
-
-```
-searchKey: time.daysPer400Years
-tags: [private]
-```
-
-```Go
-const daysPer400Years = 365*400 + 97
-```
-
-### <a id="daysPer100Years" href="#daysPer100Years">const daysPer100Years</a>
-
-```
-searchKey: time.daysPer100Years
-tags: [private]
-```
-
-```Go
-const daysPer100Years = 365*100 + 24
-```
-
-### <a id="daysPer4Years" href="#daysPer4Years">const daysPer4Years</a>
-
-```
-searchKey: time.daysPer4Years
-tags: [private]
-```
-
-```Go
-const daysPer4Years = 365*4 + 1
-```
-
-### <a id="timeBinaryVersion" href="#timeBinaryVersion">const timeBinaryVersion</a>
-
-```
-searchKey: time.timeBinaryVersion
-tags: [private]
-```
-
-```Go
-const timeBinaryVersion byte = 1
-```
-
-### <a id="alpha" href="#alpha">const alpha</a>
-
-```
-searchKey: time.alpha
-tags: [private]
-```
-
-```Go
-const alpha = -1 << 63 // math.MinInt64
-
-```
-
-alpha and omega are the beginning and end of time for zone transitions. 
-
 ### <a id="omega" href="#omega">const omega</a>
 
 ```
 searchKey: time.omega
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -2650,70 +2194,101 @@ const omega = 1<<63 - 1 // math.MaxInt64
 
 alpha and omega are the beginning and end of time for zone transitions. 
 
-### <a id="ruleJulian" href="#ruleJulian">const ruleJulian</a>
-
-```
-searchKey: time.ruleJulian
-tags: [private]
-```
-
-```Go
-const ruleJulian ruleKind = iota
-```
-
 ### <a id="ruleDOY" href="#ruleDOY">const ruleDOY</a>
 
 ```
 searchKey: time.ruleDOY
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
 const ruleDOY
 ```
 
+### <a id="ruleJulian" href="#ruleJulian">const ruleJulian</a>
+
+```
+searchKey: time.ruleJulian
+tags: [constant number private]
+```
+
+```Go
+const ruleJulian ruleKind = iota
+```
+
 ### <a id="ruleMonthWeekDay" href="#ruleMonthWeekDay">const ruleMonthWeekDay</a>
 
 ```
 searchKey: time.ruleMonthWeekDay
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
 const ruleMonthWeekDay
 ```
 
-### <a id="maxFileSize" href="#maxFileSize">const maxFileSize</a>
+### <a id="runeSelf" href="#runeSelf">const runeSelf</a>
 
 ```
-searchKey: time.maxFileSize
-tags: [private]
-```
-
-```Go
-const maxFileSize = 10 << 20
-```
-
-maxFileSize is the max permitted size of files read by readFile. As reference, the zoneinfo.zip distributed by Go is ~350 KB, so 10MB is overkill. 
-
-### <a id="seekStart" href="#seekStart">const seekStart</a>
-
-```
-searchKey: time.seekStart
-tags: [private]
+searchKey: time.runeSelf
+tags: [constant number private]
 ```
 
 ```Go
-const seekStart = 0
+const runeSelf = 0x80
 ```
 
-Copies of io.Seek* constants to avoid importing "io": 
+These are borrowed from unicode/utf8 and strconv and replicate behavior in that package, since we can't take a dependency on either. 
+
+### <a id="secondsPerDay" href="#secondsPerDay">const secondsPerDay</a>
+
+```
+searchKey: time.secondsPerDay
+tags: [constant number private]
+```
+
+```Go
+const secondsPerDay = 24 * secondsPerHour
+```
+
+### <a id="secondsPerHour" href="#secondsPerHour">const secondsPerHour</a>
+
+```
+searchKey: time.secondsPerHour
+tags: [constant number private]
+```
+
+```Go
+const secondsPerHour = 60 * secondsPerMinute
+```
+
+### <a id="secondsPerMinute" href="#secondsPerMinute">const secondsPerMinute</a>
+
+```
+searchKey: time.secondsPerMinute
+tags: [constant number private]
+```
+
+```Go
+const secondsPerMinute = 60
+```
+
+### <a id="secondsPerWeek" href="#secondsPerWeek">const secondsPerWeek</a>
+
+```
+searchKey: time.secondsPerWeek
+tags: [constant number private]
+```
+
+```Go
+const secondsPerWeek = 7 * secondsPerDay
+```
 
 ### <a id="seekCurrent" href="#seekCurrent">const seekCurrent</a>
 
 ```
 searchKey: time.seekCurrent
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -2726,7 +2301,7 @@ Copies of io.Seek* constants to avoid importing "io":
 
 ```
 searchKey: time.seekEnd
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -2735,81 +2310,912 @@ const seekEnd = 2
 
 Copies of io.Seek* constants to avoid importing "io": 
 
-### <a id="RuleJulian" href="#RuleJulian">const RuleJulian</a>
+### <a id="seekStart" href="#seekStart">const seekStart</a>
 
 ```
-searchKey: time.RuleJulian
-tags: [private]
-```
-
-```Go
-const RuleJulian = RuleKind(ruleJulian)
-```
-
-### <a id="RuleDOY" href="#RuleDOY">const RuleDOY</a>
-
-```
-searchKey: time.RuleDOY
-tags: [private]
+searchKey: time.seekStart
+tags: [constant number private]
 ```
 
 ```Go
-const RuleDOY = RuleKind(ruleDOY)
+const seekStart = 0
 ```
 
-### <a id="RuleMonthWeekDay" href="#RuleMonthWeekDay">const RuleMonthWeekDay</a>
+Copies of io.Seek* constants to avoid importing "io": 
+
+### <a id="stdArgShift" href="#stdArgShift">const stdArgShift</a>
 
 ```
-searchKey: time.RuleMonthWeekDay
-tags: [private]
-```
-
-```Go
-const RuleMonthWeekDay = RuleKind(ruleMonthWeekDay)
-```
-
-### <a id="UnixToInternal" href="#UnixToInternal">const UnixToInternal</a>
-
-```
-searchKey: time.UnixToInternal
-tags: [private]
+searchKey: time.stdArgShift
+tags: [constant number private]
 ```
 
 ```Go
-const UnixToInternal = unixToInternal
+const stdArgShift = 16 // extra argument in high bits, above low stdArgShift
+
+```
+
+### <a id="stdDay" href="#stdDay">const stdDay</a>
+
+```
+searchKey: time.stdDay
+tags: [constant number private]
+```
+
+```Go
+const stdDay // "2"
+
+```
+
+### <a id="stdFracSecond0" href="#stdFracSecond0">const stdFracSecond0</a>
+
+```
+searchKey: time.stdFracSecond0
+tags: [constant number private]
+```
+
+```Go
+const stdFracSecond0 // ".0", ".00", ... , trailing zeros included
+
+```
+
+### <a id="stdFracSecond9" href="#stdFracSecond9">const stdFracSecond9</a>
+
+```
+searchKey: time.stdFracSecond9
+tags: [constant number private]
+```
+
+```Go
+const stdFracSecond9 // ".9", ".99", ..., trailing zeros omitted
+
+```
+
+### <a id="stdHour" href="#stdHour">const stdHour</a>
+
+```
+searchKey: time.stdHour
+tags: [constant number private]
+```
+
+```Go
+const stdHour = iota + stdNeedClock // "15"
+
+```
+
+### <a id="stdHour12" href="#stdHour12">const stdHour12</a>
+
+```
+searchKey: time.stdHour12
+tags: [constant number private]
+```
+
+```Go
+const stdHour12 // "3"
+
+```
+
+### <a id="stdISO8601ColonSecondsTZ" href="#stdISO8601ColonSecondsTZ">const stdISO8601ColonSecondsTZ</a>
+
+```
+searchKey: time.stdISO8601ColonSecondsTZ
+tags: [constant number private]
+```
+
+```Go
+const stdISO8601ColonSecondsTZ // "Z07:00:00"
+
+```
+
+### <a id="stdISO8601ColonTZ" href="#stdISO8601ColonTZ">const stdISO8601ColonTZ</a>
+
+```
+searchKey: time.stdISO8601ColonTZ
+tags: [constant number private]
+```
+
+```Go
+const stdISO8601ColonTZ // "Z07:00" // prints Z for UTC
+
+```
+
+### <a id="stdISO8601SecondsTZ" href="#stdISO8601SecondsTZ">const stdISO8601SecondsTZ</a>
+
+```
+searchKey: time.stdISO8601SecondsTZ
+tags: [constant number private]
+```
+
+```Go
+const stdISO8601SecondsTZ // "Z070000"
+
+```
+
+### <a id="stdISO8601ShortTZ" href="#stdISO8601ShortTZ">const stdISO8601ShortTZ</a>
+
+```
+searchKey: time.stdISO8601ShortTZ
+tags: [constant number private]
+```
+
+```Go
+const stdISO8601ShortTZ // "Z07"
+
+```
+
+### <a id="stdISO8601TZ" href="#stdISO8601TZ">const stdISO8601TZ</a>
+
+```
+searchKey: time.stdISO8601TZ
+tags: [constant number private]
+```
+
+```Go
+const stdISO8601TZ // "Z0700"  // prints Z for UTC
+
+```
+
+### <a id="stdLongMonth" href="#stdLongMonth">const stdLongMonth</a>
+
+```
+searchKey: time.stdLongMonth
+tags: [constant number private]
+```
+
+```Go
+const stdLongMonth = iota + stdNeedDate // "January"
+
+```
+
+### <a id="stdLongWeekDay" href="#stdLongWeekDay">const stdLongWeekDay</a>
+
+```
+searchKey: time.stdLongWeekDay
+tags: [constant number private]
+```
+
+```Go
+const stdLongWeekDay // "Monday"
+
+```
+
+### <a id="stdLongYear" href="#stdLongYear">const stdLongYear</a>
+
+```
+searchKey: time.stdLongYear
+tags: [constant number private]
+```
+
+```Go
+const stdLongYear = iota + stdNeedDate // "2006"
+
+```
+
+### <a id="stdMask" href="#stdMask">const stdMask</a>
+
+```
+searchKey: time.stdMask
+tags: [constant number private]
+```
+
+```Go
+const stdMask = 1<<stdArgShift - 1 // mask out argument
+
+```
+
+### <a id="stdMinute" href="#stdMinute">const stdMinute</a>
+
+```
+searchKey: time.stdMinute
+tags: [constant number private]
+```
+
+```Go
+const stdMinute // "4"
+
+```
+
+### <a id="stdMonth" href="#stdMonth">const stdMonth</a>
+
+```
+searchKey: time.stdMonth
+tags: [constant number private]
+```
+
+```Go
+const stdMonth // "Jan"
+
+```
+
+### <a id="stdNeedClock" href="#stdNeedClock">const stdNeedClock</a>
+
+```
+searchKey: time.stdNeedClock
+tags: [constant number private]
+```
+
+```Go
+const stdNeedClock = 2 << 8 // need hour, minute, second
+
+```
+
+### <a id="stdNeedDate" href="#stdNeedDate">const stdNeedDate</a>
+
+```
+searchKey: time.stdNeedDate
+tags: [constant number private]
+```
+
+```Go
+const stdNeedDate = 1 << 8 // need month, day, year
+
+```
+
+### <a id="stdNumColonSecondsTZ" href="#stdNumColonSecondsTZ">const stdNumColonSecondsTZ</a>
+
+```
+searchKey: time.stdNumColonSecondsTZ
+tags: [constant number private]
+```
+
+```Go
+const stdNumColonSecondsTZ // "-07:00:00"
+
+```
+
+### <a id="stdNumColonTZ" href="#stdNumColonTZ">const stdNumColonTZ</a>
+
+```
+searchKey: time.stdNumColonTZ
+tags: [constant number private]
+```
+
+```Go
+const stdNumColonTZ // "-07:00" // always numeric
+
+```
+
+### <a id="stdNumMonth" href="#stdNumMonth">const stdNumMonth</a>
+
+```
+searchKey: time.stdNumMonth
+tags: [constant number private]
+```
+
+```Go
+const stdNumMonth // "1"
+
+```
+
+### <a id="stdNumSecondsTz" href="#stdNumSecondsTz">const stdNumSecondsTz</a>
+
+```
+searchKey: time.stdNumSecondsTz
+tags: [constant number private]
+```
+
+```Go
+const stdNumSecondsTz // "-070000"
+
+```
+
+### <a id="stdNumShortTZ" href="#stdNumShortTZ">const stdNumShortTZ</a>
+
+```
+searchKey: time.stdNumShortTZ
+tags: [constant number private]
+```
+
+```Go
+const stdNumShortTZ // "-07"    // always numeric
+
+```
+
+### <a id="stdNumTZ" href="#stdNumTZ">const stdNumTZ</a>
+
+```
+searchKey: time.stdNumTZ
+tags: [constant number private]
+```
+
+```Go
+const stdNumTZ // "-0700"  // always numeric
+
+```
+
+### <a id="stdPM" href="#stdPM">const stdPM</a>
+
+```
+searchKey: time.stdPM
+tags: [constant number private]
+```
+
+```Go
+const stdPM = iota + stdNeedClock // "PM"
+
+```
+
+### <a id="stdSecond" href="#stdSecond">const stdSecond</a>
+
+```
+searchKey: time.stdSecond
+tags: [constant number private]
+```
+
+```Go
+const stdSecond // "5"
+
+```
+
+### <a id="stdTZ" href="#stdTZ">const stdTZ</a>
+
+```
+searchKey: time.stdTZ
+tags: [constant number private]
+```
+
+```Go
+const stdTZ = iota // "MST"
+
+```
+
+### <a id="stdUnderDay" href="#stdUnderDay">const stdUnderDay</a>
+
+```
+searchKey: time.stdUnderDay
+tags: [constant number private]
+```
+
+```Go
+const stdUnderDay // "_2"
+
+```
+
+### <a id="stdUnderYearDay" href="#stdUnderYearDay">const stdUnderYearDay</a>
+
+```
+searchKey: time.stdUnderYearDay
+tags: [constant number private]
+```
+
+```Go
+const stdUnderYearDay // "__2"
+
+```
+
+### <a id="stdWeekDay" href="#stdWeekDay">const stdWeekDay</a>
+
+```
+searchKey: time.stdWeekDay
+tags: [constant number private]
+```
+
+```Go
+const stdWeekDay // "Mon"
+
+```
+
+### <a id="stdYear" href="#stdYear">const stdYear</a>
+
+```
+searchKey: time.stdYear
+tags: [constant number private]
+```
+
+```Go
+const stdYear // "06"
+
+```
+
+### <a id="stdZeroDay" href="#stdZeroDay">const stdZeroDay</a>
+
+```
+searchKey: time.stdZeroDay
+tags: [constant number private]
+```
+
+```Go
+const stdZeroDay // "02"
+
+```
+
+### <a id="stdZeroHour12" href="#stdZeroHour12">const stdZeroHour12</a>
+
+```
+searchKey: time.stdZeroHour12
+tags: [constant number private]
+```
+
+```Go
+const stdZeroHour12 // "03"
+
+```
+
+### <a id="stdZeroMinute" href="#stdZeroMinute">const stdZeroMinute</a>
+
+```
+searchKey: time.stdZeroMinute
+tags: [constant number private]
+```
+
+```Go
+const stdZeroMinute // "04"
+
+```
+
+### <a id="stdZeroMonth" href="#stdZeroMonth">const stdZeroMonth</a>
+
+```
+searchKey: time.stdZeroMonth
+tags: [constant number private]
+```
+
+```Go
+const stdZeroMonth // "01"
+
+```
+
+### <a id="stdZeroSecond" href="#stdZeroSecond">const stdZeroSecond</a>
+
+```
+searchKey: time.stdZeroSecond
+tags: [constant number private]
+```
+
+```Go
+const stdZeroSecond // "05"
+
+```
+
+### <a id="stdZeroYearDay" href="#stdZeroYearDay">const stdZeroYearDay</a>
+
+```
+searchKey: time.stdZeroYearDay
+tags: [constant number private]
+```
+
+```Go
+const stdZeroYearDay // "002"
+
+```
+
+### <a id="stdpm" href="#stdpm">const stdpm</a>
+
+```
+searchKey: time.stdpm
+tags: [constant number private]
+```
+
+```Go
+const stdpm // "pm"
+
+```
+
+### <a id="timeBinaryVersion" href="#timeBinaryVersion">const timeBinaryVersion</a>
+
+```
+searchKey: time.timeBinaryVersion
+tags: [constant number private]
+```
+
+```Go
+const timeBinaryVersion byte = 1
+```
+
+### <a id="unixToInternal" href="#unixToInternal">const unixToInternal</a>
+
+```
+searchKey: time.unixToInternal
+tags: [constant number private]
+```
+
+```Go
+const unixToInternal int64 = (1969*365 + 1969/4 - 1969/100 + 1969/400) * secondsPerDay
+```
+
+### <a id="wallToInternal" href="#wallToInternal">const wallToInternal</a>
+
+```
+searchKey: time.wallToInternal
+tags: [constant number private]
+```
+
+```Go
+const wallToInternal int64 = (1884*365 + 1884/4 - 1884/100 + 1884/400) * secondsPerDay
 ```
 
 ## <a id="var" href="#var">Variables</a>
 
-### <a id="std0x" href="#std0x">var std0x</a>
+```
+tags: [package]
+```
+
+### <a id="DaysIn" href="#DaysIn">var DaysIn</a>
 
 ```
-searchKey: time.std0x
-tags: [private]
+searchKey: time.DaysIn
+tags: [variable function private]
 ```
 
 ```Go
-var std0x = [...]int{stdZeroMonth, stdZeroDay, stdZeroHour12, stdZeroMinute, stdZeroSecond, stdYear}
+var DaysIn = daysIn
 ```
 
-std0x records the std values for "01", "02", ..., "06". 
+### <a id="ErrLocation" href="#ErrLocation">var ErrLocation</a>
+
+```
+searchKey: time.ErrLocation
+tags: [variable interface private]
+```
+
+```Go
+var ErrLocation = errLocation
+```
+
+### <a id="ForceZipFileForTesting" href="#ForceZipFileForTesting">var ForceZipFileForTesting</a>
+
+```
+searchKey: time.ForceZipFileForTesting
+tags: [variable function private]
+```
+
+```Go
+var ForceZipFileForTesting = forceZipFileForTesting
+```
+
+### <a id="GetMono" href="#GetMono">var GetMono</a>
+
+```
+searchKey: time.GetMono
+tags: [variable function private]
+```
+
+```Go
+var GetMono = (*Time).mono
+```
+
+### <a id="Interrupt" href="#Interrupt">var Interrupt</a>
+
+```
+searchKey: time.Interrupt
+tags: [variable function private]
+```
+
+```Go
+var Interrupt = interrupt
+```
+
+### <a id="LoadTzinfo" href="#LoadTzinfo">var LoadTzinfo</a>
+
+```
+searchKey: time.LoadTzinfo
+tags: [variable function private]
+```
+
+```Go
+var LoadTzinfo = loadTzinfo
+```
+
+### <a id="Local" href="#Local">var Local</a>
+
+```
+searchKey: time.Local
+tags: [variable struct]
+```
+
+```Go
+var Local *Location = &localLoc
+```
+
+Local represents the system's local time zone. On Unix systems, Local consults the TZ environment variable to find the time zone to use. No TZ means use the system default /etc/localtime. TZ="" means use UTC. TZ="foo" means use file foo in the system timezone directory. 
+
+### <a id="MaxMonoTime" href="#MaxMonoTime">var MaxMonoTime</a>
+
+```
+searchKey: time.MaxMonoTime
+tags: [variable struct private]
+```
+
+```Go
+var MaxMonoTime = Time{wall: 1 << 63, ext: 1<<63 - 1, loc: UTC}
+```
+
+### <a id="MinMonoTime" href="#MinMonoTime">var MinMonoTime</a>
+
+```
+searchKey: time.MinMonoTime
+tags: [variable struct private]
+```
+
+```Go
+var MinMonoTime = Time{wall: 1 << 63, ext: -1 << 63, loc: UTC}
+```
+
+### <a id="NextStdChunk" href="#NextStdChunk">var NextStdChunk</a>
+
+```
+searchKey: time.NextStdChunk
+tags: [variable function private]
+```
+
+```Go
+var NextStdChunk = nextStdChunk
+```
+
+### <a id="NotMonoNegativeTime" href="#NotMonoNegativeTime">var NotMonoNegativeTime</a>
+
+```
+searchKey: time.NotMonoNegativeTime
+tags: [variable struct private]
+```
+
+```Go
+var NotMonoNegativeTime = Time{wall: 0, ext: -1<<63 + 50}
+```
+
+### <a id="OrigZoneSources" href="#OrigZoneSources">var OrigZoneSources</a>
+
+```
+searchKey: time.OrigZoneSources
+tags: [variable array string private]
+```
+
+```Go
+var OrigZoneSources = zoneSources
+```
+
+### <a id="ParseTimeZone" href="#ParseTimeZone">var ParseTimeZone</a>
+
+```
+searchKey: time.ParseTimeZone
+tags: [variable function private]
+```
+
+```Go
+var ParseTimeZone = parseTimeZone
+```
+
+### <a id="Quote" href="#Quote">var Quote</a>
+
+```
+searchKey: time.Quote
+tags: [variable function private]
+```
+
+```Go
+var Quote = quote
+```
+
+### <a id="ReadFile" href="#ReadFile">var ReadFile</a>
+
+```
+searchKey: time.ReadFile
+tags: [variable function private]
+```
+
+```Go
+var ReadFile = readFile
+```
+
+### <a id="SetMono" href="#SetMono">var SetMono</a>
+
+```
+searchKey: time.SetMono
+tags: [variable function private]
+```
+
+```Go
+var SetMono = (*Time).setMono
+```
+
+### <a id="StdChunkNames" href="#StdChunkNames">var StdChunkNames</a>
+
+```
+searchKey: time.StdChunkNames
+tags: [variable object private]
+```
+
+```Go
+var StdChunkNames = ...
+```
+
+StdChunkNames maps from nextStdChunk results to the matched strings. 
+
+### <a id="Tzset" href="#Tzset">var Tzset</a>
+
+```
+searchKey: time.Tzset
+tags: [variable function private]
+```
+
+```Go
+var Tzset = tzset
+```
+
+### <a id="TzsetName" href="#TzsetName">var TzsetName</a>
+
+```
+searchKey: time.TzsetName
+tags: [variable function private]
+```
+
+```Go
+var TzsetName = tzsetName
+```
+
+### <a id="TzsetOffset" href="#TzsetOffset">var TzsetOffset</a>
+
+```
+searchKey: time.TzsetOffset
+tags: [variable function private]
+```
+
+```Go
+var TzsetOffset = tzsetOffset
+```
+
+### <a id="UTC" href="#UTC">var UTC</a>
+
+```
+searchKey: time.UTC
+tags: [variable struct]
+```
+
+```Go
+var UTC *Location = &utcLoc
+```
+
+UTC represents Universal Coordinated Time (UTC). 
+
+### <a id="atoiError" href="#atoiError">var atoiError</a>
+
+```
+searchKey: time.atoiError
+tags: [variable interface private]
+```
+
+```Go
+var atoiError = errors.New("time: invalid number")
+```
+
+Never printed, just needs to be non-nil for return by atoi. 
+
+### <a id="badData" href="#badData">var badData</a>
+
+```
+searchKey: time.badData
+tags: [variable interface private]
+```
+
+```Go
+var badData = errors.New("malformed time zone information")
+```
+
+### <a id="daysBefore" href="#daysBefore">var daysBefore</a>
+
+```
+searchKey: time.daysBefore
+tags: [variable array number private]
+```
+
+```Go
+var daysBefore = ...
+```
+
+daysBefore[m] counts the number of days in a non-leap year before month m begins. There is an entry for m=12, counting the number of days before January of next year (365). 
+
+### <a id="errBad" href="#errBad">var errBad</a>
+
+```
+searchKey: time.errBad
+tags: [variable interface private]
+```
+
+```Go
+var errBad = errors.New("bad value for field") // placeholder not passed to user
+
+```
+
+### <a id="errLeadingInt" href="#errLeadingInt">var errLeadingInt</a>
+
+```
+searchKey: time.errLeadingInt
+tags: [variable interface private]
+```
+
+```Go
+var errLeadingInt = errors.New("time: bad [0-9]*") // never printed
+
+```
+
+### <a id="errLocation" href="#errLocation">var errLocation</a>
+
+```
+searchKey: time.errLocation
+tags: [variable interface private]
+```
+
+```Go
+var errLocation = errors.New("time: invalid location name")
+```
+
+### <a id="loadFromEmbeddedTZData" href="#loadFromEmbeddedTZData">var loadFromEmbeddedTZData</a>
+
+```
+searchKey: time.loadFromEmbeddedTZData
+tags: [variable function private]
+```
+
+```Go
+var loadFromEmbeddedTZData func(zipname string) (string, error)
+```
+
+loadFromEmbeddedTZData is used to load a specific tzdata file from tzdata information embedded in the binary itself. This is set when the time/tzdata package is imported, via registerLoadFromEmbeddedTzdata. 
+
+### <a id="loadTzinfoFromTzdata" href="#loadTzinfoFromTzdata">var loadTzinfoFromTzdata</a>
+
+```
+searchKey: time.loadTzinfoFromTzdata
+tags: [variable function private]
+```
+
+```Go
+var loadTzinfoFromTzdata func(file, name string) ([]byte, error)
+```
+
+loadTzinfoFromTzdata returns the time zone information of the time zone with the given name, from a tzdata database file as they are typically found on android. 
+
+### <a id="localLoc" href="#localLoc">var localLoc</a>
+
+```
+searchKey: time.localLoc
+tags: [variable struct private]
+```
+
+```Go
+var localLoc Location
+```
+
+localLoc is separate so that initLocal can initialize it even if a client has changed Local. 
+
+### <a id="localOnce" href="#localOnce">var localOnce</a>
+
+```
+searchKey: time.localOnce
+tags: [variable struct private]
+```
+
+```Go
+var localOnce sync.Once
+```
 
 ### <a id="longDayNames" href="#longDayNames">var longDayNames</a>
 
 ```
 searchKey: time.longDayNames
-tags: [private]
+tags: [variable array string private]
 ```
 
 ```Go
 var longDayNames = ...
 ```
 
+### <a id="longMonthNames" href="#longMonthNames">var longMonthNames</a>
+
+```
+searchKey: time.longMonthNames
+tags: [variable array string private]
+```
+
+```Go
+var longMonthNames = ...
+```
+
 ### <a id="shortDayNames" href="#shortDayNames">var shortDayNames</a>
 
 ```
 searchKey: time.shortDayNames
-tags: [private]
+tags: [variable array string private]
 ```
 
 ```Go
@@ -2828,90 +3234,18 @@ var shortDayNames = []string{
 
 ```
 searchKey: time.shortMonthNames
-tags: [private]
+tags: [variable array string private]
 ```
 
 ```Go
 var shortMonthNames = ...
 ```
 
-### <a id="longMonthNames" href="#longMonthNames">var longMonthNames</a>
-
-```
-searchKey: time.longMonthNames
-tags: [private]
-```
-
-```Go
-var longMonthNames = ...
-```
-
-### <a id="atoiError" href="#atoiError">var atoiError</a>
-
-```
-searchKey: time.atoiError
-tags: [private]
-```
-
-```Go
-var atoiError = errors.New("time: invalid number")
-```
-
-Never printed, just needs to be non-nil for return by atoi. 
-
-### <a id="errBad" href="#errBad">var errBad</a>
-
-```
-searchKey: time.errBad
-tags: [private]
-```
-
-```Go
-var errBad = errors.New("bad value for field") // placeholder not passed to user
-
-```
-
-### <a id="errLeadingInt" href="#errLeadingInt">var errLeadingInt</a>
-
-```
-searchKey: time.errLeadingInt
-tags: [private]
-```
-
-```Go
-var errLeadingInt = errors.New("time: bad [0-9]*") // never printed
-
-```
-
-### <a id="unitMap" href="#unitMap">var unitMap</a>
-
-```
-searchKey: time.unitMap
-tags: [private]
-```
-
-```Go
-var unitMap = ...
-```
-
-### <a id="daysBefore" href="#daysBefore">var daysBefore</a>
-
-```
-searchKey: time.daysBefore
-tags: [private]
-```
-
-```Go
-var daysBefore = ...
-```
-
-daysBefore[m] counts the number of days in a non-leap year before month m begins. There is an entry for m=12, counting the number of days before January of next year (365). 
-
 ### <a id="startNano" href="#startNano">var startNano</a>
 
 ```
 searchKey: time.startNano
-tags: [private]
+tags: [variable number private]
 ```
 
 ```Go
@@ -2920,23 +3254,35 @@ var startNano int64 = runtimeNano() - 1
 
 Monotonic times are reported as offsets from startNano. We initialize startNano to runtimeNano() - 1 so that on systems where monotonic time resolution is fairly low (e.g. Windows 2008 which appears to have a default resolution of 15ms), we avoid ever reporting a monotonic time of 0. (Callers may want to use 0 as "time not set".) 
 
-### <a id="UTC" href="#UTC">var UTC</a>
+### <a id="std0x" href="#std0x">var std0x</a>
 
 ```
-searchKey: time.UTC
+searchKey: time.std0x
+tags: [variable array number private]
 ```
 
 ```Go
-var UTC *Location = &utcLoc
+var std0x = [...]int{stdZeroMonth, stdZeroDay, stdZeroHour12, stdZeroMinute, stdZeroSecond, stdYear}
 ```
 
-UTC represents Universal Coordinated Time (UTC). 
+std0x records the std values for "01", "02", ..., "06". 
+
+### <a id="unitMap" href="#unitMap">var unitMap</a>
+
+```
+searchKey: time.unitMap
+tags: [variable object private]
+```
+
+```Go
+var unitMap = ...
+```
 
 ### <a id="utcLoc" href="#utcLoc">var utcLoc</a>
 
 ```
 searchKey: time.utcLoc
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -2945,58 +3291,24 @@ var utcLoc = Location{name: "UTC"}
 
 utcLoc is separate so that get can refer to &utcLoc and ensure that it never returns a nil *Location, even if a badly behaved client has changed UTC. 
 
-### <a id="Local" href="#Local">var Local</a>
+### <a id="zoneSources" href="#zoneSources">var zoneSources</a>
 
 ```
-searchKey: time.Local
-```
-
-```Go
-var Local *Location = &localLoc
-```
-
-Local represents the system's local time zone. On Unix systems, Local consults the TZ environment variable to find the time zone to use. No TZ means use the system default /etc/localtime. TZ="" means use UTC. TZ="foo" means use file foo in the system timezone directory. 
-
-### <a id="localLoc" href="#localLoc">var localLoc</a>
-
-```
-searchKey: time.localLoc
-tags: [private]
+searchKey: time.zoneSources
+tags: [variable array string private]
 ```
 
 ```Go
-var localLoc Location
+var zoneSources = ...
 ```
 
-localLoc is separate so that initLocal can initialize it even if a client has changed Local. 
-
-### <a id="localOnce" href="#localOnce">var localOnce</a>
-
-```
-searchKey: time.localOnce
-tags: [private]
-```
-
-```Go
-var localOnce sync.Once
-```
-
-### <a id="errLocation" href="#errLocation">var errLocation</a>
-
-```
-searchKey: time.errLocation
-tags: [private]
-```
-
-```Go
-var errLocation = errors.New("time: invalid location name")
-```
+Many systems use /usr/share/zoneinfo, Solaris 2 has /usr/share/lib/zoneinfo, IRIX 6 has /usr/lib/locale/TZ. 
 
 ### <a id="zoneinfo" href="#zoneinfo">var zoneinfo</a>
 
 ```
 searchKey: time.zoneinfo
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
@@ -3007,280 +3319,434 @@ var zoneinfo *string
 
 ```
 searchKey: time.zoneinfoOnce
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
 var zoneinfoOnce sync.Once
 ```
 
-### <a id="loadFromEmbeddedTZData" href="#loadFromEmbeddedTZData">var loadFromEmbeddedTZData</a>
-
-```
-searchKey: time.loadFromEmbeddedTZData
-tags: [private]
-```
-
-```Go
-var loadFromEmbeddedTZData func(zipname string) (string, error)
-```
-
-loadFromEmbeddedTZData is used to load a specific tzdata file from tzdata information embedded in the binary itself. This is set when the time/tzdata package is imported, via registerLoadFromEmbeddedTzdata. 
-
-### <a id="badData" href="#badData">var badData</a>
-
-```
-searchKey: time.badData
-tags: [private]
-```
-
-```Go
-var badData = errors.New("malformed time zone information")
-```
-
-### <a id="loadTzinfoFromTzdata" href="#loadTzinfoFromTzdata">var loadTzinfoFromTzdata</a>
-
-```
-searchKey: time.loadTzinfoFromTzdata
-tags: [private]
-```
-
-```Go
-var loadTzinfoFromTzdata func(file, name string) ([]byte, error)
-```
-
-loadTzinfoFromTzdata returns the time zone information of the time zone with the given name, from a tzdata database file as they are typically found on android. 
-
-### <a id="zoneSources" href="#zoneSources">var zoneSources</a>
-
-```
-searchKey: time.zoneSources
-tags: [private]
-```
-
-```Go
-var zoneSources = ...
-```
-
-Many systems use /usr/share/zoneinfo, Solaris 2 has /usr/share/lib/zoneinfo, IRIX 6 has /usr/lib/locale/TZ. 
-
-### <a id="ForceZipFileForTesting" href="#ForceZipFileForTesting">var ForceZipFileForTesting</a>
-
-```
-searchKey: time.ForceZipFileForTesting
-tags: [private]
-```
-
-```Go
-var ForceZipFileForTesting = forceZipFileForTesting
-```
-
-### <a id="ParseTimeZone" href="#ParseTimeZone">var ParseTimeZone</a>
-
-```
-searchKey: time.ParseTimeZone
-tags: [private]
-```
-
-```Go
-var ParseTimeZone = parseTimeZone
-```
-
-### <a id="SetMono" href="#SetMono">var SetMono</a>
-
-```
-searchKey: time.SetMono
-tags: [private]
-```
-
-```Go
-var SetMono = (*Time).setMono
-```
-
-### <a id="GetMono" href="#GetMono">var GetMono</a>
-
-```
-searchKey: time.GetMono
-tags: [private]
-```
-
-```Go
-var GetMono = (*Time).mono
-```
-
-### <a id="ErrLocation" href="#ErrLocation">var ErrLocation</a>
-
-```
-searchKey: time.ErrLocation
-tags: [private]
-```
-
-```Go
-var ErrLocation = errLocation
-```
-
-### <a id="ReadFile" href="#ReadFile">var ReadFile</a>
-
-```
-searchKey: time.ReadFile
-tags: [private]
-```
-
-```Go
-var ReadFile = readFile
-```
-
-### <a id="LoadTzinfo" href="#LoadTzinfo">var LoadTzinfo</a>
-
-```
-searchKey: time.LoadTzinfo
-tags: [private]
-```
-
-```Go
-var LoadTzinfo = loadTzinfo
-```
-
-### <a id="NextStdChunk" href="#NextStdChunk">var NextStdChunk</a>
-
-```
-searchKey: time.NextStdChunk
-tags: [private]
-```
-
-```Go
-var NextStdChunk = nextStdChunk
-```
-
-### <a id="Tzset" href="#Tzset">var Tzset</a>
-
-```
-searchKey: time.Tzset
-tags: [private]
-```
-
-```Go
-var Tzset = tzset
-```
-
-### <a id="TzsetName" href="#TzsetName">var TzsetName</a>
-
-```
-searchKey: time.TzsetName
-tags: [private]
-```
-
-```Go
-var TzsetName = tzsetName
-```
-
-### <a id="TzsetOffset" href="#TzsetOffset">var TzsetOffset</a>
-
-```
-searchKey: time.TzsetOffset
-tags: [private]
-```
-
-```Go
-var TzsetOffset = tzsetOffset
-```
-
-### <a id="StdChunkNames" href="#StdChunkNames">var StdChunkNames</a>
-
-```
-searchKey: time.StdChunkNames
-tags: [private]
-```
-
-```Go
-var StdChunkNames = ...
-```
-
-StdChunkNames maps from nextStdChunk results to the matched strings. 
-
-### <a id="Quote" href="#Quote">var Quote</a>
-
-```
-searchKey: time.Quote
-tags: [private]
-```
-
-```Go
-var Quote = quote
-```
-
-### <a id="OrigZoneSources" href="#OrigZoneSources">var OrigZoneSources</a>
-
-```
-searchKey: time.OrigZoneSources
-tags: [private]
-```
-
-```Go
-var OrigZoneSources = zoneSources
-```
-
-### <a id="Interrupt" href="#Interrupt">var Interrupt</a>
-
-```
-searchKey: time.Interrupt
-tags: [private]
-```
-
-```Go
-var Interrupt = interrupt
-```
-
-### <a id="DaysIn" href="#DaysIn">var DaysIn</a>
-
-```
-searchKey: time.DaysIn
-tags: [private]
-```
-
-```Go
-var DaysIn = daysIn
-```
-
-### <a id="MinMonoTime" href="#MinMonoTime">var MinMonoTime</a>
-
-```
-searchKey: time.MinMonoTime
-tags: [private]
-```
-
-```Go
-var MinMonoTime = Time{wall: 1 << 63, ext: -1 << 63, loc: UTC}
-```
-
-### <a id="MaxMonoTime" href="#MaxMonoTime">var MaxMonoTime</a>
-
-```
-searchKey: time.MaxMonoTime
-tags: [private]
-```
-
-```Go
-var MaxMonoTime = Time{wall: 1 << 63, ext: 1<<63 - 1, loc: UTC}
-```
-
-### <a id="NotMonoNegativeTime" href="#NotMonoNegativeTime">var NotMonoNegativeTime</a>
-
-```
-searchKey: time.NotMonoNegativeTime
-tags: [private]
-```
-
-```Go
-var NotMonoNegativeTime = Time{wall: 0, ext: -1<<63 + 50}
-```
-
 ## <a id="type" href="#type">Types</a>
+
+```
+tags: [package]
+```
+
+### <a id="Duration" href="#Duration">type Duration int64</a>
+
+```
+searchKey: time.Duration
+tags: [number]
+```
+
+```Go
+type Duration int64
+```
+
+A Duration represents the elapsed time between two instants as an int64 nanosecond count. The representation limits the largest representable duration to approximately 290 years. 
+
+#### <a id="ParseDuration" href="#ParseDuration">func ParseDuration(s string) (Duration, error)</a>
+
+```
+searchKey: time.ParseDuration
+tags: [method]
+```
+
+```Go
+func ParseDuration(s string) (Duration, error)
+```
+
+ParseDuration parses a duration string. A duration string is a possibly signed sequence of decimal numbers, each with optional fraction and a unit suffix, such as "300ms", "-1.5h" or "2h45m". Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h". 
+
+#### <a id="Since" href="#Since">func Since(t Time) Duration</a>
+
+```
+searchKey: time.Since
+tags: [method]
+```
+
+```Go
+func Since(t Time) Duration
+```
+
+Since returns the time elapsed since t. It is shorthand for time.Now().Sub(t). 
+
+#### <a id="Until" href="#Until">func Until(t Time) Duration</a>
+
+```
+searchKey: time.Until
+tags: [method]
+```
+
+```Go
+func Until(t Time) Duration
+```
+
+Until returns the duration until t. It is shorthand for t.Sub(time.Now()). 
+
+#### <a id="div" href="#div">func div(t Time, d Duration) (qmod2 int, r Duration)</a>
+
+```
+searchKey: time.div
+tags: [method private]
+```
+
+```Go
+func div(t Time, d Duration) (qmod2 int, r Duration)
+```
+
+div divides t by d and returns the quotient parity and remainder. We don't use the quotient parity anymore (round half up instead of round to even) but it's still here in case we change our minds. 
+
+#### <a id="Duration.Hours" href="#Duration.Hours">func (d Duration) Hours() float64</a>
+
+```
+searchKey: time.Duration.Hours
+tags: [function]
+```
+
+```Go
+func (d Duration) Hours() float64
+```
+
+Hours returns the duration as a floating point number of hours. 
+
+#### <a id="Duration.Microseconds" href="#Duration.Microseconds">func (d Duration) Microseconds() int64</a>
+
+```
+searchKey: time.Duration.Microseconds
+tags: [function]
+```
+
+```Go
+func (d Duration) Microseconds() int64
+```
+
+Microseconds returns the duration as an integer microsecond count. 
+
+#### <a id="Duration.Milliseconds" href="#Duration.Milliseconds">func (d Duration) Milliseconds() int64</a>
+
+```
+searchKey: time.Duration.Milliseconds
+tags: [function]
+```
+
+```Go
+func (d Duration) Milliseconds() int64
+```
+
+Milliseconds returns the duration as an integer millisecond count. 
+
+#### <a id="Duration.Minutes" href="#Duration.Minutes">func (d Duration) Minutes() float64</a>
+
+```
+searchKey: time.Duration.Minutes
+tags: [function]
+```
+
+```Go
+func (d Duration) Minutes() float64
+```
+
+Minutes returns the duration as a floating point number of minutes. 
+
+#### <a id="Duration.Nanoseconds" href="#Duration.Nanoseconds">func (d Duration) Nanoseconds() int64</a>
+
+```
+searchKey: time.Duration.Nanoseconds
+tags: [function]
+```
+
+```Go
+func (d Duration) Nanoseconds() int64
+```
+
+Nanoseconds returns the duration as an integer nanosecond count. 
+
+#### <a id="Duration.Round" href="#Duration.Round">func (d Duration) Round(m Duration) Duration</a>
+
+```
+searchKey: time.Duration.Round
+tags: [method]
+```
+
+```Go
+func (d Duration) Round(m Duration) Duration
+```
+
+Round returns the result of rounding d to the nearest multiple of m. The rounding behavior for halfway values is to round away from zero. If the result exceeds the maximum (or minimum) value that can be stored in a Duration, Round returns the maximum (or minimum) duration. If m <= 0, Round returns d unchanged. 
+
+#### <a id="Duration.Seconds" href="#Duration.Seconds">func (d Duration) Seconds() float64</a>
+
+```
+searchKey: time.Duration.Seconds
+tags: [function]
+```
+
+```Go
+func (d Duration) Seconds() float64
+```
+
+Seconds returns the duration as a floating point number of seconds. 
+
+#### <a id="Duration.String" href="#Duration.String">func (d Duration) String() string</a>
+
+```
+searchKey: time.Duration.String
+tags: [function]
+```
+
+```Go
+func (d Duration) String() string
+```
+
+String returns a string representing the duration in the form "72h3m0.5s". Leading zero units are omitted. As a special case, durations less than one second format use a smaller unit (milli-, micro-, or nanoseconds) to ensure that the leading digit is non-zero. The zero duration formats as 0s. 
+
+#### <a id="Duration.Truncate" href="#Duration.Truncate">func (d Duration) Truncate(m Duration) Duration</a>
+
+```
+searchKey: time.Duration.Truncate
+tags: [method]
+```
+
+```Go
+func (d Duration) Truncate(m Duration) Duration
+```
+
+Truncate returns the result of rounding d toward zero to a multiple of m. If m <= 0, Truncate returns d unchanged. 
+
+### <a id="Location" href="#Location">type Location struct</a>
+
+```
+searchKey: time.Location
+tags: [struct]
+```
+
+```Go
+type Location struct {
+	name string
+	zone []zone
+	tx   []zoneTrans
+
+	// The tzdata information can be followed by a string that describes
+	// how to handle DST transitions not recorded in zoneTrans.
+	// The format is the TZ environment variable without a colon; see
+	// https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap08.html.
+	// Example string, for America/Los_Angeles: PST8PDT,M3.2.0,M11.1.0
+	extend string
+
+	// Most lookups will be for the current time.
+	// To avoid the binary search through tx, keep a
+	// static one-element cache that gives the correct
+	// zone for the time when the Location was created.
+	// if cacheStart <= t < cacheEnd,
+	// lookup can return cacheZone.
+	// The units for cacheStart and cacheEnd are seconds
+	// since January 1, 1970 UTC, to match the argument
+	// to lookup.
+	cacheStart int64
+	cacheEnd   int64
+	cacheZone  *zone
+}
+```
+
+A Location maps time instants to the zone in use at that time. Typically, the Location represents the collection of time offsets in use in a geographical area. For many Locations the time offset varies depending on whether daylight savings time is in use at the time instant. 
+
+#### <a id="FixedZone" href="#FixedZone">func FixedZone(name string, offset int) *Location</a>
+
+```
+searchKey: time.FixedZone
+tags: [method]
+```
+
+```Go
+func FixedZone(name string, offset int) *Location
+```
+
+FixedZone returns a Location that always uses the given zone name and offset (seconds east of UTC). 
+
+#### <a id="LoadLocation" href="#LoadLocation">func LoadLocation(name string) (*Location, error)</a>
+
+```
+searchKey: time.LoadLocation
+tags: [method]
+```
+
+```Go
+func LoadLocation(name string) (*Location, error)
+```
+
+LoadLocation returns the Location with the given name. 
+
+If the name is "" or "UTC", LoadLocation returns UTC. If the name is "Local", LoadLocation returns Local. 
+
+Otherwise, the name is taken to be a location name corresponding to a file in the IANA Time Zone database, such as "America/New_York". 
+
+The time zone database needed by LoadLocation may not be present on all systems, especially non-Unix systems. LoadLocation looks in the directory or uncompressed zip file named by the ZONEINFO environment variable, if any, then looks in known installation locations on Unix systems, and finally looks in $GOROOT/lib/time/zoneinfo.zip. 
+
+#### <a id="LoadLocationFromTZData" href="#LoadLocationFromTZData">func LoadLocationFromTZData(name string, data []byte) (*Location, error)</a>
+
+```
+searchKey: time.LoadLocationFromTZData
+tags: [method]
+```
+
+```Go
+func LoadLocationFromTZData(name string, data []byte) (*Location, error)
+```
+
+LoadLocationFromTZData returns a Location with the given name initialized from the IANA Time Zone database-formatted data. The data should be in the format of a standard IANA time zone file (for example, the content of /etc/localtime on Unix systems). 
+
+#### <a id="loadLocation" href="#loadLocation">func loadLocation(name string, sources []string) (z *Location, firstErr error)</a>
+
+```
+searchKey: time.loadLocation
+tags: [method private]
+```
+
+```Go
+func loadLocation(name string, sources []string) (z *Location, firstErr error)
+```
+
+loadLocation returns the Location with the given name from one of the specified sources. See loadTzinfo for a list of supported sources. The first timezone data matching the given name that is successfully loaded and parsed is returned as a Location. 
+
+#### <a id="Location.String" href="#Location.String">func (l *Location) String() string</a>
+
+```
+searchKey: time.Location.String
+tags: [function]
+```
+
+```Go
+func (l *Location) String() string
+```
+
+String returns a descriptive name for the time zone information, corresponding to the name argument to LoadLocation or FixedZone. 
+
+#### <a id="Location.firstZoneUsed" href="#Location.firstZoneUsed">func (l *Location) firstZoneUsed() bool</a>
+
+```
+searchKey: time.Location.firstZoneUsed
+tags: [function private]
+```
+
+```Go
+func (l *Location) firstZoneUsed() bool
+```
+
+firstZoneUsed reports whether the first zone is used by some transition. 
+
+#### <a id="Location.get" href="#Location.get">func (l *Location) get() *Location</a>
+
+```
+searchKey: time.Location.get
+tags: [function private]
+```
+
+```Go
+func (l *Location) get() *Location
+```
+
+#### <a id="Location.lookup" href="#Location.lookup">func (l *Location) lookup(sec int64) (name string, offset int, start, end int64, isDST bool)</a>
+
+```
+searchKey: time.Location.lookup
+tags: [method private]
+```
+
+```Go
+func (l *Location) lookup(sec int64) (name string, offset int, start, end int64, isDST bool)
+```
+
+lookup returns information about the time zone in use at an instant in time expressed as seconds since January 1, 1970 00:00:00 UTC. 
+
+The returned information gives the name of the zone (such as "CET"), the start and end times bracketing sec when that zone is in effect, the offset in seconds east of UTC (such as -5*60*60), and whether the daylight savings is being observed at that time. 
+
+#### <a id="Location.lookupFirstZone" href="#Location.lookupFirstZone">func (l *Location) lookupFirstZone() int</a>
+
+```
+searchKey: time.Location.lookupFirstZone
+tags: [function private]
+```
+
+```Go
+func (l *Location) lookupFirstZone() int
+```
+
+lookupFirstZone returns the index of the time zone to use for times before the first transition time, or when there are no transition times. 
+
+The reference implementation in localtime.c from [https://www.iana.org/time-zones/repository/releases/tzcode2013g.tar.gz](https://www.iana.org/time-zones/repository/releases/tzcode2013g.tar.gz) implements the following algorithm for these cases: 1) If the first zone is unused by the transitions, use it. 2) Otherwise, if there are transition times, and the first 
+
+```
+transition is to a zone in daylight time, find the first
+non-daylight-time zone before and closest to the first transition
+zone.
+
+```
+3) Otherwise, use the first zone that is not daylight time, if 
+
+```
+there is one.
+
+```
+4) Otherwise, use the first zone. 
+
+#### <a id="Location.lookupName" href="#Location.lookupName">func (l *Location) lookupName(name string, unix int64) (offset int, ok bool)</a>
+
+```
+searchKey: time.Location.lookupName
+tags: [method private]
+```
+
+```Go
+func (l *Location) lookupName(name string, unix int64) (offset int, ok bool)
+```
+
+lookupName returns information about the time zone with the given name (such as "EST") at the given pseudo-Unix time (what the given time of day would be in UTC). 
+
+### <a id="Month" href="#Month">type Month int</a>
+
+```
+searchKey: time.Month
+tags: [number]
+```
+
+```Go
+type Month int
+```
+
+A Month specifies a month of the year (January = 1, ...). 
+
+#### <a id="absDate" href="#absDate">func absDate(abs uint64, full bool) (year int, month Month, day int, yday int)</a>
+
+```
+searchKey: time.absDate
+tags: [method private]
+```
+
+```Go
+func absDate(abs uint64, full bool) (year int, month Month, day int, yday int)
+```
+
+absDate is like date but operates on an absolute time. 
+
+#### <a id="Month.String" href="#Month.String">func (m Month) String() string</a>
+
+```
+searchKey: time.Month.String
+tags: [function]
+```
+
+```Go
+func (m Month) String() string
+```
+
+String returns the English name of the month ("January", "February", ...). 
 
 ### <a id="ParseError" href="#ParseError">type ParseError struct</a>
 
 ```
 searchKey: time.ParseError
+tags: [struct]
 ```
 
 ```Go
@@ -3299,6 +3765,7 @@ ParseError describes a problem parsing a time string.
 
 ```
 searchKey: time.ParseError.Error
+tags: [function]
 ```
 
 ```Go
@@ -3307,124 +3774,50 @@ func (e *ParseError) Error() string
 
 Error returns the string representation of a ParseError. 
 
-### <a id="runtimeTimer" href="#runtimeTimer">type runtimeTimer struct</a>
+### <a id="Rule" href="#Rule">type Rule struct</a>
 
 ```
-searchKey: time.runtimeTimer
-tags: [private]
+searchKey: time.Rule
+tags: [struct private]
 ```
 
 ```Go
-type runtimeTimer struct {
-	pp       uintptr
-	when     int64
-	period   int64
-	f        func(interface{}, uintptr) // NOTE: must not be closure
-	arg      interface{}
-	seq      uintptr
-	nextwhen int64
-	status   uint32
+type Rule struct {
+	Kind RuleKind
+	Day  int
+	Week int
+	Mon  int
+	Time int
 }
 ```
 
-Interface to timers implemented in package runtime. Must be in sync with ../runtime/time.go:/^type timer 
-
-### <a id="Timer" href="#Timer">type Timer struct</a>
+#### <a id="TzsetRule" href="#TzsetRule">func TzsetRule(s string) (Rule, string, bool)</a>
 
 ```
-searchKey: time.Timer
-```
-
-```Go
-type Timer struct {
-	C <-chan Time
-	r runtimeTimer
-}
-```
-
-The Timer type represents a single event. When the Timer expires, the current time will be sent on C, unless the Timer was created by AfterFunc. A Timer must be created with NewTimer or AfterFunc. 
-
-#### <a id="NewTimer" href="#NewTimer">func NewTimer(d Duration) *Timer</a>
-
-```
-searchKey: time.NewTimer
+searchKey: time.TzsetRule
+tags: [method private]
 ```
 
 ```Go
-func NewTimer(d Duration) *Timer
+func TzsetRule(s string) (Rule, string, bool)
 ```
 
-NewTimer creates a new Timer that will send the current time on its channel after at least duration d. 
-
-#### <a id="AfterFunc" href="#AfterFunc">func AfterFunc(d Duration, f func()) *Timer</a>
+### <a id="RuleKind" href="#RuleKind">type RuleKind int</a>
 
 ```
-searchKey: time.AfterFunc
-```
-
-```Go
-func AfterFunc(d Duration, f func()) *Timer
-```
-
-AfterFunc waits for the duration to elapse and then calls f in its own goroutine. It returns a Timer that can be used to cancel the call using its Stop method. 
-
-#### <a id="Timer.Stop" href="#Timer.Stop">func (t *Timer) Stop() bool</a>
-
-```
-searchKey: time.Timer.Stop
+searchKey: time.RuleKind
+tags: [number private]
 ```
 
 ```Go
-func (t *Timer) Stop() bool
+type RuleKind int
 ```
-
-Stop prevents the Timer from firing. It returns true if the call stops the timer, false if the timer has already expired or been stopped. Stop does not close the channel, to prevent a read from the channel succeeding incorrectly. 
-
-To ensure the channel is empty after a call to Stop, check the return value and drain the channel. For example, assuming the program has not received from t.C already: 
-
-```
-if !t.Stop() {
-	<-t.C
-}
-
-```
-This cannot be done concurrent to other receives from the Timer's channel or other calls to the Timer's Stop method. 
-
-For a timer created with AfterFunc(d, f), if t.Stop returns false, then the timer has already expired and the function f has been started in its own goroutine; Stop does not wait for f to complete before returning. If the caller needs to know whether f is completed, it must coordinate with f explicitly. 
-
-#### <a id="Timer.Reset" href="#Timer.Reset">func (t *Timer) Reset(d Duration) bool</a>
-
-```
-searchKey: time.Timer.Reset
-```
-
-```Go
-func (t *Timer) Reset(d Duration) bool
-```
-
-Reset changes the timer to expire after duration d. It returns true if the timer had been active, false if the timer had expired or been stopped. 
-
-For a Timer created with NewTimer, Reset should be invoked only on stopped or expired timers with drained channels. 
-
-If a program has already received a value from t.C, the timer is known to have expired and the channel drained, so t.Reset can be used directly. If a program has not yet received a value from t.C, however, the timer must be stopped and—if Stop reports that the timer expired before being stopped—the channel explicitly drained: 
-
-```
-if !t.Stop() {
-	<-t.C
-}
-t.Reset(d)
-
-```
-This should not be done concurrent to other receives from the Timer's channel. 
-
-Note that it is not possible to use Reset's return value correctly, as there is a race condition between draining the channel and the new timer expiring. Reset should always be invoked on stopped or expired channels, as described above. The return value exists to preserve compatibility with existing programs. 
-
-For a Timer created with AfterFunc(d, f), Reset either reschedules when f will run, in which case Reset returns true, or schedules f to run again, in which case it returns false. When Reset returns false, Reset neither waits for the prior f to complete before returning nor does it guarantee that the subsequent goroutine running f does not run concurrently with the prior one. If the caller needs to know whether the prior execution of f is completed, it must coordinate with f explicitly. 
 
 ### <a id="Ticker" href="#Ticker">type Ticker struct</a>
 
 ```
 searchKey: time.Ticker
+tags: [struct]
 ```
 
 ```Go
@@ -3440,6 +3833,7 @@ A Ticker holds a channel that delivers `ticks' of a clock at intervals.
 
 ```
 searchKey: time.NewTicker
+tags: [method]
 ```
 
 ```Go
@@ -3448,22 +3842,11 @@ func NewTicker(d Duration) *Ticker
 
 NewTicker returns a new Ticker containing a channel that will send the time on the channel after each tick. The period of the ticks is specified by the duration argument. The ticker will adjust the time interval or drop ticks to make up for slow receivers. The duration d must be greater than zero; if not, NewTicker will panic. Stop the ticker to release associated resources. 
 
-#### <a id="Ticker.Stop" href="#Ticker.Stop">func (t *Ticker) Stop()</a>
-
-```
-searchKey: time.Ticker.Stop
-```
-
-```Go
-func (t *Ticker) Stop()
-```
-
-Stop turns off a ticker. After Stop, no more ticks will be sent. Stop does not close the channel, to prevent a concurrent goroutine reading from the channel from seeing an erroneous "tick". 
-
 #### <a id="Ticker.Reset" href="#Ticker.Reset">func (t *Ticker) Reset(d Duration)</a>
 
 ```
 searchKey: time.Ticker.Reset
+tags: [method]
 ```
 
 ```Go
@@ -3472,10 +3855,24 @@ func (t *Ticker) Reset(d Duration)
 
 Reset stops a ticker and resets its period to the specified duration. The next tick will arrive after the new period elapses. 
 
+#### <a id="Ticker.Stop" href="#Ticker.Stop">func (t *Ticker) Stop()</a>
+
+```
+searchKey: time.Ticker.Stop
+tags: [function]
+```
+
+```Go
+func (t *Ticker) Stop()
+```
+
+Stop turns off a ticker. After Stop, no more ticks will be sent. Stop does not close the channel, to prevent a concurrent goroutine reading from the channel from seeing an erroneous "tick". 
+
 ### <a id="Time" href="#Time">type Time struct</a>
 
 ```
 searchKey: time.Time
+tags: [struct]
 ```
 
 ```Go
@@ -3521,10 +3918,49 @@ In addition to the required “wall clock” reading, a Time may contain an opti
 
 Note that the Go == operator compares not just the time instant but also the Location and the monotonic clock reading. Therefore, Time values should not be used as map or database keys without first guaranteeing that the identical Location has been set for all values, which can be achieved through use of the UTC or Local method, and that the monotonic clock reading has been stripped by setting t = t.Round(0). In general, prefer t.Equal(u) to t == u, since t.Equal uses the most accurate comparison available and correctly handles the case when only one of its arguments has a monotonic clock reading. 
 
+#### <a id="Date" href="#Date">func Date(year int, month Month, day, hour, min, sec, nsec int, loc *Location) Time</a>
+
+```
+searchKey: time.Date
+tags: [method]
+```
+
+```Go
+func Date(year int, month Month, day, hour, min, sec, nsec int, loc *Location) Time
+```
+
+Date returns the Time corresponding to 
+
+```
+yyyy-mm-dd hh:mm:ss + nsec nanoseconds
+
+```
+in the appropriate zone for that time in the given location. 
+
+The month, day, hour, min, sec, and nsec values may be outside their usual ranges and will be normalized during the conversion. For example, October 32 converts to November 1. 
+
+A daylight savings time transition skips or repeats times. For example, in the United States, March 13, 2011 2:15am never occurred, while November 6, 2011 1:15am occurred twice. In such cases, the choice of time zone, and therefore the time, is not well-defined. Date returns a time that is correct in one of the two zones involved in the transition, but it does not guarantee which. 
+
+Date panics if loc is nil. 
+
+#### <a id="Now" href="#Now">func Now() Time</a>
+
+```
+searchKey: time.Now
+tags: [function]
+```
+
+```Go
+func Now() Time
+```
+
+Now returns the current local time. 
+
 #### <a id="Parse" href="#Parse">func Parse(layout, value string) (Time, error)</a>
 
 ```
 searchKey: time.Parse
+tags: [method]
 ```
 
 ```Go
@@ -3553,6 +3989,7 @@ When parsing a time with a zone abbreviation like MST, if the zone abbreviation 
 
 ```
 searchKey: time.ParseInLocation
+tags: [method]
 ```
 
 ```Go
@@ -3561,44 +3998,11 @@ func ParseInLocation(layout, value string, loc *Location) (Time, error)
 
 ParseInLocation is like Parse but differs in two important ways. First, in the absence of time zone information, Parse interprets a time as UTC; ParseInLocation interprets the time as in the given location. Second, when given a zone offset or abbreviation, Parse tries to match it against the Local location; ParseInLocation uses the given location. 
 
-#### <a id="parse" href="#parse">func parse(layout, value string, defaultLocation, local *Location) (Time, error)</a>
-
-```
-searchKey: time.parse
-tags: [private]
-```
-
-```Go
-func parse(layout, value string, defaultLocation, local *Location) (Time, error)
-```
-
-#### <a id="Now" href="#Now">func Now() Time</a>
-
-```
-searchKey: time.Now
-```
-
-```Go
-func Now() Time
-```
-
-Now returns the current local time. 
-
-#### <a id="unixTime" href="#unixTime">func unixTime(sec int64, nsec int32) Time</a>
-
-```
-searchKey: time.unixTime
-tags: [private]
-```
-
-```Go
-func unixTime(sec int64, nsec int32) Time
-```
-
 #### <a id="Unix" href="#Unix">func Unix(sec int64, nsec int64) Time</a>
 
 ```
 searchKey: time.Unix
+tags: [method]
 ```
 
 ```Go
@@ -3607,22 +4011,11 @@ func Unix(sec int64, nsec int64) Time
 
 Unix returns the local Time corresponding to the given Unix time, sec seconds and nsec nanoseconds since January 1, 1970 UTC. It is valid to pass nsec outside the range [0, 999999999]. Not all sec values have a corresponding time value. One such value is 1<<63-1 (the largest int64 value). 
 
-#### <a id="UnixMilli" href="#UnixMilli">func UnixMilli(msec int64) Time</a>
-
-```
-searchKey: time.UnixMilli
-```
-
-```Go
-func UnixMilli(msec int64) Time
-```
-
-UnixMilli returns the local Time corresponding to the given Unix time, msec milliseconds since January 1, 1970 UTC. 
-
 #### <a id="UnixMicro" href="#UnixMicro">func UnixMicro(usec int64) Time</a>
 
 ```
 searchKey: time.UnixMicro
+tags: [method]
 ```
 
 ```Go
@@ -3631,34 +4024,418 @@ func UnixMicro(usec int64) Time
 
 UnixMicro returns the local Time corresponding to the given Unix time, usec milliseconds since January 1, 1970 UTC. 
 
-#### <a id="Date" href="#Date">func Date(year int, month Month, day, hour, min, sec, nsec int, loc *Location) Time</a>
+#### <a id="UnixMilli" href="#UnixMilli">func UnixMilli(msec int64) Time</a>
 
 ```
-searchKey: time.Date
+searchKey: time.UnixMilli
+tags: [method]
 ```
 
 ```Go
-func Date(year int, month Month, day, hour, min, sec, nsec int, loc *Location) Time
+func UnixMilli(msec int64) Time
 ```
 
-Date returns the Time corresponding to 
+UnixMilli returns the local Time corresponding to the given Unix time, msec milliseconds since January 1, 1970 UTC. 
+
+#### <a id="parse" href="#parse">func parse(layout, value string, defaultLocation, local *Location) (Time, error)</a>
 
 ```
-yyyy-mm-dd hh:mm:ss + nsec nanoseconds
+searchKey: time.parse
+tags: [method private]
+```
+
+```Go
+func parse(layout, value string, defaultLocation, local *Location) (Time, error)
+```
+
+#### <a id="unixTime" href="#unixTime">func unixTime(sec int64, nsec int32) Time</a>
 
 ```
-in the appropriate zone for that time in the given location. 
+searchKey: time.unixTime
+tags: [method private]
+```
 
-The month, day, hour, min, sec, and nsec values may be outside their usual ranges and will be normalized during the conversion. For example, October 32 converts to November 1. 
+```Go
+func unixTime(sec int64, nsec int32) Time
+```
 
-A daylight savings time transition skips or repeats times. For example, in the United States, March 13, 2011 2:15am never occurred, while November 6, 2011 1:15am occurred twice. In such cases, the choice of time zone, and therefore the time, is not well-defined. Date returns a time that is correct in one of the two zones involved in the transition, but it does not guarantee which. 
+#### <a id="Time.Add" href="#Time.Add">func (t Time) Add(d Duration) Time</a>
 
-Date panics if loc is nil. 
+```
+searchKey: time.Time.Add
+tags: [method]
+```
+
+```Go
+func (t Time) Add(d Duration) Time
+```
+
+Add returns the time t+d. 
+
+#### <a id="Time.AddDate" href="#Time.AddDate">func (t Time) AddDate(years int, months int, days int) Time</a>
+
+```
+searchKey: time.Time.AddDate
+tags: [method]
+```
+
+```Go
+func (t Time) AddDate(years int, months int, days int) Time
+```
+
+AddDate returns the time corresponding to adding the given number of years, months, and days to t. For example, AddDate(-1, 2, 3) applied to January 1, 2011 returns March 4, 2010. 
+
+AddDate normalizes its result in the same way that Date does, so, for example, adding one month to October 31 yields December 1, the normalized form for November 31. 
+
+#### <a id="Time.After" href="#Time.After">func (t Time) After(u Time) bool</a>
+
+```
+searchKey: time.Time.After
+tags: [method]
+```
+
+```Go
+func (t Time) After(u Time) bool
+```
+
+After reports whether the time instant t is after u. 
+
+#### <a id="Time.AppendFormat" href="#Time.AppendFormat">func (t Time) AppendFormat(b []byte, layout string) []byte</a>
+
+```
+searchKey: time.Time.AppendFormat
+tags: [method]
+```
+
+```Go
+func (t Time) AppendFormat(b []byte, layout string) []byte
+```
+
+AppendFormat is like Format but appends the textual representation to b and returns the extended buffer. 
+
+#### <a id="Time.Before" href="#Time.Before">func (t Time) Before(u Time) bool</a>
+
+```
+searchKey: time.Time.Before
+tags: [method]
+```
+
+```Go
+func (t Time) Before(u Time) bool
+```
+
+Before reports whether the time instant t is before u. 
+
+#### <a id="Time.Clock" href="#Time.Clock">func (t Time) Clock() (hour, min, sec int)</a>
+
+```
+searchKey: time.Time.Clock
+tags: [function]
+```
+
+```Go
+func (t Time) Clock() (hour, min, sec int)
+```
+
+Clock returns the hour, minute, and second within the day specified by t. 
+
+#### <a id="Time.Date" href="#Time.Date">func (t Time) Date() (year int, month Month, day int)</a>
+
+```
+searchKey: time.Time.Date
+tags: [function]
+```
+
+```Go
+func (t Time) Date() (year int, month Month, day int)
+```
+
+Date returns the year, month, and day in which t occurs. 
+
+#### <a id="Time.Day" href="#Time.Day">func (t Time) Day() int</a>
+
+```
+searchKey: time.Time.Day
+tags: [function]
+```
+
+```Go
+func (t Time) Day() int
+```
+
+Day returns the day of the month specified by t. 
+
+#### <a id="Time.Equal" href="#Time.Equal">func (t Time) Equal(u Time) bool</a>
+
+```
+searchKey: time.Time.Equal
+tags: [method]
+```
+
+```Go
+func (t Time) Equal(u Time) bool
+```
+
+Equal reports whether t and u represent the same time instant. Two times can be equal even if they are in different locations. For example, 6:00 +0200 and 4:00 UTC are Equal. See the documentation on the Time type for the pitfalls of using == with Time values; most code should use Equal instead. 
+
+#### <a id="Time.Format" href="#Time.Format">func (t Time) Format(layout string) string</a>
+
+```
+searchKey: time.Time.Format
+tags: [method]
+```
+
+```Go
+func (t Time) Format(layout string) string
+```
+
+Format returns a textual representation of the time value formatted according to the layout defined by the argument. See the documentation for the constant called Layout to see how to represent the layout format. 
+
+The executable example for Time.Format demonstrates the working of the layout string in detail and is a good reference. 
+
+#### <a id="Time.GoString" href="#Time.GoString">func (t Time) GoString() string</a>
+
+```
+searchKey: time.Time.GoString
+tags: [function]
+```
+
+```Go
+func (t Time) GoString() string
+```
+
+GoString implements fmt.GoStringer and formats t to be printed in Go source code. 
+
+#### <a id="Time.GobDecode" href="#Time.GobDecode">func (t *Time) GobDecode(data []byte) error</a>
+
+```
+searchKey: time.Time.GobDecode
+tags: [method]
+```
+
+```Go
+func (t *Time) GobDecode(data []byte) error
+```
+
+GobDecode implements the gob.GobDecoder interface. 
+
+#### <a id="Time.GobEncode" href="#Time.GobEncode">func (t Time) GobEncode() ([]byte, error)</a>
+
+```
+searchKey: time.Time.GobEncode
+tags: [function]
+```
+
+```Go
+func (t Time) GobEncode() ([]byte, error)
+```
+
+GobEncode implements the gob.GobEncoder interface. 
+
+#### <a id="Time.Hour" href="#Time.Hour">func (t Time) Hour() int</a>
+
+```
+searchKey: time.Time.Hour
+tags: [function]
+```
+
+```Go
+func (t Time) Hour() int
+```
+
+Hour returns the hour within the day specified by t, in the range [0, 23]. 
+
+#### <a id="Time.ISOWeek" href="#Time.ISOWeek">func (t Time) ISOWeek() (year, week int)</a>
+
+```
+searchKey: time.Time.ISOWeek
+tags: [function]
+```
+
+```Go
+func (t Time) ISOWeek() (year, week int)
+```
+
+ISOWeek returns the ISO 8601 year and week number in which t occurs. Week ranges from 1 to 53. Jan 01 to Jan 03 of year n might belong to week 52 or 53 of year n-1, and Dec 29 to Dec 31 might belong to week 1 of year n+1. 
+
+#### <a id="Time.In" href="#Time.In">func (t Time) In(loc *Location) Time</a>
+
+```
+searchKey: time.Time.In
+tags: [method]
+```
+
+```Go
+func (t Time) In(loc *Location) Time
+```
+
+In returns a copy of t representing the same time instant, but with the copy's location information set to loc for display purposes. 
+
+In panics if loc is nil. 
+
+#### <a id="Time.IsDST" href="#Time.IsDST">func (t Time) IsDST() bool</a>
+
+```
+searchKey: time.Time.IsDST
+tags: [function]
+```
+
+```Go
+func (t Time) IsDST() bool
+```
+
+IsDST reports whether the time in the configured location is in Daylight Savings Time. 
+
+#### <a id="Time.IsZero" href="#Time.IsZero">func (t Time) IsZero() bool</a>
+
+```
+searchKey: time.Time.IsZero
+tags: [function]
+```
+
+```Go
+func (t Time) IsZero() bool
+```
+
+IsZero reports whether t represents the zero time instant, January 1, year 1, 00:00:00 UTC. 
+
+#### <a id="Time.Local" href="#Time.Local">func (t Time) Local() Time</a>
+
+```
+searchKey: time.Time.Local
+tags: [function]
+```
+
+```Go
+func (t Time) Local() Time
+```
+
+Local returns t with the location set to local time. 
+
+#### <a id="Time.Location" href="#Time.Location">func (t Time) Location() *Location</a>
+
+```
+searchKey: time.Time.Location
+tags: [function]
+```
+
+```Go
+func (t Time) Location() *Location
+```
+
+Location returns the time zone information associated with t. 
+
+#### <a id="Time.MarshalBinary" href="#Time.MarshalBinary">func (t Time) MarshalBinary() ([]byte, error)</a>
+
+```
+searchKey: time.Time.MarshalBinary
+tags: [function]
+```
+
+```Go
+func (t Time) MarshalBinary() ([]byte, error)
+```
+
+MarshalBinary implements the encoding.BinaryMarshaler interface. 
+
+#### <a id="Time.MarshalJSON" href="#Time.MarshalJSON">func (t Time) MarshalJSON() ([]byte, error)</a>
+
+```
+searchKey: time.Time.MarshalJSON
+tags: [function]
+```
+
+```Go
+func (t Time) MarshalJSON() ([]byte, error)
+```
+
+MarshalJSON implements the json.Marshaler interface. The time is a quoted string in RFC 3339 format, with sub-second precision added if present. 
+
+#### <a id="Time.MarshalText" href="#Time.MarshalText">func (t Time) MarshalText() ([]byte, error)</a>
+
+```
+searchKey: time.Time.MarshalText
+tags: [function]
+```
+
+```Go
+func (t Time) MarshalText() ([]byte, error)
+```
+
+MarshalText implements the encoding.TextMarshaler interface. The time is formatted in RFC 3339 format, with sub-second precision added if present. 
+
+#### <a id="Time.Minute" href="#Time.Minute">func (t Time) Minute() int</a>
+
+```
+searchKey: time.Time.Minute
+tags: [function]
+```
+
+```Go
+func (t Time) Minute() int
+```
+
+Minute returns the minute offset within the hour specified by t, in the range [0, 59]. 
+
+#### <a id="Time.Month" href="#Time.Month">func (t Time) Month() Month</a>
+
+```
+searchKey: time.Time.Month
+tags: [function]
+```
+
+```Go
+func (t Time) Month() Month
+```
+
+Month returns the month of the year specified by t. 
+
+#### <a id="Time.Nanosecond" href="#Time.Nanosecond">func (t Time) Nanosecond() int</a>
+
+```
+searchKey: time.Time.Nanosecond
+tags: [function]
+```
+
+```Go
+func (t Time) Nanosecond() int
+```
+
+Nanosecond returns the nanosecond offset within the second specified by t, in the range [0, 999999999]. 
+
+#### <a id="Time.Round" href="#Time.Round">func (t Time) Round(d Duration) Time</a>
+
+```
+searchKey: time.Time.Round
+tags: [method]
+```
+
+```Go
+func (t Time) Round(d Duration) Time
+```
+
+Round returns the result of rounding t to the nearest multiple of d (since the zero time). The rounding behavior for halfway values is to round up. If d <= 0, Round returns t stripped of any monotonic clock reading but otherwise unchanged. 
+
+Round operates on the time as an absolute duration since the zero time; it does not operate on the presentation form of the time. Thus, Round(Hour) may return a time with a non-zero minute, depending on the time's Location. 
+
+#### <a id="Time.Second" href="#Time.Second">func (t Time) Second() int</a>
+
+```
+searchKey: time.Time.Second
+tags: [function]
+```
+
+```Go
+func (t Time) Second() int
+```
+
+Second returns the second offset within the minute specified by t, in the range [0, 59]. 
 
 #### <a id="Time.String" href="#Time.String">func (t Time) String() string</a>
 
 ```
 searchKey: time.Time.String
+tags: [function]
 ```
 
 ```Go
@@ -3675,49 +4452,260 @@ If the time has a monotonic clock reading, the returned string includes a final 
 
 The returned string is meant for debugging; for a stable serialized representation, use t.MarshalText, t.MarshalBinary, or t.Format with an explicit format string. 
 
-#### <a id="Time.GoString" href="#Time.GoString">func (t Time) GoString() string</a>
+#### <a id="Time.Sub" href="#Time.Sub">func (t Time) Sub(u Time) Duration</a>
 
 ```
-searchKey: time.Time.GoString
-```
-
-```Go
-func (t Time) GoString() string
-```
-
-GoString implements fmt.GoStringer and formats t to be printed in Go source code. 
-
-#### <a id="Time.Format" href="#Time.Format">func (t Time) Format(layout string) string</a>
-
-```
-searchKey: time.Time.Format
+searchKey: time.Time.Sub
+tags: [method]
 ```
 
 ```Go
-func (t Time) Format(layout string) string
+func (t Time) Sub(u Time) Duration
 ```
 
-Format returns a textual representation of the time value formatted according to the layout defined by the argument. See the documentation for the constant called Layout to see how to represent the layout format. 
+Sub returns the duration t-u. If the result exceeds the maximum (or minimum) value that can be stored in a Duration, the maximum (or minimum) duration will be returned. To compute t-d for a duration d, use t.Add(-d). 
 
-The executable example for Time.Format demonstrates the working of the layout string in detail and is a good reference. 
-
-#### <a id="Time.AppendFormat" href="#Time.AppendFormat">func (t Time) AppendFormat(b []byte, layout string) []byte</a>
+#### <a id="Time.Truncate" href="#Time.Truncate">func (t Time) Truncate(d Duration) Time</a>
 
 ```
-searchKey: time.Time.AppendFormat
+searchKey: time.Time.Truncate
+tags: [method]
 ```
 
 ```Go
-func (t Time) AppendFormat(b []byte, layout string) []byte
+func (t Time) Truncate(d Duration) Time
 ```
 
-AppendFormat is like Format but appends the textual representation to b and returns the extended buffer. 
+Truncate returns the result of rounding t down to a multiple of d (since the zero time). If d <= 0, Truncate returns t stripped of any monotonic clock reading but otherwise unchanged. 
+
+Truncate operates on the time as an absolute duration since the zero time; it does not operate on the presentation form of the time. Thus, Truncate(Hour) may return a time with a non-zero minute, depending on the time's Location. 
+
+#### <a id="Time.UTC" href="#Time.UTC">func (t Time) UTC() Time</a>
+
+```
+searchKey: time.Time.UTC
+tags: [function]
+```
+
+```Go
+func (t Time) UTC() Time
+```
+
+UTC returns t with the location set to UTC. 
+
+#### <a id="Time.Unix" href="#Time.Unix">func (t Time) Unix() int64</a>
+
+```
+searchKey: time.Time.Unix
+tags: [function]
+```
+
+```Go
+func (t Time) Unix() int64
+```
+
+Unix returns t as a Unix time, the number of seconds elapsed since January 1, 1970 UTC. The result does not depend on the location associated with t. Unix-like operating systems often record time as a 32-bit count of seconds, but since the method here returns a 64-bit value it is valid for billions of years into the past or future. 
+
+#### <a id="Time.UnixMicro" href="#Time.UnixMicro">func (t Time) UnixMicro() int64</a>
+
+```
+searchKey: time.Time.UnixMicro
+tags: [function]
+```
+
+```Go
+func (t Time) UnixMicro() int64
+```
+
+UnixMicro returns t as a Unix time, the number of microseconds elapsed since January 1, 1970 UTC. The result is undefined if the Unix time in microseconds cannot be represented by an int64 (a date before year -290307 or after year 294246). The result does not depend on the location associated with t. 
+
+#### <a id="Time.UnixMilli" href="#Time.UnixMilli">func (t Time) UnixMilli() int64</a>
+
+```
+searchKey: time.Time.UnixMilli
+tags: [function]
+```
+
+```Go
+func (t Time) UnixMilli() int64
+```
+
+UnixMilli returns t as a Unix time, the number of milliseconds elapsed since January 1, 1970 UTC. The result is undefined if the Unix time in milliseconds cannot be represented by an int64 (a date more than 292 million years before or after 1970). The result does not depend on the location associated with t. 
+
+#### <a id="Time.UnixNano" href="#Time.UnixNano">func (t Time) UnixNano() int64</a>
+
+```
+searchKey: time.Time.UnixNano
+tags: [function]
+```
+
+```Go
+func (t Time) UnixNano() int64
+```
+
+UnixNano returns t as a Unix time, the number of nanoseconds elapsed since January 1, 1970 UTC. The result is undefined if the Unix time in nanoseconds cannot be represented by an int64 (a date before the year 1678 or after 2262). Note that this means the result of calling UnixNano on the zero Time is undefined. The result does not depend on the location associated with t. 
+
+#### <a id="Time.UnmarshalBinary" href="#Time.UnmarshalBinary">func (t *Time) UnmarshalBinary(data []byte) error</a>
+
+```
+searchKey: time.Time.UnmarshalBinary
+tags: [method]
+```
+
+```Go
+func (t *Time) UnmarshalBinary(data []byte) error
+```
+
+UnmarshalBinary implements the encoding.BinaryUnmarshaler interface. 
+
+#### <a id="Time.UnmarshalJSON" href="#Time.UnmarshalJSON">func (t *Time) UnmarshalJSON(data []byte) error</a>
+
+```
+searchKey: time.Time.UnmarshalJSON
+tags: [method]
+```
+
+```Go
+func (t *Time) UnmarshalJSON(data []byte) error
+```
+
+UnmarshalJSON implements the json.Unmarshaler interface. The time is expected to be a quoted string in RFC 3339 format. 
+
+#### <a id="Time.UnmarshalText" href="#Time.UnmarshalText">func (t *Time) UnmarshalText(data []byte) error</a>
+
+```
+searchKey: time.Time.UnmarshalText
+tags: [method]
+```
+
+```Go
+func (t *Time) UnmarshalText(data []byte) error
+```
+
+UnmarshalText implements the encoding.TextUnmarshaler interface. The time is expected to be in RFC 3339 format. 
+
+#### <a id="Time.Weekday" href="#Time.Weekday">func (t Time) Weekday() Weekday</a>
+
+```
+searchKey: time.Time.Weekday
+tags: [function]
+```
+
+```Go
+func (t Time) Weekday() Weekday
+```
+
+Weekday returns the day of the week specified by t. 
+
+#### <a id="Time.Year" href="#Time.Year">func (t Time) Year() int</a>
+
+```
+searchKey: time.Time.Year
+tags: [function]
+```
+
+```Go
+func (t Time) Year() int
+```
+
+Year returns the year in which t occurs. 
+
+#### <a id="Time.YearDay" href="#Time.YearDay">func (t Time) YearDay() int</a>
+
+```
+searchKey: time.Time.YearDay
+tags: [function]
+```
+
+```Go
+func (t Time) YearDay() int
+```
+
+YearDay returns the day of the year specified by t, in the range [1,365] for non-leap years, and [1,366] in leap years. 
+
+#### <a id="Time.Zone" href="#Time.Zone">func (t Time) Zone() (name string, offset int)</a>
+
+```
+searchKey: time.Time.Zone
+tags: [function]
+```
+
+```Go
+func (t Time) Zone() (name string, offset int)
+```
+
+Zone computes the time zone in effect at time t, returning the abbreviated name of the zone (such as "CET") and its offset in seconds east of UTC. 
+
+#### <a id="Time.abs" href="#Time.abs">func (t Time) abs() uint64</a>
+
+```
+searchKey: time.Time.abs
+tags: [function private]
+```
+
+```Go
+func (t Time) abs() uint64
+```
+
+abs returns the time t as an absolute time, adjusted by the zone offset. It is called when computing a presentation property like Month or Hour. 
+
+#### <a id="Time.addSec" href="#Time.addSec">func (t *Time) addSec(d int64)</a>
+
+```
+searchKey: time.Time.addSec
+tags: [method private]
+```
+
+```Go
+func (t *Time) addSec(d int64)
+```
+
+addSec adds d seconds to the time. 
+
+#### <a id="Time.date" href="#Time.date">func (t Time) date(full bool) (year int, month Month, day int, yday int)</a>
+
+```
+searchKey: time.Time.date
+tags: [method private]
+```
+
+```Go
+func (t Time) date(full bool) (year int, month Month, day int, yday int)
+```
+
+date computes the year, day of year, and when full=true, the month and day in which t occurs. 
+
+#### <a id="Time.locabs" href="#Time.locabs">func (t Time) locabs() (name string, offset int, abs uint64)</a>
+
+```
+searchKey: time.Time.locabs
+tags: [function private]
+```
+
+```Go
+func (t Time) locabs() (name string, offset int, abs uint64)
+```
+
+locabs is a combination of the Zone and abs methods, extracting both return values from a single zone lookup. 
+
+#### <a id="Time.mono" href="#Time.mono">func (t *Time) mono() int64</a>
+
+```
+searchKey: time.Time.mono
+tags: [function private]
+```
+
+```Go
+func (t *Time) mono() int64
+```
+
+mono returns t's monotonic clock reading. It returns 0 for a missing reading. This function is used only for testing, so it's OK that technically 0 is a valid monotonic clock reading as well. 
 
 #### <a id="Time.nsec" href="#Time.nsec">func (t *Time) nsec() int32</a>
 
 ```
 searchKey: time.Time.nsec
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -3730,7 +4718,7 @@ nsec returns the time's nanoseconds.
 
 ```
 searchKey: time.Time.sec
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -3739,37 +4727,11 @@ func (t *Time) sec() int64
 
 sec returns the time's seconds since Jan 1 year 1. 
 
-#### <a id="Time.unixSec" href="#Time.unixSec">func (t *Time) unixSec() int64</a>
-
-```
-searchKey: time.Time.unixSec
-tags: [private]
-```
-
-```Go
-func (t *Time) unixSec() int64
-```
-
-unixSec returns the time's seconds since Jan 1 1970 (Unix time). 
-
-#### <a id="Time.addSec" href="#Time.addSec">func (t *Time) addSec(d int64)</a>
-
-```
-searchKey: time.Time.addSec
-tags: [private]
-```
-
-```Go
-func (t *Time) addSec(d int64)
-```
-
-addSec adds d seconds to the time. 
-
 #### <a id="Time.setLoc" href="#Time.setLoc">func (t *Time) setLoc(loc *Location)</a>
 
 ```
 searchKey: time.Time.setLoc
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -3778,24 +4740,11 @@ func (t *Time) setLoc(loc *Location)
 
 setLoc sets the location associated with the time. 
 
-#### <a id="Time.stripMono" href="#Time.stripMono">func (t *Time) stripMono()</a>
-
-```
-searchKey: time.Time.stripMono
-tags: [private]
-```
-
-```Go
-func (t *Time) stripMono()
-```
-
-stripMono strips the monotonic clock reading in t. 
-
 #### <a id="Time.setMono" href="#Time.setMono">func (t *Time) setMono(m int64)</a>
 
 ```
 searchKey: time.Time.setMono
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -3804,575 +4753,134 @@ func (t *Time) setMono(m int64)
 
 setMono sets the monotonic clock reading in t. If t cannot hold a monotonic clock reading, because its wall time is too large, setMono is a no-op. 
 
-#### <a id="Time.mono" href="#Time.mono">func (t *Time) mono() int64</a>
+#### <a id="Time.stripMono" href="#Time.stripMono">func (t *Time) stripMono()</a>
 
 ```
-searchKey: time.Time.mono
-tags: [private]
-```
-
-```Go
-func (t *Time) mono() int64
-```
-
-mono returns t's monotonic clock reading. It returns 0 for a missing reading. This function is used only for testing, so it's OK that technically 0 is a valid monotonic clock reading as well. 
-
-#### <a id="Time.After" href="#Time.After">func (t Time) After(u Time) bool</a>
-
-```
-searchKey: time.Time.After
+searchKey: time.Time.stripMono
+tags: [function private]
 ```
 
 ```Go
-func (t Time) After(u Time) bool
+func (t *Time) stripMono()
 ```
 
-After reports whether the time instant t is after u. 
+stripMono strips the monotonic clock reading in t. 
 
-#### <a id="Time.Before" href="#Time.Before">func (t Time) Before(u Time) bool</a>
-
-```
-searchKey: time.Time.Before
-```
-
-```Go
-func (t Time) Before(u Time) bool
-```
-
-Before reports whether the time instant t is before u. 
-
-#### <a id="Time.Equal" href="#Time.Equal">func (t Time) Equal(u Time) bool</a>
+#### <a id="Time.unixSec" href="#Time.unixSec">func (t *Time) unixSec() int64</a>
 
 ```
-searchKey: time.Time.Equal
+searchKey: time.Time.unixSec
+tags: [function private]
 ```
 
 ```Go
-func (t Time) Equal(u Time) bool
+func (t *Time) unixSec() int64
 ```
 
-Equal reports whether t and u represent the same time instant. Two times can be equal even if they are in different locations. For example, 6:00 +0200 and 4:00 UTC are Equal. See the documentation on the Time type for the pitfalls of using == with Time values; most code should use Equal instead. 
+unixSec returns the time's seconds since Jan 1 1970 (Unix time). 
 
-#### <a id="Time.IsZero" href="#Time.IsZero">func (t Time) IsZero() bool</a>
-
-```
-searchKey: time.Time.IsZero
-```
-
-```Go
-func (t Time) IsZero() bool
-```
-
-IsZero reports whether t represents the zero time instant, January 1, year 1, 00:00:00 UTC. 
-
-#### <a id="Time.abs" href="#Time.abs">func (t Time) abs() uint64</a>
+### <a id="Timer" href="#Timer">type Timer struct</a>
 
 ```
-searchKey: time.Time.abs
-tags: [private]
+searchKey: time.Timer
+tags: [struct]
 ```
 
 ```Go
-func (t Time) abs() uint64
+type Timer struct {
+	C <-chan Time
+	r runtimeTimer
+}
 ```
 
-abs returns the time t as an absolute time, adjusted by the zone offset. It is called when computing a presentation property like Month or Hour. 
+The Timer type represents a single event. When the Timer expires, the current time will be sent on C, unless the Timer was created by AfterFunc. A Timer must be created with NewTimer or AfterFunc. 
 
-#### <a id="Time.locabs" href="#Time.locabs">func (t Time) locabs() (name string, offset int, abs uint64)</a>
-
-```
-searchKey: time.Time.locabs
-tags: [private]
-```
-
-```Go
-func (t Time) locabs() (name string, offset int, abs uint64)
-```
-
-locabs is a combination of the Zone and abs methods, extracting both return values from a single zone lookup. 
-
-#### <a id="Time.Date" href="#Time.Date">func (t Time) Date() (year int, month Month, day int)</a>
+#### <a id="AfterFunc" href="#AfterFunc">func AfterFunc(d Duration, f func()) *Timer</a>
 
 ```
-searchKey: time.Time.Date
+searchKey: time.AfterFunc
+tags: [method]
 ```
 
 ```Go
-func (t Time) Date() (year int, month Month, day int)
+func AfterFunc(d Duration, f func()) *Timer
 ```
 
-Date returns the year, month, and day in which t occurs. 
+AfterFunc waits for the duration to elapse and then calls f in its own goroutine. It returns a Timer that can be used to cancel the call using its Stop method. 
 
-#### <a id="Time.Year" href="#Time.Year">func (t Time) Year() int</a>
-
-```
-searchKey: time.Time.Year
-```
-
-```Go
-func (t Time) Year() int
-```
-
-Year returns the year in which t occurs. 
-
-#### <a id="Time.Month" href="#Time.Month">func (t Time) Month() Month</a>
+#### <a id="NewTimer" href="#NewTimer">func NewTimer(d Duration) *Timer</a>
 
 ```
-searchKey: time.Time.Month
+searchKey: time.NewTimer
+tags: [method]
 ```
 
 ```Go
-func (t Time) Month() Month
+func NewTimer(d Duration) *Timer
 ```
 
-Month returns the month of the year specified by t. 
+NewTimer creates a new Timer that will send the current time on its channel after at least duration d. 
 
-#### <a id="Time.Day" href="#Time.Day">func (t Time) Day() int</a>
-
-```
-searchKey: time.Time.Day
-```
-
-```Go
-func (t Time) Day() int
-```
-
-Day returns the day of the month specified by t. 
-
-#### <a id="Time.Weekday" href="#Time.Weekday">func (t Time) Weekday() Weekday</a>
+#### <a id="Timer.Reset" href="#Timer.Reset">func (t *Timer) Reset(d Duration) bool</a>
 
 ```
-searchKey: time.Time.Weekday
+searchKey: time.Timer.Reset
+tags: [method]
 ```
 
 ```Go
-func (t Time) Weekday() Weekday
+func (t *Timer) Reset(d Duration) bool
 ```
 
-Weekday returns the day of the week specified by t. 
+Reset changes the timer to expire after duration d. It returns true if the timer had been active, false if the timer had expired or been stopped. 
 
-#### <a id="Time.ISOWeek" href="#Time.ISOWeek">func (t Time) ISOWeek() (year, week int)</a>
+For a Timer created with NewTimer, Reset should be invoked only on stopped or expired timers with drained channels. 
 
-```
-searchKey: time.Time.ISOWeek
-```
-
-```Go
-func (t Time) ISOWeek() (year, week int)
-```
-
-ISOWeek returns the ISO 8601 year and week number in which t occurs. Week ranges from 1 to 53. Jan 01 to Jan 03 of year n might belong to week 52 or 53 of year n-1, and Dec 29 to Dec 31 might belong to week 1 of year n+1. 
-
-#### <a id="Time.Clock" href="#Time.Clock">func (t Time) Clock() (hour, min, sec int)</a>
+If a program has already received a value from t.C, the timer is known to have expired and the channel drained, so t.Reset can be used directly. If a program has not yet received a value from t.C, however, the timer must be stopped and—if Stop reports that the timer expired before being stopped—the channel explicitly drained: 
 
 ```
-searchKey: time.Time.Clock
-```
-
-```Go
-func (t Time) Clock() (hour, min, sec int)
-```
-
-Clock returns the hour, minute, and second within the day specified by t. 
-
-#### <a id="Time.Hour" href="#Time.Hour">func (t Time) Hour() int</a>
+if !t.Stop() {
+	<-t.C
+}
+t.Reset(d)
 
 ```
-searchKey: time.Time.Hour
+This should not be done concurrent to other receives from the Timer's channel. 
+
+Note that it is not possible to use Reset's return value correctly, as there is a race condition between draining the channel and the new timer expiring. Reset should always be invoked on stopped or expired channels, as described above. The return value exists to preserve compatibility with existing programs. 
+
+For a Timer created with AfterFunc(d, f), Reset either reschedules when f will run, in which case Reset returns true, or schedules f to run again, in which case it returns false. When Reset returns false, Reset neither waits for the prior f to complete before returning nor does it guarantee that the subsequent goroutine running f does not run concurrently with the prior one. If the caller needs to know whether the prior execution of f is completed, it must coordinate with f explicitly. 
+
+#### <a id="Timer.Stop" href="#Timer.Stop">func (t *Timer) Stop() bool</a>
+
+```
+searchKey: time.Timer.Stop
+tags: [function]
 ```
 
 ```Go
-func (t Time) Hour() int
+func (t *Timer) Stop() bool
 ```
 
-Hour returns the hour within the day specified by t, in the range [0, 23]. 
+Stop prevents the Timer from firing. It returns true if the call stops the timer, false if the timer has already expired or been stopped. Stop does not close the channel, to prevent a read from the channel succeeding incorrectly. 
 
-#### <a id="Time.Minute" href="#Time.Minute">func (t Time) Minute() int</a>
+To ensure the channel is empty after a call to Stop, check the return value and drain the channel. For example, assuming the program has not received from t.C already: 
 
 ```
-searchKey: time.Time.Minute
-```
-
-```Go
-func (t Time) Minute() int
-```
-
-Minute returns the minute offset within the hour specified by t, in the range [0, 59]. 
-
-#### <a id="Time.Second" href="#Time.Second">func (t Time) Second() int</a>
-
-```
-searchKey: time.Time.Second
-```
-
-```Go
-func (t Time) Second() int
-```
-
-Second returns the second offset within the minute specified by t, in the range [0, 59]. 
-
-#### <a id="Time.Nanosecond" href="#Time.Nanosecond">func (t Time) Nanosecond() int</a>
-
-```
-searchKey: time.Time.Nanosecond
-```
-
-```Go
-func (t Time) Nanosecond() int
-```
-
-Nanosecond returns the nanosecond offset within the second specified by t, in the range [0, 999999999]. 
-
-#### <a id="Time.YearDay" href="#Time.YearDay">func (t Time) YearDay() int</a>
-
-```
-searchKey: time.Time.YearDay
-```
-
-```Go
-func (t Time) YearDay() int
-```
-
-YearDay returns the day of the year specified by t, in the range [1,365] for non-leap years, and [1,366] in leap years. 
-
-#### <a id="Time.Add" href="#Time.Add">func (t Time) Add(d Duration) Time</a>
-
-```
-searchKey: time.Time.Add
-```
-
-```Go
-func (t Time) Add(d Duration) Time
-```
-
-Add returns the time t+d. 
-
-#### <a id="Time.Sub" href="#Time.Sub">func (t Time) Sub(u Time) Duration</a>
-
-```
-searchKey: time.Time.Sub
-```
-
-```Go
-func (t Time) Sub(u Time) Duration
-```
-
-Sub returns the duration t-u. If the result exceeds the maximum (or minimum) value that can be stored in a Duration, the maximum (or minimum) duration will be returned. To compute t-d for a duration d, use t.Add(-d). 
-
-#### <a id="Time.AddDate" href="#Time.AddDate">func (t Time) AddDate(years int, months int, days int) Time</a>
-
-```
-searchKey: time.Time.AddDate
-```
-
-```Go
-func (t Time) AddDate(years int, months int, days int) Time
-```
-
-AddDate returns the time corresponding to adding the given number of years, months, and days to t. For example, AddDate(-1, 2, 3) applied to January 1, 2011 returns March 4, 2010. 
-
-AddDate normalizes its result in the same way that Date does, so, for example, adding one month to October 31 yields December 1, the normalized form for November 31. 
-
-#### <a id="Time.date" href="#Time.date">func (t Time) date(full bool) (year int, month Month, day int, yday int)</a>
-
-```
-searchKey: time.Time.date
-tags: [private]
-```
-
-```Go
-func (t Time) date(full bool) (year int, month Month, day int, yday int)
-```
-
-date computes the year, day of year, and when full=true, the month and day in which t occurs. 
-
-#### <a id="Time.UTC" href="#Time.UTC">func (t Time) UTC() Time</a>
-
-```
-searchKey: time.Time.UTC
-```
-
-```Go
-func (t Time) UTC() Time
-```
-
-UTC returns t with the location set to UTC. 
-
-#### <a id="Time.Local" href="#Time.Local">func (t Time) Local() Time</a>
-
-```
-searchKey: time.Time.Local
-```
-
-```Go
-func (t Time) Local() Time
-```
-
-Local returns t with the location set to local time. 
-
-#### <a id="Time.In" href="#Time.In">func (t Time) In(loc *Location) Time</a>
-
-```
-searchKey: time.Time.In
-```
-
-```Go
-func (t Time) In(loc *Location) Time
-```
-
-In returns a copy of t representing the same time instant, but with the copy's location information set to loc for display purposes. 
-
-In panics if loc is nil. 
-
-#### <a id="Time.Location" href="#Time.Location">func (t Time) Location() *Location</a>
-
-```
-searchKey: time.Time.Location
-```
-
-```Go
-func (t Time) Location() *Location
-```
-
-Location returns the time zone information associated with t. 
-
-#### <a id="Time.Zone" href="#Time.Zone">func (t Time) Zone() (name string, offset int)</a>
-
-```
-searchKey: time.Time.Zone
-```
-
-```Go
-func (t Time) Zone() (name string, offset int)
-```
-
-Zone computes the time zone in effect at time t, returning the abbreviated name of the zone (such as "CET") and its offset in seconds east of UTC. 
-
-#### <a id="Time.Unix" href="#Time.Unix">func (t Time) Unix() int64</a>
-
-```
-searchKey: time.Time.Unix
-```
-
-```Go
-func (t Time) Unix() int64
-```
-
-Unix returns t as a Unix time, the number of seconds elapsed since January 1, 1970 UTC. The result does not depend on the location associated with t. Unix-like operating systems often record time as a 32-bit count of seconds, but since the method here returns a 64-bit value it is valid for billions of years into the past or future. 
-
-#### <a id="Time.UnixMilli" href="#Time.UnixMilli">func (t Time) UnixMilli() int64</a>
-
-```
-searchKey: time.Time.UnixMilli
-```
-
-```Go
-func (t Time) UnixMilli() int64
-```
-
-UnixMilli returns t as a Unix time, the number of milliseconds elapsed since January 1, 1970 UTC. The result is undefined if the Unix time in milliseconds cannot be represented by an int64 (a date more than 292 million years before or after 1970). The result does not depend on the location associated with t. 
-
-#### <a id="Time.UnixMicro" href="#Time.UnixMicro">func (t Time) UnixMicro() int64</a>
-
-```
-searchKey: time.Time.UnixMicro
-```
-
-```Go
-func (t Time) UnixMicro() int64
-```
-
-UnixMicro returns t as a Unix time, the number of microseconds elapsed since January 1, 1970 UTC. The result is undefined if the Unix time in microseconds cannot be represented by an int64 (a date before year -290307 or after year 294246). The result does not depend on the location associated with t. 
-
-#### <a id="Time.UnixNano" href="#Time.UnixNano">func (t Time) UnixNano() int64</a>
-
-```
-searchKey: time.Time.UnixNano
-```
-
-```Go
-func (t Time) UnixNano() int64
-```
-
-UnixNano returns t as a Unix time, the number of nanoseconds elapsed since January 1, 1970 UTC. The result is undefined if the Unix time in nanoseconds cannot be represented by an int64 (a date before the year 1678 or after 2262). Note that this means the result of calling UnixNano on the zero Time is undefined. The result does not depend on the location associated with t. 
-
-#### <a id="Time.MarshalBinary" href="#Time.MarshalBinary">func (t Time) MarshalBinary() ([]byte, error)</a>
-
-```
-searchKey: time.Time.MarshalBinary
-```
-
-```Go
-func (t Time) MarshalBinary() ([]byte, error)
-```
-
-MarshalBinary implements the encoding.BinaryMarshaler interface. 
-
-#### <a id="Time.UnmarshalBinary" href="#Time.UnmarshalBinary">func (t *Time) UnmarshalBinary(data []byte) error</a>
-
-```
-searchKey: time.Time.UnmarshalBinary
-```
-
-```Go
-func (t *Time) UnmarshalBinary(data []byte) error
-```
-
-UnmarshalBinary implements the encoding.BinaryUnmarshaler interface. 
-
-#### <a id="Time.GobEncode" href="#Time.GobEncode">func (t Time) GobEncode() ([]byte, error)</a>
-
-```
-searchKey: time.Time.GobEncode
-```
-
-```Go
-func (t Time) GobEncode() ([]byte, error)
-```
-
-GobEncode implements the gob.GobEncoder interface. 
-
-#### <a id="Time.GobDecode" href="#Time.GobDecode">func (t *Time) GobDecode(data []byte) error</a>
-
-```
-searchKey: time.Time.GobDecode
-```
-
-```Go
-func (t *Time) GobDecode(data []byte) error
-```
-
-GobDecode implements the gob.GobDecoder interface. 
-
-#### <a id="Time.MarshalJSON" href="#Time.MarshalJSON">func (t Time) MarshalJSON() ([]byte, error)</a>
-
-```
-searchKey: time.Time.MarshalJSON
-```
-
-```Go
-func (t Time) MarshalJSON() ([]byte, error)
-```
-
-MarshalJSON implements the json.Marshaler interface. The time is a quoted string in RFC 3339 format, with sub-second precision added if present. 
-
-#### <a id="Time.UnmarshalJSON" href="#Time.UnmarshalJSON">func (t *Time) UnmarshalJSON(data []byte) error</a>
-
-```
-searchKey: time.Time.UnmarshalJSON
-```
-
-```Go
-func (t *Time) UnmarshalJSON(data []byte) error
-```
-
-UnmarshalJSON implements the json.Unmarshaler interface. The time is expected to be a quoted string in RFC 3339 format. 
-
-#### <a id="Time.MarshalText" href="#Time.MarshalText">func (t Time) MarshalText() ([]byte, error)</a>
-
-```
-searchKey: time.Time.MarshalText
-```
-
-```Go
-func (t Time) MarshalText() ([]byte, error)
-```
-
-MarshalText implements the encoding.TextMarshaler interface. The time is formatted in RFC 3339 format, with sub-second precision added if present. 
-
-#### <a id="Time.UnmarshalText" href="#Time.UnmarshalText">func (t *Time) UnmarshalText(data []byte) error</a>
-
-```
-searchKey: time.Time.UnmarshalText
-```
-
-```Go
-func (t *Time) UnmarshalText(data []byte) error
-```
-
-UnmarshalText implements the encoding.TextUnmarshaler interface. The time is expected to be in RFC 3339 format. 
-
-#### <a id="Time.IsDST" href="#Time.IsDST">func (t Time) IsDST() bool</a>
-
-```
-searchKey: time.Time.IsDST
-```
-
-```Go
-func (t Time) IsDST() bool
-```
-
-IsDST reports whether the time in the configured location is in Daylight Savings Time. 
-
-#### <a id="Time.Truncate" href="#Time.Truncate">func (t Time) Truncate(d Duration) Time</a>
-
-```
-searchKey: time.Time.Truncate
-```
-
-```Go
-func (t Time) Truncate(d Duration) Time
-```
-
-Truncate returns the result of rounding t down to a multiple of d (since the zero time). If d <= 0, Truncate returns t stripped of any monotonic clock reading but otherwise unchanged. 
-
-Truncate operates on the time as an absolute duration since the zero time; it does not operate on the presentation form of the time. Thus, Truncate(Hour) may return a time with a non-zero minute, depending on the time's Location. 
-
-#### <a id="Time.Round" href="#Time.Round">func (t Time) Round(d Duration) Time</a>
-
-```
-searchKey: time.Time.Round
-```
-
-```Go
-func (t Time) Round(d Duration) Time
-```
-
-Round returns the result of rounding t to the nearest multiple of d (since the zero time). The rounding behavior for halfway values is to round up. If d <= 0, Round returns t stripped of any monotonic clock reading but otherwise unchanged. 
-
-Round operates on the time as an absolute duration since the zero time; it does not operate on the presentation form of the time. Thus, Round(Hour) may return a time with a non-zero minute, depending on the time's Location. 
-
-### <a id="Month" href="#Month">type Month int</a>
-
-```
-searchKey: time.Month
-```
-
-```Go
-type Month int
-```
-
-A Month specifies a month of the year (January = 1, ...). 
-
-#### <a id="absDate" href="#absDate">func absDate(abs uint64, full bool) (year int, month Month, day int, yday int)</a>
-
-```
-searchKey: time.absDate
-tags: [private]
-```
-
-```Go
-func absDate(abs uint64, full bool) (year int, month Month, day int, yday int)
-```
-
-absDate is like date but operates on an absolute time. 
-
-#### <a id="Month.String" href="#Month.String">func (m Month) String() string</a>
-
-```
-searchKey: time.Month.String
-```
+if !t.Stop() {
+	<-t.C
+}
 
-```Go
-func (m Month) String() string
 ```
+This cannot be done concurrent to other receives from the Timer's channel or other calls to the Timer's Stop method. 
 
-String returns the English name of the month ("January", "February", ...). 
+For a timer created with AfterFunc(d, f), if t.Stop returns false, then the timer has already expired and the function f has been started in its own goroutine; Stop does not wait for f to complete before returning. If the caller needs to know whether f is completed, it must coordinate with f explicitly. 
 
 ### <a id="Weekday" href="#Weekday">type Weekday int</a>
 
 ```
 searchKey: time.Weekday
+tags: [number]
 ```
 
 ```Go
@@ -4385,7 +4893,7 @@ A Weekday specifies a day of the week (Sunday = 0, ...).
 
 ```
 searchKey: time.absWeekday
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -4398,6 +4906,7 @@ absWeekday is like Weekday but operates on an absolute time.
 
 ```
 searchKey: time.Weekday.String
+tags: [function]
 ```
 
 ```Go
@@ -4406,411 +4915,106 @@ func (d Weekday) String() string
 
 String returns the English name of the day ("Sunday", "Monday", ...). 
 
-### <a id="Duration" href="#Duration">type Duration int64</a>
+### <a id="dataIO" href="#dataIO">type dataIO struct</a>
 
 ```
-searchKey: time.Duration
-```
-
-```Go
-type Duration int64
-```
-
-A Duration represents the elapsed time between two instants as an int64 nanosecond count. The representation limits the largest representable duration to approximately 290 years. 
-
-#### <a id="ParseDuration" href="#ParseDuration">func ParseDuration(s string) (Duration, error)</a>
-
-```
-searchKey: time.ParseDuration
+searchKey: time.dataIO
+tags: [struct private]
 ```
 
 ```Go
-func ParseDuration(s string) (Duration, error)
-```
-
-ParseDuration parses a duration string. A duration string is a possibly signed sequence of decimal numbers, each with optional fraction and a unit suffix, such as "300ms", "-1.5h" or "2h45m". Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h". 
-
-#### <a id="Since" href="#Since">func Since(t Time) Duration</a>
-
-```
-searchKey: time.Since
-```
-
-```Go
-func Since(t Time) Duration
-```
-
-Since returns the time elapsed since t. It is shorthand for time.Now().Sub(t). 
-
-#### <a id="Until" href="#Until">func Until(t Time) Duration</a>
-
-```
-searchKey: time.Until
-```
-
-```Go
-func Until(t Time) Duration
-```
-
-Until returns the duration until t. It is shorthand for t.Sub(time.Now()). 
-
-#### <a id="div" href="#div">func div(t Time, d Duration) (qmod2 int, r Duration)</a>
-
-```
-searchKey: time.div
-tags: [private]
-```
-
-```Go
-func div(t Time, d Duration) (qmod2 int, r Duration)
-```
-
-div divides t by d and returns the quotient parity and remainder. We don't use the quotient parity anymore (round half up instead of round to even) but it's still here in case we change our minds. 
-
-#### <a id="Duration.String" href="#Duration.String">func (d Duration) String() string</a>
-
-```
-searchKey: time.Duration.String
-```
-
-```Go
-func (d Duration) String() string
-```
-
-String returns a string representing the duration in the form "72h3m0.5s". Leading zero units are omitted. As a special case, durations less than one second format use a smaller unit (milli-, micro-, or nanoseconds) to ensure that the leading digit is non-zero. The zero duration formats as 0s. 
-
-#### <a id="Duration.Nanoseconds" href="#Duration.Nanoseconds">func (d Duration) Nanoseconds() int64</a>
-
-```
-searchKey: time.Duration.Nanoseconds
-```
-
-```Go
-func (d Duration) Nanoseconds() int64
-```
-
-Nanoseconds returns the duration as an integer nanosecond count. 
-
-#### <a id="Duration.Microseconds" href="#Duration.Microseconds">func (d Duration) Microseconds() int64</a>
-
-```
-searchKey: time.Duration.Microseconds
-```
-
-```Go
-func (d Duration) Microseconds() int64
-```
-
-Microseconds returns the duration as an integer microsecond count. 
-
-#### <a id="Duration.Milliseconds" href="#Duration.Milliseconds">func (d Duration) Milliseconds() int64</a>
-
-```
-searchKey: time.Duration.Milliseconds
-```
-
-```Go
-func (d Duration) Milliseconds() int64
-```
-
-Milliseconds returns the duration as an integer millisecond count. 
-
-#### <a id="Duration.Seconds" href="#Duration.Seconds">func (d Duration) Seconds() float64</a>
-
-```
-searchKey: time.Duration.Seconds
-```
-
-```Go
-func (d Duration) Seconds() float64
-```
-
-Seconds returns the duration as a floating point number of seconds. 
-
-#### <a id="Duration.Minutes" href="#Duration.Minutes">func (d Duration) Minutes() float64</a>
-
-```
-searchKey: time.Duration.Minutes
-```
-
-```Go
-func (d Duration) Minutes() float64
-```
-
-Minutes returns the duration as a floating point number of minutes. 
-
-#### <a id="Duration.Hours" href="#Duration.Hours">func (d Duration) Hours() float64</a>
-
-```
-searchKey: time.Duration.Hours
-```
-
-```Go
-func (d Duration) Hours() float64
-```
-
-Hours returns the duration as a floating point number of hours. 
-
-#### <a id="Duration.Truncate" href="#Duration.Truncate">func (d Duration) Truncate(m Duration) Duration</a>
-
-```
-searchKey: time.Duration.Truncate
-```
-
-```Go
-func (d Duration) Truncate(m Duration) Duration
-```
-
-Truncate returns the result of rounding d toward zero to a multiple of m. If m <= 0, Truncate returns d unchanged. 
-
-#### <a id="Duration.Round" href="#Duration.Round">func (d Duration) Round(m Duration) Duration</a>
-
-```
-searchKey: time.Duration.Round
-```
-
-```Go
-func (d Duration) Round(m Duration) Duration
-```
-
-Round returns the result of rounding d to the nearest multiple of m. The rounding behavior for halfway values is to round away from zero. If the result exceeds the maximum (or minimum) value that can be stored in a Duration, Round returns the maximum (or minimum) duration. If m <= 0, Round returns d unchanged. 
-
-### <a id="Location" href="#Location">type Location struct</a>
-
-```
-searchKey: time.Location
-```
-
-```Go
-type Location struct {
-	name string
-	zone []zone
-	tx   []zoneTrans
-
-	// The tzdata information can be followed by a string that describes
-	// how to handle DST transitions not recorded in zoneTrans.
-	// The format is the TZ environment variable without a colon; see
-	// https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap08.html.
-	// Example string, for America/Los_Angeles: PST8PDT,M3.2.0,M11.1.0
-	extend string
-
-	// Most lookups will be for the current time.
-	// To avoid the binary search through tx, keep a
-	// static one-element cache that gives the correct
-	// zone for the time when the Location was created.
-	// if cacheStart <= t < cacheEnd,
-	// lookup can return cacheZone.
-	// The units for cacheStart and cacheEnd are seconds
-	// since January 1, 1970 UTC, to match the argument
-	// to lookup.
-	cacheStart int64
-	cacheEnd   int64
-	cacheZone  *zone
+type dataIO struct {
+	p     []byte
+	error bool
 }
 ```
 
-A Location maps time instants to the zone in use at that time. Typically, the Location represents the collection of time offsets in use in a geographical area. For many Locations the time offset varies depending on whether daylight savings time is in use at the time instant. 
+Simple I/O interface to binary blob of data. 
 
-#### <a id="FixedZone" href="#FixedZone">func FixedZone(name string, offset int) *Location</a>
-
-```
-searchKey: time.FixedZone
-```
-
-```Go
-func FixedZone(name string, offset int) *Location
-```
-
-FixedZone returns a Location that always uses the given zone name and offset (seconds east of UTC). 
-
-#### <a id="LoadLocation" href="#LoadLocation">func LoadLocation(name string) (*Location, error)</a>
+#### <a id="dataIO.big4" href="#dataIO.big4">func (d *dataIO) big4() (n uint32, ok bool)</a>
 
 ```
-searchKey: time.LoadLocation
+searchKey: time.dataIO.big4
+tags: [function private]
 ```
 
 ```Go
-func LoadLocation(name string) (*Location, error)
+func (d *dataIO) big4() (n uint32, ok bool)
 ```
 
-LoadLocation returns the Location with the given name. 
-
-If the name is "" or "UTC", LoadLocation returns UTC. If the name is "Local", LoadLocation returns Local. 
-
-Otherwise, the name is taken to be a location name corresponding to a file in the IANA Time Zone database, such as "America/New_York". 
-
-The time zone database needed by LoadLocation may not be present on all systems, especially non-Unix systems. LoadLocation looks in the directory or uncompressed zip file named by the ZONEINFO environment variable, if any, then looks in known installation locations on Unix systems, and finally looks in $GOROOT/lib/time/zoneinfo.zip. 
-
-#### <a id="LoadLocationFromTZData" href="#LoadLocationFromTZData">func LoadLocationFromTZData(name string, data []byte) (*Location, error)</a>
+#### <a id="dataIO.big8" href="#dataIO.big8">func (d *dataIO) big8() (n uint64, ok bool)</a>
 
 ```
-searchKey: time.LoadLocationFromTZData
+searchKey: time.dataIO.big8
+tags: [function private]
 ```
 
 ```Go
-func LoadLocationFromTZData(name string, data []byte) (*Location, error)
+func (d *dataIO) big8() (n uint64, ok bool)
 ```
 
-LoadLocationFromTZData returns a Location with the given name initialized from the IANA Time Zone database-formatted data. The data should be in the format of a standard IANA time zone file (for example, the content of /etc/localtime on Unix systems). 
-
-#### <a id="loadLocation" href="#loadLocation">func loadLocation(name string, sources []string) (z *Location, firstErr error)</a>
+#### <a id="dataIO.byte" href="#dataIO.byte">func (d *dataIO) byte() (n byte, ok bool)</a>
 
 ```
-searchKey: time.loadLocation
-tags: [private]
-```
-
-```Go
-func loadLocation(name string, sources []string) (z *Location, firstErr error)
-```
-
-loadLocation returns the Location with the given name from one of the specified sources. See loadTzinfo for a list of supported sources. The first timezone data matching the given name that is successfully loaded and parsed is returned as a Location. 
-
-#### <a id="Location.get" href="#Location.get">func (l *Location) get() *Location</a>
-
-```
-searchKey: time.Location.get
-tags: [private]
+searchKey: time.dataIO.byte
+tags: [function private]
 ```
 
 ```Go
-func (l *Location) get() *Location
+func (d *dataIO) byte() (n byte, ok bool)
 ```
 
-#### <a id="Location.String" href="#Location.String">func (l *Location) String() string</a>
+#### <a id="dataIO.read" href="#dataIO.read">func (d *dataIO) read(n int) []byte</a>
 
 ```
-searchKey: time.Location.String
-```
-
-```Go
-func (l *Location) String() string
-```
-
-String returns a descriptive name for the time zone information, corresponding to the name argument to LoadLocation or FixedZone. 
-
-#### <a id="Location.lookup" href="#Location.lookup">func (l *Location) lookup(sec int64) (name string, offset int, start, end int64, isDST bool)</a>
-
-```
-searchKey: time.Location.lookup
-tags: [private]
+searchKey: time.dataIO.read
+tags: [method private]
 ```
 
 ```Go
-func (l *Location) lookup(sec int64) (name string, offset int, start, end int64, isDST bool)
+func (d *dataIO) read(n int) []byte
 ```
 
-lookup returns information about the time zone in use at an instant in time expressed as seconds since January 1, 1970 00:00:00 UTC. 
-
-The returned information gives the name of the zone (such as "CET"), the start and end times bracketing sec when that zone is in effect, the offset in seconds east of UTC (such as -5*60*60), and whether the daylight savings is being observed at that time. 
-
-#### <a id="Location.lookupFirstZone" href="#Location.lookupFirstZone">func (l *Location) lookupFirstZone() int</a>
+#### <a id="dataIO.rest" href="#dataIO.rest">func (d *dataIO) rest() []byte</a>
 
 ```
-searchKey: time.Location.lookupFirstZone
-tags: [private]
+searchKey: time.dataIO.rest
+tags: [function private]
 ```
 
 ```Go
-func (l *Location) lookupFirstZone() int
+func (d *dataIO) rest() []byte
 ```
 
-lookupFirstZone returns the index of the time zone to use for times before the first transition time, or when there are no transition times. 
+read returns the read of the data in the buffer. 
 
-The reference implementation in localtime.c from [https://www.iana.org/time-zones/repository/releases/tzcode2013g.tar.gz](https://www.iana.org/time-zones/repository/releases/tzcode2013g.tar.gz) implements the following algorithm for these cases: 1) If the first zone is unused by the transitions, use it. 2) Otherwise, if there are transition times, and the first 
-
-```
-transition is to a zone in daylight time, find the first
-non-daylight-time zone before and closest to the first transition
-zone.
+### <a id="fileSizeError" href="#fileSizeError">type fileSizeError string</a>
 
 ```
-3) Otherwise, use the first zone that is not daylight time, if 
-
-```
-there is one.
-
-```
-4) Otherwise, use the first zone. 
-
-#### <a id="Location.firstZoneUsed" href="#Location.firstZoneUsed">func (l *Location) firstZoneUsed() bool</a>
-
-```
-searchKey: time.Location.firstZoneUsed
-tags: [private]
+searchKey: time.fileSizeError
+tags: [string private]
 ```
 
 ```Go
-func (l *Location) firstZoneUsed() bool
+type fileSizeError string
 ```
 
-firstZoneUsed reports whether the first zone is used by some transition. 
-
-#### <a id="Location.lookupName" href="#Location.lookupName">func (l *Location) lookupName(name string, unix int64) (offset int, ok bool)</a>
+#### <a id="fileSizeError.Error" href="#fileSizeError.Error">func (f fileSizeError) Error() string</a>
 
 ```
-searchKey: time.Location.lookupName
-tags: [private]
-```
-
-```Go
-func (l *Location) lookupName(name string, unix int64) (offset int, ok bool)
-```
-
-lookupName returns information about the time zone with the given name (such as "EST") at the given pseudo-Unix time (what the given time of day would be in UTC). 
-
-### <a id="zone" href="#zone">type zone struct</a>
-
-```
-searchKey: time.zone
-tags: [private]
+searchKey: time.fileSizeError.Error
+tags: [function private]
 ```
 
 ```Go
-type zone struct {
-	name   string // abbreviated name, "CET"
-	offset int    // seconds east of UTC
-	isDST  bool   // is this zone Daylight Savings Time?
-}
+func (f fileSizeError) Error() string
 ```
-
-A zone represents a single time zone such as CET. 
-
-### <a id="zoneTrans" href="#zoneTrans">type zoneTrans struct</a>
-
-```
-searchKey: time.zoneTrans
-tags: [private]
-```
-
-```Go
-type zoneTrans struct {
-	when         int64 // transition time, in seconds since 1970 GMT
-	index        uint8 // the index of the zone that goes into effect at that time
-	isstd, isutc bool  // ignored - no idea what these mean
-}
-```
-
-A zoneTrans represents a single time zone transition. 
-
-### <a id="ruleKind" href="#ruleKind">type ruleKind int</a>
-
-```
-searchKey: time.ruleKind
-tags: [private]
-```
-
-```Go
-type ruleKind int
-```
-
-ruleKind is the kinds of rules that can be seen in a tzset string. 
 
 ### <a id="rule" href="#rule">type rule struct</a>
 
 ```
 searchKey: time.rule
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -4829,7 +5033,7 @@ rule is a rule read from a tzset string.
 
 ```
 searchKey: time.tzsetRule
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -4838,197 +5042,208 @@ func tzsetRule(s string) (rule, string, bool)
 
 tzsetRule parses a rule from a tzset string. It returns the rule, and the remainder of the string, and reports success. 
 
-### <a id="fileSizeError" href="#fileSizeError">type fileSizeError string</a>
+### <a id="ruleKind" href="#ruleKind">type ruleKind int</a>
 
 ```
-searchKey: time.fileSizeError
-tags: [private]
-```
-
-```Go
-type fileSizeError string
-```
-
-#### <a id="fileSizeError.Error" href="#fileSizeError.Error">func (f fileSizeError) Error() string</a>
-
-```
-searchKey: time.fileSizeError.Error
-tags: [private]
+searchKey: time.ruleKind
+tags: [number private]
 ```
 
 ```Go
-func (f fileSizeError) Error() string
+type ruleKind int
 ```
 
-### <a id="dataIO" href="#dataIO">type dataIO struct</a>
+ruleKind is the kinds of rules that can be seen in a tzset string. 
+
+### <a id="runtimeTimer" href="#runtimeTimer">type runtimeTimer struct</a>
 
 ```
-searchKey: time.dataIO
-tags: [private]
+searchKey: time.runtimeTimer
+tags: [struct private]
 ```
 
 ```Go
-type dataIO struct {
-	p     []byte
-	error bool
+type runtimeTimer struct {
+	pp       uintptr
+	when     int64
+	period   int64
+	f        func(interface{}, uintptr) // NOTE: must not be closure
+	arg      interface{}
+	seq      uintptr
+	nextwhen int64
+	status   uint32
 }
 ```
 
-Simple I/O interface to binary blob of data. 
+Interface to timers implemented in package runtime. Must be in sync with ../runtime/time.go:/^type timer 
 
-#### <a id="dataIO.read" href="#dataIO.read">func (d *dataIO) read(n int) []byte</a>
-
-```
-searchKey: time.dataIO.read
-tags: [private]
-```
-
-```Go
-func (d *dataIO) read(n int) []byte
-```
-
-#### <a id="dataIO.big4" href="#dataIO.big4">func (d *dataIO) big4() (n uint32, ok bool)</a>
+### <a id="zone" href="#zone">type zone struct</a>
 
 ```
-searchKey: time.dataIO.big4
-tags: [private]
+searchKey: time.zone
+tags: [struct private]
 ```
 
 ```Go
-func (d *dataIO) big4() (n uint32, ok bool)
-```
-
-#### <a id="dataIO.big8" href="#dataIO.big8">func (d *dataIO) big8() (n uint64, ok bool)</a>
-
-```
-searchKey: time.dataIO.big8
-tags: [private]
-```
-
-```Go
-func (d *dataIO) big8() (n uint64, ok bool)
-```
-
-#### <a id="dataIO.byte" href="#dataIO.byte">func (d *dataIO) byte() (n byte, ok bool)</a>
-
-```
-searchKey: time.dataIO.byte
-tags: [private]
-```
-
-```Go
-func (d *dataIO) byte() (n byte, ok bool)
-```
-
-#### <a id="dataIO.rest" href="#dataIO.rest">func (d *dataIO) rest() []byte</a>
-
-```
-searchKey: time.dataIO.rest
-tags: [private]
-```
-
-```Go
-func (d *dataIO) rest() []byte
-```
-
-read returns the read of the data in the buffer. 
-
-### <a id="RuleKind" href="#RuleKind">type RuleKind int</a>
-
-```
-searchKey: time.RuleKind
-tags: [private]
-```
-
-```Go
-type RuleKind int
-```
-
-### <a id="Rule" href="#Rule">type Rule struct</a>
-
-```
-searchKey: time.Rule
-tags: [private]
-```
-
-```Go
-type Rule struct {
-	Kind RuleKind
-	Day  int
-	Week int
-	Mon  int
-	Time int
+type zone struct {
+	name   string // abbreviated name, "CET"
+	offset int    // seconds east of UTC
+	isDST  bool   // is this zone Daylight Savings Time?
 }
 ```
 
-#### <a id="TzsetRule" href="#TzsetRule">func TzsetRule(s string) (Rule, string, bool)</a>
+A zone represents a single time zone such as CET. 
+
+### <a id="zoneTrans" href="#zoneTrans">type zoneTrans struct</a>
 
 ```
-searchKey: time.TzsetRule
-tags: [private]
+searchKey: time.zoneTrans
+tags: [struct private]
 ```
 
 ```Go
-func TzsetRule(s string) (Rule, string, bool)
+type zoneTrans struct {
+	when         int64 // transition time, in seconds since 1970 GMT
+	index        uint8 // the index of the zone that goes into effect at that time
+	isstd, isutc bool  // ignored - no idea what these mean
+}
 ```
+
+A zoneTrans represents a single time zone transition. 
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="startsWithLowerCase" href="#startsWithLowerCase">func startsWithLowerCase(str string) bool</a>
-
 ```
-searchKey: time.startsWithLowerCase
-tags: [private]
+tags: [package]
 ```
 
-```Go
-func startsWithLowerCase(str string) bool
-```
-
-startsWithLowerCase reports whether the string has a lower-case letter at the beginning. Its purpose is to prevent matching strings like "Month" when looking for "Mon". 
-
-### <a id="nextStdChunk" href="#nextStdChunk">func nextStdChunk(layout string) (prefix string, std int, suffix string)</a>
+### <a id="After" href="#After">func After(d Duration) <-chan Time</a>
 
 ```
-searchKey: time.nextStdChunk
-tags: [private]
+searchKey: time.After
+tags: [method]
 ```
 
 ```Go
-func nextStdChunk(layout string) (prefix string, std int, suffix string)
+func After(d Duration) <-chan Time
 ```
 
-nextStdChunk finds the first occurrence of a std string in layout and returns the text before, the std string, and the text after. 
+After waits for the duration to elapse and then sends the current time on the returned channel. It is equivalent to NewTimer(d).C. The underlying Timer is not recovered by the garbage collector until the timer fires. If efficiency is a concern, use NewTimer instead and call Timer.Stop if the timer is no longer needed. 
 
-### <a id="match" href="#match">func match(s1, s2 string) bool</a>
-
-```
-searchKey: time.match
-tags: [private]
-```
-
-```Go
-func match(s1, s2 string) bool
-```
-
-match reports whether s1 and s2 match ignoring case. It is assumed s1 and s2 are the same length. 
-
-### <a id="lookup" href="#lookup">func lookup(tab []string, val string) (int, string, error)</a>
+### <a id="CheckRuntimeTimerPeriodOverflow" href="#CheckRuntimeTimerPeriodOverflow">func CheckRuntimeTimerPeriodOverflow()</a>
 
 ```
-searchKey: time.lookup
-tags: [private]
+searchKey: time.CheckRuntimeTimerPeriodOverflow
+tags: [function private]
 ```
 
 ```Go
-func lookup(tab []string, val string) (int, string, error)
+func CheckRuntimeTimerPeriodOverflow()
 ```
+
+Test that a runtimeTimer with a period that would overflow when on expiration does not throw or cause other timers to hang. 
+
+This test has to be in internal_test.go since it fiddles with unexported data structures. 
+
+### <a id="ForceUSPacificForTesting" href="#ForceUSPacificForTesting">func ForceUSPacificForTesting()</a>
+
+```
+searchKey: time.ForceUSPacificForTesting
+tags: [function private]
+```
+
+```Go
+func ForceUSPacificForTesting()
+```
+
+### <a id="LoadFromEmbeddedTZData" href="#LoadFromEmbeddedTZData">func LoadFromEmbeddedTZData(zone string) (string, error)</a>
+
+```
+searchKey: time.LoadFromEmbeddedTZData
+tags: [method private]
+```
+
+```Go
+func LoadFromEmbeddedTZData(zone string) (string, error)
+```
+
+### <a id="ResetLocalOnceForTest" href="#ResetLocalOnceForTest">func ResetLocalOnceForTest()</a>
+
+```
+searchKey: time.ResetLocalOnceForTest
+tags: [function private]
+```
+
+```Go
+func ResetLocalOnceForTest()
+```
+
+### <a id="ResetZoneinfoForTesting" href="#ResetZoneinfoForTesting">func ResetZoneinfoForTesting()</a>
+
+```
+searchKey: time.ResetZoneinfoForTesting
+tags: [function private]
+```
+
+```Go
+func ResetZoneinfoForTesting()
+```
+
+### <a id="Sleep" href="#Sleep">func Sleep(d Duration)</a>
+
+```
+searchKey: time.Sleep
+tags: [method]
+```
+
+```Go
+func Sleep(d Duration)
+```
+
+Sleep pauses the current goroutine for at least the duration d. A negative or zero duration causes Sleep to return immediately. 
+
+### <a id="Tick" href="#Tick">func Tick(d Duration) <-chan Time</a>
+
+```
+searchKey: time.Tick
+tags: [method]
+```
+
+```Go
+func Tick(d Duration) <-chan Time
+```
+
+Tick is a convenience wrapper for NewTicker providing access to the ticking channel only. While Tick is useful for clients that have no need to shut down the Ticker, be aware that without a way to shut it down the underlying Ticker cannot be recovered by the garbage collector; it "leaks". Unlike NewTicker, Tick will return nil if d <= 0. 
+
+### <a id="ZoneinfoForTesting" href="#ZoneinfoForTesting">func ZoneinfoForTesting() *string</a>
+
+```
+searchKey: time.ZoneinfoForTesting
+tags: [function private]
+```
+
+```Go
+func ZoneinfoForTesting() *string
+```
+
+### <a id="absClock" href="#absClock">func absClock(abs uint64) (hour, min, sec int)</a>
+
+```
+searchKey: time.absClock
+tags: [method private]
+```
+
+```Go
+func absClock(abs uint64) (hour, min, sec int)
+```
+
+absClock is like clock but operates on an absolute time. 
 
 ### <a id="appendInt" href="#appendInt">func appendInt(b []byte, x int, width int) []byte</a>
 
 ```
 searchKey: time.appendInt
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -5041,7 +5256,7 @@ appendInt appends the decimal form of x to b and returns the result. If the deci
 
 ```
 searchKey: time.atoi
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -5050,370 +5265,116 @@ func atoi(s string) (x int, err error)
 
 Duplicates functionality in strconv, but avoids dependency. 
 
-### <a id="formatNano" href="#formatNano">func formatNano(b []byte, nanosec uint, n int, trim bool) []byte</a>
+### <a id="byteString" href="#byteString">func byteString(p []byte) string</a>
 
 ```
-searchKey: time.formatNano
-tags: [private]
-```
-
-```Go
-func formatNano(b []byte, nanosec uint, n int, trim bool) []byte
-```
-
-formatNano appends a fractional second, as nanoseconds, to b and returns the result. 
-
-### <a id="quote" href="#quote">func quote(s string) string</a>
-
-```
-searchKey: time.quote
-tags: [private]
+searchKey: time.byteString
+tags: [method private]
 ```
 
 ```Go
-func quote(s string) string
+func byteString(p []byte) string
 ```
 
-### <a id="isDigit" href="#isDigit">func isDigit(s string, i int) bool</a>
-
-```
-searchKey: time.isDigit
-tags: [private]
-```
-
-```Go
-func isDigit(s string, i int) bool
-```
-
-isDigit reports whether s[i] is in range and is a decimal digit. 
-
-### <a id="getnum" href="#getnum">func getnum(s string, fixed bool) (int, string, error)</a>
-
-```
-searchKey: time.getnum
-tags: [private]
-```
-
-```Go
-func getnum(s string, fixed bool) (int, string, error)
-```
-
-getnum parses s[0:1] or s[0:2] (fixed forces s[0:2]) as a decimal integer and returns the integer and the remainder of the string. 
-
-### <a id="getnum3" href="#getnum3">func getnum3(s string, fixed bool) (int, string, error)</a>
-
-```
-searchKey: time.getnum3
-tags: [private]
-```
-
-```Go
-func getnum3(s string, fixed bool) (int, string, error)
-```
-
-getnum3 parses s[0:1], s[0:2], or s[0:3] (fixed forces s[0:3]) as a decimal integer and returns the integer and the remainder of the string. 
-
-### <a id="cutspace" href="#cutspace">func cutspace(s string) string</a>
-
-```
-searchKey: time.cutspace
-tags: [private]
-```
-
-```Go
-func cutspace(s string) string
-```
-
-### <a id="skip" href="#skip">func skip(value, prefix string) (string, error)</a>
-
-```
-searchKey: time.skip
-tags: [private]
-```
-
-```Go
-func skip(value, prefix string) (string, error)
-```
-
-skip removes the given prefix from value, treating runs of space characters as equivalent. 
-
-### <a id="parseTimeZone" href="#parseTimeZone">func parseTimeZone(value string) (length int, ok bool)</a>
-
-```
-searchKey: time.parseTimeZone
-tags: [private]
-```
-
-```Go
-func parseTimeZone(value string) (length int, ok bool)
-```
-
-parseTimeZone parses a time zone string and returns its length. Time zones are human-generated and unpredictable. We can't do precise error checking. On the other hand, for a correct parse there must be a time zone at the beginning of the string, so it's almost always true that there's one there. We look at the beginning of the string for a run of upper-case letters. If there are more than 5, it's an error. If there are 4 or 5 and the last is a T, it's a time zone. If there are 3, it's a time zone. Otherwise, other than special cases, it's not a time zone. GMT is special because it can have an hour offset. 
-
-### <a id="parseGMT" href="#parseGMT">func parseGMT(value string) int</a>
-
-```
-searchKey: time.parseGMT
-tags: [private]
-```
-
-```Go
-func parseGMT(value string) int
-```
-
-parseGMT parses a GMT time zone. The input string is known to start "GMT". The function checks whether that is followed by a sign and a number in the range -23 through +23 excluding zero. 
-
-### <a id="parseSignedOffset" href="#parseSignedOffset">func parseSignedOffset(value string) int</a>
-
-```
-searchKey: time.parseSignedOffset
-tags: [private]
-```
-
-```Go
-func parseSignedOffset(value string) int
-```
-
-parseSignedOffset parses a signed timezone offset (e.g. "+03" or "-04"). The function checks for a signed number in the range -23 through +23 excluding zero. Returns length of the found offset string or 0 otherwise 
-
-### <a id="commaOrPeriod" href="#commaOrPeriod">func commaOrPeriod(b byte) bool</a>
-
-```
-searchKey: time.commaOrPeriod
-tags: [private]
-```
-
-```Go
-func commaOrPeriod(b byte) bool
-```
-
-### <a id="parseNanoseconds" href="#parseNanoseconds">func parseNanoseconds(value string, nbytes int) (ns int, rangeErrString string, err error)</a>
-
-```
-searchKey: time.parseNanoseconds
-tags: [private]
-```
-
-```Go
-func parseNanoseconds(value string, nbytes int) (ns int, rangeErrString string, err error)
-```
-
-### <a id="leadingInt" href="#leadingInt">func leadingInt(s string) (x int64, rem string, err error)</a>
-
-```
-searchKey: time.leadingInt
-tags: [private]
-```
-
-```Go
-func leadingInt(s string) (x int64, rem string, err error)
-```
-
-leadingInt consumes the leading [0-9]* from s. 
-
-### <a id="leadingFraction" href="#leadingFraction">func leadingFraction(s string) (x int64, scale float64, rem string)</a>
-
-```
-searchKey: time.leadingFraction
-tags: [private]
-```
-
-```Go
-func leadingFraction(s string) (x int64, scale float64, rem string)
-```
-
-leadingFraction consumes the leading [0-9]* from s. It is used only for fractions, so does not return an error on overflow, it just stops accumulating precision. 
-
-### <a id="Sleep" href="#Sleep">func Sleep(d Duration)</a>
-
-```
-searchKey: time.Sleep
-```
-
-```Go
-func Sleep(d Duration)
-```
-
-Sleep pauses the current goroutine for at least the duration d. A negative or zero duration causes Sleep to return immediately. 
-
-### <a id="when" href="#when">func when(d Duration) int64</a>
-
-```
-searchKey: time.when
-tags: [private]
-```
-
-```Go
-func when(d Duration) int64
-```
-
-when is a helper function for setting the 'when' field of a runtimeTimer. It returns what the time will be, in nanoseconds, Duration d in the future. If d is negative, it is ignored. If the returned value would be less than zero because of an overflow, MaxInt64 is returned. 
-
-### <a id="startTimer" href="#startTimer">func startTimer(*runtimeTimer)</a>
-
-```
-searchKey: time.startTimer
-tags: [private]
-```
-
-```Go
-func startTimer(*runtimeTimer)
-```
-
-### <a id="stopTimer" href="#stopTimer">func stopTimer(*runtimeTimer) bool</a>
-
-```
-searchKey: time.stopTimer
-tags: [private]
-```
-
-```Go
-func stopTimer(*runtimeTimer) bool
-```
-
-### <a id="resetTimer" href="#resetTimer">func resetTimer(*runtimeTimer, int64) bool</a>
-
-```
-searchKey: time.resetTimer
-tags: [private]
-```
-
-```Go
-func resetTimer(*runtimeTimer, int64) bool
-```
-
-### <a id="modTimer" href="#modTimer">func modTimer(t *runtimeTimer, when, period int64, f func(interface{}, uintptr), arg interface{}, seq uintptr)</a>
-
-```
-searchKey: time.modTimer
-tags: [private]
-```
-
-```Go
-func modTimer(t *runtimeTimer, when, period int64, f func(interface{}, uintptr), arg interface{}, seq uintptr)
-```
-
-### <a id="sendTime" href="#sendTime">func sendTime(c interface{}, seq uintptr)</a>
-
-```
-searchKey: time.sendTime
-tags: [private]
-```
-
-```Go
-func sendTime(c interface{}, seq uintptr)
-```
-
-### <a id="After" href="#After">func After(d Duration) <-chan Time</a>
-
-```
-searchKey: time.After
-```
-
-```Go
-func After(d Duration) <-chan Time
-```
-
-After waits for the duration to elapse and then sends the current time on the returned channel. It is equivalent to NewTimer(d).C. The underlying Timer is not recovered by the garbage collector until the timer fires. If efficiency is a concern, use NewTimer instead and call Timer.Stop if the timer is no longer needed. 
-
-### <a id="goFunc" href="#goFunc">func goFunc(arg interface{}, seq uintptr)</a>
-
-```
-searchKey: time.goFunc
-tags: [private]
-```
-
-```Go
-func goFunc(arg interface{}, seq uintptr)
-```
-
-### <a id="interrupt" href="#interrupt">func interrupt()</a>
-
-```
-searchKey: time.interrupt
-tags: [private]
-```
-
-```Go
-func interrupt()
-```
-
-for testing: whatever interrupts a sleep 
-
-### <a id="open" href="#open">func open(name string) (uintptr, error)</a>
-
-```
-searchKey: time.open
-tags: [private]
-```
-
-```Go
-func open(name string) (uintptr, error)
-```
-
-### <a id="read" href="#read">func read(fd uintptr, buf []byte) (int, error)</a>
-
-```
-searchKey: time.read
-tags: [private]
-```
-
-```Go
-func read(fd uintptr, buf []byte) (int, error)
-```
+Make a string by stopping at the first NUL 
 
 ### <a id="closefd" href="#closefd">func closefd(fd uintptr)</a>
 
 ```
 searchKey: time.closefd
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func closefd(fd uintptr)
 ```
 
-### <a id="preadn" href="#preadn">func preadn(fd uintptr, buf []byte, off int) error</a>
+### <a id="commaOrPeriod" href="#commaOrPeriod">func commaOrPeriod(b byte) bool</a>
 
 ```
-searchKey: time.preadn
-tags: [private]
-```
-
-```Go
-func preadn(fd uintptr, buf []byte, off int) error
-```
-
-### <a id="Tick" href="#Tick">func Tick(d Duration) <-chan Time</a>
-
-```
-searchKey: time.Tick
+searchKey: time.commaOrPeriod
+tags: [method private]
 ```
 
 ```Go
-func Tick(d Duration) <-chan Time
+func commaOrPeriod(b byte) bool
 ```
 
-Tick is a convenience wrapper for NewTicker providing access to the ticking channel only. While Tick is useful for clients that have no need to shut down the Ticker, be aware that without a way to shut it down the underlying Ticker cannot be recovered by the garbage collector; it "leaks". Unlike NewTicker, Tick will return nil if d <= 0. 
-
-### <a id="absClock" href="#absClock">func absClock(abs uint64) (hour, min, sec int)</a>
+### <a id="containsDotDot" href="#containsDotDot">func containsDotDot(s string) bool</a>
 
 ```
-searchKey: time.absClock
-tags: [private]
+searchKey: time.containsDotDot
+tags: [method private]
 ```
 
 ```Go
-func absClock(abs uint64) (hour, min, sec int)
+func containsDotDot(s string) bool
 ```
 
-absClock is like clock but operates on an absolute time. 
+containsDotDot reports whether s contains "..". 
+
+### <a id="cutspace" href="#cutspace">func cutspace(s string) string</a>
+
+```
+searchKey: time.cutspace
+tags: [method private]
+```
+
+```Go
+func cutspace(s string) string
+```
+
+### <a id="daysIn" href="#daysIn">func daysIn(m Month, year int) int</a>
+
+```
+searchKey: time.daysIn
+tags: [method private]
+```
+
+```Go
+func daysIn(m Month, year int) int
+```
+
+### <a id="daysSinceEpoch" href="#daysSinceEpoch">func daysSinceEpoch(year int) uint64</a>
+
+```
+searchKey: time.daysSinceEpoch
+tags: [method private]
+```
+
+```Go
+func daysSinceEpoch(year int) uint64
+```
+
+daysSinceEpoch takes a year and returns the number of days from the absolute epoch to the start of that year. This is basically (year - zeroYear) * 365, but accounting for leap days. 
+
+### <a id="empty" href="#empty">func empty(arg interface{}, seq uintptr)</a>
+
+```
+searchKey: time.empty
+tags: [method private]
+```
+
+```Go
+func empty(arg interface{}, seq uintptr)
+```
+
+### <a id="findZone" href="#findZone">func findZone(zones []zone, name string, offset int, isDST bool) int</a>
+
+```
+searchKey: time.findZone
+tags: [method private]
+```
+
+```Go
+func findZone(zones []zone, name string, offset int, isDST bool) int
+```
 
 ### <a id="fmtFrac" href="#fmtFrac">func fmtFrac(buf []byte, v uint64, prec int) (nw int, nv uint64)</a>
 
 ```
 searchKey: time.fmtFrac
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -5426,7 +5387,7 @@ fmtFrac formats the fraction of v/10**prec (e.g., ".12345") into the tail of buf
 
 ```
 searchKey: time.fmtInt
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -5435,11 +5396,194 @@ func fmtInt(buf []byte, v uint64) int
 
 fmtInt formats v into the tail of buf. It returns the index where the output begins. 
 
+### <a id="forceZipFileForTesting" href="#forceZipFileForTesting">func forceZipFileForTesting(zipOnly bool)</a>
+
+```
+searchKey: time.forceZipFileForTesting
+tags: [method private]
+```
+
+```Go
+func forceZipFileForTesting(zipOnly bool)
+```
+
+### <a id="formatNano" href="#formatNano">func formatNano(b []byte, nanosec uint, n int, trim bool) []byte</a>
+
+```
+searchKey: time.formatNano
+tags: [method private]
+```
+
+```Go
+func formatNano(b []byte, nanosec uint, n int, trim bool) []byte
+```
+
+formatNano appends a fractional second, as nanoseconds, to b and returns the result. 
+
+### <a id="get2" href="#get2">func get2(b []byte) int</a>
+
+```
+searchKey: time.get2
+tags: [method private]
+```
+
+```Go
+func get2(b []byte) int
+```
+
+get2 returns the little-endian 16-bit value in b. 
+
+### <a id="get4" href="#get4">func get4(b []byte) int</a>
+
+```
+searchKey: time.get4
+tags: [method private]
+```
+
+```Go
+func get4(b []byte) int
+```
+
+get4 returns the little-endian 32-bit value in b. 
+
+### <a id="getnum" href="#getnum">func getnum(s string, fixed bool) (int, string, error)</a>
+
+```
+searchKey: time.getnum
+tags: [method private]
+```
+
+```Go
+func getnum(s string, fixed bool) (int, string, error)
+```
+
+getnum parses s[0:1] or s[0:2] (fixed forces s[0:2]) as a decimal integer and returns the integer and the remainder of the string. 
+
+### <a id="getnum3" href="#getnum3">func getnum3(s string, fixed bool) (int, string, error)</a>
+
+```
+searchKey: time.getnum3
+tags: [method private]
+```
+
+```Go
+func getnum3(s string, fixed bool) (int, string, error)
+```
+
+getnum3 parses s[0:1], s[0:2], or s[0:3] (fixed forces s[0:3]) as a decimal integer and returns the integer and the remainder of the string. 
+
+### <a id="goFunc" href="#goFunc">func goFunc(arg interface{}, seq uintptr)</a>
+
+```
+searchKey: time.goFunc
+tags: [method private]
+```
+
+```Go
+func goFunc(arg interface{}, seq uintptr)
+```
+
+### <a id="init.internal_test.go" href="#init.internal_test.go">func init()</a>
+
+```
+searchKey: time.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="initLocal" href="#initLocal">func initLocal()</a>
+
+```
+searchKey: time.initLocal
+tags: [function private]
+```
+
+```Go
+func initLocal()
+```
+
+### <a id="initTestingZone" href="#initTestingZone">func initTestingZone()</a>
+
+```
+searchKey: time.initTestingZone
+tags: [function private]
+```
+
+```Go
+func initTestingZone()
+```
+
+### <a id="interrupt" href="#interrupt">func interrupt()</a>
+
+```
+searchKey: time.interrupt
+tags: [function private]
+```
+
+```Go
+func interrupt()
+```
+
+for testing: whatever interrupts a sleep 
+
+### <a id="isDigit" href="#isDigit">func isDigit(s string, i int) bool</a>
+
+```
+searchKey: time.isDigit
+tags: [method private]
+```
+
+```Go
+func isDigit(s string, i int) bool
+```
+
+isDigit reports whether s[i] is in range and is a decimal digit. 
+
+### <a id="isLeap" href="#isLeap">func isLeap(year int) bool</a>
+
+```
+searchKey: time.isLeap
+tags: [method private]
+```
+
+```Go
+func isLeap(year int) bool
+```
+
+### <a id="leadingFraction" href="#leadingFraction">func leadingFraction(s string) (x int64, scale float64, rem string)</a>
+
+```
+searchKey: time.leadingFraction
+tags: [method private]
+```
+
+```Go
+func leadingFraction(s string) (x int64, scale float64, rem string)
+```
+
+leadingFraction consumes the leading [0-9]* from s. It is used only for fractions, so does not return an error on overflow, it just stops accumulating precision. 
+
+### <a id="leadingInt" href="#leadingInt">func leadingInt(s string) (x int64, rem string, err error)</a>
+
+```
+searchKey: time.leadingInt
+tags: [method private]
+```
+
+```Go
+func leadingInt(s string) (x int64, rem string, err error)
+```
+
+leadingInt consumes the leading [0-9]* from s. 
+
 ### <a id="lessThanHalf" href="#lessThanHalf">func lessThanHalf(x, y Duration) bool</a>
 
 ```
 searchKey: time.lessThanHalf
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -5448,72 +5592,98 @@ func lessThanHalf(x, y Duration) bool
 
 lessThanHalf reports whether x+x < y but avoids overflow, assuming x and y are both positive (Duration is signed). 
 
-### <a id="daysIn" href="#daysIn">func daysIn(m Month, year int) int</a>
+### <a id="loadTzinfo" href="#loadTzinfo">func loadTzinfo(name string, source string) ([]byte, error)</a>
 
 ```
-searchKey: time.daysIn
-tags: [private]
-```
-
-```Go
-func daysIn(m Month, year int) int
-```
-
-### <a id="daysSinceEpoch" href="#daysSinceEpoch">func daysSinceEpoch(year int) uint64</a>
-
-```
-searchKey: time.daysSinceEpoch
-tags: [private]
+searchKey: time.loadTzinfo
+tags: [method private]
 ```
 
 ```Go
-func daysSinceEpoch(year int) uint64
+func loadTzinfo(name string, source string) ([]byte, error)
 ```
 
-daysSinceEpoch takes a year and returns the number of days from the absolute epoch to the start of that year. This is basically (year - zeroYear) * 365, but accounting for leap days. 
+loadTzinfo returns the time zone information of the time zone with the given name, from a given source. A source may be a timezone database directory, tzdata database file or an uncompressed zip file, containing the contents of such a directory. 
 
-### <a id="now" href="#now">func now() (sec int64, nsec int32, mono int64)</a>
-
-```
-searchKey: time.now
-tags: [private]
-```
-
-```Go
-func now() (sec int64, nsec int32, mono int64)
-```
-
-Provided by package runtime. 
-
-### <a id="runtimeNano" href="#runtimeNano">func runtimeNano() int64</a>
+### <a id="loadTzinfoFromDirOrZip" href="#loadTzinfoFromDirOrZip">func loadTzinfoFromDirOrZip(dir, name string) ([]byte, error)</a>
 
 ```
-searchKey: time.runtimeNano
-tags: [private]
+searchKey: time.loadTzinfoFromDirOrZip
+tags: [method private]
 ```
 
 ```Go
-func runtimeNano() int64
+func loadTzinfoFromDirOrZip(dir, name string) ([]byte, error)
 ```
 
-runtimeNano returns the current value of the runtime clock in nanoseconds. 
+loadTzinfoFromDirOrZip returns the contents of the file with the given name in dir. dir can either be an uncompressed zip file, or a directory. 
 
-### <a id="isLeap" href="#isLeap">func isLeap(year int) bool</a>
+### <a id="loadTzinfoFromZip" href="#loadTzinfoFromZip">func loadTzinfoFromZip(zipfile, name string) ([]byte, error)</a>
 
 ```
-searchKey: time.isLeap
-tags: [private]
+searchKey: time.loadTzinfoFromZip
+tags: [method private]
 ```
 
 ```Go
-func isLeap(year int) bool
+func loadTzinfoFromZip(zipfile, name string) ([]byte, error)
 ```
+
+loadTzinfoFromZip returns the contents of the file with the given name in the given uncompressed zip file. 
+
+### <a id="lookup" href="#lookup">func lookup(tab []string, val string) (int, string, error)</a>
+
+```
+searchKey: time.lookup
+tags: [method private]
+```
+
+```Go
+func lookup(tab []string, val string) (int, string, error)
+```
+
+### <a id="match" href="#match">func match(s1, s2 string) bool</a>
+
+```
+searchKey: time.match
+tags: [method private]
+```
+
+```Go
+func match(s1, s2 string) bool
+```
+
+match reports whether s1 and s2 match ignoring case. It is assumed s1 and s2 are the same length. 
+
+### <a id="modTimer" href="#modTimer">func modTimer(t *runtimeTimer, when, period int64, f func(interface{}, uintptr), arg interface{}, seq uintptr)</a>
+
+```
+searchKey: time.modTimer
+tags: [method private]
+```
+
+```Go
+func modTimer(t *runtimeTimer, when, period int64, f func(interface{}, uintptr), arg interface{}, seq uintptr)
+```
+
+### <a id="nextStdChunk" href="#nextStdChunk">func nextStdChunk(layout string) (prefix string, std int, suffix string)</a>
+
+```
+searchKey: time.nextStdChunk
+tags: [method private]
+```
+
+```Go
+func nextStdChunk(layout string) (prefix string, std int, suffix string)
+```
+
+nextStdChunk finds the first occurrence of a std string in layout and returns the text before, the std string, and the text after. 
 
 ### <a id="norm" href="#norm">func norm(hi, lo, base int) (nhi, nlo int)</a>
 
 ```
 searchKey: time.norm
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -5527,11 +5697,240 @@ hi * base + lo == nhi * base + nlo
 0 <= nlo < base
 
 ```
+### <a id="now" href="#now">func now() (sec int64, nsec int32, mono int64)</a>
+
+```
+searchKey: time.now
+tags: [function private]
+```
+
+```Go
+func now() (sec int64, nsec int32, mono int64)
+```
+
+Provided by package runtime. 
+
+### <a id="open" href="#open">func open(name string) (uintptr, error)</a>
+
+```
+searchKey: time.open
+tags: [method private]
+```
+
+```Go
+func open(name string) (uintptr, error)
+```
+
+### <a id="parseGMT" href="#parseGMT">func parseGMT(value string) int</a>
+
+```
+searchKey: time.parseGMT
+tags: [method private]
+```
+
+```Go
+func parseGMT(value string) int
+```
+
+parseGMT parses a GMT time zone. The input string is known to start "GMT". The function checks whether that is followed by a sign and a number in the range -23 through +23 excluding zero. 
+
+### <a id="parseNanoseconds" href="#parseNanoseconds">func parseNanoseconds(value string, nbytes int) (ns int, rangeErrString string, err error)</a>
+
+```
+searchKey: time.parseNanoseconds
+tags: [method private]
+```
+
+```Go
+func parseNanoseconds(value string, nbytes int) (ns int, rangeErrString string, err error)
+```
+
+### <a id="parseSignedOffset" href="#parseSignedOffset">func parseSignedOffset(value string) int</a>
+
+```
+searchKey: time.parseSignedOffset
+tags: [method private]
+```
+
+```Go
+func parseSignedOffset(value string) int
+```
+
+parseSignedOffset parses a signed timezone offset (e.g. "+03" or "-04"). The function checks for a signed number in the range -23 through +23 excluding zero. Returns length of the found offset string or 0 otherwise 
+
+### <a id="parseTimeZone" href="#parseTimeZone">func parseTimeZone(value string) (length int, ok bool)</a>
+
+```
+searchKey: time.parseTimeZone
+tags: [method private]
+```
+
+```Go
+func parseTimeZone(value string) (length int, ok bool)
+```
+
+parseTimeZone parses a time zone string and returns its length. Time zones are human-generated and unpredictable. We can't do precise error checking. On the other hand, for a correct parse there must be a time zone at the beginning of the string, so it's almost always true that there's one there. We look at the beginning of the string for a run of upper-case letters. If there are more than 5, it's an error. If there are 4 or 5 and the last is a T, it's a time zone. If there are 3, it's a time zone. Otherwise, other than special cases, it's not a time zone. GMT is special because it can have an hour offset. 
+
+### <a id="preadn" href="#preadn">func preadn(fd uintptr, buf []byte, off int) error</a>
+
+```
+searchKey: time.preadn
+tags: [method private]
+```
+
+```Go
+func preadn(fd uintptr, buf []byte, off int) error
+```
+
+### <a id="quote" href="#quote">func quote(s string) string</a>
+
+```
+searchKey: time.quote
+tags: [method private]
+```
+
+```Go
+func quote(s string) string
+```
+
+### <a id="read" href="#read">func read(fd uintptr, buf []byte) (int, error)</a>
+
+```
+searchKey: time.read
+tags: [method private]
+```
+
+```Go
+func read(fd uintptr, buf []byte) (int, error)
+```
+
+### <a id="readFile" href="#readFile">func readFile(name string) ([]byte, error)</a>
+
+```
+searchKey: time.readFile
+tags: [method private]
+```
+
+```Go
+func readFile(name string) ([]byte, error)
+```
+
+readFile reads and returns the content of the named file. It is a trivial implementation of os.ReadFile, reimplemented here to avoid depending on io/ioutil or os. It returns an error if name exceeds maxFileSize bytes. 
+
+### <a id="registerLoadFromEmbeddedTZData" href="#registerLoadFromEmbeddedTZData">func registerLoadFromEmbeddedTZData(f func(string) (string, error))</a>
+
+```
+searchKey: time.registerLoadFromEmbeddedTZData
+tags: [method private]
+```
+
+```Go
+func registerLoadFromEmbeddedTZData(f func(string) (string, error))
+```
+
+registerLoadFromEmbeddedTZData is called by the time/tzdata package, if it is imported. 
+
+### <a id="resetTimer" href="#resetTimer">func resetTimer(*runtimeTimer, int64) bool</a>
+
+```
+searchKey: time.resetTimer
+tags: [method private]
+```
+
+```Go
+func resetTimer(*runtimeTimer, int64) bool
+```
+
+### <a id="runtimeNano" href="#runtimeNano">func runtimeNano() int64</a>
+
+```
+searchKey: time.runtimeNano
+tags: [function private]
+```
+
+```Go
+func runtimeNano() int64
+```
+
+runtimeNano returns the current value of the runtime clock in nanoseconds. 
+
+### <a id="sendTime" href="#sendTime">func sendTime(c interface{}, seq uintptr)</a>
+
+```
+searchKey: time.sendTime
+tags: [method private]
+```
+
+```Go
+func sendTime(c interface{}, seq uintptr)
+```
+
+### <a id="skip" href="#skip">func skip(value, prefix string) (string, error)</a>
+
+```
+searchKey: time.skip
+tags: [method private]
+```
+
+```Go
+func skip(value, prefix string) (string, error)
+```
+
+skip removes the given prefix from value, treating runs of space characters as equivalent. 
+
+### <a id="startTimer" href="#startTimer">func startTimer(*runtimeTimer)</a>
+
+```
+searchKey: time.startTimer
+tags: [method private]
+```
+
+```Go
+func startTimer(*runtimeTimer)
+```
+
+### <a id="startsWithLowerCase" href="#startsWithLowerCase">func startsWithLowerCase(str string) bool</a>
+
+```
+searchKey: time.startsWithLowerCase
+tags: [method private]
+```
+
+```Go
+func startsWithLowerCase(str string) bool
+```
+
+startsWithLowerCase reports whether the string has a lower-case letter at the beginning. Its purpose is to prevent matching strings like "Month" when looking for "Mon". 
+
+### <a id="stopTimer" href="#stopTimer">func stopTimer(*runtimeTimer) bool</a>
+
+```
+searchKey: time.stopTimer
+tags: [method private]
+```
+
+```Go
+func stopTimer(*runtimeTimer) bool
+```
+
+### <a id="tzruleTime" href="#tzruleTime">func tzruleTime(year int, r rule, off int) int</a>
+
+```
+searchKey: time.tzruleTime
+tags: [method private]
+```
+
+```Go
+func tzruleTime(year int, r rule, off int) int
+```
+
+tzruleTime takes a year, a rule, and a timezone offset, and returns the number of seconds since the start of the year that the rule takes effect. 
+
 ### <a id="tzset" href="#tzset">func tzset(s string, initEnd, sec int64) (name string, offset int, start, end int64, isDST, ok bool)</a>
 
 ```
 searchKey: time.tzset
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -5544,7 +5943,7 @@ tzset takes a timezone string like the one found in the TZ environment variable,
 
 ```
 searchKey: time.tzsetName
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -5553,24 +5952,11 @@ func tzsetName(s string) (string, string, bool)
 
 tzsetName returns the timezone name at the start of the tzset string s, and the remainder of s, and reports whether the parsing is OK. 
 
-### <a id="tzsetOffset" href="#tzsetOffset">func tzsetOffset(s string) (offset int, rest string, ok bool)</a>
-
-```
-searchKey: time.tzsetOffset
-tags: [private]
-```
-
-```Go
-func tzsetOffset(s string) (offset int, rest string, ok bool)
-```
-
-tzsetOffset returns the timezone offset at the start of the tzset string s, and the remainder of s, and reports whether the parsing is OK. The timezone offset is returned as a number of seconds. 
-
 ### <a id="tzsetNum" href="#tzsetNum">func tzsetNum(s string, min, max int) (num int, rest string, ok bool)</a>
 
 ```
 searchKey: time.tzsetNum
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -5579,269 +5965,29 @@ func tzsetNum(s string, min, max int) (num int, rest string, ok bool)
 
 tzsetNum parses a number from a tzset string. It returns the number, and the remainder of the string, and reports success. The number must be between min and max. 
 
-### <a id="tzruleTime" href="#tzruleTime">func tzruleTime(year int, r rule, off int) int</a>
+### <a id="tzsetOffset" href="#tzsetOffset">func tzsetOffset(s string) (offset int, rest string, ok bool)</a>
 
 ```
-searchKey: time.tzruleTime
-tags: [private]
-```
-
-```Go
-func tzruleTime(year int, r rule, off int) int
-```
-
-tzruleTime takes a year, a rule, and a timezone offset, and returns the number of seconds since the start of the year that the rule takes effect. 
-
-### <a id="containsDotDot" href="#containsDotDot">func containsDotDot(s string) bool</a>
-
-```
-searchKey: time.containsDotDot
-tags: [private]
+searchKey: time.tzsetOffset
+tags: [method private]
 ```
 
 ```Go
-func containsDotDot(s string) bool
+func tzsetOffset(s string) (offset int, rest string, ok bool)
 ```
 
-containsDotDot reports whether s contains "..". 
+tzsetOffset returns the timezone offset at the start of the tzset string s, and the remainder of s, and reports whether the parsing is OK. The timezone offset is returned as a number of seconds. 
 
-### <a id="registerLoadFromEmbeddedTZData" href="#registerLoadFromEmbeddedTZData">func registerLoadFromEmbeddedTZData(f func(string) (string, error))</a>
-
-```
-searchKey: time.registerLoadFromEmbeddedTZData
-tags: [private]
-```
-
-```Go
-func registerLoadFromEmbeddedTZData(f func(string) (string, error))
-```
-
-registerLoadFromEmbeddedTZData is called by the time/tzdata package, if it is imported. 
-
-### <a id="byteString" href="#byteString">func byteString(p []byte) string</a>
+### <a id="when" href="#when">func when(d Duration) int64</a>
 
 ```
-searchKey: time.byteString
-tags: [private]
+searchKey: time.when
+tags: [method private]
 ```
 
 ```Go
-func byteString(p []byte) string
+func when(d Duration) int64
 ```
 
-Make a string by stopping at the first NUL 
-
-### <a id="findZone" href="#findZone">func findZone(zones []zone, name string, offset int, isDST bool) int</a>
-
-```
-searchKey: time.findZone
-tags: [private]
-```
-
-```Go
-func findZone(zones []zone, name string, offset int, isDST bool) int
-```
-
-### <a id="loadTzinfoFromDirOrZip" href="#loadTzinfoFromDirOrZip">func loadTzinfoFromDirOrZip(dir, name string) ([]byte, error)</a>
-
-```
-searchKey: time.loadTzinfoFromDirOrZip
-tags: [private]
-```
-
-```Go
-func loadTzinfoFromDirOrZip(dir, name string) ([]byte, error)
-```
-
-loadTzinfoFromDirOrZip returns the contents of the file with the given name in dir. dir can either be an uncompressed zip file, or a directory. 
-
-### <a id="get4" href="#get4">func get4(b []byte) int</a>
-
-```
-searchKey: time.get4
-tags: [private]
-```
-
-```Go
-func get4(b []byte) int
-```
-
-get4 returns the little-endian 32-bit value in b. 
-
-### <a id="get2" href="#get2">func get2(b []byte) int</a>
-
-```
-searchKey: time.get2
-tags: [private]
-```
-
-```Go
-func get2(b []byte) int
-```
-
-get2 returns the little-endian 16-bit value in b. 
-
-### <a id="loadTzinfoFromZip" href="#loadTzinfoFromZip">func loadTzinfoFromZip(zipfile, name string) ([]byte, error)</a>
-
-```
-searchKey: time.loadTzinfoFromZip
-tags: [private]
-```
-
-```Go
-func loadTzinfoFromZip(zipfile, name string) ([]byte, error)
-```
-
-loadTzinfoFromZip returns the contents of the file with the given name in the given uncompressed zip file. 
-
-### <a id="loadTzinfo" href="#loadTzinfo">func loadTzinfo(name string, source string) ([]byte, error)</a>
-
-```
-searchKey: time.loadTzinfo
-tags: [private]
-```
-
-```Go
-func loadTzinfo(name string, source string) ([]byte, error)
-```
-
-loadTzinfo returns the time zone information of the time zone with the given name, from a given source. A source may be a timezone database directory, tzdata database file or an uncompressed zip file, containing the contents of such a directory. 
-
-### <a id="readFile" href="#readFile">func readFile(name string) ([]byte, error)</a>
-
-```
-searchKey: time.readFile
-tags: [private]
-```
-
-```Go
-func readFile(name string) ([]byte, error)
-```
-
-readFile reads and returns the content of the named file. It is a trivial implementation of os.ReadFile, reimplemented here to avoid depending on io/ioutil or os. It returns an error if name exceeds maxFileSize bytes. 
-
-### <a id="initLocal" href="#initLocal">func initLocal()</a>
-
-```
-searchKey: time.initLocal
-tags: [private]
-```
-
-```Go
-func initLocal()
-```
-
-### <a id="ResetLocalOnceForTest" href="#ResetLocalOnceForTest">func ResetLocalOnceForTest()</a>
-
-```
-searchKey: time.ResetLocalOnceForTest
-tags: [private]
-```
-
-```Go
-func ResetLocalOnceForTest()
-```
-
-### <a id="ForceUSPacificForTesting" href="#ForceUSPacificForTesting">func ForceUSPacificForTesting()</a>
-
-```
-searchKey: time.ForceUSPacificForTesting
-tags: [private]
-```
-
-```Go
-func ForceUSPacificForTesting()
-```
-
-### <a id="ZoneinfoForTesting" href="#ZoneinfoForTesting">func ZoneinfoForTesting() *string</a>
-
-```
-searchKey: time.ZoneinfoForTesting
-tags: [private]
-```
-
-```Go
-func ZoneinfoForTesting() *string
-```
-
-### <a id="ResetZoneinfoForTesting" href="#ResetZoneinfoForTesting">func ResetZoneinfoForTesting()</a>
-
-```
-searchKey: time.ResetZoneinfoForTesting
-tags: [private]
-```
-
-```Go
-func ResetZoneinfoForTesting()
-```
-
-### <a id="LoadFromEmbeddedTZData" href="#LoadFromEmbeddedTZData">func LoadFromEmbeddedTZData(zone string) (string, error)</a>
-
-```
-searchKey: time.LoadFromEmbeddedTZData
-tags: [private]
-```
-
-```Go
-func LoadFromEmbeddedTZData(zone string) (string, error)
-```
-
-### <a id="init.internal_test.go" href="#init.internal_test.go">func init()</a>
-
-```
-searchKey: time.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
-### <a id="initTestingZone" href="#initTestingZone">func initTestingZone()</a>
-
-```
-searchKey: time.initTestingZone
-tags: [private]
-```
-
-```Go
-func initTestingZone()
-```
-
-### <a id="forceZipFileForTesting" href="#forceZipFileForTesting">func forceZipFileForTesting(zipOnly bool)</a>
-
-```
-searchKey: time.forceZipFileForTesting
-tags: [private]
-```
-
-```Go
-func forceZipFileForTesting(zipOnly bool)
-```
-
-### <a id="empty" href="#empty">func empty(arg interface{}, seq uintptr)</a>
-
-```
-searchKey: time.empty
-tags: [private]
-```
-
-```Go
-func empty(arg interface{}, seq uintptr)
-```
-
-### <a id="CheckRuntimeTimerPeriodOverflow" href="#CheckRuntimeTimerPeriodOverflow">func CheckRuntimeTimerPeriodOverflow()</a>
-
-```
-searchKey: time.CheckRuntimeTimerPeriodOverflow
-tags: [private]
-```
-
-```Go
-func CheckRuntimeTimerPeriodOverflow()
-```
-
-Test that a runtimeTimer with a period that would overflow when on expiration does not throw or cause other timers to hang. 
-
-This test has to be in internal_test.go since it fiddles with unexported data structures. 
+when is a helper function for setting the 'when' field of a runtimeTimer. It returns what the time will be, in nanoseconds, Duration d in the future. If d is negative, it is ignored. If the returned value would be less than zero because of an overflow, MaxInt64 is returned. 
 

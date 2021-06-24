@@ -19,33 +19,37 @@ func ValidMAC(message, messageMAC, key []byte) bool {
 * [Variables](#var)
     * [var hmacTests](#hmacTests)
 * [Types](#type)
-    * [type marshalable interface](#marshalable)
     * [type hmac struct](#hmac)
-        * [func (h *hmac) Sum(in []byte) []byte](#hmac.Sum)
-        * [func (h *hmac) Write(p []byte) (n int, err error)](#hmac.Write)
-        * [func (h *hmac) Size() int](#hmac.Size)
         * [func (h *hmac) BlockSize() int](#hmac.BlockSize)
         * [func (h *hmac) Reset()](#hmac.Reset)
+        * [func (h *hmac) Size() int](#hmac.Size)
+        * [func (h *hmac) Sum(in []byte) []byte](#hmac.Sum)
+        * [func (h *hmac) Write(p []byte) (n int, err error)](#hmac.Write)
     * [type hmacTest struct](#hmacTest)
     * [type justHash struct](#justHash)
+    * [type marshalable interface](#marshalable)
 * [Functions](#func)
-    * [func New(h func() hash.Hash, key []byte) hash.Hash](#New)
-    * [func Equal(mac1, mac2 []byte) bool](#Equal)
-    * [func TestHMAC(t *testing.T)](#TestHMAC)
-    * [func TestNonUniqueHash(t *testing.T)](#TestNonUniqueHash)
-    * [func TestEqual(t *testing.T)](#TestEqual)
     * [func BenchmarkHMACSHA256_1K(b *testing.B)](#BenchmarkHMACSHA256_1K)
     * [func BenchmarkHMACSHA256_32(b *testing.B)](#BenchmarkHMACSHA256_32)
     * [func BenchmarkNewWriteSum(b *testing.B)](#BenchmarkNewWriteSum)
+    * [func Equal(mac1, mac2 []byte) bool](#Equal)
+    * [func New(h func() hash.Hash, key []byte) hash.Hash](#New)
+    * [func TestEqual(t *testing.T)](#TestEqual)
+    * [func TestHMAC(t *testing.T)](#TestHMAC)
+    * [func TestNonUniqueHash(t *testing.T)](#TestNonUniqueHash)
 
 
 ## <a id="var" href="#var">Variables</a>
+
+```
+tags: [package]
+```
 
 ### <a id="hmacTests" href="#hmacTests">var hmacTests</a>
 
 ```
 searchKey: hmac.hmacTests
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
@@ -54,27 +58,15 @@ var hmacTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
-### <a id="marshalable" href="#marshalable">type marshalable interface</a>
-
 ```
-searchKey: hmac.marshalable
-tags: [private]
+tags: [package]
 ```
-
-```Go
-type marshalable interface {
-	MarshalBinary() ([]byte, error)
-	UnmarshalBinary([]byte) error
-}
-```
-
-Marshalable is the combination of encoding.BinaryMarshaler and encoding.BinaryUnmarshaler. Their method definitions are repeated here to avoid a dependency on the encoding package. 
 
 ### <a id="hmac" href="#hmac">type hmac struct</a>
 
 ```
 searchKey: hmac.hmac
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -89,44 +81,11 @@ type hmac struct {
 }
 ```
 
-#### <a id="hmac.Sum" href="#hmac.Sum">func (h *hmac) Sum(in []byte) []byte</a>
-
-```
-searchKey: hmac.hmac.Sum
-tags: [private]
-```
-
-```Go
-func (h *hmac) Sum(in []byte) []byte
-```
-
-#### <a id="hmac.Write" href="#hmac.Write">func (h *hmac) Write(p []byte) (n int, err error)</a>
-
-```
-searchKey: hmac.hmac.Write
-tags: [private]
-```
-
-```Go
-func (h *hmac) Write(p []byte) (n int, err error)
-```
-
-#### <a id="hmac.Size" href="#hmac.Size">func (h *hmac) Size() int</a>
-
-```
-searchKey: hmac.hmac.Size
-tags: [private]
-```
-
-```Go
-func (h *hmac) Size() int
-```
-
 #### <a id="hmac.BlockSize" href="#hmac.BlockSize">func (h *hmac) BlockSize() int</a>
 
 ```
 searchKey: hmac.hmac.BlockSize
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -137,18 +96,51 @@ func (h *hmac) BlockSize() int
 
 ```
 searchKey: hmac.hmac.Reset
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (h *hmac) Reset()
 ```
 
+#### <a id="hmac.Size" href="#hmac.Size">func (h *hmac) Size() int</a>
+
+```
+searchKey: hmac.hmac.Size
+tags: [function private]
+```
+
+```Go
+func (h *hmac) Size() int
+```
+
+#### <a id="hmac.Sum" href="#hmac.Sum">func (h *hmac) Sum(in []byte) []byte</a>
+
+```
+searchKey: hmac.hmac.Sum
+tags: [method private]
+```
+
+```Go
+func (h *hmac) Sum(in []byte) []byte
+```
+
+#### <a id="hmac.Write" href="#hmac.Write">func (h *hmac) Write(p []byte) (n int, err error)</a>
+
+```
+searchKey: hmac.hmac.Write
+tags: [method private]
+```
+
+```Go
+func (h *hmac) Write(p []byte) (n int, err error)
+```
+
 ### <a id="hmacTest" href="#hmacTest">type hmacTest struct</a>
 
 ```
 searchKey: hmac.hmacTest
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -166,7 +158,7 @@ type hmacTest struct {
 
 ```
 searchKey: hmac.justHash
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -177,70 +169,33 @@ type justHash struct {
 
 justHash implements just the hash.Hash methods and nothing else 
 
+### <a id="marshalable" href="#marshalable">type marshalable interface</a>
+
+```
+searchKey: hmac.marshalable
+tags: [interface private]
+```
+
+```Go
+type marshalable interface {
+	MarshalBinary() ([]byte, error)
+	UnmarshalBinary([]byte) error
+}
+```
+
+Marshalable is the combination of encoding.BinaryMarshaler and encoding.BinaryUnmarshaler. Their method definitions are repeated here to avoid a dependency on the encoding package. 
+
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="New" href="#New">func New(h func() hash.Hash, key []byte) hash.Hash</a>
-
 ```
-searchKey: hmac.New
-```
-
-```Go
-func New(h func() hash.Hash, key []byte) hash.Hash
-```
-
-New returns a new HMAC hash using the given hash.Hash type and key. New functions like sha256.New from crypto/sha256 can be used as h. h must return a new Hash every time it is called. Note that unlike other hash implementations in the standard library, the returned Hash does not implement encoding.BinaryMarshaler or encoding.BinaryUnmarshaler. 
-
-### <a id="Equal" href="#Equal">func Equal(mac1, mac2 []byte) bool</a>
-
-```
-searchKey: hmac.Equal
-```
-
-```Go
-func Equal(mac1, mac2 []byte) bool
-```
-
-Equal compares two MACs for equality without leaking timing information. 
-
-### <a id="TestHMAC" href="#TestHMAC">func TestHMAC(t *testing.T)</a>
-
-```
-searchKey: hmac.TestHMAC
-tags: [private]
-```
-
-```Go
-func TestHMAC(t *testing.T)
-```
-
-### <a id="TestNonUniqueHash" href="#TestNonUniqueHash">func TestNonUniqueHash(t *testing.T)</a>
-
-```
-searchKey: hmac.TestNonUniqueHash
-tags: [private]
-```
-
-```Go
-func TestNonUniqueHash(t *testing.T)
-```
-
-### <a id="TestEqual" href="#TestEqual">func TestEqual(t *testing.T)</a>
-
-```
-searchKey: hmac.TestEqual
-tags: [private]
-```
-
-```Go
-func TestEqual(t *testing.T)
+tags: [package]
 ```
 
 ### <a id="BenchmarkHMACSHA256_1K" href="#BenchmarkHMACSHA256_1K">func BenchmarkHMACSHA256_1K(b *testing.B)</a>
 
 ```
 searchKey: hmac.BenchmarkHMACSHA256_1K
-tags: [private]
+tags: [method private benchmark]
 ```
 
 ```Go
@@ -251,7 +206,7 @@ func BenchmarkHMACSHA256_1K(b *testing.B)
 
 ```
 searchKey: hmac.BenchmarkHMACSHA256_32
-tags: [private]
+tags: [method private benchmark]
 ```
 
 ```Go
@@ -262,10 +217,69 @@ func BenchmarkHMACSHA256_32(b *testing.B)
 
 ```
 searchKey: hmac.BenchmarkNewWriteSum
-tags: [private]
+tags: [method private benchmark]
 ```
 
 ```Go
 func BenchmarkNewWriteSum(b *testing.B)
+```
+
+### <a id="Equal" href="#Equal">func Equal(mac1, mac2 []byte) bool</a>
+
+```
+searchKey: hmac.Equal
+tags: [method]
+```
+
+```Go
+func Equal(mac1, mac2 []byte) bool
+```
+
+Equal compares two MACs for equality without leaking timing information. 
+
+### <a id="New" href="#New">func New(h func() hash.Hash, key []byte) hash.Hash</a>
+
+```
+searchKey: hmac.New
+tags: [method]
+```
+
+```Go
+func New(h func() hash.Hash, key []byte) hash.Hash
+```
+
+New returns a new HMAC hash using the given hash.Hash type and key. New functions like sha256.New from crypto/sha256 can be used as h. h must return a new Hash every time it is called. Note that unlike other hash implementations in the standard library, the returned Hash does not implement encoding.BinaryMarshaler or encoding.BinaryUnmarshaler. 
+
+### <a id="TestEqual" href="#TestEqual">func TestEqual(t *testing.T)</a>
+
+```
+searchKey: hmac.TestEqual
+tags: [method private test]
+```
+
+```Go
+func TestEqual(t *testing.T)
+```
+
+### <a id="TestHMAC" href="#TestHMAC">func TestHMAC(t *testing.T)</a>
+
+```
+searchKey: hmac.TestHMAC
+tags: [method private test]
+```
+
+```Go
+func TestHMAC(t *testing.T)
+```
+
+### <a id="TestNonUniqueHash" href="#TestNonUniqueHash">func TestNonUniqueHash(t *testing.T)</a>
+
+```
+searchKey: hmac.TestNonUniqueHash
+tags: [method private test]
+```
+
+```Go
+func TestNonUniqueHash(t *testing.T)
 ```
 

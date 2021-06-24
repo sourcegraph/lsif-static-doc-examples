@@ -57,43 +57,44 @@ Log fields and metric labels can be supplied at construction of an Operation, at
 
 * [Variables](#var)
     * [var TestContext](#TestContext)
-    * [var commonAcronyms](#commonAcronyms)
     * [var acronymsReplacer](#acronymsReplacer)
+    * [var commonAcronyms](#commonAcronyms)
 * [Types](#type)
+    * [type Args struct](#Args)
+        * [func (args Args) LogFieldMap() map[string]interface{}](#Args.LogFieldMap)
+        * [func (args Args) LogFieldPairs() []interface{}](#Args.LogFieldPairs)
     * [type Context struct](#Context)
         * [func (c *Context) Operation(args Op) *Operation](#Context.Operation)
+    * [type FinishFunc func(count float64, args github.com/sourcegraph/sourcegraph/internal/observation.Args)](#FinishFunc)
     * [type Op struct](#Op)
     * [type Operation struct](#Operation)
         * [func (op *Operation) With(ctx context.Context, err *error, args Args) (context.Context, FinishFunc)](#Operation.With)
         * [func (op *Operation) WithAndLogger(ctx context.Context, err *error, args Args) (context.Context, TraceLogger, FinishFunc)](#Operation.WithAndLogger)
-        * [func (op *Operation) trace(ctx context.Context, args Args) (*trace.Trace, context.Context)](#Operation.trace)
+        * [func (op *Operation) applyErrorFilter(err *error) *error](#Operation.applyErrorFilter)
         * [func (op *Operation) emitErrorLogs(err *error, logFields []log.Field)](#Operation.emitErrorLogs)
         * [func (op *Operation) emitMetrics(err *error, count, elapsed float64, labels []string)](#Operation.emitMetrics)
         * [func (op *Operation) finishTrace(err *error, tr *trace.Trace, logFields []log.Field)](#Operation.finishTrace)
-        * [func (op *Operation) applyErrorFilter(err *error) *error](#Operation.applyErrorFilter)
+        * [func (op *Operation) trace(ctx context.Context, args Args) (*trace.Trace, context.Context)](#Operation.trace)
     * [type TraceLogger func(fields ...github.com/opentracing/opentracing-go/log.Field)](#TraceLogger)
-    * [type FinishFunc func(count float64, args github.com/sourcegraph/sourcegraph/internal/observation.Args)](#FinishFunc)
-    * [type Args struct](#Args)
-        * [func (args Args) LogFieldMap() map[string]interface{}](#Args.LogFieldMap)
-        * [func (args Args) LogFieldPairs() []interface{}](#Args.LogFieldPairs)
 * [Functions](#func)
-    * [func mergeLabels(groups ...[]string) []string](#mergeLabels)
-    * [func mergeLogFields(groups ...[]log.Field) []log.Field](#mergeLogFields)
+    * [func TestKebabCase(t *testing.T)](#TestKebabCase)
     * [func init()](#init.util.go)
     * [func kebabCase(s string) string](#kebabCase)
-    * [func TestKebabCase(t *testing.T)](#TestKebabCase)
+    * [func mergeLabels(groups ...[]string) []string](#mergeLabels)
+    * [func mergeLogFields(groups ...[]log.Field) []log.Field](#mergeLogFields)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="TestContext" href="#TestContext">var TestContext</a>
 
 ```
 searchKey: observation.TestContext
+tags: [variable struct]
 ```
 
 ```Go
@@ -102,11 +103,24 @@ var TestContext = Context{Registerer: metrics.TestRegisterer}
 
 TestContext is a behaviorless Context usable for unit tests. 
 
+### <a id="acronymsReplacer" href="#acronymsReplacer">var acronymsReplacer</a>
+
+```
+searchKey: observation.acronymsReplacer
+tags: [variable struct private]
+```
+
+```Go
+var acronymsReplacer *strings.Replacer
+```
+
+acronymsReplacer is a string replacer that normalizes the acronyms above. For example, `API` will be transformed into `Api` so that it appears as one word. 
+
 ### <a id="commonAcronyms" href="#commonAcronyms">var commonAcronyms</a>
 
 ```
 searchKey: observation.commonAcronyms
-tags: [private]
+tags: [variable array string private]
 ```
 
 ```Go
@@ -119,29 +133,61 @@ var commonAcronyms = []string{
 
 commonAcronyms includes acronyms that malform the expected output of kebabCase due to unexpected adjacent upper-case letters. Add items to this list to stop kebabCase from transforming `FromLSIF` into `from-l-s-i-f`. 
 
-### <a id="acronymsReplacer" href="#acronymsReplacer">var acronymsReplacer</a>
-
-```
-searchKey: observation.acronymsReplacer
-tags: [private]
-```
-
-```Go
-var acronymsReplacer *strings.Replacer
-```
-
-acronymsReplacer is a string replacer that normalizes the acronyms above. For example, `API` will be transformed into `Api` so that it appears as one word. 
-
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
+
+### <a id="Args" href="#Args">type Args struct</a>
+
+```
+searchKey: observation.Args
+tags: [struct]
+```
+
+```Go
+type Args struct {
+	// MetricLabels that apply only to this invocation of the operation.
+	MetricLabels []string
+	// LogFields that apply only to this invocation of the operation.
+	LogFields []log.Field
+}
+```
+
+Args configures the observation behavior of an invocation of an operation. 
+
+#### <a id="Args.LogFieldMap" href="#Args.LogFieldMap">func (args Args) LogFieldMap() map[string]interface{}</a>
+
+```
+searchKey: observation.Args.LogFieldMap
+tags: [function]
+```
+
+```Go
+func (args Args) LogFieldMap() map[string]interface{}
+```
+
+LogFieldMap returns a string-to-interface map containing the contents of this Arg value's log fields. 
+
+#### <a id="Args.LogFieldPairs" href="#Args.LogFieldPairs">func (args Args) LogFieldPairs() []interface{}</a>
+
+```
+searchKey: observation.Args.LogFieldPairs
+tags: [function]
+```
+
+```Go
+func (args Args) LogFieldPairs() []interface{}
+```
+
+LogFieldPairs returns a slice of key, value, key, value, ... pairs containing the contents of this Arg value's log fields. 
 
 ### <a id="Context" href="#Context">type Context struct</a>
 
 ```
 searchKey: observation.Context
+tags: [struct]
 ```
 
 ```Go
@@ -158,6 +204,7 @@ Context carries context about where to send logs, trace spans, and register metr
 
 ```
 searchKey: observation.Context.Operation
+tags: [method]
 ```
 
 ```Go
@@ -166,10 +213,24 @@ func (c *Context) Operation(args Op) *Operation
 
 Operation combines the state of the parent context to create a new operation. This value should be owned and used by the code that performs the operation it represents. 
 
+### <a id="FinishFunc" href="#FinishFunc">type FinishFunc func(count float64, args github.com/sourcegraph/sourcegraph/internal/observation.Args)</a>
+
+```
+searchKey: observation.FinishFunc
+tags: [function]
+```
+
+```Go
+type FinishFunc func(count float64, args Args)
+```
+
+FinishFunc is the shape of the function returned by With and should be invoked within a defer directly before the observed function returns. 
+
 ### <a id="Op" href="#Op">type Op struct</a>
 
 ```
 searchKey: observation.Op
+tags: [struct]
 ```
 
 ```Go
@@ -201,6 +262,7 @@ Op configures an Operation instance.
 
 ```
 searchKey: observation.Operation
+tags: [struct]
 ```
 
 ```Go
@@ -221,6 +283,7 @@ Operation represents an interesting section of code that can be invoked.
 
 ```
 searchKey: observation.Operation.With
+tags: [method]
 ```
 
 ```Go
@@ -233,6 +296,7 @@ With prepares the necessary timers, loggers, and metrics to observe the invocati
 
 ```
 searchKey: observation.Operation.WithAndLogger
+tags: [method]
 ```
 
 ```Go
@@ -241,24 +305,24 @@ func (op *Operation) WithAndLogger(ctx context.Context, err *error, args Args) (
 
 WithAndLogger prepares the necessary timers, loggers, and metrics to observe the invocation of an operation. This method returns a modified context, a function that will add a log field to the active trace, and a function to be deferred until the end of the operation. 
 
-#### <a id="Operation.trace" href="#Operation.trace">func (op *Operation) trace(ctx context.Context, args Args) (*trace.Trace, context.Context)</a>
+#### <a id="Operation.applyErrorFilter" href="#Operation.applyErrorFilter">func (op *Operation) applyErrorFilter(err *error) *error</a>
 
 ```
-searchKey: observation.Operation.trace
-tags: [private]
+searchKey: observation.Operation.applyErrorFilter
+tags: [method private]
 ```
 
 ```Go
-func (op *Operation) trace(ctx context.Context, args Args) (*trace.Trace, context.Context)
+func (op *Operation) applyErrorFilter(err *error) *error
 ```
 
-trace creates a new Trace object and returns the wrapped context. If any log fields are attached to the operation or to the args to With, they are emitted immediately. This returns an unmodified context and a nil trace if no tracer was supplied on the observation context. 
+applyErrorFilter returns nil if the given error does not pass the registered error filter. The original value is returned otherwise. 
 
 #### <a id="Operation.emitErrorLogs" href="#Operation.emitErrorLogs">func (op *Operation) emitErrorLogs(err *error, logFields []log.Field)</a>
 
 ```
 searchKey: observation.Operation.emitErrorLogs
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -271,7 +335,7 @@ emitErrorLogs will log as message if the operation has failed. This log contains
 
 ```
 searchKey: observation.Operation.emitMetrics
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -284,7 +348,7 @@ emitMetrics will emit observe the duration, operation/result, and error counter 
 
 ```
 searchKey: observation.Operation.finishTrace
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -293,23 +357,24 @@ func (op *Operation) finishTrace(err *error, tr *trace.Trace, logFields []log.Fi
 
 finishTrace will set the error value, log additional fields supplied after the operation's execution, and finalize the trace span. This does nothing if no trace was constructed at the start of the operation. 
 
-#### <a id="Operation.applyErrorFilter" href="#Operation.applyErrorFilter">func (op *Operation) applyErrorFilter(err *error) *error</a>
+#### <a id="Operation.trace" href="#Operation.trace">func (op *Operation) trace(ctx context.Context, args Args) (*trace.Trace, context.Context)</a>
 
 ```
-searchKey: observation.Operation.applyErrorFilter
-tags: [private]
+searchKey: observation.Operation.trace
+tags: [method private]
 ```
 
 ```Go
-func (op *Operation) applyErrorFilter(err *error) *error
+func (op *Operation) trace(ctx context.Context, args Args) (*trace.Trace, context.Context)
 ```
 
-applyErrorFilter returns nil if the given error does not pass the registered error filter. The original value is returned otherwise. 
+trace creates a new Trace object and returns the wrapped context. If any log fields are attached to the operation or to the args to With, they are emitted immediately. This returns an unmodified context and a nil trace if no tracer was supplied on the observation context. 
 
 ### <a id="TraceLogger" href="#TraceLogger">type TraceLogger func(fields ...github.com/opentracing/opentracing-go/log.Field)</a>
 
 ```
 searchKey: observation.TraceLogger
+tags: [function]
 ```
 
 ```Go
@@ -318,70 +383,52 @@ type TraceLogger func(fields ...log.Field)
 
 TraceLogger is returned from WithAndLogger and can be used to add timestamped key and value pairs into a related opentracing span. 
 
-### <a id="FinishFunc" href="#FinishFunc">type FinishFunc func(count float64, args github.com/sourcegraph/sourcegraph/internal/observation.Args)</a>
-
-```
-searchKey: observation.FinishFunc
-```
-
-```Go
-type FinishFunc func(count float64, args Args)
-```
-
-FinishFunc is the shape of the function returned by With and should be invoked within a defer directly before the observed function returns. 
-
-### <a id="Args" href="#Args">type Args struct</a>
-
-```
-searchKey: observation.Args
-```
-
-```Go
-type Args struct {
-	// MetricLabels that apply only to this invocation of the operation.
-	MetricLabels []string
-	// LogFields that apply only to this invocation of the operation.
-	LogFields []log.Field
-}
-```
-
-Args configures the observation behavior of an invocation of an operation. 
-
-#### <a id="Args.LogFieldMap" href="#Args.LogFieldMap">func (args Args) LogFieldMap() map[string]interface{}</a>
-
-```
-searchKey: observation.Args.LogFieldMap
-```
-
-```Go
-func (args Args) LogFieldMap() map[string]interface{}
-```
-
-LogFieldMap returns a string-to-interface map containing the contents of this Arg value's log fields. 
-
-#### <a id="Args.LogFieldPairs" href="#Args.LogFieldPairs">func (args Args) LogFieldPairs() []interface{}</a>
-
-```
-searchKey: observation.Args.LogFieldPairs
-```
-
-```Go
-func (args Args) LogFieldPairs() []interface{}
-```
-
-LogFieldPairs returns a slice of key, value, key, value, ... pairs containing the contents of this Arg value's log fields. 
-
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
+
+### <a id="TestKebabCase" href="#TestKebabCase">func TestKebabCase(t *testing.T)</a>
+
+```
+searchKey: observation.TestKebabCase
+tags: [method private test]
+```
+
+```Go
+func TestKebabCase(t *testing.T)
+```
+
+### <a id="init.util.go" href="#init.util.go">func init()</a>
+
+```
+searchKey: observation.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="kebabCase" href="#kebabCase">func kebabCase(s string) string</a>
+
+```
+searchKey: observation.kebabCase
+tags: [method private]
+```
+
+```Go
+func kebabCase(s string) string
+```
+
+kebab transforms a string into lower-kebab-case. 
 
 ### <a id="mergeLabels" href="#mergeLabels">func mergeLabels(groups ...[]string) []string</a>
 
 ```
 searchKey: observation.mergeLabels
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -394,7 +441,7 @@ mergeLabels flattens slices of slices of strings.
 
 ```
 searchKey: observation.mergeLogFields
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -402,39 +449,4 @@ func mergeLogFields(groups ...[]log.Field) []log.Field
 ```
 
 mergeLogFields flattens slices of slices of log fields. 
-
-### <a id="init.util.go" href="#init.util.go">func init()</a>
-
-```
-searchKey: observation.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
-### <a id="kebabCase" href="#kebabCase">func kebabCase(s string) string</a>
-
-```
-searchKey: observation.kebabCase
-tags: [private]
-```
-
-```Go
-func kebabCase(s string) string
-```
-
-kebab transforms a string into lower-kebab-case. 
-
-### <a id="TestKebabCase" href="#TestKebabCase">func TestKebabCase(t *testing.T)</a>
-
-```
-searchKey: observation.TestKebabCase
-tags: [private]
-```
-
-```Go
-func TestKebabCase(t *testing.T)
-```
 

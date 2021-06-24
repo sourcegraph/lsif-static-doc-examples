@@ -15,14 +15,14 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="from" href="#from">var from</a>
 
 ```
 searchKey: smtp_test.from
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
@@ -35,7 +35,7 @@ variables to make ExamplePlainAuth compile, without adding unnecessary noise the
 
 ```
 searchKey: smtp_test.msg
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -48,7 +48,7 @@ variables to make ExamplePlainAuth compile, without adding unnecessary noise the
 
 ```
 searchKey: smtp_test.recipients
-tags: [private]
+tags: [variable array string private]
 ```
 
 ```Go
@@ -60,14 +60,14 @@ variables to make ExamplePlainAuth compile, without adding unnecessary noise the
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Example" href="#Example">func Example()</a>
 
 ```
 searchKey: smtp_test.Example
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -78,7 +78,7 @@ func Example()
 
 ```
 searchKey: smtp_test.ExamplePlainAuth
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -89,7 +89,7 @@ func ExamplePlainAuth()
 
 ```
 searchKey: smtp_test.ExampleSendMail
-tags: [private]
+tags: [function private]
 ```
 
 ```Go

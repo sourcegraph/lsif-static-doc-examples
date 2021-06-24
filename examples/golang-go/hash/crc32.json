@@ -4,7 +4,9 @@
     "identifier": "crc32",
     "newPage": true,
     "searchKey": "hash/crc32",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,52 +39,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/hash/crc32#Size",
-              "documentation": {
-                "identifier": "Size",
-                "newPage": false,
-                "searchKey": "crc32.Size",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const Size"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst Size = 4\n```\n\nThe size of a CRC-32 checksum in bytes. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#IEEE",
-              "documentation": {
-                "identifier": "IEEE",
-                "newPage": false,
-                "searchKey": "crc32.IEEE",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const IEEE"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst IEEE = 0xedb88320\n```\n\nPredefined polynomials. \n\nIEEE is by far and away the most common CRC-32 polynomial. Used by ethernet (IEEE 802.3), v.42, fddi, gzip, zip, png, ... \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/hash/crc32#Castagnoli",
               "documentation": {
                 "identifier": "Castagnoli",
                 "newPage": false,
                 "searchKey": "crc32.Castagnoli",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -95,12 +62,38 @@
           },
           {
             "node": {
+              "pathID": "/hash/crc32#IEEE",
+              "documentation": {
+                "identifier": "IEEE",
+                "newPage": false,
+                "searchKey": "crc32.IEEE",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IEEE"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IEEE = 0xedb88320\n```\n\nPredefined polynomials. \n\nIEEE is by far and away the most common CRC-32 polynomial. Used by ethernet (IEEE 802.3), v.42, fddi, gzip, zip, png, ... \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/hash/crc32#Koopman",
               "documentation": {
                 "identifier": "Koopman",
                 "newPage": false,
                 "searchKey": "crc32.Koopman",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -115,44 +108,23 @@
           },
           {
             "node": {
-              "pathID": "/hash/crc32#magic",
+              "pathID": "/hash/crc32#Size",
               "documentation": {
-                "identifier": "magic",
+                "identifier": "Size",
                 "newPage": false,
-                "searchKey": "crc32.magic",
+                "searchKey": "crc32.Size",
                 "tags": [
-                  "private"
+                  "constant",
+                  "number"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const magic"
+                "value": "const Size"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst magic = \"crc\\x01\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#marshaledSize",
-              "documentation": {
-                "identifier": "marshaledSize",
-                "newPage": false,
-                "searchKey": "crc32.marshaledSize",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const marshaledSize"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst marshaledSize = len(magic) + 4 + 4\n```\n\n"
+                "value": "```Go\nconst Size = 4\n```\n\nThe size of a CRC-32 checksum in bytes. \n\n"
               },
               "children": null
             }
@@ -165,6 +137,8 @@
                 "newPage": false,
                 "searchKey": "crc32.castagnoliK1",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -187,6 +161,8 @@
                 "newPage": false,
                 "searchKey": "crc32.castagnoliK2",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -203,12 +179,62 @@
           },
           {
             "node": {
+              "pathID": "/hash/crc32#magic",
+              "documentation": {
+                "identifier": "magic",
+                "newPage": false,
+                "searchKey": "crc32.magic",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const magic"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst magic = \"crc\\x01\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#marshaledSize",
+              "documentation": {
+                "identifier": "marshaledSize",
+                "newPage": false,
+                "searchKey": "crc32.marshaledSize",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const marshaledSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst marshaledSize = len(magic) + 4 + 4\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/hash/crc32#slicing8Cutoff",
               "documentation": {
                 "identifier": "slicing8Cutoff",
                 "newPage": false,
                 "searchKey": "crc32.slicing8Cutoff",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -233,7 +259,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -246,44 +274,50 @@
         "children": [
           {
             "node": {
-              "pathID": "/hash/crc32#castagnoliTable",
+              "pathID": "/hash/crc32#IEEETable",
               "documentation": {
-                "identifier": "castagnoliTable",
+                "identifier": "IEEETable",
                 "newPage": false,
-                "searchKey": "crc32.castagnoliTable",
+                "searchKey": "crc32.IEEETable",
                 "tags": [
-                  "private"
+                  "variable",
+                  "array",
+                  "number"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var castagnoliTable"
+                "value": "var IEEETable"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar castagnoliTable *Table\n```\n\ncastagnoliTable points to a lazily initialized Table for the Castagnoli polynomial. MakeTable will always return this value when asked to make a Castagnoli table so we can compare against it to find when the caller is using this polynomial. \n\n"
+                "value": "```Go\nvar IEEETable = simpleMakeTable(IEEE)\n```\n\nIEEETable is the table for the IEEE polynomial. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/hash/crc32#castagnoliTable8",
+              "pathID": "/hash/crc32#archIeeeTable8",
               "documentation": {
-                "identifier": "castagnoliTable8",
+                "identifier": "archIeeeTable8",
                 "newPage": false,
-                "searchKey": "crc32.castagnoliTable8",
+                "searchKey": "crc32.archIeeeTable8",
                 "tags": [
+                  "variable",
+                  "array",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var castagnoliTable8"
+                "value": "var archIeeeTable8"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar castagnoliTable8 *slicing8Table\n```\n\n"
+                "value": "```Go\nvar archIeeeTable8 *slicing8Table\n```\n\n"
               },
               "children": null
             }
@@ -296,6 +330,8 @@
                 "newPage": false,
                 "searchKey": "crc32.castagnoliArchImpl",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
@@ -312,34 +348,14 @@
           },
           {
             "node": {
-              "pathID": "/hash/crc32#updateCastagnoli",
-              "documentation": {
-                "identifier": "updateCastagnoli",
-                "newPage": false,
-                "searchKey": "crc32.updateCastagnoli",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var updateCastagnoli"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar updateCastagnoli func(crc uint32, p []byte) uint32\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/hash/crc32#castagnoliOnce",
               "documentation": {
                 "identifier": "castagnoliOnce",
                 "newPage": false,
                 "searchKey": "crc32.castagnoliOnce",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -356,142 +372,16 @@
           },
           {
             "node": {
-              "pathID": "/hash/crc32#haveCastagnoli",
-              "documentation": {
-                "identifier": "haveCastagnoli",
-                "newPage": false,
-                "searchKey": "crc32.haveCastagnoli",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var haveCastagnoli"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar haveCastagnoli uint32\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#IEEETable",
-              "documentation": {
-                "identifier": "IEEETable",
-                "newPage": false,
-                "searchKey": "crc32.IEEETable",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var IEEETable"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar IEEETable = simpleMakeTable(IEEE)\n```\n\nIEEETable is the table for the IEEE polynomial. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#ieeeTable8",
-              "documentation": {
-                "identifier": "ieeeTable8",
-                "newPage": false,
-                "searchKey": "crc32.ieeeTable8",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ieeeTable8"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ieeeTable8 *slicing8Table\n```\n\nieeeTable8 is the slicing8Table for IEEE \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#ieeeArchImpl",
-              "documentation": {
-                "identifier": "ieeeArchImpl",
-                "newPage": false,
-                "searchKey": "crc32.ieeeArchImpl",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ieeeArchImpl"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ieeeArchImpl bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#updateIEEE",
-              "documentation": {
-                "identifier": "updateIEEE",
-                "newPage": false,
-                "searchKey": "crc32.updateIEEE",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var updateIEEE"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar updateIEEE func(crc uint32, p []byte) uint32\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#ieeeOnce",
-              "documentation": {
-                "identifier": "ieeeOnce",
-                "newPage": false,
-                "searchKey": "crc32.ieeeOnce",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ieeeOnce"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ieeeOnce sync.Once\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/hash/crc32#castagnoliSSE42TableK1",
               "documentation": {
                 "identifier": "castagnoliSSE42TableK1",
                 "newPage": false,
                 "searchKey": "crc32.castagnoliSSE42TableK1",
                 "tags": [
+                  "variable",
+                  "array",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -514,6 +404,10 @@
                 "newPage": false,
                 "searchKey": "crc32.castagnoliSSE42TableK2",
                 "tags": [
+                  "variable",
+                  "array",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -530,22 +424,51 @@
           },
           {
             "node": {
-              "pathID": "/hash/crc32#archIeeeTable8",
+              "pathID": "/hash/crc32#castagnoliTable",
               "documentation": {
-                "identifier": "archIeeeTable8",
+                "identifier": "castagnoliTable",
                 "newPage": false,
-                "searchKey": "crc32.archIeeeTable8",
+                "searchKey": "crc32.castagnoliTable",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var archIeeeTable8"
+                "value": "var castagnoliTable"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar archIeeeTable8 *slicing8Table\n```\n\n"
+                "value": "```Go\nvar castagnoliTable *Table\n```\n\ncastagnoliTable points to a lazily initialized Table for the Castagnoli polynomial. MakeTable will always return this value when asked to make a Castagnoli table so we can compare against it to find when the caller is using this polynomial. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#castagnoliTable8",
+              "documentation": {
+                "identifier": "castagnoliTable8",
+                "newPage": false,
+                "searchKey": "crc32.castagnoliTable8",
+                "tags": [
+                  "variable",
+                  "array",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var castagnoliTable8"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar castagnoliTable8 *slicing8Table\n```\n\n"
               },
               "children": null
             }
@@ -558,6 +481,9 @@
                 "newPage": false,
                 "searchKey": "crc32.golden",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -568,6 +494,152 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar golden = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#haveCastagnoli",
+              "documentation": {
+                "identifier": "haveCastagnoli",
+                "newPage": false,
+                "searchKey": "crc32.haveCastagnoli",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var haveCastagnoli"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar haveCastagnoli uint32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#ieeeArchImpl",
+              "documentation": {
+                "identifier": "ieeeArchImpl",
+                "newPage": false,
+                "searchKey": "crc32.ieeeArchImpl",
+                "tags": [
+                  "variable",
+                  "boolean",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ieeeArchImpl"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ieeeArchImpl bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#ieeeOnce",
+              "documentation": {
+                "identifier": "ieeeOnce",
+                "newPage": false,
+                "searchKey": "crc32.ieeeOnce",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ieeeOnce"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ieeeOnce sync.Once\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#ieeeTable8",
+              "documentation": {
+                "identifier": "ieeeTable8",
+                "newPage": false,
+                "searchKey": "crc32.ieeeTable8",
+                "tags": [
+                  "variable",
+                  "array",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ieeeTable8"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ieeeTable8 *slicing8Table\n```\n\nieeeTable8 is the slicing8Table for IEEE \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#updateCastagnoli",
+              "documentation": {
+                "identifier": "updateCastagnoli",
+                "newPage": false,
+                "searchKey": "crc32.updateCastagnoli",
+                "tags": [
+                  "variable",
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var updateCastagnoli"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar updateCastagnoli func(crc uint32, p []byte) uint32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#updateIEEE",
+              "documentation": {
+                "identifier": "updateIEEE",
+                "newPage": false,
+                "searchKey": "crc32.updateIEEE",
+                "tags": [
+                  "variable",
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var updateIEEE"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar updateIEEE func(crc uint32, p []byte) uint32\n```\n\n"
               },
               "children": null
             }
@@ -582,7 +654,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -600,7 +674,10 @@
                 "identifier": "Table",
                 "newPage": false,
                 "searchKey": "crc32.Table",
-                "tags": null
+                "tags": [
+                  "array",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -618,7 +695,9 @@
                       "identifier": "MakeTable",
                       "newPage": false,
                       "searchKey": "crc32.MakeTable",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -639,6 +718,7 @@
                       "newPage": false,
                       "searchKey": "crc32.simpleMakeTable",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -664,6 +744,7 @@
                 "newPage": false,
                 "searchKey": "crc32.digest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -678,34 +759,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/hash/crc32#digest.Size",
-                    "documentation": {
-                      "identifier": "digest.Size",
-                      "newPage": false,
-                      "searchKey": "crc32.digest.Size",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *digest) Size() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *digest) Size() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/hash/crc32#digest.BlockSize",
                     "documentation": {
                       "identifier": "digest.BlockSize",
                       "newPage": false,
                       "searchKey": "crc32.digest.BlockSize",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -722,34 +782,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/hash/crc32#digest.Reset",
-                    "documentation": {
-                      "identifier": "digest.Reset",
-                      "newPage": false,
-                      "searchKey": "crc32.digest.Reset",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *digest) Reset()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *digest) Reset()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/hash/crc32#digest.MarshalBinary",
                     "documentation": {
                       "identifier": "digest.MarshalBinary",
                       "newPage": false,
                       "searchKey": "crc32.digest.MarshalBinary",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -766,12 +805,105 @@
                 },
                 {
                   "node": {
+                    "pathID": "/hash/crc32#digest.Reset",
+                    "documentation": {
+                      "identifier": "digest.Reset",
+                      "newPage": false,
+                      "searchKey": "crc32.digest.Reset",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) Reset()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) Reset()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/crc32#digest.Size",
+                    "documentation": {
+                      "identifier": "digest.Size",
+                      "newPage": false,
+                      "searchKey": "crc32.digest.Size",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) Size() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) Size() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/crc32#digest.Sum",
+                    "documentation": {
+                      "identifier": "digest.Sum",
+                      "newPage": false,
+                      "searchKey": "crc32.digest.Sum",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) Sum(in []byte) []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) Sum(in []byte) []byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/crc32#digest.Sum32",
+                    "documentation": {
+                      "identifier": "digest.Sum32",
+                      "newPage": false,
+                      "searchKey": "crc32.digest.Sum32",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) Sum32() uint32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) Sum32() uint32\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/hash/crc32#digest.UnmarshalBinary",
                     "documentation": {
                       "identifier": "digest.UnmarshalBinary",
                       "newPage": false,
                       "searchKey": "crc32.digest.UnmarshalBinary",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -794,6 +926,7 @@
                       "newPage": false,
                       "searchKey": "crc32.digest.Write",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -807,74 +940,8 @@
                     },
                     "children": null
                   }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/crc32#digest.Sum32",
-                    "documentation": {
-                      "identifier": "digest.Sum32",
-                      "newPage": false,
-                      "searchKey": "crc32.digest.Sum32",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *digest) Sum32() uint32"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *digest) Sum32() uint32\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/crc32#digest.Sum",
-                    "documentation": {
-                      "identifier": "digest.Sum",
-                      "newPage": false,
-                      "searchKey": "crc32.digest.Sum",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *digest) Sum(in []byte) []byte"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *digest) Sum(in []byte) []byte\n```\n\n"
-                    },
-                    "children": null
-                  }
                 }
               ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#sse42Table",
-              "documentation": {
-                "identifier": "sse42Table",
-                "newPage": false,
-                "searchKey": "crc32.sse42Table",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type sse42Table [4]crc32.Table"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype sse42Table [4]Table\n```\n\n"
-              },
-              "children": null
             }
           },
           {
@@ -885,6 +952,9 @@
                 "newPage": false,
                 "searchKey": "crc32.slicing8Table",
                 "tags": [
+                  "array",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -905,6 +975,7 @@
                       "newPage": false,
                       "searchKey": "crc32.slicingMakeTable",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -924,12 +995,38 @@
           },
           {
             "node": {
+              "pathID": "/hash/crc32#sse42Table",
+              "documentation": {
+                "identifier": "sse42Table",
+                "newPage": false,
+                "searchKey": "crc32.sse42Table",
+                "tags": [
+                  "array",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type sse42Table [4]crc32.Table"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype sse42Table [4]Table\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/hash/crc32#test",
               "documentation": {
                 "identifier": "test",
                 "newPage": false,
                 "searchKey": "crc32.test",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -954,7 +1051,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -967,148 +1066,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/hash/crc32#castagnoliInit",
+              "pathID": "/hash/crc32#BenchmarkCRC32",
               "documentation": {
-                "identifier": "castagnoliInit",
+                "identifier": "BenchmarkCRC32",
                 "newPage": false,
-                "searchKey": "crc32.castagnoliInit",
+                "searchKey": "crc32.BenchmarkCRC32",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func castagnoliInit()"
+                "value": "func BenchmarkCRC32(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc castagnoliInit()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#ieeeInit",
-              "documentation": {
-                "identifier": "ieeeInit",
-                "newPage": false,
-                "searchKey": "crc32.ieeeInit",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ieeeInit()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ieeeInit()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#New",
-              "documentation": {
-                "identifier": "New",
-                "newPage": false,
-                "searchKey": "crc32.New",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func New(tab *Table) hash.Hash32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc New(tab *Table) hash.Hash32\n```\n\nNew creates a new hash.Hash32 computing the CRC-32 checksum using the polynomial represented by the Table. Its Sum method will lay the value out in big-endian byte order. The returned Hash32 also implements encoding.BinaryMarshaler and encoding.BinaryUnmarshaler to marshal and unmarshal the internal state of the hash. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#NewIEEE",
-              "documentation": {
-                "identifier": "NewIEEE",
-                "newPage": false,
-                "searchKey": "crc32.NewIEEE",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func NewIEEE() hash.Hash32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc NewIEEE() hash.Hash32\n```\n\nNewIEEE creates a new hash.Hash32 computing the CRC-32 checksum using the IEEE polynomial. Its Sum method will lay the value out in big-endian byte order. The returned Hash32 also implements encoding.BinaryMarshaler and encoding.BinaryUnmarshaler to marshal and unmarshal the internal state of the hash. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#appendUint32",
-              "documentation": {
-                "identifier": "appendUint32",
-                "newPage": false,
-                "searchKey": "crc32.appendUint32",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func appendUint32(b []byte, x uint32) []byte"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc appendUint32(b []byte, x uint32) []byte\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#readUint32",
-              "documentation": {
-                "identifier": "readUint32",
-                "newPage": false,
-                "searchKey": "crc32.readUint32",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func readUint32(b []byte) uint32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc readUint32(b []byte) uint32\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#Update",
-              "documentation": {
-                "identifier": "Update",
-                "newPage": false,
-                "searchKey": "crc32.Update",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Update(crc uint32, tab *Table, p []byte) uint32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Update(crc uint32, tab *Table, p []byte) uint32\n```\n\nUpdate returns the result of adding the bytes in p to the crc. \n\n"
+                "value": "```Go\nfunc BenchmarkCRC32(b *testing.B)\n```\n\n"
               },
               "children": null
             }
@@ -1120,7 +1095,9 @@
                 "identifier": "Checksum",
                 "newPage": false,
                 "searchKey": "crc32.Checksum",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1140,7 +1117,9 @@
                 "identifier": "ChecksumIEEE",
                 "newPage": false,
                 "searchKey": "crc32.ChecksumIEEE",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1155,22 +1134,488 @@
           },
           {
             "node": {
-              "pathID": "/hash/crc32#tableSum",
+              "pathID": "/hash/crc32#New",
               "documentation": {
-                "identifier": "tableSum",
+                "identifier": "New",
                 "newPage": false,
-                "searchKey": "crc32.tableSum",
+                "searchKey": "crc32.New",
                 "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func New(tab *Table) hash.Hash32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc New(tab *Table) hash.Hash32\n```\n\nNew creates a new hash.Hash32 computing the CRC-32 checksum using the polynomial represented by the Table. Its Sum method will lay the value out in big-endian byte order. The returned Hash32 also implements encoding.BinaryMarshaler and encoding.BinaryUnmarshaler to marshal and unmarshal the internal state of the hash. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#NewIEEE",
+              "documentation": {
+                "identifier": "NewIEEE",
+                "newPage": false,
+                "searchKey": "crc32.NewIEEE",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewIEEE() hash.Hash32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewIEEE() hash.Hash32\n```\n\nNewIEEE creates a new hash.Hash32 computing the CRC-32 checksum using the IEEE polynomial. Its Sum method will lay the value out in big-endian byte order. The returned Hash32 also implements encoding.BinaryMarshaler and encoding.BinaryUnmarshaler to marshal and unmarshal the internal state of the hash. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#TestArchCastagnoli",
+              "documentation": {
+                "identifier": "TestArchCastagnoli",
+                "newPage": false,
+                "searchKey": "crc32.TestArchCastagnoli",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestArchCastagnoli(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestArchCastagnoli(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#TestArchIEEE",
+              "documentation": {
+                "identifier": "TestArchIEEE",
+                "newPage": false,
+                "searchKey": "crc32.TestArchIEEE",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestArchIEEE(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestArchIEEE(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#TestCastagnoliRace",
+              "documentation": {
+                "identifier": "TestCastagnoliRace",
+                "newPage": false,
+                "searchKey": "crc32.TestCastagnoliRace",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCastagnoliRace(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCastagnoliRace(t *testing.T)\n```\n\nFirst test, so that it can be the one to initialize castagnoliTable. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#TestGolden",
+              "documentation": {
+                "identifier": "TestGolden",
+                "newPage": false,
+                "searchKey": "crc32.TestGolden",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGolden(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGolden(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#TestGoldenMarshal",
+              "documentation": {
+                "identifier": "TestGoldenMarshal",
+                "newPage": false,
+                "searchKey": "crc32.TestGoldenMarshal",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGoldenMarshal(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGoldenMarshal(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#TestMarshalTableMismatch",
+              "documentation": {
+                "identifier": "TestMarshalTableMismatch",
+                "newPage": false,
+                "searchKey": "crc32.TestMarshalTableMismatch",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMarshalTableMismatch(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMarshalTableMismatch(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#TestSimple",
+              "documentation": {
+                "identifier": "TestSimple",
+                "newPage": false,
+                "searchKey": "crc32.TestSimple",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSimple(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSimple(t *testing.T)\n```\n\nTestSimple tests the simple generic algorithm. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#TestSlicing",
+              "documentation": {
+                "identifier": "TestSlicing",
+                "newPage": false,
+                "searchKey": "crc32.TestSlicing",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSlicing(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSlicing(t *testing.T)\n```\n\nTestSimple tests the slicing-by-8 algorithm. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#Update",
+              "documentation": {
+                "identifier": "Update",
+                "newPage": false,
+                "searchKey": "crc32.Update",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Update(crc uint32, tab *Table, p []byte) uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Update(crc uint32, tab *Table, p []byte) uint32\n```\n\nUpdate returns the result of adding the bytes in p to the crc. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#appendUint32",
+              "documentation": {
+                "identifier": "appendUint32",
+                "newPage": false,
+                "searchKey": "crc32.appendUint32",
+                "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func tableSum(t *Table) uint32"
+                "value": "func appendUint32(b []byte, x uint32) []byte"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc tableSum(t *Table) uint32\n```\n\ntableSum returns the IEEE checksum of table t. \n\n"
+                "value": "```Go\nfunc appendUint32(b []byte, x uint32) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#archAvailableCastagnoli",
+              "documentation": {
+                "identifier": "archAvailableCastagnoli",
+                "newPage": false,
+                "searchKey": "crc32.archAvailableCastagnoli",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func archAvailableCastagnoli() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc archAvailableCastagnoli() bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#archAvailableIEEE",
+              "documentation": {
+                "identifier": "archAvailableIEEE",
+                "newPage": false,
+                "searchKey": "crc32.archAvailableIEEE",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func archAvailableIEEE() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc archAvailableIEEE() bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#archInitCastagnoli",
+              "documentation": {
+                "identifier": "archInitCastagnoli",
+                "newPage": false,
+                "searchKey": "crc32.archInitCastagnoli",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func archInitCastagnoli()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc archInitCastagnoli()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#archInitIEEE",
+              "documentation": {
+                "identifier": "archInitIEEE",
+                "newPage": false,
+                "searchKey": "crc32.archInitIEEE",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func archInitIEEE()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc archInitIEEE()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#archUpdateCastagnoli",
+              "documentation": {
+                "identifier": "archUpdateCastagnoli",
+                "newPage": false,
+                "searchKey": "crc32.archUpdateCastagnoli",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func archUpdateCastagnoli(crc uint32, p []byte) uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc archUpdateCastagnoli(crc uint32, p []byte) uint32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#archUpdateIEEE",
+              "documentation": {
+                "identifier": "archUpdateIEEE",
+                "newPage": false,
+                "searchKey": "crc32.archUpdateIEEE",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func archUpdateIEEE(crc uint32, p []byte) uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc archUpdateIEEE(crc uint32, p []byte) uint32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#benchmark",
+              "documentation": {
+                "identifier": "benchmark",
+                "newPage": false,
+                "searchKey": "crc32.benchmark",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmark(b *testing.B, h hash.Hash32, n, alignment int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmark(b *testing.B, h hash.Hash32, n, alignment int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#benchmarkAll",
+              "documentation": {
+                "identifier": "benchmarkAll",
+                "newPage": false,
+                "searchKey": "crc32.benchmarkAll",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmarkAll(h hash.Hash32) func(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmarkAll(h hash.Hash32) func(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc32#castagnoliInit",
+              "documentation": {
+                "identifier": "castagnoliInit",
+                "newPage": false,
+                "searchKey": "crc32.castagnoliInit",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func castagnoliInit()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc castagnoliInit()\n```\n\n"
               },
               "children": null
             }
@@ -1183,6 +1628,7 @@
                 "newPage": false,
                 "searchKey": "crc32.castagnoliSSE42",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1205,6 +1651,7 @@
                 "newPage": false,
                 "searchKey": "crc32.castagnoliSSE42Triple",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1221,78 +1668,13 @@
           },
           {
             "node": {
-              "pathID": "/hash/crc32#ieeeCLMUL",
-              "documentation": {
-                "identifier": "ieeeCLMUL",
-                "newPage": false,
-                "searchKey": "crc32.ieeeCLMUL",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ieeeCLMUL(crc uint32, p []byte) uint32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ieeeCLMUL(crc uint32, p []byte) uint32\n```\n\nieeeCLMUL is defined in crc_amd64.s and uses the PCLMULQDQ instruction as well as SSE 4.1. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#archAvailableCastagnoli",
-              "documentation": {
-                "identifier": "archAvailableCastagnoli",
-                "newPage": false,
-                "searchKey": "crc32.archAvailableCastagnoli",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func archAvailableCastagnoli() bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc archAvailableCastagnoli() bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#archInitCastagnoli",
-              "documentation": {
-                "identifier": "archInitCastagnoli",
-                "newPage": false,
-                "searchKey": "crc32.archInitCastagnoli",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func archInitCastagnoli()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc archInitCastagnoli()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/hash/crc32#castagnoliShift",
               "documentation": {
                 "identifier": "castagnoliShift",
                 "newPage": false,
                 "searchKey": "crc32.castagnoliShift",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1309,88 +1691,69 @@
           },
           {
             "node": {
-              "pathID": "/hash/crc32#archUpdateCastagnoli",
+              "pathID": "/hash/crc32#ieeeCLMUL",
               "documentation": {
-                "identifier": "archUpdateCastagnoli",
+                "identifier": "ieeeCLMUL",
                 "newPage": false,
-                "searchKey": "crc32.archUpdateCastagnoli",
+                "searchKey": "crc32.ieeeCLMUL",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func archUpdateCastagnoli(crc uint32, p []byte) uint32"
+                "value": "func ieeeCLMUL(crc uint32, p []byte) uint32"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc archUpdateCastagnoli(crc uint32, p []byte) uint32\n```\n\n"
+                "value": "```Go\nfunc ieeeCLMUL(crc uint32, p []byte) uint32\n```\n\nieeeCLMUL is defined in crc_amd64.s and uses the PCLMULQDQ instruction as well as SSE 4.1. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/hash/crc32#archAvailableIEEE",
+              "pathID": "/hash/crc32#ieeeInit",
               "documentation": {
-                "identifier": "archAvailableIEEE",
+                "identifier": "ieeeInit",
                 "newPage": false,
-                "searchKey": "crc32.archAvailableIEEE",
+                "searchKey": "crc32.ieeeInit",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func archAvailableIEEE() bool"
+                "value": "func ieeeInit()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc archAvailableIEEE() bool\n```\n\n"
+                "value": "```Go\nfunc ieeeInit()\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/hash/crc32#archInitIEEE",
+              "pathID": "/hash/crc32#readUint32",
               "documentation": {
-                "identifier": "archInitIEEE",
+                "identifier": "readUint32",
                 "newPage": false,
-                "searchKey": "crc32.archInitIEEE",
+                "searchKey": "crc32.readUint32",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func archInitIEEE()"
+                "value": "func readUint32(b []byte) uint32"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc archInitIEEE()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#archUpdateIEEE",
-              "documentation": {
-                "identifier": "archUpdateIEEE",
-                "newPage": false,
-                "searchKey": "crc32.archUpdateIEEE",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func archUpdateIEEE(crc uint32, p []byte) uint32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc archUpdateIEEE(crc uint32, p []byte) uint32\n```\n\n"
+                "value": "```Go\nfunc readUint32(b []byte) uint32\n```\n\n"
               },
               "children": null
             }
@@ -1403,6 +1766,7 @@
                 "newPage": false,
                 "searchKey": "crc32.simplePopulateTable",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1425,6 +1789,7 @@
                 "newPage": false,
                 "searchKey": "crc32.simpleUpdate",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1447,6 +1812,7 @@
                 "newPage": false,
                 "searchKey": "crc32.slicingUpdate",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1463,66 +1829,23 @@
           },
           {
             "node": {
-              "pathID": "/hash/crc32#TestCastagnoliRace",
+              "pathID": "/hash/crc32#tableSum",
               "documentation": {
-                "identifier": "TestCastagnoliRace",
+                "identifier": "tableSum",
                 "newPage": false,
-                "searchKey": "crc32.TestCastagnoliRace",
+                "searchKey": "crc32.tableSum",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestCastagnoliRace(t *testing.T)"
+                "value": "func tableSum(t *Table) uint32"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestCastagnoliRace(t *testing.T)\n```\n\nFirst test, so that it can be the one to initialize castagnoliTable. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#testGoldenIEEE",
-              "documentation": {
-                "identifier": "testGoldenIEEE",
-                "newPage": false,
-                "searchKey": "crc32.testGoldenIEEE",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testGoldenIEEE(t *testing.T, crcFunc func(b []byte) uint32)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testGoldenIEEE(t *testing.T, crcFunc func(b []byte) uint32)\n```\n\ntestGoldenIEEE verifies that the given function returns correct IEEE checksums. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#testGoldenCastagnoli",
-              "documentation": {
-                "identifier": "testGoldenCastagnoli",
-                "newPage": false,
-                "searchKey": "crc32.testGoldenCastagnoli",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testGoldenCastagnoli(t *testing.T, crcFunc func(b []byte) uint32)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testGoldenCastagnoli(t *testing.T, crcFunc func(b []byte) uint32)\n```\n\ntestGoldenCastagnoli verifies that the given function returns correct IEEE checksums. \n\n"
+                "value": "```Go\nfunc tableSum(t *Table) uint32\n```\n\ntableSum returns the IEEE checksum of table t. \n\n"
               },
               "children": null
             }
@@ -1535,6 +1858,7 @@
                 "newPage": false,
                 "searchKey": "crc32.testCrossCheck",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1551,220 +1875,46 @@
           },
           {
             "node": {
-              "pathID": "/hash/crc32#TestSimple",
+              "pathID": "/hash/crc32#testGoldenCastagnoli",
               "documentation": {
-                "identifier": "TestSimple",
+                "identifier": "testGoldenCastagnoli",
                 "newPage": false,
-                "searchKey": "crc32.TestSimple",
+                "searchKey": "crc32.testGoldenCastagnoli",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestSimple(t *testing.T)"
+                "value": "func testGoldenCastagnoli(t *testing.T, crcFunc func(b []byte) uint32)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestSimple(t *testing.T)\n```\n\nTestSimple tests the simple generic algorithm. \n\n"
+                "value": "```Go\nfunc testGoldenCastagnoli(t *testing.T, crcFunc func(b []byte) uint32)\n```\n\ntestGoldenCastagnoli verifies that the given function returns correct IEEE checksums. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/hash/crc32#TestGoldenMarshal",
+              "pathID": "/hash/crc32#testGoldenIEEE",
               "documentation": {
-                "identifier": "TestGoldenMarshal",
+                "identifier": "testGoldenIEEE",
                 "newPage": false,
-                "searchKey": "crc32.TestGoldenMarshal",
+                "searchKey": "crc32.testGoldenIEEE",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestGoldenMarshal(t *testing.T)"
+                "value": "func testGoldenIEEE(t *testing.T, crcFunc func(b []byte) uint32)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestGoldenMarshal(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#TestMarshalTableMismatch",
-              "documentation": {
-                "identifier": "TestMarshalTableMismatch",
-                "newPage": false,
-                "searchKey": "crc32.TestMarshalTableMismatch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMarshalTableMismatch(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMarshalTableMismatch(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#TestSlicing",
-              "documentation": {
-                "identifier": "TestSlicing",
-                "newPage": false,
-                "searchKey": "crc32.TestSlicing",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSlicing(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSlicing(t *testing.T)\n```\n\nTestSimple tests the slicing-by-8 algorithm. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#TestArchIEEE",
-              "documentation": {
-                "identifier": "TestArchIEEE",
-                "newPage": false,
-                "searchKey": "crc32.TestArchIEEE",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestArchIEEE(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestArchIEEE(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#TestArchCastagnoli",
-              "documentation": {
-                "identifier": "TestArchCastagnoli",
-                "newPage": false,
-                "searchKey": "crc32.TestArchCastagnoli",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestArchCastagnoli(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestArchCastagnoli(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#TestGolden",
-              "documentation": {
-                "identifier": "TestGolden",
-                "newPage": false,
-                "searchKey": "crc32.TestGolden",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGolden(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGolden(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#BenchmarkCRC32",
-              "documentation": {
-                "identifier": "BenchmarkCRC32",
-                "newPage": false,
-                "searchKey": "crc32.BenchmarkCRC32",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkCRC32(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkCRC32(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#benchmarkAll",
-              "documentation": {
-                "identifier": "benchmarkAll",
-                "newPage": false,
-                "searchKey": "crc32.benchmarkAll",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func benchmarkAll(h hash.Hash32) func(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc benchmarkAll(h hash.Hash32) func(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/crc32#benchmark",
-              "documentation": {
-                "identifier": "benchmark",
-                "newPage": false,
-                "searchKey": "crc32.benchmark",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func benchmark(b *testing.B, h hash.Hash32, n, alignment int64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc benchmark(b *testing.B, h hash.Hash32, n, alignment int64)\n```\n\n"
+                "value": "```Go\nfunc testGoldenIEEE(t *testing.T, crcFunc func(b []byte) uint32)\n```\n\ntestGoldenIEEE verifies that the given function returns correct IEEE checksums. \n\n"
               },
               "children": null
             }

@@ -11,23 +11,24 @@ Package fmtsort provides a general stable ordering mechanism for maps, on behalf
         * [func (o *SortedMap) Less(i, j int) bool](#SortedMap.Less)
         * [func (o *SortedMap) Swap(i, j int)](#SortedMap.Swap)
 * [Functions](#func)
+    * [func Compare(a, b reflect.Value) int](#Compare)
     * [func compare(aVal, bVal reflect.Value) int](#compare)
-    * [func nilCompare(aVal, bVal reflect.Value) (int, bool)](#nilCompare)
     * [func floatCompare(a, b float64) int](#floatCompare)
     * [func isNaN(a float64) bool](#isNaN)
-    * [func Compare(a, b reflect.Value) int](#Compare)
+    * [func nilCompare(aVal, bVal reflect.Value) (int, bool)](#nilCompare)
 
 
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="SortedMap" href="#SortedMap">type SortedMap struct</a>
 
 ```
 searchKey: fmtsort.SortedMap
+tags: [struct]
 ```
 
 ```Go
@@ -43,6 +44,7 @@ SortedMap represents a map's keys and values. The keys and values are aligned in
 
 ```
 searchKey: fmtsort.Sort
+tags: [method]
 ```
 
 ```Go
@@ -72,6 +74,7 @@ The ordering rules are more general than with Go's < operator:
 
 ```
 searchKey: fmtsort.SortedMap.Len
+tags: [function]
 ```
 
 ```Go
@@ -82,6 +85,7 @@ func (o *SortedMap) Len() int
 
 ```
 searchKey: fmtsort.SortedMap.Less
+tags: [method]
 ```
 
 ```Go
@@ -92,6 +96,7 @@ func (o *SortedMap) Less(i, j int) bool
 
 ```
 searchKey: fmtsort.SortedMap.Swap
+tags: [method]
 ```
 
 ```Go
@@ -101,14 +106,25 @@ func (o *SortedMap) Swap(i, j int)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
+```
+
+### <a id="Compare" href="#Compare">func Compare(a, b reflect.Value) int</a>
+
+```
+searchKey: fmtsort.Compare
+tags: [method private]
+```
+
+```Go
+func Compare(a, b reflect.Value) int
 ```
 
 ### <a id="compare" href="#compare">func compare(aVal, bVal reflect.Value) int</a>
 
 ```
 searchKey: fmtsort.compare
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -117,24 +133,11 @@ func compare(aVal, bVal reflect.Value) int
 
 compare compares two values of the same type. It returns -1, 0, 1 according to whether a > b (1), a == b (0), or a < b (-1). If the types differ, it returns -1. See the comment on Sort for the comparison rules. 
 
-### <a id="nilCompare" href="#nilCompare">func nilCompare(aVal, bVal reflect.Value) (int, bool)</a>
-
-```
-searchKey: fmtsort.nilCompare
-tags: [private]
-```
-
-```Go
-func nilCompare(aVal, bVal reflect.Value) (int, bool)
-```
-
-nilCompare checks whether either value is nil. If not, the boolean is false. If either value is nil, the boolean is true and the integer is the comparison value. The comparison is defined to be 0 if both are nil, otherwise the one nil value compares low. Both arguments must represent a chan, func, interface, map, pointer, or slice. 
-
 ### <a id="floatCompare" href="#floatCompare">func floatCompare(a, b float64) int</a>
 
 ```
 searchKey: fmtsort.floatCompare
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -147,21 +150,23 @@ floatCompare compares two floating-point values. NaNs compare low.
 
 ```
 searchKey: fmtsort.isNaN
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func isNaN(a float64) bool
 ```
 
-### <a id="Compare" href="#Compare">func Compare(a, b reflect.Value) int</a>
+### <a id="nilCompare" href="#nilCompare">func nilCompare(aVal, bVal reflect.Value) (int, bool)</a>
 
 ```
-searchKey: fmtsort.Compare
-tags: [private]
+searchKey: fmtsort.nilCompare
+tags: [method private]
 ```
 
 ```Go
-func Compare(a, b reflect.Value) int
+func nilCompare(aVal, bVal reflect.Value) (int, bool)
 ```
+
+nilCompare checks whether either value is nil. If not, the boolean is false. If either value is nil, the boolean is true and the integer is the comparison value. The comparison is defined to be 0 if both are nil, otherwise the one nil value compares low. Both arguments must represent a chan, func, interface, map, pointer, or slice. 
 

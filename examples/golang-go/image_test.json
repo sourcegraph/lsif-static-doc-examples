@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "image_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "image_test.data",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -90,6 +95,9 @@
                 "newPage": false,
                 "searchKey": "image_test.imageTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -115,6 +123,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -135,6 +144,7 @@
                 "newPage": false,
                 "searchKey": "image_test.imageTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -160,6 +170,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -174,34 +185,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/image_test#Example_decodeConfig",
-              "documentation": {
-                "identifier": "Example_decodeConfig",
-                "newPage": false,
-                "searchKey": "image_test.Example_decodeConfig",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Example_decodeConfig()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Example_decodeConfig()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/image_test#Example",
               "documentation": {
                 "identifier": "Example",
                 "newPage": false,
                 "searchKey": "image_test.Example",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -218,12 +208,60 @@
           },
           {
             "node": {
+              "pathID": "/image_test#Example_decodeConfig",
+              "documentation": {
+                "identifier": "Example_decodeConfig",
+                "newPage": false,
+                "searchKey": "image_test.Example_decodeConfig",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_decodeConfig()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_decodeConfig()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image_test#TestDecode",
+              "documentation": {
+                "identifier": "TestDecode",
+                "newPage": false,
+                "searchKey": "image_test.TestDecode",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecode(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecode(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/image_test#decode",
               "documentation": {
                 "identifier": "decode",
                 "newPage": false,
                 "searchKey": "image_test.decode",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -246,6 +284,7 @@
                 "newPage": false,
                 "searchKey": "image_test.decodeConfig",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -268,6 +307,7 @@
                 "newPage": false,
                 "searchKey": "image_test.delta",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -290,6 +330,7 @@
                 "newPage": false,
                 "searchKey": "image_test.withinTolerance",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -300,28 +341,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc withinTolerance(c0, c1 color.Color, tolerance int) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image_test#TestDecode",
-              "documentation": {
-                "identifier": "TestDecode",
-                "newPage": false,
-                "searchKey": "image_test.TestDecode",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDecode(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDecode(t *testing.T)\n```\n\n"
               },
               "children": null
             }

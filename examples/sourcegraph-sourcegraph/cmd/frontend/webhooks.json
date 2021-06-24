@@ -4,7 +4,9 @@
     "identifier": "webhooks",
     "newPage": true,
     "searchKey": "cmd/frontend/webhooks",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -41,6 +45,8 @@
                 "newPage": false,
                 "searchKey": "webhooks.dsn",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -63,6 +69,9 @@
                 "newPage": false,
                 "searchKey": "webhooks.eventPayload",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -87,7 +96,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -100,52 +111,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/webhooks#Registerer",
-              "documentation": {
-                "identifier": "Registerer",
-                "newPage": false,
-                "searchKey": "webhooks.Registerer",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Registerer interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Registerer interface {\n\tRegister(webhook *GitHubWebhook)\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/webhooks#WebhookHandler",
-              "documentation": {
-                "identifier": "WebhookHandler",
-                "newPage": false,
-                "searchKey": "webhooks.WebhookHandler",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type WebhookHandler func(ctx context.Context, extSvc *github.com/sourcegraph/sourcegraph/internal/types.ExternalService, event interface{}) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype WebhookHandler func(ctx context.Context, extSvc *types.ExternalService, event interface{}) error\n```\n\nWebhookHandler is a handler for a webhook event, the 'event' param could be any of the event types permissible based on the event type(s) the handler was registered against. If you register a handler for many event types, you should do a type switch within your handler \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/webhooks#GitHubWebhook",
               "documentation": {
                 "identifier": "GitHubWebhook",
                 "newPage": false,
                 "searchKey": "webhooks.GitHubWebhook",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -158,32 +131,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/cmd/frontend/webhooks#GitHubWebhook.ServeHTTP",
-                    "documentation": {
-                      "identifier": "GitHubWebhook.ServeHTTP",
-                      "newPage": false,
-                      "searchKey": "webhooks.GitHubWebhook.ServeHTTP",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *GitHubWebhook) ServeHTTP(w http.ResponseWriter, r *http.Request)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *GitHubWebhook) ServeHTTP(w http.ResponseWriter, r *http.Request)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/cmd/frontend/webhooks#GitHubWebhook.Dispatch",
                     "documentation": {
                       "identifier": "GitHubWebhook.Dispatch",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.Dispatch",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -203,7 +158,9 @@
                       "identifier": "GitHubWebhook.Register",
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.Register",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -218,22 +175,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/cmd/frontend/webhooks#GitHubWebhook.getExternalService",
+                    "pathID": "/cmd/frontend/webhooks#GitHubWebhook.ServeHTTP",
                     "documentation": {
-                      "identifier": "GitHubWebhook.getExternalService",
+                      "identifier": "GitHubWebhook.ServeHTTP",
                       "newPage": false,
-                      "searchKey": "webhooks.GitHubWebhook.getExternalService",
+                      "searchKey": "webhooks.GitHubWebhook.ServeHTTP",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (h *GitHubWebhook) getExternalService(r *http.Request, body []byte) (*types.ExternalService, error)"
+                      "value": "func (h *GitHubWebhook) ServeHTTP(w http.ResponseWriter, r *http.Request)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (h *GitHubWebhook) getExternalService(r *http.Request, body []byte) (*types.ExternalService, error)\n```\n\n"
+                      "value": "```Go\nfunc (h *GitHubWebhook) ServeHTTP(w http.ResponseWriter, r *http.Request)\n```\n\n"
                     },
                     "children": null
                   }
@@ -246,6 +203,7 @@
                       "newPage": false,
                       "searchKey": "webhooks.GitHubWebhook.findAndValidateExternalService",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -259,8 +217,75 @@
                     },
                     "children": null
                   }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/webhooks#GitHubWebhook.getExternalService",
+                    "documentation": {
+                      "identifier": "GitHubWebhook.getExternalService",
+                      "newPage": false,
+                      "searchKey": "webhooks.GitHubWebhook.getExternalService",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *GitHubWebhook) getExternalService(r *http.Request, body []byte) (*types.ExternalService, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *GitHubWebhook) getExternalService(r *http.Request, body []byte) (*types.ExternalService, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
                 }
               ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/webhooks#Registerer",
+              "documentation": {
+                "identifier": "Registerer",
+                "newPage": false,
+                "searchKey": "webhooks.Registerer",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Registerer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Registerer interface {\n\tRegister(webhook *GitHubWebhook)\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/webhooks#WebhookHandler",
+              "documentation": {
+                "identifier": "WebhookHandler",
+                "newPage": false,
+                "searchKey": "webhooks.WebhookHandler",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type WebhookHandler func(ctx context.Context, extSvc *github.com/sourcegraph/sourcegraph/internal/types.ExternalService, event interface{}) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype WebhookHandler func(ctx context.Context, extSvc *types.ExternalService, event interface{}) error\n```\n\nWebhookHandler is a handler for a webhook event, the 'event' param could be any of the event types permissible based on the event type(s) the handler was registered against. If you register a handler for many event types, you should do a type switch within your handler \n\n"
+              },
+              "children": null
             }
           }
         ]
@@ -273,7 +298,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -286,79 +313,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/webhooks#TestGithubWebhookDispatchSuccess",
-              "documentation": {
-                "identifier": "TestGithubWebhookDispatchSuccess",
-                "newPage": false,
-                "searchKey": "webhooks.TestGithubWebhookDispatchSuccess",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGithubWebhookDispatchSuccess(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGithubWebhookDispatchSuccess(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/webhooks#TestGithubWebhookDispatchNoHandler",
-              "documentation": {
-                "identifier": "TestGithubWebhookDispatchNoHandler",
-                "newPage": false,
-                "searchKey": "webhooks.TestGithubWebhookDispatchNoHandler",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGithubWebhookDispatchNoHandler(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGithubWebhookDispatchNoHandler(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/webhooks#TestGithubWebhookDispatchSuccessMultiple",
-              "documentation": {
-                "identifier": "TestGithubWebhookDispatchSuccessMultiple",
-                "newPage": false,
-                "searchKey": "webhooks.TestGithubWebhookDispatchSuccessMultiple",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGithubWebhookDispatchSuccessMultiple(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGithubWebhookDispatchSuccessMultiple(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/webhooks#TestGithubWebhookDispatchError",
               "documentation": {
                 "identifier": "TestGithubWebhookDispatchError",
                 "newPage": false,
                 "searchKey": "webhooks.TestGithubWebhookDispatchError",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -374,12 +337,109 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/webhooks#TestGithubWebhookDispatchNoHandler",
+              "documentation": {
+                "identifier": "TestGithubWebhookDispatchNoHandler",
+                "newPage": false,
+                "searchKey": "webhooks.TestGithubWebhookDispatchNoHandler",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGithubWebhookDispatchNoHandler(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGithubWebhookDispatchNoHandler(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/webhooks#TestGithubWebhookDispatchSuccess",
+              "documentation": {
+                "identifier": "TestGithubWebhookDispatchSuccess",
+                "newPage": false,
+                "searchKey": "webhooks.TestGithubWebhookDispatchSuccess",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGithubWebhookDispatchSuccess(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGithubWebhookDispatchSuccess(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/webhooks#TestGithubWebhookDispatchSuccessMultiple",
+              "documentation": {
+                "identifier": "TestGithubWebhookDispatchSuccessMultiple",
+                "newPage": false,
+                "searchKey": "webhooks.TestGithubWebhookDispatchSuccessMultiple",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGithubWebhookDispatchSuccessMultiple(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGithubWebhookDispatchSuccessMultiple(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/webhooks#TestGithubWebhookExternalServices",
+              "documentation": {
+                "identifier": "TestGithubWebhookExternalServices",
+                "newPage": false,
+                "searchKey": "webhooks.TestGithubWebhookExternalServices",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGithubWebhookExternalServices(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGithubWebhookExternalServices(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/webhooks#errString",
               "documentation": {
                 "identifier": "errString",
                 "newPage": false,
                 "searchKey": "webhooks.errString",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -396,34 +456,13 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/webhooks#TestGithubWebhookExternalServices",
-              "documentation": {
-                "identifier": "TestGithubWebhookExternalServices",
-                "newPage": false,
-                "searchKey": "webhooks.TestGithubWebhookExternalServices",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGithubWebhookExternalServices(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGithubWebhookExternalServices(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/webhooks#marshalJSON",
               "documentation": {
                 "identifier": "marshalJSON",
                 "newPage": false,
                 "searchKey": "webhooks.marshalJSON",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -446,6 +485,7 @@
                 "newPage": false,
                 "searchKey": "webhooks.sign",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },

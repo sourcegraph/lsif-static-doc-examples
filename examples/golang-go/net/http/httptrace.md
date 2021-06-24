@@ -5,40 +5,32 @@ Package httptrace provides mechanisms to trace the events within HTTP client req
 ## Index
 
 * [Types](#type)
-    * [type clientEventContextKey struct{}](#clientEventContextKey)
     * [type ClientTrace struct](#ClientTrace)
         * [func ContextClientTrace(ctx context.Context) *ClientTrace](#ContextClientTrace)
         * [func (t *ClientTrace) compose(old *ClientTrace)](#ClientTrace.compose)
         * [func (t *ClientTrace) hasNetHooks() bool](#ClientTrace.hasNetHooks)
-    * [type WroteRequestInfo struct](#WroteRequestInfo)
-    * [type DNSStartInfo struct](#DNSStartInfo)
     * [type DNSDoneInfo struct](#DNSDoneInfo)
+    * [type DNSStartInfo struct](#DNSStartInfo)
     * [type GotConnInfo struct](#GotConnInfo)
+    * [type WroteRequestInfo struct](#WroteRequestInfo)
+    * [type clientEventContextKey struct{}](#clientEventContextKey)
 * [Functions](#func)
-    * [func WithClientTrace(ctx context.Context, trace *ClientTrace) context.Context](#WithClientTrace)
-    * [func TestWithClientTrace(t *testing.T)](#TestWithClientTrace)
     * [func TestCompose(t *testing.T)](#TestCompose)
+    * [func TestWithClientTrace(t *testing.T)](#TestWithClientTrace)
+    * [func WithClientTrace(ctx context.Context, trace *ClientTrace) context.Context](#WithClientTrace)
 
 
 ## <a id="type" href="#type">Types</a>
 
-### <a id="clientEventContextKey" href="#clientEventContextKey">type clientEventContextKey struct{}</a>
-
 ```
-searchKey: httptrace.clientEventContextKey
-tags: [private]
+tags: [package]
 ```
-
-```Go
-type clientEventContextKey struct{}
-```
-
-unique type to prevent assignment. 
 
 ### <a id="ClientTrace" href="#ClientTrace">type ClientTrace struct</a>
 
 ```
 searchKey: httptrace.ClientTrace
+tags: [struct]
 ```
 
 ```Go
@@ -139,6 +131,7 @@ See [https://blog.golang.org/http-tracing](https://blog.golang.org/http-tracing)
 
 ```
 searchKey: httptrace.ContextClientTrace
+tags: [method]
 ```
 
 ```Go
@@ -151,7 +144,7 @@ ContextClientTrace returns the ClientTrace associated with the provided context.
 
 ```
 searchKey: httptrace.ClientTrace.compose
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -164,46 +157,18 @@ compose modifies t such that it respects the previously-registered hooks in old,
 
 ```
 searchKey: httptrace.ClientTrace.hasNetHooks
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (t *ClientTrace) hasNetHooks() bool
 ```
 
-### <a id="WroteRequestInfo" href="#WroteRequestInfo">type WroteRequestInfo struct</a>
-
-```
-searchKey: httptrace.WroteRequestInfo
-```
-
-```Go
-type WroteRequestInfo struct {
-	// Err is any error encountered while writing the Request.
-	Err error
-}
-```
-
-WroteRequestInfo contains information provided to the WroteRequest hook. 
-
-### <a id="DNSStartInfo" href="#DNSStartInfo">type DNSStartInfo struct</a>
-
-```
-searchKey: httptrace.DNSStartInfo
-```
-
-```Go
-type DNSStartInfo struct {
-	Host string
-}
-```
-
-DNSStartInfo contains information about a DNS request. 
-
 ### <a id="DNSDoneInfo" href="#DNSDoneInfo">type DNSDoneInfo struct</a>
 
 ```
 searchKey: httptrace.DNSDoneInfo
+tags: [struct]
 ```
 
 ```Go
@@ -223,10 +188,26 @@ type DNSDoneInfo struct {
 
 DNSDoneInfo contains information about the results of a DNS lookup. 
 
+### <a id="DNSStartInfo" href="#DNSStartInfo">type DNSStartInfo struct</a>
+
+```
+searchKey: httptrace.DNSStartInfo
+tags: [struct]
+```
+
+```Go
+type DNSStartInfo struct {
+	Host string
+}
+```
+
+DNSStartInfo contains information about a DNS request. 
+
 ### <a id="GotConnInfo" href="#GotConnInfo">type GotConnInfo struct</a>
 
 ```
 searchKey: httptrace.GotConnInfo
+tags: [struct]
 ```
 
 ```Go
@@ -252,12 +233,68 @@ type GotConnInfo struct {
 
 GotConnInfo is the argument to the ClientTrace.GotConn function and contains information about the obtained connection. 
 
+### <a id="WroteRequestInfo" href="#WroteRequestInfo">type WroteRequestInfo struct</a>
+
+```
+searchKey: httptrace.WroteRequestInfo
+tags: [struct]
+```
+
+```Go
+type WroteRequestInfo struct {
+	// Err is any error encountered while writing the Request.
+	Err error
+}
+```
+
+WroteRequestInfo contains information provided to the WroteRequest hook. 
+
+### <a id="clientEventContextKey" href="#clientEventContextKey">type clientEventContextKey struct{}</a>
+
+```
+searchKey: httptrace.clientEventContextKey
+tags: [struct private]
+```
+
+```Go
+type clientEventContextKey struct{}
+```
+
+unique type to prevent assignment. 
+
 ## <a id="func" href="#func">Functions</a>
+
+```
+tags: [package]
+```
+
+### <a id="TestCompose" href="#TestCompose">func TestCompose(t *testing.T)</a>
+
+```
+searchKey: httptrace.TestCompose
+tags: [method private test]
+```
+
+```Go
+func TestCompose(t *testing.T)
+```
+
+### <a id="TestWithClientTrace" href="#TestWithClientTrace">func TestWithClientTrace(t *testing.T)</a>
+
+```
+searchKey: httptrace.TestWithClientTrace
+tags: [method private test]
+```
+
+```Go
+func TestWithClientTrace(t *testing.T)
+```
 
 ### <a id="WithClientTrace" href="#WithClientTrace">func WithClientTrace(ctx context.Context, trace *ClientTrace) context.Context</a>
 
 ```
 searchKey: httptrace.WithClientTrace
+tags: [method]
 ```
 
 ```Go
@@ -265,26 +302,4 @@ func WithClientTrace(ctx context.Context, trace *ClientTrace) context.Context
 ```
 
 WithClientTrace returns a new context based on the provided parent ctx. HTTP client requests made with the returned context will use the provided trace hooks, in addition to any previous hooks registered with ctx. Any hooks defined in the provided trace will be called first. 
-
-### <a id="TestWithClientTrace" href="#TestWithClientTrace">func TestWithClientTrace(t *testing.T)</a>
-
-```
-searchKey: httptrace.TestWithClientTrace
-tags: [private]
-```
-
-```Go
-func TestWithClientTrace(t *testing.T)
-```
-
-### <a id="TestCompose" href="#TestCompose">func TestCompose(t *testing.T)</a>
-
-```
-searchKey: httptrace.TestCompose
-tags: [private]
-```
-
-```Go
-func TestCompose(t *testing.T)
-```
 

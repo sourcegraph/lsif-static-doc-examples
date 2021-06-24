@@ -11,36 +11,37 @@ Package auth provides the Authenticator interface, which can be used to add auth
         * [func (basic *BasicAuth) Authenticate(req *http.Request) error](#BasicAuth.Authenticate)
         * [func (basic *BasicAuth) Hash() string](#BasicAuth.Hash)
     * [type BasicAuthWithSSH struct](#BasicAuthWithSSH)
+        * [func (basic *BasicAuthWithSSH) Hash() string](#BasicAuthWithSSH.Hash)
         * [func (basic *BasicAuthWithSSH) SSHPrivateKey() (privateKey, passphrase string)](#BasicAuthWithSSH.SSHPrivateKey)
         * [func (basic *BasicAuthWithSSH) SSHPublicKey() string](#BasicAuthWithSSH.SSHPublicKey)
-        * [func (basic *BasicAuthWithSSH) Hash() string](#BasicAuthWithSSH.Hash)
-    * [type OAuthClient struct](#OAuthClient)
-        * [func newOAuthClient(token, secret string) *OAuthClient](#newOAuthClient)
-        * [func (c *OAuthClient) Authenticate(req *http.Request) error](#OAuthClient.Authenticate)
-        * [func (c *OAuthClient) Hash() string](#OAuthClient.Hash)
     * [type OAuthBearerToken struct](#OAuthBearerToken)
         * [func (token *OAuthBearerToken) Authenticate(req *http.Request) error](#OAuthBearerToken.Authenticate)
         * [func (token *OAuthBearerToken) Hash() string](#OAuthBearerToken.Hash)
     * [type OAuthBearerTokenWithSSH struct](#OAuthBearerTokenWithSSH)
+        * [func (token *OAuthBearerTokenWithSSH) Hash() string](#OAuthBearerTokenWithSSH.Hash)
         * [func (token *OAuthBearerTokenWithSSH) SSHPrivateKey() (privateKey, passphrase string)](#OAuthBearerTokenWithSSH.SSHPrivateKey)
         * [func (token *OAuthBearerTokenWithSSH) SSHPublicKey() string](#OAuthBearerTokenWithSSH.SSHPublicKey)
-        * [func (token *OAuthBearerTokenWithSSH) Hash() string](#OAuthBearerTokenWithSSH.Hash)
+    * [type OAuthClient struct](#OAuthClient)
+        * [func newOAuthClient(token, secret string) *OAuthClient](#newOAuthClient)
+        * [func (c *OAuthClient) Authenticate(req *http.Request) error](#OAuthClient.Authenticate)
+        * [func (c *OAuthClient) Hash() string](#OAuthClient.Hash)
 * [Functions](#func)
     * [func TestBasicAuth(t *testing.T)](#TestBasicAuth)
-    * [func TestOAuthClient(t *testing.T)](#TestOAuthClient)
     * [func TestOAuthBearerToken(t *testing.T)](#TestOAuthBearerToken)
+    * [func TestOAuthClient(t *testing.T)](#TestOAuthClient)
 
 
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Authenticator" href="#Authenticator">type Authenticator interface</a>
 
 ```
 searchKey: auth.Authenticator
+tags: [interface]
 ```
 
 ```Go
@@ -64,6 +65,7 @@ Note that, while Authenticate provides generic functionality, the concrete types
 
 ```
 searchKey: auth.AuthenticatorWithSSH
+tags: [interface]
 ```
 
 ```Go
@@ -85,6 +87,7 @@ AuthenticatorWithSSH wraps the Authenticator interface and augments it by additi
 
 ```
 searchKey: auth.BasicAuth
+tags: [struct]
 ```
 
 ```Go
@@ -100,6 +103,7 @@ BasicAuth implements HTTP Basic Authentication for extsvc clients.
 
 ```
 searchKey: auth.BasicAuth.Authenticate
+tags: [method]
 ```
 
 ```Go
@@ -110,6 +114,7 @@ func (basic *BasicAuth) Authenticate(req *http.Request) error
 
 ```
 searchKey: auth.BasicAuth.Hash
+tags: [function]
 ```
 
 ```Go
@@ -120,6 +125,7 @@ func (basic *BasicAuth) Hash() string
 
 ```
 searchKey: auth.BasicAuthWithSSH
+tags: [struct]
 ```
 
 ```Go
@@ -134,10 +140,22 @@ type BasicAuthWithSSH struct {
 
 BasicAuthWithSSH implements HTTP Basic Authentication for extsvc clients and holds an additional RSA keypair. 
 
+#### <a id="BasicAuthWithSSH.Hash" href="#BasicAuthWithSSH.Hash">func (basic *BasicAuthWithSSH) Hash() string</a>
+
+```
+searchKey: auth.BasicAuthWithSSH.Hash
+tags: [function]
+```
+
+```Go
+func (basic *BasicAuthWithSSH) Hash() string
+```
+
 #### <a id="BasicAuthWithSSH.SSHPrivateKey" href="#BasicAuthWithSSH.SSHPrivateKey">func (basic *BasicAuthWithSSH) SSHPrivateKey() (privateKey, passphrase string)</a>
 
 ```
 searchKey: auth.BasicAuthWithSSH.SSHPrivateKey
+tags: [function]
 ```
 
 ```Go
@@ -148,69 +166,18 @@ func (basic *BasicAuthWithSSH) SSHPrivateKey() (privateKey, passphrase string)
 
 ```
 searchKey: auth.BasicAuthWithSSH.SSHPublicKey
+tags: [function]
 ```
 
 ```Go
 func (basic *BasicAuthWithSSH) SSHPublicKey() string
 ```
 
-#### <a id="BasicAuthWithSSH.Hash" href="#BasicAuthWithSSH.Hash">func (basic *BasicAuthWithSSH) Hash() string</a>
-
-```
-searchKey: auth.BasicAuthWithSSH.Hash
-```
-
-```Go
-func (basic *BasicAuthWithSSH) Hash() string
-```
-
-### <a id="OAuthClient" href="#OAuthClient">type OAuthClient struct</a>
-
-```
-searchKey: auth.OAuthClient
-```
-
-```Go
-type OAuthClient struct{ *oauth.Client }
-```
-
-OAuthClient implements OAuth 1 signature authentication for extsvc implementations. 
-
-#### <a id="newOAuthClient" href="#newOAuthClient">func newOAuthClient(token, secret string) *OAuthClient</a>
-
-```
-searchKey: auth.newOAuthClient
-tags: [private]
-```
-
-```Go
-func newOAuthClient(token, secret string) *OAuthClient
-```
-
-#### <a id="OAuthClient.Authenticate" href="#OAuthClient.Authenticate">func (c *OAuthClient) Authenticate(req *http.Request) error</a>
-
-```
-searchKey: auth.OAuthClient.Authenticate
-```
-
-```Go
-func (c *OAuthClient) Authenticate(req *http.Request) error
-```
-
-#### <a id="OAuthClient.Hash" href="#OAuthClient.Hash">func (c *OAuthClient) Hash() string</a>
-
-```
-searchKey: auth.OAuthClient.Hash
-```
-
-```Go
-func (c *OAuthClient) Hash() string
-```
-
 ### <a id="OAuthBearerToken" href="#OAuthBearerToken">type OAuthBearerToken struct</a>
 
 ```
 searchKey: auth.OAuthBearerToken
+tags: [struct]
 ```
 
 ```Go
@@ -225,6 +192,7 @@ OAuthBearerToken implements OAuth Bearer Token authentication for extsvc clients
 
 ```
 searchKey: auth.OAuthBearerToken.Authenticate
+tags: [method]
 ```
 
 ```Go
@@ -235,6 +203,7 @@ func (token *OAuthBearerToken) Authenticate(req *http.Request) error
 
 ```
 searchKey: auth.OAuthBearerToken.Hash
+tags: [function]
 ```
 
 ```Go
@@ -245,6 +214,7 @@ func (token *OAuthBearerToken) Hash() string
 
 ```
 searchKey: auth.OAuthBearerTokenWithSSH
+tags: [struct]
 ```
 
 ```Go
@@ -259,10 +229,22 @@ type OAuthBearerTokenWithSSH struct {
 
 OAuthBearerTokenWithSSH implements OAuth Bearer Token authentication for extsvc clients and holds an additional RSA keypair. 
 
+#### <a id="OAuthBearerTokenWithSSH.Hash" href="#OAuthBearerTokenWithSSH.Hash">func (token *OAuthBearerTokenWithSSH) Hash() string</a>
+
+```
+searchKey: auth.OAuthBearerTokenWithSSH.Hash
+tags: [function]
+```
+
+```Go
+func (token *OAuthBearerTokenWithSSH) Hash() string
+```
+
 #### <a id="OAuthBearerTokenWithSSH.SSHPrivateKey" href="#OAuthBearerTokenWithSSH.SSHPrivateKey">func (token *OAuthBearerTokenWithSSH) SSHPrivateKey() (privateKey, passphrase string)</a>
 
 ```
 searchKey: auth.OAuthBearerTokenWithSSH.SSHPrivateKey
+tags: [function]
 ```
 
 ```Go
@@ -273,58 +255,95 @@ func (token *OAuthBearerTokenWithSSH) SSHPrivateKey() (privateKey, passphrase st
 
 ```
 searchKey: auth.OAuthBearerTokenWithSSH.SSHPublicKey
+tags: [function]
 ```
 
 ```Go
 func (token *OAuthBearerTokenWithSSH) SSHPublicKey() string
 ```
 
-#### <a id="OAuthBearerTokenWithSSH.Hash" href="#OAuthBearerTokenWithSSH.Hash">func (token *OAuthBearerTokenWithSSH) Hash() string</a>
+### <a id="OAuthClient" href="#OAuthClient">type OAuthClient struct</a>
 
 ```
-searchKey: auth.OAuthBearerTokenWithSSH.Hash
+searchKey: auth.OAuthClient
+tags: [struct]
 ```
 
 ```Go
-func (token *OAuthBearerTokenWithSSH) Hash() string
+type OAuthClient struct{ *oauth.Client }
+```
+
+OAuthClient implements OAuth 1 signature authentication for extsvc implementations. 
+
+#### <a id="newOAuthClient" href="#newOAuthClient">func newOAuthClient(token, secret string) *OAuthClient</a>
+
+```
+searchKey: auth.newOAuthClient
+tags: [method private]
+```
+
+```Go
+func newOAuthClient(token, secret string) *OAuthClient
+```
+
+#### <a id="OAuthClient.Authenticate" href="#OAuthClient.Authenticate">func (c *OAuthClient) Authenticate(req *http.Request) error</a>
+
+```
+searchKey: auth.OAuthClient.Authenticate
+tags: [method]
+```
+
+```Go
+func (c *OAuthClient) Authenticate(req *http.Request) error
+```
+
+#### <a id="OAuthClient.Hash" href="#OAuthClient.Hash">func (c *OAuthClient) Hash() string</a>
+
+```
+searchKey: auth.OAuthClient.Hash
+tags: [function]
+```
+
+```Go
+func (c *OAuthClient) Hash() string
 ```
 
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="TestBasicAuth" href="#TestBasicAuth">func TestBasicAuth(t *testing.T)</a>
 
 ```
 searchKey: auth.TestBasicAuth
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestBasicAuth(t *testing.T)
 ```
 
-### <a id="TestOAuthClient" href="#TestOAuthClient">func TestOAuthClient(t *testing.T)</a>
-
-```
-searchKey: auth.TestOAuthClient
-tags: [private]
-```
-
-```Go
-func TestOAuthClient(t *testing.T)
-```
-
 ### <a id="TestOAuthBearerToken" href="#TestOAuthBearerToken">func TestOAuthBearerToken(t *testing.T)</a>
 
 ```
 searchKey: auth.TestOAuthBearerToken
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestOAuthBearerToken(t *testing.T)
+```
+
+### <a id="TestOAuthClient" href="#TestOAuthClient">func TestOAuthClient(t *testing.T)</a>
+
+```
+searchKey: auth.TestOAuthClient
+tags: [method private test]
+```
+
+```Go
+func TestOAuthClient(t *testing.T)
 ```
 

@@ -9,14 +9,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Example_minimal" href="#Example_minimal">func Example_minimal()</a>
 
 ```
 searchKey: tar_test.Example_minimal
-tags: [private]
+tags: [function private]
 ```
 
 ```Go

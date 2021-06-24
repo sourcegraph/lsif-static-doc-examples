@@ -4,7 +4,9 @@
     "identifier": "ioutil",
     "newPage": true,
     "searchKey": "io/ioutil",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,10 @@
                 "identifier": "Discard",
                 "newPage": false,
                 "searchKey": "ioutil.Discard",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +70,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -76,92 +85,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/io/ioutil#ReadAll",
-              "documentation": {
-                "identifier": "ReadAll",
-                "newPage": false,
-                "searchKey": "ioutil.ReadAll",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ReadAll(r io.Reader) ([]byte, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ReadAll(r io.Reader) ([]byte, error)\n```\n\nReadAll reads from r until an error or EOF and returns the data it read. A successful call returns err == nil, not err == EOF. Because ReadAll is defined to read from src until EOF, it does not treat an EOF from Read as an error to be reported. \n\nAs of Go 1.16, this function simply calls io.ReadAll. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/ioutil#ReadFile",
-              "documentation": {
-                "identifier": "ReadFile",
-                "newPage": false,
-                "searchKey": "ioutil.ReadFile",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ReadFile(filename string) ([]byte, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ReadFile(filename string) ([]byte, error)\n```\n\nReadFile reads the file named by filename and returns the contents. A successful call returns err == nil, not err == EOF. Because ReadFile reads the whole file, it does not treat an EOF from Read as an error to be reported. \n\nAs of Go 1.16, this function simply calls os.ReadFile. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/ioutil#WriteFile",
-              "documentation": {
-                "identifier": "WriteFile",
-                "newPage": false,
-                "searchKey": "ioutil.WriteFile",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func WriteFile(filename string, data []byte, perm fs.FileMode) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc WriteFile(filename string, data []byte, perm fs.FileMode) error\n```\n\nWriteFile writes data to a file named by filename. If the file does not exist, WriteFile creates it with permissions perm (before umask); otherwise WriteFile truncates it before writing, without changing permissions. \n\nAs of Go 1.16, this function simply calls os.WriteFile. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/ioutil#ReadDir",
-              "documentation": {
-                "identifier": "ReadDir",
-                "newPage": false,
-                "searchKey": "ioutil.ReadDir",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ReadDir(dirname string) ([]fs.FileInfo, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ReadDir(dirname string) ([]fs.FileInfo, error)\n```\n\nReadDir reads the directory named by dirname and returns a list of fs.FileInfo for the directory's contents, sorted by filename. If an error occurs reading the directory, ReadDir returns no directory entries along with the error. \n\nAs of Go 1.16, os.ReadDir is a more efficient and correct choice: it returns a list of fs.DirEntry instead of fs.FileInfo, and it returns partial results in the case of an error midway through reading a directory. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/io/ioutil#NopCloser",
               "documentation": {
                 "identifier": "NopCloser",
                 "newPage": false,
                 "searchKey": "ioutil.NopCloser",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -176,12 +107,102 @@
           },
           {
             "node": {
+              "pathID": "/io/ioutil#ReadAll",
+              "documentation": {
+                "identifier": "ReadAll",
+                "newPage": false,
+                "searchKey": "ioutil.ReadAll",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ReadAll(r io.Reader) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ReadAll(r io.Reader) ([]byte, error)\n```\n\nReadAll reads from r until an error or EOF and returns the data it read. A successful call returns err == nil, not err == EOF. Because ReadAll is defined to read from src until EOF, it does not treat an EOF from Read as an error to be reported. \n\nAs of Go 1.16, this function simply calls io.ReadAll. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/ioutil#ReadDir",
+              "documentation": {
+                "identifier": "ReadDir",
+                "newPage": false,
+                "searchKey": "ioutil.ReadDir",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ReadDir(dirname string) ([]fs.FileInfo, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ReadDir(dirname string) ([]fs.FileInfo, error)\n```\n\nReadDir reads the directory named by dirname and returns a list of fs.FileInfo for the directory's contents, sorted by filename. If an error occurs reading the directory, ReadDir returns no directory entries along with the error. \n\nAs of Go 1.16, os.ReadDir is a more efficient and correct choice: it returns a list of fs.DirEntry instead of fs.FileInfo, and it returns partial results in the case of an error midway through reading a directory. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/ioutil#ReadFile",
+              "documentation": {
+                "identifier": "ReadFile",
+                "newPage": false,
+                "searchKey": "ioutil.ReadFile",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ReadFile(filename string) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ReadFile(filename string) ([]byte, error)\n```\n\nReadFile reads the file named by filename and returns the contents. A successful call returns err == nil, not err == EOF. Because ReadFile reads the whole file, it does not treat an EOF from Read as an error to be reported. \n\nAs of Go 1.16, this function simply calls os.ReadFile. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/ioutil#TempDir",
+              "documentation": {
+                "identifier": "TempDir",
+                "newPage": false,
+                "searchKey": "ioutil.TempDir",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TempDir(dir, pattern string) (name string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TempDir(dir, pattern string) (name string, err error)\n```\n\nTempDir creates a new temporary directory in the directory dir. The directory name is generated by taking pattern and applying a random string to the end. If pattern includes a \"*\", the random string replaces the last \"*\". TempDir returns the name of the new directory. If dir is the empty string, TempDir uses the default directory for temporary files (see os.TempDir). Multiple programs calling TempDir simultaneously will not choose the same directory. It is the caller's responsibility to remove the directory when no longer needed. \n\nAs of Go 1.17, this function simply calls os.MkdirTemp. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/io/ioutil#TempFile",
               "documentation": {
                 "identifier": "TempFile",
                 "newPage": false,
                 "searchKey": "ioutil.TempFile",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -196,20 +217,22 @@
           },
           {
             "node": {
-              "pathID": "/io/ioutil#TempDir",
+              "pathID": "/io/ioutil#WriteFile",
               "documentation": {
-                "identifier": "TempDir",
+                "identifier": "WriteFile",
                 "newPage": false,
-                "searchKey": "ioutil.TempDir",
-                "tags": null
+                "searchKey": "ioutil.WriteFile",
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TempDir(dir, pattern string) (name string, err error)"
+                "value": "func WriteFile(filename string, data []byte, perm fs.FileMode) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TempDir(dir, pattern string) (name string, err error)\n```\n\nTempDir creates a new temporary directory in the directory dir. The directory name is generated by taking pattern and applying a random string to the end. If pattern includes a \"*\", the random string replaces the last \"*\". TempDir returns the name of the new directory. If dir is the empty string, TempDir uses the default directory for temporary files (see os.TempDir). Multiple programs calling TempDir simultaneously will not choose the same directory. It is the caller's responsibility to remove the directory when no longer needed. \n\nAs of Go 1.17, this function simply calls os.MkdirTemp. \n\n"
+                "value": "```Go\nfunc WriteFile(filename string, data []byte, perm fs.FileMode) error\n```\n\nWriteFile writes data to a file named by filename. If the file does not exist, WriteFile creates it with permissions perm (before umask); otherwise WriteFile truncates it before writing, without changing permissions. \n\nAs of Go 1.16, this function simply calls os.WriteFile. \n\n"
               },
               "children": null
             }

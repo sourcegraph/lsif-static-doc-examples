@@ -66,780 +66,337 @@ For more information about pprof, see [https://github.com/google/pprof/blob/mast
 ## Index
 
 * [Constants](#const)
-    * [const lookupTried](#lookupTried)
+    * [const blockDelay](#blockDelay)
     * [const lookupFailed](#lookupFailed)
-    * [const tagProfile_SampleType](#tagProfile_SampleType)
-    * [const tagProfile_Sample](#tagProfile_Sample)
-    * [const tagProfile_Mapping](#tagProfile_Mapping)
-    * [const tagProfile_Location](#tagProfile_Location)
-    * [const tagProfile_Function](#tagProfile_Function)
-    * [const tagProfile_StringTable](#tagProfile_StringTable)
-    * [const tagProfile_DropFrames](#tagProfile_DropFrames)
-    * [const tagProfile_KeepFrames](#tagProfile_KeepFrames)
-    * [const tagProfile_TimeNanos](#tagProfile_TimeNanos)
-    * [const tagProfile_DurationNanos](#tagProfile_DurationNanos)
-    * [const tagProfile_PeriodType](#tagProfile_PeriodType)
-    * [const tagProfile_Period](#tagProfile_Period)
-    * [const tagProfile_Comment](#tagProfile_Comment)
-    * [const tagProfile_DefaultSampleType](#tagProfile_DefaultSampleType)
-    * [const tagValueType_Type](#tagValueType_Type)
-    * [const tagValueType_Unit](#tagValueType_Unit)
-    * [const tagSample_Location](#tagSample_Location)
-    * [const tagSample_Value](#tagSample_Value)
-    * [const tagSample_Label](#tagSample_Label)
-    * [const tagLabel_Key](#tagLabel_Key)
-    * [const tagLabel_Str](#tagLabel_Str)
-    * [const tagLabel_Num](#tagLabel_Num)
-    * [const tagMapping_ID](#tagMapping_ID)
-    * [const tagMapping_Start](#tagMapping_Start)
-    * [const tagMapping_Limit](#tagMapping_Limit)
-    * [const tagMapping_Offset](#tagMapping_Offset)
-    * [const tagMapping_Filename](#tagMapping_Filename)
-    * [const tagMapping_BuildID](#tagMapping_BuildID)
-    * [const tagMapping_HasFunctions](#tagMapping_HasFunctions)
-    * [const tagMapping_HasFilenames](#tagMapping_HasFilenames)
-    * [const tagMapping_HasLineNumbers](#tagMapping_HasLineNumbers)
-    * [const tagMapping_HasInlineFrames](#tagMapping_HasInlineFrames)
-    * [const tagLocation_ID](#tagLocation_ID)
-    * [const tagLocation_MappingID](#tagLocation_MappingID)
-    * [const tagLocation_Address](#tagLocation_Address)
-    * [const tagLocation_Line](#tagLocation_Line)
-    * [const tagLine_FunctionID](#tagLine_FunctionID)
-    * [const tagLine_Line](#tagLine_Line)
+    * [const lookupTried](#lookupTried)
+    * [const tagFunction_Filename](#tagFunction_Filename)
     * [const tagFunction_ID](#tagFunction_ID)
     * [const tagFunction_Name](#tagFunction_Name)
-    * [const tagFunction_SystemName](#tagFunction_SystemName)
-    * [const tagFunction_Filename](#tagFunction_Filename)
     * [const tagFunction_StartLine](#tagFunction_StartLine)
-    * [const blockDelay](#blockDelay)
+    * [const tagFunction_SystemName](#tagFunction_SystemName)
+    * [const tagLabel_Key](#tagLabel_Key)
+    * [const tagLabel_Num](#tagLabel_Num)
+    * [const tagLabel_Str](#tagLabel_Str)
+    * [const tagLine_FunctionID](#tagLine_FunctionID)
+    * [const tagLine_Line](#tagLine_Line)
+    * [const tagLocation_Address](#tagLocation_Address)
+    * [const tagLocation_ID](#tagLocation_ID)
+    * [const tagLocation_Line](#tagLocation_Line)
+    * [const tagLocation_MappingID](#tagLocation_MappingID)
+    * [const tagMapping_BuildID](#tagMapping_BuildID)
+    * [const tagMapping_Filename](#tagMapping_Filename)
+    * [const tagMapping_HasFilenames](#tagMapping_HasFilenames)
+    * [const tagMapping_HasFunctions](#tagMapping_HasFunctions)
+    * [const tagMapping_HasInlineFrames](#tagMapping_HasInlineFrames)
+    * [const tagMapping_HasLineNumbers](#tagMapping_HasLineNumbers)
+    * [const tagMapping_ID](#tagMapping_ID)
+    * [const tagMapping_Limit](#tagMapping_Limit)
+    * [const tagMapping_Offset](#tagMapping_Offset)
+    * [const tagMapping_Start](#tagMapping_Start)
+    * [const tagProfile_Comment](#tagProfile_Comment)
+    * [const tagProfile_DefaultSampleType](#tagProfile_DefaultSampleType)
+    * [const tagProfile_DropFrames](#tagProfile_DropFrames)
+    * [const tagProfile_DurationNanos](#tagProfile_DurationNanos)
+    * [const tagProfile_Function](#tagProfile_Function)
+    * [const tagProfile_KeepFrames](#tagProfile_KeepFrames)
+    * [const tagProfile_Location](#tagProfile_Location)
+    * [const tagProfile_Mapping](#tagProfile_Mapping)
+    * [const tagProfile_Period](#tagProfile_Period)
+    * [const tagProfile_PeriodType](#tagProfile_PeriodType)
+    * [const tagProfile_Sample](#tagProfile_Sample)
+    * [const tagProfile_SampleType](#tagProfile_SampleType)
+    * [const tagProfile_StringTable](#tagProfile_StringTable)
+    * [const tagProfile_TimeNanos](#tagProfile_TimeNanos)
+    * [const tagSample_Label](#tagSample_Label)
+    * [const tagSample_Location](#tagSample_Location)
+    * [const tagSample_Value](#tagSample_Value)
+    * [const tagValueType_Type](#tagValueType_Type)
+    * [const tagValueType_Unit](#tagValueType_Unit)
 * [Variables](#var)
-    * [var errBadELF](#errBadELF)
-    * [var errNoBuildID](#errNoBuildID)
-    * [var profiles](#profiles)
-    * [var goroutineProfile](#goroutineProfile)
-    * [var threadcreateProfile](#threadcreateProfile)
-    * [var heapProfile](#heapProfile)
     * [var allocsProfile](#allocsProfile)
     * [var blockProfile](#blockProfile)
-    * [var mutexProfile](#mutexProfile)
     * [var cpu](#cpu)
-    * [var memSink](#memSink)
-    * [var persistentMemSink](#persistentMemSink)
-    * [var memoryProfilerRun](#memoryProfilerRun)
-    * [var salt1](#salt1)
-    * [var salt2](#salt2)
     * [var emptyCallStackTestRun](#emptyCallStackTestRun)
+    * [var errBadELF](#errBadELF)
+    * [var errNoBuildID](#errNoBuildID)
+    * [var goroutineProfile](#goroutineProfile)
+    * [var heapProfile](#heapProfile)
+    * [var memSink](#memSink)
+    * [var memoryProfilerRun](#memoryProfilerRun)
+    * [var mutexProfile](#mutexProfile)
+    * [var persistentMemSink](#persistentMemSink)
     * [var profSelfMapsTests](#profSelfMapsTests)
     * [var profSelfMapsTestsWithDeleted](#profSelfMapsTestsWithDeleted)
+    * [var profiles](#profiles)
+    * [var salt1](#salt1)
+    * [var salt2](#salt2)
+    * [var threadcreateProfile](#threadcreateProfile)
 * [Types](#type)
-    * [type label struct](#label)
     * [type LabelSet struct](#LabelSet)
         * [func Labels(args ...string) LabelSet](#Labels)
+    * [type Obj32 struct](#Obj32)
+    * [type Profile struct](#Profile)
+        * [func Lookup(name string) *Profile](#Lookup)
+        * [func NewProfile(name string) *Profile](#NewProfile)
+        * [func (p *Profile) Add(value interface{}, skip int)](#Profile.Add)
+        * [func (p *Profile) Count() int](#Profile.Count)
+        * [func (p *Profile) Name() string](#Profile.Name)
+        * [func (p *Profile) Remove(value interface{})](#Profile.Remove)
+        * [func (p *Profile) WriteTo(w io.Writer, debug int) error](#Profile.WriteTo)
+    * [type countProfile interface](#countProfile)
+    * [type keysByCount struct](#keysByCount)
+        * [func (x *keysByCount) Len() int](#keysByCount.Len)
+        * [func (x *keysByCount) Less(i, j int) bool](#keysByCount.Less)
+        * [func (x *keysByCount) Swap(i, j int)](#keysByCount.Swap)
+    * [type label struct](#label)
     * [type labelContextKey struct{}](#labelContextKey)
     * [type labelMap map[string]string](#labelMap)
         * [func labelValue(ctx context.Context) labelMap](#labelValue)
         * [func (l *labelMap) String() string](#labelMap.String)
-    * [type profMap struct](#profMap)
-        * [func (m *profMap) lookup(stk []uint64, tag unsafe.Pointer) *profMapEntry](#profMap.lookup)
-    * [type profMapEntry struct](#profMapEntry)
-    * [type Profile struct](#Profile)
-        * [func NewProfile(name string) *Profile](#NewProfile)
-        * [func Lookup(name string) *Profile](#Lookup)
-        * [func (p *Profile) Name() string](#Profile.Name)
-        * [func (p *Profile) Count() int](#Profile.Count)
-        * [func (p *Profile) Add(value interface{}, skip int)](#Profile.Add)
-        * [func (p *Profile) Remove(value interface{})](#Profile.Remove)
-        * [func (p *Profile) WriteTo(w io.Writer, debug int) error](#Profile.WriteTo)
-    * [type stackProfile [][]uintptr](#stackProfile)
-        * [func (x stackProfile) Len() int](#stackProfile.Len)
-        * [func (x stackProfile) Stack(i int) []uintptr](#stackProfile.Stack)
-        * [func (x stackProfile) Label(i int) *labelMap](#stackProfile.Label)
-    * [type countProfile interface](#countProfile)
-    * [type keysByCount struct](#keysByCount)
-        * [func (x *keysByCount) Len() int](#keysByCount.Len)
-        * [func (x *keysByCount) Swap(i, j int)](#keysByCount.Swap)
-        * [func (x *keysByCount) Less(i, j int) bool](#keysByCount.Less)
-    * [type runtimeProfile struct](#runtimeProfile)
-        * [func (p *runtimeProfile) Len() int](#runtimeProfile.Len)
-        * [func (p *runtimeProfile) Stack(i int) []uintptr](#runtimeProfile.Stack)
-        * [func (p *runtimeProfile) Label(i int) *labelMap](#runtimeProfile.Label)
-    * [type profileBuilder struct](#profileBuilder)
-        * [func newProfileBuilder(w io.Writer) *profileBuilder](#newProfileBuilder)
-        * [func (b *profileBuilder) stringIndex(s string) int64](#profileBuilder.stringIndex)
-        * [func (b *profileBuilder) flush()](#profileBuilder.flush)
-        * [func (b *profileBuilder) pbValueType(tag int, typ, unit string)](#profileBuilder.pbValueType)
-        * [func (b *profileBuilder) pbSample(values []int64, locs []uint64, labels func())](#profileBuilder.pbSample)
-        * [func (b *profileBuilder) pbLabel(tag int, key, str string, num int64)](#profileBuilder.pbLabel)
-        * [func (b *profileBuilder) pbLine(tag int, funcID uint64, line int64)](#profileBuilder.pbLine)
-        * [func (b *profileBuilder) pbMapping(tag int, id, base, limit, offset uint64, file, buildID string, hasFuncs bool)](#profileBuilder.pbMapping)
-        * [func (b *profileBuilder) addCPUData(data []uint64, tags []unsafe.Pointer) error](#profileBuilder.addCPUData)
-        * [func (b *profileBuilder) build()](#profileBuilder.build)
-        * [func (b *profileBuilder) appendLocsForStack(locs []uint64, stk []uintptr) (newLocs []uint64)](#profileBuilder.appendLocsForStack)
-        * [func (b *profileBuilder) emitLocation() uint64](#profileBuilder.emitLocation)
-        * [func (b *profileBuilder) readMapping()](#profileBuilder.readMapping)
-        * [func (b *profileBuilder) addMapping(lo, hi, offset uint64, file, buildID string)](#profileBuilder.addMapping)
-        * [func (b *profileBuilder) addMappingEntry(lo, hi, offset uint64, file, buildID string, fake bool)](#profileBuilder.addMappingEntry)
-    * [type memMap struct](#memMap)
-    * [type symbolizeFlag uint8](#symbolizeFlag)
-        * [func allFrames(addr uintptr) ([]runtime.Frame, symbolizeFlag)](#allFrames)
+    * [type labelSorter []pprof.label](#labelSorter)
+        * [func (s labelSorter) Len() int](#labelSorter.Len)
+        * [func (s labelSorter) Less(i, j int) bool](#labelSorter.Less)
+        * [func (s labelSorter) Swap(i, j int)](#labelSorter.Swap)
     * [type locInfo struct](#locInfo)
+    * [type matchFunc func(spec string, count uintptr, stk []*internal/profile.Location, labels map[string][]string) bool](#matchFunc)
+    * [type memMap struct](#memMap)
+    * [type msgOffset int](#msgOffset)
     * [type pcDeck struct](#pcDeck)
         * [func (d *pcDeck) reset()](#pcDeck.reset)
         * [func (d *pcDeck) tryAdd(pc uintptr, frames []runtime.Frame, symbolizeResult symbolizeFlag) (success bool)](#pcDeck.tryAdd)
+    * [type profMap struct](#profMap)
+        * [func (m *profMap) lookup(stk []uint64, tag unsafe.Pointer) *profMapEntry](#profMap.lookup)
+    * [type profMapEntry struct](#profMapEntry)
+    * [type profileBuilder struct](#profileBuilder)
+        * [func newProfileBuilder(w io.Writer) *profileBuilder](#newProfileBuilder)
+        * [func (b *profileBuilder) addCPUData(data []uint64, tags []unsafe.Pointer) error](#profileBuilder.addCPUData)
+        * [func (b *profileBuilder) addMapping(lo, hi, offset uint64, file, buildID string)](#profileBuilder.addMapping)
+        * [func (b *profileBuilder) addMappingEntry(lo, hi, offset uint64, file, buildID string, fake bool)](#profileBuilder.addMappingEntry)
+        * [func (b *profileBuilder) appendLocsForStack(locs []uint64, stk []uintptr) (newLocs []uint64)](#profileBuilder.appendLocsForStack)
+        * [func (b *profileBuilder) build()](#profileBuilder.build)
+        * [func (b *profileBuilder) emitLocation() uint64](#profileBuilder.emitLocation)
+        * [func (b *profileBuilder) flush()](#profileBuilder.flush)
+        * [func (b *profileBuilder) pbLabel(tag int, key, str string, num int64)](#profileBuilder.pbLabel)
+        * [func (b *profileBuilder) pbLine(tag int, funcID uint64, line int64)](#profileBuilder.pbLine)
+        * [func (b *profileBuilder) pbMapping(tag int, id, base, limit, offset uint64, file, buildID string, hasFuncs bool)](#profileBuilder.pbMapping)
+        * [func (b *profileBuilder) pbSample(values []int64, locs []uint64, labels func())](#profileBuilder.pbSample)
+        * [func (b *profileBuilder) pbValueType(tag int, typ, unit string)](#profileBuilder.pbValueType)
+        * [func (b *profileBuilder) readMapping()](#profileBuilder.readMapping)
+        * [func (b *profileBuilder) stringIndex(s string) int64](#profileBuilder.stringIndex)
     * [type protobuf struct](#protobuf)
-        * [func (b *protobuf) varint(x uint64)](#protobuf.varint)
-        * [func (b *protobuf) length(tag int, len int)](#protobuf.length)
-        * [func (b *protobuf) uint64(tag int, x uint64)](#protobuf.uint64)
-        * [func (b *protobuf) uint64s(tag int, x []uint64)](#protobuf.uint64s)
-        * [func (b *protobuf) uint64Opt(tag int, x uint64)](#protobuf.uint64Opt)
+        * [func (b *protobuf) bool(tag int, x bool)](#protobuf.bool)
+        * [func (b *protobuf) boolOpt(tag int, x bool)](#protobuf.boolOpt)
+        * [func (b *protobuf) endMessage(tag int, start msgOffset)](#protobuf.endMessage)
         * [func (b *protobuf) int64(tag int, x int64)](#protobuf.int64)
         * [func (b *protobuf) int64Opt(tag int, x int64)](#protobuf.int64Opt)
         * [func (b *protobuf) int64s(tag int, x []int64)](#protobuf.int64s)
-        * [func (b *protobuf) string(tag int, x string)](#protobuf.string)
-        * [func (b *protobuf) strings(tag int, x []string)](#protobuf.strings)
-        * [func (b *protobuf) stringOpt(tag int, x string)](#protobuf.stringOpt)
-        * [func (b *protobuf) bool(tag int, x bool)](#protobuf.bool)
-        * [func (b *protobuf) boolOpt(tag int, x bool)](#protobuf.boolOpt)
+        * [func (b *protobuf) length(tag int, len int)](#protobuf.length)
         * [func (b *protobuf) startMessage() msgOffset](#protobuf.startMessage)
-        * [func (b *protobuf) endMessage(tag int, start msgOffset)](#protobuf.endMessage)
-    * [type msgOffset int](#msgOffset)
-    * [type labelSorter []pprof.label](#labelSorter)
-        * [func (s labelSorter) Len() int](#labelSorter.Len)
-        * [func (s labelSorter) Swap(i, j int)](#labelSorter.Swap)
-        * [func (s labelSorter) Less(i, j int) bool](#labelSorter.Less)
-    * [type Obj32 struct](#Obj32)
-    * [type matchFunc func(spec string, count uintptr, stk []*internal/profile.Location, labels map[string][]string) bool](#matchFunc)
+        * [func (b *protobuf) string(tag int, x string)](#protobuf.string)
+        * [func (b *protobuf) stringOpt(tag int, x string)](#protobuf.stringOpt)
+        * [func (b *protobuf) strings(tag int, x []string)](#protobuf.strings)
+        * [func (b *protobuf) uint64(tag int, x uint64)](#protobuf.uint64)
+        * [func (b *protobuf) uint64Opt(tag int, x uint64)](#protobuf.uint64Opt)
+        * [func (b *protobuf) uint64s(tag int, x []uint64)](#protobuf.uint64s)
+        * [func (b *protobuf) varint(x uint64)](#protobuf.varint)
+    * [type runtimeProfile struct](#runtimeProfile)
+        * [func (p *runtimeProfile) Label(i int) *labelMap](#runtimeProfile.Label)
+        * [func (p *runtimeProfile) Len() int](#runtimeProfile.Len)
+        * [func (p *runtimeProfile) Stack(i int) []uintptr](#runtimeProfile.Stack)
+    * [type stackProfile [][]uintptr](#stackProfile)
+        * [func (x stackProfile) Label(i int) *labelMap](#stackProfile.Label)
+        * [func (x stackProfile) Len() int](#stackProfile.Len)
+        * [func (x stackProfile) Stack(i int) []uintptr](#stackProfile.Stack)
+    * [type symbolizeFlag uint8](#symbolizeFlag)
+        * [func allFrames(addr uintptr) ([]runtime.Frame, symbolizeFlag)](#allFrames)
 * [Functions](#func)
-    * [func elfBuildID(file string) (string, error)](#elfBuildID)
-    * [func WithLabels(ctx context.Context, labels LabelSet) context.Context](#WithLabels)
-    * [func Label(ctx context.Context, key string) (string, bool)](#Label)
-    * [func ForLabels(ctx context.Context, f func(key, value string) bool)](#ForLabels)
-    * [func lockProfiles()](#lockProfiles)
-    * [func unlockProfiles()](#unlockProfiles)
-    * [func Profiles() []*Profile](#Profiles)
-    * [func printCountCycleProfile(w io.Writer, countName, cycleName string, scaler func(int64, float64) (int64, float64), records []runtime.BlockProfileRecord) error](#printCountCycleProfile)
-    * [func printCountProfile(w io.Writer, debug int, name string, p countProfile) error](#printCountProfile)
-    * [func printStackRecord(w io.Writer, stk []uintptr, allFrames bool)](#printStackRecord)
-    * [func WriteHeapProfile(w io.Writer) error](#WriteHeapProfile)
-    * [func countHeap() int](#countHeap)
-    * [func writeHeap(w io.Writer, debug int) error](#writeHeap)
-    * [func writeAlloc(w io.Writer, debug int) error](#writeAlloc)
-    * [func writeHeapInternal(w io.Writer, debug int, defaultSampleType string) error](#writeHeapInternal)
-    * [func countThreadCreate() int](#countThreadCreate)
-    * [func writeThreadCreate(w io.Writer, debug int) error](#writeThreadCreate)
-    * [func countGoroutine() int](#countGoroutine)
-    * [func runtime_goroutineProfileWithLabels(p []runtime.StackRecord, labels []unsafe.Pointer) (n int, ok bool)](#runtime_goroutineProfileWithLabels)
-    * [func writeGoroutine(w io.Writer, debug int) error](#writeGoroutine)
-    * [func writeGoroutineStacks(w io.Writer) error](#writeGoroutineStacks)
-    * [func writeRuntimeProfile(w io.Writer, debug int, name string, fetch func([]runtime.StackRecord, []unsafe.Pointer) (int, bool)) error](#writeRuntimeProfile)
-    * [func StartCPUProfile(w io.Writer) error](#StartCPUProfile)
-    * [func readProfile() (data []uint64, tags []unsafe.Pointer, eof bool)](#readProfile)
-    * [func profileWriter(w io.Writer)](#profileWriter)
-    * [func StopCPUProfile()](#StopCPUProfile)
-    * [func countBlock() int](#countBlock)
-    * [func countMutex() int](#countMutex)
-    * [func writeBlock(w io.Writer, debug int) error](#writeBlock)
-    * [func scaleBlockProfile(cnt int64, ns float64) (int64, float64)](#scaleBlockProfile)
-    * [func writeMutex(w io.Writer, debug int) error](#writeMutex)
-    * [func writeProfileInternal(w io.Writer, debug int, name string, runtimeProfile func([]runtime.BlockProfileRecord) (int, bool), scaleProfile func(int64, float64) (int64, float64)) error](#writeProfileInternal)
-    * [func scaleMutexProfile(cnt int64, ns float64) (int64, float64)](#scaleMutexProfile)
-    * [func runtime_cyclesPerSecond() int64](#runtime_cyclesPerSecond)
-    * [func addMaxRSS(w io.Writer)](#addMaxRSS)
-    * [func lostProfileEvent()](#lostProfileEvent)
-    * [func funcPC(f interface{}) uintptr](#funcPC)
-    * [func parseProcSelfMaps(data []byte, addMapping func(lo, hi, offset uint64, file, buildID string))](#parseProcSelfMaps)
-    * [func writeHeapProto(w io.Writer, p []runtime.MemProfileRecord, rate int64, defaultSampleType string) error](#writeHeapProto)
-    * [func scaleHeapSample(count, size, rate int64) (int64, int64)](#scaleHeapSample)
-    * [func runtime_expandFinalInlineFrame(stk []uintptr) []uintptr](#runtime_expandFinalInlineFrame)
-    * [func runtime_setProfLabel(labels unsafe.Pointer)](#runtime_setProfLabel)
-    * [func runtime_getProfLabel() unsafe.Pointer](#runtime_getProfLabel)
-    * [func SetGoroutineLabels(ctx context.Context)](#SetGoroutineLabels)
     * [func Do(ctx context.Context, labels LabelSet, f func(context.Context))](#Do)
-    * [func labelsSorted(ctx context.Context) []label](#labelsSorted)
+    * [func ForLabels(ctx context.Context, f func(key, value string) bool)](#ForLabels)
+    * [func Label(ctx context.Context, key string) (string, bool)](#Label)
+    * [func Profiles() []*Profile](#Profiles)
+    * [func SetGoroutineLabels(ctx context.Context)](#SetGoroutineLabels)
+    * [func StartCPUProfile(w io.Writer) error](#StartCPUProfile)
+    * [func StopCPUProfile()](#StopCPUProfile)
+    * [func TestAtomicLoadStore64(t *testing.T)](#TestAtomicLoadStore64)
+    * [func TestBlockProfile(t *testing.T)](#TestBlockProfile)
+    * [func TestBlockProfileBias(t *testing.T)](#TestBlockProfileBias)
+    * [func TestCPUProfile(t *testing.T)](#TestCPUProfile)
+    * [func TestCPUProfileInlining(t *testing.T)](#TestCPUProfileInlining)
+    * [func TestCPUProfileLabel(t *testing.T)](#TestCPUProfileLabel)
+    * [func TestCPUProfileMultithreaded(t *testing.T)](#TestCPUProfileMultithreaded)
+    * [func TestCPUProfileRecursion(t *testing.T)](#TestCPUProfileRecursion)
+    * [func TestCPUProfileWithFork(t *testing.T)](#TestCPUProfileWithFork)
     * [func TestContextLabels(t *testing.T)](#TestContextLabels)
+    * [func TestConvertCPUProfile(t *testing.T)](#TestConvertCPUProfile)
+    * [func TestConvertCPUProfileEmpty(t *testing.T)](#TestConvertCPUProfileEmpty)
+    * [func TestConvertMemProfile(t *testing.T)](#TestConvertMemProfile)
+    * [func TestDo(t *testing.T)](#TestDo)
+    * [func TestEmptyCallStack(t *testing.T)](#TestEmptyCallStack)
+    * [func TestEmptyStack(t *testing.T)](#TestEmptyStack)
+    * [func TestFakeMapping(t *testing.T)](#TestFakeMapping)
+    * [func TestGoroutineCounts(t *testing.T)](#TestGoroutineCounts)
+    * [func TestGoroutineSwitch(t *testing.T)](#TestGoroutineSwitch)
     * [func TestLabelMapStringer(t *testing.T)](#TestLabelMapStringer)
+    * [func TestLabelRace(t *testing.T)](#TestLabelRace)
+    * [func TestMapping(t *testing.T)](#TestMapping)
+    * [func TestMathBigDivide(t *testing.T)](#TestMathBigDivide)
+    * [func TestMemoryProfiler(t *testing.T)](#TestMemoryProfiler)
+    * [func TestMorestack(t *testing.T)](#TestMorestack)
+    * [func TestMutexProfile(t *testing.T)](#TestMutexProfile)
+    * [func TestProcSelfMaps(t *testing.T)](#TestProcSelfMaps)
+    * [func TestSetGoroutineLabels(t *testing.T)](#TestSetGoroutineLabels)
+    * [func TestTracebackAll(t *testing.T)](#TestTracebackAll)
+    * [func TestTryAdd(t *testing.T)](#TestTryAdd)
+    * [func WithLabels(ctx context.Context, labels LabelSet) context.Context](#WithLabels)
+    * [func WriteHeapProfile(w io.Writer) error](#WriteHeapProfile)
+    * [func addMaxRSS(w io.Writer)](#addMaxRSS)
+    * [func allocatePersistent1K()](#allocatePersistent1K)
+    * [func allocateReflect()](#allocateReflect)
+    * [func allocateReflectTransient()](#allocateReflectTransient)
     * [func allocateTransient1M()](#allocateTransient1M)
     * [func allocateTransient2M()](#allocateTransient2M)
     * [func allocateTransient2MInline()](#allocateTransient2MInline)
-    * [func allocatePersistent1K()](#allocatePersistent1K)
-    * [func allocateReflectTransient()](#allocateReflectTransient)
-    * [func allocateReflect()](#allocateReflect)
-    * [func TestMemoryProfiler(t *testing.T)](#TestMemoryProfiler)
-    * [func cpuHogger(f func(x int) int, y *int, dur time.Duration)](#cpuHogger)
-    * [func cpuHog1(x int) int](#cpuHog1)
-    * [func cpuHog0(x, n int) int](#cpuHog0)
-    * [func cpuHog2(x int) int](#cpuHog2)
     * [func avoidFunctions() []string](#avoidFunctions)
-    * [func TestCPUProfile(t *testing.T)](#TestCPUProfile)
-    * [func TestCPUProfileMultithreaded(t *testing.T)](#TestCPUProfileMultithreaded)
-    * [func containsInlinedCall(f interface{}, maxBytes int) bool](#containsInlinedCall)
-    * [func findInlinedCall(f interface{}, maxBytes int) (pc uint64, found bool)](#findInlinedCall)
-    * [func TestCPUProfileInlining(t *testing.T)](#TestCPUProfileInlining)
-    * [func inlinedCaller(x int) int](#inlinedCaller)
-    * [func inlinedCallee(x, n int) int](#inlinedCallee)
-    * [func dumpCallers(pcs []uintptr)](#dumpCallers)
-    * [func inlinedCallerDump(pcs []uintptr)](#inlinedCallerDump)
-    * [func inlinedCalleeDump(pcs []uintptr)](#inlinedCalleeDump)
-    * [func TestCPUProfileRecursion(t *testing.T)](#TestCPUProfileRecursion)
-    * [func recursionCaller(x int) int](#recursionCaller)
-    * [func recursionCallee(n, x int) int](#recursionCallee)
-    * [func recursionChainTop(x int, pcs []uintptr)](#recursionChainTop)
-    * [func recursionChainMiddle(x int, pcs []uintptr)](#recursionChainMiddle)
-    * [func recursionChainBottom(x int, pcs []uintptr)](#recursionChainBottom)
-    * [func parseProfile(t *testing.T, valBytes []byte, f func(uintptr, []*profile.Location, map[string][]string)) *profile.Profile](#parseProfile)
-    * [func cpuProfilingBroken() bool](#cpuProfilingBroken)
-    * [func testCPUProfile(t *testing.T, matches matchFunc, need []string, avoid []string, f func(dur time.Duration)) *profile.Profile](#testCPUProfile)
-    * [func contains(slice []string, s string) bool](#contains)
-    * [func stackContains(spec string, count uintptr, stk []*profile.Location, labels map[string][]string) bool](#stackContains)
-    * [func profileOk(t *testing.T, matches matchFunc, need []string, avoid []string, prof bytes.Buffer, duration time.Duration) (_ *profile.Profile, ok bool)](#profileOk)
-    * [func TestCPUProfileWithFork(t *testing.T)](#TestCPUProfileWithFork)
-    * [func TestGoroutineSwitch(t *testing.T)](#TestGoroutineSwitch)
-    * [func fprintStack(w io.Writer, stk []*profile.Location)](#fprintStack)
-    * [func TestMathBigDivide(t *testing.T)](#TestMathBigDivide)
-    * [func stackContainsAll(spec string, count uintptr, stk []*profile.Location, labels map[string][]string) bool](#stackContainsAll)
-    * [func TestMorestack(t *testing.T)](#TestMorestack)
-    * [func growstack1()](#growstack1)
-    * [func growstack(n int)](#growstack)
-    * [func use(x [8 << 16]byte)](#use)
-    * [func TestBlockProfile(t *testing.T)](#TestBlockProfile)
-    * [func stacks(p *profile.Profile) (res [][]string)](#stacks)
-    * [func containsStack(got [][]string, want []string) bool](#containsStack)
+    * [func blockChanClose()](#blockChanClose)
     * [func blockChanRecv()](#blockChanRecv)
     * [func blockChanSend()](#blockChanSend)
-    * [func blockChanClose()](#blockChanClose)
-    * [func blockSelectRecvAsync()](#blockSelectRecvAsync)
-    * [func blockSelectSendSync()](#blockSelectSendSync)
-    * [func blockMutex()](#blockMutex)
     * [func blockCond()](#blockCond)
-    * [func TestBlockProfileBias(t *testing.T)](#TestBlockProfileBias)
     * [func blockFrequentShort(rate int)](#blockFrequentShort)
     * [func blockInfrequentLong(rate int)](#blockInfrequentLong)
+    * [func blockMutex()](#blockMutex)
+    * [func blockSelectRecvAsync()](#blockSelectRecvAsync)
+    * [func blockSelectSendSync()](#blockSelectSendSync)
     * [func blockevent(cycles int64, skip int)](#blockevent)
-    * [func TestMutexProfile(t *testing.T)](#TestMutexProfile)
+    * [func checkProfile(t *testing.T, p *profile.Profile, period int64, periodType *profile.ValueType, sampleType []*profile.ValueType, samples []*profile.Sample, defaultSampleType string)](#checkProfile)
+    * [func contains(slice []string, s string) bool](#contains)
+    * [func containsCountsLabels(prof *profile.Profile, countLabels map[int64]map[string]string) bool](#containsCountsLabels)
+    * [func containsInOrder(s string, all ...string) bool](#containsInOrder)
+    * [func containsInlinedCall(f interface{}, maxBytes int) bool](#containsInlinedCall)
+    * [func containsStack(got [][]string, want []string) bool](#containsStack)
+    * [func countBlock() int](#countBlock)
+    * [func countGoroutine() int](#countGoroutine)
+    * [func countHeap() int](#countHeap)
+    * [func countMutex() int](#countMutex)
+    * [func countThreadCreate() int](#countThreadCreate)
+    * [func cpuHog0(x, n int) int](#cpuHog0)
+    * [func cpuHog1(x int) int](#cpuHog1)
+    * [func cpuHog2(x int) int](#cpuHog2)
+    * [func cpuHogger(f func(x int) int, y *int, dur time.Duration)](#cpuHogger)
+    * [func cpuProfilingBroken() bool](#cpuProfilingBroken)
+    * [func dumpCallers(pcs []uintptr)](#dumpCallers)
+    * [func elfBuildID(file string) (string, error)](#elfBuildID)
+    * [func f1()](#f1)
+    * [func f2()](#f2)
+    * [func findInlinedCall(f interface{}, maxBytes int) (pc uint64, found bool)](#findInlinedCall)
+    * [func fmtJSON(x interface{}) string](#fmtJSON)
+    * [func fprintStack(w io.Writer, stk []*profile.Location)](#fprintStack)
     * [func func1(c chan int)](#func1)
     * [func func2(c chan int)](#func2)
     * [func func3(c chan int)](#func3)
     * [func func4(c chan int)](#func4)
-    * [func TestGoroutineCounts(t *testing.T)](#TestGoroutineCounts)
-    * [func containsInOrder(s string, all ...string) bool](#containsInOrder)
-    * [func containsCountsLabels(prof *profile.Profile, countLabels map[int64]map[string]string) bool](#containsCountsLabels)
-    * [func TestEmptyCallStack(t *testing.T)](#TestEmptyCallStack)
-    * [func stackContainsLabeled(spec string, count uintptr, stk []*profile.Location, labels map[string][]string) bool](#stackContainsLabeled)
-    * [func TestCPUProfileLabel(t *testing.T)](#TestCPUProfileLabel)
-    * [func TestLabelRace(t *testing.T)](#TestLabelRace)
-    * [func TestAtomicLoadStore64(t *testing.T)](#TestAtomicLoadStore64)
-    * [func TestTracebackAll(t *testing.T)](#TestTracebackAll)
-    * [func TestTryAdd(t *testing.T)](#TestTryAdd)
-    * [func translateCPUProfile(data []uint64) (*profile.Profile, error)](#translateCPUProfile)
-    * [func fmtJSON(x interface{}) string](#fmtJSON)
-    * [func TestConvertCPUProfileEmpty(t *testing.T)](#TestConvertCPUProfileEmpty)
-    * [func f1()](#f1)
-    * [func f2()](#f2)
-    * [func testPCs(t *testing.T) (addr1, addr2 uint64, map1, map2 *profile.Mapping)](#testPCs)
-    * [func TestConvertCPUProfile(t *testing.T)](#TestConvertCPUProfile)
-    * [func checkProfile(t *testing.T, p *profile.Profile, period int64, periodType *profile.ValueType, sampleType []*profile.ValueType, samples []*profile.Sample, defaultSampleType string)](#checkProfile)
-    * [func TestProcSelfMaps(t *testing.T)](#TestProcSelfMaps)
-    * [func TestMapping(t *testing.T)](#TestMapping)
-    * [func symbolized(loc *profile.Location) bool](#symbolized)
-    * [func TestFakeMapping(t *testing.T)](#TestFakeMapping)
-    * [func TestEmptyStack(t *testing.T)](#TestEmptyStack)
-    * [func TestConvertMemProfile(t *testing.T)](#TestConvertMemProfile)
-    * [func TestSetGoroutineLabels(t *testing.T)](#TestSetGoroutineLabels)
-    * [func TestDo(t *testing.T)](#TestDo)
+    * [func funcPC(f interface{}) uintptr](#funcPC)
     * [func getProfLabel() map[string]string](#getProfLabel)
+    * [func growstack(n int)](#growstack)
+    * [func growstack1()](#growstack1)
+    * [func inlinedCallee(x, n int) int](#inlinedCallee)
+    * [func inlinedCalleeDump(pcs []uintptr)](#inlinedCalleeDump)
+    * [func inlinedCaller(x int) int](#inlinedCaller)
+    * [func inlinedCallerDump(pcs []uintptr)](#inlinedCallerDump)
+    * [func labelsSorted(ctx context.Context) []label](#labelsSorted)
+    * [func lockProfiles()](#lockProfiles)
+    * [func lostProfileEvent()](#lostProfileEvent)
+    * [func parseProcSelfMaps(data []byte, addMapping func(lo, hi, offset uint64, file, buildID string))](#parseProcSelfMaps)
+    * [func parseProfile(t *testing.T, valBytes []byte, f func(uintptr, []*profile.Location, map[string][]string)) *profile.Profile](#parseProfile)
+    * [func printCountCycleProfile(w io.Writer, countName, cycleName string, scaler func(int64, float64) (int64, float64), records []runtime.BlockProfileRecord) error](#printCountCycleProfile)
+    * [func printCountProfile(w io.Writer, debug int, name string, p countProfile) error](#printCountProfile)
+    * [func printStackRecord(w io.Writer, stk []uintptr, allFrames bool)](#printStackRecord)
+    * [func profileOk(t *testing.T, matches matchFunc, need []string, avoid []string, prof bytes.Buffer, duration time.Duration) (_ *profile.Profile, ok bool)](#profileOk)
+    * [func profileWriter(w io.Writer)](#profileWriter)
+    * [func readProfile() (data []uint64, tags []unsafe.Pointer, eof bool)](#readProfile)
+    * [func recursionCallee(n, x int) int](#recursionCallee)
+    * [func recursionCaller(x int) int](#recursionCaller)
+    * [func recursionChainBottom(x int, pcs []uintptr)](#recursionChainBottom)
+    * [func recursionChainMiddle(x int, pcs []uintptr)](#recursionChainMiddle)
+    * [func recursionChainTop(x int, pcs []uintptr)](#recursionChainTop)
+    * [func runtime_cyclesPerSecond() int64](#runtime_cyclesPerSecond)
+    * [func runtime_expandFinalInlineFrame(stk []uintptr) []uintptr](#runtime_expandFinalInlineFrame)
+    * [func runtime_getProfLabel() unsafe.Pointer](#runtime_getProfLabel)
+    * [func runtime_goroutineProfileWithLabels(p []runtime.StackRecord, labels []unsafe.Pointer) (n int, ok bool)](#runtime_goroutineProfileWithLabels)
+    * [func runtime_setProfLabel(labels unsafe.Pointer)](#runtime_setProfLabel)
+    * [func scaleBlockProfile(cnt int64, ns float64) (int64, float64)](#scaleBlockProfile)
+    * [func scaleHeapSample(count, size, rate int64) (int64, int64)](#scaleHeapSample)
+    * [func scaleMutexProfile(cnt int64, ns float64) (int64, float64)](#scaleMutexProfile)
+    * [func stackContains(spec string, count uintptr, stk []*profile.Location, labels map[string][]string) bool](#stackContains)
+    * [func stackContainsAll(spec string, count uintptr, stk []*profile.Location, labels map[string][]string) bool](#stackContainsAll)
+    * [func stackContainsLabeled(spec string, count uintptr, stk []*profile.Location, labels map[string][]string) bool](#stackContainsLabeled)
+    * [func stacks(p *profile.Profile) (res [][]string)](#stacks)
+    * [func symbolized(loc *profile.Location) bool](#symbolized)
+    * [func testCPUProfile(t *testing.T, matches matchFunc, need []string, avoid []string, f func(dur time.Duration)) *profile.Profile](#testCPUProfile)
+    * [func testPCs(t *testing.T) (addr1, addr2 uint64, map1, map2 *profile.Mapping)](#testPCs)
+    * [func translateCPUProfile(data []uint64) (*profile.Profile, error)](#translateCPUProfile)
+    * [func unlockProfiles()](#unlockProfiles)
+    * [func use(x [8 << 16]byte)](#use)
+    * [func writeAlloc(w io.Writer, debug int) error](#writeAlloc)
+    * [func writeBlock(w io.Writer, debug int) error](#writeBlock)
+    * [func writeGoroutine(w io.Writer, debug int) error](#writeGoroutine)
+    * [func writeGoroutineStacks(w io.Writer) error](#writeGoroutineStacks)
+    * [func writeHeap(w io.Writer, debug int) error](#writeHeap)
+    * [func writeHeapInternal(w io.Writer, debug int, defaultSampleType string) error](#writeHeapInternal)
+    * [func writeHeapProto(w io.Writer, p []runtime.MemProfileRecord, rate int64, defaultSampleType string) error](#writeHeapProto)
+    * [func writeMutex(w io.Writer, debug int) error](#writeMutex)
+    * [func writeProfileInternal(w io.Writer, debug int, name string, runtimeProfile func([]runtime.BlockProfileRecord) (int, bool), scaleProfile func(int64, float64) (int64, float64)) error](#writeProfileInternal)
+    * [func writeRuntimeProfile(w io.Writer, debug int, name string, fetch func([]runtime.StackRecord, []unsafe.Pointer) (int, bool)) error](#writeRuntimeProfile)
+    * [func writeThreadCreate(w io.Writer, debug int) error](#writeThreadCreate)
 
 
 ## <a id="const" href="#const">Constants</a>
 
-### <a id="lookupTried" href="#lookupTried">const lookupTried</a>
+```
+tags: [package]
+```
+
+### <a id="blockDelay" href="#blockDelay">const blockDelay</a>
 
 ```
-searchKey: pprof.lookupTried
-tags: [private]
+searchKey: pprof.blockDelay
+tags: [constant number private]
 ```
 
 ```Go
-const lookupTried symbolizeFlag = 1 << iota
+const blockDelay = 10 * time.Millisecond
 ```
 
 ### <a id="lookupFailed" href="#lookupFailed">const lookupFailed</a>
 
 ```
 searchKey: pprof.lookupFailed
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
 const lookupFailed symbolizeFlag = 1 << iota
 ```
 
-### <a id="tagProfile_SampleType" href="#tagProfile_SampleType">const tagProfile_SampleType</a>
+### <a id="lookupTried" href="#lookupTried">const lookupTried</a>
 
 ```
-searchKey: pprof.tagProfile_SampleType
-tags: [private]
-```
-
-```Go
-const tagProfile_SampleType = 1 // repeated ValueType
-
-```
-
-message Profile 
-
-### <a id="tagProfile_Sample" href="#tagProfile_Sample">const tagProfile_Sample</a>
-
-```
-searchKey: pprof.tagProfile_Sample
-tags: [private]
+searchKey: pprof.lookupTried
+tags: [constant number private]
 ```
 
 ```Go
-const tagProfile_Sample = 2 // repeated Sample
-
+const lookupTried symbolizeFlag = 1 << iota
 ```
 
-### <a id="tagProfile_Mapping" href="#tagProfile_Mapping">const tagProfile_Mapping</a>
+### <a id="tagFunction_Filename" href="#tagFunction_Filename">const tagFunction_Filename</a>
 
 ```
-searchKey: pprof.tagProfile_Mapping
-tags: [private]
-```
-
-```Go
-const tagProfile_Mapping = 3 // repeated Mapping
-
-```
-
-### <a id="tagProfile_Location" href="#tagProfile_Location">const tagProfile_Location</a>
-
-```
-searchKey: pprof.tagProfile_Location
-tags: [private]
+searchKey: pprof.tagFunction_Filename
+tags: [constant number private]
 ```
 
 ```Go
-const tagProfile_Location = 4 // repeated Location
-
-```
-
-### <a id="tagProfile_Function" href="#tagProfile_Function">const tagProfile_Function</a>
-
-```
-searchKey: pprof.tagProfile_Function
-tags: [private]
-```
-
-```Go
-const tagProfile_Function = 5 // repeated Function
-
-```
-
-### <a id="tagProfile_StringTable" href="#tagProfile_StringTable">const tagProfile_StringTable</a>
-
-```
-searchKey: pprof.tagProfile_StringTable
-tags: [private]
-```
-
-```Go
-const tagProfile_StringTable = 6 // repeated string
-
-```
-
-### <a id="tagProfile_DropFrames" href="#tagProfile_DropFrames">const tagProfile_DropFrames</a>
-
-```
-searchKey: pprof.tagProfile_DropFrames
-tags: [private]
-```
-
-```Go
-const tagProfile_DropFrames = 7 // int64 (string table index)
-
-```
-
-### <a id="tagProfile_KeepFrames" href="#tagProfile_KeepFrames">const tagProfile_KeepFrames</a>
-
-```
-searchKey: pprof.tagProfile_KeepFrames
-tags: [private]
-```
-
-```Go
-const tagProfile_KeepFrames = 8 // int64 (string table index)
-
-```
-
-### <a id="tagProfile_TimeNanos" href="#tagProfile_TimeNanos">const tagProfile_TimeNanos</a>
-
-```
-searchKey: pprof.tagProfile_TimeNanos
-tags: [private]
-```
-
-```Go
-const tagProfile_TimeNanos = 9 // int64
-
-```
-
-### <a id="tagProfile_DurationNanos" href="#tagProfile_DurationNanos">const tagProfile_DurationNanos</a>
-
-```
-searchKey: pprof.tagProfile_DurationNanos
-tags: [private]
-```
-
-```Go
-const tagProfile_DurationNanos = 10 // int64
-
-```
-
-### <a id="tagProfile_PeriodType" href="#tagProfile_PeriodType">const tagProfile_PeriodType</a>
-
-```
-searchKey: pprof.tagProfile_PeriodType
-tags: [private]
-```
-
-```Go
-const tagProfile_PeriodType = 11 // ValueType (really optional string???)
-
-```
-
-### <a id="tagProfile_Period" href="#tagProfile_Period">const tagProfile_Period</a>
-
-```
-searchKey: pprof.tagProfile_Period
-tags: [private]
-```
-
-```Go
-const tagProfile_Period = 12 // int64
-
-```
-
-### <a id="tagProfile_Comment" href="#tagProfile_Comment">const tagProfile_Comment</a>
-
-```
-searchKey: pprof.tagProfile_Comment
-tags: [private]
-```
-
-```Go
-const tagProfile_Comment = 13 // repeated int64
-
-```
-
-### <a id="tagProfile_DefaultSampleType" href="#tagProfile_DefaultSampleType">const tagProfile_DefaultSampleType</a>
-
-```
-searchKey: pprof.tagProfile_DefaultSampleType
-tags: [private]
-```
-
-```Go
-const tagProfile_DefaultSampleType = 14 // int64
-
-```
-
-### <a id="tagValueType_Type" href="#tagValueType_Type">const tagValueType_Type</a>
-
-```
-searchKey: pprof.tagValueType_Type
-tags: [private]
-```
-
-```Go
-const tagValueType_Type = 1 // int64 (string table index)
-
-```
-
-message ValueType 
-
-### <a id="tagValueType_Unit" href="#tagValueType_Unit">const tagValueType_Unit</a>
-
-```
-searchKey: pprof.tagValueType_Unit
-tags: [private]
-```
-
-```Go
-const tagValueType_Unit = 2 // int64 (string table index)
-
-```
-
-### <a id="tagSample_Location" href="#tagSample_Location">const tagSample_Location</a>
-
-```
-searchKey: pprof.tagSample_Location
-tags: [private]
-```
-
-```Go
-const tagSample_Location = 1 // repeated uint64
-
-```
-
-message Sample 
-
-### <a id="tagSample_Value" href="#tagSample_Value">const tagSample_Value</a>
-
-```
-searchKey: pprof.tagSample_Value
-tags: [private]
-```
-
-```Go
-const tagSample_Value = 2 // repeated int64
-
-```
-
-### <a id="tagSample_Label" href="#tagSample_Label">const tagSample_Label</a>
-
-```
-searchKey: pprof.tagSample_Label
-tags: [private]
-```
-
-```Go
-const tagSample_Label = 3 // repeated Label
-
-```
-
-### <a id="tagLabel_Key" href="#tagLabel_Key">const tagLabel_Key</a>
-
-```
-searchKey: pprof.tagLabel_Key
-tags: [private]
-```
-
-```Go
-const tagLabel_Key = 1 // int64 (string table index)
-
-```
-
-message Label 
-
-### <a id="tagLabel_Str" href="#tagLabel_Str">const tagLabel_Str</a>
-
-```
-searchKey: pprof.tagLabel_Str
-tags: [private]
-```
-
-```Go
-const tagLabel_Str = 2 // int64 (string table index)
-
-```
-
-### <a id="tagLabel_Num" href="#tagLabel_Num">const tagLabel_Num</a>
-
-```
-searchKey: pprof.tagLabel_Num
-tags: [private]
-```
-
-```Go
-const tagLabel_Num = 3 // int64
-
-```
-
-### <a id="tagMapping_ID" href="#tagMapping_ID">const tagMapping_ID</a>
-
-```
-searchKey: pprof.tagMapping_ID
-tags: [private]
-```
-
-```Go
-const tagMapping_ID = 1 // uint64
-
-```
-
-message Mapping 
-
-### <a id="tagMapping_Start" href="#tagMapping_Start">const tagMapping_Start</a>
-
-```
-searchKey: pprof.tagMapping_Start
-tags: [private]
-```
-
-```Go
-const tagMapping_Start = 2 // uint64
-
-```
-
-### <a id="tagMapping_Limit" href="#tagMapping_Limit">const tagMapping_Limit</a>
-
-```
-searchKey: pprof.tagMapping_Limit
-tags: [private]
-```
-
-```Go
-const tagMapping_Limit = 3 // uint64
-
-```
-
-### <a id="tagMapping_Offset" href="#tagMapping_Offset">const tagMapping_Offset</a>
-
-```
-searchKey: pprof.tagMapping_Offset
-tags: [private]
-```
-
-```Go
-const tagMapping_Offset = 4 // uint64
-
-```
-
-### <a id="tagMapping_Filename" href="#tagMapping_Filename">const tagMapping_Filename</a>
-
-```
-searchKey: pprof.tagMapping_Filename
-tags: [private]
-```
-
-```Go
-const tagMapping_Filename = 5 // int64 (string table index)
-
-```
-
-### <a id="tagMapping_BuildID" href="#tagMapping_BuildID">const tagMapping_BuildID</a>
-
-```
-searchKey: pprof.tagMapping_BuildID
-tags: [private]
-```
-
-```Go
-const tagMapping_BuildID = 6 // int64 (string table index)
-
-```
-
-### <a id="tagMapping_HasFunctions" href="#tagMapping_HasFunctions">const tagMapping_HasFunctions</a>
-
-```
-searchKey: pprof.tagMapping_HasFunctions
-tags: [private]
-```
-
-```Go
-const tagMapping_HasFunctions = 7 // bool
-
-```
-
-### <a id="tagMapping_HasFilenames" href="#tagMapping_HasFilenames">const tagMapping_HasFilenames</a>
-
-```
-searchKey: pprof.tagMapping_HasFilenames
-tags: [private]
-```
-
-```Go
-const tagMapping_HasFilenames = 8 // bool
-
-```
-
-### <a id="tagMapping_HasLineNumbers" href="#tagMapping_HasLineNumbers">const tagMapping_HasLineNumbers</a>
-
-```
-searchKey: pprof.tagMapping_HasLineNumbers
-tags: [private]
-```
-
-```Go
-const tagMapping_HasLineNumbers = 9 // bool
-
-```
-
-### <a id="tagMapping_HasInlineFrames" href="#tagMapping_HasInlineFrames">const tagMapping_HasInlineFrames</a>
-
-```
-searchKey: pprof.tagMapping_HasInlineFrames
-tags: [private]
-```
-
-```Go
-const tagMapping_HasInlineFrames = 10 // bool
-
-```
-
-### <a id="tagLocation_ID" href="#tagLocation_ID">const tagLocation_ID</a>
-
-```
-searchKey: pprof.tagLocation_ID
-tags: [private]
-```
-
-```Go
-const tagLocation_ID = 1 // uint64
-
-```
-
-message Location 
-
-### <a id="tagLocation_MappingID" href="#tagLocation_MappingID">const tagLocation_MappingID</a>
-
-```
-searchKey: pprof.tagLocation_MappingID
-tags: [private]
-```
-
-```Go
-const tagLocation_MappingID = 2 // uint64
-
-```
-
-### <a id="tagLocation_Address" href="#tagLocation_Address">const tagLocation_Address</a>
-
-```
-searchKey: pprof.tagLocation_Address
-tags: [private]
-```
-
-```Go
-const tagLocation_Address = 3 // uint64
-
-```
-
-### <a id="tagLocation_Line" href="#tagLocation_Line">const tagLocation_Line</a>
-
-```
-searchKey: pprof.tagLocation_Line
-tags: [private]
-```
-
-```Go
-const tagLocation_Line = 4 // repeated Line
-
-```
-
-### <a id="tagLine_FunctionID" href="#tagLine_FunctionID">const tagLine_FunctionID</a>
-
-```
-searchKey: pprof.tagLine_FunctionID
-tags: [private]
-```
-
-```Go
-const tagLine_FunctionID = 1 // uint64
-
-```
-
-message Line 
-
-### <a id="tagLine_Line" href="#tagLine_Line">const tagLine_Line</a>
-
-```
-searchKey: pprof.tagLine_Line
-tags: [private]
-```
-
-```Go
-const tagLine_Line = 2 // int64
+const tagFunction_Filename = 4 // int64 (string table index)
 
 ```
 
@@ -847,7 +404,7 @@ const tagLine_Line = 2 // int64
 
 ```
 searchKey: pprof.tagFunction_ID
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -861,7 +418,7 @@ message Function
 
 ```
 searchKey: pprof.tagFunction_Name
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -869,35 +426,11 @@ const tagFunction_Name = 2 // int64 (string table index)
 
 ```
 
-### <a id="tagFunction_SystemName" href="#tagFunction_SystemName">const tagFunction_SystemName</a>
-
-```
-searchKey: pprof.tagFunction_SystemName
-tags: [private]
-```
-
-```Go
-const tagFunction_SystemName = 3 // int64 (string table index)
-
-```
-
-### <a id="tagFunction_Filename" href="#tagFunction_Filename">const tagFunction_Filename</a>
-
-```
-searchKey: pprof.tagFunction_Filename
-tags: [private]
-```
-
-```Go
-const tagFunction_Filename = 4 // int64 (string table index)
-
-```
-
 ### <a id="tagFunction_StartLine" href="#tagFunction_StartLine">const tagFunction_StartLine</a>
 
 ```
 searchKey: pprof.tagFunction_StartLine
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -905,99 +438,499 @@ const tagFunction_StartLine = 5 // int64
 
 ```
 
-### <a id="blockDelay" href="#blockDelay">const blockDelay</a>
+### <a id="tagFunction_SystemName" href="#tagFunction_SystemName">const tagFunction_SystemName</a>
 
 ```
-searchKey: pprof.blockDelay
-tags: [private]
+searchKey: pprof.tagFunction_SystemName
+tags: [constant number private]
 ```
 
 ```Go
-const blockDelay = 10 * time.Millisecond
+const tagFunction_SystemName = 3 // int64 (string table index)
+
+```
+
+### <a id="tagLabel_Key" href="#tagLabel_Key">const tagLabel_Key</a>
+
+```
+searchKey: pprof.tagLabel_Key
+tags: [constant number private]
+```
+
+```Go
+const tagLabel_Key = 1 // int64 (string table index)
+
+```
+
+message Label 
+
+### <a id="tagLabel_Num" href="#tagLabel_Num">const tagLabel_Num</a>
+
+```
+searchKey: pprof.tagLabel_Num
+tags: [constant number private]
+```
+
+```Go
+const tagLabel_Num = 3 // int64
+
+```
+
+### <a id="tagLabel_Str" href="#tagLabel_Str">const tagLabel_Str</a>
+
+```
+searchKey: pprof.tagLabel_Str
+tags: [constant number private]
+```
+
+```Go
+const tagLabel_Str = 2 // int64 (string table index)
+
+```
+
+### <a id="tagLine_FunctionID" href="#tagLine_FunctionID">const tagLine_FunctionID</a>
+
+```
+searchKey: pprof.tagLine_FunctionID
+tags: [constant number private]
+```
+
+```Go
+const tagLine_FunctionID = 1 // uint64
+
+```
+
+message Line 
+
+### <a id="tagLine_Line" href="#tagLine_Line">const tagLine_Line</a>
+
+```
+searchKey: pprof.tagLine_Line
+tags: [constant number private]
+```
+
+```Go
+const tagLine_Line = 2 // int64
+
+```
+
+### <a id="tagLocation_Address" href="#tagLocation_Address">const tagLocation_Address</a>
+
+```
+searchKey: pprof.tagLocation_Address
+tags: [constant number private]
+```
+
+```Go
+const tagLocation_Address = 3 // uint64
+
+```
+
+### <a id="tagLocation_ID" href="#tagLocation_ID">const tagLocation_ID</a>
+
+```
+searchKey: pprof.tagLocation_ID
+tags: [constant number private]
+```
+
+```Go
+const tagLocation_ID = 1 // uint64
+
+```
+
+message Location 
+
+### <a id="tagLocation_Line" href="#tagLocation_Line">const tagLocation_Line</a>
+
+```
+searchKey: pprof.tagLocation_Line
+tags: [constant number private]
+```
+
+```Go
+const tagLocation_Line = 4 // repeated Line
+
+```
+
+### <a id="tagLocation_MappingID" href="#tagLocation_MappingID">const tagLocation_MappingID</a>
+
+```
+searchKey: pprof.tagLocation_MappingID
+tags: [constant number private]
+```
+
+```Go
+const tagLocation_MappingID = 2 // uint64
+
+```
+
+### <a id="tagMapping_BuildID" href="#tagMapping_BuildID">const tagMapping_BuildID</a>
+
+```
+searchKey: pprof.tagMapping_BuildID
+tags: [constant number private]
+```
+
+```Go
+const tagMapping_BuildID = 6 // int64 (string table index)
+
+```
+
+### <a id="tagMapping_Filename" href="#tagMapping_Filename">const tagMapping_Filename</a>
+
+```
+searchKey: pprof.tagMapping_Filename
+tags: [constant number private]
+```
+
+```Go
+const tagMapping_Filename = 5 // int64 (string table index)
+
+```
+
+### <a id="tagMapping_HasFilenames" href="#tagMapping_HasFilenames">const tagMapping_HasFilenames</a>
+
+```
+searchKey: pprof.tagMapping_HasFilenames
+tags: [constant number private]
+```
+
+```Go
+const tagMapping_HasFilenames = 8 // bool
+
+```
+
+### <a id="tagMapping_HasFunctions" href="#tagMapping_HasFunctions">const tagMapping_HasFunctions</a>
+
+```
+searchKey: pprof.tagMapping_HasFunctions
+tags: [constant number private]
+```
+
+```Go
+const tagMapping_HasFunctions = 7 // bool
+
+```
+
+### <a id="tagMapping_HasInlineFrames" href="#tagMapping_HasInlineFrames">const tagMapping_HasInlineFrames</a>
+
+```
+searchKey: pprof.tagMapping_HasInlineFrames
+tags: [constant number private]
+```
+
+```Go
+const tagMapping_HasInlineFrames = 10 // bool
+
+```
+
+### <a id="tagMapping_HasLineNumbers" href="#tagMapping_HasLineNumbers">const tagMapping_HasLineNumbers</a>
+
+```
+searchKey: pprof.tagMapping_HasLineNumbers
+tags: [constant number private]
+```
+
+```Go
+const tagMapping_HasLineNumbers = 9 // bool
+
+```
+
+### <a id="tagMapping_ID" href="#tagMapping_ID">const tagMapping_ID</a>
+
+```
+searchKey: pprof.tagMapping_ID
+tags: [constant number private]
+```
+
+```Go
+const tagMapping_ID = 1 // uint64
+
+```
+
+message Mapping 
+
+### <a id="tagMapping_Limit" href="#tagMapping_Limit">const tagMapping_Limit</a>
+
+```
+searchKey: pprof.tagMapping_Limit
+tags: [constant number private]
+```
+
+```Go
+const tagMapping_Limit = 3 // uint64
+
+```
+
+### <a id="tagMapping_Offset" href="#tagMapping_Offset">const tagMapping_Offset</a>
+
+```
+searchKey: pprof.tagMapping_Offset
+tags: [constant number private]
+```
+
+```Go
+const tagMapping_Offset = 4 // uint64
+
+```
+
+### <a id="tagMapping_Start" href="#tagMapping_Start">const tagMapping_Start</a>
+
+```
+searchKey: pprof.tagMapping_Start
+tags: [constant number private]
+```
+
+```Go
+const tagMapping_Start = 2 // uint64
+
+```
+
+### <a id="tagProfile_Comment" href="#tagProfile_Comment">const tagProfile_Comment</a>
+
+```
+searchKey: pprof.tagProfile_Comment
+tags: [constant number private]
+```
+
+```Go
+const tagProfile_Comment = 13 // repeated int64
+
+```
+
+### <a id="tagProfile_DefaultSampleType" href="#tagProfile_DefaultSampleType">const tagProfile_DefaultSampleType</a>
+
+```
+searchKey: pprof.tagProfile_DefaultSampleType
+tags: [constant number private]
+```
+
+```Go
+const tagProfile_DefaultSampleType = 14 // int64
+
+```
+
+### <a id="tagProfile_DropFrames" href="#tagProfile_DropFrames">const tagProfile_DropFrames</a>
+
+```
+searchKey: pprof.tagProfile_DropFrames
+tags: [constant number private]
+```
+
+```Go
+const tagProfile_DropFrames = 7 // int64 (string table index)
+
+```
+
+### <a id="tagProfile_DurationNanos" href="#tagProfile_DurationNanos">const tagProfile_DurationNanos</a>
+
+```
+searchKey: pprof.tagProfile_DurationNanos
+tags: [constant number private]
+```
+
+```Go
+const tagProfile_DurationNanos = 10 // int64
+
+```
+
+### <a id="tagProfile_Function" href="#tagProfile_Function">const tagProfile_Function</a>
+
+```
+searchKey: pprof.tagProfile_Function
+tags: [constant number private]
+```
+
+```Go
+const tagProfile_Function = 5 // repeated Function
+
+```
+
+### <a id="tagProfile_KeepFrames" href="#tagProfile_KeepFrames">const tagProfile_KeepFrames</a>
+
+```
+searchKey: pprof.tagProfile_KeepFrames
+tags: [constant number private]
+```
+
+```Go
+const tagProfile_KeepFrames = 8 // int64 (string table index)
+
+```
+
+### <a id="tagProfile_Location" href="#tagProfile_Location">const tagProfile_Location</a>
+
+```
+searchKey: pprof.tagProfile_Location
+tags: [constant number private]
+```
+
+```Go
+const tagProfile_Location = 4 // repeated Location
+
+```
+
+### <a id="tagProfile_Mapping" href="#tagProfile_Mapping">const tagProfile_Mapping</a>
+
+```
+searchKey: pprof.tagProfile_Mapping
+tags: [constant number private]
+```
+
+```Go
+const tagProfile_Mapping = 3 // repeated Mapping
+
+```
+
+### <a id="tagProfile_Period" href="#tagProfile_Period">const tagProfile_Period</a>
+
+```
+searchKey: pprof.tagProfile_Period
+tags: [constant number private]
+```
+
+```Go
+const tagProfile_Period = 12 // int64
+
+```
+
+### <a id="tagProfile_PeriodType" href="#tagProfile_PeriodType">const tagProfile_PeriodType</a>
+
+```
+searchKey: pprof.tagProfile_PeriodType
+tags: [constant number private]
+```
+
+```Go
+const tagProfile_PeriodType = 11 // ValueType (really optional string???)
+
+```
+
+### <a id="tagProfile_Sample" href="#tagProfile_Sample">const tagProfile_Sample</a>
+
+```
+searchKey: pprof.tagProfile_Sample
+tags: [constant number private]
+```
+
+```Go
+const tagProfile_Sample = 2 // repeated Sample
+
+```
+
+### <a id="tagProfile_SampleType" href="#tagProfile_SampleType">const tagProfile_SampleType</a>
+
+```
+searchKey: pprof.tagProfile_SampleType
+tags: [constant number private]
+```
+
+```Go
+const tagProfile_SampleType = 1 // repeated ValueType
+
+```
+
+message Profile 
+
+### <a id="tagProfile_StringTable" href="#tagProfile_StringTable">const tagProfile_StringTable</a>
+
+```
+searchKey: pprof.tagProfile_StringTable
+tags: [constant number private]
+```
+
+```Go
+const tagProfile_StringTable = 6 // repeated string
+
+```
+
+### <a id="tagProfile_TimeNanos" href="#tagProfile_TimeNanos">const tagProfile_TimeNanos</a>
+
+```
+searchKey: pprof.tagProfile_TimeNanos
+tags: [constant number private]
+```
+
+```Go
+const tagProfile_TimeNanos = 9 // int64
+
+```
+
+### <a id="tagSample_Label" href="#tagSample_Label">const tagSample_Label</a>
+
+```
+searchKey: pprof.tagSample_Label
+tags: [constant number private]
+```
+
+```Go
+const tagSample_Label = 3 // repeated Label
+
+```
+
+### <a id="tagSample_Location" href="#tagSample_Location">const tagSample_Location</a>
+
+```
+searchKey: pprof.tagSample_Location
+tags: [constant number private]
+```
+
+```Go
+const tagSample_Location = 1 // repeated uint64
+
+```
+
+message Sample 
+
+### <a id="tagSample_Value" href="#tagSample_Value">const tagSample_Value</a>
+
+```
+searchKey: pprof.tagSample_Value
+tags: [constant number private]
+```
+
+```Go
+const tagSample_Value = 2 // repeated int64
+
+```
+
+### <a id="tagValueType_Type" href="#tagValueType_Type">const tagValueType_Type</a>
+
+```
+searchKey: pprof.tagValueType_Type
+tags: [constant number private]
+```
+
+```Go
+const tagValueType_Type = 1 // int64 (string table index)
+
+```
+
+message ValueType 
+
+### <a id="tagValueType_Unit" href="#tagValueType_Unit">const tagValueType_Unit</a>
+
+```
+searchKey: pprof.tagValueType_Unit
+tags: [constant number private]
+```
+
+```Go
+const tagValueType_Unit = 2 // int64 (string table index)
+
 ```
 
 ## <a id="var" href="#var">Variables</a>
 
-### <a id="errBadELF" href="#errBadELF">var errBadELF</a>
-
 ```
-searchKey: pprof.errBadELF
-tags: [private]
-```
-
-```Go
-var errBadELF = errors.New("malformed ELF binary")
-```
-
-### <a id="errNoBuildID" href="#errNoBuildID">var errNoBuildID</a>
-
-```
-searchKey: pprof.errNoBuildID
-tags: [private]
-```
-
-```Go
-var errNoBuildID = errors.New("no NT_GNU_BUILD_ID found in ELF binary")
-```
-
-### <a id="profiles" href="#profiles">var profiles</a>
-
-```
-searchKey: pprof.profiles
-tags: [private]
-```
-
-```Go
-var profiles struct {
-	mu sync.Mutex
-	m  map[string]*Profile
-}
-```
-
-profiles records all registered profiles. 
-
-### <a id="goroutineProfile" href="#goroutineProfile">var goroutineProfile</a>
-
-```
-searchKey: pprof.goroutineProfile
-tags: [private]
-```
-
-```Go
-var goroutineProfile = ...
-```
-
-### <a id="threadcreateProfile" href="#threadcreateProfile">var threadcreateProfile</a>
-
-```
-searchKey: pprof.threadcreateProfile
-tags: [private]
-```
-
-```Go
-var threadcreateProfile = ...
-```
-
-### <a id="heapProfile" href="#heapProfile">var heapProfile</a>
-
-```
-searchKey: pprof.heapProfile
-tags: [private]
-```
-
-```Go
-var heapProfile = &Profile{
-	name:  "heap",
-	count: countHeap,
-	write: writeHeap,
-}
+tags: [package]
 ```
 
 ### <a id="allocsProfile" href="#allocsProfile">var allocsProfile</a>
 
 ```
 searchKey: pprof.allocsProfile
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -1012,7 +945,7 @@ var allocsProfile = &Profile{
 
 ```
 searchKey: pprof.blockProfile
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -1023,26 +956,11 @@ var blockProfile = &Profile{
 }
 ```
 
-### <a id="mutexProfile" href="#mutexProfile">var mutexProfile</a>
-
-```
-searchKey: pprof.mutexProfile
-tags: [private]
-```
-
-```Go
-var mutexProfile = &Profile{
-	name:  "mutex",
-	count: countMutex,
-	write: writeMutex,
-}
-```
-
 ### <a id="cpu" href="#cpu">var cpu</a>
 
 ```
 searchKey: pprof.cpu
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -1053,77 +971,118 @@ var cpu struct {
 }
 ```
 
-### <a id="memSink" href="#memSink">var memSink</a>
-
-```
-searchKey: pprof.memSink
-tags: [private]
-```
-
-```Go
-var memSink interface{}
-```
-
-### <a id="persistentMemSink" href="#persistentMemSink">var persistentMemSink</a>
-
-```
-searchKey: pprof.persistentMemSink
-tags: [private]
-```
-
-```Go
-var persistentMemSink *Obj32
-```
-
-### <a id="memoryProfilerRun" href="#memoryProfilerRun">var memoryProfilerRun</a>
-
-```
-searchKey: pprof.memoryProfilerRun
-tags: [private]
-```
-
-```Go
-var memoryProfilerRun = 0
-```
-
-### <a id="salt1" href="#salt1">var salt1</a>
-
-```
-searchKey: pprof.salt1
-tags: [private]
-```
-
-```Go
-var salt1 = 0
-```
-
-### <a id="salt2" href="#salt2">var salt2</a>
-
-```
-searchKey: pprof.salt2
-tags: [private]
-```
-
-```Go
-var salt2 = 0
-```
-
 ### <a id="emptyCallStackTestRun" href="#emptyCallStackTestRun">var emptyCallStackTestRun</a>
 
 ```
 searchKey: pprof.emptyCallStackTestRun
-tags: [private]
+tags: [variable number private]
 ```
 
 ```Go
 var emptyCallStackTestRun int64
 ```
 
+### <a id="errBadELF" href="#errBadELF">var errBadELF</a>
+
+```
+searchKey: pprof.errBadELF
+tags: [variable interface private]
+```
+
+```Go
+var errBadELF = errors.New("malformed ELF binary")
+```
+
+### <a id="errNoBuildID" href="#errNoBuildID">var errNoBuildID</a>
+
+```
+searchKey: pprof.errNoBuildID
+tags: [variable interface private]
+```
+
+```Go
+var errNoBuildID = errors.New("no NT_GNU_BUILD_ID found in ELF binary")
+```
+
+### <a id="goroutineProfile" href="#goroutineProfile">var goroutineProfile</a>
+
+```
+searchKey: pprof.goroutineProfile
+tags: [variable struct private]
+```
+
+```Go
+var goroutineProfile = ...
+```
+
+### <a id="heapProfile" href="#heapProfile">var heapProfile</a>
+
+```
+searchKey: pprof.heapProfile
+tags: [variable struct private]
+```
+
+```Go
+var heapProfile = &Profile{
+	name:  "heap",
+	count: countHeap,
+	write: writeHeap,
+}
+```
+
+### <a id="memSink" href="#memSink">var memSink</a>
+
+```
+searchKey: pprof.memSink
+tags: [variable interface private]
+```
+
+```Go
+var memSink interface{}
+```
+
+### <a id="memoryProfilerRun" href="#memoryProfilerRun">var memoryProfilerRun</a>
+
+```
+searchKey: pprof.memoryProfilerRun
+tags: [variable number private]
+```
+
+```Go
+var memoryProfilerRun = 0
+```
+
+### <a id="mutexProfile" href="#mutexProfile">var mutexProfile</a>
+
+```
+searchKey: pprof.mutexProfile
+tags: [variable struct private]
+```
+
+```Go
+var mutexProfile = &Profile{
+	name:  "mutex",
+	count: countMutex,
+	write: writeMutex,
+}
+```
+
+### <a id="persistentMemSink" href="#persistentMemSink">var persistentMemSink</a>
+
+```
+searchKey: pprof.persistentMemSink
+tags: [variable struct private]
+```
+
+```Go
+var persistentMemSink *Obj32
+```
+
 ### <a id="profSelfMapsTests" href="#profSelfMapsTests">var profSelfMapsTests</a>
 
 ```
 searchKey: pprof.profSelfMapsTests
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
@@ -1134,33 +1093,73 @@ var profSelfMapsTests = ...
 
 ```
 searchKey: pprof.profSelfMapsTestsWithDeleted
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
 var profSelfMapsTestsWithDeleted = ...
 ```
 
-## <a id="type" href="#type">Types</a>
-
-### <a id="label" href="#label">type label struct</a>
+### <a id="profiles" href="#profiles">var profiles</a>
 
 ```
-searchKey: pprof.label
-tags: [private]
+searchKey: pprof.profiles
+tags: [variable struct private]
 ```
 
 ```Go
-type label struct {
-	key   string
-	value string
+var profiles struct {
+	mu sync.Mutex
+	m  map[string]*Profile
 }
+```
+
+profiles records all registered profiles. 
+
+### <a id="salt1" href="#salt1">var salt1</a>
+
+```
+searchKey: pprof.salt1
+tags: [variable number private]
+```
+
+```Go
+var salt1 = 0
+```
+
+### <a id="salt2" href="#salt2">var salt2</a>
+
+```
+searchKey: pprof.salt2
+tags: [variable number private]
+```
+
+```Go
+var salt2 = 0
+```
+
+### <a id="threadcreateProfile" href="#threadcreateProfile">var threadcreateProfile</a>
+
+```
+searchKey: pprof.threadcreateProfile
+tags: [variable struct private]
+```
+
+```Go
+var threadcreateProfile = ...
+```
+
+## <a id="type" href="#type">Types</a>
+
+```
+tags: [package]
 ```
 
 ### <a id="LabelSet" href="#LabelSet">type LabelSet struct</a>
 
 ```
 searchKey: pprof.LabelSet
+tags: [struct]
 ```
 
 ```Go
@@ -1175,6 +1174,7 @@ LabelSet is a set of labels.
 
 ```
 searchKey: pprof.Labels
+tags: [method]
 ```
 
 ```Go
@@ -1183,109 +1183,25 @@ func Labels(args ...string) LabelSet
 
 Labels takes an even number of strings representing key-value pairs and makes a LabelSet containing them. A label overwrites a prior label with the same key. Currently only the CPU and goroutine profiles utilize any labels information. See [https://golang.org/issue/23458](https://golang.org/issue/23458) for details. 
 
-### <a id="labelContextKey" href="#labelContextKey">type labelContextKey struct{}</a>
+### <a id="Obj32" href="#Obj32">type Obj32 struct</a>
 
 ```
-searchKey: pprof.labelContextKey
-tags: [private]
-```
-
-```Go
-type labelContextKey struct{}
-```
-
-labelContextKey is the type of contextKeys used for profiler labels. 
-
-### <a id="labelMap" href="#labelMap">type labelMap map[string]string</a>
-
-```
-searchKey: pprof.labelMap
-tags: [private]
+searchKey: pprof.Obj32
+tags: [struct private]
 ```
 
 ```Go
-type labelMap map[string]string
-```
-
-labelMap is the representation of the label set held in the context type. This is an initial implementation, but it will be replaced with something that admits incremental immutable modification more efficiently. 
-
-#### <a id="labelValue" href="#labelValue">func labelValue(ctx context.Context) labelMap</a>
-
-```
-searchKey: pprof.labelValue
-tags: [private]
-```
-
-```Go
-func labelValue(ctx context.Context) labelMap
-```
-
-#### <a id="labelMap.String" href="#labelMap.String">func (l *labelMap) String() string</a>
-
-```
-searchKey: pprof.labelMap.String
-tags: [private]
-```
-
-```Go
-func (l *labelMap) String() string
-```
-
-String statisfies Stringer and returns key, value pairs in a consistent order. 
-
-### <a id="profMap" href="#profMap">type profMap struct</a>
-
-```
-searchKey: pprof.profMap
-tags: [private]
-```
-
-```Go
-type profMap struct {
-	hash    map[uintptr]*profMapEntry
-	all     *profMapEntry
-	last    *profMapEntry
-	free    []profMapEntry
-	freeStk []uintptr
+type Obj32 struct {
+	link *Obj32
+	pad  [32 - unsafe.Sizeof(uintptr(0))]byte
 }
 ```
-
-A profMap is a map from (stack, tag) to mapEntry. It grows without bound, but that's assumed to be OK. 
-
-#### <a id="profMap.lookup" href="#profMap.lookup">func (m *profMap) lookup(stk []uint64, tag unsafe.Pointer) *profMapEntry</a>
-
-```
-searchKey: pprof.profMap.lookup
-tags: [private]
-```
-
-```Go
-func (m *profMap) lookup(stk []uint64, tag unsafe.Pointer) *profMapEntry
-```
-
-### <a id="profMapEntry" href="#profMapEntry">type profMapEntry struct</a>
-
-```
-searchKey: pprof.profMapEntry
-tags: [private]
-```
-
-```Go
-type profMapEntry struct {
-	nextHash *profMapEntry // next in hash list
-	nextAll  *profMapEntry // next in list of all entries
-	stk      []uintptr
-	tag      unsafe.Pointer
-	count    int64
-}
-```
-
-A profMapEntry is a single entry in the profMap. 
 
 ### <a id="Profile" href="#Profile">type Profile struct</a>
 
 ```
 searchKey: pprof.Profile
+tags: [struct]
 ```
 
 ```Go
@@ -1323,22 +1239,11 @@ The allocs profile is the same as the heap profile but changes the default pprof
 
 The CPU profile is not available as a Profile. It has a special API, the StartCPUProfile and StopCPUProfile functions, because it streams output to a writer during profiling. 
 
-#### <a id="NewProfile" href="#NewProfile">func NewProfile(name string) *Profile</a>
-
-```
-searchKey: pprof.NewProfile
-```
-
-```Go
-func NewProfile(name string) *Profile
-```
-
-NewProfile creates a new profile with the given name. If a profile with that name already exists, NewProfile panics. The convention is to use a 'import/path.' prefix to create separate name spaces for each package. For compatibility with various tools that read pprof data, profile names should not contain spaces. 
-
 #### <a id="Lookup" href="#Lookup">func Lookup(name string) *Profile</a>
 
 ```
 searchKey: pprof.Lookup
+tags: [method]
 ```
 
 ```Go
@@ -1347,34 +1252,24 @@ func Lookup(name string) *Profile
 
 Lookup returns the profile with the given name, or nil if no such profile exists. 
 
-#### <a id="Profile.Name" href="#Profile.Name">func (p *Profile) Name() string</a>
+#### <a id="NewProfile" href="#NewProfile">func NewProfile(name string) *Profile</a>
 
 ```
-searchKey: pprof.Profile.Name
-```
-
-```Go
-func (p *Profile) Name() string
-```
-
-Name returns this profile's name, which can be passed to Lookup to reobtain the profile. 
-
-#### <a id="Profile.Count" href="#Profile.Count">func (p *Profile) Count() int</a>
-
-```
-searchKey: pprof.Profile.Count
+searchKey: pprof.NewProfile
+tags: [method]
 ```
 
 ```Go
-func (p *Profile) Count() int
+func NewProfile(name string) *Profile
 ```
 
-Count returns the number of execution stacks currently in the profile. 
+NewProfile creates a new profile with the given name. If a profile with that name already exists, NewProfile panics. The convention is to use a 'import/path.' prefix to create separate name spaces for each package. For compatibility with various tools that read pprof data, profile names should not contain spaces. 
 
 #### <a id="Profile.Add" href="#Profile.Add">func (p *Profile) Add(value interface{}, skip int)</a>
 
 ```
 searchKey: pprof.Profile.Add
+tags: [method]
 ```
 
 ```Go
@@ -1394,10 +1289,37 @@ called from main.main
 ```
 Passing skip=0 begins the stack trace at the call to Add inside rpc.NewClient. Passing skip=1 begins the stack trace at the call to NewClient inside mypkg.Run. 
 
+#### <a id="Profile.Count" href="#Profile.Count">func (p *Profile) Count() int</a>
+
+```
+searchKey: pprof.Profile.Count
+tags: [function]
+```
+
+```Go
+func (p *Profile) Count() int
+```
+
+Count returns the number of execution stacks currently in the profile. 
+
+#### <a id="Profile.Name" href="#Profile.Name">func (p *Profile) Name() string</a>
+
+```
+searchKey: pprof.Profile.Name
+tags: [function]
+```
+
+```Go
+func (p *Profile) Name() string
+```
+
+Name returns this profile's name, which can be passed to Lookup to reobtain the profile. 
+
 #### <a id="Profile.Remove" href="#Profile.Remove">func (p *Profile) Remove(value interface{})</a>
 
 ```
 searchKey: pprof.Profile.Remove
+tags: [method]
 ```
 
 ```Go
@@ -1410,6 +1332,7 @@ Remove removes the execution stack associated with value from the profile. It is
 
 ```
 searchKey: pprof.Profile.WriteTo
+tags: [method]
 ```
 
 ```Go
@@ -1422,55 +1345,11 @@ The debug parameter enables additional output. Passing debug=0 writes the gzip-c
 
 The predefined profiles may assign meaning to other debug values; for example, when printing the "goroutine" profile, debug=2 means to print the goroutine stacks in the same form that a Go program uses when dying due to an unrecovered panic. 
 
-### <a id="stackProfile" href="#stackProfile">type stackProfile [][]uintptr</a>
-
-```
-searchKey: pprof.stackProfile
-tags: [private]
-```
-
-```Go
-type stackProfile [][]uintptr
-```
-
-#### <a id="stackProfile.Len" href="#stackProfile.Len">func (x stackProfile) Len() int</a>
-
-```
-searchKey: pprof.stackProfile.Len
-tags: [private]
-```
-
-```Go
-func (x stackProfile) Len() int
-```
-
-#### <a id="stackProfile.Stack" href="#stackProfile.Stack">func (x stackProfile) Stack(i int) []uintptr</a>
-
-```
-searchKey: pprof.stackProfile.Stack
-tags: [private]
-```
-
-```Go
-func (x stackProfile) Stack(i int) []uintptr
-```
-
-#### <a id="stackProfile.Label" href="#stackProfile.Label">func (x stackProfile) Label(i int) *labelMap</a>
-
-```
-searchKey: pprof.stackProfile.Label
-tags: [private]
-```
-
-```Go
-func (x stackProfile) Label(i int) *labelMap
-```
-
 ### <a id="countProfile" href="#countProfile">type countProfile interface</a>
 
 ```
 searchKey: pprof.countProfile
-tags: [private]
+tags: [interface private]
 ```
 
 ```Go
@@ -1487,7 +1366,7 @@ A countProfile is a set of stack traces to be printed as counts grouped by stack
 
 ```
 searchKey: pprof.keysByCount
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -1503,87 +1382,311 @@ keysByCount sorts keys with higher counts first, breaking ties by key string ord
 
 ```
 searchKey: pprof.keysByCount.Len
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (x *keysByCount) Len() int
 ```
 
-#### <a id="keysByCount.Swap" href="#keysByCount.Swap">func (x *keysByCount) Swap(i, j int)</a>
-
-```
-searchKey: pprof.keysByCount.Swap
-tags: [private]
-```
-
-```Go
-func (x *keysByCount) Swap(i, j int)
-```
-
 #### <a id="keysByCount.Less" href="#keysByCount.Less">func (x *keysByCount) Less(i, j int) bool</a>
 
 ```
 searchKey: pprof.keysByCount.Less
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (x *keysByCount) Less(i, j int) bool
 ```
 
-### <a id="runtimeProfile" href="#runtimeProfile">type runtimeProfile struct</a>
+#### <a id="keysByCount.Swap" href="#keysByCount.Swap">func (x *keysByCount) Swap(i, j int)</a>
 
 ```
-searchKey: pprof.runtimeProfile
-tags: [private]
+searchKey: pprof.keysByCount.Swap
+tags: [method private]
 ```
 
 ```Go
-type runtimeProfile struct {
-	stk    []runtime.StackRecord
-	labels []unsafe.Pointer
+func (x *keysByCount) Swap(i, j int)
+```
+
+### <a id="label" href="#label">type label struct</a>
+
+```
+searchKey: pprof.label
+tags: [struct private]
+```
+
+```Go
+type label struct {
+	key   string
+	value string
 }
 ```
 
-#### <a id="runtimeProfile.Len" href="#runtimeProfile.Len">func (p *runtimeProfile) Len() int</a>
+### <a id="labelContextKey" href="#labelContextKey">type labelContextKey struct{}</a>
 
 ```
-searchKey: pprof.runtimeProfile.Len
-tags: [private]
-```
-
-```Go
-func (p *runtimeProfile) Len() int
-```
-
-#### <a id="runtimeProfile.Stack" href="#runtimeProfile.Stack">func (p *runtimeProfile) Stack(i int) []uintptr</a>
-
-```
-searchKey: pprof.runtimeProfile.Stack
-tags: [private]
+searchKey: pprof.labelContextKey
+tags: [struct private]
 ```
 
 ```Go
-func (p *runtimeProfile) Stack(i int) []uintptr
+type labelContextKey struct{}
 ```
 
-#### <a id="runtimeProfile.Label" href="#runtimeProfile.Label">func (p *runtimeProfile) Label(i int) *labelMap</a>
+labelContextKey is the type of contextKeys used for profiler labels. 
+
+### <a id="labelMap" href="#labelMap">type labelMap map[string]string</a>
 
 ```
-searchKey: pprof.runtimeProfile.Label
-tags: [private]
+searchKey: pprof.labelMap
+tags: [object private]
 ```
 
 ```Go
-func (p *runtimeProfile) Label(i int) *labelMap
+type labelMap map[string]string
 ```
+
+labelMap is the representation of the label set held in the context type. This is an initial implementation, but it will be replaced with something that admits incremental immutable modification more efficiently. 
+
+#### <a id="labelValue" href="#labelValue">func labelValue(ctx context.Context) labelMap</a>
+
+```
+searchKey: pprof.labelValue
+tags: [method private]
+```
+
+```Go
+func labelValue(ctx context.Context) labelMap
+```
+
+#### <a id="labelMap.String" href="#labelMap.String">func (l *labelMap) String() string</a>
+
+```
+searchKey: pprof.labelMap.String
+tags: [function private]
+```
+
+```Go
+func (l *labelMap) String() string
+```
+
+String statisfies Stringer and returns key, value pairs in a consistent order. 
+
+### <a id="labelSorter" href="#labelSorter">type labelSorter []pprof.label</a>
+
+```
+searchKey: pprof.labelSorter
+tags: [array struct private]
+```
+
+```Go
+type labelSorter []label
+```
+
+#### <a id="labelSorter.Len" href="#labelSorter.Len">func (s labelSorter) Len() int</a>
+
+```
+searchKey: pprof.labelSorter.Len
+tags: [function private]
+```
+
+```Go
+func (s labelSorter) Len() int
+```
+
+#### <a id="labelSorter.Less" href="#labelSorter.Less">func (s labelSorter) Less(i, j int) bool</a>
+
+```
+searchKey: pprof.labelSorter.Less
+tags: [method private]
+```
+
+```Go
+func (s labelSorter) Less(i, j int) bool
+```
+
+#### <a id="labelSorter.Swap" href="#labelSorter.Swap">func (s labelSorter) Swap(i, j int)</a>
+
+```
+searchKey: pprof.labelSorter.Swap
+tags: [method private]
+```
+
+```Go
+func (s labelSorter) Swap(i, j int)
+```
+
+### <a id="locInfo" href="#locInfo">type locInfo struct</a>
+
+```
+searchKey: pprof.locInfo
+tags: [struct private]
+```
+
+```Go
+type locInfo struct {
+	// location id assigned by the profileBuilder
+	id uint64
+
+	// sequence of PCs, including the fake PCs returned by the traceback
+	// to represent inlined functions
+	// https://github.com/golang/go/blob/d6f2f833c93a41ec1c68e49804b8387a06b131c5/src/runtime/traceback.go#L347-L368
+	pcs []uintptr
+}
+```
+
+### <a id="matchFunc" href="#matchFunc">type matchFunc func(spec string, count uintptr, stk []*internal/profile.Location, labels map[string][]string) bool</a>
+
+```
+searchKey: pprof.matchFunc
+tags: [function private]
+```
+
+```Go
+type matchFunc func(spec string, count uintptr, stk []*profile.Location, labels map[string][]string) bool
+```
+
+### <a id="memMap" href="#memMap">type memMap struct</a>
+
+```
+searchKey: pprof.memMap
+tags: [struct private]
+```
+
+```Go
+type memMap struct {
+	// initialized as reading mapping
+	start         uintptr
+	end           uintptr
+	offset        uint64
+	file, buildID string
+
+	funcs symbolizeFlag
+	fake  bool // map entry was faked; /proc/self/maps wasn't available
+}
+```
+
+### <a id="msgOffset" href="#msgOffset">type msgOffset int</a>
+
+```
+searchKey: pprof.msgOffset
+tags: [number private]
+```
+
+```Go
+type msgOffset int
+```
+
+### <a id="pcDeck" href="#pcDeck">type pcDeck struct</a>
+
+```
+searchKey: pprof.pcDeck
+tags: [struct private]
+```
+
+```Go
+type pcDeck struct {
+	pcs             []uintptr
+	frames          []runtime.Frame
+	symbolizeResult symbolizeFlag
+}
+```
+
+pcDeck is a helper to detect a sequence of inlined functions from a stack trace returned by the runtime. 
+
+The stack traces returned by runtime's trackback functions are fully expanded (at least for Go functions) and include the fake pcs representing inlined functions. The profile proto expects the inlined functions to be encoded in one Location message. [https://github.com/google/pprof/blob/5e965273ee43930341d897407202dd5e10e952cb/proto/profile.proto#L177-L184](https://github.com/google/pprof/blob/5e965273ee43930341d897407202dd5e10e952cb/proto/profile.proto#L177-L184) 
+
+Runtime does not directly expose whether a frame is for an inlined function and looking up debug info is not ideal, so we use a heuristic to filter the fake pcs and restore the inlined and entry functions. Inlined functions have the following properties: 
+
+```
+Frame's Func is nil (note: also true for non-Go functions), and
+Frame's Entry matches its entry function frame's Entry (note: could also be true for recursive calls and non-Go functions), and
+Frame's Name does not match its entry function frame's name (note: inlined functions cannot be directly recursive).
+
+```
+As reading and processing the pcs in a stack trace one by one (from leaf to the root), we use pcDeck to temporarily hold the observed pcs and their expanded frames until we observe the entry function frame. 
+
+#### <a id="pcDeck.reset" href="#pcDeck.reset">func (d *pcDeck) reset()</a>
+
+```
+searchKey: pprof.pcDeck.reset
+tags: [function private]
+```
+
+```Go
+func (d *pcDeck) reset()
+```
+
+#### <a id="pcDeck.tryAdd" href="#pcDeck.tryAdd">func (d *pcDeck) tryAdd(pc uintptr, frames []runtime.Frame, symbolizeResult symbolizeFlag) (success bool)</a>
+
+```
+searchKey: pprof.pcDeck.tryAdd
+tags: [method private]
+```
+
+```Go
+func (d *pcDeck) tryAdd(pc uintptr, frames []runtime.Frame, symbolizeResult symbolizeFlag) (success bool)
+```
+
+tryAdd tries to add the pc and Frames expanded from it (most likely one, since the stack trace is already fully expanded) and the symbolizeResult to the deck. If it fails the caller needs to flush the deck and retry. 
+
+### <a id="profMap" href="#profMap">type profMap struct</a>
+
+```
+searchKey: pprof.profMap
+tags: [struct private]
+```
+
+```Go
+type profMap struct {
+	hash    map[uintptr]*profMapEntry
+	all     *profMapEntry
+	last    *profMapEntry
+	free    []profMapEntry
+	freeStk []uintptr
+}
+```
+
+A profMap is a map from (stack, tag) to mapEntry. It grows without bound, but that's assumed to be OK. 
+
+#### <a id="profMap.lookup" href="#profMap.lookup">func (m *profMap) lookup(stk []uint64, tag unsafe.Pointer) *profMapEntry</a>
+
+```
+searchKey: pprof.profMap.lookup
+tags: [method private]
+```
+
+```Go
+func (m *profMap) lookup(stk []uint64, tag unsafe.Pointer) *profMapEntry
+```
+
+### <a id="profMapEntry" href="#profMapEntry">type profMapEntry struct</a>
+
+```
+searchKey: pprof.profMapEntry
+tags: [struct private]
+```
+
+```Go
+type profMapEntry struct {
+	nextHash *profMapEntry // next in hash list
+	nextAll  *profMapEntry // next in list of all entries
+	stk      []uintptr
+	tag      unsafe.Pointer
+	count    int64
+}
+```
+
+A profMapEntry is a single entry in the profMap. 
 
 ### <a id="profileBuilder" href="#profileBuilder">type profileBuilder struct</a>
 
 ```
 searchKey: pprof.profileBuilder
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -1613,7 +1716,7 @@ A profileBuilder writes a profile incrementally from a stream of profile samples
 
 ```
 searchKey: pprof.newProfileBuilder
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1622,61 +1725,98 @@ func newProfileBuilder(w io.Writer) *profileBuilder
 
 newProfileBuilder returns a new profileBuilder. CPU profiling data obtained from the runtime can be added by calling b.addCPUData, and then the eventual profile can be obtained by calling b.finish. 
 
-#### <a id="profileBuilder.stringIndex" href="#profileBuilder.stringIndex">func (b *profileBuilder) stringIndex(s string) int64</a>
+#### <a id="profileBuilder.addCPUData" href="#profileBuilder.addCPUData">func (b *profileBuilder) addCPUData(data []uint64, tags []unsafe.Pointer) error</a>
 
 ```
-searchKey: pprof.profileBuilder.stringIndex
-tags: [private]
+searchKey: pprof.profileBuilder.addCPUData
+tags: [method private]
 ```
 
 ```Go
-func (b *profileBuilder) stringIndex(s string) int64
+func (b *profileBuilder) addCPUData(data []uint64, tags []unsafe.Pointer) error
 ```
 
-stringIndex adds s to the string table if not already present and returns the index of s in the string table. 
+addCPUData adds the CPU profiling data to the profile. The data must be a whole number of records, as delivered by the runtime. 
+
+#### <a id="profileBuilder.addMapping" href="#profileBuilder.addMapping">func (b *profileBuilder) addMapping(lo, hi, offset uint64, file, buildID string)</a>
+
+```
+searchKey: pprof.profileBuilder.addMapping
+tags: [method private]
+```
+
+```Go
+func (b *profileBuilder) addMapping(lo, hi, offset uint64, file, buildID string)
+```
+
+#### <a id="profileBuilder.addMappingEntry" href="#profileBuilder.addMappingEntry">func (b *profileBuilder) addMappingEntry(lo, hi, offset uint64, file, buildID string, fake bool)</a>
+
+```
+searchKey: pprof.profileBuilder.addMappingEntry
+tags: [method private]
+```
+
+```Go
+func (b *profileBuilder) addMappingEntry(lo, hi, offset uint64, file, buildID string, fake bool)
+```
+
+#### <a id="profileBuilder.appendLocsForStack" href="#profileBuilder.appendLocsForStack">func (b *profileBuilder) appendLocsForStack(locs []uint64, stk []uintptr) (newLocs []uint64)</a>
+
+```
+searchKey: pprof.profileBuilder.appendLocsForStack
+tags: [method private]
+```
+
+```Go
+func (b *profileBuilder) appendLocsForStack(locs []uint64, stk []uintptr) (newLocs []uint64)
+```
+
+appendLocsForStack appends the location IDs for the given stack trace to the given location ID slice, locs. The addresses in the stack are return PCs or 1 + the PC of an inline marker as the runtime traceback function returns. 
+
+It may emit to b.pb, so there must be no message encoding in progress. 
+
+#### <a id="profileBuilder.build" href="#profileBuilder.build">func (b *profileBuilder) build()</a>
+
+```
+searchKey: pprof.profileBuilder.build
+tags: [function private]
+```
+
+```Go
+func (b *profileBuilder) build()
+```
+
+build completes and returns the constructed profile. 
+
+#### <a id="profileBuilder.emitLocation" href="#profileBuilder.emitLocation">func (b *profileBuilder) emitLocation() uint64</a>
+
+```
+searchKey: pprof.profileBuilder.emitLocation
+tags: [function private]
+```
+
+```Go
+func (b *profileBuilder) emitLocation() uint64
+```
+
+emitLocation emits the new location and function information recorded in the deck and returns the location ID encoded in the profile protobuf. It emits to b.pb, so there must be no message encoding in progress. It resets the deck. 
 
 #### <a id="profileBuilder.flush" href="#profileBuilder.flush">func (b *profileBuilder) flush()</a>
 
 ```
 searchKey: pprof.profileBuilder.flush
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (b *profileBuilder) flush()
 ```
 
-#### <a id="profileBuilder.pbValueType" href="#profileBuilder.pbValueType">func (b *profileBuilder) pbValueType(tag int, typ, unit string)</a>
-
-```
-searchKey: pprof.profileBuilder.pbValueType
-tags: [private]
-```
-
-```Go
-func (b *profileBuilder) pbValueType(tag int, typ, unit string)
-```
-
-pbValueType encodes a ValueType message to b.pb. 
-
-#### <a id="profileBuilder.pbSample" href="#profileBuilder.pbSample">func (b *profileBuilder) pbSample(values []int64, locs []uint64, labels func())</a>
-
-```
-searchKey: pprof.profileBuilder.pbSample
-tags: [private]
-```
-
-```Go
-func (b *profileBuilder) pbSample(values []int64, locs []uint64, labels func())
-```
-
-pbSample encodes a Sample message to b.pb. 
-
 #### <a id="profileBuilder.pbLabel" href="#profileBuilder.pbLabel">func (b *profileBuilder) pbLabel(tag int, key, str string, num int64)</a>
 
 ```
 searchKey: pprof.profileBuilder.pbLabel
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1689,7 +1829,7 @@ pbLabel encodes a Label message to b.pb.
 
 ```
 searchKey: pprof.profileBuilder.pbLine
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1702,7 +1842,7 @@ pbLine encodes a Line message to b.pb.
 
 ```
 searchKey: pprof.profileBuilder.pbMapping
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1711,65 +1851,37 @@ func (b *profileBuilder) pbMapping(tag int, id, base, limit, offset uint64, file
 
 pbMapping encodes a Mapping message to b.pb. 
 
-#### <a id="profileBuilder.addCPUData" href="#profileBuilder.addCPUData">func (b *profileBuilder) addCPUData(data []uint64, tags []unsafe.Pointer) error</a>
+#### <a id="profileBuilder.pbSample" href="#profileBuilder.pbSample">func (b *profileBuilder) pbSample(values []int64, locs []uint64, labels func())</a>
 
 ```
-searchKey: pprof.profileBuilder.addCPUData
-tags: [private]
-```
-
-```Go
-func (b *profileBuilder) addCPUData(data []uint64, tags []unsafe.Pointer) error
-```
-
-addCPUData adds the CPU profiling data to the profile. The data must be a whole number of records, as delivered by the runtime. 
-
-#### <a id="profileBuilder.build" href="#profileBuilder.build">func (b *profileBuilder) build()</a>
-
-```
-searchKey: pprof.profileBuilder.build
-tags: [private]
+searchKey: pprof.profileBuilder.pbSample
+tags: [method private]
 ```
 
 ```Go
-func (b *profileBuilder) build()
+func (b *profileBuilder) pbSample(values []int64, locs []uint64, labels func())
 ```
 
-build completes and returns the constructed profile. 
+pbSample encodes a Sample message to b.pb. 
 
-#### <a id="profileBuilder.appendLocsForStack" href="#profileBuilder.appendLocsForStack">func (b *profileBuilder) appendLocsForStack(locs []uint64, stk []uintptr) (newLocs []uint64)</a>
-
-```
-searchKey: pprof.profileBuilder.appendLocsForStack
-tags: [private]
-```
-
-```Go
-func (b *profileBuilder) appendLocsForStack(locs []uint64, stk []uintptr) (newLocs []uint64)
-```
-
-appendLocsForStack appends the location IDs for the given stack trace to the given location ID slice, locs. The addresses in the stack are return PCs or 1 + the PC of an inline marker as the runtime traceback function returns. 
-
-It may emit to b.pb, so there must be no message encoding in progress. 
-
-#### <a id="profileBuilder.emitLocation" href="#profileBuilder.emitLocation">func (b *profileBuilder) emitLocation() uint64</a>
+#### <a id="profileBuilder.pbValueType" href="#profileBuilder.pbValueType">func (b *profileBuilder) pbValueType(tag int, typ, unit string)</a>
 
 ```
-searchKey: pprof.profileBuilder.emitLocation
-tags: [private]
+searchKey: pprof.profileBuilder.pbValueType
+tags: [method private]
 ```
 
 ```Go
-func (b *profileBuilder) emitLocation() uint64
+func (b *profileBuilder) pbValueType(tag int, typ, unit string)
 ```
 
-emitLocation emits the new location and function information recorded in the deck and returns the location ID encoded in the profile protobuf. It emits to b.pb, so there must be no message encoding in progress. It resets the deck. 
+pbValueType encodes a ValueType message to b.pb. 
 
 #### <a id="profileBuilder.readMapping" href="#profileBuilder.readMapping">func (b *profileBuilder) readMapping()</a>
 
 ```
 searchKey: pprof.profileBuilder.readMapping
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -1778,53 +1890,297 @@ func (b *profileBuilder) readMapping()
 
 readMapping reads /proc/self/maps and writes mappings to b.pb. It saves the address ranges of the mappings in b.mem for use when emitting locations. 
 
-#### <a id="profileBuilder.addMapping" href="#profileBuilder.addMapping">func (b *profileBuilder) addMapping(lo, hi, offset uint64, file, buildID string)</a>
+#### <a id="profileBuilder.stringIndex" href="#profileBuilder.stringIndex">func (b *profileBuilder) stringIndex(s string) int64</a>
 
 ```
-searchKey: pprof.profileBuilder.addMapping
-tags: [private]
-```
-
-```Go
-func (b *profileBuilder) addMapping(lo, hi, offset uint64, file, buildID string)
-```
-
-#### <a id="profileBuilder.addMappingEntry" href="#profileBuilder.addMappingEntry">func (b *profileBuilder) addMappingEntry(lo, hi, offset uint64, file, buildID string, fake bool)</a>
-
-```
-searchKey: pprof.profileBuilder.addMappingEntry
-tags: [private]
+searchKey: pprof.profileBuilder.stringIndex
+tags: [method private]
 ```
 
 ```Go
-func (b *profileBuilder) addMappingEntry(lo, hi, offset uint64, file, buildID string, fake bool)
+func (b *profileBuilder) stringIndex(s string) int64
 ```
 
-### <a id="memMap" href="#memMap">type memMap struct</a>
+stringIndex adds s to the string table if not already present and returns the index of s in the string table. 
+
+### <a id="protobuf" href="#protobuf">type protobuf struct</a>
 
 ```
-searchKey: pprof.memMap
-tags: [private]
+searchKey: pprof.protobuf
+tags: [struct private]
 ```
 
 ```Go
-type memMap struct {
-	// initialized as reading mapping
-	start         uintptr
-	end           uintptr
-	offset        uint64
-	file, buildID string
-
-	funcs symbolizeFlag
-	fake  bool // map entry was faked; /proc/self/maps wasn't available
+type protobuf struct {
+	data []byte
+	tmp  [16]byte
+	nest int
 }
+```
+
+A protobuf is a simple protocol buffer encoder. 
+
+#### <a id="protobuf.bool" href="#protobuf.bool">func (b *protobuf) bool(tag int, x bool)</a>
+
+```
+searchKey: pprof.protobuf.bool
+tags: [method private]
+```
+
+```Go
+func (b *protobuf) bool(tag int, x bool)
+```
+
+#### <a id="protobuf.boolOpt" href="#protobuf.boolOpt">func (b *protobuf) boolOpt(tag int, x bool)</a>
+
+```
+searchKey: pprof.protobuf.boolOpt
+tags: [method private]
+```
+
+```Go
+func (b *protobuf) boolOpt(tag int, x bool)
+```
+
+#### <a id="protobuf.endMessage" href="#protobuf.endMessage">func (b *protobuf) endMessage(tag int, start msgOffset)</a>
+
+```
+searchKey: pprof.protobuf.endMessage
+tags: [method private]
+```
+
+```Go
+func (b *protobuf) endMessage(tag int, start msgOffset)
+```
+
+#### <a id="protobuf.int64" href="#protobuf.int64">func (b *protobuf) int64(tag int, x int64)</a>
+
+```
+searchKey: pprof.protobuf.int64
+tags: [method private]
+```
+
+```Go
+func (b *protobuf) int64(tag int, x int64)
+```
+
+#### <a id="protobuf.int64Opt" href="#protobuf.int64Opt">func (b *protobuf) int64Opt(tag int, x int64)</a>
+
+```
+searchKey: pprof.protobuf.int64Opt
+tags: [method private]
+```
+
+```Go
+func (b *protobuf) int64Opt(tag int, x int64)
+```
+
+#### <a id="protobuf.int64s" href="#protobuf.int64s">func (b *protobuf) int64s(tag int, x []int64)</a>
+
+```
+searchKey: pprof.protobuf.int64s
+tags: [method private]
+```
+
+```Go
+func (b *protobuf) int64s(tag int, x []int64)
+```
+
+#### <a id="protobuf.length" href="#protobuf.length">func (b *protobuf) length(tag int, len int)</a>
+
+```
+searchKey: pprof.protobuf.length
+tags: [method private]
+```
+
+```Go
+func (b *protobuf) length(tag int, len int)
+```
+
+#### <a id="protobuf.startMessage" href="#protobuf.startMessage">func (b *protobuf) startMessage() msgOffset</a>
+
+```
+searchKey: pprof.protobuf.startMessage
+tags: [function private]
+```
+
+```Go
+func (b *protobuf) startMessage() msgOffset
+```
+
+#### <a id="protobuf.string" href="#protobuf.string">func (b *protobuf) string(tag int, x string)</a>
+
+```
+searchKey: pprof.protobuf.string
+tags: [method private]
+```
+
+```Go
+func (b *protobuf) string(tag int, x string)
+```
+
+#### <a id="protobuf.stringOpt" href="#protobuf.stringOpt">func (b *protobuf) stringOpt(tag int, x string)</a>
+
+```
+searchKey: pprof.protobuf.stringOpt
+tags: [method private]
+```
+
+```Go
+func (b *protobuf) stringOpt(tag int, x string)
+```
+
+#### <a id="protobuf.strings" href="#protobuf.strings">func (b *protobuf) strings(tag int, x []string)</a>
+
+```
+searchKey: pprof.protobuf.strings
+tags: [method private]
+```
+
+```Go
+func (b *protobuf) strings(tag int, x []string)
+```
+
+#### <a id="protobuf.uint64" href="#protobuf.uint64">func (b *protobuf) uint64(tag int, x uint64)</a>
+
+```
+searchKey: pprof.protobuf.uint64
+tags: [method private]
+```
+
+```Go
+func (b *protobuf) uint64(tag int, x uint64)
+```
+
+#### <a id="protobuf.uint64Opt" href="#protobuf.uint64Opt">func (b *protobuf) uint64Opt(tag int, x uint64)</a>
+
+```
+searchKey: pprof.protobuf.uint64Opt
+tags: [method private]
+```
+
+```Go
+func (b *protobuf) uint64Opt(tag int, x uint64)
+```
+
+#### <a id="protobuf.uint64s" href="#protobuf.uint64s">func (b *protobuf) uint64s(tag int, x []uint64)</a>
+
+```
+searchKey: pprof.protobuf.uint64s
+tags: [method private]
+```
+
+```Go
+func (b *protobuf) uint64s(tag int, x []uint64)
+```
+
+#### <a id="protobuf.varint" href="#protobuf.varint">func (b *protobuf) varint(x uint64)</a>
+
+```
+searchKey: pprof.protobuf.varint
+tags: [method private]
+```
+
+```Go
+func (b *protobuf) varint(x uint64)
+```
+
+### <a id="runtimeProfile" href="#runtimeProfile">type runtimeProfile struct</a>
+
+```
+searchKey: pprof.runtimeProfile
+tags: [struct private]
+```
+
+```Go
+type runtimeProfile struct {
+	stk    []runtime.StackRecord
+	labels []unsafe.Pointer
+}
+```
+
+#### <a id="runtimeProfile.Label" href="#runtimeProfile.Label">func (p *runtimeProfile) Label(i int) *labelMap</a>
+
+```
+searchKey: pprof.runtimeProfile.Label
+tags: [method private]
+```
+
+```Go
+func (p *runtimeProfile) Label(i int) *labelMap
+```
+
+#### <a id="runtimeProfile.Len" href="#runtimeProfile.Len">func (p *runtimeProfile) Len() int</a>
+
+```
+searchKey: pprof.runtimeProfile.Len
+tags: [function private]
+```
+
+```Go
+func (p *runtimeProfile) Len() int
+```
+
+#### <a id="runtimeProfile.Stack" href="#runtimeProfile.Stack">func (p *runtimeProfile) Stack(i int) []uintptr</a>
+
+```
+searchKey: pprof.runtimeProfile.Stack
+tags: [method private]
+```
+
+```Go
+func (p *runtimeProfile) Stack(i int) []uintptr
+```
+
+### <a id="stackProfile" href="#stackProfile">type stackProfile [][]uintptr</a>
+
+```
+searchKey: pprof.stackProfile
+tags: [array array number private]
+```
+
+```Go
+type stackProfile [][]uintptr
+```
+
+#### <a id="stackProfile.Label" href="#stackProfile.Label">func (x stackProfile) Label(i int) *labelMap</a>
+
+```
+searchKey: pprof.stackProfile.Label
+tags: [method private]
+```
+
+```Go
+func (x stackProfile) Label(i int) *labelMap
+```
+
+#### <a id="stackProfile.Len" href="#stackProfile.Len">func (x stackProfile) Len() int</a>
+
+```
+searchKey: pprof.stackProfile.Len
+tags: [function private]
+```
+
+```Go
+func (x stackProfile) Len() int
+```
+
+#### <a id="stackProfile.Stack" href="#stackProfile.Stack">func (x stackProfile) Stack(i int) []uintptr</a>
+
+```
+searchKey: pprof.stackProfile.Stack
+tags: [method private]
+```
+
+```Go
+func (x stackProfile) Stack(i int) []uintptr
 ```
 
 ### <a id="symbolizeFlag" href="#symbolizeFlag">type symbolizeFlag uint8</a>
 
 ```
 searchKey: pprof.symbolizeFlag
-tags: [private]
+tags: [number private]
 ```
 
 ```Go
@@ -1843,390 +2199,37 @@ symbolizeFlag keeps track of symbolization result.
 
 ```
 searchKey: pprof.allFrames
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func allFrames(addr uintptr) ([]runtime.Frame, symbolizeFlag)
 ```
 
-### <a id="locInfo" href="#locInfo">type locInfo struct</a>
-
-```
-searchKey: pprof.locInfo
-tags: [private]
-```
-
-```Go
-type locInfo struct {
-	// location id assigned by the profileBuilder
-	id uint64
-
-	// sequence of PCs, including the fake PCs returned by the traceback
-	// to represent inlined functions
-	// https://github.com/golang/go/blob/d6f2f833c93a41ec1c68e49804b8387a06b131c5/src/runtime/traceback.go#L347-L368
-	pcs []uintptr
-}
-```
-
-### <a id="pcDeck" href="#pcDeck">type pcDeck struct</a>
-
-```
-searchKey: pprof.pcDeck
-tags: [private]
-```
-
-```Go
-type pcDeck struct {
-	pcs             []uintptr
-	frames          []runtime.Frame
-	symbolizeResult symbolizeFlag
-}
-```
-
-pcDeck is a helper to detect a sequence of inlined functions from a stack trace returned by the runtime. 
-
-The stack traces returned by runtime's trackback functions are fully expanded (at least for Go functions) and include the fake pcs representing inlined functions. The profile proto expects the inlined functions to be encoded in one Location message. [https://github.com/google/pprof/blob/5e965273ee43930341d897407202dd5e10e952cb/proto/profile.proto#L177-L184](https://github.com/google/pprof/blob/5e965273ee43930341d897407202dd5e10e952cb/proto/profile.proto#L177-L184) 
-
-Runtime does not directly expose whether a frame is for an inlined function and looking up debug info is not ideal, so we use a heuristic to filter the fake pcs and restore the inlined and entry functions. Inlined functions have the following properties: 
-
-```
-Frame's Func is nil (note: also true for non-Go functions), and
-Frame's Entry matches its entry function frame's Entry (note: could also be true for recursive calls and non-Go functions), and
-Frame's Name does not match its entry function frame's name (note: inlined functions cannot be directly recursive).
-
-```
-As reading and processing the pcs in a stack trace one by one (from leaf to the root), we use pcDeck to temporarily hold the observed pcs and their expanded frames until we observe the entry function frame. 
-
-#### <a id="pcDeck.reset" href="#pcDeck.reset">func (d *pcDeck) reset()</a>
-
-```
-searchKey: pprof.pcDeck.reset
-tags: [private]
-```
-
-```Go
-func (d *pcDeck) reset()
-```
-
-#### <a id="pcDeck.tryAdd" href="#pcDeck.tryAdd">func (d *pcDeck) tryAdd(pc uintptr, frames []runtime.Frame, symbolizeResult symbolizeFlag) (success bool)</a>
-
-```
-searchKey: pprof.pcDeck.tryAdd
-tags: [private]
-```
-
-```Go
-func (d *pcDeck) tryAdd(pc uintptr, frames []runtime.Frame, symbolizeResult symbolizeFlag) (success bool)
-```
-
-tryAdd tries to add the pc and Frames expanded from it (most likely one, since the stack trace is already fully expanded) and the symbolizeResult to the deck. If it fails the caller needs to flush the deck and retry. 
-
-### <a id="protobuf" href="#protobuf">type protobuf struct</a>
-
-```
-searchKey: pprof.protobuf
-tags: [private]
-```
-
-```Go
-type protobuf struct {
-	data []byte
-	tmp  [16]byte
-	nest int
-}
-```
-
-A protobuf is a simple protocol buffer encoder. 
-
-#### <a id="protobuf.varint" href="#protobuf.varint">func (b *protobuf) varint(x uint64)</a>
-
-```
-searchKey: pprof.protobuf.varint
-tags: [private]
-```
-
-```Go
-func (b *protobuf) varint(x uint64)
-```
-
-#### <a id="protobuf.length" href="#protobuf.length">func (b *protobuf) length(tag int, len int)</a>
-
-```
-searchKey: pprof.protobuf.length
-tags: [private]
-```
-
-```Go
-func (b *protobuf) length(tag int, len int)
-```
-
-#### <a id="protobuf.uint64" href="#protobuf.uint64">func (b *protobuf) uint64(tag int, x uint64)</a>
-
-```
-searchKey: pprof.protobuf.uint64
-tags: [private]
-```
-
-```Go
-func (b *protobuf) uint64(tag int, x uint64)
-```
-
-#### <a id="protobuf.uint64s" href="#protobuf.uint64s">func (b *protobuf) uint64s(tag int, x []uint64)</a>
-
-```
-searchKey: pprof.protobuf.uint64s
-tags: [private]
-```
-
-```Go
-func (b *protobuf) uint64s(tag int, x []uint64)
-```
-
-#### <a id="protobuf.uint64Opt" href="#protobuf.uint64Opt">func (b *protobuf) uint64Opt(tag int, x uint64)</a>
-
-```
-searchKey: pprof.protobuf.uint64Opt
-tags: [private]
-```
-
-```Go
-func (b *protobuf) uint64Opt(tag int, x uint64)
-```
-
-#### <a id="protobuf.int64" href="#protobuf.int64">func (b *protobuf) int64(tag int, x int64)</a>
-
-```
-searchKey: pprof.protobuf.int64
-tags: [private]
-```
-
-```Go
-func (b *protobuf) int64(tag int, x int64)
-```
-
-#### <a id="protobuf.int64Opt" href="#protobuf.int64Opt">func (b *protobuf) int64Opt(tag int, x int64)</a>
-
-```
-searchKey: pprof.protobuf.int64Opt
-tags: [private]
-```
-
-```Go
-func (b *protobuf) int64Opt(tag int, x int64)
-```
-
-#### <a id="protobuf.int64s" href="#protobuf.int64s">func (b *protobuf) int64s(tag int, x []int64)</a>
-
-```
-searchKey: pprof.protobuf.int64s
-tags: [private]
-```
-
-```Go
-func (b *protobuf) int64s(tag int, x []int64)
-```
-
-#### <a id="protobuf.string" href="#protobuf.string">func (b *protobuf) string(tag int, x string)</a>
-
-```
-searchKey: pprof.protobuf.string
-tags: [private]
-```
-
-```Go
-func (b *protobuf) string(tag int, x string)
-```
-
-#### <a id="protobuf.strings" href="#protobuf.strings">func (b *protobuf) strings(tag int, x []string)</a>
-
-```
-searchKey: pprof.protobuf.strings
-tags: [private]
-```
-
-```Go
-func (b *protobuf) strings(tag int, x []string)
-```
-
-#### <a id="protobuf.stringOpt" href="#protobuf.stringOpt">func (b *protobuf) stringOpt(tag int, x string)</a>
-
-```
-searchKey: pprof.protobuf.stringOpt
-tags: [private]
-```
-
-```Go
-func (b *protobuf) stringOpt(tag int, x string)
-```
-
-#### <a id="protobuf.bool" href="#protobuf.bool">func (b *protobuf) bool(tag int, x bool)</a>
-
-```
-searchKey: pprof.protobuf.bool
-tags: [private]
-```
-
-```Go
-func (b *protobuf) bool(tag int, x bool)
-```
-
-#### <a id="protobuf.boolOpt" href="#protobuf.boolOpt">func (b *protobuf) boolOpt(tag int, x bool)</a>
-
-```
-searchKey: pprof.protobuf.boolOpt
-tags: [private]
-```
-
-```Go
-func (b *protobuf) boolOpt(tag int, x bool)
-```
-
-#### <a id="protobuf.startMessage" href="#protobuf.startMessage">func (b *protobuf) startMessage() msgOffset</a>
-
-```
-searchKey: pprof.protobuf.startMessage
-tags: [private]
-```
-
-```Go
-func (b *protobuf) startMessage() msgOffset
-```
-
-#### <a id="protobuf.endMessage" href="#protobuf.endMessage">func (b *protobuf) endMessage(tag int, start msgOffset)</a>
-
-```
-searchKey: pprof.protobuf.endMessage
-tags: [private]
-```
-
-```Go
-func (b *protobuf) endMessage(tag int, start msgOffset)
-```
-
-### <a id="msgOffset" href="#msgOffset">type msgOffset int</a>
-
-```
-searchKey: pprof.msgOffset
-tags: [private]
-```
-
-```Go
-type msgOffset int
-```
-
-### <a id="labelSorter" href="#labelSorter">type labelSorter []pprof.label</a>
-
-```
-searchKey: pprof.labelSorter
-tags: [private]
-```
-
-```Go
-type labelSorter []label
-```
-
-#### <a id="labelSorter.Len" href="#labelSorter.Len">func (s labelSorter) Len() int</a>
-
-```
-searchKey: pprof.labelSorter.Len
-tags: [private]
-```
-
-```Go
-func (s labelSorter) Len() int
-```
-
-#### <a id="labelSorter.Swap" href="#labelSorter.Swap">func (s labelSorter) Swap(i, j int)</a>
-
-```
-searchKey: pprof.labelSorter.Swap
-tags: [private]
-```
-
-```Go
-func (s labelSorter) Swap(i, j int)
-```
-
-#### <a id="labelSorter.Less" href="#labelSorter.Less">func (s labelSorter) Less(i, j int) bool</a>
-
-```
-searchKey: pprof.labelSorter.Less
-tags: [private]
-```
-
-```Go
-func (s labelSorter) Less(i, j int) bool
-```
-
-### <a id="Obj32" href="#Obj32">type Obj32 struct</a>
-
-```
-searchKey: pprof.Obj32
-tags: [private]
-```
-
-```Go
-type Obj32 struct {
-	link *Obj32
-	pad  [32 - unsafe.Sizeof(uintptr(0))]byte
-}
-```
-
-### <a id="matchFunc" href="#matchFunc">type matchFunc func(spec string, count uintptr, stk []*internal/profile.Location, labels map[string][]string) bool</a>
-
-```
-searchKey: pprof.matchFunc
-tags: [private]
-```
-
-```Go
-type matchFunc func(spec string, count uintptr, stk []*profile.Location, labels map[string][]string) bool
-```
-
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="elfBuildID" href="#elfBuildID">func elfBuildID(file string) (string, error)</a>
-
 ```
-searchKey: pprof.elfBuildID
-tags: [private]
+tags: [package]
 ```
 
-```Go
-func elfBuildID(file string) (string, error)
-```
-
-elfBuildID returns the GNU build ID of the named ELF binary, without introducing a dependency on debug/elf and its dependencies. 
-
-### <a id="WithLabels" href="#WithLabels">func WithLabels(ctx context.Context, labels LabelSet) context.Context</a>
+### <a id="Do" href="#Do">func Do(ctx context.Context, labels LabelSet, f func(context.Context))</a>
 
 ```
-searchKey: pprof.WithLabels
+searchKey: pprof.Do
+tags: [method]
 ```
 
 ```Go
-func WithLabels(ctx context.Context, labels LabelSet) context.Context
+func Do(ctx context.Context, labels LabelSet, f func(context.Context))
 ```
 
-WithLabels returns a new context.Context with the given labels added. A label overwrites a prior label with the same key. 
-
-### <a id="Label" href="#Label">func Label(ctx context.Context, key string) (string, bool)</a>
-
-```
-searchKey: pprof.Label
-```
-
-```Go
-func Label(ctx context.Context, key string) (string, bool)
-```
-
-Label returns the value of the label with the given key on ctx, and a boolean indicating whether that label exists. 
+Do calls f with a copy of the parent context with the given labels added to the parent's label map. Goroutines spawned while executing f will inherit the augmented label-set. Each key/value pair in labels is inserted into the label map in the order provided, overriding any previous value for the same key. The augmented label map will be set for the duration of the call to f and restored once f returns. 
 
 ### <a id="ForLabels" href="#ForLabels">func ForLabels(ctx context.Context, f func(key, value string) bool)</a>
 
 ```
 searchKey: pprof.ForLabels
+tags: [method]
 ```
 
 ```Go
@@ -2235,32 +2238,24 @@ func ForLabels(ctx context.Context, f func(key, value string) bool)
 
 ForLabels invokes f with each label set on the context. The function f should return true to continue iteration or false to stop iteration early. 
 
-### <a id="lockProfiles" href="#lockProfiles">func lockProfiles()</a>
+### <a id="Label" href="#Label">func Label(ctx context.Context, key string) (string, bool)</a>
 
 ```
-searchKey: pprof.lockProfiles
-tags: [private]
-```
-
-```Go
-func lockProfiles()
-```
-
-### <a id="unlockProfiles" href="#unlockProfiles">func unlockProfiles()</a>
-
-```
-searchKey: pprof.unlockProfiles
-tags: [private]
+searchKey: pprof.Label
+tags: [method]
 ```
 
 ```Go
-func unlockProfiles()
+func Label(ctx context.Context, key string) (string, bool)
 ```
+
+Label returns the value of the label with the given key on ctx, and a boolean indicating whether that label exists. 
 
 ### <a id="Profiles" href="#Profiles">func Profiles() []*Profile</a>
 
 ```
 searchKey: pprof.Profiles
+tags: [function]
 ```
 
 ```Go
@@ -2269,198 +2264,24 @@ func Profiles() []*Profile
 
 Profiles returns a slice of all the known profiles, sorted by name. 
 
-### <a id="printCountCycleProfile" href="#printCountCycleProfile">func printCountCycleProfile(w io.Writer, countName, cycleName string, scaler func(int64, float64) (int64, float64), records []runtime.BlockProfileRecord) error</a>
+### <a id="SetGoroutineLabels" href="#SetGoroutineLabels">func SetGoroutineLabels(ctx context.Context)</a>
 
 ```
-searchKey: pprof.printCountCycleProfile
-tags: [private]
-```
-
-```Go
-func printCountCycleProfile(w io.Writer, countName, cycleName string, scaler func(int64, float64) (int64, float64), records []runtime.BlockProfileRecord) error
-```
-
-printCountCycleProfile outputs block profile records (for block or mutex profiles) as the pprof-proto format output. Translations from cycle count to time duration are done because The proto expects count and time (nanoseconds) instead of count and the number of cycles for block, contention profiles. Possible 'scaler' functions are scaleBlockProfile and scaleMutexProfile. 
-
-### <a id="printCountProfile" href="#printCountProfile">func printCountProfile(w io.Writer, debug int, name string, p countProfile) error</a>
-
-```
-searchKey: pprof.printCountProfile
-tags: [private]
+searchKey: pprof.SetGoroutineLabels
+tags: [method]
 ```
 
 ```Go
-func printCountProfile(w io.Writer, debug int, name string, p countProfile) error
+func SetGoroutineLabels(ctx context.Context)
 ```
 
-printCountProfile prints a countProfile at the specified debug level. The profile will be in compressed proto format unless debug is nonzero. 
-
-### <a id="printStackRecord" href="#printStackRecord">func printStackRecord(w io.Writer, stk []uintptr, allFrames bool)</a>
-
-```
-searchKey: pprof.printStackRecord
-tags: [private]
-```
-
-```Go
-func printStackRecord(w io.Writer, stk []uintptr, allFrames bool)
-```
-
-printStackRecord prints the function + source line information for a single stack trace. 
-
-### <a id="WriteHeapProfile" href="#WriteHeapProfile">func WriteHeapProfile(w io.Writer) error</a>
-
-```
-searchKey: pprof.WriteHeapProfile
-```
-
-```Go
-func WriteHeapProfile(w io.Writer) error
-```
-
-WriteHeapProfile is shorthand for Lookup("heap").WriteTo(w, 0). It is preserved for backwards compatibility. 
-
-### <a id="countHeap" href="#countHeap">func countHeap() int</a>
-
-```
-searchKey: pprof.countHeap
-tags: [private]
-```
-
-```Go
-func countHeap() int
-```
-
-countHeap returns the number of records in the heap profile. 
-
-### <a id="writeHeap" href="#writeHeap">func writeHeap(w io.Writer, debug int) error</a>
-
-```
-searchKey: pprof.writeHeap
-tags: [private]
-```
-
-```Go
-func writeHeap(w io.Writer, debug int) error
-```
-
-writeHeap writes the current runtime heap profile to w. 
-
-### <a id="writeAlloc" href="#writeAlloc">func writeAlloc(w io.Writer, debug int) error</a>
-
-```
-searchKey: pprof.writeAlloc
-tags: [private]
-```
-
-```Go
-func writeAlloc(w io.Writer, debug int) error
-```
-
-writeAlloc writes the current runtime heap profile to w with the total allocation space as the default sample type. 
-
-### <a id="writeHeapInternal" href="#writeHeapInternal">func writeHeapInternal(w io.Writer, debug int, defaultSampleType string) error</a>
-
-```
-searchKey: pprof.writeHeapInternal
-tags: [private]
-```
-
-```Go
-func writeHeapInternal(w io.Writer, debug int, defaultSampleType string) error
-```
-
-### <a id="countThreadCreate" href="#countThreadCreate">func countThreadCreate() int</a>
-
-```
-searchKey: pprof.countThreadCreate
-tags: [private]
-```
-
-```Go
-func countThreadCreate() int
-```
-
-countThreadCreate returns the size of the current ThreadCreateProfile. 
-
-### <a id="writeThreadCreate" href="#writeThreadCreate">func writeThreadCreate(w io.Writer, debug int) error</a>
-
-```
-searchKey: pprof.writeThreadCreate
-tags: [private]
-```
-
-```Go
-func writeThreadCreate(w io.Writer, debug int) error
-```
-
-writeThreadCreate writes the current runtime ThreadCreateProfile to w. 
-
-### <a id="countGoroutine" href="#countGoroutine">func countGoroutine() int</a>
-
-```
-searchKey: pprof.countGoroutine
-tags: [private]
-```
-
-```Go
-func countGoroutine() int
-```
-
-countGoroutine returns the number of goroutines. 
-
-### <a id="runtime_goroutineProfileWithLabels" href="#runtime_goroutineProfileWithLabels">func runtime_goroutineProfileWithLabels(p []runtime.StackRecord, labels []unsafe.Pointer) (n int, ok bool)</a>
-
-```
-searchKey: pprof.runtime_goroutineProfileWithLabels
-tags: [private]
-```
-
-```Go
-func runtime_goroutineProfileWithLabels(p []runtime.StackRecord, labels []unsafe.Pointer) (n int, ok bool)
-```
-
-runtime_goroutineProfileWithLabels is defined in runtime/mprof.go 
-
-### <a id="writeGoroutine" href="#writeGoroutine">func writeGoroutine(w io.Writer, debug int) error</a>
-
-```
-searchKey: pprof.writeGoroutine
-tags: [private]
-```
-
-```Go
-func writeGoroutine(w io.Writer, debug int) error
-```
-
-writeGoroutine writes the current runtime GoroutineProfile to w. 
-
-### <a id="writeGoroutineStacks" href="#writeGoroutineStacks">func writeGoroutineStacks(w io.Writer) error</a>
-
-```
-searchKey: pprof.writeGoroutineStacks
-tags: [private]
-```
-
-```Go
-func writeGoroutineStacks(w io.Writer) error
-```
-
-### <a id="writeRuntimeProfile" href="#writeRuntimeProfile">func writeRuntimeProfile(w io.Writer, debug int, name string, fetch func([]runtime.StackRecord, []unsafe.Pointer) (int, bool)) error</a>
-
-```
-searchKey: pprof.writeRuntimeProfile
-tags: [private]
-```
-
-```Go
-func writeRuntimeProfile(w io.Writer, debug int, name string, fetch func([]runtime.StackRecord, []unsafe.Pointer) (int, bool)) error
-```
+SetGoroutineLabels sets the current goroutine's labels to match ctx. A new goroutine inherits the labels of the goroutine that created it. This is a lower-level API than Do, which should be used instead when possible. 
 
 ### <a id="StartCPUProfile" href="#StartCPUProfile">func StartCPUProfile(w io.Writer) error</a>
 
 ```
 searchKey: pprof.StartCPUProfile
+tags: [method]
 ```
 
 ```Go
@@ -2471,34 +2292,11 @@ StartCPUProfile enables CPU profiling for the current process. While profiling, 
 
 On Unix-like systems, StartCPUProfile does not work by default for Go code built with -buildmode=c-archive or -buildmode=c-shared. StartCPUProfile relies on the SIGPROF signal, but that signal will be delivered to the main program's SIGPROF signal handler (if any) not to the one used by Go. To make it work, call os/signal.Notify for syscall.SIGPROF, but note that doing so may break any profiling being done by the main program. 
 
-### <a id="readProfile" href="#readProfile">func readProfile() (data []uint64, tags []unsafe.Pointer, eof bool)</a>
-
-```
-searchKey: pprof.readProfile
-tags: [private]
-```
-
-```Go
-func readProfile() (data []uint64, tags []unsafe.Pointer, eof bool)
-```
-
-readProfile, provided by the runtime, returns the next chunk of binary CPU profiling stack trace data, blocking until data is available. If profiling is turned off and all the profile data accumulated while it was on has been returned, readProfile returns eof=true. The caller must save the returned data and tags before calling readProfile again. 
-
-### <a id="profileWriter" href="#profileWriter">func profileWriter(w io.Writer)</a>
-
-```
-searchKey: pprof.profileWriter
-tags: [private]
-```
-
-```Go
-func profileWriter(w io.Writer)
-```
-
 ### <a id="StopCPUProfile" href="#StopCPUProfile">func StopCPUProfile()</a>
 
 ```
 searchKey: pprof.StopCPUProfile
+tags: [function]
 ```
 
 ```Go
@@ -2507,109 +2305,389 @@ func StopCPUProfile()
 
 StopCPUProfile stops the current CPU profile, if any. StopCPUProfile only returns after all the writes for the profile have completed. 
 
-### <a id="countBlock" href="#countBlock">func countBlock() int</a>
+### <a id="TestAtomicLoadStore64" href="#TestAtomicLoadStore64">func TestAtomicLoadStore64(t *testing.T)</a>
 
 ```
-searchKey: pprof.countBlock
-tags: [private]
-```
-
-```Go
-func countBlock() int
-```
-
-countBlock returns the number of records in the blocking profile. 
-
-### <a id="countMutex" href="#countMutex">func countMutex() int</a>
-
-```
-searchKey: pprof.countMutex
-tags: [private]
+searchKey: pprof.TestAtomicLoadStore64
+tags: [method private test]
 ```
 
 ```Go
-func countMutex() int
+func TestAtomicLoadStore64(t *testing.T)
 ```
 
-countMutex returns the number of records in the mutex profile. 
+Check that there is no deadlock when the program receives SIGPROF while in 64bit atomics' critical section. Used to happen on mips{,le}. See #20146. 
 
-### <a id="writeBlock" href="#writeBlock">func writeBlock(w io.Writer, debug int) error</a>
-
-```
-searchKey: pprof.writeBlock
-tags: [private]
-```
-
-```Go
-func writeBlock(w io.Writer, debug int) error
-```
-
-writeBlock writes the current blocking profile to w. 
-
-### <a id="scaleBlockProfile" href="#scaleBlockProfile">func scaleBlockProfile(cnt int64, ns float64) (int64, float64)</a>
+### <a id="TestBlockProfile" href="#TestBlockProfile">func TestBlockProfile(t *testing.T)</a>
 
 ```
-searchKey: pprof.scaleBlockProfile
-tags: [private]
+searchKey: pprof.TestBlockProfile
+tags: [method private test]
 ```
 
 ```Go
-func scaleBlockProfile(cnt int64, ns float64) (int64, float64)
+func TestBlockProfile(t *testing.T)
 ```
 
-### <a id="writeMutex" href="#writeMutex">func writeMutex(w io.Writer, debug int) error</a>
+### <a id="TestBlockProfileBias" href="#TestBlockProfileBias">func TestBlockProfileBias(t *testing.T)</a>
 
 ```
-searchKey: pprof.writeMutex
-tags: [private]
-```
-
-```Go
-func writeMutex(w io.Writer, debug int) error
-```
-
-writeMutex writes the current mutex profile to w. 
-
-### <a id="writeProfileInternal" href="#writeProfileInternal">func writeProfileInternal(w io.Writer, debug int, name string, runtimeProfile func([]runtime.BlockProfileRecord) (int, bool), scaleProfile func(int64, float64) (int64, float64)) error</a>
-
-```
-searchKey: pprof.writeProfileInternal
-tags: [private]
+searchKey: pprof.TestBlockProfileBias
+tags: [method private test]
 ```
 
 ```Go
-func writeProfileInternal(w io.Writer, debug int, name string, runtimeProfile func([]runtime.BlockProfileRecord) (int, bool), scaleProfile func(int64, float64) (int64, float64)) error
+func TestBlockProfileBias(t *testing.T)
 ```
 
-writeProfileInternal writes the current blocking or mutex profile depending on the passed parameters 
+See [http://golang.org/cl/299991](http://golang.org/cl/299991). 
 
-### <a id="scaleMutexProfile" href="#scaleMutexProfile">func scaleMutexProfile(cnt int64, ns float64) (int64, float64)</a>
-
-```
-searchKey: pprof.scaleMutexProfile
-tags: [private]
-```
-
-```Go
-func scaleMutexProfile(cnt int64, ns float64) (int64, float64)
-```
-
-### <a id="runtime_cyclesPerSecond" href="#runtime_cyclesPerSecond">func runtime_cyclesPerSecond() int64</a>
+### <a id="TestCPUProfile" href="#TestCPUProfile">func TestCPUProfile(t *testing.T)</a>
 
 ```
-searchKey: pprof.runtime_cyclesPerSecond
-tags: [private]
+searchKey: pprof.TestCPUProfile
+tags: [method private test]
 ```
 
 ```Go
-func runtime_cyclesPerSecond() int64
+func TestCPUProfile(t *testing.T)
 ```
+
+### <a id="TestCPUProfileInlining" href="#TestCPUProfileInlining">func TestCPUProfileInlining(t *testing.T)</a>
+
+```
+searchKey: pprof.TestCPUProfileInlining
+tags: [method private test]
+```
+
+```Go
+func TestCPUProfileInlining(t *testing.T)
+```
+
+### <a id="TestCPUProfileLabel" href="#TestCPUProfileLabel">func TestCPUProfileLabel(t *testing.T)</a>
+
+```
+searchKey: pprof.TestCPUProfileLabel
+tags: [method private test]
+```
+
+```Go
+func TestCPUProfileLabel(t *testing.T)
+```
+
+### <a id="TestCPUProfileMultithreaded" href="#TestCPUProfileMultithreaded">func TestCPUProfileMultithreaded(t *testing.T)</a>
+
+```
+searchKey: pprof.TestCPUProfileMultithreaded
+tags: [method private test]
+```
+
+```Go
+func TestCPUProfileMultithreaded(t *testing.T)
+```
+
+### <a id="TestCPUProfileRecursion" href="#TestCPUProfileRecursion">func TestCPUProfileRecursion(t *testing.T)</a>
+
+```
+searchKey: pprof.TestCPUProfileRecursion
+tags: [method private test]
+```
+
+```Go
+func TestCPUProfileRecursion(t *testing.T)
+```
+
+### <a id="TestCPUProfileWithFork" href="#TestCPUProfileWithFork">func TestCPUProfileWithFork(t *testing.T)</a>
+
+```
+searchKey: pprof.TestCPUProfileWithFork
+tags: [method private test]
+```
+
+```Go
+func TestCPUProfileWithFork(t *testing.T)
+```
+
+Fork can hang if preempted with signals frequently enough (see issue 5517). Ensure that we do not do this. 
+
+### <a id="TestContextLabels" href="#TestContextLabels">func TestContextLabels(t *testing.T)</a>
+
+```
+searchKey: pprof.TestContextLabels
+tags: [method private test]
+```
+
+```Go
+func TestContextLabels(t *testing.T)
+```
+
+### <a id="TestConvertCPUProfile" href="#TestConvertCPUProfile">func TestConvertCPUProfile(t *testing.T)</a>
+
+```
+searchKey: pprof.TestConvertCPUProfile
+tags: [method private test]
+```
+
+```Go
+func TestConvertCPUProfile(t *testing.T)
+```
+
+### <a id="TestConvertCPUProfileEmpty" href="#TestConvertCPUProfileEmpty">func TestConvertCPUProfileEmpty(t *testing.T)</a>
+
+```
+searchKey: pprof.TestConvertCPUProfileEmpty
+tags: [method private test]
+```
+
+```Go
+func TestConvertCPUProfileEmpty(t *testing.T)
+```
+
+### <a id="TestConvertMemProfile" href="#TestConvertMemProfile">func TestConvertMemProfile(t *testing.T)</a>
+
+```
+searchKey: pprof.TestConvertMemProfile
+tags: [method private test]
+```
+
+```Go
+func TestConvertMemProfile(t *testing.T)
+```
+
+### <a id="TestDo" href="#TestDo">func TestDo(t *testing.T)</a>
+
+```
+searchKey: pprof.TestDo
+tags: [method private test]
+```
+
+```Go
+func TestDo(t *testing.T)
+```
+
+### <a id="TestEmptyCallStack" href="#TestEmptyCallStack">func TestEmptyCallStack(t *testing.T)</a>
+
+```
+searchKey: pprof.TestEmptyCallStack
+tags: [method private test]
+```
+
+```Go
+func TestEmptyCallStack(t *testing.T)
+```
+
+Issue 18836. 
+
+### <a id="TestEmptyStack" href="#TestEmptyStack">func TestEmptyStack(t *testing.T)</a>
+
+```
+searchKey: pprof.TestEmptyStack
+tags: [method private test]
+```
+
+```Go
+func TestEmptyStack(t *testing.T)
+```
+
+Make sure the profiler can handle an empty stack trace. See issue 37967. 
+
+### <a id="TestFakeMapping" href="#TestFakeMapping">func TestFakeMapping(t *testing.T)</a>
+
+```
+searchKey: pprof.TestFakeMapping
+tags: [method private test]
+```
+
+```Go
+func TestFakeMapping(t *testing.T)
+```
+
+TestFakeMapping tests if at least one mapping exists (including a fake mapping), and their HasFunctions bits are set correctly. 
+
+### <a id="TestGoroutineCounts" href="#TestGoroutineCounts">func TestGoroutineCounts(t *testing.T)</a>
+
+```
+searchKey: pprof.TestGoroutineCounts
+tags: [method private test]
+```
+
+```Go
+func TestGoroutineCounts(t *testing.T)
+```
+
+### <a id="TestGoroutineSwitch" href="#TestGoroutineSwitch">func TestGoroutineSwitch(t *testing.T)</a>
+
+```
+searchKey: pprof.TestGoroutineSwitch
+tags: [method private test]
+```
+
+```Go
+func TestGoroutineSwitch(t *testing.T)
+```
+
+Test that profiler does not observe runtime.gogo as "user" goroutine execution. If it did, it would see inconsistent state and would either record an incorrect stack or crash because the stack was malformed. 
+
+### <a id="TestLabelMapStringer" href="#TestLabelMapStringer">func TestLabelMapStringer(t *testing.T)</a>
+
+```
+searchKey: pprof.TestLabelMapStringer
+tags: [method private test]
+```
+
+```Go
+func TestLabelMapStringer(t *testing.T)
+```
+
+### <a id="TestLabelRace" href="#TestLabelRace">func TestLabelRace(t *testing.T)</a>
+
+```
+searchKey: pprof.TestLabelRace
+tags: [method private test]
+```
+
+```Go
+func TestLabelRace(t *testing.T)
+```
+
+### <a id="TestMapping" href="#TestMapping">func TestMapping(t *testing.T)</a>
+
+```
+searchKey: pprof.TestMapping
+tags: [method private test]
+```
+
+```Go
+func TestMapping(t *testing.T)
+```
+
+TestMapping checks the mapping section of CPU profiles has the HasFunctions field set correctly. If all PCs included in the samples are successfully symbolized, the corresponding mapping entry (in this test case, only one entry) should have its HasFunctions field set true. The test generates a CPU profile that includes PCs from C side that the runtime can't symbolize. See ./testdata/mappingtest. 
+
+### <a id="TestMathBigDivide" href="#TestMathBigDivide">func TestMathBigDivide(t *testing.T)</a>
+
+```
+searchKey: pprof.TestMathBigDivide
+tags: [method private test]
+```
+
+```Go
+func TestMathBigDivide(t *testing.T)
+```
+
+Test that profiling of division operations is okay, especially on ARM. See issue 6681. 
+
+### <a id="TestMemoryProfiler" href="#TestMemoryProfiler">func TestMemoryProfiler(t *testing.T)</a>
+
+```
+searchKey: pprof.TestMemoryProfiler
+tags: [method private test]
+```
+
+```Go
+func TestMemoryProfiler(t *testing.T)
+```
+
+### <a id="TestMorestack" href="#TestMorestack">func TestMorestack(t *testing.T)</a>
+
+```
+searchKey: pprof.TestMorestack
+tags: [method private test]
+```
+
+```Go
+func TestMorestack(t *testing.T)
+```
+
+### <a id="TestMutexProfile" href="#TestMutexProfile">func TestMutexProfile(t *testing.T)</a>
+
+```
+searchKey: pprof.TestMutexProfile
+tags: [method private test]
+```
+
+```Go
+func TestMutexProfile(t *testing.T)
+```
+
+### <a id="TestProcSelfMaps" href="#TestProcSelfMaps">func TestProcSelfMaps(t *testing.T)</a>
+
+```
+searchKey: pprof.TestProcSelfMaps
+tags: [method private test]
+```
+
+```Go
+func TestProcSelfMaps(t *testing.T)
+```
+
+### <a id="TestSetGoroutineLabels" href="#TestSetGoroutineLabels">func TestSetGoroutineLabels(t *testing.T)</a>
+
+```
+searchKey: pprof.TestSetGoroutineLabels
+tags: [method private test]
+```
+
+```Go
+func TestSetGoroutineLabels(t *testing.T)
+```
+
+### <a id="TestTracebackAll" href="#TestTracebackAll">func TestTracebackAll(t *testing.T)</a>
+
+```
+searchKey: pprof.TestTracebackAll
+tags: [method private test]
+```
+
+```Go
+func TestTracebackAll(t *testing.T)
+```
+
+### <a id="TestTryAdd" href="#TestTryAdd">func TestTryAdd(t *testing.T)</a>
+
+```
+searchKey: pprof.TestTryAdd
+tags: [method private test]
+```
+
+```Go
+func TestTryAdd(t *testing.T)
+```
+
+TestTryAdd tests the cases that are hard to test with real program execution. 
+
+For example, the current go compilers may not always inline functions involved in recursion but that may not be true in the future compilers. This tests such cases by using fake call sequences and forcing the profile build utilizing translateCPUProfile defined in proto_test.go 
+
+### <a id="WithLabels" href="#WithLabels">func WithLabels(ctx context.Context, labels LabelSet) context.Context</a>
+
+```
+searchKey: pprof.WithLabels
+tags: [method]
+```
+
+```Go
+func WithLabels(ctx context.Context, labels LabelSet) context.Context
+```
+
+WithLabels returns a new context.Context with the given labels added. A label overwrites a prior label with the same key. 
+
+### <a id="WriteHeapProfile" href="#WriteHeapProfile">func WriteHeapProfile(w io.Writer) error</a>
+
+```
+searchKey: pprof.WriteHeapProfile
+tags: [method]
+```
+
+```Go
+func WriteHeapProfile(w io.Writer) error
+```
+
+WriteHeapProfile is shorthand for Lookup("heap").WriteTo(w, 0). It is preserved for backwards compatibility. 
 
 ### <a id="addMaxRSS" href="#addMaxRSS">func addMaxRSS(w io.Writer)</a>
 
 ```
 searchKey: pprof.addMaxRSS
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -2618,170 +2696,44 @@ func addMaxRSS(w io.Writer)
 
 Adds MaxRSS to platforms that are supported. 
 
-### <a id="lostProfileEvent" href="#lostProfileEvent">func lostProfileEvent()</a>
+### <a id="allocatePersistent1K" href="#allocatePersistent1K">func allocatePersistent1K()</a>
 
 ```
-searchKey: pprof.lostProfileEvent
-tags: [private]
-```
-
-```Go
-func lostProfileEvent()
-```
-
-lostProfileEvent is the function to which lost profiling events are attributed. (The name shows up in the pprof graphs.) 
-
-### <a id="funcPC" href="#funcPC">func funcPC(f interface{}) uintptr</a>
-
-```
-searchKey: pprof.funcPC
-tags: [private]
+searchKey: pprof.allocatePersistent1K
+tags: [function private]
 ```
 
 ```Go
-func funcPC(f interface{}) uintptr
+func allocatePersistent1K()
 ```
 
-funcPC returns the PC for the func value f. 
-
-### <a id="parseProcSelfMaps" href="#parseProcSelfMaps">func parseProcSelfMaps(data []byte, addMapping func(lo, hi, offset uint64, file, buildID string))</a>
+### <a id="allocateReflect" href="#allocateReflect">func allocateReflect()</a>
 
 ```
-searchKey: pprof.parseProcSelfMaps
-tags: [private]
-```
-
-```Go
-func parseProcSelfMaps(data []byte, addMapping func(lo, hi, offset uint64, file, buildID string))
-```
-
-### <a id="writeHeapProto" href="#writeHeapProto">func writeHeapProto(w io.Writer, p []runtime.MemProfileRecord, rate int64, defaultSampleType string) error</a>
-
-```
-searchKey: pprof.writeHeapProto
-tags: [private]
+searchKey: pprof.allocateReflect
+tags: [function private]
 ```
 
 ```Go
-func writeHeapProto(w io.Writer, p []runtime.MemProfileRecord, rate int64, defaultSampleType string) error
+func allocateReflect()
 ```
 
-writeHeapProto writes the current heap profile in protobuf format to w. 
-
-### <a id="scaleHeapSample" href="#scaleHeapSample">func scaleHeapSample(count, size, rate int64) (int64, int64)</a>
+### <a id="allocateReflectTransient" href="#allocateReflectTransient">func allocateReflectTransient()</a>
 
 ```
-searchKey: pprof.scaleHeapSample
-tags: [private]
-```
-
-```Go
-func scaleHeapSample(count, size, rate int64) (int64, int64)
-```
-
-scaleHeapSample adjusts the data from a heap Sample to account for its probability of appearing in the collected data. heap profiles are a sampling of the memory allocations requests in a program. We estimate the unsampled value by dividing each collected sample by its probability of appearing in the profile. heap profiles rely on a poisson process to determine which samples to collect, based on the desired average collection rate R. The probability of a sample of size S to appear in that profile is 1-exp(-S/R). 
-
-### <a id="runtime_expandFinalInlineFrame" href="#runtime_expandFinalInlineFrame">func runtime_expandFinalInlineFrame(stk []uintptr) []uintptr</a>
-
-```
-searchKey: pprof.runtime_expandFinalInlineFrame
-tags: [private]
+searchKey: pprof.allocateReflectTransient
+tags: [function private]
 ```
 
 ```Go
-func runtime_expandFinalInlineFrame(stk []uintptr) []uintptr
-```
-
-runtime_expandFinalInlineFrame is defined in runtime/symtab.go. 
-
-### <a id="runtime_setProfLabel" href="#runtime_setProfLabel">func runtime_setProfLabel(labels unsafe.Pointer)</a>
-
-```
-searchKey: pprof.runtime_setProfLabel
-tags: [private]
-```
-
-```Go
-func runtime_setProfLabel(labels unsafe.Pointer)
-```
-
-runtime_setProfLabel is defined in runtime/proflabel.go. 
-
-### <a id="runtime_getProfLabel" href="#runtime_getProfLabel">func runtime_getProfLabel() unsafe.Pointer</a>
-
-```
-searchKey: pprof.runtime_getProfLabel
-tags: [private]
-```
-
-```Go
-func runtime_getProfLabel() unsafe.Pointer
-```
-
-runtime_getProfLabel is defined in runtime/proflabel.go. 
-
-### <a id="SetGoroutineLabels" href="#SetGoroutineLabels">func SetGoroutineLabels(ctx context.Context)</a>
-
-```
-searchKey: pprof.SetGoroutineLabels
-```
-
-```Go
-func SetGoroutineLabels(ctx context.Context)
-```
-
-SetGoroutineLabels sets the current goroutine's labels to match ctx. A new goroutine inherits the labels of the goroutine that created it. This is a lower-level API than Do, which should be used instead when possible. 
-
-### <a id="Do" href="#Do">func Do(ctx context.Context, labels LabelSet, f func(context.Context))</a>
-
-```
-searchKey: pprof.Do
-```
-
-```Go
-func Do(ctx context.Context, labels LabelSet, f func(context.Context))
-```
-
-Do calls f with a copy of the parent context with the given labels added to the parent's label map. Goroutines spawned while executing f will inherit the augmented label-set. Each key/value pair in labels is inserted into the label map in the order provided, overriding any previous value for the same key. The augmented label map will be set for the duration of the call to f and restored once f returns. 
-
-### <a id="labelsSorted" href="#labelsSorted">func labelsSorted(ctx context.Context) []label</a>
-
-```
-searchKey: pprof.labelsSorted
-tags: [private]
-```
-
-```Go
-func labelsSorted(ctx context.Context) []label
-```
-
-### <a id="TestContextLabels" href="#TestContextLabels">func TestContextLabels(t *testing.T)</a>
-
-```
-searchKey: pprof.TestContextLabels
-tags: [private]
-```
-
-```Go
-func TestContextLabels(t *testing.T)
-```
-
-### <a id="TestLabelMapStringer" href="#TestLabelMapStringer">func TestLabelMapStringer(t *testing.T)</a>
-
-```
-searchKey: pprof.TestLabelMapStringer
-tags: [private]
-```
-
-```Go
-func TestLabelMapStringer(t *testing.T)
+func allocateReflectTransient()
 ```
 
 ### <a id="allocateTransient1M" href="#allocateTransient1M">func allocateTransient1M()</a>
 
 ```
 searchKey: pprof.allocateTransient1M
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -2792,7 +2744,7 @@ func allocateTransient1M()
 
 ```
 searchKey: pprof.allocateTransient2M
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -2803,108 +2755,18 @@ func allocateTransient2M()
 
 ```
 searchKey: pprof.allocateTransient2MInline
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func allocateTransient2MInline()
 ```
 
-### <a id="allocatePersistent1K" href="#allocatePersistent1K">func allocatePersistent1K()</a>
-
-```
-searchKey: pprof.allocatePersistent1K
-tags: [private]
-```
-
-```Go
-func allocatePersistent1K()
-```
-
-### <a id="allocateReflectTransient" href="#allocateReflectTransient">func allocateReflectTransient()</a>
-
-```
-searchKey: pprof.allocateReflectTransient
-tags: [private]
-```
-
-```Go
-func allocateReflectTransient()
-```
-
-### <a id="allocateReflect" href="#allocateReflect">func allocateReflect()</a>
-
-```
-searchKey: pprof.allocateReflect
-tags: [private]
-```
-
-```Go
-func allocateReflect()
-```
-
-### <a id="TestMemoryProfiler" href="#TestMemoryProfiler">func TestMemoryProfiler(t *testing.T)</a>
-
-```
-searchKey: pprof.TestMemoryProfiler
-tags: [private]
-```
-
-```Go
-func TestMemoryProfiler(t *testing.T)
-```
-
-### <a id="cpuHogger" href="#cpuHogger">func cpuHogger(f func(x int) int, y *int, dur time.Duration)</a>
-
-```
-searchKey: pprof.cpuHogger
-tags: [private]
-```
-
-```Go
-func cpuHogger(f func(x int) int, y *int, dur time.Duration)
-```
-
-### <a id="cpuHog1" href="#cpuHog1">func cpuHog1(x int) int</a>
-
-```
-searchKey: pprof.cpuHog1
-tags: [private]
-```
-
-```Go
-func cpuHog1(x int) int
-```
-
-The actual CPU hogging function. Must not call other functions nor access heap/globals in the loop, otherwise under race detector the samples will be in the race runtime. 
-
-### <a id="cpuHog0" href="#cpuHog0">func cpuHog0(x, n int) int</a>
-
-```
-searchKey: pprof.cpuHog0
-tags: [private]
-```
-
-```Go
-func cpuHog0(x, n int) int
-```
-
-### <a id="cpuHog2" href="#cpuHog2">func cpuHog2(x int) int</a>
-
-```
-searchKey: pprof.cpuHog2
-tags: [private]
-```
-
-```Go
-func cpuHog2(x int) int
-```
-
 ### <a id="avoidFunctions" href="#avoidFunctions">func avoidFunctions() []string</a>
 
 ```
 searchKey: pprof.avoidFunctions
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -2913,401 +2775,22 @@ func avoidFunctions() []string
 
 Return a list of functions that we don't want to ever appear in CPU profiles. For gccgo, that list includes the sigprof handler itself. 
 
-### <a id="TestCPUProfile" href="#TestCPUProfile">func TestCPUProfile(t *testing.T)</a>
+### <a id="blockChanClose" href="#blockChanClose">func blockChanClose()</a>
 
 ```
-searchKey: pprof.TestCPUProfile
-tags: [private]
-```
-
-```Go
-func TestCPUProfile(t *testing.T)
-```
-
-### <a id="TestCPUProfileMultithreaded" href="#TestCPUProfileMultithreaded">func TestCPUProfileMultithreaded(t *testing.T)</a>
-
-```
-searchKey: pprof.TestCPUProfileMultithreaded
-tags: [private]
+searchKey: pprof.blockChanClose
+tags: [function private]
 ```
 
 ```Go
-func TestCPUProfileMultithreaded(t *testing.T)
-```
-
-### <a id="containsInlinedCall" href="#containsInlinedCall">func containsInlinedCall(f interface{}, maxBytes int) bool</a>
-
-```
-searchKey: pprof.containsInlinedCall
-tags: [private]
-```
-
-```Go
-func containsInlinedCall(f interface{}, maxBytes int) bool
-```
-
-containsInlinedCall reports whether the function body for the function f is known to contain an inlined function call within the first maxBytes bytes. 
-
-### <a id="findInlinedCall" href="#findInlinedCall">func findInlinedCall(f interface{}, maxBytes int) (pc uint64, found bool)</a>
-
-```
-searchKey: pprof.findInlinedCall
-tags: [private]
-```
-
-```Go
-func findInlinedCall(f interface{}, maxBytes int) (pc uint64, found bool)
-```
-
-findInlinedCall returns the PC of an inlined function call within the function body for the function f if any. 
-
-### <a id="TestCPUProfileInlining" href="#TestCPUProfileInlining">func TestCPUProfileInlining(t *testing.T)</a>
-
-```
-searchKey: pprof.TestCPUProfileInlining
-tags: [private]
-```
-
-```Go
-func TestCPUProfileInlining(t *testing.T)
-```
-
-### <a id="inlinedCaller" href="#inlinedCaller">func inlinedCaller(x int) int</a>
-
-```
-searchKey: pprof.inlinedCaller
-tags: [private]
-```
-
-```Go
-func inlinedCaller(x int) int
-```
-
-### <a id="inlinedCallee" href="#inlinedCallee">func inlinedCallee(x, n int) int</a>
-
-```
-searchKey: pprof.inlinedCallee
-tags: [private]
-```
-
-```Go
-func inlinedCallee(x, n int) int
-```
-
-### <a id="dumpCallers" href="#dumpCallers">func dumpCallers(pcs []uintptr)</a>
-
-```
-searchKey: pprof.dumpCallers
-tags: [private]
-```
-
-```Go
-func dumpCallers(pcs []uintptr)
-```
-
-### <a id="inlinedCallerDump" href="#inlinedCallerDump">func inlinedCallerDump(pcs []uintptr)</a>
-
-```
-searchKey: pprof.inlinedCallerDump
-tags: [private]
-```
-
-```Go
-func inlinedCallerDump(pcs []uintptr)
-```
-
-### <a id="inlinedCalleeDump" href="#inlinedCalleeDump">func inlinedCalleeDump(pcs []uintptr)</a>
-
-```
-searchKey: pprof.inlinedCalleeDump
-tags: [private]
-```
-
-```Go
-func inlinedCalleeDump(pcs []uintptr)
-```
-
-### <a id="TestCPUProfileRecursion" href="#TestCPUProfileRecursion">func TestCPUProfileRecursion(t *testing.T)</a>
-
-```
-searchKey: pprof.TestCPUProfileRecursion
-tags: [private]
-```
-
-```Go
-func TestCPUProfileRecursion(t *testing.T)
-```
-
-### <a id="recursionCaller" href="#recursionCaller">func recursionCaller(x int) int</a>
-
-```
-searchKey: pprof.recursionCaller
-tags: [private]
-```
-
-```Go
-func recursionCaller(x int) int
-```
-
-### <a id="recursionCallee" href="#recursionCallee">func recursionCallee(n, x int) int</a>
-
-```
-searchKey: pprof.recursionCallee
-tags: [private]
-```
-
-```Go
-func recursionCallee(n, x int) int
-```
-
-### <a id="recursionChainTop" href="#recursionChainTop">func recursionChainTop(x int, pcs []uintptr)</a>
-
-```
-searchKey: pprof.recursionChainTop
-tags: [private]
-```
-
-```Go
-func recursionChainTop(x int, pcs []uintptr)
-```
-
-### <a id="recursionChainMiddle" href="#recursionChainMiddle">func recursionChainMiddle(x int, pcs []uintptr)</a>
-
-```
-searchKey: pprof.recursionChainMiddle
-tags: [private]
-```
-
-```Go
-func recursionChainMiddle(x int, pcs []uintptr)
-```
-
-### <a id="recursionChainBottom" href="#recursionChainBottom">func recursionChainBottom(x int, pcs []uintptr)</a>
-
-```
-searchKey: pprof.recursionChainBottom
-tags: [private]
-```
-
-```Go
-func recursionChainBottom(x int, pcs []uintptr)
-```
-
-### <a id="parseProfile" href="#parseProfile">func parseProfile(t *testing.T, valBytes []byte, f func(uintptr, []*profile.Location, map[string][]string)) *profile.Profile</a>
-
-```
-searchKey: pprof.parseProfile
-tags: [private]
-```
-
-```Go
-func parseProfile(t *testing.T, valBytes []byte, f func(uintptr, []*profile.Location, map[string][]string)) *profile.Profile
-```
-
-### <a id="cpuProfilingBroken" href="#cpuProfilingBroken">func cpuProfilingBroken() bool</a>
-
-```
-searchKey: pprof.cpuProfilingBroken
-tags: [private]
-```
-
-```Go
-func cpuProfilingBroken() bool
-```
-
-### <a id="testCPUProfile" href="#testCPUProfile">func testCPUProfile(t *testing.T, matches matchFunc, need []string, avoid []string, f func(dur time.Duration)) *profile.Profile</a>
-
-```
-searchKey: pprof.testCPUProfile
-tags: [private]
-```
-
-```Go
-func testCPUProfile(t *testing.T, matches matchFunc, need []string, avoid []string, f func(dur time.Duration)) *profile.Profile
-```
-
-testCPUProfile runs f under the CPU profiler, checking for some conditions specified by need, as interpreted by matches, and returns the parsed profile. 
-
-### <a id="contains" href="#contains">func contains(slice []string, s string) bool</a>
-
-```
-searchKey: pprof.contains
-tags: [private]
-```
-
-```Go
-func contains(slice []string, s string) bool
-```
-
-### <a id="stackContains" href="#stackContains">func stackContains(spec string, count uintptr, stk []*profile.Location, labels map[string][]string) bool</a>
-
-```
-searchKey: pprof.stackContains
-tags: [private]
-```
-
-```Go
-func stackContains(spec string, count uintptr, stk []*profile.Location, labels map[string][]string) bool
-```
-
-stackContains matches if a function named spec appears anywhere in the stack trace. 
-
-### <a id="profileOk" href="#profileOk">func profileOk(t *testing.T, matches matchFunc, need []string, avoid []string, prof bytes.Buffer, duration time.Duration) (_ *profile.Profile, ok bool)</a>
-
-```
-searchKey: pprof.profileOk
-tags: [private]
-```
-
-```Go
-func profileOk(t *testing.T, matches matchFunc, need []string, avoid []string, prof bytes.Buffer, duration time.Duration) (_ *profile.Profile, ok bool)
-```
-
-### <a id="TestCPUProfileWithFork" href="#TestCPUProfileWithFork">func TestCPUProfileWithFork(t *testing.T)</a>
-
-```
-searchKey: pprof.TestCPUProfileWithFork
-tags: [private]
-```
-
-```Go
-func TestCPUProfileWithFork(t *testing.T)
-```
-
-Fork can hang if preempted with signals frequently enough (see issue 5517). Ensure that we do not do this. 
-
-### <a id="TestGoroutineSwitch" href="#TestGoroutineSwitch">func TestGoroutineSwitch(t *testing.T)</a>
-
-```
-searchKey: pprof.TestGoroutineSwitch
-tags: [private]
-```
-
-```Go
-func TestGoroutineSwitch(t *testing.T)
-```
-
-Test that profiler does not observe runtime.gogo as "user" goroutine execution. If it did, it would see inconsistent state and would either record an incorrect stack or crash because the stack was malformed. 
-
-### <a id="fprintStack" href="#fprintStack">func fprintStack(w io.Writer, stk []*profile.Location)</a>
-
-```
-searchKey: pprof.fprintStack
-tags: [private]
-```
-
-```Go
-func fprintStack(w io.Writer, stk []*profile.Location)
-```
-
-### <a id="TestMathBigDivide" href="#TestMathBigDivide">func TestMathBigDivide(t *testing.T)</a>
-
-```
-searchKey: pprof.TestMathBigDivide
-tags: [private]
-```
-
-```Go
-func TestMathBigDivide(t *testing.T)
-```
-
-Test that profiling of division operations is okay, especially on ARM. See issue 6681. 
-
-### <a id="stackContainsAll" href="#stackContainsAll">func stackContainsAll(spec string, count uintptr, stk []*profile.Location, labels map[string][]string) bool</a>
-
-```
-searchKey: pprof.stackContainsAll
-tags: [private]
-```
-
-```Go
-func stackContainsAll(spec string, count uintptr, stk []*profile.Location, labels map[string][]string) bool
-```
-
-stackContainsAll matches if all functions in spec (comma-separated) appear somewhere in the stack trace. 
-
-### <a id="TestMorestack" href="#TestMorestack">func TestMorestack(t *testing.T)</a>
-
-```
-searchKey: pprof.TestMorestack
-tags: [private]
-```
-
-```Go
-func TestMorestack(t *testing.T)
-```
-
-### <a id="growstack1" href="#growstack1">func growstack1()</a>
-
-```
-searchKey: pprof.growstack1
-tags: [private]
-```
-
-```Go
-func growstack1()
-```
-
-### <a id="growstack" href="#growstack">func growstack(n int)</a>
-
-```
-searchKey: pprof.growstack
-tags: [private]
-```
-
-```Go
-func growstack(n int)
-```
-
-### <a id="use" href="#use">func use(x [8 << 16]byte)</a>
-
-```
-searchKey: pprof.use
-tags: [private]
-```
-
-```Go
-func use(x [8 << 16]byte)
-```
-
-### <a id="TestBlockProfile" href="#TestBlockProfile">func TestBlockProfile(t *testing.T)</a>
-
-```
-searchKey: pprof.TestBlockProfile
-tags: [private]
-```
-
-```Go
-func TestBlockProfile(t *testing.T)
-```
-
-### <a id="stacks" href="#stacks">func stacks(p *profile.Profile) (res [][]string)</a>
-
-```
-searchKey: pprof.stacks
-tags: [private]
-```
-
-```Go
-func stacks(p *profile.Profile) (res [][]string)
-```
-
-### <a id="containsStack" href="#containsStack">func containsStack(got [][]string, want []string) bool</a>
-
-```
-searchKey: pprof.containsStack
-tags: [private]
-```
-
-```Go
-func containsStack(got [][]string, want []string) bool
+func blockChanClose()
 ```
 
 ### <a id="blockChanRecv" href="#blockChanRecv">func blockChanRecv()</a>
 
 ```
 searchKey: pprof.blockChanRecv
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -3318,86 +2801,29 @@ func blockChanRecv()
 
 ```
 searchKey: pprof.blockChanSend
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func blockChanSend()
 ```
 
-### <a id="blockChanClose" href="#blockChanClose">func blockChanClose()</a>
-
-```
-searchKey: pprof.blockChanClose
-tags: [private]
-```
-
-```Go
-func blockChanClose()
-```
-
-### <a id="blockSelectRecvAsync" href="#blockSelectRecvAsync">func blockSelectRecvAsync()</a>
-
-```
-searchKey: pprof.blockSelectRecvAsync
-tags: [private]
-```
-
-```Go
-func blockSelectRecvAsync()
-```
-
-### <a id="blockSelectSendSync" href="#blockSelectSendSync">func blockSelectSendSync()</a>
-
-```
-searchKey: pprof.blockSelectSendSync
-tags: [private]
-```
-
-```Go
-func blockSelectSendSync()
-```
-
-### <a id="blockMutex" href="#blockMutex">func blockMutex()</a>
-
-```
-searchKey: pprof.blockMutex
-tags: [private]
-```
-
-```Go
-func blockMutex()
-```
-
 ### <a id="blockCond" href="#blockCond">func blockCond()</a>
 
 ```
 searchKey: pprof.blockCond
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func blockCond()
 ```
 
-### <a id="TestBlockProfileBias" href="#TestBlockProfileBias">func TestBlockProfileBias(t *testing.T)</a>
-
-```
-searchKey: pprof.TestBlockProfileBias
-tags: [private]
-```
-
-```Go
-func TestBlockProfileBias(t *testing.T)
-```
-
-See [http://golang.org/cl/299991](http://golang.org/cl/299991). 
-
 ### <a id="blockFrequentShort" href="#blockFrequentShort">func blockFrequentShort(rate int)</a>
 
 ```
 searchKey: pprof.blockFrequentShort
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -3410,7 +2836,7 @@ blockFrequentShort produces 100000 block events with an average duration of rate
 
 ```
 searchKey: pprof.blockInfrequentLong
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -3419,11 +2845,44 @@ func blockInfrequentLong(rate int)
 
 blockFrequentShort produces 10000 block events with an average duration of rate. 
 
+### <a id="blockMutex" href="#blockMutex">func blockMutex()</a>
+
+```
+searchKey: pprof.blockMutex
+tags: [function private]
+```
+
+```Go
+func blockMutex()
+```
+
+### <a id="blockSelectRecvAsync" href="#blockSelectRecvAsync">func blockSelectRecvAsync()</a>
+
+```
+searchKey: pprof.blockSelectRecvAsync
+tags: [function private]
+```
+
+```Go
+func blockSelectRecvAsync()
+```
+
+### <a id="blockSelectSendSync" href="#blockSelectSendSync">func blockSelectSendSync()</a>
+
+```
+searchKey: pprof.blockSelectSendSync
+tags: [function private]
+```
+
+```Go
+func blockSelectSendSync()
+```
+
 ### <a id="blockevent" href="#blockevent">func blockevent(cycles int64, skip int)</a>
 
 ```
 searchKey: pprof.blockevent
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -3432,223 +2891,225 @@ func blockevent(cycles int64, skip int)
 
 Used by TestBlockProfileBias. 
 
-### <a id="TestMutexProfile" href="#TestMutexProfile">func TestMutexProfile(t *testing.T)</a>
+### <a id="checkProfile" href="#checkProfile">func checkProfile(t *testing.T, p *profile.Profile, period int64, periodType *profile.ValueType, sampleType []*profile.ValueType, samples []*profile.Sample, defaultSampleType string)</a>
 
 ```
-searchKey: pprof.TestMutexProfile
-tags: [private]
-```
-
-```Go
-func TestMutexProfile(t *testing.T)
-```
-
-### <a id="func1" href="#func1">func func1(c chan int)</a>
-
-```
-searchKey: pprof.func1
-tags: [private]
+searchKey: pprof.checkProfile
+tags: [method private]
 ```
 
 ```Go
-func func1(c chan int)
+func checkProfile(t *testing.T, p *profile.Profile, period int64, periodType *profile.ValueType, sampleType []*profile.ValueType, samples []*profile.Sample, defaultSampleType string)
 ```
 
-### <a id="func2" href="#func2">func func2(c chan int)</a>
+### <a id="contains" href="#contains">func contains(slice []string, s string) bool</a>
 
 ```
-searchKey: pprof.func2
-tags: [private]
-```
-
-```Go
-func func2(c chan int)
-```
-
-### <a id="func3" href="#func3">func func3(c chan int)</a>
-
-```
-searchKey: pprof.func3
-tags: [private]
+searchKey: pprof.contains
+tags: [method private]
 ```
 
 ```Go
-func func3(c chan int)
-```
-
-### <a id="func4" href="#func4">func func4(c chan int)</a>
-
-```
-searchKey: pprof.func4
-tags: [private]
-```
-
-```Go
-func func4(c chan int)
-```
-
-### <a id="TestGoroutineCounts" href="#TestGoroutineCounts">func TestGoroutineCounts(t *testing.T)</a>
-
-```
-searchKey: pprof.TestGoroutineCounts
-tags: [private]
-```
-
-```Go
-func TestGoroutineCounts(t *testing.T)
-```
-
-### <a id="containsInOrder" href="#containsInOrder">func containsInOrder(s string, all ...string) bool</a>
-
-```
-searchKey: pprof.containsInOrder
-tags: [private]
-```
-
-```Go
-func containsInOrder(s string, all ...string) bool
+func contains(slice []string, s string) bool
 ```
 
 ### <a id="containsCountsLabels" href="#containsCountsLabels">func containsCountsLabels(prof *profile.Profile, countLabels map[int64]map[string]string) bool</a>
 
 ```
 searchKey: pprof.containsCountsLabels
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func containsCountsLabels(prof *profile.Profile, countLabels map[int64]map[string]string) bool
 ```
 
-### <a id="TestEmptyCallStack" href="#TestEmptyCallStack">func TestEmptyCallStack(t *testing.T)</a>
+### <a id="containsInOrder" href="#containsInOrder">func containsInOrder(s string, all ...string) bool</a>
 
 ```
-searchKey: pprof.TestEmptyCallStack
-tags: [private]
-```
-
-```Go
-func TestEmptyCallStack(t *testing.T)
-```
-
-Issue 18836. 
-
-### <a id="stackContainsLabeled" href="#stackContainsLabeled">func stackContainsLabeled(spec string, count uintptr, stk []*profile.Location, labels map[string][]string) bool</a>
-
-```
-searchKey: pprof.stackContainsLabeled
-tags: [private]
+searchKey: pprof.containsInOrder
+tags: [method private]
 ```
 
 ```Go
-func stackContainsLabeled(spec string, count uintptr, stk []*profile.Location, labels map[string][]string) bool
+func containsInOrder(s string, all ...string) bool
 ```
 
-stackContainsLabeled takes a spec like funcname;key=value and matches if the stack has that key and value and has funcname somewhere in the stack. 
-
-### <a id="TestCPUProfileLabel" href="#TestCPUProfileLabel">func TestCPUProfileLabel(t *testing.T)</a>
+### <a id="containsInlinedCall" href="#containsInlinedCall">func containsInlinedCall(f interface{}, maxBytes int) bool</a>
 
 ```
-searchKey: pprof.TestCPUProfileLabel
-tags: [private]
-```
-
-```Go
-func TestCPUProfileLabel(t *testing.T)
-```
-
-### <a id="TestLabelRace" href="#TestLabelRace">func TestLabelRace(t *testing.T)</a>
-
-```
-searchKey: pprof.TestLabelRace
-tags: [private]
+searchKey: pprof.containsInlinedCall
+tags: [method private]
 ```
 
 ```Go
-func TestLabelRace(t *testing.T)
+func containsInlinedCall(f interface{}, maxBytes int) bool
 ```
 
-### <a id="TestAtomicLoadStore64" href="#TestAtomicLoadStore64">func TestAtomicLoadStore64(t *testing.T)</a>
+containsInlinedCall reports whether the function body for the function f is known to contain an inlined function call within the first maxBytes bytes. 
+
+### <a id="containsStack" href="#containsStack">func containsStack(got [][]string, want []string) bool</a>
 
 ```
-searchKey: pprof.TestAtomicLoadStore64
-tags: [private]
-```
-
-```Go
-func TestAtomicLoadStore64(t *testing.T)
-```
-
-Check that there is no deadlock when the program receives SIGPROF while in 64bit atomics' critical section. Used to happen on mips{,le}. See #20146. 
-
-### <a id="TestTracebackAll" href="#TestTracebackAll">func TestTracebackAll(t *testing.T)</a>
-
-```
-searchKey: pprof.TestTracebackAll
-tags: [private]
+searchKey: pprof.containsStack
+tags: [method private]
 ```
 
 ```Go
-func TestTracebackAll(t *testing.T)
+func containsStack(got [][]string, want []string) bool
 ```
 
-### <a id="TestTryAdd" href="#TestTryAdd">func TestTryAdd(t *testing.T)</a>
+### <a id="countBlock" href="#countBlock">func countBlock() int</a>
 
 ```
-searchKey: pprof.TestTryAdd
-tags: [private]
-```
-
-```Go
-func TestTryAdd(t *testing.T)
-```
-
-TestTryAdd tests the cases that are hard to test with real program execution. 
-
-For example, the current go compilers may not always inline functions involved in recursion but that may not be true in the future compilers. This tests such cases by using fake call sequences and forcing the profile build utilizing translateCPUProfile defined in proto_test.go 
-
-### <a id="translateCPUProfile" href="#translateCPUProfile">func translateCPUProfile(data []uint64) (*profile.Profile, error)</a>
-
-```
-searchKey: pprof.translateCPUProfile
-tags: [private]
+searchKey: pprof.countBlock
+tags: [function private]
 ```
 
 ```Go
-func translateCPUProfile(data []uint64) (*profile.Profile, error)
+func countBlock() int
 ```
 
-translateCPUProfile parses binary CPU profiling stack trace data generated by runtime.CPUProfile() into a profile struct. This is only used for testing. Real conversions stream the data into the profileBuilder as it becomes available. 
+countBlock returns the number of records in the blocking profile. 
 
-### <a id="fmtJSON" href="#fmtJSON">func fmtJSON(x interface{}) string</a>
-
-```
-searchKey: pprof.fmtJSON
-tags: [private]
-```
-
-```Go
-func fmtJSON(x interface{}) string
-```
-
-fmtJSON returns a pretty-printed JSON form for x. It works reasonbly well for printing protocol-buffer data structures like profile.Profile. 
-
-### <a id="TestConvertCPUProfileEmpty" href="#TestConvertCPUProfileEmpty">func TestConvertCPUProfileEmpty(t *testing.T)</a>
+### <a id="countGoroutine" href="#countGoroutine">func countGoroutine() int</a>
 
 ```
-searchKey: pprof.TestConvertCPUProfileEmpty
-tags: [private]
+searchKey: pprof.countGoroutine
+tags: [function private]
 ```
 
 ```Go
-func TestConvertCPUProfileEmpty(t *testing.T)
+func countGoroutine() int
 ```
+
+countGoroutine returns the number of goroutines. 
+
+### <a id="countHeap" href="#countHeap">func countHeap() int</a>
+
+```
+searchKey: pprof.countHeap
+tags: [function private]
+```
+
+```Go
+func countHeap() int
+```
+
+countHeap returns the number of records in the heap profile. 
+
+### <a id="countMutex" href="#countMutex">func countMutex() int</a>
+
+```
+searchKey: pprof.countMutex
+tags: [function private]
+```
+
+```Go
+func countMutex() int
+```
+
+countMutex returns the number of records in the mutex profile. 
+
+### <a id="countThreadCreate" href="#countThreadCreate">func countThreadCreate() int</a>
+
+```
+searchKey: pprof.countThreadCreate
+tags: [function private]
+```
+
+```Go
+func countThreadCreate() int
+```
+
+countThreadCreate returns the size of the current ThreadCreateProfile. 
+
+### <a id="cpuHog0" href="#cpuHog0">func cpuHog0(x, n int) int</a>
+
+```
+searchKey: pprof.cpuHog0
+tags: [method private]
+```
+
+```Go
+func cpuHog0(x, n int) int
+```
+
+### <a id="cpuHog1" href="#cpuHog1">func cpuHog1(x int) int</a>
+
+```
+searchKey: pprof.cpuHog1
+tags: [method private]
+```
+
+```Go
+func cpuHog1(x int) int
+```
+
+The actual CPU hogging function. Must not call other functions nor access heap/globals in the loop, otherwise under race detector the samples will be in the race runtime. 
+
+### <a id="cpuHog2" href="#cpuHog2">func cpuHog2(x int) int</a>
+
+```
+searchKey: pprof.cpuHog2
+tags: [method private]
+```
+
+```Go
+func cpuHog2(x int) int
+```
+
+### <a id="cpuHogger" href="#cpuHogger">func cpuHogger(f func(x int) int, y *int, dur time.Duration)</a>
+
+```
+searchKey: pprof.cpuHogger
+tags: [method private]
+```
+
+```Go
+func cpuHogger(f func(x int) int, y *int, dur time.Duration)
+```
+
+### <a id="cpuProfilingBroken" href="#cpuProfilingBroken">func cpuProfilingBroken() bool</a>
+
+```
+searchKey: pprof.cpuProfilingBroken
+tags: [function private]
+```
+
+```Go
+func cpuProfilingBroken() bool
+```
+
+### <a id="dumpCallers" href="#dumpCallers">func dumpCallers(pcs []uintptr)</a>
+
+```
+searchKey: pprof.dumpCallers
+tags: [method private]
+```
+
+```Go
+func dumpCallers(pcs []uintptr)
+```
+
+### <a id="elfBuildID" href="#elfBuildID">func elfBuildID(file string) (string, error)</a>
+
+```
+searchKey: pprof.elfBuildID
+tags: [method private]
+```
+
+```Go
+func elfBuildID(file string) (string, error)
+```
+
+elfBuildID returns the GNU build ID of the named ELF binary, without introducing a dependency on debug/elf and its dependencies. 
 
 ### <a id="f1" href="#f1">func f1()</a>
 
 ```
 searchKey: pprof.f1
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -3659,18 +3120,547 @@ func f1()
 
 ```
 searchKey: pprof.f2
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func f2()
 ```
 
+### <a id="findInlinedCall" href="#findInlinedCall">func findInlinedCall(f interface{}, maxBytes int) (pc uint64, found bool)</a>
+
+```
+searchKey: pprof.findInlinedCall
+tags: [method private]
+```
+
+```Go
+func findInlinedCall(f interface{}, maxBytes int) (pc uint64, found bool)
+```
+
+findInlinedCall returns the PC of an inlined function call within the function body for the function f if any. 
+
+### <a id="fmtJSON" href="#fmtJSON">func fmtJSON(x interface{}) string</a>
+
+```
+searchKey: pprof.fmtJSON
+tags: [method private]
+```
+
+```Go
+func fmtJSON(x interface{}) string
+```
+
+fmtJSON returns a pretty-printed JSON form for x. It works reasonbly well for printing protocol-buffer data structures like profile.Profile. 
+
+### <a id="fprintStack" href="#fprintStack">func fprintStack(w io.Writer, stk []*profile.Location)</a>
+
+```
+searchKey: pprof.fprintStack
+tags: [method private]
+```
+
+```Go
+func fprintStack(w io.Writer, stk []*profile.Location)
+```
+
+### <a id="func1" href="#func1">func func1(c chan int)</a>
+
+```
+searchKey: pprof.func1
+tags: [method private]
+```
+
+```Go
+func func1(c chan int)
+```
+
+### <a id="func2" href="#func2">func func2(c chan int)</a>
+
+```
+searchKey: pprof.func2
+tags: [method private]
+```
+
+```Go
+func func2(c chan int)
+```
+
+### <a id="func3" href="#func3">func func3(c chan int)</a>
+
+```
+searchKey: pprof.func3
+tags: [method private]
+```
+
+```Go
+func func3(c chan int)
+```
+
+### <a id="func4" href="#func4">func func4(c chan int)</a>
+
+```
+searchKey: pprof.func4
+tags: [method private]
+```
+
+```Go
+func func4(c chan int)
+```
+
+### <a id="funcPC" href="#funcPC">func funcPC(f interface{}) uintptr</a>
+
+```
+searchKey: pprof.funcPC
+tags: [method private]
+```
+
+```Go
+func funcPC(f interface{}) uintptr
+```
+
+funcPC returns the PC for the func value f. 
+
+### <a id="getProfLabel" href="#getProfLabel">func getProfLabel() map[string]string</a>
+
+```
+searchKey: pprof.getProfLabel
+tags: [function private]
+```
+
+```Go
+func getProfLabel() map[string]string
+```
+
+### <a id="growstack" href="#growstack">func growstack(n int)</a>
+
+```
+searchKey: pprof.growstack
+tags: [method private]
+```
+
+```Go
+func growstack(n int)
+```
+
+### <a id="growstack1" href="#growstack1">func growstack1()</a>
+
+```
+searchKey: pprof.growstack1
+tags: [function private]
+```
+
+```Go
+func growstack1()
+```
+
+### <a id="inlinedCallee" href="#inlinedCallee">func inlinedCallee(x, n int) int</a>
+
+```
+searchKey: pprof.inlinedCallee
+tags: [method private]
+```
+
+```Go
+func inlinedCallee(x, n int) int
+```
+
+### <a id="inlinedCalleeDump" href="#inlinedCalleeDump">func inlinedCalleeDump(pcs []uintptr)</a>
+
+```
+searchKey: pprof.inlinedCalleeDump
+tags: [method private]
+```
+
+```Go
+func inlinedCalleeDump(pcs []uintptr)
+```
+
+### <a id="inlinedCaller" href="#inlinedCaller">func inlinedCaller(x int) int</a>
+
+```
+searchKey: pprof.inlinedCaller
+tags: [method private]
+```
+
+```Go
+func inlinedCaller(x int) int
+```
+
+### <a id="inlinedCallerDump" href="#inlinedCallerDump">func inlinedCallerDump(pcs []uintptr)</a>
+
+```
+searchKey: pprof.inlinedCallerDump
+tags: [method private]
+```
+
+```Go
+func inlinedCallerDump(pcs []uintptr)
+```
+
+### <a id="labelsSorted" href="#labelsSorted">func labelsSorted(ctx context.Context) []label</a>
+
+```
+searchKey: pprof.labelsSorted
+tags: [method private]
+```
+
+```Go
+func labelsSorted(ctx context.Context) []label
+```
+
+### <a id="lockProfiles" href="#lockProfiles">func lockProfiles()</a>
+
+```
+searchKey: pprof.lockProfiles
+tags: [function private]
+```
+
+```Go
+func lockProfiles()
+```
+
+### <a id="lostProfileEvent" href="#lostProfileEvent">func lostProfileEvent()</a>
+
+```
+searchKey: pprof.lostProfileEvent
+tags: [function private]
+```
+
+```Go
+func lostProfileEvent()
+```
+
+lostProfileEvent is the function to which lost profiling events are attributed. (The name shows up in the pprof graphs.) 
+
+### <a id="parseProcSelfMaps" href="#parseProcSelfMaps">func parseProcSelfMaps(data []byte, addMapping func(lo, hi, offset uint64, file, buildID string))</a>
+
+```
+searchKey: pprof.parseProcSelfMaps
+tags: [method private]
+```
+
+```Go
+func parseProcSelfMaps(data []byte, addMapping func(lo, hi, offset uint64, file, buildID string))
+```
+
+### <a id="parseProfile" href="#parseProfile">func parseProfile(t *testing.T, valBytes []byte, f func(uintptr, []*profile.Location, map[string][]string)) *profile.Profile</a>
+
+```
+searchKey: pprof.parseProfile
+tags: [method private]
+```
+
+```Go
+func parseProfile(t *testing.T, valBytes []byte, f func(uintptr, []*profile.Location, map[string][]string)) *profile.Profile
+```
+
+### <a id="printCountCycleProfile" href="#printCountCycleProfile">func printCountCycleProfile(w io.Writer, countName, cycleName string, scaler func(int64, float64) (int64, float64), records []runtime.BlockProfileRecord) error</a>
+
+```
+searchKey: pprof.printCountCycleProfile
+tags: [method private]
+```
+
+```Go
+func printCountCycleProfile(w io.Writer, countName, cycleName string, scaler func(int64, float64) (int64, float64), records []runtime.BlockProfileRecord) error
+```
+
+printCountCycleProfile outputs block profile records (for block or mutex profiles) as the pprof-proto format output. Translations from cycle count to time duration are done because The proto expects count and time (nanoseconds) instead of count and the number of cycles for block, contention profiles. Possible 'scaler' functions are scaleBlockProfile and scaleMutexProfile. 
+
+### <a id="printCountProfile" href="#printCountProfile">func printCountProfile(w io.Writer, debug int, name string, p countProfile) error</a>
+
+```
+searchKey: pprof.printCountProfile
+tags: [method private]
+```
+
+```Go
+func printCountProfile(w io.Writer, debug int, name string, p countProfile) error
+```
+
+printCountProfile prints a countProfile at the specified debug level. The profile will be in compressed proto format unless debug is nonzero. 
+
+### <a id="printStackRecord" href="#printStackRecord">func printStackRecord(w io.Writer, stk []uintptr, allFrames bool)</a>
+
+```
+searchKey: pprof.printStackRecord
+tags: [method private]
+```
+
+```Go
+func printStackRecord(w io.Writer, stk []uintptr, allFrames bool)
+```
+
+printStackRecord prints the function + source line information for a single stack trace. 
+
+### <a id="profileOk" href="#profileOk">func profileOk(t *testing.T, matches matchFunc, need []string, avoid []string, prof bytes.Buffer, duration time.Duration) (_ *profile.Profile, ok bool)</a>
+
+```
+searchKey: pprof.profileOk
+tags: [method private]
+```
+
+```Go
+func profileOk(t *testing.T, matches matchFunc, need []string, avoid []string, prof bytes.Buffer, duration time.Duration) (_ *profile.Profile, ok bool)
+```
+
+### <a id="profileWriter" href="#profileWriter">func profileWriter(w io.Writer)</a>
+
+```
+searchKey: pprof.profileWriter
+tags: [method private]
+```
+
+```Go
+func profileWriter(w io.Writer)
+```
+
+### <a id="readProfile" href="#readProfile">func readProfile() (data []uint64, tags []unsafe.Pointer, eof bool)</a>
+
+```
+searchKey: pprof.readProfile
+tags: [function private]
+```
+
+```Go
+func readProfile() (data []uint64, tags []unsafe.Pointer, eof bool)
+```
+
+readProfile, provided by the runtime, returns the next chunk of binary CPU profiling stack trace data, blocking until data is available. If profiling is turned off and all the profile data accumulated while it was on has been returned, readProfile returns eof=true. The caller must save the returned data and tags before calling readProfile again. 
+
+### <a id="recursionCallee" href="#recursionCallee">func recursionCallee(n, x int) int</a>
+
+```
+searchKey: pprof.recursionCallee
+tags: [method private]
+```
+
+```Go
+func recursionCallee(n, x int) int
+```
+
+### <a id="recursionCaller" href="#recursionCaller">func recursionCaller(x int) int</a>
+
+```
+searchKey: pprof.recursionCaller
+tags: [method private]
+```
+
+```Go
+func recursionCaller(x int) int
+```
+
+### <a id="recursionChainBottom" href="#recursionChainBottom">func recursionChainBottom(x int, pcs []uintptr)</a>
+
+```
+searchKey: pprof.recursionChainBottom
+tags: [method private]
+```
+
+```Go
+func recursionChainBottom(x int, pcs []uintptr)
+```
+
+### <a id="recursionChainMiddle" href="#recursionChainMiddle">func recursionChainMiddle(x int, pcs []uintptr)</a>
+
+```
+searchKey: pprof.recursionChainMiddle
+tags: [method private]
+```
+
+```Go
+func recursionChainMiddle(x int, pcs []uintptr)
+```
+
+### <a id="recursionChainTop" href="#recursionChainTop">func recursionChainTop(x int, pcs []uintptr)</a>
+
+```
+searchKey: pprof.recursionChainTop
+tags: [method private]
+```
+
+```Go
+func recursionChainTop(x int, pcs []uintptr)
+```
+
+### <a id="runtime_cyclesPerSecond" href="#runtime_cyclesPerSecond">func runtime_cyclesPerSecond() int64</a>
+
+```
+searchKey: pprof.runtime_cyclesPerSecond
+tags: [function private]
+```
+
+```Go
+func runtime_cyclesPerSecond() int64
+```
+
+### <a id="runtime_expandFinalInlineFrame" href="#runtime_expandFinalInlineFrame">func runtime_expandFinalInlineFrame(stk []uintptr) []uintptr</a>
+
+```
+searchKey: pprof.runtime_expandFinalInlineFrame
+tags: [method private]
+```
+
+```Go
+func runtime_expandFinalInlineFrame(stk []uintptr) []uintptr
+```
+
+runtime_expandFinalInlineFrame is defined in runtime/symtab.go. 
+
+### <a id="runtime_getProfLabel" href="#runtime_getProfLabel">func runtime_getProfLabel() unsafe.Pointer</a>
+
+```
+searchKey: pprof.runtime_getProfLabel
+tags: [function private]
+```
+
+```Go
+func runtime_getProfLabel() unsafe.Pointer
+```
+
+runtime_getProfLabel is defined in runtime/proflabel.go. 
+
+### <a id="runtime_goroutineProfileWithLabels" href="#runtime_goroutineProfileWithLabels">func runtime_goroutineProfileWithLabels(p []runtime.StackRecord, labels []unsafe.Pointer) (n int, ok bool)</a>
+
+```
+searchKey: pprof.runtime_goroutineProfileWithLabels
+tags: [method private]
+```
+
+```Go
+func runtime_goroutineProfileWithLabels(p []runtime.StackRecord, labels []unsafe.Pointer) (n int, ok bool)
+```
+
+runtime_goroutineProfileWithLabels is defined in runtime/mprof.go 
+
+### <a id="runtime_setProfLabel" href="#runtime_setProfLabel">func runtime_setProfLabel(labels unsafe.Pointer)</a>
+
+```
+searchKey: pprof.runtime_setProfLabel
+tags: [method private]
+```
+
+```Go
+func runtime_setProfLabel(labels unsafe.Pointer)
+```
+
+runtime_setProfLabel is defined in runtime/proflabel.go. 
+
+### <a id="scaleBlockProfile" href="#scaleBlockProfile">func scaleBlockProfile(cnt int64, ns float64) (int64, float64)</a>
+
+```
+searchKey: pprof.scaleBlockProfile
+tags: [method private]
+```
+
+```Go
+func scaleBlockProfile(cnt int64, ns float64) (int64, float64)
+```
+
+### <a id="scaleHeapSample" href="#scaleHeapSample">func scaleHeapSample(count, size, rate int64) (int64, int64)</a>
+
+```
+searchKey: pprof.scaleHeapSample
+tags: [method private]
+```
+
+```Go
+func scaleHeapSample(count, size, rate int64) (int64, int64)
+```
+
+scaleHeapSample adjusts the data from a heap Sample to account for its probability of appearing in the collected data. heap profiles are a sampling of the memory allocations requests in a program. We estimate the unsampled value by dividing each collected sample by its probability of appearing in the profile. heap profiles rely on a poisson process to determine which samples to collect, based on the desired average collection rate R. The probability of a sample of size S to appear in that profile is 1-exp(-S/R). 
+
+### <a id="scaleMutexProfile" href="#scaleMutexProfile">func scaleMutexProfile(cnt int64, ns float64) (int64, float64)</a>
+
+```
+searchKey: pprof.scaleMutexProfile
+tags: [method private]
+```
+
+```Go
+func scaleMutexProfile(cnt int64, ns float64) (int64, float64)
+```
+
+### <a id="stackContains" href="#stackContains">func stackContains(spec string, count uintptr, stk []*profile.Location, labels map[string][]string) bool</a>
+
+```
+searchKey: pprof.stackContains
+tags: [method private]
+```
+
+```Go
+func stackContains(spec string, count uintptr, stk []*profile.Location, labels map[string][]string) bool
+```
+
+stackContains matches if a function named spec appears anywhere in the stack trace. 
+
+### <a id="stackContainsAll" href="#stackContainsAll">func stackContainsAll(spec string, count uintptr, stk []*profile.Location, labels map[string][]string) bool</a>
+
+```
+searchKey: pprof.stackContainsAll
+tags: [method private]
+```
+
+```Go
+func stackContainsAll(spec string, count uintptr, stk []*profile.Location, labels map[string][]string) bool
+```
+
+stackContainsAll matches if all functions in spec (comma-separated) appear somewhere in the stack trace. 
+
+### <a id="stackContainsLabeled" href="#stackContainsLabeled">func stackContainsLabeled(spec string, count uintptr, stk []*profile.Location, labels map[string][]string) bool</a>
+
+```
+searchKey: pprof.stackContainsLabeled
+tags: [method private]
+```
+
+```Go
+func stackContainsLabeled(spec string, count uintptr, stk []*profile.Location, labels map[string][]string) bool
+```
+
+stackContainsLabeled takes a spec like funcname;key=value and matches if the stack has that key and value and has funcname somewhere in the stack. 
+
+### <a id="stacks" href="#stacks">func stacks(p *profile.Profile) (res [][]string)</a>
+
+```
+searchKey: pprof.stacks
+tags: [method private]
+```
+
+```Go
+func stacks(p *profile.Profile) (res [][]string)
+```
+
+### <a id="symbolized" href="#symbolized">func symbolized(loc *profile.Location) bool</a>
+
+```
+searchKey: pprof.symbolized
+tags: [method private]
+```
+
+```Go
+func symbolized(loc *profile.Location) bool
+```
+
+### <a id="testCPUProfile" href="#testCPUProfile">func testCPUProfile(t *testing.T, matches matchFunc, need []string, avoid []string, f func(dur time.Duration)) *profile.Profile</a>
+
+```
+searchKey: pprof.testCPUProfile
+tags: [method private]
+```
+
+```Go
+func testCPUProfile(t *testing.T, matches matchFunc, need []string, avoid []string, f func(dur time.Duration)) *profile.Profile
+```
+
+testCPUProfile runs f under the CPU profiler, checking for some conditions specified by need, as interpreted by matches, and returns the parsed profile. 
+
 ### <a id="testPCs" href="#testPCs">func testPCs(t *testing.T) (addr1, addr2 uint64, map1, map2 *profile.Mapping)</a>
 
 ```
 searchKey: pprof.testPCs
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -3679,130 +3669,175 @@ func testPCs(t *testing.T) (addr1, addr2 uint64, map1, map2 *profile.Mapping)
 
 testPCs returns two PCs and two corresponding memory mappings to use in test profiles. 
 
-### <a id="TestConvertCPUProfile" href="#TestConvertCPUProfile">func TestConvertCPUProfile(t *testing.T)</a>
+### <a id="translateCPUProfile" href="#translateCPUProfile">func translateCPUProfile(data []uint64) (*profile.Profile, error)</a>
 
 ```
-searchKey: pprof.TestConvertCPUProfile
-tags: [private]
-```
-
-```Go
-func TestConvertCPUProfile(t *testing.T)
-```
-
-### <a id="checkProfile" href="#checkProfile">func checkProfile(t *testing.T, p *profile.Profile, period int64, periodType *profile.ValueType, sampleType []*profile.ValueType, samples []*profile.Sample, defaultSampleType string)</a>
-
-```
-searchKey: pprof.checkProfile
-tags: [private]
+searchKey: pprof.translateCPUProfile
+tags: [method private]
 ```
 
 ```Go
-func checkProfile(t *testing.T, p *profile.Profile, period int64, periodType *profile.ValueType, sampleType []*profile.ValueType, samples []*profile.Sample, defaultSampleType string)
+func translateCPUProfile(data []uint64) (*profile.Profile, error)
 ```
 
-### <a id="TestProcSelfMaps" href="#TestProcSelfMaps">func TestProcSelfMaps(t *testing.T)</a>
+translateCPUProfile parses binary CPU profiling stack trace data generated by runtime.CPUProfile() into a profile struct. This is only used for testing. Real conversions stream the data into the profileBuilder as it becomes available. 
+
+### <a id="unlockProfiles" href="#unlockProfiles">func unlockProfiles()</a>
 
 ```
-searchKey: pprof.TestProcSelfMaps
-tags: [private]
-```
-
-```Go
-func TestProcSelfMaps(t *testing.T)
-```
-
-### <a id="TestMapping" href="#TestMapping">func TestMapping(t *testing.T)</a>
-
-```
-searchKey: pprof.TestMapping
-tags: [private]
+searchKey: pprof.unlockProfiles
+tags: [function private]
 ```
 
 ```Go
-func TestMapping(t *testing.T)
+func unlockProfiles()
 ```
 
-TestMapping checks the mapping section of CPU profiles has the HasFunctions field set correctly. If all PCs included in the samples are successfully symbolized, the corresponding mapping entry (in this test case, only one entry) should have its HasFunctions field set true. The test generates a CPU profile that includes PCs from C side that the runtime can't symbolize. See ./testdata/mappingtest. 
-
-### <a id="symbolized" href="#symbolized">func symbolized(loc *profile.Location) bool</a>
+### <a id="use" href="#use">func use(x [8 << 16]byte)</a>
 
 ```
-searchKey: pprof.symbolized
-tags: [private]
-```
-
-```Go
-func symbolized(loc *profile.Location) bool
-```
-
-### <a id="TestFakeMapping" href="#TestFakeMapping">func TestFakeMapping(t *testing.T)</a>
-
-```
-searchKey: pprof.TestFakeMapping
-tags: [private]
+searchKey: pprof.use
+tags: [method private]
 ```
 
 ```Go
-func TestFakeMapping(t *testing.T)
+func use(x [8 << 16]byte)
 ```
 
-TestFakeMapping tests if at least one mapping exists (including a fake mapping), and their HasFunctions bits are set correctly. 
-
-### <a id="TestEmptyStack" href="#TestEmptyStack">func TestEmptyStack(t *testing.T)</a>
+### <a id="writeAlloc" href="#writeAlloc">func writeAlloc(w io.Writer, debug int) error</a>
 
 ```
-searchKey: pprof.TestEmptyStack
-tags: [private]
-```
-
-```Go
-func TestEmptyStack(t *testing.T)
-```
-
-Make sure the profiler can handle an empty stack trace. See issue 37967. 
-
-### <a id="TestConvertMemProfile" href="#TestConvertMemProfile">func TestConvertMemProfile(t *testing.T)</a>
-
-```
-searchKey: pprof.TestConvertMemProfile
-tags: [private]
+searchKey: pprof.writeAlloc
+tags: [method private]
 ```
 
 ```Go
-func TestConvertMemProfile(t *testing.T)
+func writeAlloc(w io.Writer, debug int) error
 ```
 
-### <a id="TestSetGoroutineLabels" href="#TestSetGoroutineLabels">func TestSetGoroutineLabels(t *testing.T)</a>
+writeAlloc writes the current runtime heap profile to w with the total allocation space as the default sample type. 
+
+### <a id="writeBlock" href="#writeBlock">func writeBlock(w io.Writer, debug int) error</a>
 
 ```
-searchKey: pprof.TestSetGoroutineLabels
-tags: [private]
-```
-
-```Go
-func TestSetGoroutineLabels(t *testing.T)
-```
-
-### <a id="TestDo" href="#TestDo">func TestDo(t *testing.T)</a>
-
-```
-searchKey: pprof.TestDo
-tags: [private]
+searchKey: pprof.writeBlock
+tags: [method private]
 ```
 
 ```Go
-func TestDo(t *testing.T)
+func writeBlock(w io.Writer, debug int) error
 ```
 
-### <a id="getProfLabel" href="#getProfLabel">func getProfLabel() map[string]string</a>
+writeBlock writes the current blocking profile to w. 
+
+### <a id="writeGoroutine" href="#writeGoroutine">func writeGoroutine(w io.Writer, debug int) error</a>
 
 ```
-searchKey: pprof.getProfLabel
-tags: [private]
+searchKey: pprof.writeGoroutine
+tags: [method private]
 ```
 
 ```Go
-func getProfLabel() map[string]string
+func writeGoroutine(w io.Writer, debug int) error
 ```
+
+writeGoroutine writes the current runtime GoroutineProfile to w. 
+
+### <a id="writeGoroutineStacks" href="#writeGoroutineStacks">func writeGoroutineStacks(w io.Writer) error</a>
+
+```
+searchKey: pprof.writeGoroutineStacks
+tags: [method private]
+```
+
+```Go
+func writeGoroutineStacks(w io.Writer) error
+```
+
+### <a id="writeHeap" href="#writeHeap">func writeHeap(w io.Writer, debug int) error</a>
+
+```
+searchKey: pprof.writeHeap
+tags: [method private]
+```
+
+```Go
+func writeHeap(w io.Writer, debug int) error
+```
+
+writeHeap writes the current runtime heap profile to w. 
+
+### <a id="writeHeapInternal" href="#writeHeapInternal">func writeHeapInternal(w io.Writer, debug int, defaultSampleType string) error</a>
+
+```
+searchKey: pprof.writeHeapInternal
+tags: [method private]
+```
+
+```Go
+func writeHeapInternal(w io.Writer, debug int, defaultSampleType string) error
+```
+
+### <a id="writeHeapProto" href="#writeHeapProto">func writeHeapProto(w io.Writer, p []runtime.MemProfileRecord, rate int64, defaultSampleType string) error</a>
+
+```
+searchKey: pprof.writeHeapProto
+tags: [method private]
+```
+
+```Go
+func writeHeapProto(w io.Writer, p []runtime.MemProfileRecord, rate int64, defaultSampleType string) error
+```
+
+writeHeapProto writes the current heap profile in protobuf format to w. 
+
+### <a id="writeMutex" href="#writeMutex">func writeMutex(w io.Writer, debug int) error</a>
+
+```
+searchKey: pprof.writeMutex
+tags: [method private]
+```
+
+```Go
+func writeMutex(w io.Writer, debug int) error
+```
+
+writeMutex writes the current mutex profile to w. 
+
+### <a id="writeProfileInternal" href="#writeProfileInternal">func writeProfileInternal(w io.Writer, debug int, name string, runtimeProfile func([]runtime.BlockProfileRecord) (int, bool), scaleProfile func(int64, float64) (int64, float64)) error</a>
+
+```
+searchKey: pprof.writeProfileInternal
+tags: [method private]
+```
+
+```Go
+func writeProfileInternal(w io.Writer, debug int, name string, runtimeProfile func([]runtime.BlockProfileRecord) (int, bool), scaleProfile func(int64, float64) (int64, float64)) error
+```
+
+writeProfileInternal writes the current blocking or mutex profile depending on the passed parameters 
+
+### <a id="writeRuntimeProfile" href="#writeRuntimeProfile">func writeRuntimeProfile(w io.Writer, debug int, name string, fetch func([]runtime.StackRecord, []unsafe.Pointer) (int, bool)) error</a>
+
+```
+searchKey: pprof.writeRuntimeProfile
+tags: [method private]
+```
+
+```Go
+func writeRuntimeProfile(w io.Writer, debug int, name string, fetch func([]runtime.StackRecord, []unsafe.Pointer) (int, bool)) error
+```
+
+### <a id="writeThreadCreate" href="#writeThreadCreate">func writeThreadCreate(w io.Writer, debug int) error</a>
+
+```
+searchKey: pprof.writeThreadCreate
+tags: [method private]
+```
+
+```Go
+func writeThreadCreate(w io.Writer, debug int) error
+```
+
+writeThreadCreate writes the current runtime ThreadCreateProfile to w. 
 

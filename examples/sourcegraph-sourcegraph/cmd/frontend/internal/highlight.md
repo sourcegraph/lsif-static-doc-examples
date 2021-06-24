@@ -3,69 +3,48 @@
 ## Index
 
 * [Variables](#var)
-    * [var syntectServer](#syntectServer)
-    * [var client](#client)
     * [var ErrBinary](#ErrBinary)
-    * [var requestCounter](#requestCounter)
-    * [var metricRequestHistogram](#metricRequestHistogram)
     * [var Mocks](#Mocks)
-    * [var emptyMocks](#emptyMocks)
     * [var SyntectLanguageMap](#SyntectLanguageMap)
+    * [var client](#client)
+    * [var emptyMocks](#emptyMocks)
+    * [var metricRequestHistogram](#metricRequestHistogram)
+    * [var requestCounter](#requestCounter)
+    * [var syntectServer](#syntectServer)
 * [Types](#type)
-    * [type Params struct](#Params)
-    * [type Metadata struct](#Metadata)
     * [type LineRange struct](#LineRange)
+    * [type Metadata struct](#Metadata)
+    * [type Params struct](#Params)
 * [Functions](#func)
-    * [func init()](#init.highlight.go)
-    * [func IsBinary(content []byte) bool](#IsBinary)
     * [func Code(ctx context.Context, p Params) (h template.HTML, aborted bool, err error)](#Code)
-    * [func firstCharacters(s string, n int) string](#firstCharacters)
-    * [func generatePlainTable(code string) (template.HTML, error)](#generatePlainTable)
     * [func CodeAsLines(ctx context.Context, p Params) ([]template.HTML, bool, error)](#CodeAsLines)
-    * [func splitHighlightedLines(input template.HTML, wholeRow bool) ([]template.HTML, error)](#splitHighlightedLines)
-    * [func normalizeFilepath(p string) string](#normalizeFilepath)
-    * [func SplitLineRanges(html template.HTML, ranges []LineRange) ([][]string, error)](#SplitLineRanges)
+    * [func IsBinary(content []byte) bool](#IsBinary)
     * [func ResetMocks()](#ResetMocks)
+    * [func SplitLineRanges(html template.HTML, ranges []LineRange) ([][]string, error)](#SplitLineRanges)
+    * [func TestCodeAsLines(t *testing.T)](#TestCodeAsLines)
     * [func TestGeneratePlainTable(t *testing.T)](#TestGeneratePlainTable)
     * [func TestGeneratePlainTableSecurity(t *testing.T)](#TestGeneratePlainTableSecurity)
     * [func TestSplitHighlightedLines(t *testing.T)](#TestSplitHighlightedLines)
-    * [func TestCodeAsLines(t *testing.T)](#TestCodeAsLines)
-    * [func Test_normalizeFilepath(t *testing.T)](#Test_normalizeFilepath)
     * [func TestSplitLineRanges(t *testing.T)](#TestSplitLineRanges)
+    * [func Test_normalizeFilepath(t *testing.T)](#Test_normalizeFilepath)
+    * [func firstCharacters(s string, n int) string](#firstCharacters)
+    * [func generatePlainTable(code string) (template.HTML, error)](#generatePlainTable)
+    * [func init()](#init.highlight.go)
+    * [func normalizeFilepath(p string) string](#normalizeFilepath)
+    * [func splitHighlightedLines(input template.HTML, wholeRow bool) ([]template.HTML, error)](#splitHighlightedLines)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
-```
-
-### <a id="syntectServer" href="#syntectServer">var syntectServer</a>
-
-```
-searchKey: highlight.syntectServer
-tags: [private]
-```
-
-```Go
-var syntectServer = ...
-```
-
-### <a id="client" href="#client">var client</a>
-
-```
-searchKey: highlight.client
-tags: [private]
-```
-
-```Go
-var client *gosyntect.Client
+tags: [package private]
 ```
 
 ### <a id="ErrBinary" href="#ErrBinary">var ErrBinary</a>
 
 ```
 searchKey: highlight.ErrBinary
+tags: [variable interface]
 ```
 
 ```Go
@@ -74,51 +53,11 @@ var ErrBinary = errors.New("cannot render binary file")
 
 ErrBinary is returned when a binary file was attempted to be highlighted. 
 
-### <a id="requestCounter" href="#requestCounter">var requestCounter</a>
-
-```
-searchKey: highlight.requestCounter
-tags: [private]
-```
-
-```Go
-var requestCounter = ...
-```
-
-TODO (Dax): Determine if Histogram provides value and either use only histogram or counter, not both 
-
-### <a id="metricRequestHistogram" href="#metricRequestHistogram">var metricRequestHistogram</a>
-
-```
-searchKey: highlight.metricRequestHistogram
-tags: [private]
-```
-
-```Go
-var metricRequestHistogram = ...
-```
-
 ### <a id="Mocks" href="#Mocks">var Mocks</a>
 
 ```
 searchKey: highlight.Mocks
-```
-
-```Go
-var Mocks, emptyMocks struct {
-	Code func(p Params) (h template.HTML, aborted bool, err error)
-}
-```
-
-Mocks is used to mock behavior in tests. Tests must call ResetMocks() when finished to ensure its mocks are not (inadvertently) used by subsequent tests. 
-
-(The emptyMocks is used by ResetMocks to zero out Mocks without needing to use a named type.) 
-
-### <a id="emptyMocks" href="#emptyMocks">var emptyMocks</a>
-
-```
-searchKey: highlight.emptyMocks
-tags: [private]
+tags: [variable struct]
 ```
 
 ```Go
@@ -135,6 +74,7 @@ Mocks is used to mock behavior in tests. Tests must call ResetMocks() when finis
 
 ```
 searchKey: highlight.SyntectLanguageMap
+tags: [variable object]
 ```
 
 ```Go
@@ -143,16 +83,119 @@ var SyntectLanguageMap = ...
 
 SyntectLanguageMap is a map that maps language identifiers that may be provided at the end of markdown code fences to valid syntect file extensions. 
 
+### <a id="client" href="#client">var client</a>
+
+```
+searchKey: highlight.client
+tags: [variable struct private]
+```
+
+```Go
+var client *gosyntect.Client
+```
+
+### <a id="emptyMocks" href="#emptyMocks">var emptyMocks</a>
+
+```
+searchKey: highlight.emptyMocks
+tags: [variable struct private]
+```
+
+```Go
+var Mocks, emptyMocks struct {
+	Code func(p Params) (h template.HTML, aborted bool, err error)
+}
+```
+
+Mocks is used to mock behavior in tests. Tests must call ResetMocks() when finished to ensure its mocks are not (inadvertently) used by subsequent tests. 
+
+(The emptyMocks is used by ResetMocks to zero out Mocks without needing to use a named type.) 
+
+### <a id="metricRequestHistogram" href="#metricRequestHistogram">var metricRequestHistogram</a>
+
+```
+searchKey: highlight.metricRequestHistogram
+tags: [variable interface private]
+```
+
+```Go
+var metricRequestHistogram = ...
+```
+
+### <a id="requestCounter" href="#requestCounter">var requestCounter</a>
+
+```
+searchKey: highlight.requestCounter
+tags: [variable struct private]
+```
+
+```Go
+var requestCounter = ...
+```
+
+TODO (Dax): Determine if Histogram provides value and either use only histogram or counter, not both 
+
+### <a id="syntectServer" href="#syntectServer">var syntectServer</a>
+
+```
+searchKey: highlight.syntectServer
+tags: [variable string private]
+```
+
+```Go
+var syntectServer = ...
+```
+
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
+
+### <a id="LineRange" href="#LineRange">type LineRange struct</a>
+
+```
+searchKey: highlight.LineRange
+tags: [struct]
+```
+
+```Go
+type LineRange struct {
+	// StartLine is the 0-based inclusive start line of the range.
+	StartLine int32
+
+	// EndLine is the 0-based exclusive end line of the range.
+	EndLine int32
+}
+```
+
+LineRange describes a line range. 
+
+It uses int32 for GraphQL compatability. 
+
+### <a id="Metadata" href="#Metadata">type Metadata struct</a>
+
+```
+searchKey: highlight.Metadata
+tags: [struct]
+```
+
+```Go
+type Metadata struct {
+	RepoName string
+	Revision string
+}
+```
+
+Metadata contains metadata about a request to highlight code. It is used to ensure that when syntax highlighting takes a long time or errors out, we can log enough information to track down what the problematic code we were trying to highlight was. 
+
+All fields are optional. 
 
 ### <a id="Params" href="#Params">type Params struct</a>
 
 ```
 searchKey: highlight.Params
+tags: [struct]
 ```
 
 ```Go
@@ -189,76 +232,17 @@ type Params struct {
 
 Params defines mandatory and optional parameters to use when highlighting code. 
 
-### <a id="Metadata" href="#Metadata">type Metadata struct</a>
-
-```
-searchKey: highlight.Metadata
-```
-
-```Go
-type Metadata struct {
-	RepoName string
-	Revision string
-}
-```
-
-Metadata contains metadata about a request to highlight code. It is used to ensure that when syntax highlighting takes a long time or errors out, we can log enough information to track down what the problematic code we were trying to highlight was. 
-
-All fields are optional. 
-
-### <a id="LineRange" href="#LineRange">type LineRange struct</a>
-
-```
-searchKey: highlight.LineRange
-```
-
-```Go
-type LineRange struct {
-	// StartLine is the 0-based inclusive start line of the range.
-	StartLine int32
-
-	// EndLine is the 0-based exclusive end line of the range.
-	EndLine int32
-}
-```
-
-LineRange describes a line range. 
-
-It uses int32 for GraphQL compatability. 
-
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
-
-### <a id="init.highlight.go" href="#init.highlight.go">func init()</a>
-
-```
-searchKey: highlight.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
-### <a id="IsBinary" href="#IsBinary">func IsBinary(content []byte) bool</a>
-
-```
-searchKey: highlight.IsBinary
-```
-
-```Go
-func IsBinary(content []byte) bool
-```
-
-IsBinary is a helper to tell if the content of a file is binary or not. 
 
 ### <a id="Code" href="#Code">func Code(ctx context.Context, p Params) (h template.HTML, aborted bool, err error)</a>
 
 ```
 searchKey: highlight.Code
+tags: [method]
 ```
 
 ```Go
@@ -271,32 +255,11 @@ The returned boolean represents whether or not highlighting was aborted due to t
 
 In the event the input content is binary, ErrBinary is returned. 
 
-### <a id="firstCharacters" href="#firstCharacters">func firstCharacters(s string, n int) string</a>
-
-```
-searchKey: highlight.firstCharacters
-tags: [private]
-```
-
-```Go
-func firstCharacters(s string, n int) string
-```
-
-### <a id="generatePlainTable" href="#generatePlainTable">func generatePlainTable(code string) (template.HTML, error)</a>
-
-```
-searchKey: highlight.generatePlainTable
-tags: [private]
-```
-
-```Go
-func generatePlainTable(code string) (template.HTML, error)
-```
-
 ### <a id="CodeAsLines" href="#CodeAsLines">func CodeAsLines(ctx context.Context, p Params) ([]template.HTML, bool, error)</a>
 
 ```
 searchKey: highlight.CodeAsLines
+tags: [method]
 ```
 
 ```Go
@@ -307,24 +270,151 @@ CodeAsLines highlights the file and returns a list of highlighted lines. The ret
 
 In the event the input content is binary, ErrBinary is returned. 
 
-### <a id="splitHighlightedLines" href="#splitHighlightedLines">func splitHighlightedLines(input template.HTML, wholeRow bool) ([]template.HTML, error)</a>
+### <a id="IsBinary" href="#IsBinary">func IsBinary(content []byte) bool</a>
 
 ```
-searchKey: highlight.splitHighlightedLines
-tags: [private]
+searchKey: highlight.IsBinary
+tags: [method]
 ```
 
 ```Go
-func splitHighlightedLines(input template.HTML, wholeRow bool) ([]template.HTML, error)
+func IsBinary(content []byte) bool
 ```
 
-splitHighlightedLines takes the highlighted HTML table and returns a slice of highlighted strings, where each string corresponds a single line in the original, highlighted file. 
+IsBinary is a helper to tell if the content of a file is binary or not. 
+
+### <a id="ResetMocks" href="#ResetMocks">func ResetMocks()</a>
+
+```
+searchKey: highlight.ResetMocks
+tags: [function]
+```
+
+```Go
+func ResetMocks()
+```
+
+ResetMocks clears the mock functions set on Mocks (so that subsequent tests don't inadvertently use them). 
+
+### <a id="SplitLineRanges" href="#SplitLineRanges">func SplitLineRanges(html template.HTML, ranges []LineRange) ([][]string, error)</a>
+
+```
+searchKey: highlight.SplitLineRanges
+tags: [method]
+```
+
+```Go
+func SplitLineRanges(html template.HTML, ranges []LineRange) ([][]string, error)
+```
+
+SplitLineRanges takes a syntax highlighted HTML table (returned by highlight.Code) and splits out the specified line ranges, returning HTML table rows `<tr>...</tr>` for each line range. 
+
+Input line ranges will automatically be clamped within the bounds of the file. 
+
+### <a id="TestCodeAsLines" href="#TestCodeAsLines">func TestCodeAsLines(t *testing.T)</a>
+
+```
+searchKey: highlight.TestCodeAsLines
+tags: [method private test]
+```
+
+```Go
+func TestCodeAsLines(t *testing.T)
+```
+
+### <a id="TestGeneratePlainTable" href="#TestGeneratePlainTable">func TestGeneratePlainTable(t *testing.T)</a>
+
+```
+searchKey: highlight.TestGeneratePlainTable
+tags: [method private test]
+```
+
+```Go
+func TestGeneratePlainTable(t *testing.T)
+```
+
+### <a id="TestGeneratePlainTableSecurity" href="#TestGeneratePlainTableSecurity">func TestGeneratePlainTableSecurity(t *testing.T)</a>
+
+```
+searchKey: highlight.TestGeneratePlainTableSecurity
+tags: [method private test]
+```
+
+```Go
+func TestGeneratePlainTableSecurity(t *testing.T)
+```
+
+### <a id="TestSplitHighlightedLines" href="#TestSplitHighlightedLines">func TestSplitHighlightedLines(t *testing.T)</a>
+
+```
+searchKey: highlight.TestSplitHighlightedLines
+tags: [method private test]
+```
+
+```Go
+func TestSplitHighlightedLines(t *testing.T)
+```
+
+### <a id="TestSplitLineRanges" href="#TestSplitLineRanges">func TestSplitLineRanges(t *testing.T)</a>
+
+```
+searchKey: highlight.TestSplitLineRanges
+tags: [method private test]
+```
+
+```Go
+func TestSplitLineRanges(t *testing.T)
+```
+
+### <a id="Test_normalizeFilepath" href="#Test_normalizeFilepath">func Test_normalizeFilepath(t *testing.T)</a>
+
+```
+searchKey: highlight.Test_normalizeFilepath
+tags: [method private test]
+```
+
+```Go
+func Test_normalizeFilepath(t *testing.T)
+```
+
+### <a id="firstCharacters" href="#firstCharacters">func firstCharacters(s string, n int) string</a>
+
+```
+searchKey: highlight.firstCharacters
+tags: [method private]
+```
+
+```Go
+func firstCharacters(s string, n int) string
+```
+
+### <a id="generatePlainTable" href="#generatePlainTable">func generatePlainTable(code string) (template.HTML, error)</a>
+
+```
+searchKey: highlight.generatePlainTable
+tags: [method private]
+```
+
+```Go
+func generatePlainTable(code string) (template.HTML, error)
+```
+
+### <a id="init.highlight.go" href="#init.highlight.go">func init()</a>
+
+```
+searchKey: highlight.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
 
 ### <a id="normalizeFilepath" href="#normalizeFilepath">func normalizeFilepath(p string) string</a>
 
 ```
 searchKey: highlight.normalizeFilepath
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -349,95 +439,16 @@ FOO.txt
 ```
 It expects the filepath uses forward slashes always. 
 
-### <a id="SplitLineRanges" href="#SplitLineRanges">func SplitLineRanges(html template.HTML, ranges []LineRange) ([][]string, error)</a>
+### <a id="splitHighlightedLines" href="#splitHighlightedLines">func splitHighlightedLines(input template.HTML, wholeRow bool) ([]template.HTML, error)</a>
 
 ```
-searchKey: highlight.SplitLineRanges
-```
-
-```Go
-func SplitLineRanges(html template.HTML, ranges []LineRange) ([][]string, error)
-```
-
-SplitLineRanges takes a syntax highlighted HTML table (returned by highlight.Code) and splits out the specified line ranges, returning HTML table rows `<tr>...</tr>` for each line range. 
-
-Input line ranges will automatically be clamped within the bounds of the file. 
-
-### <a id="ResetMocks" href="#ResetMocks">func ResetMocks()</a>
-
-```
-searchKey: highlight.ResetMocks
+searchKey: highlight.splitHighlightedLines
+tags: [method private]
 ```
 
 ```Go
-func ResetMocks()
+func splitHighlightedLines(input template.HTML, wholeRow bool) ([]template.HTML, error)
 ```
 
-ResetMocks clears the mock functions set on Mocks (so that subsequent tests don't inadvertently use them). 
-
-### <a id="TestGeneratePlainTable" href="#TestGeneratePlainTable">func TestGeneratePlainTable(t *testing.T)</a>
-
-```
-searchKey: highlight.TestGeneratePlainTable
-tags: [private]
-```
-
-```Go
-func TestGeneratePlainTable(t *testing.T)
-```
-
-### <a id="TestGeneratePlainTableSecurity" href="#TestGeneratePlainTableSecurity">func TestGeneratePlainTableSecurity(t *testing.T)</a>
-
-```
-searchKey: highlight.TestGeneratePlainTableSecurity
-tags: [private]
-```
-
-```Go
-func TestGeneratePlainTableSecurity(t *testing.T)
-```
-
-### <a id="TestSplitHighlightedLines" href="#TestSplitHighlightedLines">func TestSplitHighlightedLines(t *testing.T)</a>
-
-```
-searchKey: highlight.TestSplitHighlightedLines
-tags: [private]
-```
-
-```Go
-func TestSplitHighlightedLines(t *testing.T)
-```
-
-### <a id="TestCodeAsLines" href="#TestCodeAsLines">func TestCodeAsLines(t *testing.T)</a>
-
-```
-searchKey: highlight.TestCodeAsLines
-tags: [private]
-```
-
-```Go
-func TestCodeAsLines(t *testing.T)
-```
-
-### <a id="Test_normalizeFilepath" href="#Test_normalizeFilepath">func Test_normalizeFilepath(t *testing.T)</a>
-
-```
-searchKey: highlight.Test_normalizeFilepath
-tags: [private]
-```
-
-```Go
-func Test_normalizeFilepath(t *testing.T)
-```
-
-### <a id="TestSplitLineRanges" href="#TestSplitLineRanges">func TestSplitLineRanges(t *testing.T)</a>
-
-```
-searchKey: highlight.TestSplitLineRanges
-tags: [private]
-```
-
-```Go
-func TestSplitLineRanges(t *testing.T)
-```
+splitHighlightedLines takes the highlighted HTML table and returns a slice of highlighted strings, where each string corresponds a single line in the original, highlighted file. 
 

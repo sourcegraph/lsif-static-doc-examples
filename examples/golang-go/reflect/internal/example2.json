@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "reflect/internal/example2",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,9 @@
                 "identifier": "MyStruct",
                 "newPage": false,
                 "searchKey": "example2.MyStruct",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -12,65 +12,44 @@ pipeline.AddStep("check_mark", buildkite.Cmd("./dev/check/all.sh"))
 ## Index
 
 * [Variables](#var)
-    * [var Plugins](#Plugins)
-    * [var BeforeEveryStepOpts](#BeforeEveryStepOpts)
     * [var AfterEveryStepOpts](#AfterEveryStepOpts)
+    * [var BeforeEveryStepOpts](#BeforeEveryStepOpts)
+    * [var Plugins](#Plugins)
 * [Types](#type)
+    * [type AutomaticRetryOptions struct](#AutomaticRetryOptions)
+    * [type BuildOptions struct](#BuildOptions)
     * [type Pipeline struct](#Pipeline)
         * [func (p *Pipeline) AddStep(label string, opts ...StepOpt)](#Pipeline.AddStep)
         * [func (p *Pipeline) AddTrigger(label string, opts ...StepOpt)](#Pipeline.AddTrigger)
-        * [func (p *Pipeline) WriteTo(w io.Writer) (int64, error)](#Pipeline.WriteTo)
         * [func (p *Pipeline) AddWait()](#Pipeline.AddWait)
-    * [type BuildOptions struct](#BuildOptions)
-    * [type Step struct](#Step)
+        * [func (p *Pipeline) WriteTo(w io.Writer) (int64, error)](#Pipeline.WriteTo)
     * [type RetryOptions struct](#RetryOptions)
-    * [type AutomaticRetryOptions struct](#AutomaticRetryOptions)
+    * [type Step struct](#Step)
     * [type StepOpt func(step *github.com/sourcegraph/sourcegraph/enterprise/dev/ci/internal/buildkite.Step)](#StepOpt)
-        * [func Cmd(command string) StepOpt](#Cmd)
-        * [func Trigger(pipeline string) StepOpt](#Trigger)
+        * [func Agent(key, value string) StepOpt](#Agent)
+        * [func ArtifactPaths(paths string) StepOpt](#ArtifactPaths)
         * [func Async(async bool) StepOpt](#Async)
+        * [func AutomaticRetry(limit int) StepOpt](#AutomaticRetry)
         * [func Build(buildOptions BuildOptions) StepOpt](#Build)
-        * [func ConcurrencyGroup(group string) StepOpt](#ConcurrencyGroup)
+        * [func Cmd(command string) StepOpt](#Cmd)
         * [func Concurrency(limit int) StepOpt](#Concurrency)
+        * [func ConcurrencyGroup(group string) StepOpt](#ConcurrencyGroup)
         * [func Env(name, value string) StepOpt](#Env)
         * [func SoftFail(softFail bool) StepOpt](#SoftFail)
-        * [func AutomaticRetry(limit int) StepOpt](#AutomaticRetry)
-        * [func ArtifactPaths(paths string) StepOpt](#ArtifactPaths)
-        * [func Agent(key, value string) StepOpt](#Agent)
+        * [func Trigger(pipeline string) StepOpt](#Trigger)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
-
-### <a id="Plugins" href="#Plugins">var Plugins</a>
-
-```
-searchKey: buildkite.Plugins
-```
-
-```Go
-var Plugins = make(map[string]interface{})
-```
-
-### <a id="BeforeEveryStepOpts" href="#BeforeEveryStepOpts">var BeforeEveryStepOpts</a>
-
-```
-searchKey: buildkite.BeforeEveryStepOpts
-```
-
-```Go
-var BeforeEveryStepOpts []StepOpt
-```
-
-BeforeEveryStepOpts are e.g. commands that are run before every AddStep, similar to Plugins. 
 
 ### <a id="AfterEveryStepOpts" href="#AfterEveryStepOpts">var AfterEveryStepOpts</a>
 
 ```
 searchKey: buildkite.AfterEveryStepOpts
+tags: [variable array function]
 ```
 
 ```Go
@@ -79,16 +58,71 @@ var AfterEveryStepOpts []StepOpt
 
 AfterEveryStepOpts are e.g. that are run at the end of every AddStep, helpful for post-processing 
 
+### <a id="BeforeEveryStepOpts" href="#BeforeEveryStepOpts">var BeforeEveryStepOpts</a>
+
+```
+searchKey: buildkite.BeforeEveryStepOpts
+tags: [variable array function]
+```
+
+```Go
+var BeforeEveryStepOpts []StepOpt
+```
+
+BeforeEveryStepOpts are e.g. commands that are run before every AddStep, similar to Plugins. 
+
+### <a id="Plugins" href="#Plugins">var Plugins</a>
+
+```
+searchKey: buildkite.Plugins
+tags: [variable object]
+```
+
+```Go
+var Plugins = make(map[string]interface{})
+```
+
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
+```
+
+### <a id="AutomaticRetryOptions" href="#AutomaticRetryOptions">type AutomaticRetryOptions struct</a>
+
+```
+searchKey: buildkite.AutomaticRetryOptions
+tags: [struct]
+```
+
+```Go
+type AutomaticRetryOptions struct {
+	Limit int `json:"limit,omitempty"`
+}
+```
+
+### <a id="BuildOptions" href="#BuildOptions">type BuildOptions struct</a>
+
+```
+searchKey: buildkite.BuildOptions
+tags: [struct]
+```
+
+```Go
+type BuildOptions struct {
+	Message  string                 `json:"message,omitempty"`
+	Commit   string                 `json:"commit,omitempty"`
+	Branch   string                 `json:"branch,omitempty"`
+	MetaData map[string]interface{} `json:"meta_data,omitempty"`
+	Env      map[string]string      `json:"env,omitempty"`
+}
 ```
 
 ### <a id="Pipeline" href="#Pipeline">type Pipeline struct</a>
 
 ```
 searchKey: buildkite.Pipeline
+tags: [struct]
 ```
 
 ```Go
@@ -102,6 +136,7 @@ type Pipeline struct {
 
 ```
 searchKey: buildkite.Pipeline.AddStep
+tags: [method]
 ```
 
 ```Go
@@ -112,45 +147,45 @@ func (p *Pipeline) AddStep(label string, opts ...StepOpt)
 
 ```
 searchKey: buildkite.Pipeline.AddTrigger
+tags: [method]
 ```
 
 ```Go
 func (p *Pipeline) AddTrigger(label string, opts ...StepOpt)
 ```
 
-#### <a id="Pipeline.WriteTo" href="#Pipeline.WriteTo">func (p *Pipeline) WriteTo(w io.Writer) (int64, error)</a>
-
-```
-searchKey: buildkite.Pipeline.WriteTo
-```
-
-```Go
-func (p *Pipeline) WriteTo(w io.Writer) (int64, error)
-```
-
 #### <a id="Pipeline.AddWait" href="#Pipeline.AddWait">func (p *Pipeline) AddWait()</a>
 
 ```
 searchKey: buildkite.Pipeline.AddWait
+tags: [function]
 ```
 
 ```Go
 func (p *Pipeline) AddWait()
 ```
 
-### <a id="BuildOptions" href="#BuildOptions">type BuildOptions struct</a>
+#### <a id="Pipeline.WriteTo" href="#Pipeline.WriteTo">func (p *Pipeline) WriteTo(w io.Writer) (int64, error)</a>
 
 ```
-searchKey: buildkite.BuildOptions
+searchKey: buildkite.Pipeline.WriteTo
+tags: [method]
 ```
 
 ```Go
-type BuildOptions struct {
-	Message  string                 `json:"message,omitempty"`
-	Commit   string                 `json:"commit,omitempty"`
-	Branch   string                 `json:"branch,omitempty"`
-	MetaData map[string]interface{} `json:"meta_data,omitempty"`
-	Env      map[string]string      `json:"env,omitempty"`
+func (p *Pipeline) WriteTo(w io.Writer) (int64, error)
+```
+
+### <a id="RetryOptions" href="#RetryOptions">type RetryOptions struct</a>
+
+```
+searchKey: buildkite.RetryOptions
+tags: [struct]
+```
+
+```Go
+type RetryOptions struct {
+	Automatic *AutomaticRetryOptions `json:"automatic,omitempty"`
 }
 ```
 
@@ -158,6 +193,7 @@ type BuildOptions struct {
 
 ```
 searchKey: buildkite.Step
+tags: [struct]
 ```
 
 ```Go
@@ -179,104 +215,110 @@ type Step struct {
 }
 ```
 
-### <a id="RetryOptions" href="#RetryOptions">type RetryOptions struct</a>
-
-```
-searchKey: buildkite.RetryOptions
-```
-
-```Go
-type RetryOptions struct {
-	Automatic *AutomaticRetryOptions `json:"automatic,omitempty"`
-}
-```
-
-### <a id="AutomaticRetryOptions" href="#AutomaticRetryOptions">type AutomaticRetryOptions struct</a>
-
-```
-searchKey: buildkite.AutomaticRetryOptions
-```
-
-```Go
-type AutomaticRetryOptions struct {
-	Limit int `json:"limit,omitempty"`
-}
-```
-
 ### <a id="StepOpt" href="#StepOpt">type StepOpt func(step *github.com/sourcegraph/sourcegraph/enterprise/dev/ci/internal/buildkite.Step)</a>
 
 ```
 searchKey: buildkite.StepOpt
+tags: [function]
 ```
 
 ```Go
 type StepOpt func(step *Step)
 ```
 
-#### <a id="Cmd" href="#Cmd">func Cmd(command string) StepOpt</a>
+#### <a id="Agent" href="#Agent">func Agent(key, value string) StepOpt</a>
 
 ```
-searchKey: buildkite.Cmd
-```
-
-```Go
-func Cmd(command string) StepOpt
-```
-
-#### <a id="Trigger" href="#Trigger">func Trigger(pipeline string) StepOpt</a>
-
-```
-searchKey: buildkite.Trigger
+searchKey: buildkite.Agent
+tags: [method]
 ```
 
 ```Go
-func Trigger(pipeline string) StepOpt
+func Agent(key, value string) StepOpt
+```
+
+#### <a id="ArtifactPaths" href="#ArtifactPaths">func ArtifactPaths(paths string) StepOpt</a>
+
+```
+searchKey: buildkite.ArtifactPaths
+tags: [method]
+```
+
+```Go
+func ArtifactPaths(paths string) StepOpt
 ```
 
 #### <a id="Async" href="#Async">func Async(async bool) StepOpt</a>
 
 ```
 searchKey: buildkite.Async
+tags: [method]
 ```
 
 ```Go
 func Async(async bool) StepOpt
 ```
 
+#### <a id="AutomaticRetry" href="#AutomaticRetry">func AutomaticRetry(limit int) StepOpt</a>
+
+```
+searchKey: buildkite.AutomaticRetry
+tags: [method]
+```
+
+```Go
+func AutomaticRetry(limit int) StepOpt
+```
+
 #### <a id="Build" href="#Build">func Build(buildOptions BuildOptions) StepOpt</a>
 
 ```
 searchKey: buildkite.Build
+tags: [method]
 ```
 
 ```Go
 func Build(buildOptions BuildOptions) StepOpt
 ```
 
-#### <a id="ConcurrencyGroup" href="#ConcurrencyGroup">func ConcurrencyGroup(group string) StepOpt</a>
+#### <a id="Cmd" href="#Cmd">func Cmd(command string) StepOpt</a>
 
 ```
-searchKey: buildkite.ConcurrencyGroup
+searchKey: buildkite.Cmd
+tags: [method]
 ```
 
 ```Go
-func ConcurrencyGroup(group string) StepOpt
+func Cmd(command string) StepOpt
 ```
 
 #### <a id="Concurrency" href="#Concurrency">func Concurrency(limit int) StepOpt</a>
 
 ```
 searchKey: buildkite.Concurrency
+tags: [method]
 ```
 
 ```Go
 func Concurrency(limit int) StepOpt
 ```
 
+#### <a id="ConcurrencyGroup" href="#ConcurrencyGroup">func ConcurrencyGroup(group string) StepOpt</a>
+
+```
+searchKey: buildkite.ConcurrencyGroup
+tags: [method]
+```
+
+```Go
+func ConcurrencyGroup(group string) StepOpt
+```
+
 #### <a id="Env" href="#Env">func Env(name, value string) StepOpt</a>
 
 ```
 searchKey: buildkite.Env
+tags: [method]
 ```
 
 ```Go
@@ -287,39 +329,21 @@ func Env(name, value string) StepOpt
 
 ```
 searchKey: buildkite.SoftFail
+tags: [method]
 ```
 
 ```Go
 func SoftFail(softFail bool) StepOpt
 ```
 
-#### <a id="AutomaticRetry" href="#AutomaticRetry">func AutomaticRetry(limit int) StepOpt</a>
+#### <a id="Trigger" href="#Trigger">func Trigger(pipeline string) StepOpt</a>
 
 ```
-searchKey: buildkite.AutomaticRetry
-```
-
-```Go
-func AutomaticRetry(limit int) StepOpt
-```
-
-#### <a id="ArtifactPaths" href="#ArtifactPaths">func ArtifactPaths(paths string) StepOpt</a>
-
-```
-searchKey: buildkite.ArtifactPaths
+searchKey: buildkite.Trigger
+tags: [method]
 ```
 
 ```Go
-func ArtifactPaths(paths string) StepOpt
-```
-
-#### <a id="Agent" href="#Agent">func Agent(key, value string) StepOpt</a>
-
-```
-searchKey: buildkite.Agent
-```
-
-```Go
-func Agent(key, value string) StepOpt
+func Trigger(pipeline string) StepOpt
 ```
 

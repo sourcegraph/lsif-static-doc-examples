@@ -8,24 +8,25 @@
 * [Types](#type)
     * [type releaseMeta struct](#releaseMeta)
 * [Functions](#func)
+    * [func TestHighestMatchingVersion(t *testing.T)](#TestHighestMatchingVersion)
+    * [func TestReleaseVersions(t *testing.T)](#TestReleaseVersions)
     * [func Version() (string, error)](#Version)
     * [func highestMatchingVersion(minimumVersion *semver.Version, versions []*semver.Version) (*semver.Version, error)](#highestMatchingVersion)
     * [func releaseVersions(url string) ([]*semver.Version, error)](#releaseVersions)
     * [func releaseVersionsPage(url string) ([]*semver.Version, string, error)](#releaseVersionsPage)
-    * [func TestHighestMatchingVersion(t *testing.T)](#TestHighestMatchingVersion)
-    * [func TestReleaseVersions(t *testing.T)](#TestReleaseVersions)
 
 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="MinimumVersion" href="#MinimumVersion">const MinimumVersion</a>
 
 ```
 searchKey: srccli.MinimumVersion
+tags: [constant string]
 ```
 
 ```Go
@@ -40,7 +41,7 @@ At the time of a Sourcegraph release, this is always the latest src-cli version.
 
 ```
 searchKey: srccli.githubAPIReleasesEndpoint
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -50,14 +51,14 @@ const githubAPIReleasesEndpoint = "https://api.github.com/repos/sourcegraph/src-
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="releaseMeta" href="#releaseMeta">type releaseMeta struct</a>
 
 ```
 searchKey: srccli.releaseMeta
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -71,13 +72,36 @@ type releaseMeta struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
+```
+
+### <a id="TestHighestMatchingVersion" href="#TestHighestMatchingVersion">func TestHighestMatchingVersion(t *testing.T)</a>
+
+```
+searchKey: srccli.TestHighestMatchingVersion
+tags: [method private test]
+```
+
+```Go
+func TestHighestMatchingVersion(t *testing.T)
+```
+
+### <a id="TestReleaseVersions" href="#TestReleaseVersions">func TestReleaseVersions(t *testing.T)</a>
+
+```
+searchKey: srccli.TestReleaseVersions
+tags: [method private test]
+```
+
+```Go
+func TestReleaseVersions(t *testing.T)
 ```
 
 ### <a id="Version" href="#Version">func Version() (string, error)</a>
 
 ```
 searchKey: srccli.Version
+tags: [function]
 ```
 
 ```Go
@@ -90,7 +114,7 @@ Version returns the highest public version currently available via the GitHub re
 
 ```
 searchKey: srccli.highestMatchingVersion
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -103,7 +127,7 @@ highestMatchingVersion returns the highest version with the same major and minor
 
 ```
 searchKey: srccli.releaseVersions
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -116,7 +140,7 @@ releaseVersions requests the given URL and all subsequent pages of releases. Ret
 
 ```
 searchKey: srccli.releaseVersionsPage
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -124,26 +148,4 @@ func releaseVersionsPage(url string) ([]*semver.Version, string, error)
 ```
 
 releaseVersionsPage requests the given URL and returns the non-draft, non-prerelease items with a valid semver tag and the url for the next page of results (if one exists). 
-
-### <a id="TestHighestMatchingVersion" href="#TestHighestMatchingVersion">func TestHighestMatchingVersion(t *testing.T)</a>
-
-```
-searchKey: srccli.TestHighestMatchingVersion
-tags: [private]
-```
-
-```Go
-func TestHighestMatchingVersion(t *testing.T)
-```
-
-### <a id="TestReleaseVersions" href="#TestReleaseVersions">func TestReleaseVersions(t *testing.T)</a>
-
-```
-searchKey: srccli.TestReleaseVersions
-tags: [private]
-```
-
-```Go
-func TestReleaseVersions(t *testing.T)
-```
 

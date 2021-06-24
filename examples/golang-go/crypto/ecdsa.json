@@ -4,7 +4,9 @@
     "identifier": "ecdsa",
     "newPage": true,
     "searchKey": "crypto/ecdsa",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -41,6 +45,8 @@
                 "newPage": false,
                 "searchKey": "ecdsa.aesIV",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -65,7 +71,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -78,34 +86,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto/ecdsa#one",
-              "documentation": {
-                "identifier": "one",
-                "newPage": false,
-                "searchKey": "ecdsa.one",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var one"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar one = new(big.Int).SetInt64(1)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/ecdsa#errZeroParam",
               "documentation": {
                 "identifier": "errZeroParam",
                 "newPage": false,
                 "searchKey": "ecdsa.errZeroParam",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -122,12 +110,38 @@
           },
           {
             "node": {
+              "pathID": "/crypto/ecdsa#one",
+              "documentation": {
+                "identifier": "one",
+                "newPage": false,
+                "searchKey": "ecdsa.one",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var one"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar one = new(big.Int).SetInt64(1)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/ecdsa#zeroReader",
               "documentation": {
                 "identifier": "zeroReader",
                 "newPage": false,
                 "searchKey": "ecdsa.zeroReader",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -152,7 +166,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -165,97 +181,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto/ecdsa#invertible",
-              "documentation": {
-                "identifier": "invertible",
-                "newPage": false,
-                "searchKey": "ecdsa.invertible",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type invertible interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype invertible interface {\n\t// Inverse returns the inverse of k in GF(P)\n\tInverse(k *big.Int) *big.Int\n}\n```\n\nA invertible implements fast inverse mod Curve.Params().N \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#combinedMult",
-              "documentation": {
-                "identifier": "combinedMult",
-                "newPage": false,
-                "searchKey": "ecdsa.combinedMult",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type combinedMult interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype combinedMult interface {\n\tCombinedMult(bigX, bigY *big.Int, baseScalar, scalar []byte) (x, y *big.Int)\n}\n```\n\ncombinedMult implements fast multiplication S1*g + S2*p (g - generator, p - arbitrary point) \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#PublicKey",
-              "documentation": {
-                "identifier": "PublicKey",
-                "newPage": false,
-                "searchKey": "ecdsa.PublicKey",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type PublicKey struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype PublicKey struct {\n\telliptic.Curve\n\tX, Y *big.Int\n}\n```\n\nPublicKey represents an ECDSA public key. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/crypto/ecdsa#PublicKey.Equal",
-                    "documentation": {
-                      "identifier": "PublicKey.Equal",
-                      "newPage": false,
-                      "searchKey": "ecdsa.PublicKey.Equal",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (pub *PublicKey) Equal(x crypto.PublicKey) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (pub *PublicKey) Equal(x crypto.PublicKey) bool\n```\n\nEqual reports whether pub and x have the same value. \n\nTwo keys are only considered to have the same value if they have the same Curve value. Note that for example elliptic.P256() and elliptic.P256().Params() are different values, as the latter is a generic not constant time implementation. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/ecdsa#PrivateKey",
               "documentation": {
                 "identifier": "PrivateKey",
                 "newPage": false,
                 "searchKey": "ecdsa.PrivateKey",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -273,7 +206,9 @@
                       "identifier": "GenerateKey",
                       "newPage": false,
                       "searchKey": "ecdsa.GenerateKey",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -288,32 +223,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/crypto/ecdsa#PrivateKey.Public",
-                    "documentation": {
-                      "identifier": "PrivateKey.Public",
-                      "newPage": false,
-                      "searchKey": "ecdsa.PrivateKey.Public",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (priv *PrivateKey) Public() crypto.PublicKey"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (priv *PrivateKey) Public() crypto.PublicKey\n```\n\nPublic returns the public key corresponding to priv. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/crypto/ecdsa#PrivateKey.Equal",
                     "documentation": {
                       "identifier": "PrivateKey.Equal",
                       "newPage": false,
                       "searchKey": "ecdsa.PrivateKey.Equal",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -328,12 +245,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/crypto/ecdsa#PrivateKey.Public",
+                    "documentation": {
+                      "identifier": "PrivateKey.Public",
+                      "newPage": false,
+                      "searchKey": "ecdsa.PrivateKey.Public",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (priv *PrivateKey) Public() crypto.PublicKey"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (priv *PrivateKey) Public() crypto.PublicKey\n```\n\nPublic returns the public key corresponding to priv. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/crypto/ecdsa#PrivateKey.Sign",
                     "documentation": {
                       "identifier": "PrivateKey.Sign",
                       "newPage": false,
                       "searchKey": "ecdsa.PrivateKey.Sign",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -351,12 +292,104 @@
           },
           {
             "node": {
+              "pathID": "/crypto/ecdsa#PublicKey",
+              "documentation": {
+                "identifier": "PublicKey",
+                "newPage": false,
+                "searchKey": "ecdsa.PublicKey",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PublicKey struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PublicKey struct {\n\telliptic.Curve\n\tX, Y *big.Int\n}\n```\n\nPublicKey represents an ECDSA public key. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/crypto/ecdsa#PublicKey.Equal",
+                    "documentation": {
+                      "identifier": "PublicKey.Equal",
+                      "newPage": false,
+                      "searchKey": "ecdsa.PublicKey.Equal",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pub *PublicKey) Equal(x crypto.PublicKey) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pub *PublicKey) Equal(x crypto.PublicKey) bool\n```\n\nEqual reports whether pub and x have the same value. \n\nTwo keys are only considered to have the same value if they have the same Curve value. Note that for example elliptic.P256() and elliptic.P256().Params() are different values, as the latter is a generic not constant time implementation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#combinedMult",
+              "documentation": {
+                "identifier": "combinedMult",
+                "newPage": false,
+                "searchKey": "ecdsa.combinedMult",
+                "tags": [
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type combinedMult interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype combinedMult interface {\n\tCombinedMult(bigX, bigY *big.Int, baseScalar, scalar []byte) (x, y *big.Int)\n}\n```\n\ncombinedMult implements fast multiplication S1*g + S2*p (g - generator, p - arbitrary point) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#invertible",
+              "documentation": {
+                "identifier": "invertible",
+                "newPage": false,
+                "searchKey": "ecdsa.invertible",
+                "tags": [
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type invertible interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype invertible interface {\n\t// Inverse returns the inverse of k in GF(P)\n\tInverse(k *big.Int) *big.Int\n}\n```\n\nA invertible implements fast inverse mod Curve.Params().N \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/ecdsa#zr",
               "documentation": {
                 "identifier": "zr",
                 "newPage": false,
                 "searchKey": "ecdsa.zr",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -377,6 +410,7 @@
                       "newPage": false,
                       "searchKey": "ecdsa.zr.Read",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -404,7 +438,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -417,630 +453,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto/ecdsa#randFieldElement",
+              "pathID": "/crypto/ecdsa#BenchmarkGenerateKey",
               "documentation": {
-                "identifier": "randFieldElement",
+                "identifier": "BenchmarkGenerateKey",
                 "newPage": false,
-                "searchKey": "ecdsa.randFieldElement",
+                "searchKey": "ecdsa.BenchmarkGenerateKey",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func randFieldElement(c elliptic.Curve, rand io.Reader) (k *big.Int, err error)"
+                "value": "func BenchmarkGenerateKey(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc randFieldElement(c elliptic.Curve, rand io.Reader) (k *big.Int, err error)\n```\n\nrandFieldElement returns a random element of the field underlying the given curve using the procedure given in [NSA] A.2.1. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#hashToInt",
-              "documentation": {
-                "identifier": "hashToInt",
-                "newPage": false,
-                "searchKey": "ecdsa.hashToInt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func hashToInt(hash []byte, c elliptic.Curve) *big.Int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc hashToInt(hash []byte, c elliptic.Curve) *big.Int\n```\n\nhashToInt converts a hash value to an integer. There is some disagreement about how this is done. [NSA] suggests that this is done in the obvious manner, but [SECG] truncates the hash to the bit-length of the curve order first. We follow [SECG] because that's what OpenSSL does. Additionally, OpenSSL right shifts excess bits from the number if the hash is too large and we mirror that too. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#fermatInverse",
-              "documentation": {
-                "identifier": "fermatInverse",
-                "newPage": false,
-                "searchKey": "ecdsa.fermatInverse",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func fermatInverse(k, N *big.Int) *big.Int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc fermatInverse(k, N *big.Int) *big.Int\n```\n\nfermatInverse calculates the inverse of k in GF(P) using Fermat's method. This has better constant-time properties than Euclid's method (implemented in math/big.Int.ModInverse) although math/big itself isn't strictly constant-time so it's not perfect. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#Sign",
-              "documentation": {
-                "identifier": "Sign",
-                "newPage": false,
-                "searchKey": "ecdsa.Sign",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Sign(rand io.Reader, priv *PrivateKey, hash []byte) (r, s *big.Int, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Sign(rand io.Reader, priv *PrivateKey, hash []byte) (r, s *big.Int, err error)\n```\n\nSign signs a hash (which should be the result of hashing a larger message) using the private key, priv. If the hash is longer than the bit-length of the private key's curve order, the hash will be truncated to that length. It returns the signature as a pair of integers. The security of the private key depends on the entropy of rand. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#signGeneric",
-              "documentation": {
-                "identifier": "signGeneric",
-                "newPage": false,
-                "searchKey": "ecdsa.signGeneric",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func signGeneric(priv *PrivateKey, csprng *cipher.StreamReader, c elliptic.Curve, hash []byte) (r, s *big.Int, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc signGeneric(priv *PrivateKey, csprng *cipher.StreamReader, c elliptic.Curve, hash []byte) (r, s *big.Int, err error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#SignASN1",
-              "documentation": {
-                "identifier": "SignASN1",
-                "newPage": false,
-                "searchKey": "ecdsa.SignASN1",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SignASN1(rand io.Reader, priv *PrivateKey, hash []byte) ([]byte, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SignASN1(rand io.Reader, priv *PrivateKey, hash []byte) ([]byte, error)\n```\n\nSignASN1 signs a hash (which should be the result of hashing a larger message) using the private key, priv. If the hash is longer than the bit-length of the private key's curve order, the hash will be truncated to that length. It returns the ASN.1 encoded signature. The security of the private key depends on the entropy of rand. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#Verify",
-              "documentation": {
-                "identifier": "Verify",
-                "newPage": false,
-                "searchKey": "ecdsa.Verify",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Verify(pub *PublicKey, hash []byte, r, s *big.Int) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Verify(pub *PublicKey, hash []byte, r, s *big.Int) bool\n```\n\nVerify verifies the signature in r, s of hash using the public key, pub. Its return value records whether the signature is valid. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#verifyGeneric",
-              "documentation": {
-                "identifier": "verifyGeneric",
-                "newPage": false,
-                "searchKey": "ecdsa.verifyGeneric",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func verifyGeneric(pub *PublicKey, c elliptic.Curve, hash []byte, r, s *big.Int) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc verifyGeneric(pub *PublicKey, c elliptic.Curve, hash []byte, r, s *big.Int) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#VerifyASN1",
-              "documentation": {
-                "identifier": "VerifyASN1",
-                "newPage": false,
-                "searchKey": "ecdsa.VerifyASN1",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func VerifyASN1(pub *PublicKey, hash, sig []byte) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc VerifyASN1(pub *PublicKey, hash, sig []byte) bool\n```\n\nVerifyASN1 verifies the ASN.1 encoded signature, sig, of hash using the public key, pub. Its return value records whether the signature is valid. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#sign",
-              "documentation": {
-                "identifier": "sign",
-                "newPage": false,
-                "searchKey": "ecdsa.sign",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func sign(priv *PrivateKey, csprng *cipher.StreamReader, c elliptic.Curve, hash []byte) (r, s *big.Int, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc sign(priv *PrivateKey, csprng *cipher.StreamReader, c elliptic.Curve, hash []byte) (r, s *big.Int, err error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#verify",
-              "documentation": {
-                "identifier": "verify",
-                "newPage": false,
-                "searchKey": "ecdsa.verify",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func verify(pub *PublicKey, c elliptic.Curve, hash []byte, r, s *big.Int) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc verify(pub *PublicKey, c elliptic.Curve, hash []byte, r, s *big.Int) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#testAllCurves",
-              "documentation": {
-                "identifier": "testAllCurves",
-                "newPage": false,
-                "searchKey": "ecdsa.testAllCurves",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testAllCurves(t *testing.T, f func(*testing.T, elliptic.Curve))"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testAllCurves(t *testing.T, f func(*testing.T, elliptic.Curve))\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#TestKeyGeneration",
-              "documentation": {
-                "identifier": "TestKeyGeneration",
-                "newPage": false,
-                "searchKey": "ecdsa.TestKeyGeneration",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestKeyGeneration(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestKeyGeneration(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#testKeyGeneration",
-              "documentation": {
-                "identifier": "testKeyGeneration",
-                "newPage": false,
-                "searchKey": "ecdsa.testKeyGeneration",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testKeyGeneration(t *testing.T, c elliptic.Curve)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testKeyGeneration(t *testing.T, c elliptic.Curve)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#TestSignAndVerify",
-              "documentation": {
-                "identifier": "TestSignAndVerify",
-                "newPage": false,
-                "searchKey": "ecdsa.TestSignAndVerify",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSignAndVerify(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSignAndVerify(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#testSignAndVerify",
-              "documentation": {
-                "identifier": "testSignAndVerify",
-                "newPage": false,
-                "searchKey": "ecdsa.testSignAndVerify",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testSignAndVerify(t *testing.T, c elliptic.Curve)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testSignAndVerify(t *testing.T, c elliptic.Curve)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#TestSignAndVerifyASN1",
-              "documentation": {
-                "identifier": "TestSignAndVerifyASN1",
-                "newPage": false,
-                "searchKey": "ecdsa.TestSignAndVerifyASN1",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSignAndVerifyASN1(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSignAndVerifyASN1(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#testSignAndVerifyASN1",
-              "documentation": {
-                "identifier": "testSignAndVerifyASN1",
-                "newPage": false,
-                "searchKey": "ecdsa.testSignAndVerifyASN1",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testSignAndVerifyASN1(t *testing.T, c elliptic.Curve)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testSignAndVerifyASN1(t *testing.T, c elliptic.Curve)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#TestNonceSafety",
-              "documentation": {
-                "identifier": "TestNonceSafety",
-                "newPage": false,
-                "searchKey": "ecdsa.TestNonceSafety",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestNonceSafety(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestNonceSafety(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#testNonceSafety",
-              "documentation": {
-                "identifier": "testNonceSafety",
-                "newPage": false,
-                "searchKey": "ecdsa.testNonceSafety",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testNonceSafety(t *testing.T, c elliptic.Curve)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testNonceSafety(t *testing.T, c elliptic.Curve)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#TestINDCCA",
-              "documentation": {
-                "identifier": "TestINDCCA",
-                "newPage": false,
-                "searchKey": "ecdsa.TestINDCCA",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestINDCCA(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestINDCCA(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#testINDCCA",
-              "documentation": {
-                "identifier": "testINDCCA",
-                "newPage": false,
-                "searchKey": "ecdsa.testINDCCA",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testINDCCA(t *testing.T, c elliptic.Curve)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testINDCCA(t *testing.T, c elliptic.Curve)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#fromHex",
-              "documentation": {
-                "identifier": "fromHex",
-                "newPage": false,
-                "searchKey": "ecdsa.fromHex",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func fromHex(s string) *big.Int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc fromHex(s string) *big.Int\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#TestVectors",
-              "documentation": {
-                "identifier": "TestVectors",
-                "newPage": false,
-                "searchKey": "ecdsa.TestVectors",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestVectors(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestVectors(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#TestNegativeInputs",
-              "documentation": {
-                "identifier": "TestNegativeInputs",
-                "newPage": false,
-                "searchKey": "ecdsa.TestNegativeInputs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestNegativeInputs(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestNegativeInputs(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#testNegativeInputs",
-              "documentation": {
-                "identifier": "testNegativeInputs",
-                "newPage": false,
-                "searchKey": "ecdsa.testNegativeInputs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testNegativeInputs(t *testing.T, curve elliptic.Curve)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testNegativeInputs(t *testing.T, curve elliptic.Curve)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#TestZeroHashSignature",
-              "documentation": {
-                "identifier": "TestZeroHashSignature",
-                "newPage": false,
-                "searchKey": "ecdsa.TestZeroHashSignature",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestZeroHashSignature(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestZeroHashSignature(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#testZeroHashSignature",
-              "documentation": {
-                "identifier": "testZeroHashSignature",
-                "newPage": false,
-                "searchKey": "ecdsa.testZeroHashSignature",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testZeroHashSignature(t *testing.T, curve elliptic.Curve)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testZeroHashSignature(t *testing.T, curve elliptic.Curve)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ecdsa#benchmarkAllCurves",
-              "documentation": {
-                "identifier": "benchmarkAllCurves",
-                "newPage": false,
-                "searchKey": "ecdsa.benchmarkAllCurves",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func benchmarkAllCurves(t *testing.B, f func(*testing.B, elliptic.Curve))"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc benchmarkAllCurves(t *testing.B, f func(*testing.B, elliptic.Curve))\n```\n\n"
+                "value": "```Go\nfunc BenchmarkGenerateKey(b *testing.B)\n```\n\n"
               },
               "children": null
             }
@@ -1053,7 +483,9 @@
                 "newPage": false,
                 "searchKey": "ecdsa.BenchmarkSign",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -1075,7 +507,9 @@
                 "newPage": false,
                 "searchKey": "ecdsa.BenchmarkVerify",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -1091,22 +525,671 @@
           },
           {
             "node": {
-              "pathID": "/crypto/ecdsa#BenchmarkGenerateKey",
+              "pathID": "/crypto/ecdsa#Sign",
               "documentation": {
-                "identifier": "BenchmarkGenerateKey",
+                "identifier": "Sign",
                 "newPage": false,
-                "searchKey": "ecdsa.BenchmarkGenerateKey",
+                "searchKey": "ecdsa.Sign",
                 "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Sign(rand io.Reader, priv *PrivateKey, hash []byte) (r, s *big.Int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Sign(rand io.Reader, priv *PrivateKey, hash []byte) (r, s *big.Int, err error)\n```\n\nSign signs a hash (which should be the result of hashing a larger message) using the private key, priv. If the hash is longer than the bit-length of the private key's curve order, the hash will be truncated to that length. It returns the signature as a pair of integers. The security of the private key depends on the entropy of rand. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#SignASN1",
+              "documentation": {
+                "identifier": "SignASN1",
+                "newPage": false,
+                "searchKey": "ecdsa.SignASN1",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SignASN1(rand io.Reader, priv *PrivateKey, hash []byte) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SignASN1(rand io.Reader, priv *PrivateKey, hash []byte) ([]byte, error)\n```\n\nSignASN1 signs a hash (which should be the result of hashing a larger message) using the private key, priv. If the hash is longer than the bit-length of the private key's curve order, the hash will be truncated to that length. It returns the ASN.1 encoded signature. The security of the private key depends on the entropy of rand. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#TestINDCCA",
+              "documentation": {
+                "identifier": "TestINDCCA",
+                "newPage": false,
+                "searchKey": "ecdsa.TestINDCCA",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestINDCCA(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestINDCCA(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#TestKeyGeneration",
+              "documentation": {
+                "identifier": "TestKeyGeneration",
+                "newPage": false,
+                "searchKey": "ecdsa.TestKeyGeneration",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestKeyGeneration(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestKeyGeneration(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#TestNegativeInputs",
+              "documentation": {
+                "identifier": "TestNegativeInputs",
+                "newPage": false,
+                "searchKey": "ecdsa.TestNegativeInputs",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNegativeInputs(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNegativeInputs(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#TestNonceSafety",
+              "documentation": {
+                "identifier": "TestNonceSafety",
+                "newPage": false,
+                "searchKey": "ecdsa.TestNonceSafety",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNonceSafety(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNonceSafety(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#TestSignAndVerify",
+              "documentation": {
+                "identifier": "TestSignAndVerify",
+                "newPage": false,
+                "searchKey": "ecdsa.TestSignAndVerify",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSignAndVerify(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSignAndVerify(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#TestSignAndVerifyASN1",
+              "documentation": {
+                "identifier": "TestSignAndVerifyASN1",
+                "newPage": false,
+                "searchKey": "ecdsa.TestSignAndVerifyASN1",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSignAndVerifyASN1(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSignAndVerifyASN1(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#TestVectors",
+              "documentation": {
+                "identifier": "TestVectors",
+                "newPage": false,
+                "searchKey": "ecdsa.TestVectors",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestVectors(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestVectors(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#TestZeroHashSignature",
+              "documentation": {
+                "identifier": "TestZeroHashSignature",
+                "newPage": false,
+                "searchKey": "ecdsa.TestZeroHashSignature",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestZeroHashSignature(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestZeroHashSignature(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#Verify",
+              "documentation": {
+                "identifier": "Verify",
+                "newPage": false,
+                "searchKey": "ecdsa.Verify",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Verify(pub *PublicKey, hash []byte, r, s *big.Int) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Verify(pub *PublicKey, hash []byte, r, s *big.Int) bool\n```\n\nVerify verifies the signature in r, s of hash using the public key, pub. Its return value records whether the signature is valid. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#VerifyASN1",
+              "documentation": {
+                "identifier": "VerifyASN1",
+                "newPage": false,
+                "searchKey": "ecdsa.VerifyASN1",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func VerifyASN1(pub *PublicKey, hash, sig []byte) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc VerifyASN1(pub *PublicKey, hash, sig []byte) bool\n```\n\nVerifyASN1 verifies the ASN.1 encoded signature, sig, of hash using the public key, pub. Its return value records whether the signature is valid. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#benchmarkAllCurves",
+              "documentation": {
+                "identifier": "benchmarkAllCurves",
+                "newPage": false,
+                "searchKey": "ecdsa.benchmarkAllCurves",
+                "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkGenerateKey(b *testing.B)"
+                "value": "func benchmarkAllCurves(t *testing.B, f func(*testing.B, elliptic.Curve))"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkGenerateKey(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc benchmarkAllCurves(t *testing.B, f func(*testing.B, elliptic.Curve))\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#fermatInverse",
+              "documentation": {
+                "identifier": "fermatInverse",
+                "newPage": false,
+                "searchKey": "ecdsa.fermatInverse",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fermatInverse(k, N *big.Int) *big.Int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fermatInverse(k, N *big.Int) *big.Int\n```\n\nfermatInverse calculates the inverse of k in GF(P) using Fermat's method. This has better constant-time properties than Euclid's method (implemented in math/big.Int.ModInverse) although math/big itself isn't strictly constant-time so it's not perfect. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#fromHex",
+              "documentation": {
+                "identifier": "fromHex",
+                "newPage": false,
+                "searchKey": "ecdsa.fromHex",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fromHex(s string) *big.Int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fromHex(s string) *big.Int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#hashToInt",
+              "documentation": {
+                "identifier": "hashToInt",
+                "newPage": false,
+                "searchKey": "ecdsa.hashToInt",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hashToInt(hash []byte, c elliptic.Curve) *big.Int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hashToInt(hash []byte, c elliptic.Curve) *big.Int\n```\n\nhashToInt converts a hash value to an integer. There is some disagreement about how this is done. [NSA] suggests that this is done in the obvious manner, but [SECG] truncates the hash to the bit-length of the curve order first. We follow [SECG] because that's what OpenSSL does. Additionally, OpenSSL right shifts excess bits from the number if the hash is too large and we mirror that too. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#randFieldElement",
+              "documentation": {
+                "identifier": "randFieldElement",
+                "newPage": false,
+                "searchKey": "ecdsa.randFieldElement",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func randFieldElement(c elliptic.Curve, rand io.Reader) (k *big.Int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc randFieldElement(c elliptic.Curve, rand io.Reader) (k *big.Int, err error)\n```\n\nrandFieldElement returns a random element of the field underlying the given curve using the procedure given in [NSA] A.2.1. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#sign",
+              "documentation": {
+                "identifier": "sign",
+                "newPage": false,
+                "searchKey": "ecdsa.sign",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sign(priv *PrivateKey, csprng *cipher.StreamReader, c elliptic.Curve, hash []byte) (r, s *big.Int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sign(priv *PrivateKey, csprng *cipher.StreamReader, c elliptic.Curve, hash []byte) (r, s *big.Int, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#signGeneric",
+              "documentation": {
+                "identifier": "signGeneric",
+                "newPage": false,
+                "searchKey": "ecdsa.signGeneric",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func signGeneric(priv *PrivateKey, csprng *cipher.StreamReader, c elliptic.Curve, hash []byte) (r, s *big.Int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc signGeneric(priv *PrivateKey, csprng *cipher.StreamReader, c elliptic.Curve, hash []byte) (r, s *big.Int, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#testAllCurves",
+              "documentation": {
+                "identifier": "testAllCurves",
+                "newPage": false,
+                "searchKey": "ecdsa.testAllCurves",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testAllCurves(t *testing.T, f func(*testing.T, elliptic.Curve))"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testAllCurves(t *testing.T, f func(*testing.T, elliptic.Curve))\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#testINDCCA",
+              "documentation": {
+                "identifier": "testINDCCA",
+                "newPage": false,
+                "searchKey": "ecdsa.testINDCCA",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testINDCCA(t *testing.T, c elliptic.Curve)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testINDCCA(t *testing.T, c elliptic.Curve)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#testKeyGeneration",
+              "documentation": {
+                "identifier": "testKeyGeneration",
+                "newPage": false,
+                "searchKey": "ecdsa.testKeyGeneration",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testKeyGeneration(t *testing.T, c elliptic.Curve)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testKeyGeneration(t *testing.T, c elliptic.Curve)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#testNegativeInputs",
+              "documentation": {
+                "identifier": "testNegativeInputs",
+                "newPage": false,
+                "searchKey": "ecdsa.testNegativeInputs",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testNegativeInputs(t *testing.T, curve elliptic.Curve)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testNegativeInputs(t *testing.T, curve elliptic.Curve)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#testNonceSafety",
+              "documentation": {
+                "identifier": "testNonceSafety",
+                "newPage": false,
+                "searchKey": "ecdsa.testNonceSafety",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testNonceSafety(t *testing.T, c elliptic.Curve)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testNonceSafety(t *testing.T, c elliptic.Curve)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#testSignAndVerify",
+              "documentation": {
+                "identifier": "testSignAndVerify",
+                "newPage": false,
+                "searchKey": "ecdsa.testSignAndVerify",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testSignAndVerify(t *testing.T, c elliptic.Curve)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testSignAndVerify(t *testing.T, c elliptic.Curve)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#testSignAndVerifyASN1",
+              "documentation": {
+                "identifier": "testSignAndVerifyASN1",
+                "newPage": false,
+                "searchKey": "ecdsa.testSignAndVerifyASN1",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testSignAndVerifyASN1(t *testing.T, c elliptic.Curve)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testSignAndVerifyASN1(t *testing.T, c elliptic.Curve)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#testZeroHashSignature",
+              "documentation": {
+                "identifier": "testZeroHashSignature",
+                "newPage": false,
+                "searchKey": "ecdsa.testZeroHashSignature",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testZeroHashSignature(t *testing.T, curve elliptic.Curve)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testZeroHashSignature(t *testing.T, curve elliptic.Curve)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#verify",
+              "documentation": {
+                "identifier": "verify",
+                "newPage": false,
+                "searchKey": "ecdsa.verify",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func verify(pub *PublicKey, c elliptic.Curve, hash []byte, r, s *big.Int) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc verify(pub *PublicKey, c elliptic.Curve, hash []byte, r, s *big.Int) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ecdsa#verifyGeneric",
+              "documentation": {
+                "identifier": "verifyGeneric",
+                "newPage": false,
+                "searchKey": "ecdsa.verifyGeneric",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func verifyGeneric(pub *PublicKey, c elliptic.Curve, hash []byte, r, s *big.Int) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc verifyGeneric(pub *PublicKey, c elliptic.Curve, hash []byte, r, s *big.Int) bool\n```\n\n"
               },
               "children": null
             }

@@ -9,21 +9,26 @@ As of Go 1.16, the same functionality is now provided by package io or package o
 * [Variables](#var)
     * [var Discard](#Discard)
 * [Functions](#func)
-    * [func ReadAll(r io.Reader) ([]byte, error)](#ReadAll)
-    * [func ReadFile(filename string) ([]byte, error)](#ReadFile)
-    * [func WriteFile(filename string, data []byte, perm fs.FileMode) error](#WriteFile)
-    * [func ReadDir(dirname string) ([]fs.FileInfo, error)](#ReadDir)
     * [func NopCloser(r io.Reader) io.ReadCloser](#NopCloser)
-    * [func TempFile(dir, pattern string) (f *os.File, err error)](#TempFile)
+    * [func ReadAll(r io.Reader) ([]byte, error)](#ReadAll)
+    * [func ReadDir(dirname string) ([]fs.FileInfo, error)](#ReadDir)
+    * [func ReadFile(filename string) ([]byte, error)](#ReadFile)
     * [func TempDir(dir, pattern string) (name string, err error)](#TempDir)
+    * [func TempFile(dir, pattern string) (f *os.File, err error)](#TempFile)
+    * [func WriteFile(filename string, data []byte, perm fs.FileMode) error](#WriteFile)
 
 
 ## <a id="var" href="#var">Variables</a>
+
+```
+tags: [package]
+```
 
 ### <a id="Discard" href="#Discard">var Discard</a>
 
 ```
 searchKey: ioutil.Discard
+tags: [variable interface]
 ```
 
 ```Go
@@ -36,66 +41,15 @@ As of Go 1.16, this value is simply io.Discard.
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="ReadAll" href="#ReadAll">func ReadAll(r io.Reader) ([]byte, error)</a>
-
 ```
-searchKey: ioutil.ReadAll
+tags: [package]
 ```
-
-```Go
-func ReadAll(r io.Reader) ([]byte, error)
-```
-
-ReadAll reads from r until an error or EOF and returns the data it read. A successful call returns err == nil, not err == EOF. Because ReadAll is defined to read from src until EOF, it does not treat an EOF from Read as an error to be reported. 
-
-As of Go 1.16, this function simply calls io.ReadAll. 
-
-### <a id="ReadFile" href="#ReadFile">func ReadFile(filename string) ([]byte, error)</a>
-
-```
-searchKey: ioutil.ReadFile
-```
-
-```Go
-func ReadFile(filename string) ([]byte, error)
-```
-
-ReadFile reads the file named by filename and returns the contents. A successful call returns err == nil, not err == EOF. Because ReadFile reads the whole file, it does not treat an EOF from Read as an error to be reported. 
-
-As of Go 1.16, this function simply calls os.ReadFile. 
-
-### <a id="WriteFile" href="#WriteFile">func WriteFile(filename string, data []byte, perm fs.FileMode) error</a>
-
-```
-searchKey: ioutil.WriteFile
-```
-
-```Go
-func WriteFile(filename string, data []byte, perm fs.FileMode) error
-```
-
-WriteFile writes data to a file named by filename. If the file does not exist, WriteFile creates it with permissions perm (before umask); otherwise WriteFile truncates it before writing, without changing permissions. 
-
-As of Go 1.16, this function simply calls os.WriteFile. 
-
-### <a id="ReadDir" href="#ReadDir">func ReadDir(dirname string) ([]fs.FileInfo, error)</a>
-
-```
-searchKey: ioutil.ReadDir
-```
-
-```Go
-func ReadDir(dirname string) ([]fs.FileInfo, error)
-```
-
-ReadDir reads the directory named by dirname and returns a list of fs.FileInfo for the directory's contents, sorted by filename. If an error occurs reading the directory, ReadDir returns no directory entries along with the error. 
-
-As of Go 1.16, os.ReadDir is a more efficient and correct choice: it returns a list of fs.DirEntry instead of fs.FileInfo, and it returns partial results in the case of an error midway through reading a directory. 
 
 ### <a id="NopCloser" href="#NopCloser">func NopCloser(r io.Reader) io.ReadCloser</a>
 
 ```
 searchKey: ioutil.NopCloser
+tags: [method]
 ```
 
 ```Go
@@ -106,10 +60,71 @@ NopCloser returns a ReadCloser with a no-op Close method wrapping the provided R
 
 As of Go 1.16, this function simply calls io.NopCloser. 
 
+### <a id="ReadAll" href="#ReadAll">func ReadAll(r io.Reader) ([]byte, error)</a>
+
+```
+searchKey: ioutil.ReadAll
+tags: [method]
+```
+
+```Go
+func ReadAll(r io.Reader) ([]byte, error)
+```
+
+ReadAll reads from r until an error or EOF and returns the data it read. A successful call returns err == nil, not err == EOF. Because ReadAll is defined to read from src until EOF, it does not treat an EOF from Read as an error to be reported. 
+
+As of Go 1.16, this function simply calls io.ReadAll. 
+
+### <a id="ReadDir" href="#ReadDir">func ReadDir(dirname string) ([]fs.FileInfo, error)</a>
+
+```
+searchKey: ioutil.ReadDir
+tags: [method]
+```
+
+```Go
+func ReadDir(dirname string) ([]fs.FileInfo, error)
+```
+
+ReadDir reads the directory named by dirname and returns a list of fs.FileInfo for the directory's contents, sorted by filename. If an error occurs reading the directory, ReadDir returns no directory entries along with the error. 
+
+As of Go 1.16, os.ReadDir is a more efficient and correct choice: it returns a list of fs.DirEntry instead of fs.FileInfo, and it returns partial results in the case of an error midway through reading a directory. 
+
+### <a id="ReadFile" href="#ReadFile">func ReadFile(filename string) ([]byte, error)</a>
+
+```
+searchKey: ioutil.ReadFile
+tags: [method]
+```
+
+```Go
+func ReadFile(filename string) ([]byte, error)
+```
+
+ReadFile reads the file named by filename and returns the contents. A successful call returns err == nil, not err == EOF. Because ReadFile reads the whole file, it does not treat an EOF from Read as an error to be reported. 
+
+As of Go 1.16, this function simply calls os.ReadFile. 
+
+### <a id="TempDir" href="#TempDir">func TempDir(dir, pattern string) (name string, err error)</a>
+
+```
+searchKey: ioutil.TempDir
+tags: [method]
+```
+
+```Go
+func TempDir(dir, pattern string) (name string, err error)
+```
+
+TempDir creates a new temporary directory in the directory dir. The directory name is generated by taking pattern and applying a random string to the end. If pattern includes a "*", the random string replaces the last "*". TempDir returns the name of the new directory. If dir is the empty string, TempDir uses the default directory for temporary files (see os.TempDir). Multiple programs calling TempDir simultaneously will not choose the same directory. It is the caller's responsibility to remove the directory when no longer needed. 
+
+As of Go 1.17, this function simply calls os.MkdirTemp. 
+
 ### <a id="TempFile" href="#TempFile">func TempFile(dir, pattern string) (f *os.File, err error)</a>
 
 ```
 searchKey: ioutil.TempFile
+tags: [method]
 ```
 
 ```Go
@@ -120,17 +135,18 @@ TempFile creates a new temporary file in the directory dir, opens the file for r
 
 As of Go 1.17, this function simply calls os.CreateTemp. 
 
-### <a id="TempDir" href="#TempDir">func TempDir(dir, pattern string) (name string, err error)</a>
+### <a id="WriteFile" href="#WriteFile">func WriteFile(filename string, data []byte, perm fs.FileMode) error</a>
 
 ```
-searchKey: ioutil.TempDir
+searchKey: ioutil.WriteFile
+tags: [method]
 ```
 
 ```Go
-func TempDir(dir, pattern string) (name string, err error)
+func WriteFile(filename string, data []byte, perm fs.FileMode) error
 ```
 
-TempDir creates a new temporary directory in the directory dir. The directory name is generated by taking pattern and applying a random string to the end. If pattern includes a "*", the random string replaces the last "*". TempDir returns the name of the new directory. If dir is the empty string, TempDir uses the default directory for temporary files (see os.TempDir). Multiple programs calling TempDir simultaneously will not choose the same directory. It is the caller's responsibility to remove the directory when no longer needed. 
+WriteFile writes data to a file named by filename. If the file does not exist, WriteFile creates it with permissions perm (before umask); otherwise WriteFile truncates it before writing, without changing permissions. 
 
-As of Go 1.17, this function simply calls os.MkdirTemp. 
+As of Go 1.16, this function simply calls os.WriteFile. 
 

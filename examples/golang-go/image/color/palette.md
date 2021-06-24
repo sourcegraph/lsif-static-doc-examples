@@ -11,10 +11,15 @@ Package palette provides standard color palettes.
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [package]
+```
+
 ### <a id="Plan9" href="#Plan9">var Plan9</a>
 
 ```
 searchKey: palette.Plan9
+tags: [variable array interface]
 ```
 
 ```Go
@@ -29,6 +34,7 @@ This palette was used in the Plan 9 Operating System, described at [https://9p.i
 
 ```
 searchKey: palette.WebSafe
+tags: [variable array interface]
 ```
 
 ```Go

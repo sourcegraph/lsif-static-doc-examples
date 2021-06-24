@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/internal/batches/scheduler",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,9 @@
                 "identifier": "Scheduler",
                 "newPage": false,
                 "searchKey": "scheduler.Scheduler",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +66,9 @@
                       "identifier": "NewScheduler",
                       "newPage": false,
                       "searchKey": "scheduler.NewScheduler",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,7 +88,9 @@
                       "identifier": "Scheduler.Start",
                       "newPage": false,
                       "searchKey": "scheduler.Scheduler.Start",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -102,7 +110,9 @@
                       "identifier": "Scheduler.Stop",
                       "newPage": false,
                       "searchKey": "scheduler.Scheduler.Stop",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -123,6 +133,7 @@
                       "newPage": false,
                       "searchKey": "scheduler.Scheduler.enqueueChangeset",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -148,6 +159,7 @@
                 "newPage": false,
                 "searchKey": "scheduler.backoff",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -168,6 +180,7 @@
                       "newPage": false,
                       "searchKey": "scheduler.newBackoff",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -190,6 +203,7 @@
                       "newPage": false,
                       "searchKey": "scheduler.backoff.next",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -212,6 +226,7 @@
                       "newPage": false,
                       "searchKey": "scheduler.backoff.reset",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -237,6 +252,7 @@
                 "newPage": false,
                 "searchKey": "scheduler.ticker",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -257,6 +273,7 @@
                       "newPage": false,
                       "searchKey": "scheduler.newTicker",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -279,6 +296,7 @@
                       "newPage": false,
                       "searchKey": "scheduler.ticker.stop",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -307,6 +325,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -327,7 +346,9 @@
                 "newPage": false,
                 "searchKey": "scheduler.TestTickerGoBrrr",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -349,7 +370,9 @@
                 "newPage": false,
                 "searchKey": "scheduler.TestTickerRateLimited",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -371,7 +394,9 @@
                 "newPage": false,
                 "searchKey": "scheduler.TestTickerZero",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {

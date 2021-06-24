@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "crypto/elliptic/internal/fiat",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,9 @@
                 "newPage": false,
                 "searchKey": "fiat.p521ZeroEncoding",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -70,6 +75,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -89,7 +95,9 @@
                 "identifier": "P521Element",
                 "newPage": false,
                 "searchKey": "fiat.P521Element",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -102,132 +110,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/crypto/elliptic/internal/fiat#P521Element.One",
-                    "documentation": {
-                      "identifier": "P521Element.One",
-                      "newPage": false,
-                      "searchKey": "fiat.P521Element.One",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *P521Element) One() *P521Element"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *P521Element) One() *P521Element\n```\n\nOne sets e = 1, and returns e. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/elliptic/internal/fiat#P521Element.Equal",
-                    "documentation": {
-                      "identifier": "P521Element.Equal",
-                      "newPage": false,
-                      "searchKey": "fiat.P521Element.Equal",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *P521Element) Equal(t *P521Element) int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *P521Element) Equal(t *P521Element) int\n```\n\nEqual returns 1 if e == t, and zero otherwise. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/elliptic/internal/fiat#P521Element.IsZero",
-                    "documentation": {
-                      "identifier": "P521Element.IsZero",
-                      "newPage": false,
-                      "searchKey": "fiat.P521Element.IsZero",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *P521Element) IsZero() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *P521Element) IsZero() int\n```\n\nIsZero returns 1 if e == 0, and zero otherwise. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/elliptic/internal/fiat#P521Element.Set",
-                    "documentation": {
-                      "identifier": "P521Element.Set",
-                      "newPage": false,
-                      "searchKey": "fiat.P521Element.Set",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *P521Element) Set(t *P521Element) *P521Element"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *P521Element) Set(t *P521Element) *P521Element\n```\n\nSet sets e = t, and returns e. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/elliptic/internal/fiat#P521Element.Bytes",
-                    "documentation": {
-                      "identifier": "P521Element.Bytes",
-                      "newPage": false,
-                      "searchKey": "fiat.P521Element.Bytes",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *P521Element) Bytes() []byte"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *P521Element) Bytes() []byte\n```\n\nBytes returns the 66-byte little-endian encoding of e. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/elliptic/internal/fiat#P521Element.SetBytes",
-                    "documentation": {
-                      "identifier": "P521Element.SetBytes",
-                      "newPage": false,
-                      "searchKey": "fiat.P521Element.SetBytes",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *P521Element) SetBytes(v []byte) (*P521Element, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *P521Element) SetBytes(v []byte) (*P521Element, error)\n```\n\nSetBytes sets e = v, where v is a little-endian 66-byte encoding, and returns e. If v is not 66 bytes or it encodes a value higher than 2^521 - 1, SetBytes returns nil and an error, and e is unchanged. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/crypto/elliptic/internal/fiat#P521Element.Add",
                     "documentation": {
                       "identifier": "P521Element.Add",
                       "newPage": false,
                       "searchKey": "fiat.P521Element.Add",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -242,20 +132,88 @@
                 },
                 {
                   "node": {
-                    "pathID": "/crypto/elliptic/internal/fiat#P521Element.Sub",
+                    "pathID": "/crypto/elliptic/internal/fiat#P521Element.Bytes",
                     "documentation": {
-                      "identifier": "P521Element.Sub",
+                      "identifier": "P521Element.Bytes",
                       "newPage": false,
-                      "searchKey": "fiat.P521Element.Sub",
-                      "tags": null
+                      "searchKey": "fiat.P521Element.Bytes",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (e *P521Element) Sub(t1, t2 *P521Element) *P521Element"
+                      "value": "func (e *P521Element) Bytes() []byte"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (e *P521Element) Sub(t1, t2 *P521Element) *P521Element\n```\n\nSub sets e = t1 - t2, and returns e. \n\n"
+                      "value": "```Go\nfunc (e *P521Element) Bytes() []byte\n```\n\nBytes returns the 66-byte little-endian encoding of e. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/elliptic/internal/fiat#P521Element.Equal",
+                    "documentation": {
+                      "identifier": "P521Element.Equal",
+                      "newPage": false,
+                      "searchKey": "fiat.P521Element.Equal",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *P521Element) Equal(t *P521Element) int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *P521Element) Equal(t *P521Element) int\n```\n\nEqual returns 1 if e == t, and zero otherwise. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/elliptic/internal/fiat#P521Element.Invert",
+                    "documentation": {
+                      "identifier": "P521Element.Invert",
+                      "newPage": false,
+                      "searchKey": "fiat.P521Element.Invert",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *P521Element) Invert(t *P521Element) *P521Element"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *P521Element) Invert(t *P521Element) *P521Element\n```\n\nInvert sets e = 1/t, and returns e. \n\nIf t == 0, Invert returns e = 0. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/elliptic/internal/fiat#P521Element.IsZero",
+                    "documentation": {
+                      "identifier": "P521Element.IsZero",
+                      "newPage": false,
+                      "searchKey": "fiat.P521Element.IsZero",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *P521Element) IsZero() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *P521Element) IsZero() int\n```\n\nIsZero returns 1 if e == 0, and zero otherwise. \n\n"
                     },
                     "children": null
                   }
@@ -267,7 +225,9 @@
                       "identifier": "P521Element.Mul",
                       "newPage": false,
                       "searchKey": "fiat.P521Element.Mul",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -282,20 +242,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/crypto/elliptic/internal/fiat#P521Element.Square",
+                    "pathID": "/crypto/elliptic/internal/fiat#P521Element.One",
                     "documentation": {
-                      "identifier": "P521Element.Square",
+                      "identifier": "P521Element.One",
                       "newPage": false,
-                      "searchKey": "fiat.P521Element.Square",
-                      "tags": null
+                      "searchKey": "fiat.P521Element.One",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (e *P521Element) Square(t *P521Element) *P521Element"
+                      "value": "func (e *P521Element) One() *P521Element"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (e *P521Element) Square(t *P521Element) *P521Element\n```\n\nSquare sets e = t * t, and returns e. \n\n"
+                      "value": "```Go\nfunc (e *P521Element) One() *P521Element\n```\n\nOne sets e = 1, and returns e. \n\n"
                     },
                     "children": null
                   }
@@ -307,7 +269,9 @@
                       "identifier": "P521Element.Select",
                       "newPage": false,
                       "searchKey": "fiat.P521Element.Select",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -322,25 +286,116 @@
                 },
                 {
                   "node": {
-                    "pathID": "/crypto/elliptic/internal/fiat#P521Element.Invert",
+                    "pathID": "/crypto/elliptic/internal/fiat#P521Element.Set",
                     "documentation": {
-                      "identifier": "P521Element.Invert",
+                      "identifier": "P521Element.Set",
                       "newPage": false,
-                      "searchKey": "fiat.P521Element.Invert",
-                      "tags": null
+                      "searchKey": "fiat.P521Element.Set",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (e *P521Element) Invert(t *P521Element) *P521Element"
+                      "value": "func (e *P521Element) Set(t *P521Element) *P521Element"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (e *P521Element) Invert(t *P521Element) *P521Element\n```\n\nInvert sets e = 1/t, and returns e. \n\nIf t == 0, Invert returns e = 0. \n\n"
+                      "value": "```Go\nfunc (e *P521Element) Set(t *P521Element) *P521Element\n```\n\nSet sets e = t, and returns e. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/elliptic/internal/fiat#P521Element.SetBytes",
+                    "documentation": {
+                      "identifier": "P521Element.SetBytes",
+                      "newPage": false,
+                      "searchKey": "fiat.P521Element.SetBytes",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *P521Element) SetBytes(v []byte) (*P521Element, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *P521Element) SetBytes(v []byte) (*P521Element, error)\n```\n\nSetBytes sets e = v, where v is a little-endian 66-byte encoding, and returns e. If v is not 66 bytes or it encodes a value higher than 2^521 - 1, SetBytes returns nil and an error, and e is unchanged. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/elliptic/internal/fiat#P521Element.Square",
+                    "documentation": {
+                      "identifier": "P521Element.Square",
+                      "newPage": false,
+                      "searchKey": "fiat.P521Element.Square",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *P521Element) Square(t *P521Element) *P521Element"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *P521Element) Square(t *P521Element) *P521Element\n```\n\nSquare sets e = t * t, and returns e. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/elliptic/internal/fiat#P521Element.Sub",
+                    "documentation": {
+                      "identifier": "P521Element.Sub",
+                      "newPage": false,
+                      "searchKey": "fiat.P521Element.Sub",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *P521Element) Sub(t1, t2 *P521Element) *P521Element"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *P521Element) Sub(t1, t2 *P521Element) *P521Element\n```\n\nSub sets e = t1 - t2, and returns e. \n\n"
                     },
                     "children": null
                   }
                 }
               ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic/internal/fiat#p521Int1",
+              "documentation": {
+                "identifier": "p521Int1",
+                "newPage": false,
+                "searchKey": "fiat.p521Int1",
+                "tags": [
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type p521Int1 int8"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype p521Int1 int8\n```\n\n"
+              },
+              "children": null
             }
           },
           {
@@ -351,6 +406,7 @@
                 "newPage": false,
                 "searchKey": "fiat.p521Uint1",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -371,6 +427,7 @@
                       "newPage": false,
                       "searchKey": "fiat.p521AddcarryxU64",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -393,6 +450,7 @@
                       "newPage": false,
                       "searchKey": "fiat.p521SubborrowxU64",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -409,28 +467,6 @@
                 }
               ]
             }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic/internal/fiat#p521Int1",
-              "documentation": {
-                "identifier": "p521Int1",
-                "newPage": false,
-                "searchKey": "fiat.p521Int1",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type p521Int1 int8"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype p521Int1 int8\n```\n\n"
-              },
-              "children": null
-            }
           }
         ]
       }
@@ -443,6 +479,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -457,44 +494,23 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto/elliptic/internal/fiat#p521AddcarryxU58",
+              "pathID": "/crypto/elliptic/internal/fiat#p521Add",
               "documentation": {
-                "identifier": "p521AddcarryxU58",
+                "identifier": "p521Add",
                 "newPage": false,
-                "searchKey": "fiat.p521AddcarryxU58",
+                "searchKey": "fiat.p521Add",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func p521AddcarryxU58(out1 *uint64, out2 *p521Uint1, arg1 p521Uint1, arg2 uint64, arg3 uint64)"
+                "value": "func p521Add(out1 *[9]uint64, arg1 *[9]uint64, arg2 *[9]uint64)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc p521AddcarryxU58(out1 *uint64, out2 *p521Uint1, arg1 p521Uint1, arg2 uint64, arg3 uint64)\n```\n\np521AddcarryxU58 is an addition with carry. \n\nPostconditions: \n\n```\nout1 = (arg1 + arg2 + arg3) mod 2^58\nout2 = ⌊(arg1 + arg2 + arg3) / 2^58⌋\n\n```\nInput Bounds: \n\n```\narg1: [0x0 ~> 0x1]\narg2: [0x0 ~> 0x3ffffffffffffff]\narg3: [0x0 ~> 0x3ffffffffffffff]\n\n```\nOutput Bounds: \n\n```\nout1: [0x0 ~> 0x3ffffffffffffff]\nout2: [0x0 ~> 0x1]\n\n```\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic/internal/fiat#p521SubborrowxU58",
-              "documentation": {
-                "identifier": "p521SubborrowxU58",
-                "newPage": false,
-                "searchKey": "fiat.p521SubborrowxU58",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p521SubborrowxU58(out1 *uint64, out2 *p521Uint1, arg1 p521Uint1, arg2 uint64, arg3 uint64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p521SubborrowxU58(out1 *uint64, out2 *p521Uint1, arg1 p521Uint1, arg2 uint64, arg3 uint64)\n```\n\np521SubborrowxU58 is a subtraction with borrow. \n\nPostconditions: \n\n```\nout1 = (-arg1 + arg2 + -arg3) mod 2^58\nout2 = -⌊(-arg1 + arg2 + -arg3) / 2^58⌋\n\n```\nInput Bounds: \n\n```\narg1: [0x0 ~> 0x1]\narg2: [0x0 ~> 0x3ffffffffffffff]\narg3: [0x0 ~> 0x3ffffffffffffff]\n\n```\nOutput Bounds: \n\n```\nout1: [0x0 ~> 0x3ffffffffffffff]\nout2: [0x0 ~> 0x1]\n\n```\n"
+                "value": "```Go\nfunc p521Add(out1 *[9]uint64, arg1 *[9]uint64, arg2 *[9]uint64)\n```\n\np521Add adds two field elements. \n\nPostconditions: \n\n```\neval out1 mod m = (eval arg1 + eval arg2) mod m\n\n```\nInput Bounds: \n\n```\narg1: [[0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x200000000000000]]\narg2: [[0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x200000000000000]]\n\n```\nOutput Bounds: \n\n```\nout1: [[0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0x600000000000000]]\n\n```\n"
               },
               "children": null
             }
@@ -507,6 +523,7 @@
                 "newPage": false,
                 "searchKey": "fiat.p521AddcarryxU57",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -523,44 +540,46 @@
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic/internal/fiat#p521SubborrowxU57",
+              "pathID": "/crypto/elliptic/internal/fiat#p521AddcarryxU58",
               "documentation": {
-                "identifier": "p521SubborrowxU57",
+                "identifier": "p521AddcarryxU58",
                 "newPage": false,
-                "searchKey": "fiat.p521SubborrowxU57",
+                "searchKey": "fiat.p521AddcarryxU58",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func p521SubborrowxU57(out1 *uint64, out2 *p521Uint1, arg1 p521Uint1, arg2 uint64, arg3 uint64)"
+                "value": "func p521AddcarryxU58(out1 *uint64, out2 *p521Uint1, arg1 p521Uint1, arg2 uint64, arg3 uint64)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc p521SubborrowxU57(out1 *uint64, out2 *p521Uint1, arg1 p521Uint1, arg2 uint64, arg3 uint64)\n```\n\np521SubborrowxU57 is a subtraction with borrow. \n\nPostconditions: \n\n```\nout1 = (-arg1 + arg2 + -arg3) mod 2^57\nout2 = -⌊(-arg1 + arg2 + -arg3) / 2^57⌋\n\n```\nInput Bounds: \n\n```\narg1: [0x0 ~> 0x1]\narg2: [0x0 ~> 0x1ffffffffffffff]\narg3: [0x0 ~> 0x1ffffffffffffff]\n\n```\nOutput Bounds: \n\n```\nout1: [0x0 ~> 0x1ffffffffffffff]\nout2: [0x0 ~> 0x1]\n\n```\n"
+                "value": "```Go\nfunc p521AddcarryxU58(out1 *uint64, out2 *p521Uint1, arg1 p521Uint1, arg2 uint64, arg3 uint64)\n```\n\np521AddcarryxU58 is an addition with carry. \n\nPostconditions: \n\n```\nout1 = (arg1 + arg2 + arg3) mod 2^58\nout2 = ⌊(arg1 + arg2 + arg3) / 2^58⌋\n\n```\nInput Bounds: \n\n```\narg1: [0x0 ~> 0x1]\narg2: [0x0 ~> 0x3ffffffffffffff]\narg3: [0x0 ~> 0x3ffffffffffffff]\n\n```\nOutput Bounds: \n\n```\nout1: [0x0 ~> 0x3ffffffffffffff]\nout2: [0x0 ~> 0x1]\n\n```\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic/internal/fiat#p521CmovznzU64",
+              "pathID": "/crypto/elliptic/internal/fiat#p521Carry",
               "documentation": {
-                "identifier": "p521CmovznzU64",
+                "identifier": "p521Carry",
                 "newPage": false,
-                "searchKey": "fiat.p521CmovznzU64",
+                "searchKey": "fiat.p521Carry",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func p521CmovznzU64(out1 *uint64, arg1 p521Uint1, arg2 uint64, arg3 uint64)"
+                "value": "func p521Carry(out1 *[9]uint64, arg1 *[9]uint64)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc p521CmovznzU64(out1 *uint64, arg1 p521Uint1, arg2 uint64, arg3 uint64)\n```\n\np521CmovznzU64 is a single-word conditional move. \n\nPostconditions: \n\n```\nout1 = (if arg1 = 0 then arg2 else arg3)\n\n```\nInput Bounds: \n\n```\narg1: [0x0 ~> 0x1]\narg2: [0x0 ~> 0xffffffffffffffff]\narg3: [0x0 ~> 0xffffffffffffffff]\n\n```\nOutput Bounds: \n\n```\nout1: [0x0 ~> 0xffffffffffffffff]\n\n```\n"
+                "value": "```Go\nfunc p521Carry(out1 *[9]uint64, arg1 *[9]uint64)\n```\n\np521Carry reduces a field element. \n\nPostconditions: \n\n```\neval out1 mod m = eval arg1 mod m\n\n```\nInput Bounds: \n\n```\narg1: [[0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0x600000000000000]]\n\n```\nOutput Bounds: \n\n```\nout1: [[0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x200000000000000]]\n\n```\n"
               },
               "children": null
             }
@@ -573,6 +592,7 @@
                 "newPage": false,
                 "searchKey": "fiat.p521CarryMul",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -595,6 +615,7 @@
                 "newPage": false,
                 "searchKey": "fiat.p521CarrySquare",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -611,88 +632,23 @@
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic/internal/fiat#p521Carry",
+              "pathID": "/crypto/elliptic/internal/fiat#p521CmovznzU64",
               "documentation": {
-                "identifier": "p521Carry",
+                "identifier": "p521CmovznzU64",
                 "newPage": false,
-                "searchKey": "fiat.p521Carry",
+                "searchKey": "fiat.p521CmovznzU64",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func p521Carry(out1 *[9]uint64, arg1 *[9]uint64)"
+                "value": "func p521CmovznzU64(out1 *uint64, arg1 p521Uint1, arg2 uint64, arg3 uint64)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc p521Carry(out1 *[9]uint64, arg1 *[9]uint64)\n```\n\np521Carry reduces a field element. \n\nPostconditions: \n\n```\neval out1 mod m = eval arg1 mod m\n\n```\nInput Bounds: \n\n```\narg1: [[0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0x600000000000000]]\n\n```\nOutput Bounds: \n\n```\nout1: [[0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x200000000000000]]\n\n```\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic/internal/fiat#p521Add",
-              "documentation": {
-                "identifier": "p521Add",
-                "newPage": false,
-                "searchKey": "fiat.p521Add",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p521Add(out1 *[9]uint64, arg1 *[9]uint64, arg2 *[9]uint64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p521Add(out1 *[9]uint64, arg1 *[9]uint64, arg2 *[9]uint64)\n```\n\np521Add adds two field elements. \n\nPostconditions: \n\n```\neval out1 mod m = (eval arg1 + eval arg2) mod m\n\n```\nInput Bounds: \n\n```\narg1: [[0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x200000000000000]]\narg2: [[0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x200000000000000]]\n\n```\nOutput Bounds: \n\n```\nout1: [[0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0x600000000000000]]\n\n```\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic/internal/fiat#p521Sub",
-              "documentation": {
-                "identifier": "p521Sub",
-                "newPage": false,
-                "searchKey": "fiat.p521Sub",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p521Sub(out1 *[9]uint64, arg1 *[9]uint64, arg2 *[9]uint64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p521Sub(out1 *[9]uint64, arg1 *[9]uint64, arg2 *[9]uint64)\n```\n\np521Sub subtracts two field elements. \n\nPostconditions: \n\n```\neval out1 mod m = (eval arg1 - eval arg2) mod m\n\n```\nInput Bounds: \n\n```\narg1: [[0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x200000000000000]]\narg2: [[0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x200000000000000]]\n\n```\nOutput Bounds: \n\n```\nout1: [[0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0x600000000000000]]\n\n```\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic/internal/fiat#p521ToBytes",
-              "documentation": {
-                "identifier": "p521ToBytes",
-                "newPage": false,
-                "searchKey": "fiat.p521ToBytes",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p521ToBytes(out1 *[66]uint8, arg1 *[9]uint64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p521ToBytes(out1 *[66]uint8, arg1 *[9]uint64)\n```\n\np521ToBytes serializes a field element to bytes in little-endian order. \n\nPostconditions: \n\n```\nout1 = map (λ x, ⌊((eval arg1 mod m) mod 2^(8 * (x + 1))) / 2^(8 * x)⌋) [0..65]\n\n```\nInput Bounds: \n\n```\narg1: [[0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x200000000000000]]\n\n```\nOutput Bounds: \n\n```\nout1: [[0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0x1]]\n\n```\n"
+                "value": "```Go\nfunc p521CmovznzU64(out1 *uint64, arg1 p521Uint1, arg2 uint64, arg3 uint64)\n```\n\np521CmovznzU64 is a single-word conditional move. \n\nPostconditions: \n\n```\nout1 = (if arg1 = 0 then arg2 else arg3)\n\n```\nInput Bounds: \n\n```\narg1: [0x0 ~> 0x1]\narg2: [0x0 ~> 0xffffffffffffffff]\narg3: [0x0 ~> 0xffffffffffffffff]\n\n```\nOutput Bounds: \n\n```\nout1: [0x0 ~> 0xffffffffffffffff]\n\n```\n"
               },
               "children": null
             }
@@ -705,6 +661,7 @@
                 "newPage": false,
                 "searchKey": "fiat.p521FromBytes",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -727,6 +684,7 @@
                 "newPage": false,
                 "searchKey": "fiat.p521Selectznz",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -737,6 +695,98 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc p521Selectznz(out1 *[9]uint64, arg1 p521Uint1, arg2 *[9]uint64, arg3 *[9]uint64)\n```\n\np521Selectznz is a multi-limb conditional select. \n\nPostconditions: \n\n```\neval out1 = (if arg1 = 0 then eval arg2 else eval arg3)\n\n```\nInput Bounds: \n\n```\narg1: [0x0 ~> 0x1]\narg2: [[0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff]]\narg3: [[0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff]]\n\n```\nOutput Bounds: \n\n```\nout1: [[0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff], [0x0 ~> 0xffffffffffffffff]]\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic/internal/fiat#p521Sub",
+              "documentation": {
+                "identifier": "p521Sub",
+                "newPage": false,
+                "searchKey": "fiat.p521Sub",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func p521Sub(out1 *[9]uint64, arg1 *[9]uint64, arg2 *[9]uint64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc p521Sub(out1 *[9]uint64, arg1 *[9]uint64, arg2 *[9]uint64)\n```\n\np521Sub subtracts two field elements. \n\nPostconditions: \n\n```\neval out1 mod m = (eval arg1 - eval arg2) mod m\n\n```\nInput Bounds: \n\n```\narg1: [[0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x200000000000000]]\narg2: [[0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x200000000000000]]\n\n```\nOutput Bounds: \n\n```\nout1: [[0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0xc00000000000000], [0x0 ~> 0x600000000000000]]\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic/internal/fiat#p521SubborrowxU57",
+              "documentation": {
+                "identifier": "p521SubborrowxU57",
+                "newPage": false,
+                "searchKey": "fiat.p521SubborrowxU57",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func p521SubborrowxU57(out1 *uint64, out2 *p521Uint1, arg1 p521Uint1, arg2 uint64, arg3 uint64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc p521SubborrowxU57(out1 *uint64, out2 *p521Uint1, arg1 p521Uint1, arg2 uint64, arg3 uint64)\n```\n\np521SubborrowxU57 is a subtraction with borrow. \n\nPostconditions: \n\n```\nout1 = (-arg1 + arg2 + -arg3) mod 2^57\nout2 = -⌊(-arg1 + arg2 + -arg3) / 2^57⌋\n\n```\nInput Bounds: \n\n```\narg1: [0x0 ~> 0x1]\narg2: [0x0 ~> 0x1ffffffffffffff]\narg3: [0x0 ~> 0x1ffffffffffffff]\n\n```\nOutput Bounds: \n\n```\nout1: [0x0 ~> 0x1ffffffffffffff]\nout2: [0x0 ~> 0x1]\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic/internal/fiat#p521SubborrowxU58",
+              "documentation": {
+                "identifier": "p521SubborrowxU58",
+                "newPage": false,
+                "searchKey": "fiat.p521SubborrowxU58",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func p521SubborrowxU58(out1 *uint64, out2 *p521Uint1, arg1 p521Uint1, arg2 uint64, arg3 uint64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc p521SubborrowxU58(out1 *uint64, out2 *p521Uint1, arg1 p521Uint1, arg2 uint64, arg3 uint64)\n```\n\np521SubborrowxU58 is a subtraction with borrow. \n\nPostconditions: \n\n```\nout1 = (-arg1 + arg2 + -arg3) mod 2^58\nout2 = -⌊(-arg1 + arg2 + -arg3) / 2^58⌋\n\n```\nInput Bounds: \n\n```\narg1: [0x0 ~> 0x1]\narg2: [0x0 ~> 0x3ffffffffffffff]\narg3: [0x0 ~> 0x3ffffffffffffff]\n\n```\nOutput Bounds: \n\n```\nout1: [0x0 ~> 0x3ffffffffffffff]\nout2: [0x0 ~> 0x1]\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic/internal/fiat#p521ToBytes",
+              "documentation": {
+                "identifier": "p521ToBytes",
+                "newPage": false,
+                "searchKey": "fiat.p521ToBytes",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func p521ToBytes(out1 *[66]uint8, arg1 *[9]uint64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc p521ToBytes(out1 *[66]uint8, arg1 *[9]uint64)\n```\n\np521ToBytes serializes a field element to bytes in little-endian order. \n\nPostconditions: \n\n```\nout1 = map (λ x, ⌊((eval arg1 mod m) mod 2^(8 * (x + 1))) / 2^(8 * x)⌋) [0..65]\n\n```\nInput Bounds: \n\n```\narg1: [[0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x400000000000000], [0x0 ~> 0x200000000000000]]\n\n```\nOutput Bounds: \n\n```\nout1: [[0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0xff], [0x0 ~> 0x1]]\n\n```\n"
               },
               "children": null
             }

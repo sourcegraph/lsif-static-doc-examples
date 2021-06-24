@@ -9,188 +9,123 @@ To learn more about the generator, see the top-level program: [https://github.co
 ## Index
 
 * [Constants](#const)
-    * [const Number](#Number)
-    * [const Milliseconds](#Milliseconds)
-    * [const Seconds](#Seconds)
-    * [const Percentage](#Percentage)
-    * [const Bytes](#Bytes)
     * [const BitsPerSecond](#BitsPerSecond)
-    * [const ReadsPerSecond](#ReadsPerSecond)
-    * [const WritesPerSecond](#WritesPerSecond)
-    * [const canonicalAlertSolutionsURL](#canonicalAlertSolutionsURL)
-    * [const canonicalDashboardsDocsURL](#canonicalDashboardsDocsURL)
-    * [const alertSolutionsFile](#alertSolutionsFile)
-    * [const dashboardsDocsFile](#dashboardsDocsFile)
-    * [const alertSolutionsHeader](#alertSolutionsHeader)
-    * [const dashboardsHeader](#dashboardsHeader)
-    * [const localGrafanaURL](#localGrafanaURL)
-    * [const localGrafanaCredentials](#localGrafanaCredentials)
-    * [const localPrometheusURL](#localPrometheusURL)
-    * [const ObservableOwnerSearch](#ObservableOwnerSearch)
+    * [const Bytes](#Bytes)
+    * [const Milliseconds](#Milliseconds)
+    * [const Number](#Number)
     * [const ObservableOwnerBatches](#ObservableOwnerBatches)
     * [const ObservableOwnerCodeIntel](#ObservableOwnerCodeIntel)
+    * [const ObservableOwnerCoreApplication](#ObservableOwnerCoreApplication)
     * [const ObservableOwnerDistribution](#ObservableOwnerDistribution)
+    * [const ObservableOwnerSearch](#ObservableOwnerSearch)
     * [const ObservableOwnerSecurity](#ObservableOwnerSecurity)
     * [const ObservableOwnerWeb](#ObservableOwnerWeb)
-    * [const ObservableOwnerCoreApplication](#ObservableOwnerCoreApplication)
+    * [const Percentage](#Percentage)
+    * [const ReadsPerSecond](#ReadsPerSecond)
+    * [const Seconds](#Seconds)
+    * [const WritesPerSecond](#WritesPerSecond)
     * [const alertRulesFileSuffix](#alertRulesFileSuffix)
+    * [const alertSolutionsFile](#alertSolutionsFile)
+    * [const alertSolutionsHeader](#alertSolutionsHeader)
+    * [const canonicalAlertSolutionsURL](#canonicalAlertSolutionsURL)
+    * [const canonicalDashboardsDocsURL](#canonicalDashboardsDocsURL)
+    * [const dashboardsDocsFile](#dashboardsDocsFile)
+    * [const dashboardsHeader](#dashboardsHeader)
+    * [const localGrafanaCredentials](#localGrafanaCredentials)
+    * [const localGrafanaURL](#localGrafanaURL)
+    * [const localPrometheusURL](#localPrometheusURL)
 * [Variables](#var)
     * [var PanelOptions](#PanelOptions)
 * [Types](#type)
+    * [type Container struct](#Container)
+        * [func (c *Container) alertDescription(o Observable, alert *ObservableAlertDefinition) (string, error)](#Container.alertDescription)
+        * [func (c *Container) renderDashboard() *sdk.Board](#Container.renderDashboard)
+        * [func (c *Container) renderRules() (*promRulesFile, error)](#Container.renderRules)
+        * [func (c *Container) validate() error](#Container.validate)
+    * [type GenerateOptions struct](#GenerateOptions)
+    * [type Group struct](#Group)
+        * [func (g Group) validate() error](#Group.validate)
+    * [type Observable struct](#Observable)
+        * [func (o Observable) validate() error](#Observable.validate)
+    * [type ObservableAlertDefinition struct](#ObservableAlertDefinition)
+        * [func Alert() *ObservableAlertDefinition](#Alert)
+        * [func (a *ObservableAlertDefinition) For(d time.Duration) *ObservableAlertDefinition](#ObservableAlertDefinition.For)
+        * [func (a *ObservableAlertDefinition) Greater(f float64, aggregator *string) *ObservableAlertDefinition](#ObservableAlertDefinition.Greater)
+        * [func (a *ObservableAlertDefinition) GreaterOrEqual(f float64, aggregator *string) *ObservableAlertDefinition](#ObservableAlertDefinition.GreaterOrEqual)
+        * [func (a *ObservableAlertDefinition) Less(f float64, aggregator *string) *ObservableAlertDefinition](#ObservableAlertDefinition.Less)
+        * [func (a *ObservableAlertDefinition) LessOrEqual(f float64, aggregator *string) *ObservableAlertDefinition](#ObservableAlertDefinition.LessOrEqual)
+        * [func (a *ObservableAlertDefinition) isEmpty() bool](#ObservableAlertDefinition.isEmpty)
+        * [func (a *ObservableAlertDefinition) validate() error](#ObservableAlertDefinition.validate)
+    * [type ObservableOwner string](#ObservableOwner)
+        * [func (o ObservableOwner) toMarkdown() string](#ObservableOwner.toMarkdown)
+    * [type ObservablePanel struct](#ObservablePanel)
+        * [func Panel() ObservablePanel](#Panel)
+        * [func PanelHeatmap() ObservablePanel](#PanelHeatmap)
+        * [func PanelMinimal() ObservablePanel](#PanelMinimal)
+        * [func (p ObservablePanel) Interval(ms int) ObservablePanel](#ObservablePanel.Interval)
+        * [func (p ObservablePanel) LegendFormat(format string) ObservablePanel](#ObservablePanel.LegendFormat)
+        * [func (p ObservablePanel) Max(max float64) ObservablePanel](#ObservablePanel.Max)
+        * [func (p ObservablePanel) Min(min float64) ObservablePanel](#ObservablePanel.Min)
+        * [func (p ObservablePanel) MinAuto() ObservablePanel](#ObservablePanel.MinAuto)
+        * [func (p ObservablePanel) Unit(t UnitType) ObservablePanel](#ObservablePanel.Unit)
+        * [func (p ObservablePanel) With(ops ...ObservablePanelOption) ObservablePanel](#ObservablePanel.With)
+        * [func (p ObservablePanel) build(o Observable, panel *sdk.Panel)](#ObservablePanel.build)
+    * [type ObservablePanelOption func(github.com/sourcegraph/sourcegraph/monitoring/monitoring.Observable, *github.com/grafana-tools/sdk.Panel)](#ObservablePanelOption)
+    * [type Row []monitoring.Observable](#Row)
+        * [func (r Row) validate() error](#Row.validate)
     * [type UnitType string](#UnitType)
         * [func (u UnitType) short() string](#UnitType.short)
     * [type documentation struct](#documentation)
         * [func renderDocumentation(containers []*Container) (*documentation, error)](#renderDocumentation)
         * [func (d *documentation) renderAlertSolutionEntry(c *Container, o Observable) error](#documentation.renderAlertSolutionEntry)
         * [func (d *documentation) renderDashboardPanelEntry(c *Container, o Observable) error](#documentation.renderDashboardPanelEntry)
-    * [type GenerateOptions struct](#GenerateOptions)
-    * [type Container struct](#Container)
-        * [func (c *Container) validate() error](#Container.validate)
-        * [func (c *Container) renderDashboard() *sdk.Board](#Container.renderDashboard)
-        * [func (c *Container) alertDescription(o Observable, alert *ObservableAlertDefinition) (string, error)](#Container.alertDescription)
-        * [func (c *Container) renderRules() (*promRulesFile, error)](#Container.renderRules)
-    * [type Group struct](#Group)
-        * [func (g Group) validate() error](#Group.validate)
-    * [type Row []monitoring.Observable](#Row)
-        * [func (r Row) validate() error](#Row.validate)
-    * [type ObservableOwner string](#ObservableOwner)
-        * [func (o ObservableOwner) toMarkdown() string](#ObservableOwner.toMarkdown)
-    * [type Observable struct](#Observable)
-        * [func (o Observable) validate() error](#Observable.validate)
-    * [type ObservableAlertDefinition struct](#ObservableAlertDefinition)
-        * [func Alert() *ObservableAlertDefinition](#Alert)
-        * [func (a *ObservableAlertDefinition) GreaterOrEqual(f float64, aggregator *string) *ObservableAlertDefinition](#ObservableAlertDefinition.GreaterOrEqual)
-        * [func (a *ObservableAlertDefinition) LessOrEqual(f float64, aggregator *string) *ObservableAlertDefinition](#ObservableAlertDefinition.LessOrEqual)
-        * [func (a *ObservableAlertDefinition) Greater(f float64, aggregator *string) *ObservableAlertDefinition](#ObservableAlertDefinition.Greater)
-        * [func (a *ObservableAlertDefinition) Less(f float64, aggregator *string) *ObservableAlertDefinition](#ObservableAlertDefinition.Less)
-        * [func (a *ObservableAlertDefinition) For(d time.Duration) *ObservableAlertDefinition](#ObservableAlertDefinition.For)
-        * [func (a *ObservableAlertDefinition) isEmpty() bool](#ObservableAlertDefinition.isEmpty)
-        * [func (a *ObservableAlertDefinition) validate() error](#ObservableAlertDefinition.validate)
-    * [type ObservablePanel struct](#ObservablePanel)
-        * [func Panel() ObservablePanel](#Panel)
-        * [func PanelMinimal() ObservablePanel](#PanelMinimal)
-        * [func PanelHeatmap() ObservablePanel](#PanelHeatmap)
-        * [func (p ObservablePanel) Min(min float64) ObservablePanel](#ObservablePanel.Min)
-        * [func (p ObservablePanel) MinAuto() ObservablePanel](#ObservablePanel.MinAuto)
-        * [func (p ObservablePanel) Max(max float64) ObservablePanel](#ObservablePanel.Max)
-        * [func (p ObservablePanel) LegendFormat(format string) ObservablePanel](#ObservablePanel.LegendFormat)
-        * [func (p ObservablePanel) Unit(t UnitType) ObservablePanel](#ObservablePanel.Unit)
-        * [func (p ObservablePanel) Interval(ms int) ObservablePanel](#ObservablePanel.Interval)
-        * [func (p ObservablePanel) With(ops ...ObservablePanelOption) ObservablePanel](#ObservablePanel.With)
-        * [func (p ObservablePanel) build(o Observable, panel *sdk.Panel)](#ObservablePanel.build)
-    * [type ObservablePanelOption func(github.com/sourcegraph/sourcegraph/monitoring/monitoring.Observable, *github.com/grafana-tools/sdk.Panel)](#ObservablePanelOption)
     * [type panelOptionsLibrary struct{}](#panelOptionsLibrary)
-        * [func (panelOptionsLibrary) basicPanel() ObservablePanelOption](#panelOptionsLibrary.basicPanel)
-        * [func (panelOptionsLibrary) OpinionatedDefaults() ObservablePanelOption](#panelOptionsLibrary.OpinionatedDefaults)
         * [func (panelOptionsLibrary) AlertThresholds() ObservablePanelOption](#panelOptionsLibrary.AlertThresholds)
         * [func (panelOptionsLibrary) ColorOverride(seriesName string, color string) ObservablePanelOption](#panelOptionsLibrary.ColorOverride)
-        * [func (panelOptionsLibrary) LegendOnRight() ObservablePanelOption](#panelOptionsLibrary.LegendOnRight)
+        * [func (panelOptionsLibrary) Fill(fill int) ObservablePanelOption](#panelOptionsLibrary.Fill)
         * [func (panelOptionsLibrary) HoverShowAll() ObservablePanelOption](#panelOptionsLibrary.HoverShowAll)
         * [func (panelOptionsLibrary) HoverSort(order string) ObservablePanelOption](#panelOptionsLibrary.HoverSort)
-        * [func (panelOptionsLibrary) Fill(fill int) ObservablePanelOption](#panelOptionsLibrary.Fill)
+        * [func (panelOptionsLibrary) LegendOnRight() ObservablePanelOption](#panelOptionsLibrary.LegendOnRight)
         * [func (panelOptionsLibrary) NoLegend() ObservablePanelOption](#panelOptionsLibrary.NoLegend)
+        * [func (panelOptionsLibrary) OpinionatedDefaults() ObservablePanelOption](#panelOptionsLibrary.OpinionatedDefaults)
+        * [func (panelOptionsLibrary) basicPanel() ObservablePanelOption](#panelOptionsLibrary.basicPanel)
+    * [type promGroup struct](#promGroup)
+        * [func (g *promGroup) appendRow(alertQuery string, labels map[string]string, duration time.Duration)](#promGroup.appendRow)
+        * [func (g *promGroup) validate() error](#promGroup.validate)
     * [type promRule struct](#promRule)
         * [func (r *promRule) validate() error](#promRule.validate)
     * [type promRulesFile struct](#promRulesFile)
-    * [type promGroup struct](#promGroup)
-        * [func (g *promGroup) validate() error](#promGroup.validate)
-        * [func (g *promGroup) appendRow(alertQuery string, labels map[string]string, duration time.Duration)](#promGroup.appendRow)
 * [Functions](#func)
-    * [func setPanelSize(p *sdk.Panel, width, height int)](#setPanelSize)
-    * [func setPanelPos(p *sdk.Panel, x, y int)](#setPanelPos)
-    * [func observablePanelID(groupIndex, rowIndex, observableIndex int) uint](#observablePanelID)
-    * [func isValidGrafanaUID(s string) bool](#isValidGrafanaUID)
-    * [func fprintSubtitle(w io.Writer, text string)](#fprintSubtitle)
-    * [func fprintObservableHeader(w io.Writer, c *Container, o *Observable, headerLevel int)](#fprintObservableHeader)
-    * [func fprintOwnedBy(w io.Writer, owner ObservableOwner)](#fprintOwnedBy)
-    * [func observableDocAnchor(c *Container, o Observable) string](#observableDocAnchor)
     * [func Generate(logger log15.Logger, opts GenerateOptions, containers ...*Container) error](#Generate)
-    * [func prometheusAlertName(level, service, name string) string](#prometheusAlertName)
-    * [func pruneAssets(logger log15.Logger, filelist []string, grafanaDir, promDir string) error](#pruneAssets)
-    * [func upperFirst(s string) string](#upperFirst)
-    * [func withPeriod(s string) string](#withPeriod)
+    * [func Int64Ptr(i int64) *int64](#Int64Ptr)
     * [func StringPtr(s string) *string](#StringPtr)
     * [func boolPtr(b bool) *bool](#boolPtr)
-    * [func Int64Ptr(i int64) *int64](#Int64Ptr)
+    * [func fprintObservableHeader(w io.Writer, c *Container, o *Observable, headerLevel int)](#fprintObservableHeader)
+    * [func fprintOwnedBy(w io.Writer, owner ObservableOwner)](#fprintOwnedBy)
+    * [func fprintSubtitle(w io.Writer, text string)](#fprintSubtitle)
+    * [func isValidGrafanaUID(s string) bool](#isValidGrafanaUID)
+    * [func observableDocAnchor(c *Container, o Observable) string](#observableDocAnchor)
+    * [func observablePanelID(groupIndex, rowIndex, observableIndex int) uint](#observablePanelID)
+    * [func prometheusAlertName(level, service, name string) string](#prometheusAlertName)
+    * [func pruneAssets(logger log15.Logger, filelist []string, grafanaDir, promDir string) error](#pruneAssets)
+    * [func setPanelPos(p *sdk.Panel, x, y int)](#setPanelPos)
+    * [func setPanelSize(p *sdk.Panel, width, height int)](#setPanelSize)
     * [func toMarkdown(m string, forceList bool) (string, error)](#toMarkdown)
+    * [func upperFirst(s string) string](#upperFirst)
+    * [func withPeriod(s string) string](#withPeriod)
 
 
 ## <a id="const" href="#const">Constants</a>
 
-### <a id="Number" href="#Number">const Number</a>
-
 ```
-searchKey: monitoring.Number
+tags: [package]
 ```
-
-```Go
-const Number UnitType = "short"
-```
-
-From [https://sourcegraph.com/github.com/grafana/grafana](https://sourcegraph.com/github.com/grafana/grafana)@b63b82976b3708b082326c0b7d42f38d4bc261fa/-/blob/packages/grafana-data/src/valueFormats/categories.ts#L23 
-
-Number is the default unit type. 
-
-### <a id="Milliseconds" href="#Milliseconds">const Milliseconds</a>
-
-```
-searchKey: monitoring.Milliseconds
-```
-
-```Go
-const Milliseconds UnitType = "ms"
-```
-
-From [https://sourcegraph.com/github.com/grafana/grafana](https://sourcegraph.com/github.com/grafana/grafana)@b63b82976b3708b082326c0b7d42f38d4bc261fa/-/blob/packages/grafana-data/src/valueFormats/categories.ts#L23 
-
-Milliseconds for representing time. 
-
-### <a id="Seconds" href="#Seconds">const Seconds</a>
-
-```
-searchKey: monitoring.Seconds
-```
-
-```Go
-const Seconds UnitType = "s"
-```
-
-From [https://sourcegraph.com/github.com/grafana/grafana](https://sourcegraph.com/github.com/grafana/grafana)@b63b82976b3708b082326c0b7d42f38d4bc261fa/-/blob/packages/grafana-data/src/valueFormats/categories.ts#L23 
-
-Seconds for representing time. 
-
-### <a id="Percentage" href="#Percentage">const Percentage</a>
-
-```
-searchKey: monitoring.Percentage
-```
-
-```Go
-const Percentage UnitType = "percent"
-```
-
-From [https://sourcegraph.com/github.com/grafana/grafana](https://sourcegraph.com/github.com/grafana/grafana)@b63b82976b3708b082326c0b7d42f38d4bc261fa/-/blob/packages/grafana-data/src/valueFormats/categories.ts#L23 
-
-Percentage in the range of 0-100. 
-
-### <a id="Bytes" href="#Bytes">const Bytes</a>
-
-```
-searchKey: monitoring.Bytes
-```
-
-```Go
-const Bytes UnitType = "bytes"
-```
-
-From [https://sourcegraph.com/github.com/grafana/grafana](https://sourcegraph.com/github.com/grafana/grafana)@b63b82976b3708b082326c0b7d42f38d4bc261fa/-/blob/packages/grafana-data/src/valueFormats/categories.ts#L23 
-
-Bytes in IEC (1024) format, e.g. for representing storage sizes. 
 
 ### <a id="BitsPerSecond" href="#BitsPerSecond">const BitsPerSecond</a>
 
 ```
 searchKey: monitoring.BitsPerSecond
+tags: [constant string]
 ```
 
 ```Go
@@ -201,147 +136,56 @@ From [https://sourcegraph.com/github.com/grafana/grafana](https://sourcegraph.co
 
 BitsPerSecond, e.g. for representing network and disk IO. 
 
-### <a id="ReadsPerSecond" href="#ReadsPerSecond">const ReadsPerSecond</a>
+### <a id="Bytes" href="#Bytes">const Bytes</a>
 
 ```
-searchKey: monitoring.ReadsPerSecond
+searchKey: monitoring.Bytes
+tags: [constant string]
 ```
 
 ```Go
-const ReadsPerSecond = "rps"
+const Bytes UnitType = "bytes"
 ```
 
 From [https://sourcegraph.com/github.com/grafana/grafana](https://sourcegraph.com/github.com/grafana/grafana)@b63b82976b3708b082326c0b7d42f38d4bc261fa/-/blob/packages/grafana-data/src/valueFormats/categories.ts#L23 
 
-ReadsPerSecond, e.g for representing disk IO. 
+Bytes in IEC (1024) format, e.g. for representing storage sizes. 
 
-### <a id="WritesPerSecond" href="#WritesPerSecond">const WritesPerSecond</a>
+### <a id="Milliseconds" href="#Milliseconds">const Milliseconds</a>
 
 ```
-searchKey: monitoring.WritesPerSecond
+searchKey: monitoring.Milliseconds
+tags: [constant string]
 ```
 
 ```Go
-const WritesPerSecond = "wps"
+const Milliseconds UnitType = "ms"
 ```
 
 From [https://sourcegraph.com/github.com/grafana/grafana](https://sourcegraph.com/github.com/grafana/grafana)@b63b82976b3708b082326c0b7d42f38d4bc261fa/-/blob/packages/grafana-data/src/valueFormats/categories.ts#L23 
 
-WritesPerSecond, e.g for representing disk IO. 
+Milliseconds for representing time. 
 
-### <a id="canonicalAlertSolutionsURL" href="#canonicalAlertSolutionsURL">const canonicalAlertSolutionsURL</a>
-
-```
-searchKey: monitoring.canonicalAlertSolutionsURL
-tags: [private]
-```
-
-```Go
-const canonicalAlertSolutionsURL = ...
-```
-
-### <a id="canonicalDashboardsDocsURL" href="#canonicalDashboardsDocsURL">const canonicalDashboardsDocsURL</a>
+### <a id="Number" href="#Number">const Number</a>
 
 ```
-searchKey: monitoring.canonicalDashboardsDocsURL
-tags: [private]
+searchKey: monitoring.Number
+tags: [constant string]
 ```
 
 ```Go
-const canonicalDashboardsDocsURL = "https://docs.sourcegraph.com/admin/observability/dashboards"
+const Number UnitType = "short"
 ```
 
-### <a id="alertSolutionsFile" href="#alertSolutionsFile">const alertSolutionsFile</a>
+From [https://sourcegraph.com/github.com/grafana/grafana](https://sourcegraph.com/github.com/grafana/grafana)@b63b82976b3708b082326c0b7d42f38d4bc261fa/-/blob/packages/grafana-data/src/valueFormats/categories.ts#L23 
 
-```
-searchKey: monitoring.alertSolutionsFile
-tags: [private]
-```
-
-```Go
-const alertSolutionsFile = "alert_solutions.md"
-```
-
-### <a id="dashboardsDocsFile" href="#dashboardsDocsFile">const dashboardsDocsFile</a>
-
-```
-searchKey: monitoring.dashboardsDocsFile
-tags: [private]
-```
-
-```Go
-const dashboardsDocsFile = "dashboards.md"
-```
-
-### <a id="alertSolutionsHeader" href="#alertSolutionsHeader">const alertSolutionsHeader</a>
-
-```
-searchKey: monitoring.alertSolutionsHeader
-tags: [private]
-```
-
-```Go
-const alertSolutionsHeader = ...
-```
-
-### <a id="dashboardsHeader" href="#dashboardsHeader">const dashboardsHeader</a>
-
-```
-searchKey: monitoring.dashboardsHeader
-tags: [private]
-```
-
-```Go
-const dashboardsHeader = ...
-```
-
-### <a id="localGrafanaURL" href="#localGrafanaURL">const localGrafanaURL</a>
-
-```
-searchKey: monitoring.localGrafanaURL
-tags: [private]
-```
-
-```Go
-const localGrafanaURL = "http://127.0.0.1:3370"
-```
-
-### <a id="localGrafanaCredentials" href="#localGrafanaCredentials">const localGrafanaCredentials</a>
-
-```
-searchKey: monitoring.localGrafanaCredentials
-tags: [private]
-```
-
-```Go
-const localGrafanaCredentials = "admin:admin"
-```
-
-### <a id="localPrometheusURL" href="#localPrometheusURL">const localPrometheusURL</a>
-
-```
-searchKey: monitoring.localPrometheusURL
-tags: [private]
-```
-
-```Go
-const localPrometheusURL = "http://127.0.0.1:9090"
-```
-
-### <a id="ObservableOwnerSearch" href="#ObservableOwnerSearch">const ObservableOwnerSearch</a>
-
-```
-searchKey: monitoring.ObservableOwnerSearch
-```
-
-```Go
-const ObservableOwnerSearch ObservableOwner = "search"
-```
+Number is the default unit type. 
 
 ### <a id="ObservableOwnerBatches" href="#ObservableOwnerBatches">const ObservableOwnerBatches</a>
 
 ```
 searchKey: monitoring.ObservableOwnerBatches
+tags: [constant string]
 ```
 
 ```Go
@@ -352,26 +196,51 @@ const ObservableOwnerBatches ObservableOwner = "batches"
 
 ```
 searchKey: monitoring.ObservableOwnerCodeIntel
+tags: [constant string]
 ```
 
 ```Go
 const ObservableOwnerCodeIntel ObservableOwner = "code-intel"
 ```
 
+### <a id="ObservableOwnerCoreApplication" href="#ObservableOwnerCoreApplication">const ObservableOwnerCoreApplication</a>
+
+```
+searchKey: monitoring.ObservableOwnerCoreApplication
+tags: [constant string]
+```
+
+```Go
+const ObservableOwnerCoreApplication ObservableOwner = "core application"
+```
+
 ### <a id="ObservableOwnerDistribution" href="#ObservableOwnerDistribution">const ObservableOwnerDistribution</a>
 
 ```
 searchKey: monitoring.ObservableOwnerDistribution
+tags: [constant string]
 ```
 
 ```Go
 const ObservableOwnerDistribution ObservableOwner = "distribution"
 ```
 
+### <a id="ObservableOwnerSearch" href="#ObservableOwnerSearch">const ObservableOwnerSearch</a>
+
+```
+searchKey: monitoring.ObservableOwnerSearch
+tags: [constant string]
+```
+
+```Go
+const ObservableOwnerSearch ObservableOwner = "search"
+```
+
 ### <a id="ObservableOwnerSecurity" href="#ObservableOwnerSecurity">const ObservableOwnerSecurity</a>
 
 ```
 searchKey: monitoring.ObservableOwnerSecurity
+tags: [constant string]
 ```
 
 ```Go
@@ -382,39 +251,194 @@ const ObservableOwnerSecurity ObservableOwner = "security"
 
 ```
 searchKey: monitoring.ObservableOwnerWeb
+tags: [constant string]
 ```
 
 ```Go
 const ObservableOwnerWeb ObservableOwner = "web"
 ```
 
-### <a id="ObservableOwnerCoreApplication" href="#ObservableOwnerCoreApplication">const ObservableOwnerCoreApplication</a>
+### <a id="Percentage" href="#Percentage">const Percentage</a>
 
 ```
-searchKey: monitoring.ObservableOwnerCoreApplication
+searchKey: monitoring.Percentage
+tags: [constant string]
 ```
 
 ```Go
-const ObservableOwnerCoreApplication ObservableOwner = "core application"
+const Percentage UnitType = "percent"
 ```
+
+From [https://sourcegraph.com/github.com/grafana/grafana](https://sourcegraph.com/github.com/grafana/grafana)@b63b82976b3708b082326c0b7d42f38d4bc261fa/-/blob/packages/grafana-data/src/valueFormats/categories.ts#L23 
+
+Percentage in the range of 0-100. 
+
+### <a id="ReadsPerSecond" href="#ReadsPerSecond">const ReadsPerSecond</a>
+
+```
+searchKey: monitoring.ReadsPerSecond
+tags: [constant string]
+```
+
+```Go
+const ReadsPerSecond = "rps"
+```
+
+From [https://sourcegraph.com/github.com/grafana/grafana](https://sourcegraph.com/github.com/grafana/grafana)@b63b82976b3708b082326c0b7d42f38d4bc261fa/-/blob/packages/grafana-data/src/valueFormats/categories.ts#L23 
+
+ReadsPerSecond, e.g for representing disk IO. 
+
+### <a id="Seconds" href="#Seconds">const Seconds</a>
+
+```
+searchKey: monitoring.Seconds
+tags: [constant string]
+```
+
+```Go
+const Seconds UnitType = "s"
+```
+
+From [https://sourcegraph.com/github.com/grafana/grafana](https://sourcegraph.com/github.com/grafana/grafana)@b63b82976b3708b082326c0b7d42f38d4bc261fa/-/blob/packages/grafana-data/src/valueFormats/categories.ts#L23 
+
+Seconds for representing time. 
+
+### <a id="WritesPerSecond" href="#WritesPerSecond">const WritesPerSecond</a>
+
+```
+searchKey: monitoring.WritesPerSecond
+tags: [constant string]
+```
+
+```Go
+const WritesPerSecond = "wps"
+```
+
+From [https://sourcegraph.com/github.com/grafana/grafana](https://sourcegraph.com/github.com/grafana/grafana)@b63b82976b3708b082326c0b7d42f38d4bc261fa/-/blob/packages/grafana-data/src/valueFormats/categories.ts#L23 
+
+WritesPerSecond, e.g for representing disk IO. 
 
 ### <a id="alertRulesFileSuffix" href="#alertRulesFileSuffix">const alertRulesFileSuffix</a>
 
 ```
 searchKey: monitoring.alertRulesFileSuffix
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
 const alertRulesFileSuffix = "_alert_rules.yml"
 ```
 
+### <a id="alertSolutionsFile" href="#alertSolutionsFile">const alertSolutionsFile</a>
+
+```
+searchKey: monitoring.alertSolutionsFile
+tags: [constant string private]
+```
+
+```Go
+const alertSolutionsFile = "alert_solutions.md"
+```
+
+### <a id="alertSolutionsHeader" href="#alertSolutionsHeader">const alertSolutionsHeader</a>
+
+```
+searchKey: monitoring.alertSolutionsHeader
+tags: [constant string private]
+```
+
+```Go
+const alertSolutionsHeader = ...
+```
+
+### <a id="canonicalAlertSolutionsURL" href="#canonicalAlertSolutionsURL">const canonicalAlertSolutionsURL</a>
+
+```
+searchKey: monitoring.canonicalAlertSolutionsURL
+tags: [constant string private]
+```
+
+```Go
+const canonicalAlertSolutionsURL = ...
+```
+
+### <a id="canonicalDashboardsDocsURL" href="#canonicalDashboardsDocsURL">const canonicalDashboardsDocsURL</a>
+
+```
+searchKey: monitoring.canonicalDashboardsDocsURL
+tags: [constant string private]
+```
+
+```Go
+const canonicalDashboardsDocsURL = "https://docs.sourcegraph.com/admin/observability/dashboards"
+```
+
+### <a id="dashboardsDocsFile" href="#dashboardsDocsFile">const dashboardsDocsFile</a>
+
+```
+searchKey: monitoring.dashboardsDocsFile
+tags: [constant string private]
+```
+
+```Go
+const dashboardsDocsFile = "dashboards.md"
+```
+
+### <a id="dashboardsHeader" href="#dashboardsHeader">const dashboardsHeader</a>
+
+```
+searchKey: monitoring.dashboardsHeader
+tags: [constant string private]
+```
+
+```Go
+const dashboardsHeader = ...
+```
+
+### <a id="localGrafanaCredentials" href="#localGrafanaCredentials">const localGrafanaCredentials</a>
+
+```
+searchKey: monitoring.localGrafanaCredentials
+tags: [constant string private]
+```
+
+```Go
+const localGrafanaCredentials = "admin:admin"
+```
+
+### <a id="localGrafanaURL" href="#localGrafanaURL">const localGrafanaURL</a>
+
+```
+searchKey: monitoring.localGrafanaURL
+tags: [constant string private]
+```
+
+```Go
+const localGrafanaURL = "http://127.0.0.1:3370"
+```
+
+### <a id="localPrometheusURL" href="#localPrometheusURL">const localPrometheusURL</a>
+
+```
+searchKey: monitoring.localPrometheusURL
+tags: [constant string private]
+```
+
+```Go
+const localPrometheusURL = "http://127.0.0.1:9090"
+```
+
 ## <a id="var" href="#var">Variables</a>
+
+```
+tags: [package]
+```
 
 ### <a id="PanelOptions" href="#PanelOptions">var PanelOptions</a>
 
 ```
 searchKey: monitoring.PanelOptions
+tags: [variable struct]
 ```
 
 ```Go
@@ -427,106 +451,15 @@ See `ObservablePanelOption` for more details.
 
 ## <a id="type" href="#type">Types</a>
 
-### <a id="UnitType" href="#UnitType">type UnitType string</a>
-
 ```
-searchKey: monitoring.UnitType
+tags: [package]
 ```
-
-```Go
-type UnitType string
-```
-
-UnitType for controlling the unit type display on graphs. 
-
-#### <a id="UnitType.short" href="#UnitType.short">func (u UnitType) short() string</a>
-
-```
-searchKey: monitoring.UnitType.short
-tags: [private]
-```
-
-```Go
-func (u UnitType) short() string
-```
-
-short returns the short string description of the unit, for qualifying a number of this unit type as human-readable. 
-
-### <a id="documentation" href="#documentation">type documentation struct</a>
-
-```
-searchKey: monitoring.documentation
-tags: [private]
-```
-
-```Go
-type documentation struct {
-	alertSolutions bytes.Buffer
-	dashboards     bytes.Buffer
-}
-```
-
-#### <a id="renderDocumentation" href="#renderDocumentation">func renderDocumentation(containers []*Container) (*documentation, error)</a>
-
-```
-searchKey: monitoring.renderDocumentation
-tags: [private]
-```
-
-```Go
-func renderDocumentation(containers []*Container) (*documentation, error)
-```
-
-#### <a id="documentation.renderAlertSolutionEntry" href="#documentation.renderAlertSolutionEntry">func (d *documentation) renderAlertSolutionEntry(c *Container, o Observable) error</a>
-
-```
-searchKey: monitoring.documentation.renderAlertSolutionEntry
-tags: [private]
-```
-
-```Go
-func (d *documentation) renderAlertSolutionEntry(c *Container, o Observable) error
-```
-
-#### <a id="documentation.renderDashboardPanelEntry" href="#documentation.renderDashboardPanelEntry">func (d *documentation) renderDashboardPanelEntry(c *Container, o Observable) error</a>
-
-```
-searchKey: monitoring.documentation.renderDashboardPanelEntry
-tags: [private]
-```
-
-```Go
-func (d *documentation) renderDashboardPanelEntry(c *Container, o Observable) error
-```
-
-### <a id="GenerateOptions" href="#GenerateOptions">type GenerateOptions struct</a>
-
-```
-searchKey: monitoring.GenerateOptions
-```
-
-```Go
-type GenerateOptions struct {
-	// Toggles pruning of dangling generated assets through simple heuristic, should be disabled during builds
-	DisablePrune bool
-	// Trigger reload of active Prometheus or Grafana instance (requires respective output directories)
-	Reload bool
-
-	// Output directory for generated Grafana assets
-	GrafanaDir string
-	// Output directory for generated Prometheus assets
-	PrometheusDir string
-	// Output directory for generated documentation
-	DocsDir string
-}
-```
-
-GenerateOptions declares options for the monitoring generator. 
 
 ### <a id="Container" href="#Container">type Container struct</a>
 
 ```
 searchKey: monitoring.Container
+tags: [struct]
 ```
 
 ```Go
@@ -563,35 +496,11 @@ Container describes a Docker container to be observed.
 
 These correspond to dashboards in Grafana. 
 
-#### <a id="Container.validate" href="#Container.validate">func (c *Container) validate() error</a>
-
-```
-searchKey: monitoring.Container.validate
-tags: [private]
-```
-
-```Go
-func (c *Container) validate() error
-```
-
-#### <a id="Container.renderDashboard" href="#Container.renderDashboard">func (c *Container) renderDashboard() *sdk.Board</a>
-
-```
-searchKey: monitoring.Container.renderDashboard
-tags: [private]
-```
-
-```Go
-func (c *Container) renderDashboard() *sdk.Board
-```
-
-renderDashboard generates the Grafana renderDashboard for this container. 
-
 #### <a id="Container.alertDescription" href="#Container.alertDescription">func (c *Container) alertDescription(o Observable, alert *ObservableAlertDefinition) (string, error)</a>
 
 ```
 searchKey: monitoring.Container.alertDescription
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -600,11 +509,24 @@ func (c *Container) alertDescription(o Observable, alert *ObservableAlertDefinit
 
 alertDescription generates an alert description for the specified coontainer's alert. 
 
+#### <a id="Container.renderDashboard" href="#Container.renderDashboard">func (c *Container) renderDashboard() *sdk.Board</a>
+
+```
+searchKey: monitoring.Container.renderDashboard
+tags: [function private]
+```
+
+```Go
+func (c *Container) renderDashboard() *sdk.Board
+```
+
+renderDashboard generates the Grafana renderDashboard for this container. 
+
 #### <a id="Container.renderRules" href="#Container.renderRules">func (c *Container) renderRules() (*promRulesFile, error)</a>
 
 ```
 searchKey: monitoring.Container.renderRules
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -615,10 +537,47 @@ renderRules generates the Prometheus rules file which defines our high-level ale
 
 [https://docs.sourcegraph.com/admin/observability/metrics#high-level-alerting-metrics](https://docs.sourcegraph.com/admin/observability/metrics#high-level-alerting-metrics) 
 
+#### <a id="Container.validate" href="#Container.validate">func (c *Container) validate() error</a>
+
+```
+searchKey: monitoring.Container.validate
+tags: [function private]
+```
+
+```Go
+func (c *Container) validate() error
+```
+
+### <a id="GenerateOptions" href="#GenerateOptions">type GenerateOptions struct</a>
+
+```
+searchKey: monitoring.GenerateOptions
+tags: [struct]
+```
+
+```Go
+type GenerateOptions struct {
+	// Toggles pruning of dangling generated assets through simple heuristic, should be disabled during builds
+	DisablePrune bool
+	// Trigger reload of active Prometheus or Grafana instance (requires respective output directories)
+	Reload bool
+
+	// Output directory for generated Grafana assets
+	GrafanaDir string
+	// Output directory for generated Prometheus assets
+	PrometheusDir string
+	// Output directory for generated documentation
+	DocsDir string
+}
+```
+
+GenerateOptions declares options for the monitoring generator. 
+
 ### <a id="Group" href="#Group">type Group struct</a>
 
 ```
 searchKey: monitoring.Group
+tags: [struct]
 ```
 
 ```Go
@@ -648,67 +607,18 @@ These correspond to collapsible sections in a Grafana dashboard.
 
 ```
 searchKey: monitoring.Group.validate
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (g Group) validate() error
 ```
 
-### <a id="Row" href="#Row">type Row []monitoring.Observable</a>
-
-```
-searchKey: monitoring.Row
-```
-
-```Go
-type Row []Observable
-```
-
-Row of observable metrics. 
-
-These correspond to a row of Grafana graphs. 
-
-#### <a id="Row.validate" href="#Row.validate">func (r Row) validate() error</a>
-
-```
-searchKey: monitoring.Row.validate
-tags: [private]
-```
-
-```Go
-func (r Row) validate() error
-```
-
-### <a id="ObservableOwner" href="#ObservableOwner">type ObservableOwner string</a>
-
-```
-searchKey: monitoring.ObservableOwner
-```
-
-```Go
-type ObservableOwner string
-```
-
-ObservableOwner denotes a team that owns an Observable. The current teams are described in the handbook: [https://about.sourcegraph.com/company/team/org_chart#engineering](https://about.sourcegraph.com/company/team/org_chart#engineering) 
-
-#### <a id="ObservableOwner.toMarkdown" href="#ObservableOwner.toMarkdown">func (o ObservableOwner) toMarkdown() string</a>
-
-```
-searchKey: monitoring.ObservableOwner.toMarkdown
-tags: [private]
-```
-
-```Go
-func (o ObservableOwner) toMarkdown() string
-```
-
-toMarkdown returns a Markdown string that also links to the owner's team page 
-
 ### <a id="Observable" href="#Observable">type Observable struct</a>
 
 ```
 searchKey: monitoring.Observable
+tags: [struct]
 ```
 
 ```Go
@@ -838,7 +748,7 @@ These correspond to Grafana graphs.
 
 ```
 searchKey: monitoring.Observable.validate
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -849,6 +759,7 @@ func (o Observable) validate() error
 
 ```
 searchKey: monitoring.ObservableAlertDefinition
+tags: [struct]
 ```
 
 ```Go
@@ -876,6 +787,7 @@ ObservableAlertDefinition defines when an alert would be considered firing.
 
 ```
 searchKey: monitoring.Alert
+tags: [function]
 ```
 
 ```Go
@@ -884,58 +796,11 @@ func Alert() *ObservableAlertDefinition
 
 Alert provides a builder for defining alerting on an Observable. 
 
-#### <a id="ObservableAlertDefinition.GreaterOrEqual" href="#ObservableAlertDefinition.GreaterOrEqual">func (a *ObservableAlertDefinition) GreaterOrEqual(f float64, aggregator *string) *ObservableAlertDefinition</a>
-
-```
-searchKey: monitoring.ObservableAlertDefinition.GreaterOrEqual
-```
-
-```Go
-func (a *ObservableAlertDefinition) GreaterOrEqual(f float64, aggregator *string) *ObservableAlertDefinition
-```
-
-GreaterOrEqual indicates the alert should fire when greater or equal the given value. 
-
-#### <a id="ObservableAlertDefinition.LessOrEqual" href="#ObservableAlertDefinition.LessOrEqual">func (a *ObservableAlertDefinition) LessOrEqual(f float64, aggregator *string) *ObservableAlertDefinition</a>
-
-```
-searchKey: monitoring.ObservableAlertDefinition.LessOrEqual
-```
-
-```Go
-func (a *ObservableAlertDefinition) LessOrEqual(f float64, aggregator *string) *ObservableAlertDefinition
-```
-
-LessOrEqual indicates the alert should fire when less than or equal to the given value. 
-
-#### <a id="ObservableAlertDefinition.Greater" href="#ObservableAlertDefinition.Greater">func (a *ObservableAlertDefinition) Greater(f float64, aggregator *string) *ObservableAlertDefinition</a>
-
-```
-searchKey: monitoring.ObservableAlertDefinition.Greater
-```
-
-```Go
-func (a *ObservableAlertDefinition) Greater(f float64, aggregator *string) *ObservableAlertDefinition
-```
-
-Greater indicates the alert should fire when strictly greater to this value. 
-
-#### <a id="ObservableAlertDefinition.Less" href="#ObservableAlertDefinition.Less">func (a *ObservableAlertDefinition) Less(f float64, aggregator *string) *ObservableAlertDefinition</a>
-
-```
-searchKey: monitoring.ObservableAlertDefinition.Less
-```
-
-```Go
-func (a *ObservableAlertDefinition) Less(f float64, aggregator *string) *ObservableAlertDefinition
-```
-
-Less indicates the alert should fire when strictly less than this value. 
-
 #### <a id="ObservableAlertDefinition.For" href="#ObservableAlertDefinition.For">func (a *ObservableAlertDefinition) For(d time.Duration) *ObservableAlertDefinition</a>
 
 ```
 searchKey: monitoring.ObservableAlertDefinition.For
+tags: [method]
 ```
 
 ```Go
@@ -944,11 +809,63 @@ func (a *ObservableAlertDefinition) For(d time.Duration) *ObservableAlertDefinit
 
 For indicates how long the given thresholds must be exceeded for this alert to be considered firing. Defaults to 0s (immediately alerts when threshold is exceeded). 
 
+#### <a id="ObservableAlertDefinition.Greater" href="#ObservableAlertDefinition.Greater">func (a *ObservableAlertDefinition) Greater(f float64, aggregator *string) *ObservableAlertDefinition</a>
+
+```
+searchKey: monitoring.ObservableAlertDefinition.Greater
+tags: [method]
+```
+
+```Go
+func (a *ObservableAlertDefinition) Greater(f float64, aggregator *string) *ObservableAlertDefinition
+```
+
+Greater indicates the alert should fire when strictly greater to this value. 
+
+#### <a id="ObservableAlertDefinition.GreaterOrEqual" href="#ObservableAlertDefinition.GreaterOrEqual">func (a *ObservableAlertDefinition) GreaterOrEqual(f float64, aggregator *string) *ObservableAlertDefinition</a>
+
+```
+searchKey: monitoring.ObservableAlertDefinition.GreaterOrEqual
+tags: [method]
+```
+
+```Go
+func (a *ObservableAlertDefinition) GreaterOrEqual(f float64, aggregator *string) *ObservableAlertDefinition
+```
+
+GreaterOrEqual indicates the alert should fire when greater or equal the given value. 
+
+#### <a id="ObservableAlertDefinition.Less" href="#ObservableAlertDefinition.Less">func (a *ObservableAlertDefinition) Less(f float64, aggregator *string) *ObservableAlertDefinition</a>
+
+```
+searchKey: monitoring.ObservableAlertDefinition.Less
+tags: [method]
+```
+
+```Go
+func (a *ObservableAlertDefinition) Less(f float64, aggregator *string) *ObservableAlertDefinition
+```
+
+Less indicates the alert should fire when strictly less than this value. 
+
+#### <a id="ObservableAlertDefinition.LessOrEqual" href="#ObservableAlertDefinition.LessOrEqual">func (a *ObservableAlertDefinition) LessOrEqual(f float64, aggregator *string) *ObservableAlertDefinition</a>
+
+```
+searchKey: monitoring.ObservableAlertDefinition.LessOrEqual
+tags: [method]
+```
+
+```Go
+func (a *ObservableAlertDefinition) LessOrEqual(f float64, aggregator *string) *ObservableAlertDefinition
+```
+
+LessOrEqual indicates the alert should fire when less than or equal to the given value. 
+
 #### <a id="ObservableAlertDefinition.isEmpty" href="#ObservableAlertDefinition.isEmpty">func (a *ObservableAlertDefinition) isEmpty() bool</a>
 
 ```
 searchKey: monitoring.ObservableAlertDefinition.isEmpty
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -959,17 +876,44 @@ func (a *ObservableAlertDefinition) isEmpty() bool
 
 ```
 searchKey: monitoring.ObservableAlertDefinition.validate
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (a *ObservableAlertDefinition) validate() error
 ```
 
+### <a id="ObservableOwner" href="#ObservableOwner">type ObservableOwner string</a>
+
+```
+searchKey: monitoring.ObservableOwner
+tags: [string]
+```
+
+```Go
+type ObservableOwner string
+```
+
+ObservableOwner denotes a team that owns an Observable. The current teams are described in the handbook: [https://about.sourcegraph.com/company/team/org_chart#engineering](https://about.sourcegraph.com/company/team/org_chart#engineering) 
+
+#### <a id="ObservableOwner.toMarkdown" href="#ObservableOwner.toMarkdown">func (o ObservableOwner) toMarkdown() string</a>
+
+```
+searchKey: monitoring.ObservableOwner.toMarkdown
+tags: [function private]
+```
+
+```Go
+func (o ObservableOwner) toMarkdown() string
+```
+
+toMarkdown returns a Markdown string that also links to the owner's team page 
+
 ### <a id="ObservablePanel" href="#ObservablePanel">type ObservablePanel struct</a>
 
 ```
 searchKey: monitoring.ObservablePanel
+tags: [struct]
 ```
 
 ```Go
@@ -990,6 +934,7 @@ ObservablePanel declares options for visualizing an Observable, as well as some 
 
 ```
 searchKey: monitoring.Panel
+tags: [function]
 ```
 
 ```Go
@@ -998,10 +943,24 @@ func Panel() ObservablePanel
 
 Panel provides a builder for customizing an Observable visualization, starting with recommended defaults. 
 
+#### <a id="PanelHeatmap" href="#PanelHeatmap">func PanelHeatmap() ObservablePanel</a>
+
+```
+searchKey: monitoring.PanelHeatmap
+tags: [function]
+```
+
+```Go
+func PanelHeatmap() ObservablePanel
+```
+
+PanelHeatmap provides a builder for customizing an Observable visualization starting with an extremely minimal heatmap panel. 
+
 #### <a id="PanelMinimal" href="#PanelMinimal">func PanelMinimal() ObservablePanel</a>
 
 ```
 searchKey: monitoring.PanelMinimal
+tags: [function]
 ```
 
 ```Go
@@ -1012,22 +971,50 @@ PanelMinimal provides a builder for customizing an Observable visualization star
 
 In general, we advise using Panel() instead to start with recommended defaults. 
 
-#### <a id="PanelHeatmap" href="#PanelHeatmap">func PanelHeatmap() ObservablePanel</a>
+#### <a id="ObservablePanel.Interval" href="#ObservablePanel.Interval">func (p ObservablePanel) Interval(ms int) ObservablePanel</a>
 
 ```
-searchKey: monitoring.PanelHeatmap
+searchKey: monitoring.ObservablePanel.Interval
+tags: [method]
 ```
 
 ```Go
-func PanelHeatmap() ObservablePanel
+func (p ObservablePanel) Interval(ms int) ObservablePanel
 ```
 
-PanelHeatmap provides a builder for customizing an Observable visualization starting with an extremely minimal heatmap panel. 
+Interval declares the panel's interval in milliseconds. 
+
+#### <a id="ObservablePanel.LegendFormat" href="#ObservablePanel.LegendFormat">func (p ObservablePanel) LegendFormat(format string) ObservablePanel</a>
+
+```
+searchKey: monitoring.ObservablePanel.LegendFormat
+tags: [method]
+```
+
+```Go
+func (p ObservablePanel) LegendFormat(format string) ObservablePanel
+```
+
+LegendFormat sets the panel's legend format, which may use Go template strings to select labels from the Prometheus query. 
+
+#### <a id="ObservablePanel.Max" href="#ObservablePanel.Max">func (p ObservablePanel) Max(max float64) ObservablePanel</a>
+
+```
+searchKey: monitoring.ObservablePanel.Max
+tags: [method]
+```
+
+```Go
+func (p ObservablePanel) Max(max float64) ObservablePanel
+```
+
+Max sets the maximum value of the Y axis on the panel. The default is auto. 
 
 #### <a id="ObservablePanel.Min" href="#ObservablePanel.Min">func (p ObservablePanel) Min(min float64) ObservablePanel</a>
 
 ```
 searchKey: monitoring.ObservablePanel.Min
+tags: [method]
 ```
 
 ```Go
@@ -1040,6 +1027,7 @@ Min sets the minimum value of the Y axis on the panel. The default is zero.
 
 ```
 searchKey: monitoring.ObservablePanel.MinAuto
+tags: [function]
 ```
 
 ```Go
@@ -1050,34 +1038,11 @@ Min sets the minimum value of the Y axis on the panel to auto, instead of the de
 
 This is generally only useful if trying to show negative numbers. 
 
-#### <a id="ObservablePanel.Max" href="#ObservablePanel.Max">func (p ObservablePanel) Max(max float64) ObservablePanel</a>
-
-```
-searchKey: monitoring.ObservablePanel.Max
-```
-
-```Go
-func (p ObservablePanel) Max(max float64) ObservablePanel
-```
-
-Max sets the maximum value of the Y axis on the panel. The default is auto. 
-
-#### <a id="ObservablePanel.LegendFormat" href="#ObservablePanel.LegendFormat">func (p ObservablePanel) LegendFormat(format string) ObservablePanel</a>
-
-```
-searchKey: monitoring.ObservablePanel.LegendFormat
-```
-
-```Go
-func (p ObservablePanel) LegendFormat(format string) ObservablePanel
-```
-
-LegendFormat sets the panel's legend format, which may use Go template strings to select labels from the Prometheus query. 
-
 #### <a id="ObservablePanel.Unit" href="#ObservablePanel.Unit">func (p ObservablePanel) Unit(t UnitType) ObservablePanel</a>
 
 ```
 searchKey: monitoring.ObservablePanel.Unit
+tags: [method]
 ```
 
 ```Go
@@ -1086,22 +1051,11 @@ func (p ObservablePanel) Unit(t UnitType) ObservablePanel
 
 Unit sets the panel's Y axis unit type. 
 
-#### <a id="ObservablePanel.Interval" href="#ObservablePanel.Interval">func (p ObservablePanel) Interval(ms int) ObservablePanel</a>
-
-```
-searchKey: monitoring.ObservablePanel.Interval
-```
-
-```Go
-func (p ObservablePanel) Interval(ms int) ObservablePanel
-```
-
-Interval declares the panel's interval in milliseconds. 
-
 #### <a id="ObservablePanel.With" href="#ObservablePanel.With">func (p ObservablePanel) With(ops ...ObservablePanelOption) ObservablePanel</a>
 
 ```
 searchKey: monitoring.ObservablePanel.With
+tags: [method]
 ```
 
 ```Go
@@ -1118,7 +1072,7 @@ Shared customizations are exported by `PanelOptions`, or you can write your opti
 
 ```
 searchKey: monitoring.ObservablePanel.build
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1131,6 +1085,7 @@ build applies the configured options on this panel for the given `Observable`.
 
 ```
 searchKey: monitoring.ObservablePanelOption
+tags: [function]
 ```
 
 ```Go
@@ -1163,11 +1118,110 @@ Panel: monitoring.Panel().With(monitoring.PanelOptions.MyCustomization),
 ```
 Using a shared prefix helps with discoverability of available options. 
 
+### <a id="Row" href="#Row">type Row []monitoring.Observable</a>
+
+```
+searchKey: monitoring.Row
+tags: [array struct]
+```
+
+```Go
+type Row []Observable
+```
+
+Row of observable metrics. 
+
+These correspond to a row of Grafana graphs. 
+
+#### <a id="Row.validate" href="#Row.validate">func (r Row) validate() error</a>
+
+```
+searchKey: monitoring.Row.validate
+tags: [function private]
+```
+
+```Go
+func (r Row) validate() error
+```
+
+### <a id="UnitType" href="#UnitType">type UnitType string</a>
+
+```
+searchKey: monitoring.UnitType
+tags: [string]
+```
+
+```Go
+type UnitType string
+```
+
+UnitType for controlling the unit type display on graphs. 
+
+#### <a id="UnitType.short" href="#UnitType.short">func (u UnitType) short() string</a>
+
+```
+searchKey: monitoring.UnitType.short
+tags: [function private]
+```
+
+```Go
+func (u UnitType) short() string
+```
+
+short returns the short string description of the unit, for qualifying a number of this unit type as human-readable. 
+
+### <a id="documentation" href="#documentation">type documentation struct</a>
+
+```
+searchKey: monitoring.documentation
+tags: [struct private]
+```
+
+```Go
+type documentation struct {
+	alertSolutions bytes.Buffer
+	dashboards     bytes.Buffer
+}
+```
+
+#### <a id="renderDocumentation" href="#renderDocumentation">func renderDocumentation(containers []*Container) (*documentation, error)</a>
+
+```
+searchKey: monitoring.renderDocumentation
+tags: [method private]
+```
+
+```Go
+func renderDocumentation(containers []*Container) (*documentation, error)
+```
+
+#### <a id="documentation.renderAlertSolutionEntry" href="#documentation.renderAlertSolutionEntry">func (d *documentation) renderAlertSolutionEntry(c *Container, o Observable) error</a>
+
+```
+searchKey: monitoring.documentation.renderAlertSolutionEntry
+tags: [method private]
+```
+
+```Go
+func (d *documentation) renderAlertSolutionEntry(c *Container, o Observable) error
+```
+
+#### <a id="documentation.renderDashboardPanelEntry" href="#documentation.renderDashboardPanelEntry">func (d *documentation) renderDashboardPanelEntry(c *Container, o Observable) error</a>
+
+```
+searchKey: monitoring.documentation.renderDashboardPanelEntry
+tags: [method private]
+```
+
+```Go
+func (d *documentation) renderDashboardPanelEntry(c *Container, o Observable) error
+```
+
 ### <a id="panelOptionsLibrary" href="#panelOptionsLibrary">type panelOptionsLibrary struct{}</a>
 
 ```
 searchKey: monitoring.panelOptionsLibrary
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -1178,41 +1232,11 @@ panelOptionsLibrary provides `ObservablePanelOption` implementations.
 
 Shared panel options should be declared as functions on this struct - see the `ObservablePanelOption` documentation for more details. 
 
-#### <a id="panelOptionsLibrary.basicPanel" href="#panelOptionsLibrary.basicPanel">func (panelOptionsLibrary) basicPanel() ObservablePanelOption</a>
-
-```
-searchKey: monitoring.panelOptionsLibrary.basicPanel
-tags: [private]
-```
-
-```Go
-func (panelOptionsLibrary) basicPanel() ObservablePanelOption
-```
-
-basicPanel instantiates all properties of a graph that can be adjusted in an ObservablePanelOption, and some reasonable defaults aimed at maintaining a uniform look and feel. 
-
-All ObservablePanelOptions start with this option. 
-
-#### <a id="panelOptionsLibrary.OpinionatedDefaults" href="#panelOptionsLibrary.OpinionatedDefaults">func (panelOptionsLibrary) OpinionatedDefaults() ObservablePanelOption</a>
-
-```
-searchKey: monitoring.panelOptionsLibrary.OpinionatedDefaults
-tags: [private]
-```
-
-```Go
-func (panelOptionsLibrary) OpinionatedDefaults() ObservablePanelOption
-```
-
-OptionOpinionatedDefaults sets some opinionated default properties aimed at encouraging good dashboard practices. 
-
-It is applied in the default PanelOptions(). 
-
 #### <a id="panelOptionsLibrary.AlertThresholds" href="#panelOptionsLibrary.AlertThresholds">func (panelOptionsLibrary) AlertThresholds() ObservablePanelOption</a>
 
 ```
 searchKey: monitoring.panelOptionsLibrary.AlertThresholds
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -1227,7 +1251,7 @@ It is applied in the default PanelOptions().
 
 ```
 searchKey: monitoring.panelOptionsLibrary.ColorOverride
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1236,24 +1260,24 @@ func (panelOptionsLibrary) ColorOverride(seriesName string, color string) Observ
 
 ColorOverride takes a seriesName (which can be a regex pattern) and a color in hex format (#ABABAB). Series that match the seriesName will be colored accordingly. 
 
-#### <a id="panelOptionsLibrary.LegendOnRight" href="#panelOptionsLibrary.LegendOnRight">func (panelOptionsLibrary) LegendOnRight() ObservablePanelOption</a>
+#### <a id="panelOptionsLibrary.Fill" href="#panelOptionsLibrary.Fill">func (panelOptionsLibrary) Fill(fill int) ObservablePanelOption</a>
 
 ```
-searchKey: monitoring.panelOptionsLibrary.LegendOnRight
-tags: [private]
+searchKey: monitoring.panelOptionsLibrary.Fill
+tags: [method private]
 ```
 
 ```Go
-func (panelOptionsLibrary) LegendOnRight() ObservablePanelOption
+func (panelOptionsLibrary) Fill(fill int) ObservablePanelOption
 ```
 
-LegendOnRight moves the legend to the right side of the panel 
+Fill sets the fill opacity for all series on the panel. Set to 0 to disable fill. 
 
 #### <a id="panelOptionsLibrary.HoverShowAll" href="#panelOptionsLibrary.HoverShowAll">func (panelOptionsLibrary) HoverShowAll() ObservablePanelOption</a>
 
 ```
 searchKey: monitoring.panelOptionsLibrary.HoverShowAll
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -1266,7 +1290,7 @@ HoverShowAll makes hover tooltips show all series rather than just the one being
 
 ```
 searchKey: monitoring.panelOptionsLibrary.HoverSort
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1275,24 +1299,24 @@ func (panelOptionsLibrary) HoverSort(order string) ObservablePanelOption
 
 HoverSort sorts the series either "ascending", "descending", or "none". Default is "none". 
 
-#### <a id="panelOptionsLibrary.Fill" href="#panelOptionsLibrary.Fill">func (panelOptionsLibrary) Fill(fill int) ObservablePanelOption</a>
+#### <a id="panelOptionsLibrary.LegendOnRight" href="#panelOptionsLibrary.LegendOnRight">func (panelOptionsLibrary) LegendOnRight() ObservablePanelOption</a>
 
 ```
-searchKey: monitoring.panelOptionsLibrary.Fill
-tags: [private]
+searchKey: monitoring.panelOptionsLibrary.LegendOnRight
+tags: [function private]
 ```
 
 ```Go
-func (panelOptionsLibrary) Fill(fill int) ObservablePanelOption
+func (panelOptionsLibrary) LegendOnRight() ObservablePanelOption
 ```
 
-Fill sets the fill opacity for all series on the panel. Set to 0 to disable fill. 
+LegendOnRight moves the legend to the right side of the panel 
 
 #### <a id="panelOptionsLibrary.NoLegend" href="#panelOptionsLibrary.NoLegend">func (panelOptionsLibrary) NoLegend() ObservablePanelOption</a>
 
 ```
 searchKey: monitoring.panelOptionsLibrary.NoLegend
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -1301,11 +1325,77 @@ func (panelOptionsLibrary) NoLegend() ObservablePanelOption
 
 NoLegend disables the legend on the panel 
 
+#### <a id="panelOptionsLibrary.OpinionatedDefaults" href="#panelOptionsLibrary.OpinionatedDefaults">func (panelOptionsLibrary) OpinionatedDefaults() ObservablePanelOption</a>
+
+```
+searchKey: monitoring.panelOptionsLibrary.OpinionatedDefaults
+tags: [function private]
+```
+
+```Go
+func (panelOptionsLibrary) OpinionatedDefaults() ObservablePanelOption
+```
+
+OptionOpinionatedDefaults sets some opinionated default properties aimed at encouraging good dashboard practices. 
+
+It is applied in the default PanelOptions(). 
+
+#### <a id="panelOptionsLibrary.basicPanel" href="#panelOptionsLibrary.basicPanel">func (panelOptionsLibrary) basicPanel() ObservablePanelOption</a>
+
+```
+searchKey: monitoring.panelOptionsLibrary.basicPanel
+tags: [function private]
+```
+
+```Go
+func (panelOptionsLibrary) basicPanel() ObservablePanelOption
+```
+
+basicPanel instantiates all properties of a graph that can be adjusted in an ObservablePanelOption, and some reasonable defaults aimed at maintaining a uniform look and feel. 
+
+All ObservablePanelOptions start with this option. 
+
+### <a id="promGroup" href="#promGroup">type promGroup struct</a>
+
+```
+searchKey: monitoring.promGroup
+tags: [struct private]
+```
+
+```Go
+type promGroup struct {
+	Name  string
+	Rules []promRule
+}
+```
+
+#### <a id="promGroup.appendRow" href="#promGroup.appendRow">func (g *promGroup) appendRow(alertQuery string, labels map[string]string, duration time.Duration)</a>
+
+```
+searchKey: monitoring.promGroup.appendRow
+tags: [method private]
+```
+
+```Go
+func (g *promGroup) appendRow(alertQuery string, labels map[string]string, duration time.Duration)
+```
+
+#### <a id="promGroup.validate" href="#promGroup.validate">func (g *promGroup) validate() error</a>
+
+```
+searchKey: monitoring.promGroup.validate
+tags: [function private]
+```
+
+```Go
+func (g *promGroup) validate() error
+```
+
 ### <a id="promRule" href="#promRule">type promRule struct</a>
 
 ```
 searchKey: monitoring.promRule
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -1328,7 +1418,7 @@ promRule is a subset of a Prometheus recording or alert rule definition.
 
 ```
 searchKey: monitoring.promRule.validate
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -1339,7 +1429,7 @@ func (r *promRule) validate() error
 
 ```
 searchKey: monitoring.promRulesFile
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -1352,120 +1442,69 @@ promRulesFile represents a Prometheus recording rules file (which we use for def
 
 [https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/](https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/) 
 
-### <a id="promGroup" href="#promGroup">type promGroup struct</a>
-
-```
-searchKey: monitoring.promGroup
-tags: [private]
-```
-
-```Go
-type promGroup struct {
-	Name  string
-	Rules []promRule
-}
-```
-
-#### <a id="promGroup.validate" href="#promGroup.validate">func (g *promGroup) validate() error</a>
-
-```
-searchKey: monitoring.promGroup.validate
-tags: [private]
-```
-
-```Go
-func (g *promGroup) validate() error
-```
-
-#### <a id="promGroup.appendRow" href="#promGroup.appendRow">func (g *promGroup) appendRow(alertQuery string, labels map[string]string, duration time.Duration)</a>
-
-```
-searchKey: monitoring.promGroup.appendRow
-tags: [private]
-```
-
-```Go
-func (g *promGroup) appendRow(alertQuery string, labels map[string]string, duration time.Duration)
-```
-
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="setPanelSize" href="#setPanelSize">func setPanelSize(p *sdk.Panel, width, height int)</a>
-
 ```
-searchKey: monitoring.setPanelSize
-tags: [private]
+tags: [package]
 ```
 
-```Go
-func setPanelSize(p *sdk.Panel, width, height int)
-```
-
-setPanelSize is a helper to set a panel's size. 
-
-### <a id="setPanelPos" href="#setPanelPos">func setPanelPos(p *sdk.Panel, x, y int)</a>
+### <a id="Generate" href="#Generate">func Generate(logger log15.Logger, opts GenerateOptions, containers ...*Container) error</a>
 
 ```
-searchKey: monitoring.setPanelPos
-tags: [private]
+searchKey: monitoring.Generate
+tags: [method]
 ```
 
 ```Go
-func setPanelPos(p *sdk.Panel, x, y int)
+func Generate(logger log15.Logger, opts GenerateOptions, containers ...*Container) error
 ```
 
-setPanelSize is a helper to set a panel's position. 
+Generate is the main Sourcegraph monitoring generator entrypoint. 
 
-### <a id="observablePanelID" href="#observablePanelID">func observablePanelID(groupIndex, rowIndex, observableIndex int) uint</a>
-
-```
-searchKey: monitoring.observablePanelID
-tags: [private]
-```
-
-```Go
-func observablePanelID(groupIndex, rowIndex, observableIndex int) uint
-```
-
-observablePanelID generates a panel ID unique per dashboard for an observable at a given group and row. 
-
-### <a id="isValidGrafanaUID" href="#isValidGrafanaUID">func isValidGrafanaUID(s string) bool</a>
+### <a id="Int64Ptr" href="#Int64Ptr">func Int64Ptr(i int64) *int64</a>
 
 ```
-searchKey: monitoring.isValidGrafanaUID
-tags: [private]
+searchKey: monitoring.Int64Ptr
+tags: [method]
 ```
 
 ```Go
-func isValidGrafanaUID(s string) bool
+func Int64Ptr(i int64) *int64
 ```
 
-isValidGrafanaUID checks if the given string is a valid UID for entry into a Grafana dashboard. This is primarily used in the URL, e.g. /-/debug/grafana/d/syntect-server/<UID> and allows us to have static URLs we can document like: 
+IntPtr converts an int64 value to a pointer, useful for setting fields in some APIs. 
+
+### <a id="StringPtr" href="#StringPtr">func StringPtr(s string) *string</a>
 
 ```
-Go to [https://sourcegraph.example.com/-/debug/grafana/d/syntect-server/syntect-server](https://sourcegraph.example.com/-/debug/grafana/d/syntect-server/syntect-server)
-
-```
-Instead of having to describe all the steps to navigate there because the UID is random. 
-
-### <a id="fprintSubtitle" href="#fprintSubtitle">func fprintSubtitle(w io.Writer, text string)</a>
-
-```
-searchKey: monitoring.fprintSubtitle
-tags: [private]
+searchKey: monitoring.StringPtr
+tags: [method]
 ```
 
 ```Go
-func fprintSubtitle(w io.Writer, text string)
+func StringPtr(s string) *string
 ```
 
-fprintSubtitle prints subtitle-class text 
+StringPtr converts a string value to a pointer, useful for setting fields in some APIs. 
+
+### <a id="boolPtr" href="#boolPtr">func boolPtr(b bool) *bool</a>
+
+```
+searchKey: monitoring.boolPtr
+tags: [method private]
+```
+
+```Go
+func boolPtr(b bool) *bool
+```
+
+boolPtr converts a boolean value to a pointer, useful for setting fields in some APIs. 
 
 ### <a id="fprintObservableHeader" href="#fprintObservableHeader">func fprintObservableHeader(w io.Writer, c *Container, o *Observable, headerLevel int)</a>
 
 ```
 searchKey: monitoring.fprintObservableHeader
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1480,7 +1519,7 @@ See `observableAnchor`.
 
 ```
 searchKey: monitoring.fprintOwnedBy
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1489,11 +1528,43 @@ func fprintOwnedBy(w io.Writer, owner ObservableOwner)
 
 fprintOwnedBy prints information about who owns a particular monitoring definition. 
 
+### <a id="fprintSubtitle" href="#fprintSubtitle">func fprintSubtitle(w io.Writer, text string)</a>
+
+```
+searchKey: monitoring.fprintSubtitle
+tags: [method private]
+```
+
+```Go
+func fprintSubtitle(w io.Writer, text string)
+```
+
+fprintSubtitle prints subtitle-class text 
+
+### <a id="isValidGrafanaUID" href="#isValidGrafanaUID">func isValidGrafanaUID(s string) bool</a>
+
+```
+searchKey: monitoring.isValidGrafanaUID
+tags: [method private]
+```
+
+```Go
+func isValidGrafanaUID(s string) bool
+```
+
+isValidGrafanaUID checks if the given string is a valid UID for entry into a Grafana dashboard. This is primarily used in the URL, e.g. /-/debug/grafana/d/syntect-server/<UID> and allows us to have static URLs we can document like: 
+
+```
+Go to [https://sourcegraph.example.com/-/debug/grafana/d/syntect-server/syntect-server](https://sourcegraph.example.com/-/debug/grafana/d/syntect-server/syntect-server)
+
+```
+Instead of having to describe all the steps to navigate there because the UID is random. 
+
 ### <a id="observableDocAnchor" href="#observableDocAnchor">func observableDocAnchor(c *Container, o Observable) string</a>
 
 ```
 searchKey: monitoring.observableDocAnchor
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1504,23 +1575,24 @@ Create an anchor link that matches `fprintObservableHeader`
 
 Must match Prometheus template in `docker-images/prometheus/cmd/prom-wrapper/receivers.go` 
 
-### <a id="Generate" href="#Generate">func Generate(logger log15.Logger, opts GenerateOptions, containers ...*Container) error</a>
+### <a id="observablePanelID" href="#observablePanelID">func observablePanelID(groupIndex, rowIndex, observableIndex int) uint</a>
 
 ```
-searchKey: monitoring.Generate
+searchKey: monitoring.observablePanelID
+tags: [method private]
 ```
 
 ```Go
-func Generate(logger log15.Logger, opts GenerateOptions, containers ...*Container) error
+func observablePanelID(groupIndex, rowIndex, observableIndex int) uint
 ```
 
-Generate is the main Sourcegraph monitoring generator entrypoint. 
+observablePanelID generates a panel ID unique per dashboard for an observable at a given group and row. 
 
 ### <a id="prometheusAlertName" href="#prometheusAlertName">func prometheusAlertName(level, service, name string) string</a>
 
 ```
 searchKey: monitoring.prometheusAlertName
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1533,18 +1605,57 @@ prometheusAlertName creates an alertname that is unique given the combination of
 
 ```
 searchKey: monitoring.pruneAssets
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func pruneAssets(logger log15.Logger, filelist []string, grafanaDir, promDir string) error
 ```
 
+### <a id="setPanelPos" href="#setPanelPos">func setPanelPos(p *sdk.Panel, x, y int)</a>
+
+```
+searchKey: monitoring.setPanelPos
+tags: [method private]
+```
+
+```Go
+func setPanelPos(p *sdk.Panel, x, y int)
+```
+
+setPanelSize is a helper to set a panel's position. 
+
+### <a id="setPanelSize" href="#setPanelSize">func setPanelSize(p *sdk.Panel, width, height int)</a>
+
+```
+searchKey: monitoring.setPanelSize
+tags: [method private]
+```
+
+```Go
+func setPanelSize(p *sdk.Panel, width, height int)
+```
+
+setPanelSize is a helper to set a panel's size. 
+
+### <a id="toMarkdown" href="#toMarkdown">func toMarkdown(m string, forceList bool) (string, error)</a>
+
+```
+searchKey: monitoring.toMarkdown
+tags: [method private]
+```
+
+```Go
+func toMarkdown(m string, forceList bool) (string, error)
+```
+
+toMarkdown converts a Go string to Markdown, and optionally converts it to a list item if requested by forceList. 
+
 ### <a id="upperFirst" href="#upperFirst">func upperFirst(s string) string</a>
 
 ```
 searchKey: monitoring.upperFirst
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1557,7 +1668,7 @@ upperFirst returns s with an uppercase first rune.
 
 ```
 searchKey: monitoring.withPeriod
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1565,54 +1676,4 @@ func withPeriod(s string) string
 ```
 
 withPeriod returns s ending with a period. 
-
-### <a id="StringPtr" href="#StringPtr">func StringPtr(s string) *string</a>
-
-```
-searchKey: monitoring.StringPtr
-```
-
-```Go
-func StringPtr(s string) *string
-```
-
-StringPtr converts a string value to a pointer, useful for setting fields in some APIs. 
-
-### <a id="boolPtr" href="#boolPtr">func boolPtr(b bool) *bool</a>
-
-```
-searchKey: monitoring.boolPtr
-tags: [private]
-```
-
-```Go
-func boolPtr(b bool) *bool
-```
-
-boolPtr converts a boolean value to a pointer, useful for setting fields in some APIs. 
-
-### <a id="Int64Ptr" href="#Int64Ptr">func Int64Ptr(i int64) *int64</a>
-
-```
-searchKey: monitoring.Int64Ptr
-```
-
-```Go
-func Int64Ptr(i int64) *int64
-```
-
-IntPtr converts an int64 value to a pointer, useful for setting fields in some APIs. 
-
-### <a id="toMarkdown" href="#toMarkdown">func toMarkdown(m string, forceList bool) (string, error)</a>
-
-```
-searchKey: monitoring.toMarkdown
-tags: [private]
-```
-
-```Go
-func toMarkdown(m string, forceList bool) (string, error)
-```
-
-toMarkdown converts a Go string to Markdown, and optionally converts it to a list item if requested by forceList. 
 

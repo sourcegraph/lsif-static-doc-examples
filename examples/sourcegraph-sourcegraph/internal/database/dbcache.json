@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/database/dbcache",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "dbcache.defaultReposMaxAge",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -84,57 +89,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/database/dbcache#cachedRepos",
-              "documentation": {
-                "identifier": "cachedRepos",
-                "newPage": false,
-                "searchKey": "dbcache.cachedRepos",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type cachedRepos struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype cachedRepos struct {\n\trepos   []types.RepoName\n\tfetched time.Time\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/database/dbcache#cachedRepos.Repos",
-                    "documentation": {
-                      "identifier": "cachedRepos.Repos",
-                      "newPage": false,
-                      "searchKey": "dbcache.cachedRepos.Repos",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *cachedRepos) Repos() ([]types.RepoName, bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *cachedRepos) Repos() ([]types.RepoName, bool)\n```\n\nRepos returns the current cached repos and boolean value indicating whether an update is required \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/database/dbcache#DefaultRepoLister",
               "documentation": {
                 "identifier": "DefaultRepoLister",
                 "newPage": false,
                 "searchKey": "dbcache.DefaultRepoLister",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -152,7 +114,9 @@
                       "identifier": "NewDefaultRepoLister",
                       "newPage": false,
                       "searchKey": "dbcache.NewDefaultRepoLister",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -172,7 +136,9 @@
                       "identifier": "DefaultRepoLister.List",
                       "newPage": false,
                       "searchKey": "dbcache.DefaultRepoLister.List",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -192,7 +158,9 @@
                       "identifier": "DefaultRepoLister.ListPublic",
                       "newPage": false,
                       "searchKey": "dbcache.DefaultRepoLister.ListPublic",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -213,6 +181,7 @@
                       "newPage": false,
                       "searchKey": "dbcache.DefaultRepoLister.list",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -235,6 +204,7 @@
                       "newPage": false,
                       "searchKey": "dbcache.DefaultRepoLister.refreshCache",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -245,6 +215,53 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (s *DefaultRepoLister) refreshCache(ctx context.Context, onlyPublic bool) ([]types.RepoName, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbcache#cachedRepos",
+              "documentation": {
+                "identifier": "cachedRepos",
+                "newPage": false,
+                "searchKey": "dbcache.cachedRepos",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type cachedRepos struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype cachedRepos struct {\n\trepos   []types.RepoName\n\tfetched time.Time\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbcache#cachedRepos.Repos",
+                    "documentation": {
+                      "identifier": "cachedRepos.Repos",
+                      "newPage": false,
+                      "searchKey": "dbcache.cachedRepos.Repos",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *cachedRepos) Repos() ([]types.RepoName, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *cachedRepos) Repos() ([]types.RepoName, bool)\n```\n\nRepos returns the current cached repos and boolean value indicating whether an update is required \n\n"
                     },
                     "children": null
                   }
@@ -263,6 +280,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -277,35 +295,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/database/dbcache#TestListDefaultRepos",
-              "documentation": {
-                "identifier": "TestListDefaultRepos",
-                "newPage": false,
-                "searchKey": "dbcache.TestListDefaultRepos",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestListDefaultRepos(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestListDefaultRepos(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/database/dbcache#BenchmarkDefaultRepos_List_Empty",
               "documentation": {
                 "identifier": "BenchmarkDefaultRepos_List_Empty",
                 "newPage": false,
                 "searchKey": "dbcache.BenchmarkDefaultRepos_List_Empty",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -321,12 +319,37 @@
           },
           {
             "node": {
+              "pathID": "/internal/database/dbcache#TestListDefaultRepos",
+              "documentation": {
+                "identifier": "TestListDefaultRepos",
+                "newPage": false,
+                "searchKey": "dbcache.TestListDefaultRepos",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestListDefaultRepos(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestListDefaultRepos(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/database/dbcache#init.main_test.go",
               "documentation": {
                 "identifier": "init.main_test.go",
                 "newPage": false,
                 "searchKey": "dbcache.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/httpcli",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,56 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/httpcli#redisCache",
-              "documentation": {
-                "identifier": "redisCache",
-                "newPage": false,
-                "searchKey": "httpcli.redisCache",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var redisCache"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar redisCache = rcache.NewWithTTL(\"http\", 604800)\n```\n\nredisCache is a HTTP cache backed by Redis. The TTL of a week is a balance between caching values for a useful amount of time versus growing the cache too large. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/httpcli#externalOnce",
-              "documentation": {
-                "identifier": "externalOnce",
-                "newPage": false,
-                "searchKey": "httpcli.externalOnce",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var externalOnce"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar externalOnce sync.Once\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/httpcli#externalDoer",
               "documentation": {
                 "identifier": "externalDoer",
                 "newPage": false,
                 "searchKey": "httpcli.externalDoer",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -111,6 +71,8 @@
                 "newPage": false,
                 "searchKey": "httpcli.externalHTTPClient",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -121,6 +83,54 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar externalHTTPClient *http.Client\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/httpcli#externalOnce",
+              "documentation": {
+                "identifier": "externalOnce",
+                "newPage": false,
+                "searchKey": "httpcli.externalOnce",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var externalOnce"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar externalOnce sync.Once\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/httpcli#redisCache",
+              "documentation": {
+                "identifier": "redisCache",
+                "newPage": false,
+                "searchKey": "httpcli.redisCache",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var redisCache"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar redisCache = rcache.NewWithTTL(\"http\", 604800)\n```\n\nredisCache is a HTTP cache backed by Redis. The TTL of a week is a balance between caching values for a useful amount of time versus growing the cache too large. \n\n"
               },
               "children": null
             }
@@ -136,6 +146,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -155,7 +166,9 @@
                 "identifier": "Doer",
                 "newPage": false,
                 "searchKey": "httpcli.Doer",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -168,32 +181,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/httpcli#ExternalDoer",
-                    "documentation": {
-                      "identifier": "ExternalDoer",
-                      "newPage": false,
-                      "searchKey": "httpcli.ExternalDoer",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func ExternalDoer() Doer"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc ExternalDoer() Doer\n```\n\nExternalDoer returns a shared client for external communication. This is a convenience for existing uses of http.DefaultClient. \n\nNOTE: Use this for legacy code. New code should generally take in a httpcli.Doer and at a high level NewExternalHTTPClientFactory() is called and passed down. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/httpcli#ContextErrorMiddleware",
                     "documentation": {
                       "identifier": "ContextErrorMiddleware",
                       "newPage": false,
                       "searchKey": "httpcli.ContextErrorMiddleware",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -208,12 +203,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/httpcli#ExternalDoer",
+                    "documentation": {
+                      "identifier": "ExternalDoer",
+                      "newPage": false,
+                      "searchKey": "httpcli.ExternalDoer",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ExternalDoer() Doer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ExternalDoer() Doer\n```\n\nExternalDoer returns a shared client for external communication. This is a convenience for existing uses of http.DefaultClient. \n\nNOTE: Use this for legacy code. New code should generally take in a httpcli.Doer and at a high level NewExternalHTTPClientFactory() is called and passed down. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/httpcli#GitHubProxyRedirectMiddleware",
                     "documentation": {
                       "identifier": "GitHubProxyRedirectMiddleware",
                       "newPage": false,
                       "searchKey": "httpcli.GitHubProxyRedirectMiddleware",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -234,6 +253,7 @@
                       "newPage": false,
                       "searchKey": "httpcli.newFakeClient",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -258,7 +278,9 @@
                 "identifier": "DoerFunc",
                 "newPage": false,
                 "searchKey": "httpcli.DoerFunc",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -276,7 +298,9 @@
                       "identifier": "DoerFunc.Do",
                       "newPage": false,
                       "searchKey": "httpcli.DoerFunc.Do",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -294,174 +318,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/httpcli#Middleware",
-              "documentation": {
-                "identifier": "Middleware",
-                "newPage": false,
-                "searchKey": "httpcli.Middleware",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Middleware func(github.com/sourcegraph/sourcegraph/internal/httpcli.Doer) github.com/sourcegraph/sourcegraph/internal/httpcli.Doer"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Middleware func(Doer) Doer\n```\n\nA Middleware function wraps a Doer with a layer of behaviour. It's used to decorate an http.Client with orthogonal layers of behaviour such as logging, instrumentation, retries, etc. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/httpcli#NewMiddleware",
-                    "documentation": {
-                      "identifier": "NewMiddleware",
-                      "newPage": false,
-                      "searchKey": "httpcli.NewMiddleware",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewMiddleware(mws ...Middleware) Middleware"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewMiddleware(mws ...Middleware) Middleware\n```\n\nNewMiddleware returns a Middleware stack composed of the given Middlewares. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/httpcli#HeadersMiddleware",
-                    "documentation": {
-                      "identifier": "HeadersMiddleware",
-                      "newPage": false,
-                      "searchKey": "httpcli.HeadersMiddleware",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func HeadersMiddleware(headers ...string) Middleware"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc HeadersMiddleware(headers ...string) Middleware\n```\n\nHeadersMiddleware returns a middleware that wraps a Doer and sets the given headers. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/httpcli#Opt",
-              "documentation": {
-                "identifier": "Opt",
-                "newPage": false,
-                "searchKey": "httpcli.Opt",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Opt func(*net/http.Client) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Opt func(*http.Client) error\n```\n\nA Opt configures an aspect of a given *http.Client, returning an error in case of failure. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/httpcli#NewCertPoolOpt",
-                    "documentation": {
-                      "identifier": "NewCertPoolOpt",
-                      "newPage": false,
-                      "searchKey": "httpcli.NewCertPoolOpt",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewCertPoolOpt(certs ...string) Opt"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewCertPoolOpt(certs ...string) Opt\n```\n\nNewCertPoolOpt returns a Opt that sets the RootCAs pool of an http.Client's transport. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/httpcli#NewCachedTransportOpt",
-                    "documentation": {
-                      "identifier": "NewCachedTransportOpt",
-                      "newPage": false,
-                      "searchKey": "httpcli.NewCachedTransportOpt",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewCachedTransportOpt(c httpcache.Cache, markCachedResponses bool) Opt"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewCachedTransportOpt(c httpcache.Cache, markCachedResponses bool) Opt\n```\n\nNewCachedTransportOpt returns an Opt that wraps the existing http.Transport of an http.Client with caching using the given Cache. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/httpcli#NewIdleConnTimeoutOpt",
-                    "documentation": {
-                      "identifier": "NewIdleConnTimeoutOpt",
-                      "newPage": false,
-                      "searchKey": "httpcli.NewIdleConnTimeoutOpt",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewIdleConnTimeoutOpt(timeout time.Duration) Opt"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewIdleConnTimeoutOpt(timeout time.Duration) Opt\n```\n\nNewIdleConnTimeoutOpt returns a Opt that sets the IdleConnTimeout of an http.Client's transport. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/httpcli#NewTimeoutOpt",
-                    "documentation": {
-                      "identifier": "NewTimeoutOpt",
-                      "newPage": false,
-                      "searchKey": "httpcli.NewTimeoutOpt",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewTimeoutOpt(timeout time.Duration) Opt"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewTimeoutOpt(timeout time.Duration) Opt\n```\n\nNewTimeoutOpt returns a Opt that sets the Timeout field of an http.Client. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/httpcli#Factory",
               "documentation": {
                 "identifier": "Factory",
                 "newPage": false,
                 "searchKey": "httpcli.Factory",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -479,7 +343,9 @@
                       "identifier": "NewExternalHTTPClientFactory",
                       "newPage": false,
                       "searchKey": "httpcli.NewExternalHTTPClientFactory",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -499,7 +365,9 @@
                       "identifier": "NewFactory",
                       "newPage": false,
                       "searchKey": "httpcli.NewFactory",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -514,12 +382,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/httpcli#Factory.Client",
+                    "documentation": {
+                      "identifier": "Factory.Client",
+                      "newPage": false,
+                      "searchKey": "httpcli.Factory.Client",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f Factory) Client(base ...Opt) (*http.Client, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f Factory) Client(base ...Opt) (*http.Client, error)\n```\n\nClient returns a new http.Client configured with the given common and base opts, but not wrapped with any middleware. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/httpcli#Factory.Doer",
                     "documentation": {
                       "identifier": "Factory.Doer",
                       "newPage": false,
                       "searchKey": "httpcli.Factory.Doer",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -531,23 +423,228 @@
                     },
                     "children": null
                   }
-                },
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/httpcli#Middleware",
+              "documentation": {
+                "identifier": "Middleware",
+                "newPage": false,
+                "searchKey": "httpcli.Middleware",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Middleware func(github.com/sourcegraph/sourcegraph/internal/httpcli.Doer) github.com/sourcegraph/sourcegraph/internal/httpcli.Doer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Middleware func(Doer) Doer\n```\n\nA Middleware function wraps a Doer with a layer of behaviour. It's used to decorate an http.Client with orthogonal layers of behaviour such as logging, instrumentation, retries, etc. \n\n"
+              },
+              "children": [
                 {
                   "node": {
-                    "pathID": "/internal/httpcli#Factory.Client",
+                    "pathID": "/internal/httpcli#HeadersMiddleware",
                     "documentation": {
-                      "identifier": "Factory.Client",
+                      "identifier": "HeadersMiddleware",
                       "newPage": false,
-                      "searchKey": "httpcli.Factory.Client",
-                      "tags": null
+                      "searchKey": "httpcli.HeadersMiddleware",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f Factory) Client(base ...Opt) (*http.Client, error)"
+                      "value": "func HeadersMiddleware(headers ...string) Middleware"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f Factory) Client(base ...Opt) (*http.Client, error)\n```\n\nClient returns a new http.Client configured with the given common and base opts, but not wrapped with any middleware. \n\n"
+                      "value": "```Go\nfunc HeadersMiddleware(headers ...string) Middleware\n```\n\nHeadersMiddleware returns a middleware that wraps a Doer and sets the given headers. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/httpcli#NewMiddleware",
+                    "documentation": {
+                      "identifier": "NewMiddleware",
+                      "newPage": false,
+                      "searchKey": "httpcli.NewMiddleware",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMiddleware(mws ...Middleware) Middleware"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMiddleware(mws ...Middleware) Middleware\n```\n\nNewMiddleware returns a Middleware stack composed of the given Middlewares. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/httpcli#Opt",
+              "documentation": {
+                "identifier": "Opt",
+                "newPage": false,
+                "searchKey": "httpcli.Opt",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Opt func(*net/http.Client) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Opt func(*http.Client) error\n```\n\nA Opt configures an aspect of a given *http.Client, returning an error in case of failure. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/httpcli#NewCachedTransportOpt",
+                    "documentation": {
+                      "identifier": "NewCachedTransportOpt",
+                      "newPage": false,
+                      "searchKey": "httpcli.NewCachedTransportOpt",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewCachedTransportOpt(c httpcache.Cache, markCachedResponses bool) Opt"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewCachedTransportOpt(c httpcache.Cache, markCachedResponses bool) Opt\n```\n\nNewCachedTransportOpt returns an Opt that wraps the existing http.Transport of an http.Client with caching using the given Cache. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/httpcli#NewCertPoolOpt",
+                    "documentation": {
+                      "identifier": "NewCertPoolOpt",
+                      "newPage": false,
+                      "searchKey": "httpcli.NewCertPoolOpt",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewCertPoolOpt(certs ...string) Opt"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewCertPoolOpt(certs ...string) Opt\n```\n\nNewCertPoolOpt returns a Opt that sets the RootCAs pool of an http.Client's transport. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/httpcli#NewIdleConnTimeoutOpt",
+                    "documentation": {
+                      "identifier": "NewIdleConnTimeoutOpt",
+                      "newPage": false,
+                      "searchKey": "httpcli.NewIdleConnTimeoutOpt",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewIdleConnTimeoutOpt(timeout time.Duration) Opt"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewIdleConnTimeoutOpt(timeout time.Duration) Opt\n```\n\nNewIdleConnTimeoutOpt returns a Opt that sets the IdleConnTimeout of an http.Client's transport. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/httpcli#NewTimeoutOpt",
+                    "documentation": {
+                      "identifier": "NewTimeoutOpt",
+                      "newPage": false,
+                      "searchKey": "httpcli.NewTimeoutOpt",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewTimeoutOpt(timeout time.Duration) Opt"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewTimeoutOpt(timeout time.Duration) Opt\n```\n\nNewTimeoutOpt returns a Opt that sets the Timeout field of an http.Client. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/httpcli#bogusTransport",
+              "documentation": {
+                "identifier": "bogusTransport",
+                "newPage": false,
+                "searchKey": "httpcli.bogusTransport",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type bogusTransport struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype bogusTransport struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/httpcli#bogusTransport.RoundTrip",
+                    "documentation": {
+                      "identifier": "bogusTransport.RoundTrip",
+                      "newPage": false,
+                      "searchKey": "httpcli.bogusTransport.RoundTrip",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t bogusTransport) RoundTrip(*http.Request) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t bogusTransport) RoundTrip(*http.Request) (*http.Response, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -563,6 +660,7 @@
                 "newPage": false,
                 "searchKey": "httpcli.externalTransport",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -583,6 +681,7 @@
                       "newPage": false,
                       "searchKey": "httpcli.externalTransport.RoundTrip",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -605,6 +704,7 @@
                       "newPage": false,
                       "searchKey": "httpcli.externalTransport.update",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -615,51 +715,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (t *externalTransport) update() *http.Transport\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/httpcli#bogusTransport",
-              "documentation": {
-                "identifier": "bogusTransport",
-                "newPage": false,
-                "searchKey": "httpcli.bogusTransport",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type bogusTransport struct{}"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype bogusTransport struct{}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/httpcli#bogusTransport.RoundTrip",
-                    "documentation": {
-                      "identifier": "bogusTransport.RoundTrip",
-                      "newPage": false,
-                      "searchKey": "httpcli.bogusTransport.RoundTrip",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t bogusTransport) RoundTrip(*http.Request) (*http.Response, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t bogusTransport) RoundTrip(*http.Request) (*http.Response, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -678,6 +733,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -692,34 +748,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/httpcli#externalInit",
-              "documentation": {
-                "identifier": "externalInit",
-                "newPage": false,
-                "searchKey": "httpcli.externalInit",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func externalInit()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc externalInit()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/httpcli#ExternalHTTPClient",
               "documentation": {
                 "identifier": "ExternalHTTPClient",
                 "newPage": false,
                 "searchKey": "httpcli.ExternalHTTPClient",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -739,7 +775,9 @@
                 "identifier": "ExternalTransportOpt",
                 "newPage": false,
                 "searchKey": "httpcli.ExternalTransportOpt",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -754,99 +792,15 @@
           },
           {
             "node": {
-              "pathID": "/internal/httpcli#isUnwrappableTransport",
-              "documentation": {
-                "identifier": "isUnwrappableTransport",
-                "newPage": false,
-                "searchKey": "httpcli.isUnwrappableTransport",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func isUnwrappableTransport(cli *http.Client) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc isUnwrappableTransport(cli *http.Client) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/httpcli#TracedTransportOpt",
-              "documentation": {
-                "identifier": "TracedTransportOpt",
-                "newPage": false,
-                "searchKey": "httpcli.TracedTransportOpt",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TracedTransportOpt(cli *http.Client) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TracedTransportOpt(cli *http.Client) error\n```\n\nTracedTransportOpt wraps an existing http.Transport of an http.Client with tracing functionality. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/httpcli#getTransportForMutation",
-              "documentation": {
-                "identifier": "getTransportForMutation",
-                "newPage": false,
-                "searchKey": "httpcli.getTransportForMutation",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func getTransportForMutation(cli *http.Client) (*http.Transport, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc getTransportForMutation(cli *http.Client) (*http.Transport, error)\n```\n\ngetTransport returns the http.Transport for cli. If Transport is nil, it is set to a copy of the DefaultTransport. If it is the DefaultTransport, it is updated to a copy of the DefaultTransport. \n\nUse this function when you intend on mutating the transport. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/httpcli#TestHeadersMiddleware",
-              "documentation": {
-                "identifier": "TestHeadersMiddleware",
-                "newPage": false,
-                "searchKey": "httpcli.TestHeadersMiddleware",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestHeadersMiddleware(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestHeadersMiddleware(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/httpcli#TestContextErrorMiddleware",
               "documentation": {
                 "identifier": "TestContextErrorMiddleware",
                 "newPage": false,
                 "searchKey": "httpcli.TestContextErrorMiddleware",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -862,22 +816,24 @@
           },
           {
             "node": {
-              "pathID": "/internal/httpcli#genCert",
+              "pathID": "/internal/httpcli#TestHeadersMiddleware",
               "documentation": {
-                "identifier": "genCert",
+                "identifier": "TestHeadersMiddleware",
                 "newPage": false,
-                "searchKey": "httpcli.genCert",
+                "searchKey": "httpcli.TestHeadersMiddleware",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func genCert(subject string) (string, error)"
+                "value": "func TestHeadersMiddleware(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc genCert(subject string) (string, error)\n```\n\n"
+                "value": "```Go\nfunc TestHeadersMiddleware(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -890,7 +846,9 @@
                 "newPage": false,
                 "searchKey": "httpcli.TestNewCertPool",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -912,7 +870,9 @@
                 "newPage": false,
                 "searchKey": "httpcli.TestNewIdleConnTimeoutOpt",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -934,7 +894,9 @@
                 "newPage": false,
                 "searchKey": "httpcli.TestNewTimeoutOpt",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -944,6 +906,120 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc TestNewTimeoutOpt(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/httpcli#TracedTransportOpt",
+              "documentation": {
+                "identifier": "TracedTransportOpt",
+                "newPage": false,
+                "searchKey": "httpcli.TracedTransportOpt",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TracedTransportOpt(cli *http.Client) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TracedTransportOpt(cli *http.Client) error\n```\n\nTracedTransportOpt wraps an existing http.Transport of an http.Client with tracing functionality. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/httpcli#externalInit",
+              "documentation": {
+                "identifier": "externalInit",
+                "newPage": false,
+                "searchKey": "httpcli.externalInit",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func externalInit()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc externalInit()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/httpcli#genCert",
+              "documentation": {
+                "identifier": "genCert",
+                "newPage": false,
+                "searchKey": "httpcli.genCert",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func genCert(subject string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc genCert(subject string) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/httpcli#getTransportForMutation",
+              "documentation": {
+                "identifier": "getTransportForMutation",
+                "newPage": false,
+                "searchKey": "httpcli.getTransportForMutation",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getTransportForMutation(cli *http.Client) (*http.Transport, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getTransportForMutation(cli *http.Client) (*http.Transport, error)\n```\n\ngetTransport returns the http.Transport for cli. If Transport is nil, it is set to a copy of the DefaultTransport. If it is the DefaultTransport, it is updated to a copy of the DefaultTransport. \n\nUse this function when you intend on mutating the transport. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/httpcli#isUnwrappableTransport",
+              "documentation": {
+                "identifier": "isUnwrappableTransport",
+                "newPage": false,
+                "searchKey": "httpcli.isUnwrappableTransport",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isUnwrappableTransport(cli *http.Client) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isUnwrappableTransport(cli *http.Client) bool\n```\n\n"
               },
               "children": null
             }

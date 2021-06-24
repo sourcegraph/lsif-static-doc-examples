@@ -16,104 +16,37 @@ This package does not guarantee bit-identical results across architectures.
   * [math/rand](math/rand.md)
   * [math/rand_test](math/rand_test.md)
 * [Constants](#const)
-    * [const uvnan](#uvnan)
-    * [const uvinf](#uvinf)
-    * [const uvneginf](#uvneginf)
-    * [const uvone](#uvone)
-    * [const mask](#mask)
-    * [const shift](#shift)
-    * [const bias](#bias)
-    * [const signMask](#signMask)
-    * [const fracMask](#fracMask)
     * [const E](#E)
-    * [const Pi](#Pi)
-    * [const Phi](#Phi)
-    * [const Sqrt2](#Sqrt2)
-    * [const SqrtE](#SqrtE)
-    * [const SqrtPi](#SqrtPi)
-    * [const SqrtPhi](#SqrtPhi)
-    * [const Ln2](#Ln2)
-    * [const Log2E](#Log2E)
     * [const Ln10](#Ln10)
+    * [const Ln2](#Ln2)
     * [const Log10E](#Log10E)
+    * [const Log2E](#Log2E)
     * [const MaxFloat32](#MaxFloat32)
-    * [const SmallestNonzeroFloat32](#SmallestNonzeroFloat32)
     * [const MaxFloat64](#MaxFloat64)
-    * [const SmallestNonzeroFloat64](#SmallestNonzeroFloat64)
-    * [const intSize](#intSize)
     * [const MaxInt](#MaxInt)
-    * [const MinInt](#MinInt)
-    * [const MaxInt8](#MaxInt8)
-    * [const MinInt8](#MinInt8)
     * [const MaxInt16](#MaxInt16)
-    * [const MinInt16](#MinInt16)
     * [const MaxInt32](#MaxInt32)
-    * [const MinInt32](#MinInt32)
     * [const MaxInt64](#MaxInt64)
-    * [const MinInt64](#MinInt64)
+    * [const MaxInt8](#MaxInt8)
     * [const MaxUint](#MaxUint)
-    * [const MaxUint8](#MaxUint8)
     * [const MaxUint16](#MaxUint16)
     * [const MaxUint32](#MaxUint32)
     * [const MaxUint64](#MaxUint64)
-    * [const haveArchMax](#haveArchMax)
-    * [const haveArchMin](#haveArchMin)
-    * [const erx](#erx)
-    * [const efx](#efx)
-    * [const efx8](#efx8)
-    * [const pp0](#pp0)
-    * [const pp1](#pp1)
-    * [const pp2](#pp2)
-    * [const pp3](#pp3)
-    * [const pp4](#pp4)
-    * [const qq1](#qq1)
-    * [const qq2](#qq2)
-    * [const qq3](#qq3)
-    * [const qq4](#qq4)
-    * [const qq5](#qq5)
-    * [const pa0](#pa0)
-    * [const pa1](#pa1)
-    * [const pa2](#pa2)
-    * [const pa3](#pa3)
-    * [const pa4](#pa4)
-    * [const pa5](#pa5)
-    * [const pa6](#pa6)
-    * [const qa1](#qa1)
-    * [const qa2](#qa2)
-    * [const qa3](#qa3)
-    * [const qa4](#qa4)
-    * [const qa5](#qa5)
-    * [const qa6](#qa6)
-    * [const ra0](#ra0)
-    * [const ra1](#ra1)
-    * [const ra2](#ra2)
-    * [const ra3](#ra3)
-    * [const ra4](#ra4)
-    * [const ra5](#ra5)
-    * [const ra6](#ra6)
-    * [const ra7](#ra7)
-    * [const sa1](#sa1)
-    * [const sa2](#sa2)
-    * [const sa3](#sa3)
-    * [const sa4](#sa4)
-    * [const sa5](#sa5)
-    * [const sa6](#sa6)
-    * [const sa7](#sa7)
-    * [const sa8](#sa8)
-    * [const rb0](#rb0)
-    * [const rb1](#rb1)
-    * [const rb2](#rb2)
-    * [const rb3](#rb3)
-    * [const rb4](#rb4)
-    * [const rb5](#rb5)
-    * [const rb6](#rb6)
-    * [const sb1](#sb1)
-    * [const sb2](#sb2)
-    * [const sb3](#sb3)
-    * [const sb4](#sb4)
-    * [const sb5](#sb5)
-    * [const sb6](#sb6)
-    * [const sb7](#sb7)
+    * [const MaxUint8](#MaxUint8)
+    * [const MinInt](#MinInt)
+    * [const MinInt16](#MinInt16)
+    * [const MinInt32](#MinInt32)
+    * [const MinInt64](#MinInt64)
+    * [const MinInt8](#MinInt8)
+    * [const Phi](#Phi)
+    * [const Pi](#Pi)
+    * [const ReduceThreshold](#ReduceThreshold)
+    * [const SmallestNonzeroFloat32](#SmallestNonzeroFloat32)
+    * [const SmallestNonzeroFloat64](#SmallestNonzeroFloat64)
+    * [const Sqrt2](#Sqrt2)
+    * [const SqrtE](#SqrtE)
+    * [const SqrtPhi](#SqrtPhi)
+    * [const SqrtPi](#SqrtPi)
     * [const a0](#a0)
     * [const a1](#a1)
     * [const a2](#a2)
@@ -130,6 +63,7 @@ This package does not guarantee bit-identical results across architectures.
     * [const b5](#b5)
     * [const b6](#b6)
     * [const b7](#b7)
+    * [const bias](#bias)
     * [const c0](#c0)
     * [const c1](#c1)
     * [const c2](#c2)
@@ -154,6 +88,9 @@ This package does not guarantee bit-identical results across architectures.
     * [const e5](#e5)
     * [const e6](#e6)
     * [const e7](#e7)
+    * [const efx](#efx)
+    * [const efx8](#efx8)
+    * [const erx](#erx)
     * [const f0](#f0)
     * [const f1](#f1)
     * [const f2](#f2)
@@ -162,15 +99,7 @@ This package does not guarantee bit-identical results across architectures.
     * [const f5](#f5)
     * [const f6](#f6)
     * [const f7](#f7)
-    * [const haveArchExp2](#haveArchExp2)
-    * [const haveArchExp](#haveArchExp)
-    * [const haveArchFloor](#haveArchFloor)
-    * [const haveArchCeil](#haveArchCeil)
-    * [const haveArchTrunc](#haveArchTrunc)
-    * [const haveArchHypot](#haveArchHypot)
-    * [const haveArchLog](#haveArchLog)
-    * [const haveArchModf](#haveArchModf)
-    * [const haveArchSqrt](#haveArchSqrt)
+    * [const fracMask](#fracMask)
     * [const haveArchAcos](#haveArchAcos)
     * [const haveArchAcosh](#haveArchAcosh)
     * [const haveArchAsin](#haveArchAsin)
@@ -179,62 +108,145 @@ This package does not guarantee bit-identical results across architectures.
     * [const haveArchAtan2](#haveArchAtan2)
     * [const haveArchAtanh](#haveArchAtanh)
     * [const haveArchCbrt](#haveArchCbrt)
+    * [const haveArchCeil](#haveArchCeil)
     * [const haveArchCos](#haveArchCos)
     * [const haveArchCosh](#haveArchCosh)
     * [const haveArchErf](#haveArchErf)
     * [const haveArchErfc](#haveArchErfc)
+    * [const haveArchExp](#haveArchExp)
+    * [const haveArchExp2](#haveArchExp2)
     * [const haveArchExpm1](#haveArchExpm1)
+    * [const haveArchFloor](#haveArchFloor)
     * [const haveArchFrexp](#haveArchFrexp)
+    * [const haveArchHypot](#haveArchHypot)
     * [const haveArchLdexp](#haveArchLdexp)
+    * [const haveArchLog](#haveArchLog)
     * [const haveArchLog10](#haveArchLog10)
-    * [const haveArchLog2](#haveArchLog2)
     * [const haveArchLog1p](#haveArchLog1p)
+    * [const haveArchLog2](#haveArchLog2)
+    * [const haveArchMax](#haveArchMax)
+    * [const haveArchMin](#haveArchMin)
     * [const haveArchMod](#haveArchMod)
+    * [const haveArchModf](#haveArchModf)
     * [const haveArchPow](#haveArchPow)
     * [const haveArchRemainder](#haveArchRemainder)
     * [const haveArchSin](#haveArchSin)
     * [const haveArchSinh](#haveArchSinh)
+    * [const haveArchSqrt](#haveArchSqrt)
     * [const haveArchTan](#haveArchTan)
     * [const haveArchTanh](#haveArchTanh)
+    * [const haveArchTrunc](#haveArchTrunc)
+    * [const intSize](#intSize)
+    * [const mask](#mask)
+    * [const pa0](#pa0)
+    * [const pa1](#pa1)
+    * [const pa2](#pa2)
+    * [const pa3](#pa3)
+    * [const pa4](#pa4)
+    * [const pa5](#pa5)
+    * [const pa6](#pa6)
+    * [const pp0](#pp0)
+    * [const pp1](#pp1)
+    * [const pp2](#pp2)
+    * [const pp3](#pp3)
+    * [const pp4](#pp4)
+    * [const qa1](#qa1)
+    * [const qa2](#qa2)
+    * [const qa3](#qa3)
+    * [const qa4](#qa4)
+    * [const qa5](#qa5)
+    * [const qa6](#qa6)
+    * [const qq1](#qq1)
+    * [const qq2](#qq2)
+    * [const qq3](#qq3)
+    * [const qq4](#qq4)
+    * [const qq5](#qq5)
+    * [const ra0](#ra0)
+    * [const ra1](#ra1)
+    * [const ra2](#ra2)
+    * [const ra3](#ra3)
+    * [const ra4](#ra4)
+    * [const ra5](#ra5)
+    * [const ra6](#ra6)
+    * [const ra7](#ra7)
+    * [const rb0](#rb0)
+    * [const rb1](#rb1)
+    * [const rb2](#rb2)
+    * [const rb3](#rb3)
+    * [const rb4](#rb4)
+    * [const rb5](#rb5)
+    * [const rb6](#rb6)
     * [const reduceThreshold](#reduceThreshold)
-    * [const ReduceThreshold](#ReduceThreshold)
+    * [const sa1](#sa1)
+    * [const sa2](#sa2)
+    * [const sa3](#sa3)
+    * [const sa4](#sa4)
+    * [const sa5](#sa5)
+    * [const sa6](#sa6)
+    * [const sa7](#sa7)
+    * [const sa8](#sa8)
+    * [const sb1](#sb1)
+    * [const sb2](#sb2)
+    * [const sb3](#sb3)
+    * [const sb4](#sb4)
+    * [const sb5](#sb5)
+    * [const sb6](#sb6)
+    * [const sb7](#sb7)
+    * [const shift](#shift)
+    * [const signMask](#signMask)
+    * [const uvinf](#uvinf)
+    * [const uvnan](#uvnan)
+    * [const uvneginf](#uvneginf)
+    * [const uvone](#uvone)
 * [Variables](#var)
+    * [var Exp2Go](#Exp2Go)
+    * [var ExpGo](#ExpGo)
+    * [var HypotGo](#HypotGo)
+    * [var SqrtGo](#SqrtGo)
+    * [var TrigReduce](#TrigReduce)
+    * [var mPi4](#mPi4)
+    * [var p0R2](#p0R2)
+    * [var p0R3](#p0R3)
+    * [var p0R5](#p0R5)
+    * [var p0R8](#p0R8)
+    * [var p0S2](#p0S2)
+    * [var p0S3](#p0S3)
+    * [var p0S5](#p0S5)
+    * [var p0S8](#p0S8)
+    * [var p1R2](#p1R2)
+    * [var p1R3](#p1R3)
+    * [var p1R5](#p1R5)
+    * [var p1R8](#p1R8)
+    * [var p1S2](#p1S2)
+    * [var p1S3](#p1S3)
+    * [var p1S5](#p1S5)
+    * [var p1S8](#p1S8)
+    * [var pow10negtab32](#pow10negtab32)
+    * [var pow10postab32](#pow10postab32)
+    * [var pow10tab](#pow10tab)
+    * [var q0R2](#q0R2)
+    * [var q0R3](#q0R3)
+    * [var q0R5](#q0R5)
+    * [var q0R8](#q0R8)
+    * [var q0S2](#q0S2)
+    * [var q0S3](#q0S3)
+    * [var q0S5](#q0S5)
+    * [var q0S8](#q0S8)
+    * [var q1R2](#q1R2)
+    * [var q1R3](#q1R3)
+    * [var q1R5](#q1R5)
+    * [var q1R8](#q1R8)
+    * [var q1S2](#q1S2)
+    * [var q1S3](#q1S3)
+    * [var q1S5](#q1S5)
+    * [var q1S8](#q1S8)
+    * [var tanhP](#tanhP)
+    * [var tanhQ](#tanhQ)
     * [var useFMA](#useFMA)
+    * [var _cos](#_cos)
     * [var _gamP](#_gamP)
     * [var _gamQ](#_gamQ)
     * [var _gamS](#_gamS)
-    * [var p0R8](#p0R8)
-    * [var p0S8](#p0S8)
-    * [var p0R5](#p0R5)
-    * [var p0S5](#p0S5)
-    * [var p0R3](#p0R3)
-    * [var p0S3](#p0S3)
-    * [var p0R2](#p0R2)
-    * [var p0S2](#p0S2)
-    * [var q0R8](#q0R8)
-    * [var q0S8](#q0S8)
-    * [var q0R5](#q0R5)
-    * [var q0S5](#q0S5)
-    * [var q0R3](#q0R3)
-    * [var q0S3](#q0S3)
-    * [var q0R2](#q0R2)
-    * [var q0S2](#q0S2)
-    * [var p1R8](#p1R8)
-    * [var p1S8](#p1S8)
-    * [var p1R5](#p1R5)
-    * [var p1S5](#p1S5)
-    * [var p1R3](#p1R3)
-    * [var p1S3](#p1S3)
-    * [var p1R2](#p1R2)
-    * [var p1S2](#p1S2)
-    * [var q1R8](#q1R8)
-    * [var q1S8](#q1S8)
-    * [var q1R5](#q1R5)
-    * [var q1S5](#q1S5)
-    * [var q1R3](#q1R3)
-    * [var q1S3](#q1S3)
-    * [var q1R2](#q1R2)
-    * [var q1S2](#q1S2)
     * [var _lgamA](#_lgamA)
     * [var _lgamR](#_lgamR)
     * [var _lgamS](#_lgamS)
@@ -242,148 +254,79 @@ This package does not guarantee bit-identical results across architectures.
     * [var _lgamU](#_lgamU)
     * [var _lgamV](#_lgamV)
     * [var _lgamW](#_lgamW)
-    * [var pow10tab](#pow10tab)
-    * [var pow10postab32](#pow10postab32)
-    * [var pow10negtab32](#pow10negtab32)
     * [var _sin](#_sin)
-    * [var _cos](#_cos)
     * [var _tanP](#_tanP)
     * [var _tanQ](#_tanQ)
-    * [var tanhP](#tanhP)
-    * [var tanhQ](#tanhQ)
-    * [var mPi4](#mPi4)
-    * [var ExpGo](#ExpGo)
-    * [var Exp2Go](#Exp2Go)
-    * [var HypotGo](#HypotGo)
-    * [var SqrtGo](#SqrtGo)
-    * [var TrigReduce](#TrigReduce)
 * [Functions](#func)
     * [func Abs(x float64) float64](#Abs)
-    * [func Acosh(x float64) float64](#Acosh)
-    * [func acosh(x float64) float64](#acosh)
-    * [func Asin(x float64) float64](#Asin)
-    * [func asin(x float64) float64](#asin)
     * [func Acos(x float64) float64](#Acos)
-    * [func acos(x float64) float64](#acos)
+    * [func Acosh(x float64) float64](#Acosh)
+    * [func Asin(x float64) float64](#Asin)
     * [func Asinh(x float64) float64](#Asinh)
-    * [func asinh(x float64) float64](#asinh)
-    * [func xatan(x float64) float64](#xatan)
-    * [func satan(x float64) float64](#satan)
     * [func Atan(x float64) float64](#Atan)
-    * [func atan(x float64) float64](#atan)
     * [func Atan2(y, x float64) float64](#Atan2)
-    * [func atan2(y, x float64) float64](#atan2)
     * [func Atanh(x float64) float64](#Atanh)
-    * [func atanh(x float64) float64](#atanh)
-    * [func Inf(sign int) float64](#Inf)
-    * [func NaN() float64](#NaN)
-    * [func IsNaN(f float64) (is bool)](#IsNaN)
-    * [func IsInf(f float64, sign int) bool](#IsInf)
-    * [func normalize(x float64) (y float64, exp int)](#normalize)
     * [func Cbrt(x float64) float64](#Cbrt)
-    * [func cbrt(x float64) float64](#cbrt)
-    * [func Copysign(x, y float64) float64](#Copysign)
-    * [func Dim(x, y float64) float64](#Dim)
-    * [func Max(x, y float64) float64](#Max)
-    * [func max(x, y float64) float64](#max)
-    * [func Min(x, y float64) float64](#Min)
-    * [func min(x, y float64) float64](#min)
-    * [func archMax(x, y float64) float64](#archMax)
-    * [func archMin(x, y float64) float64](#archMin)
-    * [func Erf(x float64) float64](#Erf)
-    * [func erf(x float64) float64](#erf)
-    * [func Erfc(x float64) float64](#Erfc)
-    * [func erfc(x float64) float64](#erfc)
-    * [func Erfinv(x float64) float64](#Erfinv)
-    * [func Erfcinv(x float64) float64](#Erfcinv)
-    * [func Exp(x float64) float64](#Exp)
-    * [func exp(x float64) float64](#exp)
-    * [func Exp2(x float64) float64](#Exp2)
-    * [func exp2(x float64) float64](#exp2)
-    * [func expmulti(hi, lo float64, k int) float64](#expmulti)
-    * [func archExp2(x float64) float64](#archExp2)
-    * [func archExp(x float64) float64](#archExp)
-    * [func Expm1(x float64) float64](#Expm1)
-    * [func expm1(x float64) float64](#expm1)
-    * [func Floor(x float64) float64](#Floor)
-    * [func floor(x float64) float64](#floor)
     * [func Ceil(x float64) float64](#Ceil)
-    * [func ceil(x float64) float64](#ceil)
-    * [func Trunc(x float64) float64](#Trunc)
-    * [func trunc(x float64) float64](#trunc)
-    * [func Round(x float64) float64](#Round)
-    * [func RoundToEven(x float64) float64](#RoundToEven)
-    * [func archFloor(x float64) float64](#archFloor)
-    * [func archCeil(x float64) float64](#archCeil)
-    * [func archTrunc(x float64) float64](#archTrunc)
-    * [func zero(x uint64) uint64](#zero)
-    * [func nonzero(x uint64) uint64](#nonzero)
-    * [func shl(u1, u2 uint64, n uint) (r1, r2 uint64)](#shl)
-    * [func shr(u1, u2 uint64, n uint) (r1, r2 uint64)](#shr)
-    * [func shrcompress(u1, u2 uint64, n uint) (r1, r2 uint64)](#shrcompress)
-    * [func lz(u1, u2 uint64) (l int32)](#lz)
-    * [func split(b uint64) (sign uint32, exp int32, mantissa uint64)](#split)
+    * [func Copysign(x, y float64) float64](#Copysign)
+    * [func Cos(x float64) float64](#Cos)
+    * [func Cosh(x float64) float64](#Cosh)
+    * [func Dim(x, y float64) float64](#Dim)
+    * [func Erf(x float64) float64](#Erf)
+    * [func Erfc(x float64) float64](#Erfc)
+    * [func Erfcinv(x float64) float64](#Erfcinv)
+    * [func Erfinv(x float64) float64](#Erfinv)
+    * [func Exp(x float64) float64](#Exp)
+    * [func Exp2(x float64) float64](#Exp2)
+    * [func Expm1(x float64) float64](#Expm1)
     * [func FMA(x, y, z float64) float64](#FMA)
+    * [func Float32bits(f float32) uint32](#Float32bits)
+    * [func Float32frombits(b uint32) float32](#Float32frombits)
+    * [func Float64bits(f float64) uint64](#Float64bits)
+    * [func Float64frombits(b uint64) float64](#Float64frombits)
+    * [func Floor(x float64) float64](#Floor)
     * [func Frexp(f float64) (frac float64, exp int)](#Frexp)
-    * [func frexp(f float64) (frac float64, exp int)](#frexp)
-    * [func stirling(x float64) (float64, float64)](#stirling)
     * [func Gamma(x float64) float64](#Gamma)
-    * [func isNegInt(x float64) bool](#isNegInt)
     * [func Hypot(p, q float64) float64](#Hypot)
-    * [func hypot(p, q float64) float64](#hypot)
-    * [func archHypot(p, q float64) float64](#archHypot)
-    * [func J0(x float64) float64](#J0)
-    * [func Y0(x float64) float64](#Y0)
-    * [func pzero(x float64) float64](#pzero)
-    * [func qzero(x float64) float64](#qzero)
-    * [func J1(x float64) float64](#J1)
-    * [func Y1(x float64) float64](#Y1)
-    * [func pone(x float64) float64](#pone)
-    * [func qone(x float64) float64](#qone)
-    * [func Jn(n int, x float64) float64](#Jn)
-    * [func Yn(n int, x float64) float64](#Yn)
-    * [func Ldexp(frac float64, exp int) float64](#Ldexp)
-    * [func ldexp(frac float64, exp int) float64](#ldexp)
-    * [func Lgamma(x float64) (lgamma float64, sign int)](#Lgamma)
-    * [func sinPi(x float64) float64](#sinPi)
-    * [func Log(x float64) float64](#Log)
-    * [func log(x float64) float64](#log)
-    * [func Log10(x float64) float64](#Log10)
-    * [func log10(x float64) float64](#log10)
-    * [func Log2(x float64) float64](#Log2)
-    * [func log2(x float64) float64](#log2)
-    * [func Log1p(x float64) float64](#Log1p)
-    * [func log1p(x float64) float64](#log1p)
-    * [func archLog(x float64) float64](#archLog)
-    * [func Logb(x float64) float64](#Logb)
     * [func Ilogb(x float64) int](#Ilogb)
-    * [func ilogb(x float64) int](#ilogb)
+    * [func Inf(sign int) float64](#Inf)
+    * [func IsInf(f float64, sign int) bool](#IsInf)
+    * [func IsNaN(f float64) (is bool)](#IsNaN)
+    * [func J0(x float64) float64](#J0)
+    * [func J1(x float64) float64](#J1)
+    * [func Jn(n int, x float64) float64](#Jn)
+    * [func Ldexp(frac float64, exp int) float64](#Ldexp)
+    * [func Lgamma(x float64) (lgamma float64, sign int)](#Lgamma)
+    * [func Log(x float64) float64](#Log)
+    * [func Log10(x float64) float64](#Log10)
+    * [func Log1p(x float64) float64](#Log1p)
+    * [func Log2(x float64) float64](#Log2)
+    * [func Logb(x float64) float64](#Logb)
+    * [func Max(x, y float64) float64](#Max)
+    * [func Min(x, y float64) float64](#Min)
     * [func Mod(x, y float64) float64](#Mod)
-    * [func mod(x, y float64) float64](#mod)
     * [func Modf(f float64) (int float64, frac float64)](#Modf)
-    * [func modf(f float64) (int float64, frac float64)](#modf)
-    * [func archModf(f float64) (int float64, frac float64)](#archModf)
-    * [func Nextafter32(x, y float32) (r float32)](#Nextafter32)
+    * [func NaN() float64](#NaN)
     * [func Nextafter(x, y float64) (r float64)](#Nextafter)
-    * [func isOddInt(x float64) bool](#isOddInt)
+    * [func Nextafter32(x, y float32) (r float32)](#Nextafter32)
     * [func Pow(x, y float64) float64](#Pow)
-    * [func pow(x, y float64) float64](#pow)
     * [func Pow10(n int) float64](#Pow10)
     * [func Remainder(x, y float64) float64](#Remainder)
-    * [func remainder(x, y float64) float64](#remainder)
+    * [func Round(x float64) float64](#Round)
+    * [func RoundToEven(x float64) float64](#RoundToEven)
     * [func Signbit(x float64) bool](#Signbit)
-    * [func Cos(x float64) float64](#Cos)
-    * [func cos(x float64) float64](#cos)
     * [func Sin(x float64) float64](#Sin)
-    * [func sin(x float64) float64](#sin)
     * [func Sincos(x float64) (sin, cos float64)](#Sincos)
     * [func Sinh(x float64) float64](#Sinh)
-    * [func sinh(x float64) float64](#sinh)
-    * [func Cosh(x float64) float64](#Cosh)
-    * [func cosh(x float64) float64](#cosh)
     * [func Sqrt(x float64) float64](#Sqrt)
-    * [func sqrt(x float64) float64](#sqrt)
-    * [func archSqrt(x float64) float64](#archSqrt)
+    * [func Tan(x float64) float64](#Tan)
+    * [func Tanh(x float64) float64](#Tanh)
+    * [func Trunc(x float64) float64](#Trunc)
+    * [func Y0(x float64) float64](#Y0)
+    * [func Y1(x float64) float64](#Y1)
+    * [func Yn(n int, x float64) float64](#Yn)
+    * [func acos(x float64) float64](#acos)
+    * [func acosh(x float64) float64](#acosh)
     * [func archAcos(x float64) float64](#archAcos)
     * [func archAcosh(x float64) float64](#archAcosh)
     * [func archAsin(x float64) float64](#archAsin)
@@ -392,139 +335,102 @@ This package does not guarantee bit-identical results across architectures.
     * [func archAtan2(y, x float64) float64](#archAtan2)
     * [func archAtanh(x float64) float64](#archAtanh)
     * [func archCbrt(x float64) float64](#archCbrt)
+    * [func archCeil(x float64) float64](#archCeil)
     * [func archCos(x float64) float64](#archCos)
     * [func archCosh(x float64) float64](#archCosh)
     * [func archErf(x float64) float64](#archErf)
     * [func archErfc(x float64) float64](#archErfc)
+    * [func archExp(x float64) float64](#archExp)
+    * [func archExp2(x float64) float64](#archExp2)
     * [func archExpm1(x float64) float64](#archExpm1)
+    * [func archFloor(x float64) float64](#archFloor)
     * [func archFrexp(x float64) (float64, int)](#archFrexp)
+    * [func archHypot(p, q float64) float64](#archHypot)
     * [func archLdexp(frac float64, exp int) float64](#archLdexp)
+    * [func archLog(x float64) float64](#archLog)
     * [func archLog10(x float64) float64](#archLog10)
-    * [func archLog2(x float64) float64](#archLog2)
     * [func archLog1p(x float64) float64](#archLog1p)
+    * [func archLog2(x float64) float64](#archLog2)
+    * [func archMax(x, y float64) float64](#archMax)
+    * [func archMin(x, y float64) float64](#archMin)
     * [func archMod(x, y float64) float64](#archMod)
+    * [func archModf(f float64) (int float64, frac float64)](#archModf)
     * [func archPow(x, y float64) float64](#archPow)
     * [func archRemainder(x, y float64) float64](#archRemainder)
     * [func archSin(x float64) float64](#archSin)
     * [func archSinh(x float64) float64](#archSinh)
+    * [func archSqrt(x float64) float64](#archSqrt)
     * [func archTan(x float64) float64](#archTan)
     * [func archTanh(x float64) float64](#archTanh)
-    * [func Tan(x float64) float64](#Tan)
+    * [func archTrunc(x float64) float64](#archTrunc)
+    * [func asin(x float64) float64](#asin)
+    * [func asinh(x float64) float64](#asinh)
+    * [func atan(x float64) float64](#atan)
+    * [func atan2(y, x float64) float64](#atan2)
+    * [func atanh(x float64) float64](#atanh)
+    * [func cbrt(x float64) float64](#cbrt)
+    * [func ceil(x float64) float64](#ceil)
+    * [func cos(x float64) float64](#cos)
+    * [func cosh(x float64) float64](#cosh)
+    * [func erf(x float64) float64](#erf)
+    * [func erfc(x float64) float64](#erfc)
+    * [func exp(x float64) float64](#exp)
+    * [func exp2(x float64) float64](#exp2)
+    * [func expm1(x float64) float64](#expm1)
+    * [func expmulti(hi, lo float64, k int) float64](#expmulti)
+    * [func floor(x float64) float64](#floor)
+    * [func frexp(f float64) (frac float64, exp int)](#frexp)
+    * [func hypot(p, q float64) float64](#hypot)
+    * [func ilogb(x float64) int](#ilogb)
+    * [func isNegInt(x float64) bool](#isNegInt)
+    * [func isOddInt(x float64) bool](#isOddInt)
+    * [func ldexp(frac float64, exp int) float64](#ldexp)
+    * [func log(x float64) float64](#log)
+    * [func log10(x float64) float64](#log10)
+    * [func log1p(x float64) float64](#log1p)
+    * [func log2(x float64) float64](#log2)
+    * [func lz(u1, u2 uint64) (l int32)](#lz)
+    * [func max(x, y float64) float64](#max)
+    * [func min(x, y float64) float64](#min)
+    * [func mod(x, y float64) float64](#mod)
+    * [func modf(f float64) (int float64, frac float64)](#modf)
+    * [func nonzero(x uint64) uint64](#nonzero)
+    * [func normalize(x float64) (y float64, exp int)](#normalize)
+    * [func pone(x float64) float64](#pone)
+    * [func pow(x, y float64) float64](#pow)
+    * [func pzero(x float64) float64](#pzero)
+    * [func qone(x float64) float64](#qone)
+    * [func qzero(x float64) float64](#qzero)
+    * [func remainder(x, y float64) float64](#remainder)
+    * [func satan(x float64) float64](#satan)
+    * [func shl(u1, u2 uint64, n uint) (r1, r2 uint64)](#shl)
+    * [func shr(u1, u2 uint64, n uint) (r1, r2 uint64)](#shr)
+    * [func shrcompress(u1, u2 uint64, n uint) (r1, r2 uint64)](#shrcompress)
+    * [func sin(x float64) float64](#sin)
+    * [func sinPi(x float64) float64](#sinPi)
+    * [func sinh(x float64) float64](#sinh)
+    * [func split(b uint64) (sign uint32, exp int32, mantissa uint64)](#split)
+    * [func sqrt(x float64) float64](#sqrt)
+    * [func stirling(x float64) (float64, float64)](#stirling)
     * [func tan(x float64) float64](#tan)
-    * [func Tanh(x float64) float64](#Tanh)
     * [func tanh(x float64) float64](#tanh)
     * [func trigReduce(x float64) (j uint64, z float64)](#trigReduce)
-    * [func Float32bits(f float32) uint32](#Float32bits)
-    * [func Float32frombits(b uint32) float32](#Float32frombits)
-    * [func Float64bits(f float64) uint64](#Float64bits)
-    * [func Float64frombits(b uint64) float64](#Float64frombits)
+    * [func trunc(x float64) float64](#trunc)
+    * [func xatan(x float64) float64](#xatan)
+    * [func zero(x uint64) uint64](#zero)
 
 
 ## <a id="const" href="#const">Constants</a>
 
-### <a id="uvnan" href="#uvnan">const uvnan</a>
-
 ```
-searchKey: math.uvnan
-tags: [private]
-```
-
-```Go
-const uvnan = 0x7FF8000000000001
-```
-
-### <a id="uvinf" href="#uvinf">const uvinf</a>
-
-```
-searchKey: math.uvinf
-tags: [private]
-```
-
-```Go
-const uvinf = 0x7FF0000000000000
-```
-
-### <a id="uvneginf" href="#uvneginf">const uvneginf</a>
-
-```
-searchKey: math.uvneginf
-tags: [private]
-```
-
-```Go
-const uvneginf = 0xFFF0000000000000
-```
-
-### <a id="uvone" href="#uvone">const uvone</a>
-
-```
-searchKey: math.uvone
-tags: [private]
-```
-
-```Go
-const uvone = 0x3FF0000000000000
-```
-
-### <a id="mask" href="#mask">const mask</a>
-
-```
-searchKey: math.mask
-tags: [private]
-```
-
-```Go
-const mask = 0x7FF
-```
-
-### <a id="shift" href="#shift">const shift</a>
-
-```
-searchKey: math.shift
-tags: [private]
-```
-
-```Go
-const shift = 64 - 11 - 1
-```
-
-### <a id="bias" href="#bias">const bias</a>
-
-```
-searchKey: math.bias
-tags: [private]
-```
-
-```Go
-const bias = 1023
-```
-
-### <a id="signMask" href="#signMask">const signMask</a>
-
-```
-searchKey: math.signMask
-tags: [private]
-```
-
-```Go
-const signMask = 1 << 63
-```
-
-### <a id="fracMask" href="#fracMask">const fracMask</a>
-
-```
-searchKey: math.fracMask
-tags: [private]
-```
-
-```Go
-const fracMask = 1<<shift - 1
+tags: [package]
 ```
 
 ### <a id="E" href="#E">const E</a>
 
 ```
 searchKey: math.E
+tags: [constant number]
 ```
 
 ```Go
@@ -534,23 +440,288 @@ const E // https://oeis.org/A001113
 
 Mathematical constants. 
 
-### <a id="Pi" href="#Pi">const Pi</a>
+### <a id="Ln10" href="#Ln10">const Ln10</a>
 
 ```
-searchKey: math.Pi
+searchKey: math.Ln10
+tags: [constant number]
 ```
 
 ```Go
-const Pi // https://oeis.org/A000796
+const Ln10 // https://oeis.org/A002392
  = ...
 ```
 
 Mathematical constants. 
 
+### <a id="Ln2" href="#Ln2">const Ln2</a>
+
+```
+searchKey: math.Ln2
+tags: [constant number]
+```
+
+```Go
+const Ln2 // https://oeis.org/A002162
+ = ...
+```
+
+Mathematical constants. 
+
+### <a id="Log10E" href="#Log10E">const Log10E</a>
+
+```
+searchKey: math.Log10E
+tags: [constant number]
+```
+
+```Go
+const Log10E = 1 / Ln10
+```
+
+Mathematical constants. 
+
+### <a id="Log2E" href="#Log2E">const Log2E</a>
+
+```
+searchKey: math.Log2E
+tags: [constant number]
+```
+
+```Go
+const Log2E = 1 / Ln2
+```
+
+Mathematical constants. 
+
+### <a id="MaxFloat32" href="#MaxFloat32">const MaxFloat32</a>
+
+```
+searchKey: math.MaxFloat32
+tags: [constant number]
+```
+
+```Go
+const MaxFloat32 = 0x1p127 * (1 + (1 - 0x1p-23)) // 3.40282346638528859811704183484516925440e+38
+
+```
+
+Floating-point limit values. Max is the largest finite value representable by the type. SmallestNonzero is the smallest positive, non-zero value representable by the type. 
+
+### <a id="MaxFloat64" href="#MaxFloat64">const MaxFloat64</a>
+
+```
+searchKey: math.MaxFloat64
+tags: [constant number]
+```
+
+```Go
+const MaxFloat64 // 1.79769313486231570814527423731704356798070e+308
+ = ...
+```
+
+Floating-point limit values. Max is the largest finite value representable by the type. SmallestNonzero is the smallest positive, non-zero value representable by the type. 
+
+### <a id="MaxInt" href="#MaxInt">const MaxInt</a>
+
+```
+searchKey: math.MaxInt
+tags: [constant number]
+```
+
+```Go
+const MaxInt = 1<<(intSize-1) - 1
+```
+
+Integer limit values. 
+
+### <a id="MaxInt16" href="#MaxInt16">const MaxInt16</a>
+
+```
+searchKey: math.MaxInt16
+tags: [constant number]
+```
+
+```Go
+const MaxInt16 = 1<<15 - 1
+```
+
+Integer limit values. 
+
+### <a id="MaxInt32" href="#MaxInt32">const MaxInt32</a>
+
+```
+searchKey: math.MaxInt32
+tags: [constant number]
+```
+
+```Go
+const MaxInt32 = 1<<31 - 1
+```
+
+Integer limit values. 
+
+### <a id="MaxInt64" href="#MaxInt64">const MaxInt64</a>
+
+```
+searchKey: math.MaxInt64
+tags: [constant number]
+```
+
+```Go
+const MaxInt64 = 1<<63 - 1
+```
+
+Integer limit values. 
+
+### <a id="MaxInt8" href="#MaxInt8">const MaxInt8</a>
+
+```
+searchKey: math.MaxInt8
+tags: [constant number]
+```
+
+```Go
+const MaxInt8 = 1<<7 - 1
+```
+
+Integer limit values. 
+
+### <a id="MaxUint" href="#MaxUint">const MaxUint</a>
+
+```
+searchKey: math.MaxUint
+tags: [constant number]
+```
+
+```Go
+const MaxUint = 1<<intSize - 1
+```
+
+Integer limit values. 
+
+### <a id="MaxUint16" href="#MaxUint16">const MaxUint16</a>
+
+```
+searchKey: math.MaxUint16
+tags: [constant number]
+```
+
+```Go
+const MaxUint16 = 1<<16 - 1
+```
+
+Integer limit values. 
+
+### <a id="MaxUint32" href="#MaxUint32">const MaxUint32</a>
+
+```
+searchKey: math.MaxUint32
+tags: [constant number]
+```
+
+```Go
+const MaxUint32 = 1<<32 - 1
+```
+
+Integer limit values. 
+
+### <a id="MaxUint64" href="#MaxUint64">const MaxUint64</a>
+
+```
+searchKey: math.MaxUint64
+tags: [constant number]
+```
+
+```Go
+const MaxUint64 = 1<<64 - 1
+```
+
+Integer limit values. 
+
+### <a id="MaxUint8" href="#MaxUint8">const MaxUint8</a>
+
+```
+searchKey: math.MaxUint8
+tags: [constant number]
+```
+
+```Go
+const MaxUint8 = 1<<8 - 1
+```
+
+Integer limit values. 
+
+### <a id="MinInt" href="#MinInt">const MinInt</a>
+
+```
+searchKey: math.MinInt
+tags: [constant number]
+```
+
+```Go
+const MinInt = -1 << (intSize - 1)
+```
+
+Integer limit values. 
+
+### <a id="MinInt16" href="#MinInt16">const MinInt16</a>
+
+```
+searchKey: math.MinInt16
+tags: [constant number]
+```
+
+```Go
+const MinInt16 = -1 << 15
+```
+
+Integer limit values. 
+
+### <a id="MinInt32" href="#MinInt32">const MinInt32</a>
+
+```
+searchKey: math.MinInt32
+tags: [constant number]
+```
+
+```Go
+const MinInt32 = -1 << 31
+```
+
+Integer limit values. 
+
+### <a id="MinInt64" href="#MinInt64">const MinInt64</a>
+
+```
+searchKey: math.MinInt64
+tags: [constant number]
+```
+
+```Go
+const MinInt64 = -1 << 63
+```
+
+Integer limit values. 
+
+### <a id="MinInt8" href="#MinInt8">const MinInt8</a>
+
+```
+searchKey: math.MinInt8
+tags: [constant number]
+```
+
+```Go
+const MinInt8 = -1 << 7
+```
+
+Integer limit values. 
+
 ### <a id="Phi" href="#Phi">const Phi</a>
 
 ```
 searchKey: math.Phi
+tags: [constant number]
 ```
 
 ```Go
@@ -560,10 +731,64 @@ const Phi // https://oeis.org/A001622
 
 Mathematical constants. 
 
+### <a id="Pi" href="#Pi">const Pi</a>
+
+```
+searchKey: math.Pi
+tags: [constant number]
+```
+
+```Go
+const Pi // https://oeis.org/A000796
+ = ...
+```
+
+Mathematical constants. 
+
+### <a id="ReduceThreshold" href="#ReduceThreshold">const ReduceThreshold</a>
+
+```
+searchKey: math.ReduceThreshold
+tags: [constant number private]
+```
+
+```Go
+const ReduceThreshold = reduceThreshold
+```
+
+### <a id="SmallestNonzeroFloat32" href="#SmallestNonzeroFloat32">const SmallestNonzeroFloat32</a>
+
+```
+searchKey: math.SmallestNonzeroFloat32
+tags: [constant number]
+```
+
+```Go
+const SmallestNonzeroFloat32 = 0x1p-126 * 0x1p-23 // 1.401298464324817070923729583289916131280e-45
+
+```
+
+Floating-point limit values. Max is the largest finite value representable by the type. SmallestNonzero is the smallest positive, non-zero value representable by the type. 
+
+### <a id="SmallestNonzeroFloat64" href="#SmallestNonzeroFloat64">const SmallestNonzeroFloat64</a>
+
+```
+searchKey: math.SmallestNonzeroFloat64
+tags: [constant number]
+```
+
+```Go
+const SmallestNonzeroFloat64 // 4.9406564584124654417656879286822137236505980e-324
+ = ...
+```
+
+Floating-point limit values. Max is the largest finite value representable by the type. SmallestNonzero is the smallest positive, non-zero value representable by the type. 
+
 ### <a id="Sqrt2" href="#Sqrt2">const Sqrt2</a>
 
 ```
 searchKey: math.Sqrt2
+tags: [constant number]
 ```
 
 ```Go
@@ -577,6 +802,7 @@ Mathematical constants.
 
 ```
 searchKey: math.SqrtE
+tags: [constant number]
 ```
 
 ```Go
@@ -586,23 +812,11 @@ const SqrtE // https://oeis.org/A019774
 
 Mathematical constants. 
 
-### <a id="SqrtPi" href="#SqrtPi">const SqrtPi</a>
-
-```
-searchKey: math.SqrtPi
-```
-
-```Go
-const SqrtPi // https://oeis.org/A002161
- = ...
-```
-
-Mathematical constants. 
-
 ### <a id="SqrtPhi" href="#SqrtPhi">const SqrtPhi</a>
 
 ```
 searchKey: math.SqrtPhi
+tags: [constant number]
 ```
 
 ```Go
@@ -612,341 +826,482 @@ const SqrtPhi // https://oeis.org/A139339
 
 Mathematical constants. 
 
-### <a id="Ln2" href="#Ln2">const Ln2</a>
+### <a id="SqrtPi" href="#SqrtPi">const SqrtPi</a>
 
 ```
-searchKey: math.Ln2
+searchKey: math.SqrtPi
+tags: [constant number]
 ```
 
 ```Go
-const Ln2 // https://oeis.org/A002162
+const SqrtPi // https://oeis.org/A002161
  = ...
 ```
 
 Mathematical constants. 
 
-### <a id="Log2E" href="#Log2E">const Log2E</a>
+### <a id="a0" href="#a0">const a0</a>
 
 ```
-searchKey: math.Log2E
-```
-
-```Go
-const Log2E = 1 / Ln2
-```
-
-Mathematical constants. 
-
-### <a id="Ln10" href="#Ln10">const Ln10</a>
-
-```
-searchKey: math.Ln10
+searchKey: math.a0
+tags: [constant number private]
 ```
 
 ```Go
-const Ln10 // https://oeis.org/A002392
- = ...
+const a0 = 1.1975323115670912564578e0
 ```
 
-Mathematical constants. 
+Coefficients for approximation to erf in |x| <= 0.85 
 
-### <a id="Log10E" href="#Log10E">const Log10E</a>
-
-```
-searchKey: math.Log10E
-```
-
-```Go
-const Log10E = 1 / Ln10
-```
-
-Mathematical constants. 
-
-### <a id="MaxFloat32" href="#MaxFloat32">const MaxFloat32</a>
+### <a id="a1" href="#a1">const a1</a>
 
 ```
-searchKey: math.MaxFloat32
+searchKey: math.a1
+tags: [constant number private]
 ```
 
 ```Go
-const MaxFloat32 = 0x1p127 * (1 + (1 - 0x1p-23)) // 3.40282346638528859811704183484516925440e+38
-
+const a1 = 4.7072688112383978012285e1
 ```
 
-Floating-point limit values. Max is the largest finite value representable by the type. SmallestNonzero is the smallest positive, non-zero value representable by the type. 
-
-### <a id="SmallestNonzeroFloat32" href="#SmallestNonzeroFloat32">const SmallestNonzeroFloat32</a>
+### <a id="a2" href="#a2">const a2</a>
 
 ```
-searchKey: math.SmallestNonzeroFloat32
-```
-
-```Go
-const SmallestNonzeroFloat32 = 0x1p-126 * 0x1p-23 // 1.401298464324817070923729583289916131280e-45
-
-```
-
-Floating-point limit values. Max is the largest finite value representable by the type. SmallestNonzero is the smallest positive, non-zero value representable by the type. 
-
-### <a id="MaxFloat64" href="#MaxFloat64">const MaxFloat64</a>
-
-```
-searchKey: math.MaxFloat64
+searchKey: math.a2
+tags: [constant number private]
 ```
 
 ```Go
-const MaxFloat64 // 1.79769313486231570814527423731704356798070e+308
- = ...
+const a2 = 6.9706266534389598238465e2
 ```
 
-Floating-point limit values. Max is the largest finite value representable by the type. SmallestNonzero is the smallest positive, non-zero value representable by the type. 
-
-### <a id="SmallestNonzeroFloat64" href="#SmallestNonzeroFloat64">const SmallestNonzeroFloat64</a>
+### <a id="a3" href="#a3">const a3</a>
 
 ```
-searchKey: math.SmallestNonzeroFloat64
-```
-
-```Go
-const SmallestNonzeroFloat64 // 4.9406564584124654417656879286822137236505980e-324
- = ...
-```
-
-Floating-point limit values. Max is the largest finite value representable by the type. SmallestNonzero is the smallest positive, non-zero value representable by the type. 
-
-### <a id="intSize" href="#intSize">const intSize</a>
-
-```
-searchKey: math.intSize
-tags: [private]
+searchKey: math.a3
+tags: [constant number private]
 ```
 
 ```Go
-const intSize = 32 << (^uint(0) >> 63) // 32 or 64
-
+const a3 = 4.8548868893843886794648e3
 ```
 
-Integer limit values. 
-
-### <a id="MaxInt" href="#MaxInt">const MaxInt</a>
+### <a id="a4" href="#a4">const a4</a>
 
 ```
-searchKey: math.MaxInt
-```
-
-```Go
-const MaxInt = 1<<(intSize-1) - 1
-```
-
-Integer limit values. 
-
-### <a id="MinInt" href="#MinInt">const MinInt</a>
-
-```
-searchKey: math.MinInt
+searchKey: math.a4
+tags: [constant number private]
 ```
 
 ```Go
-const MinInt = -1 << (intSize - 1)
+const a4 = 1.6235862515167575384252e4
 ```
 
-Integer limit values. 
-
-### <a id="MaxInt8" href="#MaxInt8">const MaxInt8</a>
+### <a id="a5" href="#a5">const a5</a>
 
 ```
-searchKey: math.MaxInt8
-```
-
-```Go
-const MaxInt8 = 1<<7 - 1
-```
-
-Integer limit values. 
-
-### <a id="MinInt8" href="#MinInt8">const MinInt8</a>
-
-```
-searchKey: math.MinInt8
+searchKey: math.a5
+tags: [constant number private]
 ```
 
 ```Go
-const MinInt8 = -1 << 7
+const a5 = 2.3782041382114385731252e4
 ```
 
-Integer limit values. 
-
-### <a id="MaxInt16" href="#MaxInt16">const MaxInt16</a>
+### <a id="a6" href="#a6">const a6</a>
 
 ```
-searchKey: math.MaxInt16
-```
-
-```Go
-const MaxInt16 = 1<<15 - 1
-```
-
-Integer limit values. 
-
-### <a id="MinInt16" href="#MinInt16">const MinInt16</a>
-
-```
-searchKey: math.MinInt16
+searchKey: math.a6
+tags: [constant number private]
 ```
 
 ```Go
-const MinInt16 = -1 << 15
+const a6 = 1.1819493347062294404278e4
 ```
 
-Integer limit values. 
-
-### <a id="MaxInt32" href="#MaxInt32">const MaxInt32</a>
+### <a id="a7" href="#a7">const a7</a>
 
 ```
-searchKey: math.MaxInt32
-```
-
-```Go
-const MaxInt32 = 1<<31 - 1
-```
-
-Integer limit values. 
-
-### <a id="MinInt32" href="#MinInt32">const MinInt32</a>
-
-```
-searchKey: math.MinInt32
+searchKey: math.a7
+tags: [constant number private]
 ```
 
 ```Go
-const MinInt32 = -1 << 31
+const a7 = 8.8709406962545514830200e2
 ```
 
-Integer limit values. 
-
-### <a id="MaxInt64" href="#MaxInt64">const MaxInt64</a>
+### <a id="b0" href="#b0">const b0</a>
 
 ```
-searchKey: math.MaxInt64
-```
-
-```Go
-const MaxInt64 = 1<<63 - 1
-```
-
-Integer limit values. 
-
-### <a id="MinInt64" href="#MinInt64">const MinInt64</a>
-
-```
-searchKey: math.MinInt64
+searchKey: math.b0
+tags: [constant number private]
 ```
 
 ```Go
-const MinInt64 = -1 << 63
+const b0 = 1.0000000000000000000e0
 ```
 
-Integer limit values. 
-
-### <a id="MaxUint" href="#MaxUint">const MaxUint</a>
+### <a id="b1" href="#b1">const b1</a>
 
 ```
-searchKey: math.MaxUint
-```
-
-```Go
-const MaxUint = 1<<intSize - 1
-```
-
-Integer limit values. 
-
-### <a id="MaxUint8" href="#MaxUint8">const MaxUint8</a>
-
-```
-searchKey: math.MaxUint8
+searchKey: math.b1
+tags: [constant number private]
 ```
 
 ```Go
-const MaxUint8 = 1<<8 - 1
+const b1 = 4.2313330701600911252e1
 ```
 
-Integer limit values. 
-
-### <a id="MaxUint16" href="#MaxUint16">const MaxUint16</a>
+### <a id="b2" href="#b2">const b2</a>
 
 ```
-searchKey: math.MaxUint16
-```
-
-```Go
-const MaxUint16 = 1<<16 - 1
-```
-
-Integer limit values. 
-
-### <a id="MaxUint32" href="#MaxUint32">const MaxUint32</a>
-
-```
-searchKey: math.MaxUint32
+searchKey: math.b2
+tags: [constant number private]
 ```
 
 ```Go
-const MaxUint32 = 1<<32 - 1
+const b2 = 6.8718700749205790830e2
 ```
 
-Integer limit values. 
-
-### <a id="MaxUint64" href="#MaxUint64">const MaxUint64</a>
+### <a id="b3" href="#b3">const b3</a>
 
 ```
-searchKey: math.MaxUint64
-```
-
-```Go
-const MaxUint64 = 1<<64 - 1
-```
-
-Integer limit values. 
-
-### <a id="haveArchMax" href="#haveArchMax">const haveArchMax</a>
-
-```
-searchKey: math.haveArchMax
-tags: [private]
+searchKey: math.b3
+tags: [constant number private]
 ```
 
 ```Go
-const haveArchMax = true
+const b3 = 5.3941960214247511077e3
 ```
 
-### <a id="haveArchMin" href="#haveArchMin">const haveArchMin</a>
+### <a id="b4" href="#b4">const b4</a>
 
 ```
-searchKey: math.haveArchMin
-tags: [private]
-```
-
-```Go
-const haveArchMin = true
-```
-
-### <a id="erx" href="#erx">const erx</a>
-
-```
-searchKey: math.erx
-tags: [private]
+searchKey: math.b4
+tags: [constant number private]
 ```
 
 ```Go
-const erx = 8.45062911510467529297e-01 // 0x3FEB0AC160000000
+const b4 = 2.1213794301586595867e4
+```
 
+### <a id="b5" href="#b5">const b5</a>
+
+```
+searchKey: math.b5
+tags: [constant number private]
+```
+
+```Go
+const b5 = 3.9307895800092710610e4
+```
+
+### <a id="b6" href="#b6">const b6</a>
+
+```
+searchKey: math.b6
+tags: [constant number private]
+```
+
+```Go
+const b6 = 2.8729085735721942674e4
+```
+
+### <a id="b7" href="#b7">const b7</a>
+
+```
+searchKey: math.b7
+tags: [constant number private]
+```
+
+```Go
+const b7 = 5.2264952788528545610e3
+```
+
+### <a id="bias" href="#bias">const bias</a>
+
+```
+searchKey: math.bias
+tags: [constant number private]
+```
+
+```Go
+const bias = 1023
+```
+
+### <a id="c0" href="#c0">const c0</a>
+
+```
+searchKey: math.c0
+tags: [constant number private]
+```
+
+```Go
+const c0 = 1.42343711074968357734e0
+```
+
+Coefficients for approximation to erf in 0.85 < |x| <= 1-2*exp(-25) 
+
+### <a id="c1" href="#c1">const c1</a>
+
+```
+searchKey: math.c1
+tags: [constant number private]
+```
+
+```Go
+const c1 = 4.63033784615654529590e0
+```
+
+### <a id="c2" href="#c2">const c2</a>
+
+```
+searchKey: math.c2
+tags: [constant number private]
+```
+
+```Go
+const c2 = 5.76949722146069140550e0
+```
+
+### <a id="c3" href="#c3">const c3</a>
+
+```
+searchKey: math.c3
+tags: [constant number private]
+```
+
+```Go
+const c3 = 3.64784832476320460504e0
+```
+
+### <a id="c4" href="#c4">const c4</a>
+
+```
+searchKey: math.c4
+tags: [constant number private]
+```
+
+```Go
+const c4 = 1.27045825245236838258e0
+```
+
+### <a id="c5" href="#c5">const c5</a>
+
+```
+searchKey: math.c5
+tags: [constant number private]
+```
+
+```Go
+const c5 = 2.41780725177450611770e-1
+```
+
+### <a id="c6" href="#c6">const c6</a>
+
+```
+searchKey: math.c6
+tags: [constant number private]
+```
+
+```Go
+const c6 = 2.27238449892691845833e-2
+```
+
+### <a id="c7" href="#c7">const c7</a>
+
+```
+searchKey: math.c7
+tags: [constant number private]
+```
+
+```Go
+const c7 = 7.74545014278341407640e-4
+```
+
+### <a id="d0" href="#d0">const d0</a>
+
+```
+searchKey: math.d0
+tags: [constant number private]
+```
+
+```Go
+const d0 = 1.4142135623730950488016887e0
+```
+
+### <a id="d1" href="#d1">const d1</a>
+
+```
+searchKey: math.d1
+tags: [constant number private]
+```
+
+```Go
+const d1 = 2.9036514445419946173133295e0
+```
+
+### <a id="d2" href="#d2">const d2</a>
+
+```
+searchKey: math.d2
+tags: [constant number private]
+```
+
+```Go
+const d2 = 2.3707661626024532365971225e0
+```
+
+### <a id="d3" href="#d3">const d3</a>
+
+```
+searchKey: math.d3
+tags: [constant number private]
+```
+
+```Go
+const d3 = 9.7547832001787427186894837e-1
+```
+
+### <a id="d4" href="#d4">const d4</a>
+
+```
+searchKey: math.d4
+tags: [constant number private]
+```
+
+```Go
+const d4 = 2.0945065210512749128288442e-1
+```
+
+### <a id="d5" href="#d5">const d5</a>
+
+```
+searchKey: math.d5
+tags: [constant number private]
+```
+
+```Go
+const d5 = 2.1494160384252876777097297e-2
+```
+
+### <a id="d6" href="#d6">const d6</a>
+
+```
+searchKey: math.d6
+tags: [constant number private]
+```
+
+```Go
+const d6 = 7.7441459065157709165577218e-4
+```
+
+### <a id="d7" href="#d7">const d7</a>
+
+```
+searchKey: math.d7
+tags: [constant number private]
+```
+
+```Go
+const d7 = 1.4859850019840355905497876e-9
+```
+
+### <a id="e0" href="#e0">const e0</a>
+
+```
+searchKey: math.e0
+tags: [constant number private]
+```
+
+```Go
+const e0 = 6.65790464350110377720e0
+```
+
+Coefficients for approximation to erf in 1-2*exp(-25) < |x| < 1 
+
+### <a id="e1" href="#e1">const e1</a>
+
+```
+searchKey: math.e1
+tags: [constant number private]
+```
+
+```Go
+const e1 = 5.46378491116411436990e0
+```
+
+### <a id="e2" href="#e2">const e2</a>
+
+```
+searchKey: math.e2
+tags: [constant number private]
+```
+
+```Go
+const e2 = 1.78482653991729133580e0
+```
+
+### <a id="e3" href="#e3">const e3</a>
+
+```
+searchKey: math.e3
+tags: [constant number private]
+```
+
+```Go
+const e3 = 2.96560571828504891230e-1
+```
+
+### <a id="e4" href="#e4">const e4</a>
+
+```
+searchKey: math.e4
+tags: [constant number private]
+```
+
+```Go
+const e4 = 2.65321895265761230930e-2
+```
+
+### <a id="e5" href="#e5">const e5</a>
+
+```
+searchKey: math.e5
+tags: [constant number private]
+```
+
+```Go
+const e5 = 1.24266094738807843860e-3
+```
+
+### <a id="e6" href="#e6">const e6</a>
+
+```
+searchKey: math.e6
+tags: [constant number private]
+```
+
+```Go
+const e6 = 2.71155556874348757815e-5
+```
+
+### <a id="e7" href="#e7">const e7</a>
+
+```
+searchKey: math.e7
+tags: [constant number private]
+```
+
+```Go
+const e7 = 2.01033439929228813265e-7
 ```
 
 ### <a id="efx" href="#efx">const efx</a>
 
 ```
 searchKey: math.efx
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -960,7 +1315,7 @@ Coefficients for approximation to  erf in [0, 0.84375]
 
 ```
 searchKey: math.efx8
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -968,131 +1323,543 @@ const efx8 = 1.02703333676410069053e+00 // 0x3FF06EBA8214DB69
 
 ```
 
-### <a id="pp0" href="#pp0">const pp0</a>
+### <a id="erx" href="#erx">const erx</a>
 
 ```
-searchKey: math.pp0
-tags: [private]
-```
-
-```Go
-const pp0 = 1.28379167095512558561e-01 // 0x3FC06EBA8214DB68
-
-```
-
-### <a id="pp1" href="#pp1">const pp1</a>
-
-```
-searchKey: math.pp1
-tags: [private]
+searchKey: math.erx
+tags: [constant number private]
 ```
 
 ```Go
-const pp1 = -3.25042107247001499370e-01 // 0xBFD4CD7D691CB913
+const erx = 8.45062911510467529297e-01 // 0x3FEB0AC160000000
 
 ```
 
-### <a id="pp2" href="#pp2">const pp2</a>
+### <a id="f0" href="#f0">const f0</a>
 
 ```
-searchKey: math.pp2
-tags: [private]
-```
-
-```Go
-const pp2 = -2.84817495755985104766e-02 // 0xBF9D2A51DBD7194F
-
-```
-
-### <a id="pp3" href="#pp3">const pp3</a>
-
-```
-searchKey: math.pp3
-tags: [private]
+searchKey: math.f0
+tags: [constant number private]
 ```
 
 ```Go
-const pp3 = -5.77027029648944159157e-03 // 0xBF77A291236668E4
-
+const f0 = 1.414213562373095048801689e0
 ```
 
-### <a id="pp4" href="#pp4">const pp4</a>
+### <a id="f1" href="#f1">const f1</a>
 
 ```
-searchKey: math.pp4
-tags: [private]
-```
-
-```Go
-const pp4 = -2.37630166566501626084e-05 // 0xBEF8EAD6120016AC
-
-```
-
-### <a id="qq1" href="#qq1">const qq1</a>
-
-```
-searchKey: math.qq1
-tags: [private]
+searchKey: math.f1
+tags: [constant number private]
 ```
 
 ```Go
-const qq1 = 3.97917223959155352819e-01 // 0x3FD97779CDDADC09
-
+const f1 = 8.482908416595164588112026e-1
 ```
 
-### <a id="qq2" href="#qq2">const qq2</a>
+### <a id="f2" href="#f2">const f2</a>
 
 ```
-searchKey: math.qq2
-tags: [private]
-```
-
-```Go
-const qq2 = 6.50222499887672944485e-02 // 0x3FB0A54C5536CEBA
-
-```
-
-### <a id="qq3" href="#qq3">const qq3</a>
-
-```
-searchKey: math.qq3
-tags: [private]
+searchKey: math.f2
+tags: [constant number private]
 ```
 
 ```Go
-const qq3 = 5.08130628187576562776e-03 // 0x3F74D022C4D36B0F
-
+const f2 = 1.936480946950659106176712e-1
 ```
 
-### <a id="qq4" href="#qq4">const qq4</a>
+### <a id="f3" href="#f3">const f3</a>
 
 ```
-searchKey: math.qq4
-tags: [private]
-```
-
-```Go
-const qq4 = 1.32494738004321644526e-04 // 0x3F215DC9221C1A10
-
-```
-
-### <a id="qq5" href="#qq5">const qq5</a>
-
-```
-searchKey: math.qq5
-tags: [private]
+searchKey: math.f3
+tags: [constant number private]
 ```
 
 ```Go
-const qq5 = -3.96022827877536812320e-06 // 0xBED09C4342A26120
+const f3 = 2.103693768272068968719679e-2
+```
 
+### <a id="f4" href="#f4">const f4</a>
+
+```
+searchKey: math.f4
+tags: [constant number private]
+```
+
+```Go
+const f4 = 1.112800997078859844711555e-3
+```
+
+### <a id="f5" href="#f5">const f5</a>
+
+```
+searchKey: math.f5
+tags: [constant number private]
+```
+
+```Go
+const f5 = 2.611088405080593625138020e-5
+```
+
+### <a id="f6" href="#f6">const f6</a>
+
+```
+searchKey: math.f6
+tags: [constant number private]
+```
+
+```Go
+const f6 = 2.010321207683943062279931e-7
+```
+
+### <a id="f7" href="#f7">const f7</a>
+
+```
+searchKey: math.f7
+tags: [constant number private]
+```
+
+```Go
+const f7 = 2.891024605872965461538222e-15
+```
+
+### <a id="fracMask" href="#fracMask">const fracMask</a>
+
+```
+searchKey: math.fracMask
+tags: [constant number private]
+```
+
+```Go
+const fracMask = 1<<shift - 1
+```
+
+### <a id="haveArchAcos" href="#haveArchAcos">const haveArchAcos</a>
+
+```
+searchKey: math.haveArchAcos
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchAcos = false
+```
+
+### <a id="haveArchAcosh" href="#haveArchAcosh">const haveArchAcosh</a>
+
+```
+searchKey: math.haveArchAcosh
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchAcosh = false
+```
+
+### <a id="haveArchAsin" href="#haveArchAsin">const haveArchAsin</a>
+
+```
+searchKey: math.haveArchAsin
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchAsin = false
+```
+
+### <a id="haveArchAsinh" href="#haveArchAsinh">const haveArchAsinh</a>
+
+```
+searchKey: math.haveArchAsinh
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchAsinh = false
+```
+
+### <a id="haveArchAtan" href="#haveArchAtan">const haveArchAtan</a>
+
+```
+searchKey: math.haveArchAtan
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchAtan = false
+```
+
+### <a id="haveArchAtan2" href="#haveArchAtan2">const haveArchAtan2</a>
+
+```
+searchKey: math.haveArchAtan2
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchAtan2 = false
+```
+
+### <a id="haveArchAtanh" href="#haveArchAtanh">const haveArchAtanh</a>
+
+```
+searchKey: math.haveArchAtanh
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchAtanh = false
+```
+
+### <a id="haveArchCbrt" href="#haveArchCbrt">const haveArchCbrt</a>
+
+```
+searchKey: math.haveArchCbrt
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchCbrt = false
+```
+
+### <a id="haveArchCeil" href="#haveArchCeil">const haveArchCeil</a>
+
+```
+searchKey: math.haveArchCeil
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchCeil = true
+```
+
+### <a id="haveArchCos" href="#haveArchCos">const haveArchCos</a>
+
+```
+searchKey: math.haveArchCos
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchCos = false
+```
+
+### <a id="haveArchCosh" href="#haveArchCosh">const haveArchCosh</a>
+
+```
+searchKey: math.haveArchCosh
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchCosh = false
+```
+
+### <a id="haveArchErf" href="#haveArchErf">const haveArchErf</a>
+
+```
+searchKey: math.haveArchErf
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchErf = false
+```
+
+### <a id="haveArchErfc" href="#haveArchErfc">const haveArchErfc</a>
+
+```
+searchKey: math.haveArchErfc
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchErfc = false
+```
+
+### <a id="haveArchExp" href="#haveArchExp">const haveArchExp</a>
+
+```
+searchKey: math.haveArchExp
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchExp = true
+```
+
+### <a id="haveArchExp2" href="#haveArchExp2">const haveArchExp2</a>
+
+```
+searchKey: math.haveArchExp2
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchExp2 = false
+```
+
+### <a id="haveArchExpm1" href="#haveArchExpm1">const haveArchExpm1</a>
+
+```
+searchKey: math.haveArchExpm1
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchExpm1 = false
+```
+
+### <a id="haveArchFloor" href="#haveArchFloor">const haveArchFloor</a>
+
+```
+searchKey: math.haveArchFloor
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchFloor = true
+```
+
+### <a id="haveArchFrexp" href="#haveArchFrexp">const haveArchFrexp</a>
+
+```
+searchKey: math.haveArchFrexp
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchFrexp = false
+```
+
+### <a id="haveArchHypot" href="#haveArchHypot">const haveArchHypot</a>
+
+```
+searchKey: math.haveArchHypot
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchHypot = true
+```
+
+### <a id="haveArchLdexp" href="#haveArchLdexp">const haveArchLdexp</a>
+
+```
+searchKey: math.haveArchLdexp
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchLdexp = false
+```
+
+### <a id="haveArchLog" href="#haveArchLog">const haveArchLog</a>
+
+```
+searchKey: math.haveArchLog
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchLog = true
+```
+
+### <a id="haveArchLog10" href="#haveArchLog10">const haveArchLog10</a>
+
+```
+searchKey: math.haveArchLog10
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchLog10 = false
+```
+
+### <a id="haveArchLog1p" href="#haveArchLog1p">const haveArchLog1p</a>
+
+```
+searchKey: math.haveArchLog1p
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchLog1p = false
+```
+
+### <a id="haveArchLog2" href="#haveArchLog2">const haveArchLog2</a>
+
+```
+searchKey: math.haveArchLog2
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchLog2 = false
+```
+
+### <a id="haveArchMax" href="#haveArchMax">const haveArchMax</a>
+
+```
+searchKey: math.haveArchMax
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchMax = true
+```
+
+### <a id="haveArchMin" href="#haveArchMin">const haveArchMin</a>
+
+```
+searchKey: math.haveArchMin
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchMin = true
+```
+
+### <a id="haveArchMod" href="#haveArchMod">const haveArchMod</a>
+
+```
+searchKey: math.haveArchMod
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchMod = false
+```
+
+### <a id="haveArchModf" href="#haveArchModf">const haveArchModf</a>
+
+```
+searchKey: math.haveArchModf
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchModf = false
+```
+
+### <a id="haveArchPow" href="#haveArchPow">const haveArchPow</a>
+
+```
+searchKey: math.haveArchPow
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchPow = false
+```
+
+### <a id="haveArchRemainder" href="#haveArchRemainder">const haveArchRemainder</a>
+
+```
+searchKey: math.haveArchRemainder
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchRemainder = false
+```
+
+### <a id="haveArchSin" href="#haveArchSin">const haveArchSin</a>
+
+```
+searchKey: math.haveArchSin
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchSin = false
+```
+
+### <a id="haveArchSinh" href="#haveArchSinh">const haveArchSinh</a>
+
+```
+searchKey: math.haveArchSinh
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchSinh = false
+```
+
+### <a id="haveArchSqrt" href="#haveArchSqrt">const haveArchSqrt</a>
+
+```
+searchKey: math.haveArchSqrt
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchSqrt = true
+```
+
+### <a id="haveArchTan" href="#haveArchTan">const haveArchTan</a>
+
+```
+searchKey: math.haveArchTan
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchTan = false
+```
+
+### <a id="haveArchTanh" href="#haveArchTanh">const haveArchTanh</a>
+
+```
+searchKey: math.haveArchTanh
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchTanh = false
+```
+
+### <a id="haveArchTrunc" href="#haveArchTrunc">const haveArchTrunc</a>
+
+```
+searchKey: math.haveArchTrunc
+tags: [constant boolean private]
+```
+
+```Go
+const haveArchTrunc = true
+```
+
+### <a id="intSize" href="#intSize">const intSize</a>
+
+```
+searchKey: math.intSize
+tags: [constant number private]
+```
+
+```Go
+const intSize = 32 << (^uint(0) >> 63) // 32 or 64
+
+```
+
+Integer limit values. 
+
+### <a id="mask" href="#mask">const mask</a>
+
+```
+searchKey: math.mask
+tags: [constant number private]
+```
+
+```Go
+const mask = 0x7FF
 ```
 
 ### <a id="pa0" href="#pa0">const pa0</a>
 
 ```
 searchKey: math.pa0
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1106,7 +1873,7 @@ Coefficients for approximation to  erf  in [0.84375, 1.25]
 
 ```
 searchKey: math.pa1
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1118,7 +1885,7 @@ const pa1 = 4.14856118683748331666e-01 // 0x3FDA8D00AD92B34D
 
 ```
 searchKey: math.pa2
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1130,7 +1897,7 @@ const pa2 = -3.72207876035701323847e-01 // 0xBFD7D240FBB8C3F1
 
 ```
 searchKey: math.pa3
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1142,7 +1909,7 @@ const pa3 = 3.18346619901161753674e-01 // 0x3FD45FCA805120E4
 
 ```
 searchKey: math.pa4
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1154,7 +1921,7 @@ const pa4 = -1.10894694282396677476e-01 // 0xBFBC63983D3E28EC
 
 ```
 searchKey: math.pa5
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1166,7 +1933,7 @@ const pa5 = 3.54783043256182359371e-02 // 0x3FA22A36599795EB
 
 ```
 searchKey: math.pa6
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1174,11 +1941,71 @@ const pa6 = -2.16637559486879084300e-03 // 0xBF61BF380A96073F
 
 ```
 
+### <a id="pp0" href="#pp0">const pp0</a>
+
+```
+searchKey: math.pp0
+tags: [constant number private]
+```
+
+```Go
+const pp0 = 1.28379167095512558561e-01 // 0x3FC06EBA8214DB68
+
+```
+
+### <a id="pp1" href="#pp1">const pp1</a>
+
+```
+searchKey: math.pp1
+tags: [constant number private]
+```
+
+```Go
+const pp1 = -3.25042107247001499370e-01 // 0xBFD4CD7D691CB913
+
+```
+
+### <a id="pp2" href="#pp2">const pp2</a>
+
+```
+searchKey: math.pp2
+tags: [constant number private]
+```
+
+```Go
+const pp2 = -2.84817495755985104766e-02 // 0xBF9D2A51DBD7194F
+
+```
+
+### <a id="pp3" href="#pp3">const pp3</a>
+
+```
+searchKey: math.pp3
+tags: [constant number private]
+```
+
+```Go
+const pp3 = -5.77027029648944159157e-03 // 0xBF77A291236668E4
+
+```
+
+### <a id="pp4" href="#pp4">const pp4</a>
+
+```
+searchKey: math.pp4
+tags: [constant number private]
+```
+
+```Go
+const pp4 = -2.37630166566501626084e-05 // 0xBEF8EAD6120016AC
+
+```
+
 ### <a id="qa1" href="#qa1">const qa1</a>
 
 ```
 searchKey: math.qa1
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1190,7 +2017,7 @@ const qa1 = 1.06420880400844228286e-01 // 0x3FBB3E6618EEE323
 
 ```
 searchKey: math.qa2
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1202,7 +2029,7 @@ const qa2 = 5.40397917702171048937e-01 // 0x3FE14AF092EB6F33
 
 ```
 searchKey: math.qa3
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1214,7 +2041,7 @@ const qa3 = 7.18286544141962662868e-02 // 0x3FB2635CD99FE9A7
 
 ```
 searchKey: math.qa4
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1226,7 +2053,7 @@ const qa4 = 1.26171219808761642112e-01 // 0x3FC02660E763351F
 
 ```
 searchKey: math.qa5
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1238,7 +2065,7 @@ const qa5 = 1.36370839120290507362e-02 // 0x3F8BEDC26B51DD1C
 
 ```
 searchKey: math.qa6
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1246,11 +2073,71 @@ const qa6 = 1.19844998467991074170e-02 // 0x3F888B545735151D
 
 ```
 
+### <a id="qq1" href="#qq1">const qq1</a>
+
+```
+searchKey: math.qq1
+tags: [constant number private]
+```
+
+```Go
+const qq1 = 3.97917223959155352819e-01 // 0x3FD97779CDDADC09
+
+```
+
+### <a id="qq2" href="#qq2">const qq2</a>
+
+```
+searchKey: math.qq2
+tags: [constant number private]
+```
+
+```Go
+const qq2 = 6.50222499887672944485e-02 // 0x3FB0A54C5536CEBA
+
+```
+
+### <a id="qq3" href="#qq3">const qq3</a>
+
+```
+searchKey: math.qq3
+tags: [constant number private]
+```
+
+```Go
+const qq3 = 5.08130628187576562776e-03 // 0x3F74D022C4D36B0F
+
+```
+
+### <a id="qq4" href="#qq4">const qq4</a>
+
+```
+searchKey: math.qq4
+tags: [constant number private]
+```
+
+```Go
+const qq4 = 1.32494738004321644526e-04 // 0x3F215DC9221C1A10
+
+```
+
+### <a id="qq5" href="#qq5">const qq5</a>
+
+```
+searchKey: math.qq5
+tags: [constant number private]
+```
+
+```Go
+const qq5 = -3.96022827877536812320e-06 // 0xBED09C4342A26120
+
+```
+
 ### <a id="ra0" href="#ra0">const ra0</a>
 
 ```
 searchKey: math.ra0
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1264,7 +2151,7 @@ Coefficients for approximation to  erfc in [1.25, 1/0.35]
 
 ```
 searchKey: math.ra1
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1276,7 +2163,7 @@ const ra1 = -6.93858572707181764372e-01 // 0xBFE63416E4BA7360
 
 ```
 searchKey: math.ra2
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1288,7 +2175,7 @@ const ra2 = -1.05586262253232909814e+01 // 0xC0251E0441B0E726
 
 ```
 searchKey: math.ra3
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1300,7 +2187,7 @@ const ra3 = -6.23753324503260060396e+01 // 0xC04F300AE4CBA38D
 
 ```
 searchKey: math.ra4
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1312,7 +2199,7 @@ const ra4 = -1.62396669462573470355e+02 // 0xC0644CB184282266
 
 ```
 searchKey: math.ra5
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1324,7 +2211,7 @@ const ra5 = -1.84605092906711035994e+02 // 0xC067135CEBCCABB2
 
 ```
 searchKey: math.ra6
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1336,7 +2223,7 @@ const ra6 = -8.12874355063065934246e+01 // 0xC054526557E4D2F2
 
 ```
 searchKey: math.ra7
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1344,107 +2231,11 @@ const ra7 = -9.81432934416914548592e+00 // 0xC023A0EFC69AC25C
 
 ```
 
-### <a id="sa1" href="#sa1">const sa1</a>
-
-```
-searchKey: math.sa1
-tags: [private]
-```
-
-```Go
-const sa1 = 1.96512716674392571292e+01 // 0x4033A6B9BD707687
-
-```
-
-### <a id="sa2" href="#sa2">const sa2</a>
-
-```
-searchKey: math.sa2
-tags: [private]
-```
-
-```Go
-const sa2 = 1.37657754143519042600e+02 // 0x4061350C526AE721
-
-```
-
-### <a id="sa3" href="#sa3">const sa3</a>
-
-```
-searchKey: math.sa3
-tags: [private]
-```
-
-```Go
-const sa3 = 4.34565877475229228821e+02 // 0x407B290DD58A1A71
-
-```
-
-### <a id="sa4" href="#sa4">const sa4</a>
-
-```
-searchKey: math.sa4
-tags: [private]
-```
-
-```Go
-const sa4 = 6.45387271733267880336e+02 // 0x40842B1921EC2868
-
-```
-
-### <a id="sa5" href="#sa5">const sa5</a>
-
-```
-searchKey: math.sa5
-tags: [private]
-```
-
-```Go
-const sa5 = 4.29008140027567833386e+02 // 0x407AD02157700314
-
-```
-
-### <a id="sa6" href="#sa6">const sa6</a>
-
-```
-searchKey: math.sa6
-tags: [private]
-```
-
-```Go
-const sa6 = 1.08635005541779435134e+02 // 0x405B28A3EE48AE2C
-
-```
-
-### <a id="sa7" href="#sa7">const sa7</a>
-
-```
-searchKey: math.sa7
-tags: [private]
-```
-
-```Go
-const sa7 = 6.57024977031928170135e+00 // 0x401A47EF8E484A93
-
-```
-
-### <a id="sa8" href="#sa8">const sa8</a>
-
-```
-searchKey: math.sa8
-tags: [private]
-```
-
-```Go
-const sa8 = -6.04244152148580987438e-02 // 0xBFAEEFF2EE749A62
-
-```
-
 ### <a id="rb0" href="#rb0">const rb0</a>
 
 ```
 searchKey: math.rb0
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1458,7 +2249,7 @@ Coefficients for approximation to  erfc in [1/.35, 28]
 
 ```
 searchKey: math.rb1
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1470,7 +2261,7 @@ const rb1 = -7.99283237680523006574e-01 // 0xBFE993BA70C285DE
 
 ```
 searchKey: math.rb2
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1482,7 +2273,7 @@ const rb2 = -1.77579549177547519889e+01 // 0xC031C209555F995A
 
 ```
 searchKey: math.rb3
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1494,7 +2285,7 @@ const rb3 = -1.60636384855821916062e+02 // 0xC064145D43C5ED98
 
 ```
 searchKey: math.rb4
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1506,7 +2297,7 @@ const rb4 = -6.37566443368389627722e+02 // 0xC083EC881375F228
 
 ```
 searchKey: math.rb5
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1518,7 +2309,7 @@ const rb5 = -1.02509513161107724954e+03 // 0xC09004616A2E5992
 
 ```
 searchKey: math.rb6
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -1526,1003 +2317,11 @@ const rb6 = -4.83519191608651397019e+02 // 0xC07E384E9BDC383F
 
 ```
 
-### <a id="sb1" href="#sb1">const sb1</a>
-
-```
-searchKey: math.sb1
-tags: [private]
-```
-
-```Go
-const sb1 = 3.03380607434824582924e+01 // 0x403E568B261D5190
-
-```
-
-### <a id="sb2" href="#sb2">const sb2</a>
-
-```
-searchKey: math.sb2
-tags: [private]
-```
-
-```Go
-const sb2 = 3.25792512996573918826e+02 // 0x40745CAE221B9F0A
-
-```
-
-### <a id="sb3" href="#sb3">const sb3</a>
-
-```
-searchKey: math.sb3
-tags: [private]
-```
-
-```Go
-const sb3 = 1.53672958608443695994e+03 // 0x409802EB189D5118
-
-```
-
-### <a id="sb4" href="#sb4">const sb4</a>
-
-```
-searchKey: math.sb4
-tags: [private]
-```
-
-```Go
-const sb4 = 3.19985821950859553908e+03 // 0x40A8FFB7688C246A
-
-```
-
-### <a id="sb5" href="#sb5">const sb5</a>
-
-```
-searchKey: math.sb5
-tags: [private]
-```
-
-```Go
-const sb5 = 2.55305040643316442583e+03 // 0x40A3F219CEDF3BE6
-
-```
-
-### <a id="sb6" href="#sb6">const sb6</a>
-
-```
-searchKey: math.sb6
-tags: [private]
-```
-
-```Go
-const sb6 = 4.74528541206955367215e+02 // 0x407DA874E79FE763
-
-```
-
-### <a id="sb7" href="#sb7">const sb7</a>
-
-```
-searchKey: math.sb7
-tags: [private]
-```
-
-```Go
-const sb7 = -2.24409524465858183362e+01 // 0xC03670E242712D62
-
-```
-
-### <a id="a0" href="#a0">const a0</a>
-
-```
-searchKey: math.a0
-tags: [private]
-```
-
-```Go
-const a0 = 1.1975323115670912564578e0
-```
-
-Coefficients for approximation to erf in |x| <= 0.85 
-
-### <a id="a1" href="#a1">const a1</a>
-
-```
-searchKey: math.a1
-tags: [private]
-```
-
-```Go
-const a1 = 4.7072688112383978012285e1
-```
-
-### <a id="a2" href="#a2">const a2</a>
-
-```
-searchKey: math.a2
-tags: [private]
-```
-
-```Go
-const a2 = 6.9706266534389598238465e2
-```
-
-### <a id="a3" href="#a3">const a3</a>
-
-```
-searchKey: math.a3
-tags: [private]
-```
-
-```Go
-const a3 = 4.8548868893843886794648e3
-```
-
-### <a id="a4" href="#a4">const a4</a>
-
-```
-searchKey: math.a4
-tags: [private]
-```
-
-```Go
-const a4 = 1.6235862515167575384252e4
-```
-
-### <a id="a5" href="#a5">const a5</a>
-
-```
-searchKey: math.a5
-tags: [private]
-```
-
-```Go
-const a5 = 2.3782041382114385731252e4
-```
-
-### <a id="a6" href="#a6">const a6</a>
-
-```
-searchKey: math.a6
-tags: [private]
-```
-
-```Go
-const a6 = 1.1819493347062294404278e4
-```
-
-### <a id="a7" href="#a7">const a7</a>
-
-```
-searchKey: math.a7
-tags: [private]
-```
-
-```Go
-const a7 = 8.8709406962545514830200e2
-```
-
-### <a id="b0" href="#b0">const b0</a>
-
-```
-searchKey: math.b0
-tags: [private]
-```
-
-```Go
-const b0 = 1.0000000000000000000e0
-```
-
-### <a id="b1" href="#b1">const b1</a>
-
-```
-searchKey: math.b1
-tags: [private]
-```
-
-```Go
-const b1 = 4.2313330701600911252e1
-```
-
-### <a id="b2" href="#b2">const b2</a>
-
-```
-searchKey: math.b2
-tags: [private]
-```
-
-```Go
-const b2 = 6.8718700749205790830e2
-```
-
-### <a id="b3" href="#b3">const b3</a>
-
-```
-searchKey: math.b3
-tags: [private]
-```
-
-```Go
-const b3 = 5.3941960214247511077e3
-```
-
-### <a id="b4" href="#b4">const b4</a>
-
-```
-searchKey: math.b4
-tags: [private]
-```
-
-```Go
-const b4 = 2.1213794301586595867e4
-```
-
-### <a id="b5" href="#b5">const b5</a>
-
-```
-searchKey: math.b5
-tags: [private]
-```
-
-```Go
-const b5 = 3.9307895800092710610e4
-```
-
-### <a id="b6" href="#b6">const b6</a>
-
-```
-searchKey: math.b6
-tags: [private]
-```
-
-```Go
-const b6 = 2.8729085735721942674e4
-```
-
-### <a id="b7" href="#b7">const b7</a>
-
-```
-searchKey: math.b7
-tags: [private]
-```
-
-```Go
-const b7 = 5.2264952788528545610e3
-```
-
-### <a id="c0" href="#c0">const c0</a>
-
-```
-searchKey: math.c0
-tags: [private]
-```
-
-```Go
-const c0 = 1.42343711074968357734e0
-```
-
-Coefficients for approximation to erf in 0.85 < |x| <= 1-2*exp(-25) 
-
-### <a id="c1" href="#c1">const c1</a>
-
-```
-searchKey: math.c1
-tags: [private]
-```
-
-```Go
-const c1 = 4.63033784615654529590e0
-```
-
-### <a id="c2" href="#c2">const c2</a>
-
-```
-searchKey: math.c2
-tags: [private]
-```
-
-```Go
-const c2 = 5.76949722146069140550e0
-```
-
-### <a id="c3" href="#c3">const c3</a>
-
-```
-searchKey: math.c3
-tags: [private]
-```
-
-```Go
-const c3 = 3.64784832476320460504e0
-```
-
-### <a id="c4" href="#c4">const c4</a>
-
-```
-searchKey: math.c4
-tags: [private]
-```
-
-```Go
-const c4 = 1.27045825245236838258e0
-```
-
-### <a id="c5" href="#c5">const c5</a>
-
-```
-searchKey: math.c5
-tags: [private]
-```
-
-```Go
-const c5 = 2.41780725177450611770e-1
-```
-
-### <a id="c6" href="#c6">const c6</a>
-
-```
-searchKey: math.c6
-tags: [private]
-```
-
-```Go
-const c6 = 2.27238449892691845833e-2
-```
-
-### <a id="c7" href="#c7">const c7</a>
-
-```
-searchKey: math.c7
-tags: [private]
-```
-
-```Go
-const c7 = 7.74545014278341407640e-4
-```
-
-### <a id="d0" href="#d0">const d0</a>
-
-```
-searchKey: math.d0
-tags: [private]
-```
-
-```Go
-const d0 = 1.4142135623730950488016887e0
-```
-
-### <a id="d1" href="#d1">const d1</a>
-
-```
-searchKey: math.d1
-tags: [private]
-```
-
-```Go
-const d1 = 2.9036514445419946173133295e0
-```
-
-### <a id="d2" href="#d2">const d2</a>
-
-```
-searchKey: math.d2
-tags: [private]
-```
-
-```Go
-const d2 = 2.3707661626024532365971225e0
-```
-
-### <a id="d3" href="#d3">const d3</a>
-
-```
-searchKey: math.d3
-tags: [private]
-```
-
-```Go
-const d3 = 9.7547832001787427186894837e-1
-```
-
-### <a id="d4" href="#d4">const d4</a>
-
-```
-searchKey: math.d4
-tags: [private]
-```
-
-```Go
-const d4 = 2.0945065210512749128288442e-1
-```
-
-### <a id="d5" href="#d5">const d5</a>
-
-```
-searchKey: math.d5
-tags: [private]
-```
-
-```Go
-const d5 = 2.1494160384252876777097297e-2
-```
-
-### <a id="d6" href="#d6">const d6</a>
-
-```
-searchKey: math.d6
-tags: [private]
-```
-
-```Go
-const d6 = 7.7441459065157709165577218e-4
-```
-
-### <a id="d7" href="#d7">const d7</a>
-
-```
-searchKey: math.d7
-tags: [private]
-```
-
-```Go
-const d7 = 1.4859850019840355905497876e-9
-```
-
-### <a id="e0" href="#e0">const e0</a>
-
-```
-searchKey: math.e0
-tags: [private]
-```
-
-```Go
-const e0 = 6.65790464350110377720e0
-```
-
-Coefficients for approximation to erf in 1-2*exp(-25) < |x| < 1 
-
-### <a id="e1" href="#e1">const e1</a>
-
-```
-searchKey: math.e1
-tags: [private]
-```
-
-```Go
-const e1 = 5.46378491116411436990e0
-```
-
-### <a id="e2" href="#e2">const e2</a>
-
-```
-searchKey: math.e2
-tags: [private]
-```
-
-```Go
-const e2 = 1.78482653991729133580e0
-```
-
-### <a id="e3" href="#e3">const e3</a>
-
-```
-searchKey: math.e3
-tags: [private]
-```
-
-```Go
-const e3 = 2.96560571828504891230e-1
-```
-
-### <a id="e4" href="#e4">const e4</a>
-
-```
-searchKey: math.e4
-tags: [private]
-```
-
-```Go
-const e4 = 2.65321895265761230930e-2
-```
-
-### <a id="e5" href="#e5">const e5</a>
-
-```
-searchKey: math.e5
-tags: [private]
-```
-
-```Go
-const e5 = 1.24266094738807843860e-3
-```
-
-### <a id="e6" href="#e6">const e6</a>
-
-```
-searchKey: math.e6
-tags: [private]
-```
-
-```Go
-const e6 = 2.71155556874348757815e-5
-```
-
-### <a id="e7" href="#e7">const e7</a>
-
-```
-searchKey: math.e7
-tags: [private]
-```
-
-```Go
-const e7 = 2.01033439929228813265e-7
-```
-
-### <a id="f0" href="#f0">const f0</a>
-
-```
-searchKey: math.f0
-tags: [private]
-```
-
-```Go
-const f0 = 1.414213562373095048801689e0
-```
-
-### <a id="f1" href="#f1">const f1</a>
-
-```
-searchKey: math.f1
-tags: [private]
-```
-
-```Go
-const f1 = 8.482908416595164588112026e-1
-```
-
-### <a id="f2" href="#f2">const f2</a>
-
-```
-searchKey: math.f2
-tags: [private]
-```
-
-```Go
-const f2 = 1.936480946950659106176712e-1
-```
-
-### <a id="f3" href="#f3">const f3</a>
-
-```
-searchKey: math.f3
-tags: [private]
-```
-
-```Go
-const f3 = 2.103693768272068968719679e-2
-```
-
-### <a id="f4" href="#f4">const f4</a>
-
-```
-searchKey: math.f4
-tags: [private]
-```
-
-```Go
-const f4 = 1.112800997078859844711555e-3
-```
-
-### <a id="f5" href="#f5">const f5</a>
-
-```
-searchKey: math.f5
-tags: [private]
-```
-
-```Go
-const f5 = 2.611088405080593625138020e-5
-```
-
-### <a id="f6" href="#f6">const f6</a>
-
-```
-searchKey: math.f6
-tags: [private]
-```
-
-```Go
-const f6 = 2.010321207683943062279931e-7
-```
-
-### <a id="f7" href="#f7">const f7</a>
-
-```
-searchKey: math.f7
-tags: [private]
-```
-
-```Go
-const f7 = 2.891024605872965461538222e-15
-```
-
-### <a id="haveArchExp2" href="#haveArchExp2">const haveArchExp2</a>
-
-```
-searchKey: math.haveArchExp2
-tags: [private]
-```
-
-```Go
-const haveArchExp2 = false
-```
-
-### <a id="haveArchExp" href="#haveArchExp">const haveArchExp</a>
-
-```
-searchKey: math.haveArchExp
-tags: [private]
-```
-
-```Go
-const haveArchExp = true
-```
-
-### <a id="haveArchFloor" href="#haveArchFloor">const haveArchFloor</a>
-
-```
-searchKey: math.haveArchFloor
-tags: [private]
-```
-
-```Go
-const haveArchFloor = true
-```
-
-### <a id="haveArchCeil" href="#haveArchCeil">const haveArchCeil</a>
-
-```
-searchKey: math.haveArchCeil
-tags: [private]
-```
-
-```Go
-const haveArchCeil = true
-```
-
-### <a id="haveArchTrunc" href="#haveArchTrunc">const haveArchTrunc</a>
-
-```
-searchKey: math.haveArchTrunc
-tags: [private]
-```
-
-```Go
-const haveArchTrunc = true
-```
-
-### <a id="haveArchHypot" href="#haveArchHypot">const haveArchHypot</a>
-
-```
-searchKey: math.haveArchHypot
-tags: [private]
-```
-
-```Go
-const haveArchHypot = true
-```
-
-### <a id="haveArchLog" href="#haveArchLog">const haveArchLog</a>
-
-```
-searchKey: math.haveArchLog
-tags: [private]
-```
-
-```Go
-const haveArchLog = true
-```
-
-### <a id="haveArchModf" href="#haveArchModf">const haveArchModf</a>
-
-```
-searchKey: math.haveArchModf
-tags: [private]
-```
-
-```Go
-const haveArchModf = false
-```
-
-### <a id="haveArchSqrt" href="#haveArchSqrt">const haveArchSqrt</a>
-
-```
-searchKey: math.haveArchSqrt
-tags: [private]
-```
-
-```Go
-const haveArchSqrt = true
-```
-
-### <a id="haveArchAcos" href="#haveArchAcos">const haveArchAcos</a>
-
-```
-searchKey: math.haveArchAcos
-tags: [private]
-```
-
-```Go
-const haveArchAcos = false
-```
-
-### <a id="haveArchAcosh" href="#haveArchAcosh">const haveArchAcosh</a>
-
-```
-searchKey: math.haveArchAcosh
-tags: [private]
-```
-
-```Go
-const haveArchAcosh = false
-```
-
-### <a id="haveArchAsin" href="#haveArchAsin">const haveArchAsin</a>
-
-```
-searchKey: math.haveArchAsin
-tags: [private]
-```
-
-```Go
-const haveArchAsin = false
-```
-
-### <a id="haveArchAsinh" href="#haveArchAsinh">const haveArchAsinh</a>
-
-```
-searchKey: math.haveArchAsinh
-tags: [private]
-```
-
-```Go
-const haveArchAsinh = false
-```
-
-### <a id="haveArchAtan" href="#haveArchAtan">const haveArchAtan</a>
-
-```
-searchKey: math.haveArchAtan
-tags: [private]
-```
-
-```Go
-const haveArchAtan = false
-```
-
-### <a id="haveArchAtan2" href="#haveArchAtan2">const haveArchAtan2</a>
-
-```
-searchKey: math.haveArchAtan2
-tags: [private]
-```
-
-```Go
-const haveArchAtan2 = false
-```
-
-### <a id="haveArchAtanh" href="#haveArchAtanh">const haveArchAtanh</a>
-
-```
-searchKey: math.haveArchAtanh
-tags: [private]
-```
-
-```Go
-const haveArchAtanh = false
-```
-
-### <a id="haveArchCbrt" href="#haveArchCbrt">const haveArchCbrt</a>
-
-```
-searchKey: math.haveArchCbrt
-tags: [private]
-```
-
-```Go
-const haveArchCbrt = false
-```
-
-### <a id="haveArchCos" href="#haveArchCos">const haveArchCos</a>
-
-```
-searchKey: math.haveArchCos
-tags: [private]
-```
-
-```Go
-const haveArchCos = false
-```
-
-### <a id="haveArchCosh" href="#haveArchCosh">const haveArchCosh</a>
-
-```
-searchKey: math.haveArchCosh
-tags: [private]
-```
-
-```Go
-const haveArchCosh = false
-```
-
-### <a id="haveArchErf" href="#haveArchErf">const haveArchErf</a>
-
-```
-searchKey: math.haveArchErf
-tags: [private]
-```
-
-```Go
-const haveArchErf = false
-```
-
-### <a id="haveArchErfc" href="#haveArchErfc">const haveArchErfc</a>
-
-```
-searchKey: math.haveArchErfc
-tags: [private]
-```
-
-```Go
-const haveArchErfc = false
-```
-
-### <a id="haveArchExpm1" href="#haveArchExpm1">const haveArchExpm1</a>
-
-```
-searchKey: math.haveArchExpm1
-tags: [private]
-```
-
-```Go
-const haveArchExpm1 = false
-```
-
-### <a id="haveArchFrexp" href="#haveArchFrexp">const haveArchFrexp</a>
-
-```
-searchKey: math.haveArchFrexp
-tags: [private]
-```
-
-```Go
-const haveArchFrexp = false
-```
-
-### <a id="haveArchLdexp" href="#haveArchLdexp">const haveArchLdexp</a>
-
-```
-searchKey: math.haveArchLdexp
-tags: [private]
-```
-
-```Go
-const haveArchLdexp = false
-```
-
-### <a id="haveArchLog10" href="#haveArchLog10">const haveArchLog10</a>
-
-```
-searchKey: math.haveArchLog10
-tags: [private]
-```
-
-```Go
-const haveArchLog10 = false
-```
-
-### <a id="haveArchLog2" href="#haveArchLog2">const haveArchLog2</a>
-
-```
-searchKey: math.haveArchLog2
-tags: [private]
-```
-
-```Go
-const haveArchLog2 = false
-```
-
-### <a id="haveArchLog1p" href="#haveArchLog1p">const haveArchLog1p</a>
-
-```
-searchKey: math.haveArchLog1p
-tags: [private]
-```
-
-```Go
-const haveArchLog1p = false
-```
-
-### <a id="haveArchMod" href="#haveArchMod">const haveArchMod</a>
-
-```
-searchKey: math.haveArchMod
-tags: [private]
-```
-
-```Go
-const haveArchMod = false
-```
-
-### <a id="haveArchPow" href="#haveArchPow">const haveArchPow</a>
-
-```
-searchKey: math.haveArchPow
-tags: [private]
-```
-
-```Go
-const haveArchPow = false
-```
-
-### <a id="haveArchRemainder" href="#haveArchRemainder">const haveArchRemainder</a>
-
-```
-searchKey: math.haveArchRemainder
-tags: [private]
-```
-
-```Go
-const haveArchRemainder = false
-```
-
-### <a id="haveArchSin" href="#haveArchSin">const haveArchSin</a>
-
-```
-searchKey: math.haveArchSin
-tags: [private]
-```
-
-```Go
-const haveArchSin = false
-```
-
-### <a id="haveArchSinh" href="#haveArchSinh">const haveArchSinh</a>
-
-```
-searchKey: math.haveArchSinh
-tags: [private]
-```
-
-```Go
-const haveArchSinh = false
-```
-
-### <a id="haveArchTan" href="#haveArchTan">const haveArchTan</a>
-
-```
-searchKey: math.haveArchTan
-tags: [private]
-```
-
-```Go
-const haveArchTan = false
-```
-
-### <a id="haveArchTanh" href="#haveArchTanh">const haveArchTanh</a>
-
-```
-searchKey: math.haveArchTanh
-tags: [private]
-```
-
-```Go
-const haveArchTanh = false
-```
-
 ### <a id="reduceThreshold" href="#reduceThreshold">const reduceThreshold</a>
 
 ```
 searchKey: math.reduceThreshold
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -2537,35 +2336,802 @@ y < 1<<30  -> floor(x*4/Pi) < 1<<30 -> x < (1<<30 - 1) * Pi/4
 ```
 So, conservatively we can take x < 1<<29. Above this threshold Payne-Hanek range reduction must be used. 
 
-### <a id="ReduceThreshold" href="#ReduceThreshold">const ReduceThreshold</a>
+### <a id="sa1" href="#sa1">const sa1</a>
 
 ```
-searchKey: math.ReduceThreshold
-tags: [private]
+searchKey: math.sa1
+tags: [constant number private]
 ```
 
 ```Go
-const ReduceThreshold = reduceThreshold
+const sa1 = 1.96512716674392571292e+01 // 0x4033A6B9BD707687
+
+```
+
+### <a id="sa2" href="#sa2">const sa2</a>
+
+```
+searchKey: math.sa2
+tags: [constant number private]
+```
+
+```Go
+const sa2 = 1.37657754143519042600e+02 // 0x4061350C526AE721
+
+```
+
+### <a id="sa3" href="#sa3">const sa3</a>
+
+```
+searchKey: math.sa3
+tags: [constant number private]
+```
+
+```Go
+const sa3 = 4.34565877475229228821e+02 // 0x407B290DD58A1A71
+
+```
+
+### <a id="sa4" href="#sa4">const sa4</a>
+
+```
+searchKey: math.sa4
+tags: [constant number private]
+```
+
+```Go
+const sa4 = 6.45387271733267880336e+02 // 0x40842B1921EC2868
+
+```
+
+### <a id="sa5" href="#sa5">const sa5</a>
+
+```
+searchKey: math.sa5
+tags: [constant number private]
+```
+
+```Go
+const sa5 = 4.29008140027567833386e+02 // 0x407AD02157700314
+
+```
+
+### <a id="sa6" href="#sa6">const sa6</a>
+
+```
+searchKey: math.sa6
+tags: [constant number private]
+```
+
+```Go
+const sa6 = 1.08635005541779435134e+02 // 0x405B28A3EE48AE2C
+
+```
+
+### <a id="sa7" href="#sa7">const sa7</a>
+
+```
+searchKey: math.sa7
+tags: [constant number private]
+```
+
+```Go
+const sa7 = 6.57024977031928170135e+00 // 0x401A47EF8E484A93
+
+```
+
+### <a id="sa8" href="#sa8">const sa8</a>
+
+```
+searchKey: math.sa8
+tags: [constant number private]
+```
+
+```Go
+const sa8 = -6.04244152148580987438e-02 // 0xBFAEEFF2EE749A62
+
+```
+
+### <a id="sb1" href="#sb1">const sb1</a>
+
+```
+searchKey: math.sb1
+tags: [constant number private]
+```
+
+```Go
+const sb1 = 3.03380607434824582924e+01 // 0x403E568B261D5190
+
+```
+
+### <a id="sb2" href="#sb2">const sb2</a>
+
+```
+searchKey: math.sb2
+tags: [constant number private]
+```
+
+```Go
+const sb2 = 3.25792512996573918826e+02 // 0x40745CAE221B9F0A
+
+```
+
+### <a id="sb3" href="#sb3">const sb3</a>
+
+```
+searchKey: math.sb3
+tags: [constant number private]
+```
+
+```Go
+const sb3 = 1.53672958608443695994e+03 // 0x409802EB189D5118
+
+```
+
+### <a id="sb4" href="#sb4">const sb4</a>
+
+```
+searchKey: math.sb4
+tags: [constant number private]
+```
+
+```Go
+const sb4 = 3.19985821950859553908e+03 // 0x40A8FFB7688C246A
+
+```
+
+### <a id="sb5" href="#sb5">const sb5</a>
+
+```
+searchKey: math.sb5
+tags: [constant number private]
+```
+
+```Go
+const sb5 = 2.55305040643316442583e+03 // 0x40A3F219CEDF3BE6
+
+```
+
+### <a id="sb6" href="#sb6">const sb6</a>
+
+```
+searchKey: math.sb6
+tags: [constant number private]
+```
+
+```Go
+const sb6 = 4.74528541206955367215e+02 // 0x407DA874E79FE763
+
+```
+
+### <a id="sb7" href="#sb7">const sb7</a>
+
+```
+searchKey: math.sb7
+tags: [constant number private]
+```
+
+```Go
+const sb7 = -2.24409524465858183362e+01 // 0xC03670E242712D62
+
+```
+
+### <a id="shift" href="#shift">const shift</a>
+
+```
+searchKey: math.shift
+tags: [constant number private]
+```
+
+```Go
+const shift = 64 - 11 - 1
+```
+
+### <a id="signMask" href="#signMask">const signMask</a>
+
+```
+searchKey: math.signMask
+tags: [constant number private]
+```
+
+```Go
+const signMask = 1 << 63
+```
+
+### <a id="uvinf" href="#uvinf">const uvinf</a>
+
+```
+searchKey: math.uvinf
+tags: [constant number private]
+```
+
+```Go
+const uvinf = 0x7FF0000000000000
+```
+
+### <a id="uvnan" href="#uvnan">const uvnan</a>
+
+```
+searchKey: math.uvnan
+tags: [constant number private]
+```
+
+```Go
+const uvnan = 0x7FF8000000000001
+```
+
+### <a id="uvneginf" href="#uvneginf">const uvneginf</a>
+
+```
+searchKey: math.uvneginf
+tags: [constant number private]
+```
+
+```Go
+const uvneginf = 0xFFF0000000000000
+```
+
+### <a id="uvone" href="#uvone">const uvone</a>
+
+```
+searchKey: math.uvone
+tags: [constant number private]
+```
+
+```Go
+const uvone = 0x3FF0000000000000
 ```
 
 ## <a id="var" href="#var">Variables</a>
+
+```
+tags: [package]
+```
+
+### <a id="Exp2Go" href="#Exp2Go">var Exp2Go</a>
+
+```
+searchKey: math.Exp2Go
+tags: [variable function private]
+```
+
+```Go
+var Exp2Go = exp2
+```
+
+### <a id="ExpGo" href="#ExpGo">var ExpGo</a>
+
+```
+searchKey: math.ExpGo
+tags: [variable function private]
+```
+
+```Go
+var ExpGo = exp
+```
+
+Export internal functions for testing. 
+
+### <a id="HypotGo" href="#HypotGo">var HypotGo</a>
+
+```
+searchKey: math.HypotGo
+tags: [variable function private]
+```
+
+```Go
+var HypotGo = hypot
+```
+
+### <a id="SqrtGo" href="#SqrtGo">var SqrtGo</a>
+
+```
+searchKey: math.SqrtGo
+tags: [variable function private]
+```
+
+```Go
+var SqrtGo = sqrt
+```
+
+### <a id="TrigReduce" href="#TrigReduce">var TrigReduce</a>
+
+```
+searchKey: math.TrigReduce
+tags: [variable function private]
+```
+
+```Go
+var TrigReduce = trigReduce
+```
+
+### <a id="mPi4" href="#mPi4">var mPi4</a>
+
+```
+searchKey: math.mPi4
+tags: [variable array number private]
+```
+
+```Go
+var mPi4 = ...
+```
+
+mPi4 is the binary digits of 4/pi as a uint64 array, that is, 4/pi = Sum mPi4[i]*2^(-64*i) 19 64-bit digits and the leading one bit give 1217 bits of precision to handle the largest possible float64 exponent. 
+
+### <a id="p0R2" href="#p0R2">var p0R2</a>
+
+```
+searchKey: math.p0R2
+tags: [variable array number private]
+```
+
+```Go
+var p0R2 = ...
+```
+
+for x in [2.8570,2]=1/[0.3499,0.5] 
+
+### <a id="p0R3" href="#p0R3">var p0R3</a>
+
+```
+searchKey: math.p0R3
+tags: [variable array number private]
+```
+
+```Go
+var p0R3 = ...
+```
+
+for x in [4.547,2.8571]=1/[0.2199,0.35001] 
+
+### <a id="p0R5" href="#p0R5">var p0R5</a>
+
+```
+searchKey: math.p0R5
+tags: [variable array number private]
+```
+
+```Go
+var p0R5 = ...
+```
+
+for x in [8,4.5454]=1/[0.125,0.22001] 
+
+### <a id="p0R8" href="#p0R8">var p0R8</a>
+
+```
+searchKey: math.p0R8
+tags: [variable array number private]
+```
+
+```Go
+var p0R8 = ...
+```
+
+for x in [inf, 8]=1/[0,0.125] 
+
+### <a id="p0S2" href="#p0S2">var p0S2</a>
+
+```
+searchKey: math.p0S2
+tags: [variable array number private]
+```
+
+```Go
+var p0S2 = ...
+```
+
+### <a id="p0S3" href="#p0S3">var p0S3</a>
+
+```
+searchKey: math.p0S3
+tags: [variable array number private]
+```
+
+```Go
+var p0S3 = ...
+```
+
+### <a id="p0S5" href="#p0S5">var p0S5</a>
+
+```
+searchKey: math.p0S5
+tags: [variable array number private]
+```
+
+```Go
+var p0S5 = ...
+```
+
+### <a id="p0S8" href="#p0S8">var p0S8</a>
+
+```
+searchKey: math.p0S8
+tags: [variable array number private]
+```
+
+```Go
+var p0S8 = ...
+```
+
+### <a id="p1R2" href="#p1R2">var p1R2</a>
+
+```
+searchKey: math.p1R2
+tags: [variable array number private]
+```
+
+```Go
+var p1R2 = ...
+```
+
+for x in [2.8570,2] = 1/[0.3499,0.5] 
+
+### <a id="p1R3" href="#p1R3">var p1R3</a>
+
+```
+searchKey: math.p1R3
+tags: [variable array number private]
+```
+
+```Go
+var p1R3 = ...
+```
+
+for x in[4.5453,2.8571] = 1/[0.2199,0.35001] 
+
+### <a id="p1R5" href="#p1R5">var p1R5</a>
+
+```
+searchKey: math.p1R5
+tags: [variable array number private]
+```
+
+```Go
+var p1R5 = ...
+```
+
+for x in [8,4.5454] = 1/[0.125,0.22001] 
+
+### <a id="p1R8" href="#p1R8">var p1R8</a>
+
+```
+searchKey: math.p1R8
+tags: [variable array number private]
+```
+
+```Go
+var p1R8 = ...
+```
+
+for x in [inf, 8]=1/[0,0.125] 
+
+### <a id="p1S2" href="#p1S2">var p1S2</a>
+
+```
+searchKey: math.p1S2
+tags: [variable array number private]
+```
+
+```Go
+var p1S2 = ...
+```
+
+### <a id="p1S3" href="#p1S3">var p1S3</a>
+
+```
+searchKey: math.p1S3
+tags: [variable array number private]
+```
+
+```Go
+var p1S3 = ...
+```
+
+### <a id="p1S5" href="#p1S5">var p1S5</a>
+
+```
+searchKey: math.p1S5
+tags: [variable array number private]
+```
+
+```Go
+var p1S5 = ...
+```
+
+### <a id="p1S8" href="#p1S8">var p1S8</a>
+
+```
+searchKey: math.p1S8
+tags: [variable array number private]
+```
+
+```Go
+var p1S8 = ...
+```
+
+### <a id="pow10negtab32" href="#pow10negtab32">var pow10negtab32</a>
+
+```
+searchKey: math.pow10negtab32
+tags: [variable array number private]
+```
+
+```Go
+var pow10negtab32 = ...
+```
+
+pow10negtab32 stores the pre-computed value for 10**(-i*32) at index i. 
+
+### <a id="pow10postab32" href="#pow10postab32">var pow10postab32</a>
+
+```
+searchKey: math.pow10postab32
+tags: [variable array number private]
+```
+
+```Go
+var pow10postab32 = ...
+```
+
+pow10postab32 stores the pre-computed value for 10**(i*32) at index i. 
+
+### <a id="pow10tab" href="#pow10tab">var pow10tab</a>
+
+```
+searchKey: math.pow10tab
+tags: [variable array number private]
+```
+
+```Go
+var pow10tab = ...
+```
+
+pow10tab stores the pre-computed values 10**i for i < 32. 
+
+### <a id="q0R2" href="#q0R2">var q0R2</a>
+
+```
+searchKey: math.q0R2
+tags: [variable array number private]
+```
+
+```Go
+var q0R2 = ...
+```
+
+for x in [2.8570,2]=1/[0.3499,0.5] 
+
+### <a id="q0R3" href="#q0R3">var q0R3</a>
+
+```
+searchKey: math.q0R3
+tags: [variable array number private]
+```
+
+```Go
+var q0R3 = ...
+```
+
+for x in [4.547,2.8571]=1/[0.2199,0.35001] 
+
+### <a id="q0R5" href="#q0R5">var q0R5</a>
+
+```
+searchKey: math.q0R5
+tags: [variable array number private]
+```
+
+```Go
+var q0R5 = ...
+```
+
+for x in [8,4.5454]=1/[0.125,0.22001] 
+
+### <a id="q0R8" href="#q0R8">var q0R8</a>
+
+```
+searchKey: math.q0R8
+tags: [variable array number private]
+```
+
+```Go
+var q0R8 = ...
+```
+
+for x in [inf, 8]=1/[0,0.125] 
+
+### <a id="q0S2" href="#q0S2">var q0S2</a>
+
+```
+searchKey: math.q0S2
+tags: [variable array number private]
+```
+
+```Go
+var q0S2 = ...
+```
+
+### <a id="q0S3" href="#q0S3">var q0S3</a>
+
+```
+searchKey: math.q0S3
+tags: [variable array number private]
+```
+
+```Go
+var q0S3 = ...
+```
+
+### <a id="q0S5" href="#q0S5">var q0S5</a>
+
+```
+searchKey: math.q0S5
+tags: [variable array number private]
+```
+
+```Go
+var q0S5 = ...
+```
+
+### <a id="q0S8" href="#q0S8">var q0S8</a>
+
+```
+searchKey: math.q0S8
+tags: [variable array number private]
+```
+
+```Go
+var q0S8 = ...
+```
+
+### <a id="q1R2" href="#q1R2">var q1R2</a>
+
+```
+searchKey: math.q1R2
+tags: [variable array number private]
+```
+
+```Go
+var q1R2 = ...
+```
+
+for x in [2.8570,2] = 1/[0.3499,0.5] 
+
+### <a id="q1R3" href="#q1R3">var q1R3</a>
+
+```
+searchKey: math.q1R3
+tags: [variable array number private]
+```
+
+```Go
+var q1R3 = ...
+```
+
+for x in [4.5454,2.8571] = 1/[0.2199,0.35001] ??? 
+
+### <a id="q1R5" href="#q1R5">var q1R5</a>
+
+```
+searchKey: math.q1R5
+tags: [variable array number private]
+```
+
+```Go
+var q1R5 = ...
+```
+
+for x in [8,4.5454] = 1/[0.125,0.22001] 
+
+### <a id="q1R8" href="#q1R8">var q1R8</a>
+
+```
+searchKey: math.q1R8
+tags: [variable array number private]
+```
+
+```Go
+var q1R8 = ...
+```
+
+for x in [inf, 8] = 1/[0,0.125] 
+
+### <a id="q1S2" href="#q1S2">var q1S2</a>
+
+```
+searchKey: math.q1S2
+tags: [variable array number private]
+```
+
+```Go
+var q1S2 = ...
+```
+
+### <a id="q1S3" href="#q1S3">var q1S3</a>
+
+```
+searchKey: math.q1S3
+tags: [variable array number private]
+```
+
+```Go
+var q1S3 = ...
+```
+
+### <a id="q1S5" href="#q1S5">var q1S5</a>
+
+```
+searchKey: math.q1S5
+tags: [variable array number private]
+```
+
+```Go
+var q1S5 = ...
+```
+
+### <a id="q1S8" href="#q1S8">var q1S8</a>
+
+```
+searchKey: math.q1S8
+tags: [variable array number private]
+```
+
+```Go
+var q1S8 = ...
+```
+
+### <a id="tanhP" href="#tanhP">var tanhP</a>
+
+```
+searchKey: math.tanhP
+tags: [variable array number private]
+```
+
+```Go
+var tanhP = ...
+```
+
+### <a id="tanhQ" href="#tanhQ">var tanhQ</a>
+
+```
+searchKey: math.tanhQ
+tags: [variable array number private]
+```
+
+```Go
+var tanhQ = ...
+```
 
 ### <a id="useFMA" href="#useFMA">var useFMA</a>
 
 ```
 searchKey: math.useFMA
-tags: [private]
+tags: [variable boolean private]
 ```
 
 ```Go
 var useFMA = cpu.X86.HasAVX && cpu.X86.HasFMA
 ```
 
+### <a id="_cos" href="#_cos">var _cos</a>
+
+```
+searchKey: math._cos
+tags: [variable array number private]
+```
+
+```Go
+var _cos = ...
+```
+
+cos coefficients 
+
 ### <a id="_gamP" href="#_gamP">var _gamP</a>
 
 ```
 searchKey: math._gamP
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -2576,7 +3142,7 @@ var _gamP = ...
 
 ```
 searchKey: math._gamQ
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -2587,402 +3153,18 @@ var _gamQ = ...
 
 ```
 searchKey: math._gamS
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
 var _gamS = ...
 ```
 
-### <a id="p0R8" href="#p0R8">var p0R8</a>
-
-```
-searchKey: math.p0R8
-tags: [private]
-```
-
-```Go
-var p0R8 = ...
-```
-
-for x in [inf, 8]=1/[0,0.125] 
-
-### <a id="p0S8" href="#p0S8">var p0S8</a>
-
-```
-searchKey: math.p0S8
-tags: [private]
-```
-
-```Go
-var p0S8 = ...
-```
-
-### <a id="p0R5" href="#p0R5">var p0R5</a>
-
-```
-searchKey: math.p0R5
-tags: [private]
-```
-
-```Go
-var p0R5 = ...
-```
-
-for x in [8,4.5454]=1/[0.125,0.22001] 
-
-### <a id="p0S5" href="#p0S5">var p0S5</a>
-
-```
-searchKey: math.p0S5
-tags: [private]
-```
-
-```Go
-var p0S5 = ...
-```
-
-### <a id="p0R3" href="#p0R3">var p0R3</a>
-
-```
-searchKey: math.p0R3
-tags: [private]
-```
-
-```Go
-var p0R3 = ...
-```
-
-for x in [4.547,2.8571]=1/[0.2199,0.35001] 
-
-### <a id="p0S3" href="#p0S3">var p0S3</a>
-
-```
-searchKey: math.p0S3
-tags: [private]
-```
-
-```Go
-var p0S3 = ...
-```
-
-### <a id="p0R2" href="#p0R2">var p0R2</a>
-
-```
-searchKey: math.p0R2
-tags: [private]
-```
-
-```Go
-var p0R2 = ...
-```
-
-for x in [2.8570,2]=1/[0.3499,0.5] 
-
-### <a id="p0S2" href="#p0S2">var p0S2</a>
-
-```
-searchKey: math.p0S2
-tags: [private]
-```
-
-```Go
-var p0S2 = ...
-```
-
-### <a id="q0R8" href="#q0R8">var q0R8</a>
-
-```
-searchKey: math.q0R8
-tags: [private]
-```
-
-```Go
-var q0R8 = ...
-```
-
-for x in [inf, 8]=1/[0,0.125] 
-
-### <a id="q0S8" href="#q0S8">var q0S8</a>
-
-```
-searchKey: math.q0S8
-tags: [private]
-```
-
-```Go
-var q0S8 = ...
-```
-
-### <a id="q0R5" href="#q0R5">var q0R5</a>
-
-```
-searchKey: math.q0R5
-tags: [private]
-```
-
-```Go
-var q0R5 = ...
-```
-
-for x in [8,4.5454]=1/[0.125,0.22001] 
-
-### <a id="q0S5" href="#q0S5">var q0S5</a>
-
-```
-searchKey: math.q0S5
-tags: [private]
-```
-
-```Go
-var q0S5 = ...
-```
-
-### <a id="q0R3" href="#q0R3">var q0R3</a>
-
-```
-searchKey: math.q0R3
-tags: [private]
-```
-
-```Go
-var q0R3 = ...
-```
-
-for x in [4.547,2.8571]=1/[0.2199,0.35001] 
-
-### <a id="q0S3" href="#q0S3">var q0S3</a>
-
-```
-searchKey: math.q0S3
-tags: [private]
-```
-
-```Go
-var q0S3 = ...
-```
-
-### <a id="q0R2" href="#q0R2">var q0R2</a>
-
-```
-searchKey: math.q0R2
-tags: [private]
-```
-
-```Go
-var q0R2 = ...
-```
-
-for x in [2.8570,2]=1/[0.3499,0.5] 
-
-### <a id="q0S2" href="#q0S2">var q0S2</a>
-
-```
-searchKey: math.q0S2
-tags: [private]
-```
-
-```Go
-var q0S2 = ...
-```
-
-### <a id="p1R8" href="#p1R8">var p1R8</a>
-
-```
-searchKey: math.p1R8
-tags: [private]
-```
-
-```Go
-var p1R8 = ...
-```
-
-for x in [inf, 8]=1/[0,0.125] 
-
-### <a id="p1S8" href="#p1S8">var p1S8</a>
-
-```
-searchKey: math.p1S8
-tags: [private]
-```
-
-```Go
-var p1S8 = ...
-```
-
-### <a id="p1R5" href="#p1R5">var p1R5</a>
-
-```
-searchKey: math.p1R5
-tags: [private]
-```
-
-```Go
-var p1R5 = ...
-```
-
-for x in [8,4.5454] = 1/[0.125,0.22001] 
-
-### <a id="p1S5" href="#p1S5">var p1S5</a>
-
-```
-searchKey: math.p1S5
-tags: [private]
-```
-
-```Go
-var p1S5 = ...
-```
-
-### <a id="p1R3" href="#p1R3">var p1R3</a>
-
-```
-searchKey: math.p1R3
-tags: [private]
-```
-
-```Go
-var p1R3 = ...
-```
-
-for x in[4.5453,2.8571] = 1/[0.2199,0.35001] 
-
-### <a id="p1S3" href="#p1S3">var p1S3</a>
-
-```
-searchKey: math.p1S3
-tags: [private]
-```
-
-```Go
-var p1S3 = ...
-```
-
-### <a id="p1R2" href="#p1R2">var p1R2</a>
-
-```
-searchKey: math.p1R2
-tags: [private]
-```
-
-```Go
-var p1R2 = ...
-```
-
-for x in [2.8570,2] = 1/[0.3499,0.5] 
-
-### <a id="p1S2" href="#p1S2">var p1S2</a>
-
-```
-searchKey: math.p1S2
-tags: [private]
-```
-
-```Go
-var p1S2 = ...
-```
-
-### <a id="q1R8" href="#q1R8">var q1R8</a>
-
-```
-searchKey: math.q1R8
-tags: [private]
-```
-
-```Go
-var q1R8 = ...
-```
-
-for x in [inf, 8] = 1/[0,0.125] 
-
-### <a id="q1S8" href="#q1S8">var q1S8</a>
-
-```
-searchKey: math.q1S8
-tags: [private]
-```
-
-```Go
-var q1S8 = ...
-```
-
-### <a id="q1R5" href="#q1R5">var q1R5</a>
-
-```
-searchKey: math.q1R5
-tags: [private]
-```
-
-```Go
-var q1R5 = ...
-```
-
-for x in [8,4.5454] = 1/[0.125,0.22001] 
-
-### <a id="q1S5" href="#q1S5">var q1S5</a>
-
-```
-searchKey: math.q1S5
-tags: [private]
-```
-
-```Go
-var q1S5 = ...
-```
-
-### <a id="q1R3" href="#q1R3">var q1R3</a>
-
-```
-searchKey: math.q1R3
-tags: [private]
-```
-
-```Go
-var q1R3 = ...
-```
-
-for x in [4.5454,2.8571] = 1/[0.2199,0.35001] ??? 
-
-### <a id="q1S3" href="#q1S3">var q1S3</a>
-
-```
-searchKey: math.q1S3
-tags: [private]
-```
-
-```Go
-var q1S3 = ...
-```
-
-### <a id="q1R2" href="#q1R2">var q1R2</a>
-
-```
-searchKey: math.q1R2
-tags: [private]
-```
-
-```Go
-var q1R2 = ...
-```
-
-for x in [2.8570,2] = 1/[0.3499,0.5] 
-
-### <a id="q1S2" href="#q1S2">var q1S2</a>
-
-```
-searchKey: math.q1S2
-tags: [private]
-```
-
-```Go
-var q1S2 = ...
-```
-
 ### <a id="_lgamA" href="#_lgamA">var _lgamA</a>
 
 ```
 searchKey: math._lgamA
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -2993,7 +3175,7 @@ var _lgamA = ...
 
 ```
 searchKey: math._lgamR
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -3004,7 +3186,7 @@ var _lgamR = ...
 
 ```
 searchKey: math._lgamS
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -3015,7 +3197,7 @@ var _lgamS = ...
 
 ```
 searchKey: math._lgamT
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -3026,7 +3208,7 @@ var _lgamT = ...
 
 ```
 searchKey: math._lgamU
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -3037,7 +3219,7 @@ var _lgamU = ...
 
 ```
 searchKey: math._lgamV
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -3048,57 +3230,18 @@ var _lgamV = ...
 
 ```
 searchKey: math._lgamW
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
 var _lgamW = ...
 ```
 
-### <a id="pow10tab" href="#pow10tab">var pow10tab</a>
-
-```
-searchKey: math.pow10tab
-tags: [private]
-```
-
-```Go
-var pow10tab = ...
-```
-
-pow10tab stores the pre-computed values 10**i for i < 32. 
-
-### <a id="pow10postab32" href="#pow10postab32">var pow10postab32</a>
-
-```
-searchKey: math.pow10postab32
-tags: [private]
-```
-
-```Go
-var pow10postab32 = ...
-```
-
-pow10postab32 stores the pre-computed value for 10**(i*32) at index i. 
-
-### <a id="pow10negtab32" href="#pow10negtab32">var pow10negtab32</a>
-
-```
-searchKey: math.pow10negtab32
-tags: [private]
-```
-
-```Go
-var pow10negtab32 = ...
-```
-
-pow10negtab32 stores the pre-computed value for 10**(-i*32) at index i. 
-
 ### <a id="_sin" href="#_sin">var _sin</a>
 
 ```
 searchKey: math._sin
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -3107,24 +3250,11 @@ var _sin = ...
 
 sin coefficients 
 
-### <a id="_cos" href="#_cos">var _cos</a>
-
-```
-searchKey: math._cos
-tags: [private]
-```
-
-```Go
-var _cos = ...
-```
-
-cos coefficients 
-
 ### <a id="_tanP" href="#_tanP">var _tanP</a>
 
 ```
 searchKey: math._tanP
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -3137,111 +3267,24 @@ tan coefficients
 
 ```
 searchKey: math._tanQ
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
 var _tanQ = ...
 ```
 
-### <a id="tanhP" href="#tanhP">var tanhP</a>
-
-```
-searchKey: math.tanhP
-tags: [private]
-```
-
-```Go
-var tanhP = ...
-```
-
-### <a id="tanhQ" href="#tanhQ">var tanhQ</a>
-
-```
-searchKey: math.tanhQ
-tags: [private]
-```
-
-```Go
-var tanhQ = ...
-```
-
-### <a id="mPi4" href="#mPi4">var mPi4</a>
-
-```
-searchKey: math.mPi4
-tags: [private]
-```
-
-```Go
-var mPi4 = ...
-```
-
-mPi4 is the binary digits of 4/pi as a uint64 array, that is, 4/pi = Sum mPi4[i]*2^(-64*i) 19 64-bit digits and the leading one bit give 1217 bits of precision to handle the largest possible float64 exponent. 
-
-### <a id="ExpGo" href="#ExpGo">var ExpGo</a>
-
-```
-searchKey: math.ExpGo
-tags: [private]
-```
-
-```Go
-var ExpGo = exp
-```
-
-Export internal functions for testing. 
-
-### <a id="Exp2Go" href="#Exp2Go">var Exp2Go</a>
-
-```
-searchKey: math.Exp2Go
-tags: [private]
-```
-
-```Go
-var Exp2Go = exp2
-```
-
-### <a id="HypotGo" href="#HypotGo">var HypotGo</a>
-
-```
-searchKey: math.HypotGo
-tags: [private]
-```
-
-```Go
-var HypotGo = hypot
-```
-
-### <a id="SqrtGo" href="#SqrtGo">var SqrtGo</a>
-
-```
-searchKey: math.SqrtGo
-tags: [private]
-```
-
-```Go
-var SqrtGo = sqrt
-```
-
-### <a id="TrigReduce" href="#TrigReduce">var TrigReduce</a>
-
-```
-searchKey: math.TrigReduce
-tags: [private]
-```
-
-```Go
-var TrigReduce = trigReduce
-```
-
 ## <a id="func" href="#func">Functions</a>
+
+```
+tags: [package]
+```
 
 ### <a id="Abs" href="#Abs">func Abs(x float64) float64</a>
 
 ```
 searchKey: math.Abs
+tags: [method]
 ```
 
 ```Go
@@ -3257,10 +3300,30 @@ Abs(±Inf) = +Inf
 Abs(NaN) = NaN
 
 ```
+### <a id="Acos" href="#Acos">func Acos(x float64) float64</a>
+
+```
+searchKey: math.Acos
+tags: [method]
+```
+
+```Go
+func Acos(x float64) float64
+```
+
+Acos returns the arccosine, in radians, of x. 
+
+Special case is: 
+
+```
+Acos(x) = NaN if x < -1 or x > 1
+
+```
 ### <a id="Acosh" href="#Acosh">func Acosh(x float64) float64</a>
 
 ```
 searchKey: math.Acosh
+tags: [method]
 ```
 
 ```Go
@@ -3277,21 +3340,11 @@ Acosh(x) = NaN if x < 1
 Acosh(NaN) = NaN
 
 ```
-### <a id="acosh" href="#acosh">func acosh(x float64) float64</a>
-
-```
-searchKey: math.acosh
-tags: [private]
-```
-
-```Go
-func acosh(x float64) float64
-```
-
 ### <a id="Asin" href="#Asin">func Asin(x float64) float64</a>
 
 ```
 searchKey: math.Asin
+tags: [method]
 ```
 
 ```Go
@@ -3307,50 +3360,11 @@ Asin(±0) = ±0
 Asin(x) = NaN if x < -1 or x > 1
 
 ```
-### <a id="asin" href="#asin">func asin(x float64) float64</a>
-
-```
-searchKey: math.asin
-tags: [private]
-```
-
-```Go
-func asin(x float64) float64
-```
-
-### <a id="Acos" href="#Acos">func Acos(x float64) float64</a>
-
-```
-searchKey: math.Acos
-```
-
-```Go
-func Acos(x float64) float64
-```
-
-Acos returns the arccosine, in radians, of x. 
-
-Special case is: 
-
-```
-Acos(x) = NaN if x < -1 or x > 1
-
-```
-### <a id="acos" href="#acos">func acos(x float64) float64</a>
-
-```
-searchKey: math.acos
-tags: [private]
-```
-
-```Go
-func acos(x float64) float64
-```
-
 ### <a id="Asinh" href="#Asinh">func Asinh(x float64) float64</a>
 
 ```
 searchKey: math.Asinh
+tags: [method]
 ```
 
 ```Go
@@ -3367,47 +3381,11 @@ Asinh(±Inf) = ±Inf
 Asinh(NaN) = NaN
 
 ```
-### <a id="asinh" href="#asinh">func asinh(x float64) float64</a>
-
-```
-searchKey: math.asinh
-tags: [private]
-```
-
-```Go
-func asinh(x float64) float64
-```
-
-### <a id="xatan" href="#xatan">func xatan(x float64) float64</a>
-
-```
-searchKey: math.xatan
-tags: [private]
-```
-
-```Go
-func xatan(x float64) float64
-```
-
-xatan evaluates a series valid in the range [0, 0.66]. 
-
-### <a id="satan" href="#satan">func satan(x float64) float64</a>
-
-```
-searchKey: math.satan
-tags: [private]
-```
-
-```Go
-func satan(x float64) float64
-```
-
-satan reduces its argument (known to be positive) to the range [0, 0.66] and calls xatan. 
-
 ### <a id="Atan" href="#Atan">func Atan(x float64) float64</a>
 
 ```
 searchKey: math.Atan
+tags: [method]
 ```
 
 ```Go
@@ -3423,21 +3401,11 @@ Atan(±0) = ±0
 Atan(±Inf) = ±Pi/2
 
 ```
-### <a id="atan" href="#atan">func atan(x float64) float64</a>
-
-```
-searchKey: math.atan
-tags: [private]
-```
-
-```Go
-func atan(x float64) float64
-```
-
 ### <a id="Atan2" href="#Atan2">func Atan2(y, x float64) float64</a>
 
 ```
 searchKey: math.Atan2
+tags: [method]
 ```
 
 ```Go
@@ -3468,21 +3436,11 @@ Atan2(+Inf, x) = +Pi/2
 Atan2(-Inf, x) = -Pi/2
 
 ```
-### <a id="atan2" href="#atan2">func atan2(y, x float64) float64</a>
-
-```
-searchKey: math.atan2
-tags: [private]
-```
-
-```Go
-func atan2(y, x float64) float64
-```
-
 ### <a id="Atanh" href="#Atanh">func Atanh(x float64) float64</a>
 
 ```
 searchKey: math.Atanh
+tags: [method]
 ```
 
 ```Go
@@ -3501,82 +3459,11 @@ Atanh(x) = NaN if x < -1 or x > 1
 Atanh(NaN) = NaN
 
 ```
-### <a id="atanh" href="#atanh">func atanh(x float64) float64</a>
-
-```
-searchKey: math.atanh
-tags: [private]
-```
-
-```Go
-func atanh(x float64) float64
-```
-
-### <a id="Inf" href="#Inf">func Inf(sign int) float64</a>
-
-```
-searchKey: math.Inf
-```
-
-```Go
-func Inf(sign int) float64
-```
-
-Inf returns positive infinity if sign >= 0, negative infinity if sign < 0. 
-
-### <a id="NaN" href="#NaN">func NaN() float64</a>
-
-```
-searchKey: math.NaN
-```
-
-```Go
-func NaN() float64
-```
-
-NaN returns an IEEE 754 `not-a-number' value. 
-
-### <a id="IsNaN" href="#IsNaN">func IsNaN(f float64) (is bool)</a>
-
-```
-searchKey: math.IsNaN
-```
-
-```Go
-func IsNaN(f float64) (is bool)
-```
-
-IsNaN reports whether f is an IEEE 754 `not-a-number' value. 
-
-### <a id="IsInf" href="#IsInf">func IsInf(f float64, sign int) bool</a>
-
-```
-searchKey: math.IsInf
-```
-
-```Go
-func IsInf(f float64, sign int) bool
-```
-
-IsInf reports whether f is an infinity, according to sign. If sign > 0, IsInf reports whether f is positive infinity. If sign < 0, IsInf reports whether f is negative infinity. If sign == 0, IsInf reports whether f is either infinity. 
-
-### <a id="normalize" href="#normalize">func normalize(x float64) (y float64, exp int)</a>
-
-```
-searchKey: math.normalize
-tags: [private]
-```
-
-```Go
-func normalize(x float64) (y float64, exp int)
-```
-
-normalize returns a normal number y and exponent exp satisfying x == y × 2**exp. It assumes x is finite and non-zero. 
-
 ### <a id="Cbrt" href="#Cbrt">func Cbrt(x float64) float64</a>
 
 ```
 searchKey: math.Cbrt
+tags: [method]
 ```
 
 ```Go
@@ -3593,21 +3480,32 @@ Cbrt(±Inf) = ±Inf
 Cbrt(NaN) = NaN
 
 ```
-### <a id="cbrt" href="#cbrt">func cbrt(x float64) float64</a>
+### <a id="Ceil" href="#Ceil">func Ceil(x float64) float64</a>
 
 ```
-searchKey: math.cbrt
-tags: [private]
+searchKey: math.Ceil
+tags: [method]
 ```
 
 ```Go
-func cbrt(x float64) float64
+func Ceil(x float64) float64
 ```
 
+Ceil returns the least integer value greater than or equal to x. 
+
+Special cases are: 
+
+```
+Ceil(±0) = ±0
+Ceil(±Inf) = ±Inf
+Ceil(NaN) = NaN
+
+```
 ### <a id="Copysign" href="#Copysign">func Copysign(x, y float64) float64</a>
 
 ```
 searchKey: math.Copysign
+tags: [method]
 ```
 
 ```Go
@@ -3616,10 +3514,52 @@ func Copysign(x, y float64) float64
 
 Copysign returns a value with the magnitude of x and the sign of y. 
 
+### <a id="Cos" href="#Cos">func Cos(x float64) float64</a>
+
+```
+searchKey: math.Cos
+tags: [method]
+```
+
+```Go
+func Cos(x float64) float64
+```
+
+Cos returns the cosine of the radian argument x. 
+
+Special cases are: 
+
+```
+Cos(±Inf) = NaN
+Cos(NaN) = NaN
+
+```
+### <a id="Cosh" href="#Cosh">func Cosh(x float64) float64</a>
+
+```
+searchKey: math.Cosh
+tags: [method]
+```
+
+```Go
+func Cosh(x float64) float64
+```
+
+Cosh returns the hyperbolic cosine of x. 
+
+Special cases are: 
+
+```
+Cosh(±0) = 1
+Cosh(±Inf) = +Inf
+Cosh(NaN) = NaN
+
+```
 ### <a id="Dim" href="#Dim">func Dim(x, y float64) float64</a>
 
 ```
 searchKey: math.Dim
+tags: [method]
 ```
 
 ```Go
@@ -3636,95 +3576,11 @@ Dim(-Inf, -Inf) = NaN
 Dim(x, NaN) = Dim(NaN, x) = NaN
 
 ```
-### <a id="Max" href="#Max">func Max(x, y float64) float64</a>
-
-```
-searchKey: math.Max
-```
-
-```Go
-func Max(x, y float64) float64
-```
-
-Max returns the larger of x or y. 
-
-Special cases are: 
-
-```
-Max(x, +Inf) = Max(+Inf, x) = +Inf
-Max(x, NaN) = Max(NaN, x) = NaN
-Max(+0, ±0) = Max(±0, +0) = +0
-Max(-0, -0) = -0
-
-```
-### <a id="max" href="#max">func max(x, y float64) float64</a>
-
-```
-searchKey: math.max
-tags: [private]
-```
-
-```Go
-func max(x, y float64) float64
-```
-
-### <a id="Min" href="#Min">func Min(x, y float64) float64</a>
-
-```
-searchKey: math.Min
-```
-
-```Go
-func Min(x, y float64) float64
-```
-
-Min returns the smaller of x or y. 
-
-Special cases are: 
-
-```
-Min(x, -Inf) = Min(-Inf, x) = -Inf
-Min(x, NaN) = Min(NaN, x) = NaN
-Min(-0, ±0) = Min(±0, -0) = -0
-
-```
-### <a id="min" href="#min">func min(x, y float64) float64</a>
-
-```
-searchKey: math.min
-tags: [private]
-```
-
-```Go
-func min(x, y float64) float64
-```
-
-### <a id="archMax" href="#archMax">func archMax(x, y float64) float64</a>
-
-```
-searchKey: math.archMax
-tags: [private]
-```
-
-```Go
-func archMax(x, y float64) float64
-```
-
-### <a id="archMin" href="#archMin">func archMin(x, y float64) float64</a>
-
-```
-searchKey: math.archMin
-tags: [private]
-```
-
-```Go
-func archMin(x, y float64) float64
-```
-
 ### <a id="Erf" href="#Erf">func Erf(x float64) float64</a>
 
 ```
 searchKey: math.Erf
+tags: [method]
 ```
 
 ```Go
@@ -3741,21 +3597,11 @@ Erf(-Inf) = -1
 Erf(NaN) = NaN
 
 ```
-### <a id="erf" href="#erf">func erf(x float64) float64</a>
-
-```
-searchKey: math.erf
-tags: [private]
-```
-
-```Go
-func erf(x float64) float64
-```
-
 ### <a id="Erfc" href="#Erfc">func Erfc(x float64) float64</a>
 
 ```
 searchKey: math.Erfc
+tags: [method]
 ```
 
 ```Go
@@ -3772,42 +3618,11 @@ Erfc(-Inf) = 2
 Erfc(NaN) = NaN
 
 ```
-### <a id="erfc" href="#erfc">func erfc(x float64) float64</a>
-
-```
-searchKey: math.erfc
-tags: [private]
-```
-
-```Go
-func erfc(x float64) float64
-```
-
-### <a id="Erfinv" href="#Erfinv">func Erfinv(x float64) float64</a>
-
-```
-searchKey: math.Erfinv
-```
-
-```Go
-func Erfinv(x float64) float64
-```
-
-Erfinv returns the inverse error function of x. 
-
-Special cases are: 
-
-```
-Erfinv(1) = +Inf
-Erfinv(-1) = -Inf
-Erfinv(x) = NaN if x < -1 or x > 1
-Erfinv(NaN) = NaN
-
-```
 ### <a id="Erfcinv" href="#Erfcinv">func Erfcinv(x float64) float64</a>
 
 ```
 searchKey: math.Erfcinv
+tags: [method]
 ```
 
 ```Go
@@ -3825,10 +3640,33 @@ Erfcinv(x) = NaN if x < 0 or x > 2
 Erfcinv(NaN) = NaN
 
 ```
+### <a id="Erfinv" href="#Erfinv">func Erfinv(x float64) float64</a>
+
+```
+searchKey: math.Erfinv
+tags: [method]
+```
+
+```Go
+func Erfinv(x float64) float64
+```
+
+Erfinv returns the inverse error function of x. 
+
+Special cases are: 
+
+```
+Erfinv(1) = +Inf
+Erfinv(-1) = -Inf
+Erfinv(x) = NaN if x < -1 or x > 1
+Erfinv(NaN) = NaN
+
+```
 ### <a id="Exp" href="#Exp">func Exp(x float64) float64</a>
 
 ```
 searchKey: math.Exp
+tags: [method]
 ```
 
 ```Go
@@ -3846,21 +3684,11 @@ Exp(NaN) = NaN
 ```
 Very large values overflow to 0 or +Inf. Very small values underflow to 1. 
 
-### <a id="exp" href="#exp">func exp(x float64) float64</a>
-
-```
-searchKey: math.exp
-tags: [private]
-```
-
-```Go
-func exp(x float64) float64
-```
-
 ### <a id="Exp2" href="#Exp2">func Exp2(x float64) float64</a>
 
 ```
 searchKey: math.Exp2
+tags: [method]
 ```
 
 ```Go
@@ -3871,56 +3699,11 @@ Exp2 returns 2**x, the base-2 exponential of x.
 
 Special cases are the same as Exp. 
 
-### <a id="exp2" href="#exp2">func exp2(x float64) float64</a>
-
-```
-searchKey: math.exp2
-tags: [private]
-```
-
-```Go
-func exp2(x float64) float64
-```
-
-### <a id="expmulti" href="#expmulti">func expmulti(hi, lo float64, k int) float64</a>
-
-```
-searchKey: math.expmulti
-tags: [private]
-```
-
-```Go
-func expmulti(hi, lo float64, k int) float64
-```
-
-exp1 returns e**r × 2**k where r = hi - lo and |r| ≤ ln(2)/2. 
-
-### <a id="archExp2" href="#archExp2">func archExp2(x float64) float64</a>
-
-```
-searchKey: math.archExp2
-tags: [private]
-```
-
-```Go
-func archExp2(x float64) float64
-```
-
-### <a id="archExp" href="#archExp">func archExp(x float64) float64</a>
-
-```
-searchKey: math.archExp
-tags: [private]
-```
-
-```Go
-func archExp(x float64) float64
-```
-
 ### <a id="Expm1" href="#Expm1">func Expm1(x float64) float64</a>
 
 ```
 searchKey: math.Expm1
+tags: [method]
 ```
 
 ```Go
@@ -3939,21 +3722,76 @@ Expm1(NaN) = NaN
 ```
 Very large values overflow to -1 or +Inf. 
 
-### <a id="expm1" href="#expm1">func expm1(x float64) float64</a>
+### <a id="FMA" href="#FMA">func FMA(x, y, z float64) float64</a>
 
 ```
-searchKey: math.expm1
-tags: [private]
+searchKey: math.FMA
+tags: [method]
 ```
 
 ```Go
-func expm1(x float64) float64
+func FMA(x, y, z float64) float64
 ```
+
+FMA returns x * y + z, computed with only one rounding. (That is, FMA returns the fused multiply-add of x, y, and z.) 
+
+### <a id="Float32bits" href="#Float32bits">func Float32bits(f float32) uint32</a>
+
+```
+searchKey: math.Float32bits
+tags: [method]
+```
+
+```Go
+func Float32bits(f float32) uint32
+```
+
+Float32bits returns the IEEE 754 binary representation of f, with the sign bit of f and the result in the same bit position. Float32bits(Float32frombits(x)) == x. 
+
+### <a id="Float32frombits" href="#Float32frombits">func Float32frombits(b uint32) float32</a>
+
+```
+searchKey: math.Float32frombits
+tags: [method]
+```
+
+```Go
+func Float32frombits(b uint32) float32
+```
+
+Float32frombits returns the floating-point number corresponding to the IEEE 754 binary representation b, with the sign bit of b and the result in the same bit position. Float32frombits(Float32bits(x)) == x. 
+
+### <a id="Float64bits" href="#Float64bits">func Float64bits(f float64) uint64</a>
+
+```
+searchKey: math.Float64bits
+tags: [method]
+```
+
+```Go
+func Float64bits(f float64) uint64
+```
+
+Float64bits returns the IEEE 754 binary representation of f, with the sign bit of f and the result in the same bit position, and Float64bits(Float64frombits(x)) == x. 
+
+### <a id="Float64frombits" href="#Float64frombits">func Float64frombits(b uint64) float64</a>
+
+```
+searchKey: math.Float64frombits
+tags: [method]
+```
+
+```Go
+func Float64frombits(b uint64) float64
+```
+
+Float64frombits returns the floating-point number corresponding to the IEEE 754 binary representation b, with the sign bit of b and the result in the same bit position. Float64frombits(Float64bits(x)) == x. 
 
 ### <a id="Floor" href="#Floor">func Floor(x float64) float64</a>
 
 ```
 searchKey: math.Floor
+tags: [method]
 ```
 
 ```Go
@@ -3970,249 +3808,11 @@ Floor(±Inf) = ±Inf
 Floor(NaN) = NaN
 
 ```
-### <a id="floor" href="#floor">func floor(x float64) float64</a>
-
-```
-searchKey: math.floor
-tags: [private]
-```
-
-```Go
-func floor(x float64) float64
-```
-
-### <a id="Ceil" href="#Ceil">func Ceil(x float64) float64</a>
-
-```
-searchKey: math.Ceil
-```
-
-```Go
-func Ceil(x float64) float64
-```
-
-Ceil returns the least integer value greater than or equal to x. 
-
-Special cases are: 
-
-```
-Ceil(±0) = ±0
-Ceil(±Inf) = ±Inf
-Ceil(NaN) = NaN
-
-```
-### <a id="ceil" href="#ceil">func ceil(x float64) float64</a>
-
-```
-searchKey: math.ceil
-tags: [private]
-```
-
-```Go
-func ceil(x float64) float64
-```
-
-### <a id="Trunc" href="#Trunc">func Trunc(x float64) float64</a>
-
-```
-searchKey: math.Trunc
-```
-
-```Go
-func Trunc(x float64) float64
-```
-
-Trunc returns the integer value of x. 
-
-Special cases are: 
-
-```
-Trunc(±0) = ±0
-Trunc(±Inf) = ±Inf
-Trunc(NaN) = NaN
-
-```
-### <a id="trunc" href="#trunc">func trunc(x float64) float64</a>
-
-```
-searchKey: math.trunc
-tags: [private]
-```
-
-```Go
-func trunc(x float64) float64
-```
-
-### <a id="Round" href="#Round">func Round(x float64) float64</a>
-
-```
-searchKey: math.Round
-```
-
-```Go
-func Round(x float64) float64
-```
-
-Round returns the nearest integer, rounding half away from zero. 
-
-Special cases are: 
-
-```
-Round(±0) = ±0
-Round(±Inf) = ±Inf
-Round(NaN) = NaN
-
-```
-### <a id="RoundToEven" href="#RoundToEven">func RoundToEven(x float64) float64</a>
-
-```
-searchKey: math.RoundToEven
-```
-
-```Go
-func RoundToEven(x float64) float64
-```
-
-RoundToEven returns the nearest integer, rounding ties to even. 
-
-Special cases are: 
-
-```
-RoundToEven(±0) = ±0
-RoundToEven(±Inf) = ±Inf
-RoundToEven(NaN) = NaN
-
-```
-### <a id="archFloor" href="#archFloor">func archFloor(x float64) float64</a>
-
-```
-searchKey: math.archFloor
-tags: [private]
-```
-
-```Go
-func archFloor(x float64) float64
-```
-
-### <a id="archCeil" href="#archCeil">func archCeil(x float64) float64</a>
-
-```
-searchKey: math.archCeil
-tags: [private]
-```
-
-```Go
-func archCeil(x float64) float64
-```
-
-### <a id="archTrunc" href="#archTrunc">func archTrunc(x float64) float64</a>
-
-```
-searchKey: math.archTrunc
-tags: [private]
-```
-
-```Go
-func archTrunc(x float64) float64
-```
-
-### <a id="zero" href="#zero">func zero(x uint64) uint64</a>
-
-```
-searchKey: math.zero
-tags: [private]
-```
-
-```Go
-func zero(x uint64) uint64
-```
-
-### <a id="nonzero" href="#nonzero">func nonzero(x uint64) uint64</a>
-
-```
-searchKey: math.nonzero
-tags: [private]
-```
-
-```Go
-func nonzero(x uint64) uint64
-```
-
-### <a id="shl" href="#shl">func shl(u1, u2 uint64, n uint) (r1, r2 uint64)</a>
-
-```
-searchKey: math.shl
-tags: [private]
-```
-
-```Go
-func shl(u1, u2 uint64, n uint) (r1, r2 uint64)
-```
-
-### <a id="shr" href="#shr">func shr(u1, u2 uint64, n uint) (r1, r2 uint64)</a>
-
-```
-searchKey: math.shr
-tags: [private]
-```
-
-```Go
-func shr(u1, u2 uint64, n uint) (r1, r2 uint64)
-```
-
-### <a id="shrcompress" href="#shrcompress">func shrcompress(u1, u2 uint64, n uint) (r1, r2 uint64)</a>
-
-```
-searchKey: math.shrcompress
-tags: [private]
-```
-
-```Go
-func shrcompress(u1, u2 uint64, n uint) (r1, r2 uint64)
-```
-
-shrcompress compresses the bottom n+1 bits of the two-word value into a single bit. the result is equal to the value shifted to the right by n, except the result's 0th bit is set to the bitwise OR of the bottom n+1 bits. 
-
-### <a id="lz" href="#lz">func lz(u1, u2 uint64) (l int32)</a>
-
-```
-searchKey: math.lz
-tags: [private]
-```
-
-```Go
-func lz(u1, u2 uint64) (l int32)
-```
-
-### <a id="split" href="#split">func split(b uint64) (sign uint32, exp int32, mantissa uint64)</a>
-
-```
-searchKey: math.split
-tags: [private]
-```
-
-```Go
-func split(b uint64) (sign uint32, exp int32, mantissa uint64)
-```
-
-split splits b into sign, biased exponent, and mantissa. It adds the implicit 1 bit to the mantissa for normal values, and normalizes subnormal values. 
-
-### <a id="FMA" href="#FMA">func FMA(x, y, z float64) float64</a>
-
-```
-searchKey: math.FMA
-```
-
-```Go
-func FMA(x, y, z float64) float64
-```
-
-FMA returns x * y + z, computed with only one rounding. (That is, FMA returns the fused multiply-add of x, y, and z.) 
-
 ### <a id="Frexp" href="#Frexp">func Frexp(f float64) (frac float64, exp int)</a>
 
 ```
 searchKey: math.Frexp
+tags: [method]
 ```
 
 ```Go
@@ -4229,34 +3829,11 @@ Frexp(±Inf) = ±Inf, 0
 Frexp(NaN) = NaN, 0
 
 ```
-### <a id="frexp" href="#frexp">func frexp(f float64) (frac float64, exp int)</a>
-
-```
-searchKey: math.frexp
-tags: [private]
-```
-
-```Go
-func frexp(f float64) (frac float64, exp int)
-```
-
-### <a id="stirling" href="#stirling">func stirling(x float64) (float64, float64)</a>
-
-```
-searchKey: math.stirling
-tags: [private]
-```
-
-```Go
-func stirling(x float64) (float64, float64)
-```
-
-Gamma function computed by Stirling's formula. The pair of results must be multiplied together to get the actual answer. The multiplication is left to the caller so that, if careful, the caller can avoid infinity for 172 <= x <= 180. The polynomial is valid for 33 <= x <= 172; larger values are only used in reciprocal and produce denormalized floats. The lower precision there masks any imprecision in the polynomial. 
-
 ### <a id="Gamma" href="#Gamma">func Gamma(x float64) float64</a>
 
 ```
 searchKey: math.Gamma
+tags: [method]
 ```
 
 ```Go
@@ -4276,21 +3853,11 @@ Gamma(-Inf) = NaN
 Gamma(NaN) = NaN
 
 ```
-### <a id="isNegInt" href="#isNegInt">func isNegInt(x float64) bool</a>
-
-```
-searchKey: math.isNegInt
-tags: [private]
-```
-
-```Go
-func isNegInt(x float64) bool
-```
-
 ### <a id="Hypot" href="#Hypot">func Hypot(p, q float64) float64</a>
 
 ```
 searchKey: math.Hypot
+tags: [method]
 ```
 
 ```Go
@@ -4308,32 +3875,71 @@ Hypot(NaN, q) = NaN
 Hypot(p, NaN) = NaN
 
 ```
-### <a id="hypot" href="#hypot">func hypot(p, q float64) float64</a>
+### <a id="Ilogb" href="#Ilogb">func Ilogb(x float64) int</a>
 
 ```
-searchKey: math.hypot
-tags: [private]
-```
-
-```Go
-func hypot(p, q float64) float64
-```
-
-### <a id="archHypot" href="#archHypot">func archHypot(p, q float64) float64</a>
-
-```
-searchKey: math.archHypot
-tags: [private]
+searchKey: math.Ilogb
+tags: [method]
 ```
 
 ```Go
-func archHypot(p, q float64) float64
+func Ilogb(x float64) int
 ```
+
+Ilogb returns the binary exponent of x as an integer. 
+
+Special cases are: 
+
+```
+Ilogb(±Inf) = MaxInt32
+Ilogb(0) = MinInt32
+Ilogb(NaN) = MaxInt32
+
+```
+### <a id="Inf" href="#Inf">func Inf(sign int) float64</a>
+
+```
+searchKey: math.Inf
+tags: [method]
+```
+
+```Go
+func Inf(sign int) float64
+```
+
+Inf returns positive infinity if sign >= 0, negative infinity if sign < 0. 
+
+### <a id="IsInf" href="#IsInf">func IsInf(f float64, sign int) bool</a>
+
+```
+searchKey: math.IsInf
+tags: [method]
+```
+
+```Go
+func IsInf(f float64, sign int) bool
+```
+
+IsInf reports whether f is an infinity, according to sign. If sign > 0, IsInf reports whether f is positive infinity. If sign < 0, IsInf reports whether f is negative infinity. If sign == 0, IsInf reports whether f is either infinity. 
+
+### <a id="IsNaN" href="#IsNaN">func IsNaN(f float64) (is bool)</a>
+
+```
+searchKey: math.IsNaN
+tags: [method]
+```
+
+```Go
+func IsNaN(f float64) (is bool)
+```
+
+IsNaN reports whether f is an IEEE 754 `not-a-number' value. 
 
 ### <a id="J0" href="#J0">func J0(x float64) float64</a>
 
 ```
 searchKey: math.J0
+tags: [method]
 ```
 
 ```Go
@@ -4350,53 +3956,11 @@ J0(0) = 1
 J0(NaN) = NaN
 
 ```
-### <a id="Y0" href="#Y0">func Y0(x float64) float64</a>
-
-```
-searchKey: math.Y0
-```
-
-```Go
-func Y0(x float64) float64
-```
-
-Y0 returns the order-zero Bessel function of the second kind. 
-
-Special cases are: 
-
-```
-Y0(+Inf) = 0
-Y0(0) = -Inf
-Y0(x < 0) = NaN
-Y0(NaN) = NaN
-
-```
-### <a id="pzero" href="#pzero">func pzero(x float64) float64</a>
-
-```
-searchKey: math.pzero
-tags: [private]
-```
-
-```Go
-func pzero(x float64) float64
-```
-
-### <a id="qzero" href="#qzero">func qzero(x float64) float64</a>
-
-```
-searchKey: math.qzero
-tags: [private]
-```
-
-```Go
-func qzero(x float64) float64
-```
-
 ### <a id="J1" href="#J1">func J1(x float64) float64</a>
 
 ```
 searchKey: math.J1
+tags: [method]
 ```
 
 ```Go
@@ -4412,53 +3976,11 @@ J1(±Inf) = 0
 J1(NaN) = NaN
 
 ```
-### <a id="Y1" href="#Y1">func Y1(x float64) float64</a>
-
-```
-searchKey: math.Y1
-```
-
-```Go
-func Y1(x float64) float64
-```
-
-Y1 returns the order-one Bessel function of the second kind. 
-
-Special cases are: 
-
-```
-Y1(+Inf) = 0
-Y1(0) = -Inf
-Y1(x < 0) = NaN
-Y1(NaN) = NaN
-
-```
-### <a id="pone" href="#pone">func pone(x float64) float64</a>
-
-```
-searchKey: math.pone
-tags: [private]
-```
-
-```Go
-func pone(x float64) float64
-```
-
-### <a id="qone" href="#qone">func qone(x float64) float64</a>
-
-```
-searchKey: math.qone
-tags: [private]
-```
-
-```Go
-func qone(x float64) float64
-```
-
 ### <a id="Jn" href="#Jn">func Jn(n int, x float64) float64</a>
 
 ```
 searchKey: math.Jn
+tags: [method]
 ```
 
 ```Go
@@ -4474,32 +3996,11 @@ Jn(n, ±Inf) = 0
 Jn(n, NaN) = NaN
 
 ```
-### <a id="Yn" href="#Yn">func Yn(n int, x float64) float64</a>
-
-```
-searchKey: math.Yn
-```
-
-```Go
-func Yn(n int, x float64) float64
-```
-
-Yn returns the order-n Bessel function of the second kind. 
-
-Special cases are: 
-
-```
-Yn(n, +Inf) = 0
-Yn(n ≥ 0, 0) = -Inf
-Yn(n < 0, 0) = +Inf if n is odd, -Inf if n is even
-Yn(n, x < 0) = NaN
-Yn(n, NaN) = NaN
-
-```
 ### <a id="Ldexp" href="#Ldexp">func Ldexp(frac float64, exp int) float64</a>
 
 ```
 searchKey: math.Ldexp
+tags: [method]
 ```
 
 ```Go
@@ -4516,21 +4017,11 @@ Ldexp(±Inf, exp) = ±Inf
 Ldexp(NaN, exp) = NaN
 
 ```
-### <a id="ldexp" href="#ldexp">func ldexp(frac float64, exp int) float64</a>
-
-```
-searchKey: math.ldexp
-tags: [private]
-```
-
-```Go
-func ldexp(frac float64, exp int) float64
-```
-
 ### <a id="Lgamma" href="#Lgamma">func Lgamma(x float64) (lgamma float64, sign int)</a>
 
 ```
 searchKey: math.Lgamma
+tags: [method]
 ```
 
 ```Go
@@ -4549,23 +4040,11 @@ Lgamma(-Inf) = -Inf
 Lgamma(NaN) = NaN
 
 ```
-### <a id="sinPi" href="#sinPi">func sinPi(x float64) float64</a>
-
-```
-searchKey: math.sinPi
-tags: [private]
-```
-
-```Go
-func sinPi(x float64) float64
-```
-
-sinPi(x) is a helper function for negative x 
-
 ### <a id="Log" href="#Log">func Log(x float64) float64</a>
 
 ```
 searchKey: math.Log
+tags: [method]
 ```
 
 ```Go
@@ -4583,21 +4062,11 @@ Log(x < 0) = NaN
 Log(NaN) = NaN
 
 ```
-### <a id="log" href="#log">func log(x float64) float64</a>
-
-```
-searchKey: math.log
-tags: [private]
-```
-
-```Go
-func log(x float64) float64
-```
-
 ### <a id="Log10" href="#Log10">func Log10(x float64) float64</a>
 
 ```
 searchKey: math.Log10
+tags: [method]
 ```
 
 ```Go
@@ -4606,44 +4075,11 @@ func Log10(x float64) float64
 
 Log10 returns the decimal logarithm of x. The special cases are the same as for Log. 
 
-### <a id="log10" href="#log10">func log10(x float64) float64</a>
-
-```
-searchKey: math.log10
-tags: [private]
-```
-
-```Go
-func log10(x float64) float64
-```
-
-### <a id="Log2" href="#Log2">func Log2(x float64) float64</a>
-
-```
-searchKey: math.Log2
-```
-
-```Go
-func Log2(x float64) float64
-```
-
-Log2 returns the binary logarithm of x. The special cases are the same as for Log. 
-
-### <a id="log2" href="#log2">func log2(x float64) float64</a>
-
-```
-searchKey: math.log2
-tags: [private]
-```
-
-```Go
-func log2(x float64) float64
-```
-
 ### <a id="Log1p" href="#Log1p">func Log1p(x float64) float64</a>
 
 ```
 searchKey: math.Log1p
+tags: [method]
 ```
 
 ```Go
@@ -4662,32 +4098,24 @@ Log1p(x < -1) = NaN
 Log1p(NaN) = NaN
 
 ```
-### <a id="log1p" href="#log1p">func log1p(x float64) float64</a>
+### <a id="Log2" href="#Log2">func Log2(x float64) float64</a>
 
 ```
-searchKey: math.log1p
-tags: [private]
-```
-
-```Go
-func log1p(x float64) float64
-```
-
-### <a id="archLog" href="#archLog">func archLog(x float64) float64</a>
-
-```
-searchKey: math.archLog
-tags: [private]
+searchKey: math.Log2
+tags: [method]
 ```
 
 ```Go
-func archLog(x float64) float64
+func Log2(x float64) float64
 ```
+
+Log2 returns the binary logarithm of x. The special cases are the same as for Log. 
 
 ### <a id="Logb" href="#Logb">func Logb(x float64) float64</a>
 
 ```
 searchKey: math.Logb
+tags: [method]
 ```
 
 ```Go
@@ -4704,43 +4132,54 @@ Logb(0) = -Inf
 Logb(NaN) = NaN
 
 ```
-### <a id="Ilogb" href="#Ilogb">func Ilogb(x float64) int</a>
+### <a id="Max" href="#Max">func Max(x, y float64) float64</a>
 
 ```
-searchKey: math.Ilogb
+searchKey: math.Max
+tags: [method]
 ```
 
 ```Go
-func Ilogb(x float64) int
+func Max(x, y float64) float64
 ```
 
-Ilogb returns the binary exponent of x as an integer. 
+Max returns the larger of x or y. 
 
 Special cases are: 
 
 ```
-Ilogb(±Inf) = MaxInt32
-Ilogb(0) = MinInt32
-Ilogb(NaN) = MaxInt32
+Max(x, +Inf) = Max(+Inf, x) = +Inf
+Max(x, NaN) = Max(NaN, x) = NaN
+Max(+0, ±0) = Max(±0, +0) = +0
+Max(-0, -0) = -0
 
 ```
-### <a id="ilogb" href="#ilogb">func ilogb(x float64) int</a>
+### <a id="Min" href="#Min">func Min(x, y float64) float64</a>
 
 ```
-searchKey: math.ilogb
-tags: [private]
+searchKey: math.Min
+tags: [method]
 ```
 
 ```Go
-func ilogb(x float64) int
+func Min(x, y float64) float64
 ```
 
-logb returns the binary exponent of x. It assumes x is finite and non-zero. 
+Min returns the smaller of x or y. 
 
+Special cases are: 
+
+```
+Min(x, -Inf) = Min(-Inf, x) = -Inf
+Min(x, NaN) = Min(NaN, x) = NaN
+Min(-0, ±0) = Min(±0, -0) = -0
+
+```
 ### <a id="Mod" href="#Mod">func Mod(x, y float64) float64</a>
 
 ```
 searchKey: math.Mod
+tags: [method]
 ```
 
 ```Go
@@ -4759,21 +4198,11 @@ Mod(x, ±Inf) = x
 Mod(x, NaN) = NaN
 
 ```
-### <a id="mod" href="#mod">func mod(x, y float64) float64</a>
-
-```
-searchKey: math.mod
-tags: [private]
-```
-
-```Go
-func mod(x, y float64) float64
-```
-
 ### <a id="Modf" href="#Modf">func Modf(f float64) (int float64, frac float64)</a>
 
 ```
 searchKey: math.Modf
+tags: [method]
 ```
 
 ```Go
@@ -4789,52 +4218,24 @@ Modf(±Inf) = ±Inf, NaN
 Modf(NaN) = NaN, NaN
 
 ```
-### <a id="modf" href="#modf">func modf(f float64) (int float64, frac float64)</a>
+### <a id="NaN" href="#NaN">func NaN() float64</a>
 
 ```
-searchKey: math.modf
-tags: [private]
-```
-
-```Go
-func modf(f float64) (int float64, frac float64)
-```
-
-### <a id="archModf" href="#archModf">func archModf(f float64) (int float64, frac float64)</a>
-
-```
-searchKey: math.archModf
-tags: [private]
+searchKey: math.NaN
+tags: [function]
 ```
 
 ```Go
-func archModf(f float64) (int float64, frac float64)
+func NaN() float64
 ```
 
-### <a id="Nextafter32" href="#Nextafter32">func Nextafter32(x, y float32) (r float32)</a>
+NaN returns an IEEE 754 `not-a-number' value. 
 
-```
-searchKey: math.Nextafter32
-```
-
-```Go
-func Nextafter32(x, y float32) (r float32)
-```
-
-Nextafter32 returns the next representable float32 value after x towards y. 
-
-Special cases are: 
-
-```
-Nextafter32(x, x)   = x
-Nextafter32(NaN, y) = NaN
-Nextafter32(x, NaN) = NaN
-
-```
 ### <a id="Nextafter" href="#Nextafter">func Nextafter(x, y float64) (r float64)</a>
 
 ```
 searchKey: math.Nextafter
+tags: [method]
 ```
 
 ```Go
@@ -4851,21 +4252,32 @@ Nextafter(NaN, y) = NaN
 Nextafter(x, NaN) = NaN
 
 ```
-### <a id="isOddInt" href="#isOddInt">func isOddInt(x float64) bool</a>
+### <a id="Nextafter32" href="#Nextafter32">func Nextafter32(x, y float32) (r float32)</a>
 
 ```
-searchKey: math.isOddInt
-tags: [private]
+searchKey: math.Nextafter32
+tags: [method]
 ```
 
 ```Go
-func isOddInt(x float64) bool
+func Nextafter32(x, y float32) (r float32)
 ```
 
+Nextafter32 returns the next representable float32 value after x towards y. 
+
+Special cases are: 
+
+```
+Nextafter32(x, x)   = x
+Nextafter32(NaN, y) = NaN
+Nextafter32(x, NaN) = NaN
+
+```
 ### <a id="Pow" href="#Pow">func Pow(x, y float64) float64</a>
 
 ```
 searchKey: math.Pow
+tags: [method]
 ```
 
 ```Go
@@ -4899,21 +4311,11 @@ Pow(-Inf, y) = Pow(-0, -y)
 Pow(x, y) = NaN for finite x < 0 and finite non-integer y
 
 ```
-### <a id="pow" href="#pow">func pow(x, y float64) float64</a>
-
-```
-searchKey: math.pow
-tags: [private]
-```
-
-```Go
-func pow(x, y float64) float64
-```
-
 ### <a id="Pow10" href="#Pow10">func Pow10(n int) float64</a>
 
 ```
 searchKey: math.Pow10
+tags: [method]
 ```
 
 ```Go
@@ -4933,6 +4335,7 @@ Pow10(n) = +Inf for n > 308
 
 ```
 searchKey: math.Remainder
+tags: [method]
 ```
 
 ```Go
@@ -4951,21 +4354,53 @@ Remainder(x, ±Inf) = x
 Remainder(x, NaN) = NaN
 
 ```
-### <a id="remainder" href="#remainder">func remainder(x, y float64) float64</a>
+### <a id="Round" href="#Round">func Round(x float64) float64</a>
 
 ```
-searchKey: math.remainder
-tags: [private]
+searchKey: math.Round
+tags: [method]
 ```
 
 ```Go
-func remainder(x, y float64) float64
+func Round(x float64) float64
 ```
 
+Round returns the nearest integer, rounding half away from zero. 
+
+Special cases are: 
+
+```
+Round(±0) = ±0
+Round(±Inf) = ±Inf
+Round(NaN) = NaN
+
+```
+### <a id="RoundToEven" href="#RoundToEven">func RoundToEven(x float64) float64</a>
+
+```
+searchKey: math.RoundToEven
+tags: [method]
+```
+
+```Go
+func RoundToEven(x float64) float64
+```
+
+RoundToEven returns the nearest integer, rounding ties to even. 
+
+Special cases are: 
+
+```
+RoundToEven(±0) = ±0
+RoundToEven(±Inf) = ±Inf
+RoundToEven(NaN) = NaN
+
+```
 ### <a id="Signbit" href="#Signbit">func Signbit(x float64) bool</a>
 
 ```
 searchKey: math.Signbit
+tags: [method]
 ```
 
 ```Go
@@ -4974,40 +4409,11 @@ func Signbit(x float64) bool
 
 Signbit reports whether x is negative or negative zero. 
 
-### <a id="Cos" href="#Cos">func Cos(x float64) float64</a>
-
-```
-searchKey: math.Cos
-```
-
-```Go
-func Cos(x float64) float64
-```
-
-Cos returns the cosine of the radian argument x. 
-
-Special cases are: 
-
-```
-Cos(±Inf) = NaN
-Cos(NaN) = NaN
-
-```
-### <a id="cos" href="#cos">func cos(x float64) float64</a>
-
-```
-searchKey: math.cos
-tags: [private]
-```
-
-```Go
-func cos(x float64) float64
-```
-
 ### <a id="Sin" href="#Sin">func Sin(x float64) float64</a>
 
 ```
 searchKey: math.Sin
+tags: [method]
 ```
 
 ```Go
@@ -5024,21 +4430,11 @@ Sin(±Inf) = NaN
 Sin(NaN) = NaN
 
 ```
-### <a id="sin" href="#sin">func sin(x float64) float64</a>
-
-```
-searchKey: math.sin
-tags: [private]
-```
-
-```Go
-func sin(x float64) float64
-```
-
 ### <a id="Sincos" href="#Sincos">func Sincos(x float64) (sin, cos float64)</a>
 
 ```
 searchKey: math.Sincos
+tags: [method]
 ```
 
 ```Go
@@ -5059,6 +4455,7 @@ Sincos(NaN) = NaN, NaN
 
 ```
 searchKey: math.Sinh
+tags: [method]
 ```
 
 ```Go
@@ -5075,52 +4472,11 @@ Sinh(±Inf) = ±Inf
 Sinh(NaN) = NaN
 
 ```
-### <a id="sinh" href="#sinh">func sinh(x float64) float64</a>
-
-```
-searchKey: math.sinh
-tags: [private]
-```
-
-```Go
-func sinh(x float64) float64
-```
-
-### <a id="Cosh" href="#Cosh">func Cosh(x float64) float64</a>
-
-```
-searchKey: math.Cosh
-```
-
-```Go
-func Cosh(x float64) float64
-```
-
-Cosh returns the hyperbolic cosine of x. 
-
-Special cases are: 
-
-```
-Cosh(±0) = 1
-Cosh(±Inf) = +Inf
-Cosh(NaN) = NaN
-
-```
-### <a id="cosh" href="#cosh">func cosh(x float64) float64</a>
-
-```
-searchKey: math.cosh
-tags: [private]
-```
-
-```Go
-func cosh(x float64) float64
-```
-
 ### <a id="Sqrt" href="#Sqrt">func Sqrt(x float64) float64</a>
 
 ```
 searchKey: math.Sqrt
+tags: [method]
 ```
 
 ```Go
@@ -5138,307 +4494,11 @@ Sqrt(x < 0) = NaN
 Sqrt(NaN) = NaN
 
 ```
-### <a id="sqrt" href="#sqrt">func sqrt(x float64) float64</a>
-
-```
-searchKey: math.sqrt
-tags: [private]
-```
-
-```Go
-func sqrt(x float64) float64
-```
-
-### <a id="archSqrt" href="#archSqrt">func archSqrt(x float64) float64</a>
-
-```
-searchKey: math.archSqrt
-tags: [private]
-```
-
-```Go
-func archSqrt(x float64) float64
-```
-
-### <a id="archAcos" href="#archAcos">func archAcos(x float64) float64</a>
-
-```
-searchKey: math.archAcos
-tags: [private]
-```
-
-```Go
-func archAcos(x float64) float64
-```
-
-### <a id="archAcosh" href="#archAcosh">func archAcosh(x float64) float64</a>
-
-```
-searchKey: math.archAcosh
-tags: [private]
-```
-
-```Go
-func archAcosh(x float64) float64
-```
-
-### <a id="archAsin" href="#archAsin">func archAsin(x float64) float64</a>
-
-```
-searchKey: math.archAsin
-tags: [private]
-```
-
-```Go
-func archAsin(x float64) float64
-```
-
-### <a id="archAsinh" href="#archAsinh">func archAsinh(x float64) float64</a>
-
-```
-searchKey: math.archAsinh
-tags: [private]
-```
-
-```Go
-func archAsinh(x float64) float64
-```
-
-### <a id="archAtan" href="#archAtan">func archAtan(x float64) float64</a>
-
-```
-searchKey: math.archAtan
-tags: [private]
-```
-
-```Go
-func archAtan(x float64) float64
-```
-
-### <a id="archAtan2" href="#archAtan2">func archAtan2(y, x float64) float64</a>
-
-```
-searchKey: math.archAtan2
-tags: [private]
-```
-
-```Go
-func archAtan2(y, x float64) float64
-```
-
-### <a id="archAtanh" href="#archAtanh">func archAtanh(x float64) float64</a>
-
-```
-searchKey: math.archAtanh
-tags: [private]
-```
-
-```Go
-func archAtanh(x float64) float64
-```
-
-### <a id="archCbrt" href="#archCbrt">func archCbrt(x float64) float64</a>
-
-```
-searchKey: math.archCbrt
-tags: [private]
-```
-
-```Go
-func archCbrt(x float64) float64
-```
-
-### <a id="archCos" href="#archCos">func archCos(x float64) float64</a>
-
-```
-searchKey: math.archCos
-tags: [private]
-```
-
-```Go
-func archCos(x float64) float64
-```
-
-### <a id="archCosh" href="#archCosh">func archCosh(x float64) float64</a>
-
-```
-searchKey: math.archCosh
-tags: [private]
-```
-
-```Go
-func archCosh(x float64) float64
-```
-
-### <a id="archErf" href="#archErf">func archErf(x float64) float64</a>
-
-```
-searchKey: math.archErf
-tags: [private]
-```
-
-```Go
-func archErf(x float64) float64
-```
-
-### <a id="archErfc" href="#archErfc">func archErfc(x float64) float64</a>
-
-```
-searchKey: math.archErfc
-tags: [private]
-```
-
-```Go
-func archErfc(x float64) float64
-```
-
-### <a id="archExpm1" href="#archExpm1">func archExpm1(x float64) float64</a>
-
-```
-searchKey: math.archExpm1
-tags: [private]
-```
-
-```Go
-func archExpm1(x float64) float64
-```
-
-### <a id="archFrexp" href="#archFrexp">func archFrexp(x float64) (float64, int)</a>
-
-```
-searchKey: math.archFrexp
-tags: [private]
-```
-
-```Go
-func archFrexp(x float64) (float64, int)
-```
-
-### <a id="archLdexp" href="#archLdexp">func archLdexp(frac float64, exp int) float64</a>
-
-```
-searchKey: math.archLdexp
-tags: [private]
-```
-
-```Go
-func archLdexp(frac float64, exp int) float64
-```
-
-### <a id="archLog10" href="#archLog10">func archLog10(x float64) float64</a>
-
-```
-searchKey: math.archLog10
-tags: [private]
-```
-
-```Go
-func archLog10(x float64) float64
-```
-
-### <a id="archLog2" href="#archLog2">func archLog2(x float64) float64</a>
-
-```
-searchKey: math.archLog2
-tags: [private]
-```
-
-```Go
-func archLog2(x float64) float64
-```
-
-### <a id="archLog1p" href="#archLog1p">func archLog1p(x float64) float64</a>
-
-```
-searchKey: math.archLog1p
-tags: [private]
-```
-
-```Go
-func archLog1p(x float64) float64
-```
-
-### <a id="archMod" href="#archMod">func archMod(x, y float64) float64</a>
-
-```
-searchKey: math.archMod
-tags: [private]
-```
-
-```Go
-func archMod(x, y float64) float64
-```
-
-### <a id="archPow" href="#archPow">func archPow(x, y float64) float64</a>
-
-```
-searchKey: math.archPow
-tags: [private]
-```
-
-```Go
-func archPow(x, y float64) float64
-```
-
-### <a id="archRemainder" href="#archRemainder">func archRemainder(x, y float64) float64</a>
-
-```
-searchKey: math.archRemainder
-tags: [private]
-```
-
-```Go
-func archRemainder(x, y float64) float64
-```
-
-### <a id="archSin" href="#archSin">func archSin(x float64) float64</a>
-
-```
-searchKey: math.archSin
-tags: [private]
-```
-
-```Go
-func archSin(x float64) float64
-```
-
-### <a id="archSinh" href="#archSinh">func archSinh(x float64) float64</a>
-
-```
-searchKey: math.archSinh
-tags: [private]
-```
-
-```Go
-func archSinh(x float64) float64
-```
-
-### <a id="archTan" href="#archTan">func archTan(x float64) float64</a>
-
-```
-searchKey: math.archTan
-tags: [private]
-```
-
-```Go
-func archTan(x float64) float64
-```
-
-### <a id="archTanh" href="#archTanh">func archTanh(x float64) float64</a>
-
-```
-searchKey: math.archTanh
-tags: [private]
-```
-
-```Go
-func archTanh(x float64) float64
-```
-
 ### <a id="Tan" href="#Tan">func Tan(x float64) float64</a>
 
 ```
 searchKey: math.Tan
+tags: [method]
 ```
 
 ```Go
@@ -5455,21 +4515,11 @@ Tan(±Inf) = NaN
 Tan(NaN) = NaN
 
 ```
-### <a id="tan" href="#tan">func tan(x float64) float64</a>
-
-```
-searchKey: math.tan
-tags: [private]
-```
-
-```Go
-func tan(x float64) float64
-```
-
 ### <a id="Tanh" href="#Tanh">func Tanh(x float64) float64</a>
 
 ```
 searchKey: math.Tanh
+tags: [method]
 ```
 
 ```Go
@@ -5486,11 +4536,1083 @@ Tanh(±Inf) = ±1
 Tanh(NaN) = NaN
 
 ```
+### <a id="Trunc" href="#Trunc">func Trunc(x float64) float64</a>
+
+```
+searchKey: math.Trunc
+tags: [method]
+```
+
+```Go
+func Trunc(x float64) float64
+```
+
+Trunc returns the integer value of x. 
+
+Special cases are: 
+
+```
+Trunc(±0) = ±0
+Trunc(±Inf) = ±Inf
+Trunc(NaN) = NaN
+
+```
+### <a id="Y0" href="#Y0">func Y0(x float64) float64</a>
+
+```
+searchKey: math.Y0
+tags: [method]
+```
+
+```Go
+func Y0(x float64) float64
+```
+
+Y0 returns the order-zero Bessel function of the second kind. 
+
+Special cases are: 
+
+```
+Y0(+Inf) = 0
+Y0(0) = -Inf
+Y0(x < 0) = NaN
+Y0(NaN) = NaN
+
+```
+### <a id="Y1" href="#Y1">func Y1(x float64) float64</a>
+
+```
+searchKey: math.Y1
+tags: [method]
+```
+
+```Go
+func Y1(x float64) float64
+```
+
+Y1 returns the order-one Bessel function of the second kind. 
+
+Special cases are: 
+
+```
+Y1(+Inf) = 0
+Y1(0) = -Inf
+Y1(x < 0) = NaN
+Y1(NaN) = NaN
+
+```
+### <a id="Yn" href="#Yn">func Yn(n int, x float64) float64</a>
+
+```
+searchKey: math.Yn
+tags: [method]
+```
+
+```Go
+func Yn(n int, x float64) float64
+```
+
+Yn returns the order-n Bessel function of the second kind. 
+
+Special cases are: 
+
+```
+Yn(n, +Inf) = 0
+Yn(n ≥ 0, 0) = -Inf
+Yn(n < 0, 0) = +Inf if n is odd, -Inf if n is even
+Yn(n, x < 0) = NaN
+Yn(n, NaN) = NaN
+
+```
+### <a id="acos" href="#acos">func acos(x float64) float64</a>
+
+```
+searchKey: math.acos
+tags: [method private]
+```
+
+```Go
+func acos(x float64) float64
+```
+
+### <a id="acosh" href="#acosh">func acosh(x float64) float64</a>
+
+```
+searchKey: math.acosh
+tags: [method private]
+```
+
+```Go
+func acosh(x float64) float64
+```
+
+### <a id="archAcos" href="#archAcos">func archAcos(x float64) float64</a>
+
+```
+searchKey: math.archAcos
+tags: [method private]
+```
+
+```Go
+func archAcos(x float64) float64
+```
+
+### <a id="archAcosh" href="#archAcosh">func archAcosh(x float64) float64</a>
+
+```
+searchKey: math.archAcosh
+tags: [method private]
+```
+
+```Go
+func archAcosh(x float64) float64
+```
+
+### <a id="archAsin" href="#archAsin">func archAsin(x float64) float64</a>
+
+```
+searchKey: math.archAsin
+tags: [method private]
+```
+
+```Go
+func archAsin(x float64) float64
+```
+
+### <a id="archAsinh" href="#archAsinh">func archAsinh(x float64) float64</a>
+
+```
+searchKey: math.archAsinh
+tags: [method private]
+```
+
+```Go
+func archAsinh(x float64) float64
+```
+
+### <a id="archAtan" href="#archAtan">func archAtan(x float64) float64</a>
+
+```
+searchKey: math.archAtan
+tags: [method private]
+```
+
+```Go
+func archAtan(x float64) float64
+```
+
+### <a id="archAtan2" href="#archAtan2">func archAtan2(y, x float64) float64</a>
+
+```
+searchKey: math.archAtan2
+tags: [method private]
+```
+
+```Go
+func archAtan2(y, x float64) float64
+```
+
+### <a id="archAtanh" href="#archAtanh">func archAtanh(x float64) float64</a>
+
+```
+searchKey: math.archAtanh
+tags: [method private]
+```
+
+```Go
+func archAtanh(x float64) float64
+```
+
+### <a id="archCbrt" href="#archCbrt">func archCbrt(x float64) float64</a>
+
+```
+searchKey: math.archCbrt
+tags: [method private]
+```
+
+```Go
+func archCbrt(x float64) float64
+```
+
+### <a id="archCeil" href="#archCeil">func archCeil(x float64) float64</a>
+
+```
+searchKey: math.archCeil
+tags: [method private]
+```
+
+```Go
+func archCeil(x float64) float64
+```
+
+### <a id="archCos" href="#archCos">func archCos(x float64) float64</a>
+
+```
+searchKey: math.archCos
+tags: [method private]
+```
+
+```Go
+func archCos(x float64) float64
+```
+
+### <a id="archCosh" href="#archCosh">func archCosh(x float64) float64</a>
+
+```
+searchKey: math.archCosh
+tags: [method private]
+```
+
+```Go
+func archCosh(x float64) float64
+```
+
+### <a id="archErf" href="#archErf">func archErf(x float64) float64</a>
+
+```
+searchKey: math.archErf
+tags: [method private]
+```
+
+```Go
+func archErf(x float64) float64
+```
+
+### <a id="archErfc" href="#archErfc">func archErfc(x float64) float64</a>
+
+```
+searchKey: math.archErfc
+tags: [method private]
+```
+
+```Go
+func archErfc(x float64) float64
+```
+
+### <a id="archExp" href="#archExp">func archExp(x float64) float64</a>
+
+```
+searchKey: math.archExp
+tags: [method private]
+```
+
+```Go
+func archExp(x float64) float64
+```
+
+### <a id="archExp2" href="#archExp2">func archExp2(x float64) float64</a>
+
+```
+searchKey: math.archExp2
+tags: [method private]
+```
+
+```Go
+func archExp2(x float64) float64
+```
+
+### <a id="archExpm1" href="#archExpm1">func archExpm1(x float64) float64</a>
+
+```
+searchKey: math.archExpm1
+tags: [method private]
+```
+
+```Go
+func archExpm1(x float64) float64
+```
+
+### <a id="archFloor" href="#archFloor">func archFloor(x float64) float64</a>
+
+```
+searchKey: math.archFloor
+tags: [method private]
+```
+
+```Go
+func archFloor(x float64) float64
+```
+
+### <a id="archFrexp" href="#archFrexp">func archFrexp(x float64) (float64, int)</a>
+
+```
+searchKey: math.archFrexp
+tags: [method private]
+```
+
+```Go
+func archFrexp(x float64) (float64, int)
+```
+
+### <a id="archHypot" href="#archHypot">func archHypot(p, q float64) float64</a>
+
+```
+searchKey: math.archHypot
+tags: [method private]
+```
+
+```Go
+func archHypot(p, q float64) float64
+```
+
+### <a id="archLdexp" href="#archLdexp">func archLdexp(frac float64, exp int) float64</a>
+
+```
+searchKey: math.archLdexp
+tags: [method private]
+```
+
+```Go
+func archLdexp(frac float64, exp int) float64
+```
+
+### <a id="archLog" href="#archLog">func archLog(x float64) float64</a>
+
+```
+searchKey: math.archLog
+tags: [method private]
+```
+
+```Go
+func archLog(x float64) float64
+```
+
+### <a id="archLog10" href="#archLog10">func archLog10(x float64) float64</a>
+
+```
+searchKey: math.archLog10
+tags: [method private]
+```
+
+```Go
+func archLog10(x float64) float64
+```
+
+### <a id="archLog1p" href="#archLog1p">func archLog1p(x float64) float64</a>
+
+```
+searchKey: math.archLog1p
+tags: [method private]
+```
+
+```Go
+func archLog1p(x float64) float64
+```
+
+### <a id="archLog2" href="#archLog2">func archLog2(x float64) float64</a>
+
+```
+searchKey: math.archLog2
+tags: [method private]
+```
+
+```Go
+func archLog2(x float64) float64
+```
+
+### <a id="archMax" href="#archMax">func archMax(x, y float64) float64</a>
+
+```
+searchKey: math.archMax
+tags: [method private]
+```
+
+```Go
+func archMax(x, y float64) float64
+```
+
+### <a id="archMin" href="#archMin">func archMin(x, y float64) float64</a>
+
+```
+searchKey: math.archMin
+tags: [method private]
+```
+
+```Go
+func archMin(x, y float64) float64
+```
+
+### <a id="archMod" href="#archMod">func archMod(x, y float64) float64</a>
+
+```
+searchKey: math.archMod
+tags: [method private]
+```
+
+```Go
+func archMod(x, y float64) float64
+```
+
+### <a id="archModf" href="#archModf">func archModf(f float64) (int float64, frac float64)</a>
+
+```
+searchKey: math.archModf
+tags: [method private]
+```
+
+```Go
+func archModf(f float64) (int float64, frac float64)
+```
+
+### <a id="archPow" href="#archPow">func archPow(x, y float64) float64</a>
+
+```
+searchKey: math.archPow
+tags: [method private]
+```
+
+```Go
+func archPow(x, y float64) float64
+```
+
+### <a id="archRemainder" href="#archRemainder">func archRemainder(x, y float64) float64</a>
+
+```
+searchKey: math.archRemainder
+tags: [method private]
+```
+
+```Go
+func archRemainder(x, y float64) float64
+```
+
+### <a id="archSin" href="#archSin">func archSin(x float64) float64</a>
+
+```
+searchKey: math.archSin
+tags: [method private]
+```
+
+```Go
+func archSin(x float64) float64
+```
+
+### <a id="archSinh" href="#archSinh">func archSinh(x float64) float64</a>
+
+```
+searchKey: math.archSinh
+tags: [method private]
+```
+
+```Go
+func archSinh(x float64) float64
+```
+
+### <a id="archSqrt" href="#archSqrt">func archSqrt(x float64) float64</a>
+
+```
+searchKey: math.archSqrt
+tags: [method private]
+```
+
+```Go
+func archSqrt(x float64) float64
+```
+
+### <a id="archTan" href="#archTan">func archTan(x float64) float64</a>
+
+```
+searchKey: math.archTan
+tags: [method private]
+```
+
+```Go
+func archTan(x float64) float64
+```
+
+### <a id="archTanh" href="#archTanh">func archTanh(x float64) float64</a>
+
+```
+searchKey: math.archTanh
+tags: [method private]
+```
+
+```Go
+func archTanh(x float64) float64
+```
+
+### <a id="archTrunc" href="#archTrunc">func archTrunc(x float64) float64</a>
+
+```
+searchKey: math.archTrunc
+tags: [method private]
+```
+
+```Go
+func archTrunc(x float64) float64
+```
+
+### <a id="asin" href="#asin">func asin(x float64) float64</a>
+
+```
+searchKey: math.asin
+tags: [method private]
+```
+
+```Go
+func asin(x float64) float64
+```
+
+### <a id="asinh" href="#asinh">func asinh(x float64) float64</a>
+
+```
+searchKey: math.asinh
+tags: [method private]
+```
+
+```Go
+func asinh(x float64) float64
+```
+
+### <a id="atan" href="#atan">func atan(x float64) float64</a>
+
+```
+searchKey: math.atan
+tags: [method private]
+```
+
+```Go
+func atan(x float64) float64
+```
+
+### <a id="atan2" href="#atan2">func atan2(y, x float64) float64</a>
+
+```
+searchKey: math.atan2
+tags: [method private]
+```
+
+```Go
+func atan2(y, x float64) float64
+```
+
+### <a id="atanh" href="#atanh">func atanh(x float64) float64</a>
+
+```
+searchKey: math.atanh
+tags: [method private]
+```
+
+```Go
+func atanh(x float64) float64
+```
+
+### <a id="cbrt" href="#cbrt">func cbrt(x float64) float64</a>
+
+```
+searchKey: math.cbrt
+tags: [method private]
+```
+
+```Go
+func cbrt(x float64) float64
+```
+
+### <a id="ceil" href="#ceil">func ceil(x float64) float64</a>
+
+```
+searchKey: math.ceil
+tags: [method private]
+```
+
+```Go
+func ceil(x float64) float64
+```
+
+### <a id="cos" href="#cos">func cos(x float64) float64</a>
+
+```
+searchKey: math.cos
+tags: [method private]
+```
+
+```Go
+func cos(x float64) float64
+```
+
+### <a id="cosh" href="#cosh">func cosh(x float64) float64</a>
+
+```
+searchKey: math.cosh
+tags: [method private]
+```
+
+```Go
+func cosh(x float64) float64
+```
+
+### <a id="erf" href="#erf">func erf(x float64) float64</a>
+
+```
+searchKey: math.erf
+tags: [method private]
+```
+
+```Go
+func erf(x float64) float64
+```
+
+### <a id="erfc" href="#erfc">func erfc(x float64) float64</a>
+
+```
+searchKey: math.erfc
+tags: [method private]
+```
+
+```Go
+func erfc(x float64) float64
+```
+
+### <a id="exp" href="#exp">func exp(x float64) float64</a>
+
+```
+searchKey: math.exp
+tags: [method private]
+```
+
+```Go
+func exp(x float64) float64
+```
+
+### <a id="exp2" href="#exp2">func exp2(x float64) float64</a>
+
+```
+searchKey: math.exp2
+tags: [method private]
+```
+
+```Go
+func exp2(x float64) float64
+```
+
+### <a id="expm1" href="#expm1">func expm1(x float64) float64</a>
+
+```
+searchKey: math.expm1
+tags: [method private]
+```
+
+```Go
+func expm1(x float64) float64
+```
+
+### <a id="expmulti" href="#expmulti">func expmulti(hi, lo float64, k int) float64</a>
+
+```
+searchKey: math.expmulti
+tags: [method private]
+```
+
+```Go
+func expmulti(hi, lo float64, k int) float64
+```
+
+exp1 returns e**r × 2**k where r = hi - lo and |r| ≤ ln(2)/2. 
+
+### <a id="floor" href="#floor">func floor(x float64) float64</a>
+
+```
+searchKey: math.floor
+tags: [method private]
+```
+
+```Go
+func floor(x float64) float64
+```
+
+### <a id="frexp" href="#frexp">func frexp(f float64) (frac float64, exp int)</a>
+
+```
+searchKey: math.frexp
+tags: [method private]
+```
+
+```Go
+func frexp(f float64) (frac float64, exp int)
+```
+
+### <a id="hypot" href="#hypot">func hypot(p, q float64) float64</a>
+
+```
+searchKey: math.hypot
+tags: [method private]
+```
+
+```Go
+func hypot(p, q float64) float64
+```
+
+### <a id="ilogb" href="#ilogb">func ilogb(x float64) int</a>
+
+```
+searchKey: math.ilogb
+tags: [method private]
+```
+
+```Go
+func ilogb(x float64) int
+```
+
+logb returns the binary exponent of x. It assumes x is finite and non-zero. 
+
+### <a id="isNegInt" href="#isNegInt">func isNegInt(x float64) bool</a>
+
+```
+searchKey: math.isNegInt
+tags: [method private]
+```
+
+```Go
+func isNegInt(x float64) bool
+```
+
+### <a id="isOddInt" href="#isOddInt">func isOddInt(x float64) bool</a>
+
+```
+searchKey: math.isOddInt
+tags: [method private]
+```
+
+```Go
+func isOddInt(x float64) bool
+```
+
+### <a id="ldexp" href="#ldexp">func ldexp(frac float64, exp int) float64</a>
+
+```
+searchKey: math.ldexp
+tags: [method private]
+```
+
+```Go
+func ldexp(frac float64, exp int) float64
+```
+
+### <a id="log" href="#log">func log(x float64) float64</a>
+
+```
+searchKey: math.log
+tags: [method private]
+```
+
+```Go
+func log(x float64) float64
+```
+
+### <a id="log10" href="#log10">func log10(x float64) float64</a>
+
+```
+searchKey: math.log10
+tags: [method private]
+```
+
+```Go
+func log10(x float64) float64
+```
+
+### <a id="log1p" href="#log1p">func log1p(x float64) float64</a>
+
+```
+searchKey: math.log1p
+tags: [method private]
+```
+
+```Go
+func log1p(x float64) float64
+```
+
+### <a id="log2" href="#log2">func log2(x float64) float64</a>
+
+```
+searchKey: math.log2
+tags: [method private]
+```
+
+```Go
+func log2(x float64) float64
+```
+
+### <a id="lz" href="#lz">func lz(u1, u2 uint64) (l int32)</a>
+
+```
+searchKey: math.lz
+tags: [method private]
+```
+
+```Go
+func lz(u1, u2 uint64) (l int32)
+```
+
+### <a id="max" href="#max">func max(x, y float64) float64</a>
+
+```
+searchKey: math.max
+tags: [method private]
+```
+
+```Go
+func max(x, y float64) float64
+```
+
+### <a id="min" href="#min">func min(x, y float64) float64</a>
+
+```
+searchKey: math.min
+tags: [method private]
+```
+
+```Go
+func min(x, y float64) float64
+```
+
+### <a id="mod" href="#mod">func mod(x, y float64) float64</a>
+
+```
+searchKey: math.mod
+tags: [method private]
+```
+
+```Go
+func mod(x, y float64) float64
+```
+
+### <a id="modf" href="#modf">func modf(f float64) (int float64, frac float64)</a>
+
+```
+searchKey: math.modf
+tags: [method private]
+```
+
+```Go
+func modf(f float64) (int float64, frac float64)
+```
+
+### <a id="nonzero" href="#nonzero">func nonzero(x uint64) uint64</a>
+
+```
+searchKey: math.nonzero
+tags: [method private]
+```
+
+```Go
+func nonzero(x uint64) uint64
+```
+
+### <a id="normalize" href="#normalize">func normalize(x float64) (y float64, exp int)</a>
+
+```
+searchKey: math.normalize
+tags: [method private]
+```
+
+```Go
+func normalize(x float64) (y float64, exp int)
+```
+
+normalize returns a normal number y and exponent exp satisfying x == y × 2**exp. It assumes x is finite and non-zero. 
+
+### <a id="pone" href="#pone">func pone(x float64) float64</a>
+
+```
+searchKey: math.pone
+tags: [method private]
+```
+
+```Go
+func pone(x float64) float64
+```
+
+### <a id="pow" href="#pow">func pow(x, y float64) float64</a>
+
+```
+searchKey: math.pow
+tags: [method private]
+```
+
+```Go
+func pow(x, y float64) float64
+```
+
+### <a id="pzero" href="#pzero">func pzero(x float64) float64</a>
+
+```
+searchKey: math.pzero
+tags: [method private]
+```
+
+```Go
+func pzero(x float64) float64
+```
+
+### <a id="qone" href="#qone">func qone(x float64) float64</a>
+
+```
+searchKey: math.qone
+tags: [method private]
+```
+
+```Go
+func qone(x float64) float64
+```
+
+### <a id="qzero" href="#qzero">func qzero(x float64) float64</a>
+
+```
+searchKey: math.qzero
+tags: [method private]
+```
+
+```Go
+func qzero(x float64) float64
+```
+
+### <a id="remainder" href="#remainder">func remainder(x, y float64) float64</a>
+
+```
+searchKey: math.remainder
+tags: [method private]
+```
+
+```Go
+func remainder(x, y float64) float64
+```
+
+### <a id="satan" href="#satan">func satan(x float64) float64</a>
+
+```
+searchKey: math.satan
+tags: [method private]
+```
+
+```Go
+func satan(x float64) float64
+```
+
+satan reduces its argument (known to be positive) to the range [0, 0.66] and calls xatan. 
+
+### <a id="shl" href="#shl">func shl(u1, u2 uint64, n uint) (r1, r2 uint64)</a>
+
+```
+searchKey: math.shl
+tags: [method private]
+```
+
+```Go
+func shl(u1, u2 uint64, n uint) (r1, r2 uint64)
+```
+
+### <a id="shr" href="#shr">func shr(u1, u2 uint64, n uint) (r1, r2 uint64)</a>
+
+```
+searchKey: math.shr
+tags: [method private]
+```
+
+```Go
+func shr(u1, u2 uint64, n uint) (r1, r2 uint64)
+```
+
+### <a id="shrcompress" href="#shrcompress">func shrcompress(u1, u2 uint64, n uint) (r1, r2 uint64)</a>
+
+```
+searchKey: math.shrcompress
+tags: [method private]
+```
+
+```Go
+func shrcompress(u1, u2 uint64, n uint) (r1, r2 uint64)
+```
+
+shrcompress compresses the bottom n+1 bits of the two-word value into a single bit. the result is equal to the value shifted to the right by n, except the result's 0th bit is set to the bitwise OR of the bottom n+1 bits. 
+
+### <a id="sin" href="#sin">func sin(x float64) float64</a>
+
+```
+searchKey: math.sin
+tags: [method private]
+```
+
+```Go
+func sin(x float64) float64
+```
+
+### <a id="sinPi" href="#sinPi">func sinPi(x float64) float64</a>
+
+```
+searchKey: math.sinPi
+tags: [method private]
+```
+
+```Go
+func sinPi(x float64) float64
+```
+
+sinPi(x) is a helper function for negative x 
+
+### <a id="sinh" href="#sinh">func sinh(x float64) float64</a>
+
+```
+searchKey: math.sinh
+tags: [method private]
+```
+
+```Go
+func sinh(x float64) float64
+```
+
+### <a id="split" href="#split">func split(b uint64) (sign uint32, exp int32, mantissa uint64)</a>
+
+```
+searchKey: math.split
+tags: [method private]
+```
+
+```Go
+func split(b uint64) (sign uint32, exp int32, mantissa uint64)
+```
+
+split splits b into sign, biased exponent, and mantissa. It adds the implicit 1 bit to the mantissa for normal values, and normalizes subnormal values. 
+
+### <a id="sqrt" href="#sqrt">func sqrt(x float64) float64</a>
+
+```
+searchKey: math.sqrt
+tags: [method private]
+```
+
+```Go
+func sqrt(x float64) float64
+```
+
+### <a id="stirling" href="#stirling">func stirling(x float64) (float64, float64)</a>
+
+```
+searchKey: math.stirling
+tags: [method private]
+```
+
+```Go
+func stirling(x float64) (float64, float64)
+```
+
+Gamma function computed by Stirling's formula. The pair of results must be multiplied together to get the actual answer. The multiplication is left to the caller so that, if careful, the caller can avoid infinity for 172 <= x <= 180. The polynomial is valid for 33 <= x <= 172; larger values are only used in reciprocal and produce denormalized floats. The lower precision there masks any imprecision in the polynomial. 
+
+### <a id="tan" href="#tan">func tan(x float64) float64</a>
+
+```
+searchKey: math.tan
+tags: [method private]
+```
+
+```Go
+func tan(x float64) float64
+```
+
 ### <a id="tanh" href="#tanh">func tanh(x float64) float64</a>
 
 ```
 searchKey: math.tanh
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -5501,7 +5623,7 @@ func tanh(x float64) float64
 
 ```
 searchKey: math.trigReduce
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -5510,51 +5632,38 @@ func trigReduce(x float64) (j uint64, z float64)
 
 trigReduce implements Payne-Hanek range reduction by Pi/4 for x > 0. It returns the integer part mod 8 (j) and the fractional part (z) of x / (Pi/4). The implementation is based on: "ARGUMENT REDUCTION FOR HUGE ARGUMENTS: Good to the Last Bit" K. C. Ng et al, March 24, 1992 The simulated multi-precision calculation of x*B uses 64-bit integer arithmetic. 
 
-### <a id="Float32bits" href="#Float32bits">func Float32bits(f float32) uint32</a>
+### <a id="trunc" href="#trunc">func trunc(x float64) float64</a>
 
 ```
-searchKey: math.Float32bits
-```
-
-```Go
-func Float32bits(f float32) uint32
-```
-
-Float32bits returns the IEEE 754 binary representation of f, with the sign bit of f and the result in the same bit position. Float32bits(Float32frombits(x)) == x. 
-
-### <a id="Float32frombits" href="#Float32frombits">func Float32frombits(b uint32) float32</a>
-
-```
-searchKey: math.Float32frombits
+searchKey: math.trunc
+tags: [method private]
 ```
 
 ```Go
-func Float32frombits(b uint32) float32
+func trunc(x float64) float64
 ```
 
-Float32frombits returns the floating-point number corresponding to the IEEE 754 binary representation b, with the sign bit of b and the result in the same bit position. Float32frombits(Float32bits(x)) == x. 
-
-### <a id="Float64bits" href="#Float64bits">func Float64bits(f float64) uint64</a>
+### <a id="xatan" href="#xatan">func xatan(x float64) float64</a>
 
 ```
-searchKey: math.Float64bits
-```
-
-```Go
-func Float64bits(f float64) uint64
-```
-
-Float64bits returns the IEEE 754 binary representation of f, with the sign bit of f and the result in the same bit position, and Float64bits(Float64frombits(x)) == x. 
-
-### <a id="Float64frombits" href="#Float64frombits">func Float64frombits(b uint64) float64</a>
-
-```
-searchKey: math.Float64frombits
+searchKey: math.xatan
+tags: [method private]
 ```
 
 ```Go
-func Float64frombits(b uint64) float64
+func xatan(x float64) float64
 ```
 
-Float64frombits returns the floating-point number corresponding to the IEEE 754 binary representation b, with the sign bit of b and the result in the same bit position. Float64frombits(Float64bits(x)) == x. 
+xatan evaluates a series valid in the range [0, 0.66]. 
+
+### <a id="zero" href="#zero">func zero(x uint64) uint64</a>
+
+```
+searchKey: math.zero
+tags: [method private]
+```
+
+```Go
+func zero(x uint64) uint64
+```
 

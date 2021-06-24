@@ -62,9 +62,9 @@ For a study of the facility in action, visit
 ## Index
 
 * [Variables](#var)
-    * [var profileSupportsDelta](#profileSupportsDelta)
-    * [var profileDescriptions](#profileDescriptions)
     * [var Sink](#Sink)
+    * [var profileDescriptions](#profileDescriptions)
+    * [var profileSupportsDelta](#profileSupportsDelta)
     * [var srv](#srv)
 * [Types](#type)
     * [type handler string](#handler)
@@ -72,68 +72,72 @@ For a study of the facility in action, visit
         * [func (name handler) serveDeltaProfile(w http.ResponseWriter, r *http.Request, p *pprof.Profile, secStr string)](#handler.serveDeltaProfile)
     * [type profileEntry struct](#profileEntry)
 * [Functions](#func)
-    * [func init()](#init.pprof.go)
     * [func Cmdline(w http.ResponseWriter, r *http.Request)](#Cmdline)
-    * [func sleep(r *http.Request, d time.Duration)](#sleep)
-    * [func durationExceedsWriteTimeout(r *http.Request, seconds float64) bool](#durationExceedsWriteTimeout)
-    * [func serveError(w http.ResponseWriter, status int, txt string)](#serveError)
-    * [func Profile(w http.ResponseWriter, r *http.Request)](#Profile)
-    * [func Trace(w http.ResponseWriter, r *http.Request)](#Trace)
-    * [func Symbol(w http.ResponseWriter, r *http.Request)](#Symbol)
     * [func Handler(name string) http.Handler](#Handler)
-    * [func collectProfile(p *pprof.Profile) (*profile.Profile, error)](#collectProfile)
     * [func Index(w http.ResponseWriter, r *http.Request)](#Index)
-    * [func indexTmplExecute(w io.Writer, profiles []profileEntry) error](#indexTmplExecute)
+    * [func Profile(w http.ResponseWriter, r *http.Request)](#Profile)
+    * [func Symbol(w http.ResponseWriter, r *http.Request)](#Symbol)
+    * [func TestDeltaProfile(t *testing.T)](#TestDeltaProfile)
     * [func TestDescriptions(t *testing.T)](#TestDescriptions)
     * [func TestHandlers(t *testing.T)](#TestHandlers)
+    * [func Trace(w http.ResponseWriter, r *http.Request)](#Trace)
+    * [func collectProfile(p *pprof.Profile) (*profile.Profile, error)](#collectProfile)
+    * [func durationExceedsWriteTimeout(r *http.Request, seconds float64) bool](#durationExceedsWriteTimeout)
+    * [func indexTmplExecute(w io.Writer, profiles []profileEntry) error](#indexTmplExecute)
+    * [func init()](#init.pprof.go)
+    * [func mutexHog(duration time.Duration, hogger func(mu1, mu2 *sync.Mutex, start time.Time, dt time.Duration))](#mutexHog)
     * [func mutexHog1(mu1, mu2 *sync.Mutex, start time.Time, dt time.Duration)](#mutexHog1)
     * [func mutexHog2(mu1, mu2 *sync.Mutex, start time.Time, dt time.Duration)](#mutexHog2)
-    * [func mutexHog(duration time.Duration, hogger func(mu1, mu2 *sync.Mutex, start time.Time, dt time.Duration))](#mutexHog)
-    * [func TestDeltaProfile(t *testing.T)](#TestDeltaProfile)
     * [func query(endpoint string) (*profile.Profile, error)](#query)
     * [func seen(p *profile.Profile, fname string) bool](#seen)
+    * [func serveError(w http.ResponseWriter, status int, txt string)](#serveError)
+    * [func sleep(r *http.Request, d time.Duration)](#sleep)
 
 
 ## <a id="var" href="#var">Variables</a>
 
-### <a id="profileSupportsDelta" href="#profileSupportsDelta">var profileSupportsDelta</a>
-
 ```
-searchKey: pprof.profileSupportsDelta
-tags: [private]
-```
-
-```Go
-var profileSupportsDelta = ...
-```
-
-### <a id="profileDescriptions" href="#profileDescriptions">var profileDescriptions</a>
-
-```
-searchKey: pprof.profileDescriptions
-tags: [private]
-```
-
-```Go
-var profileDescriptions = ...
+tags: [package]
 ```
 
 ### <a id="Sink" href="#Sink">var Sink</a>
 
 ```
 searchKey: pprof.Sink
-tags: [private]
+tags: [variable number private]
 ```
 
 ```Go
 var Sink uint32
 ```
 
+### <a id="profileDescriptions" href="#profileDescriptions">var profileDescriptions</a>
+
+```
+searchKey: pprof.profileDescriptions
+tags: [variable object private]
+```
+
+```Go
+var profileDescriptions = ...
+```
+
+### <a id="profileSupportsDelta" href="#profileSupportsDelta">var profileSupportsDelta</a>
+
+```
+searchKey: pprof.profileSupportsDelta
+tags: [variable object private]
+```
+
+```Go
+var profileSupportsDelta = ...
+```
+
 ### <a id="srv" href="#srv">var srv</a>
 
 ```
 searchKey: pprof.srv
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -142,11 +146,15 @@ var srv = httptest.NewServer(nil)
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [package]
+```
+
 ### <a id="handler" href="#handler">type handler string</a>
 
 ```
 searchKey: pprof.handler
-tags: [private]
+tags: [string private]
 ```
 
 ```Go
@@ -157,7 +165,7 @@ type handler string
 
 ```
 searchKey: pprof.handler.ServeHTTP
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -168,7 +176,7 @@ func (name handler) ServeHTTP(w http.ResponseWriter, r *http.Request)
 
 ```
 searchKey: pprof.handler.serveDeltaProfile
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -179,7 +187,7 @@ func (name handler) serveDeltaProfile(w http.ResponseWriter, r *http.Request, p 
 
 ```
 searchKey: pprof.profileEntry
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -193,21 +201,15 @@ type profileEntry struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="init.pprof.go" href="#init.pprof.go">func init()</a>
-
 ```
-searchKey: pprof.init
-tags: [private]
-```
-
-```Go
-func init()
+tags: [package]
 ```
 
 ### <a id="Cmdline" href="#Cmdline">func Cmdline(w http.ResponseWriter, r *http.Request)</a>
 
 ```
 searchKey: pprof.Cmdline
+tags: [method]
 ```
 
 ```Go
@@ -216,79 +218,11 @@ func Cmdline(w http.ResponseWriter, r *http.Request)
 
 Cmdline responds with the running program's command line, with arguments separated by NUL bytes. The package initialization registers it as /debug/pprof/cmdline. 
 
-### <a id="sleep" href="#sleep">func sleep(r *http.Request, d time.Duration)</a>
-
-```
-searchKey: pprof.sleep
-tags: [private]
-```
-
-```Go
-func sleep(r *http.Request, d time.Duration)
-```
-
-### <a id="durationExceedsWriteTimeout" href="#durationExceedsWriteTimeout">func durationExceedsWriteTimeout(r *http.Request, seconds float64) bool</a>
-
-```
-searchKey: pprof.durationExceedsWriteTimeout
-tags: [private]
-```
-
-```Go
-func durationExceedsWriteTimeout(r *http.Request, seconds float64) bool
-```
-
-### <a id="serveError" href="#serveError">func serveError(w http.ResponseWriter, status int, txt string)</a>
-
-```
-searchKey: pprof.serveError
-tags: [private]
-```
-
-```Go
-func serveError(w http.ResponseWriter, status int, txt string)
-```
-
-### <a id="Profile" href="#Profile">func Profile(w http.ResponseWriter, r *http.Request)</a>
-
-```
-searchKey: pprof.Profile
-```
-
-```Go
-func Profile(w http.ResponseWriter, r *http.Request)
-```
-
-Profile responds with the pprof-formatted cpu profile. Profiling lasts for duration specified in seconds GET parameter, or for 30 seconds if not specified. The package initialization registers it as /debug/pprof/profile. 
-
-### <a id="Trace" href="#Trace">func Trace(w http.ResponseWriter, r *http.Request)</a>
-
-```
-searchKey: pprof.Trace
-```
-
-```Go
-func Trace(w http.ResponseWriter, r *http.Request)
-```
-
-Trace responds with the execution trace in binary form. Tracing lasts for duration specified in seconds GET parameter, or for 1 second if not specified. The package initialization registers it as /debug/pprof/trace. 
-
-### <a id="Symbol" href="#Symbol">func Symbol(w http.ResponseWriter, r *http.Request)</a>
-
-```
-searchKey: pprof.Symbol
-```
-
-```Go
-func Symbol(w http.ResponseWriter, r *http.Request)
-```
-
-Symbol looks up the program counters listed in the request, responding with a table mapping program counters to function names. The package initialization registers it as /debug/pprof/symbol. 
-
 ### <a id="Handler" href="#Handler">func Handler(name string) http.Handler</a>
 
 ```
 searchKey: pprof.Handler
+tags: [method]
 ```
 
 ```Go
@@ -297,21 +231,11 @@ func Handler(name string) http.Handler
 
 Handler returns an HTTP handler that serves the named profile. 
 
-### <a id="collectProfile" href="#collectProfile">func collectProfile(p *pprof.Profile) (*profile.Profile, error)</a>
-
-```
-searchKey: pprof.collectProfile
-tags: [private]
-```
-
-```Go
-func collectProfile(p *pprof.Profile) (*profile.Profile, error)
-```
-
 ### <a id="Index" href="#Index">func Index(w http.ResponseWriter, r *http.Request)</a>
 
 ```
 searchKey: pprof.Index
+tags: [method]
 ```
 
 ```Go
@@ -320,22 +244,48 @@ func Index(w http.ResponseWriter, r *http.Request)
 
 Index responds with the pprof-formatted profile named by the request. For example, "/debug/pprof/heap" serves the "heap" profile. Index responds to a request for "/debug/pprof/" with an HTML page listing the available profiles. 
 
-### <a id="indexTmplExecute" href="#indexTmplExecute">func indexTmplExecute(w io.Writer, profiles []profileEntry) error</a>
+### <a id="Profile" href="#Profile">func Profile(w http.ResponseWriter, r *http.Request)</a>
 
 ```
-searchKey: pprof.indexTmplExecute
-tags: [private]
+searchKey: pprof.Profile
+tags: [method]
 ```
 
 ```Go
-func indexTmplExecute(w io.Writer, profiles []profileEntry) error
+func Profile(w http.ResponseWriter, r *http.Request)
+```
+
+Profile responds with the pprof-formatted cpu profile. Profiling lasts for duration specified in seconds GET parameter, or for 30 seconds if not specified. The package initialization registers it as /debug/pprof/profile. 
+
+### <a id="Symbol" href="#Symbol">func Symbol(w http.ResponseWriter, r *http.Request)</a>
+
+```
+searchKey: pprof.Symbol
+tags: [method]
+```
+
+```Go
+func Symbol(w http.ResponseWriter, r *http.Request)
+```
+
+Symbol looks up the program counters listed in the request, responding with a table mapping program counters to function names. The package initialization registers it as /debug/pprof/symbol. 
+
+### <a id="TestDeltaProfile" href="#TestDeltaProfile">func TestDeltaProfile(t *testing.T)</a>
+
+```
+searchKey: pprof.TestDeltaProfile
+tags: [method private test]
+```
+
+```Go
+func TestDeltaProfile(t *testing.T)
 ```
 
 ### <a id="TestDescriptions" href="#TestDescriptions">func TestDescriptions(t *testing.T)</a>
 
 ```
 searchKey: pprof.TestDescriptions
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -348,18 +298,88 @@ TestDescriptions checks that the profile names under runtime/pprof package have 
 
 ```
 searchKey: pprof.TestHandlers
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestHandlers(t *testing.T)
 ```
 
+### <a id="Trace" href="#Trace">func Trace(w http.ResponseWriter, r *http.Request)</a>
+
+```
+searchKey: pprof.Trace
+tags: [method]
+```
+
+```Go
+func Trace(w http.ResponseWriter, r *http.Request)
+```
+
+Trace responds with the execution trace in binary form. Tracing lasts for duration specified in seconds GET parameter, or for 1 second if not specified. The package initialization registers it as /debug/pprof/trace. 
+
+### <a id="collectProfile" href="#collectProfile">func collectProfile(p *pprof.Profile) (*profile.Profile, error)</a>
+
+```
+searchKey: pprof.collectProfile
+tags: [method private]
+```
+
+```Go
+func collectProfile(p *pprof.Profile) (*profile.Profile, error)
+```
+
+### <a id="durationExceedsWriteTimeout" href="#durationExceedsWriteTimeout">func durationExceedsWriteTimeout(r *http.Request, seconds float64) bool</a>
+
+```
+searchKey: pprof.durationExceedsWriteTimeout
+tags: [method private]
+```
+
+```Go
+func durationExceedsWriteTimeout(r *http.Request, seconds float64) bool
+```
+
+### <a id="indexTmplExecute" href="#indexTmplExecute">func indexTmplExecute(w io.Writer, profiles []profileEntry) error</a>
+
+```
+searchKey: pprof.indexTmplExecute
+tags: [method private]
+```
+
+```Go
+func indexTmplExecute(w io.Writer, profiles []profileEntry) error
+```
+
+### <a id="init.pprof.go" href="#init.pprof.go">func init()</a>
+
+```
+searchKey: pprof.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="mutexHog" href="#mutexHog">func mutexHog(duration time.Duration, hogger func(mu1, mu2 *sync.Mutex, start time.Time, dt time.Duration))</a>
+
+```
+searchKey: pprof.mutexHog
+tags: [method private]
+```
+
+```Go
+func mutexHog(duration time.Duration, hogger func(mu1, mu2 *sync.Mutex, start time.Time, dt time.Duration))
+```
+
+mutexHog starts multiple goroutines that runs the given hogger function for the specified duration. The hogger function will be given two mutexes to lock & unlock. 
+
 ### <a id="mutexHog1" href="#mutexHog1">func mutexHog1(mu1, mu2 *sync.Mutex, start time.Time, dt time.Duration)</a>
 
 ```
 searchKey: pprof.mutexHog1
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -370,7 +390,7 @@ func mutexHog1(mu1, mu2 *sync.Mutex, start time.Time, dt time.Duration)
 
 ```
 searchKey: pprof.mutexHog2
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -379,35 +399,11 @@ func mutexHog2(mu1, mu2 *sync.Mutex, start time.Time, dt time.Duration)
 
 mutexHog2 is almost identical to mutexHog but we keep them separate in order to distinguish them with function names in the stack trace. We make them slightly different, using Sink, because otherwise gccgo -c opt will merge them. 
 
-### <a id="mutexHog" href="#mutexHog">func mutexHog(duration time.Duration, hogger func(mu1, mu2 *sync.Mutex, start time.Time, dt time.Duration))</a>
-
-```
-searchKey: pprof.mutexHog
-tags: [private]
-```
-
-```Go
-func mutexHog(duration time.Duration, hogger func(mu1, mu2 *sync.Mutex, start time.Time, dt time.Duration))
-```
-
-mutexHog starts multiple goroutines that runs the given hogger function for the specified duration. The hogger function will be given two mutexes to lock & unlock. 
-
-### <a id="TestDeltaProfile" href="#TestDeltaProfile">func TestDeltaProfile(t *testing.T)</a>
-
-```
-searchKey: pprof.TestDeltaProfile
-tags: [private]
-```
-
-```Go
-func TestDeltaProfile(t *testing.T)
-```
-
 ### <a id="query" href="#query">func query(endpoint string) (*profile.Profile, error)</a>
 
 ```
 searchKey: pprof.query
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -418,7 +414,7 @@ func query(endpoint string) (*profile.Profile, error)
 
 ```
 searchKey: pprof.seen
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -426,4 +422,26 @@ func seen(p *profile.Profile, fname string) bool
 ```
 
 seen returns true if the profile includes samples whose stacks include the specified function name (fname). 
+
+### <a id="serveError" href="#serveError">func serveError(w http.ResponseWriter, status int, txt string)</a>
+
+```
+searchKey: pprof.serveError
+tags: [method private]
+```
+
+```Go
+func serveError(w http.ResponseWriter, status int, txt string)
+```
+
+### <a id="sleep" href="#sleep">func sleep(r *http.Request, d time.Duration)</a>
+
+```
+searchKey: pprof.sleep
+tags: [method private]
+```
+
+```Go
+func sleep(r *http.Request, d time.Duration)
+```
 

@@ -7,82 +7,75 @@ MD5 is cryptographically broken and should not be used for secure applications.
 ## Index
 
 * [Constants](#const)
-    * [const Size](#Size)
     * [const BlockSize](#BlockSize)
+    * [const Size](#Size)
+    * [const haveAsm](#haveAsm)
     * [const init0](#init0)
     * [const init1](#init1)
     * [const init2](#init2)
     * [const init3](#init3)
     * [const magic](#magic)
     * [const marshaledSize](#marshaledSize)
-    * [const haveAsm](#haveAsm)
 * [Variables](#var)
-    * [var golden](#golden)
-    * [var largeUnmarshalTests](#largeUnmarshalTests)
     * [var bench](#bench)
     * [var buf](#buf)
+    * [var golden](#golden)
+    * [var largeUnmarshalTests](#largeUnmarshalTests)
     * [var sum](#sum)
 * [Types](#type)
     * [type digest struct](#digest)
-        * [func (d *digest) Reset()](#digest.Reset)
-        * [func (d *digest) MarshalBinary() ([]byte, error)](#digest.MarshalBinary)
-        * [func (d *digest) UnmarshalBinary(b []byte) error](#digest.UnmarshalBinary)
-        * [func (d *digest) Size() int](#digest.Size)
         * [func (d *digest) BlockSize() int](#digest.BlockSize)
-        * [func (d *digest) Write(p []byte) (nn int, err error)](#digest.Write)
+        * [func (d *digest) MarshalBinary() ([]byte, error)](#digest.MarshalBinary)
+        * [func (d *digest) Reset()](#digest.Reset)
+        * [func (d *digest) Size() int](#digest.Size)
         * [func (d *digest) Sum(in []byte) []byte](#digest.Sum)
+        * [func (d *digest) UnmarshalBinary(b []byte) error](#digest.UnmarshalBinary)
+        * [func (d *digest) Write(p []byte) (nn int, err error)](#digest.Write)
         * [func (d *digest) checkSum() [Size]byte](#digest.checkSum)
     * [type md5Test struct](#md5Test)
     * [type unmarshalTest struct](#unmarshalTest)
 * [Functions](#func)
-    * [func init()](#init.md5.go)
-    * [func appendUint64(b []byte, x uint64) []byte](#appendUint64)
-    * [func appendUint32(b []byte, x uint32) []byte](#appendUint32)
-    * [func consumeUint64(b []byte) ([]byte, uint64)](#consumeUint64)
-    * [func consumeUint32(b []byte) ([]byte, uint32)](#consumeUint32)
+    * [func BenchmarkHash128(b *testing.B)](#BenchmarkHash128)
+    * [func BenchmarkHash1K(b *testing.B)](#BenchmarkHash1K)
+    * [func BenchmarkHash1KUnaligned(b *testing.B)](#BenchmarkHash1KUnaligned)
+    * [func BenchmarkHash1M(b *testing.B)](#BenchmarkHash1M)
+    * [func BenchmarkHash256(b *testing.B)](#BenchmarkHash256)
+    * [func BenchmarkHash512(b *testing.B)](#BenchmarkHash512)
+    * [func BenchmarkHash64(b *testing.B)](#BenchmarkHash64)
+    * [func BenchmarkHash8Bytes(b *testing.B)](#BenchmarkHash8Bytes)
+    * [func BenchmarkHash8BytesUnaligned(b *testing.B)](#BenchmarkHash8BytesUnaligned)
+    * [func BenchmarkHash8K(b *testing.B)](#BenchmarkHash8K)
+    * [func BenchmarkHash8KUnaligned(b *testing.B)](#BenchmarkHash8KUnaligned)
+    * [func BenchmarkHash8M(b *testing.B)](#BenchmarkHash8M)
     * [func New() hash.Hash](#New)
     * [func Sum(data []byte) [Size]byte](#Sum)
-    * [func blockGeneric(dig *digest, p []byte)](#blockGeneric)
-    * [func block(dig *digest, p []byte)](#block)
+    * [func TestBlockGeneric(t *testing.T)](#TestBlockGeneric)
     * [func TestGolden(t *testing.T)](#TestGolden)
     * [func TestGoldenMarshal(t *testing.T)](#TestGoldenMarshal)
     * [func TestLarge(t *testing.T)](#TestLarge)
-    * [func TestBlockGeneric(t *testing.T)](#TestBlockGeneric)
-    * [func safeSum(h hash.Hash) (sum []byte, err error)](#safeSum)
     * [func TestLargeHashes(t *testing.T)](#TestLargeHashes)
+    * [func appendUint32(b []byte, x uint32) []byte](#appendUint32)
+    * [func appendUint64(b []byte, x uint64) []byte](#appendUint64)
     * [func benchmarkSize(b *testing.B, size int, unaligned bool)](#benchmarkSize)
-    * [func BenchmarkHash8Bytes(b *testing.B)](#BenchmarkHash8Bytes)
-    * [func BenchmarkHash64(b *testing.B)](#BenchmarkHash64)
-    * [func BenchmarkHash128(b *testing.B)](#BenchmarkHash128)
-    * [func BenchmarkHash256(b *testing.B)](#BenchmarkHash256)
-    * [func BenchmarkHash512(b *testing.B)](#BenchmarkHash512)
-    * [func BenchmarkHash1K(b *testing.B)](#BenchmarkHash1K)
-    * [func BenchmarkHash8K(b *testing.B)](#BenchmarkHash8K)
-    * [func BenchmarkHash1M(b *testing.B)](#BenchmarkHash1M)
-    * [func BenchmarkHash8M(b *testing.B)](#BenchmarkHash8M)
-    * [func BenchmarkHash8BytesUnaligned(b *testing.B)](#BenchmarkHash8BytesUnaligned)
-    * [func BenchmarkHash1KUnaligned(b *testing.B)](#BenchmarkHash1KUnaligned)
-    * [func BenchmarkHash8KUnaligned(b *testing.B)](#BenchmarkHash8KUnaligned)
+    * [func block(dig *digest, p []byte)](#block)
+    * [func blockGeneric(dig *digest, p []byte)](#blockGeneric)
+    * [func consumeUint32(b []byte) ([]byte, uint32)](#consumeUint32)
+    * [func consumeUint64(b []byte) ([]byte, uint64)](#consumeUint64)
+    * [func init()](#init.md5.go)
+    * [func safeSum(h hash.Hash) (sum []byte, err error)](#safeSum)
 
 
 ## <a id="const" href="#const">Constants</a>
 
-### <a id="Size" href="#Size">const Size</a>
-
 ```
-searchKey: md5.Size
+tags: [package]
 ```
-
-```Go
-const Size = 16
-```
-
-The size of an MD5 checksum in bytes. 
 
 ### <a id="BlockSize" href="#BlockSize">const BlockSize</a>
 
 ```
 searchKey: md5.BlockSize
+tags: [constant number]
 ```
 
 ```Go
@@ -91,11 +84,35 @@ const BlockSize = 64
 
 The blocksize of MD5 in bytes. 
 
+### <a id="Size" href="#Size">const Size</a>
+
+```
+searchKey: md5.Size
+tags: [constant number]
+```
+
+```Go
+const Size = 16
+```
+
+The size of an MD5 checksum in bytes. 
+
+### <a id="haveAsm" href="#haveAsm">const haveAsm</a>
+
+```
+searchKey: md5.haveAsm
+tags: [constant boolean private]
+```
+
+```Go
+const haveAsm = true
+```
+
 ### <a id="init0" href="#init0">const init0</a>
 
 ```
 searchKey: md5.init0
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -106,7 +123,7 @@ const init0 = 0x67452301
 
 ```
 searchKey: md5.init1
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -117,7 +134,7 @@ const init1 = 0xEFCDAB89
 
 ```
 searchKey: md5.init2
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -128,7 +145,7 @@ const init2 = 0x98BADCFE
 
 ```
 searchKey: md5.init3
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -139,7 +156,7 @@ const init3 = 0x10325476
 
 ```
 searchKey: md5.magic
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -150,53 +167,24 @@ const magic = "md5\x01"
 
 ```
 searchKey: md5.marshaledSize
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
 const marshaledSize = len(magic) + 4*4 + BlockSize + 8
 ```
 
-### <a id="haveAsm" href="#haveAsm">const haveAsm</a>
-
-```
-searchKey: md5.haveAsm
-tags: [private]
-```
-
-```Go
-const haveAsm = true
-```
-
 ## <a id="var" href="#var">Variables</a>
 
-### <a id="golden" href="#golden">var golden</a>
-
 ```
-searchKey: md5.golden
-tags: [private]
-```
-
-```Go
-var golden = ...
-```
-
-### <a id="largeUnmarshalTests" href="#largeUnmarshalTests">var largeUnmarshalTests</a>
-
-```
-searchKey: md5.largeUnmarshalTests
-tags: [private]
-```
-
-```Go
-var largeUnmarshalTests = ...
+tags: [package]
 ```
 
 ### <a id="bench" href="#bench">var bench</a>
 
 ```
 searchKey: md5.bench
-tags: [private]
+tags: [variable interface private]
 ```
 
 ```Go
@@ -207,18 +195,40 @@ var bench = New()
 
 ```
 searchKey: md5.buf
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
 var buf = make([]byte, 1024*1024*8+1)
 ```
 
+### <a id="golden" href="#golden">var golden</a>
+
+```
+searchKey: md5.golden
+tags: [variable array struct private]
+```
+
+```Go
+var golden = ...
+```
+
+### <a id="largeUnmarshalTests" href="#largeUnmarshalTests">var largeUnmarshalTests</a>
+
+```
+searchKey: md5.largeUnmarshalTests
+tags: [variable array struct private]
+```
+
+```Go
+var largeUnmarshalTests = ...
+```
+
 ### <a id="sum" href="#sum">var sum</a>
 
 ```
 searchKey: md5.sum
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -227,11 +237,15 @@ var sum = make([]byte, bench.Size())
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [package]
+```
+
 ### <a id="digest" href="#digest">type digest struct</a>
 
 ```
 searchKey: md5.digest
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -245,88 +259,88 @@ type digest struct {
 
 digest represents the partial evaluation of a checksum. 
 
-#### <a id="digest.Reset" href="#digest.Reset">func (d *digest) Reset()</a>
-
-```
-searchKey: md5.digest.Reset
-tags: [private]
-```
-
-```Go
-func (d *digest) Reset()
-```
-
-#### <a id="digest.MarshalBinary" href="#digest.MarshalBinary">func (d *digest) MarshalBinary() ([]byte, error)</a>
-
-```
-searchKey: md5.digest.MarshalBinary
-tags: [private]
-```
-
-```Go
-func (d *digest) MarshalBinary() ([]byte, error)
-```
-
-#### <a id="digest.UnmarshalBinary" href="#digest.UnmarshalBinary">func (d *digest) UnmarshalBinary(b []byte) error</a>
-
-```
-searchKey: md5.digest.UnmarshalBinary
-tags: [private]
-```
-
-```Go
-func (d *digest) UnmarshalBinary(b []byte) error
-```
-
-#### <a id="digest.Size" href="#digest.Size">func (d *digest) Size() int</a>
-
-```
-searchKey: md5.digest.Size
-tags: [private]
-```
-
-```Go
-func (d *digest) Size() int
-```
-
 #### <a id="digest.BlockSize" href="#digest.BlockSize">func (d *digest) BlockSize() int</a>
 
 ```
 searchKey: md5.digest.BlockSize
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (d *digest) BlockSize() int
 ```
 
-#### <a id="digest.Write" href="#digest.Write">func (d *digest) Write(p []byte) (nn int, err error)</a>
+#### <a id="digest.MarshalBinary" href="#digest.MarshalBinary">func (d *digest) MarshalBinary() ([]byte, error)</a>
 
 ```
-searchKey: md5.digest.Write
-tags: [private]
+searchKey: md5.digest.MarshalBinary
+tags: [function private]
 ```
 
 ```Go
-func (d *digest) Write(p []byte) (nn int, err error)
+func (d *digest) MarshalBinary() ([]byte, error)
+```
+
+#### <a id="digest.Reset" href="#digest.Reset">func (d *digest) Reset()</a>
+
+```
+searchKey: md5.digest.Reset
+tags: [function private]
+```
+
+```Go
+func (d *digest) Reset()
+```
+
+#### <a id="digest.Size" href="#digest.Size">func (d *digest) Size() int</a>
+
+```
+searchKey: md5.digest.Size
+tags: [function private]
+```
+
+```Go
+func (d *digest) Size() int
 ```
 
 #### <a id="digest.Sum" href="#digest.Sum">func (d *digest) Sum(in []byte) []byte</a>
 
 ```
 searchKey: md5.digest.Sum
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (d *digest) Sum(in []byte) []byte
 ```
 
+#### <a id="digest.UnmarshalBinary" href="#digest.UnmarshalBinary">func (d *digest) UnmarshalBinary(b []byte) error</a>
+
+```
+searchKey: md5.digest.UnmarshalBinary
+tags: [method private]
+```
+
+```Go
+func (d *digest) UnmarshalBinary(b []byte) error
+```
+
+#### <a id="digest.Write" href="#digest.Write">func (d *digest) Write(p []byte) (nn int, err error)</a>
+
+```
+searchKey: md5.digest.Write
+tags: [method private]
+```
+
+```Go
+func (d *digest) Write(p []byte) (nn int, err error)
+```
+
 #### <a id="digest.checkSum" href="#digest.checkSum">func (d *digest) checkSum() [Size]byte</a>
 
 ```
 searchKey: md5.digest.checkSum
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -337,7 +351,7 @@ func (d *digest) checkSum() [Size]byte
 
 ```
 searchKey: md5.md5Test
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -352,7 +366,7 @@ type md5Test struct {
 
 ```
 searchKey: md5.unmarshalTest
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -366,65 +380,147 @@ Tests for unmarshaling hashes that have hashed a large amount of data The initia
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="init.md5.go" href="#init.md5.go">func init()</a>
-
 ```
-searchKey: md5.init
-tags: [private]
+tags: [package]
 ```
 
-```Go
-func init()
-```
-
-### <a id="appendUint64" href="#appendUint64">func appendUint64(b []byte, x uint64) []byte</a>
+### <a id="BenchmarkHash128" href="#BenchmarkHash128">func BenchmarkHash128(b *testing.B)</a>
 
 ```
-searchKey: md5.appendUint64
-tags: [private]
+searchKey: md5.BenchmarkHash128
+tags: [method private benchmark]
 ```
 
 ```Go
-func appendUint64(b []byte, x uint64) []byte
+func BenchmarkHash128(b *testing.B)
 ```
 
-### <a id="appendUint32" href="#appendUint32">func appendUint32(b []byte, x uint32) []byte</a>
+### <a id="BenchmarkHash1K" href="#BenchmarkHash1K">func BenchmarkHash1K(b *testing.B)</a>
 
 ```
-searchKey: md5.appendUint32
-tags: [private]
-```
-
-```Go
-func appendUint32(b []byte, x uint32) []byte
-```
-
-### <a id="consumeUint64" href="#consumeUint64">func consumeUint64(b []byte) ([]byte, uint64)</a>
-
-```
-searchKey: md5.consumeUint64
-tags: [private]
+searchKey: md5.BenchmarkHash1K
+tags: [method private benchmark]
 ```
 
 ```Go
-func consumeUint64(b []byte) ([]byte, uint64)
+func BenchmarkHash1K(b *testing.B)
 ```
 
-### <a id="consumeUint32" href="#consumeUint32">func consumeUint32(b []byte) ([]byte, uint32)</a>
+### <a id="BenchmarkHash1KUnaligned" href="#BenchmarkHash1KUnaligned">func BenchmarkHash1KUnaligned(b *testing.B)</a>
 
 ```
-searchKey: md5.consumeUint32
-tags: [private]
+searchKey: md5.BenchmarkHash1KUnaligned
+tags: [method private benchmark]
 ```
 
 ```Go
-func consumeUint32(b []byte) ([]byte, uint32)
+func BenchmarkHash1KUnaligned(b *testing.B)
+```
+
+### <a id="BenchmarkHash1M" href="#BenchmarkHash1M">func BenchmarkHash1M(b *testing.B)</a>
+
+```
+searchKey: md5.BenchmarkHash1M
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkHash1M(b *testing.B)
+```
+
+### <a id="BenchmarkHash256" href="#BenchmarkHash256">func BenchmarkHash256(b *testing.B)</a>
+
+```
+searchKey: md5.BenchmarkHash256
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkHash256(b *testing.B)
+```
+
+### <a id="BenchmarkHash512" href="#BenchmarkHash512">func BenchmarkHash512(b *testing.B)</a>
+
+```
+searchKey: md5.BenchmarkHash512
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkHash512(b *testing.B)
+```
+
+### <a id="BenchmarkHash64" href="#BenchmarkHash64">func BenchmarkHash64(b *testing.B)</a>
+
+```
+searchKey: md5.BenchmarkHash64
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkHash64(b *testing.B)
+```
+
+### <a id="BenchmarkHash8Bytes" href="#BenchmarkHash8Bytes">func BenchmarkHash8Bytes(b *testing.B)</a>
+
+```
+searchKey: md5.BenchmarkHash8Bytes
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkHash8Bytes(b *testing.B)
+```
+
+### <a id="BenchmarkHash8BytesUnaligned" href="#BenchmarkHash8BytesUnaligned">func BenchmarkHash8BytesUnaligned(b *testing.B)</a>
+
+```
+searchKey: md5.BenchmarkHash8BytesUnaligned
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkHash8BytesUnaligned(b *testing.B)
+```
+
+### <a id="BenchmarkHash8K" href="#BenchmarkHash8K">func BenchmarkHash8K(b *testing.B)</a>
+
+```
+searchKey: md5.BenchmarkHash8K
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkHash8K(b *testing.B)
+```
+
+### <a id="BenchmarkHash8KUnaligned" href="#BenchmarkHash8KUnaligned">func BenchmarkHash8KUnaligned(b *testing.B)</a>
+
+```
+searchKey: md5.BenchmarkHash8KUnaligned
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkHash8KUnaligned(b *testing.B)
+```
+
+### <a id="BenchmarkHash8M" href="#BenchmarkHash8M">func BenchmarkHash8M(b *testing.B)</a>
+
+```
+searchKey: md5.BenchmarkHash8M
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkHash8M(b *testing.B)
 ```
 
 ### <a id="New" href="#New">func New() hash.Hash</a>
 
 ```
 searchKey: md5.New
+tags: [function]
 ```
 
 ```Go
@@ -437,6 +533,7 @@ New returns a new hash.Hash computing the MD5 checksum. The Hash also implements
 
 ```
 searchKey: md5.Sum
+tags: [method]
 ```
 
 ```Go
@@ -445,33 +542,24 @@ func Sum(data []byte) [Size]byte
 
 Sum returns the MD5 checksum of the data. 
 
-### <a id="blockGeneric" href="#blockGeneric">func blockGeneric(dig *digest, p []byte)</a>
+### <a id="TestBlockGeneric" href="#TestBlockGeneric">func TestBlockGeneric(t *testing.T)</a>
 
 ```
-searchKey: md5.blockGeneric
-tags: [private]
-```
-
-```Go
-func blockGeneric(dig *digest, p []byte)
-```
-
-### <a id="block" href="#block">func block(dig *digest, p []byte)</a>
-
-```
-searchKey: md5.block
-tags: [private]
+searchKey: md5.TestBlockGeneric
+tags: [method private test]
 ```
 
 ```Go
-func block(dig *digest, p []byte)
+func TestBlockGeneric(t *testing.T)
 ```
+
+Tests that blockGeneric (pure Go) and block (in assembly for amd64, 386, arm) match. 
 
 ### <a id="TestGolden" href="#TestGolden">func TestGolden(t *testing.T)</a>
 
 ```
 searchKey: md5.TestGolden
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -482,7 +570,7 @@ func TestGolden(t *testing.T)
 
 ```
 searchKey: md5.TestGoldenMarshal
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -493,188 +581,120 @@ func TestGoldenMarshal(t *testing.T)
 
 ```
 searchKey: md5.TestLarge
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestLarge(t *testing.T)
 ```
 
-### <a id="TestBlockGeneric" href="#TestBlockGeneric">func TestBlockGeneric(t *testing.T)</a>
-
-```
-searchKey: md5.TestBlockGeneric
-tags: [private]
-```
-
-```Go
-func TestBlockGeneric(t *testing.T)
-```
-
-Tests that blockGeneric (pure Go) and block (in assembly for amd64, 386, arm) match. 
-
-### <a id="safeSum" href="#safeSum">func safeSum(h hash.Hash) (sum []byte, err error)</a>
-
-```
-searchKey: md5.safeSum
-tags: [private]
-```
-
-```Go
-func safeSum(h hash.Hash) (sum []byte, err error)
-```
-
 ### <a id="TestLargeHashes" href="#TestLargeHashes">func TestLargeHashes(t *testing.T)</a>
 
 ```
 searchKey: md5.TestLargeHashes
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestLargeHashes(t *testing.T)
 ```
 
+### <a id="appendUint32" href="#appendUint32">func appendUint32(b []byte, x uint32) []byte</a>
+
+```
+searchKey: md5.appendUint32
+tags: [method private]
+```
+
+```Go
+func appendUint32(b []byte, x uint32) []byte
+```
+
+### <a id="appendUint64" href="#appendUint64">func appendUint64(b []byte, x uint64) []byte</a>
+
+```
+searchKey: md5.appendUint64
+tags: [method private]
+```
+
+```Go
+func appendUint64(b []byte, x uint64) []byte
+```
+
 ### <a id="benchmarkSize" href="#benchmarkSize">func benchmarkSize(b *testing.B, size int, unaligned bool)</a>
 
 ```
 searchKey: md5.benchmarkSize
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func benchmarkSize(b *testing.B, size int, unaligned bool)
 ```
 
-### <a id="BenchmarkHash8Bytes" href="#BenchmarkHash8Bytes">func BenchmarkHash8Bytes(b *testing.B)</a>
+### <a id="block" href="#block">func block(dig *digest, p []byte)</a>
 
 ```
-searchKey: md5.BenchmarkHash8Bytes
-tags: [private]
-```
-
-```Go
-func BenchmarkHash8Bytes(b *testing.B)
-```
-
-### <a id="BenchmarkHash64" href="#BenchmarkHash64">func BenchmarkHash64(b *testing.B)</a>
-
-```
-searchKey: md5.BenchmarkHash64
-tags: [private]
+searchKey: md5.block
+tags: [method private]
 ```
 
 ```Go
-func BenchmarkHash64(b *testing.B)
+func block(dig *digest, p []byte)
 ```
 
-### <a id="BenchmarkHash128" href="#BenchmarkHash128">func BenchmarkHash128(b *testing.B)</a>
+### <a id="blockGeneric" href="#blockGeneric">func blockGeneric(dig *digest, p []byte)</a>
 
 ```
-searchKey: md5.BenchmarkHash128
-tags: [private]
-```
-
-```Go
-func BenchmarkHash128(b *testing.B)
-```
-
-### <a id="BenchmarkHash256" href="#BenchmarkHash256">func BenchmarkHash256(b *testing.B)</a>
-
-```
-searchKey: md5.BenchmarkHash256
-tags: [private]
+searchKey: md5.blockGeneric
+tags: [method private]
 ```
 
 ```Go
-func BenchmarkHash256(b *testing.B)
+func blockGeneric(dig *digest, p []byte)
 ```
 
-### <a id="BenchmarkHash512" href="#BenchmarkHash512">func BenchmarkHash512(b *testing.B)</a>
+### <a id="consumeUint32" href="#consumeUint32">func consumeUint32(b []byte) ([]byte, uint32)</a>
 
 ```
-searchKey: md5.BenchmarkHash512
-tags: [private]
-```
-
-```Go
-func BenchmarkHash512(b *testing.B)
-```
-
-### <a id="BenchmarkHash1K" href="#BenchmarkHash1K">func BenchmarkHash1K(b *testing.B)</a>
-
-```
-searchKey: md5.BenchmarkHash1K
-tags: [private]
+searchKey: md5.consumeUint32
+tags: [method private]
 ```
 
 ```Go
-func BenchmarkHash1K(b *testing.B)
+func consumeUint32(b []byte) ([]byte, uint32)
 ```
 
-### <a id="BenchmarkHash8K" href="#BenchmarkHash8K">func BenchmarkHash8K(b *testing.B)</a>
+### <a id="consumeUint64" href="#consumeUint64">func consumeUint64(b []byte) ([]byte, uint64)</a>
 
 ```
-searchKey: md5.BenchmarkHash8K
-tags: [private]
-```
-
-```Go
-func BenchmarkHash8K(b *testing.B)
-```
-
-### <a id="BenchmarkHash1M" href="#BenchmarkHash1M">func BenchmarkHash1M(b *testing.B)</a>
-
-```
-searchKey: md5.BenchmarkHash1M
-tags: [private]
+searchKey: md5.consumeUint64
+tags: [method private]
 ```
 
 ```Go
-func BenchmarkHash1M(b *testing.B)
+func consumeUint64(b []byte) ([]byte, uint64)
 ```
 
-### <a id="BenchmarkHash8M" href="#BenchmarkHash8M">func BenchmarkHash8M(b *testing.B)</a>
+### <a id="init.md5.go" href="#init.md5.go">func init()</a>
 
 ```
-searchKey: md5.BenchmarkHash8M
-tags: [private]
-```
-
-```Go
-func BenchmarkHash8M(b *testing.B)
-```
-
-### <a id="BenchmarkHash8BytesUnaligned" href="#BenchmarkHash8BytesUnaligned">func BenchmarkHash8BytesUnaligned(b *testing.B)</a>
-
-```
-searchKey: md5.BenchmarkHash8BytesUnaligned
-tags: [private]
+searchKey: md5.init
+tags: [function private]
 ```
 
 ```Go
-func BenchmarkHash8BytesUnaligned(b *testing.B)
+func init()
 ```
 
-### <a id="BenchmarkHash1KUnaligned" href="#BenchmarkHash1KUnaligned">func BenchmarkHash1KUnaligned(b *testing.B)</a>
+### <a id="safeSum" href="#safeSum">func safeSum(h hash.Hash) (sum []byte, err error)</a>
 
 ```
-searchKey: md5.BenchmarkHash1KUnaligned
-tags: [private]
-```
-
-```Go
-func BenchmarkHash1KUnaligned(b *testing.B)
-```
-
-### <a id="BenchmarkHash8KUnaligned" href="#BenchmarkHash8KUnaligned">func BenchmarkHash8KUnaligned(b *testing.B)</a>
-
-```
-searchKey: md5.BenchmarkHash8KUnaligned
-tags: [private]
+searchKey: md5.safeSum
+tags: [method private]
 ```
 
 ```Go
-func BenchmarkHash8KUnaligned(b *testing.B)
+func safeSum(h hash.Hash) (sum []byte, err error)
 ```
 

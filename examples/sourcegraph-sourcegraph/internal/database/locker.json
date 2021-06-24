@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/database/locker",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "locker.lockQuery",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -67,6 +71,8 @@
                 "newPage": false,
                 "searchKey": "locker.tryLockQuery",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -89,6 +95,8 @@
                 "newPage": false,
                 "searchKey": "locker.unlockQuery",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -114,6 +122,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -133,7 +142,9 @@
                 "identifier": "Locker",
                 "newPage": false,
                 "searchKey": "locker.Locker",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -151,7 +162,9 @@
                       "identifier": "NewWithDB",
                       "newPage": false,
                       "searchKey": "locker.NewWithDB",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -166,52 +179,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/database/locker#Locker.With",
-                    "documentation": {
-                      "identifier": "Locker.With",
-                      "newPage": false,
-                      "searchKey": "locker.Locker.With",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (l *Locker) With(other basestore.ShareableStore) *Locker"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (l *Locker) With(other basestore.ShareableStore) *Locker\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/database/locker#Locker.Transact",
-                    "documentation": {
-                      "identifier": "Locker.Transact",
-                      "newPage": false,
-                      "searchKey": "locker.Locker.Transact",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (l *Locker) Transact(ctx context.Context) (*Locker, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (l *Locker) Transact(ctx context.Context) (*Locker, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/database/locker#Locker.Lock",
                     "documentation": {
                       "identifier": "Locker.Lock",
                       "newPage": false,
                       "searchKey": "locker.Locker.Lock",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -226,12 +201,57 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/database/locker#Locker.Transact",
+                    "documentation": {
+                      "identifier": "Locker.Transact",
+                      "newPage": false,
+                      "searchKey": "locker.Locker.Transact",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *Locker) Transact(ctx context.Context) (*Locker, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *Locker) Transact(ctx context.Context) (*Locker, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/locker#Locker.With",
+                    "documentation": {
+                      "identifier": "Locker.With",
+                      "newPage": false,
+                      "searchKey": "locker.Locker.With",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *Locker) With(other basestore.ShareableStore) *Locker"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *Locker) With(other basestore.ShareableStore) *Locker\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/database/locker#Locker.lock",
                     "documentation": {
                       "identifier": "Locker.lock",
                       "newPage": false,
                       "searchKey": "locker.Locker.lock",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -254,6 +274,7 @@
                       "newPage": false,
                       "searchKey": "locker.Locker.tryLock",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -276,6 +297,7 @@
                       "newPage": false,
                       "searchKey": "locker.Locker.unlock",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -300,7 +322,9 @@
                 "identifier": "UnlockFunc",
                 "newPage": false,
                 "searchKey": "locker.UnlockFunc",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -324,6 +348,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -338,35 +363,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/database/locker#init.locker_test.go",
-              "documentation": {
-                "identifier": "init.locker_test.go",
-                "newPage": false,
-                "searchKey": "locker.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/database/locker#TestLock",
               "documentation": {
                 "identifier": "TestLock",
                 "newPage": false,
                 "searchKey": "locker.TestLock",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -388,7 +393,9 @@
                 "newPage": false,
                 "searchKey": "locker.TestLockBlockingAcquire",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -398,6 +405,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc TestLockBlockingAcquire(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/locker#init.locker_test.go",
+              "documentation": {
+                "identifier": "init.locker_test.go",
+                "newPage": false,
+                "searchKey": "locker.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
               },
               "children": null
             }

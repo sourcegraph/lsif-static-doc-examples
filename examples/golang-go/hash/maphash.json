@@ -4,7 +4,9 @@
     "identifier": "maphash",
     "newPage": true,
     "searchKey": "hash/maphash",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -41,6 +45,8 @@
                 "newPage": false,
                 "searchKey": "maphash.bufSize",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -63,6 +69,8 @@
                 "newPage": false,
                 "searchKey": "maphash.hashSize",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -87,7 +95,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -106,6 +116,8 @@
                 "newPage": false,
                 "searchKey": "maphash.fixedSeed",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -130,7 +142,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -143,53 +157,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/hash/maphash#Seed",
-              "documentation": {
-                "identifier": "Seed",
-                "newPage": false,
-                "searchKey": "maphash.Seed",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Seed struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Seed struct {\n\ts uint64\n}\n```\n\nA Seed is a random value that selects the specific hash function computed by a Hash. If two Hashes use the same Seeds, they will compute the same hash values for any given input. If two Hashes use different Seeds, they are very likely to compute distinct hash values for any given input. \n\nA Seed must be initialized by calling MakeSeed. The zero seed is uninitialized and not valid for use with Hash's SetSeed method. \n\nEach Seed value is local to a single process and cannot be serialized or otherwise recreated in a different process. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/hash/maphash#MakeSeed",
-                    "documentation": {
-                      "identifier": "MakeSeed",
-                      "newPage": false,
-                      "searchKey": "maphash.MakeSeed",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func MakeSeed() Seed"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc MakeSeed() Seed\n```\n\nMakeSeed returns a new random seed. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/hash/maphash#Hash",
               "documentation": {
                 "identifier": "Hash",
                 "newPage": false,
                 "searchKey": "maphash.Hash",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -202,82 +177,44 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/hash/maphash#Hash.initSeed",
+                    "pathID": "/hash/maphash#Hash.BlockSize",
                     "documentation": {
-                      "identifier": "Hash.initSeed",
+                      "identifier": "Hash.BlockSize",
                       "newPage": false,
-                      "searchKey": "maphash.Hash.initSeed",
+                      "searchKey": "maphash.Hash.BlockSize",
                       "tags": [
-                        "private"
+                        "function"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (h *Hash) initSeed()"
+                      "value": "func (h *Hash) BlockSize() int"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (h *Hash) initSeed()\n```\n\ninitSeed seeds the hash if necessary. initSeed is called lazily before any operation that actually uses h.seed/h.state. Note that this does not include Write/WriteByte/WriteString in the case where they only add to h.buf. (If they write too much, they call h.flush, which does call h.initSeed.) \n\n"
+                      "value": "```Go\nfunc (h *Hash) BlockSize() int\n```\n\nBlockSize returns h's block size. \n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/hash/maphash#Hash.WriteByte",
+                    "pathID": "/hash/maphash#Hash.Reset",
                     "documentation": {
-                      "identifier": "Hash.WriteByte",
+                      "identifier": "Hash.Reset",
                       "newPage": false,
-                      "searchKey": "maphash.Hash.WriteByte",
-                      "tags": null
+                      "searchKey": "maphash.Hash.Reset",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (h *Hash) WriteByte(b byte) error"
+                      "value": "func (h *Hash) Reset()"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (h *Hash) WriteByte(b byte) error\n```\n\nWriteByte adds b to the sequence of bytes hashed by h. It never fails; the error result is for implementing io.ByteWriter. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/maphash#Hash.Write",
-                    "documentation": {
-                      "identifier": "Hash.Write",
-                      "newPage": false,
-                      "searchKey": "maphash.Hash.Write",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *Hash) Write(b []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *Hash) Write(b []byte) (int, error)\n```\n\nWrite adds b to the sequence of bytes hashed by h. It always writes all of b and never fails; the count and error result are for implementing io.Writer. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/maphash#Hash.WriteString",
-                    "documentation": {
-                      "identifier": "Hash.WriteString",
-                      "newPage": false,
-                      "searchKey": "maphash.Hash.WriteString",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *Hash) WriteString(s string) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *Hash) WriteString(s string) (int, error)\n```\n\nWriteString adds the bytes of s to the sequence of bytes hashed by h. It always writes all of s and never fails; the count and error result are for implementing io.StringWriter. \n\n"
+                      "value": "```Go\nfunc (h *Hash) Reset()\n```\n\nReset discards all bytes added to h. (The seed remains the same.) \n\n"
                     },
                     "children": null
                   }
@@ -289,7 +226,9 @@
                       "identifier": "Hash.Seed",
                       "newPage": false,
                       "searchKey": "maphash.Hash.Seed",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -309,7 +248,9 @@
                       "identifier": "Hash.SetSeed",
                       "newPage": false,
                       "searchKey": "maphash.Hash.SetSeed",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -324,20 +265,132 @@
                 },
                 {
                   "node": {
-                    "pathID": "/hash/maphash#Hash.Reset",
+                    "pathID": "/hash/maphash#Hash.Size",
                     "documentation": {
-                      "identifier": "Hash.Reset",
+                      "identifier": "Hash.Size",
                       "newPage": false,
-                      "searchKey": "maphash.Hash.Reset",
-                      "tags": null
+                      "searchKey": "maphash.Hash.Size",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (h *Hash) Reset()"
+                      "value": "func (h *Hash) Size() int"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (h *Hash) Reset()\n```\n\nReset discards all bytes added to h. (The seed remains the same.) \n\n"
+                      "value": "```Go\nfunc (h *Hash) Size() int\n```\n\nSize returns h's hash value size, 8 bytes. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/maphash#Hash.Sum",
+                    "documentation": {
+                      "identifier": "Hash.Sum",
+                      "newPage": false,
+                      "searchKey": "maphash.Hash.Sum",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *Hash) Sum(b []byte) []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *Hash) Sum(b []byte) []byte\n```\n\nSum appends the hash's current 64-bit value to b. It exists for implementing hash.Hash. For direct calls, it is more efficient to use Sum64. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/maphash#Hash.Sum64",
+                    "documentation": {
+                      "identifier": "Hash.Sum64",
+                      "newPage": false,
+                      "searchKey": "maphash.Hash.Sum64",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *Hash) Sum64() uint64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *Hash) Sum64() uint64\n```\n\nSum64 returns h's current 64-bit value, which depends on h's seed and the sequence of bytes added to h since the last call to Reset or SetSeed. \n\nAll bits of the Sum64 result are close to uniformly and independently distributed, so it can be safely reduced by using bit masking, shifting, or modular arithmetic. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/maphash#Hash.Write",
+                    "documentation": {
+                      "identifier": "Hash.Write",
+                      "newPage": false,
+                      "searchKey": "maphash.Hash.Write",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *Hash) Write(b []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *Hash) Write(b []byte) (int, error)\n```\n\nWrite adds b to the sequence of bytes hashed by h. It always writes all of b and never fails; the count and error result are for implementing io.Writer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/maphash#Hash.WriteByte",
+                    "documentation": {
+                      "identifier": "Hash.WriteByte",
+                      "newPage": false,
+                      "searchKey": "maphash.Hash.WriteByte",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *Hash) WriteByte(b byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *Hash) WriteByte(b byte) error\n```\n\nWriteByte adds b to the sequence of bytes hashed by h. It never fails; the error result is for implementing io.ByteWriter. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/maphash#Hash.WriteString",
+                    "documentation": {
+                      "identifier": "Hash.WriteString",
+                      "newPage": false,
+                      "searchKey": "maphash.Hash.WriteString",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *Hash) WriteString(s string) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *Hash) WriteString(s string) (int, error)\n```\n\nWriteString adds the bytes of s to the sequence of bytes hashed by h. It always writes all of s and never fails; the count and error result are for implementing io.StringWriter. \n\n"
                     },
                     "children": null
                   }
@@ -350,6 +403,7 @@
                       "newPage": false,
                       "searchKey": "maphash.Hash.flush",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -366,80 +420,230 @@
                 },
                 {
                   "node": {
-                    "pathID": "/hash/maphash#Hash.Sum64",
+                    "pathID": "/hash/maphash#Hash.initSeed",
                     "documentation": {
-                      "identifier": "Hash.Sum64",
+                      "identifier": "Hash.initSeed",
                       "newPage": false,
-                      "searchKey": "maphash.Hash.Sum64",
-                      "tags": null
+                      "searchKey": "maphash.Hash.initSeed",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (h *Hash) Sum64() uint64"
+                      "value": "func (h *Hash) initSeed()"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (h *Hash) Sum64() uint64\n```\n\nSum64 returns h's current 64-bit value, which depends on h's seed and the sequence of bytes added to h since the last call to Reset or SetSeed. \n\nAll bits of the Sum64 result are close to uniformly and independently distributed, so it can be safely reduced by using bit masking, shifting, or modular arithmetic. \n\n"
+                      "value": "```Go\nfunc (h *Hash) initSeed()\n```\n\ninitSeed seeds the hash if necessary. initSeed is called lazily before any operation that actually uses h.seed/h.state. Note that this does not include Write/WriteByte/WriteString in the case where they only add to h.buf. (If they write too much, they call h.flush, which does call h.initSeed.) \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/maphash#Seed",
+              "documentation": {
+                "identifier": "Seed",
+                "newPage": false,
+                "searchKey": "maphash.Seed",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Seed struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Seed struct {\n\ts uint64\n}\n```\n\nA Seed is a random value that selects the specific hash function computed by a Hash. If two Hashes use the same Seeds, they will compute the same hash values for any given input. If two Hashes use different Seeds, they are very likely to compute distinct hash values for any given input. \n\nA Seed must be initialized by calling MakeSeed. The zero seed is uninitialized and not valid for use with Hash's SetSeed method. \n\nEach Seed value is local to a single process and cannot be serialized or otherwise recreated in a different process. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/hash/maphash#MakeSeed",
+                    "documentation": {
+                      "identifier": "MakeSeed",
+                      "newPage": false,
+                      "searchKey": "maphash.MakeSeed",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func MakeSeed() Seed"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc MakeSeed() Seed\n```\n\nMakeSeed returns a new random seed. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/maphash#bytesKey",
+              "documentation": {
+                "identifier": "bytesKey",
+                "newPage": false,
+                "searchKey": "maphash.bytesKey",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type bytesKey struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype bytesKey struct {\n\tb []byte\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/hash/maphash#bytesKey.bits",
+                    "documentation": {
+                      "identifier": "bytesKey.bits",
+                      "newPage": false,
+                      "searchKey": "maphash.bytesKey.bits",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k *bytesKey) bits() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k *bytesKey) bits() int\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/hash/maphash#Hash.Sum",
+                    "pathID": "/hash/maphash#bytesKey.clear",
                     "documentation": {
-                      "identifier": "Hash.Sum",
+                      "identifier": "bytesKey.clear",
                       "newPage": false,
-                      "searchKey": "maphash.Hash.Sum",
-                      "tags": null
+                      "searchKey": "maphash.bytesKey.clear",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (h *Hash) Sum(b []byte) []byte"
+                      "value": "func (k *bytesKey) clear()"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (h *Hash) Sum(b []byte) []byte\n```\n\nSum appends the hash's current 64-bit value to b. It exists for implementing hash.Hash. For direct calls, it is more efficient to use Sum64. \n\n"
+                      "value": "```Go\nfunc (k *bytesKey) clear()\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/hash/maphash#Hash.Size",
+                    "pathID": "/hash/maphash#bytesKey.flipBit",
                     "documentation": {
-                      "identifier": "Hash.Size",
+                      "identifier": "bytesKey.flipBit",
                       "newPage": false,
-                      "searchKey": "maphash.Hash.Size",
-                      "tags": null
+                      "searchKey": "maphash.bytesKey.flipBit",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (h *Hash) Size() int"
+                      "value": "func (k *bytesKey) flipBit(i int)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (h *Hash) Size() int\n```\n\nSize returns h's hash value size, 8 bytes. \n\n"
+                      "value": "```Go\nfunc (k *bytesKey) flipBit(i int)\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/hash/maphash#Hash.BlockSize",
+                    "pathID": "/hash/maphash#bytesKey.hash",
                     "documentation": {
-                      "identifier": "Hash.BlockSize",
+                      "identifier": "bytesKey.hash",
                       "newPage": false,
-                      "searchKey": "maphash.Hash.BlockSize",
-                      "tags": null
+                      "searchKey": "maphash.bytesKey.hash",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (h *Hash) BlockSize() int"
+                      "value": "func (k *bytesKey) hash() uint64"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (h *Hash) BlockSize() int\n```\n\nBlockSize returns h's block size. \n\n"
+                      "value": "```Go\nfunc (k *bytesKey) hash() uint64\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/maphash#bytesKey.name",
+                    "documentation": {
+                      "identifier": "bytesKey.name",
+                      "newPage": false,
+                      "searchKey": "maphash.bytesKey.name",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k *bytesKey) name() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k *bytesKey) name() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/maphash#bytesKey.random",
+                    "documentation": {
+                      "identifier": "bytesKey.random",
+                      "newPage": false,
+                      "searchKey": "maphash.bytesKey.random",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k *bytesKey) random(r *rand.Rand)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k *bytesKey) random(r *rand.Rand)\n```\n\n"
                     },
                     "children": null
                   }
@@ -455,6 +659,7 @@
                 "newPage": false,
                 "searchKey": "maphash.hashSet",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -475,6 +680,7 @@
                       "newPage": false,
                       "searchKey": "maphash.newHashSet",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -497,6 +703,7 @@
                       "newPage": false,
                       "searchKey": "maphash.hashSet.add",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -513,34 +720,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/hash/maphash#hashSet.addS",
-                    "documentation": {
-                      "identifier": "hashSet.addS",
-                      "newPage": false,
-                      "searchKey": "maphash.hashSet.addS",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *hashSet) addS(x string)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *hashSet) addS(x string)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/hash/maphash#hashSet.addB",
                     "documentation": {
                       "identifier": "hashSet.addB",
                       "newPage": false,
                       "searchKey": "maphash.hashSet.addB",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -557,12 +743,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/hash/maphash#hashSet.addS",
+                    "documentation": {
+                      "identifier": "hashSet.addS",
+                      "newPage": false,
+                      "searchKey": "maphash.hashSet.addS",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *hashSet) addS(x string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *hashSet) addS(x string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/hash/maphash#hashSet.addS_seed",
                     "documentation": {
                       "identifier": "hashSet.addS_seed",
                       "newPage": false,
                       "searchKey": "maphash.hashSet.addS_seed",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -585,6 +795,7 @@
                       "newPage": false,
                       "searchKey": "maphash.hashSet.check",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -610,6 +821,7 @@
                 "newPage": false,
                 "searchKey": "maphash.key",
                 "tags": [
+                  "interface",
                   "private"
                 ]
               },
@@ -623,161 +835,6 @@
               },
               "children": null
             }
-          },
-          {
-            "node": {
-              "pathID": "/hash/maphash#bytesKey",
-              "documentation": {
-                "identifier": "bytesKey",
-                "newPage": false,
-                "searchKey": "maphash.bytesKey",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type bytesKey struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype bytesKey struct {\n\tb []byte\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/hash/maphash#bytesKey.clear",
-                    "documentation": {
-                      "identifier": "bytesKey.clear",
-                      "newPage": false,
-                      "searchKey": "maphash.bytesKey.clear",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (k *bytesKey) clear()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (k *bytesKey) clear()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/maphash#bytesKey.random",
-                    "documentation": {
-                      "identifier": "bytesKey.random",
-                      "newPage": false,
-                      "searchKey": "maphash.bytesKey.random",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (k *bytesKey) random(r *rand.Rand)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (k *bytesKey) random(r *rand.Rand)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/maphash#bytesKey.bits",
-                    "documentation": {
-                      "identifier": "bytesKey.bits",
-                      "newPage": false,
-                      "searchKey": "maphash.bytesKey.bits",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (k *bytesKey) bits() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (k *bytesKey) bits() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/maphash#bytesKey.flipBit",
-                    "documentation": {
-                      "identifier": "bytesKey.flipBit",
-                      "newPage": false,
-                      "searchKey": "maphash.bytesKey.flipBit",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (k *bytesKey) flipBit(i int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (k *bytesKey) flipBit(i int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/maphash#bytesKey.hash",
-                    "documentation": {
-                      "identifier": "bytesKey.hash",
-                      "newPage": false,
-                      "searchKey": "maphash.bytesKey.hash",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (k *bytesKey) hash() uint64"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (k *bytesKey) hash() uint64\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/maphash#bytesKey.name",
-                    "documentation": {
-                      "identifier": "bytesKey.name",
-                      "newPage": false,
-                      "searchKey": "maphash.bytesKey.name",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (k *bytesKey) name() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (k *bytesKey) name() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
           }
         ]
       }
@@ -789,7 +846,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -802,132 +861,96 @@
         "children": [
           {
             "node": {
-              "pathID": "/hash/maphash#runtime_fastrand",
+              "pathID": "/hash/maphash#BenchmarkHash1K",
               "documentation": {
-                "identifier": "runtime_fastrand",
+                "identifier": "BenchmarkHash1K",
                 "newPage": false,
-                "searchKey": "maphash.runtime_fastrand",
+                "searchKey": "maphash.BenchmarkHash1K",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func runtime_fastrand() uint32"
+                "value": "func BenchmarkHash1K(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc runtime_fastrand() uint32\n```\n\n"
+                "value": "```Go\nfunc BenchmarkHash1K(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/hash/maphash#rthash",
+              "pathID": "/hash/maphash#BenchmarkHash320Bytes",
               "documentation": {
-                "identifier": "rthash",
+                "identifier": "BenchmarkHash320Bytes",
                 "newPage": false,
-                "searchKey": "maphash.rthash",
+                "searchKey": "maphash.BenchmarkHash320Bytes",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func rthash(ptr *byte, len int, seed uint64) uint64"
+                "value": "func BenchmarkHash320Bytes(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc rthash(ptr *byte, len int, seed uint64) uint64\n```\n\n"
+                "value": "```Go\nfunc BenchmarkHash320Bytes(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/hash/maphash#runtime_memhash",
+              "pathID": "/hash/maphash#BenchmarkHash8Bytes",
               "documentation": {
-                "identifier": "runtime_memhash",
+                "identifier": "BenchmarkHash8Bytes",
                 "newPage": false,
-                "searchKey": "maphash.runtime_memhash",
+                "searchKey": "maphash.BenchmarkHash8Bytes",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func runtime_memhash(p unsafe.Pointer, seed, s uintptr) uintptr"
+                "value": "func BenchmarkHash8Bytes(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc runtime_memhash(p unsafe.Pointer, seed, s uintptr) uintptr\n```\n\n"
+                "value": "```Go\nfunc BenchmarkHash8Bytes(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/hash/maphash#TestUnseededHash",
+              "pathID": "/hash/maphash#BenchmarkHash8K",
               "documentation": {
-                "identifier": "TestUnseededHash",
+                "identifier": "BenchmarkHash8K",
                 "newPage": false,
-                "searchKey": "maphash.TestUnseededHash",
+                "searchKey": "maphash.BenchmarkHash8K",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestUnseededHash(t *testing.T)"
+                "value": "func BenchmarkHash8K(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestUnseededHash(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/maphash#TestSeededHash",
-              "documentation": {
-                "identifier": "TestSeededHash",
-                "newPage": false,
-                "searchKey": "maphash.TestSeededHash",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSeededHash(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSeededHash(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/maphash#TestHashGrouping",
-              "documentation": {
-                "identifier": "TestHashGrouping",
-                "newPage": false,
-                "searchKey": "maphash.TestHashGrouping",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestHashGrouping(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestHashGrouping(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc BenchmarkHash8K(b *testing.B)\n```\n\n"
               },
               "children": null
             }
@@ -940,7 +963,9 @@
                 "newPage": false,
                 "searchKey": "maphash.TestHashBytesVsString",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -956,13 +981,39 @@
           },
           {
             "node": {
+              "pathID": "/hash/maphash#TestHashGrouping",
+              "documentation": {
+                "identifier": "TestHashGrouping",
+                "newPage": false,
+                "searchKey": "maphash.TestHashGrouping",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHashGrouping(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHashGrouping(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/hash/maphash#TestHashHighBytes",
               "documentation": {
                 "identifier": "TestHashHighBytes",
                 "newPage": false,
                 "searchKey": "maphash.TestHashHighBytes",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -984,7 +1035,9 @@
                 "newPage": false,
                 "searchKey": "maphash.TestRepeat",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1000,57 +1053,15 @@
           },
           {
             "node": {
-              "pathID": "/hash/maphash#TestSeedFromSum64",
-              "documentation": {
-                "identifier": "TestSeedFromSum64",
-                "newPage": false,
-                "searchKey": "maphash.TestSeedFromSum64",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSeedFromSum64(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSeedFromSum64(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/maphash#TestSeedFromSeed",
-              "documentation": {
-                "identifier": "TestSeedFromSeed",
-                "newPage": false,
-                "searchKey": "maphash.TestSeedFromSeed",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSeedFromSeed(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSeedFromSeed(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/hash/maphash#TestSeedFromFlush",
               "documentation": {
                 "identifier": "TestSeedFromFlush",
                 "newPage": false,
                 "searchKey": "maphash.TestSeedFromFlush",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1072,7 +1083,9 @@
                 "newPage": false,
                 "searchKey": "maphash.TestSeedFromReset",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1088,198 +1101,72 @@
           },
           {
             "node": {
-              "pathID": "/hash/maphash#benchmarkSize",
+              "pathID": "/hash/maphash#TestSeedFromSeed",
               "documentation": {
-                "identifier": "benchmarkSize",
+                "identifier": "TestSeedFromSeed",
                 "newPage": false,
-                "searchKey": "maphash.benchmarkSize",
+                "searchKey": "maphash.TestSeedFromSeed",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func benchmarkSize(b *testing.B, size int)"
+                "value": "func TestSeedFromSeed(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc benchmarkSize(b *testing.B, size int)\n```\n\n"
+                "value": "```Go\nfunc TestSeedFromSeed(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/hash/maphash#BenchmarkHash8Bytes",
+              "pathID": "/hash/maphash#TestSeedFromSum64",
               "documentation": {
-                "identifier": "BenchmarkHash8Bytes",
+                "identifier": "TestSeedFromSum64",
                 "newPage": false,
-                "searchKey": "maphash.BenchmarkHash8Bytes",
+                "searchKey": "maphash.TestSeedFromSum64",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkHash8Bytes(b *testing.B)"
+                "value": "func TestSeedFromSum64(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkHash8Bytes(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc TestSeedFromSum64(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/hash/maphash#BenchmarkHash320Bytes",
+              "pathID": "/hash/maphash#TestSeededHash",
               "documentation": {
-                "identifier": "BenchmarkHash320Bytes",
+                "identifier": "TestSeededHash",
                 "newPage": false,
-                "searchKey": "maphash.BenchmarkHash320Bytes",
+                "searchKey": "maphash.TestSeededHash",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkHash320Bytes(b *testing.B)"
+                "value": "func TestSeededHash(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkHash320Bytes(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/maphash#BenchmarkHash1K",
-              "documentation": {
-                "identifier": "BenchmarkHash1K",
-                "newPage": false,
-                "searchKey": "maphash.BenchmarkHash1K",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkHash1K(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkHash1K(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/maphash#BenchmarkHash8K",
-              "documentation": {
-                "identifier": "BenchmarkHash8K",
-                "newPage": false,
-                "searchKey": "maphash.BenchmarkHash8K",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkHash8K(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkHash8K(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/maphash#TestSmhasherSanity",
-              "documentation": {
-                "identifier": "TestSmhasherSanity",
-                "newPage": false,
-                "searchKey": "maphash.TestSmhasherSanity",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSmhasherSanity(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSmhasherSanity(t *testing.T)\n```\n\nSanity checks. hash should not depend on values outside key. hash should not depend on alignment. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/maphash#bytesHash",
-              "documentation": {
-                "identifier": "bytesHash",
-                "newPage": false,
-                "searchKey": "maphash.bytesHash",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func bytesHash(b []byte) uint64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc bytesHash(b []byte) uint64\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/maphash#stringHash",
-              "documentation": {
-                "identifier": "stringHash",
-                "newPage": false,
-                "searchKey": "maphash.stringHash",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func stringHash(s string) uint64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc stringHash(s string) uint64\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/maphash#randBytes",
-              "documentation": {
-                "identifier": "randBytes",
-                "newPage": false,
-                "searchKey": "maphash.randBytes",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func randBytes(r *rand.Rand, b []byte)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc randBytes(r *rand.Rand, b []byte)\n```\n\n"
+                "value": "```Go\nfunc TestSeededHash(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1292,7 +1179,9 @@
                 "newPage": false,
                 "searchKey": "maphash.TestSmhasherAppendedZeros",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1308,255 +1197,15 @@
           },
           {
             "node": {
-              "pathID": "/hash/maphash#TestSmhasherSmallKeys",
-              "documentation": {
-                "identifier": "TestSmhasherSmallKeys",
-                "newPage": false,
-                "searchKey": "maphash.TestSmhasherSmallKeys",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSmhasherSmallKeys(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSmhasherSmallKeys(t *testing.T)\n```\n\nAll 0-3 byte strings have distinct hashes. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/maphash#TestSmhasherZeros",
-              "documentation": {
-                "identifier": "TestSmhasherZeros",
-                "newPage": false,
-                "searchKey": "maphash.TestSmhasherZeros",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSmhasherZeros(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSmhasherZeros(t *testing.T)\n```\n\nDifferent length strings of all zeros have distinct hashes. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/maphash#TestSmhasherTwoNonzero",
-              "documentation": {
-                "identifier": "TestSmhasherTwoNonzero",
-                "newPage": false,
-                "searchKey": "maphash.TestSmhasherTwoNonzero",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSmhasherTwoNonzero(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSmhasherTwoNonzero(t *testing.T)\n```\n\nStrings with up to two nonzero bytes all have distinct hashes. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/maphash#twoNonZero",
-              "documentation": {
-                "identifier": "twoNonZero",
-                "newPage": false,
-                "searchKey": "maphash.twoNonZero",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func twoNonZero(h *hashSet, n int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc twoNonZero(h *hashSet, n int)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/maphash#TestSmhasherCyclic",
-              "documentation": {
-                "identifier": "TestSmhasherCyclic",
-                "newPage": false,
-                "searchKey": "maphash.TestSmhasherCyclic",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSmhasherCyclic(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSmhasherCyclic(t *testing.T)\n```\n\nTest strings with repeats, like \"abcdabcdabcdabcd...\" \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/maphash#TestSmhasherSparse",
-              "documentation": {
-                "identifier": "TestSmhasherSparse",
-                "newPage": false,
-                "searchKey": "maphash.TestSmhasherSparse",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSmhasherSparse(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSmhasherSparse(t *testing.T)\n```\n\nTest strings with only a few bits set \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/maphash#sparse",
-              "documentation": {
-                "identifier": "sparse",
-                "newPage": false,
-                "searchKey": "maphash.sparse",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func sparse(t *testing.T, n int, k int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc sparse(t *testing.T, n int, k int)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/maphash#setbits",
-              "documentation": {
-                "identifier": "setbits",
-                "newPage": false,
-                "searchKey": "maphash.setbits",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func setbits(h *hashSet, b []byte, i int, k int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc setbits(h *hashSet, b []byte, i int, k int)\n```\n\nset up to k bits at index i and greater \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/maphash#TestSmhasherPermutation",
-              "documentation": {
-                "identifier": "TestSmhasherPermutation",
-                "newPage": false,
-                "searchKey": "maphash.TestSmhasherPermutation",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSmhasherPermutation(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSmhasherPermutation(t *testing.T)\n```\n\nTest all possible combinations of n blocks from the set s. \"permutation\" is a bad name here, but it is what Smhasher uses. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/maphash#permutation",
-              "documentation": {
-                "identifier": "permutation",
-                "newPage": false,
-                "searchKey": "maphash.permutation",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func permutation(t *testing.T, s []uint32, n int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc permutation(t *testing.T, s []uint32, n int)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/maphash#genPerm",
-              "documentation": {
-                "identifier": "genPerm",
-                "newPage": false,
-                "searchKey": "maphash.genPerm",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func genPerm(h *hashSet, b []byte, s []uint32, n int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc genPerm(h *hashSet, b []byte, s []uint32, n int)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/hash/maphash#TestSmhasherAvalanche",
               "documentation": {
                 "identifier": "TestSmhasherAvalanche",
                 "newPage": false,
                 "searchKey": "maphash.TestSmhasherAvalanche",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1572,12 +1221,277 @@
           },
           {
             "node": {
+              "pathID": "/hash/maphash#TestSmhasherCyclic",
+              "documentation": {
+                "identifier": "TestSmhasherCyclic",
+                "newPage": false,
+                "searchKey": "maphash.TestSmhasherCyclic",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSmhasherCyclic(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSmhasherCyclic(t *testing.T)\n```\n\nTest strings with repeats, like \"abcdabcdabcdabcd...\" \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/maphash#TestSmhasherPermutation",
+              "documentation": {
+                "identifier": "TestSmhasherPermutation",
+                "newPage": false,
+                "searchKey": "maphash.TestSmhasherPermutation",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSmhasherPermutation(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSmhasherPermutation(t *testing.T)\n```\n\nTest all possible combinations of n blocks from the set s. \"permutation\" is a bad name here, but it is what Smhasher uses. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/maphash#TestSmhasherSanity",
+              "documentation": {
+                "identifier": "TestSmhasherSanity",
+                "newPage": false,
+                "searchKey": "maphash.TestSmhasherSanity",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSmhasherSanity(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSmhasherSanity(t *testing.T)\n```\n\nSanity checks. hash should not depend on values outside key. hash should not depend on alignment. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/maphash#TestSmhasherSeed",
+              "documentation": {
+                "identifier": "TestSmhasherSeed",
+                "newPage": false,
+                "searchKey": "maphash.TestSmhasherSeed",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSmhasherSeed(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSmhasherSeed(t *testing.T)\n```\n\nMake sure different seed values generate different hashes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/maphash#TestSmhasherSmallKeys",
+              "documentation": {
+                "identifier": "TestSmhasherSmallKeys",
+                "newPage": false,
+                "searchKey": "maphash.TestSmhasherSmallKeys",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSmhasherSmallKeys(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSmhasherSmallKeys(t *testing.T)\n```\n\nAll 0-3 byte strings have distinct hashes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/maphash#TestSmhasherSparse",
+              "documentation": {
+                "identifier": "TestSmhasherSparse",
+                "newPage": false,
+                "searchKey": "maphash.TestSmhasherSparse",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSmhasherSparse(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSmhasherSparse(t *testing.T)\n```\n\nTest strings with only a few bits set \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/maphash#TestSmhasherText",
+              "documentation": {
+                "identifier": "TestSmhasherText",
+                "newPage": false,
+                "searchKey": "maphash.TestSmhasherText",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSmhasherText(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSmhasherText(t *testing.T)\n```\n\nAll keys of the form prefix + [A-Za-z0-9]*N + suffix. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/maphash#TestSmhasherTwoNonzero",
+              "documentation": {
+                "identifier": "TestSmhasherTwoNonzero",
+                "newPage": false,
+                "searchKey": "maphash.TestSmhasherTwoNonzero",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSmhasherTwoNonzero(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSmhasherTwoNonzero(t *testing.T)\n```\n\nStrings with up to two nonzero bytes all have distinct hashes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/maphash#TestSmhasherWindowed",
+              "documentation": {
+                "identifier": "TestSmhasherWindowed",
+                "newPage": false,
+                "searchKey": "maphash.TestSmhasherWindowed",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSmhasherWindowed(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSmhasherWindowed(t *testing.T)\n```\n\nAll bit rotations of a set of distinct keys \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/maphash#TestSmhasherZeros",
+              "documentation": {
+                "identifier": "TestSmhasherZeros",
+                "newPage": false,
+                "searchKey": "maphash.TestSmhasherZeros",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSmhasherZeros(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSmhasherZeros(t *testing.T)\n```\n\nDifferent length strings of all zeros have distinct hashes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/maphash#TestUnseededHash",
+              "documentation": {
+                "identifier": "TestUnseededHash",
+                "newPage": false,
+                "searchKey": "maphash.TestUnseededHash",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnseededHash(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnseededHash(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/hash/maphash#avalancheTest1",
               "documentation": {
                 "identifier": "avalancheTest1",
                 "newPage": false,
                 "searchKey": "maphash.avalancheTest1",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1594,66 +1508,253 @@
           },
           {
             "node": {
-              "pathID": "/hash/maphash#TestSmhasherWindowed",
+              "pathID": "/hash/maphash#benchmarkSize",
               "documentation": {
-                "identifier": "TestSmhasherWindowed",
+                "identifier": "benchmarkSize",
                 "newPage": false,
-                "searchKey": "maphash.TestSmhasherWindowed",
+                "searchKey": "maphash.benchmarkSize",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestSmhasherWindowed(t *testing.T)"
+                "value": "func benchmarkSize(b *testing.B, size int)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestSmhasherWindowed(t *testing.T)\n```\n\nAll bit rotations of a set of distinct keys \n\n"
+                "value": "```Go\nfunc benchmarkSize(b *testing.B, size int)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/hash/maphash#windowed",
+              "pathID": "/hash/maphash#bytesHash",
               "documentation": {
-                "identifier": "windowed",
+                "identifier": "bytesHash",
                 "newPage": false,
-                "searchKey": "maphash.windowed",
+                "searchKey": "maphash.bytesHash",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func windowed(t *testing.T, k key)"
+                "value": "func bytesHash(b []byte) uint64"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc windowed(t *testing.T, k key)\n```\n\n"
+                "value": "```Go\nfunc bytesHash(b []byte) uint64\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/hash/maphash#TestSmhasherText",
+              "pathID": "/hash/maphash#genPerm",
               "documentation": {
-                "identifier": "TestSmhasherText",
+                "identifier": "genPerm",
                 "newPage": false,
-                "searchKey": "maphash.TestSmhasherText",
+                "searchKey": "maphash.genPerm",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestSmhasherText(t *testing.T)"
+                "value": "func genPerm(h *hashSet, b []byte, s []uint32, n int)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestSmhasherText(t *testing.T)\n```\n\nAll keys of the form prefix + [A-Za-z0-9]*N + suffix. \n\n"
+                "value": "```Go\nfunc genPerm(h *hashSet, b []byte, s []uint32, n int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/maphash#permutation",
+              "documentation": {
+                "identifier": "permutation",
+                "newPage": false,
+                "searchKey": "maphash.permutation",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func permutation(t *testing.T, s []uint32, n int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc permutation(t *testing.T, s []uint32, n int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/maphash#randBytes",
+              "documentation": {
+                "identifier": "randBytes",
+                "newPage": false,
+                "searchKey": "maphash.randBytes",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func randBytes(r *rand.Rand, b []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc randBytes(r *rand.Rand, b []byte)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/maphash#rthash",
+              "documentation": {
+                "identifier": "rthash",
+                "newPage": false,
+                "searchKey": "maphash.rthash",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func rthash(ptr *byte, len int, seed uint64) uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc rthash(ptr *byte, len int, seed uint64) uint64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/maphash#runtime_fastrand",
+              "documentation": {
+                "identifier": "runtime_fastrand",
+                "newPage": false,
+                "searchKey": "maphash.runtime_fastrand",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runtime_fastrand() uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runtime_fastrand() uint32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/maphash#runtime_memhash",
+              "documentation": {
+                "identifier": "runtime_memhash",
+                "newPage": false,
+                "searchKey": "maphash.runtime_memhash",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runtime_memhash(p unsafe.Pointer, seed, s uintptr) uintptr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runtime_memhash(p unsafe.Pointer, seed, s uintptr) uintptr\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/maphash#setbits",
+              "documentation": {
+                "identifier": "setbits",
+                "newPage": false,
+                "searchKey": "maphash.setbits",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func setbits(h *hashSet, b []byte, i int, k int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc setbits(h *hashSet, b []byte, i int, k int)\n```\n\nset up to k bits at index i and greater \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/maphash#sparse",
+              "documentation": {
+                "identifier": "sparse",
+                "newPage": false,
+                "searchKey": "maphash.sparse",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sparse(t *testing.T, n int, k int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sparse(t *testing.T, n int, k int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/maphash#stringHash",
+              "documentation": {
+                "identifier": "stringHash",
+                "newPage": false,
+                "searchKey": "maphash.stringHash",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func stringHash(s string) uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc stringHash(s string) uint64\n```\n\n"
               },
               "children": null
             }
@@ -1666,6 +1767,7 @@
                 "newPage": false,
                 "searchKey": "maphash.text",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1682,22 +1784,46 @@
           },
           {
             "node": {
-              "pathID": "/hash/maphash#TestSmhasherSeed",
+              "pathID": "/hash/maphash#twoNonZero",
               "documentation": {
-                "identifier": "TestSmhasherSeed",
+                "identifier": "twoNonZero",
                 "newPage": false,
-                "searchKey": "maphash.TestSmhasherSeed",
+                "searchKey": "maphash.twoNonZero",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestSmhasherSeed(t *testing.T)"
+                "value": "func twoNonZero(h *hashSet, n int)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestSmhasherSeed(t *testing.T)\n```\n\nMake sure different seed values generate different hashes. \n\n"
+                "value": "```Go\nfunc twoNonZero(h *hashSet, n int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/maphash#windowed",
+              "documentation": {
+                "identifier": "windowed",
+                "newPage": false,
+                "searchKey": "maphash.windowed",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func windowed(t *testing.T, k key)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc windowed(t *testing.T, k key)\n```\n\n"
               },
               "children": null
             }

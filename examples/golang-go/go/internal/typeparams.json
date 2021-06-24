@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "go/internal/typeparams",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,10 @@
                 "identifier": "DisallowParsing",
                 "newPage": false,
                 "searchKey": "typeparams.DisallowParsing",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +69,10 @@
                 "identifier": "Enabled",
                 "newPage": false,
                 "searchKey": "typeparams.Enabled",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "boolean"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -88,6 +96,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -102,72 +111,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/go/internal/typeparams#PackExpr",
-              "documentation": {
-                "identifier": "PackExpr",
-                "newPage": false,
-                "searchKey": "typeparams.PackExpr",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func PackExpr(list []ast.Expr) ast.Expr"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc PackExpr(list []ast.Expr) ast.Expr\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/typeparams#UnpackExpr",
-              "documentation": {
-                "identifier": "UnpackExpr",
-                "newPage": false,
-                "searchKey": "typeparams.UnpackExpr",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func UnpackExpr(expr ast.Expr) []ast.Expr"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc UnpackExpr(expr ast.Expr) []ast.Expr\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/typeparams#IsListExpr",
-              "documentation": {
-                "identifier": "IsListExpr",
-                "newPage": false,
-                "searchKey": "typeparams.IsListExpr",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IsListExpr(n ast.Node) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IsListExpr(n ast.Node) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/internal/typeparams#Get",
               "documentation": {
                 "identifier": "Get",
                 "newPage": false,
                 "searchKey": "typeparams.Get",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -182,12 +133,58 @@
           },
           {
             "node": {
+              "pathID": "/go/internal/typeparams#IsListExpr",
+              "documentation": {
+                "identifier": "IsListExpr",
+                "newPage": false,
+                "searchKey": "typeparams.IsListExpr",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsListExpr(n ast.Node) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsListExpr(n ast.Node) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/typeparams#PackExpr",
+              "documentation": {
+                "identifier": "PackExpr",
+                "newPage": false,
+                "searchKey": "typeparams.PackExpr",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func PackExpr(list []ast.Expr) ast.Expr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc PackExpr(list []ast.Expr) ast.Expr\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/go/internal/typeparams#Set",
               "documentation": {
                 "identifier": "Set",
                 "newPage": false,
                 "searchKey": "typeparams.Set",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -196,6 +193,28 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc Set(node ast.Node, params *ast.FieldList)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/typeparams#UnpackExpr",
+              "documentation": {
+                "identifier": "UnpackExpr",
+                "newPage": false,
+                "searchKey": "typeparams.UnpackExpr",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func UnpackExpr(expr ast.Expr) []ast.Expr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc UnpackExpr(expr ast.Expr) []ast.Expr\n```\n\n"
               },
               "children": null
             }

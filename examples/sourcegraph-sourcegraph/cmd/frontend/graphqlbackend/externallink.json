@@ -4,7 +4,9 @@
     "identifier": "externallink",
     "newPage": true,
     "searchKey": "cmd/frontend/graphqlbackend/externallink",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -41,6 +45,8 @@
                 "newPage": false,
                 "searchKey": "externallink.linksForRepositoryFailed",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -65,7 +71,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -83,7 +91,9 @@
                 "identifier": "Resolver",
                 "newPage": false,
                 "searchKey": "externallink.Resolver",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -101,7 +111,9 @@
                       "identifier": "NewResolver",
                       "newPage": false,
                       "searchKey": "externallink.NewResolver",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -116,32 +128,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/cmd/frontend/graphqlbackend/externallink#Resolver.URL",
-                    "documentation": {
-                      "identifier": "Resolver.URL",
-                      "newPage": false,
-                      "searchKey": "externallink.Resolver.URL",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Resolver) URL() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Resolver) URL() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/cmd/frontend/graphqlbackend/externallink#Resolver.ServiceKind",
                     "documentation": {
                       "identifier": "Resolver.ServiceKind",
                       "newPage": false,
                       "searchKey": "externallink.Resolver.ServiceKind",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -161,7 +155,9 @@
                       "identifier": "Resolver.ServiceType",
                       "newPage": false,
                       "searchKey": "externallink.Resolver.ServiceType",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -181,7 +177,9 @@
                       "identifier": "Resolver.String",
                       "newPage": false,
                       "searchKey": "externallink.Resolver.String",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -190,6 +188,28 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (r *Resolver) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/graphqlbackend/externallink#Resolver.URL",
+                    "documentation": {
+                      "identifier": "Resolver.URL",
+                      "newPage": false,
+                      "searchKey": "externallink.Resolver.URL",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) URL() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) URL() string\n```\n\n"
                     },
                     "children": null
                   }
@@ -207,7 +227,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -220,52 +242,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/graphqlbackend/externallink#Repository",
-              "documentation": {
-                "identifier": "Repository",
-                "newPage": false,
-                "searchKey": "externallink.Repository",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Repository(ctx context.Context, db dbutil.DB, repo *types.Repo) (links []*Resolver, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Repository(ctx context.Context, db dbutil.DB, repo *types.Repo) (links []*Resolver, err error)\n```\n\nRepository returns the external links for a repository. \n\nFor example, a repository might have 2 external links, one to its origin repository on GitHub.com and one to the repository on Phabricator. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/graphqlbackend/externallink#FileOrDir",
-              "documentation": {
-                "identifier": "FileOrDir",
-                "newPage": false,
-                "searchKey": "externallink.FileOrDir",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func FileOrDir(ctx context.Context, db dbutil.DB, repo *types.Repo, rev, path string, isDir bool) (links []*Resolver, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc FileOrDir(ctx context.Context, db dbutil.DB, repo *types.Repo, rev, path string, isDir bool) (links []*Resolver, err error)\n```\n\nFileOrDir returns the external links for a file or directory in a repository. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/graphqlbackend/externallink#Commit",
               "documentation": {
                 "identifier": "Commit",
                 "newPage": false,
                 "searchKey": "externallink.Commit",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -280,12 +264,129 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/graphqlbackend/externallink#FileOrDir",
+              "documentation": {
+                "identifier": "FileOrDir",
+                "newPage": false,
+                "searchKey": "externallink.FileOrDir",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func FileOrDir(ctx context.Context, db dbutil.DB, repo *types.Repo, rev, path string, isDir bool) (links []*Resolver, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc FileOrDir(ctx context.Context, db dbutil.DB, repo *types.Repo, rev, path string, isDir bool) (links []*Resolver, err error)\n```\n\nFileOrDir returns the external links for a file or directory in a repository. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/graphqlbackend/externallink#Repository",
+              "documentation": {
+                "identifier": "Repository",
+                "newPage": false,
+                "searchKey": "externallink.Repository",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Repository(ctx context.Context, db dbutil.DB, repo *types.Repo) (links []*Resolver, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Repository(ctx context.Context, db dbutil.DB, repo *types.Repo) (links []*Resolver, err error)\n```\n\nRepository returns the external links for a repository. \n\nFor example, a repository might have 2 external links, one to its origin repository on GitHub.com and one to the repository on Phabricator. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/graphqlbackend/externallink#TestCommit",
+              "documentation": {
+                "identifier": "TestCommit",
+                "newPage": false,
+                "searchKey": "externallink.TestCommit",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCommit(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCommit(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/graphqlbackend/externallink#TestFileOrDir",
+              "documentation": {
+                "identifier": "TestFileOrDir",
+                "newPage": false,
+                "searchKey": "externallink.TestFileOrDir",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFileOrDir(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFileOrDir(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/graphqlbackend/externallink#TestRepository",
+              "documentation": {
+                "identifier": "TestRepository",
+                "newPage": false,
+                "searchKey": "externallink.TestRepository",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepository(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepository(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/graphqlbackend/externallink#linksForRepository",
               "documentation": {
                 "identifier": "linksForRepository",
                 "newPage": false,
                 "searchKey": "externallink.linksForRepository",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -302,100 +403,13 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/graphqlbackend/externallink#typeToMaybeEmptyKind",
-              "documentation": {
-                "identifier": "typeToMaybeEmptyKind",
-                "newPage": false,
-                "searchKey": "externallink.typeToMaybeEmptyKind",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func typeToMaybeEmptyKind(st string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc typeToMaybeEmptyKind(st string) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/graphqlbackend/externallink#TestRepository",
-              "documentation": {
-                "identifier": "TestRepository",
-                "newPage": false,
-                "searchKey": "externallink.TestRepository",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRepository(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRepository(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/graphqlbackend/externallink#TestFileOrDir",
-              "documentation": {
-                "identifier": "TestFileOrDir",
-                "newPage": false,
-                "searchKey": "externallink.TestFileOrDir",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestFileOrDir(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestFileOrDir(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/graphqlbackend/externallink#TestCommit",
-              "documentation": {
-                "identifier": "TestCommit",
-                "newPage": false,
-                "searchKey": "externallink.TestCommit",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCommit(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCommit(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/graphqlbackend/externallink#resetMocks",
               "documentation": {
                 "identifier": "resetMocks",
                 "newPage": false,
                 "searchKey": "externallink.resetMocks",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -406,6 +420,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc resetMocks()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/graphqlbackend/externallink#typeToMaybeEmptyKind",
+              "documentation": {
+                "identifier": "typeToMaybeEmptyKind",
+                "newPage": false,
+                "searchKey": "externallink.typeToMaybeEmptyKind",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func typeToMaybeEmptyKind(st string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc typeToMaybeEmptyKind(st string) string\n```\n\n"
               },
               "children": null
             }

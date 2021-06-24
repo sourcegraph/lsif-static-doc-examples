@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/search/repos",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "repos.regexpFlags",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -89,7 +94,10 @@
                 "identifier": "MockResolveRepoGroups",
                 "newPage": false,
                 "searchKey": "repos.MockResolveRepoGroups",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -110,6 +118,8 @@
                 "newPage": false,
                 "searchKey": "repos.dsn",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -135,6 +145,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -149,12 +160,105 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/search/repos#ExcludedRepos",
+              "documentation": {
+                "identifier": "ExcludedRepos",
+                "newPage": false,
+                "searchKey": "repos.ExcludedRepos",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ExcludedRepos struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ExcludedRepos struct {\n\tForks    int\n\tArchived int\n}\n```\n\nExcludedRepos is a type that counts how many repos with a certain label were excluded from search results. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/repos#computeExcludedRepositories",
+                    "documentation": {
+                      "identifier": "computeExcludedRepositories",
+                      "newPage": false,
+                      "searchKey": "repos.computeExcludedRepositories",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func computeExcludedRepositories(ctx context.Context, db dbutil.DB, q query.Q, op database.ReposListOptions) (excluded ExcludedRepos)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc computeExcludedRepositories(ctx context.Context, db dbutil.DB, q query.Q, op database.ReposListOptions) (excluded ExcludedRepos)\n```\n\ncomputeExcludedRepositories returns a list of excluded repositories (Forks or archives) based on the search Query. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/repos#Options",
+              "documentation": {
+                "identifier": "Options",
+                "newPage": false,
+                "searchKey": "repos.Options",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Options struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Options struct {\n\tRepoFilters        []string\n\tMinusRepoFilters   []string\n\tRepoGroupFilters   []string\n\tSearchContextSpec  string\n\tVersionContextName string\n\tUserSettings       *schema.Settings\n\tNoForks            bool\n\tOnlyForks          bool\n\tNoArchived         bool\n\tOnlyArchived       bool\n\tCommitAfter        string\n\tOnlyPrivate        bool\n\tOnlyPublic         bool\n\tRanked             bool // Return results ordered by rank\n\tLimit              int\n\tQuery              query.Q\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/repos#Options.String",
+                    "documentation": {
+                      "identifier": "Options.String",
+                      "newPage": false,
+                      "searchKey": "repos.Options.String",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (op *Options) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (op *Options) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/search/repos#RepoGroupValue",
               "documentation": {
                 "identifier": "RepoGroupValue",
                 "newPage": false,
                 "searchKey": "repos.RepoGroupValue",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -174,7 +278,9 @@
                 "identifier": "RepoPath",
                 "newPage": false,
                 "searchKey": "repos.RepoPath",
-                "tags": null
+                "tags": [
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -187,12 +293,35 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/internal/search/repos#RepoPath.String",
+                    "documentation": {
+                      "identifier": "RepoPath.String",
+                      "newPage": false,
+                      "searchKey": "repos.RepoPath.String",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r RepoPath) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r RepoPath) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/search/repos#RepoPath.value",
                     "documentation": {
                       "identifier": "RepoPath.value",
                       "newPage": false,
                       "searchKey": "repos.RepoPath.value",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -203,26 +332,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (RepoPath) value()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/search/repos#RepoPath.String",
-                    "documentation": {
-                      "identifier": "RepoPath.String",
-                      "newPage": false,
-                      "searchKey": "repos.RepoPath.String",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r RepoPath) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r RepoPath) String() string\n```\n\n"
                     },
                     "children": null
                   }
@@ -237,7 +346,9 @@
                 "identifier": "RepoRegexpPattern",
                 "newPage": false,
                 "searchKey": "repos.RepoRegexpPattern",
-                "tags": null
+                "tags": [
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -250,12 +361,35 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/internal/search/repos#RepoRegexpPattern.String",
+                    "documentation": {
+                      "identifier": "RepoRegexpPattern.String",
+                      "newPage": false,
+                      "searchKey": "repos.RepoRegexpPattern.String",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r RepoRegexpPattern) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r RepoRegexpPattern) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/search/repos#RepoRegexpPattern.value",
                     "documentation": {
                       "identifier": "RepoRegexpPattern.value",
                       "newPage": false,
                       "searchKey": "repos.RepoRegexpPattern.value",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -266,26 +400,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (RepoRegexpPattern) value()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/search/repos#RepoRegexpPattern.String",
-                    "documentation": {
-                      "identifier": "RepoRegexpPattern.String",
-                      "newPage": false,
-                      "searchKey": "repos.RepoRegexpPattern.String",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r RepoRegexpPattern) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r RepoRegexpPattern) String() string\n```\n\n"
                     },
                     "children": null
                   }
@@ -300,7 +414,9 @@
                 "identifier": "Resolved",
                 "newPage": false,
                 "searchKey": "repos.Resolved",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -318,7 +434,9 @@
                       "identifier": "Resolved.String",
                       "newPage": false,
                       "searchKey": "repos.Resolved.String",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -341,7 +459,9 @@
                 "identifier": "Resolver",
                 "newPage": false,
                 "searchKey": "repos.Resolver",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -359,7 +479,9 @@
                       "identifier": "Resolver.Resolve",
                       "newPage": false,
                       "searchKey": "repos.Resolver.Resolve",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -377,140 +499,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/repos#Options",
-              "documentation": {
-                "identifier": "Options",
-                "newPage": false,
-                "searchKey": "repos.Options",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Options struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Options struct {\n\tRepoFilters        []string\n\tMinusRepoFilters   []string\n\tRepoGroupFilters   []string\n\tSearchContextSpec  string\n\tVersionContextName string\n\tUserSettings       *schema.Settings\n\tNoForks            bool\n\tOnlyForks          bool\n\tNoArchived         bool\n\tOnlyArchived       bool\n\tCommitAfter        string\n\tOnlyPrivate        bool\n\tOnlyPublic         bool\n\tRanked             bool // Return results ordered by rank\n\tLimit              int\n\tQuery              query.Q\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/search/repos#Options.String",
-                    "documentation": {
-                      "identifier": "Options.String",
-                      "newPage": false,
-                      "searchKey": "repos.Options.String",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (op *Options) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (op *Options) String() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/repos#ExcludedRepos",
-              "documentation": {
-                "identifier": "ExcludedRepos",
-                "newPage": false,
-                "searchKey": "repos.ExcludedRepos",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ExcludedRepos struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ExcludedRepos struct {\n\tForks    int\n\tArchived int\n}\n```\n\nExcludedRepos is a type that counts how many repos with a certain label were excluded from search results. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/search/repos#computeExcludedRepositories",
-                    "documentation": {
-                      "identifier": "computeExcludedRepositories",
-                      "newPage": false,
-                      "searchKey": "repos.computeExcludedRepositories",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func computeExcludedRepositories(ctx context.Context, db dbutil.DB, q query.Q, op database.ReposListOptions) (excluded ExcludedRepos)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc computeExcludedRepositories(ctx context.Context, db dbutil.DB, q query.Q, op database.ReposListOptions) (excluded ExcludedRepos)\n```\n\ncomputeExcludedRepositories returns a list of excluded repositories (Forks or archives) based on the search Query. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/repos#patternRevspec",
-              "documentation": {
-                "identifier": "patternRevspec",
-                "newPage": false,
-                "searchKey": "repos.patternRevspec",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type patternRevspec struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype patternRevspec struct {\n\tincludePattern *regexp.Regexp\n\trevs           []search.RevisionSpecifier\n}\n```\n\na patternRevspec maps an include pattern to a list of revisions for repos matching that pattern. \"map\" in this case does not mean an actual map, because we want regexp matches, not identity matches. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/repos#defaultReposFunc",
-              "documentation": {
-                "identifier": "defaultReposFunc",
-                "newPage": false,
-                "searchKey": "repos.defaultReposFunc",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type defaultReposFunc func(ctx context.Context) ([]github.com/sourcegraph/sourcegraph/internal/types.RepoName, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype defaultReposFunc func(ctx context.Context) ([]types.RepoName, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/search/repos#badRequestError",
               "documentation": {
                 "identifier": "badRequestError",
                 "newPage": false,
                 "searchKey": "repos.badRequestError",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -531,6 +526,7 @@
                       "newPage": false,
                       "searchKey": "repos.badRequestError.BadRequest",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -547,34 +543,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/search/repos#badRequestError.Error",
-                    "documentation": {
-                      "identifier": "badRequestError.Error",
-                      "newPage": false,
-                      "searchKey": "repos.badRequestError.Error",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *badRequestError) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *badRequestError) Error() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/search/repos#badRequestError.Cause",
                     "documentation": {
                       "identifier": "badRequestError.Cause",
                       "newPage": false,
                       "searchKey": "repos.badRequestError.Cause",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -588,8 +563,77 @@
                     },
                     "children": null
                   }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/repos#badRequestError.Error",
+                    "documentation": {
+                      "identifier": "badRequestError.Error",
+                      "newPage": false,
+                      "searchKey": "repos.badRequestError.Error",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *badRequestError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *badRequestError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
                 }
               ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/repos#defaultReposFunc",
+              "documentation": {
+                "identifier": "defaultReposFunc",
+                "newPage": false,
+                "searchKey": "repos.defaultReposFunc",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type defaultReposFunc func(ctx context.Context) ([]github.com/sourcegraph/sourcegraph/internal/types.RepoName, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype defaultReposFunc func(ctx context.Context) ([]types.RepoName, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/repos#patternRevspec",
+              "documentation": {
+                "identifier": "patternRevspec",
+                "newPage": false,
+                "searchKey": "repos.patternRevspec",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type patternRevspec struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype patternRevspec struct {\n\tincludePattern *regexp.Regexp\n\trevs           []search.RevisionSpecifier\n}\n```\n\na patternRevspec maps an include pattern to a list of revisions for repos matching that pattern. \"map\" in this case does not mean an actual map, because we want regexp matches, not identity matches. \n\n"
+              },
+              "children": null
             }
           }
         ]
@@ -603,6 +647,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -617,12 +662,60 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/search/repos#BenchmarkGetRevsForMatchedRepo",
+              "documentation": {
+                "identifier": "BenchmarkGetRevsForMatchedRepo",
+                "newPage": false,
+                "searchKey": "repos.BenchmarkGetRevsForMatchedRepo",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkGetRevsForMatchedRepo(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkGetRevsForMatchedRepo(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/repos#ExactlyOneRepo",
+              "documentation": {
+                "identifier": "ExactlyOneRepo",
+                "newPage": false,
+                "searchKey": "repos.ExactlyOneRepo",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExactlyOneRepo(repoFilters []string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExactlyOneRepo(repoFilters []string) bool\n```\n\nExactlyOneRepo returns whether exactly one repo: literal field is specified and delineated by regex anchors ^ and $. This function helps determine whether we should return results for a single repo regardless of whether it is a fork or archive. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/search/repos#RepoGroupsToIncludePatterns",
               "documentation": {
                 "identifier": "RepoGroupsToIncludePatterns",
                 "newPage": false,
                 "searchKey": "repos.RepoGroupsToIncludePatterns",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -642,7 +735,9 @@
                 "identifier": "ResolveRepoGroups",
                 "newPage": false,
                 "searchKey": "repos.ResolveRepoGroups",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -662,7 +757,9 @@
                 "identifier": "ResolveRepoGroupsFromSettings",
                 "newPage": false,
                 "searchKey": "repos.ResolveRepoGroupsFromSettings",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -677,34 +774,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/repos#repoGroupValuesToRegexp",
-              "documentation": {
-                "identifier": "repoGroupValuesToRegexp",
-                "newPage": false,
-                "searchKey": "repos.repoGroupValuesToRegexp",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func repoGroupValuesToRegexp(groupNames []string, groups map[string][]RepoGroupValue) []string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc repoGroupValuesToRegexp(groupNames []string, groups map[string][]RepoGroupValue) []string\n```\n\nrepoGroupValuesToRegexp does a lookup of all repo groups by name and converts their values to a list of regular expressions to search. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/search/repos#SearchLimits",
               "documentation": {
                 "identifier": "SearchLimits",
                 "newPage": false,
                 "searchKey": "repos.SearchLimits",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -719,20 +796,192 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/repos#ExactlyOneRepo",
+              "pathID": "/internal/search/repos#TestDefaultRepositories",
               "documentation": {
-                "identifier": "ExactlyOneRepo",
+                "identifier": "TestDefaultRepositories",
                 "newPage": false,
-                "searchKey": "repos.ExactlyOneRepo",
-                "tags": null
+                "searchKey": "repos.TestDefaultRepositories",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func ExactlyOneRepo(repoFilters []string) bool"
+                "value": "func TestDefaultRepositories(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc ExactlyOneRepo(repoFilters []string) bool\n```\n\nExactlyOneRepo returns whether exactly one repo: literal field is specified and delineated by regex anchors ^ and $. This function helps determine whether we should return results for a single repo regardless of whether it is a fork or archive. \n\n"
+                "value": "```Go\nfunc TestDefaultRepositories(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/repos#TestMain",
+              "documentation": {
+                "identifier": "TestMain",
+                "newPage": false,
+                "searchKey": "repos.TestMain",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMain(m *testing.M)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/repos#TestRepoGroupValuesToRegexp",
+              "documentation": {
+                "identifier": "TestRepoGroupValuesToRegexp",
+                "newPage": false,
+                "searchKey": "repos.TestRepoGroupValuesToRegexp",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepoGroupValuesToRegexp(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepoGroupValuesToRegexp(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/repos#TestResolveRepositoriesWithSearchContext",
+              "documentation": {
+                "identifier": "TestResolveRepositoriesWithSearchContext",
+                "newPage": false,
+                "searchKey": "repos.TestResolveRepositoriesWithSearchContext",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestResolveRepositoriesWithSearchContext(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestResolveRepositoriesWithSearchContext(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/repos#TestResolveRepositoriesWithUserSearchContext",
+              "documentation": {
+                "identifier": "TestResolveRepositoriesWithUserSearchContext",
+                "newPage": false,
+                "searchKey": "repos.TestResolveRepositoriesWithUserSearchContext",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestResolveRepositoriesWithUserSearchContext(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestResolveRepositoriesWithUserSearchContext(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/repos#TestRevisionValidation",
+              "documentation": {
+                "identifier": "TestRevisionValidation",
+                "newPage": false,
+                "searchKey": "repos.TestRevisionValidation",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRevisionValidation(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRevisionValidation(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/repos#TestSearchRevspecs",
+              "documentation": {
+                "identifier": "TestSearchRevspecs",
+                "newPage": false,
+                "searchKey": "repos.TestSearchRevspecs",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSearchRevspecs(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSearchRevspecs(t *testing.T)\n```\n\nTestSearchRevspecs tests a repository name against a list of repository specs with optional revspecs, and determines whether we get the expected error, list of matching rev specs, or list of clashing revspecs (if no matching rev specs were found) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/repos#TestUseDefaultReposIfMissingOrGlobalSearchContext",
+              "documentation": {
+                "identifier": "TestUseDefaultReposIfMissingOrGlobalSearchContext",
+                "newPage": false,
+                "searchKey": "repos.TestUseDefaultReposIfMissingOrGlobalSearchContext",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUseDefaultReposIfMissingOrGlobalSearchContext(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUseDefaultReposIfMissingOrGlobalSearchContext(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -744,7 +993,9 @@
                 "identifier": "UnionRegExps",
                 "newPage": false,
                 "searchKey": "repos.UnionRegExps",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -759,78 +1010,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/repos#resolveVersionContext",
-              "documentation": {
-                "identifier": "resolveVersionContext",
-                "newPage": false,
-                "searchKey": "repos.resolveVersionContext",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func resolveVersionContext(versionContext string) (*schema.VersionContext, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc resolveVersionContext(versionContext string) (*schema.VersionContext, error)\n```\n\nNOTE: This function is not called if the version context is not used \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/repos#getRevsForMatchedRepo",
-              "documentation": {
-                "identifier": "getRevsForMatchedRepo",
-                "newPage": false,
-                "searchKey": "repos.getRevsForMatchedRepo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func getRevsForMatchedRepo(repo api.RepoName, pats []patternRevspec) (matched []search.RevisionSpecifier, clashing []search.RevisionSpecifier)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc getRevsForMatchedRepo(repo api.RepoName, pats []patternRevspec) (matched []search.RevisionSpecifier, clashing []search.RevisionSpecifier)\n```\n\ngiven a repo name, determine whether it matched any patterns for which we have revspecs (or ref globs), and if so, return the matching/allowed ones. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/repos#findPatternRevs",
-              "documentation": {
-                "identifier": "findPatternRevs",
-                "newPage": false,
-                "searchKey": "repos.findPatternRevs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func findPatternRevs(includePatterns []string) (includePatternRevs []patternRevspec, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc findPatternRevs(includePatterns []string) (includePatternRevs []patternRevspec, err error)\n```\n\nfindPatternRevs mutates the given list of include patterns to be a raw list of the repository name patterns we want, separating out their revision specs, if any. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/search/repos#defaultRepositories",
               "documentation": {
                 "identifier": "defaultRepositories",
                 "newPage": false,
                 "searchKey": "repos.defaultRepositories",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -853,6 +1039,7 @@
                 "newPage": false,
                 "searchKey": "repos.filterRepoHasCommitAfter",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -869,12 +1056,59 @@
           },
           {
             "node": {
+              "pathID": "/internal/search/repos#findPatternRevs",
+              "documentation": {
+                "identifier": "findPatternRevs",
+                "newPage": false,
+                "searchKey": "repos.findPatternRevs",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func findPatternRevs(includePatterns []string) (includePatternRevs []patternRevspec, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc findPatternRevs(includePatterns []string) (includePatternRevs []patternRevspec, err error)\n```\n\nfindPatternRevs mutates the given list of include patterns to be a raw list of the repository name patterns we want, separating out their revision specs, if any. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/repos#getRevsForMatchedRepo",
+              "documentation": {
+                "identifier": "getRevsForMatchedRepo",
+                "newPage": false,
+                "searchKey": "repos.getRevsForMatchedRepo",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getRevsForMatchedRepo(repo api.RepoName, pats []patternRevspec) (matched []search.RevisionSpecifier, clashing []search.RevisionSpecifier)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getRevsForMatchedRepo(repo api.RepoName, pats []patternRevspec) (matched []search.RevisionSpecifier, clashing []search.RevisionSpecifier)\n```\n\ngiven a repo name, determine whether it matched any patterns for which we have revspecs (or ref globs), and if so, return the matching/allowed ones. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/search/repos#optimizeRepoPatternWithHeuristics",
               "documentation": {
                 "identifier": "optimizeRepoPatternWithHeuristics",
                 "newPage": false,
                 "searchKey": "repos.optimizeRepoPatternWithHeuristics",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -891,176 +1125,46 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/repos#TestRepoGroupValuesToRegexp",
+              "pathID": "/internal/search/repos#repoGroupValuesToRegexp",
               "documentation": {
-                "identifier": "TestRepoGroupValuesToRegexp",
+                "identifier": "repoGroupValuesToRegexp",
                 "newPage": false,
-                "searchKey": "repos.TestRepoGroupValuesToRegexp",
+                "searchKey": "repos.repoGroupValuesToRegexp",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestRepoGroupValuesToRegexp(t *testing.T)"
+                "value": "func repoGroupValuesToRegexp(groupNames []string, groups map[string][]RepoGroupValue) []string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestRepoGroupValuesToRegexp(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc repoGroupValuesToRegexp(groupNames []string, groups map[string][]RepoGroupValue) []string\n```\n\nrepoGroupValuesToRegexp does a lookup of all repo groups by name and converts their values to a list of regular expressions to search. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/search/repos#TestMain",
+              "pathID": "/internal/search/repos#resolveVersionContext",
               "documentation": {
-                "identifier": "TestMain",
+                "identifier": "resolveVersionContext",
                 "newPage": false,
-                "searchKey": "repos.TestMain",
+                "searchKey": "repos.resolveVersionContext",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestMain(m *testing.M)"
+                "value": "func resolveVersionContext(versionContext string) (*schema.VersionContext, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/repos#TestRevisionValidation",
-              "documentation": {
-                "identifier": "TestRevisionValidation",
-                "newPage": false,
-                "searchKey": "repos.TestRevisionValidation",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRevisionValidation(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRevisionValidation(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/repos#TestSearchRevspecs",
-              "documentation": {
-                "identifier": "TestSearchRevspecs",
-                "newPage": false,
-                "searchKey": "repos.TestSearchRevspecs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSearchRevspecs(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSearchRevspecs(t *testing.T)\n```\n\nTestSearchRevspecs tests a repository name against a list of repository specs with optional revspecs, and determines whether we get the expected error, list of matching rev specs, or list of clashing revspecs (if no matching rev specs were found) \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/repos#BenchmarkGetRevsForMatchedRepo",
-              "documentation": {
-                "identifier": "BenchmarkGetRevsForMatchedRepo",
-                "newPage": false,
-                "searchKey": "repos.BenchmarkGetRevsForMatchedRepo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkGetRevsForMatchedRepo(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkGetRevsForMatchedRepo(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/repos#TestDefaultRepositories",
-              "documentation": {
-                "identifier": "TestDefaultRepositories",
-                "newPage": false,
-                "searchKey": "repos.TestDefaultRepositories",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDefaultRepositories(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDefaultRepositories(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/repos#TestUseDefaultReposIfMissingOrGlobalSearchContext",
-              "documentation": {
-                "identifier": "TestUseDefaultReposIfMissingOrGlobalSearchContext",
-                "newPage": false,
-                "searchKey": "repos.TestUseDefaultReposIfMissingOrGlobalSearchContext",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUseDefaultReposIfMissingOrGlobalSearchContext(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUseDefaultReposIfMissingOrGlobalSearchContext(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/repos#TestResolveRepositoriesWithUserSearchContext",
-              "documentation": {
-                "identifier": "TestResolveRepositoriesWithUserSearchContext",
-                "newPage": false,
-                "searchKey": "repos.TestResolveRepositoriesWithUserSearchContext",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestResolveRepositoriesWithUserSearchContext(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestResolveRepositoriesWithUserSearchContext(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc resolveVersionContext(versionContext string) (*schema.VersionContext, error)\n```\n\nNOTE: This function is not called if the version context is not used \n\n"
               },
               "children": null
             }
@@ -1073,6 +1177,7 @@
                 "newPage": false,
                 "searchKey": "repos.stringSliceToRevisionSpecifiers",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1083,28 +1188,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc stringSliceToRevisionSpecifiers(revisions []string) []search.RevisionSpecifier\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/repos#TestResolveRepositoriesWithSearchContext",
-              "documentation": {
-                "identifier": "TestResolveRepositoriesWithSearchContext",
-                "newPage": false,
-                "searchKey": "repos.TestResolveRepositoriesWithSearchContext",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestResolveRepositoriesWithSearchContext(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestResolveRepositoriesWithSearchContext(t *testing.T)\n```\n\n"
               },
               "children": null
             }

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "crypto/internal/subtle_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,9 @@
                 "newPage": false,
                 "searchKey": "subtle_test.a",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -61,34 +66,15 @@
           },
           {
             "node": {
-              "pathID": "/crypto/internal/subtle_test#b",
-              "documentation": {
-                "identifier": "b",
-                "newPage": false,
-                "searchKey": "subtle_test.b",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var b"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar a, b [100]byte\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/internal/subtle_test#aliasingTests",
               "documentation": {
                 "identifier": "aliasingTests",
                 "newPage": false,
                 "searchKey": "subtle_test.aliasingTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -99,6 +85,31 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar aliasingTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/internal/subtle_test#b",
+              "documentation": {
+                "identifier": "b",
+                "newPage": false,
+                "searchKey": "subtle_test.b",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var b"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar a, b [100]byte\n```\n\n"
               },
               "children": null
             }
@@ -114,6 +125,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -128,12 +140,37 @@
         "children": [
           {
             "node": {
+              "pathID": "/crypto/internal/subtle_test#TestAliasing",
+              "documentation": {
+                "identifier": "TestAliasing",
+                "newPage": false,
+                "searchKey": "subtle_test.TestAliasing",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAliasing(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAliasing(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/internal/subtle_test#testAliasing",
               "documentation": {
                 "identifier": "testAliasing",
                 "newPage": false,
                 "searchKey": "subtle_test.testAliasing",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -144,28 +181,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc testAliasing(t *testing.T, i int, x, y []byte, anyOverlap, inexactOverlap bool)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/internal/subtle_test#TestAliasing",
-              "documentation": {
-                "identifier": "TestAliasing",
-                "newPage": false,
-                "searchKey": "subtle_test.TestAliasing",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAliasing(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAliasing(t *testing.T)\n```\n\n"
               },
               "children": null
             }

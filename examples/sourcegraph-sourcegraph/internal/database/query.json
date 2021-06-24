@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/database/query",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,9 @@
                 "identifier": "Q",
                 "newPage": false,
                 "searchKey": "query.Q",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +66,9 @@
                       "identifier": "And",
                       "newPage": false,
                       "searchKey": "query.And",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -77,32 +83,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/database/query#Or",
-                    "documentation": {
-                      "identifier": "Or",
-                      "newPage": false,
-                      "searchKey": "query.Or",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func Or(children ...Q) Q"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc Or(children ...Q) Q\n```\n\nOr returns a Q which when evaluated will join the children by \"OR\". \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/database/query#Not",
                     "documentation": {
                       "identifier": "Not",
                       "newPage": false,
                       "searchKey": "query.Not",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -111,6 +99,28 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc Not(child Q) Q\n```\n\nNot returns a Q which when evaluated will wrap child with \"NOT\". \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/query#Or",
+                    "documentation": {
+                      "identifier": "Or",
+                      "newPage": false,
+                      "searchKey": "query.Or",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Or(children ...Q) Q"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Or(children ...Q) Q\n```\n\nOr returns a Q which when evaluated will join the children by \"OR\". \n\n"
                     },
                     "children": null
                   }
@@ -126,6 +136,7 @@
                 "newPage": false,
                 "searchKey": "query.and",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -142,34 +153,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/database/query#or",
-              "documentation": {
-                "identifier": "or",
-                "newPage": false,
-                "searchKey": "query.or",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type or struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype or struct {\n\tChildren []Q\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/database/query#not",
               "documentation": {
                 "identifier": "not",
                 "newPage": false,
                 "searchKey": "query.not",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -186,12 +176,36 @@
           },
           {
             "node": {
+              "pathID": "/internal/database/query#or",
+              "documentation": {
+                "identifier": "or",
+                "newPage": false,
+                "searchKey": "query.or",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type or struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype or struct {\n\tChildren []Q\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/database/query#printfBindVar",
               "documentation": {
                 "identifier": "printfBindVar",
                 "newPage": false,
                 "searchKey": "query.printfBindVar",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -212,6 +226,7 @@
                       "newPage": false,
                       "searchKey": "query.printfBindVar.BindVar",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -240,6 +255,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -259,7 +275,9 @@
                 "identifier": "Eval",
                 "newPage": false,
                 "searchKey": "query.Eval",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -279,7 +297,9 @@
                 "identifier": "Print",
                 "newPage": false,
                 "searchKey": "query.Print",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",

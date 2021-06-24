@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/sysreq",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,9 @@
                 "newPage": false,
                 "searchKey": "sysreq.checks",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -70,6 +75,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -84,12 +90,36 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/sysreq#CheckFunc",
+              "documentation": {
+                "identifier": "CheckFunc",
+                "newPage": false,
+                "searchKey": "sysreq.CheckFunc",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CheckFunc func(context.Context) (problem string, fix string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CheckFunc func(context.Context) (problem, fix string, err error)\n```\n\nCheckFunc is a function that checks for a system requirement. If any of problem, fix, or err are non-zero, then the system requirement check is deemed to have failed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/sysreq#Status",
               "documentation": {
                 "identifier": "Status",
                 "newPage": false,
                 "searchKey": "sysreq.Status",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -102,32 +132,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/sysreq#Status.OK",
-                    "documentation": {
-                      "identifier": "Status.OK",
-                      "newPage": false,
-                      "searchKey": "sysreq.Status.OK",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Status) OK() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Status) OK() bool\n```\n\nOK is whether the component is present, has no errors, and was not skipped. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/sysreq#Status.Failed",
                     "documentation": {
                       "identifier": "Status.Failed",
                       "newPage": false,
                       "searchKey": "sysreq.Status.Failed",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -136,6 +148,28 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (s *Status) Failed() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/sysreq#Status.OK",
+                    "documentation": {
+                      "identifier": "Status.OK",
+                      "newPage": false,
+                      "searchKey": "sysreq.Status.OK",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Status) OK() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Status) OK() bool\n```\n\nOK is whether the component is present, has no errors, and was not skipped. \n\n"
                     },
                     "children": null
                   }
@@ -151,6 +185,7 @@
                 "newPage": false,
                 "searchKey": "sysreq.check",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -161,26 +196,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\ntype check struct {\n\tName  string\n\tCheck CheckFunc\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/sysreq#CheckFunc",
-              "documentation": {
-                "identifier": "CheckFunc",
-                "newPage": false,
-                "searchKey": "sysreq.CheckFunc",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type CheckFunc func(context.Context) (problem string, fix string, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype CheckFunc func(context.Context) (problem, fix string, err error)\n```\n\nCheckFunc is a function that checks for a system requirement. If any of problem, fix, or err are non-zero, then the system requirement check is deemed to have failed. \n\n"
               },
               "children": null
             }
@@ -196,6 +211,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -210,32 +226,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/sysreq#Check",
-              "documentation": {
-                "identifier": "Check",
-                "newPage": false,
-                "searchKey": "sysreq.Check",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Check(ctx context.Context, skip []string) []Status"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Check(ctx context.Context, skip []string) []Status\n```\n\nCheck checks for the presence of system requirements, such as Docker and Git. The skip list contains case-insensitive names of requirement checks (such as \"Docker\" and \"Git\") that should be skipped. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/sysreq#AddCheck",
               "documentation": {
                 "identifier": "AddCheck",
                 "newPage": false,
                 "searchKey": "sysreq.AddCheck",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -250,22 +248,22 @@
           },
           {
             "node": {
-              "pathID": "/internal/sysreq#rlimitCheck",
+              "pathID": "/internal/sysreq#Check",
               "documentation": {
-                "identifier": "rlimitCheck",
+                "identifier": "Check",
                 "newPage": false,
-                "searchKey": "sysreq.rlimitCheck",
+                "searchKey": "sysreq.Check",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func rlimitCheck(ctx context.Context) (problem, fix string, err error)"
+                "value": "func Check(ctx context.Context, skip []string) []Status"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc rlimitCheck(ctx context.Context) (problem, fix string, err error)\n```\n\n"
+                "value": "```Go\nfunc Check(ctx context.Context, skip []string) []Status\n```\n\nCheck checks for the presence of system requirements, such as Docker and Git. The skip list contains case-insensitive names of requirement checks (such as \"Docker\" and \"Git\") that should be skipped. \n\n"
               },
               "children": null
             }
@@ -278,7 +276,9 @@
                 "newPage": false,
                 "searchKey": "sysreq.TestCheck",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -300,7 +300,9 @@
                 "newPage": false,
                 "searchKey": "sysreq.TestCheck_skip",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -310,6 +312,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc TestCheck_skip(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/sysreq#rlimitCheck",
+              "documentation": {
+                "identifier": "rlimitCheck",
+                "newPage": false,
+                "searchKey": "sysreq.rlimitCheck",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func rlimitCheck(ctx context.Context) (problem, fix string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc rlimitCheck(ctx context.Context) (problem, fix string, err error)\n```\n\n"
               },
               "children": null
             }

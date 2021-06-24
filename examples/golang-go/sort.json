@@ -4,7 +4,9 @@
     "identifier": "sort",
     "newPage": true,
     "searchKey": "sort",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,34 +39,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/sort#reflectValueOf",
-              "documentation": {
-                "identifier": "reflectValueOf",
-                "newPage": false,
-                "searchKey": "sort.reflectValueOf",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var reflectValueOf"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar reflectValueOf = reflectlite.ValueOf\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/sort#reflectSwapper",
               "documentation": {
                 "identifier": "reflectSwapper",
                 "newPage": false,
                 "searchKey": "sort.reflectSwapper",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
@@ -73,6 +57,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar reflectSwapper = reflectlite.Swapper\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sort#reflectValueOf",
+              "documentation": {
+                "identifier": "reflectValueOf",
+                "newPage": false,
+                "searchKey": "sort.reflectValueOf",
+                "tags": [
+                  "variable",
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var reflectValueOf"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar reflectValueOf = reflectlite.ValueOf\n```\n\n"
               },
               "children": null
             }
@@ -87,7 +95,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -100,12 +110,282 @@
         "children": [
           {
             "node": {
+              "pathID": "/sort#Float64Slice",
+              "documentation": {
+                "identifier": "Float64Slice",
+                "newPage": false,
+                "searchKey": "sort.Float64Slice",
+                "tags": [
+                  "array",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Float64Slice []float64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Float64Slice []float64\n```\n\nFloat64Slice implements Interface for a []float64, sorting in increasing order, with not-a-number (NaN) values ordered before other values. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/sort#Float64Slice.Len",
+                    "documentation": {
+                      "identifier": "Float64Slice.Len",
+                      "newPage": false,
+                      "searchKey": "sort.Float64Slice.Len",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x Float64Slice) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x Float64Slice) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sort#Float64Slice.Less",
+                    "documentation": {
+                      "identifier": "Float64Slice.Less",
+                      "newPage": false,
+                      "searchKey": "sort.Float64Slice.Less",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x Float64Slice) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x Float64Slice) Less(i, j int) bool\n```\n\nLess reports whether x[i] should be ordered before x[j], as required by the sort Interface. Note that floating-point comparison by itself is not a transitive relation: it does not report a consistent ordering for not-a-number (NaN) values. This implementation of Less places NaN values before any others, by using: \n\n```\nx[i] < x[j] || (math.IsNaN(x[i]) && !math.IsNaN(x[j]))\n\n```\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sort#Float64Slice.Search",
+                    "documentation": {
+                      "identifier": "Float64Slice.Search",
+                      "newPage": false,
+                      "searchKey": "sort.Float64Slice.Search",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p Float64Slice) Search(x float64) int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p Float64Slice) Search(x float64) int\n```\n\nSearch returns the result of applying SearchFloat64s to the receiver and x. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sort#Float64Slice.Sort",
+                    "documentation": {
+                      "identifier": "Float64Slice.Sort",
+                      "newPage": false,
+                      "searchKey": "sort.Float64Slice.Sort",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x Float64Slice) Sort()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x Float64Slice) Sort()\n```\n\nSort is a convenience method: x.Sort() calls Sort(x). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sort#Float64Slice.Swap",
+                    "documentation": {
+                      "identifier": "Float64Slice.Swap",
+                      "newPage": false,
+                      "searchKey": "sort.Float64Slice.Swap",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x Float64Slice) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x Float64Slice) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sort#IntSlice",
+              "documentation": {
+                "identifier": "IntSlice",
+                "newPage": false,
+                "searchKey": "sort.IntSlice",
+                "tags": [
+                  "array",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type IntSlice []int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype IntSlice []int\n```\n\nIntSlice attaches the methods of Interface to []int, sorting in increasing order. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/sort#IntSlice.Len",
+                    "documentation": {
+                      "identifier": "IntSlice.Len",
+                      "newPage": false,
+                      "searchKey": "sort.IntSlice.Len",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x IntSlice) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x IntSlice) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sort#IntSlice.Less",
+                    "documentation": {
+                      "identifier": "IntSlice.Less",
+                      "newPage": false,
+                      "searchKey": "sort.IntSlice.Less",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x IntSlice) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x IntSlice) Less(i, j int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sort#IntSlice.Search",
+                    "documentation": {
+                      "identifier": "IntSlice.Search",
+                      "newPage": false,
+                      "searchKey": "sort.IntSlice.Search",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p IntSlice) Search(x int) int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p IntSlice) Search(x int) int\n```\n\nSearch returns the result of applying SearchInts to the receiver and x. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sort#IntSlice.Sort",
+                    "documentation": {
+                      "identifier": "IntSlice.Sort",
+                      "newPage": false,
+                      "searchKey": "sort.IntSlice.Sort",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x IntSlice) Sort()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x IntSlice) Sort()\n```\n\nSort is a convenience method: x.Sort() calls Sort(x). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sort#IntSlice.Swap",
+                    "documentation": {
+                      "identifier": "IntSlice.Swap",
+                      "newPage": false,
+                      "searchKey": "sort.IntSlice.Swap",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x IntSlice) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x IntSlice) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/sort#Interface",
               "documentation": {
                 "identifier": "Interface",
                 "newPage": false,
                 "searchKey": "sort.Interface",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -123,7 +403,9 @@
                       "identifier": "Reverse",
                       "newPage": false,
                       "searchKey": "sort.Reverse",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -141,12 +423,147 @@
           },
           {
             "node": {
+              "pathID": "/sort#StringSlice",
+              "documentation": {
+                "identifier": "StringSlice",
+                "newPage": false,
+                "searchKey": "sort.StringSlice",
+                "tags": [
+                  "array",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StringSlice []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StringSlice []string\n```\n\nStringSlice attaches the methods of Interface to []string, sorting in increasing order. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/sort#StringSlice.Len",
+                    "documentation": {
+                      "identifier": "StringSlice.Len",
+                      "newPage": false,
+                      "searchKey": "sort.StringSlice.Len",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x StringSlice) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x StringSlice) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sort#StringSlice.Less",
+                    "documentation": {
+                      "identifier": "StringSlice.Less",
+                      "newPage": false,
+                      "searchKey": "sort.StringSlice.Less",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x StringSlice) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x StringSlice) Less(i, j int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sort#StringSlice.Search",
+                    "documentation": {
+                      "identifier": "StringSlice.Search",
+                      "newPage": false,
+                      "searchKey": "sort.StringSlice.Search",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p StringSlice) Search(x string) int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p StringSlice) Search(x string) int\n```\n\nSearch returns the result of applying SearchStrings to the receiver and x. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sort#StringSlice.Sort",
+                    "documentation": {
+                      "identifier": "StringSlice.Sort",
+                      "newPage": false,
+                      "searchKey": "sort.StringSlice.Sort",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x StringSlice) Sort()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x StringSlice) Sort()\n```\n\nSort is a convenience method: x.Sort() calls Sort(x). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/sort#StringSlice.Swap",
+                    "documentation": {
+                      "identifier": "StringSlice.Swap",
+                      "newPage": false,
+                      "searchKey": "sort.StringSlice.Swap",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x StringSlice) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x StringSlice) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/sort#lessSwap",
               "documentation": {
                 "identifier": "lessSwap",
                 "newPage": false,
                 "searchKey": "sort.lessSwap",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -169,6 +586,7 @@
                 "newPage": false,
                 "searchKey": "sort.reverse",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -189,6 +607,7 @@
                       "newPage": false,
                       "searchKey": "sort.reverse.Less",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -199,369 +618,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (r reverse) Less(i, j int) bool\n```\n\nLess returns the opposite of the embedded implementation's Less method. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sort#IntSlice",
-              "documentation": {
-                "identifier": "IntSlice",
-                "newPage": false,
-                "searchKey": "sort.IntSlice",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type IntSlice []int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype IntSlice []int\n```\n\nIntSlice attaches the methods of Interface to []int, sorting in increasing order. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/sort#IntSlice.Search",
-                    "documentation": {
-                      "identifier": "IntSlice.Search",
-                      "newPage": false,
-                      "searchKey": "sort.IntSlice.Search",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p IntSlice) Search(x int) int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p IntSlice) Search(x int) int\n```\n\nSearch returns the result of applying SearchInts to the receiver and x. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sort#IntSlice.Len",
-                    "documentation": {
-                      "identifier": "IntSlice.Len",
-                      "newPage": false,
-                      "searchKey": "sort.IntSlice.Len",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (x IntSlice) Len() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (x IntSlice) Len() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sort#IntSlice.Less",
-                    "documentation": {
-                      "identifier": "IntSlice.Less",
-                      "newPage": false,
-                      "searchKey": "sort.IntSlice.Less",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (x IntSlice) Less(i, j int) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (x IntSlice) Less(i, j int) bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sort#IntSlice.Swap",
-                    "documentation": {
-                      "identifier": "IntSlice.Swap",
-                      "newPage": false,
-                      "searchKey": "sort.IntSlice.Swap",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (x IntSlice) Swap(i, j int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (x IntSlice) Swap(i, j int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sort#IntSlice.Sort",
-                    "documentation": {
-                      "identifier": "IntSlice.Sort",
-                      "newPage": false,
-                      "searchKey": "sort.IntSlice.Sort",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (x IntSlice) Sort()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (x IntSlice) Sort()\n```\n\nSort is a convenience method: x.Sort() calls Sort(x). \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sort#Float64Slice",
-              "documentation": {
-                "identifier": "Float64Slice",
-                "newPage": false,
-                "searchKey": "sort.Float64Slice",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Float64Slice []float64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Float64Slice []float64\n```\n\nFloat64Slice implements Interface for a []float64, sorting in increasing order, with not-a-number (NaN) values ordered before other values. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/sort#Float64Slice.Search",
-                    "documentation": {
-                      "identifier": "Float64Slice.Search",
-                      "newPage": false,
-                      "searchKey": "sort.Float64Slice.Search",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p Float64Slice) Search(x float64) int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p Float64Slice) Search(x float64) int\n```\n\nSearch returns the result of applying SearchFloat64s to the receiver and x. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sort#Float64Slice.Len",
-                    "documentation": {
-                      "identifier": "Float64Slice.Len",
-                      "newPage": false,
-                      "searchKey": "sort.Float64Slice.Len",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (x Float64Slice) Len() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (x Float64Slice) Len() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sort#Float64Slice.Less",
-                    "documentation": {
-                      "identifier": "Float64Slice.Less",
-                      "newPage": false,
-                      "searchKey": "sort.Float64Slice.Less",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (x Float64Slice) Less(i, j int) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (x Float64Slice) Less(i, j int) bool\n```\n\nLess reports whether x[i] should be ordered before x[j], as required by the sort Interface. Note that floating-point comparison by itself is not a transitive relation: it does not report a consistent ordering for not-a-number (NaN) values. This implementation of Less places NaN values before any others, by using: \n\n```\nx[i] < x[j] || (math.IsNaN(x[i]) && !math.IsNaN(x[j]))\n\n```\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sort#Float64Slice.Swap",
-                    "documentation": {
-                      "identifier": "Float64Slice.Swap",
-                      "newPage": false,
-                      "searchKey": "sort.Float64Slice.Swap",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (x Float64Slice) Swap(i, j int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (x Float64Slice) Swap(i, j int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sort#Float64Slice.Sort",
-                    "documentation": {
-                      "identifier": "Float64Slice.Sort",
-                      "newPage": false,
-                      "searchKey": "sort.Float64Slice.Sort",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (x Float64Slice) Sort()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (x Float64Slice) Sort()\n```\n\nSort is a convenience method: x.Sort() calls Sort(x). \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sort#StringSlice",
-              "documentation": {
-                "identifier": "StringSlice",
-                "newPage": false,
-                "searchKey": "sort.StringSlice",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type StringSlice []string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype StringSlice []string\n```\n\nStringSlice attaches the methods of Interface to []string, sorting in increasing order. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/sort#StringSlice.Search",
-                    "documentation": {
-                      "identifier": "StringSlice.Search",
-                      "newPage": false,
-                      "searchKey": "sort.StringSlice.Search",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p StringSlice) Search(x string) int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p StringSlice) Search(x string) int\n```\n\nSearch returns the result of applying SearchStrings to the receiver and x. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sort#StringSlice.Len",
-                    "documentation": {
-                      "identifier": "StringSlice.Len",
-                      "newPage": false,
-                      "searchKey": "sort.StringSlice.Len",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (x StringSlice) Len() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (x StringSlice) Len() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sort#StringSlice.Less",
-                    "documentation": {
-                      "identifier": "StringSlice.Less",
-                      "newPage": false,
-                      "searchKey": "sort.StringSlice.Less",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (x StringSlice) Less(i, j int) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (x StringSlice) Less(i, j int) bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sort#StringSlice.Swap",
-                    "documentation": {
-                      "identifier": "StringSlice.Swap",
-                      "newPage": false,
-                      "searchKey": "sort.StringSlice.Swap",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (x StringSlice) Swap(i, j int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (x StringSlice) Swap(i, j int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sort#StringSlice.Sort",
-                    "documentation": {
-                      "identifier": "StringSlice.Sort",
-                      "newPage": false,
-                      "searchKey": "sort.StringSlice.Sort",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (x StringSlice) Sort()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (x StringSlice) Sort()\n```\n\nSort is a convenience method: x.Sort() calls Sort(x). \n\n"
                     },
                     "children": null
                   }
@@ -579,7 +635,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -592,12 +650,147 @@
         "children": [
           {
             "node": {
+              "pathID": "/sort#Float64s",
+              "documentation": {
+                "identifier": "Float64s",
+                "newPage": false,
+                "searchKey": "sort.Float64s",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Float64s(x []float64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Float64s(x []float64)\n```\n\nFloat64s sorts a slice of float64s in increasing order. Not-a-number (NaN) values are ordered before other values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sort#Float64sAreSorted",
+              "documentation": {
+                "identifier": "Float64sAreSorted",
+                "newPage": false,
+                "searchKey": "sort.Float64sAreSorted",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Float64sAreSorted(x []float64) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Float64sAreSorted(x []float64) bool\n```\n\nFloat64sAreSorted reports whether the slice x is sorted in increasing order, with not-a-number (NaN) values before any other values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sort#Heapsort",
+              "documentation": {
+                "identifier": "Heapsort",
+                "newPage": false,
+                "searchKey": "sort.Heapsort",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Heapsort(data Interface)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Heapsort(data Interface)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sort#Ints",
+              "documentation": {
+                "identifier": "Ints",
+                "newPage": false,
+                "searchKey": "sort.Ints",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Ints(x []int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Ints(x []int)\n```\n\nInts sorts a slice of ints in increasing order. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sort#IntsAreSorted",
+              "documentation": {
+                "identifier": "IntsAreSorted",
+                "newPage": false,
+                "searchKey": "sort.IntsAreSorted",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IntsAreSorted(x []int) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IntsAreSorted(x []int) bool\n```\n\nIntsAreSorted reports whether the slice x is sorted in increasing order. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sort#IsSorted",
+              "documentation": {
+                "identifier": "IsSorted",
+                "newPage": false,
+                "searchKey": "sort.IsSorted",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsSorted(data Interface) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsSorted(data Interface) bool\n```\n\nIsSorted reports whether data is sorted. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/sort#Search",
               "documentation": {
                 "identifier": "Search",
                 "newPage": false,
                 "searchKey": "sort.Search",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -612,32 +805,14 @@
           },
           {
             "node": {
-              "pathID": "/sort#SearchInts",
-              "documentation": {
-                "identifier": "SearchInts",
-                "newPage": false,
-                "searchKey": "sort.SearchInts",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SearchInts(a []int, x int) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SearchInts(a []int, x int) int\n```\n\nSearchInts searches for x in a sorted slice of ints and returns the index as specified by Search. The return value is the index to insert x if x is not present (it could be len(a)). The slice must be sorted in ascending order. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/sort#SearchFloat64s",
               "documentation": {
                 "identifier": "SearchFloat64s",
                 "newPage": false,
                 "searchKey": "sort.SearchFloat64s",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -652,12 +827,36 @@
           },
           {
             "node": {
+              "pathID": "/sort#SearchInts",
+              "documentation": {
+                "identifier": "SearchInts",
+                "newPage": false,
+                "searchKey": "sort.SearchInts",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SearchInts(a []int, x int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SearchInts(a []int, x int) int\n```\n\nSearchInts searches for x in a sorted slice of ints and returns the index as specified by Search. The return value is the index to insert x if x is not present (it could be len(a)). The slice must be sorted in ascending order. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/sort#SearchStrings",
               "documentation": {
                 "identifier": "SearchStrings",
                 "newPage": false,
                 "searchKey": "sort.SearchStrings",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -677,7 +876,9 @@
                 "identifier": "Slice",
                 "newPage": false,
                 "searchKey": "sort.Slice",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -692,32 +893,14 @@
           },
           {
             "node": {
-              "pathID": "/sort#SliceStable",
-              "documentation": {
-                "identifier": "SliceStable",
-                "newPage": false,
-                "searchKey": "sort.SliceStable",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SliceStable(x interface{}, less func(i, j int) bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SliceStable(x interface{}, less func(i, j int) bool)\n```\n\nSliceStable sorts the slice x using the provided less function, keeping equal elements in their original order. It panics if x is not a slice. \n\nThe less function must satisfy the same requirements as the Interface type's Less method. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/sort#SliceIsSorted",
               "documentation": {
                 "identifier": "SliceIsSorted",
                 "newPage": false,
                 "searchKey": "sort.SliceIsSorted",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -732,110 +915,110 @@
           },
           {
             "node": {
-              "pathID": "/sort#insertionSort",
+              "pathID": "/sort#SliceStable",
               "documentation": {
-                "identifier": "insertionSort",
+                "identifier": "SliceStable",
                 "newPage": false,
-                "searchKey": "sort.insertionSort",
+                "searchKey": "sort.SliceStable",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func insertionSort(data Interface, a, b int)"
+                "value": "func SliceStable(x interface{}, less func(i, j int) bool)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc insertionSort(data Interface, a, b int)\n```\n\ninsertionSort sorts data[a:b] using insertion sort. \n\n"
+                "value": "```Go\nfunc SliceStable(x interface{}, less func(i, j int) bool)\n```\n\nSliceStable sorts the slice x using the provided less function, keeping equal elements in their original order. It panics if x is not a slice. \n\nThe less function must satisfy the same requirements as the Interface type's Less method. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/sort#siftDown",
+              "pathID": "/sort#Sort",
               "documentation": {
-                "identifier": "siftDown",
+                "identifier": "Sort",
                 "newPage": false,
-                "searchKey": "sort.siftDown",
+                "searchKey": "sort.Sort",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func siftDown(data Interface, lo, hi, first int)"
+                "value": "func Sort(data Interface)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc siftDown(data Interface, lo, hi, first int)\n```\n\nsiftDown implements the heap property on data[lo:hi]. first is an offset into the array where the root of the heap lies. \n\n"
+                "value": "```Go\nfunc Sort(data Interface)\n```\n\nSort sorts data. It makes one call to data.Len to determine n and O(n*log(n)) calls to data.Less and data.Swap. The sort is not guaranteed to be stable. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/sort#heapSort",
+              "pathID": "/sort#Stable",
               "documentation": {
-                "identifier": "heapSort",
+                "identifier": "Stable",
                 "newPage": false,
-                "searchKey": "sort.heapSort",
+                "searchKey": "sort.Stable",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func heapSort(data Interface, a, b int)"
+                "value": "func Stable(data Interface)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc heapSort(data Interface, a, b int)\n```\n\n"
+                "value": "```Go\nfunc Stable(data Interface)\n```\n\nStable sorts data while keeping the original order of equal elements. \n\nIt makes one call to data.Len to determine n, O(n*log(n)) calls to data.Less and O(n*log(n)*log(n)) calls to data.Swap. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/sort#medianOfThree",
+              "pathID": "/sort#Strings",
               "documentation": {
-                "identifier": "medianOfThree",
+                "identifier": "Strings",
                 "newPage": false,
-                "searchKey": "sort.medianOfThree",
+                "searchKey": "sort.Strings",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func medianOfThree(data Interface, m1, m0, m2 int)"
+                "value": "func Strings(x []string)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc medianOfThree(data Interface, m1, m0, m2 int)\n```\n\nmedianOfThree moves the median of the three values data[m0], data[m1], data[m2] into data[m1]. \n\n"
+                "value": "```Go\nfunc Strings(x []string)\n```\n\nStrings sorts a slice of strings in increasing order. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/sort#swapRange",
+              "pathID": "/sort#StringsAreSorted",
               "documentation": {
-                "identifier": "swapRange",
+                "identifier": "StringsAreSorted",
                 "newPage": false,
-                "searchKey": "sort.swapRange",
+                "searchKey": "sort.StringsAreSorted",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func swapRange(data Interface, a, b, n int)"
+                "value": "func StringsAreSorted(x []string) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc swapRange(data Interface, a, b, n int)\n```\n\n"
+                "value": "```Go\nfunc StringsAreSorted(x []string) bool\n```\n\nStringsAreSorted reports whether the slice x is sorted in increasing order. \n\n"
               },
               "children": null
             }
@@ -848,6 +1031,7 @@
                 "newPage": false,
                 "searchKey": "sort.doPivot",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -864,434 +1048,13 @@
           },
           {
             "node": {
-              "pathID": "/sort#quickSort",
-              "documentation": {
-                "identifier": "quickSort",
-                "newPage": false,
-                "searchKey": "sort.quickSort",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func quickSort(data Interface, a, b, maxDepth int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc quickSort(data Interface, a, b, maxDepth int)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sort#Sort",
-              "documentation": {
-                "identifier": "Sort",
-                "newPage": false,
-                "searchKey": "sort.Sort",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Sort(data Interface)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Sort(data Interface)\n```\n\nSort sorts data. It makes one call to data.Len to determine n and O(n*log(n)) calls to data.Less and data.Swap. The sort is not guaranteed to be stable. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sort#maxDepth",
-              "documentation": {
-                "identifier": "maxDepth",
-                "newPage": false,
-                "searchKey": "sort.maxDepth",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func maxDepth(n int) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc maxDepth(n int) int\n```\n\nmaxDepth returns a threshold at which quicksort should switch to heapsort. It returns 2*ceil(lg(n+1)). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sort#IsSorted",
-              "documentation": {
-                "identifier": "IsSorted",
-                "newPage": false,
-                "searchKey": "sort.IsSorted",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IsSorted(data Interface) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IsSorted(data Interface) bool\n```\n\nIsSorted reports whether data is sorted. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sort#isNaN",
-              "documentation": {
-                "identifier": "isNaN",
-                "newPage": false,
-                "searchKey": "sort.isNaN",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func isNaN(f float64) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc isNaN(f float64) bool\n```\n\nisNaN is a copy of math.IsNaN to avoid a dependency on the math package. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sort#Ints",
-              "documentation": {
-                "identifier": "Ints",
-                "newPage": false,
-                "searchKey": "sort.Ints",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Ints(x []int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Ints(x []int)\n```\n\nInts sorts a slice of ints in increasing order. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sort#Float64s",
-              "documentation": {
-                "identifier": "Float64s",
-                "newPage": false,
-                "searchKey": "sort.Float64s",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Float64s(x []float64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Float64s(x []float64)\n```\n\nFloat64s sorts a slice of float64s in increasing order. Not-a-number (NaN) values are ordered before other values. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sort#Strings",
-              "documentation": {
-                "identifier": "Strings",
-                "newPage": false,
-                "searchKey": "sort.Strings",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Strings(x []string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Strings(x []string)\n```\n\nStrings sorts a slice of strings in increasing order. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sort#IntsAreSorted",
-              "documentation": {
-                "identifier": "IntsAreSorted",
-                "newPage": false,
-                "searchKey": "sort.IntsAreSorted",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IntsAreSorted(x []int) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IntsAreSorted(x []int) bool\n```\n\nIntsAreSorted reports whether the slice x is sorted in increasing order. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sort#Float64sAreSorted",
-              "documentation": {
-                "identifier": "Float64sAreSorted",
-                "newPage": false,
-                "searchKey": "sort.Float64sAreSorted",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Float64sAreSorted(x []float64) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Float64sAreSorted(x []float64) bool\n```\n\nFloat64sAreSorted reports whether the slice x is sorted in increasing order, with not-a-number (NaN) values before any other values. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sort#StringsAreSorted",
-              "documentation": {
-                "identifier": "StringsAreSorted",
-                "newPage": false,
-                "searchKey": "sort.StringsAreSorted",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func StringsAreSorted(x []string) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc StringsAreSorted(x []string) bool\n```\n\nStringsAreSorted reports whether the slice x is sorted in increasing order. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sort#Stable",
-              "documentation": {
-                "identifier": "Stable",
-                "newPage": false,
-                "searchKey": "sort.Stable",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Stable(data Interface)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Stable(data Interface)\n```\n\nStable sorts data while keeping the original order of equal elements. \n\nIt makes one call to data.Len to determine n, O(n*log(n)) calls to data.Less and O(n*log(n)*log(n)) calls to data.Swap. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sort#stable",
-              "documentation": {
-                "identifier": "stable",
-                "newPage": false,
-                "searchKey": "sort.stable",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func stable(data Interface, n int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc stable(data Interface, n int)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sort#symMerge",
-              "documentation": {
-                "identifier": "symMerge",
-                "newPage": false,
-                "searchKey": "sort.symMerge",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func symMerge(data Interface, a, m, b int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc symMerge(data Interface, a, m, b int)\n```\n\nsymMerge merges the two sorted subsequences data[a:m] and data[m:b] using the SymMerge algorithm from Pok-Son Kim and Arne Kutzner, \"Stable Minimum Storage Merging by Symmetric Comparisons\", in Susanne Albers and Tomasz Radzik, editors, Algorithms - ESA 2004, volume 3221 of Lecture Notes in Computer Science, pages 714-723. Springer, 2004. \n\nLet M = m-a and N = b-n. Wolog M < N. The recursion depth is bound by ceil(log(N+M)). The algorithm needs O(M*log(N/M + 1)) calls to data.Less. The algorithm needs O((M+N)*log(M)) calls to data.Swap. \n\nThe paper gives O((M+N)*log(M)) as the number of assignments assuming a rotation algorithm which uses O(M+N+gcd(M+N)) assignments. The argumentation in the paper carries through for Swap operations, especially as the block swapping rotate uses only O(M+N) Swaps. \n\nsymMerge assumes non-degenerate arguments: a < m && m < b. Having the caller check this condition eliminates many leaf recursion calls, which improves performance. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sort#rotate",
-              "documentation": {
-                "identifier": "rotate",
-                "newPage": false,
-                "searchKey": "sort.rotate",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func rotate(data Interface, a, m, b int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc rotate(data Interface, a, m, b int)\n```\n\nrotate rotates two consecutive blocks u = data[a:m] and v = data[m:b] in data: Data of the form 'x u v y' is changed to 'x v u y'. rotate performs at most b-a many calls to data.Swap, and it assumes non-degenerate arguments: a < m && m < b. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sort#insertionSort_func",
-              "documentation": {
-                "identifier": "insertionSort_func",
-                "newPage": false,
-                "searchKey": "sort.insertionSort_func",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func insertionSort_func(data lessSwap, a, b int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc insertionSort_func(data lessSwap, a, b int)\n```\n\nAuto-generated variant of sort.go:insertionSort \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sort#siftDown_func",
-              "documentation": {
-                "identifier": "siftDown_func",
-                "newPage": false,
-                "searchKey": "sort.siftDown_func",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func siftDown_func(data lessSwap, lo, hi, first int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc siftDown_func(data lessSwap, lo, hi, first int)\n```\n\nAuto-generated variant of sort.go:siftDown \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sort#heapSort_func",
-              "documentation": {
-                "identifier": "heapSort_func",
-                "newPage": false,
-                "searchKey": "sort.heapSort_func",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func heapSort_func(data lessSwap, a, b int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc heapSort_func(data lessSwap, a, b int)\n```\n\nAuto-generated variant of sort.go:heapSort \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sort#medianOfThree_func",
-              "documentation": {
-                "identifier": "medianOfThree_func",
-                "newPage": false,
-                "searchKey": "sort.medianOfThree_func",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func medianOfThree_func(data lessSwap, m1, m0, m2 int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc medianOfThree_func(data lessSwap, m1, m0, m2 int)\n```\n\nAuto-generated variant of sort.go:medianOfThree \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sort#swapRange_func",
-              "documentation": {
-                "identifier": "swapRange_func",
-                "newPage": false,
-                "searchKey": "sort.swapRange_func",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func swapRange_func(data lessSwap, a, b, n int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc swapRange_func(data lessSwap, a, b, n int)\n```\n\nAuto-generated variant of sort.go:swapRange \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/sort#doPivot_func",
               "documentation": {
                 "identifier": "doPivot_func",
                 "newPage": false,
                 "searchKey": "sort.doPivot_func",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1308,12 +1071,220 @@
           },
           {
             "node": {
+              "pathID": "/sort#heapSort",
+              "documentation": {
+                "identifier": "heapSort",
+                "newPage": false,
+                "searchKey": "sort.heapSort",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func heapSort(data Interface, a, b int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc heapSort(data Interface, a, b int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sort#heapSort_func",
+              "documentation": {
+                "identifier": "heapSort_func",
+                "newPage": false,
+                "searchKey": "sort.heapSort_func",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func heapSort_func(data lessSwap, a, b int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc heapSort_func(data lessSwap, a, b int)\n```\n\nAuto-generated variant of sort.go:heapSort \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sort#insertionSort",
+              "documentation": {
+                "identifier": "insertionSort",
+                "newPage": false,
+                "searchKey": "sort.insertionSort",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func insertionSort(data Interface, a, b int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc insertionSort(data Interface, a, b int)\n```\n\ninsertionSort sorts data[a:b] using insertion sort. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sort#insertionSort_func",
+              "documentation": {
+                "identifier": "insertionSort_func",
+                "newPage": false,
+                "searchKey": "sort.insertionSort_func",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func insertionSort_func(data lessSwap, a, b int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc insertionSort_func(data lessSwap, a, b int)\n```\n\nAuto-generated variant of sort.go:insertionSort \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sort#isNaN",
+              "documentation": {
+                "identifier": "isNaN",
+                "newPage": false,
+                "searchKey": "sort.isNaN",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isNaN(f float64) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isNaN(f float64) bool\n```\n\nisNaN is a copy of math.IsNaN to avoid a dependency on the math package. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sort#maxDepth",
+              "documentation": {
+                "identifier": "maxDepth",
+                "newPage": false,
+                "searchKey": "sort.maxDepth",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func maxDepth(n int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc maxDepth(n int) int\n```\n\nmaxDepth returns a threshold at which quicksort should switch to heapsort. It returns 2*ceil(lg(n+1)). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sort#medianOfThree",
+              "documentation": {
+                "identifier": "medianOfThree",
+                "newPage": false,
+                "searchKey": "sort.medianOfThree",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func medianOfThree(data Interface, m1, m0, m2 int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc medianOfThree(data Interface, m1, m0, m2 int)\n```\n\nmedianOfThree moves the median of the three values data[m0], data[m1], data[m2] into data[m1]. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sort#medianOfThree_func",
+              "documentation": {
+                "identifier": "medianOfThree_func",
+                "newPage": false,
+                "searchKey": "sort.medianOfThree_func",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func medianOfThree_func(data lessSwap, m1, m0, m2 int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc medianOfThree_func(data lessSwap, m1, m0, m2 int)\n```\n\nAuto-generated variant of sort.go:medianOfThree \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sort#quickSort",
+              "documentation": {
+                "identifier": "quickSort",
+                "newPage": false,
+                "searchKey": "sort.quickSort",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func quickSort(data Interface, a, b, maxDepth int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc quickSort(data Interface, a, b, maxDepth int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/sort#quickSort_func",
               "documentation": {
                 "identifier": "quickSort_func",
                 "newPage": false,
                 "searchKey": "sort.quickSort_func",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1330,44 +1301,23 @@
           },
           {
             "node": {
-              "pathID": "/sort#stable_func",
+              "pathID": "/sort#rotate",
               "documentation": {
-                "identifier": "stable_func",
+                "identifier": "rotate",
                 "newPage": false,
-                "searchKey": "sort.stable_func",
+                "searchKey": "sort.rotate",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func stable_func(data lessSwap, n int)"
+                "value": "func rotate(data Interface, a, m, b int)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc stable_func(data lessSwap, n int)\n```\n\nAuto-generated variant of sort.go:stable \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sort#symMerge_func",
-              "documentation": {
-                "identifier": "symMerge_func",
-                "newPage": false,
-                "searchKey": "sort.symMerge_func",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func symMerge_func(data lessSwap, a, m, b int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc symMerge_func(data lessSwap, a, m, b int)\n```\n\nAuto-generated variant of sort.go:symMerge \n\n"
+                "value": "```Go\nfunc rotate(data Interface, a, m, b int)\n```\n\nrotate rotates two consecutive blocks u = data[a:m] and v = data[m:b] in data: Data of the form 'x u v y' is changed to 'x v u y'. rotate performs at most b-a many calls to data.Swap, and it assumes non-degenerate arguments: a < m && m < b. \n\n"
               },
               "children": null
             }
@@ -1380,6 +1330,7 @@
                 "newPage": false,
                 "searchKey": "sort.rotate_func",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1396,22 +1347,184 @@
           },
           {
             "node": {
-              "pathID": "/sort#Heapsort",
+              "pathID": "/sort#siftDown",
               "documentation": {
-                "identifier": "Heapsort",
+                "identifier": "siftDown",
                 "newPage": false,
-                "searchKey": "sort.Heapsort",
+                "searchKey": "sort.siftDown",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func Heapsort(data Interface)"
+                "value": "func siftDown(data Interface, lo, hi, first int)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc Heapsort(data Interface)\n```\n\n"
+                "value": "```Go\nfunc siftDown(data Interface, lo, hi, first int)\n```\n\nsiftDown implements the heap property on data[lo:hi]. first is an offset into the array where the root of the heap lies. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sort#siftDown_func",
+              "documentation": {
+                "identifier": "siftDown_func",
+                "newPage": false,
+                "searchKey": "sort.siftDown_func",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func siftDown_func(data lessSwap, lo, hi, first int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc siftDown_func(data lessSwap, lo, hi, first int)\n```\n\nAuto-generated variant of sort.go:siftDown \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sort#stable",
+              "documentation": {
+                "identifier": "stable",
+                "newPage": false,
+                "searchKey": "sort.stable",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func stable(data Interface, n int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc stable(data Interface, n int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sort#stable_func",
+              "documentation": {
+                "identifier": "stable_func",
+                "newPage": false,
+                "searchKey": "sort.stable_func",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func stable_func(data lessSwap, n int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc stable_func(data lessSwap, n int)\n```\n\nAuto-generated variant of sort.go:stable \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sort#swapRange",
+              "documentation": {
+                "identifier": "swapRange",
+                "newPage": false,
+                "searchKey": "sort.swapRange",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func swapRange(data Interface, a, b, n int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc swapRange(data Interface, a, b, n int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sort#swapRange_func",
+              "documentation": {
+                "identifier": "swapRange_func",
+                "newPage": false,
+                "searchKey": "sort.swapRange_func",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func swapRange_func(data lessSwap, a, b, n int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc swapRange_func(data lessSwap, a, b, n int)\n```\n\nAuto-generated variant of sort.go:swapRange \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sort#symMerge",
+              "documentation": {
+                "identifier": "symMerge",
+                "newPage": false,
+                "searchKey": "sort.symMerge",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func symMerge(data Interface, a, m, b int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc symMerge(data Interface, a, m, b int)\n```\n\nsymMerge merges the two sorted subsequences data[a:m] and data[m:b] using the SymMerge algorithm from Pok-Son Kim and Arne Kutzner, \"Stable Minimum Storage Merging by Symmetric Comparisons\", in Susanne Albers and Tomasz Radzik, editors, Algorithms - ESA 2004, volume 3221 of Lecture Notes in Computer Science, pages 714-723. Springer, 2004. \n\nLet M = m-a and N = b-n. Wolog M < N. The recursion depth is bound by ceil(log(N+M)). The algorithm needs O(M*log(N/M + 1)) calls to data.Less. The algorithm needs O((M+N)*log(M)) calls to data.Swap. \n\nThe paper gives O((M+N)*log(M)) as the number of assignments assuming a rotation algorithm which uses O(M+N+gcd(M+N)) assignments. The argumentation in the paper carries through for Swap operations, especially as the block swapping rotate uses only O(M+N) Swaps. \n\nsymMerge assumes non-degenerate arguments: a < m && m < b. Having the caller check this condition eliminates many leaf recursion calls, which improves performance. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sort#symMerge_func",
+              "documentation": {
+                "identifier": "symMerge_func",
+                "newPage": false,
+                "searchKey": "sort.symMerge_func",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func symMerge_func(data lessSwap, a, m, b int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc symMerge_func(data lessSwap, a, m, b int)\n```\n\nAuto-generated variant of sort.go:symMerge \n\n"
               },
               "children": null
             }

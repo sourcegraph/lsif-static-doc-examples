@@ -4,9 +4,9 @@
 
 * [Types](#type)
     * [type Key struct](#Key)
-        * [func (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)](#Key.Version)
         * [func (k *Key) Decrypt(ctx context.Context, cipherText []byte) (*encryption.Secret, error)](#Key.Decrypt)
         * [func (k *Key) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)](#Key.Encrypt)
+        * [func (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)](#Key.Version)
     * [type encryptedValue struct](#encryptedValue)
 * [Functions](#func)
     * [func NewKey(ctx context.Context, config schema.CloudKMSEncryptionKey) (encryption.Key, error)](#NewKey)
@@ -16,13 +16,14 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Key" href="#Key">type Key struct</a>
 
 ```
 searchKey: cloudkms.Key
+tags: [struct]
 ```
 
 ```Go
@@ -32,20 +33,11 @@ type Key struct {
 }
 ```
 
-#### <a id="Key.Version" href="#Key.Version">func (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)</a>
-
-```
-searchKey: cloudkms.Key.Version
-```
-
-```Go
-func (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)
-```
-
 #### <a id="Key.Decrypt" href="#Key.Decrypt">func (k *Key) Decrypt(ctx context.Context, cipherText []byte) (*encryption.Secret, error)</a>
 
 ```
 searchKey: cloudkms.Key.Decrypt
+tags: [method]
 ```
 
 ```Go
@@ -58,6 +50,7 @@ Decrypt a secret, it must have been encrypted with the same Key encrypted secret
 
 ```
 searchKey: cloudkms.Key.Encrypt
+tags: [method]
 ```
 
 ```Go
@@ -66,11 +59,22 @@ func (k *Key) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)
 
 Encrypt a secret, storing it as a base64 encoded json blob, this json contains the key name, ciphertext, & checksum. 
 
+#### <a id="Key.Version" href="#Key.Version">func (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)</a>
+
+```
+searchKey: cloudkms.Key.Version
+tags: [method]
+```
+
+```Go
+func (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)
+```
+
 ### <a id="encryptedValue" href="#encryptedValue">type encryptedValue struct</a>
 
 ```
 searchKey: cloudkms.encryptedValue
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -84,13 +88,14 @@ type encryptedValue struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="NewKey" href="#NewKey">func NewKey(ctx context.Context, config schema.CloudKMSEncryptionKey) (encryption.Key, error)</a>
 
 ```
 searchKey: cloudkms.NewKey
+tags: [method]
 ```
 
 ```Go
@@ -101,7 +106,7 @@ func NewKey(ctx context.Context, config schema.CloudKMSEncryptionKey) (encryptio
 
 ```
 searchKey: cloudkms.crc32Sum
-tags: [private]
+tags: [method private]
 ```
 
 ```Go

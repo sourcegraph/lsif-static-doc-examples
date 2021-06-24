@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/search/filter",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,10 @@
                 "identifier": "Commit",
                 "newPage": false,
                 "searchKey": "filter.Commit",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +69,10 @@
                 "identifier": "Content",
                 "newPage": false,
                 "searchKey": "filter.Content",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +92,10 @@
                 "identifier": "File",
                 "newPage": false,
                 "searchKey": "filter.File",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +115,10 @@
                 "identifier": "Repository",
                 "newPage": false,
                 "searchKey": "filter.Repository",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -124,7 +138,10 @@
                 "identifier": "Symbol",
                 "newPage": false,
                 "searchKey": "filter.Symbol",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -148,6 +165,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -168,6 +186,8 @@
                 "newPage": false,
                 "searchKey": "filter.validSelectors",
                 "tags": [
+                  "variable",
+                  "object",
                   "private"
                 ]
               },
@@ -193,6 +213,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -212,7 +233,10 @@
                 "identifier": "SelectPath",
                 "newPage": false,
                 "searchKey": "filter.SelectPath",
-                "tags": null
+                "tags": [
+                  "array",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -230,7 +254,9 @@
                       "identifier": "SelectPathFromString",
                       "newPage": false,
                       "searchKey": "filter.SelectPathFromString",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -245,32 +271,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/search/filter#SelectPath.String",
-                    "documentation": {
-                      "identifier": "SelectPath.String",
-                      "newPage": false,
-                      "searchKey": "filter.SelectPath.String",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (sp SelectPath) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (sp SelectPath) String() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/search/filter#SelectPath.Root",
                     "documentation": {
                       "identifier": "SelectPath.Root",
                       "newPage": false,
                       "searchKey": "filter.SelectPath.Root",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -279,6 +287,28 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (sp SelectPath) Root() string\n```\n\nRoot is the top-level result type that is being selected. Returns an empty string if SelectPath is empty \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/filter#SelectPath.String",
+                    "documentation": {
+                      "identifier": "SelectPath.String",
+                      "newPage": false,
+                      "searchKey": "filter.SelectPath.String",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sp SelectPath) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sp SelectPath) String() string\n```\n\n"
                     },
                     "children": null
                   }
@@ -294,6 +324,7 @@
                 "newPage": false,
                 "searchKey": "filter.object",
                 "tags": [
+                  "object",
                   "private"
                 ]
               },

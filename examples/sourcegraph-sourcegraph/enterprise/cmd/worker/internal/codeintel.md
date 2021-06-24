@@ -7,13 +7,13 @@
   * [enterprise/cmd/worker/internal/codeintel/indexing](codeintel/indexing.md)
   * [enterprise/cmd/worker/internal/codeintel/janitor](codeintel/janitor.md)
 * [Variables](#var)
-    * [var initCodeIntelDatabaseMemo](#initCodeIntelDatabaseMemo)
     * [var commitGraphConfigInst](#commitGraphConfigInst)
+    * [var indexingConfigInst](#indexingConfigInst)
+    * [var initCodeIntelDatabaseMemo](#initCodeIntelDatabaseMemo)
     * [var initDBStore](#initDBStore)
     * [var initGitserverClient](#initGitserverClient)
-    * [var indexingConfigInst](#indexingConfigInst)
-    * [var janitorConfigInst](#janitorConfigInst)
     * [var initLSFIStore](#initLSFIStore)
+    * [var janitorConfigInst](#janitorConfigInst)
 * [Types](#type)
     * [type commitGraphConfig struct](#commitGraphConfig)
         * [func (c *commitGraphConfig) Load()](#commitGraphConfig.Load)
@@ -32,47 +32,58 @@
         * [func (j *janitorJob) Routines(ctx context.Context) ([]goroutine.BackgroundRoutine, error)](#janitorJob.Routines)
 * [Functions](#func)
     * [func InitCodeIntelDatabase() (*sql.DB, error)](#InitCodeIntelDatabase)
-    * [func NewCommitGraphJob() shared.Job](#NewCommitGraphJob)
     * [func InitDBStore() (*dbstore.Store, error)](#InitDBStore)
     * [func InitGitserverClient() (*gitserver.Client, error)](#InitGitserverClient)
+    * [func InitLSIFStore() (*lsifstore.Store, error)](#InitLSIFStore)
+    * [func NewCommitGraphJob() shared.Job](#NewCommitGraphJob)
     * [func NewIndexingJob() shared.Job](#NewIndexingJob)
     * [func NewJanitorJob() shared.Job](#NewJanitorJob)
-    * [func InitLSIFStore() (*lsifstore.Store, error)](#InitLSIFStore)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
-```
-
-### <a id="initCodeIntelDatabaseMemo" href="#initCodeIntelDatabaseMemo">var initCodeIntelDatabaseMemo</a>
-
-```
-searchKey: codeintel.initCodeIntelDatabaseMemo
-tags: [private]
-```
-
-```Go
-var initCodeIntelDatabaseMemo = ...
+tags: [package private]
 ```
 
 ### <a id="commitGraphConfigInst" href="#commitGraphConfigInst">var commitGraphConfigInst</a>
 
 ```
 searchKey: codeintel.commitGraphConfigInst
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
 var commitGraphConfigInst = &commitGraphConfig{}
 ```
 
+### <a id="indexingConfigInst" href="#indexingConfigInst">var indexingConfigInst</a>
+
+```
+searchKey: codeintel.indexingConfigInst
+tags: [variable struct private]
+```
+
+```Go
+var indexingConfigInst = &indexingConfig{}
+```
+
+### <a id="initCodeIntelDatabaseMemo" href="#initCodeIntelDatabaseMemo">var initCodeIntelDatabaseMemo</a>
+
+```
+searchKey: codeintel.initCodeIntelDatabaseMemo
+tags: [variable struct private]
+```
+
+```Go
+var initCodeIntelDatabaseMemo = ...
+```
+
 ### <a id="initDBStore" href="#initDBStore">var initDBStore</a>
 
 ```
 searchKey: codeintel.initDBStore
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -83,57 +94,46 @@ var initDBStore = ...
 
 ```
 searchKey: codeintel.initGitserverClient
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
 var initGitserverClient = ...
 ```
 
-### <a id="indexingConfigInst" href="#indexingConfigInst">var indexingConfigInst</a>
-
-```
-searchKey: codeintel.indexingConfigInst
-tags: [private]
-```
-
-```Go
-var indexingConfigInst = &indexingConfig{}
-```
-
-### <a id="janitorConfigInst" href="#janitorConfigInst">var janitorConfigInst</a>
-
-```
-searchKey: codeintel.janitorConfigInst
-tags: [private]
-```
-
-```Go
-var janitorConfigInst = &janitorConfig{}
-```
-
 ### <a id="initLSFIStore" href="#initLSFIStore">var initLSFIStore</a>
 
 ```
 searchKey: codeintel.initLSFIStore
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
 var initLSFIStore = ...
 ```
 
+### <a id="janitorConfigInst" href="#janitorConfigInst">var janitorConfigInst</a>
+
+```
+searchKey: codeintel.janitorConfigInst
+tags: [variable struct private]
+```
+
+```Go
+var janitorConfigInst = &janitorConfig{}
+```
+
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="commitGraphConfig" href="#commitGraphConfig">type commitGraphConfig struct</a>
 
 ```
 searchKey: codeintel.commitGraphConfig
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -148,7 +148,7 @@ type commitGraphConfig struct {
 
 ```
 searchKey: codeintel.commitGraphConfig.Load
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -159,7 +159,7 @@ func (c *commitGraphConfig) Load()
 
 ```
 searchKey: codeintel.commitGraphJob
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -170,7 +170,7 @@ type commitGraphJob struct{}
 
 ```
 searchKey: codeintel.commitGraphJob.Config
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -181,7 +181,7 @@ func (j *commitGraphJob) Config() []env.Config
 
 ```
 searchKey: codeintel.commitGraphJob.Routines
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -192,7 +192,7 @@ func (j *commitGraphJob) Routines(ctx context.Context) ([]goroutine.BackgroundRo
 
 ```
 searchKey: codeintel.indexingConfig
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -209,7 +209,7 @@ type indexingConfig struct {
 
 ```
 searchKey: codeintel.indexingConfig.Load
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -220,7 +220,7 @@ func (c *indexingConfig) Load()
 
 ```
 searchKey: codeintel.indexingJob
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -231,7 +231,7 @@ type indexingJob struct{}
 
 ```
 searchKey: codeintel.indexingJob.Config
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -242,7 +242,7 @@ func (j *indexingJob) Config() []env.Config
 
 ```
 searchKey: codeintel.indexingJob.Routines
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -253,7 +253,7 @@ func (j *indexingJob) Routines(ctx context.Context) ([]goroutine.BackgroundRouti
 
 ```
 searchKey: codeintel.janitorConfig
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -273,7 +273,7 @@ type janitorConfig struct {
 
 ```
 searchKey: codeintel.janitorConfig.Load
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -284,7 +284,7 @@ func (c *janitorConfig) Load()
 
 ```
 searchKey: codeintel.janitorJob
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -295,7 +295,7 @@ type janitorJob struct{}
 
 ```
 searchKey: codeintel.janitorJob.Config
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -306,7 +306,7 @@ func (j *janitorJob) Config() []env.Config
 
 ```
 searchKey: codeintel.janitorJob.Routines
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -316,13 +316,14 @@ func (j *janitorJob) Routines(ctx context.Context) ([]goroutine.BackgroundRoutin
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="InitCodeIntelDatabase" href="#InitCodeIntelDatabase">func InitCodeIntelDatabase() (*sql.DB, error)</a>
 
 ```
 searchKey: codeintel.InitCodeIntelDatabase
+tags: [function]
 ```
 
 ```Go
@@ -331,20 +332,11 @@ func InitCodeIntelDatabase() (*sql.DB, error)
 
 InitCodeIntelDatabase initializes and returns a connection to the codeintel db. 
 
-### <a id="NewCommitGraphJob" href="#NewCommitGraphJob">func NewCommitGraphJob() shared.Job</a>
-
-```
-searchKey: codeintel.NewCommitGraphJob
-```
-
-```Go
-func NewCommitGraphJob() shared.Job
-```
-
 ### <a id="InitDBStore" href="#InitDBStore">func InitDBStore() (*dbstore.Store, error)</a>
 
 ```
 searchKey: codeintel.InitDBStore
+tags: [function]
 ```
 
 ```Go
@@ -357,6 +349,7 @@ InitDBStore initializes and returns a db store instance.
 
 ```
 searchKey: codeintel.InitGitserverClient
+tags: [function]
 ```
 
 ```Go
@@ -365,10 +358,35 @@ func InitGitserverClient() (*gitserver.Client, error)
 
 InitGitserverClient initializes and returns a gitserver client. 
 
+### <a id="InitLSIFStore" href="#InitLSIFStore">func InitLSIFStore() (*lsifstore.Store, error)</a>
+
+```
+searchKey: codeintel.InitLSIFStore
+tags: [function]
+```
+
+```Go
+func InitLSIFStore() (*lsifstore.Store, error)
+```
+
+InitLSIFStore initializes and returns an LSIF store instance. 
+
+### <a id="NewCommitGraphJob" href="#NewCommitGraphJob">func NewCommitGraphJob() shared.Job</a>
+
+```
+searchKey: codeintel.NewCommitGraphJob
+tags: [function]
+```
+
+```Go
+func NewCommitGraphJob() shared.Job
+```
+
 ### <a id="NewIndexingJob" href="#NewIndexingJob">func NewIndexingJob() shared.Job</a>
 
 ```
 searchKey: codeintel.NewIndexingJob
+tags: [function]
 ```
 
 ```Go
@@ -379,21 +397,10 @@ func NewIndexingJob() shared.Job
 
 ```
 searchKey: codeintel.NewJanitorJob
+tags: [function]
 ```
 
 ```Go
 func NewJanitorJob() shared.Job
 ```
-
-### <a id="InitLSIFStore" href="#InitLSIFStore">func InitLSIFStore() (*lsifstore.Store, error)</a>
-
-```
-searchKey: codeintel.InitLSIFStore
-```
-
-```Go
-func InitLSIFStore() (*lsifstore.Store, error)
-```
-
-InitLSIFStore initializes and returns an LSIF store instance. 
 

@@ -6,8 +6,8 @@ Package graphqlutil contains utilities for working with GraphQL.
 
 * [Types](#type)
     * [type ConnectionArgs struct](#ConnectionArgs)
-        * [func (a ConnectionArgs) Set(o **database.LimitOffset)](#ConnectionArgs.Set)
         * [func (a ConnectionArgs) GetFirst() int32](#ConnectionArgs.GetFirst)
+        * [func (a ConnectionArgs) Set(o **database.LimitOffset)](#ConnectionArgs.Set)
     * [type PageInfo struct](#PageInfo)
         * [func HasNextPage(hasNextPage bool) *PageInfo](#HasNextPage)
         * [func NextPageCursor(endCursor string) *PageInfo](#NextPageCursor)
@@ -17,10 +17,15 @@ Package graphqlutil contains utilities for working with GraphQL.
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [package]
+```
+
 ### <a id="ConnectionArgs" href="#ConnectionArgs">type ConnectionArgs struct</a>
 
 ```
 searchKey: graphqlutil.ConnectionArgs
+tags: [struct]
 ```
 
 ```Go
@@ -31,22 +36,11 @@ type ConnectionArgs struct {
 
 ConnectionArgs is the common set of arguments to GraphQL fields that return connections (lists). 
 
-#### <a id="ConnectionArgs.Set" href="#ConnectionArgs.Set">func (a ConnectionArgs) Set(o **database.LimitOffset)</a>
-
-```
-searchKey: graphqlutil.ConnectionArgs.Set
-```
-
-```Go
-func (a ConnectionArgs) Set(o **database.LimitOffset)
-```
-
-Set is a convenience method for setting the DB limit and offset in a DB XyzListOptions struct. 
-
 #### <a id="ConnectionArgs.GetFirst" href="#ConnectionArgs.GetFirst">func (a ConnectionArgs) GetFirst() int32</a>
 
 ```
 searchKey: graphqlutil.ConnectionArgs.GetFirst
+tags: [function]
 ```
 
 ```Go
@@ -55,10 +49,24 @@ func (a ConnectionArgs) GetFirst() int32
 
 GetFirst is a convenience method returning the value of First, defaulting to the type's zero value if nil. 
 
+#### <a id="ConnectionArgs.Set" href="#ConnectionArgs.Set">func (a ConnectionArgs) Set(o **database.LimitOffset)</a>
+
+```
+searchKey: graphqlutil.ConnectionArgs.Set
+tags: [method]
+```
+
+```Go
+func (a ConnectionArgs) Set(o **database.LimitOffset)
+```
+
+Set is a convenience method for setting the DB limit and offset in a DB XyzListOptions struct. 
+
 ### <a id="PageInfo" href="#PageInfo">type PageInfo struct</a>
 
 ```
 searchKey: graphqlutil.PageInfo
+tags: [struct]
 ```
 
 ```Go
@@ -74,6 +82,7 @@ PageInfo implements the GraphQL type PageInfo.
 
 ```
 searchKey: graphqlutil.HasNextPage
+tags: [method]
 ```
 
 ```Go
@@ -86,6 +95,7 @@ HasNextPage returns a new PageInfo with the given hasNextPage value.
 
 ```
 searchKey: graphqlutil.NextPageCursor
+tags: [method]
 ```
 
 ```Go
@@ -98,6 +108,7 @@ NextPageCursor returns a new PageInfo indicating there is a next page with the g
 
 ```
 searchKey: graphqlutil.PageInfo.EndCursor
+tags: [function]
 ```
 
 ```Go
@@ -108,6 +119,7 @@ func (r *PageInfo) EndCursor() *string
 
 ```
 searchKey: graphqlutil.PageInfo.HasNextPage
+tags: [function]
 ```
 
 ```Go

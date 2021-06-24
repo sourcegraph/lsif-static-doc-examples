@@ -4,7 +4,9 @@
     "identifier": "des",
     "newPage": true,
     "searchKey": "crypto/des",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,10 @@
                 "identifier": "BlockSize",
                 "newPage": false,
                 "searchKey": "des.BlockSize",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +70,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -76,12 +85,91 @@
         "children": [
           {
             "node": {
+              "pathID": "/crypto/des#encryptDESTests",
+              "documentation": {
+                "identifier": "encryptDESTests",
+                "newPage": false,
+                "searchKey": "des.encryptDESTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var encryptDESTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar encryptDESTests = ...\n```\n\nsome custom tests for DES \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/des#encryptTripleDESTests",
+              "documentation": {
+                "identifier": "encryptTripleDESTests",
+                "newPage": false,
+                "searchKey": "des.encryptTripleDESTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var encryptTripleDESTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar encryptTripleDESTests = ...\n```\n\nsome custom tests for TripleDES \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/des#expansionFunction",
+              "documentation": {
+                "identifier": "expansionFunction",
+                "newPage": false,
+                "searchKey": "des.expansionFunction",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var expansionFunction"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar expansionFunction = ...\n```\n\nUsed to expand an input block of 32 bits, producing an output block of 48 bits. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/des#feistelBox",
               "documentation": {
                 "identifier": "feistelBox",
                 "newPage": false,
                 "searchKey": "des.feistelBox",
                 "tags": [
+                  "variable",
+                  "array",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -104,6 +192,8 @@
                 "newPage": false,
                 "searchKey": "des.feistelBoxOnce",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -120,34 +210,15 @@
           },
           {
             "node": {
-              "pathID": "/crypto/des#initialPermutation",
-              "documentation": {
-                "identifier": "initialPermutation",
-                "newPage": false,
-                "searchKey": "des.initialPermutation",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var initialPermutation"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar initialPermutation = ...\n```\n\nUsed to perform an initial permutation of a 64-bit input block. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/des#finalPermutation",
               "documentation": {
                 "identifier": "finalPermutation",
                 "newPage": false,
                 "searchKey": "des.finalPermutation",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -164,22 +235,50 @@
           },
           {
             "node": {
-              "pathID": "/crypto/des#expansionFunction",
+              "pathID": "/crypto/des#initialPermutation",
               "documentation": {
-                "identifier": "expansionFunction",
+                "identifier": "initialPermutation",
                 "newPage": false,
-                "searchKey": "des.expansionFunction",
+                "searchKey": "des.initialPermutation",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var expansionFunction"
+                "value": "var initialPermutation"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar expansionFunction = ...\n```\n\nUsed to expand an input block of 32 bits, producing an output block of 48 bits. \n\n"
+                "value": "```Go\nvar initialPermutation = ...\n```\n\nUsed to perform an initial permutation of a 64-bit input block. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/des#ksRotations",
+              "documentation": {
+                "identifier": "ksRotations",
+                "newPage": false,
+                "searchKey": "des.ksRotations",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ksRotations"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ksRotations = [16]uint8{1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1}\n```\n\nSize of left rotation per round in each half of the key schedule \n\n"
               },
               "children": null
             }
@@ -192,6 +291,9 @@
                 "newPage": false,
                 "searchKey": "des.permutationFunction",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -214,6 +316,9 @@
                 "newPage": false,
                 "searchKey": "des.permutedChoice1",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -236,6 +341,9 @@
                 "newPage": false,
                 "searchKey": "des.permutedChoice2",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -258,6 +366,11 @@
                 "newPage": false,
                 "searchKey": "des.sBoxes",
                 "tags": [
+                  "variable",
+                  "array",
+                  "array",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -274,78 +387,15 @@
           },
           {
             "node": {
-              "pathID": "/crypto/des#ksRotations",
-              "documentation": {
-                "identifier": "ksRotations",
-                "newPage": false,
-                "searchKey": "des.ksRotations",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ksRotations"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ksRotations = [16]uint8{1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1}\n```\n\nSize of left rotation per round in each half of the key schedule \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/des#encryptDESTests",
-              "documentation": {
-                "identifier": "encryptDESTests",
-                "newPage": false,
-                "searchKey": "des.encryptDESTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var encryptDESTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar encryptDESTests = ...\n```\n\nsome custom tests for DES \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/des#weakKeyTests",
-              "documentation": {
-                "identifier": "weakKeyTests",
-                "newPage": false,
-                "searchKey": "des.weakKeyTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var weakKeyTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar weakKeyTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/des#semiWeakKeyTests",
               "documentation": {
                 "identifier": "semiWeakKeyTests",
                 "newPage": false,
                 "searchKey": "des.semiWeakKeyTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -362,34 +412,15 @@
           },
           {
             "node": {
-              "pathID": "/crypto/des#encryptTripleDESTests",
-              "documentation": {
-                "identifier": "encryptTripleDESTests",
-                "newPage": false,
-                "searchKey": "des.encryptTripleDESTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var encryptTripleDESTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar encryptTripleDESTests = ...\n```\n\nsome custom tests for TripleDES \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/des#tableA1Key",
               "documentation": {
                 "identifier": "tableA1Key",
                 "newPage": false,
                 "searchKey": "des.tableA1Key",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -412,6 +443,9 @@
                 "newPage": false,
                 "searchKey": "des.tableA1Tests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -434,6 +468,9 @@
                 "newPage": false,
                 "searchKey": "des.tableA2Plaintext",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -456,6 +493,9 @@
                 "newPage": false,
                 "searchKey": "des.tableA2Tests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -478,6 +518,9 @@
                 "newPage": false,
                 "searchKey": "des.tableA3Plaintext",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -500,6 +543,9 @@
                 "newPage": false,
                 "searchKey": "des.tableA3Tests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -522,6 +568,9 @@
                 "newPage": false,
                 "searchKey": "des.tableA4Tests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -532,6 +581,31 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar tableA4Tests = ...\n```\n\nTable A.4 Values To Be Used for the Substitution Table Known Answer Test \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/des#weakKeyTests",
+              "documentation": {
+                "identifier": "weakKeyTests",
+                "newPage": false,
+                "searchKey": "des.weakKeyTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var weakKeyTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar weakKeyTests = ...\n```\n\n"
               },
               "children": null
             }
@@ -546,7 +620,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -559,12 +635,37 @@
         "children": [
           {
             "node": {
+              "pathID": "/crypto/des#CryptTest",
+              "documentation": {
+                "identifier": "CryptTest",
+                "newPage": false,
+                "searchKey": "des.CryptTest",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CryptTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CryptTest struct {\n\tkey []byte\n\tin  []byte\n\tout []byte\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/des#KeySizeError",
               "documentation": {
                 "identifier": "KeySizeError",
                 "newPage": false,
                 "searchKey": "des.KeySizeError",
-                "tags": null
+                "tags": [
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -582,7 +683,9 @@
                       "identifier": "KeySizeError.Error",
                       "newPage": false,
                       "searchKey": "des.KeySizeError.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -606,6 +709,7 @@
                 "newPage": false,
                 "searchKey": "des.desCipher",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -626,6 +730,7 @@
                       "newPage": false,
                       "searchKey": "des.newCipher",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -642,34 +747,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/crypto/des#desCipher.generateSubkeys",
-                    "documentation": {
-                      "identifier": "desCipher.generateSubkeys",
-                      "newPage": false,
-                      "searchKey": "des.desCipher.generateSubkeys",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *desCipher) generateSubkeys(keyBytes []byte)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *desCipher) generateSubkeys(keyBytes []byte)\n```\n\ncreates 16 56-bit subkeys from the original key \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/crypto/des#desCipher.BlockSize",
                     "documentation": {
                       "identifier": "desCipher.BlockSize",
                       "newPage": false,
                       "searchKey": "des.desCipher.BlockSize",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -686,12 +770,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/crypto/des#desCipher.Decrypt",
+                    "documentation": {
+                      "identifier": "desCipher.Decrypt",
+                      "newPage": false,
+                      "searchKey": "des.desCipher.Decrypt",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *desCipher) Decrypt(dst, src []byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *desCipher) Decrypt(dst, src []byte)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/crypto/des#desCipher.Encrypt",
                     "documentation": {
                       "identifier": "desCipher.Encrypt",
                       "newPage": false,
                       "searchKey": "des.desCipher.Encrypt",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -708,22 +816,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/crypto/des#desCipher.Decrypt",
+                    "pathID": "/crypto/des#desCipher.generateSubkeys",
                     "documentation": {
-                      "identifier": "desCipher.Decrypt",
+                      "identifier": "desCipher.generateSubkeys",
                       "newPage": false,
-                      "searchKey": "des.desCipher.Decrypt",
+                      "searchKey": "des.desCipher.generateSubkeys",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (c *desCipher) Decrypt(dst, src []byte)"
+                      "value": "func (c *desCipher) generateSubkeys(keyBytes []byte)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (c *desCipher) Decrypt(dst, src []byte)\n```\n\n"
+                      "value": "```Go\nfunc (c *desCipher) generateSubkeys(keyBytes []byte)\n```\n\ncreates 16 56-bit subkeys from the original key \n\n"
                     },
                     "children": null
                   }
@@ -739,6 +848,7 @@
                 "newPage": false,
                 "searchKey": "des.tripleDESCipher",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -759,6 +869,7 @@
                       "newPage": false,
                       "searchKey": "des.tripleDESCipher.BlockSize",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -775,34 +886,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/crypto/des#tripleDESCipher.Encrypt",
-                    "documentation": {
-                      "identifier": "tripleDESCipher.Encrypt",
-                      "newPage": false,
-                      "searchKey": "des.tripleDESCipher.Encrypt",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *tripleDESCipher) Encrypt(dst, src []byte)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *tripleDESCipher) Encrypt(dst, src []byte)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/crypto/des#tripleDESCipher.Decrypt",
                     "documentation": {
                       "identifier": "tripleDESCipher.Decrypt",
                       "newPage": false,
                       "searchKey": "des.tripleDESCipher.Decrypt",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -816,30 +906,31 @@
                     },
                     "children": null
                   }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/des#tripleDESCipher.Encrypt",
+                    "documentation": {
+                      "identifier": "tripleDESCipher.Encrypt",
+                      "newPage": false,
+                      "searchKey": "des.tripleDESCipher.Encrypt",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *tripleDESCipher) Encrypt(dst, src []byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *tripleDESCipher) Encrypt(dst, src []byte)\n```\n\n"
+                    },
+                    "children": null
+                  }
                 }
               ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/des#CryptTest",
-              "documentation": {
-                "identifier": "CryptTest",
-                "newPage": false,
-                "searchKey": "des.CryptTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type CryptTest struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype CryptTest struct {\n\tkey []byte\n\tin  []byte\n\tout []byte\n}\n```\n\n"
-              },
-              "children": null
             }
           }
         ]
@@ -852,7 +943,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -865,220 +958,96 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto/des#cryptBlock",
+              "pathID": "/crypto/des#BenchmarkDecrypt",
               "documentation": {
-                "identifier": "cryptBlock",
+                "identifier": "BenchmarkDecrypt",
                 "newPage": false,
-                "searchKey": "des.cryptBlock",
+                "searchKey": "des.BenchmarkDecrypt",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func cryptBlock(subkeys []uint64, dst, src []byte, decrypt bool)"
+                "value": "func BenchmarkDecrypt(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc cryptBlock(subkeys []uint64, dst, src []byte, decrypt bool)\n```\n\n"
+                "value": "```Go\nfunc BenchmarkDecrypt(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/des#encryptBlock",
+              "pathID": "/crypto/des#BenchmarkEncrypt",
               "documentation": {
-                "identifier": "encryptBlock",
+                "identifier": "BenchmarkEncrypt",
                 "newPage": false,
-                "searchKey": "des.encryptBlock",
+                "searchKey": "des.BenchmarkEncrypt",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func encryptBlock(subkeys []uint64, dst, src []byte)"
+                "value": "func BenchmarkEncrypt(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc encryptBlock(subkeys []uint64, dst, src []byte)\n```\n\nEncrypt one block from src into dst, using the subkeys. \n\n"
+                "value": "```Go\nfunc BenchmarkEncrypt(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/des#decryptBlock",
+              "pathID": "/crypto/des#BenchmarkTDESDecrypt",
               "documentation": {
-                "identifier": "decryptBlock",
+                "identifier": "BenchmarkTDESDecrypt",
                 "newPage": false,
-                "searchKey": "des.decryptBlock",
+                "searchKey": "des.BenchmarkTDESDecrypt",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func decryptBlock(subkeys []uint64, dst, src []byte)"
+                "value": "func BenchmarkTDESDecrypt(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc decryptBlock(subkeys []uint64, dst, src []byte)\n```\n\nDecrypt one block from src into dst, using the subkeys. \n\n"
+                "value": "```Go\nfunc BenchmarkTDESDecrypt(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/des#feistel",
+              "pathID": "/crypto/des#BenchmarkTDESEncrypt",
               "documentation": {
-                "identifier": "feistel",
+                "identifier": "BenchmarkTDESEncrypt",
                 "newPage": false,
-                "searchKey": "des.feistel",
+                "searchKey": "des.BenchmarkTDESEncrypt",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func feistel(l, r uint32, k0, k1 uint64) (lout, rout uint32)"
+                "value": "func BenchmarkTDESEncrypt(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc feistel(l, r uint32, k0, k1 uint64) (lout, rout uint32)\n```\n\nDES Feistel function. feistelBox must be initialized via feistelBoxOnce.Do(initFeistelBox) first. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/des#permuteBlock",
-              "documentation": {
-                "identifier": "permuteBlock",
-                "newPage": false,
-                "searchKey": "des.permuteBlock",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func permuteBlock(src uint64, permutation []uint8) (block uint64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc permuteBlock(src uint64, permutation []uint8) (block uint64)\n```\n\ngeneral purpose function to perform DES block permutations \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/des#initFeistelBox",
-              "documentation": {
-                "identifier": "initFeistelBox",
-                "newPage": false,
-                "searchKey": "des.initFeistelBox",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func initFeistelBox()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc initFeistelBox()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/des#permuteInitialBlock",
-              "documentation": {
-                "identifier": "permuteInitialBlock",
-                "newPage": false,
-                "searchKey": "des.permuteInitialBlock",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func permuteInitialBlock(block uint64) uint64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc permuteInitialBlock(block uint64) uint64\n```\n\npermuteInitialBlock is equivalent to the permutation defined by initialPermutation. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/des#permuteFinalBlock",
-              "documentation": {
-                "identifier": "permuteFinalBlock",
-                "newPage": false,
-                "searchKey": "des.permuteFinalBlock",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func permuteFinalBlock(block uint64) uint64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc permuteFinalBlock(block uint64) uint64\n```\n\npermuteInitialBlock is equivalent to the permutation defined by finalPermutation. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/des#ksRotate",
-              "documentation": {
-                "identifier": "ksRotate",
-                "newPage": false,
-                "searchKey": "des.ksRotate",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ksRotate(in uint32) (out []uint32)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ksRotate(in uint32) (out []uint32)\n```\n\ncreates 16 28-bit blocks rotated according to the rotation schedule \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/des#unpack",
-              "documentation": {
-                "identifier": "unpack",
-                "newPage": false,
-                "searchKey": "des.unpack",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func unpack(x uint64) uint64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc unpack(x uint64) uint64\n```\n\nExpand 48-bit input to 64-bit, with each 6-bit block padded by extra two bits at the top. By doing so, we can have the input blocks (four bits each), and the key blocks (six bits each) well-aligned without extra shifts/rotations for alignments. \n\n"
+                "value": "```Go\nfunc BenchmarkTDESEncrypt(b *testing.B)\n```\n\n"
               },
               "children": null
             }
@@ -1090,7 +1059,9 @@
                 "identifier": "NewCipher",
                 "newPage": false,
                 "searchKey": "des.NewCipher",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1110,7 +1081,9 @@
                 "identifier": "NewTripleDESCipher",
                 "newPage": false,
                 "searchKey": "des.NewTripleDESCipher",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1125,79 +1098,15 @@
           },
           {
             "node": {
-              "pathID": "/crypto/des#TestWeakKeys",
-              "documentation": {
-                "identifier": "TestWeakKeys",
-                "newPage": false,
-                "searchKey": "des.TestWeakKeys",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestWeakKeys(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestWeakKeys(t *testing.T)\n```\n\nUse the known weak keys to test DES implementation \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/des#TestSemiWeakKeyPairs",
-              "documentation": {
-                "identifier": "TestSemiWeakKeyPairs",
-                "newPage": false,
-                "searchKey": "des.TestSemiWeakKeyPairs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSemiWeakKeyPairs(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSemiWeakKeyPairs(t *testing.T)\n```\n\nUse the known semi-weak key pairs to test DES implementation \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/des#TestDESEncryptBlock",
-              "documentation": {
-                "identifier": "TestDESEncryptBlock",
-                "newPage": false,
-                "searchKey": "des.TestDESEncryptBlock",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDESEncryptBlock(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDESEncryptBlock(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/des#TestDESDecryptBlock",
               "documentation": {
                 "identifier": "TestDESDecryptBlock",
                 "newPage": false,
                 "searchKey": "des.TestDESDecryptBlock",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1213,22 +1122,24 @@
           },
           {
             "node": {
-              "pathID": "/crypto/des#TestEncryptTripleDES",
+              "pathID": "/crypto/des#TestDESEncryptBlock",
               "documentation": {
-                "identifier": "TestEncryptTripleDES",
+                "identifier": "TestDESEncryptBlock",
                 "newPage": false,
-                "searchKey": "des.TestEncryptTripleDES",
+                "searchKey": "des.TestDESEncryptBlock",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestEncryptTripleDES(t *testing.T)"
+                "value": "func TestDESEncryptBlock(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestEncryptTripleDES(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestDESEncryptBlock(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1241,7 +1152,9 @@
                 "newPage": false,
                 "searchKey": "des.TestDecryptTripleDES",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1257,242 +1170,24 @@
           },
           {
             "node": {
-              "pathID": "/crypto/des#TestVariablePlaintextKnownAnswer",
+              "pathID": "/crypto/des#TestEncryptTripleDES",
               "documentation": {
-                "identifier": "TestVariablePlaintextKnownAnswer",
+                "identifier": "TestEncryptTripleDES",
                 "newPage": false,
-                "searchKey": "des.TestVariablePlaintextKnownAnswer",
+                "searchKey": "des.TestEncryptTripleDES",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestVariablePlaintextKnownAnswer(t *testing.T)"
+                "value": "func TestEncryptTripleDES(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestVariablePlaintextKnownAnswer(t *testing.T)\n```\n\nDefined in Pub 800-20 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/des#TestVariableCiphertextKnownAnswer",
-              "documentation": {
-                "identifier": "TestVariableCiphertextKnownAnswer",
-                "newPage": false,
-                "searchKey": "des.TestVariableCiphertextKnownAnswer",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestVariableCiphertextKnownAnswer(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestVariableCiphertextKnownAnswer(t *testing.T)\n```\n\nDefined in Pub 800-20 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/des#TestInversePermutationKnownAnswer",
-              "documentation": {
-                "identifier": "TestInversePermutationKnownAnswer",
-                "newPage": false,
-                "searchKey": "des.TestInversePermutationKnownAnswer",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestInversePermutationKnownAnswer(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestInversePermutationKnownAnswer(t *testing.T)\n```\n\nDefined in Pub 800-20 Encrypting the Table A.1 ciphertext with the 0x01... key produces the original plaintext \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/des#TestInitialPermutationKnownAnswer",
-              "documentation": {
-                "identifier": "TestInitialPermutationKnownAnswer",
-                "newPage": false,
-                "searchKey": "des.TestInitialPermutationKnownAnswer",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestInitialPermutationKnownAnswer(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestInitialPermutationKnownAnswer(t *testing.T)\n```\n\nDefined in Pub 800-20 Decrypting the Table A.1 plaintext with the 0x01... key produces the corresponding ciphertext \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/des#TestVariableKeyKnownAnswerEncrypt",
-              "documentation": {
-                "identifier": "TestVariableKeyKnownAnswerEncrypt",
-                "newPage": false,
-                "searchKey": "des.TestVariableKeyKnownAnswerEncrypt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestVariableKeyKnownAnswerEncrypt(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestVariableKeyKnownAnswerEncrypt(t *testing.T)\n```\n\nDefined in Pub 800-20 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/des#TestVariableKeyKnownAnswerDecrypt",
-              "documentation": {
-                "identifier": "TestVariableKeyKnownAnswerDecrypt",
-                "newPage": false,
-                "searchKey": "des.TestVariableKeyKnownAnswerDecrypt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestVariableKeyKnownAnswerDecrypt(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestVariableKeyKnownAnswerDecrypt(t *testing.T)\n```\n\nDefined in Pub 800-20 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/des#TestPermutationOperationKnownAnswerEncrypt",
-              "documentation": {
-                "identifier": "TestPermutationOperationKnownAnswerEncrypt",
-                "newPage": false,
-                "searchKey": "des.TestPermutationOperationKnownAnswerEncrypt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestPermutationOperationKnownAnswerEncrypt(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestPermutationOperationKnownAnswerEncrypt(t *testing.T)\n```\n\nDefined in Pub 800-20 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/des#TestPermutationOperationKnownAnswerDecrypt",
-              "documentation": {
-                "identifier": "TestPermutationOperationKnownAnswerDecrypt",
-                "newPage": false,
-                "searchKey": "des.TestPermutationOperationKnownAnswerDecrypt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestPermutationOperationKnownAnswerDecrypt(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestPermutationOperationKnownAnswerDecrypt(t *testing.T)\n```\n\nDefined in Pub 800-20 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/des#TestSubstitutionTableKnownAnswerEncrypt",
-              "documentation": {
-                "identifier": "TestSubstitutionTableKnownAnswerEncrypt",
-                "newPage": false,
-                "searchKey": "des.TestSubstitutionTableKnownAnswerEncrypt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSubstitutionTableKnownAnswerEncrypt(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSubstitutionTableKnownAnswerEncrypt(t *testing.T)\n```\n\nDefined in Pub 800-20 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/des#TestSubstitutionTableKnownAnswerDecrypt",
-              "documentation": {
-                "identifier": "TestSubstitutionTableKnownAnswerDecrypt",
-                "newPage": false,
-                "searchKey": "des.TestSubstitutionTableKnownAnswerDecrypt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSubstitutionTableKnownAnswerDecrypt(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSubstitutionTableKnownAnswerDecrypt(t *testing.T)\n```\n\nDefined in Pub 800-20 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/des#TestInitialPermute",
-              "documentation": {
-                "identifier": "TestInitialPermute",
-                "newPage": false,
-                "searchKey": "des.TestInitialPermute",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestInitialPermute(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestInitialPermute(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestEncryptTripleDES(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1505,7 +1200,9 @@
                 "newPage": false,
                 "searchKey": "des.TestFinalPermute",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1521,88 +1218,542 @@
           },
           {
             "node": {
-              "pathID": "/crypto/des#BenchmarkEncrypt",
+              "pathID": "/crypto/des#TestInitialPermutationKnownAnswer",
               "documentation": {
-                "identifier": "BenchmarkEncrypt",
+                "identifier": "TestInitialPermutationKnownAnswer",
                 "newPage": false,
-                "searchKey": "des.BenchmarkEncrypt",
+                "searchKey": "des.TestInitialPermutationKnownAnswer",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkEncrypt(b *testing.B)"
+                "value": "func TestInitialPermutationKnownAnswer(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkEncrypt(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc TestInitialPermutationKnownAnswer(t *testing.T)\n```\n\nDefined in Pub 800-20 Decrypting the Table A.1 plaintext with the 0x01... key produces the corresponding ciphertext \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/des#BenchmarkDecrypt",
+              "pathID": "/crypto/des#TestInitialPermute",
               "documentation": {
-                "identifier": "BenchmarkDecrypt",
+                "identifier": "TestInitialPermute",
                 "newPage": false,
-                "searchKey": "des.BenchmarkDecrypt",
+                "searchKey": "des.TestInitialPermute",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkDecrypt(b *testing.B)"
+                "value": "func TestInitialPermute(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkDecrypt(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc TestInitialPermute(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/des#BenchmarkTDESEncrypt",
+              "pathID": "/crypto/des#TestInversePermutationKnownAnswer",
               "documentation": {
-                "identifier": "BenchmarkTDESEncrypt",
+                "identifier": "TestInversePermutationKnownAnswer",
                 "newPage": false,
-                "searchKey": "des.BenchmarkTDESEncrypt",
+                "searchKey": "des.TestInversePermutationKnownAnswer",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkTDESEncrypt(b *testing.B)"
+                "value": "func TestInversePermutationKnownAnswer(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkTDESEncrypt(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc TestInversePermutationKnownAnswer(t *testing.T)\n```\n\nDefined in Pub 800-20 Encrypting the Table A.1 ciphertext with the 0x01... key produces the original plaintext \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/des#BenchmarkTDESDecrypt",
+              "pathID": "/crypto/des#TestPermutationOperationKnownAnswerDecrypt",
               "documentation": {
-                "identifier": "BenchmarkTDESDecrypt",
+                "identifier": "TestPermutationOperationKnownAnswerDecrypt",
                 "newPage": false,
-                "searchKey": "des.BenchmarkTDESDecrypt",
+                "searchKey": "des.TestPermutationOperationKnownAnswerDecrypt",
                 "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPermutationOperationKnownAnswerDecrypt(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPermutationOperationKnownAnswerDecrypt(t *testing.T)\n```\n\nDefined in Pub 800-20 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/des#TestPermutationOperationKnownAnswerEncrypt",
+              "documentation": {
+                "identifier": "TestPermutationOperationKnownAnswerEncrypt",
+                "newPage": false,
+                "searchKey": "des.TestPermutationOperationKnownAnswerEncrypt",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPermutationOperationKnownAnswerEncrypt(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPermutationOperationKnownAnswerEncrypt(t *testing.T)\n```\n\nDefined in Pub 800-20 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/des#TestSemiWeakKeyPairs",
+              "documentation": {
+                "identifier": "TestSemiWeakKeyPairs",
+                "newPage": false,
+                "searchKey": "des.TestSemiWeakKeyPairs",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSemiWeakKeyPairs(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSemiWeakKeyPairs(t *testing.T)\n```\n\nUse the known semi-weak key pairs to test DES implementation \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/des#TestSubstitutionTableKnownAnswerDecrypt",
+              "documentation": {
+                "identifier": "TestSubstitutionTableKnownAnswerDecrypt",
+                "newPage": false,
+                "searchKey": "des.TestSubstitutionTableKnownAnswerDecrypt",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSubstitutionTableKnownAnswerDecrypt(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSubstitutionTableKnownAnswerDecrypt(t *testing.T)\n```\n\nDefined in Pub 800-20 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/des#TestSubstitutionTableKnownAnswerEncrypt",
+              "documentation": {
+                "identifier": "TestSubstitutionTableKnownAnswerEncrypt",
+                "newPage": false,
+                "searchKey": "des.TestSubstitutionTableKnownAnswerEncrypt",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSubstitutionTableKnownAnswerEncrypt(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSubstitutionTableKnownAnswerEncrypt(t *testing.T)\n```\n\nDefined in Pub 800-20 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/des#TestVariableCiphertextKnownAnswer",
+              "documentation": {
+                "identifier": "TestVariableCiphertextKnownAnswer",
+                "newPage": false,
+                "searchKey": "des.TestVariableCiphertextKnownAnswer",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestVariableCiphertextKnownAnswer(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestVariableCiphertextKnownAnswer(t *testing.T)\n```\n\nDefined in Pub 800-20 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/des#TestVariableKeyKnownAnswerDecrypt",
+              "documentation": {
+                "identifier": "TestVariableKeyKnownAnswerDecrypt",
+                "newPage": false,
+                "searchKey": "des.TestVariableKeyKnownAnswerDecrypt",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestVariableKeyKnownAnswerDecrypt(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestVariableKeyKnownAnswerDecrypt(t *testing.T)\n```\n\nDefined in Pub 800-20 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/des#TestVariableKeyKnownAnswerEncrypt",
+              "documentation": {
+                "identifier": "TestVariableKeyKnownAnswerEncrypt",
+                "newPage": false,
+                "searchKey": "des.TestVariableKeyKnownAnswerEncrypt",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestVariableKeyKnownAnswerEncrypt(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestVariableKeyKnownAnswerEncrypt(t *testing.T)\n```\n\nDefined in Pub 800-20 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/des#TestVariablePlaintextKnownAnswer",
+              "documentation": {
+                "identifier": "TestVariablePlaintextKnownAnswer",
+                "newPage": false,
+                "searchKey": "des.TestVariablePlaintextKnownAnswer",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestVariablePlaintextKnownAnswer(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestVariablePlaintextKnownAnswer(t *testing.T)\n```\n\nDefined in Pub 800-20 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/des#TestWeakKeys",
+              "documentation": {
+                "identifier": "TestWeakKeys",
+                "newPage": false,
+                "searchKey": "des.TestWeakKeys",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWeakKeys(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWeakKeys(t *testing.T)\n```\n\nUse the known weak keys to test DES implementation \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/des#cryptBlock",
+              "documentation": {
+                "identifier": "cryptBlock",
+                "newPage": false,
+                "searchKey": "des.cryptBlock",
+                "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkTDESDecrypt(b *testing.B)"
+                "value": "func cryptBlock(subkeys []uint64, dst, src []byte, decrypt bool)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkTDESDecrypt(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc cryptBlock(subkeys []uint64, dst, src []byte, decrypt bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/des#decryptBlock",
+              "documentation": {
+                "identifier": "decryptBlock",
+                "newPage": false,
+                "searchKey": "des.decryptBlock",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func decryptBlock(subkeys []uint64, dst, src []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc decryptBlock(subkeys []uint64, dst, src []byte)\n```\n\nDecrypt one block from src into dst, using the subkeys. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/des#encryptBlock",
+              "documentation": {
+                "identifier": "encryptBlock",
+                "newPage": false,
+                "searchKey": "des.encryptBlock",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func encryptBlock(subkeys []uint64, dst, src []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc encryptBlock(subkeys []uint64, dst, src []byte)\n```\n\nEncrypt one block from src into dst, using the subkeys. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/des#feistel",
+              "documentation": {
+                "identifier": "feistel",
+                "newPage": false,
+                "searchKey": "des.feistel",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func feistel(l, r uint32, k0, k1 uint64) (lout, rout uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc feistel(l, r uint32, k0, k1 uint64) (lout, rout uint32)\n```\n\nDES Feistel function. feistelBox must be initialized via feistelBoxOnce.Do(initFeistelBox) first. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/des#initFeistelBox",
+              "documentation": {
+                "identifier": "initFeistelBox",
+                "newPage": false,
+                "searchKey": "des.initFeistelBox",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func initFeistelBox()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc initFeistelBox()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/des#ksRotate",
+              "documentation": {
+                "identifier": "ksRotate",
+                "newPage": false,
+                "searchKey": "des.ksRotate",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ksRotate(in uint32) (out []uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ksRotate(in uint32) (out []uint32)\n```\n\ncreates 16 28-bit blocks rotated according to the rotation schedule \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/des#permuteBlock",
+              "documentation": {
+                "identifier": "permuteBlock",
+                "newPage": false,
+                "searchKey": "des.permuteBlock",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func permuteBlock(src uint64, permutation []uint8) (block uint64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc permuteBlock(src uint64, permutation []uint8) (block uint64)\n```\n\ngeneral purpose function to perform DES block permutations \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/des#permuteFinalBlock",
+              "documentation": {
+                "identifier": "permuteFinalBlock",
+                "newPage": false,
+                "searchKey": "des.permuteFinalBlock",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func permuteFinalBlock(block uint64) uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc permuteFinalBlock(block uint64) uint64\n```\n\npermuteInitialBlock is equivalent to the permutation defined by finalPermutation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/des#permuteInitialBlock",
+              "documentation": {
+                "identifier": "permuteInitialBlock",
+                "newPage": false,
+                "searchKey": "des.permuteInitialBlock",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func permuteInitialBlock(block uint64) uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc permuteInitialBlock(block uint64) uint64\n```\n\npermuteInitialBlock is equivalent to the permutation defined by initialPermutation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/des#unpack",
+              "documentation": {
+                "identifier": "unpack",
+                "newPage": false,
+                "searchKey": "des.unpack",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func unpack(x uint64) uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc unpack(x uint64) uint64\n```\n\nExpand 48-bit input to 64-bit, with each 6-bit block padded by extra two bits at the top. By doing so, we can have the input blocks (four bits each), and the key blocks (six bits each) well-aligned without extra shifts/rotations for alignments. \n\n"
               },
               "children": null
             }

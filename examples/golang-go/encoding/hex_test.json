@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "encoding/hex_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/encoding/hex_test#ExampleEncode",
-              "documentation": {
-                "identifier": "ExampleEncode",
-                "newPage": false,
-                "searchKey": "hex_test.ExampleEncode",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleEncode()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleEncode()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/encoding/hex_test#ExampleDecode",
               "documentation": {
                 "identifier": "ExampleDecode",
                 "newPage": false,
                 "searchKey": "hex_test.ExampleDecode",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -89,6 +70,7 @@
                 "newPage": false,
                 "searchKey": "hex_test.ExampleDecodeString",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -111,6 +93,7 @@
                 "newPage": false,
                 "searchKey": "hex_test.ExampleDump",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -133,6 +116,7 @@
                 "newPage": false,
                 "searchKey": "hex_test.ExampleDumper",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -149,12 +133,36 @@
           },
           {
             "node": {
+              "pathID": "/encoding/hex_test#ExampleEncode",
+              "documentation": {
+                "identifier": "ExampleEncode",
+                "newPage": false,
+                "searchKey": "hex_test.ExampleEncode",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleEncode()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleEncode()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/encoding/hex_test#ExampleEncodeToString",
               "documentation": {
                 "identifier": "ExampleEncodeToString",
                 "newPage": false,
                 "searchKey": "hex_test.ExampleEncodeToString",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },

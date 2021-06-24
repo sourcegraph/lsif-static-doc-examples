@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/redispool",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,12 +41,60 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/redispool#Cache",
+              "documentation": {
+                "identifier": "Cache",
+                "newPage": false,
+                "searchKey": "redispool.Cache",
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Cache"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Cache = ...\n```\n\nCache is a redis configured for caching. You usually want to use this. Only store data that can be recomputed here. Although this data is treated as ephemeral, Sourcegraph depends on it to operate performantly, so we persist in Redis to avoid cold starts, rather than having it in-memory only. \n\nIn Kubernetes the service is called redis-cache. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/redispool#Store",
+              "documentation": {
+                "identifier": "Store",
+                "newPage": false,
+                "searchKey": "redispool.Store",
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Store"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Store = ...\n```\n\nStore is a redis configured for persisting data. Do not abuse this pool, only use if you have data with a high write rate. \n\nIn Kubernetes the service is called redis-store. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/redispool#addrCache",
               "documentation": {
                 "identifier": "addrCache",
                 "newPage": false,
                 "searchKey": "redispool.addrCache",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -67,6 +117,8 @@
                 "newPage": false,
                 "searchKey": "redispool.addrStore",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -89,6 +141,8 @@
                 "newPage": false,
                 "searchKey": "redispool.schemeMatcher",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -105,52 +159,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/redispool#Cache",
-              "documentation": {
-                "identifier": "Cache",
-                "newPage": false,
-                "searchKey": "redispool.Cache",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var Cache"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar Cache = ...\n```\n\nCache is a redis configured for caching. You usually want to use this. Only store data that can be recomputed here. Although this data is treated as ephemeral, Sourcegraph depends on it to operate performantly, so we persist in Redis to avoid cold starts, rather than having it in-memory only. \n\nIn Kubernetes the service is called redis-cache. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/redispool#Store",
-              "documentation": {
-                "identifier": "Store",
-                "newPage": false,
-                "searchKey": "redispool.Store",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var Store"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar Store = ...\n```\n\nStore is a redis configured for persisting data. Do not abuse this pool, only use if you have data with a high write rate. \n\nIn Kubernetes the service is called redis-store. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/redispool#timeout",
               "documentation": {
                 "identifier": "timeout",
                 "newPage": false,
                 "searchKey": "redispool.timeout",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -176,6 +192,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -190,22 +207,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/redispool#init.redispool.go",
+              "pathID": "/internal/redispool#TestSchemeMatcher",
               "documentation": {
-                "identifier": "init.redispool.go",
+                "identifier": "TestSchemeMatcher",
                 "newPage": false,
-                "searchKey": "redispool.init",
+                "searchKey": "redispool.TestSchemeMatcher",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func init()"
+                "value": "func TestSchemeMatcher(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
+                "value": "```Go\nfunc TestSchemeMatcher(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -218,6 +237,7 @@
                 "newPage": false,
                 "searchKey": "redispool.dialRedis",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -234,12 +254,36 @@
           },
           {
             "node": {
+              "pathID": "/internal/redispool#init.redispool.go",
+              "documentation": {
+                "identifier": "init.redispool.go",
+                "newPage": false,
+                "searchKey": "redispool.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/redispool#init.sysreq.go",
               "documentation": {
                 "identifier": "init.sysreq.go",
                 "newPage": false,
                 "searchKey": "redispool.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -262,6 +306,7 @@
                 "newPage": false,
                 "searchKey": "redispool.redisCheck",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -272,28 +317,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc redisCheck(name, addr string, timeout time.Duration, pool *redis.Pool) sysreq.CheckFunc\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/redispool#TestSchemeMatcher",
-              "documentation": {
-                "identifier": "TestSchemeMatcher",
-                "newPage": false,
-                "searchKey": "redispool.TestSchemeMatcher",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSchemeMatcher(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSchemeMatcher(t *testing.T)\n```\n\n"
               },
               "children": null
             }

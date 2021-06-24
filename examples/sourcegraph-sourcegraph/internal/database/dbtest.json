@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/database/dbtest",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "dbtest.killClientConnsQuery",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -90,6 +95,8 @@
                 "newPage": false,
                 "searchKey": "dbtest.rng",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -112,6 +119,8 @@
                 "newPage": false,
                 "searchKey": "dbtest.rngLock",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -134,6 +143,8 @@
                 "newPage": false,
                 "searchKey": "dbtest.templateOnce",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -159,6 +170,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -173,32 +185,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/database/dbtest#NewTx",
-              "documentation": {
-                "identifier": "NewTx",
-                "newPage": false,
-                "searchKey": "dbtest.NewTx",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func NewTx(t testing.TB, db *sql.DB) *sql.Tx"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc NewTx(t testing.TB, db *sql.DB) *sql.Tx\n```\n\nNewTx opens a transaction off of the given database, returning that transaction if an error didn't occur. \n\nAfter opening this transaction, it executes the query \n\n```\nSET CONSTRAINTS ALL DEFERRED\n\n```\nwhich aids in testing. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/database/dbtest#NewDB",
               "documentation": {
                 "identifier": "NewDB",
                 "newPage": false,
                 "searchKey": "dbtest.NewDB",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -213,66 +207,22 @@
           },
           {
             "node": {
-              "pathID": "/internal/database/dbtest#initTemplateDB",
+              "pathID": "/internal/database/dbtest#NewTx",
               "documentation": {
-                "identifier": "initTemplateDB",
+                "identifier": "NewTx",
                 "newPage": false,
-                "searchKey": "dbtest.initTemplateDB",
+                "searchKey": "dbtest.NewTx",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func initTemplateDB(t testing.TB, config *url.URL)"
+                "value": "func NewTx(t testing.TB, db *sql.DB) *sql.Tx"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc initTemplateDB(t testing.TB, config *url.URL)\n```\n\ninitTemplateDB creates a template database with a fully migrated schema for the current package. New databases can then do a cheap copy of the migrated schema rather than running the full migration every time. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/dbtest#templateDBName",
-              "documentation": {
-                "identifier": "templateDBName",
-                "newPage": false,
-                "searchKey": "dbtest.templateDBName",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func templateDBName() string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc templateDBName() string\n```\n\ntemplateDBName returns the name of the template database for the currently running package. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/dbtest#wdHash",
-              "documentation": {
-                "identifier": "wdHash",
-                "newPage": false,
-                "searchKey": "dbtest.wdHash",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func wdHash() string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc wdHash() string\n```\n\nwdHash returns a hash of the current working directory. This is useful to get a stable identifier for the package running the tests. \n\n"
+                "value": "```Go\nfunc NewTx(t testing.TB, db *sql.DB) *sql.Tx\n```\n\nNewTx opens a transaction off of the given database, returning that transaction if an error didn't occur. \n\nAfter opening this transaction, it executes the query \n\n```\nSET CONSTRAINTS ALL DEFERRED\n\n```\nwhich aids in testing. \n\n"
               },
               "children": null
             }
@@ -285,6 +235,7 @@
                 "newPage": false,
                 "searchKey": "dbtest.dbConn",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -307,6 +258,7 @@
                 "newPage": false,
                 "searchKey": "dbtest.dbExec",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -323,12 +275,59 @@
           },
           {
             "node": {
+              "pathID": "/internal/database/dbtest#initTemplateDB",
+              "documentation": {
+                "identifier": "initTemplateDB",
+                "newPage": false,
+                "searchKey": "dbtest.initTemplateDB",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func initTemplateDB(t testing.TB, config *url.URL)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc initTemplateDB(t testing.TB, config *url.URL)\n```\n\ninitTemplateDB creates a template database with a fully migrated schema for the current package. New databases can then do a cheap copy of the migrated schema rather than running the full migration every time. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbtest#templateDBName",
+              "documentation": {
+                "identifier": "templateDBName",
+                "newPage": false,
+                "searchKey": "dbtest.templateDBName",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func templateDBName() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc templateDBName() string\n```\n\ntemplateDBName returns the name of the template database for the currently running package. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/database/dbtest#updateDSNFromEnv",
               "documentation": {
                 "identifier": "updateDSNFromEnv",
                 "newPage": false,
                 "searchKey": "dbtest.updateDSNFromEnv",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -339,6 +338,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc updateDSNFromEnv(dsn *url.URL)\n```\n\nupdateDSNFromEnv updates dsn based on PGXXX environment variables set on the frontend. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbtest#wdHash",
+              "documentation": {
+                "identifier": "wdHash",
+                "newPage": false,
+                "searchKey": "dbtest.wdHash",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func wdHash() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc wdHash() string\n```\n\nwdHash returns a hash of the current working directory. This is useful to get a stable identifier for the package running the tests. \n\n"
               },
               "children": null
             }

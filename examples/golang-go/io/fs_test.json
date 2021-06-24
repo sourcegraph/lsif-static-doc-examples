@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "io/fs_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/io/fs_test#isValidPathTests",
-              "documentation": {
-                "identifier": "isValidPathTests",
-                "newPage": false,
-                "searchKey": "fs_test.isValidPathTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var isValidPathTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar isValidPathTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/io/fs_test#globTests",
               "documentation": {
                 "identifier": "globTests",
                 "newPage": false,
                 "searchKey": "fs_test.globTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -83,22 +66,25 @@
           },
           {
             "node": {
-              "pathID": "/io/fs_test#testFsys",
+              "pathID": "/io/fs_test#isValidPathTests",
               "documentation": {
-                "identifier": "testFsys",
+                "identifier": "isValidPathTests",
                 "newPage": false,
-                "searchKey": "fs_test.testFsys",
+                "searchKey": "fs_test.isValidPathTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var testFsys"
+                "value": "var isValidPathTests"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar testFsys = ...\n```\n\n"
+                "value": "```Go\nvar isValidPathTests = ...\n```\n\n"
               },
               "children": null
             }
@@ -111,6 +97,8 @@
                 "newPage": false,
                 "searchKey": "fs_test.sysValue",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -127,12 +115,38 @@
           },
           {
             "node": {
+              "pathID": "/io/fs_test#testFsys",
+              "documentation": {
+                "identifier": "testFsys",
+                "newPage": false,
+                "searchKey": "fs_test.testFsys",
+                "tags": [
+                  "variable",
+                  "object",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testFsys"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testFsys = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/io/fs_test#tree",
               "documentation": {
                 "identifier": "tree",
                 "newPage": false,
                 "searchKey": "fs_test.tree",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -158,6 +172,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -172,12 +187,36 @@
         "children": [
           {
             "node": {
+              "pathID": "/io/fs_test#Node",
+              "documentation": {
+                "identifier": "Node",
+                "newPage": false,
+                "searchKey": "fs_test.Node",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Node struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Node struct {\n\tname    string\n\tentries []*Node // nil if the entry is a file\n\tmark    int\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/io/fs_test#globOnly",
               "documentation": {
                 "identifier": "globOnly",
                 "newPage": false,
                 "searchKey": "fs_test.globOnly",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -198,6 +237,7 @@
                       "newPage": false,
                       "searchKey": "fs_test.globOnly.Open",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -217,12 +257,36 @@
           },
           {
             "node": {
+              "pathID": "/io/fs_test#openOnly",
+              "documentation": {
+                "identifier": "openOnly",
+                "newPage": false,
+                "searchKey": "fs_test.openOnly",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type openOnly struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype openOnly struct{ FS }\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/io/fs_test#readDirOnly",
               "documentation": {
                 "identifier": "readDirOnly",
                 "newPage": false,
                 "searchKey": "fs_test.readDirOnly",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -243,6 +307,7 @@
                       "newPage": false,
                       "searchKey": "fs_test.readDirOnly.Open",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -268,6 +333,7 @@
                 "newPage": false,
                 "searchKey": "fs_test.readFileOnly",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -288,6 +354,7 @@
                       "newPage": false,
                       "searchKey": "fs_test.readFileOnly.Open",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -307,34 +374,13 @@
           },
           {
             "node": {
-              "pathID": "/io/fs_test#openOnly",
-              "documentation": {
-                "identifier": "openOnly",
-                "newPage": false,
-                "searchKey": "fs_test.openOnly",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type openOnly struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype openOnly struct{ FS }\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/io/fs_test#statOnly",
               "documentation": {
                 "identifier": "statOnly",
                 "newPage": false,
                 "searchKey": "fs_test.statOnly",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -355,6 +401,7 @@
                       "newPage": false,
                       "searchKey": "fs_test.statOnly.Open",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -380,6 +427,7 @@
                 "newPage": false,
                 "searchKey": "fs_test.subOnly",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -400,6 +448,7 @@
                       "newPage": false,
                       "searchKey": "fs_test.subOnly.Open",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -416,28 +465,6 @@
                 }
               ]
             }
-          },
-          {
-            "node": {
-              "pathID": "/io/fs_test#Node",
-              "documentation": {
-                "identifier": "Node",
-                "newPage": false,
-                "searchKey": "fs_test.Node",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Node struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Node struct {\n\tname    string\n\tentries []*Node // nil if the entry is a file\n\tmark    int\n}\n```\n\n"
-              },
-              "children": null
-            }
           }
         ]
       }
@@ -450,6 +477,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -470,6 +498,7 @@
                 "newPage": false,
                 "searchKey": "fs_test.ExampleWalkDir",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -486,22 +515,24 @@
           },
           {
             "node": {
-              "pathID": "/io/fs_test#TestValidPath",
+              "pathID": "/io/fs_test#TestFileInfoToDirEntry",
               "documentation": {
-                "identifier": "TestValidPath",
+                "identifier": "TestFileInfoToDirEntry",
                 "newPage": false,
-                "searchKey": "fs_test.TestValidPath",
+                "searchKey": "fs_test.TestFileInfoToDirEntry",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestValidPath(t *testing.T)"
+                "value": "func TestFileInfoToDirEntry(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestValidPath(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestFileInfoToDirEntry(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -514,7 +545,9 @@
                 "newPage": false,
                 "searchKey": "fs_test.TestGlob",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -536,7 +569,9 @@
                 "newPage": false,
                 "searchKey": "fs_test.TestGlobError",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -552,35 +587,15 @@
           },
           {
             "node": {
-              "pathID": "/io/fs_test#contains",
-              "documentation": {
-                "identifier": "contains",
-                "newPage": false,
-                "searchKey": "fs_test.contains",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func contains(vector []string, s string) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc contains(vector []string, s string) bool\n```\n\ncontains reports whether vector contains the string s. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/io/fs_test#TestGlobMethod",
               "documentation": {
                 "identifier": "TestGlobMethod",
                 "newPage": false,
                 "searchKey": "fs_test.TestGlobMethod",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -602,7 +617,9 @@
                 "newPage": false,
                 "searchKey": "fs_test.TestReadDir",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -618,35 +635,15 @@
           },
           {
             "node": {
-              "pathID": "/io/fs_test#TestFileInfoToDirEntry",
-              "documentation": {
-                "identifier": "TestFileInfoToDirEntry",
-                "newPage": false,
-                "searchKey": "fs_test.TestFileInfoToDirEntry",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestFileInfoToDirEntry(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestFileInfoToDirEntry(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/io/fs_test#TestReadFile",
               "documentation": {
                 "identifier": "TestReadFile",
                 "newPage": false,
                 "searchKey": "fs_test.TestReadFile",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -668,7 +665,9 @@
                 "newPage": false,
                 "searchKey": "fs_test.TestStat",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -690,7 +689,9 @@
                 "newPage": false,
                 "searchKey": "fs_test.TestSub",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -706,66 +707,48 @@
           },
           {
             "node": {
-              "pathID": "/io/fs_test#walkTree",
+              "pathID": "/io/fs_test#TestValidPath",
               "documentation": {
-                "identifier": "walkTree",
+                "identifier": "TestValidPath",
                 "newPage": false,
-                "searchKey": "fs_test.walkTree",
+                "searchKey": "fs_test.TestValidPath",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func walkTree(n *Node, path string, f func(path string, n *Node))"
+                "value": "func TestValidPath(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc walkTree(n *Node, path string, f func(path string, n *Node))\n```\n\n"
+                "value": "```Go\nfunc TestValidPath(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/io/fs_test#makeTree",
+              "pathID": "/io/fs_test#TestWalkDir",
               "documentation": {
-                "identifier": "makeTree",
+                "identifier": "TestWalkDir",
                 "newPage": false,
-                "searchKey": "fs_test.makeTree",
+                "searchKey": "fs_test.TestWalkDir",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func makeTree(t *testing.T) FS"
+                "value": "func TestWalkDir(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc makeTree(t *testing.T) FS\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/fs_test#markTree",
-              "documentation": {
-                "identifier": "markTree",
-                "newPage": false,
-                "searchKey": "fs_test.markTree",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func markTree(n *Node)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc markTree(n *Node)\n```\n\n"
+                "value": "```Go\nfunc TestWalkDir(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -778,6 +761,7 @@
                 "newPage": false,
                 "searchKey": "fs_test.checkMarks",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -794,12 +778,59 @@
           },
           {
             "node": {
+              "pathID": "/io/fs_test#contains",
+              "documentation": {
+                "identifier": "contains",
+                "newPage": false,
+                "searchKey": "fs_test.contains",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func contains(vector []string, s string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc contains(vector []string, s string) bool\n```\n\ncontains reports whether vector contains the string s. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/fs_test#makeTree",
+              "documentation": {
+                "identifier": "makeTree",
+                "newPage": false,
+                "searchKey": "fs_test.makeTree",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeTree(t *testing.T) FS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeTree(t *testing.T) FS\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/io/fs_test#mark",
               "documentation": {
                 "identifier": "mark",
                 "newPage": false,
                 "searchKey": "fs_test.mark",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -816,22 +847,46 @@
           },
           {
             "node": {
-              "pathID": "/io/fs_test#TestWalkDir",
+              "pathID": "/io/fs_test#markTree",
               "documentation": {
-                "identifier": "TestWalkDir",
+                "identifier": "markTree",
                 "newPage": false,
-                "searchKey": "fs_test.TestWalkDir",
+                "searchKey": "fs_test.markTree",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestWalkDir(t *testing.T)"
+                "value": "func markTree(n *Node)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestWalkDir(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc markTree(n *Node)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/fs_test#walkTree",
+              "documentation": {
+                "identifier": "walkTree",
+                "newPage": false,
+                "searchKey": "fs_test.walkTree",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func walkTree(n *Node, path string, f func(path string, n *Node))"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc walkTree(n *Node, path string, f func(path string, n *Node))\n```\n\n"
               },
               "children": null
             }

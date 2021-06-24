@@ -15,11 +15,15 @@ Command symbols is a service that serves code symbols (functions, variables, etc
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [package]
+```
+
 ### <a id="port" href="#port">const port</a>
 
 ```
 searchKey: main.port
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -28,11 +32,15 @@ const port = "3184"
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [package]
+```
+
 ### <a id="main" href="#main">func main()</a>
 
 ```
 searchKey: main.main
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -43,7 +51,7 @@ func main()
 
 ```
 searchKey: main.shutdownOnSIGINT
-tags: [private]
+tags: [method private]
 ```
 
 ```Go

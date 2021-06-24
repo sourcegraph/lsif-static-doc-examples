@@ -4,7 +4,9 @@
     "identifier": "cookiejar",
     "newPage": true,
     "searchKey": "net/http/cookiejar",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,12 +39,38 @@
         "children": [
           {
             "node": {
+              "pathID": "/net/http/cookiejar#acePrefix",
+              "documentation": {
+                "identifier": "acePrefix",
+                "newPage": false,
+                "searchKey": "cookiejar.acePrefix",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const acePrefix"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst acePrefix = \"xn--\"\n```\n\nacePrefix is the ASCII Compatible Encoding prefix. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/net/http/cookiejar#base",
               "documentation": {
                 "identifier": "base",
                 "newPage": false,
                 "searchKey": "cookiejar.base",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -63,6 +93,8 @@
                 "newPage": false,
                 "searchKey": "cookiejar.damp",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -85,6 +117,8 @@
                 "newPage": false,
                 "searchKey": "cookiejar.initialBias",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -107,6 +141,8 @@
                 "newPage": false,
                 "searchKey": "cookiejar.initialN",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -129,6 +165,8 @@
                 "newPage": false,
                 "searchKey": "cookiejar.skew",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -151,6 +189,8 @@
                 "newPage": false,
                 "searchKey": "cookiejar.tmax",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -173,6 +213,8 @@
                 "newPage": false,
                 "searchKey": "cookiejar.tmin",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -183,28 +225,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst tmin int32 = 1\n```\n\nThese parameter values are specified in section 5. \n\nAll computation is done with int32s, so that overflow behavior is identical regardless of whether int is 32-bit or 64-bit. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#acePrefix",
-              "documentation": {
-                "identifier": "acePrefix",
-                "newPage": false,
-                "searchKey": "cookiejar.acePrefix",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const acePrefix"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst acePrefix = \"xn--\"\n```\n\nacePrefix is the ASCII Compatible Encoding prefix. \n\n"
               },
               "children": null
             }
@@ -219,7 +239,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -232,132 +254,25 @@
         "children": [
           {
             "node": {
-              "pathID": "/net/http/cookiejar#errIllegalDomain",
+              "pathID": "/net/http/cookiejar#basicsTests",
               "documentation": {
-                "identifier": "errIllegalDomain",
+                "identifier": "basicsTests",
                 "newPage": false,
-                "searchKey": "cookiejar.errIllegalDomain",
+                "searchKey": "cookiejar.basicsTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var errIllegalDomain"
+                "value": "var basicsTests"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar errIllegalDomain = errors.New(\"cookiejar: illegal cookie domain attribute\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#errMalformedDomain",
-              "documentation": {
-                "identifier": "errMalformedDomain",
-                "newPage": false,
-                "searchKey": "cookiejar.errMalformedDomain",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var errMalformedDomain"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar errMalformedDomain = errors.New(\"cookiejar: malformed cookie domain attribute\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#errNoHostname",
-              "documentation": {
-                "identifier": "errNoHostname",
-                "newPage": false,
-                "searchKey": "cookiejar.errNoHostname",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var errNoHostname"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar errNoHostname = errors.New(\"cookiejar: no host name available (IP only)\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#endOfTime",
-              "documentation": {
-                "identifier": "endOfTime",
-                "newPage": false,
-                "searchKey": "cookiejar.endOfTime",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var endOfTime"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar endOfTime = time.Date(9999, 12, 31, 23, 59, 59, 0, time.UTC)\n```\n\nendOfTime is the time when session (non-persistent) cookies expire. This instant is representable in most date/time formats (not just Go's time.Time) and should be far enough in the future. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#tNow",
-              "documentation": {
-                "identifier": "tNow",
-                "newPage": false,
-                "searchKey": "cookiejar.tNow",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var tNow"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar tNow = time.Date(2013, 1, 1, 12, 0, 0, 0, time.UTC)\n```\n\ntNow is the synthetic current time used as now during testing. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#hasDotSuffixTests",
-              "documentation": {
-                "identifier": "hasDotSuffixTests",
-                "newPage": false,
-                "searchKey": "cookiejar.hasDotSuffixTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var hasDotSuffixTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar hasDotSuffixTests = ...\n```\n\n"
+                "value": "```Go\nvar basicsTests = ...\n```\n\nbasicsTests contains fundamental tests. Each jarTest has to be performed on a fresh, empty Jar. \n\n"
               },
               "children": null
             }
@@ -370,6 +285,8 @@
                 "newPage": false,
                 "searchKey": "cookiejar.canonicalHostTests",
                 "tags": [
+                  "variable",
+                  "object",
                   "private"
                 ]
               },
@@ -386,88 +303,75 @@
           },
           {
             "node": {
-              "pathID": "/net/http/cookiejar#hasPortTests",
+              "pathID": "/net/http/cookiejar#chromiumBasicsTests",
               "documentation": {
-                "identifier": "hasPortTests",
+                "identifier": "chromiumBasicsTests",
                 "newPage": false,
-                "searchKey": "cookiejar.hasPortTests",
+                "searchKey": "cookiejar.chromiumBasicsTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var hasPortTests"
+                "value": "var chromiumBasicsTests"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar hasPortTests = ...\n```\n\n"
+                "value": "```Go\nvar chromiumBasicsTests = ...\n```\n\nchromiumBasicsTests contains fundamental tests. Each jarTest has to be performed on a fresh, empty Jar. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/net/http/cookiejar#jarKeyTests",
+              "pathID": "/net/http/cookiejar#chromiumDeletionTests",
               "documentation": {
-                "identifier": "jarKeyTests",
+                "identifier": "chromiumDeletionTests",
                 "newPage": false,
-                "searchKey": "cookiejar.jarKeyTests",
+                "searchKey": "cookiejar.chromiumDeletionTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var jarKeyTests"
+                "value": "var chromiumDeletionTests"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar jarKeyTests = ...\n```\n\n"
+                "value": "```Go\nvar chromiumDeletionTests = ...\n```\n\nchromiumDeletionTests must be performed all on the same Jar. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/net/http/cookiejar#jarKeyNilPSLTests",
+              "pathID": "/net/http/cookiejar#chromiumDomainTests",
               "documentation": {
-                "identifier": "jarKeyNilPSLTests",
+                "identifier": "chromiumDomainTests",
                 "newPage": false,
-                "searchKey": "cookiejar.jarKeyNilPSLTests",
+                "searchKey": "cookiejar.chromiumDomainTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var jarKeyNilPSLTests"
+                "value": "var chromiumDomainTests"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar jarKeyNilPSLTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#isIPTests",
-              "documentation": {
-                "identifier": "isIPTests",
-                "newPage": false,
-                "searchKey": "cookiejar.isIPTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var isIPTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar isIPTests = ...\n```\n\n"
+                "value": "```Go\nvar chromiumDomainTests = ...\n```\n\nchromiumDomainTests contains jarTests which must be executed all on the same Jar. \n\n"
               },
               "children": null
             }
@@ -480,6 +384,8 @@
                 "newPage": false,
                 "searchKey": "cookiejar.defaultPathTests",
                 "tags": [
+                  "variable",
+                  "object",
                   "private"
                 ]
               },
@@ -502,6 +408,9 @@
                 "newPage": false,
                 "searchKey": "cookiejar.domainAndTypeTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -518,122 +427,15 @@
           },
           {
             "node": {
-              "pathID": "/net/http/cookiejar#basicsTests",
-              "documentation": {
-                "identifier": "basicsTests",
-                "newPage": false,
-                "searchKey": "cookiejar.basicsTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var basicsTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar basicsTests = ...\n```\n\nbasicsTests contains fundamental tests. Each jarTest has to be performed on a fresh, empty Jar. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#updateAndDeleteTests",
-              "documentation": {
-                "identifier": "updateAndDeleteTests",
-                "newPage": false,
-                "searchKey": "cookiejar.updateAndDeleteTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var updateAndDeleteTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar updateAndDeleteTests = ...\n```\n\nupdateAndDeleteTests contains jarTests which must be performed on the same Jar. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#chromiumBasicsTests",
-              "documentation": {
-                "identifier": "chromiumBasicsTests",
-                "newPage": false,
-                "searchKey": "cookiejar.chromiumBasicsTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var chromiumBasicsTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar chromiumBasicsTests = ...\n```\n\nchromiumBasicsTests contains fundamental tests. Each jarTest has to be performed on a fresh, empty Jar. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#chromiumDomainTests",
-              "documentation": {
-                "identifier": "chromiumDomainTests",
-                "newPage": false,
-                "searchKey": "cookiejar.chromiumDomainTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var chromiumDomainTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar chromiumDomainTests = ...\n```\n\nchromiumDomainTests contains jarTests which must be executed all on the same Jar. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#chromiumDeletionTests",
-              "documentation": {
-                "identifier": "chromiumDeletionTests",
-                "newPage": false,
-                "searchKey": "cookiejar.chromiumDeletionTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var chromiumDeletionTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar chromiumDeletionTests = ...\n```\n\nchromiumDeletionTests must be performed all on the same Jar. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/http/cookiejar#domainHandlingTests",
               "documentation": {
                 "identifier": "domainHandlingTests",
                 "newPage": false,
                 "searchKey": "cookiejar.domainHandlingTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -650,12 +452,232 @@
           },
           {
             "node": {
+              "pathID": "/net/http/cookiejar#endOfTime",
+              "documentation": {
+                "identifier": "endOfTime",
+                "newPage": false,
+                "searchKey": "cookiejar.endOfTime",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var endOfTime"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar endOfTime = time.Date(9999, 12, 31, 23, 59, 59, 0, time.UTC)\n```\n\nendOfTime is the time when session (non-persistent) cookies expire. This instant is representable in most date/time formats (not just Go's time.Time) and should be far enough in the future. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#errIllegalDomain",
+              "documentation": {
+                "identifier": "errIllegalDomain",
+                "newPage": false,
+                "searchKey": "cookiejar.errIllegalDomain",
+                "tags": [
+                  "variable",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errIllegalDomain"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errIllegalDomain = errors.New(\"cookiejar: illegal cookie domain attribute\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#errMalformedDomain",
+              "documentation": {
+                "identifier": "errMalformedDomain",
+                "newPage": false,
+                "searchKey": "cookiejar.errMalformedDomain",
+                "tags": [
+                  "variable",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errMalformedDomain"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errMalformedDomain = errors.New(\"cookiejar: malformed cookie domain attribute\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#errNoHostname",
+              "documentation": {
+                "identifier": "errNoHostname",
+                "newPage": false,
+                "searchKey": "cookiejar.errNoHostname",
+                "tags": [
+                  "variable",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errNoHostname"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errNoHostname = errors.New(\"cookiejar: no host name available (IP only)\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#hasDotSuffixTests",
+              "documentation": {
+                "identifier": "hasDotSuffixTests",
+                "newPage": false,
+                "searchKey": "cookiejar.hasDotSuffixTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var hasDotSuffixTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar hasDotSuffixTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#hasPortTests",
+              "documentation": {
+                "identifier": "hasPortTests",
+                "newPage": false,
+                "searchKey": "cookiejar.hasPortTests",
+                "tags": [
+                  "variable",
+                  "object",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var hasPortTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar hasPortTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#isIPTests",
+              "documentation": {
+                "identifier": "isIPTests",
+                "newPage": false,
+                "searchKey": "cookiejar.isIPTests",
+                "tags": [
+                  "variable",
+                  "object",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var isIPTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar isIPTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#jarKeyNilPSLTests",
+              "documentation": {
+                "identifier": "jarKeyNilPSLTests",
+                "newPage": false,
+                "searchKey": "cookiejar.jarKeyNilPSLTests",
+                "tags": [
+                  "variable",
+                  "object",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var jarKeyNilPSLTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar jarKeyNilPSLTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#jarKeyTests",
+              "documentation": {
+                "identifier": "jarKeyTests",
+                "newPage": false,
+                "searchKey": "cookiejar.jarKeyTests",
+                "tags": [
+                  "variable",
+                  "object",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var jarKeyTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar jarKeyTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/net/http/cookiejar#punycodeTestCases",
               "documentation": {
                 "identifier": "punycodeTestCases",
                 "newPage": false,
                 "searchKey": "cookiejar.punycodeTestCases",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -666,6 +688,55 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar punycodeTestCases = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#tNow",
+              "documentation": {
+                "identifier": "tNow",
+                "newPage": false,
+                "searchKey": "cookiejar.tNow",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var tNow"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar tNow = time.Date(2013, 1, 1, 12, 0, 0, 0, time.UTC)\n```\n\ntNow is the synthetic current time used as now during testing. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#updateAndDeleteTests",
+              "documentation": {
+                "identifier": "updateAndDeleteTests",
+                "newPage": false,
+                "searchKey": "cookiejar.updateAndDeleteTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var updateAndDeleteTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar updateAndDeleteTests = ...\n```\n\nupdateAndDeleteTests contains jarTests which must be performed on the same Jar. \n\n"
               },
               "children": null
             }
@@ -680,7 +751,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -693,52 +766,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/net/http/cookiejar#PublicSuffixList",
-              "documentation": {
-                "identifier": "PublicSuffixList",
-                "newPage": false,
-                "searchKey": "cookiejar.PublicSuffixList",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type PublicSuffixList interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype PublicSuffixList interface {\n\t// PublicSuffix returns the public suffix of domain.\n\t//\n\t// TODO: specify which of the caller and callee is responsible for IP\n\t// addresses, for leading and trailing dots, for case sensitivity, and\n\t// for IDN/Punycode.\n\tPublicSuffix(domain string) string\n\n\t// String returns a description of the source of this public suffix\n\t// list. The description will typically contain something like a time\n\t// stamp or version number.\n\tString() string\n}\n```\n\nPublicSuffixList provides the public suffix of a domain. For example: \n\n```\n- the public suffix of \"example.com\" is \"com\",\n- the public suffix of \"foo1.foo2.foo3.co.uk\" is \"co.uk\", and\n- the public suffix of \"bar.pvt.k12.ma.us\" is \"pvt.k12.ma.us\".\n\n```\nImplementations of PublicSuffixList must be safe for concurrent use by multiple goroutines. \n\nAn implementation that always returns \"\" is valid and may be useful for testing but it is not secure: it means that the HTTP server for foo.com can set a cookie for bar.com. \n\nA public suffix list implementation is in the package golang.org/x/net/publicsuffix. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#Options",
-              "documentation": {
-                "identifier": "Options",
-                "newPage": false,
-                "searchKey": "cookiejar.Options",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Options struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Options struct {\n\t// PublicSuffixList is the public suffix list that determines whether\n\t// an HTTP server can set a cookie for a domain.\n\t//\n\t// A nil value is valid and may be useful for testing but it is not\n\t// secure: it means that the HTTP server for foo.co.uk can set a cookie\n\t// for bar.co.uk.\n\tPublicSuffixList PublicSuffixList\n}\n```\n\nOptions are the options for creating a new Jar. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/http/cookiejar#Jar",
               "documentation": {
                 "identifier": "Jar",
                 "newPage": false,
                 "searchKey": "cookiejar.Jar",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -756,7 +791,9 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "cookiejar.New",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -777,6 +814,7 @@
                       "newPage": false,
                       "searchKey": "cookiejar.newTestJar",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -798,7 +836,9 @@
                       "identifier": "Jar.Cookies",
                       "newPage": false,
                       "searchKey": "cookiejar.Jar.Cookies",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -813,12 +853,35 @@
                 },
                 {
                   "node": {
+                    "pathID": "/net/http/cookiejar#Jar.SetCookies",
+                    "documentation": {
+                      "identifier": "Jar.SetCookies",
+                      "newPage": false,
+                      "searchKey": "cookiejar.Jar.SetCookies",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (j *Jar) SetCookies(u *url.URL, cookies []*http.Cookie)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (j *Jar) SetCookies(u *url.URL, cookies []*http.Cookie)\n```\n\nSetCookies implements the SetCookies method of the http.CookieJar interface. \n\nIt does nothing if the URL's scheme is not HTTP or HTTPS. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/net/http/cookiejar#Jar.cookies",
                     "documentation": {
                       "identifier": "Jar.cookies",
                       "newPage": false,
                       "searchKey": "cookiejar.Jar.cookies",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -835,42 +898,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/net/http/cookiejar#Jar.SetCookies",
+                    "pathID": "/net/http/cookiejar#Jar.domainAndType",
                     "documentation": {
-                      "identifier": "Jar.SetCookies",
+                      "identifier": "Jar.domainAndType",
                       "newPage": false,
-                      "searchKey": "cookiejar.Jar.SetCookies",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (j *Jar) SetCookies(u *url.URL, cookies []*http.Cookie)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (j *Jar) SetCookies(u *url.URL, cookies []*http.Cookie)\n```\n\nSetCookies implements the SetCookies method of the http.CookieJar interface. \n\nIt does nothing if the URL's scheme is not HTTP or HTTPS. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/http/cookiejar#Jar.setCookies",
-                    "documentation": {
-                      "identifier": "Jar.setCookies",
-                      "newPage": false,
-                      "searchKey": "cookiejar.Jar.setCookies",
+                      "searchKey": "cookiejar.Jar.domainAndType",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (j *Jar) setCookies(u *url.URL, cookies []*http.Cookie, now time.Time)"
+                      "value": "func (j *Jar) domainAndType(host, domain string) (string, bool, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (j *Jar) setCookies(u *url.URL, cookies []*http.Cookie, now time.Time)\n```\n\nsetCookies is like SetCookies but takes the current time as parameter. \n\n"
+                      "value": "```Go\nfunc (j *Jar) domainAndType(host, domain string) (string, bool, error)\n```\n\ndomainAndType determines the cookie's domain and hostOnly attribute. \n\n"
                     },
                     "children": null
                   }
@@ -883,6 +927,7 @@
                       "newPage": false,
                       "searchKey": "cookiejar.Jar.newEntry",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -899,27 +944,72 @@
                 },
                 {
                   "node": {
-                    "pathID": "/net/http/cookiejar#Jar.domainAndType",
+                    "pathID": "/net/http/cookiejar#Jar.setCookies",
                     "documentation": {
-                      "identifier": "Jar.domainAndType",
+                      "identifier": "Jar.setCookies",
                       "newPage": false,
-                      "searchKey": "cookiejar.Jar.domainAndType",
+                      "searchKey": "cookiejar.Jar.setCookies",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (j *Jar) domainAndType(host, domain string) (string, bool, error)"
+                      "value": "func (j *Jar) setCookies(u *url.URL, cookies []*http.Cookie, now time.Time)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (j *Jar) domainAndType(host, domain string) (string, bool, error)\n```\n\ndomainAndType determines the cookie's domain and hostOnly attribute. \n\n"
+                      "value": "```Go\nfunc (j *Jar) setCookies(u *url.URL, cookies []*http.Cookie, now time.Time)\n```\n\nsetCookies is like SetCookies but takes the current time as parameter. \n\n"
                     },
                     "children": null
                   }
                 }
               ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#Options",
+              "documentation": {
+                "identifier": "Options",
+                "newPage": false,
+                "searchKey": "cookiejar.Options",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Options struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Options struct {\n\t// PublicSuffixList is the public suffix list that determines whether\n\t// an HTTP server can set a cookie for a domain.\n\t//\n\t// A nil value is valid and may be useful for testing but it is not\n\t// secure: it means that the HTTP server for foo.co.uk can set a cookie\n\t// for bar.co.uk.\n\tPublicSuffixList PublicSuffixList\n}\n```\n\nOptions are the options for creating a new Jar. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#PublicSuffixList",
+              "documentation": {
+                "identifier": "PublicSuffixList",
+                "newPage": false,
+                "searchKey": "cookiejar.PublicSuffixList",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PublicSuffixList interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PublicSuffixList interface {\n\t// PublicSuffix returns the public suffix of domain.\n\t//\n\t// TODO: specify which of the caller and callee is responsible for IP\n\t// addresses, for leading and trailing dots, for case sensitivity, and\n\t// for IDN/Punycode.\n\tPublicSuffix(domain string) string\n\n\t// String returns a description of the source of this public suffix\n\t// list. The description will typically contain something like a time\n\t// stamp or version number.\n\tString() string\n}\n```\n\nPublicSuffixList provides the public suffix of a domain. For example: \n\n```\n- the public suffix of \"example.com\" is \"com\",\n- the public suffix of \"foo1.foo2.foo3.co.uk\" is \"co.uk\", and\n- the public suffix of \"bar.pvt.k12.ma.us\" is \"pvt.k12.ma.us\".\n\n```\nImplementations of PublicSuffixList must be safe for concurrent use by multiple goroutines. \n\nAn implementation that always returns \"\" is valid and may be useful for testing but it is not secure: it means that the HTTP server for foo.com can set a cookie for bar.com. \n\nA public suffix list implementation is in the package golang.org/x/net/publicsuffix. \n\n"
+              },
+              "children": null
             }
           },
           {
@@ -930,6 +1020,7 @@
                 "newPage": false,
                 "searchKey": "cookiejar.entry",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -944,56 +1035,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/net/http/cookiejar#entry.id",
-                    "documentation": {
-                      "identifier": "entry.id",
-                      "newPage": false,
-                      "searchKey": "cookiejar.entry.id",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *entry) id() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *entry) id() string\n```\n\nid returns the domain;path;name triple of e as an id. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/net/http/cookiejar#entry.shouldSend",
-                    "documentation": {
-                      "identifier": "entry.shouldSend",
-                      "newPage": false,
-                      "searchKey": "cookiejar.entry.shouldSend",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *entry) shouldSend(https bool, host, path string) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *entry) shouldSend(https bool, host, path string) bool\n```\n\nshouldSend determines whether e's cookie qualifies to be included in a request to host/path. It is the caller's responsibility to check if the cookie is expired. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/net/http/cookiejar#entry.domainMatch",
                     "documentation": {
                       "identifier": "entry.domainMatch",
                       "newPage": false,
                       "searchKey": "cookiejar.entry.domainMatch",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1010,12 +1058,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/net/http/cookiejar#entry.id",
+                    "documentation": {
+                      "identifier": "entry.id",
+                      "newPage": false,
+                      "searchKey": "cookiejar.entry.id",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *entry) id() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *entry) id() string\n```\n\nid returns the domain;path;name triple of e as an id. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/net/http/cookiejar#entry.pathMatch",
                     "documentation": {
                       "identifier": "entry.pathMatch",
                       "newPage": false,
                       "searchKey": "cookiejar.entry.pathMatch",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1029,70 +1101,26 @@
                     },
                     "children": null
                   }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#testPSL",
-              "documentation": {
-                "identifier": "testPSL",
-                "newPage": false,
-                "searchKey": "cookiejar.testPSL",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type testPSL struct{}"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype testPSL struct{}\n```\n\ntestPSL implements PublicSuffixList with just two rules: \"co.uk\" and the default rule \"*\". The implementation has two intentional bugs: \n\n```\nPublicSuffix(\"www.buggy.psl\") == \"xy\"\nPublicSuffix(\"www2.buggy.psl\") == \"com\"\n\n```\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/net/http/cookiejar#testPSL.String",
-                    "documentation": {
-                      "identifier": "testPSL.String",
-                      "newPage": false,
-                      "searchKey": "cookiejar.testPSL.String",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (testPSL) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (testPSL) String() string\n```\n\n"
-                    },
-                    "children": null
-                  }
                 },
                 {
                   "node": {
-                    "pathID": "/net/http/cookiejar#testPSL.PublicSuffix",
+                    "pathID": "/net/http/cookiejar#entry.shouldSend",
                     "documentation": {
-                      "identifier": "testPSL.PublicSuffix",
+                      "identifier": "entry.shouldSend",
                       "newPage": false,
-                      "searchKey": "cookiejar.testPSL.PublicSuffix",
+                      "searchKey": "cookiejar.entry.shouldSend",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (testPSL) PublicSuffix(d string) string"
+                      "value": "func (e *entry) shouldSend(https bool, host, path string) bool"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (testPSL) PublicSuffix(d string) string\n```\n\n"
+                      "value": "```Go\nfunc (e *entry) shouldSend(https bool, host, path string) bool\n```\n\nshouldSend determines whether e's cookie qualifies to be included in a request to host/path. It is the caller's responsibility to check if the cookie is expired. \n\n"
                     },
                     "children": null
                   }
@@ -1108,6 +1136,7 @@
                 "newPage": false,
                 "searchKey": "cookiejar.jarTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1128,6 +1157,7 @@
                       "newPage": false,
                       "searchKey": "cookiejar.jarTest.run",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1153,6 +1183,7 @@
                 "newPage": false,
                 "searchKey": "cookiejar.query",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1166,6 +1197,76 @@
               },
               "children": null
             }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#testPSL",
+              "documentation": {
+                "identifier": "testPSL",
+                "newPage": false,
+                "searchKey": "cookiejar.testPSL",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type testPSL struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype testPSL struct{}\n```\n\ntestPSL implements PublicSuffixList with just two rules: \"co.uk\" and the default rule \"*\". The implementation has two intentional bugs: \n\n```\nPublicSuffix(\"www.buggy.psl\") == \"xy\"\nPublicSuffix(\"www2.buggy.psl\") == \"com\"\n\n```\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/cookiejar#testPSL.PublicSuffix",
+                    "documentation": {
+                      "identifier": "testPSL.PublicSuffix",
+                      "newPage": false,
+                      "searchKey": "cookiejar.testPSL.PublicSuffix",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (testPSL) PublicSuffix(d string) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (testPSL) PublicSuffix(d string) string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/cookiejar#testPSL.String",
+                    "documentation": {
+                      "identifier": "testPSL.String",
+                      "newPage": false,
+                      "searchKey": "cookiejar.testPSL.String",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (testPSL) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (testPSL) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
           }
         ]
       }
@@ -1177,7 +1278,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1190,22 +1293,431 @@
         "children": [
           {
             "node": {
-              "pathID": "/net/http/cookiejar#hasDotSuffix",
+              "pathID": "/net/http/cookiejar#TestBasics",
               "documentation": {
-                "identifier": "hasDotSuffix",
+                "identifier": "TestBasics",
                 "newPage": false,
-                "searchKey": "cookiejar.hasDotSuffix",
+                "searchKey": "cookiejar.TestBasics",
                 "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBasics(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBasics(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#TestCanonicalHost",
+              "documentation": {
+                "identifier": "TestCanonicalHost",
+                "newPage": false,
+                "searchKey": "cookiejar.TestCanonicalHost",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCanonicalHost(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCanonicalHost(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#TestChromiumBasics",
+              "documentation": {
+                "identifier": "TestChromiumBasics",
+                "newPage": false,
+                "searchKey": "cookiejar.TestChromiumBasics",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestChromiumBasics(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestChromiumBasics(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#TestChromiumDeletion",
+              "documentation": {
+                "identifier": "TestChromiumDeletion",
+                "newPage": false,
+                "searchKey": "cookiejar.TestChromiumDeletion",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestChromiumDeletion(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestChromiumDeletion(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#TestChromiumDomain",
+              "documentation": {
+                "identifier": "TestChromiumDomain",
+                "newPage": false,
+                "searchKey": "cookiejar.TestChromiumDomain",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestChromiumDomain(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestChromiumDomain(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#TestDefaultPath",
+              "documentation": {
+                "identifier": "TestDefaultPath",
+                "newPage": false,
+                "searchKey": "cookiejar.TestDefaultPath",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDefaultPath(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDefaultPath(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#TestDomainAndType",
+              "documentation": {
+                "identifier": "TestDomainAndType",
+                "newPage": false,
+                "searchKey": "cookiejar.TestDomainAndType",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDomainAndType(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDomainAndType(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#TestDomainHandling",
+              "documentation": {
+                "identifier": "TestDomainHandling",
+                "newPage": false,
+                "searchKey": "cookiejar.TestDomainHandling",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDomainHandling(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDomainHandling(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#TestExpiration",
+              "documentation": {
+                "identifier": "TestExpiration",
+                "newPage": false,
+                "searchKey": "cookiejar.TestExpiration",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExpiration(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExpiration(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#TestHasDotSuffix",
+              "documentation": {
+                "identifier": "TestHasDotSuffix",
+                "newPage": false,
+                "searchKey": "cookiejar.TestHasDotSuffix",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHasDotSuffix(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHasDotSuffix(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#TestHasPort",
+              "documentation": {
+                "identifier": "TestHasPort",
+                "newPage": false,
+                "searchKey": "cookiejar.TestHasPort",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHasPort(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHasPort(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#TestIsIP",
+              "documentation": {
+                "identifier": "TestIsIP",
+                "newPage": false,
+                "searchKey": "cookiejar.TestIsIP",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIsIP(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIsIP(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#TestIssue19384",
+              "documentation": {
+                "identifier": "TestIssue19384",
+                "newPage": false,
+                "searchKey": "cookiejar.TestIssue19384",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue19384(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue19384(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#TestJarKey",
+              "documentation": {
+                "identifier": "TestJarKey",
+                "newPage": false,
+                "searchKey": "cookiejar.TestJarKey",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestJarKey(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestJarKey(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#TestJarKeyNilPSL",
+              "documentation": {
+                "identifier": "TestJarKeyNilPSL",
+                "newPage": false,
+                "searchKey": "cookiejar.TestJarKeyNilPSL",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestJarKeyNilPSL(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestJarKeyNilPSL(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#TestPunycode",
+              "documentation": {
+                "identifier": "TestPunycode",
+                "newPage": false,
+                "searchKey": "cookiejar.TestPunycode",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPunycode(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPunycode(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#TestUpdateAndDelete",
+              "documentation": {
+                "identifier": "TestUpdateAndDelete",
+                "newPage": false,
+                "searchKey": "cookiejar.TestUpdateAndDelete",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUpdateAndDelete(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUpdateAndDelete(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#adapt",
+              "documentation": {
+                "identifier": "adapt",
+                "newPage": false,
+                "searchKey": "cookiejar.adapt",
+                "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func hasDotSuffix(s, suffix string) bool"
+                "value": "func adapt(delta, numPoints int32, firstTime bool) int32"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc hasDotSuffix(s, suffix string) bool\n```\n\nhasDotSuffix reports whether s ends in \".\"+suffix. \n\n"
+                "value": "```Go\nfunc adapt(delta, numPoints int32, firstTime bool) int32\n```\n\nadapt is the bias adaptation function specified in section 6.1. \n\n"
               },
               "children": null
             }
@@ -1218,6 +1730,7 @@
                 "newPage": false,
                 "searchKey": "cookiejar.canonicalHost",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1234,78 +1747,13 @@
           },
           {
             "node": {
-              "pathID": "/net/http/cookiejar#hasPort",
-              "documentation": {
-                "identifier": "hasPort",
-                "newPage": false,
-                "searchKey": "cookiejar.hasPort",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func hasPort(host string) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc hasPort(host string) bool\n```\n\nhasPort reports whether host contains a port number. host may be a host name, an IPv4 or an IPv6 address. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#jarKey",
-              "documentation": {
-                "identifier": "jarKey",
-                "newPage": false,
-                "searchKey": "cookiejar.jarKey",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func jarKey(host string, psl PublicSuffixList) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc jarKey(host string, psl PublicSuffixList) string\n```\n\njarKey returns the key to use for a jar. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#isIP",
-              "documentation": {
-                "identifier": "isIP",
-                "newPage": false,
-                "searchKey": "cookiejar.isIP",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func isIP(host string) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc isIP(host string) bool\n```\n\nisIP reports whether host is an IP address. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/http/cookiejar#defaultPath",
               "documentation": {
                 "identifier": "defaultPath",
                 "newPage": false,
                 "searchKey": "cookiejar.defaultPath",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1328,6 +1776,7 @@
                 "newPage": false,
                 "searchKey": "cookiejar.encode",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1350,6 +1799,7 @@
                 "newPage": false,
                 "searchKey": "cookiejar.encodeDigit",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1366,232 +1816,13 @@
           },
           {
             "node": {
-              "pathID": "/net/http/cookiejar#adapt",
-              "documentation": {
-                "identifier": "adapt",
-                "newPage": false,
-                "searchKey": "cookiejar.adapt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func adapt(delta, numPoints int32, firstTime bool) int32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc adapt(delta, numPoints int32, firstTime bool) int32\n```\n\nadapt is the bias adaptation function specified in section 6.1. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#toASCII",
-              "documentation": {
-                "identifier": "toASCII",
-                "newPage": false,
-                "searchKey": "cookiejar.toASCII",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func toASCII(s string) (string, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc toASCII(s string) (string, error)\n```\n\ntoASCII converts a domain or domain label to its ASCII form. For example, toASCII(\"bücher.example.com\") is \"xn--bcher-kva.example.com\", and toASCII(\"golang\") is \"golang\". \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#TestHasDotSuffix",
-              "documentation": {
-                "identifier": "TestHasDotSuffix",
-                "newPage": false,
-                "searchKey": "cookiejar.TestHasDotSuffix",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestHasDotSuffix(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestHasDotSuffix(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#TestCanonicalHost",
-              "documentation": {
-                "identifier": "TestCanonicalHost",
-                "newPage": false,
-                "searchKey": "cookiejar.TestCanonicalHost",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCanonicalHost(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCanonicalHost(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#TestHasPort",
-              "documentation": {
-                "identifier": "TestHasPort",
-                "newPage": false,
-                "searchKey": "cookiejar.TestHasPort",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestHasPort(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestHasPort(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#TestJarKey",
-              "documentation": {
-                "identifier": "TestJarKey",
-                "newPage": false,
-                "searchKey": "cookiejar.TestJarKey",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestJarKey(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestJarKey(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#TestJarKeyNilPSL",
-              "documentation": {
-                "identifier": "TestJarKeyNilPSL",
-                "newPage": false,
-                "searchKey": "cookiejar.TestJarKeyNilPSL",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestJarKeyNilPSL(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestJarKeyNilPSL(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#TestIsIP",
-              "documentation": {
-                "identifier": "TestIsIP",
-                "newPage": false,
-                "searchKey": "cookiejar.TestIsIP",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIsIP(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIsIP(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#TestDefaultPath",
-              "documentation": {
-                "identifier": "TestDefaultPath",
-                "newPage": false,
-                "searchKey": "cookiejar.TestDefaultPath",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDefaultPath(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDefaultPath(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#TestDomainAndType",
-              "documentation": {
-                "identifier": "TestDomainAndType",
-                "newPage": false,
-                "searchKey": "cookiejar.TestDomainAndType",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDomainAndType(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDomainAndType(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/http/cookiejar#expiresIn",
               "documentation": {
                 "identifier": "expiresIn",
                 "newPage": false,
                 "searchKey": "cookiejar.expiresIn",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1608,12 +1839,105 @@
           },
           {
             "node": {
+              "pathID": "/net/http/cookiejar#hasDotSuffix",
+              "documentation": {
+                "identifier": "hasDotSuffix",
+                "newPage": false,
+                "searchKey": "cookiejar.hasDotSuffix",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hasDotSuffix(s, suffix string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hasDotSuffix(s, suffix string) bool\n```\n\nhasDotSuffix reports whether s ends in \".\"+suffix. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#hasPort",
+              "documentation": {
+                "identifier": "hasPort",
+                "newPage": false,
+                "searchKey": "cookiejar.hasPort",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hasPort(host string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hasPort(host string) bool\n```\n\nhasPort reports whether host contains a port number. host may be a host name, an IPv4 or an IPv6 address. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#isIP",
+              "documentation": {
+                "identifier": "isIP",
+                "newPage": false,
+                "searchKey": "cookiejar.isIP",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isIP(host string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isIP(host string) bool\n```\n\nisIP reports whether host is an IP address. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/cookiejar#jarKey",
+              "documentation": {
+                "identifier": "jarKey",
+                "newPage": false,
+                "searchKey": "cookiejar.jarKey",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func jarKey(host string, psl PublicSuffixList) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc jarKey(host string, psl PublicSuffixList) string\n```\n\njarKey returns the key to use for a jar. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/net/http/cookiejar#mustParseURL",
               "documentation": {
                 "identifier": "mustParseURL",
                 "newPage": false,
                 "searchKey": "cookiejar.mustParseURL",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1630,198 +1954,23 @@
           },
           {
             "node": {
-              "pathID": "/net/http/cookiejar#TestBasics",
+              "pathID": "/net/http/cookiejar#toASCII",
               "documentation": {
-                "identifier": "TestBasics",
+                "identifier": "toASCII",
                 "newPage": false,
-                "searchKey": "cookiejar.TestBasics",
+                "searchKey": "cookiejar.toASCII",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestBasics(t *testing.T)"
+                "value": "func toASCII(s string) (string, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestBasics(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#TestUpdateAndDelete",
-              "documentation": {
-                "identifier": "TestUpdateAndDelete",
-                "newPage": false,
-                "searchKey": "cookiejar.TestUpdateAndDelete",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUpdateAndDelete(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUpdateAndDelete(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#TestExpiration",
-              "documentation": {
-                "identifier": "TestExpiration",
-                "newPage": false,
-                "searchKey": "cookiejar.TestExpiration",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestExpiration(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestExpiration(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#TestChromiumBasics",
-              "documentation": {
-                "identifier": "TestChromiumBasics",
-                "newPage": false,
-                "searchKey": "cookiejar.TestChromiumBasics",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestChromiumBasics(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestChromiumBasics(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#TestChromiumDomain",
-              "documentation": {
-                "identifier": "TestChromiumDomain",
-                "newPage": false,
-                "searchKey": "cookiejar.TestChromiumDomain",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestChromiumDomain(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestChromiumDomain(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#TestChromiumDeletion",
-              "documentation": {
-                "identifier": "TestChromiumDeletion",
-                "newPage": false,
-                "searchKey": "cookiejar.TestChromiumDeletion",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestChromiumDeletion(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestChromiumDeletion(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#TestDomainHandling",
-              "documentation": {
-                "identifier": "TestDomainHandling",
-                "newPage": false,
-                "searchKey": "cookiejar.TestDomainHandling",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDomainHandling(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDomainHandling(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#TestIssue19384",
-              "documentation": {
-                "identifier": "TestIssue19384",
-                "newPage": false,
-                "searchKey": "cookiejar.TestIssue19384",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIssue19384(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIssue19384(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/cookiejar#TestPunycode",
-              "documentation": {
-                "identifier": "TestPunycode",
-                "newPage": false,
-                "searchKey": "cookiejar.TestPunycode",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestPunycode(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestPunycode(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc toASCII(s string) (string, error)\n```\n\ntoASCII converts a domain or domain label to its ASCII form. For example, toASCII(\"bücher.example.com\") is \"xn--bcher-kva.example.com\", and toASCII(\"golang\") is \"golang\". \n\n"
               },
               "children": null
             }

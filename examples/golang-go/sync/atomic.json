@@ -4,7 +4,9 @@
     "identifier": "atomic",
     "newPage": true,
     "searchKey": "sync/atomic",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "Value",
                 "newPage": false,
                 "searchKey": "atomic.Value",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -53,12 +59,36 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/sync/atomic#Value.CompareAndSwap",
+                    "documentation": {
+                      "identifier": "Value.CompareAndSwap",
+                      "newPage": false,
+                      "searchKey": "atomic.Value.CompareAndSwap",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Value) CompareAndSwap(old, new interface{}) (swapped bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Value) CompareAndSwap(old, new interface{}) (swapped bool)\n```\n\nCompareAndSwapPointer executes the compare-and-swap operation for the Value. \n\nAll calls to CompareAndSwap for a given Value must use values of the same concrete type. CompareAndSwap of an inconsistent type panics, as does CompareAndSwap(old, nil). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/sync/atomic#Value.Load",
                     "documentation": {
                       "identifier": "Value.Load",
                       "newPage": false,
                       "searchKey": "atomic.Value.Load",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -78,7 +108,9 @@
                       "identifier": "Value.Store",
                       "newPage": false,
                       "searchKey": "atomic.Value.Store",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -98,7 +130,9 @@
                       "identifier": "Value.Swap",
                       "newPage": false,
                       "searchKey": "atomic.Value.Swap",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -107,26 +141,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (v *Value) Swap(new interface{}) (old interface{})\n```\n\nSwap stores new into Value and returns the previous value. It returns nil if the Value is empty. \n\nAll calls to Swap for a given Value must use values of the same concrete type. Swap of an inconsistent type panics, as does Swap(nil). \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/sync/atomic#Value.CompareAndSwap",
-                    "documentation": {
-                      "identifier": "Value.CompareAndSwap",
-                      "newPage": false,
-                      "searchKey": "atomic.Value.CompareAndSwap",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *Value) CompareAndSwap(old, new interface{}) (swapped bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *Value) CompareAndSwap(old, new interface{}) (swapped bool)\n```\n\nCompareAndSwapPointer executes the compare-and-swap operation for the Value. \n\nAll calls to CompareAndSwap for a given Value must use values of the same concrete type. CompareAndSwap of an inconsistent type panics, as does CompareAndSwap(old, nil). \n\n"
                     },
                     "children": null
                   }
@@ -142,6 +156,7 @@
                 "newPage": false,
                 "searchKey": "atomic.ifaceWords",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -166,7 +181,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -179,252 +196,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/sync/atomic#SwapInt32",
-              "documentation": {
-                "identifier": "SwapInt32",
-                "newPage": false,
-                "searchKey": "atomic.SwapInt32",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SwapInt32(addr *int32, new int32) (old int32)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SwapInt32(addr *int32, new int32) (old int32)\n```\n\nSwapInt32 atomically stores new into *addr and returns the previous *addr value. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync/atomic#SwapInt64",
-              "documentation": {
-                "identifier": "SwapInt64",
-                "newPage": false,
-                "searchKey": "atomic.SwapInt64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SwapInt64(addr *int64, new int64) (old int64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SwapInt64(addr *int64, new int64) (old int64)\n```\n\nSwapInt64 atomically stores new into *addr and returns the previous *addr value. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync/atomic#SwapUint32",
-              "documentation": {
-                "identifier": "SwapUint32",
-                "newPage": false,
-                "searchKey": "atomic.SwapUint32",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SwapUint32(addr *uint32, new uint32) (old uint32)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SwapUint32(addr *uint32, new uint32) (old uint32)\n```\n\nSwapUint32 atomically stores new into *addr and returns the previous *addr value. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync/atomic#SwapUint64",
-              "documentation": {
-                "identifier": "SwapUint64",
-                "newPage": false,
-                "searchKey": "atomic.SwapUint64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SwapUint64(addr *uint64, new uint64) (old uint64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SwapUint64(addr *uint64, new uint64) (old uint64)\n```\n\nSwapUint64 atomically stores new into *addr and returns the previous *addr value. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync/atomic#SwapUintptr",
-              "documentation": {
-                "identifier": "SwapUintptr",
-                "newPage": false,
-                "searchKey": "atomic.SwapUintptr",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SwapUintptr(addr *uintptr, new uintptr) (old uintptr)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SwapUintptr(addr *uintptr, new uintptr) (old uintptr)\n```\n\nSwapUintptr atomically stores new into *addr and returns the previous *addr value. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync/atomic#SwapPointer",
-              "documentation": {
-                "identifier": "SwapPointer",
-                "newPage": false,
-                "searchKey": "atomic.SwapPointer",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SwapPointer(addr *unsafe.Pointer, new unsafe.Pointer) (old unsafe.Pointer)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SwapPointer(addr *unsafe.Pointer, new unsafe.Pointer) (old unsafe.Pointer)\n```\n\nSwapPointer atomically stores new into *addr and returns the previous *addr value. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync/atomic#CompareAndSwapInt32",
-              "documentation": {
-                "identifier": "CompareAndSwapInt32",
-                "newPage": false,
-                "searchKey": "atomic.CompareAndSwapInt32",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func CompareAndSwapInt32(addr *int32, old, new int32) (swapped bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc CompareAndSwapInt32(addr *int32, old, new int32) (swapped bool)\n```\n\nCompareAndSwapInt32 executes the compare-and-swap operation for an int32 value. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync/atomic#CompareAndSwapInt64",
-              "documentation": {
-                "identifier": "CompareAndSwapInt64",
-                "newPage": false,
-                "searchKey": "atomic.CompareAndSwapInt64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func CompareAndSwapInt64(addr *int64, old, new int64) (swapped bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc CompareAndSwapInt64(addr *int64, old, new int64) (swapped bool)\n```\n\nCompareAndSwapInt64 executes the compare-and-swap operation for an int64 value. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync/atomic#CompareAndSwapUint32",
-              "documentation": {
-                "identifier": "CompareAndSwapUint32",
-                "newPage": false,
-                "searchKey": "atomic.CompareAndSwapUint32",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func CompareAndSwapUint32(addr *uint32, old, new uint32) (swapped bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc CompareAndSwapUint32(addr *uint32, old, new uint32) (swapped bool)\n```\n\nCompareAndSwapUint32 executes the compare-and-swap operation for a uint32 value. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync/atomic#CompareAndSwapUint64",
-              "documentation": {
-                "identifier": "CompareAndSwapUint64",
-                "newPage": false,
-                "searchKey": "atomic.CompareAndSwapUint64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func CompareAndSwapUint64(addr *uint64, old, new uint64) (swapped bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc CompareAndSwapUint64(addr *uint64, old, new uint64) (swapped bool)\n```\n\nCompareAndSwapUint64 executes the compare-and-swap operation for a uint64 value. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync/atomic#CompareAndSwapUintptr",
-              "documentation": {
-                "identifier": "CompareAndSwapUintptr",
-                "newPage": false,
-                "searchKey": "atomic.CompareAndSwapUintptr",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func CompareAndSwapUintptr(addr *uintptr, old, new uintptr) (swapped bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc CompareAndSwapUintptr(addr *uintptr, old, new uintptr) (swapped bool)\n```\n\nCompareAndSwapUintptr executes the compare-and-swap operation for a uintptr value. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/sync/atomic#CompareAndSwapPointer",
-              "documentation": {
-                "identifier": "CompareAndSwapPointer",
-                "newPage": false,
-                "searchKey": "atomic.CompareAndSwapPointer",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func CompareAndSwapPointer(addr *unsafe.Pointer, old, new unsafe.Pointer) (swapped bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc CompareAndSwapPointer(addr *unsafe.Pointer, old, new unsafe.Pointer) (swapped bool)\n```\n\nCompareAndSwapPointer executes the compare-and-swap operation for a unsafe.Pointer value. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/sync/atomic#AddInt32",
               "documentation": {
                 "identifier": "AddInt32",
                 "newPage": false,
                 "searchKey": "atomic.AddInt32",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -439,32 +218,14 @@
           },
           {
             "node": {
-              "pathID": "/sync/atomic#AddUint32",
-              "documentation": {
-                "identifier": "AddUint32",
-                "newPage": false,
-                "searchKey": "atomic.AddUint32",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func AddUint32(addr *uint32, delta uint32) (new uint32)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc AddUint32(addr *uint32, delta uint32) (new uint32)\n```\n\nAddUint32 atomically adds delta to *addr and returns the new value. To subtract a signed positive constant value c from x, do AddUint32(&x, ^uint32(c-1)). In particular, to decrement x, do AddUint32(&x, ^uint32(0)). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/sync/atomic#AddInt64",
               "documentation": {
                 "identifier": "AddInt64",
                 "newPage": false,
                 "searchKey": "atomic.AddInt64",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -479,12 +240,36 @@
           },
           {
             "node": {
+              "pathID": "/sync/atomic#AddUint32",
+              "documentation": {
+                "identifier": "AddUint32",
+                "newPage": false,
+                "searchKey": "atomic.AddUint32",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AddUint32(addr *uint32, delta uint32) (new uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AddUint32(addr *uint32, delta uint32) (new uint32)\n```\n\nAddUint32 atomically adds delta to *addr and returns the new value. To subtract a signed positive constant value c from x, do AddUint32(&x, ^uint32(c-1)). In particular, to decrement x, do AddUint32(&x, ^uint32(0)). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/sync/atomic#AddUint64",
               "documentation": {
                 "identifier": "AddUint64",
                 "newPage": false,
                 "searchKey": "atomic.AddUint64",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -504,7 +289,9 @@
                 "identifier": "AddUintptr",
                 "newPage": false,
                 "searchKey": "atomic.AddUintptr",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -519,12 +306,146 @@
           },
           {
             "node": {
+              "pathID": "/sync/atomic#CompareAndSwapInt32",
+              "documentation": {
+                "identifier": "CompareAndSwapInt32",
+                "newPage": false,
+                "searchKey": "atomic.CompareAndSwapInt32",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CompareAndSwapInt32(addr *int32, old, new int32) (swapped bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CompareAndSwapInt32(addr *int32, old, new int32) (swapped bool)\n```\n\nCompareAndSwapInt32 executes the compare-and-swap operation for an int32 value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync/atomic#CompareAndSwapInt64",
+              "documentation": {
+                "identifier": "CompareAndSwapInt64",
+                "newPage": false,
+                "searchKey": "atomic.CompareAndSwapInt64",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CompareAndSwapInt64(addr *int64, old, new int64) (swapped bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CompareAndSwapInt64(addr *int64, old, new int64) (swapped bool)\n```\n\nCompareAndSwapInt64 executes the compare-and-swap operation for an int64 value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync/atomic#CompareAndSwapPointer",
+              "documentation": {
+                "identifier": "CompareAndSwapPointer",
+                "newPage": false,
+                "searchKey": "atomic.CompareAndSwapPointer",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CompareAndSwapPointer(addr *unsafe.Pointer, old, new unsafe.Pointer) (swapped bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CompareAndSwapPointer(addr *unsafe.Pointer, old, new unsafe.Pointer) (swapped bool)\n```\n\nCompareAndSwapPointer executes the compare-and-swap operation for a unsafe.Pointer value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync/atomic#CompareAndSwapUint32",
+              "documentation": {
+                "identifier": "CompareAndSwapUint32",
+                "newPage": false,
+                "searchKey": "atomic.CompareAndSwapUint32",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CompareAndSwapUint32(addr *uint32, old, new uint32) (swapped bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CompareAndSwapUint32(addr *uint32, old, new uint32) (swapped bool)\n```\n\nCompareAndSwapUint32 executes the compare-and-swap operation for a uint32 value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync/atomic#CompareAndSwapUint64",
+              "documentation": {
+                "identifier": "CompareAndSwapUint64",
+                "newPage": false,
+                "searchKey": "atomic.CompareAndSwapUint64",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CompareAndSwapUint64(addr *uint64, old, new uint64) (swapped bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CompareAndSwapUint64(addr *uint64, old, new uint64) (swapped bool)\n```\n\nCompareAndSwapUint64 executes the compare-and-swap operation for a uint64 value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync/atomic#CompareAndSwapUintptr",
+              "documentation": {
+                "identifier": "CompareAndSwapUintptr",
+                "newPage": false,
+                "searchKey": "atomic.CompareAndSwapUintptr",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CompareAndSwapUintptr(addr *uintptr, old, new uintptr) (swapped bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CompareAndSwapUintptr(addr *uintptr, old, new uintptr) (swapped bool)\n```\n\nCompareAndSwapUintptr executes the compare-and-swap operation for a uintptr value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/sync/atomic#LoadInt32",
               "documentation": {
                 "identifier": "LoadInt32",
                 "newPage": false,
                 "searchKey": "atomic.LoadInt32",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -544,7 +465,9 @@
                 "identifier": "LoadInt64",
                 "newPage": false,
                 "searchKey": "atomic.LoadInt64",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -559,12 +482,36 @@
           },
           {
             "node": {
+              "pathID": "/sync/atomic#LoadPointer",
+              "documentation": {
+                "identifier": "LoadPointer",
+                "newPage": false,
+                "searchKey": "atomic.LoadPointer",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func LoadPointer(addr *unsafe.Pointer) (val unsafe.Pointer)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc LoadPointer(addr *unsafe.Pointer) (val unsafe.Pointer)\n```\n\nLoadPointer atomically loads *addr. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/sync/atomic#LoadUint32",
               "documentation": {
                 "identifier": "LoadUint32",
                 "newPage": false,
                 "searchKey": "atomic.LoadUint32",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -584,7 +531,9 @@
                 "identifier": "LoadUint64",
                 "newPage": false,
                 "searchKey": "atomic.LoadUint64",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -604,7 +553,9 @@
                 "identifier": "LoadUintptr",
                 "newPage": false,
                 "searchKey": "atomic.LoadUintptr",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -619,32 +570,14 @@
           },
           {
             "node": {
-              "pathID": "/sync/atomic#LoadPointer",
-              "documentation": {
-                "identifier": "LoadPointer",
-                "newPage": false,
-                "searchKey": "atomic.LoadPointer",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func LoadPointer(addr *unsafe.Pointer) (val unsafe.Pointer)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc LoadPointer(addr *unsafe.Pointer) (val unsafe.Pointer)\n```\n\nLoadPointer atomically loads *addr. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/sync/atomic#StoreInt32",
               "documentation": {
                 "identifier": "StoreInt32",
                 "newPage": false,
                 "searchKey": "atomic.StoreInt32",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -664,7 +597,9 @@
                 "identifier": "StoreInt64",
                 "newPage": false,
                 "searchKey": "atomic.StoreInt64",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -679,12 +614,36 @@
           },
           {
             "node": {
+              "pathID": "/sync/atomic#StorePointer",
+              "documentation": {
+                "identifier": "StorePointer",
+                "newPage": false,
+                "searchKey": "atomic.StorePointer",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func StorePointer(addr *unsafe.Pointer, val unsafe.Pointer)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc StorePointer(addr *unsafe.Pointer, val unsafe.Pointer)\n```\n\nStorePointer atomically stores val into *addr. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/sync/atomic#StoreUint32",
               "documentation": {
                 "identifier": "StoreUint32",
                 "newPage": false,
                 "searchKey": "atomic.StoreUint32",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -704,7 +663,9 @@
                 "identifier": "StoreUint64",
                 "newPage": false,
                 "searchKey": "atomic.StoreUint64",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -724,7 +685,9 @@
                 "identifier": "StoreUintptr",
                 "newPage": false,
                 "searchKey": "atomic.StoreUintptr",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -739,20 +702,132 @@
           },
           {
             "node": {
-              "pathID": "/sync/atomic#StorePointer",
+              "pathID": "/sync/atomic#SwapInt32",
               "documentation": {
-                "identifier": "StorePointer",
+                "identifier": "SwapInt32",
                 "newPage": false,
-                "searchKey": "atomic.StorePointer",
-                "tags": null
+                "searchKey": "atomic.SwapInt32",
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func StorePointer(addr *unsafe.Pointer, val unsafe.Pointer)"
+                "value": "func SwapInt32(addr *int32, new int32) (old int32)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc StorePointer(addr *unsafe.Pointer, val unsafe.Pointer)\n```\n\nStorePointer atomically stores val into *addr. \n\n"
+                "value": "```Go\nfunc SwapInt32(addr *int32, new int32) (old int32)\n```\n\nSwapInt32 atomically stores new into *addr and returns the previous *addr value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync/atomic#SwapInt64",
+              "documentation": {
+                "identifier": "SwapInt64",
+                "newPage": false,
+                "searchKey": "atomic.SwapInt64",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SwapInt64(addr *int64, new int64) (old int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SwapInt64(addr *int64, new int64) (old int64)\n```\n\nSwapInt64 atomically stores new into *addr and returns the previous *addr value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync/atomic#SwapPointer",
+              "documentation": {
+                "identifier": "SwapPointer",
+                "newPage": false,
+                "searchKey": "atomic.SwapPointer",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SwapPointer(addr *unsafe.Pointer, new unsafe.Pointer) (old unsafe.Pointer)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SwapPointer(addr *unsafe.Pointer, new unsafe.Pointer) (old unsafe.Pointer)\n```\n\nSwapPointer atomically stores new into *addr and returns the previous *addr value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync/atomic#SwapUint32",
+              "documentation": {
+                "identifier": "SwapUint32",
+                "newPage": false,
+                "searchKey": "atomic.SwapUint32",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SwapUint32(addr *uint32, new uint32) (old uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SwapUint32(addr *uint32, new uint32) (old uint32)\n```\n\nSwapUint32 atomically stores new into *addr and returns the previous *addr value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync/atomic#SwapUint64",
+              "documentation": {
+                "identifier": "SwapUint64",
+                "newPage": false,
+                "searchKey": "atomic.SwapUint64",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SwapUint64(addr *uint64, new uint64) (old uint64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SwapUint64(addr *uint64, new uint64) (old uint64)\n```\n\nSwapUint64 atomically stores new into *addr and returns the previous *addr value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/sync/atomic#SwapUintptr",
+              "documentation": {
+                "identifier": "SwapUintptr",
+                "newPage": false,
+                "searchKey": "atomic.SwapUintptr",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SwapUintptr(addr *uintptr, new uintptr) (old uintptr)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SwapUintptr(addr *uintptr, new uintptr) (old uintptr)\n```\n\nSwapUintptr atomically stores new into *addr and returns the previous *addr value. \n\n"
               },
               "children": null
             }
@@ -765,6 +840,7 @@
                 "newPage": false,
                 "searchKey": "atomic.runtime_procPin",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -787,6 +863,7 @@
                 "newPage": false,
                 "searchKey": "atomic.runtime_procUnpin",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },

@@ -5,423 +5,58 @@ Package elf implements access to ELF object files.
 ## Index
 
 * [Constants](#const)
-    * [const EI_CLASS](#EI_CLASS)
-    * [const EI_DATA](#EI_DATA)
-    * [const EI_VERSION](#EI_VERSION)
-    * [const EI_OSABI](#EI_OSABI)
-    * [const EI_ABIVERSION](#EI_ABIVERSION)
-    * [const EI_PAD](#EI_PAD)
-    * [const EI_NIDENT](#EI_NIDENT)
-    * [const ELFMAG](#ELFMAG)
-    * [const EV_NONE](#EV_NONE)
-    * [const EV_CURRENT](#EV_CURRENT)
-    * [const ELFCLASSNONE](#ELFCLASSNONE)
-    * [const ELFCLASS32](#ELFCLASS32)
-    * [const ELFCLASS64](#ELFCLASS64)
-    * [const ELFDATANONE](#ELFDATANONE)
-    * [const ELFDATA2LSB](#ELFDATA2LSB)
-    * [const ELFDATA2MSB](#ELFDATA2MSB)
-    * [const ELFOSABI_NONE](#ELFOSABI_NONE)
-    * [const ELFOSABI_HPUX](#ELFOSABI_HPUX)
-    * [const ELFOSABI_NETBSD](#ELFOSABI_NETBSD)
-    * [const ELFOSABI_LINUX](#ELFOSABI_LINUX)
-    * [const ELFOSABI_HURD](#ELFOSABI_HURD)
-    * [const ELFOSABI_86OPEN](#ELFOSABI_86OPEN)
-    * [const ELFOSABI_SOLARIS](#ELFOSABI_SOLARIS)
-    * [const ELFOSABI_AIX](#ELFOSABI_AIX)
-    * [const ELFOSABI_IRIX](#ELFOSABI_IRIX)
-    * [const ELFOSABI_FREEBSD](#ELFOSABI_FREEBSD)
-    * [const ELFOSABI_TRU64](#ELFOSABI_TRU64)
-    * [const ELFOSABI_MODESTO](#ELFOSABI_MODESTO)
-    * [const ELFOSABI_OPENBSD](#ELFOSABI_OPENBSD)
-    * [const ELFOSABI_OPENVMS](#ELFOSABI_OPENVMS)
-    * [const ELFOSABI_NSK](#ELFOSABI_NSK)
-    * [const ELFOSABI_AROS](#ELFOSABI_AROS)
-    * [const ELFOSABI_FENIXOS](#ELFOSABI_FENIXOS)
-    * [const ELFOSABI_CLOUDABI](#ELFOSABI_CLOUDABI)
-    * [const ELFOSABI_ARM](#ELFOSABI_ARM)
-    * [const ELFOSABI_STANDALONE](#ELFOSABI_STANDALONE)
-    * [const ET_NONE](#ET_NONE)
-    * [const ET_REL](#ET_REL)
-    * [const ET_EXEC](#ET_EXEC)
-    * [const ET_DYN](#ET_DYN)
-    * [const ET_CORE](#ET_CORE)
-    * [const ET_LOOS](#ET_LOOS)
-    * [const ET_HIOS](#ET_HIOS)
-    * [const ET_LOPROC](#ET_LOPROC)
-    * [const ET_HIPROC](#ET_HIPROC)
-    * [const EM_NONE](#EM_NONE)
-    * [const EM_M32](#EM_M32)
-    * [const EM_SPARC](#EM_SPARC)
-    * [const EM_386](#EM_386)
-    * [const EM_68K](#EM_68K)
-    * [const EM_88K](#EM_88K)
-    * [const EM_860](#EM_860)
-    * [const EM_MIPS](#EM_MIPS)
-    * [const EM_S370](#EM_S370)
-    * [const EM_MIPS_RS3_LE](#EM_MIPS_RS3_LE)
-    * [const EM_PARISC](#EM_PARISC)
-    * [const EM_VPP500](#EM_VPP500)
-    * [const EM_SPARC32PLUS](#EM_SPARC32PLUS)
-    * [const EM_960](#EM_960)
-    * [const EM_PPC](#EM_PPC)
-    * [const EM_PPC64](#EM_PPC64)
-    * [const EM_S390](#EM_S390)
-    * [const EM_V800](#EM_V800)
-    * [const EM_FR20](#EM_FR20)
-    * [const EM_RH32](#EM_RH32)
-    * [const EM_RCE](#EM_RCE)
-    * [const EM_ARM](#EM_ARM)
-    * [const EM_SH](#EM_SH)
-    * [const EM_SPARCV9](#EM_SPARCV9)
-    * [const EM_TRICORE](#EM_TRICORE)
-    * [const EM_ARC](#EM_ARC)
-    * [const EM_H8_300](#EM_H8_300)
-    * [const EM_H8_300H](#EM_H8_300H)
-    * [const EM_H8S](#EM_H8S)
-    * [const EM_H8_500](#EM_H8_500)
-    * [const EM_IA_64](#EM_IA_64)
-    * [const EM_MIPS_X](#EM_MIPS_X)
-    * [const EM_COLDFIRE](#EM_COLDFIRE)
-    * [const EM_68HC12](#EM_68HC12)
-    * [const EM_MMA](#EM_MMA)
-    * [const EM_PCP](#EM_PCP)
-    * [const EM_NCPU](#EM_NCPU)
-    * [const EM_NDR1](#EM_NDR1)
-    * [const EM_STARCORE](#EM_STARCORE)
-    * [const EM_ME16](#EM_ME16)
-    * [const EM_ST100](#EM_ST100)
-    * [const EM_TINYJ](#EM_TINYJ)
-    * [const EM_X86_64](#EM_X86_64)
-    * [const EM_PDSP](#EM_PDSP)
-    * [const EM_PDP10](#EM_PDP10)
-    * [const EM_PDP11](#EM_PDP11)
-    * [const EM_FX66](#EM_FX66)
-    * [const EM_ST9PLUS](#EM_ST9PLUS)
-    * [const EM_ST7](#EM_ST7)
-    * [const EM_68HC16](#EM_68HC16)
-    * [const EM_68HC11](#EM_68HC11)
-    * [const EM_68HC08](#EM_68HC08)
-    * [const EM_68HC05](#EM_68HC05)
-    * [const EM_SVX](#EM_SVX)
-    * [const EM_ST19](#EM_ST19)
-    * [const EM_VAX](#EM_VAX)
-    * [const EM_CRIS](#EM_CRIS)
-    * [const EM_JAVELIN](#EM_JAVELIN)
-    * [const EM_FIREPATH](#EM_FIREPATH)
-    * [const EM_ZSP](#EM_ZSP)
-    * [const EM_MMIX](#EM_MMIX)
-    * [const EM_HUANY](#EM_HUANY)
-    * [const EM_PRISM](#EM_PRISM)
-    * [const EM_AVR](#EM_AVR)
-    * [const EM_FR30](#EM_FR30)
-    * [const EM_D10V](#EM_D10V)
-    * [const EM_D30V](#EM_D30V)
-    * [const EM_V850](#EM_V850)
-    * [const EM_M32R](#EM_M32R)
-    * [const EM_MN10300](#EM_MN10300)
-    * [const EM_MN10200](#EM_MN10200)
-    * [const EM_PJ](#EM_PJ)
-    * [const EM_OPENRISC](#EM_OPENRISC)
-    * [const EM_ARC_COMPACT](#EM_ARC_COMPACT)
-    * [const EM_XTENSA](#EM_XTENSA)
-    * [const EM_VIDEOCORE](#EM_VIDEOCORE)
-    * [const EM_TMM_GPP](#EM_TMM_GPP)
-    * [const EM_NS32K](#EM_NS32K)
-    * [const EM_TPC](#EM_TPC)
-    * [const EM_SNP1K](#EM_SNP1K)
-    * [const EM_ST200](#EM_ST200)
-    * [const EM_IP2K](#EM_IP2K)
-    * [const EM_MAX](#EM_MAX)
-    * [const EM_CR](#EM_CR)
-    * [const EM_F2MC16](#EM_F2MC16)
-    * [const EM_MSP430](#EM_MSP430)
-    * [const EM_BLACKFIN](#EM_BLACKFIN)
-    * [const EM_SE_C33](#EM_SE_C33)
-    * [const EM_SEP](#EM_SEP)
-    * [const EM_ARCA](#EM_ARCA)
-    * [const EM_UNICORE](#EM_UNICORE)
-    * [const EM_EXCESS](#EM_EXCESS)
-    * [const EM_DXP](#EM_DXP)
-    * [const EM_ALTERA_NIOS2](#EM_ALTERA_NIOS2)
-    * [const EM_CRX](#EM_CRX)
-    * [const EM_XGATE](#EM_XGATE)
-    * [const EM_C166](#EM_C166)
-    * [const EM_M16C](#EM_M16C)
-    * [const EM_DSPIC30F](#EM_DSPIC30F)
-    * [const EM_CE](#EM_CE)
-    * [const EM_M32C](#EM_M32C)
-    * [const EM_TSK3000](#EM_TSK3000)
-    * [const EM_RS08](#EM_RS08)
-    * [const EM_SHARC](#EM_SHARC)
-    * [const EM_ECOG2](#EM_ECOG2)
-    * [const EM_SCORE7](#EM_SCORE7)
-    * [const EM_DSP24](#EM_DSP24)
-    * [const EM_VIDEOCORE3](#EM_VIDEOCORE3)
-    * [const EM_LATTICEMICO32](#EM_LATTICEMICO32)
-    * [const EM_SE_C17](#EM_SE_C17)
-    * [const EM_TI_C6000](#EM_TI_C6000)
-    * [const EM_TI_C2000](#EM_TI_C2000)
-    * [const EM_TI_C5500](#EM_TI_C5500)
-    * [const EM_TI_ARP32](#EM_TI_ARP32)
-    * [const EM_TI_PRU](#EM_TI_PRU)
-    * [const EM_MMDSP_PLUS](#EM_MMDSP_PLUS)
-    * [const EM_CYPRESS_M8C](#EM_CYPRESS_M8C)
-    * [const EM_R32C](#EM_R32C)
-    * [const EM_TRIMEDIA](#EM_TRIMEDIA)
-    * [const EM_QDSP6](#EM_QDSP6)
-    * [const EM_8051](#EM_8051)
-    * [const EM_STXP7X](#EM_STXP7X)
-    * [const EM_NDS32](#EM_NDS32)
-    * [const EM_ECOG1](#EM_ECOG1)
-    * [const EM_ECOG1X](#EM_ECOG1X)
-    * [const EM_MAXQ30](#EM_MAXQ30)
-    * [const EM_XIMO16](#EM_XIMO16)
-    * [const EM_MANIK](#EM_MANIK)
-    * [const EM_CRAYNV2](#EM_CRAYNV2)
-    * [const EM_RX](#EM_RX)
-    * [const EM_METAG](#EM_METAG)
-    * [const EM_MCST_ELBRUS](#EM_MCST_ELBRUS)
-    * [const EM_ECOG16](#EM_ECOG16)
-    * [const EM_CR16](#EM_CR16)
-    * [const EM_ETPU](#EM_ETPU)
-    * [const EM_SLE9X](#EM_SLE9X)
-    * [const EM_L10M](#EM_L10M)
-    * [const EM_K10M](#EM_K10M)
-    * [const EM_AARCH64](#EM_AARCH64)
-    * [const EM_AVR32](#EM_AVR32)
-    * [const EM_STM8](#EM_STM8)
-    * [const EM_TILE64](#EM_TILE64)
-    * [const EM_TILEPRO](#EM_TILEPRO)
-    * [const EM_MICROBLAZE](#EM_MICROBLAZE)
-    * [const EM_CUDA](#EM_CUDA)
-    * [const EM_TILEGX](#EM_TILEGX)
-    * [const EM_CLOUDSHIELD](#EM_CLOUDSHIELD)
-    * [const EM_COREA_1ST](#EM_COREA_1ST)
-    * [const EM_COREA_2ND](#EM_COREA_2ND)
-    * [const EM_ARC_COMPACT2](#EM_ARC_COMPACT2)
-    * [const EM_OPEN8](#EM_OPEN8)
-    * [const EM_RL78](#EM_RL78)
-    * [const EM_VIDEOCORE5](#EM_VIDEOCORE5)
-    * [const EM_78KOR](#EM_78KOR)
-    * [const EM_56800EX](#EM_56800EX)
-    * [const EM_BA1](#EM_BA1)
-    * [const EM_BA2](#EM_BA2)
-    * [const EM_XCORE](#EM_XCORE)
-    * [const EM_MCHP_PIC](#EM_MCHP_PIC)
-    * [const EM_INTEL205](#EM_INTEL205)
-    * [const EM_INTEL206](#EM_INTEL206)
-    * [const EM_INTEL207](#EM_INTEL207)
-    * [const EM_INTEL208](#EM_INTEL208)
-    * [const EM_INTEL209](#EM_INTEL209)
-    * [const EM_KM32](#EM_KM32)
-    * [const EM_KMX32](#EM_KMX32)
-    * [const EM_KMX16](#EM_KMX16)
-    * [const EM_KMX8](#EM_KMX8)
-    * [const EM_KVARC](#EM_KVARC)
-    * [const EM_CDP](#EM_CDP)
-    * [const EM_COGE](#EM_COGE)
-    * [const EM_COOL](#EM_COOL)
-    * [const EM_NORC](#EM_NORC)
-    * [const EM_CSR_KALIMBA](#EM_CSR_KALIMBA)
-    * [const EM_Z80](#EM_Z80)
-    * [const EM_VISIUM](#EM_VISIUM)
-    * [const EM_FT32](#EM_FT32)
-    * [const EM_MOXIE](#EM_MOXIE)
-    * [const EM_AMDGPU](#EM_AMDGPU)
-    * [const EM_RISCV](#EM_RISCV)
-    * [const EM_LANAI](#EM_LANAI)
-    * [const EM_BPF](#EM_BPF)
-    * [const EM_486](#EM_486)
-    * [const EM_MIPS_RS4_BE](#EM_MIPS_RS4_BE)
-    * [const EM_ALPHA_STD](#EM_ALPHA_STD)
-    * [const EM_ALPHA](#EM_ALPHA)
-    * [const SHN_UNDEF](#SHN_UNDEF)
-    * [const SHN_LORESERVE](#SHN_LORESERVE)
-    * [const SHN_LOPROC](#SHN_LOPROC)
-    * [const SHN_HIPROC](#SHN_HIPROC)
-    * [const SHN_LOOS](#SHN_LOOS)
-    * [const SHN_HIOS](#SHN_HIOS)
-    * [const SHN_ABS](#SHN_ABS)
-    * [const SHN_COMMON](#SHN_COMMON)
-    * [const SHN_XINDEX](#SHN_XINDEX)
-    * [const SHN_HIRESERVE](#SHN_HIRESERVE)
-    * [const SHT_NULL](#SHT_NULL)
-    * [const SHT_PROGBITS](#SHT_PROGBITS)
-    * [const SHT_SYMTAB](#SHT_SYMTAB)
-    * [const SHT_STRTAB](#SHT_STRTAB)
-    * [const SHT_RELA](#SHT_RELA)
-    * [const SHT_HASH](#SHT_HASH)
-    * [const SHT_DYNAMIC](#SHT_DYNAMIC)
-    * [const SHT_NOTE](#SHT_NOTE)
-    * [const SHT_NOBITS](#SHT_NOBITS)
-    * [const SHT_REL](#SHT_REL)
-    * [const SHT_SHLIB](#SHT_SHLIB)
-    * [const SHT_DYNSYM](#SHT_DYNSYM)
-    * [const SHT_INIT_ARRAY](#SHT_INIT_ARRAY)
-    * [const SHT_FINI_ARRAY](#SHT_FINI_ARRAY)
-    * [const SHT_PREINIT_ARRAY](#SHT_PREINIT_ARRAY)
-    * [const SHT_GROUP](#SHT_GROUP)
-    * [const SHT_SYMTAB_SHNDX](#SHT_SYMTAB_SHNDX)
-    * [const SHT_LOOS](#SHT_LOOS)
-    * [const SHT_GNU_ATTRIBUTES](#SHT_GNU_ATTRIBUTES)
-    * [const SHT_GNU_HASH](#SHT_GNU_HASH)
-    * [const SHT_GNU_LIBLIST](#SHT_GNU_LIBLIST)
-    * [const SHT_GNU_VERDEF](#SHT_GNU_VERDEF)
-    * [const SHT_GNU_VERNEED](#SHT_GNU_VERNEED)
-    * [const SHT_GNU_VERSYM](#SHT_GNU_VERSYM)
-    * [const SHT_HIOS](#SHT_HIOS)
-    * [const SHT_LOPROC](#SHT_LOPROC)
-    * [const SHT_MIPS_ABIFLAGS](#SHT_MIPS_ABIFLAGS)
-    * [const SHT_HIPROC](#SHT_HIPROC)
-    * [const SHT_LOUSER](#SHT_LOUSER)
-    * [const SHT_HIUSER](#SHT_HIUSER)
-    * [const SHF_WRITE](#SHF_WRITE)
-    * [const SHF_ALLOC](#SHF_ALLOC)
-    * [const SHF_EXECINSTR](#SHF_EXECINSTR)
-    * [const SHF_MERGE](#SHF_MERGE)
-    * [const SHF_STRINGS](#SHF_STRINGS)
-    * [const SHF_INFO_LINK](#SHF_INFO_LINK)
-    * [const SHF_LINK_ORDER](#SHF_LINK_ORDER)
-    * [const SHF_OS_NONCONFORMING](#SHF_OS_NONCONFORMING)
-    * [const SHF_GROUP](#SHF_GROUP)
-    * [const SHF_TLS](#SHF_TLS)
-    * [const SHF_COMPRESSED](#SHF_COMPRESSED)
-    * [const SHF_MASKOS](#SHF_MASKOS)
-    * [const SHF_MASKPROC](#SHF_MASKPROC)
-    * [const COMPRESS_ZLIB](#COMPRESS_ZLIB)
-    * [const COMPRESS_LOOS](#COMPRESS_LOOS)
+    * [const ARM_MAGIC_TRAMP_NUMBER](#ARM_MAGIC_TRAMP_NUMBER)
     * [const COMPRESS_HIOS](#COMPRESS_HIOS)
-    * [const COMPRESS_LOPROC](#COMPRESS_LOPROC)
     * [const COMPRESS_HIPROC](#COMPRESS_HIPROC)
-    * [const PT_NULL](#PT_NULL)
-    * [const PT_LOAD](#PT_LOAD)
-    * [const PT_DYNAMIC](#PT_DYNAMIC)
-    * [const PT_INTERP](#PT_INTERP)
-    * [const PT_NOTE](#PT_NOTE)
-    * [const PT_SHLIB](#PT_SHLIB)
-    * [const PT_PHDR](#PT_PHDR)
-    * [const PT_TLS](#PT_TLS)
-    * [const PT_LOOS](#PT_LOOS)
-    * [const PT_GNU_EH_FRAME](#PT_GNU_EH_FRAME)
-    * [const PT_GNU_STACK](#PT_GNU_STACK)
-    * [const PT_GNU_RELRO](#PT_GNU_RELRO)
-    * [const PT_GNU_PROPERTY](#PT_GNU_PROPERTY)
-    * [const PT_GNU_MBIND_LO](#PT_GNU_MBIND_LO)
-    * [const PT_GNU_MBIND_HI](#PT_GNU_MBIND_HI)
-    * [const PT_PAX_FLAGS](#PT_PAX_FLAGS)
-    * [const PT_OPENBSD_RANDOMIZE](#PT_OPENBSD_RANDOMIZE)
-    * [const PT_OPENBSD_WXNEEDED](#PT_OPENBSD_WXNEEDED)
-    * [const PT_OPENBSD_BOOTDATA](#PT_OPENBSD_BOOTDATA)
-    * [const PT_SUNW_EH_FRAME](#PT_SUNW_EH_FRAME)
-    * [const PT_SUNWSTACK](#PT_SUNWSTACK)
-    * [const PT_HIOS](#PT_HIOS)
-    * [const PT_LOPROC](#PT_LOPROC)
-    * [const PT_ARM_ARCHEXT](#PT_ARM_ARCHEXT)
-    * [const PT_ARM_EXIDX](#PT_ARM_EXIDX)
-    * [const PT_AARCH64_ARCHEXT](#PT_AARCH64_ARCHEXT)
-    * [const PT_AARCH64_UNWIND](#PT_AARCH64_UNWIND)
-    * [const PT_MIPS_REGINFO](#PT_MIPS_REGINFO)
-    * [const PT_MIPS_RTPROC](#PT_MIPS_RTPROC)
-    * [const PT_MIPS_OPTIONS](#PT_MIPS_OPTIONS)
-    * [const PT_MIPS_ABIFLAGS](#PT_MIPS_ABIFLAGS)
-    * [const PT_S390_PGSTE](#PT_S390_PGSTE)
-    * [const PT_HIPROC](#PT_HIPROC)
-    * [const PF_X](#PF_X)
-    * [const PF_W](#PF_W)
-    * [const PF_R](#PF_R)
-    * [const PF_MASKOS](#PF_MASKOS)
-    * [const PF_MASKPROC](#PF_MASKPROC)
-    * [const DT_NULL](#DT_NULL)
-    * [const DT_NEEDED](#DT_NEEDED)
-    * [const DT_PLTRELSZ](#DT_PLTRELSZ)
-    * [const DT_PLTGOT](#DT_PLTGOT)
-    * [const DT_HASH](#DT_HASH)
-    * [const DT_STRTAB](#DT_STRTAB)
-    * [const DT_SYMTAB](#DT_SYMTAB)
-    * [const DT_RELA](#DT_RELA)
-    * [const DT_RELASZ](#DT_RELASZ)
-    * [const DT_RELAENT](#DT_RELAENT)
-    * [const DT_STRSZ](#DT_STRSZ)
-    * [const DT_SYMENT](#DT_SYMENT)
-    * [const DT_INIT](#DT_INIT)
-    * [const DT_FINI](#DT_FINI)
-    * [const DT_SONAME](#DT_SONAME)
-    * [const DT_RPATH](#DT_RPATH)
-    * [const DT_SYMBOLIC](#DT_SYMBOLIC)
-    * [const DT_REL](#DT_REL)
-    * [const DT_RELSZ](#DT_RELSZ)
-    * [const DT_RELENT](#DT_RELENT)
-    * [const DT_PLTREL](#DT_PLTREL)
-    * [const DT_DEBUG](#DT_DEBUG)
-    * [const DT_TEXTREL](#DT_TEXTREL)
-    * [const DT_JMPREL](#DT_JMPREL)
-    * [const DT_BIND_NOW](#DT_BIND_NOW)
-    * [const DT_INIT_ARRAY](#DT_INIT_ARRAY)
-    * [const DT_FINI_ARRAY](#DT_FINI_ARRAY)
-    * [const DT_INIT_ARRAYSZ](#DT_INIT_ARRAYSZ)
-    * [const DT_FINI_ARRAYSZ](#DT_FINI_ARRAYSZ)
-    * [const DT_RUNPATH](#DT_RUNPATH)
-    * [const DT_FLAGS](#DT_FLAGS)
-    * [const DT_ENCODING](#DT_ENCODING)
-    * [const DT_PREINIT_ARRAY](#DT_PREINIT_ARRAY)
-    * [const DT_PREINIT_ARRAYSZ](#DT_PREINIT_ARRAYSZ)
-    * [const DT_SYMTAB_SHNDX](#DT_SYMTAB_SHNDX)
-    * [const DT_LOOS](#DT_LOOS)
-    * [const DT_HIOS](#DT_HIOS)
-    * [const DT_VALRNGLO](#DT_VALRNGLO)
-    * [const DT_GNU_PRELINKED](#DT_GNU_PRELINKED)
-    * [const DT_GNU_CONFLICTSZ](#DT_GNU_CONFLICTSZ)
-    * [const DT_GNU_LIBLISTSZ](#DT_GNU_LIBLISTSZ)
-    * [const DT_CHECKSUM](#DT_CHECKSUM)
-    * [const DT_PLTPADSZ](#DT_PLTPADSZ)
-    * [const DT_MOVEENT](#DT_MOVEENT)
-    * [const DT_MOVESZ](#DT_MOVESZ)
-    * [const DT_FEATURE](#DT_FEATURE)
-    * [const DT_POSFLAG_1](#DT_POSFLAG_1)
-    * [const DT_SYMINSZ](#DT_SYMINSZ)
-    * [const DT_SYMINENT](#DT_SYMINENT)
-    * [const DT_VALRNGHI](#DT_VALRNGHI)
-    * [const DT_ADDRRNGLO](#DT_ADDRRNGLO)
-    * [const DT_GNU_HASH](#DT_GNU_HASH)
-    * [const DT_TLSDESC_PLT](#DT_TLSDESC_PLT)
-    * [const DT_TLSDESC_GOT](#DT_TLSDESC_GOT)
-    * [const DT_GNU_CONFLICT](#DT_GNU_CONFLICT)
-    * [const DT_GNU_LIBLIST](#DT_GNU_LIBLIST)
-    * [const DT_CONFIG](#DT_CONFIG)
-    * [const DT_DEPAUDIT](#DT_DEPAUDIT)
-    * [const DT_AUDIT](#DT_AUDIT)
-    * [const DT_PLTPAD](#DT_PLTPAD)
-    * [const DT_MOVETAB](#DT_MOVETAB)
-    * [const DT_SYMINFO](#DT_SYMINFO)
+    * [const COMPRESS_LOOS](#COMPRESS_LOOS)
+    * [const COMPRESS_LOPROC](#COMPRESS_LOPROC)
+    * [const COMPRESS_ZLIB](#COMPRESS_ZLIB)
+    * [const DF_BIND_NOW](#DF_BIND_NOW)
+    * [const DF_ORIGIN](#DF_ORIGIN)
+    * [const DF_STATIC_TLS](#DF_STATIC_TLS)
+    * [const DF_SYMBOLIC](#DF_SYMBOLIC)
+    * [const DF_TEXTREL](#DF_TEXTREL)
     * [const DT_ADDRRNGHI](#DT_ADDRRNGHI)
-    * [const DT_VERSYM](#DT_VERSYM)
-    * [const DT_RELACOUNT](#DT_RELACOUNT)
-    * [const DT_RELCOUNT](#DT_RELCOUNT)
+    * [const DT_ADDRRNGLO](#DT_ADDRRNGLO)
+    * [const DT_AUDIT](#DT_AUDIT)
+    * [const DT_AUXILIARY](#DT_AUXILIARY)
+    * [const DT_BIND_NOW](#DT_BIND_NOW)
+    * [const DT_CHECKSUM](#DT_CHECKSUM)
+    * [const DT_CONFIG](#DT_CONFIG)
+    * [const DT_DEBUG](#DT_DEBUG)
+    * [const DT_DEPAUDIT](#DT_DEPAUDIT)
+    * [const DT_ENCODING](#DT_ENCODING)
+    * [const DT_FEATURE](#DT_FEATURE)
+    * [const DT_FILTER](#DT_FILTER)
+    * [const DT_FINI](#DT_FINI)
+    * [const DT_FINI_ARRAY](#DT_FINI_ARRAY)
+    * [const DT_FINI_ARRAYSZ](#DT_FINI_ARRAYSZ)
+    * [const DT_FLAGS](#DT_FLAGS)
     * [const DT_FLAGS_1](#DT_FLAGS_1)
-    * [const DT_VERDEF](#DT_VERDEF)
-    * [const DT_VERDEFNUM](#DT_VERDEFNUM)
-    * [const DT_VERNEED](#DT_VERNEED)
-    * [const DT_VERNEEDNUM](#DT_VERNEEDNUM)
+    * [const DT_GNU_CONFLICT](#DT_GNU_CONFLICT)
+    * [const DT_GNU_CONFLICTSZ](#DT_GNU_CONFLICTSZ)
+    * [const DT_GNU_HASH](#DT_GNU_HASH)
+    * [const DT_GNU_LIBLIST](#DT_GNU_LIBLIST)
+    * [const DT_GNU_LIBLISTSZ](#DT_GNU_LIBLISTSZ)
+    * [const DT_GNU_PRELINKED](#DT_GNU_PRELINKED)
+    * [const DT_HASH](#DT_HASH)
+    * [const DT_HIOS](#DT_HIOS)
+    * [const DT_HIPROC](#DT_HIPROC)
+    * [const DT_INIT](#DT_INIT)
+    * [const DT_INIT_ARRAY](#DT_INIT_ARRAY)
+    * [const DT_INIT_ARRAYSZ](#DT_INIT_ARRAYSZ)
+    * [const DT_JMPREL](#DT_JMPREL)
+    * [const DT_LOOS](#DT_LOOS)
     * [const DT_LOPROC](#DT_LOPROC)
-    * [const DT_MIPS_RLD_VERSION](#DT_MIPS_RLD_VERSION)
-    * [const DT_MIPS_TIME_STAMP](#DT_MIPS_TIME_STAMP)
-    * [const DT_MIPS_ICHECKSUM](#DT_MIPS_ICHECKSUM)
-    * [const DT_MIPS_IVERSION](#DT_MIPS_IVERSION)
-    * [const DT_MIPS_FLAGS](#DT_MIPS_FLAGS)
+    * [const DT_MIPS_AUX_DYNAMIC](#DT_MIPS_AUX_DYNAMIC)
     * [const DT_MIPS_BASE_ADDRESS](#DT_MIPS_BASE_ADDRESS)
-    * [const DT_MIPS_MSYM](#DT_MIPS_MSYM)
+    * [const DT_MIPS_COMPACT_SIZE](#DT_MIPS_COMPACT_SIZE)
     * [const DT_MIPS_CONFLICT](#DT_MIPS_CONFLICT)
-    * [const DT_MIPS_LIBLIST](#DT_MIPS_LIBLIST)
-    * [const DT_MIPS_LOCAL_GOTNO](#DT_MIPS_LOCAL_GOTNO)
     * [const DT_MIPS_CONFLICTNO](#DT_MIPS_CONFLICTNO)
-    * [const DT_MIPS_LIBLISTNO](#DT_MIPS_LIBLISTNO)
-    * [const DT_MIPS_SYMTABNO](#DT_MIPS_SYMTABNO)
-    * [const DT_MIPS_UNREFEXTNO](#DT_MIPS_UNREFEXTNO)
-    * [const DT_MIPS_GOTSYM](#DT_MIPS_GOTSYM)
-    * [const DT_MIPS_HIPAGENO](#DT_MIPS_HIPAGENO)
-    * [const DT_MIPS_RLD_MAP](#DT_MIPS_RLD_MAP)
+    * [const DT_MIPS_CXX_FLAGS](#DT_MIPS_CXX_FLAGS)
     * [const DT_MIPS_DELTA_CLASS](#DT_MIPS_DELTA_CLASS)
+    * [const DT_MIPS_DELTA_CLASSSYM](#DT_MIPS_DELTA_CLASSSYM)
+    * [const DT_MIPS_DELTA_CLASSSYM_NO](#DT_MIPS_DELTA_CLASSSYM_NO)
     * [const DT_MIPS_DELTA_CLASS_NO](#DT_MIPS_DELTA_CLASS_NO)
     * [const DT_MIPS_DELTA_INSTANCE](#DT_MIPS_DELTA_INSTANCE)
     * [const DT_MIPS_DELTA_INSTANCE_NO](#DT_MIPS_DELTA_INSTANCE_NO)
@@ -429,169 +64,490 @@ Package elf implements access to ELF object files.
     * [const DT_MIPS_DELTA_RELOC_NO](#DT_MIPS_DELTA_RELOC_NO)
     * [const DT_MIPS_DELTA_SYM](#DT_MIPS_DELTA_SYM)
     * [const DT_MIPS_DELTA_SYM_NO](#DT_MIPS_DELTA_SYM_NO)
-    * [const DT_MIPS_DELTA_CLASSSYM](#DT_MIPS_DELTA_CLASSSYM)
-    * [const DT_MIPS_DELTA_CLASSSYM_NO](#DT_MIPS_DELTA_CLASSSYM_NO)
-    * [const DT_MIPS_CXX_FLAGS](#DT_MIPS_CXX_FLAGS)
-    * [const DT_MIPS_PIXIE_INIT](#DT_MIPS_PIXIE_INIT)
-    * [const DT_MIPS_SYMBOL_LIB](#DT_MIPS_SYMBOL_LIB)
+    * [const DT_MIPS_DYNSTR_ALIGN](#DT_MIPS_DYNSTR_ALIGN)
+    * [const DT_MIPS_FLAGS](#DT_MIPS_FLAGS)
+    * [const DT_MIPS_GOTSYM](#DT_MIPS_GOTSYM)
+    * [const DT_MIPS_GP_VALUE](#DT_MIPS_GP_VALUE)
+    * [const DT_MIPS_HIDDEN_GOTIDX](#DT_MIPS_HIDDEN_GOTIDX)
+    * [const DT_MIPS_HIPAGENO](#DT_MIPS_HIPAGENO)
+    * [const DT_MIPS_ICHECKSUM](#DT_MIPS_ICHECKSUM)
+    * [const DT_MIPS_INTERFACE](#DT_MIPS_INTERFACE)
+    * [const DT_MIPS_INTERFACE_SIZE](#DT_MIPS_INTERFACE_SIZE)
+    * [const DT_MIPS_IVERSION](#DT_MIPS_IVERSION)
+    * [const DT_MIPS_LIBLIST](#DT_MIPS_LIBLIST)
+    * [const DT_MIPS_LIBLISTNO](#DT_MIPS_LIBLISTNO)
     * [const DT_MIPS_LOCALPAGE_GOTIDX](#DT_MIPS_LOCALPAGE_GOTIDX)
     * [const DT_MIPS_LOCAL_GOTIDX](#DT_MIPS_LOCAL_GOTIDX)
-    * [const DT_MIPS_HIDDEN_GOTIDX](#DT_MIPS_HIDDEN_GOTIDX)
-    * [const DT_MIPS_PROTECTED_GOTIDX](#DT_MIPS_PROTECTED_GOTIDX)
+    * [const DT_MIPS_LOCAL_GOTNO](#DT_MIPS_LOCAL_GOTNO)
+    * [const DT_MIPS_MSYM](#DT_MIPS_MSYM)
     * [const DT_MIPS_OPTIONS](#DT_MIPS_OPTIONS)
-    * [const DT_MIPS_INTERFACE](#DT_MIPS_INTERFACE)
-    * [const DT_MIPS_DYNSTR_ALIGN](#DT_MIPS_DYNSTR_ALIGN)
-    * [const DT_MIPS_INTERFACE_SIZE](#DT_MIPS_INTERFACE_SIZE)
-    * [const DT_MIPS_RLD_TEXT_RESOLVE_ADDR](#DT_MIPS_RLD_TEXT_RESOLVE_ADDR)
     * [const DT_MIPS_PERF_SUFFIX](#DT_MIPS_PERF_SUFFIX)
-    * [const DT_MIPS_COMPACT_SIZE](#DT_MIPS_COMPACT_SIZE)
-    * [const DT_MIPS_GP_VALUE](#DT_MIPS_GP_VALUE)
-    * [const DT_MIPS_AUX_DYNAMIC](#DT_MIPS_AUX_DYNAMIC)
+    * [const DT_MIPS_PIXIE_INIT](#DT_MIPS_PIXIE_INIT)
     * [const DT_MIPS_PLTGOT](#DT_MIPS_PLTGOT)
-    * [const DT_MIPS_RWPLT](#DT_MIPS_RWPLT)
+    * [const DT_MIPS_PROTECTED_GOTIDX](#DT_MIPS_PROTECTED_GOTIDX)
+    * [const DT_MIPS_RLD_MAP](#DT_MIPS_RLD_MAP)
     * [const DT_MIPS_RLD_MAP_REL](#DT_MIPS_RLD_MAP_REL)
-    * [const DT_PPC_GOT](#DT_PPC_GOT)
-    * [const DT_PPC_OPT](#DT_PPC_OPT)
+    * [const DT_MIPS_RLD_TEXT_RESOLVE_ADDR](#DT_MIPS_RLD_TEXT_RESOLVE_ADDR)
+    * [const DT_MIPS_RLD_VERSION](#DT_MIPS_RLD_VERSION)
+    * [const DT_MIPS_RWPLT](#DT_MIPS_RWPLT)
+    * [const DT_MIPS_SYMBOL_LIB](#DT_MIPS_SYMBOL_LIB)
+    * [const DT_MIPS_SYMTABNO](#DT_MIPS_SYMTABNO)
+    * [const DT_MIPS_TIME_STAMP](#DT_MIPS_TIME_STAMP)
+    * [const DT_MIPS_UNREFEXTNO](#DT_MIPS_UNREFEXTNO)
+    * [const DT_MOVEENT](#DT_MOVEENT)
+    * [const DT_MOVESZ](#DT_MOVESZ)
+    * [const DT_MOVETAB](#DT_MOVETAB)
+    * [const DT_NEEDED](#DT_NEEDED)
+    * [const DT_NULL](#DT_NULL)
+    * [const DT_PLTGOT](#DT_PLTGOT)
+    * [const DT_PLTPAD](#DT_PLTPAD)
+    * [const DT_PLTPADSZ](#DT_PLTPADSZ)
+    * [const DT_PLTREL](#DT_PLTREL)
+    * [const DT_PLTRELSZ](#DT_PLTRELSZ)
+    * [const DT_POSFLAG_1](#DT_POSFLAG_1)
     * [const DT_PPC64_GLINK](#DT_PPC64_GLINK)
     * [const DT_PPC64_OPD](#DT_PPC64_OPD)
     * [const DT_PPC64_OPDSZ](#DT_PPC64_OPDSZ)
     * [const DT_PPC64_OPT](#DT_PPC64_OPT)
+    * [const DT_PPC_GOT](#DT_PPC_GOT)
+    * [const DT_PPC_OPT](#DT_PPC_OPT)
+    * [const DT_PREINIT_ARRAY](#DT_PREINIT_ARRAY)
+    * [const DT_PREINIT_ARRAYSZ](#DT_PREINIT_ARRAYSZ)
+    * [const DT_REL](#DT_REL)
+    * [const DT_RELA](#DT_RELA)
+    * [const DT_RELACOUNT](#DT_RELACOUNT)
+    * [const DT_RELAENT](#DT_RELAENT)
+    * [const DT_RELASZ](#DT_RELASZ)
+    * [const DT_RELCOUNT](#DT_RELCOUNT)
+    * [const DT_RELENT](#DT_RELENT)
+    * [const DT_RELSZ](#DT_RELSZ)
+    * [const DT_RPATH](#DT_RPATH)
+    * [const DT_RUNPATH](#DT_RUNPATH)
+    * [const DT_SONAME](#DT_SONAME)
     * [const DT_SPARC_REGISTER](#DT_SPARC_REGISTER)
-    * [const DT_AUXILIARY](#DT_AUXILIARY)
+    * [const DT_STRSZ](#DT_STRSZ)
+    * [const DT_STRTAB](#DT_STRTAB)
+    * [const DT_SYMBOLIC](#DT_SYMBOLIC)
+    * [const DT_SYMENT](#DT_SYMENT)
+    * [const DT_SYMINENT](#DT_SYMINENT)
+    * [const DT_SYMINFO](#DT_SYMINFO)
+    * [const DT_SYMINSZ](#DT_SYMINSZ)
+    * [const DT_SYMTAB](#DT_SYMTAB)
+    * [const DT_SYMTAB_SHNDX](#DT_SYMTAB_SHNDX)
+    * [const DT_TEXTREL](#DT_TEXTREL)
+    * [const DT_TLSDESC_GOT](#DT_TLSDESC_GOT)
+    * [const DT_TLSDESC_PLT](#DT_TLSDESC_PLT)
     * [const DT_USED](#DT_USED)
-    * [const DT_FILTER](#DT_FILTER)
-    * [const DT_HIPROC](#DT_HIPROC)
-    * [const DF_ORIGIN](#DF_ORIGIN)
-    * [const DF_SYMBOLIC](#DF_SYMBOLIC)
-    * [const DF_TEXTREL](#DF_TEXTREL)
-    * [const DF_BIND_NOW](#DF_BIND_NOW)
-    * [const DF_STATIC_TLS](#DF_STATIC_TLS)
-    * [const NT_PRSTATUS](#NT_PRSTATUS)
+    * [const DT_VALRNGHI](#DT_VALRNGHI)
+    * [const DT_VALRNGLO](#DT_VALRNGLO)
+    * [const DT_VERDEF](#DT_VERDEF)
+    * [const DT_VERDEFNUM](#DT_VERDEFNUM)
+    * [const DT_VERNEED](#DT_VERNEED)
+    * [const DT_VERNEEDNUM](#DT_VERNEEDNUM)
+    * [const DT_VERSYM](#DT_VERSYM)
+    * [const EI_ABIVERSION](#EI_ABIVERSION)
+    * [const EI_CLASS](#EI_CLASS)
+    * [const EI_DATA](#EI_DATA)
+    * [const EI_NIDENT](#EI_NIDENT)
+    * [const EI_OSABI](#EI_OSABI)
+    * [const EI_PAD](#EI_PAD)
+    * [const EI_VERSION](#EI_VERSION)
+    * [const ELFCLASS32](#ELFCLASS32)
+    * [const ELFCLASS64](#ELFCLASS64)
+    * [const ELFCLASSNONE](#ELFCLASSNONE)
+    * [const ELFDATA2LSB](#ELFDATA2LSB)
+    * [const ELFDATA2MSB](#ELFDATA2MSB)
+    * [const ELFDATANONE](#ELFDATANONE)
+    * [const ELFMAG](#ELFMAG)
+    * [const ELFOSABI_86OPEN](#ELFOSABI_86OPEN)
+    * [const ELFOSABI_AIX](#ELFOSABI_AIX)
+    * [const ELFOSABI_ARM](#ELFOSABI_ARM)
+    * [const ELFOSABI_AROS](#ELFOSABI_AROS)
+    * [const ELFOSABI_CLOUDABI](#ELFOSABI_CLOUDABI)
+    * [const ELFOSABI_FENIXOS](#ELFOSABI_FENIXOS)
+    * [const ELFOSABI_FREEBSD](#ELFOSABI_FREEBSD)
+    * [const ELFOSABI_HPUX](#ELFOSABI_HPUX)
+    * [const ELFOSABI_HURD](#ELFOSABI_HURD)
+    * [const ELFOSABI_IRIX](#ELFOSABI_IRIX)
+    * [const ELFOSABI_LINUX](#ELFOSABI_LINUX)
+    * [const ELFOSABI_MODESTO](#ELFOSABI_MODESTO)
+    * [const ELFOSABI_NETBSD](#ELFOSABI_NETBSD)
+    * [const ELFOSABI_NONE](#ELFOSABI_NONE)
+    * [const ELFOSABI_NSK](#ELFOSABI_NSK)
+    * [const ELFOSABI_OPENBSD](#ELFOSABI_OPENBSD)
+    * [const ELFOSABI_OPENVMS](#ELFOSABI_OPENVMS)
+    * [const ELFOSABI_SOLARIS](#ELFOSABI_SOLARIS)
+    * [const ELFOSABI_STANDALONE](#ELFOSABI_STANDALONE)
+    * [const ELFOSABI_TRU64](#ELFOSABI_TRU64)
+    * [const EM_386](#EM_386)
+    * [const EM_486](#EM_486)
+    * [const EM_56800EX](#EM_56800EX)
+    * [const EM_68HC05](#EM_68HC05)
+    * [const EM_68HC08](#EM_68HC08)
+    * [const EM_68HC11](#EM_68HC11)
+    * [const EM_68HC12](#EM_68HC12)
+    * [const EM_68HC16](#EM_68HC16)
+    * [const EM_68K](#EM_68K)
+    * [const EM_78KOR](#EM_78KOR)
+    * [const EM_8051](#EM_8051)
+    * [const EM_860](#EM_860)
+    * [const EM_88K](#EM_88K)
+    * [const EM_960](#EM_960)
+    * [const EM_AARCH64](#EM_AARCH64)
+    * [const EM_ALPHA](#EM_ALPHA)
+    * [const EM_ALPHA_STD](#EM_ALPHA_STD)
+    * [const EM_ALTERA_NIOS2](#EM_ALTERA_NIOS2)
+    * [const EM_AMDGPU](#EM_AMDGPU)
+    * [const EM_ARC](#EM_ARC)
+    * [const EM_ARCA](#EM_ARCA)
+    * [const EM_ARC_COMPACT](#EM_ARC_COMPACT)
+    * [const EM_ARC_COMPACT2](#EM_ARC_COMPACT2)
+    * [const EM_ARM](#EM_ARM)
+    * [const EM_AVR](#EM_AVR)
+    * [const EM_AVR32](#EM_AVR32)
+    * [const EM_BA1](#EM_BA1)
+    * [const EM_BA2](#EM_BA2)
+    * [const EM_BLACKFIN](#EM_BLACKFIN)
+    * [const EM_BPF](#EM_BPF)
+    * [const EM_C166](#EM_C166)
+    * [const EM_CDP](#EM_CDP)
+    * [const EM_CE](#EM_CE)
+    * [const EM_CLOUDSHIELD](#EM_CLOUDSHIELD)
+    * [const EM_COGE](#EM_COGE)
+    * [const EM_COLDFIRE](#EM_COLDFIRE)
+    * [const EM_COOL](#EM_COOL)
+    * [const EM_COREA_1ST](#EM_COREA_1ST)
+    * [const EM_COREA_2ND](#EM_COREA_2ND)
+    * [const EM_CR](#EM_CR)
+    * [const EM_CR16](#EM_CR16)
+    * [const EM_CRAYNV2](#EM_CRAYNV2)
+    * [const EM_CRIS](#EM_CRIS)
+    * [const EM_CRX](#EM_CRX)
+    * [const EM_CSR_KALIMBA](#EM_CSR_KALIMBA)
+    * [const EM_CUDA](#EM_CUDA)
+    * [const EM_CYPRESS_M8C](#EM_CYPRESS_M8C)
+    * [const EM_D10V](#EM_D10V)
+    * [const EM_D30V](#EM_D30V)
+    * [const EM_DSP24](#EM_DSP24)
+    * [const EM_DSPIC30F](#EM_DSPIC30F)
+    * [const EM_DXP](#EM_DXP)
+    * [const EM_ECOG1](#EM_ECOG1)
+    * [const EM_ECOG16](#EM_ECOG16)
+    * [const EM_ECOG1X](#EM_ECOG1X)
+    * [const EM_ECOG2](#EM_ECOG2)
+    * [const EM_ETPU](#EM_ETPU)
+    * [const EM_EXCESS](#EM_EXCESS)
+    * [const EM_F2MC16](#EM_F2MC16)
+    * [const EM_FIREPATH](#EM_FIREPATH)
+    * [const EM_FR20](#EM_FR20)
+    * [const EM_FR30](#EM_FR30)
+    * [const EM_FT32](#EM_FT32)
+    * [const EM_FX66](#EM_FX66)
+    * [const EM_H8S](#EM_H8S)
+    * [const EM_H8_300](#EM_H8_300)
+    * [const EM_H8_300H](#EM_H8_300H)
+    * [const EM_H8_500](#EM_H8_500)
+    * [const EM_HUANY](#EM_HUANY)
+    * [const EM_IA_64](#EM_IA_64)
+    * [const EM_INTEL205](#EM_INTEL205)
+    * [const EM_INTEL206](#EM_INTEL206)
+    * [const EM_INTEL207](#EM_INTEL207)
+    * [const EM_INTEL208](#EM_INTEL208)
+    * [const EM_INTEL209](#EM_INTEL209)
+    * [const EM_IP2K](#EM_IP2K)
+    * [const EM_JAVELIN](#EM_JAVELIN)
+    * [const EM_K10M](#EM_K10M)
+    * [const EM_KM32](#EM_KM32)
+    * [const EM_KMX16](#EM_KMX16)
+    * [const EM_KMX32](#EM_KMX32)
+    * [const EM_KMX8](#EM_KMX8)
+    * [const EM_KVARC](#EM_KVARC)
+    * [const EM_L10M](#EM_L10M)
+    * [const EM_LANAI](#EM_LANAI)
+    * [const EM_LATTICEMICO32](#EM_LATTICEMICO32)
+    * [const EM_M16C](#EM_M16C)
+    * [const EM_M32](#EM_M32)
+    * [const EM_M32C](#EM_M32C)
+    * [const EM_M32R](#EM_M32R)
+    * [const EM_MANIK](#EM_MANIK)
+    * [const EM_MAX](#EM_MAX)
+    * [const EM_MAXQ30](#EM_MAXQ30)
+    * [const EM_MCHP_PIC](#EM_MCHP_PIC)
+    * [const EM_MCST_ELBRUS](#EM_MCST_ELBRUS)
+    * [const EM_ME16](#EM_ME16)
+    * [const EM_METAG](#EM_METAG)
+    * [const EM_MICROBLAZE](#EM_MICROBLAZE)
+    * [const EM_MIPS](#EM_MIPS)
+    * [const EM_MIPS_RS3_LE](#EM_MIPS_RS3_LE)
+    * [const EM_MIPS_RS4_BE](#EM_MIPS_RS4_BE)
+    * [const EM_MIPS_X](#EM_MIPS_X)
+    * [const EM_MMA](#EM_MMA)
+    * [const EM_MMDSP_PLUS](#EM_MMDSP_PLUS)
+    * [const EM_MMIX](#EM_MMIX)
+    * [const EM_MN10200](#EM_MN10200)
+    * [const EM_MN10300](#EM_MN10300)
+    * [const EM_MOXIE](#EM_MOXIE)
+    * [const EM_MSP430](#EM_MSP430)
+    * [const EM_NCPU](#EM_NCPU)
+    * [const EM_NDR1](#EM_NDR1)
+    * [const EM_NDS32](#EM_NDS32)
+    * [const EM_NONE](#EM_NONE)
+    * [const EM_NORC](#EM_NORC)
+    * [const EM_NS32K](#EM_NS32K)
+    * [const EM_OPEN8](#EM_OPEN8)
+    * [const EM_OPENRISC](#EM_OPENRISC)
+    * [const EM_PARISC](#EM_PARISC)
+    * [const EM_PCP](#EM_PCP)
+    * [const EM_PDP10](#EM_PDP10)
+    * [const EM_PDP11](#EM_PDP11)
+    * [const EM_PDSP](#EM_PDSP)
+    * [const EM_PJ](#EM_PJ)
+    * [const EM_PPC](#EM_PPC)
+    * [const EM_PPC64](#EM_PPC64)
+    * [const EM_PRISM](#EM_PRISM)
+    * [const EM_QDSP6](#EM_QDSP6)
+    * [const EM_R32C](#EM_R32C)
+    * [const EM_RCE](#EM_RCE)
+    * [const EM_RH32](#EM_RH32)
+    * [const EM_RISCV](#EM_RISCV)
+    * [const EM_RL78](#EM_RL78)
+    * [const EM_RS08](#EM_RS08)
+    * [const EM_RX](#EM_RX)
+    * [const EM_S370](#EM_S370)
+    * [const EM_S390](#EM_S390)
+    * [const EM_SCORE7](#EM_SCORE7)
+    * [const EM_SEP](#EM_SEP)
+    * [const EM_SE_C17](#EM_SE_C17)
+    * [const EM_SE_C33](#EM_SE_C33)
+    * [const EM_SH](#EM_SH)
+    * [const EM_SHARC](#EM_SHARC)
+    * [const EM_SLE9X](#EM_SLE9X)
+    * [const EM_SNP1K](#EM_SNP1K)
+    * [const EM_SPARC](#EM_SPARC)
+    * [const EM_SPARC32PLUS](#EM_SPARC32PLUS)
+    * [const EM_SPARCV9](#EM_SPARCV9)
+    * [const EM_ST100](#EM_ST100)
+    * [const EM_ST19](#EM_ST19)
+    * [const EM_ST200](#EM_ST200)
+    * [const EM_ST7](#EM_ST7)
+    * [const EM_ST9PLUS](#EM_ST9PLUS)
+    * [const EM_STARCORE](#EM_STARCORE)
+    * [const EM_STM8](#EM_STM8)
+    * [const EM_STXP7X](#EM_STXP7X)
+    * [const EM_SVX](#EM_SVX)
+    * [const EM_TILE64](#EM_TILE64)
+    * [const EM_TILEGX](#EM_TILEGX)
+    * [const EM_TILEPRO](#EM_TILEPRO)
+    * [const EM_TINYJ](#EM_TINYJ)
+    * [const EM_TI_ARP32](#EM_TI_ARP32)
+    * [const EM_TI_C2000](#EM_TI_C2000)
+    * [const EM_TI_C5500](#EM_TI_C5500)
+    * [const EM_TI_C6000](#EM_TI_C6000)
+    * [const EM_TI_PRU](#EM_TI_PRU)
+    * [const EM_TMM_GPP](#EM_TMM_GPP)
+    * [const EM_TPC](#EM_TPC)
+    * [const EM_TRICORE](#EM_TRICORE)
+    * [const EM_TRIMEDIA](#EM_TRIMEDIA)
+    * [const EM_TSK3000](#EM_TSK3000)
+    * [const EM_UNICORE](#EM_UNICORE)
+    * [const EM_V800](#EM_V800)
+    * [const EM_V850](#EM_V850)
+    * [const EM_VAX](#EM_VAX)
+    * [const EM_VIDEOCORE](#EM_VIDEOCORE)
+    * [const EM_VIDEOCORE3](#EM_VIDEOCORE3)
+    * [const EM_VIDEOCORE5](#EM_VIDEOCORE5)
+    * [const EM_VISIUM](#EM_VISIUM)
+    * [const EM_VPP500](#EM_VPP500)
+    * [const EM_X86_64](#EM_X86_64)
+    * [const EM_XCORE](#EM_XCORE)
+    * [const EM_XGATE](#EM_XGATE)
+    * [const EM_XIMO16](#EM_XIMO16)
+    * [const EM_XTENSA](#EM_XTENSA)
+    * [const EM_Z80](#EM_Z80)
+    * [const EM_ZSP](#EM_ZSP)
+    * [const ET_CORE](#ET_CORE)
+    * [const ET_DYN](#ET_DYN)
+    * [const ET_EXEC](#ET_EXEC)
+    * [const ET_HIOS](#ET_HIOS)
+    * [const ET_HIPROC](#ET_HIPROC)
+    * [const ET_LOOS](#ET_LOOS)
+    * [const ET_LOPROC](#ET_LOPROC)
+    * [const ET_NONE](#ET_NONE)
+    * [const ET_REL](#ET_REL)
+    * [const EV_CURRENT](#EV_CURRENT)
+    * [const EV_NONE](#EV_NONE)
     * [const NT_FPREGSET](#NT_FPREGSET)
     * [const NT_PRPSINFO](#NT_PRPSINFO)
-    * [const STB_LOCAL](#STB_LOCAL)
-    * [const STB_GLOBAL](#STB_GLOBAL)
-    * [const STB_WEAK](#STB_WEAK)
-    * [const STB_LOOS](#STB_LOOS)
-    * [const STB_HIOS](#STB_HIOS)
-    * [const STB_LOPROC](#STB_LOPROC)
-    * [const STB_HIPROC](#STB_HIPROC)
-    * [const STT_NOTYPE](#STT_NOTYPE)
-    * [const STT_OBJECT](#STT_OBJECT)
-    * [const STT_FUNC](#STT_FUNC)
-    * [const STT_SECTION](#STT_SECTION)
-    * [const STT_FILE](#STT_FILE)
-    * [const STT_COMMON](#STT_COMMON)
-    * [const STT_TLS](#STT_TLS)
-    * [const STT_LOOS](#STT_LOOS)
-    * [const STT_HIOS](#STT_HIOS)
-    * [const STT_LOPROC](#STT_LOPROC)
-    * [const STT_HIPROC](#STT_HIPROC)
-    * [const STV_DEFAULT](#STV_DEFAULT)
-    * [const STV_INTERNAL](#STV_INTERNAL)
-    * [const STV_HIDDEN](#STV_HIDDEN)
-    * [const STV_PROTECTED](#STV_PROTECTED)
-    * [const R_X86_64_NONE](#R_X86_64_NONE)
-    * [const R_X86_64_64](#R_X86_64_64)
-    * [const R_X86_64_PC32](#R_X86_64_PC32)
-    * [const R_X86_64_GOT32](#R_X86_64_GOT32)
-    * [const R_X86_64_PLT32](#R_X86_64_PLT32)
-    * [const R_X86_64_COPY](#R_X86_64_COPY)
-    * [const R_X86_64_GLOB_DAT](#R_X86_64_GLOB_DAT)
-    * [const R_X86_64_JMP_SLOT](#R_X86_64_JMP_SLOT)
-    * [const R_X86_64_RELATIVE](#R_X86_64_RELATIVE)
-    * [const R_X86_64_GOTPCREL](#R_X86_64_GOTPCREL)
-    * [const R_X86_64_32](#R_X86_64_32)
-    * [const R_X86_64_32S](#R_X86_64_32S)
-    * [const R_X86_64_16](#R_X86_64_16)
-    * [const R_X86_64_PC16](#R_X86_64_PC16)
-    * [const R_X86_64_8](#R_X86_64_8)
-    * [const R_X86_64_PC8](#R_X86_64_PC8)
-    * [const R_X86_64_DTPMOD64](#R_X86_64_DTPMOD64)
-    * [const R_X86_64_DTPOFF64](#R_X86_64_DTPOFF64)
-    * [const R_X86_64_TPOFF64](#R_X86_64_TPOFF64)
-    * [const R_X86_64_TLSGD](#R_X86_64_TLSGD)
-    * [const R_X86_64_TLSLD](#R_X86_64_TLSLD)
-    * [const R_X86_64_DTPOFF32](#R_X86_64_DTPOFF32)
-    * [const R_X86_64_GOTTPOFF](#R_X86_64_GOTTPOFF)
-    * [const R_X86_64_TPOFF32](#R_X86_64_TPOFF32)
-    * [const R_X86_64_PC64](#R_X86_64_PC64)
-    * [const R_X86_64_GOTOFF64](#R_X86_64_GOTOFF64)
-    * [const R_X86_64_GOTPC32](#R_X86_64_GOTPC32)
-    * [const R_X86_64_GOT64](#R_X86_64_GOT64)
-    * [const R_X86_64_GOTPCREL64](#R_X86_64_GOTPCREL64)
-    * [const R_X86_64_GOTPC64](#R_X86_64_GOTPC64)
-    * [const R_X86_64_GOTPLT64](#R_X86_64_GOTPLT64)
-    * [const R_X86_64_PLTOFF64](#R_X86_64_PLTOFF64)
-    * [const R_X86_64_SIZE32](#R_X86_64_SIZE32)
-    * [const R_X86_64_SIZE64](#R_X86_64_SIZE64)
-    * [const R_X86_64_GOTPC32_TLSDESC](#R_X86_64_GOTPC32_TLSDESC)
-    * [const R_X86_64_TLSDESC_CALL](#R_X86_64_TLSDESC_CALL)
-    * [const R_X86_64_TLSDESC](#R_X86_64_TLSDESC)
-    * [const R_X86_64_IRELATIVE](#R_X86_64_IRELATIVE)
-    * [const R_X86_64_RELATIVE64](#R_X86_64_RELATIVE64)
-    * [const R_X86_64_PC32_BND](#R_X86_64_PC32_BND)
-    * [const R_X86_64_PLT32_BND](#R_X86_64_PLT32_BND)
-    * [const R_X86_64_GOTPCRELX](#R_X86_64_GOTPCRELX)
-    * [const R_X86_64_REX_GOTPCRELX](#R_X86_64_REX_GOTPCRELX)
-    * [const R_AARCH64_NONE](#R_AARCH64_NONE)
-    * [const R_AARCH64_P32_ABS32](#R_AARCH64_P32_ABS32)
-    * [const R_AARCH64_P32_ABS16](#R_AARCH64_P32_ABS16)
-    * [const R_AARCH64_P32_PREL32](#R_AARCH64_P32_PREL32)
-    * [const R_AARCH64_P32_PREL16](#R_AARCH64_P32_PREL16)
-    * [const R_AARCH64_P32_MOVW_UABS_G0](#R_AARCH64_P32_MOVW_UABS_G0)
-    * [const R_AARCH64_P32_MOVW_UABS_G0_NC](#R_AARCH64_P32_MOVW_UABS_G0_NC)
-    * [const R_AARCH64_P32_MOVW_UABS_G1](#R_AARCH64_P32_MOVW_UABS_G1)
-    * [const R_AARCH64_P32_MOVW_SABS_G0](#R_AARCH64_P32_MOVW_SABS_G0)
-    * [const R_AARCH64_P32_LD_PREL_LO19](#R_AARCH64_P32_LD_PREL_LO19)
-    * [const R_AARCH64_P32_ADR_PREL_LO21](#R_AARCH64_P32_ADR_PREL_LO21)
-    * [const R_AARCH64_P32_ADR_PREL_PG_HI21](#R_AARCH64_P32_ADR_PREL_PG_HI21)
-    * [const R_AARCH64_P32_ADD_ABS_LO12_NC](#R_AARCH64_P32_ADD_ABS_LO12_NC)
-    * [const R_AARCH64_P32_LDST8_ABS_LO12_NC](#R_AARCH64_P32_LDST8_ABS_LO12_NC)
-    * [const R_AARCH64_P32_LDST16_ABS_LO12_NC](#R_AARCH64_P32_LDST16_ABS_LO12_NC)
-    * [const R_AARCH64_P32_LDST32_ABS_LO12_NC](#R_AARCH64_P32_LDST32_ABS_LO12_NC)
-    * [const R_AARCH64_P32_LDST64_ABS_LO12_NC](#R_AARCH64_P32_LDST64_ABS_LO12_NC)
-    * [const R_AARCH64_P32_LDST128_ABS_LO12_NC](#R_AARCH64_P32_LDST128_ABS_LO12_NC)
-    * [const R_AARCH64_P32_TSTBR14](#R_AARCH64_P32_TSTBR14)
-    * [const R_AARCH64_P32_CONDBR19](#R_AARCH64_P32_CONDBR19)
-    * [const R_AARCH64_P32_JUMP26](#R_AARCH64_P32_JUMP26)
-    * [const R_AARCH64_P32_CALL26](#R_AARCH64_P32_CALL26)
-    * [const R_AARCH64_P32_GOT_LD_PREL19](#R_AARCH64_P32_GOT_LD_PREL19)
-    * [const R_AARCH64_P32_ADR_GOT_PAGE](#R_AARCH64_P32_ADR_GOT_PAGE)
-    * [const R_AARCH64_P32_LD32_GOT_LO12_NC](#R_AARCH64_P32_LD32_GOT_LO12_NC)
-    * [const R_AARCH64_P32_TLSGD_ADR_PAGE21](#R_AARCH64_P32_TLSGD_ADR_PAGE21)
-    * [const R_AARCH64_P32_TLSGD_ADD_LO12_NC](#R_AARCH64_P32_TLSGD_ADD_LO12_NC)
-    * [const R_AARCH64_P32_TLSIE_ADR_GOTTPREL_PAGE21](#R_AARCH64_P32_TLSIE_ADR_GOTTPREL_PAGE21)
-    * [const R_AARCH64_P32_TLSIE_LD32_GOTTPREL_LO12_NC](#R_AARCH64_P32_TLSIE_LD32_GOTTPREL_LO12_NC)
-    * [const R_AARCH64_P32_TLSIE_LD_GOTTPREL_PREL19](#R_AARCH64_P32_TLSIE_LD_GOTTPREL_PREL19)
-    * [const R_AARCH64_P32_TLSLE_MOVW_TPREL_G1](#R_AARCH64_P32_TLSLE_MOVW_TPREL_G1)
-    * [const R_AARCH64_P32_TLSLE_MOVW_TPREL_G0](#R_AARCH64_P32_TLSLE_MOVW_TPREL_G0)
-    * [const R_AARCH64_P32_TLSLE_MOVW_TPREL_G0_NC](#R_AARCH64_P32_TLSLE_MOVW_TPREL_G0_NC)
-    * [const R_AARCH64_P32_TLSLE_ADD_TPREL_HI12](#R_AARCH64_P32_TLSLE_ADD_TPREL_HI12)
-    * [const R_AARCH64_P32_TLSLE_ADD_TPREL_LO12](#R_AARCH64_P32_TLSLE_ADD_TPREL_LO12)
-    * [const R_AARCH64_P32_TLSLE_ADD_TPREL_LO12_NC](#R_AARCH64_P32_TLSLE_ADD_TPREL_LO12_NC)
-    * [const R_AARCH64_P32_TLSDESC_LD_PREL19](#R_AARCH64_P32_TLSDESC_LD_PREL19)
-    * [const R_AARCH64_P32_TLSDESC_ADR_PREL21](#R_AARCH64_P32_TLSDESC_ADR_PREL21)
-    * [const R_AARCH64_P32_TLSDESC_ADR_PAGE21](#R_AARCH64_P32_TLSDESC_ADR_PAGE21)
-    * [const R_AARCH64_P32_TLSDESC_LD32_LO12_NC](#R_AARCH64_P32_TLSDESC_LD32_LO12_NC)
-    * [const R_AARCH64_P32_TLSDESC_ADD_LO12_NC](#R_AARCH64_P32_TLSDESC_ADD_LO12_NC)
-    * [const R_AARCH64_P32_TLSDESC_CALL](#R_AARCH64_P32_TLSDESC_CALL)
-    * [const R_AARCH64_P32_COPY](#R_AARCH64_P32_COPY)
-    * [const R_AARCH64_P32_GLOB_DAT](#R_AARCH64_P32_GLOB_DAT)
-    * [const R_AARCH64_P32_JUMP_SLOT](#R_AARCH64_P32_JUMP_SLOT)
-    * [const R_AARCH64_P32_RELATIVE](#R_AARCH64_P32_RELATIVE)
-    * [const R_AARCH64_P32_TLS_DTPMOD](#R_AARCH64_P32_TLS_DTPMOD)
-    * [const R_AARCH64_P32_TLS_DTPREL](#R_AARCH64_P32_TLS_DTPREL)
-    * [const R_AARCH64_P32_TLS_TPREL](#R_AARCH64_P32_TLS_TPREL)
-    * [const R_AARCH64_P32_TLSDESC](#R_AARCH64_P32_TLSDESC)
-    * [const R_AARCH64_P32_IRELATIVE](#R_AARCH64_P32_IRELATIVE)
-    * [const R_AARCH64_NULL](#R_AARCH64_NULL)
-    * [const R_AARCH64_ABS64](#R_AARCH64_ABS64)
-    * [const R_AARCH64_ABS32](#R_AARCH64_ABS32)
+    * [const NT_PRSTATUS](#NT_PRSTATUS)
+    * [const PF_MASKOS](#PF_MASKOS)
+    * [const PF_MASKPROC](#PF_MASKPROC)
+    * [const PF_R](#PF_R)
+    * [const PF_W](#PF_W)
+    * [const PF_X](#PF_X)
+    * [const PT_AARCH64_ARCHEXT](#PT_AARCH64_ARCHEXT)
+    * [const PT_AARCH64_UNWIND](#PT_AARCH64_UNWIND)
+    * [const PT_ARM_ARCHEXT](#PT_ARM_ARCHEXT)
+    * [const PT_ARM_EXIDX](#PT_ARM_EXIDX)
+    * [const PT_DYNAMIC](#PT_DYNAMIC)
+    * [const PT_GNU_EH_FRAME](#PT_GNU_EH_FRAME)
+    * [const PT_GNU_MBIND_HI](#PT_GNU_MBIND_HI)
+    * [const PT_GNU_MBIND_LO](#PT_GNU_MBIND_LO)
+    * [const PT_GNU_PROPERTY](#PT_GNU_PROPERTY)
+    * [const PT_GNU_RELRO](#PT_GNU_RELRO)
+    * [const PT_GNU_STACK](#PT_GNU_STACK)
+    * [const PT_HIOS](#PT_HIOS)
+    * [const PT_HIPROC](#PT_HIPROC)
+    * [const PT_INTERP](#PT_INTERP)
+    * [const PT_LOAD](#PT_LOAD)
+    * [const PT_LOOS](#PT_LOOS)
+    * [const PT_LOPROC](#PT_LOPROC)
+    * [const PT_MIPS_ABIFLAGS](#PT_MIPS_ABIFLAGS)
+    * [const PT_MIPS_OPTIONS](#PT_MIPS_OPTIONS)
+    * [const PT_MIPS_REGINFO](#PT_MIPS_REGINFO)
+    * [const PT_MIPS_RTPROC](#PT_MIPS_RTPROC)
+    * [const PT_NOTE](#PT_NOTE)
+    * [const PT_NULL](#PT_NULL)
+    * [const PT_OPENBSD_BOOTDATA](#PT_OPENBSD_BOOTDATA)
+    * [const PT_OPENBSD_RANDOMIZE](#PT_OPENBSD_RANDOMIZE)
+    * [const PT_OPENBSD_WXNEEDED](#PT_OPENBSD_WXNEEDED)
+    * [const PT_PAX_FLAGS](#PT_PAX_FLAGS)
+    * [const PT_PHDR](#PT_PHDR)
+    * [const PT_S390_PGSTE](#PT_S390_PGSTE)
+    * [const PT_SHLIB](#PT_SHLIB)
+    * [const PT_SUNWSTACK](#PT_SUNWSTACK)
+    * [const PT_SUNW_EH_FRAME](#PT_SUNW_EH_FRAME)
+    * [const PT_TLS](#PT_TLS)
+    * [const R_386_16](#R_386_16)
+    * [const R_386_32](#R_386_32)
+    * [const R_386_32PLT](#R_386_32PLT)
+    * [const R_386_8](#R_386_8)
+    * [const R_386_COPY](#R_386_COPY)
+    * [const R_386_GLOB_DAT](#R_386_GLOB_DAT)
+    * [const R_386_GOT32](#R_386_GOT32)
+    * [const R_386_GOT32X](#R_386_GOT32X)
+    * [const R_386_GOTOFF](#R_386_GOTOFF)
+    * [const R_386_GOTPC](#R_386_GOTPC)
+    * [const R_386_IRELATIVE](#R_386_IRELATIVE)
+    * [const R_386_JMP_SLOT](#R_386_JMP_SLOT)
+    * [const R_386_NONE](#R_386_NONE)
+    * [const R_386_PC16](#R_386_PC16)
+    * [const R_386_PC32](#R_386_PC32)
+    * [const R_386_PC8](#R_386_PC8)
+    * [const R_386_PLT32](#R_386_PLT32)
+    * [const R_386_RELATIVE](#R_386_RELATIVE)
+    * [const R_386_SIZE32](#R_386_SIZE32)
+    * [const R_386_TLS_DESC](#R_386_TLS_DESC)
+    * [const R_386_TLS_DESC_CALL](#R_386_TLS_DESC_CALL)
+    * [const R_386_TLS_DTPMOD32](#R_386_TLS_DTPMOD32)
+    * [const R_386_TLS_DTPOFF32](#R_386_TLS_DTPOFF32)
+    * [const R_386_TLS_GD](#R_386_TLS_GD)
+    * [const R_386_TLS_GD_32](#R_386_TLS_GD_32)
+    * [const R_386_TLS_GD_CALL](#R_386_TLS_GD_CALL)
+    * [const R_386_TLS_GD_POP](#R_386_TLS_GD_POP)
+    * [const R_386_TLS_GD_PUSH](#R_386_TLS_GD_PUSH)
+    * [const R_386_TLS_GOTDESC](#R_386_TLS_GOTDESC)
+    * [const R_386_TLS_GOTIE](#R_386_TLS_GOTIE)
+    * [const R_386_TLS_IE](#R_386_TLS_IE)
+    * [const R_386_TLS_IE_32](#R_386_TLS_IE_32)
+    * [const R_386_TLS_LDM](#R_386_TLS_LDM)
+    * [const R_386_TLS_LDM_32](#R_386_TLS_LDM_32)
+    * [const R_386_TLS_LDM_CALL](#R_386_TLS_LDM_CALL)
+    * [const R_386_TLS_LDM_POP](#R_386_TLS_LDM_POP)
+    * [const R_386_TLS_LDM_PUSH](#R_386_TLS_LDM_PUSH)
+    * [const R_386_TLS_LDO_32](#R_386_TLS_LDO_32)
+    * [const R_386_TLS_LE](#R_386_TLS_LE)
+    * [const R_386_TLS_LE_32](#R_386_TLS_LE_32)
+    * [const R_386_TLS_TPOFF](#R_386_TLS_TPOFF)
+    * [const R_386_TLS_TPOFF32](#R_386_TLS_TPOFF32)
+    * [const R_390_12](#R_390_12)
+    * [const R_390_16](#R_390_16)
+    * [const R_390_20](#R_390_20)
+    * [const R_390_32](#R_390_32)
+    * [const R_390_64](#R_390_64)
+    * [const R_390_8](#R_390_8)
+    * [const R_390_COPY](#R_390_COPY)
+    * [const R_390_GLOB_DAT](#R_390_GLOB_DAT)
+    * [const R_390_GOT12](#R_390_GOT12)
+    * [const R_390_GOT16](#R_390_GOT16)
+    * [const R_390_GOT20](#R_390_GOT20)
+    * [const R_390_GOT32](#R_390_GOT32)
+    * [const R_390_GOT64](#R_390_GOT64)
+    * [const R_390_GOTENT](#R_390_GOTENT)
+    * [const R_390_GOTOFF](#R_390_GOTOFF)
+    * [const R_390_GOTOFF16](#R_390_GOTOFF16)
+    * [const R_390_GOTOFF64](#R_390_GOTOFF64)
+    * [const R_390_GOTPC](#R_390_GOTPC)
+    * [const R_390_GOTPCDBL](#R_390_GOTPCDBL)
+    * [const R_390_GOTPLT12](#R_390_GOTPLT12)
+    * [const R_390_GOTPLT16](#R_390_GOTPLT16)
+    * [const R_390_GOTPLT20](#R_390_GOTPLT20)
+    * [const R_390_GOTPLT32](#R_390_GOTPLT32)
+    * [const R_390_GOTPLT64](#R_390_GOTPLT64)
+    * [const R_390_GOTPLTENT](#R_390_GOTPLTENT)
+    * [const R_390_GOTPLTOFF16](#R_390_GOTPLTOFF16)
+    * [const R_390_GOTPLTOFF32](#R_390_GOTPLTOFF32)
+    * [const R_390_GOTPLTOFF64](#R_390_GOTPLTOFF64)
+    * [const R_390_JMP_SLOT](#R_390_JMP_SLOT)
+    * [const R_390_NONE](#R_390_NONE)
+    * [const R_390_PC16](#R_390_PC16)
+    * [const R_390_PC16DBL](#R_390_PC16DBL)
+    * [const R_390_PC32](#R_390_PC32)
+    * [const R_390_PC32DBL](#R_390_PC32DBL)
+    * [const R_390_PC64](#R_390_PC64)
+    * [const R_390_PLT16DBL](#R_390_PLT16DBL)
+    * [const R_390_PLT32](#R_390_PLT32)
+    * [const R_390_PLT32DBL](#R_390_PLT32DBL)
+    * [const R_390_PLT64](#R_390_PLT64)
+    * [const R_390_RELATIVE](#R_390_RELATIVE)
+    * [const R_390_TLS_DTPMOD](#R_390_TLS_DTPMOD)
+    * [const R_390_TLS_DTPOFF](#R_390_TLS_DTPOFF)
+    * [const R_390_TLS_GD32](#R_390_TLS_GD32)
+    * [const R_390_TLS_GD64](#R_390_TLS_GD64)
+    * [const R_390_TLS_GDCALL](#R_390_TLS_GDCALL)
+    * [const R_390_TLS_GOTIE12](#R_390_TLS_GOTIE12)
+    * [const R_390_TLS_GOTIE20](#R_390_TLS_GOTIE20)
+    * [const R_390_TLS_GOTIE32](#R_390_TLS_GOTIE32)
+    * [const R_390_TLS_GOTIE64](#R_390_TLS_GOTIE64)
+    * [const R_390_TLS_IE32](#R_390_TLS_IE32)
+    * [const R_390_TLS_IE64](#R_390_TLS_IE64)
+    * [const R_390_TLS_IEENT](#R_390_TLS_IEENT)
+    * [const R_390_TLS_LDCALL](#R_390_TLS_LDCALL)
+    * [const R_390_TLS_LDM32](#R_390_TLS_LDM32)
+    * [const R_390_TLS_LDM64](#R_390_TLS_LDM64)
+    * [const R_390_TLS_LDO32](#R_390_TLS_LDO32)
+    * [const R_390_TLS_LDO64](#R_390_TLS_LDO64)
+    * [const R_390_TLS_LE32](#R_390_TLS_LE32)
+    * [const R_390_TLS_LE64](#R_390_TLS_LE64)
+    * [const R_390_TLS_LOAD](#R_390_TLS_LOAD)
+    * [const R_390_TLS_TPOFF](#R_390_TLS_TPOFF)
     * [const R_AARCH64_ABS16](#R_AARCH64_ABS16)
-    * [const R_AARCH64_PREL64](#R_AARCH64_PREL64)
-    * [const R_AARCH64_PREL32](#R_AARCH64_PREL32)
-    * [const R_AARCH64_PREL16](#R_AARCH64_PREL16)
+    * [const R_AARCH64_ABS32](#R_AARCH64_ABS32)
+    * [const R_AARCH64_ABS64](#R_AARCH64_ABS64)
+    * [const R_AARCH64_ADD_ABS_LO12_NC](#R_AARCH64_ADD_ABS_LO12_NC)
+    * [const R_AARCH64_ADR_GOT_PAGE](#R_AARCH64_ADR_GOT_PAGE)
+    * [const R_AARCH64_ADR_PREL_LO21](#R_AARCH64_ADR_PREL_LO21)
+    * [const R_AARCH64_ADR_PREL_PG_HI21](#R_AARCH64_ADR_PREL_PG_HI21)
+    * [const R_AARCH64_ADR_PREL_PG_HI21_NC](#R_AARCH64_ADR_PREL_PG_HI21_NC)
+    * [const R_AARCH64_CALL26](#R_AARCH64_CALL26)
+    * [const R_AARCH64_CONDBR19](#R_AARCH64_CONDBR19)
+    * [const R_AARCH64_COPY](#R_AARCH64_COPY)
+    * [const R_AARCH64_GLOB_DAT](#R_AARCH64_GLOB_DAT)
+    * [const R_AARCH64_GOT_LD_PREL19](#R_AARCH64_GOT_LD_PREL19)
+    * [const R_AARCH64_IRELATIVE](#R_AARCH64_IRELATIVE)
+    * [const R_AARCH64_JUMP26](#R_AARCH64_JUMP26)
+    * [const R_AARCH64_JUMP_SLOT](#R_AARCH64_JUMP_SLOT)
+    * [const R_AARCH64_LD64_GOTOFF_LO15](#R_AARCH64_LD64_GOTOFF_LO15)
+    * [const R_AARCH64_LD64_GOTPAGE_LO15](#R_AARCH64_LD64_GOTPAGE_LO15)
+    * [const R_AARCH64_LD64_GOT_LO12_NC](#R_AARCH64_LD64_GOT_LO12_NC)
+    * [const R_AARCH64_LDST128_ABS_LO12_NC](#R_AARCH64_LDST128_ABS_LO12_NC)
+    * [const R_AARCH64_LDST16_ABS_LO12_NC](#R_AARCH64_LDST16_ABS_LO12_NC)
+    * [const R_AARCH64_LDST32_ABS_LO12_NC](#R_AARCH64_LDST32_ABS_LO12_NC)
+    * [const R_AARCH64_LDST64_ABS_LO12_NC](#R_AARCH64_LDST64_ABS_LO12_NC)
+    * [const R_AARCH64_LDST8_ABS_LO12_NC](#R_AARCH64_LDST8_ABS_LO12_NC)
+    * [const R_AARCH64_LD_PREL_LO19](#R_AARCH64_LD_PREL_LO19)
+    * [const R_AARCH64_MOVW_SABS_G0](#R_AARCH64_MOVW_SABS_G0)
+    * [const R_AARCH64_MOVW_SABS_G1](#R_AARCH64_MOVW_SABS_G1)
+    * [const R_AARCH64_MOVW_SABS_G2](#R_AARCH64_MOVW_SABS_G2)
     * [const R_AARCH64_MOVW_UABS_G0](#R_AARCH64_MOVW_UABS_G0)
     * [const R_AARCH64_MOVW_UABS_G0_NC](#R_AARCH64_MOVW_UABS_G0_NC)
     * [const R_AARCH64_MOVW_UABS_G1](#R_AARCH64_MOVW_UABS_G1)
@@ -599,213 +555,207 @@ Package elf implements access to ELF object files.
     * [const R_AARCH64_MOVW_UABS_G2](#R_AARCH64_MOVW_UABS_G2)
     * [const R_AARCH64_MOVW_UABS_G2_NC](#R_AARCH64_MOVW_UABS_G2_NC)
     * [const R_AARCH64_MOVW_UABS_G3](#R_AARCH64_MOVW_UABS_G3)
-    * [const R_AARCH64_MOVW_SABS_G0](#R_AARCH64_MOVW_SABS_G0)
-    * [const R_AARCH64_MOVW_SABS_G1](#R_AARCH64_MOVW_SABS_G1)
-    * [const R_AARCH64_MOVW_SABS_G2](#R_AARCH64_MOVW_SABS_G2)
-    * [const R_AARCH64_LD_PREL_LO19](#R_AARCH64_LD_PREL_LO19)
-    * [const R_AARCH64_ADR_PREL_LO21](#R_AARCH64_ADR_PREL_LO21)
-    * [const R_AARCH64_ADR_PREL_PG_HI21](#R_AARCH64_ADR_PREL_PG_HI21)
-    * [const R_AARCH64_ADR_PREL_PG_HI21_NC](#R_AARCH64_ADR_PREL_PG_HI21_NC)
-    * [const R_AARCH64_ADD_ABS_LO12_NC](#R_AARCH64_ADD_ABS_LO12_NC)
-    * [const R_AARCH64_LDST8_ABS_LO12_NC](#R_AARCH64_LDST8_ABS_LO12_NC)
-    * [const R_AARCH64_TSTBR14](#R_AARCH64_TSTBR14)
-    * [const R_AARCH64_CONDBR19](#R_AARCH64_CONDBR19)
-    * [const R_AARCH64_JUMP26](#R_AARCH64_JUMP26)
-    * [const R_AARCH64_CALL26](#R_AARCH64_CALL26)
-    * [const R_AARCH64_LDST16_ABS_LO12_NC](#R_AARCH64_LDST16_ABS_LO12_NC)
-    * [const R_AARCH64_LDST32_ABS_LO12_NC](#R_AARCH64_LDST32_ABS_LO12_NC)
-    * [const R_AARCH64_LDST64_ABS_LO12_NC](#R_AARCH64_LDST64_ABS_LO12_NC)
-    * [const R_AARCH64_LDST128_ABS_LO12_NC](#R_AARCH64_LDST128_ABS_LO12_NC)
-    * [const R_AARCH64_GOT_LD_PREL19](#R_AARCH64_GOT_LD_PREL19)
-    * [const R_AARCH64_LD64_GOTOFF_LO15](#R_AARCH64_LD64_GOTOFF_LO15)
-    * [const R_AARCH64_ADR_GOT_PAGE](#R_AARCH64_ADR_GOT_PAGE)
-    * [const R_AARCH64_LD64_GOT_LO12_NC](#R_AARCH64_LD64_GOT_LO12_NC)
-    * [const R_AARCH64_LD64_GOTPAGE_LO15](#R_AARCH64_LD64_GOTPAGE_LO15)
-    * [const R_AARCH64_TLSGD_ADR_PREL21](#R_AARCH64_TLSGD_ADR_PREL21)
-    * [const R_AARCH64_TLSGD_ADR_PAGE21](#R_AARCH64_TLSGD_ADR_PAGE21)
+    * [const R_AARCH64_NONE](#R_AARCH64_NONE)
+    * [const R_AARCH64_NULL](#R_AARCH64_NULL)
+    * [const R_AARCH64_P32_ABS16](#R_AARCH64_P32_ABS16)
+    * [const R_AARCH64_P32_ABS32](#R_AARCH64_P32_ABS32)
+    * [const R_AARCH64_P32_ADD_ABS_LO12_NC](#R_AARCH64_P32_ADD_ABS_LO12_NC)
+    * [const R_AARCH64_P32_ADR_GOT_PAGE](#R_AARCH64_P32_ADR_GOT_PAGE)
+    * [const R_AARCH64_P32_ADR_PREL_LO21](#R_AARCH64_P32_ADR_PREL_LO21)
+    * [const R_AARCH64_P32_ADR_PREL_PG_HI21](#R_AARCH64_P32_ADR_PREL_PG_HI21)
+    * [const R_AARCH64_P32_CALL26](#R_AARCH64_P32_CALL26)
+    * [const R_AARCH64_P32_CONDBR19](#R_AARCH64_P32_CONDBR19)
+    * [const R_AARCH64_P32_COPY](#R_AARCH64_P32_COPY)
+    * [const R_AARCH64_P32_GLOB_DAT](#R_AARCH64_P32_GLOB_DAT)
+    * [const R_AARCH64_P32_GOT_LD_PREL19](#R_AARCH64_P32_GOT_LD_PREL19)
+    * [const R_AARCH64_P32_IRELATIVE](#R_AARCH64_P32_IRELATIVE)
+    * [const R_AARCH64_P32_JUMP26](#R_AARCH64_P32_JUMP26)
+    * [const R_AARCH64_P32_JUMP_SLOT](#R_AARCH64_P32_JUMP_SLOT)
+    * [const R_AARCH64_P32_LD32_GOT_LO12_NC](#R_AARCH64_P32_LD32_GOT_LO12_NC)
+    * [const R_AARCH64_P32_LDST128_ABS_LO12_NC](#R_AARCH64_P32_LDST128_ABS_LO12_NC)
+    * [const R_AARCH64_P32_LDST16_ABS_LO12_NC](#R_AARCH64_P32_LDST16_ABS_LO12_NC)
+    * [const R_AARCH64_P32_LDST32_ABS_LO12_NC](#R_AARCH64_P32_LDST32_ABS_LO12_NC)
+    * [const R_AARCH64_P32_LDST64_ABS_LO12_NC](#R_AARCH64_P32_LDST64_ABS_LO12_NC)
+    * [const R_AARCH64_P32_LDST8_ABS_LO12_NC](#R_AARCH64_P32_LDST8_ABS_LO12_NC)
+    * [const R_AARCH64_P32_LD_PREL_LO19](#R_AARCH64_P32_LD_PREL_LO19)
+    * [const R_AARCH64_P32_MOVW_SABS_G0](#R_AARCH64_P32_MOVW_SABS_G0)
+    * [const R_AARCH64_P32_MOVW_UABS_G0](#R_AARCH64_P32_MOVW_UABS_G0)
+    * [const R_AARCH64_P32_MOVW_UABS_G0_NC](#R_AARCH64_P32_MOVW_UABS_G0_NC)
+    * [const R_AARCH64_P32_MOVW_UABS_G1](#R_AARCH64_P32_MOVW_UABS_G1)
+    * [const R_AARCH64_P32_PREL16](#R_AARCH64_P32_PREL16)
+    * [const R_AARCH64_P32_PREL32](#R_AARCH64_P32_PREL32)
+    * [const R_AARCH64_P32_RELATIVE](#R_AARCH64_P32_RELATIVE)
+    * [const R_AARCH64_P32_TLSDESC](#R_AARCH64_P32_TLSDESC)
+    * [const R_AARCH64_P32_TLSDESC_ADD_LO12_NC](#R_AARCH64_P32_TLSDESC_ADD_LO12_NC)
+    * [const R_AARCH64_P32_TLSDESC_ADR_PAGE21](#R_AARCH64_P32_TLSDESC_ADR_PAGE21)
+    * [const R_AARCH64_P32_TLSDESC_ADR_PREL21](#R_AARCH64_P32_TLSDESC_ADR_PREL21)
+    * [const R_AARCH64_P32_TLSDESC_CALL](#R_AARCH64_P32_TLSDESC_CALL)
+    * [const R_AARCH64_P32_TLSDESC_LD32_LO12_NC](#R_AARCH64_P32_TLSDESC_LD32_LO12_NC)
+    * [const R_AARCH64_P32_TLSDESC_LD_PREL19](#R_AARCH64_P32_TLSDESC_LD_PREL19)
+    * [const R_AARCH64_P32_TLSGD_ADD_LO12_NC](#R_AARCH64_P32_TLSGD_ADD_LO12_NC)
+    * [const R_AARCH64_P32_TLSGD_ADR_PAGE21](#R_AARCH64_P32_TLSGD_ADR_PAGE21)
+    * [const R_AARCH64_P32_TLSIE_ADR_GOTTPREL_PAGE21](#R_AARCH64_P32_TLSIE_ADR_GOTTPREL_PAGE21)
+    * [const R_AARCH64_P32_TLSIE_LD32_GOTTPREL_LO12_NC](#R_AARCH64_P32_TLSIE_LD32_GOTTPREL_LO12_NC)
+    * [const R_AARCH64_P32_TLSIE_LD_GOTTPREL_PREL19](#R_AARCH64_P32_TLSIE_LD_GOTTPREL_PREL19)
+    * [const R_AARCH64_P32_TLSLE_ADD_TPREL_HI12](#R_AARCH64_P32_TLSLE_ADD_TPREL_HI12)
+    * [const R_AARCH64_P32_TLSLE_ADD_TPREL_LO12](#R_AARCH64_P32_TLSLE_ADD_TPREL_LO12)
+    * [const R_AARCH64_P32_TLSLE_ADD_TPREL_LO12_NC](#R_AARCH64_P32_TLSLE_ADD_TPREL_LO12_NC)
+    * [const R_AARCH64_P32_TLSLE_MOVW_TPREL_G0](#R_AARCH64_P32_TLSLE_MOVW_TPREL_G0)
+    * [const R_AARCH64_P32_TLSLE_MOVW_TPREL_G0_NC](#R_AARCH64_P32_TLSLE_MOVW_TPREL_G0_NC)
+    * [const R_AARCH64_P32_TLSLE_MOVW_TPREL_G1](#R_AARCH64_P32_TLSLE_MOVW_TPREL_G1)
+    * [const R_AARCH64_P32_TLS_DTPMOD](#R_AARCH64_P32_TLS_DTPMOD)
+    * [const R_AARCH64_P32_TLS_DTPREL](#R_AARCH64_P32_TLS_DTPREL)
+    * [const R_AARCH64_P32_TLS_TPREL](#R_AARCH64_P32_TLS_TPREL)
+    * [const R_AARCH64_P32_TSTBR14](#R_AARCH64_P32_TSTBR14)
+    * [const R_AARCH64_PREL16](#R_AARCH64_PREL16)
+    * [const R_AARCH64_PREL32](#R_AARCH64_PREL32)
+    * [const R_AARCH64_PREL64](#R_AARCH64_PREL64)
+    * [const R_AARCH64_RELATIVE](#R_AARCH64_RELATIVE)
+    * [const R_AARCH64_TLSDESC](#R_AARCH64_TLSDESC)
+    * [const R_AARCH64_TLSDESC_ADD](#R_AARCH64_TLSDESC_ADD)
+    * [const R_AARCH64_TLSDESC_ADD_LO12_NC](#R_AARCH64_TLSDESC_ADD_LO12_NC)
+    * [const R_AARCH64_TLSDESC_ADR_PAGE21](#R_AARCH64_TLSDESC_ADR_PAGE21)
+    * [const R_AARCH64_TLSDESC_ADR_PREL21](#R_AARCH64_TLSDESC_ADR_PREL21)
+    * [const R_AARCH64_TLSDESC_CALL](#R_AARCH64_TLSDESC_CALL)
+    * [const R_AARCH64_TLSDESC_LD64_LO12_NC](#R_AARCH64_TLSDESC_LD64_LO12_NC)
+    * [const R_AARCH64_TLSDESC_LDR](#R_AARCH64_TLSDESC_LDR)
+    * [const R_AARCH64_TLSDESC_LD_PREL19](#R_AARCH64_TLSDESC_LD_PREL19)
+    * [const R_AARCH64_TLSDESC_OFF_G0_NC](#R_AARCH64_TLSDESC_OFF_G0_NC)
+    * [const R_AARCH64_TLSDESC_OFF_G1](#R_AARCH64_TLSDESC_OFF_G1)
     * [const R_AARCH64_TLSGD_ADD_LO12_NC](#R_AARCH64_TLSGD_ADD_LO12_NC)
-    * [const R_AARCH64_TLSGD_MOVW_G1](#R_AARCH64_TLSGD_MOVW_G1)
+    * [const R_AARCH64_TLSGD_ADR_PAGE21](#R_AARCH64_TLSGD_ADR_PAGE21)
+    * [const R_AARCH64_TLSGD_ADR_PREL21](#R_AARCH64_TLSGD_ADR_PREL21)
     * [const R_AARCH64_TLSGD_MOVW_G0_NC](#R_AARCH64_TLSGD_MOVW_G0_NC)
-    * [const R_AARCH64_TLSLD_ADR_PREL21](#R_AARCH64_TLSLD_ADR_PREL21)
-    * [const R_AARCH64_TLSLD_ADR_PAGE21](#R_AARCH64_TLSLD_ADR_PAGE21)
-    * [const R_AARCH64_TLSIE_MOVW_GOTTPREL_G1](#R_AARCH64_TLSIE_MOVW_GOTTPREL_G1)
-    * [const R_AARCH64_TLSIE_MOVW_GOTTPREL_G0_NC](#R_AARCH64_TLSIE_MOVW_GOTTPREL_G0_NC)
+    * [const R_AARCH64_TLSGD_MOVW_G1](#R_AARCH64_TLSGD_MOVW_G1)
     * [const R_AARCH64_TLSIE_ADR_GOTTPREL_PAGE21](#R_AARCH64_TLSIE_ADR_GOTTPREL_PAGE21)
     * [const R_AARCH64_TLSIE_LD64_GOTTPREL_LO12_NC](#R_AARCH64_TLSIE_LD64_GOTTPREL_LO12_NC)
     * [const R_AARCH64_TLSIE_LD_GOTTPREL_PREL19](#R_AARCH64_TLSIE_LD_GOTTPREL_PREL19)
-    * [const R_AARCH64_TLSLE_MOVW_TPREL_G2](#R_AARCH64_TLSLE_MOVW_TPREL_G2)
-    * [const R_AARCH64_TLSLE_MOVW_TPREL_G1](#R_AARCH64_TLSLE_MOVW_TPREL_G1)
-    * [const R_AARCH64_TLSLE_MOVW_TPREL_G1_NC](#R_AARCH64_TLSLE_MOVW_TPREL_G1_NC)
-    * [const R_AARCH64_TLSLE_MOVW_TPREL_G0](#R_AARCH64_TLSLE_MOVW_TPREL_G0)
-    * [const R_AARCH64_TLSLE_MOVW_TPREL_G0_NC](#R_AARCH64_TLSLE_MOVW_TPREL_G0_NC)
+    * [const R_AARCH64_TLSIE_MOVW_GOTTPREL_G0_NC](#R_AARCH64_TLSIE_MOVW_GOTTPREL_G0_NC)
+    * [const R_AARCH64_TLSIE_MOVW_GOTTPREL_G1](#R_AARCH64_TLSIE_MOVW_GOTTPREL_G1)
+    * [const R_AARCH64_TLSLD_ADR_PAGE21](#R_AARCH64_TLSLD_ADR_PAGE21)
+    * [const R_AARCH64_TLSLD_ADR_PREL21](#R_AARCH64_TLSLD_ADR_PREL21)
+    * [const R_AARCH64_TLSLD_LDST128_DTPREL_LO12](#R_AARCH64_TLSLD_LDST128_DTPREL_LO12)
+    * [const R_AARCH64_TLSLD_LDST128_DTPREL_LO12_NC](#R_AARCH64_TLSLD_LDST128_DTPREL_LO12_NC)
     * [const R_AARCH64_TLSLE_ADD_TPREL_HI12](#R_AARCH64_TLSLE_ADD_TPREL_HI12)
     * [const R_AARCH64_TLSLE_ADD_TPREL_LO12](#R_AARCH64_TLSLE_ADD_TPREL_LO12)
     * [const R_AARCH64_TLSLE_ADD_TPREL_LO12_NC](#R_AARCH64_TLSLE_ADD_TPREL_LO12_NC)
-    * [const R_AARCH64_TLSDESC_LD_PREL19](#R_AARCH64_TLSDESC_LD_PREL19)
-    * [const R_AARCH64_TLSDESC_ADR_PREL21](#R_AARCH64_TLSDESC_ADR_PREL21)
-    * [const R_AARCH64_TLSDESC_ADR_PAGE21](#R_AARCH64_TLSDESC_ADR_PAGE21)
-    * [const R_AARCH64_TLSDESC_LD64_LO12_NC](#R_AARCH64_TLSDESC_LD64_LO12_NC)
-    * [const R_AARCH64_TLSDESC_ADD_LO12_NC](#R_AARCH64_TLSDESC_ADD_LO12_NC)
-    * [const R_AARCH64_TLSDESC_OFF_G1](#R_AARCH64_TLSDESC_OFF_G1)
-    * [const R_AARCH64_TLSDESC_OFF_G0_NC](#R_AARCH64_TLSDESC_OFF_G0_NC)
-    * [const R_AARCH64_TLSDESC_LDR](#R_AARCH64_TLSDESC_LDR)
-    * [const R_AARCH64_TLSDESC_ADD](#R_AARCH64_TLSDESC_ADD)
-    * [const R_AARCH64_TLSDESC_CALL](#R_AARCH64_TLSDESC_CALL)
     * [const R_AARCH64_TLSLE_LDST128_TPREL_LO12](#R_AARCH64_TLSLE_LDST128_TPREL_LO12)
     * [const R_AARCH64_TLSLE_LDST128_TPREL_LO12_NC](#R_AARCH64_TLSLE_LDST128_TPREL_LO12_NC)
-    * [const R_AARCH64_TLSLD_LDST128_DTPREL_LO12](#R_AARCH64_TLSLD_LDST128_DTPREL_LO12)
-    * [const R_AARCH64_TLSLD_LDST128_DTPREL_LO12_NC](#R_AARCH64_TLSLD_LDST128_DTPREL_LO12_NC)
-    * [const R_AARCH64_COPY](#R_AARCH64_COPY)
-    * [const R_AARCH64_GLOB_DAT](#R_AARCH64_GLOB_DAT)
-    * [const R_AARCH64_JUMP_SLOT](#R_AARCH64_JUMP_SLOT)
-    * [const R_AARCH64_RELATIVE](#R_AARCH64_RELATIVE)
+    * [const R_AARCH64_TLSLE_MOVW_TPREL_G0](#R_AARCH64_TLSLE_MOVW_TPREL_G0)
+    * [const R_AARCH64_TLSLE_MOVW_TPREL_G0_NC](#R_AARCH64_TLSLE_MOVW_TPREL_G0_NC)
+    * [const R_AARCH64_TLSLE_MOVW_TPREL_G1](#R_AARCH64_TLSLE_MOVW_TPREL_G1)
+    * [const R_AARCH64_TLSLE_MOVW_TPREL_G1_NC](#R_AARCH64_TLSLE_MOVW_TPREL_G1_NC)
+    * [const R_AARCH64_TLSLE_MOVW_TPREL_G2](#R_AARCH64_TLSLE_MOVW_TPREL_G2)
     * [const R_AARCH64_TLS_DTPMOD64](#R_AARCH64_TLS_DTPMOD64)
     * [const R_AARCH64_TLS_DTPREL64](#R_AARCH64_TLS_DTPREL64)
     * [const R_AARCH64_TLS_TPREL64](#R_AARCH64_TLS_TPREL64)
-    * [const R_AARCH64_TLSDESC](#R_AARCH64_TLSDESC)
-    * [const R_AARCH64_IRELATIVE](#R_AARCH64_IRELATIVE)
-    * [const R_ALPHA_NONE](#R_ALPHA_NONE)
-    * [const R_ALPHA_REFLONG](#R_ALPHA_REFLONG)
-    * [const R_ALPHA_REFQUAD](#R_ALPHA_REFQUAD)
+    * [const R_AARCH64_TSTBR14](#R_AARCH64_TSTBR14)
+    * [const R_ALPHA_BRADDR](#R_ALPHA_BRADDR)
+    * [const R_ALPHA_COPY](#R_ALPHA_COPY)
+    * [const R_ALPHA_GLOB_DAT](#R_ALPHA_GLOB_DAT)
+    * [const R_ALPHA_GPDISP](#R_ALPHA_GPDISP)
     * [const R_ALPHA_GPREL32](#R_ALPHA_GPREL32)
+    * [const R_ALPHA_GPRELHIGH](#R_ALPHA_GPRELHIGH)
+    * [const R_ALPHA_GPRELLOW](#R_ALPHA_GPRELLOW)
+    * [const R_ALPHA_GPVALUE](#R_ALPHA_GPVALUE)
+    * [const R_ALPHA_HINT](#R_ALPHA_HINT)
+    * [const R_ALPHA_IMMED_BR_HI32](#R_ALPHA_IMMED_BR_HI32)
+    * [const R_ALPHA_IMMED_GP_16](#R_ALPHA_IMMED_GP_16)
+    * [const R_ALPHA_IMMED_GP_HI32](#R_ALPHA_IMMED_GP_HI32)
+    * [const R_ALPHA_IMMED_LO32](#R_ALPHA_IMMED_LO32)
+    * [const R_ALPHA_IMMED_SCN_HI32](#R_ALPHA_IMMED_SCN_HI32)
+    * [const R_ALPHA_JMP_SLOT](#R_ALPHA_JMP_SLOT)
     * [const R_ALPHA_LITERAL](#R_ALPHA_LITERAL)
     * [const R_ALPHA_LITUSE](#R_ALPHA_LITUSE)
-    * [const R_ALPHA_GPDISP](#R_ALPHA_GPDISP)
-    * [const R_ALPHA_BRADDR](#R_ALPHA_BRADDR)
-    * [const R_ALPHA_HINT](#R_ALPHA_HINT)
+    * [const R_ALPHA_NONE](#R_ALPHA_NONE)
+    * [const R_ALPHA_OP_PRSHIFT](#R_ALPHA_OP_PRSHIFT)
+    * [const R_ALPHA_OP_PSUB](#R_ALPHA_OP_PSUB)
+    * [const R_ALPHA_OP_PUSH](#R_ALPHA_OP_PUSH)
+    * [const R_ALPHA_OP_STORE](#R_ALPHA_OP_STORE)
+    * [const R_ALPHA_REFLONG](#R_ALPHA_REFLONG)
+    * [const R_ALPHA_REFQUAD](#R_ALPHA_REFQUAD)
+    * [const R_ALPHA_RELATIVE](#R_ALPHA_RELATIVE)
     * [const R_ALPHA_SREL16](#R_ALPHA_SREL16)
     * [const R_ALPHA_SREL32](#R_ALPHA_SREL32)
     * [const R_ALPHA_SREL64](#R_ALPHA_SREL64)
-    * [const R_ALPHA_OP_PUSH](#R_ALPHA_OP_PUSH)
-    * [const R_ALPHA_OP_STORE](#R_ALPHA_OP_STORE)
-    * [const R_ALPHA_OP_PSUB](#R_ALPHA_OP_PSUB)
-    * [const R_ALPHA_OP_PRSHIFT](#R_ALPHA_OP_PRSHIFT)
-    * [const R_ALPHA_GPVALUE](#R_ALPHA_GPVALUE)
-    * [const R_ALPHA_GPRELHIGH](#R_ALPHA_GPRELHIGH)
-    * [const R_ALPHA_GPRELLOW](#R_ALPHA_GPRELLOW)
-    * [const R_ALPHA_IMMED_GP_16](#R_ALPHA_IMMED_GP_16)
-    * [const R_ALPHA_IMMED_GP_HI32](#R_ALPHA_IMMED_GP_HI32)
-    * [const R_ALPHA_IMMED_SCN_HI32](#R_ALPHA_IMMED_SCN_HI32)
-    * [const R_ALPHA_IMMED_BR_HI32](#R_ALPHA_IMMED_BR_HI32)
-    * [const R_ALPHA_IMMED_LO32](#R_ALPHA_IMMED_LO32)
-    * [const R_ALPHA_COPY](#R_ALPHA_COPY)
-    * [const R_ALPHA_GLOB_DAT](#R_ALPHA_GLOB_DAT)
-    * [const R_ALPHA_JMP_SLOT](#R_ALPHA_JMP_SLOT)
-    * [const R_ALPHA_RELATIVE](#R_ALPHA_RELATIVE)
-    * [const R_ARM_NONE](#R_ARM_NONE)
-    * [const R_ARM_PC24](#R_ARM_PC24)
-    * [const R_ARM_ABS32](#R_ARM_ABS32)
-    * [const R_ARM_REL32](#R_ARM_REL32)
-    * [const R_ARM_PC13](#R_ARM_PC13)
-    * [const R_ARM_ABS16](#R_ARM_ABS16)
     * [const R_ARM_ABS12](#R_ARM_ABS12)
-    * [const R_ARM_THM_ABS5](#R_ARM_THM_ABS5)
+    * [const R_ARM_ABS16](#R_ARM_ABS16)
+    * [const R_ARM_ABS32](#R_ARM_ABS32)
+    * [const R_ARM_ABS32_NOI](#R_ARM_ABS32_NOI)
     * [const R_ARM_ABS8](#R_ARM_ABS8)
-    * [const R_ARM_SBREL32](#R_ARM_SBREL32)
-    * [const R_ARM_THM_PC22](#R_ARM_THM_PC22)
-    * [const R_ARM_THM_PC8](#R_ARM_THM_PC8)
-    * [const R_ARM_AMP_VCALL9](#R_ARM_AMP_VCALL9)
-    * [const R_ARM_SWI24](#R_ARM_SWI24)
-    * [const R_ARM_THM_SWI8](#R_ARM_THM_SWI8)
-    * [const R_ARM_XPC25](#R_ARM_XPC25)
-    * [const R_ARM_THM_XPC22](#R_ARM_THM_XPC22)
-    * [const R_ARM_TLS_DTPMOD32](#R_ARM_TLS_DTPMOD32)
-    * [const R_ARM_TLS_DTPOFF32](#R_ARM_TLS_DTPOFF32)
-    * [const R_ARM_TLS_TPOFF32](#R_ARM_TLS_TPOFF32)
-    * [const R_ARM_COPY](#R_ARM_COPY)
-    * [const R_ARM_GLOB_DAT](#R_ARM_GLOB_DAT)
-    * [const R_ARM_JUMP_SLOT](#R_ARM_JUMP_SLOT)
-    * [const R_ARM_RELATIVE](#R_ARM_RELATIVE)
-    * [const R_ARM_GOTOFF](#R_ARM_GOTOFF)
-    * [const R_ARM_GOTPC](#R_ARM_GOTPC)
-    * [const R_ARM_GOT32](#R_ARM_GOT32)
-    * [const R_ARM_PLT32](#R_ARM_PLT32)
-    * [const R_ARM_CALL](#R_ARM_CALL)
-    * [const R_ARM_JUMP24](#R_ARM_JUMP24)
-    * [const R_ARM_THM_JUMP24](#R_ARM_THM_JUMP24)
-    * [const R_ARM_BASE_ABS](#R_ARM_BASE_ABS)
-    * [const R_ARM_ALU_PCREL_7_0](#R_ARM_ALU_PCREL_7_0)
     * [const R_ARM_ALU_PCREL_15_8](#R_ARM_ALU_PCREL_15_8)
     * [const R_ARM_ALU_PCREL_23_15](#R_ARM_ALU_PCREL_23_15)
-    * [const R_ARM_LDR_SBREL_11_10_NC](#R_ARM_LDR_SBREL_11_10_NC)
+    * [const R_ARM_ALU_PCREL_7_0](#R_ARM_ALU_PCREL_7_0)
+    * [const R_ARM_ALU_PC_G0](#R_ARM_ALU_PC_G0)
+    * [const R_ARM_ALU_PC_G0_NC](#R_ARM_ALU_PC_G0_NC)
+    * [const R_ARM_ALU_PC_G1](#R_ARM_ALU_PC_G1)
+    * [const R_ARM_ALU_PC_G1_NC](#R_ARM_ALU_PC_G1_NC)
+    * [const R_ARM_ALU_PC_G2](#R_ARM_ALU_PC_G2)
     * [const R_ARM_ALU_SBREL_19_12_NC](#R_ARM_ALU_SBREL_19_12_NC)
     * [const R_ARM_ALU_SBREL_27_20_CK](#R_ARM_ALU_SBREL_27_20_CK)
-    * [const R_ARM_TARGET1](#R_ARM_TARGET1)
-    * [const R_ARM_SBREL31](#R_ARM_SBREL31)
-    * [const R_ARM_V4BX](#R_ARM_V4BX)
-    * [const R_ARM_TARGET2](#R_ARM_TARGET2)
-    * [const R_ARM_PREL31](#R_ARM_PREL31)
-    * [const R_ARM_MOVW_ABS_NC](#R_ARM_MOVW_ABS_NC)
-    * [const R_ARM_MOVT_ABS](#R_ARM_MOVT_ABS)
-    * [const R_ARM_MOVW_PREL_NC](#R_ARM_MOVW_PREL_NC)
-    * [const R_ARM_MOVT_PREL](#R_ARM_MOVT_PREL)
-    * [const R_ARM_THM_MOVW_ABS_NC](#R_ARM_THM_MOVW_ABS_NC)
-    * [const R_ARM_THM_MOVT_ABS](#R_ARM_THM_MOVT_ABS)
-    * [const R_ARM_THM_MOVW_PREL_NC](#R_ARM_THM_MOVW_PREL_NC)
-    * [const R_ARM_THM_MOVT_PREL](#R_ARM_THM_MOVT_PREL)
-    * [const R_ARM_THM_JUMP19](#R_ARM_THM_JUMP19)
-    * [const R_ARM_THM_JUMP6](#R_ARM_THM_JUMP6)
-    * [const R_ARM_THM_ALU_PREL_11_0](#R_ARM_THM_ALU_PREL_11_0)
-    * [const R_ARM_THM_PC12](#R_ARM_THM_PC12)
-    * [const R_ARM_ABS32_NOI](#R_ARM_ABS32_NOI)
-    * [const R_ARM_REL32_NOI](#R_ARM_REL32_NOI)
-    * [const R_ARM_ALU_PC_G0_NC](#R_ARM_ALU_PC_G0_NC)
-    * [const R_ARM_ALU_PC_G0](#R_ARM_ALU_PC_G0)
-    * [const R_ARM_ALU_PC_G1_NC](#R_ARM_ALU_PC_G1_NC)
-    * [const R_ARM_ALU_PC_G1](#R_ARM_ALU_PC_G1)
-    * [const R_ARM_ALU_PC_G2](#R_ARM_ALU_PC_G2)
-    * [const R_ARM_LDR_PC_G1](#R_ARM_LDR_PC_G1)
-    * [const R_ARM_LDR_PC_G2](#R_ARM_LDR_PC_G2)
-    * [const R_ARM_LDRS_PC_G0](#R_ARM_LDRS_PC_G0)
-    * [const R_ARM_LDRS_PC_G1](#R_ARM_LDRS_PC_G1)
-    * [const R_ARM_LDRS_PC_G2](#R_ARM_LDRS_PC_G2)
+    * [const R_ARM_ALU_SB_G0](#R_ARM_ALU_SB_G0)
+    * [const R_ARM_ALU_SB_G0_NC](#R_ARM_ALU_SB_G0_NC)
+    * [const R_ARM_ALU_SB_G1](#R_ARM_ALU_SB_G1)
+    * [const R_ARM_ALU_SB_G1_NC](#R_ARM_ALU_SB_G1_NC)
+    * [const R_ARM_ALU_SB_G2](#R_ARM_ALU_SB_G2)
+    * [const R_ARM_AMP_VCALL9](#R_ARM_AMP_VCALL9)
+    * [const R_ARM_BASE_ABS](#R_ARM_BASE_ABS)
+    * [const R_ARM_CALL](#R_ARM_CALL)
+    * [const R_ARM_COPY](#R_ARM_COPY)
+    * [const R_ARM_GLOB_DAT](#R_ARM_GLOB_DAT)
+    * [const R_ARM_GNU_VTENTRY](#R_ARM_GNU_VTENTRY)
+    * [const R_ARM_GNU_VTINHERIT](#R_ARM_GNU_VTINHERIT)
+    * [const R_ARM_GOT32](#R_ARM_GOT32)
+    * [const R_ARM_GOTOFF](#R_ARM_GOTOFF)
+    * [const R_ARM_GOTOFF12](#R_ARM_GOTOFF12)
+    * [const R_ARM_GOTPC](#R_ARM_GOTPC)
+    * [const R_ARM_GOTRELAX](#R_ARM_GOTRELAX)
+    * [const R_ARM_GOT_ABS](#R_ARM_GOT_ABS)
+    * [const R_ARM_GOT_BREL12](#R_ARM_GOT_BREL12)
+    * [const R_ARM_GOT_PREL](#R_ARM_GOT_PREL)
+    * [const R_ARM_IRELATIVE](#R_ARM_IRELATIVE)
+    * [const R_ARM_JUMP24](#R_ARM_JUMP24)
+    * [const R_ARM_JUMP_SLOT](#R_ARM_JUMP_SLOT)
     * [const R_ARM_LDC_PC_G0](#R_ARM_LDC_PC_G0)
     * [const R_ARM_LDC_PC_G1](#R_ARM_LDC_PC_G1)
     * [const R_ARM_LDC_PC_G2](#R_ARM_LDC_PC_G2)
-    * [const R_ARM_ALU_SB_G0_NC](#R_ARM_ALU_SB_G0_NC)
-    * [const R_ARM_ALU_SB_G0](#R_ARM_ALU_SB_G0)
-    * [const R_ARM_ALU_SB_G1_NC](#R_ARM_ALU_SB_G1_NC)
-    * [const R_ARM_ALU_SB_G1](#R_ARM_ALU_SB_G1)
-    * [const R_ARM_ALU_SB_G2](#R_ARM_ALU_SB_G2)
-    * [const R_ARM_LDR_SB_G0](#R_ARM_LDR_SB_G0)
-    * [const R_ARM_LDR_SB_G1](#R_ARM_LDR_SB_G1)
-    * [const R_ARM_LDR_SB_G2](#R_ARM_LDR_SB_G2)
-    * [const R_ARM_LDRS_SB_G0](#R_ARM_LDRS_SB_G0)
-    * [const R_ARM_LDRS_SB_G1](#R_ARM_LDRS_SB_G1)
-    * [const R_ARM_LDRS_SB_G2](#R_ARM_LDRS_SB_G2)
     * [const R_ARM_LDC_SB_G0](#R_ARM_LDC_SB_G0)
     * [const R_ARM_LDC_SB_G1](#R_ARM_LDC_SB_G1)
     * [const R_ARM_LDC_SB_G2](#R_ARM_LDC_SB_G2)
-    * [const R_ARM_MOVW_BREL_NC](#R_ARM_MOVW_BREL_NC)
+    * [const R_ARM_LDRS_PC_G0](#R_ARM_LDRS_PC_G0)
+    * [const R_ARM_LDRS_PC_G1](#R_ARM_LDRS_PC_G1)
+    * [const R_ARM_LDRS_PC_G2](#R_ARM_LDRS_PC_G2)
+    * [const R_ARM_LDRS_SB_G0](#R_ARM_LDRS_SB_G0)
+    * [const R_ARM_LDRS_SB_G1](#R_ARM_LDRS_SB_G1)
+    * [const R_ARM_LDRS_SB_G2](#R_ARM_LDRS_SB_G2)
+    * [const R_ARM_LDR_PC_G1](#R_ARM_LDR_PC_G1)
+    * [const R_ARM_LDR_PC_G2](#R_ARM_LDR_PC_G2)
+    * [const R_ARM_LDR_SBREL_11_10_NC](#R_ARM_LDR_SBREL_11_10_NC)
+    * [const R_ARM_LDR_SB_G0](#R_ARM_LDR_SB_G0)
+    * [const R_ARM_LDR_SB_G1](#R_ARM_LDR_SB_G1)
+    * [const R_ARM_LDR_SB_G2](#R_ARM_LDR_SB_G2)
+    * [const R_ARM_ME_TOO](#R_ARM_ME_TOO)
+    * [const R_ARM_MOVT_ABS](#R_ARM_MOVT_ABS)
     * [const R_ARM_MOVT_BREL](#R_ARM_MOVT_BREL)
+    * [const R_ARM_MOVT_PREL](#R_ARM_MOVT_PREL)
+    * [const R_ARM_MOVW_ABS_NC](#R_ARM_MOVW_ABS_NC)
     * [const R_ARM_MOVW_BREL](#R_ARM_MOVW_BREL)
-    * [const R_ARM_THM_MOVW_BREL_NC](#R_ARM_THM_MOVW_BREL_NC)
-    * [const R_ARM_THM_MOVT_BREL](#R_ARM_THM_MOVT_BREL)
-    * [const R_ARM_THM_MOVW_BREL](#R_ARM_THM_MOVW_BREL)
-    * [const R_ARM_TLS_GOTDESC](#R_ARM_TLS_GOTDESC)
-    * [const R_ARM_TLS_CALL](#R_ARM_TLS_CALL)
-    * [const R_ARM_TLS_DESCSEQ](#R_ARM_TLS_DESCSEQ)
-    * [const R_ARM_THM_TLS_CALL](#R_ARM_THM_TLS_CALL)
+    * [const R_ARM_MOVW_BREL_NC](#R_ARM_MOVW_BREL_NC)
+    * [const R_ARM_MOVW_PREL_NC](#R_ARM_MOVW_PREL_NC)
+    * [const R_ARM_NONE](#R_ARM_NONE)
+    * [const R_ARM_PC13](#R_ARM_PC13)
+    * [const R_ARM_PC24](#R_ARM_PC24)
+    * [const R_ARM_PLT32](#R_ARM_PLT32)
     * [const R_ARM_PLT32_ABS](#R_ARM_PLT32_ABS)
-    * [const R_ARM_GOT_ABS](#R_ARM_GOT_ABS)
-    * [const R_ARM_GOT_PREL](#R_ARM_GOT_PREL)
-    * [const R_ARM_GOT_BREL12](#R_ARM_GOT_BREL12)
-    * [const R_ARM_GOTOFF12](#R_ARM_GOTOFF12)
-    * [const R_ARM_GOTRELAX](#R_ARM_GOTRELAX)
-    * [const R_ARM_GNU_VTENTRY](#R_ARM_GNU_VTENTRY)
-    * [const R_ARM_GNU_VTINHERIT](#R_ARM_GNU_VTINHERIT)
-    * [const R_ARM_THM_JUMP11](#R_ARM_THM_JUMP11)
-    * [const R_ARM_THM_JUMP8](#R_ARM_THM_JUMP8)
-    * [const R_ARM_TLS_GD32](#R_ARM_TLS_GD32)
-    * [const R_ARM_TLS_LDM32](#R_ARM_TLS_LDM32)
-    * [const R_ARM_TLS_LDO32](#R_ARM_TLS_LDO32)
-    * [const R_ARM_TLS_IE32](#R_ARM_TLS_IE32)
-    * [const R_ARM_TLS_LE32](#R_ARM_TLS_LE32)
-    * [const R_ARM_TLS_LDO12](#R_ARM_TLS_LDO12)
-    * [const R_ARM_TLS_LE12](#R_ARM_TLS_LE12)
-    * [const R_ARM_TLS_IE12GP](#R_ARM_TLS_IE12GP)
+    * [const R_ARM_PREL31](#R_ARM_PREL31)
     * [const R_ARM_PRIVATE_0](#R_ARM_PRIVATE_0)
     * [const R_ARM_PRIVATE_1](#R_ARM_PRIVATE_1)
+    * [const R_ARM_PRIVATE_10](#R_ARM_PRIVATE_10)
+    * [const R_ARM_PRIVATE_11](#R_ARM_PRIVATE_11)
+    * [const R_ARM_PRIVATE_12](#R_ARM_PRIVATE_12)
+    * [const R_ARM_PRIVATE_13](#R_ARM_PRIVATE_13)
+    * [const R_ARM_PRIVATE_14](#R_ARM_PRIVATE_14)
+    * [const R_ARM_PRIVATE_15](#R_ARM_PRIVATE_15)
     * [const R_ARM_PRIVATE_2](#R_ARM_PRIVATE_2)
     * [const R_ARM_PRIVATE_3](#R_ARM_PRIVATE_3)
     * [const R_ARM_PRIVATE_4](#R_ARM_PRIVATE_4)
@@ -814,706 +764,2377 @@ Package elf implements access to ELF object files.
     * [const R_ARM_PRIVATE_7](#R_ARM_PRIVATE_7)
     * [const R_ARM_PRIVATE_8](#R_ARM_PRIVATE_8)
     * [const R_ARM_PRIVATE_9](#R_ARM_PRIVATE_9)
-    * [const R_ARM_PRIVATE_10](#R_ARM_PRIVATE_10)
-    * [const R_ARM_PRIVATE_11](#R_ARM_PRIVATE_11)
-    * [const R_ARM_PRIVATE_12](#R_ARM_PRIVATE_12)
-    * [const R_ARM_PRIVATE_13](#R_ARM_PRIVATE_13)
-    * [const R_ARM_PRIVATE_14](#R_ARM_PRIVATE_14)
-    * [const R_ARM_PRIVATE_15](#R_ARM_PRIVATE_15)
-    * [const R_ARM_ME_TOO](#R_ARM_ME_TOO)
-    * [const R_ARM_THM_TLS_DESCSEQ16](#R_ARM_THM_TLS_DESCSEQ16)
-    * [const R_ARM_THM_TLS_DESCSEQ32](#R_ARM_THM_TLS_DESCSEQ32)
-    * [const R_ARM_THM_GOT_BREL12](#R_ARM_THM_GOT_BREL12)
+    * [const R_ARM_RABS32](#R_ARM_RABS32)
+    * [const R_ARM_RBASE](#R_ARM_RBASE)
+    * [const R_ARM_REL32](#R_ARM_REL32)
+    * [const R_ARM_REL32_NOI](#R_ARM_REL32_NOI)
+    * [const R_ARM_RELATIVE](#R_ARM_RELATIVE)
+    * [const R_ARM_RPC24](#R_ARM_RPC24)
+    * [const R_ARM_RREL32](#R_ARM_RREL32)
+    * [const R_ARM_RSBREL32](#R_ARM_RSBREL32)
+    * [const R_ARM_RXPC25](#R_ARM_RXPC25)
+    * [const R_ARM_SBREL31](#R_ARM_SBREL31)
+    * [const R_ARM_SBREL32](#R_ARM_SBREL32)
+    * [const R_ARM_SWI24](#R_ARM_SWI24)
+    * [const R_ARM_TARGET1](#R_ARM_TARGET1)
+    * [const R_ARM_TARGET2](#R_ARM_TARGET2)
+    * [const R_ARM_THM_ABS5](#R_ARM_THM_ABS5)
     * [const R_ARM_THM_ALU_ABS_G0_NC](#R_ARM_THM_ALU_ABS_G0_NC)
     * [const R_ARM_THM_ALU_ABS_G1_NC](#R_ARM_THM_ALU_ABS_G1_NC)
     * [const R_ARM_THM_ALU_ABS_G2_NC](#R_ARM_THM_ALU_ABS_G2_NC)
     * [const R_ARM_THM_ALU_ABS_G3](#R_ARM_THM_ALU_ABS_G3)
-    * [const R_ARM_IRELATIVE](#R_ARM_IRELATIVE)
-    * [const R_ARM_RXPC25](#R_ARM_RXPC25)
-    * [const R_ARM_RSBREL32](#R_ARM_RSBREL32)
+    * [const R_ARM_THM_ALU_PREL_11_0](#R_ARM_THM_ALU_PREL_11_0)
+    * [const R_ARM_THM_GOT_BREL12](#R_ARM_THM_GOT_BREL12)
+    * [const R_ARM_THM_JUMP11](#R_ARM_THM_JUMP11)
+    * [const R_ARM_THM_JUMP19](#R_ARM_THM_JUMP19)
+    * [const R_ARM_THM_JUMP24](#R_ARM_THM_JUMP24)
+    * [const R_ARM_THM_JUMP6](#R_ARM_THM_JUMP6)
+    * [const R_ARM_THM_JUMP8](#R_ARM_THM_JUMP8)
+    * [const R_ARM_THM_MOVT_ABS](#R_ARM_THM_MOVT_ABS)
+    * [const R_ARM_THM_MOVT_BREL](#R_ARM_THM_MOVT_BREL)
+    * [const R_ARM_THM_MOVT_PREL](#R_ARM_THM_MOVT_PREL)
+    * [const R_ARM_THM_MOVW_ABS_NC](#R_ARM_THM_MOVW_ABS_NC)
+    * [const R_ARM_THM_MOVW_BREL](#R_ARM_THM_MOVW_BREL)
+    * [const R_ARM_THM_MOVW_BREL_NC](#R_ARM_THM_MOVW_BREL_NC)
+    * [const R_ARM_THM_MOVW_PREL_NC](#R_ARM_THM_MOVW_PREL_NC)
+    * [const R_ARM_THM_PC12](#R_ARM_THM_PC12)
+    * [const R_ARM_THM_PC22](#R_ARM_THM_PC22)
+    * [const R_ARM_THM_PC8](#R_ARM_THM_PC8)
     * [const R_ARM_THM_RPC22](#R_ARM_THM_RPC22)
-    * [const R_ARM_RREL32](#R_ARM_RREL32)
-    * [const R_ARM_RABS32](#R_ARM_RABS32)
-    * [const R_ARM_RPC24](#R_ARM_RPC24)
-    * [const R_ARM_RBASE](#R_ARM_RBASE)
-    * [const R_386_NONE](#R_386_NONE)
-    * [const R_386_32](#R_386_32)
-    * [const R_386_PC32](#R_386_PC32)
-    * [const R_386_GOT32](#R_386_GOT32)
-    * [const R_386_PLT32](#R_386_PLT32)
-    * [const R_386_COPY](#R_386_COPY)
-    * [const R_386_GLOB_DAT](#R_386_GLOB_DAT)
-    * [const R_386_JMP_SLOT](#R_386_JMP_SLOT)
-    * [const R_386_RELATIVE](#R_386_RELATIVE)
-    * [const R_386_GOTOFF](#R_386_GOTOFF)
-    * [const R_386_GOTPC](#R_386_GOTPC)
-    * [const R_386_32PLT](#R_386_32PLT)
-    * [const R_386_TLS_TPOFF](#R_386_TLS_TPOFF)
-    * [const R_386_TLS_IE](#R_386_TLS_IE)
-    * [const R_386_TLS_GOTIE](#R_386_TLS_GOTIE)
-    * [const R_386_TLS_LE](#R_386_TLS_LE)
-    * [const R_386_TLS_GD](#R_386_TLS_GD)
-    * [const R_386_TLS_LDM](#R_386_TLS_LDM)
-    * [const R_386_16](#R_386_16)
-    * [const R_386_PC16](#R_386_PC16)
-    * [const R_386_8](#R_386_8)
-    * [const R_386_PC8](#R_386_PC8)
-    * [const R_386_TLS_GD_32](#R_386_TLS_GD_32)
-    * [const R_386_TLS_GD_PUSH](#R_386_TLS_GD_PUSH)
-    * [const R_386_TLS_GD_CALL](#R_386_TLS_GD_CALL)
-    * [const R_386_TLS_GD_POP](#R_386_TLS_GD_POP)
-    * [const R_386_TLS_LDM_32](#R_386_TLS_LDM_32)
-    * [const R_386_TLS_LDM_PUSH](#R_386_TLS_LDM_PUSH)
-    * [const R_386_TLS_LDM_CALL](#R_386_TLS_LDM_CALL)
-    * [const R_386_TLS_LDM_POP](#R_386_TLS_LDM_POP)
-    * [const R_386_TLS_LDO_32](#R_386_TLS_LDO_32)
-    * [const R_386_TLS_IE_32](#R_386_TLS_IE_32)
-    * [const R_386_TLS_LE_32](#R_386_TLS_LE_32)
-    * [const R_386_TLS_DTPMOD32](#R_386_TLS_DTPMOD32)
-    * [const R_386_TLS_DTPOFF32](#R_386_TLS_DTPOFF32)
-    * [const R_386_TLS_TPOFF32](#R_386_TLS_TPOFF32)
-    * [const R_386_SIZE32](#R_386_SIZE32)
-    * [const R_386_TLS_GOTDESC](#R_386_TLS_GOTDESC)
-    * [const R_386_TLS_DESC_CALL](#R_386_TLS_DESC_CALL)
-    * [const R_386_TLS_DESC](#R_386_TLS_DESC)
-    * [const R_386_IRELATIVE](#R_386_IRELATIVE)
-    * [const R_386_GOT32X](#R_386_GOT32X)
-    * [const R_MIPS_NONE](#R_MIPS_NONE)
+    * [const R_ARM_THM_SWI8](#R_ARM_THM_SWI8)
+    * [const R_ARM_THM_TLS_CALL](#R_ARM_THM_TLS_CALL)
+    * [const R_ARM_THM_TLS_DESCSEQ16](#R_ARM_THM_TLS_DESCSEQ16)
+    * [const R_ARM_THM_TLS_DESCSEQ32](#R_ARM_THM_TLS_DESCSEQ32)
+    * [const R_ARM_THM_XPC22](#R_ARM_THM_XPC22)
+    * [const R_ARM_TLS_CALL](#R_ARM_TLS_CALL)
+    * [const R_ARM_TLS_DESCSEQ](#R_ARM_TLS_DESCSEQ)
+    * [const R_ARM_TLS_DTPMOD32](#R_ARM_TLS_DTPMOD32)
+    * [const R_ARM_TLS_DTPOFF32](#R_ARM_TLS_DTPOFF32)
+    * [const R_ARM_TLS_GD32](#R_ARM_TLS_GD32)
+    * [const R_ARM_TLS_GOTDESC](#R_ARM_TLS_GOTDESC)
+    * [const R_ARM_TLS_IE12GP](#R_ARM_TLS_IE12GP)
+    * [const R_ARM_TLS_IE32](#R_ARM_TLS_IE32)
+    * [const R_ARM_TLS_LDM32](#R_ARM_TLS_LDM32)
+    * [const R_ARM_TLS_LDO12](#R_ARM_TLS_LDO12)
+    * [const R_ARM_TLS_LDO32](#R_ARM_TLS_LDO32)
+    * [const R_ARM_TLS_LE12](#R_ARM_TLS_LE12)
+    * [const R_ARM_TLS_LE32](#R_ARM_TLS_LE32)
+    * [const R_ARM_TLS_TPOFF32](#R_ARM_TLS_TPOFF32)
+    * [const R_ARM_V4BX](#R_ARM_V4BX)
+    * [const R_ARM_XPC25](#R_ARM_XPC25)
     * [const R_MIPS_16](#R_MIPS_16)
-    * [const R_MIPS_32](#R_MIPS_32)
-    * [const R_MIPS_REL32](#R_MIPS_REL32)
     * [const R_MIPS_26](#R_MIPS_26)
-    * [const R_MIPS_HI16](#R_MIPS_HI16)
-    * [const R_MIPS_LO16](#R_MIPS_LO16)
-    * [const R_MIPS_GPREL16](#R_MIPS_GPREL16)
-    * [const R_MIPS_LITERAL](#R_MIPS_LITERAL)
-    * [const R_MIPS_GOT16](#R_MIPS_GOT16)
-    * [const R_MIPS_PC16](#R_MIPS_PC16)
-    * [const R_MIPS_CALL16](#R_MIPS_CALL16)
-    * [const R_MIPS_GPREL32](#R_MIPS_GPREL32)
-    * [const R_MIPS_SHIFT5](#R_MIPS_SHIFT5)
-    * [const R_MIPS_SHIFT6](#R_MIPS_SHIFT6)
+    * [const R_MIPS_32](#R_MIPS_32)
     * [const R_MIPS_64](#R_MIPS_64)
-    * [const R_MIPS_GOT_DISP](#R_MIPS_GOT_DISP)
-    * [const R_MIPS_GOT_PAGE](#R_MIPS_GOT_PAGE)
-    * [const R_MIPS_GOT_OFST](#R_MIPS_GOT_OFST)
-    * [const R_MIPS_GOT_HI16](#R_MIPS_GOT_HI16)
-    * [const R_MIPS_GOT_LO16](#R_MIPS_GOT_LO16)
-    * [const R_MIPS_SUB](#R_MIPS_SUB)
-    * [const R_MIPS_INSERT_A](#R_MIPS_INSERT_A)
-    * [const R_MIPS_INSERT_B](#R_MIPS_INSERT_B)
-    * [const R_MIPS_DELETE](#R_MIPS_DELETE)
-    * [const R_MIPS_HIGHER](#R_MIPS_HIGHER)
-    * [const R_MIPS_HIGHEST](#R_MIPS_HIGHEST)
+    * [const R_MIPS_ADD_IMMEDIATE](#R_MIPS_ADD_IMMEDIATE)
+    * [const R_MIPS_CALL16](#R_MIPS_CALL16)
     * [const R_MIPS_CALL_HI16](#R_MIPS_CALL_HI16)
     * [const R_MIPS_CALL_LO16](#R_MIPS_CALL_LO16)
-    * [const R_MIPS_SCN_DISP](#R_MIPS_SCN_DISP)
-    * [const R_MIPS_REL16](#R_MIPS_REL16)
-    * [const R_MIPS_ADD_IMMEDIATE](#R_MIPS_ADD_IMMEDIATE)
-    * [const R_MIPS_PJUMP](#R_MIPS_PJUMP)
-    * [const R_MIPS_RELGOT](#R_MIPS_RELGOT)
+    * [const R_MIPS_DELETE](#R_MIPS_DELETE)
+    * [const R_MIPS_GOT16](#R_MIPS_GOT16)
+    * [const R_MIPS_GOT_DISP](#R_MIPS_GOT_DISP)
+    * [const R_MIPS_GOT_HI16](#R_MIPS_GOT_HI16)
+    * [const R_MIPS_GOT_LO16](#R_MIPS_GOT_LO16)
+    * [const R_MIPS_GOT_OFST](#R_MIPS_GOT_OFST)
+    * [const R_MIPS_GOT_PAGE](#R_MIPS_GOT_PAGE)
+    * [const R_MIPS_GPREL16](#R_MIPS_GPREL16)
+    * [const R_MIPS_GPREL32](#R_MIPS_GPREL32)
+    * [const R_MIPS_HI16](#R_MIPS_HI16)
+    * [const R_MIPS_HIGHER](#R_MIPS_HIGHER)
+    * [const R_MIPS_HIGHEST](#R_MIPS_HIGHEST)
+    * [const R_MIPS_INSERT_A](#R_MIPS_INSERT_A)
+    * [const R_MIPS_INSERT_B](#R_MIPS_INSERT_B)
     * [const R_MIPS_JALR](#R_MIPS_JALR)
+    * [const R_MIPS_LITERAL](#R_MIPS_LITERAL)
+    * [const R_MIPS_LO16](#R_MIPS_LO16)
+    * [const R_MIPS_NONE](#R_MIPS_NONE)
+    * [const R_MIPS_PC16](#R_MIPS_PC16)
+    * [const R_MIPS_PJUMP](#R_MIPS_PJUMP)
+    * [const R_MIPS_REL16](#R_MIPS_REL16)
+    * [const R_MIPS_REL32](#R_MIPS_REL32)
+    * [const R_MIPS_RELGOT](#R_MIPS_RELGOT)
+    * [const R_MIPS_SCN_DISP](#R_MIPS_SCN_DISP)
+    * [const R_MIPS_SHIFT5](#R_MIPS_SHIFT5)
+    * [const R_MIPS_SHIFT6](#R_MIPS_SHIFT6)
+    * [const R_MIPS_SUB](#R_MIPS_SUB)
     * [const R_MIPS_TLS_DTPMOD32](#R_MIPS_TLS_DTPMOD32)
-    * [const R_MIPS_TLS_DTPREL32](#R_MIPS_TLS_DTPREL32)
     * [const R_MIPS_TLS_DTPMOD64](#R_MIPS_TLS_DTPMOD64)
+    * [const R_MIPS_TLS_DTPREL32](#R_MIPS_TLS_DTPREL32)
     * [const R_MIPS_TLS_DTPREL64](#R_MIPS_TLS_DTPREL64)
-    * [const R_MIPS_TLS_GD](#R_MIPS_TLS_GD)
-    * [const R_MIPS_TLS_LDM](#R_MIPS_TLS_LDM)
     * [const R_MIPS_TLS_DTPREL_HI16](#R_MIPS_TLS_DTPREL_HI16)
     * [const R_MIPS_TLS_DTPREL_LO16](#R_MIPS_TLS_DTPREL_LO16)
+    * [const R_MIPS_TLS_GD](#R_MIPS_TLS_GD)
     * [const R_MIPS_TLS_GOTTPREL](#R_MIPS_TLS_GOTTPREL)
+    * [const R_MIPS_TLS_LDM](#R_MIPS_TLS_LDM)
     * [const R_MIPS_TLS_TPREL32](#R_MIPS_TLS_TPREL32)
     * [const R_MIPS_TLS_TPREL64](#R_MIPS_TLS_TPREL64)
     * [const R_MIPS_TLS_TPREL_HI16](#R_MIPS_TLS_TPREL_HI16)
     * [const R_MIPS_TLS_TPREL_LO16](#R_MIPS_TLS_TPREL_LO16)
-    * [const R_PPC_NONE](#R_PPC_NONE)
-    * [const R_PPC_ADDR32](#R_PPC_ADDR32)
-    * [const R_PPC_ADDR24](#R_PPC_ADDR24)
-    * [const R_PPC_ADDR16](#R_PPC_ADDR16)
-    * [const R_PPC_ADDR16_LO](#R_PPC_ADDR16_LO)
-    * [const R_PPC_ADDR16_HI](#R_PPC_ADDR16_HI)
-    * [const R_PPC_ADDR16_HA](#R_PPC_ADDR16_HA)
-    * [const R_PPC_ADDR14](#R_PPC_ADDR14)
-    * [const R_PPC_ADDR14_BRTAKEN](#R_PPC_ADDR14_BRTAKEN)
-    * [const R_PPC_ADDR14_BRNTAKEN](#R_PPC_ADDR14_BRNTAKEN)
-    * [const R_PPC_REL24](#R_PPC_REL24)
-    * [const R_PPC_REL14](#R_PPC_REL14)
-    * [const R_PPC_REL14_BRTAKEN](#R_PPC_REL14_BRTAKEN)
-    * [const R_PPC_REL14_BRNTAKEN](#R_PPC_REL14_BRNTAKEN)
-    * [const R_PPC_GOT16](#R_PPC_GOT16)
-    * [const R_PPC_GOT16_LO](#R_PPC_GOT16_LO)
-    * [const R_PPC_GOT16_HI](#R_PPC_GOT16_HI)
-    * [const R_PPC_GOT16_HA](#R_PPC_GOT16_HA)
-    * [const R_PPC_PLTREL24](#R_PPC_PLTREL24)
-    * [const R_PPC_COPY](#R_PPC_COPY)
-    * [const R_PPC_GLOB_DAT](#R_PPC_GLOB_DAT)
-    * [const R_PPC_JMP_SLOT](#R_PPC_JMP_SLOT)
-    * [const R_PPC_RELATIVE](#R_PPC_RELATIVE)
-    * [const R_PPC_LOCAL24PC](#R_PPC_LOCAL24PC)
-    * [const R_PPC_UADDR32](#R_PPC_UADDR32)
-    * [const R_PPC_UADDR16](#R_PPC_UADDR16)
-    * [const R_PPC_REL32](#R_PPC_REL32)
-    * [const R_PPC_PLT32](#R_PPC_PLT32)
-    * [const R_PPC_PLTREL32](#R_PPC_PLTREL32)
-    * [const R_PPC_PLT16_LO](#R_PPC_PLT16_LO)
-    * [const R_PPC_PLT16_HI](#R_PPC_PLT16_HI)
-    * [const R_PPC_PLT16_HA](#R_PPC_PLT16_HA)
-    * [const R_PPC_SDAREL16](#R_PPC_SDAREL16)
-    * [const R_PPC_SECTOFF](#R_PPC_SECTOFF)
-    * [const R_PPC_SECTOFF_LO](#R_PPC_SECTOFF_LO)
-    * [const R_PPC_SECTOFF_HI](#R_PPC_SECTOFF_HI)
-    * [const R_PPC_SECTOFF_HA](#R_PPC_SECTOFF_HA)
-    * [const R_PPC_TLS](#R_PPC_TLS)
-    * [const R_PPC_DTPMOD32](#R_PPC_DTPMOD32)
-    * [const R_PPC_TPREL16](#R_PPC_TPREL16)
-    * [const R_PPC_TPREL16_LO](#R_PPC_TPREL16_LO)
-    * [const R_PPC_TPREL16_HI](#R_PPC_TPREL16_HI)
-    * [const R_PPC_TPREL16_HA](#R_PPC_TPREL16_HA)
-    * [const R_PPC_TPREL32](#R_PPC_TPREL32)
-    * [const R_PPC_DTPREL16](#R_PPC_DTPREL16)
-    * [const R_PPC_DTPREL16_LO](#R_PPC_DTPREL16_LO)
-    * [const R_PPC_DTPREL16_HI](#R_PPC_DTPREL16_HI)
-    * [const R_PPC_DTPREL16_HA](#R_PPC_DTPREL16_HA)
-    * [const R_PPC_DTPREL32](#R_PPC_DTPREL32)
-    * [const R_PPC_GOT_TLSGD16](#R_PPC_GOT_TLSGD16)
-    * [const R_PPC_GOT_TLSGD16_LO](#R_PPC_GOT_TLSGD16_LO)
-    * [const R_PPC_GOT_TLSGD16_HI](#R_PPC_GOT_TLSGD16_HI)
-    * [const R_PPC_GOT_TLSGD16_HA](#R_PPC_GOT_TLSGD16_HA)
-    * [const R_PPC_GOT_TLSLD16](#R_PPC_GOT_TLSLD16)
-    * [const R_PPC_GOT_TLSLD16_LO](#R_PPC_GOT_TLSLD16_LO)
-    * [const R_PPC_GOT_TLSLD16_HI](#R_PPC_GOT_TLSLD16_HI)
-    * [const R_PPC_GOT_TLSLD16_HA](#R_PPC_GOT_TLSLD16_HA)
-    * [const R_PPC_GOT_TPREL16](#R_PPC_GOT_TPREL16)
-    * [const R_PPC_GOT_TPREL16_LO](#R_PPC_GOT_TPREL16_LO)
-    * [const R_PPC_GOT_TPREL16_HI](#R_PPC_GOT_TPREL16_HI)
-    * [const R_PPC_GOT_TPREL16_HA](#R_PPC_GOT_TPREL16_HA)
-    * [const R_PPC_EMB_NADDR32](#R_PPC_EMB_NADDR32)
-    * [const R_PPC_EMB_NADDR16](#R_PPC_EMB_NADDR16)
-    * [const R_PPC_EMB_NADDR16_LO](#R_PPC_EMB_NADDR16_LO)
-    * [const R_PPC_EMB_NADDR16_HI](#R_PPC_EMB_NADDR16_HI)
-    * [const R_PPC_EMB_NADDR16_HA](#R_PPC_EMB_NADDR16_HA)
-    * [const R_PPC_EMB_SDAI16](#R_PPC_EMB_SDAI16)
-    * [const R_PPC_EMB_SDA2I16](#R_PPC_EMB_SDA2I16)
-    * [const R_PPC_EMB_SDA2REL](#R_PPC_EMB_SDA2REL)
-    * [const R_PPC_EMB_SDA21](#R_PPC_EMB_SDA21)
-    * [const R_PPC_EMB_MRKREF](#R_PPC_EMB_MRKREF)
-    * [const R_PPC_EMB_RELSEC16](#R_PPC_EMB_RELSEC16)
-    * [const R_PPC_EMB_RELST_LO](#R_PPC_EMB_RELST_LO)
-    * [const R_PPC_EMB_RELST_HI](#R_PPC_EMB_RELST_HI)
-    * [const R_PPC_EMB_RELST_HA](#R_PPC_EMB_RELST_HA)
-    * [const R_PPC_EMB_BIT_FLD](#R_PPC_EMB_BIT_FLD)
-    * [const R_PPC_EMB_RELSDA](#R_PPC_EMB_RELSDA)
-    * [const R_PPC64_NONE](#R_PPC64_NONE)
-    * [const R_PPC64_ADDR32](#R_PPC64_ADDR32)
-    * [const R_PPC64_ADDR24](#R_PPC64_ADDR24)
-    * [const R_PPC64_ADDR16](#R_PPC64_ADDR16)
-    * [const R_PPC64_ADDR16_LO](#R_PPC64_ADDR16_LO)
-    * [const R_PPC64_ADDR16_HI](#R_PPC64_ADDR16_HI)
-    * [const R_PPC64_ADDR16_HA](#R_PPC64_ADDR16_HA)
     * [const R_PPC64_ADDR14](#R_PPC64_ADDR14)
-    * [const R_PPC64_ADDR14_BRTAKEN](#R_PPC64_ADDR14_BRTAKEN)
     * [const R_PPC64_ADDR14_BRNTAKEN](#R_PPC64_ADDR14_BRNTAKEN)
-    * [const R_PPC64_REL24](#R_PPC64_REL24)
-    * [const R_PPC64_REL14](#R_PPC64_REL14)
-    * [const R_PPC64_REL14_BRTAKEN](#R_PPC64_REL14_BRTAKEN)
-    * [const R_PPC64_REL14_BRNTAKEN](#R_PPC64_REL14_BRNTAKEN)
-    * [const R_PPC64_GOT16](#R_PPC64_GOT16)
-    * [const R_PPC64_GOT16_LO](#R_PPC64_GOT16_LO)
-    * [const R_PPC64_GOT16_HI](#R_PPC64_GOT16_HI)
-    * [const R_PPC64_GOT16_HA](#R_PPC64_GOT16_HA)
-    * [const R_PPC64_JMP_SLOT](#R_PPC64_JMP_SLOT)
-    * [const R_PPC64_REL32](#R_PPC64_REL32)
-    * [const R_PPC64_ADDR64](#R_PPC64_ADDR64)
+    * [const R_PPC64_ADDR14_BRTAKEN](#R_PPC64_ADDR14_BRTAKEN)
+    * [const R_PPC64_ADDR16](#R_PPC64_ADDR16)
+    * [const R_PPC64_ADDR16_DS](#R_PPC64_ADDR16_DS)
+    * [const R_PPC64_ADDR16_HA](#R_PPC64_ADDR16_HA)
+    * [const R_PPC64_ADDR16_HI](#R_PPC64_ADDR16_HI)
+    * [const R_PPC64_ADDR16_HIGH](#R_PPC64_ADDR16_HIGH)
+    * [const R_PPC64_ADDR16_HIGHA](#R_PPC64_ADDR16_HIGHA)
     * [const R_PPC64_ADDR16_HIGHER](#R_PPC64_ADDR16_HIGHER)
     * [const R_PPC64_ADDR16_HIGHERA](#R_PPC64_ADDR16_HIGHERA)
     * [const R_PPC64_ADDR16_HIGHEST](#R_PPC64_ADDR16_HIGHEST)
     * [const R_PPC64_ADDR16_HIGHESTA](#R_PPC64_ADDR16_HIGHESTA)
-    * [const R_PPC64_REL64](#R_PPC64_REL64)
-    * [const R_PPC64_TOC16](#R_PPC64_TOC16)
-    * [const R_PPC64_TOC16_LO](#R_PPC64_TOC16_LO)
-    * [const R_PPC64_TOC16_HI](#R_PPC64_TOC16_HI)
-    * [const R_PPC64_TOC16_HA](#R_PPC64_TOC16_HA)
-    * [const R_PPC64_TOC](#R_PPC64_TOC)
-    * [const R_PPC64_PLTGOT16](#R_PPC64_PLTGOT16)
-    * [const R_PPC64_PLTGOT16_LO](#R_PPC64_PLTGOT16_LO)
-    * [const R_PPC64_PLTGOT16_HI](#R_PPC64_PLTGOT16_HI)
-    * [const R_PPC64_PLTGOT16_HA](#R_PPC64_PLTGOT16_HA)
-    * [const R_PPC64_ADDR16_DS](#R_PPC64_ADDR16_DS)
+    * [const R_PPC64_ADDR16_LO](#R_PPC64_ADDR16_LO)
     * [const R_PPC64_ADDR16_LO_DS](#R_PPC64_ADDR16_LO_DS)
-    * [const R_PPC64_GOT16_DS](#R_PPC64_GOT16_DS)
-    * [const R_PPC64_GOT16_LO_DS](#R_PPC64_GOT16_LO_DS)
-    * [const R_PPC64_PLT16_LO_DS](#R_PPC64_PLT16_LO_DS)
-    * [const R_PPC64_SECTOFF_DS](#R_PPC64_SECTOFF_DS)
-    * [const R_PPC64_SECTOFF_LO_DS](#R_PPC64_SECTOFF_LO_DS)
-    * [const R_PPC64_TOC16_DS](#R_PPC64_TOC16_DS)
-    * [const R_PPC64_TOC16_LO_DS](#R_PPC64_TOC16_LO_DS)
-    * [const R_PPC64_PLTGOT16_DS](#R_PPC64_PLTGOT16_DS)
-    * [const R_PPC64_PLTGOT_LO_DS](#R_PPC64_PLTGOT_LO_DS)
-    * [const R_PPC64_TLS](#R_PPC64_TLS)
+    * [const R_PPC64_ADDR24](#R_PPC64_ADDR24)
+    * [const R_PPC64_ADDR32](#R_PPC64_ADDR32)
+    * [const R_PPC64_ADDR64](#R_PPC64_ADDR64)
+    * [const R_PPC64_ADDR64_LOCAL](#R_PPC64_ADDR64_LOCAL)
     * [const R_PPC64_DTPMOD64](#R_PPC64_DTPMOD64)
-    * [const R_PPC64_TPREL16](#R_PPC64_TPREL16)
-    * [const R_PPC64_TPREL16_LO](#R_PPC64_TPREL16_LO)
-    * [const R_PPC64_TPREL16_HI](#R_PPC64_TPREL16_HI)
-    * [const R_PPC64_TPREL16_HA](#R_PPC64_TPREL16_HA)
-    * [const R_PPC64_TPREL64](#R_PPC64_TPREL64)
     * [const R_PPC64_DTPREL16](#R_PPC64_DTPREL16)
-    * [const R_PPC64_DTPREL16_LO](#R_PPC64_DTPREL16_LO)
-    * [const R_PPC64_DTPREL16_HI](#R_PPC64_DTPREL16_HI)
-    * [const R_PPC64_DTPREL16_HA](#R_PPC64_DTPREL16_HA)
-    * [const R_PPC64_DTPREL64](#R_PPC64_DTPREL64)
-    * [const R_PPC64_GOT_TLSGD16](#R_PPC64_GOT_TLSGD16)
-    * [const R_PPC64_GOT_TLSGD16_LO](#R_PPC64_GOT_TLSGD16_LO)
-    * [const R_PPC64_GOT_TLSGD16_HI](#R_PPC64_GOT_TLSGD16_HI)
-    * [const R_PPC64_GOT_TLSGD16_HA](#R_PPC64_GOT_TLSGD16_HA)
-    * [const R_PPC64_GOT_TLSLD16](#R_PPC64_GOT_TLSLD16)
-    * [const R_PPC64_GOT_TLSLD16_LO](#R_PPC64_GOT_TLSLD16_LO)
-    * [const R_PPC64_GOT_TLSLD16_HI](#R_PPC64_GOT_TLSLD16_HI)
-    * [const R_PPC64_GOT_TLSLD16_HA](#R_PPC64_GOT_TLSLD16_HA)
-    * [const R_PPC64_GOT_TPREL16_DS](#R_PPC64_GOT_TPREL16_DS)
-    * [const R_PPC64_GOT_TPREL16_LO_DS](#R_PPC64_GOT_TPREL16_LO_DS)
-    * [const R_PPC64_GOT_TPREL16_HI](#R_PPC64_GOT_TPREL16_HI)
-    * [const R_PPC64_GOT_TPREL16_HA](#R_PPC64_GOT_TPREL16_HA)
-    * [const R_PPC64_GOT_DTPREL16_DS](#R_PPC64_GOT_DTPREL16_DS)
-    * [const R_PPC64_GOT_DTPREL16_LO_DS](#R_PPC64_GOT_DTPREL16_LO_DS)
-    * [const R_PPC64_GOT_DTPREL16_HI](#R_PPC64_GOT_DTPREL16_HI)
-    * [const R_PPC64_GOT_DTPREL16_HA](#R_PPC64_GOT_DTPREL16_HA)
-    * [const R_PPC64_TPREL16_DS](#R_PPC64_TPREL16_DS)
-    * [const R_PPC64_TPREL16_LO_DS](#R_PPC64_TPREL16_LO_DS)
-    * [const R_PPC64_TPREL16_HIGHER](#R_PPC64_TPREL16_HIGHER)
-    * [const R_PPC64_TPREL16_HIGHERA](#R_PPC64_TPREL16_HIGHERA)
-    * [const R_PPC64_TPREL16_HIGHEST](#R_PPC64_TPREL16_HIGHEST)
-    * [const R_PPC64_TPREL16_HIGHESTA](#R_PPC64_TPREL16_HIGHESTA)
     * [const R_PPC64_DTPREL16_DS](#R_PPC64_DTPREL16_DS)
-    * [const R_PPC64_DTPREL16_LO_DS](#R_PPC64_DTPREL16_LO_DS)
+    * [const R_PPC64_DTPREL16_HA](#R_PPC64_DTPREL16_HA)
+    * [const R_PPC64_DTPREL16_HI](#R_PPC64_DTPREL16_HI)
+    * [const R_PPC64_DTPREL16_HIGH](#R_PPC64_DTPREL16_HIGH)
+    * [const R_PPC64_DTPREL16_HIGHA](#R_PPC64_DTPREL16_HIGHA)
     * [const R_PPC64_DTPREL16_HIGHER](#R_PPC64_DTPREL16_HIGHER)
     * [const R_PPC64_DTPREL16_HIGHERA](#R_PPC64_DTPREL16_HIGHERA)
     * [const R_PPC64_DTPREL16_HIGHEST](#R_PPC64_DTPREL16_HIGHEST)
     * [const R_PPC64_DTPREL16_HIGHESTA](#R_PPC64_DTPREL16_HIGHESTA)
+    * [const R_PPC64_DTPREL16_LO](#R_PPC64_DTPREL16_LO)
+    * [const R_PPC64_DTPREL16_LO_DS](#R_PPC64_DTPREL16_LO_DS)
+    * [const R_PPC64_DTPREL64](#R_PPC64_DTPREL64)
+    * [const R_PPC64_ENTRY](#R_PPC64_ENTRY)
+    * [const R_PPC64_GOT16](#R_PPC64_GOT16)
+    * [const R_PPC64_GOT16_DS](#R_PPC64_GOT16_DS)
+    * [const R_PPC64_GOT16_HA](#R_PPC64_GOT16_HA)
+    * [const R_PPC64_GOT16_HI](#R_PPC64_GOT16_HI)
+    * [const R_PPC64_GOT16_LO](#R_PPC64_GOT16_LO)
+    * [const R_PPC64_GOT16_LO_DS](#R_PPC64_GOT16_LO_DS)
+    * [const R_PPC64_GOT_DTPREL16_DS](#R_PPC64_GOT_DTPREL16_DS)
+    * [const R_PPC64_GOT_DTPREL16_HA](#R_PPC64_GOT_DTPREL16_HA)
+    * [const R_PPC64_GOT_DTPREL16_HI](#R_PPC64_GOT_DTPREL16_HI)
+    * [const R_PPC64_GOT_DTPREL16_LO_DS](#R_PPC64_GOT_DTPREL16_LO_DS)
+    * [const R_PPC64_GOT_TLSGD16](#R_PPC64_GOT_TLSGD16)
+    * [const R_PPC64_GOT_TLSGD16_HA](#R_PPC64_GOT_TLSGD16_HA)
+    * [const R_PPC64_GOT_TLSGD16_HI](#R_PPC64_GOT_TLSGD16_HI)
+    * [const R_PPC64_GOT_TLSGD16_LO](#R_PPC64_GOT_TLSGD16_LO)
+    * [const R_PPC64_GOT_TLSLD16](#R_PPC64_GOT_TLSLD16)
+    * [const R_PPC64_GOT_TLSLD16_HA](#R_PPC64_GOT_TLSLD16_HA)
+    * [const R_PPC64_GOT_TLSLD16_HI](#R_PPC64_GOT_TLSLD16_HI)
+    * [const R_PPC64_GOT_TLSLD16_LO](#R_PPC64_GOT_TLSLD16_LO)
+    * [const R_PPC64_GOT_TPREL16_DS](#R_PPC64_GOT_TPREL16_DS)
+    * [const R_PPC64_GOT_TPREL16_HA](#R_PPC64_GOT_TPREL16_HA)
+    * [const R_PPC64_GOT_TPREL16_HI](#R_PPC64_GOT_TPREL16_HI)
+    * [const R_PPC64_GOT_TPREL16_LO_DS](#R_PPC64_GOT_TPREL16_LO_DS)
+    * [const R_PPC64_IRELATIVE](#R_PPC64_IRELATIVE)
+    * [const R_PPC64_JMP_IREL](#R_PPC64_JMP_IREL)
+    * [const R_PPC64_JMP_SLOT](#R_PPC64_JMP_SLOT)
+    * [const R_PPC64_NONE](#R_PPC64_NONE)
+    * [const R_PPC64_PLT16_LO_DS](#R_PPC64_PLT16_LO_DS)
+    * [const R_PPC64_PLTGOT16](#R_PPC64_PLTGOT16)
+    * [const R_PPC64_PLTGOT16_DS](#R_PPC64_PLTGOT16_DS)
+    * [const R_PPC64_PLTGOT16_HA](#R_PPC64_PLTGOT16_HA)
+    * [const R_PPC64_PLTGOT16_HI](#R_PPC64_PLTGOT16_HI)
+    * [const R_PPC64_PLTGOT16_LO](#R_PPC64_PLTGOT16_LO)
+    * [const R_PPC64_PLTGOT_LO_DS](#R_PPC64_PLTGOT_LO_DS)
+    * [const R_PPC64_REL14](#R_PPC64_REL14)
+    * [const R_PPC64_REL14_BRNTAKEN](#R_PPC64_REL14_BRNTAKEN)
+    * [const R_PPC64_REL14_BRTAKEN](#R_PPC64_REL14_BRTAKEN)
+    * [const R_PPC64_REL16](#R_PPC64_REL16)
+    * [const R_PPC64_REL16DX_HA](#R_PPC64_REL16DX_HA)
+    * [const R_PPC64_REL16_HA](#R_PPC64_REL16_HA)
+    * [const R_PPC64_REL16_HI](#R_PPC64_REL16_HI)
+    * [const R_PPC64_REL16_LO](#R_PPC64_REL16_LO)
+    * [const R_PPC64_REL24](#R_PPC64_REL24)
+    * [const R_PPC64_REL24_NOTOC](#R_PPC64_REL24_NOTOC)
+    * [const R_PPC64_REL32](#R_PPC64_REL32)
+    * [const R_PPC64_REL64](#R_PPC64_REL64)
+    * [const R_PPC64_SECTOFF_DS](#R_PPC64_SECTOFF_DS)
+    * [const R_PPC64_SECTOFF_LO_DS](#R_PPC64_SECTOFF_LO_DS)
+    * [const R_PPC64_TLS](#R_PPC64_TLS)
     * [const R_PPC64_TLSGD](#R_PPC64_TLSGD)
     * [const R_PPC64_TLSLD](#R_PPC64_TLSLD)
+    * [const R_PPC64_TOC](#R_PPC64_TOC)
+    * [const R_PPC64_TOC16](#R_PPC64_TOC16)
+    * [const R_PPC64_TOC16_DS](#R_PPC64_TOC16_DS)
+    * [const R_PPC64_TOC16_HA](#R_PPC64_TOC16_HA)
+    * [const R_PPC64_TOC16_HI](#R_PPC64_TOC16_HI)
+    * [const R_PPC64_TOC16_LO](#R_PPC64_TOC16_LO)
+    * [const R_PPC64_TOC16_LO_DS](#R_PPC64_TOC16_LO_DS)
     * [const R_PPC64_TOCSAVE](#R_PPC64_TOCSAVE)
-    * [const R_PPC64_ADDR16_HIGH](#R_PPC64_ADDR16_HIGH)
-    * [const R_PPC64_ADDR16_HIGHA](#R_PPC64_ADDR16_HIGHA)
+    * [const R_PPC64_TPREL16](#R_PPC64_TPREL16)
+    * [const R_PPC64_TPREL16_DS](#R_PPC64_TPREL16_DS)
+    * [const R_PPC64_TPREL16_HA](#R_PPC64_TPREL16_HA)
+    * [const R_PPC64_TPREL16_HI](#R_PPC64_TPREL16_HI)
     * [const R_PPC64_TPREL16_HIGH](#R_PPC64_TPREL16_HIGH)
     * [const R_PPC64_TPREL16_HIGHA](#R_PPC64_TPREL16_HIGHA)
-    * [const R_PPC64_DTPREL16_HIGH](#R_PPC64_DTPREL16_HIGH)
-    * [const R_PPC64_DTPREL16_HIGHA](#R_PPC64_DTPREL16_HIGHA)
-    * [const R_PPC64_REL24_NOTOC](#R_PPC64_REL24_NOTOC)
-    * [const R_PPC64_ADDR64_LOCAL](#R_PPC64_ADDR64_LOCAL)
-    * [const R_PPC64_ENTRY](#R_PPC64_ENTRY)
-    * [const R_PPC64_REL16DX_HA](#R_PPC64_REL16DX_HA)
-    * [const R_PPC64_JMP_IREL](#R_PPC64_JMP_IREL)
-    * [const R_PPC64_IRELATIVE](#R_PPC64_IRELATIVE)
-    * [const R_PPC64_REL16](#R_PPC64_REL16)
-    * [const R_PPC64_REL16_LO](#R_PPC64_REL16_LO)
-    * [const R_PPC64_REL16_HI](#R_PPC64_REL16_HI)
-    * [const R_PPC64_REL16_HA](#R_PPC64_REL16_HA)
-    * [const R_RISCV_NONE](#R_RISCV_NONE)
+    * [const R_PPC64_TPREL16_HIGHER](#R_PPC64_TPREL16_HIGHER)
+    * [const R_PPC64_TPREL16_HIGHERA](#R_PPC64_TPREL16_HIGHERA)
+    * [const R_PPC64_TPREL16_HIGHEST](#R_PPC64_TPREL16_HIGHEST)
+    * [const R_PPC64_TPREL16_HIGHESTA](#R_PPC64_TPREL16_HIGHESTA)
+    * [const R_PPC64_TPREL16_LO](#R_PPC64_TPREL16_LO)
+    * [const R_PPC64_TPREL16_LO_DS](#R_PPC64_TPREL16_LO_DS)
+    * [const R_PPC64_TPREL64](#R_PPC64_TPREL64)
+    * [const R_PPC_ADDR14](#R_PPC_ADDR14)
+    * [const R_PPC_ADDR14_BRNTAKEN](#R_PPC_ADDR14_BRNTAKEN)
+    * [const R_PPC_ADDR14_BRTAKEN](#R_PPC_ADDR14_BRTAKEN)
+    * [const R_PPC_ADDR16](#R_PPC_ADDR16)
+    * [const R_PPC_ADDR16_HA](#R_PPC_ADDR16_HA)
+    * [const R_PPC_ADDR16_HI](#R_PPC_ADDR16_HI)
+    * [const R_PPC_ADDR16_LO](#R_PPC_ADDR16_LO)
+    * [const R_PPC_ADDR24](#R_PPC_ADDR24)
+    * [const R_PPC_ADDR32](#R_PPC_ADDR32)
+    * [const R_PPC_COPY](#R_PPC_COPY)
+    * [const R_PPC_DTPMOD32](#R_PPC_DTPMOD32)
+    * [const R_PPC_DTPREL16](#R_PPC_DTPREL16)
+    * [const R_PPC_DTPREL16_HA](#R_PPC_DTPREL16_HA)
+    * [const R_PPC_DTPREL16_HI](#R_PPC_DTPREL16_HI)
+    * [const R_PPC_DTPREL16_LO](#R_PPC_DTPREL16_LO)
+    * [const R_PPC_DTPREL32](#R_PPC_DTPREL32)
+    * [const R_PPC_EMB_BIT_FLD](#R_PPC_EMB_BIT_FLD)
+    * [const R_PPC_EMB_MRKREF](#R_PPC_EMB_MRKREF)
+    * [const R_PPC_EMB_NADDR16](#R_PPC_EMB_NADDR16)
+    * [const R_PPC_EMB_NADDR16_HA](#R_PPC_EMB_NADDR16_HA)
+    * [const R_PPC_EMB_NADDR16_HI](#R_PPC_EMB_NADDR16_HI)
+    * [const R_PPC_EMB_NADDR16_LO](#R_PPC_EMB_NADDR16_LO)
+    * [const R_PPC_EMB_NADDR32](#R_PPC_EMB_NADDR32)
+    * [const R_PPC_EMB_RELSDA](#R_PPC_EMB_RELSDA)
+    * [const R_PPC_EMB_RELSEC16](#R_PPC_EMB_RELSEC16)
+    * [const R_PPC_EMB_RELST_HA](#R_PPC_EMB_RELST_HA)
+    * [const R_PPC_EMB_RELST_HI](#R_PPC_EMB_RELST_HI)
+    * [const R_PPC_EMB_RELST_LO](#R_PPC_EMB_RELST_LO)
+    * [const R_PPC_EMB_SDA21](#R_PPC_EMB_SDA21)
+    * [const R_PPC_EMB_SDA2I16](#R_PPC_EMB_SDA2I16)
+    * [const R_PPC_EMB_SDA2REL](#R_PPC_EMB_SDA2REL)
+    * [const R_PPC_EMB_SDAI16](#R_PPC_EMB_SDAI16)
+    * [const R_PPC_GLOB_DAT](#R_PPC_GLOB_DAT)
+    * [const R_PPC_GOT16](#R_PPC_GOT16)
+    * [const R_PPC_GOT16_HA](#R_PPC_GOT16_HA)
+    * [const R_PPC_GOT16_HI](#R_PPC_GOT16_HI)
+    * [const R_PPC_GOT16_LO](#R_PPC_GOT16_LO)
+    * [const R_PPC_GOT_TLSGD16](#R_PPC_GOT_TLSGD16)
+    * [const R_PPC_GOT_TLSGD16_HA](#R_PPC_GOT_TLSGD16_HA)
+    * [const R_PPC_GOT_TLSGD16_HI](#R_PPC_GOT_TLSGD16_HI)
+    * [const R_PPC_GOT_TLSGD16_LO](#R_PPC_GOT_TLSGD16_LO)
+    * [const R_PPC_GOT_TLSLD16](#R_PPC_GOT_TLSLD16)
+    * [const R_PPC_GOT_TLSLD16_HA](#R_PPC_GOT_TLSLD16_HA)
+    * [const R_PPC_GOT_TLSLD16_HI](#R_PPC_GOT_TLSLD16_HI)
+    * [const R_PPC_GOT_TLSLD16_LO](#R_PPC_GOT_TLSLD16_LO)
+    * [const R_PPC_GOT_TPREL16](#R_PPC_GOT_TPREL16)
+    * [const R_PPC_GOT_TPREL16_HA](#R_PPC_GOT_TPREL16_HA)
+    * [const R_PPC_GOT_TPREL16_HI](#R_PPC_GOT_TPREL16_HI)
+    * [const R_PPC_GOT_TPREL16_LO](#R_PPC_GOT_TPREL16_LO)
+    * [const R_PPC_JMP_SLOT](#R_PPC_JMP_SLOT)
+    * [const R_PPC_LOCAL24PC](#R_PPC_LOCAL24PC)
+    * [const R_PPC_NONE](#R_PPC_NONE)
+    * [const R_PPC_PLT16_HA](#R_PPC_PLT16_HA)
+    * [const R_PPC_PLT16_HI](#R_PPC_PLT16_HI)
+    * [const R_PPC_PLT16_LO](#R_PPC_PLT16_LO)
+    * [const R_PPC_PLT32](#R_PPC_PLT32)
+    * [const R_PPC_PLTREL24](#R_PPC_PLTREL24)
+    * [const R_PPC_PLTREL32](#R_PPC_PLTREL32)
+    * [const R_PPC_REL14](#R_PPC_REL14)
+    * [const R_PPC_REL14_BRNTAKEN](#R_PPC_REL14_BRNTAKEN)
+    * [const R_PPC_REL14_BRTAKEN](#R_PPC_REL14_BRTAKEN)
+    * [const R_PPC_REL24](#R_PPC_REL24)
+    * [const R_PPC_REL32](#R_PPC_REL32)
+    * [const R_PPC_RELATIVE](#R_PPC_RELATIVE)
+    * [const R_PPC_SDAREL16](#R_PPC_SDAREL16)
+    * [const R_PPC_SECTOFF](#R_PPC_SECTOFF)
+    * [const R_PPC_SECTOFF_HA](#R_PPC_SECTOFF_HA)
+    * [const R_PPC_SECTOFF_HI](#R_PPC_SECTOFF_HI)
+    * [const R_PPC_SECTOFF_LO](#R_PPC_SECTOFF_LO)
+    * [const R_PPC_TLS](#R_PPC_TLS)
+    * [const R_PPC_TPREL16](#R_PPC_TPREL16)
+    * [const R_PPC_TPREL16_HA](#R_PPC_TPREL16_HA)
+    * [const R_PPC_TPREL16_HI](#R_PPC_TPREL16_HI)
+    * [const R_PPC_TPREL16_LO](#R_PPC_TPREL16_LO)
+    * [const R_PPC_TPREL32](#R_PPC_TPREL32)
+    * [const R_PPC_UADDR16](#R_PPC_UADDR16)
+    * [const R_PPC_UADDR32](#R_PPC_UADDR32)
     * [const R_RISCV_32](#R_RISCV_32)
+    * [const R_RISCV_32_PCREL](#R_RISCV_32_PCREL)
     * [const R_RISCV_64](#R_RISCV_64)
-    * [const R_RISCV_RELATIVE](#R_RISCV_RELATIVE)
+    * [const R_RISCV_ADD16](#R_RISCV_ADD16)
+    * [const R_RISCV_ADD32](#R_RISCV_ADD32)
+    * [const R_RISCV_ADD64](#R_RISCV_ADD64)
+    * [const R_RISCV_ADD8](#R_RISCV_ADD8)
+    * [const R_RISCV_ALIGN](#R_RISCV_ALIGN)
+    * [const R_RISCV_BRANCH](#R_RISCV_BRANCH)
+    * [const R_RISCV_CALL](#R_RISCV_CALL)
+    * [const R_RISCV_CALL_PLT](#R_RISCV_CALL_PLT)
     * [const R_RISCV_COPY](#R_RISCV_COPY)
+    * [const R_RISCV_GNU_VTENTRY](#R_RISCV_GNU_VTENTRY)
+    * [const R_RISCV_GNU_VTINHERIT](#R_RISCV_GNU_VTINHERIT)
+    * [const R_RISCV_GOT_HI20](#R_RISCV_GOT_HI20)
+    * [const R_RISCV_GPREL_I](#R_RISCV_GPREL_I)
+    * [const R_RISCV_GPREL_S](#R_RISCV_GPREL_S)
+    * [const R_RISCV_HI20](#R_RISCV_HI20)
+    * [const R_RISCV_JAL](#R_RISCV_JAL)
     * [const R_RISCV_JUMP_SLOT](#R_RISCV_JUMP_SLOT)
+    * [const R_RISCV_LO12_I](#R_RISCV_LO12_I)
+    * [const R_RISCV_LO12_S](#R_RISCV_LO12_S)
+    * [const R_RISCV_NONE](#R_RISCV_NONE)
+    * [const R_RISCV_PCREL_HI20](#R_RISCV_PCREL_HI20)
+    * [const R_RISCV_PCREL_LO12_I](#R_RISCV_PCREL_LO12_I)
+    * [const R_RISCV_PCREL_LO12_S](#R_RISCV_PCREL_LO12_S)
+    * [const R_RISCV_RELATIVE](#R_RISCV_RELATIVE)
+    * [const R_RISCV_RELAX](#R_RISCV_RELAX)
+    * [const R_RISCV_RVC_BRANCH](#R_RISCV_RVC_BRANCH)
+    * [const R_RISCV_RVC_JUMP](#R_RISCV_RVC_JUMP)
+    * [const R_RISCV_RVC_LUI](#R_RISCV_RVC_LUI)
+    * [const R_RISCV_SET16](#R_RISCV_SET16)
+    * [const R_RISCV_SET32](#R_RISCV_SET32)
+    * [const R_RISCV_SET6](#R_RISCV_SET6)
+    * [const R_RISCV_SET8](#R_RISCV_SET8)
+    * [const R_RISCV_SUB16](#R_RISCV_SUB16)
+    * [const R_RISCV_SUB32](#R_RISCV_SUB32)
+    * [const R_RISCV_SUB6](#R_RISCV_SUB6)
+    * [const R_RISCV_SUB64](#R_RISCV_SUB64)
+    * [const R_RISCV_SUB8](#R_RISCV_SUB8)
     * [const R_RISCV_TLS_DTPMOD32](#R_RISCV_TLS_DTPMOD32)
     * [const R_RISCV_TLS_DTPMOD64](#R_RISCV_TLS_DTPMOD64)
     * [const R_RISCV_TLS_DTPREL32](#R_RISCV_TLS_DTPREL32)
     * [const R_RISCV_TLS_DTPREL64](#R_RISCV_TLS_DTPREL64)
+    * [const R_RISCV_TLS_GD_HI20](#R_RISCV_TLS_GD_HI20)
+    * [const R_RISCV_TLS_GOT_HI20](#R_RISCV_TLS_GOT_HI20)
     * [const R_RISCV_TLS_TPREL32](#R_RISCV_TLS_TPREL32)
     * [const R_RISCV_TLS_TPREL64](#R_RISCV_TLS_TPREL64)
-    * [const R_RISCV_BRANCH](#R_RISCV_BRANCH)
-    * [const R_RISCV_JAL](#R_RISCV_JAL)
-    * [const R_RISCV_CALL](#R_RISCV_CALL)
-    * [const R_RISCV_CALL_PLT](#R_RISCV_CALL_PLT)
-    * [const R_RISCV_GOT_HI20](#R_RISCV_GOT_HI20)
-    * [const R_RISCV_TLS_GOT_HI20](#R_RISCV_TLS_GOT_HI20)
-    * [const R_RISCV_TLS_GD_HI20](#R_RISCV_TLS_GD_HI20)
-    * [const R_RISCV_PCREL_HI20](#R_RISCV_PCREL_HI20)
-    * [const R_RISCV_PCREL_LO12_I](#R_RISCV_PCREL_LO12_I)
-    * [const R_RISCV_PCREL_LO12_S](#R_RISCV_PCREL_LO12_S)
-    * [const R_RISCV_HI20](#R_RISCV_HI20)
-    * [const R_RISCV_LO12_I](#R_RISCV_LO12_I)
-    * [const R_RISCV_LO12_S](#R_RISCV_LO12_S)
+    * [const R_RISCV_TPREL_ADD](#R_RISCV_TPREL_ADD)
     * [const R_RISCV_TPREL_HI20](#R_RISCV_TPREL_HI20)
+    * [const R_RISCV_TPREL_I](#R_RISCV_TPREL_I)
     * [const R_RISCV_TPREL_LO12_I](#R_RISCV_TPREL_LO12_I)
     * [const R_RISCV_TPREL_LO12_S](#R_RISCV_TPREL_LO12_S)
-    * [const R_RISCV_TPREL_ADD](#R_RISCV_TPREL_ADD)
-    * [const R_RISCV_ADD8](#R_RISCV_ADD8)
-    * [const R_RISCV_ADD16](#R_RISCV_ADD16)
-    * [const R_RISCV_ADD32](#R_RISCV_ADD32)
-    * [const R_RISCV_ADD64](#R_RISCV_ADD64)
-    * [const R_RISCV_SUB8](#R_RISCV_SUB8)
-    * [const R_RISCV_SUB16](#R_RISCV_SUB16)
-    * [const R_RISCV_SUB32](#R_RISCV_SUB32)
-    * [const R_RISCV_SUB64](#R_RISCV_SUB64)
-    * [const R_RISCV_GNU_VTINHERIT](#R_RISCV_GNU_VTINHERIT)
-    * [const R_RISCV_GNU_VTENTRY](#R_RISCV_GNU_VTENTRY)
-    * [const R_RISCV_ALIGN](#R_RISCV_ALIGN)
-    * [const R_RISCV_RVC_BRANCH](#R_RISCV_RVC_BRANCH)
-    * [const R_RISCV_RVC_JUMP](#R_RISCV_RVC_JUMP)
-    * [const R_RISCV_RVC_LUI](#R_RISCV_RVC_LUI)
-    * [const R_RISCV_GPREL_I](#R_RISCV_GPREL_I)
-    * [const R_RISCV_GPREL_S](#R_RISCV_GPREL_S)
-    * [const R_RISCV_TPREL_I](#R_RISCV_TPREL_I)
     * [const R_RISCV_TPREL_S](#R_RISCV_TPREL_S)
-    * [const R_RISCV_RELAX](#R_RISCV_RELAX)
-    * [const R_RISCV_SUB6](#R_RISCV_SUB6)
-    * [const R_RISCV_SET6](#R_RISCV_SET6)
-    * [const R_RISCV_SET8](#R_RISCV_SET8)
-    * [const R_RISCV_SET16](#R_RISCV_SET16)
-    * [const R_RISCV_SET32](#R_RISCV_SET32)
-    * [const R_RISCV_32_PCREL](#R_RISCV_32_PCREL)
-    * [const R_390_NONE](#R_390_NONE)
-    * [const R_390_8](#R_390_8)
-    * [const R_390_12](#R_390_12)
-    * [const R_390_16](#R_390_16)
-    * [const R_390_32](#R_390_32)
-    * [const R_390_PC32](#R_390_PC32)
-    * [const R_390_GOT12](#R_390_GOT12)
-    * [const R_390_GOT32](#R_390_GOT32)
-    * [const R_390_PLT32](#R_390_PLT32)
-    * [const R_390_COPY](#R_390_COPY)
-    * [const R_390_GLOB_DAT](#R_390_GLOB_DAT)
-    * [const R_390_JMP_SLOT](#R_390_JMP_SLOT)
-    * [const R_390_RELATIVE](#R_390_RELATIVE)
-    * [const R_390_GOTOFF](#R_390_GOTOFF)
-    * [const R_390_GOTPC](#R_390_GOTPC)
-    * [const R_390_GOT16](#R_390_GOT16)
-    * [const R_390_PC16](#R_390_PC16)
-    * [const R_390_PC16DBL](#R_390_PC16DBL)
-    * [const R_390_PLT16DBL](#R_390_PLT16DBL)
-    * [const R_390_PC32DBL](#R_390_PC32DBL)
-    * [const R_390_PLT32DBL](#R_390_PLT32DBL)
-    * [const R_390_GOTPCDBL](#R_390_GOTPCDBL)
-    * [const R_390_64](#R_390_64)
-    * [const R_390_PC64](#R_390_PC64)
-    * [const R_390_GOT64](#R_390_GOT64)
-    * [const R_390_PLT64](#R_390_PLT64)
-    * [const R_390_GOTENT](#R_390_GOTENT)
-    * [const R_390_GOTOFF16](#R_390_GOTOFF16)
-    * [const R_390_GOTOFF64](#R_390_GOTOFF64)
-    * [const R_390_GOTPLT12](#R_390_GOTPLT12)
-    * [const R_390_GOTPLT16](#R_390_GOTPLT16)
-    * [const R_390_GOTPLT32](#R_390_GOTPLT32)
-    * [const R_390_GOTPLT64](#R_390_GOTPLT64)
-    * [const R_390_GOTPLTENT](#R_390_GOTPLTENT)
-    * [const R_390_GOTPLTOFF16](#R_390_GOTPLTOFF16)
-    * [const R_390_GOTPLTOFF32](#R_390_GOTPLTOFF32)
-    * [const R_390_GOTPLTOFF64](#R_390_GOTPLTOFF64)
-    * [const R_390_TLS_LOAD](#R_390_TLS_LOAD)
-    * [const R_390_TLS_GDCALL](#R_390_TLS_GDCALL)
-    * [const R_390_TLS_LDCALL](#R_390_TLS_LDCALL)
-    * [const R_390_TLS_GD32](#R_390_TLS_GD32)
-    * [const R_390_TLS_GD64](#R_390_TLS_GD64)
-    * [const R_390_TLS_GOTIE12](#R_390_TLS_GOTIE12)
-    * [const R_390_TLS_GOTIE32](#R_390_TLS_GOTIE32)
-    * [const R_390_TLS_GOTIE64](#R_390_TLS_GOTIE64)
-    * [const R_390_TLS_LDM32](#R_390_TLS_LDM32)
-    * [const R_390_TLS_LDM64](#R_390_TLS_LDM64)
-    * [const R_390_TLS_IE32](#R_390_TLS_IE32)
-    * [const R_390_TLS_IE64](#R_390_TLS_IE64)
-    * [const R_390_TLS_IEENT](#R_390_TLS_IEENT)
-    * [const R_390_TLS_LE32](#R_390_TLS_LE32)
-    * [const R_390_TLS_LE64](#R_390_TLS_LE64)
-    * [const R_390_TLS_LDO32](#R_390_TLS_LDO32)
-    * [const R_390_TLS_LDO64](#R_390_TLS_LDO64)
-    * [const R_390_TLS_DTPMOD](#R_390_TLS_DTPMOD)
-    * [const R_390_TLS_DTPOFF](#R_390_TLS_DTPOFF)
-    * [const R_390_TLS_TPOFF](#R_390_TLS_TPOFF)
-    * [const R_390_20](#R_390_20)
-    * [const R_390_GOT20](#R_390_GOT20)
-    * [const R_390_GOTPLT20](#R_390_GOTPLT20)
-    * [const R_390_TLS_GOTIE20](#R_390_TLS_GOTIE20)
-    * [const R_SPARC_NONE](#R_SPARC_NONE)
-    * [const R_SPARC_8](#R_SPARC_8)
+    * [const R_SPARC_10](#R_SPARC_10)
+    * [const R_SPARC_11](#R_SPARC_11)
+    * [const R_SPARC_13](#R_SPARC_13)
     * [const R_SPARC_16](#R_SPARC_16)
+    * [const R_SPARC_22](#R_SPARC_22)
     * [const R_SPARC_32](#R_SPARC_32)
-    * [const R_SPARC_DISP8](#R_SPARC_DISP8)
+    * [const R_SPARC_5](#R_SPARC_5)
+    * [const R_SPARC_6](#R_SPARC_6)
+    * [const R_SPARC_64](#R_SPARC_64)
+    * [const R_SPARC_7](#R_SPARC_7)
+    * [const R_SPARC_8](#R_SPARC_8)
+    * [const R_SPARC_COPY](#R_SPARC_COPY)
     * [const R_SPARC_DISP16](#R_SPARC_DISP16)
     * [const R_SPARC_DISP32](#R_SPARC_DISP32)
-    * [const R_SPARC_WDISP30](#R_SPARC_WDISP30)
-    * [const R_SPARC_WDISP22](#R_SPARC_WDISP22)
-    * [const R_SPARC_HI22](#R_SPARC_HI22)
-    * [const R_SPARC_22](#R_SPARC_22)
-    * [const R_SPARC_13](#R_SPARC_13)
-    * [const R_SPARC_LO10](#R_SPARC_LO10)
+    * [const R_SPARC_DISP64](#R_SPARC_DISP64)
+    * [const R_SPARC_DISP8](#R_SPARC_DISP8)
+    * [const R_SPARC_GLOB_DAT](#R_SPARC_GLOB_DAT)
+    * [const R_SPARC_GLOB_JMP](#R_SPARC_GLOB_JMP)
     * [const R_SPARC_GOT10](#R_SPARC_GOT10)
     * [const R_SPARC_GOT13](#R_SPARC_GOT13)
     * [const R_SPARC_GOT22](#R_SPARC_GOT22)
+    * [const R_SPARC_H44](#R_SPARC_H44)
+    * [const R_SPARC_HH22](#R_SPARC_HH22)
+    * [const R_SPARC_HI22](#R_SPARC_HI22)
+    * [const R_SPARC_HIPLT22](#R_SPARC_HIPLT22)
+    * [const R_SPARC_HIX22](#R_SPARC_HIX22)
+    * [const R_SPARC_HM10](#R_SPARC_HM10)
+    * [const R_SPARC_JMP_SLOT](#R_SPARC_JMP_SLOT)
+    * [const R_SPARC_L44](#R_SPARC_L44)
+    * [const R_SPARC_LM22](#R_SPARC_LM22)
+    * [const R_SPARC_LO10](#R_SPARC_LO10)
+    * [const R_SPARC_LOPLT10](#R_SPARC_LOPLT10)
+    * [const R_SPARC_LOX10](#R_SPARC_LOX10)
+    * [const R_SPARC_M44](#R_SPARC_M44)
+    * [const R_SPARC_NONE](#R_SPARC_NONE)
+    * [const R_SPARC_OLO10](#R_SPARC_OLO10)
     * [const R_SPARC_PC10](#R_SPARC_PC10)
     * [const R_SPARC_PC22](#R_SPARC_PC22)
-    * [const R_SPARC_WPLT30](#R_SPARC_WPLT30)
-    * [const R_SPARC_COPY](#R_SPARC_COPY)
-    * [const R_SPARC_GLOB_DAT](#R_SPARC_GLOB_DAT)
-    * [const R_SPARC_JMP_SLOT](#R_SPARC_JMP_SLOT)
-    * [const R_SPARC_RELATIVE](#R_SPARC_RELATIVE)
-    * [const R_SPARC_UA32](#R_SPARC_UA32)
-    * [const R_SPARC_PLT32](#R_SPARC_PLT32)
-    * [const R_SPARC_HIPLT22](#R_SPARC_HIPLT22)
-    * [const R_SPARC_LOPLT10](#R_SPARC_LOPLT10)
-    * [const R_SPARC_PCPLT32](#R_SPARC_PCPLT32)
-    * [const R_SPARC_PCPLT22](#R_SPARC_PCPLT22)
     * [const R_SPARC_PCPLT10](#R_SPARC_PCPLT10)
-    * [const R_SPARC_10](#R_SPARC_10)
-    * [const R_SPARC_11](#R_SPARC_11)
-    * [const R_SPARC_64](#R_SPARC_64)
-    * [const R_SPARC_OLO10](#R_SPARC_OLO10)
-    * [const R_SPARC_HH22](#R_SPARC_HH22)
-    * [const R_SPARC_HM10](#R_SPARC_HM10)
-    * [const R_SPARC_LM22](#R_SPARC_LM22)
+    * [const R_SPARC_PCPLT22](#R_SPARC_PCPLT22)
+    * [const R_SPARC_PCPLT32](#R_SPARC_PCPLT32)
     * [const R_SPARC_PC_HH22](#R_SPARC_PC_HH22)
     * [const R_SPARC_PC_HM10](#R_SPARC_PC_HM10)
     * [const R_SPARC_PC_LM22](#R_SPARC_PC_LM22)
+    * [const R_SPARC_PLT32](#R_SPARC_PLT32)
+    * [const R_SPARC_PLT64](#R_SPARC_PLT64)
+    * [const R_SPARC_REGISTER](#R_SPARC_REGISTER)
+    * [const R_SPARC_RELATIVE](#R_SPARC_RELATIVE)
+    * [const R_SPARC_UA16](#R_SPARC_UA16)
+    * [const R_SPARC_UA32](#R_SPARC_UA32)
+    * [const R_SPARC_UA64](#R_SPARC_UA64)
     * [const R_SPARC_WDISP16](#R_SPARC_WDISP16)
     * [const R_SPARC_WDISP19](#R_SPARC_WDISP19)
-    * [const R_SPARC_GLOB_JMP](#R_SPARC_GLOB_JMP)
-    * [const R_SPARC_7](#R_SPARC_7)
-    * [const R_SPARC_5](#R_SPARC_5)
-    * [const R_SPARC_6](#R_SPARC_6)
-    * [const R_SPARC_DISP64](#R_SPARC_DISP64)
-    * [const R_SPARC_PLT64](#R_SPARC_PLT64)
-    * [const R_SPARC_HIX22](#R_SPARC_HIX22)
-    * [const R_SPARC_LOX10](#R_SPARC_LOX10)
-    * [const R_SPARC_H44](#R_SPARC_H44)
-    * [const R_SPARC_M44](#R_SPARC_M44)
-    * [const R_SPARC_L44](#R_SPARC_L44)
-    * [const R_SPARC_REGISTER](#R_SPARC_REGISTER)
-    * [const R_SPARC_UA64](#R_SPARC_UA64)
-    * [const R_SPARC_UA16](#R_SPARC_UA16)
-    * [const ARM_MAGIC_TRAMP_NUMBER](#ARM_MAGIC_TRAMP_NUMBER)
+    * [const R_SPARC_WDISP22](#R_SPARC_WDISP22)
+    * [const R_SPARC_WDISP30](#R_SPARC_WDISP30)
+    * [const R_SPARC_WPLT30](#R_SPARC_WPLT30)
+    * [const R_X86_64_16](#R_X86_64_16)
+    * [const R_X86_64_32](#R_X86_64_32)
+    * [const R_X86_64_32S](#R_X86_64_32S)
+    * [const R_X86_64_64](#R_X86_64_64)
+    * [const R_X86_64_8](#R_X86_64_8)
+    * [const R_X86_64_COPY](#R_X86_64_COPY)
+    * [const R_X86_64_DTPMOD64](#R_X86_64_DTPMOD64)
+    * [const R_X86_64_DTPOFF32](#R_X86_64_DTPOFF32)
+    * [const R_X86_64_DTPOFF64](#R_X86_64_DTPOFF64)
+    * [const R_X86_64_GLOB_DAT](#R_X86_64_GLOB_DAT)
+    * [const R_X86_64_GOT32](#R_X86_64_GOT32)
+    * [const R_X86_64_GOT64](#R_X86_64_GOT64)
+    * [const R_X86_64_GOTOFF64](#R_X86_64_GOTOFF64)
+    * [const R_X86_64_GOTPC32](#R_X86_64_GOTPC32)
+    * [const R_X86_64_GOTPC32_TLSDESC](#R_X86_64_GOTPC32_TLSDESC)
+    * [const R_X86_64_GOTPC64](#R_X86_64_GOTPC64)
+    * [const R_X86_64_GOTPCREL](#R_X86_64_GOTPCREL)
+    * [const R_X86_64_GOTPCREL64](#R_X86_64_GOTPCREL64)
+    * [const R_X86_64_GOTPCRELX](#R_X86_64_GOTPCRELX)
+    * [const R_X86_64_GOTPLT64](#R_X86_64_GOTPLT64)
+    * [const R_X86_64_GOTTPOFF](#R_X86_64_GOTTPOFF)
+    * [const R_X86_64_IRELATIVE](#R_X86_64_IRELATIVE)
+    * [const R_X86_64_JMP_SLOT](#R_X86_64_JMP_SLOT)
+    * [const R_X86_64_NONE](#R_X86_64_NONE)
+    * [const R_X86_64_PC16](#R_X86_64_PC16)
+    * [const R_X86_64_PC32](#R_X86_64_PC32)
+    * [const R_X86_64_PC32_BND](#R_X86_64_PC32_BND)
+    * [const R_X86_64_PC64](#R_X86_64_PC64)
+    * [const R_X86_64_PC8](#R_X86_64_PC8)
+    * [const R_X86_64_PLT32](#R_X86_64_PLT32)
+    * [const R_X86_64_PLT32_BND](#R_X86_64_PLT32_BND)
+    * [const R_X86_64_PLTOFF64](#R_X86_64_PLTOFF64)
+    * [const R_X86_64_RELATIVE](#R_X86_64_RELATIVE)
+    * [const R_X86_64_RELATIVE64](#R_X86_64_RELATIVE64)
+    * [const R_X86_64_REX_GOTPCRELX](#R_X86_64_REX_GOTPCRELX)
+    * [const R_X86_64_SIZE32](#R_X86_64_SIZE32)
+    * [const R_X86_64_SIZE64](#R_X86_64_SIZE64)
+    * [const R_X86_64_TLSDESC](#R_X86_64_TLSDESC)
+    * [const R_X86_64_TLSDESC_CALL](#R_X86_64_TLSDESC_CALL)
+    * [const R_X86_64_TLSGD](#R_X86_64_TLSGD)
+    * [const R_X86_64_TLSLD](#R_X86_64_TLSLD)
+    * [const R_X86_64_TPOFF32](#R_X86_64_TPOFF32)
+    * [const R_X86_64_TPOFF64](#R_X86_64_TPOFF64)
+    * [const SHF_ALLOC](#SHF_ALLOC)
+    * [const SHF_COMPRESSED](#SHF_COMPRESSED)
+    * [const SHF_EXECINSTR](#SHF_EXECINSTR)
+    * [const SHF_GROUP](#SHF_GROUP)
+    * [const SHF_INFO_LINK](#SHF_INFO_LINK)
+    * [const SHF_LINK_ORDER](#SHF_LINK_ORDER)
+    * [const SHF_MASKOS](#SHF_MASKOS)
+    * [const SHF_MASKPROC](#SHF_MASKPROC)
+    * [const SHF_MERGE](#SHF_MERGE)
+    * [const SHF_OS_NONCONFORMING](#SHF_OS_NONCONFORMING)
+    * [const SHF_STRINGS](#SHF_STRINGS)
+    * [const SHF_TLS](#SHF_TLS)
+    * [const SHF_WRITE](#SHF_WRITE)
+    * [const SHN_ABS](#SHN_ABS)
+    * [const SHN_COMMON](#SHN_COMMON)
+    * [const SHN_HIOS](#SHN_HIOS)
+    * [const SHN_HIPROC](#SHN_HIPROC)
+    * [const SHN_HIRESERVE](#SHN_HIRESERVE)
+    * [const SHN_LOOS](#SHN_LOOS)
+    * [const SHN_LOPROC](#SHN_LOPROC)
+    * [const SHN_LORESERVE](#SHN_LORESERVE)
+    * [const SHN_UNDEF](#SHN_UNDEF)
+    * [const SHN_XINDEX](#SHN_XINDEX)
+    * [const SHT_DYNAMIC](#SHT_DYNAMIC)
+    * [const SHT_DYNSYM](#SHT_DYNSYM)
+    * [const SHT_FINI_ARRAY](#SHT_FINI_ARRAY)
+    * [const SHT_GNU_ATTRIBUTES](#SHT_GNU_ATTRIBUTES)
+    * [const SHT_GNU_HASH](#SHT_GNU_HASH)
+    * [const SHT_GNU_LIBLIST](#SHT_GNU_LIBLIST)
+    * [const SHT_GNU_VERDEF](#SHT_GNU_VERDEF)
+    * [const SHT_GNU_VERNEED](#SHT_GNU_VERNEED)
+    * [const SHT_GNU_VERSYM](#SHT_GNU_VERSYM)
+    * [const SHT_GROUP](#SHT_GROUP)
+    * [const SHT_HASH](#SHT_HASH)
+    * [const SHT_HIOS](#SHT_HIOS)
+    * [const SHT_HIPROC](#SHT_HIPROC)
+    * [const SHT_HIUSER](#SHT_HIUSER)
+    * [const SHT_INIT_ARRAY](#SHT_INIT_ARRAY)
+    * [const SHT_LOOS](#SHT_LOOS)
+    * [const SHT_LOPROC](#SHT_LOPROC)
+    * [const SHT_LOUSER](#SHT_LOUSER)
+    * [const SHT_MIPS_ABIFLAGS](#SHT_MIPS_ABIFLAGS)
+    * [const SHT_NOBITS](#SHT_NOBITS)
+    * [const SHT_NOTE](#SHT_NOTE)
+    * [const SHT_NULL](#SHT_NULL)
+    * [const SHT_PREINIT_ARRAY](#SHT_PREINIT_ARRAY)
+    * [const SHT_PROGBITS](#SHT_PROGBITS)
+    * [const SHT_REL](#SHT_REL)
+    * [const SHT_RELA](#SHT_RELA)
+    * [const SHT_SHLIB](#SHT_SHLIB)
+    * [const SHT_STRTAB](#SHT_STRTAB)
+    * [const SHT_SYMTAB](#SHT_SYMTAB)
+    * [const SHT_SYMTAB_SHNDX](#SHT_SYMTAB_SHNDX)
+    * [const STB_GLOBAL](#STB_GLOBAL)
+    * [const STB_HIOS](#STB_HIOS)
+    * [const STB_HIPROC](#STB_HIPROC)
+    * [const STB_LOCAL](#STB_LOCAL)
+    * [const STB_LOOS](#STB_LOOS)
+    * [const STB_LOPROC](#STB_LOPROC)
+    * [const STB_WEAK](#STB_WEAK)
+    * [const STT_COMMON](#STT_COMMON)
+    * [const STT_FILE](#STT_FILE)
+    * [const STT_FUNC](#STT_FUNC)
+    * [const STT_HIOS](#STT_HIOS)
+    * [const STT_HIPROC](#STT_HIPROC)
+    * [const STT_LOOS](#STT_LOOS)
+    * [const STT_LOPROC](#STT_LOPROC)
+    * [const STT_NOTYPE](#STT_NOTYPE)
+    * [const STT_OBJECT](#STT_OBJECT)
+    * [const STT_SECTION](#STT_SECTION)
+    * [const STT_TLS](#STT_TLS)
+    * [const STV_DEFAULT](#STV_DEFAULT)
+    * [const STV_HIDDEN](#STV_HIDDEN)
+    * [const STV_INTERNAL](#STV_INTERNAL)
+    * [const STV_PROTECTED](#STV_PROTECTED)
     * [const Sym32Size](#Sym32Size)
     * [const Sym64Size](#Sym64Size)
-    * [const seekStart](#seekStart)
     * [const seekCurrent](#seekCurrent)
     * [const seekEnd](#seekEnd)
+    * [const seekStart](#seekStart)
 * [Variables](#var)
-    * [var versionStrings](#versionStrings)
+    * [var ErrNoSymbols](#ErrNoSymbols)
     * [var classStrings](#classStrings)
-    * [var dataStrings](#dataStrings)
-    * [var osabiStrings](#osabiStrings)
-    * [var typeStrings](#typeStrings)
-    * [var machineStrings](#machineStrings)
-    * [var shnStrings](#shnStrings)
-    * [var shtStrings](#shtStrings)
-    * [var shfStrings](#shfStrings)
     * [var compressionStrings](#compressionStrings)
-    * [var ptStrings](#ptStrings)
-    * [var pfStrings](#pfStrings)
-    * [var dtStrings](#dtStrings)
+    * [var dataStrings](#dataStrings)
     * [var dflagStrings](#dflagStrings)
+    * [var dtStrings](#dtStrings)
+    * [var dynamicSymbolsGolden](#dynamicSymbolsGolden)
+    * [var fileTests](#fileTests)
+    * [var machineStrings](#machineStrings)
+    * [var nameTests](#nameTests)
     * [var ntypeStrings](#ntypeStrings)
-    * [var stbStrings](#stbStrings)
-    * [var sttStrings](#sttStrings)
-    * [var stvStrings](#stvStrings)
-    * [var rx86_64Strings](#rx86_64Strings)
+    * [var osabiStrings](#osabiStrings)
+    * [var pfStrings](#pfStrings)
+    * [var ptStrings](#ptStrings)
+    * [var r386Strings](#r386Strings)
+    * [var r390Strings](#r390Strings)
     * [var raarch64Strings](#raarch64Strings)
     * [var ralphaStrings](#ralphaStrings)
     * [var rarmStrings](#rarmStrings)
-    * [var r386Strings](#r386Strings)
-    * [var rmipsStrings](#rmipsStrings)
-    * [var rppcStrings](#rppcStrings)
-    * [var rppc64Strings](#rppc64Strings)
-    * [var rriscvStrings](#rriscvStrings)
-    * [var r390Strings](#r390Strings)
-    * [var rsparcStrings](#rsparcStrings)
-    * [var ErrNoSymbols](#ErrNoSymbols)
-    * [var nameTests](#nameTests)
-    * [var fileTests](#fileTests)
     * [var relocationTests](#relocationTests)
+    * [var rmipsStrings](#rmipsStrings)
+    * [var rppc64Strings](#rppc64Strings)
+    * [var rppcStrings](#rppcStrings)
+    * [var rriscvStrings](#rriscvStrings)
+    * [var rsparcStrings](#rsparcStrings)
+    * [var rx86_64Strings](#rx86_64Strings)
+    * [var shfStrings](#shfStrings)
+    * [var shnStrings](#shnStrings)
+    * [var shtStrings](#shtStrings)
+    * [var stbStrings](#stbStrings)
+    * [var sttStrings](#sttStrings)
+    * [var stvStrings](#stvStrings)
     * [var symbolsGolden](#symbolsGolden)
-    * [var dynamicSymbolsGolden](#dynamicSymbolsGolden)
+    * [var typeStrings](#typeStrings)
+    * [var versionStrings](#versionStrings)
 * [Types](#type)
-    * [type Version byte](#Version)
-        * [func (i Version) String() string](#Version.String)
-        * [func (i Version) GoString() string](#Version.GoString)
-    * [type Class byte](#Class)
-        * [func (i Class) String() string](#Class.String)
-        * [func (i Class) GoString() string](#Class.GoString)
-    * [type Data byte](#Data)
-        * [func (i Data) String() string](#Data.String)
-        * [func (i Data) GoString() string](#Data.GoString)
-    * [type OSABI byte](#OSABI)
-        * [func (i OSABI) String() string](#OSABI.String)
-        * [func (i OSABI) GoString() string](#OSABI.GoString)
-    * [type Type uint16](#Type)
-        * [func (i Type) String() string](#Type.String)
-        * [func (i Type) GoString() string](#Type.GoString)
-    * [type Machine uint16](#Machine)
-        * [func (i Machine) String() string](#Machine.String)
-        * [func (i Machine) GoString() string](#Machine.GoString)
-    * [type SectionIndex int](#SectionIndex)
-        * [func (i SectionIndex) String() string](#SectionIndex.String)
-        * [func (i SectionIndex) GoString() string](#SectionIndex.GoString)
-    * [type SectionType uint32](#SectionType)
-        * [func (i SectionType) String() string](#SectionType.String)
-        * [func (i SectionType) GoString() string](#SectionType.GoString)
-    * [type SectionFlag uint32](#SectionFlag)
-        * [func (i SectionFlag) String() string](#SectionFlag.String)
-        * [func (i SectionFlag) GoString() string](#SectionFlag.GoString)
-    * [type CompressionType int](#CompressionType)
-        * [func (i CompressionType) String() string](#CompressionType.String)
-        * [func (i CompressionType) GoString() string](#CompressionType.GoString)
-    * [type ProgType int](#ProgType)
-        * [func (i ProgType) String() string](#ProgType.String)
-        * [func (i ProgType) GoString() string](#ProgType.GoString)
-    * [type ProgFlag uint32](#ProgFlag)
-        * [func (i ProgFlag) String() string](#ProgFlag.String)
-        * [func (i ProgFlag) GoString() string](#ProgFlag.GoString)
-    * [type DynTag int](#DynTag)
-        * [func (i DynTag) String() string](#DynTag.String)
-        * [func (i DynTag) GoString() string](#DynTag.GoString)
-    * [type DynFlag int](#DynFlag)
-        * [func (i DynFlag) String() string](#DynFlag.String)
-        * [func (i DynFlag) GoString() string](#DynFlag.GoString)
-    * [type NType int](#NType)
-        * [func (i NType) String() string](#NType.String)
-        * [func (i NType) GoString() string](#NType.GoString)
-    * [type SymBind int](#SymBind)
-        * [func ST_BIND(info uint8) SymBind](#ST_BIND)
-        * [func (i SymBind) String() string](#SymBind.String)
-        * [func (i SymBind) GoString() string](#SymBind.GoString)
-    * [type SymType int](#SymType)
-        * [func ST_TYPE(info uint8) SymType](#ST_TYPE)
-        * [func (i SymType) String() string](#SymType.String)
-        * [func (i SymType) GoString() string](#SymType.GoString)
-    * [type SymVis int](#SymVis)
-        * [func ST_VISIBILITY(other uint8) SymVis](#ST_VISIBILITY)
-        * [func (i SymVis) String() string](#SymVis.String)
-        * [func (i SymVis) GoString() string](#SymVis.GoString)
-    * [type R_X86_64 int](#R_X86_64)
-        * [func (i R_X86_64) String() string](#R_X86_64.String)
-        * [func (i R_X86_64) GoString() string](#R_X86_64.GoString)
-    * [type R_AARCH64 int](#R_AARCH64)
-        * [func (i R_AARCH64) String() string](#R_AARCH64.String)
-        * [func (i R_AARCH64) GoString() string](#R_AARCH64.GoString)
-    * [type R_ALPHA int](#R_ALPHA)
-        * [func (i R_ALPHA) String() string](#R_ALPHA.String)
-        * [func (i R_ALPHA) GoString() string](#R_ALPHA.GoString)
-    * [type R_ARM int](#R_ARM)
-        * [func (i R_ARM) String() string](#R_ARM.String)
-        * [func (i R_ARM) GoString() string](#R_ARM.GoString)
-    * [type R_386 int](#R_386)
-        * [func (i R_386) String() string](#R_386.String)
-        * [func (i R_386) GoString() string](#R_386.GoString)
-    * [type R_MIPS int](#R_MIPS)
-        * [func (i R_MIPS) String() string](#R_MIPS.String)
-        * [func (i R_MIPS) GoString() string](#R_MIPS.GoString)
-    * [type R_PPC int](#R_PPC)
-        * [func (i R_PPC) String() string](#R_PPC.String)
-        * [func (i R_PPC) GoString() string](#R_PPC.GoString)
-    * [type R_PPC64 int](#R_PPC64)
-        * [func (i R_PPC64) String() string](#R_PPC64.String)
-        * [func (i R_PPC64) GoString() string](#R_PPC64.GoString)
-    * [type R_RISCV int](#R_RISCV)
-        * [func (i R_RISCV) String() string](#R_RISCV.String)
-        * [func (i R_RISCV) GoString() string](#R_RISCV.GoString)
-    * [type R_390 int](#R_390)
-        * [func (i R_390) String() string](#R_390.String)
-        * [func (i R_390) GoString() string](#R_390.GoString)
-    * [type R_SPARC int](#R_SPARC)
-        * [func (i R_SPARC) String() string](#R_SPARC.String)
-        * [func (i R_SPARC) GoString() string](#R_SPARC.GoString)
-    * [type Header32 struct](#Header32)
-    * [type Section32 struct](#Section32)
-    * [type Prog32 struct](#Prog32)
-    * [type Dyn32 struct](#Dyn32)
     * [type Chdr32 struct](#Chdr32)
-    * [type Rel32 struct](#Rel32)
-    * [type Rela32 struct](#Rela32)
-    * [type Sym32 struct](#Sym32)
-    * [type Header64 struct](#Header64)
-    * [type Section64 struct](#Section64)
-    * [type Prog64 struct](#Prog64)
-    * [type Dyn64 struct](#Dyn64)
     * [type Chdr64 struct](#Chdr64)
-    * [type Rel64 struct](#Rel64)
-    * [type Rela64 struct](#Rela64)
-    * [type Sym64 struct](#Sym64)
-    * [type intName struct](#intName)
-    * [type FileHeader struct](#FileHeader)
+    * [type Class byte](#Class)
+        * [func (i Class) GoString() string](#Class.GoString)
+        * [func (i Class) String() string](#Class.String)
+    * [type CompressionType int](#CompressionType)
+        * [func (i CompressionType) GoString() string](#CompressionType.GoString)
+        * [func (i CompressionType) String() string](#CompressionType.String)
+    * [type Data byte](#Data)
+        * [func (i Data) GoString() string](#Data.GoString)
+        * [func (i Data) String() string](#Data.String)
+    * [type Dyn32 struct](#Dyn32)
+    * [type Dyn64 struct](#Dyn64)
+    * [type DynFlag int](#DynFlag)
+        * [func (i DynFlag) GoString() string](#DynFlag.GoString)
+        * [func (i DynFlag) String() string](#DynFlag.String)
+    * [type DynTag int](#DynTag)
+        * [func (i DynTag) GoString() string](#DynTag.GoString)
+        * [func (i DynTag) String() string](#DynTag.String)
     * [type File struct](#File)
-        * [func Open(name string) (*File, error)](#Open)
         * [func NewFile(r io.ReaderAt) (*File, error)](#NewFile)
-        * [func (f *File) stringTable(link uint32) ([]byte, error)](#File.stringTable)
+        * [func Open(name string) (*File, error)](#Open)
         * [func (f *File) Close() error](#File.Close)
+        * [func (f *File) DWARF() (*dwarf.Data, error)](#File.DWARF)
+        * [func (f *File) DynString(tag DynTag) ([]string, error)](#File.DynString)
+        * [func (f *File) DynamicSymbols() ([]Symbol, error)](#File.DynamicSymbols)
+        * [func (f *File) ImportedLibraries() ([]string, error)](#File.ImportedLibraries)
+        * [func (f *File) ImportedSymbols() ([]ImportedSymbol, error)](#File.ImportedSymbols)
+        * [func (f *File) Section(name string) *Section](#File.Section)
         * [func (f *File) SectionByType(typ SectionType) *Section](#File.SectionByType)
+        * [func (f *File) Symbols() ([]Symbol, error)](#File.Symbols)
+        * [func (f *File) applyRelocations(dst []byte, rels []byte) error](#File.applyRelocations)
+        * [func (f *File) applyRelocations386(dst []byte, rels []byte) error](#File.applyRelocations386)
+        * [func (f *File) applyRelocationsAMD64(dst []byte, rels []byte) error](#File.applyRelocationsAMD64)
+        * [func (f *File) applyRelocationsARM(dst []byte, rels []byte) error](#File.applyRelocationsARM)
+        * [func (f *File) applyRelocationsARM64(dst []byte, rels []byte) error](#File.applyRelocationsARM64)
+        * [func (f *File) applyRelocationsMIPS(dst []byte, rels []byte) error](#File.applyRelocationsMIPS)
+        * [func (f *File) applyRelocationsMIPS64(dst []byte, rels []byte) error](#File.applyRelocationsMIPS64)
+        * [func (f *File) applyRelocationsPPC(dst []byte, rels []byte) error](#File.applyRelocationsPPC)
+        * [func (f *File) applyRelocationsPPC64(dst []byte, rels []byte) error](#File.applyRelocationsPPC64)
+        * [func (f *File) applyRelocationsRISCV64(dst []byte, rels []byte) error](#File.applyRelocationsRISCV64)
+        * [func (f *File) applyRelocationsSPARC64(dst []byte, rels []byte) error](#File.applyRelocationsSPARC64)
+        * [func (f *File) applyRelocationss390x(dst []byte, rels []byte) error](#File.applyRelocationss390x)
         * [func (f *File) getSymbols(typ SectionType) ([]Symbol, []byte, error)](#File.getSymbols)
         * [func (f *File) getSymbols32(typ SectionType) ([]Symbol, []byte, error)](#File.getSymbols32)
         * [func (f *File) getSymbols64(typ SectionType) ([]Symbol, []byte, error)](#File.getSymbols64)
-        * [func (f *File) Section(name string) *Section](#File.Section)
-        * [func (f *File) applyRelocations(dst []byte, rels []byte) error](#File.applyRelocations)
-        * [func (f *File) applyRelocationsAMD64(dst []byte, rels []byte) error](#File.applyRelocationsAMD64)
-        * [func (f *File) applyRelocations386(dst []byte, rels []byte) error](#File.applyRelocations386)
-        * [func (f *File) applyRelocationsARM(dst []byte, rels []byte) error](#File.applyRelocationsARM)
-        * [func (f *File) applyRelocationsARM64(dst []byte, rels []byte) error](#File.applyRelocationsARM64)
-        * [func (f *File) applyRelocationsPPC(dst []byte, rels []byte) error](#File.applyRelocationsPPC)
-        * [func (f *File) applyRelocationsPPC64(dst []byte, rels []byte) error](#File.applyRelocationsPPC64)
-        * [func (f *File) applyRelocationsMIPS(dst []byte, rels []byte) error](#File.applyRelocationsMIPS)
-        * [func (f *File) applyRelocationsMIPS64(dst []byte, rels []byte) error](#File.applyRelocationsMIPS64)
-        * [func (f *File) applyRelocationsRISCV64(dst []byte, rels []byte) error](#File.applyRelocationsRISCV64)
-        * [func (f *File) applyRelocationss390x(dst []byte, rels []byte) error](#File.applyRelocationss390x)
-        * [func (f *File) applyRelocationsSPARC64(dst []byte, rels []byte) error](#File.applyRelocationsSPARC64)
-        * [func (f *File) DWARF() (*dwarf.Data, error)](#File.DWARF)
-        * [func (f *File) Symbols() ([]Symbol, error)](#File.Symbols)
-        * [func (f *File) DynamicSymbols() ([]Symbol, error)](#File.DynamicSymbols)
-        * [func (f *File) ImportedSymbols() ([]ImportedSymbol, error)](#File.ImportedSymbols)
-        * [func (f *File) gnuVersionInit(str []byte) bool](#File.gnuVersionInit)
         * [func (f *File) gnuVersion(i int) (library string, version string)](#File.gnuVersion)
-        * [func (f *File) ImportedLibraries() ([]string, error)](#File.ImportedLibraries)
-        * [func (f *File) DynString(tag DynTag) ([]string, error)](#File.DynString)
-    * [type SectionHeader struct](#SectionHeader)
+        * [func (f *File) gnuVersionInit(str []byte) bool](#File.gnuVersionInit)
+        * [func (f *File) stringTable(link uint32) ([]byte, error)](#File.stringTable)
+    * [type FileHeader struct](#FileHeader)
+    * [type FormatError struct](#FormatError)
+        * [func (e *FormatError) Error() string](#FormatError.Error)
+    * [type Header32 struct](#Header32)
+    * [type Header64 struct](#Header64)
+    * [type ImportedSymbol struct](#ImportedSymbol)
+    * [type Machine uint16](#Machine)
+        * [func (i Machine) GoString() string](#Machine.GoString)
+        * [func (i Machine) String() string](#Machine.String)
+    * [type NType int](#NType)
+        * [func (i NType) GoString() string](#NType.GoString)
+        * [func (i NType) String() string](#NType.String)
+    * [type OSABI byte](#OSABI)
+        * [func (i OSABI) GoString() string](#OSABI.GoString)
+        * [func (i OSABI) String() string](#OSABI.String)
+    * [type Prog struct](#Prog)
+        * [func (p *Prog) Open() io.ReadSeeker](#Prog.Open)
+    * [type Prog32 struct](#Prog32)
+    * [type Prog64 struct](#Prog64)
+    * [type ProgFlag uint32](#ProgFlag)
+        * [func (i ProgFlag) GoString() string](#ProgFlag.GoString)
+        * [func (i ProgFlag) String() string](#ProgFlag.String)
+    * [type ProgHeader struct](#ProgHeader)
+    * [type ProgType int](#ProgType)
+        * [func (i ProgType) GoString() string](#ProgType.GoString)
+        * [func (i ProgType) String() string](#ProgType.String)
+    * [type R_386 int](#R_386)
+        * [func (i R_386) GoString() string](#R_386.GoString)
+        * [func (i R_386) String() string](#R_386.String)
+    * [type R_390 int](#R_390)
+        * [func (i R_390) GoString() string](#R_390.GoString)
+        * [func (i R_390) String() string](#R_390.String)
+    * [type R_AARCH64 int](#R_AARCH64)
+        * [func (i R_AARCH64) GoString() string](#R_AARCH64.GoString)
+        * [func (i R_AARCH64) String() string](#R_AARCH64.String)
+    * [type R_ALPHA int](#R_ALPHA)
+        * [func (i R_ALPHA) GoString() string](#R_ALPHA.GoString)
+        * [func (i R_ALPHA) String() string](#R_ALPHA.String)
+    * [type R_ARM int](#R_ARM)
+        * [func (i R_ARM) GoString() string](#R_ARM.GoString)
+        * [func (i R_ARM) String() string](#R_ARM.String)
+    * [type R_MIPS int](#R_MIPS)
+        * [func (i R_MIPS) GoString() string](#R_MIPS.GoString)
+        * [func (i R_MIPS) String() string](#R_MIPS.String)
+    * [type R_PPC int](#R_PPC)
+        * [func (i R_PPC) GoString() string](#R_PPC.GoString)
+        * [func (i R_PPC) String() string](#R_PPC.String)
+    * [type R_PPC64 int](#R_PPC64)
+        * [func (i R_PPC64) GoString() string](#R_PPC64.GoString)
+        * [func (i R_PPC64) String() string](#R_PPC64.String)
+    * [type R_RISCV int](#R_RISCV)
+        * [func (i R_RISCV) GoString() string](#R_RISCV.GoString)
+        * [func (i R_RISCV) String() string](#R_RISCV.String)
+    * [type R_SPARC int](#R_SPARC)
+        * [func (i R_SPARC) GoString() string](#R_SPARC.GoString)
+        * [func (i R_SPARC) String() string](#R_SPARC.String)
+    * [type R_X86_64 int](#R_X86_64)
+        * [func (i R_X86_64) GoString() string](#R_X86_64.GoString)
+        * [func (i R_X86_64) String() string](#R_X86_64.String)
+    * [type Rel32 struct](#Rel32)
+    * [type Rel64 struct](#Rel64)
+    * [type Rela32 struct](#Rela32)
+    * [type Rela64 struct](#Rela64)
     * [type Section struct](#Section)
         * [func (s *Section) Data() ([]byte, error)](#Section.Data)
         * [func (s *Section) Open() io.ReadSeeker](#Section.Open)
-    * [type ProgHeader struct](#ProgHeader)
-    * [type Prog struct](#Prog)
-        * [func (p *Prog) Open() io.ReadSeeker](#Prog.Open)
+    * [type Section32 struct](#Section32)
+    * [type Section64 struct](#Section64)
+    * [type SectionFlag uint32](#SectionFlag)
+        * [func (i SectionFlag) GoString() string](#SectionFlag.GoString)
+        * [func (i SectionFlag) String() string](#SectionFlag.String)
+    * [type SectionHeader struct](#SectionHeader)
+    * [type SectionIndex int](#SectionIndex)
+        * [func (i SectionIndex) GoString() string](#SectionIndex.GoString)
+        * [func (i SectionIndex) String() string](#SectionIndex.String)
+    * [type SectionType uint32](#SectionType)
+        * [func (i SectionType) GoString() string](#SectionType.GoString)
+        * [func (i SectionType) String() string](#SectionType.String)
+    * [type Sym32 struct](#Sym32)
+    * [type Sym64 struct](#Sym64)
+    * [type SymBind int](#SymBind)
+        * [func ST_BIND(info uint8) SymBind](#ST_BIND)
+        * [func (i SymBind) GoString() string](#SymBind.GoString)
+        * [func (i SymBind) String() string](#SymBind.String)
+    * [type SymType int](#SymType)
+        * [func ST_TYPE(info uint8) SymType](#ST_TYPE)
+        * [func (i SymType) GoString() string](#SymType.GoString)
+        * [func (i SymType) String() string](#SymType.String)
+    * [type SymVis int](#SymVis)
+        * [func ST_VISIBILITY(other uint8) SymVis](#ST_VISIBILITY)
+        * [func (i SymVis) GoString() string](#SymVis.GoString)
+        * [func (i SymVis) String() string](#SymVis.String)
     * [type Symbol struct](#Symbol)
-    * [type FormatError struct](#FormatError)
-        * [func (e *FormatError) Error() string](#FormatError.Error)
-    * [type ImportedSymbol struct](#ImportedSymbol)
-    * [type verneed struct](#verneed)
+    * [type Type uint16](#Type)
+        * [func (i Type) GoString() string](#Type.GoString)
+        * [func (i Type) String() string](#Type.String)
+    * [type Version byte](#Version)
+        * [func (i Version) GoString() string](#Version.GoString)
+        * [func (i Version) String() string](#Version.String)
     * [type errorReader struct](#errorReader)
+        * [func (r errorReader) Close() error](#errorReader.Close)
         * [func (r errorReader) Read(p []byte) (n int, err error)](#errorReader.Read)
         * [func (r errorReader) ReadAt(p []byte, off int64) (n int, err error)](#errorReader.ReadAt)
         * [func (r errorReader) Seek(offset int64, whence int) (int64, error)](#errorReader.Seek)
-        * [func (r errorReader) Close() error](#errorReader.Close)
+    * [type fileTest struct](#fileTest)
+    * [type intName struct](#intName)
+    * [type nameTest struct](#nameTest)
     * [type readSeekerFromReader struct](#readSeekerFromReader)
-        * [func (r *readSeekerFromReader) start()](#readSeekerFromReader.start)
         * [func (r *readSeekerFromReader) Read(p []byte) (n int, err error)](#readSeekerFromReader.Read)
         * [func (r *readSeekerFromReader) Seek(offset int64, whence int) (int64, error)](#readSeekerFromReader.Seek)
-    * [type nameTest struct](#nameTest)
-    * [type fileTest struct](#fileTest)
-    * [type relocationTestEntry struct](#relocationTestEntry)
+        * [func (r *readSeekerFromReader) start()](#readSeekerFromReader.start)
     * [type relocationTest struct](#relocationTest)
+    * [type relocationTestEntry struct](#relocationTestEntry)
+    * [type verneed struct](#verneed)
 * [Functions](#func)
-    * [func R_SYM32(info uint32) uint32](#R_SYM32)
-    * [func R_TYPE32(info uint32) uint32](#R_TYPE32)
-    * [func R_INFO32(sym, typ uint32) uint32](#R_INFO32)
-    * [func ST_INFO(bind SymBind, typ SymType) uint8](#ST_INFO)
-    * [func R_SYM64(info uint64) uint32](#R_SYM64)
-    * [func R_TYPE64(info uint64) uint32](#R_TYPE64)
     * [func R_INFO(sym, typ uint32) uint64](#R_INFO)
-    * [func stringName(i uint32, names []intName, goSyntax bool) string](#stringName)
-    * [func flagName(i uint32, names []intName, goSyntax bool) string](#flagName)
-    * [func getString(section []byte, start int) (string, bool)](#getString)
-    * [func canApplyRelocation(sym *Symbol) bool](#canApplyRelocation)
-    * [func TestNames(t *testing.T)](#TestNames)
-    * [func TestOpen(t *testing.T)](#TestOpen)
-    * [func decompress(gz string) (io.ReaderAt, error)](#decompress)
-    * [func TestDWARFRelocations(t *testing.T)](#TestDWARFRelocations)
+    * [func R_INFO32(sym, typ uint32) uint32](#R_INFO32)
+    * [func R_SYM32(info uint32) uint32](#R_SYM32)
+    * [func R_SYM64(info uint64) uint32](#R_SYM64)
+    * [func R_TYPE32(info uint32) uint32](#R_TYPE32)
+    * [func R_TYPE64(info uint64) uint32](#R_TYPE64)
+    * [func ST_INFO(bind SymBind, typ SymType) uint8](#ST_INFO)
     * [func TestCompressedDWARF(t *testing.T)](#TestCompressedDWARF)
     * [func TestCompressedSection(t *testing.T)](#TestCompressedSection)
-    * [func TestNoSectionOverlaps(t *testing.T)](#TestNoSectionOverlaps)
+    * [func TestDWARFRelocations(t *testing.T)](#TestDWARFRelocations)
     * [func TestIssue10996(t *testing.T)](#TestIssue10996)
+    * [func TestNames(t *testing.T)](#TestNames)
+    * [func TestNoSectionOverlaps(t *testing.T)](#TestNoSectionOverlaps)
+    * [func TestOpen(t *testing.T)](#TestOpen)
     * [func TestSymbols(t *testing.T)](#TestSymbols)
+    * [func canApplyRelocation(sym *Symbol) bool](#canApplyRelocation)
+    * [func decompress(gz string) (io.ReaderAt, error)](#decompress)
+    * [func flagName(i uint32, names []intName, goSyntax bool) string](#flagName)
+    * [func getString(section []byte, start int) (string, bool)](#getString)
+    * [func stringName(i uint32, names []intName, goSyntax bool) string](#stringName)
 
 
 ## <a id="const" href="#const">Constants</a>
+
+```
+tags: [package]
+```
+
+### <a id="ARM_MAGIC_TRAMP_NUMBER" href="#ARM_MAGIC_TRAMP_NUMBER">const ARM_MAGIC_TRAMP_NUMBER</a>
+
+```
+searchKey: elf.ARM_MAGIC_TRAMP_NUMBER
+tags: [constant number]
+```
+
+```Go
+const ARM_MAGIC_TRAMP_NUMBER = 0x5c000003
+```
+
+Magic number for the elf trampoline, chosen wisely to be an immediate value. 
+
+### <a id="COMPRESS_HIOS" href="#COMPRESS_HIOS">const COMPRESS_HIOS</a>
+
+```
+searchKey: elf.COMPRESS_HIOS
+tags: [constant number]
+```
+
+```Go
+const COMPRESS_HIOS CompressionType = 0x6fffffff /* Last OS-specific. */
+
+```
+
+### <a id="COMPRESS_HIPROC" href="#COMPRESS_HIPROC">const COMPRESS_HIPROC</a>
+
+```
+searchKey: elf.COMPRESS_HIPROC
+tags: [constant number]
+```
+
+```Go
+const COMPRESS_HIPROC CompressionType = 0x7fffffff /* Last processor-specific type. */
+
+```
+
+### <a id="COMPRESS_LOOS" href="#COMPRESS_LOOS">const COMPRESS_LOOS</a>
+
+```
+searchKey: elf.COMPRESS_LOOS
+tags: [constant number]
+```
+
+```Go
+const COMPRESS_LOOS CompressionType = 0x60000000 /* First OS-specific. */
+
+```
+
+### <a id="COMPRESS_LOPROC" href="#COMPRESS_LOPROC">const COMPRESS_LOPROC</a>
+
+```
+searchKey: elf.COMPRESS_LOPROC
+tags: [constant number]
+```
+
+```Go
+const COMPRESS_LOPROC CompressionType = 0x70000000 /* First processor-specific type. */
+
+```
+
+### <a id="COMPRESS_ZLIB" href="#COMPRESS_ZLIB">const COMPRESS_ZLIB</a>
+
+```
+searchKey: elf.COMPRESS_ZLIB
+tags: [constant number]
+```
+
+```Go
+const COMPRESS_ZLIB CompressionType = 1 /* ZLIB compression. */
+
+```
+
+### <a id="DF_BIND_NOW" href="#DF_BIND_NOW">const DF_BIND_NOW</a>
+
+```
+searchKey: elf.DF_BIND_NOW
+tags: [constant number]
+```
+
+```Go
+const DF_BIND_NOW DynFlag /* Indicates that the dynamic linker should
+   process all relocations for the object
+   containing this entry before transferring
+   control to the program. */
+ = ...
+```
+
+### <a id="DF_ORIGIN" href="#DF_ORIGIN">const DF_ORIGIN</a>
+
+```
+searchKey: elf.DF_ORIGIN
+tags: [constant number]
+```
+
+```Go
+const DF_ORIGIN DynFlag /* Indicates that the object being loaded may
+   make reference to the
+   $ORIGIN substitution string */
+ = ...
+```
+
+### <a id="DF_STATIC_TLS" href="#DF_STATIC_TLS">const DF_STATIC_TLS</a>
+
+```
+searchKey: elf.DF_STATIC_TLS
+tags: [constant number]
+```
+
+```Go
+const DF_STATIC_TLS DynFlag /* Indicates that the shared object or
+   executable contains code using a static
+   thread-local storage scheme. */
+ = ...
+```
+
+### <a id="DF_SYMBOLIC" href="#DF_SYMBOLIC">const DF_SYMBOLIC</a>
+
+```
+searchKey: elf.DF_SYMBOLIC
+tags: [constant number]
+```
+
+```Go
+const DF_SYMBOLIC DynFlag = 0x0002 /* Indicates "symbolic" linking. */
+
+```
+
+### <a id="DF_TEXTREL" href="#DF_TEXTREL">const DF_TEXTREL</a>
+
+```
+searchKey: elf.DF_TEXTREL
+tags: [constant number]
+```
+
+```Go
+const DF_TEXTREL DynFlag /* Indicates there may be relocations in non-writable segments. */
+ = ...
+```
+
+### <a id="DT_ADDRRNGHI" href="#DT_ADDRRNGHI">const DT_ADDRRNGHI</a>
+
+```
+searchKey: elf.DT_ADDRRNGHI
+tags: [constant number]
+```
+
+```Go
+const DT_ADDRRNGHI DynTag = 0x6ffffeff
+```
+
+### <a id="DT_ADDRRNGLO" href="#DT_ADDRRNGLO">const DT_ADDRRNGLO</a>
+
+```
+searchKey: elf.DT_ADDRRNGLO
+tags: [constant number]
+```
+
+```Go
+const DT_ADDRRNGLO DynTag = 0x6ffffe00
+```
+
+### <a id="DT_AUDIT" href="#DT_AUDIT">const DT_AUDIT</a>
+
+```
+searchKey: elf.DT_AUDIT
+tags: [constant number]
+```
+
+```Go
+const DT_AUDIT DynTag = 0x6ffffefc
+```
+
+### <a id="DT_AUXILIARY" href="#DT_AUXILIARY">const DT_AUXILIARY</a>
+
+```
+searchKey: elf.DT_AUXILIARY
+tags: [constant number]
+```
+
+```Go
+const DT_AUXILIARY DynTag = 0x7ffffffd
+```
+
+### <a id="DT_BIND_NOW" href="#DT_BIND_NOW">const DT_BIND_NOW</a>
+
+```
+searchKey: elf.DT_BIND_NOW
+tags: [constant number]
+```
+
+```Go
+const DT_BIND_NOW DynTag = 24 /* [sup] */
+
+```
+
+### <a id="DT_CHECKSUM" href="#DT_CHECKSUM">const DT_CHECKSUM</a>
+
+```
+searchKey: elf.DT_CHECKSUM
+tags: [constant number]
+```
+
+```Go
+const DT_CHECKSUM DynTag = 0x6ffffdf8
+```
+
+### <a id="DT_CONFIG" href="#DT_CONFIG">const DT_CONFIG</a>
+
+```
+searchKey: elf.DT_CONFIG
+tags: [constant number]
+```
+
+```Go
+const DT_CONFIG DynTag = 0x6ffffefa
+```
+
+### <a id="DT_DEBUG" href="#DT_DEBUG">const DT_DEBUG</a>
+
+```
+searchKey: elf.DT_DEBUG
+tags: [constant number]
+```
+
+```Go
+const DT_DEBUG DynTag = 21 /* Reserved (not used). */
+
+```
+
+### <a id="DT_DEPAUDIT" href="#DT_DEPAUDIT">const DT_DEPAUDIT</a>
+
+```
+searchKey: elf.DT_DEPAUDIT
+tags: [constant number]
+```
+
+```Go
+const DT_DEPAUDIT DynTag = 0x6ffffefb
+```
+
+### <a id="DT_ENCODING" href="#DT_ENCODING">const DT_ENCODING</a>
+
+```
+searchKey: elf.DT_ENCODING
+tags: [constant number]
+```
+
+```Go
+const DT_ENCODING DynTag /* Values greater than or equal to DT_ENCODING
+   and less than DT_LOOS follow the rules for
+   the interpretation of the d_un union
+   as follows: even == 'd_ptr', even == 'd_val'
+   or none */
+ = ...
+```
+
+### <a id="DT_FEATURE" href="#DT_FEATURE">const DT_FEATURE</a>
+
+```
+searchKey: elf.DT_FEATURE
+tags: [constant number]
+```
+
+```Go
+const DT_FEATURE DynTag = 0x6ffffdfc
+```
+
+### <a id="DT_FILTER" href="#DT_FILTER">const DT_FILTER</a>
+
+```
+searchKey: elf.DT_FILTER
+tags: [constant number]
+```
+
+```Go
+const DT_FILTER DynTag = 0x7fffffff
+```
+
+### <a id="DT_FINI" href="#DT_FINI">const DT_FINI</a>
+
+```
+searchKey: elf.DT_FINI
+tags: [constant number]
+```
+
+```Go
+const DT_FINI DynTag = 13 /* Address of finalization function. */
+
+```
+
+### <a id="DT_FINI_ARRAY" href="#DT_FINI_ARRAY">const DT_FINI_ARRAY</a>
+
+```
+searchKey: elf.DT_FINI_ARRAY
+tags: [constant number]
+```
+
+```Go
+const DT_FINI_ARRAY DynTag = 26 /* Address of the array of pointers to termination functions */
+
+```
+
+### <a id="DT_FINI_ARRAYSZ" href="#DT_FINI_ARRAYSZ">const DT_FINI_ARRAYSZ</a>
+
+```
+searchKey: elf.DT_FINI_ARRAYSZ
+tags: [constant number]
+```
+
+```Go
+const DT_FINI_ARRAYSZ DynTag = 28 /* Size in bytes of the array of termination functions. */
+
+```
+
+### <a id="DT_FLAGS" href="#DT_FLAGS">const DT_FLAGS</a>
+
+```
+searchKey: elf.DT_FLAGS
+tags: [constant number]
+```
+
+```Go
+const DT_FLAGS DynTag = 30 /* Object specific flag values. */
+
+```
+
+### <a id="DT_FLAGS_1" href="#DT_FLAGS_1">const DT_FLAGS_1</a>
+
+```
+searchKey: elf.DT_FLAGS_1
+tags: [constant number]
+```
+
+```Go
+const DT_FLAGS_1 DynTag = 0x6ffffffb
+```
+
+### <a id="DT_GNU_CONFLICT" href="#DT_GNU_CONFLICT">const DT_GNU_CONFLICT</a>
+
+```
+searchKey: elf.DT_GNU_CONFLICT
+tags: [constant number]
+```
+
+```Go
+const DT_GNU_CONFLICT DynTag = 0x6ffffef8
+```
+
+### <a id="DT_GNU_CONFLICTSZ" href="#DT_GNU_CONFLICTSZ">const DT_GNU_CONFLICTSZ</a>
+
+```
+searchKey: elf.DT_GNU_CONFLICTSZ
+tags: [constant number]
+```
+
+```Go
+const DT_GNU_CONFLICTSZ DynTag = 0x6ffffdf6
+```
+
+### <a id="DT_GNU_HASH" href="#DT_GNU_HASH">const DT_GNU_HASH</a>
+
+```
+searchKey: elf.DT_GNU_HASH
+tags: [constant number]
+```
+
+```Go
+const DT_GNU_HASH DynTag = 0x6ffffef5
+```
+
+### <a id="DT_GNU_LIBLIST" href="#DT_GNU_LIBLIST">const DT_GNU_LIBLIST</a>
+
+```
+searchKey: elf.DT_GNU_LIBLIST
+tags: [constant number]
+```
+
+```Go
+const DT_GNU_LIBLIST DynTag = 0x6ffffef9
+```
+
+### <a id="DT_GNU_LIBLISTSZ" href="#DT_GNU_LIBLISTSZ">const DT_GNU_LIBLISTSZ</a>
+
+```
+searchKey: elf.DT_GNU_LIBLISTSZ
+tags: [constant number]
+```
+
+```Go
+const DT_GNU_LIBLISTSZ DynTag = 0x6ffffdf7
+```
+
+### <a id="DT_GNU_PRELINKED" href="#DT_GNU_PRELINKED">const DT_GNU_PRELINKED</a>
+
+```
+searchKey: elf.DT_GNU_PRELINKED
+tags: [constant number]
+```
+
+```Go
+const DT_GNU_PRELINKED DynTag = 0x6ffffdf5
+```
+
+### <a id="DT_HASH" href="#DT_HASH">const DT_HASH</a>
+
+```
+searchKey: elf.DT_HASH
+tags: [constant number]
+```
+
+```Go
+const DT_HASH DynTag = 4 /* Address of symbol hash table. */
+
+```
+
+### <a id="DT_HIOS" href="#DT_HIOS">const DT_HIOS</a>
+
+```
+searchKey: elf.DT_HIOS
+tags: [constant number]
+```
+
+```Go
+const DT_HIOS DynTag = 0x6ffff000 /* Last OS-specific */
+
+```
+
+### <a id="DT_HIPROC" href="#DT_HIPROC">const DT_HIPROC</a>
+
+```
+searchKey: elf.DT_HIPROC
+tags: [constant number]
+```
+
+```Go
+const DT_HIPROC DynTag = 0x7fffffff /* Last processor-specific type. */
+
+```
+
+### <a id="DT_INIT" href="#DT_INIT">const DT_INIT</a>
+
+```
+searchKey: elf.DT_INIT
+tags: [constant number]
+```
+
+```Go
+const DT_INIT DynTag = 12 /* Address of initialization function. */
+
+```
+
+### <a id="DT_INIT_ARRAY" href="#DT_INIT_ARRAY">const DT_INIT_ARRAY</a>
+
+```
+searchKey: elf.DT_INIT_ARRAY
+tags: [constant number]
+```
+
+```Go
+const DT_INIT_ARRAY DynTag = 25 /* Address of the array of pointers to initialization functions */
+
+```
+
+### <a id="DT_INIT_ARRAYSZ" href="#DT_INIT_ARRAYSZ">const DT_INIT_ARRAYSZ</a>
+
+```
+searchKey: elf.DT_INIT_ARRAYSZ
+tags: [constant number]
+```
+
+```Go
+const DT_INIT_ARRAYSZ DynTag = 27 /* Size in bytes of the array of initialization functions. */
+
+```
+
+### <a id="DT_JMPREL" href="#DT_JMPREL">const DT_JMPREL</a>
+
+```
+searchKey: elf.DT_JMPREL
+tags: [constant number]
+```
+
+```Go
+const DT_JMPREL DynTag = 23 /* Address of PLT relocations. */
+
+```
+
+### <a id="DT_LOOS" href="#DT_LOOS">const DT_LOOS</a>
+
+```
+searchKey: elf.DT_LOOS
+tags: [constant number]
+```
+
+```Go
+const DT_LOOS DynTag = 0x6000000d /* First OS-specific */
+
+```
+
+### <a id="DT_LOPROC" href="#DT_LOPROC">const DT_LOPROC</a>
+
+```
+searchKey: elf.DT_LOPROC
+tags: [constant number]
+```
+
+```Go
+const DT_LOPROC DynTag = 0x70000000 /* First processor-specific type. */
+
+```
+
+### <a id="DT_MIPS_AUX_DYNAMIC" href="#DT_MIPS_AUX_DYNAMIC">const DT_MIPS_AUX_DYNAMIC</a>
+
+```
+searchKey: elf.DT_MIPS_AUX_DYNAMIC
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_AUX_DYNAMIC DynTag = 0x70000031
+```
+
+### <a id="DT_MIPS_BASE_ADDRESS" href="#DT_MIPS_BASE_ADDRESS">const DT_MIPS_BASE_ADDRESS</a>
+
+```
+searchKey: elf.DT_MIPS_BASE_ADDRESS
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_BASE_ADDRESS DynTag = 0x70000006
+```
+
+### <a id="DT_MIPS_COMPACT_SIZE" href="#DT_MIPS_COMPACT_SIZE">const DT_MIPS_COMPACT_SIZE</a>
+
+```
+searchKey: elf.DT_MIPS_COMPACT_SIZE
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_COMPACT_SIZE DynTag = 0x7000002f
+```
+
+### <a id="DT_MIPS_CONFLICT" href="#DT_MIPS_CONFLICT">const DT_MIPS_CONFLICT</a>
+
+```
+searchKey: elf.DT_MIPS_CONFLICT
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_CONFLICT DynTag = 0x70000008
+```
+
+### <a id="DT_MIPS_CONFLICTNO" href="#DT_MIPS_CONFLICTNO">const DT_MIPS_CONFLICTNO</a>
+
+```
+searchKey: elf.DT_MIPS_CONFLICTNO
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_CONFLICTNO DynTag = 0x7000000b
+```
+
+### <a id="DT_MIPS_CXX_FLAGS" href="#DT_MIPS_CXX_FLAGS">const DT_MIPS_CXX_FLAGS</a>
+
+```
+searchKey: elf.DT_MIPS_CXX_FLAGS
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_CXX_FLAGS DynTag = 0x70000022
+```
+
+### <a id="DT_MIPS_DELTA_CLASS" href="#DT_MIPS_DELTA_CLASS">const DT_MIPS_DELTA_CLASS</a>
+
+```
+searchKey: elf.DT_MIPS_DELTA_CLASS
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_DELTA_CLASS DynTag = 0x70000017
+```
+
+### <a id="DT_MIPS_DELTA_CLASSSYM" href="#DT_MIPS_DELTA_CLASSSYM">const DT_MIPS_DELTA_CLASSSYM</a>
+
+```
+searchKey: elf.DT_MIPS_DELTA_CLASSSYM
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_DELTA_CLASSSYM DynTag = 0x70000020
+```
+
+### <a id="DT_MIPS_DELTA_CLASSSYM_NO" href="#DT_MIPS_DELTA_CLASSSYM_NO">const DT_MIPS_DELTA_CLASSSYM_NO</a>
+
+```
+searchKey: elf.DT_MIPS_DELTA_CLASSSYM_NO
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_DELTA_CLASSSYM_NO DynTag = 0x70000021
+```
+
+### <a id="DT_MIPS_DELTA_CLASS_NO" href="#DT_MIPS_DELTA_CLASS_NO">const DT_MIPS_DELTA_CLASS_NO</a>
+
+```
+searchKey: elf.DT_MIPS_DELTA_CLASS_NO
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_DELTA_CLASS_NO DynTag = 0x70000018
+```
+
+### <a id="DT_MIPS_DELTA_INSTANCE" href="#DT_MIPS_DELTA_INSTANCE">const DT_MIPS_DELTA_INSTANCE</a>
+
+```
+searchKey: elf.DT_MIPS_DELTA_INSTANCE
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_DELTA_INSTANCE DynTag = 0x70000019
+```
+
+### <a id="DT_MIPS_DELTA_INSTANCE_NO" href="#DT_MIPS_DELTA_INSTANCE_NO">const DT_MIPS_DELTA_INSTANCE_NO</a>
+
+```
+searchKey: elf.DT_MIPS_DELTA_INSTANCE_NO
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_DELTA_INSTANCE_NO DynTag = 0x7000001a
+```
+
+### <a id="DT_MIPS_DELTA_RELOC" href="#DT_MIPS_DELTA_RELOC">const DT_MIPS_DELTA_RELOC</a>
+
+```
+searchKey: elf.DT_MIPS_DELTA_RELOC
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_DELTA_RELOC DynTag = 0x7000001b
+```
+
+### <a id="DT_MIPS_DELTA_RELOC_NO" href="#DT_MIPS_DELTA_RELOC_NO">const DT_MIPS_DELTA_RELOC_NO</a>
+
+```
+searchKey: elf.DT_MIPS_DELTA_RELOC_NO
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_DELTA_RELOC_NO DynTag = 0x7000001c
+```
+
+### <a id="DT_MIPS_DELTA_SYM" href="#DT_MIPS_DELTA_SYM">const DT_MIPS_DELTA_SYM</a>
+
+```
+searchKey: elf.DT_MIPS_DELTA_SYM
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_DELTA_SYM DynTag = 0x7000001d
+```
+
+### <a id="DT_MIPS_DELTA_SYM_NO" href="#DT_MIPS_DELTA_SYM_NO">const DT_MIPS_DELTA_SYM_NO</a>
+
+```
+searchKey: elf.DT_MIPS_DELTA_SYM_NO
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_DELTA_SYM_NO DynTag = 0x7000001e
+```
+
+### <a id="DT_MIPS_DYNSTR_ALIGN" href="#DT_MIPS_DYNSTR_ALIGN">const DT_MIPS_DYNSTR_ALIGN</a>
+
+```
+searchKey: elf.DT_MIPS_DYNSTR_ALIGN
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_DYNSTR_ALIGN DynTag = 0x7000002b
+```
+
+### <a id="DT_MIPS_FLAGS" href="#DT_MIPS_FLAGS">const DT_MIPS_FLAGS</a>
+
+```
+searchKey: elf.DT_MIPS_FLAGS
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_FLAGS DynTag = 0x70000005
+```
+
+### <a id="DT_MIPS_GOTSYM" href="#DT_MIPS_GOTSYM">const DT_MIPS_GOTSYM</a>
+
+```
+searchKey: elf.DT_MIPS_GOTSYM
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_GOTSYM DynTag = 0x70000013
+```
+
+### <a id="DT_MIPS_GP_VALUE" href="#DT_MIPS_GP_VALUE">const DT_MIPS_GP_VALUE</a>
+
+```
+searchKey: elf.DT_MIPS_GP_VALUE
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_GP_VALUE DynTag = 0x70000030
+```
+
+### <a id="DT_MIPS_HIDDEN_GOTIDX" href="#DT_MIPS_HIDDEN_GOTIDX">const DT_MIPS_HIDDEN_GOTIDX</a>
+
+```
+searchKey: elf.DT_MIPS_HIDDEN_GOTIDX
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_HIDDEN_GOTIDX DynTag = 0x70000027
+```
+
+### <a id="DT_MIPS_HIPAGENO" href="#DT_MIPS_HIPAGENO">const DT_MIPS_HIPAGENO</a>
+
+```
+searchKey: elf.DT_MIPS_HIPAGENO
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_HIPAGENO DynTag = 0x70000014
+```
+
+### <a id="DT_MIPS_ICHECKSUM" href="#DT_MIPS_ICHECKSUM">const DT_MIPS_ICHECKSUM</a>
+
+```
+searchKey: elf.DT_MIPS_ICHECKSUM
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_ICHECKSUM DynTag = 0x70000003
+```
+
+### <a id="DT_MIPS_INTERFACE" href="#DT_MIPS_INTERFACE">const DT_MIPS_INTERFACE</a>
+
+```
+searchKey: elf.DT_MIPS_INTERFACE
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_INTERFACE DynTag = 0x7000002a
+```
+
+### <a id="DT_MIPS_INTERFACE_SIZE" href="#DT_MIPS_INTERFACE_SIZE">const DT_MIPS_INTERFACE_SIZE</a>
+
+```
+searchKey: elf.DT_MIPS_INTERFACE_SIZE
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_INTERFACE_SIZE DynTag = 0x7000002c
+```
+
+### <a id="DT_MIPS_IVERSION" href="#DT_MIPS_IVERSION">const DT_MIPS_IVERSION</a>
+
+```
+searchKey: elf.DT_MIPS_IVERSION
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_IVERSION DynTag = 0x70000004
+```
+
+### <a id="DT_MIPS_LIBLIST" href="#DT_MIPS_LIBLIST">const DT_MIPS_LIBLIST</a>
+
+```
+searchKey: elf.DT_MIPS_LIBLIST
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_LIBLIST DynTag = 0x70000009
+```
+
+### <a id="DT_MIPS_LIBLISTNO" href="#DT_MIPS_LIBLISTNO">const DT_MIPS_LIBLISTNO</a>
+
+```
+searchKey: elf.DT_MIPS_LIBLISTNO
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_LIBLISTNO DynTag = 0x70000010
+```
+
+### <a id="DT_MIPS_LOCALPAGE_GOTIDX" href="#DT_MIPS_LOCALPAGE_GOTIDX">const DT_MIPS_LOCALPAGE_GOTIDX</a>
+
+```
+searchKey: elf.DT_MIPS_LOCALPAGE_GOTIDX
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_LOCALPAGE_GOTIDX DynTag = 0x70000025
+```
+
+### <a id="DT_MIPS_LOCAL_GOTIDX" href="#DT_MIPS_LOCAL_GOTIDX">const DT_MIPS_LOCAL_GOTIDX</a>
+
+```
+searchKey: elf.DT_MIPS_LOCAL_GOTIDX
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_LOCAL_GOTIDX DynTag = 0x70000026
+```
+
+### <a id="DT_MIPS_LOCAL_GOTNO" href="#DT_MIPS_LOCAL_GOTNO">const DT_MIPS_LOCAL_GOTNO</a>
+
+```
+searchKey: elf.DT_MIPS_LOCAL_GOTNO
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_LOCAL_GOTNO DynTag = 0x7000000a
+```
+
+### <a id="DT_MIPS_MSYM" href="#DT_MIPS_MSYM">const DT_MIPS_MSYM</a>
+
+```
+searchKey: elf.DT_MIPS_MSYM
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_MSYM DynTag = 0x70000007
+```
+
+### <a id="DT_MIPS_OPTIONS" href="#DT_MIPS_OPTIONS">const DT_MIPS_OPTIONS</a>
+
+```
+searchKey: elf.DT_MIPS_OPTIONS
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_OPTIONS DynTag = 0x70000029
+```
+
+### <a id="DT_MIPS_PERF_SUFFIX" href="#DT_MIPS_PERF_SUFFIX">const DT_MIPS_PERF_SUFFIX</a>
+
+```
+searchKey: elf.DT_MIPS_PERF_SUFFIX
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_PERF_SUFFIX DynTag = 0x7000002e
+```
+
+### <a id="DT_MIPS_PIXIE_INIT" href="#DT_MIPS_PIXIE_INIT">const DT_MIPS_PIXIE_INIT</a>
+
+```
+searchKey: elf.DT_MIPS_PIXIE_INIT
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_PIXIE_INIT DynTag = 0x70000023
+```
+
+### <a id="DT_MIPS_PLTGOT" href="#DT_MIPS_PLTGOT">const DT_MIPS_PLTGOT</a>
+
+```
+searchKey: elf.DT_MIPS_PLTGOT
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_PLTGOT DynTag = 0x70000032
+```
+
+### <a id="DT_MIPS_PROTECTED_GOTIDX" href="#DT_MIPS_PROTECTED_GOTIDX">const DT_MIPS_PROTECTED_GOTIDX</a>
+
+```
+searchKey: elf.DT_MIPS_PROTECTED_GOTIDX
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_PROTECTED_GOTIDX DynTag = 0x70000028
+```
+
+### <a id="DT_MIPS_RLD_MAP" href="#DT_MIPS_RLD_MAP">const DT_MIPS_RLD_MAP</a>
+
+```
+searchKey: elf.DT_MIPS_RLD_MAP
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_RLD_MAP DynTag = 0x70000016
+```
+
+### <a id="DT_MIPS_RLD_MAP_REL" href="#DT_MIPS_RLD_MAP_REL">const DT_MIPS_RLD_MAP_REL</a>
+
+```
+searchKey: elf.DT_MIPS_RLD_MAP_REL
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_RLD_MAP_REL DynTag = 0x70000035
+```
+
+### <a id="DT_MIPS_RLD_TEXT_RESOLVE_ADDR" href="#DT_MIPS_RLD_TEXT_RESOLVE_ADDR">const DT_MIPS_RLD_TEXT_RESOLVE_ADDR</a>
+
+```
+searchKey: elf.DT_MIPS_RLD_TEXT_RESOLVE_ADDR
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_RLD_TEXT_RESOLVE_ADDR DynTag = 0x7000002d
+```
+
+### <a id="DT_MIPS_RLD_VERSION" href="#DT_MIPS_RLD_VERSION">const DT_MIPS_RLD_VERSION</a>
+
+```
+searchKey: elf.DT_MIPS_RLD_VERSION
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_RLD_VERSION DynTag = 0x70000001
+```
+
+### <a id="DT_MIPS_RWPLT" href="#DT_MIPS_RWPLT">const DT_MIPS_RWPLT</a>
+
+```
+searchKey: elf.DT_MIPS_RWPLT
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_RWPLT DynTag = 0x70000034
+```
+
+### <a id="DT_MIPS_SYMBOL_LIB" href="#DT_MIPS_SYMBOL_LIB">const DT_MIPS_SYMBOL_LIB</a>
+
+```
+searchKey: elf.DT_MIPS_SYMBOL_LIB
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_SYMBOL_LIB DynTag = 0x70000024
+```
+
+### <a id="DT_MIPS_SYMTABNO" href="#DT_MIPS_SYMTABNO">const DT_MIPS_SYMTABNO</a>
+
+```
+searchKey: elf.DT_MIPS_SYMTABNO
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_SYMTABNO DynTag = 0x70000011
+```
+
+### <a id="DT_MIPS_TIME_STAMP" href="#DT_MIPS_TIME_STAMP">const DT_MIPS_TIME_STAMP</a>
+
+```
+searchKey: elf.DT_MIPS_TIME_STAMP
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_TIME_STAMP DynTag = 0x70000002
+```
+
+### <a id="DT_MIPS_UNREFEXTNO" href="#DT_MIPS_UNREFEXTNO">const DT_MIPS_UNREFEXTNO</a>
+
+```
+searchKey: elf.DT_MIPS_UNREFEXTNO
+tags: [constant number]
+```
+
+```Go
+const DT_MIPS_UNREFEXTNO DynTag = 0x70000012
+```
+
+### <a id="DT_MOVEENT" href="#DT_MOVEENT">const DT_MOVEENT</a>
+
+```
+searchKey: elf.DT_MOVEENT
+tags: [constant number]
+```
+
+```Go
+const DT_MOVEENT DynTag = 0x6ffffdfa
+```
+
+### <a id="DT_MOVESZ" href="#DT_MOVESZ">const DT_MOVESZ</a>
+
+```
+searchKey: elf.DT_MOVESZ
+tags: [constant number]
+```
+
+```Go
+const DT_MOVESZ DynTag = 0x6ffffdfb
+```
+
+### <a id="DT_MOVETAB" href="#DT_MOVETAB">const DT_MOVETAB</a>
+
+```
+searchKey: elf.DT_MOVETAB
+tags: [constant number]
+```
+
+```Go
+const DT_MOVETAB DynTag = 0x6ffffefe
+```
+
+### <a id="DT_NEEDED" href="#DT_NEEDED">const DT_NEEDED</a>
+
+```
+searchKey: elf.DT_NEEDED
+tags: [constant number]
+```
+
+```Go
+const DT_NEEDED DynTag = 1 /* String table offset of a needed shared library. */
+
+```
+
+### <a id="DT_NULL" href="#DT_NULL">const DT_NULL</a>
+
+```
+searchKey: elf.DT_NULL
+tags: [constant number]
+```
+
+```Go
+const DT_NULL DynTag = 0 /* Terminating entry. */
+
+```
+
+### <a id="DT_PLTGOT" href="#DT_PLTGOT">const DT_PLTGOT</a>
+
+```
+searchKey: elf.DT_PLTGOT
+tags: [constant number]
+```
+
+```Go
+const DT_PLTGOT DynTag = 3 /* Processor-dependent address. */
+
+```
+
+### <a id="DT_PLTPAD" href="#DT_PLTPAD">const DT_PLTPAD</a>
+
+```
+searchKey: elf.DT_PLTPAD
+tags: [constant number]
+```
+
+```Go
+const DT_PLTPAD DynTag = 0x6ffffefd
+```
+
+### <a id="DT_PLTPADSZ" href="#DT_PLTPADSZ">const DT_PLTPADSZ</a>
+
+```
+searchKey: elf.DT_PLTPADSZ
+tags: [constant number]
+```
+
+```Go
+const DT_PLTPADSZ DynTag = 0x6ffffdf9
+```
+
+### <a id="DT_PLTREL" href="#DT_PLTREL">const DT_PLTREL</a>
+
+```
+searchKey: elf.DT_PLTREL
+tags: [constant number]
+```
+
+```Go
+const DT_PLTREL DynTag = 20 /* Type of relocation used for PLT. */
+
+```
+
+### <a id="DT_PLTRELSZ" href="#DT_PLTRELSZ">const DT_PLTRELSZ</a>
+
+```
+searchKey: elf.DT_PLTRELSZ
+tags: [constant number]
+```
+
+```Go
+const DT_PLTRELSZ DynTag = 2 /* Total size in bytes of PLT relocations. */
+
+```
+
+### <a id="DT_POSFLAG_1" href="#DT_POSFLAG_1">const DT_POSFLAG_1</a>
+
+```
+searchKey: elf.DT_POSFLAG_1
+tags: [constant number]
+```
+
+```Go
+const DT_POSFLAG_1 DynTag = 0x6ffffdfd
+```
+
+### <a id="DT_PPC64_GLINK" href="#DT_PPC64_GLINK">const DT_PPC64_GLINK</a>
+
+```
+searchKey: elf.DT_PPC64_GLINK
+tags: [constant number]
+```
+
+```Go
+const DT_PPC64_GLINK DynTag = 0x70000000
+```
+
+### <a id="DT_PPC64_OPD" href="#DT_PPC64_OPD">const DT_PPC64_OPD</a>
+
+```
+searchKey: elf.DT_PPC64_OPD
+tags: [constant number]
+```
+
+```Go
+const DT_PPC64_OPD DynTag = 0x70000001
+```
+
+### <a id="DT_PPC64_OPDSZ" href="#DT_PPC64_OPDSZ">const DT_PPC64_OPDSZ</a>
+
+```
+searchKey: elf.DT_PPC64_OPDSZ
+tags: [constant number]
+```
+
+```Go
+const DT_PPC64_OPDSZ DynTag = 0x70000002
+```
+
+### <a id="DT_PPC64_OPT" href="#DT_PPC64_OPT">const DT_PPC64_OPT</a>
+
+```
+searchKey: elf.DT_PPC64_OPT
+tags: [constant number]
+```
+
+```Go
+const DT_PPC64_OPT DynTag = 0x70000003
+```
+
+### <a id="DT_PPC_GOT" href="#DT_PPC_GOT">const DT_PPC_GOT</a>
+
+```
+searchKey: elf.DT_PPC_GOT
+tags: [constant number]
+```
+
+```Go
+const DT_PPC_GOT DynTag = 0x70000000
+```
+
+### <a id="DT_PPC_OPT" href="#DT_PPC_OPT">const DT_PPC_OPT</a>
+
+```
+searchKey: elf.DT_PPC_OPT
+tags: [constant number]
+```
+
+```Go
+const DT_PPC_OPT DynTag = 0x70000001
+```
+
+### <a id="DT_PREINIT_ARRAY" href="#DT_PREINIT_ARRAY">const DT_PREINIT_ARRAY</a>
+
+```
+searchKey: elf.DT_PREINIT_ARRAY
+tags: [constant number]
+```
+
+```Go
+const DT_PREINIT_ARRAY DynTag /* Address of the array of pointers to pre-initialization functions. */
+ = ...
+```
+
+### <a id="DT_PREINIT_ARRAYSZ" href="#DT_PREINIT_ARRAYSZ">const DT_PREINIT_ARRAYSZ</a>
+
+```
+searchKey: elf.DT_PREINIT_ARRAYSZ
+tags: [constant number]
+```
+
+```Go
+const DT_PREINIT_ARRAYSZ DynTag /* Size in bytes of the array of pre-initialization functions. */
+ = ...
+```
+
+### <a id="DT_REL" href="#DT_REL">const DT_REL</a>
+
+```
+searchKey: elf.DT_REL
+tags: [constant number]
+```
+
+```Go
+const DT_REL DynTag = 17 /* Address of ElfNN_Rel relocations. */
+
+```
+
+### <a id="DT_RELA" href="#DT_RELA">const DT_RELA</a>
+
+```
+searchKey: elf.DT_RELA
+tags: [constant number]
+```
+
+```Go
+const DT_RELA DynTag = 7 /* Address of ElfNN_Rela relocations. */
+
+```
+
+### <a id="DT_RELACOUNT" href="#DT_RELACOUNT">const DT_RELACOUNT</a>
+
+```
+searchKey: elf.DT_RELACOUNT
+tags: [constant number]
+```
+
+```Go
+const DT_RELACOUNT DynTag = 0x6ffffff9
+```
+
+### <a id="DT_RELAENT" href="#DT_RELAENT">const DT_RELAENT</a>
+
+```
+searchKey: elf.DT_RELAENT
+tags: [constant number]
+```
+
+```Go
+const DT_RELAENT DynTag = 9 /* Size of each ElfNN_Rela relocation entry. */
+
+```
+
+### <a id="DT_RELASZ" href="#DT_RELASZ">const DT_RELASZ</a>
+
+```
+searchKey: elf.DT_RELASZ
+tags: [constant number]
+```
+
+```Go
+const DT_RELASZ DynTag = 8 /* Total size of ElfNN_Rela relocations. */
+
+```
+
+### <a id="DT_RELCOUNT" href="#DT_RELCOUNT">const DT_RELCOUNT</a>
+
+```
+searchKey: elf.DT_RELCOUNT
+tags: [constant number]
+```
+
+```Go
+const DT_RELCOUNT DynTag = 0x6ffffffa
+```
+
+### <a id="DT_RELENT" href="#DT_RELENT">const DT_RELENT</a>
+
+```
+searchKey: elf.DT_RELENT
+tags: [constant number]
+```
+
+```Go
+const DT_RELENT DynTag = 19 /* Size of each ElfNN_Rel relocation. */
+
+```
+
+### <a id="DT_RELSZ" href="#DT_RELSZ">const DT_RELSZ</a>
+
+```
+searchKey: elf.DT_RELSZ
+tags: [constant number]
+```
+
+```Go
+const DT_RELSZ DynTag = 18 /* Total size of ElfNN_Rel relocations. */
+
+```
+
+### <a id="DT_RPATH" href="#DT_RPATH">const DT_RPATH</a>
+
+```
+searchKey: elf.DT_RPATH
+tags: [constant number]
+```
+
+```Go
+const DT_RPATH DynTag = 15 /* String table offset of library path. [sup] */
+
+```
+
+### <a id="DT_RUNPATH" href="#DT_RUNPATH">const DT_RUNPATH</a>
+
+```
+searchKey: elf.DT_RUNPATH
+tags: [constant number]
+```
+
+```Go
+const DT_RUNPATH DynTag /* String table offset of a null-terminated library search path string. */
+ = ...
+```
+
+### <a id="DT_SONAME" href="#DT_SONAME">const DT_SONAME</a>
+
+```
+searchKey: elf.DT_SONAME
+tags: [constant number]
+```
+
+```Go
+const DT_SONAME DynTag = 14 /* String table offset of shared object name. */
+
+```
+
+### <a id="DT_SPARC_REGISTER" href="#DT_SPARC_REGISTER">const DT_SPARC_REGISTER</a>
+
+```
+searchKey: elf.DT_SPARC_REGISTER
+tags: [constant number]
+```
+
+```Go
+const DT_SPARC_REGISTER DynTag = 0x70000001
+```
+
+### <a id="DT_STRSZ" href="#DT_STRSZ">const DT_STRSZ</a>
+
+```
+searchKey: elf.DT_STRSZ
+tags: [constant number]
+```
+
+```Go
+const DT_STRSZ DynTag = 10 /* Size of string table. */
+
+```
+
+### <a id="DT_STRTAB" href="#DT_STRTAB">const DT_STRTAB</a>
+
+```
+searchKey: elf.DT_STRTAB
+tags: [constant number]
+```
+
+```Go
+const DT_STRTAB DynTag = 5 /* Address of string table. */
+
+```
+
+### <a id="DT_SYMBOLIC" href="#DT_SYMBOLIC">const DT_SYMBOLIC</a>
+
+```
+searchKey: elf.DT_SYMBOLIC
+tags: [constant number]
+```
+
+```Go
+const DT_SYMBOLIC DynTag = 16 /* Indicates "symbolic" linking. [sup] */
+
+```
+
+### <a id="DT_SYMENT" href="#DT_SYMENT">const DT_SYMENT</a>
+
+```
+searchKey: elf.DT_SYMENT
+tags: [constant number]
+```
+
+```Go
+const DT_SYMENT DynTag = 11 /* Size of each symbol table entry. */
+
+```
+
+### <a id="DT_SYMINENT" href="#DT_SYMINENT">const DT_SYMINENT</a>
+
+```
+searchKey: elf.DT_SYMINENT
+tags: [constant number]
+```
+
+```Go
+const DT_SYMINENT DynTag = 0x6ffffdff
+```
+
+### <a id="DT_SYMINFO" href="#DT_SYMINFO">const DT_SYMINFO</a>
+
+```
+searchKey: elf.DT_SYMINFO
+tags: [constant number]
+```
+
+```Go
+const DT_SYMINFO DynTag = 0x6ffffeff
+```
+
+### <a id="DT_SYMINSZ" href="#DT_SYMINSZ">const DT_SYMINSZ</a>
+
+```
+searchKey: elf.DT_SYMINSZ
+tags: [constant number]
+```
+
+```Go
+const DT_SYMINSZ DynTag = 0x6ffffdfe
+```
+
+### <a id="DT_SYMTAB" href="#DT_SYMTAB">const DT_SYMTAB</a>
+
+```
+searchKey: elf.DT_SYMTAB
+tags: [constant number]
+```
+
+```Go
+const DT_SYMTAB DynTag = 6 /* Address of symbol table. */
+
+```
+
+### <a id="DT_SYMTAB_SHNDX" href="#DT_SYMTAB_SHNDX">const DT_SYMTAB_SHNDX</a>
+
+```
+searchKey: elf.DT_SYMTAB_SHNDX
+tags: [constant number]
+```
+
+```Go
+const DT_SYMTAB_SHNDX DynTag = 34 /* Address of SHT_SYMTAB_SHNDX section. */
+
+```
+
+### <a id="DT_TEXTREL" href="#DT_TEXTREL">const DT_TEXTREL</a>
+
+```
+searchKey: elf.DT_TEXTREL
+tags: [constant number]
+```
+
+```Go
+const DT_TEXTREL DynTag /* Indicates there may be relocations in non-writable segments. [sup] */
+ = ...
+```
+
+### <a id="DT_TLSDESC_GOT" href="#DT_TLSDESC_GOT">const DT_TLSDESC_GOT</a>
+
+```
+searchKey: elf.DT_TLSDESC_GOT
+tags: [constant number]
+```
+
+```Go
+const DT_TLSDESC_GOT DynTag = 0x6ffffef7
+```
+
+### <a id="DT_TLSDESC_PLT" href="#DT_TLSDESC_PLT">const DT_TLSDESC_PLT</a>
+
+```
+searchKey: elf.DT_TLSDESC_PLT
+tags: [constant number]
+```
+
+```Go
+const DT_TLSDESC_PLT DynTag = 0x6ffffef6
+```
+
+### <a id="DT_USED" href="#DT_USED">const DT_USED</a>
+
+```
+searchKey: elf.DT_USED
+tags: [constant number]
+```
+
+```Go
+const DT_USED DynTag = 0x7ffffffe
+```
+
+### <a id="DT_VALRNGHI" href="#DT_VALRNGHI">const DT_VALRNGHI</a>
+
+```
+searchKey: elf.DT_VALRNGHI
+tags: [constant number]
+```
+
+```Go
+const DT_VALRNGHI DynTag = 0x6ffffdff
+```
+
+### <a id="DT_VALRNGLO" href="#DT_VALRNGLO">const DT_VALRNGLO</a>
+
+```
+searchKey: elf.DT_VALRNGLO
+tags: [constant number]
+```
+
+```Go
+const DT_VALRNGLO DynTag = 0x6ffffd00
+```
+
+### <a id="DT_VERDEF" href="#DT_VERDEF">const DT_VERDEF</a>
+
+```
+searchKey: elf.DT_VERDEF
+tags: [constant number]
+```
+
+```Go
+const DT_VERDEF DynTag = 0x6ffffffc
+```
+
+### <a id="DT_VERDEFNUM" href="#DT_VERDEFNUM">const DT_VERDEFNUM</a>
+
+```
+searchKey: elf.DT_VERDEFNUM
+tags: [constant number]
+```
+
+```Go
+const DT_VERDEFNUM DynTag = 0x6ffffffd
+```
+
+### <a id="DT_VERNEED" href="#DT_VERNEED">const DT_VERNEED</a>
+
+```
+searchKey: elf.DT_VERNEED
+tags: [constant number]
+```
+
+```Go
+const DT_VERNEED DynTag = 0x6ffffffe
+```
+
+### <a id="DT_VERNEEDNUM" href="#DT_VERNEEDNUM">const DT_VERNEEDNUM</a>
+
+```
+searchKey: elf.DT_VERNEEDNUM
+tags: [constant number]
+```
+
+```Go
+const DT_VERNEEDNUM DynTag = 0x6fffffff
+```
+
+### <a id="DT_VERSYM" href="#DT_VERSYM">const DT_VERSYM</a>
+
+```
+searchKey: elf.DT_VERSYM
+tags: [constant number]
+```
+
+```Go
+const DT_VERSYM DynTag = 0x6ffffff0
+```
+
+### <a id="EI_ABIVERSION" href="#EI_ABIVERSION">const EI_ABIVERSION</a>
+
+```
+searchKey: elf.EI_ABIVERSION
+tags: [constant number]
+```
+
+```Go
+const EI_ABIVERSION = 8 /* ABI version */
+
+```
+
+Indexes into the Header.Ident array. 
 
 ### <a id="EI_CLASS" href="#EI_CLASS">const EI_CLASS</a>
 
 ```
 searchKey: elf.EI_CLASS
+tags: [constant number]
 ```
 
 ```Go
@@ -1527,6 +3148,7 @@ Indexes into the Header.Ident array.
 
 ```
 searchKey: elf.EI_DATA
+tags: [constant number]
 ```
 
 ```Go
@@ -1536,62 +3158,11 @@ const EI_DATA = 5 /* Data format. */
 
 Indexes into the Header.Ident array. 
 
-### <a id="EI_VERSION" href="#EI_VERSION">const EI_VERSION</a>
-
-```
-searchKey: elf.EI_VERSION
-```
-
-```Go
-const EI_VERSION = 6 /* ELF format version. */
-
-```
-
-Indexes into the Header.Ident array. 
-
-### <a id="EI_OSABI" href="#EI_OSABI">const EI_OSABI</a>
-
-```
-searchKey: elf.EI_OSABI
-```
-
-```Go
-const EI_OSABI = 7 /* Operating system / ABI identification */
-
-```
-
-Indexes into the Header.Ident array. 
-
-### <a id="EI_ABIVERSION" href="#EI_ABIVERSION">const EI_ABIVERSION</a>
-
-```
-searchKey: elf.EI_ABIVERSION
-```
-
-```Go
-const EI_ABIVERSION = 8 /* ABI version */
-
-```
-
-Indexes into the Header.Ident array. 
-
-### <a id="EI_PAD" href="#EI_PAD">const EI_PAD</a>
-
-```
-searchKey: elf.EI_PAD
-```
-
-```Go
-const EI_PAD = 9 /* Start of padding (per SVR4 ABI). */
-
-```
-
-Indexes into the Header.Ident array. 
-
 ### <a id="EI_NIDENT" href="#EI_NIDENT">const EI_NIDENT</a>
 
 ```
 searchKey: elf.EI_NIDENT
+tags: [constant number]
 ```
 
 ```Go
@@ -1601,53 +3172,53 @@ const EI_NIDENT = 16 /* Size of e_ident array. */
 
 Indexes into the Header.Ident array. 
 
-### <a id="ELFMAG" href="#ELFMAG">const ELFMAG</a>
+### <a id="EI_OSABI" href="#EI_OSABI">const EI_OSABI</a>
 
 ```
-searchKey: elf.ELFMAG
-```
-
-```Go
-const ELFMAG = "\177ELF"
-```
-
-Initial magic number for ELF files. 
-
-### <a id="EV_NONE" href="#EV_NONE">const EV_NONE</a>
-
-```
-searchKey: elf.EV_NONE
+searchKey: elf.EI_OSABI
+tags: [constant number]
 ```
 
 ```Go
-const EV_NONE Version = 0
-```
-
-### <a id="EV_CURRENT" href="#EV_CURRENT">const EV_CURRENT</a>
+const EI_OSABI = 7 /* Operating system / ABI identification */
 
 ```
-searchKey: elf.EV_CURRENT
-```
 
-```Go
-const EV_CURRENT Version = 1
-```
+Indexes into the Header.Ident array. 
 
-### <a id="ELFCLASSNONE" href="#ELFCLASSNONE">const ELFCLASSNONE</a>
+### <a id="EI_PAD" href="#EI_PAD">const EI_PAD</a>
 
 ```
-searchKey: elf.ELFCLASSNONE
+searchKey: elf.EI_PAD
+tags: [constant number]
 ```
 
 ```Go
-const ELFCLASSNONE Class = 0 /* Unknown class. */
+const EI_PAD = 9 /* Start of padding (per SVR4 ABI). */
 
 ```
+
+Indexes into the Header.Ident array. 
+
+### <a id="EI_VERSION" href="#EI_VERSION">const EI_VERSION</a>
+
+```
+searchKey: elf.EI_VERSION
+tags: [constant number]
+```
+
+```Go
+const EI_VERSION = 6 /* ELF format version. */
+
+```
+
+Indexes into the Header.Ident array. 
 
 ### <a id="ELFCLASS32" href="#ELFCLASS32">const ELFCLASS32</a>
 
 ```
 searchKey: elf.ELFCLASS32
+tags: [constant number]
 ```
 
 ```Go
@@ -1659,6 +3230,7 @@ const ELFCLASS32 Class = 1 /* 32-bit architecture. */
 
 ```
 searchKey: elf.ELFCLASS64
+tags: [constant number]
 ```
 
 ```Go
@@ -1666,14 +3238,15 @@ const ELFCLASS64 Class = 2 /* 64-bit architecture. */
 
 ```
 
-### <a id="ELFDATANONE" href="#ELFDATANONE">const ELFDATANONE</a>
+### <a id="ELFCLASSNONE" href="#ELFCLASSNONE">const ELFCLASSNONE</a>
 
 ```
-searchKey: elf.ELFDATANONE
+searchKey: elf.ELFCLASSNONE
+tags: [constant number]
 ```
 
 ```Go
-const ELFDATANONE Data = 0 /* Unknown data format. */
+const ELFCLASSNONE Class = 0 /* Unknown class. */
 
 ```
 
@@ -1681,6 +3254,7 @@ const ELFDATANONE Data = 0 /* Unknown data format. */
 
 ```
 searchKey: elf.ELFDATA2LSB
+tags: [constant number]
 ```
 
 ```Go
@@ -1692,6 +3266,7 @@ const ELFDATA2LSB Data = 1 /* 2's complement little-endian. */
 
 ```
 searchKey: elf.ELFDATA2MSB
+tags: [constant number]
 ```
 
 ```Go
@@ -1699,65 +3274,36 @@ const ELFDATA2MSB Data = 2 /* 2's complement big-endian. */
 
 ```
 
-### <a id="ELFOSABI_NONE" href="#ELFOSABI_NONE">const ELFOSABI_NONE</a>
+### <a id="ELFDATANONE" href="#ELFDATANONE">const ELFDATANONE</a>
 
 ```
-searchKey: elf.ELFOSABI_NONE
-```
-
-```Go
-const ELFOSABI_NONE OSABI = 0 /* UNIX System V ABI */
-
-```
-
-### <a id="ELFOSABI_HPUX" href="#ELFOSABI_HPUX">const ELFOSABI_HPUX</a>
-
-```
-searchKey: elf.ELFOSABI_HPUX
+searchKey: elf.ELFDATANONE
+tags: [constant number]
 ```
 
 ```Go
-const ELFOSABI_HPUX OSABI = 1 /* HP-UX operating system */
+const ELFDATANONE Data = 0 /* Unknown data format. */
 
 ```
 
-### <a id="ELFOSABI_NETBSD" href="#ELFOSABI_NETBSD">const ELFOSABI_NETBSD</a>
+### <a id="ELFMAG" href="#ELFMAG">const ELFMAG</a>
 
 ```
-searchKey: elf.ELFOSABI_NETBSD
-```
-
-```Go
-const ELFOSABI_NETBSD OSABI = 2 /* NetBSD */
-
-```
-
-### <a id="ELFOSABI_LINUX" href="#ELFOSABI_LINUX">const ELFOSABI_LINUX</a>
-
-```
-searchKey: elf.ELFOSABI_LINUX
+searchKey: elf.ELFMAG
+tags: [constant string]
 ```
 
 ```Go
-const ELFOSABI_LINUX OSABI = 3 /* Linux */
-
+const ELFMAG = "\177ELF"
 ```
 
-### <a id="ELFOSABI_HURD" href="#ELFOSABI_HURD">const ELFOSABI_HURD</a>
-
-```
-searchKey: elf.ELFOSABI_HURD
-```
-
-```Go
-const ELFOSABI_HURD OSABI = 4 /* Hurd */
-
-```
+Initial magic number for ELF files. 
 
 ### <a id="ELFOSABI_86OPEN" href="#ELFOSABI_86OPEN">const ELFOSABI_86OPEN</a>
 
 ```
 searchKey: elf.ELFOSABI_86OPEN
+tags: [constant number]
 ```
 
 ```Go
@@ -1765,21 +3311,11 @@ const ELFOSABI_86OPEN OSABI = 5 /* 86Open common IA32 ABI */
 
 ```
 
-### <a id="ELFOSABI_SOLARIS" href="#ELFOSABI_SOLARIS">const ELFOSABI_SOLARIS</a>
-
-```
-searchKey: elf.ELFOSABI_SOLARIS
-```
-
-```Go
-const ELFOSABI_SOLARIS OSABI = 6 /* Solaris */
-
-```
-
 ### <a id="ELFOSABI_AIX" href="#ELFOSABI_AIX">const ELFOSABI_AIX</a>
 
 ```
 searchKey: elf.ELFOSABI_AIX
+tags: [constant number]
 ```
 
 ```Go
@@ -1787,14 +3323,51 @@ const ELFOSABI_AIX OSABI = 7 /* AIX */
 
 ```
 
-### <a id="ELFOSABI_IRIX" href="#ELFOSABI_IRIX">const ELFOSABI_IRIX</a>
+### <a id="ELFOSABI_ARM" href="#ELFOSABI_ARM">const ELFOSABI_ARM</a>
 
 ```
-searchKey: elf.ELFOSABI_IRIX
+searchKey: elf.ELFOSABI_ARM
+tags: [constant number]
 ```
 
 ```Go
-const ELFOSABI_IRIX OSABI = 8 /* IRIX */
+const ELFOSABI_ARM OSABI = 97 /* ARM */
+
+```
+
+### <a id="ELFOSABI_AROS" href="#ELFOSABI_AROS">const ELFOSABI_AROS</a>
+
+```
+searchKey: elf.ELFOSABI_AROS
+tags: [constant number]
+```
+
+```Go
+const ELFOSABI_AROS OSABI = 15 /* Amiga Research OS */
+
+```
+
+### <a id="ELFOSABI_CLOUDABI" href="#ELFOSABI_CLOUDABI">const ELFOSABI_CLOUDABI</a>
+
+```
+searchKey: elf.ELFOSABI_CLOUDABI
+tags: [constant number]
+```
+
+```Go
+const ELFOSABI_CLOUDABI OSABI = 17 /* Nuxi CloudABI */
+
+```
+
+### <a id="ELFOSABI_FENIXOS" href="#ELFOSABI_FENIXOS">const ELFOSABI_FENIXOS</a>
+
+```
+searchKey: elf.ELFOSABI_FENIXOS
+tags: [constant number]
+```
+
+```Go
+const ELFOSABI_FENIXOS OSABI = 16 /* The FenixOS highly scalable multi-core OS */
 
 ```
 
@@ -1802,6 +3375,7 @@ const ELFOSABI_IRIX OSABI = 8 /* IRIX */
 
 ```
 searchKey: elf.ELFOSABI_FREEBSD
+tags: [constant number]
 ```
 
 ```Go
@@ -1809,14 +3383,51 @@ const ELFOSABI_FREEBSD OSABI = 9 /* FreeBSD */
 
 ```
 
-### <a id="ELFOSABI_TRU64" href="#ELFOSABI_TRU64">const ELFOSABI_TRU64</a>
+### <a id="ELFOSABI_HPUX" href="#ELFOSABI_HPUX">const ELFOSABI_HPUX</a>
 
 ```
-searchKey: elf.ELFOSABI_TRU64
+searchKey: elf.ELFOSABI_HPUX
+tags: [constant number]
 ```
 
 ```Go
-const ELFOSABI_TRU64 OSABI = 10 /* TRU64 UNIX */
+const ELFOSABI_HPUX OSABI = 1 /* HP-UX operating system */
+
+```
+
+### <a id="ELFOSABI_HURD" href="#ELFOSABI_HURD">const ELFOSABI_HURD</a>
+
+```
+searchKey: elf.ELFOSABI_HURD
+tags: [constant number]
+```
+
+```Go
+const ELFOSABI_HURD OSABI = 4 /* Hurd */
+
+```
+
+### <a id="ELFOSABI_IRIX" href="#ELFOSABI_IRIX">const ELFOSABI_IRIX</a>
+
+```
+searchKey: elf.ELFOSABI_IRIX
+tags: [constant number]
+```
+
+```Go
+const ELFOSABI_IRIX OSABI = 8 /* IRIX */
+
+```
+
+### <a id="ELFOSABI_LINUX" href="#ELFOSABI_LINUX">const ELFOSABI_LINUX</a>
+
+```
+searchKey: elf.ELFOSABI_LINUX
+tags: [constant number]
+```
+
+```Go
+const ELFOSABI_LINUX OSABI = 3 /* Linux */
 
 ```
 
@@ -1824,6 +3435,7 @@ const ELFOSABI_TRU64 OSABI = 10 /* TRU64 UNIX */
 
 ```
 searchKey: elf.ELFOSABI_MODESTO
+tags: [constant number]
 ```
 
 ```Go
@@ -1831,10 +3443,47 @@ const ELFOSABI_MODESTO OSABI = 11 /* Novell Modesto */
 
 ```
 
+### <a id="ELFOSABI_NETBSD" href="#ELFOSABI_NETBSD">const ELFOSABI_NETBSD</a>
+
+```
+searchKey: elf.ELFOSABI_NETBSD
+tags: [constant number]
+```
+
+```Go
+const ELFOSABI_NETBSD OSABI = 2 /* NetBSD */
+
+```
+
+### <a id="ELFOSABI_NONE" href="#ELFOSABI_NONE">const ELFOSABI_NONE</a>
+
+```
+searchKey: elf.ELFOSABI_NONE
+tags: [constant number]
+```
+
+```Go
+const ELFOSABI_NONE OSABI = 0 /* UNIX System V ABI */
+
+```
+
+### <a id="ELFOSABI_NSK" href="#ELFOSABI_NSK">const ELFOSABI_NSK</a>
+
+```
+searchKey: elf.ELFOSABI_NSK
+tags: [constant number]
+```
+
+```Go
+const ELFOSABI_NSK OSABI = 14 /* HP Non-Stop Kernel */
+
+```
+
 ### <a id="ELFOSABI_OPENBSD" href="#ELFOSABI_OPENBSD">const ELFOSABI_OPENBSD</a>
 
 ```
 searchKey: elf.ELFOSABI_OPENBSD
+tags: [constant number]
 ```
 
 ```Go
@@ -1846,6 +3495,7 @@ const ELFOSABI_OPENBSD OSABI = 12 /* OpenBSD */
 
 ```
 searchKey: elf.ELFOSABI_OPENVMS
+tags: [constant number]
 ```
 
 ```Go
@@ -1853,58 +3503,15 @@ const ELFOSABI_OPENVMS OSABI = 13 /* Open VMS */
 
 ```
 
-### <a id="ELFOSABI_NSK" href="#ELFOSABI_NSK">const ELFOSABI_NSK</a>
+### <a id="ELFOSABI_SOLARIS" href="#ELFOSABI_SOLARIS">const ELFOSABI_SOLARIS</a>
 
 ```
-searchKey: elf.ELFOSABI_NSK
-```
-
-```Go
-const ELFOSABI_NSK OSABI = 14 /* HP Non-Stop Kernel */
-
-```
-
-### <a id="ELFOSABI_AROS" href="#ELFOSABI_AROS">const ELFOSABI_AROS</a>
-
-```
-searchKey: elf.ELFOSABI_AROS
+searchKey: elf.ELFOSABI_SOLARIS
+tags: [constant number]
 ```
 
 ```Go
-const ELFOSABI_AROS OSABI = 15 /* Amiga Research OS */
-
-```
-
-### <a id="ELFOSABI_FENIXOS" href="#ELFOSABI_FENIXOS">const ELFOSABI_FENIXOS</a>
-
-```
-searchKey: elf.ELFOSABI_FENIXOS
-```
-
-```Go
-const ELFOSABI_FENIXOS OSABI = 16 /* The FenixOS highly scalable multi-core OS */
-
-```
-
-### <a id="ELFOSABI_CLOUDABI" href="#ELFOSABI_CLOUDABI">const ELFOSABI_CLOUDABI</a>
-
-```
-searchKey: elf.ELFOSABI_CLOUDABI
-```
-
-```Go
-const ELFOSABI_CLOUDABI OSABI = 17 /* Nuxi CloudABI */
-
-```
-
-### <a id="ELFOSABI_ARM" href="#ELFOSABI_ARM">const ELFOSABI_ARM</a>
-
-```
-searchKey: elf.ELFOSABI_ARM
-```
-
-```Go
-const ELFOSABI_ARM OSABI = 97 /* ARM */
+const ELFOSABI_SOLARIS OSABI = 6 /* Solaris */
 
 ```
 
@@ -1912,6 +3519,7 @@ const ELFOSABI_ARM OSABI = 97 /* ARM */
 
 ```
 searchKey: elf.ELFOSABI_STANDALONE
+tags: [constant number]
 ```
 
 ```Go
@@ -1919,135 +3527,15 @@ const ELFOSABI_STANDALONE OSABI = 255 /* Standalone (embedded) application */
 
 ```
 
-### <a id="ET_NONE" href="#ET_NONE">const ET_NONE</a>
+### <a id="ELFOSABI_TRU64" href="#ELFOSABI_TRU64">const ELFOSABI_TRU64</a>
 
 ```
-searchKey: elf.ET_NONE
-```
-
-```Go
-const ET_NONE Type = 0 /* Unknown type. */
-
-```
-
-### <a id="ET_REL" href="#ET_REL">const ET_REL</a>
-
-```
-searchKey: elf.ET_REL
+searchKey: elf.ELFOSABI_TRU64
+tags: [constant number]
 ```
 
 ```Go
-const ET_REL Type = 1 /* Relocatable. */
-
-```
-
-### <a id="ET_EXEC" href="#ET_EXEC">const ET_EXEC</a>
-
-```
-searchKey: elf.ET_EXEC
-```
-
-```Go
-const ET_EXEC Type = 2 /* Executable. */
-
-```
-
-### <a id="ET_DYN" href="#ET_DYN">const ET_DYN</a>
-
-```
-searchKey: elf.ET_DYN
-```
-
-```Go
-const ET_DYN Type = 3 /* Shared object. */
-
-```
-
-### <a id="ET_CORE" href="#ET_CORE">const ET_CORE</a>
-
-```
-searchKey: elf.ET_CORE
-```
-
-```Go
-const ET_CORE Type = 4 /* Core file. */
-
-```
-
-### <a id="ET_LOOS" href="#ET_LOOS">const ET_LOOS</a>
-
-```
-searchKey: elf.ET_LOOS
-```
-
-```Go
-const ET_LOOS Type = 0xfe00 /* First operating system specific. */
-
-```
-
-### <a id="ET_HIOS" href="#ET_HIOS">const ET_HIOS</a>
-
-```
-searchKey: elf.ET_HIOS
-```
-
-```Go
-const ET_HIOS Type = 0xfeff /* Last operating system-specific. */
-
-```
-
-### <a id="ET_LOPROC" href="#ET_LOPROC">const ET_LOPROC</a>
-
-```
-searchKey: elf.ET_LOPROC
-```
-
-```Go
-const ET_LOPROC Type = 0xff00 /* First processor-specific. */
-
-```
-
-### <a id="ET_HIPROC" href="#ET_HIPROC">const ET_HIPROC</a>
-
-```
-searchKey: elf.ET_HIPROC
-```
-
-```Go
-const ET_HIPROC Type = 0xffff /* Last processor-specific. */
-
-```
-
-### <a id="EM_NONE" href="#EM_NONE">const EM_NONE</a>
-
-```
-searchKey: elf.EM_NONE
-```
-
-```Go
-const EM_NONE Machine = 0 /* Unknown machine. */
-
-```
-
-### <a id="EM_M32" href="#EM_M32">const EM_M32</a>
-
-```
-searchKey: elf.EM_M32
-```
-
-```Go
-const EM_M32 Machine = 1 /* AT&T WE32100. */
-
-```
-
-### <a id="EM_SPARC" href="#EM_SPARC">const EM_SPARC</a>
-
-```
-searchKey: elf.EM_SPARC
-```
-
-```Go
-const EM_SPARC Machine = 2 /* Sun SPARC. */
+const ELFOSABI_TRU64 OSABI = 10 /* TRU64 UNIX */
 
 ```
 
@@ -2055,6 +3543,7 @@ const EM_SPARC Machine = 2 /* Sun SPARC. */
 
 ```
 searchKey: elf.EM_386
+tags: [constant number]
 ```
 
 ```Go
@@ -2062,1660 +3551,25 @@ const EM_386 Machine = 3 /* Intel i386. */
 
 ```
 
-### <a id="EM_68K" href="#EM_68K">const EM_68K</a>
+### <a id="EM_486" href="#EM_486">const EM_486</a>
 
 ```
-searchKey: elf.EM_68K
+searchKey: elf.EM_486
+tags: [constant number]
 ```
 
 ```Go
-const EM_68K Machine = 4 /* Motorola 68000. */
+const EM_486 Machine = 6 /* Intel i486. */
 
 ```
 
-### <a id="EM_88K" href="#EM_88K">const EM_88K</a>
-
-```
-searchKey: elf.EM_88K
-```
-
-```Go
-const EM_88K Machine = 5 /* Motorola 88000. */
-
-```
-
-### <a id="EM_860" href="#EM_860">const EM_860</a>
-
-```
-searchKey: elf.EM_860
-```
-
-```Go
-const EM_860 Machine = 7 /* Intel i860. */
-
-```
-
-### <a id="EM_MIPS" href="#EM_MIPS">const EM_MIPS</a>
-
-```
-searchKey: elf.EM_MIPS
-```
-
-```Go
-const EM_MIPS Machine = 8 /* MIPS R3000 Big-Endian only. */
-
-```
-
-### <a id="EM_S370" href="#EM_S370">const EM_S370</a>
-
-```
-searchKey: elf.EM_S370
-```
-
-```Go
-const EM_S370 Machine = 9 /* IBM System/370. */
-
-```
-
-### <a id="EM_MIPS_RS3_LE" href="#EM_MIPS_RS3_LE">const EM_MIPS_RS3_LE</a>
-
-```
-searchKey: elf.EM_MIPS_RS3_LE
-```
-
-```Go
-const EM_MIPS_RS3_LE Machine = 10 /* MIPS R3000 Little-Endian. */
-
-```
-
-### <a id="EM_PARISC" href="#EM_PARISC">const EM_PARISC</a>
-
-```
-searchKey: elf.EM_PARISC
-```
-
-```Go
-const EM_PARISC Machine = 15 /* HP PA-RISC. */
-
-```
-
-### <a id="EM_VPP500" href="#EM_VPP500">const EM_VPP500</a>
-
-```
-searchKey: elf.EM_VPP500
-```
-
-```Go
-const EM_VPP500 Machine = 17 /* Fujitsu VPP500. */
-
-```
-
-### <a id="EM_SPARC32PLUS" href="#EM_SPARC32PLUS">const EM_SPARC32PLUS</a>
-
-```
-searchKey: elf.EM_SPARC32PLUS
-```
-
-```Go
-const EM_SPARC32PLUS Machine = 18 /* SPARC v8plus. */
-
-```
-
-### <a id="EM_960" href="#EM_960">const EM_960</a>
-
-```
-searchKey: elf.EM_960
-```
-
-```Go
-const EM_960 Machine = 19 /* Intel 80960. */
-
-```
-
-### <a id="EM_PPC" href="#EM_PPC">const EM_PPC</a>
-
-```
-searchKey: elf.EM_PPC
-```
-
-```Go
-const EM_PPC Machine = 20 /* PowerPC 32-bit. */
-
-```
-
-### <a id="EM_PPC64" href="#EM_PPC64">const EM_PPC64</a>
-
-```
-searchKey: elf.EM_PPC64
-```
-
-```Go
-const EM_PPC64 Machine = 21 /* PowerPC 64-bit. */
-
-```
-
-### <a id="EM_S390" href="#EM_S390">const EM_S390</a>
-
-```
-searchKey: elf.EM_S390
-```
-
-```Go
-const EM_S390 Machine = 22 /* IBM System/390. */
-
-```
-
-### <a id="EM_V800" href="#EM_V800">const EM_V800</a>
-
-```
-searchKey: elf.EM_V800
-```
-
-```Go
-const EM_V800 Machine = 36 /* NEC V800. */
-
-```
-
-### <a id="EM_FR20" href="#EM_FR20">const EM_FR20</a>
-
-```
-searchKey: elf.EM_FR20
-```
-
-```Go
-const EM_FR20 Machine = 37 /* Fujitsu FR20. */
-
-```
-
-### <a id="EM_RH32" href="#EM_RH32">const EM_RH32</a>
-
-```
-searchKey: elf.EM_RH32
-```
-
-```Go
-const EM_RH32 Machine = 38 /* TRW RH-32. */
-
-```
-
-### <a id="EM_RCE" href="#EM_RCE">const EM_RCE</a>
-
-```
-searchKey: elf.EM_RCE
-```
-
-```Go
-const EM_RCE Machine = 39 /* Motorola RCE. */
-
-```
-
-### <a id="EM_ARM" href="#EM_ARM">const EM_ARM</a>
-
-```
-searchKey: elf.EM_ARM
-```
-
-```Go
-const EM_ARM Machine = 40 /* ARM. */
-
-```
-
-### <a id="EM_SH" href="#EM_SH">const EM_SH</a>
-
-```
-searchKey: elf.EM_SH
-```
-
-```Go
-const EM_SH Machine = 42 /* Hitachi SH. */
-
-```
-
-### <a id="EM_SPARCV9" href="#EM_SPARCV9">const EM_SPARCV9</a>
-
-```
-searchKey: elf.EM_SPARCV9
-```
-
-```Go
-const EM_SPARCV9 Machine = 43 /* SPARC v9 64-bit. */
-
-```
-
-### <a id="EM_TRICORE" href="#EM_TRICORE">const EM_TRICORE</a>
-
-```
-searchKey: elf.EM_TRICORE
-```
-
-```Go
-const EM_TRICORE Machine = 44 /* Siemens TriCore embedded processor. */
-
-```
-
-### <a id="EM_ARC" href="#EM_ARC">const EM_ARC</a>
-
-```
-searchKey: elf.EM_ARC
-```
-
-```Go
-const EM_ARC Machine = 45 /* Argonaut RISC Core. */
-
-```
-
-### <a id="EM_H8_300" href="#EM_H8_300">const EM_H8_300</a>
-
-```
-searchKey: elf.EM_H8_300
-```
-
-```Go
-const EM_H8_300 Machine = 46 /* Hitachi H8/300. */
-
-```
-
-### <a id="EM_H8_300H" href="#EM_H8_300H">const EM_H8_300H</a>
-
-```
-searchKey: elf.EM_H8_300H
-```
-
-```Go
-const EM_H8_300H Machine = 47 /* Hitachi H8/300H. */
-
-```
-
-### <a id="EM_H8S" href="#EM_H8S">const EM_H8S</a>
-
-```
-searchKey: elf.EM_H8S
-```
-
-```Go
-const EM_H8S Machine = 48 /* Hitachi H8S. */
-
-```
-
-### <a id="EM_H8_500" href="#EM_H8_500">const EM_H8_500</a>
-
-```
-searchKey: elf.EM_H8_500
-```
-
-```Go
-const EM_H8_500 Machine = 49 /* Hitachi H8/500. */
-
-```
-
-### <a id="EM_IA_64" href="#EM_IA_64">const EM_IA_64</a>
-
-```
-searchKey: elf.EM_IA_64
-```
-
-```Go
-const EM_IA_64 Machine = 50 /* Intel IA-64 Processor. */
-
-```
-
-### <a id="EM_MIPS_X" href="#EM_MIPS_X">const EM_MIPS_X</a>
-
-```
-searchKey: elf.EM_MIPS_X
-```
-
-```Go
-const EM_MIPS_X Machine = 51 /* Stanford MIPS-X. */
-
-```
-
-### <a id="EM_COLDFIRE" href="#EM_COLDFIRE">const EM_COLDFIRE</a>
-
-```
-searchKey: elf.EM_COLDFIRE
-```
-
-```Go
-const EM_COLDFIRE Machine = 52 /* Motorola ColdFire. */
-
-```
-
-### <a id="EM_68HC12" href="#EM_68HC12">const EM_68HC12</a>
-
-```
-searchKey: elf.EM_68HC12
-```
-
-```Go
-const EM_68HC12 Machine = 53 /* Motorola M68HC12. */
-
-```
-
-### <a id="EM_MMA" href="#EM_MMA">const EM_MMA</a>
-
-```
-searchKey: elf.EM_MMA
-```
-
-```Go
-const EM_MMA Machine = 54 /* Fujitsu MMA. */
-
-```
-
-### <a id="EM_PCP" href="#EM_PCP">const EM_PCP</a>
-
-```
-searchKey: elf.EM_PCP
-```
-
-```Go
-const EM_PCP Machine = 55 /* Siemens PCP. */
-
-```
-
-### <a id="EM_NCPU" href="#EM_NCPU">const EM_NCPU</a>
-
-```
-searchKey: elf.EM_NCPU
-```
-
-```Go
-const EM_NCPU Machine = 56 /* Sony nCPU. */
-
-```
-
-### <a id="EM_NDR1" href="#EM_NDR1">const EM_NDR1</a>
-
-```
-searchKey: elf.EM_NDR1
-```
-
-```Go
-const EM_NDR1 Machine = 57 /* Denso NDR1 microprocessor. */
-
-```
-
-### <a id="EM_STARCORE" href="#EM_STARCORE">const EM_STARCORE</a>
-
-```
-searchKey: elf.EM_STARCORE
-```
-
-```Go
-const EM_STARCORE Machine = 58 /* Motorola Star*Core processor. */
-
-```
-
-### <a id="EM_ME16" href="#EM_ME16">const EM_ME16</a>
-
-```
-searchKey: elf.EM_ME16
-```
-
-```Go
-const EM_ME16 Machine = 59 /* Toyota ME16 processor. */
-
-```
-
-### <a id="EM_ST100" href="#EM_ST100">const EM_ST100</a>
-
-```
-searchKey: elf.EM_ST100
-```
-
-```Go
-const EM_ST100 Machine = 60 /* STMicroelectronics ST100 processor. */
-
-```
-
-### <a id="EM_TINYJ" href="#EM_TINYJ">const EM_TINYJ</a>
-
-```
-searchKey: elf.EM_TINYJ
-```
-
-```Go
-const EM_TINYJ Machine = 61 /* Advanced Logic Corp. TinyJ processor. */
-
-```
-
-### <a id="EM_X86_64" href="#EM_X86_64">const EM_X86_64</a>
-
-```
-searchKey: elf.EM_X86_64
-```
-
-```Go
-const EM_X86_64 Machine = 62 /* Advanced Micro Devices x86-64 */
-
-```
-
-### <a id="EM_PDSP" href="#EM_PDSP">const EM_PDSP</a>
-
-```
-searchKey: elf.EM_PDSP
-```
-
-```Go
-const EM_PDSP Machine = 63 /* Sony DSP Processor */
-
-```
-
-### <a id="EM_PDP10" href="#EM_PDP10">const EM_PDP10</a>
-
-```
-searchKey: elf.EM_PDP10
-```
-
-```Go
-const EM_PDP10 Machine = 64 /* Digital Equipment Corp. PDP-10 */
-
-```
-
-### <a id="EM_PDP11" href="#EM_PDP11">const EM_PDP11</a>
-
-```
-searchKey: elf.EM_PDP11
-```
-
-```Go
-const EM_PDP11 Machine = 65 /* Digital Equipment Corp. PDP-11 */
-
-```
-
-### <a id="EM_FX66" href="#EM_FX66">const EM_FX66</a>
-
-```
-searchKey: elf.EM_FX66
-```
-
-```Go
-const EM_FX66 Machine = 66 /* Siemens FX66 microcontroller */
-
-```
-
-### <a id="EM_ST9PLUS" href="#EM_ST9PLUS">const EM_ST9PLUS</a>
-
-```
-searchKey: elf.EM_ST9PLUS
-```
-
-```Go
-const EM_ST9PLUS Machine = 67 /* STMicroelectronics ST9+ 8/16 bit microcontroller */
-
-```
-
-### <a id="EM_ST7" href="#EM_ST7">const EM_ST7</a>
-
-```
-searchKey: elf.EM_ST7
-```
-
-```Go
-const EM_ST7 Machine = 68 /* STMicroelectronics ST7 8-bit microcontroller */
-
-```
-
-### <a id="EM_68HC16" href="#EM_68HC16">const EM_68HC16</a>
-
-```
-searchKey: elf.EM_68HC16
-```
-
-```Go
-const EM_68HC16 Machine = 69 /* Motorola MC68HC16 Microcontroller */
-
-```
-
-### <a id="EM_68HC11" href="#EM_68HC11">const EM_68HC11</a>
-
-```
-searchKey: elf.EM_68HC11
-```
-
-```Go
-const EM_68HC11 Machine = 70 /* Motorola MC68HC11 Microcontroller */
-
-```
-
-### <a id="EM_68HC08" href="#EM_68HC08">const EM_68HC08</a>
-
-```
-searchKey: elf.EM_68HC08
-```
-
-```Go
-const EM_68HC08 Machine = 71 /* Motorola MC68HC08 Microcontroller */
-
-```
-
-### <a id="EM_68HC05" href="#EM_68HC05">const EM_68HC05</a>
-
-```
-searchKey: elf.EM_68HC05
-```
-
-```Go
-const EM_68HC05 Machine = 72 /* Motorola MC68HC05 Microcontroller */
-
-```
-
-### <a id="EM_SVX" href="#EM_SVX">const EM_SVX</a>
-
-```
-searchKey: elf.EM_SVX
-```
-
-```Go
-const EM_SVX Machine = 73 /* Silicon Graphics SVx */
-
-```
-
-### <a id="EM_ST19" href="#EM_ST19">const EM_ST19</a>
-
-```
-searchKey: elf.EM_ST19
-```
-
-```Go
-const EM_ST19 Machine = 74 /* STMicroelectronics ST19 8-bit microcontroller */
-
-```
-
-### <a id="EM_VAX" href="#EM_VAX">const EM_VAX</a>
-
-```
-searchKey: elf.EM_VAX
-```
-
-```Go
-const EM_VAX Machine = 75 /* Digital VAX */
-
-```
-
-### <a id="EM_CRIS" href="#EM_CRIS">const EM_CRIS</a>
-
-```
-searchKey: elf.EM_CRIS
-```
-
-```Go
-const EM_CRIS Machine = 76 /* Axis Communications 32-bit embedded processor */
-
-```
-
-### <a id="EM_JAVELIN" href="#EM_JAVELIN">const EM_JAVELIN</a>
-
-```
-searchKey: elf.EM_JAVELIN
-```
-
-```Go
-const EM_JAVELIN Machine = 77 /* Infineon Technologies 32-bit embedded processor */
-
-```
-
-### <a id="EM_FIREPATH" href="#EM_FIREPATH">const EM_FIREPATH</a>
-
-```
-searchKey: elf.EM_FIREPATH
-```
-
-```Go
-const EM_FIREPATH Machine = 78 /* Element 14 64-bit DSP Processor */
-
-```
-
-### <a id="EM_ZSP" href="#EM_ZSP">const EM_ZSP</a>
-
-```
-searchKey: elf.EM_ZSP
-```
-
-```Go
-const EM_ZSP Machine = 79 /* LSI Logic 16-bit DSP Processor */
-
-```
-
-### <a id="EM_MMIX" href="#EM_MMIX">const EM_MMIX</a>
-
-```
-searchKey: elf.EM_MMIX
-```
-
-```Go
-const EM_MMIX Machine = 80 /* Donald Knuth's educational 64-bit processor */
-
-```
-
-### <a id="EM_HUANY" href="#EM_HUANY">const EM_HUANY</a>
-
-```
-searchKey: elf.EM_HUANY
-```
-
-```Go
-const EM_HUANY Machine = 81 /* Harvard University machine-independent object files */
-
-```
-
-### <a id="EM_PRISM" href="#EM_PRISM">const EM_PRISM</a>
-
-```
-searchKey: elf.EM_PRISM
-```
-
-```Go
-const EM_PRISM Machine = 82 /* SiTera Prism */
-
-```
-
-### <a id="EM_AVR" href="#EM_AVR">const EM_AVR</a>
-
-```
-searchKey: elf.EM_AVR
-```
-
-```Go
-const EM_AVR Machine = 83 /* Atmel AVR 8-bit microcontroller */
-
-```
-
-### <a id="EM_FR30" href="#EM_FR30">const EM_FR30</a>
-
-```
-searchKey: elf.EM_FR30
-```
-
-```Go
-const EM_FR30 Machine = 84 /* Fujitsu FR30 */
-
-```
-
-### <a id="EM_D10V" href="#EM_D10V">const EM_D10V</a>
-
-```
-searchKey: elf.EM_D10V
-```
-
-```Go
-const EM_D10V Machine = 85 /* Mitsubishi D10V */
-
-```
-
-### <a id="EM_D30V" href="#EM_D30V">const EM_D30V</a>
-
-```
-searchKey: elf.EM_D30V
-```
-
-```Go
-const EM_D30V Machine = 86 /* Mitsubishi D30V */
-
-```
-
-### <a id="EM_V850" href="#EM_V850">const EM_V850</a>
-
-```
-searchKey: elf.EM_V850
-```
-
-```Go
-const EM_V850 Machine = 87 /* NEC v850 */
-
-```
-
-### <a id="EM_M32R" href="#EM_M32R">const EM_M32R</a>
-
-```
-searchKey: elf.EM_M32R
-```
-
-```Go
-const EM_M32R Machine = 88 /* Mitsubishi M32R */
-
-```
-
-### <a id="EM_MN10300" href="#EM_MN10300">const EM_MN10300</a>
-
-```
-searchKey: elf.EM_MN10300
-```
-
-```Go
-const EM_MN10300 Machine = 89 /* Matsushita MN10300 */
-
-```
-
-### <a id="EM_MN10200" href="#EM_MN10200">const EM_MN10200</a>
-
-```
-searchKey: elf.EM_MN10200
-```
-
-```Go
-const EM_MN10200 Machine = 90 /* Matsushita MN10200 */
-
-```
-
-### <a id="EM_PJ" href="#EM_PJ">const EM_PJ</a>
-
-```
-searchKey: elf.EM_PJ
-```
-
-```Go
-const EM_PJ Machine = 91 /* picoJava */
-
-```
-
-### <a id="EM_OPENRISC" href="#EM_OPENRISC">const EM_OPENRISC</a>
-
-```
-searchKey: elf.EM_OPENRISC
-```
-
-```Go
-const EM_OPENRISC Machine = 92 /* OpenRISC 32-bit embedded processor */
-
-```
-
-### <a id="EM_ARC_COMPACT" href="#EM_ARC_COMPACT">const EM_ARC_COMPACT</a>
-
-```
-searchKey: elf.EM_ARC_COMPACT
-```
-
-```Go
-const EM_ARC_COMPACT Machine /* ARC International ARCompact processor (old spelling/synonym: EM_ARC_A5) */
- = ...
-```
-
-### <a id="EM_XTENSA" href="#EM_XTENSA">const EM_XTENSA</a>
-
-```
-searchKey: elf.EM_XTENSA
-```
-
-```Go
-const EM_XTENSA Machine = 94 /* Tensilica Xtensa Architecture */
-
-```
-
-### <a id="EM_VIDEOCORE" href="#EM_VIDEOCORE">const EM_VIDEOCORE</a>
-
-```
-searchKey: elf.EM_VIDEOCORE
-```
-
-```Go
-const EM_VIDEOCORE Machine = 95 /* Alphamosaic VideoCore processor */
-
-```
-
-### <a id="EM_TMM_GPP" href="#EM_TMM_GPP">const EM_TMM_GPP</a>
-
-```
-searchKey: elf.EM_TMM_GPP
-```
-
-```Go
-const EM_TMM_GPP Machine = 96 /* Thompson Multimedia General Purpose Processor */
-
-```
-
-### <a id="EM_NS32K" href="#EM_NS32K">const EM_NS32K</a>
-
-```
-searchKey: elf.EM_NS32K
-```
-
-```Go
-const EM_NS32K Machine = 97 /* National Semiconductor 32000 series */
-
-```
-
-### <a id="EM_TPC" href="#EM_TPC">const EM_TPC</a>
-
-```
-searchKey: elf.EM_TPC
-```
-
-```Go
-const EM_TPC Machine = 98 /* Tenor Network TPC processor */
-
-```
-
-### <a id="EM_SNP1K" href="#EM_SNP1K">const EM_SNP1K</a>
-
-```
-searchKey: elf.EM_SNP1K
-```
-
-```Go
-const EM_SNP1K Machine = 99 /* Trebia SNP 1000 processor */
-
-```
-
-### <a id="EM_ST200" href="#EM_ST200">const EM_ST200</a>
-
-```
-searchKey: elf.EM_ST200
-```
-
-```Go
-const EM_ST200 Machine = 100 /* STMicroelectronics (www.st.com) ST200 microcontroller */
-
-```
-
-### <a id="EM_IP2K" href="#EM_IP2K">const EM_IP2K</a>
-
-```
-searchKey: elf.EM_IP2K
-```
-
-```Go
-const EM_IP2K Machine = 101 /* Ubicom IP2xxx microcontroller family */
-
-```
-
-### <a id="EM_MAX" href="#EM_MAX">const EM_MAX</a>
-
-```
-searchKey: elf.EM_MAX
-```
-
-```Go
-const EM_MAX Machine = 102 /* MAX Processor */
-
-```
-
-### <a id="EM_CR" href="#EM_CR">const EM_CR</a>
-
-```
-searchKey: elf.EM_CR
-```
-
-```Go
-const EM_CR Machine = 103 /* National Semiconductor CompactRISC microprocessor */
-
-```
-
-### <a id="EM_F2MC16" href="#EM_F2MC16">const EM_F2MC16</a>
-
-```
-searchKey: elf.EM_F2MC16
-```
-
-```Go
-const EM_F2MC16 Machine = 104 /* Fujitsu F2MC16 */
-
-```
-
-### <a id="EM_MSP430" href="#EM_MSP430">const EM_MSP430</a>
-
-```
-searchKey: elf.EM_MSP430
-```
-
-```Go
-const EM_MSP430 Machine = 105 /* Texas Instruments embedded microcontroller msp430 */
-
-```
-
-### <a id="EM_BLACKFIN" href="#EM_BLACKFIN">const EM_BLACKFIN</a>
-
-```
-searchKey: elf.EM_BLACKFIN
-```
-
-```Go
-const EM_BLACKFIN Machine = 106 /* Analog Devices Blackfin (DSP) processor */
-
-```
-
-### <a id="EM_SE_C33" href="#EM_SE_C33">const EM_SE_C33</a>
-
-```
-searchKey: elf.EM_SE_C33
-```
-
-```Go
-const EM_SE_C33 Machine = 107 /* S1C33 Family of Seiko Epson processors */
-
-```
-
-### <a id="EM_SEP" href="#EM_SEP">const EM_SEP</a>
-
-```
-searchKey: elf.EM_SEP
-```
-
-```Go
-const EM_SEP Machine = 108 /* Sharp embedded microprocessor */
-
-```
-
-### <a id="EM_ARCA" href="#EM_ARCA">const EM_ARCA</a>
-
-```
-searchKey: elf.EM_ARCA
-```
-
-```Go
-const EM_ARCA Machine = 109 /* Arca RISC Microprocessor */
-
-```
-
-### <a id="EM_UNICORE" href="#EM_UNICORE">const EM_UNICORE</a>
-
-```
-searchKey: elf.EM_UNICORE
-```
-
-```Go
-const EM_UNICORE Machine /* Microprocessor series from PKU-Unity Ltd. and MPRC of Peking University */
- = ...
-```
-
-### <a id="EM_EXCESS" href="#EM_EXCESS">const EM_EXCESS</a>
-
-```
-searchKey: elf.EM_EXCESS
-```
-
-```Go
-const EM_EXCESS Machine = 111 /* eXcess: 16/32/64-bit configurable embedded CPU */
-
-```
-
-### <a id="EM_DXP" href="#EM_DXP">const EM_DXP</a>
-
-```
-searchKey: elf.EM_DXP
-```
-
-```Go
-const EM_DXP Machine = 112 /* Icera Semiconductor Inc. Deep Execution Processor */
-
-```
-
-### <a id="EM_ALTERA_NIOS2" href="#EM_ALTERA_NIOS2">const EM_ALTERA_NIOS2</a>
-
-```
-searchKey: elf.EM_ALTERA_NIOS2
-```
-
-```Go
-const EM_ALTERA_NIOS2 Machine = 113 /* Altera Nios II soft-core processor */
-
-```
-
-### <a id="EM_CRX" href="#EM_CRX">const EM_CRX</a>
-
-```
-searchKey: elf.EM_CRX
-```
-
-```Go
-const EM_CRX Machine = 114 /* National Semiconductor CompactRISC CRX microprocessor */
-
-```
-
-### <a id="EM_XGATE" href="#EM_XGATE">const EM_XGATE</a>
-
-```
-searchKey: elf.EM_XGATE
-```
-
-```Go
-const EM_XGATE Machine = 115 /* Motorola XGATE embedded processor */
-
-```
-
-### <a id="EM_C166" href="#EM_C166">const EM_C166</a>
-
-```
-searchKey: elf.EM_C166
-```
-
-```Go
-const EM_C166 Machine = 116 /* Infineon C16x/XC16x processor */
-
-```
-
-### <a id="EM_M16C" href="#EM_M16C">const EM_M16C</a>
-
-```
-searchKey: elf.EM_M16C
-```
-
-```Go
-const EM_M16C Machine = 117 /* Renesas M16C series microprocessors */
-
-```
-
-### <a id="EM_DSPIC30F" href="#EM_DSPIC30F">const EM_DSPIC30F</a>
-
-```
-searchKey: elf.EM_DSPIC30F
-```
-
-```Go
-const EM_DSPIC30F Machine = 118 /* Microchip Technology dsPIC30F Digital Signal Controller */
-
-```
-
-### <a id="EM_CE" href="#EM_CE">const EM_CE</a>
-
-```
-searchKey: elf.EM_CE
-```
-
-```Go
-const EM_CE Machine = 119 /* Freescale Communication Engine RISC core */
-
-```
-
-### <a id="EM_M32C" href="#EM_M32C">const EM_M32C</a>
-
-```
-searchKey: elf.EM_M32C
-```
-
-```Go
-const EM_M32C Machine = 120 /* Renesas M32C series microprocessors */
-
-```
-
-### <a id="EM_TSK3000" href="#EM_TSK3000">const EM_TSK3000</a>
-
-```
-searchKey: elf.EM_TSK3000
-```
-
-```Go
-const EM_TSK3000 Machine = 131 /* Altium TSK3000 core */
-
-```
-
-### <a id="EM_RS08" href="#EM_RS08">const EM_RS08</a>
-
-```
-searchKey: elf.EM_RS08
-```
-
-```Go
-const EM_RS08 Machine = 132 /* Freescale RS08 embedded processor */
-
-```
-
-### <a id="EM_SHARC" href="#EM_SHARC">const EM_SHARC</a>
-
-```
-searchKey: elf.EM_SHARC
-```
-
-```Go
-const EM_SHARC Machine = 133 /* Analog Devices SHARC family of 32-bit DSP processors */
-
-```
-
-### <a id="EM_ECOG2" href="#EM_ECOG2">const EM_ECOG2</a>
-
-```
-searchKey: elf.EM_ECOG2
-```
-
-```Go
-const EM_ECOG2 Machine = 134 /* Cyan Technology eCOG2 microprocessor */
-
-```
-
-### <a id="EM_SCORE7" href="#EM_SCORE7">const EM_SCORE7</a>
-
-```
-searchKey: elf.EM_SCORE7
-```
-
-```Go
-const EM_SCORE7 Machine = 135 /* Sunplus S+core7 RISC processor */
-
-```
-
-### <a id="EM_DSP24" href="#EM_DSP24">const EM_DSP24</a>
-
-```
-searchKey: elf.EM_DSP24
-```
-
-```Go
-const EM_DSP24 Machine = 136 /* New Japan Radio (NJR) 24-bit DSP Processor */
-
-```
-
-### <a id="EM_VIDEOCORE3" href="#EM_VIDEOCORE3">const EM_VIDEOCORE3</a>
-
-```
-searchKey: elf.EM_VIDEOCORE3
-```
-
-```Go
-const EM_VIDEOCORE3 Machine = 137 /* Broadcom VideoCore III processor */
-
-```
-
-### <a id="EM_LATTICEMICO32" href="#EM_LATTICEMICO32">const EM_LATTICEMICO32</a>
-
-```
-searchKey: elf.EM_LATTICEMICO32
-```
-
-```Go
-const EM_LATTICEMICO32 Machine = 138 /* RISC processor for Lattice FPGA architecture */
-
-```
-
-### <a id="EM_SE_C17" href="#EM_SE_C17">const EM_SE_C17</a>
-
-```
-searchKey: elf.EM_SE_C17
-```
-
-```Go
-const EM_SE_C17 Machine = 139 /* Seiko Epson C17 family */
-
-```
-
-### <a id="EM_TI_C6000" href="#EM_TI_C6000">const EM_TI_C6000</a>
-
-```
-searchKey: elf.EM_TI_C6000
-```
-
-```Go
-const EM_TI_C6000 Machine = 140 /* The Texas Instruments TMS320C6000 DSP family */
-
-```
-
-### <a id="EM_TI_C2000" href="#EM_TI_C2000">const EM_TI_C2000</a>
-
-```
-searchKey: elf.EM_TI_C2000
-```
-
-```Go
-const EM_TI_C2000 Machine = 141 /* The Texas Instruments TMS320C2000 DSP family */
-
-```
-
-### <a id="EM_TI_C5500" href="#EM_TI_C5500">const EM_TI_C5500</a>
-
-```
-searchKey: elf.EM_TI_C5500
-```
-
-```Go
-const EM_TI_C5500 Machine = 142 /* The Texas Instruments TMS320C55x DSP family */
-
-```
-
-### <a id="EM_TI_ARP32" href="#EM_TI_ARP32">const EM_TI_ARP32</a>
-
-```
-searchKey: elf.EM_TI_ARP32
-```
-
-```Go
-const EM_TI_ARP32 Machine /* Texas Instruments Application Specific RISC Processor, 32bit fetch */
- = ...
-```
-
-### <a id="EM_TI_PRU" href="#EM_TI_PRU">const EM_TI_PRU</a>
-
-```
-searchKey: elf.EM_TI_PRU
-```
-
-```Go
-const EM_TI_PRU Machine = 144 /* Texas Instruments Programmable Realtime Unit */
-
-```
-
-### <a id="EM_MMDSP_PLUS" href="#EM_MMDSP_PLUS">const EM_MMDSP_PLUS</a>
-
-```
-searchKey: elf.EM_MMDSP_PLUS
-```
-
-```Go
-const EM_MMDSP_PLUS Machine = 160 /* STMicroelectronics 64bit VLIW Data Signal Processor */
-
-```
-
-### <a id="EM_CYPRESS_M8C" href="#EM_CYPRESS_M8C">const EM_CYPRESS_M8C</a>
-
-```
-searchKey: elf.EM_CYPRESS_M8C
-```
-
-```Go
-const EM_CYPRESS_M8C Machine = 161 /* Cypress M8C microprocessor */
-
-```
-
-### <a id="EM_R32C" href="#EM_R32C">const EM_R32C</a>
-
-```
-searchKey: elf.EM_R32C
-```
-
-```Go
-const EM_R32C Machine = 162 /* Renesas R32C series microprocessors */
-
-```
-
-### <a id="EM_TRIMEDIA" href="#EM_TRIMEDIA">const EM_TRIMEDIA</a>
-
-```
-searchKey: elf.EM_TRIMEDIA
-```
-
-```Go
-const EM_TRIMEDIA Machine = 163 /* NXP Semiconductors TriMedia architecture family */
-
-```
-
-### <a id="EM_QDSP6" href="#EM_QDSP6">const EM_QDSP6</a>
-
-```
-searchKey: elf.EM_QDSP6
-```
-
-```Go
-const EM_QDSP6 Machine = 164 /* QUALCOMM DSP6 Processor */
-
-```
-
-### <a id="EM_8051" href="#EM_8051">const EM_8051</a>
-
-```
-searchKey: elf.EM_8051
-```
-
-```Go
-const EM_8051 Machine = 165 /* Intel 8051 and variants */
-
-```
-
-### <a id="EM_STXP7X" href="#EM_STXP7X">const EM_STXP7X</a>
-
-```
-searchKey: elf.EM_STXP7X
-```
-
-```Go
-const EM_STXP7X Machine /* STMicroelectronics STxP7x family of configurable and extensible RISC processors */
- = ...
-```
-
-### <a id="EM_NDS32" href="#EM_NDS32">const EM_NDS32</a>
-
-```
-searchKey: elf.EM_NDS32
-```
-
-```Go
-const EM_NDS32 Machine /* Andes Technology compact code size embedded RISC processor family */
- = ...
-```
-
-### <a id="EM_ECOG1" href="#EM_ECOG1">const EM_ECOG1</a>
-
-```
-searchKey: elf.EM_ECOG1
-```
-
-```Go
-const EM_ECOG1 Machine = 168 /* Cyan Technology eCOG1X family */
-
-```
-
-### <a id="EM_ECOG1X" href="#EM_ECOG1X">const EM_ECOG1X</a>
-
-```
-searchKey: elf.EM_ECOG1X
-```
-
-```Go
-const EM_ECOG1X Machine = 168 /* Cyan Technology eCOG1X family */
-
-```
-
-### <a id="EM_MAXQ30" href="#EM_MAXQ30">const EM_MAXQ30</a>
-
-```
-searchKey: elf.EM_MAXQ30
-```
-
-```Go
-const EM_MAXQ30 Machine = 169 /* Dallas Semiconductor MAXQ30 Core Micro-controllers */
-
-```
-
-### <a id="EM_XIMO16" href="#EM_XIMO16">const EM_XIMO16</a>
-
-```
-searchKey: elf.EM_XIMO16
-```
-
-```Go
-const EM_XIMO16 Machine = 170 /* New Japan Radio (NJR) 16-bit DSP Processor */
-
-```
-
-### <a id="EM_MANIK" href="#EM_MANIK">const EM_MANIK</a>
-
-```
-searchKey: elf.EM_MANIK
-```
-
-```Go
-const EM_MANIK Machine = 171 /* M2000 Reconfigurable RISC Microprocessor */
-
-```
-
-### <a id="EM_CRAYNV2" href="#EM_CRAYNV2">const EM_CRAYNV2</a>
-
-```
-searchKey: elf.EM_CRAYNV2
-```
-
-```Go
-const EM_CRAYNV2 Machine = 172 /* Cray Inc. NV2 vector architecture */
-
-```
-
-### <a id="EM_RX" href="#EM_RX">const EM_RX</a>
-
-```
-searchKey: elf.EM_RX
-```
-
-```Go
-const EM_RX Machine = 173 /* Renesas RX family */
-
-```
-
-### <a id="EM_METAG" href="#EM_METAG">const EM_METAG</a>
-
-```
-searchKey: elf.EM_METAG
-```
-
-```Go
-const EM_METAG Machine = 174 /* Imagination Technologies META processor architecture */
-
-```
-
-### <a id="EM_MCST_ELBRUS" href="#EM_MCST_ELBRUS">const EM_MCST_ELBRUS</a>
-
-```
-searchKey: elf.EM_MCST_ELBRUS
-```
-
-```Go
-const EM_MCST_ELBRUS Machine = 175 /* MCST Elbrus general purpose hardware architecture */
-
-```
-
-### <a id="EM_ECOG16" href="#EM_ECOG16">const EM_ECOG16</a>
-
-```
-searchKey: elf.EM_ECOG16
-```
-
-```Go
-const EM_ECOG16 Machine = 176 /* Cyan Technology eCOG16 family */
-
-```
-
-### <a id="EM_CR16" href="#EM_CR16">const EM_CR16</a>
-
-```
-searchKey: elf.EM_CR16
-```
-
-```Go
-const EM_CR16 Machine = 177 /* National Semiconductor CompactRISC CR16 16-bit microprocessor */
-
-```
-
-### <a id="EM_ETPU" href="#EM_ETPU">const EM_ETPU</a>
-
-```
-searchKey: elf.EM_ETPU
-```
-
-```Go
-const EM_ETPU Machine = 178 /* Freescale Extended Time Processing Unit */
-
-```
-
-### <a id="EM_SLE9X" href="#EM_SLE9X">const EM_SLE9X</a>
-
-```
-searchKey: elf.EM_SLE9X
-```
-
-```Go
-const EM_SLE9X Machine = 179 /* Infineon Technologies SLE9X core */
-
-```
-
-### <a id="EM_L10M" href="#EM_L10M">const EM_L10M</a>
-
-```
-searchKey: elf.EM_L10M
-```
-
-```Go
-const EM_L10M Machine = 180 /* Intel L10M */
-
-```
-
-### <a id="EM_K10M" href="#EM_K10M">const EM_K10M</a>
-
-```
-searchKey: elf.EM_K10M
-```
-
-```Go
-const EM_K10M Machine = 181 /* Intel K10M */
-
-```
-
-### <a id="EM_AARCH64" href="#EM_AARCH64">const EM_AARCH64</a>
-
-```
-searchKey: elf.EM_AARCH64
-```
-
-```Go
-const EM_AARCH64 Machine = 183 /* ARM 64-bit Architecture (AArch64) */
-
-```
-
-### <a id="EM_AVR32" href="#EM_AVR32">const EM_AVR32</a>
-
-```
-searchKey: elf.EM_AVR32
-```
-
-```Go
-const EM_AVR32 Machine = 185 /* Atmel Corporation 32-bit microprocessor family */
-
-```
-
-### <a id="EM_STM8" href="#EM_STM8">const EM_STM8</a>
-
-```
-searchKey: elf.EM_STM8
-```
-
-```Go
-const EM_STM8 Machine = 186 /* STMicroeletronics STM8 8-bit microcontroller */
-
-```
-
-### <a id="EM_TILE64" href="#EM_TILE64">const EM_TILE64</a>
-
-```
-searchKey: elf.EM_TILE64
-```
-
-```Go
-const EM_TILE64 Machine = 187 /* Tilera TILE64 multicore architecture family */
-
-```
-
-### <a id="EM_TILEPRO" href="#EM_TILEPRO">const EM_TILEPRO</a>
-
-```
-searchKey: elf.EM_TILEPRO
-```
-
-```Go
-const EM_TILEPRO Machine = 188 /* Tilera TILEPro multicore architecture family */
-
-```
-
-### <a id="EM_MICROBLAZE" href="#EM_MICROBLAZE">const EM_MICROBLAZE</a>
-
-```
-searchKey: elf.EM_MICROBLAZE
-```
-
-```Go
-const EM_MICROBLAZE Machine = 189 /* Xilinx MicroBlaze 32-bit RISC soft processor core */
-
-```
-
-### <a id="EM_CUDA" href="#EM_CUDA">const EM_CUDA</a>
-
-```
-searchKey: elf.EM_CUDA
-```
-
-```Go
-const EM_CUDA Machine = 190 /* NVIDIA CUDA architecture */
-
-```
-
-### <a id="EM_TILEGX" href="#EM_TILEGX">const EM_TILEGX</a>
-
-```
-searchKey: elf.EM_TILEGX
-```
-
-```Go
-const EM_TILEGX Machine = 191 /* Tilera TILE-Gx multicore architecture family */
-
-```
-
-### <a id="EM_CLOUDSHIELD" href="#EM_CLOUDSHIELD">const EM_CLOUDSHIELD</a>
-
-```
-searchKey: elf.EM_CLOUDSHIELD
-```
-
-```Go
-const EM_CLOUDSHIELD Machine = 192 /* CloudShield architecture family */
-
-```
-
-### <a id="EM_COREA_1ST" href="#EM_COREA_1ST">const EM_COREA_1ST</a>
-
-```
-searchKey: elf.EM_COREA_1ST
-```
-
-```Go
-const EM_COREA_1ST Machine = 193 /* KIPO-KAIST Core-A 1st generation processor family */
-
-```
-
-### <a id="EM_COREA_2ND" href="#EM_COREA_2ND">const EM_COREA_2ND</a>
-
-```
-searchKey: elf.EM_COREA_2ND
-```
-
-```Go
-const EM_COREA_2ND Machine = 194 /* KIPO-KAIST Core-A 2nd generation processor family */
-
-```
-
-### <a id="EM_ARC_COMPACT2" href="#EM_ARC_COMPACT2">const EM_ARC_COMPACT2</a>
-
-```
-searchKey: elf.EM_ARC_COMPACT2
-```
-
-```Go
-const EM_ARC_COMPACT2 Machine = 195 /* Synopsys ARCompact V2 */
-
-```
-
-### <a id="EM_OPEN8" href="#EM_OPEN8">const EM_OPEN8</a>
-
-```
-searchKey: elf.EM_OPEN8
-```
-
-```Go
-const EM_OPEN8 Machine = 196 /* Open8 8-bit RISC soft processor core */
-
-```
-
-### <a id="EM_RL78" href="#EM_RL78">const EM_RL78</a>
-
-```
-searchKey: elf.EM_RL78
-```
-
-```Go
-const EM_RL78 Machine = 197 /* Renesas RL78 family */
-
-```
-
-### <a id="EM_VIDEOCORE5" href="#EM_VIDEOCORE5">const EM_VIDEOCORE5</a>
-
-```
-searchKey: elf.EM_VIDEOCORE5
-```
-
-```Go
-const EM_VIDEOCORE5 Machine = 198 /* Broadcom VideoCore V processor */
-
-```
-
-### <a id="EM_78KOR" href="#EM_78KOR">const EM_78KOR</a>
-
-```
-searchKey: elf.EM_78KOR
-```
-
-```Go
-const EM_78KOR Machine = 199 /* Renesas 78KOR family */
-
-```
+Non-standard or deprecated. 
 
 ### <a id="EM_56800EX" href="#EM_56800EX">const EM_56800EX</a>
 
 ```
 searchKey: elf.EM_56800EX
+tags: [constant number]
 ```
 
 ```Go
@@ -3723,10 +3577,287 @@ const EM_56800EX Machine = 200 /* Freescale 56800EX Digital Signal Controller (D
 
 ```
 
+### <a id="EM_68HC05" href="#EM_68HC05">const EM_68HC05</a>
+
+```
+searchKey: elf.EM_68HC05
+tags: [constant number]
+```
+
+```Go
+const EM_68HC05 Machine = 72 /* Motorola MC68HC05 Microcontroller */
+
+```
+
+### <a id="EM_68HC08" href="#EM_68HC08">const EM_68HC08</a>
+
+```
+searchKey: elf.EM_68HC08
+tags: [constant number]
+```
+
+```Go
+const EM_68HC08 Machine = 71 /* Motorola MC68HC08 Microcontroller */
+
+```
+
+### <a id="EM_68HC11" href="#EM_68HC11">const EM_68HC11</a>
+
+```
+searchKey: elf.EM_68HC11
+tags: [constant number]
+```
+
+```Go
+const EM_68HC11 Machine = 70 /* Motorola MC68HC11 Microcontroller */
+
+```
+
+### <a id="EM_68HC12" href="#EM_68HC12">const EM_68HC12</a>
+
+```
+searchKey: elf.EM_68HC12
+tags: [constant number]
+```
+
+```Go
+const EM_68HC12 Machine = 53 /* Motorola M68HC12. */
+
+```
+
+### <a id="EM_68HC16" href="#EM_68HC16">const EM_68HC16</a>
+
+```
+searchKey: elf.EM_68HC16
+tags: [constant number]
+```
+
+```Go
+const EM_68HC16 Machine = 69 /* Motorola MC68HC16 Microcontroller */
+
+```
+
+### <a id="EM_68K" href="#EM_68K">const EM_68K</a>
+
+```
+searchKey: elf.EM_68K
+tags: [constant number]
+```
+
+```Go
+const EM_68K Machine = 4 /* Motorola 68000. */
+
+```
+
+### <a id="EM_78KOR" href="#EM_78KOR">const EM_78KOR</a>
+
+```
+searchKey: elf.EM_78KOR
+tags: [constant number]
+```
+
+```Go
+const EM_78KOR Machine = 199 /* Renesas 78KOR family */
+
+```
+
+### <a id="EM_8051" href="#EM_8051">const EM_8051</a>
+
+```
+searchKey: elf.EM_8051
+tags: [constant number]
+```
+
+```Go
+const EM_8051 Machine = 165 /* Intel 8051 and variants */
+
+```
+
+### <a id="EM_860" href="#EM_860">const EM_860</a>
+
+```
+searchKey: elf.EM_860
+tags: [constant number]
+```
+
+```Go
+const EM_860 Machine = 7 /* Intel i860. */
+
+```
+
+### <a id="EM_88K" href="#EM_88K">const EM_88K</a>
+
+```
+searchKey: elf.EM_88K
+tags: [constant number]
+```
+
+```Go
+const EM_88K Machine = 5 /* Motorola 88000. */
+
+```
+
+### <a id="EM_960" href="#EM_960">const EM_960</a>
+
+```
+searchKey: elf.EM_960
+tags: [constant number]
+```
+
+```Go
+const EM_960 Machine = 19 /* Intel 80960. */
+
+```
+
+### <a id="EM_AARCH64" href="#EM_AARCH64">const EM_AARCH64</a>
+
+```
+searchKey: elf.EM_AARCH64
+tags: [constant number]
+```
+
+```Go
+const EM_AARCH64 Machine = 183 /* ARM 64-bit Architecture (AArch64) */
+
+```
+
+### <a id="EM_ALPHA" href="#EM_ALPHA">const EM_ALPHA</a>
+
+```
+searchKey: elf.EM_ALPHA
+tags: [constant number]
+```
+
+```Go
+const EM_ALPHA Machine = 0x9026 /* Alpha (written in the absence of an ABI) */
+
+```
+
+### <a id="EM_ALPHA_STD" href="#EM_ALPHA_STD">const EM_ALPHA_STD</a>
+
+```
+searchKey: elf.EM_ALPHA_STD
+tags: [constant number]
+```
+
+```Go
+const EM_ALPHA_STD Machine = 41 /* Digital Alpha (standard value). */
+
+```
+
+### <a id="EM_ALTERA_NIOS2" href="#EM_ALTERA_NIOS2">const EM_ALTERA_NIOS2</a>
+
+```
+searchKey: elf.EM_ALTERA_NIOS2
+tags: [constant number]
+```
+
+```Go
+const EM_ALTERA_NIOS2 Machine = 113 /* Altera Nios II soft-core processor */
+
+```
+
+### <a id="EM_AMDGPU" href="#EM_AMDGPU">const EM_AMDGPU</a>
+
+```
+searchKey: elf.EM_AMDGPU
+tags: [constant number]
+```
+
+```Go
+const EM_AMDGPU Machine = 224 /* AMD GPU architecture */
+
+```
+
+### <a id="EM_ARC" href="#EM_ARC">const EM_ARC</a>
+
+```
+searchKey: elf.EM_ARC
+tags: [constant number]
+```
+
+```Go
+const EM_ARC Machine = 45 /* Argonaut RISC Core. */
+
+```
+
+### <a id="EM_ARCA" href="#EM_ARCA">const EM_ARCA</a>
+
+```
+searchKey: elf.EM_ARCA
+tags: [constant number]
+```
+
+```Go
+const EM_ARCA Machine = 109 /* Arca RISC Microprocessor */
+
+```
+
+### <a id="EM_ARC_COMPACT" href="#EM_ARC_COMPACT">const EM_ARC_COMPACT</a>
+
+```
+searchKey: elf.EM_ARC_COMPACT
+tags: [constant number]
+```
+
+```Go
+const EM_ARC_COMPACT Machine /* ARC International ARCompact processor (old spelling/synonym: EM_ARC_A5) */
+ = ...
+```
+
+### <a id="EM_ARC_COMPACT2" href="#EM_ARC_COMPACT2">const EM_ARC_COMPACT2</a>
+
+```
+searchKey: elf.EM_ARC_COMPACT2
+tags: [constant number]
+```
+
+```Go
+const EM_ARC_COMPACT2 Machine = 195 /* Synopsys ARCompact V2 */
+
+```
+
+### <a id="EM_ARM" href="#EM_ARM">const EM_ARM</a>
+
+```
+searchKey: elf.EM_ARM
+tags: [constant number]
+```
+
+```Go
+const EM_ARM Machine = 40 /* ARM. */
+
+```
+
+### <a id="EM_AVR" href="#EM_AVR">const EM_AVR</a>
+
+```
+searchKey: elf.EM_AVR
+tags: [constant number]
+```
+
+```Go
+const EM_AVR Machine = 83 /* Atmel AVR 8-bit microcontroller */
+
+```
+
+### <a id="EM_AVR32" href="#EM_AVR32">const EM_AVR32</a>
+
+```
+searchKey: elf.EM_AVR32
+tags: [constant number]
+```
+
+```Go
+const EM_AVR32 Machine = 185 /* Atmel Corporation 32-bit microprocessor family */
+
+```
+
 ### <a id="EM_BA1" href="#EM_BA1">const EM_BA1</a>
 
 ```
 searchKey: elf.EM_BA1
+tags: [constant number]
 ```
 
 ```Go
@@ -3738,6 +3869,7 @@ const EM_BA1 Machine = 201 /* Beyond BA1 CPU architecture */
 
 ```
 searchKey: elf.EM_BA2
+tags: [constant number]
 ```
 
 ```Go
@@ -3745,25 +3877,507 @@ const EM_BA2 Machine = 202 /* Beyond BA2 CPU architecture */
 
 ```
 
-### <a id="EM_XCORE" href="#EM_XCORE">const EM_XCORE</a>
+### <a id="EM_BLACKFIN" href="#EM_BLACKFIN">const EM_BLACKFIN</a>
 
 ```
-searchKey: elf.EM_XCORE
-```
-
-```Go
-const EM_XCORE Machine = 203 /* XMOS xCORE processor family */
-
-```
-
-### <a id="EM_MCHP_PIC" href="#EM_MCHP_PIC">const EM_MCHP_PIC</a>
-
-```
-searchKey: elf.EM_MCHP_PIC
+searchKey: elf.EM_BLACKFIN
+tags: [constant number]
 ```
 
 ```Go
-const EM_MCHP_PIC Machine = 204 /* Microchip 8-bit PIC(r) family */
+const EM_BLACKFIN Machine = 106 /* Analog Devices Blackfin (DSP) processor */
+
+```
+
+### <a id="EM_BPF" href="#EM_BPF">const EM_BPF</a>
+
+```
+searchKey: elf.EM_BPF
+tags: [constant number]
+```
+
+```Go
+const EM_BPF Machine = 247 /* Linux BPF – in-kernel virtual machine */
+
+```
+
+### <a id="EM_C166" href="#EM_C166">const EM_C166</a>
+
+```
+searchKey: elf.EM_C166
+tags: [constant number]
+```
+
+```Go
+const EM_C166 Machine = 116 /* Infineon C16x/XC16x processor */
+
+```
+
+### <a id="EM_CDP" href="#EM_CDP">const EM_CDP</a>
+
+```
+searchKey: elf.EM_CDP
+tags: [constant number]
+```
+
+```Go
+const EM_CDP Machine = 215 /* Paneve CDP architecture family */
+
+```
+
+### <a id="EM_CE" href="#EM_CE">const EM_CE</a>
+
+```
+searchKey: elf.EM_CE
+tags: [constant number]
+```
+
+```Go
+const EM_CE Machine = 119 /* Freescale Communication Engine RISC core */
+
+```
+
+### <a id="EM_CLOUDSHIELD" href="#EM_CLOUDSHIELD">const EM_CLOUDSHIELD</a>
+
+```
+searchKey: elf.EM_CLOUDSHIELD
+tags: [constant number]
+```
+
+```Go
+const EM_CLOUDSHIELD Machine = 192 /* CloudShield architecture family */
+
+```
+
+### <a id="EM_COGE" href="#EM_COGE">const EM_COGE</a>
+
+```
+searchKey: elf.EM_COGE
+tags: [constant number]
+```
+
+```Go
+const EM_COGE Machine = 216 /* Cognitive Smart Memory Processor */
+
+```
+
+### <a id="EM_COLDFIRE" href="#EM_COLDFIRE">const EM_COLDFIRE</a>
+
+```
+searchKey: elf.EM_COLDFIRE
+tags: [constant number]
+```
+
+```Go
+const EM_COLDFIRE Machine = 52 /* Motorola ColdFire. */
+
+```
+
+### <a id="EM_COOL" href="#EM_COOL">const EM_COOL</a>
+
+```
+searchKey: elf.EM_COOL
+tags: [constant number]
+```
+
+```Go
+const EM_COOL Machine = 217 /* Bluechip Systems CoolEngine */
+
+```
+
+### <a id="EM_COREA_1ST" href="#EM_COREA_1ST">const EM_COREA_1ST</a>
+
+```
+searchKey: elf.EM_COREA_1ST
+tags: [constant number]
+```
+
+```Go
+const EM_COREA_1ST Machine = 193 /* KIPO-KAIST Core-A 1st generation processor family */
+
+```
+
+### <a id="EM_COREA_2ND" href="#EM_COREA_2ND">const EM_COREA_2ND</a>
+
+```
+searchKey: elf.EM_COREA_2ND
+tags: [constant number]
+```
+
+```Go
+const EM_COREA_2ND Machine = 194 /* KIPO-KAIST Core-A 2nd generation processor family */
+
+```
+
+### <a id="EM_CR" href="#EM_CR">const EM_CR</a>
+
+```
+searchKey: elf.EM_CR
+tags: [constant number]
+```
+
+```Go
+const EM_CR Machine = 103 /* National Semiconductor CompactRISC microprocessor */
+
+```
+
+### <a id="EM_CR16" href="#EM_CR16">const EM_CR16</a>
+
+```
+searchKey: elf.EM_CR16
+tags: [constant number]
+```
+
+```Go
+const EM_CR16 Machine = 177 /* National Semiconductor CompactRISC CR16 16-bit microprocessor */
+
+```
+
+### <a id="EM_CRAYNV2" href="#EM_CRAYNV2">const EM_CRAYNV2</a>
+
+```
+searchKey: elf.EM_CRAYNV2
+tags: [constant number]
+```
+
+```Go
+const EM_CRAYNV2 Machine = 172 /* Cray Inc. NV2 vector architecture */
+
+```
+
+### <a id="EM_CRIS" href="#EM_CRIS">const EM_CRIS</a>
+
+```
+searchKey: elf.EM_CRIS
+tags: [constant number]
+```
+
+```Go
+const EM_CRIS Machine = 76 /* Axis Communications 32-bit embedded processor */
+
+```
+
+### <a id="EM_CRX" href="#EM_CRX">const EM_CRX</a>
+
+```
+searchKey: elf.EM_CRX
+tags: [constant number]
+```
+
+```Go
+const EM_CRX Machine = 114 /* National Semiconductor CompactRISC CRX microprocessor */
+
+```
+
+### <a id="EM_CSR_KALIMBA" href="#EM_CSR_KALIMBA">const EM_CSR_KALIMBA</a>
+
+```
+searchKey: elf.EM_CSR_KALIMBA
+tags: [constant number]
+```
+
+```Go
+const EM_CSR_KALIMBA Machine = 219 /* CSR Kalimba architecture family */
+
+```
+
+### <a id="EM_CUDA" href="#EM_CUDA">const EM_CUDA</a>
+
+```
+searchKey: elf.EM_CUDA
+tags: [constant number]
+```
+
+```Go
+const EM_CUDA Machine = 190 /* NVIDIA CUDA architecture */
+
+```
+
+### <a id="EM_CYPRESS_M8C" href="#EM_CYPRESS_M8C">const EM_CYPRESS_M8C</a>
+
+```
+searchKey: elf.EM_CYPRESS_M8C
+tags: [constant number]
+```
+
+```Go
+const EM_CYPRESS_M8C Machine = 161 /* Cypress M8C microprocessor */
+
+```
+
+### <a id="EM_D10V" href="#EM_D10V">const EM_D10V</a>
+
+```
+searchKey: elf.EM_D10V
+tags: [constant number]
+```
+
+```Go
+const EM_D10V Machine = 85 /* Mitsubishi D10V */
+
+```
+
+### <a id="EM_D30V" href="#EM_D30V">const EM_D30V</a>
+
+```
+searchKey: elf.EM_D30V
+tags: [constant number]
+```
+
+```Go
+const EM_D30V Machine = 86 /* Mitsubishi D30V */
+
+```
+
+### <a id="EM_DSP24" href="#EM_DSP24">const EM_DSP24</a>
+
+```
+searchKey: elf.EM_DSP24
+tags: [constant number]
+```
+
+```Go
+const EM_DSP24 Machine = 136 /* New Japan Radio (NJR) 24-bit DSP Processor */
+
+```
+
+### <a id="EM_DSPIC30F" href="#EM_DSPIC30F">const EM_DSPIC30F</a>
+
+```
+searchKey: elf.EM_DSPIC30F
+tags: [constant number]
+```
+
+```Go
+const EM_DSPIC30F Machine = 118 /* Microchip Technology dsPIC30F Digital Signal Controller */
+
+```
+
+### <a id="EM_DXP" href="#EM_DXP">const EM_DXP</a>
+
+```
+searchKey: elf.EM_DXP
+tags: [constant number]
+```
+
+```Go
+const EM_DXP Machine = 112 /* Icera Semiconductor Inc. Deep Execution Processor */
+
+```
+
+### <a id="EM_ECOG1" href="#EM_ECOG1">const EM_ECOG1</a>
+
+```
+searchKey: elf.EM_ECOG1
+tags: [constant number]
+```
+
+```Go
+const EM_ECOG1 Machine = 168 /* Cyan Technology eCOG1X family */
+
+```
+
+### <a id="EM_ECOG16" href="#EM_ECOG16">const EM_ECOG16</a>
+
+```
+searchKey: elf.EM_ECOG16
+tags: [constant number]
+```
+
+```Go
+const EM_ECOG16 Machine = 176 /* Cyan Technology eCOG16 family */
+
+```
+
+### <a id="EM_ECOG1X" href="#EM_ECOG1X">const EM_ECOG1X</a>
+
+```
+searchKey: elf.EM_ECOG1X
+tags: [constant number]
+```
+
+```Go
+const EM_ECOG1X Machine = 168 /* Cyan Technology eCOG1X family */
+
+```
+
+### <a id="EM_ECOG2" href="#EM_ECOG2">const EM_ECOG2</a>
+
+```
+searchKey: elf.EM_ECOG2
+tags: [constant number]
+```
+
+```Go
+const EM_ECOG2 Machine = 134 /* Cyan Technology eCOG2 microprocessor */
+
+```
+
+### <a id="EM_ETPU" href="#EM_ETPU">const EM_ETPU</a>
+
+```
+searchKey: elf.EM_ETPU
+tags: [constant number]
+```
+
+```Go
+const EM_ETPU Machine = 178 /* Freescale Extended Time Processing Unit */
+
+```
+
+### <a id="EM_EXCESS" href="#EM_EXCESS">const EM_EXCESS</a>
+
+```
+searchKey: elf.EM_EXCESS
+tags: [constant number]
+```
+
+```Go
+const EM_EXCESS Machine = 111 /* eXcess: 16/32/64-bit configurable embedded CPU */
+
+```
+
+### <a id="EM_F2MC16" href="#EM_F2MC16">const EM_F2MC16</a>
+
+```
+searchKey: elf.EM_F2MC16
+tags: [constant number]
+```
+
+```Go
+const EM_F2MC16 Machine = 104 /* Fujitsu F2MC16 */
+
+```
+
+### <a id="EM_FIREPATH" href="#EM_FIREPATH">const EM_FIREPATH</a>
+
+```
+searchKey: elf.EM_FIREPATH
+tags: [constant number]
+```
+
+```Go
+const EM_FIREPATH Machine = 78 /* Element 14 64-bit DSP Processor */
+
+```
+
+### <a id="EM_FR20" href="#EM_FR20">const EM_FR20</a>
+
+```
+searchKey: elf.EM_FR20
+tags: [constant number]
+```
+
+```Go
+const EM_FR20 Machine = 37 /* Fujitsu FR20. */
+
+```
+
+### <a id="EM_FR30" href="#EM_FR30">const EM_FR30</a>
+
+```
+searchKey: elf.EM_FR30
+tags: [constant number]
+```
+
+```Go
+const EM_FR30 Machine = 84 /* Fujitsu FR30 */
+
+```
+
+### <a id="EM_FT32" href="#EM_FT32">const EM_FT32</a>
+
+```
+searchKey: elf.EM_FT32
+tags: [constant number]
+```
+
+```Go
+const EM_FT32 Machine = 222 /* FTDI Chip FT32 high performance 32-bit RISC architecture */
+
+```
+
+### <a id="EM_FX66" href="#EM_FX66">const EM_FX66</a>
+
+```
+searchKey: elf.EM_FX66
+tags: [constant number]
+```
+
+```Go
+const EM_FX66 Machine = 66 /* Siemens FX66 microcontroller */
+
+```
+
+### <a id="EM_H8S" href="#EM_H8S">const EM_H8S</a>
+
+```
+searchKey: elf.EM_H8S
+tags: [constant number]
+```
+
+```Go
+const EM_H8S Machine = 48 /* Hitachi H8S. */
+
+```
+
+### <a id="EM_H8_300" href="#EM_H8_300">const EM_H8_300</a>
+
+```
+searchKey: elf.EM_H8_300
+tags: [constant number]
+```
+
+```Go
+const EM_H8_300 Machine = 46 /* Hitachi H8/300. */
+
+```
+
+### <a id="EM_H8_300H" href="#EM_H8_300H">const EM_H8_300H</a>
+
+```
+searchKey: elf.EM_H8_300H
+tags: [constant number]
+```
+
+```Go
+const EM_H8_300H Machine = 47 /* Hitachi H8/300H. */
+
+```
+
+### <a id="EM_H8_500" href="#EM_H8_500">const EM_H8_500</a>
+
+```
+searchKey: elf.EM_H8_500
+tags: [constant number]
+```
+
+```Go
+const EM_H8_500 Machine = 49 /* Hitachi H8/500. */
+
+```
+
+### <a id="EM_HUANY" href="#EM_HUANY">const EM_HUANY</a>
+
+```
+searchKey: elf.EM_HUANY
+tags: [constant number]
+```
+
+```Go
+const EM_HUANY Machine = 81 /* Harvard University machine-independent object files */
+
+```
+
+### <a id="EM_IA_64" href="#EM_IA_64">const EM_IA_64</a>
+
+```
+searchKey: elf.EM_IA_64
+tags: [constant number]
+```
+
+```Go
+const EM_IA_64 Machine = 50 /* Intel IA-64 Processor. */
 
 ```
 
@@ -3771,6 +4385,7 @@ const EM_MCHP_PIC Machine = 204 /* Microchip 8-bit PIC(r) family */
 
 ```
 searchKey: elf.EM_INTEL205
+tags: [constant number]
 ```
 
 ```Go
@@ -3782,6 +4397,7 @@ const EM_INTEL205 Machine = 205 /* Reserved by Intel */
 
 ```
 searchKey: elf.EM_INTEL206
+tags: [constant number]
 ```
 
 ```Go
@@ -3793,6 +4409,7 @@ const EM_INTEL206 Machine = 206 /* Reserved by Intel */
 
 ```
 searchKey: elf.EM_INTEL207
+tags: [constant number]
 ```
 
 ```Go
@@ -3804,6 +4421,7 @@ const EM_INTEL207 Machine = 207 /* Reserved by Intel */
 
 ```
 searchKey: elf.EM_INTEL208
+tags: [constant number]
 ```
 
 ```Go
@@ -3815,6 +4433,7 @@ const EM_INTEL208 Machine = 208 /* Reserved by Intel */
 
 ```
 searchKey: elf.EM_INTEL209
+tags: [constant number]
 ```
 
 ```Go
@@ -3822,10 +4441,47 @@ const EM_INTEL209 Machine = 209 /* Reserved by Intel */
 
 ```
 
+### <a id="EM_IP2K" href="#EM_IP2K">const EM_IP2K</a>
+
+```
+searchKey: elf.EM_IP2K
+tags: [constant number]
+```
+
+```Go
+const EM_IP2K Machine = 101 /* Ubicom IP2xxx microcontroller family */
+
+```
+
+### <a id="EM_JAVELIN" href="#EM_JAVELIN">const EM_JAVELIN</a>
+
+```
+searchKey: elf.EM_JAVELIN
+tags: [constant number]
+```
+
+```Go
+const EM_JAVELIN Machine = 77 /* Infineon Technologies 32-bit embedded processor */
+
+```
+
+### <a id="EM_K10M" href="#EM_K10M">const EM_K10M</a>
+
+```
+searchKey: elf.EM_K10M
+tags: [constant number]
+```
+
+```Go
+const EM_K10M Machine = 181 /* Intel K10M */
+
+```
+
 ### <a id="EM_KM32" href="#EM_KM32">const EM_KM32</a>
 
 ```
 searchKey: elf.EM_KM32
+tags: [constant number]
 ```
 
 ```Go
@@ -3833,21 +4489,11 @@ const EM_KM32 Machine = 210 /* KM211 KM32 32-bit processor */
 
 ```
 
-### <a id="EM_KMX32" href="#EM_KMX32">const EM_KMX32</a>
-
-```
-searchKey: elf.EM_KMX32
-```
-
-```Go
-const EM_KMX32 Machine = 211 /* KM211 KMX32 32-bit processor */
-
-```
-
 ### <a id="EM_KMX16" href="#EM_KMX16">const EM_KMX16</a>
 
 ```
 searchKey: elf.EM_KMX16
+tags: [constant number]
 ```
 
 ```Go
@@ -3855,10 +4501,23 @@ const EM_KMX16 Machine = 212 /* KM211 KMX16 16-bit processor */
 
 ```
 
+### <a id="EM_KMX32" href="#EM_KMX32">const EM_KMX32</a>
+
+```
+searchKey: elf.EM_KMX32
+tags: [constant number]
+```
+
+```Go
+const EM_KMX32 Machine = 211 /* KM211 KMX32 32-bit processor */
+
+```
+
 ### <a id="EM_KMX8" href="#EM_KMX8">const EM_KMX8</a>
 
 ```
 searchKey: elf.EM_KMX8
+tags: [constant number]
 ```
 
 ```Go
@@ -3870,6 +4529,7 @@ const EM_KMX8 Machine = 213 /* KM211 KMX8 8-bit processor */
 
 ```
 searchKey: elf.EM_KVARC
+tags: [constant number]
 ```
 
 ```Go
@@ -3877,124 +4537,15 @@ const EM_KVARC Machine = 214 /* KM211 KVARC processor */
 
 ```
 
-### <a id="EM_CDP" href="#EM_CDP">const EM_CDP</a>
+### <a id="EM_L10M" href="#EM_L10M">const EM_L10M</a>
 
 ```
-searchKey: elf.EM_CDP
-```
-
-```Go
-const EM_CDP Machine = 215 /* Paneve CDP architecture family */
-
-```
-
-### <a id="EM_COGE" href="#EM_COGE">const EM_COGE</a>
-
-```
-searchKey: elf.EM_COGE
+searchKey: elf.EM_L10M
+tags: [constant number]
 ```
 
 ```Go
-const EM_COGE Machine = 216 /* Cognitive Smart Memory Processor */
-
-```
-
-### <a id="EM_COOL" href="#EM_COOL">const EM_COOL</a>
-
-```
-searchKey: elf.EM_COOL
-```
-
-```Go
-const EM_COOL Machine = 217 /* Bluechip Systems CoolEngine */
-
-```
-
-### <a id="EM_NORC" href="#EM_NORC">const EM_NORC</a>
-
-```
-searchKey: elf.EM_NORC
-```
-
-```Go
-const EM_NORC Machine = 218 /* Nanoradio Optimized RISC */
-
-```
-
-### <a id="EM_CSR_KALIMBA" href="#EM_CSR_KALIMBA">const EM_CSR_KALIMBA</a>
-
-```
-searchKey: elf.EM_CSR_KALIMBA
-```
-
-```Go
-const EM_CSR_KALIMBA Machine = 219 /* CSR Kalimba architecture family */
-
-```
-
-### <a id="EM_Z80" href="#EM_Z80">const EM_Z80</a>
-
-```
-searchKey: elf.EM_Z80
-```
-
-```Go
-const EM_Z80 Machine = 220 /* Zilog Z80 */
-
-```
-
-### <a id="EM_VISIUM" href="#EM_VISIUM">const EM_VISIUM</a>
-
-```
-searchKey: elf.EM_VISIUM
-```
-
-```Go
-const EM_VISIUM Machine = 221 /* Controls and Data Services VISIUMcore processor */
-
-```
-
-### <a id="EM_FT32" href="#EM_FT32">const EM_FT32</a>
-
-```
-searchKey: elf.EM_FT32
-```
-
-```Go
-const EM_FT32 Machine = 222 /* FTDI Chip FT32 high performance 32-bit RISC architecture */
-
-```
-
-### <a id="EM_MOXIE" href="#EM_MOXIE">const EM_MOXIE</a>
-
-```
-searchKey: elf.EM_MOXIE
-```
-
-```Go
-const EM_MOXIE Machine = 223 /* Moxie processor family */
-
-```
-
-### <a id="EM_AMDGPU" href="#EM_AMDGPU">const EM_AMDGPU</a>
-
-```
-searchKey: elf.EM_AMDGPU
-```
-
-```Go
-const EM_AMDGPU Machine = 224 /* AMD GPU architecture */
-
-```
-
-### <a id="EM_RISCV" href="#EM_RISCV">const EM_RISCV</a>
-
-```
-searchKey: elf.EM_RISCV
-```
-
-```Go
-const EM_RISCV Machine = 243 /* RISC-V */
+const EM_L10M Machine = 180 /* Intel L10M */
 
 ```
 
@@ -4002,6 +4553,7 @@ const EM_RISCV Machine = 243 /* RISC-V */
 
 ```
 searchKey: elf.EM_LANAI
+tags: [constant number]
 ```
 
 ```Go
@@ -4009,34 +4561,191 @@ const EM_LANAI Machine = 244 /* Lanai 32-bit processor */
 
 ```
 
-### <a id="EM_BPF" href="#EM_BPF">const EM_BPF</a>
+### <a id="EM_LATTICEMICO32" href="#EM_LATTICEMICO32">const EM_LATTICEMICO32</a>
 
 ```
-searchKey: elf.EM_BPF
-```
-
-```Go
-const EM_BPF Machine = 247 /* Linux BPF – in-kernel virtual machine */
-
-```
-
-### <a id="EM_486" href="#EM_486">const EM_486</a>
-
-```
-searchKey: elf.EM_486
+searchKey: elf.EM_LATTICEMICO32
+tags: [constant number]
 ```
 
 ```Go
-const EM_486 Machine = 6 /* Intel i486. */
+const EM_LATTICEMICO32 Machine = 138 /* RISC processor for Lattice FPGA architecture */
 
 ```
 
-Non-standard or deprecated. 
+### <a id="EM_M16C" href="#EM_M16C">const EM_M16C</a>
+
+```
+searchKey: elf.EM_M16C
+tags: [constant number]
+```
+
+```Go
+const EM_M16C Machine = 117 /* Renesas M16C series microprocessors */
+
+```
+
+### <a id="EM_M32" href="#EM_M32">const EM_M32</a>
+
+```
+searchKey: elf.EM_M32
+tags: [constant number]
+```
+
+```Go
+const EM_M32 Machine = 1 /* AT&T WE32100. */
+
+```
+
+### <a id="EM_M32C" href="#EM_M32C">const EM_M32C</a>
+
+```
+searchKey: elf.EM_M32C
+tags: [constant number]
+```
+
+```Go
+const EM_M32C Machine = 120 /* Renesas M32C series microprocessors */
+
+```
+
+### <a id="EM_M32R" href="#EM_M32R">const EM_M32R</a>
+
+```
+searchKey: elf.EM_M32R
+tags: [constant number]
+```
+
+```Go
+const EM_M32R Machine = 88 /* Mitsubishi M32R */
+
+```
+
+### <a id="EM_MANIK" href="#EM_MANIK">const EM_MANIK</a>
+
+```
+searchKey: elf.EM_MANIK
+tags: [constant number]
+```
+
+```Go
+const EM_MANIK Machine = 171 /* M2000 Reconfigurable RISC Microprocessor */
+
+```
+
+### <a id="EM_MAX" href="#EM_MAX">const EM_MAX</a>
+
+```
+searchKey: elf.EM_MAX
+tags: [constant number]
+```
+
+```Go
+const EM_MAX Machine = 102 /* MAX Processor */
+
+```
+
+### <a id="EM_MAXQ30" href="#EM_MAXQ30">const EM_MAXQ30</a>
+
+```
+searchKey: elf.EM_MAXQ30
+tags: [constant number]
+```
+
+```Go
+const EM_MAXQ30 Machine = 169 /* Dallas Semiconductor MAXQ30 Core Micro-controllers */
+
+```
+
+### <a id="EM_MCHP_PIC" href="#EM_MCHP_PIC">const EM_MCHP_PIC</a>
+
+```
+searchKey: elf.EM_MCHP_PIC
+tags: [constant number]
+```
+
+```Go
+const EM_MCHP_PIC Machine = 204 /* Microchip 8-bit PIC(r) family */
+
+```
+
+### <a id="EM_MCST_ELBRUS" href="#EM_MCST_ELBRUS">const EM_MCST_ELBRUS</a>
+
+```
+searchKey: elf.EM_MCST_ELBRUS
+tags: [constant number]
+```
+
+```Go
+const EM_MCST_ELBRUS Machine = 175 /* MCST Elbrus general purpose hardware architecture */
+
+```
+
+### <a id="EM_ME16" href="#EM_ME16">const EM_ME16</a>
+
+```
+searchKey: elf.EM_ME16
+tags: [constant number]
+```
+
+```Go
+const EM_ME16 Machine = 59 /* Toyota ME16 processor. */
+
+```
+
+### <a id="EM_METAG" href="#EM_METAG">const EM_METAG</a>
+
+```
+searchKey: elf.EM_METAG
+tags: [constant number]
+```
+
+```Go
+const EM_METAG Machine = 174 /* Imagination Technologies META processor architecture */
+
+```
+
+### <a id="EM_MICROBLAZE" href="#EM_MICROBLAZE">const EM_MICROBLAZE</a>
+
+```
+searchKey: elf.EM_MICROBLAZE
+tags: [constant number]
+```
+
+```Go
+const EM_MICROBLAZE Machine = 189 /* Xilinx MicroBlaze 32-bit RISC soft processor core */
+
+```
+
+### <a id="EM_MIPS" href="#EM_MIPS">const EM_MIPS</a>
+
+```
+searchKey: elf.EM_MIPS
+tags: [constant number]
+```
+
+```Go
+const EM_MIPS Machine = 8 /* MIPS R3000 Big-Endian only. */
+
+```
+
+### <a id="EM_MIPS_RS3_LE" href="#EM_MIPS_RS3_LE">const EM_MIPS_RS3_LE</a>
+
+```
+searchKey: elf.EM_MIPS_RS3_LE
+tags: [constant number]
+```
+
+```Go
+const EM_MIPS_RS3_LE Machine = 10 /* MIPS R3000 Little-Endian. */
+
+```
 
 ### <a id="EM_MIPS_RS4_BE" href="#EM_MIPS_RS4_BE">const EM_MIPS_RS4_BE</a>
 
 ```
 searchKey: elf.EM_MIPS_RS4_BE
+tags: [constant number]
 ```
 
 ```Go
@@ -4044,2494 +4753,1161 @@ const EM_MIPS_RS4_BE Machine = 10 /* MIPS R4000 Big-Endian */
 
 ```
 
-### <a id="EM_ALPHA_STD" href="#EM_ALPHA_STD">const EM_ALPHA_STD</a>
+### <a id="EM_MIPS_X" href="#EM_MIPS_X">const EM_MIPS_X</a>
 
 ```
-searchKey: elf.EM_ALPHA_STD
+searchKey: elf.EM_MIPS_X
+tags: [constant number]
 ```
 
 ```Go
-const EM_ALPHA_STD Machine = 41 /* Digital Alpha (standard value). */
+const EM_MIPS_X Machine = 51 /* Stanford MIPS-X. */
 
 ```
 
-### <a id="EM_ALPHA" href="#EM_ALPHA">const EM_ALPHA</a>
+### <a id="EM_MMA" href="#EM_MMA">const EM_MMA</a>
 
 ```
-searchKey: elf.EM_ALPHA
+searchKey: elf.EM_MMA
+tags: [constant number]
 ```
 
 ```Go
-const EM_ALPHA Machine = 0x9026 /* Alpha (written in the absence of an ABI) */
+const EM_MMA Machine = 54 /* Fujitsu MMA. */
 
 ```
 
-### <a id="SHN_UNDEF" href="#SHN_UNDEF">const SHN_UNDEF</a>
+### <a id="EM_MMDSP_PLUS" href="#EM_MMDSP_PLUS">const EM_MMDSP_PLUS</a>
 
 ```
-searchKey: elf.SHN_UNDEF
+searchKey: elf.EM_MMDSP_PLUS
+tags: [constant number]
 ```
 
 ```Go
-const SHN_UNDEF SectionIndex = 0 /* Undefined, missing, irrelevant. */
+const EM_MMDSP_PLUS Machine = 160 /* STMicroelectronics 64bit VLIW Data Signal Processor */
 
 ```
 
-### <a id="SHN_LORESERVE" href="#SHN_LORESERVE">const SHN_LORESERVE</a>
+### <a id="EM_MMIX" href="#EM_MMIX">const EM_MMIX</a>
 
 ```
-searchKey: elf.SHN_LORESERVE
+searchKey: elf.EM_MMIX
+tags: [constant number]
 ```
 
 ```Go
-const SHN_LORESERVE SectionIndex = 0xff00 /* First of reserved range. */
+const EM_MMIX Machine = 80 /* Donald Knuth's educational 64-bit processor */
 
 ```
 
-### <a id="SHN_LOPROC" href="#SHN_LOPROC">const SHN_LOPROC</a>
+### <a id="EM_MN10200" href="#EM_MN10200">const EM_MN10200</a>
 
 ```
-searchKey: elf.SHN_LOPROC
+searchKey: elf.EM_MN10200
+tags: [constant number]
 ```
 
 ```Go
-const SHN_LOPROC SectionIndex = 0xff00 /* First processor-specific. */
+const EM_MN10200 Machine = 90 /* Matsushita MN10200 */
 
 ```
 
-### <a id="SHN_HIPROC" href="#SHN_HIPROC">const SHN_HIPROC</a>
+### <a id="EM_MN10300" href="#EM_MN10300">const EM_MN10300</a>
 
 ```
-searchKey: elf.SHN_HIPROC
+searchKey: elf.EM_MN10300
+tags: [constant number]
 ```
 
 ```Go
-const SHN_HIPROC SectionIndex = 0xff1f /* Last processor-specific. */
+const EM_MN10300 Machine = 89 /* Matsushita MN10300 */
 
 ```
 
-### <a id="SHN_LOOS" href="#SHN_LOOS">const SHN_LOOS</a>
+### <a id="EM_MOXIE" href="#EM_MOXIE">const EM_MOXIE</a>
 
 ```
-searchKey: elf.SHN_LOOS
+searchKey: elf.EM_MOXIE
+tags: [constant number]
 ```
 
 ```Go
-const SHN_LOOS SectionIndex = 0xff20 /* First operating system-specific. */
+const EM_MOXIE Machine = 223 /* Moxie processor family */
 
 ```
 
-### <a id="SHN_HIOS" href="#SHN_HIOS">const SHN_HIOS</a>
+### <a id="EM_MSP430" href="#EM_MSP430">const EM_MSP430</a>
 
 ```
-searchKey: elf.SHN_HIOS
+searchKey: elf.EM_MSP430
+tags: [constant number]
 ```
 
 ```Go
-const SHN_HIOS SectionIndex = 0xff3f /* Last operating system-specific. */
+const EM_MSP430 Machine = 105 /* Texas Instruments embedded microcontroller msp430 */
 
 ```
 
-### <a id="SHN_ABS" href="#SHN_ABS">const SHN_ABS</a>
+### <a id="EM_NCPU" href="#EM_NCPU">const EM_NCPU</a>
 
 ```
-searchKey: elf.SHN_ABS
+searchKey: elf.EM_NCPU
+tags: [constant number]
 ```
 
 ```Go
-const SHN_ABS SectionIndex = 0xfff1 /* Absolute values. */
+const EM_NCPU Machine = 56 /* Sony nCPU. */
 
 ```
 
-### <a id="SHN_COMMON" href="#SHN_COMMON">const SHN_COMMON</a>
+### <a id="EM_NDR1" href="#EM_NDR1">const EM_NDR1</a>
 
 ```
-searchKey: elf.SHN_COMMON
+searchKey: elf.EM_NDR1
+tags: [constant number]
 ```
 
 ```Go
-const SHN_COMMON SectionIndex = 0xfff2 /* Common data. */
+const EM_NDR1 Machine = 57 /* Denso NDR1 microprocessor. */
 
 ```
 
-### <a id="SHN_XINDEX" href="#SHN_XINDEX">const SHN_XINDEX</a>
+### <a id="EM_NDS32" href="#EM_NDS32">const EM_NDS32</a>
 
 ```
-searchKey: elf.SHN_XINDEX
+searchKey: elf.EM_NDS32
+tags: [constant number]
 ```
 
 ```Go
-const SHN_XINDEX SectionIndex = 0xffff /* Escape; index stored elsewhere. */
-
-```
-
-### <a id="SHN_HIRESERVE" href="#SHN_HIRESERVE">const SHN_HIRESERVE</a>
-
-```
-searchKey: elf.SHN_HIRESERVE
-```
-
-```Go
-const SHN_HIRESERVE SectionIndex = 0xffff /* Last of reserved range. */
-
-```
-
-### <a id="SHT_NULL" href="#SHT_NULL">const SHT_NULL</a>
-
-```
-searchKey: elf.SHT_NULL
-```
-
-```Go
-const SHT_NULL SectionType = 0 /* inactive */
-
-```
-
-### <a id="SHT_PROGBITS" href="#SHT_PROGBITS">const SHT_PROGBITS</a>
-
-```
-searchKey: elf.SHT_PROGBITS
-```
-
-```Go
-const SHT_PROGBITS SectionType = 1 /* program defined information */
-
-```
-
-### <a id="SHT_SYMTAB" href="#SHT_SYMTAB">const SHT_SYMTAB</a>
-
-```
-searchKey: elf.SHT_SYMTAB
-```
-
-```Go
-const SHT_SYMTAB SectionType = 2 /* symbol table section */
-
-```
-
-### <a id="SHT_STRTAB" href="#SHT_STRTAB">const SHT_STRTAB</a>
-
-```
-searchKey: elf.SHT_STRTAB
-```
-
-```Go
-const SHT_STRTAB SectionType = 3 /* string table section */
-
-```
-
-### <a id="SHT_RELA" href="#SHT_RELA">const SHT_RELA</a>
-
-```
-searchKey: elf.SHT_RELA
-```
-
-```Go
-const SHT_RELA SectionType = 4 /* relocation section with addends */
-
-```
-
-### <a id="SHT_HASH" href="#SHT_HASH">const SHT_HASH</a>
-
-```
-searchKey: elf.SHT_HASH
-```
-
-```Go
-const SHT_HASH SectionType = 5 /* symbol hash table section */
-
-```
-
-### <a id="SHT_DYNAMIC" href="#SHT_DYNAMIC">const SHT_DYNAMIC</a>
-
-```
-searchKey: elf.SHT_DYNAMIC
-```
-
-```Go
-const SHT_DYNAMIC SectionType = 6 /* dynamic section */
-
-```
-
-### <a id="SHT_NOTE" href="#SHT_NOTE">const SHT_NOTE</a>
-
-```
-searchKey: elf.SHT_NOTE
-```
-
-```Go
-const SHT_NOTE SectionType = 7 /* note section */
-
-```
-
-### <a id="SHT_NOBITS" href="#SHT_NOBITS">const SHT_NOBITS</a>
-
-```
-searchKey: elf.SHT_NOBITS
-```
-
-```Go
-const SHT_NOBITS SectionType = 8 /* no space section */
-
-```
-
-### <a id="SHT_REL" href="#SHT_REL">const SHT_REL</a>
-
-```
-searchKey: elf.SHT_REL
-```
-
-```Go
-const SHT_REL SectionType = 9 /* relocation section - no addends */
-
-```
-
-### <a id="SHT_SHLIB" href="#SHT_SHLIB">const SHT_SHLIB</a>
-
-```
-searchKey: elf.SHT_SHLIB
-```
-
-```Go
-const SHT_SHLIB SectionType = 10 /* reserved - purpose unknown */
-
-```
-
-### <a id="SHT_DYNSYM" href="#SHT_DYNSYM">const SHT_DYNSYM</a>
-
-```
-searchKey: elf.SHT_DYNSYM
-```
-
-```Go
-const SHT_DYNSYM SectionType = 11 /* dynamic symbol table section */
-
-```
-
-### <a id="SHT_INIT_ARRAY" href="#SHT_INIT_ARRAY">const SHT_INIT_ARRAY</a>
-
-```
-searchKey: elf.SHT_INIT_ARRAY
-```
-
-```Go
-const SHT_INIT_ARRAY SectionType = 14 /* Initialization function pointers. */
-
-```
-
-### <a id="SHT_FINI_ARRAY" href="#SHT_FINI_ARRAY">const SHT_FINI_ARRAY</a>
-
-```
-searchKey: elf.SHT_FINI_ARRAY
-```
-
-```Go
-const SHT_FINI_ARRAY SectionType = 15 /* Termination function pointers. */
-
-```
-
-### <a id="SHT_PREINIT_ARRAY" href="#SHT_PREINIT_ARRAY">const SHT_PREINIT_ARRAY</a>
-
-```
-searchKey: elf.SHT_PREINIT_ARRAY
-```
-
-```Go
-const SHT_PREINIT_ARRAY SectionType = 16 /* Pre-initialization function ptrs. */
-
-```
-
-### <a id="SHT_GROUP" href="#SHT_GROUP">const SHT_GROUP</a>
-
-```
-searchKey: elf.SHT_GROUP
-```
-
-```Go
-const SHT_GROUP SectionType = 17 /* Section group. */
-
-```
-
-### <a id="SHT_SYMTAB_SHNDX" href="#SHT_SYMTAB_SHNDX">const SHT_SYMTAB_SHNDX</a>
-
-```
-searchKey: elf.SHT_SYMTAB_SHNDX
-```
-
-```Go
-const SHT_SYMTAB_SHNDX SectionType = 18 /* Section indexes (see SHN_XINDEX). */
-
-```
-
-### <a id="SHT_LOOS" href="#SHT_LOOS">const SHT_LOOS</a>
-
-```
-searchKey: elf.SHT_LOOS
-```
-
-```Go
-const SHT_LOOS SectionType = 0x60000000 /* First of OS specific semantics */
-
-```
-
-### <a id="SHT_GNU_ATTRIBUTES" href="#SHT_GNU_ATTRIBUTES">const SHT_GNU_ATTRIBUTES</a>
-
-```
-searchKey: elf.SHT_GNU_ATTRIBUTES
-```
-
-```Go
-const SHT_GNU_ATTRIBUTES SectionType = 0x6ffffff5 /* GNU object attributes */
-
-```
-
-### <a id="SHT_GNU_HASH" href="#SHT_GNU_HASH">const SHT_GNU_HASH</a>
-
-```
-searchKey: elf.SHT_GNU_HASH
-```
-
-```Go
-const SHT_GNU_HASH SectionType = 0x6ffffff6 /* GNU hash table */
-
-```
-
-### <a id="SHT_GNU_LIBLIST" href="#SHT_GNU_LIBLIST">const SHT_GNU_LIBLIST</a>
-
-```
-searchKey: elf.SHT_GNU_LIBLIST
-```
-
-```Go
-const SHT_GNU_LIBLIST SectionType = 0x6ffffff7 /* GNU prelink library list */
-
-```
-
-### <a id="SHT_GNU_VERDEF" href="#SHT_GNU_VERDEF">const SHT_GNU_VERDEF</a>
-
-```
-searchKey: elf.SHT_GNU_VERDEF
-```
-
-```Go
-const SHT_GNU_VERDEF SectionType = 0x6ffffffd /* GNU version definition section */
-
-```
-
-### <a id="SHT_GNU_VERNEED" href="#SHT_GNU_VERNEED">const SHT_GNU_VERNEED</a>
-
-```
-searchKey: elf.SHT_GNU_VERNEED
-```
-
-```Go
-const SHT_GNU_VERNEED SectionType = 0x6ffffffe /* GNU version needs section */
-
-```
-
-### <a id="SHT_GNU_VERSYM" href="#SHT_GNU_VERSYM">const SHT_GNU_VERSYM</a>
-
-```
-searchKey: elf.SHT_GNU_VERSYM
-```
-
-```Go
-const SHT_GNU_VERSYM SectionType = 0x6fffffff /* GNU version symbol table */
-
-```
-
-### <a id="SHT_HIOS" href="#SHT_HIOS">const SHT_HIOS</a>
-
-```
-searchKey: elf.SHT_HIOS
-```
-
-```Go
-const SHT_HIOS SectionType = 0x6fffffff /* Last of OS specific semantics */
-
-```
-
-### <a id="SHT_LOPROC" href="#SHT_LOPROC">const SHT_LOPROC</a>
-
-```
-searchKey: elf.SHT_LOPROC
-```
-
-```Go
-const SHT_LOPROC SectionType = 0x70000000 /* reserved range for processor */
-
-```
-
-### <a id="SHT_MIPS_ABIFLAGS" href="#SHT_MIPS_ABIFLAGS">const SHT_MIPS_ABIFLAGS</a>
-
-```
-searchKey: elf.SHT_MIPS_ABIFLAGS
-```
-
-```Go
-const SHT_MIPS_ABIFLAGS SectionType = 0x7000002a /* .MIPS.abiflags */
-
-```
-
-### <a id="SHT_HIPROC" href="#SHT_HIPROC">const SHT_HIPROC</a>
-
-```
-searchKey: elf.SHT_HIPROC
-```
-
-```Go
-const SHT_HIPROC SectionType = 0x7fffffff /* specific section header types */
-
-```
-
-### <a id="SHT_LOUSER" href="#SHT_LOUSER">const SHT_LOUSER</a>
-
-```
-searchKey: elf.SHT_LOUSER
-```
-
-```Go
-const SHT_LOUSER SectionType = 0x80000000 /* reserved range for application */
-
-```
-
-### <a id="SHT_HIUSER" href="#SHT_HIUSER">const SHT_HIUSER</a>
-
-```
-searchKey: elf.SHT_HIUSER
-```
-
-```Go
-const SHT_HIUSER SectionType = 0xffffffff /* specific indexes */
-
-```
-
-### <a id="SHF_WRITE" href="#SHF_WRITE">const SHF_WRITE</a>
-
-```
-searchKey: elf.SHF_WRITE
-```
-
-```Go
-const SHF_WRITE SectionFlag = 0x1 /* Section contains writable data. */
-
-```
-
-### <a id="SHF_ALLOC" href="#SHF_ALLOC">const SHF_ALLOC</a>
-
-```
-searchKey: elf.SHF_ALLOC
-```
-
-```Go
-const SHF_ALLOC SectionFlag = 0x2 /* Section occupies memory. */
-
-```
-
-### <a id="SHF_EXECINSTR" href="#SHF_EXECINSTR">const SHF_EXECINSTR</a>
-
-```
-searchKey: elf.SHF_EXECINSTR
-```
-
-```Go
-const SHF_EXECINSTR SectionFlag = 0x4 /* Section contains instructions. */
-
-```
-
-### <a id="SHF_MERGE" href="#SHF_MERGE">const SHF_MERGE</a>
-
-```
-searchKey: elf.SHF_MERGE
-```
-
-```Go
-const SHF_MERGE SectionFlag = 0x10 /* Section may be merged. */
-
-```
-
-### <a id="SHF_STRINGS" href="#SHF_STRINGS">const SHF_STRINGS</a>
-
-```
-searchKey: elf.SHF_STRINGS
-```
-
-```Go
-const SHF_STRINGS SectionFlag = 0x20 /* Section contains strings. */
-
-```
-
-### <a id="SHF_INFO_LINK" href="#SHF_INFO_LINK">const SHF_INFO_LINK</a>
-
-```
-searchKey: elf.SHF_INFO_LINK
-```
-
-```Go
-const SHF_INFO_LINK SectionFlag = 0x40 /* sh_info holds section index. */
-
-```
-
-### <a id="SHF_LINK_ORDER" href="#SHF_LINK_ORDER">const SHF_LINK_ORDER</a>
-
-```
-searchKey: elf.SHF_LINK_ORDER
-```
-
-```Go
-const SHF_LINK_ORDER SectionFlag = 0x80 /* Special ordering requirements. */
-
-```
-
-### <a id="SHF_OS_NONCONFORMING" href="#SHF_OS_NONCONFORMING">const SHF_OS_NONCONFORMING</a>
-
-```
-searchKey: elf.SHF_OS_NONCONFORMING
-```
-
-```Go
-const SHF_OS_NONCONFORMING SectionFlag = 0x100 /* OS-specific processing required. */
-
-```
-
-### <a id="SHF_GROUP" href="#SHF_GROUP">const SHF_GROUP</a>
-
-```
-searchKey: elf.SHF_GROUP
-```
-
-```Go
-const SHF_GROUP SectionFlag = 0x200 /* Member of section group. */
-
-```
-
-### <a id="SHF_TLS" href="#SHF_TLS">const SHF_TLS</a>
-
-```
-searchKey: elf.SHF_TLS
-```
-
-```Go
-const SHF_TLS SectionFlag = 0x400 /* Section contains TLS data. */
-
-```
-
-### <a id="SHF_COMPRESSED" href="#SHF_COMPRESSED">const SHF_COMPRESSED</a>
-
-```
-searchKey: elf.SHF_COMPRESSED
-```
-
-```Go
-const SHF_COMPRESSED SectionFlag = 0x800 /* Section is compressed. */
-
-```
-
-### <a id="SHF_MASKOS" href="#SHF_MASKOS">const SHF_MASKOS</a>
-
-```
-searchKey: elf.SHF_MASKOS
-```
-
-```Go
-const SHF_MASKOS SectionFlag = 0x0ff00000 /* OS-specific semantics. */
-
-```
-
-### <a id="SHF_MASKPROC" href="#SHF_MASKPROC">const SHF_MASKPROC</a>
-
-```
-searchKey: elf.SHF_MASKPROC
-```
-
-```Go
-const SHF_MASKPROC SectionFlag = 0xf0000000 /* Processor-specific semantics. */
-
-```
-
-### <a id="COMPRESS_ZLIB" href="#COMPRESS_ZLIB">const COMPRESS_ZLIB</a>
-
-```
-searchKey: elf.COMPRESS_ZLIB
-```
-
-```Go
-const COMPRESS_ZLIB CompressionType = 1 /* ZLIB compression. */
-
-```
-
-### <a id="COMPRESS_LOOS" href="#COMPRESS_LOOS">const COMPRESS_LOOS</a>
-
-```
-searchKey: elf.COMPRESS_LOOS
-```
-
-```Go
-const COMPRESS_LOOS CompressionType = 0x60000000 /* First OS-specific. */
-
-```
-
-### <a id="COMPRESS_HIOS" href="#COMPRESS_HIOS">const COMPRESS_HIOS</a>
-
-```
-searchKey: elf.COMPRESS_HIOS
-```
-
-```Go
-const COMPRESS_HIOS CompressionType = 0x6fffffff /* Last OS-specific. */
-
-```
-
-### <a id="COMPRESS_LOPROC" href="#COMPRESS_LOPROC">const COMPRESS_LOPROC</a>
-
-```
-searchKey: elf.COMPRESS_LOPROC
-```
-
-```Go
-const COMPRESS_LOPROC CompressionType = 0x70000000 /* First processor-specific type. */
-
-```
-
-### <a id="COMPRESS_HIPROC" href="#COMPRESS_HIPROC">const COMPRESS_HIPROC</a>
-
-```
-searchKey: elf.COMPRESS_HIPROC
-```
-
-```Go
-const COMPRESS_HIPROC CompressionType = 0x7fffffff /* Last processor-specific type. */
-
-```
-
-### <a id="PT_NULL" href="#PT_NULL">const PT_NULL</a>
-
-```
-searchKey: elf.PT_NULL
-```
-
-```Go
-const PT_NULL ProgType = 0 /* Unused entry. */
-
-```
-
-### <a id="PT_LOAD" href="#PT_LOAD">const PT_LOAD</a>
-
-```
-searchKey: elf.PT_LOAD
-```
-
-```Go
-const PT_LOAD ProgType = 1 /* Loadable segment. */
-
-```
-
-### <a id="PT_DYNAMIC" href="#PT_DYNAMIC">const PT_DYNAMIC</a>
-
-```
-searchKey: elf.PT_DYNAMIC
-```
-
-```Go
-const PT_DYNAMIC ProgType = 2 /* Dynamic linking information segment. */
-
-```
-
-### <a id="PT_INTERP" href="#PT_INTERP">const PT_INTERP</a>
-
-```
-searchKey: elf.PT_INTERP
-```
-
-```Go
-const PT_INTERP ProgType = 3 /* Pathname of interpreter. */
-
-```
-
-### <a id="PT_NOTE" href="#PT_NOTE">const PT_NOTE</a>
-
-```
-searchKey: elf.PT_NOTE
-```
-
-```Go
-const PT_NOTE ProgType = 4 /* Auxiliary information. */
-
-```
-
-### <a id="PT_SHLIB" href="#PT_SHLIB">const PT_SHLIB</a>
-
-```
-searchKey: elf.PT_SHLIB
-```
-
-```Go
-const PT_SHLIB ProgType = 5 /* Reserved (not used). */
-
-```
-
-### <a id="PT_PHDR" href="#PT_PHDR">const PT_PHDR</a>
-
-```
-searchKey: elf.PT_PHDR
-```
-
-```Go
-const PT_PHDR ProgType = 6 /* Location of program header itself. */
-
-```
-
-### <a id="PT_TLS" href="#PT_TLS">const PT_TLS</a>
-
-```
-searchKey: elf.PT_TLS
-```
-
-```Go
-const PT_TLS ProgType = 7 /* Thread local storage segment */
-
-```
-
-### <a id="PT_LOOS" href="#PT_LOOS">const PT_LOOS</a>
-
-```
-searchKey: elf.PT_LOOS
-```
-
-```Go
-const PT_LOOS ProgType = 0x60000000 /* First OS-specific. */
-
-```
-
-### <a id="PT_GNU_EH_FRAME" href="#PT_GNU_EH_FRAME">const PT_GNU_EH_FRAME</a>
-
-```
-searchKey: elf.PT_GNU_EH_FRAME
-```
-
-```Go
-const PT_GNU_EH_FRAME ProgType = 0x6474e550 /* Frame unwind information */
-
-```
-
-### <a id="PT_GNU_STACK" href="#PT_GNU_STACK">const PT_GNU_STACK</a>
-
-```
-searchKey: elf.PT_GNU_STACK
-```
-
-```Go
-const PT_GNU_STACK ProgType = 0x6474e551 /* Stack flags */
-
-```
-
-### <a id="PT_GNU_RELRO" href="#PT_GNU_RELRO">const PT_GNU_RELRO</a>
-
-```
-searchKey: elf.PT_GNU_RELRO
-```
-
-```Go
-const PT_GNU_RELRO ProgType = 0x6474e552 /* Read only after relocs */
-
-```
-
-### <a id="PT_GNU_PROPERTY" href="#PT_GNU_PROPERTY">const PT_GNU_PROPERTY</a>
-
-```
-searchKey: elf.PT_GNU_PROPERTY
-```
-
-```Go
-const PT_GNU_PROPERTY ProgType = 0x6474e553 /* GNU property */
-
-```
-
-### <a id="PT_GNU_MBIND_LO" href="#PT_GNU_MBIND_LO">const PT_GNU_MBIND_LO</a>
-
-```
-searchKey: elf.PT_GNU_MBIND_LO
-```
-
-```Go
-const PT_GNU_MBIND_LO ProgType = 0x6474e555 /* Mbind segments start */
-
-```
-
-### <a id="PT_GNU_MBIND_HI" href="#PT_GNU_MBIND_HI">const PT_GNU_MBIND_HI</a>
-
-```
-searchKey: elf.PT_GNU_MBIND_HI
-```
-
-```Go
-const PT_GNU_MBIND_HI ProgType = 0x6474f554 /* Mbind segments finish */
-
-```
-
-### <a id="PT_PAX_FLAGS" href="#PT_PAX_FLAGS">const PT_PAX_FLAGS</a>
-
-```
-searchKey: elf.PT_PAX_FLAGS
-```
-
-```Go
-const PT_PAX_FLAGS ProgType = 0x65041580 /* PAX flags */
-
-```
-
-### <a id="PT_OPENBSD_RANDOMIZE" href="#PT_OPENBSD_RANDOMIZE">const PT_OPENBSD_RANDOMIZE</a>
-
-```
-searchKey: elf.PT_OPENBSD_RANDOMIZE
-```
-
-```Go
-const PT_OPENBSD_RANDOMIZE ProgType = 0x65a3dbe6 /* Random data */
-
-```
-
-### <a id="PT_OPENBSD_WXNEEDED" href="#PT_OPENBSD_WXNEEDED">const PT_OPENBSD_WXNEEDED</a>
-
-```
-searchKey: elf.PT_OPENBSD_WXNEEDED
-```
-
-```Go
-const PT_OPENBSD_WXNEEDED ProgType = 0x65a3dbe7 /* W^X violations */
-
-```
-
-### <a id="PT_OPENBSD_BOOTDATA" href="#PT_OPENBSD_BOOTDATA">const PT_OPENBSD_BOOTDATA</a>
-
-```
-searchKey: elf.PT_OPENBSD_BOOTDATA
-```
-
-```Go
-const PT_OPENBSD_BOOTDATA ProgType = 0x65a41be6 /* Boot arguments */
-
-```
-
-### <a id="PT_SUNW_EH_FRAME" href="#PT_SUNW_EH_FRAME">const PT_SUNW_EH_FRAME</a>
-
-```
-searchKey: elf.PT_SUNW_EH_FRAME
-```
-
-```Go
-const PT_SUNW_EH_FRAME ProgType = 0x6474e550 /* Frame unwind information */
-
-```
-
-### <a id="PT_SUNWSTACK" href="#PT_SUNWSTACK">const PT_SUNWSTACK</a>
-
-```
-searchKey: elf.PT_SUNWSTACK
-```
-
-```Go
-const PT_SUNWSTACK ProgType = 0x6ffffffb /* Stack segment */
-
-```
-
-### <a id="PT_HIOS" href="#PT_HIOS">const PT_HIOS</a>
-
-```
-searchKey: elf.PT_HIOS
-```
-
-```Go
-const PT_HIOS ProgType = 0x6fffffff /* Last OS-specific. */
-
-```
-
-### <a id="PT_LOPROC" href="#PT_LOPROC">const PT_LOPROC</a>
-
-```
-searchKey: elf.PT_LOPROC
-```
-
-```Go
-const PT_LOPROC ProgType = 0x70000000 /* First processor-specific type. */
-
-```
-
-### <a id="PT_ARM_ARCHEXT" href="#PT_ARM_ARCHEXT">const PT_ARM_ARCHEXT</a>
-
-```
-searchKey: elf.PT_ARM_ARCHEXT
-```
-
-```Go
-const PT_ARM_ARCHEXT ProgType = 0x70000000 /* Architecture compatibility */
-
-```
-
-### <a id="PT_ARM_EXIDX" href="#PT_ARM_EXIDX">const PT_ARM_EXIDX</a>
-
-```
-searchKey: elf.PT_ARM_EXIDX
-```
-
-```Go
-const PT_ARM_EXIDX ProgType = 0x70000001 /* Exception unwind tables */
-
-```
-
-### <a id="PT_AARCH64_ARCHEXT" href="#PT_AARCH64_ARCHEXT">const PT_AARCH64_ARCHEXT</a>
-
-```
-searchKey: elf.PT_AARCH64_ARCHEXT
-```
-
-```Go
-const PT_AARCH64_ARCHEXT ProgType = 0x70000000 /* Architecture compatibility */
-
-```
-
-### <a id="PT_AARCH64_UNWIND" href="#PT_AARCH64_UNWIND">const PT_AARCH64_UNWIND</a>
-
-```
-searchKey: elf.PT_AARCH64_UNWIND
-```
-
-```Go
-const PT_AARCH64_UNWIND ProgType = 0x70000001 /* Exception unwind tables */
-
-```
-
-### <a id="PT_MIPS_REGINFO" href="#PT_MIPS_REGINFO">const PT_MIPS_REGINFO</a>
-
-```
-searchKey: elf.PT_MIPS_REGINFO
-```
-
-```Go
-const PT_MIPS_REGINFO ProgType = 0x70000000 /* Register usage */
-
-```
-
-### <a id="PT_MIPS_RTPROC" href="#PT_MIPS_RTPROC">const PT_MIPS_RTPROC</a>
-
-```
-searchKey: elf.PT_MIPS_RTPROC
-```
-
-```Go
-const PT_MIPS_RTPROC ProgType = 0x70000001 /* Runtime procedures */
-
-```
-
-### <a id="PT_MIPS_OPTIONS" href="#PT_MIPS_OPTIONS">const PT_MIPS_OPTIONS</a>
-
-```
-searchKey: elf.PT_MIPS_OPTIONS
-```
-
-```Go
-const PT_MIPS_OPTIONS ProgType = 0x70000002 /* Options */
-
-```
-
-### <a id="PT_MIPS_ABIFLAGS" href="#PT_MIPS_ABIFLAGS">const PT_MIPS_ABIFLAGS</a>
-
-```
-searchKey: elf.PT_MIPS_ABIFLAGS
-```
-
-```Go
-const PT_MIPS_ABIFLAGS ProgType = 0x70000003 /* ABI flags */
-
-```
-
-### <a id="PT_S390_PGSTE" href="#PT_S390_PGSTE">const PT_S390_PGSTE</a>
-
-```
-searchKey: elf.PT_S390_PGSTE
-```
-
-```Go
-const PT_S390_PGSTE ProgType = 0x70000000 /* 4k page table size */
-
-```
-
-### <a id="PT_HIPROC" href="#PT_HIPROC">const PT_HIPROC</a>
-
-```
-searchKey: elf.PT_HIPROC
-```
-
-```Go
-const PT_HIPROC ProgType = 0x7fffffff /* Last processor-specific type. */
-
-```
-
-### <a id="PF_X" href="#PF_X">const PF_X</a>
-
-```
-searchKey: elf.PF_X
-```
-
-```Go
-const PF_X ProgFlag = 0x1 /* Executable. */
-
-```
-
-### <a id="PF_W" href="#PF_W">const PF_W</a>
-
-```
-searchKey: elf.PF_W
-```
-
-```Go
-const PF_W ProgFlag = 0x2 /* Writable. */
-
-```
-
-### <a id="PF_R" href="#PF_R">const PF_R</a>
-
-```
-searchKey: elf.PF_R
-```
-
-```Go
-const PF_R ProgFlag = 0x4 /* Readable. */
-
-```
-
-### <a id="PF_MASKOS" href="#PF_MASKOS">const PF_MASKOS</a>
-
-```
-searchKey: elf.PF_MASKOS
-```
-
-```Go
-const PF_MASKOS ProgFlag = 0x0ff00000 /* Operating system-specific. */
-
-```
-
-### <a id="PF_MASKPROC" href="#PF_MASKPROC">const PF_MASKPROC</a>
-
-```
-searchKey: elf.PF_MASKPROC
-```
-
-```Go
-const PF_MASKPROC ProgFlag = 0xf0000000 /* Processor-specific. */
-
-```
-
-### <a id="DT_NULL" href="#DT_NULL">const DT_NULL</a>
-
-```
-searchKey: elf.DT_NULL
-```
-
-```Go
-const DT_NULL DynTag = 0 /* Terminating entry. */
-
-```
-
-### <a id="DT_NEEDED" href="#DT_NEEDED">const DT_NEEDED</a>
-
-```
-searchKey: elf.DT_NEEDED
-```
-
-```Go
-const DT_NEEDED DynTag = 1 /* String table offset of a needed shared library. */
-
-```
-
-### <a id="DT_PLTRELSZ" href="#DT_PLTRELSZ">const DT_PLTRELSZ</a>
-
-```
-searchKey: elf.DT_PLTRELSZ
-```
-
-```Go
-const DT_PLTRELSZ DynTag = 2 /* Total size in bytes of PLT relocations. */
-
-```
-
-### <a id="DT_PLTGOT" href="#DT_PLTGOT">const DT_PLTGOT</a>
-
-```
-searchKey: elf.DT_PLTGOT
-```
-
-```Go
-const DT_PLTGOT DynTag = 3 /* Processor-dependent address. */
-
-```
-
-### <a id="DT_HASH" href="#DT_HASH">const DT_HASH</a>
-
-```
-searchKey: elf.DT_HASH
-```
-
-```Go
-const DT_HASH DynTag = 4 /* Address of symbol hash table. */
-
-```
-
-### <a id="DT_STRTAB" href="#DT_STRTAB">const DT_STRTAB</a>
-
-```
-searchKey: elf.DT_STRTAB
-```
-
-```Go
-const DT_STRTAB DynTag = 5 /* Address of string table. */
-
-```
-
-### <a id="DT_SYMTAB" href="#DT_SYMTAB">const DT_SYMTAB</a>
-
-```
-searchKey: elf.DT_SYMTAB
-```
-
-```Go
-const DT_SYMTAB DynTag = 6 /* Address of symbol table. */
-
-```
-
-### <a id="DT_RELA" href="#DT_RELA">const DT_RELA</a>
-
-```
-searchKey: elf.DT_RELA
-```
-
-```Go
-const DT_RELA DynTag = 7 /* Address of ElfNN_Rela relocations. */
-
-```
-
-### <a id="DT_RELASZ" href="#DT_RELASZ">const DT_RELASZ</a>
-
-```
-searchKey: elf.DT_RELASZ
-```
-
-```Go
-const DT_RELASZ DynTag = 8 /* Total size of ElfNN_Rela relocations. */
-
-```
-
-### <a id="DT_RELAENT" href="#DT_RELAENT">const DT_RELAENT</a>
-
-```
-searchKey: elf.DT_RELAENT
-```
-
-```Go
-const DT_RELAENT DynTag = 9 /* Size of each ElfNN_Rela relocation entry. */
-
-```
-
-### <a id="DT_STRSZ" href="#DT_STRSZ">const DT_STRSZ</a>
-
-```
-searchKey: elf.DT_STRSZ
-```
-
-```Go
-const DT_STRSZ DynTag = 10 /* Size of string table. */
-
-```
-
-### <a id="DT_SYMENT" href="#DT_SYMENT">const DT_SYMENT</a>
-
-```
-searchKey: elf.DT_SYMENT
-```
-
-```Go
-const DT_SYMENT DynTag = 11 /* Size of each symbol table entry. */
-
-```
-
-### <a id="DT_INIT" href="#DT_INIT">const DT_INIT</a>
-
-```
-searchKey: elf.DT_INIT
-```
-
-```Go
-const DT_INIT DynTag = 12 /* Address of initialization function. */
-
-```
-
-### <a id="DT_FINI" href="#DT_FINI">const DT_FINI</a>
-
-```
-searchKey: elf.DT_FINI
-```
-
-```Go
-const DT_FINI DynTag = 13 /* Address of finalization function. */
-
-```
-
-### <a id="DT_SONAME" href="#DT_SONAME">const DT_SONAME</a>
-
-```
-searchKey: elf.DT_SONAME
-```
-
-```Go
-const DT_SONAME DynTag = 14 /* String table offset of shared object name. */
-
-```
-
-### <a id="DT_RPATH" href="#DT_RPATH">const DT_RPATH</a>
-
-```
-searchKey: elf.DT_RPATH
-```
-
-```Go
-const DT_RPATH DynTag = 15 /* String table offset of library path. [sup] */
-
-```
-
-### <a id="DT_SYMBOLIC" href="#DT_SYMBOLIC">const DT_SYMBOLIC</a>
-
-```
-searchKey: elf.DT_SYMBOLIC
-```
-
-```Go
-const DT_SYMBOLIC DynTag = 16 /* Indicates "symbolic" linking. [sup] */
-
-```
-
-### <a id="DT_REL" href="#DT_REL">const DT_REL</a>
-
-```
-searchKey: elf.DT_REL
-```
-
-```Go
-const DT_REL DynTag = 17 /* Address of ElfNN_Rel relocations. */
-
-```
-
-### <a id="DT_RELSZ" href="#DT_RELSZ">const DT_RELSZ</a>
-
-```
-searchKey: elf.DT_RELSZ
-```
-
-```Go
-const DT_RELSZ DynTag = 18 /* Total size of ElfNN_Rel relocations. */
-
-```
-
-### <a id="DT_RELENT" href="#DT_RELENT">const DT_RELENT</a>
-
-```
-searchKey: elf.DT_RELENT
-```
-
-```Go
-const DT_RELENT DynTag = 19 /* Size of each ElfNN_Rel relocation. */
-
-```
-
-### <a id="DT_PLTREL" href="#DT_PLTREL">const DT_PLTREL</a>
-
-```
-searchKey: elf.DT_PLTREL
-```
-
-```Go
-const DT_PLTREL DynTag = 20 /* Type of relocation used for PLT. */
-
-```
-
-### <a id="DT_DEBUG" href="#DT_DEBUG">const DT_DEBUG</a>
-
-```
-searchKey: elf.DT_DEBUG
-```
-
-```Go
-const DT_DEBUG DynTag = 21 /* Reserved (not used). */
-
-```
-
-### <a id="DT_TEXTREL" href="#DT_TEXTREL">const DT_TEXTREL</a>
-
-```
-searchKey: elf.DT_TEXTREL
-```
-
-```Go
-const DT_TEXTREL DynTag /* Indicates there may be relocations in non-writable segments. [sup] */
+const EM_NDS32 Machine /* Andes Technology compact code size embedded RISC processor family */
  = ...
 ```
 
-### <a id="DT_JMPREL" href="#DT_JMPREL">const DT_JMPREL</a>
+### <a id="EM_NONE" href="#EM_NONE">const EM_NONE</a>
 
 ```
-searchKey: elf.DT_JMPREL
-```
-
-```Go
-const DT_JMPREL DynTag = 23 /* Address of PLT relocations. */
-
-```
-
-### <a id="DT_BIND_NOW" href="#DT_BIND_NOW">const DT_BIND_NOW</a>
-
-```
-searchKey: elf.DT_BIND_NOW
+searchKey: elf.EM_NONE
+tags: [constant number]
 ```
 
 ```Go
-const DT_BIND_NOW DynTag = 24 /* [sup] */
+const EM_NONE Machine = 0 /* Unknown machine. */
 
 ```
 
-### <a id="DT_INIT_ARRAY" href="#DT_INIT_ARRAY">const DT_INIT_ARRAY</a>
+### <a id="EM_NORC" href="#EM_NORC">const EM_NORC</a>
 
 ```
-searchKey: elf.DT_INIT_ARRAY
-```
-
-```Go
-const DT_INIT_ARRAY DynTag = 25 /* Address of the array of pointers to initialization functions */
-
-```
-
-### <a id="DT_FINI_ARRAY" href="#DT_FINI_ARRAY">const DT_FINI_ARRAY</a>
-
-```
-searchKey: elf.DT_FINI_ARRAY
+searchKey: elf.EM_NORC
+tags: [constant number]
 ```
 
 ```Go
-const DT_FINI_ARRAY DynTag = 26 /* Address of the array of pointers to termination functions */
+const EM_NORC Machine = 218 /* Nanoradio Optimized RISC */
 
 ```
 
-### <a id="DT_INIT_ARRAYSZ" href="#DT_INIT_ARRAYSZ">const DT_INIT_ARRAYSZ</a>
+### <a id="EM_NS32K" href="#EM_NS32K">const EM_NS32K</a>
 
 ```
-searchKey: elf.DT_INIT_ARRAYSZ
-```
-
-```Go
-const DT_INIT_ARRAYSZ DynTag = 27 /* Size in bytes of the array of initialization functions. */
-
-```
-
-### <a id="DT_FINI_ARRAYSZ" href="#DT_FINI_ARRAYSZ">const DT_FINI_ARRAYSZ</a>
-
-```
-searchKey: elf.DT_FINI_ARRAYSZ
+searchKey: elf.EM_NS32K
+tags: [constant number]
 ```
 
 ```Go
-const DT_FINI_ARRAYSZ DynTag = 28 /* Size in bytes of the array of termination functions. */
+const EM_NS32K Machine = 97 /* National Semiconductor 32000 series */
 
 ```
 
-### <a id="DT_RUNPATH" href="#DT_RUNPATH">const DT_RUNPATH</a>
+### <a id="EM_OPEN8" href="#EM_OPEN8">const EM_OPEN8</a>
 
 ```
-searchKey: elf.DT_RUNPATH
+searchKey: elf.EM_OPEN8
+tags: [constant number]
 ```
 
 ```Go
-const DT_RUNPATH DynTag /* String table offset of a null-terminated library search path string. */
+const EM_OPEN8 Machine = 196 /* Open8 8-bit RISC soft processor core */
+
+```
+
+### <a id="EM_OPENRISC" href="#EM_OPENRISC">const EM_OPENRISC</a>
+
+```
+searchKey: elf.EM_OPENRISC
+tags: [constant number]
+```
+
+```Go
+const EM_OPENRISC Machine = 92 /* OpenRISC 32-bit embedded processor */
+
+```
+
+### <a id="EM_PARISC" href="#EM_PARISC">const EM_PARISC</a>
+
+```
+searchKey: elf.EM_PARISC
+tags: [constant number]
+```
+
+```Go
+const EM_PARISC Machine = 15 /* HP PA-RISC. */
+
+```
+
+### <a id="EM_PCP" href="#EM_PCP">const EM_PCP</a>
+
+```
+searchKey: elf.EM_PCP
+tags: [constant number]
+```
+
+```Go
+const EM_PCP Machine = 55 /* Siemens PCP. */
+
+```
+
+### <a id="EM_PDP10" href="#EM_PDP10">const EM_PDP10</a>
+
+```
+searchKey: elf.EM_PDP10
+tags: [constant number]
+```
+
+```Go
+const EM_PDP10 Machine = 64 /* Digital Equipment Corp. PDP-10 */
+
+```
+
+### <a id="EM_PDP11" href="#EM_PDP11">const EM_PDP11</a>
+
+```
+searchKey: elf.EM_PDP11
+tags: [constant number]
+```
+
+```Go
+const EM_PDP11 Machine = 65 /* Digital Equipment Corp. PDP-11 */
+
+```
+
+### <a id="EM_PDSP" href="#EM_PDSP">const EM_PDSP</a>
+
+```
+searchKey: elf.EM_PDSP
+tags: [constant number]
+```
+
+```Go
+const EM_PDSP Machine = 63 /* Sony DSP Processor */
+
+```
+
+### <a id="EM_PJ" href="#EM_PJ">const EM_PJ</a>
+
+```
+searchKey: elf.EM_PJ
+tags: [constant number]
+```
+
+```Go
+const EM_PJ Machine = 91 /* picoJava */
+
+```
+
+### <a id="EM_PPC" href="#EM_PPC">const EM_PPC</a>
+
+```
+searchKey: elf.EM_PPC
+tags: [constant number]
+```
+
+```Go
+const EM_PPC Machine = 20 /* PowerPC 32-bit. */
+
+```
+
+### <a id="EM_PPC64" href="#EM_PPC64">const EM_PPC64</a>
+
+```
+searchKey: elf.EM_PPC64
+tags: [constant number]
+```
+
+```Go
+const EM_PPC64 Machine = 21 /* PowerPC 64-bit. */
+
+```
+
+### <a id="EM_PRISM" href="#EM_PRISM">const EM_PRISM</a>
+
+```
+searchKey: elf.EM_PRISM
+tags: [constant number]
+```
+
+```Go
+const EM_PRISM Machine = 82 /* SiTera Prism */
+
+```
+
+### <a id="EM_QDSP6" href="#EM_QDSP6">const EM_QDSP6</a>
+
+```
+searchKey: elf.EM_QDSP6
+tags: [constant number]
+```
+
+```Go
+const EM_QDSP6 Machine = 164 /* QUALCOMM DSP6 Processor */
+
+```
+
+### <a id="EM_R32C" href="#EM_R32C">const EM_R32C</a>
+
+```
+searchKey: elf.EM_R32C
+tags: [constant number]
+```
+
+```Go
+const EM_R32C Machine = 162 /* Renesas R32C series microprocessors */
+
+```
+
+### <a id="EM_RCE" href="#EM_RCE">const EM_RCE</a>
+
+```
+searchKey: elf.EM_RCE
+tags: [constant number]
+```
+
+```Go
+const EM_RCE Machine = 39 /* Motorola RCE. */
+
+```
+
+### <a id="EM_RH32" href="#EM_RH32">const EM_RH32</a>
+
+```
+searchKey: elf.EM_RH32
+tags: [constant number]
+```
+
+```Go
+const EM_RH32 Machine = 38 /* TRW RH-32. */
+
+```
+
+### <a id="EM_RISCV" href="#EM_RISCV">const EM_RISCV</a>
+
+```
+searchKey: elf.EM_RISCV
+tags: [constant number]
+```
+
+```Go
+const EM_RISCV Machine = 243 /* RISC-V */
+
+```
+
+### <a id="EM_RL78" href="#EM_RL78">const EM_RL78</a>
+
+```
+searchKey: elf.EM_RL78
+tags: [constant number]
+```
+
+```Go
+const EM_RL78 Machine = 197 /* Renesas RL78 family */
+
+```
+
+### <a id="EM_RS08" href="#EM_RS08">const EM_RS08</a>
+
+```
+searchKey: elf.EM_RS08
+tags: [constant number]
+```
+
+```Go
+const EM_RS08 Machine = 132 /* Freescale RS08 embedded processor */
+
+```
+
+### <a id="EM_RX" href="#EM_RX">const EM_RX</a>
+
+```
+searchKey: elf.EM_RX
+tags: [constant number]
+```
+
+```Go
+const EM_RX Machine = 173 /* Renesas RX family */
+
+```
+
+### <a id="EM_S370" href="#EM_S370">const EM_S370</a>
+
+```
+searchKey: elf.EM_S370
+tags: [constant number]
+```
+
+```Go
+const EM_S370 Machine = 9 /* IBM System/370. */
+
+```
+
+### <a id="EM_S390" href="#EM_S390">const EM_S390</a>
+
+```
+searchKey: elf.EM_S390
+tags: [constant number]
+```
+
+```Go
+const EM_S390 Machine = 22 /* IBM System/390. */
+
+```
+
+### <a id="EM_SCORE7" href="#EM_SCORE7">const EM_SCORE7</a>
+
+```
+searchKey: elf.EM_SCORE7
+tags: [constant number]
+```
+
+```Go
+const EM_SCORE7 Machine = 135 /* Sunplus S+core7 RISC processor */
+
+```
+
+### <a id="EM_SEP" href="#EM_SEP">const EM_SEP</a>
+
+```
+searchKey: elf.EM_SEP
+tags: [constant number]
+```
+
+```Go
+const EM_SEP Machine = 108 /* Sharp embedded microprocessor */
+
+```
+
+### <a id="EM_SE_C17" href="#EM_SE_C17">const EM_SE_C17</a>
+
+```
+searchKey: elf.EM_SE_C17
+tags: [constant number]
+```
+
+```Go
+const EM_SE_C17 Machine = 139 /* Seiko Epson C17 family */
+
+```
+
+### <a id="EM_SE_C33" href="#EM_SE_C33">const EM_SE_C33</a>
+
+```
+searchKey: elf.EM_SE_C33
+tags: [constant number]
+```
+
+```Go
+const EM_SE_C33 Machine = 107 /* S1C33 Family of Seiko Epson processors */
+
+```
+
+### <a id="EM_SH" href="#EM_SH">const EM_SH</a>
+
+```
+searchKey: elf.EM_SH
+tags: [constant number]
+```
+
+```Go
+const EM_SH Machine = 42 /* Hitachi SH. */
+
+```
+
+### <a id="EM_SHARC" href="#EM_SHARC">const EM_SHARC</a>
+
+```
+searchKey: elf.EM_SHARC
+tags: [constant number]
+```
+
+```Go
+const EM_SHARC Machine = 133 /* Analog Devices SHARC family of 32-bit DSP processors */
+
+```
+
+### <a id="EM_SLE9X" href="#EM_SLE9X">const EM_SLE9X</a>
+
+```
+searchKey: elf.EM_SLE9X
+tags: [constant number]
+```
+
+```Go
+const EM_SLE9X Machine = 179 /* Infineon Technologies SLE9X core */
+
+```
+
+### <a id="EM_SNP1K" href="#EM_SNP1K">const EM_SNP1K</a>
+
+```
+searchKey: elf.EM_SNP1K
+tags: [constant number]
+```
+
+```Go
+const EM_SNP1K Machine = 99 /* Trebia SNP 1000 processor */
+
+```
+
+### <a id="EM_SPARC" href="#EM_SPARC">const EM_SPARC</a>
+
+```
+searchKey: elf.EM_SPARC
+tags: [constant number]
+```
+
+```Go
+const EM_SPARC Machine = 2 /* Sun SPARC. */
+
+```
+
+### <a id="EM_SPARC32PLUS" href="#EM_SPARC32PLUS">const EM_SPARC32PLUS</a>
+
+```
+searchKey: elf.EM_SPARC32PLUS
+tags: [constant number]
+```
+
+```Go
+const EM_SPARC32PLUS Machine = 18 /* SPARC v8plus. */
+
+```
+
+### <a id="EM_SPARCV9" href="#EM_SPARCV9">const EM_SPARCV9</a>
+
+```
+searchKey: elf.EM_SPARCV9
+tags: [constant number]
+```
+
+```Go
+const EM_SPARCV9 Machine = 43 /* SPARC v9 64-bit. */
+
+```
+
+### <a id="EM_ST100" href="#EM_ST100">const EM_ST100</a>
+
+```
+searchKey: elf.EM_ST100
+tags: [constant number]
+```
+
+```Go
+const EM_ST100 Machine = 60 /* STMicroelectronics ST100 processor. */
+
+```
+
+### <a id="EM_ST19" href="#EM_ST19">const EM_ST19</a>
+
+```
+searchKey: elf.EM_ST19
+tags: [constant number]
+```
+
+```Go
+const EM_ST19 Machine = 74 /* STMicroelectronics ST19 8-bit microcontroller */
+
+```
+
+### <a id="EM_ST200" href="#EM_ST200">const EM_ST200</a>
+
+```
+searchKey: elf.EM_ST200
+tags: [constant number]
+```
+
+```Go
+const EM_ST200 Machine = 100 /* STMicroelectronics (www.st.com) ST200 microcontroller */
+
+```
+
+### <a id="EM_ST7" href="#EM_ST7">const EM_ST7</a>
+
+```
+searchKey: elf.EM_ST7
+tags: [constant number]
+```
+
+```Go
+const EM_ST7 Machine = 68 /* STMicroelectronics ST7 8-bit microcontroller */
+
+```
+
+### <a id="EM_ST9PLUS" href="#EM_ST9PLUS">const EM_ST9PLUS</a>
+
+```
+searchKey: elf.EM_ST9PLUS
+tags: [constant number]
+```
+
+```Go
+const EM_ST9PLUS Machine = 67 /* STMicroelectronics ST9+ 8/16 bit microcontroller */
+
+```
+
+### <a id="EM_STARCORE" href="#EM_STARCORE">const EM_STARCORE</a>
+
+```
+searchKey: elf.EM_STARCORE
+tags: [constant number]
+```
+
+```Go
+const EM_STARCORE Machine = 58 /* Motorola Star*Core processor. */
+
+```
+
+### <a id="EM_STM8" href="#EM_STM8">const EM_STM8</a>
+
+```
+searchKey: elf.EM_STM8
+tags: [constant number]
+```
+
+```Go
+const EM_STM8 Machine = 186 /* STMicroeletronics STM8 8-bit microcontroller */
+
+```
+
+### <a id="EM_STXP7X" href="#EM_STXP7X">const EM_STXP7X</a>
+
+```
+searchKey: elf.EM_STXP7X
+tags: [constant number]
+```
+
+```Go
+const EM_STXP7X Machine /* STMicroelectronics STxP7x family of configurable and extensible RISC processors */
  = ...
 ```
 
-### <a id="DT_FLAGS" href="#DT_FLAGS">const DT_FLAGS</a>
+### <a id="EM_SVX" href="#EM_SVX">const EM_SVX</a>
 
 ```
-searchKey: elf.DT_FLAGS
-```
-
-```Go
-const DT_FLAGS DynTag = 30 /* Object specific flag values. */
-
-```
-
-### <a id="DT_ENCODING" href="#DT_ENCODING">const DT_ENCODING</a>
-
-```
-searchKey: elf.DT_ENCODING
+searchKey: elf.EM_SVX
+tags: [constant number]
 ```
 
 ```Go
-const DT_ENCODING DynTag /* Values greater than or equal to DT_ENCODING
-   and less than DT_LOOS follow the rules for
-   the interpretation of the d_un union
-   as follows: even == 'd_ptr', even == 'd_val'
-   or none */
+const EM_SVX Machine = 73 /* Silicon Graphics SVx */
+
+```
+
+### <a id="EM_TILE64" href="#EM_TILE64">const EM_TILE64</a>
+
+```
+searchKey: elf.EM_TILE64
+tags: [constant number]
+```
+
+```Go
+const EM_TILE64 Machine = 187 /* Tilera TILE64 multicore architecture family */
+
+```
+
+### <a id="EM_TILEGX" href="#EM_TILEGX">const EM_TILEGX</a>
+
+```
+searchKey: elf.EM_TILEGX
+tags: [constant number]
+```
+
+```Go
+const EM_TILEGX Machine = 191 /* Tilera TILE-Gx multicore architecture family */
+
+```
+
+### <a id="EM_TILEPRO" href="#EM_TILEPRO">const EM_TILEPRO</a>
+
+```
+searchKey: elf.EM_TILEPRO
+tags: [constant number]
+```
+
+```Go
+const EM_TILEPRO Machine = 188 /* Tilera TILEPro multicore architecture family */
+
+```
+
+### <a id="EM_TINYJ" href="#EM_TINYJ">const EM_TINYJ</a>
+
+```
+searchKey: elf.EM_TINYJ
+tags: [constant number]
+```
+
+```Go
+const EM_TINYJ Machine = 61 /* Advanced Logic Corp. TinyJ processor. */
+
+```
+
+### <a id="EM_TI_ARP32" href="#EM_TI_ARP32">const EM_TI_ARP32</a>
+
+```
+searchKey: elf.EM_TI_ARP32
+tags: [constant number]
+```
+
+```Go
+const EM_TI_ARP32 Machine /* Texas Instruments Application Specific RISC Processor, 32bit fetch */
  = ...
 ```
 
-### <a id="DT_PREINIT_ARRAY" href="#DT_PREINIT_ARRAY">const DT_PREINIT_ARRAY</a>
+### <a id="EM_TI_C2000" href="#EM_TI_C2000">const EM_TI_C2000</a>
 
 ```
-searchKey: elf.DT_PREINIT_ARRAY
+searchKey: elf.EM_TI_C2000
+tags: [constant number]
 ```
 
 ```Go
-const DT_PREINIT_ARRAY DynTag /* Address of the array of pointers to pre-initialization functions. */
+const EM_TI_C2000 Machine = 141 /* The Texas Instruments TMS320C2000 DSP family */
+
+```
+
+### <a id="EM_TI_C5500" href="#EM_TI_C5500">const EM_TI_C5500</a>
+
+```
+searchKey: elf.EM_TI_C5500
+tags: [constant number]
+```
+
+```Go
+const EM_TI_C5500 Machine = 142 /* The Texas Instruments TMS320C55x DSP family */
+
+```
+
+### <a id="EM_TI_C6000" href="#EM_TI_C6000">const EM_TI_C6000</a>
+
+```
+searchKey: elf.EM_TI_C6000
+tags: [constant number]
+```
+
+```Go
+const EM_TI_C6000 Machine = 140 /* The Texas Instruments TMS320C6000 DSP family */
+
+```
+
+### <a id="EM_TI_PRU" href="#EM_TI_PRU">const EM_TI_PRU</a>
+
+```
+searchKey: elf.EM_TI_PRU
+tags: [constant number]
+```
+
+```Go
+const EM_TI_PRU Machine = 144 /* Texas Instruments Programmable Realtime Unit */
+
+```
+
+### <a id="EM_TMM_GPP" href="#EM_TMM_GPP">const EM_TMM_GPP</a>
+
+```
+searchKey: elf.EM_TMM_GPP
+tags: [constant number]
+```
+
+```Go
+const EM_TMM_GPP Machine = 96 /* Thompson Multimedia General Purpose Processor */
+
+```
+
+### <a id="EM_TPC" href="#EM_TPC">const EM_TPC</a>
+
+```
+searchKey: elf.EM_TPC
+tags: [constant number]
+```
+
+```Go
+const EM_TPC Machine = 98 /* Tenor Network TPC processor */
+
+```
+
+### <a id="EM_TRICORE" href="#EM_TRICORE">const EM_TRICORE</a>
+
+```
+searchKey: elf.EM_TRICORE
+tags: [constant number]
+```
+
+```Go
+const EM_TRICORE Machine = 44 /* Siemens TriCore embedded processor. */
+
+```
+
+### <a id="EM_TRIMEDIA" href="#EM_TRIMEDIA">const EM_TRIMEDIA</a>
+
+```
+searchKey: elf.EM_TRIMEDIA
+tags: [constant number]
+```
+
+```Go
+const EM_TRIMEDIA Machine = 163 /* NXP Semiconductors TriMedia architecture family */
+
+```
+
+### <a id="EM_TSK3000" href="#EM_TSK3000">const EM_TSK3000</a>
+
+```
+searchKey: elf.EM_TSK3000
+tags: [constant number]
+```
+
+```Go
+const EM_TSK3000 Machine = 131 /* Altium TSK3000 core */
+
+```
+
+### <a id="EM_UNICORE" href="#EM_UNICORE">const EM_UNICORE</a>
+
+```
+searchKey: elf.EM_UNICORE
+tags: [constant number]
+```
+
+```Go
+const EM_UNICORE Machine /* Microprocessor series from PKU-Unity Ltd. and MPRC of Peking University */
  = ...
 ```
 
-### <a id="DT_PREINIT_ARRAYSZ" href="#DT_PREINIT_ARRAYSZ">const DT_PREINIT_ARRAYSZ</a>
+### <a id="EM_V800" href="#EM_V800">const EM_V800</a>
 
 ```
-searchKey: elf.DT_PREINIT_ARRAYSZ
+searchKey: elf.EM_V800
+tags: [constant number]
 ```
 
 ```Go
-const DT_PREINIT_ARRAYSZ DynTag /* Size in bytes of the array of pre-initialization functions. */
- = ...
-```
-
-### <a id="DT_SYMTAB_SHNDX" href="#DT_SYMTAB_SHNDX">const DT_SYMTAB_SHNDX</a>
-
-```
-searchKey: elf.DT_SYMTAB_SHNDX
-```
-
-```Go
-const DT_SYMTAB_SHNDX DynTag = 34 /* Address of SHT_SYMTAB_SHNDX section. */
-
-```
-
-### <a id="DT_LOOS" href="#DT_LOOS">const DT_LOOS</a>
-
-```
-searchKey: elf.DT_LOOS
-```
-
-```Go
-const DT_LOOS DynTag = 0x6000000d /* First OS-specific */
-
-```
-
-### <a id="DT_HIOS" href="#DT_HIOS">const DT_HIOS</a>
-
-```
-searchKey: elf.DT_HIOS
-```
-
-```Go
-const DT_HIOS DynTag = 0x6ffff000 /* Last OS-specific */
-
-```
-
-### <a id="DT_VALRNGLO" href="#DT_VALRNGLO">const DT_VALRNGLO</a>
-
-```
-searchKey: elf.DT_VALRNGLO
-```
-
-```Go
-const DT_VALRNGLO DynTag = 0x6ffffd00
-```
-
-### <a id="DT_GNU_PRELINKED" href="#DT_GNU_PRELINKED">const DT_GNU_PRELINKED</a>
-
-```
-searchKey: elf.DT_GNU_PRELINKED
-```
-
-```Go
-const DT_GNU_PRELINKED DynTag = 0x6ffffdf5
-```
-
-### <a id="DT_GNU_CONFLICTSZ" href="#DT_GNU_CONFLICTSZ">const DT_GNU_CONFLICTSZ</a>
-
-```
-searchKey: elf.DT_GNU_CONFLICTSZ
-```
-
-```Go
-const DT_GNU_CONFLICTSZ DynTag = 0x6ffffdf6
-```
-
-### <a id="DT_GNU_LIBLISTSZ" href="#DT_GNU_LIBLISTSZ">const DT_GNU_LIBLISTSZ</a>
-
-```
-searchKey: elf.DT_GNU_LIBLISTSZ
-```
-
-```Go
-const DT_GNU_LIBLISTSZ DynTag = 0x6ffffdf7
-```
-
-### <a id="DT_CHECKSUM" href="#DT_CHECKSUM">const DT_CHECKSUM</a>
-
-```
-searchKey: elf.DT_CHECKSUM
-```
-
-```Go
-const DT_CHECKSUM DynTag = 0x6ffffdf8
-```
-
-### <a id="DT_PLTPADSZ" href="#DT_PLTPADSZ">const DT_PLTPADSZ</a>
-
-```
-searchKey: elf.DT_PLTPADSZ
-```
-
-```Go
-const DT_PLTPADSZ DynTag = 0x6ffffdf9
-```
-
-### <a id="DT_MOVEENT" href="#DT_MOVEENT">const DT_MOVEENT</a>
-
-```
-searchKey: elf.DT_MOVEENT
-```
-
-```Go
-const DT_MOVEENT DynTag = 0x6ffffdfa
-```
-
-### <a id="DT_MOVESZ" href="#DT_MOVESZ">const DT_MOVESZ</a>
-
-```
-searchKey: elf.DT_MOVESZ
-```
-
-```Go
-const DT_MOVESZ DynTag = 0x6ffffdfb
-```
-
-### <a id="DT_FEATURE" href="#DT_FEATURE">const DT_FEATURE</a>
-
-```
-searchKey: elf.DT_FEATURE
-```
-
-```Go
-const DT_FEATURE DynTag = 0x6ffffdfc
-```
-
-### <a id="DT_POSFLAG_1" href="#DT_POSFLAG_1">const DT_POSFLAG_1</a>
-
-```
-searchKey: elf.DT_POSFLAG_1
-```
-
-```Go
-const DT_POSFLAG_1 DynTag = 0x6ffffdfd
-```
-
-### <a id="DT_SYMINSZ" href="#DT_SYMINSZ">const DT_SYMINSZ</a>
-
-```
-searchKey: elf.DT_SYMINSZ
-```
-
-```Go
-const DT_SYMINSZ DynTag = 0x6ffffdfe
-```
-
-### <a id="DT_SYMINENT" href="#DT_SYMINENT">const DT_SYMINENT</a>
-
-```
-searchKey: elf.DT_SYMINENT
-```
-
-```Go
-const DT_SYMINENT DynTag = 0x6ffffdff
-```
-
-### <a id="DT_VALRNGHI" href="#DT_VALRNGHI">const DT_VALRNGHI</a>
-
-```
-searchKey: elf.DT_VALRNGHI
-```
-
-```Go
-const DT_VALRNGHI DynTag = 0x6ffffdff
-```
-
-### <a id="DT_ADDRRNGLO" href="#DT_ADDRRNGLO">const DT_ADDRRNGLO</a>
-
-```
-searchKey: elf.DT_ADDRRNGLO
-```
-
-```Go
-const DT_ADDRRNGLO DynTag = 0x6ffffe00
-```
-
-### <a id="DT_GNU_HASH" href="#DT_GNU_HASH">const DT_GNU_HASH</a>
-
-```
-searchKey: elf.DT_GNU_HASH
-```
-
-```Go
-const DT_GNU_HASH DynTag = 0x6ffffef5
-```
-
-### <a id="DT_TLSDESC_PLT" href="#DT_TLSDESC_PLT">const DT_TLSDESC_PLT</a>
-
-```
-searchKey: elf.DT_TLSDESC_PLT
-```
-
-```Go
-const DT_TLSDESC_PLT DynTag = 0x6ffffef6
-```
-
-### <a id="DT_TLSDESC_GOT" href="#DT_TLSDESC_GOT">const DT_TLSDESC_GOT</a>
-
-```
-searchKey: elf.DT_TLSDESC_GOT
-```
-
-```Go
-const DT_TLSDESC_GOT DynTag = 0x6ffffef7
-```
-
-### <a id="DT_GNU_CONFLICT" href="#DT_GNU_CONFLICT">const DT_GNU_CONFLICT</a>
-
-```
-searchKey: elf.DT_GNU_CONFLICT
-```
-
-```Go
-const DT_GNU_CONFLICT DynTag = 0x6ffffef8
-```
-
-### <a id="DT_GNU_LIBLIST" href="#DT_GNU_LIBLIST">const DT_GNU_LIBLIST</a>
-
-```
-searchKey: elf.DT_GNU_LIBLIST
-```
-
-```Go
-const DT_GNU_LIBLIST DynTag = 0x6ffffef9
-```
-
-### <a id="DT_CONFIG" href="#DT_CONFIG">const DT_CONFIG</a>
-
-```
-searchKey: elf.DT_CONFIG
-```
-
-```Go
-const DT_CONFIG DynTag = 0x6ffffefa
-```
-
-### <a id="DT_DEPAUDIT" href="#DT_DEPAUDIT">const DT_DEPAUDIT</a>
-
-```
-searchKey: elf.DT_DEPAUDIT
-```
-
-```Go
-const DT_DEPAUDIT DynTag = 0x6ffffefb
-```
-
-### <a id="DT_AUDIT" href="#DT_AUDIT">const DT_AUDIT</a>
-
-```
-searchKey: elf.DT_AUDIT
-```
-
-```Go
-const DT_AUDIT DynTag = 0x6ffffefc
-```
-
-### <a id="DT_PLTPAD" href="#DT_PLTPAD">const DT_PLTPAD</a>
-
-```
-searchKey: elf.DT_PLTPAD
-```
-
-```Go
-const DT_PLTPAD DynTag = 0x6ffffefd
-```
-
-### <a id="DT_MOVETAB" href="#DT_MOVETAB">const DT_MOVETAB</a>
-
-```
-searchKey: elf.DT_MOVETAB
-```
-
-```Go
-const DT_MOVETAB DynTag = 0x6ffffefe
-```
-
-### <a id="DT_SYMINFO" href="#DT_SYMINFO">const DT_SYMINFO</a>
-
-```
-searchKey: elf.DT_SYMINFO
-```
-
-```Go
-const DT_SYMINFO DynTag = 0x6ffffeff
-```
-
-### <a id="DT_ADDRRNGHI" href="#DT_ADDRRNGHI">const DT_ADDRRNGHI</a>
-
-```
-searchKey: elf.DT_ADDRRNGHI
-```
-
-```Go
-const DT_ADDRRNGHI DynTag = 0x6ffffeff
-```
-
-### <a id="DT_VERSYM" href="#DT_VERSYM">const DT_VERSYM</a>
-
-```
-searchKey: elf.DT_VERSYM
-```
-
-```Go
-const DT_VERSYM DynTag = 0x6ffffff0
-```
-
-### <a id="DT_RELACOUNT" href="#DT_RELACOUNT">const DT_RELACOUNT</a>
-
-```
-searchKey: elf.DT_RELACOUNT
-```
-
-```Go
-const DT_RELACOUNT DynTag = 0x6ffffff9
-```
-
-### <a id="DT_RELCOUNT" href="#DT_RELCOUNT">const DT_RELCOUNT</a>
-
-```
-searchKey: elf.DT_RELCOUNT
-```
-
-```Go
-const DT_RELCOUNT DynTag = 0x6ffffffa
-```
-
-### <a id="DT_FLAGS_1" href="#DT_FLAGS_1">const DT_FLAGS_1</a>
-
-```
-searchKey: elf.DT_FLAGS_1
-```
-
-```Go
-const DT_FLAGS_1 DynTag = 0x6ffffffb
-```
-
-### <a id="DT_VERDEF" href="#DT_VERDEF">const DT_VERDEF</a>
-
-```
-searchKey: elf.DT_VERDEF
-```
-
-```Go
-const DT_VERDEF DynTag = 0x6ffffffc
-```
-
-### <a id="DT_VERDEFNUM" href="#DT_VERDEFNUM">const DT_VERDEFNUM</a>
-
-```
-searchKey: elf.DT_VERDEFNUM
-```
-
-```Go
-const DT_VERDEFNUM DynTag = 0x6ffffffd
-```
-
-### <a id="DT_VERNEED" href="#DT_VERNEED">const DT_VERNEED</a>
-
-```
-searchKey: elf.DT_VERNEED
-```
-
-```Go
-const DT_VERNEED DynTag = 0x6ffffffe
-```
-
-### <a id="DT_VERNEEDNUM" href="#DT_VERNEEDNUM">const DT_VERNEEDNUM</a>
-
-```
-searchKey: elf.DT_VERNEEDNUM
-```
-
-```Go
-const DT_VERNEEDNUM DynTag = 0x6fffffff
-```
-
-### <a id="DT_LOPROC" href="#DT_LOPROC">const DT_LOPROC</a>
-
-```
-searchKey: elf.DT_LOPROC
-```
-
-```Go
-const DT_LOPROC DynTag = 0x70000000 /* First processor-specific type. */
-
-```
-
-### <a id="DT_MIPS_RLD_VERSION" href="#DT_MIPS_RLD_VERSION">const DT_MIPS_RLD_VERSION</a>
-
-```
-searchKey: elf.DT_MIPS_RLD_VERSION
-```
-
-```Go
-const DT_MIPS_RLD_VERSION DynTag = 0x70000001
-```
-
-### <a id="DT_MIPS_TIME_STAMP" href="#DT_MIPS_TIME_STAMP">const DT_MIPS_TIME_STAMP</a>
-
-```
-searchKey: elf.DT_MIPS_TIME_STAMP
-```
-
-```Go
-const DT_MIPS_TIME_STAMP DynTag = 0x70000002
-```
-
-### <a id="DT_MIPS_ICHECKSUM" href="#DT_MIPS_ICHECKSUM">const DT_MIPS_ICHECKSUM</a>
-
-```
-searchKey: elf.DT_MIPS_ICHECKSUM
-```
-
-```Go
-const DT_MIPS_ICHECKSUM DynTag = 0x70000003
-```
-
-### <a id="DT_MIPS_IVERSION" href="#DT_MIPS_IVERSION">const DT_MIPS_IVERSION</a>
-
-```
-searchKey: elf.DT_MIPS_IVERSION
-```
-
-```Go
-const DT_MIPS_IVERSION DynTag = 0x70000004
-```
-
-### <a id="DT_MIPS_FLAGS" href="#DT_MIPS_FLAGS">const DT_MIPS_FLAGS</a>
-
-```
-searchKey: elf.DT_MIPS_FLAGS
-```
-
-```Go
-const DT_MIPS_FLAGS DynTag = 0x70000005
-```
-
-### <a id="DT_MIPS_BASE_ADDRESS" href="#DT_MIPS_BASE_ADDRESS">const DT_MIPS_BASE_ADDRESS</a>
-
-```
-searchKey: elf.DT_MIPS_BASE_ADDRESS
-```
-
-```Go
-const DT_MIPS_BASE_ADDRESS DynTag = 0x70000006
-```
-
-### <a id="DT_MIPS_MSYM" href="#DT_MIPS_MSYM">const DT_MIPS_MSYM</a>
-
-```
-searchKey: elf.DT_MIPS_MSYM
-```
-
-```Go
-const DT_MIPS_MSYM DynTag = 0x70000007
-```
-
-### <a id="DT_MIPS_CONFLICT" href="#DT_MIPS_CONFLICT">const DT_MIPS_CONFLICT</a>
-
-```
-searchKey: elf.DT_MIPS_CONFLICT
-```
-
-```Go
-const DT_MIPS_CONFLICT DynTag = 0x70000008
-```
-
-### <a id="DT_MIPS_LIBLIST" href="#DT_MIPS_LIBLIST">const DT_MIPS_LIBLIST</a>
-
-```
-searchKey: elf.DT_MIPS_LIBLIST
-```
-
-```Go
-const DT_MIPS_LIBLIST DynTag = 0x70000009
-```
-
-### <a id="DT_MIPS_LOCAL_GOTNO" href="#DT_MIPS_LOCAL_GOTNO">const DT_MIPS_LOCAL_GOTNO</a>
-
-```
-searchKey: elf.DT_MIPS_LOCAL_GOTNO
-```
-
-```Go
-const DT_MIPS_LOCAL_GOTNO DynTag = 0x7000000a
-```
-
-### <a id="DT_MIPS_CONFLICTNO" href="#DT_MIPS_CONFLICTNO">const DT_MIPS_CONFLICTNO</a>
-
-```
-searchKey: elf.DT_MIPS_CONFLICTNO
-```
-
-```Go
-const DT_MIPS_CONFLICTNO DynTag = 0x7000000b
-```
-
-### <a id="DT_MIPS_LIBLISTNO" href="#DT_MIPS_LIBLISTNO">const DT_MIPS_LIBLISTNO</a>
-
-```
-searchKey: elf.DT_MIPS_LIBLISTNO
-```
-
-```Go
-const DT_MIPS_LIBLISTNO DynTag = 0x70000010
-```
-
-### <a id="DT_MIPS_SYMTABNO" href="#DT_MIPS_SYMTABNO">const DT_MIPS_SYMTABNO</a>
-
-```
-searchKey: elf.DT_MIPS_SYMTABNO
-```
-
-```Go
-const DT_MIPS_SYMTABNO DynTag = 0x70000011
-```
-
-### <a id="DT_MIPS_UNREFEXTNO" href="#DT_MIPS_UNREFEXTNO">const DT_MIPS_UNREFEXTNO</a>
-
-```
-searchKey: elf.DT_MIPS_UNREFEXTNO
-```
-
-```Go
-const DT_MIPS_UNREFEXTNO DynTag = 0x70000012
-```
-
-### <a id="DT_MIPS_GOTSYM" href="#DT_MIPS_GOTSYM">const DT_MIPS_GOTSYM</a>
+const EM_V800 Machine = 36 /* NEC V800. */
 
 ```
-searchKey: elf.DT_MIPS_GOTSYM
-```
-
-```Go
-const DT_MIPS_GOTSYM DynTag = 0x70000013
-```
-
-### <a id="DT_MIPS_HIPAGENO" href="#DT_MIPS_HIPAGENO">const DT_MIPS_HIPAGENO</a>
-
-```
-searchKey: elf.DT_MIPS_HIPAGENO
-```
 
-```Go
-const DT_MIPS_HIPAGENO DynTag = 0x70000014
-```
+### <a id="EM_V850" href="#EM_V850">const EM_V850</a>
 
-### <a id="DT_MIPS_RLD_MAP" href="#DT_MIPS_RLD_MAP">const DT_MIPS_RLD_MAP</a>
-
 ```
-searchKey: elf.DT_MIPS_RLD_MAP
+searchKey: elf.EM_V850
+tags: [constant number]
 ```
 
 ```Go
-const DT_MIPS_RLD_MAP DynTag = 0x70000016
-```
-
-### <a id="DT_MIPS_DELTA_CLASS" href="#DT_MIPS_DELTA_CLASS">const DT_MIPS_DELTA_CLASS</a>
-
-```
-searchKey: elf.DT_MIPS_DELTA_CLASS
-```
+const EM_V850 Machine = 87 /* NEC v850 */
 
-```Go
-const DT_MIPS_DELTA_CLASS DynTag = 0x70000017
 ```
 
-### <a id="DT_MIPS_DELTA_CLASS_NO" href="#DT_MIPS_DELTA_CLASS_NO">const DT_MIPS_DELTA_CLASS_NO</a>
+### <a id="EM_VAX" href="#EM_VAX">const EM_VAX</a>
 
 ```
-searchKey: elf.DT_MIPS_DELTA_CLASS_NO
+searchKey: elf.EM_VAX
+tags: [constant number]
 ```
 
 ```Go
-const DT_MIPS_DELTA_CLASS_NO DynTag = 0x70000018
-```
-
-### <a id="DT_MIPS_DELTA_INSTANCE" href="#DT_MIPS_DELTA_INSTANCE">const DT_MIPS_DELTA_INSTANCE</a>
-
-```
-searchKey: elf.DT_MIPS_DELTA_INSTANCE
-```
+const EM_VAX Machine = 75 /* Digital VAX */
 
-```Go
-const DT_MIPS_DELTA_INSTANCE DynTag = 0x70000019
 ```
 
-### <a id="DT_MIPS_DELTA_INSTANCE_NO" href="#DT_MIPS_DELTA_INSTANCE_NO">const DT_MIPS_DELTA_INSTANCE_NO</a>
+### <a id="EM_VIDEOCORE" href="#EM_VIDEOCORE">const EM_VIDEOCORE</a>
 
 ```
-searchKey: elf.DT_MIPS_DELTA_INSTANCE_NO
+searchKey: elf.EM_VIDEOCORE
+tags: [constant number]
 ```
 
 ```Go
-const DT_MIPS_DELTA_INSTANCE_NO DynTag = 0x7000001a
-```
+const EM_VIDEOCORE Machine = 95 /* Alphamosaic VideoCore processor */
 
-### <a id="DT_MIPS_DELTA_RELOC" href="#DT_MIPS_DELTA_RELOC">const DT_MIPS_DELTA_RELOC</a>
-
-```
-searchKey: elf.DT_MIPS_DELTA_RELOC
-```
-
-```Go
-const DT_MIPS_DELTA_RELOC DynTag = 0x7000001b
 ```
 
-### <a id="DT_MIPS_DELTA_RELOC_NO" href="#DT_MIPS_DELTA_RELOC_NO">const DT_MIPS_DELTA_RELOC_NO</a>
+### <a id="EM_VIDEOCORE3" href="#EM_VIDEOCORE3">const EM_VIDEOCORE3</a>
 
 ```
-searchKey: elf.DT_MIPS_DELTA_RELOC_NO
+searchKey: elf.EM_VIDEOCORE3
+tags: [constant number]
 ```
 
 ```Go
-const DT_MIPS_DELTA_RELOC_NO DynTag = 0x7000001c
-```
-
-### <a id="DT_MIPS_DELTA_SYM" href="#DT_MIPS_DELTA_SYM">const DT_MIPS_DELTA_SYM</a>
-
-```
-searchKey: elf.DT_MIPS_DELTA_SYM
-```
+const EM_VIDEOCORE3 Machine = 137 /* Broadcom VideoCore III processor */
 
-```Go
-const DT_MIPS_DELTA_SYM DynTag = 0x7000001d
 ```
 
-### <a id="DT_MIPS_DELTA_SYM_NO" href="#DT_MIPS_DELTA_SYM_NO">const DT_MIPS_DELTA_SYM_NO</a>
+### <a id="EM_VIDEOCORE5" href="#EM_VIDEOCORE5">const EM_VIDEOCORE5</a>
 
 ```
-searchKey: elf.DT_MIPS_DELTA_SYM_NO
+searchKey: elf.EM_VIDEOCORE5
+tags: [constant number]
 ```
 
 ```Go
-const DT_MIPS_DELTA_SYM_NO DynTag = 0x7000001e
-```
-
-### <a id="DT_MIPS_DELTA_CLASSSYM" href="#DT_MIPS_DELTA_CLASSSYM">const DT_MIPS_DELTA_CLASSSYM</a>
-
-```
-searchKey: elf.DT_MIPS_DELTA_CLASSSYM
-```
+const EM_VIDEOCORE5 Machine = 198 /* Broadcom VideoCore V processor */
 
-```Go
-const DT_MIPS_DELTA_CLASSSYM DynTag = 0x70000020
 ```
 
-### <a id="DT_MIPS_DELTA_CLASSSYM_NO" href="#DT_MIPS_DELTA_CLASSSYM_NO">const DT_MIPS_DELTA_CLASSSYM_NO</a>
+### <a id="EM_VISIUM" href="#EM_VISIUM">const EM_VISIUM</a>
 
 ```
-searchKey: elf.DT_MIPS_DELTA_CLASSSYM_NO
+searchKey: elf.EM_VISIUM
+tags: [constant number]
 ```
 
 ```Go
-const DT_MIPS_DELTA_CLASSSYM_NO DynTag = 0x70000021
-```
-
-### <a id="DT_MIPS_CXX_FLAGS" href="#DT_MIPS_CXX_FLAGS">const DT_MIPS_CXX_FLAGS</a>
-
-```
-searchKey: elf.DT_MIPS_CXX_FLAGS
-```
+const EM_VISIUM Machine = 221 /* Controls and Data Services VISIUMcore processor */
 
-```Go
-const DT_MIPS_CXX_FLAGS DynTag = 0x70000022
 ```
 
-### <a id="DT_MIPS_PIXIE_INIT" href="#DT_MIPS_PIXIE_INIT">const DT_MIPS_PIXIE_INIT</a>
+### <a id="EM_VPP500" href="#EM_VPP500">const EM_VPP500</a>
 
 ```
-searchKey: elf.DT_MIPS_PIXIE_INIT
+searchKey: elf.EM_VPP500
+tags: [constant number]
 ```
 
 ```Go
-const DT_MIPS_PIXIE_INIT DynTag = 0x70000023
-```
+const EM_VPP500 Machine = 17 /* Fujitsu VPP500. */
 
-### <a id="DT_MIPS_SYMBOL_LIB" href="#DT_MIPS_SYMBOL_LIB">const DT_MIPS_SYMBOL_LIB</a>
-
-```
-searchKey: elf.DT_MIPS_SYMBOL_LIB
-```
-
-```Go
-const DT_MIPS_SYMBOL_LIB DynTag = 0x70000024
 ```
 
-### <a id="DT_MIPS_LOCALPAGE_GOTIDX" href="#DT_MIPS_LOCALPAGE_GOTIDX">const DT_MIPS_LOCALPAGE_GOTIDX</a>
+### <a id="EM_X86_64" href="#EM_X86_64">const EM_X86_64</a>
 
 ```
-searchKey: elf.DT_MIPS_LOCALPAGE_GOTIDX
+searchKey: elf.EM_X86_64
+tags: [constant number]
 ```
 
 ```Go
-const DT_MIPS_LOCALPAGE_GOTIDX DynTag = 0x70000025
-```
-
-### <a id="DT_MIPS_LOCAL_GOTIDX" href="#DT_MIPS_LOCAL_GOTIDX">const DT_MIPS_LOCAL_GOTIDX</a>
-
-```
-searchKey: elf.DT_MIPS_LOCAL_GOTIDX
-```
+const EM_X86_64 Machine = 62 /* Advanced Micro Devices x86-64 */
 
-```Go
-const DT_MIPS_LOCAL_GOTIDX DynTag = 0x70000026
 ```
 
-### <a id="DT_MIPS_HIDDEN_GOTIDX" href="#DT_MIPS_HIDDEN_GOTIDX">const DT_MIPS_HIDDEN_GOTIDX</a>
+### <a id="EM_XCORE" href="#EM_XCORE">const EM_XCORE</a>
 
 ```
-searchKey: elf.DT_MIPS_HIDDEN_GOTIDX
+searchKey: elf.EM_XCORE
+tags: [constant number]
 ```
 
 ```Go
-const DT_MIPS_HIDDEN_GOTIDX DynTag = 0x70000027
-```
-
-### <a id="DT_MIPS_PROTECTED_GOTIDX" href="#DT_MIPS_PROTECTED_GOTIDX">const DT_MIPS_PROTECTED_GOTIDX</a>
-
-```
-searchKey: elf.DT_MIPS_PROTECTED_GOTIDX
-```
+const EM_XCORE Machine = 203 /* XMOS xCORE processor family */
 
-```Go
-const DT_MIPS_PROTECTED_GOTIDX DynTag = 0x70000028
 ```
 
-### <a id="DT_MIPS_OPTIONS" href="#DT_MIPS_OPTIONS">const DT_MIPS_OPTIONS</a>
+### <a id="EM_XGATE" href="#EM_XGATE">const EM_XGATE</a>
 
 ```
-searchKey: elf.DT_MIPS_OPTIONS
+searchKey: elf.EM_XGATE
+tags: [constant number]
 ```
 
 ```Go
-const DT_MIPS_OPTIONS DynTag = 0x70000029
-```
-
-### <a id="DT_MIPS_INTERFACE" href="#DT_MIPS_INTERFACE">const DT_MIPS_INTERFACE</a>
-
-```
-searchKey: elf.DT_MIPS_INTERFACE
-```
+const EM_XGATE Machine = 115 /* Motorola XGATE embedded processor */
 
-```Go
-const DT_MIPS_INTERFACE DynTag = 0x7000002a
 ```
 
-### <a id="DT_MIPS_DYNSTR_ALIGN" href="#DT_MIPS_DYNSTR_ALIGN">const DT_MIPS_DYNSTR_ALIGN</a>
+### <a id="EM_XIMO16" href="#EM_XIMO16">const EM_XIMO16</a>
 
 ```
-searchKey: elf.DT_MIPS_DYNSTR_ALIGN
+searchKey: elf.EM_XIMO16
+tags: [constant number]
 ```
 
 ```Go
-const DT_MIPS_DYNSTR_ALIGN DynTag = 0x7000002b
-```
+const EM_XIMO16 Machine = 170 /* New Japan Radio (NJR) 16-bit DSP Processor */
 
-### <a id="DT_MIPS_INTERFACE_SIZE" href="#DT_MIPS_INTERFACE_SIZE">const DT_MIPS_INTERFACE_SIZE</a>
-
-```
-searchKey: elf.DT_MIPS_INTERFACE_SIZE
-```
-
-```Go
-const DT_MIPS_INTERFACE_SIZE DynTag = 0x7000002c
 ```
 
-### <a id="DT_MIPS_RLD_TEXT_RESOLVE_ADDR" href="#DT_MIPS_RLD_TEXT_RESOLVE_ADDR">const DT_MIPS_RLD_TEXT_RESOLVE_ADDR</a>
+### <a id="EM_XTENSA" href="#EM_XTENSA">const EM_XTENSA</a>
 
 ```
-searchKey: elf.DT_MIPS_RLD_TEXT_RESOLVE_ADDR
+searchKey: elf.EM_XTENSA
+tags: [constant number]
 ```
 
 ```Go
-const DT_MIPS_RLD_TEXT_RESOLVE_ADDR DynTag = 0x7000002d
-```
-
-### <a id="DT_MIPS_PERF_SUFFIX" href="#DT_MIPS_PERF_SUFFIX">const DT_MIPS_PERF_SUFFIX</a>
-
-```
-searchKey: elf.DT_MIPS_PERF_SUFFIX
-```
+const EM_XTENSA Machine = 94 /* Tensilica Xtensa Architecture */
 
-```Go
-const DT_MIPS_PERF_SUFFIX DynTag = 0x7000002e
 ```
 
-### <a id="DT_MIPS_COMPACT_SIZE" href="#DT_MIPS_COMPACT_SIZE">const DT_MIPS_COMPACT_SIZE</a>
+### <a id="EM_Z80" href="#EM_Z80">const EM_Z80</a>
 
 ```
-searchKey: elf.DT_MIPS_COMPACT_SIZE
+searchKey: elf.EM_Z80
+tags: [constant number]
 ```
 
 ```Go
-const DT_MIPS_COMPACT_SIZE DynTag = 0x7000002f
-```
-
-### <a id="DT_MIPS_GP_VALUE" href="#DT_MIPS_GP_VALUE">const DT_MIPS_GP_VALUE</a>
-
-```
-searchKey: elf.DT_MIPS_GP_VALUE
-```
+const EM_Z80 Machine = 220 /* Zilog Z80 */
 
-```Go
-const DT_MIPS_GP_VALUE DynTag = 0x70000030
 ```
 
-### <a id="DT_MIPS_AUX_DYNAMIC" href="#DT_MIPS_AUX_DYNAMIC">const DT_MIPS_AUX_DYNAMIC</a>
+### <a id="EM_ZSP" href="#EM_ZSP">const EM_ZSP</a>
 
 ```
-searchKey: elf.DT_MIPS_AUX_DYNAMIC
+searchKey: elf.EM_ZSP
+tags: [constant number]
 ```
 
 ```Go
-const DT_MIPS_AUX_DYNAMIC DynTag = 0x70000031
-```
-
-### <a id="DT_MIPS_PLTGOT" href="#DT_MIPS_PLTGOT">const DT_MIPS_PLTGOT</a>
-
-```
-searchKey: elf.DT_MIPS_PLTGOT
-```
+const EM_ZSP Machine = 79 /* LSI Logic 16-bit DSP Processor */
 
-```Go
-const DT_MIPS_PLTGOT DynTag = 0x70000032
 ```
 
-### <a id="DT_MIPS_RWPLT" href="#DT_MIPS_RWPLT">const DT_MIPS_RWPLT</a>
+### <a id="ET_CORE" href="#ET_CORE">const ET_CORE</a>
 
 ```
-searchKey: elf.DT_MIPS_RWPLT
+searchKey: elf.ET_CORE
+tags: [constant number]
 ```
 
 ```Go
-const DT_MIPS_RWPLT DynTag = 0x70000034
-```
+const ET_CORE Type = 4 /* Core file. */
 
-### <a id="DT_MIPS_RLD_MAP_REL" href="#DT_MIPS_RLD_MAP_REL">const DT_MIPS_RLD_MAP_REL</a>
-
-```
-searchKey: elf.DT_MIPS_RLD_MAP_REL
-```
-
-```Go
-const DT_MIPS_RLD_MAP_REL DynTag = 0x70000035
 ```
 
-### <a id="DT_PPC_GOT" href="#DT_PPC_GOT">const DT_PPC_GOT</a>
+### <a id="ET_DYN" href="#ET_DYN">const ET_DYN</a>
 
 ```
-searchKey: elf.DT_PPC_GOT
+searchKey: elf.ET_DYN
+tags: [constant number]
 ```
 
 ```Go
-const DT_PPC_GOT DynTag = 0x70000000
-```
-
-### <a id="DT_PPC_OPT" href="#DT_PPC_OPT">const DT_PPC_OPT</a>
-
-```
-searchKey: elf.DT_PPC_OPT
-```
+const ET_DYN Type = 3 /* Shared object. */
 
-```Go
-const DT_PPC_OPT DynTag = 0x70000001
 ```
 
-### <a id="DT_PPC64_GLINK" href="#DT_PPC64_GLINK">const DT_PPC64_GLINK</a>
+### <a id="ET_EXEC" href="#ET_EXEC">const ET_EXEC</a>
 
 ```
-searchKey: elf.DT_PPC64_GLINK
+searchKey: elf.ET_EXEC
+tags: [constant number]
 ```
 
 ```Go
-const DT_PPC64_GLINK DynTag = 0x70000000
-```
-
-### <a id="DT_PPC64_OPD" href="#DT_PPC64_OPD">const DT_PPC64_OPD</a>
-
-```
-searchKey: elf.DT_PPC64_OPD
-```
+const ET_EXEC Type = 2 /* Executable. */
 
-```Go
-const DT_PPC64_OPD DynTag = 0x70000001
 ```
 
-### <a id="DT_PPC64_OPDSZ" href="#DT_PPC64_OPDSZ">const DT_PPC64_OPDSZ</a>
+### <a id="ET_HIOS" href="#ET_HIOS">const ET_HIOS</a>
 
 ```
-searchKey: elf.DT_PPC64_OPDSZ
+searchKey: elf.ET_HIOS
+tags: [constant number]
 ```
 
 ```Go
-const DT_PPC64_OPDSZ DynTag = 0x70000002
-```
-
-### <a id="DT_PPC64_OPT" href="#DT_PPC64_OPT">const DT_PPC64_OPT</a>
-
-```
-searchKey: elf.DT_PPC64_OPT
-```
+const ET_HIOS Type = 0xfeff /* Last operating system-specific. */
 
-```Go
-const DT_PPC64_OPT DynTag = 0x70000003
 ```
 
-### <a id="DT_SPARC_REGISTER" href="#DT_SPARC_REGISTER">const DT_SPARC_REGISTER</a>
+### <a id="ET_HIPROC" href="#ET_HIPROC">const ET_HIPROC</a>
 
 ```
-searchKey: elf.DT_SPARC_REGISTER
+searchKey: elf.ET_HIPROC
+tags: [constant number]
 ```
 
 ```Go
-const DT_SPARC_REGISTER DynTag = 0x70000001
-```
+const ET_HIPROC Type = 0xffff /* Last processor-specific. */
 
-### <a id="DT_AUXILIARY" href="#DT_AUXILIARY">const DT_AUXILIARY</a>
-
-```
-searchKey: elf.DT_AUXILIARY
-```
-
-```Go
-const DT_AUXILIARY DynTag = 0x7ffffffd
 ```
 
-### <a id="DT_USED" href="#DT_USED">const DT_USED</a>
+### <a id="ET_LOOS" href="#ET_LOOS">const ET_LOOS</a>
 
 ```
-searchKey: elf.DT_USED
+searchKey: elf.ET_LOOS
+tags: [constant number]
 ```
 
 ```Go
-const DT_USED DynTag = 0x7ffffffe
-```
-
-### <a id="DT_FILTER" href="#DT_FILTER">const DT_FILTER</a>
-
-```
-searchKey: elf.DT_FILTER
-```
+const ET_LOOS Type = 0xfe00 /* First operating system specific. */
 
-```Go
-const DT_FILTER DynTag = 0x7fffffff
 ```
 
-### <a id="DT_HIPROC" href="#DT_HIPROC">const DT_HIPROC</a>
+### <a id="ET_LOPROC" href="#ET_LOPROC">const ET_LOPROC</a>
 
 ```
-searchKey: elf.DT_HIPROC
+searchKey: elf.ET_LOPROC
+tags: [constant number]
 ```
 
 ```Go
-const DT_HIPROC DynTag = 0x7fffffff /* Last processor-specific type. */
-
-```
-
-### <a id="DF_ORIGIN" href="#DF_ORIGIN">const DF_ORIGIN</a>
-
-```
-searchKey: elf.DF_ORIGIN
-```
+const ET_LOPROC Type = 0xff00 /* First processor-specific. */
 
-```Go
-const DF_ORIGIN DynFlag /* Indicates that the object being loaded may
-   make reference to the
-   $ORIGIN substitution string */
- = ...
 ```
 
-### <a id="DF_SYMBOLIC" href="#DF_SYMBOLIC">const DF_SYMBOLIC</a>
+### <a id="ET_NONE" href="#ET_NONE">const ET_NONE</a>
 
 ```
-searchKey: elf.DF_SYMBOLIC
+searchKey: elf.ET_NONE
+tags: [constant number]
 ```
 
 ```Go
-const DF_SYMBOLIC DynFlag = 0x0002 /* Indicates "symbolic" linking. */
+const ET_NONE Type = 0 /* Unknown type. */
 
 ```
 
-### <a id="DF_TEXTREL" href="#DF_TEXTREL">const DF_TEXTREL</a>
+### <a id="ET_REL" href="#ET_REL">const ET_REL</a>
 
 ```
-searchKey: elf.DF_TEXTREL
+searchKey: elf.ET_REL
+tags: [constant number]
 ```
 
 ```Go
-const DF_TEXTREL DynFlag /* Indicates there may be relocations in non-writable segments. */
- = ...
-```
-
-### <a id="DF_BIND_NOW" href="#DF_BIND_NOW">const DF_BIND_NOW</a>
+const ET_REL Type = 1 /* Relocatable. */
 
 ```
-searchKey: elf.DF_BIND_NOW
-```
-
-```Go
-const DF_BIND_NOW DynFlag /* Indicates that the dynamic linker should
-   process all relocations for the object
-   containing this entry before transferring
-   control to the program. */
- = ...
-```
 
-### <a id="DF_STATIC_TLS" href="#DF_STATIC_TLS">const DF_STATIC_TLS</a>
+### <a id="EV_CURRENT" href="#EV_CURRENT">const EV_CURRENT</a>
 
 ```
-searchKey: elf.DF_STATIC_TLS
+searchKey: elf.EV_CURRENT
+tags: [constant number]
 ```
 
 ```Go
-const DF_STATIC_TLS DynFlag /* Indicates that the shared object or
-   executable contains code using a static
-   thread-local storage scheme. */
- = ...
+const EV_CURRENT Version = 1
 ```
 
-### <a id="NT_PRSTATUS" href="#NT_PRSTATUS">const NT_PRSTATUS</a>
+### <a id="EV_NONE" href="#EV_NONE">const EV_NONE</a>
 
 ```
-searchKey: elf.NT_PRSTATUS
+searchKey: elf.EV_NONE
+tags: [constant number]
 ```
 
 ```Go
-const NT_PRSTATUS NType = 1 /* Process status. */
-
+const EV_NONE Version = 0
 ```
 
 ### <a id="NT_FPREGSET" href="#NT_FPREGSET">const NT_FPREGSET</a>
 
 ```
 searchKey: elf.NT_FPREGSET
+tags: [constant number]
 ```
 
 ```Go
@@ -6543,6 +5919,7 @@ const NT_FPREGSET NType = 2 /* Floating point registers. */
 
 ```
 searchKey: elf.NT_PRPSINFO
+tags: [constant number]
 ```
 
 ```Go
@@ -6550,3767 +5927,490 @@ const NT_PRPSINFO NType = 3 /* Process state info. */
 
 ```
 
-### <a id="STB_LOCAL" href="#STB_LOCAL">const STB_LOCAL</a>
+### <a id="NT_PRSTATUS" href="#NT_PRSTATUS">const NT_PRSTATUS</a>
 
 ```
-searchKey: elf.STB_LOCAL
+searchKey: elf.NT_PRSTATUS
+tags: [constant number]
 ```
 
 ```Go
-const STB_LOCAL SymBind = 0 /* Local symbol */
+const NT_PRSTATUS NType = 1 /* Process status. */
 
 ```
 
-### <a id="STB_GLOBAL" href="#STB_GLOBAL">const STB_GLOBAL</a>
+### <a id="PF_MASKOS" href="#PF_MASKOS">const PF_MASKOS</a>
 
 ```
-searchKey: elf.STB_GLOBAL
+searchKey: elf.PF_MASKOS
+tags: [constant number]
 ```
 
 ```Go
-const STB_GLOBAL SymBind = 1 /* Global symbol */
+const PF_MASKOS ProgFlag = 0x0ff00000 /* Operating system-specific. */
 
 ```
 
-### <a id="STB_WEAK" href="#STB_WEAK">const STB_WEAK</a>
+### <a id="PF_MASKPROC" href="#PF_MASKPROC">const PF_MASKPROC</a>
 
 ```
-searchKey: elf.STB_WEAK
+searchKey: elf.PF_MASKPROC
+tags: [constant number]
 ```
 
 ```Go
-const STB_WEAK SymBind = 2 /* like global - lower precedence */
+const PF_MASKPROC ProgFlag = 0xf0000000 /* Processor-specific. */
 
 ```
 
-### <a id="STB_LOOS" href="#STB_LOOS">const STB_LOOS</a>
+### <a id="PF_R" href="#PF_R">const PF_R</a>
 
 ```
-searchKey: elf.STB_LOOS
+searchKey: elf.PF_R
+tags: [constant number]
 ```
 
 ```Go
-const STB_LOOS SymBind = 10 /* Reserved range for operating system */
+const PF_R ProgFlag = 0x4 /* Readable. */
 
 ```
 
-### <a id="STB_HIOS" href="#STB_HIOS">const STB_HIOS</a>
+### <a id="PF_W" href="#PF_W">const PF_W</a>
 
 ```
-searchKey: elf.STB_HIOS
+searchKey: elf.PF_W
+tags: [constant number]
 ```
 
 ```Go
-const STB_HIOS SymBind = 12 /*   specific semantics. */
+const PF_W ProgFlag = 0x2 /* Writable. */
 
 ```
 
-### <a id="STB_LOPROC" href="#STB_LOPROC">const STB_LOPROC</a>
+### <a id="PF_X" href="#PF_X">const PF_X</a>
 
 ```
-searchKey: elf.STB_LOPROC
+searchKey: elf.PF_X
+tags: [constant number]
 ```
 
 ```Go
-const STB_LOPROC SymBind = 13 /* reserved range for processor */
+const PF_X ProgFlag = 0x1 /* Executable. */
 
 ```
 
-### <a id="STB_HIPROC" href="#STB_HIPROC">const STB_HIPROC</a>
+### <a id="PT_AARCH64_ARCHEXT" href="#PT_AARCH64_ARCHEXT">const PT_AARCH64_ARCHEXT</a>
 
 ```
-searchKey: elf.STB_HIPROC
+searchKey: elf.PT_AARCH64_ARCHEXT
+tags: [constant number]
 ```
 
 ```Go
-const STB_HIPROC SymBind = 15 /*   specific semantics. */
+const PT_AARCH64_ARCHEXT ProgType = 0x70000000 /* Architecture compatibility */
 
 ```
 
-### <a id="STT_NOTYPE" href="#STT_NOTYPE">const STT_NOTYPE</a>
+### <a id="PT_AARCH64_UNWIND" href="#PT_AARCH64_UNWIND">const PT_AARCH64_UNWIND</a>
 
 ```
-searchKey: elf.STT_NOTYPE
+searchKey: elf.PT_AARCH64_UNWIND
+tags: [constant number]
 ```
 
 ```Go
-const STT_NOTYPE SymType = 0 /* Unspecified type. */
+const PT_AARCH64_UNWIND ProgType = 0x70000001 /* Exception unwind tables */
 
 ```
 
-### <a id="STT_OBJECT" href="#STT_OBJECT">const STT_OBJECT</a>
+### <a id="PT_ARM_ARCHEXT" href="#PT_ARM_ARCHEXT">const PT_ARM_ARCHEXT</a>
 
 ```
-searchKey: elf.STT_OBJECT
+searchKey: elf.PT_ARM_ARCHEXT
+tags: [constant number]
 ```
 
 ```Go
-const STT_OBJECT SymType = 1 /* Data object. */
+const PT_ARM_ARCHEXT ProgType = 0x70000000 /* Architecture compatibility */
 
 ```
 
-### <a id="STT_FUNC" href="#STT_FUNC">const STT_FUNC</a>
+### <a id="PT_ARM_EXIDX" href="#PT_ARM_EXIDX">const PT_ARM_EXIDX</a>
 
 ```
-searchKey: elf.STT_FUNC
+searchKey: elf.PT_ARM_EXIDX
+tags: [constant number]
 ```
 
 ```Go
-const STT_FUNC SymType = 2 /* Function. */
+const PT_ARM_EXIDX ProgType = 0x70000001 /* Exception unwind tables */
 
 ```
 
-### <a id="STT_SECTION" href="#STT_SECTION">const STT_SECTION</a>
+### <a id="PT_DYNAMIC" href="#PT_DYNAMIC">const PT_DYNAMIC</a>
 
 ```
-searchKey: elf.STT_SECTION
+searchKey: elf.PT_DYNAMIC
+tags: [constant number]
 ```
 
 ```Go
-const STT_SECTION SymType = 3 /* Section. */
+const PT_DYNAMIC ProgType = 2 /* Dynamic linking information segment. */
 
 ```
 
-### <a id="STT_FILE" href="#STT_FILE">const STT_FILE</a>
+### <a id="PT_GNU_EH_FRAME" href="#PT_GNU_EH_FRAME">const PT_GNU_EH_FRAME</a>
 
 ```
-searchKey: elf.STT_FILE
+searchKey: elf.PT_GNU_EH_FRAME
+tags: [constant number]
 ```
 
 ```Go
-const STT_FILE SymType = 4 /* Source file. */
+const PT_GNU_EH_FRAME ProgType = 0x6474e550 /* Frame unwind information */
 
 ```
 
-### <a id="STT_COMMON" href="#STT_COMMON">const STT_COMMON</a>
+### <a id="PT_GNU_MBIND_HI" href="#PT_GNU_MBIND_HI">const PT_GNU_MBIND_HI</a>
 
 ```
-searchKey: elf.STT_COMMON
+searchKey: elf.PT_GNU_MBIND_HI
+tags: [constant number]
 ```
 
 ```Go
-const STT_COMMON SymType = 5 /* Uninitialized common block. */
+const PT_GNU_MBIND_HI ProgType = 0x6474f554 /* Mbind segments finish */
 
 ```
 
-### <a id="STT_TLS" href="#STT_TLS">const STT_TLS</a>
+### <a id="PT_GNU_MBIND_LO" href="#PT_GNU_MBIND_LO">const PT_GNU_MBIND_LO</a>
 
 ```
-searchKey: elf.STT_TLS
+searchKey: elf.PT_GNU_MBIND_LO
+tags: [constant number]
 ```
 
 ```Go
-const STT_TLS SymType = 6 /* TLS object. */
+const PT_GNU_MBIND_LO ProgType = 0x6474e555 /* Mbind segments start */
 
 ```
 
-### <a id="STT_LOOS" href="#STT_LOOS">const STT_LOOS</a>
+### <a id="PT_GNU_PROPERTY" href="#PT_GNU_PROPERTY">const PT_GNU_PROPERTY</a>
 
 ```
-searchKey: elf.STT_LOOS
+searchKey: elf.PT_GNU_PROPERTY
+tags: [constant number]
 ```
 
 ```Go
-const STT_LOOS SymType = 10 /* Reserved range for operating system */
+const PT_GNU_PROPERTY ProgType = 0x6474e553 /* GNU property */
 
 ```
 
-### <a id="STT_HIOS" href="#STT_HIOS">const STT_HIOS</a>
+### <a id="PT_GNU_RELRO" href="#PT_GNU_RELRO">const PT_GNU_RELRO</a>
 
 ```
-searchKey: elf.STT_HIOS
+searchKey: elf.PT_GNU_RELRO
+tags: [constant number]
 ```
 
 ```Go
-const STT_HIOS SymType = 12 /*   specific semantics. */
+const PT_GNU_RELRO ProgType = 0x6474e552 /* Read only after relocs */
 
 ```
 
-### <a id="STT_LOPROC" href="#STT_LOPROC">const STT_LOPROC</a>
+### <a id="PT_GNU_STACK" href="#PT_GNU_STACK">const PT_GNU_STACK</a>
 
 ```
-searchKey: elf.STT_LOPROC
+searchKey: elf.PT_GNU_STACK
+tags: [constant number]
 ```
 
 ```Go
-const STT_LOPROC SymType = 13 /* reserved range for processor */
+const PT_GNU_STACK ProgType = 0x6474e551 /* Stack flags */
 
 ```
 
-### <a id="STT_HIPROC" href="#STT_HIPROC">const STT_HIPROC</a>
+### <a id="PT_HIOS" href="#PT_HIOS">const PT_HIOS</a>
 
 ```
-searchKey: elf.STT_HIPROC
+searchKey: elf.PT_HIOS
+tags: [constant number]
 ```
 
 ```Go
-const STT_HIPROC SymType = 15 /*   specific semantics. */
+const PT_HIOS ProgType = 0x6fffffff /* Last OS-specific. */
 
 ```
 
-### <a id="STV_DEFAULT" href="#STV_DEFAULT">const STV_DEFAULT</a>
+### <a id="PT_HIPROC" href="#PT_HIPROC">const PT_HIPROC</a>
 
 ```
-searchKey: elf.STV_DEFAULT
+searchKey: elf.PT_HIPROC
+tags: [constant number]
 ```
 
 ```Go
-const STV_DEFAULT SymVis = 0x0 /* Default visibility (see binding). */
+const PT_HIPROC ProgType = 0x7fffffff /* Last processor-specific type. */
 
 ```
 
-### <a id="STV_INTERNAL" href="#STV_INTERNAL">const STV_INTERNAL</a>
+### <a id="PT_INTERP" href="#PT_INTERP">const PT_INTERP</a>
 
 ```
-searchKey: elf.STV_INTERNAL
+searchKey: elf.PT_INTERP
+tags: [constant number]
 ```
 
 ```Go
-const STV_INTERNAL SymVis = 0x1 /* Special meaning in relocatable objects. */
+const PT_INTERP ProgType = 3 /* Pathname of interpreter. */
 
 ```
 
-### <a id="STV_HIDDEN" href="#STV_HIDDEN">const STV_HIDDEN</a>
+### <a id="PT_LOAD" href="#PT_LOAD">const PT_LOAD</a>
 
 ```
-searchKey: elf.STV_HIDDEN
+searchKey: elf.PT_LOAD
+tags: [constant number]
 ```
 
 ```Go
-const STV_HIDDEN SymVis = 0x2 /* Not visible. */
+const PT_LOAD ProgType = 1 /* Loadable segment. */
 
 ```
 
-### <a id="STV_PROTECTED" href="#STV_PROTECTED">const STV_PROTECTED</a>
+### <a id="PT_LOOS" href="#PT_LOOS">const PT_LOOS</a>
 
 ```
-searchKey: elf.STV_PROTECTED
+searchKey: elf.PT_LOOS
+tags: [constant number]
 ```
 
 ```Go
-const STV_PROTECTED SymVis = 0x3 /* Visible but not preemptible. */
+const PT_LOOS ProgType = 0x60000000 /* First OS-specific. */
 
 ```
 
-### <a id="R_X86_64_NONE" href="#R_X86_64_NONE">const R_X86_64_NONE</a>
+### <a id="PT_LOPROC" href="#PT_LOPROC">const PT_LOPROC</a>
 
 ```
-searchKey: elf.R_X86_64_NONE
+searchKey: elf.PT_LOPROC
+tags: [constant number]
 ```
 
 ```Go
-const R_X86_64_NONE R_X86_64 = 0 /* No relocation. */
+const PT_LOPROC ProgType = 0x70000000 /* First processor-specific type. */
 
 ```
 
-### <a id="R_X86_64_64" href="#R_X86_64_64">const R_X86_64_64</a>
+### <a id="PT_MIPS_ABIFLAGS" href="#PT_MIPS_ABIFLAGS">const PT_MIPS_ABIFLAGS</a>
 
 ```
-searchKey: elf.R_X86_64_64
+searchKey: elf.PT_MIPS_ABIFLAGS
+tags: [constant number]
 ```
 
 ```Go
-const R_X86_64_64 R_X86_64 = 1 /* Add 64 bit symbol value. */
+const PT_MIPS_ABIFLAGS ProgType = 0x70000003 /* ABI flags */
 
 ```
 
-### <a id="R_X86_64_PC32" href="#R_X86_64_PC32">const R_X86_64_PC32</a>
+### <a id="PT_MIPS_OPTIONS" href="#PT_MIPS_OPTIONS">const PT_MIPS_OPTIONS</a>
 
 ```
-searchKey: elf.R_X86_64_PC32
+searchKey: elf.PT_MIPS_OPTIONS
+tags: [constant number]
 ```
 
 ```Go
-const R_X86_64_PC32 R_X86_64 = 2 /* PC-relative 32 bit signed sym value. */
+const PT_MIPS_OPTIONS ProgType = 0x70000002 /* Options */
 
 ```
 
-### <a id="R_X86_64_GOT32" href="#R_X86_64_GOT32">const R_X86_64_GOT32</a>
+### <a id="PT_MIPS_REGINFO" href="#PT_MIPS_REGINFO">const PT_MIPS_REGINFO</a>
 
 ```
-searchKey: elf.R_X86_64_GOT32
+searchKey: elf.PT_MIPS_REGINFO
+tags: [constant number]
 ```
 
 ```Go
-const R_X86_64_GOT32 R_X86_64 = 3 /* PC-relative 32 bit GOT offset. */
+const PT_MIPS_REGINFO ProgType = 0x70000000 /* Register usage */
 
 ```
 
-### <a id="R_X86_64_PLT32" href="#R_X86_64_PLT32">const R_X86_64_PLT32</a>
+### <a id="PT_MIPS_RTPROC" href="#PT_MIPS_RTPROC">const PT_MIPS_RTPROC</a>
 
 ```
-searchKey: elf.R_X86_64_PLT32
+searchKey: elf.PT_MIPS_RTPROC
+tags: [constant number]
 ```
 
 ```Go
-const R_X86_64_PLT32 R_X86_64 = 4 /* PC-relative 32 bit PLT offset. */
+const PT_MIPS_RTPROC ProgType = 0x70000001 /* Runtime procedures */
 
 ```
 
-### <a id="R_X86_64_COPY" href="#R_X86_64_COPY">const R_X86_64_COPY</a>
+### <a id="PT_NOTE" href="#PT_NOTE">const PT_NOTE</a>
 
 ```
-searchKey: elf.R_X86_64_COPY
+searchKey: elf.PT_NOTE
+tags: [constant number]
 ```
 
 ```Go
-const R_X86_64_COPY R_X86_64 = 5 /* Copy data from shared object. */
+const PT_NOTE ProgType = 4 /* Auxiliary information. */
 
 ```
 
-### <a id="R_X86_64_GLOB_DAT" href="#R_X86_64_GLOB_DAT">const R_X86_64_GLOB_DAT</a>
+### <a id="PT_NULL" href="#PT_NULL">const PT_NULL</a>
 
 ```
-searchKey: elf.R_X86_64_GLOB_DAT
+searchKey: elf.PT_NULL
+tags: [constant number]
 ```
 
 ```Go
-const R_X86_64_GLOB_DAT R_X86_64 = 6 /* Set GOT entry to data address. */
+const PT_NULL ProgType = 0 /* Unused entry. */
 
 ```
 
-### <a id="R_X86_64_JMP_SLOT" href="#R_X86_64_JMP_SLOT">const R_X86_64_JMP_SLOT</a>
+### <a id="PT_OPENBSD_BOOTDATA" href="#PT_OPENBSD_BOOTDATA">const PT_OPENBSD_BOOTDATA</a>
 
 ```
-searchKey: elf.R_X86_64_JMP_SLOT
+searchKey: elf.PT_OPENBSD_BOOTDATA
+tags: [constant number]
 ```
 
 ```Go
-const R_X86_64_JMP_SLOT R_X86_64 = 7 /* Set GOT entry to code address. */
+const PT_OPENBSD_BOOTDATA ProgType = 0x65a41be6 /* Boot arguments */
 
 ```
 
-### <a id="R_X86_64_RELATIVE" href="#R_X86_64_RELATIVE">const R_X86_64_RELATIVE</a>
+### <a id="PT_OPENBSD_RANDOMIZE" href="#PT_OPENBSD_RANDOMIZE">const PT_OPENBSD_RANDOMIZE</a>
 
 ```
-searchKey: elf.R_X86_64_RELATIVE
+searchKey: elf.PT_OPENBSD_RANDOMIZE
+tags: [constant number]
 ```
 
 ```Go
-const R_X86_64_RELATIVE R_X86_64 = 8 /* Add load address of shared object. */
+const PT_OPENBSD_RANDOMIZE ProgType = 0x65a3dbe6 /* Random data */
 
 ```
 
-### <a id="R_X86_64_GOTPCREL" href="#R_X86_64_GOTPCREL">const R_X86_64_GOTPCREL</a>
+### <a id="PT_OPENBSD_WXNEEDED" href="#PT_OPENBSD_WXNEEDED">const PT_OPENBSD_WXNEEDED</a>
 
 ```
-searchKey: elf.R_X86_64_GOTPCREL
+searchKey: elf.PT_OPENBSD_WXNEEDED
+tags: [constant number]
 ```
 
 ```Go
-const R_X86_64_GOTPCREL R_X86_64 = 9 /* Add 32 bit signed pcrel offset to GOT. */
+const PT_OPENBSD_WXNEEDED ProgType = 0x65a3dbe7 /* W^X violations */
 
 ```
 
-### <a id="R_X86_64_32" href="#R_X86_64_32">const R_X86_64_32</a>
+### <a id="PT_PAX_FLAGS" href="#PT_PAX_FLAGS">const PT_PAX_FLAGS</a>
 
 ```
-searchKey: elf.R_X86_64_32
+searchKey: elf.PT_PAX_FLAGS
+tags: [constant number]
 ```
 
 ```Go
-const R_X86_64_32 R_X86_64 = 10 /* Add 32 bit zero extended symbol value */
+const PT_PAX_FLAGS ProgType = 0x65041580 /* PAX flags */
 
 ```
 
-### <a id="R_X86_64_32S" href="#R_X86_64_32S">const R_X86_64_32S</a>
+### <a id="PT_PHDR" href="#PT_PHDR">const PT_PHDR</a>
 
 ```
-searchKey: elf.R_X86_64_32S
+searchKey: elf.PT_PHDR
+tags: [constant number]
 ```
 
 ```Go
-const R_X86_64_32S R_X86_64 = 11 /* Add 32 bit sign extended symbol value */
+const PT_PHDR ProgType = 6 /* Location of program header itself. */
 
 ```
 
-### <a id="R_X86_64_16" href="#R_X86_64_16">const R_X86_64_16</a>
+### <a id="PT_S390_PGSTE" href="#PT_S390_PGSTE">const PT_S390_PGSTE</a>
 
 ```
-searchKey: elf.R_X86_64_16
+searchKey: elf.PT_S390_PGSTE
+tags: [constant number]
 ```
 
 ```Go
-const R_X86_64_16 R_X86_64 = 12 /* Add 16 bit zero extended symbol value */
+const PT_S390_PGSTE ProgType = 0x70000000 /* 4k page table size */
 
 ```
 
-### <a id="R_X86_64_PC16" href="#R_X86_64_PC16">const R_X86_64_PC16</a>
+### <a id="PT_SHLIB" href="#PT_SHLIB">const PT_SHLIB</a>
 
 ```
-searchKey: elf.R_X86_64_PC16
+searchKey: elf.PT_SHLIB
+tags: [constant number]
 ```
 
 ```Go
-const R_X86_64_PC16 R_X86_64 = 13 /* Add 16 bit signed extended pc relative symbol value */
+const PT_SHLIB ProgType = 5 /* Reserved (not used). */
 
 ```
 
-### <a id="R_X86_64_8" href="#R_X86_64_8">const R_X86_64_8</a>
+### <a id="PT_SUNWSTACK" href="#PT_SUNWSTACK">const PT_SUNWSTACK</a>
 
 ```
-searchKey: elf.R_X86_64_8
+searchKey: elf.PT_SUNWSTACK
+tags: [constant number]
 ```
 
 ```Go
-const R_X86_64_8 R_X86_64 = 14 /* Add 8 bit zero extended symbol value */
+const PT_SUNWSTACK ProgType = 0x6ffffffb /* Stack segment */
 
 ```
 
-### <a id="R_X86_64_PC8" href="#R_X86_64_PC8">const R_X86_64_PC8</a>
+### <a id="PT_SUNW_EH_FRAME" href="#PT_SUNW_EH_FRAME">const PT_SUNW_EH_FRAME</a>
 
 ```
-searchKey: elf.R_X86_64_PC8
+searchKey: elf.PT_SUNW_EH_FRAME
+tags: [constant number]
 ```
 
 ```Go
-const R_X86_64_PC8 R_X86_64 = 15 /* Add 8 bit signed extended pc relative symbol value */
+const PT_SUNW_EH_FRAME ProgType = 0x6474e550 /* Frame unwind information */
 
 ```
 
-### <a id="R_X86_64_DTPMOD64" href="#R_X86_64_DTPMOD64">const R_X86_64_DTPMOD64</a>
+### <a id="PT_TLS" href="#PT_TLS">const PT_TLS</a>
 
 ```
-searchKey: elf.R_X86_64_DTPMOD64
+searchKey: elf.PT_TLS
+tags: [constant number]
 ```
 
 ```Go
-const R_X86_64_DTPMOD64 R_X86_64 = 16 /* ID of module containing symbol */
+const PT_TLS ProgType = 7 /* Thread local storage segment */
 
 ```
 
-### <a id="R_X86_64_DTPOFF64" href="#R_X86_64_DTPOFF64">const R_X86_64_DTPOFF64</a>
+### <a id="R_386_16" href="#R_386_16">const R_386_16</a>
 
 ```
-searchKey: elf.R_X86_64_DTPOFF64
+searchKey: elf.R_386_16
+tags: [constant number]
 ```
 
 ```Go
-const R_X86_64_DTPOFF64 R_X86_64 = 17 /* Offset in TLS block */
-
-```
-
-### <a id="R_X86_64_TPOFF64" href="#R_X86_64_TPOFF64">const R_X86_64_TPOFF64</a>
-
-```
-searchKey: elf.R_X86_64_TPOFF64
-```
-
-```Go
-const R_X86_64_TPOFF64 R_X86_64 = 18 /* Offset in static TLS block */
-
-```
-
-### <a id="R_X86_64_TLSGD" href="#R_X86_64_TLSGD">const R_X86_64_TLSGD</a>
-
-```
-searchKey: elf.R_X86_64_TLSGD
-```
-
-```Go
-const R_X86_64_TLSGD R_X86_64 = 19 /* PC relative offset to GD GOT entry */
-
-```
-
-### <a id="R_X86_64_TLSLD" href="#R_X86_64_TLSLD">const R_X86_64_TLSLD</a>
-
-```
-searchKey: elf.R_X86_64_TLSLD
-```
-
-```Go
-const R_X86_64_TLSLD R_X86_64 = 20 /* PC relative offset to LD GOT entry */
-
-```
-
-### <a id="R_X86_64_DTPOFF32" href="#R_X86_64_DTPOFF32">const R_X86_64_DTPOFF32</a>
-
-```
-searchKey: elf.R_X86_64_DTPOFF32
-```
-
-```Go
-const R_X86_64_DTPOFF32 R_X86_64 = 21 /* Offset in TLS block */
-
-```
-
-### <a id="R_X86_64_GOTTPOFF" href="#R_X86_64_GOTTPOFF">const R_X86_64_GOTTPOFF</a>
-
-```
-searchKey: elf.R_X86_64_GOTTPOFF
-```
-
-```Go
-const R_X86_64_GOTTPOFF R_X86_64 = 22 /* PC relative offset to IE GOT entry */
-
-```
-
-### <a id="R_X86_64_TPOFF32" href="#R_X86_64_TPOFF32">const R_X86_64_TPOFF32</a>
-
-```
-searchKey: elf.R_X86_64_TPOFF32
-```
-
-```Go
-const R_X86_64_TPOFF32 R_X86_64 = 23 /* Offset in static TLS block */
-
-```
-
-### <a id="R_X86_64_PC64" href="#R_X86_64_PC64">const R_X86_64_PC64</a>
-
-```
-searchKey: elf.R_X86_64_PC64
-```
-
-```Go
-const R_X86_64_PC64 R_X86_64 = 24 /* PC relative 64-bit sign extended symbol value. */
-
-```
-
-### <a id="R_X86_64_GOTOFF64" href="#R_X86_64_GOTOFF64">const R_X86_64_GOTOFF64</a>
-
-```
-searchKey: elf.R_X86_64_GOTOFF64
-```
-
-```Go
-const R_X86_64_GOTOFF64 R_X86_64 = 25
-```
-
-### <a id="R_X86_64_GOTPC32" href="#R_X86_64_GOTPC32">const R_X86_64_GOTPC32</a>
-
-```
-searchKey: elf.R_X86_64_GOTPC32
-```
-
-```Go
-const R_X86_64_GOTPC32 R_X86_64 = 26
-```
-
-### <a id="R_X86_64_GOT64" href="#R_X86_64_GOT64">const R_X86_64_GOT64</a>
-
-```
-searchKey: elf.R_X86_64_GOT64
-```
-
-```Go
-const R_X86_64_GOT64 R_X86_64 = 27
-```
-
-### <a id="R_X86_64_GOTPCREL64" href="#R_X86_64_GOTPCREL64">const R_X86_64_GOTPCREL64</a>
-
-```
-searchKey: elf.R_X86_64_GOTPCREL64
-```
-
-```Go
-const R_X86_64_GOTPCREL64 R_X86_64 = 28
-```
-
-### <a id="R_X86_64_GOTPC64" href="#R_X86_64_GOTPC64">const R_X86_64_GOTPC64</a>
-
-```
-searchKey: elf.R_X86_64_GOTPC64
-```
-
-```Go
-const R_X86_64_GOTPC64 R_X86_64 = 29
-```
-
-### <a id="R_X86_64_GOTPLT64" href="#R_X86_64_GOTPLT64">const R_X86_64_GOTPLT64</a>
-
-```
-searchKey: elf.R_X86_64_GOTPLT64
-```
-
-```Go
-const R_X86_64_GOTPLT64 R_X86_64 = 30
-```
-
-### <a id="R_X86_64_PLTOFF64" href="#R_X86_64_PLTOFF64">const R_X86_64_PLTOFF64</a>
-
-```
-searchKey: elf.R_X86_64_PLTOFF64
-```
-
-```Go
-const R_X86_64_PLTOFF64 R_X86_64 = 31
-```
-
-### <a id="R_X86_64_SIZE32" href="#R_X86_64_SIZE32">const R_X86_64_SIZE32</a>
-
-```
-searchKey: elf.R_X86_64_SIZE32
-```
-
-```Go
-const R_X86_64_SIZE32 R_X86_64 = 32
-```
-
-### <a id="R_X86_64_SIZE64" href="#R_X86_64_SIZE64">const R_X86_64_SIZE64</a>
-
-```
-searchKey: elf.R_X86_64_SIZE64
-```
-
-```Go
-const R_X86_64_SIZE64 R_X86_64 = 33
-```
-
-### <a id="R_X86_64_GOTPC32_TLSDESC" href="#R_X86_64_GOTPC32_TLSDESC">const R_X86_64_GOTPC32_TLSDESC</a>
-
-```
-searchKey: elf.R_X86_64_GOTPC32_TLSDESC
-```
-
-```Go
-const R_X86_64_GOTPC32_TLSDESC R_X86_64 = 34
-```
-
-### <a id="R_X86_64_TLSDESC_CALL" href="#R_X86_64_TLSDESC_CALL">const R_X86_64_TLSDESC_CALL</a>
-
-```
-searchKey: elf.R_X86_64_TLSDESC_CALL
-```
-
-```Go
-const R_X86_64_TLSDESC_CALL R_X86_64 = 35
-```
-
-### <a id="R_X86_64_TLSDESC" href="#R_X86_64_TLSDESC">const R_X86_64_TLSDESC</a>
-
-```
-searchKey: elf.R_X86_64_TLSDESC
-```
-
-```Go
-const R_X86_64_TLSDESC R_X86_64 = 36
-```
-
-### <a id="R_X86_64_IRELATIVE" href="#R_X86_64_IRELATIVE">const R_X86_64_IRELATIVE</a>
-
-```
-searchKey: elf.R_X86_64_IRELATIVE
-```
-
-```Go
-const R_X86_64_IRELATIVE R_X86_64 = 37
-```
-
-### <a id="R_X86_64_RELATIVE64" href="#R_X86_64_RELATIVE64">const R_X86_64_RELATIVE64</a>
-
-```
-searchKey: elf.R_X86_64_RELATIVE64
-```
-
-```Go
-const R_X86_64_RELATIVE64 R_X86_64 = 38
-```
-
-### <a id="R_X86_64_PC32_BND" href="#R_X86_64_PC32_BND">const R_X86_64_PC32_BND</a>
-
-```
-searchKey: elf.R_X86_64_PC32_BND
-```
-
-```Go
-const R_X86_64_PC32_BND R_X86_64 = 39
-```
-
-### <a id="R_X86_64_PLT32_BND" href="#R_X86_64_PLT32_BND">const R_X86_64_PLT32_BND</a>
-
-```
-searchKey: elf.R_X86_64_PLT32_BND
-```
-
-```Go
-const R_X86_64_PLT32_BND R_X86_64 = 40
-```
-
-### <a id="R_X86_64_GOTPCRELX" href="#R_X86_64_GOTPCRELX">const R_X86_64_GOTPCRELX</a>
-
-```
-searchKey: elf.R_X86_64_GOTPCRELX
-```
-
-```Go
-const R_X86_64_GOTPCRELX R_X86_64 = 41
-```
-
-### <a id="R_X86_64_REX_GOTPCRELX" href="#R_X86_64_REX_GOTPCRELX">const R_X86_64_REX_GOTPCRELX</a>
-
-```
-searchKey: elf.R_X86_64_REX_GOTPCRELX
-```
-
-```Go
-const R_X86_64_REX_GOTPCRELX R_X86_64 = 42
-```
-
-### <a id="R_AARCH64_NONE" href="#R_AARCH64_NONE">const R_AARCH64_NONE</a>
-
-```
-searchKey: elf.R_AARCH64_NONE
-```
-
-```Go
-const R_AARCH64_NONE R_AARCH64 = 0
-```
-
-### <a id="R_AARCH64_P32_ABS32" href="#R_AARCH64_P32_ABS32">const R_AARCH64_P32_ABS32</a>
-
-```
-searchKey: elf.R_AARCH64_P32_ABS32
-```
-
-```Go
-const R_AARCH64_P32_ABS32 R_AARCH64 = 1
-```
-
-### <a id="R_AARCH64_P32_ABS16" href="#R_AARCH64_P32_ABS16">const R_AARCH64_P32_ABS16</a>
-
-```
-searchKey: elf.R_AARCH64_P32_ABS16
-```
-
-```Go
-const R_AARCH64_P32_ABS16 R_AARCH64 = 2
-```
-
-### <a id="R_AARCH64_P32_PREL32" href="#R_AARCH64_P32_PREL32">const R_AARCH64_P32_PREL32</a>
-
-```
-searchKey: elf.R_AARCH64_P32_PREL32
-```
-
-```Go
-const R_AARCH64_P32_PREL32 R_AARCH64 = 3
-```
-
-### <a id="R_AARCH64_P32_PREL16" href="#R_AARCH64_P32_PREL16">const R_AARCH64_P32_PREL16</a>
-
-```
-searchKey: elf.R_AARCH64_P32_PREL16
-```
-
-```Go
-const R_AARCH64_P32_PREL16 R_AARCH64 = 4
-```
-
-### <a id="R_AARCH64_P32_MOVW_UABS_G0" href="#R_AARCH64_P32_MOVW_UABS_G0">const R_AARCH64_P32_MOVW_UABS_G0</a>
-
-```
-searchKey: elf.R_AARCH64_P32_MOVW_UABS_G0
-```
-
-```Go
-const R_AARCH64_P32_MOVW_UABS_G0 R_AARCH64 = 5
-```
-
-### <a id="R_AARCH64_P32_MOVW_UABS_G0_NC" href="#R_AARCH64_P32_MOVW_UABS_G0_NC">const R_AARCH64_P32_MOVW_UABS_G0_NC</a>
-
-```
-searchKey: elf.R_AARCH64_P32_MOVW_UABS_G0_NC
-```
-
-```Go
-const R_AARCH64_P32_MOVW_UABS_G0_NC R_AARCH64 = 6
-```
-
-### <a id="R_AARCH64_P32_MOVW_UABS_G1" href="#R_AARCH64_P32_MOVW_UABS_G1">const R_AARCH64_P32_MOVW_UABS_G1</a>
-
-```
-searchKey: elf.R_AARCH64_P32_MOVW_UABS_G1
-```
-
-```Go
-const R_AARCH64_P32_MOVW_UABS_G1 R_AARCH64 = 7
-```
-
-### <a id="R_AARCH64_P32_MOVW_SABS_G0" href="#R_AARCH64_P32_MOVW_SABS_G0">const R_AARCH64_P32_MOVW_SABS_G0</a>
-
-```
-searchKey: elf.R_AARCH64_P32_MOVW_SABS_G0
-```
-
-```Go
-const R_AARCH64_P32_MOVW_SABS_G0 R_AARCH64 = 8
-```
-
-### <a id="R_AARCH64_P32_LD_PREL_LO19" href="#R_AARCH64_P32_LD_PREL_LO19">const R_AARCH64_P32_LD_PREL_LO19</a>
-
-```
-searchKey: elf.R_AARCH64_P32_LD_PREL_LO19
-```
-
-```Go
-const R_AARCH64_P32_LD_PREL_LO19 R_AARCH64 = 9
-```
-
-### <a id="R_AARCH64_P32_ADR_PREL_LO21" href="#R_AARCH64_P32_ADR_PREL_LO21">const R_AARCH64_P32_ADR_PREL_LO21</a>
-
-```
-searchKey: elf.R_AARCH64_P32_ADR_PREL_LO21
-```
-
-```Go
-const R_AARCH64_P32_ADR_PREL_LO21 R_AARCH64 = 10
-```
-
-### <a id="R_AARCH64_P32_ADR_PREL_PG_HI21" href="#R_AARCH64_P32_ADR_PREL_PG_HI21">const R_AARCH64_P32_ADR_PREL_PG_HI21</a>
-
-```
-searchKey: elf.R_AARCH64_P32_ADR_PREL_PG_HI21
-```
-
-```Go
-const R_AARCH64_P32_ADR_PREL_PG_HI21 R_AARCH64 = 11
-```
-
-### <a id="R_AARCH64_P32_ADD_ABS_LO12_NC" href="#R_AARCH64_P32_ADD_ABS_LO12_NC">const R_AARCH64_P32_ADD_ABS_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_P32_ADD_ABS_LO12_NC
-```
-
-```Go
-const R_AARCH64_P32_ADD_ABS_LO12_NC R_AARCH64 = 12
-```
-
-### <a id="R_AARCH64_P32_LDST8_ABS_LO12_NC" href="#R_AARCH64_P32_LDST8_ABS_LO12_NC">const R_AARCH64_P32_LDST8_ABS_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_P32_LDST8_ABS_LO12_NC
-```
-
-```Go
-const R_AARCH64_P32_LDST8_ABS_LO12_NC R_AARCH64 = 13
-```
-
-### <a id="R_AARCH64_P32_LDST16_ABS_LO12_NC" href="#R_AARCH64_P32_LDST16_ABS_LO12_NC">const R_AARCH64_P32_LDST16_ABS_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_P32_LDST16_ABS_LO12_NC
-```
-
-```Go
-const R_AARCH64_P32_LDST16_ABS_LO12_NC R_AARCH64 = 14
-```
-
-### <a id="R_AARCH64_P32_LDST32_ABS_LO12_NC" href="#R_AARCH64_P32_LDST32_ABS_LO12_NC">const R_AARCH64_P32_LDST32_ABS_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_P32_LDST32_ABS_LO12_NC
-```
-
-```Go
-const R_AARCH64_P32_LDST32_ABS_LO12_NC R_AARCH64 = 15
-```
-
-### <a id="R_AARCH64_P32_LDST64_ABS_LO12_NC" href="#R_AARCH64_P32_LDST64_ABS_LO12_NC">const R_AARCH64_P32_LDST64_ABS_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_P32_LDST64_ABS_LO12_NC
-```
-
-```Go
-const R_AARCH64_P32_LDST64_ABS_LO12_NC R_AARCH64 = 16
-```
-
-### <a id="R_AARCH64_P32_LDST128_ABS_LO12_NC" href="#R_AARCH64_P32_LDST128_ABS_LO12_NC">const R_AARCH64_P32_LDST128_ABS_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_P32_LDST128_ABS_LO12_NC
-```
-
-```Go
-const R_AARCH64_P32_LDST128_ABS_LO12_NC R_AARCH64 = 17
-```
-
-### <a id="R_AARCH64_P32_TSTBR14" href="#R_AARCH64_P32_TSTBR14">const R_AARCH64_P32_TSTBR14</a>
-
-```
-searchKey: elf.R_AARCH64_P32_TSTBR14
-```
-
-```Go
-const R_AARCH64_P32_TSTBR14 R_AARCH64 = 18
-```
-
-### <a id="R_AARCH64_P32_CONDBR19" href="#R_AARCH64_P32_CONDBR19">const R_AARCH64_P32_CONDBR19</a>
-
-```
-searchKey: elf.R_AARCH64_P32_CONDBR19
-```
-
-```Go
-const R_AARCH64_P32_CONDBR19 R_AARCH64 = 19
-```
-
-### <a id="R_AARCH64_P32_JUMP26" href="#R_AARCH64_P32_JUMP26">const R_AARCH64_P32_JUMP26</a>
-
-```
-searchKey: elf.R_AARCH64_P32_JUMP26
-```
-
-```Go
-const R_AARCH64_P32_JUMP26 R_AARCH64 = 20
-```
-
-### <a id="R_AARCH64_P32_CALL26" href="#R_AARCH64_P32_CALL26">const R_AARCH64_P32_CALL26</a>
-
-```
-searchKey: elf.R_AARCH64_P32_CALL26
-```
-
-```Go
-const R_AARCH64_P32_CALL26 R_AARCH64 = 21
-```
-
-### <a id="R_AARCH64_P32_GOT_LD_PREL19" href="#R_AARCH64_P32_GOT_LD_PREL19">const R_AARCH64_P32_GOT_LD_PREL19</a>
-
-```
-searchKey: elf.R_AARCH64_P32_GOT_LD_PREL19
-```
-
-```Go
-const R_AARCH64_P32_GOT_LD_PREL19 R_AARCH64 = 25
-```
-
-### <a id="R_AARCH64_P32_ADR_GOT_PAGE" href="#R_AARCH64_P32_ADR_GOT_PAGE">const R_AARCH64_P32_ADR_GOT_PAGE</a>
-
-```
-searchKey: elf.R_AARCH64_P32_ADR_GOT_PAGE
-```
-
-```Go
-const R_AARCH64_P32_ADR_GOT_PAGE R_AARCH64 = 26
-```
-
-### <a id="R_AARCH64_P32_LD32_GOT_LO12_NC" href="#R_AARCH64_P32_LD32_GOT_LO12_NC">const R_AARCH64_P32_LD32_GOT_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_P32_LD32_GOT_LO12_NC
-```
-
-```Go
-const R_AARCH64_P32_LD32_GOT_LO12_NC R_AARCH64 = 27
-```
-
-### <a id="R_AARCH64_P32_TLSGD_ADR_PAGE21" href="#R_AARCH64_P32_TLSGD_ADR_PAGE21">const R_AARCH64_P32_TLSGD_ADR_PAGE21</a>
-
-```
-searchKey: elf.R_AARCH64_P32_TLSGD_ADR_PAGE21
-```
-
-```Go
-const R_AARCH64_P32_TLSGD_ADR_PAGE21 R_AARCH64 = 81
-```
-
-### <a id="R_AARCH64_P32_TLSGD_ADD_LO12_NC" href="#R_AARCH64_P32_TLSGD_ADD_LO12_NC">const R_AARCH64_P32_TLSGD_ADD_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_P32_TLSGD_ADD_LO12_NC
-```
-
-```Go
-const R_AARCH64_P32_TLSGD_ADD_LO12_NC R_AARCH64 = 82
-```
-
-### <a id="R_AARCH64_P32_TLSIE_ADR_GOTTPREL_PAGE21" href="#R_AARCH64_P32_TLSIE_ADR_GOTTPREL_PAGE21">const R_AARCH64_P32_TLSIE_ADR_GOTTPREL_PAGE21</a>
-
-```
-searchKey: elf.R_AARCH64_P32_TLSIE_ADR_GOTTPREL_PAGE21
-```
-
-```Go
-const R_AARCH64_P32_TLSIE_ADR_GOTTPREL_PAGE21 R_AARCH64 = 103
-```
-
-### <a id="R_AARCH64_P32_TLSIE_LD32_GOTTPREL_LO12_NC" href="#R_AARCH64_P32_TLSIE_LD32_GOTTPREL_LO12_NC">const R_AARCH64_P32_TLSIE_LD32_GOTTPREL_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_P32_TLSIE_LD32_GOTTPREL_LO12_NC
-```
-
-```Go
-const R_AARCH64_P32_TLSIE_LD32_GOTTPREL_LO12_NC R_AARCH64 = 104
-```
-
-### <a id="R_AARCH64_P32_TLSIE_LD_GOTTPREL_PREL19" href="#R_AARCH64_P32_TLSIE_LD_GOTTPREL_PREL19">const R_AARCH64_P32_TLSIE_LD_GOTTPREL_PREL19</a>
-
-```
-searchKey: elf.R_AARCH64_P32_TLSIE_LD_GOTTPREL_PREL19
-```
-
-```Go
-const R_AARCH64_P32_TLSIE_LD_GOTTPREL_PREL19 R_AARCH64 = 105
-```
-
-### <a id="R_AARCH64_P32_TLSLE_MOVW_TPREL_G1" href="#R_AARCH64_P32_TLSLE_MOVW_TPREL_G1">const R_AARCH64_P32_TLSLE_MOVW_TPREL_G1</a>
-
-```
-searchKey: elf.R_AARCH64_P32_TLSLE_MOVW_TPREL_G1
-```
-
-```Go
-const R_AARCH64_P32_TLSLE_MOVW_TPREL_G1 R_AARCH64 = 106
-```
-
-### <a id="R_AARCH64_P32_TLSLE_MOVW_TPREL_G0" href="#R_AARCH64_P32_TLSLE_MOVW_TPREL_G0">const R_AARCH64_P32_TLSLE_MOVW_TPREL_G0</a>
-
-```
-searchKey: elf.R_AARCH64_P32_TLSLE_MOVW_TPREL_G0
-```
-
-```Go
-const R_AARCH64_P32_TLSLE_MOVW_TPREL_G0 R_AARCH64 = 107
-```
-
-### <a id="R_AARCH64_P32_TLSLE_MOVW_TPREL_G0_NC" href="#R_AARCH64_P32_TLSLE_MOVW_TPREL_G0_NC">const R_AARCH64_P32_TLSLE_MOVW_TPREL_G0_NC</a>
-
-```
-searchKey: elf.R_AARCH64_P32_TLSLE_MOVW_TPREL_G0_NC
-```
-
-```Go
-const R_AARCH64_P32_TLSLE_MOVW_TPREL_G0_NC R_AARCH64 = 108
-```
-
-### <a id="R_AARCH64_P32_TLSLE_ADD_TPREL_HI12" href="#R_AARCH64_P32_TLSLE_ADD_TPREL_HI12">const R_AARCH64_P32_TLSLE_ADD_TPREL_HI12</a>
-
-```
-searchKey: elf.R_AARCH64_P32_TLSLE_ADD_TPREL_HI12
-```
-
-```Go
-const R_AARCH64_P32_TLSLE_ADD_TPREL_HI12 R_AARCH64 = 109
-```
-
-### <a id="R_AARCH64_P32_TLSLE_ADD_TPREL_LO12" href="#R_AARCH64_P32_TLSLE_ADD_TPREL_LO12">const R_AARCH64_P32_TLSLE_ADD_TPREL_LO12</a>
-
-```
-searchKey: elf.R_AARCH64_P32_TLSLE_ADD_TPREL_LO12
-```
-
-```Go
-const R_AARCH64_P32_TLSLE_ADD_TPREL_LO12 R_AARCH64 = 110
-```
-
-### <a id="R_AARCH64_P32_TLSLE_ADD_TPREL_LO12_NC" href="#R_AARCH64_P32_TLSLE_ADD_TPREL_LO12_NC">const R_AARCH64_P32_TLSLE_ADD_TPREL_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_P32_TLSLE_ADD_TPREL_LO12_NC
-```
-
-```Go
-const R_AARCH64_P32_TLSLE_ADD_TPREL_LO12_NC R_AARCH64 = 111
-```
-
-### <a id="R_AARCH64_P32_TLSDESC_LD_PREL19" href="#R_AARCH64_P32_TLSDESC_LD_PREL19">const R_AARCH64_P32_TLSDESC_LD_PREL19</a>
-
-```
-searchKey: elf.R_AARCH64_P32_TLSDESC_LD_PREL19
-```
-
-```Go
-const R_AARCH64_P32_TLSDESC_LD_PREL19 R_AARCH64 = 122
-```
-
-### <a id="R_AARCH64_P32_TLSDESC_ADR_PREL21" href="#R_AARCH64_P32_TLSDESC_ADR_PREL21">const R_AARCH64_P32_TLSDESC_ADR_PREL21</a>
-
-```
-searchKey: elf.R_AARCH64_P32_TLSDESC_ADR_PREL21
-```
-
-```Go
-const R_AARCH64_P32_TLSDESC_ADR_PREL21 R_AARCH64 = 123
-```
-
-### <a id="R_AARCH64_P32_TLSDESC_ADR_PAGE21" href="#R_AARCH64_P32_TLSDESC_ADR_PAGE21">const R_AARCH64_P32_TLSDESC_ADR_PAGE21</a>
-
-```
-searchKey: elf.R_AARCH64_P32_TLSDESC_ADR_PAGE21
-```
-
-```Go
-const R_AARCH64_P32_TLSDESC_ADR_PAGE21 R_AARCH64 = 124
-```
-
-### <a id="R_AARCH64_P32_TLSDESC_LD32_LO12_NC" href="#R_AARCH64_P32_TLSDESC_LD32_LO12_NC">const R_AARCH64_P32_TLSDESC_LD32_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_P32_TLSDESC_LD32_LO12_NC
-```
-
-```Go
-const R_AARCH64_P32_TLSDESC_LD32_LO12_NC R_AARCH64 = 125
-```
-
-### <a id="R_AARCH64_P32_TLSDESC_ADD_LO12_NC" href="#R_AARCH64_P32_TLSDESC_ADD_LO12_NC">const R_AARCH64_P32_TLSDESC_ADD_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_P32_TLSDESC_ADD_LO12_NC
-```
-
-```Go
-const R_AARCH64_P32_TLSDESC_ADD_LO12_NC R_AARCH64 = 126
-```
-
-### <a id="R_AARCH64_P32_TLSDESC_CALL" href="#R_AARCH64_P32_TLSDESC_CALL">const R_AARCH64_P32_TLSDESC_CALL</a>
-
-```
-searchKey: elf.R_AARCH64_P32_TLSDESC_CALL
-```
-
-```Go
-const R_AARCH64_P32_TLSDESC_CALL R_AARCH64 = 127
-```
-
-### <a id="R_AARCH64_P32_COPY" href="#R_AARCH64_P32_COPY">const R_AARCH64_P32_COPY</a>
-
-```
-searchKey: elf.R_AARCH64_P32_COPY
-```
-
-```Go
-const R_AARCH64_P32_COPY R_AARCH64 = 180
-```
-
-### <a id="R_AARCH64_P32_GLOB_DAT" href="#R_AARCH64_P32_GLOB_DAT">const R_AARCH64_P32_GLOB_DAT</a>
-
-```
-searchKey: elf.R_AARCH64_P32_GLOB_DAT
-```
-
-```Go
-const R_AARCH64_P32_GLOB_DAT R_AARCH64 = 181
-```
-
-### <a id="R_AARCH64_P32_JUMP_SLOT" href="#R_AARCH64_P32_JUMP_SLOT">const R_AARCH64_P32_JUMP_SLOT</a>
-
-```
-searchKey: elf.R_AARCH64_P32_JUMP_SLOT
-```
-
-```Go
-const R_AARCH64_P32_JUMP_SLOT R_AARCH64 = 182
-```
-
-### <a id="R_AARCH64_P32_RELATIVE" href="#R_AARCH64_P32_RELATIVE">const R_AARCH64_P32_RELATIVE</a>
-
-```
-searchKey: elf.R_AARCH64_P32_RELATIVE
-```
-
-```Go
-const R_AARCH64_P32_RELATIVE R_AARCH64 = 183
-```
-
-### <a id="R_AARCH64_P32_TLS_DTPMOD" href="#R_AARCH64_P32_TLS_DTPMOD">const R_AARCH64_P32_TLS_DTPMOD</a>
-
-```
-searchKey: elf.R_AARCH64_P32_TLS_DTPMOD
-```
-
-```Go
-const R_AARCH64_P32_TLS_DTPMOD R_AARCH64 = 184
-```
-
-### <a id="R_AARCH64_P32_TLS_DTPREL" href="#R_AARCH64_P32_TLS_DTPREL">const R_AARCH64_P32_TLS_DTPREL</a>
-
-```
-searchKey: elf.R_AARCH64_P32_TLS_DTPREL
-```
-
-```Go
-const R_AARCH64_P32_TLS_DTPREL R_AARCH64 = 185
-```
-
-### <a id="R_AARCH64_P32_TLS_TPREL" href="#R_AARCH64_P32_TLS_TPREL">const R_AARCH64_P32_TLS_TPREL</a>
-
-```
-searchKey: elf.R_AARCH64_P32_TLS_TPREL
-```
-
-```Go
-const R_AARCH64_P32_TLS_TPREL R_AARCH64 = 186
-```
-
-### <a id="R_AARCH64_P32_TLSDESC" href="#R_AARCH64_P32_TLSDESC">const R_AARCH64_P32_TLSDESC</a>
-
-```
-searchKey: elf.R_AARCH64_P32_TLSDESC
-```
-
-```Go
-const R_AARCH64_P32_TLSDESC R_AARCH64 = 187
-```
-
-### <a id="R_AARCH64_P32_IRELATIVE" href="#R_AARCH64_P32_IRELATIVE">const R_AARCH64_P32_IRELATIVE</a>
-
-```
-searchKey: elf.R_AARCH64_P32_IRELATIVE
-```
-
-```Go
-const R_AARCH64_P32_IRELATIVE R_AARCH64 = 188
-```
-
-### <a id="R_AARCH64_NULL" href="#R_AARCH64_NULL">const R_AARCH64_NULL</a>
-
-```
-searchKey: elf.R_AARCH64_NULL
-```
-
-```Go
-const R_AARCH64_NULL R_AARCH64 = 256
-```
-
-### <a id="R_AARCH64_ABS64" href="#R_AARCH64_ABS64">const R_AARCH64_ABS64</a>
-
-```
-searchKey: elf.R_AARCH64_ABS64
-```
-
-```Go
-const R_AARCH64_ABS64 R_AARCH64 = 257
-```
-
-### <a id="R_AARCH64_ABS32" href="#R_AARCH64_ABS32">const R_AARCH64_ABS32</a>
-
-```
-searchKey: elf.R_AARCH64_ABS32
-```
-
-```Go
-const R_AARCH64_ABS32 R_AARCH64 = 258
-```
-
-### <a id="R_AARCH64_ABS16" href="#R_AARCH64_ABS16">const R_AARCH64_ABS16</a>
-
-```
-searchKey: elf.R_AARCH64_ABS16
-```
-
-```Go
-const R_AARCH64_ABS16 R_AARCH64 = 259
-```
-
-### <a id="R_AARCH64_PREL64" href="#R_AARCH64_PREL64">const R_AARCH64_PREL64</a>
-
-```
-searchKey: elf.R_AARCH64_PREL64
-```
-
-```Go
-const R_AARCH64_PREL64 R_AARCH64 = 260
-```
-
-### <a id="R_AARCH64_PREL32" href="#R_AARCH64_PREL32">const R_AARCH64_PREL32</a>
-
-```
-searchKey: elf.R_AARCH64_PREL32
-```
-
-```Go
-const R_AARCH64_PREL32 R_AARCH64 = 261
-```
-
-### <a id="R_AARCH64_PREL16" href="#R_AARCH64_PREL16">const R_AARCH64_PREL16</a>
-
-```
-searchKey: elf.R_AARCH64_PREL16
-```
-
-```Go
-const R_AARCH64_PREL16 R_AARCH64 = 262
-```
-
-### <a id="R_AARCH64_MOVW_UABS_G0" href="#R_AARCH64_MOVW_UABS_G0">const R_AARCH64_MOVW_UABS_G0</a>
-
-```
-searchKey: elf.R_AARCH64_MOVW_UABS_G0
-```
-
-```Go
-const R_AARCH64_MOVW_UABS_G0 R_AARCH64 = 263
-```
-
-### <a id="R_AARCH64_MOVW_UABS_G0_NC" href="#R_AARCH64_MOVW_UABS_G0_NC">const R_AARCH64_MOVW_UABS_G0_NC</a>
-
-```
-searchKey: elf.R_AARCH64_MOVW_UABS_G0_NC
-```
-
-```Go
-const R_AARCH64_MOVW_UABS_G0_NC R_AARCH64 = 264
-```
-
-### <a id="R_AARCH64_MOVW_UABS_G1" href="#R_AARCH64_MOVW_UABS_G1">const R_AARCH64_MOVW_UABS_G1</a>
-
-```
-searchKey: elf.R_AARCH64_MOVW_UABS_G1
-```
-
-```Go
-const R_AARCH64_MOVW_UABS_G1 R_AARCH64 = 265
-```
-
-### <a id="R_AARCH64_MOVW_UABS_G1_NC" href="#R_AARCH64_MOVW_UABS_G1_NC">const R_AARCH64_MOVW_UABS_G1_NC</a>
-
-```
-searchKey: elf.R_AARCH64_MOVW_UABS_G1_NC
-```
-
-```Go
-const R_AARCH64_MOVW_UABS_G1_NC R_AARCH64 = 266
-```
-
-### <a id="R_AARCH64_MOVW_UABS_G2" href="#R_AARCH64_MOVW_UABS_G2">const R_AARCH64_MOVW_UABS_G2</a>
-
-```
-searchKey: elf.R_AARCH64_MOVW_UABS_G2
-```
-
-```Go
-const R_AARCH64_MOVW_UABS_G2 R_AARCH64 = 267
-```
-
-### <a id="R_AARCH64_MOVW_UABS_G2_NC" href="#R_AARCH64_MOVW_UABS_G2_NC">const R_AARCH64_MOVW_UABS_G2_NC</a>
-
-```
-searchKey: elf.R_AARCH64_MOVW_UABS_G2_NC
-```
-
-```Go
-const R_AARCH64_MOVW_UABS_G2_NC R_AARCH64 = 268
-```
-
-### <a id="R_AARCH64_MOVW_UABS_G3" href="#R_AARCH64_MOVW_UABS_G3">const R_AARCH64_MOVW_UABS_G3</a>
-
-```
-searchKey: elf.R_AARCH64_MOVW_UABS_G3
-```
-
-```Go
-const R_AARCH64_MOVW_UABS_G3 R_AARCH64 = 269
-```
-
-### <a id="R_AARCH64_MOVW_SABS_G0" href="#R_AARCH64_MOVW_SABS_G0">const R_AARCH64_MOVW_SABS_G0</a>
-
-```
-searchKey: elf.R_AARCH64_MOVW_SABS_G0
-```
-
-```Go
-const R_AARCH64_MOVW_SABS_G0 R_AARCH64 = 270
-```
-
-### <a id="R_AARCH64_MOVW_SABS_G1" href="#R_AARCH64_MOVW_SABS_G1">const R_AARCH64_MOVW_SABS_G1</a>
-
-```
-searchKey: elf.R_AARCH64_MOVW_SABS_G1
-```
-
-```Go
-const R_AARCH64_MOVW_SABS_G1 R_AARCH64 = 271
-```
-
-### <a id="R_AARCH64_MOVW_SABS_G2" href="#R_AARCH64_MOVW_SABS_G2">const R_AARCH64_MOVW_SABS_G2</a>
-
-```
-searchKey: elf.R_AARCH64_MOVW_SABS_G2
-```
-
-```Go
-const R_AARCH64_MOVW_SABS_G2 R_AARCH64 = 272
-```
-
-### <a id="R_AARCH64_LD_PREL_LO19" href="#R_AARCH64_LD_PREL_LO19">const R_AARCH64_LD_PREL_LO19</a>
-
-```
-searchKey: elf.R_AARCH64_LD_PREL_LO19
-```
-
-```Go
-const R_AARCH64_LD_PREL_LO19 R_AARCH64 = 273
-```
-
-### <a id="R_AARCH64_ADR_PREL_LO21" href="#R_AARCH64_ADR_PREL_LO21">const R_AARCH64_ADR_PREL_LO21</a>
-
-```
-searchKey: elf.R_AARCH64_ADR_PREL_LO21
-```
-
-```Go
-const R_AARCH64_ADR_PREL_LO21 R_AARCH64 = 274
-```
-
-### <a id="R_AARCH64_ADR_PREL_PG_HI21" href="#R_AARCH64_ADR_PREL_PG_HI21">const R_AARCH64_ADR_PREL_PG_HI21</a>
-
-```
-searchKey: elf.R_AARCH64_ADR_PREL_PG_HI21
-```
-
-```Go
-const R_AARCH64_ADR_PREL_PG_HI21 R_AARCH64 = 275
-```
-
-### <a id="R_AARCH64_ADR_PREL_PG_HI21_NC" href="#R_AARCH64_ADR_PREL_PG_HI21_NC">const R_AARCH64_ADR_PREL_PG_HI21_NC</a>
-
-```
-searchKey: elf.R_AARCH64_ADR_PREL_PG_HI21_NC
-```
-
-```Go
-const R_AARCH64_ADR_PREL_PG_HI21_NC R_AARCH64 = 276
-```
-
-### <a id="R_AARCH64_ADD_ABS_LO12_NC" href="#R_AARCH64_ADD_ABS_LO12_NC">const R_AARCH64_ADD_ABS_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_ADD_ABS_LO12_NC
-```
-
-```Go
-const R_AARCH64_ADD_ABS_LO12_NC R_AARCH64 = 277
-```
-
-### <a id="R_AARCH64_LDST8_ABS_LO12_NC" href="#R_AARCH64_LDST8_ABS_LO12_NC">const R_AARCH64_LDST8_ABS_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_LDST8_ABS_LO12_NC
-```
-
-```Go
-const R_AARCH64_LDST8_ABS_LO12_NC R_AARCH64 = 278
-```
-
-### <a id="R_AARCH64_TSTBR14" href="#R_AARCH64_TSTBR14">const R_AARCH64_TSTBR14</a>
-
-```
-searchKey: elf.R_AARCH64_TSTBR14
-```
-
-```Go
-const R_AARCH64_TSTBR14 R_AARCH64 = 279
-```
-
-### <a id="R_AARCH64_CONDBR19" href="#R_AARCH64_CONDBR19">const R_AARCH64_CONDBR19</a>
-
-```
-searchKey: elf.R_AARCH64_CONDBR19
-```
-
-```Go
-const R_AARCH64_CONDBR19 R_AARCH64 = 280
-```
-
-### <a id="R_AARCH64_JUMP26" href="#R_AARCH64_JUMP26">const R_AARCH64_JUMP26</a>
-
-```
-searchKey: elf.R_AARCH64_JUMP26
-```
-
-```Go
-const R_AARCH64_JUMP26 R_AARCH64 = 282
-```
-
-### <a id="R_AARCH64_CALL26" href="#R_AARCH64_CALL26">const R_AARCH64_CALL26</a>
-
-```
-searchKey: elf.R_AARCH64_CALL26
-```
-
-```Go
-const R_AARCH64_CALL26 R_AARCH64 = 283
-```
-
-### <a id="R_AARCH64_LDST16_ABS_LO12_NC" href="#R_AARCH64_LDST16_ABS_LO12_NC">const R_AARCH64_LDST16_ABS_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_LDST16_ABS_LO12_NC
-```
-
-```Go
-const R_AARCH64_LDST16_ABS_LO12_NC R_AARCH64 = 284
-```
-
-### <a id="R_AARCH64_LDST32_ABS_LO12_NC" href="#R_AARCH64_LDST32_ABS_LO12_NC">const R_AARCH64_LDST32_ABS_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_LDST32_ABS_LO12_NC
-```
-
-```Go
-const R_AARCH64_LDST32_ABS_LO12_NC R_AARCH64 = 285
-```
-
-### <a id="R_AARCH64_LDST64_ABS_LO12_NC" href="#R_AARCH64_LDST64_ABS_LO12_NC">const R_AARCH64_LDST64_ABS_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_LDST64_ABS_LO12_NC
-```
-
-```Go
-const R_AARCH64_LDST64_ABS_LO12_NC R_AARCH64 = 286
-```
-
-### <a id="R_AARCH64_LDST128_ABS_LO12_NC" href="#R_AARCH64_LDST128_ABS_LO12_NC">const R_AARCH64_LDST128_ABS_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_LDST128_ABS_LO12_NC
-```
-
-```Go
-const R_AARCH64_LDST128_ABS_LO12_NC R_AARCH64 = 299
-```
-
-### <a id="R_AARCH64_GOT_LD_PREL19" href="#R_AARCH64_GOT_LD_PREL19">const R_AARCH64_GOT_LD_PREL19</a>
-
-```
-searchKey: elf.R_AARCH64_GOT_LD_PREL19
-```
-
-```Go
-const R_AARCH64_GOT_LD_PREL19 R_AARCH64 = 309
-```
-
-### <a id="R_AARCH64_LD64_GOTOFF_LO15" href="#R_AARCH64_LD64_GOTOFF_LO15">const R_AARCH64_LD64_GOTOFF_LO15</a>
-
-```
-searchKey: elf.R_AARCH64_LD64_GOTOFF_LO15
-```
-
-```Go
-const R_AARCH64_LD64_GOTOFF_LO15 R_AARCH64 = 310
-```
-
-### <a id="R_AARCH64_ADR_GOT_PAGE" href="#R_AARCH64_ADR_GOT_PAGE">const R_AARCH64_ADR_GOT_PAGE</a>
-
-```
-searchKey: elf.R_AARCH64_ADR_GOT_PAGE
-```
-
-```Go
-const R_AARCH64_ADR_GOT_PAGE R_AARCH64 = 311
-```
-
-### <a id="R_AARCH64_LD64_GOT_LO12_NC" href="#R_AARCH64_LD64_GOT_LO12_NC">const R_AARCH64_LD64_GOT_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_LD64_GOT_LO12_NC
-```
-
-```Go
-const R_AARCH64_LD64_GOT_LO12_NC R_AARCH64 = 312
-```
-
-### <a id="R_AARCH64_LD64_GOTPAGE_LO15" href="#R_AARCH64_LD64_GOTPAGE_LO15">const R_AARCH64_LD64_GOTPAGE_LO15</a>
-
-```
-searchKey: elf.R_AARCH64_LD64_GOTPAGE_LO15
-```
-
-```Go
-const R_AARCH64_LD64_GOTPAGE_LO15 R_AARCH64 = 313
-```
-
-### <a id="R_AARCH64_TLSGD_ADR_PREL21" href="#R_AARCH64_TLSGD_ADR_PREL21">const R_AARCH64_TLSGD_ADR_PREL21</a>
-
-```
-searchKey: elf.R_AARCH64_TLSGD_ADR_PREL21
-```
-
-```Go
-const R_AARCH64_TLSGD_ADR_PREL21 R_AARCH64 = 512
-```
-
-### <a id="R_AARCH64_TLSGD_ADR_PAGE21" href="#R_AARCH64_TLSGD_ADR_PAGE21">const R_AARCH64_TLSGD_ADR_PAGE21</a>
-
-```
-searchKey: elf.R_AARCH64_TLSGD_ADR_PAGE21
-```
-
-```Go
-const R_AARCH64_TLSGD_ADR_PAGE21 R_AARCH64 = 513
-```
-
-### <a id="R_AARCH64_TLSGD_ADD_LO12_NC" href="#R_AARCH64_TLSGD_ADD_LO12_NC">const R_AARCH64_TLSGD_ADD_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_TLSGD_ADD_LO12_NC
-```
-
-```Go
-const R_AARCH64_TLSGD_ADD_LO12_NC R_AARCH64 = 514
-```
-
-### <a id="R_AARCH64_TLSGD_MOVW_G1" href="#R_AARCH64_TLSGD_MOVW_G1">const R_AARCH64_TLSGD_MOVW_G1</a>
-
-```
-searchKey: elf.R_AARCH64_TLSGD_MOVW_G1
-```
-
-```Go
-const R_AARCH64_TLSGD_MOVW_G1 R_AARCH64 = 515
-```
-
-### <a id="R_AARCH64_TLSGD_MOVW_G0_NC" href="#R_AARCH64_TLSGD_MOVW_G0_NC">const R_AARCH64_TLSGD_MOVW_G0_NC</a>
-
-```
-searchKey: elf.R_AARCH64_TLSGD_MOVW_G0_NC
-```
-
-```Go
-const R_AARCH64_TLSGD_MOVW_G0_NC R_AARCH64 = 516
-```
-
-### <a id="R_AARCH64_TLSLD_ADR_PREL21" href="#R_AARCH64_TLSLD_ADR_PREL21">const R_AARCH64_TLSLD_ADR_PREL21</a>
-
-```
-searchKey: elf.R_AARCH64_TLSLD_ADR_PREL21
-```
-
-```Go
-const R_AARCH64_TLSLD_ADR_PREL21 R_AARCH64 = 517
-```
-
-### <a id="R_AARCH64_TLSLD_ADR_PAGE21" href="#R_AARCH64_TLSLD_ADR_PAGE21">const R_AARCH64_TLSLD_ADR_PAGE21</a>
-
-```
-searchKey: elf.R_AARCH64_TLSLD_ADR_PAGE21
-```
-
-```Go
-const R_AARCH64_TLSLD_ADR_PAGE21 R_AARCH64 = 518
-```
-
-### <a id="R_AARCH64_TLSIE_MOVW_GOTTPREL_G1" href="#R_AARCH64_TLSIE_MOVW_GOTTPREL_G1">const R_AARCH64_TLSIE_MOVW_GOTTPREL_G1</a>
-
-```
-searchKey: elf.R_AARCH64_TLSIE_MOVW_GOTTPREL_G1
-```
-
-```Go
-const R_AARCH64_TLSIE_MOVW_GOTTPREL_G1 R_AARCH64 = 539
-```
-
-### <a id="R_AARCH64_TLSIE_MOVW_GOTTPREL_G0_NC" href="#R_AARCH64_TLSIE_MOVW_GOTTPREL_G0_NC">const R_AARCH64_TLSIE_MOVW_GOTTPREL_G0_NC</a>
-
-```
-searchKey: elf.R_AARCH64_TLSIE_MOVW_GOTTPREL_G0_NC
-```
-
-```Go
-const R_AARCH64_TLSIE_MOVW_GOTTPREL_G0_NC R_AARCH64 = 540
-```
-
-### <a id="R_AARCH64_TLSIE_ADR_GOTTPREL_PAGE21" href="#R_AARCH64_TLSIE_ADR_GOTTPREL_PAGE21">const R_AARCH64_TLSIE_ADR_GOTTPREL_PAGE21</a>
-
-```
-searchKey: elf.R_AARCH64_TLSIE_ADR_GOTTPREL_PAGE21
-```
-
-```Go
-const R_AARCH64_TLSIE_ADR_GOTTPREL_PAGE21 R_AARCH64 = 541
-```
-
-### <a id="R_AARCH64_TLSIE_LD64_GOTTPREL_LO12_NC" href="#R_AARCH64_TLSIE_LD64_GOTTPREL_LO12_NC">const R_AARCH64_TLSIE_LD64_GOTTPREL_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_TLSIE_LD64_GOTTPREL_LO12_NC
-```
-
-```Go
-const R_AARCH64_TLSIE_LD64_GOTTPREL_LO12_NC R_AARCH64 = 542
-```
-
-### <a id="R_AARCH64_TLSIE_LD_GOTTPREL_PREL19" href="#R_AARCH64_TLSIE_LD_GOTTPREL_PREL19">const R_AARCH64_TLSIE_LD_GOTTPREL_PREL19</a>
-
-```
-searchKey: elf.R_AARCH64_TLSIE_LD_GOTTPREL_PREL19
-```
-
-```Go
-const R_AARCH64_TLSIE_LD_GOTTPREL_PREL19 R_AARCH64 = 543
-```
-
-### <a id="R_AARCH64_TLSLE_MOVW_TPREL_G2" href="#R_AARCH64_TLSLE_MOVW_TPREL_G2">const R_AARCH64_TLSLE_MOVW_TPREL_G2</a>
-
-```
-searchKey: elf.R_AARCH64_TLSLE_MOVW_TPREL_G2
-```
-
-```Go
-const R_AARCH64_TLSLE_MOVW_TPREL_G2 R_AARCH64 = 544
-```
-
-### <a id="R_AARCH64_TLSLE_MOVW_TPREL_G1" href="#R_AARCH64_TLSLE_MOVW_TPREL_G1">const R_AARCH64_TLSLE_MOVW_TPREL_G1</a>
-
-```
-searchKey: elf.R_AARCH64_TLSLE_MOVW_TPREL_G1
-```
-
-```Go
-const R_AARCH64_TLSLE_MOVW_TPREL_G1 R_AARCH64 = 545
-```
-
-### <a id="R_AARCH64_TLSLE_MOVW_TPREL_G1_NC" href="#R_AARCH64_TLSLE_MOVW_TPREL_G1_NC">const R_AARCH64_TLSLE_MOVW_TPREL_G1_NC</a>
-
-```
-searchKey: elf.R_AARCH64_TLSLE_MOVW_TPREL_G1_NC
-```
-
-```Go
-const R_AARCH64_TLSLE_MOVW_TPREL_G1_NC R_AARCH64 = 546
-```
-
-### <a id="R_AARCH64_TLSLE_MOVW_TPREL_G0" href="#R_AARCH64_TLSLE_MOVW_TPREL_G0">const R_AARCH64_TLSLE_MOVW_TPREL_G0</a>
-
-```
-searchKey: elf.R_AARCH64_TLSLE_MOVW_TPREL_G0
-```
-
-```Go
-const R_AARCH64_TLSLE_MOVW_TPREL_G0 R_AARCH64 = 547
-```
-
-### <a id="R_AARCH64_TLSLE_MOVW_TPREL_G0_NC" href="#R_AARCH64_TLSLE_MOVW_TPREL_G0_NC">const R_AARCH64_TLSLE_MOVW_TPREL_G0_NC</a>
-
-```
-searchKey: elf.R_AARCH64_TLSLE_MOVW_TPREL_G0_NC
-```
-
-```Go
-const R_AARCH64_TLSLE_MOVW_TPREL_G0_NC R_AARCH64 = 548
-```
-
-### <a id="R_AARCH64_TLSLE_ADD_TPREL_HI12" href="#R_AARCH64_TLSLE_ADD_TPREL_HI12">const R_AARCH64_TLSLE_ADD_TPREL_HI12</a>
-
-```
-searchKey: elf.R_AARCH64_TLSLE_ADD_TPREL_HI12
-```
-
-```Go
-const R_AARCH64_TLSLE_ADD_TPREL_HI12 R_AARCH64 = 549
-```
-
-### <a id="R_AARCH64_TLSLE_ADD_TPREL_LO12" href="#R_AARCH64_TLSLE_ADD_TPREL_LO12">const R_AARCH64_TLSLE_ADD_TPREL_LO12</a>
-
-```
-searchKey: elf.R_AARCH64_TLSLE_ADD_TPREL_LO12
-```
-
-```Go
-const R_AARCH64_TLSLE_ADD_TPREL_LO12 R_AARCH64 = 550
-```
-
-### <a id="R_AARCH64_TLSLE_ADD_TPREL_LO12_NC" href="#R_AARCH64_TLSLE_ADD_TPREL_LO12_NC">const R_AARCH64_TLSLE_ADD_TPREL_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_TLSLE_ADD_TPREL_LO12_NC
-```
-
-```Go
-const R_AARCH64_TLSLE_ADD_TPREL_LO12_NC R_AARCH64 = 551
-```
-
-### <a id="R_AARCH64_TLSDESC_LD_PREL19" href="#R_AARCH64_TLSDESC_LD_PREL19">const R_AARCH64_TLSDESC_LD_PREL19</a>
-
-```
-searchKey: elf.R_AARCH64_TLSDESC_LD_PREL19
-```
-
-```Go
-const R_AARCH64_TLSDESC_LD_PREL19 R_AARCH64 = 560
-```
-
-### <a id="R_AARCH64_TLSDESC_ADR_PREL21" href="#R_AARCH64_TLSDESC_ADR_PREL21">const R_AARCH64_TLSDESC_ADR_PREL21</a>
-
-```
-searchKey: elf.R_AARCH64_TLSDESC_ADR_PREL21
-```
-
-```Go
-const R_AARCH64_TLSDESC_ADR_PREL21 R_AARCH64 = 561
-```
-
-### <a id="R_AARCH64_TLSDESC_ADR_PAGE21" href="#R_AARCH64_TLSDESC_ADR_PAGE21">const R_AARCH64_TLSDESC_ADR_PAGE21</a>
-
-```
-searchKey: elf.R_AARCH64_TLSDESC_ADR_PAGE21
-```
-
-```Go
-const R_AARCH64_TLSDESC_ADR_PAGE21 R_AARCH64 = 562
-```
-
-### <a id="R_AARCH64_TLSDESC_LD64_LO12_NC" href="#R_AARCH64_TLSDESC_LD64_LO12_NC">const R_AARCH64_TLSDESC_LD64_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_TLSDESC_LD64_LO12_NC
-```
-
-```Go
-const R_AARCH64_TLSDESC_LD64_LO12_NC R_AARCH64 = 563
-```
-
-### <a id="R_AARCH64_TLSDESC_ADD_LO12_NC" href="#R_AARCH64_TLSDESC_ADD_LO12_NC">const R_AARCH64_TLSDESC_ADD_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_TLSDESC_ADD_LO12_NC
-```
-
-```Go
-const R_AARCH64_TLSDESC_ADD_LO12_NC R_AARCH64 = 564
-```
-
-### <a id="R_AARCH64_TLSDESC_OFF_G1" href="#R_AARCH64_TLSDESC_OFF_G1">const R_AARCH64_TLSDESC_OFF_G1</a>
-
-```
-searchKey: elf.R_AARCH64_TLSDESC_OFF_G1
-```
-
-```Go
-const R_AARCH64_TLSDESC_OFF_G1 R_AARCH64 = 565
-```
-
-### <a id="R_AARCH64_TLSDESC_OFF_G0_NC" href="#R_AARCH64_TLSDESC_OFF_G0_NC">const R_AARCH64_TLSDESC_OFF_G0_NC</a>
-
-```
-searchKey: elf.R_AARCH64_TLSDESC_OFF_G0_NC
-```
-
-```Go
-const R_AARCH64_TLSDESC_OFF_G0_NC R_AARCH64 = 566
-```
-
-### <a id="R_AARCH64_TLSDESC_LDR" href="#R_AARCH64_TLSDESC_LDR">const R_AARCH64_TLSDESC_LDR</a>
-
-```
-searchKey: elf.R_AARCH64_TLSDESC_LDR
-```
-
-```Go
-const R_AARCH64_TLSDESC_LDR R_AARCH64 = 567
-```
-
-### <a id="R_AARCH64_TLSDESC_ADD" href="#R_AARCH64_TLSDESC_ADD">const R_AARCH64_TLSDESC_ADD</a>
-
-```
-searchKey: elf.R_AARCH64_TLSDESC_ADD
-```
-
-```Go
-const R_AARCH64_TLSDESC_ADD R_AARCH64 = 568
-```
-
-### <a id="R_AARCH64_TLSDESC_CALL" href="#R_AARCH64_TLSDESC_CALL">const R_AARCH64_TLSDESC_CALL</a>
-
-```
-searchKey: elf.R_AARCH64_TLSDESC_CALL
-```
-
-```Go
-const R_AARCH64_TLSDESC_CALL R_AARCH64 = 569
-```
-
-### <a id="R_AARCH64_TLSLE_LDST128_TPREL_LO12" href="#R_AARCH64_TLSLE_LDST128_TPREL_LO12">const R_AARCH64_TLSLE_LDST128_TPREL_LO12</a>
-
-```
-searchKey: elf.R_AARCH64_TLSLE_LDST128_TPREL_LO12
-```
-
-```Go
-const R_AARCH64_TLSLE_LDST128_TPREL_LO12 R_AARCH64 = 570
-```
-
-### <a id="R_AARCH64_TLSLE_LDST128_TPREL_LO12_NC" href="#R_AARCH64_TLSLE_LDST128_TPREL_LO12_NC">const R_AARCH64_TLSLE_LDST128_TPREL_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_TLSLE_LDST128_TPREL_LO12_NC
-```
-
-```Go
-const R_AARCH64_TLSLE_LDST128_TPREL_LO12_NC R_AARCH64 = 571
-```
-
-### <a id="R_AARCH64_TLSLD_LDST128_DTPREL_LO12" href="#R_AARCH64_TLSLD_LDST128_DTPREL_LO12">const R_AARCH64_TLSLD_LDST128_DTPREL_LO12</a>
-
-```
-searchKey: elf.R_AARCH64_TLSLD_LDST128_DTPREL_LO12
-```
-
-```Go
-const R_AARCH64_TLSLD_LDST128_DTPREL_LO12 R_AARCH64 = 572
-```
-
-### <a id="R_AARCH64_TLSLD_LDST128_DTPREL_LO12_NC" href="#R_AARCH64_TLSLD_LDST128_DTPREL_LO12_NC">const R_AARCH64_TLSLD_LDST128_DTPREL_LO12_NC</a>
-
-```
-searchKey: elf.R_AARCH64_TLSLD_LDST128_DTPREL_LO12_NC
-```
-
-```Go
-const R_AARCH64_TLSLD_LDST128_DTPREL_LO12_NC R_AARCH64 = 573
-```
-
-### <a id="R_AARCH64_COPY" href="#R_AARCH64_COPY">const R_AARCH64_COPY</a>
-
-```
-searchKey: elf.R_AARCH64_COPY
-```
-
-```Go
-const R_AARCH64_COPY R_AARCH64 = 1024
-```
-
-### <a id="R_AARCH64_GLOB_DAT" href="#R_AARCH64_GLOB_DAT">const R_AARCH64_GLOB_DAT</a>
-
-```
-searchKey: elf.R_AARCH64_GLOB_DAT
-```
-
-```Go
-const R_AARCH64_GLOB_DAT R_AARCH64 = 1025
-```
-
-### <a id="R_AARCH64_JUMP_SLOT" href="#R_AARCH64_JUMP_SLOT">const R_AARCH64_JUMP_SLOT</a>
-
-```
-searchKey: elf.R_AARCH64_JUMP_SLOT
-```
-
-```Go
-const R_AARCH64_JUMP_SLOT R_AARCH64 = 1026
-```
-
-### <a id="R_AARCH64_RELATIVE" href="#R_AARCH64_RELATIVE">const R_AARCH64_RELATIVE</a>
-
-```
-searchKey: elf.R_AARCH64_RELATIVE
-```
-
-```Go
-const R_AARCH64_RELATIVE R_AARCH64 = 1027
-```
-
-### <a id="R_AARCH64_TLS_DTPMOD64" href="#R_AARCH64_TLS_DTPMOD64">const R_AARCH64_TLS_DTPMOD64</a>
-
-```
-searchKey: elf.R_AARCH64_TLS_DTPMOD64
-```
-
-```Go
-const R_AARCH64_TLS_DTPMOD64 R_AARCH64 = 1028
-```
-
-### <a id="R_AARCH64_TLS_DTPREL64" href="#R_AARCH64_TLS_DTPREL64">const R_AARCH64_TLS_DTPREL64</a>
-
-```
-searchKey: elf.R_AARCH64_TLS_DTPREL64
-```
-
-```Go
-const R_AARCH64_TLS_DTPREL64 R_AARCH64 = 1029
-```
-
-### <a id="R_AARCH64_TLS_TPREL64" href="#R_AARCH64_TLS_TPREL64">const R_AARCH64_TLS_TPREL64</a>
-
-```
-searchKey: elf.R_AARCH64_TLS_TPREL64
-```
-
-```Go
-const R_AARCH64_TLS_TPREL64 R_AARCH64 = 1030
-```
-
-### <a id="R_AARCH64_TLSDESC" href="#R_AARCH64_TLSDESC">const R_AARCH64_TLSDESC</a>
-
-```
-searchKey: elf.R_AARCH64_TLSDESC
-```
-
-```Go
-const R_AARCH64_TLSDESC R_AARCH64 = 1031
-```
-
-### <a id="R_AARCH64_IRELATIVE" href="#R_AARCH64_IRELATIVE">const R_AARCH64_IRELATIVE</a>
-
-```
-searchKey: elf.R_AARCH64_IRELATIVE
-```
-
-```Go
-const R_AARCH64_IRELATIVE R_AARCH64 = 1032
-```
-
-### <a id="R_ALPHA_NONE" href="#R_ALPHA_NONE">const R_ALPHA_NONE</a>
-
-```
-searchKey: elf.R_ALPHA_NONE
-```
-
-```Go
-const R_ALPHA_NONE R_ALPHA = 0 /* No reloc */
-
-```
-
-### <a id="R_ALPHA_REFLONG" href="#R_ALPHA_REFLONG">const R_ALPHA_REFLONG</a>
-
-```
-searchKey: elf.R_ALPHA_REFLONG
-```
-
-```Go
-const R_ALPHA_REFLONG R_ALPHA = 1 /* Direct 32 bit */
-
-```
-
-### <a id="R_ALPHA_REFQUAD" href="#R_ALPHA_REFQUAD">const R_ALPHA_REFQUAD</a>
-
-```
-searchKey: elf.R_ALPHA_REFQUAD
-```
-
-```Go
-const R_ALPHA_REFQUAD R_ALPHA = 2 /* Direct 64 bit */
-
-```
-
-### <a id="R_ALPHA_GPREL32" href="#R_ALPHA_GPREL32">const R_ALPHA_GPREL32</a>
-
-```
-searchKey: elf.R_ALPHA_GPREL32
-```
-
-```Go
-const R_ALPHA_GPREL32 R_ALPHA = 3 /* GP relative 32 bit */
-
-```
-
-### <a id="R_ALPHA_LITERAL" href="#R_ALPHA_LITERAL">const R_ALPHA_LITERAL</a>
-
-```
-searchKey: elf.R_ALPHA_LITERAL
-```
-
-```Go
-const R_ALPHA_LITERAL R_ALPHA = 4 /* GP relative 16 bit w/optimization */
-
-```
-
-### <a id="R_ALPHA_LITUSE" href="#R_ALPHA_LITUSE">const R_ALPHA_LITUSE</a>
-
-```
-searchKey: elf.R_ALPHA_LITUSE
-```
-
-```Go
-const R_ALPHA_LITUSE R_ALPHA = 5 /* Optimization hint for LITERAL */
-
-```
-
-### <a id="R_ALPHA_GPDISP" href="#R_ALPHA_GPDISP">const R_ALPHA_GPDISP</a>
-
-```
-searchKey: elf.R_ALPHA_GPDISP
-```
-
-```Go
-const R_ALPHA_GPDISP R_ALPHA = 6 /* Add displacement to GP */
-
-```
-
-### <a id="R_ALPHA_BRADDR" href="#R_ALPHA_BRADDR">const R_ALPHA_BRADDR</a>
-
-```
-searchKey: elf.R_ALPHA_BRADDR
-```
-
-```Go
-const R_ALPHA_BRADDR R_ALPHA = 7 /* PC+4 relative 23 bit shifted */
-
-```
-
-### <a id="R_ALPHA_HINT" href="#R_ALPHA_HINT">const R_ALPHA_HINT</a>
-
-```
-searchKey: elf.R_ALPHA_HINT
-```
-
-```Go
-const R_ALPHA_HINT R_ALPHA = 8 /* PC+4 relative 16 bit shifted */
-
-```
-
-### <a id="R_ALPHA_SREL16" href="#R_ALPHA_SREL16">const R_ALPHA_SREL16</a>
-
-```
-searchKey: elf.R_ALPHA_SREL16
-```
-
-```Go
-const R_ALPHA_SREL16 R_ALPHA = 9 /* PC relative 16 bit */
-
-```
-
-### <a id="R_ALPHA_SREL32" href="#R_ALPHA_SREL32">const R_ALPHA_SREL32</a>
-
-```
-searchKey: elf.R_ALPHA_SREL32
-```
-
-```Go
-const R_ALPHA_SREL32 R_ALPHA = 10 /* PC relative 32 bit */
-
-```
-
-### <a id="R_ALPHA_SREL64" href="#R_ALPHA_SREL64">const R_ALPHA_SREL64</a>
-
-```
-searchKey: elf.R_ALPHA_SREL64
-```
-
-```Go
-const R_ALPHA_SREL64 R_ALPHA = 11 /* PC relative 64 bit */
-
-```
-
-### <a id="R_ALPHA_OP_PUSH" href="#R_ALPHA_OP_PUSH">const R_ALPHA_OP_PUSH</a>
-
-```
-searchKey: elf.R_ALPHA_OP_PUSH
-```
-
-```Go
-const R_ALPHA_OP_PUSH R_ALPHA = 12 /* OP stack push */
-
-```
-
-### <a id="R_ALPHA_OP_STORE" href="#R_ALPHA_OP_STORE">const R_ALPHA_OP_STORE</a>
-
-```
-searchKey: elf.R_ALPHA_OP_STORE
-```
-
-```Go
-const R_ALPHA_OP_STORE R_ALPHA = 13 /* OP stack pop and store */
-
-```
-
-### <a id="R_ALPHA_OP_PSUB" href="#R_ALPHA_OP_PSUB">const R_ALPHA_OP_PSUB</a>
-
-```
-searchKey: elf.R_ALPHA_OP_PSUB
-```
-
-```Go
-const R_ALPHA_OP_PSUB R_ALPHA = 14 /* OP stack subtract */
-
-```
-
-### <a id="R_ALPHA_OP_PRSHIFT" href="#R_ALPHA_OP_PRSHIFT">const R_ALPHA_OP_PRSHIFT</a>
-
-```
-searchKey: elf.R_ALPHA_OP_PRSHIFT
-```
-
-```Go
-const R_ALPHA_OP_PRSHIFT R_ALPHA = 15 /* OP stack right shift */
-
-```
-
-### <a id="R_ALPHA_GPVALUE" href="#R_ALPHA_GPVALUE">const R_ALPHA_GPVALUE</a>
-
-```
-searchKey: elf.R_ALPHA_GPVALUE
-```
-
-```Go
-const R_ALPHA_GPVALUE R_ALPHA = 16
-```
-
-### <a id="R_ALPHA_GPRELHIGH" href="#R_ALPHA_GPRELHIGH">const R_ALPHA_GPRELHIGH</a>
-
-```
-searchKey: elf.R_ALPHA_GPRELHIGH
-```
-
-```Go
-const R_ALPHA_GPRELHIGH R_ALPHA = 17
-```
-
-### <a id="R_ALPHA_GPRELLOW" href="#R_ALPHA_GPRELLOW">const R_ALPHA_GPRELLOW</a>
-
-```
-searchKey: elf.R_ALPHA_GPRELLOW
-```
-
-```Go
-const R_ALPHA_GPRELLOW R_ALPHA = 18
-```
-
-### <a id="R_ALPHA_IMMED_GP_16" href="#R_ALPHA_IMMED_GP_16">const R_ALPHA_IMMED_GP_16</a>
-
-```
-searchKey: elf.R_ALPHA_IMMED_GP_16
-```
-
-```Go
-const R_ALPHA_IMMED_GP_16 R_ALPHA = 19
-```
-
-### <a id="R_ALPHA_IMMED_GP_HI32" href="#R_ALPHA_IMMED_GP_HI32">const R_ALPHA_IMMED_GP_HI32</a>
-
-```
-searchKey: elf.R_ALPHA_IMMED_GP_HI32
-```
-
-```Go
-const R_ALPHA_IMMED_GP_HI32 R_ALPHA = 20
-```
-
-### <a id="R_ALPHA_IMMED_SCN_HI32" href="#R_ALPHA_IMMED_SCN_HI32">const R_ALPHA_IMMED_SCN_HI32</a>
-
-```
-searchKey: elf.R_ALPHA_IMMED_SCN_HI32
-```
-
-```Go
-const R_ALPHA_IMMED_SCN_HI32 R_ALPHA = 21
-```
-
-### <a id="R_ALPHA_IMMED_BR_HI32" href="#R_ALPHA_IMMED_BR_HI32">const R_ALPHA_IMMED_BR_HI32</a>
-
-```
-searchKey: elf.R_ALPHA_IMMED_BR_HI32
-```
-
-```Go
-const R_ALPHA_IMMED_BR_HI32 R_ALPHA = 22
-```
-
-### <a id="R_ALPHA_IMMED_LO32" href="#R_ALPHA_IMMED_LO32">const R_ALPHA_IMMED_LO32</a>
-
-```
-searchKey: elf.R_ALPHA_IMMED_LO32
-```
-
-```Go
-const R_ALPHA_IMMED_LO32 R_ALPHA = 23
-```
-
-### <a id="R_ALPHA_COPY" href="#R_ALPHA_COPY">const R_ALPHA_COPY</a>
-
-```
-searchKey: elf.R_ALPHA_COPY
-```
-
-```Go
-const R_ALPHA_COPY R_ALPHA = 24 /* Copy symbol at runtime */
-
-```
-
-### <a id="R_ALPHA_GLOB_DAT" href="#R_ALPHA_GLOB_DAT">const R_ALPHA_GLOB_DAT</a>
-
-```
-searchKey: elf.R_ALPHA_GLOB_DAT
-```
-
-```Go
-const R_ALPHA_GLOB_DAT R_ALPHA = 25 /* Create GOT entry */
-
-```
-
-### <a id="R_ALPHA_JMP_SLOT" href="#R_ALPHA_JMP_SLOT">const R_ALPHA_JMP_SLOT</a>
-
-```
-searchKey: elf.R_ALPHA_JMP_SLOT
-```
-
-```Go
-const R_ALPHA_JMP_SLOT R_ALPHA = 26 /* Create PLT entry */
-
-```
-
-### <a id="R_ALPHA_RELATIVE" href="#R_ALPHA_RELATIVE">const R_ALPHA_RELATIVE</a>
-
-```
-searchKey: elf.R_ALPHA_RELATIVE
-```
-
-```Go
-const R_ALPHA_RELATIVE R_ALPHA = 27 /* Adjust by program base */
-
-```
-
-### <a id="R_ARM_NONE" href="#R_ARM_NONE">const R_ARM_NONE</a>
-
-```
-searchKey: elf.R_ARM_NONE
-```
-
-```Go
-const R_ARM_NONE R_ARM = 0 /* No relocation. */
-
-```
-
-### <a id="R_ARM_PC24" href="#R_ARM_PC24">const R_ARM_PC24</a>
-
-```
-searchKey: elf.R_ARM_PC24
-```
-
-```Go
-const R_ARM_PC24 R_ARM = 1
-```
-
-### <a id="R_ARM_ABS32" href="#R_ARM_ABS32">const R_ARM_ABS32</a>
-
-```
-searchKey: elf.R_ARM_ABS32
-```
-
-```Go
-const R_ARM_ABS32 R_ARM = 2
-```
-
-### <a id="R_ARM_REL32" href="#R_ARM_REL32">const R_ARM_REL32</a>
-
-```
-searchKey: elf.R_ARM_REL32
-```
-
-```Go
-const R_ARM_REL32 R_ARM = 3
-```
-
-### <a id="R_ARM_PC13" href="#R_ARM_PC13">const R_ARM_PC13</a>
-
-```
-searchKey: elf.R_ARM_PC13
-```
-
-```Go
-const R_ARM_PC13 R_ARM = 4
-```
-
-### <a id="R_ARM_ABS16" href="#R_ARM_ABS16">const R_ARM_ABS16</a>
-
-```
-searchKey: elf.R_ARM_ABS16
-```
-
-```Go
-const R_ARM_ABS16 R_ARM = 5
-```
-
-### <a id="R_ARM_ABS12" href="#R_ARM_ABS12">const R_ARM_ABS12</a>
-
-```
-searchKey: elf.R_ARM_ABS12
-```
-
-```Go
-const R_ARM_ABS12 R_ARM = 6
-```
-
-### <a id="R_ARM_THM_ABS5" href="#R_ARM_THM_ABS5">const R_ARM_THM_ABS5</a>
-
-```
-searchKey: elf.R_ARM_THM_ABS5
-```
-
-```Go
-const R_ARM_THM_ABS5 R_ARM = 7
-```
-
-### <a id="R_ARM_ABS8" href="#R_ARM_ABS8">const R_ARM_ABS8</a>
-
-```
-searchKey: elf.R_ARM_ABS8
-```
-
-```Go
-const R_ARM_ABS8 R_ARM = 8
-```
-
-### <a id="R_ARM_SBREL32" href="#R_ARM_SBREL32">const R_ARM_SBREL32</a>
-
-```
-searchKey: elf.R_ARM_SBREL32
-```
-
-```Go
-const R_ARM_SBREL32 R_ARM = 9
-```
-
-### <a id="R_ARM_THM_PC22" href="#R_ARM_THM_PC22">const R_ARM_THM_PC22</a>
-
-```
-searchKey: elf.R_ARM_THM_PC22
-```
-
-```Go
-const R_ARM_THM_PC22 R_ARM = 10
-```
-
-### <a id="R_ARM_THM_PC8" href="#R_ARM_THM_PC8">const R_ARM_THM_PC8</a>
-
-```
-searchKey: elf.R_ARM_THM_PC8
-```
-
-```Go
-const R_ARM_THM_PC8 R_ARM = 11
-```
-
-### <a id="R_ARM_AMP_VCALL9" href="#R_ARM_AMP_VCALL9">const R_ARM_AMP_VCALL9</a>
-
-```
-searchKey: elf.R_ARM_AMP_VCALL9
-```
-
-```Go
-const R_ARM_AMP_VCALL9 R_ARM = 12
-```
-
-### <a id="R_ARM_SWI24" href="#R_ARM_SWI24">const R_ARM_SWI24</a>
-
-```
-searchKey: elf.R_ARM_SWI24
-```
-
-```Go
-const R_ARM_SWI24 R_ARM = 13
-```
-
-### <a id="R_ARM_THM_SWI8" href="#R_ARM_THM_SWI8">const R_ARM_THM_SWI8</a>
-
-```
-searchKey: elf.R_ARM_THM_SWI8
-```
-
-```Go
-const R_ARM_THM_SWI8 R_ARM = 14
-```
-
-### <a id="R_ARM_XPC25" href="#R_ARM_XPC25">const R_ARM_XPC25</a>
-
-```
-searchKey: elf.R_ARM_XPC25
-```
-
-```Go
-const R_ARM_XPC25 R_ARM = 15
-```
-
-### <a id="R_ARM_THM_XPC22" href="#R_ARM_THM_XPC22">const R_ARM_THM_XPC22</a>
-
-```
-searchKey: elf.R_ARM_THM_XPC22
-```
-
-```Go
-const R_ARM_THM_XPC22 R_ARM = 16
-```
-
-### <a id="R_ARM_TLS_DTPMOD32" href="#R_ARM_TLS_DTPMOD32">const R_ARM_TLS_DTPMOD32</a>
-
-```
-searchKey: elf.R_ARM_TLS_DTPMOD32
-```
-
-```Go
-const R_ARM_TLS_DTPMOD32 R_ARM = 17
-```
-
-### <a id="R_ARM_TLS_DTPOFF32" href="#R_ARM_TLS_DTPOFF32">const R_ARM_TLS_DTPOFF32</a>
-
-```
-searchKey: elf.R_ARM_TLS_DTPOFF32
-```
-
-```Go
-const R_ARM_TLS_DTPOFF32 R_ARM = 18
-```
-
-### <a id="R_ARM_TLS_TPOFF32" href="#R_ARM_TLS_TPOFF32">const R_ARM_TLS_TPOFF32</a>
-
-```
-searchKey: elf.R_ARM_TLS_TPOFF32
-```
-
-```Go
-const R_ARM_TLS_TPOFF32 R_ARM = 19
-```
-
-### <a id="R_ARM_COPY" href="#R_ARM_COPY">const R_ARM_COPY</a>
-
-```
-searchKey: elf.R_ARM_COPY
-```
-
-```Go
-const R_ARM_COPY R_ARM = 20 /* Copy data from shared object. */
-
-```
-
-### <a id="R_ARM_GLOB_DAT" href="#R_ARM_GLOB_DAT">const R_ARM_GLOB_DAT</a>
-
-```
-searchKey: elf.R_ARM_GLOB_DAT
-```
-
-```Go
-const R_ARM_GLOB_DAT R_ARM = 21 /* Set GOT entry to data address. */
-
-```
-
-### <a id="R_ARM_JUMP_SLOT" href="#R_ARM_JUMP_SLOT">const R_ARM_JUMP_SLOT</a>
-
-```
-searchKey: elf.R_ARM_JUMP_SLOT
-```
-
-```Go
-const R_ARM_JUMP_SLOT R_ARM = 22 /* Set GOT entry to code address. */
-
-```
-
-### <a id="R_ARM_RELATIVE" href="#R_ARM_RELATIVE">const R_ARM_RELATIVE</a>
-
-```
-searchKey: elf.R_ARM_RELATIVE
-```
-
-```Go
-const R_ARM_RELATIVE R_ARM = 23 /* Add load address of shared object. */
-
-```
-
-### <a id="R_ARM_GOTOFF" href="#R_ARM_GOTOFF">const R_ARM_GOTOFF</a>
-
-```
-searchKey: elf.R_ARM_GOTOFF
-```
-
-```Go
-const R_ARM_GOTOFF R_ARM = 24 /* Add GOT-relative symbol address. */
-
-```
-
-### <a id="R_ARM_GOTPC" href="#R_ARM_GOTPC">const R_ARM_GOTPC</a>
-
-```
-searchKey: elf.R_ARM_GOTPC
-```
-
-```Go
-const R_ARM_GOTPC R_ARM = 25 /* Add PC-relative GOT table address. */
-
-```
-
-### <a id="R_ARM_GOT32" href="#R_ARM_GOT32">const R_ARM_GOT32</a>
-
-```
-searchKey: elf.R_ARM_GOT32
-```
-
-```Go
-const R_ARM_GOT32 R_ARM = 26 /* Add PC-relative GOT offset. */
-
-```
-
-### <a id="R_ARM_PLT32" href="#R_ARM_PLT32">const R_ARM_PLT32</a>
-
-```
-searchKey: elf.R_ARM_PLT32
-```
-
-```Go
-const R_ARM_PLT32 R_ARM = 27 /* Add PC-relative PLT offset. */
-
-```
-
-### <a id="R_ARM_CALL" href="#R_ARM_CALL">const R_ARM_CALL</a>
-
-```
-searchKey: elf.R_ARM_CALL
-```
-
-```Go
-const R_ARM_CALL R_ARM = 28
-```
-
-### <a id="R_ARM_JUMP24" href="#R_ARM_JUMP24">const R_ARM_JUMP24</a>
-
-```
-searchKey: elf.R_ARM_JUMP24
-```
-
-```Go
-const R_ARM_JUMP24 R_ARM = 29
-```
-
-### <a id="R_ARM_THM_JUMP24" href="#R_ARM_THM_JUMP24">const R_ARM_THM_JUMP24</a>
-
-```
-searchKey: elf.R_ARM_THM_JUMP24
-```
-
-```Go
-const R_ARM_THM_JUMP24 R_ARM = 30
-```
-
-### <a id="R_ARM_BASE_ABS" href="#R_ARM_BASE_ABS">const R_ARM_BASE_ABS</a>
-
-```
-searchKey: elf.R_ARM_BASE_ABS
-```
-
-```Go
-const R_ARM_BASE_ABS R_ARM = 31
-```
-
-### <a id="R_ARM_ALU_PCREL_7_0" href="#R_ARM_ALU_PCREL_7_0">const R_ARM_ALU_PCREL_7_0</a>
-
-```
-searchKey: elf.R_ARM_ALU_PCREL_7_0
-```
-
-```Go
-const R_ARM_ALU_PCREL_7_0 R_ARM = 32
-```
-
-### <a id="R_ARM_ALU_PCREL_15_8" href="#R_ARM_ALU_PCREL_15_8">const R_ARM_ALU_PCREL_15_8</a>
-
-```
-searchKey: elf.R_ARM_ALU_PCREL_15_8
-```
-
-```Go
-const R_ARM_ALU_PCREL_15_8 R_ARM = 33
-```
-
-### <a id="R_ARM_ALU_PCREL_23_15" href="#R_ARM_ALU_PCREL_23_15">const R_ARM_ALU_PCREL_23_15</a>
-
-```
-searchKey: elf.R_ARM_ALU_PCREL_23_15
-```
-
-```Go
-const R_ARM_ALU_PCREL_23_15 R_ARM = 34
-```
-
-### <a id="R_ARM_LDR_SBREL_11_10_NC" href="#R_ARM_LDR_SBREL_11_10_NC">const R_ARM_LDR_SBREL_11_10_NC</a>
-
-```
-searchKey: elf.R_ARM_LDR_SBREL_11_10_NC
-```
-
-```Go
-const R_ARM_LDR_SBREL_11_10_NC R_ARM = 35
-```
-
-### <a id="R_ARM_ALU_SBREL_19_12_NC" href="#R_ARM_ALU_SBREL_19_12_NC">const R_ARM_ALU_SBREL_19_12_NC</a>
-
-```
-searchKey: elf.R_ARM_ALU_SBREL_19_12_NC
-```
-
-```Go
-const R_ARM_ALU_SBREL_19_12_NC R_ARM = 36
-```
-
-### <a id="R_ARM_ALU_SBREL_27_20_CK" href="#R_ARM_ALU_SBREL_27_20_CK">const R_ARM_ALU_SBREL_27_20_CK</a>
-
-```
-searchKey: elf.R_ARM_ALU_SBREL_27_20_CK
-```
-
-```Go
-const R_ARM_ALU_SBREL_27_20_CK R_ARM = 37
-```
-
-### <a id="R_ARM_TARGET1" href="#R_ARM_TARGET1">const R_ARM_TARGET1</a>
-
-```
-searchKey: elf.R_ARM_TARGET1
-```
-
-```Go
-const R_ARM_TARGET1 R_ARM = 38
-```
-
-### <a id="R_ARM_SBREL31" href="#R_ARM_SBREL31">const R_ARM_SBREL31</a>
-
-```
-searchKey: elf.R_ARM_SBREL31
-```
-
-```Go
-const R_ARM_SBREL31 R_ARM = 39
-```
-
-### <a id="R_ARM_V4BX" href="#R_ARM_V4BX">const R_ARM_V4BX</a>
-
-```
-searchKey: elf.R_ARM_V4BX
-```
-
-```Go
-const R_ARM_V4BX R_ARM = 40
-```
-
-### <a id="R_ARM_TARGET2" href="#R_ARM_TARGET2">const R_ARM_TARGET2</a>
-
-```
-searchKey: elf.R_ARM_TARGET2
-```
-
-```Go
-const R_ARM_TARGET2 R_ARM = 41
-```
-
-### <a id="R_ARM_PREL31" href="#R_ARM_PREL31">const R_ARM_PREL31</a>
-
-```
-searchKey: elf.R_ARM_PREL31
-```
-
-```Go
-const R_ARM_PREL31 R_ARM = 42
-```
-
-### <a id="R_ARM_MOVW_ABS_NC" href="#R_ARM_MOVW_ABS_NC">const R_ARM_MOVW_ABS_NC</a>
-
-```
-searchKey: elf.R_ARM_MOVW_ABS_NC
-```
-
-```Go
-const R_ARM_MOVW_ABS_NC R_ARM = 43
-```
-
-### <a id="R_ARM_MOVT_ABS" href="#R_ARM_MOVT_ABS">const R_ARM_MOVT_ABS</a>
-
-```
-searchKey: elf.R_ARM_MOVT_ABS
-```
-
-```Go
-const R_ARM_MOVT_ABS R_ARM = 44
-```
-
-### <a id="R_ARM_MOVW_PREL_NC" href="#R_ARM_MOVW_PREL_NC">const R_ARM_MOVW_PREL_NC</a>
-
-```
-searchKey: elf.R_ARM_MOVW_PREL_NC
-```
-
-```Go
-const R_ARM_MOVW_PREL_NC R_ARM = 45
-```
-
-### <a id="R_ARM_MOVT_PREL" href="#R_ARM_MOVT_PREL">const R_ARM_MOVT_PREL</a>
-
-```
-searchKey: elf.R_ARM_MOVT_PREL
-```
-
-```Go
-const R_ARM_MOVT_PREL R_ARM = 46
-```
-
-### <a id="R_ARM_THM_MOVW_ABS_NC" href="#R_ARM_THM_MOVW_ABS_NC">const R_ARM_THM_MOVW_ABS_NC</a>
-
-```
-searchKey: elf.R_ARM_THM_MOVW_ABS_NC
-```
-
-```Go
-const R_ARM_THM_MOVW_ABS_NC R_ARM = 47
-```
-
-### <a id="R_ARM_THM_MOVT_ABS" href="#R_ARM_THM_MOVT_ABS">const R_ARM_THM_MOVT_ABS</a>
-
-```
-searchKey: elf.R_ARM_THM_MOVT_ABS
-```
-
-```Go
-const R_ARM_THM_MOVT_ABS R_ARM = 48
-```
-
-### <a id="R_ARM_THM_MOVW_PREL_NC" href="#R_ARM_THM_MOVW_PREL_NC">const R_ARM_THM_MOVW_PREL_NC</a>
-
-```
-searchKey: elf.R_ARM_THM_MOVW_PREL_NC
-```
-
-```Go
-const R_ARM_THM_MOVW_PREL_NC R_ARM = 49
-```
-
-### <a id="R_ARM_THM_MOVT_PREL" href="#R_ARM_THM_MOVT_PREL">const R_ARM_THM_MOVT_PREL</a>
-
-```
-searchKey: elf.R_ARM_THM_MOVT_PREL
-```
-
-```Go
-const R_ARM_THM_MOVT_PREL R_ARM = 50
-```
-
-### <a id="R_ARM_THM_JUMP19" href="#R_ARM_THM_JUMP19">const R_ARM_THM_JUMP19</a>
-
-```
-searchKey: elf.R_ARM_THM_JUMP19
-```
-
-```Go
-const R_ARM_THM_JUMP19 R_ARM = 51
-```
-
-### <a id="R_ARM_THM_JUMP6" href="#R_ARM_THM_JUMP6">const R_ARM_THM_JUMP6</a>
-
-```
-searchKey: elf.R_ARM_THM_JUMP6
-```
-
-```Go
-const R_ARM_THM_JUMP6 R_ARM = 52
-```
-
-### <a id="R_ARM_THM_ALU_PREL_11_0" href="#R_ARM_THM_ALU_PREL_11_0">const R_ARM_THM_ALU_PREL_11_0</a>
-
-```
-searchKey: elf.R_ARM_THM_ALU_PREL_11_0
-```
-
-```Go
-const R_ARM_THM_ALU_PREL_11_0 R_ARM = 53
-```
-
-### <a id="R_ARM_THM_PC12" href="#R_ARM_THM_PC12">const R_ARM_THM_PC12</a>
-
-```
-searchKey: elf.R_ARM_THM_PC12
-```
-
-```Go
-const R_ARM_THM_PC12 R_ARM = 54
-```
-
-### <a id="R_ARM_ABS32_NOI" href="#R_ARM_ABS32_NOI">const R_ARM_ABS32_NOI</a>
-
-```
-searchKey: elf.R_ARM_ABS32_NOI
-```
-
-```Go
-const R_ARM_ABS32_NOI R_ARM = 55
-```
-
-### <a id="R_ARM_REL32_NOI" href="#R_ARM_REL32_NOI">const R_ARM_REL32_NOI</a>
-
-```
-searchKey: elf.R_ARM_REL32_NOI
-```
-
-```Go
-const R_ARM_REL32_NOI R_ARM = 56
-```
-
-### <a id="R_ARM_ALU_PC_G0_NC" href="#R_ARM_ALU_PC_G0_NC">const R_ARM_ALU_PC_G0_NC</a>
-
-```
-searchKey: elf.R_ARM_ALU_PC_G0_NC
-```
-
-```Go
-const R_ARM_ALU_PC_G0_NC R_ARM = 57
-```
-
-### <a id="R_ARM_ALU_PC_G0" href="#R_ARM_ALU_PC_G0">const R_ARM_ALU_PC_G0</a>
-
-```
-searchKey: elf.R_ARM_ALU_PC_G0
-```
-
-```Go
-const R_ARM_ALU_PC_G0 R_ARM = 58
-```
-
-### <a id="R_ARM_ALU_PC_G1_NC" href="#R_ARM_ALU_PC_G1_NC">const R_ARM_ALU_PC_G1_NC</a>
-
-```
-searchKey: elf.R_ARM_ALU_PC_G1_NC
-```
-
-```Go
-const R_ARM_ALU_PC_G1_NC R_ARM = 59
-```
-
-### <a id="R_ARM_ALU_PC_G1" href="#R_ARM_ALU_PC_G1">const R_ARM_ALU_PC_G1</a>
-
-```
-searchKey: elf.R_ARM_ALU_PC_G1
-```
-
-```Go
-const R_ARM_ALU_PC_G1 R_ARM = 60
-```
-
-### <a id="R_ARM_ALU_PC_G2" href="#R_ARM_ALU_PC_G2">const R_ARM_ALU_PC_G2</a>
-
-```
-searchKey: elf.R_ARM_ALU_PC_G2
-```
-
-```Go
-const R_ARM_ALU_PC_G2 R_ARM = 61
-```
-
-### <a id="R_ARM_LDR_PC_G1" href="#R_ARM_LDR_PC_G1">const R_ARM_LDR_PC_G1</a>
-
-```
-searchKey: elf.R_ARM_LDR_PC_G1
-```
-
-```Go
-const R_ARM_LDR_PC_G1 R_ARM = 62
-```
-
-### <a id="R_ARM_LDR_PC_G2" href="#R_ARM_LDR_PC_G2">const R_ARM_LDR_PC_G2</a>
-
-```
-searchKey: elf.R_ARM_LDR_PC_G2
-```
-
-```Go
-const R_ARM_LDR_PC_G2 R_ARM = 63
-```
-
-### <a id="R_ARM_LDRS_PC_G0" href="#R_ARM_LDRS_PC_G0">const R_ARM_LDRS_PC_G0</a>
-
-```
-searchKey: elf.R_ARM_LDRS_PC_G0
-```
-
-```Go
-const R_ARM_LDRS_PC_G0 R_ARM = 64
-```
-
-### <a id="R_ARM_LDRS_PC_G1" href="#R_ARM_LDRS_PC_G1">const R_ARM_LDRS_PC_G1</a>
-
-```
-searchKey: elf.R_ARM_LDRS_PC_G1
-```
-
-```Go
-const R_ARM_LDRS_PC_G1 R_ARM = 65
-```
-
-### <a id="R_ARM_LDRS_PC_G2" href="#R_ARM_LDRS_PC_G2">const R_ARM_LDRS_PC_G2</a>
-
-```
-searchKey: elf.R_ARM_LDRS_PC_G2
-```
-
-```Go
-const R_ARM_LDRS_PC_G2 R_ARM = 66
-```
-
-### <a id="R_ARM_LDC_PC_G0" href="#R_ARM_LDC_PC_G0">const R_ARM_LDC_PC_G0</a>
-
-```
-searchKey: elf.R_ARM_LDC_PC_G0
-```
-
-```Go
-const R_ARM_LDC_PC_G0 R_ARM = 67
-```
-
-### <a id="R_ARM_LDC_PC_G1" href="#R_ARM_LDC_PC_G1">const R_ARM_LDC_PC_G1</a>
-
-```
-searchKey: elf.R_ARM_LDC_PC_G1
-```
-
-```Go
-const R_ARM_LDC_PC_G1 R_ARM = 68
-```
-
-### <a id="R_ARM_LDC_PC_G2" href="#R_ARM_LDC_PC_G2">const R_ARM_LDC_PC_G2</a>
-
-```
-searchKey: elf.R_ARM_LDC_PC_G2
-```
-
-```Go
-const R_ARM_LDC_PC_G2 R_ARM = 69
-```
-
-### <a id="R_ARM_ALU_SB_G0_NC" href="#R_ARM_ALU_SB_G0_NC">const R_ARM_ALU_SB_G0_NC</a>
-
-```
-searchKey: elf.R_ARM_ALU_SB_G0_NC
-```
-
-```Go
-const R_ARM_ALU_SB_G0_NC R_ARM = 70
-```
-
-### <a id="R_ARM_ALU_SB_G0" href="#R_ARM_ALU_SB_G0">const R_ARM_ALU_SB_G0</a>
-
-```
-searchKey: elf.R_ARM_ALU_SB_G0
-```
-
-```Go
-const R_ARM_ALU_SB_G0 R_ARM = 71
-```
-
-### <a id="R_ARM_ALU_SB_G1_NC" href="#R_ARM_ALU_SB_G1_NC">const R_ARM_ALU_SB_G1_NC</a>
-
-```
-searchKey: elf.R_ARM_ALU_SB_G1_NC
-```
-
-```Go
-const R_ARM_ALU_SB_G1_NC R_ARM = 72
-```
-
-### <a id="R_ARM_ALU_SB_G1" href="#R_ARM_ALU_SB_G1">const R_ARM_ALU_SB_G1</a>
-
-```
-searchKey: elf.R_ARM_ALU_SB_G1
-```
-
-```Go
-const R_ARM_ALU_SB_G1 R_ARM = 73
-```
-
-### <a id="R_ARM_ALU_SB_G2" href="#R_ARM_ALU_SB_G2">const R_ARM_ALU_SB_G2</a>
-
-```
-searchKey: elf.R_ARM_ALU_SB_G2
-```
-
-```Go
-const R_ARM_ALU_SB_G2 R_ARM = 74
-```
-
-### <a id="R_ARM_LDR_SB_G0" href="#R_ARM_LDR_SB_G0">const R_ARM_LDR_SB_G0</a>
-
-```
-searchKey: elf.R_ARM_LDR_SB_G0
-```
-
-```Go
-const R_ARM_LDR_SB_G0 R_ARM = 75
-```
-
-### <a id="R_ARM_LDR_SB_G1" href="#R_ARM_LDR_SB_G1">const R_ARM_LDR_SB_G1</a>
-
-```
-searchKey: elf.R_ARM_LDR_SB_G1
-```
-
-```Go
-const R_ARM_LDR_SB_G1 R_ARM = 76
-```
-
-### <a id="R_ARM_LDR_SB_G2" href="#R_ARM_LDR_SB_G2">const R_ARM_LDR_SB_G2</a>
-
-```
-searchKey: elf.R_ARM_LDR_SB_G2
-```
-
-```Go
-const R_ARM_LDR_SB_G2 R_ARM = 77
-```
-
-### <a id="R_ARM_LDRS_SB_G0" href="#R_ARM_LDRS_SB_G0">const R_ARM_LDRS_SB_G0</a>
-
-```
-searchKey: elf.R_ARM_LDRS_SB_G0
-```
-
-```Go
-const R_ARM_LDRS_SB_G0 R_ARM = 78
-```
-
-### <a id="R_ARM_LDRS_SB_G1" href="#R_ARM_LDRS_SB_G1">const R_ARM_LDRS_SB_G1</a>
-
-```
-searchKey: elf.R_ARM_LDRS_SB_G1
-```
-
-```Go
-const R_ARM_LDRS_SB_G1 R_ARM = 79
-```
-
-### <a id="R_ARM_LDRS_SB_G2" href="#R_ARM_LDRS_SB_G2">const R_ARM_LDRS_SB_G2</a>
-
-```
-searchKey: elf.R_ARM_LDRS_SB_G2
-```
-
-```Go
-const R_ARM_LDRS_SB_G2 R_ARM = 80
-```
-
-### <a id="R_ARM_LDC_SB_G0" href="#R_ARM_LDC_SB_G0">const R_ARM_LDC_SB_G0</a>
-
-```
-searchKey: elf.R_ARM_LDC_SB_G0
-```
-
-```Go
-const R_ARM_LDC_SB_G0 R_ARM = 81
-```
-
-### <a id="R_ARM_LDC_SB_G1" href="#R_ARM_LDC_SB_G1">const R_ARM_LDC_SB_G1</a>
-
-```
-searchKey: elf.R_ARM_LDC_SB_G1
-```
-
-```Go
-const R_ARM_LDC_SB_G1 R_ARM = 82
-```
-
-### <a id="R_ARM_LDC_SB_G2" href="#R_ARM_LDC_SB_G2">const R_ARM_LDC_SB_G2</a>
-
-```
-searchKey: elf.R_ARM_LDC_SB_G2
-```
-
-```Go
-const R_ARM_LDC_SB_G2 R_ARM = 83
-```
-
-### <a id="R_ARM_MOVW_BREL_NC" href="#R_ARM_MOVW_BREL_NC">const R_ARM_MOVW_BREL_NC</a>
-
-```
-searchKey: elf.R_ARM_MOVW_BREL_NC
-```
-
-```Go
-const R_ARM_MOVW_BREL_NC R_ARM = 84
-```
-
-### <a id="R_ARM_MOVT_BREL" href="#R_ARM_MOVT_BREL">const R_ARM_MOVT_BREL</a>
-
-```
-searchKey: elf.R_ARM_MOVT_BREL
-```
-
-```Go
-const R_ARM_MOVT_BREL R_ARM = 85
-```
-
-### <a id="R_ARM_MOVW_BREL" href="#R_ARM_MOVW_BREL">const R_ARM_MOVW_BREL</a>
-
-```
-searchKey: elf.R_ARM_MOVW_BREL
-```
-
-```Go
-const R_ARM_MOVW_BREL R_ARM = 86
-```
-
-### <a id="R_ARM_THM_MOVW_BREL_NC" href="#R_ARM_THM_MOVW_BREL_NC">const R_ARM_THM_MOVW_BREL_NC</a>
-
-```
-searchKey: elf.R_ARM_THM_MOVW_BREL_NC
-```
-
-```Go
-const R_ARM_THM_MOVW_BREL_NC R_ARM = 87
-```
-
-### <a id="R_ARM_THM_MOVT_BREL" href="#R_ARM_THM_MOVT_BREL">const R_ARM_THM_MOVT_BREL</a>
-
-```
-searchKey: elf.R_ARM_THM_MOVT_BREL
-```
-
-```Go
-const R_ARM_THM_MOVT_BREL R_ARM = 88
-```
-
-### <a id="R_ARM_THM_MOVW_BREL" href="#R_ARM_THM_MOVW_BREL">const R_ARM_THM_MOVW_BREL</a>
-
-```
-searchKey: elf.R_ARM_THM_MOVW_BREL
-```
-
-```Go
-const R_ARM_THM_MOVW_BREL R_ARM = 89
-```
-
-### <a id="R_ARM_TLS_GOTDESC" href="#R_ARM_TLS_GOTDESC">const R_ARM_TLS_GOTDESC</a>
-
-```
-searchKey: elf.R_ARM_TLS_GOTDESC
-```
-
-```Go
-const R_ARM_TLS_GOTDESC R_ARM = 90
-```
-
-### <a id="R_ARM_TLS_CALL" href="#R_ARM_TLS_CALL">const R_ARM_TLS_CALL</a>
-
-```
-searchKey: elf.R_ARM_TLS_CALL
-```
-
-```Go
-const R_ARM_TLS_CALL R_ARM = 91
-```
-
-### <a id="R_ARM_TLS_DESCSEQ" href="#R_ARM_TLS_DESCSEQ">const R_ARM_TLS_DESCSEQ</a>
-
-```
-searchKey: elf.R_ARM_TLS_DESCSEQ
-```
-
-```Go
-const R_ARM_TLS_DESCSEQ R_ARM = 92
-```
-
-### <a id="R_ARM_THM_TLS_CALL" href="#R_ARM_THM_TLS_CALL">const R_ARM_THM_TLS_CALL</a>
-
-```
-searchKey: elf.R_ARM_THM_TLS_CALL
-```
-
-```Go
-const R_ARM_THM_TLS_CALL R_ARM = 93
-```
-
-### <a id="R_ARM_PLT32_ABS" href="#R_ARM_PLT32_ABS">const R_ARM_PLT32_ABS</a>
-
-```
-searchKey: elf.R_ARM_PLT32_ABS
-```
-
-```Go
-const R_ARM_PLT32_ABS R_ARM = 94
-```
-
-### <a id="R_ARM_GOT_ABS" href="#R_ARM_GOT_ABS">const R_ARM_GOT_ABS</a>
-
-```
-searchKey: elf.R_ARM_GOT_ABS
-```
-
-```Go
-const R_ARM_GOT_ABS R_ARM = 95
-```
-
-### <a id="R_ARM_GOT_PREL" href="#R_ARM_GOT_PREL">const R_ARM_GOT_PREL</a>
-
-```
-searchKey: elf.R_ARM_GOT_PREL
-```
-
-```Go
-const R_ARM_GOT_PREL R_ARM = 96
-```
-
-### <a id="R_ARM_GOT_BREL12" href="#R_ARM_GOT_BREL12">const R_ARM_GOT_BREL12</a>
-
-```
-searchKey: elf.R_ARM_GOT_BREL12
-```
-
-```Go
-const R_ARM_GOT_BREL12 R_ARM = 97
-```
-
-### <a id="R_ARM_GOTOFF12" href="#R_ARM_GOTOFF12">const R_ARM_GOTOFF12</a>
-
-```
-searchKey: elf.R_ARM_GOTOFF12
-```
-
-```Go
-const R_ARM_GOTOFF12 R_ARM = 98
-```
-
-### <a id="R_ARM_GOTRELAX" href="#R_ARM_GOTRELAX">const R_ARM_GOTRELAX</a>
-
-```
-searchKey: elf.R_ARM_GOTRELAX
-```
-
-```Go
-const R_ARM_GOTRELAX R_ARM = 99
-```
-
-### <a id="R_ARM_GNU_VTENTRY" href="#R_ARM_GNU_VTENTRY">const R_ARM_GNU_VTENTRY</a>
-
-```
-searchKey: elf.R_ARM_GNU_VTENTRY
-```
-
-```Go
-const R_ARM_GNU_VTENTRY R_ARM = 100
-```
-
-### <a id="R_ARM_GNU_VTINHERIT" href="#R_ARM_GNU_VTINHERIT">const R_ARM_GNU_VTINHERIT</a>
-
-```
-searchKey: elf.R_ARM_GNU_VTINHERIT
-```
-
-```Go
-const R_ARM_GNU_VTINHERIT R_ARM = 101
-```
-
-### <a id="R_ARM_THM_JUMP11" href="#R_ARM_THM_JUMP11">const R_ARM_THM_JUMP11</a>
-
-```
-searchKey: elf.R_ARM_THM_JUMP11
-```
-
-```Go
-const R_ARM_THM_JUMP11 R_ARM = 102
-```
-
-### <a id="R_ARM_THM_JUMP8" href="#R_ARM_THM_JUMP8">const R_ARM_THM_JUMP8</a>
-
-```
-searchKey: elf.R_ARM_THM_JUMP8
-```
-
-```Go
-const R_ARM_THM_JUMP8 R_ARM = 103
-```
-
-### <a id="R_ARM_TLS_GD32" href="#R_ARM_TLS_GD32">const R_ARM_TLS_GD32</a>
-
-```
-searchKey: elf.R_ARM_TLS_GD32
-```
-
-```Go
-const R_ARM_TLS_GD32 R_ARM = 104
-```
-
-### <a id="R_ARM_TLS_LDM32" href="#R_ARM_TLS_LDM32">const R_ARM_TLS_LDM32</a>
-
-```
-searchKey: elf.R_ARM_TLS_LDM32
-```
-
-```Go
-const R_ARM_TLS_LDM32 R_ARM = 105
-```
-
-### <a id="R_ARM_TLS_LDO32" href="#R_ARM_TLS_LDO32">const R_ARM_TLS_LDO32</a>
-
-```
-searchKey: elf.R_ARM_TLS_LDO32
-```
-
-```Go
-const R_ARM_TLS_LDO32 R_ARM = 106
-```
-
-### <a id="R_ARM_TLS_IE32" href="#R_ARM_TLS_IE32">const R_ARM_TLS_IE32</a>
-
-```
-searchKey: elf.R_ARM_TLS_IE32
-```
-
-```Go
-const R_ARM_TLS_IE32 R_ARM = 107
-```
-
-### <a id="R_ARM_TLS_LE32" href="#R_ARM_TLS_LE32">const R_ARM_TLS_LE32</a>
-
-```
-searchKey: elf.R_ARM_TLS_LE32
-```
-
-```Go
-const R_ARM_TLS_LE32 R_ARM = 108
-```
-
-### <a id="R_ARM_TLS_LDO12" href="#R_ARM_TLS_LDO12">const R_ARM_TLS_LDO12</a>
-
-```
-searchKey: elf.R_ARM_TLS_LDO12
-```
-
-```Go
-const R_ARM_TLS_LDO12 R_ARM = 109
-```
-
-### <a id="R_ARM_TLS_LE12" href="#R_ARM_TLS_LE12">const R_ARM_TLS_LE12</a>
-
-```
-searchKey: elf.R_ARM_TLS_LE12
-```
-
-```Go
-const R_ARM_TLS_LE12 R_ARM = 110
-```
-
-### <a id="R_ARM_TLS_IE12GP" href="#R_ARM_TLS_IE12GP">const R_ARM_TLS_IE12GP</a>
-
-```
-searchKey: elf.R_ARM_TLS_IE12GP
-```
-
-```Go
-const R_ARM_TLS_IE12GP R_ARM = 111
-```
-
-### <a id="R_ARM_PRIVATE_0" href="#R_ARM_PRIVATE_0">const R_ARM_PRIVATE_0</a>
-
-```
-searchKey: elf.R_ARM_PRIVATE_0
-```
-
-```Go
-const R_ARM_PRIVATE_0 R_ARM = 112
-```
-
-### <a id="R_ARM_PRIVATE_1" href="#R_ARM_PRIVATE_1">const R_ARM_PRIVATE_1</a>
-
-```
-searchKey: elf.R_ARM_PRIVATE_1
-```
-
-```Go
-const R_ARM_PRIVATE_1 R_ARM = 113
-```
-
-### <a id="R_ARM_PRIVATE_2" href="#R_ARM_PRIVATE_2">const R_ARM_PRIVATE_2</a>
-
-```
-searchKey: elf.R_ARM_PRIVATE_2
-```
-
-```Go
-const R_ARM_PRIVATE_2 R_ARM = 114
-```
-
-### <a id="R_ARM_PRIVATE_3" href="#R_ARM_PRIVATE_3">const R_ARM_PRIVATE_3</a>
-
-```
-searchKey: elf.R_ARM_PRIVATE_3
-```
-
-```Go
-const R_ARM_PRIVATE_3 R_ARM = 115
-```
-
-### <a id="R_ARM_PRIVATE_4" href="#R_ARM_PRIVATE_4">const R_ARM_PRIVATE_4</a>
-
-```
-searchKey: elf.R_ARM_PRIVATE_4
-```
-
-```Go
-const R_ARM_PRIVATE_4 R_ARM = 116
-```
-
-### <a id="R_ARM_PRIVATE_5" href="#R_ARM_PRIVATE_5">const R_ARM_PRIVATE_5</a>
-
-```
-searchKey: elf.R_ARM_PRIVATE_5
-```
-
-```Go
-const R_ARM_PRIVATE_5 R_ARM = 117
-```
-
-### <a id="R_ARM_PRIVATE_6" href="#R_ARM_PRIVATE_6">const R_ARM_PRIVATE_6</a>
-
-```
-searchKey: elf.R_ARM_PRIVATE_6
-```
-
-```Go
-const R_ARM_PRIVATE_6 R_ARM = 118
-```
-
-### <a id="R_ARM_PRIVATE_7" href="#R_ARM_PRIVATE_7">const R_ARM_PRIVATE_7</a>
-
-```
-searchKey: elf.R_ARM_PRIVATE_7
-```
-
-```Go
-const R_ARM_PRIVATE_7 R_ARM = 119
-```
-
-### <a id="R_ARM_PRIVATE_8" href="#R_ARM_PRIVATE_8">const R_ARM_PRIVATE_8</a>
-
-```
-searchKey: elf.R_ARM_PRIVATE_8
-```
-
-```Go
-const R_ARM_PRIVATE_8 R_ARM = 120
-```
-
-### <a id="R_ARM_PRIVATE_9" href="#R_ARM_PRIVATE_9">const R_ARM_PRIVATE_9</a>
-
-```
-searchKey: elf.R_ARM_PRIVATE_9
-```
-
-```Go
-const R_ARM_PRIVATE_9 R_ARM = 121
-```
-
-### <a id="R_ARM_PRIVATE_10" href="#R_ARM_PRIVATE_10">const R_ARM_PRIVATE_10</a>
-
-```
-searchKey: elf.R_ARM_PRIVATE_10
-```
-
-```Go
-const R_ARM_PRIVATE_10 R_ARM = 122
-```
-
-### <a id="R_ARM_PRIVATE_11" href="#R_ARM_PRIVATE_11">const R_ARM_PRIVATE_11</a>
-
-```
-searchKey: elf.R_ARM_PRIVATE_11
-```
-
-```Go
-const R_ARM_PRIVATE_11 R_ARM = 123
-```
-
-### <a id="R_ARM_PRIVATE_12" href="#R_ARM_PRIVATE_12">const R_ARM_PRIVATE_12</a>
-
-```
-searchKey: elf.R_ARM_PRIVATE_12
-```
-
-```Go
-const R_ARM_PRIVATE_12 R_ARM = 124
-```
-
-### <a id="R_ARM_PRIVATE_13" href="#R_ARM_PRIVATE_13">const R_ARM_PRIVATE_13</a>
-
-```
-searchKey: elf.R_ARM_PRIVATE_13
-```
-
-```Go
-const R_ARM_PRIVATE_13 R_ARM = 125
-```
-
-### <a id="R_ARM_PRIVATE_14" href="#R_ARM_PRIVATE_14">const R_ARM_PRIVATE_14</a>
-
-```
-searchKey: elf.R_ARM_PRIVATE_14
-```
-
-```Go
-const R_ARM_PRIVATE_14 R_ARM = 126
-```
-
-### <a id="R_ARM_PRIVATE_15" href="#R_ARM_PRIVATE_15">const R_ARM_PRIVATE_15</a>
-
-```
-searchKey: elf.R_ARM_PRIVATE_15
-```
-
-```Go
-const R_ARM_PRIVATE_15 R_ARM = 127
-```
-
-### <a id="R_ARM_ME_TOO" href="#R_ARM_ME_TOO">const R_ARM_ME_TOO</a>
-
-```
-searchKey: elf.R_ARM_ME_TOO
-```
-
-```Go
-const R_ARM_ME_TOO R_ARM = 128
-```
-
-### <a id="R_ARM_THM_TLS_DESCSEQ16" href="#R_ARM_THM_TLS_DESCSEQ16">const R_ARM_THM_TLS_DESCSEQ16</a>
-
-```
-searchKey: elf.R_ARM_THM_TLS_DESCSEQ16
-```
-
-```Go
-const R_ARM_THM_TLS_DESCSEQ16 R_ARM = 129
-```
-
-### <a id="R_ARM_THM_TLS_DESCSEQ32" href="#R_ARM_THM_TLS_DESCSEQ32">const R_ARM_THM_TLS_DESCSEQ32</a>
-
-```
-searchKey: elf.R_ARM_THM_TLS_DESCSEQ32
-```
-
-```Go
-const R_ARM_THM_TLS_DESCSEQ32 R_ARM = 130
-```
-
-### <a id="R_ARM_THM_GOT_BREL12" href="#R_ARM_THM_GOT_BREL12">const R_ARM_THM_GOT_BREL12</a>
-
-```
-searchKey: elf.R_ARM_THM_GOT_BREL12
-```
-
-```Go
-const R_ARM_THM_GOT_BREL12 R_ARM = 131
-```
-
-### <a id="R_ARM_THM_ALU_ABS_G0_NC" href="#R_ARM_THM_ALU_ABS_G0_NC">const R_ARM_THM_ALU_ABS_G0_NC</a>
-
-```
-searchKey: elf.R_ARM_THM_ALU_ABS_G0_NC
-```
-
-```Go
-const R_ARM_THM_ALU_ABS_G0_NC R_ARM = 132
-```
-
-### <a id="R_ARM_THM_ALU_ABS_G1_NC" href="#R_ARM_THM_ALU_ABS_G1_NC">const R_ARM_THM_ALU_ABS_G1_NC</a>
-
-```
-searchKey: elf.R_ARM_THM_ALU_ABS_G1_NC
-```
-
-```Go
-const R_ARM_THM_ALU_ABS_G1_NC R_ARM = 133
-```
-
-### <a id="R_ARM_THM_ALU_ABS_G2_NC" href="#R_ARM_THM_ALU_ABS_G2_NC">const R_ARM_THM_ALU_ABS_G2_NC</a>
-
-```
-searchKey: elf.R_ARM_THM_ALU_ABS_G2_NC
-```
-
-```Go
-const R_ARM_THM_ALU_ABS_G2_NC R_ARM = 134
-```
-
-### <a id="R_ARM_THM_ALU_ABS_G3" href="#R_ARM_THM_ALU_ABS_G3">const R_ARM_THM_ALU_ABS_G3</a>
-
-```
-searchKey: elf.R_ARM_THM_ALU_ABS_G3
-```
-
-```Go
-const R_ARM_THM_ALU_ABS_G3 R_ARM = 135
-```
-
-### <a id="R_ARM_IRELATIVE" href="#R_ARM_IRELATIVE">const R_ARM_IRELATIVE</a>
-
-```
-searchKey: elf.R_ARM_IRELATIVE
-```
-
-```Go
-const R_ARM_IRELATIVE R_ARM = 160
-```
-
-### <a id="R_ARM_RXPC25" href="#R_ARM_RXPC25">const R_ARM_RXPC25</a>
-
-```
-searchKey: elf.R_ARM_RXPC25
-```
-
-```Go
-const R_ARM_RXPC25 R_ARM = 249
-```
-
-### <a id="R_ARM_RSBREL32" href="#R_ARM_RSBREL32">const R_ARM_RSBREL32</a>
-
-```
-searchKey: elf.R_ARM_RSBREL32
-```
-
-```Go
-const R_ARM_RSBREL32 R_ARM = 250
-```
-
-### <a id="R_ARM_THM_RPC22" href="#R_ARM_THM_RPC22">const R_ARM_THM_RPC22</a>
-
-```
-searchKey: elf.R_ARM_THM_RPC22
-```
-
-```Go
-const R_ARM_THM_RPC22 R_ARM = 251
-```
-
-### <a id="R_ARM_RREL32" href="#R_ARM_RREL32">const R_ARM_RREL32</a>
-
-```
-searchKey: elf.R_ARM_RREL32
-```
-
-```Go
-const R_ARM_RREL32 R_ARM = 252
-```
-
-### <a id="R_ARM_RABS32" href="#R_ARM_RABS32">const R_ARM_RABS32</a>
-
-```
-searchKey: elf.R_ARM_RABS32
-```
-
-```Go
-const R_ARM_RABS32 R_ARM = 253
-```
-
-### <a id="R_ARM_RPC24" href="#R_ARM_RPC24">const R_ARM_RPC24</a>
-
-```
-searchKey: elf.R_ARM_RPC24
-```
-
-```Go
-const R_ARM_RPC24 R_ARM = 254
-```
-
-### <a id="R_ARM_RBASE" href="#R_ARM_RBASE">const R_ARM_RBASE</a>
-
-```
-searchKey: elf.R_ARM_RBASE
-```
-
-```Go
-const R_ARM_RBASE R_ARM = 255
-```
-
-### <a id="R_386_NONE" href="#R_386_NONE">const R_386_NONE</a>
-
-```
-searchKey: elf.R_386_NONE
-```
-
-```Go
-const R_386_NONE R_386 = 0 /* No relocation. */
-
+const R_386_16 R_386 = 20
 ```
 
 ### <a id="R_386_32" href="#R_386_32">const R_386_32</a>
 
 ```
 searchKey: elf.R_386_32
+tags: [constant number]
 ```
 
 ```Go
@@ -10318,43 +6418,33 @@ const R_386_32 R_386 = 1 /* Add symbol value. */
 
 ```
 
-### <a id="R_386_PC32" href="#R_386_PC32">const R_386_PC32</a>
+### <a id="R_386_32PLT" href="#R_386_32PLT">const R_386_32PLT</a>
 
 ```
-searchKey: elf.R_386_PC32
-```
-
-```Go
-const R_386_PC32 R_386 = 2 /* Add PC-relative symbol value. */
-
-```
-
-### <a id="R_386_GOT32" href="#R_386_GOT32">const R_386_GOT32</a>
-
-```
-searchKey: elf.R_386_GOT32
+searchKey: elf.R_386_32PLT
+tags: [constant number]
 ```
 
 ```Go
-const R_386_GOT32 R_386 = 3 /* Add PC-relative GOT offset. */
-
+const R_386_32PLT R_386 = 11
 ```
 
-### <a id="R_386_PLT32" href="#R_386_PLT32">const R_386_PLT32</a>
+### <a id="R_386_8" href="#R_386_8">const R_386_8</a>
 
 ```
-searchKey: elf.R_386_PLT32
+searchKey: elf.R_386_8
+tags: [constant number]
 ```
 
 ```Go
-const R_386_PLT32 R_386 = 4 /* Add PC-relative PLT offset. */
-
+const R_386_8 R_386 = 22
 ```
 
 ### <a id="R_386_COPY" href="#R_386_COPY">const R_386_COPY</a>
 
 ```
 searchKey: elf.R_386_COPY
+tags: [constant number]
 ```
 
 ```Go
@@ -10366,6 +6456,7 @@ const R_386_COPY R_386 = 5 /* Copy data from shared object. */
 
 ```
 searchKey: elf.R_386_GLOB_DAT
+tags: [constant number]
 ```
 
 ```Go
@@ -10373,32 +6464,34 @@ const R_386_GLOB_DAT R_386 = 6 /* Set GOT entry to data address. */
 
 ```
 
-### <a id="R_386_JMP_SLOT" href="#R_386_JMP_SLOT">const R_386_JMP_SLOT</a>
+### <a id="R_386_GOT32" href="#R_386_GOT32">const R_386_GOT32</a>
 
 ```
-searchKey: elf.R_386_JMP_SLOT
-```
-
-```Go
-const R_386_JMP_SLOT R_386 = 7 /* Set GOT entry to code address. */
-
-```
-
-### <a id="R_386_RELATIVE" href="#R_386_RELATIVE">const R_386_RELATIVE</a>
-
-```
-searchKey: elf.R_386_RELATIVE
+searchKey: elf.R_386_GOT32
+tags: [constant number]
 ```
 
 ```Go
-const R_386_RELATIVE R_386 = 8 /* Add load address of shared object. */
+const R_386_GOT32 R_386 = 3 /* Add PC-relative GOT offset. */
 
+```
+
+### <a id="R_386_GOT32X" href="#R_386_GOT32X">const R_386_GOT32X</a>
+
+```
+searchKey: elf.R_386_GOT32X
+tags: [constant number]
+```
+
+```Go
+const R_386_GOT32X R_386 = 43
 ```
 
 ### <a id="R_386_GOTOFF" href="#R_386_GOTOFF">const R_386_GOTOFF</a>
 
 ```
 searchKey: elf.R_386_GOTOFF
+tags: [constant number]
 ```
 
 ```Go
@@ -10410,6 +6503,7 @@ const R_386_GOTOFF R_386 = 9 /* Add GOT-relative symbol address. */
 
 ```
 searchKey: elf.R_386_GOTPC
+tags: [constant number]
 ```
 
 ```Go
@@ -10417,247 +6511,137 @@ const R_386_GOTPC R_386 = 10 /* Add PC-relative GOT table address. */
 
 ```
 
-### <a id="R_386_32PLT" href="#R_386_32PLT">const R_386_32PLT</a>
+### <a id="R_386_IRELATIVE" href="#R_386_IRELATIVE">const R_386_IRELATIVE</a>
 
 ```
-searchKey: elf.R_386_32PLT
-```
-
-```Go
-const R_386_32PLT R_386 = 11
-```
-
-### <a id="R_386_TLS_TPOFF" href="#R_386_TLS_TPOFF">const R_386_TLS_TPOFF</a>
-
-```
-searchKey: elf.R_386_TLS_TPOFF
+searchKey: elf.R_386_IRELATIVE
+tags: [constant number]
 ```
 
 ```Go
-const R_386_TLS_TPOFF R_386 = 14 /* Negative offset in static TLS block */
-
+const R_386_IRELATIVE R_386 = 42
 ```
 
-### <a id="R_386_TLS_IE" href="#R_386_TLS_IE">const R_386_TLS_IE</a>
+### <a id="R_386_JMP_SLOT" href="#R_386_JMP_SLOT">const R_386_JMP_SLOT</a>
 
 ```
-searchKey: elf.R_386_TLS_IE
-```
-
-```Go
-const R_386_TLS_IE R_386 = 15 /* Absolute address of GOT for -ve static TLS */
-
-```
-
-### <a id="R_386_TLS_GOTIE" href="#R_386_TLS_GOTIE">const R_386_TLS_GOTIE</a>
-
-```
-searchKey: elf.R_386_TLS_GOTIE
+searchKey: elf.R_386_JMP_SLOT
+tags: [constant number]
 ```
 
 ```Go
-const R_386_TLS_GOTIE R_386 = 16 /* GOT entry for negative static TLS block */
+const R_386_JMP_SLOT R_386 = 7 /* Set GOT entry to code address. */
 
 ```
 
-### <a id="R_386_TLS_LE" href="#R_386_TLS_LE">const R_386_TLS_LE</a>
+### <a id="R_386_NONE" href="#R_386_NONE">const R_386_NONE</a>
 
 ```
-searchKey: elf.R_386_TLS_LE
-```
-
-```Go
-const R_386_TLS_LE R_386 = 17 /* Negative offset relative to static TLS */
-
-```
-
-### <a id="R_386_TLS_GD" href="#R_386_TLS_GD">const R_386_TLS_GD</a>
-
-```
-searchKey: elf.R_386_TLS_GD
+searchKey: elf.R_386_NONE
+tags: [constant number]
 ```
 
 ```Go
-const R_386_TLS_GD R_386 = 18 /* 32 bit offset to GOT (index,off) pair */
+const R_386_NONE R_386 = 0 /* No relocation. */
 
-```
-
-### <a id="R_386_TLS_LDM" href="#R_386_TLS_LDM">const R_386_TLS_LDM</a>
-
-```
-searchKey: elf.R_386_TLS_LDM
-```
-
-```Go
-const R_386_TLS_LDM R_386 = 19 /* 32 bit offset to GOT (index,zero) pair */
-
-```
-
-### <a id="R_386_16" href="#R_386_16">const R_386_16</a>
-
-```
-searchKey: elf.R_386_16
-```
-
-```Go
-const R_386_16 R_386 = 20
 ```
 
 ### <a id="R_386_PC16" href="#R_386_PC16">const R_386_PC16</a>
 
 ```
 searchKey: elf.R_386_PC16
+tags: [constant number]
 ```
 
 ```Go
 const R_386_PC16 R_386 = 21
 ```
 
-### <a id="R_386_8" href="#R_386_8">const R_386_8</a>
+### <a id="R_386_PC32" href="#R_386_PC32">const R_386_PC32</a>
 
 ```
-searchKey: elf.R_386_8
+searchKey: elf.R_386_PC32
+tags: [constant number]
 ```
 
 ```Go
-const R_386_8 R_386 = 22
+const R_386_PC32 R_386 = 2 /* Add PC-relative symbol value. */
+
 ```
 
 ### <a id="R_386_PC8" href="#R_386_PC8">const R_386_PC8</a>
 
 ```
 searchKey: elf.R_386_PC8
+tags: [constant number]
 ```
 
 ```Go
 const R_386_PC8 R_386 = 23
 ```
 
-### <a id="R_386_TLS_GD_32" href="#R_386_TLS_GD_32">const R_386_TLS_GD_32</a>
+### <a id="R_386_PLT32" href="#R_386_PLT32">const R_386_PLT32</a>
 
 ```
-searchKey: elf.R_386_TLS_GD_32
-```
-
-```Go
-const R_386_TLS_GD_32 R_386 = 24 /* 32 bit offset to GOT (index,off) pair */
-
-```
-
-### <a id="R_386_TLS_GD_PUSH" href="#R_386_TLS_GD_PUSH">const R_386_TLS_GD_PUSH</a>
-
-```
-searchKey: elf.R_386_TLS_GD_PUSH
+searchKey: elf.R_386_PLT32
+tags: [constant number]
 ```
 
 ```Go
-const R_386_TLS_GD_PUSH R_386 = 25 /* pushl instruction for Sun ABI GD sequence */
+const R_386_PLT32 R_386 = 4 /* Add PC-relative PLT offset. */
 
 ```
 
-### <a id="R_386_TLS_GD_CALL" href="#R_386_TLS_GD_CALL">const R_386_TLS_GD_CALL</a>
+### <a id="R_386_RELATIVE" href="#R_386_RELATIVE">const R_386_RELATIVE</a>
 
 ```
-searchKey: elf.R_386_TLS_GD_CALL
-```
-
-```Go
-const R_386_TLS_GD_CALL R_386 = 26 /* call instruction for Sun ABI GD sequence */
-
-```
-
-### <a id="R_386_TLS_GD_POP" href="#R_386_TLS_GD_POP">const R_386_TLS_GD_POP</a>
-
-```
-searchKey: elf.R_386_TLS_GD_POP
+searchKey: elf.R_386_RELATIVE
+tags: [constant number]
 ```
 
 ```Go
-const R_386_TLS_GD_POP R_386 = 27 /* popl instruction for Sun ABI GD sequence */
+const R_386_RELATIVE R_386 = 8 /* Add load address of shared object. */
 
 ```
 
-### <a id="R_386_TLS_LDM_32" href="#R_386_TLS_LDM_32">const R_386_TLS_LDM_32</a>
+### <a id="R_386_SIZE32" href="#R_386_SIZE32">const R_386_SIZE32</a>
 
 ```
-searchKey: elf.R_386_TLS_LDM_32
-```
-
-```Go
-const R_386_TLS_LDM_32 R_386 = 28 /* 32 bit offset to GOT (index,zero) pair */
-
-```
-
-### <a id="R_386_TLS_LDM_PUSH" href="#R_386_TLS_LDM_PUSH">const R_386_TLS_LDM_PUSH</a>
-
-```
-searchKey: elf.R_386_TLS_LDM_PUSH
+searchKey: elf.R_386_SIZE32
+tags: [constant number]
 ```
 
 ```Go
-const R_386_TLS_LDM_PUSH R_386 = 29 /* pushl instruction for Sun ABI LD sequence */
-
+const R_386_SIZE32 R_386 = 38
 ```
 
-### <a id="R_386_TLS_LDM_CALL" href="#R_386_TLS_LDM_CALL">const R_386_TLS_LDM_CALL</a>
+### <a id="R_386_TLS_DESC" href="#R_386_TLS_DESC">const R_386_TLS_DESC</a>
 
 ```
-searchKey: elf.R_386_TLS_LDM_CALL
-```
-
-```Go
-const R_386_TLS_LDM_CALL R_386 = 30 /* call instruction for Sun ABI LD sequence */
-
-```
-
-### <a id="R_386_TLS_LDM_POP" href="#R_386_TLS_LDM_POP">const R_386_TLS_LDM_POP</a>
-
-```
-searchKey: elf.R_386_TLS_LDM_POP
+searchKey: elf.R_386_TLS_DESC
+tags: [constant number]
 ```
 
 ```Go
-const R_386_TLS_LDM_POP R_386 = 31 /* popl instruction for Sun ABI LD sequence */
-
+const R_386_TLS_DESC R_386 = 41
 ```
 
-### <a id="R_386_TLS_LDO_32" href="#R_386_TLS_LDO_32">const R_386_TLS_LDO_32</a>
+### <a id="R_386_TLS_DESC_CALL" href="#R_386_TLS_DESC_CALL">const R_386_TLS_DESC_CALL</a>
 
 ```
-searchKey: elf.R_386_TLS_LDO_32
-```
-
-```Go
-const R_386_TLS_LDO_32 R_386 = 32 /* 32 bit offset from start of TLS block */
-
-```
-
-### <a id="R_386_TLS_IE_32" href="#R_386_TLS_IE_32">const R_386_TLS_IE_32</a>
-
-```
-searchKey: elf.R_386_TLS_IE_32
+searchKey: elf.R_386_TLS_DESC_CALL
+tags: [constant number]
 ```
 
 ```Go
-const R_386_TLS_IE_32 R_386 = 33 /* 32 bit offset to GOT static TLS offset entry */
-
-```
-
-### <a id="R_386_TLS_LE_32" href="#R_386_TLS_LE_32">const R_386_TLS_LE_32</a>
-
-```
-searchKey: elf.R_386_TLS_LE_32
-```
-
-```Go
-const R_386_TLS_LE_32 R_386 = 34 /* 32 bit offset within static TLS block */
-
+const R_386_TLS_DESC_CALL R_386 = 40
 ```
 
 ### <a id="R_386_TLS_DTPMOD32" href="#R_386_TLS_DTPMOD32">const R_386_TLS_DTPMOD32</a>
 
 ```
 searchKey: elf.R_386_TLS_DTPMOD32
+tags: [constant number]
 ```
 
 ```Go
@@ -10669,6 +6653,7 @@ const R_386_TLS_DTPMOD32 R_386 = 35 /* GOT entry containing TLS index */
 
 ```
 searchKey: elf.R_386_TLS_DTPOFF32
+tags: [constant number]
 ```
 
 ```Go
@@ -10676,10 +6661,226 @@ const R_386_TLS_DTPOFF32 R_386 = 36 /* GOT entry containing TLS offset */
 
 ```
 
+### <a id="R_386_TLS_GD" href="#R_386_TLS_GD">const R_386_TLS_GD</a>
+
+```
+searchKey: elf.R_386_TLS_GD
+tags: [constant number]
+```
+
+```Go
+const R_386_TLS_GD R_386 = 18 /* 32 bit offset to GOT (index,off) pair */
+
+```
+
+### <a id="R_386_TLS_GD_32" href="#R_386_TLS_GD_32">const R_386_TLS_GD_32</a>
+
+```
+searchKey: elf.R_386_TLS_GD_32
+tags: [constant number]
+```
+
+```Go
+const R_386_TLS_GD_32 R_386 = 24 /* 32 bit offset to GOT (index,off) pair */
+
+```
+
+### <a id="R_386_TLS_GD_CALL" href="#R_386_TLS_GD_CALL">const R_386_TLS_GD_CALL</a>
+
+```
+searchKey: elf.R_386_TLS_GD_CALL
+tags: [constant number]
+```
+
+```Go
+const R_386_TLS_GD_CALL R_386 = 26 /* call instruction for Sun ABI GD sequence */
+
+```
+
+### <a id="R_386_TLS_GD_POP" href="#R_386_TLS_GD_POP">const R_386_TLS_GD_POP</a>
+
+```
+searchKey: elf.R_386_TLS_GD_POP
+tags: [constant number]
+```
+
+```Go
+const R_386_TLS_GD_POP R_386 = 27 /* popl instruction for Sun ABI GD sequence */
+
+```
+
+### <a id="R_386_TLS_GD_PUSH" href="#R_386_TLS_GD_PUSH">const R_386_TLS_GD_PUSH</a>
+
+```
+searchKey: elf.R_386_TLS_GD_PUSH
+tags: [constant number]
+```
+
+```Go
+const R_386_TLS_GD_PUSH R_386 = 25 /* pushl instruction for Sun ABI GD sequence */
+
+```
+
+### <a id="R_386_TLS_GOTDESC" href="#R_386_TLS_GOTDESC">const R_386_TLS_GOTDESC</a>
+
+```
+searchKey: elf.R_386_TLS_GOTDESC
+tags: [constant number]
+```
+
+```Go
+const R_386_TLS_GOTDESC R_386 = 39
+```
+
+### <a id="R_386_TLS_GOTIE" href="#R_386_TLS_GOTIE">const R_386_TLS_GOTIE</a>
+
+```
+searchKey: elf.R_386_TLS_GOTIE
+tags: [constant number]
+```
+
+```Go
+const R_386_TLS_GOTIE R_386 = 16 /* GOT entry for negative static TLS block */
+
+```
+
+### <a id="R_386_TLS_IE" href="#R_386_TLS_IE">const R_386_TLS_IE</a>
+
+```
+searchKey: elf.R_386_TLS_IE
+tags: [constant number]
+```
+
+```Go
+const R_386_TLS_IE R_386 = 15 /* Absolute address of GOT for -ve static TLS */
+
+```
+
+### <a id="R_386_TLS_IE_32" href="#R_386_TLS_IE_32">const R_386_TLS_IE_32</a>
+
+```
+searchKey: elf.R_386_TLS_IE_32
+tags: [constant number]
+```
+
+```Go
+const R_386_TLS_IE_32 R_386 = 33 /* 32 bit offset to GOT static TLS offset entry */
+
+```
+
+### <a id="R_386_TLS_LDM" href="#R_386_TLS_LDM">const R_386_TLS_LDM</a>
+
+```
+searchKey: elf.R_386_TLS_LDM
+tags: [constant number]
+```
+
+```Go
+const R_386_TLS_LDM R_386 = 19 /* 32 bit offset to GOT (index,zero) pair */
+
+```
+
+### <a id="R_386_TLS_LDM_32" href="#R_386_TLS_LDM_32">const R_386_TLS_LDM_32</a>
+
+```
+searchKey: elf.R_386_TLS_LDM_32
+tags: [constant number]
+```
+
+```Go
+const R_386_TLS_LDM_32 R_386 = 28 /* 32 bit offset to GOT (index,zero) pair */
+
+```
+
+### <a id="R_386_TLS_LDM_CALL" href="#R_386_TLS_LDM_CALL">const R_386_TLS_LDM_CALL</a>
+
+```
+searchKey: elf.R_386_TLS_LDM_CALL
+tags: [constant number]
+```
+
+```Go
+const R_386_TLS_LDM_CALL R_386 = 30 /* call instruction for Sun ABI LD sequence */
+
+```
+
+### <a id="R_386_TLS_LDM_POP" href="#R_386_TLS_LDM_POP">const R_386_TLS_LDM_POP</a>
+
+```
+searchKey: elf.R_386_TLS_LDM_POP
+tags: [constant number]
+```
+
+```Go
+const R_386_TLS_LDM_POP R_386 = 31 /* popl instruction for Sun ABI LD sequence */
+
+```
+
+### <a id="R_386_TLS_LDM_PUSH" href="#R_386_TLS_LDM_PUSH">const R_386_TLS_LDM_PUSH</a>
+
+```
+searchKey: elf.R_386_TLS_LDM_PUSH
+tags: [constant number]
+```
+
+```Go
+const R_386_TLS_LDM_PUSH R_386 = 29 /* pushl instruction for Sun ABI LD sequence */
+
+```
+
+### <a id="R_386_TLS_LDO_32" href="#R_386_TLS_LDO_32">const R_386_TLS_LDO_32</a>
+
+```
+searchKey: elf.R_386_TLS_LDO_32
+tags: [constant number]
+```
+
+```Go
+const R_386_TLS_LDO_32 R_386 = 32 /* 32 bit offset from start of TLS block */
+
+```
+
+### <a id="R_386_TLS_LE" href="#R_386_TLS_LE">const R_386_TLS_LE</a>
+
+```
+searchKey: elf.R_386_TLS_LE
+tags: [constant number]
+```
+
+```Go
+const R_386_TLS_LE R_386 = 17 /* Negative offset relative to static TLS */
+
+```
+
+### <a id="R_386_TLS_LE_32" href="#R_386_TLS_LE_32">const R_386_TLS_LE_32</a>
+
+```
+searchKey: elf.R_386_TLS_LE_32
+tags: [constant number]
+```
+
+```Go
+const R_386_TLS_LE_32 R_386 = 34 /* 32 bit offset within static TLS block */
+
+```
+
+### <a id="R_386_TLS_TPOFF" href="#R_386_TLS_TPOFF">const R_386_TLS_TPOFF</a>
+
+```
+searchKey: elf.R_386_TLS_TPOFF
+tags: [constant number]
+```
+
+```Go
+const R_386_TLS_TPOFF R_386 = 14 /* Negative offset in static TLS block */
+
+```
+
 ### <a id="R_386_TLS_TPOFF32" href="#R_386_TLS_TPOFF32">const R_386_TLS_TPOFF32</a>
 
 ```
 searchKey: elf.R_386_TLS_TPOFF32
+tags: [constant number]
 ```
 
 ```Go
@@ -10687,186 +6888,4088 @@ const R_386_TLS_TPOFF32 R_386 = 37 /* GOT entry of -ve static TLS offset */
 
 ```
 
-### <a id="R_386_SIZE32" href="#R_386_SIZE32">const R_386_SIZE32</a>
+### <a id="R_390_12" href="#R_390_12">const R_390_12</a>
 
 ```
-searchKey: elf.R_386_SIZE32
-```
-
-```Go
-const R_386_SIZE32 R_386 = 38
-```
-
-### <a id="R_386_TLS_GOTDESC" href="#R_386_TLS_GOTDESC">const R_386_TLS_GOTDESC</a>
-
-```
-searchKey: elf.R_386_TLS_GOTDESC
+searchKey: elf.R_390_12
+tags: [constant number]
 ```
 
 ```Go
-const R_386_TLS_GOTDESC R_386 = 39
+const R_390_12 R_390 = 2
 ```
 
-### <a id="R_386_TLS_DESC_CALL" href="#R_386_TLS_DESC_CALL">const R_386_TLS_DESC_CALL</a>
+### <a id="R_390_16" href="#R_390_16">const R_390_16</a>
 
 ```
-searchKey: elf.R_386_TLS_DESC_CALL
-```
-
-```Go
-const R_386_TLS_DESC_CALL R_386 = 40
-```
-
-### <a id="R_386_TLS_DESC" href="#R_386_TLS_DESC">const R_386_TLS_DESC</a>
-
-```
-searchKey: elf.R_386_TLS_DESC
+searchKey: elf.R_390_16
+tags: [constant number]
 ```
 
 ```Go
-const R_386_TLS_DESC R_386 = 41
+const R_390_16 R_390 = 3
 ```
 
-### <a id="R_386_IRELATIVE" href="#R_386_IRELATIVE">const R_386_IRELATIVE</a>
+### <a id="R_390_20" href="#R_390_20">const R_390_20</a>
 
 ```
-searchKey: elf.R_386_IRELATIVE
-```
-
-```Go
-const R_386_IRELATIVE R_386 = 42
-```
-
-### <a id="R_386_GOT32X" href="#R_386_GOT32X">const R_386_GOT32X</a>
-
-```
-searchKey: elf.R_386_GOT32X
+searchKey: elf.R_390_20
+tags: [constant number]
 ```
 
 ```Go
-const R_386_GOT32X R_386 = 43
+const R_390_20 R_390 = 57
 ```
 
-### <a id="R_MIPS_NONE" href="#R_MIPS_NONE">const R_MIPS_NONE</a>
+### <a id="R_390_32" href="#R_390_32">const R_390_32</a>
 
 ```
-searchKey: elf.R_MIPS_NONE
+searchKey: elf.R_390_32
+tags: [constant number]
 ```
 
 ```Go
-const R_MIPS_NONE R_MIPS = 0
+const R_390_32 R_390 = 4
+```
+
+### <a id="R_390_64" href="#R_390_64">const R_390_64</a>
+
+```
+searchKey: elf.R_390_64
+tags: [constant number]
+```
+
+```Go
+const R_390_64 R_390 = 22
+```
+
+### <a id="R_390_8" href="#R_390_8">const R_390_8</a>
+
+```
+searchKey: elf.R_390_8
+tags: [constant number]
+```
+
+```Go
+const R_390_8 R_390 = 1
+```
+
+### <a id="R_390_COPY" href="#R_390_COPY">const R_390_COPY</a>
+
+```
+searchKey: elf.R_390_COPY
+tags: [constant number]
+```
+
+```Go
+const R_390_COPY R_390 = 9
+```
+
+### <a id="R_390_GLOB_DAT" href="#R_390_GLOB_DAT">const R_390_GLOB_DAT</a>
+
+```
+searchKey: elf.R_390_GLOB_DAT
+tags: [constant number]
+```
+
+```Go
+const R_390_GLOB_DAT R_390 = 10
+```
+
+### <a id="R_390_GOT12" href="#R_390_GOT12">const R_390_GOT12</a>
+
+```
+searchKey: elf.R_390_GOT12
+tags: [constant number]
+```
+
+```Go
+const R_390_GOT12 R_390 = 6
+```
+
+### <a id="R_390_GOT16" href="#R_390_GOT16">const R_390_GOT16</a>
+
+```
+searchKey: elf.R_390_GOT16
+tags: [constant number]
+```
+
+```Go
+const R_390_GOT16 R_390 = 15
+```
+
+### <a id="R_390_GOT20" href="#R_390_GOT20">const R_390_GOT20</a>
+
+```
+searchKey: elf.R_390_GOT20
+tags: [constant number]
+```
+
+```Go
+const R_390_GOT20 R_390 = 58
+```
+
+### <a id="R_390_GOT32" href="#R_390_GOT32">const R_390_GOT32</a>
+
+```
+searchKey: elf.R_390_GOT32
+tags: [constant number]
+```
+
+```Go
+const R_390_GOT32 R_390 = 7
+```
+
+### <a id="R_390_GOT64" href="#R_390_GOT64">const R_390_GOT64</a>
+
+```
+searchKey: elf.R_390_GOT64
+tags: [constant number]
+```
+
+```Go
+const R_390_GOT64 R_390 = 24
+```
+
+### <a id="R_390_GOTENT" href="#R_390_GOTENT">const R_390_GOTENT</a>
+
+```
+searchKey: elf.R_390_GOTENT
+tags: [constant number]
+```
+
+```Go
+const R_390_GOTENT R_390 = 26
+```
+
+### <a id="R_390_GOTOFF" href="#R_390_GOTOFF">const R_390_GOTOFF</a>
+
+```
+searchKey: elf.R_390_GOTOFF
+tags: [constant number]
+```
+
+```Go
+const R_390_GOTOFF R_390 = 13
+```
+
+### <a id="R_390_GOTOFF16" href="#R_390_GOTOFF16">const R_390_GOTOFF16</a>
+
+```
+searchKey: elf.R_390_GOTOFF16
+tags: [constant number]
+```
+
+```Go
+const R_390_GOTOFF16 R_390 = 27
+```
+
+### <a id="R_390_GOTOFF64" href="#R_390_GOTOFF64">const R_390_GOTOFF64</a>
+
+```
+searchKey: elf.R_390_GOTOFF64
+tags: [constant number]
+```
+
+```Go
+const R_390_GOTOFF64 R_390 = 28
+```
+
+### <a id="R_390_GOTPC" href="#R_390_GOTPC">const R_390_GOTPC</a>
+
+```
+searchKey: elf.R_390_GOTPC
+tags: [constant number]
+```
+
+```Go
+const R_390_GOTPC R_390 = 14
+```
+
+### <a id="R_390_GOTPCDBL" href="#R_390_GOTPCDBL">const R_390_GOTPCDBL</a>
+
+```
+searchKey: elf.R_390_GOTPCDBL
+tags: [constant number]
+```
+
+```Go
+const R_390_GOTPCDBL R_390 = 21
+```
+
+### <a id="R_390_GOTPLT12" href="#R_390_GOTPLT12">const R_390_GOTPLT12</a>
+
+```
+searchKey: elf.R_390_GOTPLT12
+tags: [constant number]
+```
+
+```Go
+const R_390_GOTPLT12 R_390 = 29
+```
+
+### <a id="R_390_GOTPLT16" href="#R_390_GOTPLT16">const R_390_GOTPLT16</a>
+
+```
+searchKey: elf.R_390_GOTPLT16
+tags: [constant number]
+```
+
+```Go
+const R_390_GOTPLT16 R_390 = 30
+```
+
+### <a id="R_390_GOTPLT20" href="#R_390_GOTPLT20">const R_390_GOTPLT20</a>
+
+```
+searchKey: elf.R_390_GOTPLT20
+tags: [constant number]
+```
+
+```Go
+const R_390_GOTPLT20 R_390 = 59
+```
+
+### <a id="R_390_GOTPLT32" href="#R_390_GOTPLT32">const R_390_GOTPLT32</a>
+
+```
+searchKey: elf.R_390_GOTPLT32
+tags: [constant number]
+```
+
+```Go
+const R_390_GOTPLT32 R_390 = 31
+```
+
+### <a id="R_390_GOTPLT64" href="#R_390_GOTPLT64">const R_390_GOTPLT64</a>
+
+```
+searchKey: elf.R_390_GOTPLT64
+tags: [constant number]
+```
+
+```Go
+const R_390_GOTPLT64 R_390 = 32
+```
+
+### <a id="R_390_GOTPLTENT" href="#R_390_GOTPLTENT">const R_390_GOTPLTENT</a>
+
+```
+searchKey: elf.R_390_GOTPLTENT
+tags: [constant number]
+```
+
+```Go
+const R_390_GOTPLTENT R_390 = 33
+```
+
+### <a id="R_390_GOTPLTOFF16" href="#R_390_GOTPLTOFF16">const R_390_GOTPLTOFF16</a>
+
+```
+searchKey: elf.R_390_GOTPLTOFF16
+tags: [constant number]
+```
+
+```Go
+const R_390_GOTPLTOFF16 R_390 = 34
+```
+
+### <a id="R_390_GOTPLTOFF32" href="#R_390_GOTPLTOFF32">const R_390_GOTPLTOFF32</a>
+
+```
+searchKey: elf.R_390_GOTPLTOFF32
+tags: [constant number]
+```
+
+```Go
+const R_390_GOTPLTOFF32 R_390 = 35
+```
+
+### <a id="R_390_GOTPLTOFF64" href="#R_390_GOTPLTOFF64">const R_390_GOTPLTOFF64</a>
+
+```
+searchKey: elf.R_390_GOTPLTOFF64
+tags: [constant number]
+```
+
+```Go
+const R_390_GOTPLTOFF64 R_390 = 36
+```
+
+### <a id="R_390_JMP_SLOT" href="#R_390_JMP_SLOT">const R_390_JMP_SLOT</a>
+
+```
+searchKey: elf.R_390_JMP_SLOT
+tags: [constant number]
+```
+
+```Go
+const R_390_JMP_SLOT R_390 = 11
+```
+
+### <a id="R_390_NONE" href="#R_390_NONE">const R_390_NONE</a>
+
+```
+searchKey: elf.R_390_NONE
+tags: [constant number]
+```
+
+```Go
+const R_390_NONE R_390 = 0
+```
+
+### <a id="R_390_PC16" href="#R_390_PC16">const R_390_PC16</a>
+
+```
+searchKey: elf.R_390_PC16
+tags: [constant number]
+```
+
+```Go
+const R_390_PC16 R_390 = 16
+```
+
+### <a id="R_390_PC16DBL" href="#R_390_PC16DBL">const R_390_PC16DBL</a>
+
+```
+searchKey: elf.R_390_PC16DBL
+tags: [constant number]
+```
+
+```Go
+const R_390_PC16DBL R_390 = 17
+```
+
+### <a id="R_390_PC32" href="#R_390_PC32">const R_390_PC32</a>
+
+```
+searchKey: elf.R_390_PC32
+tags: [constant number]
+```
+
+```Go
+const R_390_PC32 R_390 = 5
+```
+
+### <a id="R_390_PC32DBL" href="#R_390_PC32DBL">const R_390_PC32DBL</a>
+
+```
+searchKey: elf.R_390_PC32DBL
+tags: [constant number]
+```
+
+```Go
+const R_390_PC32DBL R_390 = 19
+```
+
+### <a id="R_390_PC64" href="#R_390_PC64">const R_390_PC64</a>
+
+```
+searchKey: elf.R_390_PC64
+tags: [constant number]
+```
+
+```Go
+const R_390_PC64 R_390 = 23
+```
+
+### <a id="R_390_PLT16DBL" href="#R_390_PLT16DBL">const R_390_PLT16DBL</a>
+
+```
+searchKey: elf.R_390_PLT16DBL
+tags: [constant number]
+```
+
+```Go
+const R_390_PLT16DBL R_390 = 18
+```
+
+### <a id="R_390_PLT32" href="#R_390_PLT32">const R_390_PLT32</a>
+
+```
+searchKey: elf.R_390_PLT32
+tags: [constant number]
+```
+
+```Go
+const R_390_PLT32 R_390 = 8
+```
+
+### <a id="R_390_PLT32DBL" href="#R_390_PLT32DBL">const R_390_PLT32DBL</a>
+
+```
+searchKey: elf.R_390_PLT32DBL
+tags: [constant number]
+```
+
+```Go
+const R_390_PLT32DBL R_390 = 20
+```
+
+### <a id="R_390_PLT64" href="#R_390_PLT64">const R_390_PLT64</a>
+
+```
+searchKey: elf.R_390_PLT64
+tags: [constant number]
+```
+
+```Go
+const R_390_PLT64 R_390 = 25
+```
+
+### <a id="R_390_RELATIVE" href="#R_390_RELATIVE">const R_390_RELATIVE</a>
+
+```
+searchKey: elf.R_390_RELATIVE
+tags: [constant number]
+```
+
+```Go
+const R_390_RELATIVE R_390 = 12
+```
+
+### <a id="R_390_TLS_DTPMOD" href="#R_390_TLS_DTPMOD">const R_390_TLS_DTPMOD</a>
+
+```
+searchKey: elf.R_390_TLS_DTPMOD
+tags: [constant number]
+```
+
+```Go
+const R_390_TLS_DTPMOD R_390 = 54
+```
+
+### <a id="R_390_TLS_DTPOFF" href="#R_390_TLS_DTPOFF">const R_390_TLS_DTPOFF</a>
+
+```
+searchKey: elf.R_390_TLS_DTPOFF
+tags: [constant number]
+```
+
+```Go
+const R_390_TLS_DTPOFF R_390 = 55
+```
+
+### <a id="R_390_TLS_GD32" href="#R_390_TLS_GD32">const R_390_TLS_GD32</a>
+
+```
+searchKey: elf.R_390_TLS_GD32
+tags: [constant number]
+```
+
+```Go
+const R_390_TLS_GD32 R_390 = 40
+```
+
+### <a id="R_390_TLS_GD64" href="#R_390_TLS_GD64">const R_390_TLS_GD64</a>
+
+```
+searchKey: elf.R_390_TLS_GD64
+tags: [constant number]
+```
+
+```Go
+const R_390_TLS_GD64 R_390 = 41
+```
+
+### <a id="R_390_TLS_GDCALL" href="#R_390_TLS_GDCALL">const R_390_TLS_GDCALL</a>
+
+```
+searchKey: elf.R_390_TLS_GDCALL
+tags: [constant number]
+```
+
+```Go
+const R_390_TLS_GDCALL R_390 = 38
+```
+
+### <a id="R_390_TLS_GOTIE12" href="#R_390_TLS_GOTIE12">const R_390_TLS_GOTIE12</a>
+
+```
+searchKey: elf.R_390_TLS_GOTIE12
+tags: [constant number]
+```
+
+```Go
+const R_390_TLS_GOTIE12 R_390 = 42
+```
+
+### <a id="R_390_TLS_GOTIE20" href="#R_390_TLS_GOTIE20">const R_390_TLS_GOTIE20</a>
+
+```
+searchKey: elf.R_390_TLS_GOTIE20
+tags: [constant number]
+```
+
+```Go
+const R_390_TLS_GOTIE20 R_390 = 60
+```
+
+### <a id="R_390_TLS_GOTIE32" href="#R_390_TLS_GOTIE32">const R_390_TLS_GOTIE32</a>
+
+```
+searchKey: elf.R_390_TLS_GOTIE32
+tags: [constant number]
+```
+
+```Go
+const R_390_TLS_GOTIE32 R_390 = 43
+```
+
+### <a id="R_390_TLS_GOTIE64" href="#R_390_TLS_GOTIE64">const R_390_TLS_GOTIE64</a>
+
+```
+searchKey: elf.R_390_TLS_GOTIE64
+tags: [constant number]
+```
+
+```Go
+const R_390_TLS_GOTIE64 R_390 = 44
+```
+
+### <a id="R_390_TLS_IE32" href="#R_390_TLS_IE32">const R_390_TLS_IE32</a>
+
+```
+searchKey: elf.R_390_TLS_IE32
+tags: [constant number]
+```
+
+```Go
+const R_390_TLS_IE32 R_390 = 47
+```
+
+### <a id="R_390_TLS_IE64" href="#R_390_TLS_IE64">const R_390_TLS_IE64</a>
+
+```
+searchKey: elf.R_390_TLS_IE64
+tags: [constant number]
+```
+
+```Go
+const R_390_TLS_IE64 R_390 = 48
+```
+
+### <a id="R_390_TLS_IEENT" href="#R_390_TLS_IEENT">const R_390_TLS_IEENT</a>
+
+```
+searchKey: elf.R_390_TLS_IEENT
+tags: [constant number]
+```
+
+```Go
+const R_390_TLS_IEENT R_390 = 49
+```
+
+### <a id="R_390_TLS_LDCALL" href="#R_390_TLS_LDCALL">const R_390_TLS_LDCALL</a>
+
+```
+searchKey: elf.R_390_TLS_LDCALL
+tags: [constant number]
+```
+
+```Go
+const R_390_TLS_LDCALL R_390 = 39
+```
+
+### <a id="R_390_TLS_LDM32" href="#R_390_TLS_LDM32">const R_390_TLS_LDM32</a>
+
+```
+searchKey: elf.R_390_TLS_LDM32
+tags: [constant number]
+```
+
+```Go
+const R_390_TLS_LDM32 R_390 = 45
+```
+
+### <a id="R_390_TLS_LDM64" href="#R_390_TLS_LDM64">const R_390_TLS_LDM64</a>
+
+```
+searchKey: elf.R_390_TLS_LDM64
+tags: [constant number]
+```
+
+```Go
+const R_390_TLS_LDM64 R_390 = 46
+```
+
+### <a id="R_390_TLS_LDO32" href="#R_390_TLS_LDO32">const R_390_TLS_LDO32</a>
+
+```
+searchKey: elf.R_390_TLS_LDO32
+tags: [constant number]
+```
+
+```Go
+const R_390_TLS_LDO32 R_390 = 52
+```
+
+### <a id="R_390_TLS_LDO64" href="#R_390_TLS_LDO64">const R_390_TLS_LDO64</a>
+
+```
+searchKey: elf.R_390_TLS_LDO64
+tags: [constant number]
+```
+
+```Go
+const R_390_TLS_LDO64 R_390 = 53
+```
+
+### <a id="R_390_TLS_LE32" href="#R_390_TLS_LE32">const R_390_TLS_LE32</a>
+
+```
+searchKey: elf.R_390_TLS_LE32
+tags: [constant number]
+```
+
+```Go
+const R_390_TLS_LE32 R_390 = 50
+```
+
+### <a id="R_390_TLS_LE64" href="#R_390_TLS_LE64">const R_390_TLS_LE64</a>
+
+```
+searchKey: elf.R_390_TLS_LE64
+tags: [constant number]
+```
+
+```Go
+const R_390_TLS_LE64 R_390 = 51
+```
+
+### <a id="R_390_TLS_LOAD" href="#R_390_TLS_LOAD">const R_390_TLS_LOAD</a>
+
+```
+searchKey: elf.R_390_TLS_LOAD
+tags: [constant number]
+```
+
+```Go
+const R_390_TLS_LOAD R_390 = 37
+```
+
+### <a id="R_390_TLS_TPOFF" href="#R_390_TLS_TPOFF">const R_390_TLS_TPOFF</a>
+
+```
+searchKey: elf.R_390_TLS_TPOFF
+tags: [constant number]
+```
+
+```Go
+const R_390_TLS_TPOFF R_390 = 56
+```
+
+### <a id="R_AARCH64_ABS16" href="#R_AARCH64_ABS16">const R_AARCH64_ABS16</a>
+
+```
+searchKey: elf.R_AARCH64_ABS16
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_ABS16 R_AARCH64 = 259
+```
+
+### <a id="R_AARCH64_ABS32" href="#R_AARCH64_ABS32">const R_AARCH64_ABS32</a>
+
+```
+searchKey: elf.R_AARCH64_ABS32
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_ABS32 R_AARCH64 = 258
+```
+
+### <a id="R_AARCH64_ABS64" href="#R_AARCH64_ABS64">const R_AARCH64_ABS64</a>
+
+```
+searchKey: elf.R_AARCH64_ABS64
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_ABS64 R_AARCH64 = 257
+```
+
+### <a id="R_AARCH64_ADD_ABS_LO12_NC" href="#R_AARCH64_ADD_ABS_LO12_NC">const R_AARCH64_ADD_ABS_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_ADD_ABS_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_ADD_ABS_LO12_NC R_AARCH64 = 277
+```
+
+### <a id="R_AARCH64_ADR_GOT_PAGE" href="#R_AARCH64_ADR_GOT_PAGE">const R_AARCH64_ADR_GOT_PAGE</a>
+
+```
+searchKey: elf.R_AARCH64_ADR_GOT_PAGE
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_ADR_GOT_PAGE R_AARCH64 = 311
+```
+
+### <a id="R_AARCH64_ADR_PREL_LO21" href="#R_AARCH64_ADR_PREL_LO21">const R_AARCH64_ADR_PREL_LO21</a>
+
+```
+searchKey: elf.R_AARCH64_ADR_PREL_LO21
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_ADR_PREL_LO21 R_AARCH64 = 274
+```
+
+### <a id="R_AARCH64_ADR_PREL_PG_HI21" href="#R_AARCH64_ADR_PREL_PG_HI21">const R_AARCH64_ADR_PREL_PG_HI21</a>
+
+```
+searchKey: elf.R_AARCH64_ADR_PREL_PG_HI21
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_ADR_PREL_PG_HI21 R_AARCH64 = 275
+```
+
+### <a id="R_AARCH64_ADR_PREL_PG_HI21_NC" href="#R_AARCH64_ADR_PREL_PG_HI21_NC">const R_AARCH64_ADR_PREL_PG_HI21_NC</a>
+
+```
+searchKey: elf.R_AARCH64_ADR_PREL_PG_HI21_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_ADR_PREL_PG_HI21_NC R_AARCH64 = 276
+```
+
+### <a id="R_AARCH64_CALL26" href="#R_AARCH64_CALL26">const R_AARCH64_CALL26</a>
+
+```
+searchKey: elf.R_AARCH64_CALL26
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_CALL26 R_AARCH64 = 283
+```
+
+### <a id="R_AARCH64_CONDBR19" href="#R_AARCH64_CONDBR19">const R_AARCH64_CONDBR19</a>
+
+```
+searchKey: elf.R_AARCH64_CONDBR19
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_CONDBR19 R_AARCH64 = 280
+```
+
+### <a id="R_AARCH64_COPY" href="#R_AARCH64_COPY">const R_AARCH64_COPY</a>
+
+```
+searchKey: elf.R_AARCH64_COPY
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_COPY R_AARCH64 = 1024
+```
+
+### <a id="R_AARCH64_GLOB_DAT" href="#R_AARCH64_GLOB_DAT">const R_AARCH64_GLOB_DAT</a>
+
+```
+searchKey: elf.R_AARCH64_GLOB_DAT
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_GLOB_DAT R_AARCH64 = 1025
+```
+
+### <a id="R_AARCH64_GOT_LD_PREL19" href="#R_AARCH64_GOT_LD_PREL19">const R_AARCH64_GOT_LD_PREL19</a>
+
+```
+searchKey: elf.R_AARCH64_GOT_LD_PREL19
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_GOT_LD_PREL19 R_AARCH64 = 309
+```
+
+### <a id="R_AARCH64_IRELATIVE" href="#R_AARCH64_IRELATIVE">const R_AARCH64_IRELATIVE</a>
+
+```
+searchKey: elf.R_AARCH64_IRELATIVE
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_IRELATIVE R_AARCH64 = 1032
+```
+
+### <a id="R_AARCH64_JUMP26" href="#R_AARCH64_JUMP26">const R_AARCH64_JUMP26</a>
+
+```
+searchKey: elf.R_AARCH64_JUMP26
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_JUMP26 R_AARCH64 = 282
+```
+
+### <a id="R_AARCH64_JUMP_SLOT" href="#R_AARCH64_JUMP_SLOT">const R_AARCH64_JUMP_SLOT</a>
+
+```
+searchKey: elf.R_AARCH64_JUMP_SLOT
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_JUMP_SLOT R_AARCH64 = 1026
+```
+
+### <a id="R_AARCH64_LD64_GOTOFF_LO15" href="#R_AARCH64_LD64_GOTOFF_LO15">const R_AARCH64_LD64_GOTOFF_LO15</a>
+
+```
+searchKey: elf.R_AARCH64_LD64_GOTOFF_LO15
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_LD64_GOTOFF_LO15 R_AARCH64 = 310
+```
+
+### <a id="R_AARCH64_LD64_GOTPAGE_LO15" href="#R_AARCH64_LD64_GOTPAGE_LO15">const R_AARCH64_LD64_GOTPAGE_LO15</a>
+
+```
+searchKey: elf.R_AARCH64_LD64_GOTPAGE_LO15
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_LD64_GOTPAGE_LO15 R_AARCH64 = 313
+```
+
+### <a id="R_AARCH64_LD64_GOT_LO12_NC" href="#R_AARCH64_LD64_GOT_LO12_NC">const R_AARCH64_LD64_GOT_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_LD64_GOT_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_LD64_GOT_LO12_NC R_AARCH64 = 312
+```
+
+### <a id="R_AARCH64_LDST128_ABS_LO12_NC" href="#R_AARCH64_LDST128_ABS_LO12_NC">const R_AARCH64_LDST128_ABS_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_LDST128_ABS_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_LDST128_ABS_LO12_NC R_AARCH64 = 299
+```
+
+### <a id="R_AARCH64_LDST16_ABS_LO12_NC" href="#R_AARCH64_LDST16_ABS_LO12_NC">const R_AARCH64_LDST16_ABS_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_LDST16_ABS_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_LDST16_ABS_LO12_NC R_AARCH64 = 284
+```
+
+### <a id="R_AARCH64_LDST32_ABS_LO12_NC" href="#R_AARCH64_LDST32_ABS_LO12_NC">const R_AARCH64_LDST32_ABS_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_LDST32_ABS_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_LDST32_ABS_LO12_NC R_AARCH64 = 285
+```
+
+### <a id="R_AARCH64_LDST64_ABS_LO12_NC" href="#R_AARCH64_LDST64_ABS_LO12_NC">const R_AARCH64_LDST64_ABS_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_LDST64_ABS_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_LDST64_ABS_LO12_NC R_AARCH64 = 286
+```
+
+### <a id="R_AARCH64_LDST8_ABS_LO12_NC" href="#R_AARCH64_LDST8_ABS_LO12_NC">const R_AARCH64_LDST8_ABS_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_LDST8_ABS_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_LDST8_ABS_LO12_NC R_AARCH64 = 278
+```
+
+### <a id="R_AARCH64_LD_PREL_LO19" href="#R_AARCH64_LD_PREL_LO19">const R_AARCH64_LD_PREL_LO19</a>
+
+```
+searchKey: elf.R_AARCH64_LD_PREL_LO19
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_LD_PREL_LO19 R_AARCH64 = 273
+```
+
+### <a id="R_AARCH64_MOVW_SABS_G0" href="#R_AARCH64_MOVW_SABS_G0">const R_AARCH64_MOVW_SABS_G0</a>
+
+```
+searchKey: elf.R_AARCH64_MOVW_SABS_G0
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_MOVW_SABS_G0 R_AARCH64 = 270
+```
+
+### <a id="R_AARCH64_MOVW_SABS_G1" href="#R_AARCH64_MOVW_SABS_G1">const R_AARCH64_MOVW_SABS_G1</a>
+
+```
+searchKey: elf.R_AARCH64_MOVW_SABS_G1
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_MOVW_SABS_G1 R_AARCH64 = 271
+```
+
+### <a id="R_AARCH64_MOVW_SABS_G2" href="#R_AARCH64_MOVW_SABS_G2">const R_AARCH64_MOVW_SABS_G2</a>
+
+```
+searchKey: elf.R_AARCH64_MOVW_SABS_G2
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_MOVW_SABS_G2 R_AARCH64 = 272
+```
+
+### <a id="R_AARCH64_MOVW_UABS_G0" href="#R_AARCH64_MOVW_UABS_G0">const R_AARCH64_MOVW_UABS_G0</a>
+
+```
+searchKey: elf.R_AARCH64_MOVW_UABS_G0
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_MOVW_UABS_G0 R_AARCH64 = 263
+```
+
+### <a id="R_AARCH64_MOVW_UABS_G0_NC" href="#R_AARCH64_MOVW_UABS_G0_NC">const R_AARCH64_MOVW_UABS_G0_NC</a>
+
+```
+searchKey: elf.R_AARCH64_MOVW_UABS_G0_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_MOVW_UABS_G0_NC R_AARCH64 = 264
+```
+
+### <a id="R_AARCH64_MOVW_UABS_G1" href="#R_AARCH64_MOVW_UABS_G1">const R_AARCH64_MOVW_UABS_G1</a>
+
+```
+searchKey: elf.R_AARCH64_MOVW_UABS_G1
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_MOVW_UABS_G1 R_AARCH64 = 265
+```
+
+### <a id="R_AARCH64_MOVW_UABS_G1_NC" href="#R_AARCH64_MOVW_UABS_G1_NC">const R_AARCH64_MOVW_UABS_G1_NC</a>
+
+```
+searchKey: elf.R_AARCH64_MOVW_UABS_G1_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_MOVW_UABS_G1_NC R_AARCH64 = 266
+```
+
+### <a id="R_AARCH64_MOVW_UABS_G2" href="#R_AARCH64_MOVW_UABS_G2">const R_AARCH64_MOVW_UABS_G2</a>
+
+```
+searchKey: elf.R_AARCH64_MOVW_UABS_G2
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_MOVW_UABS_G2 R_AARCH64 = 267
+```
+
+### <a id="R_AARCH64_MOVW_UABS_G2_NC" href="#R_AARCH64_MOVW_UABS_G2_NC">const R_AARCH64_MOVW_UABS_G2_NC</a>
+
+```
+searchKey: elf.R_AARCH64_MOVW_UABS_G2_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_MOVW_UABS_G2_NC R_AARCH64 = 268
+```
+
+### <a id="R_AARCH64_MOVW_UABS_G3" href="#R_AARCH64_MOVW_UABS_G3">const R_AARCH64_MOVW_UABS_G3</a>
+
+```
+searchKey: elf.R_AARCH64_MOVW_UABS_G3
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_MOVW_UABS_G3 R_AARCH64 = 269
+```
+
+### <a id="R_AARCH64_NONE" href="#R_AARCH64_NONE">const R_AARCH64_NONE</a>
+
+```
+searchKey: elf.R_AARCH64_NONE
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_NONE R_AARCH64 = 0
+```
+
+### <a id="R_AARCH64_NULL" href="#R_AARCH64_NULL">const R_AARCH64_NULL</a>
+
+```
+searchKey: elf.R_AARCH64_NULL
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_NULL R_AARCH64 = 256
+```
+
+### <a id="R_AARCH64_P32_ABS16" href="#R_AARCH64_P32_ABS16">const R_AARCH64_P32_ABS16</a>
+
+```
+searchKey: elf.R_AARCH64_P32_ABS16
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_ABS16 R_AARCH64 = 2
+```
+
+### <a id="R_AARCH64_P32_ABS32" href="#R_AARCH64_P32_ABS32">const R_AARCH64_P32_ABS32</a>
+
+```
+searchKey: elf.R_AARCH64_P32_ABS32
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_ABS32 R_AARCH64 = 1
+```
+
+### <a id="R_AARCH64_P32_ADD_ABS_LO12_NC" href="#R_AARCH64_P32_ADD_ABS_LO12_NC">const R_AARCH64_P32_ADD_ABS_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_P32_ADD_ABS_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_ADD_ABS_LO12_NC R_AARCH64 = 12
+```
+
+### <a id="R_AARCH64_P32_ADR_GOT_PAGE" href="#R_AARCH64_P32_ADR_GOT_PAGE">const R_AARCH64_P32_ADR_GOT_PAGE</a>
+
+```
+searchKey: elf.R_AARCH64_P32_ADR_GOT_PAGE
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_ADR_GOT_PAGE R_AARCH64 = 26
+```
+
+### <a id="R_AARCH64_P32_ADR_PREL_LO21" href="#R_AARCH64_P32_ADR_PREL_LO21">const R_AARCH64_P32_ADR_PREL_LO21</a>
+
+```
+searchKey: elf.R_AARCH64_P32_ADR_PREL_LO21
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_ADR_PREL_LO21 R_AARCH64 = 10
+```
+
+### <a id="R_AARCH64_P32_ADR_PREL_PG_HI21" href="#R_AARCH64_P32_ADR_PREL_PG_HI21">const R_AARCH64_P32_ADR_PREL_PG_HI21</a>
+
+```
+searchKey: elf.R_AARCH64_P32_ADR_PREL_PG_HI21
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_ADR_PREL_PG_HI21 R_AARCH64 = 11
+```
+
+### <a id="R_AARCH64_P32_CALL26" href="#R_AARCH64_P32_CALL26">const R_AARCH64_P32_CALL26</a>
+
+```
+searchKey: elf.R_AARCH64_P32_CALL26
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_CALL26 R_AARCH64 = 21
+```
+
+### <a id="R_AARCH64_P32_CONDBR19" href="#R_AARCH64_P32_CONDBR19">const R_AARCH64_P32_CONDBR19</a>
+
+```
+searchKey: elf.R_AARCH64_P32_CONDBR19
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_CONDBR19 R_AARCH64 = 19
+```
+
+### <a id="R_AARCH64_P32_COPY" href="#R_AARCH64_P32_COPY">const R_AARCH64_P32_COPY</a>
+
+```
+searchKey: elf.R_AARCH64_P32_COPY
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_COPY R_AARCH64 = 180
+```
+
+### <a id="R_AARCH64_P32_GLOB_DAT" href="#R_AARCH64_P32_GLOB_DAT">const R_AARCH64_P32_GLOB_DAT</a>
+
+```
+searchKey: elf.R_AARCH64_P32_GLOB_DAT
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_GLOB_DAT R_AARCH64 = 181
+```
+
+### <a id="R_AARCH64_P32_GOT_LD_PREL19" href="#R_AARCH64_P32_GOT_LD_PREL19">const R_AARCH64_P32_GOT_LD_PREL19</a>
+
+```
+searchKey: elf.R_AARCH64_P32_GOT_LD_PREL19
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_GOT_LD_PREL19 R_AARCH64 = 25
+```
+
+### <a id="R_AARCH64_P32_IRELATIVE" href="#R_AARCH64_P32_IRELATIVE">const R_AARCH64_P32_IRELATIVE</a>
+
+```
+searchKey: elf.R_AARCH64_P32_IRELATIVE
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_IRELATIVE R_AARCH64 = 188
+```
+
+### <a id="R_AARCH64_P32_JUMP26" href="#R_AARCH64_P32_JUMP26">const R_AARCH64_P32_JUMP26</a>
+
+```
+searchKey: elf.R_AARCH64_P32_JUMP26
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_JUMP26 R_AARCH64 = 20
+```
+
+### <a id="R_AARCH64_P32_JUMP_SLOT" href="#R_AARCH64_P32_JUMP_SLOT">const R_AARCH64_P32_JUMP_SLOT</a>
+
+```
+searchKey: elf.R_AARCH64_P32_JUMP_SLOT
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_JUMP_SLOT R_AARCH64 = 182
+```
+
+### <a id="R_AARCH64_P32_LD32_GOT_LO12_NC" href="#R_AARCH64_P32_LD32_GOT_LO12_NC">const R_AARCH64_P32_LD32_GOT_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_P32_LD32_GOT_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_LD32_GOT_LO12_NC R_AARCH64 = 27
+```
+
+### <a id="R_AARCH64_P32_LDST128_ABS_LO12_NC" href="#R_AARCH64_P32_LDST128_ABS_LO12_NC">const R_AARCH64_P32_LDST128_ABS_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_P32_LDST128_ABS_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_LDST128_ABS_LO12_NC R_AARCH64 = 17
+```
+
+### <a id="R_AARCH64_P32_LDST16_ABS_LO12_NC" href="#R_AARCH64_P32_LDST16_ABS_LO12_NC">const R_AARCH64_P32_LDST16_ABS_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_P32_LDST16_ABS_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_LDST16_ABS_LO12_NC R_AARCH64 = 14
+```
+
+### <a id="R_AARCH64_P32_LDST32_ABS_LO12_NC" href="#R_AARCH64_P32_LDST32_ABS_LO12_NC">const R_AARCH64_P32_LDST32_ABS_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_P32_LDST32_ABS_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_LDST32_ABS_LO12_NC R_AARCH64 = 15
+```
+
+### <a id="R_AARCH64_P32_LDST64_ABS_LO12_NC" href="#R_AARCH64_P32_LDST64_ABS_LO12_NC">const R_AARCH64_P32_LDST64_ABS_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_P32_LDST64_ABS_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_LDST64_ABS_LO12_NC R_AARCH64 = 16
+```
+
+### <a id="R_AARCH64_P32_LDST8_ABS_LO12_NC" href="#R_AARCH64_P32_LDST8_ABS_LO12_NC">const R_AARCH64_P32_LDST8_ABS_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_P32_LDST8_ABS_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_LDST8_ABS_LO12_NC R_AARCH64 = 13
+```
+
+### <a id="R_AARCH64_P32_LD_PREL_LO19" href="#R_AARCH64_P32_LD_PREL_LO19">const R_AARCH64_P32_LD_PREL_LO19</a>
+
+```
+searchKey: elf.R_AARCH64_P32_LD_PREL_LO19
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_LD_PREL_LO19 R_AARCH64 = 9
+```
+
+### <a id="R_AARCH64_P32_MOVW_SABS_G0" href="#R_AARCH64_P32_MOVW_SABS_G0">const R_AARCH64_P32_MOVW_SABS_G0</a>
+
+```
+searchKey: elf.R_AARCH64_P32_MOVW_SABS_G0
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_MOVW_SABS_G0 R_AARCH64 = 8
+```
+
+### <a id="R_AARCH64_P32_MOVW_UABS_G0" href="#R_AARCH64_P32_MOVW_UABS_G0">const R_AARCH64_P32_MOVW_UABS_G0</a>
+
+```
+searchKey: elf.R_AARCH64_P32_MOVW_UABS_G0
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_MOVW_UABS_G0 R_AARCH64 = 5
+```
+
+### <a id="R_AARCH64_P32_MOVW_UABS_G0_NC" href="#R_AARCH64_P32_MOVW_UABS_G0_NC">const R_AARCH64_P32_MOVW_UABS_G0_NC</a>
+
+```
+searchKey: elf.R_AARCH64_P32_MOVW_UABS_G0_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_MOVW_UABS_G0_NC R_AARCH64 = 6
+```
+
+### <a id="R_AARCH64_P32_MOVW_UABS_G1" href="#R_AARCH64_P32_MOVW_UABS_G1">const R_AARCH64_P32_MOVW_UABS_G1</a>
+
+```
+searchKey: elf.R_AARCH64_P32_MOVW_UABS_G1
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_MOVW_UABS_G1 R_AARCH64 = 7
+```
+
+### <a id="R_AARCH64_P32_PREL16" href="#R_AARCH64_P32_PREL16">const R_AARCH64_P32_PREL16</a>
+
+```
+searchKey: elf.R_AARCH64_P32_PREL16
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_PREL16 R_AARCH64 = 4
+```
+
+### <a id="R_AARCH64_P32_PREL32" href="#R_AARCH64_P32_PREL32">const R_AARCH64_P32_PREL32</a>
+
+```
+searchKey: elf.R_AARCH64_P32_PREL32
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_PREL32 R_AARCH64 = 3
+```
+
+### <a id="R_AARCH64_P32_RELATIVE" href="#R_AARCH64_P32_RELATIVE">const R_AARCH64_P32_RELATIVE</a>
+
+```
+searchKey: elf.R_AARCH64_P32_RELATIVE
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_RELATIVE R_AARCH64 = 183
+```
+
+### <a id="R_AARCH64_P32_TLSDESC" href="#R_AARCH64_P32_TLSDESC">const R_AARCH64_P32_TLSDESC</a>
+
+```
+searchKey: elf.R_AARCH64_P32_TLSDESC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_TLSDESC R_AARCH64 = 187
+```
+
+### <a id="R_AARCH64_P32_TLSDESC_ADD_LO12_NC" href="#R_AARCH64_P32_TLSDESC_ADD_LO12_NC">const R_AARCH64_P32_TLSDESC_ADD_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_P32_TLSDESC_ADD_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_TLSDESC_ADD_LO12_NC R_AARCH64 = 126
+```
+
+### <a id="R_AARCH64_P32_TLSDESC_ADR_PAGE21" href="#R_AARCH64_P32_TLSDESC_ADR_PAGE21">const R_AARCH64_P32_TLSDESC_ADR_PAGE21</a>
+
+```
+searchKey: elf.R_AARCH64_P32_TLSDESC_ADR_PAGE21
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_TLSDESC_ADR_PAGE21 R_AARCH64 = 124
+```
+
+### <a id="R_AARCH64_P32_TLSDESC_ADR_PREL21" href="#R_AARCH64_P32_TLSDESC_ADR_PREL21">const R_AARCH64_P32_TLSDESC_ADR_PREL21</a>
+
+```
+searchKey: elf.R_AARCH64_P32_TLSDESC_ADR_PREL21
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_TLSDESC_ADR_PREL21 R_AARCH64 = 123
+```
+
+### <a id="R_AARCH64_P32_TLSDESC_CALL" href="#R_AARCH64_P32_TLSDESC_CALL">const R_AARCH64_P32_TLSDESC_CALL</a>
+
+```
+searchKey: elf.R_AARCH64_P32_TLSDESC_CALL
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_TLSDESC_CALL R_AARCH64 = 127
+```
+
+### <a id="R_AARCH64_P32_TLSDESC_LD32_LO12_NC" href="#R_AARCH64_P32_TLSDESC_LD32_LO12_NC">const R_AARCH64_P32_TLSDESC_LD32_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_P32_TLSDESC_LD32_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_TLSDESC_LD32_LO12_NC R_AARCH64 = 125
+```
+
+### <a id="R_AARCH64_P32_TLSDESC_LD_PREL19" href="#R_AARCH64_P32_TLSDESC_LD_PREL19">const R_AARCH64_P32_TLSDESC_LD_PREL19</a>
+
+```
+searchKey: elf.R_AARCH64_P32_TLSDESC_LD_PREL19
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_TLSDESC_LD_PREL19 R_AARCH64 = 122
+```
+
+### <a id="R_AARCH64_P32_TLSGD_ADD_LO12_NC" href="#R_AARCH64_P32_TLSGD_ADD_LO12_NC">const R_AARCH64_P32_TLSGD_ADD_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_P32_TLSGD_ADD_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_TLSGD_ADD_LO12_NC R_AARCH64 = 82
+```
+
+### <a id="R_AARCH64_P32_TLSGD_ADR_PAGE21" href="#R_AARCH64_P32_TLSGD_ADR_PAGE21">const R_AARCH64_P32_TLSGD_ADR_PAGE21</a>
+
+```
+searchKey: elf.R_AARCH64_P32_TLSGD_ADR_PAGE21
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_TLSGD_ADR_PAGE21 R_AARCH64 = 81
+```
+
+### <a id="R_AARCH64_P32_TLSIE_ADR_GOTTPREL_PAGE21" href="#R_AARCH64_P32_TLSIE_ADR_GOTTPREL_PAGE21">const R_AARCH64_P32_TLSIE_ADR_GOTTPREL_PAGE21</a>
+
+```
+searchKey: elf.R_AARCH64_P32_TLSIE_ADR_GOTTPREL_PAGE21
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_TLSIE_ADR_GOTTPREL_PAGE21 R_AARCH64 = 103
+```
+
+### <a id="R_AARCH64_P32_TLSIE_LD32_GOTTPREL_LO12_NC" href="#R_AARCH64_P32_TLSIE_LD32_GOTTPREL_LO12_NC">const R_AARCH64_P32_TLSIE_LD32_GOTTPREL_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_P32_TLSIE_LD32_GOTTPREL_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_TLSIE_LD32_GOTTPREL_LO12_NC R_AARCH64 = 104
+```
+
+### <a id="R_AARCH64_P32_TLSIE_LD_GOTTPREL_PREL19" href="#R_AARCH64_P32_TLSIE_LD_GOTTPREL_PREL19">const R_AARCH64_P32_TLSIE_LD_GOTTPREL_PREL19</a>
+
+```
+searchKey: elf.R_AARCH64_P32_TLSIE_LD_GOTTPREL_PREL19
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_TLSIE_LD_GOTTPREL_PREL19 R_AARCH64 = 105
+```
+
+### <a id="R_AARCH64_P32_TLSLE_ADD_TPREL_HI12" href="#R_AARCH64_P32_TLSLE_ADD_TPREL_HI12">const R_AARCH64_P32_TLSLE_ADD_TPREL_HI12</a>
+
+```
+searchKey: elf.R_AARCH64_P32_TLSLE_ADD_TPREL_HI12
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_TLSLE_ADD_TPREL_HI12 R_AARCH64 = 109
+```
+
+### <a id="R_AARCH64_P32_TLSLE_ADD_TPREL_LO12" href="#R_AARCH64_P32_TLSLE_ADD_TPREL_LO12">const R_AARCH64_P32_TLSLE_ADD_TPREL_LO12</a>
+
+```
+searchKey: elf.R_AARCH64_P32_TLSLE_ADD_TPREL_LO12
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_TLSLE_ADD_TPREL_LO12 R_AARCH64 = 110
+```
+
+### <a id="R_AARCH64_P32_TLSLE_ADD_TPREL_LO12_NC" href="#R_AARCH64_P32_TLSLE_ADD_TPREL_LO12_NC">const R_AARCH64_P32_TLSLE_ADD_TPREL_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_P32_TLSLE_ADD_TPREL_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_TLSLE_ADD_TPREL_LO12_NC R_AARCH64 = 111
+```
+
+### <a id="R_AARCH64_P32_TLSLE_MOVW_TPREL_G0" href="#R_AARCH64_P32_TLSLE_MOVW_TPREL_G0">const R_AARCH64_P32_TLSLE_MOVW_TPREL_G0</a>
+
+```
+searchKey: elf.R_AARCH64_P32_TLSLE_MOVW_TPREL_G0
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_TLSLE_MOVW_TPREL_G0 R_AARCH64 = 107
+```
+
+### <a id="R_AARCH64_P32_TLSLE_MOVW_TPREL_G0_NC" href="#R_AARCH64_P32_TLSLE_MOVW_TPREL_G0_NC">const R_AARCH64_P32_TLSLE_MOVW_TPREL_G0_NC</a>
+
+```
+searchKey: elf.R_AARCH64_P32_TLSLE_MOVW_TPREL_G0_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_TLSLE_MOVW_TPREL_G0_NC R_AARCH64 = 108
+```
+
+### <a id="R_AARCH64_P32_TLSLE_MOVW_TPREL_G1" href="#R_AARCH64_P32_TLSLE_MOVW_TPREL_G1">const R_AARCH64_P32_TLSLE_MOVW_TPREL_G1</a>
+
+```
+searchKey: elf.R_AARCH64_P32_TLSLE_MOVW_TPREL_G1
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_TLSLE_MOVW_TPREL_G1 R_AARCH64 = 106
+```
+
+### <a id="R_AARCH64_P32_TLS_DTPMOD" href="#R_AARCH64_P32_TLS_DTPMOD">const R_AARCH64_P32_TLS_DTPMOD</a>
+
+```
+searchKey: elf.R_AARCH64_P32_TLS_DTPMOD
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_TLS_DTPMOD R_AARCH64 = 184
+```
+
+### <a id="R_AARCH64_P32_TLS_DTPREL" href="#R_AARCH64_P32_TLS_DTPREL">const R_AARCH64_P32_TLS_DTPREL</a>
+
+```
+searchKey: elf.R_AARCH64_P32_TLS_DTPREL
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_TLS_DTPREL R_AARCH64 = 185
+```
+
+### <a id="R_AARCH64_P32_TLS_TPREL" href="#R_AARCH64_P32_TLS_TPREL">const R_AARCH64_P32_TLS_TPREL</a>
+
+```
+searchKey: elf.R_AARCH64_P32_TLS_TPREL
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_TLS_TPREL R_AARCH64 = 186
+```
+
+### <a id="R_AARCH64_P32_TSTBR14" href="#R_AARCH64_P32_TSTBR14">const R_AARCH64_P32_TSTBR14</a>
+
+```
+searchKey: elf.R_AARCH64_P32_TSTBR14
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_P32_TSTBR14 R_AARCH64 = 18
+```
+
+### <a id="R_AARCH64_PREL16" href="#R_AARCH64_PREL16">const R_AARCH64_PREL16</a>
+
+```
+searchKey: elf.R_AARCH64_PREL16
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_PREL16 R_AARCH64 = 262
+```
+
+### <a id="R_AARCH64_PREL32" href="#R_AARCH64_PREL32">const R_AARCH64_PREL32</a>
+
+```
+searchKey: elf.R_AARCH64_PREL32
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_PREL32 R_AARCH64 = 261
+```
+
+### <a id="R_AARCH64_PREL64" href="#R_AARCH64_PREL64">const R_AARCH64_PREL64</a>
+
+```
+searchKey: elf.R_AARCH64_PREL64
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_PREL64 R_AARCH64 = 260
+```
+
+### <a id="R_AARCH64_RELATIVE" href="#R_AARCH64_RELATIVE">const R_AARCH64_RELATIVE</a>
+
+```
+searchKey: elf.R_AARCH64_RELATIVE
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_RELATIVE R_AARCH64 = 1027
+```
+
+### <a id="R_AARCH64_TLSDESC" href="#R_AARCH64_TLSDESC">const R_AARCH64_TLSDESC</a>
+
+```
+searchKey: elf.R_AARCH64_TLSDESC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSDESC R_AARCH64 = 1031
+```
+
+### <a id="R_AARCH64_TLSDESC_ADD" href="#R_AARCH64_TLSDESC_ADD">const R_AARCH64_TLSDESC_ADD</a>
+
+```
+searchKey: elf.R_AARCH64_TLSDESC_ADD
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSDESC_ADD R_AARCH64 = 568
+```
+
+### <a id="R_AARCH64_TLSDESC_ADD_LO12_NC" href="#R_AARCH64_TLSDESC_ADD_LO12_NC">const R_AARCH64_TLSDESC_ADD_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_TLSDESC_ADD_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSDESC_ADD_LO12_NC R_AARCH64 = 564
+```
+
+### <a id="R_AARCH64_TLSDESC_ADR_PAGE21" href="#R_AARCH64_TLSDESC_ADR_PAGE21">const R_AARCH64_TLSDESC_ADR_PAGE21</a>
+
+```
+searchKey: elf.R_AARCH64_TLSDESC_ADR_PAGE21
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSDESC_ADR_PAGE21 R_AARCH64 = 562
+```
+
+### <a id="R_AARCH64_TLSDESC_ADR_PREL21" href="#R_AARCH64_TLSDESC_ADR_PREL21">const R_AARCH64_TLSDESC_ADR_PREL21</a>
+
+```
+searchKey: elf.R_AARCH64_TLSDESC_ADR_PREL21
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSDESC_ADR_PREL21 R_AARCH64 = 561
+```
+
+### <a id="R_AARCH64_TLSDESC_CALL" href="#R_AARCH64_TLSDESC_CALL">const R_AARCH64_TLSDESC_CALL</a>
+
+```
+searchKey: elf.R_AARCH64_TLSDESC_CALL
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSDESC_CALL R_AARCH64 = 569
+```
+
+### <a id="R_AARCH64_TLSDESC_LD64_LO12_NC" href="#R_AARCH64_TLSDESC_LD64_LO12_NC">const R_AARCH64_TLSDESC_LD64_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_TLSDESC_LD64_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSDESC_LD64_LO12_NC R_AARCH64 = 563
+```
+
+### <a id="R_AARCH64_TLSDESC_LDR" href="#R_AARCH64_TLSDESC_LDR">const R_AARCH64_TLSDESC_LDR</a>
+
+```
+searchKey: elf.R_AARCH64_TLSDESC_LDR
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSDESC_LDR R_AARCH64 = 567
+```
+
+### <a id="R_AARCH64_TLSDESC_LD_PREL19" href="#R_AARCH64_TLSDESC_LD_PREL19">const R_AARCH64_TLSDESC_LD_PREL19</a>
+
+```
+searchKey: elf.R_AARCH64_TLSDESC_LD_PREL19
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSDESC_LD_PREL19 R_AARCH64 = 560
+```
+
+### <a id="R_AARCH64_TLSDESC_OFF_G0_NC" href="#R_AARCH64_TLSDESC_OFF_G0_NC">const R_AARCH64_TLSDESC_OFF_G0_NC</a>
+
+```
+searchKey: elf.R_AARCH64_TLSDESC_OFF_G0_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSDESC_OFF_G0_NC R_AARCH64 = 566
+```
+
+### <a id="R_AARCH64_TLSDESC_OFF_G1" href="#R_AARCH64_TLSDESC_OFF_G1">const R_AARCH64_TLSDESC_OFF_G1</a>
+
+```
+searchKey: elf.R_AARCH64_TLSDESC_OFF_G1
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSDESC_OFF_G1 R_AARCH64 = 565
+```
+
+### <a id="R_AARCH64_TLSGD_ADD_LO12_NC" href="#R_AARCH64_TLSGD_ADD_LO12_NC">const R_AARCH64_TLSGD_ADD_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_TLSGD_ADD_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSGD_ADD_LO12_NC R_AARCH64 = 514
+```
+
+### <a id="R_AARCH64_TLSGD_ADR_PAGE21" href="#R_AARCH64_TLSGD_ADR_PAGE21">const R_AARCH64_TLSGD_ADR_PAGE21</a>
+
+```
+searchKey: elf.R_AARCH64_TLSGD_ADR_PAGE21
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSGD_ADR_PAGE21 R_AARCH64 = 513
+```
+
+### <a id="R_AARCH64_TLSGD_ADR_PREL21" href="#R_AARCH64_TLSGD_ADR_PREL21">const R_AARCH64_TLSGD_ADR_PREL21</a>
+
+```
+searchKey: elf.R_AARCH64_TLSGD_ADR_PREL21
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSGD_ADR_PREL21 R_AARCH64 = 512
+```
+
+### <a id="R_AARCH64_TLSGD_MOVW_G0_NC" href="#R_AARCH64_TLSGD_MOVW_G0_NC">const R_AARCH64_TLSGD_MOVW_G0_NC</a>
+
+```
+searchKey: elf.R_AARCH64_TLSGD_MOVW_G0_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSGD_MOVW_G0_NC R_AARCH64 = 516
+```
+
+### <a id="R_AARCH64_TLSGD_MOVW_G1" href="#R_AARCH64_TLSGD_MOVW_G1">const R_AARCH64_TLSGD_MOVW_G1</a>
+
+```
+searchKey: elf.R_AARCH64_TLSGD_MOVW_G1
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSGD_MOVW_G1 R_AARCH64 = 515
+```
+
+### <a id="R_AARCH64_TLSIE_ADR_GOTTPREL_PAGE21" href="#R_AARCH64_TLSIE_ADR_GOTTPREL_PAGE21">const R_AARCH64_TLSIE_ADR_GOTTPREL_PAGE21</a>
+
+```
+searchKey: elf.R_AARCH64_TLSIE_ADR_GOTTPREL_PAGE21
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSIE_ADR_GOTTPREL_PAGE21 R_AARCH64 = 541
+```
+
+### <a id="R_AARCH64_TLSIE_LD64_GOTTPREL_LO12_NC" href="#R_AARCH64_TLSIE_LD64_GOTTPREL_LO12_NC">const R_AARCH64_TLSIE_LD64_GOTTPREL_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_TLSIE_LD64_GOTTPREL_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSIE_LD64_GOTTPREL_LO12_NC R_AARCH64 = 542
+```
+
+### <a id="R_AARCH64_TLSIE_LD_GOTTPREL_PREL19" href="#R_AARCH64_TLSIE_LD_GOTTPREL_PREL19">const R_AARCH64_TLSIE_LD_GOTTPREL_PREL19</a>
+
+```
+searchKey: elf.R_AARCH64_TLSIE_LD_GOTTPREL_PREL19
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSIE_LD_GOTTPREL_PREL19 R_AARCH64 = 543
+```
+
+### <a id="R_AARCH64_TLSIE_MOVW_GOTTPREL_G0_NC" href="#R_AARCH64_TLSIE_MOVW_GOTTPREL_G0_NC">const R_AARCH64_TLSIE_MOVW_GOTTPREL_G0_NC</a>
+
+```
+searchKey: elf.R_AARCH64_TLSIE_MOVW_GOTTPREL_G0_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSIE_MOVW_GOTTPREL_G0_NC R_AARCH64 = 540
+```
+
+### <a id="R_AARCH64_TLSIE_MOVW_GOTTPREL_G1" href="#R_AARCH64_TLSIE_MOVW_GOTTPREL_G1">const R_AARCH64_TLSIE_MOVW_GOTTPREL_G1</a>
+
+```
+searchKey: elf.R_AARCH64_TLSIE_MOVW_GOTTPREL_G1
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSIE_MOVW_GOTTPREL_G1 R_AARCH64 = 539
+```
+
+### <a id="R_AARCH64_TLSLD_ADR_PAGE21" href="#R_AARCH64_TLSLD_ADR_PAGE21">const R_AARCH64_TLSLD_ADR_PAGE21</a>
+
+```
+searchKey: elf.R_AARCH64_TLSLD_ADR_PAGE21
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSLD_ADR_PAGE21 R_AARCH64 = 518
+```
+
+### <a id="R_AARCH64_TLSLD_ADR_PREL21" href="#R_AARCH64_TLSLD_ADR_PREL21">const R_AARCH64_TLSLD_ADR_PREL21</a>
+
+```
+searchKey: elf.R_AARCH64_TLSLD_ADR_PREL21
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSLD_ADR_PREL21 R_AARCH64 = 517
+```
+
+### <a id="R_AARCH64_TLSLD_LDST128_DTPREL_LO12" href="#R_AARCH64_TLSLD_LDST128_DTPREL_LO12">const R_AARCH64_TLSLD_LDST128_DTPREL_LO12</a>
+
+```
+searchKey: elf.R_AARCH64_TLSLD_LDST128_DTPREL_LO12
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSLD_LDST128_DTPREL_LO12 R_AARCH64 = 572
+```
+
+### <a id="R_AARCH64_TLSLD_LDST128_DTPREL_LO12_NC" href="#R_AARCH64_TLSLD_LDST128_DTPREL_LO12_NC">const R_AARCH64_TLSLD_LDST128_DTPREL_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_TLSLD_LDST128_DTPREL_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSLD_LDST128_DTPREL_LO12_NC R_AARCH64 = 573
+```
+
+### <a id="R_AARCH64_TLSLE_ADD_TPREL_HI12" href="#R_AARCH64_TLSLE_ADD_TPREL_HI12">const R_AARCH64_TLSLE_ADD_TPREL_HI12</a>
+
+```
+searchKey: elf.R_AARCH64_TLSLE_ADD_TPREL_HI12
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSLE_ADD_TPREL_HI12 R_AARCH64 = 549
+```
+
+### <a id="R_AARCH64_TLSLE_ADD_TPREL_LO12" href="#R_AARCH64_TLSLE_ADD_TPREL_LO12">const R_AARCH64_TLSLE_ADD_TPREL_LO12</a>
+
+```
+searchKey: elf.R_AARCH64_TLSLE_ADD_TPREL_LO12
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSLE_ADD_TPREL_LO12 R_AARCH64 = 550
+```
+
+### <a id="R_AARCH64_TLSLE_ADD_TPREL_LO12_NC" href="#R_AARCH64_TLSLE_ADD_TPREL_LO12_NC">const R_AARCH64_TLSLE_ADD_TPREL_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_TLSLE_ADD_TPREL_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSLE_ADD_TPREL_LO12_NC R_AARCH64 = 551
+```
+
+### <a id="R_AARCH64_TLSLE_LDST128_TPREL_LO12" href="#R_AARCH64_TLSLE_LDST128_TPREL_LO12">const R_AARCH64_TLSLE_LDST128_TPREL_LO12</a>
+
+```
+searchKey: elf.R_AARCH64_TLSLE_LDST128_TPREL_LO12
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSLE_LDST128_TPREL_LO12 R_AARCH64 = 570
+```
+
+### <a id="R_AARCH64_TLSLE_LDST128_TPREL_LO12_NC" href="#R_AARCH64_TLSLE_LDST128_TPREL_LO12_NC">const R_AARCH64_TLSLE_LDST128_TPREL_LO12_NC</a>
+
+```
+searchKey: elf.R_AARCH64_TLSLE_LDST128_TPREL_LO12_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSLE_LDST128_TPREL_LO12_NC R_AARCH64 = 571
+```
+
+### <a id="R_AARCH64_TLSLE_MOVW_TPREL_G0" href="#R_AARCH64_TLSLE_MOVW_TPREL_G0">const R_AARCH64_TLSLE_MOVW_TPREL_G0</a>
+
+```
+searchKey: elf.R_AARCH64_TLSLE_MOVW_TPREL_G0
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSLE_MOVW_TPREL_G0 R_AARCH64 = 547
+```
+
+### <a id="R_AARCH64_TLSLE_MOVW_TPREL_G0_NC" href="#R_AARCH64_TLSLE_MOVW_TPREL_G0_NC">const R_AARCH64_TLSLE_MOVW_TPREL_G0_NC</a>
+
+```
+searchKey: elf.R_AARCH64_TLSLE_MOVW_TPREL_G0_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSLE_MOVW_TPREL_G0_NC R_AARCH64 = 548
+```
+
+### <a id="R_AARCH64_TLSLE_MOVW_TPREL_G1" href="#R_AARCH64_TLSLE_MOVW_TPREL_G1">const R_AARCH64_TLSLE_MOVW_TPREL_G1</a>
+
+```
+searchKey: elf.R_AARCH64_TLSLE_MOVW_TPREL_G1
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSLE_MOVW_TPREL_G1 R_AARCH64 = 545
+```
+
+### <a id="R_AARCH64_TLSLE_MOVW_TPREL_G1_NC" href="#R_AARCH64_TLSLE_MOVW_TPREL_G1_NC">const R_AARCH64_TLSLE_MOVW_TPREL_G1_NC</a>
+
+```
+searchKey: elf.R_AARCH64_TLSLE_MOVW_TPREL_G1_NC
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSLE_MOVW_TPREL_G1_NC R_AARCH64 = 546
+```
+
+### <a id="R_AARCH64_TLSLE_MOVW_TPREL_G2" href="#R_AARCH64_TLSLE_MOVW_TPREL_G2">const R_AARCH64_TLSLE_MOVW_TPREL_G2</a>
+
+```
+searchKey: elf.R_AARCH64_TLSLE_MOVW_TPREL_G2
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLSLE_MOVW_TPREL_G2 R_AARCH64 = 544
+```
+
+### <a id="R_AARCH64_TLS_DTPMOD64" href="#R_AARCH64_TLS_DTPMOD64">const R_AARCH64_TLS_DTPMOD64</a>
+
+```
+searchKey: elf.R_AARCH64_TLS_DTPMOD64
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLS_DTPMOD64 R_AARCH64 = 1028
+```
+
+### <a id="R_AARCH64_TLS_DTPREL64" href="#R_AARCH64_TLS_DTPREL64">const R_AARCH64_TLS_DTPREL64</a>
+
+```
+searchKey: elf.R_AARCH64_TLS_DTPREL64
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLS_DTPREL64 R_AARCH64 = 1029
+```
+
+### <a id="R_AARCH64_TLS_TPREL64" href="#R_AARCH64_TLS_TPREL64">const R_AARCH64_TLS_TPREL64</a>
+
+```
+searchKey: elf.R_AARCH64_TLS_TPREL64
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TLS_TPREL64 R_AARCH64 = 1030
+```
+
+### <a id="R_AARCH64_TSTBR14" href="#R_AARCH64_TSTBR14">const R_AARCH64_TSTBR14</a>
+
+```
+searchKey: elf.R_AARCH64_TSTBR14
+tags: [constant number]
+```
+
+```Go
+const R_AARCH64_TSTBR14 R_AARCH64 = 279
+```
+
+### <a id="R_ALPHA_BRADDR" href="#R_ALPHA_BRADDR">const R_ALPHA_BRADDR</a>
+
+```
+searchKey: elf.R_ALPHA_BRADDR
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_BRADDR R_ALPHA = 7 /* PC+4 relative 23 bit shifted */
+
+```
+
+### <a id="R_ALPHA_COPY" href="#R_ALPHA_COPY">const R_ALPHA_COPY</a>
+
+```
+searchKey: elf.R_ALPHA_COPY
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_COPY R_ALPHA = 24 /* Copy symbol at runtime */
+
+```
+
+### <a id="R_ALPHA_GLOB_DAT" href="#R_ALPHA_GLOB_DAT">const R_ALPHA_GLOB_DAT</a>
+
+```
+searchKey: elf.R_ALPHA_GLOB_DAT
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_GLOB_DAT R_ALPHA = 25 /* Create GOT entry */
+
+```
+
+### <a id="R_ALPHA_GPDISP" href="#R_ALPHA_GPDISP">const R_ALPHA_GPDISP</a>
+
+```
+searchKey: elf.R_ALPHA_GPDISP
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_GPDISP R_ALPHA = 6 /* Add displacement to GP */
+
+```
+
+### <a id="R_ALPHA_GPREL32" href="#R_ALPHA_GPREL32">const R_ALPHA_GPREL32</a>
+
+```
+searchKey: elf.R_ALPHA_GPREL32
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_GPREL32 R_ALPHA = 3 /* GP relative 32 bit */
+
+```
+
+### <a id="R_ALPHA_GPRELHIGH" href="#R_ALPHA_GPRELHIGH">const R_ALPHA_GPRELHIGH</a>
+
+```
+searchKey: elf.R_ALPHA_GPRELHIGH
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_GPRELHIGH R_ALPHA = 17
+```
+
+### <a id="R_ALPHA_GPRELLOW" href="#R_ALPHA_GPRELLOW">const R_ALPHA_GPRELLOW</a>
+
+```
+searchKey: elf.R_ALPHA_GPRELLOW
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_GPRELLOW R_ALPHA = 18
+```
+
+### <a id="R_ALPHA_GPVALUE" href="#R_ALPHA_GPVALUE">const R_ALPHA_GPVALUE</a>
+
+```
+searchKey: elf.R_ALPHA_GPVALUE
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_GPVALUE R_ALPHA = 16
+```
+
+### <a id="R_ALPHA_HINT" href="#R_ALPHA_HINT">const R_ALPHA_HINT</a>
+
+```
+searchKey: elf.R_ALPHA_HINT
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_HINT R_ALPHA = 8 /* PC+4 relative 16 bit shifted */
+
+```
+
+### <a id="R_ALPHA_IMMED_BR_HI32" href="#R_ALPHA_IMMED_BR_HI32">const R_ALPHA_IMMED_BR_HI32</a>
+
+```
+searchKey: elf.R_ALPHA_IMMED_BR_HI32
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_IMMED_BR_HI32 R_ALPHA = 22
+```
+
+### <a id="R_ALPHA_IMMED_GP_16" href="#R_ALPHA_IMMED_GP_16">const R_ALPHA_IMMED_GP_16</a>
+
+```
+searchKey: elf.R_ALPHA_IMMED_GP_16
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_IMMED_GP_16 R_ALPHA = 19
+```
+
+### <a id="R_ALPHA_IMMED_GP_HI32" href="#R_ALPHA_IMMED_GP_HI32">const R_ALPHA_IMMED_GP_HI32</a>
+
+```
+searchKey: elf.R_ALPHA_IMMED_GP_HI32
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_IMMED_GP_HI32 R_ALPHA = 20
+```
+
+### <a id="R_ALPHA_IMMED_LO32" href="#R_ALPHA_IMMED_LO32">const R_ALPHA_IMMED_LO32</a>
+
+```
+searchKey: elf.R_ALPHA_IMMED_LO32
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_IMMED_LO32 R_ALPHA = 23
+```
+
+### <a id="R_ALPHA_IMMED_SCN_HI32" href="#R_ALPHA_IMMED_SCN_HI32">const R_ALPHA_IMMED_SCN_HI32</a>
+
+```
+searchKey: elf.R_ALPHA_IMMED_SCN_HI32
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_IMMED_SCN_HI32 R_ALPHA = 21
+```
+
+### <a id="R_ALPHA_JMP_SLOT" href="#R_ALPHA_JMP_SLOT">const R_ALPHA_JMP_SLOT</a>
+
+```
+searchKey: elf.R_ALPHA_JMP_SLOT
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_JMP_SLOT R_ALPHA = 26 /* Create PLT entry */
+
+```
+
+### <a id="R_ALPHA_LITERAL" href="#R_ALPHA_LITERAL">const R_ALPHA_LITERAL</a>
+
+```
+searchKey: elf.R_ALPHA_LITERAL
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_LITERAL R_ALPHA = 4 /* GP relative 16 bit w/optimization */
+
+```
+
+### <a id="R_ALPHA_LITUSE" href="#R_ALPHA_LITUSE">const R_ALPHA_LITUSE</a>
+
+```
+searchKey: elf.R_ALPHA_LITUSE
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_LITUSE R_ALPHA = 5 /* Optimization hint for LITERAL */
+
+```
+
+### <a id="R_ALPHA_NONE" href="#R_ALPHA_NONE">const R_ALPHA_NONE</a>
+
+```
+searchKey: elf.R_ALPHA_NONE
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_NONE R_ALPHA = 0 /* No reloc */
+
+```
+
+### <a id="R_ALPHA_OP_PRSHIFT" href="#R_ALPHA_OP_PRSHIFT">const R_ALPHA_OP_PRSHIFT</a>
+
+```
+searchKey: elf.R_ALPHA_OP_PRSHIFT
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_OP_PRSHIFT R_ALPHA = 15 /* OP stack right shift */
+
+```
+
+### <a id="R_ALPHA_OP_PSUB" href="#R_ALPHA_OP_PSUB">const R_ALPHA_OP_PSUB</a>
+
+```
+searchKey: elf.R_ALPHA_OP_PSUB
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_OP_PSUB R_ALPHA = 14 /* OP stack subtract */
+
+```
+
+### <a id="R_ALPHA_OP_PUSH" href="#R_ALPHA_OP_PUSH">const R_ALPHA_OP_PUSH</a>
+
+```
+searchKey: elf.R_ALPHA_OP_PUSH
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_OP_PUSH R_ALPHA = 12 /* OP stack push */
+
+```
+
+### <a id="R_ALPHA_OP_STORE" href="#R_ALPHA_OP_STORE">const R_ALPHA_OP_STORE</a>
+
+```
+searchKey: elf.R_ALPHA_OP_STORE
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_OP_STORE R_ALPHA = 13 /* OP stack pop and store */
+
+```
+
+### <a id="R_ALPHA_REFLONG" href="#R_ALPHA_REFLONG">const R_ALPHA_REFLONG</a>
+
+```
+searchKey: elf.R_ALPHA_REFLONG
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_REFLONG R_ALPHA = 1 /* Direct 32 bit */
+
+```
+
+### <a id="R_ALPHA_REFQUAD" href="#R_ALPHA_REFQUAD">const R_ALPHA_REFQUAD</a>
+
+```
+searchKey: elf.R_ALPHA_REFQUAD
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_REFQUAD R_ALPHA = 2 /* Direct 64 bit */
+
+```
+
+### <a id="R_ALPHA_RELATIVE" href="#R_ALPHA_RELATIVE">const R_ALPHA_RELATIVE</a>
+
+```
+searchKey: elf.R_ALPHA_RELATIVE
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_RELATIVE R_ALPHA = 27 /* Adjust by program base */
+
+```
+
+### <a id="R_ALPHA_SREL16" href="#R_ALPHA_SREL16">const R_ALPHA_SREL16</a>
+
+```
+searchKey: elf.R_ALPHA_SREL16
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_SREL16 R_ALPHA = 9 /* PC relative 16 bit */
+
+```
+
+### <a id="R_ALPHA_SREL32" href="#R_ALPHA_SREL32">const R_ALPHA_SREL32</a>
+
+```
+searchKey: elf.R_ALPHA_SREL32
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_SREL32 R_ALPHA = 10 /* PC relative 32 bit */
+
+```
+
+### <a id="R_ALPHA_SREL64" href="#R_ALPHA_SREL64">const R_ALPHA_SREL64</a>
+
+```
+searchKey: elf.R_ALPHA_SREL64
+tags: [constant number]
+```
+
+```Go
+const R_ALPHA_SREL64 R_ALPHA = 11 /* PC relative 64 bit */
+
+```
+
+### <a id="R_ARM_ABS12" href="#R_ARM_ABS12">const R_ARM_ABS12</a>
+
+```
+searchKey: elf.R_ARM_ABS12
+tags: [constant number]
+```
+
+```Go
+const R_ARM_ABS12 R_ARM = 6
+```
+
+### <a id="R_ARM_ABS16" href="#R_ARM_ABS16">const R_ARM_ABS16</a>
+
+```
+searchKey: elf.R_ARM_ABS16
+tags: [constant number]
+```
+
+```Go
+const R_ARM_ABS16 R_ARM = 5
+```
+
+### <a id="R_ARM_ABS32" href="#R_ARM_ABS32">const R_ARM_ABS32</a>
+
+```
+searchKey: elf.R_ARM_ABS32
+tags: [constant number]
+```
+
+```Go
+const R_ARM_ABS32 R_ARM = 2
+```
+
+### <a id="R_ARM_ABS32_NOI" href="#R_ARM_ABS32_NOI">const R_ARM_ABS32_NOI</a>
+
+```
+searchKey: elf.R_ARM_ABS32_NOI
+tags: [constant number]
+```
+
+```Go
+const R_ARM_ABS32_NOI R_ARM = 55
+```
+
+### <a id="R_ARM_ABS8" href="#R_ARM_ABS8">const R_ARM_ABS8</a>
+
+```
+searchKey: elf.R_ARM_ABS8
+tags: [constant number]
+```
+
+```Go
+const R_ARM_ABS8 R_ARM = 8
+```
+
+### <a id="R_ARM_ALU_PCREL_15_8" href="#R_ARM_ALU_PCREL_15_8">const R_ARM_ALU_PCREL_15_8</a>
+
+```
+searchKey: elf.R_ARM_ALU_PCREL_15_8
+tags: [constant number]
+```
+
+```Go
+const R_ARM_ALU_PCREL_15_8 R_ARM = 33
+```
+
+### <a id="R_ARM_ALU_PCREL_23_15" href="#R_ARM_ALU_PCREL_23_15">const R_ARM_ALU_PCREL_23_15</a>
+
+```
+searchKey: elf.R_ARM_ALU_PCREL_23_15
+tags: [constant number]
+```
+
+```Go
+const R_ARM_ALU_PCREL_23_15 R_ARM = 34
+```
+
+### <a id="R_ARM_ALU_PCREL_7_0" href="#R_ARM_ALU_PCREL_7_0">const R_ARM_ALU_PCREL_7_0</a>
+
+```
+searchKey: elf.R_ARM_ALU_PCREL_7_0
+tags: [constant number]
+```
+
+```Go
+const R_ARM_ALU_PCREL_7_0 R_ARM = 32
+```
+
+### <a id="R_ARM_ALU_PC_G0" href="#R_ARM_ALU_PC_G0">const R_ARM_ALU_PC_G0</a>
+
+```
+searchKey: elf.R_ARM_ALU_PC_G0
+tags: [constant number]
+```
+
+```Go
+const R_ARM_ALU_PC_G0 R_ARM = 58
+```
+
+### <a id="R_ARM_ALU_PC_G0_NC" href="#R_ARM_ALU_PC_G0_NC">const R_ARM_ALU_PC_G0_NC</a>
+
+```
+searchKey: elf.R_ARM_ALU_PC_G0_NC
+tags: [constant number]
+```
+
+```Go
+const R_ARM_ALU_PC_G0_NC R_ARM = 57
+```
+
+### <a id="R_ARM_ALU_PC_G1" href="#R_ARM_ALU_PC_G1">const R_ARM_ALU_PC_G1</a>
+
+```
+searchKey: elf.R_ARM_ALU_PC_G1
+tags: [constant number]
+```
+
+```Go
+const R_ARM_ALU_PC_G1 R_ARM = 60
+```
+
+### <a id="R_ARM_ALU_PC_G1_NC" href="#R_ARM_ALU_PC_G1_NC">const R_ARM_ALU_PC_G1_NC</a>
+
+```
+searchKey: elf.R_ARM_ALU_PC_G1_NC
+tags: [constant number]
+```
+
+```Go
+const R_ARM_ALU_PC_G1_NC R_ARM = 59
+```
+
+### <a id="R_ARM_ALU_PC_G2" href="#R_ARM_ALU_PC_G2">const R_ARM_ALU_PC_G2</a>
+
+```
+searchKey: elf.R_ARM_ALU_PC_G2
+tags: [constant number]
+```
+
+```Go
+const R_ARM_ALU_PC_G2 R_ARM = 61
+```
+
+### <a id="R_ARM_ALU_SBREL_19_12_NC" href="#R_ARM_ALU_SBREL_19_12_NC">const R_ARM_ALU_SBREL_19_12_NC</a>
+
+```
+searchKey: elf.R_ARM_ALU_SBREL_19_12_NC
+tags: [constant number]
+```
+
+```Go
+const R_ARM_ALU_SBREL_19_12_NC R_ARM = 36
+```
+
+### <a id="R_ARM_ALU_SBREL_27_20_CK" href="#R_ARM_ALU_SBREL_27_20_CK">const R_ARM_ALU_SBREL_27_20_CK</a>
+
+```
+searchKey: elf.R_ARM_ALU_SBREL_27_20_CK
+tags: [constant number]
+```
+
+```Go
+const R_ARM_ALU_SBREL_27_20_CK R_ARM = 37
+```
+
+### <a id="R_ARM_ALU_SB_G0" href="#R_ARM_ALU_SB_G0">const R_ARM_ALU_SB_G0</a>
+
+```
+searchKey: elf.R_ARM_ALU_SB_G0
+tags: [constant number]
+```
+
+```Go
+const R_ARM_ALU_SB_G0 R_ARM = 71
+```
+
+### <a id="R_ARM_ALU_SB_G0_NC" href="#R_ARM_ALU_SB_G0_NC">const R_ARM_ALU_SB_G0_NC</a>
+
+```
+searchKey: elf.R_ARM_ALU_SB_G0_NC
+tags: [constant number]
+```
+
+```Go
+const R_ARM_ALU_SB_G0_NC R_ARM = 70
+```
+
+### <a id="R_ARM_ALU_SB_G1" href="#R_ARM_ALU_SB_G1">const R_ARM_ALU_SB_G1</a>
+
+```
+searchKey: elf.R_ARM_ALU_SB_G1
+tags: [constant number]
+```
+
+```Go
+const R_ARM_ALU_SB_G1 R_ARM = 73
+```
+
+### <a id="R_ARM_ALU_SB_G1_NC" href="#R_ARM_ALU_SB_G1_NC">const R_ARM_ALU_SB_G1_NC</a>
+
+```
+searchKey: elf.R_ARM_ALU_SB_G1_NC
+tags: [constant number]
+```
+
+```Go
+const R_ARM_ALU_SB_G1_NC R_ARM = 72
+```
+
+### <a id="R_ARM_ALU_SB_G2" href="#R_ARM_ALU_SB_G2">const R_ARM_ALU_SB_G2</a>
+
+```
+searchKey: elf.R_ARM_ALU_SB_G2
+tags: [constant number]
+```
+
+```Go
+const R_ARM_ALU_SB_G2 R_ARM = 74
+```
+
+### <a id="R_ARM_AMP_VCALL9" href="#R_ARM_AMP_VCALL9">const R_ARM_AMP_VCALL9</a>
+
+```
+searchKey: elf.R_ARM_AMP_VCALL9
+tags: [constant number]
+```
+
+```Go
+const R_ARM_AMP_VCALL9 R_ARM = 12
+```
+
+### <a id="R_ARM_BASE_ABS" href="#R_ARM_BASE_ABS">const R_ARM_BASE_ABS</a>
+
+```
+searchKey: elf.R_ARM_BASE_ABS
+tags: [constant number]
+```
+
+```Go
+const R_ARM_BASE_ABS R_ARM = 31
+```
+
+### <a id="R_ARM_CALL" href="#R_ARM_CALL">const R_ARM_CALL</a>
+
+```
+searchKey: elf.R_ARM_CALL
+tags: [constant number]
+```
+
+```Go
+const R_ARM_CALL R_ARM = 28
+```
+
+### <a id="R_ARM_COPY" href="#R_ARM_COPY">const R_ARM_COPY</a>
+
+```
+searchKey: elf.R_ARM_COPY
+tags: [constant number]
+```
+
+```Go
+const R_ARM_COPY R_ARM = 20 /* Copy data from shared object. */
+
+```
+
+### <a id="R_ARM_GLOB_DAT" href="#R_ARM_GLOB_DAT">const R_ARM_GLOB_DAT</a>
+
+```
+searchKey: elf.R_ARM_GLOB_DAT
+tags: [constant number]
+```
+
+```Go
+const R_ARM_GLOB_DAT R_ARM = 21 /* Set GOT entry to data address. */
+
+```
+
+### <a id="R_ARM_GNU_VTENTRY" href="#R_ARM_GNU_VTENTRY">const R_ARM_GNU_VTENTRY</a>
+
+```
+searchKey: elf.R_ARM_GNU_VTENTRY
+tags: [constant number]
+```
+
+```Go
+const R_ARM_GNU_VTENTRY R_ARM = 100
+```
+
+### <a id="R_ARM_GNU_VTINHERIT" href="#R_ARM_GNU_VTINHERIT">const R_ARM_GNU_VTINHERIT</a>
+
+```
+searchKey: elf.R_ARM_GNU_VTINHERIT
+tags: [constant number]
+```
+
+```Go
+const R_ARM_GNU_VTINHERIT R_ARM = 101
+```
+
+### <a id="R_ARM_GOT32" href="#R_ARM_GOT32">const R_ARM_GOT32</a>
+
+```
+searchKey: elf.R_ARM_GOT32
+tags: [constant number]
+```
+
+```Go
+const R_ARM_GOT32 R_ARM = 26 /* Add PC-relative GOT offset. */
+
+```
+
+### <a id="R_ARM_GOTOFF" href="#R_ARM_GOTOFF">const R_ARM_GOTOFF</a>
+
+```
+searchKey: elf.R_ARM_GOTOFF
+tags: [constant number]
+```
+
+```Go
+const R_ARM_GOTOFF R_ARM = 24 /* Add GOT-relative symbol address. */
+
+```
+
+### <a id="R_ARM_GOTOFF12" href="#R_ARM_GOTOFF12">const R_ARM_GOTOFF12</a>
+
+```
+searchKey: elf.R_ARM_GOTOFF12
+tags: [constant number]
+```
+
+```Go
+const R_ARM_GOTOFF12 R_ARM = 98
+```
+
+### <a id="R_ARM_GOTPC" href="#R_ARM_GOTPC">const R_ARM_GOTPC</a>
+
+```
+searchKey: elf.R_ARM_GOTPC
+tags: [constant number]
+```
+
+```Go
+const R_ARM_GOTPC R_ARM = 25 /* Add PC-relative GOT table address. */
+
+```
+
+### <a id="R_ARM_GOTRELAX" href="#R_ARM_GOTRELAX">const R_ARM_GOTRELAX</a>
+
+```
+searchKey: elf.R_ARM_GOTRELAX
+tags: [constant number]
+```
+
+```Go
+const R_ARM_GOTRELAX R_ARM = 99
+```
+
+### <a id="R_ARM_GOT_ABS" href="#R_ARM_GOT_ABS">const R_ARM_GOT_ABS</a>
+
+```
+searchKey: elf.R_ARM_GOT_ABS
+tags: [constant number]
+```
+
+```Go
+const R_ARM_GOT_ABS R_ARM = 95
+```
+
+### <a id="R_ARM_GOT_BREL12" href="#R_ARM_GOT_BREL12">const R_ARM_GOT_BREL12</a>
+
+```
+searchKey: elf.R_ARM_GOT_BREL12
+tags: [constant number]
+```
+
+```Go
+const R_ARM_GOT_BREL12 R_ARM = 97
+```
+
+### <a id="R_ARM_GOT_PREL" href="#R_ARM_GOT_PREL">const R_ARM_GOT_PREL</a>
+
+```
+searchKey: elf.R_ARM_GOT_PREL
+tags: [constant number]
+```
+
+```Go
+const R_ARM_GOT_PREL R_ARM = 96
+```
+
+### <a id="R_ARM_IRELATIVE" href="#R_ARM_IRELATIVE">const R_ARM_IRELATIVE</a>
+
+```
+searchKey: elf.R_ARM_IRELATIVE
+tags: [constant number]
+```
+
+```Go
+const R_ARM_IRELATIVE R_ARM = 160
+```
+
+### <a id="R_ARM_JUMP24" href="#R_ARM_JUMP24">const R_ARM_JUMP24</a>
+
+```
+searchKey: elf.R_ARM_JUMP24
+tags: [constant number]
+```
+
+```Go
+const R_ARM_JUMP24 R_ARM = 29
+```
+
+### <a id="R_ARM_JUMP_SLOT" href="#R_ARM_JUMP_SLOT">const R_ARM_JUMP_SLOT</a>
+
+```
+searchKey: elf.R_ARM_JUMP_SLOT
+tags: [constant number]
+```
+
+```Go
+const R_ARM_JUMP_SLOT R_ARM = 22 /* Set GOT entry to code address. */
+
+```
+
+### <a id="R_ARM_LDC_PC_G0" href="#R_ARM_LDC_PC_G0">const R_ARM_LDC_PC_G0</a>
+
+```
+searchKey: elf.R_ARM_LDC_PC_G0
+tags: [constant number]
+```
+
+```Go
+const R_ARM_LDC_PC_G0 R_ARM = 67
+```
+
+### <a id="R_ARM_LDC_PC_G1" href="#R_ARM_LDC_PC_G1">const R_ARM_LDC_PC_G1</a>
+
+```
+searchKey: elf.R_ARM_LDC_PC_G1
+tags: [constant number]
+```
+
+```Go
+const R_ARM_LDC_PC_G1 R_ARM = 68
+```
+
+### <a id="R_ARM_LDC_PC_G2" href="#R_ARM_LDC_PC_G2">const R_ARM_LDC_PC_G2</a>
+
+```
+searchKey: elf.R_ARM_LDC_PC_G2
+tags: [constant number]
+```
+
+```Go
+const R_ARM_LDC_PC_G2 R_ARM = 69
+```
+
+### <a id="R_ARM_LDC_SB_G0" href="#R_ARM_LDC_SB_G0">const R_ARM_LDC_SB_G0</a>
+
+```
+searchKey: elf.R_ARM_LDC_SB_G0
+tags: [constant number]
+```
+
+```Go
+const R_ARM_LDC_SB_G0 R_ARM = 81
+```
+
+### <a id="R_ARM_LDC_SB_G1" href="#R_ARM_LDC_SB_G1">const R_ARM_LDC_SB_G1</a>
+
+```
+searchKey: elf.R_ARM_LDC_SB_G1
+tags: [constant number]
+```
+
+```Go
+const R_ARM_LDC_SB_G1 R_ARM = 82
+```
+
+### <a id="R_ARM_LDC_SB_G2" href="#R_ARM_LDC_SB_G2">const R_ARM_LDC_SB_G2</a>
+
+```
+searchKey: elf.R_ARM_LDC_SB_G2
+tags: [constant number]
+```
+
+```Go
+const R_ARM_LDC_SB_G2 R_ARM = 83
+```
+
+### <a id="R_ARM_LDRS_PC_G0" href="#R_ARM_LDRS_PC_G0">const R_ARM_LDRS_PC_G0</a>
+
+```
+searchKey: elf.R_ARM_LDRS_PC_G0
+tags: [constant number]
+```
+
+```Go
+const R_ARM_LDRS_PC_G0 R_ARM = 64
+```
+
+### <a id="R_ARM_LDRS_PC_G1" href="#R_ARM_LDRS_PC_G1">const R_ARM_LDRS_PC_G1</a>
+
+```
+searchKey: elf.R_ARM_LDRS_PC_G1
+tags: [constant number]
+```
+
+```Go
+const R_ARM_LDRS_PC_G1 R_ARM = 65
+```
+
+### <a id="R_ARM_LDRS_PC_G2" href="#R_ARM_LDRS_PC_G2">const R_ARM_LDRS_PC_G2</a>
+
+```
+searchKey: elf.R_ARM_LDRS_PC_G2
+tags: [constant number]
+```
+
+```Go
+const R_ARM_LDRS_PC_G2 R_ARM = 66
+```
+
+### <a id="R_ARM_LDRS_SB_G0" href="#R_ARM_LDRS_SB_G0">const R_ARM_LDRS_SB_G0</a>
+
+```
+searchKey: elf.R_ARM_LDRS_SB_G0
+tags: [constant number]
+```
+
+```Go
+const R_ARM_LDRS_SB_G0 R_ARM = 78
+```
+
+### <a id="R_ARM_LDRS_SB_G1" href="#R_ARM_LDRS_SB_G1">const R_ARM_LDRS_SB_G1</a>
+
+```
+searchKey: elf.R_ARM_LDRS_SB_G1
+tags: [constant number]
+```
+
+```Go
+const R_ARM_LDRS_SB_G1 R_ARM = 79
+```
+
+### <a id="R_ARM_LDRS_SB_G2" href="#R_ARM_LDRS_SB_G2">const R_ARM_LDRS_SB_G2</a>
+
+```
+searchKey: elf.R_ARM_LDRS_SB_G2
+tags: [constant number]
+```
+
+```Go
+const R_ARM_LDRS_SB_G2 R_ARM = 80
+```
+
+### <a id="R_ARM_LDR_PC_G1" href="#R_ARM_LDR_PC_G1">const R_ARM_LDR_PC_G1</a>
+
+```
+searchKey: elf.R_ARM_LDR_PC_G1
+tags: [constant number]
+```
+
+```Go
+const R_ARM_LDR_PC_G1 R_ARM = 62
+```
+
+### <a id="R_ARM_LDR_PC_G2" href="#R_ARM_LDR_PC_G2">const R_ARM_LDR_PC_G2</a>
+
+```
+searchKey: elf.R_ARM_LDR_PC_G2
+tags: [constant number]
+```
+
+```Go
+const R_ARM_LDR_PC_G2 R_ARM = 63
+```
+
+### <a id="R_ARM_LDR_SBREL_11_10_NC" href="#R_ARM_LDR_SBREL_11_10_NC">const R_ARM_LDR_SBREL_11_10_NC</a>
+
+```
+searchKey: elf.R_ARM_LDR_SBREL_11_10_NC
+tags: [constant number]
+```
+
+```Go
+const R_ARM_LDR_SBREL_11_10_NC R_ARM = 35
+```
+
+### <a id="R_ARM_LDR_SB_G0" href="#R_ARM_LDR_SB_G0">const R_ARM_LDR_SB_G0</a>
+
+```
+searchKey: elf.R_ARM_LDR_SB_G0
+tags: [constant number]
+```
+
+```Go
+const R_ARM_LDR_SB_G0 R_ARM = 75
+```
+
+### <a id="R_ARM_LDR_SB_G1" href="#R_ARM_LDR_SB_G1">const R_ARM_LDR_SB_G1</a>
+
+```
+searchKey: elf.R_ARM_LDR_SB_G1
+tags: [constant number]
+```
+
+```Go
+const R_ARM_LDR_SB_G1 R_ARM = 76
+```
+
+### <a id="R_ARM_LDR_SB_G2" href="#R_ARM_LDR_SB_G2">const R_ARM_LDR_SB_G2</a>
+
+```
+searchKey: elf.R_ARM_LDR_SB_G2
+tags: [constant number]
+```
+
+```Go
+const R_ARM_LDR_SB_G2 R_ARM = 77
+```
+
+### <a id="R_ARM_ME_TOO" href="#R_ARM_ME_TOO">const R_ARM_ME_TOO</a>
+
+```
+searchKey: elf.R_ARM_ME_TOO
+tags: [constant number]
+```
+
+```Go
+const R_ARM_ME_TOO R_ARM = 128
+```
+
+### <a id="R_ARM_MOVT_ABS" href="#R_ARM_MOVT_ABS">const R_ARM_MOVT_ABS</a>
+
+```
+searchKey: elf.R_ARM_MOVT_ABS
+tags: [constant number]
+```
+
+```Go
+const R_ARM_MOVT_ABS R_ARM = 44
+```
+
+### <a id="R_ARM_MOVT_BREL" href="#R_ARM_MOVT_BREL">const R_ARM_MOVT_BREL</a>
+
+```
+searchKey: elf.R_ARM_MOVT_BREL
+tags: [constant number]
+```
+
+```Go
+const R_ARM_MOVT_BREL R_ARM = 85
+```
+
+### <a id="R_ARM_MOVT_PREL" href="#R_ARM_MOVT_PREL">const R_ARM_MOVT_PREL</a>
+
+```
+searchKey: elf.R_ARM_MOVT_PREL
+tags: [constant number]
+```
+
+```Go
+const R_ARM_MOVT_PREL R_ARM = 46
+```
+
+### <a id="R_ARM_MOVW_ABS_NC" href="#R_ARM_MOVW_ABS_NC">const R_ARM_MOVW_ABS_NC</a>
+
+```
+searchKey: elf.R_ARM_MOVW_ABS_NC
+tags: [constant number]
+```
+
+```Go
+const R_ARM_MOVW_ABS_NC R_ARM = 43
+```
+
+### <a id="R_ARM_MOVW_BREL" href="#R_ARM_MOVW_BREL">const R_ARM_MOVW_BREL</a>
+
+```
+searchKey: elf.R_ARM_MOVW_BREL
+tags: [constant number]
+```
+
+```Go
+const R_ARM_MOVW_BREL R_ARM = 86
+```
+
+### <a id="R_ARM_MOVW_BREL_NC" href="#R_ARM_MOVW_BREL_NC">const R_ARM_MOVW_BREL_NC</a>
+
+```
+searchKey: elf.R_ARM_MOVW_BREL_NC
+tags: [constant number]
+```
+
+```Go
+const R_ARM_MOVW_BREL_NC R_ARM = 84
+```
+
+### <a id="R_ARM_MOVW_PREL_NC" href="#R_ARM_MOVW_PREL_NC">const R_ARM_MOVW_PREL_NC</a>
+
+```
+searchKey: elf.R_ARM_MOVW_PREL_NC
+tags: [constant number]
+```
+
+```Go
+const R_ARM_MOVW_PREL_NC R_ARM = 45
+```
+
+### <a id="R_ARM_NONE" href="#R_ARM_NONE">const R_ARM_NONE</a>
+
+```
+searchKey: elf.R_ARM_NONE
+tags: [constant number]
+```
+
+```Go
+const R_ARM_NONE R_ARM = 0 /* No relocation. */
+
+```
+
+### <a id="R_ARM_PC13" href="#R_ARM_PC13">const R_ARM_PC13</a>
+
+```
+searchKey: elf.R_ARM_PC13
+tags: [constant number]
+```
+
+```Go
+const R_ARM_PC13 R_ARM = 4
+```
+
+### <a id="R_ARM_PC24" href="#R_ARM_PC24">const R_ARM_PC24</a>
+
+```
+searchKey: elf.R_ARM_PC24
+tags: [constant number]
+```
+
+```Go
+const R_ARM_PC24 R_ARM = 1
+```
+
+### <a id="R_ARM_PLT32" href="#R_ARM_PLT32">const R_ARM_PLT32</a>
+
+```
+searchKey: elf.R_ARM_PLT32
+tags: [constant number]
+```
+
+```Go
+const R_ARM_PLT32 R_ARM = 27 /* Add PC-relative PLT offset. */
+
+```
+
+### <a id="R_ARM_PLT32_ABS" href="#R_ARM_PLT32_ABS">const R_ARM_PLT32_ABS</a>
+
+```
+searchKey: elf.R_ARM_PLT32_ABS
+tags: [constant number]
+```
+
+```Go
+const R_ARM_PLT32_ABS R_ARM = 94
+```
+
+### <a id="R_ARM_PREL31" href="#R_ARM_PREL31">const R_ARM_PREL31</a>
+
+```
+searchKey: elf.R_ARM_PREL31
+tags: [constant number]
+```
+
+```Go
+const R_ARM_PREL31 R_ARM = 42
+```
+
+### <a id="R_ARM_PRIVATE_0" href="#R_ARM_PRIVATE_0">const R_ARM_PRIVATE_0</a>
+
+```
+searchKey: elf.R_ARM_PRIVATE_0
+tags: [constant number]
+```
+
+```Go
+const R_ARM_PRIVATE_0 R_ARM = 112
+```
+
+### <a id="R_ARM_PRIVATE_1" href="#R_ARM_PRIVATE_1">const R_ARM_PRIVATE_1</a>
+
+```
+searchKey: elf.R_ARM_PRIVATE_1
+tags: [constant number]
+```
+
+```Go
+const R_ARM_PRIVATE_1 R_ARM = 113
+```
+
+### <a id="R_ARM_PRIVATE_10" href="#R_ARM_PRIVATE_10">const R_ARM_PRIVATE_10</a>
+
+```
+searchKey: elf.R_ARM_PRIVATE_10
+tags: [constant number]
+```
+
+```Go
+const R_ARM_PRIVATE_10 R_ARM = 122
+```
+
+### <a id="R_ARM_PRIVATE_11" href="#R_ARM_PRIVATE_11">const R_ARM_PRIVATE_11</a>
+
+```
+searchKey: elf.R_ARM_PRIVATE_11
+tags: [constant number]
+```
+
+```Go
+const R_ARM_PRIVATE_11 R_ARM = 123
+```
+
+### <a id="R_ARM_PRIVATE_12" href="#R_ARM_PRIVATE_12">const R_ARM_PRIVATE_12</a>
+
+```
+searchKey: elf.R_ARM_PRIVATE_12
+tags: [constant number]
+```
+
+```Go
+const R_ARM_PRIVATE_12 R_ARM = 124
+```
+
+### <a id="R_ARM_PRIVATE_13" href="#R_ARM_PRIVATE_13">const R_ARM_PRIVATE_13</a>
+
+```
+searchKey: elf.R_ARM_PRIVATE_13
+tags: [constant number]
+```
+
+```Go
+const R_ARM_PRIVATE_13 R_ARM = 125
+```
+
+### <a id="R_ARM_PRIVATE_14" href="#R_ARM_PRIVATE_14">const R_ARM_PRIVATE_14</a>
+
+```
+searchKey: elf.R_ARM_PRIVATE_14
+tags: [constant number]
+```
+
+```Go
+const R_ARM_PRIVATE_14 R_ARM = 126
+```
+
+### <a id="R_ARM_PRIVATE_15" href="#R_ARM_PRIVATE_15">const R_ARM_PRIVATE_15</a>
+
+```
+searchKey: elf.R_ARM_PRIVATE_15
+tags: [constant number]
+```
+
+```Go
+const R_ARM_PRIVATE_15 R_ARM = 127
+```
+
+### <a id="R_ARM_PRIVATE_2" href="#R_ARM_PRIVATE_2">const R_ARM_PRIVATE_2</a>
+
+```
+searchKey: elf.R_ARM_PRIVATE_2
+tags: [constant number]
+```
+
+```Go
+const R_ARM_PRIVATE_2 R_ARM = 114
+```
+
+### <a id="R_ARM_PRIVATE_3" href="#R_ARM_PRIVATE_3">const R_ARM_PRIVATE_3</a>
+
+```
+searchKey: elf.R_ARM_PRIVATE_3
+tags: [constant number]
+```
+
+```Go
+const R_ARM_PRIVATE_3 R_ARM = 115
+```
+
+### <a id="R_ARM_PRIVATE_4" href="#R_ARM_PRIVATE_4">const R_ARM_PRIVATE_4</a>
+
+```
+searchKey: elf.R_ARM_PRIVATE_4
+tags: [constant number]
+```
+
+```Go
+const R_ARM_PRIVATE_4 R_ARM = 116
+```
+
+### <a id="R_ARM_PRIVATE_5" href="#R_ARM_PRIVATE_5">const R_ARM_PRIVATE_5</a>
+
+```
+searchKey: elf.R_ARM_PRIVATE_5
+tags: [constant number]
+```
+
+```Go
+const R_ARM_PRIVATE_5 R_ARM = 117
+```
+
+### <a id="R_ARM_PRIVATE_6" href="#R_ARM_PRIVATE_6">const R_ARM_PRIVATE_6</a>
+
+```
+searchKey: elf.R_ARM_PRIVATE_6
+tags: [constant number]
+```
+
+```Go
+const R_ARM_PRIVATE_6 R_ARM = 118
+```
+
+### <a id="R_ARM_PRIVATE_7" href="#R_ARM_PRIVATE_7">const R_ARM_PRIVATE_7</a>
+
+```
+searchKey: elf.R_ARM_PRIVATE_7
+tags: [constant number]
+```
+
+```Go
+const R_ARM_PRIVATE_7 R_ARM = 119
+```
+
+### <a id="R_ARM_PRIVATE_8" href="#R_ARM_PRIVATE_8">const R_ARM_PRIVATE_8</a>
+
+```
+searchKey: elf.R_ARM_PRIVATE_8
+tags: [constant number]
+```
+
+```Go
+const R_ARM_PRIVATE_8 R_ARM = 120
+```
+
+### <a id="R_ARM_PRIVATE_9" href="#R_ARM_PRIVATE_9">const R_ARM_PRIVATE_9</a>
+
+```
+searchKey: elf.R_ARM_PRIVATE_9
+tags: [constant number]
+```
+
+```Go
+const R_ARM_PRIVATE_9 R_ARM = 121
+```
+
+### <a id="R_ARM_RABS32" href="#R_ARM_RABS32">const R_ARM_RABS32</a>
+
+```
+searchKey: elf.R_ARM_RABS32
+tags: [constant number]
+```
+
+```Go
+const R_ARM_RABS32 R_ARM = 253
+```
+
+### <a id="R_ARM_RBASE" href="#R_ARM_RBASE">const R_ARM_RBASE</a>
+
+```
+searchKey: elf.R_ARM_RBASE
+tags: [constant number]
+```
+
+```Go
+const R_ARM_RBASE R_ARM = 255
+```
+
+### <a id="R_ARM_REL32" href="#R_ARM_REL32">const R_ARM_REL32</a>
+
+```
+searchKey: elf.R_ARM_REL32
+tags: [constant number]
+```
+
+```Go
+const R_ARM_REL32 R_ARM = 3
+```
+
+### <a id="R_ARM_REL32_NOI" href="#R_ARM_REL32_NOI">const R_ARM_REL32_NOI</a>
+
+```
+searchKey: elf.R_ARM_REL32_NOI
+tags: [constant number]
+```
+
+```Go
+const R_ARM_REL32_NOI R_ARM = 56
+```
+
+### <a id="R_ARM_RELATIVE" href="#R_ARM_RELATIVE">const R_ARM_RELATIVE</a>
+
+```
+searchKey: elf.R_ARM_RELATIVE
+tags: [constant number]
+```
+
+```Go
+const R_ARM_RELATIVE R_ARM = 23 /* Add load address of shared object. */
+
+```
+
+### <a id="R_ARM_RPC24" href="#R_ARM_RPC24">const R_ARM_RPC24</a>
+
+```
+searchKey: elf.R_ARM_RPC24
+tags: [constant number]
+```
+
+```Go
+const R_ARM_RPC24 R_ARM = 254
+```
+
+### <a id="R_ARM_RREL32" href="#R_ARM_RREL32">const R_ARM_RREL32</a>
+
+```
+searchKey: elf.R_ARM_RREL32
+tags: [constant number]
+```
+
+```Go
+const R_ARM_RREL32 R_ARM = 252
+```
+
+### <a id="R_ARM_RSBREL32" href="#R_ARM_RSBREL32">const R_ARM_RSBREL32</a>
+
+```
+searchKey: elf.R_ARM_RSBREL32
+tags: [constant number]
+```
+
+```Go
+const R_ARM_RSBREL32 R_ARM = 250
+```
+
+### <a id="R_ARM_RXPC25" href="#R_ARM_RXPC25">const R_ARM_RXPC25</a>
+
+```
+searchKey: elf.R_ARM_RXPC25
+tags: [constant number]
+```
+
+```Go
+const R_ARM_RXPC25 R_ARM = 249
+```
+
+### <a id="R_ARM_SBREL31" href="#R_ARM_SBREL31">const R_ARM_SBREL31</a>
+
+```
+searchKey: elf.R_ARM_SBREL31
+tags: [constant number]
+```
+
+```Go
+const R_ARM_SBREL31 R_ARM = 39
+```
+
+### <a id="R_ARM_SBREL32" href="#R_ARM_SBREL32">const R_ARM_SBREL32</a>
+
+```
+searchKey: elf.R_ARM_SBREL32
+tags: [constant number]
+```
+
+```Go
+const R_ARM_SBREL32 R_ARM = 9
+```
+
+### <a id="R_ARM_SWI24" href="#R_ARM_SWI24">const R_ARM_SWI24</a>
+
+```
+searchKey: elf.R_ARM_SWI24
+tags: [constant number]
+```
+
+```Go
+const R_ARM_SWI24 R_ARM = 13
+```
+
+### <a id="R_ARM_TARGET1" href="#R_ARM_TARGET1">const R_ARM_TARGET1</a>
+
+```
+searchKey: elf.R_ARM_TARGET1
+tags: [constant number]
+```
+
+```Go
+const R_ARM_TARGET1 R_ARM = 38
+```
+
+### <a id="R_ARM_TARGET2" href="#R_ARM_TARGET2">const R_ARM_TARGET2</a>
+
+```
+searchKey: elf.R_ARM_TARGET2
+tags: [constant number]
+```
+
+```Go
+const R_ARM_TARGET2 R_ARM = 41
+```
+
+### <a id="R_ARM_THM_ABS5" href="#R_ARM_THM_ABS5">const R_ARM_THM_ABS5</a>
+
+```
+searchKey: elf.R_ARM_THM_ABS5
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_ABS5 R_ARM = 7
+```
+
+### <a id="R_ARM_THM_ALU_ABS_G0_NC" href="#R_ARM_THM_ALU_ABS_G0_NC">const R_ARM_THM_ALU_ABS_G0_NC</a>
+
+```
+searchKey: elf.R_ARM_THM_ALU_ABS_G0_NC
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_ALU_ABS_G0_NC R_ARM = 132
+```
+
+### <a id="R_ARM_THM_ALU_ABS_G1_NC" href="#R_ARM_THM_ALU_ABS_G1_NC">const R_ARM_THM_ALU_ABS_G1_NC</a>
+
+```
+searchKey: elf.R_ARM_THM_ALU_ABS_G1_NC
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_ALU_ABS_G1_NC R_ARM = 133
+```
+
+### <a id="R_ARM_THM_ALU_ABS_G2_NC" href="#R_ARM_THM_ALU_ABS_G2_NC">const R_ARM_THM_ALU_ABS_G2_NC</a>
+
+```
+searchKey: elf.R_ARM_THM_ALU_ABS_G2_NC
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_ALU_ABS_G2_NC R_ARM = 134
+```
+
+### <a id="R_ARM_THM_ALU_ABS_G3" href="#R_ARM_THM_ALU_ABS_G3">const R_ARM_THM_ALU_ABS_G3</a>
+
+```
+searchKey: elf.R_ARM_THM_ALU_ABS_G3
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_ALU_ABS_G3 R_ARM = 135
+```
+
+### <a id="R_ARM_THM_ALU_PREL_11_0" href="#R_ARM_THM_ALU_PREL_11_0">const R_ARM_THM_ALU_PREL_11_0</a>
+
+```
+searchKey: elf.R_ARM_THM_ALU_PREL_11_0
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_ALU_PREL_11_0 R_ARM = 53
+```
+
+### <a id="R_ARM_THM_GOT_BREL12" href="#R_ARM_THM_GOT_BREL12">const R_ARM_THM_GOT_BREL12</a>
+
+```
+searchKey: elf.R_ARM_THM_GOT_BREL12
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_GOT_BREL12 R_ARM = 131
+```
+
+### <a id="R_ARM_THM_JUMP11" href="#R_ARM_THM_JUMP11">const R_ARM_THM_JUMP11</a>
+
+```
+searchKey: elf.R_ARM_THM_JUMP11
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_JUMP11 R_ARM = 102
+```
+
+### <a id="R_ARM_THM_JUMP19" href="#R_ARM_THM_JUMP19">const R_ARM_THM_JUMP19</a>
+
+```
+searchKey: elf.R_ARM_THM_JUMP19
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_JUMP19 R_ARM = 51
+```
+
+### <a id="R_ARM_THM_JUMP24" href="#R_ARM_THM_JUMP24">const R_ARM_THM_JUMP24</a>
+
+```
+searchKey: elf.R_ARM_THM_JUMP24
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_JUMP24 R_ARM = 30
+```
+
+### <a id="R_ARM_THM_JUMP6" href="#R_ARM_THM_JUMP6">const R_ARM_THM_JUMP6</a>
+
+```
+searchKey: elf.R_ARM_THM_JUMP6
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_JUMP6 R_ARM = 52
+```
+
+### <a id="R_ARM_THM_JUMP8" href="#R_ARM_THM_JUMP8">const R_ARM_THM_JUMP8</a>
+
+```
+searchKey: elf.R_ARM_THM_JUMP8
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_JUMP8 R_ARM = 103
+```
+
+### <a id="R_ARM_THM_MOVT_ABS" href="#R_ARM_THM_MOVT_ABS">const R_ARM_THM_MOVT_ABS</a>
+
+```
+searchKey: elf.R_ARM_THM_MOVT_ABS
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_MOVT_ABS R_ARM = 48
+```
+
+### <a id="R_ARM_THM_MOVT_BREL" href="#R_ARM_THM_MOVT_BREL">const R_ARM_THM_MOVT_BREL</a>
+
+```
+searchKey: elf.R_ARM_THM_MOVT_BREL
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_MOVT_BREL R_ARM = 88
+```
+
+### <a id="R_ARM_THM_MOVT_PREL" href="#R_ARM_THM_MOVT_PREL">const R_ARM_THM_MOVT_PREL</a>
+
+```
+searchKey: elf.R_ARM_THM_MOVT_PREL
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_MOVT_PREL R_ARM = 50
+```
+
+### <a id="R_ARM_THM_MOVW_ABS_NC" href="#R_ARM_THM_MOVW_ABS_NC">const R_ARM_THM_MOVW_ABS_NC</a>
+
+```
+searchKey: elf.R_ARM_THM_MOVW_ABS_NC
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_MOVW_ABS_NC R_ARM = 47
+```
+
+### <a id="R_ARM_THM_MOVW_BREL" href="#R_ARM_THM_MOVW_BREL">const R_ARM_THM_MOVW_BREL</a>
+
+```
+searchKey: elf.R_ARM_THM_MOVW_BREL
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_MOVW_BREL R_ARM = 89
+```
+
+### <a id="R_ARM_THM_MOVW_BREL_NC" href="#R_ARM_THM_MOVW_BREL_NC">const R_ARM_THM_MOVW_BREL_NC</a>
+
+```
+searchKey: elf.R_ARM_THM_MOVW_BREL_NC
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_MOVW_BREL_NC R_ARM = 87
+```
+
+### <a id="R_ARM_THM_MOVW_PREL_NC" href="#R_ARM_THM_MOVW_PREL_NC">const R_ARM_THM_MOVW_PREL_NC</a>
+
+```
+searchKey: elf.R_ARM_THM_MOVW_PREL_NC
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_MOVW_PREL_NC R_ARM = 49
+```
+
+### <a id="R_ARM_THM_PC12" href="#R_ARM_THM_PC12">const R_ARM_THM_PC12</a>
+
+```
+searchKey: elf.R_ARM_THM_PC12
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_PC12 R_ARM = 54
+```
+
+### <a id="R_ARM_THM_PC22" href="#R_ARM_THM_PC22">const R_ARM_THM_PC22</a>
+
+```
+searchKey: elf.R_ARM_THM_PC22
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_PC22 R_ARM = 10
+```
+
+### <a id="R_ARM_THM_PC8" href="#R_ARM_THM_PC8">const R_ARM_THM_PC8</a>
+
+```
+searchKey: elf.R_ARM_THM_PC8
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_PC8 R_ARM = 11
+```
+
+### <a id="R_ARM_THM_RPC22" href="#R_ARM_THM_RPC22">const R_ARM_THM_RPC22</a>
+
+```
+searchKey: elf.R_ARM_THM_RPC22
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_RPC22 R_ARM = 251
+```
+
+### <a id="R_ARM_THM_SWI8" href="#R_ARM_THM_SWI8">const R_ARM_THM_SWI8</a>
+
+```
+searchKey: elf.R_ARM_THM_SWI8
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_SWI8 R_ARM = 14
+```
+
+### <a id="R_ARM_THM_TLS_CALL" href="#R_ARM_THM_TLS_CALL">const R_ARM_THM_TLS_CALL</a>
+
+```
+searchKey: elf.R_ARM_THM_TLS_CALL
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_TLS_CALL R_ARM = 93
+```
+
+### <a id="R_ARM_THM_TLS_DESCSEQ16" href="#R_ARM_THM_TLS_DESCSEQ16">const R_ARM_THM_TLS_DESCSEQ16</a>
+
+```
+searchKey: elf.R_ARM_THM_TLS_DESCSEQ16
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_TLS_DESCSEQ16 R_ARM = 129
+```
+
+### <a id="R_ARM_THM_TLS_DESCSEQ32" href="#R_ARM_THM_TLS_DESCSEQ32">const R_ARM_THM_TLS_DESCSEQ32</a>
+
+```
+searchKey: elf.R_ARM_THM_TLS_DESCSEQ32
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_TLS_DESCSEQ32 R_ARM = 130
+```
+
+### <a id="R_ARM_THM_XPC22" href="#R_ARM_THM_XPC22">const R_ARM_THM_XPC22</a>
+
+```
+searchKey: elf.R_ARM_THM_XPC22
+tags: [constant number]
+```
+
+```Go
+const R_ARM_THM_XPC22 R_ARM = 16
+```
+
+### <a id="R_ARM_TLS_CALL" href="#R_ARM_TLS_CALL">const R_ARM_TLS_CALL</a>
+
+```
+searchKey: elf.R_ARM_TLS_CALL
+tags: [constant number]
+```
+
+```Go
+const R_ARM_TLS_CALL R_ARM = 91
+```
+
+### <a id="R_ARM_TLS_DESCSEQ" href="#R_ARM_TLS_DESCSEQ">const R_ARM_TLS_DESCSEQ</a>
+
+```
+searchKey: elf.R_ARM_TLS_DESCSEQ
+tags: [constant number]
+```
+
+```Go
+const R_ARM_TLS_DESCSEQ R_ARM = 92
+```
+
+### <a id="R_ARM_TLS_DTPMOD32" href="#R_ARM_TLS_DTPMOD32">const R_ARM_TLS_DTPMOD32</a>
+
+```
+searchKey: elf.R_ARM_TLS_DTPMOD32
+tags: [constant number]
+```
+
+```Go
+const R_ARM_TLS_DTPMOD32 R_ARM = 17
+```
+
+### <a id="R_ARM_TLS_DTPOFF32" href="#R_ARM_TLS_DTPOFF32">const R_ARM_TLS_DTPOFF32</a>
+
+```
+searchKey: elf.R_ARM_TLS_DTPOFF32
+tags: [constant number]
+```
+
+```Go
+const R_ARM_TLS_DTPOFF32 R_ARM = 18
+```
+
+### <a id="R_ARM_TLS_GD32" href="#R_ARM_TLS_GD32">const R_ARM_TLS_GD32</a>
+
+```
+searchKey: elf.R_ARM_TLS_GD32
+tags: [constant number]
+```
+
+```Go
+const R_ARM_TLS_GD32 R_ARM = 104
+```
+
+### <a id="R_ARM_TLS_GOTDESC" href="#R_ARM_TLS_GOTDESC">const R_ARM_TLS_GOTDESC</a>
+
+```
+searchKey: elf.R_ARM_TLS_GOTDESC
+tags: [constant number]
+```
+
+```Go
+const R_ARM_TLS_GOTDESC R_ARM = 90
+```
+
+### <a id="R_ARM_TLS_IE12GP" href="#R_ARM_TLS_IE12GP">const R_ARM_TLS_IE12GP</a>
+
+```
+searchKey: elf.R_ARM_TLS_IE12GP
+tags: [constant number]
+```
+
+```Go
+const R_ARM_TLS_IE12GP R_ARM = 111
+```
+
+### <a id="R_ARM_TLS_IE32" href="#R_ARM_TLS_IE32">const R_ARM_TLS_IE32</a>
+
+```
+searchKey: elf.R_ARM_TLS_IE32
+tags: [constant number]
+```
+
+```Go
+const R_ARM_TLS_IE32 R_ARM = 107
+```
+
+### <a id="R_ARM_TLS_LDM32" href="#R_ARM_TLS_LDM32">const R_ARM_TLS_LDM32</a>
+
+```
+searchKey: elf.R_ARM_TLS_LDM32
+tags: [constant number]
+```
+
+```Go
+const R_ARM_TLS_LDM32 R_ARM = 105
+```
+
+### <a id="R_ARM_TLS_LDO12" href="#R_ARM_TLS_LDO12">const R_ARM_TLS_LDO12</a>
+
+```
+searchKey: elf.R_ARM_TLS_LDO12
+tags: [constant number]
+```
+
+```Go
+const R_ARM_TLS_LDO12 R_ARM = 109
+```
+
+### <a id="R_ARM_TLS_LDO32" href="#R_ARM_TLS_LDO32">const R_ARM_TLS_LDO32</a>
+
+```
+searchKey: elf.R_ARM_TLS_LDO32
+tags: [constant number]
+```
+
+```Go
+const R_ARM_TLS_LDO32 R_ARM = 106
+```
+
+### <a id="R_ARM_TLS_LE12" href="#R_ARM_TLS_LE12">const R_ARM_TLS_LE12</a>
+
+```
+searchKey: elf.R_ARM_TLS_LE12
+tags: [constant number]
+```
+
+```Go
+const R_ARM_TLS_LE12 R_ARM = 110
+```
+
+### <a id="R_ARM_TLS_LE32" href="#R_ARM_TLS_LE32">const R_ARM_TLS_LE32</a>
+
+```
+searchKey: elf.R_ARM_TLS_LE32
+tags: [constant number]
+```
+
+```Go
+const R_ARM_TLS_LE32 R_ARM = 108
+```
+
+### <a id="R_ARM_TLS_TPOFF32" href="#R_ARM_TLS_TPOFF32">const R_ARM_TLS_TPOFF32</a>
+
+```
+searchKey: elf.R_ARM_TLS_TPOFF32
+tags: [constant number]
+```
+
+```Go
+const R_ARM_TLS_TPOFF32 R_ARM = 19
+```
+
+### <a id="R_ARM_V4BX" href="#R_ARM_V4BX">const R_ARM_V4BX</a>
+
+```
+searchKey: elf.R_ARM_V4BX
+tags: [constant number]
+```
+
+```Go
+const R_ARM_V4BX R_ARM = 40
+```
+
+### <a id="R_ARM_XPC25" href="#R_ARM_XPC25">const R_ARM_XPC25</a>
+
+```
+searchKey: elf.R_ARM_XPC25
+tags: [constant number]
+```
+
+```Go
+const R_ARM_XPC25 R_ARM = 15
 ```
 
 ### <a id="R_MIPS_16" href="#R_MIPS_16">const R_MIPS_16</a>
 
 ```
 searchKey: elf.R_MIPS_16
+tags: [constant number]
 ```
 
 ```Go
 const R_MIPS_16 R_MIPS = 1
 ```
 
-### <a id="R_MIPS_32" href="#R_MIPS_32">const R_MIPS_32</a>
-
-```
-searchKey: elf.R_MIPS_32
-```
-
-```Go
-const R_MIPS_32 R_MIPS = 2
-```
-
-### <a id="R_MIPS_REL32" href="#R_MIPS_REL32">const R_MIPS_REL32</a>
-
-```
-searchKey: elf.R_MIPS_REL32
-```
-
-```Go
-const R_MIPS_REL32 R_MIPS = 3
-```
-
 ### <a id="R_MIPS_26" href="#R_MIPS_26">const R_MIPS_26</a>
 
 ```
 searchKey: elf.R_MIPS_26
+tags: [constant number]
 ```
 
 ```Go
 const R_MIPS_26 R_MIPS = 4
 ```
 
-### <a id="R_MIPS_HI16" href="#R_MIPS_HI16">const R_MIPS_HI16</a>
+### <a id="R_MIPS_32" href="#R_MIPS_32">const R_MIPS_32</a>
 
 ```
-searchKey: elf.R_MIPS_HI16
-```
-
-```Go
-const R_MIPS_HI16 R_MIPS = 5 /* high 16 bits of symbol value */
-
-```
-
-### <a id="R_MIPS_LO16" href="#R_MIPS_LO16">const R_MIPS_LO16</a>
-
-```
-searchKey: elf.R_MIPS_LO16
+searchKey: elf.R_MIPS_32
+tags: [constant number]
 ```
 
 ```Go
-const R_MIPS_LO16 R_MIPS = 6 /* low 16 bits of symbol value */
-
+const R_MIPS_32 R_MIPS = 2
 ```
 
-### <a id="R_MIPS_GPREL16" href="#R_MIPS_GPREL16">const R_MIPS_GPREL16</a>
+### <a id="R_MIPS_64" href="#R_MIPS_64">const R_MIPS_64</a>
 
 ```
-searchKey: elf.R_MIPS_GPREL16
-```
-
-```Go
-const R_MIPS_GPREL16 R_MIPS = 7 /* GP-relative reference  */
-
-```
-
-### <a id="R_MIPS_LITERAL" href="#R_MIPS_LITERAL">const R_MIPS_LITERAL</a>
-
-```
-searchKey: elf.R_MIPS_LITERAL
+searchKey: elf.R_MIPS_64
+tags: [constant number]
 ```
 
 ```Go
-const R_MIPS_LITERAL R_MIPS = 8 /* Reference to literal section  */
-
+const R_MIPS_64 R_MIPS = 18
 ```
 
-### <a id="R_MIPS_GOT16" href="#R_MIPS_GOT16">const R_MIPS_GOT16</a>
+### <a id="R_MIPS_ADD_IMMEDIATE" href="#R_MIPS_ADD_IMMEDIATE">const R_MIPS_ADD_IMMEDIATE</a>
 
 ```
-searchKey: elf.R_MIPS_GOT16
-```
-
-```Go
-const R_MIPS_GOT16 R_MIPS = 9 /* Reference to global offset table */
-
-```
-
-### <a id="R_MIPS_PC16" href="#R_MIPS_PC16">const R_MIPS_PC16</a>
-
-```
-searchKey: elf.R_MIPS_PC16
+searchKey: elf.R_MIPS_ADD_IMMEDIATE
+tags: [constant number]
 ```
 
 ```Go
-const R_MIPS_PC16 R_MIPS = 10 /* 16 bit PC relative reference */
-
+const R_MIPS_ADD_IMMEDIATE R_MIPS = 34
 ```
 
 ### <a id="R_MIPS_CALL16" href="#R_MIPS_CALL16">const R_MIPS_CALL16</a>
 
 ```
 searchKey: elf.R_MIPS_CALL16
+tags: [constant number]
 ```
 
 ```Go
@@ -10874,160 +10977,11 @@ const R_MIPS_CALL16 R_MIPS = 11 /* 16 bit call through glbl offset tbl */
 
 ```
 
-### <a id="R_MIPS_GPREL32" href="#R_MIPS_GPREL32">const R_MIPS_GPREL32</a>
-
-```
-searchKey: elf.R_MIPS_GPREL32
-```
-
-```Go
-const R_MIPS_GPREL32 R_MIPS = 12
-```
-
-### <a id="R_MIPS_SHIFT5" href="#R_MIPS_SHIFT5">const R_MIPS_SHIFT5</a>
-
-```
-searchKey: elf.R_MIPS_SHIFT5
-```
-
-```Go
-const R_MIPS_SHIFT5 R_MIPS = 16
-```
-
-### <a id="R_MIPS_SHIFT6" href="#R_MIPS_SHIFT6">const R_MIPS_SHIFT6</a>
-
-```
-searchKey: elf.R_MIPS_SHIFT6
-```
-
-```Go
-const R_MIPS_SHIFT6 R_MIPS = 17
-```
-
-### <a id="R_MIPS_64" href="#R_MIPS_64">const R_MIPS_64</a>
-
-```
-searchKey: elf.R_MIPS_64
-```
-
-```Go
-const R_MIPS_64 R_MIPS = 18
-```
-
-### <a id="R_MIPS_GOT_DISP" href="#R_MIPS_GOT_DISP">const R_MIPS_GOT_DISP</a>
-
-```
-searchKey: elf.R_MIPS_GOT_DISP
-```
-
-```Go
-const R_MIPS_GOT_DISP R_MIPS = 19
-```
-
-### <a id="R_MIPS_GOT_PAGE" href="#R_MIPS_GOT_PAGE">const R_MIPS_GOT_PAGE</a>
-
-```
-searchKey: elf.R_MIPS_GOT_PAGE
-```
-
-```Go
-const R_MIPS_GOT_PAGE R_MIPS = 20
-```
-
-### <a id="R_MIPS_GOT_OFST" href="#R_MIPS_GOT_OFST">const R_MIPS_GOT_OFST</a>
-
-```
-searchKey: elf.R_MIPS_GOT_OFST
-```
-
-```Go
-const R_MIPS_GOT_OFST R_MIPS = 21
-```
-
-### <a id="R_MIPS_GOT_HI16" href="#R_MIPS_GOT_HI16">const R_MIPS_GOT_HI16</a>
-
-```
-searchKey: elf.R_MIPS_GOT_HI16
-```
-
-```Go
-const R_MIPS_GOT_HI16 R_MIPS = 22
-```
-
-### <a id="R_MIPS_GOT_LO16" href="#R_MIPS_GOT_LO16">const R_MIPS_GOT_LO16</a>
-
-```
-searchKey: elf.R_MIPS_GOT_LO16
-```
-
-```Go
-const R_MIPS_GOT_LO16 R_MIPS = 23
-```
-
-### <a id="R_MIPS_SUB" href="#R_MIPS_SUB">const R_MIPS_SUB</a>
-
-```
-searchKey: elf.R_MIPS_SUB
-```
-
-```Go
-const R_MIPS_SUB R_MIPS = 24
-```
-
-### <a id="R_MIPS_INSERT_A" href="#R_MIPS_INSERT_A">const R_MIPS_INSERT_A</a>
-
-```
-searchKey: elf.R_MIPS_INSERT_A
-```
-
-```Go
-const R_MIPS_INSERT_A R_MIPS = 25
-```
-
-### <a id="R_MIPS_INSERT_B" href="#R_MIPS_INSERT_B">const R_MIPS_INSERT_B</a>
-
-```
-searchKey: elf.R_MIPS_INSERT_B
-```
-
-```Go
-const R_MIPS_INSERT_B R_MIPS = 26
-```
-
-### <a id="R_MIPS_DELETE" href="#R_MIPS_DELETE">const R_MIPS_DELETE</a>
-
-```
-searchKey: elf.R_MIPS_DELETE
-```
-
-```Go
-const R_MIPS_DELETE R_MIPS = 27
-```
-
-### <a id="R_MIPS_HIGHER" href="#R_MIPS_HIGHER">const R_MIPS_HIGHER</a>
-
-```
-searchKey: elf.R_MIPS_HIGHER
-```
-
-```Go
-const R_MIPS_HIGHER R_MIPS = 28
-```
-
-### <a id="R_MIPS_HIGHEST" href="#R_MIPS_HIGHEST">const R_MIPS_HIGHEST</a>
-
-```
-searchKey: elf.R_MIPS_HIGHEST
-```
-
-```Go
-const R_MIPS_HIGHEST R_MIPS = 29
-```
-
 ### <a id="R_MIPS_CALL_HI16" href="#R_MIPS_CALL_HI16">const R_MIPS_CALL_HI16</a>
 
 ```
 searchKey: elf.R_MIPS_CALL_HI16
+tags: [constant number]
 ```
 
 ```Go
@@ -11038,76 +10992,321 @@ const R_MIPS_CALL_HI16 R_MIPS = 30
 
 ```
 searchKey: elf.R_MIPS_CALL_LO16
+tags: [constant number]
 ```
 
 ```Go
 const R_MIPS_CALL_LO16 R_MIPS = 31
 ```
 
-### <a id="R_MIPS_SCN_DISP" href="#R_MIPS_SCN_DISP">const R_MIPS_SCN_DISP</a>
+### <a id="R_MIPS_DELETE" href="#R_MIPS_DELETE">const R_MIPS_DELETE</a>
 
 ```
-searchKey: elf.R_MIPS_SCN_DISP
-```
-
-```Go
-const R_MIPS_SCN_DISP R_MIPS = 32
-```
-
-### <a id="R_MIPS_REL16" href="#R_MIPS_REL16">const R_MIPS_REL16</a>
-
-```
-searchKey: elf.R_MIPS_REL16
+searchKey: elf.R_MIPS_DELETE
+tags: [constant number]
 ```
 
 ```Go
-const R_MIPS_REL16 R_MIPS = 33
+const R_MIPS_DELETE R_MIPS = 27
 ```
 
-### <a id="R_MIPS_ADD_IMMEDIATE" href="#R_MIPS_ADD_IMMEDIATE">const R_MIPS_ADD_IMMEDIATE</a>
+### <a id="R_MIPS_GOT16" href="#R_MIPS_GOT16">const R_MIPS_GOT16</a>
 
 ```
-searchKey: elf.R_MIPS_ADD_IMMEDIATE
-```
-
-```Go
-const R_MIPS_ADD_IMMEDIATE R_MIPS = 34
-```
-
-### <a id="R_MIPS_PJUMP" href="#R_MIPS_PJUMP">const R_MIPS_PJUMP</a>
-
-```
-searchKey: elf.R_MIPS_PJUMP
+searchKey: elf.R_MIPS_GOT16
+tags: [constant number]
 ```
 
 ```Go
-const R_MIPS_PJUMP R_MIPS = 35
-```
-
-### <a id="R_MIPS_RELGOT" href="#R_MIPS_RELGOT">const R_MIPS_RELGOT</a>
+const R_MIPS_GOT16 R_MIPS = 9 /* Reference to global offset table */
 
 ```
-searchKey: elf.R_MIPS_RELGOT
+
+### <a id="R_MIPS_GOT_DISP" href="#R_MIPS_GOT_DISP">const R_MIPS_GOT_DISP</a>
+
+```
+searchKey: elf.R_MIPS_GOT_DISP
+tags: [constant number]
 ```
 
 ```Go
-const R_MIPS_RELGOT R_MIPS = 36
+const R_MIPS_GOT_DISP R_MIPS = 19
+```
+
+### <a id="R_MIPS_GOT_HI16" href="#R_MIPS_GOT_HI16">const R_MIPS_GOT_HI16</a>
+
+```
+searchKey: elf.R_MIPS_GOT_HI16
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_GOT_HI16 R_MIPS = 22
+```
+
+### <a id="R_MIPS_GOT_LO16" href="#R_MIPS_GOT_LO16">const R_MIPS_GOT_LO16</a>
+
+```
+searchKey: elf.R_MIPS_GOT_LO16
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_GOT_LO16 R_MIPS = 23
+```
+
+### <a id="R_MIPS_GOT_OFST" href="#R_MIPS_GOT_OFST">const R_MIPS_GOT_OFST</a>
+
+```
+searchKey: elf.R_MIPS_GOT_OFST
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_GOT_OFST R_MIPS = 21
+```
+
+### <a id="R_MIPS_GOT_PAGE" href="#R_MIPS_GOT_PAGE">const R_MIPS_GOT_PAGE</a>
+
+```
+searchKey: elf.R_MIPS_GOT_PAGE
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_GOT_PAGE R_MIPS = 20
+```
+
+### <a id="R_MIPS_GPREL16" href="#R_MIPS_GPREL16">const R_MIPS_GPREL16</a>
+
+```
+searchKey: elf.R_MIPS_GPREL16
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_GPREL16 R_MIPS = 7 /* GP-relative reference  */
+
+```
+
+### <a id="R_MIPS_GPREL32" href="#R_MIPS_GPREL32">const R_MIPS_GPREL32</a>
+
+```
+searchKey: elf.R_MIPS_GPREL32
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_GPREL32 R_MIPS = 12
+```
+
+### <a id="R_MIPS_HI16" href="#R_MIPS_HI16">const R_MIPS_HI16</a>
+
+```
+searchKey: elf.R_MIPS_HI16
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_HI16 R_MIPS = 5 /* high 16 bits of symbol value */
+
+```
+
+### <a id="R_MIPS_HIGHER" href="#R_MIPS_HIGHER">const R_MIPS_HIGHER</a>
+
+```
+searchKey: elf.R_MIPS_HIGHER
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_HIGHER R_MIPS = 28
+```
+
+### <a id="R_MIPS_HIGHEST" href="#R_MIPS_HIGHEST">const R_MIPS_HIGHEST</a>
+
+```
+searchKey: elf.R_MIPS_HIGHEST
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_HIGHEST R_MIPS = 29
+```
+
+### <a id="R_MIPS_INSERT_A" href="#R_MIPS_INSERT_A">const R_MIPS_INSERT_A</a>
+
+```
+searchKey: elf.R_MIPS_INSERT_A
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_INSERT_A R_MIPS = 25
+```
+
+### <a id="R_MIPS_INSERT_B" href="#R_MIPS_INSERT_B">const R_MIPS_INSERT_B</a>
+
+```
+searchKey: elf.R_MIPS_INSERT_B
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_INSERT_B R_MIPS = 26
 ```
 
 ### <a id="R_MIPS_JALR" href="#R_MIPS_JALR">const R_MIPS_JALR</a>
 
 ```
 searchKey: elf.R_MIPS_JALR
+tags: [constant number]
 ```
 
 ```Go
 const R_MIPS_JALR R_MIPS = 37
 ```
 
+### <a id="R_MIPS_LITERAL" href="#R_MIPS_LITERAL">const R_MIPS_LITERAL</a>
+
+```
+searchKey: elf.R_MIPS_LITERAL
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_LITERAL R_MIPS = 8 /* Reference to literal section  */
+
+```
+
+### <a id="R_MIPS_LO16" href="#R_MIPS_LO16">const R_MIPS_LO16</a>
+
+```
+searchKey: elf.R_MIPS_LO16
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_LO16 R_MIPS = 6 /* low 16 bits of symbol value */
+
+```
+
+### <a id="R_MIPS_NONE" href="#R_MIPS_NONE">const R_MIPS_NONE</a>
+
+```
+searchKey: elf.R_MIPS_NONE
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_NONE R_MIPS = 0
+```
+
+### <a id="R_MIPS_PC16" href="#R_MIPS_PC16">const R_MIPS_PC16</a>
+
+```
+searchKey: elf.R_MIPS_PC16
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_PC16 R_MIPS = 10 /* 16 bit PC relative reference */
+
+```
+
+### <a id="R_MIPS_PJUMP" href="#R_MIPS_PJUMP">const R_MIPS_PJUMP</a>
+
+```
+searchKey: elf.R_MIPS_PJUMP
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_PJUMP R_MIPS = 35
+```
+
+### <a id="R_MIPS_REL16" href="#R_MIPS_REL16">const R_MIPS_REL16</a>
+
+```
+searchKey: elf.R_MIPS_REL16
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_REL16 R_MIPS = 33
+```
+
+### <a id="R_MIPS_REL32" href="#R_MIPS_REL32">const R_MIPS_REL32</a>
+
+```
+searchKey: elf.R_MIPS_REL32
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_REL32 R_MIPS = 3
+```
+
+### <a id="R_MIPS_RELGOT" href="#R_MIPS_RELGOT">const R_MIPS_RELGOT</a>
+
+```
+searchKey: elf.R_MIPS_RELGOT
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_RELGOT R_MIPS = 36
+```
+
+### <a id="R_MIPS_SCN_DISP" href="#R_MIPS_SCN_DISP">const R_MIPS_SCN_DISP</a>
+
+```
+searchKey: elf.R_MIPS_SCN_DISP
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_SCN_DISP R_MIPS = 32
+```
+
+### <a id="R_MIPS_SHIFT5" href="#R_MIPS_SHIFT5">const R_MIPS_SHIFT5</a>
+
+```
+searchKey: elf.R_MIPS_SHIFT5
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_SHIFT5 R_MIPS = 16
+```
+
+### <a id="R_MIPS_SHIFT6" href="#R_MIPS_SHIFT6">const R_MIPS_SHIFT6</a>
+
+```
+searchKey: elf.R_MIPS_SHIFT6
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_SHIFT6 R_MIPS = 17
+```
+
+### <a id="R_MIPS_SUB" href="#R_MIPS_SUB">const R_MIPS_SUB</a>
+
+```
+searchKey: elf.R_MIPS_SUB
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_SUB R_MIPS = 24
+```
+
 ### <a id="R_MIPS_TLS_DTPMOD32" href="#R_MIPS_TLS_DTPMOD32">const R_MIPS_TLS_DTPMOD32</a>
 
 ```
 searchKey: elf.R_MIPS_TLS_DTPMOD32
+tags: [constant number]
 ```
 
 ```Go
@@ -11115,21 +11314,11 @@ const R_MIPS_TLS_DTPMOD32 R_MIPS = 38 /* Module number 32 bit */
 
 ```
 
-### <a id="R_MIPS_TLS_DTPREL32" href="#R_MIPS_TLS_DTPREL32">const R_MIPS_TLS_DTPREL32</a>
-
-```
-searchKey: elf.R_MIPS_TLS_DTPREL32
-```
-
-```Go
-const R_MIPS_TLS_DTPREL32 R_MIPS = 39 /* Module-relative offset 32 bit */
-
-```
-
 ### <a id="R_MIPS_TLS_DTPMOD64" href="#R_MIPS_TLS_DTPMOD64">const R_MIPS_TLS_DTPMOD64</a>
 
 ```
 searchKey: elf.R_MIPS_TLS_DTPMOD64
+tags: [constant number]
 ```
 
 ```Go
@@ -11137,10 +11326,23 @@ const R_MIPS_TLS_DTPMOD64 R_MIPS = 40 /* Module number 64 bit */
 
 ```
 
+### <a id="R_MIPS_TLS_DTPREL32" href="#R_MIPS_TLS_DTPREL32">const R_MIPS_TLS_DTPREL32</a>
+
+```
+searchKey: elf.R_MIPS_TLS_DTPREL32
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_TLS_DTPREL32 R_MIPS = 39 /* Module-relative offset 32 bit */
+
+```
+
 ### <a id="R_MIPS_TLS_DTPREL64" href="#R_MIPS_TLS_DTPREL64">const R_MIPS_TLS_DTPREL64</a>
 
 ```
 searchKey: elf.R_MIPS_TLS_DTPREL64
+tags: [constant number]
 ```
 
 ```Go
@@ -11148,32 +11350,11 @@ const R_MIPS_TLS_DTPREL64 R_MIPS = 41 /* Module-relative offset 64 bit */
 
 ```
 
-### <a id="R_MIPS_TLS_GD" href="#R_MIPS_TLS_GD">const R_MIPS_TLS_GD</a>
-
-```
-searchKey: elf.R_MIPS_TLS_GD
-```
-
-```Go
-const R_MIPS_TLS_GD R_MIPS = 42 /* 16 bit GOT offset for GD */
-
-```
-
-### <a id="R_MIPS_TLS_LDM" href="#R_MIPS_TLS_LDM">const R_MIPS_TLS_LDM</a>
-
-```
-searchKey: elf.R_MIPS_TLS_LDM
-```
-
-```Go
-const R_MIPS_TLS_LDM R_MIPS = 43 /* 16 bit GOT offset for LDM */
-
-```
-
 ### <a id="R_MIPS_TLS_DTPREL_HI16" href="#R_MIPS_TLS_DTPREL_HI16">const R_MIPS_TLS_DTPREL_HI16</a>
 
 ```
 searchKey: elf.R_MIPS_TLS_DTPREL_HI16
+tags: [constant number]
 ```
 
 ```Go
@@ -11185,6 +11366,7 @@ const R_MIPS_TLS_DTPREL_HI16 R_MIPS = 44 /* Module-relative offset, high 16 bits
 
 ```
 searchKey: elf.R_MIPS_TLS_DTPREL_LO16
+tags: [constant number]
 ```
 
 ```Go
@@ -11192,10 +11374,23 @@ const R_MIPS_TLS_DTPREL_LO16 R_MIPS = 45 /* Module-relative offset, low 16 bits 
 
 ```
 
+### <a id="R_MIPS_TLS_GD" href="#R_MIPS_TLS_GD">const R_MIPS_TLS_GD</a>
+
+```
+searchKey: elf.R_MIPS_TLS_GD
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_TLS_GD R_MIPS = 42 /* 16 bit GOT offset for GD */
+
+```
+
 ### <a id="R_MIPS_TLS_GOTTPREL" href="#R_MIPS_TLS_GOTTPREL">const R_MIPS_TLS_GOTTPREL</a>
 
 ```
 searchKey: elf.R_MIPS_TLS_GOTTPREL
+tags: [constant number]
 ```
 
 ```Go
@@ -11203,10 +11398,23 @@ const R_MIPS_TLS_GOTTPREL R_MIPS = 46 /* 16 bit GOT offset for IE */
 
 ```
 
+### <a id="R_MIPS_TLS_LDM" href="#R_MIPS_TLS_LDM">const R_MIPS_TLS_LDM</a>
+
+```
+searchKey: elf.R_MIPS_TLS_LDM
+tags: [constant number]
+```
+
+```Go
+const R_MIPS_TLS_LDM R_MIPS = 43 /* 16 bit GOT offset for LDM */
+
+```
+
 ### <a id="R_MIPS_TLS_TPREL32" href="#R_MIPS_TLS_TPREL32">const R_MIPS_TLS_TPREL32</a>
 
 ```
 searchKey: elf.R_MIPS_TLS_TPREL32
+tags: [constant number]
 ```
 
 ```Go
@@ -11218,6 +11426,7 @@ const R_MIPS_TLS_TPREL32 R_MIPS = 47 /* TP-relative offset, 32 bit */
 
 ```
 searchKey: elf.R_MIPS_TLS_TPREL64
+tags: [constant number]
 ```
 
 ```Go
@@ -11229,6 +11438,7 @@ const R_MIPS_TLS_TPREL64 R_MIPS = 48 /* TP-relative offset, 64 bit */
 
 ```
 searchKey: elf.R_MIPS_TLS_TPREL_HI16
+tags: [constant number]
 ```
 
 ```Go
@@ -11240,6 +11450,7 @@ const R_MIPS_TLS_TPREL_HI16 R_MIPS = 49 /* TP-relative offset, high 16 bits */
 
 ```
 searchKey: elf.R_MIPS_TLS_TPREL_LO16
+tags: [constant number]
 ```
 
 ```Go
@@ -11247,915 +11458,11 @@ const R_MIPS_TLS_TPREL_LO16 R_MIPS = 50 /* TP-relative offset, low 16 bits */
 
 ```
 
-### <a id="R_PPC_NONE" href="#R_PPC_NONE">const R_PPC_NONE</a>
-
-```
-searchKey: elf.R_PPC_NONE
-```
-
-```Go
-const R_PPC_NONE R_PPC = 0 // R_POWERPC_NONE
-
-```
-
-### <a id="R_PPC_ADDR32" href="#R_PPC_ADDR32">const R_PPC_ADDR32</a>
-
-```
-searchKey: elf.R_PPC_ADDR32
-```
-
-```Go
-const R_PPC_ADDR32 R_PPC = 1 // R_POWERPC_ADDR32
-
-```
-
-### <a id="R_PPC_ADDR24" href="#R_PPC_ADDR24">const R_PPC_ADDR24</a>
-
-```
-searchKey: elf.R_PPC_ADDR24
-```
-
-```Go
-const R_PPC_ADDR24 R_PPC = 2 // R_POWERPC_ADDR24
-
-```
-
-### <a id="R_PPC_ADDR16" href="#R_PPC_ADDR16">const R_PPC_ADDR16</a>
-
-```
-searchKey: elf.R_PPC_ADDR16
-```
-
-```Go
-const R_PPC_ADDR16 R_PPC = 3 // R_POWERPC_ADDR16
-
-```
-
-### <a id="R_PPC_ADDR16_LO" href="#R_PPC_ADDR16_LO">const R_PPC_ADDR16_LO</a>
-
-```
-searchKey: elf.R_PPC_ADDR16_LO
-```
-
-```Go
-const R_PPC_ADDR16_LO R_PPC = 4 // R_POWERPC_ADDR16_LO
-
-```
-
-### <a id="R_PPC_ADDR16_HI" href="#R_PPC_ADDR16_HI">const R_PPC_ADDR16_HI</a>
-
-```
-searchKey: elf.R_PPC_ADDR16_HI
-```
-
-```Go
-const R_PPC_ADDR16_HI R_PPC = 5 // R_POWERPC_ADDR16_HI
-
-```
-
-### <a id="R_PPC_ADDR16_HA" href="#R_PPC_ADDR16_HA">const R_PPC_ADDR16_HA</a>
-
-```
-searchKey: elf.R_PPC_ADDR16_HA
-```
-
-```Go
-const R_PPC_ADDR16_HA R_PPC = 6 // R_POWERPC_ADDR16_HA
-
-```
-
-### <a id="R_PPC_ADDR14" href="#R_PPC_ADDR14">const R_PPC_ADDR14</a>
-
-```
-searchKey: elf.R_PPC_ADDR14
-```
-
-```Go
-const R_PPC_ADDR14 R_PPC = 7 // R_POWERPC_ADDR14
-
-```
-
-### <a id="R_PPC_ADDR14_BRTAKEN" href="#R_PPC_ADDR14_BRTAKEN">const R_PPC_ADDR14_BRTAKEN</a>
-
-```
-searchKey: elf.R_PPC_ADDR14_BRTAKEN
-```
-
-```Go
-const R_PPC_ADDR14_BRTAKEN R_PPC = 8 // R_POWERPC_ADDR14_BRTAKEN
-
-```
-
-### <a id="R_PPC_ADDR14_BRNTAKEN" href="#R_PPC_ADDR14_BRNTAKEN">const R_PPC_ADDR14_BRNTAKEN</a>
-
-```
-searchKey: elf.R_PPC_ADDR14_BRNTAKEN
-```
-
-```Go
-const R_PPC_ADDR14_BRNTAKEN R_PPC = 9 // R_POWERPC_ADDR14_BRNTAKEN
-
-```
-
-### <a id="R_PPC_REL24" href="#R_PPC_REL24">const R_PPC_REL24</a>
-
-```
-searchKey: elf.R_PPC_REL24
-```
-
-```Go
-const R_PPC_REL24 R_PPC = 10 // R_POWERPC_REL24
-
-```
-
-### <a id="R_PPC_REL14" href="#R_PPC_REL14">const R_PPC_REL14</a>
-
-```
-searchKey: elf.R_PPC_REL14
-```
-
-```Go
-const R_PPC_REL14 R_PPC = 11 // R_POWERPC_REL14
-
-```
-
-### <a id="R_PPC_REL14_BRTAKEN" href="#R_PPC_REL14_BRTAKEN">const R_PPC_REL14_BRTAKEN</a>
-
-```
-searchKey: elf.R_PPC_REL14_BRTAKEN
-```
-
-```Go
-const R_PPC_REL14_BRTAKEN R_PPC = 12 // R_POWERPC_REL14_BRTAKEN
-
-```
-
-### <a id="R_PPC_REL14_BRNTAKEN" href="#R_PPC_REL14_BRNTAKEN">const R_PPC_REL14_BRNTAKEN</a>
-
-```
-searchKey: elf.R_PPC_REL14_BRNTAKEN
-```
-
-```Go
-const R_PPC_REL14_BRNTAKEN R_PPC = 13 // R_POWERPC_REL14_BRNTAKEN
-
-```
-
-### <a id="R_PPC_GOT16" href="#R_PPC_GOT16">const R_PPC_GOT16</a>
-
-```
-searchKey: elf.R_PPC_GOT16
-```
-
-```Go
-const R_PPC_GOT16 R_PPC = 14 // R_POWERPC_GOT16
-
-```
-
-### <a id="R_PPC_GOT16_LO" href="#R_PPC_GOT16_LO">const R_PPC_GOT16_LO</a>
-
-```
-searchKey: elf.R_PPC_GOT16_LO
-```
-
-```Go
-const R_PPC_GOT16_LO R_PPC = 15 // R_POWERPC_GOT16_LO
-
-```
-
-### <a id="R_PPC_GOT16_HI" href="#R_PPC_GOT16_HI">const R_PPC_GOT16_HI</a>
-
-```
-searchKey: elf.R_PPC_GOT16_HI
-```
-
-```Go
-const R_PPC_GOT16_HI R_PPC = 16 // R_POWERPC_GOT16_HI
-
-```
-
-### <a id="R_PPC_GOT16_HA" href="#R_PPC_GOT16_HA">const R_PPC_GOT16_HA</a>
-
-```
-searchKey: elf.R_PPC_GOT16_HA
-```
-
-```Go
-const R_PPC_GOT16_HA R_PPC = 17 // R_POWERPC_GOT16_HA
-
-```
-
-### <a id="R_PPC_PLTREL24" href="#R_PPC_PLTREL24">const R_PPC_PLTREL24</a>
-
-```
-searchKey: elf.R_PPC_PLTREL24
-```
-
-```Go
-const R_PPC_PLTREL24 R_PPC = 18
-```
-
-### <a id="R_PPC_COPY" href="#R_PPC_COPY">const R_PPC_COPY</a>
-
-```
-searchKey: elf.R_PPC_COPY
-```
-
-```Go
-const R_PPC_COPY R_PPC = 19 // R_POWERPC_COPY
-
-```
-
-### <a id="R_PPC_GLOB_DAT" href="#R_PPC_GLOB_DAT">const R_PPC_GLOB_DAT</a>
-
-```
-searchKey: elf.R_PPC_GLOB_DAT
-```
-
-```Go
-const R_PPC_GLOB_DAT R_PPC = 20 // R_POWERPC_GLOB_DAT
-
-```
-
-### <a id="R_PPC_JMP_SLOT" href="#R_PPC_JMP_SLOT">const R_PPC_JMP_SLOT</a>
-
-```
-searchKey: elf.R_PPC_JMP_SLOT
-```
-
-```Go
-const R_PPC_JMP_SLOT R_PPC = 21 // R_POWERPC_JMP_SLOT
-
-```
-
-### <a id="R_PPC_RELATIVE" href="#R_PPC_RELATIVE">const R_PPC_RELATIVE</a>
-
-```
-searchKey: elf.R_PPC_RELATIVE
-```
-
-```Go
-const R_PPC_RELATIVE R_PPC = 22 // R_POWERPC_RELATIVE
-
-```
-
-### <a id="R_PPC_LOCAL24PC" href="#R_PPC_LOCAL24PC">const R_PPC_LOCAL24PC</a>
-
-```
-searchKey: elf.R_PPC_LOCAL24PC
-```
-
-```Go
-const R_PPC_LOCAL24PC R_PPC = 23
-```
-
-### <a id="R_PPC_UADDR32" href="#R_PPC_UADDR32">const R_PPC_UADDR32</a>
-
-```
-searchKey: elf.R_PPC_UADDR32
-```
-
-```Go
-const R_PPC_UADDR32 R_PPC = 24 // R_POWERPC_UADDR32
-
-```
-
-### <a id="R_PPC_UADDR16" href="#R_PPC_UADDR16">const R_PPC_UADDR16</a>
-
-```
-searchKey: elf.R_PPC_UADDR16
-```
-
-```Go
-const R_PPC_UADDR16 R_PPC = 25 // R_POWERPC_UADDR16
-
-```
-
-### <a id="R_PPC_REL32" href="#R_PPC_REL32">const R_PPC_REL32</a>
-
-```
-searchKey: elf.R_PPC_REL32
-```
-
-```Go
-const R_PPC_REL32 R_PPC = 26 // R_POWERPC_REL32
-
-```
-
-### <a id="R_PPC_PLT32" href="#R_PPC_PLT32">const R_PPC_PLT32</a>
-
-```
-searchKey: elf.R_PPC_PLT32
-```
-
-```Go
-const R_PPC_PLT32 R_PPC = 27 // R_POWERPC_PLT32
-
-```
-
-### <a id="R_PPC_PLTREL32" href="#R_PPC_PLTREL32">const R_PPC_PLTREL32</a>
-
-```
-searchKey: elf.R_PPC_PLTREL32
-```
-
-```Go
-const R_PPC_PLTREL32 R_PPC = 28 // R_POWERPC_PLTREL32
-
-```
-
-### <a id="R_PPC_PLT16_LO" href="#R_PPC_PLT16_LO">const R_PPC_PLT16_LO</a>
-
-```
-searchKey: elf.R_PPC_PLT16_LO
-```
-
-```Go
-const R_PPC_PLT16_LO R_PPC = 29 // R_POWERPC_PLT16_LO
-
-```
-
-### <a id="R_PPC_PLT16_HI" href="#R_PPC_PLT16_HI">const R_PPC_PLT16_HI</a>
-
-```
-searchKey: elf.R_PPC_PLT16_HI
-```
-
-```Go
-const R_PPC_PLT16_HI R_PPC = 30 // R_POWERPC_PLT16_HI
-
-```
-
-### <a id="R_PPC_PLT16_HA" href="#R_PPC_PLT16_HA">const R_PPC_PLT16_HA</a>
-
-```
-searchKey: elf.R_PPC_PLT16_HA
-```
-
-```Go
-const R_PPC_PLT16_HA R_PPC = 31 // R_POWERPC_PLT16_HA
-
-```
-
-### <a id="R_PPC_SDAREL16" href="#R_PPC_SDAREL16">const R_PPC_SDAREL16</a>
-
-```
-searchKey: elf.R_PPC_SDAREL16
-```
-
-```Go
-const R_PPC_SDAREL16 R_PPC = 32
-```
-
-### <a id="R_PPC_SECTOFF" href="#R_PPC_SECTOFF">const R_PPC_SECTOFF</a>
-
-```
-searchKey: elf.R_PPC_SECTOFF
-```
-
-```Go
-const R_PPC_SECTOFF R_PPC = 33 // R_POWERPC_SECTOFF
-
-```
-
-### <a id="R_PPC_SECTOFF_LO" href="#R_PPC_SECTOFF_LO">const R_PPC_SECTOFF_LO</a>
-
-```
-searchKey: elf.R_PPC_SECTOFF_LO
-```
-
-```Go
-const R_PPC_SECTOFF_LO R_PPC = 34 // R_POWERPC_SECTOFF_LO
-
-```
-
-### <a id="R_PPC_SECTOFF_HI" href="#R_PPC_SECTOFF_HI">const R_PPC_SECTOFF_HI</a>
-
-```
-searchKey: elf.R_PPC_SECTOFF_HI
-```
-
-```Go
-const R_PPC_SECTOFF_HI R_PPC = 35 // R_POWERPC_SECTOFF_HI
-
-```
-
-### <a id="R_PPC_SECTOFF_HA" href="#R_PPC_SECTOFF_HA">const R_PPC_SECTOFF_HA</a>
-
-```
-searchKey: elf.R_PPC_SECTOFF_HA
-```
-
-```Go
-const R_PPC_SECTOFF_HA R_PPC = 36 // R_POWERPC_SECTOFF_HA
-
-```
-
-### <a id="R_PPC_TLS" href="#R_PPC_TLS">const R_PPC_TLS</a>
-
-```
-searchKey: elf.R_PPC_TLS
-```
-
-```Go
-const R_PPC_TLS R_PPC = 67 // R_POWERPC_TLS
-
-```
-
-### <a id="R_PPC_DTPMOD32" href="#R_PPC_DTPMOD32">const R_PPC_DTPMOD32</a>
-
-```
-searchKey: elf.R_PPC_DTPMOD32
-```
-
-```Go
-const R_PPC_DTPMOD32 R_PPC = 68 // R_POWERPC_DTPMOD32
-
-```
-
-### <a id="R_PPC_TPREL16" href="#R_PPC_TPREL16">const R_PPC_TPREL16</a>
-
-```
-searchKey: elf.R_PPC_TPREL16
-```
-
-```Go
-const R_PPC_TPREL16 R_PPC = 69 // R_POWERPC_TPREL16
-
-```
-
-### <a id="R_PPC_TPREL16_LO" href="#R_PPC_TPREL16_LO">const R_PPC_TPREL16_LO</a>
-
-```
-searchKey: elf.R_PPC_TPREL16_LO
-```
-
-```Go
-const R_PPC_TPREL16_LO R_PPC = 70 // R_POWERPC_TPREL16_LO
-
-```
-
-### <a id="R_PPC_TPREL16_HI" href="#R_PPC_TPREL16_HI">const R_PPC_TPREL16_HI</a>
-
-```
-searchKey: elf.R_PPC_TPREL16_HI
-```
-
-```Go
-const R_PPC_TPREL16_HI R_PPC = 71 // R_POWERPC_TPREL16_HI
-
-```
-
-### <a id="R_PPC_TPREL16_HA" href="#R_PPC_TPREL16_HA">const R_PPC_TPREL16_HA</a>
-
-```
-searchKey: elf.R_PPC_TPREL16_HA
-```
-
-```Go
-const R_PPC_TPREL16_HA R_PPC = 72 // R_POWERPC_TPREL16_HA
-
-```
-
-### <a id="R_PPC_TPREL32" href="#R_PPC_TPREL32">const R_PPC_TPREL32</a>
-
-```
-searchKey: elf.R_PPC_TPREL32
-```
-
-```Go
-const R_PPC_TPREL32 R_PPC = 73 // R_POWERPC_TPREL32
-
-```
-
-### <a id="R_PPC_DTPREL16" href="#R_PPC_DTPREL16">const R_PPC_DTPREL16</a>
-
-```
-searchKey: elf.R_PPC_DTPREL16
-```
-
-```Go
-const R_PPC_DTPREL16 R_PPC = 74 // R_POWERPC_DTPREL16
-
-```
-
-### <a id="R_PPC_DTPREL16_LO" href="#R_PPC_DTPREL16_LO">const R_PPC_DTPREL16_LO</a>
-
-```
-searchKey: elf.R_PPC_DTPREL16_LO
-```
-
-```Go
-const R_PPC_DTPREL16_LO R_PPC = 75 // R_POWERPC_DTPREL16_LO
-
-```
-
-### <a id="R_PPC_DTPREL16_HI" href="#R_PPC_DTPREL16_HI">const R_PPC_DTPREL16_HI</a>
-
-```
-searchKey: elf.R_PPC_DTPREL16_HI
-```
-
-```Go
-const R_PPC_DTPREL16_HI R_PPC = 76 // R_POWERPC_DTPREL16_HI
-
-```
-
-### <a id="R_PPC_DTPREL16_HA" href="#R_PPC_DTPREL16_HA">const R_PPC_DTPREL16_HA</a>
-
-```
-searchKey: elf.R_PPC_DTPREL16_HA
-```
-
-```Go
-const R_PPC_DTPREL16_HA R_PPC = 77 // R_POWERPC_DTPREL16_HA
-
-```
-
-### <a id="R_PPC_DTPREL32" href="#R_PPC_DTPREL32">const R_PPC_DTPREL32</a>
-
-```
-searchKey: elf.R_PPC_DTPREL32
-```
-
-```Go
-const R_PPC_DTPREL32 R_PPC = 78 // R_POWERPC_DTPREL32
-
-```
-
-### <a id="R_PPC_GOT_TLSGD16" href="#R_PPC_GOT_TLSGD16">const R_PPC_GOT_TLSGD16</a>
-
-```
-searchKey: elf.R_PPC_GOT_TLSGD16
-```
-
-```Go
-const R_PPC_GOT_TLSGD16 R_PPC = 79 // R_POWERPC_GOT_TLSGD16
-
-```
-
-### <a id="R_PPC_GOT_TLSGD16_LO" href="#R_PPC_GOT_TLSGD16_LO">const R_PPC_GOT_TLSGD16_LO</a>
-
-```
-searchKey: elf.R_PPC_GOT_TLSGD16_LO
-```
-
-```Go
-const R_PPC_GOT_TLSGD16_LO R_PPC = 80 // R_POWERPC_GOT_TLSGD16_LO
-
-```
-
-### <a id="R_PPC_GOT_TLSGD16_HI" href="#R_PPC_GOT_TLSGD16_HI">const R_PPC_GOT_TLSGD16_HI</a>
-
-```
-searchKey: elf.R_PPC_GOT_TLSGD16_HI
-```
-
-```Go
-const R_PPC_GOT_TLSGD16_HI R_PPC = 81 // R_POWERPC_GOT_TLSGD16_HI
-
-```
-
-### <a id="R_PPC_GOT_TLSGD16_HA" href="#R_PPC_GOT_TLSGD16_HA">const R_PPC_GOT_TLSGD16_HA</a>
-
-```
-searchKey: elf.R_PPC_GOT_TLSGD16_HA
-```
-
-```Go
-const R_PPC_GOT_TLSGD16_HA R_PPC = 82 // R_POWERPC_GOT_TLSGD16_HA
-
-```
-
-### <a id="R_PPC_GOT_TLSLD16" href="#R_PPC_GOT_TLSLD16">const R_PPC_GOT_TLSLD16</a>
-
-```
-searchKey: elf.R_PPC_GOT_TLSLD16
-```
-
-```Go
-const R_PPC_GOT_TLSLD16 R_PPC = 83 // R_POWERPC_GOT_TLSLD16
-
-```
-
-### <a id="R_PPC_GOT_TLSLD16_LO" href="#R_PPC_GOT_TLSLD16_LO">const R_PPC_GOT_TLSLD16_LO</a>
-
-```
-searchKey: elf.R_PPC_GOT_TLSLD16_LO
-```
-
-```Go
-const R_PPC_GOT_TLSLD16_LO R_PPC = 84 // R_POWERPC_GOT_TLSLD16_LO
-
-```
-
-### <a id="R_PPC_GOT_TLSLD16_HI" href="#R_PPC_GOT_TLSLD16_HI">const R_PPC_GOT_TLSLD16_HI</a>
-
-```
-searchKey: elf.R_PPC_GOT_TLSLD16_HI
-```
-
-```Go
-const R_PPC_GOT_TLSLD16_HI R_PPC = 85 // R_POWERPC_GOT_TLSLD16_HI
-
-```
-
-### <a id="R_PPC_GOT_TLSLD16_HA" href="#R_PPC_GOT_TLSLD16_HA">const R_PPC_GOT_TLSLD16_HA</a>
-
-```
-searchKey: elf.R_PPC_GOT_TLSLD16_HA
-```
-
-```Go
-const R_PPC_GOT_TLSLD16_HA R_PPC = 86 // R_POWERPC_GOT_TLSLD16_HA
-
-```
-
-### <a id="R_PPC_GOT_TPREL16" href="#R_PPC_GOT_TPREL16">const R_PPC_GOT_TPREL16</a>
-
-```
-searchKey: elf.R_PPC_GOT_TPREL16
-```
-
-```Go
-const R_PPC_GOT_TPREL16 R_PPC = 87 // R_POWERPC_GOT_TPREL16
-
-```
-
-### <a id="R_PPC_GOT_TPREL16_LO" href="#R_PPC_GOT_TPREL16_LO">const R_PPC_GOT_TPREL16_LO</a>
-
-```
-searchKey: elf.R_PPC_GOT_TPREL16_LO
-```
-
-```Go
-const R_PPC_GOT_TPREL16_LO R_PPC = 88 // R_POWERPC_GOT_TPREL16_LO
-
-```
-
-### <a id="R_PPC_GOT_TPREL16_HI" href="#R_PPC_GOT_TPREL16_HI">const R_PPC_GOT_TPREL16_HI</a>
-
-```
-searchKey: elf.R_PPC_GOT_TPREL16_HI
-```
-
-```Go
-const R_PPC_GOT_TPREL16_HI R_PPC = 89 // R_POWERPC_GOT_TPREL16_HI
-
-```
-
-### <a id="R_PPC_GOT_TPREL16_HA" href="#R_PPC_GOT_TPREL16_HA">const R_PPC_GOT_TPREL16_HA</a>
-
-```
-searchKey: elf.R_PPC_GOT_TPREL16_HA
-```
-
-```Go
-const R_PPC_GOT_TPREL16_HA R_PPC = 90 // R_POWERPC_GOT_TPREL16_HA
-
-```
-
-### <a id="R_PPC_EMB_NADDR32" href="#R_PPC_EMB_NADDR32">const R_PPC_EMB_NADDR32</a>
-
-```
-searchKey: elf.R_PPC_EMB_NADDR32
-```
-
-```Go
-const R_PPC_EMB_NADDR32 R_PPC = 101
-```
-
-### <a id="R_PPC_EMB_NADDR16" href="#R_PPC_EMB_NADDR16">const R_PPC_EMB_NADDR16</a>
-
-```
-searchKey: elf.R_PPC_EMB_NADDR16
-```
-
-```Go
-const R_PPC_EMB_NADDR16 R_PPC = 102
-```
-
-### <a id="R_PPC_EMB_NADDR16_LO" href="#R_PPC_EMB_NADDR16_LO">const R_PPC_EMB_NADDR16_LO</a>
-
-```
-searchKey: elf.R_PPC_EMB_NADDR16_LO
-```
-
-```Go
-const R_PPC_EMB_NADDR16_LO R_PPC = 103
-```
-
-### <a id="R_PPC_EMB_NADDR16_HI" href="#R_PPC_EMB_NADDR16_HI">const R_PPC_EMB_NADDR16_HI</a>
-
-```
-searchKey: elf.R_PPC_EMB_NADDR16_HI
-```
-
-```Go
-const R_PPC_EMB_NADDR16_HI R_PPC = 104
-```
-
-### <a id="R_PPC_EMB_NADDR16_HA" href="#R_PPC_EMB_NADDR16_HA">const R_PPC_EMB_NADDR16_HA</a>
-
-```
-searchKey: elf.R_PPC_EMB_NADDR16_HA
-```
-
-```Go
-const R_PPC_EMB_NADDR16_HA R_PPC = 105
-```
-
-### <a id="R_PPC_EMB_SDAI16" href="#R_PPC_EMB_SDAI16">const R_PPC_EMB_SDAI16</a>
-
-```
-searchKey: elf.R_PPC_EMB_SDAI16
-```
-
-```Go
-const R_PPC_EMB_SDAI16 R_PPC = 106
-```
-
-### <a id="R_PPC_EMB_SDA2I16" href="#R_PPC_EMB_SDA2I16">const R_PPC_EMB_SDA2I16</a>
-
-```
-searchKey: elf.R_PPC_EMB_SDA2I16
-```
-
-```Go
-const R_PPC_EMB_SDA2I16 R_PPC = 107
-```
-
-### <a id="R_PPC_EMB_SDA2REL" href="#R_PPC_EMB_SDA2REL">const R_PPC_EMB_SDA2REL</a>
-
-```
-searchKey: elf.R_PPC_EMB_SDA2REL
-```
-
-```Go
-const R_PPC_EMB_SDA2REL R_PPC = 108
-```
-
-### <a id="R_PPC_EMB_SDA21" href="#R_PPC_EMB_SDA21">const R_PPC_EMB_SDA21</a>
-
-```
-searchKey: elf.R_PPC_EMB_SDA21
-```
-
-```Go
-const R_PPC_EMB_SDA21 R_PPC = 109
-```
-
-### <a id="R_PPC_EMB_MRKREF" href="#R_PPC_EMB_MRKREF">const R_PPC_EMB_MRKREF</a>
-
-```
-searchKey: elf.R_PPC_EMB_MRKREF
-```
-
-```Go
-const R_PPC_EMB_MRKREF R_PPC = 110
-```
-
-### <a id="R_PPC_EMB_RELSEC16" href="#R_PPC_EMB_RELSEC16">const R_PPC_EMB_RELSEC16</a>
-
-```
-searchKey: elf.R_PPC_EMB_RELSEC16
-```
-
-```Go
-const R_PPC_EMB_RELSEC16 R_PPC = 111
-```
-
-### <a id="R_PPC_EMB_RELST_LO" href="#R_PPC_EMB_RELST_LO">const R_PPC_EMB_RELST_LO</a>
-
-```
-searchKey: elf.R_PPC_EMB_RELST_LO
-```
-
-```Go
-const R_PPC_EMB_RELST_LO R_PPC = 112
-```
-
-### <a id="R_PPC_EMB_RELST_HI" href="#R_PPC_EMB_RELST_HI">const R_PPC_EMB_RELST_HI</a>
-
-```
-searchKey: elf.R_PPC_EMB_RELST_HI
-```
-
-```Go
-const R_PPC_EMB_RELST_HI R_PPC = 113
-```
-
-### <a id="R_PPC_EMB_RELST_HA" href="#R_PPC_EMB_RELST_HA">const R_PPC_EMB_RELST_HA</a>
-
-```
-searchKey: elf.R_PPC_EMB_RELST_HA
-```
-
-```Go
-const R_PPC_EMB_RELST_HA R_PPC = 114
-```
-
-### <a id="R_PPC_EMB_BIT_FLD" href="#R_PPC_EMB_BIT_FLD">const R_PPC_EMB_BIT_FLD</a>
-
-```
-searchKey: elf.R_PPC_EMB_BIT_FLD
-```
-
-```Go
-const R_PPC_EMB_BIT_FLD R_PPC = 115
-```
-
-### <a id="R_PPC_EMB_RELSDA" href="#R_PPC_EMB_RELSDA">const R_PPC_EMB_RELSDA</a>
-
-```
-searchKey: elf.R_PPC_EMB_RELSDA
-```
-
-```Go
-const R_PPC_EMB_RELSDA R_PPC = 116
-```
-
-### <a id="R_PPC64_NONE" href="#R_PPC64_NONE">const R_PPC64_NONE</a>
-
-```
-searchKey: elf.R_PPC64_NONE
-```
-
-```Go
-const R_PPC64_NONE R_PPC64 = 0 // R_POWERPC_NONE
-
-```
-
-### <a id="R_PPC64_ADDR32" href="#R_PPC64_ADDR32">const R_PPC64_ADDR32</a>
-
-```
-searchKey: elf.R_PPC64_ADDR32
-```
-
-```Go
-const R_PPC64_ADDR32 R_PPC64 = 1 // R_POWERPC_ADDR32
-
-```
-
-### <a id="R_PPC64_ADDR24" href="#R_PPC64_ADDR24">const R_PPC64_ADDR24</a>
-
-```
-searchKey: elf.R_PPC64_ADDR24
-```
-
-```Go
-const R_PPC64_ADDR24 R_PPC64 = 2 // R_POWERPC_ADDR24
-
-```
-
-### <a id="R_PPC64_ADDR16" href="#R_PPC64_ADDR16">const R_PPC64_ADDR16</a>
-
-```
-searchKey: elf.R_PPC64_ADDR16
-```
-
-```Go
-const R_PPC64_ADDR16 R_PPC64 = 3 // R_POWERPC_ADDR16
-
-```
-
-### <a id="R_PPC64_ADDR16_LO" href="#R_PPC64_ADDR16_LO">const R_PPC64_ADDR16_LO</a>
-
-```
-searchKey: elf.R_PPC64_ADDR16_LO
-```
-
-```Go
-const R_PPC64_ADDR16_LO R_PPC64 = 4 // R_POWERPC_ADDR16_LO
-
-```
-
-### <a id="R_PPC64_ADDR16_HI" href="#R_PPC64_ADDR16_HI">const R_PPC64_ADDR16_HI</a>
-
-```
-searchKey: elf.R_PPC64_ADDR16_HI
-```
-
-```Go
-const R_PPC64_ADDR16_HI R_PPC64 = 5 // R_POWERPC_ADDR16_HI
-
-```
-
-### <a id="R_PPC64_ADDR16_HA" href="#R_PPC64_ADDR16_HA">const R_PPC64_ADDR16_HA</a>
-
-```
-searchKey: elf.R_PPC64_ADDR16_HA
-```
-
-```Go
-const R_PPC64_ADDR16_HA R_PPC64 = 6 // R_POWERPC_ADDR16_HA
-
-```
-
 ### <a id="R_PPC64_ADDR14" href="#R_PPC64_ADDR14">const R_PPC64_ADDR14</a>
 
 ```
 searchKey: elf.R_PPC64_ADDR14
+tags: [constant number]
 ```
 
 ```Go
@@ -12163,21 +11470,11 @@ const R_PPC64_ADDR14 R_PPC64 = 7 // R_POWERPC_ADDR14
 
 ```
 
-### <a id="R_PPC64_ADDR14_BRTAKEN" href="#R_PPC64_ADDR14_BRTAKEN">const R_PPC64_ADDR14_BRTAKEN</a>
-
-```
-searchKey: elf.R_PPC64_ADDR14_BRTAKEN
-```
-
-```Go
-const R_PPC64_ADDR14_BRTAKEN R_PPC64 = 8 // R_POWERPC_ADDR14_BRTAKEN
-
-```
-
 ### <a id="R_PPC64_ADDR14_BRNTAKEN" href="#R_PPC64_ADDR14_BRNTAKEN">const R_PPC64_ADDR14_BRNTAKEN</a>
 
 ```
 searchKey: elf.R_PPC64_ADDR14_BRNTAKEN
+tags: [constant number]
 ```
 
 ```Go
@@ -12185,838 +11482,70 @@ const R_PPC64_ADDR14_BRNTAKEN R_PPC64 = 9 // R_POWERPC_ADDR14_BRNTAKEN
 
 ```
 
-### <a id="R_PPC64_REL24" href="#R_PPC64_REL24">const R_PPC64_REL24</a>
+### <a id="R_PPC64_ADDR14_BRTAKEN" href="#R_PPC64_ADDR14_BRTAKEN">const R_PPC64_ADDR14_BRTAKEN</a>
 
 ```
-searchKey: elf.R_PPC64_REL24
-```
-
-```Go
-const R_PPC64_REL24 R_PPC64 = 10 // R_POWERPC_REL24
-
-```
-
-### <a id="R_PPC64_REL14" href="#R_PPC64_REL14">const R_PPC64_REL14</a>
-
-```
-searchKey: elf.R_PPC64_REL14
+searchKey: elf.R_PPC64_ADDR14_BRTAKEN
+tags: [constant number]
 ```
 
 ```Go
-const R_PPC64_REL14 R_PPC64 = 11 // R_POWERPC_REL14
+const R_PPC64_ADDR14_BRTAKEN R_PPC64 = 8 // R_POWERPC_ADDR14_BRTAKEN
 
 ```
 
-### <a id="R_PPC64_REL14_BRTAKEN" href="#R_PPC64_REL14_BRTAKEN">const R_PPC64_REL14_BRTAKEN</a>
+### <a id="R_PPC64_ADDR16" href="#R_PPC64_ADDR16">const R_PPC64_ADDR16</a>
 
 ```
-searchKey: elf.R_PPC64_REL14_BRTAKEN
-```
-
-```Go
-const R_PPC64_REL14_BRTAKEN R_PPC64 = 12 // R_POWERPC_REL14_BRTAKEN
-
-```
-
-### <a id="R_PPC64_REL14_BRNTAKEN" href="#R_PPC64_REL14_BRNTAKEN">const R_PPC64_REL14_BRNTAKEN</a>
-
-```
-searchKey: elf.R_PPC64_REL14_BRNTAKEN
+searchKey: elf.R_PPC64_ADDR16
+tags: [constant number]
 ```
 
 ```Go
-const R_PPC64_REL14_BRNTAKEN R_PPC64 = 13 // R_POWERPC_REL14_BRNTAKEN
+const R_PPC64_ADDR16 R_PPC64 = 3 // R_POWERPC_ADDR16
 
-```
-
-### <a id="R_PPC64_GOT16" href="#R_PPC64_GOT16">const R_PPC64_GOT16</a>
-
-```
-searchKey: elf.R_PPC64_GOT16
-```
-
-```Go
-const R_PPC64_GOT16 R_PPC64 = 14 // R_POWERPC_GOT16
-
-```
-
-### <a id="R_PPC64_GOT16_LO" href="#R_PPC64_GOT16_LO">const R_PPC64_GOT16_LO</a>
-
-```
-searchKey: elf.R_PPC64_GOT16_LO
-```
-
-```Go
-const R_PPC64_GOT16_LO R_PPC64 = 15 // R_POWERPC_GOT16_LO
-
-```
-
-### <a id="R_PPC64_GOT16_HI" href="#R_PPC64_GOT16_HI">const R_PPC64_GOT16_HI</a>
-
-```
-searchKey: elf.R_PPC64_GOT16_HI
-```
-
-```Go
-const R_PPC64_GOT16_HI R_PPC64 = 16 // R_POWERPC_GOT16_HI
-
-```
-
-### <a id="R_PPC64_GOT16_HA" href="#R_PPC64_GOT16_HA">const R_PPC64_GOT16_HA</a>
-
-```
-searchKey: elf.R_PPC64_GOT16_HA
-```
-
-```Go
-const R_PPC64_GOT16_HA R_PPC64 = 17 // R_POWERPC_GOT16_HA
-
-```
-
-### <a id="R_PPC64_JMP_SLOT" href="#R_PPC64_JMP_SLOT">const R_PPC64_JMP_SLOT</a>
-
-```
-searchKey: elf.R_PPC64_JMP_SLOT
-```
-
-```Go
-const R_PPC64_JMP_SLOT R_PPC64 = 21 // R_POWERPC_JMP_SLOT
-
-```
-
-### <a id="R_PPC64_REL32" href="#R_PPC64_REL32">const R_PPC64_REL32</a>
-
-```
-searchKey: elf.R_PPC64_REL32
-```
-
-```Go
-const R_PPC64_REL32 R_PPC64 = 26 // R_POWERPC_REL32
-
-```
-
-### <a id="R_PPC64_ADDR64" href="#R_PPC64_ADDR64">const R_PPC64_ADDR64</a>
-
-```
-searchKey: elf.R_PPC64_ADDR64
-```
-
-```Go
-const R_PPC64_ADDR64 R_PPC64 = 38
-```
-
-### <a id="R_PPC64_ADDR16_HIGHER" href="#R_PPC64_ADDR16_HIGHER">const R_PPC64_ADDR16_HIGHER</a>
-
-```
-searchKey: elf.R_PPC64_ADDR16_HIGHER
-```
-
-```Go
-const R_PPC64_ADDR16_HIGHER R_PPC64 = 39
-```
-
-### <a id="R_PPC64_ADDR16_HIGHERA" href="#R_PPC64_ADDR16_HIGHERA">const R_PPC64_ADDR16_HIGHERA</a>
-
-```
-searchKey: elf.R_PPC64_ADDR16_HIGHERA
-```
-
-```Go
-const R_PPC64_ADDR16_HIGHERA R_PPC64 = 40
-```
-
-### <a id="R_PPC64_ADDR16_HIGHEST" href="#R_PPC64_ADDR16_HIGHEST">const R_PPC64_ADDR16_HIGHEST</a>
-
-```
-searchKey: elf.R_PPC64_ADDR16_HIGHEST
-```
-
-```Go
-const R_PPC64_ADDR16_HIGHEST R_PPC64 = 41
-```
-
-### <a id="R_PPC64_ADDR16_HIGHESTA" href="#R_PPC64_ADDR16_HIGHESTA">const R_PPC64_ADDR16_HIGHESTA</a>
-
-```
-searchKey: elf.R_PPC64_ADDR16_HIGHESTA
-```
-
-```Go
-const R_PPC64_ADDR16_HIGHESTA R_PPC64 = 42
-```
-
-### <a id="R_PPC64_REL64" href="#R_PPC64_REL64">const R_PPC64_REL64</a>
-
-```
-searchKey: elf.R_PPC64_REL64
-```
-
-```Go
-const R_PPC64_REL64 R_PPC64 = 44
-```
-
-### <a id="R_PPC64_TOC16" href="#R_PPC64_TOC16">const R_PPC64_TOC16</a>
-
-```
-searchKey: elf.R_PPC64_TOC16
-```
-
-```Go
-const R_PPC64_TOC16 R_PPC64 = 47
-```
-
-### <a id="R_PPC64_TOC16_LO" href="#R_PPC64_TOC16_LO">const R_PPC64_TOC16_LO</a>
-
-```
-searchKey: elf.R_PPC64_TOC16_LO
-```
-
-```Go
-const R_PPC64_TOC16_LO R_PPC64 = 48
-```
-
-### <a id="R_PPC64_TOC16_HI" href="#R_PPC64_TOC16_HI">const R_PPC64_TOC16_HI</a>
-
-```
-searchKey: elf.R_PPC64_TOC16_HI
-```
-
-```Go
-const R_PPC64_TOC16_HI R_PPC64 = 49
-```
-
-### <a id="R_PPC64_TOC16_HA" href="#R_PPC64_TOC16_HA">const R_PPC64_TOC16_HA</a>
-
-```
-searchKey: elf.R_PPC64_TOC16_HA
-```
-
-```Go
-const R_PPC64_TOC16_HA R_PPC64 = 50
-```
-
-### <a id="R_PPC64_TOC" href="#R_PPC64_TOC">const R_PPC64_TOC</a>
-
-```
-searchKey: elf.R_PPC64_TOC
-```
-
-```Go
-const R_PPC64_TOC R_PPC64 = 51
-```
-
-### <a id="R_PPC64_PLTGOT16" href="#R_PPC64_PLTGOT16">const R_PPC64_PLTGOT16</a>
-
-```
-searchKey: elf.R_PPC64_PLTGOT16
-```
-
-```Go
-const R_PPC64_PLTGOT16 R_PPC64 = 52
-```
-
-### <a id="R_PPC64_PLTGOT16_LO" href="#R_PPC64_PLTGOT16_LO">const R_PPC64_PLTGOT16_LO</a>
-
-```
-searchKey: elf.R_PPC64_PLTGOT16_LO
-```
-
-```Go
-const R_PPC64_PLTGOT16_LO R_PPC64 = 53
-```
-
-### <a id="R_PPC64_PLTGOT16_HI" href="#R_PPC64_PLTGOT16_HI">const R_PPC64_PLTGOT16_HI</a>
-
-```
-searchKey: elf.R_PPC64_PLTGOT16_HI
-```
-
-```Go
-const R_PPC64_PLTGOT16_HI R_PPC64 = 54
-```
-
-### <a id="R_PPC64_PLTGOT16_HA" href="#R_PPC64_PLTGOT16_HA">const R_PPC64_PLTGOT16_HA</a>
-
-```
-searchKey: elf.R_PPC64_PLTGOT16_HA
-```
-
-```Go
-const R_PPC64_PLTGOT16_HA R_PPC64 = 55
 ```
 
 ### <a id="R_PPC64_ADDR16_DS" href="#R_PPC64_ADDR16_DS">const R_PPC64_ADDR16_DS</a>
 
 ```
 searchKey: elf.R_PPC64_ADDR16_DS
+tags: [constant number]
 ```
 
 ```Go
 const R_PPC64_ADDR16_DS R_PPC64 = 56
 ```
 
-### <a id="R_PPC64_ADDR16_LO_DS" href="#R_PPC64_ADDR16_LO_DS">const R_PPC64_ADDR16_LO_DS</a>
+### <a id="R_PPC64_ADDR16_HA" href="#R_PPC64_ADDR16_HA">const R_PPC64_ADDR16_HA</a>
 
 ```
-searchKey: elf.R_PPC64_ADDR16_LO_DS
-```
-
-```Go
-const R_PPC64_ADDR16_LO_DS R_PPC64 = 57
-```
-
-### <a id="R_PPC64_GOT16_DS" href="#R_PPC64_GOT16_DS">const R_PPC64_GOT16_DS</a>
-
-```
-searchKey: elf.R_PPC64_GOT16_DS
+searchKey: elf.R_PPC64_ADDR16_HA
+tags: [constant number]
 ```
 
 ```Go
-const R_PPC64_GOT16_DS R_PPC64 = 58
-```
-
-### <a id="R_PPC64_GOT16_LO_DS" href="#R_PPC64_GOT16_LO_DS">const R_PPC64_GOT16_LO_DS</a>
+const R_PPC64_ADDR16_HA R_PPC64 = 6 // R_POWERPC_ADDR16_HA
 
 ```
-searchKey: elf.R_PPC64_GOT16_LO_DS
-```
 
-```Go
-const R_PPC64_GOT16_LO_DS R_PPC64 = 59
-```
-
-### <a id="R_PPC64_PLT16_LO_DS" href="#R_PPC64_PLT16_LO_DS">const R_PPC64_PLT16_LO_DS</a>
+### <a id="R_PPC64_ADDR16_HI" href="#R_PPC64_ADDR16_HI">const R_PPC64_ADDR16_HI</a>
 
 ```
-searchKey: elf.R_PPC64_PLT16_LO_DS
+searchKey: elf.R_PPC64_ADDR16_HI
+tags: [constant number]
 ```
 
 ```Go
-const R_PPC64_PLT16_LO_DS R_PPC64 = 60
-```
+const R_PPC64_ADDR16_HI R_PPC64 = 5 // R_POWERPC_ADDR16_HI
 
-### <a id="R_PPC64_SECTOFF_DS" href="#R_PPC64_SECTOFF_DS">const R_PPC64_SECTOFF_DS</a>
-
-```
-searchKey: elf.R_PPC64_SECTOFF_DS
-```
-
-```Go
-const R_PPC64_SECTOFF_DS R_PPC64 = 61
-```
-
-### <a id="R_PPC64_SECTOFF_LO_DS" href="#R_PPC64_SECTOFF_LO_DS">const R_PPC64_SECTOFF_LO_DS</a>
-
-```
-searchKey: elf.R_PPC64_SECTOFF_LO_DS
-```
-
-```Go
-const R_PPC64_SECTOFF_LO_DS R_PPC64 = 61
-```
-
-### <a id="R_PPC64_TOC16_DS" href="#R_PPC64_TOC16_DS">const R_PPC64_TOC16_DS</a>
-
-```
-searchKey: elf.R_PPC64_TOC16_DS
-```
-
-```Go
-const R_PPC64_TOC16_DS R_PPC64 = 63
-```
-
-### <a id="R_PPC64_TOC16_LO_DS" href="#R_PPC64_TOC16_LO_DS">const R_PPC64_TOC16_LO_DS</a>
-
-```
-searchKey: elf.R_PPC64_TOC16_LO_DS
-```
-
-```Go
-const R_PPC64_TOC16_LO_DS R_PPC64 = 64
-```
-
-### <a id="R_PPC64_PLTGOT16_DS" href="#R_PPC64_PLTGOT16_DS">const R_PPC64_PLTGOT16_DS</a>
-
-```
-searchKey: elf.R_PPC64_PLTGOT16_DS
-```
-
-```Go
-const R_PPC64_PLTGOT16_DS R_PPC64 = 65
-```
-
-### <a id="R_PPC64_PLTGOT_LO_DS" href="#R_PPC64_PLTGOT_LO_DS">const R_PPC64_PLTGOT_LO_DS</a>
-
-```
-searchKey: elf.R_PPC64_PLTGOT_LO_DS
-```
-
-```Go
-const R_PPC64_PLTGOT_LO_DS R_PPC64 = 66
-```
-
-### <a id="R_PPC64_TLS" href="#R_PPC64_TLS">const R_PPC64_TLS</a>
-
-```
-searchKey: elf.R_PPC64_TLS
-```
-
-```Go
-const R_PPC64_TLS R_PPC64 = 67 // R_POWERPC_TLS
-
-```
-
-### <a id="R_PPC64_DTPMOD64" href="#R_PPC64_DTPMOD64">const R_PPC64_DTPMOD64</a>
-
-```
-searchKey: elf.R_PPC64_DTPMOD64
-```
-
-```Go
-const R_PPC64_DTPMOD64 R_PPC64 = 68 // R_POWERPC_DTPMOD64
-
-```
-
-### <a id="R_PPC64_TPREL16" href="#R_PPC64_TPREL16">const R_PPC64_TPREL16</a>
-
-```
-searchKey: elf.R_PPC64_TPREL16
-```
-
-```Go
-const R_PPC64_TPREL16 R_PPC64 = 69 // R_POWERPC_TPREL16
-
-```
-
-### <a id="R_PPC64_TPREL16_LO" href="#R_PPC64_TPREL16_LO">const R_PPC64_TPREL16_LO</a>
-
-```
-searchKey: elf.R_PPC64_TPREL16_LO
-```
-
-```Go
-const R_PPC64_TPREL16_LO R_PPC64 = 70 // R_POWERPC_TPREL16_LO
-
-```
-
-### <a id="R_PPC64_TPREL16_HI" href="#R_PPC64_TPREL16_HI">const R_PPC64_TPREL16_HI</a>
-
-```
-searchKey: elf.R_PPC64_TPREL16_HI
-```
-
-```Go
-const R_PPC64_TPREL16_HI R_PPC64 = 71 // R_POWERPC_TPREL16_HI
-
-```
-
-### <a id="R_PPC64_TPREL16_HA" href="#R_PPC64_TPREL16_HA">const R_PPC64_TPREL16_HA</a>
-
-```
-searchKey: elf.R_PPC64_TPREL16_HA
-```
-
-```Go
-const R_PPC64_TPREL16_HA R_PPC64 = 72 // R_POWERPC_TPREL16_HA
-
-```
-
-### <a id="R_PPC64_TPREL64" href="#R_PPC64_TPREL64">const R_PPC64_TPREL64</a>
-
-```
-searchKey: elf.R_PPC64_TPREL64
-```
-
-```Go
-const R_PPC64_TPREL64 R_PPC64 = 73 // R_POWERPC_TPREL64
-
-```
-
-### <a id="R_PPC64_DTPREL16" href="#R_PPC64_DTPREL16">const R_PPC64_DTPREL16</a>
-
-```
-searchKey: elf.R_PPC64_DTPREL16
-```
-
-```Go
-const R_PPC64_DTPREL16 R_PPC64 = 74 // R_POWERPC_DTPREL16
-
-```
-
-### <a id="R_PPC64_DTPREL16_LO" href="#R_PPC64_DTPREL16_LO">const R_PPC64_DTPREL16_LO</a>
-
-```
-searchKey: elf.R_PPC64_DTPREL16_LO
-```
-
-```Go
-const R_PPC64_DTPREL16_LO R_PPC64 = 75 // R_POWERPC_DTPREL16_LO
-
-```
-
-### <a id="R_PPC64_DTPREL16_HI" href="#R_PPC64_DTPREL16_HI">const R_PPC64_DTPREL16_HI</a>
-
-```
-searchKey: elf.R_PPC64_DTPREL16_HI
-```
-
-```Go
-const R_PPC64_DTPREL16_HI R_PPC64 = 76 // R_POWERPC_DTPREL16_HI
-
-```
-
-### <a id="R_PPC64_DTPREL16_HA" href="#R_PPC64_DTPREL16_HA">const R_PPC64_DTPREL16_HA</a>
-
-```
-searchKey: elf.R_PPC64_DTPREL16_HA
-```
-
-```Go
-const R_PPC64_DTPREL16_HA R_PPC64 = 77 // R_POWERPC_DTPREL16_HA
-
-```
-
-### <a id="R_PPC64_DTPREL64" href="#R_PPC64_DTPREL64">const R_PPC64_DTPREL64</a>
-
-```
-searchKey: elf.R_PPC64_DTPREL64
-```
-
-```Go
-const R_PPC64_DTPREL64 R_PPC64 = 78 // R_POWERPC_DTPREL64
-
-```
-
-### <a id="R_PPC64_GOT_TLSGD16" href="#R_PPC64_GOT_TLSGD16">const R_PPC64_GOT_TLSGD16</a>
-
-```
-searchKey: elf.R_PPC64_GOT_TLSGD16
-```
-
-```Go
-const R_PPC64_GOT_TLSGD16 R_PPC64 = 79 // R_POWERPC_GOT_TLSGD16
-
-```
-
-### <a id="R_PPC64_GOT_TLSGD16_LO" href="#R_PPC64_GOT_TLSGD16_LO">const R_PPC64_GOT_TLSGD16_LO</a>
-
-```
-searchKey: elf.R_PPC64_GOT_TLSGD16_LO
-```
-
-```Go
-const R_PPC64_GOT_TLSGD16_LO R_PPC64 = 80 // R_POWERPC_GOT_TLSGD16_LO
-
-```
-
-### <a id="R_PPC64_GOT_TLSGD16_HI" href="#R_PPC64_GOT_TLSGD16_HI">const R_PPC64_GOT_TLSGD16_HI</a>
-
-```
-searchKey: elf.R_PPC64_GOT_TLSGD16_HI
-```
-
-```Go
-const R_PPC64_GOT_TLSGD16_HI R_PPC64 = 81 // R_POWERPC_GOT_TLSGD16_HI
-
-```
-
-### <a id="R_PPC64_GOT_TLSGD16_HA" href="#R_PPC64_GOT_TLSGD16_HA">const R_PPC64_GOT_TLSGD16_HA</a>
-
-```
-searchKey: elf.R_PPC64_GOT_TLSGD16_HA
-```
-
-```Go
-const R_PPC64_GOT_TLSGD16_HA R_PPC64 = 82 // R_POWERPC_GOT_TLSGD16_HA
-
-```
-
-### <a id="R_PPC64_GOT_TLSLD16" href="#R_PPC64_GOT_TLSLD16">const R_PPC64_GOT_TLSLD16</a>
-
-```
-searchKey: elf.R_PPC64_GOT_TLSLD16
-```
-
-```Go
-const R_PPC64_GOT_TLSLD16 R_PPC64 = 83 // R_POWERPC_GOT_TLSLD16
-
-```
-
-### <a id="R_PPC64_GOT_TLSLD16_LO" href="#R_PPC64_GOT_TLSLD16_LO">const R_PPC64_GOT_TLSLD16_LO</a>
-
-```
-searchKey: elf.R_PPC64_GOT_TLSLD16_LO
-```
-
-```Go
-const R_PPC64_GOT_TLSLD16_LO R_PPC64 = 84 // R_POWERPC_GOT_TLSLD16_LO
-
-```
-
-### <a id="R_PPC64_GOT_TLSLD16_HI" href="#R_PPC64_GOT_TLSLD16_HI">const R_PPC64_GOT_TLSLD16_HI</a>
-
-```
-searchKey: elf.R_PPC64_GOT_TLSLD16_HI
-```
-
-```Go
-const R_PPC64_GOT_TLSLD16_HI R_PPC64 = 85 // R_POWERPC_GOT_TLSLD16_HI
-
-```
-
-### <a id="R_PPC64_GOT_TLSLD16_HA" href="#R_PPC64_GOT_TLSLD16_HA">const R_PPC64_GOT_TLSLD16_HA</a>
-
-```
-searchKey: elf.R_PPC64_GOT_TLSLD16_HA
-```
-
-```Go
-const R_PPC64_GOT_TLSLD16_HA R_PPC64 = 86 // R_POWERPC_GOT_TLSLD16_HA
-
-```
-
-### <a id="R_PPC64_GOT_TPREL16_DS" href="#R_PPC64_GOT_TPREL16_DS">const R_PPC64_GOT_TPREL16_DS</a>
-
-```
-searchKey: elf.R_PPC64_GOT_TPREL16_DS
-```
-
-```Go
-const R_PPC64_GOT_TPREL16_DS R_PPC64 = 87 // R_POWERPC_GOT_TPREL16_DS
-
-```
-
-### <a id="R_PPC64_GOT_TPREL16_LO_DS" href="#R_PPC64_GOT_TPREL16_LO_DS">const R_PPC64_GOT_TPREL16_LO_DS</a>
-
-```
-searchKey: elf.R_PPC64_GOT_TPREL16_LO_DS
-```
-
-```Go
-const R_PPC64_GOT_TPREL16_LO_DS R_PPC64 = 88 // R_POWERPC_GOT_TPREL16_LO_DS
-
-```
-
-### <a id="R_PPC64_GOT_TPREL16_HI" href="#R_PPC64_GOT_TPREL16_HI">const R_PPC64_GOT_TPREL16_HI</a>
-
-```
-searchKey: elf.R_PPC64_GOT_TPREL16_HI
-```
-
-```Go
-const R_PPC64_GOT_TPREL16_HI R_PPC64 = 89 // R_POWERPC_GOT_TPREL16_HI
-
-```
-
-### <a id="R_PPC64_GOT_TPREL16_HA" href="#R_PPC64_GOT_TPREL16_HA">const R_PPC64_GOT_TPREL16_HA</a>
-
-```
-searchKey: elf.R_PPC64_GOT_TPREL16_HA
-```
-
-```Go
-const R_PPC64_GOT_TPREL16_HA R_PPC64 = 90 // R_POWERPC_GOT_TPREL16_HA
-
-```
-
-### <a id="R_PPC64_GOT_DTPREL16_DS" href="#R_PPC64_GOT_DTPREL16_DS">const R_PPC64_GOT_DTPREL16_DS</a>
-
-```
-searchKey: elf.R_PPC64_GOT_DTPREL16_DS
-```
-
-```Go
-const R_PPC64_GOT_DTPREL16_DS R_PPC64 = 91 // R_POWERPC_GOT_DTPREL16_DS
-
-```
-
-### <a id="R_PPC64_GOT_DTPREL16_LO_DS" href="#R_PPC64_GOT_DTPREL16_LO_DS">const R_PPC64_GOT_DTPREL16_LO_DS</a>
-
-```
-searchKey: elf.R_PPC64_GOT_DTPREL16_LO_DS
-```
-
-```Go
-const R_PPC64_GOT_DTPREL16_LO_DS R_PPC64 = 92 // R_POWERPC_GOT_DTPREL16_LO_DS
-
-```
-
-### <a id="R_PPC64_GOT_DTPREL16_HI" href="#R_PPC64_GOT_DTPREL16_HI">const R_PPC64_GOT_DTPREL16_HI</a>
-
-```
-searchKey: elf.R_PPC64_GOT_DTPREL16_HI
-```
-
-```Go
-const R_PPC64_GOT_DTPREL16_HI R_PPC64 = 93 // R_POWERPC_GOT_DTPREL16_HI
-
-```
-
-### <a id="R_PPC64_GOT_DTPREL16_HA" href="#R_PPC64_GOT_DTPREL16_HA">const R_PPC64_GOT_DTPREL16_HA</a>
-
-```
-searchKey: elf.R_PPC64_GOT_DTPREL16_HA
-```
-
-```Go
-const R_PPC64_GOT_DTPREL16_HA R_PPC64 = 94 // R_POWERPC_GOT_DTPREL16_HA
-
-```
-
-### <a id="R_PPC64_TPREL16_DS" href="#R_PPC64_TPREL16_DS">const R_PPC64_TPREL16_DS</a>
-
-```
-searchKey: elf.R_PPC64_TPREL16_DS
-```
-
-```Go
-const R_PPC64_TPREL16_DS R_PPC64 = 95
-```
-
-### <a id="R_PPC64_TPREL16_LO_DS" href="#R_PPC64_TPREL16_LO_DS">const R_PPC64_TPREL16_LO_DS</a>
-
-```
-searchKey: elf.R_PPC64_TPREL16_LO_DS
-```
-
-```Go
-const R_PPC64_TPREL16_LO_DS R_PPC64 = 96
-```
-
-### <a id="R_PPC64_TPREL16_HIGHER" href="#R_PPC64_TPREL16_HIGHER">const R_PPC64_TPREL16_HIGHER</a>
-
-```
-searchKey: elf.R_PPC64_TPREL16_HIGHER
-```
-
-```Go
-const R_PPC64_TPREL16_HIGHER R_PPC64 = 97
-```
-
-### <a id="R_PPC64_TPREL16_HIGHERA" href="#R_PPC64_TPREL16_HIGHERA">const R_PPC64_TPREL16_HIGHERA</a>
-
-```
-searchKey: elf.R_PPC64_TPREL16_HIGHERA
-```
-
-```Go
-const R_PPC64_TPREL16_HIGHERA R_PPC64 = 98
-```
-
-### <a id="R_PPC64_TPREL16_HIGHEST" href="#R_PPC64_TPREL16_HIGHEST">const R_PPC64_TPREL16_HIGHEST</a>
-
-```
-searchKey: elf.R_PPC64_TPREL16_HIGHEST
-```
-
-```Go
-const R_PPC64_TPREL16_HIGHEST R_PPC64 = 99
-```
-
-### <a id="R_PPC64_TPREL16_HIGHESTA" href="#R_PPC64_TPREL16_HIGHESTA">const R_PPC64_TPREL16_HIGHESTA</a>
-
-```
-searchKey: elf.R_PPC64_TPREL16_HIGHESTA
-```
-
-```Go
-const R_PPC64_TPREL16_HIGHESTA R_PPC64 = 100
-```
-
-### <a id="R_PPC64_DTPREL16_DS" href="#R_PPC64_DTPREL16_DS">const R_PPC64_DTPREL16_DS</a>
-
-```
-searchKey: elf.R_PPC64_DTPREL16_DS
-```
-
-```Go
-const R_PPC64_DTPREL16_DS R_PPC64 = 101
-```
-
-### <a id="R_PPC64_DTPREL16_LO_DS" href="#R_PPC64_DTPREL16_LO_DS">const R_PPC64_DTPREL16_LO_DS</a>
-
-```
-searchKey: elf.R_PPC64_DTPREL16_LO_DS
-```
-
-```Go
-const R_PPC64_DTPREL16_LO_DS R_PPC64 = 102
-```
-
-### <a id="R_PPC64_DTPREL16_HIGHER" href="#R_PPC64_DTPREL16_HIGHER">const R_PPC64_DTPREL16_HIGHER</a>
-
-```
-searchKey: elf.R_PPC64_DTPREL16_HIGHER
-```
-
-```Go
-const R_PPC64_DTPREL16_HIGHER R_PPC64 = 103
-```
-
-### <a id="R_PPC64_DTPREL16_HIGHERA" href="#R_PPC64_DTPREL16_HIGHERA">const R_PPC64_DTPREL16_HIGHERA</a>
-
-```
-searchKey: elf.R_PPC64_DTPREL16_HIGHERA
-```
-
-```Go
-const R_PPC64_DTPREL16_HIGHERA R_PPC64 = 104
-```
-
-### <a id="R_PPC64_DTPREL16_HIGHEST" href="#R_PPC64_DTPREL16_HIGHEST">const R_PPC64_DTPREL16_HIGHEST</a>
-
-```
-searchKey: elf.R_PPC64_DTPREL16_HIGHEST
-```
-
-```Go
-const R_PPC64_DTPREL16_HIGHEST R_PPC64 = 105
-```
-
-### <a id="R_PPC64_DTPREL16_HIGHESTA" href="#R_PPC64_DTPREL16_HIGHESTA">const R_PPC64_DTPREL16_HIGHESTA</a>
-
-```
-searchKey: elf.R_PPC64_DTPREL16_HIGHESTA
-```
-
-```Go
-const R_PPC64_DTPREL16_HIGHESTA R_PPC64 = 106
-```
-
-### <a id="R_PPC64_TLSGD" href="#R_PPC64_TLSGD">const R_PPC64_TLSGD</a>
-
-```
-searchKey: elf.R_PPC64_TLSGD
-```
-
-```Go
-const R_PPC64_TLSGD R_PPC64 = 107
-```
-
-### <a id="R_PPC64_TLSLD" href="#R_PPC64_TLSLD">const R_PPC64_TLSLD</a>
-
-```
-searchKey: elf.R_PPC64_TLSLD
-```
-
-```Go
-const R_PPC64_TLSLD R_PPC64 = 108
-```
-
-### <a id="R_PPC64_TOCSAVE" href="#R_PPC64_TOCSAVE">const R_PPC64_TOCSAVE</a>
-
-```
-searchKey: elf.R_PPC64_TOCSAVE
-```
-
-```Go
-const R_PPC64_TOCSAVE R_PPC64 = 109
 ```
 
 ### <a id="R_PPC64_ADDR16_HIGH" href="#R_PPC64_ADDR16_HIGH">const R_PPC64_ADDR16_HIGH</a>
 
 ```
 searchKey: elf.R_PPC64_ADDR16_HIGH
+tags: [constant number]
 ```
 
 ```Go
@@ -13027,36 +11556,190 @@ const R_PPC64_ADDR16_HIGH R_PPC64 = 110
 
 ```
 searchKey: elf.R_PPC64_ADDR16_HIGHA
+tags: [constant number]
 ```
 
 ```Go
 const R_PPC64_ADDR16_HIGHA R_PPC64 = 111
 ```
 
-### <a id="R_PPC64_TPREL16_HIGH" href="#R_PPC64_TPREL16_HIGH">const R_PPC64_TPREL16_HIGH</a>
+### <a id="R_PPC64_ADDR16_HIGHER" href="#R_PPC64_ADDR16_HIGHER">const R_PPC64_ADDR16_HIGHER</a>
 
 ```
-searchKey: elf.R_PPC64_TPREL16_HIGH
-```
-
-```Go
-const R_PPC64_TPREL16_HIGH R_PPC64 = 112
-```
-
-### <a id="R_PPC64_TPREL16_HIGHA" href="#R_PPC64_TPREL16_HIGHA">const R_PPC64_TPREL16_HIGHA</a>
-
-```
-searchKey: elf.R_PPC64_TPREL16_HIGHA
+searchKey: elf.R_PPC64_ADDR16_HIGHER
+tags: [constant number]
 ```
 
 ```Go
-const R_PPC64_TPREL16_HIGHA R_PPC64 = 113
+const R_PPC64_ADDR16_HIGHER R_PPC64 = 39
+```
+
+### <a id="R_PPC64_ADDR16_HIGHERA" href="#R_PPC64_ADDR16_HIGHERA">const R_PPC64_ADDR16_HIGHERA</a>
+
+```
+searchKey: elf.R_PPC64_ADDR16_HIGHERA
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_ADDR16_HIGHERA R_PPC64 = 40
+```
+
+### <a id="R_PPC64_ADDR16_HIGHEST" href="#R_PPC64_ADDR16_HIGHEST">const R_PPC64_ADDR16_HIGHEST</a>
+
+```
+searchKey: elf.R_PPC64_ADDR16_HIGHEST
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_ADDR16_HIGHEST R_PPC64 = 41
+```
+
+### <a id="R_PPC64_ADDR16_HIGHESTA" href="#R_PPC64_ADDR16_HIGHESTA">const R_PPC64_ADDR16_HIGHESTA</a>
+
+```
+searchKey: elf.R_PPC64_ADDR16_HIGHESTA
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_ADDR16_HIGHESTA R_PPC64 = 42
+```
+
+### <a id="R_PPC64_ADDR16_LO" href="#R_PPC64_ADDR16_LO">const R_PPC64_ADDR16_LO</a>
+
+```
+searchKey: elf.R_PPC64_ADDR16_LO
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_ADDR16_LO R_PPC64 = 4 // R_POWERPC_ADDR16_LO
+
+```
+
+### <a id="R_PPC64_ADDR16_LO_DS" href="#R_PPC64_ADDR16_LO_DS">const R_PPC64_ADDR16_LO_DS</a>
+
+```
+searchKey: elf.R_PPC64_ADDR16_LO_DS
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_ADDR16_LO_DS R_PPC64 = 57
+```
+
+### <a id="R_PPC64_ADDR24" href="#R_PPC64_ADDR24">const R_PPC64_ADDR24</a>
+
+```
+searchKey: elf.R_PPC64_ADDR24
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_ADDR24 R_PPC64 = 2 // R_POWERPC_ADDR24
+
+```
+
+### <a id="R_PPC64_ADDR32" href="#R_PPC64_ADDR32">const R_PPC64_ADDR32</a>
+
+```
+searchKey: elf.R_PPC64_ADDR32
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_ADDR32 R_PPC64 = 1 // R_POWERPC_ADDR32
+
+```
+
+### <a id="R_PPC64_ADDR64" href="#R_PPC64_ADDR64">const R_PPC64_ADDR64</a>
+
+```
+searchKey: elf.R_PPC64_ADDR64
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_ADDR64 R_PPC64 = 38
+```
+
+### <a id="R_PPC64_ADDR64_LOCAL" href="#R_PPC64_ADDR64_LOCAL">const R_PPC64_ADDR64_LOCAL</a>
+
+```
+searchKey: elf.R_PPC64_ADDR64_LOCAL
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_ADDR64_LOCAL R_PPC64 = 117
+```
+
+### <a id="R_PPC64_DTPMOD64" href="#R_PPC64_DTPMOD64">const R_PPC64_DTPMOD64</a>
+
+```
+searchKey: elf.R_PPC64_DTPMOD64
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_DTPMOD64 R_PPC64 = 68 // R_POWERPC_DTPMOD64
+
+```
+
+### <a id="R_PPC64_DTPREL16" href="#R_PPC64_DTPREL16">const R_PPC64_DTPREL16</a>
+
+```
+searchKey: elf.R_PPC64_DTPREL16
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_DTPREL16 R_PPC64 = 74 // R_POWERPC_DTPREL16
+
+```
+
+### <a id="R_PPC64_DTPREL16_DS" href="#R_PPC64_DTPREL16_DS">const R_PPC64_DTPREL16_DS</a>
+
+```
+searchKey: elf.R_PPC64_DTPREL16_DS
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_DTPREL16_DS R_PPC64 = 101
+```
+
+### <a id="R_PPC64_DTPREL16_HA" href="#R_PPC64_DTPREL16_HA">const R_PPC64_DTPREL16_HA</a>
+
+```
+searchKey: elf.R_PPC64_DTPREL16_HA
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_DTPREL16_HA R_PPC64 = 77 // R_POWERPC_DTPREL16_HA
+
+```
+
+### <a id="R_PPC64_DTPREL16_HI" href="#R_PPC64_DTPREL16_HI">const R_PPC64_DTPREL16_HI</a>
+
+```
+searchKey: elf.R_PPC64_DTPREL16_HI
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_DTPREL16_HI R_PPC64 = 76 // R_POWERPC_DTPREL16_HI
+
 ```
 
 ### <a id="R_PPC64_DTPREL16_HIGH" href="#R_PPC64_DTPREL16_HIGH">const R_PPC64_DTPREL16_HIGH</a>
 
 ```
 searchKey: elf.R_PPC64_DTPREL16_HIGH
+tags: [constant number]
 ```
 
 ```Go
@@ -13067,67 +11750,370 @@ const R_PPC64_DTPREL16_HIGH R_PPC64 = 114
 
 ```
 searchKey: elf.R_PPC64_DTPREL16_HIGHA
+tags: [constant number]
 ```
 
 ```Go
 const R_PPC64_DTPREL16_HIGHA R_PPC64 = 115
 ```
 
-### <a id="R_PPC64_REL24_NOTOC" href="#R_PPC64_REL24_NOTOC">const R_PPC64_REL24_NOTOC</a>
+### <a id="R_PPC64_DTPREL16_HIGHER" href="#R_PPC64_DTPREL16_HIGHER">const R_PPC64_DTPREL16_HIGHER</a>
 
 ```
-searchKey: elf.R_PPC64_REL24_NOTOC
-```
-
-```Go
-const R_PPC64_REL24_NOTOC R_PPC64 = 116
-```
-
-### <a id="R_PPC64_ADDR64_LOCAL" href="#R_PPC64_ADDR64_LOCAL">const R_PPC64_ADDR64_LOCAL</a>
-
-```
-searchKey: elf.R_PPC64_ADDR64_LOCAL
+searchKey: elf.R_PPC64_DTPREL16_HIGHER
+tags: [constant number]
 ```
 
 ```Go
-const R_PPC64_ADDR64_LOCAL R_PPC64 = 117
+const R_PPC64_DTPREL16_HIGHER R_PPC64 = 103
+```
+
+### <a id="R_PPC64_DTPREL16_HIGHERA" href="#R_PPC64_DTPREL16_HIGHERA">const R_PPC64_DTPREL16_HIGHERA</a>
+
+```
+searchKey: elf.R_PPC64_DTPREL16_HIGHERA
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_DTPREL16_HIGHERA R_PPC64 = 104
+```
+
+### <a id="R_PPC64_DTPREL16_HIGHEST" href="#R_PPC64_DTPREL16_HIGHEST">const R_PPC64_DTPREL16_HIGHEST</a>
+
+```
+searchKey: elf.R_PPC64_DTPREL16_HIGHEST
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_DTPREL16_HIGHEST R_PPC64 = 105
+```
+
+### <a id="R_PPC64_DTPREL16_HIGHESTA" href="#R_PPC64_DTPREL16_HIGHESTA">const R_PPC64_DTPREL16_HIGHESTA</a>
+
+```
+searchKey: elf.R_PPC64_DTPREL16_HIGHESTA
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_DTPREL16_HIGHESTA R_PPC64 = 106
+```
+
+### <a id="R_PPC64_DTPREL16_LO" href="#R_PPC64_DTPREL16_LO">const R_PPC64_DTPREL16_LO</a>
+
+```
+searchKey: elf.R_PPC64_DTPREL16_LO
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_DTPREL16_LO R_PPC64 = 75 // R_POWERPC_DTPREL16_LO
+
+```
+
+### <a id="R_PPC64_DTPREL16_LO_DS" href="#R_PPC64_DTPREL16_LO_DS">const R_PPC64_DTPREL16_LO_DS</a>
+
+```
+searchKey: elf.R_PPC64_DTPREL16_LO_DS
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_DTPREL16_LO_DS R_PPC64 = 102
+```
+
+### <a id="R_PPC64_DTPREL64" href="#R_PPC64_DTPREL64">const R_PPC64_DTPREL64</a>
+
+```
+searchKey: elf.R_PPC64_DTPREL64
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_DTPREL64 R_PPC64 = 78 // R_POWERPC_DTPREL64
+
 ```
 
 ### <a id="R_PPC64_ENTRY" href="#R_PPC64_ENTRY">const R_PPC64_ENTRY</a>
 
 ```
 searchKey: elf.R_PPC64_ENTRY
+tags: [constant number]
 ```
 
 ```Go
 const R_PPC64_ENTRY R_PPC64 = 118
 ```
 
-### <a id="R_PPC64_REL16DX_HA" href="#R_PPC64_REL16DX_HA">const R_PPC64_REL16DX_HA</a>
+### <a id="R_PPC64_GOT16" href="#R_PPC64_GOT16">const R_PPC64_GOT16</a>
 
 ```
-searchKey: elf.R_PPC64_REL16DX_HA
-```
-
-```Go
-const R_PPC64_REL16DX_HA R_PPC64 = 246 // R_POWERPC_REL16DX_HA
-
-```
-
-### <a id="R_PPC64_JMP_IREL" href="#R_PPC64_JMP_IREL">const R_PPC64_JMP_IREL</a>
-
-```
-searchKey: elf.R_PPC64_JMP_IREL
+searchKey: elf.R_PPC64_GOT16
+tags: [constant number]
 ```
 
 ```Go
-const R_PPC64_JMP_IREL R_PPC64 = 247
+const R_PPC64_GOT16 R_PPC64 = 14 // R_POWERPC_GOT16
+
+```
+
+### <a id="R_PPC64_GOT16_DS" href="#R_PPC64_GOT16_DS">const R_PPC64_GOT16_DS</a>
+
+```
+searchKey: elf.R_PPC64_GOT16_DS
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_GOT16_DS R_PPC64 = 58
+```
+
+### <a id="R_PPC64_GOT16_HA" href="#R_PPC64_GOT16_HA">const R_PPC64_GOT16_HA</a>
+
+```
+searchKey: elf.R_PPC64_GOT16_HA
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_GOT16_HA R_PPC64 = 17 // R_POWERPC_GOT16_HA
+
+```
+
+### <a id="R_PPC64_GOT16_HI" href="#R_PPC64_GOT16_HI">const R_PPC64_GOT16_HI</a>
+
+```
+searchKey: elf.R_PPC64_GOT16_HI
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_GOT16_HI R_PPC64 = 16 // R_POWERPC_GOT16_HI
+
+```
+
+### <a id="R_PPC64_GOT16_LO" href="#R_PPC64_GOT16_LO">const R_PPC64_GOT16_LO</a>
+
+```
+searchKey: elf.R_PPC64_GOT16_LO
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_GOT16_LO R_PPC64 = 15 // R_POWERPC_GOT16_LO
+
+```
+
+### <a id="R_PPC64_GOT16_LO_DS" href="#R_PPC64_GOT16_LO_DS">const R_PPC64_GOT16_LO_DS</a>
+
+```
+searchKey: elf.R_PPC64_GOT16_LO_DS
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_GOT16_LO_DS R_PPC64 = 59
+```
+
+### <a id="R_PPC64_GOT_DTPREL16_DS" href="#R_PPC64_GOT_DTPREL16_DS">const R_PPC64_GOT_DTPREL16_DS</a>
+
+```
+searchKey: elf.R_PPC64_GOT_DTPREL16_DS
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_GOT_DTPREL16_DS R_PPC64 = 91 // R_POWERPC_GOT_DTPREL16_DS
+
+```
+
+### <a id="R_PPC64_GOT_DTPREL16_HA" href="#R_PPC64_GOT_DTPREL16_HA">const R_PPC64_GOT_DTPREL16_HA</a>
+
+```
+searchKey: elf.R_PPC64_GOT_DTPREL16_HA
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_GOT_DTPREL16_HA R_PPC64 = 94 // R_POWERPC_GOT_DTPREL16_HA
+
+```
+
+### <a id="R_PPC64_GOT_DTPREL16_HI" href="#R_PPC64_GOT_DTPREL16_HI">const R_PPC64_GOT_DTPREL16_HI</a>
+
+```
+searchKey: elf.R_PPC64_GOT_DTPREL16_HI
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_GOT_DTPREL16_HI R_PPC64 = 93 // R_POWERPC_GOT_DTPREL16_HI
+
+```
+
+### <a id="R_PPC64_GOT_DTPREL16_LO_DS" href="#R_PPC64_GOT_DTPREL16_LO_DS">const R_PPC64_GOT_DTPREL16_LO_DS</a>
+
+```
+searchKey: elf.R_PPC64_GOT_DTPREL16_LO_DS
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_GOT_DTPREL16_LO_DS R_PPC64 = 92 // R_POWERPC_GOT_DTPREL16_LO_DS
+
+```
+
+### <a id="R_PPC64_GOT_TLSGD16" href="#R_PPC64_GOT_TLSGD16">const R_PPC64_GOT_TLSGD16</a>
+
+```
+searchKey: elf.R_PPC64_GOT_TLSGD16
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_GOT_TLSGD16 R_PPC64 = 79 // R_POWERPC_GOT_TLSGD16
+
+```
+
+### <a id="R_PPC64_GOT_TLSGD16_HA" href="#R_PPC64_GOT_TLSGD16_HA">const R_PPC64_GOT_TLSGD16_HA</a>
+
+```
+searchKey: elf.R_PPC64_GOT_TLSGD16_HA
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_GOT_TLSGD16_HA R_PPC64 = 82 // R_POWERPC_GOT_TLSGD16_HA
+
+```
+
+### <a id="R_PPC64_GOT_TLSGD16_HI" href="#R_PPC64_GOT_TLSGD16_HI">const R_PPC64_GOT_TLSGD16_HI</a>
+
+```
+searchKey: elf.R_PPC64_GOT_TLSGD16_HI
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_GOT_TLSGD16_HI R_PPC64 = 81 // R_POWERPC_GOT_TLSGD16_HI
+
+```
+
+### <a id="R_PPC64_GOT_TLSGD16_LO" href="#R_PPC64_GOT_TLSGD16_LO">const R_PPC64_GOT_TLSGD16_LO</a>
+
+```
+searchKey: elf.R_PPC64_GOT_TLSGD16_LO
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_GOT_TLSGD16_LO R_PPC64 = 80 // R_POWERPC_GOT_TLSGD16_LO
+
+```
+
+### <a id="R_PPC64_GOT_TLSLD16" href="#R_PPC64_GOT_TLSLD16">const R_PPC64_GOT_TLSLD16</a>
+
+```
+searchKey: elf.R_PPC64_GOT_TLSLD16
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_GOT_TLSLD16 R_PPC64 = 83 // R_POWERPC_GOT_TLSLD16
+
+```
+
+### <a id="R_PPC64_GOT_TLSLD16_HA" href="#R_PPC64_GOT_TLSLD16_HA">const R_PPC64_GOT_TLSLD16_HA</a>
+
+```
+searchKey: elf.R_PPC64_GOT_TLSLD16_HA
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_GOT_TLSLD16_HA R_PPC64 = 86 // R_POWERPC_GOT_TLSLD16_HA
+
+```
+
+### <a id="R_PPC64_GOT_TLSLD16_HI" href="#R_PPC64_GOT_TLSLD16_HI">const R_PPC64_GOT_TLSLD16_HI</a>
+
+```
+searchKey: elf.R_PPC64_GOT_TLSLD16_HI
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_GOT_TLSLD16_HI R_PPC64 = 85 // R_POWERPC_GOT_TLSLD16_HI
+
+```
+
+### <a id="R_PPC64_GOT_TLSLD16_LO" href="#R_PPC64_GOT_TLSLD16_LO">const R_PPC64_GOT_TLSLD16_LO</a>
+
+```
+searchKey: elf.R_PPC64_GOT_TLSLD16_LO
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_GOT_TLSLD16_LO R_PPC64 = 84 // R_POWERPC_GOT_TLSLD16_LO
+
+```
+
+### <a id="R_PPC64_GOT_TPREL16_DS" href="#R_PPC64_GOT_TPREL16_DS">const R_PPC64_GOT_TPREL16_DS</a>
+
+```
+searchKey: elf.R_PPC64_GOT_TPREL16_DS
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_GOT_TPREL16_DS R_PPC64 = 87 // R_POWERPC_GOT_TPREL16_DS
+
+```
+
+### <a id="R_PPC64_GOT_TPREL16_HA" href="#R_PPC64_GOT_TPREL16_HA">const R_PPC64_GOT_TPREL16_HA</a>
+
+```
+searchKey: elf.R_PPC64_GOT_TPREL16_HA
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_GOT_TPREL16_HA R_PPC64 = 90 // R_POWERPC_GOT_TPREL16_HA
+
+```
+
+### <a id="R_PPC64_GOT_TPREL16_HI" href="#R_PPC64_GOT_TPREL16_HI">const R_PPC64_GOT_TPREL16_HI</a>
+
+```
+searchKey: elf.R_PPC64_GOT_TPREL16_HI
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_GOT_TPREL16_HI R_PPC64 = 89 // R_POWERPC_GOT_TPREL16_HI
+
+```
+
+### <a id="R_PPC64_GOT_TPREL16_LO_DS" href="#R_PPC64_GOT_TPREL16_LO_DS">const R_PPC64_GOT_TPREL16_LO_DS</a>
+
+```
+searchKey: elf.R_PPC64_GOT_TPREL16_LO_DS
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_GOT_TPREL16_LO_DS R_PPC64 = 88 // R_POWERPC_GOT_TPREL16_LO_DS
+
 ```
 
 ### <a id="R_PPC64_IRELATIVE" href="#R_PPC64_IRELATIVE">const R_PPC64_IRELATIVE</a>
 
 ```
 searchKey: elf.R_PPC64_IRELATIVE
+tags: [constant number]
 ```
 
 ```Go
@@ -13135,10 +12121,159 @@ const R_PPC64_IRELATIVE R_PPC64 = 248 // R_POWERPC_IRELATIVE
 
 ```
 
+### <a id="R_PPC64_JMP_IREL" href="#R_PPC64_JMP_IREL">const R_PPC64_JMP_IREL</a>
+
+```
+searchKey: elf.R_PPC64_JMP_IREL
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_JMP_IREL R_PPC64 = 247
+```
+
+### <a id="R_PPC64_JMP_SLOT" href="#R_PPC64_JMP_SLOT">const R_PPC64_JMP_SLOT</a>
+
+```
+searchKey: elf.R_PPC64_JMP_SLOT
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_JMP_SLOT R_PPC64 = 21 // R_POWERPC_JMP_SLOT
+
+```
+
+### <a id="R_PPC64_NONE" href="#R_PPC64_NONE">const R_PPC64_NONE</a>
+
+```
+searchKey: elf.R_PPC64_NONE
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_NONE R_PPC64 = 0 // R_POWERPC_NONE
+
+```
+
+### <a id="R_PPC64_PLT16_LO_DS" href="#R_PPC64_PLT16_LO_DS">const R_PPC64_PLT16_LO_DS</a>
+
+```
+searchKey: elf.R_PPC64_PLT16_LO_DS
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_PLT16_LO_DS R_PPC64 = 60
+```
+
+### <a id="R_PPC64_PLTGOT16" href="#R_PPC64_PLTGOT16">const R_PPC64_PLTGOT16</a>
+
+```
+searchKey: elf.R_PPC64_PLTGOT16
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_PLTGOT16 R_PPC64 = 52
+```
+
+### <a id="R_PPC64_PLTGOT16_DS" href="#R_PPC64_PLTGOT16_DS">const R_PPC64_PLTGOT16_DS</a>
+
+```
+searchKey: elf.R_PPC64_PLTGOT16_DS
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_PLTGOT16_DS R_PPC64 = 65
+```
+
+### <a id="R_PPC64_PLTGOT16_HA" href="#R_PPC64_PLTGOT16_HA">const R_PPC64_PLTGOT16_HA</a>
+
+```
+searchKey: elf.R_PPC64_PLTGOT16_HA
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_PLTGOT16_HA R_PPC64 = 55
+```
+
+### <a id="R_PPC64_PLTGOT16_HI" href="#R_PPC64_PLTGOT16_HI">const R_PPC64_PLTGOT16_HI</a>
+
+```
+searchKey: elf.R_PPC64_PLTGOT16_HI
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_PLTGOT16_HI R_PPC64 = 54
+```
+
+### <a id="R_PPC64_PLTGOT16_LO" href="#R_PPC64_PLTGOT16_LO">const R_PPC64_PLTGOT16_LO</a>
+
+```
+searchKey: elf.R_PPC64_PLTGOT16_LO
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_PLTGOT16_LO R_PPC64 = 53
+```
+
+### <a id="R_PPC64_PLTGOT_LO_DS" href="#R_PPC64_PLTGOT_LO_DS">const R_PPC64_PLTGOT_LO_DS</a>
+
+```
+searchKey: elf.R_PPC64_PLTGOT_LO_DS
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_PLTGOT_LO_DS R_PPC64 = 66
+```
+
+### <a id="R_PPC64_REL14" href="#R_PPC64_REL14">const R_PPC64_REL14</a>
+
+```
+searchKey: elf.R_PPC64_REL14
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_REL14 R_PPC64 = 11 // R_POWERPC_REL14
+
+```
+
+### <a id="R_PPC64_REL14_BRNTAKEN" href="#R_PPC64_REL14_BRNTAKEN">const R_PPC64_REL14_BRNTAKEN</a>
+
+```
+searchKey: elf.R_PPC64_REL14_BRNTAKEN
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_REL14_BRNTAKEN R_PPC64 = 13 // R_POWERPC_REL14_BRNTAKEN
+
+```
+
+### <a id="R_PPC64_REL14_BRTAKEN" href="#R_PPC64_REL14_BRTAKEN">const R_PPC64_REL14_BRTAKEN</a>
+
+```
+searchKey: elf.R_PPC64_REL14_BRTAKEN
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_REL14_BRTAKEN R_PPC64 = 12 // R_POWERPC_REL14_BRTAKEN
+
+```
+
 ### <a id="R_PPC64_REL16" href="#R_PPC64_REL16">const R_PPC64_REL16</a>
 
 ```
 searchKey: elf.R_PPC64_REL16
+tags: [constant number]
 ```
 
 ```Go
@@ -13146,25 +12281,15 @@ const R_PPC64_REL16 R_PPC64 = 249 // R_POWERPC_REL16
 
 ```
 
-### <a id="R_PPC64_REL16_LO" href="#R_PPC64_REL16_LO">const R_PPC64_REL16_LO</a>
+### <a id="R_PPC64_REL16DX_HA" href="#R_PPC64_REL16DX_HA">const R_PPC64_REL16DX_HA</a>
 
 ```
-searchKey: elf.R_PPC64_REL16_LO
-```
-
-```Go
-const R_PPC64_REL16_LO R_PPC64 = 250 // R_POWERPC_REL16_LO
-
-```
-
-### <a id="R_PPC64_REL16_HI" href="#R_PPC64_REL16_HI">const R_PPC64_REL16_HI</a>
-
-```
-searchKey: elf.R_PPC64_REL16_HI
+searchKey: elf.R_PPC64_REL16DX_HA
+tags: [constant number]
 ```
 
 ```Go
-const R_PPC64_REL16_HI R_PPC64 = 251 // R_POWERPC_REL16_HI
+const R_PPC64_REL16DX_HA R_PPC64 = 246 // R_POWERPC_REL16DX_HA
 
 ```
 
@@ -13172,6 +12297,7 @@ const R_PPC64_REL16_HI R_PPC64 = 251 // R_POWERPC_REL16_HI
 
 ```
 searchKey: elf.R_PPC64_REL16_HA
+tags: [constant number]
 ```
 
 ```Go
@@ -13179,14 +12305,1270 @@ const R_PPC64_REL16_HA R_PPC64 = 252 // R_POWERPC_REL16_HA
 
 ```
 
-### <a id="R_RISCV_NONE" href="#R_RISCV_NONE">const R_RISCV_NONE</a>
+### <a id="R_PPC64_REL16_HI" href="#R_PPC64_REL16_HI">const R_PPC64_REL16_HI</a>
 
 ```
-searchKey: elf.R_RISCV_NONE
+searchKey: elf.R_PPC64_REL16_HI
+tags: [constant number]
 ```
 
 ```Go
-const R_RISCV_NONE R_RISCV = 0 /* No relocation. */
+const R_PPC64_REL16_HI R_PPC64 = 251 // R_POWERPC_REL16_HI
+
+```
+
+### <a id="R_PPC64_REL16_LO" href="#R_PPC64_REL16_LO">const R_PPC64_REL16_LO</a>
+
+```
+searchKey: elf.R_PPC64_REL16_LO
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_REL16_LO R_PPC64 = 250 // R_POWERPC_REL16_LO
+
+```
+
+### <a id="R_PPC64_REL24" href="#R_PPC64_REL24">const R_PPC64_REL24</a>
+
+```
+searchKey: elf.R_PPC64_REL24
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_REL24 R_PPC64 = 10 // R_POWERPC_REL24
+
+```
+
+### <a id="R_PPC64_REL24_NOTOC" href="#R_PPC64_REL24_NOTOC">const R_PPC64_REL24_NOTOC</a>
+
+```
+searchKey: elf.R_PPC64_REL24_NOTOC
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_REL24_NOTOC R_PPC64 = 116
+```
+
+### <a id="R_PPC64_REL32" href="#R_PPC64_REL32">const R_PPC64_REL32</a>
+
+```
+searchKey: elf.R_PPC64_REL32
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_REL32 R_PPC64 = 26 // R_POWERPC_REL32
+
+```
+
+### <a id="R_PPC64_REL64" href="#R_PPC64_REL64">const R_PPC64_REL64</a>
+
+```
+searchKey: elf.R_PPC64_REL64
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_REL64 R_PPC64 = 44
+```
+
+### <a id="R_PPC64_SECTOFF_DS" href="#R_PPC64_SECTOFF_DS">const R_PPC64_SECTOFF_DS</a>
+
+```
+searchKey: elf.R_PPC64_SECTOFF_DS
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_SECTOFF_DS R_PPC64 = 61
+```
+
+### <a id="R_PPC64_SECTOFF_LO_DS" href="#R_PPC64_SECTOFF_LO_DS">const R_PPC64_SECTOFF_LO_DS</a>
+
+```
+searchKey: elf.R_PPC64_SECTOFF_LO_DS
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_SECTOFF_LO_DS R_PPC64 = 61
+```
+
+### <a id="R_PPC64_TLS" href="#R_PPC64_TLS">const R_PPC64_TLS</a>
+
+```
+searchKey: elf.R_PPC64_TLS
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_TLS R_PPC64 = 67 // R_POWERPC_TLS
+
+```
+
+### <a id="R_PPC64_TLSGD" href="#R_PPC64_TLSGD">const R_PPC64_TLSGD</a>
+
+```
+searchKey: elf.R_PPC64_TLSGD
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_TLSGD R_PPC64 = 107
+```
+
+### <a id="R_PPC64_TLSLD" href="#R_PPC64_TLSLD">const R_PPC64_TLSLD</a>
+
+```
+searchKey: elf.R_PPC64_TLSLD
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_TLSLD R_PPC64 = 108
+```
+
+### <a id="R_PPC64_TOC" href="#R_PPC64_TOC">const R_PPC64_TOC</a>
+
+```
+searchKey: elf.R_PPC64_TOC
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_TOC R_PPC64 = 51
+```
+
+### <a id="R_PPC64_TOC16" href="#R_PPC64_TOC16">const R_PPC64_TOC16</a>
+
+```
+searchKey: elf.R_PPC64_TOC16
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_TOC16 R_PPC64 = 47
+```
+
+### <a id="R_PPC64_TOC16_DS" href="#R_PPC64_TOC16_DS">const R_PPC64_TOC16_DS</a>
+
+```
+searchKey: elf.R_PPC64_TOC16_DS
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_TOC16_DS R_PPC64 = 63
+```
+
+### <a id="R_PPC64_TOC16_HA" href="#R_PPC64_TOC16_HA">const R_PPC64_TOC16_HA</a>
+
+```
+searchKey: elf.R_PPC64_TOC16_HA
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_TOC16_HA R_PPC64 = 50
+```
+
+### <a id="R_PPC64_TOC16_HI" href="#R_PPC64_TOC16_HI">const R_PPC64_TOC16_HI</a>
+
+```
+searchKey: elf.R_PPC64_TOC16_HI
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_TOC16_HI R_PPC64 = 49
+```
+
+### <a id="R_PPC64_TOC16_LO" href="#R_PPC64_TOC16_LO">const R_PPC64_TOC16_LO</a>
+
+```
+searchKey: elf.R_PPC64_TOC16_LO
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_TOC16_LO R_PPC64 = 48
+```
+
+### <a id="R_PPC64_TOC16_LO_DS" href="#R_PPC64_TOC16_LO_DS">const R_PPC64_TOC16_LO_DS</a>
+
+```
+searchKey: elf.R_PPC64_TOC16_LO_DS
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_TOC16_LO_DS R_PPC64 = 64
+```
+
+### <a id="R_PPC64_TOCSAVE" href="#R_PPC64_TOCSAVE">const R_PPC64_TOCSAVE</a>
+
+```
+searchKey: elf.R_PPC64_TOCSAVE
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_TOCSAVE R_PPC64 = 109
+```
+
+### <a id="R_PPC64_TPREL16" href="#R_PPC64_TPREL16">const R_PPC64_TPREL16</a>
+
+```
+searchKey: elf.R_PPC64_TPREL16
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_TPREL16 R_PPC64 = 69 // R_POWERPC_TPREL16
+
+```
+
+### <a id="R_PPC64_TPREL16_DS" href="#R_PPC64_TPREL16_DS">const R_PPC64_TPREL16_DS</a>
+
+```
+searchKey: elf.R_PPC64_TPREL16_DS
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_TPREL16_DS R_PPC64 = 95
+```
+
+### <a id="R_PPC64_TPREL16_HA" href="#R_PPC64_TPREL16_HA">const R_PPC64_TPREL16_HA</a>
+
+```
+searchKey: elf.R_PPC64_TPREL16_HA
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_TPREL16_HA R_PPC64 = 72 // R_POWERPC_TPREL16_HA
+
+```
+
+### <a id="R_PPC64_TPREL16_HI" href="#R_PPC64_TPREL16_HI">const R_PPC64_TPREL16_HI</a>
+
+```
+searchKey: elf.R_PPC64_TPREL16_HI
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_TPREL16_HI R_PPC64 = 71 // R_POWERPC_TPREL16_HI
+
+```
+
+### <a id="R_PPC64_TPREL16_HIGH" href="#R_PPC64_TPREL16_HIGH">const R_PPC64_TPREL16_HIGH</a>
+
+```
+searchKey: elf.R_PPC64_TPREL16_HIGH
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_TPREL16_HIGH R_PPC64 = 112
+```
+
+### <a id="R_PPC64_TPREL16_HIGHA" href="#R_PPC64_TPREL16_HIGHA">const R_PPC64_TPREL16_HIGHA</a>
+
+```
+searchKey: elf.R_PPC64_TPREL16_HIGHA
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_TPREL16_HIGHA R_PPC64 = 113
+```
+
+### <a id="R_PPC64_TPREL16_HIGHER" href="#R_PPC64_TPREL16_HIGHER">const R_PPC64_TPREL16_HIGHER</a>
+
+```
+searchKey: elf.R_PPC64_TPREL16_HIGHER
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_TPREL16_HIGHER R_PPC64 = 97
+```
+
+### <a id="R_PPC64_TPREL16_HIGHERA" href="#R_PPC64_TPREL16_HIGHERA">const R_PPC64_TPREL16_HIGHERA</a>
+
+```
+searchKey: elf.R_PPC64_TPREL16_HIGHERA
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_TPREL16_HIGHERA R_PPC64 = 98
+```
+
+### <a id="R_PPC64_TPREL16_HIGHEST" href="#R_PPC64_TPREL16_HIGHEST">const R_PPC64_TPREL16_HIGHEST</a>
+
+```
+searchKey: elf.R_PPC64_TPREL16_HIGHEST
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_TPREL16_HIGHEST R_PPC64 = 99
+```
+
+### <a id="R_PPC64_TPREL16_HIGHESTA" href="#R_PPC64_TPREL16_HIGHESTA">const R_PPC64_TPREL16_HIGHESTA</a>
+
+```
+searchKey: elf.R_PPC64_TPREL16_HIGHESTA
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_TPREL16_HIGHESTA R_PPC64 = 100
+```
+
+### <a id="R_PPC64_TPREL16_LO" href="#R_PPC64_TPREL16_LO">const R_PPC64_TPREL16_LO</a>
+
+```
+searchKey: elf.R_PPC64_TPREL16_LO
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_TPREL16_LO R_PPC64 = 70 // R_POWERPC_TPREL16_LO
+
+```
+
+### <a id="R_PPC64_TPREL16_LO_DS" href="#R_PPC64_TPREL16_LO_DS">const R_PPC64_TPREL16_LO_DS</a>
+
+```
+searchKey: elf.R_PPC64_TPREL16_LO_DS
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_TPREL16_LO_DS R_PPC64 = 96
+```
+
+### <a id="R_PPC64_TPREL64" href="#R_PPC64_TPREL64">const R_PPC64_TPREL64</a>
+
+```
+searchKey: elf.R_PPC64_TPREL64
+tags: [constant number]
+```
+
+```Go
+const R_PPC64_TPREL64 R_PPC64 = 73 // R_POWERPC_TPREL64
+
+```
+
+### <a id="R_PPC_ADDR14" href="#R_PPC_ADDR14">const R_PPC_ADDR14</a>
+
+```
+searchKey: elf.R_PPC_ADDR14
+tags: [constant number]
+```
+
+```Go
+const R_PPC_ADDR14 R_PPC = 7 // R_POWERPC_ADDR14
+
+```
+
+### <a id="R_PPC_ADDR14_BRNTAKEN" href="#R_PPC_ADDR14_BRNTAKEN">const R_PPC_ADDR14_BRNTAKEN</a>
+
+```
+searchKey: elf.R_PPC_ADDR14_BRNTAKEN
+tags: [constant number]
+```
+
+```Go
+const R_PPC_ADDR14_BRNTAKEN R_PPC = 9 // R_POWERPC_ADDR14_BRNTAKEN
+
+```
+
+### <a id="R_PPC_ADDR14_BRTAKEN" href="#R_PPC_ADDR14_BRTAKEN">const R_PPC_ADDR14_BRTAKEN</a>
+
+```
+searchKey: elf.R_PPC_ADDR14_BRTAKEN
+tags: [constant number]
+```
+
+```Go
+const R_PPC_ADDR14_BRTAKEN R_PPC = 8 // R_POWERPC_ADDR14_BRTAKEN
+
+```
+
+### <a id="R_PPC_ADDR16" href="#R_PPC_ADDR16">const R_PPC_ADDR16</a>
+
+```
+searchKey: elf.R_PPC_ADDR16
+tags: [constant number]
+```
+
+```Go
+const R_PPC_ADDR16 R_PPC = 3 // R_POWERPC_ADDR16
+
+```
+
+### <a id="R_PPC_ADDR16_HA" href="#R_PPC_ADDR16_HA">const R_PPC_ADDR16_HA</a>
+
+```
+searchKey: elf.R_PPC_ADDR16_HA
+tags: [constant number]
+```
+
+```Go
+const R_PPC_ADDR16_HA R_PPC = 6 // R_POWERPC_ADDR16_HA
+
+```
+
+### <a id="R_PPC_ADDR16_HI" href="#R_PPC_ADDR16_HI">const R_PPC_ADDR16_HI</a>
+
+```
+searchKey: elf.R_PPC_ADDR16_HI
+tags: [constant number]
+```
+
+```Go
+const R_PPC_ADDR16_HI R_PPC = 5 // R_POWERPC_ADDR16_HI
+
+```
+
+### <a id="R_PPC_ADDR16_LO" href="#R_PPC_ADDR16_LO">const R_PPC_ADDR16_LO</a>
+
+```
+searchKey: elf.R_PPC_ADDR16_LO
+tags: [constant number]
+```
+
+```Go
+const R_PPC_ADDR16_LO R_PPC = 4 // R_POWERPC_ADDR16_LO
+
+```
+
+### <a id="R_PPC_ADDR24" href="#R_PPC_ADDR24">const R_PPC_ADDR24</a>
+
+```
+searchKey: elf.R_PPC_ADDR24
+tags: [constant number]
+```
+
+```Go
+const R_PPC_ADDR24 R_PPC = 2 // R_POWERPC_ADDR24
+
+```
+
+### <a id="R_PPC_ADDR32" href="#R_PPC_ADDR32">const R_PPC_ADDR32</a>
+
+```
+searchKey: elf.R_PPC_ADDR32
+tags: [constant number]
+```
+
+```Go
+const R_PPC_ADDR32 R_PPC = 1 // R_POWERPC_ADDR32
+
+```
+
+### <a id="R_PPC_COPY" href="#R_PPC_COPY">const R_PPC_COPY</a>
+
+```
+searchKey: elf.R_PPC_COPY
+tags: [constant number]
+```
+
+```Go
+const R_PPC_COPY R_PPC = 19 // R_POWERPC_COPY
+
+```
+
+### <a id="R_PPC_DTPMOD32" href="#R_PPC_DTPMOD32">const R_PPC_DTPMOD32</a>
+
+```
+searchKey: elf.R_PPC_DTPMOD32
+tags: [constant number]
+```
+
+```Go
+const R_PPC_DTPMOD32 R_PPC = 68 // R_POWERPC_DTPMOD32
+
+```
+
+### <a id="R_PPC_DTPREL16" href="#R_PPC_DTPREL16">const R_PPC_DTPREL16</a>
+
+```
+searchKey: elf.R_PPC_DTPREL16
+tags: [constant number]
+```
+
+```Go
+const R_PPC_DTPREL16 R_PPC = 74 // R_POWERPC_DTPREL16
+
+```
+
+### <a id="R_PPC_DTPREL16_HA" href="#R_PPC_DTPREL16_HA">const R_PPC_DTPREL16_HA</a>
+
+```
+searchKey: elf.R_PPC_DTPREL16_HA
+tags: [constant number]
+```
+
+```Go
+const R_PPC_DTPREL16_HA R_PPC = 77 // R_POWERPC_DTPREL16_HA
+
+```
+
+### <a id="R_PPC_DTPREL16_HI" href="#R_PPC_DTPREL16_HI">const R_PPC_DTPREL16_HI</a>
+
+```
+searchKey: elf.R_PPC_DTPREL16_HI
+tags: [constant number]
+```
+
+```Go
+const R_PPC_DTPREL16_HI R_PPC = 76 // R_POWERPC_DTPREL16_HI
+
+```
+
+### <a id="R_PPC_DTPREL16_LO" href="#R_PPC_DTPREL16_LO">const R_PPC_DTPREL16_LO</a>
+
+```
+searchKey: elf.R_PPC_DTPREL16_LO
+tags: [constant number]
+```
+
+```Go
+const R_PPC_DTPREL16_LO R_PPC = 75 // R_POWERPC_DTPREL16_LO
+
+```
+
+### <a id="R_PPC_DTPREL32" href="#R_PPC_DTPREL32">const R_PPC_DTPREL32</a>
+
+```
+searchKey: elf.R_PPC_DTPREL32
+tags: [constant number]
+```
+
+```Go
+const R_PPC_DTPREL32 R_PPC = 78 // R_POWERPC_DTPREL32
+
+```
+
+### <a id="R_PPC_EMB_BIT_FLD" href="#R_PPC_EMB_BIT_FLD">const R_PPC_EMB_BIT_FLD</a>
+
+```
+searchKey: elf.R_PPC_EMB_BIT_FLD
+tags: [constant number]
+```
+
+```Go
+const R_PPC_EMB_BIT_FLD R_PPC = 115
+```
+
+### <a id="R_PPC_EMB_MRKREF" href="#R_PPC_EMB_MRKREF">const R_PPC_EMB_MRKREF</a>
+
+```
+searchKey: elf.R_PPC_EMB_MRKREF
+tags: [constant number]
+```
+
+```Go
+const R_PPC_EMB_MRKREF R_PPC = 110
+```
+
+### <a id="R_PPC_EMB_NADDR16" href="#R_PPC_EMB_NADDR16">const R_PPC_EMB_NADDR16</a>
+
+```
+searchKey: elf.R_PPC_EMB_NADDR16
+tags: [constant number]
+```
+
+```Go
+const R_PPC_EMB_NADDR16 R_PPC = 102
+```
+
+### <a id="R_PPC_EMB_NADDR16_HA" href="#R_PPC_EMB_NADDR16_HA">const R_PPC_EMB_NADDR16_HA</a>
+
+```
+searchKey: elf.R_PPC_EMB_NADDR16_HA
+tags: [constant number]
+```
+
+```Go
+const R_PPC_EMB_NADDR16_HA R_PPC = 105
+```
+
+### <a id="R_PPC_EMB_NADDR16_HI" href="#R_PPC_EMB_NADDR16_HI">const R_PPC_EMB_NADDR16_HI</a>
+
+```
+searchKey: elf.R_PPC_EMB_NADDR16_HI
+tags: [constant number]
+```
+
+```Go
+const R_PPC_EMB_NADDR16_HI R_PPC = 104
+```
+
+### <a id="R_PPC_EMB_NADDR16_LO" href="#R_PPC_EMB_NADDR16_LO">const R_PPC_EMB_NADDR16_LO</a>
+
+```
+searchKey: elf.R_PPC_EMB_NADDR16_LO
+tags: [constant number]
+```
+
+```Go
+const R_PPC_EMB_NADDR16_LO R_PPC = 103
+```
+
+### <a id="R_PPC_EMB_NADDR32" href="#R_PPC_EMB_NADDR32">const R_PPC_EMB_NADDR32</a>
+
+```
+searchKey: elf.R_PPC_EMB_NADDR32
+tags: [constant number]
+```
+
+```Go
+const R_PPC_EMB_NADDR32 R_PPC = 101
+```
+
+### <a id="R_PPC_EMB_RELSDA" href="#R_PPC_EMB_RELSDA">const R_PPC_EMB_RELSDA</a>
+
+```
+searchKey: elf.R_PPC_EMB_RELSDA
+tags: [constant number]
+```
+
+```Go
+const R_PPC_EMB_RELSDA R_PPC = 116
+```
+
+### <a id="R_PPC_EMB_RELSEC16" href="#R_PPC_EMB_RELSEC16">const R_PPC_EMB_RELSEC16</a>
+
+```
+searchKey: elf.R_PPC_EMB_RELSEC16
+tags: [constant number]
+```
+
+```Go
+const R_PPC_EMB_RELSEC16 R_PPC = 111
+```
+
+### <a id="R_PPC_EMB_RELST_HA" href="#R_PPC_EMB_RELST_HA">const R_PPC_EMB_RELST_HA</a>
+
+```
+searchKey: elf.R_PPC_EMB_RELST_HA
+tags: [constant number]
+```
+
+```Go
+const R_PPC_EMB_RELST_HA R_PPC = 114
+```
+
+### <a id="R_PPC_EMB_RELST_HI" href="#R_PPC_EMB_RELST_HI">const R_PPC_EMB_RELST_HI</a>
+
+```
+searchKey: elf.R_PPC_EMB_RELST_HI
+tags: [constant number]
+```
+
+```Go
+const R_PPC_EMB_RELST_HI R_PPC = 113
+```
+
+### <a id="R_PPC_EMB_RELST_LO" href="#R_PPC_EMB_RELST_LO">const R_PPC_EMB_RELST_LO</a>
+
+```
+searchKey: elf.R_PPC_EMB_RELST_LO
+tags: [constant number]
+```
+
+```Go
+const R_PPC_EMB_RELST_LO R_PPC = 112
+```
+
+### <a id="R_PPC_EMB_SDA21" href="#R_PPC_EMB_SDA21">const R_PPC_EMB_SDA21</a>
+
+```
+searchKey: elf.R_PPC_EMB_SDA21
+tags: [constant number]
+```
+
+```Go
+const R_PPC_EMB_SDA21 R_PPC = 109
+```
+
+### <a id="R_PPC_EMB_SDA2I16" href="#R_PPC_EMB_SDA2I16">const R_PPC_EMB_SDA2I16</a>
+
+```
+searchKey: elf.R_PPC_EMB_SDA2I16
+tags: [constant number]
+```
+
+```Go
+const R_PPC_EMB_SDA2I16 R_PPC = 107
+```
+
+### <a id="R_PPC_EMB_SDA2REL" href="#R_PPC_EMB_SDA2REL">const R_PPC_EMB_SDA2REL</a>
+
+```
+searchKey: elf.R_PPC_EMB_SDA2REL
+tags: [constant number]
+```
+
+```Go
+const R_PPC_EMB_SDA2REL R_PPC = 108
+```
+
+### <a id="R_PPC_EMB_SDAI16" href="#R_PPC_EMB_SDAI16">const R_PPC_EMB_SDAI16</a>
+
+```
+searchKey: elf.R_PPC_EMB_SDAI16
+tags: [constant number]
+```
+
+```Go
+const R_PPC_EMB_SDAI16 R_PPC = 106
+```
+
+### <a id="R_PPC_GLOB_DAT" href="#R_PPC_GLOB_DAT">const R_PPC_GLOB_DAT</a>
+
+```
+searchKey: elf.R_PPC_GLOB_DAT
+tags: [constant number]
+```
+
+```Go
+const R_PPC_GLOB_DAT R_PPC = 20 // R_POWERPC_GLOB_DAT
+
+```
+
+### <a id="R_PPC_GOT16" href="#R_PPC_GOT16">const R_PPC_GOT16</a>
+
+```
+searchKey: elf.R_PPC_GOT16
+tags: [constant number]
+```
+
+```Go
+const R_PPC_GOT16 R_PPC = 14 // R_POWERPC_GOT16
+
+```
+
+### <a id="R_PPC_GOT16_HA" href="#R_PPC_GOT16_HA">const R_PPC_GOT16_HA</a>
+
+```
+searchKey: elf.R_PPC_GOT16_HA
+tags: [constant number]
+```
+
+```Go
+const R_PPC_GOT16_HA R_PPC = 17 // R_POWERPC_GOT16_HA
+
+```
+
+### <a id="R_PPC_GOT16_HI" href="#R_PPC_GOT16_HI">const R_PPC_GOT16_HI</a>
+
+```
+searchKey: elf.R_PPC_GOT16_HI
+tags: [constant number]
+```
+
+```Go
+const R_PPC_GOT16_HI R_PPC = 16 // R_POWERPC_GOT16_HI
+
+```
+
+### <a id="R_PPC_GOT16_LO" href="#R_PPC_GOT16_LO">const R_PPC_GOT16_LO</a>
+
+```
+searchKey: elf.R_PPC_GOT16_LO
+tags: [constant number]
+```
+
+```Go
+const R_PPC_GOT16_LO R_PPC = 15 // R_POWERPC_GOT16_LO
+
+```
+
+### <a id="R_PPC_GOT_TLSGD16" href="#R_PPC_GOT_TLSGD16">const R_PPC_GOT_TLSGD16</a>
+
+```
+searchKey: elf.R_PPC_GOT_TLSGD16
+tags: [constant number]
+```
+
+```Go
+const R_PPC_GOT_TLSGD16 R_PPC = 79 // R_POWERPC_GOT_TLSGD16
+
+```
+
+### <a id="R_PPC_GOT_TLSGD16_HA" href="#R_PPC_GOT_TLSGD16_HA">const R_PPC_GOT_TLSGD16_HA</a>
+
+```
+searchKey: elf.R_PPC_GOT_TLSGD16_HA
+tags: [constant number]
+```
+
+```Go
+const R_PPC_GOT_TLSGD16_HA R_PPC = 82 // R_POWERPC_GOT_TLSGD16_HA
+
+```
+
+### <a id="R_PPC_GOT_TLSGD16_HI" href="#R_PPC_GOT_TLSGD16_HI">const R_PPC_GOT_TLSGD16_HI</a>
+
+```
+searchKey: elf.R_PPC_GOT_TLSGD16_HI
+tags: [constant number]
+```
+
+```Go
+const R_PPC_GOT_TLSGD16_HI R_PPC = 81 // R_POWERPC_GOT_TLSGD16_HI
+
+```
+
+### <a id="R_PPC_GOT_TLSGD16_LO" href="#R_PPC_GOT_TLSGD16_LO">const R_PPC_GOT_TLSGD16_LO</a>
+
+```
+searchKey: elf.R_PPC_GOT_TLSGD16_LO
+tags: [constant number]
+```
+
+```Go
+const R_PPC_GOT_TLSGD16_LO R_PPC = 80 // R_POWERPC_GOT_TLSGD16_LO
+
+```
+
+### <a id="R_PPC_GOT_TLSLD16" href="#R_PPC_GOT_TLSLD16">const R_PPC_GOT_TLSLD16</a>
+
+```
+searchKey: elf.R_PPC_GOT_TLSLD16
+tags: [constant number]
+```
+
+```Go
+const R_PPC_GOT_TLSLD16 R_PPC = 83 // R_POWERPC_GOT_TLSLD16
+
+```
+
+### <a id="R_PPC_GOT_TLSLD16_HA" href="#R_PPC_GOT_TLSLD16_HA">const R_PPC_GOT_TLSLD16_HA</a>
+
+```
+searchKey: elf.R_PPC_GOT_TLSLD16_HA
+tags: [constant number]
+```
+
+```Go
+const R_PPC_GOT_TLSLD16_HA R_PPC = 86 // R_POWERPC_GOT_TLSLD16_HA
+
+```
+
+### <a id="R_PPC_GOT_TLSLD16_HI" href="#R_PPC_GOT_TLSLD16_HI">const R_PPC_GOT_TLSLD16_HI</a>
+
+```
+searchKey: elf.R_PPC_GOT_TLSLD16_HI
+tags: [constant number]
+```
+
+```Go
+const R_PPC_GOT_TLSLD16_HI R_PPC = 85 // R_POWERPC_GOT_TLSLD16_HI
+
+```
+
+### <a id="R_PPC_GOT_TLSLD16_LO" href="#R_PPC_GOT_TLSLD16_LO">const R_PPC_GOT_TLSLD16_LO</a>
+
+```
+searchKey: elf.R_PPC_GOT_TLSLD16_LO
+tags: [constant number]
+```
+
+```Go
+const R_PPC_GOT_TLSLD16_LO R_PPC = 84 // R_POWERPC_GOT_TLSLD16_LO
+
+```
+
+### <a id="R_PPC_GOT_TPREL16" href="#R_PPC_GOT_TPREL16">const R_PPC_GOT_TPREL16</a>
+
+```
+searchKey: elf.R_PPC_GOT_TPREL16
+tags: [constant number]
+```
+
+```Go
+const R_PPC_GOT_TPREL16 R_PPC = 87 // R_POWERPC_GOT_TPREL16
+
+```
+
+### <a id="R_PPC_GOT_TPREL16_HA" href="#R_PPC_GOT_TPREL16_HA">const R_PPC_GOT_TPREL16_HA</a>
+
+```
+searchKey: elf.R_PPC_GOT_TPREL16_HA
+tags: [constant number]
+```
+
+```Go
+const R_PPC_GOT_TPREL16_HA R_PPC = 90 // R_POWERPC_GOT_TPREL16_HA
+
+```
+
+### <a id="R_PPC_GOT_TPREL16_HI" href="#R_PPC_GOT_TPREL16_HI">const R_PPC_GOT_TPREL16_HI</a>
+
+```
+searchKey: elf.R_PPC_GOT_TPREL16_HI
+tags: [constant number]
+```
+
+```Go
+const R_PPC_GOT_TPREL16_HI R_PPC = 89 // R_POWERPC_GOT_TPREL16_HI
+
+```
+
+### <a id="R_PPC_GOT_TPREL16_LO" href="#R_PPC_GOT_TPREL16_LO">const R_PPC_GOT_TPREL16_LO</a>
+
+```
+searchKey: elf.R_PPC_GOT_TPREL16_LO
+tags: [constant number]
+```
+
+```Go
+const R_PPC_GOT_TPREL16_LO R_PPC = 88 // R_POWERPC_GOT_TPREL16_LO
+
+```
+
+### <a id="R_PPC_JMP_SLOT" href="#R_PPC_JMP_SLOT">const R_PPC_JMP_SLOT</a>
+
+```
+searchKey: elf.R_PPC_JMP_SLOT
+tags: [constant number]
+```
+
+```Go
+const R_PPC_JMP_SLOT R_PPC = 21 // R_POWERPC_JMP_SLOT
+
+```
+
+### <a id="R_PPC_LOCAL24PC" href="#R_PPC_LOCAL24PC">const R_PPC_LOCAL24PC</a>
+
+```
+searchKey: elf.R_PPC_LOCAL24PC
+tags: [constant number]
+```
+
+```Go
+const R_PPC_LOCAL24PC R_PPC = 23
+```
+
+### <a id="R_PPC_NONE" href="#R_PPC_NONE">const R_PPC_NONE</a>
+
+```
+searchKey: elf.R_PPC_NONE
+tags: [constant number]
+```
+
+```Go
+const R_PPC_NONE R_PPC = 0 // R_POWERPC_NONE
+
+```
+
+### <a id="R_PPC_PLT16_HA" href="#R_PPC_PLT16_HA">const R_PPC_PLT16_HA</a>
+
+```
+searchKey: elf.R_PPC_PLT16_HA
+tags: [constant number]
+```
+
+```Go
+const R_PPC_PLT16_HA R_PPC = 31 // R_POWERPC_PLT16_HA
+
+```
+
+### <a id="R_PPC_PLT16_HI" href="#R_PPC_PLT16_HI">const R_PPC_PLT16_HI</a>
+
+```
+searchKey: elf.R_PPC_PLT16_HI
+tags: [constant number]
+```
+
+```Go
+const R_PPC_PLT16_HI R_PPC = 30 // R_POWERPC_PLT16_HI
+
+```
+
+### <a id="R_PPC_PLT16_LO" href="#R_PPC_PLT16_LO">const R_PPC_PLT16_LO</a>
+
+```
+searchKey: elf.R_PPC_PLT16_LO
+tags: [constant number]
+```
+
+```Go
+const R_PPC_PLT16_LO R_PPC = 29 // R_POWERPC_PLT16_LO
+
+```
+
+### <a id="R_PPC_PLT32" href="#R_PPC_PLT32">const R_PPC_PLT32</a>
+
+```
+searchKey: elf.R_PPC_PLT32
+tags: [constant number]
+```
+
+```Go
+const R_PPC_PLT32 R_PPC = 27 // R_POWERPC_PLT32
+
+```
+
+### <a id="R_PPC_PLTREL24" href="#R_PPC_PLTREL24">const R_PPC_PLTREL24</a>
+
+```
+searchKey: elf.R_PPC_PLTREL24
+tags: [constant number]
+```
+
+```Go
+const R_PPC_PLTREL24 R_PPC = 18
+```
+
+### <a id="R_PPC_PLTREL32" href="#R_PPC_PLTREL32">const R_PPC_PLTREL32</a>
+
+```
+searchKey: elf.R_PPC_PLTREL32
+tags: [constant number]
+```
+
+```Go
+const R_PPC_PLTREL32 R_PPC = 28 // R_POWERPC_PLTREL32
+
+```
+
+### <a id="R_PPC_REL14" href="#R_PPC_REL14">const R_PPC_REL14</a>
+
+```
+searchKey: elf.R_PPC_REL14
+tags: [constant number]
+```
+
+```Go
+const R_PPC_REL14 R_PPC = 11 // R_POWERPC_REL14
+
+```
+
+### <a id="R_PPC_REL14_BRNTAKEN" href="#R_PPC_REL14_BRNTAKEN">const R_PPC_REL14_BRNTAKEN</a>
+
+```
+searchKey: elf.R_PPC_REL14_BRNTAKEN
+tags: [constant number]
+```
+
+```Go
+const R_PPC_REL14_BRNTAKEN R_PPC = 13 // R_POWERPC_REL14_BRNTAKEN
+
+```
+
+### <a id="R_PPC_REL14_BRTAKEN" href="#R_PPC_REL14_BRTAKEN">const R_PPC_REL14_BRTAKEN</a>
+
+```
+searchKey: elf.R_PPC_REL14_BRTAKEN
+tags: [constant number]
+```
+
+```Go
+const R_PPC_REL14_BRTAKEN R_PPC = 12 // R_POWERPC_REL14_BRTAKEN
+
+```
+
+### <a id="R_PPC_REL24" href="#R_PPC_REL24">const R_PPC_REL24</a>
+
+```
+searchKey: elf.R_PPC_REL24
+tags: [constant number]
+```
+
+```Go
+const R_PPC_REL24 R_PPC = 10 // R_POWERPC_REL24
+
+```
+
+### <a id="R_PPC_REL32" href="#R_PPC_REL32">const R_PPC_REL32</a>
+
+```
+searchKey: elf.R_PPC_REL32
+tags: [constant number]
+```
+
+```Go
+const R_PPC_REL32 R_PPC = 26 // R_POWERPC_REL32
+
+```
+
+### <a id="R_PPC_RELATIVE" href="#R_PPC_RELATIVE">const R_PPC_RELATIVE</a>
+
+```
+searchKey: elf.R_PPC_RELATIVE
+tags: [constant number]
+```
+
+```Go
+const R_PPC_RELATIVE R_PPC = 22 // R_POWERPC_RELATIVE
+
+```
+
+### <a id="R_PPC_SDAREL16" href="#R_PPC_SDAREL16">const R_PPC_SDAREL16</a>
+
+```
+searchKey: elf.R_PPC_SDAREL16
+tags: [constant number]
+```
+
+```Go
+const R_PPC_SDAREL16 R_PPC = 32
+```
+
+### <a id="R_PPC_SECTOFF" href="#R_PPC_SECTOFF">const R_PPC_SECTOFF</a>
+
+```
+searchKey: elf.R_PPC_SECTOFF
+tags: [constant number]
+```
+
+```Go
+const R_PPC_SECTOFF R_PPC = 33 // R_POWERPC_SECTOFF
+
+```
+
+### <a id="R_PPC_SECTOFF_HA" href="#R_PPC_SECTOFF_HA">const R_PPC_SECTOFF_HA</a>
+
+```
+searchKey: elf.R_PPC_SECTOFF_HA
+tags: [constant number]
+```
+
+```Go
+const R_PPC_SECTOFF_HA R_PPC = 36 // R_POWERPC_SECTOFF_HA
+
+```
+
+### <a id="R_PPC_SECTOFF_HI" href="#R_PPC_SECTOFF_HI">const R_PPC_SECTOFF_HI</a>
+
+```
+searchKey: elf.R_PPC_SECTOFF_HI
+tags: [constant number]
+```
+
+```Go
+const R_PPC_SECTOFF_HI R_PPC = 35 // R_POWERPC_SECTOFF_HI
+
+```
+
+### <a id="R_PPC_SECTOFF_LO" href="#R_PPC_SECTOFF_LO">const R_PPC_SECTOFF_LO</a>
+
+```
+searchKey: elf.R_PPC_SECTOFF_LO
+tags: [constant number]
+```
+
+```Go
+const R_PPC_SECTOFF_LO R_PPC = 34 // R_POWERPC_SECTOFF_LO
+
+```
+
+### <a id="R_PPC_TLS" href="#R_PPC_TLS">const R_PPC_TLS</a>
+
+```
+searchKey: elf.R_PPC_TLS
+tags: [constant number]
+```
+
+```Go
+const R_PPC_TLS R_PPC = 67 // R_POWERPC_TLS
+
+```
+
+### <a id="R_PPC_TPREL16" href="#R_PPC_TPREL16">const R_PPC_TPREL16</a>
+
+```
+searchKey: elf.R_PPC_TPREL16
+tags: [constant number]
+```
+
+```Go
+const R_PPC_TPREL16 R_PPC = 69 // R_POWERPC_TPREL16
+
+```
+
+### <a id="R_PPC_TPREL16_HA" href="#R_PPC_TPREL16_HA">const R_PPC_TPREL16_HA</a>
+
+```
+searchKey: elf.R_PPC_TPREL16_HA
+tags: [constant number]
+```
+
+```Go
+const R_PPC_TPREL16_HA R_PPC = 72 // R_POWERPC_TPREL16_HA
+
+```
+
+### <a id="R_PPC_TPREL16_HI" href="#R_PPC_TPREL16_HI">const R_PPC_TPREL16_HI</a>
+
+```
+searchKey: elf.R_PPC_TPREL16_HI
+tags: [constant number]
+```
+
+```Go
+const R_PPC_TPREL16_HI R_PPC = 71 // R_POWERPC_TPREL16_HI
+
+```
+
+### <a id="R_PPC_TPREL16_LO" href="#R_PPC_TPREL16_LO">const R_PPC_TPREL16_LO</a>
+
+```
+searchKey: elf.R_PPC_TPREL16_LO
+tags: [constant number]
+```
+
+```Go
+const R_PPC_TPREL16_LO R_PPC = 70 // R_POWERPC_TPREL16_LO
+
+```
+
+### <a id="R_PPC_TPREL32" href="#R_PPC_TPREL32">const R_PPC_TPREL32</a>
+
+```
+searchKey: elf.R_PPC_TPREL32
+tags: [constant number]
+```
+
+```Go
+const R_PPC_TPREL32 R_PPC = 73 // R_POWERPC_TPREL32
+
+```
+
+### <a id="R_PPC_UADDR16" href="#R_PPC_UADDR16">const R_PPC_UADDR16</a>
+
+```
+searchKey: elf.R_PPC_UADDR16
+tags: [constant number]
+```
+
+```Go
+const R_PPC_UADDR16 R_PPC = 25 // R_POWERPC_UADDR16
+
+```
+
+### <a id="R_PPC_UADDR32" href="#R_PPC_UADDR32">const R_PPC_UADDR32</a>
+
+```
+searchKey: elf.R_PPC_UADDR32
+tags: [constant number]
+```
+
+```Go
+const R_PPC_UADDR32 R_PPC = 24 // R_POWERPC_UADDR32
 
 ```
 
@@ -13194,6 +13576,7 @@ const R_RISCV_NONE R_RISCV = 0 /* No relocation. */
 
 ```
 searchKey: elf.R_RISCV_32
+tags: [constant number]
 ```
 
 ```Go
@@ -13201,10 +13584,23 @@ const R_RISCV_32 R_RISCV = 1 /* Add 32 bit zero extended symbol value */
 
 ```
 
+### <a id="R_RISCV_32_PCREL" href="#R_RISCV_32_PCREL">const R_RISCV_32_PCREL</a>
+
+```
+searchKey: elf.R_RISCV_32_PCREL
+tags: [constant number]
+```
+
+```Go
+const R_RISCV_32_PCREL R_RISCV = 57 /* 32-bit PC relative */
+
+```
+
 ### <a id="R_RISCV_64" href="#R_RISCV_64">const R_RISCV_64</a>
 
 ```
 searchKey: elf.R_RISCV_64
+tags: [constant number]
 ```
 
 ```Go
@@ -13212,307 +13608,11 @@ const R_RISCV_64 R_RISCV = 2 /* Add 64 bit symbol value. */
 
 ```
 
-### <a id="R_RISCV_RELATIVE" href="#R_RISCV_RELATIVE">const R_RISCV_RELATIVE</a>
-
-```
-searchKey: elf.R_RISCV_RELATIVE
-```
-
-```Go
-const R_RISCV_RELATIVE R_RISCV = 3 /* Add load address of shared object. */
-
-```
-
-### <a id="R_RISCV_COPY" href="#R_RISCV_COPY">const R_RISCV_COPY</a>
-
-```
-searchKey: elf.R_RISCV_COPY
-```
-
-```Go
-const R_RISCV_COPY R_RISCV = 4 /* Copy data from shared object. */
-
-```
-
-### <a id="R_RISCV_JUMP_SLOT" href="#R_RISCV_JUMP_SLOT">const R_RISCV_JUMP_SLOT</a>
-
-```
-searchKey: elf.R_RISCV_JUMP_SLOT
-```
-
-```Go
-const R_RISCV_JUMP_SLOT R_RISCV = 5 /* Set GOT entry to code address. */
-
-```
-
-### <a id="R_RISCV_TLS_DTPMOD32" href="#R_RISCV_TLS_DTPMOD32">const R_RISCV_TLS_DTPMOD32</a>
-
-```
-searchKey: elf.R_RISCV_TLS_DTPMOD32
-```
-
-```Go
-const R_RISCV_TLS_DTPMOD32 R_RISCV = 6 /* 32 bit ID of module containing symbol */
-
-```
-
-### <a id="R_RISCV_TLS_DTPMOD64" href="#R_RISCV_TLS_DTPMOD64">const R_RISCV_TLS_DTPMOD64</a>
-
-```
-searchKey: elf.R_RISCV_TLS_DTPMOD64
-```
-
-```Go
-const R_RISCV_TLS_DTPMOD64 R_RISCV = 7 /* ID of module containing symbol */
-
-```
-
-### <a id="R_RISCV_TLS_DTPREL32" href="#R_RISCV_TLS_DTPREL32">const R_RISCV_TLS_DTPREL32</a>
-
-```
-searchKey: elf.R_RISCV_TLS_DTPREL32
-```
-
-```Go
-const R_RISCV_TLS_DTPREL32 R_RISCV = 8 /* 32 bit relative offset in TLS block */
-
-```
-
-### <a id="R_RISCV_TLS_DTPREL64" href="#R_RISCV_TLS_DTPREL64">const R_RISCV_TLS_DTPREL64</a>
-
-```
-searchKey: elf.R_RISCV_TLS_DTPREL64
-```
-
-```Go
-const R_RISCV_TLS_DTPREL64 R_RISCV = 9 /* Relative offset in TLS block */
-
-```
-
-### <a id="R_RISCV_TLS_TPREL32" href="#R_RISCV_TLS_TPREL32">const R_RISCV_TLS_TPREL32</a>
-
-```
-searchKey: elf.R_RISCV_TLS_TPREL32
-```
-
-```Go
-const R_RISCV_TLS_TPREL32 R_RISCV = 10 /* 32 bit relative offset in static TLS block */
-
-```
-
-### <a id="R_RISCV_TLS_TPREL64" href="#R_RISCV_TLS_TPREL64">const R_RISCV_TLS_TPREL64</a>
-
-```
-searchKey: elf.R_RISCV_TLS_TPREL64
-```
-
-```Go
-const R_RISCV_TLS_TPREL64 R_RISCV = 11 /* Relative offset in static TLS block */
-
-```
-
-### <a id="R_RISCV_BRANCH" href="#R_RISCV_BRANCH">const R_RISCV_BRANCH</a>
-
-```
-searchKey: elf.R_RISCV_BRANCH
-```
-
-```Go
-const R_RISCV_BRANCH R_RISCV = 16 /* PC-relative branch */
-
-```
-
-### <a id="R_RISCV_JAL" href="#R_RISCV_JAL">const R_RISCV_JAL</a>
-
-```
-searchKey: elf.R_RISCV_JAL
-```
-
-```Go
-const R_RISCV_JAL R_RISCV = 17 /* PC-relative jump */
-
-```
-
-### <a id="R_RISCV_CALL" href="#R_RISCV_CALL">const R_RISCV_CALL</a>
-
-```
-searchKey: elf.R_RISCV_CALL
-```
-
-```Go
-const R_RISCV_CALL R_RISCV = 18 /* PC-relative call */
-
-```
-
-### <a id="R_RISCV_CALL_PLT" href="#R_RISCV_CALL_PLT">const R_RISCV_CALL_PLT</a>
-
-```
-searchKey: elf.R_RISCV_CALL_PLT
-```
-
-```Go
-const R_RISCV_CALL_PLT R_RISCV = 19 /* PC-relative call (PLT) */
-
-```
-
-### <a id="R_RISCV_GOT_HI20" href="#R_RISCV_GOT_HI20">const R_RISCV_GOT_HI20</a>
-
-```
-searchKey: elf.R_RISCV_GOT_HI20
-```
-
-```Go
-const R_RISCV_GOT_HI20 R_RISCV = 20 /* PC-relative GOT reference */
-
-```
-
-### <a id="R_RISCV_TLS_GOT_HI20" href="#R_RISCV_TLS_GOT_HI20">const R_RISCV_TLS_GOT_HI20</a>
-
-```
-searchKey: elf.R_RISCV_TLS_GOT_HI20
-```
-
-```Go
-const R_RISCV_TLS_GOT_HI20 R_RISCV = 21 /* PC-relative TLS IE GOT offset */
-
-```
-
-### <a id="R_RISCV_TLS_GD_HI20" href="#R_RISCV_TLS_GD_HI20">const R_RISCV_TLS_GD_HI20</a>
-
-```
-searchKey: elf.R_RISCV_TLS_GD_HI20
-```
-
-```Go
-const R_RISCV_TLS_GD_HI20 R_RISCV = 22 /* PC-relative TLS GD reference */
-
-```
-
-### <a id="R_RISCV_PCREL_HI20" href="#R_RISCV_PCREL_HI20">const R_RISCV_PCREL_HI20</a>
-
-```
-searchKey: elf.R_RISCV_PCREL_HI20
-```
-
-```Go
-const R_RISCV_PCREL_HI20 R_RISCV = 23 /* PC-relative reference */
-
-```
-
-### <a id="R_RISCV_PCREL_LO12_I" href="#R_RISCV_PCREL_LO12_I">const R_RISCV_PCREL_LO12_I</a>
-
-```
-searchKey: elf.R_RISCV_PCREL_LO12_I
-```
-
-```Go
-const R_RISCV_PCREL_LO12_I R_RISCV = 24 /* PC-relative reference */
-
-```
-
-### <a id="R_RISCV_PCREL_LO12_S" href="#R_RISCV_PCREL_LO12_S">const R_RISCV_PCREL_LO12_S</a>
-
-```
-searchKey: elf.R_RISCV_PCREL_LO12_S
-```
-
-```Go
-const R_RISCV_PCREL_LO12_S R_RISCV = 25 /* PC-relative reference */
-
-```
-
-### <a id="R_RISCV_HI20" href="#R_RISCV_HI20">const R_RISCV_HI20</a>
-
-```
-searchKey: elf.R_RISCV_HI20
-```
-
-```Go
-const R_RISCV_HI20 R_RISCV = 26 /* Absolute address */
-
-```
-
-### <a id="R_RISCV_LO12_I" href="#R_RISCV_LO12_I">const R_RISCV_LO12_I</a>
-
-```
-searchKey: elf.R_RISCV_LO12_I
-```
-
-```Go
-const R_RISCV_LO12_I R_RISCV = 27 /* Absolute address */
-
-```
-
-### <a id="R_RISCV_LO12_S" href="#R_RISCV_LO12_S">const R_RISCV_LO12_S</a>
-
-```
-searchKey: elf.R_RISCV_LO12_S
-```
-
-```Go
-const R_RISCV_LO12_S R_RISCV = 28 /* Absolute address */
-
-```
-
-### <a id="R_RISCV_TPREL_HI20" href="#R_RISCV_TPREL_HI20">const R_RISCV_TPREL_HI20</a>
-
-```
-searchKey: elf.R_RISCV_TPREL_HI20
-```
-
-```Go
-const R_RISCV_TPREL_HI20 R_RISCV = 29 /* TLS LE thread offset */
-
-```
-
-### <a id="R_RISCV_TPREL_LO12_I" href="#R_RISCV_TPREL_LO12_I">const R_RISCV_TPREL_LO12_I</a>
-
-```
-searchKey: elf.R_RISCV_TPREL_LO12_I
-```
-
-```Go
-const R_RISCV_TPREL_LO12_I R_RISCV = 30 /* TLS LE thread offset */
-
-```
-
-### <a id="R_RISCV_TPREL_LO12_S" href="#R_RISCV_TPREL_LO12_S">const R_RISCV_TPREL_LO12_S</a>
-
-```
-searchKey: elf.R_RISCV_TPREL_LO12_S
-```
-
-```Go
-const R_RISCV_TPREL_LO12_S R_RISCV = 31 /* TLS LE thread offset */
-
-```
-
-### <a id="R_RISCV_TPREL_ADD" href="#R_RISCV_TPREL_ADD">const R_RISCV_TPREL_ADD</a>
-
-```
-searchKey: elf.R_RISCV_TPREL_ADD
-```
-
-```Go
-const R_RISCV_TPREL_ADD R_RISCV = 32 /* TLS LE thread usage */
-
-```
-
-### <a id="R_RISCV_ADD8" href="#R_RISCV_ADD8">const R_RISCV_ADD8</a>
-
-```
-searchKey: elf.R_RISCV_ADD8
-```
-
-```Go
-const R_RISCV_ADD8 R_RISCV = 33 /* 8-bit label addition */
-
-```
-
 ### <a id="R_RISCV_ADD16" href="#R_RISCV_ADD16">const R_RISCV_ADD16</a>
 
 ```
 searchKey: elf.R_RISCV_ADD16
+tags: [constant number]
 ```
 
 ```Go
@@ -13524,6 +13624,7 @@ const R_RISCV_ADD16 R_RISCV = 34 /* 16-bit label addition */
 
 ```
 searchKey: elf.R_RISCV_ADD32
+tags: [constant number]
 ```
 
 ```Go
@@ -13535,6 +13636,7 @@ const R_RISCV_ADD32 R_RISCV = 35 /* 32-bit label addition */
 
 ```
 searchKey: elf.R_RISCV_ADD64
+tags: [constant number]
 ```
 
 ```Go
@@ -13542,69 +13644,15 @@ const R_RISCV_ADD64 R_RISCV = 36 /* 64-bit label addition */
 
 ```
 
-### <a id="R_RISCV_SUB8" href="#R_RISCV_SUB8">const R_RISCV_SUB8</a>
+### <a id="R_RISCV_ADD8" href="#R_RISCV_ADD8">const R_RISCV_ADD8</a>
 
 ```
-searchKey: elf.R_RISCV_SUB8
-```
-
-```Go
-const R_RISCV_SUB8 R_RISCV = 37 /* 8-bit label subtraction */
-
-```
-
-### <a id="R_RISCV_SUB16" href="#R_RISCV_SUB16">const R_RISCV_SUB16</a>
-
-```
-searchKey: elf.R_RISCV_SUB16
+searchKey: elf.R_RISCV_ADD8
+tags: [constant number]
 ```
 
 ```Go
-const R_RISCV_SUB16 R_RISCV = 38 /* 16-bit label subtraction */
-
-```
-
-### <a id="R_RISCV_SUB32" href="#R_RISCV_SUB32">const R_RISCV_SUB32</a>
-
-```
-searchKey: elf.R_RISCV_SUB32
-```
-
-```Go
-const R_RISCV_SUB32 R_RISCV = 39 /* 32-bit label subtraction */
-
-```
-
-### <a id="R_RISCV_SUB64" href="#R_RISCV_SUB64">const R_RISCV_SUB64</a>
-
-```
-searchKey: elf.R_RISCV_SUB64
-```
-
-```Go
-const R_RISCV_SUB64 R_RISCV = 40 /* 64-bit label subtraction */
-
-```
-
-### <a id="R_RISCV_GNU_VTINHERIT" href="#R_RISCV_GNU_VTINHERIT">const R_RISCV_GNU_VTINHERIT</a>
-
-```
-searchKey: elf.R_RISCV_GNU_VTINHERIT
-```
-
-```Go
-const R_RISCV_GNU_VTINHERIT R_RISCV = 41 /* GNU C++ vtable hierarchy */
-
-```
-
-### <a id="R_RISCV_GNU_VTENTRY" href="#R_RISCV_GNU_VTENTRY">const R_RISCV_GNU_VTENTRY</a>
-
-```
-searchKey: elf.R_RISCV_GNU_VTENTRY
-```
-
-```Go
-const R_RISCV_GNU_VTENTRY R_RISCV = 42 /* GNU C++ vtable member usage */
+const R_RISCV_ADD8 R_RISCV = 33 /* 8-bit label addition */
 
 ```
 
@@ -13612,6 +13660,7 @@ const R_RISCV_GNU_VTENTRY R_RISCV = 42 /* GNU C++ vtable member usage */
 
 ```
 searchKey: elf.R_RISCV_ALIGN
+tags: [constant number]
 ```
 
 ```Go
@@ -13619,36 +13668,87 @@ const R_RISCV_ALIGN R_RISCV = 43 /* Alignment statement */
 
 ```
 
-### <a id="R_RISCV_RVC_BRANCH" href="#R_RISCV_RVC_BRANCH">const R_RISCV_RVC_BRANCH</a>
+### <a id="R_RISCV_BRANCH" href="#R_RISCV_BRANCH">const R_RISCV_BRANCH</a>
 
 ```
-searchKey: elf.R_RISCV_RVC_BRANCH
-```
-
-```Go
-const R_RISCV_RVC_BRANCH R_RISCV = 44 /* PC-relative branch offset */
-
-```
-
-### <a id="R_RISCV_RVC_JUMP" href="#R_RISCV_RVC_JUMP">const R_RISCV_RVC_JUMP</a>
-
-```
-searchKey: elf.R_RISCV_RVC_JUMP
+searchKey: elf.R_RISCV_BRANCH
+tags: [constant number]
 ```
 
 ```Go
-const R_RISCV_RVC_JUMP R_RISCV = 45 /* PC-relative jump offset */
+const R_RISCV_BRANCH R_RISCV = 16 /* PC-relative branch */
 
 ```
 
-### <a id="R_RISCV_RVC_LUI" href="#R_RISCV_RVC_LUI">const R_RISCV_RVC_LUI</a>
+### <a id="R_RISCV_CALL" href="#R_RISCV_CALL">const R_RISCV_CALL</a>
 
 ```
-searchKey: elf.R_RISCV_RVC_LUI
+searchKey: elf.R_RISCV_CALL
+tags: [constant number]
 ```
 
 ```Go
-const R_RISCV_RVC_LUI R_RISCV = 46 /* Absolute address */
+const R_RISCV_CALL R_RISCV = 18 /* PC-relative call */
+
+```
+
+### <a id="R_RISCV_CALL_PLT" href="#R_RISCV_CALL_PLT">const R_RISCV_CALL_PLT</a>
+
+```
+searchKey: elf.R_RISCV_CALL_PLT
+tags: [constant number]
+```
+
+```Go
+const R_RISCV_CALL_PLT R_RISCV = 19 /* PC-relative call (PLT) */
+
+```
+
+### <a id="R_RISCV_COPY" href="#R_RISCV_COPY">const R_RISCV_COPY</a>
+
+```
+searchKey: elf.R_RISCV_COPY
+tags: [constant number]
+```
+
+```Go
+const R_RISCV_COPY R_RISCV = 4 /* Copy data from shared object. */
+
+```
+
+### <a id="R_RISCV_GNU_VTENTRY" href="#R_RISCV_GNU_VTENTRY">const R_RISCV_GNU_VTENTRY</a>
+
+```
+searchKey: elf.R_RISCV_GNU_VTENTRY
+tags: [constant number]
+```
+
+```Go
+const R_RISCV_GNU_VTENTRY R_RISCV = 42 /* GNU C++ vtable member usage */
+
+```
+
+### <a id="R_RISCV_GNU_VTINHERIT" href="#R_RISCV_GNU_VTINHERIT">const R_RISCV_GNU_VTINHERIT</a>
+
+```
+searchKey: elf.R_RISCV_GNU_VTINHERIT
+tags: [constant number]
+```
+
+```Go
+const R_RISCV_GNU_VTINHERIT R_RISCV = 41 /* GNU C++ vtable hierarchy */
+
+```
+
+### <a id="R_RISCV_GOT_HI20" href="#R_RISCV_GOT_HI20">const R_RISCV_GOT_HI20</a>
+
+```
+searchKey: elf.R_RISCV_GOT_HI20
+tags: [constant number]
+```
+
+```Go
+const R_RISCV_GOT_HI20 R_RISCV = 20 /* PC-relative GOT reference */
 
 ```
 
@@ -13656,6 +13756,7 @@ const R_RISCV_RVC_LUI R_RISCV = 46 /* Absolute address */
 
 ```
 searchKey: elf.R_RISCV_GPREL_I
+tags: [constant number]
 ```
 
 ```Go
@@ -13667,6 +13768,7 @@ const R_RISCV_GPREL_I R_RISCV = 47 /* GP-relative reference */
 
 ```
 searchKey: elf.R_RISCV_GPREL_S
+tags: [constant number]
 ```
 
 ```Go
@@ -13674,25 +13776,123 @@ const R_RISCV_GPREL_S R_RISCV = 48 /* GP-relative reference */
 
 ```
 
-### <a id="R_RISCV_TPREL_I" href="#R_RISCV_TPREL_I">const R_RISCV_TPREL_I</a>
+### <a id="R_RISCV_HI20" href="#R_RISCV_HI20">const R_RISCV_HI20</a>
 
 ```
-searchKey: elf.R_RISCV_TPREL_I
-```
-
-```Go
-const R_RISCV_TPREL_I R_RISCV = 49 /* TP-relative TLS LE load */
-
-```
-
-### <a id="R_RISCV_TPREL_S" href="#R_RISCV_TPREL_S">const R_RISCV_TPREL_S</a>
-
-```
-searchKey: elf.R_RISCV_TPREL_S
+searchKey: elf.R_RISCV_HI20
+tags: [constant number]
 ```
 
 ```Go
-const R_RISCV_TPREL_S R_RISCV = 50 /* TP-relative TLS LE store */
+const R_RISCV_HI20 R_RISCV = 26 /* Absolute address */
+
+```
+
+### <a id="R_RISCV_JAL" href="#R_RISCV_JAL">const R_RISCV_JAL</a>
+
+```
+searchKey: elf.R_RISCV_JAL
+tags: [constant number]
+```
+
+```Go
+const R_RISCV_JAL R_RISCV = 17 /* PC-relative jump */
+
+```
+
+### <a id="R_RISCV_JUMP_SLOT" href="#R_RISCV_JUMP_SLOT">const R_RISCV_JUMP_SLOT</a>
+
+```
+searchKey: elf.R_RISCV_JUMP_SLOT
+tags: [constant number]
+```
+
+```Go
+const R_RISCV_JUMP_SLOT R_RISCV = 5 /* Set GOT entry to code address. */
+
+```
+
+### <a id="R_RISCV_LO12_I" href="#R_RISCV_LO12_I">const R_RISCV_LO12_I</a>
+
+```
+searchKey: elf.R_RISCV_LO12_I
+tags: [constant number]
+```
+
+```Go
+const R_RISCV_LO12_I R_RISCV = 27 /* Absolute address */
+
+```
+
+### <a id="R_RISCV_LO12_S" href="#R_RISCV_LO12_S">const R_RISCV_LO12_S</a>
+
+```
+searchKey: elf.R_RISCV_LO12_S
+tags: [constant number]
+```
+
+```Go
+const R_RISCV_LO12_S R_RISCV = 28 /* Absolute address */
+
+```
+
+### <a id="R_RISCV_NONE" href="#R_RISCV_NONE">const R_RISCV_NONE</a>
+
+```
+searchKey: elf.R_RISCV_NONE
+tags: [constant number]
+```
+
+```Go
+const R_RISCV_NONE R_RISCV = 0 /* No relocation. */
+
+```
+
+### <a id="R_RISCV_PCREL_HI20" href="#R_RISCV_PCREL_HI20">const R_RISCV_PCREL_HI20</a>
+
+```
+searchKey: elf.R_RISCV_PCREL_HI20
+tags: [constant number]
+```
+
+```Go
+const R_RISCV_PCREL_HI20 R_RISCV = 23 /* PC-relative reference */
+
+```
+
+### <a id="R_RISCV_PCREL_LO12_I" href="#R_RISCV_PCREL_LO12_I">const R_RISCV_PCREL_LO12_I</a>
+
+```
+searchKey: elf.R_RISCV_PCREL_LO12_I
+tags: [constant number]
+```
+
+```Go
+const R_RISCV_PCREL_LO12_I R_RISCV = 24 /* PC-relative reference */
+
+```
+
+### <a id="R_RISCV_PCREL_LO12_S" href="#R_RISCV_PCREL_LO12_S">const R_RISCV_PCREL_LO12_S</a>
+
+```
+searchKey: elf.R_RISCV_PCREL_LO12_S
+tags: [constant number]
+```
+
+```Go
+const R_RISCV_PCREL_LO12_S R_RISCV = 25 /* PC-relative reference */
+
+```
+
+### <a id="R_RISCV_RELATIVE" href="#R_RISCV_RELATIVE">const R_RISCV_RELATIVE</a>
+
+```
+searchKey: elf.R_RISCV_RELATIVE
+tags: [constant number]
+```
+
+```Go
+const R_RISCV_RELATIVE R_RISCV = 3 /* Add load address of shared object. */
 
 ```
 
@@ -13700,6 +13900,7 @@ const R_RISCV_TPREL_S R_RISCV = 50 /* TP-relative TLS LE store */
 
 ```
 searchKey: elf.R_RISCV_RELAX
+tags: [constant number]
 ```
 
 ```Go
@@ -13707,36 +13908,39 @@ const R_RISCV_RELAX R_RISCV = 51 /* Instruction pair can be relaxed */
 
 ```
 
-### <a id="R_RISCV_SUB6" href="#R_RISCV_SUB6">const R_RISCV_SUB6</a>
+### <a id="R_RISCV_RVC_BRANCH" href="#R_RISCV_RVC_BRANCH">const R_RISCV_RVC_BRANCH</a>
 
 ```
-searchKey: elf.R_RISCV_SUB6
-```
-
-```Go
-const R_RISCV_SUB6 R_RISCV = 52 /* Local label subtraction */
-
-```
-
-### <a id="R_RISCV_SET6" href="#R_RISCV_SET6">const R_RISCV_SET6</a>
-
-```
-searchKey: elf.R_RISCV_SET6
+searchKey: elf.R_RISCV_RVC_BRANCH
+tags: [constant number]
 ```
 
 ```Go
-const R_RISCV_SET6 R_RISCV = 53 /* Local label subtraction */
+const R_RISCV_RVC_BRANCH R_RISCV = 44 /* PC-relative branch offset */
 
 ```
 
-### <a id="R_RISCV_SET8" href="#R_RISCV_SET8">const R_RISCV_SET8</a>
+### <a id="R_RISCV_RVC_JUMP" href="#R_RISCV_RVC_JUMP">const R_RISCV_RVC_JUMP</a>
 
 ```
-searchKey: elf.R_RISCV_SET8
+searchKey: elf.R_RISCV_RVC_JUMP
+tags: [constant number]
 ```
 
 ```Go
-const R_RISCV_SET8 R_RISCV = 54 /* Local label subtraction */
+const R_RISCV_RVC_JUMP R_RISCV = 45 /* PC-relative jump offset */
+
+```
+
+### <a id="R_RISCV_RVC_LUI" href="#R_RISCV_RVC_LUI">const R_RISCV_RVC_LUI</a>
+
+```
+searchKey: elf.R_RISCV_RVC_LUI
+tags: [constant number]
+```
+
+```Go
+const R_RISCV_RVC_LUI R_RISCV = 46 /* Absolute address */
 
 ```
 
@@ -13744,6 +13948,7 @@ const R_RISCV_SET8 R_RISCV = 54 /* Local label subtraction */
 
 ```
 searchKey: elf.R_RISCV_SET16
+tags: [constant number]
 ```
 
 ```Go
@@ -13755,6 +13960,7 @@ const R_RISCV_SET16 R_RISCV = 55 /* Local label subtraction */
 
 ```
 searchKey: elf.R_RISCV_SET32
+tags: [constant number]
 ```
 
 ```Go
@@ -13762,931 +13968,263 @@ const R_RISCV_SET32 R_RISCV = 56 /* Local label subtraction */
 
 ```
 
-### <a id="R_RISCV_32_PCREL" href="#R_RISCV_32_PCREL">const R_RISCV_32_PCREL</a>
+### <a id="R_RISCV_SET6" href="#R_RISCV_SET6">const R_RISCV_SET6</a>
 
 ```
-searchKey: elf.R_RISCV_32_PCREL
+searchKey: elf.R_RISCV_SET6
+tags: [constant number]
 ```
 
 ```Go
-const R_RISCV_32_PCREL R_RISCV = 57 /* 32-bit PC relative */
+const R_RISCV_SET6 R_RISCV = 53 /* Local label subtraction */
 
 ```
 
-### <a id="R_390_NONE" href="#R_390_NONE">const R_390_NONE</a>
+### <a id="R_RISCV_SET8" href="#R_RISCV_SET8">const R_RISCV_SET8</a>
 
 ```
-searchKey: elf.R_390_NONE
+searchKey: elf.R_RISCV_SET8
+tags: [constant number]
 ```
 
 ```Go
-const R_390_NONE R_390 = 0
-```
-
-### <a id="R_390_8" href="#R_390_8">const R_390_8</a>
-
-```
-searchKey: elf.R_390_8
-```
-
-```Go
-const R_390_8 R_390 = 1
-```
-
-### <a id="R_390_12" href="#R_390_12">const R_390_12</a>
-
-```
-searchKey: elf.R_390_12
-```
-
-```Go
-const R_390_12 R_390 = 2
-```
-
-### <a id="R_390_16" href="#R_390_16">const R_390_16</a>
-
-```
-searchKey: elf.R_390_16
-```
-
-```Go
-const R_390_16 R_390 = 3
-```
-
-### <a id="R_390_32" href="#R_390_32">const R_390_32</a>
-
-```
-searchKey: elf.R_390_32
-```
-
-```Go
-const R_390_32 R_390 = 4
-```
-
-### <a id="R_390_PC32" href="#R_390_PC32">const R_390_PC32</a>
-
-```
-searchKey: elf.R_390_PC32
-```
-
-```Go
-const R_390_PC32 R_390 = 5
-```
-
-### <a id="R_390_GOT12" href="#R_390_GOT12">const R_390_GOT12</a>
-
-```
-searchKey: elf.R_390_GOT12
-```
-
-```Go
-const R_390_GOT12 R_390 = 6
-```
-
-### <a id="R_390_GOT32" href="#R_390_GOT32">const R_390_GOT32</a>
-
-```
-searchKey: elf.R_390_GOT32
-```
-
-```Go
-const R_390_GOT32 R_390 = 7
-```
-
-### <a id="R_390_PLT32" href="#R_390_PLT32">const R_390_PLT32</a>
-
-```
-searchKey: elf.R_390_PLT32
-```
-
-```Go
-const R_390_PLT32 R_390 = 8
-```
-
-### <a id="R_390_COPY" href="#R_390_COPY">const R_390_COPY</a>
-
-```
-searchKey: elf.R_390_COPY
-```
-
-```Go
-const R_390_COPY R_390 = 9
-```
-
-### <a id="R_390_GLOB_DAT" href="#R_390_GLOB_DAT">const R_390_GLOB_DAT</a>
-
-```
-searchKey: elf.R_390_GLOB_DAT
-```
-
-```Go
-const R_390_GLOB_DAT R_390 = 10
-```
-
-### <a id="R_390_JMP_SLOT" href="#R_390_JMP_SLOT">const R_390_JMP_SLOT</a>
-
-```
-searchKey: elf.R_390_JMP_SLOT
-```
-
-```Go
-const R_390_JMP_SLOT R_390 = 11
-```
-
-### <a id="R_390_RELATIVE" href="#R_390_RELATIVE">const R_390_RELATIVE</a>
-
-```
-searchKey: elf.R_390_RELATIVE
-```
-
-```Go
-const R_390_RELATIVE R_390 = 12
-```
-
-### <a id="R_390_GOTOFF" href="#R_390_GOTOFF">const R_390_GOTOFF</a>
-
-```
-searchKey: elf.R_390_GOTOFF
-```
-
-```Go
-const R_390_GOTOFF R_390 = 13
-```
-
-### <a id="R_390_GOTPC" href="#R_390_GOTPC">const R_390_GOTPC</a>
-
-```
-searchKey: elf.R_390_GOTPC
-```
-
-```Go
-const R_390_GOTPC R_390 = 14
-```
-
-### <a id="R_390_GOT16" href="#R_390_GOT16">const R_390_GOT16</a>
-
-```
-searchKey: elf.R_390_GOT16
-```
-
-```Go
-const R_390_GOT16 R_390 = 15
-```
-
-### <a id="R_390_PC16" href="#R_390_PC16">const R_390_PC16</a>
-
-```
-searchKey: elf.R_390_PC16
-```
-
-```Go
-const R_390_PC16 R_390 = 16
-```
-
-### <a id="R_390_PC16DBL" href="#R_390_PC16DBL">const R_390_PC16DBL</a>
-
-```
-searchKey: elf.R_390_PC16DBL
-```
-
-```Go
-const R_390_PC16DBL R_390 = 17
-```
-
-### <a id="R_390_PLT16DBL" href="#R_390_PLT16DBL">const R_390_PLT16DBL</a>
-
-```
-searchKey: elf.R_390_PLT16DBL
-```
-
-```Go
-const R_390_PLT16DBL R_390 = 18
-```
-
-### <a id="R_390_PC32DBL" href="#R_390_PC32DBL">const R_390_PC32DBL</a>
-
-```
-searchKey: elf.R_390_PC32DBL
-```
-
-```Go
-const R_390_PC32DBL R_390 = 19
-```
-
-### <a id="R_390_PLT32DBL" href="#R_390_PLT32DBL">const R_390_PLT32DBL</a>
-
-```
-searchKey: elf.R_390_PLT32DBL
-```
-
-```Go
-const R_390_PLT32DBL R_390 = 20
-```
-
-### <a id="R_390_GOTPCDBL" href="#R_390_GOTPCDBL">const R_390_GOTPCDBL</a>
-
-```
-searchKey: elf.R_390_GOTPCDBL
-```
-
-```Go
-const R_390_GOTPCDBL R_390 = 21
-```
-
-### <a id="R_390_64" href="#R_390_64">const R_390_64</a>
-
-```
-searchKey: elf.R_390_64
-```
-
-```Go
-const R_390_64 R_390 = 22
-```
-
-### <a id="R_390_PC64" href="#R_390_PC64">const R_390_PC64</a>
-
-```
-searchKey: elf.R_390_PC64
-```
-
-```Go
-const R_390_PC64 R_390 = 23
-```
-
-### <a id="R_390_GOT64" href="#R_390_GOT64">const R_390_GOT64</a>
-
-```
-searchKey: elf.R_390_GOT64
-```
-
-```Go
-const R_390_GOT64 R_390 = 24
-```
-
-### <a id="R_390_PLT64" href="#R_390_PLT64">const R_390_PLT64</a>
-
-```
-searchKey: elf.R_390_PLT64
-```
-
-```Go
-const R_390_PLT64 R_390 = 25
-```
-
-### <a id="R_390_GOTENT" href="#R_390_GOTENT">const R_390_GOTENT</a>
-
-```
-searchKey: elf.R_390_GOTENT
-```
-
-```Go
-const R_390_GOTENT R_390 = 26
-```
-
-### <a id="R_390_GOTOFF16" href="#R_390_GOTOFF16">const R_390_GOTOFF16</a>
-
-```
-searchKey: elf.R_390_GOTOFF16
-```
-
-```Go
-const R_390_GOTOFF16 R_390 = 27
-```
-
-### <a id="R_390_GOTOFF64" href="#R_390_GOTOFF64">const R_390_GOTOFF64</a>
-
-```
-searchKey: elf.R_390_GOTOFF64
-```
-
-```Go
-const R_390_GOTOFF64 R_390 = 28
-```
-
-### <a id="R_390_GOTPLT12" href="#R_390_GOTPLT12">const R_390_GOTPLT12</a>
-
-```
-searchKey: elf.R_390_GOTPLT12
-```
-
-```Go
-const R_390_GOTPLT12 R_390 = 29
-```
-
-### <a id="R_390_GOTPLT16" href="#R_390_GOTPLT16">const R_390_GOTPLT16</a>
-
-```
-searchKey: elf.R_390_GOTPLT16
-```
-
-```Go
-const R_390_GOTPLT16 R_390 = 30
-```
-
-### <a id="R_390_GOTPLT32" href="#R_390_GOTPLT32">const R_390_GOTPLT32</a>
-
-```
-searchKey: elf.R_390_GOTPLT32
-```
-
-```Go
-const R_390_GOTPLT32 R_390 = 31
-```
-
-### <a id="R_390_GOTPLT64" href="#R_390_GOTPLT64">const R_390_GOTPLT64</a>
-
-```
-searchKey: elf.R_390_GOTPLT64
-```
-
-```Go
-const R_390_GOTPLT64 R_390 = 32
-```
-
-### <a id="R_390_GOTPLTENT" href="#R_390_GOTPLTENT">const R_390_GOTPLTENT</a>
-
-```
-searchKey: elf.R_390_GOTPLTENT
-```
-
-```Go
-const R_390_GOTPLTENT R_390 = 33
-```
-
-### <a id="R_390_GOTPLTOFF16" href="#R_390_GOTPLTOFF16">const R_390_GOTPLTOFF16</a>
-
-```
-searchKey: elf.R_390_GOTPLTOFF16
-```
-
-```Go
-const R_390_GOTPLTOFF16 R_390 = 34
-```
-
-### <a id="R_390_GOTPLTOFF32" href="#R_390_GOTPLTOFF32">const R_390_GOTPLTOFF32</a>
-
-```
-searchKey: elf.R_390_GOTPLTOFF32
-```
-
-```Go
-const R_390_GOTPLTOFF32 R_390 = 35
-```
-
-### <a id="R_390_GOTPLTOFF64" href="#R_390_GOTPLTOFF64">const R_390_GOTPLTOFF64</a>
-
-```
-searchKey: elf.R_390_GOTPLTOFF64
-```
-
-```Go
-const R_390_GOTPLTOFF64 R_390 = 36
-```
-
-### <a id="R_390_TLS_LOAD" href="#R_390_TLS_LOAD">const R_390_TLS_LOAD</a>
-
-```
-searchKey: elf.R_390_TLS_LOAD
-```
-
-```Go
-const R_390_TLS_LOAD R_390 = 37
-```
-
-### <a id="R_390_TLS_GDCALL" href="#R_390_TLS_GDCALL">const R_390_TLS_GDCALL</a>
-
-```
-searchKey: elf.R_390_TLS_GDCALL
-```
-
-```Go
-const R_390_TLS_GDCALL R_390 = 38
-```
-
-### <a id="R_390_TLS_LDCALL" href="#R_390_TLS_LDCALL">const R_390_TLS_LDCALL</a>
-
-```
-searchKey: elf.R_390_TLS_LDCALL
-```
-
-```Go
-const R_390_TLS_LDCALL R_390 = 39
-```
-
-### <a id="R_390_TLS_GD32" href="#R_390_TLS_GD32">const R_390_TLS_GD32</a>
-
-```
-searchKey: elf.R_390_TLS_GD32
-```
-
-```Go
-const R_390_TLS_GD32 R_390 = 40
-```
-
-### <a id="R_390_TLS_GD64" href="#R_390_TLS_GD64">const R_390_TLS_GD64</a>
-
-```
-searchKey: elf.R_390_TLS_GD64
-```
-
-```Go
-const R_390_TLS_GD64 R_390 = 41
-```
-
-### <a id="R_390_TLS_GOTIE12" href="#R_390_TLS_GOTIE12">const R_390_TLS_GOTIE12</a>
-
-```
-searchKey: elf.R_390_TLS_GOTIE12
-```
-
-```Go
-const R_390_TLS_GOTIE12 R_390 = 42
-```
-
-### <a id="R_390_TLS_GOTIE32" href="#R_390_TLS_GOTIE32">const R_390_TLS_GOTIE32</a>
-
-```
-searchKey: elf.R_390_TLS_GOTIE32
-```
-
-```Go
-const R_390_TLS_GOTIE32 R_390 = 43
-```
-
-### <a id="R_390_TLS_GOTIE64" href="#R_390_TLS_GOTIE64">const R_390_TLS_GOTIE64</a>
-
-```
-searchKey: elf.R_390_TLS_GOTIE64
-```
-
-```Go
-const R_390_TLS_GOTIE64 R_390 = 44
-```
-
-### <a id="R_390_TLS_LDM32" href="#R_390_TLS_LDM32">const R_390_TLS_LDM32</a>
-
-```
-searchKey: elf.R_390_TLS_LDM32
-```
-
-```Go
-const R_390_TLS_LDM32 R_390 = 45
-```
-
-### <a id="R_390_TLS_LDM64" href="#R_390_TLS_LDM64">const R_390_TLS_LDM64</a>
-
-```
-searchKey: elf.R_390_TLS_LDM64
-```
-
-```Go
-const R_390_TLS_LDM64 R_390 = 46
-```
-
-### <a id="R_390_TLS_IE32" href="#R_390_TLS_IE32">const R_390_TLS_IE32</a>
-
-```
-searchKey: elf.R_390_TLS_IE32
-```
-
-```Go
-const R_390_TLS_IE32 R_390 = 47
-```
-
-### <a id="R_390_TLS_IE64" href="#R_390_TLS_IE64">const R_390_TLS_IE64</a>
-
-```
-searchKey: elf.R_390_TLS_IE64
-```
-
-```Go
-const R_390_TLS_IE64 R_390 = 48
-```
-
-### <a id="R_390_TLS_IEENT" href="#R_390_TLS_IEENT">const R_390_TLS_IEENT</a>
-
-```
-searchKey: elf.R_390_TLS_IEENT
-```
-
-```Go
-const R_390_TLS_IEENT R_390 = 49
-```
-
-### <a id="R_390_TLS_LE32" href="#R_390_TLS_LE32">const R_390_TLS_LE32</a>
-
-```
-searchKey: elf.R_390_TLS_LE32
-```
-
-```Go
-const R_390_TLS_LE32 R_390 = 50
-```
-
-### <a id="R_390_TLS_LE64" href="#R_390_TLS_LE64">const R_390_TLS_LE64</a>
-
-```
-searchKey: elf.R_390_TLS_LE64
-```
-
-```Go
-const R_390_TLS_LE64 R_390 = 51
-```
-
-### <a id="R_390_TLS_LDO32" href="#R_390_TLS_LDO32">const R_390_TLS_LDO32</a>
-
-```
-searchKey: elf.R_390_TLS_LDO32
-```
+const R_RISCV_SET8 R_RISCV = 54 /* Local label subtraction */
 
-```Go
-const R_390_TLS_LDO32 R_390 = 52
 ```
 
-### <a id="R_390_TLS_LDO64" href="#R_390_TLS_LDO64">const R_390_TLS_LDO64</a>
+### <a id="R_RISCV_SUB16" href="#R_RISCV_SUB16">const R_RISCV_SUB16</a>
 
 ```
-searchKey: elf.R_390_TLS_LDO64
+searchKey: elf.R_RISCV_SUB16
+tags: [constant number]
 ```
 
 ```Go
-const R_390_TLS_LDO64 R_390 = 53
-```
+const R_RISCV_SUB16 R_RISCV = 38 /* 16-bit label subtraction */
 
-### <a id="R_390_TLS_DTPMOD" href="#R_390_TLS_DTPMOD">const R_390_TLS_DTPMOD</a>
-
-```
-searchKey: elf.R_390_TLS_DTPMOD
-```
-
-```Go
-const R_390_TLS_DTPMOD R_390 = 54
 ```
 
-### <a id="R_390_TLS_DTPOFF" href="#R_390_TLS_DTPOFF">const R_390_TLS_DTPOFF</a>
+### <a id="R_RISCV_SUB32" href="#R_RISCV_SUB32">const R_RISCV_SUB32</a>
 
 ```
-searchKey: elf.R_390_TLS_DTPOFF
+searchKey: elf.R_RISCV_SUB32
+tags: [constant number]
 ```
 
 ```Go
-const R_390_TLS_DTPOFF R_390 = 55
-```
-
-### <a id="R_390_TLS_TPOFF" href="#R_390_TLS_TPOFF">const R_390_TLS_TPOFF</a>
-
-```
-searchKey: elf.R_390_TLS_TPOFF
-```
+const R_RISCV_SUB32 R_RISCV = 39 /* 32-bit label subtraction */
 
-```Go
-const R_390_TLS_TPOFF R_390 = 56
 ```
 
-### <a id="R_390_20" href="#R_390_20">const R_390_20</a>
+### <a id="R_RISCV_SUB6" href="#R_RISCV_SUB6">const R_RISCV_SUB6</a>
 
 ```
-searchKey: elf.R_390_20
+searchKey: elf.R_RISCV_SUB6
+tags: [constant number]
 ```
 
 ```Go
-const R_390_20 R_390 = 57
-```
-
-### <a id="R_390_GOT20" href="#R_390_GOT20">const R_390_GOT20</a>
-
-```
-searchKey: elf.R_390_GOT20
-```
+const R_RISCV_SUB6 R_RISCV = 52 /* Local label subtraction */
 
-```Go
-const R_390_GOT20 R_390 = 58
 ```
 
-### <a id="R_390_GOTPLT20" href="#R_390_GOTPLT20">const R_390_GOTPLT20</a>
+### <a id="R_RISCV_SUB64" href="#R_RISCV_SUB64">const R_RISCV_SUB64</a>
 
 ```
-searchKey: elf.R_390_GOTPLT20
+searchKey: elf.R_RISCV_SUB64
+tags: [constant number]
 ```
 
 ```Go
-const R_390_GOTPLT20 R_390 = 59
-```
-
-### <a id="R_390_TLS_GOTIE20" href="#R_390_TLS_GOTIE20">const R_390_TLS_GOTIE20</a>
+const R_RISCV_SUB64 R_RISCV = 40 /* 64-bit label subtraction */
 
-```
-searchKey: elf.R_390_TLS_GOTIE20
-```
-
-```Go
-const R_390_TLS_GOTIE20 R_390 = 60
 ```
 
-### <a id="R_SPARC_NONE" href="#R_SPARC_NONE">const R_SPARC_NONE</a>
+### <a id="R_RISCV_SUB8" href="#R_RISCV_SUB8">const R_RISCV_SUB8</a>
 
 ```
-searchKey: elf.R_SPARC_NONE
+searchKey: elf.R_RISCV_SUB8
+tags: [constant number]
 ```
 
 ```Go
-const R_SPARC_NONE R_SPARC = 0
-```
-
-### <a id="R_SPARC_8" href="#R_SPARC_8">const R_SPARC_8</a>
-
-```
-searchKey: elf.R_SPARC_8
-```
+const R_RISCV_SUB8 R_RISCV = 37 /* 8-bit label subtraction */
 
-```Go
-const R_SPARC_8 R_SPARC = 1
 ```
 
-### <a id="R_SPARC_16" href="#R_SPARC_16">const R_SPARC_16</a>
+### <a id="R_RISCV_TLS_DTPMOD32" href="#R_RISCV_TLS_DTPMOD32">const R_RISCV_TLS_DTPMOD32</a>
 
 ```
-searchKey: elf.R_SPARC_16
+searchKey: elf.R_RISCV_TLS_DTPMOD32
+tags: [constant number]
 ```
 
 ```Go
-const R_SPARC_16 R_SPARC = 2
-```
+const R_RISCV_TLS_DTPMOD32 R_RISCV = 6 /* 32 bit ID of module containing symbol */
 
-### <a id="R_SPARC_32" href="#R_SPARC_32">const R_SPARC_32</a>
-
-```
-searchKey: elf.R_SPARC_32
-```
-
-```Go
-const R_SPARC_32 R_SPARC = 3
 ```
 
-### <a id="R_SPARC_DISP8" href="#R_SPARC_DISP8">const R_SPARC_DISP8</a>
+### <a id="R_RISCV_TLS_DTPMOD64" href="#R_RISCV_TLS_DTPMOD64">const R_RISCV_TLS_DTPMOD64</a>
 
 ```
-searchKey: elf.R_SPARC_DISP8
+searchKey: elf.R_RISCV_TLS_DTPMOD64
+tags: [constant number]
 ```
 
 ```Go
-const R_SPARC_DISP8 R_SPARC = 4
-```
-
-### <a id="R_SPARC_DISP16" href="#R_SPARC_DISP16">const R_SPARC_DISP16</a>
-
-```
-searchKey: elf.R_SPARC_DISP16
-```
+const R_RISCV_TLS_DTPMOD64 R_RISCV = 7 /* ID of module containing symbol */
 
-```Go
-const R_SPARC_DISP16 R_SPARC = 5
 ```
 
-### <a id="R_SPARC_DISP32" href="#R_SPARC_DISP32">const R_SPARC_DISP32</a>
+### <a id="R_RISCV_TLS_DTPREL32" href="#R_RISCV_TLS_DTPREL32">const R_RISCV_TLS_DTPREL32</a>
 
 ```
-searchKey: elf.R_SPARC_DISP32
+searchKey: elf.R_RISCV_TLS_DTPREL32
+tags: [constant number]
 ```
 
 ```Go
-const R_SPARC_DISP32 R_SPARC = 6
-```
-
-### <a id="R_SPARC_WDISP30" href="#R_SPARC_WDISP30">const R_SPARC_WDISP30</a>
-
-```
-searchKey: elf.R_SPARC_WDISP30
-```
+const R_RISCV_TLS_DTPREL32 R_RISCV = 8 /* 32 bit relative offset in TLS block */
 
-```Go
-const R_SPARC_WDISP30 R_SPARC = 7
 ```
 
-### <a id="R_SPARC_WDISP22" href="#R_SPARC_WDISP22">const R_SPARC_WDISP22</a>
+### <a id="R_RISCV_TLS_DTPREL64" href="#R_RISCV_TLS_DTPREL64">const R_RISCV_TLS_DTPREL64</a>
 
 ```
-searchKey: elf.R_SPARC_WDISP22
+searchKey: elf.R_RISCV_TLS_DTPREL64
+tags: [constant number]
 ```
 
 ```Go
-const R_SPARC_WDISP22 R_SPARC = 8
-```
-
-### <a id="R_SPARC_HI22" href="#R_SPARC_HI22">const R_SPARC_HI22</a>
+const R_RISCV_TLS_DTPREL64 R_RISCV = 9 /* Relative offset in TLS block */
 
-```
-searchKey: elf.R_SPARC_HI22
-```
-
-```Go
-const R_SPARC_HI22 R_SPARC = 9
 ```
 
-### <a id="R_SPARC_22" href="#R_SPARC_22">const R_SPARC_22</a>
+### <a id="R_RISCV_TLS_GD_HI20" href="#R_RISCV_TLS_GD_HI20">const R_RISCV_TLS_GD_HI20</a>
 
 ```
-searchKey: elf.R_SPARC_22
+searchKey: elf.R_RISCV_TLS_GD_HI20
+tags: [constant number]
 ```
 
 ```Go
-const R_SPARC_22 R_SPARC = 10
-```
-
-### <a id="R_SPARC_13" href="#R_SPARC_13">const R_SPARC_13</a>
-
-```
-searchKey: elf.R_SPARC_13
-```
+const R_RISCV_TLS_GD_HI20 R_RISCV = 22 /* PC-relative TLS GD reference */
 
-```Go
-const R_SPARC_13 R_SPARC = 11
 ```
 
-### <a id="R_SPARC_LO10" href="#R_SPARC_LO10">const R_SPARC_LO10</a>
+### <a id="R_RISCV_TLS_GOT_HI20" href="#R_RISCV_TLS_GOT_HI20">const R_RISCV_TLS_GOT_HI20</a>
 
 ```
-searchKey: elf.R_SPARC_LO10
+searchKey: elf.R_RISCV_TLS_GOT_HI20
+tags: [constant number]
 ```
 
 ```Go
-const R_SPARC_LO10 R_SPARC = 12
-```
+const R_RISCV_TLS_GOT_HI20 R_RISCV = 21 /* PC-relative TLS IE GOT offset */
 
-### <a id="R_SPARC_GOT10" href="#R_SPARC_GOT10">const R_SPARC_GOT10</a>
-
-```
-searchKey: elf.R_SPARC_GOT10
-```
-
-```Go
-const R_SPARC_GOT10 R_SPARC = 13
 ```
 
-### <a id="R_SPARC_GOT13" href="#R_SPARC_GOT13">const R_SPARC_GOT13</a>
+### <a id="R_RISCV_TLS_TPREL32" href="#R_RISCV_TLS_TPREL32">const R_RISCV_TLS_TPREL32</a>
 
 ```
-searchKey: elf.R_SPARC_GOT13
+searchKey: elf.R_RISCV_TLS_TPREL32
+tags: [constant number]
 ```
 
 ```Go
-const R_SPARC_GOT13 R_SPARC = 14
-```
-
-### <a id="R_SPARC_GOT22" href="#R_SPARC_GOT22">const R_SPARC_GOT22</a>
-
-```
-searchKey: elf.R_SPARC_GOT22
-```
+const R_RISCV_TLS_TPREL32 R_RISCV = 10 /* 32 bit relative offset in static TLS block */
 
-```Go
-const R_SPARC_GOT22 R_SPARC = 15
 ```
 
-### <a id="R_SPARC_PC10" href="#R_SPARC_PC10">const R_SPARC_PC10</a>
+### <a id="R_RISCV_TLS_TPREL64" href="#R_RISCV_TLS_TPREL64">const R_RISCV_TLS_TPREL64</a>
 
 ```
-searchKey: elf.R_SPARC_PC10
+searchKey: elf.R_RISCV_TLS_TPREL64
+tags: [constant number]
 ```
 
 ```Go
-const R_SPARC_PC10 R_SPARC = 16
-```
-
-### <a id="R_SPARC_PC22" href="#R_SPARC_PC22">const R_SPARC_PC22</a>
-
-```
-searchKey: elf.R_SPARC_PC22
-```
+const R_RISCV_TLS_TPREL64 R_RISCV = 11 /* Relative offset in static TLS block */
 
-```Go
-const R_SPARC_PC22 R_SPARC = 17
 ```
 
-### <a id="R_SPARC_WPLT30" href="#R_SPARC_WPLT30">const R_SPARC_WPLT30</a>
+### <a id="R_RISCV_TPREL_ADD" href="#R_RISCV_TPREL_ADD">const R_RISCV_TPREL_ADD</a>
 
 ```
-searchKey: elf.R_SPARC_WPLT30
+searchKey: elf.R_RISCV_TPREL_ADD
+tags: [constant number]
 ```
 
 ```Go
-const R_SPARC_WPLT30 R_SPARC = 18
-```
-
-### <a id="R_SPARC_COPY" href="#R_SPARC_COPY">const R_SPARC_COPY</a>
+const R_RISCV_TPREL_ADD R_RISCV = 32 /* TLS LE thread usage */
 
-```
-searchKey: elf.R_SPARC_COPY
-```
-
-```Go
-const R_SPARC_COPY R_SPARC = 19
 ```
 
-### <a id="R_SPARC_GLOB_DAT" href="#R_SPARC_GLOB_DAT">const R_SPARC_GLOB_DAT</a>
+### <a id="R_RISCV_TPREL_HI20" href="#R_RISCV_TPREL_HI20">const R_RISCV_TPREL_HI20</a>
 
 ```
-searchKey: elf.R_SPARC_GLOB_DAT
+searchKey: elf.R_RISCV_TPREL_HI20
+tags: [constant number]
 ```
 
 ```Go
-const R_SPARC_GLOB_DAT R_SPARC = 20
-```
-
-### <a id="R_SPARC_JMP_SLOT" href="#R_SPARC_JMP_SLOT">const R_SPARC_JMP_SLOT</a>
-
-```
-searchKey: elf.R_SPARC_JMP_SLOT
-```
+const R_RISCV_TPREL_HI20 R_RISCV = 29 /* TLS LE thread offset */
 
-```Go
-const R_SPARC_JMP_SLOT R_SPARC = 21
 ```
 
-### <a id="R_SPARC_RELATIVE" href="#R_SPARC_RELATIVE">const R_SPARC_RELATIVE</a>
+### <a id="R_RISCV_TPREL_I" href="#R_RISCV_TPREL_I">const R_RISCV_TPREL_I</a>
 
 ```
-searchKey: elf.R_SPARC_RELATIVE
+searchKey: elf.R_RISCV_TPREL_I
+tags: [constant number]
 ```
 
 ```Go
-const R_SPARC_RELATIVE R_SPARC = 22
-```
+const R_RISCV_TPREL_I R_RISCV = 49 /* TP-relative TLS LE load */
 
-### <a id="R_SPARC_UA32" href="#R_SPARC_UA32">const R_SPARC_UA32</a>
-
-```
-searchKey: elf.R_SPARC_UA32
-```
-
-```Go
-const R_SPARC_UA32 R_SPARC = 23
 ```
 
-### <a id="R_SPARC_PLT32" href="#R_SPARC_PLT32">const R_SPARC_PLT32</a>
+### <a id="R_RISCV_TPREL_LO12_I" href="#R_RISCV_TPREL_LO12_I">const R_RISCV_TPREL_LO12_I</a>
 
 ```
-searchKey: elf.R_SPARC_PLT32
+searchKey: elf.R_RISCV_TPREL_LO12_I
+tags: [constant number]
 ```
 
 ```Go
-const R_SPARC_PLT32 R_SPARC = 24
-```
-
-### <a id="R_SPARC_HIPLT22" href="#R_SPARC_HIPLT22">const R_SPARC_HIPLT22</a>
-
-```
-searchKey: elf.R_SPARC_HIPLT22
-```
+const R_RISCV_TPREL_LO12_I R_RISCV = 30 /* TLS LE thread offset */
 
-```Go
-const R_SPARC_HIPLT22 R_SPARC = 25
 ```
 
-### <a id="R_SPARC_LOPLT10" href="#R_SPARC_LOPLT10">const R_SPARC_LOPLT10</a>
+### <a id="R_RISCV_TPREL_LO12_S" href="#R_RISCV_TPREL_LO12_S">const R_RISCV_TPREL_LO12_S</a>
 
 ```
-searchKey: elf.R_SPARC_LOPLT10
+searchKey: elf.R_RISCV_TPREL_LO12_S
+tags: [constant number]
 ```
 
 ```Go
-const R_SPARC_LOPLT10 R_SPARC = 26
-```
-
-### <a id="R_SPARC_PCPLT32" href="#R_SPARC_PCPLT32">const R_SPARC_PCPLT32</a>
-
-```
-searchKey: elf.R_SPARC_PCPLT32
-```
+const R_RISCV_TPREL_LO12_S R_RISCV = 31 /* TLS LE thread offset */
 
-```Go
-const R_SPARC_PCPLT32 R_SPARC = 27
 ```
 
-### <a id="R_SPARC_PCPLT22" href="#R_SPARC_PCPLT22">const R_SPARC_PCPLT22</a>
+### <a id="R_RISCV_TPREL_S" href="#R_RISCV_TPREL_S">const R_RISCV_TPREL_S</a>
 
 ```
-searchKey: elf.R_SPARC_PCPLT22
+searchKey: elf.R_RISCV_TPREL_S
+tags: [constant number]
 ```
 
 ```Go
-const R_SPARC_PCPLT22 R_SPARC = 28
-```
-
-### <a id="R_SPARC_PCPLT10" href="#R_SPARC_PCPLT10">const R_SPARC_PCPLT10</a>
+const R_RISCV_TPREL_S R_RISCV = 50 /* TP-relative TLS LE store */
 
-```
-searchKey: elf.R_SPARC_PCPLT10
-```
-
-```Go
-const R_SPARC_PCPLT10 R_SPARC = 29
 ```
 
 ### <a id="R_SPARC_10" href="#R_SPARC_10">const R_SPARC_10</a>
 
 ```
 searchKey: elf.R_SPARC_10
+tags: [constant number]
 ```
 
 ```Go
@@ -14697,136 +14235,62 @@ const R_SPARC_10 R_SPARC = 30
 
 ```
 searchKey: elf.R_SPARC_11
+tags: [constant number]
 ```
 
 ```Go
 const R_SPARC_11 R_SPARC = 31
 ```
 
-### <a id="R_SPARC_64" href="#R_SPARC_64">const R_SPARC_64</a>
+### <a id="R_SPARC_13" href="#R_SPARC_13">const R_SPARC_13</a>
 
 ```
-searchKey: elf.R_SPARC_64
-```
-
-```Go
-const R_SPARC_64 R_SPARC = 32
-```
-
-### <a id="R_SPARC_OLO10" href="#R_SPARC_OLO10">const R_SPARC_OLO10</a>
-
-```
-searchKey: elf.R_SPARC_OLO10
+searchKey: elf.R_SPARC_13
+tags: [constant number]
 ```
 
 ```Go
-const R_SPARC_OLO10 R_SPARC = 33
+const R_SPARC_13 R_SPARC = 11
 ```
 
-### <a id="R_SPARC_HH22" href="#R_SPARC_HH22">const R_SPARC_HH22</a>
+### <a id="R_SPARC_16" href="#R_SPARC_16">const R_SPARC_16</a>
 
 ```
-searchKey: elf.R_SPARC_HH22
-```
-
-```Go
-const R_SPARC_HH22 R_SPARC = 34
-```
-
-### <a id="R_SPARC_HM10" href="#R_SPARC_HM10">const R_SPARC_HM10</a>
-
-```
-searchKey: elf.R_SPARC_HM10
+searchKey: elf.R_SPARC_16
+tags: [constant number]
 ```
 
 ```Go
-const R_SPARC_HM10 R_SPARC = 35
+const R_SPARC_16 R_SPARC = 2
 ```
 
-### <a id="R_SPARC_LM22" href="#R_SPARC_LM22">const R_SPARC_LM22</a>
+### <a id="R_SPARC_22" href="#R_SPARC_22">const R_SPARC_22</a>
 
 ```
-searchKey: elf.R_SPARC_LM22
-```
-
-```Go
-const R_SPARC_LM22 R_SPARC = 36
-```
-
-### <a id="R_SPARC_PC_HH22" href="#R_SPARC_PC_HH22">const R_SPARC_PC_HH22</a>
-
-```
-searchKey: elf.R_SPARC_PC_HH22
+searchKey: elf.R_SPARC_22
+tags: [constant number]
 ```
 
 ```Go
-const R_SPARC_PC_HH22 R_SPARC = 37
+const R_SPARC_22 R_SPARC = 10
 ```
 
-### <a id="R_SPARC_PC_HM10" href="#R_SPARC_PC_HM10">const R_SPARC_PC_HM10</a>
+### <a id="R_SPARC_32" href="#R_SPARC_32">const R_SPARC_32</a>
 
 ```
-searchKey: elf.R_SPARC_PC_HM10
-```
-
-```Go
-const R_SPARC_PC_HM10 R_SPARC = 38
-```
-
-### <a id="R_SPARC_PC_LM22" href="#R_SPARC_PC_LM22">const R_SPARC_PC_LM22</a>
-
-```
-searchKey: elf.R_SPARC_PC_LM22
+searchKey: elf.R_SPARC_32
+tags: [constant number]
 ```
 
 ```Go
-const R_SPARC_PC_LM22 R_SPARC = 39
-```
-
-### <a id="R_SPARC_WDISP16" href="#R_SPARC_WDISP16">const R_SPARC_WDISP16</a>
-
-```
-searchKey: elf.R_SPARC_WDISP16
-```
-
-```Go
-const R_SPARC_WDISP16 R_SPARC = 40
-```
-
-### <a id="R_SPARC_WDISP19" href="#R_SPARC_WDISP19">const R_SPARC_WDISP19</a>
-
-```
-searchKey: elf.R_SPARC_WDISP19
-```
-
-```Go
-const R_SPARC_WDISP19 R_SPARC = 41
-```
-
-### <a id="R_SPARC_GLOB_JMP" href="#R_SPARC_GLOB_JMP">const R_SPARC_GLOB_JMP</a>
-
-```
-searchKey: elf.R_SPARC_GLOB_JMP
-```
-
-```Go
-const R_SPARC_GLOB_JMP R_SPARC = 42
-```
-
-### <a id="R_SPARC_7" href="#R_SPARC_7">const R_SPARC_7</a>
-
-```
-searchKey: elf.R_SPARC_7
-```
-
-```Go
-const R_SPARC_7 R_SPARC = 43
+const R_SPARC_32 R_SPARC = 3
 ```
 
 ### <a id="R_SPARC_5" href="#R_SPARC_5">const R_SPARC_5</a>
 
 ```
 searchKey: elf.R_SPARC_5
+tags: [constant number]
 ```
 
 ```Go
@@ -14837,128 +14301,1944 @@ const R_SPARC_5 R_SPARC = 44
 
 ```
 searchKey: elf.R_SPARC_6
+tags: [constant number]
 ```
 
 ```Go
 const R_SPARC_6 R_SPARC = 45
 ```
 
+### <a id="R_SPARC_64" href="#R_SPARC_64">const R_SPARC_64</a>
+
+```
+searchKey: elf.R_SPARC_64
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_64 R_SPARC = 32
+```
+
+### <a id="R_SPARC_7" href="#R_SPARC_7">const R_SPARC_7</a>
+
+```
+searchKey: elf.R_SPARC_7
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_7 R_SPARC = 43
+```
+
+### <a id="R_SPARC_8" href="#R_SPARC_8">const R_SPARC_8</a>
+
+```
+searchKey: elf.R_SPARC_8
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_8 R_SPARC = 1
+```
+
+### <a id="R_SPARC_COPY" href="#R_SPARC_COPY">const R_SPARC_COPY</a>
+
+```
+searchKey: elf.R_SPARC_COPY
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_COPY R_SPARC = 19
+```
+
+### <a id="R_SPARC_DISP16" href="#R_SPARC_DISP16">const R_SPARC_DISP16</a>
+
+```
+searchKey: elf.R_SPARC_DISP16
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_DISP16 R_SPARC = 5
+```
+
+### <a id="R_SPARC_DISP32" href="#R_SPARC_DISP32">const R_SPARC_DISP32</a>
+
+```
+searchKey: elf.R_SPARC_DISP32
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_DISP32 R_SPARC = 6
+```
+
 ### <a id="R_SPARC_DISP64" href="#R_SPARC_DISP64">const R_SPARC_DISP64</a>
 
 ```
 searchKey: elf.R_SPARC_DISP64
+tags: [constant number]
 ```
 
 ```Go
 const R_SPARC_DISP64 R_SPARC = 46
 ```
 
-### <a id="R_SPARC_PLT64" href="#R_SPARC_PLT64">const R_SPARC_PLT64</a>
+### <a id="R_SPARC_DISP8" href="#R_SPARC_DISP8">const R_SPARC_DISP8</a>
 
 ```
-searchKey: elf.R_SPARC_PLT64
-```
-
-```Go
-const R_SPARC_PLT64 R_SPARC = 47
-```
-
-### <a id="R_SPARC_HIX22" href="#R_SPARC_HIX22">const R_SPARC_HIX22</a>
-
-```
-searchKey: elf.R_SPARC_HIX22
+searchKey: elf.R_SPARC_DISP8
+tags: [constant number]
 ```
 
 ```Go
-const R_SPARC_HIX22 R_SPARC = 48
+const R_SPARC_DISP8 R_SPARC = 4
 ```
 
-### <a id="R_SPARC_LOX10" href="#R_SPARC_LOX10">const R_SPARC_LOX10</a>
+### <a id="R_SPARC_GLOB_DAT" href="#R_SPARC_GLOB_DAT">const R_SPARC_GLOB_DAT</a>
 
 ```
-searchKey: elf.R_SPARC_LOX10
+searchKey: elf.R_SPARC_GLOB_DAT
+tags: [constant number]
 ```
 
 ```Go
-const R_SPARC_LOX10 R_SPARC = 49
+const R_SPARC_GLOB_DAT R_SPARC = 20
+```
+
+### <a id="R_SPARC_GLOB_JMP" href="#R_SPARC_GLOB_JMP">const R_SPARC_GLOB_JMP</a>
+
+```
+searchKey: elf.R_SPARC_GLOB_JMP
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_GLOB_JMP R_SPARC = 42
+```
+
+### <a id="R_SPARC_GOT10" href="#R_SPARC_GOT10">const R_SPARC_GOT10</a>
+
+```
+searchKey: elf.R_SPARC_GOT10
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_GOT10 R_SPARC = 13
+```
+
+### <a id="R_SPARC_GOT13" href="#R_SPARC_GOT13">const R_SPARC_GOT13</a>
+
+```
+searchKey: elf.R_SPARC_GOT13
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_GOT13 R_SPARC = 14
+```
+
+### <a id="R_SPARC_GOT22" href="#R_SPARC_GOT22">const R_SPARC_GOT22</a>
+
+```
+searchKey: elf.R_SPARC_GOT22
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_GOT22 R_SPARC = 15
 ```
 
 ### <a id="R_SPARC_H44" href="#R_SPARC_H44">const R_SPARC_H44</a>
 
 ```
 searchKey: elf.R_SPARC_H44
+tags: [constant number]
 ```
 
 ```Go
 const R_SPARC_H44 R_SPARC = 50
 ```
 
-### <a id="R_SPARC_M44" href="#R_SPARC_M44">const R_SPARC_M44</a>
+### <a id="R_SPARC_HH22" href="#R_SPARC_HH22">const R_SPARC_HH22</a>
 
 ```
-searchKey: elf.R_SPARC_M44
+searchKey: elf.R_SPARC_HH22
+tags: [constant number]
 ```
 
 ```Go
-const R_SPARC_M44 R_SPARC = 51
+const R_SPARC_HH22 R_SPARC = 34
+```
+
+### <a id="R_SPARC_HI22" href="#R_SPARC_HI22">const R_SPARC_HI22</a>
+
+```
+searchKey: elf.R_SPARC_HI22
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_HI22 R_SPARC = 9
+```
+
+### <a id="R_SPARC_HIPLT22" href="#R_SPARC_HIPLT22">const R_SPARC_HIPLT22</a>
+
+```
+searchKey: elf.R_SPARC_HIPLT22
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_HIPLT22 R_SPARC = 25
+```
+
+### <a id="R_SPARC_HIX22" href="#R_SPARC_HIX22">const R_SPARC_HIX22</a>
+
+```
+searchKey: elf.R_SPARC_HIX22
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_HIX22 R_SPARC = 48
+```
+
+### <a id="R_SPARC_HM10" href="#R_SPARC_HM10">const R_SPARC_HM10</a>
+
+```
+searchKey: elf.R_SPARC_HM10
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_HM10 R_SPARC = 35
+```
+
+### <a id="R_SPARC_JMP_SLOT" href="#R_SPARC_JMP_SLOT">const R_SPARC_JMP_SLOT</a>
+
+```
+searchKey: elf.R_SPARC_JMP_SLOT
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_JMP_SLOT R_SPARC = 21
 ```
 
 ### <a id="R_SPARC_L44" href="#R_SPARC_L44">const R_SPARC_L44</a>
 
 ```
 searchKey: elf.R_SPARC_L44
+tags: [constant number]
 ```
 
 ```Go
 const R_SPARC_L44 R_SPARC = 52
 ```
 
+### <a id="R_SPARC_LM22" href="#R_SPARC_LM22">const R_SPARC_LM22</a>
+
+```
+searchKey: elf.R_SPARC_LM22
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_LM22 R_SPARC = 36
+```
+
+### <a id="R_SPARC_LO10" href="#R_SPARC_LO10">const R_SPARC_LO10</a>
+
+```
+searchKey: elf.R_SPARC_LO10
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_LO10 R_SPARC = 12
+```
+
+### <a id="R_SPARC_LOPLT10" href="#R_SPARC_LOPLT10">const R_SPARC_LOPLT10</a>
+
+```
+searchKey: elf.R_SPARC_LOPLT10
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_LOPLT10 R_SPARC = 26
+```
+
+### <a id="R_SPARC_LOX10" href="#R_SPARC_LOX10">const R_SPARC_LOX10</a>
+
+```
+searchKey: elf.R_SPARC_LOX10
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_LOX10 R_SPARC = 49
+```
+
+### <a id="R_SPARC_M44" href="#R_SPARC_M44">const R_SPARC_M44</a>
+
+```
+searchKey: elf.R_SPARC_M44
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_M44 R_SPARC = 51
+```
+
+### <a id="R_SPARC_NONE" href="#R_SPARC_NONE">const R_SPARC_NONE</a>
+
+```
+searchKey: elf.R_SPARC_NONE
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_NONE R_SPARC = 0
+```
+
+### <a id="R_SPARC_OLO10" href="#R_SPARC_OLO10">const R_SPARC_OLO10</a>
+
+```
+searchKey: elf.R_SPARC_OLO10
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_OLO10 R_SPARC = 33
+```
+
+### <a id="R_SPARC_PC10" href="#R_SPARC_PC10">const R_SPARC_PC10</a>
+
+```
+searchKey: elf.R_SPARC_PC10
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_PC10 R_SPARC = 16
+```
+
+### <a id="R_SPARC_PC22" href="#R_SPARC_PC22">const R_SPARC_PC22</a>
+
+```
+searchKey: elf.R_SPARC_PC22
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_PC22 R_SPARC = 17
+```
+
+### <a id="R_SPARC_PCPLT10" href="#R_SPARC_PCPLT10">const R_SPARC_PCPLT10</a>
+
+```
+searchKey: elf.R_SPARC_PCPLT10
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_PCPLT10 R_SPARC = 29
+```
+
+### <a id="R_SPARC_PCPLT22" href="#R_SPARC_PCPLT22">const R_SPARC_PCPLT22</a>
+
+```
+searchKey: elf.R_SPARC_PCPLT22
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_PCPLT22 R_SPARC = 28
+```
+
+### <a id="R_SPARC_PCPLT32" href="#R_SPARC_PCPLT32">const R_SPARC_PCPLT32</a>
+
+```
+searchKey: elf.R_SPARC_PCPLT32
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_PCPLT32 R_SPARC = 27
+```
+
+### <a id="R_SPARC_PC_HH22" href="#R_SPARC_PC_HH22">const R_SPARC_PC_HH22</a>
+
+```
+searchKey: elf.R_SPARC_PC_HH22
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_PC_HH22 R_SPARC = 37
+```
+
+### <a id="R_SPARC_PC_HM10" href="#R_SPARC_PC_HM10">const R_SPARC_PC_HM10</a>
+
+```
+searchKey: elf.R_SPARC_PC_HM10
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_PC_HM10 R_SPARC = 38
+```
+
+### <a id="R_SPARC_PC_LM22" href="#R_SPARC_PC_LM22">const R_SPARC_PC_LM22</a>
+
+```
+searchKey: elf.R_SPARC_PC_LM22
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_PC_LM22 R_SPARC = 39
+```
+
+### <a id="R_SPARC_PLT32" href="#R_SPARC_PLT32">const R_SPARC_PLT32</a>
+
+```
+searchKey: elf.R_SPARC_PLT32
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_PLT32 R_SPARC = 24
+```
+
+### <a id="R_SPARC_PLT64" href="#R_SPARC_PLT64">const R_SPARC_PLT64</a>
+
+```
+searchKey: elf.R_SPARC_PLT64
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_PLT64 R_SPARC = 47
+```
+
 ### <a id="R_SPARC_REGISTER" href="#R_SPARC_REGISTER">const R_SPARC_REGISTER</a>
 
 ```
 searchKey: elf.R_SPARC_REGISTER
+tags: [constant number]
 ```
 
 ```Go
 const R_SPARC_REGISTER R_SPARC = 53
 ```
 
-### <a id="R_SPARC_UA64" href="#R_SPARC_UA64">const R_SPARC_UA64</a>
+### <a id="R_SPARC_RELATIVE" href="#R_SPARC_RELATIVE">const R_SPARC_RELATIVE</a>
 
 ```
-searchKey: elf.R_SPARC_UA64
+searchKey: elf.R_SPARC_RELATIVE
+tags: [constant number]
 ```
 
 ```Go
-const R_SPARC_UA64 R_SPARC = 54
+const R_SPARC_RELATIVE R_SPARC = 22
 ```
 
 ### <a id="R_SPARC_UA16" href="#R_SPARC_UA16">const R_SPARC_UA16</a>
 
 ```
 searchKey: elf.R_SPARC_UA16
+tags: [constant number]
 ```
 
 ```Go
 const R_SPARC_UA16 R_SPARC = 55
 ```
 
-### <a id="ARM_MAGIC_TRAMP_NUMBER" href="#ARM_MAGIC_TRAMP_NUMBER">const ARM_MAGIC_TRAMP_NUMBER</a>
+### <a id="R_SPARC_UA32" href="#R_SPARC_UA32">const R_SPARC_UA32</a>
 
 ```
-searchKey: elf.ARM_MAGIC_TRAMP_NUMBER
+searchKey: elf.R_SPARC_UA32
+tags: [constant number]
 ```
 
 ```Go
-const ARM_MAGIC_TRAMP_NUMBER = 0x5c000003
+const R_SPARC_UA32 R_SPARC = 23
 ```
 
-Magic number for the elf trampoline, chosen wisely to be an immediate value. 
+### <a id="R_SPARC_UA64" href="#R_SPARC_UA64">const R_SPARC_UA64</a>
+
+```
+searchKey: elf.R_SPARC_UA64
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_UA64 R_SPARC = 54
+```
+
+### <a id="R_SPARC_WDISP16" href="#R_SPARC_WDISP16">const R_SPARC_WDISP16</a>
+
+```
+searchKey: elf.R_SPARC_WDISP16
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_WDISP16 R_SPARC = 40
+```
+
+### <a id="R_SPARC_WDISP19" href="#R_SPARC_WDISP19">const R_SPARC_WDISP19</a>
+
+```
+searchKey: elf.R_SPARC_WDISP19
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_WDISP19 R_SPARC = 41
+```
+
+### <a id="R_SPARC_WDISP22" href="#R_SPARC_WDISP22">const R_SPARC_WDISP22</a>
+
+```
+searchKey: elf.R_SPARC_WDISP22
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_WDISP22 R_SPARC = 8
+```
+
+### <a id="R_SPARC_WDISP30" href="#R_SPARC_WDISP30">const R_SPARC_WDISP30</a>
+
+```
+searchKey: elf.R_SPARC_WDISP30
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_WDISP30 R_SPARC = 7
+```
+
+### <a id="R_SPARC_WPLT30" href="#R_SPARC_WPLT30">const R_SPARC_WPLT30</a>
+
+```
+searchKey: elf.R_SPARC_WPLT30
+tags: [constant number]
+```
+
+```Go
+const R_SPARC_WPLT30 R_SPARC = 18
+```
+
+### <a id="R_X86_64_16" href="#R_X86_64_16">const R_X86_64_16</a>
+
+```
+searchKey: elf.R_X86_64_16
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_16 R_X86_64 = 12 /* Add 16 bit zero extended symbol value */
+
+```
+
+### <a id="R_X86_64_32" href="#R_X86_64_32">const R_X86_64_32</a>
+
+```
+searchKey: elf.R_X86_64_32
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_32 R_X86_64 = 10 /* Add 32 bit zero extended symbol value */
+
+```
+
+### <a id="R_X86_64_32S" href="#R_X86_64_32S">const R_X86_64_32S</a>
+
+```
+searchKey: elf.R_X86_64_32S
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_32S R_X86_64 = 11 /* Add 32 bit sign extended symbol value */
+
+```
+
+### <a id="R_X86_64_64" href="#R_X86_64_64">const R_X86_64_64</a>
+
+```
+searchKey: elf.R_X86_64_64
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_64 R_X86_64 = 1 /* Add 64 bit symbol value. */
+
+```
+
+### <a id="R_X86_64_8" href="#R_X86_64_8">const R_X86_64_8</a>
+
+```
+searchKey: elf.R_X86_64_8
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_8 R_X86_64 = 14 /* Add 8 bit zero extended symbol value */
+
+```
+
+### <a id="R_X86_64_COPY" href="#R_X86_64_COPY">const R_X86_64_COPY</a>
+
+```
+searchKey: elf.R_X86_64_COPY
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_COPY R_X86_64 = 5 /* Copy data from shared object. */
+
+```
+
+### <a id="R_X86_64_DTPMOD64" href="#R_X86_64_DTPMOD64">const R_X86_64_DTPMOD64</a>
+
+```
+searchKey: elf.R_X86_64_DTPMOD64
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_DTPMOD64 R_X86_64 = 16 /* ID of module containing symbol */
+
+```
+
+### <a id="R_X86_64_DTPOFF32" href="#R_X86_64_DTPOFF32">const R_X86_64_DTPOFF32</a>
+
+```
+searchKey: elf.R_X86_64_DTPOFF32
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_DTPOFF32 R_X86_64 = 21 /* Offset in TLS block */
+
+```
+
+### <a id="R_X86_64_DTPOFF64" href="#R_X86_64_DTPOFF64">const R_X86_64_DTPOFF64</a>
+
+```
+searchKey: elf.R_X86_64_DTPOFF64
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_DTPOFF64 R_X86_64 = 17 /* Offset in TLS block */
+
+```
+
+### <a id="R_X86_64_GLOB_DAT" href="#R_X86_64_GLOB_DAT">const R_X86_64_GLOB_DAT</a>
+
+```
+searchKey: elf.R_X86_64_GLOB_DAT
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_GLOB_DAT R_X86_64 = 6 /* Set GOT entry to data address. */
+
+```
+
+### <a id="R_X86_64_GOT32" href="#R_X86_64_GOT32">const R_X86_64_GOT32</a>
+
+```
+searchKey: elf.R_X86_64_GOT32
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_GOT32 R_X86_64 = 3 /* PC-relative 32 bit GOT offset. */
+
+```
+
+### <a id="R_X86_64_GOT64" href="#R_X86_64_GOT64">const R_X86_64_GOT64</a>
+
+```
+searchKey: elf.R_X86_64_GOT64
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_GOT64 R_X86_64 = 27
+```
+
+### <a id="R_X86_64_GOTOFF64" href="#R_X86_64_GOTOFF64">const R_X86_64_GOTOFF64</a>
+
+```
+searchKey: elf.R_X86_64_GOTOFF64
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_GOTOFF64 R_X86_64 = 25
+```
+
+### <a id="R_X86_64_GOTPC32" href="#R_X86_64_GOTPC32">const R_X86_64_GOTPC32</a>
+
+```
+searchKey: elf.R_X86_64_GOTPC32
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_GOTPC32 R_X86_64 = 26
+```
+
+### <a id="R_X86_64_GOTPC32_TLSDESC" href="#R_X86_64_GOTPC32_TLSDESC">const R_X86_64_GOTPC32_TLSDESC</a>
+
+```
+searchKey: elf.R_X86_64_GOTPC32_TLSDESC
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_GOTPC32_TLSDESC R_X86_64 = 34
+```
+
+### <a id="R_X86_64_GOTPC64" href="#R_X86_64_GOTPC64">const R_X86_64_GOTPC64</a>
+
+```
+searchKey: elf.R_X86_64_GOTPC64
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_GOTPC64 R_X86_64 = 29
+```
+
+### <a id="R_X86_64_GOTPCREL" href="#R_X86_64_GOTPCREL">const R_X86_64_GOTPCREL</a>
+
+```
+searchKey: elf.R_X86_64_GOTPCREL
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_GOTPCREL R_X86_64 = 9 /* Add 32 bit signed pcrel offset to GOT. */
+
+```
+
+### <a id="R_X86_64_GOTPCREL64" href="#R_X86_64_GOTPCREL64">const R_X86_64_GOTPCREL64</a>
+
+```
+searchKey: elf.R_X86_64_GOTPCREL64
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_GOTPCREL64 R_X86_64 = 28
+```
+
+### <a id="R_X86_64_GOTPCRELX" href="#R_X86_64_GOTPCRELX">const R_X86_64_GOTPCRELX</a>
+
+```
+searchKey: elf.R_X86_64_GOTPCRELX
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_GOTPCRELX R_X86_64 = 41
+```
+
+### <a id="R_X86_64_GOTPLT64" href="#R_X86_64_GOTPLT64">const R_X86_64_GOTPLT64</a>
+
+```
+searchKey: elf.R_X86_64_GOTPLT64
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_GOTPLT64 R_X86_64 = 30
+```
+
+### <a id="R_X86_64_GOTTPOFF" href="#R_X86_64_GOTTPOFF">const R_X86_64_GOTTPOFF</a>
+
+```
+searchKey: elf.R_X86_64_GOTTPOFF
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_GOTTPOFF R_X86_64 = 22 /* PC relative offset to IE GOT entry */
+
+```
+
+### <a id="R_X86_64_IRELATIVE" href="#R_X86_64_IRELATIVE">const R_X86_64_IRELATIVE</a>
+
+```
+searchKey: elf.R_X86_64_IRELATIVE
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_IRELATIVE R_X86_64 = 37
+```
+
+### <a id="R_X86_64_JMP_SLOT" href="#R_X86_64_JMP_SLOT">const R_X86_64_JMP_SLOT</a>
+
+```
+searchKey: elf.R_X86_64_JMP_SLOT
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_JMP_SLOT R_X86_64 = 7 /* Set GOT entry to code address. */
+
+```
+
+### <a id="R_X86_64_NONE" href="#R_X86_64_NONE">const R_X86_64_NONE</a>
+
+```
+searchKey: elf.R_X86_64_NONE
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_NONE R_X86_64 = 0 /* No relocation. */
+
+```
+
+### <a id="R_X86_64_PC16" href="#R_X86_64_PC16">const R_X86_64_PC16</a>
+
+```
+searchKey: elf.R_X86_64_PC16
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_PC16 R_X86_64 = 13 /* Add 16 bit signed extended pc relative symbol value */
+
+```
+
+### <a id="R_X86_64_PC32" href="#R_X86_64_PC32">const R_X86_64_PC32</a>
+
+```
+searchKey: elf.R_X86_64_PC32
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_PC32 R_X86_64 = 2 /* PC-relative 32 bit signed sym value. */
+
+```
+
+### <a id="R_X86_64_PC32_BND" href="#R_X86_64_PC32_BND">const R_X86_64_PC32_BND</a>
+
+```
+searchKey: elf.R_X86_64_PC32_BND
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_PC32_BND R_X86_64 = 39
+```
+
+### <a id="R_X86_64_PC64" href="#R_X86_64_PC64">const R_X86_64_PC64</a>
+
+```
+searchKey: elf.R_X86_64_PC64
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_PC64 R_X86_64 = 24 /* PC relative 64-bit sign extended symbol value. */
+
+```
+
+### <a id="R_X86_64_PC8" href="#R_X86_64_PC8">const R_X86_64_PC8</a>
+
+```
+searchKey: elf.R_X86_64_PC8
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_PC8 R_X86_64 = 15 /* Add 8 bit signed extended pc relative symbol value */
+
+```
+
+### <a id="R_X86_64_PLT32" href="#R_X86_64_PLT32">const R_X86_64_PLT32</a>
+
+```
+searchKey: elf.R_X86_64_PLT32
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_PLT32 R_X86_64 = 4 /* PC-relative 32 bit PLT offset. */
+
+```
+
+### <a id="R_X86_64_PLT32_BND" href="#R_X86_64_PLT32_BND">const R_X86_64_PLT32_BND</a>
+
+```
+searchKey: elf.R_X86_64_PLT32_BND
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_PLT32_BND R_X86_64 = 40
+```
+
+### <a id="R_X86_64_PLTOFF64" href="#R_X86_64_PLTOFF64">const R_X86_64_PLTOFF64</a>
+
+```
+searchKey: elf.R_X86_64_PLTOFF64
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_PLTOFF64 R_X86_64 = 31
+```
+
+### <a id="R_X86_64_RELATIVE" href="#R_X86_64_RELATIVE">const R_X86_64_RELATIVE</a>
+
+```
+searchKey: elf.R_X86_64_RELATIVE
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_RELATIVE R_X86_64 = 8 /* Add load address of shared object. */
+
+```
+
+### <a id="R_X86_64_RELATIVE64" href="#R_X86_64_RELATIVE64">const R_X86_64_RELATIVE64</a>
+
+```
+searchKey: elf.R_X86_64_RELATIVE64
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_RELATIVE64 R_X86_64 = 38
+```
+
+### <a id="R_X86_64_REX_GOTPCRELX" href="#R_X86_64_REX_GOTPCRELX">const R_X86_64_REX_GOTPCRELX</a>
+
+```
+searchKey: elf.R_X86_64_REX_GOTPCRELX
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_REX_GOTPCRELX R_X86_64 = 42
+```
+
+### <a id="R_X86_64_SIZE32" href="#R_X86_64_SIZE32">const R_X86_64_SIZE32</a>
+
+```
+searchKey: elf.R_X86_64_SIZE32
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_SIZE32 R_X86_64 = 32
+```
+
+### <a id="R_X86_64_SIZE64" href="#R_X86_64_SIZE64">const R_X86_64_SIZE64</a>
+
+```
+searchKey: elf.R_X86_64_SIZE64
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_SIZE64 R_X86_64 = 33
+```
+
+### <a id="R_X86_64_TLSDESC" href="#R_X86_64_TLSDESC">const R_X86_64_TLSDESC</a>
+
+```
+searchKey: elf.R_X86_64_TLSDESC
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_TLSDESC R_X86_64 = 36
+```
+
+### <a id="R_X86_64_TLSDESC_CALL" href="#R_X86_64_TLSDESC_CALL">const R_X86_64_TLSDESC_CALL</a>
+
+```
+searchKey: elf.R_X86_64_TLSDESC_CALL
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_TLSDESC_CALL R_X86_64 = 35
+```
+
+### <a id="R_X86_64_TLSGD" href="#R_X86_64_TLSGD">const R_X86_64_TLSGD</a>
+
+```
+searchKey: elf.R_X86_64_TLSGD
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_TLSGD R_X86_64 = 19 /* PC relative offset to GD GOT entry */
+
+```
+
+### <a id="R_X86_64_TLSLD" href="#R_X86_64_TLSLD">const R_X86_64_TLSLD</a>
+
+```
+searchKey: elf.R_X86_64_TLSLD
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_TLSLD R_X86_64 = 20 /* PC relative offset to LD GOT entry */
+
+```
+
+### <a id="R_X86_64_TPOFF32" href="#R_X86_64_TPOFF32">const R_X86_64_TPOFF32</a>
+
+```
+searchKey: elf.R_X86_64_TPOFF32
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_TPOFF32 R_X86_64 = 23 /* Offset in static TLS block */
+
+```
+
+### <a id="R_X86_64_TPOFF64" href="#R_X86_64_TPOFF64">const R_X86_64_TPOFF64</a>
+
+```
+searchKey: elf.R_X86_64_TPOFF64
+tags: [constant number]
+```
+
+```Go
+const R_X86_64_TPOFF64 R_X86_64 = 18 /* Offset in static TLS block */
+
+```
+
+### <a id="SHF_ALLOC" href="#SHF_ALLOC">const SHF_ALLOC</a>
+
+```
+searchKey: elf.SHF_ALLOC
+tags: [constant number]
+```
+
+```Go
+const SHF_ALLOC SectionFlag = 0x2 /* Section occupies memory. */
+
+```
+
+### <a id="SHF_COMPRESSED" href="#SHF_COMPRESSED">const SHF_COMPRESSED</a>
+
+```
+searchKey: elf.SHF_COMPRESSED
+tags: [constant number]
+```
+
+```Go
+const SHF_COMPRESSED SectionFlag = 0x800 /* Section is compressed. */
+
+```
+
+### <a id="SHF_EXECINSTR" href="#SHF_EXECINSTR">const SHF_EXECINSTR</a>
+
+```
+searchKey: elf.SHF_EXECINSTR
+tags: [constant number]
+```
+
+```Go
+const SHF_EXECINSTR SectionFlag = 0x4 /* Section contains instructions. */
+
+```
+
+### <a id="SHF_GROUP" href="#SHF_GROUP">const SHF_GROUP</a>
+
+```
+searchKey: elf.SHF_GROUP
+tags: [constant number]
+```
+
+```Go
+const SHF_GROUP SectionFlag = 0x200 /* Member of section group. */
+
+```
+
+### <a id="SHF_INFO_LINK" href="#SHF_INFO_LINK">const SHF_INFO_LINK</a>
+
+```
+searchKey: elf.SHF_INFO_LINK
+tags: [constant number]
+```
+
+```Go
+const SHF_INFO_LINK SectionFlag = 0x40 /* sh_info holds section index. */
+
+```
+
+### <a id="SHF_LINK_ORDER" href="#SHF_LINK_ORDER">const SHF_LINK_ORDER</a>
+
+```
+searchKey: elf.SHF_LINK_ORDER
+tags: [constant number]
+```
+
+```Go
+const SHF_LINK_ORDER SectionFlag = 0x80 /* Special ordering requirements. */
+
+```
+
+### <a id="SHF_MASKOS" href="#SHF_MASKOS">const SHF_MASKOS</a>
+
+```
+searchKey: elf.SHF_MASKOS
+tags: [constant number]
+```
+
+```Go
+const SHF_MASKOS SectionFlag = 0x0ff00000 /* OS-specific semantics. */
+
+```
+
+### <a id="SHF_MASKPROC" href="#SHF_MASKPROC">const SHF_MASKPROC</a>
+
+```
+searchKey: elf.SHF_MASKPROC
+tags: [constant number]
+```
+
+```Go
+const SHF_MASKPROC SectionFlag = 0xf0000000 /* Processor-specific semantics. */
+
+```
+
+### <a id="SHF_MERGE" href="#SHF_MERGE">const SHF_MERGE</a>
+
+```
+searchKey: elf.SHF_MERGE
+tags: [constant number]
+```
+
+```Go
+const SHF_MERGE SectionFlag = 0x10 /* Section may be merged. */
+
+```
+
+### <a id="SHF_OS_NONCONFORMING" href="#SHF_OS_NONCONFORMING">const SHF_OS_NONCONFORMING</a>
+
+```
+searchKey: elf.SHF_OS_NONCONFORMING
+tags: [constant number]
+```
+
+```Go
+const SHF_OS_NONCONFORMING SectionFlag = 0x100 /* OS-specific processing required. */
+
+```
+
+### <a id="SHF_STRINGS" href="#SHF_STRINGS">const SHF_STRINGS</a>
+
+```
+searchKey: elf.SHF_STRINGS
+tags: [constant number]
+```
+
+```Go
+const SHF_STRINGS SectionFlag = 0x20 /* Section contains strings. */
+
+```
+
+### <a id="SHF_TLS" href="#SHF_TLS">const SHF_TLS</a>
+
+```
+searchKey: elf.SHF_TLS
+tags: [constant number]
+```
+
+```Go
+const SHF_TLS SectionFlag = 0x400 /* Section contains TLS data. */
+
+```
+
+### <a id="SHF_WRITE" href="#SHF_WRITE">const SHF_WRITE</a>
+
+```
+searchKey: elf.SHF_WRITE
+tags: [constant number]
+```
+
+```Go
+const SHF_WRITE SectionFlag = 0x1 /* Section contains writable data. */
+
+```
+
+### <a id="SHN_ABS" href="#SHN_ABS">const SHN_ABS</a>
+
+```
+searchKey: elf.SHN_ABS
+tags: [constant number]
+```
+
+```Go
+const SHN_ABS SectionIndex = 0xfff1 /* Absolute values. */
+
+```
+
+### <a id="SHN_COMMON" href="#SHN_COMMON">const SHN_COMMON</a>
+
+```
+searchKey: elf.SHN_COMMON
+tags: [constant number]
+```
+
+```Go
+const SHN_COMMON SectionIndex = 0xfff2 /* Common data. */
+
+```
+
+### <a id="SHN_HIOS" href="#SHN_HIOS">const SHN_HIOS</a>
+
+```
+searchKey: elf.SHN_HIOS
+tags: [constant number]
+```
+
+```Go
+const SHN_HIOS SectionIndex = 0xff3f /* Last operating system-specific. */
+
+```
+
+### <a id="SHN_HIPROC" href="#SHN_HIPROC">const SHN_HIPROC</a>
+
+```
+searchKey: elf.SHN_HIPROC
+tags: [constant number]
+```
+
+```Go
+const SHN_HIPROC SectionIndex = 0xff1f /* Last processor-specific. */
+
+```
+
+### <a id="SHN_HIRESERVE" href="#SHN_HIRESERVE">const SHN_HIRESERVE</a>
+
+```
+searchKey: elf.SHN_HIRESERVE
+tags: [constant number]
+```
+
+```Go
+const SHN_HIRESERVE SectionIndex = 0xffff /* Last of reserved range. */
+
+```
+
+### <a id="SHN_LOOS" href="#SHN_LOOS">const SHN_LOOS</a>
+
+```
+searchKey: elf.SHN_LOOS
+tags: [constant number]
+```
+
+```Go
+const SHN_LOOS SectionIndex = 0xff20 /* First operating system-specific. */
+
+```
+
+### <a id="SHN_LOPROC" href="#SHN_LOPROC">const SHN_LOPROC</a>
+
+```
+searchKey: elf.SHN_LOPROC
+tags: [constant number]
+```
+
+```Go
+const SHN_LOPROC SectionIndex = 0xff00 /* First processor-specific. */
+
+```
+
+### <a id="SHN_LORESERVE" href="#SHN_LORESERVE">const SHN_LORESERVE</a>
+
+```
+searchKey: elf.SHN_LORESERVE
+tags: [constant number]
+```
+
+```Go
+const SHN_LORESERVE SectionIndex = 0xff00 /* First of reserved range. */
+
+```
+
+### <a id="SHN_UNDEF" href="#SHN_UNDEF">const SHN_UNDEF</a>
+
+```
+searchKey: elf.SHN_UNDEF
+tags: [constant number]
+```
+
+```Go
+const SHN_UNDEF SectionIndex = 0 /* Undefined, missing, irrelevant. */
+
+```
+
+### <a id="SHN_XINDEX" href="#SHN_XINDEX">const SHN_XINDEX</a>
+
+```
+searchKey: elf.SHN_XINDEX
+tags: [constant number]
+```
+
+```Go
+const SHN_XINDEX SectionIndex = 0xffff /* Escape; index stored elsewhere. */
+
+```
+
+### <a id="SHT_DYNAMIC" href="#SHT_DYNAMIC">const SHT_DYNAMIC</a>
+
+```
+searchKey: elf.SHT_DYNAMIC
+tags: [constant number]
+```
+
+```Go
+const SHT_DYNAMIC SectionType = 6 /* dynamic section */
+
+```
+
+### <a id="SHT_DYNSYM" href="#SHT_DYNSYM">const SHT_DYNSYM</a>
+
+```
+searchKey: elf.SHT_DYNSYM
+tags: [constant number]
+```
+
+```Go
+const SHT_DYNSYM SectionType = 11 /* dynamic symbol table section */
+
+```
+
+### <a id="SHT_FINI_ARRAY" href="#SHT_FINI_ARRAY">const SHT_FINI_ARRAY</a>
+
+```
+searchKey: elf.SHT_FINI_ARRAY
+tags: [constant number]
+```
+
+```Go
+const SHT_FINI_ARRAY SectionType = 15 /* Termination function pointers. */
+
+```
+
+### <a id="SHT_GNU_ATTRIBUTES" href="#SHT_GNU_ATTRIBUTES">const SHT_GNU_ATTRIBUTES</a>
+
+```
+searchKey: elf.SHT_GNU_ATTRIBUTES
+tags: [constant number]
+```
+
+```Go
+const SHT_GNU_ATTRIBUTES SectionType = 0x6ffffff5 /* GNU object attributes */
+
+```
+
+### <a id="SHT_GNU_HASH" href="#SHT_GNU_HASH">const SHT_GNU_HASH</a>
+
+```
+searchKey: elf.SHT_GNU_HASH
+tags: [constant number]
+```
+
+```Go
+const SHT_GNU_HASH SectionType = 0x6ffffff6 /* GNU hash table */
+
+```
+
+### <a id="SHT_GNU_LIBLIST" href="#SHT_GNU_LIBLIST">const SHT_GNU_LIBLIST</a>
+
+```
+searchKey: elf.SHT_GNU_LIBLIST
+tags: [constant number]
+```
+
+```Go
+const SHT_GNU_LIBLIST SectionType = 0x6ffffff7 /* GNU prelink library list */
+
+```
+
+### <a id="SHT_GNU_VERDEF" href="#SHT_GNU_VERDEF">const SHT_GNU_VERDEF</a>
+
+```
+searchKey: elf.SHT_GNU_VERDEF
+tags: [constant number]
+```
+
+```Go
+const SHT_GNU_VERDEF SectionType = 0x6ffffffd /* GNU version definition section */
+
+```
+
+### <a id="SHT_GNU_VERNEED" href="#SHT_GNU_VERNEED">const SHT_GNU_VERNEED</a>
+
+```
+searchKey: elf.SHT_GNU_VERNEED
+tags: [constant number]
+```
+
+```Go
+const SHT_GNU_VERNEED SectionType = 0x6ffffffe /* GNU version needs section */
+
+```
+
+### <a id="SHT_GNU_VERSYM" href="#SHT_GNU_VERSYM">const SHT_GNU_VERSYM</a>
+
+```
+searchKey: elf.SHT_GNU_VERSYM
+tags: [constant number]
+```
+
+```Go
+const SHT_GNU_VERSYM SectionType = 0x6fffffff /* GNU version symbol table */
+
+```
+
+### <a id="SHT_GROUP" href="#SHT_GROUP">const SHT_GROUP</a>
+
+```
+searchKey: elf.SHT_GROUP
+tags: [constant number]
+```
+
+```Go
+const SHT_GROUP SectionType = 17 /* Section group. */
+
+```
+
+### <a id="SHT_HASH" href="#SHT_HASH">const SHT_HASH</a>
+
+```
+searchKey: elf.SHT_HASH
+tags: [constant number]
+```
+
+```Go
+const SHT_HASH SectionType = 5 /* symbol hash table section */
+
+```
+
+### <a id="SHT_HIOS" href="#SHT_HIOS">const SHT_HIOS</a>
+
+```
+searchKey: elf.SHT_HIOS
+tags: [constant number]
+```
+
+```Go
+const SHT_HIOS SectionType = 0x6fffffff /* Last of OS specific semantics */
+
+```
+
+### <a id="SHT_HIPROC" href="#SHT_HIPROC">const SHT_HIPROC</a>
+
+```
+searchKey: elf.SHT_HIPROC
+tags: [constant number]
+```
+
+```Go
+const SHT_HIPROC SectionType = 0x7fffffff /* specific section header types */
+
+```
+
+### <a id="SHT_HIUSER" href="#SHT_HIUSER">const SHT_HIUSER</a>
+
+```
+searchKey: elf.SHT_HIUSER
+tags: [constant number]
+```
+
+```Go
+const SHT_HIUSER SectionType = 0xffffffff /* specific indexes */
+
+```
+
+### <a id="SHT_INIT_ARRAY" href="#SHT_INIT_ARRAY">const SHT_INIT_ARRAY</a>
+
+```
+searchKey: elf.SHT_INIT_ARRAY
+tags: [constant number]
+```
+
+```Go
+const SHT_INIT_ARRAY SectionType = 14 /* Initialization function pointers. */
+
+```
+
+### <a id="SHT_LOOS" href="#SHT_LOOS">const SHT_LOOS</a>
+
+```
+searchKey: elf.SHT_LOOS
+tags: [constant number]
+```
+
+```Go
+const SHT_LOOS SectionType = 0x60000000 /* First of OS specific semantics */
+
+```
+
+### <a id="SHT_LOPROC" href="#SHT_LOPROC">const SHT_LOPROC</a>
+
+```
+searchKey: elf.SHT_LOPROC
+tags: [constant number]
+```
+
+```Go
+const SHT_LOPROC SectionType = 0x70000000 /* reserved range for processor */
+
+```
+
+### <a id="SHT_LOUSER" href="#SHT_LOUSER">const SHT_LOUSER</a>
+
+```
+searchKey: elf.SHT_LOUSER
+tags: [constant number]
+```
+
+```Go
+const SHT_LOUSER SectionType = 0x80000000 /* reserved range for application */
+
+```
+
+### <a id="SHT_MIPS_ABIFLAGS" href="#SHT_MIPS_ABIFLAGS">const SHT_MIPS_ABIFLAGS</a>
+
+```
+searchKey: elf.SHT_MIPS_ABIFLAGS
+tags: [constant number]
+```
+
+```Go
+const SHT_MIPS_ABIFLAGS SectionType = 0x7000002a /* .MIPS.abiflags */
+
+```
+
+### <a id="SHT_NOBITS" href="#SHT_NOBITS">const SHT_NOBITS</a>
+
+```
+searchKey: elf.SHT_NOBITS
+tags: [constant number]
+```
+
+```Go
+const SHT_NOBITS SectionType = 8 /* no space section */
+
+```
+
+### <a id="SHT_NOTE" href="#SHT_NOTE">const SHT_NOTE</a>
+
+```
+searchKey: elf.SHT_NOTE
+tags: [constant number]
+```
+
+```Go
+const SHT_NOTE SectionType = 7 /* note section */
+
+```
+
+### <a id="SHT_NULL" href="#SHT_NULL">const SHT_NULL</a>
+
+```
+searchKey: elf.SHT_NULL
+tags: [constant number]
+```
+
+```Go
+const SHT_NULL SectionType = 0 /* inactive */
+
+```
+
+### <a id="SHT_PREINIT_ARRAY" href="#SHT_PREINIT_ARRAY">const SHT_PREINIT_ARRAY</a>
+
+```
+searchKey: elf.SHT_PREINIT_ARRAY
+tags: [constant number]
+```
+
+```Go
+const SHT_PREINIT_ARRAY SectionType = 16 /* Pre-initialization function ptrs. */
+
+```
+
+### <a id="SHT_PROGBITS" href="#SHT_PROGBITS">const SHT_PROGBITS</a>
+
+```
+searchKey: elf.SHT_PROGBITS
+tags: [constant number]
+```
+
+```Go
+const SHT_PROGBITS SectionType = 1 /* program defined information */
+
+```
+
+### <a id="SHT_REL" href="#SHT_REL">const SHT_REL</a>
+
+```
+searchKey: elf.SHT_REL
+tags: [constant number]
+```
+
+```Go
+const SHT_REL SectionType = 9 /* relocation section - no addends */
+
+```
+
+### <a id="SHT_RELA" href="#SHT_RELA">const SHT_RELA</a>
+
+```
+searchKey: elf.SHT_RELA
+tags: [constant number]
+```
+
+```Go
+const SHT_RELA SectionType = 4 /* relocation section with addends */
+
+```
+
+### <a id="SHT_SHLIB" href="#SHT_SHLIB">const SHT_SHLIB</a>
+
+```
+searchKey: elf.SHT_SHLIB
+tags: [constant number]
+```
+
+```Go
+const SHT_SHLIB SectionType = 10 /* reserved - purpose unknown */
+
+```
+
+### <a id="SHT_STRTAB" href="#SHT_STRTAB">const SHT_STRTAB</a>
+
+```
+searchKey: elf.SHT_STRTAB
+tags: [constant number]
+```
+
+```Go
+const SHT_STRTAB SectionType = 3 /* string table section */
+
+```
+
+### <a id="SHT_SYMTAB" href="#SHT_SYMTAB">const SHT_SYMTAB</a>
+
+```
+searchKey: elf.SHT_SYMTAB
+tags: [constant number]
+```
+
+```Go
+const SHT_SYMTAB SectionType = 2 /* symbol table section */
+
+```
+
+### <a id="SHT_SYMTAB_SHNDX" href="#SHT_SYMTAB_SHNDX">const SHT_SYMTAB_SHNDX</a>
+
+```
+searchKey: elf.SHT_SYMTAB_SHNDX
+tags: [constant number]
+```
+
+```Go
+const SHT_SYMTAB_SHNDX SectionType = 18 /* Section indexes (see SHN_XINDEX). */
+
+```
+
+### <a id="STB_GLOBAL" href="#STB_GLOBAL">const STB_GLOBAL</a>
+
+```
+searchKey: elf.STB_GLOBAL
+tags: [constant number]
+```
+
+```Go
+const STB_GLOBAL SymBind = 1 /* Global symbol */
+
+```
+
+### <a id="STB_HIOS" href="#STB_HIOS">const STB_HIOS</a>
+
+```
+searchKey: elf.STB_HIOS
+tags: [constant number]
+```
+
+```Go
+const STB_HIOS SymBind = 12 /*   specific semantics. */
+
+```
+
+### <a id="STB_HIPROC" href="#STB_HIPROC">const STB_HIPROC</a>
+
+```
+searchKey: elf.STB_HIPROC
+tags: [constant number]
+```
+
+```Go
+const STB_HIPROC SymBind = 15 /*   specific semantics. */
+
+```
+
+### <a id="STB_LOCAL" href="#STB_LOCAL">const STB_LOCAL</a>
+
+```
+searchKey: elf.STB_LOCAL
+tags: [constant number]
+```
+
+```Go
+const STB_LOCAL SymBind = 0 /* Local symbol */
+
+```
+
+### <a id="STB_LOOS" href="#STB_LOOS">const STB_LOOS</a>
+
+```
+searchKey: elf.STB_LOOS
+tags: [constant number]
+```
+
+```Go
+const STB_LOOS SymBind = 10 /* Reserved range for operating system */
+
+```
+
+### <a id="STB_LOPROC" href="#STB_LOPROC">const STB_LOPROC</a>
+
+```
+searchKey: elf.STB_LOPROC
+tags: [constant number]
+```
+
+```Go
+const STB_LOPROC SymBind = 13 /* reserved range for processor */
+
+```
+
+### <a id="STB_WEAK" href="#STB_WEAK">const STB_WEAK</a>
+
+```
+searchKey: elf.STB_WEAK
+tags: [constant number]
+```
+
+```Go
+const STB_WEAK SymBind = 2 /* like global - lower precedence */
+
+```
+
+### <a id="STT_COMMON" href="#STT_COMMON">const STT_COMMON</a>
+
+```
+searchKey: elf.STT_COMMON
+tags: [constant number]
+```
+
+```Go
+const STT_COMMON SymType = 5 /* Uninitialized common block. */
+
+```
+
+### <a id="STT_FILE" href="#STT_FILE">const STT_FILE</a>
+
+```
+searchKey: elf.STT_FILE
+tags: [constant number]
+```
+
+```Go
+const STT_FILE SymType = 4 /* Source file. */
+
+```
+
+### <a id="STT_FUNC" href="#STT_FUNC">const STT_FUNC</a>
+
+```
+searchKey: elf.STT_FUNC
+tags: [constant number]
+```
+
+```Go
+const STT_FUNC SymType = 2 /* Function. */
+
+```
+
+### <a id="STT_HIOS" href="#STT_HIOS">const STT_HIOS</a>
+
+```
+searchKey: elf.STT_HIOS
+tags: [constant number]
+```
+
+```Go
+const STT_HIOS SymType = 12 /*   specific semantics. */
+
+```
+
+### <a id="STT_HIPROC" href="#STT_HIPROC">const STT_HIPROC</a>
+
+```
+searchKey: elf.STT_HIPROC
+tags: [constant number]
+```
+
+```Go
+const STT_HIPROC SymType = 15 /*   specific semantics. */
+
+```
+
+### <a id="STT_LOOS" href="#STT_LOOS">const STT_LOOS</a>
+
+```
+searchKey: elf.STT_LOOS
+tags: [constant number]
+```
+
+```Go
+const STT_LOOS SymType = 10 /* Reserved range for operating system */
+
+```
+
+### <a id="STT_LOPROC" href="#STT_LOPROC">const STT_LOPROC</a>
+
+```
+searchKey: elf.STT_LOPROC
+tags: [constant number]
+```
+
+```Go
+const STT_LOPROC SymType = 13 /* reserved range for processor */
+
+```
+
+### <a id="STT_NOTYPE" href="#STT_NOTYPE">const STT_NOTYPE</a>
+
+```
+searchKey: elf.STT_NOTYPE
+tags: [constant number]
+```
+
+```Go
+const STT_NOTYPE SymType = 0 /* Unspecified type. */
+
+```
+
+### <a id="STT_OBJECT" href="#STT_OBJECT">const STT_OBJECT</a>
+
+```
+searchKey: elf.STT_OBJECT
+tags: [constant number]
+```
+
+```Go
+const STT_OBJECT SymType = 1 /* Data object. */
+
+```
+
+### <a id="STT_SECTION" href="#STT_SECTION">const STT_SECTION</a>
+
+```
+searchKey: elf.STT_SECTION
+tags: [constant number]
+```
+
+```Go
+const STT_SECTION SymType = 3 /* Section. */
+
+```
+
+### <a id="STT_TLS" href="#STT_TLS">const STT_TLS</a>
+
+```
+searchKey: elf.STT_TLS
+tags: [constant number]
+```
+
+```Go
+const STT_TLS SymType = 6 /* TLS object. */
+
+```
+
+### <a id="STV_DEFAULT" href="#STV_DEFAULT">const STV_DEFAULT</a>
+
+```
+searchKey: elf.STV_DEFAULT
+tags: [constant number]
+```
+
+```Go
+const STV_DEFAULT SymVis = 0x0 /* Default visibility (see binding). */
+
+```
+
+### <a id="STV_HIDDEN" href="#STV_HIDDEN">const STV_HIDDEN</a>
+
+```
+searchKey: elf.STV_HIDDEN
+tags: [constant number]
+```
+
+```Go
+const STV_HIDDEN SymVis = 0x2 /* Not visible. */
+
+```
+
+### <a id="STV_INTERNAL" href="#STV_INTERNAL">const STV_INTERNAL</a>
+
+```
+searchKey: elf.STV_INTERNAL
+tags: [constant number]
+```
+
+```Go
+const STV_INTERNAL SymVis = 0x1 /* Special meaning in relocatable objects. */
+
+```
+
+### <a id="STV_PROTECTED" href="#STV_PROTECTED">const STV_PROTECTED</a>
+
+```
+searchKey: elf.STV_PROTECTED
+tags: [constant number]
+```
+
+```Go
+const STV_PROTECTED SymVis = 0x3 /* Visible but not preemptible. */
+
+```
 
 ### <a id="Sym32Size" href="#Sym32Size">const Sym32Size</a>
 
 ```
 searchKey: elf.Sym32Size
+tags: [constant number]
 ```
 
 ```Go
@@ -14969,30 +16249,18 @@ const Sym32Size = 16
 
 ```
 searchKey: elf.Sym64Size
+tags: [constant number]
 ```
 
 ```Go
 const Sym64Size = 24
 ```
 
-### <a id="seekStart" href="#seekStart">const seekStart</a>
-
-```
-searchKey: elf.seekStart
-tags: [private]
-```
-
-```Go
-const seekStart int = 0
-```
-
-seekStart, seekCurrent, seekEnd are copies of io.SeekStart, io.SeekCurrent, and io.SeekEnd. We can't use the ones from package io because we want this code to build with Go 1.4 during cmd/dist bootstrap. 
-
 ### <a id="seekCurrent" href="#seekCurrent">const seekCurrent</a>
 
 ```
 searchKey: elf.seekCurrent
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -15005,7 +16273,7 @@ seekStart, seekCurrent, seekEnd are copies of io.SeekStart, io.SeekCurrent, and 
 
 ```
 searchKey: elf.seekEnd
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -15014,27 +16282,43 @@ const seekEnd int = 2
 
 seekStart, seekCurrent, seekEnd are copies of io.SeekStart, io.SeekCurrent, and io.SeekEnd. We can't use the ones from package io because we want this code to build with Go 1.4 during cmd/dist bootstrap. 
 
-## <a id="var" href="#var">Variables</a>
-
-### <a id="versionStrings" href="#versionStrings">var versionStrings</a>
+### <a id="seekStart" href="#seekStart">const seekStart</a>
 
 ```
-searchKey: elf.versionStrings
-tags: [private]
+searchKey: elf.seekStart
+tags: [constant number private]
 ```
 
 ```Go
-var versionStrings = []intName{
-	{0, "EV_NONE"},
-	{1, "EV_CURRENT"},
-}
+const seekStart int = 0
 ```
+
+seekStart, seekCurrent, seekEnd are copies of io.SeekStart, io.SeekCurrent, and io.SeekEnd. We can't use the ones from package io because we want this code to build with Go 1.4 during cmd/dist bootstrap. 
+
+## <a id="var" href="#var">Variables</a>
+
+```
+tags: [package]
+```
+
+### <a id="ErrNoSymbols" href="#ErrNoSymbols">var ErrNoSymbols</a>
+
+```
+searchKey: elf.ErrNoSymbols
+tags: [variable interface]
+```
+
+```Go
+var ErrNoSymbols = errors.New("no symbol section")
+```
+
+ErrNoSymbols is returned by File.Symbols and File.DynamicSymbols if there is no such section in the File. 
 
 ### <a id="classStrings" href="#classStrings">var classStrings</a>
 
 ```
 searchKey: elf.classStrings
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
@@ -15045,11 +16329,22 @@ var classStrings = []intName{
 }
 ```
 
+### <a id="compressionStrings" href="#compressionStrings">var compressionStrings</a>
+
+```
+searchKey: elf.compressionStrings
+tags: [variable array struct private]
+```
+
+```Go
+var compressionStrings = ...
+```
+
 ### <a id="dataStrings" href="#dataStrings">var dataStrings</a>
 
 ```
 searchKey: elf.dataStrings
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
@@ -15060,136 +16355,77 @@ var dataStrings = []intName{
 }
 ```
 
-### <a id="osabiStrings" href="#osabiStrings">var osabiStrings</a>
-
-```
-searchKey: elf.osabiStrings
-tags: [private]
-```
-
-```Go
-var osabiStrings = ...
-```
-
-### <a id="typeStrings" href="#typeStrings">var typeStrings</a>
-
-```
-searchKey: elf.typeStrings
-tags: [private]
-```
-
-```Go
-var typeStrings = ...
-```
-
-### <a id="machineStrings" href="#machineStrings">var machineStrings</a>
-
-```
-searchKey: elf.machineStrings
-tags: [private]
-```
-
-```Go
-var machineStrings = ...
-```
-
-### <a id="shnStrings" href="#shnStrings">var shnStrings</a>
-
-```
-searchKey: elf.shnStrings
-tags: [private]
-```
-
-```Go
-var shnStrings = ...
-```
-
-### <a id="shtStrings" href="#shtStrings">var shtStrings</a>
-
-```
-searchKey: elf.shtStrings
-tags: [private]
-```
-
-```Go
-var shtStrings = ...
-```
-
-### <a id="shfStrings" href="#shfStrings">var shfStrings</a>
-
-```
-searchKey: elf.shfStrings
-tags: [private]
-```
-
-```Go
-var shfStrings = ...
-```
-
-### <a id="compressionStrings" href="#compressionStrings">var compressionStrings</a>
-
-```
-searchKey: elf.compressionStrings
-tags: [private]
-```
-
-```Go
-var compressionStrings = ...
-```
-
-### <a id="ptStrings" href="#ptStrings">var ptStrings</a>
-
-```
-searchKey: elf.ptStrings
-tags: [private]
-```
-
-```Go
-var ptStrings = ...
-```
-
-### <a id="pfStrings" href="#pfStrings">var pfStrings</a>
-
-```
-searchKey: elf.pfStrings
-tags: [private]
-```
-
-```Go
-var pfStrings = []intName{
-	{0x1, "PF_X"},
-	{0x2, "PF_W"},
-	{0x4, "PF_R"},
-}
-```
-
-### <a id="dtStrings" href="#dtStrings">var dtStrings</a>
-
-```
-searchKey: elf.dtStrings
-tags: [private]
-```
-
-```Go
-var dtStrings = ...
-```
-
 ### <a id="dflagStrings" href="#dflagStrings">var dflagStrings</a>
 
 ```
 searchKey: elf.dflagStrings
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
 var dflagStrings = ...
 ```
 
+### <a id="dtStrings" href="#dtStrings">var dtStrings</a>
+
+```
+searchKey: elf.dtStrings
+tags: [variable array struct private]
+```
+
+```Go
+var dtStrings = ...
+```
+
+### <a id="dynamicSymbolsGolden" href="#dynamicSymbolsGolden">var dynamicSymbolsGolden</a>
+
+```
+searchKey: elf.dynamicSymbolsGolden
+tags: [variable object private]
+```
+
+```Go
+var dynamicSymbolsGolden = ...
+```
+
+### <a id="fileTests" href="#fileTests">var fileTests</a>
+
+```
+searchKey: elf.fileTests
+tags: [variable array struct private]
+```
+
+```Go
+var fileTests = ...
+```
+
+### <a id="machineStrings" href="#machineStrings">var machineStrings</a>
+
+```
+searchKey: elf.machineStrings
+tags: [variable array struct private]
+```
+
+```Go
+var machineStrings = ...
+```
+
+### <a id="nameTests" href="#nameTests">var nameTests</a>
+
+```
+searchKey: elf.nameTests
+tags: [variable array struct private]
+```
+
+```Go
+var nameTests = ...
+```
+
 ### <a id="ntypeStrings" href="#ntypeStrings">var ntypeStrings</a>
 
 ```
 searchKey: elf.ntypeStrings
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
@@ -15200,55 +16436,70 @@ var ntypeStrings = []intName{
 }
 ```
 
-### <a id="stbStrings" href="#stbStrings">var stbStrings</a>
+### <a id="osabiStrings" href="#osabiStrings">var osabiStrings</a>
 
 ```
-searchKey: elf.stbStrings
-tags: [private]
-```
-
-```Go
-var stbStrings = ...
-```
-
-### <a id="sttStrings" href="#sttStrings">var sttStrings</a>
-
-```
-searchKey: elf.sttStrings
-tags: [private]
+searchKey: elf.osabiStrings
+tags: [variable array struct private]
 ```
 
 ```Go
-var sttStrings = ...
+var osabiStrings = ...
 ```
 
-### <a id="stvStrings" href="#stvStrings">var stvStrings</a>
+### <a id="pfStrings" href="#pfStrings">var pfStrings</a>
 
 ```
-searchKey: elf.stvStrings
-tags: [private]
-```
-
-```Go
-var stvStrings = ...
-```
-
-### <a id="rx86_64Strings" href="#rx86_64Strings">var rx86_64Strings</a>
-
-```
-searchKey: elf.rx86_64Strings
-tags: [private]
+searchKey: elf.pfStrings
+tags: [variable array struct private]
 ```
 
 ```Go
-var rx86_64Strings = ...
+var pfStrings = []intName{
+	{0x1, "PF_X"},
+	{0x2, "PF_W"},
+	{0x4, "PF_R"},
+}
+```
+
+### <a id="ptStrings" href="#ptStrings">var ptStrings</a>
+
+```
+searchKey: elf.ptStrings
+tags: [variable array struct private]
+```
+
+```Go
+var ptStrings = ...
+```
+
+### <a id="r386Strings" href="#r386Strings">var r386Strings</a>
+
+```
+searchKey: elf.r386Strings
+tags: [variable array struct private]
+```
+
+```Go
+var r386Strings = ...
+```
+
+### <a id="r390Strings" href="#r390Strings">var r390Strings</a>
+
+```
+searchKey: elf.r390Strings
+tags: [variable array struct private]
+```
+
+```Go
+var r390Strings = ...
 ```
 
 ### <a id="raarch64Strings" href="#raarch64Strings">var raarch64Strings</a>
 
 ```
 searchKey: elf.raarch64Strings
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
@@ -15259,7 +16510,7 @@ var raarch64Strings = ...
 
 ```
 searchKey: elf.ralphaStrings
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
@@ -15270,195 +16521,238 @@ var ralphaStrings = ...
 
 ```
 searchKey: elf.rarmStrings
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
 var rarmStrings = ...
 ```
 
-### <a id="r386Strings" href="#r386Strings">var r386Strings</a>
-
-```
-searchKey: elf.r386Strings
-tags: [private]
-```
-
-```Go
-var r386Strings = ...
-```
-
-### <a id="rmipsStrings" href="#rmipsStrings">var rmipsStrings</a>
-
-```
-searchKey: elf.rmipsStrings
-tags: [private]
-```
-
-```Go
-var rmipsStrings = ...
-```
-
-### <a id="rppcStrings" href="#rppcStrings">var rppcStrings</a>
-
-```
-searchKey: elf.rppcStrings
-tags: [private]
-```
-
-```Go
-var rppcStrings = ...
-```
-
-### <a id="rppc64Strings" href="#rppc64Strings">var rppc64Strings</a>
-
-```
-searchKey: elf.rppc64Strings
-tags: [private]
-```
-
-```Go
-var rppc64Strings = ...
-```
-
-### <a id="rriscvStrings" href="#rriscvStrings">var rriscvStrings</a>
-
-```
-searchKey: elf.rriscvStrings
-tags: [private]
-```
-
-```Go
-var rriscvStrings = ...
-```
-
-### <a id="r390Strings" href="#r390Strings">var r390Strings</a>
-
-```
-searchKey: elf.r390Strings
-tags: [private]
-```
-
-```Go
-var r390Strings = ...
-```
-
-### <a id="rsparcStrings" href="#rsparcStrings">var rsparcStrings</a>
-
-```
-searchKey: elf.rsparcStrings
-tags: [private]
-```
-
-```Go
-var rsparcStrings = ...
-```
-
-### <a id="ErrNoSymbols" href="#ErrNoSymbols">var ErrNoSymbols</a>
-
-```
-searchKey: elf.ErrNoSymbols
-```
-
-```Go
-var ErrNoSymbols = errors.New("no symbol section")
-```
-
-ErrNoSymbols is returned by File.Symbols and File.DynamicSymbols if there is no such section in the File. 
-
-### <a id="nameTests" href="#nameTests">var nameTests</a>
-
-```
-searchKey: elf.nameTests
-tags: [private]
-```
-
-```Go
-var nameTests = ...
-```
-
-### <a id="fileTests" href="#fileTests">var fileTests</a>
-
-```
-searchKey: elf.fileTests
-tags: [private]
-```
-
-```Go
-var fileTests = ...
-```
-
 ### <a id="relocationTests" href="#relocationTests">var relocationTests</a>
 
 ```
 searchKey: elf.relocationTests
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
 var relocationTests = ...
 ```
 
+### <a id="rmipsStrings" href="#rmipsStrings">var rmipsStrings</a>
+
+```
+searchKey: elf.rmipsStrings
+tags: [variable array struct private]
+```
+
+```Go
+var rmipsStrings = ...
+```
+
+### <a id="rppc64Strings" href="#rppc64Strings">var rppc64Strings</a>
+
+```
+searchKey: elf.rppc64Strings
+tags: [variable array struct private]
+```
+
+```Go
+var rppc64Strings = ...
+```
+
+### <a id="rppcStrings" href="#rppcStrings">var rppcStrings</a>
+
+```
+searchKey: elf.rppcStrings
+tags: [variable array struct private]
+```
+
+```Go
+var rppcStrings = ...
+```
+
+### <a id="rriscvStrings" href="#rriscvStrings">var rriscvStrings</a>
+
+```
+searchKey: elf.rriscvStrings
+tags: [variable array struct private]
+```
+
+```Go
+var rriscvStrings = ...
+```
+
+### <a id="rsparcStrings" href="#rsparcStrings">var rsparcStrings</a>
+
+```
+searchKey: elf.rsparcStrings
+tags: [variable array struct private]
+```
+
+```Go
+var rsparcStrings = ...
+```
+
+### <a id="rx86_64Strings" href="#rx86_64Strings">var rx86_64Strings</a>
+
+```
+searchKey: elf.rx86_64Strings
+tags: [variable array struct private]
+```
+
+```Go
+var rx86_64Strings = ...
+```
+
+### <a id="shfStrings" href="#shfStrings">var shfStrings</a>
+
+```
+searchKey: elf.shfStrings
+tags: [variable array struct private]
+```
+
+```Go
+var shfStrings = ...
+```
+
+### <a id="shnStrings" href="#shnStrings">var shnStrings</a>
+
+```
+searchKey: elf.shnStrings
+tags: [variable array struct private]
+```
+
+```Go
+var shnStrings = ...
+```
+
+### <a id="shtStrings" href="#shtStrings">var shtStrings</a>
+
+```
+searchKey: elf.shtStrings
+tags: [variable array struct private]
+```
+
+```Go
+var shtStrings = ...
+```
+
+### <a id="stbStrings" href="#stbStrings">var stbStrings</a>
+
+```
+searchKey: elf.stbStrings
+tags: [variable array struct private]
+```
+
+```Go
+var stbStrings = ...
+```
+
+### <a id="sttStrings" href="#sttStrings">var sttStrings</a>
+
+```
+searchKey: elf.sttStrings
+tags: [variable array struct private]
+```
+
+```Go
+var sttStrings = ...
+```
+
+### <a id="stvStrings" href="#stvStrings">var stvStrings</a>
+
+```
+searchKey: elf.stvStrings
+tags: [variable array struct private]
+```
+
+```Go
+var stvStrings = ...
+```
+
 ### <a id="symbolsGolden" href="#symbolsGolden">var symbolsGolden</a>
 
 ```
 searchKey: elf.symbolsGolden
-tags: [private]
+tags: [variable object private]
 ```
 
 ```Go
 var symbolsGolden = ...
 ```
 
-### <a id="dynamicSymbolsGolden" href="#dynamicSymbolsGolden">var dynamicSymbolsGolden</a>
+### <a id="typeStrings" href="#typeStrings">var typeStrings</a>
 
 ```
-searchKey: elf.dynamicSymbolsGolden
-tags: [private]
+searchKey: elf.typeStrings
+tags: [variable array struct private]
 ```
 
 ```Go
-var dynamicSymbolsGolden = ...
+var typeStrings = ...
+```
+
+### <a id="versionStrings" href="#versionStrings">var versionStrings</a>
+
+```
+searchKey: elf.versionStrings
+tags: [variable array struct private]
+```
+
+```Go
+var versionStrings = []intName{
+	{0, "EV_NONE"},
+	{1, "EV_CURRENT"},
+}
 ```
 
 ## <a id="type" href="#type">Types</a>
 
-### <a id="Version" href="#Version">type Version byte</a>
-
 ```
-searchKey: elf.Version
+tags: [package]
 ```
 
-```Go
-type Version byte
-```
-
-Version is found in Header.Ident[EI_VERSION] and Header.Version. 
-
-#### <a id="Version.String" href="#Version.String">func (i Version) String() string</a>
+### <a id="Chdr32" href="#Chdr32">type Chdr32 struct</a>
 
 ```
-searchKey: elf.Version.String
+searchKey: elf.Chdr32
+tags: [struct]
 ```
 
 ```Go
-func (i Version) String() string
+type Chdr32 struct {
+	Type      uint32
+	Size      uint32
+	Addralign uint32
+}
 ```
 
-#### <a id="Version.GoString" href="#Version.GoString">func (i Version) GoString() string</a>
+ELF32 Compression header. 
+
+### <a id="Chdr64" href="#Chdr64">type Chdr64 struct</a>
 
 ```
-searchKey: elf.Version.GoString
+searchKey: elf.Chdr64
+tags: [struct]
 ```
 
 ```Go
-func (i Version) GoString() string
+type Chdr64 struct {
+	Type      uint32
+	_         uint32 /* Reserved. */
+	Size      uint64
+	Addralign uint64
+}
 ```
+
+ELF64 Compression header. 
 
 ### <a id="Class" href="#Class">type Class byte</a>
 
 ```
 searchKey: elf.Class
+tags: [number]
 ```
 
 ```Go
@@ -15467,254 +16761,33 @@ type Class byte
 
 Class is found in Header.Ident[EI_CLASS] and Header.Class. 
 
-#### <a id="Class.String" href="#Class.String">func (i Class) String() string</a>
-
-```
-searchKey: elf.Class.String
-```
-
-```Go
-func (i Class) String() string
-```
-
 #### <a id="Class.GoString" href="#Class.GoString">func (i Class) GoString() string</a>
 
 ```
 searchKey: elf.Class.GoString
+tags: [function]
 ```
 
 ```Go
 func (i Class) GoString() string
 ```
 
-### <a id="Data" href="#Data">type Data byte</a>
+#### <a id="Class.String" href="#Class.String">func (i Class) String() string</a>
 
 ```
-searchKey: elf.Data
-```
-
-```Go
-type Data byte
-```
-
-Data is found in Header.Ident[EI_DATA] and Header.Data. 
-
-#### <a id="Data.String" href="#Data.String">func (i Data) String() string</a>
-
-```
-searchKey: elf.Data.String
+searchKey: elf.Class.String
+tags: [function]
 ```
 
 ```Go
-func (i Data) String() string
-```
-
-#### <a id="Data.GoString" href="#Data.GoString">func (i Data) GoString() string</a>
-
-```
-searchKey: elf.Data.GoString
-```
-
-```Go
-func (i Data) GoString() string
-```
-
-### <a id="OSABI" href="#OSABI">type OSABI byte</a>
-
-```
-searchKey: elf.OSABI
-```
-
-```Go
-type OSABI byte
-```
-
-OSABI is found in Header.Ident[EI_OSABI] and Header.OSABI. 
-
-#### <a id="OSABI.String" href="#OSABI.String">func (i OSABI) String() string</a>
-
-```
-searchKey: elf.OSABI.String
-```
-
-```Go
-func (i OSABI) String() string
-```
-
-#### <a id="OSABI.GoString" href="#OSABI.GoString">func (i OSABI) GoString() string</a>
-
-```
-searchKey: elf.OSABI.GoString
-```
-
-```Go
-func (i OSABI) GoString() string
-```
-
-### <a id="Type" href="#Type">type Type uint16</a>
-
-```
-searchKey: elf.Type
-```
-
-```Go
-type Type uint16
-```
-
-Type is found in Header.Type. 
-
-#### <a id="Type.String" href="#Type.String">func (i Type) String() string</a>
-
-```
-searchKey: elf.Type.String
-```
-
-```Go
-func (i Type) String() string
-```
-
-#### <a id="Type.GoString" href="#Type.GoString">func (i Type) GoString() string</a>
-
-```
-searchKey: elf.Type.GoString
-```
-
-```Go
-func (i Type) GoString() string
-```
-
-### <a id="Machine" href="#Machine">type Machine uint16</a>
-
-```
-searchKey: elf.Machine
-```
-
-```Go
-type Machine uint16
-```
-
-Machine is found in Header.Machine. 
-
-#### <a id="Machine.String" href="#Machine.String">func (i Machine) String() string</a>
-
-```
-searchKey: elf.Machine.String
-```
-
-```Go
-func (i Machine) String() string
-```
-
-#### <a id="Machine.GoString" href="#Machine.GoString">func (i Machine) GoString() string</a>
-
-```
-searchKey: elf.Machine.GoString
-```
-
-```Go
-func (i Machine) GoString() string
-```
-
-### <a id="SectionIndex" href="#SectionIndex">type SectionIndex int</a>
-
-```
-searchKey: elf.SectionIndex
-```
-
-```Go
-type SectionIndex int
-```
-
-Special section indices. 
-
-#### <a id="SectionIndex.String" href="#SectionIndex.String">func (i SectionIndex) String() string</a>
-
-```
-searchKey: elf.SectionIndex.String
-```
-
-```Go
-func (i SectionIndex) String() string
-```
-
-#### <a id="SectionIndex.GoString" href="#SectionIndex.GoString">func (i SectionIndex) GoString() string</a>
-
-```
-searchKey: elf.SectionIndex.GoString
-```
-
-```Go
-func (i SectionIndex) GoString() string
-```
-
-### <a id="SectionType" href="#SectionType">type SectionType uint32</a>
-
-```
-searchKey: elf.SectionType
-```
-
-```Go
-type SectionType uint32
-```
-
-Section type. 
-
-#### <a id="SectionType.String" href="#SectionType.String">func (i SectionType) String() string</a>
-
-```
-searchKey: elf.SectionType.String
-```
-
-```Go
-func (i SectionType) String() string
-```
-
-#### <a id="SectionType.GoString" href="#SectionType.GoString">func (i SectionType) GoString() string</a>
-
-```
-searchKey: elf.SectionType.GoString
-```
-
-```Go
-func (i SectionType) GoString() string
-```
-
-### <a id="SectionFlag" href="#SectionFlag">type SectionFlag uint32</a>
-
-```
-searchKey: elf.SectionFlag
-```
-
-```Go
-type SectionFlag uint32
-```
-
-Section flags. 
-
-#### <a id="SectionFlag.String" href="#SectionFlag.String">func (i SectionFlag) String() string</a>
-
-```
-searchKey: elf.SectionFlag.String
-```
-
-```Go
-func (i SectionFlag) String() string
-```
-
-#### <a id="SectionFlag.GoString" href="#SectionFlag.GoString">func (i SectionFlag) GoString() string</a>
-
-```
-searchKey: elf.SectionFlag.GoString
-```
-
-```Go
-func (i SectionFlag) GoString() string
+func (i Class) String() string
 ```
 
 ### <a id="CompressionType" href="#CompressionType">type CompressionType int</a>
 
 ```
 searchKey: elf.CompressionType
+tags: [number]
 ```
 
 ```Go
@@ -15723,126 +16796,100 @@ type CompressionType int
 
 Section compression type. 
 
-#### <a id="CompressionType.String" href="#CompressionType.String">func (i CompressionType) String() string</a>
-
-```
-searchKey: elf.CompressionType.String
-```
-
-```Go
-func (i CompressionType) String() string
-```
-
 #### <a id="CompressionType.GoString" href="#CompressionType.GoString">func (i CompressionType) GoString() string</a>
 
 ```
 searchKey: elf.CompressionType.GoString
+tags: [function]
 ```
 
 ```Go
 func (i CompressionType) GoString() string
 ```
 
-### <a id="ProgType" href="#ProgType">type ProgType int</a>
+#### <a id="CompressionType.String" href="#CompressionType.String">func (i CompressionType) String() string</a>
 
 ```
-searchKey: elf.ProgType
-```
-
-```Go
-type ProgType int
-```
-
-Prog.Type 
-
-#### <a id="ProgType.String" href="#ProgType.String">func (i ProgType) String() string</a>
-
-```
-searchKey: elf.ProgType.String
+searchKey: elf.CompressionType.String
+tags: [function]
 ```
 
 ```Go
-func (i ProgType) String() string
+func (i CompressionType) String() string
 ```
 
-#### <a id="ProgType.GoString" href="#ProgType.GoString">func (i ProgType) GoString() string</a>
+### <a id="Data" href="#Data">type Data byte</a>
 
 ```
-searchKey: elf.ProgType.GoString
-```
-
-```Go
-func (i ProgType) GoString() string
-```
-
-### <a id="ProgFlag" href="#ProgFlag">type ProgFlag uint32</a>
-
-```
-searchKey: elf.ProgFlag
+searchKey: elf.Data
+tags: [number]
 ```
 
 ```Go
-type ProgFlag uint32
+type Data byte
 ```
 
-Prog.Flag 
+Data is found in Header.Ident[EI_DATA] and Header.Data. 
 
-#### <a id="ProgFlag.String" href="#ProgFlag.String">func (i ProgFlag) String() string</a>
-
-```
-searchKey: elf.ProgFlag.String
-```
-
-```Go
-func (i ProgFlag) String() string
-```
-
-#### <a id="ProgFlag.GoString" href="#ProgFlag.GoString">func (i ProgFlag) GoString() string</a>
+#### <a id="Data.GoString" href="#Data.GoString">func (i Data) GoString() string</a>
 
 ```
-searchKey: elf.ProgFlag.GoString
+searchKey: elf.Data.GoString
+tags: [function]
 ```
 
 ```Go
-func (i ProgFlag) GoString() string
+func (i Data) GoString() string
 ```
 
-### <a id="DynTag" href="#DynTag">type DynTag int</a>
+#### <a id="Data.String" href="#Data.String">func (i Data) String() string</a>
 
 ```
-searchKey: elf.DynTag
-```
-
-```Go
-type DynTag int
-```
-
-Dyn.Tag 
-
-#### <a id="DynTag.String" href="#DynTag.String">func (i DynTag) String() string</a>
-
-```
-searchKey: elf.DynTag.String
+searchKey: elf.Data.String
+tags: [function]
 ```
 
 ```Go
-func (i DynTag) String() string
+func (i Data) String() string
 ```
 
-#### <a id="DynTag.GoString" href="#DynTag.GoString">func (i DynTag) GoString() string</a>
+### <a id="Dyn32" href="#Dyn32">type Dyn32 struct</a>
 
 ```
-searchKey: elf.DynTag.GoString
+searchKey: elf.Dyn32
+tags: [struct]
 ```
 
 ```Go
-func (i DynTag) GoString() string
+type Dyn32 struct {
+	Tag int32  /* Entry type. */
+	Val uint32 /* Integer/Address value. */
+}
 ```
+
+ELF32 Dynamic structure. The ".dynamic" section contains an array of them. 
+
+### <a id="Dyn64" href="#Dyn64">type Dyn64 struct</a>
+
+```
+searchKey: elf.Dyn64
+tags: [struct]
+```
+
+```Go
+type Dyn64 struct {
+	Tag int64  /* Entry type. */
+	Val uint64 /* Integer/address value */
+}
+```
+
+ELF64 Dynamic structure. The ".dynamic" section contains an array of them. 
 
 ### <a id="DynFlag" href="#DynFlag">type DynFlag int</a>
 
 ```
 searchKey: elf.DynFlag
+tags: [number]
 ```
 
 ```Go
@@ -15851,544 +16898,494 @@ type DynFlag int
 
 DT_FLAGS values. 
 
-#### <a id="DynFlag.String" href="#DynFlag.String">func (i DynFlag) String() string</a>
-
-```
-searchKey: elf.DynFlag.String
-```
-
-```Go
-func (i DynFlag) String() string
-```
-
 #### <a id="DynFlag.GoString" href="#DynFlag.GoString">func (i DynFlag) GoString() string</a>
 
 ```
 searchKey: elf.DynFlag.GoString
+tags: [function]
 ```
 
 ```Go
 func (i DynFlag) GoString() string
 ```
 
-### <a id="NType" href="#NType">type NType int</a>
+#### <a id="DynFlag.String" href="#DynFlag.String">func (i DynFlag) String() string</a>
 
 ```
-searchKey: elf.NType
-```
-
-```Go
-type NType int
-```
-
-NType values; used in core files. 
-
-#### <a id="NType.String" href="#NType.String">func (i NType) String() string</a>
-
-```
-searchKey: elf.NType.String
+searchKey: elf.DynFlag.String
+tags: [function]
 ```
 
 ```Go
-func (i NType) String() string
+func (i DynFlag) String() string
 ```
 
-#### <a id="NType.GoString" href="#NType.GoString">func (i NType) GoString() string</a>
+### <a id="DynTag" href="#DynTag">type DynTag int</a>
 
 ```
-searchKey: elf.NType.GoString
-```
-
-```Go
-func (i NType) GoString() string
-```
-
-### <a id="SymBind" href="#SymBind">type SymBind int</a>
-
-```
-searchKey: elf.SymBind
+searchKey: elf.DynTag
+tags: [number]
 ```
 
 ```Go
-type SymBind int
+type DynTag int
 ```
 
-Symbol Binding - ELFNN_ST_BIND - st_info 
+Dyn.Tag 
 
-#### <a id="ST_BIND" href="#ST_BIND">func ST_BIND(info uint8) SymBind</a>
-
-```
-searchKey: elf.ST_BIND
-```
-
-```Go
-func ST_BIND(info uint8) SymBind
-```
-
-#### <a id="SymBind.String" href="#SymBind.String">func (i SymBind) String() string</a>
+#### <a id="DynTag.GoString" href="#DynTag.GoString">func (i DynTag) GoString() string</a>
 
 ```
-searchKey: elf.SymBind.String
+searchKey: elf.DynTag.GoString
+tags: [function]
 ```
 
 ```Go
-func (i SymBind) String() string
+func (i DynTag) GoString() string
 ```
 
-#### <a id="SymBind.GoString" href="#SymBind.GoString">func (i SymBind) GoString() string</a>
+#### <a id="DynTag.String" href="#DynTag.String">func (i DynTag) String() string</a>
 
 ```
-searchKey: elf.SymBind.GoString
-```
-
-```Go
-func (i SymBind) GoString() string
-```
-
-### <a id="SymType" href="#SymType">type SymType int</a>
-
-```
-searchKey: elf.SymType
+searchKey: elf.DynTag.String
+tags: [function]
 ```
 
 ```Go
-type SymType int
+func (i DynTag) String() string
 ```
 
-Symbol type - ELFNN_ST_TYPE - st_info 
-
-#### <a id="ST_TYPE" href="#ST_TYPE">func ST_TYPE(info uint8) SymType</a>
+### <a id="File" href="#File">type File struct</a>
 
 ```
-searchKey: elf.ST_TYPE
-```
-
-```Go
-func ST_TYPE(info uint8) SymType
-```
-
-#### <a id="SymType.String" href="#SymType.String">func (i SymType) String() string</a>
-
-```
-searchKey: elf.SymType.String
+searchKey: elf.File
+tags: [struct]
 ```
 
 ```Go
-func (i SymType) String() string
+type File struct {
+	FileHeader
+	Sections  []*Section
+	Progs     []*Prog
+	closer    io.Closer
+	gnuNeed   []verneed
+	gnuVersym []byte
+}
 ```
 
-#### <a id="SymType.GoString" href="#SymType.GoString">func (i SymType) GoString() string</a>
+A File represents an open ELF file. 
+
+#### <a id="NewFile" href="#NewFile">func NewFile(r io.ReaderAt) (*File, error)</a>
 
 ```
-searchKey: elf.SymType.GoString
-```
-
-```Go
-func (i SymType) GoString() string
-```
-
-### <a id="SymVis" href="#SymVis">type SymVis int</a>
-
-```
-searchKey: elf.SymVis
-```
-
-```Go
-type SymVis int
-```
-
-Symbol visibility - ELFNN_ST_VISIBILITY - st_other 
-
-#### <a id="ST_VISIBILITY" href="#ST_VISIBILITY">func ST_VISIBILITY(other uint8) SymVis</a>
-
-```
-searchKey: elf.ST_VISIBILITY
+searchKey: elf.NewFile
+tags: [method]
 ```
 
 ```Go
-func ST_VISIBILITY(other uint8) SymVis
+func NewFile(r io.ReaderAt) (*File, error)
 ```
 
-#### <a id="SymVis.String" href="#SymVis.String">func (i SymVis) String() string</a>
+NewFile creates a new File for accessing an ELF binary in an underlying reader. The ELF binary is expected to start at position 0 in the ReaderAt. 
+
+#### <a id="Open" href="#Open">func Open(name string) (*File, error)</a>
 
 ```
-searchKey: elf.SymVis.String
-```
-
-```Go
-func (i SymVis) String() string
-```
-
-#### <a id="SymVis.GoString" href="#SymVis.GoString">func (i SymVis) GoString() string</a>
-
-```
-searchKey: elf.SymVis.GoString
+searchKey: elf.Open
+tags: [method]
 ```
 
 ```Go
-func (i SymVis) GoString() string
+func Open(name string) (*File, error)
 ```
 
-### <a id="R_X86_64" href="#R_X86_64">type R_X86_64 int</a>
+Open opens the named file using os.Open and prepares it for use as an ELF binary. 
+
+#### <a id="File.Close" href="#File.Close">func (f *File) Close() error</a>
 
 ```
-searchKey: elf.R_X86_64
-```
-
-```Go
-type R_X86_64 int
-```
-
-Relocation types for x86-64. 
-
-#### <a id="R_X86_64.String" href="#R_X86_64.String">func (i R_X86_64) String() string</a>
-
-```
-searchKey: elf.R_X86_64.String
+searchKey: elf.File.Close
+tags: [function]
 ```
 
 ```Go
-func (i R_X86_64) String() string
+func (f *File) Close() error
 ```
 
-#### <a id="R_X86_64.GoString" href="#R_X86_64.GoString">func (i R_X86_64) GoString() string</a>
+Close closes the File. If the File was created using NewFile directly instead of Open, Close has no effect. 
+
+#### <a id="File.DWARF" href="#File.DWARF">func (f *File) DWARF() (*dwarf.Data, error)</a>
 
 ```
-searchKey: elf.R_X86_64.GoString
-```
-
-```Go
-func (i R_X86_64) GoString() string
-```
-
-### <a id="R_AARCH64" href="#R_AARCH64">type R_AARCH64 int</a>
-
-```
-searchKey: elf.R_AARCH64
+searchKey: elf.File.DWARF
+tags: [function]
 ```
 
 ```Go
-type R_AARCH64 int
+func (f *File) DWARF() (*dwarf.Data, error)
 ```
 
-Relocation types for AArch64 (aka arm64) 
-
-#### <a id="R_AARCH64.String" href="#R_AARCH64.String">func (i R_AARCH64) String() string</a>
+#### <a id="File.DynString" href="#File.DynString">func (f *File) DynString(tag DynTag) ([]string, error)</a>
 
 ```
-searchKey: elf.R_AARCH64.String
-```
-
-```Go
-func (i R_AARCH64) String() string
-```
-
-#### <a id="R_AARCH64.GoString" href="#R_AARCH64.GoString">func (i R_AARCH64) GoString() string</a>
-
-```
-searchKey: elf.R_AARCH64.GoString
+searchKey: elf.File.DynString
+tags: [method]
 ```
 
 ```Go
-func (i R_AARCH64) GoString() string
+func (f *File) DynString(tag DynTag) ([]string, error)
 ```
 
-### <a id="R_ALPHA" href="#R_ALPHA">type R_ALPHA int</a>
+DynString returns the strings listed for the given tag in the file's dynamic section. 
+
+The tag must be one that takes string values: DT_NEEDED, DT_SONAME, DT_RPATH, or DT_RUNPATH. 
+
+#### <a id="File.DynamicSymbols" href="#File.DynamicSymbols">func (f *File) DynamicSymbols() ([]Symbol, error)</a>
 
 ```
-searchKey: elf.R_ALPHA
-```
-
-```Go
-type R_ALPHA int
-```
-
-Relocation types for Alpha. 
-
-#### <a id="R_ALPHA.String" href="#R_ALPHA.String">func (i R_ALPHA) String() string</a>
-
-```
-searchKey: elf.R_ALPHA.String
+searchKey: elf.File.DynamicSymbols
+tags: [function]
 ```
 
 ```Go
-func (i R_ALPHA) String() string
+func (f *File) DynamicSymbols() ([]Symbol, error)
 ```
 
-#### <a id="R_ALPHA.GoString" href="#R_ALPHA.GoString">func (i R_ALPHA) GoString() string</a>
+DynamicSymbols returns the dynamic symbol table for f. The symbols will be listed in the order they appear in f. 
+
+If f has a symbol version table, the returned Symbols will have initialized Version and Library fields. 
+
+For compatibility with Symbols, DynamicSymbols omits the null symbol at index 0. After retrieving the symbols as symtab, an externally supplied index x corresponds to symtab[x-1], not symtab[x]. 
+
+#### <a id="File.ImportedLibraries" href="#File.ImportedLibraries">func (f *File) ImportedLibraries() ([]string, error)</a>
 
 ```
-searchKey: elf.R_ALPHA.GoString
-```
-
-```Go
-func (i R_ALPHA) GoString() string
-```
-
-### <a id="R_ARM" href="#R_ARM">type R_ARM int</a>
-
-```
-searchKey: elf.R_ARM
+searchKey: elf.File.ImportedLibraries
+tags: [function]
 ```
 
 ```Go
-type R_ARM int
+func (f *File) ImportedLibraries() ([]string, error)
 ```
 
-Relocation types for ARM. 
+ImportedLibraries returns the names of all libraries referred to by the binary f that are expected to be linked with the binary at dynamic link time. 
 
-#### <a id="R_ARM.String" href="#R_ARM.String">func (i R_ARM) String() string</a>
-
-```
-searchKey: elf.R_ARM.String
-```
-
-```Go
-func (i R_ARM) String() string
-```
-
-#### <a id="R_ARM.GoString" href="#R_ARM.GoString">func (i R_ARM) GoString() string</a>
+#### <a id="File.ImportedSymbols" href="#File.ImportedSymbols">func (f *File) ImportedSymbols() ([]ImportedSymbol, error)</a>
 
 ```
-searchKey: elf.R_ARM.GoString
+searchKey: elf.File.ImportedSymbols
+tags: [function]
 ```
 
 ```Go
-func (i R_ARM) GoString() string
+func (f *File) ImportedSymbols() ([]ImportedSymbol, error)
 ```
 
-### <a id="R_386" href="#R_386">type R_386 int</a>
+ImportedSymbols returns the names of all symbols referred to by the binary f that are expected to be satisfied by other libraries at dynamic load time. It does not return weak symbols. 
+
+#### <a id="File.Section" href="#File.Section">func (f *File) Section(name string) *Section</a>
 
 ```
-searchKey: elf.R_386
-```
-
-```Go
-type R_386 int
-```
-
-Relocation types for 386. 
-
-#### <a id="R_386.String" href="#R_386.String">func (i R_386) String() string</a>
-
-```
-searchKey: elf.R_386.String
+searchKey: elf.File.Section
+tags: [method]
 ```
 
 ```Go
-func (i R_386) String() string
+func (f *File) Section(name string) *Section
 ```
 
-#### <a id="R_386.GoString" href="#R_386.GoString">func (i R_386) GoString() string</a>
+Section returns a section with the given name, or nil if no such section exists. 
+
+#### <a id="File.SectionByType" href="#File.SectionByType">func (f *File) SectionByType(typ SectionType) *Section</a>
 
 ```
-searchKey: elf.R_386.GoString
-```
-
-```Go
-func (i R_386) GoString() string
-```
-
-### <a id="R_MIPS" href="#R_MIPS">type R_MIPS int</a>
-
-```
-searchKey: elf.R_MIPS
+searchKey: elf.File.SectionByType
+tags: [method]
 ```
 
 ```Go
-type R_MIPS int
+func (f *File) SectionByType(typ SectionType) *Section
 ```
 
-Relocation types for MIPS. 
+SectionByType returns the first section in f with the given type, or nil if there is no such section. 
 
-#### <a id="R_MIPS.String" href="#R_MIPS.String">func (i R_MIPS) String() string</a>
-
-```
-searchKey: elf.R_MIPS.String
-```
-
-```Go
-func (i R_MIPS) String() string
-```
-
-#### <a id="R_MIPS.GoString" href="#R_MIPS.GoString">func (i R_MIPS) GoString() string</a>
+#### <a id="File.Symbols" href="#File.Symbols">func (f *File) Symbols() ([]Symbol, error)</a>
 
 ```
-searchKey: elf.R_MIPS.GoString
+searchKey: elf.File.Symbols
+tags: [function]
 ```
 
 ```Go
-func (i R_MIPS) GoString() string
+func (f *File) Symbols() ([]Symbol, error)
 ```
 
-### <a id="R_PPC" href="#R_PPC">type R_PPC int</a>
+Symbols returns the symbol table for f. The symbols will be listed in the order they appear in f. 
+
+For compatibility with Go 1.0, Symbols omits the null symbol at index 0. After retrieving the symbols as symtab, an externally supplied index x corresponds to symtab[x-1], not symtab[x]. 
+
+#### <a id="File.applyRelocations" href="#File.applyRelocations">func (f *File) applyRelocations(dst []byte, rels []byte) error</a>
 
 ```
-searchKey: elf.R_PPC
-```
-
-```Go
-type R_PPC int
-```
-
-Relocation types for PowerPC. 
-
-Values that are shared by both R_PPC and R_PPC64 are prefixed with R_POWERPC_ in the ELF standard. For the R_PPC type, the relevant shared relocations have been renamed with the prefix R_PPC_. The original name follows the value in a comment. 
-
-#### <a id="R_PPC.String" href="#R_PPC.String">func (i R_PPC) String() string</a>
-
-```
-searchKey: elf.R_PPC.String
+searchKey: elf.File.applyRelocations
+tags: [method private]
 ```
 
 ```Go
-func (i R_PPC) String() string
+func (f *File) applyRelocations(dst []byte, rels []byte) error
 ```
 
-#### <a id="R_PPC.GoString" href="#R_PPC.GoString">func (i R_PPC) GoString() string</a>
+applyRelocations applies relocations to dst. rels is a relocations section in REL or RELA format. 
+
+#### <a id="File.applyRelocations386" href="#File.applyRelocations386">func (f *File) applyRelocations386(dst []byte, rels []byte) error</a>
 
 ```
-searchKey: elf.R_PPC.GoString
-```
-
-```Go
-func (i R_PPC) GoString() string
-```
-
-### <a id="R_PPC64" href="#R_PPC64">type R_PPC64 int</a>
-
-```
-searchKey: elf.R_PPC64
+searchKey: elf.File.applyRelocations386
+tags: [method private]
 ```
 
 ```Go
-type R_PPC64 int
+func (f *File) applyRelocations386(dst []byte, rels []byte) error
 ```
 
-Relocation types for 64-bit PowerPC or Power Architecture processors. 
-
-Values that are shared by both R_PPC and R_PPC64 are prefixed with R_POWERPC_ in the ELF standard. For the R_PPC64 type, the relevant shared relocations have been renamed with the prefix R_PPC64_. The original name follows the value in a comment. 
-
-#### <a id="R_PPC64.String" href="#R_PPC64.String">func (i R_PPC64) String() string</a>
+#### <a id="File.applyRelocationsAMD64" href="#File.applyRelocationsAMD64">func (f *File) applyRelocationsAMD64(dst []byte, rels []byte) error</a>
 
 ```
-searchKey: elf.R_PPC64.String
+searchKey: elf.File.applyRelocationsAMD64
+tags: [method private]
 ```
 
 ```Go
-func (i R_PPC64) String() string
+func (f *File) applyRelocationsAMD64(dst []byte, rels []byte) error
 ```
 
-#### <a id="R_PPC64.GoString" href="#R_PPC64.GoString">func (i R_PPC64) GoString() string</a>
+#### <a id="File.applyRelocationsARM" href="#File.applyRelocationsARM">func (f *File) applyRelocationsARM(dst []byte, rels []byte) error</a>
 
 ```
-searchKey: elf.R_PPC64.GoString
-```
-
-```Go
-func (i R_PPC64) GoString() string
-```
-
-### <a id="R_RISCV" href="#R_RISCV">type R_RISCV int</a>
-
-```
-searchKey: elf.R_RISCV
+searchKey: elf.File.applyRelocationsARM
+tags: [method private]
 ```
 
 ```Go
-type R_RISCV int
+func (f *File) applyRelocationsARM(dst []byte, rels []byte) error
 ```
 
-Relocation types for RISC-V processors. 
-
-#### <a id="R_RISCV.String" href="#R_RISCV.String">func (i R_RISCV) String() string</a>
+#### <a id="File.applyRelocationsARM64" href="#File.applyRelocationsARM64">func (f *File) applyRelocationsARM64(dst []byte, rels []byte) error</a>
 
 ```
-searchKey: elf.R_RISCV.String
-```
-
-```Go
-func (i R_RISCV) String() string
-```
-
-#### <a id="R_RISCV.GoString" href="#R_RISCV.GoString">func (i R_RISCV) GoString() string</a>
-
-```
-searchKey: elf.R_RISCV.GoString
+searchKey: elf.File.applyRelocationsARM64
+tags: [method private]
 ```
 
 ```Go
-func (i R_RISCV) GoString() string
+func (f *File) applyRelocationsARM64(dst []byte, rels []byte) error
 ```
 
-### <a id="R_390" href="#R_390">type R_390 int</a>
+#### <a id="File.applyRelocationsMIPS" href="#File.applyRelocationsMIPS">func (f *File) applyRelocationsMIPS(dst []byte, rels []byte) error</a>
 
 ```
-searchKey: elf.R_390
-```
-
-```Go
-type R_390 int
-```
-
-Relocation types for s390x processors. 
-
-#### <a id="R_390.String" href="#R_390.String">func (i R_390) String() string</a>
-
-```
-searchKey: elf.R_390.String
+searchKey: elf.File.applyRelocationsMIPS
+tags: [method private]
 ```
 
 ```Go
-func (i R_390) String() string
+func (f *File) applyRelocationsMIPS(dst []byte, rels []byte) error
 ```
 
-#### <a id="R_390.GoString" href="#R_390.GoString">func (i R_390) GoString() string</a>
+#### <a id="File.applyRelocationsMIPS64" href="#File.applyRelocationsMIPS64">func (f *File) applyRelocationsMIPS64(dst []byte, rels []byte) error</a>
 
 ```
-searchKey: elf.R_390.GoString
-```
-
-```Go
-func (i R_390) GoString() string
-```
-
-### <a id="R_SPARC" href="#R_SPARC">type R_SPARC int</a>
-
-```
-searchKey: elf.R_SPARC
+searchKey: elf.File.applyRelocationsMIPS64
+tags: [method private]
 ```
 
 ```Go
-type R_SPARC int
+func (f *File) applyRelocationsMIPS64(dst []byte, rels []byte) error
 ```
 
-Relocation types for SPARC. 
-
-#### <a id="R_SPARC.String" href="#R_SPARC.String">func (i R_SPARC) String() string</a>
+#### <a id="File.applyRelocationsPPC" href="#File.applyRelocationsPPC">func (f *File) applyRelocationsPPC(dst []byte, rels []byte) error</a>
 
 ```
-searchKey: elf.R_SPARC.String
-```
-
-```Go
-func (i R_SPARC) String() string
-```
-
-#### <a id="R_SPARC.GoString" href="#R_SPARC.GoString">func (i R_SPARC) GoString() string</a>
-
-```
-searchKey: elf.R_SPARC.GoString
+searchKey: elf.File.applyRelocationsPPC
+tags: [method private]
 ```
 
 ```Go
-func (i R_SPARC) GoString() string
+func (f *File) applyRelocationsPPC(dst []byte, rels []byte) error
+```
+
+#### <a id="File.applyRelocationsPPC64" href="#File.applyRelocationsPPC64">func (f *File) applyRelocationsPPC64(dst []byte, rels []byte) error</a>
+
+```
+searchKey: elf.File.applyRelocationsPPC64
+tags: [method private]
+```
+
+```Go
+func (f *File) applyRelocationsPPC64(dst []byte, rels []byte) error
+```
+
+#### <a id="File.applyRelocationsRISCV64" href="#File.applyRelocationsRISCV64">func (f *File) applyRelocationsRISCV64(dst []byte, rels []byte) error</a>
+
+```
+searchKey: elf.File.applyRelocationsRISCV64
+tags: [method private]
+```
+
+```Go
+func (f *File) applyRelocationsRISCV64(dst []byte, rels []byte) error
+```
+
+#### <a id="File.applyRelocationsSPARC64" href="#File.applyRelocationsSPARC64">func (f *File) applyRelocationsSPARC64(dst []byte, rels []byte) error</a>
+
+```
+searchKey: elf.File.applyRelocationsSPARC64
+tags: [method private]
+```
+
+```Go
+func (f *File) applyRelocationsSPARC64(dst []byte, rels []byte) error
+```
+
+#### <a id="File.applyRelocationss390x" href="#File.applyRelocationss390x">func (f *File) applyRelocationss390x(dst []byte, rels []byte) error</a>
+
+```
+searchKey: elf.File.applyRelocationss390x
+tags: [method private]
+```
+
+```Go
+func (f *File) applyRelocationss390x(dst []byte, rels []byte) error
+```
+
+#### <a id="File.getSymbols" href="#File.getSymbols">func (f *File) getSymbols(typ SectionType) ([]Symbol, []byte, error)</a>
+
+```
+searchKey: elf.File.getSymbols
+tags: [method private]
+```
+
+```Go
+func (f *File) getSymbols(typ SectionType) ([]Symbol, []byte, error)
+```
+
+getSymbols returns a slice of Symbols from parsing the symbol table with the given type, along with the associated string table. 
+
+#### <a id="File.getSymbols32" href="#File.getSymbols32">func (f *File) getSymbols32(typ SectionType) ([]Symbol, []byte, error)</a>
+
+```
+searchKey: elf.File.getSymbols32
+tags: [method private]
+```
+
+```Go
+func (f *File) getSymbols32(typ SectionType) ([]Symbol, []byte, error)
+```
+
+#### <a id="File.getSymbols64" href="#File.getSymbols64">func (f *File) getSymbols64(typ SectionType) ([]Symbol, []byte, error)</a>
+
+```
+searchKey: elf.File.getSymbols64
+tags: [method private]
+```
+
+```Go
+func (f *File) getSymbols64(typ SectionType) ([]Symbol, []byte, error)
+```
+
+#### <a id="File.gnuVersion" href="#File.gnuVersion">func (f *File) gnuVersion(i int) (library string, version string)</a>
+
+```
+searchKey: elf.File.gnuVersion
+tags: [method private]
+```
+
+```Go
+func (f *File) gnuVersion(i int) (library string, version string)
+```
+
+gnuVersion adds Library and Version information to sym, which came from offset i of the symbol table. 
+
+#### <a id="File.gnuVersionInit" href="#File.gnuVersionInit">func (f *File) gnuVersionInit(str []byte) bool</a>
+
+```
+searchKey: elf.File.gnuVersionInit
+tags: [method private]
+```
+
+```Go
+func (f *File) gnuVersionInit(str []byte) bool
+```
+
+gnuVersionInit parses the GNU version tables for use by calls to gnuVersion. 
+
+#### <a id="File.stringTable" href="#File.stringTable">func (f *File) stringTable(link uint32) ([]byte, error)</a>
+
+```
+searchKey: elf.File.stringTable
+tags: [method private]
+```
+
+```Go
+func (f *File) stringTable(link uint32) ([]byte, error)
+```
+
+stringTable reads and returns the string table given by the specified link value. 
+
+### <a id="FileHeader" href="#FileHeader">type FileHeader struct</a>
+
+```
+searchKey: elf.FileHeader
+tags: [struct]
+```
+
+```Go
+type FileHeader struct {
+	Class      Class
+	Data       Data
+	Version    Version
+	OSABI      OSABI
+	ABIVersion uint8
+	ByteOrder  binary.ByteOrder
+	Type       Type
+	Machine    Machine
+	Entry      uint64
+}
+```
+
+A FileHeader represents an ELF file header. 
+
+### <a id="FormatError" href="#FormatError">type FormatError struct</a>
+
+```
+searchKey: elf.FormatError
+tags: [struct]
+```
+
+```Go
+type FormatError struct {
+	off int64
+	msg string
+	val interface{}
+}
+```
+
+#### <a id="FormatError.Error" href="#FormatError.Error">func (e *FormatError) Error() string</a>
+
+```
+searchKey: elf.FormatError.Error
+tags: [function]
+```
+
+```Go
+func (e *FormatError) Error() string
 ```
 
 ### <a id="Header32" href="#Header32">type Header32 struct</a>
 
 ```
 searchKey: elf.Header32
+tags: [struct]
 ```
 
 ```Go
@@ -16412,135 +17409,11 @@ type Header32 struct {
 
 ELF32 File header. 
 
-### <a id="Section32" href="#Section32">type Section32 struct</a>
-
-```
-searchKey: elf.Section32
-```
-
-```Go
-type Section32 struct {
-	Name      uint32 /* Section name (index into the section header string table). */
-	Type      uint32 /* Section type. */
-	Flags     uint32 /* Section flags. */
-	Addr      uint32 /* Address in memory image. */
-	Off       uint32 /* Offset in file. */
-	Size      uint32 /* Size in bytes. */
-	Link      uint32 /* Index of a related section. */
-	Info      uint32 /* Depends on section type. */
-	Addralign uint32 /* Alignment in bytes. */
-	Entsize   uint32 /* Size of each entry in section. */
-}
-```
-
-ELF32 Section header. 
-
-### <a id="Prog32" href="#Prog32">type Prog32 struct</a>
-
-```
-searchKey: elf.Prog32
-```
-
-```Go
-type Prog32 struct {
-	Type   uint32 /* Entry type. */
-	Off    uint32 /* File offset of contents. */
-	Vaddr  uint32 /* Virtual address in memory image. */
-	Paddr  uint32 /* Physical address (not used). */
-	Filesz uint32 /* Size of contents in file. */
-	Memsz  uint32 /* Size of contents in memory. */
-	Flags  uint32 /* Access permission flags. */
-	Align  uint32 /* Alignment in memory and file. */
-}
-```
-
-ELF32 Program header. 
-
-### <a id="Dyn32" href="#Dyn32">type Dyn32 struct</a>
-
-```
-searchKey: elf.Dyn32
-```
-
-```Go
-type Dyn32 struct {
-	Tag int32  /* Entry type. */
-	Val uint32 /* Integer/Address value. */
-}
-```
-
-ELF32 Dynamic structure. The ".dynamic" section contains an array of them. 
-
-### <a id="Chdr32" href="#Chdr32">type Chdr32 struct</a>
-
-```
-searchKey: elf.Chdr32
-```
-
-```Go
-type Chdr32 struct {
-	Type      uint32
-	Size      uint32
-	Addralign uint32
-}
-```
-
-ELF32 Compression header. 
-
-### <a id="Rel32" href="#Rel32">type Rel32 struct</a>
-
-```
-searchKey: elf.Rel32
-```
-
-```Go
-type Rel32 struct {
-	Off  uint32 /* Location to be relocated. */
-	Info uint32 /* Relocation type and symbol index. */
-}
-```
-
-ELF32 Relocations that don't need an addend field. 
-
-### <a id="Rela32" href="#Rela32">type Rela32 struct</a>
-
-```
-searchKey: elf.Rela32
-```
-
-```Go
-type Rela32 struct {
-	Off    uint32 /* Location to be relocated. */
-	Info   uint32 /* Relocation type and symbol index. */
-	Addend int32  /* Addend. */
-}
-```
-
-ELF32 Relocations that need an addend field. 
-
-### <a id="Sym32" href="#Sym32">type Sym32 struct</a>
-
-```
-searchKey: elf.Sym32
-```
-
-```Go
-type Sym32 struct {
-	Name  uint32
-	Value uint32
-	Size  uint32
-	Info  uint8
-	Other uint8
-	Shndx uint16
-}
-```
-
-ELF32 Symbol. 
-
 ### <a id="Header64" href="#Header64">type Header64 struct</a>
 
 ```
 searchKey: elf.Header64
+tags: [struct]
 ```
 
 ```Go
@@ -16564,33 +17437,190 @@ type Header64 struct {
 
 ELF64 file header. 
 
-### <a id="Section64" href="#Section64">type Section64 struct</a>
+### <a id="ImportedSymbol" href="#ImportedSymbol">type ImportedSymbol struct</a>
 
 ```
-searchKey: elf.Section64
+searchKey: elf.ImportedSymbol
+tags: [struct]
 ```
 
 ```Go
-type Section64 struct {
-	Name      uint32 /* Section name (index into the section header string table). */
-	Type      uint32 /* Section type. */
-	Flags     uint64 /* Section flags. */
-	Addr      uint64 /* Address in memory image. */
-	Off       uint64 /* Offset in file. */
-	Size      uint64 /* Size in bytes. */
-	Link      uint32 /* Index of a related section. */
-	Info      uint32 /* Depends on section type. */
-	Addralign uint64 /* Alignment in bytes. */
-	Entsize   uint64 /* Size of each entry in section. */
+type ImportedSymbol struct {
+	Name    string
+	Version string
+	Library string
 }
 ```
 
-ELF64 Section header. 
+### <a id="Machine" href="#Machine">type Machine uint16</a>
+
+```
+searchKey: elf.Machine
+tags: [number]
+```
+
+```Go
+type Machine uint16
+```
+
+Machine is found in Header.Machine. 
+
+#### <a id="Machine.GoString" href="#Machine.GoString">func (i Machine) GoString() string</a>
+
+```
+searchKey: elf.Machine.GoString
+tags: [function]
+```
+
+```Go
+func (i Machine) GoString() string
+```
+
+#### <a id="Machine.String" href="#Machine.String">func (i Machine) String() string</a>
+
+```
+searchKey: elf.Machine.String
+tags: [function]
+```
+
+```Go
+func (i Machine) String() string
+```
+
+### <a id="NType" href="#NType">type NType int</a>
+
+```
+searchKey: elf.NType
+tags: [number]
+```
+
+```Go
+type NType int
+```
+
+NType values; used in core files. 
+
+#### <a id="NType.GoString" href="#NType.GoString">func (i NType) GoString() string</a>
+
+```
+searchKey: elf.NType.GoString
+tags: [function]
+```
+
+```Go
+func (i NType) GoString() string
+```
+
+#### <a id="NType.String" href="#NType.String">func (i NType) String() string</a>
+
+```
+searchKey: elf.NType.String
+tags: [function]
+```
+
+```Go
+func (i NType) String() string
+```
+
+### <a id="OSABI" href="#OSABI">type OSABI byte</a>
+
+```
+searchKey: elf.OSABI
+tags: [number]
+```
+
+```Go
+type OSABI byte
+```
+
+OSABI is found in Header.Ident[EI_OSABI] and Header.OSABI. 
+
+#### <a id="OSABI.GoString" href="#OSABI.GoString">func (i OSABI) GoString() string</a>
+
+```
+searchKey: elf.OSABI.GoString
+tags: [function]
+```
+
+```Go
+func (i OSABI) GoString() string
+```
+
+#### <a id="OSABI.String" href="#OSABI.String">func (i OSABI) String() string</a>
+
+```
+searchKey: elf.OSABI.String
+tags: [function]
+```
+
+```Go
+func (i OSABI) String() string
+```
+
+### <a id="Prog" href="#Prog">type Prog struct</a>
+
+```
+searchKey: elf.Prog
+tags: [struct]
+```
+
+```Go
+type Prog struct {
+	ProgHeader
+
+	// Embed ReaderAt for ReadAt method.
+	// Do not embed SectionReader directly
+	// to avoid having Read and Seek.
+	// If a client wants Read and Seek it must use
+	// Open() to avoid fighting over the seek offset
+	// with other clients.
+	io.ReaderAt
+	sr *io.SectionReader
+}
+```
+
+A Prog represents a single ELF program header in an ELF binary. 
+
+#### <a id="Prog.Open" href="#Prog.Open">func (p *Prog) Open() io.ReadSeeker</a>
+
+```
+searchKey: elf.Prog.Open
+tags: [function]
+```
+
+```Go
+func (p *Prog) Open() io.ReadSeeker
+```
+
+Open returns a new ReadSeeker reading the ELF program body. 
+
+### <a id="Prog32" href="#Prog32">type Prog32 struct</a>
+
+```
+searchKey: elf.Prog32
+tags: [struct]
+```
+
+```Go
+type Prog32 struct {
+	Type   uint32 /* Entry type. */
+	Off    uint32 /* File offset of contents. */
+	Vaddr  uint32 /* Virtual address in memory image. */
+	Paddr  uint32 /* Physical address (not used). */
+	Filesz uint32 /* Size of contents in file. */
+	Memsz  uint32 /* Size of contents in memory. */
+	Flags  uint32 /* Access permission flags. */
+	Align  uint32 /* Alignment in memory and file. */
+}
+```
+
+ELF32 Program header. 
 
 ### <a id="Prog64" href="#Prog64">type Prog64 struct</a>
 
 ```
 searchKey: elf.Prog64
+tags: [struct]
 ```
 
 ```Go
@@ -16608,42 +17638,508 @@ type Prog64 struct {
 
 ELF64 Program header. 
 
-### <a id="Dyn64" href="#Dyn64">type Dyn64 struct</a>
+### <a id="ProgFlag" href="#ProgFlag">type ProgFlag uint32</a>
 
 ```
-searchKey: elf.Dyn64
-```
-
-```Go
-type Dyn64 struct {
-	Tag int64  /* Entry type. */
-	Val uint64 /* Integer/address value */
-}
-```
-
-ELF64 Dynamic structure. The ".dynamic" section contains an array of them. 
-
-### <a id="Chdr64" href="#Chdr64">type Chdr64 struct</a>
-
-```
-searchKey: elf.Chdr64
+searchKey: elf.ProgFlag
+tags: [number]
 ```
 
 ```Go
-type Chdr64 struct {
-	Type      uint32
-	_         uint32 /* Reserved. */
-	Size      uint64
-	Addralign uint64
+type ProgFlag uint32
+```
+
+Prog.Flag 
+
+#### <a id="ProgFlag.GoString" href="#ProgFlag.GoString">func (i ProgFlag) GoString() string</a>
+
+```
+searchKey: elf.ProgFlag.GoString
+tags: [function]
+```
+
+```Go
+func (i ProgFlag) GoString() string
+```
+
+#### <a id="ProgFlag.String" href="#ProgFlag.String">func (i ProgFlag) String() string</a>
+
+```
+searchKey: elf.ProgFlag.String
+tags: [function]
+```
+
+```Go
+func (i ProgFlag) String() string
+```
+
+### <a id="ProgHeader" href="#ProgHeader">type ProgHeader struct</a>
+
+```
+searchKey: elf.ProgHeader
+tags: [struct]
+```
+
+```Go
+type ProgHeader struct {
+	Type   ProgType
+	Flags  ProgFlag
+	Off    uint64
+	Vaddr  uint64
+	Paddr  uint64
+	Filesz uint64
+	Memsz  uint64
+	Align  uint64
 }
 ```
 
-ELF64 Compression header. 
+A ProgHeader represents a single ELF program header. 
+
+### <a id="ProgType" href="#ProgType">type ProgType int</a>
+
+```
+searchKey: elf.ProgType
+tags: [number]
+```
+
+```Go
+type ProgType int
+```
+
+Prog.Type 
+
+#### <a id="ProgType.GoString" href="#ProgType.GoString">func (i ProgType) GoString() string</a>
+
+```
+searchKey: elf.ProgType.GoString
+tags: [function]
+```
+
+```Go
+func (i ProgType) GoString() string
+```
+
+#### <a id="ProgType.String" href="#ProgType.String">func (i ProgType) String() string</a>
+
+```
+searchKey: elf.ProgType.String
+tags: [function]
+```
+
+```Go
+func (i ProgType) String() string
+```
+
+### <a id="R_386" href="#R_386">type R_386 int</a>
+
+```
+searchKey: elf.R_386
+tags: [number]
+```
+
+```Go
+type R_386 int
+```
+
+Relocation types for 386. 
+
+#### <a id="R_386.GoString" href="#R_386.GoString">func (i R_386) GoString() string</a>
+
+```
+searchKey: elf.R_386.GoString
+tags: [function]
+```
+
+```Go
+func (i R_386) GoString() string
+```
+
+#### <a id="R_386.String" href="#R_386.String">func (i R_386) String() string</a>
+
+```
+searchKey: elf.R_386.String
+tags: [function]
+```
+
+```Go
+func (i R_386) String() string
+```
+
+### <a id="R_390" href="#R_390">type R_390 int</a>
+
+```
+searchKey: elf.R_390
+tags: [number]
+```
+
+```Go
+type R_390 int
+```
+
+Relocation types for s390x processors. 
+
+#### <a id="R_390.GoString" href="#R_390.GoString">func (i R_390) GoString() string</a>
+
+```
+searchKey: elf.R_390.GoString
+tags: [function]
+```
+
+```Go
+func (i R_390) GoString() string
+```
+
+#### <a id="R_390.String" href="#R_390.String">func (i R_390) String() string</a>
+
+```
+searchKey: elf.R_390.String
+tags: [function]
+```
+
+```Go
+func (i R_390) String() string
+```
+
+### <a id="R_AARCH64" href="#R_AARCH64">type R_AARCH64 int</a>
+
+```
+searchKey: elf.R_AARCH64
+tags: [number]
+```
+
+```Go
+type R_AARCH64 int
+```
+
+Relocation types for AArch64 (aka arm64) 
+
+#### <a id="R_AARCH64.GoString" href="#R_AARCH64.GoString">func (i R_AARCH64) GoString() string</a>
+
+```
+searchKey: elf.R_AARCH64.GoString
+tags: [function]
+```
+
+```Go
+func (i R_AARCH64) GoString() string
+```
+
+#### <a id="R_AARCH64.String" href="#R_AARCH64.String">func (i R_AARCH64) String() string</a>
+
+```
+searchKey: elf.R_AARCH64.String
+tags: [function]
+```
+
+```Go
+func (i R_AARCH64) String() string
+```
+
+### <a id="R_ALPHA" href="#R_ALPHA">type R_ALPHA int</a>
+
+```
+searchKey: elf.R_ALPHA
+tags: [number]
+```
+
+```Go
+type R_ALPHA int
+```
+
+Relocation types for Alpha. 
+
+#### <a id="R_ALPHA.GoString" href="#R_ALPHA.GoString">func (i R_ALPHA) GoString() string</a>
+
+```
+searchKey: elf.R_ALPHA.GoString
+tags: [function]
+```
+
+```Go
+func (i R_ALPHA) GoString() string
+```
+
+#### <a id="R_ALPHA.String" href="#R_ALPHA.String">func (i R_ALPHA) String() string</a>
+
+```
+searchKey: elf.R_ALPHA.String
+tags: [function]
+```
+
+```Go
+func (i R_ALPHA) String() string
+```
+
+### <a id="R_ARM" href="#R_ARM">type R_ARM int</a>
+
+```
+searchKey: elf.R_ARM
+tags: [number]
+```
+
+```Go
+type R_ARM int
+```
+
+Relocation types for ARM. 
+
+#### <a id="R_ARM.GoString" href="#R_ARM.GoString">func (i R_ARM) GoString() string</a>
+
+```
+searchKey: elf.R_ARM.GoString
+tags: [function]
+```
+
+```Go
+func (i R_ARM) GoString() string
+```
+
+#### <a id="R_ARM.String" href="#R_ARM.String">func (i R_ARM) String() string</a>
+
+```
+searchKey: elf.R_ARM.String
+tags: [function]
+```
+
+```Go
+func (i R_ARM) String() string
+```
+
+### <a id="R_MIPS" href="#R_MIPS">type R_MIPS int</a>
+
+```
+searchKey: elf.R_MIPS
+tags: [number]
+```
+
+```Go
+type R_MIPS int
+```
+
+Relocation types for MIPS. 
+
+#### <a id="R_MIPS.GoString" href="#R_MIPS.GoString">func (i R_MIPS) GoString() string</a>
+
+```
+searchKey: elf.R_MIPS.GoString
+tags: [function]
+```
+
+```Go
+func (i R_MIPS) GoString() string
+```
+
+#### <a id="R_MIPS.String" href="#R_MIPS.String">func (i R_MIPS) String() string</a>
+
+```
+searchKey: elf.R_MIPS.String
+tags: [function]
+```
+
+```Go
+func (i R_MIPS) String() string
+```
+
+### <a id="R_PPC" href="#R_PPC">type R_PPC int</a>
+
+```
+searchKey: elf.R_PPC
+tags: [number]
+```
+
+```Go
+type R_PPC int
+```
+
+Relocation types for PowerPC. 
+
+Values that are shared by both R_PPC and R_PPC64 are prefixed with R_POWERPC_ in the ELF standard. For the R_PPC type, the relevant shared relocations have been renamed with the prefix R_PPC_. The original name follows the value in a comment. 
+
+#### <a id="R_PPC.GoString" href="#R_PPC.GoString">func (i R_PPC) GoString() string</a>
+
+```
+searchKey: elf.R_PPC.GoString
+tags: [function]
+```
+
+```Go
+func (i R_PPC) GoString() string
+```
+
+#### <a id="R_PPC.String" href="#R_PPC.String">func (i R_PPC) String() string</a>
+
+```
+searchKey: elf.R_PPC.String
+tags: [function]
+```
+
+```Go
+func (i R_PPC) String() string
+```
+
+### <a id="R_PPC64" href="#R_PPC64">type R_PPC64 int</a>
+
+```
+searchKey: elf.R_PPC64
+tags: [number]
+```
+
+```Go
+type R_PPC64 int
+```
+
+Relocation types for 64-bit PowerPC or Power Architecture processors. 
+
+Values that are shared by both R_PPC and R_PPC64 are prefixed with R_POWERPC_ in the ELF standard. For the R_PPC64 type, the relevant shared relocations have been renamed with the prefix R_PPC64_. The original name follows the value in a comment. 
+
+#### <a id="R_PPC64.GoString" href="#R_PPC64.GoString">func (i R_PPC64) GoString() string</a>
+
+```
+searchKey: elf.R_PPC64.GoString
+tags: [function]
+```
+
+```Go
+func (i R_PPC64) GoString() string
+```
+
+#### <a id="R_PPC64.String" href="#R_PPC64.String">func (i R_PPC64) String() string</a>
+
+```
+searchKey: elf.R_PPC64.String
+tags: [function]
+```
+
+```Go
+func (i R_PPC64) String() string
+```
+
+### <a id="R_RISCV" href="#R_RISCV">type R_RISCV int</a>
+
+```
+searchKey: elf.R_RISCV
+tags: [number]
+```
+
+```Go
+type R_RISCV int
+```
+
+Relocation types for RISC-V processors. 
+
+#### <a id="R_RISCV.GoString" href="#R_RISCV.GoString">func (i R_RISCV) GoString() string</a>
+
+```
+searchKey: elf.R_RISCV.GoString
+tags: [function]
+```
+
+```Go
+func (i R_RISCV) GoString() string
+```
+
+#### <a id="R_RISCV.String" href="#R_RISCV.String">func (i R_RISCV) String() string</a>
+
+```
+searchKey: elf.R_RISCV.String
+tags: [function]
+```
+
+```Go
+func (i R_RISCV) String() string
+```
+
+### <a id="R_SPARC" href="#R_SPARC">type R_SPARC int</a>
+
+```
+searchKey: elf.R_SPARC
+tags: [number]
+```
+
+```Go
+type R_SPARC int
+```
+
+Relocation types for SPARC. 
+
+#### <a id="R_SPARC.GoString" href="#R_SPARC.GoString">func (i R_SPARC) GoString() string</a>
+
+```
+searchKey: elf.R_SPARC.GoString
+tags: [function]
+```
+
+```Go
+func (i R_SPARC) GoString() string
+```
+
+#### <a id="R_SPARC.String" href="#R_SPARC.String">func (i R_SPARC) String() string</a>
+
+```
+searchKey: elf.R_SPARC.String
+tags: [function]
+```
+
+```Go
+func (i R_SPARC) String() string
+```
+
+### <a id="R_X86_64" href="#R_X86_64">type R_X86_64 int</a>
+
+```
+searchKey: elf.R_X86_64
+tags: [number]
+```
+
+```Go
+type R_X86_64 int
+```
+
+Relocation types for x86-64. 
+
+#### <a id="R_X86_64.GoString" href="#R_X86_64.GoString">func (i R_X86_64) GoString() string</a>
+
+```
+searchKey: elf.R_X86_64.GoString
+tags: [function]
+```
+
+```Go
+func (i R_X86_64) GoString() string
+```
+
+#### <a id="R_X86_64.String" href="#R_X86_64.String">func (i R_X86_64) String() string</a>
+
+```
+searchKey: elf.R_X86_64.String
+tags: [function]
+```
+
+```Go
+func (i R_X86_64) String() string
+```
+
+### <a id="Rel32" href="#Rel32">type Rel32 struct</a>
+
+```
+searchKey: elf.Rel32
+tags: [struct]
+```
+
+```Go
+type Rel32 struct {
+	Off  uint32 /* Location to be relocated. */
+	Info uint32 /* Relocation type and symbol index. */
+}
+```
+
+ELF32 Relocations that don't need an addend field. 
 
 ### <a id="Rel64" href="#Rel64">type Rel64 struct</a>
 
 ```
 searchKey: elf.Rel64
+tags: [struct]
 ```
 
 ```Go
@@ -16655,10 +18151,28 @@ type Rel64 struct {
 
 ELF64 relocations that don't need an addend field. 
 
+### <a id="Rela32" href="#Rela32">type Rela32 struct</a>
+
+```
+searchKey: elf.Rela32
+tags: [struct]
+```
+
+```Go
+type Rela32 struct {
+	Off    uint32 /* Location to be relocated. */
+	Info   uint32 /* Relocation type and symbol index. */
+	Addend int32  /* Addend. */
+}
+```
+
+ELF32 Relocations that need an addend field. 
+
 ### <a id="Rela64" href="#Rela64">type Rela64 struct</a>
 
 ```
 searchKey: elf.Rela64
+tags: [struct]
 ```
 
 ```Go
@@ -16671,459 +18185,11 @@ type Rela64 struct {
 
 ELF64 relocations that need an addend field. 
 
-### <a id="Sym64" href="#Sym64">type Sym64 struct</a>
-
-```
-searchKey: elf.Sym64
-```
-
-```Go
-type Sym64 struct {
-	Name  uint32 /* String table index of name. */
-	Info  uint8  /* Type and binding information. */
-	Other uint8  /* Reserved (not used). */
-	Shndx uint16 /* Section index of symbol. */
-	Value uint64 /* Symbol value. */
-	Size  uint64 /* Size of associated object. */
-}
-```
-
-ELF64 symbol table entries. 
-
-### <a id="intName" href="#intName">type intName struct</a>
-
-```
-searchKey: elf.intName
-tags: [private]
-```
-
-```Go
-type intName struct {
-	i uint32
-	s string
-}
-```
-
-### <a id="FileHeader" href="#FileHeader">type FileHeader struct</a>
-
-```
-searchKey: elf.FileHeader
-```
-
-```Go
-type FileHeader struct {
-	Class      Class
-	Data       Data
-	Version    Version
-	OSABI      OSABI
-	ABIVersion uint8
-	ByteOrder  binary.ByteOrder
-	Type       Type
-	Machine    Machine
-	Entry      uint64
-}
-```
-
-A FileHeader represents an ELF file header. 
-
-### <a id="File" href="#File">type File struct</a>
-
-```
-searchKey: elf.File
-```
-
-```Go
-type File struct {
-	FileHeader
-	Sections  []*Section
-	Progs     []*Prog
-	closer    io.Closer
-	gnuNeed   []verneed
-	gnuVersym []byte
-}
-```
-
-A File represents an open ELF file. 
-
-#### <a id="Open" href="#Open">func Open(name string) (*File, error)</a>
-
-```
-searchKey: elf.Open
-```
-
-```Go
-func Open(name string) (*File, error)
-```
-
-Open opens the named file using os.Open and prepares it for use as an ELF binary. 
-
-#### <a id="NewFile" href="#NewFile">func NewFile(r io.ReaderAt) (*File, error)</a>
-
-```
-searchKey: elf.NewFile
-```
-
-```Go
-func NewFile(r io.ReaderAt) (*File, error)
-```
-
-NewFile creates a new File for accessing an ELF binary in an underlying reader. The ELF binary is expected to start at position 0 in the ReaderAt. 
-
-#### <a id="File.stringTable" href="#File.stringTable">func (f *File) stringTable(link uint32) ([]byte, error)</a>
-
-```
-searchKey: elf.File.stringTable
-tags: [private]
-```
-
-```Go
-func (f *File) stringTable(link uint32) ([]byte, error)
-```
-
-stringTable reads and returns the string table given by the specified link value. 
-
-#### <a id="File.Close" href="#File.Close">func (f *File) Close() error</a>
-
-```
-searchKey: elf.File.Close
-```
-
-```Go
-func (f *File) Close() error
-```
-
-Close closes the File. If the File was created using NewFile directly instead of Open, Close has no effect. 
-
-#### <a id="File.SectionByType" href="#File.SectionByType">func (f *File) SectionByType(typ SectionType) *Section</a>
-
-```
-searchKey: elf.File.SectionByType
-```
-
-```Go
-func (f *File) SectionByType(typ SectionType) *Section
-```
-
-SectionByType returns the first section in f with the given type, or nil if there is no such section. 
-
-#### <a id="File.getSymbols" href="#File.getSymbols">func (f *File) getSymbols(typ SectionType) ([]Symbol, []byte, error)</a>
-
-```
-searchKey: elf.File.getSymbols
-tags: [private]
-```
-
-```Go
-func (f *File) getSymbols(typ SectionType) ([]Symbol, []byte, error)
-```
-
-getSymbols returns a slice of Symbols from parsing the symbol table with the given type, along with the associated string table. 
-
-#### <a id="File.getSymbols32" href="#File.getSymbols32">func (f *File) getSymbols32(typ SectionType) ([]Symbol, []byte, error)</a>
-
-```
-searchKey: elf.File.getSymbols32
-tags: [private]
-```
-
-```Go
-func (f *File) getSymbols32(typ SectionType) ([]Symbol, []byte, error)
-```
-
-#### <a id="File.getSymbols64" href="#File.getSymbols64">func (f *File) getSymbols64(typ SectionType) ([]Symbol, []byte, error)</a>
-
-```
-searchKey: elf.File.getSymbols64
-tags: [private]
-```
-
-```Go
-func (f *File) getSymbols64(typ SectionType) ([]Symbol, []byte, error)
-```
-
-#### <a id="File.Section" href="#File.Section">func (f *File) Section(name string) *Section</a>
-
-```
-searchKey: elf.File.Section
-```
-
-```Go
-func (f *File) Section(name string) *Section
-```
-
-Section returns a section with the given name, or nil if no such section exists. 
-
-#### <a id="File.applyRelocations" href="#File.applyRelocations">func (f *File) applyRelocations(dst []byte, rels []byte) error</a>
-
-```
-searchKey: elf.File.applyRelocations
-tags: [private]
-```
-
-```Go
-func (f *File) applyRelocations(dst []byte, rels []byte) error
-```
-
-applyRelocations applies relocations to dst. rels is a relocations section in REL or RELA format. 
-
-#### <a id="File.applyRelocationsAMD64" href="#File.applyRelocationsAMD64">func (f *File) applyRelocationsAMD64(dst []byte, rels []byte) error</a>
-
-```
-searchKey: elf.File.applyRelocationsAMD64
-tags: [private]
-```
-
-```Go
-func (f *File) applyRelocationsAMD64(dst []byte, rels []byte) error
-```
-
-#### <a id="File.applyRelocations386" href="#File.applyRelocations386">func (f *File) applyRelocations386(dst []byte, rels []byte) error</a>
-
-```
-searchKey: elf.File.applyRelocations386
-tags: [private]
-```
-
-```Go
-func (f *File) applyRelocations386(dst []byte, rels []byte) error
-```
-
-#### <a id="File.applyRelocationsARM" href="#File.applyRelocationsARM">func (f *File) applyRelocationsARM(dst []byte, rels []byte) error</a>
-
-```
-searchKey: elf.File.applyRelocationsARM
-tags: [private]
-```
-
-```Go
-func (f *File) applyRelocationsARM(dst []byte, rels []byte) error
-```
-
-#### <a id="File.applyRelocationsARM64" href="#File.applyRelocationsARM64">func (f *File) applyRelocationsARM64(dst []byte, rels []byte) error</a>
-
-```
-searchKey: elf.File.applyRelocationsARM64
-tags: [private]
-```
-
-```Go
-func (f *File) applyRelocationsARM64(dst []byte, rels []byte) error
-```
-
-#### <a id="File.applyRelocationsPPC" href="#File.applyRelocationsPPC">func (f *File) applyRelocationsPPC(dst []byte, rels []byte) error</a>
-
-```
-searchKey: elf.File.applyRelocationsPPC
-tags: [private]
-```
-
-```Go
-func (f *File) applyRelocationsPPC(dst []byte, rels []byte) error
-```
-
-#### <a id="File.applyRelocationsPPC64" href="#File.applyRelocationsPPC64">func (f *File) applyRelocationsPPC64(dst []byte, rels []byte) error</a>
-
-```
-searchKey: elf.File.applyRelocationsPPC64
-tags: [private]
-```
-
-```Go
-func (f *File) applyRelocationsPPC64(dst []byte, rels []byte) error
-```
-
-#### <a id="File.applyRelocationsMIPS" href="#File.applyRelocationsMIPS">func (f *File) applyRelocationsMIPS(dst []byte, rels []byte) error</a>
-
-```
-searchKey: elf.File.applyRelocationsMIPS
-tags: [private]
-```
-
-```Go
-func (f *File) applyRelocationsMIPS(dst []byte, rels []byte) error
-```
-
-#### <a id="File.applyRelocationsMIPS64" href="#File.applyRelocationsMIPS64">func (f *File) applyRelocationsMIPS64(dst []byte, rels []byte) error</a>
-
-```
-searchKey: elf.File.applyRelocationsMIPS64
-tags: [private]
-```
-
-```Go
-func (f *File) applyRelocationsMIPS64(dst []byte, rels []byte) error
-```
-
-#### <a id="File.applyRelocationsRISCV64" href="#File.applyRelocationsRISCV64">func (f *File) applyRelocationsRISCV64(dst []byte, rels []byte) error</a>
-
-```
-searchKey: elf.File.applyRelocationsRISCV64
-tags: [private]
-```
-
-```Go
-func (f *File) applyRelocationsRISCV64(dst []byte, rels []byte) error
-```
-
-#### <a id="File.applyRelocationss390x" href="#File.applyRelocationss390x">func (f *File) applyRelocationss390x(dst []byte, rels []byte) error</a>
-
-```
-searchKey: elf.File.applyRelocationss390x
-tags: [private]
-```
-
-```Go
-func (f *File) applyRelocationss390x(dst []byte, rels []byte) error
-```
-
-#### <a id="File.applyRelocationsSPARC64" href="#File.applyRelocationsSPARC64">func (f *File) applyRelocationsSPARC64(dst []byte, rels []byte) error</a>
-
-```
-searchKey: elf.File.applyRelocationsSPARC64
-tags: [private]
-```
-
-```Go
-func (f *File) applyRelocationsSPARC64(dst []byte, rels []byte) error
-```
-
-#### <a id="File.DWARF" href="#File.DWARF">func (f *File) DWARF() (*dwarf.Data, error)</a>
-
-```
-searchKey: elf.File.DWARF
-```
-
-```Go
-func (f *File) DWARF() (*dwarf.Data, error)
-```
-
-#### <a id="File.Symbols" href="#File.Symbols">func (f *File) Symbols() ([]Symbol, error)</a>
-
-```
-searchKey: elf.File.Symbols
-```
-
-```Go
-func (f *File) Symbols() ([]Symbol, error)
-```
-
-Symbols returns the symbol table for f. The symbols will be listed in the order they appear in f. 
-
-For compatibility with Go 1.0, Symbols omits the null symbol at index 0. After retrieving the symbols as symtab, an externally supplied index x corresponds to symtab[x-1], not symtab[x]. 
-
-#### <a id="File.DynamicSymbols" href="#File.DynamicSymbols">func (f *File) DynamicSymbols() ([]Symbol, error)</a>
-
-```
-searchKey: elf.File.DynamicSymbols
-```
-
-```Go
-func (f *File) DynamicSymbols() ([]Symbol, error)
-```
-
-DynamicSymbols returns the dynamic symbol table for f. The symbols will be listed in the order they appear in f. 
-
-If f has a symbol version table, the returned Symbols will have initialized Version and Library fields. 
-
-For compatibility with Symbols, DynamicSymbols omits the null symbol at index 0. After retrieving the symbols as symtab, an externally supplied index x corresponds to symtab[x-1], not symtab[x]. 
-
-#### <a id="File.ImportedSymbols" href="#File.ImportedSymbols">func (f *File) ImportedSymbols() ([]ImportedSymbol, error)</a>
-
-```
-searchKey: elf.File.ImportedSymbols
-```
-
-```Go
-func (f *File) ImportedSymbols() ([]ImportedSymbol, error)
-```
-
-ImportedSymbols returns the names of all symbols referred to by the binary f that are expected to be satisfied by other libraries at dynamic load time. It does not return weak symbols. 
-
-#### <a id="File.gnuVersionInit" href="#File.gnuVersionInit">func (f *File) gnuVersionInit(str []byte) bool</a>
-
-```
-searchKey: elf.File.gnuVersionInit
-tags: [private]
-```
-
-```Go
-func (f *File) gnuVersionInit(str []byte) bool
-```
-
-gnuVersionInit parses the GNU version tables for use by calls to gnuVersion. 
-
-#### <a id="File.gnuVersion" href="#File.gnuVersion">func (f *File) gnuVersion(i int) (library string, version string)</a>
-
-```
-searchKey: elf.File.gnuVersion
-tags: [private]
-```
-
-```Go
-func (f *File) gnuVersion(i int) (library string, version string)
-```
-
-gnuVersion adds Library and Version information to sym, which came from offset i of the symbol table. 
-
-#### <a id="File.ImportedLibraries" href="#File.ImportedLibraries">func (f *File) ImportedLibraries() ([]string, error)</a>
-
-```
-searchKey: elf.File.ImportedLibraries
-```
-
-```Go
-func (f *File) ImportedLibraries() ([]string, error)
-```
-
-ImportedLibraries returns the names of all libraries referred to by the binary f that are expected to be linked with the binary at dynamic link time. 
-
-#### <a id="File.DynString" href="#File.DynString">func (f *File) DynString(tag DynTag) ([]string, error)</a>
-
-```
-searchKey: elf.File.DynString
-```
-
-```Go
-func (f *File) DynString(tag DynTag) ([]string, error)
-```
-
-DynString returns the strings listed for the given tag in the file's dynamic section. 
-
-The tag must be one that takes string values: DT_NEEDED, DT_SONAME, DT_RPATH, or DT_RUNPATH. 
-
-### <a id="SectionHeader" href="#SectionHeader">type SectionHeader struct</a>
-
-```
-searchKey: elf.SectionHeader
-```
-
-```Go
-type SectionHeader struct {
-	Name      string
-	Type      SectionType
-	Flags     SectionFlag
-	Addr      uint64
-	Offset    uint64
-	Size      uint64
-	Link      uint32
-	Info      uint32
-	Addralign uint64
-	Entsize   uint64
-
-	// FileSize is the size of this section in the file in bytes.
-	// If a section is compressed, FileSize is the size of the
-	// compressed data, while Size (above) is the size of the
-	// uncompressed data.
-	FileSize uint64
-}
-```
-
-A SectionHeader represents a single ELF section header. 
-
 ### <a id="Section" href="#Section">type Section struct</a>
 
 ```
 searchKey: elf.Section
+tags: [struct]
 ```
 
 ```Go
@@ -17154,6 +18220,7 @@ A Section represents a single section in an ELF file.
 
 ```
 searchKey: elf.Section.Data
+tags: [function]
 ```
 
 ```Go
@@ -17166,6 +18233,7 @@ Data reads and returns the contents of the ELF section. Even if the section is s
 
 ```
 searchKey: elf.Section.Open
+tags: [function]
 ```
 
 ```Go
@@ -17174,66 +18242,372 @@ func (s *Section) Open() io.ReadSeeker
 
 Open returns a new ReadSeeker reading the ELF section. Even if the section is stored compressed in the ELF file, the ReadSeeker reads uncompressed data. 
 
-### <a id="ProgHeader" href="#ProgHeader">type ProgHeader struct</a>
+### <a id="Section32" href="#Section32">type Section32 struct</a>
 
 ```
-searchKey: elf.ProgHeader
+searchKey: elf.Section32
+tags: [struct]
 ```
 
 ```Go
-type ProgHeader struct {
-	Type   ProgType
-	Flags  ProgFlag
-	Off    uint64
-	Vaddr  uint64
-	Paddr  uint64
-	Filesz uint64
-	Memsz  uint64
-	Align  uint64
+type Section32 struct {
+	Name      uint32 /* Section name (index into the section header string table). */
+	Type      uint32 /* Section type. */
+	Flags     uint32 /* Section flags. */
+	Addr      uint32 /* Address in memory image. */
+	Off       uint32 /* Offset in file. */
+	Size      uint32 /* Size in bytes. */
+	Link      uint32 /* Index of a related section. */
+	Info      uint32 /* Depends on section type. */
+	Addralign uint32 /* Alignment in bytes. */
+	Entsize   uint32 /* Size of each entry in section. */
 }
 ```
 
-A ProgHeader represents a single ELF program header. 
+ELF32 Section header. 
 
-### <a id="Prog" href="#Prog">type Prog struct</a>
+### <a id="Section64" href="#Section64">type Section64 struct</a>
 
 ```
-searchKey: elf.Prog
+searchKey: elf.Section64
+tags: [struct]
 ```
 
 ```Go
-type Prog struct {
-	ProgHeader
-
-	// Embed ReaderAt for ReadAt method.
-	// Do not embed SectionReader directly
-	// to avoid having Read and Seek.
-	// If a client wants Read and Seek it must use
-	// Open() to avoid fighting over the seek offset
-	// with other clients.
-	io.ReaderAt
-	sr *io.SectionReader
+type Section64 struct {
+	Name      uint32 /* Section name (index into the section header string table). */
+	Type      uint32 /* Section type. */
+	Flags     uint64 /* Section flags. */
+	Addr      uint64 /* Address in memory image. */
+	Off       uint64 /* Offset in file. */
+	Size      uint64 /* Size in bytes. */
+	Link      uint32 /* Index of a related section. */
+	Info      uint32 /* Depends on section type. */
+	Addralign uint64 /* Alignment in bytes. */
+	Entsize   uint64 /* Size of each entry in section. */
 }
 ```
 
-A Prog represents a single ELF program header in an ELF binary. 
+ELF64 Section header. 
 
-#### <a id="Prog.Open" href="#Prog.Open">func (p *Prog) Open() io.ReadSeeker</a>
+### <a id="SectionFlag" href="#SectionFlag">type SectionFlag uint32</a>
 
 ```
-searchKey: elf.Prog.Open
+searchKey: elf.SectionFlag
+tags: [number]
 ```
 
 ```Go
-func (p *Prog) Open() io.ReadSeeker
+type SectionFlag uint32
 ```
 
-Open returns a new ReadSeeker reading the ELF program body. 
+Section flags. 
+
+#### <a id="SectionFlag.GoString" href="#SectionFlag.GoString">func (i SectionFlag) GoString() string</a>
+
+```
+searchKey: elf.SectionFlag.GoString
+tags: [function]
+```
+
+```Go
+func (i SectionFlag) GoString() string
+```
+
+#### <a id="SectionFlag.String" href="#SectionFlag.String">func (i SectionFlag) String() string</a>
+
+```
+searchKey: elf.SectionFlag.String
+tags: [function]
+```
+
+```Go
+func (i SectionFlag) String() string
+```
+
+### <a id="SectionHeader" href="#SectionHeader">type SectionHeader struct</a>
+
+```
+searchKey: elf.SectionHeader
+tags: [struct]
+```
+
+```Go
+type SectionHeader struct {
+	Name      string
+	Type      SectionType
+	Flags     SectionFlag
+	Addr      uint64
+	Offset    uint64
+	Size      uint64
+	Link      uint32
+	Info      uint32
+	Addralign uint64
+	Entsize   uint64
+
+	// FileSize is the size of this section in the file in bytes.
+	// If a section is compressed, FileSize is the size of the
+	// compressed data, while Size (above) is the size of the
+	// uncompressed data.
+	FileSize uint64
+}
+```
+
+A SectionHeader represents a single ELF section header. 
+
+### <a id="SectionIndex" href="#SectionIndex">type SectionIndex int</a>
+
+```
+searchKey: elf.SectionIndex
+tags: [number]
+```
+
+```Go
+type SectionIndex int
+```
+
+Special section indices. 
+
+#### <a id="SectionIndex.GoString" href="#SectionIndex.GoString">func (i SectionIndex) GoString() string</a>
+
+```
+searchKey: elf.SectionIndex.GoString
+tags: [function]
+```
+
+```Go
+func (i SectionIndex) GoString() string
+```
+
+#### <a id="SectionIndex.String" href="#SectionIndex.String">func (i SectionIndex) String() string</a>
+
+```
+searchKey: elf.SectionIndex.String
+tags: [function]
+```
+
+```Go
+func (i SectionIndex) String() string
+```
+
+### <a id="SectionType" href="#SectionType">type SectionType uint32</a>
+
+```
+searchKey: elf.SectionType
+tags: [number]
+```
+
+```Go
+type SectionType uint32
+```
+
+Section type. 
+
+#### <a id="SectionType.GoString" href="#SectionType.GoString">func (i SectionType) GoString() string</a>
+
+```
+searchKey: elf.SectionType.GoString
+tags: [function]
+```
+
+```Go
+func (i SectionType) GoString() string
+```
+
+#### <a id="SectionType.String" href="#SectionType.String">func (i SectionType) String() string</a>
+
+```
+searchKey: elf.SectionType.String
+tags: [function]
+```
+
+```Go
+func (i SectionType) String() string
+```
+
+### <a id="Sym32" href="#Sym32">type Sym32 struct</a>
+
+```
+searchKey: elf.Sym32
+tags: [struct]
+```
+
+```Go
+type Sym32 struct {
+	Name  uint32
+	Value uint32
+	Size  uint32
+	Info  uint8
+	Other uint8
+	Shndx uint16
+}
+```
+
+ELF32 Symbol. 
+
+### <a id="Sym64" href="#Sym64">type Sym64 struct</a>
+
+```
+searchKey: elf.Sym64
+tags: [struct]
+```
+
+```Go
+type Sym64 struct {
+	Name  uint32 /* String table index of name. */
+	Info  uint8  /* Type and binding information. */
+	Other uint8  /* Reserved (not used). */
+	Shndx uint16 /* Section index of symbol. */
+	Value uint64 /* Symbol value. */
+	Size  uint64 /* Size of associated object. */
+}
+```
+
+ELF64 symbol table entries. 
+
+### <a id="SymBind" href="#SymBind">type SymBind int</a>
+
+```
+searchKey: elf.SymBind
+tags: [number]
+```
+
+```Go
+type SymBind int
+```
+
+Symbol Binding - ELFNN_ST_BIND - st_info 
+
+#### <a id="ST_BIND" href="#ST_BIND">func ST_BIND(info uint8) SymBind</a>
+
+```
+searchKey: elf.ST_BIND
+tags: [method]
+```
+
+```Go
+func ST_BIND(info uint8) SymBind
+```
+
+#### <a id="SymBind.GoString" href="#SymBind.GoString">func (i SymBind) GoString() string</a>
+
+```
+searchKey: elf.SymBind.GoString
+tags: [function]
+```
+
+```Go
+func (i SymBind) GoString() string
+```
+
+#### <a id="SymBind.String" href="#SymBind.String">func (i SymBind) String() string</a>
+
+```
+searchKey: elf.SymBind.String
+tags: [function]
+```
+
+```Go
+func (i SymBind) String() string
+```
+
+### <a id="SymType" href="#SymType">type SymType int</a>
+
+```
+searchKey: elf.SymType
+tags: [number]
+```
+
+```Go
+type SymType int
+```
+
+Symbol type - ELFNN_ST_TYPE - st_info 
+
+#### <a id="ST_TYPE" href="#ST_TYPE">func ST_TYPE(info uint8) SymType</a>
+
+```
+searchKey: elf.ST_TYPE
+tags: [method]
+```
+
+```Go
+func ST_TYPE(info uint8) SymType
+```
+
+#### <a id="SymType.GoString" href="#SymType.GoString">func (i SymType) GoString() string</a>
+
+```
+searchKey: elf.SymType.GoString
+tags: [function]
+```
+
+```Go
+func (i SymType) GoString() string
+```
+
+#### <a id="SymType.String" href="#SymType.String">func (i SymType) String() string</a>
+
+```
+searchKey: elf.SymType.String
+tags: [function]
+```
+
+```Go
+func (i SymType) String() string
+```
+
+### <a id="SymVis" href="#SymVis">type SymVis int</a>
+
+```
+searchKey: elf.SymVis
+tags: [number]
+```
+
+```Go
+type SymVis int
+```
+
+Symbol visibility - ELFNN_ST_VISIBILITY - st_other 
+
+#### <a id="ST_VISIBILITY" href="#ST_VISIBILITY">func ST_VISIBILITY(other uint8) SymVis</a>
+
+```
+searchKey: elf.ST_VISIBILITY
+tags: [method]
+```
+
+```Go
+func ST_VISIBILITY(other uint8) SymVis
+```
+
+#### <a id="SymVis.GoString" href="#SymVis.GoString">func (i SymVis) GoString() string</a>
+
+```
+searchKey: elf.SymVis.GoString
+tags: [function]
+```
+
+```Go
+func (i SymVis) GoString() string
+```
+
+#### <a id="SymVis.String" href="#SymVis.String">func (i SymVis) String() string</a>
+
+```
+searchKey: elf.SymVis.String
+tags: [function]
+```
+
+```Go
+func (i SymVis) String() string
+```
 
 ### <a id="Symbol" href="#Symbol">type Symbol struct</a>
 
 ```
 searchKey: elf.Symbol
+tags: [struct]
 ```
 
 ```Go
@@ -17252,63 +18626,81 @@ type Symbol struct {
 
 A Symbol represents an entry in an ELF symbol table section. 
 
-### <a id="FormatError" href="#FormatError">type FormatError struct</a>
+### <a id="Type" href="#Type">type Type uint16</a>
 
 ```
-searchKey: elf.FormatError
-```
-
-```Go
-type FormatError struct {
-	off int64
-	msg string
-	val interface{}
-}
-```
-
-#### <a id="FormatError.Error" href="#FormatError.Error">func (e *FormatError) Error() string</a>
-
-```
-searchKey: elf.FormatError.Error
+searchKey: elf.Type
+tags: [number]
 ```
 
 ```Go
-func (e *FormatError) Error() string
+type Type uint16
 ```
 
-### <a id="ImportedSymbol" href="#ImportedSymbol">type ImportedSymbol struct</a>
+Type is found in Header.Type. 
+
+#### <a id="Type.GoString" href="#Type.GoString">func (i Type) GoString() string</a>
 
 ```
-searchKey: elf.ImportedSymbol
-```
-
-```Go
-type ImportedSymbol struct {
-	Name    string
-	Version string
-	Library string
-}
-```
-
-### <a id="verneed" href="#verneed">type verneed struct</a>
-
-```
-searchKey: elf.verneed
-tags: [private]
+searchKey: elf.Type.GoString
+tags: [function]
 ```
 
 ```Go
-type verneed struct {
-	File string
-	Name string
-}
+func (i Type) GoString() string
+```
+
+#### <a id="Type.String" href="#Type.String">func (i Type) String() string</a>
+
+```
+searchKey: elf.Type.String
+tags: [function]
+```
+
+```Go
+func (i Type) String() string
+```
+
+### <a id="Version" href="#Version">type Version byte</a>
+
+```
+searchKey: elf.Version
+tags: [number]
+```
+
+```Go
+type Version byte
+```
+
+Version is found in Header.Ident[EI_VERSION] and Header.Version. 
+
+#### <a id="Version.GoString" href="#Version.GoString">func (i Version) GoString() string</a>
+
+```
+searchKey: elf.Version.GoString
+tags: [function]
+```
+
+```Go
+func (i Version) GoString() string
+```
+
+#### <a id="Version.String" href="#Version.String">func (i Version) String() string</a>
+
+```
+searchKey: elf.Version.String
+tags: [function]
+```
+
+```Go
+func (i Version) String() string
 ```
 
 ### <a id="errorReader" href="#errorReader">type errorReader struct</a>
 
 ```
 searchKey: elf.errorReader
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -17319,11 +18711,22 @@ type errorReader struct {
 
 errorReader returns error from all operations. 
 
+#### <a id="errorReader.Close" href="#errorReader.Close">func (r errorReader) Close() error</a>
+
+```
+searchKey: elf.errorReader.Close
+tags: [function private]
+```
+
+```Go
+func (r errorReader) Close() error
+```
+
 #### <a id="errorReader.Read" href="#errorReader.Read">func (r errorReader) Read(p []byte) (n int, err error)</a>
 
 ```
 searchKey: elf.errorReader.Read
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -17334,7 +18737,7 @@ func (r errorReader) Read(p []byte) (n int, err error)
 
 ```
 searchKey: elf.errorReader.ReadAt
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -17345,29 +18748,63 @@ func (r errorReader) ReadAt(p []byte, off int64) (n int, err error)
 
 ```
 searchKey: elf.errorReader.Seek
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (r errorReader) Seek(offset int64, whence int) (int64, error)
 ```
 
-#### <a id="errorReader.Close" href="#errorReader.Close">func (r errorReader) Close() error</a>
+### <a id="fileTest" href="#fileTest">type fileTest struct</a>
 
 ```
-searchKey: elf.errorReader.Close
-tags: [private]
+searchKey: elf.fileTest
+tags: [struct private]
 ```
 
 ```Go
-func (r errorReader) Close() error
+type fileTest struct {
+	file     string
+	hdr      FileHeader
+	sections []SectionHeader
+	progs    []ProgHeader
+	needed   []string
+}
+```
+
+### <a id="intName" href="#intName">type intName struct</a>
+
+```
+searchKey: elf.intName
+tags: [struct private]
+```
+
+```Go
+type intName struct {
+	i uint32
+	s string
+}
+```
+
+### <a id="nameTest" href="#nameTest">type nameTest struct</a>
+
+```
+searchKey: elf.nameTest
+tags: [struct private]
+```
+
+```Go
+type nameTest struct {
+	val interface{}
+	str string
+}
 ```
 
 ### <a id="readSeekerFromReader" href="#readSeekerFromReader">type readSeekerFromReader struct</a>
 
 ```
 searchKey: elf.readSeekerFromReader
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -17381,22 +18818,11 @@ type readSeekerFromReader struct {
 
 readSeekerFromReader converts an io.Reader into an io.ReadSeeker. In general Seek may not be efficient, but it is optimized for common cases such as seeking to the end to find the length of the data. 
 
-#### <a id="readSeekerFromReader.start" href="#readSeekerFromReader.start">func (r *readSeekerFromReader) start()</a>
-
-```
-searchKey: elf.readSeekerFromReader.start
-tags: [private]
-```
-
-```Go
-func (r *readSeekerFromReader) start()
-```
-
 #### <a id="readSeekerFromReader.Read" href="#readSeekerFromReader.Read">func (r *readSeekerFromReader) Read(p []byte) (n int, err error)</a>
 
 ```
 searchKey: elf.readSeekerFromReader.Read
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -17407,41 +18833,35 @@ func (r *readSeekerFromReader) Read(p []byte) (n int, err error)
 
 ```
 searchKey: elf.readSeekerFromReader.Seek
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (r *readSeekerFromReader) Seek(offset int64, whence int) (int64, error)
 ```
 
-### <a id="nameTest" href="#nameTest">type nameTest struct</a>
+#### <a id="readSeekerFromReader.start" href="#readSeekerFromReader.start">func (r *readSeekerFromReader) start()</a>
 
 ```
-searchKey: elf.nameTest
-tags: [private]
-```
-
-```Go
-type nameTest struct {
-	val interface{}
-	str string
-}
-```
-
-### <a id="fileTest" href="#fileTest">type fileTest struct</a>
-
-```
-searchKey: elf.fileTest
-tags: [private]
+searchKey: elf.readSeekerFromReader.start
+tags: [function private]
 ```
 
 ```Go
-type fileTest struct {
-	file     string
-	hdr      FileHeader
-	sections []SectionHeader
-	progs    []ProgHeader
-	needed   []string
+func (r *readSeekerFromReader) start()
+```
+
+### <a id="relocationTest" href="#relocationTest">type relocationTest struct</a>
+
+```
+searchKey: elf.relocationTest
+tags: [struct private]
+```
+
+```Go
+type relocationTest struct {
+	file    string
+	entries []relocationTestEntry
 }
 ```
 
@@ -17449,7 +18869,7 @@ type fileTest struct {
 
 ```
 searchKey: elf.relocationTestEntry
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -17460,191 +18880,108 @@ type relocationTestEntry struct {
 }
 ```
 
-### <a id="relocationTest" href="#relocationTest">type relocationTest struct</a>
+### <a id="verneed" href="#verneed">type verneed struct</a>
 
 ```
-searchKey: elf.relocationTest
-tags: [private]
+searchKey: elf.verneed
+tags: [struct private]
 ```
 
 ```Go
-type relocationTest struct {
-	file    string
-	entries []relocationTestEntry
+type verneed struct {
+	File string
+	Name string
 }
 ```
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="R_SYM32" href="#R_SYM32">func R_SYM32(info uint32) uint32</a>
-
 ```
-searchKey: elf.R_SYM32
-```
-
-```Go
-func R_SYM32(info uint32) uint32
-```
-
-### <a id="R_TYPE32" href="#R_TYPE32">func R_TYPE32(info uint32) uint32</a>
-
-```
-searchKey: elf.R_TYPE32
-```
-
-```Go
-func R_TYPE32(info uint32) uint32
-```
-
-### <a id="R_INFO32" href="#R_INFO32">func R_INFO32(sym, typ uint32) uint32</a>
-
-```
-searchKey: elf.R_INFO32
-```
-
-```Go
-func R_INFO32(sym, typ uint32) uint32
-```
-
-### <a id="ST_INFO" href="#ST_INFO">func ST_INFO(bind SymBind, typ SymType) uint8</a>
-
-```
-searchKey: elf.ST_INFO
-```
-
-```Go
-func ST_INFO(bind SymBind, typ SymType) uint8
-```
-
-### <a id="R_SYM64" href="#R_SYM64">func R_SYM64(info uint64) uint32</a>
-
-```
-searchKey: elf.R_SYM64
-```
-
-```Go
-func R_SYM64(info uint64) uint32
-```
-
-### <a id="R_TYPE64" href="#R_TYPE64">func R_TYPE64(info uint64) uint32</a>
-
-```
-searchKey: elf.R_TYPE64
-```
-
-```Go
-func R_TYPE64(info uint64) uint32
+tags: [package]
 ```
 
 ### <a id="R_INFO" href="#R_INFO">func R_INFO(sym, typ uint32) uint64</a>
 
 ```
 searchKey: elf.R_INFO
+tags: [method]
 ```
 
 ```Go
 func R_INFO(sym, typ uint32) uint64
 ```
 
-### <a id="stringName" href="#stringName">func stringName(i uint32, names []intName, goSyntax bool) string</a>
+### <a id="R_INFO32" href="#R_INFO32">func R_INFO32(sym, typ uint32) uint32</a>
 
 ```
-searchKey: elf.stringName
-tags: [private]
-```
-
-```Go
-func stringName(i uint32, names []intName, goSyntax bool) string
-```
-
-### <a id="flagName" href="#flagName">func flagName(i uint32, names []intName, goSyntax bool) string</a>
-
-```
-searchKey: elf.flagName
-tags: [private]
+searchKey: elf.R_INFO32
+tags: [method]
 ```
 
 ```Go
-func flagName(i uint32, names []intName, goSyntax bool) string
+func R_INFO32(sym, typ uint32) uint32
 ```
 
-### <a id="getString" href="#getString">func getString(section []byte, start int) (string, bool)</a>
+### <a id="R_SYM32" href="#R_SYM32">func R_SYM32(info uint32) uint32</a>
 
 ```
-searchKey: elf.getString
-tags: [private]
-```
-
-```Go
-func getString(section []byte, start int) (string, bool)
-```
-
-getString extracts a string from an ELF string table. 
-
-### <a id="canApplyRelocation" href="#canApplyRelocation">func canApplyRelocation(sym *Symbol) bool</a>
-
-```
-searchKey: elf.canApplyRelocation
-tags: [private]
+searchKey: elf.R_SYM32
+tags: [method]
 ```
 
 ```Go
-func canApplyRelocation(sym *Symbol) bool
+func R_SYM32(info uint32) uint32
 ```
 
-canApplyRelocation reports whether we should try to apply a relocation to a DWARF data section, given a pointer to the symbol targeted by the relocation. Most relocations in DWARF data tend to be section-relative, but some target non-section symbols (for example, low_PC attrs on subprogram or compilation unit DIEs that target function symbols). 
-
-### <a id="TestNames" href="#TestNames">func TestNames(t *testing.T)</a>
+### <a id="R_SYM64" href="#R_SYM64">func R_SYM64(info uint64) uint32</a>
 
 ```
-searchKey: elf.TestNames
-tags: [private]
-```
-
-```Go
-func TestNames(t *testing.T)
-```
-
-### <a id="TestOpen" href="#TestOpen">func TestOpen(t *testing.T)</a>
-
-```
-searchKey: elf.TestOpen
-tags: [private]
+searchKey: elf.R_SYM64
+tags: [method]
 ```
 
 ```Go
-func TestOpen(t *testing.T)
+func R_SYM64(info uint64) uint32
 ```
 
-### <a id="decompress" href="#decompress">func decompress(gz string) (io.ReaderAt, error)</a>
+### <a id="R_TYPE32" href="#R_TYPE32">func R_TYPE32(info uint32) uint32</a>
 
 ```
-searchKey: elf.decompress
-tags: [private]
-```
-
-```Go
-func decompress(gz string) (io.ReaderAt, error)
-```
-
-elf.NewFile requires io.ReaderAt, which compress/gzip cannot provide. Decompress the file to a bytes.Reader. 
-
-### <a id="TestDWARFRelocations" href="#TestDWARFRelocations">func TestDWARFRelocations(t *testing.T)</a>
-
-```
-searchKey: elf.TestDWARFRelocations
-tags: [private]
+searchKey: elf.R_TYPE32
+tags: [method]
 ```
 
 ```Go
-func TestDWARFRelocations(t *testing.T)
+func R_TYPE32(info uint32) uint32
+```
+
+### <a id="R_TYPE64" href="#R_TYPE64">func R_TYPE64(info uint64) uint32</a>
+
+```
+searchKey: elf.R_TYPE64
+tags: [method]
+```
+
+```Go
+func R_TYPE64(info uint64) uint32
+```
+
+### <a id="ST_INFO" href="#ST_INFO">func ST_INFO(bind SymBind, typ SymType) uint8</a>
+
+```
+searchKey: elf.ST_INFO
+tags: [method]
+```
+
+```Go
+func ST_INFO(bind SymBind, typ SymType) uint8
 ```
 
 ### <a id="TestCompressedDWARF" href="#TestCompressedDWARF">func TestCompressedDWARF(t *testing.T)</a>
 
 ```
 searchKey: elf.TestCompressedDWARF
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -17655,40 +18992,73 @@ func TestCompressedDWARF(t *testing.T)
 
 ```
 searchKey: elf.TestCompressedSection
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestCompressedSection(t *testing.T)
 ```
 
-### <a id="TestNoSectionOverlaps" href="#TestNoSectionOverlaps">func TestNoSectionOverlaps(t *testing.T)</a>
+### <a id="TestDWARFRelocations" href="#TestDWARFRelocations">func TestDWARFRelocations(t *testing.T)</a>
 
 ```
-searchKey: elf.TestNoSectionOverlaps
-tags: [private]
+searchKey: elf.TestDWARFRelocations
+tags: [method private test]
 ```
 
 ```Go
-func TestNoSectionOverlaps(t *testing.T)
+func TestDWARFRelocations(t *testing.T)
 ```
 
 ### <a id="TestIssue10996" href="#TestIssue10996">func TestIssue10996(t *testing.T)</a>
 
 ```
 searchKey: elf.TestIssue10996
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestIssue10996(t *testing.T)
 ```
 
+### <a id="TestNames" href="#TestNames">func TestNames(t *testing.T)</a>
+
+```
+searchKey: elf.TestNames
+tags: [method private test]
+```
+
+```Go
+func TestNames(t *testing.T)
+```
+
+### <a id="TestNoSectionOverlaps" href="#TestNoSectionOverlaps">func TestNoSectionOverlaps(t *testing.T)</a>
+
+```
+searchKey: elf.TestNoSectionOverlaps
+tags: [method private test]
+```
+
+```Go
+func TestNoSectionOverlaps(t *testing.T)
+```
+
+### <a id="TestOpen" href="#TestOpen">func TestOpen(t *testing.T)</a>
+
+```
+searchKey: elf.TestOpen
+tags: [method private test]
+```
+
+```Go
+func TestOpen(t *testing.T)
+```
+
 ### <a id="TestSymbols" href="#TestSymbols">func TestSymbols(t *testing.T)</a>
 
 ```
 searchKey: elf.TestSymbols
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -17696,4 +19066,65 @@ func TestSymbols(t *testing.T)
 ```
 
 TODO: remove duplicate code 
+
+### <a id="canApplyRelocation" href="#canApplyRelocation">func canApplyRelocation(sym *Symbol) bool</a>
+
+```
+searchKey: elf.canApplyRelocation
+tags: [method private]
+```
+
+```Go
+func canApplyRelocation(sym *Symbol) bool
+```
+
+canApplyRelocation reports whether we should try to apply a relocation to a DWARF data section, given a pointer to the symbol targeted by the relocation. Most relocations in DWARF data tend to be section-relative, but some target non-section symbols (for example, low_PC attrs on subprogram or compilation unit DIEs that target function symbols). 
+
+### <a id="decompress" href="#decompress">func decompress(gz string) (io.ReaderAt, error)</a>
+
+```
+searchKey: elf.decompress
+tags: [method private]
+```
+
+```Go
+func decompress(gz string) (io.ReaderAt, error)
+```
+
+elf.NewFile requires io.ReaderAt, which compress/gzip cannot provide. Decompress the file to a bytes.Reader. 
+
+### <a id="flagName" href="#flagName">func flagName(i uint32, names []intName, goSyntax bool) string</a>
+
+```
+searchKey: elf.flagName
+tags: [method private]
+```
+
+```Go
+func flagName(i uint32, names []intName, goSyntax bool) string
+```
+
+### <a id="getString" href="#getString">func getString(section []byte, start int) (string, bool)</a>
+
+```
+searchKey: elf.getString
+tags: [method private]
+```
+
+```Go
+func getString(section []byte, start int) (string, bool)
+```
+
+getString extracts a string from an ELF string table. 
+
+### <a id="stringName" href="#stringName">func stringName(i uint32, names []intName, goSyntax bool) string</a>
+
+```
+searchKey: elf.stringName
+tags: [method private]
+```
+
+```Go
+func stringName(i uint32, names []intName, goSyntax bool) string
+```
 

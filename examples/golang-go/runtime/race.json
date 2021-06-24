@@ -4,7 +4,9 @@
     "identifier": "race",
     "newPage": true,
     "searchKey": "runtime/race",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -41,7 +45,9 @@
                 "newPage": false,
                 "searchKey": "race.TestIssue37485",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {

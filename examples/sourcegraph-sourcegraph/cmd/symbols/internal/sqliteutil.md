@@ -12,14 +12,14 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="libSqlite3Pcre" href="#libSqlite3Pcre">var libSqlite3Pcre</a>
 
 ```
 searchKey: sqliteutil.libSqlite3Pcre
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
@@ -29,13 +29,14 @@ var libSqlite3Pcre = env.Get("LIBSQLITE3_PCRE", "", "path to the libsqlite3-pcre
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="MustRegisterSqlite3WithPcre" href="#MustRegisterSqlite3WithPcre">func MustRegisterSqlite3WithPcre()</a>
 
 ```
 searchKey: sqliteutil.MustRegisterSqlite3WithPcre
+tags: [function]
 ```
 
 ```Go
@@ -48,6 +49,7 @@ MustRegisterSqlite3WithPcre registers a sqlite3 driver with PCRE support and pan
 
 ```
 searchKey: sqliteutil.SetLocalLibpath
+tags: [function]
 ```
 
 ```Go

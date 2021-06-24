@@ -4,7 +4,9 @@
     "identifier": "zlib",
     "newPage": true,
     "searchKey": "compress/zlib",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,74 +39,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/compress/zlib#zlibDeflate",
-              "documentation": {
-                "identifier": "zlibDeflate",
-                "newPage": false,
-                "searchKey": "zlib.zlibDeflate",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const zlibDeflate"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst zlibDeflate = 8\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/compress/zlib#NoCompression",
-              "documentation": {
-                "identifier": "NoCompression",
-                "newPage": false,
-                "searchKey": "zlib.NoCompression",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const NoCompression"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst NoCompression = flate.NoCompression\n```\n\nThese constants are copied from the flate package, so that code that imports \"compress/zlib\" does not also have to import \"compress/flate\". \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/compress/zlib#BestSpeed",
-              "documentation": {
-                "identifier": "BestSpeed",
-                "newPage": false,
-                "searchKey": "zlib.BestSpeed",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const BestSpeed"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst BestSpeed = flate.BestSpeed\n```\n\nThese constants are copied from the flate package, so that code that imports \"compress/zlib\" does not also have to import \"compress/flate\". \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/compress/zlib#BestCompression",
               "documentation": {
                 "identifier": "BestCompression",
                 "newPage": false,
                 "searchKey": "zlib.BestCompression",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -117,12 +62,38 @@
           },
           {
             "node": {
+              "pathID": "/compress/zlib#BestSpeed",
+              "documentation": {
+                "identifier": "BestSpeed",
+                "newPage": false,
+                "searchKey": "zlib.BestSpeed",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const BestSpeed"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst BestSpeed = flate.BestSpeed\n```\n\nThese constants are copied from the flate package, so that code that imports \"compress/zlib\" does not also have to import \"compress/flate\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/compress/zlib#DefaultCompression",
               "documentation": {
                 "identifier": "DefaultCompression",
                 "newPage": false,
                 "searchKey": "zlib.DefaultCompression",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -142,7 +113,10 @@
                 "identifier": "HuffmanOnly",
                 "newPage": false,
                 "searchKey": "zlib.HuffmanOnly",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -151,6 +125,53 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst HuffmanOnly = flate.HuffmanOnly\n```\n\nThese constants are copied from the flate package, so that code that imports \"compress/zlib\" does not also have to import \"compress/flate\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/compress/zlib#NoCompression",
+              "documentation": {
+                "identifier": "NoCompression",
+                "newPage": false,
+                "searchKey": "zlib.NoCompression",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const NoCompression"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst NoCompression = flate.NoCompression\n```\n\nThese constants are copied from the flate package, so that code that imports \"compress/zlib\" does not also have to import \"compress/flate\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/compress/zlib#zlibDeflate",
+              "documentation": {
+                "identifier": "zlibDeflate",
+                "newPage": false,
+                "searchKey": "zlib.zlibDeflate",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const zlibDeflate"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst zlibDeflate = 8\n```\n\n"
               },
               "children": null
             }
@@ -165,7 +186,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -183,7 +206,10 @@
                 "identifier": "ErrChecksum",
                 "newPage": false,
                 "searchKey": "zlib.ErrChecksum",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -203,7 +229,10 @@
                 "identifier": "ErrDictionary",
                 "newPage": false,
                 "searchKey": "zlib.ErrDictionary",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -223,7 +252,10 @@
                 "identifier": "ErrHeader",
                 "newPage": false,
                 "searchKey": "zlib.ErrHeader",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -238,22 +270,25 @@
           },
           {
             "node": {
-              "pathID": "/compress/zlib#zlibTests",
+              "pathID": "/compress/zlib#data",
               "documentation": {
-                "identifier": "zlibTests",
+                "identifier": "data",
                 "newPage": false,
-                "searchKey": "zlib.zlibTests",
+                "searchKey": "zlib.data",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var zlibTests"
+                "value": "var data"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar zlibTests = ...\n```\n\n"
+                "value": "```Go\nvar data = []string{\n\t\"test a reasonable sized string that can be compressed\",\n}\n```\n\n"
               },
               "children": null
             }
@@ -266,6 +301,9 @@
                 "newPage": false,
                 "searchKey": "zlib.filenames",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
@@ -282,22 +320,25 @@
           },
           {
             "node": {
-              "pathID": "/compress/zlib#data",
+              "pathID": "/compress/zlib#zlibTests",
               "documentation": {
-                "identifier": "data",
+                "identifier": "zlibTests",
                 "newPage": false,
-                "searchKey": "zlib.data",
+                "searchKey": "zlib.zlibTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var data"
+                "value": "var zlibTests"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar data = []string{\n\t\"test a reasonable sized string that can be compressed\",\n}\n```\n\n"
+                "value": "```Go\nvar zlibTests = ...\n```\n\n"
               },
               "children": null
             }
@@ -312,7 +353,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -325,101 +368,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/compress/zlib#reader",
-              "documentation": {
-                "identifier": "reader",
-                "newPage": false,
-                "searchKey": "zlib.reader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type reader struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype reader struct {\n\tr            flate.Reader\n\tdecompressor io.ReadCloser\n\tdigest       hash.Hash32\n\terr          error\n\tscratch      [4]byte\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/compress/zlib#reader.Read",
-                    "documentation": {
-                      "identifier": "reader.Read",
-                      "newPage": false,
-                      "searchKey": "zlib.reader.Read",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (z *reader) Read(p []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (z *reader) Read(p []byte) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/compress/zlib#reader.Close",
-                    "documentation": {
-                      "identifier": "reader.Close",
-                      "newPage": false,
-                      "searchKey": "zlib.reader.Close",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (z *reader) Close() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (z *reader) Close() error\n```\n\nCalling Close does not close the wrapped io.Reader originally passed to NewReader. In order for the ZLIB checksum to be verified, the reader must be fully consumed until the io.EOF. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/compress/zlib#reader.Reset",
-                    "documentation": {
-                      "identifier": "reader.Reset",
-                      "newPage": false,
-                      "searchKey": "zlib.reader.Reset",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (z *reader) Reset(r io.Reader, dict []byte) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (z *reader) Reset(r io.Reader, dict []byte) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/compress/zlib#Resetter",
               "documentation": {
                 "identifier": "Resetter",
                 "newPage": false,
                 "searchKey": "zlib.Resetter",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -439,7 +395,9 @@
                 "identifier": "Writer",
                 "newPage": false,
                 "searchKey": "zlib.Writer",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -457,7 +415,9 @@
                       "identifier": "NewWriter",
                       "newPage": false,
                       "searchKey": "zlib.NewWriter",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -477,7 +437,9 @@
                       "identifier": "NewWriterLevel",
                       "newPage": false,
                       "searchKey": "zlib.NewWriterLevel",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -497,7 +459,9 @@
                       "identifier": "NewWriterLevelDict",
                       "newPage": false,
                       "searchKey": "zlib.NewWriterLevelDict",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -512,62 +476,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/compress/zlib#Writer.Reset",
+                    "pathID": "/compress/zlib#Writer.Close",
                     "documentation": {
-                      "identifier": "Writer.Reset",
+                      "identifier": "Writer.Close",
                       "newPage": false,
-                      "searchKey": "zlib.Writer.Reset",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (z *Writer) Reset(w io.Writer)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (z *Writer) Reset(w io.Writer)\n```\n\nReset clears the state of the Writer z such that it is equivalent to its initial state from NewWriterLevel or NewWriterLevelDict, but instead writing to w. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/compress/zlib#Writer.writeHeader",
-                    "documentation": {
-                      "identifier": "Writer.writeHeader",
-                      "newPage": false,
-                      "searchKey": "zlib.Writer.writeHeader",
+                      "searchKey": "zlib.Writer.Close",
                       "tags": [
-                        "private"
+                        "function"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (z *Writer) writeHeader() (err error)"
+                      "value": "func (z *Writer) Close() error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (z *Writer) writeHeader() (err error)\n```\n\nwriteHeader writes the ZLIB header. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/compress/zlib#Writer.Write",
-                    "documentation": {
-                      "identifier": "Writer.Write",
-                      "newPage": false,
-                      "searchKey": "zlib.Writer.Write",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (z *Writer) Write(p []byte) (n int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (z *Writer) Write(p []byte) (n int, err error)\n```\n\nWrite writes a compressed form of p to the underlying io.Writer. The compressed bytes are not necessarily flushed until the Writer is closed or explicitly flushed. \n\n"
+                      "value": "```Go\nfunc (z *Writer) Close() error\n```\n\nClose closes the Writer, flushing any unwritten data to the underlying io.Writer, but does not close the underlying io.Writer. \n\n"
                     },
                     "children": null
                   }
@@ -579,7 +503,9 @@
                       "identifier": "Writer.Flush",
                       "newPage": false,
                       "searchKey": "zlib.Writer.Flush",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -594,20 +520,160 @@
                 },
                 {
                   "node": {
-                    "pathID": "/compress/zlib#Writer.Close",
+                    "pathID": "/compress/zlib#Writer.Reset",
                     "documentation": {
-                      "identifier": "Writer.Close",
+                      "identifier": "Writer.Reset",
                       "newPage": false,
-                      "searchKey": "zlib.Writer.Close",
-                      "tags": null
+                      "searchKey": "zlib.Writer.Reset",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (z *Writer) Close() error"
+                      "value": "func (z *Writer) Reset(w io.Writer)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (z *Writer) Close() error\n```\n\nClose closes the Writer, flushing any unwritten data to the underlying io.Writer, but does not close the underlying io.Writer. \n\n"
+                      "value": "```Go\nfunc (z *Writer) Reset(w io.Writer)\n```\n\nReset clears the state of the Writer z such that it is equivalent to its initial state from NewWriterLevel or NewWriterLevelDict, but instead writing to w. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/compress/zlib#Writer.Write",
+                    "documentation": {
+                      "identifier": "Writer.Write",
+                      "newPage": false,
+                      "searchKey": "zlib.Writer.Write",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (z *Writer) Write(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (z *Writer) Write(p []byte) (n int, err error)\n```\n\nWrite writes a compressed form of p to the underlying io.Writer. The compressed bytes are not necessarily flushed until the Writer is closed or explicitly flushed. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/compress/zlib#Writer.writeHeader",
+                    "documentation": {
+                      "identifier": "Writer.writeHeader",
+                      "newPage": false,
+                      "searchKey": "zlib.Writer.writeHeader",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (z *Writer) writeHeader() (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (z *Writer) writeHeader() (err error)\n```\n\nwriteHeader writes the ZLIB header. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/compress/zlib#reader",
+              "documentation": {
+                "identifier": "reader",
+                "newPage": false,
+                "searchKey": "zlib.reader",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type reader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype reader struct {\n\tr            flate.Reader\n\tdecompressor io.ReadCloser\n\tdigest       hash.Hash32\n\terr          error\n\tscratch      [4]byte\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/compress/zlib#reader.Close",
+                    "documentation": {
+                      "identifier": "reader.Close",
+                      "newPage": false,
+                      "searchKey": "zlib.reader.Close",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (z *reader) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (z *reader) Close() error\n```\n\nCalling Close does not close the wrapped io.Reader originally passed to NewReader. In order for the ZLIB checksum to be verified, the reader must be fully consumed until the io.EOF. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/compress/zlib#reader.Read",
+                    "documentation": {
+                      "identifier": "reader.Read",
+                      "newPage": false,
+                      "searchKey": "zlib.reader.Read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (z *reader) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (z *reader) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/compress/zlib#reader.Reset",
+                    "documentation": {
+                      "identifier": "reader.Reset",
+                      "newPage": false,
+                      "searchKey": "zlib.reader.Reset",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (z *reader) Reset(r io.Reader, dict []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (z *reader) Reset(r io.Reader, dict []byte) error\n```\n\n"
                     },
                     "children": null
                   }
@@ -623,6 +689,7 @@
                 "newPage": false,
                 "searchKey": "zlib.zlibTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -647,7 +714,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -665,7 +734,9 @@
                 "identifier": "NewReader",
                 "newPage": false,
                 "searchKey": "zlib.NewReader",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -685,7 +756,9 @@
                 "identifier": "NewReaderDict",
                 "newPage": false,
                 "searchKey": "zlib.NewReaderDict",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -706,7 +779,9 @@
                 "newPage": false,
                 "searchKey": "zlib.TestDecompressor",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -722,79 +797,15 @@
           },
           {
             "node": {
-              "pathID": "/compress/zlib#testFileLevelDict",
-              "documentation": {
-                "identifier": "testFileLevelDict",
-                "newPage": false,
-                "searchKey": "zlib.testFileLevelDict",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testFileLevelDict(t *testing.T, fn string, level int, d string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testFileLevelDict(t *testing.T, fn string, level int, d string)\n```\n\nTests that compressing and then decompressing the given file at the given compression level and dictionary yields equivalent bytes to the original file. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/compress/zlib#testLevelDict",
-              "documentation": {
-                "identifier": "testLevelDict",
-                "newPage": false,
-                "searchKey": "zlib.testLevelDict",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testLevelDict(t *testing.T, fn string, b0 []byte, level int, d string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testLevelDict(t *testing.T, fn string, b0 []byte, level int, d string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/compress/zlib#testFileLevelDictReset",
-              "documentation": {
-                "identifier": "testFileLevelDictReset",
-                "newPage": false,
-                "searchKey": "zlib.testFileLevelDictReset",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testFileLevelDictReset(t *testing.T, fn string, level int, dict []byte)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testFileLevelDictReset(t *testing.T, fn string, level int, dict []byte)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/compress/zlib#TestWriter",
               "documentation": {
                 "identifier": "TestWriter",
                 "newPage": false,
                 "searchKey": "zlib.TestWriter",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -816,7 +827,9 @@
                 "newPage": false,
                 "searchKey": "zlib.TestWriterBig",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -838,7 +851,9 @@
                 "newPage": false,
                 "searchKey": "zlib.TestWriterDict",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -854,13 +869,39 @@
           },
           {
             "node": {
+              "pathID": "/compress/zlib#TestWriterDictIsUsed",
+              "documentation": {
+                "identifier": "TestWriterDictIsUsed",
+                "newPage": false,
+                "searchKey": "zlib.TestWriterDictIsUsed",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriterDictIsUsed(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriterDictIsUsed(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/compress/zlib#TestWriterReset",
               "documentation": {
                 "identifier": "TestWriterReset",
                 "newPage": false,
                 "searchKey": "zlib.TestWriterReset",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -876,22 +917,69 @@
           },
           {
             "node": {
-              "pathID": "/compress/zlib#TestWriterDictIsUsed",
+              "pathID": "/compress/zlib#testFileLevelDict",
               "documentation": {
-                "identifier": "TestWriterDictIsUsed",
+                "identifier": "testFileLevelDict",
                 "newPage": false,
-                "searchKey": "zlib.TestWriterDictIsUsed",
+                "searchKey": "zlib.testFileLevelDict",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestWriterDictIsUsed(t *testing.T)"
+                "value": "func testFileLevelDict(t *testing.T, fn string, level int, d string)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestWriterDictIsUsed(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc testFileLevelDict(t *testing.T, fn string, level int, d string)\n```\n\nTests that compressing and then decompressing the given file at the given compression level and dictionary yields equivalent bytes to the original file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/compress/zlib#testFileLevelDictReset",
+              "documentation": {
+                "identifier": "testFileLevelDictReset",
+                "newPage": false,
+                "searchKey": "zlib.testFileLevelDictReset",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testFileLevelDictReset(t *testing.T, fn string, level int, dict []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testFileLevelDictReset(t *testing.T, fn string, level int, dict []byte)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/compress/zlib#testLevelDict",
+              "documentation": {
+                "identifier": "testLevelDict",
+                "newPage": false,
+                "searchKey": "zlib.testLevelDict",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testLevelDict(t *testing.T, fn string, b0 []byte, level int, d string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testLevelDict(t *testing.T, fn string, b0 []byte, level int, d string)\n```\n\n"
               },
               "children": null
             }

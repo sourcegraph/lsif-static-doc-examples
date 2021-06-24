@@ -3,71 +3,82 @@
 ## Index
 
 * [Constants](#const)
-    * [const databaseNamePrefix](#databaseNamePrefix)
     * [const containerName](#containerName)
+    * [const databaseNamePrefix](#databaseNamePrefix)
 * [Variables](#var)
+    * [var databases](#databases)
     * [var logger](#logger)
     * [var versionRe](#versionRe)
-    * [var databases](#databases)
 * [Types](#type)
     * [type runFunc func(quiet bool, cmd ...string) (string, error)](#runFunc)
         * [func runWithPrefix(prefix []string) runFunc](#runWithPrefix)
     * [type table struct](#table)
 * [Functions](#func)
+    * [func describeTable(db *sql.DB, databaseName string, table table, run runFunc) (string, error)](#describeTable)
+    * [func describeTypes(db *sql.DB) (map[string][]string, error)](#describeTypes)
+    * [func generateAndWrite(database *dbconn.Database, dataSource string, commandPrefix []string, destinationFile string) error](#generateAndWrite)
+    * [func generateInternal(database *dbconn.Database, dataSource string, run runFunc) (string, error)](#generateInternal)
+    * [func getColumnComments(db *sql.DB, table string) (map[string]string, error)](#getColumnComments)
+    * [func getTableComment(db *sql.DB, table string) (comment string, _ error)](#getTableComment)
+    * [func getTables(db *sql.DB) (tables []table, _ error)](#getTables)
+    * [func getViewQuery(db *sql.DB, view string) (query string, _ error)](#getViewQuery)
     * [func main()](#main)
+    * [func mainContainer() error](#mainContainer)
     * [func mainErr() error](#mainErr)
     * [func mainLocal() error](#mainLocal)
-    * [func mainContainer() error](#mainContainer)
-    * [func generateAndWrite(database *dbconn.Database, dataSource string, commandPrefix []string, destinationFile string) error](#generateAndWrite)
     * [func startDocker() (commandPrefix []string, shutdown func(), _ error)](#startDocker)
-    * [func generateInternal(database *dbconn.Database, dataSource string, run runFunc) (string, error)](#generateInternal)
-    * [func getTables(db *sql.DB) (tables []table, _ error)](#getTables)
-    * [func describeTable(db *sql.DB, databaseName string, table table, run runFunc) (string, error)](#describeTable)
-    * [func getTableComment(db *sql.DB, table string) (comment string, _ error)](#getTableComment)
-    * [func getViewQuery(db *sql.DB, view string) (query string, _ error)](#getViewQuery)
-    * [func getColumnComments(db *sql.DB, table string) (map[string]string, error)](#getColumnComments)
-    * [func describeTypes(db *sql.DB) (map[string][]string, error)](#describeTypes)
 
 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
-```
-
-### <a id="databaseNamePrefix" href="#databaseNamePrefix">const databaseNamePrefix</a>
-
-```
-searchKey: main.databaseNamePrefix
-tags: [private]
-```
-
-```Go
-const databaseNamePrefix = "schemadoc-gen-temp-"
+tags: [package private]
 ```
 
 ### <a id="containerName" href="#containerName">const containerName</a>
 
 ```
 searchKey: main.containerName
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
 const containerName = "schemadoc"
 ```
 
+### <a id="databaseNamePrefix" href="#databaseNamePrefix">const databaseNamePrefix</a>
+
+```
+searchKey: main.databaseNamePrefix
+tags: [constant string private]
+```
+
+```Go
+const databaseNamePrefix = "schemadoc-gen-temp-"
+```
+
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
+```
+
+### <a id="databases" href="#databases">var databases</a>
+
+```
+searchKey: main.databases
+tags: [variable object private]
+```
+
+```Go
+var databases = ...
 ```
 
 ### <a id="logger" href="#logger">var logger</a>
 
 ```
 searchKey: main.logger
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -78,35 +89,24 @@ var logger = log.New(os.Stderr, "", log.LstdFlags)
 
 ```
 searchKey: main.versionRe
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
 var versionRe = lazyregexp.New(fmt.Sprintf(`\b%s\b`, regexp.QuoteMeta(`12\.\d+`)))
 ```
 
-### <a id="databases" href="#databases">var databases</a>
-
-```
-searchKey: main.databases
-tags: [private]
-```
-
-```Go
-var databases = ...
-```
-
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="runFunc" href="#runFunc">type runFunc func(quiet bool, cmd ...string) (string, error)</a>
 
 ```
 searchKey: main.runFunc
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -117,7 +117,7 @@ type runFunc func(quiet bool, cmd ...string) (string, error)
 
 ```
 searchKey: main.runWithPrefix
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -128,7 +128,7 @@ func runWithPrefix(prefix []string) runFunc
 
 ```
 searchKey: main.table
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -141,14 +141,102 @@ type table struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
+```
+
+### <a id="describeTable" href="#describeTable">func describeTable(db *sql.DB, databaseName string, table table, run runFunc) (string, error)</a>
+
+```
+searchKey: main.describeTable
+tags: [method private]
+```
+
+```Go
+func describeTable(db *sql.DB, databaseName string, table table, run runFunc) (string, error)
+```
+
+### <a id="describeTypes" href="#describeTypes">func describeTypes(db *sql.DB) (map[string][]string, error)</a>
+
+```
+searchKey: main.describeTypes
+tags: [method private]
+```
+
+```Go
+func describeTypes(db *sql.DB) (map[string][]string, error)
+```
+
+### <a id="generateAndWrite" href="#generateAndWrite">func generateAndWrite(database *dbconn.Database, dataSource string, commandPrefix []string, destinationFile string) error</a>
+
+```
+searchKey: main.generateAndWrite
+tags: [method private]
+```
+
+```Go
+func generateAndWrite(database *dbconn.Database, dataSource string, commandPrefix []string, destinationFile string) error
+```
+
+### <a id="generateInternal" href="#generateInternal">func generateInternal(database *dbconn.Database, dataSource string, run runFunc) (string, error)</a>
+
+```
+searchKey: main.generateInternal
+tags: [method private]
+```
+
+```Go
+func generateInternal(database *dbconn.Database, dataSource string, run runFunc) (string, error)
+```
+
+### <a id="getColumnComments" href="#getColumnComments">func getColumnComments(db *sql.DB, table string) (map[string]string, error)</a>
+
+```
+searchKey: main.getColumnComments
+tags: [method private]
+```
+
+```Go
+func getColumnComments(db *sql.DB, table string) (map[string]string, error)
+```
+
+### <a id="getTableComment" href="#getTableComment">func getTableComment(db *sql.DB, table string) (comment string, _ error)</a>
+
+```
+searchKey: main.getTableComment
+tags: [method private]
+```
+
+```Go
+func getTableComment(db *sql.DB, table string) (comment string, _ error)
+```
+
+### <a id="getTables" href="#getTables">func getTables(db *sql.DB) (tables []table, _ error)</a>
+
+```
+searchKey: main.getTables
+tags: [method private]
+```
+
+```Go
+func getTables(db *sql.DB) (tables []table, _ error)
+```
+
+### <a id="getViewQuery" href="#getViewQuery">func getViewQuery(db *sql.DB, view string) (query string, _ error)</a>
+
+```
+searchKey: main.getViewQuery
+tags: [method private]
+```
+
+```Go
+func getViewQuery(db *sql.DB, view string) (query string, _ error)
 ```
 
 ### <a id="main" href="#main">func main()</a>
 
 ```
 searchKey: main.main
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -157,11 +245,22 @@ func main()
 
 This script generates markdown formatted output containing descriptions of the current dabase schema, obtained from postgres. The correct PGHOST, PGPORT, PGUSER etc. env variables must be set to run this script. 
 
+### <a id="mainContainer" href="#mainContainer">func mainContainer() error</a>
+
+```
+searchKey: main.mainContainer
+tags: [function private]
+```
+
+```Go
+func mainContainer() error
+```
+
 ### <a id="mainErr" href="#mainErr">func mainErr() error</a>
 
 ```
 searchKey: main.mainErr
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -172,120 +271,21 @@ func mainErr() error
 
 ```
 searchKey: main.mainLocal
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func mainLocal() error
 ```
 
-### <a id="mainContainer" href="#mainContainer">func mainContainer() error</a>
-
-```
-searchKey: main.mainContainer
-tags: [private]
-```
-
-```Go
-func mainContainer() error
-```
-
-### <a id="generateAndWrite" href="#generateAndWrite">func generateAndWrite(database *dbconn.Database, dataSource string, commandPrefix []string, destinationFile string) error</a>
-
-```
-searchKey: main.generateAndWrite
-tags: [private]
-```
-
-```Go
-func generateAndWrite(database *dbconn.Database, dataSource string, commandPrefix []string, destinationFile string) error
-```
-
 ### <a id="startDocker" href="#startDocker">func startDocker() (commandPrefix []string, shutdown func(), _ error)</a>
 
 ```
 searchKey: main.startDocker
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func startDocker() (commandPrefix []string, shutdown func(), _ error)
-```
-
-### <a id="generateInternal" href="#generateInternal">func generateInternal(database *dbconn.Database, dataSource string, run runFunc) (string, error)</a>
-
-```
-searchKey: main.generateInternal
-tags: [private]
-```
-
-```Go
-func generateInternal(database *dbconn.Database, dataSource string, run runFunc) (string, error)
-```
-
-### <a id="getTables" href="#getTables">func getTables(db *sql.DB) (tables []table, _ error)</a>
-
-```
-searchKey: main.getTables
-tags: [private]
-```
-
-```Go
-func getTables(db *sql.DB) (tables []table, _ error)
-```
-
-### <a id="describeTable" href="#describeTable">func describeTable(db *sql.DB, databaseName string, table table, run runFunc) (string, error)</a>
-
-```
-searchKey: main.describeTable
-tags: [private]
-```
-
-```Go
-func describeTable(db *sql.DB, databaseName string, table table, run runFunc) (string, error)
-```
-
-### <a id="getTableComment" href="#getTableComment">func getTableComment(db *sql.DB, table string) (comment string, _ error)</a>
-
-```
-searchKey: main.getTableComment
-tags: [private]
-```
-
-```Go
-func getTableComment(db *sql.DB, table string) (comment string, _ error)
-```
-
-### <a id="getViewQuery" href="#getViewQuery">func getViewQuery(db *sql.DB, view string) (query string, _ error)</a>
-
-```
-searchKey: main.getViewQuery
-tags: [private]
-```
-
-```Go
-func getViewQuery(db *sql.DB, view string) (query string, _ error)
-```
-
-### <a id="getColumnComments" href="#getColumnComments">func getColumnComments(db *sql.DB, table string) (map[string]string, error)</a>
-
-```
-searchKey: main.getColumnComments
-tags: [private]
-```
-
-```Go
-func getColumnComments(db *sql.DB, table string) (map[string]string, error)
-```
-
-### <a id="describeTypes" href="#describeTypes">func describeTypes(db *sql.DB) (map[string][]string, error)</a>
-
-```
-searchKey: main.describeTypes
-tags: [private]
-```
-
-```Go
-func describeTypes(db *sql.DB) (map[string][]string, error)
 ```
 

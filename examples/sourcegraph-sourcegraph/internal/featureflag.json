@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/featureflag",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,9 @@
                 "identifier": "FeatureFlag",
                 "newPage": false,
                 "searchKey": "featureflag.FeatureFlag",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -57,32 +61,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/featureflag#FeatureFlag.EvaluateForUser",
-                    "documentation": {
-                      "identifier": "FeatureFlag.EvaluateForUser",
-                      "newPage": false,
-                      "searchKey": "featureflag.FeatureFlag.EvaluateForUser",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *FeatureFlag) EvaluateForUser(userID int32) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *FeatureFlag) EvaluateForUser(userID int32) bool\n```\n\nEvaluateForUser evaluates the feature flag for a userID. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/featureflag#FeatureFlag.EvaluateForAnonymousUser",
                     "documentation": {
                       "identifier": "FeatureFlag.EvaluateForAnonymousUser",
                       "newPage": false,
                       "searchKey": "featureflag.FeatureFlag.EvaluateForAnonymousUser",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -97,12 +83,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/featureflag#FeatureFlag.EvaluateForUser",
+                    "documentation": {
+                      "identifier": "FeatureFlag.EvaluateForUser",
+                      "newPage": false,
+                      "searchKey": "featureflag.FeatureFlag.EvaluateForUser",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *FeatureFlag) EvaluateForUser(userID int32) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *FeatureFlag) EvaluateForUser(userID int32) bool\n```\n\nEvaluateForUser evaluates the feature flag for a userID. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/featureflag#FeatureFlag.EvaluateGlobal",
                     "documentation": {
                       "identifier": "FeatureFlag.EvaluateGlobal",
                       "newPage": false,
                       "searchKey": "featureflag.FeatureFlag.EvaluateGlobal",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -125,7 +135,9 @@
                 "identifier": "FeatureFlagBool",
                 "newPage": false,
                 "searchKey": "featureflag.FeatureFlagBool",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -145,7 +157,9 @@
                 "identifier": "FeatureFlagRollout",
                 "newPage": false,
                 "searchKey": "featureflag.FeatureFlagRollout",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -160,20 +174,22 @@
           },
           {
             "node": {
-              "pathID": "/internal/featureflag#Override",
+              "pathID": "/internal/featureflag#FeatureFlagStore",
               "documentation": {
-                "identifier": "Override",
+                "identifier": "FeatureFlagStore",
                 "newPage": false,
-                "searchKey": "featureflag.Override",
-                "tags": null
+                "searchKey": "featureflag.FeatureFlagStore",
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type Override struct"
+                "value": "type FeatureFlagStore interface"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype Override struct {\n\tUserID   *int32\n\tOrgID    *int32\n\tFlagName string\n\tValue    bool\n}\n```\n\n"
+                "value": "```Go\ntype FeatureFlagStore interface {\n\tGetUserFlags(context.Context, int32) (map[string]bool, error)\n\tGetAnonymousUserFlags(context.Context, string) (map[string]bool, error)\n\tGetGlobalFeatureFlags(context.Context) (map[string]bool, error)\n}\n```\n\n"
               },
               "children": null
             }
@@ -185,7 +201,9 @@
                 "identifier": "FlagSet",
                 "newPage": false,
                 "searchKey": "featureflag.FlagSet",
-                "tags": null
+                "tags": [
+                  "object"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -203,7 +221,9 @@
                       "identifier": "FromContext",
                       "newPage": false,
                       "searchKey": "featureflag.FromContext",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -223,7 +243,9 @@
                       "identifier": "FlagSet.GetBool",
                       "newPage": false,
                       "searchKey": "featureflag.FlagSet.GetBool",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -243,7 +265,9 @@
                       "identifier": "FlagSet.GetBoolOr",
                       "newPage": false,
                       "searchKey": "featureflag.FlagSet.GetBoolOr",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -261,12 +285,35 @@
           },
           {
             "node": {
+              "pathID": "/internal/featureflag#Override",
+              "documentation": {
+                "identifier": "Override",
+                "newPage": false,
+                "searchKey": "featureflag.Override",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Override struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Override struct {\n\tUserID   *int32\n\tOrgID    *int32\n\tFlagName string\n\tValue    bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/featureflag#flagContextKey",
               "documentation": {
                 "identifier": "flagContextKey",
                 "newPage": false,
                 "searchKey": "featureflag.flagContextKey",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -277,26 +324,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\ntype flagContextKey struct{}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/featureflag#FeatureFlagStore",
-              "documentation": {
-                "identifier": "FeatureFlagStore",
-                "newPage": false,
-                "searchKey": "featureflag.FeatureFlagStore",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type FeatureFlagStore interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype FeatureFlagStore interface {\n\tGetUserFlags(context.Context, int32) (map[string]bool, error)\n\tGetAnonymousUserFlags(context.Context, string) (map[string]bool, error)\n\tGetGlobalFeatureFlags(context.Context) (map[string]bool, error)\n}\n```\n\n"
               },
               "children": null
             }
@@ -312,6 +339,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -326,56 +354,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/featureflag#hashUserAndFlag",
-              "documentation": {
-                "identifier": "hashUserAndFlag",
-                "newPage": false,
-                "searchKey": "featureflag.hashUserAndFlag",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func hashUserAndFlag(userID int32, flagName string) uint32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc hashUserAndFlag(userID int32, flagName string) uint32\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/featureflag#hashAnonymousUserAndFlag",
-              "documentation": {
-                "identifier": "hashAnonymousUserAndFlag",
-                "newPage": false,
-                "searchKey": "featureflag.hashAnonymousUserAndFlag",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func hashAnonymousUserAndFlag(anonymousUID, flagName string) uint32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc hashAnonymousUserAndFlag(anonymousUID, flagName string) uint32\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/featureflag#Middleware",
               "documentation": {
                 "identifier": "Middleware",
                 "newPage": false,
                 "searchKey": "featureflag.Middleware",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -396,6 +382,7 @@
                 "newPage": false,
                 "searchKey": "featureflag.contextWithFeatureFlags",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -406,6 +393,52 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc contextWithFeatureFlags(ffs FeatureFlagStore, r *http.Request) context.Context\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/featureflag#hashAnonymousUserAndFlag",
+              "documentation": {
+                "identifier": "hashAnonymousUserAndFlag",
+                "newPage": false,
+                "searchKey": "featureflag.hashAnonymousUserAndFlag",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hashAnonymousUserAndFlag(anonymousUID, flagName string) uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hashAnonymousUserAndFlag(anonymousUID, flagName string) uint32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/featureflag#hashUserAndFlag",
+              "documentation": {
+                "identifier": "hashUserAndFlag",
+                "newPage": false,
+                "searchKey": "featureflag.hashUserAndFlag",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hashUserAndFlag(userID int32, flagName string) uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hashUserAndFlag(userID int32, flagName string) uint32\n```\n\n"
               },
               "children": null
             }

@@ -5,51 +5,51 @@
 * [Constants](#const)
     * [const shortDuration](#shortDuration)
 * [Functions](#func)
-    * [func BenchmarkCommonParentCancel(b *testing.B)](#BenchmarkCommonParentCancel)
-    * [func BenchmarkWithTimeout(b *testing.B)](#BenchmarkWithTimeout)
-    * [func benchmarkWithTimeout(b *testing.B, concurrentContexts int)](#benchmarkWithTimeout)
     * [func BenchmarkCancelTree(b *testing.B)](#BenchmarkCancelTree)
-    * [func buildContextTree(root Context, depth int)](#buildContextTree)
     * [func BenchmarkCheckCanceled(b *testing.B)](#BenchmarkCheckCanceled)
+    * [func BenchmarkCommonParentCancel(b *testing.B)](#BenchmarkCommonParentCancel)
     * [func BenchmarkContextCancelDone(b *testing.B)](#BenchmarkContextCancelDone)
+    * [func BenchmarkWithTimeout(b *testing.B)](#BenchmarkWithTimeout)
     * [func ExampleWithCancel()](#ExampleWithCancel)
     * [func ExampleWithDeadline()](#ExampleWithDeadline)
     * [func ExampleWithTimeout()](#ExampleWithTimeout)
     * [func ExampleWithValue()](#ExampleWithValue)
-    * [func TestDeadlineExceededIsNetError(t *testing.T)](#TestDeadlineExceededIsNetError)
-    * [func TestBackground(t *testing.T)](#TestBackground)
-    * [func TestTODO(t *testing.T)](#TestTODO)
-    * [func TestWithCancel(t *testing.T)](#TestWithCancel)
-    * [func TestParentFinishesChild(t *testing.T)](#TestParentFinishesChild)
-    * [func TestChildFinishesFirst(t *testing.T)](#TestChildFinishesFirst)
-    * [func TestDeadline(t *testing.T)](#TestDeadline)
-    * [func TestTimeout(t *testing.T)](#TestTimeout)
-    * [func TestCanceledTimeout(t *testing.T)](#TestCanceledTimeout)
-    * [func TestValues(t *testing.T)](#TestValues)
     * [func TestAllocs(t *testing.T)](#TestAllocs)
-    * [func TestSimultaneousCancels(t *testing.T)](#TestSimultaneousCancels)
+    * [func TestBackground(t *testing.T)](#TestBackground)
+    * [func TestCancelRemoves(t *testing.T)](#TestCancelRemoves)
+    * [func TestCanceledTimeout(t *testing.T)](#TestCanceledTimeout)
+    * [func TestChildFinishesFirst(t *testing.T)](#TestChildFinishesFirst)
+    * [func TestCustomContextGoroutines(t *testing.T)](#TestCustomContextGoroutines)
+    * [func TestDeadline(t *testing.T)](#TestDeadline)
+    * [func TestDeadlineExceededIsNetError(t *testing.T)](#TestDeadlineExceededIsNetError)
+    * [func TestDeadlineExceededSupportsTimeout(t *testing.T)](#TestDeadlineExceededSupportsTimeout)
     * [func TestInterlockedCancels(t *testing.T)](#TestInterlockedCancels)
+    * [func TestInvalidDerivedFail(t *testing.T)](#TestInvalidDerivedFail)
     * [func TestLayersCancel(t *testing.T)](#TestLayersCancel)
     * [func TestLayersTimeout(t *testing.T)](#TestLayersTimeout)
-    * [func TestCancelRemoves(t *testing.T)](#TestCancelRemoves)
+    * [func TestParentFinishesChild(t *testing.T)](#TestParentFinishesChild)
+    * [func TestSimultaneousCancels(t *testing.T)](#TestSimultaneousCancels)
+    * [func TestTODO(t *testing.T)](#TestTODO)
+    * [func TestTimeout(t *testing.T)](#TestTimeout)
+    * [func TestValues(t *testing.T)](#TestValues)
+    * [func TestWithCancel(t *testing.T)](#TestWithCancel)
     * [func TestWithCancelCanceledParent(t *testing.T)](#TestWithCancelCanceledParent)
     * [func TestWithValueChecksKey(t *testing.T)](#TestWithValueChecksKey)
-    * [func TestInvalidDerivedFail(t *testing.T)](#TestInvalidDerivedFail)
-    * [func TestDeadlineExceededSupportsTimeout(t *testing.T)](#TestDeadlineExceededSupportsTimeout)
-    * [func TestCustomContextGoroutines(t *testing.T)](#TestCustomContextGoroutines)
+    * [func benchmarkWithTimeout(b *testing.B, concurrentContexts int)](#benchmarkWithTimeout)
+    * [func buildContextTree(root Context, depth int)](#buildContextTree)
 
 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="shortDuration" href="#shortDuration">const shortDuration</a>
 
 ```
 searchKey: context_test.shortDuration
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -60,91 +60,69 @@ const shortDuration = 1 * time.Millisecond // a reasonable duration to block in 
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
-```
-
-### <a id="BenchmarkCommonParentCancel" href="#BenchmarkCommonParentCancel">func BenchmarkCommonParentCancel(b *testing.B)</a>
-
-```
-searchKey: context_test.BenchmarkCommonParentCancel
-tags: [private]
-```
-
-```Go
-func BenchmarkCommonParentCancel(b *testing.B)
-```
-
-### <a id="BenchmarkWithTimeout" href="#BenchmarkWithTimeout">func BenchmarkWithTimeout(b *testing.B)</a>
-
-```
-searchKey: context_test.BenchmarkWithTimeout
-tags: [private]
-```
-
-```Go
-func BenchmarkWithTimeout(b *testing.B)
-```
-
-### <a id="benchmarkWithTimeout" href="#benchmarkWithTimeout">func benchmarkWithTimeout(b *testing.B, concurrentContexts int)</a>
-
-```
-searchKey: context_test.benchmarkWithTimeout
-tags: [private]
-```
-
-```Go
-func benchmarkWithTimeout(b *testing.B, concurrentContexts int)
+tags: [package private]
 ```
 
 ### <a id="BenchmarkCancelTree" href="#BenchmarkCancelTree">func BenchmarkCancelTree(b *testing.B)</a>
 
 ```
 searchKey: context_test.BenchmarkCancelTree
-tags: [private]
+tags: [method private benchmark]
 ```
 
 ```Go
 func BenchmarkCancelTree(b *testing.B)
 ```
 
-### <a id="buildContextTree" href="#buildContextTree">func buildContextTree(root Context, depth int)</a>
-
-```
-searchKey: context_test.buildContextTree
-tags: [private]
-```
-
-```Go
-func buildContextTree(root Context, depth int)
-```
-
 ### <a id="BenchmarkCheckCanceled" href="#BenchmarkCheckCanceled">func BenchmarkCheckCanceled(b *testing.B)</a>
 
 ```
 searchKey: context_test.BenchmarkCheckCanceled
-tags: [private]
+tags: [method private benchmark]
 ```
 
 ```Go
 func BenchmarkCheckCanceled(b *testing.B)
 ```
 
+### <a id="BenchmarkCommonParentCancel" href="#BenchmarkCommonParentCancel">func BenchmarkCommonParentCancel(b *testing.B)</a>
+
+```
+searchKey: context_test.BenchmarkCommonParentCancel
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkCommonParentCancel(b *testing.B)
+```
+
 ### <a id="BenchmarkContextCancelDone" href="#BenchmarkContextCancelDone">func BenchmarkContextCancelDone(b *testing.B)</a>
 
 ```
 searchKey: context_test.BenchmarkContextCancelDone
-tags: [private]
+tags: [method private benchmark]
 ```
 
 ```Go
 func BenchmarkContextCancelDone(b *testing.B)
 ```
 
+### <a id="BenchmarkWithTimeout" href="#BenchmarkWithTimeout">func BenchmarkWithTimeout(b *testing.B)</a>
+
+```
+searchKey: context_test.BenchmarkWithTimeout
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkWithTimeout(b *testing.B)
+```
+
 ### <a id="ExampleWithCancel" href="#ExampleWithCancel">func ExampleWithCancel()</a>
 
 ```
 searchKey: context_test.ExampleWithCancel
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -157,7 +135,7 @@ This example demonstrates the use of a cancelable context to prevent a goroutine
 
 ```
 searchKey: context_test.ExampleWithDeadline
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -170,7 +148,7 @@ This example passes a context with an arbitrary deadline to tell a blocking func
 
 ```
 searchKey: context_test.ExampleWithTimeout
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -183,7 +161,7 @@ This example passes a context with a timeout to tell a blocking function that it
 
 ```
 searchKey: context_test.ExampleWithValue
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -192,154 +170,132 @@ func ExampleWithValue()
 
 This example demonstrates how a value can be passed to the context and also how to retrieve it if it exists. 
 
-### <a id="TestDeadlineExceededIsNetError" href="#TestDeadlineExceededIsNetError">func TestDeadlineExceededIsNetError(t *testing.T)</a>
-
-```
-searchKey: context_test.TestDeadlineExceededIsNetError
-tags: [private]
-```
-
-```Go
-func TestDeadlineExceededIsNetError(t *testing.T)
-```
-
-### <a id="TestBackground" href="#TestBackground">func TestBackground(t *testing.T)</a>
-
-```
-searchKey: context_test.TestBackground
-tags: [private]
-```
-
-```Go
-func TestBackground(t *testing.T)
-```
-
-### <a id="TestTODO" href="#TestTODO">func TestTODO(t *testing.T)</a>
-
-```
-searchKey: context_test.TestTODO
-tags: [private]
-```
-
-```Go
-func TestTODO(t *testing.T)
-```
-
-### <a id="TestWithCancel" href="#TestWithCancel">func TestWithCancel(t *testing.T)</a>
-
-```
-searchKey: context_test.TestWithCancel
-tags: [private]
-```
-
-```Go
-func TestWithCancel(t *testing.T)
-```
-
-### <a id="TestParentFinishesChild" href="#TestParentFinishesChild">func TestParentFinishesChild(t *testing.T)</a>
-
-```
-searchKey: context_test.TestParentFinishesChild
-tags: [private]
-```
-
-```Go
-func TestParentFinishesChild(t *testing.T)
-```
-
-### <a id="TestChildFinishesFirst" href="#TestChildFinishesFirst">func TestChildFinishesFirst(t *testing.T)</a>
-
-```
-searchKey: context_test.TestChildFinishesFirst
-tags: [private]
-```
-
-```Go
-func TestChildFinishesFirst(t *testing.T)
-```
-
-### <a id="TestDeadline" href="#TestDeadline">func TestDeadline(t *testing.T)</a>
-
-```
-searchKey: context_test.TestDeadline
-tags: [private]
-```
-
-```Go
-func TestDeadline(t *testing.T)
-```
-
-### <a id="TestTimeout" href="#TestTimeout">func TestTimeout(t *testing.T)</a>
-
-```
-searchKey: context_test.TestTimeout
-tags: [private]
-```
-
-```Go
-func TestTimeout(t *testing.T)
-```
-
-### <a id="TestCanceledTimeout" href="#TestCanceledTimeout">func TestCanceledTimeout(t *testing.T)</a>
-
-```
-searchKey: context_test.TestCanceledTimeout
-tags: [private]
-```
-
-```Go
-func TestCanceledTimeout(t *testing.T)
-```
-
-### <a id="TestValues" href="#TestValues">func TestValues(t *testing.T)</a>
-
-```
-searchKey: context_test.TestValues
-tags: [private]
-```
-
-```Go
-func TestValues(t *testing.T)
-```
-
 ### <a id="TestAllocs" href="#TestAllocs">func TestAllocs(t *testing.T)</a>
 
 ```
 searchKey: context_test.TestAllocs
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestAllocs(t *testing.T)
 ```
 
-### <a id="TestSimultaneousCancels" href="#TestSimultaneousCancels">func TestSimultaneousCancels(t *testing.T)</a>
+### <a id="TestBackground" href="#TestBackground">func TestBackground(t *testing.T)</a>
 
 ```
-searchKey: context_test.TestSimultaneousCancels
-tags: [private]
+searchKey: context_test.TestBackground
+tags: [method private test]
 ```
 
 ```Go
-func TestSimultaneousCancels(t *testing.T)
+func TestBackground(t *testing.T)
+```
+
+### <a id="TestCancelRemoves" href="#TestCancelRemoves">func TestCancelRemoves(t *testing.T)</a>
+
+```
+searchKey: context_test.TestCancelRemoves
+tags: [method private test]
+```
+
+```Go
+func TestCancelRemoves(t *testing.T)
+```
+
+### <a id="TestCanceledTimeout" href="#TestCanceledTimeout">func TestCanceledTimeout(t *testing.T)</a>
+
+```
+searchKey: context_test.TestCanceledTimeout
+tags: [method private test]
+```
+
+```Go
+func TestCanceledTimeout(t *testing.T)
+```
+
+### <a id="TestChildFinishesFirst" href="#TestChildFinishesFirst">func TestChildFinishesFirst(t *testing.T)</a>
+
+```
+searchKey: context_test.TestChildFinishesFirst
+tags: [method private test]
+```
+
+```Go
+func TestChildFinishesFirst(t *testing.T)
+```
+
+### <a id="TestCustomContextGoroutines" href="#TestCustomContextGoroutines">func TestCustomContextGoroutines(t *testing.T)</a>
+
+```
+searchKey: context_test.TestCustomContextGoroutines
+tags: [method private test]
+```
+
+```Go
+func TestCustomContextGoroutines(t *testing.T)
+```
+
+### <a id="TestDeadline" href="#TestDeadline">func TestDeadline(t *testing.T)</a>
+
+```
+searchKey: context_test.TestDeadline
+tags: [method private test]
+```
+
+```Go
+func TestDeadline(t *testing.T)
+```
+
+### <a id="TestDeadlineExceededIsNetError" href="#TestDeadlineExceededIsNetError">func TestDeadlineExceededIsNetError(t *testing.T)</a>
+
+```
+searchKey: context_test.TestDeadlineExceededIsNetError
+tags: [method private test]
+```
+
+```Go
+func TestDeadlineExceededIsNetError(t *testing.T)
+```
+
+### <a id="TestDeadlineExceededSupportsTimeout" href="#TestDeadlineExceededSupportsTimeout">func TestDeadlineExceededSupportsTimeout(t *testing.T)</a>
+
+```
+searchKey: context_test.TestDeadlineExceededSupportsTimeout
+tags: [method private test]
+```
+
+```Go
+func TestDeadlineExceededSupportsTimeout(t *testing.T)
 ```
 
 ### <a id="TestInterlockedCancels" href="#TestInterlockedCancels">func TestInterlockedCancels(t *testing.T)</a>
 
 ```
 searchKey: context_test.TestInterlockedCancels
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestInterlockedCancels(t *testing.T)
 ```
 
+### <a id="TestInvalidDerivedFail" href="#TestInvalidDerivedFail">func TestInvalidDerivedFail(t *testing.T)</a>
+
+```
+searchKey: context_test.TestInvalidDerivedFail
+tags: [method private test]
+```
+
+```Go
+func TestInvalidDerivedFail(t *testing.T)
+```
+
 ### <a id="TestLayersCancel" href="#TestLayersCancel">func TestLayersCancel(t *testing.T)</a>
 
 ```
 searchKey: context_test.TestLayersCancel
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -350,29 +306,84 @@ func TestLayersCancel(t *testing.T)
 
 ```
 searchKey: context_test.TestLayersTimeout
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestLayersTimeout(t *testing.T)
 ```
 
-### <a id="TestCancelRemoves" href="#TestCancelRemoves">func TestCancelRemoves(t *testing.T)</a>
+### <a id="TestParentFinishesChild" href="#TestParentFinishesChild">func TestParentFinishesChild(t *testing.T)</a>
 
 ```
-searchKey: context_test.TestCancelRemoves
-tags: [private]
+searchKey: context_test.TestParentFinishesChild
+tags: [method private test]
 ```
 
 ```Go
-func TestCancelRemoves(t *testing.T)
+func TestParentFinishesChild(t *testing.T)
+```
+
+### <a id="TestSimultaneousCancels" href="#TestSimultaneousCancels">func TestSimultaneousCancels(t *testing.T)</a>
+
+```
+searchKey: context_test.TestSimultaneousCancels
+tags: [method private test]
+```
+
+```Go
+func TestSimultaneousCancels(t *testing.T)
+```
+
+### <a id="TestTODO" href="#TestTODO">func TestTODO(t *testing.T)</a>
+
+```
+searchKey: context_test.TestTODO
+tags: [method private test]
+```
+
+```Go
+func TestTODO(t *testing.T)
+```
+
+### <a id="TestTimeout" href="#TestTimeout">func TestTimeout(t *testing.T)</a>
+
+```
+searchKey: context_test.TestTimeout
+tags: [method private test]
+```
+
+```Go
+func TestTimeout(t *testing.T)
+```
+
+### <a id="TestValues" href="#TestValues">func TestValues(t *testing.T)</a>
+
+```
+searchKey: context_test.TestValues
+tags: [method private test]
+```
+
+```Go
+func TestValues(t *testing.T)
+```
+
+### <a id="TestWithCancel" href="#TestWithCancel">func TestWithCancel(t *testing.T)</a>
+
+```
+searchKey: context_test.TestWithCancel
+tags: [method private test]
+```
+
+```Go
+func TestWithCancel(t *testing.T)
 ```
 
 ### <a id="TestWithCancelCanceledParent" href="#TestWithCancelCanceledParent">func TestWithCancelCanceledParent(t *testing.T)</a>
 
 ```
 searchKey: context_test.TestWithCancelCanceledParent
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -383,43 +394,32 @@ func TestWithCancelCanceledParent(t *testing.T)
 
 ```
 searchKey: context_test.TestWithValueChecksKey
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestWithValueChecksKey(t *testing.T)
 ```
 
-### <a id="TestInvalidDerivedFail" href="#TestInvalidDerivedFail">func TestInvalidDerivedFail(t *testing.T)</a>
+### <a id="benchmarkWithTimeout" href="#benchmarkWithTimeout">func benchmarkWithTimeout(b *testing.B, concurrentContexts int)</a>
 
 ```
-searchKey: context_test.TestInvalidDerivedFail
-tags: [private]
-```
-
-```Go
-func TestInvalidDerivedFail(t *testing.T)
-```
-
-### <a id="TestDeadlineExceededSupportsTimeout" href="#TestDeadlineExceededSupportsTimeout">func TestDeadlineExceededSupportsTimeout(t *testing.T)</a>
-
-```
-searchKey: context_test.TestDeadlineExceededSupportsTimeout
-tags: [private]
+searchKey: context_test.benchmarkWithTimeout
+tags: [method private]
 ```
 
 ```Go
-func TestDeadlineExceededSupportsTimeout(t *testing.T)
+func benchmarkWithTimeout(b *testing.B, concurrentContexts int)
 ```
 
-### <a id="TestCustomContextGoroutines" href="#TestCustomContextGoroutines">func TestCustomContextGoroutines(t *testing.T)</a>
+### <a id="buildContextTree" href="#buildContextTree">func buildContextTree(root Context, depth int)</a>
 
 ```
-searchKey: context_test.TestCustomContextGoroutines
-tags: [private]
+searchKey: context_test.buildContextTree
+tags: [method private]
 ```
 
 ```Go
-func TestCustomContextGoroutines(t *testing.T)
+func buildContextTree(root Context, depth int)
 ```
 

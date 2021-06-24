@@ -9,10 +9,10 @@ For example, pre-submit checks that use this package directly would behave diffe
 ## Index
 
 * [Constants](#const)
-    * [const tabWidth](#tabWidth)
+    * [const parserMode](#parserMode)
     * [const printerMode](#printerMode)
     * [const printerNormalizeNumbers](#printerNormalizeNumbers)
-    * [const parserMode](#parserMode)
+    * [const tabWidth](#tabWidth)
     * [const testfile](#testfile)
 * [Variables](#var)
     * [var config](#config)
@@ -20,38 +20,40 @@ For example, pre-submit checks that use this package directly would behave diffe
 * [Functions](#func)
     * [func Node(dst io.Writer, fset *token.FileSet, node interface{}) error](#Node)
     * [func Source(src []byte) ([]byte, error)](#Source)
-    * [func hasUnsortedImports(file *ast.File) bool](#hasUnsortedImports)
-    * [func parse(fset *token.FileSet, filename string, src []byte, fragmentOk bool) (file *ast.File,...](#parse)
-    * [func format(fset *token.FileSet,...](#format)
-    * [func isSpace(b byte) bool](#isSpace)
-    * [func diff(t *testing.T, dst, src []byte)](#diff)
+    * [func String(s string) (string, error)](#String)
     * [func TestNode(t *testing.T)](#TestNode)
     * [func TestNodeNoModify(t *testing.T)](#TestNodeNoModify)
-    * [func TestSource(t *testing.T)](#TestSource)
-    * [func String(s string) (string, error)](#String)
     * [func TestPartial(t *testing.T)](#TestPartial)
+    * [func TestSource(t *testing.T)](#TestSource)
+    * [func diff(t *testing.T, dst, src []byte)](#diff)
+    * [func format(fset *token.FileSet,...](#format)
+    * [func hasUnsortedImports(file *ast.File) bool](#hasUnsortedImports)
+    * [func isSpace(b byte) bool](#isSpace)
+    * [func parse(fset *token.FileSet, filename string, src []byte, fragmentOk bool) (file *ast.File,...](#parse)
 
 
 ## <a id="const" href="#const">Constants</a>
 
-### <a id="tabWidth" href="#tabWidth">const tabWidth</a>
+```
+tags: [package]
+```
+
+### <a id="parserMode" href="#parserMode">const parserMode</a>
 
 ```
-searchKey: format.tabWidth
-tags: [private]
+searchKey: format.parserMode
+tags: [constant number private]
 ```
 
 ```Go
-const tabWidth = 8
+const parserMode = parser.ParseComments
 ```
-
-Keep these in sync with cmd/gofmt/gofmt.go. 
 
 ### <a id="printerMode" href="#printerMode">const printerMode</a>
 
 ```
 searchKey: format.printerMode
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -64,7 +66,7 @@ Keep these in sync with cmd/gofmt/gofmt.go.
 
 ```
 searchKey: format.printerNormalizeNumbers
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -77,22 +79,24 @@ printerNormalizeNumbers means to canonicalize number literal prefixes and expone
 
 This value is defined in go/printer specifically for go/format and cmd/gofmt. 
 
-### <a id="parserMode" href="#parserMode">const parserMode</a>
+### <a id="tabWidth" href="#tabWidth">const tabWidth</a>
 
 ```
-searchKey: format.parserMode
-tags: [private]
+searchKey: format.tabWidth
+tags: [constant number private]
 ```
 
 ```Go
-const parserMode = parser.ParseComments
+const tabWidth = 8
 ```
+
+Keep these in sync with cmd/gofmt/gofmt.go. 
 
 ### <a id="testfile" href="#testfile">const testfile</a>
 
 ```
 searchKey: format.testfile
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -101,11 +105,15 @@ const testfile = "format_test.go"
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [package]
+```
+
 ### <a id="config" href="#config">var config</a>
 
 ```
 searchKey: format.config
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -116,7 +124,7 @@ var config = printer.Config{Mode: printerMode, Tabwidth: tabWidth}
 
 ```
 searchKey: format.tests
-tags: [private]
+tags: [variable array string private]
 ```
 
 ```Go
@@ -127,10 +135,15 @@ Test cases that are expected to fail are marked by the prefix "ERROR". The forma
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [package]
+```
+
 ### <a id="Node" href="#Node">func Node(dst io.Writer, fset *token.FileSet, node interface{}) error</a>
 
 ```
 searchKey: format.Node
+tags: [method]
 ```
 
 ```Go
@@ -147,6 +160,7 @@ The function may return early (before the entire result is written) and return a
 
 ```
 searchKey: format.Source
+tags: [method]
 ```
 
 ```Go
@@ -157,40 +171,79 @@ Source formats src in canonical gofmt style and returns the result or an (I/O or
 
 If src is a partial source file, the leading and trailing space of src is applied to the result (such that it has the same leading and trailing space as src), and the result is indented by the same amount as the first line of src containing code. Imports are not sorted for partial source files. 
 
-### <a id="hasUnsortedImports" href="#hasUnsortedImports">func hasUnsortedImports(file *ast.File) bool</a>
+### <a id="String" href="#String">func String(s string) (string, error)</a>
 
 ```
-searchKey: format.hasUnsortedImports
-tags: [private]
-```
-
-```Go
-func hasUnsortedImports(file *ast.File) bool
-```
-
-### <a id="parse" href="#parse">func parse(fset *token.FileSet, filename string, src []byte, fragmentOk bool) (file *ast.File,...</a>
-
-```
-searchKey: format.parse
-tags: [private]
+searchKey: format.String
+tags: [method private]
 ```
 
 ```Go
-func parse(fset *token.FileSet, filename string, src []byte, fragmentOk bool) (
-	file *ast.File,
-	sourceAdj func(src []byte, indent int) []byte,
-	indentAdj int,
-	err error,
-)
+func String(s string) (string, error)
 ```
 
-parse parses src, which was read from the named file, as a Go source file, declaration, or statement list. 
+### <a id="TestNode" href="#TestNode">func TestNode(t *testing.T)</a>
+
+```
+searchKey: format.TestNode
+tags: [method private test]
+```
+
+```Go
+func TestNode(t *testing.T)
+```
+
+### <a id="TestNodeNoModify" href="#TestNodeNoModify">func TestNodeNoModify(t *testing.T)</a>
+
+```
+searchKey: format.TestNodeNoModify
+tags: [method private test]
+```
+
+```Go
+func TestNodeNoModify(t *testing.T)
+```
+
+Node is documented to not modify the AST. Test that it is so even when numbers are normalized. 
+
+### <a id="TestPartial" href="#TestPartial">func TestPartial(t *testing.T)</a>
+
+```
+searchKey: format.TestPartial
+tags: [method private test]
+```
+
+```Go
+func TestPartial(t *testing.T)
+```
+
+### <a id="TestSource" href="#TestSource">func TestSource(t *testing.T)</a>
+
+```
+searchKey: format.TestSource
+tags: [method private test]
+```
+
+```Go
+func TestSource(t *testing.T)
+```
+
+### <a id="diff" href="#diff">func diff(t *testing.T, dst, src []byte)</a>
+
+```
+searchKey: format.diff
+tags: [method private]
+```
+
+```Go
+func diff(t *testing.T, dst, src []byte)
+```
 
 ### <a id="format" href="#format">func format(fset *token.FileSet,...</a>
 
 ```
 searchKey: format.format
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -206,11 +259,22 @@ func format(
 
 format formats the given package file originally obtained from src and adjusts the result based on the original source via sourceAdj and indentAdj. 
 
+### <a id="hasUnsortedImports" href="#hasUnsortedImports">func hasUnsortedImports(file *ast.File) bool</a>
+
+```
+searchKey: format.hasUnsortedImports
+tags: [method private]
+```
+
+```Go
+func hasUnsortedImports(file *ast.File) bool
+```
+
 ### <a id="isSpace" href="#isSpace">func isSpace(b byte) bool</a>
 
 ```
 searchKey: format.isSpace
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -219,71 +283,21 @@ func isSpace(b byte) bool
 
 isSpace reports whether the byte is a space character. isSpace defines a space as being among the following bytes: ' ', '\t', '\n' and '\r'. 
 
-### <a id="diff" href="#diff">func diff(t *testing.T, dst, src []byte)</a>
+### <a id="parse" href="#parse">func parse(fset *token.FileSet, filename string, src []byte, fragmentOk bool) (file *ast.File,...</a>
 
 ```
-searchKey: format.diff
-tags: [private]
-```
-
-```Go
-func diff(t *testing.T, dst, src []byte)
-```
-
-### <a id="TestNode" href="#TestNode">func TestNode(t *testing.T)</a>
-
-```
-searchKey: format.TestNode
-tags: [private]
+searchKey: format.parse
+tags: [method private]
 ```
 
 ```Go
-func TestNode(t *testing.T)
+func parse(fset *token.FileSet, filename string, src []byte, fragmentOk bool) (
+	file *ast.File,
+	sourceAdj func(src []byte, indent int) []byte,
+	indentAdj int,
+	err error,
+)
 ```
 
-### <a id="TestNodeNoModify" href="#TestNodeNoModify">func TestNodeNoModify(t *testing.T)</a>
-
-```
-searchKey: format.TestNodeNoModify
-tags: [private]
-```
-
-```Go
-func TestNodeNoModify(t *testing.T)
-```
-
-Node is documented to not modify the AST. Test that it is so even when numbers are normalized. 
-
-### <a id="TestSource" href="#TestSource">func TestSource(t *testing.T)</a>
-
-```
-searchKey: format.TestSource
-tags: [private]
-```
-
-```Go
-func TestSource(t *testing.T)
-```
-
-### <a id="String" href="#String">func String(s string) (string, error)</a>
-
-```
-searchKey: format.String
-tags: [private]
-```
-
-```Go
-func String(s string) (string, error)
-```
-
-### <a id="TestPartial" href="#TestPartial">func TestPartial(t *testing.T)</a>
-
-```
-searchKey: format.TestPartial
-tags: [private]
-```
-
-```Go
-func TestPartial(t *testing.T)
-```
+parse parses src, which was read from the named file, as a Go source file, declaration, or statement list. 
 

@@ -4,7 +4,9 @@
     "identifier": "ring",
     "newPage": true,
     "searchKey": "container/ring",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "Ring",
                 "newPage": false,
                 "searchKey": "ring.Ring",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -58,7 +64,9 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "ring.New",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -79,6 +87,7 @@
                       "newPage": false,
                       "searchKey": "ring.makeN",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -95,22 +104,88 @@
                 },
                 {
                   "node": {
-                    "pathID": "/container/ring#Ring.init.ring.go",
+                    "pathID": "/container/ring#Ring.Do",
                     "documentation": {
-                      "identifier": "Ring.init.ring.go",
+                      "identifier": "Ring.Do",
                       "newPage": false,
-                      "searchKey": "ring.Ring.init",
+                      "searchKey": "ring.Ring.Do",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (r *Ring) init() *Ring"
+                      "value": "func (r *Ring) Do(f func(interface{}))"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (r *Ring) init() *Ring\n```\n\n"
+                      "value": "```Go\nfunc (r *Ring) Do(f func(interface{}))\n```\n\nDo calls function f on each element of the ring, in forward order. The behavior of Do is undefined if f changes *r. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/container/ring#Ring.Len",
+                    "documentation": {
+                      "identifier": "Ring.Len",
+                      "newPage": false,
+                      "searchKey": "ring.Ring.Len",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Ring) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Ring) Len() int\n```\n\nLen computes the number of elements in ring r. It executes in time proportional to the number of elements. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/container/ring#Ring.Link",
+                    "documentation": {
+                      "identifier": "Ring.Link",
+                      "newPage": false,
+                      "searchKey": "ring.Ring.Link",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Ring) Link(s *Ring) *Ring"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Ring) Link(s *Ring) *Ring\n```\n\nLink connects ring r with ring s such that r.Next() becomes s and returns the original value for r.Next(). r must not be empty. \n\nIf r and s point to the same ring, linking them removes the elements between r and s from the ring. The removed elements form a subring and the result is a reference to that subring (if no elements were removed, the result is still the original value for r.Next(), and not nil). \n\nIf r and s point to different rings, linking them creates a single ring with the elements of s inserted after r. The result points to the element following the last element of s after insertion. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/container/ring#Ring.Move",
+                    "documentation": {
+                      "identifier": "Ring.Move",
+                      "newPage": false,
+                      "searchKey": "ring.Ring.Move",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Ring) Move(n int) *Ring"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Ring) Move(n int) *Ring\n```\n\nMove moves n % r.Len() elements backward (n < 0) or forward (n >= 0) in the ring and returns that ring element. r must not be empty. \n\n"
                     },
                     "children": null
                   }
@@ -122,7 +197,9 @@
                       "identifier": "Ring.Next",
                       "newPage": false,
                       "searchKey": "ring.Ring.Next",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -142,7 +219,9 @@
                       "identifier": "Ring.Prev",
                       "newPage": false,
                       "searchKey": "ring.Ring.Prev",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -157,52 +236,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/container/ring#Ring.Move",
-                    "documentation": {
-                      "identifier": "Ring.Move",
-                      "newPage": false,
-                      "searchKey": "ring.Ring.Move",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Ring) Move(n int) *Ring"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Ring) Move(n int) *Ring\n```\n\nMove moves n % r.Len() elements backward (n < 0) or forward (n >= 0) in the ring and returns that ring element. r must not be empty. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/container/ring#Ring.Link",
-                    "documentation": {
-                      "identifier": "Ring.Link",
-                      "newPage": false,
-                      "searchKey": "ring.Ring.Link",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Ring) Link(s *Ring) *Ring"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Ring) Link(s *Ring) *Ring\n```\n\nLink connects ring r with ring s such that r.Next() becomes s and returns the original value for r.Next(). r must not be empty. \n\nIf r and s point to the same ring, linking them removes the elements between r and s from the ring. The removed elements form a subring and the result is a reference to that subring (if no elements were removed, the result is still the original value for r.Next(), and not nil). \n\nIf r and s point to different rings, linking them creates a single ring with the elements of s inserted after r. The result points to the element following the last element of s after insertion. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/container/ring#Ring.Unlink",
                     "documentation": {
                       "identifier": "Ring.Unlink",
                       "newPage": false,
                       "searchKey": "ring.Ring.Unlink",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -217,40 +258,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/container/ring#Ring.Len",
+                    "pathID": "/container/ring#Ring.init.ring.go",
                     "documentation": {
-                      "identifier": "Ring.Len",
+                      "identifier": "Ring.init.ring.go",
                       "newPage": false,
-                      "searchKey": "ring.Ring.Len",
-                      "tags": null
+                      "searchKey": "ring.Ring.init",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (r *Ring) Len() int"
+                      "value": "func (r *Ring) init() *Ring"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (r *Ring) Len() int\n```\n\nLen computes the number of elements in ring r. It executes in time proportional to the number of elements. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/container/ring#Ring.Do",
-                    "documentation": {
-                      "identifier": "Ring.Do",
-                      "newPage": false,
-                      "searchKey": "ring.Ring.Do",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Ring) Do(f func(interface{}))"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Ring) Do(f func(interface{}))\n```\n\nDo calls function f on each element of the ring, in forward order. The behavior of Do is undefined if f changes *r. \n\n"
+                      "value": "```Go\nfunc (r *Ring) init() *Ring\n```\n\n"
                     },
                     "children": null
                   }
@@ -268,7 +292,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -281,57 +307,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/container/ring#dump",
-              "documentation": {
-                "identifier": "dump",
-                "newPage": false,
-                "searchKey": "ring.dump",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func dump(r *Ring)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc dump(r *Ring)\n```\n\nFor debugging - keep around. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/container/ring#verify",
-              "documentation": {
-                "identifier": "verify",
-                "newPage": false,
-                "searchKey": "ring.verify",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func verify(t *testing.T, r *Ring, N int, sum int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc verify(t *testing.T, r *Ring, N int, sum int)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/container/ring#TestCornerCases",
               "documentation": {
                 "identifier": "TestCornerCases",
                 "newPage": false,
                 "searchKey": "ring.TestCornerCases",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -347,57 +331,15 @@
           },
           {
             "node": {
-              "pathID": "/container/ring#sumN",
-              "documentation": {
-                "identifier": "sumN",
-                "newPage": false,
-                "searchKey": "ring.sumN",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func sumN(n int) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc sumN(n int) int\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/container/ring#TestNew",
-              "documentation": {
-                "identifier": "TestNew",
-                "newPage": false,
-                "searchKey": "ring.TestNew",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestNew(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestNew(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/container/ring#TestLink1",
               "documentation": {
                 "identifier": "TestLink1",
                 "newPage": false,
                 "searchKey": "ring.TestLink1",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -419,7 +361,9 @@
                 "newPage": false,
                 "searchKey": "ring.TestLink2",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -441,7 +385,9 @@
                 "newPage": false,
                 "searchKey": "ring.TestLink3",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -457,35 +403,15 @@
           },
           {
             "node": {
-              "pathID": "/container/ring#TestUnlink",
-              "documentation": {
-                "identifier": "TestUnlink",
-                "newPage": false,
-                "searchKey": "ring.TestUnlink",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUnlink(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUnlink(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/container/ring#TestLinkUnlink",
               "documentation": {
                 "identifier": "TestLinkUnlink",
                 "newPage": false,
                 "searchKey": "ring.TestLinkUnlink",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -507,7 +433,9 @@
                 "newPage": false,
                 "searchKey": "ring.TestMoveEmptyRing",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -517,6 +445,123 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc TestMoveEmptyRing(t *testing.T)\n```\n\nTest that calling Move() on an empty Ring initializes it. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/container/ring#TestNew",
+              "documentation": {
+                "identifier": "TestNew",
+                "newPage": false,
+                "searchKey": "ring.TestNew",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNew(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNew(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/container/ring#TestUnlink",
+              "documentation": {
+                "identifier": "TestUnlink",
+                "newPage": false,
+                "searchKey": "ring.TestUnlink",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnlink(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnlink(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/container/ring#dump",
+              "documentation": {
+                "identifier": "dump",
+                "newPage": false,
+                "searchKey": "ring.dump",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func dump(r *Ring)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc dump(r *Ring)\n```\n\nFor debugging - keep around. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/container/ring#sumN",
+              "documentation": {
+                "identifier": "sumN",
+                "newPage": false,
+                "searchKey": "ring.sumN",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sumN(n int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sumN(n int) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/container/ring#verify",
+              "documentation": {
+                "identifier": "verify",
+                "newPage": false,
+                "searchKey": "ring.verify",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func verify(t *testing.T, r *Ring, N int, sum int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc verify(t *testing.T, r *Ring, N int, sum int)\n```\n\n"
               },
               "children": null
             }

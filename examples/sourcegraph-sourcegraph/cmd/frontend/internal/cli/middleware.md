@@ -11,22 +11,22 @@ Package middleware contains HTTP middlewares.
     * [type goImportMetaTag struct](#goImportMetaTag)
 * [Functions](#func)
     * [func BlackHole(next http.Handler) http.Handler](#BlackHole)
-    * [func isBlackhole(r *http.Request) bool](#isBlackhole)
     * [func SourcegraphComGoGetHandler(next http.Handler) http.Handler](#SourcegraphComGoGetHandler)
     * [func Trace(next http.Handler) http.Handler](#Trace)
+    * [func isBlackhole(r *http.Request) bool](#isBlackhole)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="goImportMetaTagTemplate" href="#goImportMetaTagTemplate">var goImportMetaTagTemplate</a>
 
 ```
 searchKey: middleware.goImportMetaTagTemplate
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -39,7 +39,7 @@ goImportMetaTagTemplate is an HTML template for rendering a blank page with a go
 
 ```
 searchKey: middleware.httpTrace
-tags: [private]
+tags: [variable boolean private]
 ```
 
 ```Go
@@ -49,14 +49,14 @@ var httpTrace, _ = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="goImportMetaTag" href="#goImportMetaTag">type goImportMetaTag struct</a>
 
 ```
 searchKey: middleware.goImportMetaTag
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -81,13 +81,14 @@ goImportMetaTag represents a go-import meta tag.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="BlackHole" href="#BlackHole">func BlackHole(next http.Handler) http.Handler</a>
 
 ```
 searchKey: middleware.BlackHole
+tags: [method]
 ```
 
 ```Go
@@ -98,21 +99,11 @@ BlackHole is a middleware which returns StatusGone on removed URLs that external
 
 🚨 SECURITY: This handler is served to all clients, even on private servers to clients who have not authenticated. It must not reveal any sensitive information. 
 
-### <a id="isBlackhole" href="#isBlackhole">func isBlackhole(r *http.Request) bool</a>
-
-```
-searchKey: middleware.isBlackhole
-tags: [private]
-```
-
-```Go
-func isBlackhole(r *http.Request) bool
-```
-
 ### <a id="SourcegraphComGoGetHandler" href="#SourcegraphComGoGetHandler">func SourcegraphComGoGetHandler(next http.Handler) http.Handler</a>
 
 ```
 searchKey: middleware.SourcegraphComGoGetHandler
+tags: [method]
 ```
 
 ```Go
@@ -137,6 +128,7 @@ import path pointing to github.com/sourcegraph/<repo> as the clone URL.
 
 ```
 searchKey: middleware.Trace
+tags: [method]
 ```
 
 ```Go
@@ -144,4 +136,15 @@ func Trace(next http.Handler) http.Handler
 ```
 
 Trace is an HTTP middleware that dumps the HTTP request body (to stderr) if the env var `HTTP_TRACE=1`. 
+
+### <a id="isBlackhole" href="#isBlackhole">func isBlackhole(r *http.Request) bool</a>
+
+```
+searchKey: middleware.isBlackhole
+tags: [method private]
+```
+
+```Go
+func isBlackhole(r *http.Request) bool
+```
 

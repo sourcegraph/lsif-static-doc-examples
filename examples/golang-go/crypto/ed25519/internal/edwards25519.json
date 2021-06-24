@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "crypto/ed25519/internal/edwards25519",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,232 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#identity",
-              "documentation": {
-                "identifier": "identity",
-                "newPage": false,
-                "searchKey": "edwards25519.identity",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var identity"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar identity, _ = ...\n```\n\nidentity is the point at infinity. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#generator",
-              "documentation": {
-                "identifier": "generator",
-                "newPage": false,
-                "searchKey": "edwards25519.generator",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var generator"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar generator, _ = ...\n```\n\ngenerator is the canonical curve basepoint. See TestGenerator for the correspondence of this encoding with the values in RFC 8032. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#feOne",
-              "documentation": {
-                "identifier": "feOne",
-                "newPage": false,
-                "searchKey": "edwards25519.feOne",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var feOne"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar feOne = new(field.Element).One()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#d",
-              "documentation": {
-                "identifier": "d",
-                "newPage": false,
-                "searchKey": "edwards25519.d",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var d"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar d = ...\n```\n\nd is a constant in the curve equation. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#d2",
-              "documentation": {
-                "identifier": "d2",
-                "newPage": false,
-                "searchKey": "edwards25519.d2",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var d2"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar d2 = new(field.Element).Add(d, d)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#scZero",
-              "documentation": {
-                "identifier": "scZero",
-                "newPage": false,
-                "searchKey": "edwards25519.scZero",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var scZero"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar scZero = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#scOne",
-              "documentation": {
-                "identifier": "scOne",
-                "newPage": false,
-                "searchKey": "edwards25519.scOne",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var scOne"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar scOne = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#scMinusOne",
-              "documentation": {
-                "identifier": "scMinusOne",
-                "newPage": false,
-                "searchKey": "edwards25519.scMinusOne",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var scMinusOne"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar scMinusOne = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#basepointTablePrecomp",
-              "documentation": {
-                "identifier": "basepointTablePrecomp",
-                "newPage": false,
-                "searchKey": "edwards25519.basepointTablePrecomp",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var basepointTablePrecomp"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar basepointTablePrecomp struct {\n\ttable    [32]affineLookupTable\n\tinitOnce sync.Once\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#basepointNafTablePrecomp",
-              "documentation": {
-                "identifier": "basepointNafTablePrecomp",
-                "newPage": false,
-                "searchKey": "edwards25519.basepointNafTablePrecomp",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var basepointNafTablePrecomp"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar basepointNafTablePrecomp struct {\n\ttable    nafLookupTable8\n\tinitOnce sync.Once\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/ed25519/internal/edwards25519#B",
               "documentation": {
                 "identifier": "B",
                 "newPage": false,
                 "searchKey": "edwards25519.B",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -287,6 +71,8 @@
                 "newPage": false,
                 "searchKey": "edwards25519.I",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -303,66 +89,94 @@
           },
           {
             "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#testAllocationsSink",
+              "pathID": "/crypto/ed25519/internal/edwards25519#basepointNafTablePrecomp",
               "documentation": {
-                "identifier": "testAllocationsSink",
+                "identifier": "basepointNafTablePrecomp",
                 "newPage": false,
-                "searchKey": "edwards25519.testAllocationsSink",
+                "searchKey": "edwards25519.basepointNafTablePrecomp",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var testAllocationsSink"
+                "value": "var basepointNafTablePrecomp"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar testAllocationsSink byte\n```\n\n"
+                "value": "```Go\nvar basepointNafTablePrecomp struct {\n\ttable    nafLookupTable8\n\tinitOnce sync.Once\n}\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#quickCheckConfig1024",
+              "pathID": "/crypto/ed25519/internal/edwards25519#basepointTablePrecomp",
               "documentation": {
-                "identifier": "quickCheckConfig1024",
+                "identifier": "basepointTablePrecomp",
                 "newPage": false,
-                "searchKey": "edwards25519.quickCheckConfig1024",
+                "searchKey": "edwards25519.basepointTablePrecomp",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var quickCheckConfig1024"
+                "value": "var basepointTablePrecomp"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar quickCheckConfig1024 = &quick.Config{MaxCountScale: 1 << 10}\n```\n\nquickCheckConfig1024 will make each quickcheck test run (1024 * -quickchecks) times. The default value of -quickchecks is 100. \n\n"
+                "value": "```Go\nvar basepointTablePrecomp struct {\n\ttable    [32]affineLookupTable\n\tinitOnce sync.Once\n}\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#quickCheckConfig32",
+              "pathID": "/crypto/ed25519/internal/edwards25519#d",
               "documentation": {
-                "identifier": "quickCheckConfig32",
+                "identifier": "d",
                 "newPage": false,
-                "searchKey": "edwards25519.quickCheckConfig32",
+                "searchKey": "edwards25519.d",
                 "tags": [
+                  "variable",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var quickCheckConfig32"
+                "value": "var d"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar quickCheckConfig32 = &quick.Config{MaxCountScale: 1 << 5}\n```\n\nquickCheckConfig32 will make each quickcheck test run (32 * -quickchecks) times. The default value of -quickchecks is 100. \n\n"
+                "value": "```Go\nvar d = ...\n```\n\nd is a constant in the curve equation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#d2",
+              "documentation": {
+                "identifier": "d2",
+                "newPage": false,
+                "searchKey": "edwards25519.d2",
+                "tags": [
+                  "variable",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var d2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar d2 = new(field.Element).Add(d, d)\n```\n\n"
               },
               "children": null
             }
@@ -375,6 +189,8 @@
                 "newPage": false,
                 "searchKey": "edwards25519.dalekScalar",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -397,6 +213,8 @@
                 "newPage": false,
                 "searchKey": "edwards25519.dalekScalarBasepoint",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -407,6 +225,221 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar dalekScalarBasepoint, _ = ...\n```\n\nthe above, times the edwards25519 basepoint. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#feOne",
+              "documentation": {
+                "identifier": "feOne",
+                "newPage": false,
+                "searchKey": "edwards25519.feOne",
+                "tags": [
+                  "variable",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var feOne"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar feOne = new(field.Element).One()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#generator",
+              "documentation": {
+                "identifier": "generator",
+                "newPage": false,
+                "searchKey": "edwards25519.generator",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var generator"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar generator, _ = ...\n```\n\ngenerator is the canonical curve basepoint. See TestGenerator for the correspondence of this encoding with the values in RFC 8032. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#identity",
+              "documentation": {
+                "identifier": "identity",
+                "newPage": false,
+                "searchKey": "edwards25519.identity",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var identity"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar identity, _ = ...\n```\n\nidentity is the point at infinity. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#quickCheckConfig1024",
+              "documentation": {
+                "identifier": "quickCheckConfig1024",
+                "newPage": false,
+                "searchKey": "edwards25519.quickCheckConfig1024",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var quickCheckConfig1024"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar quickCheckConfig1024 = &quick.Config{MaxCountScale: 1 << 10}\n```\n\nquickCheckConfig1024 will make each quickcheck test run (1024 * -quickchecks) times. The default value of -quickchecks is 100. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#quickCheckConfig32",
+              "documentation": {
+                "identifier": "quickCheckConfig32",
+                "newPage": false,
+                "searchKey": "edwards25519.quickCheckConfig32",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var quickCheckConfig32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar quickCheckConfig32 = &quick.Config{MaxCountScale: 1 << 5}\n```\n\nquickCheckConfig32 will make each quickcheck test run (32 * -quickchecks) times. The default value of -quickchecks is 100. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#scMinusOne",
+              "documentation": {
+                "identifier": "scMinusOne",
+                "newPage": false,
+                "searchKey": "edwards25519.scMinusOne",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var scMinusOne"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar scMinusOne = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#scOne",
+              "documentation": {
+                "identifier": "scOne",
+                "newPage": false,
+                "searchKey": "edwards25519.scOne",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var scOne"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar scOne = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#scZero",
+              "documentation": {
+                "identifier": "scZero",
+                "newPage": false,
+                "searchKey": "edwards25519.scZero",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var scZero"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar scZero = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#testAllocationsSink",
+              "documentation": {
+                "identifier": "testAllocationsSink",
+                "newPage": false,
+                "searchKey": "edwards25519.testAllocationsSink",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testAllocationsSink"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testAllocationsSink byte\n```\n\n"
               },
               "children": null
             }
@@ -422,6 +455,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -436,234 +470,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#projP1xP1",
-              "documentation": {
-                "identifier": "projP1xP1",
-                "newPage": false,
-                "searchKey": "edwards25519.projP1xP1",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type projP1xP1 struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype projP1xP1 struct {\n\tX, Y, Z, T field.Element\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#projP1xP1.Add",
-                    "documentation": {
-                      "identifier": "projP1xP1.Add",
-                      "newPage": false,
-                      "searchKey": "edwards25519.projP1xP1.Add",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *projP1xP1) Add(p *Point, q *projCached) *projP1xP1"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *projP1xP1) Add(p *Point, q *projCached) *projP1xP1\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#projP1xP1.Sub",
-                    "documentation": {
-                      "identifier": "projP1xP1.Sub",
-                      "newPage": false,
-                      "searchKey": "edwards25519.projP1xP1.Sub",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *projP1xP1) Sub(p *Point, q *projCached) *projP1xP1"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *projP1xP1) Sub(p *Point, q *projCached) *projP1xP1\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#projP1xP1.AddAffine",
-                    "documentation": {
-                      "identifier": "projP1xP1.AddAffine",
-                      "newPage": false,
-                      "searchKey": "edwards25519.projP1xP1.AddAffine",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *projP1xP1) AddAffine(p *Point, q *affineCached) *projP1xP1"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *projP1xP1) AddAffine(p *Point, q *affineCached) *projP1xP1\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#projP1xP1.SubAffine",
-                    "documentation": {
-                      "identifier": "projP1xP1.SubAffine",
-                      "newPage": false,
-                      "searchKey": "edwards25519.projP1xP1.SubAffine",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *projP1xP1) SubAffine(p *Point, q *affineCached) *projP1xP1"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *projP1xP1) SubAffine(p *Point, q *affineCached) *projP1xP1\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#projP1xP1.Double",
-                    "documentation": {
-                      "identifier": "projP1xP1.Double",
-                      "newPage": false,
-                      "searchKey": "edwards25519.projP1xP1.Double",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *projP1xP1) Double(p *projP2) *projP1xP1"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *projP1xP1) Double(p *projP2) *projP1xP1\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#projP2",
-              "documentation": {
-                "identifier": "projP2",
-                "newPage": false,
-                "searchKey": "edwards25519.projP2",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type projP2 struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype projP2 struct {\n\tX, Y, Z field.Element\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#projP2.Zero",
-                    "documentation": {
-                      "identifier": "projP2.Zero",
-                      "newPage": false,
-                      "searchKey": "edwards25519.projP2.Zero",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *projP2) Zero() *projP2"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *projP2) Zero() *projP2\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#projP2.FromP1xP1",
-                    "documentation": {
-                      "identifier": "projP2.FromP1xP1",
-                      "newPage": false,
-                      "searchKey": "edwards25519.projP2.FromP1xP1",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *projP2) FromP1xP1(p *projP1xP1) *projP2"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *projP2) FromP1xP1(p *projP1xP1) *projP2\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#projP2.FromP3",
-                    "documentation": {
-                      "identifier": "projP2.FromP3",
-                      "newPage": false,
-                      "searchKey": "edwards25519.projP2.FromP3",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *projP2) FromP3(p *Point) *projP2"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *projP2) FromP3(p *Point) *projP2\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/ed25519/internal/edwards25519#Point",
               "documentation": {
                 "identifier": "Point",
                 "newPage": false,
                 "searchKey": "edwards25519.Point",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -676,32 +490,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#NewIdentityPoint",
-                    "documentation": {
-                      "identifier": "NewIdentityPoint",
-                      "newPage": false,
-                      "searchKey": "edwards25519.NewIdentityPoint",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewIdentityPoint() *Point"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewIdentityPoint() *Point\n```\n\nNewIdentityPoint returns a new Point set to the identity. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/crypto/ed25519/internal/edwards25519#NewGeneratorPoint",
                     "documentation": {
                       "identifier": "NewGeneratorPoint",
                       "newPage": false,
                       "searchKey": "edwards25519.NewGeneratorPoint",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -716,20 +512,44 @@
                 },
                 {
                   "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#Point.Set",
+                    "pathID": "/crypto/ed25519/internal/edwards25519#NewIdentityPoint",
                     "documentation": {
-                      "identifier": "Point.Set",
+                      "identifier": "NewIdentityPoint",
                       "newPage": false,
-                      "searchKey": "edwards25519.Point.Set",
-                      "tags": null
+                      "searchKey": "edwards25519.NewIdentityPoint",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (v *Point) Set(u *Point) *Point"
+                      "value": "func NewIdentityPoint() *Point"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (v *Point) Set(u *Point) *Point\n```\n\nSet sets v = u, and returns v. \n\n"
+                      "value": "```Go\nfunc NewIdentityPoint() *Point\n```\n\nNewIdentityPoint returns a new Point set to the identity. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#Point.Add",
+                    "documentation": {
+                      "identifier": "Point.Add",
+                      "newPage": false,
+                      "searchKey": "edwards25519.Point.Add",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Point) Add(p, q *Point) *Point"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Point) Add(p, q *Point) *Point\n```\n\nAdd sets v = p + q, and returns v. \n\n"
                     },
                     "children": null
                   }
@@ -741,7 +561,9 @@
                       "identifier": "Point.Bytes",
                       "newPage": false,
                       "searchKey": "edwards25519.Point.Bytes",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -756,12 +578,189 @@
                 },
                 {
                   "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#Point.Equal",
+                    "documentation": {
+                      "identifier": "Point.Equal",
+                      "newPage": false,
+                      "searchKey": "edwards25519.Point.Equal",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Point) Equal(u *Point) int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Point) Equal(u *Point) int\n```\n\nEqual returns 1 if v is equivalent to u, and 0 otherwise. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#Point.Negate",
+                    "documentation": {
+                      "identifier": "Point.Negate",
+                      "newPage": false,
+                      "searchKey": "edwards25519.Point.Negate",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Point) Negate(p *Point) *Point"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Point) Negate(p *Point) *Point\n```\n\nNegate sets v = -p, and returns v. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#Point.ScalarBaseMult",
+                    "documentation": {
+                      "identifier": "Point.ScalarBaseMult",
+                      "newPage": false,
+                      "searchKey": "edwards25519.Point.ScalarBaseMult",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Point) ScalarBaseMult(x *Scalar) *Point"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Point) ScalarBaseMult(x *Scalar) *Point\n```\n\nScalarBaseMult sets v = x * B, where B is the canonical generator, and returns v. \n\nThe scalar multiplication is done in constant time. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#Point.ScalarMult",
+                    "documentation": {
+                      "identifier": "Point.ScalarMult",
+                      "newPage": false,
+                      "searchKey": "edwards25519.Point.ScalarMult",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Point) ScalarMult(x *Scalar, q *Point) *Point"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Point) ScalarMult(x *Scalar, q *Point) *Point\n```\n\nScalarMult sets v = x * q, and returns v. \n\nThe scalar multiplication is done in constant time. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#Point.Set",
+                    "documentation": {
+                      "identifier": "Point.Set",
+                      "newPage": false,
+                      "searchKey": "edwards25519.Point.Set",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Point) Set(u *Point) *Point"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Point) Set(u *Point) *Point\n```\n\nSet sets v = u, and returns v. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#Point.SetBytes",
+                    "documentation": {
+                      "identifier": "Point.SetBytes",
+                      "newPage": false,
+                      "searchKey": "edwards25519.Point.SetBytes",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Point) SetBytes(x []byte) (*Point, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Point) SetBytes(x []byte) (*Point, error)\n```\n\nSetBytes sets v = x, where x is a 32-byte encoding of v. If x does not represent a valid point on the curve, SetBytes returns nil and an error and the receiver is unchanged. Otherwise, SetBytes returns v. \n\nNote that SetBytes accepts all non-canonical encodings of valid points. That is, it follows decoding rules that match most implementations in the ecosystem rather than RFC 8032. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#Point.Subtract",
+                    "documentation": {
+                      "identifier": "Point.Subtract",
+                      "newPage": false,
+                      "searchKey": "edwards25519.Point.Subtract",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Point) Subtract(p, q *Point) *Point"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Point) Subtract(p, q *Point) *Point\n```\n\nSubtract sets v = p - q, and returns v. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#Point.VarTimeDoubleScalarBaseMult",
+                    "documentation": {
+                      "identifier": "Point.VarTimeDoubleScalarBaseMult",
+                      "newPage": false,
+                      "searchKey": "edwards25519.Point.VarTimeDoubleScalarBaseMult",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Point) VarTimeDoubleScalarBaseMult(a *Scalar, A *Point, b *Scalar) *Point"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Point) VarTimeDoubleScalarBaseMult(a *Scalar, A *Point, b *Scalar) *Point\n```\n\nVarTimeDoubleScalarBaseMult sets v = a * A + b * B, where B is the canonical generator, and returns v. \n\nExecution time depends on the inputs. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/crypto/ed25519/internal/edwards25519#Point.bytes",
                     "documentation": {
                       "identifier": "Point.bytes",
                       "newPage": false,
                       "searchKey": "edwards25519.Point.bytes",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -778,32 +777,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#Point.SetBytes",
-                    "documentation": {
-                      "identifier": "Point.SetBytes",
-                      "newPage": false,
-                      "searchKey": "edwards25519.Point.SetBytes",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *Point) SetBytes(x []byte) (*Point, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *Point) SetBytes(x []byte) (*Point, error)\n```\n\nSetBytes sets v = x, where x is a 32-byte encoding of v. If x does not represent a valid point on the curve, SetBytes returns nil and an error and the receiver is unchanged. Otherwise, SetBytes returns v. \n\nNote that SetBytes accepts all non-canonical encodings of valid points. That is, it follows decoding rules that match most implementations in the ecosystem rather than RFC 8032. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/crypto/ed25519/internal/edwards25519#Point.fromP1xP1",
                     "documentation": {
                       "identifier": "Point.fromP1xP1",
                       "newPage": false,
                       "searchKey": "edwards25519.Point.fromP1xP1",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -826,6 +806,7 @@
                       "newPage": false,
                       "searchKey": "edwards25519.Point.fromP2",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -836,390 +817,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (v *Point) fromP2(p *projP2) *Point\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#Point.Add",
-                    "documentation": {
-                      "identifier": "Point.Add",
-                      "newPage": false,
-                      "searchKey": "edwards25519.Point.Add",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *Point) Add(p, q *Point) *Point"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *Point) Add(p, q *Point) *Point\n```\n\nAdd sets v = p + q, and returns v. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#Point.Subtract",
-                    "documentation": {
-                      "identifier": "Point.Subtract",
-                      "newPage": false,
-                      "searchKey": "edwards25519.Point.Subtract",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *Point) Subtract(p, q *Point) *Point"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *Point) Subtract(p, q *Point) *Point\n```\n\nSubtract sets v = p - q, and returns v. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#Point.Negate",
-                    "documentation": {
-                      "identifier": "Point.Negate",
-                      "newPage": false,
-                      "searchKey": "edwards25519.Point.Negate",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *Point) Negate(p *Point) *Point"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *Point) Negate(p *Point) *Point\n```\n\nNegate sets v = -p, and returns v. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#Point.Equal",
-                    "documentation": {
-                      "identifier": "Point.Equal",
-                      "newPage": false,
-                      "searchKey": "edwards25519.Point.Equal",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *Point) Equal(u *Point) int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *Point) Equal(u *Point) int\n```\n\nEqual returns 1 if v is equivalent to u, and 0 otherwise. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#Point.ScalarBaseMult",
-                    "documentation": {
-                      "identifier": "Point.ScalarBaseMult",
-                      "newPage": false,
-                      "searchKey": "edwards25519.Point.ScalarBaseMult",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *Point) ScalarBaseMult(x *Scalar) *Point"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *Point) ScalarBaseMult(x *Scalar) *Point\n```\n\nScalarBaseMult sets v = x * B, where B is the canonical generator, and returns v. \n\nThe scalar multiplication is done in constant time. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#Point.ScalarMult",
-                    "documentation": {
-                      "identifier": "Point.ScalarMult",
-                      "newPage": false,
-                      "searchKey": "edwards25519.Point.ScalarMult",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *Point) ScalarMult(x *Scalar, q *Point) *Point"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *Point) ScalarMult(x *Scalar, q *Point) *Point\n```\n\nScalarMult sets v = x * q, and returns v. \n\nThe scalar multiplication is done in constant time. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#Point.VarTimeDoubleScalarBaseMult",
-                    "documentation": {
-                      "identifier": "Point.VarTimeDoubleScalarBaseMult",
-                      "newPage": false,
-                      "searchKey": "edwards25519.Point.VarTimeDoubleScalarBaseMult",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *Point) VarTimeDoubleScalarBaseMult(a *Scalar, A *Point, b *Scalar) *Point"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *Point) VarTimeDoubleScalarBaseMult(a *Scalar, A *Point, b *Scalar) *Point\n```\n\nVarTimeDoubleScalarBaseMult sets v = a * A + b * B, where B is the canonical generator, and returns v. \n\nExecution time depends on the inputs. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#incomparable",
-              "documentation": {
-                "identifier": "incomparable",
-                "newPage": false,
-                "searchKey": "edwards25519.incomparable",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type incomparable [0]func()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype incomparable [0]func()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#projCached",
-              "documentation": {
-                "identifier": "projCached",
-                "newPage": false,
-                "searchKey": "edwards25519.projCached",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type projCached struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype projCached struct {\n\tYplusX, YminusX, Z, T2d field.Element\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#projCached.Zero",
-                    "documentation": {
-                      "identifier": "projCached.Zero",
-                      "newPage": false,
-                      "searchKey": "edwards25519.projCached.Zero",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *projCached) Zero() *projCached"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *projCached) Zero() *projCached\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#projCached.FromP3",
-                    "documentation": {
-                      "identifier": "projCached.FromP3",
-                      "newPage": false,
-                      "searchKey": "edwards25519.projCached.FromP3",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *projCached) FromP3(p *Point) *projCached"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *projCached) FromP3(p *Point) *projCached\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#projCached.Select",
-                    "documentation": {
-                      "identifier": "projCached.Select",
-                      "newPage": false,
-                      "searchKey": "edwards25519.projCached.Select",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *projCached) Select(a, b *projCached, cond int) *projCached"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *projCached) Select(a, b *projCached, cond int) *projCached\n```\n\nSelect sets v to a if cond == 1 and to b if cond == 0. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#projCached.CondNeg",
-                    "documentation": {
-                      "identifier": "projCached.CondNeg",
-                      "newPage": false,
-                      "searchKey": "edwards25519.projCached.CondNeg",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *projCached) CondNeg(cond int) *projCached"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *projCached) CondNeg(cond int) *projCached\n```\n\nCondNeg negates v if cond == 1 and leaves it unchanged if cond == 0. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#affineCached",
-              "documentation": {
-                "identifier": "affineCached",
-                "newPage": false,
-                "searchKey": "edwards25519.affineCached",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type affineCached struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype affineCached struct {\n\tYplusX, YminusX, T2d field.Element\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#affineCached.Zero",
-                    "documentation": {
-                      "identifier": "affineCached.Zero",
-                      "newPage": false,
-                      "searchKey": "edwards25519.affineCached.Zero",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *affineCached) Zero() *affineCached"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *affineCached) Zero() *affineCached\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#affineCached.FromP3",
-                    "documentation": {
-                      "identifier": "affineCached.FromP3",
-                      "newPage": false,
-                      "searchKey": "edwards25519.affineCached.FromP3",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *affineCached) FromP3(p *Point) *affineCached"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *affineCached) FromP3(p *Point) *affineCached\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#affineCached.Select",
-                    "documentation": {
-                      "identifier": "affineCached.Select",
-                      "newPage": false,
-                      "searchKey": "edwards25519.affineCached.Select",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *affineCached) Select(a, b *affineCached, cond int) *affineCached"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *affineCached) Select(a, b *affineCached, cond int) *affineCached\n```\n\nSelect sets v to a if cond == 1 and to b if cond == 0. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#affineCached.CondNeg",
-                    "documentation": {
-                      "identifier": "affineCached.CondNeg",
-                      "newPage": false,
-                      "searchKey": "edwards25519.affineCached.CondNeg",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v *affineCached) CondNeg(cond int) *affineCached"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v *affineCached) CondNeg(cond int) *affineCached\n```\n\nCondNeg negates v if cond == 1 and leaves it unchanged if cond == 0. \n\n"
                     },
                     "children": null
                   }
@@ -1234,7 +831,9 @@
                 "identifier": "Scalar",
                 "newPage": false,
                 "searchKey": "edwards25519.Scalar",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1252,7 +851,9 @@
                       "identifier": "NewScalar",
                       "newPage": false,
                       "searchKey": "edwards25519.NewScalar",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1267,32 +868,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#Scalar.MultiplyAdd",
-                    "documentation": {
-                      "identifier": "Scalar.MultiplyAdd",
-                      "newPage": false,
-                      "searchKey": "edwards25519.Scalar.MultiplyAdd",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Scalar) MultiplyAdd(x, y, z *Scalar) *Scalar"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Scalar) MultiplyAdd(x, y, z *Scalar) *Scalar\n```\n\nMultiplyAdd sets s = x * y + z mod l, and returns s. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/crypto/ed25519/internal/edwards25519#Scalar.Add",
                     "documentation": {
                       "identifier": "Scalar.Add",
                       "newPage": false,
                       "searchKey": "edwards25519.Scalar.Add",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1307,152 +890,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#Scalar.Subtract",
-                    "documentation": {
-                      "identifier": "Scalar.Subtract",
-                      "newPage": false,
-                      "searchKey": "edwards25519.Scalar.Subtract",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Scalar) Subtract(x, y *Scalar) *Scalar"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Scalar) Subtract(x, y *Scalar) *Scalar\n```\n\nSubtract sets s = x - y mod l, and returns s. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#Scalar.Negate",
-                    "documentation": {
-                      "identifier": "Scalar.Negate",
-                      "newPage": false,
-                      "searchKey": "edwards25519.Scalar.Negate",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Scalar) Negate(x *Scalar) *Scalar"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Scalar) Negate(x *Scalar) *Scalar\n```\n\nNegate sets s = -x mod l, and returns s. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#Scalar.Multiply",
-                    "documentation": {
-                      "identifier": "Scalar.Multiply",
-                      "newPage": false,
-                      "searchKey": "edwards25519.Scalar.Multiply",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Scalar) Multiply(x, y *Scalar) *Scalar"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Scalar) Multiply(x, y *Scalar) *Scalar\n```\n\nMultiply sets s = x * y mod l, and returns s. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#Scalar.Set",
-                    "documentation": {
-                      "identifier": "Scalar.Set",
-                      "newPage": false,
-                      "searchKey": "edwards25519.Scalar.Set",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Scalar) Set(x *Scalar) *Scalar"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Scalar) Set(x *Scalar) *Scalar\n```\n\nSet sets s = x, and returns s. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#Scalar.SetUniformBytes",
-                    "documentation": {
-                      "identifier": "Scalar.SetUniformBytes",
-                      "newPage": false,
-                      "searchKey": "edwards25519.Scalar.SetUniformBytes",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Scalar) SetUniformBytes(x []byte) *Scalar"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Scalar) SetUniformBytes(x []byte) *Scalar\n```\n\nSetUniformBytes sets s to an uniformly distributed value given 64 uniformly distributed random bytes. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#Scalar.SetCanonicalBytes",
-                    "documentation": {
-                      "identifier": "Scalar.SetCanonicalBytes",
-                      "newPage": false,
-                      "searchKey": "edwards25519.Scalar.SetCanonicalBytes",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Scalar) SetCanonicalBytes(x []byte) (*Scalar, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Scalar) SetCanonicalBytes(x []byte) (*Scalar, error)\n```\n\nSetCanonicalBytes sets s = x, where x is a 32-byte little-endian encoding of s, and returns s. If x is not a canonical encoding of s, SetCanonicalBytes returns nil and an error, and the receiver is unchanged. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#Scalar.SetBytesWithClamping",
-                    "documentation": {
-                      "identifier": "Scalar.SetBytesWithClamping",
-                      "newPage": false,
-                      "searchKey": "edwards25519.Scalar.SetBytesWithClamping",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Scalar) SetBytesWithClamping(x []byte) *Scalar"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Scalar) SetBytesWithClamping(x []byte) *Scalar\n```\n\nSetBytesWithClamping applies the buffer pruning described in RFC 8032, Section 5.1.5 (also known as clamping) and sets s to the result. The input must be 32 bytes, and it is not modified. \n\nNote that since Scalar values are always reduced modulo the prime order of the curve, the resulting value will not preserve any of the cofactor-clearing properties that clamping is meant to provide. It will however work as expected as long as it is applied to points on the prime order subgroup, like in Ed25519. In fact, it is lost to history why RFC 8032 adopted the irrelevant RFC 7748 clamping, but it is now required for compatibility. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/crypto/ed25519/internal/edwards25519#Scalar.Bytes",
                     "documentation": {
                       "identifier": "Scalar.Bytes",
                       "newPage": false,
                       "searchKey": "edwards25519.Scalar.Bytes",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1472,7 +917,9 @@
                       "identifier": "Scalar.Equal",
                       "newPage": false,
                       "searchKey": "edwards25519.Scalar.Equal",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1487,12 +934,212 @@
                 },
                 {
                   "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#Scalar.Generate",
+                    "documentation": {
+                      "identifier": "Scalar.Generate",
+                      "newPage": false,
+                      "searchKey": "edwards25519.Scalar.Generate",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (Scalar) Generate(rand *mathrand.Rand, size int) reflect.Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (Scalar) Generate(rand *mathrand.Rand, size int) reflect.Value\n```\n\nGenerate returns a valid (reduced modulo l) Scalar with a distribution weighted towards high, low, and edge values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#Scalar.Multiply",
+                    "documentation": {
+                      "identifier": "Scalar.Multiply",
+                      "newPage": false,
+                      "searchKey": "edwards25519.Scalar.Multiply",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scalar) Multiply(x, y *Scalar) *Scalar"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scalar) Multiply(x, y *Scalar) *Scalar\n```\n\nMultiply sets s = x * y mod l, and returns s. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#Scalar.MultiplyAdd",
+                    "documentation": {
+                      "identifier": "Scalar.MultiplyAdd",
+                      "newPage": false,
+                      "searchKey": "edwards25519.Scalar.MultiplyAdd",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scalar) MultiplyAdd(x, y, z *Scalar) *Scalar"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scalar) MultiplyAdd(x, y, z *Scalar) *Scalar\n```\n\nMultiplyAdd sets s = x * y + z mod l, and returns s. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#Scalar.Negate",
+                    "documentation": {
+                      "identifier": "Scalar.Negate",
+                      "newPage": false,
+                      "searchKey": "edwards25519.Scalar.Negate",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scalar) Negate(x *Scalar) *Scalar"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scalar) Negate(x *Scalar) *Scalar\n```\n\nNegate sets s = -x mod l, and returns s. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#Scalar.Set",
+                    "documentation": {
+                      "identifier": "Scalar.Set",
+                      "newPage": false,
+                      "searchKey": "edwards25519.Scalar.Set",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scalar) Set(x *Scalar) *Scalar"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scalar) Set(x *Scalar) *Scalar\n```\n\nSet sets s = x, and returns s. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#Scalar.SetBytesWithClamping",
+                    "documentation": {
+                      "identifier": "Scalar.SetBytesWithClamping",
+                      "newPage": false,
+                      "searchKey": "edwards25519.Scalar.SetBytesWithClamping",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scalar) SetBytesWithClamping(x []byte) *Scalar"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scalar) SetBytesWithClamping(x []byte) *Scalar\n```\n\nSetBytesWithClamping applies the buffer pruning described in RFC 8032, Section 5.1.5 (also known as clamping) and sets s to the result. The input must be 32 bytes, and it is not modified. \n\nNote that since Scalar values are always reduced modulo the prime order of the curve, the resulting value will not preserve any of the cofactor-clearing properties that clamping is meant to provide. It will however work as expected as long as it is applied to points on the prime order subgroup, like in Ed25519. In fact, it is lost to history why RFC 8032 adopted the irrelevant RFC 7748 clamping, but it is now required for compatibility. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#Scalar.SetCanonicalBytes",
+                    "documentation": {
+                      "identifier": "Scalar.SetCanonicalBytes",
+                      "newPage": false,
+                      "searchKey": "edwards25519.Scalar.SetCanonicalBytes",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scalar) SetCanonicalBytes(x []byte) (*Scalar, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scalar) SetCanonicalBytes(x []byte) (*Scalar, error)\n```\n\nSetCanonicalBytes sets s = x, where x is a 32-byte little-endian encoding of s, and returns s. If x is not a canonical encoding of s, SetCanonicalBytes returns nil and an error, and the receiver is unchanged. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#Scalar.SetUniformBytes",
+                    "documentation": {
+                      "identifier": "Scalar.SetUniformBytes",
+                      "newPage": false,
+                      "searchKey": "edwards25519.Scalar.SetUniformBytes",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scalar) SetUniformBytes(x []byte) *Scalar"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scalar) SetUniformBytes(x []byte) *Scalar\n```\n\nSetUniformBytes sets s to an uniformly distributed value given 64 uniformly distributed random bytes. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#Scalar.Subtract",
+                    "documentation": {
+                      "identifier": "Scalar.Subtract",
+                      "newPage": false,
+                      "searchKey": "edwards25519.Scalar.Subtract",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scalar) Subtract(x, y *Scalar) *Scalar"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scalar) Subtract(x, y *Scalar) *Scalar\n```\n\nSubtract sets s = x - y mod l, and returns s. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/crypto/ed25519/internal/edwards25519#Scalar.nonAdjacentForm",
                     "documentation": {
                       "identifier": "Scalar.nonAdjacentForm",
                       "newPage": false,
                       "searchKey": "edwards25519.Scalar.nonAdjacentForm",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1515,6 +1162,7 @@
                       "newPage": false,
                       "searchKey": "edwards25519.Scalar.signedRadix16",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1528,92 +1176,119 @@
                     },
                     "children": null
                   }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#Scalar.Generate",
-                    "documentation": {
-                      "identifier": "Scalar.Generate",
-                      "newPage": false,
-                      "searchKey": "edwards25519.Scalar.Generate",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (Scalar) Generate(rand *mathrand.Rand, size int) reflect.Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (Scalar) Generate(rand *mathrand.Rand, size int) reflect.Value\n```\n\nGenerate returns a valid (reduced modulo l) Scalar with a distribution weighted towards high, low, and edge values. \n\n"
-                    },
-                    "children": null
-                  }
                 }
               ]
             }
           },
           {
             "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#projLookupTable",
+              "pathID": "/crypto/ed25519/internal/edwards25519#affineCached",
               "documentation": {
-                "identifier": "projLookupTable",
+                "identifier": "affineCached",
                 "newPage": false,
-                "searchKey": "edwards25519.projLookupTable",
+                "searchKey": "edwards25519.affineCached",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type projLookupTable struct"
+                "value": "type affineCached struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype projLookupTable struct {\n\tpoints [8]projCached\n}\n```\n\nA dynamic lookup table for variable-base, constant-time scalar muls. \n\n"
+                "value": "```Go\ntype affineCached struct {\n\tYplusX, YminusX, T2d field.Element\n}\n```\n\n"
               },
               "children": [
                 {
                   "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#projLookupTable.FromP3",
+                    "pathID": "/crypto/ed25519/internal/edwards25519#affineCached.CondNeg",
                     "documentation": {
-                      "identifier": "projLookupTable.FromP3",
+                      "identifier": "affineCached.CondNeg",
                       "newPage": false,
-                      "searchKey": "edwards25519.projLookupTable.FromP3",
+                      "searchKey": "edwards25519.affineCached.CondNeg",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (v *projLookupTable) FromP3(q *Point)"
+                      "value": "func (v *affineCached) CondNeg(cond int) *affineCached"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (v *projLookupTable) FromP3(q *Point)\n```\n\nBuilds a lookup table at runtime. Fast. \n\n"
+                      "value": "```Go\nfunc (v *affineCached) CondNeg(cond int) *affineCached\n```\n\nCondNeg negates v if cond == 1 and leaves it unchanged if cond == 0. \n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/crypto/ed25519/internal/edwards25519#projLookupTable.SelectInto",
+                    "pathID": "/crypto/ed25519/internal/edwards25519#affineCached.FromP3",
                     "documentation": {
-                      "identifier": "projLookupTable.SelectInto",
+                      "identifier": "affineCached.FromP3",
                       "newPage": false,
-                      "searchKey": "edwards25519.projLookupTable.SelectInto",
+                      "searchKey": "edwards25519.affineCached.FromP3",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (v *projLookupTable) SelectInto(dest *projCached, x int8)"
+                      "value": "func (v *affineCached) FromP3(p *Point) *affineCached"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (v *projLookupTable) SelectInto(dest *projCached, x int8)\n```\n\nSet dest to x*Q, where -8 <= x <= 8, in constant time. \n\n"
+                      "value": "```Go\nfunc (v *affineCached) FromP3(p *Point) *affineCached\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#affineCached.Select",
+                    "documentation": {
+                      "identifier": "affineCached.Select",
+                      "newPage": false,
+                      "searchKey": "edwards25519.affineCached.Select",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *affineCached) Select(a, b *affineCached, cond int) *affineCached"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *affineCached) Select(a, b *affineCached, cond int) *affineCached\n```\n\nSelect sets v to a if cond == 1 and to b if cond == 0. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#affineCached.Zero",
+                    "documentation": {
+                      "identifier": "affineCached.Zero",
+                      "newPage": false,
+                      "searchKey": "edwards25519.affineCached.Zero",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *affineCached) Zero() *affineCached"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *affineCached) Zero() *affineCached\n```\n\n"
                     },
                     "children": null
                   }
@@ -1629,6 +1304,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.affineLookupTable",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1649,6 +1325,7 @@
                       "newPage": false,
                       "searchKey": "edwards25519.affineLookupTable.FromP3",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1671,6 +1348,7 @@
                       "newPage": false,
                       "searchKey": "edwards25519.affineLookupTable.SelectInto",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1690,12 +1368,37 @@
           },
           {
             "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#incomparable",
+              "documentation": {
+                "identifier": "incomparable",
+                "newPage": false,
+                "searchKey": "edwards25519.incomparable",
+                "tags": [
+                  "array",
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type incomparable [0]func()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype incomparable [0]func()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/ed25519/internal/edwards25519#nafLookupTable5",
               "documentation": {
                 "identifier": "nafLookupTable5",
                 "newPage": false,
                 "searchKey": "edwards25519.nafLookupTable5",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1716,6 +1419,7 @@
                       "newPage": false,
                       "searchKey": "edwards25519.nafLookupTable5.FromP3",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1738,6 +1442,7 @@
                       "newPage": false,
                       "searchKey": "edwards25519.nafLookupTable5.SelectInto",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1763,6 +1468,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.nafLookupTable8",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1783,6 +1489,7 @@
                       "newPage": false,
                       "searchKey": "edwards25519.basepointNafTable",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1805,6 +1512,7 @@
                       "newPage": false,
                       "searchKey": "edwards25519.nafLookupTable8.FromP3",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1827,6 +1535,7 @@
                       "newPage": false,
                       "searchKey": "edwards25519.nafLookupTable8.SelectInto",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1852,6 +1561,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.notZeroScalar",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1872,6 +1582,7 @@
                       "newPage": false,
                       "searchKey": "edwards25519.notZeroScalar.Generate",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1882,6 +1593,424 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (notZeroScalar) Generate(rand *mathrand.Rand, size int) reflect.Value\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#projCached",
+              "documentation": {
+                "identifier": "projCached",
+                "newPage": false,
+                "searchKey": "edwards25519.projCached",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type projCached struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype projCached struct {\n\tYplusX, YminusX, Z, T2d field.Element\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#projCached.CondNeg",
+                    "documentation": {
+                      "identifier": "projCached.CondNeg",
+                      "newPage": false,
+                      "searchKey": "edwards25519.projCached.CondNeg",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *projCached) CondNeg(cond int) *projCached"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *projCached) CondNeg(cond int) *projCached\n```\n\nCondNeg negates v if cond == 1 and leaves it unchanged if cond == 0. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#projCached.FromP3",
+                    "documentation": {
+                      "identifier": "projCached.FromP3",
+                      "newPage": false,
+                      "searchKey": "edwards25519.projCached.FromP3",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *projCached) FromP3(p *Point) *projCached"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *projCached) FromP3(p *Point) *projCached\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#projCached.Select",
+                    "documentation": {
+                      "identifier": "projCached.Select",
+                      "newPage": false,
+                      "searchKey": "edwards25519.projCached.Select",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *projCached) Select(a, b *projCached, cond int) *projCached"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *projCached) Select(a, b *projCached, cond int) *projCached\n```\n\nSelect sets v to a if cond == 1 and to b if cond == 0. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#projCached.Zero",
+                    "documentation": {
+                      "identifier": "projCached.Zero",
+                      "newPage": false,
+                      "searchKey": "edwards25519.projCached.Zero",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *projCached) Zero() *projCached"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *projCached) Zero() *projCached\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#projLookupTable",
+              "documentation": {
+                "identifier": "projLookupTable",
+                "newPage": false,
+                "searchKey": "edwards25519.projLookupTable",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type projLookupTable struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype projLookupTable struct {\n\tpoints [8]projCached\n}\n```\n\nA dynamic lookup table for variable-base, constant-time scalar muls. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#projLookupTable.FromP3",
+                    "documentation": {
+                      "identifier": "projLookupTable.FromP3",
+                      "newPage": false,
+                      "searchKey": "edwards25519.projLookupTable.FromP3",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *projLookupTable) FromP3(q *Point)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *projLookupTable) FromP3(q *Point)\n```\n\nBuilds a lookup table at runtime. Fast. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#projLookupTable.SelectInto",
+                    "documentation": {
+                      "identifier": "projLookupTable.SelectInto",
+                      "newPage": false,
+                      "searchKey": "edwards25519.projLookupTable.SelectInto",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *projLookupTable) SelectInto(dest *projCached, x int8)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *projLookupTable) SelectInto(dest *projCached, x int8)\n```\n\nSet dest to x*Q, where -8 <= x <= 8, in constant time. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#projP1xP1",
+              "documentation": {
+                "identifier": "projP1xP1",
+                "newPage": false,
+                "searchKey": "edwards25519.projP1xP1",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type projP1xP1 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype projP1xP1 struct {\n\tX, Y, Z, T field.Element\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#projP1xP1.Add",
+                    "documentation": {
+                      "identifier": "projP1xP1.Add",
+                      "newPage": false,
+                      "searchKey": "edwards25519.projP1xP1.Add",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *projP1xP1) Add(p *Point, q *projCached) *projP1xP1"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *projP1xP1) Add(p *Point, q *projCached) *projP1xP1\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#projP1xP1.AddAffine",
+                    "documentation": {
+                      "identifier": "projP1xP1.AddAffine",
+                      "newPage": false,
+                      "searchKey": "edwards25519.projP1xP1.AddAffine",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *projP1xP1) AddAffine(p *Point, q *affineCached) *projP1xP1"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *projP1xP1) AddAffine(p *Point, q *affineCached) *projP1xP1\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#projP1xP1.Double",
+                    "documentation": {
+                      "identifier": "projP1xP1.Double",
+                      "newPage": false,
+                      "searchKey": "edwards25519.projP1xP1.Double",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *projP1xP1) Double(p *projP2) *projP1xP1"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *projP1xP1) Double(p *projP2) *projP1xP1\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#projP1xP1.Sub",
+                    "documentation": {
+                      "identifier": "projP1xP1.Sub",
+                      "newPage": false,
+                      "searchKey": "edwards25519.projP1xP1.Sub",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *projP1xP1) Sub(p *Point, q *projCached) *projP1xP1"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *projP1xP1) Sub(p *Point, q *projCached) *projP1xP1\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#projP1xP1.SubAffine",
+                    "documentation": {
+                      "identifier": "projP1xP1.SubAffine",
+                      "newPage": false,
+                      "searchKey": "edwards25519.projP1xP1.SubAffine",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *projP1xP1) SubAffine(p *Point, q *affineCached) *projP1xP1"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *projP1xP1) SubAffine(p *Point, q *affineCached) *projP1xP1\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#projP2",
+              "documentation": {
+                "identifier": "projP2",
+                "newPage": false,
+                "searchKey": "edwards25519.projP2",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type projP2 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype projP2 struct {\n\tX, Y, Z field.Element\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#projP2.FromP1xP1",
+                    "documentation": {
+                      "identifier": "projP2.FromP1xP1",
+                      "newPage": false,
+                      "searchKey": "edwards25519.projP2.FromP1xP1",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *projP2) FromP1xP1(p *projP1xP1) *projP2"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *projP2) FromP1xP1(p *projP1xP1) *projP2\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#projP2.FromP3",
+                    "documentation": {
+                      "identifier": "projP2.FromP3",
+                      "newPage": false,
+                      "searchKey": "edwards25519.projP2.FromP3",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *projP2) FromP3(p *Point) *projP2"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *projP2) FromP3(p *Point) *projP2\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519#projP2.Zero",
+                    "documentation": {
+                      "identifier": "projP2.Zero",
+                      "newPage": false,
+                      "searchKey": "edwards25519.projP2.Zero",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *projP2) Zero() *projP2"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *projP2) Zero() *projP2\n```\n\n"
                     },
                     "children": null
                   }
@@ -1900,6 +2029,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -1914,12 +2044,827 @@
         "children": [
           {
             "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#BenchmarkScalarBaseMult",
+              "documentation": {
+                "identifier": "BenchmarkScalarBaseMult",
+                "newPage": false,
+                "searchKey": "edwards25519.BenchmarkScalarBaseMult",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkScalarBaseMult(t *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkScalarBaseMult(t *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#BenchmarkScalarMult",
+              "documentation": {
+                "identifier": "BenchmarkScalarMult",
+                "newPage": false,
+                "searchKey": "edwards25519.BenchmarkScalarMult",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkScalarMult(t *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkScalarMult(t *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#BenchmarkVarTimeDoubleScalarBaseMult",
+              "documentation": {
+                "identifier": "BenchmarkVarTimeDoubleScalarBaseMult",
+                "newPage": false,
+                "searchKey": "edwards25519.BenchmarkVarTimeDoubleScalarBaseMult",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkVarTimeDoubleScalarBaseMult(t *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkVarTimeDoubleScalarBaseMult(t *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestAddSubNegOnBasePoint",
+              "documentation": {
+                "identifier": "TestAddSubNegOnBasePoint",
+                "newPage": false,
+                "searchKey": "edwards25519.TestAddSubNegOnBasePoint",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAddSubNegOnBasePoint(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAddSubNegOnBasePoint(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestAffineLookupTable",
+              "documentation": {
+                "identifier": "TestAffineLookupTable",
+                "newPage": false,
+                "searchKey": "edwards25519.TestAffineLookupTable",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAffineLookupTable(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAffineLookupTable(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestAllocations",
+              "documentation": {
+                "identifier": "TestAllocations",
+                "newPage": false,
+                "searchKey": "edwards25519.TestAllocations",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAllocations(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAllocations(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestBaseMultVsDalek",
+              "documentation": {
+                "identifier": "TestBaseMultVsDalek",
+                "newPage": false,
+                "searchKey": "edwards25519.TestBaseMultVsDalek",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBaseMultVsDalek(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBaseMultVsDalek(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestBasepointNafTableGeneration",
+              "documentation": {
+                "identifier": "TestBasepointNafTableGeneration",
+                "newPage": false,
+                "searchKey": "edwards25519.TestBasepointNafTableGeneration",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBasepointNafTableGeneration(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBasepointNafTableGeneration(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestBasepointTableGeneration",
+              "documentation": {
+                "identifier": "TestBasepointTableGeneration",
+                "newPage": false,
+                "searchKey": "edwards25519.TestBasepointTableGeneration",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBasepointTableGeneration(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBasepointTableGeneration(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestComparable",
+              "documentation": {
+                "identifier": "TestComparable",
+                "newPage": false,
+                "searchKey": "edwards25519.TestComparable",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestComparable(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestComparable(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestGenerator",
+              "documentation": {
+                "identifier": "TestGenerator",
+                "newPage": false,
+                "searchKey": "edwards25519.TestGenerator",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGenerator(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGenerator(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestInvalidEncodings",
+              "documentation": {
+                "identifier": "TestInvalidEncodings",
+                "newPage": false,
+                "searchKey": "edwards25519.TestInvalidEncodings",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInvalidEncodings(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInvalidEncodings(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestNafLookupTable5",
+              "documentation": {
+                "identifier": "TestNafLookupTable5",
+                "newPage": false,
+                "searchKey": "edwards25519.TestNafLookupTable5",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNafLookupTable5(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNafLookupTable5(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestNafLookupTable8",
+              "documentation": {
+                "identifier": "TestNafLookupTable8",
+                "newPage": false,
+                "searchKey": "edwards25519.TestNafLookupTable8",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNafLookupTable8(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNafLookupTable8(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestNonCanonicalPoints",
+              "documentation": {
+                "identifier": "TestNonCanonicalPoints",
+                "newPage": false,
+                "searchKey": "edwards25519.TestNonCanonicalPoints",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNonCanonicalPoints(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNonCanonicalPoints(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestProjLookupTable",
+              "documentation": {
+                "identifier": "TestProjLookupTable",
+                "newPage": false,
+                "searchKey": "edwards25519.TestProjLookupTable",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestProjLookupTable(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestProjLookupTable(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarAddLikeSubNeg",
+              "documentation": {
+                "identifier": "TestScalarAddLikeSubNeg",
+                "newPage": false,
+                "searchKey": "edwards25519.TestScalarAddLikeSubNeg",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScalarAddLikeSubNeg(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScalarAddLikeSubNeg(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarAliasing",
+              "documentation": {
+                "identifier": "TestScalarAliasing",
+                "newPage": false,
+                "searchKey": "edwards25519.TestScalarAliasing",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScalarAliasing(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScalarAliasing(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarEqual",
+              "documentation": {
+                "identifier": "TestScalarEqual",
+                "newPage": false,
+                "searchKey": "edwards25519.TestScalarEqual",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScalarEqual(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScalarEqual(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarGenerate",
+              "documentation": {
+                "identifier": "TestScalarGenerate",
+                "newPage": false,
+                "searchKey": "edwards25519.TestScalarGenerate",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScalarGenerate(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScalarGenerate(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarMultDistributesOverAdd",
+              "documentation": {
+                "identifier": "TestScalarMultDistributesOverAdd",
+                "newPage": false,
+                "searchKey": "edwards25519.TestScalarMultDistributesOverAdd",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScalarMultDistributesOverAdd(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScalarMultDistributesOverAdd(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarMultMatchesBaseMult",
+              "documentation": {
+                "identifier": "TestScalarMultMatchesBaseMult",
+                "newPage": false,
+                "searchKey": "edwards25519.TestScalarMultMatchesBaseMult",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScalarMultMatchesBaseMult(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScalarMultMatchesBaseMult(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarMultNonIdentityPoint",
+              "documentation": {
+                "identifier": "TestScalarMultNonIdentityPoint",
+                "newPage": false,
+                "searchKey": "edwards25519.TestScalarMultNonIdentityPoint",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScalarMultNonIdentityPoint(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScalarMultNonIdentityPoint(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarMultSmallScalars",
+              "documentation": {
+                "identifier": "TestScalarMultSmallScalars",
+                "newPage": false,
+                "searchKey": "edwards25519.TestScalarMultSmallScalars",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScalarMultSmallScalars(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScalarMultSmallScalars(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarMultVsDalek",
+              "documentation": {
+                "identifier": "TestScalarMultVsDalek",
+                "newPage": false,
+                "searchKey": "edwards25519.TestScalarMultVsDalek",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScalarMultVsDalek(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScalarMultVsDalek(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarMultiplyDistributesOverAdd",
+              "documentation": {
+                "identifier": "TestScalarMultiplyDistributesOverAdd",
+                "newPage": false,
+                "searchKey": "edwards25519.TestScalarMultiplyDistributesOverAdd",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScalarMultiplyDistributesOverAdd(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScalarMultiplyDistributesOverAdd(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarNonAdjacentForm",
+              "documentation": {
+                "identifier": "TestScalarNonAdjacentForm",
+                "newPage": false,
+                "searchKey": "edwards25519.TestScalarNonAdjacentForm",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScalarNonAdjacentForm(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScalarNonAdjacentForm(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarSetBytesWithClamping",
+              "documentation": {
+                "identifier": "TestScalarSetBytesWithClamping",
+                "newPage": false,
+                "searchKey": "edwards25519.TestScalarSetBytesWithClamping",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScalarSetBytesWithClamping(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScalarSetBytesWithClamping(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarSetCanonicalBytes",
+              "documentation": {
+                "identifier": "TestScalarSetCanonicalBytes",
+                "newPage": false,
+                "searchKey": "edwards25519.TestScalarSetCanonicalBytes",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScalarSetCanonicalBytes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScalarSetCanonicalBytes(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarSetUniformBytes",
+              "documentation": {
+                "identifier": "TestScalarSetUniformBytes",
+                "newPage": false,
+                "searchKey": "edwards25519.TestScalarSetUniformBytes",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScalarSetUniformBytes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScalarSetUniformBytes(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestVarTimeDoubleBaseMultMatchesBaseMult",
+              "documentation": {
+                "identifier": "TestVarTimeDoubleBaseMultMatchesBaseMult",
+                "newPage": false,
+                "searchKey": "edwards25519.TestVarTimeDoubleBaseMultMatchesBaseMult",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestVarTimeDoubleBaseMultMatchesBaseMult(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestVarTimeDoubleBaseMultMatchesBaseMult(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#TestVarTimeDoubleBaseMultVsDalek",
+              "documentation": {
+                "identifier": "TestVarTimeDoubleBaseMultVsDalek",
+                "newPage": false,
+                "searchKey": "edwards25519.TestVarTimeDoubleBaseMultVsDalek",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestVarTimeDoubleBaseMultVsDalek(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestVarTimeDoubleBaseMultVsDalek(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#basepointTable",
+              "documentation": {
+                "identifier": "basepointTable",
+                "newPage": false,
+                "searchKey": "edwards25519.basepointTable",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func basepointTable() *[32]affineLookupTable"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc basepointTable() *[32]affineLookupTable\n```\n\nbasepointTable is a set of 32 affineLookupTables, where table i is generated from 256i * basepoint. It is precomputed the first time it's used. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#bigIntFromLittleEndianBytes",
+              "documentation": {
+                "identifier": "bigIntFromLittleEndianBytes",
+                "newPage": false,
+                "searchKey": "edwards25519.bigIntFromLittleEndianBytes",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func bigIntFromLittleEndianBytes(b []byte) *big.Int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc bigIntFromLittleEndianBytes(b []byte) *big.Int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/ed25519/internal/edwards25519#checkInitialized",
               "documentation": {
                 "identifier": "checkInitialized",
                 "newPage": false,
                 "searchKey": "edwards25519.checkInitialized",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1936,12 +2881,36 @@
           },
           {
             "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#checkOnCurve",
+              "documentation": {
+                "identifier": "checkOnCurve",
+                "newPage": false,
+                "searchKey": "edwards25519.checkOnCurve",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkOnCurve(t *testing.T, points ...*Point)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkOnCurve(t *testing.T, points ...*Point)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/ed25519/internal/edwards25519#copyFieldElement",
               "documentation": {
                 "identifier": "copyFieldElement",
                 "newPage": false,
                 "searchKey": "edwards25519.copyFieldElement",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1958,12 +2927,36 @@
           },
           {
             "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519#decodeHex",
+              "documentation": {
+                "identifier": "decodeHex",
+                "newPage": false,
+                "searchKey": "edwards25519.decodeHex",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func decodeHex(s string) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc decodeHex(s string) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/ed25519/internal/edwards25519#isReduced",
               "documentation": {
                 "identifier": "isReduced",
                 "newPage": false,
                 "searchKey": "edwards25519.isReduced",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1986,6 +2979,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.load3",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2008,6 +3002,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.load4",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2030,6 +3025,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.scMulAdd",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2052,6 +3048,7 @@
                 "newPage": false,
                 "searchKey": "edwards25519.scReduce",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2062,798 +3059,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc scReduce(out *[32]byte, s *[64]byte)\n```\n\nInput: \n\n```\ns[0]+256*s[1]+...+256^63*s[63] = s\n\n```\nOutput: \n\n```\ns[0]+256*s[1]+...+256^31*s[31] = s mod l\nwhere l = 2^252 + 27742317777372353535851937790883648493.\n\n```\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#basepointTable",
-              "documentation": {
-                "identifier": "basepointTable",
-                "newPage": false,
-                "searchKey": "edwards25519.basepointTable",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func basepointTable() *[32]affineLookupTable"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc basepointTable() *[32]affineLookupTable\n```\n\nbasepointTable is a set of 32 affineLookupTables, where table i is generated from 256i * basepoint. It is precomputed the first time it's used. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#checkOnCurve",
-              "documentation": {
-                "identifier": "checkOnCurve",
-                "newPage": false,
-                "searchKey": "edwards25519.checkOnCurve",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func checkOnCurve(t *testing.T, points ...*Point)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc checkOnCurve(t *testing.T, points ...*Point)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestGenerator",
-              "documentation": {
-                "identifier": "TestGenerator",
-                "newPage": false,
-                "searchKey": "edwards25519.TestGenerator",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGenerator(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGenerator(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestAddSubNegOnBasePoint",
-              "documentation": {
-                "identifier": "TestAddSubNegOnBasePoint",
-                "newPage": false,
-                "searchKey": "edwards25519.TestAddSubNegOnBasePoint",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAddSubNegOnBasePoint(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAddSubNegOnBasePoint(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestComparable",
-              "documentation": {
-                "identifier": "TestComparable",
-                "newPage": false,
-                "searchKey": "edwards25519.TestComparable",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestComparable(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestComparable(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestInvalidEncodings",
-              "documentation": {
-                "identifier": "TestInvalidEncodings",
-                "newPage": false,
-                "searchKey": "edwards25519.TestInvalidEncodings",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestInvalidEncodings(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestInvalidEncodings(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestNonCanonicalPoints",
-              "documentation": {
-                "identifier": "TestNonCanonicalPoints",
-                "newPage": false,
-                "searchKey": "edwards25519.TestNonCanonicalPoints",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestNonCanonicalPoints(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestNonCanonicalPoints(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestAllocations",
-              "documentation": {
-                "identifier": "TestAllocations",
-                "newPage": false,
-                "searchKey": "edwards25519.TestAllocations",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAllocations(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAllocations(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#decodeHex",
-              "documentation": {
-                "identifier": "decodeHex",
-                "newPage": false,
-                "searchKey": "edwards25519.decodeHex",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func decodeHex(s string) []byte"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc decodeHex(s string) []byte\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarAliasing",
-              "documentation": {
-                "identifier": "TestScalarAliasing",
-                "newPage": false,
-                "searchKey": "edwards25519.TestScalarAliasing",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestScalarAliasing(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestScalarAliasing(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarGenerate",
-              "documentation": {
-                "identifier": "TestScalarGenerate",
-                "newPage": false,
-                "searchKey": "edwards25519.TestScalarGenerate",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestScalarGenerate(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestScalarGenerate(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarSetCanonicalBytes",
-              "documentation": {
-                "identifier": "TestScalarSetCanonicalBytes",
-                "newPage": false,
-                "searchKey": "edwards25519.TestScalarSetCanonicalBytes",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestScalarSetCanonicalBytes(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestScalarSetCanonicalBytes(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarSetUniformBytes",
-              "documentation": {
-                "identifier": "TestScalarSetUniformBytes",
-                "newPage": false,
-                "searchKey": "edwards25519.TestScalarSetUniformBytes",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestScalarSetUniformBytes(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestScalarSetUniformBytes(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarSetBytesWithClamping",
-              "documentation": {
-                "identifier": "TestScalarSetBytesWithClamping",
-                "newPage": false,
-                "searchKey": "edwards25519.TestScalarSetBytesWithClamping",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestScalarSetBytesWithClamping(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestScalarSetBytesWithClamping(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#bigIntFromLittleEndianBytes",
-              "documentation": {
-                "identifier": "bigIntFromLittleEndianBytes",
-                "newPage": false,
-                "searchKey": "edwards25519.bigIntFromLittleEndianBytes",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func bigIntFromLittleEndianBytes(b []byte) *big.Int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc bigIntFromLittleEndianBytes(b []byte) *big.Int\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarMultiplyDistributesOverAdd",
-              "documentation": {
-                "identifier": "TestScalarMultiplyDistributesOverAdd",
-                "newPage": false,
-                "searchKey": "edwards25519.TestScalarMultiplyDistributesOverAdd",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestScalarMultiplyDistributesOverAdd(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestScalarMultiplyDistributesOverAdd(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarAddLikeSubNeg",
-              "documentation": {
-                "identifier": "TestScalarAddLikeSubNeg",
-                "newPage": false,
-                "searchKey": "edwards25519.TestScalarAddLikeSubNeg",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestScalarAddLikeSubNeg(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestScalarAddLikeSubNeg(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarNonAdjacentForm",
-              "documentation": {
-                "identifier": "TestScalarNonAdjacentForm",
-                "newPage": false,
-                "searchKey": "edwards25519.TestScalarNonAdjacentForm",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestScalarNonAdjacentForm(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestScalarNonAdjacentForm(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarEqual",
-              "documentation": {
-                "identifier": "TestScalarEqual",
-                "newPage": false,
-                "searchKey": "edwards25519.TestScalarEqual",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestScalarEqual(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestScalarEqual(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarMultSmallScalars",
-              "documentation": {
-                "identifier": "TestScalarMultSmallScalars",
-                "newPage": false,
-                "searchKey": "edwards25519.TestScalarMultSmallScalars",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestScalarMultSmallScalars(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestScalarMultSmallScalars(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarMultVsDalek",
-              "documentation": {
-                "identifier": "TestScalarMultVsDalek",
-                "newPage": false,
-                "searchKey": "edwards25519.TestScalarMultVsDalek",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestScalarMultVsDalek(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestScalarMultVsDalek(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestBaseMultVsDalek",
-              "documentation": {
-                "identifier": "TestBaseMultVsDalek",
-                "newPage": false,
-                "searchKey": "edwards25519.TestBaseMultVsDalek",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestBaseMultVsDalek(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestBaseMultVsDalek(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestVarTimeDoubleBaseMultVsDalek",
-              "documentation": {
-                "identifier": "TestVarTimeDoubleBaseMultVsDalek",
-                "newPage": false,
-                "searchKey": "edwards25519.TestVarTimeDoubleBaseMultVsDalek",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestVarTimeDoubleBaseMultVsDalek(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestVarTimeDoubleBaseMultVsDalek(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarMultDistributesOverAdd",
-              "documentation": {
-                "identifier": "TestScalarMultDistributesOverAdd",
-                "newPage": false,
-                "searchKey": "edwards25519.TestScalarMultDistributesOverAdd",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestScalarMultDistributesOverAdd(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestScalarMultDistributesOverAdd(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarMultNonIdentityPoint",
-              "documentation": {
-                "identifier": "TestScalarMultNonIdentityPoint",
-                "newPage": false,
-                "searchKey": "edwards25519.TestScalarMultNonIdentityPoint",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestScalarMultNonIdentityPoint(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestScalarMultNonIdentityPoint(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestBasepointTableGeneration",
-              "documentation": {
-                "identifier": "TestBasepointTableGeneration",
-                "newPage": false,
-                "searchKey": "edwards25519.TestBasepointTableGeneration",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestBasepointTableGeneration(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestBasepointTableGeneration(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestScalarMultMatchesBaseMult",
-              "documentation": {
-                "identifier": "TestScalarMultMatchesBaseMult",
-                "newPage": false,
-                "searchKey": "edwards25519.TestScalarMultMatchesBaseMult",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestScalarMultMatchesBaseMult(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestScalarMultMatchesBaseMult(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestBasepointNafTableGeneration",
-              "documentation": {
-                "identifier": "TestBasepointNafTableGeneration",
-                "newPage": false,
-                "searchKey": "edwards25519.TestBasepointNafTableGeneration",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestBasepointNafTableGeneration(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestBasepointNafTableGeneration(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestVarTimeDoubleBaseMultMatchesBaseMult",
-              "documentation": {
-                "identifier": "TestVarTimeDoubleBaseMultMatchesBaseMult",
-                "newPage": false,
-                "searchKey": "edwards25519.TestVarTimeDoubleBaseMultMatchesBaseMult",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestVarTimeDoubleBaseMultMatchesBaseMult(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestVarTimeDoubleBaseMultMatchesBaseMult(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#BenchmarkScalarBaseMult",
-              "documentation": {
-                "identifier": "BenchmarkScalarBaseMult",
-                "newPage": false,
-                "searchKey": "edwards25519.BenchmarkScalarBaseMult",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkScalarBaseMult(t *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkScalarBaseMult(t *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#BenchmarkScalarMult",
-              "documentation": {
-                "identifier": "BenchmarkScalarMult",
-                "newPage": false,
-                "searchKey": "edwards25519.BenchmarkScalarMult",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkScalarMult(t *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkScalarMult(t *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#BenchmarkVarTimeDoubleScalarBaseMult",
-              "documentation": {
-                "identifier": "BenchmarkVarTimeDoubleScalarBaseMult",
-                "newPage": false,
-                "searchKey": "edwards25519.BenchmarkVarTimeDoubleScalarBaseMult",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkVarTimeDoubleScalarBaseMult(t *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkVarTimeDoubleScalarBaseMult(t *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestProjLookupTable",
-              "documentation": {
-                "identifier": "TestProjLookupTable",
-                "newPage": false,
-                "searchKey": "edwards25519.TestProjLookupTable",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestProjLookupTable(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestProjLookupTable(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestAffineLookupTable",
-              "documentation": {
-                "identifier": "TestAffineLookupTable",
-                "newPage": false,
-                "searchKey": "edwards25519.TestAffineLookupTable",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAffineLookupTable(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAffineLookupTable(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestNafLookupTable5",
-              "documentation": {
-                "identifier": "TestNafLookupTable5",
-                "newPage": false,
-                "searchKey": "edwards25519.TestNafLookupTable5",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestNafLookupTable5(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestNafLookupTable5(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519/internal/edwards25519#TestNafLookupTable8",
-              "documentation": {
-                "identifier": "TestNafLookupTable8",
-                "newPage": false,
-                "searchKey": "edwards25519.TestNafLookupTable8",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestNafLookupTable8(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestNafLookupTable8(t *testing.T)\n```\n\n"
               },
               "children": null
             }

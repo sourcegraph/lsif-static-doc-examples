@@ -3,56 +3,57 @@
 ## Index
 
 * [Variables](#var)
-    * [var mu](#mu)
     * [var defaultRing](#defaultRing)
+    * [var mu](#mu)
 * [Types](#type)
     * [type Ring struct](#Ring)
         * [func Default() Ring](#Default)
         * [func NewRing(ctx context.Context, keyConfig *schema.EncryptionKeys) (*Ring, error)](#NewRing)
 * [Functions](#func)
-    * [func MockDefault(r Ring)](#MockDefault)
     * [func Init(ctx context.Context) error](#Init)
+    * [func MockDefault(r Ring)](#MockDefault)
     * [func NewKey(ctx context.Context, k *schema.EncryptionKey, config *schema.EncryptionKeys) (encryption.Key, error)](#NewKey)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
-```
-
-### <a id="mu" href="#mu">var mu</a>
-
-```
-searchKey: keyring.mu
-tags: [private]
-```
-
-```Go
-var mu sync.RWMutex
+tags: [package private]
 ```
 
 ### <a id="defaultRing" href="#defaultRing">var defaultRing</a>
 
 ```
 searchKey: keyring.defaultRing
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
 var defaultRing Ring
 ```
 
+### <a id="mu" href="#mu">var mu</a>
+
+```
+searchKey: keyring.mu
+tags: [variable struct private]
+```
+
+```Go
+var mu sync.RWMutex
+```
+
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Ring" href="#Ring">type Ring struct</a>
 
 ```
 searchKey: keyring.Ring
+tags: [struct]
 ```
 
 ```Go
@@ -67,6 +68,7 @@ type Ring struct {
 
 ```
 searchKey: keyring.Default
+tags: [function]
 ```
 
 ```Go
@@ -79,6 +81,7 @@ Default returns the default keyring, if you can avoid using this from arbitrary 
 
 ```
 searchKey: keyring.NewRing
+tags: [method]
 ```
 
 ```Go
@@ -90,13 +93,25 @@ NewRing creates a keyring.Ring containing all the keys configured in site config
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
+```
+
+### <a id="Init" href="#Init">func Init(ctx context.Context) error</a>
+
+```
+searchKey: keyring.Init
+tags: [method]
+```
+
+```Go
+func Init(ctx context.Context) error
 ```
 
 ### <a id="MockDefault" href="#MockDefault">func MockDefault(r Ring)</a>
 
 ```
 searchKey: keyring.MockDefault
+tags: [method]
 ```
 
 ```Go
@@ -105,20 +120,11 @@ func MockDefault(r Ring)
 
 MockDefault overrides the default keyring. Note: This function is defined for testing purpose. Use Init to correctly setup a keyring. 
 
-### <a id="Init" href="#Init">func Init(ctx context.Context) error</a>
-
-```
-searchKey: keyring.Init
-```
-
-```Go
-func Init(ctx context.Context) error
-```
-
 ### <a id="NewKey" href="#NewKey">func NewKey(ctx context.Context, k *schema.EncryptionKey, config *schema.EncryptionKeys) (encryption.Key, error)</a>
 
 ```
 searchKey: keyring.NewKey
+tags: [method]
 ```
 
 ```Go

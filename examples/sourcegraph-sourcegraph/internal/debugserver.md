@@ -3,44 +3,34 @@
 ## Index
 
 * [Variables](#var)
-    * [var addr](#addr)
     * [var Services](#Services)
+    * [var addr](#addr)
 * [Types](#type)
+    * [type Dumper interface](#Dumper)
     * [type Endpoint struct](#Endpoint)
     * [type Service struct](#Service)
-    * [type Dumper interface](#Dumper)
 * [Functions](#func)
-    * [func init()](#init.debug.go)
     * [func NewServerRoutine(ready <-chan struct{}, extra ...Endpoint) goroutine.BackgroundRoutine](#NewServerRoutine)
     * [func expvarHandler(w http.ResponseWriter, r *http.Request)](#expvarHandler)
-    * [func gcHandler(w http.ResponseWriter, r *http.Request)](#gcHandler)
     * [func freeOSMemoryHandler(w http.ResponseWriter, r *http.Request)](#freeOSMemoryHandler)
-    * [func registerMetadataGauge()](#registerMetadataGauge)
+    * [func gcHandler(w http.ResponseWriter, r *http.Request)](#gcHandler)
     * [func healthzHandler(w http.ResponseWriter, r *http.Request)](#healthzHandler)
+    * [func init()](#init.debug.go)
     * [func readyHandler(ready <-chan struct{}) http.HandlerFunc](#readyHandler)
+    * [func registerMetadataGauge()](#registerMetadataGauge)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
-```
-
-### <a id="addr" href="#addr">var addr</a>
-
-```
-searchKey: debugserver.addr
-tags: [private]
-```
-
-```Go
-var addr = env.Get("SRC_PROF_HTTP", ":6060", "net/http/pprof http bind address.")
+tags: [package private]
 ```
 
 ### <a id="Services" href="#Services">var Services</a>
 
 ```
 searchKey: debugserver.Services
+tags: [variable array struct]
 ```
 
 ```Go
@@ -49,16 +39,44 @@ var Services []Service
 
 Services is the list of registered services' debug addresses. Populated from SRC_PROF_MAP. 
 
+### <a id="addr" href="#addr">var addr</a>
+
+```
+searchKey: debugserver.addr
+tags: [variable string private]
+```
+
+```Go
+var addr = env.Get("SRC_PROF_HTTP", ":6060", "net/http/pprof http bind address.")
+```
+
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
+
+### <a id="Dumper" href="#Dumper">type Dumper interface</a>
+
+```
+searchKey: debugserver.Dumper
+tags: [interface]
+```
+
+```Go
+type Dumper interface {
+	// DebugDump returns a snapshot of the current state.
+	DebugDump() interface{}
+}
+```
+
+Dumper is a service which can dump its state for debugging. 
 
 ### <a id="Endpoint" href="#Endpoint">type Endpoint struct</a>
 
 ```
 searchKey: debugserver.Endpoint
+tags: [struct]
 ```
 
 ```Go
@@ -78,6 +96,7 @@ Endpoint is a handler for the debug server. It will be displayed on the debug in
 
 ```
 searchKey: debugserver.Service
+tags: [struct]
 ```
 
 ```Go
@@ -96,42 +115,17 @@ type Service struct {
 
 Service is a service's debug addr (host:port). 
 
-### <a id="Dumper" href="#Dumper">type Dumper interface</a>
-
-```
-searchKey: debugserver.Dumper
-```
-
-```Go
-type Dumper interface {
-	// DebugDump returns a snapshot of the current state.
-	DebugDump() interface{}
-}
-```
-
-Dumper is a service which can dump its state for debugging. 
-
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
-```
-
-### <a id="init.debug.go" href="#init.debug.go">func init()</a>
-
-```
-searchKey: debugserver.init
-tags: [private]
-```
-
-```Go
-func init()
+tags: [package private]
 ```
 
 ### <a id="NewServerRoutine" href="#NewServerRoutine">func NewServerRoutine(ready <-chan struct{}, extra ...Endpoint) goroutine.BackgroundRoutine</a>
 
 ```
 searchKey: debugserver.NewServerRoutine
+tags: [method]
 ```
 
 ```Go
@@ -144,7 +138,7 @@ NewServerRoutine returns a background routine that exposes pprof and metrics end
 
 ```
 searchKey: debugserver.expvarHandler
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -153,44 +147,33 @@ func expvarHandler(w http.ResponseWriter, r *http.Request)
 
 expvarHandler is copied from package expvar and exported so that it can be mounted on any ServeMux, not just http.DefaultServeMux. 
 
-### <a id="gcHandler" href="#gcHandler">func gcHandler(w http.ResponseWriter, r *http.Request)</a>
-
-```
-searchKey: debugserver.gcHandler
-tags: [private]
-```
-
-```Go
-func gcHandler(w http.ResponseWriter, r *http.Request)
-```
-
 ### <a id="freeOSMemoryHandler" href="#freeOSMemoryHandler">func freeOSMemoryHandler(w http.ResponseWriter, r *http.Request)</a>
 
 ```
 searchKey: debugserver.freeOSMemoryHandler
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func freeOSMemoryHandler(w http.ResponseWriter, r *http.Request)
 ```
 
-### <a id="registerMetadataGauge" href="#registerMetadataGauge">func registerMetadataGauge()</a>
+### <a id="gcHandler" href="#gcHandler">func gcHandler(w http.ResponseWriter, r *http.Request)</a>
 
 ```
-searchKey: debugserver.registerMetadataGauge
-tags: [private]
+searchKey: debugserver.gcHandler
+tags: [method private]
 ```
 
 ```Go
-func registerMetadataGauge()
+func gcHandler(w http.ResponseWriter, r *http.Request)
 ```
 
 ### <a id="healthzHandler" href="#healthzHandler">func healthzHandler(w http.ResponseWriter, r *http.Request)</a>
 
 ```
 searchKey: debugserver.healthzHandler
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -199,11 +182,22 @@ func healthzHandler(w http.ResponseWriter, r *http.Request)
 
 healthzHandler is the http.HandlerFunc that responds to /healthz requests on the debugserver port. This always returns a 200 OK while the binary can be reached. 
 
+### <a id="init.debug.go" href="#init.debug.go">func init()</a>
+
+```
+searchKey: debugserver.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
 ### <a id="readyHandler" href="#readyHandler">func readyHandler(ready <-chan struct{}) http.HandlerFunc</a>
 
 ```
 searchKey: debugserver.readyHandler
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -211,4 +205,15 @@ func readyHandler(ready <-chan struct{}) http.HandlerFunc
 ```
 
 readyHandler returns an http.HandlerFunc that responds to the /ready requests on the debugserver port. This will return a 200 OK once the given channel is closed, and a 503 Service Unavailable otherwise. 
+
+### <a id="registerMetadataGauge" href="#registerMetadataGauge">func registerMetadataGauge()</a>
+
+```
+searchKey: debugserver.registerMetadataGauge
+tags: [function private]
+```
+
+```Go
+func registerMetadataGauge()
+```
 

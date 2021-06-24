@@ -4,7 +4,9 @@
     "identifier": "gitserver",
     "newPage": true,
     "searchKey": "cmd/gitserver",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,44 +39,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/gitserver#reposDir",
+              "pathID": "/cmd/gitserver#envHostname",
               "documentation": {
-                "identifier": "reposDir",
+                "identifier": "envHostname",
                 "newPage": false,
-                "searchKey": "main.reposDir",
+                "searchKey": "main.envHostname",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var reposDir"
+                "value": "var envHostname"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar reposDir = env.Get(\"SRC_REPOS_DIR\", \"/data/repos\", \"Root dir containing repos.\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/gitserver#wantPctFree",
-              "documentation": {
-                "identifier": "wantPctFree",
-                "newPage": false,
-                "searchKey": "main.wantPctFree",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var wantPctFree"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar wantPctFree = ...\n```\n\n"
+                "value": "```Go\nvar envHostname = env.Get(\"HOSTNAME\", \"\", \"Hostname override\")\n```\n\n"
               },
               "children": null
             }
@@ -85,6 +69,8 @@
                 "newPage": false,
                 "searchKey": "main.janitorInterval",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -101,22 +87,24 @@
           },
           {
             "node": {
-              "pathID": "/cmd/gitserver#syncRepoStateInterval",
+              "pathID": "/cmd/gitserver#reposDir",
               "documentation": {
-                "identifier": "syncRepoStateInterval",
+                "identifier": "reposDir",
                 "newPage": false,
-                "searchKey": "main.syncRepoStateInterval",
+                "searchKey": "main.reposDir",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var syncRepoStateInterval"
+                "value": "var reposDir"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar syncRepoStateInterval = ...\n```\n\n"
+                "value": "```Go\nvar reposDir = env.Get(\"SRC_REPOS_DIR\", \"/data/repos\", \"Root dir containing repos.\")\n```\n\n"
               },
               "children": null
             }
@@ -129,6 +117,8 @@
                 "newPage": false,
                 "searchKey": "main.syncRepoStateBatchSize",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -145,12 +135,38 @@
           },
           {
             "node": {
+              "pathID": "/cmd/gitserver#syncRepoStateInterval",
+              "documentation": {
+                "identifier": "syncRepoStateInterval",
+                "newPage": false,
+                "searchKey": "main.syncRepoStateInterval",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var syncRepoStateInterval"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar syncRepoStateInterval = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/gitserver#syncRepoStateUpsertPerSecond",
               "documentation": {
                 "identifier": "syncRepoStateUpsertPerSecond",
                 "newPage": false,
                 "searchKey": "main.syncRepoStateUpsertPerSecond",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -167,22 +183,24 @@
           },
           {
             "node": {
-              "pathID": "/cmd/gitserver#envHostname",
+              "pathID": "/cmd/gitserver#wantPctFree",
               "documentation": {
-                "identifier": "envHostname",
+                "identifier": "wantPctFree",
                 "newPage": false,
-                "searchKey": "main.envHostname",
+                "searchKey": "main.wantPctFree",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var envHostname"
+                "value": "var wantPctFree"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar envHostname = env.Get(\"HOSTNAME\", \"\", \"Hostname override\")\n```\n\n"
+                "value": "```Go\nvar wantPctFree = ...\n```\n\n"
               },
               "children": null
             }
@@ -197,7 +215,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -210,66 +230,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/gitserver#main",
+              "pathID": "/cmd/gitserver#TestParsePercent",
               "documentation": {
-                "identifier": "main",
+                "identifier": "TestParsePercent",
                 "newPage": false,
-                "searchKey": "main.main",
+                "searchKey": "main.TestParsePercent",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func main()"
+                "value": "func TestParsePercent(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc main()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/gitserver#hostnameBestEffort",
-              "documentation": {
-                "identifier": "hostnameBestEffort",
-                "newPage": false,
-                "searchKey": "main.hostnameBestEffort",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func hostnameBestEffort() string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc hostnameBestEffort() string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/gitserver#getPercent",
-              "documentation": {
-                "identifier": "getPercent",
-                "newPage": false,
-                "searchKey": "main.getPercent",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func getPercent(p int) (int, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc getPercent(p int) (int, error)\n```\n\n"
+                "value": "```Go\nfunc TestParsePercent(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -282,6 +260,7 @@
                 "newPage": false,
                 "searchKey": "main.getDB",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -298,22 +277,69 @@
           },
           {
             "node": {
-              "pathID": "/cmd/gitserver#TestParsePercent",
+              "pathID": "/cmd/gitserver#getPercent",
               "documentation": {
-                "identifier": "TestParsePercent",
+                "identifier": "getPercent",
                 "newPage": false,
-                "searchKey": "main.TestParsePercent",
+                "searchKey": "main.getPercent",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestParsePercent(t *testing.T)"
+                "value": "func getPercent(p int) (int, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestParsePercent(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc getPercent(p int) (int, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/gitserver#hostnameBestEffort",
+              "documentation": {
+                "identifier": "hostnameBestEffort",
+                "newPage": false,
+                "searchKey": "main.hostnameBestEffort",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hostnameBestEffort() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hostnameBestEffort() string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/gitserver#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
               },
               "children": null
             }

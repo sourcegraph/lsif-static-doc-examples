@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/internal/batches/resolvers/apitest",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,233 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#GitTarget",
-              "documentation": {
-                "identifier": "GitTarget",
-                "newPage": false,
-                "searchKey": "apitest.GitTarget",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type GitTarget struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype GitTarget struct {\n\tOID            string\n\tAbbreviatedOID string\n\tTargetType     string `json:\"type\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#DiffRange",
-              "documentation": {
-                "identifier": "DiffRange",
-                "newPage": false,
-                "searchKey": "apitest.DiffRange",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type DiffRange struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype DiffRange struct{ StartLine, Lines int }\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#DiffStat",
-              "documentation": {
-                "identifier": "DiffStat",
-                "newPage": false,
-                "searchKey": "apitest.DiffStat",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type DiffStat struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype DiffStat struct{ Added, Deleted, Changed int32 }\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/resolvers/apitest#DiffStat.ToDiffStat",
-                    "documentation": {
-                      "identifier": "DiffStat.ToDiffStat",
-                      "newPage": false,
-                      "searchKey": "apitest.DiffStat.ToDiffStat",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (ds DiffStat) ToDiffStat() *diff.Stat"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (ds DiffStat) ToDiffStat() *diff.Stat\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#FileDiffHunk",
-              "documentation": {
-                "identifier": "FileDiffHunk",
-                "newPage": false,
-                "searchKey": "apitest.FileDiffHunk",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type FileDiffHunk struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype FileDiffHunk struct {\n\tBody, Section      string\n\tOldNoNewlineAt     bool\n\tOldRange, NewRange DiffRange\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#File",
-              "documentation": {
-                "identifier": "File",
-                "newPage": false,
-                "searchKey": "apitest.File",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type File struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype File struct {\n\tName string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#FileDiff",
-              "documentation": {
-                "identifier": "FileDiff",
-                "newPage": false,
-                "searchKey": "apitest.FileDiff",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type FileDiff struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype FileDiff struct {\n\tOldPath, NewPath string\n\tHunks            []FileDiffHunk\n\tStat             DiffStat\n\tOldFile          File\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#FileDiffs",
-              "documentation": {
-                "identifier": "FileDiffs",
-                "newPage": false,
-                "searchKey": "apitest.FileDiffs",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type FileDiffs struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype FileDiffs struct {\n\tRawDiff    string\n\tDiffStat   DiffStat\n\tPageInfo   PageInfo\n\tNodes      []FileDiff\n\tTotalCount int\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#User",
-              "documentation": {
-                "identifier": "User",
-                "newPage": false,
-                "searchKey": "apitest.User",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type User struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype User struct {\n\tID         string\n\tDatabaseID int32\n\tSiteAdmin  bool\n\n\tBatchChanges          BatchChangeConnection\n\tBatchChangesCodeHosts BatchChangesCodeHostsConnection\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#Org",
-              "documentation": {
-                "identifier": "Org",
-                "newPage": false,
-                "searchKey": "apitest.Org",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Org struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Org struct {\n\tID   string\n\tName string\n\n\tBatchChanges BatchChangeConnection\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#UserOrg",
-              "documentation": {
-                "identifier": "UserOrg",
-                "newPage": false,
-                "searchKey": "apitest.UserOrg",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type UserOrg struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype UserOrg struct {\n\tID         string\n\tDatabaseID int32\n\tSiteAdmin  bool\n\tName       string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/batches/resolvers/apitest#BatchChange",
               "documentation": {
                 "identifier": "BatchChange",
                 "newPage": false,
                 "searchKey": "apitest.BatchChange",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -285,7 +68,9 @@
                 "identifier": "BatchChangeConnection",
                 "newPage": false,
                 "searchKey": "apitest.BatchChangeConnection",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -300,200 +85,66 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#ChangesetEvent",
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#BatchChangesCodeHost",
               "documentation": {
-                "identifier": "ChangesetEvent",
+                "identifier": "BatchChangesCodeHost",
                 "newPage": false,
-                "searchKey": "apitest.ChangesetEvent",
-                "tags": null
+                "searchKey": "apitest.BatchChangesCodeHost",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type ChangesetEvent struct"
+                "value": "type BatchChangesCodeHost struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype ChangesetEvent struct {\n\tID        string\n\tChangeset struct{ ID string }\n\tCreatedAt string\n}\n```\n\n"
+                "value": "```Go\ntype BatchChangesCodeHost struct {\n\tExternalServiceKind string\n\tExternalServiceURL  string\n\tCredential          BatchChangesCredential\n}\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#ChangesetEventConnection",
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#BatchChangesCodeHostsConnection",
               "documentation": {
-                "identifier": "ChangesetEventConnection",
+                "identifier": "BatchChangesCodeHostsConnection",
                 "newPage": false,
-                "searchKey": "apitest.ChangesetEventConnection",
-                "tags": null
+                "searchKey": "apitest.BatchChangesCodeHostsConnection",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type ChangesetEventConnection struct"
+                "value": "type BatchChangesCodeHostsConnection struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype ChangesetEventConnection struct {\n\tTotalCount int\n\tPageInfo   PageInfo\n\tNodes      []ChangesetEvent\n}\n```\n\n"
+                "value": "```Go\ntype BatchChangesCodeHostsConnection struct {\n\tPageInfo   PageInfo\n\tNodes      []BatchChangesCodeHost\n\tTotalCount int\n}\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#Repository",
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#BatchChangesCredential",
               "documentation": {
-                "identifier": "Repository",
+                "identifier": "BatchChangesCredential",
                 "newPage": false,
-                "searchKey": "apitest.Repository",
-                "tags": null
+                "searchKey": "apitest.BatchChangesCredential",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type Repository struct"
+                "value": "type BatchChangesCredential struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype Repository struct {\n\tID   string\n\tName string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#ExternalURL",
-              "documentation": {
-                "identifier": "ExternalURL",
-                "newPage": false,
-                "searchKey": "apitest.ExternalURL",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ExternalURL struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ExternalURL struct {\n\tURL         string\n\tServiceKind string\n\tServiceType string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#Changeset",
-              "documentation": {
-                "identifier": "Changeset",
-                "newPage": false,
-                "searchKey": "apitest.Changeset",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Changeset struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Changeset struct {\n\tTypename           string `json:\"__typename\"`\n\tID                 string\n\tRepository         Repository\n\tBatchChanges       BatchChangeConnection\n\tCreatedAt          string\n\tUpdatedAt          string\n\tNextSyncAt         string\n\tScheduleEstimateAt string\n\tTitle              string\n\tBody               string\n\tError              string\n\tState              string\n\tExternalID         string\n\tExternalURL        ExternalURL\n\tReviewState        string\n\tCheckState         string\n\tEvents             ChangesetEventConnection\n\n\tDiff Comparison\n\n\tLabels []Label\n\n\tCurrentSpec ChangesetSpec\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#Comparison",
-              "documentation": {
-                "identifier": "Comparison",
-                "newPage": false,
-                "searchKey": "apitest.Comparison",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Comparison struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Comparison struct {\n\tTypename  string `json:\"__typename\"`\n\tFileDiffs FileDiffs\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#Label",
-              "documentation": {
-                "identifier": "Label",
-                "newPage": false,
-                "searchKey": "apitest.Label",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Label struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Label struct {\n\tText        string\n\tColor       string\n\tDescription *string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#ChangesetConnection",
-              "documentation": {
-                "identifier": "ChangesetConnection",
-                "newPage": false,
-                "searchKey": "apitest.ChangesetConnection",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ChangesetConnection struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ChangesetConnection struct {\n\tNodes      []Changeset\n\tTotalCount int\n\tPageInfo   PageInfo\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#ChangesetsStats",
-              "documentation": {
-                "identifier": "ChangesetsStats",
-                "newPage": false,
-                "searchKey": "apitest.ChangesetsStats",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ChangesetsStats struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ChangesetsStats struct {\n\tUnpublished int\n\tDraft       int\n\tOpen        int\n\tMerged      int\n\tClosed      int\n\tDeleted     int\n\tTotal       int\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#ChangesetCounts",
-              "documentation": {
-                "identifier": "ChangesetCounts",
-                "newPage": false,
-                "searchKey": "apitest.ChangesetCounts",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ChangesetCounts struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ChangesetCounts struct {\n\tDate                 string\n\tTotal                int32\n\tMerged               int32\n\tClosed               int32\n\tOpen                 int32\n\tDraft                int32\n\tOpenApproved         int32\n\tOpenChangesRequested int32\n\tOpenPending          int32\n}\n```\n\n"
+                "value": "```Go\ntype BatchChangesCredential struct {\n\tID                  string\n\tExternalServiceKind string\n\tExternalServiceURL  string\n\tIsSiteCredential    bool\n\tCreatedAt           string\n}\n```\n\n"
               },
               "children": null
             }
@@ -505,7 +156,9 @@
                 "identifier": "BatchSpec",
                 "newPage": false,
                 "searchKey": "apitest.BatchSpec",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -520,60 +173,88 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#ChangesetSpecDelta",
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#BulkOperation",
               "documentation": {
-                "identifier": "ChangesetSpecDelta",
+                "identifier": "BulkOperation",
                 "newPage": false,
-                "searchKey": "apitest.ChangesetSpecDelta",
-                "tags": null
+                "searchKey": "apitest.BulkOperation",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type ChangesetSpecDelta struct"
+                "value": "type BulkOperation struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype ChangesetSpecDelta struct {\n\tTitleChanged         bool\n\tBodyChanged          bool\n\tUndraft              bool\n\tBaseRefChanged       bool\n\tDiffChanged          bool\n\tCommitMessageChanged bool\n\tAuthorNameChanged    bool\n\tAuthorEmailChanged   bool\n}\n```\n\nChangesetSpecDelta is the delta between two ChangesetSpecs describing the same Changeset. \n\n"
+                "value": "```Go\ntype BulkOperation struct {\n\tID         string\n\tType       string\n\tState      string\n\tProgress   float64\n\tErrors     []*ChangesetJobError\n\tCreatedAt  string\n\tFinishedAt string\n}\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#ChangesetSpec",
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#BulkOperationConnection",
               "documentation": {
-                "identifier": "ChangesetSpec",
+                "identifier": "BulkOperationConnection",
                 "newPage": false,
-                "searchKey": "apitest.ChangesetSpec",
-                "tags": null
+                "searchKey": "apitest.BulkOperationConnection",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type ChangesetSpec struct"
+                "value": "type BulkOperationConnection struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype ChangesetSpec struct {\n\tTypename string `json:\"__typename\"`\n\tID       string\n\n\tDescription ChangesetSpecDescription\n\n\tExpiresAt *graphqlbackend.DateTime\n}\n```\n\n"
+                "value": "```Go\ntype BulkOperationConnection struct {\n\tNodes      []BulkOperation\n\tTotalCount int\n\tPageInfo   PageInfo\n}\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#ChangesetSpecConnection",
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#Changeset",
               "documentation": {
-                "identifier": "ChangesetSpecConnection",
+                "identifier": "Changeset",
                 "newPage": false,
-                "searchKey": "apitest.ChangesetSpecConnection",
-                "tags": null
+                "searchKey": "apitest.Changeset",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type ChangesetSpecConnection struct"
+                "value": "type Changeset struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype ChangesetSpecConnection struct {\n\tNodes      []ChangesetSpec\n\tTotalCount int\n\tPageInfo   PageInfo\n}\n```\n\n"
+                "value": "```Go\ntype Changeset struct {\n\tTypename           string `json:\"__typename\"`\n\tID                 string\n\tRepository         Repository\n\tBatchChanges       BatchChangeConnection\n\tCreatedAt          string\n\tUpdatedAt          string\n\tNextSyncAt         string\n\tScheduleEstimateAt string\n\tTitle              string\n\tBody               string\n\tError              string\n\tState              string\n\tExternalID         string\n\tExternalURL        ExternalURL\n\tReviewState        string\n\tCheckState         string\n\tEvents             ChangesetEventConnection\n\n\tDiff Comparison\n\n\tLabels []Label\n\n\tCurrentSpec ChangesetSpec\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#ChangesetApplyPreview",
+              "documentation": {
+                "identifier": "ChangesetApplyPreview",
+                "newPage": false,
+                "searchKey": "apitest.ChangesetApplyPreview",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ChangesetApplyPreview struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ChangesetApplyPreview struct {\n\tTypename string `json:\"__typename\"`\n\n\tOperations []btypes.ReconcilerOperation\n\tDelta      ChangesetSpecDelta\n\tTargets    ChangesetApplyPreviewTargets\n}\n```\n\n"
               },
               "children": null
             }
@@ -585,7 +266,9 @@
                 "identifier": "ChangesetApplyPreviewConnection",
                 "newPage": false,
                 "searchKey": "apitest.ChangesetApplyPreviewConnection",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -605,7 +288,9 @@
                 "identifier": "ChangesetApplyPreviewConnectionStats",
                 "newPage": false,
                 "searchKey": "apitest.ChangesetApplyPreviewConnectionStats",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -620,32 +305,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#ChangesetApplyPreview",
-              "documentation": {
-                "identifier": "ChangesetApplyPreview",
-                "newPage": false,
-                "searchKey": "apitest.ChangesetApplyPreview",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ChangesetApplyPreview struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ChangesetApplyPreview struct {\n\tTypename string `json:\"__typename\"`\n\n\tOperations []btypes.ReconcilerOperation\n\tDelta      ChangesetSpecDelta\n\tTargets    ChangesetApplyPreviewTargets\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/batches/resolvers/apitest#ChangesetApplyPreviewTargets",
               "documentation": {
                 "identifier": "ChangesetApplyPreviewTargets",
                 "newPage": false,
                 "searchKey": "apitest.ChangesetApplyPreviewTargets",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -660,12 +327,190 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#ChangesetConnection",
+              "documentation": {
+                "identifier": "ChangesetConnection",
+                "newPage": false,
+                "searchKey": "apitest.ChangesetConnection",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ChangesetConnection struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ChangesetConnection struct {\n\tNodes      []Changeset\n\tTotalCount int\n\tPageInfo   PageInfo\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#ChangesetCounts",
+              "documentation": {
+                "identifier": "ChangesetCounts",
+                "newPage": false,
+                "searchKey": "apitest.ChangesetCounts",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ChangesetCounts struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ChangesetCounts struct {\n\tDate                 string\n\tTotal                int32\n\tMerged               int32\n\tClosed               int32\n\tOpen                 int32\n\tDraft                int32\n\tOpenApproved         int32\n\tOpenChangesRequested int32\n\tOpenPending          int32\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#ChangesetEvent",
+              "documentation": {
+                "identifier": "ChangesetEvent",
+                "newPage": false,
+                "searchKey": "apitest.ChangesetEvent",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ChangesetEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ChangesetEvent struct {\n\tID        string\n\tChangeset struct{ ID string }\n\tCreatedAt string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#ChangesetEventConnection",
+              "documentation": {
+                "identifier": "ChangesetEventConnection",
+                "newPage": false,
+                "searchKey": "apitest.ChangesetEventConnection",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ChangesetEventConnection struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ChangesetEventConnection struct {\n\tTotalCount int\n\tPageInfo   PageInfo\n\tNodes      []ChangesetEvent\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#ChangesetJobError",
+              "documentation": {
+                "identifier": "ChangesetJobError",
+                "newPage": false,
+                "searchKey": "apitest.ChangesetJobError",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ChangesetJobError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ChangesetJobError struct {\n\tChangeset *Changeset\n\tError     *string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#ChangesetSpec",
+              "documentation": {
+                "identifier": "ChangesetSpec",
+                "newPage": false,
+                "searchKey": "apitest.ChangesetSpec",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ChangesetSpec struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ChangesetSpec struct {\n\tTypename string `json:\"__typename\"`\n\tID       string\n\n\tDescription ChangesetSpecDescription\n\n\tExpiresAt *graphqlbackend.DateTime\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#ChangesetSpecConnection",
+              "documentation": {
+                "identifier": "ChangesetSpecConnection",
+                "newPage": false,
+                "searchKey": "apitest.ChangesetSpecConnection",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ChangesetSpecConnection struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ChangesetSpecConnection struct {\n\tNodes      []ChangesetSpec\n\tTotalCount int\n\tPageInfo   PageInfo\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#ChangesetSpecDelta",
+              "documentation": {
+                "identifier": "ChangesetSpecDelta",
+                "newPage": false,
+                "searchKey": "apitest.ChangesetSpecDelta",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ChangesetSpecDelta struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ChangesetSpecDelta struct {\n\tTitleChanged         bool\n\tBodyChanged          bool\n\tUndraft              bool\n\tBaseRefChanged       bool\n\tDiffChanged          bool\n\tCommitMessageChanged bool\n\tAuthorNameChanged    bool\n\tAuthorEmailChanged   bool\n}\n```\n\nChangesetSpecDelta is the delta between two ChangesetSpecs describing the same Changeset. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/batches/resolvers/apitest#ChangesetSpecDescription",
               "documentation": {
                 "identifier": "ChangesetSpecDescription",
                 "newPage": false,
                 "searchKey": "apitest.ChangesetSpecDescription",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -680,12 +525,257 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#ChangesetsStats",
+              "documentation": {
+                "identifier": "ChangesetsStats",
+                "newPage": false,
+                "searchKey": "apitest.ChangesetsStats",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ChangesetsStats struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ChangesetsStats struct {\n\tUnpublished int\n\tDraft       int\n\tOpen        int\n\tMerged      int\n\tClosed      int\n\tDeleted     int\n\tTotal       int\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#Comparison",
+              "documentation": {
+                "identifier": "Comparison",
+                "newPage": false,
+                "searchKey": "apitest.Comparison",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Comparison struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Comparison struct {\n\tTypename  string `json:\"__typename\"`\n\tFileDiffs FileDiffs\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#DiffRange",
+              "documentation": {
+                "identifier": "DiffRange",
+                "newPage": false,
+                "searchKey": "apitest.DiffRange",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DiffRange struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DiffRange struct{ StartLine, Lines int }\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#DiffStat",
+              "documentation": {
+                "identifier": "DiffStat",
+                "newPage": false,
+                "searchKey": "apitest.DiffStat",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DiffStat struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DiffStat struct{ Added, Deleted, Changed int32 }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/resolvers/apitest#DiffStat.ToDiffStat",
+                    "documentation": {
+                      "identifier": "DiffStat.ToDiffStat",
+                      "newPage": false,
+                      "searchKey": "apitest.DiffStat.ToDiffStat",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ds DiffStat) ToDiffStat() *diff.Stat"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ds DiffStat) ToDiffStat() *diff.Stat\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#EmptyResponse",
+              "documentation": {
+                "identifier": "EmptyResponse",
+                "newPage": false,
+                "searchKey": "apitest.EmptyResponse",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type EmptyResponse struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype EmptyResponse struct {\n\tAlwaysNil string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#ExternalURL",
+              "documentation": {
+                "identifier": "ExternalURL",
+                "newPage": false,
+                "searchKey": "apitest.ExternalURL",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ExternalURL struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ExternalURL struct {\n\tURL         string\n\tServiceKind string\n\tServiceType string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#File",
+              "documentation": {
+                "identifier": "File",
+                "newPage": false,
+                "searchKey": "apitest.File",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type File struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype File struct {\n\tName string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#FileDiff",
+              "documentation": {
+                "identifier": "FileDiff",
+                "newPage": false,
+                "searchKey": "apitest.FileDiff",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FileDiff struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FileDiff struct {\n\tOldPath, NewPath string\n\tHunks            []FileDiffHunk\n\tStat             DiffStat\n\tOldFile          File\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#FileDiffHunk",
+              "documentation": {
+                "identifier": "FileDiffHunk",
+                "newPage": false,
+                "searchKey": "apitest.FileDiffHunk",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FileDiffHunk struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FileDiffHunk struct {\n\tBody, Section      string\n\tOldNoNewlineAt     bool\n\tOldRange, NewRange DiffRange\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#FileDiffs",
+              "documentation": {
+                "identifier": "FileDiffs",
+                "newPage": false,
+                "searchKey": "apitest.FileDiffs",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FileDiffs struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FileDiffs struct {\n\tRawDiff    string\n\tDiffStat   DiffStat\n\tPageInfo   PageInfo\n\tNodes      []FileDiff\n\tTotalCount int\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/batches/resolvers/apitest#GitCommitDescription",
               "documentation": {
                 "identifier": "GitCommitDescription",
                 "newPage": false,
                 "searchKey": "apitest.GitCommitDescription",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -700,12 +790,80 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#GitTarget",
+              "documentation": {
+                "identifier": "GitTarget",
+                "newPage": false,
+                "searchKey": "apitest.GitTarget",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GitTarget struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GitTarget struct {\n\tOID            string\n\tAbbreviatedOID string\n\tTargetType     string `json:\"type\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#Label",
+              "documentation": {
+                "identifier": "Label",
+                "newPage": false,
+                "searchKey": "apitest.Label",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Label struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Label struct {\n\tText        string\n\tColor       string\n\tDescription *string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#Org",
+              "documentation": {
+                "identifier": "Org",
+                "newPage": false,
+                "searchKey": "apitest.Org",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Org struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Org struct {\n\tID   string\n\tName string\n\n\tBatchChanges BatchChangeConnection\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/batches/resolvers/apitest#PageInfo",
               "documentation": {
                 "identifier": "PageInfo",
                 "newPage": false,
                 "searchKey": "apitest.PageInfo",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -725,7 +883,9 @@
                 "identifier": "Person",
                 "newPage": false,
                 "searchKey": "apitest.Person",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -740,140 +900,66 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#BatchChangesCredential",
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#Repository",
               "documentation": {
-                "identifier": "BatchChangesCredential",
+                "identifier": "Repository",
                 "newPage": false,
-                "searchKey": "apitest.BatchChangesCredential",
-                "tags": null
+                "searchKey": "apitest.Repository",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type BatchChangesCredential struct"
+                "value": "type Repository struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype BatchChangesCredential struct {\n\tID                  string\n\tExternalServiceKind string\n\tExternalServiceURL  string\n\tIsSiteCredential    bool\n\tCreatedAt           string\n}\n```\n\n"
+                "value": "```Go\ntype Repository struct {\n\tID   string\n\tName string\n}\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#EmptyResponse",
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#User",
               "documentation": {
-                "identifier": "EmptyResponse",
+                "identifier": "User",
                 "newPage": false,
-                "searchKey": "apitest.EmptyResponse",
-                "tags": null
+                "searchKey": "apitest.User",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type EmptyResponse struct"
+                "value": "type User struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype EmptyResponse struct {\n\tAlwaysNil string\n}\n```\n\n"
+                "value": "```Go\ntype User struct {\n\tID         string\n\tDatabaseID int32\n\tSiteAdmin  bool\n\n\tBatchChanges          BatchChangeConnection\n\tBatchChangesCodeHosts BatchChangesCodeHostsConnection\n}\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#BatchChangesCodeHostsConnection",
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#UserOrg",
               "documentation": {
-                "identifier": "BatchChangesCodeHostsConnection",
+                "identifier": "UserOrg",
                 "newPage": false,
-                "searchKey": "apitest.BatchChangesCodeHostsConnection",
-                "tags": null
+                "searchKey": "apitest.UserOrg",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type BatchChangesCodeHostsConnection struct"
+                "value": "type UserOrg struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype BatchChangesCodeHostsConnection struct {\n\tPageInfo   PageInfo\n\tNodes      []BatchChangesCodeHost\n\tTotalCount int\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#BatchChangesCodeHost",
-              "documentation": {
-                "identifier": "BatchChangesCodeHost",
-                "newPage": false,
-                "searchKey": "apitest.BatchChangesCodeHost",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type BatchChangesCodeHost struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype BatchChangesCodeHost struct {\n\tExternalServiceKind string\n\tExternalServiceURL  string\n\tCredential          BatchChangesCredential\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#BulkOperation",
-              "documentation": {
-                "identifier": "BulkOperation",
-                "newPage": false,
-                "searchKey": "apitest.BulkOperation",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type BulkOperation struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype BulkOperation struct {\n\tID         string\n\tType       string\n\tState      string\n\tProgress   float64\n\tErrors     []*ChangesetJobError\n\tCreatedAt  string\n\tFinishedAt string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#ChangesetJobError",
-              "documentation": {
-                "identifier": "ChangesetJobError",
-                "newPage": false,
-                "searchKey": "apitest.ChangesetJobError",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ChangesetJobError struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ChangesetJobError struct {\n\tChangeset *Changeset\n\tError     *string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#BulkOperationConnection",
-              "documentation": {
-                "identifier": "BulkOperationConnection",
-                "newPage": false,
-                "searchKey": "apitest.BulkOperationConnection",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type BulkOperationConnection struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype BulkOperationConnection struct {\n\tNodes      []BulkOperation\n\tTotalCount int\n\tPageInfo   PageInfo\n}\n```\n\n"
+                "value": "```Go\ntype UserOrg struct {\n\tID         string\n\tDatabaseID int32\n\tSiteAdmin  bool\n\tName       string\n}\n```\n\n"
               },
               "children": null
             }
@@ -889,6 +975,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -903,32 +990,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/resolvers/apitest#MustExec",
-              "documentation": {
-                "identifier": "MustExec",
-                "newPage": false,
-                "searchKey": "apitest.MustExec",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func MustExec(ctx context.Context,..."
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc MustExec(\n\tctx context.Context,\n\tt testing.TB,\n\ts *graphql.Schema,\n\tin map[string]interface{},\n\tout interface{},\n\tquery string,\n)\n```\n\nMustExec uses Exec to execute the given query and calls t.Fatalf if Exec failed. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/batches/resolvers/apitest#Exec",
               "documentation": {
                 "identifier": "Exec",
                 "newPage": false,
                 "searchKey": "apitest.Exec",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -943,12 +1012,35 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/batches/resolvers/apitest#MustExec",
+              "documentation": {
+                "identifier": "MustExec",
+                "newPage": false,
+                "searchKey": "apitest.MustExec",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MustExec(ctx context.Context,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MustExec(\n\tctx context.Context,\n\tt testing.TB,\n\ts *graphql.Schema,\n\tin map[string]interface{},\n\tout interface{},\n\tquery string,\n)\n```\n\nMustExec uses Exec to execute the given query and calls t.Fatalf if Exec failed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/batches/resolvers/apitest#toJSON",
               "documentation": {
                 "identifier": "toJSON",
                 "newPage": false,
                 "searchKey": "apitest.toJSON",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },

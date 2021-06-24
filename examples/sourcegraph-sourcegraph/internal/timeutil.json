@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/timeutil",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,9 @@
                 "identifier": "FakeClock",
                 "newPage": false,
                 "searchKey": "timeutil.FakeClock",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +66,9 @@
                       "identifier": "NewFakeClock",
                       "newPage": false,
                       "searchKey": "timeutil.NewFakeClock",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,7 +88,9 @@
                       "identifier": "FakeClock.Now",
                       "newPage": false,
                       "searchKey": "timeutil.FakeClock.Now",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -102,7 +110,9 @@
                       "identifier": "FakeClock.Time",
                       "newPage": false,
                       "searchKey": "timeutil.FakeClock.Time",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -129,6 +139,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -148,7 +159,9 @@
                 "identifier": "Now",
                 "newPage": false,
                 "searchKey": "timeutil.Now",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -168,7 +181,9 @@
                 "identifier": "StartOfWeek",
                 "newPage": false,
                 "searchKey": "timeutil.StartOfWeek",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -189,7 +204,9 @@
                 "newPage": false,
                 "searchKey": "timeutil.TestWeek_StartOfWeek",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {

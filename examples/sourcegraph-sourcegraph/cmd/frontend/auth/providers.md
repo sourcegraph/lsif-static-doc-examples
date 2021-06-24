@@ -3,31 +3,46 @@
 ## Index
 
 * [Variables](#var)
+    * [var MockProviders](#MockProviders)
     * [var curProviders](#curProviders)
     * [var curProvidersMu](#curProvidersMu)
-    * [var MockProviders](#MockProviders)
 * [Types](#type)
-    * [type Provider interface](#Provider)
-        * [func GetProviderByConfigID(id ConfigID) Provider](#GetProviderByConfigID)
     * [type ConfigID struct](#ConfigID)
     * [type Info struct](#Info)
+    * [type Provider interface](#Provider)
+        * [func GetProviderByConfigID(id ConfigID) Provider](#GetProviderByConfigID)
     * [type sortProviders []providers.Provider](#sortProviders)
         * [func (p sortProviders) Len() int](#sortProviders.Len)
         * [func (p sortProviders) Less(i, j int) bool](#sortProviders.Less)
         * [func (p sortProviders) Swap(i, j int)](#sortProviders.Swap)
 * [Functions](#func)
-    * [func Update(pkgName string, providers []Provider)](#Update)
-    * [func Providers() []Provider](#Providers)
     * [func BuiltinAuthEnabled() bool](#BuiltinAuthEnabled)
+    * [func Providers() []Provider](#Providers)
+    * [func Update(pkgName string, providers []Provider)](#Update)
 
 
 ## <a id="var" href="#var">Variables</a>
+
+```
+tags: [package]
+```
+
+### <a id="MockProviders" href="#MockProviders">var MockProviders</a>
+
+```
+searchKey: providers.MockProviders
+tags: [variable array interface]
+```
+
+```Go
+var MockProviders []Provider
+```
 
 ### <a id="curProviders" href="#curProviders">var curProviders</a>
 
 ```
 searchKey: providers.curProviders
-tags: [private]
+tags: [variable object private]
 ```
 
 ```Go
@@ -40,29 +55,81 @@ curProviders is a map (package name -> (config string -> Provider)). The first k
 
 ```
 searchKey: providers.curProvidersMu
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
 var curProvidersMu sync.RWMutex
 ```
 
-### <a id="MockProviders" href="#MockProviders">var MockProviders</a>
+## <a id="type" href="#type">Types</a>
 
 ```
-searchKey: providers.MockProviders
+tags: [package]
+```
+
+### <a id="ConfigID" href="#ConfigID">type ConfigID struct</a>
+
+```
+searchKey: providers.ConfigID
+tags: [struct]
 ```
 
 ```Go
-var MockProviders []Provider
+type ConfigID struct {
+	// Type is the type of this auth provider (equal to its "type" property in its entry in the
+	// auth.providers array in site configuration).
+	Type string
+
+	// ID is an identifier that uniquely represents a provider's config among all other provider
+	// configs of the same type.
+	//
+	// This value MUST NOT be persisted or used to associate accounts with this provider because it
+	// can change when any property in this provider's config changes, even when those changes are
+	// not material for identification (such as changing the display name).
+	//
+	// 🚨 SECURITY: This MUST NOT contain secret information because it is shown to unauthenticated
+	// and anonymous clients.
+	ID string
+}
 ```
 
-## <a id="type" href="#type">Types</a>
+ConfigID identifies a provider config object in the auth.providers site configuration array. 
+
+🚨 SECURITY: This MUST NOT contain secret information because it is shown to unauthenticated and anonymous clients. 
+
+### <a id="Info" href="#Info">type Info struct</a>
+
+```
+searchKey: providers.Info
+tags: [struct]
+```
+
+```Go
+type Info struct {
+	// ServiceID identifies the external service that this authentication provider represents. It is
+	// a stable identifier.
+	ServiceID string
+
+	// ClientID identifies the external service client used when communicating with the external
+	// service. It is a stable identifier.
+	ClientID string
+
+	// DisplayName is the name to use when displaying the provider in the UI.
+	DisplayName string
+
+	// AuthenticationURL is the URL to visit in order to initiate authenticating via this provider.
+	AuthenticationURL string
+}
+```
+
+Info contains information about an authentication provider. 
 
 ### <a id="Provider" href="#Provider">type Provider interface</a>
 
 ```
 searchKey: providers.Provider
+tags: [interface]
 ```
 
 ```Go
@@ -97,72 +164,18 @@ An authentication provider implementation can have multiple Provider instances. 
 
 ```
 searchKey: providers.GetProviderByConfigID
+tags: [method]
 ```
 
 ```Go
 func GetProviderByConfigID(id ConfigID) Provider
 ```
 
-### <a id="ConfigID" href="#ConfigID">type ConfigID struct</a>
-
-```
-searchKey: providers.ConfigID
-```
-
-```Go
-type ConfigID struct {
-	// Type is the type of this auth provider (equal to its "type" property in its entry in the
-	// auth.providers array in site configuration).
-	Type string
-
-	// ID is an identifier that uniquely represents a provider's config among all other provider
-	// configs of the same type.
-	//
-	// This value MUST NOT be persisted or used to associate accounts with this provider because it
-	// can change when any property in this provider's config changes, even when those changes are
-	// not material for identification (such as changing the display name).
-	//
-	// 🚨 SECURITY: This MUST NOT contain secret information because it is shown to unauthenticated
-	// and anonymous clients.
-	ID string
-}
-```
-
-ConfigID identifies a provider config object in the auth.providers site configuration array. 
-
-🚨 SECURITY: This MUST NOT contain secret information because it is shown to unauthenticated and anonymous clients. 
-
-### <a id="Info" href="#Info">type Info struct</a>
-
-```
-searchKey: providers.Info
-```
-
-```Go
-type Info struct {
-	// ServiceID identifies the external service that this authentication provider represents. It is
-	// a stable identifier.
-	ServiceID string
-
-	// ClientID identifies the external service client used when communicating with the external
-	// service. It is a stable identifier.
-	ClientID string
-
-	// DisplayName is the name to use when displaying the provider in the UI.
-	DisplayName string
-
-	// AuthenticationURL is the URL to visit in order to initiate authenticating via this provider.
-	AuthenticationURL string
-}
-```
-
-Info contains information about an authentication provider. 
-
 ### <a id="sortProviders" href="#sortProviders">type sortProviders []providers.Provider</a>
 
 ```
 searchKey: providers.sortProviders
-tags: [private]
+tags: [array interface private]
 ```
 
 ```Go
@@ -173,7 +186,7 @@ type sortProviders []Provider
 
 ```
 searchKey: providers.sortProviders.Len
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -184,7 +197,7 @@ func (p sortProviders) Len() int
 
 ```
 searchKey: providers.sortProviders.Less
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -197,7 +210,7 @@ Less puts the builtin provider first and sorts the others alphabetically by type
 
 ```
 searchKey: providers.sortProviders.Swap
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -206,22 +219,26 @@ func (p sortProviders) Swap(i, j int)
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="Update" href="#Update">func Update(pkgName string, providers []Provider)</a>
+```
+tags: [package]
+```
+
+### <a id="BuiltinAuthEnabled" href="#BuiltinAuthEnabled">func BuiltinAuthEnabled() bool</a>
 
 ```
-searchKey: providers.Update
+searchKey: providers.BuiltinAuthEnabled
+tags: [function]
 ```
 
 ```Go
-func Update(pkgName string, providers []Provider)
+func BuiltinAuthEnabled() bool
 ```
-
-Update updates the set of active authentication provider instances. It replaces the current set of Providers under the specified pkgName with the new set. 
 
 ### <a id="Providers" href="#Providers">func Providers() []Provider</a>
 
 ```
 searchKey: providers.Providers
+tags: [function]
 ```
 
 ```Go
@@ -230,13 +247,16 @@ func Providers() []Provider
 
 Providers returns the set of currently registered authentication providers. When no providers are registered, returns nil (and sign-in is effectively disabled). 
 
-### <a id="BuiltinAuthEnabled" href="#BuiltinAuthEnabled">func BuiltinAuthEnabled() bool</a>
+### <a id="Update" href="#Update">func Update(pkgName string, providers []Provider)</a>
 
 ```
-searchKey: providers.BuiltinAuthEnabled
+searchKey: providers.Update
+tags: [method]
 ```
 
 ```Go
-func BuiltinAuthEnabled() bool
+func Update(pkgName string, providers []Provider)
 ```
+
+Update updates the set of active authentication provider instances. It replaces the current set of Providers under the specified pkgName with the new set. 
 

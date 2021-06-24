@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "cmd/frontend/internal/gosrc",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,10 @@
                 "identifier": "RuntimeVersion",
                 "newPage": false,
                 "searchKey": "gosrc.RuntimeVersion",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -65,6 +70,8 @@
                 "newPage": false,
                 "searchKey": "gosrc.errNoMatch",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -87,6 +94,8 @@
                 "newPage": false,
                 "searchKey": "gosrc.gopkgSrcTemplate",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -109,6 +118,9 @@
                 "newPage": false,
                 "searchKey": "gosrc.stdlibInternalPackagePrefixes",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
@@ -131,6 +143,8 @@
                 "newPage": false,
                 "searchKey": "gosrc.stdlibPackagePaths",
                 "tags": [
+                  "variable",
+                  "object",
                   "private"
                 ]
               },
@@ -156,6 +170,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -175,7 +190,9 @@
                 "identifier": "Directory",
                 "newPage": false,
                 "searchKey": "gosrc.Directory",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -193,7 +210,9 @@
                       "identifier": "ResolveImportPath",
                       "newPage": false,
                       "searchKey": "gosrc.ResolveImportPath",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -208,34 +227,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/cmd/frontend/internal/gosrc#resolveStaticImportPath",
-                    "documentation": {
-                      "identifier": "resolveStaticImportPath",
-                      "newPage": false,
-                      "searchKey": "gosrc.resolveStaticImportPath",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func resolveStaticImportPath(importPath string) (*Directory, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc resolveStaticImportPath(importPath string) (*Directory, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/cmd/frontend/internal/gosrc#resolveDynamicImportPath",
                     "documentation": {
                       "identifier": "resolveDynamicImportPath",
                       "newPage": false,
                       "searchKey": "gosrc.resolveDynamicImportPath",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -246,6 +244,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc resolveDynamicImportPath(client httpcli.Doer, importPath string) (*Directory, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/gosrc#resolveStaticImportPath",
+                    "documentation": {
+                      "identifier": "resolveStaticImportPath",
+                      "newPage": false,
+                      "searchKey": "gosrc.resolveStaticImportPath",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func resolveStaticImportPath(importPath string) (*Directory, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc resolveStaticImportPath(importPath string) (*Directory, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -261,6 +282,7 @@
                 "newPage": false,
                 "searchKey": "gosrc.importMeta",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -281,6 +303,7 @@
                       "newPage": false,
                       "searchKey": "gosrc.fetchMeta",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -303,6 +326,7 @@
                       "newPage": false,
                       "searchKey": "gosrc.parseMeta",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -328,6 +352,7 @@
                 "newPage": false,
                 "searchKey": "gosrc.sourceMeta",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -350,6 +375,7 @@
                 "newPage": false,
                 "searchKey": "gosrc.testTransport",
                 "tags": [
+                  "object",
                   "private"
                 ]
               },
@@ -370,6 +396,7 @@
                       "newPage": false,
                       "searchKey": "gosrc.testTransport.RoundTrip",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -398,6 +425,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -412,34 +440,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/gosrc#attrValue",
-              "documentation": {
-                "identifier": "attrValue",
-                "newPage": false,
-                "searchKey": "gosrc.attrValue",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func attrValue(attrs []xml.Attr, name string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc attrValue(attrs []xml.Attr, name string) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/gosrc#IsStdlibPkg",
               "documentation": {
                 "identifier": "IsStdlibPkg",
                 "newPage": false,
                 "searchKey": "gosrc.IsStdlibPkg",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -460,7 +468,9 @@
                 "newPage": false,
                 "searchKey": "gosrc.TestResolveImportPath",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -470,6 +480,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc TestResolveImportPath(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/gosrc#attrValue",
+              "documentation": {
+                "identifier": "attrValue",
+                "newPage": false,
+                "searchKey": "gosrc.attrValue",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func attrValue(attrs []xml.Attr, name string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc attrValue(attrs []xml.Attr, name string) string\n```\n\n"
               },
               "children": null
             }

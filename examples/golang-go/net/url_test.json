@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "net/url_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,100 +41,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/net/url_test#ExampleValues",
-              "documentation": {
-                "identifier": "ExampleValues",
-                "newPage": false,
-                "searchKey": "url_test.ExampleValues",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleValues()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleValues()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url_test#ExampleURL",
-              "documentation": {
-                "identifier": "ExampleURL",
-                "newPage": false,
-                "searchKey": "url_test.ExampleURL",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleURL()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleURL()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url_test#ExampleURL_roundtrip",
-              "documentation": {
-                "identifier": "ExampleURL_roundtrip",
-                "newPage": false,
-                "searchKey": "url_test.ExampleURL_roundtrip",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleURL_roundtrip()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleURL_roundtrip()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url_test#ExampleURL_ResolveReference",
-              "documentation": {
-                "identifier": "ExampleURL_ResolveReference",
-                "newPage": false,
-                "searchKey": "url_test.ExampleURL_ResolveReference",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleURL_ResolveReference()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleURL_ResolveReference()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/url_test#ExampleParseQuery",
               "documentation": {
                 "identifier": "ExampleParseQuery",
                 "newPage": false,
                 "searchKey": "url_test.ExampleParseQuery",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -149,22 +64,23 @@
           },
           {
             "node": {
-              "pathID": "/net/url_test#ExampleURL_EscapedPath",
+              "pathID": "/net/url_test#ExampleURL",
               "documentation": {
-                "identifier": "ExampleURL_EscapedPath",
+                "identifier": "ExampleURL",
                 "newPage": false,
-                "searchKey": "url_test.ExampleURL_EscapedPath",
+                "searchKey": "url_test.ExampleURL",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func ExampleURL_EscapedPath()"
+                "value": "func ExampleURL()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc ExampleURL_EscapedPath()\n```\n\n"
+                "value": "```Go\nfunc ExampleURL()\n```\n\n"
               },
               "children": null
             }
@@ -177,6 +93,7 @@
                 "newPage": false,
                 "searchKey": "url_test.ExampleURL_EscapedFragment",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -193,12 +110,36 @@
           },
           {
             "node": {
+              "pathID": "/net/url_test#ExampleURL_EscapedPath",
+              "documentation": {
+                "identifier": "ExampleURL_EscapedPath",
+                "newPage": false,
+                "searchKey": "url_test.ExampleURL_EscapedPath",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleURL_EscapedPath()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleURL_EscapedPath()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/net/url_test#ExampleURL_Hostname",
               "documentation": {
                 "identifier": "ExampleURL_Hostname",
                 "newPage": false,
                 "searchKey": "url_test.ExampleURL_Hostname",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -221,6 +162,7 @@
                 "newPage": false,
                 "searchKey": "url_test.ExampleURL_IsAbs",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -243,6 +185,7 @@
                 "newPage": false,
                 "searchKey": "url_test.ExampleURL_MarshalBinary",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -265,6 +208,7 @@
                 "newPage": false,
                 "searchKey": "url_test.ExampleURL_Parse",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -287,6 +231,7 @@
                 "newPage": false,
                 "searchKey": "url_test.ExampleURL_Port",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -309,6 +254,7 @@
                 "newPage": false,
                 "searchKey": "url_test.ExampleURL_Query",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -325,56 +271,13 @@
           },
           {
             "node": {
-              "pathID": "/net/url_test#ExampleURL_String",
-              "documentation": {
-                "identifier": "ExampleURL_String",
-                "newPage": false,
-                "searchKey": "url_test.ExampleURL_String",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleURL_String()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleURL_String()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/url_test#ExampleURL_UnmarshalBinary",
-              "documentation": {
-                "identifier": "ExampleURL_UnmarshalBinary",
-                "newPage": false,
-                "searchKey": "url_test.ExampleURL_UnmarshalBinary",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleURL_UnmarshalBinary()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleURL_UnmarshalBinary()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/net/url_test#ExampleURL_Redacted",
               "documentation": {
                 "identifier": "ExampleURL_Redacted",
                 "newPage": false,
                 "searchKey": "url_test.ExampleURL_Redacted",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -397,6 +300,7 @@
                 "newPage": false,
                 "searchKey": "url_test.ExampleURL_RequestURI",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -413,12 +317,128 @@
           },
           {
             "node": {
+              "pathID": "/net/url_test#ExampleURL_ResolveReference",
+              "documentation": {
+                "identifier": "ExampleURL_ResolveReference",
+                "newPage": false,
+                "searchKey": "url_test.ExampleURL_ResolveReference",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleURL_ResolveReference()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleURL_ResolveReference()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url_test#ExampleURL_String",
+              "documentation": {
+                "identifier": "ExampleURL_String",
+                "newPage": false,
+                "searchKey": "url_test.ExampleURL_String",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleURL_String()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleURL_String()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url_test#ExampleURL_UnmarshalBinary",
+              "documentation": {
+                "identifier": "ExampleURL_UnmarshalBinary",
+                "newPage": false,
+                "searchKey": "url_test.ExampleURL_UnmarshalBinary",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleURL_UnmarshalBinary()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleURL_UnmarshalBinary()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url_test#ExampleURL_roundtrip",
+              "documentation": {
+                "identifier": "ExampleURL_roundtrip",
+                "newPage": false,
+                "searchKey": "url_test.ExampleURL_roundtrip",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleURL_roundtrip()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleURL_roundtrip()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/url_test#ExampleValues",
+              "documentation": {
+                "identifier": "ExampleValues",
+                "newPage": false,
+                "searchKey": "url_test.ExampleValues",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleValues()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleValues()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/net/url_test#toJSON",
               "documentation": {
                 "identifier": "toJSON",
                 "newPage": false,
                 "searchKey": "url_test.toJSON",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },

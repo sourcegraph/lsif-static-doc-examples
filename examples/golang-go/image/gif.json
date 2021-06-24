@@ -4,7 +4,9 @@
     "identifier": "gif",
     "newPage": true,
     "searchKey": "image/gif",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,142 +39,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/image/gif#fColorTable",
-              "documentation": {
-                "identifier": "fColorTable",
-                "newPage": false,
-                "searchKey": "gif.fColorTable",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const fColorTable"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst fColorTable = 1 << 7\n```\n\nMasks etc. \n\nFields. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#fInterlace",
-              "documentation": {
-                "identifier": "fInterlace",
-                "newPage": false,
-                "searchKey": "gif.fInterlace",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const fInterlace"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst fInterlace = 1 << 6\n```\n\nMasks etc. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#fColorTableBitsMask",
-              "documentation": {
-                "identifier": "fColorTableBitsMask",
-                "newPage": false,
-                "searchKey": "gif.fColorTableBitsMask",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const fColorTableBitsMask"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst fColorTableBitsMask = 7\n```\n\nMasks etc. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#gcTransparentColorSet",
-              "documentation": {
-                "identifier": "gcTransparentColorSet",
-                "newPage": false,
-                "searchKey": "gif.gcTransparentColorSet",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const gcTransparentColorSet"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst gcTransparentColorSet = 1 << 0\n```\n\nMasks etc. \n\nGraphic control flags. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#gcDisposalMethodMask",
-              "documentation": {
-                "identifier": "gcDisposalMethodMask",
-                "newPage": false,
-                "searchKey": "gif.gcDisposalMethodMask",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const gcDisposalMethodMask"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst gcDisposalMethodMask = 7 << 2\n```\n\nMasks etc. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#DisposalNone",
-              "documentation": {
-                "identifier": "DisposalNone",
-                "newPage": false,
-                "searchKey": "gif.DisposalNone",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const DisposalNone"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst DisposalNone = 0x01\n```\n\nDisposal Methods. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/image/gif#DisposalBackground",
               "documentation": {
                 "identifier": "DisposalBackground",
                 "newPage": false,
                 "searchKey": "gif.DisposalBackground",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -185,12 +62,38 @@
           },
           {
             "node": {
+              "pathID": "/image/gif#DisposalNone",
+              "documentation": {
+                "identifier": "DisposalNone",
+                "newPage": false,
+                "searchKey": "gif.DisposalNone",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const DisposalNone"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst DisposalNone = 0x01\n```\n\nDisposal Methods. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/image/gif#DisposalPrevious",
               "documentation": {
                 "identifier": "DisposalPrevious",
                 "newPage": false,
                 "searchKey": "gif.DisposalPrevious",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -205,144 +108,14 @@
           },
           {
             "node": {
-              "pathID": "/image/gif#sExtension",
-              "documentation": {
-                "identifier": "sExtension",
-                "newPage": false,
-                "searchKey": "gif.sExtension",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const sExtension"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst sExtension = 0x21\n```\n\nSection indicators. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#sImageDescriptor",
-              "documentation": {
-                "identifier": "sImageDescriptor",
-                "newPage": false,
-                "searchKey": "gif.sImageDescriptor",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const sImageDescriptor"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst sImageDescriptor = 0x2C\n```\n\nSection indicators. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#sTrailer",
-              "documentation": {
-                "identifier": "sTrailer",
-                "newPage": false,
-                "searchKey": "gif.sTrailer",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const sTrailer"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst sTrailer = 0x3B\n```\n\nSection indicators. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#eText",
-              "documentation": {
-                "identifier": "eText",
-                "newPage": false,
-                "searchKey": "gif.eText",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const eText"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst eText = 0x01 // Plain Text\n\n```\n\nExtensions. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#eGraphicControl",
-              "documentation": {
-                "identifier": "eGraphicControl",
-                "newPage": false,
-                "searchKey": "gif.eGraphicControl",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const eGraphicControl"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst eGraphicControl = 0xF9 // Graphic Control\n\n```\n\nExtensions. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#eComment",
-              "documentation": {
-                "identifier": "eComment",
-                "newPage": false,
-                "searchKey": "gif.eComment",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const eComment"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst eComment = 0xFE // Comment\n\n```\n\nExtensions. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/image/gif#eApplication",
               "documentation": {
                 "identifier": "eApplication",
                 "newPage": false,
                 "searchKey": "gif.eApplication",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -359,22 +132,144 @@
           },
           {
             "node": {
-              "pathID": "/image/gif#gcLabel",
+              "pathID": "/image/gif#eComment",
               "documentation": {
-                "identifier": "gcLabel",
+                "identifier": "eComment",
                 "newPage": false,
-                "searchKey": "gif.gcLabel",
+                "searchKey": "gif.eComment",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const gcLabel"
+                "value": "const eComment"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst gcLabel = 0xF9\n```\n\nGraphic control extension fields. \n\n"
+                "value": "```Go\nconst eComment = 0xFE // Comment\n\n```\n\nExtensions. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#eGraphicControl",
+              "documentation": {
+                "identifier": "eGraphicControl",
+                "newPage": false,
+                "searchKey": "gif.eGraphicControl",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const eGraphicControl"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst eGraphicControl = 0xF9 // Graphic Control\n\n```\n\nExtensions. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#eText",
+              "documentation": {
+                "identifier": "eText",
+                "newPage": false,
+                "searchKey": "gif.eText",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const eText"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst eText = 0x01 // Plain Text\n\n```\n\nExtensions. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#fColorTable",
+              "documentation": {
+                "identifier": "fColorTable",
+                "newPage": false,
+                "searchKey": "gif.fColorTable",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fColorTable"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fColorTable = 1 << 7\n```\n\nMasks etc. \n\nFields. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#fColorTableBitsMask",
+              "documentation": {
+                "identifier": "fColorTableBitsMask",
+                "newPage": false,
+                "searchKey": "gif.fColorTableBitsMask",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fColorTableBitsMask"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fColorTableBitsMask = 7\n```\n\nMasks etc. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#fInterlace",
+              "documentation": {
+                "identifier": "fInterlace",
+                "newPage": false,
+                "searchKey": "gif.fInterlace",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fInterlace"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fInterlace = 1 << 6\n```\n\nMasks etc. \n\n"
               },
               "children": null
             }
@@ -387,6 +282,8 @@
                 "newPage": false,
                 "searchKey": "gif.gcBlockSize",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -403,12 +300,86 @@
           },
           {
             "node": {
+              "pathID": "/image/gif#gcDisposalMethodMask",
+              "documentation": {
+                "identifier": "gcDisposalMethodMask",
+                "newPage": false,
+                "searchKey": "gif.gcDisposalMethodMask",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const gcDisposalMethodMask"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst gcDisposalMethodMask = 7 << 2\n```\n\nMasks etc. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#gcLabel",
+              "documentation": {
+                "identifier": "gcLabel",
+                "newPage": false,
+                "searchKey": "gif.gcLabel",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const gcLabel"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst gcLabel = 0xF9\n```\n\nGraphic control extension fields. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#gcTransparentColorSet",
+              "documentation": {
+                "identifier": "gcTransparentColorSet",
+                "newPage": false,
+                "searchKey": "gif.gcTransparentColorSet",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const gcTransparentColorSet"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst gcTransparentColorSet = 1 << 0\n```\n\nMasks etc. \n\nGraphic control flags. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/image/gif#headerStr",
               "documentation": {
                 "identifier": "headerStr",
                 "newPage": false,
                 "searchKey": "gif.headerStr",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -431,6 +402,8 @@
                 "newPage": false,
                 "searchKey": "gif.paletteStr",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -447,12 +420,86 @@
           },
           {
             "node": {
+              "pathID": "/image/gif#sExtension",
+              "documentation": {
+                "identifier": "sExtension",
+                "newPage": false,
+                "searchKey": "gif.sExtension",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const sExtension"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst sExtension = 0x21\n```\n\nSection indicators. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#sImageDescriptor",
+              "documentation": {
+                "identifier": "sImageDescriptor",
+                "newPage": false,
+                "searchKey": "gif.sImageDescriptor",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const sImageDescriptor"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst sImageDescriptor = 0x2C\n```\n\nSection indicators. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#sTrailer",
+              "documentation": {
+                "identifier": "sTrailer",
+                "newPage": false,
+                "searchKey": "gif.sTrailer",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const sTrailer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst sTrailer = 0x3B\n```\n\nSection indicators. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/image/gif#trailerStr",
               "documentation": {
                 "identifier": "trailerStr",
                 "newPage": false,
                 "searchKey": "gif.trailerStr",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -477,7 +524,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -490,12 +539,38 @@
         "children": [
           {
             "node": {
+              "pathID": "/image/gif#errBadPixel",
+              "documentation": {
+                "identifier": "errBadPixel",
+                "newPage": false,
+                "searchKey": "gif.errBadPixel",
+                "tags": [
+                  "variable",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errBadPixel"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errBadPixel = errors.New(\"gif: invalid pixel value\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/image/gif#errNotEnough",
               "documentation": {
                 "identifier": "errNotEnough",
                 "newPage": false,
                 "searchKey": "gif.errNotEnough",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -518,6 +593,8 @@
                 "newPage": false,
                 "searchKey": "gif.errTooMuch",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -534,22 +611,25 @@
           },
           {
             "node": {
-              "pathID": "/image/gif#errBadPixel",
+              "pathID": "/image/gif#frames",
               "documentation": {
-                "identifier": "errBadPixel",
+                "identifier": "frames",
                 "newPage": false,
-                "searchKey": "gif.errBadPixel",
+                "searchKey": "gif.frames",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var errBadPixel"
+                "value": "var frames"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar errBadPixel = errors.New(\"gif: invalid pixel value\")\n```\n\n"
+                "value": "```Go\nvar frames = []string{\n\t\"../testdata/video-001.gif\",\n\t\"../testdata/video-005.gray.gif\",\n}\n```\n\n"
               },
               "children": null
             }
@@ -562,6 +642,9 @@
                 "newPage": false,
                 "searchKey": "gif.interlacing",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -584,6 +667,9 @@
                 "newPage": false,
                 "searchKey": "gif.log2Lookup",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -600,34 +686,15 @@
           },
           {
             "node": {
-              "pathID": "/image/gif#testGIF",
-              "documentation": {
-                "identifier": "testGIF",
-                "newPage": false,
-                "searchKey": "gif.testGIF",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var testGIF"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar testGIF = ...\n```\n\ntestGIF is a simple GIF that we can modify to test different scenarios. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/image/gif#testCase",
               "documentation": {
                 "identifier": "testCase",
                 "newPage": false,
                 "searchKey": "gif.testCase",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -644,22 +711,25 @@
           },
           {
             "node": {
-              "pathID": "/image/gif#frames",
+              "pathID": "/image/gif#testGIF",
               "documentation": {
-                "identifier": "frames",
+                "identifier": "testGIF",
                 "newPage": false,
-                "searchKey": "gif.frames",
+                "searchKey": "gif.testGIF",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var frames"
+                "value": "var testGIF"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar frames = []string{\n\t\"../testdata/video-001.gif\",\n\t\"../testdata/video-005.gray.gif\",\n}\n```\n\n"
+                "value": "```Go\nvar testGIF = ...\n```\n\ntestGIF is a simple GIF that we can modify to test different scenarios. \n\n"
               },
               "children": null
             }
@@ -674,7 +744,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -687,24 +759,347 @@
         "children": [
           {
             "node": {
-              "pathID": "/image/gif#reader",
+              "pathID": "/image/gif#GIF",
               "documentation": {
-                "identifier": "reader",
+                "identifier": "GIF",
                 "newPage": false,
-                "searchKey": "gif.reader",
+                "searchKey": "gif.GIF",
                 "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GIF struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GIF struct {\n\tImage []*image.Paletted // The successive images.\n\tDelay []int             // The successive delay times, one per frame, in 100ths of a second.\n\t// LoopCount controls the number of times an animation will be\n\t// restarted during display.\n\t// A LoopCount of 0 means to loop forever.\n\t// A LoopCount of -1 means to show each frame only once.\n\t// Otherwise, the animation is looped LoopCount+1 times.\n\tLoopCount int\n\t// Disposal is the successive disposal methods, one per frame. For\n\t// backwards compatibility, a nil Disposal is valid to pass to EncodeAll,\n\t// and implies that each frame's disposal method is 0 (no disposal\n\t// specified).\n\tDisposal []byte\n\t// Config is the global color table (palette), width and height. A nil or\n\t// empty-color.Palette Config.ColorModel means that each frame has its own\n\t// color table and there is no global color table. Each frame's bounds must\n\t// be within the rectangle defined by the two points (0, 0) and\n\t// (Config.Width, Config.Height).\n\t//\n\t// For backwards compatibility, a zero-valued Config is valid to pass to\n\t// EncodeAll, and implies that the overall GIF's width and height equals\n\t// the first frame's bounds' Rectangle.Max point.\n\tConfig image.Config\n\t// BackgroundIndex is the background index in the global color table, for\n\t// use with the DisposalBackground disposal method.\n\tBackgroundIndex byte\n}\n```\n\nGIF represents the possibly multiple images stored in a GIF file. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/image/gif#DecodeAll",
+                    "documentation": {
+                      "identifier": "DecodeAll",
+                      "newPage": false,
+                      "searchKey": "gif.DecodeAll",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func DecodeAll(r io.Reader) (*GIF, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc DecodeAll(r io.Reader) (*GIF, error)\n```\n\nDecodeAll reads a GIF image from r and returns the sequential frames and timing information. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/image/gif#readGIF",
+                    "documentation": {
+                      "identifier": "readGIF",
+                      "newPage": false,
+                      "searchKey": "gif.readGIF",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func readGIF(filename string) (*GIF, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc readGIF(filename string) (*GIF, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#Options",
+              "documentation": {
+                "identifier": "Options",
+                "newPage": false,
+                "searchKey": "gif.Options",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Options struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Options struct {\n\t// NumColors is the maximum number of colors used in the image.\n\t// It ranges from 1 to 256.\n\tNumColors int\n\n\t// Quantizer is used to produce a palette with size NumColors.\n\t// palette.Plan9 is used in place of a nil Quantizer.\n\tQuantizer draw.Quantizer\n\n\t// Drawer is used to convert the source image to the desired palette.\n\t// draw.FloydSteinberg is used in place of a nil Drawer.\n\tDrawer draw.Drawer\n}\n```\n\nOptions are the encoding parameters. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#blockReader",
+              "documentation": {
+                "identifier": "blockReader",
+                "newPage": false,
+                "searchKey": "gif.blockReader",
+                "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type reader interface"
+                "value": "type blockReader struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype reader interface {\n\tio.Reader\n\tio.ByteReader\n}\n```\n\nIf the io.Reader does not also have ReadByte, then decode will introduce its own buffering. \n\n"
+                "value": "```Go\ntype blockReader struct {\n\td    *decoder\n\ti, j uint8 // d.tmp[i:j] contains the buffered bytes\n\terr  error\n}\n```\n\nblockReader parses the block structure of GIF image data, which comprises (n, (n bytes)) blocks, with 1 <= n <= 255. It is the reader given to the LZW decoder, which is thus immune to the blocking. After the LZW decoder completes, there will be a 0-byte block remaining (0, ()), which is consumed when checking that the blockReader is exhausted. \n\nTo avoid the allocation of a bufio.Reader for the lzw Reader, blockReader implements io.ReadByte and buffers blocks into the decoder's \"tmp\" buffer. \n\n"
               },
-              "children": null
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/image/gif#blockReader.Read",
+                    "documentation": {
+                      "identifier": "blockReader.Read",
+                      "newPage": false,
+                      "searchKey": "gif.blockReader.Read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *blockReader) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *blockReader) Read(p []byte) (int, error)\n```\n\nblockReader must implement io.Reader, but its Read shouldn't ever actually be called in practice. The compress/lzw package will only call ReadByte. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/image/gif#blockReader.ReadByte",
+                    "documentation": {
+                      "identifier": "blockReader.ReadByte",
+                      "newPage": false,
+                      "searchKey": "gif.blockReader.ReadByte",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *blockReader) ReadByte() (byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *blockReader) ReadByte() (byte, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/image/gif#blockReader.close",
+                    "documentation": {
+                      "identifier": "blockReader.close",
+                      "newPage": false,
+                      "searchKey": "gif.blockReader.close",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *blockReader) close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *blockReader) close() error\n```\n\nclose primarily detects whether or not a block terminator was encountered after reading a sequence of data sub-blocks. It allows at most one trailing sub-block worth of data. I.e., if some number of bytes exist in one sub-block following the end of LZW data, the very next sub-block must be the block terminator. If the very end of LZW data happened to fill one sub-block, at most one more sub-block of length 1 may exist before the block-terminator. These accommodations allow us to support GIFs created by less strict encoders. See [https://golang.org/issue/16146](https://golang.org/issue/16146). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/image/gif#blockReader.fill",
+                    "documentation": {
+                      "identifier": "blockReader.fill",
+                      "newPage": false,
+                      "searchKey": "gif.blockReader.fill",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *blockReader) fill()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *blockReader) fill()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#blockWriter",
+              "documentation": {
+                "identifier": "blockWriter",
+                "newPage": false,
+                "searchKey": "gif.blockWriter",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type blockWriter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype blockWriter struct {\n\te *encoder\n}\n```\n\nblockWriter writes the block structure of GIF image data, which comprises (n, (n bytes)) blocks, with 1 <= n <= 255. It is the writer given to the LZW encoder, which is thus immune to the blocking. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/image/gif#blockWriter.Flush",
+                    "documentation": {
+                      "identifier": "blockWriter.Flush",
+                      "newPage": false,
+                      "searchKey": "gif.blockWriter.Flush",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b blockWriter) Flush() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b blockWriter) Flush() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/image/gif#blockWriter.Write",
+                    "documentation": {
+                      "identifier": "blockWriter.Write",
+                      "newPage": false,
+                      "searchKey": "gif.blockWriter.Write",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b blockWriter) Write(data []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b blockWriter) Write(data []byte) (int, error)\n```\n\nblockWriter must be an io.Writer for lzw.NewWriter, but this is never actually called. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/image/gif#blockWriter.WriteByte",
+                    "documentation": {
+                      "identifier": "blockWriter.WriteByte",
+                      "newPage": false,
+                      "searchKey": "gif.blockWriter.WriteByte",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b blockWriter) WriteByte(c byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b blockWriter) WriteByte(c byte) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/image/gif#blockWriter.close",
+                    "documentation": {
+                      "identifier": "blockWriter.close",
+                      "newPage": false,
+                      "searchKey": "gif.blockWriter.close",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b blockWriter) close()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b blockWriter) close()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/image/gif#blockWriter.setup",
+                    "documentation": {
+                      "identifier": "blockWriter.setup",
+                      "newPage": false,
+                      "searchKey": "gif.blockWriter.setup",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b blockWriter) setup()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b blockWriter) setup()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
             }
           },
           {
@@ -715,6 +1110,7 @@
                 "newPage": false,
                 "searchKey": "gif.decoder",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -735,6 +1131,7 @@
                       "newPage": false,
                       "searchKey": "gif.decoder.decode",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -751,122 +1148,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/image/gif#decoder.readHeaderAndScreenDescriptor",
-                    "documentation": {
-                      "identifier": "decoder.readHeaderAndScreenDescriptor",
-                      "newPage": false,
-                      "searchKey": "gif.decoder.readHeaderAndScreenDescriptor",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *decoder) readHeaderAndScreenDescriptor() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *decoder) readHeaderAndScreenDescriptor() error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/image/gif#decoder.readColorTable",
-                    "documentation": {
-                      "identifier": "decoder.readColorTable",
-                      "newPage": false,
-                      "searchKey": "gif.decoder.readColorTable",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *decoder) readColorTable(fields byte) (color.Palette, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *decoder) readColorTable(fields byte) (color.Palette, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/image/gif#decoder.readExtension",
-                    "documentation": {
-                      "identifier": "decoder.readExtension",
-                      "newPage": false,
-                      "searchKey": "gif.decoder.readExtension",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *decoder) readExtension() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *decoder) readExtension() error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/image/gif#decoder.readGraphicControl",
-                    "documentation": {
-                      "identifier": "decoder.readGraphicControl",
-                      "newPage": false,
-                      "searchKey": "gif.decoder.readGraphicControl",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *decoder) readGraphicControl() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *decoder) readGraphicControl() error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/image/gif#decoder.readImageDescriptor",
-                    "documentation": {
-                      "identifier": "decoder.readImageDescriptor",
-                      "newPage": false,
-                      "searchKey": "gif.decoder.readImageDescriptor",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *decoder) readImageDescriptor(keepAllFrames bool) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *decoder) readImageDescriptor(keepAllFrames bool) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/image/gif#decoder.newImageFromDescriptor",
                     "documentation": {
                       "identifier": "decoder.newImageFromDescriptor",
                       "newPage": false,
                       "searchKey": "gif.decoder.newImageFromDescriptor",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -889,6 +1177,7 @@
                       "newPage": false,
                       "searchKey": "gif.decoder.readBlock",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -902,226 +1191,123 @@
                     },
                     "children": null
                   }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#blockReader",
-              "documentation": {
-                "identifier": "blockReader",
-                "newPage": false,
-                "searchKey": "gif.blockReader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type blockReader struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype blockReader struct {\n\td    *decoder\n\ti, j uint8 // d.tmp[i:j] contains the buffered bytes\n\terr  error\n}\n```\n\nblockReader parses the block structure of GIF image data, which comprises (n, (n bytes)) blocks, with 1 <= n <= 255. It is the reader given to the LZW decoder, which is thus immune to the blocking. After the LZW decoder completes, there will be a 0-byte block remaining (0, ()), which is consumed when checking that the blockReader is exhausted. \n\nTo avoid the allocation of a bufio.Reader for the lzw Reader, blockReader implements io.ReadByte and buffers blocks into the decoder's \"tmp\" buffer. \n\n"
-              },
-              "children": [
+                },
                 {
                   "node": {
-                    "pathID": "/image/gif#blockReader.fill",
+                    "pathID": "/image/gif#decoder.readColorTable",
                     "documentation": {
-                      "identifier": "blockReader.fill",
+                      "identifier": "decoder.readColorTable",
                       "newPage": false,
-                      "searchKey": "gif.blockReader.fill",
+                      "searchKey": "gif.decoder.readColorTable",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (b *blockReader) fill()"
+                      "value": "func (d *decoder) readColorTable(fields byte) (color.Palette, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (b *blockReader) fill()\n```\n\n"
+                      "value": "```Go\nfunc (d *decoder) readColorTable(fields byte) (color.Palette, error)\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/image/gif#blockReader.ReadByte",
+                    "pathID": "/image/gif#decoder.readExtension",
                     "documentation": {
-                      "identifier": "blockReader.ReadByte",
+                      "identifier": "decoder.readExtension",
                       "newPage": false,
-                      "searchKey": "gif.blockReader.ReadByte",
+                      "searchKey": "gif.decoder.readExtension",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (b *blockReader) ReadByte() (byte, error)"
+                      "value": "func (d *decoder) readExtension() error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (b *blockReader) ReadByte() (byte, error)\n```\n\n"
+                      "value": "```Go\nfunc (d *decoder) readExtension() error\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/image/gif#blockReader.Read",
+                    "pathID": "/image/gif#decoder.readGraphicControl",
                     "documentation": {
-                      "identifier": "blockReader.Read",
+                      "identifier": "decoder.readGraphicControl",
                       "newPage": false,
-                      "searchKey": "gif.blockReader.Read",
+                      "searchKey": "gif.decoder.readGraphicControl",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (b *blockReader) Read(p []byte) (int, error)"
+                      "value": "func (d *decoder) readGraphicControl() error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (b *blockReader) Read(p []byte) (int, error)\n```\n\nblockReader must implement io.Reader, but its Read shouldn't ever actually be called in practice. The compress/lzw package will only call ReadByte. \n\n"
+                      "value": "```Go\nfunc (d *decoder) readGraphicControl() error\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/image/gif#blockReader.close",
+                    "pathID": "/image/gif#decoder.readHeaderAndScreenDescriptor",
                     "documentation": {
-                      "identifier": "blockReader.close",
+                      "identifier": "decoder.readHeaderAndScreenDescriptor",
                       "newPage": false,
-                      "searchKey": "gif.blockReader.close",
+                      "searchKey": "gif.decoder.readHeaderAndScreenDescriptor",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (b *blockReader) close() error"
+                      "value": "func (d *decoder) readHeaderAndScreenDescriptor() error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (b *blockReader) close() error\n```\n\nclose primarily detects whether or not a block terminator was encountered after reading a sequence of data sub-blocks. It allows at most one trailing sub-block worth of data. I.e., if some number of bytes exist in one sub-block following the end of LZW data, the very next sub-block must be the block terminator. If the very end of LZW data happened to fill one sub-block, at most one more sub-block of length 1 may exist before the block-terminator. These accommodations allow us to support GIFs created by less strict encoders. See [https://golang.org/issue/16146](https://golang.org/issue/16146). \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#interlaceScan",
-              "documentation": {
-                "identifier": "interlaceScan",
-                "newPage": false,
-                "searchKey": "gif.interlaceScan",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type interlaceScan struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype interlaceScan struct {\n\tskip, start int\n}\n```\n\ninterlaceScan defines the ordering for a pass of the interlace algorithm. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#GIF",
-              "documentation": {
-                "identifier": "GIF",
-                "newPage": false,
-                "searchKey": "gif.GIF",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type GIF struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype GIF struct {\n\tImage []*image.Paletted // The successive images.\n\tDelay []int             // The successive delay times, one per frame, in 100ths of a second.\n\t// LoopCount controls the number of times an animation will be\n\t// restarted during display.\n\t// A LoopCount of 0 means to loop forever.\n\t// A LoopCount of -1 means to show each frame only once.\n\t// Otherwise, the animation is looped LoopCount+1 times.\n\tLoopCount int\n\t// Disposal is the successive disposal methods, one per frame. For\n\t// backwards compatibility, a nil Disposal is valid to pass to EncodeAll,\n\t// and implies that each frame's disposal method is 0 (no disposal\n\t// specified).\n\tDisposal []byte\n\t// Config is the global color table (palette), width and height. A nil or\n\t// empty-color.Palette Config.ColorModel means that each frame has its own\n\t// color table and there is no global color table. Each frame's bounds must\n\t// be within the rectangle defined by the two points (0, 0) and\n\t// (Config.Width, Config.Height).\n\t//\n\t// For backwards compatibility, a zero-valued Config is valid to pass to\n\t// EncodeAll, and implies that the overall GIF's width and height equals\n\t// the first frame's bounds' Rectangle.Max point.\n\tConfig image.Config\n\t// BackgroundIndex is the background index in the global color table, for\n\t// use with the DisposalBackground disposal method.\n\tBackgroundIndex byte\n}\n```\n\nGIF represents the possibly multiple images stored in a GIF file. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/image/gif#DecodeAll",
-                    "documentation": {
-                      "identifier": "DecodeAll",
-                      "newPage": false,
-                      "searchKey": "gif.DecodeAll",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func DecodeAll(r io.Reader) (*GIF, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc DecodeAll(r io.Reader) (*GIF, error)\n```\n\nDecodeAll reads a GIF image from r and returns the sequential frames and timing information. \n\n"
+                      "value": "```Go\nfunc (d *decoder) readHeaderAndScreenDescriptor() error\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/image/gif#readGIF",
+                    "pathID": "/image/gif#decoder.readImageDescriptor",
                     "documentation": {
-                      "identifier": "readGIF",
+                      "identifier": "decoder.readImageDescriptor",
                       "newPage": false,
-                      "searchKey": "gif.readGIF",
+                      "searchKey": "gif.decoder.readImageDescriptor",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func readGIF(filename string) (*GIF, error)"
+                      "value": "func (d *decoder) readImageDescriptor(keepAllFrames bool) error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc readGIF(filename string) (*GIF, error)\n```\n\n"
+                      "value": "```Go\nfunc (d *decoder) readImageDescriptor(keepAllFrames bool) error\n```\n\n"
                     },
                     "children": null
                   }
                 }
               ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#writer",
-              "documentation": {
-                "identifier": "writer",
-                "newPage": false,
-                "searchKey": "gif.writer",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type writer interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype writer interface {\n\tFlush() error\n\tio.Writer\n\tio.ByteWriter\n}\n```\n\nwriter is a buffered writer. \n\n"
-              },
-              "children": null
             }
           },
           {
@@ -1132,6 +1318,7 @@
                 "newPage": false,
                 "searchKey": "gif.encoder",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1146,12 +1333,36 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/image/gif#encoder.colorTablesMatch",
+                    "documentation": {
+                      "identifier": "encoder.colorTablesMatch",
+                      "newPage": false,
+                      "searchKey": "gif.encoder.colorTablesMatch",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) colorTablesMatch(localLen, transparentIndex int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) colorTablesMatch(localLen, transparentIndex int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/image/gif#encoder.flush",
                     "documentation": {
                       "identifier": "encoder.flush",
                       "newPage": false,
                       "searchKey": "gif.encoder.flush",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1174,6 +1385,7 @@
                       "newPage": false,
                       "searchKey": "gif.encoder.write",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1196,6 +1408,7 @@
                       "newPage": false,
                       "searchKey": "gif.encoder.writeByte",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1218,6 +1431,7 @@
                       "newPage": false,
                       "searchKey": "gif.encoder.writeHeader",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1234,34 +1448,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/image/gif#encoder.colorTablesMatch",
-                    "documentation": {
-                      "identifier": "encoder.colorTablesMatch",
-                      "newPage": false,
-                      "searchKey": "gif.encoder.colorTablesMatch",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *encoder) colorTablesMatch(localLen, transparentIndex int) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *encoder) colorTablesMatch(localLen, transparentIndex int) bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/image/gif#encoder.writeImageBlock",
                     "documentation": {
                       "identifier": "encoder.writeImageBlock",
                       "newPage": false,
                       "searchKey": "gif.encoder.writeImageBlock",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1281,153 +1474,23 @@
           },
           {
             "node": {
-              "pathID": "/image/gif#blockWriter",
+              "pathID": "/image/gif#interlaceScan",
               "documentation": {
-                "identifier": "blockWriter",
+                "identifier": "interlaceScan",
                 "newPage": false,
-                "searchKey": "gif.blockWriter",
+                "searchKey": "gif.interlaceScan",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type blockWriter struct"
+                "value": "type interlaceScan struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype blockWriter struct {\n\te *encoder\n}\n```\n\nblockWriter writes the block structure of GIF image data, which comprises (n, (n bytes)) blocks, with 1 <= n <= 255. It is the writer given to the LZW encoder, which is thus immune to the blocking. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/image/gif#blockWriter.setup",
-                    "documentation": {
-                      "identifier": "blockWriter.setup",
-                      "newPage": false,
-                      "searchKey": "gif.blockWriter.setup",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b blockWriter) setup()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b blockWriter) setup()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/image/gif#blockWriter.Flush",
-                    "documentation": {
-                      "identifier": "blockWriter.Flush",
-                      "newPage": false,
-                      "searchKey": "gif.blockWriter.Flush",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b blockWriter) Flush() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b blockWriter) Flush() error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/image/gif#blockWriter.WriteByte",
-                    "documentation": {
-                      "identifier": "blockWriter.WriteByte",
-                      "newPage": false,
-                      "searchKey": "gif.blockWriter.WriteByte",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b blockWriter) WriteByte(c byte) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b blockWriter) WriteByte(c byte) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/image/gif#blockWriter.Write",
-                    "documentation": {
-                      "identifier": "blockWriter.Write",
-                      "newPage": false,
-                      "searchKey": "gif.blockWriter.Write",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b blockWriter) Write(data []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b blockWriter) Write(data []byte) (int, error)\n```\n\nblockWriter must be an io.Writer for lzw.NewWriter, but this is never actually called. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/image/gif#blockWriter.close",
-                    "documentation": {
-                      "identifier": "blockWriter.close",
-                      "newPage": false,
-                      "searchKey": "gif.blockWriter.close",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b blockWriter) close()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b blockWriter) close()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#Options",
-              "documentation": {
-                "identifier": "Options",
-                "newPage": false,
-                "searchKey": "gif.Options",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Options struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Options struct {\n\t// NumColors is the maximum number of colors used in the image.\n\t// It ranges from 1 to 256.\n\tNumColors int\n\n\t// Quantizer is used to produce a palette with size NumColors.\n\t// palette.Plan9 is used in place of a nil Quantizer.\n\tQuantizer draw.Quantizer\n\n\t// Drawer is used to convert the source image to the desired palette.\n\t// draw.FloydSteinberg is used in place of a nil Drawer.\n\tDrawer draw.Drawer\n}\n```\n\nOptions are the encoding parameters. \n\n"
+                "value": "```Go\ntype interlaceScan struct {\n\tskip, start int\n}\n```\n\ninterlaceScan defines the ordering for a pass of the interlace algorithm. \n\n"
               },
               "children": null
             }
@@ -1440,6 +1503,7 @@
                 "newPage": false,
                 "searchKey": "gif.offsetImage",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1460,6 +1524,7 @@
                       "newPage": false,
                       "searchKey": "gif.offsetImage.Bounds",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1476,6 +1541,52 @@
                 }
               ]
             }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#reader",
+              "documentation": {
+                "identifier": "reader",
+                "newPage": false,
+                "searchKey": "gif.reader",
+                "tags": [
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type reader interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype reader interface {\n\tio.Reader\n\tio.ByteReader\n}\n```\n\nIf the io.Reader does not also have ReadByte, then decode will introduce its own buffering. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#writer",
+              "documentation": {
+                "identifier": "writer",
+                "newPage": false,
+                "searchKey": "gif.writer",
+                "tags": [
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type writer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype writer interface {\n\tFlush() error\n\tio.Writer\n\tio.ByteWriter\n}\n```\n\nwriter is a buffered writer. \n\n"
+              },
+              "children": null
+            }
           }
         ]
       }
@@ -1487,7 +1598,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1500,66 +1613,120 @@
         "children": [
           {
             "node": {
-              "pathID": "/image/gif#readFull",
+              "pathID": "/image/gif#BenchmarkDecode",
               "documentation": {
-                "identifier": "readFull",
+                "identifier": "BenchmarkDecode",
                 "newPage": false,
-                "searchKey": "gif.readFull",
+                "searchKey": "gif.BenchmarkDecode",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func readFull(r io.Reader, b []byte) error"
+                "value": "func BenchmarkDecode(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc readFull(r io.Reader, b []byte) error\n```\n\n"
+                "value": "```Go\nfunc BenchmarkDecode(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/image/gif#readByte",
+              "pathID": "/image/gif#BenchmarkEncodeRandomPaletted",
               "documentation": {
-                "identifier": "readByte",
+                "identifier": "BenchmarkEncodeRandomPaletted",
                 "newPage": false,
-                "searchKey": "gif.readByte",
+                "searchKey": "gif.BenchmarkEncodeRandomPaletted",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func readByte(r io.ByteReader) (byte, error)"
+                "value": "func BenchmarkEncodeRandomPaletted(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc readByte(r io.ByteReader) (byte, error)\n```\n\n"
+                "value": "```Go\nfunc BenchmarkEncodeRandomPaletted(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/image/gif#uninterlace",
+              "pathID": "/image/gif#BenchmarkEncodeRandomRGBA",
               "documentation": {
-                "identifier": "uninterlace",
+                "identifier": "BenchmarkEncodeRandomRGBA",
                 "newPage": false,
-                "searchKey": "gif.uninterlace",
+                "searchKey": "gif.BenchmarkEncodeRandomRGBA",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func uninterlace(m *image.Paletted)"
+                "value": "func BenchmarkEncodeRandomRGBA(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc uninterlace(m *image.Paletted)\n```\n\nuninterlace rearranges the pixels in m to account for interlaced input. \n\n"
+                "value": "```Go\nfunc BenchmarkEncodeRandomRGBA(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#BenchmarkEncodeRealisticPaletted",
+              "documentation": {
+                "identifier": "BenchmarkEncodeRealisticPaletted",
+                "newPage": false,
+                "searchKey": "gif.BenchmarkEncodeRealisticPaletted",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEncodeRealisticPaletted(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEncodeRealisticPaletted(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#BenchmarkEncodeRealisticRGBA",
+              "documentation": {
+                "identifier": "BenchmarkEncodeRealisticRGBA",
+                "newPage": false,
+                "searchKey": "gif.BenchmarkEncodeRealisticRGBA",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEncodeRealisticRGBA(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEncodeRealisticRGBA(b *testing.B)\n```\n\n"
               },
               "children": null
             }
@@ -1571,7 +1738,9 @@
                 "identifier": "Decode",
                 "newPage": false,
                 "searchKey": "gif.Decode",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1591,7 +1760,9 @@
                 "identifier": "DecodeConfig",
                 "newPage": false,
                 "searchKey": "gif.DecodeConfig",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1606,120 +1777,14 @@
           },
           {
             "node": {
-              "pathID": "/image/gif#init.reader.go",
-              "documentation": {
-                "identifier": "init.reader.go",
-                "newPage": false,
-                "searchKey": "gif.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#log2",
-              "documentation": {
-                "identifier": "log2",
-                "newPage": false,
-                "searchKey": "gif.log2",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func log2(x int) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc log2(x int) int\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#writeUint16",
-              "documentation": {
-                "identifier": "writeUint16",
-                "newPage": false,
-                "searchKey": "gif.writeUint16",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func writeUint16(b []uint8, u uint16)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc writeUint16(b []uint8, u uint16)\n```\n\nLittle-endian. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#encodeColorTable",
-              "documentation": {
-                "identifier": "encodeColorTable",
-                "newPage": false,
-                "searchKey": "gif.encodeColorTable",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func encodeColorTable(dst []byte, p color.Palette, size int) (int, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc encodeColorTable(dst []byte, p color.Palette, size int) (int, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#EncodeAll",
-              "documentation": {
-                "identifier": "EncodeAll",
-                "newPage": false,
-                "searchKey": "gif.EncodeAll",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func EncodeAll(w io.Writer, g *GIF) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc EncodeAll(w io.Writer, g *GIF) error\n```\n\nEncodeAll writes the images in g to w in GIF format with the given loop count and delay between frames. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/image/gif#Encode",
               "documentation": {
                 "identifier": "Encode",
                 "newPage": false,
                 "searchKey": "gif.Encode",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1734,88 +1799,22 @@
           },
           {
             "node": {
-              "pathID": "/image/gif#lzwEncode",
+              "pathID": "/image/gif#EncodeAll",
               "documentation": {
-                "identifier": "lzwEncode",
+                "identifier": "EncodeAll",
                 "newPage": false,
-                "searchKey": "gif.lzwEncode",
+                "searchKey": "gif.EncodeAll",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func lzwEncode(in []byte) []byte"
+                "value": "func EncodeAll(w io.Writer, g *GIF) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc lzwEncode(in []byte) []byte\n```\n\nlzwEncode returns an LZW encoding (with 2-bit literals) of in. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#TestDecode",
-              "documentation": {
-                "identifier": "TestDecode",
-                "newPage": false,
-                "searchKey": "gif.TestDecode",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDecode(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDecode(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#TestTransparentIndex",
-              "documentation": {
-                "identifier": "TestTransparentIndex",
-                "newPage": false,
-                "searchKey": "gif.TestTransparentIndex",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTransparentIndex(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTransparentIndex(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#try",
-              "documentation": {
-                "identifier": "try",
-                "newPage": false,
-                "searchKey": "gif.try",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func try(t *testing.T, b []byte, want string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc try(t *testing.T, b []byte, want string)\n```\n\n"
+                "value": "```Go\nfunc EncodeAll(w io.Writer, g *GIF) error\n```\n\nEncodeAll writes the images in g to w in GIF format with the given loop count and delay between frames. \n\n"
               },
               "children": null
             }
@@ -1828,7 +1827,9 @@
                 "newPage": false,
                 "searchKey": "gif.TestBounds",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1844,13 +1845,399 @@
           },
           {
             "node": {
+              "pathID": "/image/gif#TestColorTablesMatch",
+              "documentation": {
+                "identifier": "TestColorTablesMatch",
+                "newPage": false,
+                "searchKey": "gif.TestColorTablesMatch",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestColorTablesMatch(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestColorTablesMatch(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#TestDecode",
+              "documentation": {
+                "identifier": "TestDecode",
+                "newPage": false,
+                "searchKey": "gif.TestDecode",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecode(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecode(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#TestDecodeMemoryConsumption",
+              "documentation": {
+                "identifier": "TestDecodeMemoryConsumption",
+                "newPage": false,
+                "searchKey": "gif.TestDecodeMemoryConsumption",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecodeMemoryConsumption(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecodeMemoryConsumption(t *testing.T)\n```\n\nSee golang.org/issue/22237 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#TestEncodeAllFramesOutOfBounds",
+              "documentation": {
+                "identifier": "TestEncodeAllFramesOutOfBounds",
+                "newPage": false,
+                "searchKey": "gif.TestEncodeAllFramesOutOfBounds",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncodeAllFramesOutOfBounds(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncodeAllFramesOutOfBounds(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#TestEncodeAllGo1Dot4",
+              "documentation": {
+                "identifier": "TestEncodeAllGo1Dot4",
+                "newPage": false,
+                "searchKey": "gif.TestEncodeAllGo1Dot4",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncodeAllGo1Dot4(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncodeAllGo1Dot4(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#TestEncodeAllGo1Dot5",
+              "documentation": {
+                "identifier": "TestEncodeAllGo1Dot5",
+                "newPage": false,
+                "searchKey": "gif.TestEncodeAllGo1Dot5",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncodeAllGo1Dot5(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncodeAllGo1Dot5(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#TestEncodeAllGo1Dot5GlobalColorModel",
+              "documentation": {
+                "identifier": "TestEncodeAllGo1Dot5GlobalColorModel",
+                "newPage": false,
+                "searchKey": "gif.TestEncodeAllGo1Dot5GlobalColorModel",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncodeAllGo1Dot5GlobalColorModel(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncodeAllGo1Dot5GlobalColorModel(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#TestEncodeBadPalettes",
+              "documentation": {
+                "identifier": "TestEncodeBadPalettes",
+                "newPage": false,
+                "searchKey": "gif.TestEncodeBadPalettes",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncodeBadPalettes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncodeBadPalettes(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#TestEncodeCroppedSubImages",
+              "documentation": {
+                "identifier": "TestEncodeCroppedSubImages",
+                "newPage": false,
+                "searchKey": "gif.TestEncodeCroppedSubImages",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncodeCroppedSubImages(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncodeCroppedSubImages(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#TestEncodeImplicitConfigSize",
+              "documentation": {
+                "identifier": "TestEncodeImplicitConfigSize",
+                "newPage": false,
+                "searchKey": "gif.TestEncodeImplicitConfigSize",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncodeImplicitConfigSize(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncodeImplicitConfigSize(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#TestEncodeMismatchDelay",
+              "documentation": {
+                "identifier": "TestEncodeMismatchDelay",
+                "newPage": false,
+                "searchKey": "gif.TestEncodeMismatchDelay",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncodeMismatchDelay(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncodeMismatchDelay(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#TestEncodeNonZeroMinPoint",
+              "documentation": {
+                "identifier": "TestEncodeNonZeroMinPoint",
+                "newPage": false,
+                "searchKey": "gif.TestEncodeNonZeroMinPoint",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncodeNonZeroMinPoint(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncodeNonZeroMinPoint(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#TestEncodePalettes",
+              "documentation": {
+                "identifier": "TestEncodePalettes",
+                "newPage": false,
+                "searchKey": "gif.TestEncodePalettes",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncodePalettes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncodePalettes(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#TestEncodeWrappedImage",
+              "documentation": {
+                "identifier": "TestEncodeWrappedImage",
+                "newPage": false,
+                "searchKey": "gif.TestEncodeWrappedImage",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncodeWrappedImage(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncodeWrappedImage(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#TestEncodeZeroGIF",
+              "documentation": {
+                "identifier": "TestEncodeZeroGIF",
+                "newPage": false,
+                "searchKey": "gif.TestEncodeZeroGIF",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncodeZeroGIF(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncodeZeroGIF(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#TestLoopCount",
+              "documentation": {
+                "identifier": "TestLoopCount",
+                "newPage": false,
+                "searchKey": "gif.TestLoopCount",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLoopCount(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLoopCount(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/image/gif#TestNoPalette",
               "documentation": {
                 "identifier": "TestNoPalette",
                 "newPage": false,
                 "searchKey": "gif.TestNoPalette",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1872,7 +2259,9 @@
                 "newPage": false,
                 "searchKey": "gif.TestPixelOutsidePaletteRange",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1888,13 +2277,63 @@
           },
           {
             "node": {
+              "pathID": "/image/gif#TestSubImage",
+              "documentation": {
+                "identifier": "TestSubImage",
+                "newPage": false,
+                "searchKey": "gif.TestSubImage",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSubImage(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSubImage(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#TestTransparentIndex",
+              "documentation": {
+                "identifier": "TestTransparentIndex",
+                "newPage": false,
+                "searchKey": "gif.TestTransparentIndex",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTransparentIndex(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTransparentIndex(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/image/gif#TestTransparentPixelOutsidePaletteRange",
               "documentation": {
                 "identifier": "TestTransparentPixelOutsidePaletteRange",
                 "newPage": false,
                 "searchKey": "gif.TestTransparentPixelOutsidePaletteRange",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1910,35 +2349,15 @@
           },
           {
             "node": {
-              "pathID": "/image/gif#TestLoopCount",
-              "documentation": {
-                "identifier": "TestLoopCount",
-                "newPage": false,
-                "searchKey": "gif.TestLoopCount",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestLoopCount(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestLoopCount(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/image/gif#TestUnexpectedEOF",
               "documentation": {
                 "identifier": "TestUnexpectedEOF",
                 "newPage": false,
                 "searchKey": "gif.TestUnexpectedEOF",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1954,88 +2373,24 @@
           },
           {
             "node": {
-              "pathID": "/image/gif#TestDecodeMemoryConsumption",
+              "pathID": "/image/gif#TestWriter",
               "documentation": {
-                "identifier": "TestDecodeMemoryConsumption",
+                "identifier": "TestWriter",
                 "newPage": false,
-                "searchKey": "gif.TestDecodeMemoryConsumption",
+                "searchKey": "gif.TestWriter",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestDecodeMemoryConsumption(t *testing.T)"
+                "value": "func TestWriter(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestDecodeMemoryConsumption(t *testing.T)\n```\n\nSee golang.org/issue/22237 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#BenchmarkDecode",
-              "documentation": {
-                "identifier": "BenchmarkDecode",
-                "newPage": false,
-                "searchKey": "gif.BenchmarkDecode",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkDecode(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkDecode(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#readImg",
-              "documentation": {
-                "identifier": "readImg",
-                "newPage": false,
-                "searchKey": "gif.readImg",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func readImg(filename string) (image.Image, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc readImg(filename string) (image.Image, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#delta",
-              "documentation": {
-                "identifier": "delta",
-                "newPage": false,
-                "searchKey": "gif.delta",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func delta(u0, u1 uint32) int64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc delta(u0, u1 uint32) int64\n```\n\n"
+                "value": "```Go\nfunc TestWriter(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -2048,6 +2403,7 @@
                 "newPage": false,
                 "searchKey": "gif.averageDelta",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2070,6 +2426,7 @@
                 "newPage": false,
                 "searchKey": "gif.averageDeltaBound",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2086,44 +2443,115 @@
           },
           {
             "node": {
-              "pathID": "/image/gif#TestWriter",
+              "pathID": "/image/gif#delta",
               "documentation": {
-                "identifier": "TestWriter",
+                "identifier": "delta",
                 "newPage": false,
-                "searchKey": "gif.TestWriter",
+                "searchKey": "gif.delta",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestWriter(t *testing.T)"
+                "value": "func delta(u0, u1 uint32) int64"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestWriter(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc delta(u0, u1 uint32) int64\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/image/gif#TestSubImage",
+              "pathID": "/image/gif#encodeColorTable",
               "documentation": {
-                "identifier": "TestSubImage",
+                "identifier": "encodeColorTable",
                 "newPage": false,
-                "searchKey": "gif.TestSubImage",
+                "searchKey": "gif.encodeColorTable",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestSubImage(t *testing.T)"
+                "value": "func encodeColorTable(dst []byte, p color.Palette, size int) (int, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestSubImage(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc encodeColorTable(dst []byte, p color.Palette, size int) (int, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#init.reader.go",
+              "documentation": {
+                "identifier": "init.reader.go",
+                "newPage": false,
+                "searchKey": "gif.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#log2",
+              "documentation": {
+                "identifier": "log2",
+                "newPage": false,
+                "searchKey": "gif.log2",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func log2(x int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc log2(x int) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#lzwEncode",
+              "documentation": {
+                "identifier": "lzwEncode",
+                "newPage": false,
+                "searchKey": "gif.lzwEncode",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func lzwEncode(in []byte) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc lzwEncode(in []byte) []byte\n```\n\nlzwEncode returns an LZW encoding (with 2-bit literals) of in. \n\n"
               },
               "children": null
             }
@@ -2136,6 +2564,7 @@
                 "newPage": false,
                 "searchKey": "gif.palettesEqual",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2152,12 +2581,82 @@
           },
           {
             "node": {
+              "pathID": "/image/gif#readByte",
+              "documentation": {
+                "identifier": "readByte",
+                "newPage": false,
+                "searchKey": "gif.readByte",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readByte(r io.ByteReader) (byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readByte(r io.ByteReader) (byte, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#readFull",
+              "documentation": {
+                "identifier": "readFull",
+                "newPage": false,
+                "searchKey": "gif.readFull",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readFull(r io.Reader, b []byte) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readFull(r io.Reader, b []byte) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/gif#readImg",
+              "documentation": {
+                "identifier": "readImg",
+                "newPage": false,
+                "searchKey": "gif.readImg",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readImg(filename string) (image.Image, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readImg(filename string) (image.Image, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/image/gif#testEncodeAll",
               "documentation": {
                 "identifier": "testEncodeAll",
                 "newPage": false,
                 "searchKey": "gif.testEncodeAll",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2174,374 +2673,69 @@
           },
           {
             "node": {
-              "pathID": "/image/gif#TestEncodeAllGo1Dot4",
+              "pathID": "/image/gif#try",
               "documentation": {
-                "identifier": "TestEncodeAllGo1Dot4",
+                "identifier": "try",
                 "newPage": false,
-                "searchKey": "gif.TestEncodeAllGo1Dot4",
+                "searchKey": "gif.try",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestEncodeAllGo1Dot4(t *testing.T)"
+                "value": "func try(t *testing.T, b []byte, want string)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestEncodeAllGo1Dot4(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc try(t *testing.T, b []byte, want string)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/image/gif#TestEncodeAllGo1Dot5",
+              "pathID": "/image/gif#uninterlace",
               "documentation": {
-                "identifier": "TestEncodeAllGo1Dot5",
+                "identifier": "uninterlace",
                 "newPage": false,
-                "searchKey": "gif.TestEncodeAllGo1Dot5",
+                "searchKey": "gif.uninterlace",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestEncodeAllGo1Dot5(t *testing.T)"
+                "value": "func uninterlace(m *image.Paletted)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestEncodeAllGo1Dot5(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc uninterlace(m *image.Paletted)\n```\n\nuninterlace rearranges the pixels in m to account for interlaced input. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/image/gif#TestEncodeAllGo1Dot5GlobalColorModel",
+              "pathID": "/image/gif#writeUint16",
               "documentation": {
-                "identifier": "TestEncodeAllGo1Dot5GlobalColorModel",
+                "identifier": "writeUint16",
                 "newPage": false,
-                "searchKey": "gif.TestEncodeAllGo1Dot5GlobalColorModel",
+                "searchKey": "gif.writeUint16",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestEncodeAllGo1Dot5GlobalColorModel(t *testing.T)"
+                "value": "func writeUint16(b []uint8, u uint16)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestEncodeAllGo1Dot5GlobalColorModel(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#TestEncodeMismatchDelay",
-              "documentation": {
-                "identifier": "TestEncodeMismatchDelay",
-                "newPage": false,
-                "searchKey": "gif.TestEncodeMismatchDelay",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEncodeMismatchDelay(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEncodeMismatchDelay(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#TestEncodeZeroGIF",
-              "documentation": {
-                "identifier": "TestEncodeZeroGIF",
-                "newPage": false,
-                "searchKey": "gif.TestEncodeZeroGIF",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEncodeZeroGIF(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEncodeZeroGIF(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#TestEncodeAllFramesOutOfBounds",
-              "documentation": {
-                "identifier": "TestEncodeAllFramesOutOfBounds",
-                "newPage": false,
-                "searchKey": "gif.TestEncodeAllFramesOutOfBounds",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEncodeAllFramesOutOfBounds(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEncodeAllFramesOutOfBounds(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#TestEncodeNonZeroMinPoint",
-              "documentation": {
-                "identifier": "TestEncodeNonZeroMinPoint",
-                "newPage": false,
-                "searchKey": "gif.TestEncodeNonZeroMinPoint",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEncodeNonZeroMinPoint(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEncodeNonZeroMinPoint(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#TestEncodeImplicitConfigSize",
-              "documentation": {
-                "identifier": "TestEncodeImplicitConfigSize",
-                "newPage": false,
-                "searchKey": "gif.TestEncodeImplicitConfigSize",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEncodeImplicitConfigSize(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEncodeImplicitConfigSize(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#TestEncodePalettes",
-              "documentation": {
-                "identifier": "TestEncodePalettes",
-                "newPage": false,
-                "searchKey": "gif.TestEncodePalettes",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEncodePalettes(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEncodePalettes(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#TestEncodeBadPalettes",
-              "documentation": {
-                "identifier": "TestEncodeBadPalettes",
-                "newPage": false,
-                "searchKey": "gif.TestEncodeBadPalettes",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEncodeBadPalettes(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEncodeBadPalettes(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#TestColorTablesMatch",
-              "documentation": {
-                "identifier": "TestColorTablesMatch",
-                "newPage": false,
-                "searchKey": "gif.TestColorTablesMatch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestColorTablesMatch(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestColorTablesMatch(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#TestEncodeCroppedSubImages",
-              "documentation": {
-                "identifier": "TestEncodeCroppedSubImages",
-                "newPage": false,
-                "searchKey": "gif.TestEncodeCroppedSubImages",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEncodeCroppedSubImages(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEncodeCroppedSubImages(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#TestEncodeWrappedImage",
-              "documentation": {
-                "identifier": "TestEncodeWrappedImage",
-                "newPage": false,
-                "searchKey": "gif.TestEncodeWrappedImage",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEncodeWrappedImage(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEncodeWrappedImage(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#BenchmarkEncodeRandomPaletted",
-              "documentation": {
-                "identifier": "BenchmarkEncodeRandomPaletted",
-                "newPage": false,
-                "searchKey": "gif.BenchmarkEncodeRandomPaletted",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkEncodeRandomPaletted(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkEncodeRandomPaletted(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#BenchmarkEncodeRandomRGBA",
-              "documentation": {
-                "identifier": "BenchmarkEncodeRandomRGBA",
-                "newPage": false,
-                "searchKey": "gif.BenchmarkEncodeRandomRGBA",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkEncodeRandomRGBA(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkEncodeRandomRGBA(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#BenchmarkEncodeRealisticPaletted",
-              "documentation": {
-                "identifier": "BenchmarkEncodeRealisticPaletted",
-                "newPage": false,
-                "searchKey": "gif.BenchmarkEncodeRealisticPaletted",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkEncodeRealisticPaletted(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkEncodeRealisticPaletted(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/image/gif#BenchmarkEncodeRealisticRGBA",
-              "documentation": {
-                "identifier": "BenchmarkEncodeRealisticRGBA",
-                "newPage": false,
-                "searchKey": "gif.BenchmarkEncodeRealisticRGBA",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkEncodeRealisticRGBA(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkEncodeRealisticRGBA(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc writeUint16(b []uint8, u uint16)\n```\n\nLittle-endian. \n\n"
               },
               "children": null
             }

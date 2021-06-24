@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/conf/confdefaults",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,12 +41,38 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/conf/confdefaults#Default",
+              "documentation": {
+                "identifier": "Default",
+                "newPage": false,
+                "searchKey": "confdefaults.Default",
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Default"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Default conftypes.RawUnified\n```\n\nDefault is the default for *this* deployment type. It is populated by pkg/conf at init time. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/conf/confdefaults#DevAndTesting",
               "documentation": {
                 "identifier": "DevAndTesting",
                 "newPage": false,
                 "searchKey": "confdefaults.DevAndTesting",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +92,10 @@
                 "identifier": "DockerContainer",
                 "newPage": false,
                 "searchKey": "confdefaults.DockerContainer",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +115,10 @@
                 "identifier": "KubernetesOrDockerComposeOrPureDocker",
                 "newPage": false,
                 "searchKey": "confdefaults.KubernetesOrDockerComposeOrPureDocker",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -93,26 +127,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar KubernetesOrDockerComposeOrPureDocker = ...\n```\n\nKubernetesOrDockerComposeOrPureDocker is the default configuration applied to Kubernetes, Docker Compose, and pure Docker instances of Sourcegraph. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/conf/confdefaults#Default",
-              "documentation": {
-                "identifier": "Default",
-                "newPage": false,
-                "searchKey": "confdefaults.Default",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var Default"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar Default conftypes.RawUnified\n```\n\nDefault is the default for *this* deployment type. It is populated by pkg/conf at init time. \n\n"
               },
               "children": null
             }

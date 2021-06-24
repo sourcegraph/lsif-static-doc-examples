@@ -5,33 +5,22 @@ Package nettrace contains internal hooks for tracing activity in the net package
 ## Index
 
 * [Types](#type)
-    * [type TraceKey struct{}](#TraceKey)
     * [type LookupIPAltResolverKey struct{}](#LookupIPAltResolverKey)
     * [type Trace struct](#Trace)
+    * [type TraceKey struct{}](#TraceKey)
 
 
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
-
-### <a id="TraceKey" href="#TraceKey">type TraceKey struct{}</a>
-
-```
-searchKey: nettrace.TraceKey
-```
-
-```Go
-type TraceKey struct{}
-```
-
-TraceKey is a context.Context Value key. Its associated value should be a *Trace struct. 
 
 ### <a id="LookupIPAltResolverKey" href="#LookupIPAltResolverKey">type LookupIPAltResolverKey struct{}</a>
 
 ```
 searchKey: nettrace.LookupIPAltResolverKey
+tags: [struct]
 ```
 
 ```Go
@@ -48,6 +37,7 @@ func lookupIP(ctx context.Context, host string) ([]IPAddr, error)
 
 ```
 searchKey: nettrace.Trace
+tags: [struct]
 ```
 
 ```Go
@@ -76,4 +66,17 @@ type Trace struct {
 ```
 
 Trace contains a set of hooks for tracing events within the net package. Any specific hook may be nil. 
+
+### <a id="TraceKey" href="#TraceKey">type TraceKey struct{}</a>
+
+```
+searchKey: nettrace.TraceKey
+tags: [struct]
+```
+
+```Go
+type TraceKey struct{}
+```
+
+TraceKey is a context.Context Value key. Its associated value should be a *Trace struct. 
 

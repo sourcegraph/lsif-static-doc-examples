@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/database/batch",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "batch.maxNumParameters",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -90,6 +95,8 @@
                 "newPage": false,
                 "searchKey": "batch.querySuffixCache",
                 "tags": [
+                  "variable",
+                  "object",
                   "private"
                 ]
               },
@@ -112,6 +119,8 @@
                 "newPage": false,
                 "searchKey": "batch.querySuffixCacheMutex",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -134,6 +143,8 @@
                 "newPage": false,
                 "searchKey": "batch.setup",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -159,6 +170,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -178,7 +190,9 @@
                 "identifier": "Inserter",
                 "newPage": false,
                 "searchKey": "batch.Inserter",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -196,7 +210,9 @@
                       "identifier": "NewInserter",
                       "newPage": false,
                       "searchKey": "batch.NewInserter",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -216,7 +232,9 @@
                       "identifier": "NewInserterWithReturn",
                       "newPage": false,
                       "searchKey": "batch.NewInserterWithReturn",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -231,32 +249,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/database/batch#Inserter.Insert",
-                    "documentation": {
-                      "identifier": "Inserter.Insert",
-                      "newPage": false,
-                      "searchKey": "batch.Inserter.Insert",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (i *Inserter) Insert(ctx context.Context, values ...interface{}) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (i *Inserter) Insert(ctx context.Context, values ...interface{}) error\n```\n\nInsert submits a single row of values to be inserted on the next flush. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/database/batch#Inserter.Flush",
                     "documentation": {
                       "identifier": "Inserter.Flush",
                       "newPage": false,
                       "searchKey": "batch.Inserter.Flush",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -271,22 +271,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/database/batch#Inserter.pop",
+                    "pathID": "/internal/database/batch#Inserter.Insert",
                     "documentation": {
-                      "identifier": "Inserter.pop",
+                      "identifier": "Inserter.Insert",
                       "newPage": false,
-                      "searchKey": "batch.Inserter.pop",
+                      "searchKey": "batch.Inserter.Insert",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (i *Inserter) pop() (batch []interface{})"
+                      "value": "func (i *Inserter) Insert(ctx context.Context, values ...interface{}) error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (i *Inserter) pop() (batch []interface{})\n```\n\npop removes and returns as many values from the current batch that can be attached to a single insert statement. The returned values are the oldest values submitted to the batch (in order). \n\n"
+                      "value": "```Go\nfunc (i *Inserter) Insert(ctx context.Context, values ...interface{}) error\n```\n\nInsert submits a single row of values to be inserted on the next flush. \n\n"
                     },
                     "children": null
                   }
@@ -299,6 +299,7 @@
                       "newPage": false,
                       "searchKey": "batch.Inserter.makeQuery",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -309,6 +310,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (i *Inserter) makeQuery(numValues int) string\n```\n\nmakeQuery returns a parameterized SQL query that has the given number of values worth of placeholder variables. It is assumed that the number of values is non-zero and also is a multiple of the number of columns of the target table. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/batch#Inserter.pop",
+                    "documentation": {
+                      "identifier": "Inserter.pop",
+                      "newPage": false,
+                      "searchKey": "batch.Inserter.pop",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i *Inserter) pop() (batch []interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i *Inserter) pop() (batch []interface{})\n```\n\npop removes and returns as many values from the current batch that can be attached to a single insert statement. The returned values are the oldest values submitted to the batch (in order). \n\n"
                     },
                     "children": null
                   }
@@ -323,7 +347,9 @@
                 "identifier": "ReturningScanner",
                 "newPage": false,
                 "searchKey": "batch.ReturningScanner",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -347,6 +373,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -361,12 +388,62 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/database/batch#BenchmarkBatchInserter",
+              "documentation": {
+                "identifier": "BenchmarkBatchInserter",
+                "newPage": false,
+                "searchKey": "batch.BenchmarkBatchInserter",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkBatchInserter(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkBatchInserter(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/batch#BenchmarkBatchInserterLargePayload",
+              "documentation": {
+                "identifier": "BenchmarkBatchInserterLargePayload",
+                "newPage": false,
+                "searchKey": "batch.BenchmarkBatchInserterLargePayload",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkBatchInserterLargePayload(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkBatchInserterLargePayload(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/database/batch#InsertValues",
               "documentation": {
                 "identifier": "InsertValues",
                 "newPage": false,
                 "searchKey": "batch.InsertValues",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -381,12 +458,62 @@
           },
           {
             "node": {
+              "pathID": "/internal/database/batch#TestBatchInserter",
+              "documentation": {
+                "identifier": "TestBatchInserter",
+                "newPage": false,
+                "searchKey": "batch.TestBatchInserter",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBatchInserter(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBatchInserter(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/batch#TestBatchInserterWithReturn",
+              "documentation": {
+                "identifier": "TestBatchInserterWithReturn",
+                "newPage": false,
+                "searchKey": "batch.TestBatchInserterWithReturn",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBatchInserterWithReturn(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBatchInserterWithReturn(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/database/batch#WithInserter",
               "documentation": {
                 "identifier": "WithInserter",
                 "newPage": false,
                 "searchKey": "batch.WithInserter",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -406,7 +533,9 @@
                 "identifier": "WithInserterWithReturn",
                 "newPage": false,
                 "searchKey": "batch.WithInserterWithReturn",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -421,34 +550,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/database/batch#with",
-              "documentation": {
-                "identifier": "with",
-                "newPage": false,
-                "searchKey": "batch.with",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func with(ctx context.Context, inserter *Inserter, f func(inserter *Inserter) error) (err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc with(ctx context.Context, inserter *Inserter, f func(inserter *Inserter) error) (err error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/database/batch#getMaxBatchSize",
               "documentation": {
                 "identifier": "getMaxBatchSize",
                 "newPage": false,
                 "searchKey": "batch.getMaxBatchSize",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -465,12 +573,59 @@
           },
           {
             "node": {
+              "pathID": "/internal/database/batch#init.batch_test.go",
+              "documentation": {
+                "identifier": "init.batch_test.go",
+                "newPage": false,
+                "searchKey": "batch.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/batch#makePayload",
+              "documentation": {
+                "identifier": "makePayload",
+                "newPage": false,
+                "searchKey": "batch.makePayload",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makePayload(size int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makePayload(size int) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/database/batch#makeQueryPrefix",
               "documentation": {
                 "identifier": "makeQueryPrefix",
                 "newPage": false,
                 "searchKey": "batch.makeQueryPrefix",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -493,6 +648,7 @@
                 "newPage": false,
                 "searchKey": "batch.makeQuerySuffix",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -515,6 +671,7 @@
                 "newPage": false,
                 "searchKey": "batch.makeReturningSuffix",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -531,144 +688,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/database/batch#init.batch_test.go",
-              "documentation": {
-                "identifier": "init.batch_test.go",
-                "newPage": false,
-                "searchKey": "batch.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/batch#TestBatchInserter",
-              "documentation": {
-                "identifier": "TestBatchInserter",
-                "newPage": false,
-                "searchKey": "batch.TestBatchInserter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestBatchInserter(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestBatchInserter(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/batch#TestBatchInserterWithReturn",
-              "documentation": {
-                "identifier": "TestBatchInserterWithReturn",
-                "newPage": false,
-                "searchKey": "batch.TestBatchInserterWithReturn",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestBatchInserterWithReturn(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestBatchInserterWithReturn(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/batch#BenchmarkBatchInserter",
-              "documentation": {
-                "identifier": "BenchmarkBatchInserter",
-                "newPage": false,
-                "searchKey": "batch.BenchmarkBatchInserter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkBatchInserter(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkBatchInserter(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/batch#BenchmarkBatchInserterLargePayload",
-              "documentation": {
-                "identifier": "BenchmarkBatchInserterLargePayload",
-                "newPage": false,
-                "searchKey": "batch.BenchmarkBatchInserterLargePayload",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkBatchInserterLargePayload(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkBatchInserterLargePayload(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/batch#setupTestTable",
-              "documentation": {
-                "identifier": "setupTestTable",
-                "newPage": false,
-                "searchKey": "batch.setupTestTable",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func setupTestTable(t testing.TB, db *sql.DB)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc setupTestTable(t testing.TB, db *sql.DB)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/database/batch#makeTestValues",
               "documentation": {
                 "identifier": "makeTestValues",
                 "newPage": false,
                 "searchKey": "batch.makeTestValues",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -685,22 +711,23 @@
           },
           {
             "node": {
-              "pathID": "/internal/database/batch#makePayload",
+              "pathID": "/internal/database/batch#setupTestTable",
               "documentation": {
-                "identifier": "makePayload",
+                "identifier": "setupTestTable",
                 "newPage": false,
-                "searchKey": "batch.makePayload",
+                "searchKey": "batch.setupTestTable",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func makePayload(size int) string"
+                "value": "func setupTestTable(t testing.TB, db *sql.DB)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc makePayload(size int) string\n```\n\n"
+                "value": "```Go\nfunc setupTestTable(t testing.TB, db *sql.DB)\n```\n\n"
               },
               "children": null
             }
@@ -713,6 +740,7 @@
                 "newPage": false,
                 "searchKey": "batch.testInsert",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -735,6 +763,7 @@
                 "newPage": false,
                 "searchKey": "batch.testInsertWithReturn",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -745,6 +774,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc testInsertWithReturn(t testing.TB, db *sql.DB, expectedValues [][]interface{}) (insertedIDs []int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/batch#with",
+              "documentation": {
+                "identifier": "with",
+                "newPage": false,
+                "searchKey": "batch.with",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func with(ctx context.Context, inserter *Inserter, f func(inserter *Inserter) error) (err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc with(ctx context.Context, inserter *Inserter, f func(inserter *Inserter) error) (err error)\n```\n\n"
               },
               "children": null
             }

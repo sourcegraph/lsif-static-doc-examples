@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "cmd/frontend/internal/search",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,12 +41,38 @@
         "children": [
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/search#commitMatch",
+              "documentation": {
+                "identifier": "commitMatch",
+                "newPage": false,
+                "searchKey": "search.commitMatch",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const commitMatch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst commitMatch\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/search#fileMatch",
               "documentation": {
                 "identifier": "fileMatch",
                 "newPage": false,
                 "searchKey": "search.fileMatch",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -67,6 +95,8 @@
                 "newPage": false,
                 "searchKey": "search.repoMatch",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -89,6 +119,8 @@
                 "newPage": false,
                 "searchKey": "search.symbolMatch",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -99,28 +131,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst symbolMatch\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/search#commitMatch",
-              "documentation": {
-                "identifier": "commitMatch",
-                "newPage": false,
-                "searchKey": "search.commitMatch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const commitMatch"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst commitMatch\n```\n\n"
               },
               "children": null
             }
@@ -136,6 +146,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -156,6 +167,8 @@
                 "newPage": false,
                 "searchKey": "search.metricLatency",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -178,6 +191,8 @@
                 "newPage": false,
                 "searchKey": "search.searchBlitzUserAgentRegexp",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -203,6 +218,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -217,302 +233,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/search#progressAggregator",
-              "documentation": {
-                "identifier": "progressAggregator",
-                "newPage": false,
-                "searchKey": "search.progressAggregator",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type progressAggregator struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype progressAggregator struct {\n\tStart        time.Time\n\tMatchCount   int\n\tStats        streaming.Stats\n\tLimit        int\n\tDisplayLimit int\n\tTrace        string // may be empty\n\n\t// Dirty is true if p has changed since the last call to Current.\n\tDirty bool\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/internal/search#progressAggregator.Update",
-                    "documentation": {
-                      "identifier": "progressAggregator.Update",
-                      "newPage": false,
-                      "searchKey": "search.progressAggregator.Update",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *progressAggregator) Update(event streaming.SearchEvent)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *progressAggregator) Update(event streaming.SearchEvent)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/internal/search#progressAggregator.currentStats",
-                    "documentation": {
-                      "identifier": "progressAggregator.currentStats",
-                      "newPage": false,
-                      "searchKey": "search.progressAggregator.currentStats",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *progressAggregator) currentStats() api.ProgressStats"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *progressAggregator) currentStats() api.ProgressStats\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/internal/search#progressAggregator.Current",
-                    "documentation": {
-                      "identifier": "progressAggregator.Current",
-                      "newPage": false,
-                      "searchKey": "search.progressAggregator.Current",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *progressAggregator) Current() api.Progress"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *progressAggregator) Current() api.Progress\n```\n\nCurrent returns the current progress event. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/internal/search#progressAggregator.Final",
-                    "documentation": {
-                      "identifier": "progressAggregator.Final",
-                      "newPage": false,
-                      "searchKey": "search.progressAggregator.Final",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *progressAggregator) Final() api.Progress"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *progressAggregator) Final() api.Progress\n```\n\nFinal returns the current progress event, but with final fields set to indicate it is the last progress event. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/search#namerFunc",
-              "documentation": {
-                "identifier": "namerFunc",
-                "newPage": false,
-                "searchKey": "search.namerFunc",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type namerFunc string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype namerFunc string\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/internal/search#namerFunc.Name",
-                    "documentation": {
-                      "identifier": "namerFunc.Name",
-                      "newPage": false,
-                      "searchKey": "search.namerFunc.Name",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (n namerFunc) Name() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (n namerFunc) Name() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/search#streamHandler",
-              "documentation": {
-                "identifier": "streamHandler",
-                "newPage": false,
-                "searchKey": "search.streamHandler",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type streamHandler struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype streamHandler struct {\n\tdb                  dbutil.DB\n\tnewSearchResolver   func(context.Context, dbutil.DB, *graphqlbackend.SearchArgs) (searchResolver, error)\n\tflushTickerInternal time.Duration\n\tpingTickerInterval  time.Duration\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/internal/search#streamHandler.ServeHTTP",
-                    "documentation": {
-                      "identifier": "streamHandler.ServeHTTP",
-                      "newPage": false,
-                      "searchKey": "search.streamHandler.ServeHTTP",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *streamHandler) ServeHTTP(w http.ResponseWriter, r *http.Request)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *streamHandler) ServeHTTP(w http.ResponseWriter, r *http.Request)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/internal/search#streamHandler.getEventRepoMetadata",
-                    "documentation": {
-                      "identifier": "streamHandler.getEventRepoMetadata",
-                      "newPage": false,
-                      "searchKey": "search.streamHandler.getEventRepoMetadata",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *streamHandler) getEventRepoMetadata(ctx context.Context, event streaming.SearchEvent) map[api.RepoID]*types.Repo"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *streamHandler) getEventRepoMetadata(ctx context.Context, event streaming.SearchEvent) map[api.RepoID]*types.Repo\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/internal/search#streamHandler.startSearch",
-                    "documentation": {
-                      "identifier": "streamHandler.startSearch",
-                      "newPage": false,
-                      "searchKey": "search.streamHandler.startSearch",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *streamHandler) startSearch(ctx context.Context, a *args) (events <-chan streaming.SearchEvent, inputs run.SearchInputs, results func() (*graphqlbackend.SearchResultsResolver, error))"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *streamHandler) startSearch(ctx context.Context, a *args) (events <-chan streaming.SearchEvent, inputs run.SearchInputs, results func() (*graphqlbackend.SearchResultsResolver, error))\n```\n\nstartSearch will start a search. It returns the events channel which streams out search events. Once events is closed you can call results which will return the results resolver and error. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/search#searchResolver",
-              "documentation": {
-                "identifier": "searchResolver",
-                "newPage": false,
-                "searchKey": "search.searchResolver",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type searchResolver interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype searchResolver interface {\n\tResults(context.Context) (*graphqlbackend.SearchResultsResolver, error)\n\tInputs() run.SearchInputs\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/internal/search#defaultNewSearchResolver",
-                    "documentation": {
-                      "identifier": "defaultNewSearchResolver",
-                      "newPage": false,
-                      "searchKey": "search.defaultNewSearchResolver",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func defaultNewSearchResolver(ctx context.Context, db dbutil.DB, args *graphqlbackend.SearchArgs) (searchResolver, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc defaultNewSearchResolver(ctx context.Context, db dbutil.DB, args *graphqlbackend.SearchArgs) (searchResolver, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/search#args",
               "documentation": {
                 "identifier": "args",
                 "newPage": false,
                 "searchKey": "search.args",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -533,6 +260,7 @@
                       "newPage": false,
                       "searchKey": "search.parseURLQuery",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -558,6 +286,7 @@
                 "newPage": false,
                 "searchKey": "search.jsonArrayBuf",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -578,6 +307,7 @@
                       "newPage": false,
                       "searchKey": "search.jsonArrayBuf.Append",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -600,6 +330,7 @@
                       "newPage": false,
                       "searchKey": "search.jsonArrayBuf.Flush",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -622,6 +353,7 @@
                       "newPage": false,
                       "searchKey": "search.jsonArrayBuf.Len",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -647,6 +379,7 @@
                 "newPage": false,
                 "searchKey": "search.matchType",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -667,6 +400,7 @@
                       "newPage": false,
                       "searchKey": "search.matchType.MarshalJSON",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -692,6 +426,7 @@
                 "newPage": false,
                 "searchKey": "search.mockSearchResolver",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -706,34 +441,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/cmd/frontend/internal/search#mockSearchResolver.Results",
-                    "documentation": {
-                      "identifier": "mockSearchResolver.Results",
-                      "newPage": false,
-                      "searchKey": "search.mockSearchResolver.Results",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *mockSearchResolver) Results(ctx context.Context) (*graphqlbackend.SearchResultsResolver, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *mockSearchResolver) Results(ctx context.Context) (*graphqlbackend.SearchResultsResolver, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/cmd/frontend/internal/search#mockSearchResolver.Close",
                     "documentation": {
                       "identifier": "mockSearchResolver.Close",
                       "newPage": false,
                       "searchKey": "search.mockSearchResolver.Close",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -756,6 +470,7 @@
                       "newPage": false,
                       "searchKey": "search.mockSearchResolver.Inputs",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -766,6 +481,332 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (h *mockSearchResolver) Inputs() run.SearchInputs\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/search#mockSearchResolver.Results",
+                    "documentation": {
+                      "identifier": "mockSearchResolver.Results",
+                      "newPage": false,
+                      "searchKey": "search.mockSearchResolver.Results",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *mockSearchResolver) Results(ctx context.Context) (*graphqlbackend.SearchResultsResolver, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *mockSearchResolver) Results(ctx context.Context) (*graphqlbackend.SearchResultsResolver, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/search#namerFunc",
+              "documentation": {
+                "identifier": "namerFunc",
+                "newPage": false,
+                "searchKey": "search.namerFunc",
+                "tags": [
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type namerFunc string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype namerFunc string\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/search#namerFunc.Name",
+                    "documentation": {
+                      "identifier": "namerFunc.Name",
+                      "newPage": false,
+                      "searchKey": "search.namerFunc.Name",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n namerFunc) Name() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n namerFunc) Name() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/search#progressAggregator",
+              "documentation": {
+                "identifier": "progressAggregator",
+                "newPage": false,
+                "searchKey": "search.progressAggregator",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type progressAggregator struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype progressAggregator struct {\n\tStart        time.Time\n\tMatchCount   int\n\tStats        streaming.Stats\n\tLimit        int\n\tDisplayLimit int\n\tTrace        string // may be empty\n\n\t// Dirty is true if p has changed since the last call to Current.\n\tDirty bool\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/search#progressAggregator.Current",
+                    "documentation": {
+                      "identifier": "progressAggregator.Current",
+                      "newPage": false,
+                      "searchKey": "search.progressAggregator.Current",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *progressAggregator) Current() api.Progress"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *progressAggregator) Current() api.Progress\n```\n\nCurrent returns the current progress event. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/search#progressAggregator.Final",
+                    "documentation": {
+                      "identifier": "progressAggregator.Final",
+                      "newPage": false,
+                      "searchKey": "search.progressAggregator.Final",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *progressAggregator) Final() api.Progress"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *progressAggregator) Final() api.Progress\n```\n\nFinal returns the current progress event, but with final fields set to indicate it is the last progress event. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/search#progressAggregator.Update",
+                    "documentation": {
+                      "identifier": "progressAggregator.Update",
+                      "newPage": false,
+                      "searchKey": "search.progressAggregator.Update",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *progressAggregator) Update(event streaming.SearchEvent)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *progressAggregator) Update(event streaming.SearchEvent)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/search#progressAggregator.currentStats",
+                    "documentation": {
+                      "identifier": "progressAggregator.currentStats",
+                      "newPage": false,
+                      "searchKey": "search.progressAggregator.currentStats",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *progressAggregator) currentStats() api.ProgressStats"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *progressAggregator) currentStats() api.ProgressStats\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/search#searchResolver",
+              "documentation": {
+                "identifier": "searchResolver",
+                "newPage": false,
+                "searchKey": "search.searchResolver",
+                "tags": [
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type searchResolver interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype searchResolver interface {\n\tResults(context.Context) (*graphqlbackend.SearchResultsResolver, error)\n\tInputs() run.SearchInputs\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/search#defaultNewSearchResolver",
+                    "documentation": {
+                      "identifier": "defaultNewSearchResolver",
+                      "newPage": false,
+                      "searchKey": "search.defaultNewSearchResolver",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func defaultNewSearchResolver(ctx context.Context, db dbutil.DB, args *graphqlbackend.SearchArgs) (searchResolver, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc defaultNewSearchResolver(ctx context.Context, db dbutil.DB, args *graphqlbackend.SearchArgs) (searchResolver, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/search#streamHandler",
+              "documentation": {
+                "identifier": "streamHandler",
+                "newPage": false,
+                "searchKey": "search.streamHandler",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type streamHandler struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype streamHandler struct {\n\tdb                  dbutil.DB\n\tnewSearchResolver   func(context.Context, dbutil.DB, *graphqlbackend.SearchArgs) (searchResolver, error)\n\tflushTickerInternal time.Duration\n\tpingTickerInterval  time.Duration\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/search#streamHandler.ServeHTTP",
+                    "documentation": {
+                      "identifier": "streamHandler.ServeHTTP",
+                      "newPage": false,
+                      "searchKey": "search.streamHandler.ServeHTTP",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *streamHandler) ServeHTTP(w http.ResponseWriter, r *http.Request)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *streamHandler) ServeHTTP(w http.ResponseWriter, r *http.Request)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/search#streamHandler.getEventRepoMetadata",
+                    "documentation": {
+                      "identifier": "streamHandler.getEventRepoMetadata",
+                      "newPage": false,
+                      "searchKey": "search.streamHandler.getEventRepoMetadata",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *streamHandler) getEventRepoMetadata(ctx context.Context, event streaming.SearchEvent) map[api.RepoID]*types.Repo"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *streamHandler) getEventRepoMetadata(ctx context.Context, event streaming.SearchEvent) map[api.RepoID]*types.Repo\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/search#streamHandler.startSearch",
+                    "documentation": {
+                      "identifier": "streamHandler.startSearch",
+                      "newPage": false,
+                      "searchKey": "search.streamHandler.startSearch",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *streamHandler) startSearch(ctx context.Context, a *args) (events <-chan streaming.SearchEvent, inputs run.SearchInputs, results func() (*graphqlbackend.SearchResultsResolver, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *streamHandler) startSearch(ctx context.Context, a *args) (events <-chan streaming.SearchEvent, inputs run.SearchInputs, results func() (*graphqlbackend.SearchResultsResolver, error))\n```\n\nstartSearch will start a search. It returns the events channel which streams out search events. Once events is closed you can call results which will return the results resolver and error. \n\n"
                     },
                     "children": null
                   }
@@ -784,6 +825,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -798,12 +840,313 @@
         "children": [
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/search#GuessSource",
+              "documentation": {
+                "identifier": "GuessSource",
+                "newPage": false,
+                "searchKey": "search.GuessSource",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GuessSource(r *http.Request) trace.SourceType"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GuessSource(r *http.Request) trace.SourceType\n```\n\nGuessSource guesses the source the request came from (browser, other HTTP client, etc.) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/search#StreamHandler",
+              "documentation": {
+                "identifier": "StreamHandler",
+                "newPage": false,
+                "searchKey": "search.StreamHandler",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func StreamHandler(db dbutil.DB) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc StreamHandler(db dbutil.DB) http.Handler\n```\n\nStreamHandler is an http handler which streams back search results. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/search#TestDefaultNewSearchResolver",
+              "documentation": {
+                "identifier": "TestDefaultNewSearchResolver",
+                "newPage": false,
+                "searchKey": "search.TestDefaultNewSearchResolver",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDefaultNewSearchResolver(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDefaultNewSearchResolver(t *testing.T)\n```\n\nEnsures graphqlbackend matches the interface we expect \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/search#TestDisplayLimit",
+              "documentation": {
+                "identifier": "TestDisplayLimit",
+                "newPage": false,
+                "searchKey": "search.TestDisplayLimit",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDisplayLimit(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDisplayLimit(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/search#TestServeStream_empty",
+              "documentation": {
+                "identifier": "TestServeStream_empty",
+                "newPage": false,
+                "searchKey": "search.TestServeStream_empty",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestServeStream_empty(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestServeStream_empty(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/search#batchEvents",
+              "documentation": {
+                "identifier": "batchEvents",
+                "newPage": false,
+                "searchKey": "search.batchEvents",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func batchEvents(source <-chan streaming.SearchEvent, delay time.Duration) <-chan streaming.SearchEvent"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc batchEvents(source <-chan streaming.SearchEvent, delay time.Duration) <-chan streaming.SearchEvent\n```\n\nbatchEvents takes an event stream and merges events that come through close in time into a single event. This makes downstream database and network operations more efficient by enabling batch reads. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/search#eventStreamOTHook",
+              "documentation": {
+                "identifier": "eventStreamOTHook",
+                "newPage": false,
+                "searchKey": "search.eventStreamOTHook",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func eventStreamOTHook(log func(...otlog.Field)) func(streamhttp.WriterStat)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc eventStreamOTHook(log func(...otlog.Field)) func(streamhttp.WriterStat)\n```\n\neventStreamOTHook returns a StatHook which logs to log. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/search#fromCommit",
+              "documentation": {
+                "identifier": "fromCommit",
+                "newPage": false,
+                "searchKey": "search.fromCommit",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fromCommit(commit *result.CommitMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventCommitMatch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fromCommit(commit *result.CommitMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventCommitMatch\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/search#fromFileMatch",
+              "documentation": {
+                "identifier": "fromFileMatch",
+                "newPage": false,
+                "searchKey": "search.fromFileMatch",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fromFileMatch(fm *result.FileMatch, repoCache map[api.RepoID]*types.Repo) streamhttp.EventMatch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fromFileMatch(fm *result.FileMatch, repoCache map[api.RepoID]*types.Repo) streamhttp.EventMatch\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/search#fromMatch",
+              "documentation": {
+                "identifier": "fromMatch",
+                "newPage": false,
+                "searchKey": "search.fromMatch",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fromMatch(match result.Match, repoCache map[api.RepoID]*types.Repo) streamhttp.EventMatch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fromMatch(match result.Match, repoCache map[api.RepoID]*types.Repo) streamhttp.EventMatch\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/search#fromRepository",
+              "documentation": {
+                "identifier": "fromRepository",
+                "newPage": false,
+                "searchKey": "search.fromRepository",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fromRepository(rm *result.RepoMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventRepoMatch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fromRepository(rm *result.RepoMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventRepoMatch\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/search#fromStrPtr",
+              "documentation": {
+                "identifier": "fromStrPtr",
+                "newPage": false,
+                "searchKey": "search.fromStrPtr",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fromStrPtr(s *string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fromStrPtr(s *string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/search#fromSymbolMatch",
+              "documentation": {
+                "identifier": "fromSymbolMatch",
+                "newPage": false,
+                "searchKey": "search.fromSymbolMatch",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fromSymbolMatch(fm *result.FileMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventSymbolMatch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fromSymbolMatch(fm *result.FileMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventSymbolMatch\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/search#getNames",
               "documentation": {
                 "identifier": "getNames",
                 "newPage": false,
                 "searchKey": "search.getNames",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -826,6 +1169,7 @@
                 "newPage": false,
                 "searchKey": "search.intPtr",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -842,238 +1186,23 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/search#StreamHandler",
+              "pathID": "/cmd/frontend/internal/search#mkRepoMatch",
               "documentation": {
-                "identifier": "StreamHandler",
+                "identifier": "mkRepoMatch",
                 "newPage": false,
-                "searchKey": "search.StreamHandler",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func StreamHandler(db dbutil.DB) http.Handler"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc StreamHandler(db dbutil.DB) http.Handler\n```\n\nStreamHandler is an http handler which streams back search results. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/search#strPtr",
-              "documentation": {
-                "identifier": "strPtr",
-                "newPage": false,
-                "searchKey": "search.strPtr",
+                "searchKey": "search.mkRepoMatch",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func strPtr(s string) *string"
+                "value": "func mkRepoMatch(id int) *result.RepoMatch"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc strPtr(s string) *string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/search#fromStrPtr",
-              "documentation": {
-                "identifier": "fromStrPtr",
-                "newPage": false,
-                "searchKey": "search.fromStrPtr",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func fromStrPtr(s *string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc fromStrPtr(s *string) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/search#fromMatch",
-              "documentation": {
-                "identifier": "fromMatch",
-                "newPage": false,
-                "searchKey": "search.fromMatch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func fromMatch(match result.Match, repoCache map[api.RepoID]*types.Repo) streamhttp.EventMatch"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc fromMatch(match result.Match, repoCache map[api.RepoID]*types.Repo) streamhttp.EventMatch\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/search#fromFileMatch",
-              "documentation": {
-                "identifier": "fromFileMatch",
-                "newPage": false,
-                "searchKey": "search.fromFileMatch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func fromFileMatch(fm *result.FileMatch, repoCache map[api.RepoID]*types.Repo) streamhttp.EventMatch"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc fromFileMatch(fm *result.FileMatch, repoCache map[api.RepoID]*types.Repo) streamhttp.EventMatch\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/search#fromSymbolMatch",
-              "documentation": {
-                "identifier": "fromSymbolMatch",
-                "newPage": false,
-                "searchKey": "search.fromSymbolMatch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func fromSymbolMatch(fm *result.FileMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventSymbolMatch"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc fromSymbolMatch(fm *result.FileMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventSymbolMatch\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/search#fromRepository",
-              "documentation": {
-                "identifier": "fromRepository",
-                "newPage": false,
-                "searchKey": "search.fromRepository",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func fromRepository(rm *result.RepoMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventRepoMatch"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc fromRepository(rm *result.RepoMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventRepoMatch\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/search#fromCommit",
-              "documentation": {
-                "identifier": "fromCommit",
-                "newPage": false,
-                "searchKey": "search.fromCommit",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func fromCommit(commit *result.CommitMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventCommitMatch"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc fromCommit(commit *result.CommitMatch, repoCache map[api.RepoID]*types.Repo) *streamhttp.EventCommitMatch\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/search#eventStreamOTHook",
-              "documentation": {
-                "identifier": "eventStreamOTHook",
-                "newPage": false,
-                "searchKey": "search.eventStreamOTHook",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func eventStreamOTHook(log func(...otlog.Field)) func(streamhttp.WriterStat)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc eventStreamOTHook(log func(...otlog.Field)) func(streamhttp.WriterStat)\n```\n\neventStreamOTHook returns a StatHook which logs to log. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/search#GuessSource",
-              "documentation": {
-                "identifier": "GuessSource",
-                "newPage": false,
-                "searchKey": "search.GuessSource",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GuessSource(r *http.Request) trace.SourceType"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GuessSource(r *http.Request) trace.SourceType\n```\n\nGuessSource guesses the source the request came from (browser, other HTTP client, etc.) \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/search#batchEvents",
-              "documentation": {
-                "identifier": "batchEvents",
-                "newPage": false,
-                "searchKey": "search.batchEvents",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func batchEvents(source <-chan streaming.SearchEvent, delay time.Duration) <-chan streaming.SearchEvent"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc batchEvents(source <-chan streaming.SearchEvent, delay time.Duration) <-chan streaming.SearchEvent\n```\n\nbatchEvents takes an event stream and merges events that come through close in time into a single event. This makes downstream database and network operations more efficient by enabling batch reads. \n\n"
+                "value": "```Go\nfunc mkRepoMatch(id int) *result.RepoMatch\n```\n\n"
               },
               "children": null
             }
@@ -1086,6 +1215,7 @@
                 "newPage": false,
                 "searchKey": "search.repoIDs",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1102,88 +1232,23 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/search#TestServeStream_empty",
+              "pathID": "/cmd/frontend/internal/search#strPtr",
               "documentation": {
-                "identifier": "TestServeStream_empty",
+                "identifier": "strPtr",
                 "newPage": false,
-                "searchKey": "search.TestServeStream_empty",
+                "searchKey": "search.strPtr",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestServeStream_empty(t *testing.T)"
+                "value": "func strPtr(s string) *string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestServeStream_empty(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/search#TestDefaultNewSearchResolver",
-              "documentation": {
-                "identifier": "TestDefaultNewSearchResolver",
-                "newPage": false,
-                "searchKey": "search.TestDefaultNewSearchResolver",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDefaultNewSearchResolver(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDefaultNewSearchResolver(t *testing.T)\n```\n\nEnsures graphqlbackend matches the interface we expect \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/search#TestDisplayLimit",
-              "documentation": {
-                "identifier": "TestDisplayLimit",
-                "newPage": false,
-                "searchKey": "search.TestDisplayLimit",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDisplayLimit(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDisplayLimit(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/search#mkRepoMatch",
-              "documentation": {
-                "identifier": "mkRepoMatch",
-                "newPage": false,
-                "searchKey": "search.mkRepoMatch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func mkRepoMatch(id int) *result.RepoMatch"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc mkRepoMatch(id int) *result.RepoMatch\n```\n\n"
+                "value": "```Go\nfunc strPtr(s string) *string\n```\n\n"
               },
               "children": null
             }

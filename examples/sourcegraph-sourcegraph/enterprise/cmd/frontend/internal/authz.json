@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/authz",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "authz.clock",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -89,7 +94,9 @@
                 "identifier": "Init",
                 "newPage": false,
                 "searchKey": "authz.Init",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -110,6 +117,7 @@
                 "newPage": false,
                 "searchKey": "authz.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },

@@ -4,7 +4,9 @@
     "identifier": "bufio",
     "newPage": true,
     "searchKey": "bufio",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,12 +39,61 @@
         "children": [
           {
             "node": {
+              "pathID": "/bufio#DefaultBufSize",
+              "documentation": {
+                "identifier": "DefaultBufSize",
+                "newPage": false,
+                "searchKey": "bufio.DefaultBufSize",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const DefaultBufSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst DefaultBufSize = defaultBufSize\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio#MaxScanTokenSize",
+              "documentation": {
+                "identifier": "MaxScanTokenSize",
+                "newPage": false,
+                "searchKey": "bufio.MaxScanTokenSize",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MaxScanTokenSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MaxScanTokenSize = 64 * 1024\n```\n\nMaxScanTokenSize is the maximum size used to buffer a token unless the user provides an explicit buffer with Scanner.Buffer. The actual maximum token size may be smaller as the buffer may need to include, for instance, a newline. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/bufio#defaultBufSize",
               "documentation": {
                 "identifier": "defaultBufSize",
                 "newPage": false,
                 "searchKey": "bufio.defaultBufSize",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -57,34 +110,14 @@
           },
           {
             "node": {
-              "pathID": "/bufio#minReadBufferSize",
-              "documentation": {
-                "identifier": "minReadBufferSize",
-                "newPage": false,
-                "searchKey": "bufio.minReadBufferSize",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const minReadBufferSize"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst minReadBufferSize = 16\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/bufio#maxConsecutiveEmptyReads",
               "documentation": {
                 "identifier": "maxConsecutiveEmptyReads",
                 "newPage": false,
                 "searchKey": "bufio.maxConsecutiveEmptyReads",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -101,20 +134,24 @@
           },
           {
             "node": {
-              "pathID": "/bufio#MaxScanTokenSize",
+              "pathID": "/bufio#minReadBufferSize",
               "documentation": {
-                "identifier": "MaxScanTokenSize",
+                "identifier": "minReadBufferSize",
                 "newPage": false,
-                "searchKey": "bufio.MaxScanTokenSize",
-                "tags": null
+                "searchKey": "bufio.minReadBufferSize",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const MaxScanTokenSize"
+                "value": "const minReadBufferSize"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst MaxScanTokenSize = 64 * 1024\n```\n\nMaxScanTokenSize is the maximum size used to buffer a token unless the user provides an explicit buffer with Scanner.Buffer. The actual maximum token size may be smaller as the buffer may need to include, for instance, a newline. \n\n"
+                "value": "```Go\nconst minReadBufferSize = 16\n```\n\n"
               },
               "children": null
             }
@@ -127,6 +164,8 @@
                 "newPage": false,
                 "searchKey": "bufio.startBufSize",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -137,28 +176,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst startBufSize = 4096 // Size of initial allocation for buffer.\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/bufio#DefaultBufSize",
-              "documentation": {
-                "identifier": "DefaultBufSize",
-                "newPage": false,
-                "searchKey": "bufio.DefaultBufSize",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const DefaultBufSize"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst DefaultBufSize = defaultBufSize\n```\n\n"
               },
               "children": null
             }
@@ -173,7 +190,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -186,12 +205,107 @@
         "children": [
           {
             "node": {
+              "pathID": "/bufio#ErrAdvanceTooFar",
+              "documentation": {
+                "identifier": "ErrAdvanceTooFar",
+                "newPage": false,
+                "searchKey": "bufio.ErrAdvanceTooFar",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrAdvanceTooFar"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrAdvanceTooFar = errors.New(\"bufio.Scanner: SplitFunc returns advance count beyond input\")\n```\n\nErrors returned by Scanner. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio#ErrBadReadCount",
+              "documentation": {
+                "identifier": "ErrBadReadCount",
+                "newPage": false,
+                "searchKey": "bufio.ErrBadReadCount",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrBadReadCount"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrBadReadCount = errors.New(\"bufio.Scanner: Read returned impossible count\")\n```\n\nErrors returned by Scanner. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio#ErrBufferFull",
+              "documentation": {
+                "identifier": "ErrBufferFull",
+                "newPage": false,
+                "searchKey": "bufio.ErrBufferFull",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrBufferFull"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrBufferFull = errors.New(\"bufio: buffer full\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio#ErrFinalToken",
+              "documentation": {
+                "identifier": "ErrFinalToken",
+                "newPage": false,
+                "searchKey": "bufio.ErrFinalToken",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrFinalToken"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrFinalToken = errors.New(\"final token\")\n```\n\nErrFinalToken is a special sentinel error value. It is intended to be returned by a Split function to indicate that the token being delivered with the error is the last token and scanning should stop after this one. After ErrFinalToken is received by Scan, scanning stops with no error. The value is useful to stop processing early or when it is necessary to deliver a final empty token. One could achieve the same behavior with a custom error value but providing one here is tidier. See the emptyFinalToken example for a use of this value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/bufio#ErrInvalidUnreadByte",
               "documentation": {
                 "identifier": "ErrInvalidUnreadByte",
                 "newPage": false,
                 "searchKey": "bufio.ErrInvalidUnreadByte",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -211,7 +325,10 @@
                 "identifier": "ErrInvalidUnreadRune",
                 "newPage": false,
                 "searchKey": "bufio.ErrInvalidUnreadRune",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -226,20 +343,23 @@
           },
           {
             "node": {
-              "pathID": "/bufio#ErrBufferFull",
+              "pathID": "/bufio#ErrNegativeAdvance",
               "documentation": {
-                "identifier": "ErrBufferFull",
+                "identifier": "ErrNegativeAdvance",
                 "newPage": false,
-                "searchKey": "bufio.ErrBufferFull",
-                "tags": null
+                "searchKey": "bufio.ErrNegativeAdvance",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var ErrBufferFull"
+                "value": "var ErrNegativeAdvance"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar ErrBufferFull = errors.New(\"bufio: buffer full\")\n```\n\n"
+                "value": "```Go\nvar ErrNegativeAdvance = errors.New(\"bufio.Scanner: SplitFunc returns negative advance count\")\n```\n\nErrors returned by Scanner. \n\n"
               },
               "children": null
             }
@@ -251,7 +371,10 @@
                 "identifier": "ErrNegativeCount",
                 "newPage": false,
                 "searchKey": "bufio.ErrNegativeCount",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -266,12 +389,61 @@
           },
           {
             "node": {
+              "pathID": "/bufio#ErrTooLong",
+              "documentation": {
+                "identifier": "ErrTooLong",
+                "newPage": false,
+                "searchKey": "bufio.ErrTooLong",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrTooLong"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrTooLong = errors.New(\"bufio.Scanner: token too long\")\n```\n\nErrors returned by Scanner. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio#IsSpace",
+              "documentation": {
+                "identifier": "IsSpace",
+                "newPage": false,
+                "searchKey": "bufio.IsSpace",
+                "tags": [
+                  "variable",
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var IsSpace"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar IsSpace = isSpace\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/bufio#errNegativeRead",
               "documentation": {
                 "identifier": "errNegativeRead",
                 "newPage": false,
                 "searchKey": "bufio.errNegativeRead",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -294,6 +466,8 @@
                 "newPage": false,
                 "searchKey": "bufio.errNegativeWrite",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -310,112 +484,15 @@
           },
           {
             "node": {
-              "pathID": "/bufio#ErrTooLong",
-              "documentation": {
-                "identifier": "ErrTooLong",
-                "newPage": false,
-                "searchKey": "bufio.ErrTooLong",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ErrTooLong"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ErrTooLong = errors.New(\"bufio.Scanner: token too long\")\n```\n\nErrors returned by Scanner. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/bufio#ErrNegativeAdvance",
-              "documentation": {
-                "identifier": "ErrNegativeAdvance",
-                "newPage": false,
-                "searchKey": "bufio.ErrNegativeAdvance",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ErrNegativeAdvance"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ErrNegativeAdvance = errors.New(\"bufio.Scanner: SplitFunc returns negative advance count\")\n```\n\nErrors returned by Scanner. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/bufio#ErrAdvanceTooFar",
-              "documentation": {
-                "identifier": "ErrAdvanceTooFar",
-                "newPage": false,
-                "searchKey": "bufio.ErrAdvanceTooFar",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ErrAdvanceTooFar"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ErrAdvanceTooFar = errors.New(\"bufio.Scanner: SplitFunc returns advance count beyond input\")\n```\n\nErrors returned by Scanner. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/bufio#ErrBadReadCount",
-              "documentation": {
-                "identifier": "ErrBadReadCount",
-                "newPage": false,
-                "searchKey": "bufio.ErrBadReadCount",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ErrBadReadCount"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ErrBadReadCount = errors.New(\"bufio.Scanner: Read returned impossible count\")\n```\n\nErrors returned by Scanner. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/bufio#ErrFinalToken",
-              "documentation": {
-                "identifier": "ErrFinalToken",
-                "newPage": false,
-                "searchKey": "bufio.ErrFinalToken",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ErrFinalToken"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ErrFinalToken = errors.New(\"final token\")\n```\n\nErrFinalToken is a special sentinel error value. It is intended to be returned by a Split function to indicate that the token being delivered with the error is the last token and scanning should stop after this one. After ErrFinalToken is received by Scan, scanning stops with no error. The value is useful to stop processing early or when it is necessary to deliver a final empty token. One could achieve the same behavior with a custom error value but providing one here is tidier. See the emptyFinalToken example for a use of this value. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/bufio#errorRune",
               "documentation": {
                 "identifier": "errorRune",
                 "newPage": false,
                 "searchKey": "bufio.errorRune",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -426,28 +503,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar errorRune = []byte(string(utf8.RuneError))\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/bufio#IsSpace",
-              "documentation": {
-                "identifier": "IsSpace",
-                "newPage": false,
-                "searchKey": "bufio.IsSpace",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var IsSpace"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar IsSpace = isSpace\n```\n\n"
               },
               "children": null
             }
@@ -462,7 +517,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -475,12 +532,59 @@
         "children": [
           {
             "node": {
+              "pathID": "/bufio#ReadWriter",
+              "documentation": {
+                "identifier": "ReadWriter",
+                "newPage": false,
+                "searchKey": "bufio.ReadWriter",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ReadWriter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ReadWriter struct {\n\t*Reader\n\t*Writer\n}\n```\n\nReadWriter stores pointers to a Reader and a Writer. It implements io.ReadWriter. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/bufio#NewReadWriter",
+                    "documentation": {
+                      "identifier": "NewReadWriter",
+                      "newPage": false,
+                      "searchKey": "bufio.NewReadWriter",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewReadWriter(r *Reader, w *Writer) *ReadWriter"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewReadWriter(r *Reader, w *Writer) *ReadWriter\n```\n\nNewReadWriter allocates a new ReadWriter that dispatches to r and w. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/bufio#Reader",
               "documentation": {
                 "identifier": "Reader",
                 "newPage": false,
                 "searchKey": "bufio.Reader",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -493,32 +597,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/bufio#NewReaderSize",
-                    "documentation": {
-                      "identifier": "NewReaderSize",
-                      "newPage": false,
-                      "searchKey": "bufio.NewReaderSize",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewReaderSize(rd io.Reader, size int) *Reader"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewReaderSize(rd io.Reader, size int) *Reader\n```\n\nNewReaderSize returns a new Reader whose buffer has at least the specified size. If the argument io.Reader is already a Reader with large enough size, it returns the underlying Reader. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/bufio#NewReader",
                     "documentation": {
                       "identifier": "NewReader",
                       "newPage": false,
                       "searchKey": "bufio.NewReader",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -533,20 +619,242 @@
                 },
                 {
                   "node": {
-                    "pathID": "/bufio#Reader.Size",
+                    "pathID": "/bufio#NewReaderSize",
                     "documentation": {
-                      "identifier": "Reader.Size",
+                      "identifier": "NewReaderSize",
                       "newPage": false,
-                      "searchKey": "bufio.Reader.Size",
-                      "tags": null
+                      "searchKey": "bufio.NewReaderSize",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (b *Reader) Size() int"
+                      "value": "func NewReaderSize(rd io.Reader, size int) *Reader"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (b *Reader) Size() int\n```\n\nSize returns the size of the underlying buffer in bytes. \n\n"
+                      "value": "```Go\nfunc NewReaderSize(rd io.Reader, size int) *Reader\n```\n\nNewReaderSize returns a new Reader whose buffer has at least the specified size. If the argument io.Reader is already a Reader with large enough size, it returns the underlying Reader. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Reader.Buffered",
+                    "documentation": {
+                      "identifier": "Reader.Buffered",
+                      "newPage": false,
+                      "searchKey": "bufio.Reader.Buffered",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Reader) Buffered() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Reader) Buffered() int\n```\n\nBuffered returns the number of bytes that can be read from the current buffer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Reader.Discard",
+                    "documentation": {
+                      "identifier": "Reader.Discard",
+                      "newPage": false,
+                      "searchKey": "bufio.Reader.Discard",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Reader) Discard(n int) (discarded int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Reader) Discard(n int) (discarded int, err error)\n```\n\nDiscard skips the next n bytes, returning the number of bytes discarded. \n\nIf Discard skips fewer than n bytes, it also returns an error. If 0 <= n <= b.Buffered(), Discard is guaranteed to succeed without reading from the underlying io.Reader. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Reader.Peek",
+                    "documentation": {
+                      "identifier": "Reader.Peek",
+                      "newPage": false,
+                      "searchKey": "bufio.Reader.Peek",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Reader) Peek(n int) ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Reader) Peek(n int) ([]byte, error)\n```\n\nPeek returns the next n bytes without advancing the reader. The bytes stop being valid at the next read call. If Peek returns fewer than n bytes, it also returns an error explaining why the read is short. The error is ErrBufferFull if n is larger than b's buffer size. \n\nCalling Peek prevents a UnreadByte or UnreadRune call from succeeding until the next read operation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Reader.Read",
+                    "documentation": {
+                      "identifier": "Reader.Read",
+                      "newPage": false,
+                      "searchKey": "bufio.Reader.Read",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Reader) Read(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Reader) Read(p []byte) (n int, err error)\n```\n\nRead reads data into p. It returns the number of bytes read into p. The bytes are taken from at most one Read on the underlying Reader, hence n may be less than len(p). To read exactly len(p) bytes, use io.ReadFull(b, p). At EOF, the count will be zero and err will be io.EOF. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Reader.ReadByte",
+                    "documentation": {
+                      "identifier": "Reader.ReadByte",
+                      "newPage": false,
+                      "searchKey": "bufio.Reader.ReadByte",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Reader) ReadByte() (byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Reader) ReadByte() (byte, error)\n```\n\nReadByte reads and returns a single byte. If no byte is available, returns an error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Reader.ReadBytes",
+                    "documentation": {
+                      "identifier": "Reader.ReadBytes",
+                      "newPage": false,
+                      "searchKey": "bufio.Reader.ReadBytes",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Reader) ReadBytes(delim byte) ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Reader) ReadBytes(delim byte) ([]byte, error)\n```\n\nReadBytes reads until the first occurrence of delim in the input, returning a slice containing the data up to and including the delimiter. If ReadBytes encounters an error before finding a delimiter, it returns the data read before the error and the error itself (often io.EOF). ReadBytes returns err != nil if and only if the returned data does not end in delim. For simple uses, a Scanner may be more convenient. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Reader.ReadLine",
+                    "documentation": {
+                      "identifier": "Reader.ReadLine",
+                      "newPage": false,
+                      "searchKey": "bufio.Reader.ReadLine",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Reader) ReadLine() (line []byte, isPrefix bool, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Reader) ReadLine() (line []byte, isPrefix bool, err error)\n```\n\nReadLine is a low-level line-reading primitive. Most callers should use ReadBytes('\\n') or ReadString('\\n') instead or use a Scanner. \n\nReadLine tries to return a single line, not including the end-of-line bytes. If the line was too long for the buffer then isPrefix is set and the beginning of the line is returned. The rest of the line will be returned from future calls. isPrefix will be false when returning the last fragment of the line. The returned buffer is only valid until the next call to ReadLine. ReadLine either returns a non-nil line or it returns an error, never both. \n\nThe text returned from ReadLine does not include the line end (\"\\r\\n\" or \"\\n\"). No indication or error is given if the input ends without a final line end. Calling UnreadByte after ReadLine will always unread the last byte read (possibly a character belonging to the line end) even if that byte is not part of the line returned by ReadLine. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Reader.ReadRune",
+                    "documentation": {
+                      "identifier": "Reader.ReadRune",
+                      "newPage": false,
+                      "searchKey": "bufio.Reader.ReadRune",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Reader) ReadRune() (r rune, size int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Reader) ReadRune() (r rune, size int, err error)\n```\n\nReadRune reads a single UTF-8 encoded Unicode character and returns the rune and its size in bytes. If the encoded rune is invalid, it consumes one byte and returns unicode.ReplacementChar (U+FFFD) with a size of 1. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Reader.ReadSlice",
+                    "documentation": {
+                      "identifier": "Reader.ReadSlice",
+                      "newPage": false,
+                      "searchKey": "bufio.Reader.ReadSlice",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Reader) ReadSlice(delim byte) (line []byte, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Reader) ReadSlice(delim byte) (line []byte, err error)\n```\n\nReadSlice reads until the first occurrence of delim in the input, returning a slice pointing at the bytes in the buffer. The bytes stop being valid at the next read. If ReadSlice encounters an error before finding a delimiter, it returns all the data in the buffer and the error itself (often io.EOF). ReadSlice fails with error ErrBufferFull if the buffer fills without a delim. Because the data returned from ReadSlice will be overwritten by the next I/O operation, most clients should use ReadBytes or ReadString instead. ReadSlice returns err != nil if and only if line does not end in delim. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Reader.ReadString",
+                    "documentation": {
+                      "identifier": "Reader.ReadString",
+                      "newPage": false,
+                      "searchKey": "bufio.Reader.ReadString",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Reader) ReadString(delim byte) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Reader) ReadString(delim byte) (string, error)\n```\n\nReadString reads until the first occurrence of delim in the input, returning a string containing the data up to and including the delimiter. If ReadString encounters an error before finding a delimiter, it returns the data read before the error and the error itself (often io.EOF). ReadString returns err != nil if and only if the returned data does not end in delim. For simple uses, a Scanner may be more convenient. \n\n"
                     },
                     "children": null
                   }
@@ -558,7 +866,9 @@
                       "identifier": "Reader.Reset",
                       "newPage": false,
                       "searchKey": "bufio.Reader.Reset",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -573,22 +883,111 @@
                 },
                 {
                   "node": {
-                    "pathID": "/bufio#Reader.reset",
+                    "pathID": "/bufio#Reader.Size",
                     "documentation": {
-                      "identifier": "Reader.reset",
+                      "identifier": "Reader.Size",
                       "newPage": false,
-                      "searchKey": "bufio.Reader.reset",
+                      "searchKey": "bufio.Reader.Size",
                       "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Reader) Size() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Reader) Size() int\n```\n\nSize returns the size of the underlying buffer in bytes. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Reader.UnreadByte",
+                    "documentation": {
+                      "identifier": "Reader.UnreadByte",
+                      "newPage": false,
+                      "searchKey": "bufio.Reader.UnreadByte",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Reader) UnreadByte() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Reader) UnreadByte() error\n```\n\nUnreadByte unreads the last byte. Only the most recently read byte can be unread. \n\nUnreadByte returns an error if the most recent method called on the Reader was not a read operation. Notably, Peek is not considered a read operation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Reader.UnreadRune",
+                    "documentation": {
+                      "identifier": "Reader.UnreadRune",
+                      "newPage": false,
+                      "searchKey": "bufio.Reader.UnreadRune",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Reader) UnreadRune() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Reader) UnreadRune() error\n```\n\nUnreadRune unreads the last rune. If the most recent method called on the Reader was not a ReadRune, UnreadRune returns an error. (In this regard it is stricter than UnreadByte, which will unread the last byte from any read operation.) \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Reader.WriteTo",
+                    "documentation": {
+                      "identifier": "Reader.WriteTo",
+                      "newPage": false,
+                      "searchKey": "bufio.Reader.WriteTo",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Reader) WriteTo(w io.Writer) (n int64, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Reader) WriteTo(w io.Writer) (n int64, err error)\n```\n\nWriteTo implements io.WriterTo. This may make multiple calls to the Read method of the underlying Reader. If the underlying reader supports the WriteTo method, this calls the underlying WriteTo without buffering. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Reader.collectFragments",
+                    "documentation": {
+                      "identifier": "Reader.collectFragments",
+                      "newPage": false,
+                      "searchKey": "bufio.Reader.collectFragments",
+                      "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (b *Reader) reset(buf []byte, r io.Reader)"
+                      "value": "func (b *Reader) collectFragments(delim byte) (fullBuffers [][]byte, finalFragment []byte, totalLen int, err error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (b *Reader) reset(buf []byte, r io.Reader)\n```\n\n"
+                      "value": "```Go\nfunc (b *Reader) collectFragments(delim byte) (fullBuffers [][]byte, finalFragment []byte, totalLen int, err error)\n```\n\ncollectFragments reads until the first occurrence of delim in the input. It returns (slice of full buffers, remaining bytes before delim, total number of bytes in the combined first two elements, error). The complete result is equal to `bytes.Join(append(fullBuffers, finalFragment), nil)`, which has a length of `totalLen`. The result is structured in this way to allow callers to minimize allocations and copies. \n\n"
                     },
                     "children": null
                   }
@@ -601,6 +1000,7 @@
                       "newPage": false,
                       "searchKey": "bufio.Reader.fill",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -623,6 +1023,7 @@
                       "newPage": false,
                       "searchKey": "bufio.Reader.readErr",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -639,282 +1040,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/bufio#Reader.Peek",
+                    "pathID": "/bufio#Reader.reset",
                     "documentation": {
-                      "identifier": "Reader.Peek",
+                      "identifier": "Reader.reset",
                       "newPage": false,
-                      "searchKey": "bufio.Reader.Peek",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Reader) Peek(n int) ([]byte, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Reader) Peek(n int) ([]byte, error)\n```\n\nPeek returns the next n bytes without advancing the reader. The bytes stop being valid at the next read call. If Peek returns fewer than n bytes, it also returns an error explaining why the read is short. The error is ErrBufferFull if n is larger than b's buffer size. \n\nCalling Peek prevents a UnreadByte or UnreadRune call from succeeding until the next read operation. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Reader.Discard",
-                    "documentation": {
-                      "identifier": "Reader.Discard",
-                      "newPage": false,
-                      "searchKey": "bufio.Reader.Discard",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Reader) Discard(n int) (discarded int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Reader) Discard(n int) (discarded int, err error)\n```\n\nDiscard skips the next n bytes, returning the number of bytes discarded. \n\nIf Discard skips fewer than n bytes, it also returns an error. If 0 <= n <= b.Buffered(), Discard is guaranteed to succeed without reading from the underlying io.Reader. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Reader.Read",
-                    "documentation": {
-                      "identifier": "Reader.Read",
-                      "newPage": false,
-                      "searchKey": "bufio.Reader.Read",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Reader) Read(p []byte) (n int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Reader) Read(p []byte) (n int, err error)\n```\n\nRead reads data into p. It returns the number of bytes read into p. The bytes are taken from at most one Read on the underlying Reader, hence n may be less than len(p). To read exactly len(p) bytes, use io.ReadFull(b, p). At EOF, the count will be zero and err will be io.EOF. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Reader.ReadByte",
-                    "documentation": {
-                      "identifier": "Reader.ReadByte",
-                      "newPage": false,
-                      "searchKey": "bufio.Reader.ReadByte",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Reader) ReadByte() (byte, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Reader) ReadByte() (byte, error)\n```\n\nReadByte reads and returns a single byte. If no byte is available, returns an error. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Reader.UnreadByte",
-                    "documentation": {
-                      "identifier": "Reader.UnreadByte",
-                      "newPage": false,
-                      "searchKey": "bufio.Reader.UnreadByte",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Reader) UnreadByte() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Reader) UnreadByte() error\n```\n\nUnreadByte unreads the last byte. Only the most recently read byte can be unread. \n\nUnreadByte returns an error if the most recent method called on the Reader was not a read operation. Notably, Peek is not considered a read operation. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Reader.ReadRune",
-                    "documentation": {
-                      "identifier": "Reader.ReadRune",
-                      "newPage": false,
-                      "searchKey": "bufio.Reader.ReadRune",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Reader) ReadRune() (r rune, size int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Reader) ReadRune() (r rune, size int, err error)\n```\n\nReadRune reads a single UTF-8 encoded Unicode character and returns the rune and its size in bytes. If the encoded rune is invalid, it consumes one byte and returns unicode.ReplacementChar (U+FFFD) with a size of 1. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Reader.UnreadRune",
-                    "documentation": {
-                      "identifier": "Reader.UnreadRune",
-                      "newPage": false,
-                      "searchKey": "bufio.Reader.UnreadRune",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Reader) UnreadRune() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Reader) UnreadRune() error\n```\n\nUnreadRune unreads the last rune. If the most recent method called on the Reader was not a ReadRune, UnreadRune returns an error. (In this regard it is stricter than UnreadByte, which will unread the last byte from any read operation.) \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Reader.Buffered",
-                    "documentation": {
-                      "identifier": "Reader.Buffered",
-                      "newPage": false,
-                      "searchKey": "bufio.Reader.Buffered",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Reader) Buffered() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Reader) Buffered() int\n```\n\nBuffered returns the number of bytes that can be read from the current buffer. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Reader.ReadSlice",
-                    "documentation": {
-                      "identifier": "Reader.ReadSlice",
-                      "newPage": false,
-                      "searchKey": "bufio.Reader.ReadSlice",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Reader) ReadSlice(delim byte) (line []byte, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Reader) ReadSlice(delim byte) (line []byte, err error)\n```\n\nReadSlice reads until the first occurrence of delim in the input, returning a slice pointing at the bytes in the buffer. The bytes stop being valid at the next read. If ReadSlice encounters an error before finding a delimiter, it returns all the data in the buffer and the error itself (often io.EOF). ReadSlice fails with error ErrBufferFull if the buffer fills without a delim. Because the data returned from ReadSlice will be overwritten by the next I/O operation, most clients should use ReadBytes or ReadString instead. ReadSlice returns err != nil if and only if line does not end in delim. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Reader.ReadLine",
-                    "documentation": {
-                      "identifier": "Reader.ReadLine",
-                      "newPage": false,
-                      "searchKey": "bufio.Reader.ReadLine",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Reader) ReadLine() (line []byte, isPrefix bool, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Reader) ReadLine() (line []byte, isPrefix bool, err error)\n```\n\nReadLine is a low-level line-reading primitive. Most callers should use ReadBytes('\\n') or ReadString('\\n') instead or use a Scanner. \n\nReadLine tries to return a single line, not including the end-of-line bytes. If the line was too long for the buffer then isPrefix is set and the beginning of the line is returned. The rest of the line will be returned from future calls. isPrefix will be false when returning the last fragment of the line. The returned buffer is only valid until the next call to ReadLine. ReadLine either returns a non-nil line or it returns an error, never both. \n\nThe text returned from ReadLine does not include the line end (\"\\r\\n\" or \"\\n\"). No indication or error is given if the input ends without a final line end. Calling UnreadByte after ReadLine will always unread the last byte read (possibly a character belonging to the line end) even if that byte is not part of the line returned by ReadLine. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Reader.collectFragments",
-                    "documentation": {
-                      "identifier": "Reader.collectFragments",
-                      "newPage": false,
-                      "searchKey": "bufio.Reader.collectFragments",
+                      "searchKey": "bufio.Reader.reset",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (b *Reader) collectFragments(delim byte) (fullBuffers [][]byte, finalFragment []byte, totalLen int, err error)"
+                      "value": "func (b *Reader) reset(buf []byte, r io.Reader)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (b *Reader) collectFragments(delim byte) (fullBuffers [][]byte, finalFragment []byte, totalLen int, err error)\n```\n\ncollectFragments reads until the first occurrence of delim in the input. It returns (slice of full buffers, remaining bytes before delim, total number of bytes in the combined first two elements, error). The complete result is equal to `bytes.Join(append(fullBuffers, finalFragment), nil)`, which has a length of `totalLen`. The result is structured in this way to allow callers to minimize allocations and copies. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Reader.ReadBytes",
-                    "documentation": {
-                      "identifier": "Reader.ReadBytes",
-                      "newPage": false,
-                      "searchKey": "bufio.Reader.ReadBytes",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Reader) ReadBytes(delim byte) ([]byte, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Reader) ReadBytes(delim byte) ([]byte, error)\n```\n\nReadBytes reads until the first occurrence of delim in the input, returning a slice containing the data up to and including the delimiter. If ReadBytes encounters an error before finding a delimiter, it returns the data read before the error and the error itself (often io.EOF). ReadBytes returns err != nil if and only if the returned data does not end in delim. For simple uses, a Scanner may be more convenient. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Reader.ReadString",
-                    "documentation": {
-                      "identifier": "Reader.ReadString",
-                      "newPage": false,
-                      "searchKey": "bufio.Reader.ReadString",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Reader) ReadString(delim byte) (string, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Reader) ReadString(delim byte) (string, error)\n```\n\nReadString reads until the first occurrence of delim in the input, returning a string containing the data up to and including the delimiter. If ReadString encounters an error before finding a delimiter, it returns the data read before the error and the error itself (often io.EOF). ReadString returns err != nil if and only if the returned data does not end in delim. For simple uses, a Scanner may be more convenient. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Reader.WriteTo",
-                    "documentation": {
-                      "identifier": "Reader.WriteTo",
-                      "newPage": false,
-                      "searchKey": "bufio.Reader.WriteTo",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Reader) WriteTo(w io.Writer) (n int64, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Reader) WriteTo(w io.Writer) (n int64, err error)\n```\n\nWriteTo implements io.WriterTo. This may make multiple calls to the Read method of the underlying Reader. If the underlying reader supports the WriteTo method, this calls the underlying WriteTo without buffering. \n\n"
+                      "value": "```Go\nfunc (b *Reader) reset(buf []byte, r io.Reader)\n```\n\n"
                     },
                     "children": null
                   }
@@ -927,6 +1069,7 @@
                       "newPage": false,
                       "searchKey": "bufio.Reader.writeBuf",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -946,314 +1089,14 @@
           },
           {
             "node": {
-              "pathID": "/bufio#Writer",
-              "documentation": {
-                "identifier": "Writer",
-                "newPage": false,
-                "searchKey": "bufio.Writer",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Writer struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Writer struct {\n\terr error\n\tbuf []byte\n\tn   int\n\twr  io.Writer\n}\n```\n\nWriter implements buffering for an io.Writer object. If an error occurs writing to a Writer, no more data will be accepted and all subsequent writes, and Flush, will return the error. After all data has been written, the client should call the Flush method to guarantee all data has been forwarded to the underlying io.Writer. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/bufio#NewWriterSize",
-                    "documentation": {
-                      "identifier": "NewWriterSize",
-                      "newPage": false,
-                      "searchKey": "bufio.NewWriterSize",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewWriterSize(w io.Writer, size int) *Writer"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewWriterSize(w io.Writer, size int) *Writer\n```\n\nNewWriterSize returns a new Writer whose buffer has at least the specified size. If the argument io.Writer is already a Writer with large enough size, it returns the underlying Writer. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#NewWriter",
-                    "documentation": {
-                      "identifier": "NewWriter",
-                      "newPage": false,
-                      "searchKey": "bufio.NewWriter",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewWriter(w io.Writer) *Writer"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewWriter(w io.Writer) *Writer\n```\n\nNewWriter returns a new Writer whose buffer has the default size. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Writer.Size",
-                    "documentation": {
-                      "identifier": "Writer.Size",
-                      "newPage": false,
-                      "searchKey": "bufio.Writer.Size",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Writer) Size() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Writer) Size() int\n```\n\nSize returns the size of the underlying buffer in bytes. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Writer.Reset",
-                    "documentation": {
-                      "identifier": "Writer.Reset",
-                      "newPage": false,
-                      "searchKey": "bufio.Writer.Reset",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Writer) Reset(w io.Writer)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Writer) Reset(w io.Writer)\n```\n\nReset discards any unflushed buffered data, clears any error, and resets b to write its output to w. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Writer.Flush",
-                    "documentation": {
-                      "identifier": "Writer.Flush",
-                      "newPage": false,
-                      "searchKey": "bufio.Writer.Flush",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Writer) Flush() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Writer) Flush() error\n```\n\nFlush writes any buffered data to the underlying io.Writer. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Writer.Available",
-                    "documentation": {
-                      "identifier": "Writer.Available",
-                      "newPage": false,
-                      "searchKey": "bufio.Writer.Available",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Writer) Available() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Writer) Available() int\n```\n\nAvailable returns how many bytes are unused in the buffer. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Writer.Buffered",
-                    "documentation": {
-                      "identifier": "Writer.Buffered",
-                      "newPage": false,
-                      "searchKey": "bufio.Writer.Buffered",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Writer) Buffered() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Writer) Buffered() int\n```\n\nBuffered returns the number of bytes that have been written into the current buffer. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Writer.Write",
-                    "documentation": {
-                      "identifier": "Writer.Write",
-                      "newPage": false,
-                      "searchKey": "bufio.Writer.Write",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Writer) Write(p []byte) (nn int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Writer) Write(p []byte) (nn int, err error)\n```\n\nWrite writes the contents of p into the buffer. It returns the number of bytes written. If nn < len(p), it also returns an error explaining why the write is short. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Writer.WriteByte",
-                    "documentation": {
-                      "identifier": "Writer.WriteByte",
-                      "newPage": false,
-                      "searchKey": "bufio.Writer.WriteByte",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Writer) WriteByte(c byte) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Writer) WriteByte(c byte) error\n```\n\nWriteByte writes a single byte. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Writer.WriteRune",
-                    "documentation": {
-                      "identifier": "Writer.WriteRune",
-                      "newPage": false,
-                      "searchKey": "bufio.Writer.WriteRune",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Writer) WriteRune(r rune) (size int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Writer) WriteRune(r rune) (size int, err error)\n```\n\nWriteRune writes a single Unicode code point, returning the number of bytes written and any error. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Writer.WriteString",
-                    "documentation": {
-                      "identifier": "Writer.WriteString",
-                      "newPage": false,
-                      "searchKey": "bufio.Writer.WriteString",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Writer) WriteString(s string) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Writer) WriteString(s string) (int, error)\n```\n\nWriteString writes a string. It returns the number of bytes written. If the count is less than len(s), it also returns an error explaining why the write is short. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Writer.ReadFrom",
-                    "documentation": {
-                      "identifier": "Writer.ReadFrom",
-                      "newPage": false,
-                      "searchKey": "bufio.Writer.ReadFrom",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *Writer) ReadFrom(r io.Reader) (n int64, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *Writer) ReadFrom(r io.Reader) (n int64, err error)\n```\n\nReadFrom implements io.ReaderFrom. If the underlying writer supports the ReadFrom method, and b has no buffered data yet, this calls the underlying ReadFrom without buffering. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/bufio#ReadWriter",
-              "documentation": {
-                "identifier": "ReadWriter",
-                "newPage": false,
-                "searchKey": "bufio.ReadWriter",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ReadWriter struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ReadWriter struct {\n\t*Reader\n\t*Writer\n}\n```\n\nReadWriter stores pointers to a Reader and a Writer. It implements io.ReadWriter. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/bufio#NewReadWriter",
-                    "documentation": {
-                      "identifier": "NewReadWriter",
-                      "newPage": false,
-                      "searchKey": "bufio.NewReadWriter",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewReadWriter(r *Reader, w *Writer) *ReadWriter"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewReadWriter(r *Reader, w *Writer) *ReadWriter\n```\n\nNewReadWriter allocates a new ReadWriter that dispatches to r and w. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/bufio#Scanner",
               "documentation": {
                 "identifier": "Scanner",
                 "newPage": false,
                 "searchKey": "bufio.Scanner",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1271,7 +1114,9 @@
                       "identifier": "NewScanner",
                       "newPage": false,
                       "searchKey": "bufio.NewScanner",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1286,20 +1131,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/bufio#Scanner.Err",
+                    "pathID": "/bufio#Scanner.Buffer",
                     "documentation": {
-                      "identifier": "Scanner.Err",
+                      "identifier": "Scanner.Buffer",
                       "newPage": false,
-                      "searchKey": "bufio.Scanner.Err",
-                      "tags": null
+                      "searchKey": "bufio.Scanner.Buffer",
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (s *Scanner) Err() error"
+                      "value": "func (s *Scanner) Buffer(buf []byte, max int)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (s *Scanner) Err() error\n```\n\nErr returns the first non-EOF error that was encountered by the Scanner. \n\n"
+                      "value": "```Go\nfunc (s *Scanner) Buffer(buf []byte, max int)\n```\n\nBuffer sets the initial buffer to use when scanning and the maximum size of buffer that may be allocated during scanning. The maximum token size is the larger of max and cap(buf). If max <= cap(buf), Scan will use this buffer only and do no allocation. \n\nBy default, Scan uses an internal buffer and sets the maximum token size to MaxScanTokenSize. \n\nBuffer panics if it is called after scanning has started. \n\n"
                     },
                     "children": null
                   }
@@ -1311,7 +1158,9 @@
                       "identifier": "Scanner.Bytes",
                       "newPage": false,
                       "searchKey": "bufio.Scanner.Bytes",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1326,20 +1175,68 @@
                 },
                 {
                   "node": {
-                    "pathID": "/bufio#Scanner.Text",
+                    "pathID": "/bufio#Scanner.Err",
                     "documentation": {
-                      "identifier": "Scanner.Text",
+                      "identifier": "Scanner.Err",
                       "newPage": false,
-                      "searchKey": "bufio.Scanner.Text",
-                      "tags": null
+                      "searchKey": "bufio.Scanner.Err",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (s *Scanner) Text() string"
+                      "value": "func (s *Scanner) Err() error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (s *Scanner) Text() string\n```\n\nText returns the most recent token generated by a call to Scan as a newly allocated string holding its bytes. \n\n"
+                      "value": "```Go\nfunc (s *Scanner) Err() error\n```\n\nErr returns the first non-EOF error that was encountered by the Scanner. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Scanner.ErrOrEOF",
+                    "documentation": {
+                      "identifier": "Scanner.ErrOrEOF",
+                      "newPage": false,
+                      "searchKey": "bufio.Scanner.ErrOrEOF",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) ErrOrEOF() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) ErrOrEOF() error\n```\n\nErrOrEOF is like Err, but returns EOF. Used to test a corner case. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Scanner.MaxTokenSize",
+                    "documentation": {
+                      "identifier": "Scanner.MaxTokenSize",
+                      "newPage": false,
+                      "searchKey": "bufio.Scanner.MaxTokenSize",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) MaxTokenSize(n int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) MaxTokenSize(n int)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1351,7 +1248,9 @@
                       "identifier": "Scanner.Scan",
                       "newPage": false,
                       "searchKey": "bufio.Scanner.Scan",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1366,12 +1265,57 @@
                 },
                 {
                   "node": {
+                    "pathID": "/bufio#Scanner.Split",
+                    "documentation": {
+                      "identifier": "Scanner.Split",
+                      "newPage": false,
+                      "searchKey": "bufio.Scanner.Split",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) Split(split SplitFunc)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) Split(split SplitFunc)\n```\n\nSplit sets the split function for the Scanner. The default split function is ScanLines. \n\nSplit panics if it is called after scanning has started. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Scanner.Text",
+                    "documentation": {
+                      "identifier": "Scanner.Text",
+                      "newPage": false,
+                      "searchKey": "bufio.Scanner.Text",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) Text() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) Text() string\n```\n\nText returns the most recent token generated by a call to Scan as a newly allocated string holding its bytes. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/bufio#Scanner.advance",
                     "documentation": {
                       "identifier": "Scanner.advance",
                       "newPage": false,
                       "searchKey": "bufio.Scanner.advance",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1394,6 +1338,7 @@
                       "newPage": false,
                       "searchKey": "bufio.Scanner.setErr",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1404,90 +1349,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (s *Scanner) setErr(err error)\n```\n\nsetErr records the first error encountered. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Scanner.Buffer",
-                    "documentation": {
-                      "identifier": "Scanner.Buffer",
-                      "newPage": false,
-                      "searchKey": "bufio.Scanner.Buffer",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Scanner) Buffer(buf []byte, max int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Scanner) Buffer(buf []byte, max int)\n```\n\nBuffer sets the initial buffer to use when scanning and the maximum size of buffer that may be allocated during scanning. The maximum token size is the larger of max and cap(buf). If max <= cap(buf), Scan will use this buffer only and do no allocation. \n\nBy default, Scan uses an internal buffer and sets the maximum token size to MaxScanTokenSize. \n\nBuffer panics if it is called after scanning has started. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Scanner.Split",
-                    "documentation": {
-                      "identifier": "Scanner.Split",
-                      "newPage": false,
-                      "searchKey": "bufio.Scanner.Split",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Scanner) Split(split SplitFunc)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Scanner) Split(split SplitFunc)\n```\n\nSplit sets the split function for the Scanner. The default split function is ScanLines. \n\nSplit panics if it is called after scanning has started. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Scanner.MaxTokenSize",
-                    "documentation": {
-                      "identifier": "Scanner.MaxTokenSize",
-                      "newPage": false,
-                      "searchKey": "bufio.Scanner.MaxTokenSize",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Scanner) MaxTokenSize(n int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Scanner) MaxTokenSize(n int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/bufio#Scanner.ErrOrEOF",
-                    "documentation": {
-                      "identifier": "Scanner.ErrOrEOF",
-                      "newPage": false,
-                      "searchKey": "bufio.Scanner.ErrOrEOF",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Scanner) ErrOrEOF() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Scanner) ErrOrEOF() error\n```\n\nErrOrEOF is like Err, but returns EOF. Used to test a corner case. \n\n"
                     },
                     "children": null
                   }
@@ -1502,7 +1363,9 @@
                 "identifier": "SplitFunc",
                 "newPage": false,
                 "searchKey": "bufio.SplitFunc",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1513,6 +1376,293 @@
                 "value": "```Go\ntype SplitFunc func(data []byte, atEOF bool) (advance int, token []byte, err error)\n```\n\nSplitFunc is the signature of the split function used to tokenize the input. The arguments are an initial substring of the remaining unprocessed data and a flag, atEOF, that reports whether the Reader has no more data to give. The return values are the number of bytes to advance the input and the next token to return to the user, if any, plus an error, if any. \n\nScanning stops if the function returns an error, in which case some of the input may be discarded. If that error is ErrFinalToken, scanning stops with no error. \n\nOtherwise, the Scanner advances the input. If the token is not nil, the Scanner returns it to the user. If the token is nil, the Scanner reads more data and continues scanning; if there is no more data--if atEOF was true--the Scanner returns. If the data does not yet hold a complete token, for instance if it has no newline while scanning lines, a SplitFunc can return (0, nil, nil) to signal the Scanner to read more data into the slice and try again with a longer slice starting at the same point in the input. \n\nThe function is never called with an empty data slice unless atEOF is true. If atEOF is true, however, data may be non-empty and, as always, holds unprocessed text. \n\n"
               },
               "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio#Writer",
+              "documentation": {
+                "identifier": "Writer",
+                "newPage": false,
+                "searchKey": "bufio.Writer",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Writer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Writer struct {\n\terr error\n\tbuf []byte\n\tn   int\n\twr  io.Writer\n}\n```\n\nWriter implements buffering for an io.Writer object. If an error occurs writing to a Writer, no more data will be accepted and all subsequent writes, and Flush, will return the error. After all data has been written, the client should call the Flush method to guarantee all data has been forwarded to the underlying io.Writer. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/bufio#NewWriter",
+                    "documentation": {
+                      "identifier": "NewWriter",
+                      "newPage": false,
+                      "searchKey": "bufio.NewWriter",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewWriter(w io.Writer) *Writer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewWriter(w io.Writer) *Writer\n```\n\nNewWriter returns a new Writer whose buffer has the default size. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#NewWriterSize",
+                    "documentation": {
+                      "identifier": "NewWriterSize",
+                      "newPage": false,
+                      "searchKey": "bufio.NewWriterSize",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewWriterSize(w io.Writer, size int) *Writer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewWriterSize(w io.Writer, size int) *Writer\n```\n\nNewWriterSize returns a new Writer whose buffer has at least the specified size. If the argument io.Writer is already a Writer with large enough size, it returns the underlying Writer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Writer.Available",
+                    "documentation": {
+                      "identifier": "Writer.Available",
+                      "newPage": false,
+                      "searchKey": "bufio.Writer.Available",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Writer) Available() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Writer) Available() int\n```\n\nAvailable returns how many bytes are unused in the buffer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Writer.Buffered",
+                    "documentation": {
+                      "identifier": "Writer.Buffered",
+                      "newPage": false,
+                      "searchKey": "bufio.Writer.Buffered",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Writer) Buffered() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Writer) Buffered() int\n```\n\nBuffered returns the number of bytes that have been written into the current buffer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Writer.Flush",
+                    "documentation": {
+                      "identifier": "Writer.Flush",
+                      "newPage": false,
+                      "searchKey": "bufio.Writer.Flush",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Writer) Flush() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Writer) Flush() error\n```\n\nFlush writes any buffered data to the underlying io.Writer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Writer.ReadFrom",
+                    "documentation": {
+                      "identifier": "Writer.ReadFrom",
+                      "newPage": false,
+                      "searchKey": "bufio.Writer.ReadFrom",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Writer) ReadFrom(r io.Reader) (n int64, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Writer) ReadFrom(r io.Reader) (n int64, err error)\n```\n\nReadFrom implements io.ReaderFrom. If the underlying writer supports the ReadFrom method, and b has no buffered data yet, this calls the underlying ReadFrom without buffering. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Writer.Reset",
+                    "documentation": {
+                      "identifier": "Writer.Reset",
+                      "newPage": false,
+                      "searchKey": "bufio.Writer.Reset",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Writer) Reset(w io.Writer)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Writer) Reset(w io.Writer)\n```\n\nReset discards any unflushed buffered data, clears any error, and resets b to write its output to w. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Writer.Size",
+                    "documentation": {
+                      "identifier": "Writer.Size",
+                      "newPage": false,
+                      "searchKey": "bufio.Writer.Size",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Writer) Size() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Writer) Size() int\n```\n\nSize returns the size of the underlying buffer in bytes. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Writer.Write",
+                    "documentation": {
+                      "identifier": "Writer.Write",
+                      "newPage": false,
+                      "searchKey": "bufio.Writer.Write",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Writer) Write(p []byte) (nn int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Writer) Write(p []byte) (nn int, err error)\n```\n\nWrite writes the contents of p into the buffer. It returns the number of bytes written. If nn < len(p), it also returns an error explaining why the write is short. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Writer.WriteByte",
+                    "documentation": {
+                      "identifier": "Writer.WriteByte",
+                      "newPage": false,
+                      "searchKey": "bufio.Writer.WriteByte",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Writer) WriteByte(c byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Writer) WriteByte(c byte) error\n```\n\nWriteByte writes a single byte. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Writer.WriteRune",
+                    "documentation": {
+                      "identifier": "Writer.WriteRune",
+                      "newPage": false,
+                      "searchKey": "bufio.Writer.WriteRune",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Writer) WriteRune(r rune) (size int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Writer) WriteRune(r rune) (size int, err error)\n```\n\nWriteRune writes a single Unicode code point, returning the number of bytes written and any error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio#Writer.WriteString",
+                    "documentation": {
+                      "identifier": "Writer.WriteString",
+                      "newPage": false,
+                      "searchKey": "bufio.Writer.WriteString",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Writer) WriteString(s string) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Writer) WriteString(s string) (int, error)\n```\n\nWriteString writes a string. It returns the number of bytes written. If the count is less than len(s), it also returns an error explaining why the write is short. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
             }
           }
         ]
@@ -1525,7 +1675,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1543,7 +1695,9 @@
                 "identifier": "ScanBytes",
                 "newPage": false,
                 "searchKey": "bufio.ScanBytes",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1558,12 +1712,36 @@
           },
           {
             "node": {
+              "pathID": "/bufio#ScanLines",
+              "documentation": {
+                "identifier": "ScanLines",
+                "newPage": false,
+                "searchKey": "bufio.ScanLines",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ScanLines(data []byte, atEOF bool) (advance int, token []byte, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ScanLines(data []byte, atEOF bool) (advance int, token []byte, err error)\n```\n\nScanLines is a split function for a Scanner that returns each line of text, stripped of any trailing end-of-line marker. The returned line may be empty. The end-of-line marker is one optional carriage return followed by one mandatory newline. In regular expression notation, it is `\\r?\\n`. The last non-empty line of input will be returned even if it has no newline. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/bufio#ScanRunes",
               "documentation": {
                 "identifier": "ScanRunes",
                 "newPage": false,
                 "searchKey": "bufio.ScanRunes",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1578,12 +1756,35 @@
           },
           {
             "node": {
+              "pathID": "/bufio#ScanWords",
+              "documentation": {
+                "identifier": "ScanWords",
+                "newPage": false,
+                "searchKey": "bufio.ScanWords",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ScanWords(data []byte, atEOF bool) (advance int, token []byte, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ScanWords(data []byte, atEOF bool) (advance int, token []byte, err error)\n```\n\nScanWords is a split function for a Scanner that returns each space-separated word of text, with surrounding spaces deleted. It will never return an empty string. The definition of space is set by unicode.IsSpace. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/bufio#dropCR",
               "documentation": {
                 "identifier": "dropCR",
                 "newPage": false,
                 "searchKey": "bufio.dropCR",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1600,32 +1801,13 @@
           },
           {
             "node": {
-              "pathID": "/bufio#ScanLines",
-              "documentation": {
-                "identifier": "ScanLines",
-                "newPage": false,
-                "searchKey": "bufio.ScanLines",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ScanLines(data []byte, atEOF bool) (advance int, token []byte, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ScanLines(data []byte, atEOF bool) (advance int, token []byte, err error)\n```\n\nScanLines is a split function for a Scanner that returns each line of text, stripped of any trailing end-of-line marker. The returned line may be empty. The end-of-line marker is one optional carriage return followed by one mandatory newline. In regular expression notation, it is `\\r?\\n`. The last non-empty line of input will be returned even if it has no newline. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/bufio#isSpace",
               "documentation": {
                 "identifier": "isSpace",
                 "newPage": false,
                 "searchKey": "bufio.isSpace",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1636,26 +1818,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc isSpace(r rune) bool\n```\n\nisSpace reports whether the character is a Unicode white space character. We avoid dependency on the unicode package, but check validity of the implementation in the tests. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/bufio#ScanWords",
-              "documentation": {
-                "identifier": "ScanWords",
-                "newPage": false,
-                "searchKey": "bufio.ScanWords",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ScanWords(data []byte, atEOF bool) (advance int, token []byte, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ScanWords(data []byte, atEOF bool) (advance int, token []byte, err error)\n```\n\nScanWords is a split function for a Scanner that returns each space-separated word of text, with surrounding spaces deleted. It will never return an empty string. The definition of space is set by unicode.IsSpace. \n\n"
               },
               "children": null
             }

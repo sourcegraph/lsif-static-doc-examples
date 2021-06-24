@@ -4,7 +4,9 @@
     "identifier": "schema",
     "newPage": true,
     "searchKey": "schema",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,10 @@
                 "identifier": "AWSCodeCommitSchemaJSON",
                 "newPage": false,
                 "searchKey": "schema.AWSCodeCommitSchemaJSON",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +67,10 @@
                 "identifier": "BatchSpecSchemaJSON",
                 "newPage": false,
                 "searchKey": "schema.BatchSpecSchemaJSON",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +90,10 @@
                 "identifier": "BitbucketCloudSchemaJSON",
                 "newPage": false,
                 "searchKey": "schema.BitbucketCloudSchemaJSON",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +113,10 @@
                 "identifier": "BitbucketServerSchemaJSON",
                 "newPage": false,
                 "searchKey": "schema.BitbucketServerSchemaJSON",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -120,7 +136,10 @@
                 "identifier": "ChangesetSpecSchemaJSON",
                 "newPage": false,
                 "searchKey": "schema.ChangesetSpecSchemaJSON",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -140,7 +159,10 @@
                 "identifier": "GitHubSchemaJSON",
                 "newPage": false,
                 "searchKey": "schema.GitHubSchemaJSON",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -160,7 +182,10 @@
                 "identifier": "GitLabSchemaJSON",
                 "newPage": false,
                 "searchKey": "schema.GitLabSchemaJSON",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -180,7 +205,10 @@
                 "identifier": "GitoliteSchemaJSON",
                 "newPage": false,
                 "searchKey": "schema.GitoliteSchemaJSON",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -200,7 +228,10 @@
                 "identifier": "OtherExternalServiceSchemaJSON",
                 "newPage": false,
                 "searchKey": "schema.OtherExternalServiceSchemaJSON",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -220,7 +251,10 @@
                 "identifier": "PerforceSchemaJSON",
                 "newPage": false,
                 "searchKey": "schema.PerforceSchemaJSON",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -240,7 +274,10 @@
                 "identifier": "PhabricatorSchemaJSON",
                 "newPage": false,
                 "searchKey": "schema.PhabricatorSchemaJSON",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -260,7 +297,10 @@
                 "identifier": "SettingsSchemaJSON",
                 "newPage": false,
                 "searchKey": "schema.SettingsSchemaJSON",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -280,7 +320,10 @@
                 "identifier": "SiteSchemaJSON",
                 "newPage": false,
                 "searchKey": "schema.SiteSchemaJSON",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -303,7 +346,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -316,152 +361,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/schema#SourcegraphExtensionManifest",
-              "documentation": {
-                "identifier": "SourcegraphExtensionManifest",
-                "newPage": false,
-                "searchKey": "schema.SourcegraphExtensionManifest",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type SourcegraphExtensionManifest struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype SourcegraphExtensionManifest struct {\n\tActivationEvents []string                `json:\"activationEvents\"`\n\tArgs             *map[string]interface{} `json:\"args,omitempty\"`\n\tContributes      *Contributions          `json:\"contributes,omitempty\"`\n\tDescription      string                  `json:\"description,omitempty\"`\n\tIcon             string                  `json:\"icon,omitempty\"`\n\tReadme           string                  `json:\"readme,omitempty\"`\n\tRepository       *ExtensionRepository    `json:\"repository,omitempty\"`\n\tWip              bool                    `json:\"wip,omitempty\"`\n\tUrl              string                  `json:\"url\"`\n}\n```\n\nSourcegraphExtensionManifest description: The Sourcegraph extension manifest describes the extension and the features it provides. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/schema#ExtensionRepository",
-              "documentation": {
-                "identifier": "ExtensionRepository",
-                "newPage": false,
-                "searchKey": "schema.ExtensionRepository",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ExtensionRepository struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ExtensionRepository struct {\n\tType string `json:\"type,omitempty\"`\n\tUrl  string `json:\"url\"`\n}\n```\n\nExtensionRepository description: The location of the version control repository for this extension. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/schema#Action",
-              "documentation": {
-                "identifier": "Action",
-                "newPage": false,
-                "searchKey": "schema.Action",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Action struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Action struct {\n\tActionItem       *ActionItem   `json:\"actionItem,omitempty\"`\n\tCategory         string        `json:\"category,omitempty\"`\n\tCommand          string        `json:\"command,omitempty\"`\n\tCommandArguments []interface{} `json:\"commandArguments,omitempty\"`\n\tIconURL          string        `json:\"iconURL,omitempty\"`\n\tId               string        `json:\"id,omitempty\"`\n\tTitle            string        `json:\"title,omitempty\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/schema#ActionItem",
-              "documentation": {
-                "identifier": "ActionItem",
-                "newPage": false,
-                "searchKey": "schema.ActionItem",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ActionItem struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ActionItem struct {\n\tDescription string `json:\"description,omitempty\"`\n\tIconURL     string `json:\"iconURL,omitempty\"`\n\tLabel       string `json:\"label,omitempty\"`\n}\n```\n\nActionItem description: The action item. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/schema#Contributions",
-              "documentation": {
-                "identifier": "Contributions",
-                "newPage": false,
-                "searchKey": "schema.Contributions",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Contributions struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Contributions struct {\n\tActions       []*Action          `json:\"actions,omitempty\"`\n\tConfiguration *jsonschema.Schema `json:\"configuration,omitempty\"`\n\tMenus         *Menus             `json:\"menus,omitempty\"`\n}\n```\n\nContributions description: Features contributed by this extension. Extensions may also register certain types of contributions dynamically. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/schema#MenuItem",
-              "documentation": {
-                "identifier": "MenuItem",
-                "newPage": false,
-                "searchKey": "schema.MenuItem",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type MenuItem struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype MenuItem struct {\n\tAction string `json:\"action,omitempty\"`\n\tAlt    string `json:\"alt,omitempty\"`\n\tWhen   string `json:\"when,omitempty\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/schema#Menus",
-              "documentation": {
-                "identifier": "Menus",
-                "newPage": false,
-                "searchKey": "schema.Menus",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Menus struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Menus struct {\n\tCommandPalette []*MenuItem `json:\"commandPalette,omitempty\"`\n\tEditorTitle    []*MenuItem `json:\"editor/title,omitempty\"`\n\tHelp           []*MenuItem `json:\"help,omitempty\"`\n}\n```\n\nMenus description: Describes where to place actions in menus. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/schema#AWSCodeCommitConnection",
               "documentation": {
                 "identifier": "AWSCodeCommitConnection",
                 "newPage": false,
                 "searchKey": "schema.AWSCodeCommitConnection",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -481,7 +388,9 @@
                 "identifier": "AWSCodeCommitGitCredentials",
                 "newPage": false,
                 "searchKey": "schema.AWSCodeCommitGitCredentials",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -501,7 +410,9 @@
                 "identifier": "AWSKMSEncryptionKey",
                 "newPage": false,
                 "searchKey": "schema.AWSKMSEncryptionKey",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -516,12 +427,58 @@
           },
           {
             "node": {
+              "pathID": "/schema#Action",
+              "documentation": {
+                "identifier": "Action",
+                "newPage": false,
+                "searchKey": "schema.Action",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Action struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Action struct {\n\tActionItem       *ActionItem   `json:\"actionItem,omitempty\"`\n\tCategory         string        `json:\"category,omitempty\"`\n\tCommand          string        `json:\"command,omitempty\"`\n\tCommandArguments []interface{} `json:\"commandArguments,omitempty\"`\n\tIconURL          string        `json:\"iconURL,omitempty\"`\n\tId               string        `json:\"id,omitempty\"`\n\tTitle            string        `json:\"title,omitempty\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/schema#ActionItem",
+              "documentation": {
+                "identifier": "ActionItem",
+                "newPage": false,
+                "searchKey": "schema.ActionItem",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ActionItem struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ActionItem struct {\n\tDescription string `json:\"description,omitempty\"`\n\tIconURL     string `json:\"iconURL,omitempty\"`\n\tLabel       string `json:\"label,omitempty\"`\n}\n```\n\nActionItem description: The action item. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/schema#AdditionalProperties",
               "documentation": {
                 "identifier": "AdditionalProperties",
                 "newPage": false,
                 "searchKey": "schema.AdditionalProperties",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -541,7 +498,9 @@
                 "identifier": "ApiRatelimit",
                 "newPage": false,
                 "searchKey": "schema.ApiRatelimit",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -561,7 +520,9 @@
                 "identifier": "AuthAccessTokens",
                 "newPage": false,
                 "searchKey": "schema.AuthAccessTokens",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -581,7 +542,9 @@
                 "identifier": "AuthProviderCommon",
                 "newPage": false,
                 "searchKey": "schema.AuthProviderCommon",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -601,7 +564,9 @@
                 "identifier": "AuthProviders",
                 "newPage": false,
                 "searchKey": "schema.AuthProviders",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -619,7 +584,9 @@
                       "identifier": "AuthProviders.MarshalJSON",
                       "newPage": false,
                       "searchKey": "schema.AuthProviders.MarshalJSON",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -639,7 +606,9 @@
                       "identifier": "AuthProviders.UnmarshalJSON",
                       "newPage": false,
                       "searchKey": "schema.AuthProviders.UnmarshalJSON",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -662,7 +631,9 @@
                 "identifier": "BatchChangeRolloutWindow",
                 "newPage": false,
                 "searchKey": "schema.BatchChangeRolloutWindow",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -682,7 +653,9 @@
                 "identifier": "BatchSpec",
                 "newPage": false,
                 "searchKey": "schema.BatchSpec",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -702,7 +675,9 @@
                 "identifier": "BitbucketCloudConnection",
                 "newPage": false,
                 "searchKey": "schema.BitbucketCloudConnection",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -722,7 +697,9 @@
                 "identifier": "BitbucketCloudRateLimit",
                 "newPage": false,
                 "searchKey": "schema.BitbucketCloudRateLimit",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -742,7 +719,9 @@
                 "identifier": "BitbucketServerAuthorization",
                 "newPage": false,
                 "searchKey": "schema.BitbucketServerAuthorization",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -762,7 +741,9 @@
                 "identifier": "BitbucketServerConnection",
                 "newPage": false,
                 "searchKey": "schema.BitbucketServerConnection",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -780,7 +761,9 @@
                       "identifier": "BitbucketServerConnection.WebhookSecret",
                       "newPage": false,
                       "searchKey": "schema.BitbucketServerConnection.WebhookSecret",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -803,7 +786,9 @@
                 "identifier": "BitbucketServerIdentityProvider",
                 "newPage": false,
                 "searchKey": "schema.BitbucketServerIdentityProvider",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -821,7 +806,9 @@
                       "identifier": "BitbucketServerIdentityProvider.MarshalJSON",
                       "newPage": false,
                       "searchKey": "schema.BitbucketServerIdentityProvider.MarshalJSON",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -841,7 +828,9 @@
                       "identifier": "BitbucketServerIdentityProvider.UnmarshalJSON",
                       "newPage": false,
                       "searchKey": "schema.BitbucketServerIdentityProvider.UnmarshalJSON",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -864,7 +853,9 @@
                 "identifier": "BitbucketServerOAuth",
                 "newPage": false,
                 "searchKey": "schema.BitbucketServerOAuth",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -884,7 +875,9 @@
                 "identifier": "BitbucketServerPlugin",
                 "newPage": false,
                 "searchKey": "schema.BitbucketServerPlugin",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -904,7 +897,9 @@
                 "identifier": "BitbucketServerPluginWebhooks",
                 "newPage": false,
                 "searchKey": "schema.BitbucketServerPluginWebhooks",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -924,7 +919,9 @@
                 "identifier": "BitbucketServerRateLimit",
                 "newPage": false,
                 "searchKey": "schema.BitbucketServerRateLimit",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -944,7 +941,9 @@
                 "identifier": "BitbucketServerUsernameIdentity",
                 "newPage": false,
                 "searchKey": "schema.BitbucketServerUsernameIdentity",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -964,7 +963,9 @@
                 "identifier": "BrandAssets",
                 "newPage": false,
                 "searchKey": "schema.BrandAssets",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -984,7 +985,9 @@
                 "identifier": "Branding",
                 "newPage": false,
                 "searchKey": "schema.Branding",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1004,7 +1007,9 @@
                 "identifier": "BuiltinAuthProvider",
                 "newPage": false,
                 "searchKey": "schema.BuiltinAuthProvider",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1024,7 +1029,9 @@
                 "identifier": "ChangesetTemplate",
                 "newPage": false,
                 "searchKey": "schema.ChangesetTemplate",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1044,7 +1051,9 @@
                 "identifier": "CloneURLToRepositoryName",
                 "newPage": false,
                 "searchKey": "schema.CloneURLToRepositoryName",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1064,7 +1073,9 @@
                 "identifier": "CloudKMSEncryptionKey",
                 "newPage": false,
                 "searchKey": "schema.CloudKMSEncryptionKey",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1079,12 +1090,36 @@
           },
           {
             "node": {
+              "pathID": "/schema#Contributions",
+              "documentation": {
+                "identifier": "Contributions",
+                "newPage": false,
+                "searchKey": "schema.Contributions",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Contributions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Contributions struct {\n\tActions       []*Action          `json:\"actions,omitempty\"`\n\tConfiguration *jsonschema.Schema `json:\"configuration,omitempty\"`\n\tMenus         *Menus             `json:\"menus,omitempty\"`\n}\n```\n\nContributions description: Features contributed by this extension. Extensions may also register certain types of contributions dynamically. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/schema#CustomGitFetchMapping",
               "documentation": {
                 "identifier": "CustomGitFetchMapping",
                 "newPage": false,
                 "searchKey": "schema.CustomGitFetchMapping",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1104,7 +1139,9 @@
                 "identifier": "DebugLog",
                 "newPage": false,
                 "searchKey": "schema.DebugLog",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1124,7 +1161,9 @@
                 "identifier": "Dotcom",
                 "newPage": false,
                 "searchKey": "schema.Dotcom",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1144,7 +1183,9 @@
                 "identifier": "EncryptionKey",
                 "newPage": false,
                 "searchKey": "schema.EncryptionKey",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1162,7 +1203,9 @@
                       "identifier": "EncryptionKey.MarshalJSON",
                       "newPage": false,
                       "searchKey": "schema.EncryptionKey.MarshalJSON",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1182,7 +1225,9 @@
                       "identifier": "EncryptionKey.UnmarshalJSON",
                       "newPage": false,
                       "searchKey": "schema.EncryptionKey.UnmarshalJSON",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1205,7 +1250,9 @@
                 "identifier": "EncryptionKeys",
                 "newPage": false,
                 "searchKey": "schema.EncryptionKeys",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1225,7 +1272,9 @@
                 "identifier": "ExcludedAWSCodeCommitRepo",
                 "newPage": false,
                 "searchKey": "schema.ExcludedAWSCodeCommitRepo",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1245,7 +1294,9 @@
                 "identifier": "ExcludedBitbucketCloudRepo",
                 "newPage": false,
                 "searchKey": "schema.ExcludedBitbucketCloudRepo",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1265,7 +1316,9 @@
                 "identifier": "ExcludedBitbucketServerRepo",
                 "newPage": false,
                 "searchKey": "schema.ExcludedBitbucketServerRepo",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1285,7 +1338,9 @@
                 "identifier": "ExcludedGitHubRepo",
                 "newPage": false,
                 "searchKey": "schema.ExcludedGitHubRepo",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1305,7 +1360,9 @@
                 "identifier": "ExcludedGitLabProject",
                 "newPage": false,
                 "searchKey": "schema.ExcludedGitLabProject",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1325,7 +1382,9 @@
                 "identifier": "ExcludedGitoliteRepo",
                 "newPage": false,
                 "searchKey": "schema.ExcludedGitoliteRepo",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1345,7 +1404,9 @@
                 "identifier": "ExpandedGitCommitDescription",
                 "newPage": false,
                 "searchKey": "schema.ExpandedGitCommitDescription",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1365,7 +1426,9 @@
                 "identifier": "ExperimentalFeatures",
                 "newPage": false,
                 "searchKey": "schema.ExperimentalFeatures",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1380,12 +1443,36 @@
           },
           {
             "node": {
+              "pathID": "/schema#ExtensionRepository",
+              "documentation": {
+                "identifier": "ExtensionRepository",
+                "newPage": false,
+                "searchKey": "schema.ExtensionRepository",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ExtensionRepository struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ExtensionRepository struct {\n\tType string `json:\"type,omitempty\"`\n\tUrl  string `json:\"url\"`\n}\n```\n\nExtensionRepository description: The location of the version control repository for this extension. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/schema#Extensions",
               "documentation": {
                 "identifier": "Extensions",
                 "newPage": false,
                 "searchKey": "schema.Extensions",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1405,7 +1492,9 @@
                 "identifier": "ExternalIdentity",
                 "newPage": false,
                 "searchKey": "schema.ExternalIdentity",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1425,7 +1514,9 @@
                 "identifier": "GitCommitAuthor",
                 "newPage": false,
                 "searchKey": "schema.GitCommitAuthor",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1445,7 +1536,9 @@
                 "identifier": "GitCommitDescription",
                 "newPage": false,
                 "searchKey": "schema.GitCommitDescription",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1465,7 +1558,9 @@
                 "identifier": "GitHubAuthProvider",
                 "newPage": false,
                 "searchKey": "schema.GitHubAuthProvider",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1485,7 +1580,9 @@
                 "identifier": "GitHubAuthorization",
                 "newPage": false,
                 "searchKey": "schema.GitHubAuthorization",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1505,7 +1602,9 @@
                 "identifier": "GitHubConnection",
                 "newPage": false,
                 "searchKey": "schema.GitHubConnection",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1523,7 +1622,9 @@
                       "identifier": "GitHubConnection.SetRepos",
                       "newPage": false,
                       "searchKey": "schema.GitHubConnection.SetRepos",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1546,7 +1647,9 @@
                 "identifier": "GitHubRateLimit",
                 "newPage": false,
                 "searchKey": "schema.GitHubRateLimit",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1566,7 +1669,9 @@
                 "identifier": "GitHubWebhook",
                 "newPage": false,
                 "searchKey": "schema.GitHubWebhook",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1586,7 +1691,9 @@
                 "identifier": "GitLabAuthProvider",
                 "newPage": false,
                 "searchKey": "schema.GitLabAuthProvider",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1606,7 +1713,9 @@
                 "identifier": "GitLabAuthorization",
                 "newPage": false,
                 "searchKey": "schema.GitLabAuthorization",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1626,7 +1735,9 @@
                 "identifier": "GitLabConnection",
                 "newPage": false,
                 "searchKey": "schema.GitLabConnection",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1644,7 +1755,9 @@
                       "identifier": "GitLabConnection.SetRepos",
                       "newPage": false,
                       "searchKey": "schema.GitLabConnection.SetRepos",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1667,7 +1780,9 @@
                 "identifier": "GitLabNameTransformation",
                 "newPage": false,
                 "searchKey": "schema.GitLabNameTransformation",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1687,7 +1802,9 @@
                 "identifier": "GitLabProject",
                 "newPage": false,
                 "searchKey": "schema.GitLabProject",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1707,7 +1824,9 @@
                 "identifier": "GitLabRateLimit",
                 "newPage": false,
                 "searchKey": "schema.GitLabRateLimit",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1727,7 +1846,9 @@
                 "identifier": "GitLabWebhook",
                 "newPage": false,
                 "searchKey": "schema.GitLabWebhook",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1747,7 +1868,9 @@
                 "identifier": "GitoliteConnection",
                 "newPage": false,
                 "searchKey": "schema.GitoliteConnection",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1767,7 +1890,9 @@
                 "identifier": "HTTPHeaderAuthProvider",
                 "newPage": false,
                 "searchKey": "schema.HTTPHeaderAuthProvider",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1787,7 +1912,9 @@
                 "identifier": "IdentityProvider",
                 "newPage": false,
                 "searchKey": "schema.IdentityProvider",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1805,7 +1932,9 @@
                       "identifier": "IdentityProvider.MarshalJSON",
                       "newPage": false,
                       "searchKey": "schema.IdentityProvider.MarshalJSON",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1825,7 +1954,9 @@
                       "identifier": "IdentityProvider.UnmarshalJSON",
                       "newPage": false,
                       "searchKey": "schema.IdentityProvider.UnmarshalJSON",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1848,7 +1979,9 @@
                 "identifier": "ImportChangesets",
                 "newPage": false,
                 "searchKey": "schema.ImportChangesets",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1868,7 +2001,9 @@
                 "identifier": "Insight",
                 "newPage": false,
                 "searchKey": "schema.Insight",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1888,7 +2023,9 @@
                 "identifier": "InsightSeries",
                 "newPage": false,
                 "searchKey": "schema.InsightSeries",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1908,7 +2045,9 @@
                 "identifier": "Log",
                 "newPage": false,
                 "searchKey": "schema.Log",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1923,12 +2062,58 @@
           },
           {
             "node": {
+              "pathID": "/schema#MenuItem",
+              "documentation": {
+                "identifier": "MenuItem",
+                "newPage": false,
+                "searchKey": "schema.MenuItem",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MenuItem struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MenuItem struct {\n\tAction string `json:\"action,omitempty\"`\n\tAlt    string `json:\"alt,omitempty\"`\n\tWhen   string `json:\"when,omitempty\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/schema#Menus",
+              "documentation": {
+                "identifier": "Menus",
+                "newPage": false,
+                "searchKey": "schema.Menus",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Menus struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Menus struct {\n\tCommandPalette []*MenuItem `json:\"commandPalette,omitempty\"`\n\tEditorTitle    []*MenuItem `json:\"editor/title,omitempty\"`\n\tHelp           []*MenuItem `json:\"help,omitempty\"`\n}\n```\n\nMenus description: Describes where to place actions in menus. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/schema#MountedEncryptionKey",
               "documentation": {
                 "identifier": "MountedEncryptionKey",
                 "newPage": false,
                 "searchKey": "schema.MountedEncryptionKey",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1948,7 +2133,9 @@
                 "identifier": "NoOpEncryptionKey",
                 "newPage": false,
                 "searchKey": "schema.NoOpEncryptionKey",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1968,7 +2155,9 @@
                 "identifier": "Notice",
                 "newPage": false,
                 "searchKey": "schema.Notice",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1988,7 +2177,9 @@
                 "identifier": "Notifier",
                 "newPage": false,
                 "searchKey": "schema.Notifier",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2006,7 +2197,9 @@
                       "identifier": "Notifier.MarshalJSON",
                       "newPage": false,
                       "searchKey": "schema.Notifier.MarshalJSON",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2026,7 +2219,9 @@
                       "identifier": "Notifier.UnmarshalJSON",
                       "newPage": false,
                       "searchKey": "schema.Notifier.UnmarshalJSON",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2049,7 +2244,9 @@
                 "identifier": "NotifierEmail",
                 "newPage": false,
                 "searchKey": "schema.NotifierEmail",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2069,7 +2266,9 @@
                 "identifier": "NotifierOpsGenie",
                 "newPage": false,
                 "searchKey": "schema.NotifierOpsGenie",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2089,7 +2288,9 @@
                 "identifier": "NotifierPagerduty",
                 "newPage": false,
                 "searchKey": "schema.NotifierPagerduty",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2109,7 +2310,9 @@
                 "identifier": "NotifierSlack",
                 "newPage": false,
                 "searchKey": "schema.NotifierSlack",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2129,7 +2332,9 @@
                 "identifier": "NotifierWebhook",
                 "newPage": false,
                 "searchKey": "schema.NotifierWebhook",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2149,7 +2354,9 @@
                 "identifier": "OAuthIdentity",
                 "newPage": false,
                 "searchKey": "schema.OAuthIdentity",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2169,7 +2376,9 @@
                 "identifier": "ObservabilityAlerts",
                 "newPage": false,
                 "searchKey": "schema.ObservabilityAlerts",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2189,7 +2398,9 @@
                 "identifier": "ObservabilityTracing",
                 "newPage": false,
                 "searchKey": "schema.ObservabilityTracing",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2209,7 +2420,9 @@
                 "identifier": "OnQuery",
                 "newPage": false,
                 "searchKey": "schema.OnQuery",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2229,7 +2442,9 @@
                 "identifier": "OnRepository",
                 "newPage": false,
                 "searchKey": "schema.OnRepository",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2249,7 +2464,9 @@
                 "identifier": "OpenIDConnectAuthProvider",
                 "newPage": false,
                 "searchKey": "schema.OpenIDConnectAuthProvider",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2269,7 +2486,9 @@
                 "identifier": "OtherExternalServiceConnection",
                 "newPage": false,
                 "searchKey": "schema.OtherExternalServiceConnection",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2289,7 +2508,9 @@
                 "identifier": "Overrides",
                 "newPage": false,
                 "searchKey": "schema.Overrides",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2309,7 +2530,9 @@
                 "identifier": "ParentSourcegraph",
                 "newPage": false,
                 "searchKey": "schema.ParentSourcegraph",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2329,7 +2552,9 @@
                 "identifier": "PerforceAuthorization",
                 "newPage": false,
                 "searchKey": "schema.PerforceAuthorization",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2349,7 +2574,9 @@
                 "identifier": "PerforceConnection",
                 "newPage": false,
                 "searchKey": "schema.PerforceConnection",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2369,7 +2596,9 @@
                 "identifier": "PerforceRateLimit",
                 "newPage": false,
                 "searchKey": "schema.PerforceRateLimit",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2389,7 +2618,9 @@
                 "identifier": "PermissionsUserMapping",
                 "newPage": false,
                 "searchKey": "schema.PermissionsUserMapping",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2409,7 +2640,9 @@
                 "identifier": "Phabricator",
                 "newPage": false,
                 "searchKey": "schema.Phabricator",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2429,7 +2662,9 @@
                 "identifier": "PhabricatorConnection",
                 "newPage": false,
                 "searchKey": "schema.PhabricatorConnection",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2449,7 +2684,9 @@
                 "identifier": "QuickLink",
                 "newPage": false,
                 "searchKey": "schema.QuickLink",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2469,7 +2706,9 @@
                 "identifier": "Ranking",
                 "newPage": false,
                 "searchKey": "schema.Ranking",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2489,7 +2728,9 @@
                 "identifier": "Repos",
                 "newPage": false,
                 "searchKey": "schema.Repos",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2509,7 +2750,9 @@
                 "identifier": "Responders",
                 "newPage": false,
                 "searchKey": "schema.Responders",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2529,7 +2772,9 @@
                 "identifier": "SAMLAuthProvider",
                 "newPage": false,
                 "searchKey": "schema.SAMLAuthProvider",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2549,7 +2794,9 @@
                 "identifier": "SMTPServerConfig",
                 "newPage": false,
                 "searchKey": "schema.SMTPServerConfig",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2569,7 +2816,9 @@
                 "identifier": "SearchLimits",
                 "newPage": false,
                 "searchKey": "schema.SearchLimits",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2589,7 +2838,9 @@
                 "identifier": "SearchSavedQueries",
                 "newPage": false,
                 "searchKey": "schema.SearchSavedQueries",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2609,7 +2860,9 @@
                 "identifier": "SearchScope",
                 "newPage": false,
                 "searchKey": "schema.SearchScope",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2629,7 +2882,9 @@
                 "identifier": "Sentry",
                 "newPage": false,
                 "searchKey": "schema.Sentry",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2649,7 +2904,9 @@
                 "identifier": "Settings",
                 "newPage": false,
                 "searchKey": "schema.Settings",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2669,7 +2926,9 @@
                 "identifier": "SettingsExperimentalFeatures",
                 "newPage": false,
                 "searchKey": "schema.SettingsExperimentalFeatures",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2689,7 +2948,9 @@
                 "identifier": "SiteConfiguration",
                 "newPage": false,
                 "searchKey": "schema.SiteConfiguration",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2704,12 +2965,36 @@
           },
           {
             "node": {
+              "pathID": "/schema#SourcegraphExtensionManifest",
+              "documentation": {
+                "identifier": "SourcegraphExtensionManifest",
+                "newPage": false,
+                "searchKey": "schema.SourcegraphExtensionManifest",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SourcegraphExtensionManifest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SourcegraphExtensionManifest struct {\n\tActivationEvents []string                `json:\"activationEvents\"`\n\tArgs             *map[string]interface{} `json:\"args,omitempty\"`\n\tContributes      *Contributions          `json:\"contributes,omitempty\"`\n\tDescription      string                  `json:\"description,omitempty\"`\n\tIcon             string                  `json:\"icon,omitempty\"`\n\tReadme           string                  `json:\"readme,omitempty\"`\n\tRepository       *ExtensionRepository    `json:\"repository,omitempty\"`\n\tWip              bool                    `json:\"wip,omitempty\"`\n\tUrl              string                  `json:\"url\"`\n}\n```\n\nSourcegraphExtensionManifest description: The Sourcegraph extension manifest describes the extension and the features it provides. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/schema#Step",
               "documentation": {
                 "identifier": "Step",
                 "newPage": false,
                 "searchKey": "schema.Step",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2729,7 +3014,9 @@
                 "identifier": "TlsExternal",
                 "newPage": false,
                 "searchKey": "schema.TlsExternal",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2749,7 +3036,9 @@
                 "identifier": "TransformChanges",
                 "newPage": false,
                 "searchKey": "schema.TransformChanges",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2769,7 +3058,9 @@
                 "identifier": "UpdateIntervalRule",
                 "newPage": false,
                 "searchKey": "schema.UpdateIntervalRule",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2789,7 +3080,9 @@
                 "identifier": "UsernameIdentity",
                 "newPage": false,
                 "searchKey": "schema.UsernameIdentity",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2809,7 +3102,9 @@
                 "identifier": "VersionContext",
                 "newPage": false,
                 "searchKey": "schema.VersionContext",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2829,7 +3124,9 @@
                 "identifier": "VersionContextRevision",
                 "newPage": false,
                 "searchKey": "schema.VersionContextRevision",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2849,7 +3146,9 @@
                 "identifier": "Webhooks",
                 "newPage": false,
                 "searchKey": "schema.Webhooks",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2869,7 +3168,9 @@
                 "identifier": "WorkspaceConfiguration",
                 "newPage": false,
                 "searchKey": "schema.WorkspaceConfiguration",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",

@@ -4,64 +4,86 @@
 
 * [Variables](#var)
     * [var debug](#debug)
-    * [var tests](#tests)
     * [var sink](#sink)
+    * [var tests](#tests)
 * [Functions](#func)
-    * [func array1(buf *bytes.Buffer, n int)](#array1)
     * [func BenchmarkFormat(b *testing.B)](#BenchmarkFormat)
     * [func ExampleNode()](#ExampleNode)
+    * [func array1(buf *bytes.Buffer, n int)](#array1)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="debug" href="#debug">var debug</a>
 
 ```
 searchKey: format_test.debug
-tags: [private]
+tags: [variable boolean private]
 ```
 
 ```Go
 var debug = flag.Bool("debug", false, "write .src files containing formatting input; for debugging")
 ```
 
-### <a id="tests" href="#tests">var tests</a>
-
-```
-searchKey: format_test.tests
-tags: [private]
-```
-
-```Go
-var tests = ...
-```
-
 ### <a id="sink" href="#sink">var sink</a>
 
 ```
 searchKey: format_test.sink
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
 var sink []byte
 ```
 
+### <a id="tests" href="#tests">var tests</a>
+
+```
+searchKey: format_test.tests
+tags: [variable array struct private]
+```
+
+```Go
+var tests = ...
+```
+
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
+```
+
+### <a id="BenchmarkFormat" href="#BenchmarkFormat">func BenchmarkFormat(b *testing.B)</a>
+
+```
+searchKey: format_test.BenchmarkFormat
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkFormat(b *testing.B)
+```
+
+### <a id="ExampleNode" href="#ExampleNode">func ExampleNode()</a>
+
+```
+searchKey: format_test.ExampleNode
+tags: [function private]
+```
+
+```Go
+func ExampleNode()
 ```
 
 ### <a id="array1" href="#array1">func array1(buf *bytes.Buffer, n int)</a>
 
 ```
 searchKey: format_test.array1
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -85,25 +107,3 @@ var _ = [...]byte{
 ...
 
 ```
-### <a id="BenchmarkFormat" href="#BenchmarkFormat">func BenchmarkFormat(b *testing.B)</a>
-
-```
-searchKey: format_test.BenchmarkFormat
-tags: [private]
-```
-
-```Go
-func BenchmarkFormat(b *testing.B)
-```
-
-### <a id="ExampleNode" href="#ExampleNode">func ExampleNode()</a>
-
-```
-searchKey: format_test.ExampleNode
-tags: [private]
-```
-
-```Go
-func ExampleNode()
-```
-

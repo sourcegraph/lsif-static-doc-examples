@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/debugserver",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,12 +41,38 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/debugserver#Services",
+              "documentation": {
+                "identifier": "Services",
+                "newPage": false,
+                "searchKey": "debugserver.Services",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Services"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Services []Service\n```\n\nServices is the list of registered services' debug addresses. Populated from SRC_PROF_MAP. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/debugserver#addr",
               "documentation": {
                 "identifier": "addr",
                 "newPage": false,
                 "searchKey": "debugserver.addr",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -55,26 +83,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar addr = env.Get(\"SRC_PROF_HTTP\", \":6060\", \"net/http/pprof http bind address.\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/debugserver#Services",
-              "documentation": {
-                "identifier": "Services",
-                "newPage": false,
-                "searchKey": "debugserver.Services",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var Services"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar Services []Service\n```\n\nServices is the list of registered services' debug addresses. Populated from SRC_PROF_MAP. \n\n"
               },
               "children": null
             }
@@ -90,6 +98,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -104,12 +113,36 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/debugserver#Dumper",
+              "documentation": {
+                "identifier": "Dumper",
+                "newPage": false,
+                "searchKey": "debugserver.Dumper",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Dumper interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Dumper interface {\n\t// DebugDump returns a snapshot of the current state.\n\tDebugDump() interface{}\n}\n```\n\nDumper is a service which can dump its state for debugging. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/debugserver#Endpoint",
               "documentation": {
                 "identifier": "Endpoint",
                 "newPage": false,
                 "searchKey": "debugserver.Endpoint",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -129,7 +162,9 @@
                 "identifier": "Service",
                 "newPage": false,
                 "searchKey": "debugserver.Service",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -138,26 +173,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\ntype Service struct {\n\t// Name of the service. Always the binary name. example: \"gitserver\"\n\tName string\n\n\t// Host is the host:port for the services SRC_PROF_HTTP. example:\n\t// \"127.0.0.1:6060\"\n\tHost string\n\n\t// DefaultPath is the path to the service we should link to.\n\tDefaultPath string\n}\n```\n\nService is a service's debug addr (host:port). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/debugserver#Dumper",
-              "documentation": {
-                "identifier": "Dumper",
-                "newPage": false,
-                "searchKey": "debugserver.Dumper",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Dumper interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Dumper interface {\n\t// DebugDump returns a snapshot of the current state.\n\tDebugDump() interface{}\n}\n```\n\nDumper is a service which can dump its state for debugging. \n\n"
               },
               "children": null
             }
@@ -173,6 +188,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -187,34 +203,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/debugserver#init.debug.go",
-              "documentation": {
-                "identifier": "init.debug.go",
-                "newPage": false,
-                "searchKey": "debugserver.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/debugserver#NewServerRoutine",
               "documentation": {
                 "identifier": "NewServerRoutine",
                 "newPage": false,
                 "searchKey": "debugserver.NewServerRoutine",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -235,6 +231,7 @@
                 "newPage": false,
                 "searchKey": "debugserver.expvarHandler",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -251,34 +248,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/debugserver#gcHandler",
-              "documentation": {
-                "identifier": "gcHandler",
-                "newPage": false,
-                "searchKey": "debugserver.gcHandler",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func gcHandler(w http.ResponseWriter, r *http.Request)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc gcHandler(w http.ResponseWriter, r *http.Request)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/debugserver#freeOSMemoryHandler",
               "documentation": {
                 "identifier": "freeOSMemoryHandler",
                 "newPage": false,
                 "searchKey": "debugserver.freeOSMemoryHandler",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -295,22 +271,23 @@
           },
           {
             "node": {
-              "pathID": "/internal/debugserver#registerMetadataGauge",
+              "pathID": "/internal/debugserver#gcHandler",
               "documentation": {
-                "identifier": "registerMetadataGauge",
+                "identifier": "gcHandler",
                 "newPage": false,
-                "searchKey": "debugserver.registerMetadataGauge",
+                "searchKey": "debugserver.gcHandler",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func registerMetadataGauge()"
+                "value": "func gcHandler(w http.ResponseWriter, r *http.Request)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc registerMetadataGauge()\n```\n\n"
+                "value": "```Go\nfunc gcHandler(w http.ResponseWriter, r *http.Request)\n```\n\n"
               },
               "children": null
             }
@@ -323,6 +300,7 @@
                 "newPage": false,
                 "searchKey": "debugserver.healthzHandler",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -339,12 +317,36 @@
           },
           {
             "node": {
+              "pathID": "/internal/debugserver#init.debug.go",
+              "documentation": {
+                "identifier": "init.debug.go",
+                "newPage": false,
+                "searchKey": "debugserver.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/debugserver#readyHandler",
               "documentation": {
                 "identifier": "readyHandler",
                 "newPage": false,
                 "searchKey": "debugserver.readyHandler",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -355,6 +357,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc readyHandler(ready <-chan struct{}) http.HandlerFunc\n```\n\nreadyHandler returns an http.HandlerFunc that responds to the /ready requests on the debugserver port. This will return a 200 OK once the given channel is closed, and a 503 Service Unavailable otherwise. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/debugserver#registerMetadataGauge",
+              "documentation": {
+                "identifier": "registerMetadataGauge",
+                "newPage": false,
+                "searchKey": "debugserver.registerMetadataGauge",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func registerMetadataGauge()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc registerMetadataGauge()\n```\n\n"
               },
               "children": null
             }

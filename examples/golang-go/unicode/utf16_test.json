@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "unicode/utf16_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,56 +41,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/unicode/utf16_test#encodeTests",
-              "documentation": {
-                "identifier": "encodeTests",
-                "newPage": false,
-                "searchKey": "utf16_test.encodeTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var encodeTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar encodeTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf16_test#decodeTests",
-              "documentation": {
-                "identifier": "decodeTests",
-                "newPage": false,
-                "searchKey": "utf16_test.decodeTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var decodeTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar decodeTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/unicode/utf16_test#decodeRuneTests",
               "documentation": {
                 "identifier": "decodeRuneTests",
                 "newPage": false,
                 "searchKey": "utf16_test.decodeRuneTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -105,12 +66,65 @@
           },
           {
             "node": {
+              "pathID": "/unicode/utf16_test#decodeTests",
+              "documentation": {
+                "identifier": "decodeTests",
+                "newPage": false,
+                "searchKey": "utf16_test.decodeTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var decodeTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar decodeTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf16_test#encodeTests",
+              "documentation": {
+                "identifier": "encodeTests",
+                "newPage": false,
+                "searchKey": "utf16_test.encodeTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var encodeTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar encodeTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/unicode/utf16_test#surrogateTests",
               "documentation": {
                 "identifier": "surrogateTests",
                 "newPage": false,
                 "searchKey": "utf16_test.surrogateTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -136,6 +150,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -150,34 +165,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/unicode/utf16_test#encodeTest",
-              "documentation": {
-                "identifier": "encodeTest",
-                "newPage": false,
-                "searchKey": "utf16_test.encodeTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type encodeTest struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype encodeTest struct {\n\tin  []rune\n\tout []uint16\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/unicode/utf16_test#decodeTest",
               "documentation": {
                 "identifier": "decodeTest",
                 "newPage": false,
                 "searchKey": "utf16_test.decodeTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -188,6 +182,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\ntype decodeTest struct {\n\tin  []uint16\n\tout []rune\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf16_test#encodeTest",
+              "documentation": {
+                "identifier": "encodeTest",
+                "newPage": false,
+                "searchKey": "utf16_test.encodeTest",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type encodeTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype encodeTest struct {\n\tin  []rune\n\tout []uint16\n}\n```\n\n"
               },
               "children": null
             }
@@ -203,6 +220,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -217,132 +235,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/unicode/utf16_test#TestConstants",
+              "pathID": "/unicode/utf16_test#BenchmarkDecodeRune",
               "documentation": {
-                "identifier": "TestConstants",
+                "identifier": "BenchmarkDecodeRune",
                 "newPage": false,
-                "searchKey": "utf16_test.TestConstants",
+                "searchKey": "utf16_test.BenchmarkDecodeRune",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestConstants(t *testing.T)"
+                "value": "func BenchmarkDecodeRune(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestConstants(t *testing.T)\n```\n\nValidate the constants redefined from unicode. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf16_test#TestEncode",
-              "documentation": {
-                "identifier": "TestEncode",
-                "newPage": false,
-                "searchKey": "utf16_test.TestEncode",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEncode(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEncode(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf16_test#TestEncodeRune",
-              "documentation": {
-                "identifier": "TestEncodeRune",
-                "newPage": false,
-                "searchKey": "utf16_test.TestEncodeRune",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEncodeRune(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEncodeRune(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf16_test#TestDecode",
-              "documentation": {
-                "identifier": "TestDecode",
-                "newPage": false,
-                "searchKey": "utf16_test.TestDecode",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDecode(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDecode(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf16_test#TestDecodeRune",
-              "documentation": {
-                "identifier": "TestDecodeRune",
-                "newPage": false,
-                "searchKey": "utf16_test.TestDecodeRune",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDecodeRune(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDecodeRune(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf16_test#TestIsSurrogate",
-              "documentation": {
-                "identifier": "TestIsSurrogate",
-                "newPage": false,
-                "searchKey": "utf16_test.TestIsSurrogate",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIsSurrogate(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIsSurrogate(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc BenchmarkDecodeRune(b *testing.B)\n```\n\n"
               },
               "children": null
             }
@@ -355,7 +265,9 @@
                 "newPage": false,
                 "searchKey": "utf16_test.BenchmarkDecodeValidASCII",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -377,7 +289,9 @@
                 "newPage": false,
                 "searchKey": "utf16_test.BenchmarkDecodeValidJapaneseChars",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -393,22 +307,24 @@
           },
           {
             "node": {
-              "pathID": "/unicode/utf16_test#BenchmarkDecodeRune",
+              "pathID": "/unicode/utf16_test#BenchmarkEncodeRune",
               "documentation": {
-                "identifier": "BenchmarkDecodeRune",
+                "identifier": "BenchmarkEncodeRune",
                 "newPage": false,
-                "searchKey": "utf16_test.BenchmarkDecodeRune",
+                "searchKey": "utf16_test.BenchmarkEncodeRune",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkDecodeRune(b *testing.B)"
+                "value": "func BenchmarkEncodeRune(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkDecodeRune(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc BenchmarkEncodeRune(b *testing.B)\n```\n\n"
               },
               "children": null
             }
@@ -421,7 +337,9 @@
                 "newPage": false,
                 "searchKey": "utf16_test.BenchmarkEncodeValidASCII",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -443,7 +361,9 @@
                 "newPage": false,
                 "searchKey": "utf16_test.BenchmarkEncodeValidJapaneseChars",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -459,22 +379,144 @@
           },
           {
             "node": {
-              "pathID": "/unicode/utf16_test#BenchmarkEncodeRune",
+              "pathID": "/unicode/utf16_test#TestConstants",
               "documentation": {
-                "identifier": "BenchmarkEncodeRune",
+                "identifier": "TestConstants",
                 "newPage": false,
-                "searchKey": "utf16_test.BenchmarkEncodeRune",
+                "searchKey": "utf16_test.TestConstants",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkEncodeRune(b *testing.B)"
+                "value": "func TestConstants(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkEncodeRune(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc TestConstants(t *testing.T)\n```\n\nValidate the constants redefined from unicode. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf16_test#TestDecode",
+              "documentation": {
+                "identifier": "TestDecode",
+                "newPage": false,
+                "searchKey": "utf16_test.TestDecode",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecode(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecode(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf16_test#TestDecodeRune",
+              "documentation": {
+                "identifier": "TestDecodeRune",
+                "newPage": false,
+                "searchKey": "utf16_test.TestDecodeRune",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecodeRune(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecodeRune(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf16_test#TestEncode",
+              "documentation": {
+                "identifier": "TestEncode",
+                "newPage": false,
+                "searchKey": "utf16_test.TestEncode",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncode(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncode(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf16_test#TestEncodeRune",
+              "documentation": {
+                "identifier": "TestEncodeRune",
+                "newPage": false,
+                "searchKey": "utf16_test.TestEncodeRune",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncodeRune(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncodeRune(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf16_test#TestIsSurrogate",
+              "documentation": {
+                "identifier": "TestIsSurrogate",
+                "newPage": false,
+                "searchKey": "utf16_test.TestIsSurrogate",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIsSurrogate(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIsSurrogate(t *testing.T)\n```\n\n"
               },
               "children": null
             }

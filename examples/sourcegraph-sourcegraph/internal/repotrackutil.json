@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/repotrackutil",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,9 @@
                 "newPage": false,
                 "searchKey": "repotrackutil.trackedRepo",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
@@ -67,6 +72,8 @@
                 "newPage": false,
                 "searchKey": "repotrackutil.trackedRepoRe",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -92,6 +99,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -111,7 +119,9 @@
                 "identifier": "GetTrackedRepo",
                 "newPage": false,
                 "searchKey": "repotrackutil.GetTrackedRepo",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -132,7 +142,9 @@
                 "newPage": false,
                 "searchKey": "repotrackutil.TestGetTrackedRepo",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {

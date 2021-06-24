@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/version",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "version.devVersion",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -90,6 +95,8 @@
                 "newPage": false,
                 "searchKey": "version.devTimestamp",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -106,34 +113,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/version#version",
-              "documentation": {
-                "identifier": "version",
-                "newPage": false,
-                "searchKey": "version.version",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var version"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar version = devVersion\n```\n\nversion is configured at build time via ldflags like this: -ldflags \"-X github.com/sourcegraph/sourcegraph/internal/version.version=1.2.3\" \n\nThe version may not be semver-compatible, e.g. `insiders` or `65769_2020-06-05_9bd91a3`. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/version#timestamp",
               "documentation": {
                 "identifier": "timestamp",
                 "newPage": false,
                 "searchKey": "version.timestamp",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -144,6 +131,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar timestamp = devTimestamp\n```\n\ntimestamp is the build timestamp configured at build time via ldflags like this: -ldflags \"-X github.com/sourcegraph/sourcegraph/internal/version.timestamp=$UNIX_SECONDS\" \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/version#version",
+              "documentation": {
+                "identifier": "version",
+                "newPage": false,
+                "searchKey": "version.version",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var version"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar version = devVersion\n```\n\nversion is configured at build time via ldflags like this: -ldflags \"-X github.com/sourcegraph/sourcegraph/internal/version.version=1.2.3\" \n\nThe version may not be semver-compatible, e.g. `insiders` or `65769_2020-06-05_9bd91a3`. \n\n"
               },
               "children": null
             }
@@ -159,6 +170,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -173,42 +185,22 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/version#init.version.go",
+              "pathID": "/internal/version#HowLongOutOfDate",
               "documentation": {
-                "identifier": "init.version.go",
+                "identifier": "HowLongOutOfDate",
                 "newPage": false,
-                "searchKey": "version.init",
+                "searchKey": "version.HowLongOutOfDate",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func init()"
+                "value": "func HowLongOutOfDate(now time.Time) (int, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/version#Version",
-              "documentation": {
-                "identifier": "Version",
-                "newPage": false,
-                "searchKey": "version.Version",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Version() string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Version() string\n```\n\nVersion returns the version string configured at build time. \n\n"
+                "value": "```Go\nfunc HowLongOutOfDate(now time.Time) (int, error)\n```\n\nHowLongOutOfDate returns a time in months since this build of Sourcegraph was created. It is based on a constant baked into the Go binary at build time. \n\n"
               },
               "children": null
             }
@@ -220,7 +212,9 @@
                 "identifier": "IsDev",
                 "newPage": false,
                 "searchKey": "version.IsDev",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -240,7 +234,9 @@
                 "identifier": "Mock",
                 "newPage": false,
                 "searchKey": "version.Mock",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -260,7 +256,9 @@
                 "identifier": "MockTimestamp",
                 "newPage": false,
                 "searchKey": "version.MockTimestamp",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -275,64 +273,24 @@
           },
           {
             "node": {
-              "pathID": "/internal/version#HowLongOutOfDate",
+              "pathID": "/internal/version#TestHowLongOutOfDate",
               "documentation": {
-                "identifier": "HowLongOutOfDate",
+                "identifier": "TestHowLongOutOfDate",
                 "newPage": false,
-                "searchKey": "version.HowLongOutOfDate",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func HowLongOutOfDate(now time.Time) (int, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc HowLongOutOfDate(now time.Time) (int, error)\n```\n\nHowLongOutOfDate returns a time in months since this build of Sourcegraph was created. It is based on a constant baked into the Go binary at build time. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/version#monthsFromDays",
-              "documentation": {
-                "identifier": "monthsFromDays",
-                "newPage": false,
-                "searchKey": "version.monthsFromDays",
+                "searchKey": "version.TestHowLongOutOfDate",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func monthsFromDays(days float64) int"
+                "value": "func TestHowLongOutOfDate(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc monthsFromDays(days float64) int\n```\n\nmonthsFromDays roughly determines the number of months given days \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/version#TestVersion",
-              "documentation": {
-                "identifier": "TestVersion",
-                "newPage": false,
-                "searchKey": "version.TestVersion",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestVersion(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestVersion(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestHowLongOutOfDate(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -345,7 +303,9 @@
                 "newPage": false,
                 "searchKey": "version.TestIsDev",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -361,13 +321,39 @@
           },
           {
             "node": {
+              "pathID": "/internal/version#TestVersion",
+              "documentation": {
+                "identifier": "TestVersion",
+                "newPage": false,
+                "searchKey": "version.TestVersion",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestVersion(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestVersion(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/version#Test_monthsFromDays",
               "documentation": {
                 "identifier": "Test_monthsFromDays",
                 "newPage": false,
                 "searchKey": "version.Test_monthsFromDays",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -383,22 +369,68 @@
           },
           {
             "node": {
-              "pathID": "/internal/version#TestHowLongOutOfDate",
+              "pathID": "/internal/version#Version",
               "documentation": {
-                "identifier": "TestHowLongOutOfDate",
+                "identifier": "Version",
                 "newPage": false,
-                "searchKey": "version.TestHowLongOutOfDate",
+                "searchKey": "version.Version",
                 "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Version() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Version() string\n```\n\nVersion returns the version string configured at build time. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/version#init.version.go",
+              "documentation": {
+                "identifier": "init.version.go",
+                "newPage": false,
+                "searchKey": "version.init",
+                "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestHowLongOutOfDate(t *testing.T)"
+                "value": "func init()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestHowLongOutOfDate(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/version#monthsFromDays",
+              "documentation": {
+                "identifier": "monthsFromDays",
+                "newPage": false,
+                "searchKey": "version.monthsFromDays",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func monthsFromDays(days float64) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc monthsFromDays(days float64) int\n```\n\nmonthsFromDays roughly determines the number of months given days \n\n"
               },
               "children": null
             }

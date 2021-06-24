@@ -9,33 +9,33 @@
 * [Types](#type)
     * [type Obj struct](#Obj)
     * [type T int](#T)
-        * [func (t *T) ptrmethod() []byte](#T.ptrmethod)
         * [func (t T) method() []byte](#T.method)
+        * [func (t *T) ptrmethod() []byte](#T.ptrmethod)
 * [Functions](#func)
-    * [func TestReadGCStats(t *testing.T)](#TestReadGCStats)
     * [func TestFreeOSMemory(t *testing.T)](#TestFreeOSMemory)
-    * [func TestSetGCPercent(t *testing.T)](#TestSetGCPercent)
-    * [func abs64(a int64) int64](#abs64)
-    * [func TestSetMaxThreadsOvf(t *testing.T)](#TestSetMaxThreadsOvf)
-    * [func TestWriteHeapDumpNonempty(t *testing.T)](#TestWriteHeapDumpNonempty)
-    * [func objfin(x *Obj)](#objfin)
-    * [func TestWriteHeapDumpFinalizers(t *testing.T)](#TestWriteHeapDumpFinalizers)
     * [func TestPanicOnFault(t *testing.T)](#TestPanicOnFault)
+    * [func TestReadGCStats(t *testing.T)](#TestReadGCStats)
+    * [func TestSetGCPercent(t *testing.T)](#TestSetGCPercent)
+    * [func TestSetMaxThreadsOvf(t *testing.T)](#TestSetMaxThreadsOvf)
     * [func TestStack(t *testing.T)](#TestStack)
+    * [func TestWriteHeapDumpFinalizers(t *testing.T)](#TestWriteHeapDumpFinalizers)
+    * [func TestWriteHeapDumpNonempty(t *testing.T)](#TestWriteHeapDumpNonempty)
+    * [func abs64(a int64) int64](#abs64)
     * [func check(t *testing.T, line, has string)](#check)
+    * [func objfin(x *Obj)](#objfin)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="big" href="#big">var big</a>
 
 ```
 searchKey: debug_test.big
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -46,7 +46,7 @@ var big = make([]byte, 1<<20)
 
 ```
 searchKey: debug_test.setGCPercentBallast
-tags: [private]
+tags: [variable interface private]
 ```
 
 ```Go
@@ -57,7 +57,7 @@ var setGCPercentBallast interface{}
 
 ```
 searchKey: debug_test.setGCPercentSink
-tags: [private]
+tags: [variable interface private]
 ```
 
 ```Go
@@ -67,14 +67,14 @@ var setGCPercentSink interface{}
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Obj" href="#Obj">type Obj struct</a>
 
 ```
 searchKey: debug_test.Obj
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -87,145 +87,101 @@ type Obj struct {
 
 ```
 searchKey: debug_test.T
-tags: [private]
+tags: [number private]
 ```
 
 ```Go
 type T int
 ```
 
-#### <a id="T.ptrmethod" href="#T.ptrmethod">func (t *T) ptrmethod() []byte</a>
-
-```
-searchKey: debug_test.T.ptrmethod
-tags: [private]
-```
-
-```Go
-func (t *T) ptrmethod() []byte
-```
-
 #### <a id="T.method" href="#T.method">func (t T) method() []byte</a>
 
 ```
 searchKey: debug_test.T.method
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (t T) method() []byte
 ```
 
-## <a id="func" href="#func">Functions</a>
+#### <a id="T.ptrmethod" href="#T.ptrmethod">func (t *T) ptrmethod() []byte</a>
 
 ```
-tags: [private]
-```
-
-### <a id="TestReadGCStats" href="#TestReadGCStats">func TestReadGCStats(t *testing.T)</a>
-
-```
-searchKey: debug_test.TestReadGCStats
-tags: [private]
+searchKey: debug_test.T.ptrmethod
+tags: [function private]
 ```
 
 ```Go
-func TestReadGCStats(t *testing.T)
+func (t *T) ptrmethod() []byte
+```
+
+## <a id="func" href="#func">Functions</a>
+
+```
+tags: [package private]
 ```
 
 ### <a id="TestFreeOSMemory" href="#TestFreeOSMemory">func TestFreeOSMemory(t *testing.T)</a>
 
 ```
 searchKey: debug_test.TestFreeOSMemory
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestFreeOSMemory(t *testing.T)
 ```
 
-### <a id="TestSetGCPercent" href="#TestSetGCPercent">func TestSetGCPercent(t *testing.T)</a>
-
-```
-searchKey: debug_test.TestSetGCPercent
-tags: [private]
-```
-
-```Go
-func TestSetGCPercent(t *testing.T)
-```
-
-### <a id="abs64" href="#abs64">func abs64(a int64) int64</a>
-
-```
-searchKey: debug_test.abs64
-tags: [private]
-```
-
-```Go
-func abs64(a int64) int64
-```
-
-### <a id="TestSetMaxThreadsOvf" href="#TestSetMaxThreadsOvf">func TestSetMaxThreadsOvf(t *testing.T)</a>
-
-```
-searchKey: debug_test.TestSetMaxThreadsOvf
-tags: [private]
-```
-
-```Go
-func TestSetMaxThreadsOvf(t *testing.T)
-```
-
-### <a id="TestWriteHeapDumpNonempty" href="#TestWriteHeapDumpNonempty">func TestWriteHeapDumpNonempty(t *testing.T)</a>
-
-```
-searchKey: debug_test.TestWriteHeapDumpNonempty
-tags: [private]
-```
-
-```Go
-func TestWriteHeapDumpNonempty(t *testing.T)
-```
-
-### <a id="objfin" href="#objfin">func objfin(x *Obj)</a>
-
-```
-searchKey: debug_test.objfin
-tags: [private]
-```
-
-```Go
-func objfin(x *Obj)
-```
-
-### <a id="TestWriteHeapDumpFinalizers" href="#TestWriteHeapDumpFinalizers">func TestWriteHeapDumpFinalizers(t *testing.T)</a>
-
-```
-searchKey: debug_test.TestWriteHeapDumpFinalizers
-tags: [private]
-```
-
-```Go
-func TestWriteHeapDumpFinalizers(t *testing.T)
-```
-
 ### <a id="TestPanicOnFault" href="#TestPanicOnFault">func TestPanicOnFault(t *testing.T)</a>
 
 ```
 searchKey: debug_test.TestPanicOnFault
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestPanicOnFault(t *testing.T)
 ```
 
+### <a id="TestReadGCStats" href="#TestReadGCStats">func TestReadGCStats(t *testing.T)</a>
+
+```
+searchKey: debug_test.TestReadGCStats
+tags: [method private test]
+```
+
+```Go
+func TestReadGCStats(t *testing.T)
+```
+
+### <a id="TestSetGCPercent" href="#TestSetGCPercent">func TestSetGCPercent(t *testing.T)</a>
+
+```
+searchKey: debug_test.TestSetGCPercent
+tags: [method private test]
+```
+
+```Go
+func TestSetGCPercent(t *testing.T)
+```
+
+### <a id="TestSetMaxThreadsOvf" href="#TestSetMaxThreadsOvf">func TestSetMaxThreadsOvf(t *testing.T)</a>
+
+```
+searchKey: debug_test.TestSetMaxThreadsOvf
+tags: [method private test]
+```
+
+```Go
+func TestSetMaxThreadsOvf(t *testing.T)
+```
+
 ### <a id="TestStack" href="#TestStack">func TestStack(t *testing.T)</a>
 
 ```
 searchKey: debug_test.TestStack
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -250,14 +206,58 @@ created by testing.RunTests
 	/Users/r/go/src/testing/testing.go:561 +0x86d
 
 ```
+### <a id="TestWriteHeapDumpFinalizers" href="#TestWriteHeapDumpFinalizers">func TestWriteHeapDumpFinalizers(t *testing.T)</a>
+
+```
+searchKey: debug_test.TestWriteHeapDumpFinalizers
+tags: [method private test]
+```
+
+```Go
+func TestWriteHeapDumpFinalizers(t *testing.T)
+```
+
+### <a id="TestWriteHeapDumpNonempty" href="#TestWriteHeapDumpNonempty">func TestWriteHeapDumpNonempty(t *testing.T)</a>
+
+```
+searchKey: debug_test.TestWriteHeapDumpNonempty
+tags: [method private test]
+```
+
+```Go
+func TestWriteHeapDumpNonempty(t *testing.T)
+```
+
+### <a id="abs64" href="#abs64">func abs64(a int64) int64</a>
+
+```
+searchKey: debug_test.abs64
+tags: [method private]
+```
+
+```Go
+func abs64(a int64) int64
+```
+
 ### <a id="check" href="#check">func check(t *testing.T, line, has string)</a>
 
 ```
 searchKey: debug_test.check
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func check(t *testing.T, line, has string)
+```
+
+### <a id="objfin" href="#objfin">func objfin(x *Obj)</a>
+
+```
+searchKey: debug_test.objfin
+tags: [method private]
+```
+
+```Go
+func objfin(x *Obj)
 ```
 

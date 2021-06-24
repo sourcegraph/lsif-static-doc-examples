@@ -8,106 +8,106 @@ Package httpapi contains the HTTP API.
   * [cmd/frontend/internal/httpapi/router](httpapi/router.md)
   * [cmd/frontend/internal/httpapi/webhookhandlers](httpapi/webhookhandlers.md)
 * [Variables](#var)
-    * [var traceGraphQLQueriesSample](#traceGraphQLQueriesSample)
+    * [var allowedFilenames](#allowedFilenames)
     * [var schemaDecoder](#schemaDecoder)
     * [var srcCliDownloadsURL](#srcCliDownloadsURL)
-    * [var allowedFilenames](#allowedFilenames)
+    * [var traceGraphQLQueriesSample](#traceGraphQLQueriesSample)
 * [Types](#type)
-    * [type graphQLQueryParams struct](#graphQLQueryParams)
-    * [type traceData struct](#traceData)
     * [type errorHandler struct](#errorHandler)
         * [func (h *errorHandler) Handle(w http.ResponseWriter, r *http.Request, status int, err error)](#errorHandler.Handle)
-    * [type reposListServer struct](#reposListServer)
-        * [func (h *reposListServer) serveIndex(w http.ResponseWriter, r *http.Request) error](#reposListServer.serveIndex)
     * [type gitServiceHandler struct](#gitServiceHandler)
-        * [func (s *gitServiceHandler) serveInfoRefs(w http.ResponseWriter, r *http.Request)](#gitServiceHandler.serveInfoRefs)
-        * [func (s *gitServiceHandler) serveGitUploadPack(w http.ResponseWriter, r *http.Request)](#gitServiceHandler.serveGitUploadPack)
         * [func (s *gitServiceHandler) redirectToGitServer(w http.ResponseWriter, r *http.Request, gitPath string)](#gitServiceHandler.redirectToGitServer)
+        * [func (s *gitServiceHandler) serveGitUploadPack(w http.ResponseWriter, r *http.Request)](#gitServiceHandler.serveGitUploadPack)
+        * [func (s *gitServiceHandler) serveInfoRefs(w http.ResponseWriter, r *http.Request)](#gitServiceHandler.serveInfoRefs)
+    * [type graphQLQueryParams struct](#graphQLQueryParams)
     * [type mockAddrForRepo struct{}](#mockAddrForRepo)
         * [func (mockAddrForRepo) AddrForRepo(name api.RepoName) string](#mockAddrForRepo.AddrForRepo)
     * [type mockRepos struct](#mockRepos)
-        * [func (r *mockRepos) ListIndexable(context.Context) ([]types.RepoName, error)](#mockRepos.ListIndexable)
         * [func (r *mockRepos) List(ctx context.Context, opt database.ReposListOptions) ([]*types.Repo, error)](#mockRepos.List)
+        * [func (r *mockRepos) ListIndexable(context.Context) ([]types.RepoName, error)](#mockRepos.ListIndexable)
+    * [type reposListServer struct](#reposListServer)
+        * [func (h *reposListServer) serveIndex(w http.ResponseWriter, r *http.Request) error](#reposListServer.serveIndex)
     * [type suffixIndexers bool](#suffixIndexers)
-        * [func (b suffixIndexers) ReposSubset(ctx context.Context, hostname string, indexed map[string]struct{}, repoNames []string) ([]string, error)](#suffixIndexers.ReposSubset)
         * [func (b suffixIndexers) Enabled() bool](#suffixIndexers.Enabled)
+        * [func (b suffixIndexers) ReposSubset(ctx context.Context, hostname string, indexed map[string]struct{}, repoNames []string) ([]string, error)](#suffixIndexers.ReposSubset)
+    * [type traceData struct](#traceData)
 * [Functions](#func)
     * [func AccessTokenAuthMiddleware(db dbutil.DB, next http.Handler) http.Handler](#AccessTokenAuthMiddleware)
-    * [func serveGraphQL(schema *graphql.Schema, rlw graphqlbackend.LimitWatcher, isInternal bool) func(w http.ResponseWriter, r *http.Request) (err error)](#serveGraphQL)
-    * [func traceGraphQL(data traceData)](#traceGraphQL)
-    * [func getUID(r *http.Request) (uid string, ip bool, anonymous bool)](#getUID)
-    * [func writeJSON(w http.ResponseWriter, v interface{}) error](#writeJSON)
     * [func NewHandler(db dbutil.DB, m *mux.Router, schema *graphql.Schema, githubWebhook webhooks.Registerer, gitlabWebhook, bitbucketServerWebhook http.Handler, newCodeIntelUploadHandler enterprise.NewCodeIntelUploadHandler, rateLimiter graphqlbackend.LimitWatcher) http.Handler](#NewHandler)
     * [func NewInternalHandler(m *mux.Router, db dbutil.DB, schema *graphql.Schema, newCodeIntelUploadHandler enterprise.NewCodeIntelUploadHandler, rateLimitWatcher graphqlbackend.LimitWatcher) http.Handler](#NewInternalHandler)
-    * [func init()](#init.httpapi.go)
-    * [func jsonMiddleware(errorHandler *errorHandler) func(func(http.ResponseWriter, *http.Request) error) http.Handler](#jsonMiddleware)
-    * [func serveReposGetByName(w http.ResponseWriter, r *http.Request) error](#serveReposGetByName)
-    * [func servePhabricatorRepoCreate(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error](#servePhabricatorRepoCreate)
-    * [func serveExternalServiceConfigs(w http.ResponseWriter, r *http.Request) error](#serveExternalServiceConfigs)
-    * [func serveExternalServicesList(w http.ResponseWriter, r *http.Request) error](#serveExternalServicesList)
-    * [func serveConfiguration(w http.ResponseWriter, r *http.Request) error](#serveConfiguration)
-    * [func repoRankFromConfig(siteConfig schema.SiteConfiguration, repoName string) float64](#repoRankFromConfig)
-    * [func serveSearchConfiguration(w http.ResponseWriter, r *http.Request) error](#serveSearchConfiguration)
-    * [func serveReposListEnabled(w http.ResponseWriter, r *http.Request) error](#serveReposListEnabled)
-    * [func serveSavedQueriesListAll(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error](#serveSavedQueriesListAll)
-    * [func serveSavedQueriesGetInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error](#serveSavedQueriesGetInfo)
-    * [func serveSavedQueriesSetInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error](#serveSavedQueriesSetInfo)
-    * [func serveSavedQueriesDeleteInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error](#serveSavedQueriesDeleteInfo)
-    * [func serveSettingsGetForSubject(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error](#serveSettingsGetForSubject)
-    * [func serveOrgsListUsers(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error](#serveOrgsListUsers)
-    * [func serveOrgsGetByName(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error](#serveOrgsGetByName)
-    * [func serveUsersGetByUsername(w http.ResponseWriter, r *http.Request) error](#serveUsersGetByUsername)
-    * [func serveUserEmailsGetEmail(w http.ResponseWriter, r *http.Request) error](#serveUserEmailsGetEmail)
-    * [func serveExternalURL(w http.ResponseWriter, r *http.Request) error](#serveExternalURL)
-    * [func serveCanSendEmail(w http.ResponseWriter, r *http.Request) error](#serveCanSendEmail)
-    * [func serveSendEmail(w http.ResponseWriter, r *http.Request) error](#serveSendEmail)
-    * [func serveGitResolveRevision(w http.ResponseWriter, r *http.Request) error](#serveGitResolveRevision)
-    * [func serveGitTar(w http.ResponseWriter, r *http.Request) error](#serveGitTar)
-    * [func serveGitExec(w http.ResponseWriter, r *http.Request) error](#serveGitExec)
-    * [func handlePing(w http.ResponseWriter, r *http.Request)](#handlePing)
-    * [func serveRepoRefresh(w http.ResponseWriter, r *http.Request) error](#serveRepoRefresh)
-    * [func badgeValue(r *http.Request) (int, error)](#badgeValue)
-    * [func badgeValueFmt(totalRefs int) string](#badgeValueFmt)
-    * [func serveRepoShield(w http.ResponseWriter, r *http.Request) error](#serveRepoShield)
-    * [func srcCliVersionServe(w http.ResponseWriter, r *http.Request) error](#srcCliVersionServe)
-    * [func srcCliDownloadServe(w http.ResponseWriter, r *http.Request) error](#srcCliDownloadServe)
-    * [func srcCliVersion() string](#srcCliVersion)
-    * [func isExpectedRelease(filename string) bool](#isExpectedRelease)
-    * [func telemetryHandler(db dbutil.DB) http.Handler](#telemetryHandler)
-    * [func init()](#init.api_test.go)
-    * [func newTest() *httptestutil.Client](#newTest)
     * [func TestAccessTokenAuthMiddleware(t *testing.T)](#TestAccessTokenAuthMiddleware)
-    * [func init()](#init.db_test.go)
     * [func TestGitServiceHandlers(t *testing.T)](#TestGitServiceHandlers)
-    * [func TestReposIndex(t *testing.T)](#TestReposIndex)
     * [func TestRepoRankFromConfig(t *testing.T)](#TestRepoRankFromConfig)
     * [func TestRepoRefresh(t *testing.T)](#TestRepoRefresh)
-    * [func TestRepoShieldFmt(t *testing.T)](#TestRepoShieldFmt)
     * [func TestRepoShield(t *testing.T)](#TestRepoShield)
+    * [func TestRepoShieldFmt(t *testing.T)](#TestRepoShieldFmt)
+    * [func TestReposIndex(t *testing.T)](#TestReposIndex)
+    * [func badgeValue(r *http.Request) (int, error)](#badgeValue)
+    * [func badgeValueFmt(totalRefs int) string](#badgeValueFmt)
+    * [func getUID(r *http.Request) (uid string, ip bool, anonymous bool)](#getUID)
+    * [func handlePing(w http.ResponseWriter, r *http.Request)](#handlePing)
+    * [func init()](#init.api_test.go)
+    * [func init()](#init.db_test.go)
+    * [func init()](#init.httpapi.go)
+    * [func isExpectedRelease(filename string) bool](#isExpectedRelease)
+    * [func jsonMiddleware(errorHandler *errorHandler) func(func(http.ResponseWriter, *http.Request) error) http.Handler](#jsonMiddleware)
+    * [func newTest() *httptestutil.Client](#newTest)
+    * [func repoRankFromConfig(siteConfig schema.SiteConfiguration, repoName string) float64](#repoRankFromConfig)
+    * [func serveCanSendEmail(w http.ResponseWriter, r *http.Request) error](#serveCanSendEmail)
+    * [func serveConfiguration(w http.ResponseWriter, r *http.Request) error](#serveConfiguration)
+    * [func serveExternalServiceConfigs(w http.ResponseWriter, r *http.Request) error](#serveExternalServiceConfigs)
+    * [func serveExternalServicesList(w http.ResponseWriter, r *http.Request) error](#serveExternalServicesList)
+    * [func serveExternalURL(w http.ResponseWriter, r *http.Request) error](#serveExternalURL)
+    * [func serveGitExec(w http.ResponseWriter, r *http.Request) error](#serveGitExec)
+    * [func serveGitResolveRevision(w http.ResponseWriter, r *http.Request) error](#serveGitResolveRevision)
+    * [func serveGitTar(w http.ResponseWriter, r *http.Request) error](#serveGitTar)
+    * [func serveGraphQL(schema *graphql.Schema, rlw graphqlbackend.LimitWatcher, isInternal bool) func(w http.ResponseWriter, r *http.Request) (err error)](#serveGraphQL)
+    * [func serveOrgsGetByName(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error](#serveOrgsGetByName)
+    * [func serveOrgsListUsers(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error](#serveOrgsListUsers)
+    * [func servePhabricatorRepoCreate(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error](#servePhabricatorRepoCreate)
+    * [func serveRepoRefresh(w http.ResponseWriter, r *http.Request) error](#serveRepoRefresh)
+    * [func serveRepoShield(w http.ResponseWriter, r *http.Request) error](#serveRepoShield)
+    * [func serveReposGetByName(w http.ResponseWriter, r *http.Request) error](#serveReposGetByName)
+    * [func serveReposListEnabled(w http.ResponseWriter, r *http.Request) error](#serveReposListEnabled)
+    * [func serveSavedQueriesDeleteInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error](#serveSavedQueriesDeleteInfo)
+    * [func serveSavedQueriesGetInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error](#serveSavedQueriesGetInfo)
+    * [func serveSavedQueriesListAll(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error](#serveSavedQueriesListAll)
+    * [func serveSavedQueriesSetInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error](#serveSavedQueriesSetInfo)
+    * [func serveSearchConfiguration(w http.ResponseWriter, r *http.Request) error](#serveSearchConfiguration)
+    * [func serveSendEmail(w http.ResponseWriter, r *http.Request) error](#serveSendEmail)
+    * [func serveSettingsGetForSubject(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error](#serveSettingsGetForSubject)
+    * [func serveUserEmailsGetEmail(w http.ResponseWriter, r *http.Request) error](#serveUserEmailsGetEmail)
+    * [func serveUsersGetByUsername(w http.ResponseWriter, r *http.Request) error](#serveUsersGetByUsername)
+    * [func srcCliDownloadServe(w http.ResponseWriter, r *http.Request) error](#srcCliDownloadServe)
+    * [func srcCliVersion() string](#srcCliVersion)
+    * [func srcCliVersionServe(w http.ResponseWriter, r *http.Request) error](#srcCliVersionServe)
+    * [func telemetryHandler(db dbutil.DB) http.Handler](#telemetryHandler)
+    * [func traceGraphQL(data traceData)](#traceGraphQL)
+    * [func writeJSON(w http.ResponseWriter, v interface{}) error](#writeJSON)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
-### <a id="traceGraphQLQueriesSample" href="#traceGraphQLQueriesSample">var traceGraphQLQueriesSample</a>
+### <a id="allowedFilenames" href="#allowedFilenames">var allowedFilenames</a>
 
 ```
-searchKey: httpapi.traceGraphQLQueriesSample
-tags: [private]
+searchKey: httpapi.allowedFilenames
+tags: [variable array string private]
 ```
 
 ```Go
-var traceGraphQLQueriesSample = ...
+var allowedFilenames = ...
 ```
 
 ### <a id="schemaDecoder" href="#schemaDecoder">var schemaDecoder</a>
 
 ```
 searchKey: httpapi.schemaDecoder
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -118,77 +118,35 @@ var schemaDecoder = schema.NewDecoder()
 
 ```
 searchKey: httpapi.srcCliDownloadsURL
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
 var srcCliDownloadsURL = "https://github.com/sourcegraph/src-cli/releases/download"
 ```
 
-### <a id="allowedFilenames" href="#allowedFilenames">var allowedFilenames</a>
+### <a id="traceGraphQLQueriesSample" href="#traceGraphQLQueriesSample">var traceGraphQLQueriesSample</a>
 
 ```
-searchKey: httpapi.allowedFilenames
-tags: [private]
+searchKey: httpapi.traceGraphQLQueriesSample
+tags: [variable number private]
 ```
 
 ```Go
-var allowedFilenames = ...
+var traceGraphQLQueriesSample = ...
 ```
 
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
-```
-
-### <a id="graphQLQueryParams" href="#graphQLQueryParams">type graphQLQueryParams struct</a>
-
-```
-searchKey: httpapi.graphQLQueryParams
-tags: [private]
-```
-
-```Go
-type graphQLQueryParams struct {
-	Query         string                 `json:"query"`
-	OperationName string                 `json:"operationName"`
-	Variables     map[string]interface{} `json:"variables"`
-}
-```
-
-### <a id="traceData" href="#traceData">type traceData struct</a>
-
-```
-searchKey: httpapi.traceData
-tags: [private]
-```
-
-```Go
-type traceData struct {
-	queryParams   graphQLQueryParams
-	execStart     time.Time
-	uid           string
-	anonymous     bool
-	isInternal    bool
-	requestName   string
-	requestSource string
-	queryErrors   []*gqlerrors.QueryError
-
-	cost      *graphqlbackend.QueryCost
-	costError error
-
-	limited     bool
-	limitError  error
-	limitResult throttled.RateLimitResult
-}
+tags: [package private]
 ```
 
 ### <a id="errorHandler" href="#errorHandler">type errorHandler struct</a>
 
 ```
 searchKey: httpapi.errorHandler
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -201,18 +159,141 @@ type errorHandler struct {
 
 ```
 searchKey: httpapi.errorHandler.Handle
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (h *errorHandler) Handle(w http.ResponseWriter, r *http.Request, status int, err error)
 ```
 
+### <a id="gitServiceHandler" href="#gitServiceHandler">type gitServiceHandler struct</a>
+
+```
+searchKey: httpapi.gitServiceHandler
+tags: [struct private]
+```
+
+```Go
+type gitServiceHandler struct {
+	Gitserver interface {
+		AddrForRepo(api.RepoName) string
+	}
+}
+```
+
+gitServiceHandler are handlers which redirect git clone requests to the gitserver for the repo. 
+
+#### <a id="gitServiceHandler.redirectToGitServer" href="#gitServiceHandler.redirectToGitServer">func (s *gitServiceHandler) redirectToGitServer(w http.ResponseWriter, r *http.Request, gitPath string)</a>
+
+```
+searchKey: httpapi.gitServiceHandler.redirectToGitServer
+tags: [method private]
+```
+
+```Go
+func (s *gitServiceHandler) redirectToGitServer(w http.ResponseWriter, r *http.Request, gitPath string)
+```
+
+#### <a id="gitServiceHandler.serveGitUploadPack" href="#gitServiceHandler.serveGitUploadPack">func (s *gitServiceHandler) serveGitUploadPack(w http.ResponseWriter, r *http.Request)</a>
+
+```
+searchKey: httpapi.gitServiceHandler.serveGitUploadPack
+tags: [method private]
+```
+
+```Go
+func (s *gitServiceHandler) serveGitUploadPack(w http.ResponseWriter, r *http.Request)
+```
+
+#### <a id="gitServiceHandler.serveInfoRefs" href="#gitServiceHandler.serveInfoRefs">func (s *gitServiceHandler) serveInfoRefs(w http.ResponseWriter, r *http.Request)</a>
+
+```
+searchKey: httpapi.gitServiceHandler.serveInfoRefs
+tags: [method private]
+```
+
+```Go
+func (s *gitServiceHandler) serveInfoRefs(w http.ResponseWriter, r *http.Request)
+```
+
+### <a id="graphQLQueryParams" href="#graphQLQueryParams">type graphQLQueryParams struct</a>
+
+```
+searchKey: httpapi.graphQLQueryParams
+tags: [struct private]
+```
+
+```Go
+type graphQLQueryParams struct {
+	Query         string                 `json:"query"`
+	OperationName string                 `json:"operationName"`
+	Variables     map[string]interface{} `json:"variables"`
+}
+```
+
+### <a id="mockAddrForRepo" href="#mockAddrForRepo">type mockAddrForRepo struct{}</a>
+
+```
+searchKey: httpapi.mockAddrForRepo
+tags: [struct private]
+```
+
+```Go
+type mockAddrForRepo struct{}
+```
+
+#### <a id="mockAddrForRepo.AddrForRepo" href="#mockAddrForRepo.AddrForRepo">func (mockAddrForRepo) AddrForRepo(name api.RepoName) string</a>
+
+```
+searchKey: httpapi.mockAddrForRepo.AddrForRepo
+tags: [method private]
+```
+
+```Go
+func (mockAddrForRepo) AddrForRepo(name api.RepoName) string
+```
+
+### <a id="mockRepos" href="#mockRepos">type mockRepos struct</a>
+
+```
+searchKey: httpapi.mockRepos
+tags: [struct private]
+```
+
+```Go
+type mockRepos struct {
+	defaultRepos []string
+	repos        []string
+}
+```
+
+#### <a id="mockRepos.List" href="#mockRepos.List">func (r *mockRepos) List(ctx context.Context, opt database.ReposListOptions) ([]*types.Repo, error)</a>
+
+```
+searchKey: httpapi.mockRepos.List
+tags: [method private]
+```
+
+```Go
+func (r *mockRepos) List(ctx context.Context, opt database.ReposListOptions) ([]*types.Repo, error)
+```
+
+#### <a id="mockRepos.ListIndexable" href="#mockRepos.ListIndexable">func (r *mockRepos) ListIndexable(context.Context) ([]types.RepoName, error)</a>
+
+```
+searchKey: httpapi.mockRepos.ListIndexable
+tags: [method private]
+```
+
+```Go
+func (r *mockRepos) ListIndexable(context.Context) ([]types.RepoName, error)
+```
+
 ### <a id="reposListServer" href="#reposListServer">type reposListServer struct</a>
 
 ```
 searchKey: httpapi.reposListServer
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -248,7 +329,7 @@ type reposListServer struct {
 
 ```
 searchKey: httpapi.reposListServer.serveIndex
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -257,119 +338,11 @@ func (h *reposListServer) serveIndex(w http.ResponseWriter, r *http.Request) err
 
 serveIndex is used by zoekt to get the list of repositories for it to index. 
 
-### <a id="gitServiceHandler" href="#gitServiceHandler">type gitServiceHandler struct</a>
-
-```
-searchKey: httpapi.gitServiceHandler
-tags: [private]
-```
-
-```Go
-type gitServiceHandler struct {
-	Gitserver interface {
-		AddrForRepo(api.RepoName) string
-	}
-}
-```
-
-gitServiceHandler are handlers which redirect git clone requests to the gitserver for the repo. 
-
-#### <a id="gitServiceHandler.serveInfoRefs" href="#gitServiceHandler.serveInfoRefs">func (s *gitServiceHandler) serveInfoRefs(w http.ResponseWriter, r *http.Request)</a>
-
-```
-searchKey: httpapi.gitServiceHandler.serveInfoRefs
-tags: [private]
-```
-
-```Go
-func (s *gitServiceHandler) serveInfoRefs(w http.ResponseWriter, r *http.Request)
-```
-
-#### <a id="gitServiceHandler.serveGitUploadPack" href="#gitServiceHandler.serveGitUploadPack">func (s *gitServiceHandler) serveGitUploadPack(w http.ResponseWriter, r *http.Request)</a>
-
-```
-searchKey: httpapi.gitServiceHandler.serveGitUploadPack
-tags: [private]
-```
-
-```Go
-func (s *gitServiceHandler) serveGitUploadPack(w http.ResponseWriter, r *http.Request)
-```
-
-#### <a id="gitServiceHandler.redirectToGitServer" href="#gitServiceHandler.redirectToGitServer">func (s *gitServiceHandler) redirectToGitServer(w http.ResponseWriter, r *http.Request, gitPath string)</a>
-
-```
-searchKey: httpapi.gitServiceHandler.redirectToGitServer
-tags: [private]
-```
-
-```Go
-func (s *gitServiceHandler) redirectToGitServer(w http.ResponseWriter, r *http.Request, gitPath string)
-```
-
-### <a id="mockAddrForRepo" href="#mockAddrForRepo">type mockAddrForRepo struct{}</a>
-
-```
-searchKey: httpapi.mockAddrForRepo
-tags: [private]
-```
-
-```Go
-type mockAddrForRepo struct{}
-```
-
-#### <a id="mockAddrForRepo.AddrForRepo" href="#mockAddrForRepo.AddrForRepo">func (mockAddrForRepo) AddrForRepo(name api.RepoName) string</a>
-
-```
-searchKey: httpapi.mockAddrForRepo.AddrForRepo
-tags: [private]
-```
-
-```Go
-func (mockAddrForRepo) AddrForRepo(name api.RepoName) string
-```
-
-### <a id="mockRepos" href="#mockRepos">type mockRepos struct</a>
-
-```
-searchKey: httpapi.mockRepos
-tags: [private]
-```
-
-```Go
-type mockRepos struct {
-	defaultRepos []string
-	repos        []string
-}
-```
-
-#### <a id="mockRepos.ListIndexable" href="#mockRepos.ListIndexable">func (r *mockRepos) ListIndexable(context.Context) ([]types.RepoName, error)</a>
-
-```
-searchKey: httpapi.mockRepos.ListIndexable
-tags: [private]
-```
-
-```Go
-func (r *mockRepos) ListIndexable(context.Context) ([]types.RepoName, error)
-```
-
-#### <a id="mockRepos.List" href="#mockRepos.List">func (r *mockRepos) List(ctx context.Context, opt database.ReposListOptions) ([]*types.Repo, error)</a>
-
-```
-searchKey: httpapi.mockRepos.List
-tags: [private]
-```
-
-```Go
-func (r *mockRepos) List(ctx context.Context, opt database.ReposListOptions) ([]*types.Repo, error)
-```
-
 ### <a id="suffixIndexers" href="#suffixIndexers">type suffixIndexers bool</a>
 
 ```
 searchKey: httpapi.suffixIndexers
-tags: [private]
+tags: [boolean private]
 ```
 
 ```Go
@@ -378,38 +351,66 @@ type suffixIndexers bool
 
 suffixIndexers mocks Indexers. ReposSubset will return all repoNames with the suffix of hostname. 
 
-#### <a id="suffixIndexers.ReposSubset" href="#suffixIndexers.ReposSubset">func (b suffixIndexers) ReposSubset(ctx context.Context, hostname string, indexed map[string]struct{}, repoNames []string) ([]string, error)</a>
-
-```
-searchKey: httpapi.suffixIndexers.ReposSubset
-tags: [private]
-```
-
-```Go
-func (b suffixIndexers) ReposSubset(ctx context.Context, hostname string, indexed map[string]struct{}, repoNames []string) ([]string, error)
-```
-
 #### <a id="suffixIndexers.Enabled" href="#suffixIndexers.Enabled">func (b suffixIndexers) Enabled() bool</a>
 
 ```
 searchKey: httpapi.suffixIndexers.Enabled
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (b suffixIndexers) Enabled() bool
 ```
 
+#### <a id="suffixIndexers.ReposSubset" href="#suffixIndexers.ReposSubset">func (b suffixIndexers) ReposSubset(ctx context.Context, hostname string, indexed map[string]struct{}, repoNames []string) ([]string, error)</a>
+
+```
+searchKey: httpapi.suffixIndexers.ReposSubset
+tags: [method private]
+```
+
+```Go
+func (b suffixIndexers) ReposSubset(ctx context.Context, hostname string, indexed map[string]struct{}, repoNames []string) ([]string, error)
+```
+
+### <a id="traceData" href="#traceData">type traceData struct</a>
+
+```
+searchKey: httpapi.traceData
+tags: [struct private]
+```
+
+```Go
+type traceData struct {
+	queryParams   graphQLQueryParams
+	execStart     time.Time
+	uid           string
+	anonymous     bool
+	isInternal    bool
+	requestName   string
+	requestSource string
+	queryErrors   []*gqlerrors.QueryError
+
+	cost      *graphqlbackend.QueryCost
+	costError error
+
+	limited     bool
+	limitError  error
+	limitResult throttled.RateLimitResult
+}
+```
+
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="AccessTokenAuthMiddleware" href="#AccessTokenAuthMiddleware">func AccessTokenAuthMiddleware(db dbutil.DB, next http.Handler) http.Handler</a>
 
 ```
 searchKey: httpapi.AccessTokenAuthMiddleware
+tags: [method]
 ```
 
 ```Go
@@ -418,56 +419,11 @@ func AccessTokenAuthMiddleware(db dbutil.DB, next http.Handler) http.Handler
 
 AccessTokenAuthMiddleware authenticates the user based on the token query parameter or the "Authorization" header. 
 
-### <a id="serveGraphQL" href="#serveGraphQL">func serveGraphQL(schema *graphql.Schema, rlw graphqlbackend.LimitWatcher, isInternal bool) func(w http.ResponseWriter, r *http.Request) (err error)</a>
-
-```
-searchKey: httpapi.serveGraphQL
-tags: [private]
-```
-
-```Go
-func serveGraphQL(schema *graphql.Schema, rlw graphqlbackend.LimitWatcher, isInternal bool) func(w http.ResponseWriter, r *http.Request) (err error)
-```
-
-### <a id="traceGraphQL" href="#traceGraphQL">func traceGraphQL(data traceData)</a>
-
-```
-searchKey: httpapi.traceGraphQL
-tags: [private]
-```
-
-```Go
-func traceGraphQL(data traceData)
-```
-
-### <a id="getUID" href="#getUID">func getUID(r *http.Request) (uid string, ip bool, anonymous bool)</a>
-
-```
-searchKey: httpapi.getUID
-tags: [private]
-```
-
-```Go
-func getUID(r *http.Request) (uid string, ip bool, anonymous bool)
-```
-
-### <a id="writeJSON" href="#writeJSON">func writeJSON(w http.ResponseWriter, v interface{}) error</a>
-
-```
-searchKey: httpapi.writeJSON
-tags: [private]
-```
-
-```Go
-func writeJSON(w http.ResponseWriter, v interface{}) error
-```
-
-writeJSON writes a JSON Content-Type header and a JSON-encoded object to the http.ResponseWriter. 
-
 ### <a id="NewHandler" href="#NewHandler">func NewHandler(db dbutil.DB, m *mux.Router, schema *graphql.Schema, githubWebhook webhooks.Registerer, gitlabWebhook, bitbucketServerWebhook http.Handler, newCodeIntelUploadHandler enterprise.NewCodeIntelUploadHandler, rateLimiter graphqlbackend.LimitWatcher) http.Handler</a>
 
 ```
 searchKey: httpapi.NewHandler
+tags: [method]
 ```
 
 ```Go
@@ -482,6 +438,7 @@ NewHandler returns a new API handler that uses the provided API router, which mu
 
 ```
 searchKey: httpapi.NewInternalHandler
+tags: [method]
 ```
 
 ```Go
@@ -492,316 +449,88 @@ NewInternalHandler returns a new API handler for internal endpoints that uses th
 
 🚨 SECURITY: This handler should not be served on a publicly exposed port. 🚨 This handler is not guaranteed to provide the same authorization checks as public API handlers. 
 
-### <a id="init.httpapi.go" href="#init.httpapi.go">func init()</a>
+### <a id="TestAccessTokenAuthMiddleware" href="#TestAccessTokenAuthMiddleware">func TestAccessTokenAuthMiddleware(t *testing.T)</a>
 
 ```
-searchKey: httpapi.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
-### <a id="jsonMiddleware" href="#jsonMiddleware">func jsonMiddleware(errorHandler *errorHandler) func(func(http.ResponseWriter, *http.Request) error) http.Handler</a>
-
-```
-searchKey: httpapi.jsonMiddleware
-tags: [private]
+searchKey: httpapi.TestAccessTokenAuthMiddleware
+tags: [method private test]
 ```
 
 ```Go
-func jsonMiddleware(errorHandler *errorHandler) func(func(http.ResponseWriter, *http.Request) error) http.Handler
+func TestAccessTokenAuthMiddleware(t *testing.T)
 ```
 
-### <a id="serveReposGetByName" href="#serveReposGetByName">func serveReposGetByName(w http.ResponseWriter, r *http.Request) error</a>
+### <a id="TestGitServiceHandlers" href="#TestGitServiceHandlers">func TestGitServiceHandlers(t *testing.T)</a>
 
 ```
-searchKey: httpapi.serveReposGetByName
-tags: [private]
-```
-
-```Go
-func serveReposGetByName(w http.ResponseWriter, r *http.Request) error
-```
-
-### <a id="servePhabricatorRepoCreate" href="#servePhabricatorRepoCreate">func servePhabricatorRepoCreate(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error</a>
-
-```
-searchKey: httpapi.servePhabricatorRepoCreate
-tags: [private]
+searchKey: httpapi.TestGitServiceHandlers
+tags: [method private test]
 ```
 
 ```Go
-func servePhabricatorRepoCreate(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error
+func TestGitServiceHandlers(t *testing.T)
 ```
 
-### <a id="serveExternalServiceConfigs" href="#serveExternalServiceConfigs">func serveExternalServiceConfigs(w http.ResponseWriter, r *http.Request) error</a>
+### <a id="TestRepoRankFromConfig" href="#TestRepoRankFromConfig">func TestRepoRankFromConfig(t *testing.T)</a>
 
 ```
-searchKey: httpapi.serveExternalServiceConfigs
-tags: [private]
-```
-
-```Go
-func serveExternalServiceConfigs(w http.ResponseWriter, r *http.Request) error
-```
-
-serveExternalServiceConfigs serves a JSON response that is an array of all external service configs that match the requested kind. 
-
-### <a id="serveExternalServicesList" href="#serveExternalServicesList">func serveExternalServicesList(w http.ResponseWriter, r *http.Request) error</a>
-
-```
-searchKey: httpapi.serveExternalServicesList
-tags: [private]
+searchKey: httpapi.TestRepoRankFromConfig
+tags: [method private test]
 ```
 
 ```Go
-func serveExternalServicesList(w http.ResponseWriter, r *http.Request) error
+func TestRepoRankFromConfig(t *testing.T)
 ```
 
-serveExternalServicesList serves a JSON response that is an array of all external services of the given kind 
-
-### <a id="serveConfiguration" href="#serveConfiguration">func serveConfiguration(w http.ResponseWriter, r *http.Request) error</a>
+### <a id="TestRepoRefresh" href="#TestRepoRefresh">func TestRepoRefresh(t *testing.T)</a>
 
 ```
-searchKey: httpapi.serveConfiguration
-tags: [private]
-```
-
-```Go
-func serveConfiguration(w http.ResponseWriter, r *http.Request) error
-```
-
-### <a id="repoRankFromConfig" href="#repoRankFromConfig">func repoRankFromConfig(siteConfig schema.SiteConfiguration, repoName string) float64</a>
-
-```
-searchKey: httpapi.repoRankFromConfig
-tags: [private]
+searchKey: httpapi.TestRepoRefresh
+tags: [method private test]
 ```
 
 ```Go
-func repoRankFromConfig(siteConfig schema.SiteConfiguration, repoName string) float64
+func TestRepoRefresh(t *testing.T)
 ```
 
-### <a id="serveSearchConfiguration" href="#serveSearchConfiguration">func serveSearchConfiguration(w http.ResponseWriter, r *http.Request) error</a>
+### <a id="TestRepoShield" href="#TestRepoShield">func TestRepoShield(t *testing.T)</a>
 
 ```
-searchKey: httpapi.serveSearchConfiguration
-tags: [private]
-```
-
-```Go
-func serveSearchConfiguration(w http.ResponseWriter, r *http.Request) error
-```
-
-serveSearchConfiguration is _only_ used by the zoekt index server. Zoekt does not depend on frontend and therefore does not have access to `conf.Watch`. Additionally, it only cares about certain search specific settings so this search specific endpoint is used rather than serving the entire site settings from /.internal/configuration. 
-
-This endpoint also supports batch requests to avoid managing concurrency in zoekt. On vertically scaled instances we have observed zoekt requesting this endpoint concurrently leading to socket starvation. 
-
-### <a id="serveReposListEnabled" href="#serveReposListEnabled">func serveReposListEnabled(w http.ResponseWriter, r *http.Request) error</a>
-
-```
-searchKey: httpapi.serveReposListEnabled
-tags: [private]
+searchKey: httpapi.TestRepoShield
+tags: [method private test]
 ```
 
 ```Go
-func serveReposListEnabled(w http.ResponseWriter, r *http.Request) error
+func TestRepoShield(t *testing.T)
 ```
 
-### <a id="serveSavedQueriesListAll" href="#serveSavedQueriesListAll">func serveSavedQueriesListAll(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error</a>
+### <a id="TestRepoShieldFmt" href="#TestRepoShieldFmt">func TestRepoShieldFmt(t *testing.T)</a>
 
 ```
-searchKey: httpapi.serveSavedQueriesListAll
-tags: [private]
-```
-
-```Go
-func serveSavedQueriesListAll(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error
-```
-
-### <a id="serveSavedQueriesGetInfo" href="#serveSavedQueriesGetInfo">func serveSavedQueriesGetInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error</a>
-
-```
-searchKey: httpapi.serveSavedQueriesGetInfo
-tags: [private]
+searchKey: httpapi.TestRepoShieldFmt
+tags: [method private test]
 ```
 
 ```Go
-func serveSavedQueriesGetInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error
+func TestRepoShieldFmt(t *testing.T)
 ```
 
-### <a id="serveSavedQueriesSetInfo" href="#serveSavedQueriesSetInfo">func serveSavedQueriesSetInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error</a>
+### <a id="TestReposIndex" href="#TestReposIndex">func TestReposIndex(t *testing.T)</a>
 
 ```
-searchKey: httpapi.serveSavedQueriesSetInfo
-tags: [private]
-```
-
-```Go
-func serveSavedQueriesSetInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error
-```
-
-### <a id="serveSavedQueriesDeleteInfo" href="#serveSavedQueriesDeleteInfo">func serveSavedQueriesDeleteInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error</a>
-
-```
-searchKey: httpapi.serveSavedQueriesDeleteInfo
-tags: [private]
+searchKey: httpapi.TestReposIndex
+tags: [method private test]
 ```
 
 ```Go
-func serveSavedQueriesDeleteInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error
-```
-
-### <a id="serveSettingsGetForSubject" href="#serveSettingsGetForSubject">func serveSettingsGetForSubject(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error</a>
-
-```
-searchKey: httpapi.serveSettingsGetForSubject
-tags: [private]
-```
-
-```Go
-func serveSettingsGetForSubject(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error
-```
-
-### <a id="serveOrgsListUsers" href="#serveOrgsListUsers">func serveOrgsListUsers(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error</a>
-
-```
-searchKey: httpapi.serveOrgsListUsers
-tags: [private]
-```
-
-```Go
-func serveOrgsListUsers(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error
-```
-
-### <a id="serveOrgsGetByName" href="#serveOrgsGetByName">func serveOrgsGetByName(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error</a>
-
-```
-searchKey: httpapi.serveOrgsGetByName
-tags: [private]
-```
-
-```Go
-func serveOrgsGetByName(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error
-```
-
-### <a id="serveUsersGetByUsername" href="#serveUsersGetByUsername">func serveUsersGetByUsername(w http.ResponseWriter, r *http.Request) error</a>
-
-```
-searchKey: httpapi.serveUsersGetByUsername
-tags: [private]
-```
-
-```Go
-func serveUsersGetByUsername(w http.ResponseWriter, r *http.Request) error
-```
-
-### <a id="serveUserEmailsGetEmail" href="#serveUserEmailsGetEmail">func serveUserEmailsGetEmail(w http.ResponseWriter, r *http.Request) error</a>
-
-```
-searchKey: httpapi.serveUserEmailsGetEmail
-tags: [private]
-```
-
-```Go
-func serveUserEmailsGetEmail(w http.ResponseWriter, r *http.Request) error
-```
-
-### <a id="serveExternalURL" href="#serveExternalURL">func serveExternalURL(w http.ResponseWriter, r *http.Request) error</a>
-
-```
-searchKey: httpapi.serveExternalURL
-tags: [private]
-```
-
-```Go
-func serveExternalURL(w http.ResponseWriter, r *http.Request) error
-```
-
-### <a id="serveCanSendEmail" href="#serveCanSendEmail">func serveCanSendEmail(w http.ResponseWriter, r *http.Request) error</a>
-
-```
-searchKey: httpapi.serveCanSendEmail
-tags: [private]
-```
-
-```Go
-func serveCanSendEmail(w http.ResponseWriter, r *http.Request) error
-```
-
-### <a id="serveSendEmail" href="#serveSendEmail">func serveSendEmail(w http.ResponseWriter, r *http.Request) error</a>
-
-```
-searchKey: httpapi.serveSendEmail
-tags: [private]
-```
-
-```Go
-func serveSendEmail(w http.ResponseWriter, r *http.Request) error
-```
-
-### <a id="serveGitResolveRevision" href="#serveGitResolveRevision">func serveGitResolveRevision(w http.ResponseWriter, r *http.Request) error</a>
-
-```
-searchKey: httpapi.serveGitResolveRevision
-tags: [private]
-```
-
-```Go
-func serveGitResolveRevision(w http.ResponseWriter, r *http.Request) error
-```
-
-### <a id="serveGitTar" href="#serveGitTar">func serveGitTar(w http.ResponseWriter, r *http.Request) error</a>
-
-```
-searchKey: httpapi.serveGitTar
-tags: [private]
-```
-
-```Go
-func serveGitTar(w http.ResponseWriter, r *http.Request) error
-```
-
-### <a id="serveGitExec" href="#serveGitExec">func serveGitExec(w http.ResponseWriter, r *http.Request) error</a>
-
-```
-searchKey: httpapi.serveGitExec
-tags: [private]
-```
-
-```Go
-func serveGitExec(w http.ResponseWriter, r *http.Request) error
-```
-
-### <a id="handlePing" href="#handlePing">func handlePing(w http.ResponseWriter, r *http.Request)</a>
-
-```
-searchKey: httpapi.handlePing
-tags: [private]
-```
-
-```Go
-func handlePing(w http.ResponseWriter, r *http.Request)
-```
-
-### <a id="serveRepoRefresh" href="#serveRepoRefresh">func serveRepoRefresh(w http.ResponseWriter, r *http.Request) error</a>
-
-```
-searchKey: httpapi.serveRepoRefresh
-tags: [private]
-```
-
-```Go
-func serveRepoRefresh(w http.ResponseWriter, r *http.Request) error
+func TestReposIndex(t *testing.T)
 ```
 
 ### <a id="badgeValue" href="#badgeValue">func badgeValue(r *http.Request) (int, error)</a>
 
 ```
 searchKey: httpapi.badgeValue
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -814,7 +543,7 @@ NOTE: Keep in sync with services/backend/httpapi/repo_shield.go
 
 ```
 searchKey: httpapi.badgeValueFmt
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -823,33 +552,393 @@ func badgeValueFmt(totalRefs int) string
 
 NOTE: Keep in sync with services/backend/httpapi/repo_shield.go 
 
+### <a id="getUID" href="#getUID">func getUID(r *http.Request) (uid string, ip bool, anonymous bool)</a>
+
+```
+searchKey: httpapi.getUID
+tags: [method private]
+```
+
+```Go
+func getUID(r *http.Request) (uid string, ip bool, anonymous bool)
+```
+
+### <a id="handlePing" href="#handlePing">func handlePing(w http.ResponseWriter, r *http.Request)</a>
+
+```
+searchKey: httpapi.handlePing
+tags: [method private]
+```
+
+```Go
+func handlePing(w http.ResponseWriter, r *http.Request)
+```
+
+### <a id="init.api_test.go" href="#init.api_test.go">func init()</a>
+
+```
+searchKey: httpapi.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="init.db_test.go" href="#init.db_test.go">func init()</a>
+
+```
+searchKey: httpapi.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="init.httpapi.go" href="#init.httpapi.go">func init()</a>
+
+```
+searchKey: httpapi.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="isExpectedRelease" href="#isExpectedRelease">func isExpectedRelease(filename string) bool</a>
+
+```
+searchKey: httpapi.isExpectedRelease
+tags: [method private]
+```
+
+```Go
+func isExpectedRelease(filename string) bool
+```
+
+### <a id="jsonMiddleware" href="#jsonMiddleware">func jsonMiddleware(errorHandler *errorHandler) func(func(http.ResponseWriter, *http.Request) error) http.Handler</a>
+
+```
+searchKey: httpapi.jsonMiddleware
+tags: [method private]
+```
+
+```Go
+func jsonMiddleware(errorHandler *errorHandler) func(func(http.ResponseWriter, *http.Request) error) http.Handler
+```
+
+### <a id="newTest" href="#newTest">func newTest() *httptestutil.Client</a>
+
+```
+searchKey: httpapi.newTest
+tags: [function private]
+```
+
+```Go
+func newTest() *httptestutil.Client
+```
+
+### <a id="repoRankFromConfig" href="#repoRankFromConfig">func repoRankFromConfig(siteConfig schema.SiteConfiguration, repoName string) float64</a>
+
+```
+searchKey: httpapi.repoRankFromConfig
+tags: [method private]
+```
+
+```Go
+func repoRankFromConfig(siteConfig schema.SiteConfiguration, repoName string) float64
+```
+
+### <a id="serveCanSendEmail" href="#serveCanSendEmail">func serveCanSendEmail(w http.ResponseWriter, r *http.Request) error</a>
+
+```
+searchKey: httpapi.serveCanSendEmail
+tags: [method private]
+```
+
+```Go
+func serveCanSendEmail(w http.ResponseWriter, r *http.Request) error
+```
+
+### <a id="serveConfiguration" href="#serveConfiguration">func serveConfiguration(w http.ResponseWriter, r *http.Request) error</a>
+
+```
+searchKey: httpapi.serveConfiguration
+tags: [method private]
+```
+
+```Go
+func serveConfiguration(w http.ResponseWriter, r *http.Request) error
+```
+
+### <a id="serveExternalServiceConfigs" href="#serveExternalServiceConfigs">func serveExternalServiceConfigs(w http.ResponseWriter, r *http.Request) error</a>
+
+```
+searchKey: httpapi.serveExternalServiceConfigs
+tags: [method private]
+```
+
+```Go
+func serveExternalServiceConfigs(w http.ResponseWriter, r *http.Request) error
+```
+
+serveExternalServiceConfigs serves a JSON response that is an array of all external service configs that match the requested kind. 
+
+### <a id="serveExternalServicesList" href="#serveExternalServicesList">func serveExternalServicesList(w http.ResponseWriter, r *http.Request) error</a>
+
+```
+searchKey: httpapi.serveExternalServicesList
+tags: [method private]
+```
+
+```Go
+func serveExternalServicesList(w http.ResponseWriter, r *http.Request) error
+```
+
+serveExternalServicesList serves a JSON response that is an array of all external services of the given kind 
+
+### <a id="serveExternalURL" href="#serveExternalURL">func serveExternalURL(w http.ResponseWriter, r *http.Request) error</a>
+
+```
+searchKey: httpapi.serveExternalURL
+tags: [method private]
+```
+
+```Go
+func serveExternalURL(w http.ResponseWriter, r *http.Request) error
+```
+
+### <a id="serveGitExec" href="#serveGitExec">func serveGitExec(w http.ResponseWriter, r *http.Request) error</a>
+
+```
+searchKey: httpapi.serveGitExec
+tags: [method private]
+```
+
+```Go
+func serveGitExec(w http.ResponseWriter, r *http.Request) error
+```
+
+### <a id="serveGitResolveRevision" href="#serveGitResolveRevision">func serveGitResolveRevision(w http.ResponseWriter, r *http.Request) error</a>
+
+```
+searchKey: httpapi.serveGitResolveRevision
+tags: [method private]
+```
+
+```Go
+func serveGitResolveRevision(w http.ResponseWriter, r *http.Request) error
+```
+
+### <a id="serveGitTar" href="#serveGitTar">func serveGitTar(w http.ResponseWriter, r *http.Request) error</a>
+
+```
+searchKey: httpapi.serveGitTar
+tags: [method private]
+```
+
+```Go
+func serveGitTar(w http.ResponseWriter, r *http.Request) error
+```
+
+### <a id="serveGraphQL" href="#serveGraphQL">func serveGraphQL(schema *graphql.Schema, rlw graphqlbackend.LimitWatcher, isInternal bool) func(w http.ResponseWriter, r *http.Request) (err error)</a>
+
+```
+searchKey: httpapi.serveGraphQL
+tags: [method private]
+```
+
+```Go
+func serveGraphQL(schema *graphql.Schema, rlw graphqlbackend.LimitWatcher, isInternal bool) func(w http.ResponseWriter, r *http.Request) (err error)
+```
+
+### <a id="serveOrgsGetByName" href="#serveOrgsGetByName">func serveOrgsGetByName(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error</a>
+
+```
+searchKey: httpapi.serveOrgsGetByName
+tags: [method private]
+```
+
+```Go
+func serveOrgsGetByName(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error
+```
+
+### <a id="serveOrgsListUsers" href="#serveOrgsListUsers">func serveOrgsListUsers(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error</a>
+
+```
+searchKey: httpapi.serveOrgsListUsers
+tags: [method private]
+```
+
+```Go
+func serveOrgsListUsers(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error
+```
+
+### <a id="servePhabricatorRepoCreate" href="#servePhabricatorRepoCreate">func servePhabricatorRepoCreate(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error</a>
+
+```
+searchKey: httpapi.servePhabricatorRepoCreate
+tags: [method private]
+```
+
+```Go
+func servePhabricatorRepoCreate(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error
+```
+
+### <a id="serveRepoRefresh" href="#serveRepoRefresh">func serveRepoRefresh(w http.ResponseWriter, r *http.Request) error</a>
+
+```
+searchKey: httpapi.serveRepoRefresh
+tags: [method private]
+```
+
+```Go
+func serveRepoRefresh(w http.ResponseWriter, r *http.Request) error
+```
+
 ### <a id="serveRepoShield" href="#serveRepoShield">func serveRepoShield(w http.ResponseWriter, r *http.Request) error</a>
 
 ```
 searchKey: httpapi.serveRepoShield
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func serveRepoShield(w http.ResponseWriter, r *http.Request) error
 ```
 
-### <a id="srcCliVersionServe" href="#srcCliVersionServe">func srcCliVersionServe(w http.ResponseWriter, r *http.Request) error</a>
+### <a id="serveReposGetByName" href="#serveReposGetByName">func serveReposGetByName(w http.ResponseWriter, r *http.Request) error</a>
 
 ```
-searchKey: httpapi.srcCliVersionServe
-tags: [private]
+searchKey: httpapi.serveReposGetByName
+tags: [method private]
 ```
 
 ```Go
-func srcCliVersionServe(w http.ResponseWriter, r *http.Request) error
+func serveReposGetByName(w http.ResponseWriter, r *http.Request) error
+```
+
+### <a id="serveReposListEnabled" href="#serveReposListEnabled">func serveReposListEnabled(w http.ResponseWriter, r *http.Request) error</a>
+
+```
+searchKey: httpapi.serveReposListEnabled
+tags: [method private]
+```
+
+```Go
+func serveReposListEnabled(w http.ResponseWriter, r *http.Request) error
+```
+
+### <a id="serveSavedQueriesDeleteInfo" href="#serveSavedQueriesDeleteInfo">func serveSavedQueriesDeleteInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error</a>
+
+```
+searchKey: httpapi.serveSavedQueriesDeleteInfo
+tags: [method private]
+```
+
+```Go
+func serveSavedQueriesDeleteInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error
+```
+
+### <a id="serveSavedQueriesGetInfo" href="#serveSavedQueriesGetInfo">func serveSavedQueriesGetInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error</a>
+
+```
+searchKey: httpapi.serveSavedQueriesGetInfo
+tags: [method private]
+```
+
+```Go
+func serveSavedQueriesGetInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error
+```
+
+### <a id="serveSavedQueriesListAll" href="#serveSavedQueriesListAll">func serveSavedQueriesListAll(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error</a>
+
+```
+searchKey: httpapi.serveSavedQueriesListAll
+tags: [method private]
+```
+
+```Go
+func serveSavedQueriesListAll(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error
+```
+
+### <a id="serveSavedQueriesSetInfo" href="#serveSavedQueriesSetInfo">func serveSavedQueriesSetInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error</a>
+
+```
+searchKey: httpapi.serveSavedQueriesSetInfo
+tags: [method private]
+```
+
+```Go
+func serveSavedQueriesSetInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error
+```
+
+### <a id="serveSearchConfiguration" href="#serveSearchConfiguration">func serveSearchConfiguration(w http.ResponseWriter, r *http.Request) error</a>
+
+```
+searchKey: httpapi.serveSearchConfiguration
+tags: [method private]
+```
+
+```Go
+func serveSearchConfiguration(w http.ResponseWriter, r *http.Request) error
+```
+
+serveSearchConfiguration is _only_ used by the zoekt index server. Zoekt does not depend on frontend and therefore does not have access to `conf.Watch`. Additionally, it only cares about certain search specific settings so this search specific endpoint is used rather than serving the entire site settings from /.internal/configuration. 
+
+This endpoint also supports batch requests to avoid managing concurrency in zoekt. On vertically scaled instances we have observed zoekt requesting this endpoint concurrently leading to socket starvation. 
+
+### <a id="serveSendEmail" href="#serveSendEmail">func serveSendEmail(w http.ResponseWriter, r *http.Request) error</a>
+
+```
+searchKey: httpapi.serveSendEmail
+tags: [method private]
+```
+
+```Go
+func serveSendEmail(w http.ResponseWriter, r *http.Request) error
+```
+
+### <a id="serveSettingsGetForSubject" href="#serveSettingsGetForSubject">func serveSettingsGetForSubject(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error</a>
+
+```
+searchKey: httpapi.serveSettingsGetForSubject
+tags: [method private]
+```
+
+```Go
+func serveSettingsGetForSubject(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error
+```
+
+### <a id="serveUserEmailsGetEmail" href="#serveUserEmailsGetEmail">func serveUserEmailsGetEmail(w http.ResponseWriter, r *http.Request) error</a>
+
+```
+searchKey: httpapi.serveUserEmailsGetEmail
+tags: [method private]
+```
+
+```Go
+func serveUserEmailsGetEmail(w http.ResponseWriter, r *http.Request) error
+```
+
+### <a id="serveUsersGetByUsername" href="#serveUsersGetByUsername">func serveUsersGetByUsername(w http.ResponseWriter, r *http.Request) error</a>
+
+```
+searchKey: httpapi.serveUsersGetByUsername
+tags: [method private]
+```
+
+```Go
+func serveUsersGetByUsername(w http.ResponseWriter, r *http.Request) error
 ```
 
 ### <a id="srcCliDownloadServe" href="#srcCliDownloadServe">func srcCliDownloadServe(w http.ResponseWriter, r *http.Request) error</a>
 
 ```
 searchKey: httpapi.srcCliDownloadServe
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -860,142 +949,56 @@ func srcCliDownloadServe(w http.ResponseWriter, r *http.Request) error
 
 ```
 searchKey: httpapi.srcCliVersion
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func srcCliVersion() string
 ```
 
-### <a id="isExpectedRelease" href="#isExpectedRelease">func isExpectedRelease(filename string) bool</a>
+### <a id="srcCliVersionServe" href="#srcCliVersionServe">func srcCliVersionServe(w http.ResponseWriter, r *http.Request) error</a>
 
 ```
-searchKey: httpapi.isExpectedRelease
-tags: [private]
+searchKey: httpapi.srcCliVersionServe
+tags: [method private]
 ```
 
 ```Go
-func isExpectedRelease(filename string) bool
+func srcCliVersionServe(w http.ResponseWriter, r *http.Request) error
 ```
 
 ### <a id="telemetryHandler" href="#telemetryHandler">func telemetryHandler(db dbutil.DB) http.Handler</a>
 
 ```
 searchKey: httpapi.telemetryHandler
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func telemetryHandler(db dbutil.DB) http.Handler
 ```
 
-### <a id="init.api_test.go" href="#init.api_test.go">func init()</a>
+### <a id="traceGraphQL" href="#traceGraphQL">func traceGraphQL(data traceData)</a>
 
 ```
-searchKey: httpapi.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
-### <a id="newTest" href="#newTest">func newTest() *httptestutil.Client</a>
-
-```
-searchKey: httpapi.newTest
-tags: [private]
+searchKey: httpapi.traceGraphQL
+tags: [method private]
 ```
 
 ```Go
-func newTest() *httptestutil.Client
+func traceGraphQL(data traceData)
 ```
 
-### <a id="TestAccessTokenAuthMiddleware" href="#TestAccessTokenAuthMiddleware">func TestAccessTokenAuthMiddleware(t *testing.T)</a>
+### <a id="writeJSON" href="#writeJSON">func writeJSON(w http.ResponseWriter, v interface{}) error</a>
 
 ```
-searchKey: httpapi.TestAccessTokenAuthMiddleware
-tags: [private]
-```
-
-```Go
-func TestAccessTokenAuthMiddleware(t *testing.T)
-```
-
-### <a id="init.db_test.go" href="#init.db_test.go">func init()</a>
-
-```
-searchKey: httpapi.init
-tags: [private]
+searchKey: httpapi.writeJSON
+tags: [method private]
 ```
 
 ```Go
-func init()
+func writeJSON(w http.ResponseWriter, v interface{}) error
 ```
 
-### <a id="TestGitServiceHandlers" href="#TestGitServiceHandlers">func TestGitServiceHandlers(t *testing.T)</a>
-
-```
-searchKey: httpapi.TestGitServiceHandlers
-tags: [private]
-```
-
-```Go
-func TestGitServiceHandlers(t *testing.T)
-```
-
-### <a id="TestReposIndex" href="#TestReposIndex">func TestReposIndex(t *testing.T)</a>
-
-```
-searchKey: httpapi.TestReposIndex
-tags: [private]
-```
-
-```Go
-func TestReposIndex(t *testing.T)
-```
-
-### <a id="TestRepoRankFromConfig" href="#TestRepoRankFromConfig">func TestRepoRankFromConfig(t *testing.T)</a>
-
-```
-searchKey: httpapi.TestRepoRankFromConfig
-tags: [private]
-```
-
-```Go
-func TestRepoRankFromConfig(t *testing.T)
-```
-
-### <a id="TestRepoRefresh" href="#TestRepoRefresh">func TestRepoRefresh(t *testing.T)</a>
-
-```
-searchKey: httpapi.TestRepoRefresh
-tags: [private]
-```
-
-```Go
-func TestRepoRefresh(t *testing.T)
-```
-
-### <a id="TestRepoShieldFmt" href="#TestRepoShieldFmt">func TestRepoShieldFmt(t *testing.T)</a>
-
-```
-searchKey: httpapi.TestRepoShieldFmt
-tags: [private]
-```
-
-```Go
-func TestRepoShieldFmt(t *testing.T)
-```
-
-### <a id="TestRepoShield" href="#TestRepoShield">func TestRepoShield(t *testing.T)</a>
-
-```
-searchKey: httpapi.TestRepoShield
-tags: [private]
-```
-
-```Go
-func TestRepoShield(t *testing.T)
-```
+writeJSON writes a JSON Content-Type header and a JSON-encoded object to the http.ResponseWriter. 
 

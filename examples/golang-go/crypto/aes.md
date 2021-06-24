@@ -7,143 +7,149 @@ The AES operations in this package are not implemented using constant-time algor
 ## Index
 
 * [Constants](#const)
+    * [const BlockSize](#BlockSize)
     * [const gcmBlockSize](#gcmBlockSize)
-    * [const gcmTagSize](#gcmTagSize)
     * [const gcmMinimumTagSize](#gcmMinimumTagSize)
     * [const gcmStandardNonceSize](#gcmStandardNonceSize)
-    * [const BlockSize](#BlockSize)
+    * [const gcmTagSize](#gcmTagSize)
     * [const poly](#poly)
 * [Variables](#var)
+    * [var encryptTests](#encryptTests)
     * [var errOpen](#errOpen)
-    * [var supportsAES](#supportsAES)
-    * [var supportsGFMUL](#supportsGFMUL)
+    * [var keyTests](#keyTests)
     * [var powx](#powx)
     * [var sbox0](#sbox0)
     * [var sbox1](#sbox1)
-    * [var te0](#te0)
-    * [var te1](#te1)
-    * [var te2](#te2)
-    * [var te3](#te3)
+    * [var supportsAES](#supportsAES)
+    * [var supportsGFMUL](#supportsGFMUL)
     * [var td0](#td0)
     * [var td1](#td1)
     * [var td2](#td2)
     * [var td3](#td3)
-    * [var keyTests](#keyTests)
-    * [var encryptTests](#encryptTests)
+    * [var te0](#te0)
+    * [var te1](#te1)
+    * [var te2](#te2)
+    * [var te3](#te3)
 * [Types](#type)
-    * [type aesCipherGCM struct](#aesCipherGCM)
-        * [func (c *aesCipherGCM) NewGCM(nonceSize, tagSize int) (cipher.AEAD, error)](#aesCipherGCM.NewGCM)
-    * [type gcmAsm struct](#gcmAsm)
-        * [func (g *gcmAsm) NonceSize() int](#gcmAsm.NonceSize)
-        * [func (g *gcmAsm) Overhead() int](#gcmAsm.Overhead)
-        * [func (g *gcmAsm) Seal(dst, nonce, plaintext, data []byte) []byte](#gcmAsm.Seal)
-        * [func (g *gcmAsm) Open(dst, nonce, ciphertext, data []byte) ([]byte, error)](#gcmAsm.Open)
-    * [type aesCipher struct](#aesCipher)
-        * [func (c *aesCipher) BlockSize() int](#aesCipher.BlockSize)
-        * [func (c *aesCipher) Encrypt(dst, src []byte)](#aesCipher.Encrypt)
-        * [func (c *aesCipher) Decrypt(dst, src []byte)](#aesCipher.Decrypt)
+    * [type CryptTest struct](#CryptTest)
     * [type KeySizeError int](#KeySizeError)
         * [func (k KeySizeError) Error() string](#KeySizeError.Error)
+    * [type KeyTest struct](#KeyTest)
+    * [type aesCipher struct](#aesCipher)
+        * [func (c *aesCipher) BlockSize() int](#aesCipher.BlockSize)
+        * [func (c *aesCipher) Decrypt(dst, src []byte)](#aesCipher.Decrypt)
+        * [func (c *aesCipher) Encrypt(dst, src []byte)](#aesCipher.Encrypt)
     * [type aesCipherAsm struct](#aesCipherAsm)
         * [func (c *aesCipherAsm) BlockSize() int](#aesCipherAsm.BlockSize)
-        * [func (c *aesCipherAsm) Encrypt(dst, src []byte)](#aesCipherAsm.Encrypt)
         * [func (c *aesCipherAsm) Decrypt(dst, src []byte)](#aesCipherAsm.Decrypt)
-    * [type gcmAble interface](#gcmAble)
-    * [type cbcEncAble interface](#cbcEncAble)
+        * [func (c *aesCipherAsm) Encrypt(dst, src []byte)](#aesCipherAsm.Encrypt)
+    * [type aesCipherGCM struct](#aesCipherGCM)
+        * [func (c *aesCipherGCM) NewGCM(nonceSize, tagSize int) (cipher.AEAD, error)](#aesCipherGCM.NewGCM)
     * [type cbcDecAble interface](#cbcDecAble)
+    * [type cbcEncAble interface](#cbcEncAble)
     * [type ctrAble interface](#ctrAble)
-    * [type KeyTest struct](#KeyTest)
-    * [type CryptTest struct](#CryptTest)
-    * [type testInterface interface](#testInterface)
-    * [type testBlock struct{}](#testBlock)
-        * [func (*testBlock) BlockSize() int](#testBlock.BlockSize)
-        * [func (*testBlock) Encrypt(a, b []byte)](#testBlock.Encrypt)
-        * [func (*testBlock) Decrypt(a, b []byte)](#testBlock.Decrypt)
-        * [func (*testBlock) NewGCM(int, int) (cipher.AEAD, error)](#testBlock.NewGCM)
-        * [func (*testBlock) NewCBCEncrypter([]byte) cipher.BlockMode](#testBlock.NewCBCEncrypter)
-        * [func (*testBlock) NewCBCDecrypter([]byte) cipher.BlockMode](#testBlock.NewCBCDecrypter)
-        * [func (*testBlock) NewCTR([]byte) cipher.Stream](#testBlock.NewCTR)
+    * [type gcmAble interface](#gcmAble)
+    * [type gcmAsm struct](#gcmAsm)
+        * [func (g *gcmAsm) NonceSize() int](#gcmAsm.NonceSize)
+        * [func (g *gcmAsm) Open(dst, nonce, ciphertext, data []byte) ([]byte, error)](#gcmAsm.Open)
+        * [func (g *gcmAsm) Overhead() int](#gcmAsm.Overhead)
+        * [func (g *gcmAsm) Seal(dst, nonce, plaintext, data []byte) []byte](#gcmAsm.Seal)
     * [type testAEAD struct{}](#testAEAD)
+        * [func (*testAEAD) InAESPackage() bool](#testAEAD.InAESPackage)
         * [func (*testAEAD) NonceSize() int](#testAEAD.NonceSize)
+        * [func (*testAEAD) Open(a, b, c, d []byte) ([]byte, error)](#testAEAD.Open)
         * [func (*testAEAD) Overhead() int](#testAEAD.Overhead)
         * [func (*testAEAD) Seal(a, b, c, d []byte) []byte](#testAEAD.Seal)
-        * [func (*testAEAD) Open(a, b, c, d []byte) ([]byte, error)](#testAEAD.Open)
-        * [func (*testAEAD) InAESPackage() bool](#testAEAD.InAESPackage)
+    * [type testBlock struct{}](#testBlock)
+        * [func (*testBlock) BlockSize() int](#testBlock.BlockSize)
+        * [func (*testBlock) Decrypt(a, b []byte)](#testBlock.Decrypt)
+        * [func (*testBlock) Encrypt(a, b []byte)](#testBlock.Encrypt)
+        * [func (*testBlock) NewCBCDecrypter([]byte) cipher.BlockMode](#testBlock.NewCBCDecrypter)
+        * [func (*testBlock) NewCBCEncrypter([]byte) cipher.BlockMode](#testBlock.NewCBCEncrypter)
+        * [func (*testBlock) NewCTR([]byte) cipher.Stream](#testBlock.NewCTR)
+        * [func (*testBlock) NewGCM(int, int) (cipher.AEAD, error)](#testBlock.NewGCM)
     * [type testBlockMode struct{}](#testBlockMode)
         * [func (*testBlockMode) BlockSize() int](#testBlockMode.BlockSize)
         * [func (*testBlockMode) CryptBlocks(a, b []byte)](#testBlockMode.CryptBlocks)
         * [func (*testBlockMode) InAESPackage() bool](#testBlockMode.InAESPackage)
+    * [type testInterface interface](#testInterface)
     * [type testStream struct{}](#testStream)
-        * [func (*testStream) XORKeyStream(a, b []byte)](#testStream.XORKeyStream)
         * [func (*testStream) InAESPackage() bool](#testStream.InAESPackage)
+        * [func (*testStream) XORKeyStream(a, b []byte)](#testStream.XORKeyStream)
 * [Functions](#func)
-    * [func gcmAesInit(productTable *[256]byte, ks []uint32)](#gcmAesInit)
-    * [func gcmAesData(productTable *[256]byte, data []byte, T *[16]byte)](#gcmAesData)
-    * [func gcmAesEnc(productTable *[256]byte, dst, src []byte, ctr, T *[16]byte, ks []uint32)](#gcmAesEnc)
-    * [func gcmAesDec(productTable *[256]byte, dst, src []byte, ctr, T *[16]byte, ks []uint32)](#gcmAesDec)
-    * [func gcmAesFinish(productTable *[256]byte, tagMask, T *[16]byte, pLen, dLen uint64)](#gcmAesFinish)
-    * [func sliceForAppend(in []byte, n int) (head, tail []byte)](#sliceForAppend)
-    * [func encryptBlockGo(xk []uint32, dst, src []byte)](#encryptBlockGo)
-    * [func decryptBlockGo(xk []uint32, dst, src []byte)](#decryptBlockGo)
-    * [func subw(w uint32) uint32](#subw)
-    * [func rotw(w uint32) uint32](#rotw)
-    * [func expandKeyGo(key []byte, enc, dec []uint32)](#expandKeyGo)
-    * [func NewCipher(key []byte) (cipher.Block, error)](#NewCipher)
-    * [func newCipherGeneric(key []byte) (cipher.Block, error)](#newCipherGeneric)
-    * [func encryptBlockAsm(nr int, xk *uint32, dst, src *byte)](#encryptBlockAsm)
-    * [func decryptBlockAsm(nr int, xk *uint32, dst, src *byte)](#decryptBlockAsm)
-    * [func expandKeyAsm(nr int, key *byte, enc *uint32, dec *uint32)](#expandKeyAsm)
-    * [func newCipher(key []byte) (cipher.Block, error)](#newCipher)
-    * [func expandKey(key []byte, enc, dec []uint32)](#expandKey)
-    * [func TestPowx(t *testing.T)](#TestPowx)
-    * [func mul(b, c uint32) uint32](#mul)
-    * [func TestMul(t *testing.T)](#TestMul)
-    * [func TestSboxes(t *testing.T)](#TestSboxes)
-    * [func TestTe(t *testing.T)](#TestTe)
-    * [func TestTd(t *testing.T)](#TestTd)
-    * [func TestExpandKey(t *testing.T)](#TestExpandKey)
-    * [func TestCipherEncrypt(t *testing.T)](#TestCipherEncrypt)
-    * [func TestCipherDecrypt(t *testing.T)](#TestCipherDecrypt)
-    * [func TestShortBlocks(t *testing.T)](#TestShortBlocks)
-    * [func mustPanic(t *testing.T, msg string, f func())](#mustPanic)
-    * [func BenchmarkEncrypt(b *testing.B)](#BenchmarkEncrypt)
     * [func BenchmarkDecrypt(b *testing.B)](#BenchmarkDecrypt)
+    * [func BenchmarkEncrypt(b *testing.B)](#BenchmarkEncrypt)
     * [func BenchmarkExpand(b *testing.B)](#BenchmarkExpand)
-    * [func TestGCMAble(t *testing.T)](#TestGCMAble)
-    * [func TestCBCEncAble(t *testing.T)](#TestCBCEncAble)
+    * [func NewCipher(key []byte) (cipher.Block, error)](#NewCipher)
     * [func TestCBCDecAble(t *testing.T)](#TestCBCDecAble)
+    * [func TestCBCEncAble(t *testing.T)](#TestCBCEncAble)
     * [func TestCTRAble(t *testing.T)](#TestCTRAble)
+    * [func TestCipherDecrypt(t *testing.T)](#TestCipherDecrypt)
+    * [func TestCipherEncrypt(t *testing.T)](#TestCipherEncrypt)
+    * [func TestExpandKey(t *testing.T)](#TestExpandKey)
+    * [func TestGCMAble(t *testing.T)](#TestGCMAble)
+    * [func TestMul(t *testing.T)](#TestMul)
+    * [func TestPowx(t *testing.T)](#TestPowx)
+    * [func TestSboxes(t *testing.T)](#TestSboxes)
+    * [func TestShortBlocks(t *testing.T)](#TestShortBlocks)
+    * [func TestTd(t *testing.T)](#TestTd)
+    * [func TestTe(t *testing.T)](#TestTe)
+    * [func decryptBlockAsm(nr int, xk *uint32, dst, src *byte)](#decryptBlockAsm)
+    * [func decryptBlockGo(xk []uint32, dst, src []byte)](#decryptBlockGo)
+    * [func encryptBlockAsm(nr int, xk *uint32, dst, src *byte)](#encryptBlockAsm)
+    * [func encryptBlockGo(xk []uint32, dst, src []byte)](#encryptBlockGo)
+    * [func expandKey(key []byte, enc, dec []uint32)](#expandKey)
+    * [func expandKeyAsm(nr int, key *byte, enc *uint32, dec *uint32)](#expandKeyAsm)
+    * [func expandKeyGo(key []byte, enc, dec []uint32)](#expandKeyGo)
+    * [func gcmAesData(productTable *[256]byte, data []byte, T *[16]byte)](#gcmAesData)
+    * [func gcmAesDec(productTable *[256]byte, dst, src []byte, ctr, T *[16]byte, ks []uint32)](#gcmAesDec)
+    * [func gcmAesEnc(productTable *[256]byte, dst, src []byte, ctr, T *[16]byte, ks []uint32)](#gcmAesEnc)
+    * [func gcmAesFinish(productTable *[256]byte, tagMask, T *[16]byte, pLen, dLen uint64)](#gcmAesFinish)
+    * [func gcmAesInit(productTable *[256]byte, ks []uint32)](#gcmAesInit)
+    * [func mul(b, c uint32) uint32](#mul)
+    * [func mustPanic(t *testing.T, msg string, f func())](#mustPanic)
+    * [func newCipher(key []byte) (cipher.Block, error)](#newCipher)
+    * [func newCipherGeneric(key []byte) (cipher.Block, error)](#newCipherGeneric)
+    * [func rotw(w uint32) uint32](#rotw)
+    * [func sliceForAppend(in []byte, n int) (head, tail []byte)](#sliceForAppend)
+    * [func subw(w uint32) uint32](#subw)
 
 
 ## <a id="const" href="#const">Constants</a>
+
+```
+tags: [package]
+```
+
+### <a id="BlockSize" href="#BlockSize">const BlockSize</a>
+
+```
+searchKey: aes.BlockSize
+tags: [constant number]
+```
+
+```Go
+const BlockSize = 16
+```
+
+The AES block size in bytes. 
 
 ### <a id="gcmBlockSize" href="#gcmBlockSize">const gcmBlockSize</a>
 
 ```
 searchKey: aes.gcmBlockSize
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
 const gcmBlockSize = 16
 ```
 
-### <a id="gcmTagSize" href="#gcmTagSize">const gcmTagSize</a>
-
-```
-searchKey: aes.gcmTagSize
-tags: [private]
-```
-
-```Go
-const gcmTagSize = 16
-```
-
 ### <a id="gcmMinimumTagSize" href="#gcmMinimumTagSize">const gcmMinimumTagSize</a>
 
 ```
 searchKey: aes.gcmMinimumTagSize
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -155,30 +161,29 @@ const gcmMinimumTagSize = 12 // NIST SP 800-38D recommends tags with 12 or more 
 
 ```
 searchKey: aes.gcmStandardNonceSize
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
 const gcmStandardNonceSize = 12
 ```
 
-### <a id="BlockSize" href="#BlockSize">const BlockSize</a>
+### <a id="gcmTagSize" href="#gcmTagSize">const gcmTagSize</a>
 
 ```
-searchKey: aes.BlockSize
+searchKey: aes.gcmTagSize
+tags: [constant number private]
 ```
 
 ```Go
-const BlockSize = 16
+const gcmTagSize = 16
 ```
-
-The AES block size in bytes. 
 
 ### <a id="poly" href="#poly">const poly</a>
 
 ```
 searchKey: aes.poly
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -190,44 +195,48 @@ AES is based on the mathematical behavior of binary polynomials (polynomials ove
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [package]
+```
+
+### <a id="encryptTests" href="#encryptTests">var encryptTests</a>
+
+```
+searchKey: aes.encryptTests
+tags: [variable array struct private]
+```
+
+```Go
+var encryptTests = ...
+```
+
 ### <a id="errOpen" href="#errOpen">var errOpen</a>
 
 ```
 searchKey: aes.errOpen
-tags: [private]
+tags: [variable interface private]
 ```
 
 ```Go
 var errOpen = errors.New("cipher: message authentication failed")
 ```
 
-### <a id="supportsAES" href="#supportsAES">var supportsAES</a>
+### <a id="keyTests" href="#keyTests">var keyTests</a>
 
 ```
-searchKey: aes.supportsAES
-tags: [private]
-```
-
-```Go
-var supportsAES = cpu.X86.HasAES || cpu.ARM64.HasAES
-```
-
-### <a id="supportsGFMUL" href="#supportsGFMUL">var supportsGFMUL</a>
-
-```
-searchKey: aes.supportsGFMUL
-tags: [private]
+searchKey: aes.keyTests
+tags: [variable array struct private]
 ```
 
 ```Go
-var supportsGFMUL = cpu.X86.HasPCLMULQDQ || cpu.ARM64.HasPMULL
+var keyTests = ...
 ```
 
 ### <a id="powx" href="#powx">var powx</a>
 
 ```
 searchKey: aes.powx
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -240,7 +249,7 @@ Powers of x mod poly in GF(2).
 
 ```
 searchKey: aes.sbox0
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -253,7 +262,7 @@ FIPS-197 Figure 7. S-box substitution values in hexadecimal format.
 
 ```
 searchKey: aes.sbox1
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -262,55 +271,33 @@ var sbox1 = ...
 
 FIPS-197 Figure 14.  Inverse S-box substitution values in hexadecimal format. 
 
-### <a id="te0" href="#te0">var te0</a>
+### <a id="supportsAES" href="#supportsAES">var supportsAES</a>
 
 ```
-searchKey: aes.te0
-tags: [private]
-```
-
-```Go
-var te0 = ...
-```
-
-### <a id="te1" href="#te1">var te1</a>
-
-```
-searchKey: aes.te1
-tags: [private]
+searchKey: aes.supportsAES
+tags: [variable boolean private]
 ```
 
 ```Go
-var te1 = ...
+var supportsAES = cpu.X86.HasAES || cpu.ARM64.HasAES
 ```
 
-### <a id="te2" href="#te2">var te2</a>
+### <a id="supportsGFMUL" href="#supportsGFMUL">var supportsGFMUL</a>
 
 ```
-searchKey: aes.te2
-tags: [private]
-```
-
-```Go
-var te2 = ...
-```
-
-### <a id="te3" href="#te3">var te3</a>
-
-```
-searchKey: aes.te3
-tags: [private]
+searchKey: aes.supportsGFMUL
+tags: [variable boolean private]
 ```
 
 ```Go
-var te3 = ...
+var supportsGFMUL = cpu.X86.HasPCLMULQDQ || cpu.ARM64.HasPMULL
 ```
 
 ### <a id="td0" href="#td0">var td0</a>
 
 ```
 searchKey: aes.td0
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -321,7 +308,7 @@ var td0 = ...
 
 ```
 searchKey: aes.td1
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -332,7 +319,7 @@ var td1 = ...
 
 ```
 searchKey: aes.td2
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -343,42 +330,219 @@ var td2 = ...
 
 ```
 searchKey: aes.td3
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
 var td3 = ...
 ```
 
-### <a id="keyTests" href="#keyTests">var keyTests</a>
+### <a id="te0" href="#te0">var te0</a>
 
 ```
-searchKey: aes.keyTests
-tags: [private]
-```
-
-```Go
-var keyTests = ...
-```
-
-### <a id="encryptTests" href="#encryptTests">var encryptTests</a>
-
-```
-searchKey: aes.encryptTests
-tags: [private]
+searchKey: aes.te0
+tags: [variable array number private]
 ```
 
 ```Go
-var encryptTests = ...
+var te0 = ...
+```
+
+### <a id="te1" href="#te1">var te1</a>
+
+```
+searchKey: aes.te1
+tags: [variable array number private]
+```
+
+```Go
+var te1 = ...
+```
+
+### <a id="te2" href="#te2">var te2</a>
+
+```
+searchKey: aes.te2
+tags: [variable array number private]
+```
+
+```Go
+var te2 = ...
+```
+
+### <a id="te3" href="#te3">var te3</a>
+
+```
+searchKey: aes.te3
+tags: [variable array number private]
+```
+
+```Go
+var te3 = ...
 ```
 
 ## <a id="type" href="#type">Types</a>
+
+```
+tags: [package]
+```
+
+### <a id="CryptTest" href="#CryptTest">type CryptTest struct</a>
+
+```
+searchKey: aes.CryptTest
+tags: [struct private]
+```
+
+```Go
+type CryptTest struct {
+	key []byte
+	in  []byte
+	out []byte
+}
+```
+
+Appendix B, C of FIPS 197: Cipher examples, Example vectors. 
+
+### <a id="KeySizeError" href="#KeySizeError">type KeySizeError int</a>
+
+```
+searchKey: aes.KeySizeError
+tags: [number]
+```
+
+```Go
+type KeySizeError int
+```
+
+#### <a id="KeySizeError.Error" href="#KeySizeError.Error">func (k KeySizeError) Error() string</a>
+
+```
+searchKey: aes.KeySizeError.Error
+tags: [function]
+```
+
+```Go
+func (k KeySizeError) Error() string
+```
+
+### <a id="KeyTest" href="#KeyTest">type KeyTest struct</a>
+
+```
+searchKey: aes.KeyTest
+tags: [struct private]
+```
+
+```Go
+type KeyTest struct {
+	key []byte
+	enc []uint32
+	dec []uint32 // decryption expansion; not in FIPS 197, computed from C implementation.
+}
+```
+
+Appendix A of FIPS 197: Key expansion examples 
+
+### <a id="aesCipher" href="#aesCipher">type aesCipher struct</a>
+
+```
+searchKey: aes.aesCipher
+tags: [struct private]
+```
+
+```Go
+type aesCipher struct {
+	enc []uint32
+	dec []uint32
+}
+```
+
+A cipher is an instance of AES encryption using a particular key. 
+
+#### <a id="aesCipher.BlockSize" href="#aesCipher.BlockSize">func (c *aesCipher) BlockSize() int</a>
+
+```
+searchKey: aes.aesCipher.BlockSize
+tags: [function private]
+```
+
+```Go
+func (c *aesCipher) BlockSize() int
+```
+
+#### <a id="aesCipher.Decrypt" href="#aesCipher.Decrypt">func (c *aesCipher) Decrypt(dst, src []byte)</a>
+
+```
+searchKey: aes.aesCipher.Decrypt
+tags: [method private]
+```
+
+```Go
+func (c *aesCipher) Decrypt(dst, src []byte)
+```
+
+#### <a id="aesCipher.Encrypt" href="#aesCipher.Encrypt">func (c *aesCipher) Encrypt(dst, src []byte)</a>
+
+```
+searchKey: aes.aesCipher.Encrypt
+tags: [method private]
+```
+
+```Go
+func (c *aesCipher) Encrypt(dst, src []byte)
+```
+
+### <a id="aesCipherAsm" href="#aesCipherAsm">type aesCipherAsm struct</a>
+
+```
+searchKey: aes.aesCipherAsm
+tags: [struct private]
+```
+
+```Go
+type aesCipherAsm struct {
+	aesCipher
+}
+```
+
+#### <a id="aesCipherAsm.BlockSize" href="#aesCipherAsm.BlockSize">func (c *aesCipherAsm) BlockSize() int</a>
+
+```
+searchKey: aes.aesCipherAsm.BlockSize
+tags: [function private]
+```
+
+```Go
+func (c *aesCipherAsm) BlockSize() int
+```
+
+#### <a id="aesCipherAsm.Decrypt" href="#aesCipherAsm.Decrypt">func (c *aesCipherAsm) Decrypt(dst, src []byte)</a>
+
+```
+searchKey: aes.aesCipherAsm.Decrypt
+tags: [method private]
+```
+
+```Go
+func (c *aesCipherAsm) Decrypt(dst, src []byte)
+```
+
+#### <a id="aesCipherAsm.Encrypt" href="#aesCipherAsm.Encrypt">func (c *aesCipherAsm) Encrypt(dst, src []byte)</a>
+
+```
+searchKey: aes.aesCipherAsm.Encrypt
+tags: [method private]
+```
+
+```Go
+func (c *aesCipherAsm) Encrypt(dst, src []byte)
+```
 
 ### <a id="aesCipherGCM" href="#aesCipherGCM">type aesCipherGCM struct</a>
 
 ```
 searchKey: aes.aesCipherGCM
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -393,7 +557,7 @@ aesCipherGCM implements crypto/cipher.gcmAble so that crypto/cipher.NewGCM will 
 
 ```
 searchKey: aes.aesCipherGCM.NewGCM
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -402,11 +566,71 @@ func (c *aesCipherGCM) NewGCM(nonceSize, tagSize int) (cipher.AEAD, error)
 
 NewGCM returns the AES cipher wrapped in Galois Counter Mode. This is only called by crypto/cipher.NewGCM via the gcmAble interface. 
 
+### <a id="cbcDecAble" href="#cbcDecAble">type cbcDecAble interface</a>
+
+```
+searchKey: aes.cbcDecAble
+tags: [interface private]
+```
+
+```Go
+type cbcDecAble interface {
+	NewCBCDecrypter(iv []byte) cipher.BlockMode
+}
+```
+
+cbcDecAble is implemented by cipher.Blocks that can provide an optimized implementation of CBC decryption through the cipher.BlockMode interface. See crypto/cipher/cbc.go. 
+
+### <a id="cbcEncAble" href="#cbcEncAble">type cbcEncAble interface</a>
+
+```
+searchKey: aes.cbcEncAble
+tags: [interface private]
+```
+
+```Go
+type cbcEncAble interface {
+	NewCBCEncrypter(iv []byte) cipher.BlockMode
+}
+```
+
+cbcEncAble is implemented by cipher.Blocks that can provide an optimized implementation of CBC encryption through the cipher.BlockMode interface. See crypto/cipher/cbc.go. 
+
+### <a id="ctrAble" href="#ctrAble">type ctrAble interface</a>
+
+```
+searchKey: aes.ctrAble
+tags: [interface private]
+```
+
+```Go
+type ctrAble interface {
+	NewCTR(iv []byte) cipher.Stream
+}
+```
+
+ctrAble is implemented by cipher.Blocks that can provide an optimized implementation of CTR through the cipher.Stream interface. See crypto/cipher/ctr.go. 
+
+### <a id="gcmAble" href="#gcmAble">type gcmAble interface</a>
+
+```
+searchKey: aes.gcmAble
+tags: [interface private]
+```
+
+```Go
+type gcmAble interface {
+	NewGCM(nonceSize, tagSize int) (cipher.AEAD, error)
+}
+```
+
+gcmAble is implemented by cipher.Blocks that can provide an optimized implementation of GCM through the AEAD interface. See crypto/cipher/gcm.go. 
+
 ### <a id="gcmAsm" href="#gcmAsm">type gcmAsm struct</a>
 
 ```
 searchKey: aes.gcmAsm
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -428,18 +652,31 @@ type gcmAsm struct {
 
 ```
 searchKey: aes.gcmAsm.NonceSize
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (g *gcmAsm) NonceSize() int
 ```
 
+#### <a id="gcmAsm.Open" href="#gcmAsm.Open">func (g *gcmAsm) Open(dst, nonce, ciphertext, data []byte) ([]byte, error)</a>
+
+```
+searchKey: aes.gcmAsm.Open
+tags: [method private]
+```
+
+```Go
+func (g *gcmAsm) Open(dst, nonce, ciphertext, data []byte) ([]byte, error)
+```
+
+Open authenticates and decrypts ciphertext. See the cipher.AEAD interface for details. 
+
 #### <a id="gcmAsm.Overhead" href="#gcmAsm.Overhead">func (g *gcmAsm) Overhead() int</a>
 
 ```
 searchKey: aes.gcmAsm.Overhead
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -450,7 +687,7 @@ func (g *gcmAsm) Overhead() int
 
 ```
 searchKey: aes.gcmAsm.Seal
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -459,248 +696,79 @@ func (g *gcmAsm) Seal(dst, nonce, plaintext, data []byte) []byte
 
 Seal encrypts and authenticates plaintext. See the cipher.AEAD interface for details. 
 
-#### <a id="gcmAsm.Open" href="#gcmAsm.Open">func (g *gcmAsm) Open(dst, nonce, ciphertext, data []byte) ([]byte, error)</a>
+### <a id="testAEAD" href="#testAEAD">type testAEAD struct{}</a>
 
 ```
-searchKey: aes.gcmAsm.Open
-tags: [private]
-```
-
-```Go
-func (g *gcmAsm) Open(dst, nonce, ciphertext, data []byte) ([]byte, error)
-```
-
-Open authenticates and decrypts ciphertext. See the cipher.AEAD interface for details. 
-
-### <a id="aesCipher" href="#aesCipher">type aesCipher struct</a>
-
-```
-searchKey: aes.aesCipher
-tags: [private]
+searchKey: aes.testAEAD
+tags: [struct private]
 ```
 
 ```Go
-type aesCipher struct {
-	enc []uint32
-	dec []uint32
-}
+type testAEAD struct{}
 ```
 
-A cipher is an instance of AES encryption using a particular key. 
+testAEAD implements the cipher.AEAD interface. 
 
-#### <a id="aesCipher.BlockSize" href="#aesCipher.BlockSize">func (c *aesCipher) BlockSize() int</a>
+#### <a id="testAEAD.InAESPackage" href="#testAEAD.InAESPackage">func (*testAEAD) InAESPackage() bool</a>
 
 ```
-searchKey: aes.aesCipher.BlockSize
-tags: [private]
+searchKey: aes.testAEAD.InAESPackage
+tags: [function private]
 ```
 
 ```Go
-func (c *aesCipher) BlockSize() int
+func (*testAEAD) InAESPackage() bool
 ```
 
-#### <a id="aesCipher.Encrypt" href="#aesCipher.Encrypt">func (c *aesCipher) Encrypt(dst, src []byte)</a>
+#### <a id="testAEAD.NonceSize" href="#testAEAD.NonceSize">func (*testAEAD) NonceSize() int</a>
 
 ```
-searchKey: aes.aesCipher.Encrypt
-tags: [private]
-```
-
-```Go
-func (c *aesCipher) Encrypt(dst, src []byte)
-```
-
-#### <a id="aesCipher.Decrypt" href="#aesCipher.Decrypt">func (c *aesCipher) Decrypt(dst, src []byte)</a>
-
-```
-searchKey: aes.aesCipher.Decrypt
-tags: [private]
+searchKey: aes.testAEAD.NonceSize
+tags: [function private]
 ```
 
 ```Go
-func (c *aesCipher) Decrypt(dst, src []byte)
+func (*testAEAD) NonceSize() int
 ```
 
-### <a id="KeySizeError" href="#KeySizeError">type KeySizeError int</a>
+#### <a id="testAEAD.Open" href="#testAEAD.Open">func (*testAEAD) Open(a, b, c, d []byte) ([]byte, error)</a>
 
 ```
-searchKey: aes.KeySizeError
-```
-
-```Go
-type KeySizeError int
-```
-
-#### <a id="KeySizeError.Error" href="#KeySizeError.Error">func (k KeySizeError) Error() string</a>
-
-```
-searchKey: aes.KeySizeError.Error
+searchKey: aes.testAEAD.Open
+tags: [method private]
 ```
 
 ```Go
-func (k KeySizeError) Error() string
+func (*testAEAD) Open(a, b, c, d []byte) ([]byte, error)
 ```
 
-### <a id="aesCipherAsm" href="#aesCipherAsm">type aesCipherAsm struct</a>
+#### <a id="testAEAD.Overhead" href="#testAEAD.Overhead">func (*testAEAD) Overhead() int</a>
 
 ```
-searchKey: aes.aesCipherAsm
-tags: [private]
-```
-
-```Go
-type aesCipherAsm struct {
-	aesCipher
-}
-```
-
-#### <a id="aesCipherAsm.BlockSize" href="#aesCipherAsm.BlockSize">func (c *aesCipherAsm) BlockSize() int</a>
-
-```
-searchKey: aes.aesCipherAsm.BlockSize
-tags: [private]
+searchKey: aes.testAEAD.Overhead
+tags: [function private]
 ```
 
 ```Go
-func (c *aesCipherAsm) BlockSize() int
+func (*testAEAD) Overhead() int
 ```
 
-#### <a id="aesCipherAsm.Encrypt" href="#aesCipherAsm.Encrypt">func (c *aesCipherAsm) Encrypt(dst, src []byte)</a>
+#### <a id="testAEAD.Seal" href="#testAEAD.Seal">func (*testAEAD) Seal(a, b, c, d []byte) []byte</a>
 
 ```
-searchKey: aes.aesCipherAsm.Encrypt
-tags: [private]
-```
-
-```Go
-func (c *aesCipherAsm) Encrypt(dst, src []byte)
-```
-
-#### <a id="aesCipherAsm.Decrypt" href="#aesCipherAsm.Decrypt">func (c *aesCipherAsm) Decrypt(dst, src []byte)</a>
-
-```
-searchKey: aes.aesCipherAsm.Decrypt
-tags: [private]
+searchKey: aes.testAEAD.Seal
+tags: [method private]
 ```
 
 ```Go
-func (c *aesCipherAsm) Decrypt(dst, src []byte)
+func (*testAEAD) Seal(a, b, c, d []byte) []byte
 ```
-
-### <a id="gcmAble" href="#gcmAble">type gcmAble interface</a>
-
-```
-searchKey: aes.gcmAble
-tags: [private]
-```
-
-```Go
-type gcmAble interface {
-	NewGCM(nonceSize, tagSize int) (cipher.AEAD, error)
-}
-```
-
-gcmAble is implemented by cipher.Blocks that can provide an optimized implementation of GCM through the AEAD interface. See crypto/cipher/gcm.go. 
-
-### <a id="cbcEncAble" href="#cbcEncAble">type cbcEncAble interface</a>
-
-```
-searchKey: aes.cbcEncAble
-tags: [private]
-```
-
-```Go
-type cbcEncAble interface {
-	NewCBCEncrypter(iv []byte) cipher.BlockMode
-}
-```
-
-cbcEncAble is implemented by cipher.Blocks that can provide an optimized implementation of CBC encryption through the cipher.BlockMode interface. See crypto/cipher/cbc.go. 
-
-### <a id="cbcDecAble" href="#cbcDecAble">type cbcDecAble interface</a>
-
-```
-searchKey: aes.cbcDecAble
-tags: [private]
-```
-
-```Go
-type cbcDecAble interface {
-	NewCBCDecrypter(iv []byte) cipher.BlockMode
-}
-```
-
-cbcDecAble is implemented by cipher.Blocks that can provide an optimized implementation of CBC decryption through the cipher.BlockMode interface. See crypto/cipher/cbc.go. 
-
-### <a id="ctrAble" href="#ctrAble">type ctrAble interface</a>
-
-```
-searchKey: aes.ctrAble
-tags: [private]
-```
-
-```Go
-type ctrAble interface {
-	NewCTR(iv []byte) cipher.Stream
-}
-```
-
-ctrAble is implemented by cipher.Blocks that can provide an optimized implementation of CTR through the cipher.Stream interface. See crypto/cipher/ctr.go. 
-
-### <a id="KeyTest" href="#KeyTest">type KeyTest struct</a>
-
-```
-searchKey: aes.KeyTest
-tags: [private]
-```
-
-```Go
-type KeyTest struct {
-	key []byte
-	enc []uint32
-	dec []uint32 // decryption expansion; not in FIPS 197, computed from C implementation.
-}
-```
-
-Appendix A of FIPS 197: Key expansion examples 
-
-### <a id="CryptTest" href="#CryptTest">type CryptTest struct</a>
-
-```
-searchKey: aes.CryptTest
-tags: [private]
-```
-
-```Go
-type CryptTest struct {
-	key []byte
-	in  []byte
-	out []byte
-}
-```
-
-Appendix B, C of FIPS 197: Cipher examples, Example vectors. 
-
-### <a id="testInterface" href="#testInterface">type testInterface interface</a>
-
-```
-searchKey: aes.testInterface
-tags: [private]
-```
-
-```Go
-type testInterface interface {
-	InAESPackage() bool
-}
-```
-
-testInterface can be asserted to check that a type originates from this test group. 
 
 ### <a id="testBlock" href="#testBlock">type testBlock struct{}</a>
 
 ```
 searchKey: aes.testBlock
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -713,152 +781,84 @@ testBlock implements the cipher.Block interface and any *Able interfaces that ne
 
 ```
 searchKey: aes.testBlock.BlockSize
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (*testBlock) BlockSize() int
 ```
 
-#### <a id="testBlock.Encrypt" href="#testBlock.Encrypt">func (*testBlock) Encrypt(a, b []byte)</a>
-
-```
-searchKey: aes.testBlock.Encrypt
-tags: [private]
-```
-
-```Go
-func (*testBlock) Encrypt(a, b []byte)
-```
-
 #### <a id="testBlock.Decrypt" href="#testBlock.Decrypt">func (*testBlock) Decrypt(a, b []byte)</a>
 
 ```
 searchKey: aes.testBlock.Decrypt
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (*testBlock) Decrypt(a, b []byte)
 ```
 
-#### <a id="testBlock.NewGCM" href="#testBlock.NewGCM">func (*testBlock) NewGCM(int, int) (cipher.AEAD, error)</a>
+#### <a id="testBlock.Encrypt" href="#testBlock.Encrypt">func (*testBlock) Encrypt(a, b []byte)</a>
 
 ```
-searchKey: aes.testBlock.NewGCM
-tags: [private]
-```
-
-```Go
-func (*testBlock) NewGCM(int, int) (cipher.AEAD, error)
-```
-
-#### <a id="testBlock.NewCBCEncrypter" href="#testBlock.NewCBCEncrypter">func (*testBlock) NewCBCEncrypter([]byte) cipher.BlockMode</a>
-
-```
-searchKey: aes.testBlock.NewCBCEncrypter
-tags: [private]
+searchKey: aes.testBlock.Encrypt
+tags: [method private]
 ```
 
 ```Go
-func (*testBlock) NewCBCEncrypter([]byte) cipher.BlockMode
+func (*testBlock) Encrypt(a, b []byte)
 ```
 
 #### <a id="testBlock.NewCBCDecrypter" href="#testBlock.NewCBCDecrypter">func (*testBlock) NewCBCDecrypter([]byte) cipher.BlockMode</a>
 
 ```
 searchKey: aes.testBlock.NewCBCDecrypter
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (*testBlock) NewCBCDecrypter([]byte) cipher.BlockMode
 ```
 
+#### <a id="testBlock.NewCBCEncrypter" href="#testBlock.NewCBCEncrypter">func (*testBlock) NewCBCEncrypter([]byte) cipher.BlockMode</a>
+
+```
+searchKey: aes.testBlock.NewCBCEncrypter
+tags: [method private]
+```
+
+```Go
+func (*testBlock) NewCBCEncrypter([]byte) cipher.BlockMode
+```
+
 #### <a id="testBlock.NewCTR" href="#testBlock.NewCTR">func (*testBlock) NewCTR([]byte) cipher.Stream</a>
 
 ```
 searchKey: aes.testBlock.NewCTR
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (*testBlock) NewCTR([]byte) cipher.Stream
 ```
 
-### <a id="testAEAD" href="#testAEAD">type testAEAD struct{}</a>
+#### <a id="testBlock.NewGCM" href="#testBlock.NewGCM">func (*testBlock) NewGCM(int, int) (cipher.AEAD, error)</a>
 
 ```
-searchKey: aes.testAEAD
-tags: [private]
-```
-
-```Go
-type testAEAD struct{}
-```
-
-testAEAD implements the cipher.AEAD interface. 
-
-#### <a id="testAEAD.NonceSize" href="#testAEAD.NonceSize">func (*testAEAD) NonceSize() int</a>
-
-```
-searchKey: aes.testAEAD.NonceSize
-tags: [private]
+searchKey: aes.testBlock.NewGCM
+tags: [method private]
 ```
 
 ```Go
-func (*testAEAD) NonceSize() int
-```
-
-#### <a id="testAEAD.Overhead" href="#testAEAD.Overhead">func (*testAEAD) Overhead() int</a>
-
-```
-searchKey: aes.testAEAD.Overhead
-tags: [private]
-```
-
-```Go
-func (*testAEAD) Overhead() int
-```
-
-#### <a id="testAEAD.Seal" href="#testAEAD.Seal">func (*testAEAD) Seal(a, b, c, d []byte) []byte</a>
-
-```
-searchKey: aes.testAEAD.Seal
-tags: [private]
-```
-
-```Go
-func (*testAEAD) Seal(a, b, c, d []byte) []byte
-```
-
-#### <a id="testAEAD.Open" href="#testAEAD.Open">func (*testAEAD) Open(a, b, c, d []byte) ([]byte, error)</a>
-
-```
-searchKey: aes.testAEAD.Open
-tags: [private]
-```
-
-```Go
-func (*testAEAD) Open(a, b, c, d []byte) ([]byte, error)
-```
-
-#### <a id="testAEAD.InAESPackage" href="#testAEAD.InAESPackage">func (*testAEAD) InAESPackage() bool</a>
-
-```
-searchKey: aes.testAEAD.InAESPackage
-tags: [private]
-```
-
-```Go
-func (*testAEAD) InAESPackage() bool
+func (*testBlock) NewGCM(int, int) (cipher.AEAD, error)
 ```
 
 ### <a id="testBlockMode" href="#testBlockMode">type testBlockMode struct{}</a>
 
 ```
 searchKey: aes.testBlockMode
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -871,7 +871,7 @@ testBlockMode implements the cipher.BlockMode interface.
 
 ```
 searchKey: aes.testBlockMode.BlockSize
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -882,7 +882,7 @@ func (*testBlockMode) BlockSize() int
 
 ```
 searchKey: aes.testBlockMode.CryptBlocks
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -893,18 +893,33 @@ func (*testBlockMode) CryptBlocks(a, b []byte)
 
 ```
 searchKey: aes.testBlockMode.InAESPackage
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (*testBlockMode) InAESPackage() bool
 ```
 
+### <a id="testInterface" href="#testInterface">type testInterface interface</a>
+
+```
+searchKey: aes.testInterface
+tags: [interface private]
+```
+
+```Go
+type testInterface interface {
+	InAESPackage() bool
+}
+```
+
+testInterface can be asserted to check that a type originates from this test group. 
+
 ### <a id="testStream" href="#testStream">type testStream struct{}</a>
 
 ```
 searchKey: aes.testStream
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -913,167 +928,72 @@ type testStream struct{}
 
 testStream implements the cipher.Stream interface. 
 
-#### <a id="testStream.XORKeyStream" href="#testStream.XORKeyStream">func (*testStream) XORKeyStream(a, b []byte)</a>
-
-```
-searchKey: aes.testStream.XORKeyStream
-tags: [private]
-```
-
-```Go
-func (*testStream) XORKeyStream(a, b []byte)
-```
-
 #### <a id="testStream.InAESPackage" href="#testStream.InAESPackage">func (*testStream) InAESPackage() bool</a>
 
 ```
 searchKey: aes.testStream.InAESPackage
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (*testStream) InAESPackage() bool
 ```
 
+#### <a id="testStream.XORKeyStream" href="#testStream.XORKeyStream">func (*testStream) XORKeyStream(a, b []byte)</a>
+
+```
+searchKey: aes.testStream.XORKeyStream
+tags: [method private]
+```
+
+```Go
+func (*testStream) XORKeyStream(a, b []byte)
+```
+
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="gcmAesInit" href="#gcmAesInit">func gcmAesInit(productTable *[256]byte, ks []uint32)</a>
-
 ```
-searchKey: aes.gcmAesInit
-tags: [private]
+tags: [package]
 ```
 
-```Go
-func gcmAesInit(productTable *[256]byte, ks []uint32)
-```
-
-### <a id="gcmAesData" href="#gcmAesData">func gcmAesData(productTable *[256]byte, data []byte, T *[16]byte)</a>
+### <a id="BenchmarkDecrypt" href="#BenchmarkDecrypt">func BenchmarkDecrypt(b *testing.B)</a>
 
 ```
-searchKey: aes.gcmAesData
-tags: [private]
+searchKey: aes.BenchmarkDecrypt
+tags: [method private benchmark]
 ```
 
 ```Go
-func gcmAesData(productTable *[256]byte, data []byte, T *[16]byte)
+func BenchmarkDecrypt(b *testing.B)
 ```
 
-### <a id="gcmAesEnc" href="#gcmAesEnc">func gcmAesEnc(productTable *[256]byte, dst, src []byte, ctr, T *[16]byte, ks []uint32)</a>
+### <a id="BenchmarkEncrypt" href="#BenchmarkEncrypt">func BenchmarkEncrypt(b *testing.B)</a>
 
 ```
-searchKey: aes.gcmAesEnc
-tags: [private]
-```
-
-```Go
-func gcmAesEnc(productTable *[256]byte, dst, src []byte, ctr, T *[16]byte, ks []uint32)
-```
-
-### <a id="gcmAesDec" href="#gcmAesDec">func gcmAesDec(productTable *[256]byte, dst, src []byte, ctr, T *[16]byte, ks []uint32)</a>
-
-```
-searchKey: aes.gcmAesDec
-tags: [private]
+searchKey: aes.BenchmarkEncrypt
+tags: [method private benchmark]
 ```
 
 ```Go
-func gcmAesDec(productTable *[256]byte, dst, src []byte, ctr, T *[16]byte, ks []uint32)
+func BenchmarkEncrypt(b *testing.B)
 ```
 
-### <a id="gcmAesFinish" href="#gcmAesFinish">func gcmAesFinish(productTable *[256]byte, tagMask, T *[16]byte, pLen, dLen uint64)</a>
+### <a id="BenchmarkExpand" href="#BenchmarkExpand">func BenchmarkExpand(b *testing.B)</a>
 
 ```
-searchKey: aes.gcmAesFinish
-tags: [private]
-```
-
-```Go
-func gcmAesFinish(productTable *[256]byte, tagMask, T *[16]byte, pLen, dLen uint64)
-```
-
-### <a id="sliceForAppend" href="#sliceForAppend">func sliceForAppend(in []byte, n int) (head, tail []byte)</a>
-
-```
-searchKey: aes.sliceForAppend
-tags: [private]
+searchKey: aes.BenchmarkExpand
+tags: [method private benchmark]
 ```
 
 ```Go
-func sliceForAppend(in []byte, n int) (head, tail []byte)
+func BenchmarkExpand(b *testing.B)
 ```
-
-sliceForAppend takes a slice and a requested number of bytes. It returns a slice with the contents of the given slice followed by that many bytes and a second slice that aliases into it and contains only the extra bytes. If the original slice has sufficient capacity then no allocation is performed. 
-
-### <a id="encryptBlockGo" href="#encryptBlockGo">func encryptBlockGo(xk []uint32, dst, src []byte)</a>
-
-```
-searchKey: aes.encryptBlockGo
-tags: [private]
-```
-
-```Go
-func encryptBlockGo(xk []uint32, dst, src []byte)
-```
-
-Encrypt one block from src into dst, using the expanded key xk. 
-
-### <a id="decryptBlockGo" href="#decryptBlockGo">func decryptBlockGo(xk []uint32, dst, src []byte)</a>
-
-```
-searchKey: aes.decryptBlockGo
-tags: [private]
-```
-
-```Go
-func decryptBlockGo(xk []uint32, dst, src []byte)
-```
-
-Decrypt one block from src into dst, using the expanded key xk. 
-
-### <a id="subw" href="#subw">func subw(w uint32) uint32</a>
-
-```
-searchKey: aes.subw
-tags: [private]
-```
-
-```Go
-func subw(w uint32) uint32
-```
-
-Apply sbox0 to each byte in w. 
-
-### <a id="rotw" href="#rotw">func rotw(w uint32) uint32</a>
-
-```
-searchKey: aes.rotw
-tags: [private]
-```
-
-```Go
-func rotw(w uint32) uint32
-```
-
-Rotate 
-
-### <a id="expandKeyGo" href="#expandKeyGo">func expandKeyGo(key []byte, enc, dec []uint32)</a>
-
-```
-searchKey: aes.expandKeyGo
-tags: [private]
-```
-
-```Go
-func expandKeyGo(key []byte, enc, dec []uint32)
-```
-
-Key expansion algorithm. See FIPS-197, Figure 11. Their rcon[i] is our powx[i-1] << 24. 
 
 ### <a id="NewCipher" href="#NewCipher">func NewCipher(key []byte) (cipher.Block, error)</a>
 
 ```
 searchKey: aes.NewCipher
+tags: [method]
 ```
 
 ```Go
@@ -1082,281 +1002,11 @@ func NewCipher(key []byte) (cipher.Block, error)
 
 NewCipher creates and returns a new cipher.Block. The key argument should be the AES key, either 16, 24, or 32 bytes to select AES-128, AES-192, or AES-256. 
 
-### <a id="newCipherGeneric" href="#newCipherGeneric">func newCipherGeneric(key []byte) (cipher.Block, error)</a>
-
-```
-searchKey: aes.newCipherGeneric
-tags: [private]
-```
-
-```Go
-func newCipherGeneric(key []byte) (cipher.Block, error)
-```
-
-newCipherGeneric creates and returns a new cipher.Block implemented in pure Go. 
-
-### <a id="encryptBlockAsm" href="#encryptBlockAsm">func encryptBlockAsm(nr int, xk *uint32, dst, src *byte)</a>
-
-```
-searchKey: aes.encryptBlockAsm
-tags: [private]
-```
-
-```Go
-func encryptBlockAsm(nr int, xk *uint32, dst, src *byte)
-```
-
-### <a id="decryptBlockAsm" href="#decryptBlockAsm">func decryptBlockAsm(nr int, xk *uint32, dst, src *byte)</a>
-
-```
-searchKey: aes.decryptBlockAsm
-tags: [private]
-```
-
-```Go
-func decryptBlockAsm(nr int, xk *uint32, dst, src *byte)
-```
-
-### <a id="expandKeyAsm" href="#expandKeyAsm">func expandKeyAsm(nr int, key *byte, enc *uint32, dec *uint32)</a>
-
-```
-searchKey: aes.expandKeyAsm
-tags: [private]
-```
-
-```Go
-func expandKeyAsm(nr int, key *byte, enc *uint32, dec *uint32)
-```
-
-### <a id="newCipher" href="#newCipher">func newCipher(key []byte) (cipher.Block, error)</a>
-
-```
-searchKey: aes.newCipher
-tags: [private]
-```
-
-```Go
-func newCipher(key []byte) (cipher.Block, error)
-```
-
-### <a id="expandKey" href="#expandKey">func expandKey(key []byte, enc, dec []uint32)</a>
-
-```
-searchKey: aes.expandKey
-tags: [private]
-```
-
-```Go
-func expandKey(key []byte, enc, dec []uint32)
-```
-
-expandKey is used by BenchmarkExpand to ensure that the asm implementation of key expansion is used for the benchmark when it is available. 
-
-### <a id="TestPowx" href="#TestPowx">func TestPowx(t *testing.T)</a>
-
-```
-searchKey: aes.TestPowx
-tags: [private]
-```
-
-```Go
-func TestPowx(t *testing.T)
-```
-
-Test that powx is initialized correctly. (Can adapt this code to generate it too.) 
-
-### <a id="mul" href="#mul">func mul(b, c uint32) uint32</a>
-
-```
-searchKey: aes.mul
-tags: [private]
-```
-
-```Go
-func mul(b, c uint32) uint32
-```
-
-Multiply b and c as GF(2) polynomials modulo poly 
-
-### <a id="TestMul" href="#TestMul">func TestMul(t *testing.T)</a>
-
-```
-searchKey: aes.TestMul
-tags: [private]
-```
-
-```Go
-func TestMul(t *testing.T)
-```
-
-Test all mul inputs against bit-by-bit n² algorithm. 
-
-### <a id="TestSboxes" href="#TestSboxes">func TestSboxes(t *testing.T)</a>
-
-```
-searchKey: aes.TestSboxes
-tags: [private]
-```
-
-```Go
-func TestSboxes(t *testing.T)
-```
-
-Check that S-boxes are inverses of each other. They have more structure that we could test, but if this sanity check passes, we'll assume the cut and paste from the FIPS PDF worked. 
-
-### <a id="TestTe" href="#TestTe">func TestTe(t *testing.T)</a>
-
-```
-searchKey: aes.TestTe
-tags: [private]
-```
-
-```Go
-func TestTe(t *testing.T)
-```
-
-Test that encryption tables are correct. (Can adapt this code to generate them too.) 
-
-### <a id="TestTd" href="#TestTd">func TestTd(t *testing.T)</a>
-
-```
-searchKey: aes.TestTd
-tags: [private]
-```
-
-```Go
-func TestTd(t *testing.T)
-```
-
-Test that decryption tables are correct. (Can adapt this code to generate them too.) 
-
-### <a id="TestExpandKey" href="#TestExpandKey">func TestExpandKey(t *testing.T)</a>
-
-```
-searchKey: aes.TestExpandKey
-tags: [private]
-```
-
-```Go
-func TestExpandKey(t *testing.T)
-```
-
-Test key expansion against FIPS 197 examples. 
-
-### <a id="TestCipherEncrypt" href="#TestCipherEncrypt">func TestCipherEncrypt(t *testing.T)</a>
-
-```
-searchKey: aes.TestCipherEncrypt
-tags: [private]
-```
-
-```Go
-func TestCipherEncrypt(t *testing.T)
-```
-
-Test Cipher Encrypt method against FIPS 197 examples. 
-
-### <a id="TestCipherDecrypt" href="#TestCipherDecrypt">func TestCipherDecrypt(t *testing.T)</a>
-
-```
-searchKey: aes.TestCipherDecrypt
-tags: [private]
-```
-
-```Go
-func TestCipherDecrypt(t *testing.T)
-```
-
-Test Cipher Decrypt against FIPS 197 examples. 
-
-### <a id="TestShortBlocks" href="#TestShortBlocks">func TestShortBlocks(t *testing.T)</a>
-
-```
-searchKey: aes.TestShortBlocks
-tags: [private]
-```
-
-```Go
-func TestShortBlocks(t *testing.T)
-```
-
-Test short input/output. Assembly used to not notice. See issue 7928. 
-
-### <a id="mustPanic" href="#mustPanic">func mustPanic(t *testing.T, msg string, f func())</a>
-
-```
-searchKey: aes.mustPanic
-tags: [private]
-```
-
-```Go
-func mustPanic(t *testing.T, msg string, f func())
-```
-
-### <a id="BenchmarkEncrypt" href="#BenchmarkEncrypt">func BenchmarkEncrypt(b *testing.B)</a>
-
-```
-searchKey: aes.BenchmarkEncrypt
-tags: [private]
-```
-
-```Go
-func BenchmarkEncrypt(b *testing.B)
-```
-
-### <a id="BenchmarkDecrypt" href="#BenchmarkDecrypt">func BenchmarkDecrypt(b *testing.B)</a>
-
-```
-searchKey: aes.BenchmarkDecrypt
-tags: [private]
-```
-
-```Go
-func BenchmarkDecrypt(b *testing.B)
-```
-
-### <a id="BenchmarkExpand" href="#BenchmarkExpand">func BenchmarkExpand(b *testing.B)</a>
-
-```
-searchKey: aes.BenchmarkExpand
-tags: [private]
-```
-
-```Go
-func BenchmarkExpand(b *testing.B)
-```
-
-### <a id="TestGCMAble" href="#TestGCMAble">func TestGCMAble(t *testing.T)</a>
-
-```
-searchKey: aes.TestGCMAble
-tags: [private]
-```
-
-```Go
-func TestGCMAble(t *testing.T)
-```
-
-Test the gcmAble interface is detected correctly by the cipher package. 
-
-### <a id="TestCBCEncAble" href="#TestCBCEncAble">func TestCBCEncAble(t *testing.T)</a>
-
-```
-searchKey: aes.TestCBCEncAble
-tags: [private]
-```
-
-```Go
-func TestCBCEncAble(t *testing.T)
-```
-
-Test the cbcEncAble interface is detected correctly by the cipher package. 
-
 ### <a id="TestCBCDecAble" href="#TestCBCDecAble">func TestCBCDecAble(t *testing.T)</a>
 
 ```
 searchKey: aes.TestCBCDecAble
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -1365,11 +1015,24 @@ func TestCBCDecAble(t *testing.T)
 
 Test the cbcDecAble interface is detected correctly by the cipher package. 
 
+### <a id="TestCBCEncAble" href="#TestCBCEncAble">func TestCBCEncAble(t *testing.T)</a>
+
+```
+searchKey: aes.TestCBCEncAble
+tags: [method private test]
+```
+
+```Go
+func TestCBCEncAble(t *testing.T)
+```
+
+Test the cbcEncAble interface is detected correctly by the cipher package. 
+
 ### <a id="TestCTRAble" href="#TestCTRAble">func TestCTRAble(t *testing.T)</a>
 
 ```
 searchKey: aes.TestCTRAble
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -1377,4 +1040,361 @@ func TestCTRAble(t *testing.T)
 ```
 
 Test the ctrAble interface is detected correctly by the cipher package. 
+
+### <a id="TestCipherDecrypt" href="#TestCipherDecrypt">func TestCipherDecrypt(t *testing.T)</a>
+
+```
+searchKey: aes.TestCipherDecrypt
+tags: [method private test]
+```
+
+```Go
+func TestCipherDecrypt(t *testing.T)
+```
+
+Test Cipher Decrypt against FIPS 197 examples. 
+
+### <a id="TestCipherEncrypt" href="#TestCipherEncrypt">func TestCipherEncrypt(t *testing.T)</a>
+
+```
+searchKey: aes.TestCipherEncrypt
+tags: [method private test]
+```
+
+```Go
+func TestCipherEncrypt(t *testing.T)
+```
+
+Test Cipher Encrypt method against FIPS 197 examples. 
+
+### <a id="TestExpandKey" href="#TestExpandKey">func TestExpandKey(t *testing.T)</a>
+
+```
+searchKey: aes.TestExpandKey
+tags: [method private test]
+```
+
+```Go
+func TestExpandKey(t *testing.T)
+```
+
+Test key expansion against FIPS 197 examples. 
+
+### <a id="TestGCMAble" href="#TestGCMAble">func TestGCMAble(t *testing.T)</a>
+
+```
+searchKey: aes.TestGCMAble
+tags: [method private test]
+```
+
+```Go
+func TestGCMAble(t *testing.T)
+```
+
+Test the gcmAble interface is detected correctly by the cipher package. 
+
+### <a id="TestMul" href="#TestMul">func TestMul(t *testing.T)</a>
+
+```
+searchKey: aes.TestMul
+tags: [method private test]
+```
+
+```Go
+func TestMul(t *testing.T)
+```
+
+Test all mul inputs against bit-by-bit n² algorithm. 
+
+### <a id="TestPowx" href="#TestPowx">func TestPowx(t *testing.T)</a>
+
+```
+searchKey: aes.TestPowx
+tags: [method private test]
+```
+
+```Go
+func TestPowx(t *testing.T)
+```
+
+Test that powx is initialized correctly. (Can adapt this code to generate it too.) 
+
+### <a id="TestSboxes" href="#TestSboxes">func TestSboxes(t *testing.T)</a>
+
+```
+searchKey: aes.TestSboxes
+tags: [method private test]
+```
+
+```Go
+func TestSboxes(t *testing.T)
+```
+
+Check that S-boxes are inverses of each other. They have more structure that we could test, but if this sanity check passes, we'll assume the cut and paste from the FIPS PDF worked. 
+
+### <a id="TestShortBlocks" href="#TestShortBlocks">func TestShortBlocks(t *testing.T)</a>
+
+```
+searchKey: aes.TestShortBlocks
+tags: [method private test]
+```
+
+```Go
+func TestShortBlocks(t *testing.T)
+```
+
+Test short input/output. Assembly used to not notice. See issue 7928. 
+
+### <a id="TestTd" href="#TestTd">func TestTd(t *testing.T)</a>
+
+```
+searchKey: aes.TestTd
+tags: [method private test]
+```
+
+```Go
+func TestTd(t *testing.T)
+```
+
+Test that decryption tables are correct. (Can adapt this code to generate them too.) 
+
+### <a id="TestTe" href="#TestTe">func TestTe(t *testing.T)</a>
+
+```
+searchKey: aes.TestTe
+tags: [method private test]
+```
+
+```Go
+func TestTe(t *testing.T)
+```
+
+Test that encryption tables are correct. (Can adapt this code to generate them too.) 
+
+### <a id="decryptBlockAsm" href="#decryptBlockAsm">func decryptBlockAsm(nr int, xk *uint32, dst, src *byte)</a>
+
+```
+searchKey: aes.decryptBlockAsm
+tags: [method private]
+```
+
+```Go
+func decryptBlockAsm(nr int, xk *uint32, dst, src *byte)
+```
+
+### <a id="decryptBlockGo" href="#decryptBlockGo">func decryptBlockGo(xk []uint32, dst, src []byte)</a>
+
+```
+searchKey: aes.decryptBlockGo
+tags: [method private]
+```
+
+```Go
+func decryptBlockGo(xk []uint32, dst, src []byte)
+```
+
+Decrypt one block from src into dst, using the expanded key xk. 
+
+### <a id="encryptBlockAsm" href="#encryptBlockAsm">func encryptBlockAsm(nr int, xk *uint32, dst, src *byte)</a>
+
+```
+searchKey: aes.encryptBlockAsm
+tags: [method private]
+```
+
+```Go
+func encryptBlockAsm(nr int, xk *uint32, dst, src *byte)
+```
+
+### <a id="encryptBlockGo" href="#encryptBlockGo">func encryptBlockGo(xk []uint32, dst, src []byte)</a>
+
+```
+searchKey: aes.encryptBlockGo
+tags: [method private]
+```
+
+```Go
+func encryptBlockGo(xk []uint32, dst, src []byte)
+```
+
+Encrypt one block from src into dst, using the expanded key xk. 
+
+### <a id="expandKey" href="#expandKey">func expandKey(key []byte, enc, dec []uint32)</a>
+
+```
+searchKey: aes.expandKey
+tags: [method private]
+```
+
+```Go
+func expandKey(key []byte, enc, dec []uint32)
+```
+
+expandKey is used by BenchmarkExpand to ensure that the asm implementation of key expansion is used for the benchmark when it is available. 
+
+### <a id="expandKeyAsm" href="#expandKeyAsm">func expandKeyAsm(nr int, key *byte, enc *uint32, dec *uint32)</a>
+
+```
+searchKey: aes.expandKeyAsm
+tags: [method private]
+```
+
+```Go
+func expandKeyAsm(nr int, key *byte, enc *uint32, dec *uint32)
+```
+
+### <a id="expandKeyGo" href="#expandKeyGo">func expandKeyGo(key []byte, enc, dec []uint32)</a>
+
+```
+searchKey: aes.expandKeyGo
+tags: [method private]
+```
+
+```Go
+func expandKeyGo(key []byte, enc, dec []uint32)
+```
+
+Key expansion algorithm. See FIPS-197, Figure 11. Their rcon[i] is our powx[i-1] << 24. 
+
+### <a id="gcmAesData" href="#gcmAesData">func gcmAesData(productTable *[256]byte, data []byte, T *[16]byte)</a>
+
+```
+searchKey: aes.gcmAesData
+tags: [method private]
+```
+
+```Go
+func gcmAesData(productTable *[256]byte, data []byte, T *[16]byte)
+```
+
+### <a id="gcmAesDec" href="#gcmAesDec">func gcmAesDec(productTable *[256]byte, dst, src []byte, ctr, T *[16]byte, ks []uint32)</a>
+
+```
+searchKey: aes.gcmAesDec
+tags: [method private]
+```
+
+```Go
+func gcmAesDec(productTable *[256]byte, dst, src []byte, ctr, T *[16]byte, ks []uint32)
+```
+
+### <a id="gcmAesEnc" href="#gcmAesEnc">func gcmAesEnc(productTable *[256]byte, dst, src []byte, ctr, T *[16]byte, ks []uint32)</a>
+
+```
+searchKey: aes.gcmAesEnc
+tags: [method private]
+```
+
+```Go
+func gcmAesEnc(productTable *[256]byte, dst, src []byte, ctr, T *[16]byte, ks []uint32)
+```
+
+### <a id="gcmAesFinish" href="#gcmAesFinish">func gcmAesFinish(productTable *[256]byte, tagMask, T *[16]byte, pLen, dLen uint64)</a>
+
+```
+searchKey: aes.gcmAesFinish
+tags: [method private]
+```
+
+```Go
+func gcmAesFinish(productTable *[256]byte, tagMask, T *[16]byte, pLen, dLen uint64)
+```
+
+### <a id="gcmAesInit" href="#gcmAesInit">func gcmAesInit(productTable *[256]byte, ks []uint32)</a>
+
+```
+searchKey: aes.gcmAesInit
+tags: [method private]
+```
+
+```Go
+func gcmAesInit(productTable *[256]byte, ks []uint32)
+```
+
+### <a id="mul" href="#mul">func mul(b, c uint32) uint32</a>
+
+```
+searchKey: aes.mul
+tags: [method private]
+```
+
+```Go
+func mul(b, c uint32) uint32
+```
+
+Multiply b and c as GF(2) polynomials modulo poly 
+
+### <a id="mustPanic" href="#mustPanic">func mustPanic(t *testing.T, msg string, f func())</a>
+
+```
+searchKey: aes.mustPanic
+tags: [method private]
+```
+
+```Go
+func mustPanic(t *testing.T, msg string, f func())
+```
+
+### <a id="newCipher" href="#newCipher">func newCipher(key []byte) (cipher.Block, error)</a>
+
+```
+searchKey: aes.newCipher
+tags: [method private]
+```
+
+```Go
+func newCipher(key []byte) (cipher.Block, error)
+```
+
+### <a id="newCipherGeneric" href="#newCipherGeneric">func newCipherGeneric(key []byte) (cipher.Block, error)</a>
+
+```
+searchKey: aes.newCipherGeneric
+tags: [method private]
+```
+
+```Go
+func newCipherGeneric(key []byte) (cipher.Block, error)
+```
+
+newCipherGeneric creates and returns a new cipher.Block implemented in pure Go. 
+
+### <a id="rotw" href="#rotw">func rotw(w uint32) uint32</a>
+
+```
+searchKey: aes.rotw
+tags: [method private]
+```
+
+```Go
+func rotw(w uint32) uint32
+```
+
+Rotate 
+
+### <a id="sliceForAppend" href="#sliceForAppend">func sliceForAppend(in []byte, n int) (head, tail []byte)</a>
+
+```
+searchKey: aes.sliceForAppend
+tags: [method private]
+```
+
+```Go
+func sliceForAppend(in []byte, n int) (head, tail []byte)
+```
+
+sliceForAppend takes a slice and a requested number of bytes. It returns a slice with the contents of the given slice followed by that many bytes and a second slice that aliases into it and contains only the extra bytes. If the original slice has sufficient capacity then no allocation is performed. 
+
+### <a id="subw" href="#subw">func subw(w uint32) uint32</a>
+
+```
+searchKey: aes.subw
+tags: [method private]
+```
+
+```Go
+func subw(w uint32) uint32
+```
+
+Apply sbox0 to each byte in w. 
 

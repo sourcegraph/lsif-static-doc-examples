@@ -9,92 +9,107 @@ This package's outputs might be easily predictable regardless of how it's seeded
 ## Index
 
 * [Constants](#const)
+    * [const int32max](#int32max)
     * [const re](#re)
     * [const rn](#rn)
     * [const rngLen](#rngLen)
-    * [const rngTap](#rngTap)
-    * [const rngMax](#rngMax)
     * [const rngMask](#rngMask)
-    * [const int32max](#int32max)
+    * [const rngMax](#rngMax)
+    * [const rngTap](#rngTap)
 * [Variables](#var)
-    * [var ke](#ke)
-    * [var we](#we)
     * [var fe](#fe)
-    * [var kn](#kn)
-    * [var wn](#wn)
     * [var fn](#fn)
     * [var globalRand](#globalRand)
+    * [var ke](#ke)
+    * [var kn](#kn)
     * [var rngCooked](#rngCooked)
+    * [var we](#we)
+    * [var wn](#wn)
 * [Types](#type)
-    * [type Source interface](#Source)
-        * [func NewSource(seed int64) Source](#NewSource)
-    * [type Source64 interface](#Source64)
     * [type Rand struct](#Rand)
         * [func New(src Source) *Rand](#New)
         * [func (r *Rand) ExpFloat64() float64](#Rand.ExpFloat64)
-        * [func (r *Rand) NormFloat64() float64](#Rand.NormFloat64)
-        * [func (r *Rand) Seed(seed int64)](#Rand.Seed)
+        * [func (r *Rand) Float32() float32](#Rand.Float32)
+        * [func (r *Rand) Float64() float64](#Rand.Float64)
+        * [func (r *Rand) Int() int](#Rand.Int)
+        * [func (r *Rand) Int31() int32](#Rand.Int31)
+        * [func (r *Rand) Int31n(n int32) int32](#Rand.Int31n)
         * [func (r *Rand) Int63() int64](#Rand.Int63)
+        * [func (r *Rand) Int63n(n int64) int64](#Rand.Int63n)
+        * [func (r *Rand) Intn(n int) int](#Rand.Intn)
+        * [func (r *Rand) NormFloat64() float64](#Rand.NormFloat64)
+        * [func (r *Rand) Perm(n int) []int](#Rand.Perm)
+        * [func (r *Rand) Read(p []byte) (n int, err error)](#Rand.Read)
+        * [func (r *Rand) Seed(seed int64)](#Rand.Seed)
+        * [func (r *Rand) Shuffle(n int, swap func(i, j int))](#Rand.Shuffle)
         * [func (r *Rand) Uint32() uint32](#Rand.Uint32)
         * [func (r *Rand) Uint64() uint64](#Rand.Uint64)
-        * [func (r *Rand) Int31() int32](#Rand.Int31)
-        * [func (r *Rand) Int() int](#Rand.Int)
-        * [func (r *Rand) Int63n(n int64) int64](#Rand.Int63n)
-        * [func (r *Rand) Int31n(n int32) int32](#Rand.Int31n)
         * [func (r *Rand) int31n(n int32) int32](#Rand.int31n)
-        * [func (r *Rand) Intn(n int) int](#Rand.Intn)
-        * [func (r *Rand) Float64() float64](#Rand.Float64)
-        * [func (r *Rand) Float32() float32](#Rand.Float32)
-        * [func (r *Rand) Perm(n int) []int](#Rand.Perm)
-        * [func (r *Rand) Shuffle(n int, swap func(i, j int))](#Rand.Shuffle)
-        * [func (r *Rand) Read(p []byte) (n int, err error)](#Rand.Read)
-    * [type lockedSource struct](#lockedSource)
-        * [func (r *lockedSource) Int63() (n int64)](#lockedSource.Int63)
-        * [func (r *lockedSource) Uint64() (n uint64)](#lockedSource.Uint64)
-        * [func (r *lockedSource) Seed(seed int64)](#lockedSource.Seed)
-        * [func (r *lockedSource) seedPos(seed int64, readPos *int8)](#lockedSource.seedPos)
-        * [func (r *lockedSource) read(p []byte, readVal *int64, readPos *int8) (n int, err error)](#lockedSource.read)
-    * [type rngSource struct](#rngSource)
-        * [func (rng *rngSource) Seed(seed int64)](#rngSource.Seed)
-        * [func (rng *rngSource) Int63() int64](#rngSource.Int63)
-        * [func (rng *rngSource) Uint64() uint64](#rngSource.Uint64)
+    * [type Source interface](#Source)
+        * [func NewSource(seed int64) Source](#NewSource)
+    * [type Source64 interface](#Source64)
     * [type Zipf struct](#Zipf)
         * [func NewZipf(r *Rand, s float64, v float64, imax uint64) *Zipf](#NewZipf)
+        * [func (z *Zipf) Uint64() uint64](#Zipf.Uint64)
         * [func (z *Zipf) h(x float64) float64](#Zipf.h)
         * [func (z *Zipf) hinv(x float64) float64](#Zipf.hinv)
-        * [func (z *Zipf) Uint64() uint64](#Zipf.Uint64)
+    * [type lockedSource struct](#lockedSource)
+        * [func (r *lockedSource) Int63() (n int64)](#lockedSource.Int63)
+        * [func (r *lockedSource) Seed(seed int64)](#lockedSource.Seed)
+        * [func (r *lockedSource) Uint64() (n uint64)](#lockedSource.Uint64)
+        * [func (r *lockedSource) read(p []byte, readVal *int64, readPos *int8) (n int, err error)](#lockedSource.read)
+        * [func (r *lockedSource) seedPos(seed int64, readPos *int8)](#lockedSource.seedPos)
+    * [type rngSource struct](#rngSource)
+        * [func (rng *rngSource) Int63() int64](#rngSource.Int63)
+        * [func (rng *rngSource) Seed(seed int64)](#rngSource.Seed)
+        * [func (rng *rngSource) Uint64() uint64](#rngSource.Uint64)
 * [Functions](#func)
-    * [func absInt32(i int32) uint32](#absInt32)
-    * [func read(p []byte, src Source, readVal *int64, readPos *int8) (n int, err error)](#read)
-    * [func Seed(seed int64)](#Seed)
+    * [func ExpFloat64() float64](#ExpFloat64)
+    * [func Float32() float32](#Float32)
+    * [func Float64() float64](#Float64)
+    * [func GetExponentialDistributionParameters() (float64, [256]uint32, [256]float32, [256]float32)](#GetExponentialDistributionParameters)
+    * [func GetNormalDistributionParameters() (float64, [128]uint32, [128]float32, [128]float32)](#GetNormalDistributionParameters)
+    * [func Int() int](#Int)
+    * [func Int31() int32](#Int31)
+    * [func Int31n(n int32) int32](#Int31n)
+    * [func Int31nForTest(r *Rand, n int32) int32](#Int31nForTest)
     * [func Int63() int64](#Int63)
+    * [func Int63n(n int64) int64](#Int63n)
+    * [func Intn(n int) int](#Intn)
+    * [func NormFloat64() float64](#NormFloat64)
+    * [func Perm(n int) []int](#Perm)
+    * [func Read(p []byte) (n int, err error)](#Read)
+    * [func Seed(seed int64)](#Seed)
+    * [func Shuffle(n int, swap func(i, j int))](#Shuffle)
     * [func Uint32() uint32](#Uint32)
     * [func Uint64() uint64](#Uint64)
-    * [func Int31() int32](#Int31)
-    * [func Int() int](#Int)
-    * [func Int63n(n int64) int64](#Int63n)
-    * [func Int31n(n int32) int32](#Int31n)
-    * [func Intn(n int) int](#Intn)
-    * [func Float64() float64](#Float64)
-    * [func Float32() float32](#Float32)
-    * [func Perm(n int) []int](#Perm)
-    * [func Shuffle(n int, swap func(i, j int))](#Shuffle)
-    * [func Read(p []byte) (n int, err error)](#Read)
-    * [func NormFloat64() float64](#NormFloat64)
-    * [func ExpFloat64() float64](#ExpFloat64)
+    * [func absInt32(i int32) uint32](#absInt32)
+    * [func read(p []byte, src Source, readVal *int64, readPos *int8) (n int, err error)](#read)
     * [func seedrand(x int32) int32](#seedrand)
-    * [func Int31nForTest(r *Rand, n int32) int32](#Int31nForTest)
-    * [func GetNormalDistributionParameters() (float64, [128]uint32, [128]float32, [128]float32)](#GetNormalDistributionParameters)
-    * [func GetExponentialDistributionParameters() (float64, [256]uint32, [256]float32, [256]float32)](#GetExponentialDistributionParameters)
 
 
 ## <a id="const" href="#const">Constants</a>
+
+```
+tags: [package]
+```
+
+### <a id="int32max" href="#int32max">const int32max</a>
+
+```
+searchKey: rand.int32max
+tags: [constant number private]
+```
+
+```Go
+const int32max = (1 << 31) - 1
+```
 
 ### <a id="re" href="#re">const re</a>
 
 ```
 searchKey: rand.re
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -105,7 +120,7 @@ const re = 7.69711747013104972
 
 ```
 searchKey: rand.rn
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -116,119 +131,68 @@ const rn = 3.442619855899
 
 ```
 searchKey: rand.rngLen
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
 const rngLen = 607
 ```
 
-### <a id="rngTap" href="#rngTap">const rngTap</a>
-
-```
-searchKey: rand.rngTap
-tags: [private]
-```
-
-```Go
-const rngTap = 273
-```
-
-### <a id="rngMax" href="#rngMax">const rngMax</a>
-
-```
-searchKey: rand.rngMax
-tags: [private]
-```
-
-```Go
-const rngMax = 1 << 63
-```
-
 ### <a id="rngMask" href="#rngMask">const rngMask</a>
 
 ```
 searchKey: rand.rngMask
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
 const rngMask = rngMax - 1
 ```
 
-### <a id="int32max" href="#int32max">const int32max</a>
+### <a id="rngMax" href="#rngMax">const rngMax</a>
 
 ```
-searchKey: rand.int32max
-tags: [private]
+searchKey: rand.rngMax
+tags: [constant number private]
 ```
 
 ```Go
-const int32max = (1 << 31) - 1
+const rngMax = 1 << 63
+```
+
+### <a id="rngTap" href="#rngTap">const rngTap</a>
+
+```
+searchKey: rand.rngTap
+tags: [constant number private]
+```
+
+```Go
+const rngTap = 273
 ```
 
 ## <a id="var" href="#var">Variables</a>
 
-### <a id="ke" href="#ke">var ke</a>
-
 ```
-searchKey: rand.ke
-tags: [private]
-```
-
-```Go
-var ke = ...
-```
-
-### <a id="we" href="#we">var we</a>
-
-```
-searchKey: rand.we
-tags: [private]
-```
-
-```Go
-var we = ...
+tags: [package]
 ```
 
 ### <a id="fe" href="#fe">var fe</a>
 
 ```
 searchKey: rand.fe
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
 var fe = ...
 ```
 
-### <a id="kn" href="#kn">var kn</a>
-
-```
-searchKey: rand.kn
-tags: [private]
-```
-
-```Go
-var kn = ...
-```
-
-### <a id="wn" href="#wn">var wn</a>
-
-```
-searchKey: rand.wn
-tags: [private]
-```
-
-```Go
-var wn = ...
-```
-
 ### <a id="fn" href="#fn">var fn</a>
 
 ```
 searchKey: rand.fn
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -239,18 +203,40 @@ var fn = ...
 
 ```
 searchKey: rand.globalRand
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
 var globalRand = New(&lockedSource{src: NewSource(1).(*rngSource)})
 ```
 
+### <a id="ke" href="#ke">var ke</a>
+
+```
+searchKey: rand.ke
+tags: [variable array number private]
+```
+
+```Go
+var ke = ...
+```
+
+### <a id="kn" href="#kn">var kn</a>
+
+```
+searchKey: rand.kn
+tags: [variable array number private]
+```
+
+```Go
+var kn = ...
+```
+
 ### <a id="rngCooked" href="#rngCooked">var rngCooked</a>
 
 ```
 searchKey: rand.rngCooked
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -259,54 +245,39 @@ var rngCooked [rngLen]int64 = ...
 
 rngCooked used for seeding. See gen_cooked.go for details. 
 
+### <a id="we" href="#we">var we</a>
+
+```
+searchKey: rand.we
+tags: [variable array number private]
+```
+
+```Go
+var we = ...
+```
+
+### <a id="wn" href="#wn">var wn</a>
+
+```
+searchKey: rand.wn
+tags: [variable array number private]
+```
+
+```Go
+var wn = ...
+```
+
 ## <a id="type" href="#type">Types</a>
 
-### <a id="Source" href="#Source">type Source interface</a>
-
 ```
-searchKey: rand.Source
+tags: [package]
 ```
-
-```Go
-type Source interface {
-	Int63() int64
-	Seed(seed int64)
-}
-```
-
-A Source represents a source of uniformly-distributed pseudo-random int64 values in the range [0, 1<<63). 
-
-#### <a id="NewSource" href="#NewSource">func NewSource(seed int64) Source</a>
-
-```
-searchKey: rand.NewSource
-```
-
-```Go
-func NewSource(seed int64) Source
-```
-
-NewSource returns a new pseudo-random Source seeded with the given value. Unlike the default Source used by top-level functions, this source is not safe for concurrent use by multiple goroutines. 
-
-### <a id="Source64" href="#Source64">type Source64 interface</a>
-
-```
-searchKey: rand.Source64
-```
-
-```Go
-type Source64 interface {
-	Source
-	Uint64() uint64
-}
-```
-
-A Source64 is a Source that can also generate uniformly-distributed pseudo-random uint64 values in the range [0, 1<<64) directly. If a Rand r's underlying Source s implements Source64, then r.Uint64 returns the result of one call to s.Uint64 instead of making two calls to s.Int63. 
 
 ### <a id="Rand" href="#Rand">type Rand struct</a>
 
 ```
 searchKey: rand.Rand
+tags: [struct]
 ```
 
 ```Go
@@ -331,6 +302,7 @@ A Rand is a source of random numbers.
 
 ```
 searchKey: rand.New
+tags: [method]
 ```
 
 ```Go
@@ -343,6 +315,7 @@ New returns a new Rand that uses random values from src to generate other random
 
 ```
 searchKey: rand.Rand.ExpFloat64
+tags: [function]
 ```
 
 ```Go
@@ -355,10 +328,115 @@ ExpFloat64 returns an exponentially distributed float64 in the range (0, +math.M
 sample = ExpFloat64() / desiredRateParameter
 
 ```
+#### <a id="Rand.Float32" href="#Rand.Float32">func (r *Rand) Float32() float32</a>
+
+```
+searchKey: rand.Rand.Float32
+tags: [function]
+```
+
+```Go
+func (r *Rand) Float32() float32
+```
+
+Float32 returns, as a float32, a pseudo-random number in the half-open interval [0.0,1.0). 
+
+#### <a id="Rand.Float64" href="#Rand.Float64">func (r *Rand) Float64() float64</a>
+
+```
+searchKey: rand.Rand.Float64
+tags: [function]
+```
+
+```Go
+func (r *Rand) Float64() float64
+```
+
+Float64 returns, as a float64, a pseudo-random number in the half-open interval [0.0,1.0). 
+
+#### <a id="Rand.Int" href="#Rand.Int">func (r *Rand) Int() int</a>
+
+```
+searchKey: rand.Rand.Int
+tags: [function]
+```
+
+```Go
+func (r *Rand) Int() int
+```
+
+Int returns a non-negative pseudo-random int. 
+
+#### <a id="Rand.Int31" href="#Rand.Int31">func (r *Rand) Int31() int32</a>
+
+```
+searchKey: rand.Rand.Int31
+tags: [function]
+```
+
+```Go
+func (r *Rand) Int31() int32
+```
+
+Int31 returns a non-negative pseudo-random 31-bit integer as an int32. 
+
+#### <a id="Rand.Int31n" href="#Rand.Int31n">func (r *Rand) Int31n(n int32) int32</a>
+
+```
+searchKey: rand.Rand.Int31n
+tags: [method]
+```
+
+```Go
+func (r *Rand) Int31n(n int32) int32
+```
+
+Int31n returns, as an int32, a non-negative pseudo-random number in the half-open interval [0,n). It panics if n <= 0. 
+
+#### <a id="Rand.Int63" href="#Rand.Int63">func (r *Rand) Int63() int64</a>
+
+```
+searchKey: rand.Rand.Int63
+tags: [function]
+```
+
+```Go
+func (r *Rand) Int63() int64
+```
+
+Int63 returns a non-negative pseudo-random 63-bit integer as an int64. 
+
+#### <a id="Rand.Int63n" href="#Rand.Int63n">func (r *Rand) Int63n(n int64) int64</a>
+
+```
+searchKey: rand.Rand.Int63n
+tags: [method]
+```
+
+```Go
+func (r *Rand) Int63n(n int64) int64
+```
+
+Int63n returns, as an int64, a non-negative pseudo-random number in the half-open interval [0,n). It panics if n <= 0. 
+
+#### <a id="Rand.Intn" href="#Rand.Intn">func (r *Rand) Intn(n int) int</a>
+
+```
+searchKey: rand.Rand.Intn
+tags: [method]
+```
+
+```Go
+func (r *Rand) Intn(n int) int
+```
+
+Intn returns, as an int, a non-negative pseudo-random number in the half-open interval [0,n). It panics if n <= 0. 
+
 #### <a id="Rand.NormFloat64" href="#Rand.NormFloat64">func (r *Rand) NormFloat64() float64</a>
 
 ```
 searchKey: rand.Rand.NormFloat64
+tags: [function]
 ```
 
 ```Go
@@ -371,10 +449,37 @@ NormFloat64 returns a normally distributed float64 in the range -math.MaxFloat64
 sample = NormFloat64() * desiredStdDev + desiredMean
 
 ```
+#### <a id="Rand.Perm" href="#Rand.Perm">func (r *Rand) Perm(n int) []int</a>
+
+```
+searchKey: rand.Rand.Perm
+tags: [method]
+```
+
+```Go
+func (r *Rand) Perm(n int) []int
+```
+
+Perm returns, as a slice of n ints, a pseudo-random permutation of the integers in the half-open interval [0,n). 
+
+#### <a id="Rand.Read" href="#Rand.Read">func (r *Rand) Read(p []byte) (n int, err error)</a>
+
+```
+searchKey: rand.Rand.Read
+tags: [method]
+```
+
+```Go
+func (r *Rand) Read(p []byte) (n int, err error)
+```
+
+Read generates len(p) random bytes and writes them into p. It always returns len(p) and a nil error. Read should not be called concurrently with any other Rand method. 
+
 #### <a id="Rand.Seed" href="#Rand.Seed">func (r *Rand) Seed(seed int64)</a>
 
 ```
 searchKey: rand.Rand.Seed
+tags: [method]
 ```
 
 ```Go
@@ -383,22 +488,24 @@ func (r *Rand) Seed(seed int64)
 
 Seed uses the provided seed value to initialize the generator to a deterministic state. Seed should not be called concurrently with any other Rand method. 
 
-#### <a id="Rand.Int63" href="#Rand.Int63">func (r *Rand) Int63() int64</a>
+#### <a id="Rand.Shuffle" href="#Rand.Shuffle">func (r *Rand) Shuffle(n int, swap func(i, j int))</a>
 
 ```
-searchKey: rand.Rand.Int63
+searchKey: rand.Rand.Shuffle
+tags: [method]
 ```
 
 ```Go
-func (r *Rand) Int63() int64
+func (r *Rand) Shuffle(n int, swap func(i, j int))
 ```
 
-Int63 returns a non-negative pseudo-random 63-bit integer as an int64. 
+Shuffle pseudo-randomizes the order of elements. n is the number of elements. Shuffle panics if n < 0. swap swaps the elements with indexes i and j. 
 
 #### <a id="Rand.Uint32" href="#Rand.Uint32">func (r *Rand) Uint32() uint32</a>
 
 ```
 searchKey: rand.Rand.Uint32
+tags: [function]
 ```
 
 ```Go
@@ -411,6 +518,7 @@ Uint32 returns a pseudo-random 32-bit value as a uint32.
 
 ```
 searchKey: rand.Rand.Uint64
+tags: [function]
 ```
 
 ```Go
@@ -419,59 +527,11 @@ func (r *Rand) Uint64() uint64
 
 Uint64 returns a pseudo-random 64-bit value as a uint64. 
 
-#### <a id="Rand.Int31" href="#Rand.Int31">func (r *Rand) Int31() int32</a>
-
-```
-searchKey: rand.Rand.Int31
-```
-
-```Go
-func (r *Rand) Int31() int32
-```
-
-Int31 returns a non-negative pseudo-random 31-bit integer as an int32. 
-
-#### <a id="Rand.Int" href="#Rand.Int">func (r *Rand) Int() int</a>
-
-```
-searchKey: rand.Rand.Int
-```
-
-```Go
-func (r *Rand) Int() int
-```
-
-Int returns a non-negative pseudo-random int. 
-
-#### <a id="Rand.Int63n" href="#Rand.Int63n">func (r *Rand) Int63n(n int64) int64</a>
-
-```
-searchKey: rand.Rand.Int63n
-```
-
-```Go
-func (r *Rand) Int63n(n int64) int64
-```
-
-Int63n returns, as an int64, a non-negative pseudo-random number in the half-open interval [0,n). It panics if n <= 0. 
-
-#### <a id="Rand.Int31n" href="#Rand.Int31n">func (r *Rand) Int31n(n int32) int32</a>
-
-```
-searchKey: rand.Rand.Int31n
-```
-
-```Go
-func (r *Rand) Int31n(n int32) int32
-```
-
-Int31n returns, as an int32, a non-negative pseudo-random number in the half-open interval [0,n). It panics if n <= 0. 
-
 #### <a id="Rand.int31n" href="#Rand.int31n">func (r *Rand) int31n(n int32) int32</a>
 
 ```
 searchKey: rand.Rand.int31n
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -482,209 +542,56 @@ int31n returns, as an int32, a non-negative pseudo-random number in the half-ope
 
 For implementation details, see: [https://lemire.me/blog/2016/06/27/a-fast-alternative-to-the-modulo-reduction](https://lemire.me/blog/2016/06/27/a-fast-alternative-to-the-modulo-reduction) [https://lemire.me/blog/2016/06/30/fast-random-shuffling](https://lemire.me/blog/2016/06/30/fast-random-shuffling) 
 
-#### <a id="Rand.Intn" href="#Rand.Intn">func (r *Rand) Intn(n int) int</a>
+### <a id="Source" href="#Source">type Source interface</a>
 
 ```
-searchKey: rand.Rand.Intn
-```
-
-```Go
-func (r *Rand) Intn(n int) int
-```
-
-Intn returns, as an int, a non-negative pseudo-random number in the half-open interval [0,n). It panics if n <= 0. 
-
-#### <a id="Rand.Float64" href="#Rand.Float64">func (r *Rand) Float64() float64</a>
-
-```
-searchKey: rand.Rand.Float64
+searchKey: rand.Source
+tags: [interface]
 ```
 
 ```Go
-func (r *Rand) Float64() float64
-```
-
-Float64 returns, as a float64, a pseudo-random number in the half-open interval [0.0,1.0). 
-
-#### <a id="Rand.Float32" href="#Rand.Float32">func (r *Rand) Float32() float32</a>
-
-```
-searchKey: rand.Rand.Float32
-```
-
-```Go
-func (r *Rand) Float32() float32
-```
-
-Float32 returns, as a float32, a pseudo-random number in the half-open interval [0.0,1.0). 
-
-#### <a id="Rand.Perm" href="#Rand.Perm">func (r *Rand) Perm(n int) []int</a>
-
-```
-searchKey: rand.Rand.Perm
-```
-
-```Go
-func (r *Rand) Perm(n int) []int
-```
-
-Perm returns, as a slice of n ints, a pseudo-random permutation of the integers in the half-open interval [0,n). 
-
-#### <a id="Rand.Shuffle" href="#Rand.Shuffle">func (r *Rand) Shuffle(n int, swap func(i, j int))</a>
-
-```
-searchKey: rand.Rand.Shuffle
-```
-
-```Go
-func (r *Rand) Shuffle(n int, swap func(i, j int))
-```
-
-Shuffle pseudo-randomizes the order of elements. n is the number of elements. Shuffle panics if n < 0. swap swaps the elements with indexes i and j. 
-
-#### <a id="Rand.Read" href="#Rand.Read">func (r *Rand) Read(p []byte) (n int, err error)</a>
-
-```
-searchKey: rand.Rand.Read
-```
-
-```Go
-func (r *Rand) Read(p []byte) (n int, err error)
-```
-
-Read generates len(p) random bytes and writes them into p. It always returns len(p) and a nil error. Read should not be called concurrently with any other Rand method. 
-
-### <a id="lockedSource" href="#lockedSource">type lockedSource struct</a>
-
-```
-searchKey: rand.lockedSource
-tags: [private]
-```
-
-```Go
-type lockedSource struct {
-	lk  sync.Mutex
-	src *rngSource
+type Source interface {
+	Int63() int64
+	Seed(seed int64)
 }
 ```
 
-#### <a id="lockedSource.Int63" href="#lockedSource.Int63">func (r *lockedSource) Int63() (n int64)</a>
+A Source represents a source of uniformly-distributed pseudo-random int64 values in the range [0, 1<<63). 
+
+#### <a id="NewSource" href="#NewSource">func NewSource(seed int64) Source</a>
 
 ```
-searchKey: rand.lockedSource.Int63
-tags: [private]
-```
-
-```Go
-func (r *lockedSource) Int63() (n int64)
-```
-
-#### <a id="lockedSource.Uint64" href="#lockedSource.Uint64">func (r *lockedSource) Uint64() (n uint64)</a>
-
-```
-searchKey: rand.lockedSource.Uint64
-tags: [private]
+searchKey: rand.NewSource
+tags: [method]
 ```
 
 ```Go
-func (r *lockedSource) Uint64() (n uint64)
+func NewSource(seed int64) Source
 ```
 
-#### <a id="lockedSource.Seed" href="#lockedSource.Seed">func (r *lockedSource) Seed(seed int64)</a>
+NewSource returns a new pseudo-random Source seeded with the given value. Unlike the default Source used by top-level functions, this source is not safe for concurrent use by multiple goroutines. 
+
+### <a id="Source64" href="#Source64">type Source64 interface</a>
 
 ```
-searchKey: rand.lockedSource.Seed
-tags: [private]
-```
-
-```Go
-func (r *lockedSource) Seed(seed int64)
-```
-
-#### <a id="lockedSource.seedPos" href="#lockedSource.seedPos">func (r *lockedSource) seedPos(seed int64, readPos *int8)</a>
-
-```
-searchKey: rand.lockedSource.seedPos
-tags: [private]
+searchKey: rand.Source64
+tags: [interface]
 ```
 
 ```Go
-func (r *lockedSource) seedPos(seed int64, readPos *int8)
-```
-
-seedPos implements Seed for a lockedSource without a race condition. 
-
-#### <a id="lockedSource.read" href="#lockedSource.read">func (r *lockedSource) read(p []byte, readVal *int64, readPos *int8) (n int, err error)</a>
-
-```
-searchKey: rand.lockedSource.read
-tags: [private]
-```
-
-```Go
-func (r *lockedSource) read(p []byte, readVal *int64, readPos *int8) (n int, err error)
-```
-
-read implements Read for a lockedSource without a race condition. 
-
-### <a id="rngSource" href="#rngSource">type rngSource struct</a>
-
-```
-searchKey: rand.rngSource
-tags: [private]
-```
-
-```Go
-type rngSource struct {
-	tap  int           // index into vec
-	feed int           // index into vec
-	vec  [rngLen]int64 // current feedback register
+type Source64 interface {
+	Source
+	Uint64() uint64
 }
 ```
 
-#### <a id="rngSource.Seed" href="#rngSource.Seed">func (rng *rngSource) Seed(seed int64)</a>
-
-```
-searchKey: rand.rngSource.Seed
-tags: [private]
-```
-
-```Go
-func (rng *rngSource) Seed(seed int64)
-```
-
-Seed uses the provided seed value to initialize the generator to a deterministic state. 
-
-#### <a id="rngSource.Int63" href="#rngSource.Int63">func (rng *rngSource) Int63() int64</a>
-
-```
-searchKey: rand.rngSource.Int63
-tags: [private]
-```
-
-```Go
-func (rng *rngSource) Int63() int64
-```
-
-Int63 returns a non-negative pseudo-random 63-bit integer as an int64. 
-
-#### <a id="rngSource.Uint64" href="#rngSource.Uint64">func (rng *rngSource) Uint64() uint64</a>
-
-```
-searchKey: rand.rngSource.Uint64
-tags: [private]
-```
-
-```Go
-func (rng *rngSource) Uint64() uint64
-```
-
-Uint64 returns a non-negative pseudo-random 64-bit integer as an uint64. 
+A Source64 is a Source that can also generate uniformly-distributed pseudo-random uint64 values in the range [0, 1<<64) directly. If a Rand r's underlying Source s implements Source64, then r.Uint64 returns the result of one call to s.Uint64 instead of making two calls to s.Int63. 
 
 ### <a id="Zipf" href="#Zipf">type Zipf struct</a>
 
 ```
 searchKey: rand.Zipf
+tags: [struct]
 ```
 
 ```Go
@@ -707,6 +614,7 @@ A Zipf generates Zipf distributed variates.
 
 ```
 searchKey: rand.NewZipf
+tags: [method]
 ```
 
 ```Go
@@ -715,11 +623,24 @@ func NewZipf(r *Rand, s float64, v float64, imax uint64) *Zipf
 
 NewZipf returns a Zipf variate generator. The generator generates values k ∈ [0, imax] such that P(k) is proportional to (v + k) ** (-s). Requirements: s > 1 and v >= 1. 
 
+#### <a id="Zipf.Uint64" href="#Zipf.Uint64">func (z *Zipf) Uint64() uint64</a>
+
+```
+searchKey: rand.Zipf.Uint64
+tags: [function]
+```
+
+```Go
+func (z *Zipf) Uint64() uint64
+```
+
+Uint64 returns a value drawn from the Zipf distribution described by the Zipf object. 
+
 #### <a id="Zipf.h" href="#Zipf.h">func (z *Zipf) h(x float64) float64</a>
 
 ```
 searchKey: rand.Zipf.h
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -730,237 +651,151 @@ func (z *Zipf) h(x float64) float64
 
 ```
 searchKey: rand.Zipf.hinv
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (z *Zipf) hinv(x float64) float64
 ```
 
-#### <a id="Zipf.Uint64" href="#Zipf.Uint64">func (z *Zipf) Uint64() uint64</a>
+### <a id="lockedSource" href="#lockedSource">type lockedSource struct</a>
 
 ```
-searchKey: rand.Zipf.Uint64
+searchKey: rand.lockedSource
+tags: [struct private]
 ```
 
 ```Go
-func (z *Zipf) Uint64() uint64
+type lockedSource struct {
+	lk  sync.Mutex
+	src *rngSource
+}
 ```
 
-Uint64 returns a value drawn from the Zipf distribution described by the Zipf object. 
+#### <a id="lockedSource.Int63" href="#lockedSource.Int63">func (r *lockedSource) Int63() (n int64)</a>
+
+```
+searchKey: rand.lockedSource.Int63
+tags: [function private]
+```
+
+```Go
+func (r *lockedSource) Int63() (n int64)
+```
+
+#### <a id="lockedSource.Seed" href="#lockedSource.Seed">func (r *lockedSource) Seed(seed int64)</a>
+
+```
+searchKey: rand.lockedSource.Seed
+tags: [method private]
+```
+
+```Go
+func (r *lockedSource) Seed(seed int64)
+```
+
+#### <a id="lockedSource.Uint64" href="#lockedSource.Uint64">func (r *lockedSource) Uint64() (n uint64)</a>
+
+```
+searchKey: rand.lockedSource.Uint64
+tags: [function private]
+```
+
+```Go
+func (r *lockedSource) Uint64() (n uint64)
+```
+
+#### <a id="lockedSource.read" href="#lockedSource.read">func (r *lockedSource) read(p []byte, readVal *int64, readPos *int8) (n int, err error)</a>
+
+```
+searchKey: rand.lockedSource.read
+tags: [method private]
+```
+
+```Go
+func (r *lockedSource) read(p []byte, readVal *int64, readPos *int8) (n int, err error)
+```
+
+read implements Read for a lockedSource without a race condition. 
+
+#### <a id="lockedSource.seedPos" href="#lockedSource.seedPos">func (r *lockedSource) seedPos(seed int64, readPos *int8)</a>
+
+```
+searchKey: rand.lockedSource.seedPos
+tags: [method private]
+```
+
+```Go
+func (r *lockedSource) seedPos(seed int64, readPos *int8)
+```
+
+seedPos implements Seed for a lockedSource without a race condition. 
+
+### <a id="rngSource" href="#rngSource">type rngSource struct</a>
+
+```
+searchKey: rand.rngSource
+tags: [struct private]
+```
+
+```Go
+type rngSource struct {
+	tap  int           // index into vec
+	feed int           // index into vec
+	vec  [rngLen]int64 // current feedback register
+}
+```
+
+#### <a id="rngSource.Int63" href="#rngSource.Int63">func (rng *rngSource) Int63() int64</a>
+
+```
+searchKey: rand.rngSource.Int63
+tags: [function private]
+```
+
+```Go
+func (rng *rngSource) Int63() int64
+```
+
+Int63 returns a non-negative pseudo-random 63-bit integer as an int64. 
+
+#### <a id="rngSource.Seed" href="#rngSource.Seed">func (rng *rngSource) Seed(seed int64)</a>
+
+```
+searchKey: rand.rngSource.Seed
+tags: [method private]
+```
+
+```Go
+func (rng *rngSource) Seed(seed int64)
+```
+
+Seed uses the provided seed value to initialize the generator to a deterministic state. 
+
+#### <a id="rngSource.Uint64" href="#rngSource.Uint64">func (rng *rngSource) Uint64() uint64</a>
+
+```
+searchKey: rand.rngSource.Uint64
+tags: [function private]
+```
+
+```Go
+func (rng *rngSource) Uint64() uint64
+```
+
+Uint64 returns a non-negative pseudo-random 64-bit integer as an uint64. 
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="absInt32" href="#absInt32">func absInt32(i int32) uint32</a>
-
 ```
-searchKey: rand.absInt32
-tags: [private]
+tags: [package]
 ```
 
-```Go
-func absInt32(i int32) uint32
-```
-
-### <a id="read" href="#read">func read(p []byte, src Source, readVal *int64, readPos *int8) (n int, err error)</a>
-
-```
-searchKey: rand.read
-tags: [private]
-```
-
-```Go
-func read(p []byte, src Source, readVal *int64, readPos *int8) (n int, err error)
-```
-
-### <a id="Seed" href="#Seed">func Seed(seed int64)</a>
-
-```
-searchKey: rand.Seed
-```
-
-```Go
-func Seed(seed int64)
-```
-
-Seed uses the provided seed value to initialize the default Source to a deterministic state. If Seed is not called, the generator behaves as if seeded by Seed(1). Seed values that have the same remainder when divided by 2³¹-1 generate the same pseudo-random sequence. Seed, unlike the Rand.Seed method, is safe for concurrent use. 
-
-### <a id="Int63" href="#Int63">func Int63() int64</a>
-
-```
-searchKey: rand.Int63
-```
-
-```Go
-func Int63() int64
-```
-
-Int63 returns a non-negative pseudo-random 63-bit integer as an int64 from the default Source. 
-
-### <a id="Uint32" href="#Uint32">func Uint32() uint32</a>
-
-```
-searchKey: rand.Uint32
-```
-
-```Go
-func Uint32() uint32
-```
-
-Uint32 returns a pseudo-random 32-bit value as a uint32 from the default Source. 
-
-### <a id="Uint64" href="#Uint64">func Uint64() uint64</a>
-
-```
-searchKey: rand.Uint64
-```
-
-```Go
-func Uint64() uint64
-```
-
-Uint64 returns a pseudo-random 64-bit value as a uint64 from the default Source. 
-
-### <a id="Int31" href="#Int31">func Int31() int32</a>
-
-```
-searchKey: rand.Int31
-```
-
-```Go
-func Int31() int32
-```
-
-Int31 returns a non-negative pseudo-random 31-bit integer as an int32 from the default Source. 
-
-### <a id="Int" href="#Int">func Int() int</a>
-
-```
-searchKey: rand.Int
-```
-
-```Go
-func Int() int
-```
-
-Int returns a non-negative pseudo-random int from the default Source. 
-
-### <a id="Int63n" href="#Int63n">func Int63n(n int64) int64</a>
-
-```
-searchKey: rand.Int63n
-```
-
-```Go
-func Int63n(n int64) int64
-```
-
-Int63n returns, as an int64, a non-negative pseudo-random number in the half-open interval [0,n) from the default Source. It panics if n <= 0. 
-
-### <a id="Int31n" href="#Int31n">func Int31n(n int32) int32</a>
-
-```
-searchKey: rand.Int31n
-```
-
-```Go
-func Int31n(n int32) int32
-```
-
-Int31n returns, as an int32, a non-negative pseudo-random number in the half-open interval [0,n) from the default Source. It panics if n <= 0. 
-
-### <a id="Intn" href="#Intn">func Intn(n int) int</a>
-
-```
-searchKey: rand.Intn
-```
-
-```Go
-func Intn(n int) int
-```
-
-Intn returns, as an int, a non-negative pseudo-random number in the half-open interval [0,n) from the default Source. It panics if n <= 0. 
-
-### <a id="Float64" href="#Float64">func Float64() float64</a>
-
-```
-searchKey: rand.Float64
-```
-
-```Go
-func Float64() float64
-```
-
-Float64 returns, as a float64, a pseudo-random number in the half-open interval [0.0,1.0) from the default Source. 
-
-### <a id="Float32" href="#Float32">func Float32() float32</a>
-
-```
-searchKey: rand.Float32
-```
-
-```Go
-func Float32() float32
-```
-
-Float32 returns, as a float32, a pseudo-random number in the half-open interval [0.0,1.0) from the default Source. 
-
-### <a id="Perm" href="#Perm">func Perm(n int) []int</a>
-
-```
-searchKey: rand.Perm
-```
-
-```Go
-func Perm(n int) []int
-```
-
-Perm returns, as a slice of n ints, a pseudo-random permutation of the integers in the half-open interval [0,n) from the default Source. 
-
-### <a id="Shuffle" href="#Shuffle">func Shuffle(n int, swap func(i, j int))</a>
-
-```
-searchKey: rand.Shuffle
-```
-
-```Go
-func Shuffle(n int, swap func(i, j int))
-```
-
-Shuffle pseudo-randomizes the order of elements using the default Source. n is the number of elements. Shuffle panics if n < 0. swap swaps the elements with indexes i and j. 
-
-### <a id="Read" href="#Read">func Read(p []byte) (n int, err error)</a>
-
-```
-searchKey: rand.Read
-```
-
-```Go
-func Read(p []byte) (n int, err error)
-```
-
-Read generates len(p) random bytes from the default Source and writes them into p. It always returns len(p) and a nil error. Read, unlike the Rand.Read method, is safe for concurrent use. 
-
-### <a id="NormFloat64" href="#NormFloat64">func NormFloat64() float64</a>
-
-```
-searchKey: rand.NormFloat64
-```
-
-```Go
-func NormFloat64() float64
-```
-
-NormFloat64 returns a normally distributed float64 in the range [-math.MaxFloat64, +math.MaxFloat64] with standard normal distribution (mean = 0, stddev = 1) from the default Source. To produce a different normal distribution, callers can adjust the output using: 
-
-```
-sample = NormFloat64() * desiredStdDev + desiredMean
-
-```
 ### <a id="ExpFloat64" href="#ExpFloat64">func ExpFloat64() float64</a>
 
 ```
 searchKey: rand.ExpFloat64
+tags: [function]
 ```
 
 ```Go
@@ -973,11 +808,265 @@ ExpFloat64 returns an exponentially distributed float64 in the range (0, +math.M
 sample = ExpFloat64() / desiredRateParameter
 
 ```
+### <a id="Float32" href="#Float32">func Float32() float32</a>
+
+```
+searchKey: rand.Float32
+tags: [function]
+```
+
+```Go
+func Float32() float32
+```
+
+Float32 returns, as a float32, a pseudo-random number in the half-open interval [0.0,1.0) from the default Source. 
+
+### <a id="Float64" href="#Float64">func Float64() float64</a>
+
+```
+searchKey: rand.Float64
+tags: [function]
+```
+
+```Go
+func Float64() float64
+```
+
+Float64 returns, as a float64, a pseudo-random number in the half-open interval [0.0,1.0) from the default Source. 
+
+### <a id="GetExponentialDistributionParameters" href="#GetExponentialDistributionParameters">func GetExponentialDistributionParameters() (float64, [256]uint32, [256]float32, [256]float32)</a>
+
+```
+searchKey: rand.GetExponentialDistributionParameters
+tags: [function private]
+```
+
+```Go
+func GetExponentialDistributionParameters() (float64, [256]uint32, [256]float32, [256]float32)
+```
+
+### <a id="GetNormalDistributionParameters" href="#GetNormalDistributionParameters">func GetNormalDistributionParameters() (float64, [128]uint32, [128]float32, [128]float32)</a>
+
+```
+searchKey: rand.GetNormalDistributionParameters
+tags: [function private]
+```
+
+```Go
+func GetNormalDistributionParameters() (float64, [128]uint32, [128]float32, [128]float32)
+```
+
+### <a id="Int" href="#Int">func Int() int</a>
+
+```
+searchKey: rand.Int
+tags: [function]
+```
+
+```Go
+func Int() int
+```
+
+Int returns a non-negative pseudo-random int from the default Source. 
+
+### <a id="Int31" href="#Int31">func Int31() int32</a>
+
+```
+searchKey: rand.Int31
+tags: [function]
+```
+
+```Go
+func Int31() int32
+```
+
+Int31 returns a non-negative pseudo-random 31-bit integer as an int32 from the default Source. 
+
+### <a id="Int31n" href="#Int31n">func Int31n(n int32) int32</a>
+
+```
+searchKey: rand.Int31n
+tags: [method]
+```
+
+```Go
+func Int31n(n int32) int32
+```
+
+Int31n returns, as an int32, a non-negative pseudo-random number in the half-open interval [0,n) from the default Source. It panics if n <= 0. 
+
+### <a id="Int31nForTest" href="#Int31nForTest">func Int31nForTest(r *Rand, n int32) int32</a>
+
+```
+searchKey: rand.Int31nForTest
+tags: [method private]
+```
+
+```Go
+func Int31nForTest(r *Rand, n int32) int32
+```
+
+### <a id="Int63" href="#Int63">func Int63() int64</a>
+
+```
+searchKey: rand.Int63
+tags: [function]
+```
+
+```Go
+func Int63() int64
+```
+
+Int63 returns a non-negative pseudo-random 63-bit integer as an int64 from the default Source. 
+
+### <a id="Int63n" href="#Int63n">func Int63n(n int64) int64</a>
+
+```
+searchKey: rand.Int63n
+tags: [method]
+```
+
+```Go
+func Int63n(n int64) int64
+```
+
+Int63n returns, as an int64, a non-negative pseudo-random number in the half-open interval [0,n) from the default Source. It panics if n <= 0. 
+
+### <a id="Intn" href="#Intn">func Intn(n int) int</a>
+
+```
+searchKey: rand.Intn
+tags: [method]
+```
+
+```Go
+func Intn(n int) int
+```
+
+Intn returns, as an int, a non-negative pseudo-random number in the half-open interval [0,n) from the default Source. It panics if n <= 0. 
+
+### <a id="NormFloat64" href="#NormFloat64">func NormFloat64() float64</a>
+
+```
+searchKey: rand.NormFloat64
+tags: [function]
+```
+
+```Go
+func NormFloat64() float64
+```
+
+NormFloat64 returns a normally distributed float64 in the range [-math.MaxFloat64, +math.MaxFloat64] with standard normal distribution (mean = 0, stddev = 1) from the default Source. To produce a different normal distribution, callers can adjust the output using: 
+
+```
+sample = NormFloat64() * desiredStdDev + desiredMean
+
+```
+### <a id="Perm" href="#Perm">func Perm(n int) []int</a>
+
+```
+searchKey: rand.Perm
+tags: [method]
+```
+
+```Go
+func Perm(n int) []int
+```
+
+Perm returns, as a slice of n ints, a pseudo-random permutation of the integers in the half-open interval [0,n) from the default Source. 
+
+### <a id="Read" href="#Read">func Read(p []byte) (n int, err error)</a>
+
+```
+searchKey: rand.Read
+tags: [method]
+```
+
+```Go
+func Read(p []byte) (n int, err error)
+```
+
+Read generates len(p) random bytes from the default Source and writes them into p. It always returns len(p) and a nil error. Read, unlike the Rand.Read method, is safe for concurrent use. 
+
+### <a id="Seed" href="#Seed">func Seed(seed int64)</a>
+
+```
+searchKey: rand.Seed
+tags: [method]
+```
+
+```Go
+func Seed(seed int64)
+```
+
+Seed uses the provided seed value to initialize the default Source to a deterministic state. If Seed is not called, the generator behaves as if seeded by Seed(1). Seed values that have the same remainder when divided by 2³¹-1 generate the same pseudo-random sequence. Seed, unlike the Rand.Seed method, is safe for concurrent use. 
+
+### <a id="Shuffle" href="#Shuffle">func Shuffle(n int, swap func(i, j int))</a>
+
+```
+searchKey: rand.Shuffle
+tags: [method]
+```
+
+```Go
+func Shuffle(n int, swap func(i, j int))
+```
+
+Shuffle pseudo-randomizes the order of elements using the default Source. n is the number of elements. Shuffle panics if n < 0. swap swaps the elements with indexes i and j. 
+
+### <a id="Uint32" href="#Uint32">func Uint32() uint32</a>
+
+```
+searchKey: rand.Uint32
+tags: [function]
+```
+
+```Go
+func Uint32() uint32
+```
+
+Uint32 returns a pseudo-random 32-bit value as a uint32 from the default Source. 
+
+### <a id="Uint64" href="#Uint64">func Uint64() uint64</a>
+
+```
+searchKey: rand.Uint64
+tags: [function]
+```
+
+```Go
+func Uint64() uint64
+```
+
+Uint64 returns a pseudo-random 64-bit value as a uint64 from the default Source. 
+
+### <a id="absInt32" href="#absInt32">func absInt32(i int32) uint32</a>
+
+```
+searchKey: rand.absInt32
+tags: [method private]
+```
+
+```Go
+func absInt32(i int32) uint32
+```
+
+### <a id="read" href="#read">func read(p []byte, src Source, readVal *int64, readPos *int8) (n int, err error)</a>
+
+```
+searchKey: rand.read
+tags: [method private]
+```
+
+```Go
+func read(p []byte, src Source, readVal *int64, readPos *int8) (n int, err error)
+```
+
 ### <a id="seedrand" href="#seedrand">func seedrand(x int32) int32</a>
 
 ```
 searchKey: rand.seedrand
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -985,37 +1074,4 @@ func seedrand(x int32) int32
 ```
 
 seed rng x[n+1] = 48271 * x[n] mod (2**31 - 1) 
-
-### <a id="Int31nForTest" href="#Int31nForTest">func Int31nForTest(r *Rand, n int32) int32</a>
-
-```
-searchKey: rand.Int31nForTest
-tags: [private]
-```
-
-```Go
-func Int31nForTest(r *Rand, n int32) int32
-```
-
-### <a id="GetNormalDistributionParameters" href="#GetNormalDistributionParameters">func GetNormalDistributionParameters() (float64, [128]uint32, [128]float32, [128]float32)</a>
-
-```
-searchKey: rand.GetNormalDistributionParameters
-tags: [private]
-```
-
-```Go
-func GetNormalDistributionParameters() (float64, [128]uint32, [128]float32, [128]float32)
-```
-
-### <a id="GetExponentialDistributionParameters" href="#GetExponentialDistributionParameters">func GetExponentialDistributionParameters() (float64, [256]uint32, [256]float32, [256]float32)</a>
-
-```
-searchKey: rand.GetExponentialDistributionParameters
-tags: [private]
-```
-
-```Go
-func GetExponentialDistributionParameters() (float64, [256]uint32, [256]float32, [256]float32)
-```
 

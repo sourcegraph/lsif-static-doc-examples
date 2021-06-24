@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/search/backend",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/search/backend#requestDuration",
-              "documentation": {
-                "identifier": "requestDuration",
-                "newPage": false,
-                "searchKey": "backend.requestDuration",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var requestDuration"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar requestDuration = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/search/backend#metricListAllCount",
               "documentation": {
                 "identifier": "metricListAllCount",
                 "newPage": false,
                 "searchKey": "backend.metricListAllCount",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -83,34 +65,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/backend#metricListAllWithID",
-              "documentation": {
-                "identifier": "metricListAllWithID",
-                "newPage": false,
-                "searchKey": "backend.metricListAllWithID",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var metricListAllWithID"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar metricListAllWithID = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/search/backend#metricListAllTimestamp",
               "documentation": {
                 "identifier": "metricListAllTimestamp",
                 "newPage": false,
                 "searchKey": "backend.metricListAllTimestamp",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -127,12 +89,62 @@
           },
           {
             "node": {
+              "pathID": "/internal/search/backend#metricListAllWithID",
+              "documentation": {
+                "identifier": "metricListAllWithID",
+                "newPage": false,
+                "searchKey": "backend.metricListAllWithID",
+                "tags": [
+                  "variable",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var metricListAllWithID"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar metricListAllWithID = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/backend#requestDuration",
+              "documentation": {
+                "identifier": "requestDuration",
+                "newPage": false,
+                "searchKey": "backend.requestDuration",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var requestDuration"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar requestDuration = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/search/backend#zoektHTTPClient",
               "documentation": {
                 "identifier": "zoektHTTPClient",
                 "newPage": false,
                 "searchKey": "backend.zoektHTTPClient",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -158,6 +170,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -172,12 +185,36 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/search/backend#EndpointMap",
+              "documentation": {
+                "identifier": "EndpointMap",
+                "newPage": false,
+                "searchKey": "backend.EndpointMap",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type EndpointMap interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype EndpointMap interface {\n\t// Endpoints returns a set of all addresses. Do not modify the returned value.\n\tEndpoints() (map[string]struct{}, error)\n\t// GetMany returns the endpoint for each key. (consistent hashing).\n\tGetMany(...string) ([]string, error)\n}\n```\n\nEndpointMap is the subset of endpoint.Map (consistent hashmap) methods we use. Declared as an interface for testing. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/search/backend#FakeSearcher",
               "documentation": {
                 "identifier": "FakeSearcher",
                 "newPage": false,
                 "searchKey": "backend.FakeSearcher",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -190,12 +227,36 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/internal/search/backend#FakeSearcher.List",
+                    "documentation": {
+                      "identifier": "FakeSearcher.List",
+                      "newPage": false,
+                      "searchKey": "backend.FakeSearcher.List",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ss *FakeSearcher) List(ctx context.Context, q zoektquery.Q) (*zoekt.RepoList, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ss *FakeSearcher) List(ctx context.Context, q zoektquery.Q) (*zoekt.RepoList, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/search/backend#FakeSearcher.Search",
                     "documentation": {
                       "identifier": "FakeSearcher.Search",
                       "newPage": false,
                       "searchKey": "backend.FakeSearcher.Search",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -215,7 +276,9 @@
                       "identifier": "FakeSearcher.StreamSearch",
                       "newPage": false,
                       "searchKey": "backend.FakeSearcher.StreamSearch",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -230,32 +293,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/search/backend#FakeSearcher.List",
-                    "documentation": {
-                      "identifier": "FakeSearcher.List",
-                      "newPage": false,
-                      "searchKey": "backend.FakeSearcher.List",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (ss *FakeSearcher) List(ctx context.Context, q zoektquery.Q) (*zoekt.RepoList, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (ss *FakeSearcher) List(ctx context.Context, q zoektquery.Q) (*zoekt.RepoList, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/search/backend#FakeSearcher.String",
                     "documentation": {
                       "identifier": "FakeSearcher.String",
                       "newPage": false,
                       "searchKey": "backend.FakeSearcher.String",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -278,7 +323,9 @@
                 "identifier": "HorizontalSearcher",
                 "newPage": false,
                 "searchKey": "backend.HorizontalSearcher",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -291,72 +338,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/search/backend#HorizontalSearcher.StreamSearch",
-                    "documentation": {
-                      "identifier": "HorizontalSearcher.StreamSearch",
-                      "newPage": false,
-                      "searchKey": "backend.HorizontalSearcher.StreamSearch",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *HorizontalSearcher) StreamSearch(ctx context.Context, q query.Q, opts *zoekt.SearchOptions, streamer zoekt.Sender) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *HorizontalSearcher) StreamSearch(ctx context.Context, q query.Q, opts *zoekt.SearchOptions, streamer zoekt.Sender) error\n```\n\nStreamSearch does a search which merges the stream from every endpoint in Map. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/search/backend#HorizontalSearcher.Search",
-                    "documentation": {
-                      "identifier": "HorizontalSearcher.Search",
-                      "newPage": false,
-                      "searchKey": "backend.HorizontalSearcher.Search",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *HorizontalSearcher) Search(ctx context.Context, q query.Q, opts *zoekt.SearchOptions) (*zoekt.SearchResult, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *HorizontalSearcher) Search(ctx context.Context, q query.Q, opts *zoekt.SearchOptions) (*zoekt.SearchResult, error)\n```\n\nSearch aggregates search over every endpoint in Map. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/search/backend#HorizontalSearcher.List",
-                    "documentation": {
-                      "identifier": "HorizontalSearcher.List",
-                      "newPage": false,
-                      "searchKey": "backend.HorizontalSearcher.List",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *HorizontalSearcher) List(ctx context.Context, q query.Q) (*zoekt.RepoList, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *HorizontalSearcher) List(ctx context.Context, q query.Q) (*zoekt.RepoList, error)\n```\n\nList aggregates list over every endpoint in Map. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/search/backend#HorizontalSearcher.Close",
                     "documentation": {
                       "identifier": "HorizontalSearcher.Close",
                       "newPage": false,
                       "searchKey": "backend.HorizontalSearcher.Close",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -371,12 +360,80 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/search/backend#HorizontalSearcher.List",
+                    "documentation": {
+                      "identifier": "HorizontalSearcher.List",
+                      "newPage": false,
+                      "searchKey": "backend.HorizontalSearcher.List",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *HorizontalSearcher) List(ctx context.Context, q query.Q) (*zoekt.RepoList, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *HorizontalSearcher) List(ctx context.Context, q query.Q) (*zoekt.RepoList, error)\n```\n\nList aggregates list over every endpoint in Map. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/backend#HorizontalSearcher.Search",
+                    "documentation": {
+                      "identifier": "HorizontalSearcher.Search",
+                      "newPage": false,
+                      "searchKey": "backend.HorizontalSearcher.Search",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *HorizontalSearcher) Search(ctx context.Context, q query.Q, opts *zoekt.SearchOptions) (*zoekt.SearchResult, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *HorizontalSearcher) Search(ctx context.Context, q query.Q, opts *zoekt.SearchOptions) (*zoekt.SearchResult, error)\n```\n\nSearch aggregates search over every endpoint in Map. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/backend#HorizontalSearcher.StreamSearch",
+                    "documentation": {
+                      "identifier": "HorizontalSearcher.StreamSearch",
+                      "newPage": false,
+                      "searchKey": "backend.HorizontalSearcher.StreamSearch",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *HorizontalSearcher) StreamSearch(ctx context.Context, q query.Q, opts *zoekt.SearchOptions, streamer zoekt.Sender) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *HorizontalSearcher) StreamSearch(ctx context.Context, q query.Q, opts *zoekt.SearchOptions, streamer zoekt.Sender) error\n```\n\nStreamSearch does a search which merges the stream from every endpoint in Map. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/search/backend#HorizontalSearcher.String",
                     "documentation": {
                       "identifier": "HorizontalSearcher.String",
                       "newPage": false,
                       "searchKey": "backend.HorizontalSearcher.String",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -397,6 +454,7 @@
                       "newPage": false,
                       "searchKey": "backend.HorizontalSearcher.searchers",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -419,6 +477,7 @@
                       "newPage": false,
                       "searchKey": "backend.HorizontalSearcher.syncSearchers",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -438,42 +497,64 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/backend#dedupper",
+              "pathID": "/internal/search/backend#Indexers",
               "documentation": {
-                "identifier": "dedupper",
+                "identifier": "Indexers",
                 "newPage": false,
-                "searchKey": "backend.dedupper",
+                "searchKey": "backend.Indexers",
                 "tags": [
-                  "private"
+                  "struct"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type dedupper map[string]string"
+                "value": "type Indexers struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype dedupper map[string]string // repoName -> endpoint\n\n```\n\n"
+                "value": "```Go\ntype Indexers struct {\n\t// Map is the desired mapping from repository names to endpoints.\n\tMap EndpointMap\n\n\t// Indexed returns a set of repository names currently indexed on\n\t// endpoint. If indexed fails, it is expected to return an empty set.\n\tIndexed func(ctx context.Context, endpoint string) map[string]struct{}\n}\n```\n\nIndexers provides methods over the set of indexed-search servers in a Sourcegraph cluster. \n\n"
               },
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/search/backend#dedupper.Dedup",
+                    "pathID": "/internal/search/backend#Indexers.Enabled",
                     "documentation": {
-                      "identifier": "dedupper.Dedup",
+                      "identifier": "Indexers.Enabled",
                       "newPage": false,
-                      "searchKey": "backend.dedupper.Dedup",
+                      "searchKey": "backend.Indexers.Enabled",
                       "tags": [
-                        "private"
+                        "function"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (repoEndpoint dedupper) Dedup(endpoint string, fms []zoekt.FileMatch) []zoekt.FileMatch"
+                      "value": "func (c *Indexers) Enabled() bool"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (repoEndpoint dedupper) Dedup(endpoint string, fms []zoekt.FileMatch) []zoekt.FileMatch\n```\n\nDedup will in-place filter out matches on Repositories we have already seen. A Repository has been seen if a previous call to Dedup had a match in it with a different endpoint. \n\n"
+                      "value": "```Go\nfunc (c *Indexers) Enabled() bool\n```\n\nEnabled returns true if this feature is enabled. At first horizontal sharding will be disabled, if so the functions here fallback to single shard behaviour. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/backend#Indexers.ReposSubset",
+                    "documentation": {
+                      "identifier": "Indexers.ReposSubset",
+                      "newPage": false,
+                      "searchKey": "backend.Indexers.ReposSubset",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Indexers) ReposSubset(ctx context.Context, hostname string, indexed map[string]struct{}, repoNames []string) ([]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Indexers) ReposSubset(ctx context.Context, hostname string, indexed map[string]struct{}, repoNames []string) ([]string, error)\n```\n\nReposSubset returns the subset of repoNames that hostname should index. \n\nReposSubset reuses the underlying array of repoNames. \n\nindexed is the set of repositories currently indexed by hostname. \n\nAn error is returned if hostname is not part of the Indexers endpoints. \n\n"
                     },
                     "children": null
                   }
@@ -483,34 +564,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/backend#zoektIndexOptions",
-              "documentation": {
-                "identifier": "zoektIndexOptions",
-                "newPage": false,
-                "searchKey": "backend.zoektIndexOptions",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type zoektIndexOptions struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype zoektIndexOptions struct {\n\t// RepoID is the Sourcegraph Repository ID.\n\tRepoID int32\n\n\t// Public is true if the repository is public and does not require auth\n\t// filtering.\n\tPublic bool\n\n\t// LargeFiles is a slice of glob patterns where matching file paths should\n\t// be indexed regardless of their size. The pattern syntax can be found\n\t// here: https://golang.org/pkg/path/filepath/#Match.\n\tLargeFiles []string\n\n\t// Symbols if true will make zoekt index the output of ctags.\n\tSymbols bool\n\n\t// Branches is a slice of branches to index.\n\tBranches []zoekt.RepositoryBranch `json:\",omitempty\"`\n\n\t// Priority indicates ranking in results, higher first.\n\tPriority float64 `json:\",omitempty\"`\n\n\t// Error if non-empty indicates the request failed for the repo.\n\tError string `json:\",omitempty\"`\n}\n```\n\nzoektIndexOptions are options which change what we index for a repository. Everytime a repository is indexed by zoekt this structure is fetched. See getIndexOptions in the zoekt codebase. \n\nWe only specify a subset of the fields. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/search/backend#RepoIndexOptions",
               "documentation": {
                 "identifier": "RepoIndexOptions",
                 "newPage": false,
                 "searchKey": "backend.RepoIndexOptions",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -525,194 +586,91 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/backend#EndpointMap",
+              "pathID": "/internal/search/backend#StreamSearchAdapter",
               "documentation": {
-                "identifier": "EndpointMap",
+                "identifier": "StreamSearchAdapter",
                 "newPage": false,
-                "searchKey": "backend.EndpointMap",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type EndpointMap interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype EndpointMap interface {\n\t// Endpoints returns a set of all addresses. Do not modify the returned value.\n\tEndpoints() (map[string]struct{}, error)\n\t// GetMany returns the endpoint for each key. (consistent hashing).\n\tGetMany(...string) ([]string, error)\n}\n```\n\nEndpointMap is the subset of endpoint.Map (consistent hashmap) methods we use. Declared as an interface for testing. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/backend#Indexers",
-              "documentation": {
-                "identifier": "Indexers",
-                "newPage": false,
-                "searchKey": "backend.Indexers",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Indexers struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Indexers struct {\n\t// Map is the desired mapping from repository names to endpoints.\n\tMap EndpointMap\n\n\t// Indexed returns a set of repository names currently indexed on\n\t// endpoint. If indexed fails, it is expected to return an empty set.\n\tIndexed func(ctx context.Context, endpoint string) map[string]struct{}\n}\n```\n\nIndexers provides methods over the set of indexed-search servers in a Sourcegraph cluster. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/search/backend#Indexers.ReposSubset",
-                    "documentation": {
-                      "identifier": "Indexers.ReposSubset",
-                      "newPage": false,
-                      "searchKey": "backend.Indexers.ReposSubset",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Indexers) ReposSubset(ctx context.Context, hostname string, indexed map[string]struct{}, repoNames []string) ([]string, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Indexers) ReposSubset(ctx context.Context, hostname string, indexed map[string]struct{}, repoNames []string) ([]string, error)\n```\n\nReposSubset returns the subset of repoNames that hostname should index. \n\nReposSubset reuses the underlying array of repoNames. \n\nindexed is the set of repositories currently indexed by hostname. \n\nAn error is returned if hostname is not part of the Indexers endpoints. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/search/backend#Indexers.Enabled",
-                    "documentation": {
-                      "identifier": "Indexers.Enabled",
-                      "newPage": false,
-                      "searchKey": "backend.Indexers.Enabled",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Indexers) Enabled() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Indexers) Enabled() bool\n```\n\nEnabled returns true if this feature is enabled. At first horizontal sharding will be disabled, if so the functions here fallback to single shard behaviour. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/backend#meteredSearcher",
-              "documentation": {
-                "identifier": "meteredSearcher",
-                "newPage": false,
-                "searchKey": "backend.meteredSearcher",
+                "searchKey": "backend.StreamSearchAdapter",
                 "tags": [
-                  "private"
+                  "struct"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type meteredSearcher struct"
+                "value": "type StreamSearchAdapter struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype meteredSearcher struct {\n\tzoekt.Streamer\n\n\thostname string\n}\n```\n\n"
+                "value": "```Go\ntype StreamSearchAdapter struct {\n\tzoekt.Searcher\n}\n```\n\nStreamSearchAdapter adapts a zoekt.Searcher to conform to the StreamSearch interface by calling zoekt.Searcher.Search. \n\n"
               },
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/search/backend#meteredSearcher.StreamSearch",
+                    "pathID": "/internal/search/backend#StreamSearchAdapter.StreamSearch",
                     "documentation": {
-                      "identifier": "meteredSearcher.StreamSearch",
+                      "identifier": "StreamSearchAdapter.StreamSearch",
                       "newPage": false,
-                      "searchKey": "backend.meteredSearcher.StreamSearch",
+                      "searchKey": "backend.StreamSearchAdapter.StreamSearch",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (m *meteredSearcher) StreamSearch(ctx context.Context, q query.Q, opts *zoekt.SearchOptions, c zoekt.Sender) (err error)"
+                      "value": "func (s *StreamSearchAdapter) StreamSearch(ctx context.Context, q query.Q, opts *zoekt.SearchOptions, c zoekt.Sender) error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (m *meteredSearcher) StreamSearch(ctx context.Context, q query.Q, opts *zoekt.SearchOptions, c zoekt.Sender) (err error)\n```\n\n"
+                      "value": "```Go\nfunc (s *StreamSearchAdapter) StreamSearch(ctx context.Context, q query.Q, opts *zoekt.SearchOptions, c zoekt.Sender) error\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/internal/search/backend#meteredSearcher.Search",
+                    "pathID": "/internal/search/backend#StreamSearchAdapter.String",
                     "documentation": {
-                      "identifier": "meteredSearcher.Search",
+                      "identifier": "StreamSearchAdapter.String",
                       "newPage": false,
-                      "searchKey": "backend.meteredSearcher.Search",
+                      "searchKey": "backend.StreamSearchAdapter.String",
                       "tags": [
-                        "private"
+                        "function"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (m *meteredSearcher) Search(ctx context.Context, q query.Q, opts *zoekt.SearchOptions) (*zoekt.SearchResult, error)"
+                      "value": "func (s *StreamSearchAdapter) String() string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (m *meteredSearcher) Search(ctx context.Context, q query.Q, opts *zoekt.SearchOptions) (*zoekt.SearchResult, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/search/backend#meteredSearcher.List",
-                    "documentation": {
-                      "identifier": "meteredSearcher.List",
-                      "newPage": false,
-                      "searchKey": "backend.meteredSearcher.List",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *meteredSearcher) List(ctx context.Context, q query.Q) (*zoekt.RepoList, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *meteredSearcher) List(ctx context.Context, q query.Q) (*zoekt.RepoList, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/search/backend#meteredSearcher.String",
-                    "documentation": {
-                      "identifier": "meteredSearcher.String",
-                      "newPage": false,
-                      "searchKey": "backend.meteredSearcher.String",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *meteredSearcher) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *meteredSearcher) String() string\n```\n\n"
+                      "value": "```Go\nfunc (s *StreamSearchAdapter) String() string\n```\n\n"
                     },
                     "children": null
                   }
                 }
               ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/backend#StreamSearchEvent",
+              "documentation": {
+                "identifier": "StreamSearchEvent",
+                "newPage": false,
+                "searchKey": "backend.StreamSearchEvent",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StreamSearchEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StreamSearchEvent struct {\n\t// SearchResult is non-nil if this event is a search result. These should be\n\t// combined with previous and later SearchResults.\n\tSearchResult *zoekt.SearchResult\n}\n```\n\nStreamSearchEvent has fields optionally set representing events that happen during a search. \n\nThis is a Sourcegraph extension. \n\n"
+              },
+              "children": null
             }
           },
           {
@@ -722,7 +680,9 @@
                 "identifier": "Zoekt",
                 "newPage": false,
                 "searchKey": "backend.Zoekt",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -740,7 +700,9 @@
                       "identifier": "Zoekt.Close",
                       "newPage": false,
                       "searchKey": "backend.Zoekt.Close",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -755,20 +717,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/search/backend#Zoekt.String",
+                    "pathID": "/internal/search/backend#Zoekt.Enabled",
                     "documentation": {
-                      "identifier": "Zoekt.String",
+                      "identifier": "Zoekt.Enabled",
                       "newPage": false,
-                      "searchKey": "backend.Zoekt.String",
-                      "tags": null
+                      "searchKey": "backend.Zoekt.Enabled",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (c *Zoekt) String() string"
+                      "value": "func (c *Zoekt) Enabled() bool"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (c *Zoekt) String() string\n```\n\n"
+                      "value": "```Go\nfunc (c *Zoekt) Enabled() bool\n```\n\nEnabled returns true if Zoekt is enabled. It is enabled if Client is non-nil and it hasn't been disabled by SetEnable. \n\n"
                     },
                     "children": null
                   }
@@ -780,7 +744,9 @@
                       "identifier": "Zoekt.ListAll",
                       "newPage": false,
                       "searchKey": "backend.Zoekt.ListAll",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -800,7 +766,9 @@
                       "identifier": "Zoekt.SetEnabled",
                       "newPage": false,
                       "searchKey": "backend.Zoekt.SetEnabled",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -815,20 +783,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/search/backend#Zoekt.Enabled",
+                    "pathID": "/internal/search/backend#Zoekt.String",
                     "documentation": {
-                      "identifier": "Zoekt.Enabled",
+                      "identifier": "Zoekt.String",
                       "newPage": false,
-                      "searchKey": "backend.Zoekt.Enabled",
-                      "tags": null
+                      "searchKey": "backend.Zoekt.String",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (c *Zoekt) Enabled() bool"
+                      "value": "func (c *Zoekt) String() string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (c *Zoekt) Enabled() bool\n```\n\nEnabled returns true if Zoekt is enabled. It is enabled if Client is non-nil and it hasn't been disabled by SetEnable. \n\n"
+                      "value": "```Go\nfunc (c *Zoekt) String() string\n```\n\n"
                     },
                     "children": null
                   }
@@ -841,6 +811,7 @@
                       "newPage": false,
                       "searchKey": "backend.Zoekt.list",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -863,6 +834,7 @@
                       "newPage": false,
                       "searchKey": "backend.Zoekt.start",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -887,7 +859,9 @@
                 "identifier": "ZoektStreamFunc",
                 "newPage": false,
                 "searchKey": "backend.ZoektStreamFunc",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -905,7 +879,9 @@
                       "identifier": "ZoektStreamFunc.Send",
                       "newPage": false,
                       "searchKey": "backend.ZoektStreamFunc.Send",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -923,248 +899,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/backend#StreamSearchEvent",
-              "documentation": {
-                "identifier": "StreamSearchEvent",
-                "newPage": false,
-                "searchKey": "backend.StreamSearchEvent",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type StreamSearchEvent struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype StreamSearchEvent struct {\n\t// SearchResult is non-nil if this event is a search result. These should be\n\t// combined with previous and later SearchResults.\n\tSearchResult *zoekt.SearchResult\n}\n```\n\nStreamSearchEvent has fields optionally set representing events that happen during a search. \n\nThis is a Sourcegraph extension. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/backend#StreamSearchAdapter",
-              "documentation": {
-                "identifier": "StreamSearchAdapter",
-                "newPage": false,
-                "searchKey": "backend.StreamSearchAdapter",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type StreamSearchAdapter struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype StreamSearchAdapter struct {\n\tzoekt.Searcher\n}\n```\n\nStreamSearchAdapter adapts a zoekt.Searcher to conform to the StreamSearch interface by calling zoekt.Searcher.Search. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/search/backend#StreamSearchAdapter.StreamSearch",
-                    "documentation": {
-                      "identifier": "StreamSearchAdapter.StreamSearch",
-                      "newPage": false,
-                      "searchKey": "backend.StreamSearchAdapter.StreamSearch",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *StreamSearchAdapter) StreamSearch(ctx context.Context, q query.Q, opts *zoekt.SearchOptions, c zoekt.Sender) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *StreamSearchAdapter) StreamSearch(ctx context.Context, q query.Q, opts *zoekt.SearchOptions, c zoekt.Sender) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/search/backend#StreamSearchAdapter.String",
-                    "documentation": {
-                      "identifier": "StreamSearchAdapter.String",
-                      "newPage": false,
-                      "searchKey": "backend.StreamSearchAdapter.String",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *StreamSearchAdapter) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *StreamSearchAdapter) String() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/backend#zoektStream",
-              "documentation": {
-                "identifier": "zoektStream",
-                "newPage": false,
-                "searchKey": "backend.zoektStream",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type zoektStream struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype zoektStream struct {\n\tzoekt.Searcher\n\t*zoektstream.Client\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/backend#mockSearcher",
-              "documentation": {
-                "identifier": "mockSearcher",
-                "newPage": false,
-                "searchKey": "backend.mockSearcher",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type mockSearcher struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype mockSearcher struct {\n\tsearchResult *zoekt.SearchResult\n\tsearchError  error\n\tlistResult   *zoekt.RepoList\n\tlistError    error\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/search/backend#mockSearcher.Search",
-                    "documentation": {
-                      "identifier": "mockSearcher.Search",
-                      "newPage": false,
-                      "searchKey": "backend.mockSearcher.Search",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *mockSearcher) Search(context.Context, query.Q, *zoekt.SearchOptions) (*zoekt.SearchResult, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *mockSearcher) Search(context.Context, query.Q, *zoekt.SearchOptions) (*zoekt.SearchResult, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/search/backend#mockSearcher.StreamSearch",
-                    "documentation": {
-                      "identifier": "mockSearcher.StreamSearch",
-                      "newPage": false,
-                      "searchKey": "backend.mockSearcher.StreamSearch",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *mockSearcher) StreamSearch(ctx context.Context, q query.Q, opts *zoekt.SearchOptions, streamer zoekt.Sender) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *mockSearcher) StreamSearch(ctx context.Context, q query.Q, opts *zoekt.SearchOptions, streamer zoekt.Sender) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/search/backend#mockSearcher.List",
-                    "documentation": {
-                      "identifier": "mockSearcher.List",
-                      "newPage": false,
-                      "searchKey": "backend.mockSearcher.List",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *mockSearcher) List(context.Context, query.Q) (*zoekt.RepoList, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *mockSearcher) List(context.Context, query.Q) (*zoekt.RepoList, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/search/backend#mockSearcher.Close",
-                    "documentation": {
-                      "identifier": "mockSearcher.Close",
-                      "newPage": false,
-                      "searchKey": "backend.mockSearcher.Close",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*mockSearcher) Close()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*mockSearcher) Close()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/search/backend#mockSearcher.String",
-                    "documentation": {
-                      "identifier": "mockSearcher.String",
-                      "newPage": false,
-                      "searchKey": "backend.mockSearcher.String",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*mockSearcher) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*mockSearcher) String() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/search/backend#atomicMap",
               "documentation": {
                 "identifier": "atomicMap",
                 "newPage": false,
                 "searchKey": "backend.atomicMap",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1185,6 +926,7 @@
                       "newPage": false,
                       "searchKey": "backend.atomicMap.Endpoints",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1207,6 +949,7 @@
                       "newPage": false,
                       "searchKey": "backend.atomicMap.GetMany",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1226,12 +969,316 @@
           },
           {
             "node": {
+              "pathID": "/internal/search/backend#dedupper",
+              "documentation": {
+                "identifier": "dedupper",
+                "newPage": false,
+                "searchKey": "backend.dedupper",
+                "tags": [
+                  "object",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type dedupper map[string]string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype dedupper map[string]string // repoName -> endpoint\n\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/backend#dedupper.Dedup",
+                    "documentation": {
+                      "identifier": "dedupper.Dedup",
+                      "newPage": false,
+                      "searchKey": "backend.dedupper.Dedup",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (repoEndpoint dedupper) Dedup(endpoint string, fms []zoekt.FileMatch) []zoekt.FileMatch"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (repoEndpoint dedupper) Dedup(endpoint string, fms []zoekt.FileMatch) []zoekt.FileMatch\n```\n\nDedup will in-place filter out matches on Repositories we have already seen. A Repository has been seen if a previous call to Dedup had a match in it with a different endpoint. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/backend#meteredSearcher",
+              "documentation": {
+                "identifier": "meteredSearcher",
+                "newPage": false,
+                "searchKey": "backend.meteredSearcher",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type meteredSearcher struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype meteredSearcher struct {\n\tzoekt.Streamer\n\n\thostname string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/backend#meteredSearcher.List",
+                    "documentation": {
+                      "identifier": "meteredSearcher.List",
+                      "newPage": false,
+                      "searchKey": "backend.meteredSearcher.List",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *meteredSearcher) List(ctx context.Context, q query.Q) (*zoekt.RepoList, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *meteredSearcher) List(ctx context.Context, q query.Q) (*zoekt.RepoList, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/backend#meteredSearcher.Search",
+                    "documentation": {
+                      "identifier": "meteredSearcher.Search",
+                      "newPage": false,
+                      "searchKey": "backend.meteredSearcher.Search",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *meteredSearcher) Search(ctx context.Context, q query.Q, opts *zoekt.SearchOptions) (*zoekt.SearchResult, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *meteredSearcher) Search(ctx context.Context, q query.Q, opts *zoekt.SearchOptions) (*zoekt.SearchResult, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/backend#meteredSearcher.StreamSearch",
+                    "documentation": {
+                      "identifier": "meteredSearcher.StreamSearch",
+                      "newPage": false,
+                      "searchKey": "backend.meteredSearcher.StreamSearch",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *meteredSearcher) StreamSearch(ctx context.Context, q query.Q, opts *zoekt.SearchOptions, c zoekt.Sender) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *meteredSearcher) StreamSearch(ctx context.Context, q query.Q, opts *zoekt.SearchOptions, c zoekt.Sender) (err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/backend#meteredSearcher.String",
+                    "documentation": {
+                      "identifier": "meteredSearcher.String",
+                      "newPage": false,
+                      "searchKey": "backend.meteredSearcher.String",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *meteredSearcher) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *meteredSearcher) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/backend#mockSearcher",
+              "documentation": {
+                "identifier": "mockSearcher",
+                "newPage": false,
+                "searchKey": "backend.mockSearcher",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type mockSearcher struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype mockSearcher struct {\n\tsearchResult *zoekt.SearchResult\n\tsearchError  error\n\tlistResult   *zoekt.RepoList\n\tlistError    error\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/backend#mockSearcher.Close",
+                    "documentation": {
+                      "identifier": "mockSearcher.Close",
+                      "newPage": false,
+                      "searchKey": "backend.mockSearcher.Close",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*mockSearcher) Close()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*mockSearcher) Close()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/backend#mockSearcher.List",
+                    "documentation": {
+                      "identifier": "mockSearcher.List",
+                      "newPage": false,
+                      "searchKey": "backend.mockSearcher.List",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *mockSearcher) List(context.Context, query.Q) (*zoekt.RepoList, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *mockSearcher) List(context.Context, query.Q) (*zoekt.RepoList, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/backend#mockSearcher.Search",
+                    "documentation": {
+                      "identifier": "mockSearcher.Search",
+                      "newPage": false,
+                      "searchKey": "backend.mockSearcher.Search",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *mockSearcher) Search(context.Context, query.Q, *zoekt.SearchOptions) (*zoekt.SearchResult, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *mockSearcher) Search(context.Context, query.Q, *zoekt.SearchOptions) (*zoekt.SearchResult, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/backend#mockSearcher.StreamSearch",
+                    "documentation": {
+                      "identifier": "mockSearcher.StreamSearch",
+                      "newPage": false,
+                      "searchKey": "backend.mockSearcher.StreamSearch",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *mockSearcher) StreamSearch(ctx context.Context, q query.Q, opts *zoekt.SearchOptions, streamer zoekt.Sender) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *mockSearcher) StreamSearch(ctx context.Context, q query.Q, opts *zoekt.SearchOptions, streamer zoekt.Sender) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/backend#mockSearcher.String",
+                    "documentation": {
+                      "identifier": "mockSearcher.String",
+                      "newPage": false,
+                      "searchKey": "backend.mockSearcher.String",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*mockSearcher) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*mockSearcher) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/search/backend#prefixMap",
               "documentation": {
                 "identifier": "prefixMap",
                 "newPage": false,
                 "searchKey": "backend.prefixMap",
                 "tags": [
+                  "array",
+                  "string",
                   "private"
                 ]
               },
@@ -1252,6 +1299,7 @@
                       "newPage": false,
                       "searchKey": "backend.prefixMap.Endpoints",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1274,6 +1322,7 @@
                       "newPage": false,
                       "searchKey": "backend.prefixMap.GetMany",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1290,6 +1339,52 @@
                 }
               ]
             }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/backend#zoektIndexOptions",
+              "documentation": {
+                "identifier": "zoektIndexOptions",
+                "newPage": false,
+                "searchKey": "backend.zoektIndexOptions",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type zoektIndexOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype zoektIndexOptions struct {\n\t// RepoID is the Sourcegraph Repository ID.\n\tRepoID int32\n\n\t// Public is true if the repository is public and does not require auth\n\t// filtering.\n\tPublic bool\n\n\t// LargeFiles is a slice of glob patterns where matching file paths should\n\t// be indexed regardless of their size. The pattern syntax can be found\n\t// here: https://golang.org/pkg/path/filepath/#Match.\n\tLargeFiles []string\n\n\t// Symbols if true will make zoekt index the output of ctags.\n\tSymbols bool\n\n\t// Branches is a slice of branches to index.\n\tBranches []zoekt.RepositoryBranch `json:\",omitempty\"`\n\n\t// Priority indicates ranking in results, higher first.\n\tPriority float64 `json:\",omitempty\"`\n\n\t// Error if non-empty indicates the request failed for the repo.\n\tError string `json:\",omitempty\"`\n}\n```\n\nzoektIndexOptions are options which change what we index for a repository. Everytime a repository is indexed by zoekt this structure is fetched. See getIndexOptions in the zoekt codebase. \n\nWe only specify a subset of the fields. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/backend#zoektStream",
+              "documentation": {
+                "identifier": "zoektStream",
+                "newPage": false,
+                "searchKey": "backend.zoektStream",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type zoektStream struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype zoektStream struct {\n\tzoekt.Searcher\n\t*zoektstream.Client\n}\n```\n\n"
+              },
+              "children": null
+            }
           }
         ]
       }
@@ -1302,6 +1397,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -1321,7 +1417,9 @@
                 "identifier": "AggregateStreamSearch",
                 "newPage": false,
                 "searchKey": "backend.AggregateStreamSearch",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1336,22 +1434,24 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/backend#equalKeys",
+              "pathID": "/internal/search/backend#BenchmarkDedup",
               "documentation": {
-                "identifier": "equalKeys",
+                "identifier": "BenchmarkDedup",
                 "newPage": false,
-                "searchKey": "backend.equalKeys",
+                "searchKey": "backend.BenchmarkDedup",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func equalKeys(a map[string]zoekt.Streamer, b map[string]struct{}) bool"
+                "value": "func BenchmarkDedup(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc equalKeys(a map[string]zoekt.Streamer, b map[string]struct{}) bool\n```\n\n"
+                "value": "```Go\nfunc BenchmarkDedup(b *testing.B)\n```\n\n"
               },
               "children": null
             }
@@ -1363,7 +1463,9 @@
                 "identifier": "GetIndexOptions",
                 "newPage": false,
                 "searchKey": "backend.GetIndexOptions",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1378,88 +1480,306 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/backend#getIndexOptions",
+              "pathID": "/internal/search/backend#NewMeteredSearcher",
               "documentation": {
-                "identifier": "getIndexOptions",
+                "identifier": "NewMeteredSearcher",
                 "newPage": false,
-                "searchKey": "backend.getIndexOptions",
+                "searchKey": "backend.NewMeteredSearcher",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func getIndexOptions(c *schema.SiteConfiguration,..."
+                "value": "func NewMeteredSearcher(hostname string, z zoekt.Streamer) zoekt.Streamer"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc getIndexOptions(\n\tc *schema.SiteConfiguration,\n\trepoName string,\n\tgetRepoIndexOptions func(repo string) (*RepoIndexOptions, error),\n\tgetSearchContextRevisions func(repo int32) ([]string, error),\n) []byte\n```\n\n"
+                "value": "```Go\nfunc NewMeteredSearcher(hostname string, z zoekt.Streamer) zoekt.Streamer\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/search/backend#getBoolPtr",
+              "pathID": "/internal/search/backend#TestDedupper",
               "documentation": {
-                "identifier": "getBoolPtr",
+                "identifier": "TestDedupper",
                 "newPage": false,
-                "searchKey": "backend.getBoolPtr",
+                "searchKey": "backend.TestDedupper",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func getBoolPtr(b *bool, default_ bool) bool"
+                "value": "func TestDedupper(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc getBoolPtr(b *bool, default_ bool) bool\n```\n\n"
+                "value": "```Go\nfunc TestDedupper(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/search/backend#marshal",
+              "pathID": "/internal/search/backend#TestDoStreamSearch",
               "documentation": {
-                "identifier": "marshal",
+                "identifier": "TestDoStreamSearch",
                 "newPage": false,
-                "searchKey": "backend.marshal",
+                "searchKey": "backend.TestDoStreamSearch",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func marshal(o *zoektIndexOptions) []byte"
+                "value": "func TestDoStreamSearch(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc marshal(o *zoektIndexOptions) []byte\n```\n\n"
+                "value": "```Go\nfunc TestDoStreamSearch(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/search/backend#findEndpoint",
+              "pathID": "/internal/search/backend#TestFindEndpoint",
               "documentation": {
-                "identifier": "findEndpoint",
+                "identifier": "TestFindEndpoint",
                 "newPage": false,
-                "searchKey": "backend.findEndpoint",
+                "searchKey": "backend.TestFindEndpoint",
                 "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFindEndpoint(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFindEndpoint(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/backend#TestGetIndexOptions",
+              "documentation": {
+                "identifier": "TestGetIndexOptions",
+                "newPage": false,
+                "searchKey": "backend.TestGetIndexOptions",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetIndexOptions(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetIndexOptions(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/backend#TestGetIndexOptions_batch",
+              "documentation": {
+                "identifier": "TestGetIndexOptions_batch",
+                "newPage": false,
+                "searchKey": "backend.TestGetIndexOptions_batch",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetIndexOptions_batch(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetIndexOptions_batch(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/backend#TestGetIndexOptions_getVersion",
+              "documentation": {
+                "identifier": "TestGetIndexOptions_getVersion",
+                "newPage": false,
+                "searchKey": "backend.TestGetIndexOptions_getVersion",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetIndexOptions_getVersion(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetIndexOptions_getVersion(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/backend#TestHorizontalSearcher",
+              "documentation": {
+                "identifier": "TestHorizontalSearcher",
+                "newPage": false,
+                "searchKey": "backend.TestHorizontalSearcher",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHorizontalSearcher(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHorizontalSearcher(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/backend#TestReposSubset",
+              "documentation": {
+                "identifier": "TestReposSubset",
+                "newPage": false,
+                "searchKey": "backend.TestReposSubset",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReposSubset(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReposSubset(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/backend#TestSyncSearchers",
+              "documentation": {
+                "identifier": "TestSyncSearchers",
+                "newPage": false,
+                "searchKey": "backend.TestSyncSearchers",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSyncSearchers(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSyncSearchers(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/backend#ZoektDial",
+              "documentation": {
+                "identifier": "ZoektDial",
+                "newPage": false,
+                "searchKey": "backend.ZoektDial",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ZoektDial(endpoint string) zoekt.Streamer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ZoektDial(endpoint string) zoekt.Streamer\n```\n\nZoektDial connects to a Searcher HTTP RPC server at address (host:port). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/backend#backgroundSearch",
+              "documentation": {
+                "identifier": "backgroundSearch",
+                "newPage": false,
+                "searchKey": "backend.backgroundSearch",
+                "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func findEndpoint(eps map[string]struct{}, hostname string) (string, error)"
+                "value": "func backgroundSearch(searcher zoekt.Searcher) func(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc findEndpoint(eps map[string]struct{}, hostname string) (string, error)\n```\n\nfindEndpoint returns the endpoint in eps which matches hostname. \n\n"
+                "value": "```Go\nfunc backgroundSearch(searcher zoekt.Searcher) func(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/backend#boolPtr",
+              "documentation": {
+                "identifier": "boolPtr",
+                "newPage": false,
+                "searchKey": "backend.boolPtr",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func boolPtr(b bool) *bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc boolPtr(b bool) *bool\n```\n\n"
               },
               "children": null
             }
@@ -1472,6 +1792,7 @@
                 "newPage": false,
                 "searchKey": "backend.endpointsString",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1488,20 +1809,138 @@
           },
           {
             "node": {
-              "pathID": "/internal/search/backend#NewMeteredSearcher",
+              "pathID": "/internal/search/backend#equalKeys",
               "documentation": {
-                "identifier": "NewMeteredSearcher",
+                "identifier": "equalKeys",
                 "newPage": false,
-                "searchKey": "backend.NewMeteredSearcher",
-                "tags": null
+                "searchKey": "backend.equalKeys",
+                "tags": [
+                  "method",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func NewMeteredSearcher(hostname string, z zoekt.Streamer) zoekt.Streamer"
+                "value": "func equalKeys(a map[string]zoekt.Streamer, b map[string]struct{}) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc NewMeteredSearcher(hostname string, z zoekt.Streamer) zoekt.Streamer\n```\n\n"
+                "value": "```Go\nfunc equalKeys(a map[string]zoekt.Streamer, b map[string]struct{}) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/backend#findEndpoint",
+              "documentation": {
+                "identifier": "findEndpoint",
+                "newPage": false,
+                "searchKey": "backend.findEndpoint",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func findEndpoint(eps map[string]struct{}, hostname string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc findEndpoint(eps map[string]struct{}, hostname string) (string, error)\n```\n\nfindEndpoint returns the endpoint in eps which matches hostname. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/backend#getBoolPtr",
+              "documentation": {
+                "identifier": "getBoolPtr",
+                "newPage": false,
+                "searchKey": "backend.getBoolPtr",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getBoolPtr(b *bool, default_ bool) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getBoolPtr(b *bool, default_ bool) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/backend#getIndexOptions",
+              "documentation": {
+                "identifier": "getIndexOptions",
+                "newPage": false,
+                "searchKey": "backend.getIndexOptions",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getIndexOptions(c *schema.SiteConfiguration,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getIndexOptions(\n\tc *schema.SiteConfiguration,\n\trepoName string,\n\tgetRepoIndexOptions func(repo string) (*RepoIndexOptions, error),\n\tgetSearchContextRevisions func(repo int32) ([]string, error),\n) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/backend#marshal",
+              "documentation": {
+                "identifier": "marshal",
+                "newPage": false,
+                "searchKey": "backend.marshal",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func marshal(o *zoektIndexOptions) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc marshal(o *zoektIndexOptions) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/backend#parseVersionContext",
+              "documentation": {
+                "identifier": "parseVersionContext",
+                "newPage": false,
+                "searchKey": "backend.parseVersionContext",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseVersionContext(name string, repoRevStrs ...string) *schema.VersionContext"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseVersionContext(name string, repoRevStrs ...string) *schema.VersionContext\n```\n\n"
               },
               "children": null
             }
@@ -1514,6 +1953,7 @@
                 "newPage": false,
                 "searchKey": "backend.queryString",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1536,6 +1976,7 @@
                 "newPage": false,
                 "searchKey": "backend.randSleep",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1546,312 +1987,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc randSleep(d, jitter time.Duration)\n```\n\nrandSleep will sleep for an expected d duration with a jitter in [-jitter / 2, jitter / 2]. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/backend#ZoektDial",
-              "documentation": {
-                "identifier": "ZoektDial",
-                "newPage": false,
-                "searchKey": "backend.ZoektDial",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ZoektDial(endpoint string) zoekt.Streamer"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ZoektDial(endpoint string) zoekt.Streamer\n```\n\nZoektDial connects to a Searcher HTTP RPC server at address (host:port). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/backend#TestHorizontalSearcher",
-              "documentation": {
-                "identifier": "TestHorizontalSearcher",
-                "newPage": false,
-                "searchKey": "backend.TestHorizontalSearcher",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestHorizontalSearcher(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestHorizontalSearcher(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/backend#TestDoStreamSearch",
-              "documentation": {
-                "identifier": "TestDoStreamSearch",
-                "newPage": false,
-                "searchKey": "backend.TestDoStreamSearch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDoStreamSearch(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDoStreamSearch(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/backend#TestSyncSearchers",
-              "documentation": {
-                "identifier": "TestSyncSearchers",
-                "newPage": false,
-                "searchKey": "backend.TestSyncSearchers",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSyncSearchers(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSyncSearchers(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/backend#TestDedupper",
-              "documentation": {
-                "identifier": "TestDedupper",
-                "newPage": false,
-                "searchKey": "backend.TestDedupper",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDedupper(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDedupper(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/backend#BenchmarkDedup",
-              "documentation": {
-                "identifier": "BenchmarkDedup",
-                "newPage": false,
-                "searchKey": "backend.BenchmarkDedup",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkDedup(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkDedup(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/backend#backgroundSearch",
-              "documentation": {
-                "identifier": "backgroundSearch",
-                "newPage": false,
-                "searchKey": "backend.backgroundSearch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func backgroundSearch(searcher zoekt.Searcher) func(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc backgroundSearch(searcher zoekt.Searcher) func(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/backend#TestGetIndexOptions",
-              "documentation": {
-                "identifier": "TestGetIndexOptions",
-                "newPage": false,
-                "searchKey": "backend.TestGetIndexOptions",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGetIndexOptions(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGetIndexOptions(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/backend#TestGetIndexOptions_getVersion",
-              "documentation": {
-                "identifier": "TestGetIndexOptions_getVersion",
-                "newPage": false,
-                "searchKey": "backend.TestGetIndexOptions_getVersion",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGetIndexOptions_getVersion(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGetIndexOptions_getVersion(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/backend#TestGetIndexOptions_batch",
-              "documentation": {
-                "identifier": "TestGetIndexOptions_batch",
-                "newPage": false,
-                "searchKey": "backend.TestGetIndexOptions_batch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGetIndexOptions_batch(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGetIndexOptions_batch(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/backend#parseVersionContext",
-              "documentation": {
-                "identifier": "parseVersionContext",
-                "newPage": false,
-                "searchKey": "backend.parseVersionContext",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func parseVersionContext(name string, repoRevStrs ...string) *schema.VersionContext"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc parseVersionContext(name string, repoRevStrs ...string) *schema.VersionContext\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/backend#boolPtr",
-              "documentation": {
-                "identifier": "boolPtr",
-                "newPage": false,
-                "searchKey": "backend.boolPtr",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func boolPtr(b bool) *bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc boolPtr(b bool) *bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/backend#TestReposSubset",
-              "documentation": {
-                "identifier": "TestReposSubset",
-                "newPage": false,
-                "searchKey": "backend.TestReposSubset",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReposSubset(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReposSubset(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/backend#TestFindEndpoint",
-              "documentation": {
-                "identifier": "TestFindEndpoint",
-                "newPage": false,
-                "searchKey": "backend.TestFindEndpoint",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestFindEndpoint(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestFindEndpoint(t *testing.T)\n```\n\n"
               },
               "children": null
             }

@@ -4,7 +4,9 @@
     "identifier": "fstest",
     "newPage": true,
     "searchKey": "testing/fstest",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "MapFS",
                 "newPage": false,
                 "searchKey": "fstest.MapFS",
-                "tags": null
+                "tags": [
+                  "object"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -53,12 +59,36 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/testing/fstest#MapFS.Glob",
+                    "documentation": {
+                      "identifier": "MapFS.Glob",
+                      "newPage": false,
+                      "searchKey": "fstest.MapFS.Glob",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fsys MapFS) Glob(pattern string) ([]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fsys MapFS) Glob(pattern string) ([]string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/testing/fstest#MapFS.Open",
                     "documentation": {
                       "identifier": "MapFS.Open",
                       "newPage": false,
                       "searchKey": "fstest.MapFS.Open",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -73,12 +103,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/testing/fstest#MapFS.ReadDir",
+                    "documentation": {
+                      "identifier": "MapFS.ReadDir",
+                      "newPage": false,
+                      "searchKey": "fstest.MapFS.ReadDir",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fsys MapFS) ReadDir(name string) ([]fs.DirEntry, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fsys MapFS) ReadDir(name string) ([]fs.DirEntry, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/testing/fstest#MapFS.ReadFile",
                     "documentation": {
                       "identifier": "MapFS.ReadFile",
                       "newPage": false,
                       "searchKey": "fstest.MapFS.ReadFile",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -98,7 +152,9 @@
                       "identifier": "MapFS.Stat",
                       "newPage": false,
                       "searchKey": "fstest.MapFS.Stat",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -113,52 +169,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/testing/fstest#MapFS.ReadDir",
-                    "documentation": {
-                      "identifier": "MapFS.ReadDir",
-                      "newPage": false,
-                      "searchKey": "fstest.MapFS.ReadDir",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (fsys MapFS) ReadDir(name string) ([]fs.DirEntry, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (fsys MapFS) ReadDir(name string) ([]fs.DirEntry, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/testing/fstest#MapFS.Glob",
-                    "documentation": {
-                      "identifier": "MapFS.Glob",
-                      "newPage": false,
-                      "searchKey": "fstest.MapFS.Glob",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (fsys MapFS) Glob(pattern string) ([]string, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (fsys MapFS) Glob(pattern string) ([]string, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/testing/fstest#MapFS.Sub",
                     "documentation": {
                       "identifier": "MapFS.Sub",
                       "newPage": false,
                       "searchKey": "fstest.MapFS.Sub",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -181,7 +199,9 @@
                 "identifier": "MapFile",
                 "newPage": false,
                 "searchKey": "fstest.MapFile",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -202,6 +222,7 @@
                 "newPage": false,
                 "searchKey": "fstest.fsOnly",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -218,500 +239,13 @@
           },
           {
             "node": {
-              "pathID": "/testing/fstest#noSub",
-              "documentation": {
-                "identifier": "noSub",
-                "newPage": false,
-                "searchKey": "fstest.noSub",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type noSub struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype noSub struct {\n\tMapFS\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/testing/fstest#noSub.Sub",
-                    "documentation": {
-                      "identifier": "noSub.Sub",
-                      "newPage": false,
-                      "searchKey": "fstest.noSub.Sub",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (noSub) Sub()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (noSub) Sub()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing/fstest#mapFileInfo",
-              "documentation": {
-                "identifier": "mapFileInfo",
-                "newPage": false,
-                "searchKey": "fstest.mapFileInfo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type mapFileInfo struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype mapFileInfo struct {\n\tname string\n\tf    *MapFile\n}\n```\n\nA mapFileInfo implements fs.FileInfo and fs.DirEntry for a given map file. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/testing/fstest#mapFileInfo.Name",
-                    "documentation": {
-                      "identifier": "mapFileInfo.Name",
-                      "newPage": false,
-                      "searchKey": "fstest.mapFileInfo.Name",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (i *mapFileInfo) Name() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (i *mapFileInfo) Name() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/testing/fstest#mapFileInfo.Size",
-                    "documentation": {
-                      "identifier": "mapFileInfo.Size",
-                      "newPage": false,
-                      "searchKey": "fstest.mapFileInfo.Size",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (i *mapFileInfo) Size() int64"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (i *mapFileInfo) Size() int64\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/testing/fstest#mapFileInfo.Mode",
-                    "documentation": {
-                      "identifier": "mapFileInfo.Mode",
-                      "newPage": false,
-                      "searchKey": "fstest.mapFileInfo.Mode",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (i *mapFileInfo) Mode() fs.FileMode"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (i *mapFileInfo) Mode() fs.FileMode\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/testing/fstest#mapFileInfo.Type",
-                    "documentation": {
-                      "identifier": "mapFileInfo.Type",
-                      "newPage": false,
-                      "searchKey": "fstest.mapFileInfo.Type",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (i *mapFileInfo) Type() fs.FileMode"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (i *mapFileInfo) Type() fs.FileMode\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/testing/fstest#mapFileInfo.ModTime",
-                    "documentation": {
-                      "identifier": "mapFileInfo.ModTime",
-                      "newPage": false,
-                      "searchKey": "fstest.mapFileInfo.ModTime",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (i *mapFileInfo) ModTime() time.Time"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (i *mapFileInfo) ModTime() time.Time\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/testing/fstest#mapFileInfo.IsDir",
-                    "documentation": {
-                      "identifier": "mapFileInfo.IsDir",
-                      "newPage": false,
-                      "searchKey": "fstest.mapFileInfo.IsDir",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (i *mapFileInfo) IsDir() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (i *mapFileInfo) IsDir() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/testing/fstest#mapFileInfo.Sys",
-                    "documentation": {
-                      "identifier": "mapFileInfo.Sys",
-                      "newPage": false,
-                      "searchKey": "fstest.mapFileInfo.Sys",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (i *mapFileInfo) Sys() interface{}"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (i *mapFileInfo) Sys() interface{}\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/testing/fstest#mapFileInfo.Info",
-                    "documentation": {
-                      "identifier": "mapFileInfo.Info",
-                      "newPage": false,
-                      "searchKey": "fstest.mapFileInfo.Info",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (i *mapFileInfo) Info() (fs.FileInfo, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (i *mapFileInfo) Info() (fs.FileInfo, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing/fstest#openMapFile",
-              "documentation": {
-                "identifier": "openMapFile",
-                "newPage": false,
-                "searchKey": "fstest.openMapFile",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type openMapFile struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype openMapFile struct {\n\tpath string\n\tmapFileInfo\n\toffset int64\n}\n```\n\nAn openMapFile is a regular (non-directory) fs.File open for reading. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/testing/fstest#openMapFile.Stat",
-                    "documentation": {
-                      "identifier": "openMapFile.Stat",
-                      "newPage": false,
-                      "searchKey": "fstest.openMapFile.Stat",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *openMapFile) Stat() (fs.FileInfo, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *openMapFile) Stat() (fs.FileInfo, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/testing/fstest#openMapFile.Close",
-                    "documentation": {
-                      "identifier": "openMapFile.Close",
-                      "newPage": false,
-                      "searchKey": "fstest.openMapFile.Close",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *openMapFile) Close() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *openMapFile) Close() error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/testing/fstest#openMapFile.Read",
-                    "documentation": {
-                      "identifier": "openMapFile.Read",
-                      "newPage": false,
-                      "searchKey": "fstest.openMapFile.Read",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *openMapFile) Read(b []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *openMapFile) Read(b []byte) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/testing/fstest#openMapFile.Seek",
-                    "documentation": {
-                      "identifier": "openMapFile.Seek",
-                      "newPage": false,
-                      "searchKey": "fstest.openMapFile.Seek",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *openMapFile) Seek(offset int64, whence int) (int64, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *openMapFile) Seek(offset int64, whence int) (int64, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/testing/fstest#openMapFile.ReadAt",
-                    "documentation": {
-                      "identifier": "openMapFile.ReadAt",
-                      "newPage": false,
-                      "searchKey": "fstest.openMapFile.ReadAt",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *openMapFile) ReadAt(b []byte, offset int64) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *openMapFile) ReadAt(b []byte, offset int64) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing/fstest#mapDir",
-              "documentation": {
-                "identifier": "mapDir",
-                "newPage": false,
-                "searchKey": "fstest.mapDir",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type mapDir struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype mapDir struct {\n\tpath string\n\tmapFileInfo\n\tentry  []mapFileInfo\n\toffset int\n}\n```\n\nA mapDir is a directory fs.File (so also an fs.ReadDirFile) open for reading. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/testing/fstest#mapDir.Stat",
-                    "documentation": {
-                      "identifier": "mapDir.Stat",
-                      "newPage": false,
-                      "searchKey": "fstest.mapDir.Stat",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *mapDir) Stat() (fs.FileInfo, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *mapDir) Stat() (fs.FileInfo, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/testing/fstest#mapDir.Close",
-                    "documentation": {
-                      "identifier": "mapDir.Close",
-                      "newPage": false,
-                      "searchKey": "fstest.mapDir.Close",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *mapDir) Close() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *mapDir) Close() error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/testing/fstest#mapDir.Read",
-                    "documentation": {
-                      "identifier": "mapDir.Read",
-                      "newPage": false,
-                      "searchKey": "fstest.mapDir.Read",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *mapDir) Read(b []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *mapDir) Read(b []byte) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/testing/fstest#mapDir.ReadDir",
-                    "documentation": {
-                      "identifier": "mapDir.ReadDir",
-                      "newPage": false,
-                      "searchKey": "fstest.mapDir.ReadDir",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *mapDir) ReadDir(count int) ([]fs.DirEntry, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *mapDir) ReadDir(count int) ([]fs.DirEntry, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/testing/fstest#fsTester",
               "documentation": {
                 "identifier": "fsTester",
                 "newPage": false,
                 "searchKey": "fstest.fsTester",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -726,44 +260,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/testing/fstest#fsTester.errorf",
+                    "pathID": "/testing/fstest#fsTester.checkBadPath",
                     "documentation": {
-                      "identifier": "fsTester.errorf",
+                      "identifier": "fsTester.checkBadPath",
                       "newPage": false,
-                      "searchKey": "fstest.fsTester.errorf",
+                      "searchKey": "fstest.fsTester.checkBadPath",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (t *fsTester) errorf(format string, args ...interface{})"
+                      "value": "func (t *fsTester) checkBadPath(file string, desc string, open func(string) error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (t *fsTester) errorf(format string, args ...interface{})\n```\n\nerrorf adds an error line to errText. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/testing/fstest#fsTester.openDir",
-                    "documentation": {
-                      "identifier": "fsTester.openDir",
-                      "newPage": false,
-                      "searchKey": "fstest.fsTester.openDir",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t *fsTester) openDir(dir string) fs.ReadDirFile"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t *fsTester) openDir(dir string) fs.ReadDirFile\n```\n\n"
+                      "value": "```Go\nfunc (t *fsTester) checkBadPath(file string, desc string, open func(string) error)\n```\n\ncheckBadPath checks that various invalid forms of file's name cannot be opened using open. \n\n"
                     },
                     "children": null
                   }
@@ -776,6 +289,7 @@
                       "newPage": false,
                       "searchKey": "fstest.fsTester.checkDir",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -792,56 +306,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/testing/fstest#fsTester.checkGlob",
-                    "documentation": {
-                      "identifier": "fsTester.checkGlob",
-                      "newPage": false,
-                      "searchKey": "fstest.fsTester.checkGlob",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t *fsTester) checkGlob(dir string, list []fs.DirEntry)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t *fsTester) checkGlob(dir string, list []fs.DirEntry)\n```\n\ncheckGlob checks that various glob patterns work if the file system implements GlobFS. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/testing/fstest#fsTester.checkStat",
-                    "documentation": {
-                      "identifier": "fsTester.checkStat",
-                      "newPage": false,
-                      "searchKey": "fstest.fsTester.checkStat",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t *fsTester) checkStat(path string, entry fs.DirEntry)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t *fsTester) checkStat(path string, entry fs.DirEntry)\n```\n\ncheckStat checks that a direct stat of path matches entry, which was found in the parent's directory listing. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/testing/fstest#fsTester.checkDirList",
                     "documentation": {
                       "identifier": "fsTester.checkDirList",
                       "newPage": false,
                       "searchKey": "fstest.fsTester.checkDirList",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -864,6 +335,7 @@
                       "newPage": false,
                       "searchKey": "fstest.fsTester.checkFile",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -886,6 +358,7 @@
                       "newPage": false,
                       "searchKey": "fstest.fsTester.checkFileRead",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -902,12 +375,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/testing/fstest#fsTester.checkGlob",
+                    "documentation": {
+                      "identifier": "fsTester.checkGlob",
+                      "newPage": false,
+                      "searchKey": "fstest.fsTester.checkGlob",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *fsTester) checkGlob(dir string, list []fs.DirEntry)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *fsTester) checkGlob(dir string, list []fs.DirEntry)\n```\n\ncheckGlob checks that various glob patterns work if the file system implements GlobFS. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/testing/fstest#fsTester.checkOpen",
                     "documentation": {
                       "identifier": "fsTester.checkOpen",
                       "newPage": false,
                       "searchKey": "fstest.fsTester.checkOpen",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -924,22 +421,579 @@
                 },
                 {
                   "node": {
-                    "pathID": "/testing/fstest#fsTester.checkBadPath",
+                    "pathID": "/testing/fstest#fsTester.checkStat",
                     "documentation": {
-                      "identifier": "fsTester.checkBadPath",
+                      "identifier": "fsTester.checkStat",
                       "newPage": false,
-                      "searchKey": "fstest.fsTester.checkBadPath",
+                      "searchKey": "fstest.fsTester.checkStat",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (t *fsTester) checkBadPath(file string, desc string, open func(string) error)"
+                      "value": "func (t *fsTester) checkStat(path string, entry fs.DirEntry)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (t *fsTester) checkBadPath(file string, desc string, open func(string) error)\n```\n\ncheckBadPath checks that various invalid forms of file's name cannot be opened using open. \n\n"
+                      "value": "```Go\nfunc (t *fsTester) checkStat(path string, entry fs.DirEntry)\n```\n\ncheckStat checks that a direct stat of path matches entry, which was found in the parent's directory listing. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/testing/fstest#fsTester.errorf",
+                    "documentation": {
+                      "identifier": "fsTester.errorf",
+                      "newPage": false,
+                      "searchKey": "fstest.fsTester.errorf",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *fsTester) errorf(format string, args ...interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *fsTester) errorf(format string, args ...interface{})\n```\n\nerrorf adds an error line to errText. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/testing/fstest#fsTester.openDir",
+                    "documentation": {
+                      "identifier": "fsTester.openDir",
+                      "newPage": false,
+                      "searchKey": "fstest.fsTester.openDir",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *fsTester) openDir(dir string) fs.ReadDirFile"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *fsTester) openDir(dir string) fs.ReadDirFile\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing/fstest#mapDir",
+              "documentation": {
+                "identifier": "mapDir",
+                "newPage": false,
+                "searchKey": "fstest.mapDir",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type mapDir struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype mapDir struct {\n\tpath string\n\tmapFileInfo\n\tentry  []mapFileInfo\n\toffset int\n}\n```\n\nA mapDir is a directory fs.File (so also an fs.ReadDirFile) open for reading. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/testing/fstest#mapDir.Close",
+                    "documentation": {
+                      "identifier": "mapDir.Close",
+                      "newPage": false,
+                      "searchKey": "fstest.mapDir.Close",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *mapDir) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *mapDir) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/testing/fstest#mapDir.Read",
+                    "documentation": {
+                      "identifier": "mapDir.Read",
+                      "newPage": false,
+                      "searchKey": "fstest.mapDir.Read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *mapDir) Read(b []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *mapDir) Read(b []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/testing/fstest#mapDir.ReadDir",
+                    "documentation": {
+                      "identifier": "mapDir.ReadDir",
+                      "newPage": false,
+                      "searchKey": "fstest.mapDir.ReadDir",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *mapDir) ReadDir(count int) ([]fs.DirEntry, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *mapDir) ReadDir(count int) ([]fs.DirEntry, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/testing/fstest#mapDir.Stat",
+                    "documentation": {
+                      "identifier": "mapDir.Stat",
+                      "newPage": false,
+                      "searchKey": "fstest.mapDir.Stat",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *mapDir) Stat() (fs.FileInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *mapDir) Stat() (fs.FileInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing/fstest#mapFileInfo",
+              "documentation": {
+                "identifier": "mapFileInfo",
+                "newPage": false,
+                "searchKey": "fstest.mapFileInfo",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type mapFileInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype mapFileInfo struct {\n\tname string\n\tf    *MapFile\n}\n```\n\nA mapFileInfo implements fs.FileInfo and fs.DirEntry for a given map file. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/testing/fstest#mapFileInfo.Info",
+                    "documentation": {
+                      "identifier": "mapFileInfo.Info",
+                      "newPage": false,
+                      "searchKey": "fstest.mapFileInfo.Info",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i *mapFileInfo) Info() (fs.FileInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i *mapFileInfo) Info() (fs.FileInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/testing/fstest#mapFileInfo.IsDir",
+                    "documentation": {
+                      "identifier": "mapFileInfo.IsDir",
+                      "newPage": false,
+                      "searchKey": "fstest.mapFileInfo.IsDir",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i *mapFileInfo) IsDir() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i *mapFileInfo) IsDir() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/testing/fstest#mapFileInfo.ModTime",
+                    "documentation": {
+                      "identifier": "mapFileInfo.ModTime",
+                      "newPage": false,
+                      "searchKey": "fstest.mapFileInfo.ModTime",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i *mapFileInfo) ModTime() time.Time"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i *mapFileInfo) ModTime() time.Time\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/testing/fstest#mapFileInfo.Mode",
+                    "documentation": {
+                      "identifier": "mapFileInfo.Mode",
+                      "newPage": false,
+                      "searchKey": "fstest.mapFileInfo.Mode",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i *mapFileInfo) Mode() fs.FileMode"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i *mapFileInfo) Mode() fs.FileMode\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/testing/fstest#mapFileInfo.Name",
+                    "documentation": {
+                      "identifier": "mapFileInfo.Name",
+                      "newPage": false,
+                      "searchKey": "fstest.mapFileInfo.Name",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i *mapFileInfo) Name() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i *mapFileInfo) Name() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/testing/fstest#mapFileInfo.Size",
+                    "documentation": {
+                      "identifier": "mapFileInfo.Size",
+                      "newPage": false,
+                      "searchKey": "fstest.mapFileInfo.Size",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i *mapFileInfo) Size() int64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i *mapFileInfo) Size() int64\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/testing/fstest#mapFileInfo.Sys",
+                    "documentation": {
+                      "identifier": "mapFileInfo.Sys",
+                      "newPage": false,
+                      "searchKey": "fstest.mapFileInfo.Sys",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i *mapFileInfo) Sys() interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i *mapFileInfo) Sys() interface{}\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/testing/fstest#mapFileInfo.Type",
+                    "documentation": {
+                      "identifier": "mapFileInfo.Type",
+                      "newPage": false,
+                      "searchKey": "fstest.mapFileInfo.Type",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i *mapFileInfo) Type() fs.FileMode"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i *mapFileInfo) Type() fs.FileMode\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing/fstest#noSub",
+              "documentation": {
+                "identifier": "noSub",
+                "newPage": false,
+                "searchKey": "fstest.noSub",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type noSub struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype noSub struct {\n\tMapFS\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/testing/fstest#noSub.Sub",
+                    "documentation": {
+                      "identifier": "noSub.Sub",
+                      "newPage": false,
+                      "searchKey": "fstest.noSub.Sub",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (noSub) Sub()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (noSub) Sub()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing/fstest#openMapFile",
+              "documentation": {
+                "identifier": "openMapFile",
+                "newPage": false,
+                "searchKey": "fstest.openMapFile",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type openMapFile struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype openMapFile struct {\n\tpath string\n\tmapFileInfo\n\toffset int64\n}\n```\n\nAn openMapFile is a regular (non-directory) fs.File open for reading. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/testing/fstest#openMapFile.Close",
+                    "documentation": {
+                      "identifier": "openMapFile.Close",
+                      "newPage": false,
+                      "searchKey": "fstest.openMapFile.Close",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *openMapFile) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *openMapFile) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/testing/fstest#openMapFile.Read",
+                    "documentation": {
+                      "identifier": "openMapFile.Read",
+                      "newPage": false,
+                      "searchKey": "fstest.openMapFile.Read",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *openMapFile) Read(b []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *openMapFile) Read(b []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/testing/fstest#openMapFile.ReadAt",
+                    "documentation": {
+                      "identifier": "openMapFile.ReadAt",
+                      "newPage": false,
+                      "searchKey": "fstest.openMapFile.ReadAt",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *openMapFile) ReadAt(b []byte, offset int64) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *openMapFile) ReadAt(b []byte, offset int64) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/testing/fstest#openMapFile.Seek",
+                    "documentation": {
+                      "identifier": "openMapFile.Seek",
+                      "newPage": false,
+                      "searchKey": "fstest.openMapFile.Seek",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *openMapFile) Seek(offset int64, whence int) (int64, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *openMapFile) Seek(offset int64, whence int) (int64, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/testing/fstest#openMapFile.Stat",
+                    "documentation": {
+                      "identifier": "openMapFile.Stat",
+                      "newPage": false,
+                      "searchKey": "fstest.openMapFile.Stat",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *openMapFile) Stat() (fs.FileInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *openMapFile) Stat() (fs.FileInfo, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -957,7 +1011,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -970,12 +1026,38 @@
         "children": [
           {
             "node": {
+              "pathID": "/testing/fstest#TestDash",
+              "documentation": {
+                "identifier": "TestDash",
+                "newPage": false,
+                "searchKey": "fstest.TestDash",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDash(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDash(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/testing/fstest#TestFS",
               "documentation": {
                 "identifier": "TestFS",
                 "newPage": false,
                 "searchKey": "fstest.TestFS",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -990,101 +1072,15 @@
           },
           {
             "node": {
-              "pathID": "/testing/fstest#testFS",
-              "documentation": {
-                "identifier": "testFS",
-                "newPage": false,
-                "searchKey": "fstest.testFS",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testFS(fsys fs.FS, expected ...string) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testFS(fsys fs.FS, expected ...string) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing/fstest#formatEntry",
-              "documentation": {
-                "identifier": "formatEntry",
-                "newPage": false,
-                "searchKey": "fstest.formatEntry",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func formatEntry(entry fs.DirEntry) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc formatEntry(entry fs.DirEntry) string\n```\n\nformatEntry formats an fs.DirEntry into a string for error messages and comparison. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing/fstest#formatInfoEntry",
-              "documentation": {
-                "identifier": "formatInfoEntry",
-                "newPage": false,
-                "searchKey": "fstest.formatInfoEntry",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func formatInfoEntry(info fs.FileInfo) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc formatInfoEntry(info fs.FileInfo) string\n```\n\nformatInfoEntry formats an fs.FileInfo into a string like the result of formatEntry, for error messages and comparison. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing/fstest#formatInfo",
-              "documentation": {
-                "identifier": "formatInfo",
-                "newPage": false,
-                "searchKey": "fstest.formatInfo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func formatInfo(info fs.FileInfo) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc formatInfo(info fs.FileInfo) string\n```\n\nformatInfo formats an fs.FileInfo into a string for error messages and comparison. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/testing/fstest#TestMapFS",
               "documentation": {
                 "identifier": "TestMapFS",
                 "newPage": false,
                 "searchKey": "fstest.TestMapFS",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1106,7 +1102,9 @@
                 "newPage": false,
                 "searchKey": "fstest.TestSymlink",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1122,22 +1120,92 @@
           },
           {
             "node": {
-              "pathID": "/testing/fstest#TestDash",
+              "pathID": "/testing/fstest#formatEntry",
               "documentation": {
-                "identifier": "TestDash",
+                "identifier": "formatEntry",
                 "newPage": false,
-                "searchKey": "fstest.TestDash",
+                "searchKey": "fstest.formatEntry",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestDash(t *testing.T)"
+                "value": "func formatEntry(entry fs.DirEntry) string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestDash(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc formatEntry(entry fs.DirEntry) string\n```\n\nformatEntry formats an fs.DirEntry into a string for error messages and comparison. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing/fstest#formatInfo",
+              "documentation": {
+                "identifier": "formatInfo",
+                "newPage": false,
+                "searchKey": "fstest.formatInfo",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func formatInfo(info fs.FileInfo) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc formatInfo(info fs.FileInfo) string\n```\n\nformatInfo formats an fs.FileInfo into a string for error messages and comparison. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing/fstest#formatInfoEntry",
+              "documentation": {
+                "identifier": "formatInfoEntry",
+                "newPage": false,
+                "searchKey": "fstest.formatInfoEntry",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func formatInfoEntry(info fs.FileInfo) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc formatInfoEntry(info fs.FileInfo) string\n```\n\nformatInfoEntry formats an fs.FileInfo into a string like the result of formatEntry, for error messages and comparison. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing/fstest#testFS",
+              "documentation": {
+                "identifier": "testFS",
+                "newPage": false,
+                "searchKey": "fstest.testFS",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testFS(fsys fs.FS, expected ...string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testFS(fsys fs.FS, expected ...string) error\n```\n\n"
               },
               "children": null
             }

@@ -4,7 +4,9 @@
     "identifier": "envvar",
     "newPage": true,
     "searchKey": "cmd/frontend/envvar",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,10 @@
                 "identifier": "HTTPAddrInternal",
                 "newPage": false,
                 "searchKey": "envvar.HTTPAddrInternal",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -55,34 +62,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/envvar#sourcegraphDotComMode",
-              "documentation": {
-                "identifier": "sourcegraphDotComMode",
-                "newPage": false,
-                "searchKey": "envvar.sourcegraphDotComMode",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var sourcegraphDotComMode"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar sourcegraphDotComMode, _ = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/envvar#disableProfiler",
               "documentation": {
                 "identifier": "disableProfiler",
                 "newPage": false,
                 "searchKey": "envvar.disableProfiler",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
@@ -105,6 +92,8 @@
                 "newPage": false,
                 "searchKey": "envvar.openGraphPreviewServiceURL",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -115,6 +104,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar openGraphPreviewServiceURL = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/envvar#sourcegraphDotComMode",
+              "documentation": {
+                "identifier": "sourcegraphDotComMode",
+                "newPage": false,
+                "searchKey": "envvar.sourcegraphDotComMode",
+                "tags": [
+                  "variable",
+                  "boolean",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sourcegraphDotComMode"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sourcegraphDotComMode, _ = ...\n```\n\n"
               },
               "children": null
             }
@@ -129,7 +142,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -142,52 +157,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/envvar#SourcegraphDotComMode",
-              "documentation": {
-                "identifier": "SourcegraphDotComMode",
-                "newPage": false,
-                "searchKey": "envvar.SourcegraphDotComMode",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SourcegraphDotComMode() bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SourcegraphDotComMode() bool\n```\n\nSourcegraphDotComMode is true if this server is running Sourcegraph.com (solely by checking the SOURCEGRAPHDOTCOM_MODE env var). Sourcegraph.com shows additional marketing and sets up some additional redirects. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/envvar#MockSourcegraphDotComMode",
-              "documentation": {
-                "identifier": "MockSourcegraphDotComMode",
-                "newPage": false,
-                "searchKey": "envvar.MockSourcegraphDotComMode",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func MockSourcegraphDotComMode(value bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc MockSourcegraphDotComMode(value bool)\n```\n\nMockSourcegraphDotComMode is used by tests to mock the result of SourcegraphDotComMode. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/envvar#DisableProfiler",
               "documentation": {
                 "identifier": "DisableProfiler",
                 "newPage": false,
                 "searchKey": "envvar.DisableProfiler",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -202,12 +179,36 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/envvar#MockSourcegraphDotComMode",
+              "documentation": {
+                "identifier": "MockSourcegraphDotComMode",
+                "newPage": false,
+                "searchKey": "envvar.MockSourcegraphDotComMode",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MockSourcegraphDotComMode(value bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MockSourcegraphDotComMode(value bool)\n```\n\nMockSourcegraphDotComMode is used by tests to mock the result of SourcegraphDotComMode. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/envvar#OpenGraphPreviewServiceURL",
               "documentation": {
                 "identifier": "OpenGraphPreviewServiceURL",
                 "newPage": false,
                 "searchKey": "envvar.OpenGraphPreviewServiceURL",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -216,6 +217,28 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc OpenGraphPreviewServiceURL() string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/envvar#SourcegraphDotComMode",
+              "documentation": {
+                "identifier": "SourcegraphDotComMode",
+                "newPage": false,
+                "searchKey": "envvar.SourcegraphDotComMode",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SourcegraphDotComMode() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SourcegraphDotComMode() bool\n```\n\nSourcegraphDotComMode is true if this server is running Sourcegraph.com (solely by checking the SOURCEGRAPHDOTCOM_MODE env var). Sourcegraph.com shows additional marketing and sets up some additional redirects. \n\n"
               },
               "children": null
             }

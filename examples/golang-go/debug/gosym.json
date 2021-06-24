@@ -4,7 +4,9 @@
     "identifier": "gosym",
     "newPage": true,
     "searchKey": "debug/gosym",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,110 +39,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/debug/gosym#verUnknown",
+              "pathID": "/debug/gosym#go116magic",
               "documentation": {
-                "identifier": "verUnknown",
+                "identifier": "go116magic",
                 "newPage": false,
-                "searchKey": "gosym.verUnknown",
+                "searchKey": "gosym.go116magic",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const verUnknown"
+                "value": "const go116magic"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst verUnknown version = iota\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/gosym#ver11",
-              "documentation": {
-                "identifier": "ver11",
-                "newPage": false,
-                "searchKey": "gosym.ver11",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const ver11"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst ver11\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/gosym#ver12",
-              "documentation": {
-                "identifier": "ver12",
-                "newPage": false,
-                "searchKey": "gosym.ver12",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const ver12"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst ver12\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/gosym#ver116",
-              "documentation": {
-                "identifier": "ver116",
-                "newPage": false,
-                "searchKey": "gosym.ver116",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const ver116"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst ver116\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/gosym#oldQuantum",
-              "documentation": {
-                "identifier": "oldQuantum",
-                "newPage": false,
-                "searchKey": "gosym.oldQuantum",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const oldQuantum"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst oldQuantum = 1\n```\n\nNOTE(rsc): This is wrong for GOARCH=arm, which uses a quantum of 4, but we have no idea whether we're using arm or not. This only matters in the old (pre-Go 1.2) symbol table format, so it's not worth fixing. \n\n"
+                "value": "```Go\nconst go116magic = 0xfffffffa\n```\n\n"
               },
               "children": null
             }
@@ -151,6 +69,8 @@
                 "newPage": false,
                 "searchKey": "gosym.go12magic",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -167,22 +87,120 @@
           },
           {
             "node": {
-              "pathID": "/debug/gosym#go116magic",
+              "pathID": "/debug/gosym#oldQuantum",
               "documentation": {
-                "identifier": "go116magic",
+                "identifier": "oldQuantum",
                 "newPage": false,
-                "searchKey": "gosym.go116magic",
+                "searchKey": "gosym.oldQuantum",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const go116magic"
+                "value": "const oldQuantum"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst go116magic = 0xfffffffa\n```\n\n"
+                "value": "```Go\nconst oldQuantum = 1\n```\n\nNOTE(rsc): This is wrong for GOARCH=arm, which uses a quantum of 4, but we have no idea whether we're using arm or not. This only matters in the old (pre-Go 1.2) symbol table format, so it's not worth fixing. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/gosym#ver11",
+              "documentation": {
+                "identifier": "ver11",
+                "newPage": false,
+                "searchKey": "gosym.ver11",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ver11"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ver11\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/gosym#ver116",
+              "documentation": {
+                "identifier": "ver116",
+                "newPage": false,
+                "searchKey": "gosym.ver116",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ver116"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ver116\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/gosym#ver12",
+              "documentation": {
+                "identifier": "ver12",
+                "newPage": false,
+                "searchKey": "gosym.ver12",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ver12"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ver12\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/gosym#verUnknown",
+              "documentation": {
+                "identifier": "verUnknown",
+                "newPage": false,
+                "searchKey": "gosym.verUnknown",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const verUnknown"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst verUnknown version = iota\n```\n\n"
               },
               "children": null
             }
@@ -197,7 +215,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -210,34 +230,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/debug/gosym#littleEndianSymtab",
-              "documentation": {
-                "identifier": "littleEndianSymtab",
-                "newPage": false,
-                "searchKey": "gosym.littleEndianSymtab",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var littleEndianSymtab"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar littleEndianSymtab = []byte{0xFD, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/debug/gosym#bigEndianSymtab",
               "documentation": {
                 "identifier": "bigEndianSymtab",
                 "newPage": false,
                 "searchKey": "gosym.bigEndianSymtab",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -254,12 +255,40 @@
           },
           {
             "node": {
+              "pathID": "/debug/gosym#littleEndianSymtab",
+              "documentation": {
+                "identifier": "littleEndianSymtab",
+                "newPage": false,
+                "searchKey": "gosym.littleEndianSymtab",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var littleEndianSymtab"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar littleEndianSymtab = []byte{0xFD, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/debug/gosym#oldLittleEndianSymtab",
               "documentation": {
                 "identifier": "oldLittleEndianSymtab",
                 "newPage": false,
                 "searchKey": "gosym.oldLittleEndianSymtab",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -282,6 +311,8 @@
                 "newPage": false,
                 "searchKey": "gosym.pclineTempDir",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -304,6 +335,8 @@
                 "newPage": false,
                 "searchKey": "gosym.pclinetestBinary",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -328,7 +361,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -341,22 +376,67 @@
         "children": [
           {
             "node": {
-              "pathID": "/debug/gosym#version",
+              "pathID": "/debug/gosym#DecodingError",
               "documentation": {
-                "identifier": "version",
+                "identifier": "DecodingError",
                 "newPage": false,
-                "searchKey": "gosym.version",
+                "searchKey": "gosym.DecodingError",
                 "tags": [
-                  "private"
+                  "struct"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type version int"
+                "value": "type DecodingError struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype version int\n```\n\nversion of the pclntab \n\n"
+                "value": "```Go\ntype DecodingError struct {\n\toff int\n\tmsg string\n\tval interface{}\n}\n```\n\nDecodingError represents an error during the decoding of the symbol table. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/debug/gosym#DecodingError.Error",
+                    "documentation": {
+                      "identifier": "DecodingError.Error",
+                      "newPage": false,
+                      "searchKey": "gosym.DecodingError.Error",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *DecodingError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *DecodingError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/gosym#Func",
+              "documentation": {
+                "identifier": "Func",
+                "newPage": false,
+                "searchKey": "gosym.Func",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Func struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Func struct {\n\tEntry uint64\n\t*Sym\n\tEnd       uint64\n\tParams    []*Sym // nil for Go 1.3 and later binaries\n\tLocals    []*Sym // nil for Go 1.3 and later binaries\n\tFrameSize int\n\tLineTable *LineTable\n\tObj       *Obj\n}\n```\n\nA Func collects information about a single function. \n\n"
               },
               "children": null
             }
@@ -368,7 +448,9 @@
                 "identifier": "LineTable",
                 "newPage": false,
                 "searchKey": "gosym.LineTable",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -386,7 +468,9 @@
                       "identifier": "NewLineTable",
                       "newPage": false,
                       "searchKey": "gosym.NewLineTable",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -401,78 +485,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/debug/gosym#LineTable.parse",
-                    "documentation": {
-                      "identifier": "LineTable.parse",
-                      "newPage": false,
-                      "searchKey": "gosym.LineTable.parse",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t *LineTable) parse(targetPC uint64, targetLine int) (b []byte, pc uint64, line int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t *LineTable) parse(targetPC uint64, targetLine int) (b []byte, pc uint64, line int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/debug/gosym#LineTable.slice",
-                    "documentation": {
-                      "identifier": "LineTable.slice",
-                      "newPage": false,
-                      "searchKey": "gosym.LineTable.slice",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t *LineTable) slice(pc uint64) *LineTable"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t *LineTable) slice(pc uint64) *LineTable\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/debug/gosym#LineTable.PCToLine",
-                    "documentation": {
-                      "identifier": "LineTable.PCToLine",
-                      "newPage": false,
-                      "searchKey": "gosym.LineTable.PCToLine",
-                      "tags": [
-                        "deprecated"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t *LineTable) PCToLine(pc uint64) int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t *LineTable) PCToLine(pc uint64) int\n```\n\nPCToLine returns the line number for the given program counter. \n\nDeprecated: Use Table's PCToLine method instead. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/debug/gosym#LineTable.LineToPC",
                     "documentation": {
                       "identifier": "LineTable.LineToPC",
                       "newPage": false,
                       "searchKey": "gosym.LineTable.LineToPC",
                       "tags": [
+                        "method",
                         "deprecated"
                       ]
                     },
@@ -489,242 +508,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/debug/gosym#LineTable.isGo12",
+                    "pathID": "/debug/gosym#LineTable.PCToLine",
                     "documentation": {
-                      "identifier": "LineTable.isGo12",
+                      "identifier": "LineTable.PCToLine",
                       "newPage": false,
-                      "searchKey": "gosym.LineTable.isGo12",
+                      "searchKey": "gosym.LineTable.PCToLine",
                       "tags": [
-                        "private"
+                        "method",
+                        "deprecated"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (t *LineTable) isGo12() bool"
+                      "value": "func (t *LineTable) PCToLine(pc uint64) int"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (t *LineTable) isGo12() bool\n```\n\nisGo12 reports whether this is a Go 1.2 (or later) symbol table. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/debug/gosym#LineTable.uintptr",
-                    "documentation": {
-                      "identifier": "LineTable.uintptr",
-                      "newPage": false,
-                      "searchKey": "gosym.LineTable.uintptr",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t *LineTable) uintptr(b []byte) uint64"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t *LineTable) uintptr(b []byte) uint64\n```\n\nuintptr returns the pointer-sized value encoded at b. The pointer size is dictated by the table being read. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/debug/gosym#LineTable.parsePclnTab",
-                    "documentation": {
-                      "identifier": "LineTable.parsePclnTab",
-                      "newPage": false,
-                      "searchKey": "gosym.LineTable.parsePclnTab",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t *LineTable) parsePclnTab()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t *LineTable) parsePclnTab()\n```\n\nparsePclnTab parses the pclntab, setting the version. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/debug/gosym#LineTable.go12Funcs",
-                    "documentation": {
-                      "identifier": "LineTable.go12Funcs",
-                      "newPage": false,
-                      "searchKey": "gosym.LineTable.go12Funcs",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t *LineTable) go12Funcs() []Func"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t *LineTable) go12Funcs() []Func\n```\n\ngo12Funcs returns a slice of Funcs derived from the Go 1.2 pcln table. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/debug/gosym#LineTable.findFunc",
-                    "documentation": {
-                      "identifier": "LineTable.findFunc",
-                      "newPage": false,
-                      "searchKey": "gosym.LineTable.findFunc",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t *LineTable) findFunc(pc uint64) []byte"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t *LineTable) findFunc(pc uint64) []byte\n```\n\nfindFunc returns the func corresponding to the given program counter. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/debug/gosym#LineTable.readvarint",
-                    "documentation": {
-                      "identifier": "LineTable.readvarint",
-                      "newPage": false,
-                      "searchKey": "gosym.LineTable.readvarint",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t *LineTable) readvarint(pp *[]byte) uint32"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t *LineTable) readvarint(pp *[]byte) uint32\n```\n\nreadvarint reads, removes, and returns a varint from *pp. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/debug/gosym#LineTable.funcName",
-                    "documentation": {
-                      "identifier": "LineTable.funcName",
-                      "newPage": false,
-                      "searchKey": "gosym.LineTable.funcName",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t *LineTable) funcName(off uint32) string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t *LineTable) funcName(off uint32) string\n```\n\nfuncName returns the name of the function found at off. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/debug/gosym#LineTable.stringFrom",
-                    "documentation": {
-                      "identifier": "LineTable.stringFrom",
-                      "newPage": false,
-                      "searchKey": "gosym.LineTable.stringFrom",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t *LineTable) stringFrom(arr []byte, off uint32) string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t *LineTable) stringFrom(arr []byte, off uint32) string\n```\n\nstringFrom returns a Go string found at off from a position. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/debug/gosym#LineTable.string",
-                    "documentation": {
-                      "identifier": "LineTable.string",
-                      "newPage": false,
-                      "searchKey": "gosym.LineTable.string",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t *LineTable) string(off uint32) string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t *LineTable) string(off uint32) string\n```\n\nstring returns a Go string found at off. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/debug/gosym#LineTable.step",
-                    "documentation": {
-                      "identifier": "LineTable.step",
-                      "newPage": false,
-                      "searchKey": "gosym.LineTable.step",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t *LineTable) step(p *[]byte, pc *uint64, val *int32, first bool) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t *LineTable) step(p *[]byte, pc *uint64, val *int32, first bool) bool\n```\n\nstep advances to the next pc, value pair in the encoded table. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/debug/gosym#LineTable.pcvalue",
-                    "documentation": {
-                      "identifier": "LineTable.pcvalue",
-                      "newPage": false,
-                      "searchKey": "gosym.LineTable.pcvalue",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t *LineTable) pcvalue(off uint32, entry, targetpc uint64) int32"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t *LineTable) pcvalue(off uint32, entry, targetpc uint64) int32\n```\n\npcvalue reports the value associated with the target pc. off is the offset to the beginning of the pc-value table, and entry is the start PC for the corresponding function. \n\n"
+                      "value": "```Go\nfunc (t *LineTable) PCToLine(pc uint64) int\n```\n\nPCToLine returns the line number for the given program counter. \n\nDeprecated: Use Table's PCToLine method instead. \n\n"
                     },
                     "children": null
                   }
@@ -737,6 +537,7 @@
                       "newPage": false,
                       "searchKey": "gosym.LineTable.findFileLine",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -753,44 +554,69 @@
                 },
                 {
                   "node": {
-                    "pathID": "/debug/gosym#LineTable.go12PCToLine",
+                    "pathID": "/debug/gosym#LineTable.findFunc",
                     "documentation": {
-                      "identifier": "LineTable.go12PCToLine",
+                      "identifier": "LineTable.findFunc",
                       "newPage": false,
-                      "searchKey": "gosym.LineTable.go12PCToLine",
+                      "searchKey": "gosym.LineTable.findFunc",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (t *LineTable) go12PCToLine(pc uint64) (line int)"
+                      "value": "func (t *LineTable) findFunc(pc uint64) []byte"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (t *LineTable) go12PCToLine(pc uint64) (line int)\n```\n\ngo12PCToLine maps program counter to line number for the Go 1.2 pcln table. \n\n"
+                      "value": "```Go\nfunc (t *LineTable) findFunc(pc uint64) []byte\n```\n\nfindFunc returns the func corresponding to the given program counter. \n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/debug/gosym#LineTable.go12PCToFile",
+                    "pathID": "/debug/gosym#LineTable.funcName",
                     "documentation": {
-                      "identifier": "LineTable.go12PCToFile",
+                      "identifier": "LineTable.funcName",
                       "newPage": false,
-                      "searchKey": "gosym.LineTable.go12PCToFile",
+                      "searchKey": "gosym.LineTable.funcName",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (t *LineTable) go12PCToFile(pc uint64) (file string)"
+                      "value": "func (t *LineTable) funcName(off uint32) string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (t *LineTable) go12PCToFile(pc uint64) (file string)\n```\n\ngo12PCToFile maps program counter to file name for the Go 1.2 pcln table. \n\n"
+                      "value": "```Go\nfunc (t *LineTable) funcName(off uint32) string\n```\n\nfuncName returns the name of the function found at off. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/gosym#LineTable.go12Funcs",
+                    "documentation": {
+                      "identifier": "LineTable.go12Funcs",
+                      "newPage": false,
+                      "searchKey": "gosym.LineTable.go12Funcs",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *LineTable) go12Funcs() []Func"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *LineTable) go12Funcs() []Func\n```\n\ngo12Funcs returns a slice of Funcs derived from the Go 1.2 pcln table. \n\n"
                     },
                     "children": null
                   }
@@ -803,6 +629,7 @@
                       "newPage": false,
                       "searchKey": "gosym.LineTable.go12LineToPC",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -819,12 +646,82 @@
                 },
                 {
                   "node": {
+                    "pathID": "/debug/gosym#LineTable.go12MapFiles",
+                    "documentation": {
+                      "identifier": "LineTable.go12MapFiles",
+                      "newPage": false,
+                      "searchKey": "gosym.LineTable.go12MapFiles",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *LineTable) go12MapFiles(m map[string]*Obj, obj *Obj)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *LineTable) go12MapFiles(m map[string]*Obj, obj *Obj)\n```\n\ngo12MapFiles adds to m a key for every file in the Go 1.2 LineTable. Every key maps to obj. That's not a very interesting map, but it provides a way for callers to obtain the list of files in the program. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/gosym#LineTable.go12PCToFile",
+                    "documentation": {
+                      "identifier": "LineTable.go12PCToFile",
+                      "newPage": false,
+                      "searchKey": "gosym.LineTable.go12PCToFile",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *LineTable) go12PCToFile(pc uint64) (file string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *LineTable) go12PCToFile(pc uint64) (file string)\n```\n\ngo12PCToFile maps program counter to file name for the Go 1.2 pcln table. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/gosym#LineTable.go12PCToLine",
+                    "documentation": {
+                      "identifier": "LineTable.go12PCToLine",
+                      "newPage": false,
+                      "searchKey": "gosym.LineTable.go12PCToLine",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *LineTable) go12PCToLine(pc uint64) (line int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *LineTable) go12PCToLine(pc uint64) (line int)\n```\n\ngo12PCToLine maps program counter to line number for the Go 1.2 pcln table. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/debug/gosym#LineTable.initFileMap",
                     "documentation": {
                       "identifier": "LineTable.initFileMap",
                       "newPage": false,
                       "searchKey": "gosym.LineTable.initFileMap",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -841,22 +738,299 @@
                 },
                 {
                   "node": {
-                    "pathID": "/debug/gosym#LineTable.go12MapFiles",
+                    "pathID": "/debug/gosym#LineTable.isGo12",
                     "documentation": {
-                      "identifier": "LineTable.go12MapFiles",
+                      "identifier": "LineTable.isGo12",
                       "newPage": false,
-                      "searchKey": "gosym.LineTable.go12MapFiles",
+                      "searchKey": "gosym.LineTable.isGo12",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (t *LineTable) go12MapFiles(m map[string]*Obj, obj *Obj)"
+                      "value": "func (t *LineTable) isGo12() bool"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (t *LineTable) go12MapFiles(m map[string]*Obj, obj *Obj)\n```\n\ngo12MapFiles adds to m a key for every file in the Go 1.2 LineTable. Every key maps to obj. That's not a very interesting map, but it provides a way for callers to obtain the list of files in the program. \n\n"
+                      "value": "```Go\nfunc (t *LineTable) isGo12() bool\n```\n\nisGo12 reports whether this is a Go 1.2 (or later) symbol table. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/gosym#LineTable.parse",
+                    "documentation": {
+                      "identifier": "LineTable.parse",
+                      "newPage": false,
+                      "searchKey": "gosym.LineTable.parse",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *LineTable) parse(targetPC uint64, targetLine int) (b []byte, pc uint64, line int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *LineTable) parse(targetPC uint64, targetLine int) (b []byte, pc uint64, line int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/gosym#LineTable.parsePclnTab",
+                    "documentation": {
+                      "identifier": "LineTable.parsePclnTab",
+                      "newPage": false,
+                      "searchKey": "gosym.LineTable.parsePclnTab",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *LineTable) parsePclnTab()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *LineTable) parsePclnTab()\n```\n\nparsePclnTab parses the pclntab, setting the version. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/gosym#LineTable.pcvalue",
+                    "documentation": {
+                      "identifier": "LineTable.pcvalue",
+                      "newPage": false,
+                      "searchKey": "gosym.LineTable.pcvalue",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *LineTable) pcvalue(off uint32, entry, targetpc uint64) int32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *LineTable) pcvalue(off uint32, entry, targetpc uint64) int32\n```\n\npcvalue reports the value associated with the target pc. off is the offset to the beginning of the pc-value table, and entry is the start PC for the corresponding function. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/gosym#LineTable.readvarint",
+                    "documentation": {
+                      "identifier": "LineTable.readvarint",
+                      "newPage": false,
+                      "searchKey": "gosym.LineTable.readvarint",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *LineTable) readvarint(pp *[]byte) uint32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *LineTable) readvarint(pp *[]byte) uint32\n```\n\nreadvarint reads, removes, and returns a varint from *pp. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/gosym#LineTable.slice",
+                    "documentation": {
+                      "identifier": "LineTable.slice",
+                      "newPage": false,
+                      "searchKey": "gosym.LineTable.slice",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *LineTable) slice(pc uint64) *LineTable"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *LineTable) slice(pc uint64) *LineTable\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/gosym#LineTable.step",
+                    "documentation": {
+                      "identifier": "LineTable.step",
+                      "newPage": false,
+                      "searchKey": "gosym.LineTable.step",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *LineTable) step(p *[]byte, pc *uint64, val *int32, first bool) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *LineTable) step(p *[]byte, pc *uint64, val *int32, first bool) bool\n```\n\nstep advances to the next pc, value pair in the encoded table. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/gosym#LineTable.string",
+                    "documentation": {
+                      "identifier": "LineTable.string",
+                      "newPage": false,
+                      "searchKey": "gosym.LineTable.string",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *LineTable) string(off uint32) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *LineTable) string(off uint32) string\n```\n\nstring returns a Go string found at off. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/gosym#LineTable.stringFrom",
+                    "documentation": {
+                      "identifier": "LineTable.stringFrom",
+                      "newPage": false,
+                      "searchKey": "gosym.LineTable.stringFrom",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *LineTable) stringFrom(arr []byte, off uint32) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *LineTable) stringFrom(arr []byte, off uint32) string\n```\n\nstringFrom returns a Go string found at off from a position. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/gosym#LineTable.uintptr",
+                    "documentation": {
+                      "identifier": "LineTable.uintptr",
+                      "newPage": false,
+                      "searchKey": "gosym.LineTable.uintptr",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *LineTable) uintptr(b []byte) uint64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *LineTable) uintptr(b []byte) uint64\n```\n\nuintptr returns the pointer-sized value encoded at b. The pointer size is dictated by the table being read. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/gosym#Obj",
+              "documentation": {
+                "identifier": "Obj",
+                "newPage": false,
+                "searchKey": "gosym.Obj",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Obj struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Obj struct {\n\t// Funcs is a list of functions in the Obj.\n\tFuncs []Func\n\n\t// In Go 1.1 and earlier, Paths is a list of symbols corresponding\n\t// to the source file names that produced the Obj.\n\t// In Go 1.2, Paths is nil.\n\t// Use the keys of Table.Files to obtain a list of source files.\n\tPaths []Sym // meta\n}\n```\n\nAn Obj represents a collection of functions in a symbol table. \n\nThe exact method of division of a binary into separate Objs is an internal detail of the symbol table format. \n\nIn early versions of Go each source file became a different Obj. \n\nIn Go 1 and Go 1.1, each package produced one Obj for all Go sources and one Obj per C source file. \n\nIn Go 1.2, there is a single Obj for the entire program. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/debug/gosym#Obj.alineFromLine",
+                    "documentation": {
+                      "identifier": "Obj.alineFromLine",
+                      "newPage": false,
+                      "searchKey": "gosym.Obj.alineFromLine",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (o *Obj) alineFromLine(path string, line int) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (o *Obj) alineFromLine(path string, line int) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/gosym#Obj.lineFromAline",
+                    "documentation": {
+                      "identifier": "Obj.lineFromAline",
+                      "newPage": false,
+                      "searchKey": "gosym.Obj.lineFromAline",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (o *Obj) lineFromAline(aline int) (string, int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (o *Obj) lineFromAline(aline int) (string, int)\n```\n\n"
                     },
                     "children": null
                   }
@@ -871,7 +1045,9 @@
                 "identifier": "Sym",
                 "newPage": false,
                 "searchKey": "gosym.Sym",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -884,20 +1060,22 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/debug/gosym#Sym.Static",
+                    "pathID": "/debug/gosym#Sym.BaseName",
                     "documentation": {
-                      "identifier": "Sym.Static",
+                      "identifier": "Sym.BaseName",
                       "newPage": false,
-                      "searchKey": "gosym.Sym.Static",
-                      "tags": null
+                      "searchKey": "gosym.Sym.BaseName",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (s *Sym) Static() bool"
+                      "value": "func (s *Sym) BaseName() string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (s *Sym) Static() bool\n```\n\nStatic reports whether this symbol is static (not visible outside its file). \n\n"
+                      "value": "```Go\nfunc (s *Sym) BaseName() string\n```\n\nBaseName returns the symbol name without the package or receiver name. \n\n"
                     },
                     "children": null
                   }
@@ -909,7 +1087,9 @@
                       "identifier": "Sym.PackageName",
                       "newPage": false,
                       "searchKey": "gosym.Sym.PackageName",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -929,7 +1109,9 @@
                       "identifier": "Sym.ReceiverName",
                       "newPage": false,
                       "searchKey": "gosym.Sym.ReceiverName",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -944,105 +1126,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/debug/gosym#Sym.BaseName",
+                    "pathID": "/debug/gosym#Sym.Static",
                     "documentation": {
-                      "identifier": "Sym.BaseName",
+                      "identifier": "Sym.Static",
                       "newPage": false,
-                      "searchKey": "gosym.Sym.BaseName",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Sym) BaseName() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Sym) BaseName() string\n```\n\nBaseName returns the symbol name without the package or receiver name. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/gosym#Func",
-              "documentation": {
-                "identifier": "Func",
-                "newPage": false,
-                "searchKey": "gosym.Func",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Func struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Func struct {\n\tEntry uint64\n\t*Sym\n\tEnd       uint64\n\tParams    []*Sym // nil for Go 1.3 and later binaries\n\tLocals    []*Sym // nil for Go 1.3 and later binaries\n\tFrameSize int\n\tLineTable *LineTable\n\tObj       *Obj\n}\n```\n\nA Func collects information about a single function. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/gosym#Obj",
-              "documentation": {
-                "identifier": "Obj",
-                "newPage": false,
-                "searchKey": "gosym.Obj",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Obj struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Obj struct {\n\t// Funcs is a list of functions in the Obj.\n\tFuncs []Func\n\n\t// In Go 1.1 and earlier, Paths is a list of symbols corresponding\n\t// to the source file names that produced the Obj.\n\t// In Go 1.2, Paths is nil.\n\t// Use the keys of Table.Files to obtain a list of source files.\n\tPaths []Sym // meta\n}\n```\n\nAn Obj represents a collection of functions in a symbol table. \n\nThe exact method of division of a binary into separate Objs is an internal detail of the symbol table format. \n\nIn early versions of Go each source file became a different Obj. \n\nIn Go 1 and Go 1.1, each package produced one Obj for all Go sources and one Obj per C source file. \n\nIn Go 1.2, there is a single Obj for the entire program. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/debug/gosym#Obj.lineFromAline",
-                    "documentation": {
-                      "identifier": "Obj.lineFromAline",
-                      "newPage": false,
-                      "searchKey": "gosym.Obj.lineFromAline",
+                      "searchKey": "gosym.Sym.Static",
                       "tags": [
-                        "private"
+                        "function"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (o *Obj) lineFromAline(aline int) (string, int)"
+                      "value": "func (s *Sym) Static() bool"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (o *Obj) lineFromAline(aline int) (string, int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/debug/gosym#Obj.alineFromLine",
-                    "documentation": {
-                      "identifier": "Obj.alineFromLine",
-                      "newPage": false,
-                      "searchKey": "gosym.Obj.alineFromLine",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (o *Obj) alineFromLine(path string, line int) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (o *Obj) alineFromLine(path string, line int) (int, error)\n```\n\n"
+                      "value": "```Go\nfunc (s *Sym) Static() bool\n```\n\nStatic reports whether this symbol is static (not visible outside its file). \n\n"
                     },
                     "children": null
                   }
@@ -1057,7 +1156,9 @@
                 "identifier": "Table",
                 "newPage": false,
                 "searchKey": "gosym.Table",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1075,7 +1176,9 @@
                       "identifier": "NewTable",
                       "newPage": false,
                       "searchKey": "gosym.NewTable",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1090,34 +1193,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/debug/gosym#getTable",
-                    "documentation": {
-                      "identifier": "getTable",
-                      "newPage": false,
-                      "searchKey": "gosym.getTable",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func getTable(t *testing.T) *Table"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc getTable(t *testing.T) *Table\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/debug/gosym#crack",
                     "documentation": {
                       "identifier": "crack",
                       "newPage": false,
                       "searchKey": "gosym.crack",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1134,12 +1216,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/debug/gosym#getTable",
+                    "documentation": {
+                      "identifier": "getTable",
+                      "newPage": false,
+                      "searchKey": "gosym.getTable",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func getTable(t *testing.T) *Table"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc getTable(t *testing.T) *Table\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/debug/gosym#parse",
                     "documentation": {
                       "identifier": "parse",
                       "newPage": false,
                       "searchKey": "gosym.parse",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1156,12 +1262,80 @@
                 },
                 {
                   "node": {
+                    "pathID": "/debug/gosym#Table.LineToPC",
+                    "documentation": {
+                      "identifier": "Table.LineToPC",
+                      "newPage": false,
+                      "searchKey": "gosym.Table.LineToPC",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *Table) LineToPC(file string, line int) (pc uint64, fn *Func, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *Table) LineToPC(file string, line int) (pc uint64, fn *Func, err error)\n```\n\nLineToPC looks up the first program counter on the given line in the named file. It returns UnknownPathError or UnknownLineError if there is an error looking up this line. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/gosym#Table.LookupFunc",
+                    "documentation": {
+                      "identifier": "Table.LookupFunc",
+                      "newPage": false,
+                      "searchKey": "gosym.Table.LookupFunc",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *Table) LookupFunc(name string) *Func"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *Table) LookupFunc(name string) *Func\n```\n\nLookupFunc returns the text, data, or bss symbol with the given name, or nil if no such symbol is found. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/gosym#Table.LookupSym",
+                    "documentation": {
+                      "identifier": "Table.LookupSym",
+                      "newPage": false,
+                      "searchKey": "gosym.Table.LookupSym",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *Table) LookupSym(name string) *Sym"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *Table) LookupSym(name string) *Sym\n```\n\nLookupSym returns the text, data, or bss symbol with the given name, or nil if no such symbol is found. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/debug/gosym#Table.PCToFunc",
                     "documentation": {
                       "identifier": "Table.PCToFunc",
                       "newPage": false,
                       "searchKey": "gosym.Table.PCToFunc",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1181,7 +1355,9 @@
                       "identifier": "Table.PCToLine",
                       "newPage": false,
                       "searchKey": "gosym.Table.PCToLine",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1196,72 +1372,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/debug/gosym#Table.LineToPC",
-                    "documentation": {
-                      "identifier": "Table.LineToPC",
-                      "newPage": false,
-                      "searchKey": "gosym.Table.LineToPC",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t *Table) LineToPC(file string, line int) (pc uint64, fn *Func, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t *Table) LineToPC(file string, line int) (pc uint64, fn *Func, err error)\n```\n\nLineToPC looks up the first program counter on the given line in the named file. It returns UnknownPathError or UnknownLineError if there is an error looking up this line. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/debug/gosym#Table.LookupSym",
-                    "documentation": {
-                      "identifier": "Table.LookupSym",
-                      "newPage": false,
-                      "searchKey": "gosym.Table.LookupSym",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t *Table) LookupSym(name string) *Sym"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t *Table) LookupSym(name string) *Sym\n```\n\nLookupSym returns the text, data, or bss symbol with the given name, or nil if no such symbol is found. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/debug/gosym#Table.LookupFunc",
-                    "documentation": {
-                      "identifier": "Table.LookupFunc",
-                      "newPage": false,
-                      "searchKey": "gosym.Table.LookupFunc",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t *Table) LookupFunc(name string) *Func"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t *Table) LookupFunc(name string) *Func\n```\n\nLookupFunc returns the text, data, or bss symbol with the given name, or nil if no such symbol is found. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/debug/gosym#Table.SymByAddr",
                     "documentation": {
                       "identifier": "Table.SymByAddr",
                       "newPage": false,
                       "searchKey": "gosym.Table.SymByAddr",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1279,34 +1397,14 @@
           },
           {
             "node": {
-              "pathID": "/debug/gosym#sym",
-              "documentation": {
-                "identifier": "sym",
-                "newPage": false,
-                "searchKey": "gosym.sym",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type sym struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype sym struct {\n\tvalue  uint64\n\tgotype uint64\n\ttyp    byte\n\tname   []byte\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/debug/gosym#UnknownFileError",
               "documentation": {
                 "identifier": "UnknownFileError",
                 "newPage": false,
                 "searchKey": "gosym.UnknownFileError",
-                "tags": null
+                "tags": [
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1324,7 +1422,9 @@
                       "identifier": "UnknownFileError.Error",
                       "newPage": false,
                       "searchKey": "gosym.UnknownFileError.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1347,7 +1447,9 @@
                 "identifier": "UnknownLineError",
                 "newPage": false,
                 "searchKey": "gosym.UnknownLineError",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1365,7 +1467,9 @@
                       "identifier": "UnknownLineError.Error",
                       "newPage": false,
                       "searchKey": "gosym.UnknownLineError.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1383,43 +1487,48 @@
           },
           {
             "node": {
-              "pathID": "/debug/gosym#DecodingError",
+              "pathID": "/debug/gosym#sym",
               "documentation": {
-                "identifier": "DecodingError",
+                "identifier": "sym",
                 "newPage": false,
-                "searchKey": "gosym.DecodingError",
-                "tags": null
+                "searchKey": "gosym.sym",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type DecodingError struct"
+                "value": "type sym struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype DecodingError struct {\n\toff int\n\tmsg string\n\tval interface{}\n}\n```\n\nDecodingError represents an error during the decoding of the symbol table. \n\n"
+                "value": "```Go\ntype sym struct {\n\tvalue  uint64\n\tgotype uint64\n\ttyp    byte\n\tname   []byte\n}\n```\n\n"
               },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/debug/gosym#DecodingError.Error",
-                    "documentation": {
-                      "identifier": "DecodingError.Error",
-                      "newPage": false,
-                      "searchKey": "gosym.DecodingError.Error",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *DecodingError) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *DecodingError) Error() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/gosym#version",
+              "documentation": {
+                "identifier": "version",
+                "newPage": false,
+                "searchKey": "gosym.version",
+                "tags": [
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type version int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype version int\n```\n\nversion of the pclntab \n\n"
+              },
+              "children": null
             }
           }
         ]
@@ -1432,7 +1541,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1445,22 +1556,215 @@
         "children": [
           {
             "node": {
-              "pathID": "/debug/gosym#walksymtab",
+              "pathID": "/debug/gosym#Test115PclnParsing",
               "documentation": {
-                "identifier": "walksymtab",
+                "identifier": "Test115PclnParsing",
                 "newPage": false,
-                "searchKey": "gosym.walksymtab",
+                "searchKey": "gosym.Test115PclnParsing",
                 "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Test115PclnParsing(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Test115PclnParsing(t *testing.T)\n```\n\nTest that we can parse a pclntab from 1.15. The file was compiled in /tmp/hello.go: [BEGIN] package main \n\nfunc main() { \n\n```\nprintln(\"hello\")\n\n```\n} [END] \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/gosym#TestIssue29551",
+              "documentation": {
+                "identifier": "TestIssue29551",
+                "newPage": false,
+                "searchKey": "gosym.TestIssue29551",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue29551(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue29551(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/gosym#TestLineAline",
+              "documentation": {
+                "identifier": "TestLineAline",
+                "newPage": false,
+                "searchKey": "gosym.TestLineAline",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLineAline(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLineAline(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/gosym#TestLineFromAline",
+              "documentation": {
+                "identifier": "TestLineFromAline",
+                "newPage": false,
+                "searchKey": "gosym.TestLineFromAline",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLineFromAline(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLineFromAline(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/gosym#TestPCLine",
+              "documentation": {
+                "identifier": "TestPCLine",
+                "newPage": false,
+                "searchKey": "gosym.TestPCLine",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPCLine(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPCLine(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/gosym#TestRemotePackage",
+              "documentation": {
+                "identifier": "TestRemotePackage",
+                "newPage": false,
+                "searchKey": "gosym.TestRemotePackage",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRemotePackage(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRemotePackage(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/gosym#TestStandardLibPackage",
+              "documentation": {
+                "identifier": "TestStandardLibPackage",
+                "newPage": false,
+                "searchKey": "gosym.TestStandardLibPackage",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStandardLibPackage(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStandardLibPackage(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/gosym#TestStandardLibPathPackage",
+              "documentation": {
+                "identifier": "TestStandardLibPathPackage",
+                "newPage": false,
+                "searchKey": "gosym.TestStandardLibPathPackage",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStandardLibPathPackage(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStandardLibPathPackage(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/gosym#assertString",
+              "documentation": {
+                "identifier": "assertString",
+                "newPage": false,
+                "searchKey": "gosym.assertString",
+                "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func walksymtab(data []byte, fn func(sym) error) error"
+                "value": "func assertString(t *testing.T, dsc, out, tgt string)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc walksymtab(data []byte, fn func(sym) error) error\n```\n\n"
+                "value": "```Go\nfunc assertString(t *testing.T, dsc, out, tgt string)\n```\n\n"
               },
               "children": null
             }
@@ -1473,6 +1777,7 @@
                 "newPage": false,
                 "searchKey": "gosym.dotest",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1495,6 +1800,7 @@
                 "newPage": false,
                 "searchKey": "gosym.endtest",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1517,6 +1823,7 @@
                 "newPage": false,
                 "searchKey": "gosym.skipIfNotELF",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1533,198 +1840,23 @@
           },
           {
             "node": {
-              "pathID": "/debug/gosym#TestLineFromAline",
+              "pathID": "/debug/gosym#walksymtab",
               "documentation": {
-                "identifier": "TestLineFromAline",
+                "identifier": "walksymtab",
                 "newPage": false,
-                "searchKey": "gosym.TestLineFromAline",
+                "searchKey": "gosym.walksymtab",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestLineFromAline(t *testing.T)"
+                "value": "func walksymtab(data []byte, fn func(sym) error) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestLineFromAline(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/gosym#TestLineAline",
-              "documentation": {
-                "identifier": "TestLineAline",
-                "newPage": false,
-                "searchKey": "gosym.TestLineAline",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestLineAline(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestLineAline(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/gosym#TestPCLine",
-              "documentation": {
-                "identifier": "TestPCLine",
-                "newPage": false,
-                "searchKey": "gosym.TestPCLine",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestPCLine(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestPCLine(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/gosym#Test115PclnParsing",
-              "documentation": {
-                "identifier": "Test115PclnParsing",
-                "newPage": false,
-                "searchKey": "gosym.Test115PclnParsing",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Test115PclnParsing(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Test115PclnParsing(t *testing.T)\n```\n\nTest that we can parse a pclntab from 1.15. The file was compiled in /tmp/hello.go: [BEGIN] package main \n\nfunc main() { \n\n```\nprintln(\"hello\")\n\n```\n} [END] \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/gosym#assertString",
-              "documentation": {
-                "identifier": "assertString",
-                "newPage": false,
-                "searchKey": "gosym.assertString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func assertString(t *testing.T, dsc, out, tgt string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc assertString(t *testing.T, dsc, out, tgt string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/gosym#TestStandardLibPackage",
-              "documentation": {
-                "identifier": "TestStandardLibPackage",
-                "newPage": false,
-                "searchKey": "gosym.TestStandardLibPackage",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestStandardLibPackage(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestStandardLibPackage(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/gosym#TestStandardLibPathPackage",
-              "documentation": {
-                "identifier": "TestStandardLibPathPackage",
-                "newPage": false,
-                "searchKey": "gosym.TestStandardLibPathPackage",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestStandardLibPathPackage(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestStandardLibPathPackage(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/gosym#TestRemotePackage",
-              "documentation": {
-                "identifier": "TestRemotePackage",
-                "newPage": false,
-                "searchKey": "gosym.TestRemotePackage",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRemotePackage(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRemotePackage(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/gosym#TestIssue29551",
-              "documentation": {
-                "identifier": "TestIssue29551",
-                "newPage": false,
-                "searchKey": "gosym.TestIssue29551",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIssue29551(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIssue29551(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc walksymtab(data []byte, fn func(sym) error) error\n```\n\n"
               },
               "children": null
             }

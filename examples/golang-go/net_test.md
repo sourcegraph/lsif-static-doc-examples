@@ -3,16 +3,16 @@
 ## Index
 
 * [Functions](#func)
-    * [func ExampleListener()](#ExampleListener)
+    * [func ExampleCIDRMask()](#ExampleCIDRMask)
     * [func ExampleDialer()](#ExampleDialer)
     * [func ExampleDialer_unix()](#ExampleDialer_unix)
-    * [func ExampleIPv4()](#ExampleIPv4)
-    * [func ExampleParseCIDR()](#ExampleParseCIDR)
-    * [func ExampleParseIP()](#ExampleParseIP)
     * [func ExampleIP_DefaultMask()](#ExampleIP_DefaultMask)
     * [func ExampleIP_Mask()](#ExampleIP_Mask)
-    * [func ExampleCIDRMask()](#ExampleCIDRMask)
+    * [func ExampleIPv4()](#ExampleIPv4)
     * [func ExampleIPv4Mask()](#ExampleIPv4Mask)
+    * [func ExampleListener()](#ExampleListener)
+    * [func ExampleParseCIDR()](#ExampleParseCIDR)
+    * [func ExampleParseIP()](#ExampleParseIP)
     * [func ExampleUDPConn_WriteTo()](#ExampleUDPConn_WriteTo)
     * [func TestPipe(t *testing.T)](#TestPipe)
     * [func TestPipeCloseError(t *testing.T)](#TestPipeCloseError)
@@ -21,25 +21,25 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
-### <a id="ExampleListener" href="#ExampleListener">func ExampleListener()</a>
+### <a id="ExampleCIDRMask" href="#ExampleCIDRMask">func ExampleCIDRMask()</a>
 
 ```
-searchKey: net_test.ExampleListener
-tags: [private]
+searchKey: net_test.ExampleCIDRMask
+tags: [function private]
 ```
 
 ```Go
-func ExampleListener()
+func ExampleCIDRMask()
 ```
 
 ### <a id="ExampleDialer" href="#ExampleDialer">func ExampleDialer()</a>
 
 ```
 searchKey: net_test.ExampleDialer
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -50,51 +50,18 @@ func ExampleDialer()
 
 ```
 searchKey: net_test.ExampleDialer_unix
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func ExampleDialer_unix()
 ```
 
-### <a id="ExampleIPv4" href="#ExampleIPv4">func ExampleIPv4()</a>
-
-```
-searchKey: net_test.ExampleIPv4
-tags: [private]
-```
-
-```Go
-func ExampleIPv4()
-```
-
-### <a id="ExampleParseCIDR" href="#ExampleParseCIDR">func ExampleParseCIDR()</a>
-
-```
-searchKey: net_test.ExampleParseCIDR
-tags: [private]
-```
-
-```Go
-func ExampleParseCIDR()
-```
-
-### <a id="ExampleParseIP" href="#ExampleParseIP">func ExampleParseIP()</a>
-
-```
-searchKey: net_test.ExampleParseIP
-tags: [private]
-```
-
-```Go
-func ExampleParseIP()
-```
-
 ### <a id="ExampleIP_DefaultMask" href="#ExampleIP_DefaultMask">func ExampleIP_DefaultMask()</a>
 
 ```
 searchKey: net_test.ExampleIP_DefaultMask
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -105,40 +72,73 @@ func ExampleIP_DefaultMask()
 
 ```
 searchKey: net_test.ExampleIP_Mask
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func ExampleIP_Mask()
 ```
 
-### <a id="ExampleCIDRMask" href="#ExampleCIDRMask">func ExampleCIDRMask()</a>
+### <a id="ExampleIPv4" href="#ExampleIPv4">func ExampleIPv4()</a>
 
 ```
-searchKey: net_test.ExampleCIDRMask
-tags: [private]
+searchKey: net_test.ExampleIPv4
+tags: [function private]
 ```
 
 ```Go
-func ExampleCIDRMask()
+func ExampleIPv4()
 ```
 
 ### <a id="ExampleIPv4Mask" href="#ExampleIPv4Mask">func ExampleIPv4Mask()</a>
 
 ```
 searchKey: net_test.ExampleIPv4Mask
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func ExampleIPv4Mask()
 ```
 
+### <a id="ExampleListener" href="#ExampleListener">func ExampleListener()</a>
+
+```
+searchKey: net_test.ExampleListener
+tags: [function private]
+```
+
+```Go
+func ExampleListener()
+```
+
+### <a id="ExampleParseCIDR" href="#ExampleParseCIDR">func ExampleParseCIDR()</a>
+
+```
+searchKey: net_test.ExampleParseCIDR
+tags: [function private]
+```
+
+```Go
+func ExampleParseCIDR()
+```
+
+### <a id="ExampleParseIP" href="#ExampleParseIP">func ExampleParseIP()</a>
+
+```
+searchKey: net_test.ExampleParseIP
+tags: [function private]
+```
+
+```Go
+func ExampleParseIP()
+```
+
 ### <a id="ExampleUDPConn_WriteTo" href="#ExampleUDPConn_WriteTo">func ExampleUDPConn_WriteTo()</a>
 
 ```
 searchKey: net_test.ExampleUDPConn_WriteTo
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -149,7 +149,7 @@ func ExampleUDPConn_WriteTo()
 
 ```
 searchKey: net_test.TestPipe
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -160,7 +160,7 @@ func TestPipe(t *testing.T)
 
 ```
 searchKey: net_test.TestPipeCloseError
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go

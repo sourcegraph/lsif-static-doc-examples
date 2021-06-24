@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "text/tabwriter_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "tabwriter_test.codeSnippet",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -90,6 +95,9 @@
                 "newPage": false,
                 "searchKey": "tabwriter_test.tests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -115,6 +123,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -135,6 +144,7 @@
                 "newPage": false,
                 "searchKey": "tabwriter_test.buffer",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -149,44 +159,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/text/tabwriter_test#buffer.init.tabwriter_test.go",
+                    "pathID": "/text/tabwriter_test#buffer.String",
                     "documentation": {
-                      "identifier": "buffer.init.tabwriter_test.go",
+                      "identifier": "buffer.String",
                       "newPage": false,
-                      "searchKey": "tabwriter_test.buffer.init",
+                      "searchKey": "tabwriter_test.buffer.String",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (b *buffer) init(n int)"
+                      "value": "func (b *buffer) String() string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (b *buffer) init(n int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/text/tabwriter_test#buffer.clear",
-                    "documentation": {
-                      "identifier": "buffer.clear",
-                      "newPage": false,
-                      "searchKey": "tabwriter_test.buffer.clear",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *buffer) clear()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *buffer) clear()\n```\n\n"
+                      "value": "```Go\nfunc (b *buffer) String() string\n```\n\n"
                     },
                     "children": null
                   }
@@ -199,6 +188,7 @@
                       "newPage": false,
                       "searchKey": "tabwriter_test.buffer.Write",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -215,22 +205,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/text/tabwriter_test#buffer.String",
+                    "pathID": "/text/tabwriter_test#buffer.clear",
                     "documentation": {
-                      "identifier": "buffer.String",
+                      "identifier": "buffer.clear",
                       "newPage": false,
-                      "searchKey": "tabwriter_test.buffer.String",
+                      "searchKey": "tabwriter_test.buffer.clear",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (b *buffer) String() string"
+                      "value": "func (b *buffer) clear()"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (b *buffer) String() string\n```\n\n"
+                      "value": "```Go\nfunc (b *buffer) clear()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/tabwriter_test#buffer.init.tabwriter_test.go",
+                    "documentation": {
+                      "identifier": "buffer.init.tabwriter_test.go",
+                      "newPage": false,
+                      "searchKey": "tabwriter_test.buffer.init",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *buffer) init(n int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *buffer) init(n int)\n```\n\n"
                     },
                     "children": null
                   }
@@ -246,6 +260,7 @@
                 "newPage": false,
                 "searchKey": "tabwriter_test.panicWriter",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -266,6 +281,7 @@
                       "newPage": false,
                       "searchKey": "tabwriter_test.panicWriter.Write",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -294,6 +310,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -308,12 +325,109 @@
         "children": [
           {
             "node": {
+              "pathID": "/text/tabwriter_test#BenchmarkCode",
+              "documentation": {
+                "identifier": "BenchmarkCode",
+                "newPage": false,
+                "searchKey": "tabwriter_test.BenchmarkCode",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkCode(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkCode(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/tabwriter_test#BenchmarkPyramid",
+              "documentation": {
+                "identifier": "BenchmarkPyramid",
+                "newPage": false,
+                "searchKey": "tabwriter_test.BenchmarkPyramid",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkPyramid(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkPyramid(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/tabwriter_test#BenchmarkRagged",
+              "documentation": {
+                "identifier": "BenchmarkRagged",
+                "newPage": false,
+                "searchKey": "tabwriter_test.BenchmarkRagged",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkRagged(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkRagged(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/tabwriter_test#BenchmarkTable",
+              "documentation": {
+                "identifier": "BenchmarkTable",
+                "newPage": false,
+                "searchKey": "tabwriter_test.BenchmarkTable",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkTable(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkTable(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/text/tabwriter_test#ExampleWriter_Init",
               "documentation": {
                 "identifier": "ExampleWriter_Init",
                 "newPage": false,
                 "searchKey": "tabwriter_test.ExampleWriter_Init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -336,6 +450,7 @@
                 "newPage": false,
                 "searchKey": "tabwriter_test.Example_elastic",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -358,6 +473,7 @@
                 "newPage": false,
                 "searchKey": "tabwriter_test.Example_trailingTab",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -374,79 +490,15 @@
           },
           {
             "node": {
-              "pathID": "/text/tabwriter_test#write",
-              "documentation": {
-                "identifier": "write",
-                "newPage": false,
-                "searchKey": "tabwriter_test.write",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func write(t *testing.T, testname string, w *Writer, src string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc write(t *testing.T, testname string, w *Writer, src string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/text/tabwriter_test#verify",
-              "documentation": {
-                "identifier": "verify",
-                "newPage": false,
-                "searchKey": "tabwriter_test.verify",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func verify(t *testing.T, testname string, w *Writer, b *buffer, src, expected string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc verify(t *testing.T, testname string, w *Writer, b *buffer, src, expected string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/text/tabwriter_test#check",
-              "documentation": {
-                "identifier": "check",
-                "newPage": false,
-                "searchKey": "tabwriter_test.check",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func check(t *testing.T, testname string, minwidth, tabwidth, padding int, padchar byte, flags uint, src, expected string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc check(t *testing.T, testname string, minwidth, tabwidth, padding int, padchar byte, flags uint, src, expected string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/text/tabwriter_test#Test",
               "documentation": {
                 "identifier": "Test",
                 "newPage": false,
                 "searchKey": "tabwriter_test.Test",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -462,35 +514,15 @@
           },
           {
             "node": {
-              "pathID": "/text/tabwriter_test#wantPanicString",
-              "documentation": {
-                "identifier": "wantPanicString",
-                "newPage": false,
-                "searchKey": "tabwriter_test.wantPanicString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func wantPanicString(t *testing.T, want string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc wantPanicString(t *testing.T, want string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/text/tabwriter_test#TestPanicDuringFlush",
               "documentation": {
                 "identifier": "TestPanicDuringFlush",
                 "newPage": false,
                 "searchKey": "tabwriter_test.TestPanicDuringFlush",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -512,7 +544,9 @@
                 "newPage": false,
                 "searchKey": "tabwriter_test.TestPanicDuringWrite",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -528,88 +562,92 @@
           },
           {
             "node": {
-              "pathID": "/text/tabwriter_test#BenchmarkTable",
+              "pathID": "/text/tabwriter_test#check",
               "documentation": {
-                "identifier": "BenchmarkTable",
+                "identifier": "check",
                 "newPage": false,
-                "searchKey": "tabwriter_test.BenchmarkTable",
+                "searchKey": "tabwriter_test.check",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkTable(b *testing.B)"
+                "value": "func check(t *testing.T, testname string, minwidth, tabwidth, padding int, padchar byte, flags uint, src, expected string)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkTable(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc check(t *testing.T, testname string, minwidth, tabwidth, padding int, padchar byte, flags uint, src, expected string)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/text/tabwriter_test#BenchmarkPyramid",
+              "pathID": "/text/tabwriter_test#verify",
               "documentation": {
-                "identifier": "BenchmarkPyramid",
+                "identifier": "verify",
                 "newPage": false,
-                "searchKey": "tabwriter_test.BenchmarkPyramid",
+                "searchKey": "tabwriter_test.verify",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkPyramid(b *testing.B)"
+                "value": "func verify(t *testing.T, testname string, w *Writer, b *buffer, src, expected string)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkPyramid(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc verify(t *testing.T, testname string, w *Writer, b *buffer, src, expected string)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/text/tabwriter_test#BenchmarkRagged",
+              "pathID": "/text/tabwriter_test#wantPanicString",
               "documentation": {
-                "identifier": "BenchmarkRagged",
+                "identifier": "wantPanicString",
                 "newPage": false,
-                "searchKey": "tabwriter_test.BenchmarkRagged",
+                "searchKey": "tabwriter_test.wantPanicString",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkRagged(b *testing.B)"
+                "value": "func wantPanicString(t *testing.T, want string)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkRagged(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc wantPanicString(t *testing.T, want string)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/text/tabwriter_test#BenchmarkCode",
+              "pathID": "/text/tabwriter_test#write",
               "documentation": {
-                "identifier": "BenchmarkCode",
+                "identifier": "write",
                 "newPage": false,
-                "searchKey": "tabwriter_test.BenchmarkCode",
+                "searchKey": "tabwriter_test.write",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkCode(b *testing.B)"
+                "value": "func write(t *testing.T, testname string, w *Writer, src string)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkCode(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc write(t *testing.T, testname string, w *Writer, src string)\n```\n\n"
               },
               "children": null
             }

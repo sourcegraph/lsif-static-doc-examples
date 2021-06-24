@@ -5,33 +5,188 @@
 * Subpages
   * [cmd/frontend/hubspot/hubspotutil](hubspot/hubspotutil.md)
 * [Types](#type)
+    * [type Client struct](#Client)
+        * [func New(portalID, hapiKey string) *Client](#New)
+        * [func (c *Client) CreateOrUpdateContact(email string, params *ContactProperties) (*ContactResponse, error)](#Client.CreateOrUpdateContact)
+        * [func (c *Client) LogEvent(email string, eventID string, params map[string]string) error](#Client.LogEvent)
+        * [func (c *Client) SubmitForm(formID string, params interface{}) error](#Client.SubmitForm)
+        * [func (c *Client) baseContactURL(email string) *url.URL](#Client.baseContactURL)
+        * [func (c *Client) baseEventURL() *url.URL](#Client.baseEventURL)
+        * [func (c *Client) baseFormURL() *url.URL](#Client.baseFormURL)
+        * [func (c *Client) get(methodName string, baseURL *url.URL, suffix string, params map[string]string) error](#Client.get)
+        * [func (c *Client) postForm(methodName string, baseURL *url.URL, suffix string, body interface{}) error](#Client.postForm)
+        * [func (c *Client) postJSON(methodName string, baseURL *url.URL, reqPayload, respPayload interface{}) error](#Client.postJSON)
     * [type ContactProperties struct](#ContactProperties)
     * [type ContactResponse struct](#ContactResponse)
     * [type apiProperties struct](#apiProperties)
         * [func newAPIValues(h *ContactProperties) *apiProperties](#newAPIValues)
         * [func (h *apiProperties) set(property string, value interface{})](#apiProperties.set)
     * [type apiProperty struct](#apiProperty)
-    * [type Client struct](#Client)
-        * [func New(portalID, hapiKey string) *Client](#New)
-        * [func (c *Client) CreateOrUpdateContact(email string, params *ContactProperties) (*ContactResponse, error)](#Client.CreateOrUpdateContact)
-        * [func (c *Client) baseContactURL(email string) *url.URL](#Client.baseContactURL)
-        * [func (c *Client) LogEvent(email string, eventID string, params map[string]string) error](#Client.LogEvent)
-        * [func (c *Client) baseEventURL() *url.URL](#Client.baseEventURL)
-        * [func (c *Client) SubmitForm(formID string, params interface{}) error](#Client.SubmitForm)
-        * [func (c *Client) baseFormURL() *url.URL](#Client.baseFormURL)
-        * [func (c *Client) postForm(methodName string, baseURL *url.URL, suffix string, body interface{}) error](#Client.postForm)
-        * [func (c *Client) postJSON(methodName string, baseURL *url.URL, reqPayload, respPayload interface{}) error](#Client.postJSON)
-        * [func (c *Client) get(methodName string, baseURL *url.URL, suffix string, params map[string]string) error](#Client.get)
 * [Functions](#func)
     * [func wrapError(methodName string, err error) error](#wrapError)
 
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [package]
+```
+
+### <a id="Client" href="#Client">type Client struct</a>
+
+```
+searchKey: hubspot.Client
+tags: [struct]
+```
+
+```Go
+type Client struct {
+	portalID string
+	hapiKey  string
+}
+```
+
+Client is a HubSpot API client 
+
+#### <a id="New" href="#New">func New(portalID, hapiKey string) *Client</a>
+
+```
+searchKey: hubspot.New
+tags: [method]
+```
+
+```Go
+func New(portalID, hapiKey string) *Client
+```
+
+New returns a new HubSpot client using the given Portal ID. 
+
+#### <a id="Client.CreateOrUpdateContact" href="#Client.CreateOrUpdateContact">func (c *Client) CreateOrUpdateContact(email string, params *ContactProperties) (*ContactResponse, error)</a>
+
+```
+searchKey: hubspot.Client.CreateOrUpdateContact
+tags: [method]
+```
+
+```Go
+func (c *Client) CreateOrUpdateContact(email string, params *ContactProperties) (*ContactResponse, error)
+```
+
+CreateOrUpdateContact creates or updates a HubSpot contact (with email as primary key) 
+
+The endpoint returns 200 with the contact's VID and an isNew field on success, or a 409 Conflict if we attempt to change a user's email address to a new one that is already taken 
+
+[http://developers.hubspot.com/docs/methods/contacts/create_or_update](http://developers.hubspot.com/docs/methods/contacts/create_or_update) 
+
+#### <a id="Client.LogEvent" href="#Client.LogEvent">func (c *Client) LogEvent(email string, eventID string, params map[string]string) error</a>
+
+```
+searchKey: hubspot.Client.LogEvent
+tags: [method]
+```
+
+```Go
+func (c *Client) LogEvent(email string, eventID string, params map[string]string) error
+```
+
+LogEvent logs a user action or event. The response will have a status code of 200 with no data in the body 
+
+[http://developers.hubspot.com/docs/methods/enterprise_events/http_api](http://developers.hubspot.com/docs/methods/enterprise_events/http_api) 
+
+#### <a id="Client.SubmitForm" href="#Client.SubmitForm">func (c *Client) SubmitForm(formID string, params interface{}) error</a>
+
+```
+searchKey: hubspot.Client.SubmitForm
+tags: [method]
+```
+
+```Go
+func (c *Client) SubmitForm(formID string, params interface{}) error
+```
+
+SubmitForm submits form data.  Form submissions return an empty body with status code 204 or 302 if submission was successful. 
+
+`params` must be a map[string]string or a struct convertible to a URL querystring using query.Values(). The keys (or `url` tags in the struct) must be snake case, per HubSpot conventions. 
+
+See [https://developers.hubspot.com/docs/methods/forms/submit_form](https://developers.hubspot.com/docs/methods/forms/submit_form). 
+
+#### <a id="Client.baseContactURL" href="#Client.baseContactURL">func (c *Client) baseContactURL(email string) *url.URL</a>
+
+```
+searchKey: hubspot.Client.baseContactURL
+tags: [method private]
+```
+
+```Go
+func (c *Client) baseContactURL(email string) *url.URL
+```
+
+#### <a id="Client.baseEventURL" href="#Client.baseEventURL">func (c *Client) baseEventURL() *url.URL</a>
+
+```
+searchKey: hubspot.Client.baseEventURL
+tags: [function private]
+```
+
+```Go
+func (c *Client) baseEventURL() *url.URL
+```
+
+#### <a id="Client.baseFormURL" href="#Client.baseFormURL">func (c *Client) baseFormURL() *url.URL</a>
+
+```
+searchKey: hubspot.Client.baseFormURL
+tags: [function private]
+```
+
+```Go
+func (c *Client) baseFormURL() *url.URL
+```
+
+#### <a id="Client.get" href="#Client.get">func (c *Client) get(methodName string, baseURL *url.URL, suffix string, params map[string]string) error</a>
+
+```
+searchKey: hubspot.Client.get
+tags: [method private]
+```
+
+```Go
+func (c *Client) get(methodName string, baseURL *url.URL, suffix string, params map[string]string) error
+```
+
+Send a GET request to HubSpot APIs that accept JSON in a querystring (e.g. the Events API) 
+
+#### <a id="Client.postForm" href="#Client.postForm">func (c *Client) postForm(methodName string, baseURL *url.URL, suffix string, body interface{}) error</a>
+
+```
+searchKey: hubspot.Client.postForm
+tags: [method private]
+```
+
+```Go
+func (c *Client) postForm(methodName string, baseURL *url.URL, suffix string, body interface{}) error
+```
+
+Send a POST request with form data to HubSpot APIs that accept application/x-www-form-urlencoded data (e.g. the Forms API) 
+
+#### <a id="Client.postJSON" href="#Client.postJSON">func (c *Client) postJSON(methodName string, baseURL *url.URL, reqPayload, respPayload interface{}) error</a>
+
+```
+searchKey: hubspot.Client.postJSON
+tags: [method private]
+```
+
+```Go
+func (c *Client) postJSON(methodName string, baseURL *url.URL, reqPayload, respPayload interface{}) error
+```
+
+Send a POST request with JSON data to HubSpot APIs that accept JSON (e.g. the Contacts, Lists, etc APIs) 
+
 ### <a id="ContactProperties" href="#ContactProperties">type ContactProperties struct</a>
 
 ```
 searchKey: hubspot.ContactProperties
+tags: [struct]
 ```
 
 ```Go
@@ -50,6 +205,7 @@ ContactProperties represent HubSpot user properties
 
 ```
 searchKey: hubspot.ContactResponse
+tags: [struct]
 ```
 
 ```Go
@@ -65,7 +221,7 @@ ContactResponse represents HubSpot user properties returned after a CreateOrUpda
 
 ```
 searchKey: hubspot.apiProperties
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -80,7 +236,7 @@ apiProperties represents a list of HubSpot API-compliant key-value pairs
 
 ```
 searchKey: hubspot.newAPIValues
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -93,7 +249,7 @@ newAPIValues converts a ContactProperties struct to a HubSpot API-compliant arra
 
 ```
 searchKey: hubspot.apiProperties.set
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -104,7 +260,7 @@ func (h *apiProperties) set(property string, value interface{})
 
 ```
 searchKey: hubspot.apiProperty
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -114,158 +270,17 @@ type apiProperty struct {
 }
 ```
 
-### <a id="Client" href="#Client">type Client struct</a>
-
-```
-searchKey: hubspot.Client
-```
-
-```Go
-type Client struct {
-	portalID string
-	hapiKey  string
-}
-```
-
-Client is a HubSpot API client 
-
-#### <a id="New" href="#New">func New(portalID, hapiKey string) *Client</a>
-
-```
-searchKey: hubspot.New
-```
-
-```Go
-func New(portalID, hapiKey string) *Client
-```
-
-New returns a new HubSpot client using the given Portal ID. 
-
-#### <a id="Client.CreateOrUpdateContact" href="#Client.CreateOrUpdateContact">func (c *Client) CreateOrUpdateContact(email string, params *ContactProperties) (*ContactResponse, error)</a>
-
-```
-searchKey: hubspot.Client.CreateOrUpdateContact
-```
-
-```Go
-func (c *Client) CreateOrUpdateContact(email string, params *ContactProperties) (*ContactResponse, error)
-```
-
-CreateOrUpdateContact creates or updates a HubSpot contact (with email as primary key) 
-
-The endpoint returns 200 with the contact's VID and an isNew field on success, or a 409 Conflict if we attempt to change a user's email address to a new one that is already taken 
-
-[http://developers.hubspot.com/docs/methods/contacts/create_or_update](http://developers.hubspot.com/docs/methods/contacts/create_or_update) 
-
-#### <a id="Client.baseContactURL" href="#Client.baseContactURL">func (c *Client) baseContactURL(email string) *url.URL</a>
-
-```
-searchKey: hubspot.Client.baseContactURL
-tags: [private]
-```
-
-```Go
-func (c *Client) baseContactURL(email string) *url.URL
-```
-
-#### <a id="Client.LogEvent" href="#Client.LogEvent">func (c *Client) LogEvent(email string, eventID string, params map[string]string) error</a>
-
-```
-searchKey: hubspot.Client.LogEvent
-```
-
-```Go
-func (c *Client) LogEvent(email string, eventID string, params map[string]string) error
-```
-
-LogEvent logs a user action or event. The response will have a status code of 200 with no data in the body 
-
-[http://developers.hubspot.com/docs/methods/enterprise_events/http_api](http://developers.hubspot.com/docs/methods/enterprise_events/http_api) 
-
-#### <a id="Client.baseEventURL" href="#Client.baseEventURL">func (c *Client) baseEventURL() *url.URL</a>
-
-```
-searchKey: hubspot.Client.baseEventURL
-tags: [private]
-```
-
-```Go
-func (c *Client) baseEventURL() *url.URL
-```
-
-#### <a id="Client.SubmitForm" href="#Client.SubmitForm">func (c *Client) SubmitForm(formID string, params interface{}) error</a>
-
-```
-searchKey: hubspot.Client.SubmitForm
-```
-
-```Go
-func (c *Client) SubmitForm(formID string, params interface{}) error
-```
-
-SubmitForm submits form data.  Form submissions return an empty body with status code 204 or 302 if submission was successful. 
-
-`params` must be a map[string]string or a struct convertible to a URL querystring using query.Values(). The keys (or `url` tags in the struct) must be snake case, per HubSpot conventions. 
-
-See [https://developers.hubspot.com/docs/methods/forms/submit_form](https://developers.hubspot.com/docs/methods/forms/submit_form). 
-
-#### <a id="Client.baseFormURL" href="#Client.baseFormURL">func (c *Client) baseFormURL() *url.URL</a>
-
-```
-searchKey: hubspot.Client.baseFormURL
-tags: [private]
-```
-
-```Go
-func (c *Client) baseFormURL() *url.URL
-```
-
-#### <a id="Client.postForm" href="#Client.postForm">func (c *Client) postForm(methodName string, baseURL *url.URL, suffix string, body interface{}) error</a>
-
-```
-searchKey: hubspot.Client.postForm
-tags: [private]
-```
-
-```Go
-func (c *Client) postForm(methodName string, baseURL *url.URL, suffix string, body interface{}) error
-```
-
-Send a POST request with form data to HubSpot APIs that accept application/x-www-form-urlencoded data (e.g. the Forms API) 
-
-#### <a id="Client.postJSON" href="#Client.postJSON">func (c *Client) postJSON(methodName string, baseURL *url.URL, reqPayload, respPayload interface{}) error</a>
-
-```
-searchKey: hubspot.Client.postJSON
-tags: [private]
-```
-
-```Go
-func (c *Client) postJSON(methodName string, baseURL *url.URL, reqPayload, respPayload interface{}) error
-```
-
-Send a POST request with JSON data to HubSpot APIs that accept JSON (e.g. the Contacts, Lists, etc APIs) 
-
-#### <a id="Client.get" href="#Client.get">func (c *Client) get(methodName string, baseURL *url.URL, suffix string, params map[string]string) error</a>
-
-```
-searchKey: hubspot.Client.get
-tags: [private]
-```
-
-```Go
-func (c *Client) get(methodName string, baseURL *url.URL, suffix string, params map[string]string) error
-```
-
-Send a GET request to HubSpot APIs that accept JSON in a querystring (e.g. the Events API) 
-
 ## <a id="func" href="#func">Functions</a>
+
+```
+tags: [package]
+```
 
 ### <a id="wrapError" href="#wrapError">func wrapError(methodName string, err error) error</a>
 
 ```
 searchKey: hubspot.wrapError
-tags: [private]
+tags: [method private]
 ```
 
 ```Go

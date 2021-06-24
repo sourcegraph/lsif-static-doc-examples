@@ -8,26 +8,27 @@
     * [type State struct](#State)
         * [func Get(ctx context.Context) (*State, error)](#Get)
         * [func getConfiguration(ctx context.Context) (*State, error)](#getConfiguration)
-    * [type queryExecDatabaseHandler interface](#queryExecDatabaseHandler)
     * [type execDatabaseHandler interface](#execDatabaseHandler)
+    * [type queryExecDatabaseHandler interface](#queryExecDatabaseHandler)
 * [Functions](#func)
-    * [func SiteInitialized(ctx context.Context) (alreadyInitialized bool, err error)](#SiteInitialized)
     * [func EnsureInitialized(ctx context.Context, dbh queryExecDatabaseHandler) (alreadyInitialized bool, err error)](#EnsureInitialized)
-    * [func tryInsertNew(ctx context.Context, dbh execDatabaseHandler) error](#tryInsertNew)
-    * [func init()](#init.db_test.go)
+    * [func SiteInitialized(ctx context.Context) (alreadyInitialized bool, err error)](#SiteInitialized)
     * [func TestGet(t *testing.T)](#TestGet)
+    * [func init()](#init.db_test.go)
+    * [func tryInsertNew(ctx context.Context, dbh execDatabaseHandler) error](#tryInsertNew)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Mock" href="#Mock">var Mock</a>
 
 ```
 searchKey: globalstatedb.Mock
+tags: [variable struct]
 ```
 
 ```Go
@@ -39,13 +40,14 @@ var Mock = struct {
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="State" href="#State">type State struct</a>
 
 ```
 searchKey: globalstatedb.State
+tags: [struct]
 ```
 
 ```Go
@@ -59,6 +61,7 @@ type State struct {
 
 ```
 searchKey: globalstatedb.Get
+tags: [method]
 ```
 
 ```Go
@@ -69,18 +72,31 @@ func Get(ctx context.Context) (*State, error)
 
 ```
 searchKey: globalstatedb.getConfiguration
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func getConfiguration(ctx context.Context) (*State, error)
 ```
 
+### <a id="execDatabaseHandler" href="#execDatabaseHandler">type execDatabaseHandler interface</a>
+
+```
+searchKey: globalstatedb.execDatabaseHandler
+tags: [interface private]
+```
+
+```Go
+type execDatabaseHandler interface {
+	Exec(ctx context.Context, query *sqlf.Query) error
+}
+```
+
 ### <a id="queryExecDatabaseHandler" href="#queryExecDatabaseHandler">type queryExecDatabaseHandler interface</a>
 
 ```
 searchKey: globalstatedb.queryExecDatabaseHandler
-tags: [private]
+tags: [interface private]
 ```
 
 ```Go
@@ -90,39 +106,17 @@ type queryExecDatabaseHandler interface {
 }
 ```
 
-### <a id="execDatabaseHandler" href="#execDatabaseHandler">type execDatabaseHandler interface</a>
-
-```
-searchKey: globalstatedb.execDatabaseHandler
-tags: [private]
-```
-
-```Go
-type execDatabaseHandler interface {
-	Exec(ctx context.Context, query *sqlf.Query) error
-}
-```
-
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
-```
-
-### <a id="SiteInitialized" href="#SiteInitialized">func SiteInitialized(ctx context.Context) (alreadyInitialized bool, err error)</a>
-
-```
-searchKey: globalstatedb.SiteInitialized
-```
-
-```Go
-func SiteInitialized(ctx context.Context) (alreadyInitialized bool, err error)
+tags: [package private]
 ```
 
 ### <a id="EnsureInitialized" href="#EnsureInitialized">func EnsureInitialized(ctx context.Context, dbh queryExecDatabaseHandler) (alreadyInitialized bool, err error)</a>
 
 ```
 searchKey: globalstatedb.EnsureInitialized
+tags: [method]
 ```
 
 ```Go
@@ -133,36 +127,47 @@ EnsureInitialized ensures the site is marked as having been initialized. If the 
 
 🚨 SECURITY: Initialization is an important security measure. If a new account is created on a site that is not initialized, and no other accounts exist, it is granted site admin privileges. If the site *has* been initialized, then a new account is not granted site admin privileges (even if all other users are deleted). This reduces the risk of (1) a site admin accidentally deleting all user accounts and opening up their site to any attacker becoming a site admin and (2) a bug in user account creation code letting attackers create site admin accounts. 
 
-### <a id="tryInsertNew" href="#tryInsertNew">func tryInsertNew(ctx context.Context, dbh execDatabaseHandler) error</a>
+### <a id="SiteInitialized" href="#SiteInitialized">func SiteInitialized(ctx context.Context) (alreadyInitialized bool, err error)</a>
 
 ```
-searchKey: globalstatedb.tryInsertNew
-tags: [private]
-```
-
-```Go
-func tryInsertNew(ctx context.Context, dbh execDatabaseHandler) error
-```
-
-### <a id="init.db_test.go" href="#init.db_test.go">func init()</a>
-
-```
-searchKey: globalstatedb.init
-tags: [private]
+searchKey: globalstatedb.SiteInitialized
+tags: [method]
 ```
 
 ```Go
-func init()
+func SiteInitialized(ctx context.Context) (alreadyInitialized bool, err error)
 ```
 
 ### <a id="TestGet" href="#TestGet">func TestGet(t *testing.T)</a>
 
 ```
 searchKey: globalstatedb.TestGet
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestGet(t *testing.T)
+```
+
+### <a id="init.db_test.go" href="#init.db_test.go">func init()</a>
+
+```
+searchKey: globalstatedb.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="tryInsertNew" href="#tryInsertNew">func tryInsertNew(ctx context.Context, dbh execDatabaseHandler) error</a>
+
+```
+searchKey: globalstatedb.tryInsertNew
+tags: [method private]
+```
+
+```Go
+func tryInsertNew(ctx context.Context, dbh execDatabaseHandler) error
 ```
 

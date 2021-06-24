@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/httptestutil",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,12 +41,278 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/httptestutil#Client",
+              "documentation": {
+                "identifier": "Client",
+                "newPage": false,
+                "searchKey": "httptestutil.Client",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Client struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Client struct{ http.Client }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/httptestutil#NewTest",
+                    "documentation": {
+                      "identifier": "NewTest",
+                      "newPage": false,
+                      "searchKey": "httptestutil.NewTest",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewTest(h http.Handler) *Client"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewTest(h http.Handler) *Client\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/httptestutil#Client.Do",
+                    "documentation": {
+                      "identifier": "Client.Do",
+                      "newPage": false,
+                      "searchKey": "httptestutil.Client.Do",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) Do(req *http.Request) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) Do(req *http.Request) (*http.Response, error)\n```\n\nDo buffers the response body so that callers need not call resp.Body.Close(). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/httptestutil#Client.DoJSON",
+                    "documentation": {
+                      "identifier": "Client.DoJSON",
+                      "newPage": false,
+                      "searchKey": "httptestutil.Client.DoJSON",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) DoJSON(method, url string, in, out interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) DoJSON(method, url string, in, out interface{}) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/httptestutil#Client.DoNoFollowRedirects",
+                    "documentation": {
+                      "identifier": "Client.DoNoFollowRedirects",
+                      "newPage": false,
+                      "searchKey": "httptestutil.Client.DoNoFollowRedirects",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c Client) DoNoFollowRedirects(req *http.Request) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c Client) DoNoFollowRedirects(req *http.Request) (*http.Response, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/httptestutil#Client.DoOK",
+                    "documentation": {
+                      "identifier": "Client.DoOK",
+                      "newPage": false,
+                      "searchKey": "httptestutil.Client.DoOK",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) DoOK(req *http.Request) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) DoOK(req *http.Request) (*http.Response, error)\n```\n\nDoOK checks that the response is HTTP 200. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/httptestutil#Client.Get",
+                    "documentation": {
+                      "identifier": "Client.Get",
+                      "newPage": false,
+                      "searchKey": "httptestutil.Client.Get",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) Get(url string) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) Get(url string) (*http.Response, error)\n```\n\nGet buffers the response body so that callers need not call resp.Body.Close(). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/httptestutil#Client.GetJSON",
+                    "documentation": {
+                      "identifier": "Client.GetJSON",
+                      "newPage": false,
+                      "searchKey": "httptestutil.Client.GetJSON",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) GetJSON(url string, v interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) GetJSON(url string, v interface{}) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/httptestutil#Client.GetNoFollowRedirects",
+                    "documentation": {
+                      "identifier": "Client.GetNoFollowRedirects",
+                      "newPage": false,
+                      "searchKey": "httptestutil.Client.GetNoFollowRedirects",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c Client) GetNoFollowRedirects(url_ string) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c Client) GetNoFollowRedirects(url_ string) (*http.Response, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/httptestutil#Client.GetOK",
+                    "documentation": {
+                      "identifier": "Client.GetOK",
+                      "newPage": false,
+                      "searchKey": "httptestutil.Client.GetOK",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) GetOK(url string) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) GetOK(url string) (*http.Response, error)\n```\n\nGetOK checks that the response is HTTP 200. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/httptestutil#Client.PostFormNoFollowRedirects",
+                    "documentation": {
+                      "identifier": "Client.PostFormNoFollowRedirects",
+                      "newPage": false,
+                      "searchKey": "httptestutil.Client.PostFormNoFollowRedirects",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) PostFormNoFollowRedirects(url string, data url.Values) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) PostFormNoFollowRedirects(url string, data url.Values) (*http.Response, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/httptestutil#Client.PostOK",
+                    "documentation": {
+                      "identifier": "Client.PostOK",
+                      "newPage": false,
+                      "searchKey": "httptestutil.Client.PostOK",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) PostOK(url string, body io.Reader) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) PostOK(url string, body io.Reader) (*http.Response, error)\n```\n\nPostOK checks that the response is HTTP 200. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/httptestutil#handlerTransport",
               "documentation": {
                 "identifier": "handlerTransport",
                 "newPage": false,
                 "searchKey": "httptestutil.handlerTransport",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -65,6 +333,7 @@
                       "newPage": false,
                       "searchKey": "httptestutil.handlerTransport.RoundTrip",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -75,247 +344,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (t handlerTransport) RoundTrip(req *http.Request) (*http.Response, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/httptestutil#Client",
-              "documentation": {
-                "identifier": "Client",
-                "newPage": false,
-                "searchKey": "httptestutil.Client",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Client struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Client struct{ http.Client }\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/httptestutil#NewTest",
-                    "documentation": {
-                      "identifier": "NewTest",
-                      "newPage": false,
-                      "searchKey": "httptestutil.NewTest",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewTest(h http.Handler) *Client"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewTest(h http.Handler) *Client\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/httptestutil#Client.Get",
-                    "documentation": {
-                      "identifier": "Client.Get",
-                      "newPage": false,
-                      "searchKey": "httptestutil.Client.Get",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) Get(url string) (*http.Response, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) Get(url string) (*http.Response, error)\n```\n\nGet buffers the response body so that callers need not call resp.Body.Close(). \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/httptestutil#Client.Do",
-                    "documentation": {
-                      "identifier": "Client.Do",
-                      "newPage": false,
-                      "searchKey": "httptestutil.Client.Do",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) Do(req *http.Request) (*http.Response, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) Do(req *http.Request) (*http.Response, error)\n```\n\nDo buffers the response body so that callers need not call resp.Body.Close(). \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/httptestutil#Client.DoOK",
-                    "documentation": {
-                      "identifier": "Client.DoOK",
-                      "newPage": false,
-                      "searchKey": "httptestutil.Client.DoOK",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) DoOK(req *http.Request) (*http.Response, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) DoOK(req *http.Request) (*http.Response, error)\n```\n\nDoOK checks that the response is HTTP 200. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/httptestutil#Client.GetOK",
-                    "documentation": {
-                      "identifier": "Client.GetOK",
-                      "newPage": false,
-                      "searchKey": "httptestutil.Client.GetOK",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) GetOK(url string) (*http.Response, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) GetOK(url string) (*http.Response, error)\n```\n\nGetOK checks that the response is HTTP 200. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/httptestutil#Client.PostOK",
-                    "documentation": {
-                      "identifier": "Client.PostOK",
-                      "newPage": false,
-                      "searchKey": "httptestutil.Client.PostOK",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) PostOK(url string, body io.Reader) (*http.Response, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) PostOK(url string, body io.Reader) (*http.Response, error)\n```\n\nPostOK checks that the response is HTTP 200. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/httptestutil#Client.DoNoFollowRedirects",
-                    "documentation": {
-                      "identifier": "Client.DoNoFollowRedirects",
-                      "newPage": false,
-                      "searchKey": "httptestutil.Client.DoNoFollowRedirects",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c Client) DoNoFollowRedirects(req *http.Request) (*http.Response, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c Client) DoNoFollowRedirects(req *http.Request) (*http.Response, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/httptestutil#Client.GetNoFollowRedirects",
-                    "documentation": {
-                      "identifier": "Client.GetNoFollowRedirects",
-                      "newPage": false,
-                      "searchKey": "httptestutil.Client.GetNoFollowRedirects",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c Client) GetNoFollowRedirects(url_ string) (*http.Response, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c Client) GetNoFollowRedirects(url_ string) (*http.Response, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/httptestutil#Client.GetJSON",
-                    "documentation": {
-                      "identifier": "Client.GetJSON",
-                      "newPage": false,
-                      "searchKey": "httptestutil.Client.GetJSON",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) GetJSON(url string, v interface{}) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) GetJSON(url string, v interface{}) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/httptestutil#Client.DoJSON",
-                    "documentation": {
-                      "identifier": "Client.DoJSON",
-                      "newPage": false,
-                      "searchKey": "httptestutil.Client.DoJSON",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) DoJSON(method, url string, in, out interface{}) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) DoJSON(method, url string, in, out interface{}) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/httptestutil#Client.PostFormNoFollowRedirects",
-                    "documentation": {
-                      "identifier": "Client.PostFormNoFollowRedirects",
-                      "newPage": false,
-                      "searchKey": "httptestutil.Client.PostFormNoFollowRedirects",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) PostFormNoFollowRedirects(url string, data url.Values) (*http.Response, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) PostFormNoFollowRedirects(url string, data url.Values) (*http.Response, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -334,6 +362,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -348,52 +377,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/httptestutil#NewRecorder",
-              "documentation": {
-                "identifier": "NewRecorder",
-                "newPage": false,
-                "searchKey": "httptestutil.NewRecorder",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func NewRecorder(file string, record bool, filters ...cassette.Filter) (*recorder.Recorder, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc NewRecorder(file string, record bool, filters ...cassette.Filter) (*recorder.Recorder, error)\n```\n\nNewRecorder returns an HTTP interaction recorder with the given record mode and filters. It strips away the HTTP Authorization and Set-Cookie headers. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/httptestutil#NewRecorderOpt",
-              "documentation": {
-                "identifier": "NewRecorderOpt",
-                "newPage": false,
-                "searchKey": "httptestutil.NewRecorderOpt",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func NewRecorderOpt(rec *recorder.Recorder) httpcli.Opt"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc NewRecorderOpt(rec *recorder.Recorder) httpcli.Opt\n```\n\nNewRecorderOpt returns an httpcli.Opt that wraps the Transport of an http.Client with the given recorder. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/httptestutil#NewGitHubRecorderFactory",
               "documentation": {
                 "identifier": "NewGitHubRecorderFactory",
                 "newPage": false,
                 "searchKey": "httptestutil.NewGitHubRecorderFactory",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -408,12 +399,36 @@
           },
           {
             "node": {
+              "pathID": "/internal/httptestutil#NewRecorder",
+              "documentation": {
+                "identifier": "NewRecorder",
+                "newPage": false,
+                "searchKey": "httptestutil.NewRecorder",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewRecorder(file string, record bool, filters ...cassette.Filter) (*recorder.Recorder, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewRecorder(file string, record bool, filters ...cassette.Filter) (*recorder.Recorder, error)\n```\n\nNewRecorder returns an HTTP interaction recorder with the given record mode and filters. It strips away the HTTP Authorization and Set-Cookie headers. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/httptestutil#NewRecorderFactory",
               "documentation": {
                 "identifier": "NewRecorderFactory",
                 "newPage": false,
                 "searchKey": "httptestutil.NewRecorderFactory",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -422,6 +437,28 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc NewRecorderFactory(t testing.TB, update bool, name string) (*httpcli.Factory, func())\n```\n\nNewRecorderFactory returns a *httpcli.Factory that records all HTTP requests in \"testdata/vcr/{name}\" with {name} being the name that's passed in. \n\nIf update is true, the HTTP requests are recorded, otherwise they're replayed from the recorded cassette. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/httptestutil#NewRecorderOpt",
+              "documentation": {
+                "identifier": "NewRecorderOpt",
+                "newPage": false,
+                "searchKey": "httptestutil.NewRecorderOpt",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewRecorderOpt(rec *recorder.Recorder) httpcli.Opt"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewRecorderOpt(rec *recorder.Recorder) httpcli.Opt\n```\n\nNewRecorderOpt returns an httpcli.Opt that wraps the Transport of an http.Client with the given recorder. \n\n"
               },
               "children": null
             }

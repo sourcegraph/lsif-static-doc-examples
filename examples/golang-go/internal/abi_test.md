@@ -10,14 +10,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="TestFuncPC" href="#TestFuncPC">func TestFuncPC(t *testing.T)</a>
 
 ```
 searchKey: abi_test.TestFuncPC
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -28,7 +28,7 @@ func TestFuncPC(t *testing.T)
 
 ```
 searchKey: abi_test.TestFuncPCCompileError
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go

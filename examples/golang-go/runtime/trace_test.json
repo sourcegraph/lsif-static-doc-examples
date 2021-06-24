@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "runtime/trace_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "trace_test.saveTraces",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -90,6 +95,7 @@
                 "newPage": false,
                 "searchKey": "trace_test.frame",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -115,6 +121,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -129,35 +136,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/runtime/trace_test#BenchmarkStartRegion",
-              "documentation": {
-                "identifier": "BenchmarkStartRegion",
-                "newPage": false,
-                "searchKey": "trace_test.BenchmarkStartRegion",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkStartRegion(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkStartRegion(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/runtime/trace_test#BenchmarkNewTask",
               "documentation": {
                 "identifier": "BenchmarkNewTask",
                 "newPage": false,
                 "searchKey": "trace_test.BenchmarkNewTask",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -173,22 +160,24 @@
           },
           {
             "node": {
-              "pathID": "/runtime/trace_test#TestUserTaskRegion",
+              "pathID": "/runtime/trace_test#BenchmarkStartRegion",
               "documentation": {
-                "identifier": "TestUserTaskRegion",
+                "identifier": "BenchmarkStartRegion",
                 "newPage": false,
-                "searchKey": "trace_test.TestUserTaskRegion",
+                "searchKey": "trace_test.BenchmarkStartRegion",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestUserTaskRegion(t *testing.T)"
+                "value": "func BenchmarkStartRegion(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestUserTaskRegion(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc BenchmarkStartRegion(b *testing.B)\n```\n\n"
               },
               "children": null
             }
@@ -201,6 +190,7 @@
                 "newPage": false,
                 "searchKey": "trace_test.Example",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -223,6 +213,7 @@
                 "newPage": false,
                 "searchKey": "trace_test.RunMyProgram",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -239,13 +230,183 @@
           },
           {
             "node": {
+              "pathID": "/runtime/trace_test#TestEventBatch",
+              "documentation": {
+                "identifier": "TestEventBatch",
+                "newPage": false,
+                "searchKey": "trace_test.TestEventBatch",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEventBatch(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEventBatch(t *testing.T)\n```\n\nTestEventBatch tests Flush calls that happen during Start don't produce corrupted traces. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/trace_test#TestTrace",
+              "documentation": {
+                "identifier": "TestTrace",
+                "newPage": false,
+                "searchKey": "trace_test.TestTrace",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTrace(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTrace(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/trace_test#TestTraceDoubleStart",
+              "documentation": {
+                "identifier": "TestTraceDoubleStart",
+                "newPage": false,
+                "searchKey": "trace_test.TestTraceDoubleStart",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTraceDoubleStart(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTraceDoubleStart(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/trace_test#TestTraceFutileWakeup",
+              "documentation": {
+                "identifier": "TestTraceFutileWakeup",
+                "newPage": false,
+                "searchKey": "trace_test.TestTraceFutileWakeup",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTraceFutileWakeup(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTraceFutileWakeup(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/trace_test#TestTraceStartStop",
+              "documentation": {
+                "identifier": "TestTraceStartStop",
+                "newPage": false,
+                "searchKey": "trace_test.TestTraceStartStop",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTraceStartStop(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTraceStartStop(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/trace_test#TestTraceStress",
+              "documentation": {
+                "identifier": "TestTraceStress",
+                "newPage": false,
+                "searchKey": "trace_test.TestTraceStress",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTraceStress(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTraceStress(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/trace_test#TestTraceStressStartStop",
+              "documentation": {
+                "identifier": "TestTraceStressStartStop",
+                "newPage": false,
+                "searchKey": "trace_test.TestTraceStressStartStop",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTraceStressStartStop(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTraceStressStartStop(t *testing.T)\n```\n\nDo a bunch of various stuff (timers, GC, network, etc) in a separate goroutine. And concurrently with all that start/stop trace 3 times. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/runtime/trace_test#TestTraceSymbolize",
               "documentation": {
                 "identifier": "TestTraceSymbolize",
                 "newPage": false,
                 "searchKey": "trace_test.TestTraceSymbolize",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -261,22 +422,24 @@
           },
           {
             "node": {
-              "pathID": "/runtime/trace_test#skipTraceSymbolizeTestIfNecessary",
+              "pathID": "/runtime/trace_test#TestUserTaskRegion",
               "documentation": {
-                "identifier": "skipTraceSymbolizeTestIfNecessary",
+                "identifier": "TestUserTaskRegion",
                 "newPage": false,
-                "searchKey": "trace_test.skipTraceSymbolizeTestIfNecessary",
+                "searchKey": "trace_test.TestUserTaskRegion",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func skipTraceSymbolizeTestIfNecessary(t *testing.T)"
+                "value": "func TestUserTaskRegion(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc skipTraceSymbolizeTestIfNecessary(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestUserTaskRegion(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -289,6 +452,7 @@
                 "newPage": false,
                 "searchKey": "trace_test.dumpEventStacks",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -311,6 +475,7 @@
                 "newPage": false,
                 "searchKey": "trace_test.dumpFrames",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -327,166 +492,13 @@
           },
           {
             "node": {
-              "pathID": "/runtime/trace_test#TestEventBatch",
-              "documentation": {
-                "identifier": "TestEventBatch",
-                "newPage": false,
-                "searchKey": "trace_test.TestEventBatch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEventBatch(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEventBatch(t *testing.T)\n```\n\nTestEventBatch tests Flush calls that happen during Start don't produce corrupted traces. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/trace_test#TestTraceStartStop",
-              "documentation": {
-                "identifier": "TestTraceStartStop",
-                "newPage": false,
-                "searchKey": "trace_test.TestTraceStartStop",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTraceStartStop(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTraceStartStop(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/trace_test#TestTraceDoubleStart",
-              "documentation": {
-                "identifier": "TestTraceDoubleStart",
-                "newPage": false,
-                "searchKey": "trace_test.TestTraceDoubleStart",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTraceDoubleStart(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTraceDoubleStart(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/trace_test#TestTrace",
-              "documentation": {
-                "identifier": "TestTrace",
-                "newPage": false,
-                "searchKey": "trace_test.TestTrace",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTrace(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTrace(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/trace_test#parseTrace",
-              "documentation": {
-                "identifier": "parseTrace",
-                "newPage": false,
-                "searchKey": "trace_test.parseTrace",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func parseTrace(t *testing.T, r io.Reader) ([]*trace.Event, map[uint64]*trace.GDesc)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc parseTrace(t *testing.T, r io.Reader) ([]*trace.Event, map[uint64]*trace.GDesc)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/trace_test#testBrokenTimestamps",
-              "documentation": {
-                "identifier": "testBrokenTimestamps",
-                "newPage": false,
-                "searchKey": "trace_test.testBrokenTimestamps",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testBrokenTimestamps(t *testing.T, data []byte)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testBrokenTimestamps(t *testing.T, data []byte)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/trace_test#TestTraceStress",
-              "documentation": {
-                "identifier": "TestTraceStress",
-                "newPage": false,
-                "searchKey": "trace_test.TestTraceStress",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTraceStress(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTraceStress(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/runtime/trace_test#isMemoryConstrained",
               "documentation": {
                 "identifier": "isMemoryConstrained",
                 "newPage": false,
                 "searchKey": "trace_test.isMemoryConstrained",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -503,44 +515,23 @@
           },
           {
             "node": {
-              "pathID": "/runtime/trace_test#TestTraceStressStartStop",
+              "pathID": "/runtime/trace_test#parseTrace",
               "documentation": {
-                "identifier": "TestTraceStressStartStop",
+                "identifier": "parseTrace",
                 "newPage": false,
-                "searchKey": "trace_test.TestTraceStressStartStop",
+                "searchKey": "trace_test.parseTrace",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestTraceStressStartStop(t *testing.T)"
+                "value": "func parseTrace(t *testing.T, r io.Reader) ([]*trace.Event, map[uint64]*trace.GDesc)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestTraceStressStartStop(t *testing.T)\n```\n\nDo a bunch of various stuff (timers, GC, network, etc) in a separate goroutine. And concurrently with all that start/stop trace 3 times. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/trace_test#TestTraceFutileWakeup",
-              "documentation": {
-                "identifier": "TestTraceFutileWakeup",
-                "newPage": false,
-                "searchKey": "trace_test.TestTraceFutileWakeup",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTraceFutileWakeup(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTraceFutileWakeup(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc parseTrace(t *testing.T, r io.Reader) ([]*trace.Event, map[uint64]*trace.GDesc)\n```\n\n"
               },
               "children": null
             }
@@ -553,6 +544,7 @@
                 "newPage": false,
                 "searchKey": "trace_test.saveTrace",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -563,6 +555,52 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc saveTrace(t *testing.T, buf *bytes.Buffer, name string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/trace_test#skipTraceSymbolizeTestIfNecessary",
+              "documentation": {
+                "identifier": "skipTraceSymbolizeTestIfNecessary",
+                "newPage": false,
+                "searchKey": "trace_test.skipTraceSymbolizeTestIfNecessary",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func skipTraceSymbolizeTestIfNecessary(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc skipTraceSymbolizeTestIfNecessary(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/trace_test#testBrokenTimestamps",
+              "documentation": {
+                "identifier": "testBrokenTimestamps",
+                "newPage": false,
+                "searchKey": "trace_test.testBrokenTimestamps",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testBrokenTimestamps(t *testing.T, data []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testBrokenTimestamps(t *testing.T, data []byte)\n```\n\n"
               },
               "children": null
             }

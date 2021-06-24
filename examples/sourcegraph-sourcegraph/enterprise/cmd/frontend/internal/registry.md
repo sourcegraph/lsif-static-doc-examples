@@ -5,182 +5,169 @@ Package registry contains the implementation of the extension registry.
 ## Index
 
 * [Constants](#const)
-    * [const extensionPublisherNameExpr](#extensionPublisherNameExpr)
     * [const extensionIDExpr](#extensionIDExpr)
+    * [const extensionPublisherNameExpr](#extensionPublisherNameExpr)
 * [Variables](#var)
-    * [var sourceMappingURLLineRegex](#sourceMappingURLLineRegex)
-    * [var nonLettersDigits](#nonLettersDigits)
-    * [var featuredExtensionIDs](#featuredExtensionIDs)
-    * [var extensionIsWIPExpr](#extensionIsWIPExpr)
-    * [var registryList](#registryList)
-    * [var registryGetByUUID](#registryGetByUUID)
-    * [var registryGetByExtensionID](#registryGetByExtensionID)
-    * [var registryGetFeaturedExtensions](#registryGetFeaturedExtensions)
-    * [var registryRequestsDuration](#registryRequestsDuration)
-    * [var mocks](#mocks)
-    * [var errRegistryUnknownPublisher](#errRegistryUnknownPublisher)
     * [var errInvalidJSONInManifest](#errInvalidJSONInManifest)
+    * [var errRegistryUnknownPublisher](#errRegistryUnknownPublisher)
+    * [var extensionIsWIPExpr](#extensionIsWIPExpr)
+    * [var featuredExtensionIDs](#featuredExtensionIDs)
+    * [var mocks](#mocks)
+    * [var nonLettersDigits](#nonLettersDigits)
     * [var registryExtensionNamesForTests](#registryExtensionNamesForTests)
+    * [var registryGetByExtensionID](#registryGetByExtensionID)
+    * [var registryGetByUUID](#registryGetByUUID)
+    * [var registryGetFeaturedExtensions](#registryGetFeaturedExtensions)
+    * [var registryList](#registryList)
+    * [var registryRequestsDuration](#registryRequestsDuration)
+    * [var sourceMappingURLLineRegex](#sourceMappingURLLineRegex)
 * [Types](#type)
-    * [type extensionDBResolver struct](#extensionDBResolver)
-        * [func (r *extensionDBResolver) ID() graphql.ID](#extensionDBResolver.ID)
-        * [func (r *extensionDBResolver) UUID() string](#extensionDBResolver.UUID)
-        * [func (r *extensionDBResolver) ExtensionID() string](#extensionDBResolver.ExtensionID)
-        * [func (r *extensionDBResolver) ExtensionIDWithoutRegistry() string](#extensionDBResolver.ExtensionIDWithoutRegistry)
-        * [func (r *extensionDBResolver) Publisher(ctx context.Context) (graphqlbackend.RegistryPublisher, error)](#extensionDBResolver.Publisher)
-        * [func (r *extensionDBResolver) Name() string](#extensionDBResolver.Name)
-        * [func (r *extensionDBResolver) Manifest(ctx context.Context) (graphqlbackend.ExtensionManifest, error)](#extensionDBResolver.Manifest)
-        * [func (r *extensionDBResolver) CreatedAt() *graphqlbackend.DateTime](#extensionDBResolver.CreatedAt)
-        * [func (r *extensionDBResolver) UpdatedAt() *graphqlbackend.DateTime](#extensionDBResolver.UpdatedAt)
-        * [func (r *extensionDBResolver) PublishedAt(ctx context.Context) (*graphqlbackend.DateTime, error)](#extensionDBResolver.PublishedAt)
-        * [func (r *extensionDBResolver) URL() string](#extensionDBResolver.URL)
-        * [func (r *extensionDBResolver) RemoteURL() *string](#extensionDBResolver.RemoteURL)
-        * [func (r *extensionDBResolver) RegistryName() (string, error)](#extensionDBResolver.RegistryName)
-        * [func (r *extensionDBResolver) IsLocal() bool](#extensionDBResolver.IsLocal)
-        * [func (r *extensionDBResolver) IsWorkInProgress() bool](#extensionDBResolver.IsWorkInProgress)
-        * [func (r *extensionDBResolver) ViewerCanAdminister(ctx context.Context) (bool, error)](#extensionDBResolver.ViewerCanAdminister)
-        * [func (r *extensionDBResolver) release(ctx context.Context) (*dbRelease, error)](#extensionDBResolver.release)
     * [type dbExtension struct](#dbExtension)
     * [type dbExtensions struct{}](#dbExtensions)
+        * [func (s dbExtensions) Count(ctx context.Context, opt dbExtensionsListOptions) (int, error)](#dbExtensions.Count)
+        * [func (s dbExtensions) CountPublishers(ctx context.Context, opt dbPublishersListOptions) (int, error)](#dbExtensions.CountPublishers)
         * [func (s dbExtensions) Create(ctx context.Context, publisherUserID, publisherOrgID int32, name string) (id int32, err error)](#dbExtensions.Create)
+        * [func (dbExtensions) Delete(ctx context.Context, id int32) error](#dbExtensions.Delete)
+        * [func (s dbExtensions) GetByExtensionID(ctx context.Context, extensionID string) (*dbExtension, error)](#dbExtensions.GetByExtensionID)
         * [func (s dbExtensions) GetByID(ctx context.Context, id int32) (*dbExtension, error)](#dbExtensions.GetByID)
         * [func (s dbExtensions) GetByUUID(ctx context.Context, uuid string) (*dbExtension, error)](#dbExtensions.GetByUUID)
-        * [func (s dbExtensions) GetByExtensionID(ctx context.Context, extensionID string) (*dbExtension, error)](#dbExtensions.GetByExtensionID)
         * [func (s dbExtensions) GetFeaturedExtensions(ctx context.Context) ([]*dbExtension, error)](#dbExtensions.GetFeaturedExtensions)
-        * [func (s dbExtensions) getFeaturedExtensions(ctx context.Context, featuredExtensionIDs []string) ([]*dbExtension, error)](#dbExtensions.getFeaturedExtensions)
-        * [func (s dbExtensions) List(ctx context.Context, opt dbExtensionsListOptions) ([]*dbExtension, error)](#dbExtensions.List)
-        * [func (dbExtensions) listCountSQL(conds []*sqlf.Query) *sqlf.Query](#dbExtensions.listCountSQL)
-        * [func (s dbExtensions) list(ctx context.Context, conds, order []*sqlf.Query, limitOffset *database.LimitOffset) ([]*dbExtension, error)](#dbExtensions.list)
-        * [func (s dbExtensions) Count(ctx context.Context, opt dbExtensionsListOptions) (int, error)](#dbExtensions.Count)
-        * [func (dbExtensions) Update(ctx context.Context, id int32, name *string) error](#dbExtensions.Update)
-        * [func (dbExtensions) Delete(ctx context.Context, id int32) error](#dbExtensions.Delete)
-        * [func (s dbExtensions) ListPublishers(ctx context.Context, opt dbPublishersListOptions) ([]*dbPublisher, error)](#dbExtensions.ListPublishers)
-        * [func (dbExtensions) publishersSQLCTE() *sqlf.Query](#dbExtensions.publishersSQLCTE)
-        * [func (s dbExtensions) listPublishers(ctx context.Context, conds []*sqlf.Query, limitOffset *database.LimitOffset) ([]*dbPublisher, error)](#dbExtensions.listPublishers)
-        * [func (s dbExtensions) CountPublishers(ctx context.Context, opt dbPublishersListOptions) (int, error)](#dbExtensions.CountPublishers)
         * [func (s dbExtensions) GetPublisher(ctx context.Context, name string) (*dbPublisher, error)](#dbExtensions.GetPublisher)
-    * [type extensionNotFoundError struct](#extensionNotFoundError)
-        * [func (err extensionNotFoundError) NotFound() bool](#extensionNotFoundError.NotFound)
-        * [func (err extensionNotFoundError) Error() string](#extensionNotFoundError.Error)
+        * [func (s dbExtensions) List(ctx context.Context, opt dbExtensionsListOptions) ([]*dbExtension, error)](#dbExtensions.List)
+        * [func (s dbExtensions) ListPublishers(ctx context.Context, opt dbPublishersListOptions) ([]*dbPublisher, error)](#dbExtensions.ListPublishers)
+        * [func (dbExtensions) Update(ctx context.Context, id int32, name *string) error](#dbExtensions.Update)
+        * [func (s dbExtensions) getFeaturedExtensions(ctx context.Context, featuredExtensionIDs []string) ([]*dbExtension, error)](#dbExtensions.getFeaturedExtensions)
+        * [func (s dbExtensions) list(ctx context.Context, conds, order []*sqlf.Query, limitOffset *database.LimitOffset) ([]*dbExtension, error)](#dbExtensions.list)
+        * [func (dbExtensions) listCountSQL(conds []*sqlf.Query) *sqlf.Query](#dbExtensions.listCountSQL)
+        * [func (s dbExtensions) listPublishers(ctx context.Context, conds []*sqlf.Query, limitOffset *database.LimitOffset) ([]*dbPublisher, error)](#dbExtensions.listPublishers)
+        * [func (dbExtensions) publishersSQLCTE() *sqlf.Query](#dbExtensions.publishersSQLCTE)
     * [type dbExtensionsListOptions struct](#dbExtensionsListOptions)
         * [func toDBExtensionsListOptions(args graphqlbackend.RegistryExtensionConnectionArgs) (dbExtensionsListOptions, error)](#toDBExtensionsListOptions)
         * [func (o dbExtensionsListOptions) sqlConditions() []*sqlf.Query](#dbExtensionsListOptions.sqlConditions)
         * [func (o dbExtensionsListOptions) sqlOrder() []*sqlf.Query](#dbExtensionsListOptions.sqlOrder)
-    * [type mockExtensions struct](#mockExtensions)
-    * [type responseRecorder struct](#responseRecorder)
-        * [func (r *responseRecorder) WriteHeader(code int)](#responseRecorder.WriteHeader)
     * [type dbMocks struct](#dbMocks)
-    * [type registryPublisherConnection struct](#registryPublisherConnection)
-        * [func (r *registryPublisherConnection) compute(ctx context.Context) ([]*dbPublisher, error)](#registryPublisherConnection.compute)
-        * [func (r *registryPublisherConnection) Nodes(ctx context.Context) ([]graphqlbackend.RegistryPublisher, error)](#registryPublisherConnection.Nodes)
-        * [func (r *registryPublisherConnection) TotalCount(ctx context.Context) (int32, error)](#registryPublisherConnection.TotalCount)
-        * [func (r *registryPublisherConnection) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)](#registryPublisherConnection.PageInfo)
-    * [type registryPublisher struct](#registryPublisher)
-        * [func getRegistryPublisher(ctx context.Context, db dbutil.DB, publisher dbPublisher) (*registryPublisher, error)](#getRegistryPublisher)
-        * [func (r *registryPublisher) ToUser() (*graphqlbackend.UserResolver, bool)](#registryPublisher.ToUser)
-        * [func (r *registryPublisher) ToOrg() (*graphqlbackend.OrgResolver, bool)](#registryPublisher.ToOrg)
-        * [func (r *registryPublisher) toDBRegistryPublisher() dbPublisher](#registryPublisher.toDBRegistryPublisher)
-        * [func (r *registryPublisher) RegistryExtensionConnectionURL() (*string, error)](#registryPublisher.RegistryExtensionConnectionURL)
-    * [type registryPublisherID struct](#registryPublisherID)
-        * [func toRegistryPublisherID(extension *dbExtension) *registryPublisherID](#toRegistryPublisherID)
-        * [func unmarshalRegistryPublisherID(id graphql.ID) (*registryPublisherID, error)](#unmarshalRegistryPublisherID)
-        * [func (p *registryPublisherID) viewerCanAdminister(ctx context.Context, db dbutil.DB) error](#registryPublisherID.viewerCanAdminister)
     * [type dbPublisher struct](#dbPublisher)
         * [func (p dbPublisher) IsZero() bool](#dbPublisher.IsZero)
-    * [type publisherNotFoundError struct](#publisherNotFoundError)
-        * [func (err publisherNotFoundError) NotFound() bool](#publisherNotFoundError.NotFound)
-        * [func (err publisherNotFoundError) Error() string](#publisherNotFoundError.Error)
     * [type dbPublishersListOptions struct](#dbPublishersListOptions)
         * [func (o dbPublishersListOptions) sqlConditions() []*sqlf.Query](#dbPublishersListOptions.sqlConditions)
     * [type dbRelease struct](#dbRelease)
         * [func getLatestRelease(ctx context.Context, extensionID string, registryExtensionID int32, releaseTag string) (*dbRelease, error)](#getLatestRelease)
     * [type dbReleases struct{}](#dbReleases)
         * [func (dbReleases) Create(ctx context.Context, release *dbRelease) (id int64, err error)](#dbReleases.Create)
+        * [func (dbReleases) GetArtifacts(ctx context.Context, id int64) (bundle, sourcemap []byte, err error)](#dbReleases.GetArtifacts)
         * [func (dbReleases) GetLatest(ctx context.Context, registryExtensionID int32, releaseTag string, includeArtifacts bool) (*dbRelease, error)](#dbReleases.GetLatest)
         * [func (dbReleases) GetLatestBatch(ctx context.Context, registryExtensionIDs []int32, releaseTag string, includeArtifacts bool) ([]*dbRelease, error)](#dbReleases.GetLatestBatch)
-        * [func (dbReleases) GetArtifacts(ctx context.Context, id int64) (bundle, sourcemap []byte, err error)](#dbReleases.GetArtifacts)
-    * [type releaseNotFoundError struct](#releaseNotFoundError)
-        * [func (err releaseNotFoundError) NotFound() bool](#releaseNotFoundError.NotFound)
-        * [func (err releaseNotFoundError) Error() string](#releaseNotFoundError.Error)
+    * [type extensionDBResolver struct](#extensionDBResolver)
+        * [func (r *extensionDBResolver) CreatedAt() *graphqlbackend.DateTime](#extensionDBResolver.CreatedAt)
+        * [func (r *extensionDBResolver) ExtensionID() string](#extensionDBResolver.ExtensionID)
+        * [func (r *extensionDBResolver) ExtensionIDWithoutRegistry() string](#extensionDBResolver.ExtensionIDWithoutRegistry)
+        * [func (r *extensionDBResolver) ID() graphql.ID](#extensionDBResolver.ID)
+        * [func (r *extensionDBResolver) IsLocal() bool](#extensionDBResolver.IsLocal)
+        * [func (r *extensionDBResolver) IsWorkInProgress() bool](#extensionDBResolver.IsWorkInProgress)
+        * [func (r *extensionDBResolver) Manifest(ctx context.Context) (graphqlbackend.ExtensionManifest, error)](#extensionDBResolver.Manifest)
+        * [func (r *extensionDBResolver) Name() string](#extensionDBResolver.Name)
+        * [func (r *extensionDBResolver) PublishedAt(ctx context.Context) (*graphqlbackend.DateTime, error)](#extensionDBResolver.PublishedAt)
+        * [func (r *extensionDBResolver) Publisher(ctx context.Context) (graphqlbackend.RegistryPublisher, error)](#extensionDBResolver.Publisher)
+        * [func (r *extensionDBResolver) RegistryName() (string, error)](#extensionDBResolver.RegistryName)
+        * [func (r *extensionDBResolver) RemoteURL() *string](#extensionDBResolver.RemoteURL)
+        * [func (r *extensionDBResolver) URL() string](#extensionDBResolver.URL)
+        * [func (r *extensionDBResolver) UUID() string](#extensionDBResolver.UUID)
+        * [func (r *extensionDBResolver) UpdatedAt() *graphqlbackend.DateTime](#extensionDBResolver.UpdatedAt)
+        * [func (r *extensionDBResolver) ViewerCanAdminister(ctx context.Context) (bool, error)](#extensionDBResolver.ViewerCanAdminister)
+        * [func (r *extensionDBResolver) release(ctx context.Context) (*dbRelease, error)](#extensionDBResolver.release)
+    * [type extensionNotFoundError struct](#extensionNotFoundError)
+        * [func (err extensionNotFoundError) Error() string](#extensionNotFoundError.Error)
+        * [func (err extensionNotFoundError) NotFound() bool](#extensionNotFoundError.NotFound)
+    * [type mockExtensions struct](#mockExtensions)
     * [type mockReleases struct](#mockReleases)
+    * [type publisherNotFoundError struct](#publisherNotFoundError)
+        * [func (err publisherNotFoundError) Error() string](#publisherNotFoundError.Error)
+        * [func (err publisherNotFoundError) NotFound() bool](#publisherNotFoundError.NotFound)
+    * [type registryPublisher struct](#registryPublisher)
+        * [func getRegistryPublisher(ctx context.Context, db dbutil.DB, publisher dbPublisher) (*registryPublisher, error)](#getRegistryPublisher)
+        * [func (r *registryPublisher) RegistryExtensionConnectionURL() (*string, error)](#registryPublisher.RegistryExtensionConnectionURL)
+        * [func (r *registryPublisher) ToOrg() (*graphqlbackend.OrgResolver, bool)](#registryPublisher.ToOrg)
+        * [func (r *registryPublisher) ToUser() (*graphqlbackend.UserResolver, bool)](#registryPublisher.ToUser)
+        * [func (r *registryPublisher) toDBRegistryPublisher() dbPublisher](#registryPublisher.toDBRegistryPublisher)
+    * [type registryPublisherConnection struct](#registryPublisherConnection)
+        * [func (r *registryPublisherConnection) Nodes(ctx context.Context) ([]graphqlbackend.RegistryPublisher, error)](#registryPublisherConnection.Nodes)
+        * [func (r *registryPublisherConnection) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)](#registryPublisherConnection.PageInfo)
+        * [func (r *registryPublisherConnection) TotalCount(ctx context.Context) (int32, error)](#registryPublisherConnection.TotalCount)
+        * [func (r *registryPublisherConnection) compute(ctx context.Context) ([]*dbPublisher, error)](#registryPublisherConnection.compute)
+    * [type registryPublisherID struct](#registryPublisherID)
+        * [func toRegistryPublisherID(extension *dbExtension) *registryPublisherID](#toRegistryPublisherID)
+        * [func unmarshalRegistryPublisherID(id graphql.ID) (*registryPublisherID, error)](#unmarshalRegistryPublisherID)
+        * [func (p *registryPublisherID) viewerCanAdminister(ctx context.Context, db dbutil.DB) error](#registryPublisherID.viewerCanAdminister)
+    * [type releaseNotFoundError struct](#releaseNotFoundError)
+        * [func (err releaseNotFoundError) Error() string](#releaseNotFoundError.Error)
+        * [func (err releaseNotFoundError) NotFound() bool](#releaseNotFoundError.NotFound)
+    * [type responseRecorder struct](#responseRecorder)
+        * [func (r *responseRecorder) WriteHeader(code int)](#responseRecorder.WriteHeader)
 * [Functions](#func)
-    * [func init()](#init.allow.go)
-    * [func getAllowedExtensionsFromSiteConfig() []string](#getAllowedExtensionsFromSiteConfig)
-    * [func init()](#init.extension_bundle.go)
-    * [func handleRegistryExtensionBundle(w http.ResponseWriter, r *http.Request)](#handleRegistryExtensionBundle)
-    * [func parseExtensionBundleFilename(filename string) (int64, error)](#parseExtensionBundleFilename)
-    * [func init()](#init.extension_connection_graphql.go)
-    * [func listLocalRegistryExtensions(ctx context.Context, db dbutil.DB, args graphqlbackend.RegistryExtensionConnectionArgs) ([]graphqlbackend.RegistryExtension, error)](#listLocalRegistryExtensions)
-    * [func countLocalRegistryExtensions(ctx context.Context, db dbutil.DB, args graphqlbackend.RegistryExtensionConnectionArgs) (int, error)](#countLocalRegistryExtensions)
-    * [func parseExtensionQuery(q string) (text, category, tag string)](#parseExtensionQuery)
-    * [func filterStripLocalExtensionIDs(extensionIDs []string) []string](#filterStripLocalExtensionIDs)
-    * [func strptr(s string) *string](#strptr)
-    * [func validateExtensionManifest(text string) error](#validateExtensionManifest)
-    * [func getLatestForBatch(ctx context.Context, vs []*dbExtension) (map[int32]*dbRelease, error)](#getLatestForBatch)
-    * [func prepReleaseManifest(extensionID string, release *dbRelease) error](#prepReleaseManifest)
-    * [func makeExtensionBundleURL(registryExtensionReleaseID int64, timestamp int64, extensionIDHint string) (string, error)](#makeExtensionBundleURL)
-    * [func init()](#init.extensions.go)
-    * [func prefixLocalExtensionID(xs ...*dbExtension) error](#prefixLocalExtensionID)
-    * [func init()](#init.http_api.go)
-    * [func toRegistryAPIExtension(ctx context.Context, v *dbExtension) (*registry.Extension, error)](#toRegistryAPIExtension)
-    * [func toRegistryAPIExtensionBatch(ctx context.Context, vs []*dbExtension) ([]*registry.Extension, error)](#toRegistryAPIExtensionBatch)
-    * [func newExtension(v *dbExtension, manifest *string, publishedAt time.Time) *registry.Extension](#newExtension)
-    * [func handleRegistry(w http.ResponseWriter, r *http.Request) (err error)](#handleRegistry)
-    * [func init()](#init.http_api.go.0xc06f6623d8)
-    * [func resetMocks()](#resetMocks)
-    * [func init()](#init.publisher_connection_graphql.go)
-    * [func extensionRegistryPublishers(ctx context.Context, db dbutil.DB, args *graphqlutil.ConnectionArgs) (graphqlbackend.RegistryPublisherConnection, error)](#extensionRegistryPublishers)
-    * [func init()](#init.publisher_graphql.go)
-    * [func extensionRegistryViewerPublishers(ctx context.Context, db dbutil.DB) ([]graphqlbackend.RegistryPublisher, error)](#extensionRegistryViewerPublishers)
-    * [func init()](#init.registry_graphql.go)
-    * [func registryExtensionByIDInt32(ctx context.Context, db dbutil.DB, id int32) (graphqlbackend.RegistryExtension, error)](#registryExtensionByIDInt32)
-    * [func extensionRegistryCreateExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryCreateExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)](#extensionRegistryCreateExtension)
-    * [func viewerCanAdministerExtension(ctx context.Context, db dbutil.DB, id frontendregistry.RegistryExtensionID) error](#viewerCanAdministerExtension)
-    * [func extensionRegistryUpdateExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryUpdateExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)](#extensionRegistryUpdateExtension)
-    * [func extensionRegistryDeleteExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryDeleteExtensionArgs) (*graphqlbackend.EmptyResponse, error)](#extensionRegistryDeleteExtension)
-    * [func extensionRegistryPublishExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryPublishExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)](#extensionRegistryPublishExtension)
-    * [func TestIsRemoteExtensionAllowed(t *testing.T)](#TestIsRemoteExtensionAllowed)
-    * [func sameElements(a, b []string) bool](#sameElements)
+    * [func TestFeaturedExtensions(t *testing.T)](#TestFeaturedExtensions)
     * [func TestFilterRemoteExtensions(t *testing.T)](#TestFilterRemoteExtensions)
-    * [func init()](#init.db_test.go)
-    * [func TestParseExtensionBundleFilename(t *testing.T)](#TestParseExtensionBundleFilename)
     * [func TestFilteringExtensionIDs(t *testing.T)](#TestFilteringExtensionIDs)
-    * [func TestToDBExtensionsListOptions(t *testing.T)](#TestToDBExtensionsListOptions)
-    * [func strarrayptr(values []string) *[]string](#strarrayptr)
     * [func TestGetExtensionManifestWithBundleURL(t *testing.T)](#TestGetExtensionManifestWithBundleURL)
-    * [func jsonDeepEqual(a, b string) bool](#jsonDeepEqual)
-    * [func TestRegistryExtensions_validNames(t *testing.T)](#TestRegistryExtensions_validNames)
+    * [func TestIsRemoteExtensionAllowed(t *testing.T)](#TestIsRemoteExtensionAllowed)
+    * [func TestParseExtensionBundleFilename(t *testing.T)](#TestParseExtensionBundleFilename)
+    * [func TestRegistryExtensionReleases(t *testing.T)](#TestRegistryExtensionReleases)
     * [func TestRegistryExtensions(t *testing.T)](#TestRegistryExtensions)
     * [func TestRegistryExtensions_ListCount(t *testing.T)](#TestRegistryExtensions_ListCount)
-    * [func TestFeaturedExtensions(t *testing.T)](#TestFeaturedExtensions)
+    * [func TestRegistryExtensions_validNames(t *testing.T)](#TestRegistryExtensions_validNames)
+    * [func TestToDBExtensionsListOptions(t *testing.T)](#TestToDBExtensionsListOptions)
     * [func asJSON(t *testing.T, v interface{}) string](#asJSON)
-    * [func TestRegistryExtensionReleases(t *testing.T)](#TestRegistryExtensionReleases)
+    * [func countLocalRegistryExtensions(ctx context.Context, db dbutil.DB, args graphqlbackend.RegistryExtensionConnectionArgs) (int, error)](#countLocalRegistryExtensions)
+    * [func extensionRegistryCreateExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryCreateExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)](#extensionRegistryCreateExtension)
+    * [func extensionRegistryDeleteExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryDeleteExtensionArgs) (*graphqlbackend.EmptyResponse, error)](#extensionRegistryDeleteExtension)
+    * [func extensionRegistryPublishExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryPublishExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)](#extensionRegistryPublishExtension)
+    * [func extensionRegistryPublishers(ctx context.Context, db dbutil.DB, args *graphqlutil.ConnectionArgs) (graphqlbackend.RegistryPublisherConnection, error)](#extensionRegistryPublishers)
+    * [func extensionRegistryUpdateExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryUpdateExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)](#extensionRegistryUpdateExtension)
+    * [func extensionRegistryViewerPublishers(ctx context.Context, db dbutil.DB) ([]graphqlbackend.RegistryPublisher, error)](#extensionRegistryViewerPublishers)
+    * [func filterStripLocalExtensionIDs(extensionIDs []string) []string](#filterStripLocalExtensionIDs)
+    * [func getAllowedExtensionsFromSiteConfig() []string](#getAllowedExtensionsFromSiteConfig)
+    * [func getLatestForBatch(ctx context.Context, vs []*dbExtension) (map[int32]*dbRelease, error)](#getLatestForBatch)
+    * [func handleRegistry(w http.ResponseWriter, r *http.Request) (err error)](#handleRegistry)
+    * [func handleRegistryExtensionBundle(w http.ResponseWriter, r *http.Request)](#handleRegistryExtensionBundle)
+    * [func init()](#init.allow.go)
+    * [func init()](#init.db_test.go)
+    * [func init()](#init.extension_bundle.go)
+    * [func init()](#init.extension_connection_graphql.go)
+    * [func init()](#init.extensions.go)
+    * [func init()](#init.http_api.go)
+    * [func init()](#init.http_api.go.0xc0775eab18)
+    * [func init()](#init.publisher_connection_graphql.go)
+    * [func init()](#init.publisher_graphql.go)
+    * [func init()](#init.registry_graphql.go)
+    * [func jsonDeepEqual(a, b string) bool](#jsonDeepEqual)
+    * [func listLocalRegistryExtensions(ctx context.Context, db dbutil.DB, args graphqlbackend.RegistryExtensionConnectionArgs) ([]graphqlbackend.RegistryExtension, error)](#listLocalRegistryExtensions)
+    * [func makeExtensionBundleURL(registryExtensionReleaseID int64, timestamp int64, extensionIDHint string) (string, error)](#makeExtensionBundleURL)
+    * [func newExtension(v *dbExtension, manifest *string, publishedAt time.Time) *registry.Extension](#newExtension)
+    * [func parseExtensionBundleFilename(filename string) (int64, error)](#parseExtensionBundleFilename)
+    * [func parseExtensionQuery(q string) (text, category, tag string)](#parseExtensionQuery)
+    * [func prefixLocalExtensionID(xs ...*dbExtension) error](#prefixLocalExtensionID)
+    * [func prepReleaseManifest(extensionID string, release *dbRelease) error](#prepReleaseManifest)
+    * [func registryExtensionByIDInt32(ctx context.Context, db dbutil.DB, id int32) (graphqlbackend.RegistryExtension, error)](#registryExtensionByIDInt32)
+    * [func resetMocks()](#resetMocks)
+    * [func sameElements(a, b []string) bool](#sameElements)
+    * [func strarrayptr(values []string) *[]string](#strarrayptr)
+    * [func strptr(s string) *string](#strptr)
+    * [func toRegistryAPIExtension(ctx context.Context, v *dbExtension) (*registry.Extension, error)](#toRegistryAPIExtension)
+    * [func toRegistryAPIExtensionBatch(ctx context.Context, vs []*dbExtension) ([]*registry.Extension, error)](#toRegistryAPIExtensionBatch)
+    * [func validateExtensionManifest(text string) error](#validateExtensionManifest)
+    * [func viewerCanAdministerExtension(ctx context.Context, db dbutil.DB, id frontendregistry.RegistryExtensionID) error](#viewerCanAdministerExtension)
 
 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
-
-### <a id="extensionPublisherNameExpr" href="#extensionPublisherNameExpr">const extensionPublisherNameExpr</a>
-
-```
-searchKey: registry.extensionPublisherNameExpr
-tags: [private]
-```
-
-```Go
-const extensionPublisherNameExpr = "COALESCE(users.username, orgs.name)"
-```
-
-extensionPublisherNameExpr is the SQL expression for the extension's publisher's name (using the table aliases created by (dbExtensions).listCountSQL. 
 
 ### <a id="extensionIDExpr" href="#extensionIDExpr">const extensionIDExpr</a>
 
 ```
 searchKey: registry.extensionIDExpr
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -189,54 +176,52 @@ const extensionIDExpr = "CONCAT(" + extensionPublisherNameExpr + ", '/', x.name)
 
 extensionIDExpr is the SQL expression for the extension ID (using the table aliases created by (dbExtensions).listCountSQL. 
 
+### <a id="extensionPublisherNameExpr" href="#extensionPublisherNameExpr">const extensionPublisherNameExpr</a>
+
+```
+searchKey: registry.extensionPublisherNameExpr
+tags: [constant string private]
+```
+
+```Go
+const extensionPublisherNameExpr = "COALESCE(users.username, orgs.name)"
+```
+
+extensionPublisherNameExpr is the SQL expression for the extension's publisher's name (using the table aliases created by (dbExtensions).listCountSQL. 
+
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
-### <a id="sourceMappingURLLineRegex" href="#sourceMappingURLLineRegex">var sourceMappingURLLineRegex</a>
+### <a id="errInvalidJSONInManifest" href="#errInvalidJSONInManifest">var errInvalidJSONInManifest</a>
 
 ```
-searchKey: registry.sourceMappingURLLineRegex
-tags: [private]
-```
-
-```Go
-var sourceMappingURLLineRegex = lazyregexp.New(`(?m)\r?\n?^//# sourceMappingURL=.+$`)
-```
-
-sourceMappingURLLineRegex is a regular expression that matches all lines with a `//# sourceMappingURL` comment 
-
-### <a id="nonLettersDigits" href="#nonLettersDigits">var nonLettersDigits</a>
-
-```
-searchKey: registry.nonLettersDigits
-tags: [private]
+searchKey: registry.errInvalidJSONInManifest
+tags: [variable interface private]
 ```
 
 ```Go
-var nonLettersDigits = lazyregexp.New(`[^a-zA-Z0-9-]`)
+var errInvalidJSONInManifest = errors.New("invalid syntax in extension manifest JSON")
 ```
 
-### <a id="featuredExtensionIDs" href="#featuredExtensionIDs">var featuredExtensionIDs</a>
+### <a id="errRegistryUnknownPublisher" href="#errRegistryUnknownPublisher">var errRegistryUnknownPublisher</a>
 
 ```
-searchKey: registry.featuredExtensionIDs
-tags: [private]
+searchKey: registry.errRegistryUnknownPublisher
+tags: [variable interface private]
 ```
 
 ```Go
-var featuredExtensionIDs = ...
+var errRegistryUnknownPublisher = errors.New("unknown registry extension publisher")
 ```
-
-Temporary: we manually set these. Featured extensions live on sourcegraph.com, all other instances ask dotcom for these extensions and filter based on site configuration. 
 
 ### <a id="extensionIsWIPExpr" href="#extensionIsWIPExpr">var extensionIsWIPExpr</a>
 
 ```
 searchKey: registry.extensionIsWIPExpr
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -247,107 +232,46 @@ extensionIsWIPExpr is the SQL expression for whether the extension is a WIP exte
 
 BACKCOMPAT: It still reads the title property even though extensions no longer have titles. 
 
-### <a id="registryList" href="#registryList">var registryList</a>
+### <a id="featuredExtensionIDs" href="#featuredExtensionIDs">var featuredExtensionIDs</a>
 
 ```
-searchKey: registry.registryList
-tags: [private]
-```
-
-```Go
-var registryList = ...
-```
-
-Funcs called by serveRegistry to get registry data. If fakeRegistryData is set, it is used as the data source instead of the database. 
-
-### <a id="registryGetByUUID" href="#registryGetByUUID">var registryGetByUUID</a>
-
-```
-searchKey: registry.registryGetByUUID
-tags: [private]
+searchKey: registry.featuredExtensionIDs
+tags: [variable array string private]
 ```
 
 ```Go
-var registryGetByUUID = ...
+var featuredExtensionIDs = ...
 ```
 
-Funcs called by serveRegistry to get registry data. If fakeRegistryData is set, it is used as the data source instead of the database. 
-
-### <a id="registryGetByExtensionID" href="#registryGetByExtensionID">var registryGetByExtensionID</a>
-
-```
-searchKey: registry.registryGetByExtensionID
-tags: [private]
-```
-
-```Go
-var registryGetByExtensionID = ...
-```
-
-Funcs called by serveRegistry to get registry data. If fakeRegistryData is set, it is used as the data source instead of the database. 
-
-### <a id="registryGetFeaturedExtensions" href="#registryGetFeaturedExtensions">var registryGetFeaturedExtensions</a>
-
-```
-searchKey: registry.registryGetFeaturedExtensions
-tags: [private]
-```
-
-```Go
-var registryGetFeaturedExtensions = ...
-```
-
-Funcs called by serveRegistry to get registry data. If fakeRegistryData is set, it is used as the data source instead of the database. 
-
-### <a id="registryRequestsDuration" href="#registryRequestsDuration">var registryRequestsDuration</a>
-
-```
-searchKey: registry.registryRequestsDuration
-tags: [private]
-```
-
-```Go
-var registryRequestsDuration = ...
-```
+Temporary: we manually set these. Featured extensions live on sourcegraph.com, all other instances ask dotcom for these extensions and filter based on site configuration. 
 
 ### <a id="mocks" href="#mocks">var mocks</a>
 
 ```
 searchKey: registry.mocks
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
 var mocks dbMocks
 ```
 
-### <a id="errRegistryUnknownPublisher" href="#errRegistryUnknownPublisher">var errRegistryUnknownPublisher</a>
+### <a id="nonLettersDigits" href="#nonLettersDigits">var nonLettersDigits</a>
 
 ```
-searchKey: registry.errRegistryUnknownPublisher
-tags: [private]
-```
-
-```Go
-var errRegistryUnknownPublisher = errors.New("unknown registry extension publisher")
-```
-
-### <a id="errInvalidJSONInManifest" href="#errInvalidJSONInManifest">var errInvalidJSONInManifest</a>
-
-```
-searchKey: registry.errInvalidJSONInManifest
-tags: [private]
+searchKey: registry.nonLettersDigits
+tags: [variable struct private]
 ```
 
 ```Go
-var errInvalidJSONInManifest = errors.New("invalid syntax in extension manifest JSON")
+var nonLettersDigits = lazyregexp.New(`[^a-zA-Z0-9-]`)
 ```
 
 ### <a id="registryExtensionNamesForTests" href="#registryExtensionNamesForTests">var registryExtensionNamesForTests</a>
 
 ```
 searchKey: registry.registryExtensionNamesForTests
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
@@ -356,224 +280,93 @@ var registryExtensionNamesForTests = ...
 
 registryExtensionNamesForTests is a list of test cases containing valid and invalid registry extension names. 
 
+### <a id="registryGetByExtensionID" href="#registryGetByExtensionID">var registryGetByExtensionID</a>
+
+```
+searchKey: registry.registryGetByExtensionID
+tags: [variable function private]
+```
+
+```Go
+var registryGetByExtensionID = ...
+```
+
+Funcs called by serveRegistry to get registry data. If fakeRegistryData is set, it is used as the data source instead of the database. 
+
+### <a id="registryGetByUUID" href="#registryGetByUUID">var registryGetByUUID</a>
+
+```
+searchKey: registry.registryGetByUUID
+tags: [variable function private]
+```
+
+```Go
+var registryGetByUUID = ...
+```
+
+Funcs called by serveRegistry to get registry data. If fakeRegistryData is set, it is used as the data source instead of the database. 
+
+### <a id="registryGetFeaturedExtensions" href="#registryGetFeaturedExtensions">var registryGetFeaturedExtensions</a>
+
+```
+searchKey: registry.registryGetFeaturedExtensions
+tags: [variable function private]
+```
+
+```Go
+var registryGetFeaturedExtensions = ...
+```
+
+Funcs called by serveRegistry to get registry data. If fakeRegistryData is set, it is used as the data source instead of the database. 
+
+### <a id="registryList" href="#registryList">var registryList</a>
+
+```
+searchKey: registry.registryList
+tags: [variable function private]
+```
+
+```Go
+var registryList = ...
+```
+
+Funcs called by serveRegistry to get registry data. If fakeRegistryData is set, it is used as the data source instead of the database. 
+
+### <a id="registryRequestsDuration" href="#registryRequestsDuration">var registryRequestsDuration</a>
+
+```
+searchKey: registry.registryRequestsDuration
+tags: [variable struct private]
+```
+
+```Go
+var registryRequestsDuration = ...
+```
+
+### <a id="sourceMappingURLLineRegex" href="#sourceMappingURLLineRegex">var sourceMappingURLLineRegex</a>
+
+```
+searchKey: registry.sourceMappingURLLineRegex
+tags: [variable struct private]
+```
+
+```Go
+var sourceMappingURLLineRegex = lazyregexp.New(`(?m)\r?\n?^//# sourceMappingURL=.+$`)
+```
+
+sourceMappingURLLineRegex is a regular expression that matches all lines with a `//# sourceMappingURL` comment 
+
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
-```
-
-### <a id="extensionDBResolver" href="#extensionDBResolver">type extensionDBResolver struct</a>
-
-```
-searchKey: registry.extensionDBResolver
-tags: [private]
-```
-
-```Go
-type extensionDBResolver struct {
-	db dbutil.DB
-	v  *dbExtension
-
-	// Supplied as part of list endpoints, but
-	// calculated as part of single-extension endpoints
-	r *dbRelease
-}
-```
-
-extensionDBResolver implements the GraphQL type RegistryExtension. 
-
-#### <a id="extensionDBResolver.ID" href="#extensionDBResolver.ID">func (r *extensionDBResolver) ID() graphql.ID</a>
-
-```
-searchKey: registry.extensionDBResolver.ID
-tags: [private]
-```
-
-```Go
-func (r *extensionDBResolver) ID() graphql.ID
-```
-
-#### <a id="extensionDBResolver.UUID" href="#extensionDBResolver.UUID">func (r *extensionDBResolver) UUID() string</a>
-
-```
-searchKey: registry.extensionDBResolver.UUID
-tags: [private]
-```
-
-```Go
-func (r *extensionDBResolver) UUID() string
-```
-
-#### <a id="extensionDBResolver.ExtensionID" href="#extensionDBResolver.ExtensionID">func (r *extensionDBResolver) ExtensionID() string</a>
-
-```
-searchKey: registry.extensionDBResolver.ExtensionID
-tags: [private]
-```
-
-```Go
-func (r *extensionDBResolver) ExtensionID() string
-```
-
-#### <a id="extensionDBResolver.ExtensionIDWithoutRegistry" href="#extensionDBResolver.ExtensionIDWithoutRegistry">func (r *extensionDBResolver) ExtensionIDWithoutRegistry() string</a>
-
-```
-searchKey: registry.extensionDBResolver.ExtensionIDWithoutRegistry
-tags: [private]
-```
-
-```Go
-func (r *extensionDBResolver) ExtensionIDWithoutRegistry() string
-```
-
-#### <a id="extensionDBResolver.Publisher" href="#extensionDBResolver.Publisher">func (r *extensionDBResolver) Publisher(ctx context.Context) (graphqlbackend.RegistryPublisher, error)</a>
-
-```
-searchKey: registry.extensionDBResolver.Publisher
-tags: [private]
-```
-
-```Go
-func (r *extensionDBResolver) Publisher(ctx context.Context) (graphqlbackend.RegistryPublisher, error)
-```
-
-#### <a id="extensionDBResolver.Name" href="#extensionDBResolver.Name">func (r *extensionDBResolver) Name() string</a>
-
-```
-searchKey: registry.extensionDBResolver.Name
-tags: [private]
-```
-
-```Go
-func (r *extensionDBResolver) Name() string
-```
-
-#### <a id="extensionDBResolver.Manifest" href="#extensionDBResolver.Manifest">func (r *extensionDBResolver) Manifest(ctx context.Context) (graphqlbackend.ExtensionManifest, error)</a>
-
-```
-searchKey: registry.extensionDBResolver.Manifest
-tags: [private]
-```
-
-```Go
-func (r *extensionDBResolver) Manifest(ctx context.Context) (graphqlbackend.ExtensionManifest, error)
-```
-
-#### <a id="extensionDBResolver.CreatedAt" href="#extensionDBResolver.CreatedAt">func (r *extensionDBResolver) CreatedAt() *graphqlbackend.DateTime</a>
-
-```
-searchKey: registry.extensionDBResolver.CreatedAt
-tags: [private]
-```
-
-```Go
-func (r *extensionDBResolver) CreatedAt() *graphqlbackend.DateTime
-```
-
-#### <a id="extensionDBResolver.UpdatedAt" href="#extensionDBResolver.UpdatedAt">func (r *extensionDBResolver) UpdatedAt() *graphqlbackend.DateTime</a>
-
-```
-searchKey: registry.extensionDBResolver.UpdatedAt
-tags: [private]
-```
-
-```Go
-func (r *extensionDBResolver) UpdatedAt() *graphqlbackend.DateTime
-```
-
-#### <a id="extensionDBResolver.PublishedAt" href="#extensionDBResolver.PublishedAt">func (r *extensionDBResolver) PublishedAt(ctx context.Context) (*graphqlbackend.DateTime, error)</a>
-
-```
-searchKey: registry.extensionDBResolver.PublishedAt
-tags: [private]
-```
-
-```Go
-func (r *extensionDBResolver) PublishedAt(ctx context.Context) (*graphqlbackend.DateTime, error)
-```
-
-#### <a id="extensionDBResolver.URL" href="#extensionDBResolver.URL">func (r *extensionDBResolver) URL() string</a>
-
-```
-searchKey: registry.extensionDBResolver.URL
-tags: [private]
-```
-
-```Go
-func (r *extensionDBResolver) URL() string
-```
-
-#### <a id="extensionDBResolver.RemoteURL" href="#extensionDBResolver.RemoteURL">func (r *extensionDBResolver) RemoteURL() *string</a>
-
-```
-searchKey: registry.extensionDBResolver.RemoteURL
-tags: [private]
-```
-
-```Go
-func (r *extensionDBResolver) RemoteURL() *string
-```
-
-#### <a id="extensionDBResolver.RegistryName" href="#extensionDBResolver.RegistryName">func (r *extensionDBResolver) RegistryName() (string, error)</a>
-
-```
-searchKey: registry.extensionDBResolver.RegistryName
-tags: [private]
-```
-
-```Go
-func (r *extensionDBResolver) RegistryName() (string, error)
-```
-
-#### <a id="extensionDBResolver.IsLocal" href="#extensionDBResolver.IsLocal">func (r *extensionDBResolver) IsLocal() bool</a>
-
-```
-searchKey: registry.extensionDBResolver.IsLocal
-tags: [private]
-```
-
-```Go
-func (r *extensionDBResolver) IsLocal() bool
-```
-
-#### <a id="extensionDBResolver.IsWorkInProgress" href="#extensionDBResolver.IsWorkInProgress">func (r *extensionDBResolver) IsWorkInProgress() bool</a>
-
-```
-searchKey: registry.extensionDBResolver.IsWorkInProgress
-tags: [private]
-```
-
-```Go
-func (r *extensionDBResolver) IsWorkInProgress() bool
-```
-
-#### <a id="extensionDBResolver.ViewerCanAdminister" href="#extensionDBResolver.ViewerCanAdminister">func (r *extensionDBResolver) ViewerCanAdminister(ctx context.Context) (bool, error)</a>
-
-```
-searchKey: registry.extensionDBResolver.ViewerCanAdminister
-tags: [private]
-```
-
-```Go
-func (r *extensionDBResolver) ViewerCanAdminister(ctx context.Context) (bool, error)
-```
-
-#### <a id="extensionDBResolver.release" href="#extensionDBResolver.release">func (r *extensionDBResolver) release(ctx context.Context) (*dbRelease, error)</a>
-
-```
-searchKey: registry.extensionDBResolver.release
-tags: [private]
-```
-
-```Go
-func (r *extensionDBResolver) release(ctx context.Context) (*dbRelease, error)
+tags: [package private]
 ```
 
 ### <a id="dbExtension" href="#dbExtension">type dbExtension struct</a>
 
 ```
 searchKey: registry.dbExtension
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -618,18 +411,48 @@ It is the internal form of github.com/sourcegraph/sourcegraph/internal/registry.
 
 ```
 searchKey: registry.dbExtensions
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
 type dbExtensions struct{}
 ```
 
+#### <a id="dbExtensions.Count" href="#dbExtensions.Count">func (s dbExtensions) Count(ctx context.Context, opt dbExtensionsListOptions) (int, error)</a>
+
+```
+searchKey: registry.dbExtensions.Count
+tags: [method private]
+```
+
+```Go
+func (s dbExtensions) Count(ctx context.Context, opt dbExtensionsListOptions) (int, error)
+```
+
+Count counts all registry extensions that satisfy the options (ignoring limit and offset). 
+
+🚨 SECURITY: The caller must ensure that the actor is permitted to count the results. 
+
+#### <a id="dbExtensions.CountPublishers" href="#dbExtensions.CountPublishers">func (s dbExtensions) CountPublishers(ctx context.Context, opt dbPublishersListOptions) (int, error)</a>
+
+```
+searchKey: registry.dbExtensions.CountPublishers
+tags: [method private]
+```
+
+```Go
+func (s dbExtensions) CountPublishers(ctx context.Context, opt dbPublishersListOptions) (int, error)
+```
+
+CountPublishers counts all registry publishers that satisfy the options (ignoring limit and offset). 
+
+🚨 SECURITY: The caller must ensure that the actor is permitted to count the results. 
+
 #### <a id="dbExtensions.Create" href="#dbExtensions.Create">func (s dbExtensions) Create(ctx context.Context, publisherUserID, publisherOrgID int32, name string) (id int32, err error)</a>
 
 ```
 searchKey: registry.dbExtensions.Create
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -638,11 +461,39 @@ func (s dbExtensions) Create(ctx context.Context, publisherUserID, publisherOrgI
 
 Create creates a new extension in the extension registry. Exactly 1 of publisherUserID and publisherOrgID must be nonzero. 
 
+#### <a id="dbExtensions.Delete" href="#dbExtensions.Delete">func (dbExtensions) Delete(ctx context.Context, id int32) error</a>
+
+```
+searchKey: registry.dbExtensions.Delete
+tags: [method private]
+```
+
+```Go
+func (dbExtensions) Delete(ctx context.Context, id int32) error
+```
+
+Delete marks an registry extension as deleted. 
+
+#### <a id="dbExtensions.GetByExtensionID" href="#dbExtensions.GetByExtensionID">func (s dbExtensions) GetByExtensionID(ctx context.Context, extensionID string) (*dbExtension, error)</a>
+
+```
+searchKey: registry.dbExtensions.GetByExtensionID
+tags: [method private]
+```
+
+```Go
+func (s dbExtensions) GetByExtensionID(ctx context.Context, extensionID string) (*dbExtension, error)
+```
+
+GetByExtensionID retrieves the registry extension (if any) given its extension ID, which is the concatenation of the publisher name, a slash ("/"), and the extension name. 
+
+🚨 SECURITY: The caller must ensure that the actor is permitted to view this registry extension. 
+
 #### <a id="dbExtensions.GetByID" href="#dbExtensions.GetByID">func (s dbExtensions) GetByID(ctx context.Context, id int32) (*dbExtension, error)</a>
 
 ```
 searchKey: registry.dbExtensions.GetByID
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -657,7 +508,7 @@ GetByID retrieves the registry extension (if any) given its ID.
 
 ```
 searchKey: registry.dbExtensions.GetByUUID
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -668,26 +519,11 @@ GetByUUID retrieves the registry extension (if any) given its UUID.
 
 🚨 SECURITY: The caller must ensure that the actor is permitted to view this registry extension. 
 
-#### <a id="dbExtensions.GetByExtensionID" href="#dbExtensions.GetByExtensionID">func (s dbExtensions) GetByExtensionID(ctx context.Context, extensionID string) (*dbExtension, error)</a>
-
-```
-searchKey: registry.dbExtensions.GetByExtensionID
-tags: [private]
-```
-
-```Go
-func (s dbExtensions) GetByExtensionID(ctx context.Context, extensionID string) (*dbExtension, error)
-```
-
-GetByExtensionID retrieves the registry extension (if any) given its extension ID, which is the concatenation of the publisher name, a slash ("/"), and the extension name. 
-
-🚨 SECURITY: The caller must ensure that the actor is permitted to view this registry extension. 
-
 #### <a id="dbExtensions.GetFeaturedExtensions" href="#dbExtensions.GetFeaturedExtensions">func (s dbExtensions) GetFeaturedExtensions(ctx context.Context) ([]*dbExtension, error)</a>
 
 ```
 searchKey: registry.dbExtensions.GetFeaturedExtensions
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -698,22 +534,24 @@ GetFeaturedExtensions retrieves the set of currently featured extensions. This s
 
 🚨 SECURITY: The caller must ensure that the actor is permitted to view these registry extensions. 
 
-#### <a id="dbExtensions.getFeaturedExtensions" href="#dbExtensions.getFeaturedExtensions">func (s dbExtensions) getFeaturedExtensions(ctx context.Context, featuredExtensionIDs []string) ([]*dbExtension, error)</a>
+#### <a id="dbExtensions.GetPublisher" href="#dbExtensions.GetPublisher">func (s dbExtensions) GetPublisher(ctx context.Context, name string) (*dbPublisher, error)</a>
 
 ```
-searchKey: registry.dbExtensions.getFeaturedExtensions
-tags: [private]
+searchKey: registry.dbExtensions.GetPublisher
+tags: [method private]
 ```
 
 ```Go
-func (s dbExtensions) getFeaturedExtensions(ctx context.Context, featuredExtensionIDs []string) ([]*dbExtension, error)
+func (s dbExtensions) GetPublisher(ctx context.Context, name string) (*dbPublisher, error)
 ```
+
+GePublisher gets the registry publisher with the given name. 
 
 #### <a id="dbExtensions.List" href="#dbExtensions.List">func (s dbExtensions) List(ctx context.Context, opt dbExtensionsListOptions) ([]*dbExtension, error)</a>
 
 ```
 searchKey: registry.dbExtensions.List
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -724,74 +562,11 @@ List lists all registry extensions that satisfy the options.
 
 🚨 SECURITY: The caller must ensure that the actor is permitted to list with the specified options. 
 
-#### <a id="dbExtensions.listCountSQL" href="#dbExtensions.listCountSQL">func (dbExtensions) listCountSQL(conds []*sqlf.Query) *sqlf.Query</a>
-
-```
-searchKey: registry.dbExtensions.listCountSQL
-tags: [private]
-```
-
-```Go
-func (dbExtensions) listCountSQL(conds []*sqlf.Query) *sqlf.Query
-```
-
-#### <a id="dbExtensions.list" href="#dbExtensions.list">func (s dbExtensions) list(ctx context.Context, conds, order []*sqlf.Query, limitOffset *database.LimitOffset) ([]*dbExtension, error)</a>
-
-```
-searchKey: registry.dbExtensions.list
-tags: [private]
-```
-
-```Go
-func (s dbExtensions) list(ctx context.Context, conds, order []*sqlf.Query, limitOffset *database.LimitOffset) ([]*dbExtension, error)
-```
-
-#### <a id="dbExtensions.Count" href="#dbExtensions.Count">func (s dbExtensions) Count(ctx context.Context, opt dbExtensionsListOptions) (int, error)</a>
-
-```
-searchKey: registry.dbExtensions.Count
-tags: [private]
-```
-
-```Go
-func (s dbExtensions) Count(ctx context.Context, opt dbExtensionsListOptions) (int, error)
-```
-
-Count counts all registry extensions that satisfy the options (ignoring limit and offset). 
-
-🚨 SECURITY: The caller must ensure that the actor is permitted to count the results. 
-
-#### <a id="dbExtensions.Update" href="#dbExtensions.Update">func (dbExtensions) Update(ctx context.Context, id int32, name *string) error</a>
-
-```
-searchKey: registry.dbExtensions.Update
-tags: [private]
-```
-
-```Go
-func (dbExtensions) Update(ctx context.Context, id int32, name *string) error
-```
-
-Update updates information about the registry extension. 
-
-#### <a id="dbExtensions.Delete" href="#dbExtensions.Delete">func (dbExtensions) Delete(ctx context.Context, id int32) error</a>
-
-```
-searchKey: registry.dbExtensions.Delete
-tags: [private]
-```
-
-```Go
-func (dbExtensions) Delete(ctx context.Context, id int32) error
-```
-
-Delete marks an registry extension as deleted. 
-
 #### <a id="dbExtensions.ListPublishers" href="#dbExtensions.ListPublishers">func (s dbExtensions) ListPublishers(ctx context.Context, opt dbPublishersListOptions) ([]*dbPublisher, error)</a>
 
 ```
 searchKey: registry.dbExtensions.ListPublishers
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -802,100 +577,79 @@ ListPublishers lists all publishers of extensions to the registry.
 
 🚨 SECURITY: The caller must ensure that the actor is permitted to list with the specified options. 
 
-#### <a id="dbExtensions.publishersSQLCTE" href="#dbExtensions.publishersSQLCTE">func (dbExtensions) publishersSQLCTE() *sqlf.Query</a>
+#### <a id="dbExtensions.Update" href="#dbExtensions.Update">func (dbExtensions) Update(ctx context.Context, id int32, name *string) error</a>
 
 ```
-searchKey: registry.dbExtensions.publishersSQLCTE
-tags: [private]
+searchKey: registry.dbExtensions.Update
+tags: [method private]
 ```
 
 ```Go
-func (dbExtensions) publishersSQLCTE() *sqlf.Query
+func (dbExtensions) Update(ctx context.Context, id int32, name *string) error
+```
+
+Update updates information about the registry extension. 
+
+#### <a id="dbExtensions.getFeaturedExtensions" href="#dbExtensions.getFeaturedExtensions">func (s dbExtensions) getFeaturedExtensions(ctx context.Context, featuredExtensionIDs []string) ([]*dbExtension, error)</a>
+
+```
+searchKey: registry.dbExtensions.getFeaturedExtensions
+tags: [method private]
+```
+
+```Go
+func (s dbExtensions) getFeaturedExtensions(ctx context.Context, featuredExtensionIDs []string) ([]*dbExtension, error)
+```
+
+#### <a id="dbExtensions.list" href="#dbExtensions.list">func (s dbExtensions) list(ctx context.Context, conds, order []*sqlf.Query, limitOffset *database.LimitOffset) ([]*dbExtension, error)</a>
+
+```
+searchKey: registry.dbExtensions.list
+tags: [method private]
+```
+
+```Go
+func (s dbExtensions) list(ctx context.Context, conds, order []*sqlf.Query, limitOffset *database.LimitOffset) ([]*dbExtension, error)
+```
+
+#### <a id="dbExtensions.listCountSQL" href="#dbExtensions.listCountSQL">func (dbExtensions) listCountSQL(conds []*sqlf.Query) *sqlf.Query</a>
+
+```
+searchKey: registry.dbExtensions.listCountSQL
+tags: [method private]
+```
+
+```Go
+func (dbExtensions) listCountSQL(conds []*sqlf.Query) *sqlf.Query
 ```
 
 #### <a id="dbExtensions.listPublishers" href="#dbExtensions.listPublishers">func (s dbExtensions) listPublishers(ctx context.Context, conds []*sqlf.Query, limitOffset *database.LimitOffset) ([]*dbPublisher, error)</a>
 
 ```
 searchKey: registry.dbExtensions.listPublishers
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (s dbExtensions) listPublishers(ctx context.Context, conds []*sqlf.Query, limitOffset *database.LimitOffset) ([]*dbPublisher, error)
 ```
 
-#### <a id="dbExtensions.CountPublishers" href="#dbExtensions.CountPublishers">func (s dbExtensions) CountPublishers(ctx context.Context, opt dbPublishersListOptions) (int, error)</a>
+#### <a id="dbExtensions.publishersSQLCTE" href="#dbExtensions.publishersSQLCTE">func (dbExtensions) publishersSQLCTE() *sqlf.Query</a>
 
 ```
-searchKey: registry.dbExtensions.CountPublishers
-tags: [private]
-```
-
-```Go
-func (s dbExtensions) CountPublishers(ctx context.Context, opt dbPublishersListOptions) (int, error)
-```
-
-CountPublishers counts all registry publishers that satisfy the options (ignoring limit and offset). 
-
-🚨 SECURITY: The caller must ensure that the actor is permitted to count the results. 
-
-#### <a id="dbExtensions.GetPublisher" href="#dbExtensions.GetPublisher">func (s dbExtensions) GetPublisher(ctx context.Context, name string) (*dbPublisher, error)</a>
-
-```
-searchKey: registry.dbExtensions.GetPublisher
-tags: [private]
+searchKey: registry.dbExtensions.publishersSQLCTE
+tags: [function private]
 ```
 
 ```Go
-func (s dbExtensions) GetPublisher(ctx context.Context, name string) (*dbPublisher, error)
-```
-
-GePublisher gets the registry publisher with the given name. 
-
-### <a id="extensionNotFoundError" href="#extensionNotFoundError">type extensionNotFoundError struct</a>
-
-```
-searchKey: registry.extensionNotFoundError
-tags: [private]
-```
-
-```Go
-type extensionNotFoundError struct {
-	args []interface{}
-}
-```
-
-extensionNotFoundError occurs when an extension is not found in the extension registry. 
-
-#### <a id="extensionNotFoundError.NotFound" href="#extensionNotFoundError.NotFound">func (err extensionNotFoundError) NotFound() bool</a>
-
-```
-searchKey: registry.extensionNotFoundError.NotFound
-tags: [private]
-```
-
-```Go
-func (err extensionNotFoundError) NotFound() bool
-```
-
-NotFound implements errcode.NotFounder. 
-
-#### <a id="extensionNotFoundError.Error" href="#extensionNotFoundError.Error">func (err extensionNotFoundError) Error() string</a>
-
-```
-searchKey: registry.extensionNotFoundError.Error
-tags: [private]
-```
-
-```Go
-func (err extensionNotFoundError) Error() string
+func (dbExtensions) publishersSQLCTE() *sqlf.Query
 ```
 
 ### <a id="dbExtensionsListOptions" href="#dbExtensionsListOptions">type dbExtensionsListOptions struct</a>
 
 ```
 searchKey: registry.dbExtensionsListOptions
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -915,7 +669,7 @@ dbExtensionsListOptions contains options for listing registry extensions.
 
 ```
 searchKey: registry.toDBExtensionsListOptions
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -926,7 +680,7 @@ func toDBExtensionsListOptions(args graphqlbackend.RegistryExtensionConnectionAr
 
 ```
 searchKey: registry.dbExtensionsListOptions.sqlConditions
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -937,64 +691,18 @@ func (o dbExtensionsListOptions) sqlConditions() []*sqlf.Query
 
 ```
 searchKey: registry.dbExtensionsListOptions.sqlOrder
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (o dbExtensionsListOptions) sqlOrder() []*sqlf.Query
 ```
 
-### <a id="mockExtensions" href="#mockExtensions">type mockExtensions struct</a>
-
-```
-searchKey: registry.mockExtensions
-tags: [private]
-```
-
-```Go
-type mockExtensions struct {
-	Create                func(publisherUserID, publisherOrgID int32, name string) (int32, error)
-	GetByID               func(id int32) (*dbExtension, error)
-	GetByUUID             func(uuid string) (*dbExtension, error)
-	GetByExtensionID      func(extensionID string) (*dbExtension, error)
-	GetFeaturedExtensions func() ([]*dbExtension, error)
-	Update                func(id int32, name *string) error
-	Delete                func(id int32) error
-}
-```
-
-mockExtensions mocks the registry extensions store. 
-
-### <a id="responseRecorder" href="#responseRecorder">type responseRecorder struct</a>
-
-```
-searchKey: registry.responseRecorder
-tags: [private]
-```
-
-```Go
-type responseRecorder struct {
-	http.ResponseWriter
-	code int
-}
-```
-
-#### <a id="responseRecorder.WriteHeader" href="#responseRecorder.WriteHeader">func (r *responseRecorder) WriteHeader(code int)</a>
-
-```
-searchKey: registry.responseRecorder.WriteHeader
-tags: [private]
-```
-
-```Go
-func (r *responseRecorder) WriteHeader(code int)
-```
-
 ### <a id="dbMocks" href="#dbMocks">type dbMocks struct</a>
 
 ```
 searchKey: registry.dbMocks
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -1004,201 +712,11 @@ type dbMocks struct {
 }
 ```
 
-### <a id="registryPublisherConnection" href="#registryPublisherConnection">type registryPublisherConnection struct</a>
-
-```
-searchKey: registry.registryPublisherConnection
-tags: [private]
-```
-
-```Go
-type registryPublisherConnection struct {
-	opt dbPublishersListOptions
-
-	// cache results because they are used by multiple fields
-	once               sync.Once
-	registryPublishers []*dbPublisher
-	err                error
-	db                 dbutil.DB
-}
-```
-
-registryPublisherConnection resolves a list of registry publishers. 
-
-#### <a id="registryPublisherConnection.compute" href="#registryPublisherConnection.compute">func (r *registryPublisherConnection) compute(ctx context.Context) ([]*dbPublisher, error)</a>
-
-```
-searchKey: registry.registryPublisherConnection.compute
-tags: [private]
-```
-
-```Go
-func (r *registryPublisherConnection) compute(ctx context.Context) ([]*dbPublisher, error)
-```
-
-#### <a id="registryPublisherConnection.Nodes" href="#registryPublisherConnection.Nodes">func (r *registryPublisherConnection) Nodes(ctx context.Context) ([]graphqlbackend.RegistryPublisher, error)</a>
-
-```
-searchKey: registry.registryPublisherConnection.Nodes
-tags: [private]
-```
-
-```Go
-func (r *registryPublisherConnection) Nodes(ctx context.Context) ([]graphqlbackend.RegistryPublisher, error)
-```
-
-#### <a id="registryPublisherConnection.TotalCount" href="#registryPublisherConnection.TotalCount">func (r *registryPublisherConnection) TotalCount(ctx context.Context) (int32, error)</a>
-
-```
-searchKey: registry.registryPublisherConnection.TotalCount
-tags: [private]
-```
-
-```Go
-func (r *registryPublisherConnection) TotalCount(ctx context.Context) (int32, error)
-```
-
-#### <a id="registryPublisherConnection.PageInfo" href="#registryPublisherConnection.PageInfo">func (r *registryPublisherConnection) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)</a>
-
-```
-searchKey: registry.registryPublisherConnection.PageInfo
-tags: [private]
-```
-
-```Go
-func (r *registryPublisherConnection) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)
-```
-
-### <a id="registryPublisher" href="#registryPublisher">type registryPublisher struct</a>
-
-```
-searchKey: registry.registryPublisher
-tags: [private]
-```
-
-```Go
-type registryPublisher struct {
-	user *graphqlbackend.UserResolver
-	org  *graphqlbackend.OrgResolver
-}
-```
-
-registryPublisher implements the GraphQL type RegistryPublisher. 
-
-#### <a id="getRegistryPublisher" href="#getRegistryPublisher">func getRegistryPublisher(ctx context.Context, db dbutil.DB, publisher dbPublisher) (*registryPublisher, error)</a>
-
-```
-searchKey: registry.getRegistryPublisher
-tags: [private]
-```
-
-```Go
-func getRegistryPublisher(ctx context.Context, db dbutil.DB, publisher dbPublisher) (*registryPublisher, error)
-```
-
-#### <a id="registryPublisher.ToUser" href="#registryPublisher.ToUser">func (r *registryPublisher) ToUser() (*graphqlbackend.UserResolver, bool)</a>
-
-```
-searchKey: registry.registryPublisher.ToUser
-tags: [private]
-```
-
-```Go
-func (r *registryPublisher) ToUser() (*graphqlbackend.UserResolver, bool)
-```
-
-#### <a id="registryPublisher.ToOrg" href="#registryPublisher.ToOrg">func (r *registryPublisher) ToOrg() (*graphqlbackend.OrgResolver, bool)</a>
-
-```
-searchKey: registry.registryPublisher.ToOrg
-tags: [private]
-```
-
-```Go
-func (r *registryPublisher) ToOrg() (*graphqlbackend.OrgResolver, bool)
-```
-
-#### <a id="registryPublisher.toDBRegistryPublisher" href="#registryPublisher.toDBRegistryPublisher">func (r *registryPublisher) toDBRegistryPublisher() dbPublisher</a>
-
-```
-searchKey: registry.registryPublisher.toDBRegistryPublisher
-tags: [private]
-```
-
-```Go
-func (r *registryPublisher) toDBRegistryPublisher() dbPublisher
-```
-
-#### <a id="registryPublisher.RegistryExtensionConnectionURL" href="#registryPublisher.RegistryExtensionConnectionURL">func (r *registryPublisher) RegistryExtensionConnectionURL() (*string, error)</a>
-
-```
-searchKey: registry.registryPublisher.RegistryExtensionConnectionURL
-tags: [private]
-```
-
-```Go
-func (r *registryPublisher) RegistryExtensionConnectionURL() (*string, error)
-```
-
-### <a id="registryPublisherID" href="#registryPublisherID">type registryPublisherID struct</a>
-
-```
-searchKey: registry.registryPublisherID
-tags: [private]
-```
-
-```Go
-type registryPublisherID struct {
-	userID, orgID int32
-}
-```
-
-#### <a id="toRegistryPublisherID" href="#toRegistryPublisherID">func toRegistryPublisherID(extension *dbExtension) *registryPublisherID</a>
-
-```
-searchKey: registry.toRegistryPublisherID
-tags: [private]
-```
-
-```Go
-func toRegistryPublisherID(extension *dbExtension) *registryPublisherID
-```
-
-#### <a id="unmarshalRegistryPublisherID" href="#unmarshalRegistryPublisherID">func unmarshalRegistryPublisherID(id graphql.ID) (*registryPublisherID, error)</a>
-
-```
-searchKey: registry.unmarshalRegistryPublisherID
-tags: [private]
-```
-
-```Go
-func unmarshalRegistryPublisherID(id graphql.ID) (*registryPublisherID, error)
-```
-
-unmarshalRegistryPublisherID unmarshals the GraphQL ID into the possible publisher ID types. 
-
-🚨 SECURITY 
-
-#### <a id="registryPublisherID.viewerCanAdminister" href="#registryPublisherID.viewerCanAdminister">func (p *registryPublisherID) viewerCanAdminister(ctx context.Context, db dbutil.DB) error</a>
-
-```
-searchKey: registry.registryPublisherID.viewerCanAdminister
-tags: [private]
-```
-
-```Go
-func (p *registryPublisherID) viewerCanAdminister(ctx context.Context, db dbutil.DB) error
-```
-
-viewerCanAdminister returns whether the current user is allowed to perform mutations on a registry extension with the given publisher. 
-
-🚨 SECURITY 
-
 ### <a id="dbPublisher" href="#dbPublisher">type dbPublisher struct</a>
 
 ```
 searchKey: registry.dbPublisher
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -1217,7 +735,7 @@ dbPublisher is a publisher of extensions to the registry.
 
 ```
 searchKey: registry.dbPublisher.IsZero
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -1226,50 +744,11 @@ func (p dbPublisher) IsZero() bool
 
 IsZero reports whether p is the zero value. 
 
-### <a id="publisherNotFoundError" href="#publisherNotFoundError">type publisherNotFoundError struct</a>
-
-```
-searchKey: registry.publisherNotFoundError
-tags: [private]
-```
-
-```Go
-type publisherNotFoundError struct {
-	args []interface{}
-}
-```
-
-publisherNotFoundError occurs when a registry extension publisher is not found. 
-
-#### <a id="publisherNotFoundError.NotFound" href="#publisherNotFoundError.NotFound">func (err publisherNotFoundError) NotFound() bool</a>
-
-```
-searchKey: registry.publisherNotFoundError.NotFound
-tags: [private]
-```
-
-```Go
-func (err publisherNotFoundError) NotFound() bool
-```
-
-NotFound implements errcode.NotFounder. 
-
-#### <a id="publisherNotFoundError.Error" href="#publisherNotFoundError.Error">func (err publisherNotFoundError) Error() string</a>
-
-```
-searchKey: registry.publisherNotFoundError.Error
-tags: [private]
-```
-
-```Go
-func (err publisherNotFoundError) Error() string
-```
-
 ### <a id="dbPublishersListOptions" href="#dbPublishersListOptions">type dbPublishersListOptions struct</a>
 
 ```
 searchKey: registry.dbPublishersListOptions
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -1284,7 +763,7 @@ dbPublishersListOptions contains options for listing publishers of extensions in
 
 ```
 searchKey: registry.dbPublishersListOptions.sqlConditions
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -1295,7 +774,7 @@ func (o dbPublishersListOptions) sqlConditions() []*sqlf.Query
 
 ```
 searchKey: registry.dbRelease
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -1318,7 +797,7 @@ dbRelease describes a release of an extension in the extension registry.
 
 ```
 searchKey: registry.getLatestRelease
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1331,7 +810,7 @@ getLatestRelease returns the release with the extension manifest as JSON. If the
 
 ```
 searchKey: registry.dbReleases
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -1342,7 +821,7 @@ type dbReleases struct{}
 
 ```
 searchKey: registry.dbReleases.Create
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1351,11 +830,24 @@ func (dbReleases) Create(ctx context.Context, release *dbRelease) (id int64, err
 
 Create creates a new release of an extension in the extension registry. The release.ID and release.CreatedAt fields are ignored (they are populated automatically by the database). 
 
+#### <a id="dbReleases.GetArtifacts" href="#dbReleases.GetArtifacts">func (dbReleases) GetArtifacts(ctx context.Context, id int64) (bundle, sourcemap []byte, err error)</a>
+
+```
+searchKey: registry.dbReleases.GetArtifacts
+tags: [method private]
+```
+
+```Go
+func (dbReleases) GetArtifacts(ctx context.Context, id int64) (bundle, sourcemap []byte, err error)
+```
+
+GetArtifacts gets the bundled JavaScript source file contents and the source map for a release (by ID). 
+
 #### <a id="dbReleases.GetLatest" href="#dbReleases.GetLatest">func (dbReleases) GetLatest(ctx context.Context, registryExtensionID int32, releaseTag string, includeArtifacts bool) (*dbRelease, error)</a>
 
 ```
 searchKey: registry.dbReleases.GetLatest
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1368,7 +860,7 @@ GetLatest gets the latest release for the extension with the given release tag (
 
 ```
 searchKey: registry.dbReleases.GetLatestBatch
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1377,63 +869,278 @@ func (dbReleases) GetLatestBatch(ctx context.Context, registryExtensionIDs []int
 
 GetLatestBatch gets the latest releases for the extensions with the given release tag (e.g., "release"). If includeArtifacts is true, it populates the (*dbRelease).{Bundle,SourceMap} fields, which may be large. 
 
-#### <a id="dbReleases.GetArtifacts" href="#dbReleases.GetArtifacts">func (dbReleases) GetArtifacts(ctx context.Context, id int64) (bundle, sourcemap []byte, err error)</a>
+### <a id="extensionDBResolver" href="#extensionDBResolver">type extensionDBResolver struct</a>
 
 ```
-searchKey: registry.dbReleases.GetArtifacts
-tags: [private]
-```
-
-```Go
-func (dbReleases) GetArtifacts(ctx context.Context, id int64) (bundle, sourcemap []byte, err error)
-```
-
-GetArtifacts gets the bundled JavaScript source file contents and the source map for a release (by ID). 
-
-### <a id="releaseNotFoundError" href="#releaseNotFoundError">type releaseNotFoundError struct</a>
-
-```
-searchKey: registry.releaseNotFoundError
-tags: [private]
+searchKey: registry.extensionDBResolver
+tags: [struct private]
 ```
 
 ```Go
-type releaseNotFoundError struct {
+type extensionDBResolver struct {
+	db dbutil.DB
+	v  *dbExtension
+
+	// Supplied as part of list endpoints, but
+	// calculated as part of single-extension endpoints
+	r *dbRelease
+}
+```
+
+extensionDBResolver implements the GraphQL type RegistryExtension. 
+
+#### <a id="extensionDBResolver.CreatedAt" href="#extensionDBResolver.CreatedAt">func (r *extensionDBResolver) CreatedAt() *graphqlbackend.DateTime</a>
+
+```
+searchKey: registry.extensionDBResolver.CreatedAt
+tags: [function private]
+```
+
+```Go
+func (r *extensionDBResolver) CreatedAt() *graphqlbackend.DateTime
+```
+
+#### <a id="extensionDBResolver.ExtensionID" href="#extensionDBResolver.ExtensionID">func (r *extensionDBResolver) ExtensionID() string</a>
+
+```
+searchKey: registry.extensionDBResolver.ExtensionID
+tags: [function private]
+```
+
+```Go
+func (r *extensionDBResolver) ExtensionID() string
+```
+
+#### <a id="extensionDBResolver.ExtensionIDWithoutRegistry" href="#extensionDBResolver.ExtensionIDWithoutRegistry">func (r *extensionDBResolver) ExtensionIDWithoutRegistry() string</a>
+
+```
+searchKey: registry.extensionDBResolver.ExtensionIDWithoutRegistry
+tags: [function private]
+```
+
+```Go
+func (r *extensionDBResolver) ExtensionIDWithoutRegistry() string
+```
+
+#### <a id="extensionDBResolver.ID" href="#extensionDBResolver.ID">func (r *extensionDBResolver) ID() graphql.ID</a>
+
+```
+searchKey: registry.extensionDBResolver.ID
+tags: [function private]
+```
+
+```Go
+func (r *extensionDBResolver) ID() graphql.ID
+```
+
+#### <a id="extensionDBResolver.IsLocal" href="#extensionDBResolver.IsLocal">func (r *extensionDBResolver) IsLocal() bool</a>
+
+```
+searchKey: registry.extensionDBResolver.IsLocal
+tags: [function private]
+```
+
+```Go
+func (r *extensionDBResolver) IsLocal() bool
+```
+
+#### <a id="extensionDBResolver.IsWorkInProgress" href="#extensionDBResolver.IsWorkInProgress">func (r *extensionDBResolver) IsWorkInProgress() bool</a>
+
+```
+searchKey: registry.extensionDBResolver.IsWorkInProgress
+tags: [function private]
+```
+
+```Go
+func (r *extensionDBResolver) IsWorkInProgress() bool
+```
+
+#### <a id="extensionDBResolver.Manifest" href="#extensionDBResolver.Manifest">func (r *extensionDBResolver) Manifest(ctx context.Context) (graphqlbackend.ExtensionManifest, error)</a>
+
+```
+searchKey: registry.extensionDBResolver.Manifest
+tags: [method private]
+```
+
+```Go
+func (r *extensionDBResolver) Manifest(ctx context.Context) (graphqlbackend.ExtensionManifest, error)
+```
+
+#### <a id="extensionDBResolver.Name" href="#extensionDBResolver.Name">func (r *extensionDBResolver) Name() string</a>
+
+```
+searchKey: registry.extensionDBResolver.Name
+tags: [function private]
+```
+
+```Go
+func (r *extensionDBResolver) Name() string
+```
+
+#### <a id="extensionDBResolver.PublishedAt" href="#extensionDBResolver.PublishedAt">func (r *extensionDBResolver) PublishedAt(ctx context.Context) (*graphqlbackend.DateTime, error)</a>
+
+```
+searchKey: registry.extensionDBResolver.PublishedAt
+tags: [method private]
+```
+
+```Go
+func (r *extensionDBResolver) PublishedAt(ctx context.Context) (*graphqlbackend.DateTime, error)
+```
+
+#### <a id="extensionDBResolver.Publisher" href="#extensionDBResolver.Publisher">func (r *extensionDBResolver) Publisher(ctx context.Context) (graphqlbackend.RegistryPublisher, error)</a>
+
+```
+searchKey: registry.extensionDBResolver.Publisher
+tags: [method private]
+```
+
+```Go
+func (r *extensionDBResolver) Publisher(ctx context.Context) (graphqlbackend.RegistryPublisher, error)
+```
+
+#### <a id="extensionDBResolver.RegistryName" href="#extensionDBResolver.RegistryName">func (r *extensionDBResolver) RegistryName() (string, error)</a>
+
+```
+searchKey: registry.extensionDBResolver.RegistryName
+tags: [function private]
+```
+
+```Go
+func (r *extensionDBResolver) RegistryName() (string, error)
+```
+
+#### <a id="extensionDBResolver.RemoteURL" href="#extensionDBResolver.RemoteURL">func (r *extensionDBResolver) RemoteURL() *string</a>
+
+```
+searchKey: registry.extensionDBResolver.RemoteURL
+tags: [function private]
+```
+
+```Go
+func (r *extensionDBResolver) RemoteURL() *string
+```
+
+#### <a id="extensionDBResolver.URL" href="#extensionDBResolver.URL">func (r *extensionDBResolver) URL() string</a>
+
+```
+searchKey: registry.extensionDBResolver.URL
+tags: [function private]
+```
+
+```Go
+func (r *extensionDBResolver) URL() string
+```
+
+#### <a id="extensionDBResolver.UUID" href="#extensionDBResolver.UUID">func (r *extensionDBResolver) UUID() string</a>
+
+```
+searchKey: registry.extensionDBResolver.UUID
+tags: [function private]
+```
+
+```Go
+func (r *extensionDBResolver) UUID() string
+```
+
+#### <a id="extensionDBResolver.UpdatedAt" href="#extensionDBResolver.UpdatedAt">func (r *extensionDBResolver) UpdatedAt() *graphqlbackend.DateTime</a>
+
+```
+searchKey: registry.extensionDBResolver.UpdatedAt
+tags: [function private]
+```
+
+```Go
+func (r *extensionDBResolver) UpdatedAt() *graphqlbackend.DateTime
+```
+
+#### <a id="extensionDBResolver.ViewerCanAdminister" href="#extensionDBResolver.ViewerCanAdminister">func (r *extensionDBResolver) ViewerCanAdminister(ctx context.Context) (bool, error)</a>
+
+```
+searchKey: registry.extensionDBResolver.ViewerCanAdminister
+tags: [method private]
+```
+
+```Go
+func (r *extensionDBResolver) ViewerCanAdminister(ctx context.Context) (bool, error)
+```
+
+#### <a id="extensionDBResolver.release" href="#extensionDBResolver.release">func (r *extensionDBResolver) release(ctx context.Context) (*dbRelease, error)</a>
+
+```
+searchKey: registry.extensionDBResolver.release
+tags: [method private]
+```
+
+```Go
+func (r *extensionDBResolver) release(ctx context.Context) (*dbRelease, error)
+```
+
+### <a id="extensionNotFoundError" href="#extensionNotFoundError">type extensionNotFoundError struct</a>
+
+```
+searchKey: registry.extensionNotFoundError
+tags: [struct private]
+```
+
+```Go
+type extensionNotFoundError struct {
 	args []interface{}
 }
 ```
 
-releaseNotFoundError occurs when an extension release is not found in the extension registry. 
+extensionNotFoundError occurs when an extension is not found in the extension registry. 
 
-#### <a id="releaseNotFoundError.NotFound" href="#releaseNotFoundError.NotFound">func (err releaseNotFoundError) NotFound() bool</a>
+#### <a id="extensionNotFoundError.Error" href="#extensionNotFoundError.Error">func (err extensionNotFoundError) Error() string</a>
 
 ```
-searchKey: registry.releaseNotFoundError.NotFound
-tags: [private]
+searchKey: registry.extensionNotFoundError.Error
+tags: [function private]
 ```
 
 ```Go
-func (err releaseNotFoundError) NotFound() bool
+func (err extensionNotFoundError) Error() string
+```
+
+#### <a id="extensionNotFoundError.NotFound" href="#extensionNotFoundError.NotFound">func (err extensionNotFoundError) NotFound() bool</a>
+
+```
+searchKey: registry.extensionNotFoundError.NotFound
+tags: [function private]
+```
+
+```Go
+func (err extensionNotFoundError) NotFound() bool
 ```
 
 NotFound implements errcode.NotFounder. 
 
-#### <a id="releaseNotFoundError.Error" href="#releaseNotFoundError.Error">func (err releaseNotFoundError) Error() string</a>
+### <a id="mockExtensions" href="#mockExtensions">type mockExtensions struct</a>
 
 ```
-searchKey: registry.releaseNotFoundError.Error
-tags: [private]
+searchKey: registry.mockExtensions
+tags: [struct private]
 ```
 
 ```Go
-func (err releaseNotFoundError) Error() string
+type mockExtensions struct {
+	Create                func(publisherUserID, publisherOrgID int32, name string) (int32, error)
+	GetByID               func(id int32) (*dbExtension, error)
+	GetByUUID             func(uuid string) (*dbExtension, error)
+	GetByExtensionID      func(extensionID string) (*dbExtension, error)
+	GetFeaturedExtensions func() ([]*dbExtension, error)
+	Update                func(id int32, name *string) error
+	Delete                func(id int32) error
+}
 ```
+
+mockExtensions mocks the registry extensions store. 
 
 ### <a id="mockReleases" href="#mockReleases">type mockReleases struct</a>
 
 ```
 searchKey: registry.mockReleases
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -1446,545 +1153,387 @@ type mockReleases struct {
 
 mockReleases mocks the registry extension releases store. 
 
+### <a id="publisherNotFoundError" href="#publisherNotFoundError">type publisherNotFoundError struct</a>
+
+```
+searchKey: registry.publisherNotFoundError
+tags: [struct private]
+```
+
+```Go
+type publisherNotFoundError struct {
+	args []interface{}
+}
+```
+
+publisherNotFoundError occurs when a registry extension publisher is not found. 
+
+#### <a id="publisherNotFoundError.Error" href="#publisherNotFoundError.Error">func (err publisherNotFoundError) Error() string</a>
+
+```
+searchKey: registry.publisherNotFoundError.Error
+tags: [function private]
+```
+
+```Go
+func (err publisherNotFoundError) Error() string
+```
+
+#### <a id="publisherNotFoundError.NotFound" href="#publisherNotFoundError.NotFound">func (err publisherNotFoundError) NotFound() bool</a>
+
+```
+searchKey: registry.publisherNotFoundError.NotFound
+tags: [function private]
+```
+
+```Go
+func (err publisherNotFoundError) NotFound() bool
+```
+
+NotFound implements errcode.NotFounder. 
+
+### <a id="registryPublisher" href="#registryPublisher">type registryPublisher struct</a>
+
+```
+searchKey: registry.registryPublisher
+tags: [struct private]
+```
+
+```Go
+type registryPublisher struct {
+	user *graphqlbackend.UserResolver
+	org  *graphqlbackend.OrgResolver
+}
+```
+
+registryPublisher implements the GraphQL type RegistryPublisher. 
+
+#### <a id="getRegistryPublisher" href="#getRegistryPublisher">func getRegistryPublisher(ctx context.Context, db dbutil.DB, publisher dbPublisher) (*registryPublisher, error)</a>
+
+```
+searchKey: registry.getRegistryPublisher
+tags: [method private]
+```
+
+```Go
+func getRegistryPublisher(ctx context.Context, db dbutil.DB, publisher dbPublisher) (*registryPublisher, error)
+```
+
+#### <a id="registryPublisher.RegistryExtensionConnectionURL" href="#registryPublisher.RegistryExtensionConnectionURL">func (r *registryPublisher) RegistryExtensionConnectionURL() (*string, error)</a>
+
+```
+searchKey: registry.registryPublisher.RegistryExtensionConnectionURL
+tags: [function private]
+```
+
+```Go
+func (r *registryPublisher) RegistryExtensionConnectionURL() (*string, error)
+```
+
+#### <a id="registryPublisher.ToOrg" href="#registryPublisher.ToOrg">func (r *registryPublisher) ToOrg() (*graphqlbackend.OrgResolver, bool)</a>
+
+```
+searchKey: registry.registryPublisher.ToOrg
+tags: [function private]
+```
+
+```Go
+func (r *registryPublisher) ToOrg() (*graphqlbackend.OrgResolver, bool)
+```
+
+#### <a id="registryPublisher.ToUser" href="#registryPublisher.ToUser">func (r *registryPublisher) ToUser() (*graphqlbackend.UserResolver, bool)</a>
+
+```
+searchKey: registry.registryPublisher.ToUser
+tags: [function private]
+```
+
+```Go
+func (r *registryPublisher) ToUser() (*graphqlbackend.UserResolver, bool)
+```
+
+#### <a id="registryPublisher.toDBRegistryPublisher" href="#registryPublisher.toDBRegistryPublisher">func (r *registryPublisher) toDBRegistryPublisher() dbPublisher</a>
+
+```
+searchKey: registry.registryPublisher.toDBRegistryPublisher
+tags: [function private]
+```
+
+```Go
+func (r *registryPublisher) toDBRegistryPublisher() dbPublisher
+```
+
+### <a id="registryPublisherConnection" href="#registryPublisherConnection">type registryPublisherConnection struct</a>
+
+```
+searchKey: registry.registryPublisherConnection
+tags: [struct private]
+```
+
+```Go
+type registryPublisherConnection struct {
+	opt dbPublishersListOptions
+
+	// cache results because they are used by multiple fields
+	once               sync.Once
+	registryPublishers []*dbPublisher
+	err                error
+	db                 dbutil.DB
+}
+```
+
+registryPublisherConnection resolves a list of registry publishers. 
+
+#### <a id="registryPublisherConnection.Nodes" href="#registryPublisherConnection.Nodes">func (r *registryPublisherConnection) Nodes(ctx context.Context) ([]graphqlbackend.RegistryPublisher, error)</a>
+
+```
+searchKey: registry.registryPublisherConnection.Nodes
+tags: [method private]
+```
+
+```Go
+func (r *registryPublisherConnection) Nodes(ctx context.Context) ([]graphqlbackend.RegistryPublisher, error)
+```
+
+#### <a id="registryPublisherConnection.PageInfo" href="#registryPublisherConnection.PageInfo">func (r *registryPublisherConnection) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)</a>
+
+```
+searchKey: registry.registryPublisherConnection.PageInfo
+tags: [method private]
+```
+
+```Go
+func (r *registryPublisherConnection) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)
+```
+
+#### <a id="registryPublisherConnection.TotalCount" href="#registryPublisherConnection.TotalCount">func (r *registryPublisherConnection) TotalCount(ctx context.Context) (int32, error)</a>
+
+```
+searchKey: registry.registryPublisherConnection.TotalCount
+tags: [method private]
+```
+
+```Go
+func (r *registryPublisherConnection) TotalCount(ctx context.Context) (int32, error)
+```
+
+#### <a id="registryPublisherConnection.compute" href="#registryPublisherConnection.compute">func (r *registryPublisherConnection) compute(ctx context.Context) ([]*dbPublisher, error)</a>
+
+```
+searchKey: registry.registryPublisherConnection.compute
+tags: [method private]
+```
+
+```Go
+func (r *registryPublisherConnection) compute(ctx context.Context) ([]*dbPublisher, error)
+```
+
+### <a id="registryPublisherID" href="#registryPublisherID">type registryPublisherID struct</a>
+
+```
+searchKey: registry.registryPublisherID
+tags: [struct private]
+```
+
+```Go
+type registryPublisherID struct {
+	userID, orgID int32
+}
+```
+
+#### <a id="toRegistryPublisherID" href="#toRegistryPublisherID">func toRegistryPublisherID(extension *dbExtension) *registryPublisherID</a>
+
+```
+searchKey: registry.toRegistryPublisherID
+tags: [method private]
+```
+
+```Go
+func toRegistryPublisherID(extension *dbExtension) *registryPublisherID
+```
+
+#### <a id="unmarshalRegistryPublisherID" href="#unmarshalRegistryPublisherID">func unmarshalRegistryPublisherID(id graphql.ID) (*registryPublisherID, error)</a>
+
+```
+searchKey: registry.unmarshalRegistryPublisherID
+tags: [method private]
+```
+
+```Go
+func unmarshalRegistryPublisherID(id graphql.ID) (*registryPublisherID, error)
+```
+
+unmarshalRegistryPublisherID unmarshals the GraphQL ID into the possible publisher ID types. 
+
+🚨 SECURITY 
+
+#### <a id="registryPublisherID.viewerCanAdminister" href="#registryPublisherID.viewerCanAdminister">func (p *registryPublisherID) viewerCanAdminister(ctx context.Context, db dbutil.DB) error</a>
+
+```
+searchKey: registry.registryPublisherID.viewerCanAdminister
+tags: [method private]
+```
+
+```Go
+func (p *registryPublisherID) viewerCanAdminister(ctx context.Context, db dbutil.DB) error
+```
+
+viewerCanAdminister returns whether the current user is allowed to perform mutations on a registry extension with the given publisher. 
+
+🚨 SECURITY 
+
+### <a id="releaseNotFoundError" href="#releaseNotFoundError">type releaseNotFoundError struct</a>
+
+```
+searchKey: registry.releaseNotFoundError
+tags: [struct private]
+```
+
+```Go
+type releaseNotFoundError struct {
+	args []interface{}
+}
+```
+
+releaseNotFoundError occurs when an extension release is not found in the extension registry. 
+
+#### <a id="releaseNotFoundError.Error" href="#releaseNotFoundError.Error">func (err releaseNotFoundError) Error() string</a>
+
+```
+searchKey: registry.releaseNotFoundError.Error
+tags: [function private]
+```
+
+```Go
+func (err releaseNotFoundError) Error() string
+```
+
+#### <a id="releaseNotFoundError.NotFound" href="#releaseNotFoundError.NotFound">func (err releaseNotFoundError) NotFound() bool</a>
+
+```
+searchKey: registry.releaseNotFoundError.NotFound
+tags: [function private]
+```
+
+```Go
+func (err releaseNotFoundError) NotFound() bool
+```
+
+NotFound implements errcode.NotFounder. 
+
+### <a id="responseRecorder" href="#responseRecorder">type responseRecorder struct</a>
+
+```
+searchKey: registry.responseRecorder
+tags: [struct private]
+```
+
+```Go
+type responseRecorder struct {
+	http.ResponseWriter
+	code int
+}
+```
+
+#### <a id="responseRecorder.WriteHeader" href="#responseRecorder.WriteHeader">func (r *responseRecorder) WriteHeader(code int)</a>
+
+```
+searchKey: registry.responseRecorder.WriteHeader
+tags: [method private]
+```
+
+```Go
+func (r *responseRecorder) WriteHeader(code int)
+```
+
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
-### <a id="init.allow.go" href="#init.allow.go">func init()</a>
+### <a id="TestFeaturedExtensions" href="#TestFeaturedExtensions">func TestFeaturedExtensions(t *testing.T)</a>
 
 ```
-searchKey: registry.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
-### <a id="getAllowedExtensionsFromSiteConfig" href="#getAllowedExtensionsFromSiteConfig">func getAllowedExtensionsFromSiteConfig() []string</a>
-
-```
-searchKey: registry.getAllowedExtensionsFromSiteConfig
-tags: [private]
+searchKey: registry.TestFeaturedExtensions
+tags: [method private test]
 ```
 
 ```Go
-func getAllowedExtensionsFromSiteConfig() []string
-```
-
-### <a id="init.extension_bundle.go" href="#init.extension_bundle.go">func init()</a>
-
-```
-searchKey: registry.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
-### <a id="handleRegistryExtensionBundle" href="#handleRegistryExtensionBundle">func handleRegistryExtensionBundle(w http.ResponseWriter, r *http.Request)</a>
-
-```
-searchKey: registry.handleRegistryExtensionBundle
-tags: [private]
-```
-
-```Go
-func handleRegistryExtensionBundle(w http.ResponseWriter, r *http.Request)
-```
-
-handleRegistryExtensionBundle serves the bundled JavaScript source file or the source map for an extension in the registry as a raw JavaScript or JSON file. 
-
-### <a id="parseExtensionBundleFilename" href="#parseExtensionBundleFilename">func parseExtensionBundleFilename(filename string) (int64, error)</a>
-
-```
-searchKey: registry.parseExtensionBundleFilename
-tags: [private]
-```
-
-```Go
-func parseExtensionBundleFilename(filename string) (int64, error)
-```
-
-parseExtensionBundleFilename parses the release ID from the extension bundle's filename, which is of the form "1234-publisher-extension-id.js" or ".map". The part of the filename after the "-" and before the extension is ignored; it exists to help distinguish log messages from different extensions in debugging. 
-
-### <a id="init.extension_connection_graphql.go" href="#init.extension_connection_graphql.go">func init()</a>
-
-```
-searchKey: registry.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
-### <a id="listLocalRegistryExtensions" href="#listLocalRegistryExtensions">func listLocalRegistryExtensions(ctx context.Context, db dbutil.DB, args graphqlbackend.RegistryExtensionConnectionArgs) ([]graphqlbackend.RegistryExtension, error)</a>
-
-```
-searchKey: registry.listLocalRegistryExtensions
-tags: [private]
-```
-
-```Go
-func listLocalRegistryExtensions(ctx context.Context, db dbutil.DB, args graphqlbackend.RegistryExtensionConnectionArgs) ([]graphqlbackend.RegistryExtension, error)
-```
-
-### <a id="countLocalRegistryExtensions" href="#countLocalRegistryExtensions">func countLocalRegistryExtensions(ctx context.Context, db dbutil.DB, args graphqlbackend.RegistryExtensionConnectionArgs) (int, error)</a>
-
-```
-searchKey: registry.countLocalRegistryExtensions
-tags: [private]
-```
-
-```Go
-func countLocalRegistryExtensions(ctx context.Context, db dbutil.DB, args graphqlbackend.RegistryExtensionConnectionArgs) (int, error)
-```
-
-### <a id="parseExtensionQuery" href="#parseExtensionQuery">func parseExtensionQuery(q string) (text, category, tag string)</a>
-
-```
-searchKey: registry.parseExtensionQuery
-tags: [private]
-```
-
-```Go
-func parseExtensionQuery(q string) (text, category, tag string)
-```
-
-parseExtensionQuery parses an extension registry query consisting of terms and the operators `category:"My category"`, `tag:"mytag"`, #installed, #enabled, and #disabled. 
-
-This is an intentionally simple, unoptimized parser. 
-
-### <a id="filterStripLocalExtensionIDs" href="#filterStripLocalExtensionIDs">func filterStripLocalExtensionIDs(extensionIDs []string) []string</a>
-
-```
-searchKey: registry.filterStripLocalExtensionIDs
-tags: [private]
-```
-
-```Go
-func filterStripLocalExtensionIDs(extensionIDs []string) []string
-```
-
-filterStripLocalExtensionIDs filters to local extension IDs and strips the host prefix. 
-
-### <a id="strptr" href="#strptr">func strptr(s string) *string</a>
-
-```
-searchKey: registry.strptr
-tags: [private]
-```
-
-```Go
-func strptr(s string) *string
-```
-
-### <a id="validateExtensionManifest" href="#validateExtensionManifest">func validateExtensionManifest(text string) error</a>
-
-```
-searchKey: registry.validateExtensionManifest
-tags: [private]
-```
-
-```Go
-func validateExtensionManifest(text string) error
-```
-
-validateExtensionManifest validates a JSON extension manifest for syntax. 
-
-TODO(sqs): Also validate it against the JSON Schema. 
-
-### <a id="getLatestForBatch" href="#getLatestForBatch">func getLatestForBatch(ctx context.Context, vs []*dbExtension) (map[int32]*dbRelease, error)</a>
-
-```
-searchKey: registry.getLatestForBatch
-tags: [private]
-```
-
-```Go
-func getLatestForBatch(ctx context.Context, vs []*dbExtension) (map[int32]*dbRelease, error)
-```
-
-getLatestForBatch returns a map from extension identifiers to the latest DB release with the extension manifest as JSON for that extension. If there are no releases, it returns a nil manifest. If the manifest has no "url" field itself, a "url" field pointing to the extension's bundle is inserted. It also returns the date that the release was published. 
-
-### <a id="prepReleaseManifest" href="#prepReleaseManifest">func prepReleaseManifest(extensionID string, release *dbRelease) error</a>
-
-```
-searchKey: registry.prepReleaseManifest
-tags: [private]
-```
-
-```Go
-func prepReleaseManifest(extensionID string, release *dbRelease) error
-```
-
-prepReleaseManifest will set the Manifest field of the release. If the manifest has no "url" field itself, a "url" field pointing to the extension's bundle is inserted. It also returns the date that the release was published. 
-
-### <a id="makeExtensionBundleURL" href="#makeExtensionBundleURL">func makeExtensionBundleURL(registryExtensionReleaseID int64, timestamp int64, extensionIDHint string) (string, error)</a>
-
-```
-searchKey: registry.makeExtensionBundleURL
-tags: [private]
-```
-
-```Go
-func makeExtensionBundleURL(registryExtensionReleaseID int64, timestamp int64, extensionIDHint string) (string, error)
-```
-
-### <a id="init.extensions.go" href="#init.extensions.go">func init()</a>
-
-```
-searchKey: registry.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
-### <a id="prefixLocalExtensionID" href="#prefixLocalExtensionID">func prefixLocalExtensionID(xs ...*dbExtension) error</a>
-
-```
-searchKey: registry.prefixLocalExtensionID
-tags: [private]
-```
-
-```Go
-func prefixLocalExtensionID(xs ...*dbExtension) error
-```
-
-prefixLocalExtensionID adds the local registry's extension ID prefix (from GetLocalRegistryExtensionIDPrefix) to all extensions' extension IDs in the list. 
-
-### <a id="init.http_api.go" href="#init.http_api.go">func init()</a>
-
-```
-searchKey: registry.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
-### <a id="toRegistryAPIExtension" href="#toRegistryAPIExtension">func toRegistryAPIExtension(ctx context.Context, v *dbExtension) (*registry.Extension, error)</a>
-
-```
-searchKey: registry.toRegistryAPIExtension
-tags: [private]
-```
-
-```Go
-func toRegistryAPIExtension(ctx context.Context, v *dbExtension) (*registry.Extension, error)
-```
-
-### <a id="toRegistryAPIExtensionBatch" href="#toRegistryAPIExtensionBatch">func toRegistryAPIExtensionBatch(ctx context.Context, vs []*dbExtension) ([]*registry.Extension, error)</a>
-
-```
-searchKey: registry.toRegistryAPIExtensionBatch
-tags: [private]
-```
-
-```Go
-func toRegistryAPIExtensionBatch(ctx context.Context, vs []*dbExtension) ([]*registry.Extension, error)
-```
-
-### <a id="newExtension" href="#newExtension">func newExtension(v *dbExtension, manifest *string, publishedAt time.Time) *registry.Extension</a>
-
-```
-searchKey: registry.newExtension
-tags: [private]
-```
-
-```Go
-func newExtension(v *dbExtension, manifest *string, publishedAt time.Time) *registry.Extension
-```
-
-### <a id="handleRegistry" href="#handleRegistry">func handleRegistry(w http.ResponseWriter, r *http.Request) (err error)</a>
-
-```
-searchKey: registry.handleRegistry
-tags: [private]
-```
-
-```Go
-func handleRegistry(w http.ResponseWriter, r *http.Request) (err error)
-```
-
-handleRegistry serves the external HTTP API for the extension registry. 
-
-### <a id="init.http_api.go.0xc06f6623d8" href="#init.http_api.go.0xc06f6623d8">func init()</a>
-
-```
-searchKey: registry.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
-### <a id="resetMocks" href="#resetMocks">func resetMocks()</a>
-
-```
-searchKey: registry.resetMocks
-tags: [private]
-```
-
-```Go
-func resetMocks()
-```
-
-### <a id="init.publisher_connection_graphql.go" href="#init.publisher_connection_graphql.go">func init()</a>
-
-```
-searchKey: registry.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
-### <a id="extensionRegistryPublishers" href="#extensionRegistryPublishers">func extensionRegistryPublishers(ctx context.Context, db dbutil.DB, args *graphqlutil.ConnectionArgs) (graphqlbackend.RegistryPublisherConnection, error)</a>
-
-```
-searchKey: registry.extensionRegistryPublishers
-tags: [private]
-```
-
-```Go
-func extensionRegistryPublishers(ctx context.Context, db dbutil.DB, args *graphqlutil.ConnectionArgs) (graphqlbackend.RegistryPublisherConnection, error)
-```
-
-### <a id="init.publisher_graphql.go" href="#init.publisher_graphql.go">func init()</a>
-
-```
-searchKey: registry.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
-### <a id="extensionRegistryViewerPublishers" href="#extensionRegistryViewerPublishers">func extensionRegistryViewerPublishers(ctx context.Context, db dbutil.DB) ([]graphqlbackend.RegistryPublisher, error)</a>
-
-```
-searchKey: registry.extensionRegistryViewerPublishers
-tags: [private]
-```
-
-```Go
-func extensionRegistryViewerPublishers(ctx context.Context, db dbutil.DB) ([]graphqlbackend.RegistryPublisher, error)
-```
-
-### <a id="init.registry_graphql.go" href="#init.registry_graphql.go">func init()</a>
-
-```
-searchKey: registry.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
-### <a id="registryExtensionByIDInt32" href="#registryExtensionByIDInt32">func registryExtensionByIDInt32(ctx context.Context, db dbutil.DB, id int32) (graphqlbackend.RegistryExtension, error)</a>
-
-```
-searchKey: registry.registryExtensionByIDInt32
-tags: [private]
-```
-
-```Go
-func registryExtensionByIDInt32(ctx context.Context, db dbutil.DB, id int32) (graphqlbackend.RegistryExtension, error)
-```
-
-### <a id="extensionRegistryCreateExtension" href="#extensionRegistryCreateExtension">func extensionRegistryCreateExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryCreateExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)</a>
-
-```
-searchKey: registry.extensionRegistryCreateExtension
-tags: [private]
-```
-
-```Go
-func extensionRegistryCreateExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryCreateExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)
-```
-
-### <a id="viewerCanAdministerExtension" href="#viewerCanAdministerExtension">func viewerCanAdministerExtension(ctx context.Context, db dbutil.DB, id frontendregistry.RegistryExtensionID) error</a>
-
-```
-searchKey: registry.viewerCanAdministerExtension
-tags: [private]
-```
-
-```Go
-func viewerCanAdministerExtension(ctx context.Context, db dbutil.DB, id frontendregistry.RegistryExtensionID) error
-```
-
-### <a id="extensionRegistryUpdateExtension" href="#extensionRegistryUpdateExtension">func extensionRegistryUpdateExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryUpdateExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)</a>
-
-```
-searchKey: registry.extensionRegistryUpdateExtension
-tags: [private]
-```
-
-```Go
-func extensionRegistryUpdateExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryUpdateExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)
-```
-
-### <a id="extensionRegistryDeleteExtension" href="#extensionRegistryDeleteExtension">func extensionRegistryDeleteExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryDeleteExtensionArgs) (*graphqlbackend.EmptyResponse, error)</a>
-
-```
-searchKey: registry.extensionRegistryDeleteExtension
-tags: [private]
-```
-
-```Go
-func extensionRegistryDeleteExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryDeleteExtensionArgs) (*graphqlbackend.EmptyResponse, error)
-```
-
-### <a id="extensionRegistryPublishExtension" href="#extensionRegistryPublishExtension">func extensionRegistryPublishExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryPublishExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)</a>
-
-```
-searchKey: registry.extensionRegistryPublishExtension
-tags: [private]
-```
-
-```Go
-func extensionRegistryPublishExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryPublishExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)
-```
-
-### <a id="TestIsRemoteExtensionAllowed" href="#TestIsRemoteExtensionAllowed">func TestIsRemoteExtensionAllowed(t *testing.T)</a>
-
-```
-searchKey: registry.TestIsRemoteExtensionAllowed
-tags: [private]
-```
-
-```Go
-func TestIsRemoteExtensionAllowed(t *testing.T)
-```
-
-### <a id="sameElements" href="#sameElements">func sameElements(a, b []string) bool</a>
-
-```
-searchKey: registry.sameElements
-tags: [private]
-```
-
-```Go
-func sameElements(a, b []string) bool
+func TestFeaturedExtensions(t *testing.T)
 ```
 
 ### <a id="TestFilterRemoteExtensions" href="#TestFilterRemoteExtensions">func TestFilterRemoteExtensions(t *testing.T)</a>
 
 ```
 searchKey: registry.TestFilterRemoteExtensions
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestFilterRemoteExtensions(t *testing.T)
 ```
 
-### <a id="init.db_test.go" href="#init.db_test.go">func init()</a>
-
-```
-searchKey: registry.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
-### <a id="TestParseExtensionBundleFilename" href="#TestParseExtensionBundleFilename">func TestParseExtensionBundleFilename(t *testing.T)</a>
-
-```
-searchKey: registry.TestParseExtensionBundleFilename
-tags: [private]
-```
-
-```Go
-func TestParseExtensionBundleFilename(t *testing.T)
-```
-
 ### <a id="TestFilteringExtensionIDs" href="#TestFilteringExtensionIDs">func TestFilteringExtensionIDs(t *testing.T)</a>
 
 ```
 searchKey: registry.TestFilteringExtensionIDs
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestFilteringExtensionIDs(t *testing.T)
 ```
 
-### <a id="TestToDBExtensionsListOptions" href="#TestToDBExtensionsListOptions">func TestToDBExtensionsListOptions(t *testing.T)</a>
-
-```
-searchKey: registry.TestToDBExtensionsListOptions
-tags: [private]
-```
-
-```Go
-func TestToDBExtensionsListOptions(t *testing.T)
-```
-
-### <a id="strarrayptr" href="#strarrayptr">func strarrayptr(values []string) *[]string</a>
-
-```
-searchKey: registry.strarrayptr
-tags: [private]
-```
-
-```Go
-func strarrayptr(values []string) *[]string
-```
-
 ### <a id="TestGetExtensionManifestWithBundleURL" href="#TestGetExtensionManifestWithBundleURL">func TestGetExtensionManifestWithBundleURL(t *testing.T)</a>
 
 ```
 searchKey: registry.TestGetExtensionManifestWithBundleURL
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestGetExtensionManifestWithBundleURL(t *testing.T)
 ```
 
-### <a id="jsonDeepEqual" href="#jsonDeepEqual">func jsonDeepEqual(a, b string) bool</a>
+### <a id="TestIsRemoteExtensionAllowed" href="#TestIsRemoteExtensionAllowed">func TestIsRemoteExtensionAllowed(t *testing.T)</a>
 
 ```
-searchKey: registry.jsonDeepEqual
-tags: [private]
-```
-
-```Go
-func jsonDeepEqual(a, b string) bool
-```
-
-### <a id="TestRegistryExtensions_validNames" href="#TestRegistryExtensions_validNames">func TestRegistryExtensions_validNames(t *testing.T)</a>
-
-```
-searchKey: registry.TestRegistryExtensions_validNames
-tags: [private]
+searchKey: registry.TestIsRemoteExtensionAllowed
+tags: [method private test]
 ```
 
 ```Go
-func TestRegistryExtensions_validNames(t *testing.T)
+func TestIsRemoteExtensionAllowed(t *testing.T)
+```
+
+### <a id="TestParseExtensionBundleFilename" href="#TestParseExtensionBundleFilename">func TestParseExtensionBundleFilename(t *testing.T)</a>
+
+```
+searchKey: registry.TestParseExtensionBundleFilename
+tags: [method private test]
+```
+
+```Go
+func TestParseExtensionBundleFilename(t *testing.T)
+```
+
+### <a id="TestRegistryExtensionReleases" href="#TestRegistryExtensionReleases">func TestRegistryExtensionReleases(t *testing.T)</a>
+
+```
+searchKey: registry.TestRegistryExtensionReleases
+tags: [method private test]
+```
+
+```Go
+func TestRegistryExtensionReleases(t *testing.T)
 ```
 
 ### <a id="TestRegistryExtensions" href="#TestRegistryExtensions">func TestRegistryExtensions(t *testing.T)</a>
 
 ```
 searchKey: registry.TestRegistryExtensions
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -1995,43 +1544,494 @@ func TestRegistryExtensions(t *testing.T)
 
 ```
 searchKey: registry.TestRegistryExtensions_ListCount
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestRegistryExtensions_ListCount(t *testing.T)
 ```
 
-### <a id="TestFeaturedExtensions" href="#TestFeaturedExtensions">func TestFeaturedExtensions(t *testing.T)</a>
+### <a id="TestRegistryExtensions_validNames" href="#TestRegistryExtensions_validNames">func TestRegistryExtensions_validNames(t *testing.T)</a>
 
 ```
-searchKey: registry.TestFeaturedExtensions
-tags: [private]
+searchKey: registry.TestRegistryExtensions_validNames
+tags: [method private test]
 ```
 
 ```Go
-func TestFeaturedExtensions(t *testing.T)
+func TestRegistryExtensions_validNames(t *testing.T)
+```
+
+### <a id="TestToDBExtensionsListOptions" href="#TestToDBExtensionsListOptions">func TestToDBExtensionsListOptions(t *testing.T)</a>
+
+```
+searchKey: registry.TestToDBExtensionsListOptions
+tags: [method private test]
+```
+
+```Go
+func TestToDBExtensionsListOptions(t *testing.T)
 ```
 
 ### <a id="asJSON" href="#asJSON">func asJSON(t *testing.T, v interface{}) string</a>
 
 ```
 searchKey: registry.asJSON
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func asJSON(t *testing.T, v interface{}) string
 ```
 
-### <a id="TestRegistryExtensionReleases" href="#TestRegistryExtensionReleases">func TestRegistryExtensionReleases(t *testing.T)</a>
+### <a id="countLocalRegistryExtensions" href="#countLocalRegistryExtensions">func countLocalRegistryExtensions(ctx context.Context, db dbutil.DB, args graphqlbackend.RegistryExtensionConnectionArgs) (int, error)</a>
 
 ```
-searchKey: registry.TestRegistryExtensionReleases
-tags: [private]
+searchKey: registry.countLocalRegistryExtensions
+tags: [method private]
 ```
 
 ```Go
-func TestRegistryExtensionReleases(t *testing.T)
+func countLocalRegistryExtensions(ctx context.Context, db dbutil.DB, args graphqlbackend.RegistryExtensionConnectionArgs) (int, error)
+```
+
+### <a id="extensionRegistryCreateExtension" href="#extensionRegistryCreateExtension">func extensionRegistryCreateExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryCreateExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)</a>
+
+```
+searchKey: registry.extensionRegistryCreateExtension
+tags: [method private]
+```
+
+```Go
+func extensionRegistryCreateExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryCreateExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)
+```
+
+### <a id="extensionRegistryDeleteExtension" href="#extensionRegistryDeleteExtension">func extensionRegistryDeleteExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryDeleteExtensionArgs) (*graphqlbackend.EmptyResponse, error)</a>
+
+```
+searchKey: registry.extensionRegistryDeleteExtension
+tags: [method private]
+```
+
+```Go
+func extensionRegistryDeleteExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryDeleteExtensionArgs) (*graphqlbackend.EmptyResponse, error)
+```
+
+### <a id="extensionRegistryPublishExtension" href="#extensionRegistryPublishExtension">func extensionRegistryPublishExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryPublishExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)</a>
+
+```
+searchKey: registry.extensionRegistryPublishExtension
+tags: [method private]
+```
+
+```Go
+func extensionRegistryPublishExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryPublishExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)
+```
+
+### <a id="extensionRegistryPublishers" href="#extensionRegistryPublishers">func extensionRegistryPublishers(ctx context.Context, db dbutil.DB, args *graphqlutil.ConnectionArgs) (graphqlbackend.RegistryPublisherConnection, error)</a>
+
+```
+searchKey: registry.extensionRegistryPublishers
+tags: [method private]
+```
+
+```Go
+func extensionRegistryPublishers(ctx context.Context, db dbutil.DB, args *graphqlutil.ConnectionArgs) (graphqlbackend.RegistryPublisherConnection, error)
+```
+
+### <a id="extensionRegistryUpdateExtension" href="#extensionRegistryUpdateExtension">func extensionRegistryUpdateExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryUpdateExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)</a>
+
+```
+searchKey: registry.extensionRegistryUpdateExtension
+tags: [method private]
+```
+
+```Go
+func extensionRegistryUpdateExtension(ctx context.Context, db dbutil.DB, args *graphqlbackend.ExtensionRegistryUpdateExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)
+```
+
+### <a id="extensionRegistryViewerPublishers" href="#extensionRegistryViewerPublishers">func extensionRegistryViewerPublishers(ctx context.Context, db dbutil.DB) ([]graphqlbackend.RegistryPublisher, error)</a>
+
+```
+searchKey: registry.extensionRegistryViewerPublishers
+tags: [method private]
+```
+
+```Go
+func extensionRegistryViewerPublishers(ctx context.Context, db dbutil.DB) ([]graphqlbackend.RegistryPublisher, error)
+```
+
+### <a id="filterStripLocalExtensionIDs" href="#filterStripLocalExtensionIDs">func filterStripLocalExtensionIDs(extensionIDs []string) []string</a>
+
+```
+searchKey: registry.filterStripLocalExtensionIDs
+tags: [method private]
+```
+
+```Go
+func filterStripLocalExtensionIDs(extensionIDs []string) []string
+```
+
+filterStripLocalExtensionIDs filters to local extension IDs and strips the host prefix. 
+
+### <a id="getAllowedExtensionsFromSiteConfig" href="#getAllowedExtensionsFromSiteConfig">func getAllowedExtensionsFromSiteConfig() []string</a>
+
+```
+searchKey: registry.getAllowedExtensionsFromSiteConfig
+tags: [function private]
+```
+
+```Go
+func getAllowedExtensionsFromSiteConfig() []string
+```
+
+### <a id="getLatestForBatch" href="#getLatestForBatch">func getLatestForBatch(ctx context.Context, vs []*dbExtension) (map[int32]*dbRelease, error)</a>
+
+```
+searchKey: registry.getLatestForBatch
+tags: [method private]
+```
+
+```Go
+func getLatestForBatch(ctx context.Context, vs []*dbExtension) (map[int32]*dbRelease, error)
+```
+
+getLatestForBatch returns a map from extension identifiers to the latest DB release with the extension manifest as JSON for that extension. If there are no releases, it returns a nil manifest. If the manifest has no "url" field itself, a "url" field pointing to the extension's bundle is inserted. It also returns the date that the release was published. 
+
+### <a id="handleRegistry" href="#handleRegistry">func handleRegistry(w http.ResponseWriter, r *http.Request) (err error)</a>
+
+```
+searchKey: registry.handleRegistry
+tags: [method private]
+```
+
+```Go
+func handleRegistry(w http.ResponseWriter, r *http.Request) (err error)
+```
+
+handleRegistry serves the external HTTP API for the extension registry. 
+
+### <a id="handleRegistryExtensionBundle" href="#handleRegistryExtensionBundle">func handleRegistryExtensionBundle(w http.ResponseWriter, r *http.Request)</a>
+
+```
+searchKey: registry.handleRegistryExtensionBundle
+tags: [method private]
+```
+
+```Go
+func handleRegistryExtensionBundle(w http.ResponseWriter, r *http.Request)
+```
+
+handleRegistryExtensionBundle serves the bundled JavaScript source file or the source map for an extension in the registry as a raw JavaScript or JSON file. 
+
+### <a id="init.allow.go" href="#init.allow.go">func init()</a>
+
+```
+searchKey: registry.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="init.db_test.go" href="#init.db_test.go">func init()</a>
+
+```
+searchKey: registry.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="init.extension_bundle.go" href="#init.extension_bundle.go">func init()</a>
+
+```
+searchKey: registry.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="init.extension_connection_graphql.go" href="#init.extension_connection_graphql.go">func init()</a>
+
+```
+searchKey: registry.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="init.extensions.go" href="#init.extensions.go">func init()</a>
+
+```
+searchKey: registry.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="init.http_api.go" href="#init.http_api.go">func init()</a>
+
+```
+searchKey: registry.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="init.http_api.go.0xc0775eab18" href="#init.http_api.go.0xc0775eab18">func init()</a>
+
+```
+searchKey: registry.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="init.publisher_connection_graphql.go" href="#init.publisher_connection_graphql.go">func init()</a>
+
+```
+searchKey: registry.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="init.publisher_graphql.go" href="#init.publisher_graphql.go">func init()</a>
+
+```
+searchKey: registry.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="init.registry_graphql.go" href="#init.registry_graphql.go">func init()</a>
+
+```
+searchKey: registry.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="jsonDeepEqual" href="#jsonDeepEqual">func jsonDeepEqual(a, b string) bool</a>
+
+```
+searchKey: registry.jsonDeepEqual
+tags: [method private]
+```
+
+```Go
+func jsonDeepEqual(a, b string) bool
+```
+
+### <a id="listLocalRegistryExtensions" href="#listLocalRegistryExtensions">func listLocalRegistryExtensions(ctx context.Context, db dbutil.DB, args graphqlbackend.RegistryExtensionConnectionArgs) ([]graphqlbackend.RegistryExtension, error)</a>
+
+```
+searchKey: registry.listLocalRegistryExtensions
+tags: [method private]
+```
+
+```Go
+func listLocalRegistryExtensions(ctx context.Context, db dbutil.DB, args graphqlbackend.RegistryExtensionConnectionArgs) ([]graphqlbackend.RegistryExtension, error)
+```
+
+### <a id="makeExtensionBundleURL" href="#makeExtensionBundleURL">func makeExtensionBundleURL(registryExtensionReleaseID int64, timestamp int64, extensionIDHint string) (string, error)</a>
+
+```
+searchKey: registry.makeExtensionBundleURL
+tags: [method private]
+```
+
+```Go
+func makeExtensionBundleURL(registryExtensionReleaseID int64, timestamp int64, extensionIDHint string) (string, error)
+```
+
+### <a id="newExtension" href="#newExtension">func newExtension(v *dbExtension, manifest *string, publishedAt time.Time) *registry.Extension</a>
+
+```
+searchKey: registry.newExtension
+tags: [method private]
+```
+
+```Go
+func newExtension(v *dbExtension, manifest *string, publishedAt time.Time) *registry.Extension
+```
+
+### <a id="parseExtensionBundleFilename" href="#parseExtensionBundleFilename">func parseExtensionBundleFilename(filename string) (int64, error)</a>
+
+```
+searchKey: registry.parseExtensionBundleFilename
+tags: [method private]
+```
+
+```Go
+func parseExtensionBundleFilename(filename string) (int64, error)
+```
+
+parseExtensionBundleFilename parses the release ID from the extension bundle's filename, which is of the form "1234-publisher-extension-id.js" or ".map". The part of the filename after the "-" and before the extension is ignored; it exists to help distinguish log messages from different extensions in debugging. 
+
+### <a id="parseExtensionQuery" href="#parseExtensionQuery">func parseExtensionQuery(q string) (text, category, tag string)</a>
+
+```
+searchKey: registry.parseExtensionQuery
+tags: [method private]
+```
+
+```Go
+func parseExtensionQuery(q string) (text, category, tag string)
+```
+
+parseExtensionQuery parses an extension registry query consisting of terms and the operators `category:"My category"`, `tag:"mytag"`, #installed, #enabled, and #disabled. 
+
+This is an intentionally simple, unoptimized parser. 
+
+### <a id="prefixLocalExtensionID" href="#prefixLocalExtensionID">func prefixLocalExtensionID(xs ...*dbExtension) error</a>
+
+```
+searchKey: registry.prefixLocalExtensionID
+tags: [method private]
+```
+
+```Go
+func prefixLocalExtensionID(xs ...*dbExtension) error
+```
+
+prefixLocalExtensionID adds the local registry's extension ID prefix (from GetLocalRegistryExtensionIDPrefix) to all extensions' extension IDs in the list. 
+
+### <a id="prepReleaseManifest" href="#prepReleaseManifest">func prepReleaseManifest(extensionID string, release *dbRelease) error</a>
+
+```
+searchKey: registry.prepReleaseManifest
+tags: [method private]
+```
+
+```Go
+func prepReleaseManifest(extensionID string, release *dbRelease) error
+```
+
+prepReleaseManifest will set the Manifest field of the release. If the manifest has no "url" field itself, a "url" field pointing to the extension's bundle is inserted. It also returns the date that the release was published. 
+
+### <a id="registryExtensionByIDInt32" href="#registryExtensionByIDInt32">func registryExtensionByIDInt32(ctx context.Context, db dbutil.DB, id int32) (graphqlbackend.RegistryExtension, error)</a>
+
+```
+searchKey: registry.registryExtensionByIDInt32
+tags: [method private]
+```
+
+```Go
+func registryExtensionByIDInt32(ctx context.Context, db dbutil.DB, id int32) (graphqlbackend.RegistryExtension, error)
+```
+
+### <a id="resetMocks" href="#resetMocks">func resetMocks()</a>
+
+```
+searchKey: registry.resetMocks
+tags: [function private]
+```
+
+```Go
+func resetMocks()
+```
+
+### <a id="sameElements" href="#sameElements">func sameElements(a, b []string) bool</a>
+
+```
+searchKey: registry.sameElements
+tags: [method private]
+```
+
+```Go
+func sameElements(a, b []string) bool
+```
+
+### <a id="strarrayptr" href="#strarrayptr">func strarrayptr(values []string) *[]string</a>
+
+```
+searchKey: registry.strarrayptr
+tags: [method private]
+```
+
+```Go
+func strarrayptr(values []string) *[]string
+```
+
+### <a id="strptr" href="#strptr">func strptr(s string) *string</a>
+
+```
+searchKey: registry.strptr
+tags: [method private]
+```
+
+```Go
+func strptr(s string) *string
+```
+
+### <a id="toRegistryAPIExtension" href="#toRegistryAPIExtension">func toRegistryAPIExtension(ctx context.Context, v *dbExtension) (*registry.Extension, error)</a>
+
+```
+searchKey: registry.toRegistryAPIExtension
+tags: [method private]
+```
+
+```Go
+func toRegistryAPIExtension(ctx context.Context, v *dbExtension) (*registry.Extension, error)
+```
+
+### <a id="toRegistryAPIExtensionBatch" href="#toRegistryAPIExtensionBatch">func toRegistryAPIExtensionBatch(ctx context.Context, vs []*dbExtension) ([]*registry.Extension, error)</a>
+
+```
+searchKey: registry.toRegistryAPIExtensionBatch
+tags: [method private]
+```
+
+```Go
+func toRegistryAPIExtensionBatch(ctx context.Context, vs []*dbExtension) ([]*registry.Extension, error)
+```
+
+### <a id="validateExtensionManifest" href="#validateExtensionManifest">func validateExtensionManifest(text string) error</a>
+
+```
+searchKey: registry.validateExtensionManifest
+tags: [method private]
+```
+
+```Go
+func validateExtensionManifest(text string) error
+```
+
+validateExtensionManifest validates a JSON extension manifest for syntax. 
+
+TODO(sqs): Also validate it against the JSON Schema. 
+
+### <a id="viewerCanAdministerExtension" href="#viewerCanAdministerExtension">func viewerCanAdministerExtension(ctx context.Context, db dbutil.DB, id frontendregistry.RegistryExtensionID) error</a>
+
+```
+searchKey: registry.viewerCanAdministerExtension
+tags: [method private]
+```
+
+```Go
+func viewerCanAdministerExtension(ctx context.Context, db dbutil.DB, id frontendregistry.RegistryExtensionID) error
 ```
 

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/bytealg",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,44 +41,94 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/bytealg#offsetX86HasSSE2",
+              "pathID": "/internal/bytealg#MaxBruteForce",
               "documentation": {
-                "identifier": "offsetX86HasSSE2",
+                "identifier": "MaxBruteForce",
                 "newPage": false,
-                "searchKey": "bytealg.offsetX86HasSSE2",
+                "searchKey": "bytealg.MaxBruteForce",
                 "tags": [
-                  "private"
+                  "constant",
+                  "number"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const offsetX86HasSSE2"
+                "value": "const MaxBruteForce"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst offsetX86HasSSE2 = unsafe.Offsetof(cpu.X86.HasSSE2)\n```\n\nOffsets into internal/cpu records for use in assembly. \n\n"
+                "value": "```Go\nconst MaxBruteForce = 64\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/bytealg#offsetX86HasSSE42",
+              "pathID": "/internal/bytealg#PrimeRK",
               "documentation": {
-                "identifier": "offsetX86HasSSE42",
+                "identifier": "PrimeRK",
                 "newPage": false,
-                "searchKey": "bytealg.offsetX86HasSSE42",
+                "searchKey": "bytealg.PrimeRK",
                 "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PrimeRK"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PrimeRK = 16777619\n```\n\nPrimeRK is the prime base used in Rabin-Karp algorithm. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/bytealg#offsetPPC64HasPOWER9",
+              "documentation": {
+                "identifier": "offsetPPC64HasPOWER9",
+                "newPage": false,
+                "searchKey": "bytealg.offsetPPC64HasPOWER9",
+                "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const offsetX86HasSSE42"
+                "value": "const offsetPPC64HasPOWER9"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst offsetX86HasSSE42 = unsafe.Offsetof(cpu.X86.HasSSE42)\n```\n\nOffsets into internal/cpu records for use in assembly. \n\n"
+                "value": "```Go\nconst offsetPPC64HasPOWER9 = unsafe.Offsetof(cpu.PPC64.IsPOWER9)\n```\n\nOffsets into internal/cpu records for use in assembly. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/bytealg#offsetS390xHasVX",
+              "documentation": {
+                "identifier": "offsetS390xHasVX",
+                "newPage": false,
+                "searchKey": "bytealg.offsetS390xHasVX",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const offsetS390xHasVX"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst offsetS390xHasVX = unsafe.Offsetof(cpu.S390X.HasVX)\n```\n\nOffsets into internal/cpu records for use in assembly. \n\n"
               },
               "children": null
             }
@@ -89,6 +141,8 @@
                 "newPage": false,
                 "searchKey": "bytealg.offsetX86HasAVX2",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -111,6 +165,8 @@
                 "newPage": false,
                 "searchKey": "bytealg.offsetX86HasPOPCNT",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -127,84 +183,48 @@
           },
           {
             "node": {
-              "pathID": "/internal/bytealg#offsetS390xHasVX",
+              "pathID": "/internal/bytealg#offsetX86HasSSE2",
               "documentation": {
-                "identifier": "offsetS390xHasVX",
+                "identifier": "offsetX86HasSSE2",
                 "newPage": false,
-                "searchKey": "bytealg.offsetS390xHasVX",
+                "searchKey": "bytealg.offsetX86HasSSE2",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const offsetS390xHasVX"
+                "value": "const offsetX86HasSSE2"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst offsetS390xHasVX = unsafe.Offsetof(cpu.S390X.HasVX)\n```\n\nOffsets into internal/cpu records for use in assembly. \n\n"
+                "value": "```Go\nconst offsetX86HasSSE2 = unsafe.Offsetof(cpu.X86.HasSSE2)\n```\n\nOffsets into internal/cpu records for use in assembly. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/bytealg#offsetPPC64HasPOWER9",
+              "pathID": "/internal/bytealg#offsetX86HasSSE42",
               "documentation": {
-                "identifier": "offsetPPC64HasPOWER9",
+                "identifier": "offsetX86HasSSE42",
                 "newPage": false,
-                "searchKey": "bytealg.offsetPPC64HasPOWER9",
+                "searchKey": "bytealg.offsetX86HasSSE42",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const offsetPPC64HasPOWER9"
+                "value": "const offsetX86HasSSE42"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst offsetPPC64HasPOWER9 = unsafe.Offsetof(cpu.PPC64.IsPOWER9)\n```\n\nOffsets into internal/cpu records for use in assembly. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/bytealg#PrimeRK",
-              "documentation": {
-                "identifier": "PrimeRK",
-                "newPage": false,
-                "searchKey": "bytealg.PrimeRK",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const PrimeRK"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst PrimeRK = 16777619\n```\n\nPrimeRK is the prime base used in Rabin-Karp algorithm. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/bytealg#MaxBruteForce",
-              "documentation": {
-                "identifier": "MaxBruteForce",
-                "newPage": false,
-                "searchKey": "bytealg.MaxBruteForce",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const MaxBruteForce"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst MaxBruteForce = 64\n```\n\n"
+                "value": "```Go\nconst offsetX86HasSSE42 = unsafe.Offsetof(cpu.X86.HasSSE42)\n```\n\nOffsets into internal/cpu records for use in assembly. \n\n"
               },
               "children": null
             }
@@ -220,6 +240,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -239,7 +260,10 @@
                 "identifier": "MaxLen",
                 "newPage": false,
                 "searchKey": "bytealg.MaxLen",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -263,6 +287,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -277,132 +302,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/bytealg#HashStrBytes",
-              "documentation": {
-                "identifier": "HashStrBytes",
-                "newPage": false,
-                "searchKey": "bytealg.HashStrBytes",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func HashStrBytes(sep []byte) (uint32, uint32)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc HashStrBytes(sep []byte) (uint32, uint32)\n```\n\nHashStrBytes returns the hash and the appropriate multiplicative factor for use in Rabin-Karp algorithm. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/bytealg#HashStr",
-              "documentation": {
-                "identifier": "HashStr",
-                "newPage": false,
-                "searchKey": "bytealg.HashStr",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func HashStr(sep string) (uint32, uint32)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc HashStr(sep string) (uint32, uint32)\n```\n\nHashStr returns the hash and the appropriate multiplicative factor for use in Rabin-Karp algorithm. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/bytealg#HashStrRevBytes",
-              "documentation": {
-                "identifier": "HashStrRevBytes",
-                "newPage": false,
-                "searchKey": "bytealg.HashStrRevBytes",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func HashStrRevBytes(sep []byte) (uint32, uint32)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc HashStrRevBytes(sep []byte) (uint32, uint32)\n```\n\nHashStrRevBytes returns the hash of the reverse of sep and the appropriate multiplicative factor for use in Rabin-Karp algorithm. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/bytealg#HashStrRev",
-              "documentation": {
-                "identifier": "HashStrRev",
-                "newPage": false,
-                "searchKey": "bytealg.HashStrRev",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func HashStrRev(sep string) (uint32, uint32)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc HashStrRev(sep string) (uint32, uint32)\n```\n\nHashStrRev returns the hash of the reverse of sep and the appropriate multiplicative factor for use in Rabin-Karp algorithm. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/bytealg#IndexRabinKarpBytes",
-              "documentation": {
-                "identifier": "IndexRabinKarpBytes",
-                "newPage": false,
-                "searchKey": "bytealg.IndexRabinKarpBytes",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IndexRabinKarpBytes(s, sep []byte) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IndexRabinKarpBytes(s, sep []byte) int\n```\n\nIndexRabinKarpBytes uses the Rabin-Karp search algorithm to return the index of the first occurrence of substr in s, or -1 if not present. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/bytealg#IndexRabinKarp",
-              "documentation": {
-                "identifier": "IndexRabinKarp",
-                "newPage": false,
-                "searchKey": "bytealg.IndexRabinKarp",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IndexRabinKarp(s, substr string) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IndexRabinKarp(s, substr string) int\n```\n\nIndexRabinKarp uses the Rabin-Karp search algorithm to return the index of the first occurrence of substr in s, or -1 if not present. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/bytealg#Compare",
               "documentation": {
                 "identifier": "Compare",
                 "newPage": false,
                 "searchKey": "bytealg.Compare",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -417,34 +324,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/bytealg#abigen_runtime_cmpstring",
-              "documentation": {
-                "identifier": "abigen_runtime_cmpstring",
-                "newPage": false,
-                "searchKey": "bytealg.abigen_runtime_cmpstring",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func abigen_runtime_cmpstring(a, b string) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc abigen_runtime_cmpstring(a, b string) int\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/bytealg#Count",
               "documentation": {
                 "identifier": "Count",
                 "newPage": false,
                 "searchKey": "bytealg.Count",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -464,7 +351,9 @@
                 "identifier": "CountString",
                 "newPage": false,
                 "searchKey": "bytealg.CountString",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -479,44 +368,22 @@
           },
           {
             "node": {
-              "pathID": "/internal/bytealg#countGeneric",
+              "pathID": "/internal/bytealg#Cutover",
               "documentation": {
-                "identifier": "countGeneric",
+                "identifier": "Cutover",
                 "newPage": false,
-                "searchKey": "bytealg.countGeneric",
+                "searchKey": "bytealg.Cutover",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func countGeneric(b []byte, c byte) int"
+                "value": "func Cutover(n int) int"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc countGeneric(b []byte, c byte) int\n```\n\nA backup implementation to use by assembly. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/bytealg#countGenericString",
-              "documentation": {
-                "identifier": "countGenericString",
-                "newPage": false,
-                "searchKey": "bytealg.countGenericString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func countGenericString(s string, c byte) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc countGenericString(s string, c byte) int\n```\n\n"
+                "value": "```Go\nfunc Cutover(n int) int\n```\n\nCutover reports the number of failures of IndexByte we should tolerate before switching over to Index. n is the number of bytes processed so far. See the bytes.Index implementation for details. \n\n"
               },
               "children": null
             }
@@ -528,7 +395,9 @@
                 "identifier": "Equal",
                 "newPage": false,
                 "searchKey": "bytealg.Equal",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -543,12 +412,256 @@
           },
           {
             "node": {
+              "pathID": "/internal/bytealg#HashStr",
+              "documentation": {
+                "identifier": "HashStr",
+                "newPage": false,
+                "searchKey": "bytealg.HashStr",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HashStr(sep string) (uint32, uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HashStr(sep string) (uint32, uint32)\n```\n\nHashStr returns the hash and the appropriate multiplicative factor for use in Rabin-Karp algorithm. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/bytealg#HashStrBytes",
+              "documentation": {
+                "identifier": "HashStrBytes",
+                "newPage": false,
+                "searchKey": "bytealg.HashStrBytes",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HashStrBytes(sep []byte) (uint32, uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HashStrBytes(sep []byte) (uint32, uint32)\n```\n\nHashStrBytes returns the hash and the appropriate multiplicative factor for use in Rabin-Karp algorithm. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/bytealg#HashStrRev",
+              "documentation": {
+                "identifier": "HashStrRev",
+                "newPage": false,
+                "searchKey": "bytealg.HashStrRev",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HashStrRev(sep string) (uint32, uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HashStrRev(sep string) (uint32, uint32)\n```\n\nHashStrRev returns the hash of the reverse of sep and the appropriate multiplicative factor for use in Rabin-Karp algorithm. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/bytealg#HashStrRevBytes",
+              "documentation": {
+                "identifier": "HashStrRevBytes",
+                "newPage": false,
+                "searchKey": "bytealg.HashStrRevBytes",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HashStrRevBytes(sep []byte) (uint32, uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HashStrRevBytes(sep []byte) (uint32, uint32)\n```\n\nHashStrRevBytes returns the hash of the reverse of sep and the appropriate multiplicative factor for use in Rabin-Karp algorithm. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/bytealg#Index",
+              "documentation": {
+                "identifier": "Index",
+                "newPage": false,
+                "searchKey": "bytealg.Index",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Index(a, b []byte) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Index(a, b []byte) int\n```\n\nIndex returns the index of the first instance of b in a, or -1 if b is not present in a. Requires 2 <= len(b) <= MaxLen. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/bytealg#IndexByte",
+              "documentation": {
+                "identifier": "IndexByte",
+                "newPage": false,
+                "searchKey": "bytealg.IndexByte",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IndexByte(b []byte, c byte) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IndexByte(b []byte, c byte) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/bytealg#IndexByteString",
+              "documentation": {
+                "identifier": "IndexByteString",
+                "newPage": false,
+                "searchKey": "bytealg.IndexByteString",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IndexByteString(s string, c byte) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IndexByteString(s string, c byte) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/bytealg#IndexRabinKarp",
+              "documentation": {
+                "identifier": "IndexRabinKarp",
+                "newPage": false,
+                "searchKey": "bytealg.IndexRabinKarp",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IndexRabinKarp(s, substr string) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IndexRabinKarp(s, substr string) int\n```\n\nIndexRabinKarp uses the Rabin-Karp search algorithm to return the index of the first occurrence of substr in s, or -1 if not present. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/bytealg#IndexRabinKarpBytes",
+              "documentation": {
+                "identifier": "IndexRabinKarpBytes",
+                "newPage": false,
+                "searchKey": "bytealg.IndexRabinKarpBytes",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IndexRabinKarpBytes(s, sep []byte) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IndexRabinKarpBytes(s, sep []byte) int\n```\n\nIndexRabinKarpBytes uses the Rabin-Karp search algorithm to return the index of the first occurrence of substr in s, or -1 if not present. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/bytealg#IndexString",
+              "documentation": {
+                "identifier": "IndexString",
+                "newPage": false,
+                "searchKey": "bytealg.IndexString",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IndexString(a, b string) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IndexString(a, b string) int\n```\n\nIndexString returns the index of the first instance of b in a, or -1 if b is not present in a. Requires 2 <= len(b) <= MaxLen. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/bytealg#abigen_runtime_cmpstring",
+              "documentation": {
+                "identifier": "abigen_runtime_cmpstring",
+                "newPage": false,
+                "searchKey": "bytealg.abigen_runtime_cmpstring",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func abigen_runtime_cmpstring(a, b string) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc abigen_runtime_cmpstring(a, b string) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/bytealg#abigen_runtime_memequal",
               "documentation": {
                 "identifier": "abigen_runtime_memequal",
                 "newPage": false,
                 "searchKey": "bytealg.abigen_runtime_memequal",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -571,6 +684,7 @@
                 "newPage": false,
                 "searchKey": "bytealg.abigen_runtime_memequal_varlen",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -587,12 +701,59 @@
           },
           {
             "node": {
+              "pathID": "/internal/bytealg#countGeneric",
+              "documentation": {
+                "identifier": "countGeneric",
+                "newPage": false,
+                "searchKey": "bytealg.countGeneric",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func countGeneric(b []byte, c byte) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc countGeneric(b []byte, c byte) int\n```\n\nA backup implementation to use by assembly. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/bytealg#countGenericString",
+              "documentation": {
+                "identifier": "countGenericString",
+                "newPage": false,
+                "searchKey": "bytealg.countGenericString",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func countGenericString(s string, c byte) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc countGenericString(s string, c byte) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/bytealg#init.index_amd64.go",
               "documentation": {
                 "identifier": "init.index_amd64.go",
                 "newPage": false,
                 "searchKey": "bytealg.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -603,106 +764,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/bytealg#Cutover",
-              "documentation": {
-                "identifier": "Cutover",
-                "newPage": false,
-                "searchKey": "bytealg.Cutover",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Cutover(n int) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Cutover(n int) int\n```\n\nCutover reports the number of failures of IndexByte we should tolerate before switching over to Index. n is the number of bytes processed so far. See the bytes.Index implementation for details. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/bytealg#Index",
-              "documentation": {
-                "identifier": "Index",
-                "newPage": false,
-                "searchKey": "bytealg.Index",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Index(a, b []byte) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Index(a, b []byte) int\n```\n\nIndex returns the index of the first instance of b in a, or -1 if b is not present in a. Requires 2 <= len(b) <= MaxLen. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/bytealg#IndexString",
-              "documentation": {
-                "identifier": "IndexString",
-                "newPage": false,
-                "searchKey": "bytealg.IndexString",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IndexString(a, b string) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IndexString(a, b string) int\n```\n\nIndexString returns the index of the first instance of b in a, or -1 if b is not present in a. Requires 2 <= len(b) <= MaxLen. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/bytealg#IndexByte",
-              "documentation": {
-                "identifier": "IndexByte",
-                "newPage": false,
-                "searchKey": "bytealg.IndexByte",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IndexByte(b []byte, c byte) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IndexByte(b []byte, c byte) int\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/bytealg#IndexByteString",
-              "documentation": {
-                "identifier": "IndexByteString",
-                "newPage": false,
-                "searchKey": "bytealg.IndexByteString",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IndexByteString(s string, c byte) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IndexByteString(s string, c byte) int\n```\n\n"
               },
               "children": null
             }

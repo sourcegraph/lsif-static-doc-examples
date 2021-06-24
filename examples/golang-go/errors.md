@@ -63,19 +63,23 @@ because the former will succeed if err wraps an *fs.PathError.
     * [type errorString struct](#errorString)
         * [func (e *errorString) Error() string](#errorString.Error)
 * [Functions](#func)
+    * [func As(err error, target interface{}) bool](#As)
+    * [func Is(err, target error) bool](#Is)
     * [func New(text string) error](#New)
     * [func Unwrap(err error) error](#Unwrap)
-    * [func Is(err, target error) bool](#Is)
-    * [func As(err error, target interface{}) bool](#As)
 
 
 ## <a id="var" href="#var">Variables</a>
+
+```
+tags: [package]
+```
 
 ### <a id="errorType" href="#errorType">var errorType</a>
 
 ```
 searchKey: errors.errorType
-tags: [private]
+tags: [variable interface private]
 ```
 
 ```Go
@@ -84,11 +88,15 @@ var errorType = reflectlite.TypeOf((*error)(nil)).Elem()
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [package]
+```
+
 ### <a id="errorString" href="#errorString">type errorString struct</a>
 
 ```
 searchKey: errors.errorString
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -103,7 +111,7 @@ errorString is a trivial implementation of error.
 
 ```
 searchKey: errors.errorString.Error
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -112,34 +120,36 @@ func (e *errorString) Error() string
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="New" href="#New">func New(text string) error</a>
-
 ```
-searchKey: errors.New
+tags: [package]
 ```
 
-```Go
-func New(text string) error
-```
-
-New returns an error that formats as the given text. Each call to New returns a distinct error value even if the text is identical. 
-
-### <a id="Unwrap" href="#Unwrap">func Unwrap(err error) error</a>
+### <a id="As" href="#As">func As(err error, target interface{}) bool</a>
 
 ```
-searchKey: errors.Unwrap
+searchKey: errors.As
+tags: [method]
 ```
 
 ```Go
-func Unwrap(err error) error
+func As(err error, target interface{}) bool
 ```
 
-Unwrap returns the result of calling the Unwrap method on err, if err's type contains an Unwrap method returning error. Otherwise, Unwrap returns nil. 
+As finds the first error in err's chain that matches target, and if so, sets target to that error value and returns true. Otherwise, it returns false. 
+
+The chain consists of err itself followed by the sequence of errors obtained by repeatedly calling Unwrap. 
+
+An error matches target if the error's concrete value is assignable to the value pointed to by target, or if the error has a method As(interface{}) bool such that As(target) returns true. In the latter case, the As method is responsible for setting target. 
+
+An error type might provide an As method so it can be treated as if it were a different error type. 
+
+As panics if target is not a non-nil pointer to either a type that implements error, or to any interface type. 
 
 ### <a id="Is" href="#Is">func Is(err, target error) bool</a>
 
 ```
 searchKey: errors.Is
+tags: [method]
 ```
 
 ```Go
@@ -160,23 +170,29 @@ func (m MyError) Is(target error) bool { return target == fs.ErrExist }
 ```
 then Is(MyError{}, fs.ErrExist) returns true. See syscall.Errno.Is for an example in the standard library. 
 
-### <a id="As" href="#As">func As(err error, target interface{}) bool</a>
+### <a id="New" href="#New">func New(text string) error</a>
 
 ```
-searchKey: errors.As
+searchKey: errors.New
+tags: [method]
 ```
 
 ```Go
-func As(err error, target interface{}) bool
+func New(text string) error
 ```
 
-As finds the first error in err's chain that matches target, and if so, sets target to that error value and returns true. Otherwise, it returns false. 
+New returns an error that formats as the given text. Each call to New returns a distinct error value even if the text is identical. 
 
-The chain consists of err itself followed by the sequence of errors obtained by repeatedly calling Unwrap. 
+### <a id="Unwrap" href="#Unwrap">func Unwrap(err error) error</a>
 
-An error matches target if the error's concrete value is assignable to the value pointed to by target, or if the error has a method As(interface{}) bool such that As(target) returns true. In the latter case, the As method is responsible for setting target. 
+```
+searchKey: errors.Unwrap
+tags: [method]
+```
 
-An error type might provide an As method so it can be treated as if it were a different error type. 
+```Go
+func Unwrap(err error) error
+```
 
-As panics if target is not a non-nil pointer to either a type that implements error, or to any interface type. 
+Unwrap returns the result of calling the Unwrap method on err, if err's type contains an Unwrap method returning error. Otherwise, Unwrap returns nil. 
 

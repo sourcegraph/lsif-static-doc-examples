@@ -3,23 +3,23 @@
 ## Index
 
 * [Constants](#const)
-    * [const RefTypeUnknown](#RefTypeUnknown)
     * [const RefTypeBranch](#RefTypeBranch)
     * [const RefTypeTag](#RefTypeTag)
+    * [const RefTypeUnknown](#RefTypeUnknown)
 * [Variables](#var)
     * [var refPrefixes](#refPrefixes)
 * [Types](#type)
     * [type Client struct](#Client)
         * [func New(dbStore DBStore, observationContext *observation.Context) *Client](#New)
-        * [func (c *Client) CommitExists(ctx context.Context, repositoryID int, commit string) (_ bool, err error)](#Client.CommitExists)
-        * [func (c *Client) Head(ctx context.Context, repositoryID int) (_ string, err error)](#Client.Head)
         * [func (c *Client) CommitDate(ctx context.Context, repositoryID int, commit string) (_ time.Time, err error)](#Client.CommitDate)
+        * [func (c *Client) CommitExists(ctx context.Context, repositoryID int, commit string) (_ bool, err error)](#Client.CommitExists)
         * [func (c *Client) CommitGraph(ctx context.Context, repositoryID int, opts CommitGraphOptions) (_ *CommitGraph, err error)](#Client.CommitGraph)
-        * [func (c *Client) RefDescriptions(ctx context.Context, repositoryID int) (_ map[string]RefDescription, err error)](#Client.RefDescriptions)
-        * [func (c *Client) RawContents(ctx context.Context, repositoryID int, commit, file string) (_ []byte, err error)](#Client.RawContents)
         * [func (c *Client) DirectoryChildren(ctx context.Context, repositoryID int, commit string, dirnames []string) (_ map[string][]string, err error)](#Client.DirectoryChildren)
         * [func (c *Client) FileExists(ctx context.Context, repositoryID int, commit, file string) (_ bool, err error)](#Client.FileExists)
+        * [func (c *Client) Head(ctx context.Context, repositoryID int) (_ string, err error)](#Client.Head)
         * [func (c *Client) ListFiles(ctx context.Context, repositoryID int, commit string, pattern *regexp.Regexp) (_ []string, err error)](#Client.ListFiles)
+        * [func (c *Client) RawContents(ctx context.Context, repositoryID int, commit, file string) (_ []byte, err error)](#Client.RawContents)
+        * [func (c *Client) RefDescriptions(ctx context.Context, repositoryID int) (_ map[string]RefDescription, err error)](#Client.RefDescriptions)
         * [func (c *Client) ResolveRevision(ctx context.Context, repositoryID int, versionString string) (commitID api.CommitID, err error)](#Client.ResolveRevision)
         * [func (c *Client) execGitCommand(ctx context.Context, repositoryID int, args ...string) (string, error)](#Client.execGitCommand)
         * [func (c *Client) execResolveRevGitCommand(ctx context.Context, repositoryID int, revision string, args ...string) (string, error)](#Client.execResolveRevGitCommand)
@@ -29,38 +29,29 @@
         * [func (c *CommitGraph) Graph() map[string][]string](#CommitGraph.Graph)
         * [func (c *CommitGraph) Order() []string](#CommitGraph.Order)
     * [type CommitGraphOptions struct](#CommitGraphOptions)
+    * [type DBStore interface](#DBStore)
     * [type RefDescription struct](#RefDescription)
     * [type RefType int](#RefType)
-    * [type DBStore interface](#DBStore)
     * [type operations struct](#operations)
         * [func newOperations(observationContext *observation.Context) *operations](#newOperations)
 * [Functions](#func)
-    * [func parseRefDescriptions(lines []string) (map[string]RefDescription, error)](#parseRefDescriptions)
     * [func TestParseCommitGraph(t *testing.T)](#TestParseCommitGraph)
     * [func TestParseCommitGraphPartial(t *testing.T)](#TestParseCommitGraphPartial)
     * [func TestParseRefDescriptions(t *testing.T)](#TestParseRefDescriptions)
+    * [func parseRefDescriptions(lines []string) (map[string]RefDescription, error)](#parseRefDescriptions)
 
 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
-```
-
-### <a id="RefTypeUnknown" href="#RefTypeUnknown">const RefTypeUnknown</a>
-
-```
-searchKey: gitserver.RefTypeUnknown
-```
-
-```Go
-const RefTypeUnknown RefType = iota
+tags: [package private]
 ```
 
 ### <a id="RefTypeBranch" href="#RefTypeBranch">const RefTypeBranch</a>
 
 ```
 searchKey: gitserver.RefTypeBranch
+tags: [constant number]
 ```
 
 ```Go
@@ -71,23 +62,35 @@ const RefTypeBranch
 
 ```
 searchKey: gitserver.RefTypeTag
+tags: [constant number]
 ```
 
 ```Go
 const RefTypeTag
 ```
 
+### <a id="RefTypeUnknown" href="#RefTypeUnknown">const RefTypeUnknown</a>
+
+```
+searchKey: gitserver.RefTypeUnknown
+tags: [constant number]
+```
+
+```Go
+const RefTypeUnknown RefType = iota
+```
+
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="refPrefixes" href="#refPrefixes">var refPrefixes</a>
 
 ```
 searchKey: gitserver.refPrefixes
-tags: [private]
+tags: [variable object private]
 ```
 
 ```Go
@@ -100,13 +103,14 @@ var refPrefixes = map[string]RefType{
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Client" href="#Client">type Client struct</a>
 
 ```
 searchKey: gitserver.Client
+tags: [struct]
 ```
 
 ```Go
@@ -120,40 +124,18 @@ type Client struct {
 
 ```
 searchKey: gitserver.New
+tags: [method]
 ```
 
 ```Go
 func New(dbStore DBStore, observationContext *observation.Context) *Client
 ```
 
-#### <a id="Client.CommitExists" href="#Client.CommitExists">func (c *Client) CommitExists(ctx context.Context, repositoryID int, commit string) (_ bool, err error)</a>
-
-```
-searchKey: gitserver.Client.CommitExists
-```
-
-```Go
-func (c *Client) CommitExists(ctx context.Context, repositoryID int, commit string) (_ bool, err error)
-```
-
-Head determines the tip commit of the default branch for the given repository. 
-
-#### <a id="Client.Head" href="#Client.Head">func (c *Client) Head(ctx context.Context, repositoryID int) (_ string, err error)</a>
-
-```
-searchKey: gitserver.Client.Head
-```
-
-```Go
-func (c *Client) Head(ctx context.Context, repositoryID int) (_ string, err error)
-```
-
-Head determines the tip commit of the default branch for the given repository. 
-
 #### <a id="Client.CommitDate" href="#Client.CommitDate">func (c *Client) CommitDate(ctx context.Context, repositoryID int, commit string) (_ time.Time, err error)</a>
 
 ```
 searchKey: gitserver.Client.CommitDate
+tags: [method]
 ```
 
 ```Go
@@ -162,10 +144,24 @@ func (c *Client) CommitDate(ctx context.Context, repositoryID int, commit string
 
 CommitDate returns the time that the given commit was committed. 
 
+#### <a id="Client.CommitExists" href="#Client.CommitExists">func (c *Client) CommitExists(ctx context.Context, repositoryID int, commit string) (_ bool, err error)</a>
+
+```
+searchKey: gitserver.Client.CommitExists
+tags: [method]
+```
+
+```Go
+func (c *Client) CommitExists(ctx context.Context, repositoryID int, commit string) (_ bool, err error)
+```
+
+Head determines the tip commit of the default branch for the given repository. 
+
 #### <a id="Client.CommitGraph" href="#Client.CommitGraph">func (c *Client) CommitGraph(ctx context.Context, repositoryID int, opts CommitGraphOptions) (_ *CommitGraph, err error)</a>
 
 ```
 searchKey: gitserver.Client.CommitGraph
+tags: [method]
 ```
 
 ```Go
@@ -174,34 +170,11 @@ func (c *Client) CommitGraph(ctx context.Context, repositoryID int, opts CommitG
 
 CommitGraph returns the commit graph for the given repository as a mapping from a commit to its parents. If a commit is supplied, the returned graph will be rooted at the given commit. If a non-zero limit is supplied, at most that many commits will be returned. 
 
-#### <a id="Client.RefDescriptions" href="#Client.RefDescriptions">func (c *Client) RefDescriptions(ctx context.Context, repositoryID int) (_ map[string]RefDescription, err error)</a>
-
-```
-searchKey: gitserver.Client.RefDescriptions
-```
-
-```Go
-func (c *Client) RefDescriptions(ctx context.Context, repositoryID int) (_ map[string]RefDescription, err error)
-```
-
-RefDescriptions returns a map from commits to descriptions of the tip of each branch and tag of the given repository. 
-
-#### <a id="Client.RawContents" href="#Client.RawContents">func (c *Client) RawContents(ctx context.Context, repositoryID int, commit, file string) (_ []byte, err error)</a>
-
-```
-searchKey: gitserver.Client.RawContents
-```
-
-```Go
-func (c *Client) RawContents(ctx context.Context, repositoryID int, commit, file string) (_ []byte, err error)
-```
-
-RawContents returns the contents of a file in a particular commit of a repository. 
-
 #### <a id="Client.DirectoryChildren" href="#Client.DirectoryChildren">func (c *Client) DirectoryChildren(ctx context.Context, repositoryID int, commit string, dirnames []string) (_ map[string][]string, err error)</a>
 
 ```
 searchKey: gitserver.Client.DirectoryChildren
+tags: [method]
 ```
 
 ```Go
@@ -214,6 +187,7 @@ DirectoryChildren determines all children known to git for the given directory n
 
 ```
 searchKey: gitserver.Client.FileExists
+tags: [method]
 ```
 
 ```Go
@@ -222,10 +196,24 @@ func (c *Client) FileExists(ctx context.Context, repositoryID int, commit, file 
 
 FileExists determines whether a file exists in a particular commit of a repository. 
 
+#### <a id="Client.Head" href="#Client.Head">func (c *Client) Head(ctx context.Context, repositoryID int) (_ string, err error)</a>
+
+```
+searchKey: gitserver.Client.Head
+tags: [method]
+```
+
+```Go
+func (c *Client) Head(ctx context.Context, repositoryID int) (_ string, err error)
+```
+
+Head determines the tip commit of the default branch for the given repository. 
+
 #### <a id="Client.ListFiles" href="#Client.ListFiles">func (c *Client) ListFiles(ctx context.Context, repositoryID int, commit string, pattern *regexp.Regexp) (_ []string, err error)</a>
 
 ```
 searchKey: gitserver.Client.ListFiles
+tags: [method]
 ```
 
 ```Go
@@ -234,10 +222,37 @@ func (c *Client) ListFiles(ctx context.Context, repositoryID int, commit string,
 
 ListFiles returns a list of root-relative file paths matching the given pattern in a particular commit of a repository. 
 
+#### <a id="Client.RawContents" href="#Client.RawContents">func (c *Client) RawContents(ctx context.Context, repositoryID int, commit, file string) (_ []byte, err error)</a>
+
+```
+searchKey: gitserver.Client.RawContents
+tags: [method]
+```
+
+```Go
+func (c *Client) RawContents(ctx context.Context, repositoryID int, commit, file string) (_ []byte, err error)
+```
+
+RawContents returns the contents of a file in a particular commit of a repository. 
+
+#### <a id="Client.RefDescriptions" href="#Client.RefDescriptions">func (c *Client) RefDescriptions(ctx context.Context, repositoryID int) (_ map[string]RefDescription, err error)</a>
+
+```
+searchKey: gitserver.Client.RefDescriptions
+tags: [method]
+```
+
+```Go
+func (c *Client) RefDescriptions(ctx context.Context, repositoryID int) (_ map[string]RefDescription, err error)
+```
+
+RefDescriptions returns a map from commits to descriptions of the tip of each branch and tag of the given repository. 
+
 #### <a id="Client.ResolveRevision" href="#Client.ResolveRevision">func (c *Client) ResolveRevision(ctx context.Context, repositoryID int, versionString string) (commitID api.CommitID, err error)</a>
 
 ```
 searchKey: gitserver.Client.ResolveRevision
+tags: [method]
 ```
 
 ```Go
@@ -250,7 +265,7 @@ ResolveRevision returns the absolute commit for a commit-ish spec.
 
 ```
 searchKey: gitserver.Client.execGitCommand
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -263,7 +278,7 @@ execGitCommand executes a git command for the given repository by identifier.
 
 ```
 searchKey: gitserver.Client.execResolveRevGitCommand
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -276,7 +291,7 @@ execResolveRevGitCommand executes a git command for the given repository by iden
 
 ```
 searchKey: gitserver.Client.repositoryIDToRepo
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -289,6 +304,7 @@ repositoryIDToRepo creates a api.RepoName from a repository identifier.
 
 ```
 searchKey: gitserver.CommitGraph
+tags: [struct]
 ```
 
 ```Go
@@ -302,6 +318,7 @@ type CommitGraph struct {
 
 ```
 searchKey: gitserver.ParseCommitGraph
+tags: [method]
 ```
 
 ```Go
@@ -314,6 +331,7 @@ ParseCommitGraph converts the output of git log into a map from commits to paren
 
 ```
 searchKey: gitserver.CommitGraph.Graph
+tags: [function]
 ```
 
 ```Go
@@ -324,6 +342,7 @@ func (c *CommitGraph) Graph() map[string][]string
 
 ```
 searchKey: gitserver.CommitGraph.Order
+tags: [function]
 ```
 
 ```Go
@@ -334,6 +353,7 @@ func (c *CommitGraph) Order() []string
 
 ```
 searchKey: gitserver.CommitGraphOptions
+tags: [struct]
 ```
 
 ```Go
@@ -345,10 +365,24 @@ type CommitGraphOptions struct {
 }
 ```
 
+### <a id="DBStore" href="#DBStore">type DBStore interface</a>
+
+```
+searchKey: gitserver.DBStore
+tags: [interface]
+```
+
+```Go
+type DBStore interface {
+	RepoName(ctx context.Context, repositoryID int) (string, error)
+}
+```
+
 ### <a id="RefDescription" href="#RefDescription">type RefDescription struct</a>
 
 ```
 searchKey: gitserver.RefDescription
+tags: [struct]
 ```
 
 ```Go
@@ -366,29 +400,18 @@ RefDescription describes a commit at the head of a branch or tag.
 
 ```
 searchKey: gitserver.RefType
+tags: [number]
 ```
 
 ```Go
 type RefType int
 ```
 
-### <a id="DBStore" href="#DBStore">type DBStore interface</a>
-
-```
-searchKey: gitserver.DBStore
-```
-
-```Go
-type DBStore interface {
-	RepoName(ctx context.Context, repositoryID int) (string, error)
-}
-```
-
 ### <a id="operations" href="#operations">type operations struct</a>
 
 ```
 searchKey: gitserver.operations
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -410,7 +433,7 @@ type operations struct {
 
 ```
 searchKey: gitserver.newOperations
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -420,29 +443,14 @@ func newOperations(observationContext *observation.Context) *operations
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
-
-### <a id="parseRefDescriptions" href="#parseRefDescriptions">func parseRefDescriptions(lines []string) (map[string]RefDescription, error)</a>
-
-```
-searchKey: gitserver.parseRefDescriptions
-tags: [private]
-```
-
-```Go
-func parseRefDescriptions(lines []string) (map[string]RefDescription, error)
-```
-
-parseRefDescriptions converts the output of the for-each-ref command in the RefDescriptions method to a map from commits to RefDescription objects. Each line should conform to the format string `%(objectname):%(refname):%(HEAD):%(creatordate)`, where 
-
-- %(objectname) is the 40-character revhash - %(refname) is the name of the tag or branch (prefixed with refs/heads/ or ref/tags/) - %(HEAD) is `*` if the branch is the default branch (and whitesace otherwise) - %(creatordate) is the ISO-formatted date the object was created 
 
 ### <a id="TestParseCommitGraph" href="#TestParseCommitGraph">func TestParseCommitGraph(t *testing.T)</a>
 
 ```
 searchKey: gitserver.TestParseCommitGraph
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -453,7 +461,7 @@ func TestParseCommitGraph(t *testing.T)
 
 ```
 searchKey: gitserver.TestParseCommitGraphPartial
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -464,10 +472,25 @@ func TestParseCommitGraphPartial(t *testing.T)
 
 ```
 searchKey: gitserver.TestParseRefDescriptions
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestParseRefDescriptions(t *testing.T)
 ```
+
+### <a id="parseRefDescriptions" href="#parseRefDescriptions">func parseRefDescriptions(lines []string) (map[string]RefDescription, error)</a>
+
+```
+searchKey: gitserver.parseRefDescriptions
+tags: [method private]
+```
+
+```Go
+func parseRefDescriptions(lines []string) (map[string]RefDescription, error)
+```
+
+parseRefDescriptions converts the output of the for-each-ref command in the RefDescriptions method to a map from commits to RefDescription objects. Each line should conform to the format string `%(objectname):%(refname):%(HEAD):%(creatordate)`, where 
+
+- %(objectname) is the 40-character revhash - %(refname) is the name of the tag or branch (prefixed with refs/heads/ or ref/tags/) - %(HEAD) is `*` if the branch is the default branch (and whitesace otherwise) - %(creatordate) is the ISO-formatted date the object was created 
 

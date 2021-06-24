@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/cmd/worker/internal/codeintel",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/cmd/worker/internal/codeintel#initCodeIntelDatabaseMemo",
-              "documentation": {
-                "identifier": "initCodeIntelDatabaseMemo",
-                "newPage": false,
-                "searchKey": "codeintel.initCodeIntelDatabaseMemo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var initCodeIntelDatabaseMemo"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar initCodeIntelDatabaseMemo = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/worker/internal/codeintel#commitGraphConfigInst",
               "documentation": {
                 "identifier": "commitGraphConfigInst",
                 "newPage": false,
                 "searchKey": "codeintel.commitGraphConfigInst",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -83,12 +65,62 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#indexingConfigInst",
+              "documentation": {
+                "identifier": "indexingConfigInst",
+                "newPage": false,
+                "searchKey": "codeintel.indexingConfigInst",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var indexingConfigInst"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar indexingConfigInst = &indexingConfig{}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#initCodeIntelDatabaseMemo",
+              "documentation": {
+                "identifier": "initCodeIntelDatabaseMemo",
+                "newPage": false,
+                "searchKey": "codeintel.initCodeIntelDatabaseMemo",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var initCodeIntelDatabaseMemo"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar initCodeIntelDatabaseMemo = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/worker/internal/codeintel#initDBStore",
               "documentation": {
                 "identifier": "initDBStore",
                 "newPage": false,
                 "searchKey": "codeintel.initDBStore",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -111,6 +143,8 @@
                 "newPage": false,
                 "searchKey": "codeintel.initGitserverClient",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -127,22 +161,24 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/worker/internal/codeintel#indexingConfigInst",
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#initLSFIStore",
               "documentation": {
-                "identifier": "indexingConfigInst",
+                "identifier": "initLSFIStore",
                 "newPage": false,
-                "searchKey": "codeintel.indexingConfigInst",
+                "searchKey": "codeintel.initLSFIStore",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var indexingConfigInst"
+                "value": "var initLSFIStore"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar indexingConfigInst = &indexingConfig{}\n```\n\n"
+                "value": "```Go\nvar initLSFIStore = ...\n```\n\n"
               },
               "children": null
             }
@@ -155,6 +191,8 @@
                 "newPage": false,
                 "searchKey": "codeintel.janitorConfigInst",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -165,28 +203,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar janitorConfigInst = &janitorConfig{}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/worker/internal/codeintel#initLSFIStore",
-              "documentation": {
-                "identifier": "initLSFIStore",
-                "newPage": false,
-                "searchKey": "codeintel.initLSFIStore",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var initLSFIStore"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar initLSFIStore = ...\n```\n\n"
               },
               "children": null
             }
@@ -202,6 +218,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -222,6 +239,7 @@
                 "newPage": false,
                 "searchKey": "codeintel.commitGraphConfig",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -242,6 +260,7 @@
                       "newPage": false,
                       "searchKey": "codeintel.commitGraphConfig.Load",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -267,6 +286,7 @@
                 "newPage": false,
                 "searchKey": "codeintel.commitGraphJob",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -287,6 +307,7 @@
                       "newPage": false,
                       "searchKey": "codeintel.commitGraphJob.Config",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -309,6 +330,7 @@
                       "newPage": false,
                       "searchKey": "codeintel.commitGraphJob.Routines",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -334,6 +356,7 @@
                 "newPage": false,
                 "searchKey": "codeintel.indexingConfig",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -354,6 +377,7 @@
                       "newPage": false,
                       "searchKey": "codeintel.indexingConfig.Load",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -379,6 +403,7 @@
                 "newPage": false,
                 "searchKey": "codeintel.indexingJob",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -399,6 +424,7 @@
                       "newPage": false,
                       "searchKey": "codeintel.indexingJob.Config",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -421,6 +447,7 @@
                       "newPage": false,
                       "searchKey": "codeintel.indexingJob.Routines",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -446,6 +473,7 @@
                 "newPage": false,
                 "searchKey": "codeintel.janitorConfig",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -466,6 +494,7 @@
                       "newPage": false,
                       "searchKey": "codeintel.janitorConfig.Load",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -491,6 +520,7 @@
                 "newPage": false,
                 "searchKey": "codeintel.janitorJob",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -511,6 +541,7 @@
                       "newPage": false,
                       "searchKey": "codeintel.janitorJob.Config",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -533,6 +564,7 @@
                       "newPage": false,
                       "searchKey": "codeintel.janitorJob.Routines",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -561,6 +593,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -580,7 +613,9 @@
                 "identifier": "InitCodeIntelDatabase",
                 "newPage": false,
                 "searchKey": "codeintel.InitCodeIntelDatabase",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -595,32 +630,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/worker/internal/codeintel#NewCommitGraphJob",
-              "documentation": {
-                "identifier": "NewCommitGraphJob",
-                "newPage": false,
-                "searchKey": "codeintel.NewCommitGraphJob",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func NewCommitGraphJob() shared.Job"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc NewCommitGraphJob() shared.Job\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/worker/internal/codeintel#InitDBStore",
               "documentation": {
                 "identifier": "InitDBStore",
                 "newPage": false,
                 "searchKey": "codeintel.InitDBStore",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -640,7 +657,9 @@
                 "identifier": "InitGitserverClient",
                 "newPage": false,
                 "searchKey": "codeintel.InitGitserverClient",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -655,12 +674,58 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#InitLSIFStore",
+              "documentation": {
+                "identifier": "InitLSIFStore",
+                "newPage": false,
+                "searchKey": "codeintel.InitLSIFStore",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func InitLSIFStore() (*lsifstore.Store, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc InitLSIFStore() (*lsifstore.Store, error)\n```\n\nInitLSIFStore initializes and returns an LSIF store instance. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#NewCommitGraphJob",
+              "documentation": {
+                "identifier": "NewCommitGraphJob",
+                "newPage": false,
+                "searchKey": "codeintel.NewCommitGraphJob",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewCommitGraphJob() shared.Job"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewCommitGraphJob() shared.Job\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/worker/internal/codeintel#NewIndexingJob",
               "documentation": {
                 "identifier": "NewIndexingJob",
                 "newPage": false,
                 "searchKey": "codeintel.NewIndexingJob",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -680,7 +745,9 @@
                 "identifier": "NewJanitorJob",
                 "newPage": false,
                 "searchKey": "codeintel.NewJanitorJob",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -689,26 +756,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc NewJanitorJob() shared.Job\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/worker/internal/codeintel#InitLSIFStore",
-              "documentation": {
-                "identifier": "InitLSIFStore",
-                "newPage": false,
-                "searchKey": "codeintel.InitLSIFStore",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func InitLSIFStore() (*lsifstore.Store, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc InitLSIFStore() (*lsifstore.Store, error)\n```\n\nInitLSIFStore initializes and returns an LSIF store instance. \n\n"
               },
               "children": null
             }

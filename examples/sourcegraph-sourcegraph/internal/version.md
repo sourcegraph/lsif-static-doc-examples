@@ -8,33 +8,33 @@
     * [const devVersion](#devVersion)
 * [Variables](#var)
     * [var devTimestamp](#devTimestamp)
-    * [var version](#version)
     * [var timestamp](#timestamp)
+    * [var version](#version)
 * [Functions](#func)
-    * [func init()](#init.version.go)
-    * [func Version() string](#Version)
+    * [func HowLongOutOfDate(now time.Time) (int, error)](#HowLongOutOfDate)
     * [func IsDev(version string) bool](#IsDev)
     * [func Mock(mockVersion string)](#Mock)
     * [func MockTimestamp(mockTimestamp string)](#MockTimestamp)
-    * [func HowLongOutOfDate(now time.Time) (int, error)](#HowLongOutOfDate)
-    * [func monthsFromDays(days float64) int](#monthsFromDays)
-    * [func TestVersion(t *testing.T)](#TestVersion)
-    * [func TestIsDev(t *testing.T)](#TestIsDev)
-    * [func Test_monthsFromDays(t *testing.T)](#Test_monthsFromDays)
     * [func TestHowLongOutOfDate(t *testing.T)](#TestHowLongOutOfDate)
+    * [func TestIsDev(t *testing.T)](#TestIsDev)
+    * [func TestVersion(t *testing.T)](#TestVersion)
+    * [func Test_monthsFromDays(t *testing.T)](#Test_monthsFromDays)
+    * [func Version() string](#Version)
+    * [func init()](#init.version.go)
+    * [func monthsFromDays(days float64) int](#monthsFromDays)
 
 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="devVersion" href="#devVersion">const devVersion</a>
 
 ```
 searchKey: version.devVersion
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -45,14 +45,14 @@ const devVersion = "0.0.0+dev" // version string for unreleased development buil
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="devTimestamp" href="#devTimestamp">var devTimestamp</a>
 
 ```
 searchKey: version.devTimestamp
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
@@ -60,11 +60,24 @@ var devTimestamp // build timestamp for unreleased development builds
  = ...
 ```
 
+### <a id="timestamp" href="#timestamp">var timestamp</a>
+
+```
+searchKey: version.timestamp
+tags: [variable string private]
+```
+
+```Go
+var timestamp = devTimestamp
+```
+
+timestamp is the build timestamp configured at build time via ldflags like this: -ldflags "-X github.com/sourcegraph/sourcegraph/internal/version.timestamp=$UNIX_SECONDS" 
+
 ### <a id="version" href="#version">var version</a>
 
 ```
 searchKey: version.version
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
@@ -75,52 +88,30 @@ version is configured at build time via ldflags like this: -ldflags "-X github.c
 
 The version may not be semver-compatible, e.g. `insiders` or `65769_2020-06-05_9bd91a3`. 
 
-### <a id="timestamp" href="#timestamp">var timestamp</a>
-
-```
-searchKey: version.timestamp
-tags: [private]
-```
-
-```Go
-var timestamp = devTimestamp
-```
-
-timestamp is the build timestamp configured at build time via ldflags like this: -ldflags "-X github.com/sourcegraph/sourcegraph/internal/version.timestamp=$UNIX_SECONDS" 
-
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
-### <a id="init.version.go" href="#init.version.go">func init()</a>
+### <a id="HowLongOutOfDate" href="#HowLongOutOfDate">func HowLongOutOfDate(now time.Time) (int, error)</a>
 
 ```
-searchKey: version.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
-### <a id="Version" href="#Version">func Version() string</a>
-
-```
-searchKey: version.Version
+searchKey: version.HowLongOutOfDate
+tags: [method]
 ```
 
 ```Go
-func Version() string
+func HowLongOutOfDate(now time.Time) (int, error)
 ```
 
-Version returns the version string configured at build time. 
+HowLongOutOfDate returns a time in months since this build of Sourcegraph was created. It is based on a constant baked into the Go binary at build time. 
 
 ### <a id="IsDev" href="#IsDev">func IsDev(version string) bool</a>
 
 ```
 searchKey: version.IsDev
+tags: [method]
 ```
 
 ```Go
@@ -133,6 +124,7 @@ IsDev reports whether the version string is an unreleased development build.
 
 ```
 searchKey: version.Mock
+tags: [method]
 ```
 
 ```Go
@@ -145,6 +137,7 @@ Mock is used by tests to mock the result of Version and IsDev.
 
 ```
 searchKey: version.MockTimestamp
+tags: [method]
 ```
 
 ```Go
@@ -153,23 +146,79 @@ func MockTimestamp(mockTimestamp string)
 
 MockTimeStamp is used by tests to mock the current build timestamp 
 
-### <a id="HowLongOutOfDate" href="#HowLongOutOfDate">func HowLongOutOfDate(now time.Time) (int, error)</a>
+### <a id="TestHowLongOutOfDate" href="#TestHowLongOutOfDate">func TestHowLongOutOfDate(t *testing.T)</a>
 
 ```
-searchKey: version.HowLongOutOfDate
+searchKey: version.TestHowLongOutOfDate
+tags: [method private test]
 ```
 
 ```Go
-func HowLongOutOfDate(now time.Time) (int, error)
+func TestHowLongOutOfDate(t *testing.T)
 ```
 
-HowLongOutOfDate returns a time in months since this build of Sourcegraph was created. It is based on a constant baked into the Go binary at build time. 
+### <a id="TestIsDev" href="#TestIsDev">func TestIsDev(t *testing.T)</a>
+
+```
+searchKey: version.TestIsDev
+tags: [method private test]
+```
+
+```Go
+func TestIsDev(t *testing.T)
+```
+
+### <a id="TestVersion" href="#TestVersion">func TestVersion(t *testing.T)</a>
+
+```
+searchKey: version.TestVersion
+tags: [method private test]
+```
+
+```Go
+func TestVersion(t *testing.T)
+```
+
+### <a id="Test_monthsFromDays" href="#Test_monthsFromDays">func Test_monthsFromDays(t *testing.T)</a>
+
+```
+searchKey: version.Test_monthsFromDays
+tags: [method private test]
+```
+
+```Go
+func Test_monthsFromDays(t *testing.T)
+```
+
+### <a id="Version" href="#Version">func Version() string</a>
+
+```
+searchKey: version.Version
+tags: [function]
+```
+
+```Go
+func Version() string
+```
+
+Version returns the version string configured at build time. 
+
+### <a id="init.version.go" href="#init.version.go">func init()</a>
+
+```
+searchKey: version.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
 
 ### <a id="monthsFromDays" href="#monthsFromDays">func monthsFromDays(days float64) int</a>
 
 ```
 searchKey: version.monthsFromDays
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -177,48 +226,4 @@ func monthsFromDays(days float64) int
 ```
 
 monthsFromDays roughly determines the number of months given days 
-
-### <a id="TestVersion" href="#TestVersion">func TestVersion(t *testing.T)</a>
-
-```
-searchKey: version.TestVersion
-tags: [private]
-```
-
-```Go
-func TestVersion(t *testing.T)
-```
-
-### <a id="TestIsDev" href="#TestIsDev">func TestIsDev(t *testing.T)</a>
-
-```
-searchKey: version.TestIsDev
-tags: [private]
-```
-
-```Go
-func TestIsDev(t *testing.T)
-```
-
-### <a id="Test_monthsFromDays" href="#Test_monthsFromDays">func Test_monthsFromDays(t *testing.T)</a>
-
-```
-searchKey: version.Test_monthsFromDays
-tags: [private]
-```
-
-```Go
-func Test_monthsFromDays(t *testing.T)
-```
-
-### <a id="TestHowLongOutOfDate" href="#TestHowLongOutOfDate">func TestHowLongOutOfDate(t *testing.T)</a>
-
-```
-searchKey: version.TestHowLongOutOfDate
-tags: [private]
-```
-
-```Go
-func TestHowLongOutOfDate(t *testing.T)
-```
 

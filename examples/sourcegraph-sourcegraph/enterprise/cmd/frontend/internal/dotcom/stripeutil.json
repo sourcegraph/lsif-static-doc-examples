@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/dotcom/stripeutil",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/dotcom/stripeutil#stripeSecretKey",
-              "documentation": {
-                "identifier": "stripeSecretKey",
-                "newPage": false,
-                "searchKey": "stripeutil.stripeSecretKey",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var stripeSecretKey"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar stripeSecretKey = env.Get(\"STRIPE_SECRET_KEY\", \"\", \"billing: Stripe API secret key\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/dotcom/stripeutil#stripePublishableKey",
               "documentation": {
                 "identifier": "stripePublishableKey",
                 "newPage": false,
                 "searchKey": "stripeutil.stripePublishableKey",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -77,6 +59,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar stripePublishableKey = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/stripeutil#stripeSecretKey",
+              "documentation": {
+                "identifier": "stripeSecretKey",
+                "newPage": false,
+                "searchKey": "stripeutil.stripeSecretKey",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var stripeSecretKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar stripeSecretKey = env.Get(\"STRIPE_SECRET_KEY\", \"\", \"billing: Stripe API secret key\")\n```\n\n"
               },
               "children": null
             }
@@ -92,6 +98,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -106,76 +113,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/dotcom/stripeutil#ValidateAndPublishConfig",
-              "documentation": {
-                "identifier": "ValidateAndPublishConfig",
-                "newPage": false,
-                "searchKey": "stripeutil.ValidateAndPublishConfig",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ValidateAndPublishConfig() bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ValidateAndPublishConfig() bool\n```\n\nValidateAndPublishConfig check for and validates config for Stripe and exposes the publishable key through the jscontext. It exists the process, if the variables don't pass validation. It returns true if Stripe was configured. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/dotcom/stripeutil#isTest",
-              "documentation": {
-                "identifier": "isTest",
-                "newPage": false,
-                "searchKey": "stripeutil.isTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func isTest() bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc isTest() bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/dotcom/stripeutil#baseURL",
-              "documentation": {
-                "identifier": "baseURL",
-                "newPage": false,
-                "searchKey": "stripeutil.baseURL",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func baseURL() string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc baseURL() string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/dotcom/stripeutil#CustomerURL",
               "documentation": {
                 "identifier": "CustomerURL",
                 "newPage": false,
                 "searchKey": "stripeutil.CustomerURL",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -195,7 +140,9 @@
                 "identifier": "SubscriptionURL",
                 "newPage": false,
                 "searchKey": "stripeutil.SubscriptionURL",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -204,6 +151,74 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc SubscriptionURL(id string) string\n```\n\nSubscriptionURL returns the URL to the subscription with the given ID on the billing system. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/stripeutil#ValidateAndPublishConfig",
+              "documentation": {
+                "identifier": "ValidateAndPublishConfig",
+                "newPage": false,
+                "searchKey": "stripeutil.ValidateAndPublishConfig",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ValidateAndPublishConfig() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ValidateAndPublishConfig() bool\n```\n\nValidateAndPublishConfig check for and validates config for Stripe and exposes the publishable key through the jscontext. It exists the process, if the variables don't pass validation. It returns true if Stripe was configured. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/stripeutil#baseURL",
+              "documentation": {
+                "identifier": "baseURL",
+                "newPage": false,
+                "searchKey": "stripeutil.baseURL",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func baseURL() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc baseURL() string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/stripeutil#isTest",
+              "documentation": {
+                "identifier": "isTest",
+                "newPage": false,
+                "searchKey": "stripeutil.isTest",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isTest() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isTest() bool\n```\n\n"
               },
               "children": null
             }

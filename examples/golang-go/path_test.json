@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "path_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,122 +41,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/path_test#matchTests",
-              "documentation": {
-                "identifier": "matchTests",
-                "newPage": false,
-                "searchKey": "path_test.matchTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var matchTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar matchTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path_test#cleantests",
-              "documentation": {
-                "identifier": "cleantests",
-                "newPage": false,
-                "searchKey": "path_test.cleantests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var cleantests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar cleantests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path_test#splittests",
-              "documentation": {
-                "identifier": "splittests",
-                "newPage": false,
-                "searchKey": "path_test.splittests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var splittests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar splittests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path_test#jointests",
-              "documentation": {
-                "identifier": "jointests",
-                "newPage": false,
-                "searchKey": "path_test.jointests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var jointests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar jointests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path_test#exttests",
-              "documentation": {
-                "identifier": "exttests",
-                "newPage": false,
-                "searchKey": "path_test.exttests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var exttests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar exttests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/path_test#basetests",
               "documentation": {
                 "identifier": "basetests",
                 "newPage": false,
                 "searchKey": "path_test.basetests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -171,12 +66,40 @@
           },
           {
             "node": {
+              "pathID": "/path_test#cleantests",
+              "documentation": {
+                "identifier": "cleantests",
+                "newPage": false,
+                "searchKey": "path_test.cleantests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var cleantests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar cleantests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/path_test#dirtests",
               "documentation": {
                 "identifier": "dirtests",
                 "newPage": false,
                 "searchKey": "path_test.dirtests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -193,12 +116,40 @@
           },
           {
             "node": {
+              "pathID": "/path_test#exttests",
+              "documentation": {
+                "identifier": "exttests",
+                "newPage": false,
+                "searchKey": "path_test.exttests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var exttests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar exttests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/path_test#isAbsTests",
               "documentation": {
                 "identifier": "isAbsTests",
                 "newPage": false,
                 "searchKey": "path_test.isAbsTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -209,6 +160,81 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar isAbsTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path_test#jointests",
+              "documentation": {
+                "identifier": "jointests",
+                "newPage": false,
+                "searchKey": "path_test.jointests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var jointests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar jointests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path_test#matchTests",
+              "documentation": {
+                "identifier": "matchTests",
+                "newPage": false,
+                "searchKey": "path_test.matchTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var matchTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar matchTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path_test#splittests",
+              "documentation": {
+                "identifier": "splittests",
+                "newPage": false,
+                "searchKey": "path_test.splittests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var splittests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar splittests = ...\n```\n\n"
               },
               "children": null
             }
@@ -224,6 +250,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -238,100 +265,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/path_test#MatchTest",
-              "documentation": {
-                "identifier": "MatchTest",
-                "newPage": false,
-                "searchKey": "path_test.MatchTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type MatchTest struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype MatchTest struct {\n\tpattern, s string\n\tmatch      bool\n\terr        error\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path_test#PathTest",
-              "documentation": {
-                "identifier": "PathTest",
-                "newPage": false,
-                "searchKey": "path_test.PathTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type PathTest struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype PathTest struct {\n\tpath, result string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path_test#SplitTest",
-              "documentation": {
-                "identifier": "SplitTest",
-                "newPage": false,
-                "searchKey": "path_test.SplitTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type SplitTest struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype SplitTest struct {\n\tpath, dir, file string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path_test#JoinTest",
-              "documentation": {
-                "identifier": "JoinTest",
-                "newPage": false,
-                "searchKey": "path_test.JoinTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type JoinTest struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype JoinTest struct {\n\telem []string\n\tpath string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/path_test#ExtTest",
               "documentation": {
                 "identifier": "ExtTest",
                 "newPage": false,
                 "searchKey": "path_test.ExtTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -354,6 +294,7 @@
                 "newPage": false,
                 "searchKey": "path_test.IsAbsTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -364,6 +305,98 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\ntype IsAbsTest struct {\n\tpath  string\n\tisAbs bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path_test#JoinTest",
+              "documentation": {
+                "identifier": "JoinTest",
+                "newPage": false,
+                "searchKey": "path_test.JoinTest",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type JoinTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype JoinTest struct {\n\telem []string\n\tpath string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path_test#MatchTest",
+              "documentation": {
+                "identifier": "MatchTest",
+                "newPage": false,
+                "searchKey": "path_test.MatchTest",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MatchTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MatchTest struct {\n\tpattern, s string\n\tmatch      bool\n\terr        error\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path_test#PathTest",
+              "documentation": {
+                "identifier": "PathTest",
+                "newPage": false,
+                "searchKey": "path_test.PathTest",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PathTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PathTest struct {\n\tpath, result string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path_test#SplitTest",
+              "documentation": {
+                "identifier": "SplitTest",
+                "newPage": false,
+                "searchKey": "path_test.SplitTest",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SplitTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SplitTest struct {\n\tpath, dir, file string\n}\n```\n\n"
               },
               "children": null
             }
@@ -379,6 +412,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -399,6 +433,7 @@
                 "newPage": false,
                 "searchKey": "path_test.ExampleBase",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -421,6 +456,7 @@
                 "newPage": false,
                 "searchKey": "path_test.ExampleClean",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -443,6 +479,7 @@
                 "newPage": false,
                 "searchKey": "path_test.ExampleDir",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -465,6 +502,7 @@
                 "newPage": false,
                 "searchKey": "path_test.ExampleExt",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -487,6 +525,7 @@
                 "newPage": false,
                 "searchKey": "path_test.ExampleIsAbs",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -509,6 +548,7 @@
                 "newPage": false,
                 "searchKey": "path_test.ExampleJoin",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -531,6 +571,7 @@
                 "newPage": false,
                 "searchKey": "path_test.ExampleMatch",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -553,6 +594,7 @@
                 "newPage": false,
                 "searchKey": "path_test.ExampleSplit",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -569,22 +611,24 @@
           },
           {
             "node": {
-              "pathID": "/path_test#TestMatch",
+              "pathID": "/path_test#TestBase",
               "documentation": {
-                "identifier": "TestMatch",
+                "identifier": "TestBase",
                 "newPage": false,
-                "searchKey": "path_test.TestMatch",
+                "searchKey": "path_test.TestBase",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestMatch(t *testing.T)"
+                "value": "func TestBase(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestMatch(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestBase(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -597,7 +641,9 @@
                 "newPage": false,
                 "searchKey": "path_test.TestClean",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -619,7 +665,9 @@
                 "newPage": false,
                 "searchKey": "path_test.TestCleanMallocs",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -635,101 +683,15 @@
           },
           {
             "node": {
-              "pathID": "/path_test#TestSplit",
-              "documentation": {
-                "identifier": "TestSplit",
-                "newPage": false,
-                "searchKey": "path_test.TestSplit",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSplit(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSplit(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path_test#TestJoin",
-              "documentation": {
-                "identifier": "TestJoin",
-                "newPage": false,
-                "searchKey": "path_test.TestJoin",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestJoin(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestJoin(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path_test#TestExt",
-              "documentation": {
-                "identifier": "TestExt",
-                "newPage": false,
-                "searchKey": "path_test.TestExt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestExt(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestExt(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/path_test#TestBase",
-              "documentation": {
-                "identifier": "TestBase",
-                "newPage": false,
-                "searchKey": "path_test.TestBase",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestBase(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestBase(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/path_test#TestDir",
               "documentation": {
                 "identifier": "TestDir",
                 "newPage": false,
                 "searchKey": "path_test.TestDir",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -745,13 +707,39 @@
           },
           {
             "node": {
+              "pathID": "/path_test#TestExt",
+              "documentation": {
+                "identifier": "TestExt",
+                "newPage": false,
+                "searchKey": "path_test.TestExt",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExt(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExt(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/path_test#TestIsAbs",
               "documentation": {
                 "identifier": "TestIsAbs",
                 "newPage": false,
                 "searchKey": "path_test.TestIsAbs",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -761,6 +749,78 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc TestIsAbs(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path_test#TestJoin",
+              "documentation": {
+                "identifier": "TestJoin",
+                "newPage": false,
+                "searchKey": "path_test.TestJoin",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestJoin(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestJoin(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path_test#TestMatch",
+              "documentation": {
+                "identifier": "TestMatch",
+                "newPage": false,
+                "searchKey": "path_test.TestMatch",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMatch(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMatch(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/path_test#TestSplit",
+              "documentation": {
+                "identifier": "TestSplit",
+                "newPage": false,
+                "searchKey": "path_test.TestSplit",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSplit(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSplit(t *testing.T)\n```\n\n"
               },
               "children": null
             }

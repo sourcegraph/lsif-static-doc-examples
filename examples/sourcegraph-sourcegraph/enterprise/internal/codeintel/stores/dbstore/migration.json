@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/internal/codeintel/stores/dbstore/migration",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,12 +41,85 @@
         "children": [
           {
             "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#CommittedAtMigrationID",
+              "documentation": {
+                "identifier": "CommittedAtMigrationID",
+                "newPage": false,
+                "searchKey": "migration.CommittedAtMigrationID",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const CommittedAtMigrationID"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst CommittedAtMigrationID = 8\n```\n\nCommittedAtMigrationID is the primary key of the migration record handled by an instance of committedAtMigrator. This is associated with the out-of-band migration record inserted in the file migrations/frontend/1528395817_lsif_uploads_committed_at.up.sql. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#committedAtDownQuery",
+              "documentation": {
+                "identifier": "committedAtDownQuery",
+                "newPage": false,
+                "searchKey": "migration.committedAtDownQuery",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const committedAtDownQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst committedAtDownQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#committedAtProcesshandleCommitQuery",
+              "documentation": {
+                "identifier": "committedAtProcesshandleCommitQuery",
+                "newPage": false,
+                "searchKey": "migration.committedAtProcesshandleCommitQuery",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const committedAtProcesshandleCommitQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst committedAtProcesshandleCommitQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#committedAtProgressQuery",
               "documentation": {
                 "identifier": "committedAtProgressQuery",
                 "newPage": false,
                 "searchKey": "migration.committedAtProgressQuery",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -67,6 +142,8 @@
                 "newPage": false,
                 "searchKey": "migration.committedAtSelectUpQuery",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -77,70 +154,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst committedAtSelectUpQuery = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#committedAtProcesshandleCommitQuery",
-              "documentation": {
-                "identifier": "committedAtProcesshandleCommitQuery",
-                "newPage": false,
-                "searchKey": "migration.committedAtProcesshandleCommitQuery",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const committedAtProcesshandleCommitQuery"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst committedAtProcesshandleCommitQuery = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#committedAtDownQuery",
-              "documentation": {
-                "identifier": "committedAtDownQuery",
-                "newPage": false,
-                "searchKey": "migration.committedAtDownQuery",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const committedAtDownQuery"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst committedAtDownQuery = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#CommittedAtMigrationID",
-              "documentation": {
-                "identifier": "CommittedAtMigrationID",
-                "newPage": false,
-                "searchKey": "migration.CommittedAtMigrationID",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const CommittedAtMigrationID"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst CommittedAtMigrationID = 8\n```\n\nCommittedAtMigrationID is the primary key of the migration record handled by an instance of committedAtMigrator. This is associated with the out-of-band migration record inserted in the file migrations/frontend/1528395817_lsif_uploads_committed_at.up.sql. \n\n"
               },
               "children": null
             }
@@ -156,6 +169,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -170,12 +184,370 @@
         "children": [
           {
             "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#GitserverClient",
+              "documentation": {
+                "identifier": "GitserverClient",
+                "newPage": false,
+                "searchKey": "migration.GitserverClient",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GitserverClient interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GitserverClient interface {\n\tCommitDate(ctx context.Context, repositoryID int, commit string) (time.Time, error)\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#GitserverClientCommitDateFunc",
+              "documentation": {
+                "identifier": "GitserverClientCommitDateFunc",
+                "newPage": false,
+                "searchKey": "migration.GitserverClientCommitDateFunc",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GitserverClientCommitDateFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GitserverClientCommitDateFunc struct {\n\tdefaultHook func(context.Context, int, string) (time.Time, error)\n\thooks       []func(context.Context, int, string) (time.Time, error)\n\thistory     []GitserverClientCommitDateFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nGitserverClientCommitDateFunc describes the behavior when the CommitDate method of the parent MockGitserverClient instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#GitserverClientCommitDateFunc.History",
+                    "documentation": {
+                      "identifier": "GitserverClientCommitDateFunc.History",
+                      "newPage": false,
+                      "searchKey": "migration.GitserverClientCommitDateFunc.History",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *GitserverClientCommitDateFunc) History() []GitserverClientCommitDateFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *GitserverClientCommitDateFunc) History() []GitserverClientCommitDateFuncCall\n```\n\nHistory returns a sequence of GitserverClientCommitDateFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#GitserverClientCommitDateFunc.PushHook",
+                    "documentation": {
+                      "identifier": "GitserverClientCommitDateFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "migration.GitserverClientCommitDateFunc.PushHook",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *GitserverClientCommitDateFunc) PushHook(hook func(context.Context, int, string) (time.Time, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *GitserverClientCommitDateFunc) PushHook(hook func(context.Context, int, string) (time.Time, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the CommitDate method of the parent MockGitserverClient instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#GitserverClientCommitDateFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "GitserverClientCommitDateFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "migration.GitserverClientCommitDateFunc.PushReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *GitserverClientCommitDateFunc) PushReturn(r0 time.Time, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *GitserverClientCommitDateFunc) PushReturn(r0 time.Time, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#GitserverClientCommitDateFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "GitserverClientCommitDateFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "migration.GitserverClientCommitDateFunc.SetDefaultHook",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *GitserverClientCommitDateFunc) SetDefaultHook(hook func(context.Context, int, string) (time.Time, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *GitserverClientCommitDateFunc) SetDefaultHook(hook func(context.Context, int, string) (time.Time, error))\n```\n\nSetDefaultHook sets function that is called when the CommitDate method of the parent MockGitserverClient instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#GitserverClientCommitDateFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "GitserverClientCommitDateFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "migration.GitserverClientCommitDateFunc.SetDefaultReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *GitserverClientCommitDateFunc) SetDefaultReturn(r0 time.Time, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *GitserverClientCommitDateFunc) SetDefaultReturn(r0 time.Time, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#GitserverClientCommitDateFunc.appendCall",
+                    "documentation": {
+                      "identifier": "GitserverClientCommitDateFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "migration.GitserverClientCommitDateFunc.appendCall",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *GitserverClientCommitDateFunc) appendCall(r0 GitserverClientCommitDateFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *GitserverClientCommitDateFunc) appendCall(r0 GitserverClientCommitDateFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#GitserverClientCommitDateFunc.nextHook",
+                    "documentation": {
+                      "identifier": "GitserverClientCommitDateFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "migration.GitserverClientCommitDateFunc.nextHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *GitserverClientCommitDateFunc) nextHook() func(context.Context, int, string) (time.Time, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *GitserverClientCommitDateFunc) nextHook() func(context.Context, int, string) (time.Time, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#GitserverClientCommitDateFuncCall",
+              "documentation": {
+                "identifier": "GitserverClientCommitDateFuncCall",
+                "newPage": false,
+                "searchKey": "migration.GitserverClientCommitDateFuncCall",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GitserverClientCommitDateFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GitserverClientCommitDateFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 int\n\t// Arg2 is the value of the 3rd argument passed to this method\n\t// invocation.\n\tArg2 string\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 time.Time\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nGitserverClientCommitDateFuncCall is an object that describes an invocation of method CommitDate on an instance of MockGitserverClient. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#GitserverClientCommitDateFuncCall.Args",
+                    "documentation": {
+                      "identifier": "GitserverClientCommitDateFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "migration.GitserverClientCommitDateFuncCall.Args",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c GitserverClientCommitDateFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c GitserverClientCommitDateFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#GitserverClientCommitDateFuncCall.Results",
+                    "documentation": {
+                      "identifier": "GitserverClientCommitDateFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "migration.GitserverClientCommitDateFuncCall.Results",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c GitserverClientCommitDateFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c GitserverClientCommitDateFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#MockGitserverClient",
+              "documentation": {
+                "identifier": "MockGitserverClient",
+                "newPage": false,
+                "searchKey": "migration.MockGitserverClient",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockGitserverClient struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockGitserverClient struct {\n\t// CommitDateFunc is an instance of a mock function object controlling\n\t// the behavior of the method CommitDate.\n\tCommitDateFunc *GitserverClientCommitDateFunc\n}\n```\n\nMockGitserverClient is a mock implementation of the GitserverClient interface (from the package github.com/sourcegraph/sourcegraph/enterprise/internal/codeintel/stores/dbstore/migration) used for unit testing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#NewMockGitserverClient",
+                    "documentation": {
+                      "identifier": "NewMockGitserverClient",
+                      "newPage": false,
+                      "searchKey": "migration.NewMockGitserverClient",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockGitserverClient() *MockGitserverClient"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockGitserverClient() *MockGitserverClient\n```\n\nNewMockGitserverClient creates a new mock of the GitserverClient interface. All methods return zero values for all results, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#NewMockGitserverClientFrom",
+                    "documentation": {
+                      "identifier": "NewMockGitserverClientFrom",
+                      "newPage": false,
+                      "searchKey": "migration.NewMockGitserverClientFrom",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockGitserverClientFrom(i GitserverClient) *MockGitserverClient"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockGitserverClientFrom(i GitserverClient) *MockGitserverClient\n```\n\nNewMockGitserverClientFrom creates a new mock of the MockGitserverClient interface. All methods delegate to the given implementation, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#MockGitserverClient.CommitDate",
+                    "documentation": {
+                      "identifier": "MockGitserverClient.CommitDate",
+                      "newPage": false,
+                      "searchKey": "migration.MockGitserverClient.CommitDate",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockGitserverClient) CommitDate(v0 context.Context, v1 int, v2 string) (time.Time, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockGitserverClient) CommitDate(v0 context.Context, v1 int, v2 string) (time.Time, error)\n```\n\nCommitDate delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#committedAtMigrator",
               "documentation": {
                 "identifier": "committedAtMigrator",
                 "newPage": false,
                 "searchKey": "migration.committedAtMigrator",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -190,12 +562,36 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#committedAtMigrator.Down",
+                    "documentation": {
+                      "identifier": "committedAtMigrator.Down",
+                      "newPage": false,
+                      "searchKey": "migration.committedAtMigrator.Down",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *committedAtMigrator) Down(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *committedAtMigrator) Down(ctx context.Context) error\n```\n\nDown runs a batch of the migration in reverse. This method simply sets the committed_at column to null for a number of records matching the configured batch size. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#committedAtMigrator.Progress",
                     "documentation": {
                       "identifier": "committedAtMigrator.Progress",
                       "newPage": false,
                       "searchKey": "migration.committedAtMigrator.Progress",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -218,6 +614,7 @@
                       "newPage": false,
                       "searchKey": "migration.committedAtMigrator.Up",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -234,34 +631,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#committedAtMigrator.handleSourcedCommits",
-                    "documentation": {
-                      "identifier": "committedAtMigrator.handleSourcedCommits",
-                      "newPage": false,
-                      "searchKey": "migration.committedAtMigrator.handleSourcedCommits",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *committedAtMigrator) handleSourcedCommits(ctx context.Context, tx *dbstore.Store, sourcedCommits dbstore.SourcedCommits) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *committedAtMigrator) handleSourcedCommits(ctx context.Context, tx *dbstore.Store, sourcedCommits dbstore.SourcedCommits) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#committedAtMigrator.handleCommit",
                     "documentation": {
                       "identifier": "committedAtMigrator.handleCommit",
                       "newPage": false,
                       "searchKey": "migration.committedAtMigrator.handleCommit",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -278,349 +654,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#committedAtMigrator.Down",
+                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#committedAtMigrator.handleSourcedCommits",
                     "documentation": {
-                      "identifier": "committedAtMigrator.Down",
+                      "identifier": "committedAtMigrator.handleSourcedCommits",
                       "newPage": false,
-                      "searchKey": "migration.committedAtMigrator.Down",
+                      "searchKey": "migration.committedAtMigrator.handleSourcedCommits",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (m *committedAtMigrator) Down(ctx context.Context) error"
+                      "value": "func (m *committedAtMigrator) handleSourcedCommits(ctx context.Context, tx *dbstore.Store, sourcedCommits dbstore.SourcedCommits) error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (m *committedAtMigrator) Down(ctx context.Context) error\n```\n\nDown runs a batch of the migration in reverse. This method simply sets the committed_at column to null for a number of records matching the configured batch size. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#GitserverClient",
-              "documentation": {
-                "identifier": "GitserverClient",
-                "newPage": false,
-                "searchKey": "migration.GitserverClient",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type GitserverClient interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype GitserverClient interface {\n\tCommitDate(ctx context.Context, repositoryID int, commit string) (time.Time, error)\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#MockGitserverClient",
-              "documentation": {
-                "identifier": "MockGitserverClient",
-                "newPage": false,
-                "searchKey": "migration.MockGitserverClient",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type MockGitserverClient struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype MockGitserverClient struct {\n\t// CommitDateFunc is an instance of a mock function object controlling\n\t// the behavior of the method CommitDate.\n\tCommitDateFunc *GitserverClientCommitDateFunc\n}\n```\n\nMockGitserverClient is a mock implementation of the GitserverClient interface (from the package github.com/sourcegraph/sourcegraph/enterprise/internal/codeintel/stores/dbstore/migration) used for unit testing. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#NewMockGitserverClient",
-                    "documentation": {
-                      "identifier": "NewMockGitserverClient",
-                      "newPage": false,
-                      "searchKey": "migration.NewMockGitserverClient",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewMockGitserverClient() *MockGitserverClient"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewMockGitserverClient() *MockGitserverClient\n```\n\nNewMockGitserverClient creates a new mock of the GitserverClient interface. All methods return zero values for all results, unless overwritten. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#NewMockGitserverClientFrom",
-                    "documentation": {
-                      "identifier": "NewMockGitserverClientFrom",
-                      "newPage": false,
-                      "searchKey": "migration.NewMockGitserverClientFrom",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewMockGitserverClientFrom(i GitserverClient) *MockGitserverClient"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewMockGitserverClientFrom(i GitserverClient) *MockGitserverClient\n```\n\nNewMockGitserverClientFrom creates a new mock of the MockGitserverClient interface. All methods delegate to the given implementation, unless overwritten. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#MockGitserverClient.CommitDate",
-                    "documentation": {
-                      "identifier": "MockGitserverClient.CommitDate",
-                      "newPage": false,
-                      "searchKey": "migration.MockGitserverClient.CommitDate",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *MockGitserverClient) CommitDate(v0 context.Context, v1 int, v2 string) (time.Time, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *MockGitserverClient) CommitDate(v0 context.Context, v1 int, v2 string) (time.Time, error)\n```\n\nCommitDate delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#GitserverClientCommitDateFunc",
-              "documentation": {
-                "identifier": "GitserverClientCommitDateFunc",
-                "newPage": false,
-                "searchKey": "migration.GitserverClientCommitDateFunc",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type GitserverClientCommitDateFunc struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype GitserverClientCommitDateFunc struct {\n\tdefaultHook func(context.Context, int, string) (time.Time, error)\n\thooks       []func(context.Context, int, string) (time.Time, error)\n\thistory     []GitserverClientCommitDateFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nGitserverClientCommitDateFunc describes the behavior when the CommitDate method of the parent MockGitserverClient instance is invoked. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#GitserverClientCommitDateFunc.SetDefaultHook",
-                    "documentation": {
-                      "identifier": "GitserverClientCommitDateFunc.SetDefaultHook",
-                      "newPage": false,
-                      "searchKey": "migration.GitserverClientCommitDateFunc.SetDefaultHook",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *GitserverClientCommitDateFunc) SetDefaultHook(hook func(context.Context, int, string) (time.Time, error))"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *GitserverClientCommitDateFunc) SetDefaultHook(hook func(context.Context, int, string) (time.Time, error))\n```\n\nSetDefaultHook sets function that is called when the CommitDate method of the parent MockGitserverClient instance is invoked and the hook queue is empty. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#GitserverClientCommitDateFunc.PushHook",
-                    "documentation": {
-                      "identifier": "GitserverClientCommitDateFunc.PushHook",
-                      "newPage": false,
-                      "searchKey": "migration.GitserverClientCommitDateFunc.PushHook",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *GitserverClientCommitDateFunc) PushHook(hook func(context.Context, int, string) (time.Time, error))"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *GitserverClientCommitDateFunc) PushHook(hook func(context.Context, int, string) (time.Time, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the CommitDate method of the parent MockGitserverClient instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#GitserverClientCommitDateFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "GitserverClientCommitDateFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "migration.GitserverClientCommitDateFunc.SetDefaultReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *GitserverClientCommitDateFunc) SetDefaultReturn(r0 time.Time, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *GitserverClientCommitDateFunc) SetDefaultReturn(r0 time.Time, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#GitserverClientCommitDateFunc.PushReturn",
-                    "documentation": {
-                      "identifier": "GitserverClientCommitDateFunc.PushReturn",
-                      "newPage": false,
-                      "searchKey": "migration.GitserverClientCommitDateFunc.PushReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *GitserverClientCommitDateFunc) PushReturn(r0 time.Time, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *GitserverClientCommitDateFunc) PushReturn(r0 time.Time, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#GitserverClientCommitDateFunc.nextHook",
-                    "documentation": {
-                      "identifier": "GitserverClientCommitDateFunc.nextHook",
-                      "newPage": false,
-                      "searchKey": "migration.GitserverClientCommitDateFunc.nextHook",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *GitserverClientCommitDateFunc) nextHook() func(context.Context, int, string) (time.Time, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *GitserverClientCommitDateFunc) nextHook() func(context.Context, int, string) (time.Time, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#GitserverClientCommitDateFunc.appendCall",
-                    "documentation": {
-                      "identifier": "GitserverClientCommitDateFunc.appendCall",
-                      "newPage": false,
-                      "searchKey": "migration.GitserverClientCommitDateFunc.appendCall",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *GitserverClientCommitDateFunc) appendCall(r0 GitserverClientCommitDateFuncCall)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *GitserverClientCommitDateFunc) appendCall(r0 GitserverClientCommitDateFuncCall)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#GitserverClientCommitDateFunc.History",
-                    "documentation": {
-                      "identifier": "GitserverClientCommitDateFunc.History",
-                      "newPage": false,
-                      "searchKey": "migration.GitserverClientCommitDateFunc.History",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *GitserverClientCommitDateFunc) History() []GitserverClientCommitDateFuncCall"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *GitserverClientCommitDateFunc) History() []GitserverClientCommitDateFuncCall\n```\n\nHistory returns a sequence of GitserverClientCommitDateFuncCall objects describing the invocations of this function. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#GitserverClientCommitDateFuncCall",
-              "documentation": {
-                "identifier": "GitserverClientCommitDateFuncCall",
-                "newPage": false,
-                "searchKey": "migration.GitserverClientCommitDateFuncCall",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type GitserverClientCommitDateFuncCall struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype GitserverClientCommitDateFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 int\n\t// Arg2 is the value of the 3rd argument passed to this method\n\t// invocation.\n\tArg2 string\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 time.Time\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nGitserverClientCommitDateFuncCall is an object that describes an invocation of method CommitDate on an instance of MockGitserverClient. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#GitserverClientCommitDateFuncCall.Args",
-                    "documentation": {
-                      "identifier": "GitserverClientCommitDateFuncCall.Args",
-                      "newPage": false,
-                      "searchKey": "migration.GitserverClientCommitDateFuncCall.Args",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c GitserverClientCommitDateFuncCall) Args() []interface{}"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c GitserverClientCommitDateFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#GitserverClientCommitDateFuncCall.Results",
-                    "documentation": {
-                      "identifier": "GitserverClientCommitDateFuncCall.Results",
-                      "newPage": false,
-                      "searchKey": "migration.GitserverClientCommitDateFuncCall.Results",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c GitserverClientCommitDateFuncCall) Results() []interface{}"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c GitserverClientCommitDateFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                      "value": "```Go\nfunc (m *committedAtMigrator) handleSourcedCommits(ctx context.Context, tx *dbstore.Store, sourcedCommits dbstore.SourcedCommits) error\n```\n\n"
                     },
                     "children": null
                   }
@@ -639,6 +689,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -658,7 +709,9 @@
                 "identifier": "NewCommittedAtMigrator",
                 "newPage": false,
                 "searchKey": "migration.NewCommittedAtMigrator",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -673,12 +726,108 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#TestCommittedAtMigrator",
+              "documentation": {
+                "identifier": "TestCommittedAtMigrator",
+                "newPage": false,
+                "searchKey": "migration.TestCommittedAtMigrator",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCommittedAtMigrator(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCommittedAtMigrator(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#TestCommittedAtMigratorUnknownCommits",
+              "documentation": {
+                "identifier": "TestCommittedAtMigratorUnknownCommits",
+                "newPage": false,
+                "searchKey": "migration.TestCommittedAtMigratorUnknownCommits",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCommittedAtMigratorUnknownCommits(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCommittedAtMigratorUnknownCommits(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#TestCommittedAtMigratorUnknownRepository",
+              "documentation": {
+                "identifier": "TestCommittedAtMigratorUnknownRepository",
+                "newPage": false,
+                "searchKey": "migration.TestCommittedAtMigratorUnknownRepository",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCommittedAtMigratorUnknownRepository(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCommittedAtMigratorUnknownRepository(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#init.migration_test.go",
+              "documentation": {
+                "identifier": "init.migration_test.go",
+                "newPage": false,
+                "searchKey": "migration.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#isRepositoryNotFound",
               "documentation": {
                 "identifier": "isRepositoryNotFound",
                 "newPage": false,
                 "searchKey": "migration.isRepositoryNotFound",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -701,6 +850,7 @@
                 "newPage": false,
                 "searchKey": "migration.isRevisionNotFound",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -711,94 +861,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc isRevisionNotFound(err error) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#TestCommittedAtMigrator",
-              "documentation": {
-                "identifier": "TestCommittedAtMigrator",
-                "newPage": false,
-                "searchKey": "migration.TestCommittedAtMigrator",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCommittedAtMigrator(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCommittedAtMigrator(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#TestCommittedAtMigratorUnknownRepository",
-              "documentation": {
-                "identifier": "TestCommittedAtMigratorUnknownRepository",
-                "newPage": false,
-                "searchKey": "migration.TestCommittedAtMigratorUnknownRepository",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCommittedAtMigratorUnknownRepository(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCommittedAtMigratorUnknownRepository(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#TestCommittedAtMigratorUnknownCommits",
-              "documentation": {
-                "identifier": "TestCommittedAtMigratorUnknownCommits",
-                "newPage": false,
-                "searchKey": "migration.TestCommittedAtMigratorUnknownCommits",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCommittedAtMigratorUnknownCommits(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCommittedAtMigratorUnknownCommits(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/dbstore/migration#init.migration_test.go",
-              "documentation": {
-                "identifier": "init.migration_test.go",
-                "newPage": false,
-                "searchKey": "migration.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
               },
               "children": null
             }

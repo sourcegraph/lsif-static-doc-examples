@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "errors_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "errors_test.poserPathErr",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -90,6 +95,7 @@
                 "newPage": false,
                 "searchKey": "errors_test.MyError",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -110,6 +116,7 @@
                       "newPage": false,
                       "searchKey": "errors_test.MyError.Error",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -129,101 +136,13 @@
           },
           {
             "node": {
-              "pathID": "/errors_test#poser",
-              "documentation": {
-                "identifier": "poser",
-                "newPage": false,
-                "searchKey": "errors_test.poser",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type poser struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype poser struct {\n\tmsg string\n\tf   func(error) bool\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/errors_test#poser.Error",
-                    "documentation": {
-                      "identifier": "poser.Error",
-                      "newPage": false,
-                      "searchKey": "errors_test.poser.Error",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *poser) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *poser) Error() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/errors_test#poser.Is",
-                    "documentation": {
-                      "identifier": "poser.Is",
-                      "newPage": false,
-                      "searchKey": "errors_test.poser.Is",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *poser) Is(err error) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *poser) Is(err error) bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/errors_test#poser.As",
-                    "documentation": {
-                      "identifier": "poser.As",
-                      "newPage": false,
-                      "searchKey": "errors_test.poser.As",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *poser) As(err interface{}) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *poser) As(err interface{}) bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/errors_test#errorT",
               "documentation": {
                 "identifier": "errorT",
                 "newPage": false,
                 "searchKey": "errors_test.errorT",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -244,6 +163,7 @@
                       "newPage": false,
                       "searchKey": "errors_test.errorT.Error",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -263,79 +183,13 @@
           },
           {
             "node": {
-              "pathID": "/errors_test#wrapped",
-              "documentation": {
-                "identifier": "wrapped",
-                "newPage": false,
-                "searchKey": "errors_test.wrapped",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type wrapped struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype wrapped struct {\n\tmsg string\n\terr error\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/errors_test#wrapped.Error",
-                    "documentation": {
-                      "identifier": "wrapped.Error",
-                      "newPage": false,
-                      "searchKey": "errors_test.wrapped.Error",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e wrapped) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e wrapped) Error() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/errors_test#wrapped.Unwrap",
-                    "documentation": {
-                      "identifier": "wrapped.Unwrap",
-                      "newPage": false,
-                      "searchKey": "errors_test.wrapped.Unwrap",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e wrapped) Unwrap() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e wrapped) Unwrap() error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/errors_test#errorUncomparable",
               "documentation": {
                 "identifier": "errorUncomparable",
                 "newPage": false,
                 "searchKey": "errors_test.errorUncomparable",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -356,6 +210,7 @@
                       "newPage": false,
                       "searchKey": "errors_test.errorUncomparable.Error",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -378,6 +233,7 @@
                       "newPage": false,
                       "searchKey": "errors_test.errorUncomparable.Is",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -388,6 +244,169 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (errorUncomparable) Is(target error) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/errors_test#poser",
+              "documentation": {
+                "identifier": "poser",
+                "newPage": false,
+                "searchKey": "errors_test.poser",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type poser struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype poser struct {\n\tmsg string\n\tf   func(error) bool\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/errors_test#poser.As",
+                    "documentation": {
+                      "identifier": "poser.As",
+                      "newPage": false,
+                      "searchKey": "errors_test.poser.As",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *poser) As(err interface{}) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *poser) As(err interface{}) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/errors_test#poser.Error",
+                    "documentation": {
+                      "identifier": "poser.Error",
+                      "newPage": false,
+                      "searchKey": "errors_test.poser.Error",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *poser) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *poser) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/errors_test#poser.Is",
+                    "documentation": {
+                      "identifier": "poser.Is",
+                      "newPage": false,
+                      "searchKey": "errors_test.poser.Is",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *poser) Is(err error) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *poser) Is(err error) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/errors_test#wrapped",
+              "documentation": {
+                "identifier": "wrapped",
+                "newPage": false,
+                "searchKey": "errors_test.wrapped",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type wrapped struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype wrapped struct {\n\tmsg string\n\terr error\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/errors_test#wrapped.Error",
+                    "documentation": {
+                      "identifier": "wrapped.Error",
+                      "newPage": false,
+                      "searchKey": "errors_test.wrapped.Error",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e wrapped) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e wrapped) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/errors_test#wrapped.Unwrap",
+                    "documentation": {
+                      "identifier": "wrapped.Unwrap",
+                      "newPage": false,
+                      "searchKey": "errors_test.wrapped.Unwrap",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e wrapped) Unwrap() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e wrapped) Unwrap() error\n```\n\n"
                     },
                     "children": null
                   }
@@ -406,6 +425,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -420,44 +440,69 @@
         "children": [
           {
             "node": {
-              "pathID": "/errors_test#TestNewEqual",
+              "pathID": "/errors_test#Example",
               "documentation": {
-                "identifier": "TestNewEqual",
+                "identifier": "Example",
                 "newPage": false,
-                "searchKey": "errors_test.TestNewEqual",
+                "searchKey": "errors_test.Example",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestNewEqual(t *testing.T)"
+                "value": "func Example()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestNewEqual(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc Example()\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/errors_test#TestErrorMethod",
+              "pathID": "/errors_test#ExampleAs",
               "documentation": {
-                "identifier": "TestErrorMethod",
+                "identifier": "ExampleAs",
                 "newPage": false,
-                "searchKey": "errors_test.TestErrorMethod",
+                "searchKey": "errors_test.ExampleAs",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestErrorMethod(t *testing.T)"
+                "value": "func ExampleAs()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestErrorMethod(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc ExampleAs()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/errors_test#ExampleIs",
+              "documentation": {
+                "identifier": "ExampleIs",
+                "newPage": false,
+                "searchKey": "errors_test.ExampleIs",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleIs()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleIs()\n```\n\n"
               },
               "children": null
             }
@@ -470,6 +515,7 @@
                 "newPage": false,
                 "searchKey": "errors_test.ExampleNew",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -492,6 +538,7 @@
                 "newPage": false,
                 "searchKey": "errors_test.ExampleNew_errorf",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -508,79 +555,15 @@
           },
           {
             "node": {
-              "pathID": "/errors_test#oops",
-              "documentation": {
-                "identifier": "oops",
-                "newPage": false,
-                "searchKey": "errors_test.oops",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func oops() error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc oops() error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/errors_test#Example",
-              "documentation": {
-                "identifier": "Example",
-                "newPage": false,
-                "searchKey": "errors_test.Example",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Example()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Example()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/errors_test#TestIs",
-              "documentation": {
-                "identifier": "TestIs",
-                "newPage": false,
-                "searchKey": "errors_test.TestIs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIs(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIs(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/errors_test#TestAs",
               "documentation": {
                 "identifier": "TestAs",
                 "newPage": false,
                 "searchKey": "errors_test.TestAs",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -602,7 +585,9 @@
                 "newPage": false,
                 "searchKey": "errors_test.TestAsValidation",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -618,13 +603,87 @@
           },
           {
             "node": {
+              "pathID": "/errors_test#TestErrorMethod",
+              "documentation": {
+                "identifier": "TestErrorMethod",
+                "newPage": false,
+                "searchKey": "errors_test.TestErrorMethod",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestErrorMethod(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestErrorMethod(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/errors_test#TestIs",
+              "documentation": {
+                "identifier": "TestIs",
+                "newPage": false,
+                "searchKey": "errors_test.TestIs",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIs(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIs(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/errors_test#TestNewEqual",
+              "documentation": {
+                "identifier": "TestNewEqual",
+                "newPage": false,
+                "searchKey": "errors_test.TestNewEqual",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNewEqual(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNewEqual(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/errors_test#TestUnwrap",
               "documentation": {
                 "identifier": "TestUnwrap",
                 "newPage": false,
                 "searchKey": "errors_test.TestUnwrap",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -640,44 +699,23 @@
           },
           {
             "node": {
-              "pathID": "/errors_test#ExampleIs",
+              "pathID": "/errors_test#oops",
               "documentation": {
-                "identifier": "ExampleIs",
+                "identifier": "oops",
                 "newPage": false,
-                "searchKey": "errors_test.ExampleIs",
+                "searchKey": "errors_test.oops",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func ExampleIs()"
+                "value": "func oops() error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc ExampleIs()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/errors_test#ExampleAs",
-              "documentation": {
-                "identifier": "ExampleAs",
-                "newPage": false,
-                "searchKey": "errors_test.ExampleAs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleAs()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleAs()\n```\n\n"
+                "value": "```Go\nfunc oops() error\n```\n\n"
               },
               "children": null
             }

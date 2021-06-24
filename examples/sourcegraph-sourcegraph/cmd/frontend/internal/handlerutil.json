@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "cmd/frontend/internal/handlerutil",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "handlerutil.ravenClient",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -84,53 +89,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/handlerutil#URLMovedError",
-              "documentation": {
-                "identifier": "URLMovedError",
-                "newPage": false,
-                "searchKey": "handlerutil.URLMovedError",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type URLMovedError struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype URLMovedError struct {\n\tNewRepo api.RepoName `json:\"RedirectTo\"`\n}\n```\n\nURLMovedError should be returned when a requested resource has moved to a new address. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/internal/handlerutil#URLMovedError.Error",
-                    "documentation": {
-                      "identifier": "URLMovedError.Error",
-                      "newPage": false,
-                      "searchKey": "handlerutil.URLMovedError.Error",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *URLMovedError) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *URLMovedError) Error() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/handlerutil#HandlerWithErrorReturn",
               "documentation": {
                 "identifier": "HandlerWithErrorReturn",
                 "newPage": false,
                 "searchKey": "handlerutil.HandlerWithErrorReturn",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -148,7 +114,9 @@
                       "identifier": "HandlerWithErrorReturn.ServeHTTP",
                       "newPage": false,
                       "searchKey": "handlerutil.HandlerWithErrorReturn.ServeHTTP",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -157,6 +125,51 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (h HandlerWithErrorReturn) ServeHTTP(w http.ResponseWriter, r *http.Request)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/handlerutil#URLMovedError",
+              "documentation": {
+                "identifier": "URLMovedError",
+                "newPage": false,
+                "searchKey": "handlerutil.URLMovedError",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type URLMovedError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype URLMovedError struct {\n\tNewRepo api.RepoName `json:\"RedirectTo\"`\n}\n```\n\nURLMovedError should be returned when a requested resource has moved to a new address. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/handlerutil#URLMovedError.Error",
+                    "documentation": {
+                      "identifier": "URLMovedError.Error",
+                      "newPage": false,
+                      "searchKey": "handlerutil.URLMovedError.Error",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *URLMovedError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *URLMovedError) Error() string\n```\n\n"
                     },
                     "children": null
                   }
@@ -175,6 +188,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -189,12 +203,194 @@
         "children": [
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/handlerutil#CSRFMiddleware",
+              "documentation": {
+                "identifier": "CSRFMiddleware",
+                "newPage": false,
+                "searchKey": "handlerutil.CSRFMiddleware",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CSRFMiddleware(next http.Handler, isSecure func() bool) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CSRFMiddleware(next http.Handler, isSecure func() bool) http.Handler\n```\n\nCSRFMiddleware is HTTP middleware that helps prevent cross-site request forgery. To make your forms compliant you will have to submit the token via the X-Csrf-Token header, which is made available in the client-side context. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/handlerutil#GetRepo",
+              "documentation": {
+                "identifier": "GetRepo",
+                "newPage": false,
+                "searchKey": "handlerutil.GetRepo",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetRepo(ctx context.Context, vars map[string]string) (*types.Repo, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetRepo(ctx context.Context, vars map[string]string) (*types.Repo, error)\n```\n\nGetRepo gets the repo (from the reposSvc) specified in the URL's Repo route param. Callers should ideally check for a return error of type URLMovedError and handle this scenario by warning or redirecting the user. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/handlerutil#GetRepoAndRev",
+              "documentation": {
+                "identifier": "GetRepoAndRev",
+                "newPage": false,
+                "searchKey": "handlerutil.GetRepoAndRev",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetRepoAndRev(ctx context.Context, vars map[string]string) (*types.Repo, api.CommitID, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetRepoAndRev(ctx context.Context, vars map[string]string) (*types.Repo, api.CommitID, error)\n```\n\nGetRepoAndRev returns the repo object and the commit ID for a repository. It may also return custom error URLMovedError to allow special handling of this case, such as for example redirecting the user. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/handlerutil#RedirectToNewRepoName",
+              "documentation": {
+                "identifier": "RedirectToNewRepoName",
+                "newPage": false,
+                "searchKey": "handlerutil.RedirectToNewRepoName",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RedirectToNewRepoName(w http.ResponseWriter, r *http.Request, newRepoName api.RepoName) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RedirectToNewRepoName(w http.ResponseWriter, r *http.Request, newRepoName api.RepoName) error\n```\n\nRedirectToNewRepoName writes an HTTP redirect response with a Location that matches the request's location except with the Repo route var updated to refer to newRepoName (instead of the originally requested repo name). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/handlerutil#TestGetRepo",
+              "documentation": {
+                "identifier": "TestGetRepo",
+                "newPage": false,
+                "searchKey": "handlerutil.TestGetRepo",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetRepo(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetRepo(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/handlerutil#collapseMultipleErrors",
+              "documentation": {
+                "identifier": "collapseMultipleErrors",
+                "newPage": false,
+                "searchKey": "handlerutil.collapseMultipleErrors",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func collapseMultipleErrors(err error) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc collapseMultipleErrors(err error) error\n```\n\ncollapseMultipleErrors returns the first err if err is a parallel.Errors list of length 1. Otherwise it returns err unchanged. This lets us return the proper HTTP status code for single errors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/handlerutil#getRepoRev",
+              "documentation": {
+                "identifier": "getRepoRev",
+                "newPage": false,
+                "searchKey": "handlerutil.getRepoRev",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getRepoRev(ctx context.Context, vars map[string]string, repoID api.RepoID) (api.RepoID, api.CommitID, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getRepoRev(ctx context.Context, vars map[string]string, repoID api.RepoID) (api.RepoID, api.CommitID, error)\n```\n\ngetRepoRev resolves the repository and commit specified in the route vars. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/handlerutil#httpErrCode",
+              "documentation": {
+                "identifier": "httpErrCode",
+                "newPage": false,
+                "searchKey": "handlerutil.httpErrCode",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func httpErrCode(r *http.Request, err error) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc httpErrCode(r *http.Request, err error) int\n```\n\nhttpErrCode maps an error to a status code. If the client canceled the request we return the non-standard \"499 Client Closed Request\" used by nginx. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/handlerutil#init.error_reporting.go",
               "documentation": {
                 "identifier": "init.error_reporting.go",
                 "newPage": false,
                 "searchKey": "handlerutil.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -217,6 +413,7 @@
                 "newPage": false,
                 "searchKey": "handlerutil.reportError",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -227,174 +424,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc reportError(r *http.Request, status int, err error, panicked bool)\n```\n\nreportError reports an error to Sentry. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/handlerutil#httpErrCode",
-              "documentation": {
-                "identifier": "httpErrCode",
-                "newPage": false,
-                "searchKey": "handlerutil.httpErrCode",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func httpErrCode(r *http.Request, err error) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc httpErrCode(r *http.Request, err error) int\n```\n\nhttpErrCode maps an error to a status code. If the client canceled the request we return the non-standard \"499 Client Closed Request\" used by nginx. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/handlerutil#collapseMultipleErrors",
-              "documentation": {
-                "identifier": "collapseMultipleErrors",
-                "newPage": false,
-                "searchKey": "handlerutil.collapseMultipleErrors",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func collapseMultipleErrors(err error) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc collapseMultipleErrors(err error) error\n```\n\ncollapseMultipleErrors returns the first err if err is a parallel.Errors list of length 1. Otherwise it returns err unchanged. This lets us return the proper HTTP status code for single errors. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/handlerutil#CSRFMiddleware",
-              "documentation": {
-                "identifier": "CSRFMiddleware",
-                "newPage": false,
-                "searchKey": "handlerutil.CSRFMiddleware",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func CSRFMiddleware(next http.Handler, isSecure func() bool) http.Handler"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc CSRFMiddleware(next http.Handler, isSecure func() bool) http.Handler\n```\n\nCSRFMiddleware is HTTP middleware that helps prevent cross-site request forgery. To make your forms compliant you will have to submit the token via the X-Csrf-Token header, which is made available in the client-side context. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/handlerutil#GetRepo",
-              "documentation": {
-                "identifier": "GetRepo",
-                "newPage": false,
-                "searchKey": "handlerutil.GetRepo",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetRepo(ctx context.Context, vars map[string]string) (*types.Repo, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetRepo(ctx context.Context, vars map[string]string) (*types.Repo, error)\n```\n\nGetRepo gets the repo (from the reposSvc) specified in the URL's Repo route param. Callers should ideally check for a return error of type URLMovedError and handle this scenario by warning or redirecting the user. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/handlerutil#getRepoRev",
-              "documentation": {
-                "identifier": "getRepoRev",
-                "newPage": false,
-                "searchKey": "handlerutil.getRepoRev",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func getRepoRev(ctx context.Context, vars map[string]string, repoID api.RepoID) (api.RepoID, api.CommitID, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc getRepoRev(ctx context.Context, vars map[string]string, repoID api.RepoID) (api.RepoID, api.CommitID, error)\n```\n\ngetRepoRev resolves the repository and commit specified in the route vars. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/handlerutil#GetRepoAndRev",
-              "documentation": {
-                "identifier": "GetRepoAndRev",
-                "newPage": false,
-                "searchKey": "handlerutil.GetRepoAndRev",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetRepoAndRev(ctx context.Context, vars map[string]string) (*types.Repo, api.CommitID, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetRepoAndRev(ctx context.Context, vars map[string]string) (*types.Repo, api.CommitID, error)\n```\n\nGetRepoAndRev returns the repo object and the commit ID for a repository. It may also return custom error URLMovedError to allow special handling of this case, such as for example redirecting the user. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/handlerutil#RedirectToNewRepoName",
-              "documentation": {
-                "identifier": "RedirectToNewRepoName",
-                "newPage": false,
-                "searchKey": "handlerutil.RedirectToNewRepoName",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func RedirectToNewRepoName(w http.ResponseWriter, r *http.Request, newRepoName api.RepoName) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc RedirectToNewRepoName(w http.ResponseWriter, r *http.Request, newRepoName api.RepoName) error\n```\n\nRedirectToNewRepoName writes an HTTP redirect response with a Location that matches the request's location except with the Repo route var updated to refer to newRepoName (instead of the originally requested repo name). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/handlerutil#TestGetRepo",
-              "documentation": {
-                "identifier": "TestGetRepo",
-                "newPage": false,
-                "searchKey": "handlerutil.TestGetRepo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGetRepo(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGetRepo(t *testing.T)\n```\n\n"
               },
               "children": null
             }

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/sysinfo",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,10 @@
                 "identifier": "CPU",
                 "newPage": false,
                 "searchKey": "sysinfo.CPU",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -68,6 +73,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -88,6 +94,7 @@
                 "newPage": false,
                 "searchKey": "sysinfo.cpuInfo",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -108,6 +115,7 @@
                       "newPage": false,
                       "searchKey": "sysinfo.cpuInfo.Name",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },

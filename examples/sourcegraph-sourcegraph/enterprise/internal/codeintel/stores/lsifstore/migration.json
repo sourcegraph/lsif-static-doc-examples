@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/internal/codeintel/stores/lsifstore/migration",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,32 +41,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#DiagnosticsCountMigrationID",
-              "documentation": {
-                "identifier": "DiagnosticsCountMigrationID",
-                "newPage": false,
-                "searchKey": "migration.DiagnosticsCountMigrationID",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const DiagnosticsCountMigrationID"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst DiagnosticsCountMigrationID = 1\n```\n\nDiagnosticsCountMigrationID is the primary key of the migration record handled by an instance of diagnosticsCountMigrator. This is associated with the out-of-band migration record inserted in migrations/frontend/1528395786_diagnostic_counts_migration.up.sql. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#DefinitionsCountMigrationID",
               "documentation": {
                 "identifier": "DefinitionsCountMigrationID",
                 "newPage": false,
                 "searchKey": "migration.DefinitionsCountMigrationID",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -79,20 +64,23 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#ReferencesCountMigrationID",
+              "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#DiagnosticsCountMigrationID",
               "documentation": {
-                "identifier": "ReferencesCountMigrationID",
+                "identifier": "DiagnosticsCountMigrationID",
                 "newPage": false,
-                "searchKey": "migration.ReferencesCountMigrationID",
-                "tags": null
+                "searchKey": "migration.DiagnosticsCountMigrationID",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const ReferencesCountMigrationID"
+                "value": "const DiagnosticsCountMigrationID"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst ReferencesCountMigrationID = 5\n```\n\nReferencesCountMigrationID is the primary key of the migration record handled by an instance of locationsCountMigrator. This is associated with the out-of-band migration record inserted in migrations/frontend/1528395807_lsif_locations_migration.up.sql. \n\n"
+                "value": "```Go\nconst DiagnosticsCountMigrationID = 1\n```\n\nDiagnosticsCountMigrationID is the primary key of the migration record handled by an instance of diagnosticsCountMigrator. This is associated with the out-of-band migration record inserted in migrations/frontend/1528395786_diagnostic_counts_migration.up.sql. \n\n"
               },
               "children": null
             }
@@ -104,7 +92,10 @@
                 "identifier": "DocumentColumnSplitMigrationID",
                 "newPage": false,
                 "searchKey": "migration.DocumentColumnSplitMigrationID",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -119,12 +110,37 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#ReferencesCountMigrationID",
+              "documentation": {
+                "identifier": "ReferencesCountMigrationID",
+                "newPage": false,
+                "searchKey": "migration.ReferencesCountMigrationID",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ReferencesCountMigrationID"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ReferencesCountMigrationID = 5\n```\n\nReferencesCountMigrationID is the primary key of the migration record handled by an instance of locationsCountMigrator. This is associated with the out-of-band migration record inserted in migrations/frontend/1528395807_lsif_locations_migration.up.sql. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#migratorProgressQuery",
               "documentation": {
                 "identifier": "migratorProgressQuery",
                 "newPage": false,
                 "searchKey": "migration.migratorProgressQuery",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -141,12 +157,38 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#processRowsQuery",
+              "documentation": {
+                "identifier": "processRowsQuery",
+                "newPage": false,
+                "searchKey": "migration.processRowsQuery",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const processRowsQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst processRowsQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#runUpdateBoundsQuery",
               "documentation": {
                 "identifier": "runUpdateBoundsQuery",
                 "newPage": false,
                 "searchKey": "migration.runUpdateBoundsQuery",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -169,6 +211,8 @@
                 "newPage": false,
                 "searchKey": "migration.selectAndLockDumpQuery",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -185,34 +229,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#processRowsQuery",
-              "documentation": {
-                "identifier": "processRowsQuery",
-                "newPage": false,
-                "searchKey": "migration.processRowsQuery",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const processRowsQuery"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst processRowsQuery = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#updateBatchTemporaryTableQuery",
               "documentation": {
                 "identifier": "updateBatchTemporaryTableQuery",
                 "newPage": false,
                 "searchKey": "migration.updateBatchTemporaryTableQuery",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -235,6 +259,8 @@
                 "newPage": false,
                 "searchKey": "migration.updateBatchUpdateQuery",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -260,6 +286,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -274,34 +301,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#temporaryTableName",
-              "documentation": {
-                "identifier": "temporaryTableName",
-                "newPage": false,
-                "searchKey": "migration.temporaryTableName",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var temporaryTableName"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar temporaryTableName = \"t_migration_payload\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#temporaryTableExpression",
               "documentation": {
                 "identifier": "temporaryTableExpression",
                 "newPage": false,
                 "searchKey": "migration.temporaryTableExpression",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -312,6 +319,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar temporaryTableExpression = sqlf.Sprintf(temporaryTableName)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#temporaryTableName",
+              "documentation": {
+                "identifier": "temporaryTableName",
+                "newPage": false,
+                "searchKey": "migration.temporaryTableName",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var temporaryTableName"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar temporaryTableName = \"t_migration_payload\"\n```\n\n"
               },
               "children": null
             }
@@ -327,6 +358,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -341,213 +373,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#diagnosticsCountMigrator",
-              "documentation": {
-                "identifier": "diagnosticsCountMigrator",
-                "newPage": false,
-                "searchKey": "migration.diagnosticsCountMigrator",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type diagnosticsCountMigrator struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype diagnosticsCountMigrator struct {\n\tserializer *lsifstore.Serializer\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#diagnosticsCountMigrator.MigrateRowUp",
-                    "documentation": {
-                      "identifier": "diagnosticsCountMigrator.MigrateRowUp",
-                      "newPage": false,
-                      "searchKey": "migration.diagnosticsCountMigrator.MigrateRowUp",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *diagnosticsCountMigrator) MigrateRowUp(scanner scanner) ([]interface{}, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *diagnosticsCountMigrator) MigrateRowUp(scanner scanner) ([]interface{}, error)\n```\n\nMigrateRowUp reads the payload of the given row and returns an updateSpec on how to modify the record to conform to the new schema. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#diagnosticsCountMigrator.MigrateRowDown",
-                    "documentation": {
-                      "identifier": "diagnosticsCountMigrator.MigrateRowDown",
-                      "newPage": false,
-                      "searchKey": "migration.diagnosticsCountMigrator.MigrateRowDown",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *diagnosticsCountMigrator) MigrateRowDown(scanner scanner) ([]interface{}, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *diagnosticsCountMigrator) MigrateRowDown(scanner scanner) ([]interface{}, error)\n```\n\nMigrateRowDown sets num_diagnostics back to zero to undo the migration up direction. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#documentColumnSplitMigrator",
-              "documentation": {
-                "identifier": "documentColumnSplitMigrator",
-                "newPage": false,
-                "searchKey": "migration.documentColumnSplitMigrator",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type documentColumnSplitMigrator struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype documentColumnSplitMigrator struct {\n\tserializer *lsifstore.Serializer\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#documentColumnSplitMigrator.MigrateRowUp",
-                    "documentation": {
-                      "identifier": "documentColumnSplitMigrator.MigrateRowUp",
-                      "newPage": false,
-                      "searchKey": "migration.documentColumnSplitMigrator.MigrateRowUp",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *documentColumnSplitMigrator) MigrateRowUp(scanner scanner) ([]interface{}, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *documentColumnSplitMigrator) MigrateRowUp(scanner scanner) ([]interface{}, error)\n```\n\nMigrateRowUp reads the payload of the given row and returns an updateSpec on how to modify the record to conform to the new schema. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#documentColumnSplitMigrator.MigrateRowDown",
-                    "documentation": {
-                      "identifier": "documentColumnSplitMigrator.MigrateRowDown",
-                      "newPage": false,
-                      "searchKey": "migration.documentColumnSplitMigrator.MigrateRowDown",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *documentColumnSplitMigrator) MigrateRowDown(scanner scanner) ([]interface{}, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *documentColumnSplitMigrator) MigrateRowDown(scanner scanner) ([]interface{}, error)\n```\n\nMigrateRowDown sets num_diagnostics back to zero to undo the migration up direction. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#locationsCountMigrator",
-              "documentation": {
-                "identifier": "locationsCountMigrator",
-                "newPage": false,
-                "searchKey": "migration.locationsCountMigrator",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type locationsCountMigrator struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype locationsCountMigrator struct {\n\tserializer *lsifstore.Serializer\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#locationsCountMigrator.MigrateRowUp",
-                    "documentation": {
-                      "identifier": "locationsCountMigrator.MigrateRowUp",
-                      "newPage": false,
-                      "searchKey": "migration.locationsCountMigrator.MigrateRowUp",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *locationsCountMigrator) MigrateRowUp(scanner scanner) ([]interface{}, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *locationsCountMigrator) MigrateRowUp(scanner scanner) ([]interface{}, error)\n```\n\nMigrateRowUp reads the payload of the given row and returns an updateSpec on how to modify the record to conform to the new schema. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#locationsCountMigrator.MigrateRowDown",
-                    "documentation": {
-                      "identifier": "locationsCountMigrator.MigrateRowDown",
-                      "newPage": false,
-                      "searchKey": "migration.locationsCountMigrator.MigrateRowDown",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *locationsCountMigrator) MigrateRowDown(scanner scanner) ([]interface{}, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *locationsCountMigrator) MigrateRowDown(scanner scanner) ([]interface{}, error)\n```\n\nMigrateRowDown sets num_locations back to zero to undo the migration up direction. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#Migrator",
               "documentation": {
                 "identifier": "Migrator",
                 "newPage": false,
                 "searchKey": "migration.Migrator",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -560,12 +393,36 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#Migrator.Down",
+                    "documentation": {
+                      "identifier": "Migrator.Down",
+                      "newPage": false,
+                      "searchKey": "migration.Migrator.Down",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *Migrator) Down(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *Migrator) Down(ctx context.Context) error\n```\n\nDown runs a batch of the migration in reverse. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#Migrator.Progress",
                     "documentation": {
                       "identifier": "Migrator.Progress",
                       "newPage": false,
                       "searchKey": "migration.Migrator.Progress",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -585,7 +442,9 @@
                       "identifier": "Migrator.Up",
                       "newPage": false,
                       "searchKey": "migration.Migrator.Up",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -600,20 +459,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#Migrator.Down",
+                    "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#Migrator.processRows",
                     "documentation": {
-                      "identifier": "Migrator.Down",
+                      "identifier": "Migrator.processRows",
                       "newPage": false,
-                      "searchKey": "migration.Migrator.Down",
-                      "tags": null
+                      "searchKey": "migration.Migrator.processRows",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (m *Migrator) Down(ctx context.Context) error"
+                      "value": "func (m *Migrator) processRows(ctx context.Context, tx *lsifstore.Store, dumpID, version int, driverFunc driverFunc) (_ <-chan []interface{}, err error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (m *Migrator) Down(ctx context.Context) error\n```\n\nDown runs a batch of the migration in reverse. \n\n"
+                      "value": "```Go\nfunc (m *Migrator) processRows(ctx context.Context, tx *lsifstore.Store, dumpID, version int, driverFunc driverFunc) (_ <-chan []interface{}, err error)\n```\n\nprocessRows selects a batch of rows from the target table associated with the given dump identifier to  update and calls the given driver func over each row. The driver func returns the set of values that should be used to update that row. These values are fed into a channel usable for batch insert. \n\n"
                     },
                     "children": null
                   }
@@ -626,6 +488,7 @@
                       "newPage": false,
                       "searchKey": "migration.Migrator.run",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -648,6 +511,7 @@
                       "newPage": false,
                       "searchKey": "migration.Migrator.selectAndLockDump",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -664,34 +528,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#Migrator.processRows",
-                    "documentation": {
-                      "identifier": "Migrator.processRows",
-                      "newPage": false,
-                      "searchKey": "migration.Migrator.processRows",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *Migrator) processRows(ctx context.Context, tx *lsifstore.Store, dumpID, version int, driverFunc driverFunc) (_ <-chan []interface{}, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *Migrator) processRows(ctx context.Context, tx *lsifstore.Store, dumpID, version int, driverFunc driverFunc) (_ <-chan []interface{}, err error)\n```\n\nprocessRows selects a batch of rows from the target table associated with the given dump identifier to  update and calls the given driver func over each row. The driver func returns the set of values that should be used to update that row. These values are fed into a channel usable for batch insert. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#Migrator.updateBatch",
                     "documentation": {
                       "identifier": "Migrator.updateBatch",
                       "newPage": false,
                       "searchKey": "migration.Migrator.updateBatch",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -711,68 +554,142 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#migratorOptions",
+              "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#diagnosticsCountMigrator",
               "documentation": {
-                "identifier": "migratorOptions",
+                "identifier": "diagnosticsCountMigrator",
                 "newPage": false,
-                "searchKey": "migration.migratorOptions",
+                "searchKey": "migration.diagnosticsCountMigrator",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type migratorOptions struct"
+                "value": "type diagnosticsCountMigrator struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype migratorOptions struct {\n\t// tableName is the name of the table undergoing migration.\n\ttableName string\n\n\t// targetVersion is the value of the row's schema version after an up migration.\n\ttargetVersion int\n\n\t// batchSize limits the number of rows that will be scanned on each call to Up/Down.\n\tbatchSize int\n\n\t// fields is an ordered set of fields used to construct temporary tables and update queries.\n\tfields []fieldSpec\n}\n```\n\n"
+                "value": "```Go\ntype diagnosticsCountMigrator struct {\n\tserializer *lsifstore.Serializer\n}\n```\n\n"
               },
-              "children": null
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#diagnosticsCountMigrator.MigrateRowDown",
+                    "documentation": {
+                      "identifier": "diagnosticsCountMigrator.MigrateRowDown",
+                      "newPage": false,
+                      "searchKey": "migration.diagnosticsCountMigrator.MigrateRowDown",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *diagnosticsCountMigrator) MigrateRowDown(scanner scanner) ([]interface{}, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *diagnosticsCountMigrator) MigrateRowDown(scanner scanner) ([]interface{}, error)\n```\n\nMigrateRowDown sets num_diagnostics back to zero to undo the migration up direction. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#diagnosticsCountMigrator.MigrateRowUp",
+                    "documentation": {
+                      "identifier": "diagnosticsCountMigrator.MigrateRowUp",
+                      "newPage": false,
+                      "searchKey": "migration.diagnosticsCountMigrator.MigrateRowUp",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *diagnosticsCountMigrator) MigrateRowUp(scanner scanner) ([]interface{}, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *diagnosticsCountMigrator) MigrateRowUp(scanner scanner) ([]interface{}, error)\n```\n\nMigrateRowUp reads the payload of the given row and returns an updateSpec on how to modify the record to conform to the new schema. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#fieldSpec",
+              "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#documentColumnSplitMigrator",
               "documentation": {
-                "identifier": "fieldSpec",
+                "identifier": "documentColumnSplitMigrator",
                 "newPage": false,
-                "searchKey": "migration.fieldSpec",
+                "searchKey": "migration.documentColumnSplitMigrator",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type fieldSpec struct"
+                "value": "type documentColumnSplitMigrator struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype fieldSpec struct {\n\t// name is the name of the column.\n\tname string\n\n\t// postgresType is the type (with modifiers) of the column.\n\tpostgresType string\n\n\t// primaryKey indicates that the field is part of a composite primary key.\n\tprimaryKey bool\n\n\t// readOnly indicates that the field should be skipped on updates.\n\treadOnly bool\n\n\t// updateOnly indicates that the field should be skipped on selects.\n\tupdateOnly bool\n}\n```\n\n"
+                "value": "```Go\ntype documentColumnSplitMigrator struct {\n\tserializer *lsifstore.Serializer\n}\n```\n\n"
               },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#migrationDriver",
-              "documentation": {
-                "identifier": "migrationDriver",
-                "newPage": false,
-                "searchKey": "migration.migrationDriver",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type migrationDriver interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype migrationDriver interface {\n\t// MigrateRowUp determines which fields to update for the given row. The scanner will receive\n\t// the values of the primary keys plus any additional non-updateOnly fields supplied via the\n\t// migrator's fields option. Implementations must return the same number of values as the set\n\t// of primary keys plus any additional non-selectOnly fields supplied via the migrator's fields\n\t// option.\n\tMigrateRowUp(scanner scanner) ([]interface{}, error)\n\n\t// MigrateRowDown undoes the migration for the given row.  The scanner will receive the values\n\t// of the primary keys plus any additional non-updateOnly fields supplied via the migrator's\n\t// fields option. Implementations must return the same number of values as the set  of primary\n\t// keys plus any additional non-selectOnly fields supplied via the migrator's fields option.\n\tMigrateRowDown(scanner scanner) ([]interface{}, error)\n}\n```\n\n"
-              },
-              "children": null
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#documentColumnSplitMigrator.MigrateRowDown",
+                    "documentation": {
+                      "identifier": "documentColumnSplitMigrator.MigrateRowDown",
+                      "newPage": false,
+                      "searchKey": "migration.documentColumnSplitMigrator.MigrateRowDown",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *documentColumnSplitMigrator) MigrateRowDown(scanner scanner) ([]interface{}, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *documentColumnSplitMigrator) MigrateRowDown(scanner scanner) ([]interface{}, error)\n```\n\nMigrateRowDown sets num_diagnostics back to zero to undo the migration up direction. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#documentColumnSplitMigrator.MigrateRowUp",
+                    "documentation": {
+                      "identifier": "documentColumnSplitMigrator.MigrateRowUp",
+                      "newPage": false,
+                      "searchKey": "migration.documentColumnSplitMigrator.MigrateRowUp",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *documentColumnSplitMigrator) MigrateRowUp(scanner scanner) ([]interface{}, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *documentColumnSplitMigrator) MigrateRowUp(scanner scanner) ([]interface{}, error)\n```\n\nMigrateRowUp reads the payload of the given row and returns an updateSpec on how to modify the record to conform to the new schema. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
             }
           },
           {
@@ -783,6 +700,7 @@
                 "newPage": false,
                 "searchKey": "migration.driverFunc",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -799,12 +717,152 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#fieldSpec",
+              "documentation": {
+                "identifier": "fieldSpec",
+                "newPage": false,
+                "searchKey": "migration.fieldSpec",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type fieldSpec struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype fieldSpec struct {\n\t// name is the name of the column.\n\tname string\n\n\t// postgresType is the type (with modifiers) of the column.\n\tpostgresType string\n\n\t// primaryKey indicates that the field is part of a composite primary key.\n\tprimaryKey bool\n\n\t// readOnly indicates that the field should be skipped on updates.\n\treadOnly bool\n\n\t// updateOnly indicates that the field should be skipped on selects.\n\tupdateOnly bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#locationsCountMigrator",
+              "documentation": {
+                "identifier": "locationsCountMigrator",
+                "newPage": false,
+                "searchKey": "migration.locationsCountMigrator",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type locationsCountMigrator struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype locationsCountMigrator struct {\n\tserializer *lsifstore.Serializer\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#locationsCountMigrator.MigrateRowDown",
+                    "documentation": {
+                      "identifier": "locationsCountMigrator.MigrateRowDown",
+                      "newPage": false,
+                      "searchKey": "migration.locationsCountMigrator.MigrateRowDown",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *locationsCountMigrator) MigrateRowDown(scanner scanner) ([]interface{}, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *locationsCountMigrator) MigrateRowDown(scanner scanner) ([]interface{}, error)\n```\n\nMigrateRowDown sets num_locations back to zero to undo the migration up direction. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#locationsCountMigrator.MigrateRowUp",
+                    "documentation": {
+                      "identifier": "locationsCountMigrator.MigrateRowUp",
+                      "newPage": false,
+                      "searchKey": "migration.locationsCountMigrator.MigrateRowUp",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *locationsCountMigrator) MigrateRowUp(scanner scanner) ([]interface{}, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *locationsCountMigrator) MigrateRowUp(scanner scanner) ([]interface{}, error)\n```\n\nMigrateRowUp reads the payload of the given row and returns an updateSpec on how to modify the record to conform to the new schema. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#migrationDriver",
+              "documentation": {
+                "identifier": "migrationDriver",
+                "newPage": false,
+                "searchKey": "migration.migrationDriver",
+                "tags": [
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type migrationDriver interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype migrationDriver interface {\n\t// MigrateRowUp determines which fields to update for the given row. The scanner will receive\n\t// the values of the primary keys plus any additional non-updateOnly fields supplied via the\n\t// migrator's fields option. Implementations must return the same number of values as the set\n\t// of primary keys plus any additional non-selectOnly fields supplied via the migrator's fields\n\t// option.\n\tMigrateRowUp(scanner scanner) ([]interface{}, error)\n\n\t// MigrateRowDown undoes the migration for the given row.  The scanner will receive the values\n\t// of the primary keys plus any additional non-updateOnly fields supplied via the migrator's\n\t// fields option. Implementations must return the same number of values as the set  of primary\n\t// keys plus any additional non-selectOnly fields supplied via the migrator's fields option.\n\tMigrateRowDown(scanner scanner) ([]interface{}, error)\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#migratorOptions",
+              "documentation": {
+                "identifier": "migratorOptions",
+                "newPage": false,
+                "searchKey": "migration.migratorOptions",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type migratorOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype migratorOptions struct {\n\t// tableName is the name of the table undergoing migration.\n\ttableName string\n\n\t// targetVersion is the value of the row's schema version after an up migration.\n\ttargetVersion int\n\n\t// batchSize limits the number of rows that will be scanned on each call to Up/Down.\n\tbatchSize int\n\n\t// fields is an ordered set of fields used to construct temporary tables and update queries.\n\tfields []fieldSpec\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#scanner",
               "documentation": {
                 "identifier": "scanner",
                 "newPage": false,
                 "searchKey": "migration.scanner",
                 "tags": [
+                  "interface",
                   "private"
                 ]
               },
@@ -827,6 +885,7 @@
                 "newPage": false,
                 "searchKey": "migration.testMigrationDriver",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -841,34 +900,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#testMigrationDriver.MigrateRowUp",
-                    "documentation": {
-                      "identifier": "testMigrationDriver.MigrateRowUp",
-                      "newPage": false,
-                      "searchKey": "migration.testMigrationDriver.MigrateRowUp",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *testMigrationDriver) MigrateRowUp(scanner scanner) ([]interface{}, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *testMigrationDriver) MigrateRowUp(scanner scanner) ([]interface{}, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#testMigrationDriver.MigrateRowDown",
                     "documentation": {
                       "identifier": "testMigrationDriver.MigrateRowDown",
                       "newPage": false,
                       "searchKey": "migration.testMigrationDriver.MigrateRowDown",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -879,6 +917,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (m *testMigrationDriver) MigrateRowDown(scanner scanner) ([]interface{}, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#testMigrationDriver.MigrateRowUp",
+                    "documentation": {
+                      "identifier": "testMigrationDriver.MigrateRowUp",
+                      "newPage": false,
+                      "searchKey": "migration.testMigrationDriver.MigrateRowUp",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *testMigrationDriver) MigrateRowUp(scanner scanner) ([]interface{}, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *testMigrationDriver) MigrateRowUp(scanner scanner) ([]interface{}, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -897,6 +958,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -916,7 +978,9 @@
                 "identifier": "NewDiagnosticsCountMigrator",
                 "newPage": false,
                 "searchKey": "migration.NewDiagnosticsCountMigrator",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -936,7 +1000,9 @@
                 "identifier": "NewDocumentColumnSplitMigrator",
                 "newPage": false,
                 "searchKey": "migration.NewDocumentColumnSplitMigrator",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -956,7 +1022,9 @@
                 "identifier": "NewLocationsCountMigrator",
                 "newPage": false,
                 "searchKey": "migration.NewLocationsCountMigrator",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -971,35 +1039,15 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#newMigrator",
-              "documentation": {
-                "identifier": "newMigrator",
-                "newPage": false,
-                "searchKey": "migration.newMigrator",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func newMigrator(store *lsifstore.Store, driver migrationDriver, options migratorOptions) oobmigration.Migrator"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc newMigrator(store *lsifstore.Store, driver migrationDriver, options migratorOptions) oobmigration.Migrator\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#TestDiagnosticsCountMigrator",
               "documentation": {
                 "identifier": "TestDiagnosticsCountMigrator",
                 "newPage": false,
                 "searchKey": "migration.TestDiagnosticsCountMigrator",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1021,7 +1069,9 @@
                 "newPage": false,
                 "searchKey": "migration.TestDocumentColumnSplitMigrator",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1043,7 +1093,9 @@
                 "newPage": false,
                 "searchKey": "migration.TestLocationsCountMigrator",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1059,12 +1111,37 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#TestMigratorRemovesBoundsWithoutData",
+              "documentation": {
+                "identifier": "TestMigratorRemovesBoundsWithoutData",
+                "newPage": false,
+                "searchKey": "migration.TestMigratorRemovesBoundsWithoutData",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMigratorRemovesBoundsWithoutData(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMigratorRemovesBoundsWithoutData(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#init.migration_test.go",
               "documentation": {
                 "identifier": "init.migration_test.go",
                 "newPage": false,
                 "searchKey": "migration.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1081,22 +1158,23 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#TestMigratorRemovesBoundsWithoutData",
+              "pathID": "/enterprise/internal/codeintel/stores/lsifstore/migration#newMigrator",
               "documentation": {
-                "identifier": "TestMigratorRemovesBoundsWithoutData",
+                "identifier": "newMigrator",
                 "newPage": false,
-                "searchKey": "migration.TestMigratorRemovesBoundsWithoutData",
+                "searchKey": "migration.newMigrator",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestMigratorRemovesBoundsWithoutData(t *testing.T)"
+                "value": "func newMigrator(store *lsifstore.Store, driver migrationDriver, options migratorOptions) oobmigration.Migrator"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestMigratorRemovesBoundsWithoutData(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc newMigrator(store *lsifstore.Store, driver migrationDriver, options migratorOptions) oobmigration.Migrator\n```\n\n"
               },
               "children": null
             }

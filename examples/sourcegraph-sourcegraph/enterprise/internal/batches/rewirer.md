@@ -6,29 +6,30 @@
     * [type ChangesetRewirer struct](#ChangesetRewirer)
         * [func New(mappings btypes.RewirerMappings, batchChangeID int64) *ChangesetRewirer](#New)
         * [func (r *ChangesetRewirer) Rewire() (changesets []*btypes.Changeset, err error)](#ChangesetRewirer.Rewire)
-        * [func (r *ChangesetRewirer) createChangesetForSpec(repo *types.Repo, spec *btypes.ChangesetSpec) *btypes.Changeset](#ChangesetRewirer.createChangesetForSpec)
-        * [func (r *ChangesetRewirer) updateChangesetToNewSpec(c *btypes.Changeset, spec *btypes.ChangesetSpec)](#ChangesetRewirer.updateChangesetToNewSpec)
-        * [func (r *ChangesetRewirer) createTrackingChangeset(repo *types.Repo, externalID string) *btypes.Changeset](#ChangesetRewirer.createTrackingChangeset)
         * [func (r *ChangesetRewirer) attachTrackingChangeset(changeset *btypes.Changeset)](#ChangesetRewirer.attachTrackingChangeset)
         * [func (r *ChangesetRewirer) closeChangeset(changeset *btypes.Changeset)](#ChangesetRewirer.closeChangeset)
+        * [func (r *ChangesetRewirer) createChangesetForSpec(repo *types.Repo, spec *btypes.ChangesetSpec) *btypes.Changeset](#ChangesetRewirer.createChangesetForSpec)
+        * [func (r *ChangesetRewirer) createTrackingChangeset(repo *types.Repo, externalID string) *btypes.Changeset](#ChangesetRewirer.createTrackingChangeset)
+        * [func (r *ChangesetRewirer) updateChangesetToNewSpec(c *btypes.Changeset, spec *btypes.ChangesetSpec)](#ChangesetRewirer.updateChangesetToNewSpec)
     * [type ErrRepoNotSupported struct](#ErrRepoNotSupported)
         * [func (e ErrRepoNotSupported) Error() string](#ErrRepoNotSupported.Error)
 * [Functions](#func)
-    * [func checkRepoSupported(repo *types.Repo) error](#checkRepoSupported)
     * [func TestRewirer_Rewire(t *testing.T)](#TestRewirer_Rewire)
     * [func assertResetReconcilerState(a ct.ChangesetAssertions) ct.ChangesetAssertions](#assertResetReconcilerState)
+    * [func checkRepoSupported(repo *types.Repo) error](#checkRepoSupported)
 
 
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="ChangesetRewirer" href="#ChangesetRewirer">type ChangesetRewirer struct</a>
 
 ```
 searchKey: rewirer.ChangesetRewirer
+tags: [struct]
 ```
 
 ```Go
@@ -43,6 +44,7 @@ type ChangesetRewirer struct {
 
 ```
 searchKey: rewirer.New
+tags: [method]
 ```
 
 ```Go
@@ -53,6 +55,7 @@ func New(mappings btypes.RewirerMappings, batchChangeID int64) *ChangesetRewirer
 
 ```
 searchKey: rewirer.ChangesetRewirer.Rewire
+tags: [function]
 ```
 
 ```Go
@@ -63,44 +66,11 @@ Rewire uses RewirerMappings (mapping ChangesetSpecs to matching Changesets) gene
 
 It also updates the ChangesetIDs on the batch change. 
 
-#### <a id="ChangesetRewirer.createChangesetForSpec" href="#ChangesetRewirer.createChangesetForSpec">func (r *ChangesetRewirer) createChangesetForSpec(repo *types.Repo, spec *btypes.ChangesetSpec) *btypes.Changeset</a>
-
-```
-searchKey: rewirer.ChangesetRewirer.createChangesetForSpec
-tags: [private]
-```
-
-```Go
-func (r *ChangesetRewirer) createChangesetForSpec(repo *types.Repo, spec *btypes.ChangesetSpec) *btypes.Changeset
-```
-
-#### <a id="ChangesetRewirer.updateChangesetToNewSpec" href="#ChangesetRewirer.updateChangesetToNewSpec">func (r *ChangesetRewirer) updateChangesetToNewSpec(c *btypes.Changeset, spec *btypes.ChangesetSpec)</a>
-
-```
-searchKey: rewirer.ChangesetRewirer.updateChangesetToNewSpec
-tags: [private]
-```
-
-```Go
-func (r *ChangesetRewirer) updateChangesetToNewSpec(c *btypes.Changeset, spec *btypes.ChangesetSpec)
-```
-
-#### <a id="ChangesetRewirer.createTrackingChangeset" href="#ChangesetRewirer.createTrackingChangeset">func (r *ChangesetRewirer) createTrackingChangeset(repo *types.Repo, externalID string) *btypes.Changeset</a>
-
-```
-searchKey: rewirer.ChangesetRewirer.createTrackingChangeset
-tags: [private]
-```
-
-```Go
-func (r *ChangesetRewirer) createTrackingChangeset(repo *types.Repo, externalID string) *btypes.Changeset
-```
-
 #### <a id="ChangesetRewirer.attachTrackingChangeset" href="#ChangesetRewirer.attachTrackingChangeset">func (r *ChangesetRewirer) attachTrackingChangeset(changeset *btypes.Changeset)</a>
 
 ```
 searchKey: rewirer.ChangesetRewirer.attachTrackingChangeset
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -111,17 +81,51 @@ func (r *ChangesetRewirer) attachTrackingChangeset(changeset *btypes.Changeset)
 
 ```
 searchKey: rewirer.ChangesetRewirer.closeChangeset
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (r *ChangesetRewirer) closeChangeset(changeset *btypes.Changeset)
 ```
 
+#### <a id="ChangesetRewirer.createChangesetForSpec" href="#ChangesetRewirer.createChangesetForSpec">func (r *ChangesetRewirer) createChangesetForSpec(repo *types.Repo, spec *btypes.ChangesetSpec) *btypes.Changeset</a>
+
+```
+searchKey: rewirer.ChangesetRewirer.createChangesetForSpec
+tags: [method private]
+```
+
+```Go
+func (r *ChangesetRewirer) createChangesetForSpec(repo *types.Repo, spec *btypes.ChangesetSpec) *btypes.Changeset
+```
+
+#### <a id="ChangesetRewirer.createTrackingChangeset" href="#ChangesetRewirer.createTrackingChangeset">func (r *ChangesetRewirer) createTrackingChangeset(repo *types.Repo, externalID string) *btypes.Changeset</a>
+
+```
+searchKey: rewirer.ChangesetRewirer.createTrackingChangeset
+tags: [method private]
+```
+
+```Go
+func (r *ChangesetRewirer) createTrackingChangeset(repo *types.Repo, externalID string) *btypes.Changeset
+```
+
+#### <a id="ChangesetRewirer.updateChangesetToNewSpec" href="#ChangesetRewirer.updateChangesetToNewSpec">func (r *ChangesetRewirer) updateChangesetToNewSpec(c *btypes.Changeset, spec *btypes.ChangesetSpec)</a>
+
+```
+searchKey: rewirer.ChangesetRewirer.updateChangesetToNewSpec
+tags: [method private]
+```
+
+```Go
+func (r *ChangesetRewirer) updateChangesetToNewSpec(c *btypes.Changeset, spec *btypes.ChangesetSpec)
+```
+
 ### <a id="ErrRepoNotSupported" href="#ErrRepoNotSupported">type ErrRepoNotSupported struct</a>
 
 ```
 searchKey: rewirer.ErrRepoNotSupported
+tags: [struct]
 ```
 
 ```Go
@@ -137,6 +141,7 @@ ErrRepoNotSupported is thrown by the rewirer when it encounters a mapping target
 
 ```
 searchKey: rewirer.ErrRepoNotSupported.Error
+tags: [function]
 ```
 
 ```Go
@@ -146,27 +151,14 @@ func (e ErrRepoNotSupported) Error() string
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
-
-### <a id="checkRepoSupported" href="#checkRepoSupported">func checkRepoSupported(repo *types.Repo) error</a>
-
-```
-searchKey: rewirer.checkRepoSupported
-tags: [private]
-```
-
-```Go
-func checkRepoSupported(repo *types.Repo) error
-```
-
-checkRepoSupported checks whether the given repository is supported by batch changes and if not it returns an error. 
 
 ### <a id="TestRewirer_Rewire" href="#TestRewirer_Rewire">func TestRewirer_Rewire(t *testing.T)</a>
 
 ```
 searchKey: rewirer.TestRewirer_Rewire
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -177,10 +169,23 @@ func TestRewirer_Rewire(t *testing.T)
 
 ```
 searchKey: rewirer.assertResetReconcilerState
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func assertResetReconcilerState(a ct.ChangesetAssertions) ct.ChangesetAssertions
 ```
+
+### <a id="checkRepoSupported" href="#checkRepoSupported">func checkRepoSupported(repo *types.Repo) error</a>
+
+```
+searchKey: rewirer.checkRepoSupported
+tags: [method private]
+```
+
+```Go
+func checkRepoSupported(repo *types.Repo) error
+```
+
+checkRepoSupported checks whether the given repository is supported by batch changes and if not it returns an error. 
 

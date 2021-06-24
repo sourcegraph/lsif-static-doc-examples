@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "crypto/ecdsa_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,22 +41,23 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto/ecdsa_test#testEqual",
+              "pathID": "/crypto/ecdsa_test#Example",
               "documentation": {
-                "identifier": "testEqual",
+                "identifier": "Example",
                 "newPage": false,
-                "searchKey": "ecdsa_test.testEqual",
+                "searchKey": "ecdsa_test.Example",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func testEqual(t *testing.T, c elliptic.Curve)"
+                "value": "func Example()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc testEqual(t *testing.T, c elliptic.Curve)\n```\n\n"
+                "value": "```Go\nfunc Example()\n```\n\n"
               },
               "children": null
             }
@@ -67,7 +70,9 @@
                 "newPage": false,
                 "searchKey": "ecdsa_test.TestEqual",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -83,22 +88,23 @@
           },
           {
             "node": {
-              "pathID": "/crypto/ecdsa_test#Example",
+              "pathID": "/crypto/ecdsa_test#testEqual",
               "documentation": {
-                "identifier": "Example",
+                "identifier": "testEqual",
                 "newPage": false,
-                "searchKey": "ecdsa_test.Example",
+                "searchKey": "ecdsa_test.testEqual",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func Example()"
+                "value": "func testEqual(t *testing.T, c elliptic.Curve)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc Example()\n```\n\n"
+                "value": "```Go\nfunc testEqual(t *testing.T, c elliptic.Curve)\n```\n\n"
               },
               "children": null
             }

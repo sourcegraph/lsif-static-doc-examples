@@ -75,67 +75,86 @@ The trace tool computes the latency of a task by measuring the time between the 
 ## Index
 
 * [Constants](#const)
-    * [const regionStartCode](#regionStartCode)
     * [const regionEndCode](#regionEndCode)
+    * [const regionStartCode](#regionStartCode)
 * [Variables](#var)
-    * [var lastTaskID](#lastTaskID)
     * [var bgTask](#bgTask)
+    * [var lastTaskID](#lastTaskID)
     * [var noopRegion](#noopRegion)
     * [var tracing](#tracing)
 * [Types](#type)
-    * [type traceContextKey struct{}](#traceContextKey)
+    * [type Region struct](#Region)
+        * [func StartRegion(ctx context.Context, regionType string) *Region](#StartRegion)
+        * [func (r *Region) End()](#Region.End)
     * [type Task struct](#Task)
         * [func NewTask(pctx context.Context, taskType string) (ctx context.Context, task *Task)](#NewTask)
         * [func fromContext(ctx context.Context) *Task](#fromContext)
         * [func (t *Task) End()](#Task.End)
-    * [type Region struct](#Region)
-        * [func StartRegion(ctx context.Context, regionType string) *Region](#StartRegion)
-        * [func (r *Region) End()](#Region.End)
+    * [type traceContextKey struct{}](#traceContextKey)
 * [Functions](#func)
-    * [func newID() uint64](#newID)
+    * [func IsEnabled() bool](#IsEnabled)
     * [func Log(ctx context.Context, category, message string)](#Log)
     * [func Logf(ctx context.Context, category, format string, args ...interface{})](#Logf)
-    * [func WithRegion(ctx context.Context, regionType string, fn func())](#WithRegion)
-    * [func IsEnabled() bool](#IsEnabled)
-    * [func userTaskCreate(id, parentID uint64, taskType string)](#userTaskCreate)
-    * [func userTaskEnd(id uint64)](#userTaskEnd)
-    * [func userRegion(id, mode uint64, regionType string)](#userRegion)
-    * [func userLog(id uint64, category, message string)](#userLog)
     * [func Start(w io.Writer) error](#Start)
     * [func Stop()](#Stop)
+    * [func WithRegion(ctx context.Context, regionType string, fn func())](#WithRegion)
+    * [func newID() uint64](#newID)
+    * [func userLog(id uint64, category, message string)](#userLog)
+    * [func userRegion(id, mode uint64, regionType string)](#userRegion)
+    * [func userTaskCreate(id, parentID uint64, taskType string)](#userTaskCreate)
+    * [func userTaskEnd(id uint64)](#userTaskEnd)
 
 
 ## <a id="const" href="#const">Constants</a>
 
-### <a id="regionStartCode" href="#regionStartCode">const regionStartCode</a>
-
 ```
-searchKey: trace.regionStartCode
-tags: [private]
-```
-
-```Go
-const regionStartCode = uint64(0)
+tags: [package]
 ```
 
 ### <a id="regionEndCode" href="#regionEndCode">const regionEndCode</a>
 
 ```
 searchKey: trace.regionEndCode
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
 const regionEndCode = uint64(1)
 ```
 
+### <a id="regionStartCode" href="#regionStartCode">const regionStartCode</a>
+
+```
+searchKey: trace.regionStartCode
+tags: [constant number private]
+```
+
+```Go
+const regionStartCode = uint64(0)
+```
+
 ## <a id="var" href="#var">Variables</a>
+
+```
+tags: [package]
+```
+
+### <a id="bgTask" href="#bgTask">var bgTask</a>
+
+```
+searchKey: trace.bgTask
+tags: [variable struct private]
+```
+
+```Go
+var bgTask = Task{id: uint64(0)}
+```
 
 ### <a id="lastTaskID" href="#lastTaskID">var lastTaskID</a>
 
 ```
 searchKey: trace.lastTaskID
-tags: [private]
+tags: [variable number private]
 ```
 
 ```Go
@@ -143,22 +162,11 @@ var lastTaskID uint64 = 0 // task id issued last time
 
 ```
 
-### <a id="bgTask" href="#bgTask">var bgTask</a>
-
-```
-searchKey: trace.bgTask
-tags: [private]
-```
-
-```Go
-var bgTask = Task{id: uint64(0)}
-```
-
 ### <a id="noopRegion" href="#noopRegion">var noopRegion</a>
 
 ```
 searchKey: trace.noopRegion
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -169,7 +177,7 @@ var noopRegion = &Region{}
 
 ```
 searchKey: trace.tracing
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -181,21 +189,61 @@ var tracing struct {
 
 ## <a id="type" href="#type">Types</a>
 
-### <a id="traceContextKey" href="#traceContextKey">type traceContextKey struct{}</a>
+```
+tags: [package]
+```
+
+### <a id="Region" href="#Region">type Region struct</a>
 
 ```
-searchKey: trace.traceContextKey
-tags: [private]
+searchKey: trace.Region
+tags: [struct]
 ```
 
 ```Go
-type traceContextKey struct{}
+type Region struct {
+	id         uint64
+	regionType string
+}
 ```
+
+Region is a region of code whose execution time interval is traced. 
+
+#### <a id="StartRegion" href="#StartRegion">func StartRegion(ctx context.Context, regionType string) *Region</a>
+
+```
+searchKey: trace.StartRegion
+tags: [method]
+```
+
+```Go
+func StartRegion(ctx context.Context, regionType string) *Region
+```
+
+StartRegion starts a region and returns a function for marking the end of the region. The returned Region's End function must be called from the same goroutine where the region was started. Within each goroutine, regions must nest. That is, regions started after this region must be ended before this region can be ended. Recommended usage is 
+
+```
+defer trace.StartRegion(ctx, "myTracedRegion").End()
+
+```
+#### <a id="Region.End" href="#Region.End">func (r *Region) End()</a>
+
+```
+searchKey: trace.Region.End
+tags: [function]
+```
+
+```Go
+func (r *Region) End()
+```
+
+End marks the end of the traced code region. 
 
 ### <a id="Task" href="#Task">type Task struct</a>
 
 ```
 searchKey: trace.Task
+tags: [struct]
 ```
 
 ```Go
@@ -210,6 +258,7 @@ Task is a data type for tracing a user-defined, logical operation.
 
 ```
 searchKey: trace.NewTask
+tags: [method]
 ```
 
 ```Go
@@ -236,7 +285,7 @@ go func() {  // continue processing the task in a separate goroutine.
 
 ```
 searchKey: trace.fromContext
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -247,6 +296,7 @@ func fromContext(ctx context.Context) *Task
 
 ```
 searchKey: trace.Task.End
+tags: [function]
 ```
 
 ```Go
@@ -255,66 +305,41 @@ func (t *Task) End()
 
 End marks the end of the operation represented by the Task. 
 
-### <a id="Region" href="#Region">type Region struct</a>
+### <a id="traceContextKey" href="#traceContextKey">type traceContextKey struct{}</a>
 
 ```
-searchKey: trace.Region
-```
-
-```Go
-type Region struct {
-	id         uint64
-	regionType string
-}
-```
-
-Region is a region of code whose execution time interval is traced. 
-
-#### <a id="StartRegion" href="#StartRegion">func StartRegion(ctx context.Context, regionType string) *Region</a>
-
-```
-searchKey: trace.StartRegion
+searchKey: trace.traceContextKey
+tags: [struct private]
 ```
 
 ```Go
-func StartRegion(ctx context.Context, regionType string) *Region
+type traceContextKey struct{}
 ```
-
-StartRegion starts a region and returns a function for marking the end of the region. The returned Region's End function must be called from the same goroutine where the region was started. Within each goroutine, regions must nest. That is, regions started after this region must be ended before this region can be ended. Recommended usage is 
-
-```
-defer trace.StartRegion(ctx, "myTracedRegion").End()
-
-```
-#### <a id="Region.End" href="#Region.End">func (r *Region) End()</a>
-
-```
-searchKey: trace.Region.End
-```
-
-```Go
-func (r *Region) End()
-```
-
-End marks the end of the traced code region. 
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="newID" href="#newID">func newID() uint64</a>
+```
+tags: [package]
+```
+
+### <a id="IsEnabled" href="#IsEnabled">func IsEnabled() bool</a>
 
 ```
-searchKey: trace.newID
-tags: [private]
+searchKey: trace.IsEnabled
+tags: [function]
 ```
 
 ```Go
-func newID() uint64
+func IsEnabled() bool
 ```
+
+IsEnabled reports whether tracing is enabled. The information is advisory only. The tracing status may have changed by the time this function returns. 
 
 ### <a id="Log" href="#Log">func Log(ctx context.Context, category, message string)</a>
 
 ```
 searchKey: trace.Log
+tags: [method]
 ```
 
 ```Go
@@ -327,6 +352,7 @@ Log emits a one-off event with the given category and message. Category can be e
 
 ```
 searchKey: trace.Logf
+tags: [method]
 ```
 
 ```Go
@@ -335,88 +361,11 @@ func Logf(ctx context.Context, category, format string, args ...interface{})
 
 Logf is like Log, but the value is formatted using the specified format spec. 
 
-### <a id="WithRegion" href="#WithRegion">func WithRegion(ctx context.Context, regionType string, fn func())</a>
-
-```
-searchKey: trace.WithRegion
-```
-
-```Go
-func WithRegion(ctx context.Context, regionType string, fn func())
-```
-
-WithRegion starts a region associated with its calling goroutine, runs fn, and then ends the region. If the context carries a task, the region is associated with the task. Otherwise, the region is attached to the background task. 
-
-The regionType is used to classify regions, so there should be only a handful of unique region types. 
-
-### <a id="IsEnabled" href="#IsEnabled">func IsEnabled() bool</a>
-
-```
-searchKey: trace.IsEnabled
-```
-
-```Go
-func IsEnabled() bool
-```
-
-IsEnabled reports whether tracing is enabled. The information is advisory only. The tracing status may have changed by the time this function returns. 
-
-### <a id="userTaskCreate" href="#userTaskCreate">func userTaskCreate(id, parentID uint64, taskType string)</a>
-
-```
-searchKey: trace.userTaskCreate
-tags: [private]
-```
-
-```Go
-func userTaskCreate(id, parentID uint64, taskType string)
-```
-
-emits UserTaskCreate event. 
-
-### <a id="userTaskEnd" href="#userTaskEnd">func userTaskEnd(id uint64)</a>
-
-```
-searchKey: trace.userTaskEnd
-tags: [private]
-```
-
-```Go
-func userTaskEnd(id uint64)
-```
-
-emits UserTaskEnd event. 
-
-### <a id="userRegion" href="#userRegion">func userRegion(id, mode uint64, regionType string)</a>
-
-```
-searchKey: trace.userRegion
-tags: [private]
-```
-
-```Go
-func userRegion(id, mode uint64, regionType string)
-```
-
-emits UserRegion event. 
-
-### <a id="userLog" href="#userLog">func userLog(id uint64, category, message string)</a>
-
-```
-searchKey: trace.userLog
-tags: [private]
-```
-
-```Go
-func userLog(id uint64, category, message string)
-```
-
-emits UserLog event. 
-
 ### <a id="Start" href="#Start">func Start(w io.Writer) error</a>
 
 ```
 searchKey: trace.Start
+tags: [method]
 ```
 
 ```Go
@@ -429,6 +378,7 @@ Start enables tracing for the current program. While tracing, the trace will be 
 
 ```
 searchKey: trace.Stop
+tags: [function]
 ```
 
 ```Go
@@ -436,4 +386,82 @@ func Stop()
 ```
 
 Stop stops the current tracing, if any. Stop only returns after all the writes for the trace have completed. 
+
+### <a id="WithRegion" href="#WithRegion">func WithRegion(ctx context.Context, regionType string, fn func())</a>
+
+```
+searchKey: trace.WithRegion
+tags: [method]
+```
+
+```Go
+func WithRegion(ctx context.Context, regionType string, fn func())
+```
+
+WithRegion starts a region associated with its calling goroutine, runs fn, and then ends the region. If the context carries a task, the region is associated with the task. Otherwise, the region is attached to the background task. 
+
+The regionType is used to classify regions, so there should be only a handful of unique region types. 
+
+### <a id="newID" href="#newID">func newID() uint64</a>
+
+```
+searchKey: trace.newID
+tags: [function private]
+```
+
+```Go
+func newID() uint64
+```
+
+### <a id="userLog" href="#userLog">func userLog(id uint64, category, message string)</a>
+
+```
+searchKey: trace.userLog
+tags: [method private]
+```
+
+```Go
+func userLog(id uint64, category, message string)
+```
+
+emits UserLog event. 
+
+### <a id="userRegion" href="#userRegion">func userRegion(id, mode uint64, regionType string)</a>
+
+```
+searchKey: trace.userRegion
+tags: [method private]
+```
+
+```Go
+func userRegion(id, mode uint64, regionType string)
+```
+
+emits UserRegion event. 
+
+### <a id="userTaskCreate" href="#userTaskCreate">func userTaskCreate(id, parentID uint64, taskType string)</a>
+
+```
+searchKey: trace.userTaskCreate
+tags: [method private]
+```
+
+```Go
+func userTaskCreate(id, parentID uint64, taskType string)
+```
+
+emits UserTaskCreate event. 
+
+### <a id="userTaskEnd" href="#userTaskEnd">func userTaskEnd(id uint64)</a>
+
+```
+searchKey: trace.userTaskEnd
+tags: [method private]
+```
+
+```Go
+func userTaskEnd(id uint64)
+```
+
+emits UserTaskEnd event. 
 

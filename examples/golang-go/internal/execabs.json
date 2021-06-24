@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/execabs",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,10 @@
                 "identifier": "ErrNotFound",
                 "newPage": false,
                 "searchKey": "execabs.ErrNotFound",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -68,6 +73,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -87,7 +93,9 @@
                 "identifier": "Cmd",
                 "newPage": false,
                 "searchKey": "execabs.Cmd",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,32 +108,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/execabs#CommandContext",
-                    "documentation": {
-                      "identifier": "CommandContext",
-                      "newPage": false,
-                      "searchKey": "execabs.CommandContext",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func CommandContext(ctx context.Context, name string, arg ...string) *exec.Cmd"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc CommandContext(ctx context.Context, name string, arg ...string) *exec.Cmd\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/execabs#Command",
                     "documentation": {
                       "identifier": "Command",
                       "newPage": false,
                       "searchKey": "execabs.Command",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -134,6 +124,28 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc Command(name string, arg ...string) *exec.Cmd\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/execabs#CommandContext",
+                    "documentation": {
+                      "identifier": "CommandContext",
+                      "newPage": false,
+                      "searchKey": "execabs.CommandContext",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func CommandContext(ctx context.Context, name string, arg ...string) *exec.Cmd"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc CommandContext(ctx context.Context, name string, arg ...string) *exec.Cmd\n```\n\n"
                     },
                     "children": null
                   }
@@ -148,7 +160,9 @@
                 "identifier": "Error",
                 "newPage": false,
                 "searchKey": "execabs.Error",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -168,7 +182,9 @@
                 "identifier": "ExitError",
                 "newPage": false,
                 "searchKey": "execabs.ExitError",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -192,6 +208,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -206,34 +223,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/execabs#relError",
-              "documentation": {
-                "identifier": "relError",
-                "newPage": false,
-                "searchKey": "execabs.relError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func relError(file, path string) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc relError(file, path string) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/execabs#LookPath",
               "documentation": {
                 "identifier": "LookPath",
                 "newPage": false,
                 "searchKey": "execabs.LookPath",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -248,12 +245,85 @@
           },
           {
             "node": {
+              "pathID": "/internal/execabs#TestCommand",
+              "documentation": {
+                "identifier": "TestCommand",
+                "newPage": false,
+                "searchKey": "execabs.TestCommand",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCommand(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCommand(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/execabs#TestFixCmd",
+              "documentation": {
+                "identifier": "TestFixCmd",
+                "newPage": false,
+                "searchKey": "execabs.TestFixCmd",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFixCmd(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFixCmd(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/execabs#TestLookPath",
+              "documentation": {
+                "identifier": "TestLookPath",
+                "newPage": false,
+                "searchKey": "execabs.TestLookPath",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLookPath(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLookPath(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/execabs#fixCmd",
               "documentation": {
                 "identifier": "fixCmd",
                 "newPage": false,
                 "searchKey": "execabs.fixCmd",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -270,66 +340,23 @@
           },
           {
             "node": {
-              "pathID": "/internal/execabs#TestFixCmd",
+              "pathID": "/internal/execabs#relError",
               "documentation": {
-                "identifier": "TestFixCmd",
+                "identifier": "relError",
                 "newPage": false,
-                "searchKey": "execabs.TestFixCmd",
+                "searchKey": "execabs.relError",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestFixCmd(t *testing.T)"
+                "value": "func relError(file, path string) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestFixCmd(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/execabs#TestCommand",
-              "documentation": {
-                "identifier": "TestCommand",
-                "newPage": false,
-                "searchKey": "execabs.TestCommand",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCommand(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCommand(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/execabs#TestLookPath",
-              "documentation": {
-                "identifier": "TestLookPath",
-                "newPage": false,
-                "searchKey": "execabs.TestLookPath",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestLookPath(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestLookPath(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc relError(file, path string) error\n```\n\n"
               },
               "children": null
             }

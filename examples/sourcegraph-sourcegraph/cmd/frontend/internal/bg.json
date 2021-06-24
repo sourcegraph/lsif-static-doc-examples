@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "cmd/frontend/internal/bg",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "bg.recommendedPolicy",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -89,7 +94,9 @@
                 "identifier": "CheckRedisCacheEvictionPolicy",
                 "newPage": false,
                 "searchKey": "bg.CheckRedisCacheEvictionPolicy",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,34 +111,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/bg#getRunID",
-              "documentation": {
-                "identifier": "getRunID",
-                "newPage": false,
-                "searchKey": "bg.getRunID",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func getRunID(c redis.Conn) (string, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc getRunID(c redis.Conn) (string, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/bg#DeleteOldCacheDataInRedis",
               "documentation": {
                 "identifier": "DeleteOldCacheDataInRedis",
                 "newPage": false,
                 "searchKey": "bg.DeleteOldCacheDataInRedis",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -151,7 +138,9 @@
                 "identifier": "DeleteOldEventLogsInPostgres",
                 "newPage": false,
                 "searchKey": "bg.DeleteOldEventLogsInPostgres",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -171,7 +160,9 @@
                 "identifier": "DeleteOldSecurityEventLogsInPostgres",
                 "newPage": false,
                 "searchKey": "bg.DeleteOldSecurityEventLogsInPostgres",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -186,12 +177,36 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/bg#getRunID",
+              "documentation": {
+                "identifier": "getRunID",
+                "newPage": false,
+                "searchKey": "bg.getRunID",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getRunID(c redis.Conn) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getRunID(c redis.Conn) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/bg#init.db_test.go",
               "documentation": {
                 "identifier": "init.db_test.go",
                 "newPage": false,
                 "searchKey": "bg.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },

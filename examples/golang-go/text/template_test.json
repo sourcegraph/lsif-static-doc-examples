@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "text/template_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,7 @@
                 "newPage": false,
                 "searchKey": "template_test.templateFile",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -70,6 +73,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -90,6 +94,7 @@
                 "newPage": false,
                 "searchKey": "template_test.ExampleTemplate",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -112,6 +117,7 @@
                 "newPage": false,
                 "searchKey": "template_test.ExampleTemplate_block",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -128,22 +134,23 @@
           },
           {
             "node": {
-              "pathID": "/text/template_test#createTestDir",
+              "pathID": "/text/template_test#ExampleTemplate_func",
               "documentation": {
-                "identifier": "createTestDir",
+                "identifier": "ExampleTemplate_func",
                 "newPage": false,
-                "searchKey": "template_test.createTestDir",
+                "searchKey": "template_test.ExampleTemplate_func",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func createTestDir(files []templateFile) string"
+                "value": "func ExampleTemplate_func()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc createTestDir(files []templateFile) string\n```\n\n"
+                "value": "```Go\nfunc ExampleTemplate_func()\n```\n\nThis example demonstrates a custom function to process template text. It installs the strings.Title function and uses it to Make Title Text Look Good In Our Template's Output. \n\n"
               },
               "children": null
             }
@@ -156,6 +163,7 @@
                 "newPage": false,
                 "searchKey": "template_test.ExampleTemplate_glob",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -178,6 +186,7 @@
                 "newPage": false,
                 "searchKey": "template_test.ExampleTemplate_helpers",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -200,6 +209,7 @@
                 "newPage": false,
                 "searchKey": "template_test.ExampleTemplate_share",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -216,35 +226,15 @@
           },
           {
             "node": {
-              "pathID": "/text/template_test#ExampleTemplate_func",
-              "documentation": {
-                "identifier": "ExampleTemplate_func",
-                "newPage": false,
-                "searchKey": "template_test.ExampleTemplate_func",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleTemplate_func()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleTemplate_func()\n```\n\nThis example demonstrates a custom function to process template text. It installs the strings.Title function and uses it to Make Title Text Look Good In Our Template's Output. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/text/template_test#TestLinkerGC",
               "documentation": {
                 "identifier": "TestLinkerGC",
                 "newPage": false,
                 "searchKey": "template_test.TestLinkerGC",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -254,6 +244,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc TestLinkerGC(t *testing.T)\n```\n\nIssue 36021: verify that text/template doesn't prevent the linker from removing unused methods. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/template_test#createTestDir",
+              "documentation": {
+                "identifier": "createTestDir",
+                "newPage": false,
+                "searchKey": "template_test.createTestDir",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func createTestDir(files []templateFile) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc createTestDir(files []templateFile) string\n```\n\n"
               },
               "children": null
             }

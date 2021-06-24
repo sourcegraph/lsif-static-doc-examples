@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/race",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,10 @@
                 "identifier": "Enabled",
                 "newPage": false,
                 "searchKey": "race.Enabled",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "boolean"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -68,6 +73,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -87,7 +93,9 @@
                 "identifier": "Acquire",
                 "newPage": false,
                 "searchKey": "race.Acquire",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -102,52 +110,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/race#Release",
-              "documentation": {
-                "identifier": "Release",
-                "newPage": false,
-                "searchKey": "race.Release",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Release(addr unsafe.Pointer)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Release(addr unsafe.Pointer)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/race#ReleaseMerge",
-              "documentation": {
-                "identifier": "ReleaseMerge",
-                "newPage": false,
-                "searchKey": "race.ReleaseMerge",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ReleaseMerge(addr unsafe.Pointer)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ReleaseMerge(addr unsafe.Pointer)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/race#Disable",
               "documentation": {
                 "identifier": "Disable",
                 "newPage": false,
                 "searchKey": "race.Disable",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -167,7 +137,9 @@
                 "identifier": "Enable",
                 "newPage": false,
                 "searchKey": "race.Enable",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -182,12 +154,36 @@
           },
           {
             "node": {
+              "pathID": "/internal/race#Errors",
+              "documentation": {
+                "identifier": "Errors",
+                "newPage": false,
+                "searchKey": "race.Errors",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Errors() int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Errors() int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/race#Read",
               "documentation": {
                 "identifier": "Read",
                 "newPage": false,
                 "searchKey": "race.Read",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -202,32 +198,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/race#Write",
-              "documentation": {
-                "identifier": "Write",
-                "newPage": false,
-                "searchKey": "race.Write",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Write(addr unsafe.Pointer)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Write(addr unsafe.Pointer)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/race#ReadRange",
               "documentation": {
                 "identifier": "ReadRange",
                 "newPage": false,
                 "searchKey": "race.ReadRange",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -242,12 +220,80 @@
           },
           {
             "node": {
+              "pathID": "/internal/race#Release",
+              "documentation": {
+                "identifier": "Release",
+                "newPage": false,
+                "searchKey": "race.Release",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Release(addr unsafe.Pointer)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Release(addr unsafe.Pointer)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/race#ReleaseMerge",
+              "documentation": {
+                "identifier": "ReleaseMerge",
+                "newPage": false,
+                "searchKey": "race.ReleaseMerge",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ReleaseMerge(addr unsafe.Pointer)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ReleaseMerge(addr unsafe.Pointer)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/race#Write",
+              "documentation": {
+                "identifier": "Write",
+                "newPage": false,
+                "searchKey": "race.Write",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Write(addr unsafe.Pointer)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Write(addr unsafe.Pointer)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/race#WriteRange",
               "documentation": {
                 "identifier": "WriteRange",
                 "newPage": false,
                 "searchKey": "race.WriteRange",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -256,26 +302,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc WriteRange(addr unsafe.Pointer, len int)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/race#Errors",
-              "documentation": {
-                "identifier": "Errors",
-                "newPage": false,
-                "searchKey": "race.Errors",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Errors() int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Errors() int\n```\n\n"
               },
               "children": null
             }

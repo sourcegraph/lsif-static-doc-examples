@@ -12,57 +12,57 @@
         * [func (m *MockStore) Init(v0 context.Context) error](#MockStore.Init)
         * [func (m *MockStore) Upload(v0 context.Context, v1 string, v2 io.Reader) (int64, error)](#MockStore.Upload)
     * [type StoreComposeFunc struct](#StoreComposeFunc)
-        * [func (f *StoreComposeFunc) SetDefaultHook(hook func(context.Context, string, ...string) (int64, error))](#StoreComposeFunc.SetDefaultHook)
-        * [func (f *StoreComposeFunc) PushHook(hook func(context.Context, string, ...string) (int64, error))](#StoreComposeFunc.PushHook)
-        * [func (f *StoreComposeFunc) SetDefaultReturn(r0 int64, r1 error)](#StoreComposeFunc.SetDefaultReturn)
-        * [func (f *StoreComposeFunc) PushReturn(r0 int64, r1 error)](#StoreComposeFunc.PushReturn)
-        * [func (f *StoreComposeFunc) nextHook() func(context.Context, string, ...string) (int64, error)](#StoreComposeFunc.nextHook)
-        * [func (f *StoreComposeFunc) appendCall(r0 StoreComposeFuncCall)](#StoreComposeFunc.appendCall)
         * [func (f *StoreComposeFunc) History() []StoreComposeFuncCall](#StoreComposeFunc.History)
+        * [func (f *StoreComposeFunc) PushHook(hook func(context.Context, string, ...string) (int64, error))](#StoreComposeFunc.PushHook)
+        * [func (f *StoreComposeFunc) PushReturn(r0 int64, r1 error)](#StoreComposeFunc.PushReturn)
+        * [func (f *StoreComposeFunc) SetDefaultHook(hook func(context.Context, string, ...string) (int64, error))](#StoreComposeFunc.SetDefaultHook)
+        * [func (f *StoreComposeFunc) SetDefaultReturn(r0 int64, r1 error)](#StoreComposeFunc.SetDefaultReturn)
+        * [func (f *StoreComposeFunc) appendCall(r0 StoreComposeFuncCall)](#StoreComposeFunc.appendCall)
+        * [func (f *StoreComposeFunc) nextHook() func(context.Context, string, ...string) (int64, error)](#StoreComposeFunc.nextHook)
     * [type StoreComposeFuncCall struct](#StoreComposeFuncCall)
         * [func (c StoreComposeFuncCall) Args() []interface{}](#StoreComposeFuncCall.Args)
         * [func (c StoreComposeFuncCall) Results() []interface{}](#StoreComposeFuncCall.Results)
     * [type StoreDeleteFunc struct](#StoreDeleteFunc)
-        * [func (f *StoreDeleteFunc) SetDefaultHook(hook func(context.Context, string) error)](#StoreDeleteFunc.SetDefaultHook)
-        * [func (f *StoreDeleteFunc) PushHook(hook func(context.Context, string) error)](#StoreDeleteFunc.PushHook)
-        * [func (f *StoreDeleteFunc) SetDefaultReturn(r0 error)](#StoreDeleteFunc.SetDefaultReturn)
-        * [func (f *StoreDeleteFunc) PushReturn(r0 error)](#StoreDeleteFunc.PushReturn)
-        * [func (f *StoreDeleteFunc) nextHook() func(context.Context, string) error](#StoreDeleteFunc.nextHook)
-        * [func (f *StoreDeleteFunc) appendCall(r0 StoreDeleteFuncCall)](#StoreDeleteFunc.appendCall)
         * [func (f *StoreDeleteFunc) History() []StoreDeleteFuncCall](#StoreDeleteFunc.History)
+        * [func (f *StoreDeleteFunc) PushHook(hook func(context.Context, string) error)](#StoreDeleteFunc.PushHook)
+        * [func (f *StoreDeleteFunc) PushReturn(r0 error)](#StoreDeleteFunc.PushReturn)
+        * [func (f *StoreDeleteFunc) SetDefaultHook(hook func(context.Context, string) error)](#StoreDeleteFunc.SetDefaultHook)
+        * [func (f *StoreDeleteFunc) SetDefaultReturn(r0 error)](#StoreDeleteFunc.SetDefaultReturn)
+        * [func (f *StoreDeleteFunc) appendCall(r0 StoreDeleteFuncCall)](#StoreDeleteFunc.appendCall)
+        * [func (f *StoreDeleteFunc) nextHook() func(context.Context, string) error](#StoreDeleteFunc.nextHook)
     * [type StoreDeleteFuncCall struct](#StoreDeleteFuncCall)
         * [func (c StoreDeleteFuncCall) Args() []interface{}](#StoreDeleteFuncCall.Args)
         * [func (c StoreDeleteFuncCall) Results() []interface{}](#StoreDeleteFuncCall.Results)
     * [type StoreGetFunc struct](#StoreGetFunc)
-        * [func (f *StoreGetFunc) SetDefaultHook(hook func(context.Context, string) (io.ReadCloser, error))](#StoreGetFunc.SetDefaultHook)
-        * [func (f *StoreGetFunc) PushHook(hook func(context.Context, string) (io.ReadCloser, error))](#StoreGetFunc.PushHook)
-        * [func (f *StoreGetFunc) SetDefaultReturn(r0 io.ReadCloser, r1 error)](#StoreGetFunc.SetDefaultReturn)
-        * [func (f *StoreGetFunc) PushReturn(r0 io.ReadCloser, r1 error)](#StoreGetFunc.PushReturn)
-        * [func (f *StoreGetFunc) nextHook() func(context.Context, string) (io.ReadCloser, error)](#StoreGetFunc.nextHook)
-        * [func (f *StoreGetFunc) appendCall(r0 StoreGetFuncCall)](#StoreGetFunc.appendCall)
         * [func (f *StoreGetFunc) History() []StoreGetFuncCall](#StoreGetFunc.History)
+        * [func (f *StoreGetFunc) PushHook(hook func(context.Context, string) (io.ReadCloser, error))](#StoreGetFunc.PushHook)
+        * [func (f *StoreGetFunc) PushReturn(r0 io.ReadCloser, r1 error)](#StoreGetFunc.PushReturn)
+        * [func (f *StoreGetFunc) SetDefaultHook(hook func(context.Context, string) (io.ReadCloser, error))](#StoreGetFunc.SetDefaultHook)
+        * [func (f *StoreGetFunc) SetDefaultReturn(r0 io.ReadCloser, r1 error)](#StoreGetFunc.SetDefaultReturn)
+        * [func (f *StoreGetFunc) appendCall(r0 StoreGetFuncCall)](#StoreGetFunc.appendCall)
+        * [func (f *StoreGetFunc) nextHook() func(context.Context, string) (io.ReadCloser, error)](#StoreGetFunc.nextHook)
     * [type StoreGetFuncCall struct](#StoreGetFuncCall)
         * [func (c StoreGetFuncCall) Args() []interface{}](#StoreGetFuncCall.Args)
         * [func (c StoreGetFuncCall) Results() []interface{}](#StoreGetFuncCall.Results)
     * [type StoreInitFunc struct](#StoreInitFunc)
-        * [func (f *StoreInitFunc) SetDefaultHook(hook func(context.Context) error)](#StoreInitFunc.SetDefaultHook)
-        * [func (f *StoreInitFunc) PushHook(hook func(context.Context) error)](#StoreInitFunc.PushHook)
-        * [func (f *StoreInitFunc) SetDefaultReturn(r0 error)](#StoreInitFunc.SetDefaultReturn)
-        * [func (f *StoreInitFunc) PushReturn(r0 error)](#StoreInitFunc.PushReturn)
-        * [func (f *StoreInitFunc) nextHook() func(context.Context) error](#StoreInitFunc.nextHook)
-        * [func (f *StoreInitFunc) appendCall(r0 StoreInitFuncCall)](#StoreInitFunc.appendCall)
         * [func (f *StoreInitFunc) History() []StoreInitFuncCall](#StoreInitFunc.History)
+        * [func (f *StoreInitFunc) PushHook(hook func(context.Context) error)](#StoreInitFunc.PushHook)
+        * [func (f *StoreInitFunc) PushReturn(r0 error)](#StoreInitFunc.PushReturn)
+        * [func (f *StoreInitFunc) SetDefaultHook(hook func(context.Context) error)](#StoreInitFunc.SetDefaultHook)
+        * [func (f *StoreInitFunc) SetDefaultReturn(r0 error)](#StoreInitFunc.SetDefaultReturn)
+        * [func (f *StoreInitFunc) appendCall(r0 StoreInitFuncCall)](#StoreInitFunc.appendCall)
+        * [func (f *StoreInitFunc) nextHook() func(context.Context) error](#StoreInitFunc.nextHook)
     * [type StoreInitFuncCall struct](#StoreInitFuncCall)
         * [func (c StoreInitFuncCall) Args() []interface{}](#StoreInitFuncCall.Args)
         * [func (c StoreInitFuncCall) Results() []interface{}](#StoreInitFuncCall.Results)
     * [type StoreUploadFunc struct](#StoreUploadFunc)
-        * [func (f *StoreUploadFunc) SetDefaultHook(hook func(context.Context, string, io.Reader) (int64, error))](#StoreUploadFunc.SetDefaultHook)
-        * [func (f *StoreUploadFunc) PushHook(hook func(context.Context, string, io.Reader) (int64, error))](#StoreUploadFunc.PushHook)
-        * [func (f *StoreUploadFunc) SetDefaultReturn(r0 int64, r1 error)](#StoreUploadFunc.SetDefaultReturn)
-        * [func (f *StoreUploadFunc) PushReturn(r0 int64, r1 error)](#StoreUploadFunc.PushReturn)
-        * [func (f *StoreUploadFunc) nextHook() func(context.Context, string, io.Reader) (int64, error)](#StoreUploadFunc.nextHook)
-        * [func (f *StoreUploadFunc) appendCall(r0 StoreUploadFuncCall)](#StoreUploadFunc.appendCall)
         * [func (f *StoreUploadFunc) History() []StoreUploadFuncCall](#StoreUploadFunc.History)
+        * [func (f *StoreUploadFunc) PushHook(hook func(context.Context, string, io.Reader) (int64, error))](#StoreUploadFunc.PushHook)
+        * [func (f *StoreUploadFunc) PushReturn(r0 int64, r1 error)](#StoreUploadFunc.PushReturn)
+        * [func (f *StoreUploadFunc) SetDefaultHook(hook func(context.Context, string, io.Reader) (int64, error))](#StoreUploadFunc.SetDefaultHook)
+        * [func (f *StoreUploadFunc) SetDefaultReturn(r0 int64, r1 error)](#StoreUploadFunc.SetDefaultReturn)
+        * [func (f *StoreUploadFunc) appendCall(r0 StoreUploadFuncCall)](#StoreUploadFunc.appendCall)
+        * [func (f *StoreUploadFunc) nextHook() func(context.Context, string, io.Reader) (int64, error)](#StoreUploadFunc.nextHook)
     * [type StoreUploadFuncCall struct](#StoreUploadFuncCall)
         * [func (c StoreUploadFuncCall) Args() []interface{}](#StoreUploadFuncCall.Args)
         * [func (c StoreUploadFuncCall) Results() []interface{}](#StoreUploadFuncCall.Results)
@@ -71,13 +71,14 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="MockStore" href="#MockStore">type MockStore struct</a>
 
 ```
 searchKey: mocks.MockStore
+tags: [struct]
 ```
 
 ```Go
@@ -106,6 +107,7 @@ MockStore is a mock implementation of the Store interface (from the package gith
 
 ```
 searchKey: mocks.NewMockStore
+tags: [function]
 ```
 
 ```Go
@@ -118,6 +120,7 @@ NewMockStore creates a new mock of the Store interface. All methods return zero 
 
 ```
 searchKey: mocks.NewMockStoreFrom
+tags: [method]
 ```
 
 ```Go
@@ -130,6 +133,7 @@ NewMockStoreFrom creates a new mock of the MockStore interface. All methods dele
 
 ```
 searchKey: mocks.MockStore.Compose
+tags: [method]
 ```
 
 ```Go
@@ -142,6 +146,7 @@ Compose delegates to the next hook function in the queue and stores the paramete
 
 ```
 searchKey: mocks.MockStore.Delete
+tags: [method]
 ```
 
 ```Go
@@ -154,6 +159,7 @@ Delete delegates to the next hook function in the queue and stores the parameter
 
 ```
 searchKey: mocks.MockStore.Get
+tags: [method]
 ```
 
 ```Go
@@ -166,6 +172,7 @@ Get delegates to the next hook function in the queue and stores the parameter an
 
 ```
 searchKey: mocks.MockStore.Init
+tags: [method]
 ```
 
 ```Go
@@ -178,6 +185,7 @@ Init delegates to the next hook function in the queue and stores the parameter a
 
 ```
 searchKey: mocks.MockStore.Upload
+tags: [method]
 ```
 
 ```Go
@@ -190,6 +198,7 @@ Upload delegates to the next hook function in the queue and stores the parameter
 
 ```
 searchKey: mocks.StoreComposeFunc
+tags: [struct]
 ```
 
 ```Go
@@ -203,80 +212,11 @@ type StoreComposeFunc struct {
 
 StoreComposeFunc describes the behavior when the Compose method of the parent MockStore instance is invoked. 
 
-#### <a id="StoreComposeFunc.SetDefaultHook" href="#StoreComposeFunc.SetDefaultHook">func (f *StoreComposeFunc) SetDefaultHook(hook func(context.Context, string, ...string) (int64, error))</a>
-
-```
-searchKey: mocks.StoreComposeFunc.SetDefaultHook
-```
-
-```Go
-func (f *StoreComposeFunc) SetDefaultHook(hook func(context.Context, string, ...string) (int64, error))
-```
-
-SetDefaultHook sets function that is called when the Compose method of the parent MockStore instance is invoked and the hook queue is empty. 
-
-#### <a id="StoreComposeFunc.PushHook" href="#StoreComposeFunc.PushHook">func (f *StoreComposeFunc) PushHook(hook func(context.Context, string, ...string) (int64, error))</a>
-
-```
-searchKey: mocks.StoreComposeFunc.PushHook
-```
-
-```Go
-func (f *StoreComposeFunc) PushHook(hook func(context.Context, string, ...string) (int64, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the Compose method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="StoreComposeFunc.SetDefaultReturn" href="#StoreComposeFunc.SetDefaultReturn">func (f *StoreComposeFunc) SetDefaultReturn(r0 int64, r1 error)</a>
-
-```
-searchKey: mocks.StoreComposeFunc.SetDefaultReturn
-```
-
-```Go
-func (f *StoreComposeFunc) SetDefaultReturn(r0 int64, r1 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="StoreComposeFunc.PushReturn" href="#StoreComposeFunc.PushReturn">func (f *StoreComposeFunc) PushReturn(r0 int64, r1 error)</a>
-
-```
-searchKey: mocks.StoreComposeFunc.PushReturn
-```
-
-```Go
-func (f *StoreComposeFunc) PushReturn(r0 int64, r1 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="StoreComposeFunc.nextHook" href="#StoreComposeFunc.nextHook">func (f *StoreComposeFunc) nextHook() func(context.Context, string, ...string) (int64, error)</a>
-
-```
-searchKey: mocks.StoreComposeFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *StoreComposeFunc) nextHook() func(context.Context, string, ...string) (int64, error)
-```
-
-#### <a id="StoreComposeFunc.appendCall" href="#StoreComposeFunc.appendCall">func (f *StoreComposeFunc) appendCall(r0 StoreComposeFuncCall)</a>
-
-```
-searchKey: mocks.StoreComposeFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *StoreComposeFunc) appendCall(r0 StoreComposeFuncCall)
-```
-
 #### <a id="StoreComposeFunc.History" href="#StoreComposeFunc.History">func (f *StoreComposeFunc) History() []StoreComposeFuncCall</a>
 
 ```
 searchKey: mocks.StoreComposeFunc.History
+tags: [function]
 ```
 
 ```Go
@@ -285,10 +225,85 @@ func (f *StoreComposeFunc) History() []StoreComposeFuncCall
 
 History returns a sequence of StoreComposeFuncCall objects describing the invocations of this function. 
 
+#### <a id="StoreComposeFunc.PushHook" href="#StoreComposeFunc.PushHook">func (f *StoreComposeFunc) PushHook(hook func(context.Context, string, ...string) (int64, error))</a>
+
+```
+searchKey: mocks.StoreComposeFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *StoreComposeFunc) PushHook(hook func(context.Context, string, ...string) (int64, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the Compose method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="StoreComposeFunc.PushReturn" href="#StoreComposeFunc.PushReturn">func (f *StoreComposeFunc) PushReturn(r0 int64, r1 error)</a>
+
+```
+searchKey: mocks.StoreComposeFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *StoreComposeFunc) PushReturn(r0 int64, r1 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="StoreComposeFunc.SetDefaultHook" href="#StoreComposeFunc.SetDefaultHook">func (f *StoreComposeFunc) SetDefaultHook(hook func(context.Context, string, ...string) (int64, error))</a>
+
+```
+searchKey: mocks.StoreComposeFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *StoreComposeFunc) SetDefaultHook(hook func(context.Context, string, ...string) (int64, error))
+```
+
+SetDefaultHook sets function that is called when the Compose method of the parent MockStore instance is invoked and the hook queue is empty. 
+
+#### <a id="StoreComposeFunc.SetDefaultReturn" href="#StoreComposeFunc.SetDefaultReturn">func (f *StoreComposeFunc) SetDefaultReturn(r0 int64, r1 error)</a>
+
+```
+searchKey: mocks.StoreComposeFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *StoreComposeFunc) SetDefaultReturn(r0 int64, r1 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="StoreComposeFunc.appendCall" href="#StoreComposeFunc.appendCall">func (f *StoreComposeFunc) appendCall(r0 StoreComposeFuncCall)</a>
+
+```
+searchKey: mocks.StoreComposeFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *StoreComposeFunc) appendCall(r0 StoreComposeFuncCall)
+```
+
+#### <a id="StoreComposeFunc.nextHook" href="#StoreComposeFunc.nextHook">func (f *StoreComposeFunc) nextHook() func(context.Context, string, ...string) (int64, error)</a>
+
+```
+searchKey: mocks.StoreComposeFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *StoreComposeFunc) nextHook() func(context.Context, string, ...string) (int64, error)
+```
+
 ### <a id="StoreComposeFuncCall" href="#StoreComposeFuncCall">type StoreComposeFuncCall struct</a>
 
 ```
 searchKey: mocks.StoreComposeFuncCall
+tags: [struct]
 ```
 
 ```Go
@@ -317,6 +332,7 @@ StoreComposeFuncCall is an object that describes an invocation of method Compose
 
 ```
 searchKey: mocks.StoreComposeFuncCall.Args
+tags: [function]
 ```
 
 ```Go
@@ -329,6 +345,7 @@ Args returns an interface slice containing the arguments of this invocation. The
 
 ```
 searchKey: mocks.StoreComposeFuncCall.Results
+tags: [function]
 ```
 
 ```Go
@@ -341,6 +358,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.StoreDeleteFunc
+tags: [struct]
 ```
 
 ```Go
@@ -354,80 +372,11 @@ type StoreDeleteFunc struct {
 
 StoreDeleteFunc describes the behavior when the Delete method of the parent MockStore instance is invoked. 
 
-#### <a id="StoreDeleteFunc.SetDefaultHook" href="#StoreDeleteFunc.SetDefaultHook">func (f *StoreDeleteFunc) SetDefaultHook(hook func(context.Context, string) error)</a>
-
-```
-searchKey: mocks.StoreDeleteFunc.SetDefaultHook
-```
-
-```Go
-func (f *StoreDeleteFunc) SetDefaultHook(hook func(context.Context, string) error)
-```
-
-SetDefaultHook sets function that is called when the Delete method of the parent MockStore instance is invoked and the hook queue is empty. 
-
-#### <a id="StoreDeleteFunc.PushHook" href="#StoreDeleteFunc.PushHook">func (f *StoreDeleteFunc) PushHook(hook func(context.Context, string) error)</a>
-
-```
-searchKey: mocks.StoreDeleteFunc.PushHook
-```
-
-```Go
-func (f *StoreDeleteFunc) PushHook(hook func(context.Context, string) error)
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the Delete method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="StoreDeleteFunc.SetDefaultReturn" href="#StoreDeleteFunc.SetDefaultReturn">func (f *StoreDeleteFunc) SetDefaultReturn(r0 error)</a>
-
-```
-searchKey: mocks.StoreDeleteFunc.SetDefaultReturn
-```
-
-```Go
-func (f *StoreDeleteFunc) SetDefaultReturn(r0 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="StoreDeleteFunc.PushReturn" href="#StoreDeleteFunc.PushReturn">func (f *StoreDeleteFunc) PushReturn(r0 error)</a>
-
-```
-searchKey: mocks.StoreDeleteFunc.PushReturn
-```
-
-```Go
-func (f *StoreDeleteFunc) PushReturn(r0 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="StoreDeleteFunc.nextHook" href="#StoreDeleteFunc.nextHook">func (f *StoreDeleteFunc) nextHook() func(context.Context, string) error</a>
-
-```
-searchKey: mocks.StoreDeleteFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *StoreDeleteFunc) nextHook() func(context.Context, string) error
-```
-
-#### <a id="StoreDeleteFunc.appendCall" href="#StoreDeleteFunc.appendCall">func (f *StoreDeleteFunc) appendCall(r0 StoreDeleteFuncCall)</a>
-
-```
-searchKey: mocks.StoreDeleteFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *StoreDeleteFunc) appendCall(r0 StoreDeleteFuncCall)
-```
-
 #### <a id="StoreDeleteFunc.History" href="#StoreDeleteFunc.History">func (f *StoreDeleteFunc) History() []StoreDeleteFuncCall</a>
 
 ```
 searchKey: mocks.StoreDeleteFunc.History
+tags: [function]
 ```
 
 ```Go
@@ -436,10 +385,85 @@ func (f *StoreDeleteFunc) History() []StoreDeleteFuncCall
 
 History returns a sequence of StoreDeleteFuncCall objects describing the invocations of this function. 
 
+#### <a id="StoreDeleteFunc.PushHook" href="#StoreDeleteFunc.PushHook">func (f *StoreDeleteFunc) PushHook(hook func(context.Context, string) error)</a>
+
+```
+searchKey: mocks.StoreDeleteFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *StoreDeleteFunc) PushHook(hook func(context.Context, string) error)
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the Delete method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="StoreDeleteFunc.PushReturn" href="#StoreDeleteFunc.PushReturn">func (f *StoreDeleteFunc) PushReturn(r0 error)</a>
+
+```
+searchKey: mocks.StoreDeleteFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *StoreDeleteFunc) PushReturn(r0 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="StoreDeleteFunc.SetDefaultHook" href="#StoreDeleteFunc.SetDefaultHook">func (f *StoreDeleteFunc) SetDefaultHook(hook func(context.Context, string) error)</a>
+
+```
+searchKey: mocks.StoreDeleteFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *StoreDeleteFunc) SetDefaultHook(hook func(context.Context, string) error)
+```
+
+SetDefaultHook sets function that is called when the Delete method of the parent MockStore instance is invoked and the hook queue is empty. 
+
+#### <a id="StoreDeleteFunc.SetDefaultReturn" href="#StoreDeleteFunc.SetDefaultReturn">func (f *StoreDeleteFunc) SetDefaultReturn(r0 error)</a>
+
+```
+searchKey: mocks.StoreDeleteFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *StoreDeleteFunc) SetDefaultReturn(r0 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="StoreDeleteFunc.appendCall" href="#StoreDeleteFunc.appendCall">func (f *StoreDeleteFunc) appendCall(r0 StoreDeleteFuncCall)</a>
+
+```
+searchKey: mocks.StoreDeleteFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *StoreDeleteFunc) appendCall(r0 StoreDeleteFuncCall)
+```
+
+#### <a id="StoreDeleteFunc.nextHook" href="#StoreDeleteFunc.nextHook">func (f *StoreDeleteFunc) nextHook() func(context.Context, string) error</a>
+
+```
+searchKey: mocks.StoreDeleteFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *StoreDeleteFunc) nextHook() func(context.Context, string) error
+```
+
 ### <a id="StoreDeleteFuncCall" href="#StoreDeleteFuncCall">type StoreDeleteFuncCall struct</a>
 
 ```
 searchKey: mocks.StoreDeleteFuncCall
+tags: [struct]
 ```
 
 ```Go
@@ -462,6 +486,7 @@ StoreDeleteFuncCall is an object that describes an invocation of method Delete o
 
 ```
 searchKey: mocks.StoreDeleteFuncCall.Args
+tags: [function]
 ```
 
 ```Go
@@ -474,6 +499,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreDeleteFuncCall.Results
+tags: [function]
 ```
 
 ```Go
@@ -486,6 +512,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.StoreGetFunc
+tags: [struct]
 ```
 
 ```Go
@@ -499,80 +526,11 @@ type StoreGetFunc struct {
 
 StoreGetFunc describes the behavior when the Get method of the parent MockStore instance is invoked. 
 
-#### <a id="StoreGetFunc.SetDefaultHook" href="#StoreGetFunc.SetDefaultHook">func (f *StoreGetFunc) SetDefaultHook(hook func(context.Context, string) (io.ReadCloser, error))</a>
-
-```
-searchKey: mocks.StoreGetFunc.SetDefaultHook
-```
-
-```Go
-func (f *StoreGetFunc) SetDefaultHook(hook func(context.Context, string) (io.ReadCloser, error))
-```
-
-SetDefaultHook sets function that is called when the Get method of the parent MockStore instance is invoked and the hook queue is empty. 
-
-#### <a id="StoreGetFunc.PushHook" href="#StoreGetFunc.PushHook">func (f *StoreGetFunc) PushHook(hook func(context.Context, string) (io.ReadCloser, error))</a>
-
-```
-searchKey: mocks.StoreGetFunc.PushHook
-```
-
-```Go
-func (f *StoreGetFunc) PushHook(hook func(context.Context, string) (io.ReadCloser, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the Get method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="StoreGetFunc.SetDefaultReturn" href="#StoreGetFunc.SetDefaultReturn">func (f *StoreGetFunc) SetDefaultReturn(r0 io.ReadCloser, r1 error)</a>
-
-```
-searchKey: mocks.StoreGetFunc.SetDefaultReturn
-```
-
-```Go
-func (f *StoreGetFunc) SetDefaultReturn(r0 io.ReadCloser, r1 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="StoreGetFunc.PushReturn" href="#StoreGetFunc.PushReturn">func (f *StoreGetFunc) PushReturn(r0 io.ReadCloser, r1 error)</a>
-
-```
-searchKey: mocks.StoreGetFunc.PushReturn
-```
-
-```Go
-func (f *StoreGetFunc) PushReturn(r0 io.ReadCloser, r1 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="StoreGetFunc.nextHook" href="#StoreGetFunc.nextHook">func (f *StoreGetFunc) nextHook() func(context.Context, string) (io.ReadCloser, error)</a>
-
-```
-searchKey: mocks.StoreGetFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *StoreGetFunc) nextHook() func(context.Context, string) (io.ReadCloser, error)
-```
-
-#### <a id="StoreGetFunc.appendCall" href="#StoreGetFunc.appendCall">func (f *StoreGetFunc) appendCall(r0 StoreGetFuncCall)</a>
-
-```
-searchKey: mocks.StoreGetFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *StoreGetFunc) appendCall(r0 StoreGetFuncCall)
-```
-
 #### <a id="StoreGetFunc.History" href="#StoreGetFunc.History">func (f *StoreGetFunc) History() []StoreGetFuncCall</a>
 
 ```
 searchKey: mocks.StoreGetFunc.History
+tags: [function]
 ```
 
 ```Go
@@ -581,10 +539,85 @@ func (f *StoreGetFunc) History() []StoreGetFuncCall
 
 History returns a sequence of StoreGetFuncCall objects describing the invocations of this function. 
 
+#### <a id="StoreGetFunc.PushHook" href="#StoreGetFunc.PushHook">func (f *StoreGetFunc) PushHook(hook func(context.Context, string) (io.ReadCloser, error))</a>
+
+```
+searchKey: mocks.StoreGetFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *StoreGetFunc) PushHook(hook func(context.Context, string) (io.ReadCloser, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the Get method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="StoreGetFunc.PushReturn" href="#StoreGetFunc.PushReturn">func (f *StoreGetFunc) PushReturn(r0 io.ReadCloser, r1 error)</a>
+
+```
+searchKey: mocks.StoreGetFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *StoreGetFunc) PushReturn(r0 io.ReadCloser, r1 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="StoreGetFunc.SetDefaultHook" href="#StoreGetFunc.SetDefaultHook">func (f *StoreGetFunc) SetDefaultHook(hook func(context.Context, string) (io.ReadCloser, error))</a>
+
+```
+searchKey: mocks.StoreGetFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *StoreGetFunc) SetDefaultHook(hook func(context.Context, string) (io.ReadCloser, error))
+```
+
+SetDefaultHook sets function that is called when the Get method of the parent MockStore instance is invoked and the hook queue is empty. 
+
+#### <a id="StoreGetFunc.SetDefaultReturn" href="#StoreGetFunc.SetDefaultReturn">func (f *StoreGetFunc) SetDefaultReturn(r0 io.ReadCloser, r1 error)</a>
+
+```
+searchKey: mocks.StoreGetFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *StoreGetFunc) SetDefaultReturn(r0 io.ReadCloser, r1 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="StoreGetFunc.appendCall" href="#StoreGetFunc.appendCall">func (f *StoreGetFunc) appendCall(r0 StoreGetFuncCall)</a>
+
+```
+searchKey: mocks.StoreGetFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *StoreGetFunc) appendCall(r0 StoreGetFuncCall)
+```
+
+#### <a id="StoreGetFunc.nextHook" href="#StoreGetFunc.nextHook">func (f *StoreGetFunc) nextHook() func(context.Context, string) (io.ReadCloser, error)</a>
+
+```
+searchKey: mocks.StoreGetFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *StoreGetFunc) nextHook() func(context.Context, string) (io.ReadCloser, error)
+```
+
 ### <a id="StoreGetFuncCall" href="#StoreGetFuncCall">type StoreGetFuncCall struct</a>
 
 ```
 searchKey: mocks.StoreGetFuncCall
+tags: [struct]
 ```
 
 ```Go
@@ -610,6 +643,7 @@ StoreGetFuncCall is an object that describes an invocation of method Get on an i
 
 ```
 searchKey: mocks.StoreGetFuncCall.Args
+tags: [function]
 ```
 
 ```Go
@@ -622,6 +656,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreGetFuncCall.Results
+tags: [function]
 ```
 
 ```Go
@@ -634,6 +669,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.StoreInitFunc
+tags: [struct]
 ```
 
 ```Go
@@ -647,80 +683,11 @@ type StoreInitFunc struct {
 
 StoreInitFunc describes the behavior when the Init method of the parent MockStore instance is invoked. 
 
-#### <a id="StoreInitFunc.SetDefaultHook" href="#StoreInitFunc.SetDefaultHook">func (f *StoreInitFunc) SetDefaultHook(hook func(context.Context) error)</a>
-
-```
-searchKey: mocks.StoreInitFunc.SetDefaultHook
-```
-
-```Go
-func (f *StoreInitFunc) SetDefaultHook(hook func(context.Context) error)
-```
-
-SetDefaultHook sets function that is called when the Init method of the parent MockStore instance is invoked and the hook queue is empty. 
-
-#### <a id="StoreInitFunc.PushHook" href="#StoreInitFunc.PushHook">func (f *StoreInitFunc) PushHook(hook func(context.Context) error)</a>
-
-```
-searchKey: mocks.StoreInitFunc.PushHook
-```
-
-```Go
-func (f *StoreInitFunc) PushHook(hook func(context.Context) error)
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the Init method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="StoreInitFunc.SetDefaultReturn" href="#StoreInitFunc.SetDefaultReturn">func (f *StoreInitFunc) SetDefaultReturn(r0 error)</a>
-
-```
-searchKey: mocks.StoreInitFunc.SetDefaultReturn
-```
-
-```Go
-func (f *StoreInitFunc) SetDefaultReturn(r0 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="StoreInitFunc.PushReturn" href="#StoreInitFunc.PushReturn">func (f *StoreInitFunc) PushReturn(r0 error)</a>
-
-```
-searchKey: mocks.StoreInitFunc.PushReturn
-```
-
-```Go
-func (f *StoreInitFunc) PushReturn(r0 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="StoreInitFunc.nextHook" href="#StoreInitFunc.nextHook">func (f *StoreInitFunc) nextHook() func(context.Context) error</a>
-
-```
-searchKey: mocks.StoreInitFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *StoreInitFunc) nextHook() func(context.Context) error
-```
-
-#### <a id="StoreInitFunc.appendCall" href="#StoreInitFunc.appendCall">func (f *StoreInitFunc) appendCall(r0 StoreInitFuncCall)</a>
-
-```
-searchKey: mocks.StoreInitFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *StoreInitFunc) appendCall(r0 StoreInitFuncCall)
-```
-
 #### <a id="StoreInitFunc.History" href="#StoreInitFunc.History">func (f *StoreInitFunc) History() []StoreInitFuncCall</a>
 
 ```
 searchKey: mocks.StoreInitFunc.History
+tags: [function]
 ```
 
 ```Go
@@ -729,10 +696,85 @@ func (f *StoreInitFunc) History() []StoreInitFuncCall
 
 History returns a sequence of StoreInitFuncCall objects describing the invocations of this function. 
 
+#### <a id="StoreInitFunc.PushHook" href="#StoreInitFunc.PushHook">func (f *StoreInitFunc) PushHook(hook func(context.Context) error)</a>
+
+```
+searchKey: mocks.StoreInitFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *StoreInitFunc) PushHook(hook func(context.Context) error)
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the Init method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="StoreInitFunc.PushReturn" href="#StoreInitFunc.PushReturn">func (f *StoreInitFunc) PushReturn(r0 error)</a>
+
+```
+searchKey: mocks.StoreInitFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *StoreInitFunc) PushReturn(r0 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="StoreInitFunc.SetDefaultHook" href="#StoreInitFunc.SetDefaultHook">func (f *StoreInitFunc) SetDefaultHook(hook func(context.Context) error)</a>
+
+```
+searchKey: mocks.StoreInitFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *StoreInitFunc) SetDefaultHook(hook func(context.Context) error)
+```
+
+SetDefaultHook sets function that is called when the Init method of the parent MockStore instance is invoked and the hook queue is empty. 
+
+#### <a id="StoreInitFunc.SetDefaultReturn" href="#StoreInitFunc.SetDefaultReturn">func (f *StoreInitFunc) SetDefaultReturn(r0 error)</a>
+
+```
+searchKey: mocks.StoreInitFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *StoreInitFunc) SetDefaultReturn(r0 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="StoreInitFunc.appendCall" href="#StoreInitFunc.appendCall">func (f *StoreInitFunc) appendCall(r0 StoreInitFuncCall)</a>
+
+```
+searchKey: mocks.StoreInitFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *StoreInitFunc) appendCall(r0 StoreInitFuncCall)
+```
+
+#### <a id="StoreInitFunc.nextHook" href="#StoreInitFunc.nextHook">func (f *StoreInitFunc) nextHook() func(context.Context) error</a>
+
+```
+searchKey: mocks.StoreInitFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *StoreInitFunc) nextHook() func(context.Context) error
+```
+
 ### <a id="StoreInitFuncCall" href="#StoreInitFuncCall">type StoreInitFuncCall struct</a>
 
 ```
 searchKey: mocks.StoreInitFuncCall
+tags: [struct]
 ```
 
 ```Go
@@ -752,6 +794,7 @@ StoreInitFuncCall is an object that describes an invocation of method Init on an
 
 ```
 searchKey: mocks.StoreInitFuncCall.Args
+tags: [function]
 ```
 
 ```Go
@@ -764,6 +807,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreInitFuncCall.Results
+tags: [function]
 ```
 
 ```Go
@@ -776,6 +820,7 @@ Results returns an interface slice containing the results of this invocation.
 
 ```
 searchKey: mocks.StoreUploadFunc
+tags: [struct]
 ```
 
 ```Go
@@ -789,80 +834,11 @@ type StoreUploadFunc struct {
 
 StoreUploadFunc describes the behavior when the Upload method of the parent MockStore instance is invoked. 
 
-#### <a id="StoreUploadFunc.SetDefaultHook" href="#StoreUploadFunc.SetDefaultHook">func (f *StoreUploadFunc) SetDefaultHook(hook func(context.Context, string, io.Reader) (int64, error))</a>
-
-```
-searchKey: mocks.StoreUploadFunc.SetDefaultHook
-```
-
-```Go
-func (f *StoreUploadFunc) SetDefaultHook(hook func(context.Context, string, io.Reader) (int64, error))
-```
-
-SetDefaultHook sets function that is called when the Upload method of the parent MockStore instance is invoked and the hook queue is empty. 
-
-#### <a id="StoreUploadFunc.PushHook" href="#StoreUploadFunc.PushHook">func (f *StoreUploadFunc) PushHook(hook func(context.Context, string, io.Reader) (int64, error))</a>
-
-```
-searchKey: mocks.StoreUploadFunc.PushHook
-```
-
-```Go
-func (f *StoreUploadFunc) PushHook(hook func(context.Context, string, io.Reader) (int64, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the Upload method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="StoreUploadFunc.SetDefaultReturn" href="#StoreUploadFunc.SetDefaultReturn">func (f *StoreUploadFunc) SetDefaultReturn(r0 int64, r1 error)</a>
-
-```
-searchKey: mocks.StoreUploadFunc.SetDefaultReturn
-```
-
-```Go
-func (f *StoreUploadFunc) SetDefaultReturn(r0 int64, r1 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="StoreUploadFunc.PushReturn" href="#StoreUploadFunc.PushReturn">func (f *StoreUploadFunc) PushReturn(r0 int64, r1 error)</a>
-
-```
-searchKey: mocks.StoreUploadFunc.PushReturn
-```
-
-```Go
-func (f *StoreUploadFunc) PushReturn(r0 int64, r1 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="StoreUploadFunc.nextHook" href="#StoreUploadFunc.nextHook">func (f *StoreUploadFunc) nextHook() func(context.Context, string, io.Reader) (int64, error)</a>
-
-```
-searchKey: mocks.StoreUploadFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *StoreUploadFunc) nextHook() func(context.Context, string, io.Reader) (int64, error)
-```
-
-#### <a id="StoreUploadFunc.appendCall" href="#StoreUploadFunc.appendCall">func (f *StoreUploadFunc) appendCall(r0 StoreUploadFuncCall)</a>
-
-```
-searchKey: mocks.StoreUploadFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *StoreUploadFunc) appendCall(r0 StoreUploadFuncCall)
-```
-
 #### <a id="StoreUploadFunc.History" href="#StoreUploadFunc.History">func (f *StoreUploadFunc) History() []StoreUploadFuncCall</a>
 
 ```
 searchKey: mocks.StoreUploadFunc.History
+tags: [function]
 ```
 
 ```Go
@@ -871,10 +847,85 @@ func (f *StoreUploadFunc) History() []StoreUploadFuncCall
 
 History returns a sequence of StoreUploadFuncCall objects describing the invocations of this function. 
 
+#### <a id="StoreUploadFunc.PushHook" href="#StoreUploadFunc.PushHook">func (f *StoreUploadFunc) PushHook(hook func(context.Context, string, io.Reader) (int64, error))</a>
+
+```
+searchKey: mocks.StoreUploadFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *StoreUploadFunc) PushHook(hook func(context.Context, string, io.Reader) (int64, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the Upload method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="StoreUploadFunc.PushReturn" href="#StoreUploadFunc.PushReturn">func (f *StoreUploadFunc) PushReturn(r0 int64, r1 error)</a>
+
+```
+searchKey: mocks.StoreUploadFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *StoreUploadFunc) PushReturn(r0 int64, r1 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="StoreUploadFunc.SetDefaultHook" href="#StoreUploadFunc.SetDefaultHook">func (f *StoreUploadFunc) SetDefaultHook(hook func(context.Context, string, io.Reader) (int64, error))</a>
+
+```
+searchKey: mocks.StoreUploadFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *StoreUploadFunc) SetDefaultHook(hook func(context.Context, string, io.Reader) (int64, error))
+```
+
+SetDefaultHook sets function that is called when the Upload method of the parent MockStore instance is invoked and the hook queue is empty. 
+
+#### <a id="StoreUploadFunc.SetDefaultReturn" href="#StoreUploadFunc.SetDefaultReturn">func (f *StoreUploadFunc) SetDefaultReturn(r0 int64, r1 error)</a>
+
+```
+searchKey: mocks.StoreUploadFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *StoreUploadFunc) SetDefaultReturn(r0 int64, r1 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="StoreUploadFunc.appendCall" href="#StoreUploadFunc.appendCall">func (f *StoreUploadFunc) appendCall(r0 StoreUploadFuncCall)</a>
+
+```
+searchKey: mocks.StoreUploadFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *StoreUploadFunc) appendCall(r0 StoreUploadFuncCall)
+```
+
+#### <a id="StoreUploadFunc.nextHook" href="#StoreUploadFunc.nextHook">func (f *StoreUploadFunc) nextHook() func(context.Context, string, io.Reader) (int64, error)</a>
+
+```
+searchKey: mocks.StoreUploadFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *StoreUploadFunc) nextHook() func(context.Context, string, io.Reader) (int64, error)
+```
+
 ### <a id="StoreUploadFuncCall" href="#StoreUploadFuncCall">type StoreUploadFuncCall struct</a>
 
 ```
 searchKey: mocks.StoreUploadFuncCall
+tags: [struct]
 ```
 
 ```Go
@@ -903,6 +954,7 @@ StoreUploadFuncCall is an object that describes an invocation of method Upload o
 
 ```
 searchKey: mocks.StoreUploadFuncCall.Args
+tags: [function]
 ```
 
 ```Go
@@ -915,6 +967,7 @@ Args returns an interface slice containing the arguments of this invocation.
 
 ```
 searchKey: mocks.StoreUploadFuncCall.Results
+tags: [function]
 ```
 
 ```Go

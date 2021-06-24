@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/extsvc/bitbucketcloud",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,12 +41,37 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/extsvc/bitbucketcloud#RateLimitMaxBurstRequests",
+              "documentation": {
+                "identifier": "RateLimitMaxBurstRequests",
+                "newPage": false,
+                "searchKey": "bitbucketcloud.RateLimitMaxBurstRequests",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RateLimitMaxBurstRequests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RateLimitMaxBurstRequests = 500\n```\n\nThese fields define the self-imposed Bitbucket rate limit (since Bitbucket Cloud does not have a concept of rate limiting in HTTP response headers). \n\nSee [https://godoc.org/golang.org/x/time/rate#Limiter](https://godoc.org/golang.org/x/time/rate#Limiter) for an explanation of these fields. \n\nThe limits chosen here are based on the following logic: Bitbucket Cloud restricts \"List all repositories\" requests (which are a good portion of our requests) to 1,000/hr, and they restrict \"List a user or team's repositories\" requests (which are roughly equal to our repository lookup requests) to 1,000/hr. See `pkg/extsvc/bitbucketserver/client.go` for the calculations behind these limits` \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/extsvc/bitbucketcloud#rateLimitRequestsPerSecond",
               "documentation": {
                 "identifier": "rateLimitRequestsPerSecond",
                 "newPage": false,
                 "searchKey": "bitbucketcloud.rateLimitRequestsPerSecond",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -55,26 +82,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst rateLimitRequestsPerSecond = 2 // 120/min or 7200/hr\n\n```\n\nThese fields define the self-imposed Bitbucket rate limit (since Bitbucket Cloud does not have a concept of rate limiting in HTTP response headers). \n\nSee [https://godoc.org/golang.org/x/time/rate#Limiter](https://godoc.org/golang.org/x/time/rate#Limiter) for an explanation of these fields. \n\nThe limits chosen here are based on the following logic: Bitbucket Cloud restricts \"List all repositories\" requests (which are a good portion of our requests) to 1,000/hr, and they restrict \"List a user or team's repositories\" requests (which are roughly equal to our repository lookup requests) to 1,000/hr. See `pkg/extsvc/bitbucketserver/client.go` for the calculations behind these limits` \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc/bitbucketcloud#RateLimitMaxBurstRequests",
-              "documentation": {
-                "identifier": "RateLimitMaxBurstRequests",
-                "newPage": false,
-                "searchKey": "bitbucketcloud.RateLimitMaxBurstRequests",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const RateLimitMaxBurstRequests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst RateLimitMaxBurstRequests = 500\n```\n\nThese fields define the self-imposed Bitbucket rate limit (since Bitbucket Cloud does not have a concept of rate limiting in HTTP response headers). \n\nSee [https://godoc.org/golang.org/x/time/rate#Limiter](https://godoc.org/golang.org/x/time/rate#Limiter) for an explanation of these fields. \n\nThe limits chosen here are based on the following logic: Bitbucket Cloud restricts \"List all repositories\" requests (which are a good portion of our requests) to 1,000/hr, and they restrict \"List a user or team's repositories\" requests (which are roughly equal to our repository lookup requests) to 1,000/hr. See `pkg/extsvc/bitbucketserver/client.go` for the calculations behind these limits` \n\n"
               },
               "children": null
             }
@@ -90,6 +97,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -104,34 +112,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/extsvc/bitbucketcloud#requestCounter",
-              "documentation": {
-                "identifier": "requestCounter",
-                "newPage": false,
-                "searchKey": "bitbucketcloud.requestCounter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var requestCounter"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar requestCounter = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/extsvc/bitbucketcloud#normalizer",
               "documentation": {
                 "identifier": "normalizer",
                 "newPage": false,
                 "searchKey": "bitbucketcloud.normalizer",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -148,12 +136,38 @@
           },
           {
             "node": {
+              "pathID": "/internal/extsvc/bitbucketcloud#requestCounter",
+              "documentation": {
+                "identifier": "requestCounter",
+                "newPage": false,
+                "searchKey": "bitbucketcloud.requestCounter",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var requestCounter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar requestCounter = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/extsvc/bitbucketcloud#update",
               "documentation": {
                 "identifier": "update",
                 "newPage": false,
                 "searchKey": "bitbucketcloud.update",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
@@ -179,6 +193,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -198,7 +213,9 @@
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "bitbucketcloud.Client",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -216,7 +233,9 @@
                       "identifier": "NewClient",
                       "newPage": false,
                       "searchKey": "bitbucketcloud.NewClient",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -236,7 +255,9 @@
                       "identifier": "NewTestClient",
                       "newPage": false,
                       "searchKey": "bitbucketcloud.NewTestClient",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -256,7 +277,9 @@
                       "identifier": "Client.Repos",
                       "newPage": false,
                       "searchKey": "bitbucketcloud.Client.Repos",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -271,12 +294,59 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/extsvc/bitbucketcloud#Client.authenticate",
+                    "documentation": {
+                      "identifier": "Client.authenticate",
+                      "newPage": false,
+                      "searchKey": "bitbucketcloud.Client.authenticate",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) authenticate(req *http.Request) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) authenticate(req *http.Request) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketcloud#Client.do",
+                    "documentation": {
+                      "identifier": "Client.do",
+                      "newPage": false,
+                      "searchKey": "bitbucketcloud.Client.do",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) do(ctx context.Context, req *http.Request, result interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) do(ctx context.Context, req *http.Request, result interface{}) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/extsvc/bitbucketcloud#Client.page",
                     "documentation": {
                       "identifier": "Client.page",
                       "newPage": false,
                       "searchKey": "bitbucketcloud.Client.page",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -299,6 +369,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketcloud.Client.reqPage",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -312,153 +383,8 @@
                     },
                     "children": null
                   }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/extsvc/bitbucketcloud#Client.do",
-                    "documentation": {
-                      "identifier": "Client.do",
-                      "newPage": false,
-                      "searchKey": "bitbucketcloud.Client.do",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) do(ctx context.Context, req *http.Request, result interface{}) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) do(ctx context.Context, req *http.Request, result interface{}) error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/extsvc/bitbucketcloud#Client.authenticate",
-                    "documentation": {
-                      "identifier": "Client.authenticate",
-                      "newPage": false,
-                      "searchKey": "bitbucketcloud.Client.authenticate",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) authenticate(req *http.Request) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) authenticate(req *http.Request) error\n```\n\n"
-                    },
-                    "children": null
-                  }
                 }
               ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc/bitbucketcloud#PageToken",
-              "documentation": {
-                "identifier": "PageToken",
-                "newPage": false,
-                "searchKey": "bitbucketcloud.PageToken",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type PageToken struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype PageToken struct {\n\tSize    int    `json:\"size\"`\n\tPage    int    `json:\"page\"`\n\tPagelen int    `json:\"pagelen\"`\n\tNext    string `json:\"next\"`\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/extsvc/bitbucketcloud#PageToken.HasMore",
-                    "documentation": {
-                      "identifier": "PageToken.HasMore",
-                      "newPage": false,
-                      "searchKey": "bitbucketcloud.PageToken.HasMore",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t *PageToken) HasMore() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t *PageToken) HasMore() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/extsvc/bitbucketcloud#PageToken.Values",
-                    "documentation": {
-                      "identifier": "PageToken.Values",
-                      "newPage": false,
-                      "searchKey": "bitbucketcloud.PageToken.Values",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t *PageToken) Values() url.Values"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t *PageToken) Values() url.Values\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc/bitbucketcloud#Repo",
-              "documentation": {
-                "identifier": "Repo",
-                "newPage": false,
-                "searchKey": "bitbucketcloud.Repo",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Repo struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Repo struct {\n\tSlug        string `json:\"slug\"`\n\tName        string `json:\"name\"`\n\tFullName    string `json:\"full_name\"`\n\tUUID        string `json:\"uuid\"`\n\tSCM         string `json:\"scm\"`\n\tDescription string `json:\"description\"`\n\tParent      *Repo  `json:\"parent\"`\n\tIsPrivate   bool   `json:\"is_private\"`\n\tLinks       Links  `json:\"links\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc/bitbucketcloud#Links",
-              "documentation": {
-                "identifier": "Links",
-                "newPage": false,
-                "searchKey": "bitbucketcloud.Links",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Links struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Links struct {\n\tClone CloneLinks `json:\"clone\"`\n\tHTML  Link       `json:\"html\"`\n}\n```\n\n"
-              },
-              "children": null
             }
           },
           {
@@ -468,7 +394,10 @@
                 "identifier": "CloneLinks",
                 "newPage": false,
                 "searchKey": "bitbucketcloud.CloneLinks",
-                "tags": null
+                "tags": [
+                  "array",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -486,7 +415,9 @@
                       "identifier": "CloneLinks.HTTPS",
                       "newPage": false,
                       "searchKey": "bitbucketcloud.CloneLinks.HTTPS",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -509,7 +440,9 @@
                 "identifier": "Link",
                 "newPage": false,
                 "searchKey": "bitbucketcloud.Link",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -524,12 +457,124 @@
           },
           {
             "node": {
+              "pathID": "/internal/extsvc/bitbucketcloud#Links",
+              "documentation": {
+                "identifier": "Links",
+                "newPage": false,
+                "searchKey": "bitbucketcloud.Links",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Links struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Links struct {\n\tClone CloneLinks `json:\"clone\"`\n\tHTML  Link       `json:\"html\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketcloud#PageToken",
+              "documentation": {
+                "identifier": "PageToken",
+                "newPage": false,
+                "searchKey": "bitbucketcloud.PageToken",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PageToken struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PageToken struct {\n\tSize    int    `json:\"size\"`\n\tPage    int    `json:\"page\"`\n\tPagelen int    `json:\"pagelen\"`\n\tNext    string `json:\"next\"`\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketcloud#PageToken.HasMore",
+                    "documentation": {
+                      "identifier": "PageToken.HasMore",
+                      "newPage": false,
+                      "searchKey": "bitbucketcloud.PageToken.HasMore",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *PageToken) HasMore() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *PageToken) HasMore() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketcloud#PageToken.Values",
+                    "documentation": {
+                      "identifier": "PageToken.Values",
+                      "newPage": false,
+                      "searchKey": "bitbucketcloud.PageToken.Values",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *PageToken) Values() url.Values"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *PageToken) Values() url.Values\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketcloud#Repo",
+              "documentation": {
+                "identifier": "Repo",
+                "newPage": false,
+                "searchKey": "bitbucketcloud.Repo",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Repo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Repo struct {\n\tSlug        string `json:\"slug\"`\n\tName        string `json:\"name\"`\n\tFullName    string `json:\"full_name\"`\n\tUUID        string `json:\"uuid\"`\n\tSCM         string `json:\"scm\"`\n\tDescription string `json:\"description\"`\n\tParent      *Repo  `json:\"parent\"`\n\tIsPrivate   bool   `json:\"is_private\"`\n\tLinks       Links  `json:\"links\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/extsvc/bitbucketcloud#httpError",
               "documentation": {
                 "identifier": "httpError",
                 "newPage": false,
                 "searchKey": "bitbucketcloud.httpError",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -550,6 +595,7 @@
                       "newPage": false,
                       "searchKey": "bitbucketcloud.httpError.Error",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -566,34 +612,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/extsvc/bitbucketcloud#httpError.Unauthorized",
-                    "documentation": {
-                      "identifier": "httpError.Unauthorized",
-                      "newPage": false,
-                      "searchKey": "bitbucketcloud.httpError.Unauthorized",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *httpError) Unauthorized() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *httpError) Unauthorized() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/extsvc/bitbucketcloud#httpError.NotFound",
                     "documentation": {
                       "identifier": "httpError.NotFound",
                       "newPage": false,
                       "searchKey": "bitbucketcloud.httpError.NotFound",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -604,6 +629,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (e *httpError) NotFound() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketcloud#httpError.Unauthorized",
+                    "documentation": {
+                      "identifier": "httpError.Unauthorized",
+                      "newPage": false,
+                      "searchKey": "bitbucketcloud.httpError.Unauthorized",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *httpError) Unauthorized() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *httpError) Unauthorized() bool\n```\n\n"
                     },
                     "children": null
                   }
@@ -622,6 +670,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -641,7 +690,9 @@
                 "identifier": "GetenvTestBitbucketCloudUsername",
                 "newPage": false,
                 "searchKey": "bitbucketcloud.GetenvTestBitbucketCloudUsername",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -656,12 +707,37 @@
           },
           {
             "node": {
+              "pathID": "/internal/extsvc/bitbucketcloud#TestClient_Repos",
+              "documentation": {
+                "identifier": "TestClient_Repos",
+                "newPage": false,
+                "searchKey": "bitbucketcloud.TestClient_Repos",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestClient_Repos(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestClient_Repos(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/extsvc/bitbucketcloud#normalize",
               "documentation": {
                 "identifier": "normalize",
                 "newPage": false,
                 "searchKey": "bitbucketcloud.normalize",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -672,28 +748,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc normalize(path string) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc/bitbucketcloud#TestClient_Repos",
-              "documentation": {
-                "identifier": "TestClient_Repos",
-                "newPage": false,
-                "searchKey": "bitbucketcloud.TestClient_Repos",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestClient_Repos(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestClient_Repos(t *testing.T)\n```\n\n"
               },
               "children": null
             }

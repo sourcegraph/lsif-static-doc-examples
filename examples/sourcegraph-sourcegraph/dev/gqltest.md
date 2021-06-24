@@ -3,22 +3,22 @@
 ## Index
 
 * [Variables](#var)
-    * [var client](#client)
-    * [var long](#long)
-    * [var baseURL](#baseURL)
-    * [var email](#email)
-    * [var username](#username)
-    * [var password](#password)
-    * [var githubToken](#githubToken)
     * [var awsAccessKeyID](#awsAccessKeyID)
-    * [var awsSecretAccessKey](#awsSecretAccessKey)
-    * [var awsCodeCommitUsername](#awsCodeCommitUsername)
     * [var awsCodeCommitPassword](#awsCodeCommitPassword)
-    * [var bbsURL](#bbsURL)
-    * [var bbsToken](#bbsToken)
-    * [var bbsUsername](#bbsUsername)
-    * [var azureDevOpsUsername](#azureDevOpsUsername)
+    * [var awsCodeCommitUsername](#awsCodeCommitUsername)
+    * [var awsSecretAccessKey](#awsSecretAccessKey)
     * [var azureDevOpsToken](#azureDevOpsToken)
+    * [var azureDevOpsUsername](#azureDevOpsUsername)
+    * [var baseURL](#baseURL)
+    * [var bbsToken](#bbsToken)
+    * [var bbsURL](#bbsURL)
+    * [var bbsUsername](#bbsUsername)
+    * [var client](#client)
+    * [var email](#email)
+    * [var githubToken](#githubToken)
+    * [var long](#long)
+    * [var password](#password)
+    * [var username](#username)
 * [Types](#type)
     * [type searchClient interface](#searchClient)
 * [Functions](#func)
@@ -28,203 +28,211 @@
     * [func TestExternalService_BitbucketServer(t *testing.T)](#TestExternalService_BitbucketServer)
     * [func TestFeatureFlags(t *testing.T)](#TestFeatureFlags)
     * [func TestMain(m *testing.M)](#TestMain)
-    * [func mustMarshalJSONString(v interface{}) string](#mustMarshalJSONString)
     * [func TestOrganization(t *testing.T)](#TestOrganization)
     * [func TestRepository(t *testing.T)](#TestRepository)
     * [func TestRepository_NameWithSpace(t *testing.T)](#TestRepository_NameWithSpace)
     * [func TestSearch(t *testing.T)](#TestSearch)
-    * [func testSearchClient(t *testing.T, client searchClient)](#testSearchClient)
-    * [func testSearchOther(t *testing.T)](#testSearchOther)
-    * [func testSearchContextsCRUD(t *testing.T, client *gqltestutil.Client)](#testSearchContextsCRUD)
-    * [func testListingSearchContexts(t *testing.T, client *gqltestutil.Client)](#testListingSearchContexts)
     * [func TestSiteConfig(t *testing.T)](#TestSiteConfig)
+    * [func mustMarshalJSONString(v interface{}) string](#mustMarshalJSONString)
+    * [func testListingSearchContexts(t *testing.T, client *gqltestutil.Client)](#testListingSearchContexts)
+    * [func testSearchClient(t *testing.T, client searchClient)](#testSearchClient)
+    * [func testSearchContextsCRUD(t *testing.T, client *gqltestutil.Client)](#testSearchContextsCRUD)
+    * [func testSearchOther(t *testing.T)](#testSearchOther)
 
 
 ## <a id="var" href="#var">Variables</a>
 
-### <a id="client" href="#client">var client</a>
-
 ```
-searchKey: main.client
-tags: [private]
-```
-
-```Go
-var client *gqltestutil.Client
-```
-
-### <a id="long" href="#long">var long</a>
-
-```
-searchKey: main.long
-tags: [private]
-```
-
-```Go
-var long = ...
-```
-
-### <a id="baseURL" href="#baseURL">var baseURL</a>
-
-```
-searchKey: main.baseURL
-tags: [private]
-```
-
-```Go
-var baseURL = ...
-```
-
-### <a id="email" href="#email">var email</a>
-
-```
-searchKey: main.email
-tags: [private]
-```
-
-```Go
-var email = flag.String("email", "gqltest@sourcegraph.com", "The email of the admin user")
-```
-
-### <a id="username" href="#username">var username</a>
-
-```
-searchKey: main.username
-tags: [private]
-```
-
-```Go
-var username = flag.String("username", "gqltest-admin", "The username of the admin user")
-```
-
-### <a id="password" href="#password">var password</a>
-
-```
-searchKey: main.password
-tags: [private]
-```
-
-```Go
-var password = flag.String("password", "supersecurepassword", "The password of the admin user")
-```
-
-### <a id="githubToken" href="#githubToken">var githubToken</a>
-
-```
-searchKey: main.githubToken
-tags: [private]
-```
-
-```Go
-var githubToken = ...
+tags: [package]
 ```
 
 ### <a id="awsAccessKeyID" href="#awsAccessKeyID">var awsAccessKeyID</a>
 
 ```
 searchKey: main.awsAccessKeyID
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
 var awsAccessKeyID = ...
 ```
 
-### <a id="awsSecretAccessKey" href="#awsSecretAccessKey">var awsSecretAccessKey</a>
-
-```
-searchKey: main.awsSecretAccessKey
-tags: [private]
-```
-
-```Go
-var awsSecretAccessKey = ...
-```
-
-### <a id="awsCodeCommitUsername" href="#awsCodeCommitUsername">var awsCodeCommitUsername</a>
-
-```
-searchKey: main.awsCodeCommitUsername
-tags: [private]
-```
-
-```Go
-var awsCodeCommitUsername = ...
-```
-
 ### <a id="awsCodeCommitPassword" href="#awsCodeCommitPassword">var awsCodeCommitPassword</a>
 
 ```
 searchKey: main.awsCodeCommitPassword
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
 var awsCodeCommitPassword = ...
 ```
 
-### <a id="bbsURL" href="#bbsURL">var bbsURL</a>
+### <a id="awsCodeCommitUsername" href="#awsCodeCommitUsername">var awsCodeCommitUsername</a>
 
 ```
-searchKey: main.bbsURL
-tags: [private]
-```
-
-```Go
-var bbsURL = flag.String("bbs-url", os.Getenv("BITBUCKET_SERVER_URL"), "The Bitbucket Server URL")
-```
-
-### <a id="bbsToken" href="#bbsToken">var bbsToken</a>
-
-```
-searchKey: main.bbsToken
-tags: [private]
+searchKey: main.awsCodeCommitUsername
+tags: [variable string private]
 ```
 
 ```Go
-var bbsToken = ...
+var awsCodeCommitUsername = ...
 ```
 
-### <a id="bbsUsername" href="#bbsUsername">var bbsUsername</a>
+### <a id="awsSecretAccessKey" href="#awsSecretAccessKey">var awsSecretAccessKey</a>
 
 ```
-searchKey: main.bbsUsername
-tags: [private]
-```
-
-```Go
-var bbsUsername = ...
-```
-
-### <a id="azureDevOpsUsername" href="#azureDevOpsUsername">var azureDevOpsUsername</a>
-
-```
-searchKey: main.azureDevOpsUsername
-tags: [private]
+searchKey: main.awsSecretAccessKey
+tags: [variable string private]
 ```
 
 ```Go
-var azureDevOpsUsername = ...
+var awsSecretAccessKey = ...
 ```
 
 ### <a id="azureDevOpsToken" href="#azureDevOpsToken">var azureDevOpsToken</a>
 
 ```
 searchKey: main.azureDevOpsToken
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
 var azureDevOpsToken = ...
 ```
 
+### <a id="azureDevOpsUsername" href="#azureDevOpsUsername">var azureDevOpsUsername</a>
+
+```
+searchKey: main.azureDevOpsUsername
+tags: [variable string private]
+```
+
+```Go
+var azureDevOpsUsername = ...
+```
+
+### <a id="baseURL" href="#baseURL">var baseURL</a>
+
+```
+searchKey: main.baseURL
+tags: [variable string private]
+```
+
+```Go
+var baseURL = ...
+```
+
+### <a id="bbsToken" href="#bbsToken">var bbsToken</a>
+
+```
+searchKey: main.bbsToken
+tags: [variable string private]
+```
+
+```Go
+var bbsToken = ...
+```
+
+### <a id="bbsURL" href="#bbsURL">var bbsURL</a>
+
+```
+searchKey: main.bbsURL
+tags: [variable string private]
+```
+
+```Go
+var bbsURL = flag.String("bbs-url", os.Getenv("BITBUCKET_SERVER_URL"), "The Bitbucket Server URL")
+```
+
+### <a id="bbsUsername" href="#bbsUsername">var bbsUsername</a>
+
+```
+searchKey: main.bbsUsername
+tags: [variable string private]
+```
+
+```Go
+var bbsUsername = ...
+```
+
+### <a id="client" href="#client">var client</a>
+
+```
+searchKey: main.client
+tags: [variable struct private]
+```
+
+```Go
+var client *gqltestutil.Client
+```
+
+### <a id="email" href="#email">var email</a>
+
+```
+searchKey: main.email
+tags: [variable string private]
+```
+
+```Go
+var email = flag.String("email", "gqltest@sourcegraph.com", "The email of the admin user")
+```
+
+### <a id="githubToken" href="#githubToken">var githubToken</a>
+
+```
+searchKey: main.githubToken
+tags: [variable string private]
+```
+
+```Go
+var githubToken = ...
+```
+
+### <a id="long" href="#long">var long</a>
+
+```
+searchKey: main.long
+tags: [variable boolean private]
+```
+
+```Go
+var long = ...
+```
+
+### <a id="password" href="#password">var password</a>
+
+```
+searchKey: main.password
+tags: [variable string private]
+```
+
+```Go
+var password = flag.String("password", "supersecurepassword", "The password of the admin user")
+```
+
+### <a id="username" href="#username">var username</a>
+
+```
+searchKey: main.username
+tags: [variable string private]
+```
+
+```Go
+var username = flag.String("username", "gqltest-admin", "The username of the admin user")
+```
+
 ## <a id="type" href="#type">Types</a>
+
+```
+tags: [package]
+```
 
 ### <a id="searchClient" href="#searchClient">type searchClient interface</a>
 
 ```
 searchKey: main.searchClient
-tags: [private]
+tags: [interface private]
 ```
 
 ```Go
@@ -242,11 +250,15 @@ searchClient is an interface so we can swap out a streaming vs graphql based sea
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [package]
+```
+
 ### <a id="TestAccessToken" href="#TestAccessToken">func TestAccessToken(t *testing.T)</a>
 
 ```
 searchKey: main.TestAccessToken
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -257,7 +269,7 @@ func TestAccessToken(t *testing.T)
 
 ```
 searchKey: main.TestExternalService
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -268,7 +280,7 @@ func TestExternalService(t *testing.T)
 
 ```
 searchKey: main.TestExternalService_AWSCodeCommit
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -279,7 +291,7 @@ func TestExternalService_AWSCodeCommit(t *testing.T)
 
 ```
 searchKey: main.TestExternalService_BitbucketServer
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -290,7 +302,7 @@ func TestExternalService_BitbucketServer(t *testing.T)
 
 ```
 searchKey: main.TestFeatureFlags
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -301,29 +313,18 @@ func TestFeatureFlags(t *testing.T)
 
 ```
 searchKey: main.TestMain
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestMain(m *testing.M)
 ```
 
-### <a id="mustMarshalJSONString" href="#mustMarshalJSONString">func mustMarshalJSONString(v interface{}) string</a>
-
-```
-searchKey: main.mustMarshalJSONString
-tags: [private]
-```
-
-```Go
-func mustMarshalJSONString(v interface{}) string
-```
-
 ### <a id="TestOrganization" href="#TestOrganization">func TestOrganization(t *testing.T)</a>
 
 ```
 searchKey: main.TestOrganization
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -334,7 +335,7 @@ func TestOrganization(t *testing.T)
 
 ```
 searchKey: main.TestRepository
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -345,7 +346,7 @@ func TestRepository(t *testing.T)
 
 ```
 searchKey: main.TestRepository_NameWithSpace
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -356,29 +357,73 @@ func TestRepository_NameWithSpace(t *testing.T)
 
 ```
 searchKey: main.TestSearch
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestSearch(t *testing.T)
 ```
 
+### <a id="TestSiteConfig" href="#TestSiteConfig">func TestSiteConfig(t *testing.T)</a>
+
+```
+searchKey: main.TestSiteConfig
+tags: [method private test]
+```
+
+```Go
+func TestSiteConfig(t *testing.T)
+```
+
+### <a id="mustMarshalJSONString" href="#mustMarshalJSONString">func mustMarshalJSONString(v interface{}) string</a>
+
+```
+searchKey: main.mustMarshalJSONString
+tags: [method private]
+```
+
+```Go
+func mustMarshalJSONString(v interface{}) string
+```
+
+### <a id="testListingSearchContexts" href="#testListingSearchContexts">func testListingSearchContexts(t *testing.T, client *gqltestutil.Client)</a>
+
+```
+searchKey: main.testListingSearchContexts
+tags: [method private]
+```
+
+```Go
+func testListingSearchContexts(t *testing.T, client *gqltestutil.Client)
+```
+
 ### <a id="testSearchClient" href="#testSearchClient">func testSearchClient(t *testing.T, client searchClient)</a>
 
 ```
 searchKey: main.testSearchClient
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func testSearchClient(t *testing.T, client searchClient)
 ```
 
+### <a id="testSearchContextsCRUD" href="#testSearchContextsCRUD">func testSearchContextsCRUD(t *testing.T, client *gqltestutil.Client)</a>
+
+```
+searchKey: main.testSearchContextsCRUD
+tags: [method private]
+```
+
+```Go
+func testSearchContextsCRUD(t *testing.T, client *gqltestutil.Client)
+```
+
 ### <a id="testSearchOther" href="#testSearchOther">func testSearchOther(t *testing.T)</a>
 
 ```
 searchKey: main.testSearchOther
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -386,37 +431,4 @@ func testSearchOther(t *testing.T)
 ```
 
 testSearchOther other contains search tests for parts of the GraphQL API which are not replicated in the streaming API (statistics and suggestions). 
-
-### <a id="testSearchContextsCRUD" href="#testSearchContextsCRUD">func testSearchContextsCRUD(t *testing.T, client *gqltestutil.Client)</a>
-
-```
-searchKey: main.testSearchContextsCRUD
-tags: [private]
-```
-
-```Go
-func testSearchContextsCRUD(t *testing.T, client *gqltestutil.Client)
-```
-
-### <a id="testListingSearchContexts" href="#testListingSearchContexts">func testListingSearchContexts(t *testing.T, client *gqltestutil.Client)</a>
-
-```
-searchKey: main.testListingSearchContexts
-tags: [private]
-```
-
-```Go
-func testListingSearchContexts(t *testing.T, client *gqltestutil.Client)
-```
-
-### <a id="TestSiteConfig" href="#TestSiteConfig">func TestSiteConfig(t *testing.T)</a>
-
-```
-searchKey: main.TestSiteConfig
-tags: [private]
-```
-
-```Go
-func TestSiteConfig(t *testing.T)
-```
 

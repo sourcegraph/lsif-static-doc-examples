@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/encryption/cloudkms",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,9 @@
                 "identifier": "Key",
                 "newPage": false,
                 "searchKey": "cloudkms.Key",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -57,32 +61,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/encryption/cloudkms#Key.Version",
-                    "documentation": {
-                      "identifier": "Key.Version",
-                      "newPage": false,
-                      "searchKey": "cloudkms.Key.Version",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/encryption/cloudkms#Key.Decrypt",
                     "documentation": {
                       "identifier": "Key.Decrypt",
                       "newPage": false,
                       "searchKey": "cloudkms.Key.Decrypt",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -102,7 +88,9 @@
                       "identifier": "Key.Encrypt",
                       "newPage": false,
                       "searchKey": "cloudkms.Key.Encrypt",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -111,6 +99,28 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (k *Key) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)\n```\n\nEncrypt a secret, storing it as a base64 encoded json blob, this json contains the key name, ciphertext, & checksum. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/encryption/cloudkms#Key.Version",
+                    "documentation": {
+                      "identifier": "Key.Version",
+                      "newPage": false,
+                      "searchKey": "cloudkms.Key.Version",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -126,6 +136,7 @@
                 "newPage": false,
                 "searchKey": "cloudkms.encryptedValue",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -151,6 +162,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -170,7 +182,9 @@
                 "identifier": "NewKey",
                 "newPage": false,
                 "searchKey": "cloudkms.NewKey",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -191,6 +205,7 @@
                 "newPage": false,
                 "searchKey": "cloudkms.crc32Sum",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },

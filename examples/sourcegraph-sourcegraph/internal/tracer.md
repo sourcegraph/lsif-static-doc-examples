@@ -7,19 +7,19 @@ Package tracer initializes distributed tracing and log15 behavior. It also updat
 * [Constants](#const)
     * [const tracingNotEnabledURL](#tracingNotEnabledURL)
 * [Types](#type)
-    * [type Options struct](#Options)
     * [type Option func(*github.com/sourcegraph/sourcegraph/internal/tracer.Options)](#Option)
         * [func ServiceName(s string) Option](#ServiceName)
+    * [type Options struct](#Options)
     * [type jaegerOpts struct](#jaegerOpts)
     * [type switchableTracer struct](#switchableTracer)
         * [func newSwitchableTracer() *switchableTracer](#newSwitchableTracer)
-        * [func (t *switchableTracer) StartSpan(operationName string, opts ...opentracing.StartSpanOption) opentracing.Span](#switchableTracer.StartSpan)
-        * [func (t *switchableTracer) Inject(sm opentracing.SpanContext, format interface{}, carrier interface{}) error](#switchableTracer.Inject)
         * [func (t *switchableTracer) Extract(format interface{}, carrier interface{}) (opentracing.SpanContext, error)](#switchableTracer.Extract)
+        * [func (t *switchableTracer) Inject(sm opentracing.SpanContext, format interface{}, carrier interface{}) error](#switchableTracer.Inject)
+        * [func (t *switchableTracer) StartSpan(operationName string, opts ...opentracing.StartSpanOption) opentracing.Span](#switchableTracer.StartSpan)
         * [func (t *switchableTracer) set(tracer opentracing.Tracer, tracerCloser io.Closer, log bool)](#switchableTracer.set)
 * [Functions](#func)
-    * [func init()](#init.tracer.go)
     * [func Init(options ...Option)](#Init)
+    * [func init()](#init.tracer.go)
     * [func initTracer(serviceName string)](#initTracer)
     * [func newTracer(opts *jaegerOpts) (opentracing.Tracer, func(span opentracing.Span) string, io.Closer, error)](#newTracer)
 
@@ -27,14 +27,14 @@ Package tracer initializes distributed tracing and log15 behavior. It also updat
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="tracingNotEnabledURL" href="#tracingNotEnabledURL">const tracingNotEnabledURL</a>
 
 ```
 searchKey: tracer.tracingNotEnabledURL
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -44,27 +44,14 @@ const tracingNotEnabledURL = "#tracing_not_enabled_for_this_request_add_?trace=1
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
-
-### <a id="Options" href="#Options">type Options struct</a>
-
-```
-searchKey: tracer.Options
-```
-
-```Go
-type Options struct {
-	serviceName string
-}
-```
-
-Options control the behavior of a tracer. 
 
 ### <a id="Option" href="#Option">type Option func(*github.com/sourcegraph/sourcegraph/internal/tracer.Options)</a>
 
 ```
 searchKey: tracer.Option
+tags: [function]
 ```
 
 ```Go
@@ -77,17 +64,33 @@ If this idiom seems strange: [https://github.com/tmrts/go-patterns/blob/master/i
 
 ```
 searchKey: tracer.ServiceName
+tags: [method]
 ```
 
 ```Go
 func ServiceName(s string) Option
 ```
 
+### <a id="Options" href="#Options">type Options struct</a>
+
+```
+searchKey: tracer.Options
+tags: [struct]
+```
+
+```Go
+type Options struct {
+	serviceName string
+}
+```
+
+Options control the behavior of a tracer. 
+
 ### <a id="jaegerOpts" href="#jaegerOpts">type jaegerOpts struct</a>
 
 ```
 searchKey: tracer.jaegerOpts
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -103,7 +106,7 @@ type jaegerOpts struct {
 
 ```
 searchKey: tracer.switchableTracer
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -121,51 +124,51 @@ switchableTracer implements opentracing.Tracer. The underlying tracer used is sw
 
 ```
 searchKey: tracer.newSwitchableTracer
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func newSwitchableTracer() *switchableTracer
 ```
 
-#### <a id="switchableTracer.StartSpan" href="#switchableTracer.StartSpan">func (t *switchableTracer) StartSpan(operationName string, opts ...opentracing.StartSpanOption) opentracing.Span</a>
-
-```
-searchKey: tracer.switchableTracer.StartSpan
-tags: [private]
-```
-
-```Go
-func (t *switchableTracer) StartSpan(operationName string, opts ...opentracing.StartSpanOption) opentracing.Span
-```
-
-#### <a id="switchableTracer.Inject" href="#switchableTracer.Inject">func (t *switchableTracer) Inject(sm opentracing.SpanContext, format interface{}, carrier interface{}) error</a>
-
-```
-searchKey: tracer.switchableTracer.Inject
-tags: [private]
-```
-
-```Go
-func (t *switchableTracer) Inject(sm opentracing.SpanContext, format interface{}, carrier interface{}) error
-```
-
 #### <a id="switchableTracer.Extract" href="#switchableTracer.Extract">func (t *switchableTracer) Extract(format interface{}, carrier interface{}) (opentracing.SpanContext, error)</a>
 
 ```
 searchKey: tracer.switchableTracer.Extract
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (t *switchableTracer) Extract(format interface{}, carrier interface{}) (opentracing.SpanContext, error)
 ```
 
+#### <a id="switchableTracer.Inject" href="#switchableTracer.Inject">func (t *switchableTracer) Inject(sm opentracing.SpanContext, format interface{}, carrier interface{}) error</a>
+
+```
+searchKey: tracer.switchableTracer.Inject
+tags: [method private]
+```
+
+```Go
+func (t *switchableTracer) Inject(sm opentracing.SpanContext, format interface{}, carrier interface{}) error
+```
+
+#### <a id="switchableTracer.StartSpan" href="#switchableTracer.StartSpan">func (t *switchableTracer) StartSpan(operationName string, opts ...opentracing.StartSpanOption) opentracing.Span</a>
+
+```
+searchKey: tracer.switchableTracer.StartSpan
+tags: [method private]
+```
+
+```Go
+func (t *switchableTracer) StartSpan(operationName string, opts ...opentracing.StartSpanOption) opentracing.Span
+```
+
 #### <a id="switchableTracer.set" href="#switchableTracer.set">func (t *switchableTracer) set(tracer opentracing.Tracer, tracerCloser io.Closer, log bool)</a>
 
 ```
 searchKey: tracer.switchableTracer.set
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -175,35 +178,36 @@ func (t *switchableTracer) set(tracer opentracing.Tracer, tracerCloser io.Closer
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
-```
-
-### <a id="init.tracer.go" href="#init.tracer.go">func init()</a>
-
-```
-searchKey: tracer.init
-tags: [private]
-```
-
-```Go
-func init()
+tags: [package private]
 ```
 
 ### <a id="Init" href="#Init">func Init(options ...Option)</a>
 
 ```
 searchKey: tracer.Init
+tags: [method]
 ```
 
 ```Go
 func Init(options ...Option)
 ```
 
+### <a id="init.tracer.go" href="#init.tracer.go">func init()</a>
+
+```
+searchKey: tracer.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
 ### <a id="initTracer" href="#initTracer">func initTracer(serviceName string)</a>
 
 ```
 searchKey: tracer.initTracer
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -216,7 +220,7 @@ initTracer is a helper that should be called exactly once (from Init).
 
 ```
 searchKey: tracer.newTracer
-tags: [private]
+tags: [method private]
 ```
 
 ```Go

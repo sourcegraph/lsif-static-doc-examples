@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "go/ast_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,22 +41,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/go/ast_test#src",
+              "pathID": "/go/ast_test#golden",
               "documentation": {
-                "identifier": "src",
+                "identifier": "golden",
                 "newPage": false,
-                "searchKey": "ast_test.src",
+                "searchKey": "ast_test.golden",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const src"
+                "value": "const golden"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst src = ...\n```\n\n"
+                "value": "```Go\nconst golden = ...\n```\n\nCalling ast.MergePackageFiles with ast.FilterFuncDuplicates keeps a duplicate entry with attached documentation in favor of one without, and it favors duplicate entries appearing later in the source over ones appearing earlier. This is why (*t2).f2 is kept and t2.f2 is eliminated in this test case. \n\n"
               },
               "children": null
             }
@@ -67,6 +71,8 @@
                 "newPage": false,
                 "searchKey": "ast_test.input",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -83,22 +89,24 @@
           },
           {
             "node": {
-              "pathID": "/go/ast_test#golden",
+              "pathID": "/go/ast_test#src",
               "documentation": {
-                "identifier": "golden",
+                "identifier": "src",
                 "newPage": false,
-                "searchKey": "ast_test.golden",
+                "searchKey": "ast_test.src",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const golden"
+                "value": "const src"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst golden = ...\n```\n\nCalling ast.MergePackageFiles with ast.FilterFuncDuplicates keeps a duplicate entry with attached documentation in favor of one without, and it favors duplicate entries appearing later in the source over ones appearing earlier. This is why (*t2).f2 is kept and t2.f2 is eliminated in this test case. \n\n"
+                "value": "```Go\nconst src = ...\n```\n\n"
               },
               "children": null
             }
@@ -114,6 +122,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -134,6 +143,8 @@
                 "newPage": false,
                 "searchKey": "ast_test.res",
                 "tags": [
+                  "variable",
+                  "object",
                   "private"
                 ]
               },
@@ -159,6 +170,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -173,66 +185,23 @@
         "children": [
           {
             "node": {
-              "pathID": "/go/ast_test#ctext",
+              "pathID": "/go/ast_test#ExampleCommentMap",
               "documentation": {
-                "identifier": "ctext",
+                "identifier": "ExampleCommentMap",
                 "newPage": false,
-                "searchKey": "ast_test.ctext",
+                "searchKey": "ast_test.ExampleCommentMap",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func ctext(list []*CommentGroup) string"
+                "value": "func ExampleCommentMap()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc ctext(list []*CommentGroup) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/ast_test#TestCommentMap",
-              "documentation": {
-                "identifier": "TestCommentMap",
-                "newPage": false,
-                "searchKey": "ast_test.TestCommentMap",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCommentMap(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCommentMap(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/ast_test#TestFilter",
-              "documentation": {
-                "identifier": "TestFilter",
-                "newPage": false,
-                "searchKey": "ast_test.TestFilter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestFilter(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestFilter(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc ExampleCommentMap()\n```\n\nThis example illustrates how to remove a variable declaration in a Go program while maintaining correct comment association using an ast.CommentMap. \n\n"
               },
               "children": null
             }
@@ -245,6 +214,7 @@
                 "newPage": false,
                 "searchKey": "ast_test.ExampleInspect",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -267,6 +237,7 @@
                 "newPage": false,
                 "searchKey": "ast_test.ExamplePrint",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -283,22 +254,48 @@
           },
           {
             "node": {
-              "pathID": "/go/ast_test#ExampleCommentMap",
+              "pathID": "/go/ast_test#TestCommentMap",
               "documentation": {
-                "identifier": "ExampleCommentMap",
+                "identifier": "TestCommentMap",
                 "newPage": false,
-                "searchKey": "ast_test.ExampleCommentMap",
+                "searchKey": "ast_test.TestCommentMap",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func ExampleCommentMap()"
+                "value": "func TestCommentMap(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc ExampleCommentMap()\n```\n\nThis example illustrates how to remove a variable declaration in a Go program while maintaining correct comment association using an ast.CommentMap. \n\n"
+                "value": "```Go\nfunc TestCommentMap(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/ast_test#TestFilter",
+              "documentation": {
+                "identifier": "TestFilter",
+                "newPage": false,
+                "searchKey": "ast_test.TestFilter",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFilter(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFilter(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -311,7 +308,9 @@
                 "newPage": false,
                 "searchKey": "ast_test.TestFilterDuplicates",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -333,7 +332,9 @@
                 "newPage": false,
                 "searchKey": "ast_test.TestIssue33649",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -343,6 +344,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc TestIssue33649(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/ast_test#ctext",
+              "documentation": {
+                "identifier": "ctext",
+                "newPage": false,
+                "searchKey": "ast_test.ctext",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ctext(list []*CommentGroup) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ctext(list []*CommentGroup) string\n```\n\n"
               },
               "children": null
             }

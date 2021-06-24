@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "cmd/frontend/internal/app/debugproxies",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,22 +41,22 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app/debugproxies#proxyEndpoint",
+              "pathID": "/cmd/frontend/internal/app/debugproxies#Endpoint",
               "documentation": {
-                "identifier": "proxyEndpoint",
+                "identifier": "Endpoint",
                 "newPage": false,
-                "searchKey": "debugproxies.proxyEndpoint",
+                "searchKey": "debugproxies.Endpoint",
                 "tags": [
-                  "private"
+                  "struct"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type proxyEndpoint struct"
+                "value": "type Endpoint struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype proxyEndpoint struct {\n\treverseProxy http.Handler\n\thost         string\n}\n```\n\nproxyEndpoint couples the reverse proxy with the endpoint it proxies. \n\n"
+                "value": "```Go\ntype Endpoint struct {\n\t// Service to which the endpoint belongs\n\tService string\n\t// Addr:port, so hostname part of a URL (ip address ok)\n\tAddr string\n\t// Hostname of the endpoint, if set. Only use this for display purposes,\n\t// it doesn't include the port nor is it gaurenteed to be resolvable.\n\tHostname string\n}\n```\n\nRepresents an endpoint \n\n"
               },
               "children": null
             }
@@ -66,7 +68,9 @@
                 "identifier": "ReverseProxyHandler",
                 "newPage": false,
                 "searchKey": "debugproxies.ReverseProxyHandler",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +88,9 @@
                       "identifier": "ReverseProxyHandler.AddToRouter",
                       "newPage": false,
                       "searchKey": "debugproxies.ReverseProxyHandler.AddToRouter",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -99,12 +105,35 @@
                 },
                 {
                   "node": {
+                    "pathID": "/cmd/frontend/internal/app/debugproxies#ReverseProxyHandler.Populate",
+                    "documentation": {
+                      "identifier": "ReverseProxyHandler.Populate",
+                      "newPage": false,
+                      "searchKey": "debugproxies.ReverseProxyHandler.Populate",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rph *ReverseProxyHandler) Populate(peps []Endpoint)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rph *ReverseProxyHandler) Populate(peps []Endpoint)\n```\n\nPopulate declares the proxyEndpoints to use. This method can be called at any time from any goroutine. It completely replaces the previous proxied endpoints with the ones specified in the call. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/cmd/frontend/internal/app/debugproxies#ReverseProxyHandler.serveIndex",
                     "documentation": {
                       "identifier": "ReverseProxyHandler.serveIndex",
                       "newPage": false,
                       "searchKey": "debugproxies.ReverseProxyHandler.serveIndex",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -127,6 +156,7 @@
                       "newPage": false,
                       "searchKey": "debugproxies.ReverseProxyHandler.serveReverseProxy",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -140,48 +170,8 @@
                     },
                     "children": null
                   }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/internal/app/debugproxies#ReverseProxyHandler.Populate",
-                    "documentation": {
-                      "identifier": "ReverseProxyHandler.Populate",
-                      "newPage": false,
-                      "searchKey": "debugproxies.ReverseProxyHandler.Populate",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (rph *ReverseProxyHandler) Populate(peps []Endpoint)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (rph *ReverseProxyHandler) Populate(peps []Endpoint)\n```\n\nPopulate declares the proxyEndpoints to use. This method can be called at any time from any goroutine. It completely replaces the previous proxied endpoints with the ones specified in the call. \n\n"
-                    },
-                    "children": null
-                  }
                 }
               ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app/debugproxies#Endpoint",
-              "documentation": {
-                "identifier": "Endpoint",
-                "newPage": false,
-                "searchKey": "debugproxies.Endpoint",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Endpoint struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Endpoint struct {\n\t// Service to which the endpoint belongs\n\tService string\n\t// Addr:port, so hostname part of a URL (ip address ok)\n\tAddr string\n\t// Hostname of the endpoint, if set. Only use this for display purposes,\n\t// it doesn't include the port nor is it gaurenteed to be resolvable.\n\tHostname string\n}\n```\n\nRepresents an endpoint \n\n"
-              },
-              "children": null
             }
           },
           {
@@ -191,7 +181,9 @@
                 "identifier": "ScanConsumer",
                 "newPage": false,
                 "searchKey": "debugproxies.ScanConsumer",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -212,6 +204,7 @@
                 "newPage": false,
                 "searchKey": "debugproxies.clusterScanner",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -232,6 +225,7 @@
                       "newPage": false,
                       "searchKey": "debugproxies.clusterScanner.runEventLoop",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -248,34 +242,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/cmd/frontend/internal/app/debugproxies#clusterScanner.watchEndpointEvents",
-                    "documentation": {
-                      "identifier": "clusterScanner.watchEndpointEvents",
-                      "newPage": false,
-                      "searchKey": "debugproxies.clusterScanner.watchEndpointEvents",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (cs *clusterScanner) watchEndpointEvents() (bool, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (cs *clusterScanner) watchEndpointEvents() (bool, error)\n```\n\nwatchEndpointEvents uses the k8s watch API operation to watch for endpoint events. Spins forever unless an error occurs that would necessitate creating a new watcher. The caller will then call again creating the new watcher. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/cmd/frontend/internal/app/debugproxies#clusterScanner.scanCluster",
                     "documentation": {
                       "identifier": "clusterScanner.scanCluster",
                       "newPage": false,
                       "searchKey": "debugproxies.clusterScanner.scanCluster",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -289,8 +262,54 @@
                     },
                     "children": null
                   }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/app/debugproxies#clusterScanner.watchEndpointEvents",
+                    "documentation": {
+                      "identifier": "clusterScanner.watchEndpointEvents",
+                      "newPage": false,
+                      "searchKey": "debugproxies.clusterScanner.watchEndpointEvents",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (cs *clusterScanner) watchEndpointEvents() (bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (cs *clusterScanner) watchEndpointEvents() (bool, error)\n```\n\nwatchEndpointEvents uses the k8s watch API operation to watch for endpoint events. Spins forever unless an error occurs that would necessitate creating a new watcher. The caller will then call again creating the new watcher. \n\n"
+                    },
+                    "children": null
+                  }
                 }
               ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/debugproxies#proxyEndpoint",
+              "documentation": {
+                "identifier": "proxyEndpoint",
+                "newPage": false,
+                "searchKey": "debugproxies.proxyEndpoint",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type proxyEndpoint struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype proxyEndpoint struct {\n\treverseProxy http.Handler\n\thost         string\n}\n```\n\nproxyEndpoint couples the reverse proxy with the endpoint it proxies. \n\n"
+              },
+              "children": null
             }
           }
         ]
@@ -304,6 +323,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -318,44 +338,118 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app/debugproxies#displayNameFromEndpoint",
+              "pathID": "/cmd/frontend/internal/app/debugproxies#StartClusterScanner",
               "documentation": {
-                "identifier": "displayNameFromEndpoint",
+                "identifier": "StartClusterScanner",
                 "newPage": false,
-                "searchKey": "debugproxies.displayNameFromEndpoint",
+                "searchKey": "debugproxies.StartClusterScanner",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func displayNameFromEndpoint(ep Endpoint) string"
+                "value": "func StartClusterScanner(consumer ScanConsumer) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc displayNameFromEndpoint(ep Endpoint) string\n```\n\nCreates a display name from an endpoint suited for using in a URL link. \n\n"
+                "value": "```Go\nfunc StartClusterScanner(consumer ScanConsumer) error\n```\n\nStarts a cluster scanner with the specified consumer. Does not block. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app/debugproxies#reverseProxyFromHost",
+              "pathID": "/cmd/frontend/internal/app/debugproxies#TestClusterScan",
               "documentation": {
-                "identifier": "reverseProxyFromHost",
+                "identifier": "TestClusterScan",
                 "newPage": false,
-                "searchKey": "debugproxies.reverseProxyFromHost",
+                "searchKey": "debugproxies.TestClusterScan",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func reverseProxyFromHost(host string, pathPrefix string) http.Handler"
+                "value": "func TestClusterScan(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc reverseProxyFromHost(host string, pathPrefix string) http.Handler\n```\n\nreverseProxyFromHost creates a reverse proxy from specified host with the path prefix that will be stripped from request before it gets sent to the destination endpoint. \n\n"
+                "value": "```Go\nfunc TestClusterScan(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/debugproxies#TestDisplayNameFromEndpoint",
+              "documentation": {
+                "identifier": "TestDisplayNameFromEndpoint",
+                "newPage": false,
+                "searchKey": "debugproxies.TestDisplayNameFromEndpoint",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDisplayNameFromEndpoint(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDisplayNameFromEndpoint(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/debugproxies#TestIndexLinks",
+              "documentation": {
+                "identifier": "TestIndexLinks",
+                "newPage": false,
+                "searchKey": "debugproxies.TestIndexLinks",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIndexLinks(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIndexLinks(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/debugproxies#TestReverseProxyRequestPaths",
+              "documentation": {
+                "identifier": "TestReverseProxyRequestPaths",
+                "newPage": false,
+                "searchKey": "debugproxies.TestReverseProxyRequestPaths",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReverseProxyRequestPaths(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReverseProxyRequestPaths(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -368,6 +462,7 @@
                 "newPage": false,
                 "searchKey": "debugproxies.adminOnly",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -384,42 +479,23 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app/debugproxies#startClusterScannerWithClient",
+              "pathID": "/cmd/frontend/internal/app/debugproxies#displayNameFromEndpoint",
               "documentation": {
-                "identifier": "startClusterScannerWithClient",
+                "identifier": "displayNameFromEndpoint",
                 "newPage": false,
-                "searchKey": "debugproxies.startClusterScannerWithClient",
+                "searchKey": "debugproxies.displayNameFromEndpoint",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func startClusterScannerWithClient(client *kubernetes.Clientset, ns string, consumer ScanConsumer) error"
+                "value": "func displayNameFromEndpoint(ep Endpoint) string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc startClusterScannerWithClient(client *kubernetes.Clientset, ns string, consumer ScanConsumer) error\n```\n\nStarts a cluster scanner with the specified client and consumer. Does not block. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app/debugproxies#StartClusterScanner",
-              "documentation": {
-                "identifier": "StartClusterScanner",
-                "newPage": false,
-                "searchKey": "debugproxies.StartClusterScanner",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func StartClusterScanner(consumer ScanConsumer) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc StartClusterScanner(consumer ScanConsumer) error\n```\n\nStarts a cluster scanner with the specified consumer. Does not block. \n\n"
+                "value": "```Go\nfunc displayNameFromEndpoint(ep Endpoint) string\n```\n\nCreates a display name from an endpoint suited for using in a URL link. \n\n"
               },
               "children": null
             }
@@ -432,6 +508,7 @@
                 "newPage": false,
                 "searchKey": "debugproxies.namespace",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -448,88 +525,46 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app/debugproxies#TestReverseProxyRequestPaths",
+              "pathID": "/cmd/frontend/internal/app/debugproxies#reverseProxyFromHost",
               "documentation": {
-                "identifier": "TestReverseProxyRequestPaths",
+                "identifier": "reverseProxyFromHost",
                 "newPage": false,
-                "searchKey": "debugproxies.TestReverseProxyRequestPaths",
+                "searchKey": "debugproxies.reverseProxyFromHost",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestReverseProxyRequestPaths(t *testing.T)"
+                "value": "func reverseProxyFromHost(host string, pathPrefix string) http.Handler"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestReverseProxyRequestPaths(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc reverseProxyFromHost(host string, pathPrefix string) http.Handler\n```\n\nreverseProxyFromHost creates a reverse proxy from specified host with the path prefix that will be stripped from request before it gets sent to the destination endpoint. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app/debugproxies#TestIndexLinks",
+              "pathID": "/cmd/frontend/internal/app/debugproxies#startClusterScannerWithClient",
               "documentation": {
-                "identifier": "TestIndexLinks",
+                "identifier": "startClusterScannerWithClient",
                 "newPage": false,
-                "searchKey": "debugproxies.TestIndexLinks",
+                "searchKey": "debugproxies.startClusterScannerWithClient",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestIndexLinks(t *testing.T)"
+                "value": "func startClusterScannerWithClient(client *kubernetes.Clientset, ns string, consumer ScanConsumer) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestIndexLinks(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app/debugproxies#TestDisplayNameFromEndpoint",
-              "documentation": {
-                "identifier": "TestDisplayNameFromEndpoint",
-                "newPage": false,
-                "searchKey": "debugproxies.TestDisplayNameFromEndpoint",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDisplayNameFromEndpoint(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDisplayNameFromEndpoint(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app/debugproxies#TestClusterScan",
-              "documentation": {
-                "identifier": "TestClusterScan",
-                "newPage": false,
-                "searchKey": "debugproxies.TestClusterScan",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestClusterScan(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestClusterScan(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc startClusterScannerWithClient(client *kubernetes.Clientset, ns string, consumer ScanConsumer) error\n```\n\nStarts a cluster scanner with the specified client and consumer. Does not block. \n\n"
               },
               "children": null
             }

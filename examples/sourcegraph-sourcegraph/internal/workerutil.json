@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/workerutil",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,198 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/workerutil#Handler",
-              "documentation": {
-                "identifier": "Handler",
-                "newPage": false,
-                "searchKey": "workerutil.Handler",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Handler interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Handler interface {\n\t// Handle processes a single record. The store provided by this method is the store\n\t// returned from the Dequeue method returning the associated record.\n\tHandle(ctx context.Context, store Store, record Record) error\n}\n```\n\nHandler is the configurable consumer within a worker. Types that conform to this interface may also optionally conform to the PreDequeuer, PreHandler, and PostHandler interfaces to further configure the behavior of the worker routine. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil#WithPreDequeue",
-              "documentation": {
-                "identifier": "WithPreDequeue",
-                "newPage": false,
-                "searchKey": "workerutil.WithPreDequeue",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type WithPreDequeue interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype WithPreDequeue interface {\n\t// PreDequeue is called, if implemented, directly before a call to the store's Dequeue method.\n\t// If this method returns false, then the current worker iteration is skipped and the next iteration\n\t// will begin after waiting for the configured polling interval. Any value returned by this method\n\t// will be used as additional parameters to the store's Dequeue method.\n\tPreDequeue(ctx context.Context) (dequeueable bool, extraDequeueArguments interface{}, err error)\n}\n```\n\nWithPreDequeue is an extension of the Handler interface. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil#WithHooks",
-              "documentation": {
-                "identifier": "WithHooks",
-                "newPage": false,
-                "searchKey": "workerutil.WithHooks",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type WithHooks interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype WithHooks interface {\n\t// PreHandle is called, if implemented, directly before a invoking the handler with the given\n\t// record. This method is invoked before starting a handler goroutine - therefore, any expensive\n\t// operations in this method will block the dequeue loop from proceeding.\n\tPreHandle(ctx context.Context, record Record)\n\n\t// PostHandle is called, if implemented, directly after the handler for the given record has\n\t// completed. This method is invoked inside the handler goroutine. Note that if PreHandle and\n\t// PostHandle both operate on shared data, that they will be operating on the data from different\n\t// goroutines and it is up to the caller to properly synchronize access to it.\n\tPostHandle(ctx context.Context, record Record)\n}\n```\n\nWithHooks is an extension of the Handler interface. \n\nExample use case: The processor for LSIF uploads has a maximum budget based on input size. PreHandle will subtract the input size (atomically) from the budget and PostHandle will restore the input size back to the budget. The PreDequeue hook is also implemented to supply additional SQL conditions that ensures no record with a larger input sizes than the current budget will be dequeued by the worker process. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil#WorkerMetrics",
-              "documentation": {
-                "identifier": "WorkerMetrics",
-                "newPage": false,
-                "searchKey": "workerutil.WorkerMetrics",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type WorkerMetrics struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype WorkerMetrics struct {\n\toperations *operations\n\tnumJobs    prometheus.Gauge\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil#NewMetrics",
-                    "documentation": {
-                      "identifier": "NewMetrics",
-                      "newPage": false,
-                      "searchKey": "workerutil.NewMetrics",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewMetrics(observationContext *observation.Context, prefix string, labels map[string]string) WorkerMetrics"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewMetrics(observationContext *observation.Context, prefix string, labels map[string]string) WorkerMetrics\n```\n\nNewMetrics creates and registers the following metrics for a generic worker instance. \n\n```\n- {prefix}_duration_seconds_bucket: handler operation latency histogram\n- {prefix}_total: number of handler operations\n- {prefix}_error_total: number of handler operations resulting in an error\n- {prefix}_handlers: the number of active handler routines\n\n```\nThe given labels are emitted on each metric. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil#operations",
-              "documentation": {
-                "identifier": "operations",
-                "newPage": false,
-                "searchKey": "workerutil.operations",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type operations struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype operations struct {\n\thandle *observation.Operation\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil#newOperations",
-                    "documentation": {
-                      "identifier": "newOperations",
-                      "newPage": false,
-                      "searchKey": "workerutil.newOperations",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func newOperations(observationContext *observation.Context, prefix string, keys, values []string) *operations"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc newOperations(observationContext *observation.Context, prefix string, keys, values []string) *operations\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil#Record",
-              "documentation": {
-                "identifier": "Record",
-                "newPage": false,
-                "searchKey": "workerutil.Record",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Record interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Record interface {\n\t// RecordID returns the integer primary key of the record.\n\tRecordID() int\n}\n```\n\nRecord is a generic interface for record conforming to the requirements of the store. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil#Store",
-              "documentation": {
-                "identifier": "Store",
-                "newPage": false,
-                "searchKey": "workerutil.Store",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Store interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Store interface {\n\t// QueuedCount returns the number of records in the queued state. Any extra arguments supplied will be used in\n\t// accordance with the concrete persistence layer (e.g. additional SQL conditions for a database layer).\n\tQueuedCount(ctx context.Context, extraArguments interface{}) (int, error)\n\n\t// Dequeue selects the a record for processing. Any extra arguments supplied will be used in accordance with the\n\t// concrete persistence layer (e.g. additional SQL conditions for a database layer). This method returns a boolean\n\t// flag indicating the existence of a processable record along with a refined store instance which should be used\n\t// for all additional operations (MarkComplete, MarkErrored, and Done) while processing the given record.\n\tDequeue(ctx context.Context, extraArguments interface{}) (Record, Store, bool, error)\n\n\t// AddExecutionLogEntry adds an executor log entry to the record.\n\tAddExecutionLogEntry(ctx context.Context, id int, entry ExecutionLogEntry) error\n\n\t// MarkComplete attempts to update the state of the record to complete. This method returns a boolean flag indicating\n\t// if the record was updated.\n\tMarkComplete(ctx context.Context, id int) (bool, error)\n\n\t// MarkErrored attempts to update the state of the record to errored. This method returns a boolean flag indicating\n\t// if the record was updated.\n\tMarkErrored(ctx context.Context, id int, failureMessage string) (bool, error)\n\n\t// MarkFailed attempts to update the state of the record to failed. This method returns a boolean flag indicating\n\t// if the record was updated.\n\tMarkFailed(ctx context.Context, id int, failureMessage string) (bool, error)\n\n\t// Done marks the current record as complete. Depending on the store implementation, this may release locked\n\t// or temporary resources, or commit or rollback a transaction. This method should append any additional error\n\t// that occurs during finalization to the error argument.\n\tDone(err error) error\n}\n```\n\nStore is the persistence layer for the workerutil package that handles worker-side operations. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/workerutil#ExecutionLogEntry",
               "documentation": {
                 "identifier": "ExecutionLogEntry",
                 "newPage": false,
                 "searchKey": "workerutil.ExecutionLogEntry",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -245,280 +63,24 @@
           },
           {
             "node": {
-              "pathID": "/internal/workerutil#Worker",
+              "pathID": "/internal/workerutil#Handler",
               "documentation": {
-                "identifier": "Worker",
+                "identifier": "Handler",
                 "newPage": false,
-                "searchKey": "workerutil.Worker",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Worker struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Worker struct {\n\tstore            Store\n\thandler          Handler\n\toptions          WorkerOptions\n\tclock            glock.Clock\n\thandlerSemaphore chan struct{}   // tracks available handler slots\n\tctx              context.Context // root context passed to the handler\n\tcancel           func()          // cancels the root context\n\twg               sync.WaitGroup  // tracks active handler routines\n\tfinished         chan struct{}   // signals that Start has finished\n}\n```\n\nWorker is a generic consumer of records from the workerutil store. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil#NewWorker",
-                    "documentation": {
-                      "identifier": "NewWorker",
-                      "newPage": false,
-                      "searchKey": "workerutil.NewWorker",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewWorker(ctx context.Context, store Store, handler Handler, options WorkerOptions) *Worker"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewWorker(ctx context.Context, store Store, handler Handler, options WorkerOptions) *Worker\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil#newWorker",
-                    "documentation": {
-                      "identifier": "newWorker",
-                      "newPage": false,
-                      "searchKey": "workerutil.newWorker",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func newWorker(ctx context.Context, store Store, handler Handler, options WorkerOptions, clock glock.Clock) *Worker"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc newWorker(ctx context.Context, store Store, handler Handler, options WorkerOptions, clock glock.Clock) *Worker\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil#Worker.Start",
-                    "documentation": {
-                      "identifier": "Worker.Start",
-                      "newPage": false,
-                      "searchKey": "workerutil.Worker.Start",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (w *Worker) Start()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (w *Worker) Start()\n```\n\nStart begins polling for work from the underlying store and processing records. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil#Worker.Stop",
-                    "documentation": {
-                      "identifier": "Worker.Stop",
-                      "newPage": false,
-                      "searchKey": "workerutil.Worker.Stop",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (w *Worker) Stop()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (w *Worker) Stop()\n```\n\nStop will cause the worker loop to exit after the current iteration. This is done by canceling the context passed to the database and the handler functions (which may cause the currently processing unit of work to fail). This method blocks until all handler goroutines have exited. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil#Worker.dequeueAndHandle",
-                    "documentation": {
-                      "identifier": "Worker.dequeueAndHandle",
-                      "newPage": false,
-                      "searchKey": "workerutil.Worker.dequeueAndHandle",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (w *Worker) dequeueAndHandle() (dequeued bool, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (w *Worker) dequeueAndHandle() (dequeued bool, err error)\n```\n\ndequeueAndHandle selects a queued record to process. This method returns false if no such record can be dequeued and returns an error only on failure to dequeue a new record - no handler errors will bubble up. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil#Worker.handle",
-                    "documentation": {
-                      "identifier": "Worker.handle",
-                      "newPage": false,
-                      "searchKey": "workerutil.Worker.handle",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (w *Worker) handle(tx Store, record Record) (err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (w *Worker) handle(tx Store, record Record) (err error)\n```\n\nhandle processes the given record locked by the given transaction. This method returns an error only if there is an issue committing the transaction - no handler errors will bubble up. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil#Worker.preDequeueHook",
-                    "documentation": {
-                      "identifier": "Worker.preDequeueHook",
-                      "newPage": false,
-                      "searchKey": "workerutil.Worker.preDequeueHook",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (w *Worker) preDequeueHook() (dequeueable bool, extraDequeueArguments interface{}, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (w *Worker) preDequeueHook() (dequeueable bool, extraDequeueArguments interface{}, err error)\n```\n\npreDequeueHook invokes the handler's pre-dequeue hook if it exists. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil#WorkerOptions",
-              "documentation": {
-                "identifier": "WorkerOptions",
-                "newPage": false,
-                "searchKey": "workerutil.WorkerOptions",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type WorkerOptions struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype WorkerOptions struct {\n\t// Name denotes the name of the worker used to distinguish log messages and\n\t// emitted metrics. The worker constructor will fail if this field is not\n\t// supplied.\n\tName string\n\n\t// NumHandlers is the maximum number of handlers that can be invoked\n\t// concurrently. The underlying store will not be queried while the current\n\t// number of handlers exceeds this value.\n\tNumHandlers int\n\n\t// Interval is the frequency to poll the underlying store for new work.\n\tInterval time.Duration\n\n\t// Metrics configures logging, tracing, and metrics for the work loop.\n\tMetrics WorkerMetrics\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil#MockHandler",
-              "documentation": {
-                "identifier": "MockHandler",
-                "newPage": false,
-                "searchKey": "workerutil.MockHandler",
+                "searchKey": "workerutil.Handler",
                 "tags": [
-                  "private"
+                  "interface"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type MockHandler struct"
+                "value": "type Handler interface"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype MockHandler struct {\n\t// HandleFunc is an instance of a mock function object controlling the\n\t// behavior of the method Handle.\n\tHandleFunc *HandlerHandleFunc\n}\n```\n\nMockHandler is a mock implementation of the Handler interface (from the package github.com/sourcegraph/sourcegraph/internal/workerutil) used for unit testing. \n\n"
+                "value": "```Go\ntype Handler interface {\n\t// Handle processes a single record. The store provided by this method is the store\n\t// returned from the Dequeue method returning the associated record.\n\tHandle(ctx context.Context, store Store, record Record) error\n}\n```\n\nHandler is the configurable consumer within a worker. Types that conform to this interface may also optionally conform to the PreDequeuer, PreHandler, and PostHandler interfaces to further configure the behavior of the worker routine. \n\n"
               },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil#NewMockHandler",
-                    "documentation": {
-                      "identifier": "NewMockHandler",
-                      "newPage": false,
-                      "searchKey": "workerutil.NewMockHandler",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewMockHandler() *MockHandler"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewMockHandler() *MockHandler\n```\n\nNewMockHandler creates a new mock of the Handler interface. All methods return zero values for all results, unless overwritten. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil#NewMockHandlerFrom",
-                    "documentation": {
-                      "identifier": "NewMockHandlerFrom",
-                      "newPage": false,
-                      "searchKey": "workerutil.NewMockHandlerFrom",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewMockHandlerFrom(i Handler) *MockHandler"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewMockHandlerFrom(i Handler) *MockHandler\n```\n\nNewMockHandlerFrom creates a new mock of the MockHandler interface. All methods delegate to the given implementation, unless overwritten. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil#MockHandler.Handle",
-                    "documentation": {
-                      "identifier": "MockHandler.Handle",
-                      "newPage": false,
-                      "searchKey": "workerutil.MockHandler.Handle",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *MockHandler) Handle(v0 context.Context, v1 Store, v2 Record) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *MockHandler) Handle(v0 context.Context, v1 Store, v2 Record) error\n```\n\nHandle delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
+              "children": null
             }
           },
           {
@@ -529,6 +91,7 @@
                 "newPage": false,
                 "searchKey": "workerutil.HandlerHandleFunc",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -543,22 +106,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#HandlerHandleFunc.SetDefaultHook",
+                    "pathID": "/internal/workerutil#HandlerHandleFunc.History",
                     "documentation": {
-                      "identifier": "HandlerHandleFunc.SetDefaultHook",
+                      "identifier": "HandlerHandleFunc.History",
                       "newPage": false,
-                      "searchKey": "workerutil.HandlerHandleFunc.SetDefaultHook",
+                      "searchKey": "workerutil.HandlerHandleFunc.History",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *HandlerHandleFunc) SetDefaultHook(hook func(context.Context, Store, Record) error)"
+                      "value": "func (f *HandlerHandleFunc) History() []HandlerHandleFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *HandlerHandleFunc) SetDefaultHook(hook func(context.Context, Store, Record) error)\n```\n\nSetDefaultHook sets function that is called when the Handle method of the parent MockHandler instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *HandlerHandleFunc) History() []HandlerHandleFuncCall\n```\n\nHistory returns a sequence of HandlerHandleFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -571,6 +135,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.HandlerHandleFunc.PushHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -587,34 +152,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#HandlerHandleFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "HandlerHandleFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "workerutil.HandlerHandleFunc.SetDefaultReturn",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *HandlerHandleFunc) SetDefaultReturn(r0 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *HandlerHandleFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/workerutil#HandlerHandleFunc.PushReturn",
                     "documentation": {
                       "identifier": "HandlerHandleFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "workerutil.HandlerHandleFunc.PushReturn",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -631,22 +175,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#HandlerHandleFunc.nextHook",
+                    "pathID": "/internal/workerutil#HandlerHandleFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "HandlerHandleFunc.nextHook",
+                      "identifier": "HandlerHandleFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "workerutil.HandlerHandleFunc.nextHook",
+                      "searchKey": "workerutil.HandlerHandleFunc.SetDefaultHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *HandlerHandleFunc) nextHook() func(context.Context, Store, Record) error"
+                      "value": "func (f *HandlerHandleFunc) SetDefaultHook(hook func(context.Context, Store, Record) error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *HandlerHandleFunc) nextHook() func(context.Context, Store, Record) error\n```\n\n"
+                      "value": "```Go\nfunc (f *HandlerHandleFunc) SetDefaultHook(hook func(context.Context, Store, Record) error)\n```\n\nSetDefaultHook sets function that is called when the Handle method of the parent MockHandler instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#HandlerHandleFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "HandlerHandleFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "workerutil.HandlerHandleFunc.SetDefaultReturn",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *HandlerHandleFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *HandlerHandleFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -659,6 +227,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.HandlerHandleFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -675,22 +244,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#HandlerHandleFunc.History",
+                    "pathID": "/internal/workerutil#HandlerHandleFunc.nextHook",
                     "documentation": {
-                      "identifier": "HandlerHandleFunc.History",
+                      "identifier": "HandlerHandleFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "workerutil.HandlerHandleFunc.History",
+                      "searchKey": "workerutil.HandlerHandleFunc.nextHook",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *HandlerHandleFunc) History() []HandlerHandleFuncCall"
+                      "value": "func (f *HandlerHandleFunc) nextHook() func(context.Context, Store, Record) error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *HandlerHandleFunc) History() []HandlerHandleFuncCall\n```\n\nHistory returns a sequence of HandlerHandleFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *HandlerHandleFunc) nextHook() func(context.Context, Store, Record) error\n```\n\n"
                     },
                     "children": null
                   }
@@ -706,6 +276,7 @@
                 "newPage": false,
                 "searchKey": "workerutil.HandlerHandleFuncCall",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -726,6 +297,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.HandlerHandleFuncCall.Args",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -748,6 +320,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.HandlerHandleFuncCall.Results",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -767,12 +340,200 @@
           },
           {
             "node": {
+              "pathID": "/internal/workerutil#MockHandler",
+              "documentation": {
+                "identifier": "MockHandler",
+                "newPage": false,
+                "searchKey": "workerutil.MockHandler",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockHandler struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockHandler struct {\n\t// HandleFunc is an instance of a mock function object controlling the\n\t// behavior of the method Handle.\n\tHandleFunc *HandlerHandleFunc\n}\n```\n\nMockHandler is a mock implementation of the Handler interface (from the package github.com/sourcegraph/sourcegraph/internal/workerutil) used for unit testing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#NewMockHandler",
+                    "documentation": {
+                      "identifier": "NewMockHandler",
+                      "newPage": false,
+                      "searchKey": "workerutil.NewMockHandler",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockHandler() *MockHandler"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockHandler() *MockHandler\n```\n\nNewMockHandler creates a new mock of the Handler interface. All methods return zero values for all results, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#NewMockHandlerFrom",
+                    "documentation": {
+                      "identifier": "NewMockHandlerFrom",
+                      "newPage": false,
+                      "searchKey": "workerutil.NewMockHandlerFrom",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockHandlerFrom(i Handler) *MockHandler"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockHandlerFrom(i Handler) *MockHandler\n```\n\nNewMockHandlerFrom creates a new mock of the MockHandler interface. All methods delegate to the given implementation, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#MockHandler.Handle",
+                    "documentation": {
+                      "identifier": "MockHandler.Handle",
+                      "newPage": false,
+                      "searchKey": "workerutil.MockHandler.Handle",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockHandler) Handle(v0 context.Context, v1 Store, v2 Record) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockHandler) Handle(v0 context.Context, v1 Store, v2 Record) error\n```\n\nHandle delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil#MockHandlerWithHooks",
+              "documentation": {
+                "identifier": "MockHandlerWithHooks",
+                "newPage": false,
+                "searchKey": "workerutil.MockHandlerWithHooks",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockHandlerWithHooks struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockHandlerWithHooks struct {\n\t*MockHandler\n\t*MockWithHooks\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#NewMockHandlerWithHooks",
+                    "documentation": {
+                      "identifier": "NewMockHandlerWithHooks",
+                      "newPage": false,
+                      "searchKey": "workerutil.NewMockHandlerWithHooks",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockHandlerWithHooks() *MockHandlerWithHooks"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockHandlerWithHooks() *MockHandlerWithHooks\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil#MockHandlerWithPreDequeue",
+              "documentation": {
+                "identifier": "MockHandlerWithPreDequeue",
+                "newPage": false,
+                "searchKey": "workerutil.MockHandlerWithPreDequeue",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockHandlerWithPreDequeue struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockHandlerWithPreDequeue struct {\n\t*MockHandler\n\t*MockWithPreDequeue\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#NewMockHandlerWithPreDequeue",
+                    "documentation": {
+                      "identifier": "NewMockHandlerWithPreDequeue",
+                      "newPage": false,
+                      "searchKey": "workerutil.NewMockHandlerWithPreDequeue",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockHandlerWithPreDequeue() *MockHandlerWithPreDequeue"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockHandlerWithPreDequeue() *MockHandlerWithPreDequeue\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/workerutil#MockStore",
               "documentation": {
                 "identifier": "MockStore",
                 "newPage": false,
                 "searchKey": "workerutil.MockStore",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -793,6 +554,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.NewMockStore",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -815,6 +577,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.NewMockStoreFrom",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -837,6 +600,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.MockStore.AddExecutionLogEntry",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -859,6 +623,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.MockStore.Dequeue",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -881,6 +646,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.MockStore.Done",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -903,6 +669,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.MockStore.MarkComplete",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -925,6 +692,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.MockStore.MarkErrored",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -947,6 +715,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.MockStore.MarkFailed",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -969,6 +738,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.MockStore.QueuedCount",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -988,12 +758,266 @@
           },
           {
             "node": {
+              "pathID": "/internal/workerutil#MockWithHooks",
+              "documentation": {
+                "identifier": "MockWithHooks",
+                "newPage": false,
+                "searchKey": "workerutil.MockWithHooks",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockWithHooks struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockWithHooks struct {\n\t// PostHandleFunc is an instance of a mock function object controlling\n\t// the behavior of the method PostHandle.\n\tPostHandleFunc *WithHooksPostHandleFunc\n\t// PreHandleFunc is an instance of a mock function object controlling\n\t// the behavior of the method PreHandle.\n\tPreHandleFunc *WithHooksPreHandleFunc\n}\n```\n\nMockWithHooks is a mock implementation of the WithHooks interface (from the package github.com/sourcegraph/sourcegraph/internal/workerutil) used for unit testing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#NewMockWithHooks",
+                    "documentation": {
+                      "identifier": "NewMockWithHooks",
+                      "newPage": false,
+                      "searchKey": "workerutil.NewMockWithHooks",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockWithHooks() *MockWithHooks"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockWithHooks() *MockWithHooks\n```\n\nNewMockWithHooks creates a new mock of the WithHooks interface. All methods return zero values for all results, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#NewMockWithHooksFrom",
+                    "documentation": {
+                      "identifier": "NewMockWithHooksFrom",
+                      "newPage": false,
+                      "searchKey": "workerutil.NewMockWithHooksFrom",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockWithHooksFrom(i WithHooks) *MockWithHooks"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockWithHooksFrom(i WithHooks) *MockWithHooks\n```\n\nNewMockWithHooksFrom creates a new mock of the MockWithHooks interface. All methods delegate to the given implementation, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#MockWithHooks.PostHandle",
+                    "documentation": {
+                      "identifier": "MockWithHooks.PostHandle",
+                      "newPage": false,
+                      "searchKey": "workerutil.MockWithHooks.PostHandle",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockWithHooks) PostHandle(v0 context.Context, v1 Record)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockWithHooks) PostHandle(v0 context.Context, v1 Record)\n```\n\nPostHandle delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#MockWithHooks.PreHandle",
+                    "documentation": {
+                      "identifier": "MockWithHooks.PreHandle",
+                      "newPage": false,
+                      "searchKey": "workerutil.MockWithHooks.PreHandle",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockWithHooks) PreHandle(v0 context.Context, v1 Record)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockWithHooks) PreHandle(v0 context.Context, v1 Record)\n```\n\nPreHandle delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil#MockWithPreDequeue",
+              "documentation": {
+                "identifier": "MockWithPreDequeue",
+                "newPage": false,
+                "searchKey": "workerutil.MockWithPreDequeue",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockWithPreDequeue struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockWithPreDequeue struct {\n\t// PreDequeueFunc is an instance of a mock function object controlling\n\t// the behavior of the method PreDequeue.\n\tPreDequeueFunc *WithPreDequeuePreDequeueFunc\n}\n```\n\nMockWithPreDequeue is a mock implementation of the WithPreDequeue interface (from the package github.com/sourcegraph/sourcegraph/internal/workerutil) used for unit testing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#NewMockWithPreDequeue",
+                    "documentation": {
+                      "identifier": "NewMockWithPreDequeue",
+                      "newPage": false,
+                      "searchKey": "workerutil.NewMockWithPreDequeue",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockWithPreDequeue() *MockWithPreDequeue"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockWithPreDequeue() *MockWithPreDequeue\n```\n\nNewMockWithPreDequeue creates a new mock of the WithPreDequeue interface. All methods return zero values for all results, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#NewMockWithPreDequeueFrom",
+                    "documentation": {
+                      "identifier": "NewMockWithPreDequeueFrom",
+                      "newPage": false,
+                      "searchKey": "workerutil.NewMockWithPreDequeueFrom",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockWithPreDequeueFrom(i WithPreDequeue) *MockWithPreDequeue"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockWithPreDequeueFrom(i WithPreDequeue) *MockWithPreDequeue\n```\n\nNewMockWithPreDequeueFrom creates a new mock of the MockWithPreDequeue interface. All methods delegate to the given implementation, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#MockWithPreDequeue.PreDequeue",
+                    "documentation": {
+                      "identifier": "MockWithPreDequeue.PreDequeue",
+                      "newPage": false,
+                      "searchKey": "workerutil.MockWithPreDequeue.PreDequeue",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockWithPreDequeue) PreDequeue(v0 context.Context) (bool, interface{}, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockWithPreDequeue) PreDequeue(v0 context.Context) (bool, interface{}, error)\n```\n\nPreDequeue delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil#Record",
+              "documentation": {
+                "identifier": "Record",
+                "newPage": false,
+                "searchKey": "workerutil.Record",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Record interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Record interface {\n\t// RecordID returns the integer primary key of the record.\n\tRecordID() int\n}\n```\n\nRecord is a generic interface for record conforming to the requirements of the store. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil#Store",
+              "documentation": {
+                "identifier": "Store",
+                "newPage": false,
+                "searchKey": "workerutil.Store",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Store interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Store interface {\n\t// QueuedCount returns the number of records in the queued state. Any extra arguments supplied will be used in\n\t// accordance with the concrete persistence layer (e.g. additional SQL conditions for a database layer).\n\tQueuedCount(ctx context.Context, extraArguments interface{}) (int, error)\n\n\t// Dequeue selects the a record for processing. Any extra arguments supplied will be used in accordance with the\n\t// concrete persistence layer (e.g. additional SQL conditions for a database layer). This method returns a boolean\n\t// flag indicating the existence of a processable record along with a refined store instance which should be used\n\t// for all additional operations (MarkComplete, MarkErrored, and Done) while processing the given record.\n\tDequeue(ctx context.Context, extraArguments interface{}) (Record, Store, bool, error)\n\n\t// AddExecutionLogEntry adds an executor log entry to the record.\n\tAddExecutionLogEntry(ctx context.Context, id int, entry ExecutionLogEntry) error\n\n\t// MarkComplete attempts to update the state of the record to complete. This method returns a boolean flag indicating\n\t// if the record was updated.\n\tMarkComplete(ctx context.Context, id int) (bool, error)\n\n\t// MarkErrored attempts to update the state of the record to errored. This method returns a boolean flag indicating\n\t// if the record was updated.\n\tMarkErrored(ctx context.Context, id int, failureMessage string) (bool, error)\n\n\t// MarkFailed attempts to update the state of the record to failed. This method returns a boolean flag indicating\n\t// if the record was updated.\n\tMarkFailed(ctx context.Context, id int, failureMessage string) (bool, error)\n\n\t// Done marks the current record as complete. Depending on the store implementation, this may release locked\n\t// or temporary resources, or commit or rollback a transaction. This method should append any additional error\n\t// that occurs during finalization to the error argument.\n\tDone(err error) error\n}\n```\n\nStore is the persistence layer for the workerutil package that handles worker-side operations. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/workerutil#StoreAddExecutionLogEntryFunc",
               "documentation": {
                 "identifier": "StoreAddExecutionLogEntryFunc",
                 "newPage": false,
                 "searchKey": "workerutil.StoreAddExecutionLogEntryFunc",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1008,22 +1032,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreAddExecutionLogEntryFunc.SetDefaultHook",
+                    "pathID": "/internal/workerutil#StoreAddExecutionLogEntryFunc.History",
                     "documentation": {
-                      "identifier": "StoreAddExecutionLogEntryFunc.SetDefaultHook",
+                      "identifier": "StoreAddExecutionLogEntryFunc.History",
                       "newPage": false,
-                      "searchKey": "workerutil.StoreAddExecutionLogEntryFunc.SetDefaultHook",
+                      "searchKey": "workerutil.StoreAddExecutionLogEntryFunc.History",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreAddExecutionLogEntryFunc) SetDefaultHook(hook func(context.Context, int, ExecutionLogEntry) error)"
+                      "value": "func (f *StoreAddExecutionLogEntryFunc) History() []StoreAddExecutionLogEntryFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) SetDefaultHook(hook func(context.Context, int, ExecutionLogEntry) error)\n```\n\nSetDefaultHook sets function that is called when the AddExecutionLogEntry method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) History() []StoreAddExecutionLogEntryFuncCall\n```\n\nHistory returns a sequence of StoreAddExecutionLogEntryFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -1036,6 +1061,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreAddExecutionLogEntryFunc.PushHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1052,34 +1078,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreAddExecutionLogEntryFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "StoreAddExecutionLogEntryFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "workerutil.StoreAddExecutionLogEntryFunc.SetDefaultReturn",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *StoreAddExecutionLogEntryFunc) SetDefaultReturn(r0 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/workerutil#StoreAddExecutionLogEntryFunc.PushReturn",
                     "documentation": {
                       "identifier": "StoreAddExecutionLogEntryFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "workerutil.StoreAddExecutionLogEntryFunc.PushReturn",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1096,22 +1101,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreAddExecutionLogEntryFunc.nextHook",
+                    "pathID": "/internal/workerutil#StoreAddExecutionLogEntryFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "StoreAddExecutionLogEntryFunc.nextHook",
+                      "identifier": "StoreAddExecutionLogEntryFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "workerutil.StoreAddExecutionLogEntryFunc.nextHook",
+                      "searchKey": "workerutil.StoreAddExecutionLogEntryFunc.SetDefaultHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreAddExecutionLogEntryFunc) nextHook() func(context.Context, int, ExecutionLogEntry) error"
+                      "value": "func (f *StoreAddExecutionLogEntryFunc) SetDefaultHook(hook func(context.Context, int, ExecutionLogEntry) error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) nextHook() func(context.Context, int, ExecutionLogEntry) error\n```\n\n"
+                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) SetDefaultHook(hook func(context.Context, int, ExecutionLogEntry) error)\n```\n\nSetDefaultHook sets function that is called when the AddExecutionLogEntry method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#StoreAddExecutionLogEntryFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreAddExecutionLogEntryFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "workerutil.StoreAddExecutionLogEntryFunc.SetDefaultReturn",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreAddExecutionLogEntryFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -1124,6 +1153,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreAddExecutionLogEntryFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1140,22 +1170,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreAddExecutionLogEntryFunc.History",
+                    "pathID": "/internal/workerutil#StoreAddExecutionLogEntryFunc.nextHook",
                     "documentation": {
-                      "identifier": "StoreAddExecutionLogEntryFunc.History",
+                      "identifier": "StoreAddExecutionLogEntryFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "workerutil.StoreAddExecutionLogEntryFunc.History",
+                      "searchKey": "workerutil.StoreAddExecutionLogEntryFunc.nextHook",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreAddExecutionLogEntryFunc) History() []StoreAddExecutionLogEntryFuncCall"
+                      "value": "func (f *StoreAddExecutionLogEntryFunc) nextHook() func(context.Context, int, ExecutionLogEntry) error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) History() []StoreAddExecutionLogEntryFuncCall\n```\n\nHistory returns a sequence of StoreAddExecutionLogEntryFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) nextHook() func(context.Context, int, ExecutionLogEntry) error\n```\n\n"
                     },
                     "children": null
                   }
@@ -1171,6 +1202,7 @@
                 "newPage": false,
                 "searchKey": "workerutil.StoreAddExecutionLogEntryFuncCall",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1191,6 +1223,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreAddExecutionLogEntryFuncCall.Args",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1213,6 +1246,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreAddExecutionLogEntryFuncCall.Results",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1238,6 +1272,7 @@
                 "newPage": false,
                 "searchKey": "workerutil.StoreDequeueFunc",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1252,22 +1287,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreDequeueFunc.SetDefaultHook",
+                    "pathID": "/internal/workerutil#StoreDequeueFunc.History",
                     "documentation": {
-                      "identifier": "StoreDequeueFunc.SetDefaultHook",
+                      "identifier": "StoreDequeueFunc.History",
                       "newPage": false,
-                      "searchKey": "workerutil.StoreDequeueFunc.SetDefaultHook",
+                      "searchKey": "workerutil.StoreDequeueFunc.History",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreDequeueFunc) SetDefaultHook(hook func(context.Context, interface{}) (Record, Store, bool, error))"
+                      "value": "func (f *StoreDequeueFunc) History() []StoreDequeueFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreDequeueFunc) SetDefaultHook(hook func(context.Context, interface{}) (Record, Store, bool, error))\n```\n\nSetDefaultHook sets function that is called when the Dequeue method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *StoreDequeueFunc) History() []StoreDequeueFuncCall\n```\n\nHistory returns a sequence of StoreDequeueFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -1280,6 +1316,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreDequeueFunc.PushHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1296,34 +1333,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreDequeueFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "StoreDequeueFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "workerutil.StoreDequeueFunc.SetDefaultReturn",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *StoreDequeueFunc) SetDefaultReturn(r0 Record, r1 Store, r2 bool, r3 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreDequeueFunc) SetDefaultReturn(r0 Record, r1 Store, r2 bool, r3 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/workerutil#StoreDequeueFunc.PushReturn",
                     "documentation": {
                       "identifier": "StoreDequeueFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "workerutil.StoreDequeueFunc.PushReturn",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1340,22 +1356,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreDequeueFunc.nextHook",
+                    "pathID": "/internal/workerutil#StoreDequeueFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "StoreDequeueFunc.nextHook",
+                      "identifier": "StoreDequeueFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "workerutil.StoreDequeueFunc.nextHook",
+                      "searchKey": "workerutil.StoreDequeueFunc.SetDefaultHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreDequeueFunc) nextHook() func(context.Context, interface{}) (Record, Store, bool, error)"
+                      "value": "func (f *StoreDequeueFunc) SetDefaultHook(hook func(context.Context, interface{}) (Record, Store, bool, error))"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreDequeueFunc) nextHook() func(context.Context, interface{}) (Record, Store, bool, error)\n```\n\n"
+                      "value": "```Go\nfunc (f *StoreDequeueFunc) SetDefaultHook(hook func(context.Context, interface{}) (Record, Store, bool, error))\n```\n\nSetDefaultHook sets function that is called when the Dequeue method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#StoreDequeueFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreDequeueFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "workerutil.StoreDequeueFunc.SetDefaultReturn",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDequeueFunc) SetDefaultReturn(r0 Record, r1 Store, r2 bool, r3 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDequeueFunc) SetDefaultReturn(r0 Record, r1 Store, r2 bool, r3 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -1368,6 +1408,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreDequeueFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1384,22 +1425,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreDequeueFunc.History",
+                    "pathID": "/internal/workerutil#StoreDequeueFunc.nextHook",
                     "documentation": {
-                      "identifier": "StoreDequeueFunc.History",
+                      "identifier": "StoreDequeueFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "workerutil.StoreDequeueFunc.History",
+                      "searchKey": "workerutil.StoreDequeueFunc.nextHook",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreDequeueFunc) History() []StoreDequeueFuncCall"
+                      "value": "func (f *StoreDequeueFunc) nextHook() func(context.Context, interface{}) (Record, Store, bool, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreDequeueFunc) History() []StoreDequeueFuncCall\n```\n\nHistory returns a sequence of StoreDequeueFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *StoreDequeueFunc) nextHook() func(context.Context, interface{}) (Record, Store, bool, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1415,6 +1457,7 @@
                 "newPage": false,
                 "searchKey": "workerutil.StoreDequeueFuncCall",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1435,6 +1478,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreDequeueFuncCall.Args",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1457,6 +1501,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreDequeueFuncCall.Results",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1482,6 +1527,7 @@
                 "newPage": false,
                 "searchKey": "workerutil.StoreDoneFunc",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1496,22 +1542,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreDoneFunc.SetDefaultHook",
+                    "pathID": "/internal/workerutil#StoreDoneFunc.History",
                     "documentation": {
-                      "identifier": "StoreDoneFunc.SetDefaultHook",
+                      "identifier": "StoreDoneFunc.History",
                       "newPage": false,
-                      "searchKey": "workerutil.StoreDoneFunc.SetDefaultHook",
+                      "searchKey": "workerutil.StoreDoneFunc.History",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreDoneFunc) SetDefaultHook(hook func(error) error)"
+                      "value": "func (f *StoreDoneFunc) History() []StoreDoneFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreDoneFunc) SetDefaultHook(hook func(error) error)\n```\n\nSetDefaultHook sets function that is called when the Done method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *StoreDoneFunc) History() []StoreDoneFuncCall\n```\n\nHistory returns a sequence of StoreDoneFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -1524,6 +1571,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreDoneFunc.PushHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1540,34 +1588,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreDoneFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "StoreDoneFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "workerutil.StoreDoneFunc.SetDefaultReturn",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *StoreDoneFunc) SetDefaultReturn(r0 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreDoneFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/workerutil#StoreDoneFunc.PushReturn",
                     "documentation": {
                       "identifier": "StoreDoneFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "workerutil.StoreDoneFunc.PushReturn",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1584,22 +1611,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreDoneFunc.nextHook",
+                    "pathID": "/internal/workerutil#StoreDoneFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "StoreDoneFunc.nextHook",
+                      "identifier": "StoreDoneFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "workerutil.StoreDoneFunc.nextHook",
+                      "searchKey": "workerutil.StoreDoneFunc.SetDefaultHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreDoneFunc) nextHook() func(error) error"
+                      "value": "func (f *StoreDoneFunc) SetDefaultHook(hook func(error) error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreDoneFunc) nextHook() func(error) error\n```\n\n"
+                      "value": "```Go\nfunc (f *StoreDoneFunc) SetDefaultHook(hook func(error) error)\n```\n\nSetDefaultHook sets function that is called when the Done method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#StoreDoneFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreDoneFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "workerutil.StoreDoneFunc.SetDefaultReturn",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDoneFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDoneFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -1612,6 +1663,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreDoneFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1628,22 +1680,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreDoneFunc.History",
+                    "pathID": "/internal/workerutil#StoreDoneFunc.nextHook",
                     "documentation": {
-                      "identifier": "StoreDoneFunc.History",
+                      "identifier": "StoreDoneFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "workerutil.StoreDoneFunc.History",
+                      "searchKey": "workerutil.StoreDoneFunc.nextHook",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreDoneFunc) History() []StoreDoneFuncCall"
+                      "value": "func (f *StoreDoneFunc) nextHook() func(error) error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreDoneFunc) History() []StoreDoneFuncCall\n```\n\nHistory returns a sequence of StoreDoneFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *StoreDoneFunc) nextHook() func(error) error\n```\n\n"
                     },
                     "children": null
                   }
@@ -1659,6 +1712,7 @@
                 "newPage": false,
                 "searchKey": "workerutil.StoreDoneFuncCall",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1679,6 +1733,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreDoneFuncCall.Args",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1701,6 +1756,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreDoneFuncCall.Results",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1726,6 +1782,7 @@
                 "newPage": false,
                 "searchKey": "workerutil.StoreMarkCompleteFunc",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1740,22 +1797,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreMarkCompleteFunc.SetDefaultHook",
+                    "pathID": "/internal/workerutil#StoreMarkCompleteFunc.History",
                     "documentation": {
-                      "identifier": "StoreMarkCompleteFunc.SetDefaultHook",
+                      "identifier": "StoreMarkCompleteFunc.History",
                       "newPage": false,
-                      "searchKey": "workerutil.StoreMarkCompleteFunc.SetDefaultHook",
+                      "searchKey": "workerutil.StoreMarkCompleteFunc.History",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreMarkCompleteFunc) SetDefaultHook(hook func(context.Context, int) (bool, error))"
+                      "value": "func (f *StoreMarkCompleteFunc) History() []StoreMarkCompleteFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) SetDefaultHook(hook func(context.Context, int) (bool, error))\n```\n\nSetDefaultHook sets function that is called when the MarkComplete method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) History() []StoreMarkCompleteFuncCall\n```\n\nHistory returns a sequence of StoreMarkCompleteFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -1768,6 +1826,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkCompleteFunc.PushHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1784,34 +1843,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreMarkCompleteFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "StoreMarkCompleteFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "workerutil.StoreMarkCompleteFunc.SetDefaultReturn",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *StoreMarkCompleteFunc) SetDefaultReturn(r0 bool, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) SetDefaultReturn(r0 bool, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/workerutil#StoreMarkCompleteFunc.PushReturn",
                     "documentation": {
                       "identifier": "StoreMarkCompleteFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkCompleteFunc.PushReturn",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1828,22 +1866,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreMarkCompleteFunc.nextHook",
+                    "pathID": "/internal/workerutil#StoreMarkCompleteFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "StoreMarkCompleteFunc.nextHook",
+                      "identifier": "StoreMarkCompleteFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "workerutil.StoreMarkCompleteFunc.nextHook",
+                      "searchKey": "workerutil.StoreMarkCompleteFunc.SetDefaultHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreMarkCompleteFunc) nextHook() func(context.Context, int) (bool, error)"
+                      "value": "func (f *StoreMarkCompleteFunc) SetDefaultHook(hook func(context.Context, int) (bool, error))"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) nextHook() func(context.Context, int) (bool, error)\n```\n\n"
+                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) SetDefaultHook(hook func(context.Context, int) (bool, error))\n```\n\nSetDefaultHook sets function that is called when the MarkComplete method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#StoreMarkCompleteFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreMarkCompleteFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "workerutil.StoreMarkCompleteFunc.SetDefaultReturn",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkCompleteFunc) SetDefaultReturn(r0 bool, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) SetDefaultReturn(r0 bool, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -1856,6 +1918,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkCompleteFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1872,22 +1935,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreMarkCompleteFunc.History",
+                    "pathID": "/internal/workerutil#StoreMarkCompleteFunc.nextHook",
                     "documentation": {
-                      "identifier": "StoreMarkCompleteFunc.History",
+                      "identifier": "StoreMarkCompleteFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "workerutil.StoreMarkCompleteFunc.History",
+                      "searchKey": "workerutil.StoreMarkCompleteFunc.nextHook",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreMarkCompleteFunc) History() []StoreMarkCompleteFuncCall"
+                      "value": "func (f *StoreMarkCompleteFunc) nextHook() func(context.Context, int) (bool, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) History() []StoreMarkCompleteFuncCall\n```\n\nHistory returns a sequence of StoreMarkCompleteFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) nextHook() func(context.Context, int) (bool, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1903,6 +1967,7 @@
                 "newPage": false,
                 "searchKey": "workerutil.StoreMarkCompleteFuncCall",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1923,6 +1988,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkCompleteFuncCall.Args",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1945,6 +2011,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkCompleteFuncCall.Results",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1970,6 +2037,7 @@
                 "newPage": false,
                 "searchKey": "workerutil.StoreMarkErroredFunc",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1984,22 +2052,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreMarkErroredFunc.SetDefaultHook",
+                    "pathID": "/internal/workerutil#StoreMarkErroredFunc.History",
                     "documentation": {
-                      "identifier": "StoreMarkErroredFunc.SetDefaultHook",
+                      "identifier": "StoreMarkErroredFunc.History",
                       "newPage": false,
-                      "searchKey": "workerutil.StoreMarkErroredFunc.SetDefaultHook",
+                      "searchKey": "workerutil.StoreMarkErroredFunc.History",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreMarkErroredFunc) SetDefaultHook(hook func(context.Context, int, string) (bool, error))"
+                      "value": "func (f *StoreMarkErroredFunc) History() []StoreMarkErroredFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) SetDefaultHook(hook func(context.Context, int, string) (bool, error))\n```\n\nSetDefaultHook sets function that is called when the MarkErrored method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) History() []StoreMarkErroredFuncCall\n```\n\nHistory returns a sequence of StoreMarkErroredFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -2012,6 +2081,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkErroredFunc.PushHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -2028,34 +2098,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreMarkErroredFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "StoreMarkErroredFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "workerutil.StoreMarkErroredFunc.SetDefaultReturn",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *StoreMarkErroredFunc) SetDefaultReturn(r0 bool, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) SetDefaultReturn(r0 bool, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/workerutil#StoreMarkErroredFunc.PushReturn",
                     "documentation": {
                       "identifier": "StoreMarkErroredFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkErroredFunc.PushReturn",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -2072,22 +2121,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreMarkErroredFunc.nextHook",
+                    "pathID": "/internal/workerutil#StoreMarkErroredFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "StoreMarkErroredFunc.nextHook",
+                      "identifier": "StoreMarkErroredFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "workerutil.StoreMarkErroredFunc.nextHook",
+                      "searchKey": "workerutil.StoreMarkErroredFunc.SetDefaultHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreMarkErroredFunc) nextHook() func(context.Context, int, string) (bool, error)"
+                      "value": "func (f *StoreMarkErroredFunc) SetDefaultHook(hook func(context.Context, int, string) (bool, error))"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) nextHook() func(context.Context, int, string) (bool, error)\n```\n\n"
+                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) SetDefaultHook(hook func(context.Context, int, string) (bool, error))\n```\n\nSetDefaultHook sets function that is called when the MarkErrored method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#StoreMarkErroredFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreMarkErroredFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "workerutil.StoreMarkErroredFunc.SetDefaultReturn",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkErroredFunc) SetDefaultReturn(r0 bool, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) SetDefaultReturn(r0 bool, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -2100,6 +2173,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkErroredFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -2116,22 +2190,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreMarkErroredFunc.History",
+                    "pathID": "/internal/workerutil#StoreMarkErroredFunc.nextHook",
                     "documentation": {
-                      "identifier": "StoreMarkErroredFunc.History",
+                      "identifier": "StoreMarkErroredFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "workerutil.StoreMarkErroredFunc.History",
+                      "searchKey": "workerutil.StoreMarkErroredFunc.nextHook",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreMarkErroredFunc) History() []StoreMarkErroredFuncCall"
+                      "value": "func (f *StoreMarkErroredFunc) nextHook() func(context.Context, int, string) (bool, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) History() []StoreMarkErroredFuncCall\n```\n\nHistory returns a sequence of StoreMarkErroredFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) nextHook() func(context.Context, int, string) (bool, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -2147,6 +2222,7 @@
                 "newPage": false,
                 "searchKey": "workerutil.StoreMarkErroredFuncCall",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -2167,6 +2243,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkErroredFuncCall.Args",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -2189,6 +2266,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkErroredFuncCall.Results",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -2214,6 +2292,7 @@
                 "newPage": false,
                 "searchKey": "workerutil.StoreMarkFailedFunc",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -2228,22 +2307,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreMarkFailedFunc.SetDefaultHook",
+                    "pathID": "/internal/workerutil#StoreMarkFailedFunc.History",
                     "documentation": {
-                      "identifier": "StoreMarkFailedFunc.SetDefaultHook",
+                      "identifier": "StoreMarkFailedFunc.History",
                       "newPage": false,
-                      "searchKey": "workerutil.StoreMarkFailedFunc.SetDefaultHook",
+                      "searchKey": "workerutil.StoreMarkFailedFunc.History",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreMarkFailedFunc) SetDefaultHook(hook func(context.Context, int, string) (bool, error))"
+                      "value": "func (f *StoreMarkFailedFunc) History() []StoreMarkFailedFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) SetDefaultHook(hook func(context.Context, int, string) (bool, error))\n```\n\nSetDefaultHook sets function that is called when the MarkFailed method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) History() []StoreMarkFailedFuncCall\n```\n\nHistory returns a sequence of StoreMarkFailedFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -2256,6 +2336,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkFailedFunc.PushHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -2272,34 +2353,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreMarkFailedFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "StoreMarkFailedFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "workerutil.StoreMarkFailedFunc.SetDefaultReturn",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *StoreMarkFailedFunc) SetDefaultReturn(r0 bool, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) SetDefaultReturn(r0 bool, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/workerutil#StoreMarkFailedFunc.PushReturn",
                     "documentation": {
                       "identifier": "StoreMarkFailedFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkFailedFunc.PushReturn",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -2316,22 +2376,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreMarkFailedFunc.nextHook",
+                    "pathID": "/internal/workerutil#StoreMarkFailedFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "StoreMarkFailedFunc.nextHook",
+                      "identifier": "StoreMarkFailedFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "workerutil.StoreMarkFailedFunc.nextHook",
+                      "searchKey": "workerutil.StoreMarkFailedFunc.SetDefaultHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreMarkFailedFunc) nextHook() func(context.Context, int, string) (bool, error)"
+                      "value": "func (f *StoreMarkFailedFunc) SetDefaultHook(hook func(context.Context, int, string) (bool, error))"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) nextHook() func(context.Context, int, string) (bool, error)\n```\n\n"
+                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) SetDefaultHook(hook func(context.Context, int, string) (bool, error))\n```\n\nSetDefaultHook sets function that is called when the MarkFailed method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#StoreMarkFailedFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreMarkFailedFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "workerutil.StoreMarkFailedFunc.SetDefaultReturn",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkFailedFunc) SetDefaultReturn(r0 bool, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) SetDefaultReturn(r0 bool, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -2344,6 +2428,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkFailedFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -2360,22 +2445,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreMarkFailedFunc.History",
+                    "pathID": "/internal/workerutil#StoreMarkFailedFunc.nextHook",
                     "documentation": {
-                      "identifier": "StoreMarkFailedFunc.History",
+                      "identifier": "StoreMarkFailedFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "workerutil.StoreMarkFailedFunc.History",
+                      "searchKey": "workerutil.StoreMarkFailedFunc.nextHook",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreMarkFailedFunc) History() []StoreMarkFailedFuncCall"
+                      "value": "func (f *StoreMarkFailedFunc) nextHook() func(context.Context, int, string) (bool, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) History() []StoreMarkFailedFuncCall\n```\n\nHistory returns a sequence of StoreMarkFailedFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) nextHook() func(context.Context, int, string) (bool, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -2391,6 +2477,7 @@
                 "newPage": false,
                 "searchKey": "workerutil.StoreMarkFailedFuncCall",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -2411,6 +2498,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkFailedFuncCall.Args",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -2433,6 +2521,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreMarkFailedFuncCall.Results",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -2458,6 +2547,7 @@
                 "newPage": false,
                 "searchKey": "workerutil.StoreQueuedCountFunc",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -2472,22 +2562,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreQueuedCountFunc.SetDefaultHook",
+                    "pathID": "/internal/workerutil#StoreQueuedCountFunc.History",
                     "documentation": {
-                      "identifier": "StoreQueuedCountFunc.SetDefaultHook",
+                      "identifier": "StoreQueuedCountFunc.History",
                       "newPage": false,
-                      "searchKey": "workerutil.StoreQueuedCountFunc.SetDefaultHook",
+                      "searchKey": "workerutil.StoreQueuedCountFunc.History",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreQueuedCountFunc) SetDefaultHook(hook func(context.Context, interface{}) (int, error))"
+                      "value": "func (f *StoreQueuedCountFunc) History() []StoreQueuedCountFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) SetDefaultHook(hook func(context.Context, interface{}) (int, error))\n```\n\nSetDefaultHook sets function that is called when the QueuedCount method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) History() []StoreQueuedCountFuncCall\n```\n\nHistory returns a sequence of StoreQueuedCountFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -2500,6 +2591,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreQueuedCountFunc.PushHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -2516,34 +2608,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreQueuedCountFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "StoreQueuedCountFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "workerutil.StoreQueuedCountFunc.SetDefaultReturn",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *StoreQueuedCountFunc) SetDefaultReturn(r0 int, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) SetDefaultReturn(r0 int, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/workerutil#StoreQueuedCountFunc.PushReturn",
                     "documentation": {
                       "identifier": "StoreQueuedCountFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "workerutil.StoreQueuedCountFunc.PushReturn",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -2560,22 +2631,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreQueuedCountFunc.nextHook",
+                    "pathID": "/internal/workerutil#StoreQueuedCountFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "StoreQueuedCountFunc.nextHook",
+                      "identifier": "StoreQueuedCountFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "workerutil.StoreQueuedCountFunc.nextHook",
+                      "searchKey": "workerutil.StoreQueuedCountFunc.SetDefaultHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreQueuedCountFunc) nextHook() func(context.Context, interface{}) (int, error)"
+                      "value": "func (f *StoreQueuedCountFunc) SetDefaultHook(hook func(context.Context, interface{}) (int, error))"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) nextHook() func(context.Context, interface{}) (int, error)\n```\n\n"
+                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) SetDefaultHook(hook func(context.Context, interface{}) (int, error))\n```\n\nSetDefaultHook sets function that is called when the QueuedCount method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#StoreQueuedCountFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreQueuedCountFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "workerutil.StoreQueuedCountFunc.SetDefaultReturn",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreQueuedCountFunc) SetDefaultReturn(r0 int, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) SetDefaultReturn(r0 int, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -2588,6 +2683,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreQueuedCountFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -2604,22 +2700,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#StoreQueuedCountFunc.History",
+                    "pathID": "/internal/workerutil#StoreQueuedCountFunc.nextHook",
                     "documentation": {
-                      "identifier": "StoreQueuedCountFunc.History",
+                      "identifier": "StoreQueuedCountFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "workerutil.StoreQueuedCountFunc.History",
+                      "searchKey": "workerutil.StoreQueuedCountFunc.nextHook",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreQueuedCountFunc) History() []StoreQueuedCountFuncCall"
+                      "value": "func (f *StoreQueuedCountFunc) nextHook() func(context.Context, interface{}) (int, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) History() []StoreQueuedCountFuncCall\n```\n\nHistory returns a sequence of StoreQueuedCountFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) nextHook() func(context.Context, interface{}) (int, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -2635,6 +2732,7 @@
                 "newPage": false,
                 "searchKey": "workerutil.StoreQueuedCountFuncCall",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -2655,6 +2753,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreQueuedCountFuncCall.Args",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -2677,6 +2776,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.StoreQueuedCountFuncCall.Results",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -2696,113 +2796,71 @@
           },
           {
             "node": {
-              "pathID": "/internal/workerutil#MockWithHooks",
+              "pathID": "/internal/workerutil#TestRecord",
               "documentation": {
-                "identifier": "MockWithHooks",
+                "identifier": "TestRecord",
                 "newPage": false,
-                "searchKey": "workerutil.MockWithHooks",
+                "searchKey": "workerutil.TestRecord",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type MockWithHooks struct"
+                "value": "type TestRecord struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype MockWithHooks struct {\n\t// PostHandleFunc is an instance of a mock function object controlling\n\t// the behavior of the method PostHandle.\n\tPostHandleFunc *WithHooksPostHandleFunc\n\t// PreHandleFunc is an instance of a mock function object controlling\n\t// the behavior of the method PreHandle.\n\tPreHandleFunc *WithHooksPreHandleFunc\n}\n```\n\nMockWithHooks is a mock implementation of the WithHooks interface (from the package github.com/sourcegraph/sourcegraph/internal/workerutil) used for unit testing. \n\n"
+                "value": "```Go\ntype TestRecord struct {\n\tID    int\n\tState string\n}\n```\n\n"
               },
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#NewMockWithHooks",
+                    "pathID": "/internal/workerutil#TestRecord.RecordID",
                     "documentation": {
-                      "identifier": "NewMockWithHooks",
+                      "identifier": "TestRecord.RecordID",
                       "newPage": false,
-                      "searchKey": "workerutil.NewMockWithHooks",
+                      "searchKey": "workerutil.TestRecord.RecordID",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func NewMockWithHooks() *MockWithHooks"
+                      "value": "func (v TestRecord) RecordID() int"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc NewMockWithHooks() *MockWithHooks\n```\n\nNewMockWithHooks creates a new mock of the WithHooks interface. All methods return zero values for all results, unless overwritten. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil#NewMockWithHooksFrom",
-                    "documentation": {
-                      "identifier": "NewMockWithHooksFrom",
-                      "newPage": false,
-                      "searchKey": "workerutil.NewMockWithHooksFrom",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewMockWithHooksFrom(i WithHooks) *MockWithHooks"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewMockWithHooksFrom(i WithHooks) *MockWithHooks\n```\n\nNewMockWithHooksFrom creates a new mock of the MockWithHooks interface. All methods delegate to the given implementation, unless overwritten. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil#MockWithHooks.PostHandle",
-                    "documentation": {
-                      "identifier": "MockWithHooks.PostHandle",
-                      "newPage": false,
-                      "searchKey": "workerutil.MockWithHooks.PostHandle",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *MockWithHooks) PostHandle(v0 context.Context, v1 Record)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *MockWithHooks) PostHandle(v0 context.Context, v1 Record)\n```\n\nPostHandle delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil#MockWithHooks.PreHandle",
-                    "documentation": {
-                      "identifier": "MockWithHooks.PreHandle",
-                      "newPage": false,
-                      "searchKey": "workerutil.MockWithHooks.PreHandle",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *MockWithHooks) PreHandle(v0 context.Context, v1 Record)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *MockWithHooks) PreHandle(v0 context.Context, v1 Record)\n```\n\nPreHandle delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                      "value": "```Go\nfunc (v TestRecord) RecordID() int\n```\n\n"
                     },
                     "children": null
                   }
                 }
               ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil#WithHooks",
+              "documentation": {
+                "identifier": "WithHooks",
+                "newPage": false,
+                "searchKey": "workerutil.WithHooks",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type WithHooks interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype WithHooks interface {\n\t// PreHandle is called, if implemented, directly before a invoking the handler with the given\n\t// record. This method is invoked before starting a handler goroutine - therefore, any expensive\n\t// operations in this method will block the dequeue loop from proceeding.\n\tPreHandle(ctx context.Context, record Record)\n\n\t// PostHandle is called, if implemented, directly after the handler for the given record has\n\t// completed. This method is invoked inside the handler goroutine. Note that if PreHandle and\n\t// PostHandle both operate on shared data, that they will be operating on the data from different\n\t// goroutines and it is up to the caller to properly synchronize access to it.\n\tPostHandle(ctx context.Context, record Record)\n}\n```\n\nWithHooks is an extension of the Handler interface. \n\nExample use case: The processor for LSIF uploads has a maximum budget based on input size. PreHandle will subtract the input size (atomically) from the budget and PostHandle will restore the input size back to the budget. The PreDequeue hook is also implemented to supply additional SQL conditions that ensures no record with a larger input sizes than the current budget will be dequeued by the worker process. \n\n"
+              },
+              "children": null
             }
           },
           {
@@ -2813,6 +2871,7 @@
                 "newPage": false,
                 "searchKey": "workerutil.WithHooksPostHandleFunc",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -2827,22 +2886,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#WithHooksPostHandleFunc.SetDefaultHook",
+                    "pathID": "/internal/workerutil#WithHooksPostHandleFunc.History",
                     "documentation": {
-                      "identifier": "WithHooksPostHandleFunc.SetDefaultHook",
+                      "identifier": "WithHooksPostHandleFunc.History",
                       "newPage": false,
-                      "searchKey": "workerutil.WithHooksPostHandleFunc.SetDefaultHook",
+                      "searchKey": "workerutil.WithHooksPostHandleFunc.History",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *WithHooksPostHandleFunc) SetDefaultHook(hook func(context.Context, Record))"
+                      "value": "func (f *WithHooksPostHandleFunc) History() []WithHooksPostHandleFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *WithHooksPostHandleFunc) SetDefaultHook(hook func(context.Context, Record))\n```\n\nSetDefaultHook sets function that is called when the PostHandle method of the parent MockWithHooks instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *WithHooksPostHandleFunc) History() []WithHooksPostHandleFuncCall\n```\n\nHistory returns a sequence of WithHooksPostHandleFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -2855,6 +2915,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPostHandleFunc.PushHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -2871,34 +2932,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#WithHooksPostHandleFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "WithHooksPostHandleFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "workerutil.WithHooksPostHandleFunc.SetDefaultReturn",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *WithHooksPostHandleFunc) SetDefaultReturn()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *WithHooksPostHandleFunc) SetDefaultReturn()\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/workerutil#WithHooksPostHandleFunc.PushReturn",
                     "documentation": {
                       "identifier": "WithHooksPostHandleFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPostHandleFunc.PushReturn",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -2915,22 +2955,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#WithHooksPostHandleFunc.nextHook",
+                    "pathID": "/internal/workerutil#WithHooksPostHandleFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "WithHooksPostHandleFunc.nextHook",
+                      "identifier": "WithHooksPostHandleFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "workerutil.WithHooksPostHandleFunc.nextHook",
+                      "searchKey": "workerutil.WithHooksPostHandleFunc.SetDefaultHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *WithHooksPostHandleFunc) nextHook() func(context.Context, Record)"
+                      "value": "func (f *WithHooksPostHandleFunc) SetDefaultHook(hook func(context.Context, Record))"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *WithHooksPostHandleFunc) nextHook() func(context.Context, Record)\n```\n\n"
+                      "value": "```Go\nfunc (f *WithHooksPostHandleFunc) SetDefaultHook(hook func(context.Context, Record))\n```\n\nSetDefaultHook sets function that is called when the PostHandle method of the parent MockWithHooks instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#WithHooksPostHandleFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "WithHooksPostHandleFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "workerutil.WithHooksPostHandleFunc.SetDefaultReturn",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *WithHooksPostHandleFunc) SetDefaultReturn()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *WithHooksPostHandleFunc) SetDefaultReturn()\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -2943,6 +3007,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPostHandleFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -2959,22 +3024,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#WithHooksPostHandleFunc.History",
+                    "pathID": "/internal/workerutil#WithHooksPostHandleFunc.nextHook",
                     "documentation": {
-                      "identifier": "WithHooksPostHandleFunc.History",
+                      "identifier": "WithHooksPostHandleFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "workerutil.WithHooksPostHandleFunc.History",
+                      "searchKey": "workerutil.WithHooksPostHandleFunc.nextHook",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *WithHooksPostHandleFunc) History() []WithHooksPostHandleFuncCall"
+                      "value": "func (f *WithHooksPostHandleFunc) nextHook() func(context.Context, Record)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *WithHooksPostHandleFunc) History() []WithHooksPostHandleFuncCall\n```\n\nHistory returns a sequence of WithHooksPostHandleFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *WithHooksPostHandleFunc) nextHook() func(context.Context, Record)\n```\n\n"
                     },
                     "children": null
                   }
@@ -2990,6 +3056,7 @@
                 "newPage": false,
                 "searchKey": "workerutil.WithHooksPostHandleFuncCall",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -3010,6 +3077,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPostHandleFuncCall.Args",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -3032,6 +3100,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPostHandleFuncCall.Results",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -3057,6 +3126,7 @@
                 "newPage": false,
                 "searchKey": "workerutil.WithHooksPreHandleFunc",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -3071,22 +3141,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#WithHooksPreHandleFunc.SetDefaultHook",
+                    "pathID": "/internal/workerutil#WithHooksPreHandleFunc.History",
                     "documentation": {
-                      "identifier": "WithHooksPreHandleFunc.SetDefaultHook",
+                      "identifier": "WithHooksPreHandleFunc.History",
                       "newPage": false,
-                      "searchKey": "workerutil.WithHooksPreHandleFunc.SetDefaultHook",
+                      "searchKey": "workerutil.WithHooksPreHandleFunc.History",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *WithHooksPreHandleFunc) SetDefaultHook(hook func(context.Context, Record))"
+                      "value": "func (f *WithHooksPreHandleFunc) History() []WithHooksPreHandleFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *WithHooksPreHandleFunc) SetDefaultHook(hook func(context.Context, Record))\n```\n\nSetDefaultHook sets function that is called when the PreHandle method of the parent MockWithHooks instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *WithHooksPreHandleFunc) History() []WithHooksPreHandleFuncCall\n```\n\nHistory returns a sequence of WithHooksPreHandleFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -3099,6 +3170,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPreHandleFunc.PushHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -3115,34 +3187,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#WithHooksPreHandleFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "WithHooksPreHandleFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "workerutil.WithHooksPreHandleFunc.SetDefaultReturn",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *WithHooksPreHandleFunc) SetDefaultReturn()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *WithHooksPreHandleFunc) SetDefaultReturn()\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/workerutil#WithHooksPreHandleFunc.PushReturn",
                     "documentation": {
                       "identifier": "WithHooksPreHandleFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPreHandleFunc.PushReturn",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -3159,22 +3210,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#WithHooksPreHandleFunc.nextHook",
+                    "pathID": "/internal/workerutil#WithHooksPreHandleFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "WithHooksPreHandleFunc.nextHook",
+                      "identifier": "WithHooksPreHandleFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "workerutil.WithHooksPreHandleFunc.nextHook",
+                      "searchKey": "workerutil.WithHooksPreHandleFunc.SetDefaultHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *WithHooksPreHandleFunc) nextHook() func(context.Context, Record)"
+                      "value": "func (f *WithHooksPreHandleFunc) SetDefaultHook(hook func(context.Context, Record))"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *WithHooksPreHandleFunc) nextHook() func(context.Context, Record)\n```\n\n"
+                      "value": "```Go\nfunc (f *WithHooksPreHandleFunc) SetDefaultHook(hook func(context.Context, Record))\n```\n\nSetDefaultHook sets function that is called when the PreHandle method of the parent MockWithHooks instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#WithHooksPreHandleFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "WithHooksPreHandleFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "workerutil.WithHooksPreHandleFunc.SetDefaultReturn",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *WithHooksPreHandleFunc) SetDefaultReturn()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *WithHooksPreHandleFunc) SetDefaultReturn()\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -3187,6 +3262,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPreHandleFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -3203,22 +3279,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#WithHooksPreHandleFunc.History",
+                    "pathID": "/internal/workerutil#WithHooksPreHandleFunc.nextHook",
                     "documentation": {
-                      "identifier": "WithHooksPreHandleFunc.History",
+                      "identifier": "WithHooksPreHandleFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "workerutil.WithHooksPreHandleFunc.History",
+                      "searchKey": "workerutil.WithHooksPreHandleFunc.nextHook",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *WithHooksPreHandleFunc) History() []WithHooksPreHandleFuncCall"
+                      "value": "func (f *WithHooksPreHandleFunc) nextHook() func(context.Context, Record)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *WithHooksPreHandleFunc) History() []WithHooksPreHandleFuncCall\n```\n\nHistory returns a sequence of WithHooksPreHandleFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *WithHooksPreHandleFunc) nextHook() func(context.Context, Record)\n```\n\n"
                     },
                     "children": null
                   }
@@ -3234,6 +3311,7 @@
                 "newPage": false,
                 "searchKey": "workerutil.WithHooksPreHandleFuncCall",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -3254,6 +3332,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPreHandleFuncCall.Args",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -3276,6 +3355,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.WithHooksPreHandleFuncCall.Results",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -3295,91 +3375,24 @@
           },
           {
             "node": {
-              "pathID": "/internal/workerutil#MockWithPreDequeue",
+              "pathID": "/internal/workerutil#WithPreDequeue",
               "documentation": {
-                "identifier": "MockWithPreDequeue",
+                "identifier": "WithPreDequeue",
                 "newPage": false,
-                "searchKey": "workerutil.MockWithPreDequeue",
+                "searchKey": "workerutil.WithPreDequeue",
                 "tags": [
-                  "private"
+                  "interface"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type MockWithPreDequeue struct"
+                "value": "type WithPreDequeue interface"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype MockWithPreDequeue struct {\n\t// PreDequeueFunc is an instance of a mock function object controlling\n\t// the behavior of the method PreDequeue.\n\tPreDequeueFunc *WithPreDequeuePreDequeueFunc\n}\n```\n\nMockWithPreDequeue is a mock implementation of the WithPreDequeue interface (from the package github.com/sourcegraph/sourcegraph/internal/workerutil) used for unit testing. \n\n"
+                "value": "```Go\ntype WithPreDequeue interface {\n\t// PreDequeue is called, if implemented, directly before a call to the store's Dequeue method.\n\t// If this method returns false, then the current worker iteration is skipped and the next iteration\n\t// will begin after waiting for the configured polling interval. Any value returned by this method\n\t// will be used as additional parameters to the store's Dequeue method.\n\tPreDequeue(ctx context.Context) (dequeueable bool, extraDequeueArguments interface{}, err error)\n}\n```\n\nWithPreDequeue is an extension of the Handler interface. \n\n"
               },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil#NewMockWithPreDequeue",
-                    "documentation": {
-                      "identifier": "NewMockWithPreDequeue",
-                      "newPage": false,
-                      "searchKey": "workerutil.NewMockWithPreDequeue",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewMockWithPreDequeue() *MockWithPreDequeue"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewMockWithPreDequeue() *MockWithPreDequeue\n```\n\nNewMockWithPreDequeue creates a new mock of the WithPreDequeue interface. All methods return zero values for all results, unless overwritten. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil#NewMockWithPreDequeueFrom",
-                    "documentation": {
-                      "identifier": "NewMockWithPreDequeueFrom",
-                      "newPage": false,
-                      "searchKey": "workerutil.NewMockWithPreDequeueFrom",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewMockWithPreDequeueFrom(i WithPreDequeue) *MockWithPreDequeue"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewMockWithPreDequeueFrom(i WithPreDequeue) *MockWithPreDequeue\n```\n\nNewMockWithPreDequeueFrom creates a new mock of the MockWithPreDequeue interface. All methods delegate to the given implementation, unless overwritten. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil#MockWithPreDequeue.PreDequeue",
-                    "documentation": {
-                      "identifier": "MockWithPreDequeue.PreDequeue",
-                      "newPage": false,
-                      "searchKey": "workerutil.MockWithPreDequeue.PreDequeue",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *MockWithPreDequeue) PreDequeue(v0 context.Context) (bool, interface{}, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *MockWithPreDequeue) PreDequeue(v0 context.Context) (bool, interface{}, error)\n```\n\nPreDequeue delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
+              "children": null
             }
           },
           {
@@ -3390,6 +3403,7 @@
                 "newPage": false,
                 "searchKey": "workerutil.WithPreDequeuePreDequeueFunc",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -3404,22 +3418,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#WithPreDequeuePreDequeueFunc.SetDefaultHook",
+                    "pathID": "/internal/workerutil#WithPreDequeuePreDequeueFunc.History",
                     "documentation": {
-                      "identifier": "WithPreDequeuePreDequeueFunc.SetDefaultHook",
+                      "identifier": "WithPreDequeuePreDequeueFunc.History",
                       "newPage": false,
-                      "searchKey": "workerutil.WithPreDequeuePreDequeueFunc.SetDefaultHook",
+                      "searchKey": "workerutil.WithPreDequeuePreDequeueFunc.History",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *WithPreDequeuePreDequeueFunc) SetDefaultHook(hook func(context.Context) (bool, interface{}, error))"
+                      "value": "func (f *WithPreDequeuePreDequeueFunc) History() []WithPreDequeuePreDequeueFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *WithPreDequeuePreDequeueFunc) SetDefaultHook(hook func(context.Context) (bool, interface{}, error))\n```\n\nSetDefaultHook sets function that is called when the PreDequeue method of the parent MockWithPreDequeue instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *WithPreDequeuePreDequeueFunc) History() []WithPreDequeuePreDequeueFuncCall\n```\n\nHistory returns a sequence of WithPreDequeuePreDequeueFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -3432,6 +3447,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.WithPreDequeuePreDequeueFunc.PushHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -3448,34 +3464,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#WithPreDequeuePreDequeueFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "WithPreDequeuePreDequeueFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "workerutil.WithPreDequeuePreDequeueFunc.SetDefaultReturn",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *WithPreDequeuePreDequeueFunc) SetDefaultReturn(r0 bool, r1 interface{}, r2 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *WithPreDequeuePreDequeueFunc) SetDefaultReturn(r0 bool, r1 interface{}, r2 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/workerutil#WithPreDequeuePreDequeueFunc.PushReturn",
                     "documentation": {
                       "identifier": "WithPreDequeuePreDequeueFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "workerutil.WithPreDequeuePreDequeueFunc.PushReturn",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -3492,22 +3487,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#WithPreDequeuePreDequeueFunc.nextHook",
+                    "pathID": "/internal/workerutil#WithPreDequeuePreDequeueFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "WithPreDequeuePreDequeueFunc.nextHook",
+                      "identifier": "WithPreDequeuePreDequeueFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "workerutil.WithPreDequeuePreDequeueFunc.nextHook",
+                      "searchKey": "workerutil.WithPreDequeuePreDequeueFunc.SetDefaultHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *WithPreDequeuePreDequeueFunc) nextHook() func(context.Context) (bool, interface{}, error)"
+                      "value": "func (f *WithPreDequeuePreDequeueFunc) SetDefaultHook(hook func(context.Context) (bool, interface{}, error))"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *WithPreDequeuePreDequeueFunc) nextHook() func(context.Context) (bool, interface{}, error)\n```\n\n"
+                      "value": "```Go\nfunc (f *WithPreDequeuePreDequeueFunc) SetDefaultHook(hook func(context.Context) (bool, interface{}, error))\n```\n\nSetDefaultHook sets function that is called when the PreDequeue method of the parent MockWithPreDequeue instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#WithPreDequeuePreDequeueFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "WithPreDequeuePreDequeueFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "workerutil.WithPreDequeuePreDequeueFunc.SetDefaultReturn",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *WithPreDequeuePreDequeueFunc) SetDefaultReturn(r0 bool, r1 interface{}, r2 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *WithPreDequeuePreDequeueFunc) SetDefaultReturn(r0 bool, r1 interface{}, r2 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -3520,6 +3539,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.WithPreDequeuePreDequeueFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -3536,22 +3556,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#WithPreDequeuePreDequeueFunc.History",
+                    "pathID": "/internal/workerutil#WithPreDequeuePreDequeueFunc.nextHook",
                     "documentation": {
-                      "identifier": "WithPreDequeuePreDequeueFunc.History",
+                      "identifier": "WithPreDequeuePreDequeueFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "workerutil.WithPreDequeuePreDequeueFunc.History",
+                      "searchKey": "workerutil.WithPreDequeuePreDequeueFunc.nextHook",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *WithPreDequeuePreDequeueFunc) History() []WithPreDequeuePreDequeueFuncCall"
+                      "value": "func (f *WithPreDequeuePreDequeueFunc) nextHook() func(context.Context) (bool, interface{}, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *WithPreDequeuePreDequeueFunc) History() []WithPreDequeuePreDequeueFuncCall\n```\n\nHistory returns a sequence of WithPreDequeuePreDequeueFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *WithPreDequeuePreDequeueFunc) nextHook() func(context.Context) (bool, interface{}, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -3567,6 +3588,7 @@
                 "newPage": false,
                 "searchKey": "workerutil.WithPreDequeuePreDequeueFuncCall",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -3587,6 +3609,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.WithPreDequeuePreDequeueFuncCall.Args",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -3609,6 +3632,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.WithPreDequeuePreDequeueFuncCall.Results",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -3628,47 +3652,250 @@
           },
           {
             "node": {
-              "pathID": "/internal/workerutil#TestRecord",
+              "pathID": "/internal/workerutil#Worker",
               "documentation": {
-                "identifier": "TestRecord",
+                "identifier": "Worker",
                 "newPage": false,
-                "searchKey": "workerutil.TestRecord",
+                "searchKey": "workerutil.Worker",
                 "tags": [
-                  "private"
+                  "struct"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type TestRecord struct"
+                "value": "type Worker struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype TestRecord struct {\n\tID    int\n\tState string\n}\n```\n\n"
+                "value": "```Go\ntype Worker struct {\n\tstore            Store\n\thandler          Handler\n\toptions          WorkerOptions\n\tclock            glock.Clock\n\thandlerSemaphore chan struct{}   // tracks available handler slots\n\tctx              context.Context // root context passed to the handler\n\tcancel           func()          // cancels the root context\n\twg               sync.WaitGroup  // tracks active handler routines\n\tfinished         chan struct{}   // signals that Start has finished\n}\n```\n\nWorker is a generic consumer of records from the workerutil store. \n\n"
               },
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#TestRecord.RecordID",
+                    "pathID": "/internal/workerutil#NewWorker",
                     "documentation": {
-                      "identifier": "TestRecord.RecordID",
+                      "identifier": "NewWorker",
                       "newPage": false,
-                      "searchKey": "workerutil.TestRecord.RecordID",
+                      "searchKey": "workerutil.NewWorker",
                       "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewWorker(ctx context.Context, store Store, handler Handler, options WorkerOptions) *Worker"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewWorker(ctx context.Context, store Store, handler Handler, options WorkerOptions) *Worker\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#newWorker",
+                    "documentation": {
+                      "identifier": "newWorker",
+                      "newPage": false,
+                      "searchKey": "workerutil.newWorker",
+                      "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (v TestRecord) RecordID() int"
+                      "value": "func newWorker(ctx context.Context, store Store, handler Handler, options WorkerOptions, clock glock.Clock) *Worker"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (v TestRecord) RecordID() int\n```\n\n"
+                      "value": "```Go\nfunc newWorker(ctx context.Context, store Store, handler Handler, options WorkerOptions, clock glock.Clock) *Worker\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#Worker.Start",
+                    "documentation": {
+                      "identifier": "Worker.Start",
+                      "newPage": false,
+                      "searchKey": "workerutil.Worker.Start",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Worker) Start()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Worker) Start()\n```\n\nStart begins polling for work from the underlying store and processing records. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#Worker.Stop",
+                    "documentation": {
+                      "identifier": "Worker.Stop",
+                      "newPage": false,
+                      "searchKey": "workerutil.Worker.Stop",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Worker) Stop()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Worker) Stop()\n```\n\nStop will cause the worker loop to exit after the current iteration. This is done by canceling the context passed to the database and the handler functions (which may cause the currently processing unit of work to fail). This method blocks until all handler goroutines have exited. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#Worker.dequeueAndHandle",
+                    "documentation": {
+                      "identifier": "Worker.dequeueAndHandle",
+                      "newPage": false,
+                      "searchKey": "workerutil.Worker.dequeueAndHandle",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Worker) dequeueAndHandle() (dequeued bool, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Worker) dequeueAndHandle() (dequeued bool, err error)\n```\n\ndequeueAndHandle selects a queued record to process. This method returns false if no such record can be dequeued and returns an error only on failure to dequeue a new record - no handler errors will bubble up. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#Worker.handle",
+                    "documentation": {
+                      "identifier": "Worker.handle",
+                      "newPage": false,
+                      "searchKey": "workerutil.Worker.handle",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Worker) handle(tx Store, record Record) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Worker) handle(tx Store, record Record) (err error)\n```\n\nhandle processes the given record locked by the given transaction. This method returns an error only if there is an issue committing the transaction - no handler errors will bubble up. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#Worker.preDequeueHook",
+                    "documentation": {
+                      "identifier": "Worker.preDequeueHook",
+                      "newPage": false,
+                      "searchKey": "workerutil.Worker.preDequeueHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Worker) preDequeueHook() (dequeueable bool, extraDequeueArguments interface{}, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Worker) preDequeueHook() (dequeueable bool, extraDequeueArguments interface{}, err error)\n```\n\npreDequeueHook invokes the handler's pre-dequeue hook if it exists. \n\n"
                     },
                     "children": null
                   }
                 }
               ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil#WorkerMetrics",
+              "documentation": {
+                "identifier": "WorkerMetrics",
+                "newPage": false,
+                "searchKey": "workerutil.WorkerMetrics",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type WorkerMetrics struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype WorkerMetrics struct {\n\toperations *operations\n\tnumJobs    prometheus.Gauge\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil#NewMetrics",
+                    "documentation": {
+                      "identifier": "NewMetrics",
+                      "newPage": false,
+                      "searchKey": "workerutil.NewMetrics",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMetrics(observationContext *observation.Context, prefix string, labels map[string]string) WorkerMetrics"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMetrics(observationContext *observation.Context, prefix string, labels map[string]string) WorkerMetrics\n```\n\nNewMetrics creates and registers the following metrics for a generic worker instance. \n\n```\n- {prefix}_duration_seconds_bucket: handler operation latency histogram\n- {prefix}_total: number of handler operations\n- {prefix}_error_total: number of handler operations resulting in an error\n- {prefix}_handlers: the number of active handler routines\n\n```\nThe given labels are emitted on each metric. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil#WorkerOptions",
+              "documentation": {
+                "identifier": "WorkerOptions",
+                "newPage": false,
+                "searchKey": "workerutil.WorkerOptions",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type WorkerOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype WorkerOptions struct {\n\t// Name denotes the name of the worker used to distinguish log messages and\n\t// emitted metrics. The worker constructor will fail if this field is not\n\t// supplied.\n\tName string\n\n\t// NumHandlers is the maximum number of handlers that can be invoked\n\t// concurrently. The underlying store will not be queried while the current\n\t// number of handlers exceeds this value.\n\tNumHandlers int\n\n\t// Interval is the frequency to poll the underlying store for new work.\n\tInterval time.Duration\n\n\t// Metrics configures logging, tracing, and metrics for the work loop.\n\tMetrics WorkerMetrics\n}\n```\n\n"
+              },
+              "children": null
             }
           },
           {
@@ -3679,6 +3906,7 @@
                 "newPage": false,
                 "searchKey": "workerutil.nonRetryableTestErr",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -3699,6 +3927,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.nonRetryableTestErr.Error",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -3721,6 +3950,7 @@
                       "newPage": false,
                       "searchKey": "workerutil.nonRetryableTestErr.NonRetryable",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -3740,87 +3970,44 @@
           },
           {
             "node": {
-              "pathID": "/internal/workerutil#MockHandlerWithPreDequeue",
+              "pathID": "/internal/workerutil#operations",
               "documentation": {
-                "identifier": "MockHandlerWithPreDequeue",
+                "identifier": "operations",
                 "newPage": false,
-                "searchKey": "workerutil.MockHandlerWithPreDequeue",
+                "searchKey": "workerutil.operations",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type MockHandlerWithPreDequeue struct"
+                "value": "type operations struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype MockHandlerWithPreDequeue struct {\n\t*MockHandler\n\t*MockWithPreDequeue\n}\n```\n\n"
+                "value": "```Go\ntype operations struct {\n\thandle *observation.Operation\n}\n```\n\n"
               },
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil#NewMockHandlerWithPreDequeue",
+                    "pathID": "/internal/workerutil#newOperations",
                     "documentation": {
-                      "identifier": "NewMockHandlerWithPreDequeue",
+                      "identifier": "newOperations",
                       "newPage": false,
-                      "searchKey": "workerutil.NewMockHandlerWithPreDequeue",
+                      "searchKey": "workerutil.newOperations",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func NewMockHandlerWithPreDequeue() *MockHandlerWithPreDequeue"
+                      "value": "func newOperations(observationContext *observation.Context, prefix string, keys, values []string) *operations"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc NewMockHandlerWithPreDequeue() *MockHandlerWithPreDequeue\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil#MockHandlerWithHooks",
-              "documentation": {
-                "identifier": "MockHandlerWithHooks",
-                "newPage": false,
-                "searchKey": "workerutil.MockHandlerWithHooks",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type MockHandlerWithHooks struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype MockHandlerWithHooks struct {\n\t*MockHandler\n\t*MockWithHooks\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/workerutil#NewMockHandlerWithHooks",
-                    "documentation": {
-                      "identifier": "NewMockHandlerWithHooks",
-                      "newPage": false,
-                      "searchKey": "workerutil.NewMockHandlerWithHooks",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewMockHandlerWithHooks() *MockHandlerWithHooks"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewMockHandlerWithHooks() *MockHandlerWithHooks\n```\n\n"
+                      "value": "```Go\nfunc newOperations(observationContext *observation.Context, prefix string, keys, values []string) *operations\n```\n\n"
                     },
                     "children": null
                   }
@@ -3839,6 +4026,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -3859,7 +4047,9 @@
                 "newPage": false,
                 "searchKey": "workerutil.TestMain",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -3875,22 +4065,72 @@
           },
           {
             "node": {
-              "pathID": "/internal/workerutil#TestWorkerHandlerSuccess",
+              "pathID": "/internal/workerutil#TestWorkerBlockingPreDequeueHook",
               "documentation": {
-                "identifier": "TestWorkerHandlerSuccess",
+                "identifier": "TestWorkerBlockingPreDequeueHook",
                 "newPage": false,
-                "searchKey": "workerutil.TestWorkerHandlerSuccess",
+                "searchKey": "workerutil.TestWorkerBlockingPreDequeueHook",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestWorkerHandlerSuccess(t *testing.T)"
+                "value": "func TestWorkerBlockingPreDequeueHook(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestWorkerHandlerSuccess(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestWorkerBlockingPreDequeueHook(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil#TestWorkerConcurrent",
+              "documentation": {
+                "identifier": "TestWorkerConcurrent",
+                "newPage": false,
+                "searchKey": "workerutil.TestWorkerConcurrent",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWorkerConcurrent(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWorkerConcurrent(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil#TestWorkerConditionalPreDequeueHook",
+              "documentation": {
+                "identifier": "TestWorkerConditionalPreDequeueHook",
+                "newPage": false,
+                "searchKey": "workerutil.TestWorkerConditionalPreDequeueHook",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWorkerConditionalPreDequeueHook(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWorkerConditionalPreDequeueHook(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -3903,7 +4143,9 @@
                 "newPage": false,
                 "searchKey": "workerutil.TestWorkerHandlerFailure",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -3925,7 +4167,9 @@
                 "newPage": false,
                 "searchKey": "workerutil.TestWorkerHandlerNonRetryableFailure",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -3941,66 +4185,24 @@
           },
           {
             "node": {
-              "pathID": "/internal/workerutil#TestWorkerConcurrent",
+              "pathID": "/internal/workerutil#TestWorkerHandlerSuccess",
               "documentation": {
-                "identifier": "TestWorkerConcurrent",
+                "identifier": "TestWorkerHandlerSuccess",
                 "newPage": false,
-                "searchKey": "workerutil.TestWorkerConcurrent",
+                "searchKey": "workerutil.TestWorkerHandlerSuccess",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestWorkerConcurrent(t *testing.T)"
+                "value": "func TestWorkerHandlerSuccess(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestWorkerConcurrent(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil#TestWorkerBlockingPreDequeueHook",
-              "documentation": {
-                "identifier": "TestWorkerBlockingPreDequeueHook",
-                "newPage": false,
-                "searchKey": "workerutil.TestWorkerBlockingPreDequeueHook",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestWorkerBlockingPreDequeueHook(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestWorkerBlockingPreDequeueHook(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/workerutil#TestWorkerConditionalPreDequeueHook",
-              "documentation": {
-                "identifier": "TestWorkerConditionalPreDequeueHook",
-                "newPage": false,
-                "searchKey": "workerutil.TestWorkerConditionalPreDequeueHook",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestWorkerConditionalPreDequeueHook(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestWorkerConditionalPreDequeueHook(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestWorkerHandlerSuccess(t *testing.T)\n```\n\n"
               },
               "children": null
             }

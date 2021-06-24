@@ -4,7 +4,9 @@
     "identifier": "graphqlutil",
     "newPage": true,
     "searchKey": "cmd/frontend/graphqlbackend/graphqlutil",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,9 @@
                 "identifier": "ConnectionArgs",
                 "newPage": false,
                 "searchKey": "graphqlutil.ConnectionArgs",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -53,32 +59,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/cmd/frontend/graphqlbackend/graphqlutil#ConnectionArgs.Set",
-                    "documentation": {
-                      "identifier": "ConnectionArgs.Set",
-                      "newPage": false,
-                      "searchKey": "graphqlutil.ConnectionArgs.Set",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (a ConnectionArgs) Set(o **database.LimitOffset)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (a ConnectionArgs) Set(o **database.LimitOffset)\n```\n\nSet is a convenience method for setting the DB limit and offset in a DB XyzListOptions struct. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/cmd/frontend/graphqlbackend/graphqlutil#ConnectionArgs.GetFirst",
                     "documentation": {
                       "identifier": "ConnectionArgs.GetFirst",
                       "newPage": false,
                       "searchKey": "graphqlutil.ConnectionArgs.GetFirst",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -87,6 +75,28 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (a ConnectionArgs) GetFirst() int32\n```\n\nGetFirst is a convenience method returning the value of First, defaulting to the type's zero value if nil. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/graphqlbackend/graphqlutil#ConnectionArgs.Set",
+                    "documentation": {
+                      "identifier": "ConnectionArgs.Set",
+                      "newPage": false,
+                      "searchKey": "graphqlutil.ConnectionArgs.Set",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a ConnectionArgs) Set(o **database.LimitOffset)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a ConnectionArgs) Set(o **database.LimitOffset)\n```\n\nSet is a convenience method for setting the DB limit and offset in a DB XyzListOptions struct. \n\n"
                     },
                     "children": null
                   }
@@ -101,7 +111,9 @@
                 "identifier": "PageInfo",
                 "newPage": false,
                 "searchKey": "graphqlutil.PageInfo",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -119,7 +131,9 @@
                       "identifier": "HasNextPage",
                       "newPage": false,
                       "searchKey": "graphqlutil.HasNextPage",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -139,7 +153,9 @@
                       "identifier": "NextPageCursor",
                       "newPage": false,
                       "searchKey": "graphqlutil.NextPageCursor",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -159,7 +175,9 @@
                       "identifier": "PageInfo.EndCursor",
                       "newPage": false,
                       "searchKey": "graphqlutil.PageInfo.EndCursor",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -179,7 +197,9 @@
                       "identifier": "PageInfo.HasNextPage",
                       "newPage": false,
                       "searchKey": "graphqlutil.PageInfo.HasNextPage",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",

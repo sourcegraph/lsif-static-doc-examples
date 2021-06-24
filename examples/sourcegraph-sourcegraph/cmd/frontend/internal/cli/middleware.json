@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "cmd/frontend/internal/cli/middleware",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "middleware.goImportMetaTagTemplate",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -67,6 +71,8 @@
                 "newPage": false,
                 "searchKey": "middleware.httpTrace",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
@@ -92,6 +98,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -112,6 +119,7 @@
                 "newPage": false,
                 "searchKey": "middleware.goImportMetaTag",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -137,6 +145,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -156,7 +165,9 @@
                 "identifier": "BlackHole",
                 "newPage": false,
                 "searchKey": "middleware.BlackHole",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -171,34 +182,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/cli/middleware#isBlackhole",
-              "documentation": {
-                "identifier": "isBlackhole",
-                "newPage": false,
-                "searchKey": "middleware.isBlackhole",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func isBlackhole(r *http.Request) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc isBlackhole(r *http.Request) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/cli/middleware#SourcegraphComGoGetHandler",
               "documentation": {
                 "identifier": "SourcegraphComGoGetHandler",
                 "newPage": false,
                 "searchKey": "middleware.SourcegraphComGoGetHandler",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -218,7 +209,9 @@
                 "identifier": "Trace",
                 "newPage": false,
                 "searchKey": "middleware.Trace",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -227,6 +220,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc Trace(next http.Handler) http.Handler\n```\n\nTrace is an HTTP middleware that dumps the HTTP request body (to stderr) if the env var `HTTP_TRACE=1`. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli/middleware#isBlackhole",
+              "documentation": {
+                "identifier": "isBlackhole",
+                "newPage": false,
+                "searchKey": "middleware.isBlackhole",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isBlackhole(r *http.Request) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isBlackhole(r *http.Request) bool\n```\n\n"
               },
               "children": null
             }

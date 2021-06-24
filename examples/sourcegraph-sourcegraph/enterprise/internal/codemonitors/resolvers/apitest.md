@@ -5,88 +5,103 @@ Package apitest provided types used in testing.
 ## Index
 
 * [Types](#type)
+    * [type Action struct](#Action)
+    * [type ActionConnection struct](#ActionConnection)
+    * [type ActionEmail struct](#ActionEmail)
+    * [type ActionEvent struct](#ActionEvent)
+    * [type ActionEventConnection struct](#ActionEventConnection)
+    * [type Monitor struct](#Monitor)
+    * [type MonitorConnection struct](#MonitorConnection)
+    * [type Node struct](#Node)
+    * [type PageInfo struct](#PageInfo)
+    * [type RecipientsConnection struct](#RecipientsConnection)
     * [type Response struct](#Response)
+    * [type Trigger struct](#Trigger)
+    * [type TriggerEvent struct](#TriggerEvent)
+    * [type TriggerEventConnection struct](#TriggerEventConnection)
     * [type UpdateCodeMonitorResponse struct](#UpdateCodeMonitorResponse)
     * [type User struct](#User)
-    * [type Node struct](#Node)
-    * [type MonitorConnection struct](#MonitorConnection)
-    * [type Monitor struct](#Monitor)
     * [type UserOrg struct](#UserOrg)
-    * [type PageInfo struct](#PageInfo)
-    * [type ActionConnection struct](#ActionConnection)
-    * [type Action struct](#Action)
-    * [type ActionEmail struct](#ActionEmail)
-    * [type RecipientsConnection struct](#RecipientsConnection)
-    * [type Trigger struct](#Trigger)
-    * [type TriggerEventConnection struct](#TriggerEventConnection)
-    * [type TriggerEvent struct](#TriggerEvent)
-    * [type ActionEventConnection struct](#ActionEventConnection)
-    * [type ActionEvent struct](#ActionEvent)
 
 
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
-### <a id="Response" href="#Response">type Response struct</a>
+### <a id="Action" href="#Action">type Action struct</a>
 
 ```
-searchKey: apitest.Response
+searchKey: apitest.Action
+tags: [struct]
 ```
 
 ```Go
-type Response struct {
-	User User
+type Action struct {
+	ActionEmail
 }
 ```
 
-### <a id="UpdateCodeMonitorResponse" href="#UpdateCodeMonitorResponse">type UpdateCodeMonitorResponse struct</a>
+### <a id="ActionConnection" href="#ActionConnection">type ActionConnection struct</a>
 
 ```
-searchKey: apitest.UpdateCodeMonitorResponse
+searchKey: apitest.ActionConnection
+tags: [struct]
 ```
 
 ```Go
-type UpdateCodeMonitorResponse struct {
-	UpdateCodeMonitor Monitor
+type ActionConnection struct {
+	Nodes      []Action
+	TotalCount int
+	PageInfo   PageInfo
 }
 ```
 
-### <a id="User" href="#User">type User struct</a>
+### <a id="ActionEmail" href="#ActionEmail">type ActionEmail struct</a>
 
 ```
-searchKey: apitest.User
+searchKey: apitest.ActionEmail
+tags: [struct]
 ```
 
 ```Go
-type User struct {
-	Monitors MonitorConnection
+type ActionEmail struct {
+	Id         string
+	Enabled    bool
+	Priority   string
+	Recipients RecipientsConnection
+	Header     string
+	Events     ActionEventConnection
 }
 ```
 
-### <a id="Node" href="#Node">type Node struct</a>
+### <a id="ActionEvent" href="#ActionEvent">type ActionEvent struct</a>
 
 ```
-searchKey: apitest.Node
+searchKey: apitest.ActionEvent
+tags: [struct]
 ```
 
 ```Go
-type Node struct {
-	Node Monitor
+type ActionEvent struct {
+	Id        string
+	Status    string
+	Timestamp string
+	Message   *string
 }
 ```
 
-### <a id="MonitorConnection" href="#MonitorConnection">type MonitorConnection struct</a>
+### <a id="ActionEventConnection" href="#ActionEventConnection">type ActionEventConnection struct</a>
 
 ```
-searchKey: apitest.MonitorConnection
+searchKey: apitest.ActionEventConnection
+tags: [struct]
 ```
 
 ```Go
-type MonitorConnection struct {
-	Nodes      []Monitor
+type ActionEventConnection struct {
+	Nodes      []ActionEvent
 	TotalCount int
 	PageInfo   PageInfo
 }
@@ -96,6 +111,7 @@ type MonitorConnection struct {
 
 ```
 searchKey: apitest.Monitor
+tags: [struct]
 ```
 
 ```Go
@@ -111,15 +127,31 @@ type Monitor struct {
 }
 ```
 
-### <a id="UserOrg" href="#UserOrg">type UserOrg struct</a>
+### <a id="MonitorConnection" href="#MonitorConnection">type MonitorConnection struct</a>
 
 ```
-searchKey: apitest.UserOrg
+searchKey: apitest.MonitorConnection
+tags: [struct]
 ```
 
 ```Go
-type UserOrg struct {
-	Name string `json:"username"`
+type MonitorConnection struct {
+	Nodes      []Monitor
+	TotalCount int
+	PageInfo   PageInfo
+}
+```
+
+### <a id="Node" href="#Node">type Node struct</a>
+
+```
+searchKey: apitest.Node
+tags: [struct]
+```
+
+```Go
+type Node struct {
+	Node Monitor
 }
 ```
 
@@ -127,6 +159,7 @@ type UserOrg struct {
 
 ```
 searchKey: apitest.PageInfo
+tags: [struct]
 ```
 
 ```Go
@@ -136,53 +169,11 @@ type PageInfo struct {
 }
 ```
 
-### <a id="ActionConnection" href="#ActionConnection">type ActionConnection struct</a>
-
-```
-searchKey: apitest.ActionConnection
-```
-
-```Go
-type ActionConnection struct {
-	Nodes      []Action
-	TotalCount int
-	PageInfo   PageInfo
-}
-```
-
-### <a id="Action" href="#Action">type Action struct</a>
-
-```
-searchKey: apitest.Action
-```
-
-```Go
-type Action struct {
-	ActionEmail
-}
-```
-
-### <a id="ActionEmail" href="#ActionEmail">type ActionEmail struct</a>
-
-```
-searchKey: apitest.ActionEmail
-```
-
-```Go
-type ActionEmail struct {
-	Id         string
-	Enabled    bool
-	Priority   string
-	Recipients RecipientsConnection
-	Header     string
-	Events     ActionEventConnection
-}
-```
-
 ### <a id="RecipientsConnection" href="#RecipientsConnection">type RecipientsConnection struct</a>
 
 ```
 searchKey: apitest.RecipientsConnection
+tags: [struct]
 ```
 
 ```Go
@@ -193,10 +184,24 @@ type RecipientsConnection struct {
 }
 ```
 
+### <a id="Response" href="#Response">type Response struct</a>
+
+```
+searchKey: apitest.Response
+tags: [struct]
+```
+
+```Go
+type Response struct {
+	User User
+}
+```
+
 ### <a id="Trigger" href="#Trigger">type Trigger struct</a>
 
 ```
 searchKey: apitest.Trigger
+tags: [struct]
 ```
 
 ```Go
@@ -207,24 +212,11 @@ type Trigger struct {
 }
 ```
 
-### <a id="TriggerEventConnection" href="#TriggerEventConnection">type TriggerEventConnection struct</a>
-
-```
-searchKey: apitest.TriggerEventConnection
-```
-
-```Go
-type TriggerEventConnection struct {
-	Nodes      []TriggerEvent
-	TotalCount int
-	PageInfo   PageInfo
-}
-```
-
 ### <a id="TriggerEvent" href="#TriggerEvent">type TriggerEvent struct</a>
 
 ```
 searchKey: apitest.TriggerEvent
+tags: [struct]
 ```
 
 ```Go
@@ -236,32 +228,57 @@ type TriggerEvent struct {
 }
 ```
 
-### <a id="ActionEventConnection" href="#ActionEventConnection">type ActionEventConnection struct</a>
+### <a id="TriggerEventConnection" href="#TriggerEventConnection">type TriggerEventConnection struct</a>
 
 ```
-searchKey: apitest.ActionEventConnection
+searchKey: apitest.TriggerEventConnection
+tags: [struct]
 ```
 
 ```Go
-type ActionEventConnection struct {
-	Nodes      []ActionEvent
+type TriggerEventConnection struct {
+	Nodes      []TriggerEvent
 	TotalCount int
 	PageInfo   PageInfo
 }
 ```
 
-### <a id="ActionEvent" href="#ActionEvent">type ActionEvent struct</a>
+### <a id="UpdateCodeMonitorResponse" href="#UpdateCodeMonitorResponse">type UpdateCodeMonitorResponse struct</a>
 
 ```
-searchKey: apitest.ActionEvent
+searchKey: apitest.UpdateCodeMonitorResponse
+tags: [struct]
 ```
 
 ```Go
-type ActionEvent struct {
-	Id        string
-	Status    string
-	Timestamp string
-	Message   *string
+type UpdateCodeMonitorResponse struct {
+	UpdateCodeMonitor Monitor
+}
+```
+
+### <a id="User" href="#User">type User struct</a>
+
+```
+searchKey: apitest.User
+tags: [struct]
+```
+
+```Go
+type User struct {
+	Monitors MonitorConnection
+}
+```
+
+### <a id="UserOrg" href="#UserOrg">type UserOrg struct</a>
+
+```
+searchKey: apitest.UserOrg
+tags: [struct]
+```
+
+```Go
+type UserOrg struct {
+	Name string `json:"username"`
 }
 ```
 

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/reflectlite_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,100 +41,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/reflectlite_test#typeTests",
-              "documentation": {
-                "identifier": "typeTests",
-                "newPage": false,
-                "searchKey": "reflectlite_test.typeTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var typeTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar typeTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#valueTests",
-              "documentation": {
-                "identifier": "valueTests",
-                "newPage": false,
-                "searchKey": "reflectlite_test.valueTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var valueTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar valueTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#_i",
-              "documentation": {
-                "identifier": "_i",
-                "newPage": false,
-                "searchKey": "reflectlite_test._i",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var _i"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar _i = 7\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#valueToStringTests",
-              "documentation": {
-                "identifier": "valueToStringTests",
-                "newPage": false,
-                "searchKey": "reflectlite_test.valueToStringTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var valueToStringTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar valueToStringTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/reflectlite_test#appendTests",
               "documentation": {
                 "identifier": "appendTests",
                 "newPage": false,
                 "searchKey": "reflectlite_test.appendTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -149,12 +66,39 @@
           },
           {
             "node": {
+              "pathID": "/internal/reflectlite_test#assignableTests",
+              "documentation": {
+                "identifier": "assignableTests",
+                "newPage": false,
+                "searchKey": "reflectlite_test.assignableTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var assignableTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar assignableTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/reflectlite_test#fn1",
               "documentation": {
                 "identifier": "fn1",
                 "newPage": false,
                 "searchKey": "reflectlite_test.fn1",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
@@ -177,6 +121,8 @@
                 "newPage": false,
                 "searchKey": "reflectlite_test.fn2",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
@@ -199,6 +145,8 @@
                 "newPage": false,
                 "searchKey": "reflectlite_test.fn3",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
@@ -215,12 +163,38 @@
           },
           {
             "node": {
+              "pathID": "/internal/reflectlite_test#implementsTests",
+              "documentation": {
+                "identifier": "implementsTests",
+                "newPage": false,
+                "searchKey": "reflectlite_test.implementsTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var implementsTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar implementsTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/reflectlite_test#loop1",
               "documentation": {
                 "identifier": "loop1",
                 "newPage": false,
                 "searchKey": "reflectlite_test.loop1",
                 "tags": [
+                  "variable",
                   "private"
                 ]
               },
@@ -243,6 +217,7 @@
                 "newPage": false,
                 "searchKey": "reflectlite_test.loop2",
                 "tags": [
+                  "variable",
                   "private"
                 ]
               },
@@ -265,6 +240,8 @@
                 "newPage": false,
                 "searchKey": "reflectlite_test.loopy1",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -287,6 +264,8 @@
                 "newPage": false,
                 "searchKey": "reflectlite_test.loopy2",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -303,34 +282,15 @@
           },
           {
             "node": {
-              "pathID": "/internal/reflectlite_test#typeOfTests",
-              "documentation": {
-                "identifier": "typeOfTests",
-                "newPage": false,
-                "searchKey": "reflectlite_test.typeOfTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var typeOfTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar typeOfTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/reflectlite_test#nameTests",
               "documentation": {
                 "identifier": "nameTests",
                 "newPage": false,
                 "searchKey": "reflectlite_test.nameTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -353,6 +313,9 @@
                 "newPage": false,
                 "searchKey": "reflectlite_test.typeNames",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
@@ -369,44 +332,124 @@
           },
           {
             "node": {
-              "pathID": "/internal/reflectlite_test#implementsTests",
+              "pathID": "/internal/reflectlite_test#typeOfTests",
               "documentation": {
-                "identifier": "implementsTests",
+                "identifier": "typeOfTests",
                 "newPage": false,
-                "searchKey": "reflectlite_test.implementsTests",
+                "searchKey": "reflectlite_test.typeOfTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var implementsTests"
+                "value": "var typeOfTests"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar implementsTests = ...\n```\n\n"
+                "value": "```Go\nvar typeOfTests = ...\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/reflectlite_test#assignableTests",
+              "pathID": "/internal/reflectlite_test#typeTests",
               "documentation": {
-                "identifier": "assignableTests",
+                "identifier": "typeTests",
                 "newPage": false,
-                "searchKey": "reflectlite_test.assignableTests",
+                "searchKey": "reflectlite_test.typeTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var assignableTests"
+                "value": "var typeTests"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar assignableTests = ...\n```\n\n"
+                "value": "```Go\nvar typeTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#valueTests",
+              "documentation": {
+                "identifier": "valueTests",
+                "newPage": false,
+                "searchKey": "reflectlite_test.valueTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var valueTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar valueTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#valueToStringTests",
+              "documentation": {
+                "identifier": "valueToStringTests",
+                "newPage": false,
+                "searchKey": "reflectlite_test.valueToStringTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var valueToStringTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar valueToStringTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#_i",
+              "documentation": {
+                "identifier": "_i",
+                "newPage": false,
+                "searchKey": "reflectlite_test._i",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var _i"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar _i = 7\n```\n\n"
               },
               "children": null
             }
@@ -422,6 +465,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -436,100 +480,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/reflectlite_test#integer",
-              "documentation": {
-                "identifier": "integer",
-                "newPage": false,
-                "searchKey": "reflectlite_test.integer",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type integer int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype integer int\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#T",
-              "documentation": {
-                "identifier": "T",
-                "newPage": false,
-                "searchKey": "reflectlite_test.T",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type T struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype T struct {\n\ta int\n\tb float64\n\tc string\n\td *int\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#pair",
-              "documentation": {
-                "identifier": "pair",
-                "newPage": false,
-                "searchKey": "reflectlite_test.pair",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type pair struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype pair struct {\n\ti interface{}\n\ts string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#big",
-              "documentation": {
-                "identifier": "big",
-                "newPage": false,
-                "searchKey": "reflectlite_test.big",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type big struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype big struct {\n\ta, b, c, d, e int64\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/reflectlite_test#Basic",
               "documentation": {
                 "identifier": "Basic",
                 "newPage": false,
                 "searchKey": "reflectlite_test.Basic",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -546,22 +503,68 @@
           },
           {
             "node": {
-              "pathID": "/internal/reflectlite_test#NotBasic",
+              "pathID": "/internal/reflectlite_test#Ch",
               "documentation": {
-                "identifier": "NotBasic",
+                "identifier": "Ch",
                 "newPage": false,
-                "searchKey": "reflectlite_test.NotBasic",
+                "searchKey": "reflectlite_test.Ch",
                 "tags": [
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type NotBasic reflectlite_test.Basic"
+                "value": "type Ch <-chan interface{}"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype NotBasic Basic\n```\n\n"
+                "value": "```Go\ntype Ch <-chan interface{}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#D1",
+              "documentation": {
+                "identifier": "D1",
+                "newPage": false,
+                "searchKey": "reflectlite_test.D1",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type D1 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype D1 struct {\n\td int\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#D2",
+              "documentation": {
+                "identifier": "D2",
+                "newPage": false,
+                "searchKey": "reflectlite_test.D2",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type D2 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype D2 struct {\n\td int\n}\n```\n\n"
               },
               "children": null
             }
@@ -574,6 +577,7 @@
                 "newPage": false,
                 "searchKey": "reflectlite_test.DeepEqualTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -590,22 +594,46 @@
           },
           {
             "node": {
-              "pathID": "/internal/reflectlite_test#self",
+              "pathID": "/internal/reflectlite_test#IntPtr",
               "documentation": {
-                "identifier": "self",
+                "identifier": "IntPtr",
                 "newPage": false,
-                "searchKey": "reflectlite_test.self",
+                "searchKey": "reflectlite_test.IntPtr",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type self struct{}"
+                "value": "type IntPtr *int"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype self struct{}\n```\n\n"
+                "value": "```Go\ntype IntPtr *int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#IntPtr1",
+              "documentation": {
+                "identifier": "IntPtr1",
+                "newPage": false,
+                "searchKey": "reflectlite_test.IntPtr1",
+                "tags": [
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type IntPtr1 *int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype IntPtr1 *int\n```\n\n"
               },
               "children": null
             }
@@ -640,6 +668,7 @@
                 "newPage": false,
                 "searchKey": "reflectlite_test.Loopy",
                 "tags": [
+                  "interface",
                   "private"
                 ]
               },
@@ -656,12 +685,36 @@
           },
           {
             "node": {
+              "pathID": "/internal/reflectlite_test#NotBasic",
+              "documentation": {
+                "identifier": "NotBasic",
+                "newPage": false,
+                "searchKey": "reflectlite_test.NotBasic",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NotBasic reflectlite_test.Basic"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NotBasic Basic\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/reflectlite_test#Point",
               "documentation": {
                 "identifier": "Point",
                 "newPage": false,
                 "searchKey": "reflectlite_test.Point",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -682,6 +735,7 @@
                       "newPage": false,
                       "searchKey": "reflectlite_test.Point.AnotherMethod",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -704,6 +758,7 @@
                       "newPage": false,
                       "searchKey": "reflectlite_test.Point.Dist",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -726,6 +781,7 @@
                       "newPage": false,
                       "searchKey": "reflectlite_test.Point.GCMethod",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -748,6 +804,7 @@
                       "newPage": false,
                       "searchKey": "reflectlite_test.Point.NoArgs",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -770,6 +827,7 @@
                       "newPage": false,
                       "searchKey": "reflectlite_test.Point.TotalDist",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -789,56 +847,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/reflectlite_test#D1",
-              "documentation": {
-                "identifier": "D1",
-                "newPage": false,
-                "searchKey": "reflectlite_test.D1",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type D1 struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype D1 struct {\n\td int\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#D2",
-              "documentation": {
-                "identifier": "D2",
-                "newPage": false,
-                "searchKey": "reflectlite_test.D2",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type D2 struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype D2 struct {\n\td int\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/reflectlite_test#S",
               "documentation": {
                 "identifier": "S",
                 "newPage": false,
                 "searchKey": "reflectlite_test.S",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -855,88 +870,23 @@
           },
           {
             "node": {
-              "pathID": "/internal/reflectlite_test#TheNameOfThisTypeIsExactly255BytesLongSoWhenTheCompilerPrependsTheReflectTestPackageNameAndExtraStarTheLinkerRuntimeAndReflectPackagesWillHaveToCorrectlyDecodeTheSecondLengthByte0123456789_0123456789_0123456789_0123456789_0123456789_012345678",
+              "pathID": "/internal/reflectlite_test#T",
               "documentation": {
-                "identifier": "TheNameOfThisTypeIsExactly255BytesLongSoWhenTheCompilerPrependsTheReflectTestPackageNameAndExtraStarTheLinkerRuntimeAndReflectPackagesWillHaveToCorrectlyDecodeTheSecondLengthByte0123456789_0123456789_0123456789_0123456789_0123456789_012345678",
+                "identifier": "T",
                 "newPage": false,
-                "searchKey": "reflectlite_test.TheNameOfThisTypeIsExactly255BytesLongSoWhenTheCompilerPrependsTheReflectTestPackageNameAndExtraStarTheLinkerRuntimeAndReflectPackagesWillHaveToCorrectlyDecodeTheSecondLengthByte0123456789_0123456789_0123456789_0123456789_0123456789_012345678",
+                "searchKey": "reflectlite_test.T",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type TheNameOfThisTypeIsExactly255BytesLongSoWhenTheCompilerPrependsTheReflectTestPackageNameAndExtraStarTheLinkerRuntimeAndReflectPackagesWillHaveToCorrectlyDecodeTheSecondLengthByte0123456789_0123456789_0123456789_0123456789_0123456789_012345678 int"
+                "value": "type T struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype TheNameOfThisTypeIsExactly255BytesLongSoWhenTheCompilerPrependsTheReflectTestPackageNameAndExtraStarTheLinkerRuntimeAndReflectPackagesWillHaveToCorrectlyDecodeTheSecondLengthByte0123456789_0123456789_0123456789_0123456789_0123456789_012345678 int\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#nameTest",
-              "documentation": {
-                "identifier": "nameTest",
-                "newPage": false,
-                "searchKey": "reflectlite_test.nameTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type nameTest struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype nameTest struct {\n\tv    interface{}\n\twant string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#Tint",
-              "documentation": {
-                "identifier": "Tint",
-                "newPage": false,
-                "searchKey": "reflectlite_test.Tint",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Tint int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Tint int\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#Tint2",
-              "documentation": {
-                "identifier": "Tint2",
-                "newPage": false,
-                "searchKey": "reflectlite_test.Tint2",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Tint2 reflectlite_test.Tint"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Tint2 = Tint\n```\n\n"
+                "value": "```Go\ntype T struct {\n\ta int\n\tb float64\n\tc string\n\td *int\n}\n```\n\n"
               },
               "children": null
             }
@@ -949,6 +899,7 @@
                 "newPage": false,
                 "searchKey": "reflectlite_test.Talias1",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -971,6 +922,7 @@
                 "newPage": false,
                 "searchKey": "reflectlite_test.Talias2",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -987,200 +939,115 @@
           },
           {
             "node": {
-              "pathID": "/internal/reflectlite_test#visitor",
+              "pathID": "/internal/reflectlite_test#TheNameOfThisTypeIsExactly255BytesLongSoWhenTheCompilerPrependsTheReflectTestPackageNameAndExtraStarTheLinkerRuntimeAndReflectPackagesWillHaveToCorrectlyDecodeTheSecondLengthByte0123456789_0123456789_0123456789_0123456789_0123456789_012345678",
               "documentation": {
-                "identifier": "visitor",
+                "identifier": "TheNameOfThisTypeIsExactly255BytesLongSoWhenTheCompilerPrependsTheReflectTestPackageNameAndExtraStarTheLinkerRuntimeAndReflectPackagesWillHaveToCorrectlyDecodeTheSecondLengthByte0123456789_0123456789_0123456789_0123456789_0123456789_012345678",
                 "newPage": false,
-                "searchKey": "reflectlite_test.visitor",
+                "searchKey": "reflectlite_test.TheNameOfThisTypeIsExactly255BytesLongSoWhenTheCompilerPrependsTheReflectTestPackageNameAndExtraStarTheLinkerRuntimeAndReflectPackagesWillHaveToCorrectlyDecodeTheSecondLengthByte0123456789_0123456789_0123456789_0123456789_0123456789_012345678",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type visitor struct"
+                "value": "type TheNameOfThisTypeIsExactly255BytesLongSoWhenTheCompilerPrependsTheReflectTestPackageNameAndExtraStarTheLinkerRuntimeAndReflectPackagesWillHaveToCorrectlyDecodeTheSecondLengthByte0123456789_0123456789_0123456789_0123456789_0123456789_012345678 int"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype visitor struct {\n\tm map[string]map[string]bool\n}\n```\n\n"
+                "value": "```Go\ntype TheNameOfThisTypeIsExactly255BytesLongSoWhenTheCompilerPrependsTheReflectTestPackageNameAndExtraStarTheLinkerRuntimeAndReflectPackagesWillHaveToCorrectlyDecodeTheSecondLengthByte0123456789_0123456789_0123456789_0123456789_0123456789_012345678 int\n```\n\n"
               },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/reflectlite_test#newVisitor",
-                    "documentation": {
-                      "identifier": "newVisitor",
-                      "newPage": false,
-                      "searchKey": "reflectlite_test.newVisitor",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func newVisitor() visitor"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc newVisitor() visitor\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/reflectlite_test#visitor.filter",
-                    "documentation": {
-                      "identifier": "visitor.filter",
-                      "newPage": false,
-                      "searchKey": "reflectlite_test.visitor.filter",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v visitor) filter(name string) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v visitor) filter(name string) bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/reflectlite_test#visitor.Visit",
-                    "documentation": {
-                      "identifier": "visitor.Visit",
-                      "newPage": false,
-                      "searchKey": "reflectlite_test.visitor.Visit",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v visitor) Visit(n ast.Node) ast.Visitor"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v visitor) Visit(n ast.Node) ast.Visitor\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
+              "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/reflectlite_test#notAnExpr",
+              "pathID": "/internal/reflectlite_test#Tint",
               "documentation": {
-                "identifier": "notAnExpr",
+                "identifier": "Tint",
                 "newPage": false,
-                "searchKey": "reflectlite_test.notAnExpr",
+                "searchKey": "reflectlite_test.Tint",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type notAnExpr struct{}"
+                "value": "type Tint int"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype notAnExpr struct{}\n```\n\n"
+                "value": "```Go\ntype Tint int\n```\n\n"
               },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/reflectlite_test#notAnExpr.Pos",
-                    "documentation": {
-                      "identifier": "notAnExpr.Pos",
-                      "newPage": false,
-                      "searchKey": "reflectlite_test.notAnExpr.Pos",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (notAnExpr) Pos() token.Pos"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (notAnExpr) Pos() token.Pos\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/reflectlite_test#notAnExpr.End",
-                    "documentation": {
-                      "identifier": "notAnExpr.End",
-                      "newPage": false,
-                      "searchKey": "reflectlite_test.notAnExpr.End",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (notAnExpr) End() token.Pos"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (notAnExpr) End() token.Pos\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/reflectlite_test#notAnExpr.exprNode",
-                    "documentation": {
-                      "identifier": "notAnExpr.exprNode",
-                      "newPage": false,
-                      "searchKey": "reflectlite_test.notAnExpr.exprNode",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (notAnExpr) exprNode()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (notAnExpr) exprNode()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
+              "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/reflectlite_test#notASTExpr",
+              "pathID": "/internal/reflectlite_test#Tint2",
               "documentation": {
-                "identifier": "notASTExpr",
+                "identifier": "Tint2",
                 "newPage": false,
-                "searchKey": "reflectlite_test.notASTExpr",
+                "searchKey": "reflectlite_test.Tint2",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type notASTExpr interface"
+                "value": "type Tint2 reflectlite_test.Tint"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype notASTExpr interface {\n\tPos() token.Pos\n\tEnd() token.Pos\n\texprNode()\n}\n```\n\n"
+                "value": "```Go\ntype Tint2 = Tint\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#big",
+              "documentation": {
+                "identifier": "big",
+                "newPage": false,
+                "searchKey": "reflectlite_test.big",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type big struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype big struct {\n\ta, b, c, d, e int64\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#integer",
+              "documentation": {
+                "identifier": "integer",
+                "newPage": false,
+                "searchKey": "reflectlite_test.integer",
+                "tags": [
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type integer int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype integer int\n```\n\n"
               },
               "children": null
             }
@@ -1193,6 +1060,7 @@
                 "newPage": false,
                 "searchKey": "reflectlite_test.mapError",
                 "tags": [
+                  "object",
                   "private"
                 ]
               },
@@ -1213,6 +1081,7 @@
                       "newPage": false,
                       "searchKey": "reflectlite_test.mapError.Error",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1232,68 +1101,280 @@
           },
           {
             "node": {
-              "pathID": "/internal/reflectlite_test#IntPtr",
+              "pathID": "/internal/reflectlite_test#nameTest",
               "documentation": {
-                "identifier": "IntPtr",
+                "identifier": "nameTest",
                 "newPage": false,
-                "searchKey": "reflectlite_test.IntPtr",
+                "searchKey": "reflectlite_test.nameTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type IntPtr *int"
+                "value": "type nameTest struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype IntPtr *int\n```\n\n"
+                "value": "```Go\ntype nameTest struct {\n\tv    interface{}\n\twant string\n}\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/reflectlite_test#IntPtr1",
+              "pathID": "/internal/reflectlite_test#notASTExpr",
               "documentation": {
-                "identifier": "IntPtr1",
+                "identifier": "notASTExpr",
                 "newPage": false,
-                "searchKey": "reflectlite_test.IntPtr1",
+                "searchKey": "reflectlite_test.notASTExpr",
                 "tags": [
+                  "interface",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type IntPtr1 *int"
+                "value": "type notASTExpr interface"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype IntPtr1 *int\n```\n\n"
+                "value": "```Go\ntype notASTExpr interface {\n\tPos() token.Pos\n\tEnd() token.Pos\n\texprNode()\n}\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/reflectlite_test#Ch",
+              "pathID": "/internal/reflectlite_test#notAnExpr",
               "documentation": {
-                "identifier": "Ch",
+                "identifier": "notAnExpr",
                 "newPage": false,
-                "searchKey": "reflectlite_test.Ch",
+                "searchKey": "reflectlite_test.notAnExpr",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type Ch <-chan interface{}"
+                "value": "type notAnExpr struct{}"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype Ch <-chan interface{}\n```\n\n"
+                "value": "```Go\ntype notAnExpr struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/reflectlite_test#notAnExpr.End",
+                    "documentation": {
+                      "identifier": "notAnExpr.End",
+                      "newPage": false,
+                      "searchKey": "reflectlite_test.notAnExpr.End",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (notAnExpr) End() token.Pos"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (notAnExpr) End() token.Pos\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/reflectlite_test#notAnExpr.Pos",
+                    "documentation": {
+                      "identifier": "notAnExpr.Pos",
+                      "newPage": false,
+                      "searchKey": "reflectlite_test.notAnExpr.Pos",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (notAnExpr) Pos() token.Pos"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (notAnExpr) Pos() token.Pos\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/reflectlite_test#notAnExpr.exprNode",
+                    "documentation": {
+                      "identifier": "notAnExpr.exprNode",
+                      "newPage": false,
+                      "searchKey": "reflectlite_test.notAnExpr.exprNode",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (notAnExpr) exprNode()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (notAnExpr) exprNode()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#pair",
+              "documentation": {
+                "identifier": "pair",
+                "newPage": false,
+                "searchKey": "reflectlite_test.pair",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type pair struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype pair struct {\n\ti interface{}\n\ts string\n}\n```\n\n"
               },
               "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#self",
+              "documentation": {
+                "identifier": "self",
+                "newPage": false,
+                "searchKey": "reflectlite_test.self",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type self struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype self struct{}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#visitor",
+              "documentation": {
+                "identifier": "visitor",
+                "newPage": false,
+                "searchKey": "reflectlite_test.visitor",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type visitor struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype visitor struct {\n\tm map[string]map[string]bool\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/reflectlite_test#newVisitor",
+                    "documentation": {
+                      "identifier": "newVisitor",
+                      "newPage": false,
+                      "searchKey": "reflectlite_test.newVisitor",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newVisitor() visitor"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newVisitor() visitor\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/reflectlite_test#visitor.Visit",
+                    "documentation": {
+                      "identifier": "visitor.Visit",
+                      "newPage": false,
+                      "searchKey": "reflectlite_test.visitor.Visit",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v visitor) Visit(n ast.Node) ast.Visitor"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v visitor) Visit(n ast.Node) ast.Visitor\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/reflectlite_test#visitor.filter",
+                    "documentation": {
+                      "identifier": "visitor.filter",
+                      "newPage": false,
+                      "searchKey": "reflectlite_test.visitor.filter",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v visitor) filter(name string) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v visitor) filter(name string) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
             }
           }
         ]
@@ -1307,6 +1388,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -1321,418 +1403,23 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/reflectlite_test#ToValue",
+              "pathID": "/internal/reflectlite_test#Indirect",
               "documentation": {
-                "identifier": "ToValue",
+                "identifier": "Indirect",
                 "newPage": false,
-                "searchKey": "reflectlite_test.ToValue",
+                "searchKey": "reflectlite_test.Indirect",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func ToValue(v Value) reflect.Value"
+                "value": "func Indirect(v Value) Value"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc ToValue(v Value) reflect.Value\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#TypeString",
-              "documentation": {
-                "identifier": "TypeString",
-                "newPage": false,
-                "searchKey": "reflectlite_test.TypeString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TypeString(t Type) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TypeString(t Type) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#assert",
-              "documentation": {
-                "identifier": "assert",
-                "newPage": false,
-                "searchKey": "reflectlite_test.assert",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func assert(t *testing.T, s, want string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc assert(t *testing.T, s, want string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#testType",
-              "documentation": {
-                "identifier": "testType",
-                "newPage": false,
-                "searchKey": "reflectlite_test.testType",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testType(t *testing.T, i int, typ Type, want string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testType(t *testing.T, i int, typ Type, want string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#testReflectType",
-              "documentation": {
-                "identifier": "testReflectType",
-                "newPage": false,
-                "searchKey": "reflectlite_test.testReflectType",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testReflectType(t *testing.T, i int, typ Type, want string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testReflectType(t *testing.T, i int, typ Type, want string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#TestTypes",
-              "documentation": {
-                "identifier": "TestTypes",
-                "newPage": false,
-                "searchKey": "reflectlite_test.TestTypes",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTypes(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTypes(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#TestSetValue",
-              "documentation": {
-                "identifier": "TestSetValue",
-                "newPage": false,
-                "searchKey": "reflectlite_test.TestSetValue",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSetValue(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSetValue(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#TestCanSetField",
-              "documentation": {
-                "identifier": "TestCanSetField",
-                "newPage": false,
-                "searchKey": "reflectlite_test.TestCanSetField",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCanSetField(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCanSetField(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#TestValueToString",
-              "documentation": {
-                "identifier": "TestValueToString",
-                "newPage": false,
-                "searchKey": "reflectlite_test.TestValueToString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestValueToString(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestValueToString(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#TestPtrSetNil",
-              "documentation": {
-                "identifier": "TestPtrSetNil",
-                "newPage": false,
-                "searchKey": "reflectlite_test.TestPtrSetNil",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestPtrSetNil(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestPtrSetNil(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#TestMapSetNil",
-              "documentation": {
-                "identifier": "TestMapSetNil",
-                "newPage": false,
-                "searchKey": "reflectlite_test.TestMapSetNil",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMapSetNil(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMapSetNil(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#TestAll",
-              "documentation": {
-                "identifier": "TestAll",
-                "newPage": false,
-                "searchKey": "reflectlite_test.TestAll",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAll(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAll(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#TestInterfaceValue",
-              "documentation": {
-                "identifier": "TestInterfaceValue",
-                "newPage": false,
-                "searchKey": "reflectlite_test.TestInterfaceValue",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestInterfaceValue(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestInterfaceValue(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#TestFunctionValue",
-              "documentation": {
-                "identifier": "TestFunctionValue",
-                "newPage": false,
-                "searchKey": "reflectlite_test.TestFunctionValue",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestFunctionValue(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestFunctionValue(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#sameInts",
-              "documentation": {
-                "identifier": "sameInts",
-                "newPage": false,
-                "searchKey": "reflectlite_test.sameInts",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func sameInts(x, y []int) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc sameInts(x, y []int) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#TestBigUnnamedStruct",
-              "documentation": {
-                "identifier": "TestBigUnnamedStruct",
-                "newPage": false,
-                "searchKey": "reflectlite_test.TestBigUnnamedStruct",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestBigUnnamedStruct(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestBigUnnamedStruct(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#TestBigStruct",
-              "documentation": {
-                "identifier": "TestBigStruct",
-                "newPage": false,
-                "searchKey": "reflectlite_test.TestBigStruct",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestBigStruct(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestBigStruct(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#init.all_test.go",
-              "documentation": {
-                "identifier": "init.all_test.go",
-                "newPage": false,
-                "searchKey": "reflectlite_test.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#TestTypeOf",
-              "documentation": {
-                "identifier": "TestTypeOf",
-                "newPage": false,
-                "searchKey": "reflectlite_test.TestTypeOf",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTypeOf(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTypeOf(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc Indirect(v Value) Value\n```\n\nIndirect returns the value that v points to. If v is a nil pointer, Indirect returns a zero Value. If v is not a pointer, Indirect returns v. \n\n"
               },
               "children": null
             }
@@ -1745,6 +1432,7 @@
                 "newPage": false,
                 "searchKey": "reflectlite_test.Nil",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1767,6 +1455,7 @@
                 "newPage": false,
                 "searchKey": "reflectlite_test.NotNil",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1783,277 +1472,15 @@
           },
           {
             "node": {
-              "pathID": "/internal/reflectlite_test#TestIsNil",
-              "documentation": {
-                "identifier": "TestIsNil",
-                "newPage": false,
-                "searchKey": "reflectlite_test.TestIsNil",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIsNil(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIsNil(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#Indirect",
-              "documentation": {
-                "identifier": "Indirect",
-                "newPage": false,
-                "searchKey": "reflectlite_test.Indirect",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Indirect(v Value) Value"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Indirect(v Value) Value\n```\n\nIndirect returns the value that v points to. If v is a nil pointer, Indirect returns a zero Value. If v is not a pointer, Indirect returns v. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#TestNilPtrValueSub",
-              "documentation": {
-                "identifier": "TestNilPtrValueSub",
-                "newPage": false,
-                "searchKey": "reflectlite_test.TestNilPtrValueSub",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestNilPtrValueSub(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestNilPtrValueSub(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#TestImportPath",
-              "documentation": {
-                "identifier": "TestImportPath",
-                "newPage": false,
-                "searchKey": "reflectlite_test.TestImportPath",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestImportPath(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestImportPath(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#noAlloc",
-              "documentation": {
-                "identifier": "noAlloc",
-                "newPage": false,
-                "searchKey": "reflectlite_test.noAlloc",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func noAlloc(t *testing.T, n int, f func(int))"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc noAlloc(t *testing.T, n int, f func(int))\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#TestAllocations",
-              "documentation": {
-                "identifier": "TestAllocations",
-                "newPage": false,
-                "searchKey": "reflectlite_test.TestAllocations",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAllocations(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAllocations(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#TestSetPanic",
-              "documentation": {
-                "identifier": "TestSetPanic",
-                "newPage": false,
-                "searchKey": "reflectlite_test.TestSetPanic",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSetPanic(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSetPanic(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#shouldPanic",
-              "documentation": {
-                "identifier": "shouldPanic",
-                "newPage": false,
-                "searchKey": "reflectlite_test.shouldPanic",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func shouldPanic(f func())"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc shouldPanic(f func())\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#TestBigZero",
-              "documentation": {
-                "identifier": "TestBigZero",
-                "newPage": false,
-                "searchKey": "reflectlite_test.TestBigZero",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestBigZero(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestBigZero(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#TestInvalid",
-              "documentation": {
-                "identifier": "TestInvalid",
-                "newPage": false,
-                "searchKey": "reflectlite_test.TestInvalid",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestInvalid(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestInvalid(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#TestNames",
-              "documentation": {
-                "identifier": "TestNames",
-                "newPage": false,
-                "searchKey": "reflectlite_test.TestNames",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestNames(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestNames(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/reflectlite_test#TestUnaddressableField",
-              "documentation": {
-                "identifier": "TestUnaddressableField",
-                "newPage": false,
-                "searchKey": "reflectlite_test.TestUnaddressableField",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUnaddressableField(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUnaddressableField(t *testing.T)\n```\n\nTestUnaddressableField tests that the reflect package will not allow a type from another package to be used as a named type with an unexported field. \n\nThis ensures that unexported fields cannot be modified by other packages. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/reflectlite_test#TestAliasNames",
               "documentation": {
                 "identifier": "TestAliasNames",
                 "newPage": false,
                 "searchKey": "reflectlite_test.TestAliasNames",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2069,12 +1496,705 @@
           },
           {
             "node": {
+              "pathID": "/internal/reflectlite_test#TestAll",
+              "documentation": {
+                "identifier": "TestAll",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestAll",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAll(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAll(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TestAllocations",
+              "documentation": {
+                "identifier": "TestAllocations",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestAllocations",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAllocations(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAllocations(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TestAssignableTo",
+              "documentation": {
+                "identifier": "TestAssignableTo",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestAssignableTo",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAssignableTo(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAssignableTo(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TestBigStruct",
+              "documentation": {
+                "identifier": "TestBigStruct",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestBigStruct",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBigStruct(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBigStruct(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TestBigUnnamedStruct",
+              "documentation": {
+                "identifier": "TestBigUnnamedStruct",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestBigUnnamedStruct",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBigUnnamedStruct(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBigUnnamedStruct(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TestBigZero",
+              "documentation": {
+                "identifier": "TestBigZero",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestBigZero",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBigZero(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBigZero(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TestCanSetField",
+              "documentation": {
+                "identifier": "TestCanSetField",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestCanSetField",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCanSetField(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCanSetField(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TestFunctionValue",
+              "documentation": {
+                "identifier": "TestFunctionValue",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestFunctionValue",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFunctionValue(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFunctionValue(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TestImplements",
+              "documentation": {
+                "identifier": "TestImplements",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestImplements",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestImplements(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestImplements(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TestImplicitSetConversion",
+              "documentation": {
+                "identifier": "TestImplicitSetConversion",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestImplicitSetConversion",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestImplicitSetConversion(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestImplicitSetConversion(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TestImportPath",
+              "documentation": {
+                "identifier": "TestImportPath",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestImportPath",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestImportPath(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestImportPath(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TestInterfaceValue",
+              "documentation": {
+                "identifier": "TestInterfaceValue",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestInterfaceValue",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInterfaceValue(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInterfaceValue(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TestInvalid",
+              "documentation": {
+                "identifier": "TestInvalid",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestInvalid",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInvalid(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInvalid(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TestIsNil",
+              "documentation": {
+                "identifier": "TestIsNil",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestIsNil",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIsNil(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIsNil(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TestMapSetNil",
+              "documentation": {
+                "identifier": "TestMapSetNil",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestMapSetNil",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMapSetNil(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMapSetNil(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TestMirrorWithReflect",
+              "documentation": {
+                "identifier": "TestMirrorWithReflect",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestMirrorWithReflect",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMirrorWithReflect(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMirrorWithReflect(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TestNames",
+              "documentation": {
+                "identifier": "TestNames",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestNames",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNames(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNames(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TestNilPtrValueSub",
+              "documentation": {
+                "identifier": "TestNilPtrValueSub",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestNilPtrValueSub",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNilPtrValueSub(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNilPtrValueSub(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TestPtrSetNil",
+              "documentation": {
+                "identifier": "TestPtrSetNil",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestPtrSetNil",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPtrSetNil(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPtrSetNil(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TestSetPanic",
+              "documentation": {
+                "identifier": "TestSetPanic",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestSetPanic",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSetPanic(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSetPanic(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TestSetValue",
+              "documentation": {
+                "identifier": "TestSetValue",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestSetValue",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSetValue(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSetValue(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TestTypeOf",
+              "documentation": {
+                "identifier": "TestTypeOf",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestTypeOf",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTypeOf(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTypeOf(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TestTypes",
+              "documentation": {
+                "identifier": "TestTypes",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestTypes",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTypes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTypes(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TestUnaddressableField",
+              "documentation": {
+                "identifier": "TestUnaddressableField",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestUnaddressableField",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnaddressableField(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnaddressableField(t *testing.T)\n```\n\nTestUnaddressableField tests that the reflect package will not allow a type from another package to be used as a named type with an unexported field. \n\nThis ensures that unexported fields cannot be modified by other packages. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TestValueToString",
+              "documentation": {
+                "identifier": "TestValueToString",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TestValueToString",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestValueToString(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestValueToString(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#ToValue",
+              "documentation": {
+                "identifier": "ToValue",
+                "newPage": false,
+                "searchKey": "reflectlite_test.ToValue",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ToValue(v Value) reflect.Value"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ToValue(v Value) reflect.Value\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#TypeString",
+              "documentation": {
+                "identifier": "TypeString",
+                "newPage": false,
+                "searchKey": "reflectlite_test.TypeString",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TypeString(t Type) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TypeString(t Type) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#assert",
+              "documentation": {
+                "identifier": "assert",
+                "newPage": false,
+                "searchKey": "reflectlite_test.assert",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func assert(t *testing.T, s, want string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc assert(t *testing.T, s, want string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#init.all_test.go",
+              "documentation": {
+                "identifier": "init.all_test.go",
+                "newPage": false,
+                "searchKey": "reflectlite_test.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/reflectlite_test#loadTypes",
               "documentation": {
                 "identifier": "loadTypes",
                 "newPage": false,
                 "searchKey": "reflectlite_test.loadTypes",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2091,88 +2211,115 @@
           },
           {
             "node": {
-              "pathID": "/internal/reflectlite_test#TestMirrorWithReflect",
+              "pathID": "/internal/reflectlite_test#noAlloc",
               "documentation": {
-                "identifier": "TestMirrorWithReflect",
+                "identifier": "noAlloc",
                 "newPage": false,
-                "searchKey": "reflectlite_test.TestMirrorWithReflect",
+                "searchKey": "reflectlite_test.noAlloc",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestMirrorWithReflect(t *testing.T)"
+                "value": "func noAlloc(t *testing.T, n int, f func(int))"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestMirrorWithReflect(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc noAlloc(t *testing.T, n int, f func(int))\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/reflectlite_test#TestImplicitSetConversion",
+              "pathID": "/internal/reflectlite_test#sameInts",
               "documentation": {
-                "identifier": "TestImplicitSetConversion",
+                "identifier": "sameInts",
                 "newPage": false,
-                "searchKey": "reflectlite_test.TestImplicitSetConversion",
+                "searchKey": "reflectlite_test.sameInts",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestImplicitSetConversion(t *testing.T)"
+                "value": "func sameInts(x, y []int) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestImplicitSetConversion(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc sameInts(x, y []int) bool\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/reflectlite_test#TestImplements",
+              "pathID": "/internal/reflectlite_test#shouldPanic",
               "documentation": {
-                "identifier": "TestImplements",
+                "identifier": "shouldPanic",
                 "newPage": false,
-                "searchKey": "reflectlite_test.TestImplements",
+                "searchKey": "reflectlite_test.shouldPanic",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestImplements(t *testing.T)"
+                "value": "func shouldPanic(f func())"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestImplements(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc shouldPanic(f func())\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/reflectlite_test#TestAssignableTo",
+              "pathID": "/internal/reflectlite_test#testReflectType",
               "documentation": {
-                "identifier": "TestAssignableTo",
+                "identifier": "testReflectType",
                 "newPage": false,
-                "searchKey": "reflectlite_test.TestAssignableTo",
+                "searchKey": "reflectlite_test.testReflectType",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestAssignableTo(t *testing.T)"
+                "value": "func testReflectType(t *testing.T, i int, typ Type, want string)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestAssignableTo(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc testReflectType(t *testing.T, i int, typ Type, want string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/reflectlite_test#testType",
+              "documentation": {
+                "identifier": "testType",
+                "newPage": false,
+                "searchKey": "reflectlite_test.testType",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testType(t *testing.T, i int, typ Type, want string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testType(t *testing.T, i int, typ Type, want string)\n```\n\n"
               },
               "children": null
             }
@@ -2185,6 +2332,7 @@
                 "newPage": false,
                 "searchKey": "reflectlite_test.valueToString",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2207,6 +2355,7 @@
                 "newPage": false,
                 "searchKey": "reflectlite_test.valueToStringImpl",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },

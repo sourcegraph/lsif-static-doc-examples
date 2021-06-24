@@ -9,27 +9,39 @@ The "site ID" was formerly known as the "app ID".
 ## Index
 
 * [Variables](#var)
+    * [var fatalln](#fatalln)
     * [var inited](#inited)
     * [var siteID](#siteID)
-    * [var fatalln](#fatalln)
 * [Functions](#func)
-    * [func Init()](#Init)
     * [func Get() string](#Get)
-    * [func TestNotInited(t *testing.T)](#TestNotInited)
+    * [func Init()](#Init)
     * [func TestGet(t *testing.T)](#TestGet)
+    * [func TestNotInited(t *testing.T)](#TestNotInited)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
+```
+
+### <a id="fatalln" href="#fatalln">var fatalln</a>
+
+```
+searchKey: siteid.fatalln
+tags: [variable function private]
+```
+
+```Go
+var fatalln = log.Fatalln // overridden in tests
+
 ```
 
 ### <a id="inited" href="#inited">var inited</a>
 
 ```
 searchKey: siteid.inited
-tags: [private]
+tags: [variable boolean private]
 ```
 
 ```Go
@@ -40,47 +52,24 @@ var inited bool
 
 ```
 searchKey: siteid.siteID
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
 var siteID string
 ```
 
-### <a id="fatalln" href="#fatalln">var fatalln</a>
-
-```
-searchKey: siteid.fatalln
-tags: [private]
-```
-
-```Go
-var fatalln = log.Fatalln // overridden in tests
-
-```
-
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
-
-### <a id="Init" href="#Init">func Init()</a>
-
-```
-searchKey: siteid.Init
-```
-
-```Go
-func Init()
-```
-
-Init reads (or generates) the site ID. This func must be called exactly once before Get can be called. 
 
 ### <a id="Get" href="#Get">func Get() string</a>
 
 ```
 searchKey: siteid.Get
+tags: [function]
 ```
 
 ```Go
@@ -91,25 +80,38 @@ Get returns the site ID.
 
 Get may only be called after Init has been called. 
 
-### <a id="TestNotInited" href="#TestNotInited">func TestNotInited(t *testing.T)</a>
+### <a id="Init" href="#Init">func Init()</a>
 
 ```
-searchKey: siteid.TestNotInited
-tags: [private]
+searchKey: siteid.Init
+tags: [function]
 ```
 
 ```Go
-func TestNotInited(t *testing.T)
+func Init()
 ```
+
+Init reads (or generates) the site ID. This func must be called exactly once before Get can be called. 
 
 ### <a id="TestGet" href="#TestGet">func TestGet(t *testing.T)</a>
 
 ```
 searchKey: siteid.TestGet
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestGet(t *testing.T)
+```
+
+### <a id="TestNotInited" href="#TestNotInited">func TestNotInited(t *testing.T)</a>
+
+```
+searchKey: siteid.TestNotInited
+tags: [method private test]
+```
+
+```Go
+func TestNotInited(t *testing.T)
 ```
 

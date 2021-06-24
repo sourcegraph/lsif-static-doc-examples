@@ -9,8 +9,8 @@
 * [Functions](#func)
     * [func ExecutorQueue() *monitoring.Container](#ExecutorQueue)
     * [func Frontend() *monitoring.Container](#Frontend)
-    * [func GitServer() *monitoring.Container](#GitServer)
     * [func GitHubProxy() *monitoring.Container](#GitHubProxy)
+    * [func GitServer() *monitoring.Container](#GitServer)
     * [func Postgres() *monitoring.Container](#Postgres)
     * [func PreciseCodeIntelIndexer() *monitoring.Container](#PreciseCodeIntelIndexer)
     * [func PreciseCodeIntelWorker() *monitoring.Container](#PreciseCodeIntelWorker)
@@ -21,18 +21,22 @@
     * [func Symbols() *monitoring.Container](#Symbols)
     * [func SyntectServer() *monitoring.Container](#SyntectServer)
     * [func Worker() *monitoring.Container](#Worker)
-    * [func createWorkerActiveJobRows() []monitoring.Row](#createWorkerActiveJobRows)
     * [func ZoektIndexServer() *monitoring.Container](#ZoektIndexServer)
     * [func ZoektWebServer() *monitoring.Container](#ZoektWebServer)
+    * [func createWorkerActiveJobRows() []monitoring.Row](#createWorkerActiveJobRows)
 
 
 ## <a id="var" href="#var">Variables</a>
+
+```
+tags: [package]
+```
 
 ### <a id="workerJobs" href="#workerJobs">var workerJobs</a>
 
 ```
 searchKey: definitions.workerJobs
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
@@ -41,10 +45,15 @@ var workerJobs = ...
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [package]
+```
+
 ### <a id="ExecutorQueue" href="#ExecutorQueue">func ExecutorQueue() *monitoring.Container</a>
 
 ```
 searchKey: definitions.ExecutorQueue
+tags: [function]
 ```
 
 ```Go
@@ -55,36 +64,40 @@ func ExecutorQueue() *monitoring.Container
 
 ```
 searchKey: definitions.Frontend
+tags: [function]
 ```
 
 ```Go
 func Frontend() *monitoring.Container
 ```
 
-### <a id="GitServer" href="#GitServer">func GitServer() *monitoring.Container</a>
-
-```
-searchKey: definitions.GitServer
-```
-
-```Go
-func GitServer() *monitoring.Container
-```
-
 ### <a id="GitHubProxy" href="#GitHubProxy">func GitHubProxy() *monitoring.Container</a>
 
 ```
 searchKey: definitions.GitHubProxy
+tags: [function]
 ```
 
 ```Go
 func GitHubProxy() *monitoring.Container
 ```
 
+### <a id="GitServer" href="#GitServer">func GitServer() *monitoring.Container</a>
+
+```
+searchKey: definitions.GitServer
+tags: [function]
+```
+
+```Go
+func GitServer() *monitoring.Container
+```
+
 ### <a id="Postgres" href="#Postgres">func Postgres() *monitoring.Container</a>
 
 ```
 searchKey: definitions.Postgres
+tags: [function]
 ```
 
 ```Go
@@ -95,6 +108,7 @@ func Postgres() *monitoring.Container
 
 ```
 searchKey: definitions.PreciseCodeIntelIndexer
+tags: [function]
 ```
 
 ```Go
@@ -105,6 +119,7 @@ func PreciseCodeIntelIndexer() *monitoring.Container
 
 ```
 searchKey: definitions.PreciseCodeIntelWorker
+tags: [function]
 ```
 
 ```Go
@@ -115,6 +130,7 @@ func PreciseCodeIntelWorker() *monitoring.Container
 
 ```
 searchKey: definitions.Prometheus
+tags: [function]
 ```
 
 ```Go
@@ -125,6 +141,7 @@ func Prometheus() *monitoring.Container
 
 ```
 searchKey: definitions.QueryRunner
+tags: [function]
 ```
 
 ```Go
@@ -135,6 +152,7 @@ func QueryRunner() *monitoring.Container
 
 ```
 searchKey: definitions.RepoUpdater
+tags: [function]
 ```
 
 ```Go
@@ -145,6 +163,7 @@ func RepoUpdater() *monitoring.Container
 
 ```
 searchKey: definitions.Searcher
+tags: [function]
 ```
 
 ```Go
@@ -155,6 +174,7 @@ func Searcher() *monitoring.Container
 
 ```
 searchKey: definitions.Symbols
+tags: [function]
 ```
 
 ```Go
@@ -165,6 +185,7 @@ func Symbols() *monitoring.Container
 
 ```
 searchKey: definitions.SyntectServer
+tags: [function]
 ```
 
 ```Go
@@ -175,27 +196,18 @@ func SyntectServer() *monitoring.Container
 
 ```
 searchKey: definitions.Worker
+tags: [function]
 ```
 
 ```Go
 func Worker() *monitoring.Container
 ```
 
-### <a id="createWorkerActiveJobRows" href="#createWorkerActiveJobRows">func createWorkerActiveJobRows() []monitoring.Row</a>
-
-```
-searchKey: definitions.createWorkerActiveJobRows
-tags: [private]
-```
-
-```Go
-func createWorkerActiveJobRows() []monitoring.Row
-```
-
 ### <a id="ZoektIndexServer" href="#ZoektIndexServer">func ZoektIndexServer() *monitoring.Container</a>
 
 ```
 searchKey: definitions.ZoektIndexServer
+tags: [function]
 ```
 
 ```Go
@@ -206,9 +218,21 @@ func ZoektIndexServer() *monitoring.Container
 
 ```
 searchKey: definitions.ZoektWebServer
+tags: [function]
 ```
 
 ```Go
 func ZoektWebServer() *monitoring.Container
+```
+
+### <a id="createWorkerActiveJobRows" href="#createWorkerActiveJobRows">func createWorkerActiveJobRows() []monitoring.Row</a>
+
+```
+searchKey: definitions.createWorkerActiveJobRows
+tags: [function private]
+```
+
+```Go
+func createWorkerActiveJobRows() []monitoring.Row
 ```
 

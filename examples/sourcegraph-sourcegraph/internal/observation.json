@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/observation",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,10 @@
                 "identifier": "TestContext",
                 "newPage": false,
                 "searchKey": "observation.TestContext",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -59,34 +64,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/observation#commonAcronyms",
-              "documentation": {
-                "identifier": "commonAcronyms",
-                "newPage": false,
-                "searchKey": "observation.commonAcronyms",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var commonAcronyms"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar commonAcronyms = []string{\n\t\"API\",\n\t\"ID\",\n\t\"LSIF\",\n}\n```\n\ncommonAcronyms includes acronyms that malform the expected output of kebabCase due to unexpected adjacent upper-case letters. Add items to this list to stop kebabCase from transforming `FromLSIF` into `from-l-s-i-f`. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/observation#acronymsReplacer",
               "documentation": {
                 "identifier": "acronymsReplacer",
                 "newPage": false,
                 "searchKey": "observation.acronymsReplacer",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -97,6 +82,31 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar acronymsReplacer *strings.Replacer\n```\n\nacronymsReplacer is a string replacer that normalizes the acronyms above. For example, `API` will be transformed into `Api` so that it appears as one word. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/observation#commonAcronyms",
+              "documentation": {
+                "identifier": "commonAcronyms",
+                "newPage": false,
+                "searchKey": "observation.commonAcronyms",
+                "tags": [
+                  "variable",
+                  "array",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var commonAcronyms"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar commonAcronyms = []string{\n\t\"API\",\n\t\"ID\",\n\t\"LSIF\",\n}\n```\n\ncommonAcronyms includes acronyms that malform the expected output of kebabCase due to unexpected adjacent upper-case letters. Add items to this list to stop kebabCase from transforming `FromLSIF` into `from-l-s-i-f`. \n\n"
               },
               "children": null
             }
@@ -112,6 +122,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -126,12 +137,81 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/observation#Args",
+              "documentation": {
+                "identifier": "Args",
+                "newPage": false,
+                "searchKey": "observation.Args",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Args struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Args struct {\n\t// MetricLabels that apply only to this invocation of the operation.\n\tMetricLabels []string\n\t// LogFields that apply only to this invocation of the operation.\n\tLogFields []log.Field\n}\n```\n\nArgs configures the observation behavior of an invocation of an operation. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/observation#Args.LogFieldMap",
+                    "documentation": {
+                      "identifier": "Args.LogFieldMap",
+                      "newPage": false,
+                      "searchKey": "observation.Args.LogFieldMap",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (args Args) LogFieldMap() map[string]interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (args Args) LogFieldMap() map[string]interface{}\n```\n\nLogFieldMap returns a string-to-interface map containing the contents of this Arg value's log fields. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/observation#Args.LogFieldPairs",
+                    "documentation": {
+                      "identifier": "Args.LogFieldPairs",
+                      "newPage": false,
+                      "searchKey": "observation.Args.LogFieldPairs",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (args Args) LogFieldPairs() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (args Args) LogFieldPairs() []interface{}\n```\n\nLogFieldPairs returns a slice of key, value, key, value, ... pairs containing the contents of this Arg value's log fields. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/observation#Context",
               "documentation": {
                 "identifier": "Context",
                 "newPage": false,
                 "searchKey": "observation.Context",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -149,7 +229,9 @@
                       "identifier": "Context.Operation",
                       "newPage": false,
                       "searchKey": "observation.Context.Operation",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -167,12 +249,36 @@
           },
           {
             "node": {
+              "pathID": "/internal/observation#FinishFunc",
+              "documentation": {
+                "identifier": "FinishFunc",
+                "newPage": false,
+                "searchKey": "observation.FinishFunc",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FinishFunc func(count float64, args github.com/sourcegraph/sourcegraph/internal/observation.Args)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FinishFunc func(count float64, args Args)\n```\n\nFinishFunc is the shape of the function returned by With and should be invoked within a defer directly before the observed function returns. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/observation#Op",
               "documentation": {
                 "identifier": "Op",
                 "newPage": false,
                 "searchKey": "observation.Op",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -192,7 +298,9 @@
                 "identifier": "Operation",
                 "newPage": false,
                 "searchKey": "observation.Operation",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -210,7 +318,9 @@
                       "identifier": "Operation.With",
                       "newPage": false,
                       "searchKey": "observation.Operation.With",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -230,7 +340,9 @@
                       "identifier": "Operation.WithAndLogger",
                       "newPage": false,
                       "searchKey": "observation.Operation.WithAndLogger",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -245,22 +357,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/observation#Operation.trace",
+                    "pathID": "/internal/observation#Operation.applyErrorFilter",
                     "documentation": {
-                      "identifier": "Operation.trace",
+                      "identifier": "Operation.applyErrorFilter",
                       "newPage": false,
-                      "searchKey": "observation.Operation.trace",
+                      "searchKey": "observation.Operation.applyErrorFilter",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (op *Operation) trace(ctx context.Context, args Args) (*trace.Trace, context.Context)"
+                      "value": "func (op *Operation) applyErrorFilter(err *error) *error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (op *Operation) trace(ctx context.Context, args Args) (*trace.Trace, context.Context)\n```\n\ntrace creates a new Trace object and returns the wrapped context. If any log fields are attached to the operation or to the args to With, they are emitted immediately. This returns an unmodified context and a nil trace if no tracer was supplied on the observation context. \n\n"
+                      "value": "```Go\nfunc (op *Operation) applyErrorFilter(err *error) *error\n```\n\napplyErrorFilter returns nil if the given error does not pass the registered error filter. The original value is returned otherwise. \n\n"
                     },
                     "children": null
                   }
@@ -273,6 +386,7 @@
                       "newPage": false,
                       "searchKey": "observation.Operation.emitErrorLogs",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -295,6 +409,7 @@
                       "newPage": false,
                       "searchKey": "observation.Operation.emitMetrics",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -317,6 +432,7 @@
                       "newPage": false,
                       "searchKey": "observation.Operation.finishTrace",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -333,22 +449,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/observation#Operation.applyErrorFilter",
+                    "pathID": "/internal/observation#Operation.trace",
                     "documentation": {
-                      "identifier": "Operation.applyErrorFilter",
+                      "identifier": "Operation.trace",
                       "newPage": false,
-                      "searchKey": "observation.Operation.applyErrorFilter",
+                      "searchKey": "observation.Operation.trace",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (op *Operation) applyErrorFilter(err *error) *error"
+                      "value": "func (op *Operation) trace(ctx context.Context, args Args) (*trace.Trace, context.Context)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (op *Operation) applyErrorFilter(err *error) *error\n```\n\napplyErrorFilter returns nil if the given error does not pass the registered error filter. The original value is returned otherwise. \n\n"
+                      "value": "```Go\nfunc (op *Operation) trace(ctx context.Context, args Args) (*trace.Trace, context.Context)\n```\n\ntrace creates a new Trace object and returns the wrapped context. If any log fields are attached to the operation or to the args to With, they are emitted immediately. This returns an unmodified context and a nil trace if no tracer was supplied on the observation context. \n\n"
                     },
                     "children": null
                   }
@@ -363,7 +480,9 @@
                 "identifier": "TraceLogger",
                 "newPage": false,
                 "searchKey": "observation.TraceLogger",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -374,87 +493,6 @@
                 "value": "```Go\ntype TraceLogger func(fields ...log.Field)\n```\n\nTraceLogger is returned from WithAndLogger and can be used to add timestamped key and value pairs into a related opentracing span. \n\n"
               },
               "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/observation#FinishFunc",
-              "documentation": {
-                "identifier": "FinishFunc",
-                "newPage": false,
-                "searchKey": "observation.FinishFunc",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type FinishFunc func(count float64, args github.com/sourcegraph/sourcegraph/internal/observation.Args)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype FinishFunc func(count float64, args Args)\n```\n\nFinishFunc is the shape of the function returned by With and should be invoked within a defer directly before the observed function returns. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/observation#Args",
-              "documentation": {
-                "identifier": "Args",
-                "newPage": false,
-                "searchKey": "observation.Args",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Args struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Args struct {\n\t// MetricLabels that apply only to this invocation of the operation.\n\tMetricLabels []string\n\t// LogFields that apply only to this invocation of the operation.\n\tLogFields []log.Field\n}\n```\n\nArgs configures the observation behavior of an invocation of an operation. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/observation#Args.LogFieldMap",
-                    "documentation": {
-                      "identifier": "Args.LogFieldMap",
-                      "newPage": false,
-                      "searchKey": "observation.Args.LogFieldMap",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (args Args) LogFieldMap() map[string]interface{}"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (args Args) LogFieldMap() map[string]interface{}\n```\n\nLogFieldMap returns a string-to-interface map containing the contents of this Arg value's log fields. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/observation#Args.LogFieldPairs",
-                    "documentation": {
-                      "identifier": "Args.LogFieldPairs",
-                      "newPage": false,
-                      "searchKey": "observation.Args.LogFieldPairs",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (args Args) LogFieldPairs() []interface{}"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (args Args) LogFieldPairs() []interface{}\n```\n\nLogFieldPairs returns a slice of key, value, key, value, ... pairs containing the contents of this Arg value's log fields. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
             }
           }
         ]
@@ -468,6 +506,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -482,44 +521,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/observation#mergeLabels",
+              "pathID": "/internal/observation#TestKebabCase",
               "documentation": {
-                "identifier": "mergeLabels",
+                "identifier": "TestKebabCase",
                 "newPage": false,
-                "searchKey": "observation.mergeLabels",
+                "searchKey": "observation.TestKebabCase",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func mergeLabels(groups ...[]string) []string"
+                "value": "func TestKebabCase(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc mergeLabels(groups ...[]string) []string\n```\n\nmergeLabels flattens slices of slices of strings. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/observation#mergeLogFields",
-              "documentation": {
-                "identifier": "mergeLogFields",
-                "newPage": false,
-                "searchKey": "observation.mergeLogFields",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func mergeLogFields(groups ...[]log.Field) []log.Field"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc mergeLogFields(groups ...[]log.Field) []log.Field\n```\n\nmergeLogFields flattens slices of slices of log fields. \n\n"
+                "value": "```Go\nfunc TestKebabCase(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -532,6 +551,7 @@
                 "newPage": false,
                 "searchKey": "observation.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -554,6 +574,7 @@
                 "newPage": false,
                 "searchKey": "observation.kebabCase",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -570,22 +591,46 @@
           },
           {
             "node": {
-              "pathID": "/internal/observation#TestKebabCase",
+              "pathID": "/internal/observation#mergeLabels",
               "documentation": {
-                "identifier": "TestKebabCase",
+                "identifier": "mergeLabels",
                 "newPage": false,
-                "searchKey": "observation.TestKebabCase",
+                "searchKey": "observation.mergeLabels",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestKebabCase(t *testing.T)"
+                "value": "func mergeLabels(groups ...[]string) []string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestKebabCase(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc mergeLabels(groups ...[]string) []string\n```\n\nmergeLabels flattens slices of slices of strings. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/observation#mergeLogFields",
+              "documentation": {
+                "identifier": "mergeLogFields",
+                "newPage": false,
+                "searchKey": "observation.mergeLogFields",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mergeLogFields(groups ...[]log.Field) []log.Field"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mergeLogFields(groups ...[]log.Field) []log.Field\n```\n\nmergeLogFields flattens slices of slices of log fields. \n\n"
               },
               "children": null
             }

@@ -5,10 +5,11 @@ Package bits implements bit counting and manipulation functions for the predecla
 ## Index
 
 * [Constants](#const)
-    * [const uintSize](#uintSize)
+    * [const DeBruijn64](#DeBruijn64)
     * [const UintSize](#UintSize)
     * [const deBruijn32](#deBruijn32)
     * [const deBruijn64](#deBruijn64)
+    * [const len8tab](#len8tab)
     * [const m0](#m0)
     * [const m1](#m1)
     * [const m2](#m2)
@@ -17,83 +18,86 @@ Package bits implements bit counting and manipulation functions for the predecla
     * [const ntz8tab](#ntz8tab)
     * [const pop8tab](#pop8tab)
     * [const rev8tab](#rev8tab)
-    * [const len8tab](#len8tab)
-    * [const DeBruijn64](#DeBruijn64)
+    * [const uintSize](#uintSize)
 * [Variables](#var)
     * [var deBruijn32tab](#deBruijn32tab)
     * [var deBruijn64tab](#deBruijn64tab)
-    * [var overflowError](#overflowError)
     * [var divideError](#divideError)
+    * [var overflowError](#overflowError)
 * [Functions](#func)
+    * [func Add(x, y, carry uint) (sum, carryOut uint)](#Add)
+    * [func Add32(x, y, carry uint32) (sum, carryOut uint32)](#Add32)
+    * [func Add64(x, y, carry uint64) (sum, carryOut uint64)](#Add64)
+    * [func Div(hi, lo, y uint) (quo, rem uint)](#Div)
+    * [func Div32(hi, lo, y uint32) (quo, rem uint32)](#Div32)
+    * [func Div64(hi, lo, y uint64) (quo, rem uint64)](#Div64)
     * [func LeadingZeros(x uint) int](#LeadingZeros)
-    * [func LeadingZeros8(x uint8) int](#LeadingZeros8)
     * [func LeadingZeros16(x uint16) int](#LeadingZeros16)
     * [func LeadingZeros32(x uint32) int](#LeadingZeros32)
     * [func LeadingZeros64(x uint64) int](#LeadingZeros64)
-    * [func TrailingZeros(x uint) int](#TrailingZeros)
-    * [func TrailingZeros8(x uint8) int](#TrailingZeros8)
-    * [func TrailingZeros16(x uint16) int](#TrailingZeros16)
-    * [func TrailingZeros32(x uint32) int](#TrailingZeros32)
-    * [func TrailingZeros64(x uint64) int](#TrailingZeros64)
+    * [func LeadingZeros8(x uint8) int](#LeadingZeros8)
+    * [func Len(x uint) int](#Len)
+    * [func Len16(x uint16) (n int)](#Len16)
+    * [func Len32(x uint32) (n int)](#Len32)
+    * [func Len64(x uint64) (n int)](#Len64)
+    * [func Len8(x uint8) int](#Len8)
+    * [func Mul(x, y uint) (hi, lo uint)](#Mul)
+    * [func Mul32(x, y uint32) (hi, lo uint32)](#Mul32)
+    * [func Mul64(x, y uint64) (hi, lo uint64)](#Mul64)
     * [func OnesCount(x uint) int](#OnesCount)
-    * [func OnesCount8(x uint8) int](#OnesCount8)
     * [func OnesCount16(x uint16) int](#OnesCount16)
     * [func OnesCount32(x uint32) int](#OnesCount32)
     * [func OnesCount64(x uint64) int](#OnesCount64)
-    * [func RotateLeft(x uint, k int) uint](#RotateLeft)
-    * [func RotateLeft8(x uint8, k int) uint8](#RotateLeft8)
-    * [func RotateLeft16(x uint16, k int) uint16](#RotateLeft16)
-    * [func RotateLeft32(x uint32, k int) uint32](#RotateLeft32)
-    * [func RotateLeft64(x uint64, k int) uint64](#RotateLeft64)
+    * [func OnesCount8(x uint8) int](#OnesCount8)
+    * [func Rem(hi, lo, y uint) uint](#Rem)
+    * [func Rem32(hi, lo, y uint32) uint32](#Rem32)
+    * [func Rem64(hi, lo, y uint64) uint64](#Rem64)
     * [func Reverse(x uint) uint](#Reverse)
-    * [func Reverse8(x uint8) uint8](#Reverse8)
     * [func Reverse16(x uint16) uint16](#Reverse16)
     * [func Reverse32(x uint32) uint32](#Reverse32)
     * [func Reverse64(x uint64) uint64](#Reverse64)
+    * [func Reverse8(x uint8) uint8](#Reverse8)
     * [func ReverseBytes(x uint) uint](#ReverseBytes)
     * [func ReverseBytes16(x uint16) uint16](#ReverseBytes16)
     * [func ReverseBytes32(x uint32) uint32](#ReverseBytes32)
     * [func ReverseBytes64(x uint64) uint64](#ReverseBytes64)
-    * [func Len(x uint) int](#Len)
-    * [func Len8(x uint8) int](#Len8)
-    * [func Len16(x uint16) (n int)](#Len16)
-    * [func Len32(x uint32) (n int)](#Len32)
-    * [func Len64(x uint64) (n int)](#Len64)
-    * [func Add(x, y, carry uint) (sum, carryOut uint)](#Add)
-    * [func Add32(x, y, carry uint32) (sum, carryOut uint32)](#Add32)
-    * [func Add64(x, y, carry uint64) (sum, carryOut uint64)](#Add64)
+    * [func RotateLeft(x uint, k int) uint](#RotateLeft)
+    * [func RotateLeft16(x uint16, k int) uint16](#RotateLeft16)
+    * [func RotateLeft32(x uint32, k int) uint32](#RotateLeft32)
+    * [func RotateLeft64(x uint64, k int) uint64](#RotateLeft64)
+    * [func RotateLeft8(x uint8, k int) uint8](#RotateLeft8)
     * [func Sub(x, y, borrow uint) (diff, borrowOut uint)](#Sub)
     * [func Sub32(x, y, borrow uint32) (diff, borrowOut uint32)](#Sub32)
     * [func Sub64(x, y, borrow uint64) (diff, borrowOut uint64)](#Sub64)
-    * [func Mul(x, y uint) (hi, lo uint)](#Mul)
-    * [func Mul32(x, y uint32) (hi, lo uint32)](#Mul32)
-    * [func Mul64(x, y uint64) (hi, lo uint64)](#Mul64)
-    * [func Div(hi, lo, y uint) (quo, rem uint)](#Div)
-    * [func Div32(hi, lo, y uint32) (quo, rem uint32)](#Div32)
-    * [func Div64(hi, lo, y uint64) (quo, rem uint64)](#Div64)
-    * [func Rem(hi, lo, y uint) uint](#Rem)
-    * [func Rem32(hi, lo, y uint32) uint32](#Rem32)
-    * [func Rem64(hi, lo, y uint64) uint64](#Rem64)
+    * [func TrailingZeros(x uint) int](#TrailingZeros)
+    * [func TrailingZeros16(x uint16) int](#TrailingZeros16)
+    * [func TrailingZeros32(x uint32) int](#TrailingZeros32)
+    * [func TrailingZeros64(x uint64) int](#TrailingZeros64)
+    * [func TrailingZeros8(x uint8) int](#TrailingZeros8)
 
 
 ## <a id="const" href="#const">Constants</a>
 
-### <a id="uintSize" href="#uintSize">const uintSize</a>
+```
+tags: [package]
+```
+
+### <a id="DeBruijn64" href="#DeBruijn64">const DeBruijn64</a>
 
 ```
-searchKey: bits.uintSize
-tags: [private]
+searchKey: bits.DeBruijn64
+tags: [constant number private]
 ```
 
 ```Go
-const uintSize = 32 << (^uint(0) >> 63) // 32 or 64
-
+const DeBruijn64 = deBruijn64
 ```
 
 ### <a id="UintSize" href="#UintSize">const UintSize</a>
 
 ```
 searchKey: bits.UintSize
+tags: [constant number]
 ```
 
 ```Go
@@ -106,7 +110,7 @@ UintSize is the size of a uint in bits.
 
 ```
 searchKey: bits.deBruijn32
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -119,18 +123,29 @@ See [http://supertech.csail.mit.edu/papers/debruijn.pdf](http://supertech.csail.
 
 ```
 searchKey: bits.deBruijn64
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
 const deBruijn64 = 0x03f79d71b4ca8b09
 ```
 
+### <a id="len8tab" href="#len8tab">const len8tab</a>
+
+```
+searchKey: bits.len8tab
+tags: [constant string private]
+```
+
+```Go
+const len8tab = ...
+```
+
 ### <a id="m0" href="#m0">const m0</a>
 
 ```
 searchKey: bits.m0
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -142,7 +157,7 @@ const m0 = 0x5555555555555555 // 01010101 ...
 
 ```
 searchKey: bits.m1
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -154,7 +169,7 @@ const m1 = 0x3333333333333333 // 00110011 ...
 
 ```
 searchKey: bits.m2
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -166,7 +181,7 @@ const m2 = 0x0f0f0f0f0f0f0f0f // 00001111 ...
 
 ```
 searchKey: bits.m3
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -178,7 +193,7 @@ const m3 = 0x00ff00ff00ff00ff // etc.
 
 ```
 searchKey: bits.m4
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -189,7 +204,7 @@ const m4 = 0x0000ffff0000ffff
 
 ```
 searchKey: bits.ntz8tab
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -200,7 +215,7 @@ const ntz8tab = ...
 
 ```
 searchKey: bits.pop8tab
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -211,42 +226,36 @@ const pop8tab = ...
 
 ```
 searchKey: bits.rev8tab
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
 const rev8tab = ...
 ```
 
-### <a id="len8tab" href="#len8tab">const len8tab</a>
+### <a id="uintSize" href="#uintSize">const uintSize</a>
 
 ```
-searchKey: bits.len8tab
-tags: [private]
-```
-
-```Go
-const len8tab = ...
-```
-
-### <a id="DeBruijn64" href="#DeBruijn64">const DeBruijn64</a>
-
-```
-searchKey: bits.DeBruijn64
-tags: [private]
+searchKey: bits.uintSize
+tags: [constant number private]
 ```
 
 ```Go
-const DeBruijn64 = deBruijn64
+const uintSize = 32 << (^uint(0) >> 63) // 32 or 64
+
 ```
 
 ## <a id="var" href="#var">Variables</a>
+
+```
+tags: [package]
+```
 
 ### <a id="deBruijn32tab" href="#deBruijn32tab">var deBruijn32tab</a>
 
 ```
 searchKey: bits.deBruijn32tab
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -257,467 +266,46 @@ var deBruijn32tab = ...
 
 ```
 searchKey: bits.deBruijn64tab
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
 var deBruijn64tab = ...
 ```
 
-### <a id="overflowError" href="#overflowError">var overflowError</a>
-
-```
-searchKey: bits.overflowError
-tags: [private]
-```
-
-```Go
-var overflowError error
-```
-
 ### <a id="divideError" href="#divideError">var divideError</a>
 
 ```
 searchKey: bits.divideError
-tags: [private]
+tags: [variable interface private]
 ```
 
 ```Go
 var divideError error
 ```
 
+### <a id="overflowError" href="#overflowError">var overflowError</a>
+
+```
+searchKey: bits.overflowError
+tags: [variable interface private]
+```
+
+```Go
+var overflowError error
+```
+
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="LeadingZeros" href="#LeadingZeros">func LeadingZeros(x uint) int</a>
-
 ```
-searchKey: bits.LeadingZeros
+tags: [package]
 ```
-
-```Go
-func LeadingZeros(x uint) int
-```
-
-LeadingZeros returns the number of leading zero bits in x; the result is UintSize for x == 0. 
-
-### <a id="LeadingZeros8" href="#LeadingZeros8">func LeadingZeros8(x uint8) int</a>
-
-```
-searchKey: bits.LeadingZeros8
-```
-
-```Go
-func LeadingZeros8(x uint8) int
-```
-
-LeadingZeros8 returns the number of leading zero bits in x; the result is 8 for x == 0. 
-
-### <a id="LeadingZeros16" href="#LeadingZeros16">func LeadingZeros16(x uint16) int</a>
-
-```
-searchKey: bits.LeadingZeros16
-```
-
-```Go
-func LeadingZeros16(x uint16) int
-```
-
-LeadingZeros16 returns the number of leading zero bits in x; the result is 16 for x == 0. 
-
-### <a id="LeadingZeros32" href="#LeadingZeros32">func LeadingZeros32(x uint32) int</a>
-
-```
-searchKey: bits.LeadingZeros32
-```
-
-```Go
-func LeadingZeros32(x uint32) int
-```
-
-LeadingZeros32 returns the number of leading zero bits in x; the result is 32 for x == 0. 
-
-### <a id="LeadingZeros64" href="#LeadingZeros64">func LeadingZeros64(x uint64) int</a>
-
-```
-searchKey: bits.LeadingZeros64
-```
-
-```Go
-func LeadingZeros64(x uint64) int
-```
-
-LeadingZeros64 returns the number of leading zero bits in x; the result is 64 for x == 0. 
-
-### <a id="TrailingZeros" href="#TrailingZeros">func TrailingZeros(x uint) int</a>
-
-```
-searchKey: bits.TrailingZeros
-```
-
-```Go
-func TrailingZeros(x uint) int
-```
-
-TrailingZeros returns the number of trailing zero bits in x; the result is UintSize for x == 0. 
-
-### <a id="TrailingZeros8" href="#TrailingZeros8">func TrailingZeros8(x uint8) int</a>
-
-```
-searchKey: bits.TrailingZeros8
-```
-
-```Go
-func TrailingZeros8(x uint8) int
-```
-
-TrailingZeros8 returns the number of trailing zero bits in x; the result is 8 for x == 0. 
-
-### <a id="TrailingZeros16" href="#TrailingZeros16">func TrailingZeros16(x uint16) int</a>
-
-```
-searchKey: bits.TrailingZeros16
-```
-
-```Go
-func TrailingZeros16(x uint16) int
-```
-
-TrailingZeros16 returns the number of trailing zero bits in x; the result is 16 for x == 0. 
-
-### <a id="TrailingZeros32" href="#TrailingZeros32">func TrailingZeros32(x uint32) int</a>
-
-```
-searchKey: bits.TrailingZeros32
-```
-
-```Go
-func TrailingZeros32(x uint32) int
-```
-
-TrailingZeros32 returns the number of trailing zero bits in x; the result is 32 for x == 0. 
-
-### <a id="TrailingZeros64" href="#TrailingZeros64">func TrailingZeros64(x uint64) int</a>
-
-```
-searchKey: bits.TrailingZeros64
-```
-
-```Go
-func TrailingZeros64(x uint64) int
-```
-
-TrailingZeros64 returns the number of trailing zero bits in x; the result is 64 for x == 0. 
-
-### <a id="OnesCount" href="#OnesCount">func OnesCount(x uint) int</a>
-
-```
-searchKey: bits.OnesCount
-```
-
-```Go
-func OnesCount(x uint) int
-```
-
-OnesCount returns the number of one bits ("population count") in x. 
-
-### <a id="OnesCount8" href="#OnesCount8">func OnesCount8(x uint8) int</a>
-
-```
-searchKey: bits.OnesCount8
-```
-
-```Go
-func OnesCount8(x uint8) int
-```
-
-OnesCount8 returns the number of one bits ("population count") in x. 
-
-### <a id="OnesCount16" href="#OnesCount16">func OnesCount16(x uint16) int</a>
-
-```
-searchKey: bits.OnesCount16
-```
-
-```Go
-func OnesCount16(x uint16) int
-```
-
-OnesCount16 returns the number of one bits ("population count") in x. 
-
-### <a id="OnesCount32" href="#OnesCount32">func OnesCount32(x uint32) int</a>
-
-```
-searchKey: bits.OnesCount32
-```
-
-```Go
-func OnesCount32(x uint32) int
-```
-
-OnesCount32 returns the number of one bits ("population count") in x. 
-
-### <a id="OnesCount64" href="#OnesCount64">func OnesCount64(x uint64) int</a>
-
-```
-searchKey: bits.OnesCount64
-```
-
-```Go
-func OnesCount64(x uint64) int
-```
-
-OnesCount64 returns the number of one bits ("population count") in x. 
-
-### <a id="RotateLeft" href="#RotateLeft">func RotateLeft(x uint, k int) uint</a>
-
-```
-searchKey: bits.RotateLeft
-```
-
-```Go
-func RotateLeft(x uint, k int) uint
-```
-
-RotateLeft returns the value of x rotated left by (k mod UintSize) bits. To rotate x right by k bits, call RotateLeft(x, -k). 
-
-This function's execution time does not depend on the inputs. 
-
-### <a id="RotateLeft8" href="#RotateLeft8">func RotateLeft8(x uint8, k int) uint8</a>
-
-```
-searchKey: bits.RotateLeft8
-```
-
-```Go
-func RotateLeft8(x uint8, k int) uint8
-```
-
-RotateLeft8 returns the value of x rotated left by (k mod 8) bits. To rotate x right by k bits, call RotateLeft8(x, -k). 
-
-This function's execution time does not depend on the inputs. 
-
-### <a id="RotateLeft16" href="#RotateLeft16">func RotateLeft16(x uint16, k int) uint16</a>
-
-```
-searchKey: bits.RotateLeft16
-```
-
-```Go
-func RotateLeft16(x uint16, k int) uint16
-```
-
-RotateLeft16 returns the value of x rotated left by (k mod 16) bits. To rotate x right by k bits, call RotateLeft16(x, -k). 
-
-This function's execution time does not depend on the inputs. 
-
-### <a id="RotateLeft32" href="#RotateLeft32">func RotateLeft32(x uint32, k int) uint32</a>
-
-```
-searchKey: bits.RotateLeft32
-```
-
-```Go
-func RotateLeft32(x uint32, k int) uint32
-```
-
-RotateLeft32 returns the value of x rotated left by (k mod 32) bits. To rotate x right by k bits, call RotateLeft32(x, -k). 
-
-This function's execution time does not depend on the inputs. 
-
-### <a id="RotateLeft64" href="#RotateLeft64">func RotateLeft64(x uint64, k int) uint64</a>
-
-```
-searchKey: bits.RotateLeft64
-```
-
-```Go
-func RotateLeft64(x uint64, k int) uint64
-```
-
-RotateLeft64 returns the value of x rotated left by (k mod 64) bits. To rotate x right by k bits, call RotateLeft64(x, -k). 
-
-This function's execution time does not depend on the inputs. 
-
-### <a id="Reverse" href="#Reverse">func Reverse(x uint) uint</a>
-
-```
-searchKey: bits.Reverse
-```
-
-```Go
-func Reverse(x uint) uint
-```
-
-Reverse returns the value of x with its bits in reversed order. 
-
-### <a id="Reverse8" href="#Reverse8">func Reverse8(x uint8) uint8</a>
-
-```
-searchKey: bits.Reverse8
-```
-
-```Go
-func Reverse8(x uint8) uint8
-```
-
-Reverse8 returns the value of x with its bits in reversed order. 
-
-### <a id="Reverse16" href="#Reverse16">func Reverse16(x uint16) uint16</a>
-
-```
-searchKey: bits.Reverse16
-```
-
-```Go
-func Reverse16(x uint16) uint16
-```
-
-Reverse16 returns the value of x with its bits in reversed order. 
-
-### <a id="Reverse32" href="#Reverse32">func Reverse32(x uint32) uint32</a>
-
-```
-searchKey: bits.Reverse32
-```
-
-```Go
-func Reverse32(x uint32) uint32
-```
-
-Reverse32 returns the value of x with its bits in reversed order. 
-
-### <a id="Reverse64" href="#Reverse64">func Reverse64(x uint64) uint64</a>
-
-```
-searchKey: bits.Reverse64
-```
-
-```Go
-func Reverse64(x uint64) uint64
-```
-
-Reverse64 returns the value of x with its bits in reversed order. 
-
-### <a id="ReverseBytes" href="#ReverseBytes">func ReverseBytes(x uint) uint</a>
-
-```
-searchKey: bits.ReverseBytes
-```
-
-```Go
-func ReverseBytes(x uint) uint
-```
-
-ReverseBytes returns the value of x with its bytes in reversed order. 
-
-This function's execution time does not depend on the inputs. 
-
-### <a id="ReverseBytes16" href="#ReverseBytes16">func ReverseBytes16(x uint16) uint16</a>
-
-```
-searchKey: bits.ReverseBytes16
-```
-
-```Go
-func ReverseBytes16(x uint16) uint16
-```
-
-ReverseBytes16 returns the value of x with its bytes in reversed order. 
-
-This function's execution time does not depend on the inputs. 
-
-### <a id="ReverseBytes32" href="#ReverseBytes32">func ReverseBytes32(x uint32) uint32</a>
-
-```
-searchKey: bits.ReverseBytes32
-```
-
-```Go
-func ReverseBytes32(x uint32) uint32
-```
-
-ReverseBytes32 returns the value of x with its bytes in reversed order. 
-
-This function's execution time does not depend on the inputs. 
-
-### <a id="ReverseBytes64" href="#ReverseBytes64">func ReverseBytes64(x uint64) uint64</a>
-
-```
-searchKey: bits.ReverseBytes64
-```
-
-```Go
-func ReverseBytes64(x uint64) uint64
-```
-
-ReverseBytes64 returns the value of x with its bytes in reversed order. 
-
-This function's execution time does not depend on the inputs. 
-
-### <a id="Len" href="#Len">func Len(x uint) int</a>
-
-```
-searchKey: bits.Len
-```
-
-```Go
-func Len(x uint) int
-```
-
-Len returns the minimum number of bits required to represent x; the result is 0 for x == 0. 
-
-### <a id="Len8" href="#Len8">func Len8(x uint8) int</a>
-
-```
-searchKey: bits.Len8
-```
-
-```Go
-func Len8(x uint8) int
-```
-
-Len8 returns the minimum number of bits required to represent x; the result is 0 for x == 0. 
-
-### <a id="Len16" href="#Len16">func Len16(x uint16) (n int)</a>
-
-```
-searchKey: bits.Len16
-```
-
-```Go
-func Len16(x uint16) (n int)
-```
-
-Len16 returns the minimum number of bits required to represent x; the result is 0 for x == 0. 
-
-### <a id="Len32" href="#Len32">func Len32(x uint32) (n int)</a>
-
-```
-searchKey: bits.Len32
-```
-
-```Go
-func Len32(x uint32) (n int)
-```
-
-Len32 returns the minimum number of bits required to represent x; the result is 0 for x == 0. 
-
-### <a id="Len64" href="#Len64">func Len64(x uint64) (n int)</a>
-
-```
-searchKey: bits.Len64
-```
-
-```Go
-func Len64(x uint64) (n int)
-```
-
-Len64 returns the minimum number of bits required to represent x; the result is 0 for x == 0. 
 
 ### <a id="Add" href="#Add">func Add(x, y, carry uint) (sum, carryOut uint)</a>
 
 ```
 searchKey: bits.Add
+tags: [method]
 ```
 
 ```Go
@@ -732,6 +320,7 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.Add32
+tags: [method]
 ```
 
 ```Go
@@ -746,6 +335,7 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.Add64
+tags: [method]
 ```
 
 ```Go
@@ -756,52 +346,180 @@ Add64 returns the sum with carry of x, y and carry: sum = x + y + carry. The car
 
 This function's execution time does not depend on the inputs. 
 
-### <a id="Sub" href="#Sub">func Sub(x, y, borrow uint) (diff, borrowOut uint)</a>
+### <a id="Div" href="#Div">func Div(hi, lo, y uint) (quo, rem uint)</a>
 
 ```
-searchKey: bits.Sub
-```
-
-```Go
-func Sub(x, y, borrow uint) (diff, borrowOut uint)
-```
-
-Sub returns the difference of x, y and borrow: diff = x - y - borrow. The borrow input must be 0 or 1; otherwise the behavior is undefined. The borrowOut output is guaranteed to be 0 or 1. 
-
-This function's execution time does not depend on the inputs. 
-
-### <a id="Sub32" href="#Sub32">func Sub32(x, y, borrow uint32) (diff, borrowOut uint32)</a>
-
-```
-searchKey: bits.Sub32
+searchKey: bits.Div
+tags: [method]
 ```
 
 ```Go
-func Sub32(x, y, borrow uint32) (diff, borrowOut uint32)
+func Div(hi, lo, y uint) (quo, rem uint)
 ```
 
-Sub32 returns the difference of x, y and borrow, diff = x - y - borrow. The borrow input must be 0 or 1; otherwise the behavior is undefined. The borrowOut output is guaranteed to be 0 or 1. 
+Div returns the quotient and remainder of (hi, lo) divided by y: quo = (hi, lo)/y, rem = (hi, lo)%y with the dividend bits' upper half in parameter hi and the lower half in parameter lo. Div panics for y == 0 (division by zero) or y <= hi (quotient overflow). 
 
-This function's execution time does not depend on the inputs. 
-
-### <a id="Sub64" href="#Sub64">func Sub64(x, y, borrow uint64) (diff, borrowOut uint64)</a>
+### <a id="Div32" href="#Div32">func Div32(hi, lo, y uint32) (quo, rem uint32)</a>
 
 ```
-searchKey: bits.Sub64
+searchKey: bits.Div32
+tags: [method]
 ```
 
 ```Go
-func Sub64(x, y, borrow uint64) (diff, borrowOut uint64)
+func Div32(hi, lo, y uint32) (quo, rem uint32)
 ```
 
-Sub64 returns the difference of x, y and borrow: diff = x - y - borrow. The borrow input must be 0 or 1; otherwise the behavior is undefined. The borrowOut output is guaranteed to be 0 or 1. 
+Div32 returns the quotient and remainder of (hi, lo) divided by y: quo = (hi, lo)/y, rem = (hi, lo)%y with the dividend bits' upper half in parameter hi and the lower half in parameter lo. Div32 panics for y == 0 (division by zero) or y <= hi (quotient overflow). 
 
-This function's execution time does not depend on the inputs. 
+### <a id="Div64" href="#Div64">func Div64(hi, lo, y uint64) (quo, rem uint64)</a>
+
+```
+searchKey: bits.Div64
+tags: [method]
+```
+
+```Go
+func Div64(hi, lo, y uint64) (quo, rem uint64)
+```
+
+Div64 returns the quotient and remainder of (hi, lo) divided by y: quo = (hi, lo)/y, rem = (hi, lo)%y with the dividend bits' upper half in parameter hi and the lower half in parameter lo. Div64 panics for y == 0 (division by zero) or y <= hi (quotient overflow). 
+
+### <a id="LeadingZeros" href="#LeadingZeros">func LeadingZeros(x uint) int</a>
+
+```
+searchKey: bits.LeadingZeros
+tags: [method]
+```
+
+```Go
+func LeadingZeros(x uint) int
+```
+
+LeadingZeros returns the number of leading zero bits in x; the result is UintSize for x == 0. 
+
+### <a id="LeadingZeros16" href="#LeadingZeros16">func LeadingZeros16(x uint16) int</a>
+
+```
+searchKey: bits.LeadingZeros16
+tags: [method]
+```
+
+```Go
+func LeadingZeros16(x uint16) int
+```
+
+LeadingZeros16 returns the number of leading zero bits in x; the result is 16 for x == 0. 
+
+### <a id="LeadingZeros32" href="#LeadingZeros32">func LeadingZeros32(x uint32) int</a>
+
+```
+searchKey: bits.LeadingZeros32
+tags: [method]
+```
+
+```Go
+func LeadingZeros32(x uint32) int
+```
+
+LeadingZeros32 returns the number of leading zero bits in x; the result is 32 for x == 0. 
+
+### <a id="LeadingZeros64" href="#LeadingZeros64">func LeadingZeros64(x uint64) int</a>
+
+```
+searchKey: bits.LeadingZeros64
+tags: [method]
+```
+
+```Go
+func LeadingZeros64(x uint64) int
+```
+
+LeadingZeros64 returns the number of leading zero bits in x; the result is 64 for x == 0. 
+
+### <a id="LeadingZeros8" href="#LeadingZeros8">func LeadingZeros8(x uint8) int</a>
+
+```
+searchKey: bits.LeadingZeros8
+tags: [method]
+```
+
+```Go
+func LeadingZeros8(x uint8) int
+```
+
+LeadingZeros8 returns the number of leading zero bits in x; the result is 8 for x == 0. 
+
+### <a id="Len" href="#Len">func Len(x uint) int</a>
+
+```
+searchKey: bits.Len
+tags: [method]
+```
+
+```Go
+func Len(x uint) int
+```
+
+Len returns the minimum number of bits required to represent x; the result is 0 for x == 0. 
+
+### <a id="Len16" href="#Len16">func Len16(x uint16) (n int)</a>
+
+```
+searchKey: bits.Len16
+tags: [method]
+```
+
+```Go
+func Len16(x uint16) (n int)
+```
+
+Len16 returns the minimum number of bits required to represent x; the result is 0 for x == 0. 
+
+### <a id="Len32" href="#Len32">func Len32(x uint32) (n int)</a>
+
+```
+searchKey: bits.Len32
+tags: [method]
+```
+
+```Go
+func Len32(x uint32) (n int)
+```
+
+Len32 returns the minimum number of bits required to represent x; the result is 0 for x == 0. 
+
+### <a id="Len64" href="#Len64">func Len64(x uint64) (n int)</a>
+
+```
+searchKey: bits.Len64
+tags: [method]
+```
+
+```Go
+func Len64(x uint64) (n int)
+```
+
+Len64 returns the minimum number of bits required to represent x; the result is 0 for x == 0. 
+
+### <a id="Len8" href="#Len8">func Len8(x uint8) int</a>
+
+```
+searchKey: bits.Len8
+tags: [method]
+```
+
+```Go
+func Len8(x uint8) int
+```
+
+Len8 returns the minimum number of bits required to represent x; the result is 0 for x == 0. 
 
 ### <a id="Mul" href="#Mul">func Mul(x, y uint) (hi, lo uint)</a>
 
 ```
 searchKey: bits.Mul
+tags: [method]
 ```
 
 ```Go
@@ -816,6 +534,7 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.Mul32
+tags: [method]
 ```
 
 ```Go
@@ -830,6 +549,7 @@ This function's execution time does not depend on the inputs.
 
 ```
 searchKey: bits.Mul64
+tags: [method]
 ```
 
 ```Go
@@ -840,46 +560,76 @@ Mul64 returns the 128-bit product of x and y: (hi, lo) = x * y with the product 
 
 This function's execution time does not depend on the inputs. 
 
-### <a id="Div" href="#Div">func Div(hi, lo, y uint) (quo, rem uint)</a>
+### <a id="OnesCount" href="#OnesCount">func OnesCount(x uint) int</a>
 
 ```
-searchKey: bits.Div
-```
-
-```Go
-func Div(hi, lo, y uint) (quo, rem uint)
-```
-
-Div returns the quotient and remainder of (hi, lo) divided by y: quo = (hi, lo)/y, rem = (hi, lo)%y with the dividend bits' upper half in parameter hi and the lower half in parameter lo. Div panics for y == 0 (division by zero) or y <= hi (quotient overflow). 
-
-### <a id="Div32" href="#Div32">func Div32(hi, lo, y uint32) (quo, rem uint32)</a>
-
-```
-searchKey: bits.Div32
+searchKey: bits.OnesCount
+tags: [method]
 ```
 
 ```Go
-func Div32(hi, lo, y uint32) (quo, rem uint32)
+func OnesCount(x uint) int
 ```
 
-Div32 returns the quotient and remainder of (hi, lo) divided by y: quo = (hi, lo)/y, rem = (hi, lo)%y with the dividend bits' upper half in parameter hi and the lower half in parameter lo. Div32 panics for y == 0 (division by zero) or y <= hi (quotient overflow). 
+OnesCount returns the number of one bits ("population count") in x. 
 
-### <a id="Div64" href="#Div64">func Div64(hi, lo, y uint64) (quo, rem uint64)</a>
+### <a id="OnesCount16" href="#OnesCount16">func OnesCount16(x uint16) int</a>
 
 ```
-searchKey: bits.Div64
+searchKey: bits.OnesCount16
+tags: [method]
 ```
 
 ```Go
-func Div64(hi, lo, y uint64) (quo, rem uint64)
+func OnesCount16(x uint16) int
 ```
 
-Div64 returns the quotient and remainder of (hi, lo) divided by y: quo = (hi, lo)/y, rem = (hi, lo)%y with the dividend bits' upper half in parameter hi and the lower half in parameter lo. Div64 panics for y == 0 (division by zero) or y <= hi (quotient overflow). 
+OnesCount16 returns the number of one bits ("population count") in x. 
+
+### <a id="OnesCount32" href="#OnesCount32">func OnesCount32(x uint32) int</a>
+
+```
+searchKey: bits.OnesCount32
+tags: [method]
+```
+
+```Go
+func OnesCount32(x uint32) int
+```
+
+OnesCount32 returns the number of one bits ("population count") in x. 
+
+### <a id="OnesCount64" href="#OnesCount64">func OnesCount64(x uint64) int</a>
+
+```
+searchKey: bits.OnesCount64
+tags: [method]
+```
+
+```Go
+func OnesCount64(x uint64) int
+```
+
+OnesCount64 returns the number of one bits ("population count") in x. 
+
+### <a id="OnesCount8" href="#OnesCount8">func OnesCount8(x uint8) int</a>
+
+```
+searchKey: bits.OnesCount8
+tags: [method]
+```
+
+```Go
+func OnesCount8(x uint8) int
+```
+
+OnesCount8 returns the number of one bits ("population count") in x. 
 
 ### <a id="Rem" href="#Rem">func Rem(hi, lo, y uint) uint</a>
 
 ```
 searchKey: bits.Rem
+tags: [method]
 ```
 
 ```Go
@@ -892,6 +642,7 @@ Rem returns the remainder of (hi, lo) divided by y. Rem panics for y == 0 (divis
 
 ```
 searchKey: bits.Rem32
+tags: [method]
 ```
 
 ```Go
@@ -904,6 +655,7 @@ Rem32 returns the remainder of (hi, lo) divided by y. Rem32 panics for y == 0 (d
 
 ```
 searchKey: bits.Rem64
+tags: [method]
 ```
 
 ```Go
@@ -911,4 +663,314 @@ func Rem64(hi, lo, y uint64) uint64
 ```
 
 Rem64 returns the remainder of (hi, lo) divided by y. Rem64 panics for y == 0 (division by zero) but, unlike Div64, it doesn't panic on a quotient overflow. 
+
+### <a id="Reverse" href="#Reverse">func Reverse(x uint) uint</a>
+
+```
+searchKey: bits.Reverse
+tags: [method]
+```
+
+```Go
+func Reverse(x uint) uint
+```
+
+Reverse returns the value of x with its bits in reversed order. 
+
+### <a id="Reverse16" href="#Reverse16">func Reverse16(x uint16) uint16</a>
+
+```
+searchKey: bits.Reverse16
+tags: [method]
+```
+
+```Go
+func Reverse16(x uint16) uint16
+```
+
+Reverse16 returns the value of x with its bits in reversed order. 
+
+### <a id="Reverse32" href="#Reverse32">func Reverse32(x uint32) uint32</a>
+
+```
+searchKey: bits.Reverse32
+tags: [method]
+```
+
+```Go
+func Reverse32(x uint32) uint32
+```
+
+Reverse32 returns the value of x with its bits in reversed order. 
+
+### <a id="Reverse64" href="#Reverse64">func Reverse64(x uint64) uint64</a>
+
+```
+searchKey: bits.Reverse64
+tags: [method]
+```
+
+```Go
+func Reverse64(x uint64) uint64
+```
+
+Reverse64 returns the value of x with its bits in reversed order. 
+
+### <a id="Reverse8" href="#Reverse8">func Reverse8(x uint8) uint8</a>
+
+```
+searchKey: bits.Reverse8
+tags: [method]
+```
+
+```Go
+func Reverse8(x uint8) uint8
+```
+
+Reverse8 returns the value of x with its bits in reversed order. 
+
+### <a id="ReverseBytes" href="#ReverseBytes">func ReverseBytes(x uint) uint</a>
+
+```
+searchKey: bits.ReverseBytes
+tags: [method]
+```
+
+```Go
+func ReverseBytes(x uint) uint
+```
+
+ReverseBytes returns the value of x with its bytes in reversed order. 
+
+This function's execution time does not depend on the inputs. 
+
+### <a id="ReverseBytes16" href="#ReverseBytes16">func ReverseBytes16(x uint16) uint16</a>
+
+```
+searchKey: bits.ReverseBytes16
+tags: [method]
+```
+
+```Go
+func ReverseBytes16(x uint16) uint16
+```
+
+ReverseBytes16 returns the value of x with its bytes in reversed order. 
+
+This function's execution time does not depend on the inputs. 
+
+### <a id="ReverseBytes32" href="#ReverseBytes32">func ReverseBytes32(x uint32) uint32</a>
+
+```
+searchKey: bits.ReverseBytes32
+tags: [method]
+```
+
+```Go
+func ReverseBytes32(x uint32) uint32
+```
+
+ReverseBytes32 returns the value of x with its bytes in reversed order. 
+
+This function's execution time does not depend on the inputs. 
+
+### <a id="ReverseBytes64" href="#ReverseBytes64">func ReverseBytes64(x uint64) uint64</a>
+
+```
+searchKey: bits.ReverseBytes64
+tags: [method]
+```
+
+```Go
+func ReverseBytes64(x uint64) uint64
+```
+
+ReverseBytes64 returns the value of x with its bytes in reversed order. 
+
+This function's execution time does not depend on the inputs. 
+
+### <a id="RotateLeft" href="#RotateLeft">func RotateLeft(x uint, k int) uint</a>
+
+```
+searchKey: bits.RotateLeft
+tags: [method]
+```
+
+```Go
+func RotateLeft(x uint, k int) uint
+```
+
+RotateLeft returns the value of x rotated left by (k mod UintSize) bits. To rotate x right by k bits, call RotateLeft(x, -k). 
+
+This function's execution time does not depend on the inputs. 
+
+### <a id="RotateLeft16" href="#RotateLeft16">func RotateLeft16(x uint16, k int) uint16</a>
+
+```
+searchKey: bits.RotateLeft16
+tags: [method]
+```
+
+```Go
+func RotateLeft16(x uint16, k int) uint16
+```
+
+RotateLeft16 returns the value of x rotated left by (k mod 16) bits. To rotate x right by k bits, call RotateLeft16(x, -k). 
+
+This function's execution time does not depend on the inputs. 
+
+### <a id="RotateLeft32" href="#RotateLeft32">func RotateLeft32(x uint32, k int) uint32</a>
+
+```
+searchKey: bits.RotateLeft32
+tags: [method]
+```
+
+```Go
+func RotateLeft32(x uint32, k int) uint32
+```
+
+RotateLeft32 returns the value of x rotated left by (k mod 32) bits. To rotate x right by k bits, call RotateLeft32(x, -k). 
+
+This function's execution time does not depend on the inputs. 
+
+### <a id="RotateLeft64" href="#RotateLeft64">func RotateLeft64(x uint64, k int) uint64</a>
+
+```
+searchKey: bits.RotateLeft64
+tags: [method]
+```
+
+```Go
+func RotateLeft64(x uint64, k int) uint64
+```
+
+RotateLeft64 returns the value of x rotated left by (k mod 64) bits. To rotate x right by k bits, call RotateLeft64(x, -k). 
+
+This function's execution time does not depend on the inputs. 
+
+### <a id="RotateLeft8" href="#RotateLeft8">func RotateLeft8(x uint8, k int) uint8</a>
+
+```
+searchKey: bits.RotateLeft8
+tags: [method]
+```
+
+```Go
+func RotateLeft8(x uint8, k int) uint8
+```
+
+RotateLeft8 returns the value of x rotated left by (k mod 8) bits. To rotate x right by k bits, call RotateLeft8(x, -k). 
+
+This function's execution time does not depend on the inputs. 
+
+### <a id="Sub" href="#Sub">func Sub(x, y, borrow uint) (diff, borrowOut uint)</a>
+
+```
+searchKey: bits.Sub
+tags: [method]
+```
+
+```Go
+func Sub(x, y, borrow uint) (diff, borrowOut uint)
+```
+
+Sub returns the difference of x, y and borrow: diff = x - y - borrow. The borrow input must be 0 or 1; otherwise the behavior is undefined. The borrowOut output is guaranteed to be 0 or 1. 
+
+This function's execution time does not depend on the inputs. 
+
+### <a id="Sub32" href="#Sub32">func Sub32(x, y, borrow uint32) (diff, borrowOut uint32)</a>
+
+```
+searchKey: bits.Sub32
+tags: [method]
+```
+
+```Go
+func Sub32(x, y, borrow uint32) (diff, borrowOut uint32)
+```
+
+Sub32 returns the difference of x, y and borrow, diff = x - y - borrow. The borrow input must be 0 or 1; otherwise the behavior is undefined. The borrowOut output is guaranteed to be 0 or 1. 
+
+This function's execution time does not depend on the inputs. 
+
+### <a id="Sub64" href="#Sub64">func Sub64(x, y, borrow uint64) (diff, borrowOut uint64)</a>
+
+```
+searchKey: bits.Sub64
+tags: [method]
+```
+
+```Go
+func Sub64(x, y, borrow uint64) (diff, borrowOut uint64)
+```
+
+Sub64 returns the difference of x, y and borrow: diff = x - y - borrow. The borrow input must be 0 or 1; otherwise the behavior is undefined. The borrowOut output is guaranteed to be 0 or 1. 
+
+This function's execution time does not depend on the inputs. 
+
+### <a id="TrailingZeros" href="#TrailingZeros">func TrailingZeros(x uint) int</a>
+
+```
+searchKey: bits.TrailingZeros
+tags: [method]
+```
+
+```Go
+func TrailingZeros(x uint) int
+```
+
+TrailingZeros returns the number of trailing zero bits in x; the result is UintSize for x == 0. 
+
+### <a id="TrailingZeros16" href="#TrailingZeros16">func TrailingZeros16(x uint16) int</a>
+
+```
+searchKey: bits.TrailingZeros16
+tags: [method]
+```
+
+```Go
+func TrailingZeros16(x uint16) int
+```
+
+TrailingZeros16 returns the number of trailing zero bits in x; the result is 16 for x == 0. 
+
+### <a id="TrailingZeros32" href="#TrailingZeros32">func TrailingZeros32(x uint32) int</a>
+
+```
+searchKey: bits.TrailingZeros32
+tags: [method]
+```
+
+```Go
+func TrailingZeros32(x uint32) int
+```
+
+TrailingZeros32 returns the number of trailing zero bits in x; the result is 32 for x == 0. 
+
+### <a id="TrailingZeros64" href="#TrailingZeros64">func TrailingZeros64(x uint64) int</a>
+
+```
+searchKey: bits.TrailingZeros64
+tags: [method]
+```
+
+```Go
+func TrailingZeros64(x uint64) int
+```
+
+TrailingZeros64 returns the number of trailing zero bits in x; the result is 64 for x == 0. 
+
+### <a id="TrailingZeros8" href="#TrailingZeros8">func TrailingZeros8(x uint8) int</a>
+
+```
+searchKey: bits.TrailingZeros8
+tags: [method]
+```
+
+```Go
+func TrailingZeros8(x uint8) int
+```
+
+TrailingZeros8 returns the number of trailing zero bits in x; the result is 8 for x == 0. 
 

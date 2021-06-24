@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "net/http/httptest_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,12 +41,36 @@
         "children": [
           {
             "node": {
+              "pathID": "/net/http/httptest_test#ExampleNewTLSServer",
+              "documentation": {
+                "identifier": "ExampleNewTLSServer",
+                "newPage": false,
+                "searchKey": "httptest_test.ExampleNewTLSServer",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleNewTLSServer()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleNewTLSServer()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/net/http/httptest_test#ExampleResponseRecorder",
               "documentation": {
                 "identifier": "ExampleResponseRecorder",
                 "newPage": false,
                 "searchKey": "httptest_test.ExampleResponseRecorder",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -67,6 +93,7 @@
                 "newPage": false,
                 "searchKey": "httptest_test.ExampleServer",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -89,6 +116,7 @@
                 "newPage": false,
                 "searchKey": "httptest_test.ExampleServer_hTTP2",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -99,28 +127,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc ExampleServer_hTTP2()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/net/http/httptest_test#ExampleNewTLSServer",
-              "documentation": {
-                "identifier": "ExampleNewTLSServer",
-                "newPage": false,
-                "searchKey": "httptest_test.ExampleNewTLSServer",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleNewTLSServer()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleNewTLSServer()\n```\n\n"
               },
               "children": null
             }

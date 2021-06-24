@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "math/rand_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "rand_test.numTestSamples",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -84,166 +89,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/math/rand_test#rn",
-              "documentation": {
-                "identifier": "rn",
-                "newPage": false,
-                "searchKey": "rand_test.rn",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var rn"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar rn, kn, wn, fn = GetNormalDistributionParameters()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#kn",
-              "documentation": {
-                "identifier": "kn",
-                "newPage": false,
-                "searchKey": "rand_test.kn",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var kn"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar rn, kn, wn, fn = GetNormalDistributionParameters()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#wn",
-              "documentation": {
-                "identifier": "wn",
-                "newPage": false,
-                "searchKey": "rand_test.wn",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var wn"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar rn, kn, wn, fn = GetNormalDistributionParameters()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#fn",
-              "documentation": {
-                "identifier": "fn",
-                "newPage": false,
-                "searchKey": "rand_test.fn",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var fn"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar rn, kn, wn, fn = GetNormalDistributionParameters()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#re",
-              "documentation": {
-                "identifier": "re",
-                "newPage": false,
-                "searchKey": "rand_test.re",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var re"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar re, ke, we, fe = GetExponentialDistributionParameters()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#ke",
-              "documentation": {
-                "identifier": "ke",
-                "newPage": false,
-                "searchKey": "rand_test.ke",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ke"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar re, ke, we, fe = GetExponentialDistributionParameters()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#we",
-              "documentation": {
-                "identifier": "we",
-                "newPage": false,
-                "searchKey": "rand_test.we",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var we"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar re, ke, we, fe = GetExponentialDistributionParameters()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/math/rand_test#fe",
               "documentation": {
                 "identifier": "fe",
                 "newPage": false,
                 "searchKey": "rand_test.fe",
                 "tags": [
+                  "variable",
                   "private"
                 ]
               },
@@ -260,22 +112,69 @@
           },
           {
             "node": {
-              "pathID": "/math/rand_test#testSeeds",
+              "pathID": "/math/rand_test#fn",
               "documentation": {
-                "identifier": "testSeeds",
+                "identifier": "fn",
                 "newPage": false,
-                "searchKey": "rand_test.testSeeds",
+                "searchKey": "rand_test.fn",
                 "tags": [
+                  "variable",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var testSeeds"
+                "value": "var fn"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar testSeeds = []int64{1, 1754801282, 1698661970, 1550503961}\n```\n\n"
+                "value": "```Go\nvar rn, kn, wn, fn = GetNormalDistributionParameters()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#ke",
+              "documentation": {
+                "identifier": "ke",
+                "newPage": false,
+                "searchKey": "rand_test.ke",
+                "tags": [
+                  "variable",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ke"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar re, ke, we, fe = GetExponentialDistributionParameters()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#kn",
+              "documentation": {
+                "identifier": "kn",
+                "newPage": false,
+                "searchKey": "rand_test.kn",
+                "tags": [
+                  "variable",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var kn"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar rn, kn, wn, fn = GetNormalDistributionParameters()\n```\n\n"
               },
               "children": null
             }
@@ -288,6 +187,8 @@
                 "newPage": false,
                 "searchKey": "rand_test.printgolden",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
@@ -304,12 +205,38 @@
           },
           {
             "node": {
+              "pathID": "/math/rand_test#re",
+              "documentation": {
+                "identifier": "re",
+                "newPage": false,
+                "searchKey": "rand_test.re",
+                "tags": [
+                  "variable",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var re"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar re, ke, we, fe = GetExponentialDistributionParameters()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/rand_test#regressGolden",
               "documentation": {
                 "identifier": "regressGolden",
                 "newPage": false,
                 "searchKey": "rand_test.regressGolden",
                 "tags": [
+                  "variable",
+                  "array",
+                  "interface",
                   "private"
                 ]
               },
@@ -320,6 +247,100 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar regressGolden = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#rn",
+              "documentation": {
+                "identifier": "rn",
+                "newPage": false,
+                "searchKey": "rand_test.rn",
+                "tags": [
+                  "variable",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var rn"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar rn, kn, wn, fn = GetNormalDistributionParameters()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#testSeeds",
+              "documentation": {
+                "identifier": "testSeeds",
+                "newPage": false,
+                "searchKey": "rand_test.testSeeds",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testSeeds"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testSeeds = []int64{1, 1754801282, 1698661970, 1550503961}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#we",
+              "documentation": {
+                "identifier": "we",
+                "newPage": false,
+                "searchKey": "rand_test.we",
+                "tags": [
+                  "variable",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var we"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar re, ke, we, fe = GetExponentialDistributionParameters()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#wn",
+              "documentation": {
+                "identifier": "wn",
+                "newPage": false,
+                "searchKey": "rand_test.wn",
+                "tags": [
+                  "variable",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var wn"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar rn, kn, wn, fn = GetNormalDistributionParameters()\n```\n\n"
               },
               "children": null
             }
@@ -335,6 +356,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -355,6 +377,7 @@
                 "newPage": false,
                 "searchKey": "rand_test.statsResults",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -375,6 +398,7 @@
                       "newPage": false,
                       "searchKey": "rand_test.getStatsResults",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -397,6 +421,7 @@
                       "newPage": false,
                       "searchKey": "rand_test.statsResults.checkSimilarDistribution",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -425,6 +450,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -439,12 +465,373 @@
         "children": [
           {
             "node": {
+              "pathID": "/math/rand_test#BenchmarkFloat32",
+              "documentation": {
+                "identifier": "BenchmarkFloat32",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkFloat32",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkFloat32(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkFloat32(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#BenchmarkFloat64",
+              "documentation": {
+                "identifier": "BenchmarkFloat64",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkFloat64",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkFloat64(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkFloat64(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#BenchmarkInt31n1000",
+              "documentation": {
+                "identifier": "BenchmarkInt31n1000",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkInt31n1000",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkInt31n1000(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkInt31n1000(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#BenchmarkInt63Threadsafe",
+              "documentation": {
+                "identifier": "BenchmarkInt63Threadsafe",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkInt63Threadsafe",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkInt63Threadsafe(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkInt63Threadsafe(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#BenchmarkInt63ThreadsafeParallel",
+              "documentation": {
+                "identifier": "BenchmarkInt63ThreadsafeParallel",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkInt63ThreadsafeParallel",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkInt63ThreadsafeParallel(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkInt63ThreadsafeParallel(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#BenchmarkInt63Unthreadsafe",
+              "documentation": {
+                "identifier": "BenchmarkInt63Unthreadsafe",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkInt63Unthreadsafe",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkInt63Unthreadsafe(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkInt63Unthreadsafe(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#BenchmarkInt63n1000",
+              "documentation": {
+                "identifier": "BenchmarkInt63n1000",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkInt63n1000",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkInt63n1000(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkInt63n1000(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#BenchmarkIntn1000",
+              "documentation": {
+                "identifier": "BenchmarkIntn1000",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkIntn1000",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkIntn1000(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkIntn1000(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#BenchmarkPerm3",
+              "documentation": {
+                "identifier": "BenchmarkPerm3",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkPerm3",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkPerm3(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkPerm3(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#BenchmarkPerm30",
+              "documentation": {
+                "identifier": "BenchmarkPerm30",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkPerm30",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkPerm30(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkPerm30(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#BenchmarkPerm30ViaShuffle",
+              "documentation": {
+                "identifier": "BenchmarkPerm30ViaShuffle",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkPerm30ViaShuffle",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkPerm30ViaShuffle(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkPerm30ViaShuffle(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#BenchmarkRead1000",
+              "documentation": {
+                "identifier": "BenchmarkRead1000",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkRead1000",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkRead1000(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkRead1000(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#BenchmarkRead3",
+              "documentation": {
+                "identifier": "BenchmarkRead3",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkRead3",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkRead3(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkRead3(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#BenchmarkRead64",
+              "documentation": {
+                "identifier": "BenchmarkRead64",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkRead64",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkRead64(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkRead64(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#BenchmarkShuffleOverhead",
+              "documentation": {
+                "identifier": "BenchmarkShuffleOverhead",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkShuffleOverhead",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkShuffleOverhead(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkShuffleOverhead(b *testing.B)\n```\n\nBenchmarkShuffleOverhead uses a minimal swap function to measure just the shuffling overhead. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/rand_test#Example",
               "documentation": {
                 "identifier": "Example",
                 "newPage": false,
                 "searchKey": "rand_test.Example",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -461,22 +848,23 @@
           },
           {
             "node": {
-              "pathID": "/math/rand_test#Example_rand",
+              "pathID": "/math/rand_test#ExampleIntn",
               "documentation": {
-                "identifier": "Example_rand",
+                "identifier": "ExampleIntn",
                 "newPage": false,
-                "searchKey": "rand_test.Example_rand",
+                "searchKey": "rand_test.ExampleIntn",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func Example_rand()"
+                "value": "func ExampleIntn()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc Example_rand()\n```\n\nThis example shows the use of each of the methods on a *Rand. The use of the global functions is the same, without the receiver. \n\n"
+                "value": "```Go\nfunc ExampleIntn()\n```\n\n"
               },
               "children": null
             }
@@ -489,6 +877,7 @@
                 "newPage": false,
                 "searchKey": "rand_test.ExamplePerm",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -511,6 +900,7 @@
                 "newPage": false,
                 "searchKey": "rand_test.ExampleShuffle",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -533,6 +923,7 @@
                 "newPage": false,
                 "searchKey": "rand_test.ExampleShuffle_slicesInUnison",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -549,22 +940,23 @@
           },
           {
             "node": {
-              "pathID": "/math/rand_test#ExampleIntn",
+              "pathID": "/math/rand_test#Example_rand",
               "documentation": {
-                "identifier": "ExampleIntn",
+                "identifier": "Example_rand",
                 "newPage": false,
-                "searchKey": "rand_test.ExampleIntn",
+                "searchKey": "rand_test.Example_rand",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func ExampleIntn()"
+                "value": "func Example_rand()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc ExampleIntn()\n```\n\n"
+                "value": "```Go\nfunc Example_rand()\n```\n\nThis example shows the use of each of the methods on a *Rand. The use of the global functions is the same, without the receiver. \n\n"
               },
               "children": null
             }
@@ -577,7 +969,9 @@
                 "newPage": false,
                 "searchKey": "rand_test.TestConcurrent",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -593,44 +987,336 @@
           },
           {
             "node": {
-              "pathID": "/math/rand_test#max",
+              "pathID": "/math/rand_test#TestExpTables",
               "documentation": {
-                "identifier": "max",
+                "identifier": "TestExpTables",
                 "newPage": false,
-                "searchKey": "rand_test.max",
+                "searchKey": "rand_test.TestExpTables",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func max(a, b float64) float64"
+                "value": "func TestExpTables(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc max(a, b float64) float64\n```\n\n"
+                "value": "```Go\nfunc TestExpTables(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/math/rand_test#nearEqual",
+              "pathID": "/math/rand_test#TestFloat32",
               "documentation": {
-                "identifier": "nearEqual",
+                "identifier": "TestFloat32",
                 "newPage": false,
-                "searchKey": "rand_test.nearEqual",
+                "searchKey": "rand_test.TestFloat32",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func nearEqual(a, b, closeEnough, maxError float64) bool"
+                "value": "func TestFloat32(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc nearEqual(a, b, closeEnough, maxError float64) bool\n```\n\n"
+                "value": "```Go\nfunc TestFloat32(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#TestNonStandardExponentialValues",
+              "documentation": {
+                "identifier": "TestNonStandardExponentialValues",
+                "newPage": false,
+                "searchKey": "rand_test.TestNonStandardExponentialValues",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNonStandardExponentialValues(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNonStandardExponentialValues(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#TestNonStandardNormalValues",
+              "documentation": {
+                "identifier": "TestNonStandardNormalValues",
+                "newPage": false,
+                "searchKey": "rand_test.TestNonStandardNormalValues",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNonStandardNormalValues(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNonStandardNormalValues(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#TestNormTables",
+              "documentation": {
+                "identifier": "TestNormTables",
+                "newPage": false,
+                "searchKey": "rand_test.TestNormTables",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNormTables(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNormTables(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#TestReadByOneByte",
+              "documentation": {
+                "identifier": "TestReadByOneByte",
+                "newPage": false,
+                "searchKey": "rand_test.TestReadByOneByte",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadByOneByte(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadByOneByte(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#TestReadEmpty",
+              "documentation": {
+                "identifier": "TestReadEmpty",
+                "newPage": false,
+                "searchKey": "rand_test.TestReadEmpty",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadEmpty(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadEmpty(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#TestReadSeedReset",
+              "documentation": {
+                "identifier": "TestReadSeedReset",
+                "newPage": false,
+                "searchKey": "rand_test.TestReadSeedReset",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadSeedReset(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadSeedReset(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#TestReadUniformity",
+              "documentation": {
+                "identifier": "TestReadUniformity",
+                "newPage": false,
+                "searchKey": "rand_test.TestReadUniformity",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadUniformity(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadUniformity(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#TestRegress",
+              "documentation": {
+                "identifier": "TestRegress",
+                "newPage": false,
+                "searchKey": "rand_test.TestRegress",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRegress(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRegress(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#TestShuffleSmall",
+              "documentation": {
+                "identifier": "TestShuffleSmall",
+                "newPage": false,
+                "searchKey": "rand_test.TestShuffleSmall",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestShuffleSmall(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestShuffleSmall(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#TestStandardExponentialValues",
+              "documentation": {
+                "identifier": "TestStandardExponentialValues",
+                "newPage": false,
+                "searchKey": "rand_test.TestStandardExponentialValues",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStandardExponentialValues(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStandardExponentialValues(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#TestStandardNormalValues",
+              "documentation": {
+                "identifier": "TestStandardNormalValues",
+                "newPage": false,
+                "searchKey": "rand_test.TestStandardNormalValues",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStandardNormalValues(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStandardNormalValues(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/rand_test#TestUniformFactorial",
+              "documentation": {
+                "identifier": "TestUniformFactorial",
+                "newPage": false,
+                "searchKey": "rand_test.TestUniformFactorial",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUniformFactorial(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUniformFactorial(t *testing.T)\n```\n\nTestUniformFactorial tests several ways of generating a uniform value in [0, n!). \n\n"
               },
               "children": null
             }
@@ -643,6 +1329,7 @@
                 "newPage": false,
                 "searchKey": "rand_test.checkSampleDistribution",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -665,6 +1352,7 @@
                 "newPage": false,
                 "searchKey": "rand_test.checkSampleSliceDistributions",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -681,254 +1369,13 @@
           },
           {
             "node": {
-              "pathID": "/math/rand_test#generateNormalSamples",
-              "documentation": {
-                "identifier": "generateNormalSamples",
-                "newPage": false,
-                "searchKey": "rand_test.generateNormalSamples",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func generateNormalSamples(nsamples int, mean, stddev float64, seed int64) []float64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc generateNormalSamples(nsamples int, mean, stddev float64, seed int64) []float64\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#testNormalDistribution",
-              "documentation": {
-                "identifier": "testNormalDistribution",
-                "newPage": false,
-                "searchKey": "rand_test.testNormalDistribution",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testNormalDistribution(t *testing.T, nsamples int, mean, stddev float64, seed int64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testNormalDistribution(t *testing.T, nsamples int, mean, stddev float64, seed int64)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#TestStandardNormalValues",
-              "documentation": {
-                "identifier": "TestStandardNormalValues",
-                "newPage": false,
-                "searchKey": "rand_test.TestStandardNormalValues",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestStandardNormalValues(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestStandardNormalValues(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#TestNonStandardNormalValues",
-              "documentation": {
-                "identifier": "TestNonStandardNormalValues",
-                "newPage": false,
-                "searchKey": "rand_test.TestNonStandardNormalValues",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestNonStandardNormalValues(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestNonStandardNormalValues(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#generateExponentialSamples",
-              "documentation": {
-                "identifier": "generateExponentialSamples",
-                "newPage": false,
-                "searchKey": "rand_test.generateExponentialSamples",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func generateExponentialSamples(nsamples int, rate float64, seed int64) []float64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc generateExponentialSamples(nsamples int, rate float64, seed int64) []float64\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#testExponentialDistribution",
-              "documentation": {
-                "identifier": "testExponentialDistribution",
-                "newPage": false,
-                "searchKey": "rand_test.testExponentialDistribution",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testExponentialDistribution(t *testing.T, nsamples int, rate float64, seed int64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testExponentialDistribution(t *testing.T, nsamples int, rate float64, seed int64)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#TestStandardExponentialValues",
-              "documentation": {
-                "identifier": "TestStandardExponentialValues",
-                "newPage": false,
-                "searchKey": "rand_test.TestStandardExponentialValues",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestStandardExponentialValues(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestStandardExponentialValues(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#TestNonStandardExponentialValues",
-              "documentation": {
-                "identifier": "TestNonStandardExponentialValues",
-                "newPage": false,
-                "searchKey": "rand_test.TestNonStandardExponentialValues",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestNonStandardExponentialValues(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestNonStandardExponentialValues(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#initNorm",
-              "documentation": {
-                "identifier": "initNorm",
-                "newPage": false,
-                "searchKey": "rand_test.initNorm",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func initNorm() (testKn []uint32, testWn, testFn []float32)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc initNorm() (testKn []uint32, testWn, testFn []float32)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#initExp",
-              "documentation": {
-                "identifier": "initExp",
-                "newPage": false,
-                "searchKey": "rand_test.initExp",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func initExp() (testKe []uint32, testWe, testFe []float32)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc initExp() (testKe []uint32, testWe, testFe []float32)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#compareUint32Slices",
-              "documentation": {
-                "identifier": "compareUint32Slices",
-                "newPage": false,
-                "searchKey": "rand_test.compareUint32Slices",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func compareUint32Slices(s1, s2 []uint32) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc compareUint32Slices(s1, s2 []uint32) int\n```\n\ncompareUint32Slices returns the first index where the two slices disagree, or <0 if the lengths are the same and all elements are identical. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/math/rand_test#compareFloat32Slices",
               "documentation": {
                 "identifier": "compareFloat32Slices",
                 "newPage": false,
                 "searchKey": "rand_test.compareFloat32Slices",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -945,220 +1392,23 @@
           },
           {
             "node": {
-              "pathID": "/math/rand_test#TestNormTables",
+              "pathID": "/math/rand_test#compareUint32Slices",
               "documentation": {
-                "identifier": "TestNormTables",
+                "identifier": "compareUint32Slices",
                 "newPage": false,
-                "searchKey": "rand_test.TestNormTables",
+                "searchKey": "rand_test.compareUint32Slices",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestNormTables(t *testing.T)"
+                "value": "func compareUint32Slices(s1, s2 []uint32) int"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestNormTables(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#TestExpTables",
-              "documentation": {
-                "identifier": "TestExpTables",
-                "newPage": false,
-                "searchKey": "rand_test.TestExpTables",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestExpTables(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestExpTables(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#hasSlowFloatingPoint",
-              "documentation": {
-                "identifier": "hasSlowFloatingPoint",
-                "newPage": false,
-                "searchKey": "rand_test.hasSlowFloatingPoint",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func hasSlowFloatingPoint() bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc hasSlowFloatingPoint() bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#TestFloat32",
-              "documentation": {
-                "identifier": "TestFloat32",
-                "newPage": false,
-                "searchKey": "rand_test.TestFloat32",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestFloat32(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestFloat32(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#testReadUniformity",
-              "documentation": {
-                "identifier": "testReadUniformity",
-                "newPage": false,
-                "searchKey": "rand_test.testReadUniformity",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testReadUniformity(t *testing.T, n int, seed int64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testReadUniformity(t *testing.T, n int, seed int64)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#TestReadUniformity",
-              "documentation": {
-                "identifier": "TestReadUniformity",
-                "newPage": false,
-                "searchKey": "rand_test.TestReadUniformity",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReadUniformity(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReadUniformity(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#TestReadEmpty",
-              "documentation": {
-                "identifier": "TestReadEmpty",
-                "newPage": false,
-                "searchKey": "rand_test.TestReadEmpty",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReadEmpty(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReadEmpty(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#TestReadByOneByte",
-              "documentation": {
-                "identifier": "TestReadByOneByte",
-                "newPage": false,
-                "searchKey": "rand_test.TestReadByOneByte",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReadByOneByte(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReadByOneByte(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#TestReadSeedReset",
-              "documentation": {
-                "identifier": "TestReadSeedReset",
-                "newPage": false,
-                "searchKey": "rand_test.TestReadSeedReset",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReadSeedReset(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReadSeedReset(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#TestShuffleSmall",
-              "documentation": {
-                "identifier": "TestShuffleSmall",
-                "newPage": false,
-                "searchKey": "rand_test.TestShuffleSmall",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestShuffleSmall(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestShuffleSmall(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc compareUint32Slices(s1, s2 []uint32) int\n```\n\ncompareUint32Slices returns the first index where the two slices disagree, or <0 if the lengths are the same and all elements are identical. \n\n"
               },
               "children": null
             }
@@ -1171,6 +1421,7 @@
                 "newPage": false,
                 "searchKey": "rand_test.encodePerm",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1187,374 +1438,230 @@
           },
           {
             "node": {
-              "pathID": "/math/rand_test#TestUniformFactorial",
+              "pathID": "/math/rand_test#generateExponentialSamples",
               "documentation": {
-                "identifier": "TestUniformFactorial",
+                "identifier": "generateExponentialSamples",
                 "newPage": false,
-                "searchKey": "rand_test.TestUniformFactorial",
+                "searchKey": "rand_test.generateExponentialSamples",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestUniformFactorial(t *testing.T)"
+                "value": "func generateExponentialSamples(nsamples int, rate float64, seed int64) []float64"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestUniformFactorial(t *testing.T)\n```\n\nTestUniformFactorial tests several ways of generating a uniform value in [0, n!). \n\n"
+                "value": "```Go\nfunc generateExponentialSamples(nsamples int, rate float64, seed int64) []float64\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/math/rand_test#BenchmarkInt63Threadsafe",
+              "pathID": "/math/rand_test#generateNormalSamples",
               "documentation": {
-                "identifier": "BenchmarkInt63Threadsafe",
+                "identifier": "generateNormalSamples",
                 "newPage": false,
-                "searchKey": "rand_test.BenchmarkInt63Threadsafe",
+                "searchKey": "rand_test.generateNormalSamples",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkInt63Threadsafe(b *testing.B)"
+                "value": "func generateNormalSamples(nsamples int, mean, stddev float64, seed int64) []float64"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkInt63Threadsafe(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc generateNormalSamples(nsamples int, mean, stddev float64, seed int64) []float64\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/math/rand_test#BenchmarkInt63ThreadsafeParallel",
+              "pathID": "/math/rand_test#hasSlowFloatingPoint",
               "documentation": {
-                "identifier": "BenchmarkInt63ThreadsafeParallel",
+                "identifier": "hasSlowFloatingPoint",
                 "newPage": false,
-                "searchKey": "rand_test.BenchmarkInt63ThreadsafeParallel",
+                "searchKey": "rand_test.hasSlowFloatingPoint",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkInt63ThreadsafeParallel(b *testing.B)"
+                "value": "func hasSlowFloatingPoint() bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkInt63ThreadsafeParallel(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc hasSlowFloatingPoint() bool\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/math/rand_test#BenchmarkInt63Unthreadsafe",
+              "pathID": "/math/rand_test#initExp",
               "documentation": {
-                "identifier": "BenchmarkInt63Unthreadsafe",
+                "identifier": "initExp",
                 "newPage": false,
-                "searchKey": "rand_test.BenchmarkInt63Unthreadsafe",
+                "searchKey": "rand_test.initExp",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkInt63Unthreadsafe(b *testing.B)"
+                "value": "func initExp() (testKe []uint32, testWe, testFe []float32)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkInt63Unthreadsafe(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc initExp() (testKe []uint32, testWe, testFe []float32)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/math/rand_test#BenchmarkIntn1000",
+              "pathID": "/math/rand_test#initNorm",
               "documentation": {
-                "identifier": "BenchmarkIntn1000",
+                "identifier": "initNorm",
                 "newPage": false,
-                "searchKey": "rand_test.BenchmarkIntn1000",
+                "searchKey": "rand_test.initNorm",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkIntn1000(b *testing.B)"
+                "value": "func initNorm() (testKn []uint32, testWn, testFn []float32)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkIntn1000(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc initNorm() (testKn []uint32, testWn, testFn []float32)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/math/rand_test#BenchmarkInt63n1000",
+              "pathID": "/math/rand_test#max",
               "documentation": {
-                "identifier": "BenchmarkInt63n1000",
+                "identifier": "max",
                 "newPage": false,
-                "searchKey": "rand_test.BenchmarkInt63n1000",
+                "searchKey": "rand_test.max",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkInt63n1000(b *testing.B)"
+                "value": "func max(a, b float64) float64"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkInt63n1000(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc max(a, b float64) float64\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/math/rand_test#BenchmarkInt31n1000",
+              "pathID": "/math/rand_test#nearEqual",
               "documentation": {
-                "identifier": "BenchmarkInt31n1000",
+                "identifier": "nearEqual",
                 "newPage": false,
-                "searchKey": "rand_test.BenchmarkInt31n1000",
+                "searchKey": "rand_test.nearEqual",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkInt31n1000(b *testing.B)"
+                "value": "func nearEqual(a, b, closeEnough, maxError float64) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkInt31n1000(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc nearEqual(a, b, closeEnough, maxError float64) bool\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/math/rand_test#BenchmarkFloat32",
+              "pathID": "/math/rand_test#testExponentialDistribution",
               "documentation": {
-                "identifier": "BenchmarkFloat32",
+                "identifier": "testExponentialDistribution",
                 "newPage": false,
-                "searchKey": "rand_test.BenchmarkFloat32",
+                "searchKey": "rand_test.testExponentialDistribution",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkFloat32(b *testing.B)"
+                "value": "func testExponentialDistribution(t *testing.T, nsamples int, rate float64, seed int64)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkFloat32(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc testExponentialDistribution(t *testing.T, nsamples int, rate float64, seed int64)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/math/rand_test#BenchmarkFloat64",
+              "pathID": "/math/rand_test#testNormalDistribution",
               "documentation": {
-                "identifier": "BenchmarkFloat64",
+                "identifier": "testNormalDistribution",
                 "newPage": false,
-                "searchKey": "rand_test.BenchmarkFloat64",
+                "searchKey": "rand_test.testNormalDistribution",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkFloat64(b *testing.B)"
+                "value": "func testNormalDistribution(t *testing.T, nsamples int, mean, stddev float64, seed int64)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkFloat64(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc testNormalDistribution(t *testing.T, nsamples int, mean, stddev float64, seed int64)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/math/rand_test#BenchmarkPerm3",
+              "pathID": "/math/rand_test#testReadUniformity",
               "documentation": {
-                "identifier": "BenchmarkPerm3",
+                "identifier": "testReadUniformity",
                 "newPage": false,
-                "searchKey": "rand_test.BenchmarkPerm3",
+                "searchKey": "rand_test.testReadUniformity",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkPerm3(b *testing.B)"
+                "value": "func testReadUniformity(t *testing.T, n int, seed int64)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkPerm3(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#BenchmarkPerm30",
-              "documentation": {
-                "identifier": "BenchmarkPerm30",
-                "newPage": false,
-                "searchKey": "rand_test.BenchmarkPerm30",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkPerm30(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkPerm30(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#BenchmarkPerm30ViaShuffle",
-              "documentation": {
-                "identifier": "BenchmarkPerm30ViaShuffle",
-                "newPage": false,
-                "searchKey": "rand_test.BenchmarkPerm30ViaShuffle",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkPerm30ViaShuffle(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkPerm30ViaShuffle(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#BenchmarkShuffleOverhead",
-              "documentation": {
-                "identifier": "BenchmarkShuffleOverhead",
-                "newPage": false,
-                "searchKey": "rand_test.BenchmarkShuffleOverhead",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkShuffleOverhead(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkShuffleOverhead(b *testing.B)\n```\n\nBenchmarkShuffleOverhead uses a minimal swap function to measure just the shuffling overhead. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#BenchmarkRead3",
-              "documentation": {
-                "identifier": "BenchmarkRead3",
-                "newPage": false,
-                "searchKey": "rand_test.BenchmarkRead3",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkRead3(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkRead3(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#BenchmarkRead64",
-              "documentation": {
-                "identifier": "BenchmarkRead64",
-                "newPage": false,
-                "searchKey": "rand_test.BenchmarkRead64",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkRead64(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkRead64(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#BenchmarkRead1000",
-              "documentation": {
-                "identifier": "BenchmarkRead1000",
-                "newPage": false,
-                "searchKey": "rand_test.BenchmarkRead1000",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkRead1000(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkRead1000(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/rand_test#TestRegress",
-              "documentation": {
-                "identifier": "TestRegress",
-                "newPage": false,
-                "searchKey": "rand_test.TestRegress",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRegress(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRegress(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc testReadUniformity(t *testing.T, n int, seed int64)\n```\n\n"
               },
               "children": null
             }

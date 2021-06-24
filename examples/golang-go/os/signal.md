@@ -81,81 +81,85 @@ On Plan 9, signals have type syscall.Note, which is a string. Calling Notify wit
 * [Constants](#const)
     * [const numSig](#numSig)
 * [Variables](#var)
-    * [var handlers](#handlers)
-    * [var watchSignalLoopOnce](#watchSignalLoopOnce)
-    * [var watchSignalLoop](#watchSignalLoop)
-    * [var settleTime](#settleTime)
-    * [var checkSighupIgnored](#checkSighupIgnored)
-    * [var sendUncaughtSighup](#sendUncaughtSighup)
-    * [var dieFromSighup](#dieFromSighup)
     * [var checkNotifyContext](#checkNotifyContext)
+    * [var checkSighupIgnored](#checkSighupIgnored)
     * [var ctxNotifyTimes](#ctxNotifyTimes)
+    * [var dieFromSighup](#dieFromSighup)
+    * [var handlers](#handlers)
+    * [var sendUncaughtSighup](#sendUncaughtSighup)
+    * [var settleTime](#settleTime)
+    * [var watchSignalLoop](#watchSignalLoop)
+    * [var watchSignalLoopOnce](#watchSignalLoopOnce)
 * [Types](#type)
-    * [type stopping struct](#stopping)
     * [type handler struct](#handler)
-        * [func (h *handler) want(sig int) bool](#handler.want)
-        * [func (h *handler) set(sig int)](#handler.set)
         * [func (h *handler) clear(sig int)](#handler.clear)
+        * [func (h *handler) set(sig int)](#handler.set)
+        * [func (h *handler) want(sig int) bool](#handler.want)
     * [type signalCtx struct](#signalCtx)
-        * [func (c *signalCtx) stop()](#signalCtx.stop)
         * [func (c *signalCtx) String() string](#signalCtx.String)
+        * [func (c *signalCtx) stop()](#signalCtx.stop)
+    * [type stopping struct](#stopping)
     * [type stringer interface](#stringer)
 * [Functions](#func)
-    * [func cancel(sigs []os.Signal, action func(int))](#cancel)
     * [func Ignore(sig ...os.Signal)](#Ignore)
     * [func Ignored(sig os.Signal) bool](#Ignored)
     * [func Notify(c chan<- os.Signal, sig ...os.Signal)](#Notify)
+    * [func NotifyContext(parent context.Context, signals ...os.Signal) (ctx context.Context, stop context.CancelFunc)](#NotifyContext)
     * [func Reset(sig ...os.Signal)](#Reset)
     * [func Stop(c chan<- os.Signal)](#Stop)
-    * [func signalWaitUntilIdle()](#signalWaitUntilIdle)
+    * [func TestAtomicStop(t *testing.T)](#TestAtomicStop)
+    * [func TestDetectNohup(t *testing.T)](#TestDetectNohup)
+    * [func TestIgnore(t *testing.T)](#TestIgnore)
+    * [func TestIgnored(t *testing.T)](#TestIgnored)
+    * [func TestNohup(t *testing.T)](#TestNohup)
+    * [func TestNotifyContextCancelParent(t *testing.T)](#TestNotifyContextCancelParent)
+    * [func TestNotifyContextNotifications(t *testing.T)](#TestNotifyContextNotifications)
+    * [func TestNotifyContextPrematureCancelParent(t *testing.T)](#TestNotifyContextPrematureCancelParent)
+    * [func TestNotifyContextSimultaneousStop(t *testing.T)](#TestNotifyContextSimultaneousStop)
+    * [func TestNotifyContextStop(t *testing.T)](#TestNotifyContextStop)
+    * [func TestNotifyContextStringer(t *testing.T)](#TestNotifyContextStringer)
+    * [func TestReset(t *testing.T)](#TestReset)
+    * [func TestSIGCONT(t *testing.T)](#TestSIGCONT)
+    * [func TestSignal(t *testing.T)](#TestSignal)
+    * [func TestSignalTrace(t *testing.T)](#TestSignalTrace)
+    * [func TestStop(t *testing.T)](#TestStop)
+    * [func TestStress(t *testing.T)](#TestStress)
+    * [func TestTime(t *testing.T)](#TestTime)
+    * [func atomicStopTestProgram(t *testing.T)](#atomicStopTestProgram)
+    * [func cancel(sigs []os.Signal, action func(int))](#cancel)
+    * [func disableSignal(sig int)](#disableSignal)
+    * [func enableSignal(sig int)](#enableSignal)
+    * [func ignoreSignal(sig int)](#ignoreSignal)
+    * [func init()](#init.signal_test.go)
+    * [func init()](#init.signal_unix.go)
+    * [func loop()](#loop)
     * [func process(sig os.Signal)](#process)
-    * [func NotifyContext(parent context.Context, signals ...os.Signal) (ctx context.Context, stop context.CancelFunc)](#NotifyContext)
+    * [func quiesce()](#quiesce)
+    * [func signalIgnored(sig int) bool](#signalIgnored)
+    * [func signalWaitUntilIdle()](#signalWaitUntilIdle)
     * [func signal_disable(uint32)](#signal_disable)
     * [func signal_enable(uint32)](#signal_enable)
     * [func signal_ignore(uint32)](#signal_ignore)
     * [func signal_ignored(uint32) bool](#signal_ignored)
     * [func signal_recv() uint32](#signal_recv)
-    * [func loop()](#loop)
-    * [func init()](#init.signal_unix.go)
     * [func signum(sig os.Signal) int](#signum)
-    * [func enableSignal(sig int)](#enableSignal)
-    * [func disableSignal(sig int)](#disableSignal)
-    * [func ignoreSignal(sig int)](#ignoreSignal)
-    * [func signalIgnored(sig int) bool](#signalIgnored)
-    * [func init()](#init.signal_test.go)
-    * [func waitSig(t *testing.T, c <-chan os.Signal, sig os.Signal)](#waitSig)
-    * [func waitSigAll(t *testing.T, c <-chan os.Signal, sig os.Signal)](#waitSigAll)
-    * [func waitSig1(t *testing.T, c <-chan os.Signal, sig os.Signal, all bool)](#waitSig1)
-    * [func quiesce()](#quiesce)
-    * [func TestSignal(t *testing.T)](#TestSignal)
-    * [func TestStress(t *testing.T)](#TestStress)
     * [func testCancel(t *testing.T, ignore bool)](#testCancel)
-    * [func TestReset(t *testing.T)](#TestReset)
-    * [func TestIgnore(t *testing.T)](#TestIgnore)
-    * [func TestIgnored(t *testing.T)](#TestIgnored)
-    * [func TestDetectNohup(t *testing.T)](#TestDetectNohup)
-    * [func TestStop(t *testing.T)](#TestStop)
-    * [func TestNohup(t *testing.T)](#TestNohup)
-    * [func TestSIGCONT(t *testing.T)](#TestSIGCONT)
-    * [func TestAtomicStop(t *testing.T)](#TestAtomicStop)
-    * [func atomicStopTestProgram(t *testing.T)](#atomicStopTestProgram)
-    * [func TestTime(t *testing.T)](#TestTime)
-    * [func TestNotifyContextNotifications(t *testing.T)](#TestNotifyContextNotifications)
-    * [func TestNotifyContextStop(t *testing.T)](#TestNotifyContextStop)
-    * [func TestNotifyContextCancelParent(t *testing.T)](#TestNotifyContextCancelParent)
-    * [func TestNotifyContextPrematureCancelParent(t *testing.T)](#TestNotifyContextPrematureCancelParent)
-    * [func TestNotifyContextSimultaneousStop(t *testing.T)](#TestNotifyContextSimultaneousStop)
-    * [func TestNotifyContextStringer(t *testing.T)](#TestNotifyContextStringer)
-    * [func TestSignalTrace(t *testing.T)](#TestSignalTrace)
+    * [func waitSig(t *testing.T, c <-chan os.Signal, sig os.Signal)](#waitSig)
+    * [func waitSig1(t *testing.T, c <-chan os.Signal, sig os.Signal, all bool)](#waitSig1)
+    * [func waitSigAll(t *testing.T, c <-chan os.Signal, sig os.Signal)](#waitSigAll)
 
 
 ## <a id="const" href="#const">Constants</a>
+
+```
+tags: [package]
+```
 
 ### <a id="numSig" href="#numSig">const numSig</a>
 
 ```
 searchKey: signal.numSig
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -165,11 +169,59 @@ const numSig = 65 // max across all systems
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [package]
+```
+
+### <a id="checkNotifyContext" href="#checkNotifyContext">var checkNotifyContext</a>
+
+```
+searchKey: signal.checkNotifyContext
+tags: [variable boolean private]
+```
+
+```Go
+var checkNotifyContext = ...
+```
+
+### <a id="checkSighupIgnored" href="#checkSighupIgnored">var checkSighupIgnored</a>
+
+```
+searchKey: signal.checkSighupIgnored
+tags: [variable boolean private]
+```
+
+```Go
+var checkSighupIgnored = ...
+```
+
+### <a id="ctxNotifyTimes" href="#ctxNotifyTimes">var ctxNotifyTimes</a>
+
+```
+searchKey: signal.ctxNotifyTimes
+tags: [variable number private]
+```
+
+```Go
+var ctxNotifyTimes = ...
+```
+
+### <a id="dieFromSighup" href="#dieFromSighup">var dieFromSighup</a>
+
+```
+searchKey: signal.dieFromSighup
+tags: [variable boolean private]
+```
+
+```Go
+var dieFromSighup = flag.Bool("die_from_sighup", false, "wait to die from uncaught SIGHUP")
+```
+
 ### <a id="handlers" href="#handlers">var handlers</a>
 
 ```
 searchKey: signal.handlers
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -188,35 +240,22 @@ var handlers struct {
 } = ...
 ```
 
-### <a id="watchSignalLoopOnce" href="#watchSignalLoopOnce">var watchSignalLoopOnce</a>
+### <a id="sendUncaughtSighup" href="#sendUncaughtSighup">var sendUncaughtSighup</a>
 
 ```
-searchKey: signal.watchSignalLoopOnce
-tags: [private]
-```
-
-```Go
-var watchSignalLoopOnce sync.Once
-```
-
-watchSignalLoopOnce guards calling the conditionally initialized watchSignalLoop. If watchSignalLoop is non-nil, it will be run in a goroutine lazily once Notify is invoked. See Issue 21576. 
-
-### <a id="watchSignalLoop" href="#watchSignalLoop">var watchSignalLoop</a>
-
-```
-searchKey: signal.watchSignalLoop
-tags: [private]
+searchKey: signal.sendUncaughtSighup
+tags: [variable number private]
 ```
 
 ```Go
-var watchSignalLoop func()
+var sendUncaughtSighup = flag.Int("send_uncaught_sighup", 0, "send uncaught SIGHUP during TestStop")
 ```
 
 ### <a id="settleTime" href="#settleTime">var settleTime</a>
 
 ```
 searchKey: signal.settleTime
-tags: [private]
+tags: [variable number private]
 ```
 
 ```Go
@@ -227,82 +266,41 @@ settleTime is an upper bound on how long we expect signals to take to be deliver
 
 The current value is set based on flakes observed in the Go builders. 
 
-### <a id="checkSighupIgnored" href="#checkSighupIgnored">var checkSighupIgnored</a>
+### <a id="watchSignalLoop" href="#watchSignalLoop">var watchSignalLoop</a>
 
 ```
-searchKey: signal.checkSighupIgnored
-tags: [private]
-```
-
-```Go
-var checkSighupIgnored = ...
-```
-
-### <a id="sendUncaughtSighup" href="#sendUncaughtSighup">var sendUncaughtSighup</a>
-
-```
-searchKey: signal.sendUncaughtSighup
-tags: [private]
+searchKey: signal.watchSignalLoop
+tags: [variable function private]
 ```
 
 ```Go
-var sendUncaughtSighup = flag.Int("send_uncaught_sighup", 0, "send uncaught SIGHUP during TestStop")
+var watchSignalLoop func()
 ```
 
-### <a id="dieFromSighup" href="#dieFromSighup">var dieFromSighup</a>
+### <a id="watchSignalLoopOnce" href="#watchSignalLoopOnce">var watchSignalLoopOnce</a>
 
 ```
-searchKey: signal.dieFromSighup
-tags: [private]
-```
-
-```Go
-var dieFromSighup = flag.Bool("die_from_sighup", false, "wait to die from uncaught SIGHUP")
-```
-
-### <a id="checkNotifyContext" href="#checkNotifyContext">var checkNotifyContext</a>
-
-```
-searchKey: signal.checkNotifyContext
-tags: [private]
+searchKey: signal.watchSignalLoopOnce
+tags: [variable struct private]
 ```
 
 ```Go
-var checkNotifyContext = ...
+var watchSignalLoopOnce sync.Once
 ```
 
-### <a id="ctxNotifyTimes" href="#ctxNotifyTimes">var ctxNotifyTimes</a>
-
-```
-searchKey: signal.ctxNotifyTimes
-tags: [private]
-```
-
-```Go
-var ctxNotifyTimes = ...
-```
+watchSignalLoopOnce guards calling the conditionally initialized watchSignalLoop. If watchSignalLoop is non-nil, it will be run in a goroutine lazily once Notify is invoked. See Issue 21576. 
 
 ## <a id="type" href="#type">Types</a>
 
-### <a id="stopping" href="#stopping">type stopping struct</a>
-
 ```
-searchKey: signal.stopping
-tags: [private]
-```
-
-```Go
-type stopping struct {
-	c chan<- os.Signal
-	h *handler
-}
+tags: [package]
 ```
 
 ### <a id="handler" href="#handler">type handler struct</a>
 
 ```
 searchKey: signal.handler
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -311,44 +309,44 @@ type handler struct {
 }
 ```
 
-#### <a id="handler.want" href="#handler.want">func (h *handler) want(sig int) bool</a>
-
-```
-searchKey: signal.handler.want
-tags: [private]
-```
-
-```Go
-func (h *handler) want(sig int) bool
-```
-
-#### <a id="handler.set" href="#handler.set">func (h *handler) set(sig int)</a>
-
-```
-searchKey: signal.handler.set
-tags: [private]
-```
-
-```Go
-func (h *handler) set(sig int)
-```
-
 #### <a id="handler.clear" href="#handler.clear">func (h *handler) clear(sig int)</a>
 
 ```
 searchKey: signal.handler.clear
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (h *handler) clear(sig int)
 ```
 
+#### <a id="handler.set" href="#handler.set">func (h *handler) set(sig int)</a>
+
+```
+searchKey: signal.handler.set
+tags: [method private]
+```
+
+```Go
+func (h *handler) set(sig int)
+```
+
+#### <a id="handler.want" href="#handler.want">func (h *handler) want(sig int) bool</a>
+
+```
+searchKey: signal.handler.want
+tags: [method private]
+```
+
+```Go
+func (h *handler) want(sig int) bool
+```
+
 ### <a id="signalCtx" href="#signalCtx">type signalCtx struct</a>
 
 ```
 searchKey: signal.signalCtx
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -361,33 +359,47 @@ type signalCtx struct {
 }
 ```
 
-#### <a id="signalCtx.stop" href="#signalCtx.stop">func (c *signalCtx) stop()</a>
-
-```
-searchKey: signal.signalCtx.stop
-tags: [private]
-```
-
-```Go
-func (c *signalCtx) stop()
-```
-
 #### <a id="signalCtx.String" href="#signalCtx.String">func (c *signalCtx) String() string</a>
 
 ```
 searchKey: signal.signalCtx.String
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (c *signalCtx) String() string
 ```
 
+#### <a id="signalCtx.stop" href="#signalCtx.stop">func (c *signalCtx) stop()</a>
+
+```
+searchKey: signal.signalCtx.stop
+tags: [function private]
+```
+
+```Go
+func (c *signalCtx) stop()
+```
+
+### <a id="stopping" href="#stopping">type stopping struct</a>
+
+```
+searchKey: signal.stopping
+tags: [struct private]
+```
+
+```Go
+type stopping struct {
+	c chan<- os.Signal
+	h *handler
+}
+```
+
 ### <a id="stringer" href="#stringer">type stringer interface</a>
 
 ```
 searchKey: signal.stringer
-tags: [private]
+tags: [interface private]
 ```
 
 ```Go
@@ -398,23 +410,15 @@ type stringer interface {
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="cancel" href="#cancel">func cancel(sigs []os.Signal, action func(int))</a>
-
 ```
-searchKey: signal.cancel
-tags: [private]
+tags: [package]
 ```
-
-```Go
-func cancel(sigs []os.Signal, action func(int))
-```
-
-Stop relaying the signals, sigs, to any channels previously registered to receive them and either reset the signal handlers to their original values (action=disableSignal) or ignore the signals (action=ignoreSignal). 
 
 ### <a id="Ignore" href="#Ignore">func Ignore(sig ...os.Signal)</a>
 
 ```
 searchKey: signal.Ignore
+tags: [method]
 ```
 
 ```Go
@@ -427,6 +431,7 @@ Ignore causes the provided signals to be ignored. If they are received by the pr
 
 ```
 searchKey: signal.Ignored
+tags: [method]
 ```
 
 ```Go
@@ -439,6 +444,7 @@ Ignored reports whether sig is currently ignored.
 
 ```
 searchKey: signal.Notify
+tags: [method]
 ```
 
 ```Go
@@ -453,58 +459,11 @@ It is allowed to call Notify multiple times with the same channel: each call exp
 
 It is allowed to call Notify multiple times with different channels and the same signals: each channel receives copies of incoming signals independently. 
 
-### <a id="Reset" href="#Reset">func Reset(sig ...os.Signal)</a>
-
-```
-searchKey: signal.Reset
-```
-
-```Go
-func Reset(sig ...os.Signal)
-```
-
-Reset undoes the effect of any prior calls to Notify for the provided signals. If no signals are provided, all signal handlers will be reset. 
-
-### <a id="Stop" href="#Stop">func Stop(c chan<- os.Signal)</a>
-
-```
-searchKey: signal.Stop
-```
-
-```Go
-func Stop(c chan<- os.Signal)
-```
-
-Stop causes package signal to stop relaying incoming signals to c. It undoes the effect of all prior calls to Notify using c. When Stop returns, it is guaranteed that c will receive no more signals. 
-
-### <a id="signalWaitUntilIdle" href="#signalWaitUntilIdle">func signalWaitUntilIdle()</a>
-
-```
-searchKey: signal.signalWaitUntilIdle
-tags: [private]
-```
-
-```Go
-func signalWaitUntilIdle()
-```
-
-Wait until there are no more signals waiting to be delivered. Defined by the runtime package. 
-
-### <a id="process" href="#process">func process(sig os.Signal)</a>
-
-```
-searchKey: signal.process
-tags: [private]
-```
-
-```Go
-func process(sig os.Signal)
-```
-
 ### <a id="NotifyContext" href="#NotifyContext">func NotifyContext(parent context.Context, signals ...os.Signal) (ctx context.Context, stop context.CancelFunc)</a>
 
 ```
 searchKey: signal.NotifyContext
+tags: [method]
 ```
 
 ```Go
@@ -517,250 +476,63 @@ The stop function unregisters the signal behavior, which, like signal.Reset, may
 
 The stop function releases resources associated with it, so code should call stop as soon as the operations running in this Context complete and signals no longer need to be diverted to the context. 
 
-### <a id="signal_disable" href="#signal_disable">func signal_disable(uint32)</a>
+### <a id="Reset" href="#Reset">func Reset(sig ...os.Signal)</a>
 
 ```
-searchKey: signal.signal_disable
-tags: [private]
-```
-
-```Go
-func signal_disable(uint32)
-```
-
-Defined by the runtime package. 
-
-### <a id="signal_enable" href="#signal_enable">func signal_enable(uint32)</a>
-
-```
-searchKey: signal.signal_enable
-tags: [private]
+searchKey: signal.Reset
+tags: [method]
 ```
 
 ```Go
-func signal_enable(uint32)
+func Reset(sig ...os.Signal)
 ```
 
-### <a id="signal_ignore" href="#signal_ignore">func signal_ignore(uint32)</a>
+Reset undoes the effect of any prior calls to Notify for the provided signals. If no signals are provided, all signal handlers will be reset. 
+
+### <a id="Stop" href="#Stop">func Stop(c chan<- os.Signal)</a>
 
 ```
-searchKey: signal.signal_ignore
-tags: [private]
-```
-
-```Go
-func signal_ignore(uint32)
-```
-
-### <a id="signal_ignored" href="#signal_ignored">func signal_ignored(uint32) bool</a>
-
-```
-searchKey: signal.signal_ignored
-tags: [private]
+searchKey: signal.Stop
+tags: [method]
 ```
 
 ```Go
-func signal_ignored(uint32) bool
+func Stop(c chan<- os.Signal)
 ```
 
-### <a id="signal_recv" href="#signal_recv">func signal_recv() uint32</a>
+Stop causes package signal to stop relaying incoming signals to c. It undoes the effect of all prior calls to Notify using c. When Stop returns, it is guaranteed that c will receive no more signals. 
+
+### <a id="TestAtomicStop" href="#TestAtomicStop">func TestAtomicStop(t *testing.T)</a>
 
 ```
-searchKey: signal.signal_recv
-tags: [private]
-```
-
-```Go
-func signal_recv() uint32
-```
-
-### <a id="loop" href="#loop">func loop()</a>
-
-```
-searchKey: signal.loop
-tags: [private]
+searchKey: signal.TestAtomicStop
+tags: [method private test]
 ```
 
 ```Go
-func loop()
+func TestAtomicStop(t *testing.T)
 ```
 
-### <a id="init.signal_unix.go" href="#init.signal_unix.go">func init()</a>
+Test race between stopping and receiving a signal (issue 14571). 
+
+### <a id="TestDetectNohup" href="#TestDetectNohup">func TestDetectNohup(t *testing.T)</a>
 
 ```
-searchKey: signal.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
-### <a id="signum" href="#signum">func signum(sig os.Signal) int</a>
-
-```
-searchKey: signal.signum
-tags: [private]
+searchKey: signal.TestDetectNohup
+tags: [method private test]
 ```
 
 ```Go
-func signum(sig os.Signal) int
+func TestDetectNohup(t *testing.T)
 ```
 
-### <a id="enableSignal" href="#enableSignal">func enableSignal(sig int)</a>
-
-```
-searchKey: signal.enableSignal
-tags: [private]
-```
-
-```Go
-func enableSignal(sig int)
-```
-
-### <a id="disableSignal" href="#disableSignal">func disableSignal(sig int)</a>
-
-```
-searchKey: signal.disableSignal
-tags: [private]
-```
-
-```Go
-func disableSignal(sig int)
-```
-
-### <a id="ignoreSignal" href="#ignoreSignal">func ignoreSignal(sig int)</a>
-
-```
-searchKey: signal.ignoreSignal
-tags: [private]
-```
-
-```Go
-func ignoreSignal(sig int)
-```
-
-### <a id="signalIgnored" href="#signalIgnored">func signalIgnored(sig int) bool</a>
-
-```
-searchKey: signal.signalIgnored
-tags: [private]
-```
-
-```Go
-func signalIgnored(sig int) bool
-```
-
-### <a id="init.signal_test.go" href="#init.signal_test.go">func init()</a>
-
-```
-searchKey: signal.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
-### <a id="waitSig" href="#waitSig">func waitSig(t *testing.T, c <-chan os.Signal, sig os.Signal)</a>
-
-```
-searchKey: signal.waitSig
-tags: [private]
-```
-
-```Go
-func waitSig(t *testing.T, c <-chan os.Signal, sig os.Signal)
-```
-
-### <a id="waitSigAll" href="#waitSigAll">func waitSigAll(t *testing.T, c <-chan os.Signal, sig os.Signal)</a>
-
-```
-searchKey: signal.waitSigAll
-tags: [private]
-```
-
-```Go
-func waitSigAll(t *testing.T, c <-chan os.Signal, sig os.Signal)
-```
-
-### <a id="waitSig1" href="#waitSig1">func waitSig1(t *testing.T, c <-chan os.Signal, sig os.Signal, all bool)</a>
-
-```
-searchKey: signal.waitSig1
-tags: [private]
-```
-
-```Go
-func waitSig1(t *testing.T, c <-chan os.Signal, sig os.Signal, all bool)
-```
-
-### <a id="quiesce" href="#quiesce">func quiesce()</a>
-
-```
-searchKey: signal.quiesce
-tags: [private]
-```
-
-```Go
-func quiesce()
-```
-
-quiesce waits until we can be reasonably confident that all pending signals have been delivered by the OS. 
-
-### <a id="TestSignal" href="#TestSignal">func TestSignal(t *testing.T)</a>
-
-```
-searchKey: signal.TestSignal
-tags: [private]
-```
-
-```Go
-func TestSignal(t *testing.T)
-```
-
-Test that basic signal handling works. 
-
-### <a id="TestStress" href="#TestStress">func TestStress(t *testing.T)</a>
-
-```
-searchKey: signal.TestStress
-tags: [private]
-```
-
-```Go
-func TestStress(t *testing.T)
-```
-
-### <a id="testCancel" href="#testCancel">func testCancel(t *testing.T, ignore bool)</a>
-
-```
-searchKey: signal.testCancel
-tags: [private]
-```
-
-```Go
-func testCancel(t *testing.T, ignore bool)
-```
-
-### <a id="TestReset" href="#TestReset">func TestReset(t *testing.T)</a>
-
-```
-searchKey: signal.TestReset
-tags: [private]
-```
-
-```Go
-func TestReset(t *testing.T)
-```
-
-Test that Reset cancels registration for listed signals on all channels. 
+Test that Ignored(SIGHUP) correctly detects whether it is being run under nohup. 
 
 ### <a id="TestIgnore" href="#TestIgnore">func TestIgnore(t *testing.T)</a>
 
 ```
 searchKey: signal.TestIgnore
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -773,7 +545,7 @@ Test that Ignore cancels registration for listed signals on all channels.
 
 ```
 searchKey: signal.TestIgnored
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -782,37 +554,11 @@ func TestIgnored(t *testing.T)
 
 Test that Ignored correctly detects changes to the ignored status of a signal. 
 
-### <a id="TestDetectNohup" href="#TestDetectNohup">func TestDetectNohup(t *testing.T)</a>
-
-```
-searchKey: signal.TestDetectNohup
-tags: [private]
-```
-
-```Go
-func TestDetectNohup(t *testing.T)
-```
-
-Test that Ignored(SIGHUP) correctly detects whether it is being run under nohup. 
-
-### <a id="TestStop" href="#TestStop">func TestStop(t *testing.T)</a>
-
-```
-searchKey: signal.TestStop
-tags: [private]
-```
-
-```Go
-func TestStop(t *testing.T)
-```
-
-Test that Stop cancels the channel's registrations. 
-
 ### <a id="TestNohup" href="#TestNohup">func TestNohup(t *testing.T)</a>
 
 ```
 searchKey: signal.TestNohup
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -821,94 +567,33 @@ func TestNohup(t *testing.T)
 
 Test that when run under nohup, an uncaught SIGHUP does not kill the program. 
 
-### <a id="TestSIGCONT" href="#TestSIGCONT">func TestSIGCONT(t *testing.T)</a>
-
-```
-searchKey: signal.TestSIGCONT
-tags: [private]
-```
-
-```Go
-func TestSIGCONT(t *testing.T)
-```
-
-Test that SIGCONT works (issue 8953). 
-
-### <a id="TestAtomicStop" href="#TestAtomicStop">func TestAtomicStop(t *testing.T)</a>
-
-```
-searchKey: signal.TestAtomicStop
-tags: [private]
-```
-
-```Go
-func TestAtomicStop(t *testing.T)
-```
-
-Test race between stopping and receiving a signal (issue 14571). 
-
-### <a id="atomicStopTestProgram" href="#atomicStopTestProgram">func atomicStopTestProgram(t *testing.T)</a>
-
-```
-searchKey: signal.atomicStopTestProgram
-tags: [private]
-```
-
-```Go
-func atomicStopTestProgram(t *testing.T)
-```
-
-atomicStopTestProgram is run in a subprocess by TestAtomicStop. It tries to trigger a signal delivery race. This function should either catch a signal or die from it. 
-
-### <a id="TestTime" href="#TestTime">func TestTime(t *testing.T)</a>
-
-```
-searchKey: signal.TestTime
-tags: [private]
-```
-
-```Go
-func TestTime(t *testing.T)
-```
-
-### <a id="TestNotifyContextNotifications" href="#TestNotifyContextNotifications">func TestNotifyContextNotifications(t *testing.T)</a>
-
-```
-searchKey: signal.TestNotifyContextNotifications
-tags: [private]
-```
-
-```Go
-func TestNotifyContextNotifications(t *testing.T)
-```
-
-### <a id="TestNotifyContextStop" href="#TestNotifyContextStop">func TestNotifyContextStop(t *testing.T)</a>
-
-```
-searchKey: signal.TestNotifyContextStop
-tags: [private]
-```
-
-```Go
-func TestNotifyContextStop(t *testing.T)
-```
-
 ### <a id="TestNotifyContextCancelParent" href="#TestNotifyContextCancelParent">func TestNotifyContextCancelParent(t *testing.T)</a>
 
 ```
 searchKey: signal.TestNotifyContextCancelParent
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestNotifyContextCancelParent(t *testing.T)
 ```
 
+### <a id="TestNotifyContextNotifications" href="#TestNotifyContextNotifications">func TestNotifyContextNotifications(t *testing.T)</a>
+
+```
+searchKey: signal.TestNotifyContextNotifications
+tags: [method private test]
+```
+
+```Go
+func TestNotifyContextNotifications(t *testing.T)
+```
+
 ### <a id="TestNotifyContextPrematureCancelParent" href="#TestNotifyContextPrematureCancelParent">func TestNotifyContextPrematureCancelParent(t *testing.T)</a>
 
 ```
 searchKey: signal.TestNotifyContextPrematureCancelParent
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -919,29 +604,79 @@ func TestNotifyContextPrematureCancelParent(t *testing.T)
 
 ```
 searchKey: signal.TestNotifyContextSimultaneousStop
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestNotifyContextSimultaneousStop(t *testing.T)
 ```
 
+### <a id="TestNotifyContextStop" href="#TestNotifyContextStop">func TestNotifyContextStop(t *testing.T)</a>
+
+```
+searchKey: signal.TestNotifyContextStop
+tags: [method private test]
+```
+
+```Go
+func TestNotifyContextStop(t *testing.T)
+```
+
 ### <a id="TestNotifyContextStringer" href="#TestNotifyContextStringer">func TestNotifyContextStringer(t *testing.T)</a>
 
 ```
 searchKey: signal.TestNotifyContextStringer
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestNotifyContextStringer(t *testing.T)
 ```
 
+### <a id="TestReset" href="#TestReset">func TestReset(t *testing.T)</a>
+
+```
+searchKey: signal.TestReset
+tags: [method private test]
+```
+
+```Go
+func TestReset(t *testing.T)
+```
+
+Test that Reset cancels registration for listed signals on all channels. 
+
+### <a id="TestSIGCONT" href="#TestSIGCONT">func TestSIGCONT(t *testing.T)</a>
+
+```
+searchKey: signal.TestSIGCONT
+tags: [method private test]
+```
+
+```Go
+func TestSIGCONT(t *testing.T)
+```
+
+Test that SIGCONT works (issue 8953). 
+
+### <a id="TestSignal" href="#TestSignal">func TestSignal(t *testing.T)</a>
+
+```
+searchKey: signal.TestSignal
+tags: [method private test]
+```
+
+```Go
+func TestSignal(t *testing.T)
+```
+
+Test that basic signal handling works. 
+
 ### <a id="TestSignalTrace" href="#TestSignalTrace">func TestSignalTrace(t *testing.T)</a>
 
 ```
 searchKey: signal.TestSignalTrace
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -949,4 +684,291 @@ func TestSignalTrace(t *testing.T)
 ```
 
 #44193 test signal handling while stopping and starting the world. 
+
+### <a id="TestStop" href="#TestStop">func TestStop(t *testing.T)</a>
+
+```
+searchKey: signal.TestStop
+tags: [method private test]
+```
+
+```Go
+func TestStop(t *testing.T)
+```
+
+Test that Stop cancels the channel's registrations. 
+
+### <a id="TestStress" href="#TestStress">func TestStress(t *testing.T)</a>
+
+```
+searchKey: signal.TestStress
+tags: [method private test]
+```
+
+```Go
+func TestStress(t *testing.T)
+```
+
+### <a id="TestTime" href="#TestTime">func TestTime(t *testing.T)</a>
+
+```
+searchKey: signal.TestTime
+tags: [method private test]
+```
+
+```Go
+func TestTime(t *testing.T)
+```
+
+### <a id="atomicStopTestProgram" href="#atomicStopTestProgram">func atomicStopTestProgram(t *testing.T)</a>
+
+```
+searchKey: signal.atomicStopTestProgram
+tags: [method private]
+```
+
+```Go
+func atomicStopTestProgram(t *testing.T)
+```
+
+atomicStopTestProgram is run in a subprocess by TestAtomicStop. It tries to trigger a signal delivery race. This function should either catch a signal or die from it. 
+
+### <a id="cancel" href="#cancel">func cancel(sigs []os.Signal, action func(int))</a>
+
+```
+searchKey: signal.cancel
+tags: [method private]
+```
+
+```Go
+func cancel(sigs []os.Signal, action func(int))
+```
+
+Stop relaying the signals, sigs, to any channels previously registered to receive them and either reset the signal handlers to their original values (action=disableSignal) or ignore the signals (action=ignoreSignal). 
+
+### <a id="disableSignal" href="#disableSignal">func disableSignal(sig int)</a>
+
+```
+searchKey: signal.disableSignal
+tags: [method private]
+```
+
+```Go
+func disableSignal(sig int)
+```
+
+### <a id="enableSignal" href="#enableSignal">func enableSignal(sig int)</a>
+
+```
+searchKey: signal.enableSignal
+tags: [method private]
+```
+
+```Go
+func enableSignal(sig int)
+```
+
+### <a id="ignoreSignal" href="#ignoreSignal">func ignoreSignal(sig int)</a>
+
+```
+searchKey: signal.ignoreSignal
+tags: [method private]
+```
+
+```Go
+func ignoreSignal(sig int)
+```
+
+### <a id="init.signal_test.go" href="#init.signal_test.go">func init()</a>
+
+```
+searchKey: signal.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="init.signal_unix.go" href="#init.signal_unix.go">func init()</a>
+
+```
+searchKey: signal.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="loop" href="#loop">func loop()</a>
+
+```
+searchKey: signal.loop
+tags: [function private]
+```
+
+```Go
+func loop()
+```
+
+### <a id="process" href="#process">func process(sig os.Signal)</a>
+
+```
+searchKey: signal.process
+tags: [method private]
+```
+
+```Go
+func process(sig os.Signal)
+```
+
+### <a id="quiesce" href="#quiesce">func quiesce()</a>
+
+```
+searchKey: signal.quiesce
+tags: [function private]
+```
+
+```Go
+func quiesce()
+```
+
+quiesce waits until we can be reasonably confident that all pending signals have been delivered by the OS. 
+
+### <a id="signalIgnored" href="#signalIgnored">func signalIgnored(sig int) bool</a>
+
+```
+searchKey: signal.signalIgnored
+tags: [method private]
+```
+
+```Go
+func signalIgnored(sig int) bool
+```
+
+### <a id="signalWaitUntilIdle" href="#signalWaitUntilIdle">func signalWaitUntilIdle()</a>
+
+```
+searchKey: signal.signalWaitUntilIdle
+tags: [function private]
+```
+
+```Go
+func signalWaitUntilIdle()
+```
+
+Wait until there are no more signals waiting to be delivered. Defined by the runtime package. 
+
+### <a id="signal_disable" href="#signal_disable">func signal_disable(uint32)</a>
+
+```
+searchKey: signal.signal_disable
+tags: [method private]
+```
+
+```Go
+func signal_disable(uint32)
+```
+
+Defined by the runtime package. 
+
+### <a id="signal_enable" href="#signal_enable">func signal_enable(uint32)</a>
+
+```
+searchKey: signal.signal_enable
+tags: [method private]
+```
+
+```Go
+func signal_enable(uint32)
+```
+
+### <a id="signal_ignore" href="#signal_ignore">func signal_ignore(uint32)</a>
+
+```
+searchKey: signal.signal_ignore
+tags: [method private]
+```
+
+```Go
+func signal_ignore(uint32)
+```
+
+### <a id="signal_ignored" href="#signal_ignored">func signal_ignored(uint32) bool</a>
+
+```
+searchKey: signal.signal_ignored
+tags: [method private]
+```
+
+```Go
+func signal_ignored(uint32) bool
+```
+
+### <a id="signal_recv" href="#signal_recv">func signal_recv() uint32</a>
+
+```
+searchKey: signal.signal_recv
+tags: [function private]
+```
+
+```Go
+func signal_recv() uint32
+```
+
+### <a id="signum" href="#signum">func signum(sig os.Signal) int</a>
+
+```
+searchKey: signal.signum
+tags: [method private]
+```
+
+```Go
+func signum(sig os.Signal) int
+```
+
+### <a id="testCancel" href="#testCancel">func testCancel(t *testing.T, ignore bool)</a>
+
+```
+searchKey: signal.testCancel
+tags: [method private]
+```
+
+```Go
+func testCancel(t *testing.T, ignore bool)
+```
+
+### <a id="waitSig" href="#waitSig">func waitSig(t *testing.T, c <-chan os.Signal, sig os.Signal)</a>
+
+```
+searchKey: signal.waitSig
+tags: [method private]
+```
+
+```Go
+func waitSig(t *testing.T, c <-chan os.Signal, sig os.Signal)
+```
+
+### <a id="waitSig1" href="#waitSig1">func waitSig1(t *testing.T, c <-chan os.Signal, sig os.Signal, all bool)</a>
+
+```
+searchKey: signal.waitSig1
+tags: [method private]
+```
+
+```Go
+func waitSig1(t *testing.T, c <-chan os.Signal, sig os.Signal, all bool)
+```
+
+### <a id="waitSigAll" href="#waitSigAll">func waitSigAll(t *testing.T, c <-chan os.Signal, sig os.Signal)</a>
+
+```
+searchKey: signal.waitSigAll
+tags: [method private]
+```
+
+```Go
+func waitSigAll(t *testing.T, c <-chan os.Signal, sig os.Signal)
+```
 

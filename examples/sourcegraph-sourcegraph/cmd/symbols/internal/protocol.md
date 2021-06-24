@@ -9,13 +9,14 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="SearchArgs" href="#SearchArgs">type SearchArgs struct</a>
 
 ```
 searchKey: protocol.SearchArgs
+tags: [struct]
 ```
 
 ```Go

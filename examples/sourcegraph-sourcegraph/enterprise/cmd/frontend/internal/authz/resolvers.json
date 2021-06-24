@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/authz/resolvers",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "resolvers.errDisabledSourcegraphDotCom",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -67,6 +71,8 @@
                 "newPage": false,
                 "searchKey": "resolvers.now",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -83,34 +89,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#parseSchemaOnce",
-              "documentation": {
-                "identifier": "parseSchemaOnce",
-                "newPage": false,
-                "searchKey": "resolvers.parseSchemaOnce",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var parseSchemaOnce"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar parseSchemaOnce sync.Once\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#parseSchemaErr",
               "documentation": {
                 "identifier": "parseSchemaErr",
                 "newPage": false,
                 "searchKey": "resolvers.parseSchemaErr",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -127,12 +113,38 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#parseSchemaOnce",
+              "documentation": {
+                "identifier": "parseSchemaOnce",
+                "newPage": false,
+                "searchKey": "resolvers.parseSchemaOnce",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var parseSchemaOnce"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar parseSchemaOnce sync.Once\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#parsedSchema",
               "documentation": {
                 "identifier": "parsedSchema",
                 "newPage": false,
                 "searchKey": "resolvers.parsedSchema",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -158,6 +170,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -172,123 +185,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#repositoryConnectionResolver",
-              "documentation": {
-                "identifier": "repositoryConnectionResolver",
-                "newPage": false,
-                "searchKey": "resolvers.repositoryConnectionResolver",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type repositoryConnectionResolver struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype repositoryConnectionResolver struct {\n\tdb  dbutil.DB\n\tids *roaring.Bitmap\n\n\tfirst int32\n\tafter *string\n\n\t// cache results because they are used by multiple fields\n\tonce     sync.Once\n\trepos    []*types.Repo\n\tpageInfo *graphqlutil.PageInfo\n\terr      error\n}\n```\n\nrepositoryConnectionResolver resolves a list of repositories from the roaring bitmap with pagination. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#repositoryConnectionResolver.compute",
-                    "documentation": {
-                      "identifier": "repositoryConnectionResolver.compute",
-                      "newPage": false,
-                      "searchKey": "resolvers.repositoryConnectionResolver.compute",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *repositoryConnectionResolver) compute(ctx context.Context) ([]*types.Repo, *graphqlutil.PageInfo, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *repositoryConnectionResolver) compute(ctx context.Context) ([]*types.Repo, *graphqlutil.PageInfo, error)\n```\n\n🚨 SECURITY: It is the caller's responsibility to ensure the current authenticated user is the site admin because this method computes data from all available information in the database. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#repositoryConnectionResolver.Nodes",
-                    "documentation": {
-                      "identifier": "repositoryConnectionResolver.Nodes",
-                      "newPage": false,
-                      "searchKey": "resolvers.repositoryConnectionResolver.Nodes",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *repositoryConnectionResolver) Nodes(ctx context.Context) ([]*graphqlbackend.RepositoryResolver, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *repositoryConnectionResolver) Nodes(ctx context.Context) ([]*graphqlbackend.RepositoryResolver, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#repositoryConnectionResolver.TotalCount",
-                    "documentation": {
-                      "identifier": "repositoryConnectionResolver.TotalCount",
-                      "newPage": false,
-                      "searchKey": "resolvers.repositoryConnectionResolver.TotalCount",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *repositoryConnectionResolver) TotalCount(ctx context.Context, args *graphqlbackend.TotalCountArgs) (*int32, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *repositoryConnectionResolver) TotalCount(ctx context.Context, args *graphqlbackend.TotalCountArgs) (*int32, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#repositoryConnectionResolver.PageInfo",
-                    "documentation": {
-                      "identifier": "repositoryConnectionResolver.PageInfo",
-                      "newPage": false,
-                      "searchKey": "resolvers.repositoryConnectionResolver.PageInfo",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *repositoryConnectionResolver) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *repositoryConnectionResolver) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#Resolver",
               "documentation": {
                 "identifier": "Resolver",
                 "newPage": false,
                 "searchKey": "resolvers.Resolver",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -301,94 +205,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#Resolver.checkLicense",
-                    "documentation": {
-                      "identifier": "Resolver.checkLicense",
-                      "newPage": false,
-                      "searchKey": "resolvers.Resolver.checkLicense",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Resolver) checkLicense() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Resolver) checkLicense() error\n```\n\ncheckLicense returns a user-facing error if the ACLs feature is not purchased with the current license or any error occurred while validating the licence. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#Resolver.SetRepositoryPermissionsForUsers",
-                    "documentation": {
-                      "identifier": "Resolver.SetRepositoryPermissionsForUsers",
-                      "newPage": false,
-                      "searchKey": "resolvers.Resolver.SetRepositoryPermissionsForUsers",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Resolver) SetRepositoryPermissionsForUsers(ctx context.Context, args *graphqlbackend.RepoPermsArgs) (resp *graphqlbackend.EmptyResponse, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Resolver) SetRepositoryPermissionsForUsers(ctx context.Context, args *graphqlbackend.RepoPermsArgs) (resp *graphqlbackend.EmptyResponse, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#Resolver.ScheduleRepositoryPermissionsSync",
-                    "documentation": {
-                      "identifier": "Resolver.ScheduleRepositoryPermissionsSync",
-                      "newPage": false,
-                      "searchKey": "resolvers.Resolver.ScheduleRepositoryPermissionsSync",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Resolver) ScheduleRepositoryPermissionsSync(ctx context.Context, args *graphqlbackend.RepositoryIDArgs) (*graphqlbackend.EmptyResponse, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Resolver) ScheduleRepositoryPermissionsSync(ctx context.Context, args *graphqlbackend.RepositoryIDArgs) (*graphqlbackend.EmptyResponse, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#Resolver.ScheduleUserPermissionsSync",
-                    "documentation": {
-                      "identifier": "Resolver.ScheduleUserPermissionsSync",
-                      "newPage": false,
-                      "searchKey": "resolvers.Resolver.ScheduleUserPermissionsSync",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Resolver) ScheduleUserPermissionsSync(ctx context.Context, args *graphqlbackend.UserIDArgs) (*graphqlbackend.EmptyResponse, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Resolver) ScheduleUserPermissionsSync(ctx context.Context, args *graphqlbackend.UserIDArgs) (*graphqlbackend.EmptyResponse, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#Resolver.AuthorizedUserRepositories",
                     "documentation": {
                       "identifier": "Resolver.AuthorizedUserRepositories",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.AuthorizedUserRepositories",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -403,32 +227,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#Resolver.UsersWithPendingPermissions",
-                    "documentation": {
-                      "identifier": "Resolver.UsersWithPendingPermissions",
-                      "newPage": false,
-                      "searchKey": "resolvers.Resolver.UsersWithPendingPermissions",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Resolver) UsersWithPendingPermissions(ctx context.Context) ([]string, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Resolver) UsersWithPendingPermissions(ctx context.Context) ([]string, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#Resolver.AuthorizedUsers",
                     "documentation": {
                       "identifier": "Resolver.AuthorizedUsers",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.AuthorizedUsers",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -448,7 +254,9 @@
                       "identifier": "Resolver.RepositoryPermissionsInfo",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.RepositoryPermissionsInfo",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -463,12 +271,80 @@
                 },
                 {
                   "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#Resolver.ScheduleRepositoryPermissionsSync",
+                    "documentation": {
+                      "identifier": "Resolver.ScheduleRepositoryPermissionsSync",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.ScheduleRepositoryPermissionsSync",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) ScheduleRepositoryPermissionsSync(ctx context.Context, args *graphqlbackend.RepositoryIDArgs) (*graphqlbackend.EmptyResponse, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) ScheduleRepositoryPermissionsSync(ctx context.Context, args *graphqlbackend.RepositoryIDArgs) (*graphqlbackend.EmptyResponse, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#Resolver.ScheduleUserPermissionsSync",
+                    "documentation": {
+                      "identifier": "Resolver.ScheduleUserPermissionsSync",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.ScheduleUserPermissionsSync",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) ScheduleUserPermissionsSync(ctx context.Context, args *graphqlbackend.UserIDArgs) (*graphqlbackend.EmptyResponse, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) ScheduleUserPermissionsSync(ctx context.Context, args *graphqlbackend.UserIDArgs) (*graphqlbackend.EmptyResponse, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#Resolver.SetRepositoryPermissionsForUsers",
+                    "documentation": {
+                      "identifier": "Resolver.SetRepositoryPermissionsForUsers",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.SetRepositoryPermissionsForUsers",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) SetRepositoryPermissionsForUsers(ctx context.Context, args *graphqlbackend.RepoPermsArgs) (resp *graphqlbackend.EmptyResponse, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) SetRepositoryPermissionsForUsers(ctx context.Context, args *graphqlbackend.RepoPermsArgs) (resp *graphqlbackend.EmptyResponse, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#Resolver.UserPermissionsInfo",
                     "documentation": {
                       "identifier": "Resolver.UserPermissionsInfo",
                       "newPage": false,
                       "searchKey": "resolvers.Resolver.UserPermissionsInfo",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -477,6 +353,98 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (r *Resolver) UserPermissionsInfo(ctx context.Context, id graphql.ID) (graphqlbackend.PermissionsInfoResolver, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#Resolver.UsersWithPendingPermissions",
+                    "documentation": {
+                      "identifier": "Resolver.UsersWithPendingPermissions",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.UsersWithPendingPermissions",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) UsersWithPendingPermissions(ctx context.Context) ([]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) UsersWithPendingPermissions(ctx context.Context) ([]string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#Resolver.checkLicense",
+                    "documentation": {
+                      "identifier": "Resolver.checkLicense",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.checkLicense",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) checkLicense() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) checkLicense() error\n```\n\ncheckLicense returns a user-facing error if the ACLs feature is not purchased with the current license or any error occurred while validating the licence. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#fakeRepoupdaterClient",
+              "documentation": {
+                "identifier": "fakeRepoupdaterClient",
+                "newPage": false,
+                "searchKey": "resolvers.fakeRepoupdaterClient",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type fakeRepoupdaterClient struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype fakeRepoupdaterClient struct {\n\tmockSchedulePermsSync func(ctx context.Context, args protocol.PermsSyncRequest) error\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#fakeRepoupdaterClient.SchedulePermsSync",
+                    "documentation": {
+                      "identifier": "fakeRepoupdaterClient.SchedulePermsSync",
+                      "newPage": false,
+                      "searchKey": "resolvers.fakeRepoupdaterClient.SchedulePermsSync",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *fakeRepoupdaterClient) SchedulePermsSync(ctx context.Context, args protocol.PermsSyncRequest) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *fakeRepoupdaterClient) SchedulePermsSync(ctx context.Context, args protocol.PermsSyncRequest) error\n```\n\n"
                     },
                     "children": null
                   }
@@ -492,6 +460,7 @@
                 "newPage": false,
                 "searchKey": "resolvers.permissionsInfoResolver",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -512,6 +481,7 @@
                       "newPage": false,
                       "searchKey": "resolvers.permissionsInfoResolver.Permissions",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -534,6 +504,7 @@
                       "newPage": false,
                       "searchKey": "resolvers.permissionsInfoResolver.SyncedAt",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -556,6 +527,7 @@
                       "newPage": false,
                       "searchKey": "resolvers.permissionsInfoResolver.UpdatedAt",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -575,12 +547,129 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#repositoryConnectionResolver",
+              "documentation": {
+                "identifier": "repositoryConnectionResolver",
+                "newPage": false,
+                "searchKey": "resolvers.repositoryConnectionResolver",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type repositoryConnectionResolver struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype repositoryConnectionResolver struct {\n\tdb  dbutil.DB\n\tids *roaring.Bitmap\n\n\tfirst int32\n\tafter *string\n\n\t// cache results because they are used by multiple fields\n\tonce     sync.Once\n\trepos    []*types.Repo\n\tpageInfo *graphqlutil.PageInfo\n\terr      error\n}\n```\n\nrepositoryConnectionResolver resolves a list of repositories from the roaring bitmap with pagination. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#repositoryConnectionResolver.Nodes",
+                    "documentation": {
+                      "identifier": "repositoryConnectionResolver.Nodes",
+                      "newPage": false,
+                      "searchKey": "resolvers.repositoryConnectionResolver.Nodes",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *repositoryConnectionResolver) Nodes(ctx context.Context) ([]*graphqlbackend.RepositoryResolver, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *repositoryConnectionResolver) Nodes(ctx context.Context) ([]*graphqlbackend.RepositoryResolver, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#repositoryConnectionResolver.PageInfo",
+                    "documentation": {
+                      "identifier": "repositoryConnectionResolver.PageInfo",
+                      "newPage": false,
+                      "searchKey": "resolvers.repositoryConnectionResolver.PageInfo",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *repositoryConnectionResolver) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *repositoryConnectionResolver) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#repositoryConnectionResolver.TotalCount",
+                    "documentation": {
+                      "identifier": "repositoryConnectionResolver.TotalCount",
+                      "newPage": false,
+                      "searchKey": "resolvers.repositoryConnectionResolver.TotalCount",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *repositoryConnectionResolver) TotalCount(ctx context.Context, args *graphqlbackend.TotalCountArgs) (*int32, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *repositoryConnectionResolver) TotalCount(ctx context.Context, args *graphqlbackend.TotalCountArgs) (*int32, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#repositoryConnectionResolver.compute",
+                    "documentation": {
+                      "identifier": "repositoryConnectionResolver.compute",
+                      "newPage": false,
+                      "searchKey": "resolvers.repositoryConnectionResolver.compute",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *repositoryConnectionResolver) compute(ctx context.Context) ([]*types.Repo, *graphqlutil.PageInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *repositoryConnectionResolver) compute(ctx context.Context) ([]*types.Repo, *graphqlutil.PageInfo, error)\n```\n\n🚨 SECURITY: It is the caller's responsibility to ensure the current authenticated user is the site admin because this method computes data from all available information in the database. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#userConnectionResolver",
               "documentation": {
                 "identifier": "userConnectionResolver",
                 "newPage": false,
                 "searchKey": "resolvers.userConnectionResolver",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -595,34 +684,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#userConnectionResolver.compute",
-                    "documentation": {
-                      "identifier": "userConnectionResolver.compute",
-                      "newPage": false,
-                      "searchKey": "resolvers.userConnectionResolver.compute",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *userConnectionResolver) compute(ctx context.Context) ([]*types.User, *graphqlutil.PageInfo, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *userConnectionResolver) compute(ctx context.Context) ([]*types.User, *graphqlutil.PageInfo, error)\n```\n\n🚨 SECURITY: It is the caller's responsibility to ensure the current authenticated user is the site admin because this method computes data from all available information in the database. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#userConnectionResolver.Nodes",
                     "documentation": {
                       "identifier": "userConnectionResolver.Nodes",
                       "newPage": false,
                       "searchKey": "resolvers.userConnectionResolver.Nodes",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -639,12 +707,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#userConnectionResolver.PageInfo",
+                    "documentation": {
+                      "identifier": "userConnectionResolver.PageInfo",
+                      "newPage": false,
+                      "searchKey": "resolvers.userConnectionResolver.PageInfo",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *userConnectionResolver) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *userConnectionResolver) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#userConnectionResolver.TotalCount",
                     "documentation": {
                       "identifier": "userConnectionResolver.TotalCount",
                       "newPage": false,
                       "searchKey": "resolvers.userConnectionResolver.TotalCount",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -661,67 +753,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#userConnectionResolver.PageInfo",
+                    "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#userConnectionResolver.compute",
                     "documentation": {
-                      "identifier": "userConnectionResolver.PageInfo",
+                      "identifier": "userConnectionResolver.compute",
                       "newPage": false,
-                      "searchKey": "resolvers.userConnectionResolver.PageInfo",
+                      "searchKey": "resolvers.userConnectionResolver.compute",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (r *userConnectionResolver) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)"
+                      "value": "func (r *userConnectionResolver) compute(ctx context.Context) ([]*types.User, *graphqlutil.PageInfo, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (r *userConnectionResolver) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#fakeRepoupdaterClient",
-              "documentation": {
-                "identifier": "fakeRepoupdaterClient",
-                "newPage": false,
-                "searchKey": "resolvers.fakeRepoupdaterClient",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type fakeRepoupdaterClient struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype fakeRepoupdaterClient struct {\n\tmockSchedulePermsSync func(ctx context.Context, args protocol.PermsSyncRequest) error\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#fakeRepoupdaterClient.SchedulePermsSync",
-                    "documentation": {
-                      "identifier": "fakeRepoupdaterClient.SchedulePermsSync",
-                      "newPage": false,
-                      "searchKey": "resolvers.fakeRepoupdaterClient.SchedulePermsSync",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *fakeRepoupdaterClient) SchedulePermsSync(ctx context.Context, args protocol.PermsSyncRequest) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *fakeRepoupdaterClient) SchedulePermsSync(ctx context.Context, args protocol.PermsSyncRequest) error\n```\n\n"
+                      "value": "```Go\nfunc (r *userConnectionResolver) compute(ctx context.Context) ([]*types.User, *graphqlutil.PageInfo, error)\n```\n\n🚨 SECURITY: It is the caller's responsibility to ensure the current authenticated user is the site admin because this method computes data from all available information in the database. \n\n"
                     },
                     "children": null
                   }
@@ -740,6 +788,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -759,7 +808,9 @@
                 "identifier": "NewResolver",
                 "newPage": false,
                 "searchKey": "resolvers.NewResolver",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -774,12 +825,205 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#TestResolver_AuthorizedUserRepositories",
+              "documentation": {
+                "identifier": "TestResolver_AuthorizedUserRepositories",
+                "newPage": false,
+                "searchKey": "resolvers.TestResolver_AuthorizedUserRepositories",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestResolver_AuthorizedUserRepositories(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestResolver_AuthorizedUserRepositories(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#TestResolver_AuthorizedUsers",
+              "documentation": {
+                "identifier": "TestResolver_AuthorizedUsers",
+                "newPage": false,
+                "searchKey": "resolvers.TestResolver_AuthorizedUsers",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestResolver_AuthorizedUsers(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestResolver_AuthorizedUsers(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#TestResolver_RepositoryPermissionsInfo",
+              "documentation": {
+                "identifier": "TestResolver_RepositoryPermissionsInfo",
+                "newPage": false,
+                "searchKey": "resolvers.TestResolver_RepositoryPermissionsInfo",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestResolver_RepositoryPermissionsInfo(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestResolver_RepositoryPermissionsInfo(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#TestResolver_ScheduleRepositoryPermissionsSync",
+              "documentation": {
+                "identifier": "TestResolver_ScheduleRepositoryPermissionsSync",
+                "newPage": false,
+                "searchKey": "resolvers.TestResolver_ScheduleRepositoryPermissionsSync",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestResolver_ScheduleRepositoryPermissionsSync(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestResolver_ScheduleRepositoryPermissionsSync(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#TestResolver_ScheduleUserPermissionsSync",
+              "documentation": {
+                "identifier": "TestResolver_ScheduleUserPermissionsSync",
+                "newPage": false,
+                "searchKey": "resolvers.TestResolver_ScheduleUserPermissionsSync",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestResolver_ScheduleUserPermissionsSync(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestResolver_ScheduleUserPermissionsSync(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#TestResolver_SetRepositoryPermissionsForUsers",
+              "documentation": {
+                "identifier": "TestResolver_SetRepositoryPermissionsForUsers",
+                "newPage": false,
+                "searchKey": "resolvers.TestResolver_SetRepositoryPermissionsForUsers",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestResolver_SetRepositoryPermissionsForUsers(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestResolver_SetRepositoryPermissionsForUsers(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#TestResolver_UserPermissionsInfo",
+              "documentation": {
+                "identifier": "TestResolver_UserPermissionsInfo",
+                "newPage": false,
+                "searchKey": "resolvers.TestResolver_UserPermissionsInfo",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestResolver_UserPermissionsInfo(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestResolver_UserPermissionsInfo(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#TestResolver_UsersWithPendingPermissions",
+              "documentation": {
+                "identifier": "TestResolver_UsersWithPendingPermissions",
+                "newPage": false,
+                "searchKey": "resolvers.TestResolver_UsersWithPendingPermissions",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestResolver_UsersWithPendingPermissions(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestResolver_UsersWithPendingPermissions(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#clock",
               "documentation": {
                 "identifier": "clock",
                 "newPage": false,
                 "searchKey": "resolvers.clock",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -802,6 +1046,7 @@
                 "newPage": false,
                 "searchKey": "resolvers.mustParseGraphQLSchema",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -812,182 +1057,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc mustParseGraphQLSchema(t *testing.T, db dbutil.DB) *graphql.Schema\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#TestResolver_SetRepositoryPermissionsForUsers",
-              "documentation": {
-                "identifier": "TestResolver_SetRepositoryPermissionsForUsers",
-                "newPage": false,
-                "searchKey": "resolvers.TestResolver_SetRepositoryPermissionsForUsers",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestResolver_SetRepositoryPermissionsForUsers(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestResolver_SetRepositoryPermissionsForUsers(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#TestResolver_ScheduleRepositoryPermissionsSync",
-              "documentation": {
-                "identifier": "TestResolver_ScheduleRepositoryPermissionsSync",
-                "newPage": false,
-                "searchKey": "resolvers.TestResolver_ScheduleRepositoryPermissionsSync",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestResolver_ScheduleRepositoryPermissionsSync(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestResolver_ScheduleRepositoryPermissionsSync(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#TestResolver_ScheduleUserPermissionsSync",
-              "documentation": {
-                "identifier": "TestResolver_ScheduleUserPermissionsSync",
-                "newPage": false,
-                "searchKey": "resolvers.TestResolver_ScheduleUserPermissionsSync",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestResolver_ScheduleUserPermissionsSync(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestResolver_ScheduleUserPermissionsSync(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#TestResolver_AuthorizedUserRepositories",
-              "documentation": {
-                "identifier": "TestResolver_AuthorizedUserRepositories",
-                "newPage": false,
-                "searchKey": "resolvers.TestResolver_AuthorizedUserRepositories",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestResolver_AuthorizedUserRepositories(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestResolver_AuthorizedUserRepositories(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#TestResolver_UsersWithPendingPermissions",
-              "documentation": {
-                "identifier": "TestResolver_UsersWithPendingPermissions",
-                "newPage": false,
-                "searchKey": "resolvers.TestResolver_UsersWithPendingPermissions",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestResolver_UsersWithPendingPermissions(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestResolver_UsersWithPendingPermissions(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#TestResolver_AuthorizedUsers",
-              "documentation": {
-                "identifier": "TestResolver_AuthorizedUsers",
-                "newPage": false,
-                "searchKey": "resolvers.TestResolver_AuthorizedUsers",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestResolver_AuthorizedUsers(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestResolver_AuthorizedUsers(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#TestResolver_RepositoryPermissionsInfo",
-              "documentation": {
-                "identifier": "TestResolver_RepositoryPermissionsInfo",
-                "newPage": false,
-                "searchKey": "resolvers.TestResolver_RepositoryPermissionsInfo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestResolver_RepositoryPermissionsInfo(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestResolver_RepositoryPermissionsInfo(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers#TestResolver_UserPermissionsInfo",
-              "documentation": {
-                "identifier": "TestResolver_UserPermissionsInfo",
-                "newPage": false,
-                "searchKey": "resolvers.TestResolver_UserPermissionsInfo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestResolver_UserPermissionsInfo(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestResolver_UserPermissionsInfo(t *testing.T)\n```\n\n"
               },
               "children": null
             }

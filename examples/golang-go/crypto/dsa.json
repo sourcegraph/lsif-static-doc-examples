@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "crypto/dsa",
     "tags": [
+      "package",
       "deprecated"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "deprecated"
           ]
         },
@@ -44,7 +46,10 @@
                 "identifier": "L1024N160",
                 "newPage": false,
                 "searchKey": "dsa.L1024N160",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +69,10 @@
                 "identifier": "L2048N224",
                 "newPage": false,
                 "searchKey": "dsa.L2048N224",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +92,10 @@
                 "identifier": "L2048N256",
                 "newPage": false,
                 "searchKey": "dsa.L2048N256",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +115,10 @@
                 "identifier": "L3072N256",
                 "newPage": false,
                 "searchKey": "dsa.L3072N256",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -125,6 +139,8 @@
                 "newPage": false,
                 "searchKey": "dsa.numMRTests",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -150,6 +166,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "deprecated"
           ]
         },
@@ -169,7 +186,10 @@
                 "identifier": "ErrInvalidPublicKey",
                 "newPage": false,
                 "searchKey": "dsa.ErrInvalidPublicKey",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -193,6 +213,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "deprecated"
           ]
         },
@@ -207,12 +228,36 @@
         "children": [
           {
             "node": {
+              "pathID": "/crypto/dsa#ParameterSizes",
+              "documentation": {
+                "identifier": "ParameterSizes",
+                "newPage": false,
+                "searchKey": "dsa.ParameterSizes",
+                "tags": [
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ParameterSizes int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ParameterSizes int\n```\n\nParameterSizes is an enumeration of the acceptable bit lengths of the primes in a set of DSA parameters. See FIPS 186-3, section 4.2. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/dsa#Parameters",
               "documentation": {
                 "identifier": "Parameters",
                 "newPage": false,
                 "searchKey": "dsa.Parameters",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -227,32 +272,14 @@
           },
           {
             "node": {
-              "pathID": "/crypto/dsa#PublicKey",
-              "documentation": {
-                "identifier": "PublicKey",
-                "newPage": false,
-                "searchKey": "dsa.PublicKey",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type PublicKey struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype PublicKey struct {\n\tParameters\n\tY *big.Int\n}\n```\n\nPublicKey represents a DSA public key. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/dsa#PrivateKey",
               "documentation": {
                 "identifier": "PrivateKey",
                 "newPage": false,
                 "searchKey": "dsa.PrivateKey",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -267,20 +294,22 @@
           },
           {
             "node": {
-              "pathID": "/crypto/dsa#ParameterSizes",
+              "pathID": "/crypto/dsa#PublicKey",
               "documentation": {
-                "identifier": "ParameterSizes",
+                "identifier": "PublicKey",
                 "newPage": false,
-                "searchKey": "dsa.ParameterSizes",
-                "tags": null
+                "searchKey": "dsa.PublicKey",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type ParameterSizes int"
+                "value": "type PublicKey struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype ParameterSizes int\n```\n\nParameterSizes is an enumeration of the acceptable bit lengths of the primes in a set of DSA parameters. See FIPS 186-3, section 4.2. \n\n"
+                "value": "```Go\ntype PublicKey struct {\n\tParameters\n\tY *big.Int\n}\n```\n\nPublicKey represents a DSA public key. \n\n"
               },
               "children": null
             }
@@ -296,6 +325,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "deprecated"
           ]
         },
@@ -310,32 +340,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto/dsa#GenerateParameters",
-              "documentation": {
-                "identifier": "GenerateParameters",
-                "newPage": false,
-                "searchKey": "dsa.GenerateParameters",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GenerateParameters(params *Parameters, rand io.Reader, sizes ParameterSizes) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GenerateParameters(params *Parameters, rand io.Reader, sizes ParameterSizes) error\n```\n\nGenerateParameters puts a random, valid set of DSA parameters into params. This function can take many seconds, even on fast machines. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/dsa#GenerateKey",
               "documentation": {
                 "identifier": "GenerateKey",
                 "newPage": false,
                 "searchKey": "dsa.GenerateKey",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -350,22 +362,22 @@
           },
           {
             "node": {
-              "pathID": "/crypto/dsa#fermatInverse",
+              "pathID": "/crypto/dsa#GenerateParameters",
               "documentation": {
-                "identifier": "fermatInverse",
+                "identifier": "GenerateParameters",
                 "newPage": false,
-                "searchKey": "dsa.fermatInverse",
+                "searchKey": "dsa.GenerateParameters",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func fermatInverse(k, P *big.Int) *big.Int"
+                "value": "func GenerateParameters(params *Parameters, rand io.Reader, sizes ParameterSizes) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc fermatInverse(k, P *big.Int) *big.Int\n```\n\nfermatInverse calculates the inverse of k in GF(P) using Fermat's method. This has better constant-time properties than Euclid's method (implemented in math/big.Int.ModInverse) although math/big itself isn't strictly constant-time so it's not perfect. \n\n"
+                "value": "```Go\nfunc GenerateParameters(params *Parameters, rand io.Reader, sizes ParameterSizes) error\n```\n\nGenerateParameters puts a random, valid set of DSA parameters into params. This function can take many seconds, even on fast machines. \n\n"
               },
               "children": null
             }
@@ -377,7 +389,9 @@
                 "identifier": "Sign",
                 "newPage": false,
                 "searchKey": "dsa.Sign",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -392,77 +406,15 @@
           },
           {
             "node": {
-              "pathID": "/crypto/dsa#Verify",
-              "documentation": {
-                "identifier": "Verify",
-                "newPage": false,
-                "searchKey": "dsa.Verify",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Verify(pub *PublicKey, hash []byte, r, s *big.Int) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Verify(pub *PublicKey, hash []byte, r, s *big.Int) bool\n```\n\nVerify verifies the signature in r, s of hash using the public key, pub. It reports whether the signature is valid. \n\nNote that FIPS 186-3 section 4.6 specifies that the hash should be truncated to the byte-length of the subgroup. This function does not perform that truncation itself. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/dsa#testSignAndVerify",
-              "documentation": {
-                "identifier": "testSignAndVerify",
-                "newPage": false,
-                "searchKey": "dsa.testSignAndVerify",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testSignAndVerify(t *testing.T, i int, priv *PrivateKey)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testSignAndVerify(t *testing.T, i int, priv *PrivateKey)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/dsa#testParameterGeneration",
-              "documentation": {
-                "identifier": "testParameterGeneration",
-                "newPage": false,
-                "searchKey": "dsa.testParameterGeneration",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testParameterGeneration(t *testing.T, sizes ParameterSizes, L, N int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testParameterGeneration(t *testing.T, sizes ParameterSizes, L, N int)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/dsa#TestParameterGeneration",
               "documentation": {
                 "identifier": "TestParameterGeneration",
                 "newPage": false,
                 "searchKey": "dsa.TestParameterGeneration",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -478,35 +430,15 @@
           },
           {
             "node": {
-              "pathID": "/crypto/dsa#fromHex",
-              "documentation": {
-                "identifier": "fromHex",
-                "newPage": false,
-                "searchKey": "dsa.fromHex",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func fromHex(s string) *big.Int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc fromHex(s string) *big.Int\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/dsa#TestSignAndVerify",
               "documentation": {
                 "identifier": "TestSignAndVerify",
                 "newPage": false,
                 "searchKey": "dsa.TestSignAndVerify",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -528,7 +460,9 @@
                 "newPage": false,
                 "searchKey": "dsa.TestSignAndVerifyWithBadPublicKey",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -550,7 +484,9 @@
                 "newPage": false,
                 "searchKey": "dsa.TestSigningWithDegenerateKeys",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -560,6 +496,120 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc TestSigningWithDegenerateKeys(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/dsa#Verify",
+              "documentation": {
+                "identifier": "Verify",
+                "newPage": false,
+                "searchKey": "dsa.Verify",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Verify(pub *PublicKey, hash []byte, r, s *big.Int) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Verify(pub *PublicKey, hash []byte, r, s *big.Int) bool\n```\n\nVerify verifies the signature in r, s of hash using the public key, pub. It reports whether the signature is valid. \n\nNote that FIPS 186-3 section 4.6 specifies that the hash should be truncated to the byte-length of the subgroup. This function does not perform that truncation itself. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/dsa#fermatInverse",
+              "documentation": {
+                "identifier": "fermatInverse",
+                "newPage": false,
+                "searchKey": "dsa.fermatInverse",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fermatInverse(k, P *big.Int) *big.Int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fermatInverse(k, P *big.Int) *big.Int\n```\n\nfermatInverse calculates the inverse of k in GF(P) using Fermat's method. This has better constant-time properties than Euclid's method (implemented in math/big.Int.ModInverse) although math/big itself isn't strictly constant-time so it's not perfect. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/dsa#fromHex",
+              "documentation": {
+                "identifier": "fromHex",
+                "newPage": false,
+                "searchKey": "dsa.fromHex",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fromHex(s string) *big.Int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fromHex(s string) *big.Int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/dsa#testParameterGeneration",
+              "documentation": {
+                "identifier": "testParameterGeneration",
+                "newPage": false,
+                "searchKey": "dsa.testParameterGeneration",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testParameterGeneration(t *testing.T, sizes ParameterSizes, L, N int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testParameterGeneration(t *testing.T, sizes ParameterSizes, L, N int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/dsa#testSignAndVerify",
+              "documentation": {
+                "identifier": "testSignAndVerify",
+                "newPage": false,
+                "searchKey": "dsa.testSignAndVerify",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testSignAndVerify(t *testing.T, i int, priv *PrivateKey)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testSignAndVerify(t *testing.T, i int, priv *PrivateKey)\n```\n\n"
               },
               "children": null
             }

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/workerutil/dbworker/store/mocks",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,9 @@
                 "identifier": "MockStore",
                 "newPage": false,
                 "searchKey": "mocks.MockStore",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +66,9 @@
                       "identifier": "NewMockStore",
                       "newPage": false,
                       "searchKey": "mocks.NewMockStore",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,7 +88,9 @@
                       "identifier": "NewMockStoreFrom",
                       "newPage": false,
                       "searchKey": "mocks.NewMockStoreFrom",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -102,7 +110,9 @@
                       "identifier": "MockStore.AddExecutionLogEntry",
                       "newPage": false,
                       "searchKey": "mocks.MockStore.AddExecutionLogEntry",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -122,7 +132,9 @@
                       "identifier": "MockStore.Dequeue",
                       "newPage": false,
                       "searchKey": "mocks.MockStore.Dequeue",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -142,7 +154,9 @@
                       "identifier": "MockStore.DequeueWithIndependentTransactionContext",
                       "newPage": false,
                       "searchKey": "mocks.MockStore.DequeueWithIndependentTransactionContext",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -162,7 +176,9 @@
                       "identifier": "MockStore.Done",
                       "newPage": false,
                       "searchKey": "mocks.MockStore.Done",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -182,7 +198,9 @@
                       "identifier": "MockStore.Handle",
                       "newPage": false,
                       "searchKey": "mocks.MockStore.Handle",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -202,7 +220,9 @@
                       "identifier": "MockStore.MarkComplete",
                       "newPage": false,
                       "searchKey": "mocks.MockStore.MarkComplete",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -222,7 +242,9 @@
                       "identifier": "MockStore.MarkErrored",
                       "newPage": false,
                       "searchKey": "mocks.MockStore.MarkErrored",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -242,7 +264,9 @@
                       "identifier": "MockStore.MarkFailed",
                       "newPage": false,
                       "searchKey": "mocks.MockStore.MarkFailed",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -262,7 +286,9 @@
                       "identifier": "MockStore.QueuedCount",
                       "newPage": false,
                       "searchKey": "mocks.MockStore.QueuedCount",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -282,7 +308,9 @@
                       "identifier": "MockStore.Requeue",
                       "newPage": false,
                       "searchKey": "mocks.MockStore.Requeue",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -302,7 +330,9 @@
                       "identifier": "MockStore.ResetStalled",
                       "newPage": false,
                       "searchKey": "mocks.MockStore.ResetStalled",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -325,7 +355,9 @@
                 "identifier": "StoreAddExecutionLogEntryFunc",
                 "newPage": false,
                 "searchKey": "mocks.StoreAddExecutionLogEntryFunc",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -338,20 +370,22 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreAddExecutionLogEntryFunc.SetDefaultHook",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreAddExecutionLogEntryFunc.History",
                     "documentation": {
-                      "identifier": "StoreAddExecutionLogEntryFunc.SetDefaultHook",
+                      "identifier": "StoreAddExecutionLogEntryFunc.History",
                       "newPage": false,
-                      "searchKey": "mocks.StoreAddExecutionLogEntryFunc.SetDefaultHook",
-                      "tags": null
+                      "searchKey": "mocks.StoreAddExecutionLogEntryFunc.History",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreAddExecutionLogEntryFunc) SetDefaultHook(hook func(context.Context, int, workerutil.ExecutionLogEntry) error)"
+                      "value": "func (f *StoreAddExecutionLogEntryFunc) History() []StoreAddExecutionLogEntryFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) SetDefaultHook(hook func(context.Context, int, workerutil.ExecutionLogEntry) error)\n```\n\nSetDefaultHook sets function that is called when the AddExecutionLogEntry method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) History() []StoreAddExecutionLogEntryFuncCall\n```\n\nHistory returns a sequence of StoreAddExecutionLogEntryFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -363,7 +397,9 @@
                       "identifier": "StoreAddExecutionLogEntryFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreAddExecutionLogEntryFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -378,32 +414,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreAddExecutionLogEntryFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "StoreAddExecutionLogEntryFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "mocks.StoreAddExecutionLogEntryFunc.SetDefaultReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *StoreAddExecutionLogEntryFunc) SetDefaultReturn(r0 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/workerutil/dbworker/store/mocks#StoreAddExecutionLogEntryFunc.PushReturn",
                     "documentation": {
                       "identifier": "StoreAddExecutionLogEntryFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.StoreAddExecutionLogEntryFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -418,22 +436,44 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreAddExecutionLogEntryFunc.nextHook",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreAddExecutionLogEntryFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "StoreAddExecutionLogEntryFunc.nextHook",
+                      "identifier": "StoreAddExecutionLogEntryFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "mocks.StoreAddExecutionLogEntryFunc.nextHook",
+                      "searchKey": "mocks.StoreAddExecutionLogEntryFunc.SetDefaultHook",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreAddExecutionLogEntryFunc) nextHook() func(context.Context, int, workerutil.ExecutionLogEntry) error"
+                      "value": "func (f *StoreAddExecutionLogEntryFunc) SetDefaultHook(hook func(context.Context, int, workerutil.ExecutionLogEntry) error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) nextHook() func(context.Context, int, workerutil.ExecutionLogEntry) error\n```\n\n"
+                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) SetDefaultHook(hook func(context.Context, int, workerutil.ExecutionLogEntry) error)\n```\n\nSetDefaultHook sets function that is called when the AddExecutionLogEntry method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreAddExecutionLogEntryFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreAddExecutionLogEntryFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreAddExecutionLogEntryFunc.SetDefaultReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreAddExecutionLogEntryFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -446,6 +486,7 @@
                       "newPage": false,
                       "searchKey": "mocks.StoreAddExecutionLogEntryFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -462,20 +503,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreAddExecutionLogEntryFunc.History",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreAddExecutionLogEntryFunc.nextHook",
                     "documentation": {
-                      "identifier": "StoreAddExecutionLogEntryFunc.History",
+                      "identifier": "StoreAddExecutionLogEntryFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "mocks.StoreAddExecutionLogEntryFunc.History",
-                      "tags": null
+                      "searchKey": "mocks.StoreAddExecutionLogEntryFunc.nextHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreAddExecutionLogEntryFunc) History() []StoreAddExecutionLogEntryFuncCall"
+                      "value": "func (f *StoreAddExecutionLogEntryFunc) nextHook() func(context.Context, int, workerutil.ExecutionLogEntry) error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) History() []StoreAddExecutionLogEntryFuncCall\n```\n\nHistory returns a sequence of StoreAddExecutionLogEntryFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) nextHook() func(context.Context, int, workerutil.ExecutionLogEntry) error\n```\n\n"
                     },
                     "children": null
                   }
@@ -490,7 +534,9 @@
                 "identifier": "StoreAddExecutionLogEntryFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.StoreAddExecutionLogEntryFuncCall",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -508,7 +554,9 @@
                       "identifier": "StoreAddExecutionLogEntryFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.StoreAddExecutionLogEntryFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -528,7 +576,9 @@
                       "identifier": "StoreAddExecutionLogEntryFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.StoreAddExecutionLogEntryFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -551,7 +601,9 @@
                 "identifier": "StoreDequeueFunc",
                 "newPage": false,
                 "searchKey": "mocks.StoreDequeueFunc",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -564,20 +616,22 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueFunc.SetDefaultHook",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueFunc.History",
                     "documentation": {
-                      "identifier": "StoreDequeueFunc.SetDefaultHook",
+                      "identifier": "StoreDequeueFunc.History",
                       "newPage": false,
-                      "searchKey": "mocks.StoreDequeueFunc.SetDefaultHook",
-                      "tags": null
+                      "searchKey": "mocks.StoreDequeueFunc.History",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreDequeueFunc) SetDefaultHook(hook func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error))"
+                      "value": "func (f *StoreDequeueFunc) History() []StoreDequeueFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreDequeueFunc) SetDefaultHook(hook func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error))\n```\n\nSetDefaultHook sets function that is called when the Dequeue method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *StoreDequeueFunc) History() []StoreDequeueFuncCall\n```\n\nHistory returns a sequence of StoreDequeueFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -589,7 +643,9 @@
                       "identifier": "StoreDequeueFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreDequeueFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -604,32 +660,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "StoreDequeueFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "mocks.StoreDequeueFunc.SetDefaultReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *StoreDequeueFunc) SetDefaultReturn(r0 workerutil.Record, r1 store.Store, r2 bool, r3 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreDequeueFunc) SetDefaultReturn(r0 workerutil.Record, r1 store.Store, r2 bool, r3 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueFunc.PushReturn",
                     "documentation": {
                       "identifier": "StoreDequeueFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.StoreDequeueFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -644,22 +682,44 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueFunc.nextHook",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "StoreDequeueFunc.nextHook",
+                      "identifier": "StoreDequeueFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "mocks.StoreDequeueFunc.nextHook",
+                      "searchKey": "mocks.StoreDequeueFunc.SetDefaultHook",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreDequeueFunc) nextHook() func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error)"
+                      "value": "func (f *StoreDequeueFunc) SetDefaultHook(hook func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error))"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreDequeueFunc) nextHook() func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error)\n```\n\n"
+                      "value": "```Go\nfunc (f *StoreDequeueFunc) SetDefaultHook(hook func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error))\n```\n\nSetDefaultHook sets function that is called when the Dequeue method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreDequeueFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDequeueFunc.SetDefaultReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDequeueFunc) SetDefaultReturn(r0 workerutil.Record, r1 store.Store, r2 bool, r3 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDequeueFunc) SetDefaultReturn(r0 workerutil.Record, r1 store.Store, r2 bool, r3 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -672,6 +732,7 @@
                       "newPage": false,
                       "searchKey": "mocks.StoreDequeueFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -688,20 +749,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueFunc.History",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueFunc.nextHook",
                     "documentation": {
-                      "identifier": "StoreDequeueFunc.History",
+                      "identifier": "StoreDequeueFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "mocks.StoreDequeueFunc.History",
-                      "tags": null
+                      "searchKey": "mocks.StoreDequeueFunc.nextHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreDequeueFunc) History() []StoreDequeueFuncCall"
+                      "value": "func (f *StoreDequeueFunc) nextHook() func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreDequeueFunc) History() []StoreDequeueFuncCall\n```\n\nHistory returns a sequence of StoreDequeueFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *StoreDequeueFunc) nextHook() func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -716,7 +780,9 @@
                 "identifier": "StoreDequeueFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.StoreDequeueFuncCall",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -734,7 +800,9 @@
                       "identifier": "StoreDequeueFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.StoreDequeueFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -754,7 +822,9 @@
                       "identifier": "StoreDequeueFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.StoreDequeueFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -777,7 +847,9 @@
                 "identifier": "StoreDequeueWithIndependentTransactionContextFunc",
                 "newPage": false,
                 "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFunc",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -790,20 +862,22 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueWithIndependentTransactionContextFunc.SetDefaultHook",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueWithIndependentTransactionContextFunc.History",
                     "documentation": {
-                      "identifier": "StoreDequeueWithIndependentTransactionContextFunc.SetDefaultHook",
+                      "identifier": "StoreDequeueWithIndependentTransactionContextFunc.History",
                       "newPage": false,
-                      "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFunc.SetDefaultHook",
-                      "tags": null
+                      "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFunc.History",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreDequeueWithIndependentTransactionContextFunc) SetDefaultHook(hook func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error))"
+                      "value": "func (f *StoreDequeueWithIndependentTransactionContextFunc) History() []StoreDequeueWithIndependentTransactionContextFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreDequeueWithIndependentTransactionContextFunc) SetDefaultHook(hook func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error))\n```\n\nSetDefaultHook sets function that is called when the DequeueWithIndependentTransactionContext method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *StoreDequeueWithIndependentTransactionContextFunc) History() []StoreDequeueWithIndependentTransactionContextFuncCall\n```\n\nHistory returns a sequence of StoreDequeueWithIndependentTransactionContextFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -815,7 +889,9 @@
                       "identifier": "StoreDequeueWithIndependentTransactionContextFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -830,32 +906,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueWithIndependentTransactionContextFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "StoreDequeueWithIndependentTransactionContextFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFunc.SetDefaultReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *StoreDequeueWithIndependentTransactionContextFunc) SetDefaultReturn(r0 workerutil.Record, r1 store.Store, r2 bool, r3 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreDequeueWithIndependentTransactionContextFunc) SetDefaultReturn(r0 workerutil.Record, r1 store.Store, r2 bool, r3 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueWithIndependentTransactionContextFunc.PushReturn",
                     "documentation": {
                       "identifier": "StoreDequeueWithIndependentTransactionContextFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -870,22 +928,44 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueWithIndependentTransactionContextFunc.nextHook",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueWithIndependentTransactionContextFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "StoreDequeueWithIndependentTransactionContextFunc.nextHook",
+                      "identifier": "StoreDequeueWithIndependentTransactionContextFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFunc.nextHook",
+                      "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFunc.SetDefaultHook",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreDequeueWithIndependentTransactionContextFunc) nextHook() func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error)"
+                      "value": "func (f *StoreDequeueWithIndependentTransactionContextFunc) SetDefaultHook(hook func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error))"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreDequeueWithIndependentTransactionContextFunc) nextHook() func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error)\n```\n\n"
+                      "value": "```Go\nfunc (f *StoreDequeueWithIndependentTransactionContextFunc) SetDefaultHook(hook func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error))\n```\n\nSetDefaultHook sets function that is called when the DequeueWithIndependentTransactionContext method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueWithIndependentTransactionContextFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreDequeueWithIndependentTransactionContextFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFunc.SetDefaultReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDequeueWithIndependentTransactionContextFunc) SetDefaultReturn(r0 workerutil.Record, r1 store.Store, r2 bool, r3 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDequeueWithIndependentTransactionContextFunc) SetDefaultReturn(r0 workerutil.Record, r1 store.Store, r2 bool, r3 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -898,6 +978,7 @@
                       "newPage": false,
                       "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -914,20 +995,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueWithIndependentTransactionContextFunc.History",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueWithIndependentTransactionContextFunc.nextHook",
                     "documentation": {
-                      "identifier": "StoreDequeueWithIndependentTransactionContextFunc.History",
+                      "identifier": "StoreDequeueWithIndependentTransactionContextFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFunc.History",
-                      "tags": null
+                      "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFunc.nextHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreDequeueWithIndependentTransactionContextFunc) History() []StoreDequeueWithIndependentTransactionContextFuncCall"
+                      "value": "func (f *StoreDequeueWithIndependentTransactionContextFunc) nextHook() func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreDequeueWithIndependentTransactionContextFunc) History() []StoreDequeueWithIndependentTransactionContextFuncCall\n```\n\nHistory returns a sequence of StoreDequeueWithIndependentTransactionContextFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *StoreDequeueWithIndependentTransactionContextFunc) nextHook() func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -942,7 +1026,9 @@
                 "identifier": "StoreDequeueWithIndependentTransactionContextFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFuncCall",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -960,7 +1046,9 @@
                       "identifier": "StoreDequeueWithIndependentTransactionContextFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -980,7 +1068,9 @@
                       "identifier": "StoreDequeueWithIndependentTransactionContextFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1003,7 +1093,9 @@
                 "identifier": "StoreDoneFunc",
                 "newPage": false,
                 "searchKey": "mocks.StoreDoneFunc",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1016,20 +1108,22 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDoneFunc.SetDefaultHook",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDoneFunc.History",
                     "documentation": {
-                      "identifier": "StoreDoneFunc.SetDefaultHook",
+                      "identifier": "StoreDoneFunc.History",
                       "newPage": false,
-                      "searchKey": "mocks.StoreDoneFunc.SetDefaultHook",
-                      "tags": null
+                      "searchKey": "mocks.StoreDoneFunc.History",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreDoneFunc) SetDefaultHook(hook func(error) error)"
+                      "value": "func (f *StoreDoneFunc) History() []StoreDoneFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreDoneFunc) SetDefaultHook(hook func(error) error)\n```\n\nSetDefaultHook sets function that is called when the Done method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *StoreDoneFunc) History() []StoreDoneFuncCall\n```\n\nHistory returns a sequence of StoreDoneFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -1041,7 +1135,9 @@
                       "identifier": "StoreDoneFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreDoneFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1056,32 +1152,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDoneFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "StoreDoneFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "mocks.StoreDoneFunc.SetDefaultReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *StoreDoneFunc) SetDefaultReturn(r0 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreDoneFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDoneFunc.PushReturn",
                     "documentation": {
                       "identifier": "StoreDoneFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.StoreDoneFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1096,22 +1174,44 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDoneFunc.nextHook",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDoneFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "StoreDoneFunc.nextHook",
+                      "identifier": "StoreDoneFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "mocks.StoreDoneFunc.nextHook",
+                      "searchKey": "mocks.StoreDoneFunc.SetDefaultHook",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreDoneFunc) nextHook() func(error) error"
+                      "value": "func (f *StoreDoneFunc) SetDefaultHook(hook func(error) error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreDoneFunc) nextHook() func(error) error\n```\n\n"
+                      "value": "```Go\nfunc (f *StoreDoneFunc) SetDefaultHook(hook func(error) error)\n```\n\nSetDefaultHook sets function that is called when the Done method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDoneFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreDoneFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDoneFunc.SetDefaultReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDoneFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDoneFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -1124,6 +1224,7 @@
                       "newPage": false,
                       "searchKey": "mocks.StoreDoneFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1140,20 +1241,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDoneFunc.History",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDoneFunc.nextHook",
                     "documentation": {
-                      "identifier": "StoreDoneFunc.History",
+                      "identifier": "StoreDoneFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "mocks.StoreDoneFunc.History",
-                      "tags": null
+                      "searchKey": "mocks.StoreDoneFunc.nextHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreDoneFunc) History() []StoreDoneFuncCall"
+                      "value": "func (f *StoreDoneFunc) nextHook() func(error) error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreDoneFunc) History() []StoreDoneFuncCall\n```\n\nHistory returns a sequence of StoreDoneFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *StoreDoneFunc) nextHook() func(error) error\n```\n\n"
                     },
                     "children": null
                   }
@@ -1168,7 +1272,9 @@
                 "identifier": "StoreDoneFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.StoreDoneFuncCall",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1186,7 +1292,9 @@
                       "identifier": "StoreDoneFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.StoreDoneFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1206,7 +1314,9 @@
                       "identifier": "StoreDoneFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.StoreDoneFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1229,7 +1339,9 @@
                 "identifier": "StoreHandleFunc",
                 "newPage": false,
                 "searchKey": "mocks.StoreHandleFunc",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1242,20 +1354,22 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreHandleFunc.SetDefaultHook",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreHandleFunc.History",
                     "documentation": {
-                      "identifier": "StoreHandleFunc.SetDefaultHook",
+                      "identifier": "StoreHandleFunc.History",
                       "newPage": false,
-                      "searchKey": "mocks.StoreHandleFunc.SetDefaultHook",
-                      "tags": null
+                      "searchKey": "mocks.StoreHandleFunc.History",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreHandleFunc) SetDefaultHook(hook func() *basestore.TransactableHandle)"
+                      "value": "func (f *StoreHandleFunc) History() []StoreHandleFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreHandleFunc) SetDefaultHook(hook func() *basestore.TransactableHandle)\n```\n\nSetDefaultHook sets function that is called when the Handle method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *StoreHandleFunc) History() []StoreHandleFuncCall\n```\n\nHistory returns a sequence of StoreHandleFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -1267,7 +1381,9 @@
                       "identifier": "StoreHandleFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreHandleFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1282,32 +1398,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreHandleFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "StoreHandleFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "mocks.StoreHandleFunc.SetDefaultReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *StoreHandleFunc) SetDefaultReturn(r0 *basestore.TransactableHandle)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreHandleFunc) SetDefaultReturn(r0 *basestore.TransactableHandle)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/workerutil/dbworker/store/mocks#StoreHandleFunc.PushReturn",
                     "documentation": {
                       "identifier": "StoreHandleFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.StoreHandleFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1322,22 +1420,44 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreHandleFunc.nextHook",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreHandleFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "StoreHandleFunc.nextHook",
+                      "identifier": "StoreHandleFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "mocks.StoreHandleFunc.nextHook",
+                      "searchKey": "mocks.StoreHandleFunc.SetDefaultHook",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreHandleFunc) nextHook() func() *basestore.TransactableHandle"
+                      "value": "func (f *StoreHandleFunc) SetDefaultHook(hook func() *basestore.TransactableHandle)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreHandleFunc) nextHook() func() *basestore.TransactableHandle\n```\n\n"
+                      "value": "```Go\nfunc (f *StoreHandleFunc) SetDefaultHook(hook func() *basestore.TransactableHandle)\n```\n\nSetDefaultHook sets function that is called when the Handle method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreHandleFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreHandleFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreHandleFunc.SetDefaultReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreHandleFunc) SetDefaultReturn(r0 *basestore.TransactableHandle)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreHandleFunc) SetDefaultReturn(r0 *basestore.TransactableHandle)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -1350,6 +1470,7 @@
                       "newPage": false,
                       "searchKey": "mocks.StoreHandleFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1366,20 +1487,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreHandleFunc.History",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreHandleFunc.nextHook",
                     "documentation": {
-                      "identifier": "StoreHandleFunc.History",
+                      "identifier": "StoreHandleFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "mocks.StoreHandleFunc.History",
-                      "tags": null
+                      "searchKey": "mocks.StoreHandleFunc.nextHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreHandleFunc) History() []StoreHandleFuncCall"
+                      "value": "func (f *StoreHandleFunc) nextHook() func() *basestore.TransactableHandle"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreHandleFunc) History() []StoreHandleFuncCall\n```\n\nHistory returns a sequence of StoreHandleFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *StoreHandleFunc) nextHook() func() *basestore.TransactableHandle\n```\n\n"
                     },
                     "children": null
                   }
@@ -1394,7 +1518,9 @@
                 "identifier": "StoreHandleFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.StoreHandleFuncCall",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1412,7 +1538,9 @@
                       "identifier": "StoreHandleFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.StoreHandleFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1432,7 +1560,9 @@
                       "identifier": "StoreHandleFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.StoreHandleFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1455,7 +1585,9 @@
                 "identifier": "StoreMarkCompleteFunc",
                 "newPage": false,
                 "searchKey": "mocks.StoreMarkCompleteFunc",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1468,20 +1600,22 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkCompleteFunc.SetDefaultHook",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkCompleteFunc.History",
                     "documentation": {
-                      "identifier": "StoreMarkCompleteFunc.SetDefaultHook",
+                      "identifier": "StoreMarkCompleteFunc.History",
                       "newPage": false,
-                      "searchKey": "mocks.StoreMarkCompleteFunc.SetDefaultHook",
-                      "tags": null
+                      "searchKey": "mocks.StoreMarkCompleteFunc.History",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreMarkCompleteFunc) SetDefaultHook(hook func(context.Context, int) (bool, error))"
+                      "value": "func (f *StoreMarkCompleteFunc) History() []StoreMarkCompleteFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) SetDefaultHook(hook func(context.Context, int) (bool, error))\n```\n\nSetDefaultHook sets function that is called when the MarkComplete method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) History() []StoreMarkCompleteFuncCall\n```\n\nHistory returns a sequence of StoreMarkCompleteFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -1493,7 +1627,9 @@
                       "identifier": "StoreMarkCompleteFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreMarkCompleteFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1508,32 +1644,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkCompleteFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "StoreMarkCompleteFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "mocks.StoreMarkCompleteFunc.SetDefaultReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *StoreMarkCompleteFunc) SetDefaultReturn(r0 bool, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) SetDefaultReturn(r0 bool, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkCompleteFunc.PushReturn",
                     "documentation": {
                       "identifier": "StoreMarkCompleteFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.StoreMarkCompleteFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1548,22 +1666,44 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkCompleteFunc.nextHook",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkCompleteFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "StoreMarkCompleteFunc.nextHook",
+                      "identifier": "StoreMarkCompleteFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "mocks.StoreMarkCompleteFunc.nextHook",
+                      "searchKey": "mocks.StoreMarkCompleteFunc.SetDefaultHook",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreMarkCompleteFunc) nextHook() func(context.Context, int) (bool, error)"
+                      "value": "func (f *StoreMarkCompleteFunc) SetDefaultHook(hook func(context.Context, int) (bool, error))"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) nextHook() func(context.Context, int) (bool, error)\n```\n\n"
+                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) SetDefaultHook(hook func(context.Context, int) (bool, error))\n```\n\nSetDefaultHook sets function that is called when the MarkComplete method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkCompleteFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreMarkCompleteFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkCompleteFunc.SetDefaultReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkCompleteFunc) SetDefaultReturn(r0 bool, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) SetDefaultReturn(r0 bool, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -1576,6 +1716,7 @@
                       "newPage": false,
                       "searchKey": "mocks.StoreMarkCompleteFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1592,20 +1733,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkCompleteFunc.History",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkCompleteFunc.nextHook",
                     "documentation": {
-                      "identifier": "StoreMarkCompleteFunc.History",
+                      "identifier": "StoreMarkCompleteFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "mocks.StoreMarkCompleteFunc.History",
-                      "tags": null
+                      "searchKey": "mocks.StoreMarkCompleteFunc.nextHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreMarkCompleteFunc) History() []StoreMarkCompleteFuncCall"
+                      "value": "func (f *StoreMarkCompleteFunc) nextHook() func(context.Context, int) (bool, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) History() []StoreMarkCompleteFuncCall\n```\n\nHistory returns a sequence of StoreMarkCompleteFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) nextHook() func(context.Context, int) (bool, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1620,7 +1764,9 @@
                 "identifier": "StoreMarkCompleteFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.StoreMarkCompleteFuncCall",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1638,7 +1784,9 @@
                       "identifier": "StoreMarkCompleteFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.StoreMarkCompleteFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1658,7 +1806,9 @@
                       "identifier": "StoreMarkCompleteFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.StoreMarkCompleteFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1681,7 +1831,9 @@
                 "identifier": "StoreMarkErroredFunc",
                 "newPage": false,
                 "searchKey": "mocks.StoreMarkErroredFunc",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1694,20 +1846,22 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkErroredFunc.SetDefaultHook",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkErroredFunc.History",
                     "documentation": {
-                      "identifier": "StoreMarkErroredFunc.SetDefaultHook",
+                      "identifier": "StoreMarkErroredFunc.History",
                       "newPage": false,
-                      "searchKey": "mocks.StoreMarkErroredFunc.SetDefaultHook",
-                      "tags": null
+                      "searchKey": "mocks.StoreMarkErroredFunc.History",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreMarkErroredFunc) SetDefaultHook(hook func(context.Context, int, string) (bool, error))"
+                      "value": "func (f *StoreMarkErroredFunc) History() []StoreMarkErroredFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) SetDefaultHook(hook func(context.Context, int, string) (bool, error))\n```\n\nSetDefaultHook sets function that is called when the MarkErrored method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) History() []StoreMarkErroredFuncCall\n```\n\nHistory returns a sequence of StoreMarkErroredFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -1719,7 +1873,9 @@
                       "identifier": "StoreMarkErroredFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreMarkErroredFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1734,32 +1890,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkErroredFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "StoreMarkErroredFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "mocks.StoreMarkErroredFunc.SetDefaultReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *StoreMarkErroredFunc) SetDefaultReturn(r0 bool, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) SetDefaultReturn(r0 bool, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkErroredFunc.PushReturn",
                     "documentation": {
                       "identifier": "StoreMarkErroredFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.StoreMarkErroredFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1774,22 +1912,44 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkErroredFunc.nextHook",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkErroredFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "StoreMarkErroredFunc.nextHook",
+                      "identifier": "StoreMarkErroredFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "mocks.StoreMarkErroredFunc.nextHook",
+                      "searchKey": "mocks.StoreMarkErroredFunc.SetDefaultHook",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreMarkErroredFunc) nextHook() func(context.Context, int, string) (bool, error)"
+                      "value": "func (f *StoreMarkErroredFunc) SetDefaultHook(hook func(context.Context, int, string) (bool, error))"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) nextHook() func(context.Context, int, string) (bool, error)\n```\n\n"
+                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) SetDefaultHook(hook func(context.Context, int, string) (bool, error))\n```\n\nSetDefaultHook sets function that is called when the MarkErrored method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkErroredFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreMarkErroredFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkErroredFunc.SetDefaultReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkErroredFunc) SetDefaultReturn(r0 bool, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) SetDefaultReturn(r0 bool, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -1802,6 +1962,7 @@
                       "newPage": false,
                       "searchKey": "mocks.StoreMarkErroredFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1818,20 +1979,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkErroredFunc.History",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkErroredFunc.nextHook",
                     "documentation": {
-                      "identifier": "StoreMarkErroredFunc.History",
+                      "identifier": "StoreMarkErroredFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "mocks.StoreMarkErroredFunc.History",
-                      "tags": null
+                      "searchKey": "mocks.StoreMarkErroredFunc.nextHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreMarkErroredFunc) History() []StoreMarkErroredFuncCall"
+                      "value": "func (f *StoreMarkErroredFunc) nextHook() func(context.Context, int, string) (bool, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) History() []StoreMarkErroredFuncCall\n```\n\nHistory returns a sequence of StoreMarkErroredFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) nextHook() func(context.Context, int, string) (bool, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1846,7 +2010,9 @@
                 "identifier": "StoreMarkErroredFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.StoreMarkErroredFuncCall",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1864,7 +2030,9 @@
                       "identifier": "StoreMarkErroredFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.StoreMarkErroredFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1884,7 +2052,9 @@
                       "identifier": "StoreMarkErroredFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.StoreMarkErroredFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1907,7 +2077,9 @@
                 "identifier": "StoreMarkFailedFunc",
                 "newPage": false,
                 "searchKey": "mocks.StoreMarkFailedFunc",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1920,20 +2092,22 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkFailedFunc.SetDefaultHook",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkFailedFunc.History",
                     "documentation": {
-                      "identifier": "StoreMarkFailedFunc.SetDefaultHook",
+                      "identifier": "StoreMarkFailedFunc.History",
                       "newPage": false,
-                      "searchKey": "mocks.StoreMarkFailedFunc.SetDefaultHook",
-                      "tags": null
+                      "searchKey": "mocks.StoreMarkFailedFunc.History",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreMarkFailedFunc) SetDefaultHook(hook func(context.Context, int, string) (bool, error))"
+                      "value": "func (f *StoreMarkFailedFunc) History() []StoreMarkFailedFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) SetDefaultHook(hook func(context.Context, int, string) (bool, error))\n```\n\nSetDefaultHook sets function that is called when the MarkFailed method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) History() []StoreMarkFailedFuncCall\n```\n\nHistory returns a sequence of StoreMarkFailedFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -1945,7 +2119,9 @@
                       "identifier": "StoreMarkFailedFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreMarkFailedFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1960,32 +2136,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkFailedFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "StoreMarkFailedFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "mocks.StoreMarkFailedFunc.SetDefaultReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *StoreMarkFailedFunc) SetDefaultReturn(r0 bool, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) SetDefaultReturn(r0 bool, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkFailedFunc.PushReturn",
                     "documentation": {
                       "identifier": "StoreMarkFailedFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.StoreMarkFailedFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2000,22 +2158,44 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkFailedFunc.nextHook",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkFailedFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "StoreMarkFailedFunc.nextHook",
+                      "identifier": "StoreMarkFailedFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "mocks.StoreMarkFailedFunc.nextHook",
+                      "searchKey": "mocks.StoreMarkFailedFunc.SetDefaultHook",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreMarkFailedFunc) nextHook() func(context.Context, int, string) (bool, error)"
+                      "value": "func (f *StoreMarkFailedFunc) SetDefaultHook(hook func(context.Context, int, string) (bool, error))"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) nextHook() func(context.Context, int, string) (bool, error)\n```\n\n"
+                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) SetDefaultHook(hook func(context.Context, int, string) (bool, error))\n```\n\nSetDefaultHook sets function that is called when the MarkFailed method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkFailedFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreMarkFailedFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkFailedFunc.SetDefaultReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkFailedFunc) SetDefaultReturn(r0 bool, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) SetDefaultReturn(r0 bool, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -2028,6 +2208,7 @@
                       "newPage": false,
                       "searchKey": "mocks.StoreMarkFailedFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -2044,20 +2225,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkFailedFunc.History",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkFailedFunc.nextHook",
                     "documentation": {
-                      "identifier": "StoreMarkFailedFunc.History",
+                      "identifier": "StoreMarkFailedFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "mocks.StoreMarkFailedFunc.History",
-                      "tags": null
+                      "searchKey": "mocks.StoreMarkFailedFunc.nextHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreMarkFailedFunc) History() []StoreMarkFailedFuncCall"
+                      "value": "func (f *StoreMarkFailedFunc) nextHook() func(context.Context, int, string) (bool, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) History() []StoreMarkFailedFuncCall\n```\n\nHistory returns a sequence of StoreMarkFailedFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) nextHook() func(context.Context, int, string) (bool, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -2072,7 +2256,9 @@
                 "identifier": "StoreMarkFailedFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.StoreMarkFailedFuncCall",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2090,7 +2276,9 @@
                       "identifier": "StoreMarkFailedFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.StoreMarkFailedFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2110,7 +2298,9 @@
                       "identifier": "StoreMarkFailedFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.StoreMarkFailedFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2133,7 +2323,9 @@
                 "identifier": "StoreQueuedCountFunc",
                 "newPage": false,
                 "searchKey": "mocks.StoreQueuedCountFunc",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2146,20 +2338,22 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreQueuedCountFunc.SetDefaultHook",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreQueuedCountFunc.History",
                     "documentation": {
-                      "identifier": "StoreQueuedCountFunc.SetDefaultHook",
+                      "identifier": "StoreQueuedCountFunc.History",
                       "newPage": false,
-                      "searchKey": "mocks.StoreQueuedCountFunc.SetDefaultHook",
-                      "tags": null
+                      "searchKey": "mocks.StoreQueuedCountFunc.History",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreQueuedCountFunc) SetDefaultHook(hook func(context.Context, []*sqlf.Query) (int, error))"
+                      "value": "func (f *StoreQueuedCountFunc) History() []StoreQueuedCountFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) SetDefaultHook(hook func(context.Context, []*sqlf.Query) (int, error))\n```\n\nSetDefaultHook sets function that is called when the QueuedCount method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) History() []StoreQueuedCountFuncCall\n```\n\nHistory returns a sequence of StoreQueuedCountFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -2171,7 +2365,9 @@
                       "identifier": "StoreQueuedCountFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreQueuedCountFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2186,32 +2382,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreQueuedCountFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "StoreQueuedCountFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "mocks.StoreQueuedCountFunc.SetDefaultReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *StoreQueuedCountFunc) SetDefaultReturn(r0 int, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) SetDefaultReturn(r0 int, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/workerutil/dbworker/store/mocks#StoreQueuedCountFunc.PushReturn",
                     "documentation": {
                       "identifier": "StoreQueuedCountFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.StoreQueuedCountFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2226,22 +2404,44 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreQueuedCountFunc.nextHook",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreQueuedCountFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "StoreQueuedCountFunc.nextHook",
+                      "identifier": "StoreQueuedCountFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "mocks.StoreQueuedCountFunc.nextHook",
+                      "searchKey": "mocks.StoreQueuedCountFunc.SetDefaultHook",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreQueuedCountFunc) nextHook() func(context.Context, []*sqlf.Query) (int, error)"
+                      "value": "func (f *StoreQueuedCountFunc) SetDefaultHook(hook func(context.Context, []*sqlf.Query) (int, error))"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) nextHook() func(context.Context, []*sqlf.Query) (int, error)\n```\n\n"
+                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) SetDefaultHook(hook func(context.Context, []*sqlf.Query) (int, error))\n```\n\nSetDefaultHook sets function that is called when the QueuedCount method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreQueuedCountFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreQueuedCountFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreQueuedCountFunc.SetDefaultReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreQueuedCountFunc) SetDefaultReturn(r0 int, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) SetDefaultReturn(r0 int, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -2254,6 +2454,7 @@
                       "newPage": false,
                       "searchKey": "mocks.StoreQueuedCountFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -2270,20 +2471,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreQueuedCountFunc.History",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreQueuedCountFunc.nextHook",
                     "documentation": {
-                      "identifier": "StoreQueuedCountFunc.History",
+                      "identifier": "StoreQueuedCountFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "mocks.StoreQueuedCountFunc.History",
-                      "tags": null
+                      "searchKey": "mocks.StoreQueuedCountFunc.nextHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreQueuedCountFunc) History() []StoreQueuedCountFuncCall"
+                      "value": "func (f *StoreQueuedCountFunc) nextHook() func(context.Context, []*sqlf.Query) (int, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) History() []StoreQueuedCountFuncCall\n```\n\nHistory returns a sequence of StoreQueuedCountFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) nextHook() func(context.Context, []*sqlf.Query) (int, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -2298,7 +2502,9 @@
                 "identifier": "StoreQueuedCountFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.StoreQueuedCountFuncCall",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2316,7 +2522,9 @@
                       "identifier": "StoreQueuedCountFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.StoreQueuedCountFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2336,7 +2544,9 @@
                       "identifier": "StoreQueuedCountFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.StoreQueuedCountFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2359,7 +2569,9 @@
                 "identifier": "StoreRequeueFunc",
                 "newPage": false,
                 "searchKey": "mocks.StoreRequeueFunc",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2372,20 +2584,22 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreRequeueFunc.SetDefaultHook",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreRequeueFunc.History",
                     "documentation": {
-                      "identifier": "StoreRequeueFunc.SetDefaultHook",
+                      "identifier": "StoreRequeueFunc.History",
                       "newPage": false,
-                      "searchKey": "mocks.StoreRequeueFunc.SetDefaultHook",
-                      "tags": null
+                      "searchKey": "mocks.StoreRequeueFunc.History",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreRequeueFunc) SetDefaultHook(hook func(context.Context, int, time.Time) error)"
+                      "value": "func (f *StoreRequeueFunc) History() []StoreRequeueFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreRequeueFunc) SetDefaultHook(hook func(context.Context, int, time.Time) error)\n```\n\nSetDefaultHook sets function that is called when the Requeue method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *StoreRequeueFunc) History() []StoreRequeueFuncCall\n```\n\nHistory returns a sequence of StoreRequeueFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -2397,7 +2611,9 @@
                       "identifier": "StoreRequeueFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreRequeueFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2412,32 +2628,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreRequeueFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "StoreRequeueFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "mocks.StoreRequeueFunc.SetDefaultReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *StoreRequeueFunc) SetDefaultReturn(r0 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreRequeueFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/workerutil/dbworker/store/mocks#StoreRequeueFunc.PushReturn",
                     "documentation": {
                       "identifier": "StoreRequeueFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.StoreRequeueFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2452,22 +2650,44 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreRequeueFunc.nextHook",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreRequeueFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "StoreRequeueFunc.nextHook",
+                      "identifier": "StoreRequeueFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "mocks.StoreRequeueFunc.nextHook",
+                      "searchKey": "mocks.StoreRequeueFunc.SetDefaultHook",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreRequeueFunc) nextHook() func(context.Context, int, time.Time) error"
+                      "value": "func (f *StoreRequeueFunc) SetDefaultHook(hook func(context.Context, int, time.Time) error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreRequeueFunc) nextHook() func(context.Context, int, time.Time) error\n```\n\n"
+                      "value": "```Go\nfunc (f *StoreRequeueFunc) SetDefaultHook(hook func(context.Context, int, time.Time) error)\n```\n\nSetDefaultHook sets function that is called when the Requeue method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreRequeueFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreRequeueFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreRequeueFunc.SetDefaultReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreRequeueFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreRequeueFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -2480,6 +2700,7 @@
                       "newPage": false,
                       "searchKey": "mocks.StoreRequeueFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -2496,20 +2717,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreRequeueFunc.History",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreRequeueFunc.nextHook",
                     "documentation": {
-                      "identifier": "StoreRequeueFunc.History",
+                      "identifier": "StoreRequeueFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "mocks.StoreRequeueFunc.History",
-                      "tags": null
+                      "searchKey": "mocks.StoreRequeueFunc.nextHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreRequeueFunc) History() []StoreRequeueFuncCall"
+                      "value": "func (f *StoreRequeueFunc) nextHook() func(context.Context, int, time.Time) error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreRequeueFunc) History() []StoreRequeueFuncCall\n```\n\nHistory returns a sequence of StoreRequeueFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *StoreRequeueFunc) nextHook() func(context.Context, int, time.Time) error\n```\n\n"
                     },
                     "children": null
                   }
@@ -2524,7 +2748,9 @@
                 "identifier": "StoreRequeueFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.StoreRequeueFuncCall",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2542,7 +2768,9 @@
                       "identifier": "StoreRequeueFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.StoreRequeueFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2562,7 +2790,9 @@
                       "identifier": "StoreRequeueFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.StoreRequeueFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2585,7 +2815,9 @@
                 "identifier": "StoreResetStalledFunc",
                 "newPage": false,
                 "searchKey": "mocks.StoreResetStalledFunc",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2598,20 +2830,22 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreResetStalledFunc.SetDefaultHook",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreResetStalledFunc.History",
                     "documentation": {
-                      "identifier": "StoreResetStalledFunc.SetDefaultHook",
+                      "identifier": "StoreResetStalledFunc.History",
                       "newPage": false,
-                      "searchKey": "mocks.StoreResetStalledFunc.SetDefaultHook",
-                      "tags": null
+                      "searchKey": "mocks.StoreResetStalledFunc.History",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreResetStalledFunc) SetDefaultHook(hook func(context.Context) ([]int, []int, error))"
+                      "value": "func (f *StoreResetStalledFunc) History() []StoreResetStalledFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreResetStalledFunc) SetDefaultHook(hook func(context.Context) ([]int, []int, error))\n```\n\nSetDefaultHook sets function that is called when the ResetStalled method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *StoreResetStalledFunc) History() []StoreResetStalledFuncCall\n```\n\nHistory returns a sequence of StoreResetStalledFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -2623,7 +2857,9 @@
                       "identifier": "StoreResetStalledFunc.PushHook",
                       "newPage": false,
                       "searchKey": "mocks.StoreResetStalledFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2638,32 +2874,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreResetStalledFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "StoreResetStalledFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "mocks.StoreResetStalledFunc.SetDefaultReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *StoreResetStalledFunc) SetDefaultReturn(r0 []int, r1 []int, r2 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreResetStalledFunc) SetDefaultReturn(r0 []int, r1 []int, r2 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/workerutil/dbworker/store/mocks#StoreResetStalledFunc.PushReturn",
                     "documentation": {
                       "identifier": "StoreResetStalledFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "mocks.StoreResetStalledFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2678,22 +2896,44 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreResetStalledFunc.nextHook",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreResetStalledFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "StoreResetStalledFunc.nextHook",
+                      "identifier": "StoreResetStalledFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "mocks.StoreResetStalledFunc.nextHook",
+                      "searchKey": "mocks.StoreResetStalledFunc.SetDefaultHook",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreResetStalledFunc) nextHook() func(context.Context) ([]int, []int, error)"
+                      "value": "func (f *StoreResetStalledFunc) SetDefaultHook(hook func(context.Context) ([]int, []int, error))"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreResetStalledFunc) nextHook() func(context.Context) ([]int, []int, error)\n```\n\n"
+                      "value": "```Go\nfunc (f *StoreResetStalledFunc) SetDefaultHook(hook func(context.Context) ([]int, []int, error))\n```\n\nSetDefaultHook sets function that is called when the ResetStalled method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreResetStalledFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreResetStalledFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreResetStalledFunc.SetDefaultReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreResetStalledFunc) SetDefaultReturn(r0 []int, r1 []int, r2 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreResetStalledFunc) SetDefaultReturn(r0 []int, r1 []int, r2 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -2706,6 +2946,7 @@
                       "newPage": false,
                       "searchKey": "mocks.StoreResetStalledFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -2722,20 +2963,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreResetStalledFunc.History",
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreResetStalledFunc.nextHook",
                     "documentation": {
-                      "identifier": "StoreResetStalledFunc.History",
+                      "identifier": "StoreResetStalledFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "mocks.StoreResetStalledFunc.History",
-                      "tags": null
+                      "searchKey": "mocks.StoreResetStalledFunc.nextHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *StoreResetStalledFunc) History() []StoreResetStalledFuncCall"
+                      "value": "func (f *StoreResetStalledFunc) nextHook() func(context.Context) ([]int, []int, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *StoreResetStalledFunc) History() []StoreResetStalledFuncCall\n```\n\nHistory returns a sequence of StoreResetStalledFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *StoreResetStalledFunc) nextHook() func(context.Context) ([]int, []int, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -2750,7 +2994,9 @@
                 "identifier": "StoreResetStalledFuncCall",
                 "newPage": false,
                 "searchKey": "mocks.StoreResetStalledFuncCall",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -2768,7 +3014,9 @@
                       "identifier": "StoreResetStalledFuncCall.Args",
                       "newPage": false,
                       "searchKey": "mocks.StoreResetStalledFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -2788,7 +3036,9 @@
                       "identifier": "StoreResetStalledFuncCall.Results",
                       "newPage": false,
                       "searchKey": "mocks.StoreResetStalledFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",

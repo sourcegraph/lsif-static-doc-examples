@@ -4,7 +4,9 @@
     "identifier": "rand",
     "newPage": true,
     "searchKey": "crypto/rand",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -41,6 +45,8 @@
                 "newPage": false,
                 "searchKey": "rand.urandomDevice",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -65,7 +71,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -83,7 +91,10 @@
                 "identifier": "Reader",
                 "newPage": false,
                 "searchKey": "rand.Reader",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,6 +115,8 @@
                 "newPage": false,
                 "searchKey": "rand.altGetRandom",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
@@ -126,6 +139,8 @@
                 "newPage": false,
                 "searchKey": "rand.isEAGAIN",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
@@ -148,6 +163,9 @@
                 "newPage": false,
                 "searchKey": "rand.smallPrimes",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -170,6 +188,8 @@
                 "newPage": false,
                 "searchKey": "rand.smallPrimesProduct",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -194,7 +214,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -213,6 +235,7 @@
                 "newPage": false,
                 "searchKey": "rand.devReader",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -233,6 +256,7 @@
                       "newPage": false,
                       "searchKey": "rand.devReader.Read",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -258,6 +282,7 @@
                 "newPage": false,
                 "searchKey": "rand.hideAgainReader",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -278,6 +303,7 @@
                       "newPage": false,
                       "searchKey": "rand.hideAgainReader.Read",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -303,6 +329,7 @@
                 "newPage": false,
                 "searchKey": "rand.reader",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -323,6 +350,7 @@
                       "newPage": false,
                       "searchKey": "rand.reader.Read",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -350,7 +378,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -363,206 +393,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto/rand#init.eagain.go",
-              "documentation": {
-                "identifier": "init.eagain.go",
-                "newPage": false,
-                "searchKey": "rand.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/rand#unixIsEAGAIN",
-              "documentation": {
-                "identifier": "unixIsEAGAIN",
-                "newPage": false,
-                "searchKey": "rand.unixIsEAGAIN",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func unixIsEAGAIN(err error) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc unixIsEAGAIN(err error) bool\n```\n\nunixIsEAGAIN reports whether err is a syscall.EAGAIN wrapped in a PathError. See golang.org/issue/9205 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/rand#Read",
-              "documentation": {
-                "identifier": "Read",
-                "newPage": false,
-                "searchKey": "rand.Read",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Read(b []byte) (n int, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Read(b []byte) (n int, err error)\n```\n\nRead is a helper function that calls Reader.Read using io.ReadFull. On return, n == len(b) if and only if err == nil. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/rand#init.rand_getentropy.go",
-              "documentation": {
-                "identifier": "init.rand_getentropy.go",
-                "newPage": false,
-                "searchKey": "rand.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/rand#getEntropy",
-              "documentation": {
-                "identifier": "getEntropy",
-                "newPage": false,
-                "searchKey": "rand.getEntropy",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func getEntropy(p []byte) (ok bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc getEntropy(p []byte) (ok bool)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/rand#init.rand_unix.go",
-              "documentation": {
-                "identifier": "init.rand_unix.go",
-                "newPage": false,
-                "searchKey": "rand.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/rand#warnBlocked",
-              "documentation": {
-                "identifier": "warnBlocked",
-                "newPage": false,
-                "searchKey": "rand.warnBlocked",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func warnBlocked()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc warnBlocked()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/rand#newReader",
-              "documentation": {
-                "identifier": "newReader",
-                "newPage": false,
-                "searchKey": "rand.newReader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func newReader(entropy io.Reader) io.Reader"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc newReader(entropy io.Reader) io.Reader\n```\n\nnewReader returns a new pseudorandom generator that seeds itself by reading from entropy. If entropy == nil, the generator seeds itself by reading from the system's random number generator, typically /dev/random. The Read method on the returned reader always returns the full amount asked for, or else it returns an error. \n\nThe generator uses the X9.31 algorithm with AES-128, reseeding after every 1 MB of generated data. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/rand#Prime",
-              "documentation": {
-                "identifier": "Prime",
-                "newPage": false,
-                "searchKey": "rand.Prime",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Prime(rand io.Reader, bits int) (p *big.Int, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Prime(rand io.Reader, bits int) (p *big.Int, err error)\n```\n\nPrime returns a number, p, of the given size, such that p is prime with high probability. Prime will return error for any error returned by rand.Read or if bits < 2. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/rand#Int",
               "documentation": {
                 "identifier": "Int",
                 "newPage": false,
                 "searchKey": "rand.Int",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -577,13 +415,59 @@
           },
           {
             "node": {
+              "pathID": "/crypto/rand#Prime",
+              "documentation": {
+                "identifier": "Prime",
+                "newPage": false,
+                "searchKey": "rand.Prime",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Prime(rand io.Reader, bits int) (p *big.Int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Prime(rand io.Reader, bits int) (p *big.Int, err error)\n```\n\nPrime returns a number, p, of the given size, such that p is prime with high probability. Prime will return error for any error returned by rand.Read or if bits < 2. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rand#Read",
+              "documentation": {
+                "identifier": "Read",
+                "newPage": false,
+                "searchKey": "rand.Read",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Read(b []byte) (n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Read(b []byte) (n int, err error)\n```\n\nRead is a helper function that calls Reader.Read using io.ReadFull. On return, n == len(b) if and only if err == nil. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/rand#TestRead",
               "documentation": {
                 "identifier": "TestRead",
                 "newPage": false,
                 "searchKey": "rand.TestRead",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -605,7 +489,9 @@
                 "newPage": false,
                 "searchKey": "rand.TestReadEmpty",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -615,6 +501,167 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc TestReadEmpty(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rand#getEntropy",
+              "documentation": {
+                "identifier": "getEntropy",
+                "newPage": false,
+                "searchKey": "rand.getEntropy",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getEntropy(p []byte) (ok bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getEntropy(p []byte) (ok bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rand#init.eagain.go",
+              "documentation": {
+                "identifier": "init.eagain.go",
+                "newPage": false,
+                "searchKey": "rand.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rand#init.rand_getentropy.go",
+              "documentation": {
+                "identifier": "init.rand_getentropy.go",
+                "newPage": false,
+                "searchKey": "rand.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rand#init.rand_unix.go",
+              "documentation": {
+                "identifier": "init.rand_unix.go",
+                "newPage": false,
+                "searchKey": "rand.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rand#newReader",
+              "documentation": {
+                "identifier": "newReader",
+                "newPage": false,
+                "searchKey": "rand.newReader",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newReader(entropy io.Reader) io.Reader"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newReader(entropy io.Reader) io.Reader\n```\n\nnewReader returns a new pseudorandom generator that seeds itself by reading from entropy. If entropy == nil, the generator seeds itself by reading from the system's random number generator, typically /dev/random. The Read method on the returned reader always returns the full amount asked for, or else it returns an error. \n\nThe generator uses the X9.31 algorithm with AES-128, reseeding after every 1 MB of generated data. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rand#unixIsEAGAIN",
+              "documentation": {
+                "identifier": "unixIsEAGAIN",
+                "newPage": false,
+                "searchKey": "rand.unixIsEAGAIN",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func unixIsEAGAIN(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc unixIsEAGAIN(err error) bool\n```\n\nunixIsEAGAIN reports whether err is a syscall.EAGAIN wrapped in a PathError. See golang.org/issue/9205 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rand#warnBlocked",
+              "documentation": {
+                "identifier": "warnBlocked",
+                "newPage": false,
+                "searchKey": "rand.warnBlocked",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func warnBlocked()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc warnBlocked()\n```\n\n"
               },
               "children": null
             }

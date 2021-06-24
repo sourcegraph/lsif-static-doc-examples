@@ -4,7 +4,9 @@
     "identifier": "search",
     "newPage": true,
     "searchKey": "cmd/searcher/search",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,12 +39,62 @@
         "children": [
           {
             "node": {
+              "pathID": "/cmd/searcher/search#defaultMaxSearchResults",
+              "documentation": {
+                "identifier": "defaultMaxSearchResults",
+                "newPage": false,
+                "searchKey": "search.defaultMaxSearchResults",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const defaultMaxSearchResults"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst defaultMaxSearchResults = 30\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#maxFileMatchLimit",
+              "documentation": {
+                "identifier": "maxFileMatchLimit",
+                "newPage": false,
+                "searchKey": "search.maxFileMatchLimit",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxFileMatchLimit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxFileMatchLimit = 100\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/searcher/search#maxFileMatches",
               "documentation": {
                 "identifier": "maxFileMatches",
                 "newPage": false,
                 "searchKey": "search.maxFileMatches",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -63,6 +117,8 @@
                 "newPage": false,
                 "searchKey": "search.maxLineMatches",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -79,56 +135,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/searcher/search#numWorkers",
-              "documentation": {
-                "identifier": "numWorkers",
-                "newPage": false,
-                "searchKey": "search.numWorkers",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const numWorkers"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst numWorkers = 8\n```\n\nnumWorkers is how many concurrent readerGreps run in the case of regexSearch, and the number of parallel workers in the case of structuralSearch. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#maxFileMatchLimit",
-              "documentation": {
-                "identifier": "maxFileMatchLimit",
-                "newPage": false,
-                "searchKey": "search.maxFileMatchLimit",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const maxFileMatchLimit"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst maxFileMatchLimit = 100\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/searcher/search#megabyte",
               "documentation": {
                 "identifier": "megabyte",
                 "newPage": false,
                 "searchKey": "search.megabyte",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -145,22 +159,24 @@
           },
           {
             "node": {
-              "pathID": "/cmd/searcher/search#defaultMaxSearchResults",
+              "pathID": "/cmd/searcher/search#numWorkers",
               "documentation": {
-                "identifier": "defaultMaxSearchResults",
+                "identifier": "numWorkers",
                 "newPage": false,
-                "searchKey": "search.defaultMaxSearchResults",
+                "searchKey": "search.numWorkers",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const defaultMaxSearchResults"
+                "value": "const numWorkers"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst defaultMaxSearchResults = 30\n```\n\n"
+                "value": "```Go\nconst numWorkers = 8\n```\n\nnumWorkers is how many concurrent readerGreps run in the case of regexSearch, and the number of parallel workers in the case of structuralSearch. \n\n"
               },
               "children": null
             }
@@ -175,7 +191,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -188,88 +206,23 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/searcher/search#lowerTable",
+              "pathID": "/cmd/searcher/search#All",
               "documentation": {
-                "identifier": "lowerTable",
+                "identifier": "All",
                 "newPage": false,
-                "searchKey": "search.lowerTable",
+                "searchKey": "search.All",
                 "tags": [
-                  "private"
+                  "variable",
+                  "struct"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var lowerTable"
+                "value": "var All"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar lowerTable = ...\n```\n\npython to generate ', '.join(hex(ord(chr(i).lower())) for i in range(256)) \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#decoder",
-              "documentation": {
-                "identifier": "decoder",
-                "newPage": false,
-                "searchKey": "search.decoder",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var decoder"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar decoder = schema.NewDecoder()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#running",
-              "documentation": {
-                "identifier": "running",
-                "newPage": false,
-                "searchKey": "search.running",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var running"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar running = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#archiveSize",
-              "documentation": {
-                "identifier": "archiveSize",
-                "newPage": false,
-                "searchKey": "search.archiveSize",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var archiveSize"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar archiveSize = ...\n```\n\n"
+                "value": "```Go\nvar All UniversalSet = struct{}{}\n```\n\n"
               },
               "children": null
             }
@@ -282,6 +235,8 @@
                 "newPage": false,
                 "searchKey": "search.archiveFiles",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -298,108 +253,48 @@
           },
           {
             "node": {
-              "pathID": "/cmd/searcher/search#requestTotal",
+              "pathID": "/cmd/searcher/search#archiveSize",
               "documentation": {
-                "identifier": "requestTotal",
+                "identifier": "archiveSize",
                 "newPage": false,
-                "searchKey": "search.requestTotal",
+                "searchKey": "search.archiveSize",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var requestTotal"
+                "value": "var archiveSize"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar requestTotal = ...\n```\n\n"
+                "value": "```Go\nvar archiveSize = ...\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/searcher/search#isValidMatcher",
+              "pathID": "/cmd/searcher/search#decoder",
               "documentation": {
-                "identifier": "isValidMatcher",
+                "identifier": "decoder",
                 "newPage": false,
-                "searchKey": "search.isValidMatcher",
+                "searchKey": "search.decoder",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var isValidMatcher"
+                "value": "var decoder"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar isValidMatcher = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#All",
-              "documentation": {
-                "identifier": "All",
-                "newPage": false,
-                "searchKey": "search.All",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var All"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar All UniversalSet = struct{}{}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#requestTotalStructuralSearch",
-              "documentation": {
-                "identifier": "requestTotalStructuralSearch",
-                "newPage": false,
-                "searchKey": "search.requestTotalStructuralSearch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var requestTotalStructuralSearch"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar requestTotalStructuralSearch = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#zoektOnce",
-              "documentation": {
-                "identifier": "zoektOnce",
-                "newPage": false,
-                "searchKey": "search.zoektOnce",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var zoektOnce"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar zoektOnce sync.Once\n```\n\n"
+                "value": "```Go\nvar decoder = schema.NewDecoder()\n```\n\n"
               },
               "children": null
             }
@@ -412,6 +307,8 @@
                 "newPage": false,
                 "searchKey": "search.endpointMap",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -428,34 +325,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/searcher/search#zoektClient",
-              "documentation": {
-                "identifier": "zoektClient",
-                "newPage": false,
-                "searchKey": "search.zoektClient",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var zoektClient"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar zoektClient zoekt.Streamer\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/searcher/search#errNoResultsInTimeout",
               "documentation": {
                 "identifier": "errNoResultsInTimeout",
                 "newPage": false,
                 "searchKey": "search.errNoResultsInTimeout",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -478,6 +355,8 @@
                 "newPage": false,
                 "searchKey": "search.githubStore",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -488,6 +367,175 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar githubStore = ...\n```\n\ngithubStore fetches from github and caches across test runs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#isValidMatcher",
+              "documentation": {
+                "identifier": "isValidMatcher",
+                "newPage": false,
+                "searchKey": "search.isValidMatcher",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var isValidMatcher"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar isValidMatcher = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#lowerTable",
+              "documentation": {
+                "identifier": "lowerTable",
+                "newPage": false,
+                "searchKey": "search.lowerTable",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var lowerTable"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar lowerTable = ...\n```\n\npython to generate ', '.join(hex(ord(chr(i).lower())) for i in range(256)) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#requestTotal",
+              "documentation": {
+                "identifier": "requestTotal",
+                "newPage": false,
+                "searchKey": "search.requestTotal",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var requestTotal"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar requestTotal = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#requestTotalStructuralSearch",
+              "documentation": {
+                "identifier": "requestTotalStructuralSearch",
+                "newPage": false,
+                "searchKey": "search.requestTotalStructuralSearch",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var requestTotalStructuralSearch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar requestTotalStructuralSearch = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#running",
+              "documentation": {
+                "identifier": "running",
+                "newPage": false,
+                "searchKey": "search.running",
+                "tags": [
+                  "variable",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var running"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar running = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#zoektClient",
+              "documentation": {
+                "identifier": "zoektClient",
+                "newPage": false,
+                "searchKey": "search.zoektClient",
+                "tags": [
+                  "variable",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var zoektClient"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar zoektClient zoekt.Streamer\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#zoektOnce",
+              "documentation": {
+                "identifier": "zoektOnce",
+                "newPage": false,
+                "searchKey": "search.zoektOnce",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var zoektOnce"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar zoektOnce sync.Once\n```\n\n"
               },
               "children": null
             }
@@ -502,7 +550,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -520,7 +570,9 @@
                 "identifier": "Service",
                 "newPage": false,
                 "searchKey": "search.Service",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -538,7 +590,9 @@
                       "identifier": "Service.ServeHTTP",
                       "newPage": false,
                       "searchKey": "search.Service.ServeHTTP",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -559,6 +613,7 @@
                       "newPage": false,
                       "searchKey": "search.Service.search",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -578,275 +633,15 @@
           },
           {
             "node": {
-              "pathID": "/cmd/searcher/search#badRequestError",
-              "documentation": {
-                "identifier": "badRequestError",
-                "newPage": false,
-                "searchKey": "search.badRequestError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type badRequestError struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype badRequestError struct{ msg string }\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/searcher/search#badRequestError.Error",
-                    "documentation": {
-                      "identifier": "badRequestError.Error",
-                      "newPage": false,
-                      "searchKey": "search.badRequestError.Error",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e badRequestError) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e badRequestError) Error() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/searcher/search#badRequestError.BadRequest",
-                    "documentation": {
-                      "identifier": "badRequestError.BadRequest",
-                      "newPage": false,
-                      "searchKey": "search.badRequestError.BadRequest",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e badRequestError) BadRequest() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e badRequestError) BadRequest() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#readerGrep",
-              "documentation": {
-                "identifier": "readerGrep",
-                "newPage": false,
-                "searchKey": "search.readerGrep",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type readerGrep struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype readerGrep struct {\n\t// re is the regexp to match, or nil if empty (\"match all files' content\").\n\tre *regexp.Regexp\n\n\t// ignoreCase if true means we need to do case insensitive matching.\n\tignoreCase bool\n\n\t// transformBuf is reused between file searches to avoid\n\t// re-allocating. It is only used if we need to transform the input\n\t// before matching. For example we lower case the input in the case of\n\t// ignoreCase.\n\ttransformBuf []byte\n\n\t// matchPath is compiled from the include/exclude path patterns and reports\n\t// whether a file path matches (and should be searched).\n\tmatchPath pathmatch.PathMatcher\n\n\t// literalSubstring is used to test if a file is worth considering for\n\t// matches. literalSubstring is guaranteed to appear in any match found by\n\t// re. It is the output of the longestLiteral function. It is only set if\n\t// the regex has an empty LiteralPrefix.\n\tliteralSubstring []byte\n}\n```\n\nreaderGrep is responsible for finding LineMatches. It is not concurrency safe (it reuses buffers for performance). \n\nThis code is base on reading the techniques detailed in [http://blog.burntsushi.net/ripgrep/](http://blog.burntsushi.net/ripgrep/) \n\nThe stdlib regexp is pretty powerful and in fact implements many of the features in ripgrep. Our implementation gives high performance via pruning aggressively which files to consider (non-binary under a limit) and optimizing for assuming most lines will not contain a match. The pruning of files is done by the store. \n\nIf there is no more low-hanging fruit and perf is not acceptable, we could consider using ripgrep directly (modify it to search zip archives). \n\nTODO(keegan) return search statistics \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/searcher/search#compile",
-                    "documentation": {
-                      "identifier": "compile",
-                      "newPage": false,
-                      "searchKey": "search.compile",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func compile(p *protocol.PatternInfo) (*readerGrep, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc compile(p *protocol.PatternInfo) (*readerGrep, error)\n```\n\ncompile returns a readerGrep for matching p. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/searcher/search#readerGrep.Copy",
-                    "documentation": {
-                      "identifier": "readerGrep.Copy",
-                      "newPage": false,
-                      "searchKey": "search.readerGrep.Copy",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (rg *readerGrep) Copy() *readerGrep"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (rg *readerGrep) Copy() *readerGrep\n```\n\nCopy returns a copied version of rg that is safe to use from another goroutine. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/searcher/search#readerGrep.matchString",
-                    "documentation": {
-                      "identifier": "readerGrep.matchString",
-                      "newPage": false,
-                      "searchKey": "search.readerGrep.matchString",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (rg *readerGrep) matchString(s string) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (rg *readerGrep) matchString(s string) bool\n```\n\nmatchString returns whether rg's regexp pattern matches s. It is intended to be used to match file paths. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/searcher/search#readerGrep.Find",
-                    "documentation": {
-                      "identifier": "readerGrep.Find",
-                      "newPage": false,
-                      "searchKey": "search.readerGrep.Find",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (rg *readerGrep) Find(zf *store.ZipFile, f *store.SrcFile) (matches []protocol.LineMatch, limitHit bool, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (rg *readerGrep) Find(zf *store.ZipFile, f *store.SrcFile) (matches []protocol.LineMatch, limitHit bool, err error)\n```\n\nFind returns a LineMatch for each line that matches rg in reader. LimitHit is true if some matches may not have been included in the result. NOTE: This is not safe to use concurrently. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/searcher/search#readerGrep.FindZip",
-                    "documentation": {
-                      "identifier": "readerGrep.FindZip",
-                      "newPage": false,
-                      "searchKey": "search.readerGrep.FindZip",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (rg *readerGrep) FindZip(zf *store.ZipFile, f *store.SrcFile) (protocol.FileMatch, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (rg *readerGrep) FindZip(zf *store.ZipFile, f *store.SrcFile) (protocol.FileMatch, error)\n```\n\nFindZip is a convenience function to run Find on f. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#filePatterns",
-              "documentation": {
-                "identifier": "filePatterns",
-                "newPage": false,
-                "searchKey": "search.filePatterns",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type filePatterns interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype filePatterns interface {\n\tValue()\n}\n```\n\nA variant type that represents whether to search all files in a Zip file (type UniversalSet), or just a subset (type Subset). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#UniversalSet",
-              "documentation": {
-                "identifier": "UniversalSet",
-                "newPage": false,
-                "searchKey": "search.UniversalSet",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type UniversalSet struct{}"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype UniversalSet struct{}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/searcher/search#UniversalSet.Value",
-                    "documentation": {
-                      "identifier": "UniversalSet.Value",
-                      "newPage": false,
-                      "searchKey": "search.UniversalSet.Value",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (UniversalSet) Value()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (UniversalSet) Value()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/searcher/search#Subset",
               "documentation": {
                 "identifier": "Subset",
                 "newPage": false,
                 "searchKey": "search.Subset",
-                "tags": null
+                "tags": [
+                  "array",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -864,7 +659,9 @@
                       "identifier": "Subset.Value",
                       "newPage": false,
                       "searchKey": "search.Subset.Value",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -882,24 +679,47 @@
           },
           {
             "node": {
-              "pathID": "/cmd/searcher/search#zoektSearchStreamEvent",
+              "pathID": "/cmd/searcher/search#UniversalSet",
               "documentation": {
-                "identifier": "zoektSearchStreamEvent",
+                "identifier": "UniversalSet",
                 "newPage": false,
-                "searchKey": "search.zoektSearchStreamEvent",
+                "searchKey": "search.UniversalSet",
                 "tags": [
-                  "private"
+                  "struct"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type zoektSearchStreamEvent struct"
+                "value": "type UniversalSet struct{}"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype zoektSearchStreamEvent struct {\n\tfm       []zoekt.FileMatch\n\tlimitHit bool\n\tpartial  map[api.RepoID]struct{}\n\terr      error\n}\n```\n\n"
+                "value": "```Go\ntype UniversalSet struct{}\n```\n\n"
               },
-              "children": null
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/searcher/search#UniversalSet.Value",
+                    "documentation": {
+                      "identifier": "UniversalSet.Value",
+                      "newPage": false,
+                      "searchKey": "search.UniversalSet.Value",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (UniversalSet) Value()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (UniversalSet) Value()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
             }
           },
           {
@@ -910,6 +730,7 @@
                 "newPage": false,
                 "searchKey": "search.atomicEndpoints",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -930,6 +751,7 @@
                       "newPage": false,
                       "searchKey": "search.atomicEndpoints.Endpoints",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -952,6 +774,7 @@
                       "newPage": false,
                       "searchKey": "search.atomicEndpoints.Set",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -974,6 +797,7 @@
                       "newPage": false,
                       "searchKey": "search.atomicEndpoints.needsUpdate",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -990,6 +814,261 @@
                 }
               ]
             }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#badRequestError",
+              "documentation": {
+                "identifier": "badRequestError",
+                "newPage": false,
+                "searchKey": "search.badRequestError",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type badRequestError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype badRequestError struct{ msg string }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/searcher/search#badRequestError.BadRequest",
+                    "documentation": {
+                      "identifier": "badRequestError.BadRequest",
+                      "newPage": false,
+                      "searchKey": "search.badRequestError.BadRequest",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e badRequestError) BadRequest() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e badRequestError) BadRequest() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/searcher/search#badRequestError.Error",
+                    "documentation": {
+                      "identifier": "badRequestError.Error",
+                      "newPage": false,
+                      "searchKey": "search.badRequestError.Error",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e badRequestError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e badRequestError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#filePatterns",
+              "documentation": {
+                "identifier": "filePatterns",
+                "newPage": false,
+                "searchKey": "search.filePatterns",
+                "tags": [
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type filePatterns interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype filePatterns interface {\n\tValue()\n}\n```\n\nA variant type that represents whether to search all files in a Zip file (type UniversalSet), or just a subset (type Subset). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#readerGrep",
+              "documentation": {
+                "identifier": "readerGrep",
+                "newPage": false,
+                "searchKey": "search.readerGrep",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type readerGrep struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype readerGrep struct {\n\t// re is the regexp to match, or nil if empty (\"match all files' content\").\n\tre *regexp.Regexp\n\n\t// ignoreCase if true means we need to do case insensitive matching.\n\tignoreCase bool\n\n\t// transformBuf is reused between file searches to avoid\n\t// re-allocating. It is only used if we need to transform the input\n\t// before matching. For example we lower case the input in the case of\n\t// ignoreCase.\n\ttransformBuf []byte\n\n\t// matchPath is compiled from the include/exclude path patterns and reports\n\t// whether a file path matches (and should be searched).\n\tmatchPath pathmatch.PathMatcher\n\n\t// literalSubstring is used to test if a file is worth considering for\n\t// matches. literalSubstring is guaranteed to appear in any match found by\n\t// re. It is the output of the longestLiteral function. It is only set if\n\t// the regex has an empty LiteralPrefix.\n\tliteralSubstring []byte\n}\n```\n\nreaderGrep is responsible for finding LineMatches. It is not concurrency safe (it reuses buffers for performance). \n\nThis code is base on reading the techniques detailed in [http://blog.burntsushi.net/ripgrep/](http://blog.burntsushi.net/ripgrep/) \n\nThe stdlib regexp is pretty powerful and in fact implements many of the features in ripgrep. Our implementation gives high performance via pruning aggressively which files to consider (non-binary under a limit) and optimizing for assuming most lines will not contain a match. The pruning of files is done by the store. \n\nIf there is no more low-hanging fruit and perf is not acceptable, we could consider using ripgrep directly (modify it to search zip archives). \n\nTODO(keegan) return search statistics \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/searcher/search#compile",
+                    "documentation": {
+                      "identifier": "compile",
+                      "newPage": false,
+                      "searchKey": "search.compile",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func compile(p *protocol.PatternInfo) (*readerGrep, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc compile(p *protocol.PatternInfo) (*readerGrep, error)\n```\n\ncompile returns a readerGrep for matching p. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/searcher/search#readerGrep.Copy",
+                    "documentation": {
+                      "identifier": "readerGrep.Copy",
+                      "newPage": false,
+                      "searchKey": "search.readerGrep.Copy",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rg *readerGrep) Copy() *readerGrep"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rg *readerGrep) Copy() *readerGrep\n```\n\nCopy returns a copied version of rg that is safe to use from another goroutine. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/searcher/search#readerGrep.Find",
+                    "documentation": {
+                      "identifier": "readerGrep.Find",
+                      "newPage": false,
+                      "searchKey": "search.readerGrep.Find",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rg *readerGrep) Find(zf *store.ZipFile, f *store.SrcFile) (matches []protocol.LineMatch, limitHit bool, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rg *readerGrep) Find(zf *store.ZipFile, f *store.SrcFile) (matches []protocol.LineMatch, limitHit bool, err error)\n```\n\nFind returns a LineMatch for each line that matches rg in reader. LimitHit is true if some matches may not have been included in the result. NOTE: This is not safe to use concurrently. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/searcher/search#readerGrep.FindZip",
+                    "documentation": {
+                      "identifier": "readerGrep.FindZip",
+                      "newPage": false,
+                      "searchKey": "search.readerGrep.FindZip",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rg *readerGrep) FindZip(zf *store.ZipFile, f *store.SrcFile) (protocol.FileMatch, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rg *readerGrep) FindZip(zf *store.ZipFile, f *store.SrcFile) (protocol.FileMatch, error)\n```\n\nFindZip is a convenience function to run Find on f. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/searcher/search#readerGrep.matchString",
+                    "documentation": {
+                      "identifier": "readerGrep.matchString",
+                      "newPage": false,
+                      "searchKey": "search.readerGrep.matchString",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rg *readerGrep) matchString(s string) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rg *readerGrep) matchString(s string) bool\n```\n\nmatchString returns whether rg's regexp pattern matches s. It is intended to be used to match file paths. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#zoektSearchStreamEvent",
+              "documentation": {
+                "identifier": "zoektSearchStreamEvent",
+                "newPage": false,
+                "searchKey": "search.zoektSearchStreamEvent",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type zoektSearchStreamEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype zoektSearchStreamEvent struct {\n\tfm       []zoekt.FileMatch\n\tlimitHit bool\n\tpartial  map[api.RepoID]struct{}\n\terr      error\n}\n```\n\n"
+              },
+              "children": null
+            }
           }
         ]
       }
@@ -1001,7 +1080,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1014,12 +1095,324 @@
         "children": [
           {
             "node": {
+              "pathID": "/cmd/searcher/search#BenchmarkBytesToLowerASCII",
+              "documentation": {
+                "identifier": "BenchmarkBytesToLowerASCII",
+                "newPage": false,
+                "searchKey": "search.BenchmarkBytesToLowerASCII",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkBytesToLowerASCII(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkBytesToLowerASCII(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#BenchmarkSearchRegex_large_fixed",
+              "documentation": {
+                "identifier": "BenchmarkSearchRegex_large_fixed",
+                "newPage": false,
+                "searchKey": "search.BenchmarkSearchRegex_large_fixed",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSearchRegex_large_fixed(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSearchRegex_large_fixed(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#BenchmarkSearchRegex_large_fixed_casesensitive",
+              "documentation": {
+                "identifier": "BenchmarkSearchRegex_large_fixed_casesensitive",
+                "newPage": false,
+                "searchKey": "search.BenchmarkSearchRegex_large_fixed_casesensitive",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSearchRegex_large_fixed_casesensitive(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSearchRegex_large_fixed_casesensitive(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#BenchmarkSearchRegex_large_path",
+              "documentation": {
+                "identifier": "BenchmarkSearchRegex_large_path",
+                "newPage": false,
+                "searchKey": "search.BenchmarkSearchRegex_large_path",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSearchRegex_large_path(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSearchRegex_large_path(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#BenchmarkSearchRegex_large_re_anchor",
+              "documentation": {
+                "identifier": "BenchmarkSearchRegex_large_re_anchor",
+                "newPage": false,
+                "searchKey": "search.BenchmarkSearchRegex_large_re_anchor",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSearchRegex_large_re_anchor(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSearchRegex_large_re_anchor(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#BenchmarkSearchRegex_large_re_common",
+              "documentation": {
+                "identifier": "BenchmarkSearchRegex_large_re_common",
+                "newPage": false,
+                "searchKey": "search.BenchmarkSearchRegex_large_re_common",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSearchRegex_large_re_common(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSearchRegex_large_re_common(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#BenchmarkSearchRegex_large_re_dotstar",
+              "documentation": {
+                "identifier": "BenchmarkSearchRegex_large_re_dotstar",
+                "newPage": false,
+                "searchKey": "search.BenchmarkSearchRegex_large_re_dotstar",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSearchRegex_large_re_dotstar(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSearchRegex_large_re_dotstar(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#BenchmarkSearchRegex_small_fixed",
+              "documentation": {
+                "identifier": "BenchmarkSearchRegex_small_fixed",
+                "newPage": false,
+                "searchKey": "search.BenchmarkSearchRegex_small_fixed",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSearchRegex_small_fixed(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSearchRegex_small_fixed(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#BenchmarkSearchRegex_small_fixed_casesensitive",
+              "documentation": {
+                "identifier": "BenchmarkSearchRegex_small_fixed_casesensitive",
+                "newPage": false,
+                "searchKey": "search.BenchmarkSearchRegex_small_fixed_casesensitive",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSearchRegex_small_fixed_casesensitive(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSearchRegex_small_fixed_casesensitive(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#BenchmarkSearchRegex_small_re_anchor",
+              "documentation": {
+                "identifier": "BenchmarkSearchRegex_small_re_anchor",
+                "newPage": false,
+                "searchKey": "search.BenchmarkSearchRegex_small_re_anchor",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSearchRegex_small_re_anchor(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSearchRegex_small_re_anchor(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#BenchmarkSearchRegex_small_re_common",
+              "documentation": {
+                "identifier": "BenchmarkSearchRegex_small_re_common",
+                "newPage": false,
+                "searchKey": "search.BenchmarkSearchRegex_small_re_common",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSearchRegex_small_re_common(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSearchRegex_small_re_common(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#BenchmarkSearchRegex_small_re_dotstar",
+              "documentation": {
+                "identifier": "BenchmarkSearchRegex_small_re_dotstar",
+                "newPage": false,
+                "searchKey": "search.BenchmarkSearchRegex_small_re_dotstar",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSearchRegex_small_re_dotstar(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSearchRegex_small_re_dotstar(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#HandleFilePathPatterns",
+              "documentation": {
+                "identifier": "HandleFilePathPatterns",
+                "newPage": false,
+                "searchKey": "search.HandleFilePathPatterns",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HandleFilePathPatterns(query *search.TextPatternInfo) (zoektquery.Q, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HandleFilePathPatterns(query *search.TextPatternInfo) (zoektquery.Q, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/searcher/search#NewFilter",
               "documentation": {
                 "identifier": "NewFilter",
                 "newPage": false,
                 "searchKey": "search.NewFilter",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1034,44 +1427,546 @@
           },
           {
             "node": {
-              "pathID": "/cmd/searcher/search#newIgnoreMatcher",
+              "pathID": "/cmd/searcher/search#TestBuildQuery",
               "documentation": {
-                "identifier": "newIgnoreMatcher",
+                "identifier": "TestBuildQuery",
                 "newPage": false,
-                "searchKey": "search.newIgnoreMatcher",
+                "searchKey": "search.TestBuildQuery",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func newIgnoreMatcher(ctx context.Context, repo api.RepoName, commit api.CommitID) (*ignore.Matcher, error)"
+                "value": "func TestBuildQuery(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc newIgnoreMatcher(ctx context.Context, repo api.RepoName, commit api.CommitID) (*ignore.Matcher, error)\n```\n\nnewIgnoreMatcher calls gitserver to retrieve the ignore-file. If the file doesn't exist we return an empty ignore.Matcher. \n\n"
+                "value": "```Go\nfunc TestBuildQuery(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/searcher/search#bytesToLowerASCIIgeneric",
+              "pathID": "/cmd/searcher/search#TestBytesToLowerASCII",
               "documentation": {
-                "identifier": "bytesToLowerASCIIgeneric",
+                "identifier": "TestBytesToLowerASCII",
                 "newPage": false,
-                "searchKey": "search.bytesToLowerASCIIgeneric",
+                "searchKey": "search.TestBytesToLowerASCII",
                 "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBytesToLowerASCII(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBytesToLowerASCII(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#TestHighlightMultipleLines",
+              "documentation": {
+                "identifier": "TestHighlightMultipleLines",
+                "newPage": false,
+                "searchKey": "search.TestHighlightMultipleLines",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHighlightMultipleLines(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHighlightMultipleLines(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#TestIncludePatterns",
+              "documentation": {
+                "identifier": "TestIncludePatterns",
+                "newPage": false,
+                "searchKey": "search.TestIncludePatterns",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIncludePatterns(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIncludePatterns(t *testing.T)\n```\n\nTests that includePatterns works. includePatterns serve a similar role in structural search compared to regex search, but is interpreted _differently_. includePatterns cannot be a regex expression (as in traditional search), but instead (currently) expects a list of patterns that represent a set of file paths to search. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#TestInferredMatcher",
+              "documentation": {
+                "identifier": "TestInferredMatcher",
+                "newPage": false,
+                "searchKey": "search.TestInferredMatcher",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInferredMatcher(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInferredMatcher(t *testing.T)\n```\n\nTests that structural search correctly infers the Go matcher from the .go file extension. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#TestLongestLiteral",
+              "documentation": {
+                "identifier": "TestLongestLiteral",
+                "newPage": false,
+                "searchKey": "search.TestLongestLiteral",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLongestLiteral(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLongestLiteral(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#TestLowerRegexp",
+              "documentation": {
+                "identifier": "TestLowerRegexp",
+                "newPage": false,
+                "searchKey": "search.TestLowerRegexp",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLowerRegexp(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLowerRegexp(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#TestMatchCountForMultilineMatches",
+              "documentation": {
+                "identifier": "TestMatchCountForMultilineMatches",
+                "newPage": false,
+                "searchKey": "search.TestMatchCountForMultilineMatches",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMatchCountForMultilineMatches(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMatchCountForMultilineMatches(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#TestMatcherLookupByExtension",
+              "documentation": {
+                "identifier": "TestMatcherLookupByExtension",
+                "newPage": false,
+                "searchKey": "search.TestMatcherLookupByExtension",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMatcherLookupByExtension(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMatcherLookupByExtension(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#TestMatcherLookupByLanguage",
+              "documentation": {
+                "identifier": "TestMatcherLookupByLanguage",
+                "newPage": false,
+                "searchKey": "search.TestMatcherLookupByLanguage",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMatcherLookupByLanguage(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMatcherLookupByLanguage(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#TestMaxMatches",
+              "documentation": {
+                "identifier": "TestMaxMatches",
+                "newPage": false,
+                "searchKey": "search.TestMaxMatches",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMaxMatches(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMaxMatches(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#TestMissingIgnoreFile",
+              "documentation": {
+                "identifier": "TestMissingIgnoreFile",
+                "newPage": false,
+                "searchKey": "search.TestMissingIgnoreFile",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMissingIgnoreFile(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMissingIgnoreFile(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#TestNewIgnoreMatcher",
+              "documentation": {
+                "identifier": "TestNewIgnoreMatcher",
+                "newPage": false,
+                "searchKey": "search.TestNewIgnoreMatcher",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNewIgnoreMatcher(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNewIgnoreMatcher(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#TestPathMatches",
+              "documentation": {
+                "identifier": "TestPathMatches",
+                "newPage": false,
+                "searchKey": "search.TestPathMatches",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPathMatches(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPathMatches(t *testing.T)\n```\n\nTests that: \n\n- IncludePatterns can match the path in any order - A path must match all (not any) of the IncludePatterns - An empty pattern is allowed \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#TestReadAll",
+              "documentation": {
+                "identifier": "TestReadAll",
+                "newPage": false,
+                "searchKey": "search.TestReadAll",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadAll(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadAll(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#TestRecordMetrics",
+              "documentation": {
+                "identifier": "TestRecordMetrics",
+                "newPage": false,
+                "searchKey": "search.TestRecordMetrics",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRecordMetrics(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRecordMetrics(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#TestRegexSearch",
+              "documentation": {
+                "identifier": "TestRegexSearch",
+                "newPage": false,
+                "searchKey": "search.TestRegexSearch",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRegexSearch(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRegexSearch(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#TestRule",
+              "documentation": {
+                "identifier": "TestRule",
+                "newPage": false,
+                "searchKey": "search.TestRule",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRule(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRule(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#ToFileMatch",
+              "documentation": {
+                "identifier": "ToFileMatch",
+                "newPage": false,
+                "searchKey": "search.ToFileMatch",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ToFileMatch(combyMatches []comby.FileMatch) (matches []protocol.FileMatch)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ToFileMatch(combyMatches []comby.FileMatch) (matches []protocol.FileMatch)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#appendMatches",
+              "documentation": {
+                "identifier": "appendMatches",
+                "newPage": false,
+                "searchKey": "search.appendMatches",
+                "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func bytesToLowerASCIIgeneric(dst, src []byte)"
+                "value": "func appendMatches(matches []protocol.LineMatch, fileBuf []byte, matchLineBuf []byte, lineNumber, start, end int) []protocol.LineMatch"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc bytesToLowerASCIIgeneric(dst, src []byte)\n```\n\n"
+                "value": "```Go\nfunc appendMatches(matches []protocol.LineMatch, fileBuf []byte, matchLineBuf []byte, lineNumber, start, end int) []protocol.LineMatch\n```\n\nmatchLineBuf is a byte slice that contains the full line(s) that the match appears on. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#benchBytesToLower",
+              "documentation": {
+                "identifier": "benchBytesToLower",
+                "newPage": false,
+                "searchKey": "search.benchBytesToLower",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchBytesToLower(b *testing.B, src []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchBytesToLower(b *testing.B, src []byte)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#benchSearchRegex",
+              "documentation": {
+                "identifier": "benchSearchRegex",
+                "newPage": false,
+                "searchKey": "search.benchSearchRegex",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchSearchRegex(b *testing.B, p *protocol.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchSearchRegex(b *testing.B, p *protocol.Request)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#buildQuery",
+              "documentation": {
+                "identifier": "buildQuery",
+                "newPage": false,
+                "searchKey": "search.buildQuery",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func buildQuery(args *search.TextPatternInfo, repoBranches map[string][]string, filePathPatterns zoektquery.Q, shortcircuit bool) (zoektquery.Q, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc buildQuery(args *search.TextPatternInfo, repoBranches map[string][]string, filePathPatterns zoektquery.Q, shortcircuit bool) (zoektquery.Q, error)\n```\n\n"
               },
               "children": null
             }
@@ -1084,6 +1979,7 @@
                 "newPage": false,
                 "searchKey": "search.bytesToLowerASCII",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1100,12 +1996,197 @@
           },
           {
             "node": {
+              "pathID": "/cmd/searcher/search#bytesToLowerASCIIgeneric",
+              "documentation": {
+                "identifier": "bytesToLowerASCIIgeneric",
+                "newPage": false,
+                "searchKey": "search.bytesToLowerASCIIgeneric",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func bytesToLowerASCIIgeneric(dst, src []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc bytesToLowerASCIIgeneric(dst, src []byte)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#checkBytesToLower",
+              "documentation": {
+                "identifier": "checkBytesToLower",
+                "newPage": false,
+                "searchKey": "search.checkBytesToLower",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkBytesToLower(t *testing.T, b []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkBytesToLower(t *testing.T, b []byte)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#contextWithoutDeadline",
+              "documentation": {
+                "identifier": "contextWithoutDeadline",
+                "newPage": false,
+                "searchKey": "search.contextWithoutDeadline",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func contextWithoutDeadline(cOld context.Context) (context.Context, context.CancelFunc)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc contextWithoutDeadline(cOld context.Context) (context.Context, context.CancelFunc)\n```\n\ncontextWithoutDeadline returns a context which will cancel if the cOld is canceled. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#extensionToMatcher",
+              "documentation": {
+                "identifier": "extensionToMatcher",
+                "newPage": false,
+                "searchKey": "search.extensionToMatcher",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func extensionToMatcher(extension string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc extensionToMatcher(extension string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#filteredStructuralSearch",
+              "documentation": {
+                "identifier": "filteredStructuralSearch",
+                "newPage": false,
+                "searchKey": "search.filteredStructuralSearch",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func filteredStructuralSearch(ctx context.Context, zipPath string, zipFile *store.ZipFile, p *protocol.PatternInfo, repo api.RepoName) (matches []protocol.FileMatch, limitHit bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc filteredStructuralSearch(ctx context.Context, zipPath string, zipFile *store.ZipFile, p *protocol.PatternInfo, repo api.RepoName) (matches []protocol.FileMatch, limitHit bool, err error)\n```\n\nfilteredStructuralSearch filters the list of files with a regex search before passing the zip to comby \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#getZoektClient",
+              "documentation": {
+                "identifier": "getZoektClient",
+                "newPage": false,
+                "searchKey": "search.getZoektClient",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getZoektClient(indexerEndpoints []string) zoekt.Streamer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getZoektClient(indexerEndpoints []string) zoekt.Streamer\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#highlightMultipleLines",
+              "documentation": {
+                "identifier": "highlightMultipleLines",
+                "newPage": false,
+                "searchKey": "search.highlightMultipleLines",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func highlightMultipleLines(r *comby.Match) (matches []protocol.LineMatch)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc highlightMultipleLines(r *comby.Match) (matches []protocol.LineMatch)\n```\n\nThe Sourcegraph frontend and interface only allow LineMatches (matches on a single line) and it isn't possible to specify a line and column range spanning multiple lines for highlighting. This function chops up potentially multiline matches into multiple LineMatches. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#hydrateLineNumbers",
+              "documentation": {
+                "identifier": "hydrateLineNumbers",
+                "newPage": false,
+                "searchKey": "search.hydrateLineNumbers",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hydrateLineNumbers(fileBuf []byte, lastLineNumber, lastMatchIndex, lineStart int, match []int) (lineNumber, matchIndex int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hydrateLineNumbers(fileBuf []byte, lastLineNumber, lastMatchIndex, lineStart int, match []int) (lineNumber, matchIndex int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/searcher/search#init.search.go",
               "documentation": {
                 "identifier": "init.search.go",
                 "newPage": false,
                 "searchKey": "search.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1122,22 +2203,23 @@
           },
           {
             "node": {
-              "pathID": "/cmd/searcher/search#validateParams",
+              "pathID": "/cmd/searcher/search#init.search_regex_test.go",
               "documentation": {
-                "identifier": "validateParams",
+                "identifier": "init.search_regex_test.go",
                 "newPage": false,
-                "searchKey": "search.validateParams",
+                "searchKey": "search.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func validateParams(p *protocol.Request) error"
+                "value": "func init()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc validateParams(p *protocol.Request) error\n```\n\n"
+                "value": "```Go\nfunc init()\n```\n\n"
               },
               "children": null
             }
@@ -1150,6 +2232,7 @@
                 "newPage": false,
                 "searchKey": "search.isBadRequest",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1172,6 +2255,7 @@
                 "newPage": false,
                 "searchKey": "search.isTemporary",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1188,100 +2272,13 @@
           },
           {
             "node": {
-              "pathID": "/cmd/searcher/search#hydrateLineNumbers",
-              "documentation": {
-                "identifier": "hydrateLineNumbers",
-                "newPage": false,
-                "searchKey": "search.hydrateLineNumbers",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func hydrateLineNumbers(fileBuf []byte, lastLineNumber, lastMatchIndex, lineStart int, match []int) (lineNumber, matchIndex int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc hydrateLineNumbers(fileBuf []byte, lastLineNumber, lastMatchIndex, lineStart int, match []int) (lineNumber, matchIndex int)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#appendMatches",
-              "documentation": {
-                "identifier": "appendMatches",
-                "newPage": false,
-                "searchKey": "search.appendMatches",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func appendMatches(matches []protocol.LineMatch, fileBuf []byte, matchLineBuf []byte, lineNumber, start, end int) []protocol.LineMatch"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc appendMatches(matches []protocol.LineMatch, fileBuf []byte, matchLineBuf []byte, lineNumber, start, end int) []protocol.LineMatch\n```\n\nmatchLineBuf is a byte slice that contains the full line(s) that the match appears on. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#regexSearch",
-              "documentation": {
-                "identifier": "regexSearch",
-                "newPage": false,
-                "searchKey": "search.regexSearch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func regexSearch(ctx context.Context, rg *readerGrep, zf *store.ZipFile, fileMatchLimit int, patternMatchesContent, patternMatchesPaths bool, isPatternNegated bool) (fm []protocol.FileMatch, limitHit bool, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc regexSearch(ctx context.Context, rg *readerGrep, zf *store.ZipFile, fileMatchLimit int, patternMatchesContent, patternMatchesPaths bool, isPatternNegated bool) (fm []protocol.FileMatch, limitHit bool, err error)\n```\n\nregexSearch concurrently searches files in zr looking for matches using rg. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#lowerRegexpASCII",
-              "documentation": {
-                "identifier": "lowerRegexpASCII",
-                "newPage": false,
-                "searchKey": "search.lowerRegexpASCII",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func lowerRegexpASCII(re *syntax.Regexp)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc lowerRegexpASCII(re *syntax.Regexp)\n```\n\nlowerRegexpASCII lowers rune literals and expands char classes to include lowercase. It does it inplace. We can't just use strings.ToLower since it will change the meaning of regex shorthands like \\S or \\B. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/searcher/search#longestLiteral",
               "documentation": {
                 "identifier": "longestLiteral",
                 "newPage": false,
                 "searchKey": "search.longestLiteral",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1298,98 +2295,13 @@
           },
           {
             "node": {
-              "pathID": "/cmd/searcher/search#readAll",
-              "documentation": {
-                "identifier": "readAll",
-                "newPage": false,
-                "searchKey": "search.readAll",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func readAll(r io.Reader, b []byte) (int, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc readAll(r io.Reader, b []byte) (int, error)\n```\n\nreadAll will read r until EOF into b. It returns the number of bytes read. If we do not reach EOF, an error is returned. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#highlightMultipleLines",
-              "documentation": {
-                "identifier": "highlightMultipleLines",
-                "newPage": false,
-                "searchKey": "search.highlightMultipleLines",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func highlightMultipleLines(r *comby.Match) (matches []protocol.LineMatch)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc highlightMultipleLines(r *comby.Match) (matches []protocol.LineMatch)\n```\n\nThe Sourcegraph frontend and interface only allow LineMatches (matches on a single line) and it isn't possible to specify a line and column range spanning multiple lines for highlighting. This function chops up potentially multiline matches into multiple LineMatches. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#ToFileMatch",
-              "documentation": {
-                "identifier": "ToFileMatch",
-                "newPage": false,
-                "searchKey": "search.ToFileMatch",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ToFileMatch(combyMatches []comby.FileMatch) (matches []protocol.FileMatch)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ToFileMatch(combyMatches []comby.FileMatch) (matches []protocol.FileMatch)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#extensionToMatcher",
-              "documentation": {
-                "identifier": "extensionToMatcher",
-                "newPage": false,
-                "searchKey": "search.extensionToMatcher",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func extensionToMatcher(extension string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc extensionToMatcher(extension string) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/searcher/search#lookupMatcher",
               "documentation": {
                 "identifier": "lookupMatcher",
                 "newPage": false,
                 "searchKey": "search.lookupMatcher",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1406,44 +2318,92 @@
           },
           {
             "node": {
-              "pathID": "/cmd/searcher/search#filteredStructuralSearch",
+              "pathID": "/cmd/searcher/search#lowerRegexpASCII",
               "documentation": {
-                "identifier": "filteredStructuralSearch",
+                "identifier": "lowerRegexpASCII",
                 "newPage": false,
-                "searchKey": "search.filteredStructuralSearch",
+                "searchKey": "search.lowerRegexpASCII",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func filteredStructuralSearch(ctx context.Context, zipPath string, zipFile *store.ZipFile, p *protocol.PatternInfo, repo api.RepoName) (matches []protocol.FileMatch, limitHit bool, err error)"
+                "value": "func lowerRegexpASCII(re *syntax.Regexp)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc filteredStructuralSearch(ctx context.Context, zipPath string, zipFile *store.ZipFile, p *protocol.PatternInfo, repo api.RepoName) (matches []protocol.FileMatch, limitHit bool, err error)\n```\n\nfilteredStructuralSearch filters the list of files with a regex search before passing the zip to comby \n\n"
+                "value": "```Go\nfunc lowerRegexpASCII(re *syntax.Regexp)\n```\n\nlowerRegexpASCII lowers rune literals and expands char classes to include lowercase. It does it inplace. We can't just use strings.ToLower since it will change the meaning of regex shorthands like \\S or \\B. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/searcher/search#toMatcher",
+              "pathID": "/cmd/searcher/search#newIgnoreMatcher",
               "documentation": {
-                "identifier": "toMatcher",
+                "identifier": "newIgnoreMatcher",
                 "newPage": false,
-                "searchKey": "search.toMatcher",
+                "searchKey": "search.newIgnoreMatcher",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func toMatcher(languages []string, extensionHint string) string"
+                "value": "func newIgnoreMatcher(ctx context.Context, repo api.RepoName, commit api.CommitID) (*ignore.Matcher, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc toMatcher(languages []string, extensionHint string) string\n```\n\ntoMatcher returns the matcher that parameterizes structural search. It derives either from an explicit language, or an inferred extension hint. \n\n"
+                "value": "```Go\nfunc newIgnoreMatcher(ctx context.Context, repo api.RepoName, commit api.CommitID) (*ignore.Matcher, error)\n```\n\nnewIgnoreMatcher calls gitserver to retrieve the ignore-file. If the file doesn't exist we return an empty ignore.Matcher. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#readAll",
+              "documentation": {
+                "identifier": "readAll",
+                "newPage": false,
+                "searchKey": "search.readAll",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readAll(r io.Reader, b []byte) (int, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readAll(r io.Reader, b []byte) (int, error)\n```\n\nreadAll will read r until EOF into b. It returns the number of bytes read. If we do not reach EOF, an error is returned. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/search#regexSearch",
+              "documentation": {
+                "identifier": "regexSearch",
+                "newPage": false,
+                "searchKey": "search.regexSearch",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func regexSearch(ctx context.Context, rg *readerGrep, zf *store.ZipFile, fileMatchLimit int, patternMatchesContent, patternMatchesPaths bool, isPatternNegated bool) (fm []protocol.FileMatch, limitHit bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc regexSearch(ctx context.Context, rg *readerGrep, zf *store.ZipFile, fileMatchLimit int, patternMatchesContent, patternMatchesPaths bool, isPatternNegated bool) (fm []protocol.FileMatch, limitHit bool, err error)\n```\n\nregexSearch concurrently searches files in zr looking for matches using rg. \n\n"
               },
               "children": null
             }
@@ -1456,6 +2416,7 @@
                 "newPage": false,
                 "searchKey": "search.structuralSearch",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1478,6 +2439,7 @@
                 "newPage": false,
                 "searchKey": "search.structuralSearchWithZoekt",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1494,86 +2456,46 @@
           },
           {
             "node": {
-              "pathID": "/cmd/searcher/search#getZoektClient",
+              "pathID": "/cmd/searcher/search#toMatcher",
               "documentation": {
-                "identifier": "getZoektClient",
+                "identifier": "toMatcher",
                 "newPage": false,
-                "searchKey": "search.getZoektClient",
+                "searchKey": "search.toMatcher",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func getZoektClient(indexerEndpoints []string) zoekt.Streamer"
+                "value": "func toMatcher(languages []string, extensionHint string) string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc getZoektClient(indexerEndpoints []string) zoekt.Streamer\n```\n\n"
+                "value": "```Go\nfunc toMatcher(languages []string, extensionHint string) string\n```\n\ntoMatcher returns the matcher that parameterizes structural search. It derives either from an explicit language, or an inferred extension hint. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/searcher/search#HandleFilePathPatterns",
+              "pathID": "/cmd/searcher/search#validateParams",
               "documentation": {
-                "identifier": "HandleFilePathPatterns",
+                "identifier": "validateParams",
                 "newPage": false,
-                "searchKey": "search.HandleFilePathPatterns",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func HandleFilePathPatterns(query *search.TextPatternInfo) (zoektquery.Q, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc HandleFilePathPatterns(query *search.TextPatternInfo) (zoektquery.Q, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#buildQuery",
-              "documentation": {
-                "identifier": "buildQuery",
-                "newPage": false,
-                "searchKey": "search.buildQuery",
+                "searchKey": "search.validateParams",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func buildQuery(args *search.TextPatternInfo, repoBranches map[string][]string, filePathPatterns zoektquery.Q, shortcircuit bool) (zoektquery.Q, error)"
+                "value": "func validateParams(p *protocol.Request) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc buildQuery(args *search.TextPatternInfo, repoBranches map[string][]string, filePathPatterns zoektquery.Q, shortcircuit bool) (zoektquery.Q, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#zoektSearch",
-              "documentation": {
-                "identifier": "zoektSearch",
-                "newPage": false,
-                "searchKey": "search.zoektSearch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func zoektSearch(ctx context.Context, args *search.TextPatternInfo, repoBranches map[string][]string, since func(t time.Time) time.Duration, endpoints []string, useFullDeadline bool, c chan<- zoektSearchStreamEvent) (fm []zoekt.FileMatch, limitHit bool, partial map[api.RepoID]struct{}, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc zoektSearch(ctx context.Context, args *search.TextPatternInfo, repoBranches map[string][]string, since func(t time.Time) time.Duration, endpoints []string, useFullDeadline bool, c chan<- zoektSearchStreamEvent) (fm []zoekt.FileMatch, limitHit bool, partial map[api.RepoID]struct{}, err error)\n```\n\nzoektSearch searches repositories using zoekt, returning file contents for files that match the given pattern. \n\nTimeouts are reported through the context, and as a special case errNoResultsInTimeout is returned if no results are found in the given timeout (instead of the more common case of finding partial or full results in the given timeout). \n\n"
+                "value": "```Go\nfunc validateParams(p *protocol.Request) error\n```\n\n"
               },
               "children": null
             }
@@ -1586,6 +2508,7 @@
                 "newPage": false,
                 "searchKey": "search.writeZip",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1602,770 +2525,23 @@
           },
           {
             "node": {
-              "pathID": "/cmd/searcher/search#contextWithoutDeadline",
+              "pathID": "/cmd/searcher/search#zoektSearch",
               "documentation": {
-                "identifier": "contextWithoutDeadline",
+                "identifier": "zoektSearch",
                 "newPage": false,
-                "searchKey": "search.contextWithoutDeadline",
+                "searchKey": "search.zoektSearch",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func contextWithoutDeadline(cOld context.Context) (context.Context, context.CancelFunc)"
+                "value": "func zoektSearch(ctx context.Context, args *search.TextPatternInfo, repoBranches map[string][]string, since func(t time.Time) time.Duration, endpoints []string, useFullDeadline bool, c chan<- zoektSearchStreamEvent) (fm []zoekt.FileMatch, limitHit bool, partial map[api.RepoID]struct{}, err error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc contextWithoutDeadline(cOld context.Context) (context.Context, context.CancelFunc)\n```\n\ncontextWithoutDeadline returns a context which will cancel if the cOld is canceled. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#TestNewIgnoreMatcher",
-              "documentation": {
-                "identifier": "TestNewIgnoreMatcher",
-                "newPage": false,
-                "searchKey": "search.TestNewIgnoreMatcher",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestNewIgnoreMatcher(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestNewIgnoreMatcher(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#TestMissingIgnoreFile",
-              "documentation": {
-                "identifier": "TestMissingIgnoreFile",
-                "newPage": false,
-                "searchKey": "search.TestMissingIgnoreFile",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMissingIgnoreFile(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMissingIgnoreFile(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#benchBytesToLower",
-              "documentation": {
-                "identifier": "benchBytesToLower",
-                "newPage": false,
-                "searchKey": "search.benchBytesToLower",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func benchBytesToLower(b *testing.B, src []byte)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc benchBytesToLower(b *testing.B, src []byte)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#BenchmarkBytesToLowerASCII",
-              "documentation": {
-                "identifier": "BenchmarkBytesToLowerASCII",
-                "newPage": false,
-                "searchKey": "search.BenchmarkBytesToLowerASCII",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkBytesToLowerASCII(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkBytesToLowerASCII(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#checkBytesToLower",
-              "documentation": {
-                "identifier": "checkBytesToLower",
-                "newPage": false,
-                "searchKey": "search.checkBytesToLower",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func checkBytesToLower(t *testing.T, b []byte)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc checkBytesToLower(t *testing.T, b []byte)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#TestBytesToLowerASCII",
-              "documentation": {
-                "identifier": "TestBytesToLowerASCII",
-                "newPage": false,
-                "searchKey": "search.TestBytesToLowerASCII",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestBytesToLowerASCII(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestBytesToLowerASCII(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#BenchmarkSearchRegex_large_fixed",
-              "documentation": {
-                "identifier": "BenchmarkSearchRegex_large_fixed",
-                "newPage": false,
-                "searchKey": "search.BenchmarkSearchRegex_large_fixed",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkSearchRegex_large_fixed(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkSearchRegex_large_fixed(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#BenchmarkSearchRegex_large_fixed_casesensitive",
-              "documentation": {
-                "identifier": "BenchmarkSearchRegex_large_fixed_casesensitive",
-                "newPage": false,
-                "searchKey": "search.BenchmarkSearchRegex_large_fixed_casesensitive",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkSearchRegex_large_fixed_casesensitive(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkSearchRegex_large_fixed_casesensitive(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#BenchmarkSearchRegex_large_re_dotstar",
-              "documentation": {
-                "identifier": "BenchmarkSearchRegex_large_re_dotstar",
-                "newPage": false,
-                "searchKey": "search.BenchmarkSearchRegex_large_re_dotstar",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkSearchRegex_large_re_dotstar(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkSearchRegex_large_re_dotstar(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#BenchmarkSearchRegex_large_re_common",
-              "documentation": {
-                "identifier": "BenchmarkSearchRegex_large_re_common",
-                "newPage": false,
-                "searchKey": "search.BenchmarkSearchRegex_large_re_common",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkSearchRegex_large_re_common(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkSearchRegex_large_re_common(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#BenchmarkSearchRegex_large_re_anchor",
-              "documentation": {
-                "identifier": "BenchmarkSearchRegex_large_re_anchor",
-                "newPage": false,
-                "searchKey": "search.BenchmarkSearchRegex_large_re_anchor",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkSearchRegex_large_re_anchor(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkSearchRegex_large_re_anchor(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#BenchmarkSearchRegex_large_path",
-              "documentation": {
-                "identifier": "BenchmarkSearchRegex_large_path",
-                "newPage": false,
-                "searchKey": "search.BenchmarkSearchRegex_large_path",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkSearchRegex_large_path(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkSearchRegex_large_path(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#BenchmarkSearchRegex_small_fixed",
-              "documentation": {
-                "identifier": "BenchmarkSearchRegex_small_fixed",
-                "newPage": false,
-                "searchKey": "search.BenchmarkSearchRegex_small_fixed",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkSearchRegex_small_fixed(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkSearchRegex_small_fixed(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#BenchmarkSearchRegex_small_fixed_casesensitive",
-              "documentation": {
-                "identifier": "BenchmarkSearchRegex_small_fixed_casesensitive",
-                "newPage": false,
-                "searchKey": "search.BenchmarkSearchRegex_small_fixed_casesensitive",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkSearchRegex_small_fixed_casesensitive(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkSearchRegex_small_fixed_casesensitive(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#BenchmarkSearchRegex_small_re_dotstar",
-              "documentation": {
-                "identifier": "BenchmarkSearchRegex_small_re_dotstar",
-                "newPage": false,
-                "searchKey": "search.BenchmarkSearchRegex_small_re_dotstar",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkSearchRegex_small_re_dotstar(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkSearchRegex_small_re_dotstar(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#BenchmarkSearchRegex_small_re_common",
-              "documentation": {
-                "identifier": "BenchmarkSearchRegex_small_re_common",
-                "newPage": false,
-                "searchKey": "search.BenchmarkSearchRegex_small_re_common",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkSearchRegex_small_re_common(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkSearchRegex_small_re_common(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#BenchmarkSearchRegex_small_re_anchor",
-              "documentation": {
-                "identifier": "BenchmarkSearchRegex_small_re_anchor",
-                "newPage": false,
-                "searchKey": "search.BenchmarkSearchRegex_small_re_anchor",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkSearchRegex_small_re_anchor(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkSearchRegex_small_re_anchor(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#benchSearchRegex",
-              "documentation": {
-                "identifier": "benchSearchRegex",
-                "newPage": false,
-                "searchKey": "search.benchSearchRegex",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func benchSearchRegex(b *testing.B, p *protocol.Request)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc benchSearchRegex(b *testing.B, p *protocol.Request)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#TestLowerRegexp",
-              "documentation": {
-                "identifier": "TestLowerRegexp",
-                "newPage": false,
-                "searchKey": "search.TestLowerRegexp",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestLowerRegexp(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestLowerRegexp(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#TestLongestLiteral",
-              "documentation": {
-                "identifier": "TestLongestLiteral",
-                "newPage": false,
-                "searchKey": "search.TestLongestLiteral",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestLongestLiteral(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestLongestLiteral(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#TestReadAll",
-              "documentation": {
-                "identifier": "TestReadAll",
-                "newPage": false,
-                "searchKey": "search.TestReadAll",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReadAll(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReadAll(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#TestMaxMatches",
-              "documentation": {
-                "identifier": "TestMaxMatches",
-                "newPage": false,
-                "searchKey": "search.TestMaxMatches",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMaxMatches(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMaxMatches(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#TestPathMatches",
-              "documentation": {
-                "identifier": "TestPathMatches",
-                "newPage": false,
-                "searchKey": "search.TestPathMatches",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestPathMatches(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestPathMatches(t *testing.T)\n```\n\nTests that: \n\n- IncludePatterns can match the path in any order - A path must match all (not any) of the IncludePatterns - An empty pattern is allowed \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#init.search_regex_test.go",
-              "documentation": {
-                "identifier": "init.search_regex_test.go",
-                "newPage": false,
-                "searchKey": "search.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#TestRegexSearch",
-              "documentation": {
-                "identifier": "TestRegexSearch",
-                "newPage": false,
-                "searchKey": "search.TestRegexSearch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRegexSearch(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRegexSearch(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#TestMatcherLookupByLanguage",
-              "documentation": {
-                "identifier": "TestMatcherLookupByLanguage",
-                "newPage": false,
-                "searchKey": "search.TestMatcherLookupByLanguage",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMatcherLookupByLanguage(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMatcherLookupByLanguage(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#TestMatcherLookupByExtension",
-              "documentation": {
-                "identifier": "TestMatcherLookupByExtension",
-                "newPage": false,
-                "searchKey": "search.TestMatcherLookupByExtension",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMatcherLookupByExtension(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMatcherLookupByExtension(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#TestInferredMatcher",
-              "documentation": {
-                "identifier": "TestInferredMatcher",
-                "newPage": false,
-                "searchKey": "search.TestInferredMatcher",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestInferredMatcher(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestInferredMatcher(t *testing.T)\n```\n\nTests that structural search correctly infers the Go matcher from the .go file extension. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#TestRecordMetrics",
-              "documentation": {
-                "identifier": "TestRecordMetrics",
-                "newPage": false,
-                "searchKey": "search.TestRecordMetrics",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRecordMetrics(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRecordMetrics(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#TestIncludePatterns",
-              "documentation": {
-                "identifier": "TestIncludePatterns",
-                "newPage": false,
-                "searchKey": "search.TestIncludePatterns",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIncludePatterns(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIncludePatterns(t *testing.T)\n```\n\nTests that includePatterns works. includePatterns serve a similar role in structural search compared to regex search, but is interpreted _differently_. includePatterns cannot be a regex expression (as in traditional search), but instead (currently) expects a list of patterns that represent a set of file paths to search. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#TestRule",
-              "documentation": {
-                "identifier": "TestRule",
-                "newPage": false,
-                "searchKey": "search.TestRule",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRule(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRule(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#TestHighlightMultipleLines",
-              "documentation": {
-                "identifier": "TestHighlightMultipleLines",
-                "newPage": false,
-                "searchKey": "search.TestHighlightMultipleLines",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestHighlightMultipleLines(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestHighlightMultipleLines(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#TestMatchCountForMultilineMatches",
-              "documentation": {
-                "identifier": "TestMatchCountForMultilineMatches",
-                "newPage": false,
-                "searchKey": "search.TestMatchCountForMultilineMatches",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMatchCountForMultilineMatches(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMatchCountForMultilineMatches(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/searcher/search#TestBuildQuery",
-              "documentation": {
-                "identifier": "TestBuildQuery",
-                "newPage": false,
-                "searchKey": "search.TestBuildQuery",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestBuildQuery(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestBuildQuery(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc zoektSearch(ctx context.Context, args *search.TextPatternInfo, repoBranches map[string][]string, since func(t time.Time) time.Duration, endpoints []string, useFullDeadline bool, c chan<- zoektSearchStreamEvent) (fm []zoekt.FileMatch, limitHit bool, partial map[api.RepoID]struct{}, err error)\n```\n\nzoektSearch searches repositories using zoekt, returning file contents for files that match the given pattern. \n\nTimeouts are reported through the context, and as a special case errNoResultsInTimeout is returned if no results are found in the given timeout (instead of the more common case of finding partial or full results in the given timeout). \n\n"
               },
               "children": null
             }

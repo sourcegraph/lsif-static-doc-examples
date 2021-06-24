@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/internal/batches/search",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,9 @@
                 "identifier": "ErrExpr",
                 "newPage": false,
                 "searchKey": "search.ErrExpr",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,6 +67,7 @@
                       "newPage": false,
                       "searchKey": "search.createErrExpr",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -84,7 +89,9 @@
                       "identifier": "ErrExpr.Error",
                       "newPage": false,
                       "searchKey": "search.ErrExpr.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -107,7 +114,9 @@
                 "identifier": "ErrUnsupportedField",
                 "newPage": false,
                 "searchKey": "search.ErrUnsupportedField",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -125,7 +134,9 @@
                       "identifier": "ErrUnsupportedField.Error",
                       "newPage": false,
                       "searchKey": "search.ErrUnsupportedField.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -148,7 +159,9 @@
                 "identifier": "ErrUnsupportedValueType",
                 "newPage": false,
                 "searchKey": "search.ErrUnsupportedValueType",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -166,7 +179,9 @@
                       "identifier": "ErrUnsupportedValueType.Error",
                       "newPage": false,
                       "searchKey": "search.ErrUnsupportedValueType.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -189,7 +204,9 @@
                 "identifier": "TextSearchTerm",
                 "newPage": false,
                 "searchKey": "search.TextSearchTerm",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -213,6 +230,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -232,7 +250,9 @@
                 "identifier": "ParseTextSearch",
                 "newPage": false,
                 "searchKey": "search.ParseTextSearch",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -253,7 +273,9 @@
                 "newPage": false,
                 "searchKey": "search.TestChangesetSearch",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {

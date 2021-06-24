@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "runtime/internal/sys_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,44 +41,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/runtime/internal/sys_test#TestCtz64",
+              "pathID": "/runtime/internal/sys_test#TestBswap32",
               "documentation": {
-                "identifier": "TestCtz64",
+                "identifier": "TestBswap32",
                 "newPage": false,
-                "searchKey": "sys_test.TestCtz64",
+                "searchKey": "sys_test.TestBswap32",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestCtz64(t *testing.T)"
+                "value": "func TestBswap32(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestCtz64(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/sys_test#TestCtz32",
-              "documentation": {
-                "identifier": "TestCtz32",
-                "newPage": false,
-                "searchKey": "sys_test.TestCtz32",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCtz32(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCtz32(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestBswap32(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -89,7 +71,9 @@
                 "newPage": false,
                 "searchKey": "sys_test.TestBswap64",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -105,22 +89,48 @@
           },
           {
             "node": {
-              "pathID": "/runtime/internal/sys_test#TestBswap32",
+              "pathID": "/runtime/internal/sys_test#TestCtz32",
               "documentation": {
-                "identifier": "TestBswap32",
+                "identifier": "TestCtz32",
                 "newPage": false,
-                "searchKey": "sys_test.TestBswap32",
+                "searchKey": "sys_test.TestCtz32",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestBswap32(t *testing.T)"
+                "value": "func TestCtz32(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestBswap32(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestCtz32(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/sys_test#TestCtz64",
+              "documentation": {
+                "identifier": "TestCtz64",
+                "newPage": false,
+                "searchKey": "sys_test.TestCtz64",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCtz64(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCtz64(t *testing.T)\n```\n\n"
               },
               "children": null
             }

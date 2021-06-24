@@ -5,56 +5,42 @@ Package debug contains facilities for programs to debug themselves while they ar
 ## Index
 
 * [Types](#type)
-    * [type GCStats struct](#GCStats)
     * [type BuildInfo struct](#BuildInfo)
         * [func ReadBuildInfo() (info *BuildInfo, ok bool)](#ReadBuildInfo)
         * [func readBuildInfo(data string) (*BuildInfo, bool)](#readBuildInfo)
+    * [type GCStats struct](#GCStats)
     * [type Module struct](#Module)
 * [Functions](#func)
+    * [func FreeOSMemory()](#FreeOSMemory)
+    * [func PrintStack()](#PrintStack)
     * [func ReadGCStats(stats *GCStats)](#ReadGCStats)
     * [func SetGCPercent(percent int) int](#SetGCPercent)
-    * [func FreeOSMemory()](#FreeOSMemory)
     * [func SetMaxStack(bytes int) int](#SetMaxStack)
     * [func SetMaxThreads(threads int) int](#SetMaxThreads)
     * [func SetPanicOnFault(enabled bool) bool](#SetPanicOnFault)
-    * [func WriteHeapDump(fd uintptr)](#WriteHeapDump)
     * [func SetTraceback(level string)](#SetTraceback)
-    * [func modinfo() string](#modinfo)
-    * [func PrintStack()](#PrintStack)
     * [func Stack() []byte](#Stack)
-    * [func readGCStats(*[]time.Duration)](#readGCStats)
+    * [func WriteHeapDump(fd uintptr)](#WriteHeapDump)
     * [func freeOSMemory()](#freeOSMemory)
-    * [func setMaxStack(int) int](#setMaxStack)
+    * [func modinfo() string](#modinfo)
+    * [func readGCStats(*[]time.Duration)](#readGCStats)
     * [func setGCPercent(int32) int32](#setGCPercent)
-    * [func setPanicOnFault(bool) bool](#setPanicOnFault)
+    * [func setMaxStack(int) int](#setMaxStack)
     * [func setMaxThreads(int) int](#setMaxThreads)
+    * [func setPanicOnFault(bool) bool](#setPanicOnFault)
 
 
 ## <a id="type" href="#type">Types</a>
 
-### <a id="GCStats" href="#GCStats">type GCStats struct</a>
-
 ```
-searchKey: debug.GCStats
+tags: [package]
 ```
-
-```Go
-type GCStats struct {
-	LastGC         time.Time       // time of last collection
-	NumGC          int64           // number of garbage collections
-	PauseTotal     time.Duration   // total pause for all collections
-	Pause          []time.Duration // pause history, most recent first
-	PauseEnd       []time.Time     // pause end times history, most recent first
-	PauseQuantiles []time.Duration
-}
-```
-
-GCStats collect information about recent garbage collections. 
 
 ### <a id="BuildInfo" href="#BuildInfo">type BuildInfo struct</a>
 
 ```
 searchKey: debug.BuildInfo
+tags: [struct]
 ```
 
 ```Go
@@ -71,6 +57,7 @@ BuildInfo represents the build information read from the running binary.
 
 ```
 searchKey: debug.ReadBuildInfo
+tags: [function]
 ```
 
 ```Go
@@ -83,17 +70,38 @@ ReadBuildInfo returns the build information embedded in the running binary. The 
 
 ```
 searchKey: debug.readBuildInfo
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func readBuildInfo(data string) (*BuildInfo, bool)
 ```
 
+### <a id="GCStats" href="#GCStats">type GCStats struct</a>
+
+```
+searchKey: debug.GCStats
+tags: [struct]
+```
+
+```Go
+type GCStats struct {
+	LastGC         time.Time       // time of last collection
+	NumGC          int64           // number of garbage collections
+	PauseTotal     time.Duration   // total pause for all collections
+	Pause          []time.Duration // pause history, most recent first
+	PauseEnd       []time.Time     // pause end times history, most recent first
+	PauseQuantiles []time.Duration
+}
+```
+
+GCStats collect information about recent garbage collections. 
+
 ### <a id="Module" href="#Module">type Module struct</a>
 
 ```
 searchKey: debug.Module
+tags: [struct]
 ```
 
 ```Go
@@ -109,10 +117,41 @@ Module represents a module.
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [package]
+```
+
+### <a id="FreeOSMemory" href="#FreeOSMemory">func FreeOSMemory()</a>
+
+```
+searchKey: debug.FreeOSMemory
+tags: [function]
+```
+
+```Go
+func FreeOSMemory()
+```
+
+FreeOSMemory forces a garbage collection followed by an attempt to return as much memory to the operating system as possible. (Even if this is not called, the runtime gradually returns memory to the operating system in a background task.) 
+
+### <a id="PrintStack" href="#PrintStack">func PrintStack()</a>
+
+```
+searchKey: debug.PrintStack
+tags: [function]
+```
+
+```Go
+func PrintStack()
+```
+
+PrintStack prints to standard error the stack trace returned by runtime.Stack. 
+
 ### <a id="ReadGCStats" href="#ReadGCStats">func ReadGCStats(stats *GCStats)</a>
 
 ```
 searchKey: debug.ReadGCStats
+tags: [method]
 ```
 
 ```Go
@@ -125,6 +164,7 @@ ReadGCStats reads statistics about garbage collection into stats. The number of 
 
 ```
 searchKey: debug.SetGCPercent
+tags: [method]
 ```
 
 ```Go
@@ -133,22 +173,11 @@ func SetGCPercent(percent int) int
 
 SetGCPercent sets the garbage collection target percentage: a collection is triggered when the ratio of freshly allocated data to live data remaining after the previous collection reaches this percentage. SetGCPercent returns the previous setting. The initial setting is the value of the GOGC environment variable at startup, or 100 if the variable is not set. A negative percentage disables garbage collection. 
 
-### <a id="FreeOSMemory" href="#FreeOSMemory">func FreeOSMemory()</a>
-
-```
-searchKey: debug.FreeOSMemory
-```
-
-```Go
-func FreeOSMemory()
-```
-
-FreeOSMemory forces a garbage collection followed by an attempt to return as much memory to the operating system as possible. (Even if this is not called, the runtime gradually returns memory to the operating system in a background task.) 
-
 ### <a id="SetMaxStack" href="#SetMaxStack">func SetMaxStack(bytes int) int</a>
 
 ```
 searchKey: debug.SetMaxStack
+tags: [method]
 ```
 
 ```Go
@@ -163,6 +192,7 @@ SetMaxStack is useful mainly for limiting the damage done by goroutines that ent
 
 ```
 searchKey: debug.SetMaxThreads
+tags: [method]
 ```
 
 ```Go
@@ -179,6 +209,7 @@ SetMaxThreads is useful mainly for limiting the damage done by programs that cre
 
 ```
 searchKey: debug.SetPanicOnFault
+tags: [method]
 ```
 
 ```Go
@@ -193,10 +224,37 @@ Addr() uintptr
 ```
 If that method exists, it returns the memory address which triggered the fault. The results of Addr are best-effort and the veracity of the result may depend on the platform. SetPanicOnFault applies only to the current goroutine. It returns the previous setting. 
 
+### <a id="SetTraceback" href="#SetTraceback">func SetTraceback(level string)</a>
+
+```
+searchKey: debug.SetTraceback
+tags: [method]
+```
+
+```Go
+func SetTraceback(level string)
+```
+
+SetTraceback sets the amount of detail printed by the runtime in the traceback it prints before exiting due to an unrecovered panic or an internal runtime error. The level argument takes the same values as the GOTRACEBACK environment variable. For example, SetTraceback("all") ensure that the program prints all goroutines when it crashes. See the package runtime documentation for details. If SetTraceback is called with a level lower than that of the environment variable, the call is ignored. 
+
+### <a id="Stack" href="#Stack">func Stack() []byte</a>
+
+```
+searchKey: debug.Stack
+tags: [function]
+```
+
+```Go
+func Stack() []byte
+```
+
+Stack returns a formatted stack trace of the goroutine that calls it. It calls runtime.Stack with a large enough buffer to capture the entire trace. 
+
 ### <a id="WriteHeapDump" href="#WriteHeapDump">func WriteHeapDump(fd uintptr)</a>
 
 ```
 searchKey: debug.WriteHeapDump
+tags: [method]
 ```
 
 ```Go
@@ -209,23 +267,22 @@ WriteHeapDump suspends the execution of all goroutines until the heap dump is co
 
 The heap dump format is defined at [https://golang.org/s/go15heapdump](https://golang.org/s/go15heapdump). 
 
-### <a id="SetTraceback" href="#SetTraceback">func SetTraceback(level string)</a>
+### <a id="freeOSMemory" href="#freeOSMemory">func freeOSMemory()</a>
 
 ```
-searchKey: debug.SetTraceback
+searchKey: debug.freeOSMemory
+tags: [function private]
 ```
 
 ```Go
-func SetTraceback(level string)
+func freeOSMemory()
 ```
-
-SetTraceback sets the amount of detail printed by the runtime in the traceback it prints before exiting due to an unrecovered panic or an internal runtime error. The level argument takes the same values as the GOTRACEBACK environment variable. For example, SetTraceback("all") ensure that the program prints all goroutines when it crashes. See the package runtime documentation for details. If SetTraceback is called with a level lower than that of the environment variable, the call is ignored. 
 
 ### <a id="modinfo" href="#modinfo">func modinfo() string</a>
 
 ```
 searchKey: debug.modinfo
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -234,35 +291,11 @@ func modinfo() string
 
 exported from runtime 
 
-### <a id="PrintStack" href="#PrintStack">func PrintStack()</a>
-
-```
-searchKey: debug.PrintStack
-```
-
-```Go
-func PrintStack()
-```
-
-PrintStack prints to standard error the stack trace returned by runtime.Stack. 
-
-### <a id="Stack" href="#Stack">func Stack() []byte</a>
-
-```
-searchKey: debug.Stack
-```
-
-```Go
-func Stack() []byte
-```
-
-Stack returns a formatted stack trace of the goroutine that calls it. It calls runtime.Stack with a large enough buffer to capture the entire trace. 
-
 ### <a id="readGCStats" href="#readGCStats">func readGCStats(*[]time.Duration)</a>
 
 ```
 searchKey: debug.readGCStats
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -271,58 +304,47 @@ func readGCStats(*[]time.Duration)
 
 Implemented in package runtime. 
 
-### <a id="freeOSMemory" href="#freeOSMemory">func freeOSMemory()</a>
-
-```
-searchKey: debug.freeOSMemory
-tags: [private]
-```
-
-```Go
-func freeOSMemory()
-```
-
-### <a id="setMaxStack" href="#setMaxStack">func setMaxStack(int) int</a>
-
-```
-searchKey: debug.setMaxStack
-tags: [private]
-```
-
-```Go
-func setMaxStack(int) int
-```
-
 ### <a id="setGCPercent" href="#setGCPercent">func setGCPercent(int32) int32</a>
 
 ```
 searchKey: debug.setGCPercent
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func setGCPercent(int32) int32
 ```
 
-### <a id="setPanicOnFault" href="#setPanicOnFault">func setPanicOnFault(bool) bool</a>
+### <a id="setMaxStack" href="#setMaxStack">func setMaxStack(int) int</a>
 
 ```
-searchKey: debug.setPanicOnFault
-tags: [private]
+searchKey: debug.setMaxStack
+tags: [method private]
 ```
 
 ```Go
-func setPanicOnFault(bool) bool
+func setMaxStack(int) int
 ```
 
 ### <a id="setMaxThreads" href="#setMaxThreads">func setMaxThreads(int) int</a>
 
 ```
 searchKey: debug.setMaxThreads
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func setMaxThreads(int) int
+```
+
+### <a id="setPanicOnFault" href="#setPanicOnFault">func setPanicOnFault(bool) bool</a>
+
+```
+searchKey: debug.setPanicOnFault
+tags: [method private]
+```
+
+```Go
+func setPanicOnFault(bool) bool
 ```
 

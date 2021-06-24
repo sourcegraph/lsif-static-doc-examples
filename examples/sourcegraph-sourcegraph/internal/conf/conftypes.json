@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/conf/conftypes",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,32 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/conf/conftypes#ServiceConnections",
-              "documentation": {
-                "identifier": "ServiceConnections",
-                "newPage": false,
-                "searchKey": "conftypes.ServiceConnections",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ServiceConnections struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ServiceConnections struct {\n\t// GitServers is the addresses of gitserver instances that should be\n\t// talked to.\n\tGitServers []string `json:\"gitServers\"`\n\n\t// PostgresDSN is the PostgreSQL DB data source name.\n\t// eg: \"postgres://sg@pgsql/sourcegraph?sslmode=false\"\n\tPostgresDSN string `json:\"postgresDSN\"`\n\n\t// CodeIntelPostgresDSN is the PostgreSQL DB data source name for the\n\t// code intel database.\n\t// eg: \"postgres://sg@pgsql/sourcegraph_codeintel?sslmode=false\"\n\tCodeIntelPostgresDSN string `json:\"codeIntelPostgresDSN\"`\n\n\t// CodeInsightsTimescaleDSN is the TimescaleDB data source name for the\n\t// code insights database.\n\t// eg: \"postgres://sg@pgsql/sourcegraph_codeintel?sslmode=false\"\n\tCodeInsightsTimescaleDSN string `json:\"codeinsightsTimescaleDSN\"`\n}\n```\n\nServiceConnections represents configuration about how the deployment internally connects to services. These are settings that need to be propagated from the frontend to other services, so that the frontend can be the source of truth for all configuration. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/conf/conftypes#RawUnified",
               "documentation": {
                 "identifier": "RawUnified",
                 "newPage": false,
                 "searchKey": "conftypes.RawUnified",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -82,7 +66,9 @@
                       "identifier": "RawUnified.Equal",
                       "newPage": false,
                       "searchKey": "conftypes.RawUnified.Equal",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -96,6 +82,28 @@
                   }
                 }
               ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/conftypes#ServiceConnections",
+              "documentation": {
+                "identifier": "ServiceConnections",
+                "newPage": false,
+                "searchKey": "conftypes.ServiceConnections",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ServiceConnections struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ServiceConnections struct {\n\t// GitServers is the addresses of gitserver instances that should be\n\t// talked to.\n\tGitServers []string `json:\"gitServers\"`\n\n\t// PostgresDSN is the PostgreSQL DB data source name.\n\t// eg: \"postgres://sg@pgsql/sourcegraph?sslmode=false\"\n\tPostgresDSN string `json:\"postgresDSN\"`\n\n\t// CodeIntelPostgresDSN is the PostgreSQL DB data source name for the\n\t// code intel database.\n\t// eg: \"postgres://sg@pgsql/sourcegraph_codeintel?sslmode=false\"\n\tCodeIntelPostgresDSN string `json:\"codeIntelPostgresDSN\"`\n\n\t// CodeInsightsTimescaleDSN is the TimescaleDB data source name for the\n\t// code insights database.\n\t// eg: \"postgres://sg@pgsql/sourcegraph_codeintel?sslmode=false\"\n\tCodeInsightsTimescaleDSN string `json:\"codeinsightsTimescaleDSN\"`\n}\n```\n\nServiceConnections represents configuration about how the deployment internally connects to services. These are settings that need to be propagated from the frontend to other services, so that the frontend can be the source of truth for all configuration. \n\n"
+              },
+              "children": null
             }
           }
         ]

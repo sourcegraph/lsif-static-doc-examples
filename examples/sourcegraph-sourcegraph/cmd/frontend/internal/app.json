@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "cmd/frontend/internal/app",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "app.errMonitoringNotLicensed",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -84,12 +89,61 @@
         "children": [
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/app#PreMountGrafanaHook",
+              "documentation": {
+                "identifier": "PreMountGrafanaHook",
+                "newPage": false,
+                "searchKey": "app.PreMountGrafanaHook",
+                "tags": [
+                  "variable",
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var PreMountGrafanaHook"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar PreMountGrafanaHook func() error\n```\n\nPreMountGrafanaHook (if set) is invoked as a hook prior to mounting a the Grafana endpoint to the debug router. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#allowRobotsVar",
+              "documentation": {
+                "identifier": "allowRobotsVar",
+                "newPage": false,
+                "searchKey": "app.allowRobotsVar",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var allowRobotsVar"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar allowRobotsVar = env.Get(\"ROBOTS_TXT_ALLOW\", \"false\", \"allow search engines to index the site\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/app#grafanaURLFromEnv",
               "documentation": {
                 "identifier": "grafanaURLFromEnv",
                 "newPage": false,
                 "searchKey": "app.grafanaURLFromEnv",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -112,6 +166,8 @@
                 "newPage": false,
                 "searchKey": "app.jaegerURLFromEnv",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -128,76 +184,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app#PreMountGrafanaHook",
-              "documentation": {
-                "identifier": "PreMountGrafanaHook",
-                "newPage": false,
-                "searchKey": "app.PreMountGrafanaHook",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var PreMountGrafanaHook"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar PreMountGrafanaHook func() error\n```\n\nPreMountGrafanaHook (if set) is invoked as a hook prior to mounting a the Grafana endpoint to the debug router. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#regDriveLetter",
-              "documentation": {
-                "identifier": "regDriveLetter",
-                "newPage": false,
-                "searchKey": "app.regDriveLetter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var regDriveLetter"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar regDriveLetter = lazyregexp.New(\"^/[a-zA-Z]:\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#allowRobotsVar",
-              "documentation": {
-                "identifier": "allowRobotsVar",
-                "newPage": false,
-                "searchKey": "app.allowRobotsVar",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var allowRobotsVar"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar allowRobotsVar = env.Get(\"ROBOTS_TXT_ALLOW\", \"false\", \"allow search engines to index the site\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/app#openSearchDescription",
               "documentation": {
                 "identifier": "openSearchDescription",
                 "newPage": false,
                 "searchKey": "app.openSearchDescription",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -214,12 +208,38 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/app#regDriveLetter",
+              "documentation": {
+                "identifier": "regDriveLetter",
+                "newPage": false,
+                "searchKey": "app.regDriveLetter",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var regDriveLetter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar regDriveLetter = lazyregexp.New(\"^/[a-zA-Z]:\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/app#ssoSignOutHandler",
               "documentation": {
                 "identifier": "ssoSignOutHandler",
                 "newPage": false,
                 "searchKey": "app.ssoSignOutHandler",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
@@ -245,6 +265,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -259,12 +280,58 @@
         "children": [
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/app#SignOutURL",
+              "documentation": {
+                "identifier": "SignOutURL",
+                "newPage": false,
+                "searchKey": "app.SignOutURL",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SignOutURL struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SignOutURL struct {\n\tProviderDisplayName string\n\tProviderServiceType string\n\tURL                 string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#editorOpenFileRequest",
+              "documentation": {
+                "identifier": "editorOpenFileRequest",
+                "newPage": false,
+                "searchKey": "app.editorOpenFileRequest",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type editorOpenFileRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype editorOpenFileRequest struct {\n\tremoteURL         string            // Git repository remote URL.\n\thostnameToPattern map[string]string // Map of Git remote URL hostnames to patterns describing how they map to Sourcegraph repositories\n\tbranch            string            // Git branch name.\n\trevision          string            // Git revision.\n\tfile              string            // Unix filepath relative to repository root.\n\n\t// Zero-based cursor selection parameters. Required.\n\tstartRow, endRow int\n\tstartCol, endCol int\n}\n```\n\neditorSearchRequest represents parameters for \"open file on Sourcegraph\" editor requests. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/app#editorRequest",
               "documentation": {
                 "identifier": "editorRequest",
                 "newPage": false,
                 "searchKey": "app.editorRequest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -285,6 +352,7 @@
                       "newPage": false,
                       "searchKey": "app.parseEditorRequest",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -307,6 +375,7 @@
                       "newPage": false,
                       "searchKey": "app.editorRequest.addTracking",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -323,34 +392,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/cmd/frontend/internal/app#editorRequest.searchRedirect",
-                    "documentation": {
-                      "identifier": "editorRequest.searchRedirect",
-                      "newPage": false,
-                      "searchKey": "app.editorRequest.searchRedirect",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *editorRequest) searchRedirect(ctx context.Context) (string, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *editorRequest) searchRedirect(ctx context.Context) (string, error)\n```\n\nsearchRedirect returns the redirect URL for the pre-validated search request. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/cmd/frontend/internal/app#editorRequest.openFileRedirect",
                     "documentation": {
                       "identifier": "editorRequest.openFileRedirect",
                       "newPage": false,
                       "searchKey": "app.editorRequest.openFileRedirect",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -373,6 +421,7 @@
                       "newPage": false,
                       "searchKey": "app.editorRequest.redirectURL",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -386,30 +435,31 @@
                     },
                     "children": null
                   }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/app#editorRequest.searchRedirect",
+                    "documentation": {
+                      "identifier": "editorRequest.searchRedirect",
+                      "newPage": false,
+                      "searchKey": "app.editorRequest.searchRedirect",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *editorRequest) searchRedirect(ctx context.Context) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *editorRequest) searchRedirect(ctx context.Context) (string, error)\n```\n\nsearchRedirect returns the redirect URL for the pre-validated search request. \n\n"
+                    },
+                    "children": null
+                  }
                 }
               ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#editorOpenFileRequest",
-              "documentation": {
-                "identifier": "editorOpenFileRequest",
-                "newPage": false,
-                "searchKey": "app.editorOpenFileRequest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type editorOpenFileRequest struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype editorOpenFileRequest struct {\n\tremoteURL         string            // Git repository remote URL.\n\thostnameToPattern map[string]string // Map of Git remote URL hostnames to patterns describing how they map to Sourcegraph repositories\n\tbranch            string            // Git branch name.\n\trevision          string            // Git revision.\n\tfile              string            // Unix filepath relative to repository root.\n\n\t// Zero-based cursor selection parameters. Required.\n\tstartRow, endRow int\n\tstartCol, endCol int\n}\n```\n\neditorSearchRequest represents parameters for \"open file on Sourcegraph\" editor requests. \n\n"
-              },
-              "children": null
             }
           },
           {
@@ -420,6 +470,7 @@
                 "newPage": false,
                 "searchKey": "app.editorSearchRequest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -442,6 +493,7 @@
                 "newPage": false,
                 "searchKey": "app.goSymbolSpec",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -462,6 +514,7 @@
                       "newPage": false,
                       "searchKey": "app.parseGoSymbolURLPath",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -487,6 +540,7 @@
                 "newPage": false,
                 "searchKey": "app.invalidSymbolURLPathError",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -507,6 +561,7 @@
                       "newPage": false,
                       "searchKey": "app.invalidSymbolURLPathError.Error",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -526,76 +581,13 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app#SignOutURL",
-              "documentation": {
-                "identifier": "SignOutURL",
-                "newPage": false,
-                "searchKey": "app.SignOutURL",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type SignOutURL struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype SignOutURL struct {\n\tProviderDisplayName string\n\tProviderServiceType string\n\tURL                 string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#symbolLocationArgs",
-              "documentation": {
-                "identifier": "symbolLocationArgs",
-                "newPage": false,
-                "searchKey": "app.symbolLocationArgs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type symbolLocationArgs struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype symbolLocationArgs struct {\n\tvfs        map[string]string\n\tcommitID   api.CommitID\n\timportPath string\n\tpath       string\n\treceiver   *string\n\tsymbol     string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#test",
-              "documentation": {
-                "identifier": "test",
-                "newPage": false,
-                "searchKey": "app.test",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type test struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype test struct {\n\targs symbolLocationArgs\n\twant *lsp.Location\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/app#stringMapFS",
               "documentation": {
                 "identifier": "stringMapFS",
                 "newPage": false,
                 "searchKey": "app.stringMapFS",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -616,6 +608,7 @@
                       "newPage": false,
                       "searchKey": "app.mapFS",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -638,6 +631,7 @@
                       "newPage": false,
                       "searchKey": "app.stringMapFS.ListAllFiles",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -654,6 +648,52 @@
                 }
               ]
             }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#symbolLocationArgs",
+              "documentation": {
+                "identifier": "symbolLocationArgs",
+                "newPage": false,
+                "searchKey": "app.symbolLocationArgs",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type symbolLocationArgs struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype symbolLocationArgs struct {\n\tvfs        map[string]string\n\tcommitID   api.CommitID\n\timportPath string\n\tpath       string\n\treceiver   *string\n\tsymbol     string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#test",
+              "documentation": {
+                "identifier": "test",
+                "newPage": false,
+                "searchKey": "app.test",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type test struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype test struct {\n\targs symbolLocationArgs\n\twant *lsp.Location\n}\n```\n\n"
+              },
+              "children": null
+            }
           }
         ]
       }
@@ -666,6 +706,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -680,12 +721,80 @@
         "children": [
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/app#IsAbs",
+              "documentation": {
+                "identifier": "IsAbs",
+                "newPage": false,
+                "searchKey": "app.IsAbs",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsAbs(path string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsAbs(path string) bool\n```\n\nIsAbs returns true if the given path is absolute \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#IsURI",
+              "documentation": {
+                "identifier": "IsURI",
+                "newPage": false,
+                "searchKey": "app.IsURI",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsURI(s lsp.DocumentURI) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsURI(s lsp.DocumentURI) bool\n```\n\nIsURI tells if s denotes an URI \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#IsVendorDir",
+              "documentation": {
+                "identifier": "IsVendorDir",
+                "newPage": false,
+                "searchKey": "app.IsVendorDir",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsVendorDir(dir string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsVendorDir(dir string) bool\n```\n\nIsVendorDir tells if the specified directory is a vendor directory. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/app#NewHandler",
               "documentation": {
                 "identifier": "NewHandler",
                 "newPage": false,
                 "searchKey": "app.NewHandler",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -700,12 +809,611 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/app#Panicf",
+              "documentation": {
+                "identifier": "Panicf",
+                "newPage": false,
+                "searchKey": "app.Panicf",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Panicf(r interface{}, format string, v ...interface{}) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Panicf(r interface{}, format string, v ...interface{}) error\n```\n\nPanicf takes the return value of recover() and outputs data to the log with the stack trace appended. Arguments are handled in the manner of fmt.Printf. Arguments should format to a string which identifies what the panic code was doing. Returns a non-nil error if it recovered from a panic. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#PathEqual",
+              "documentation": {
+                "identifier": "PathEqual",
+                "newPage": false,
+                "searchKey": "app.PathEqual",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func PathEqual(a, b string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc PathEqual(a, b string) bool\n```\n\nPathEqual returns true if both a and b are equal \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#PathHasPrefix",
+              "documentation": {
+                "identifier": "PathHasPrefix",
+                "newPage": false,
+                "searchKey": "app.PathHasPrefix",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func PathHasPrefix(s, prefix string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc PathHasPrefix(s, prefix string) bool\n```\n\nPathHasPrefix returns true if s is starts with the given prefix \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#PathToURI",
+              "documentation": {
+                "identifier": "PathToURI",
+                "newPage": false,
+                "searchKey": "app.PathToURI",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func PathToURI(path string) lsp.DocumentURI"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc PathToURI(path string) lsp.DocumentURI\n```\n\nPathToURI converts given absolute path to file URI \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#PathTrimPrefix",
+              "documentation": {
+                "identifier": "PathTrimPrefix",
+                "newPage": false,
+                "searchKey": "app.PathTrimPrefix",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func PathTrimPrefix(s, prefix string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc PathTrimPrefix(s, prefix string) string\n```\n\nPathTrimPrefix removes the prefix from s \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#PrepareContext",
+              "documentation": {
+                "identifier": "PrepareContext",
+                "newPage": false,
+                "searchKey": "app.PrepareContext",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func PrepareContext(bctx *build.Context, ctx context.Context, vfs ctxvfs.FileSystem)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc PrepareContext(bctx *build.Context, ctx context.Context, vfs ctxvfs.FileSystem)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#RegisterSSOSignOutHandler",
+              "documentation": {
+                "identifier": "RegisterSSOSignOutHandler",
+                "newPage": false,
+                "searchKey": "app.RegisterSSOSignOutHandler",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RegisterSSOSignOutHandler(f func(w http.ResponseWriter, r *http.Request))"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RegisterSSOSignOutHandler(f func(w http.ResponseWriter, r *http.Request))\n```\n\nRegisterSSOSignOutHandler registers a SSO sign-out handler that takes care of cleaning up SSO session state, both on Sourcegraph and on the SSO provider. This function should only be called once from an init function. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#TestEditorRedirect",
+              "documentation": {
+                "identifier": "TestEditorRedirect",
+                "newPage": false,
+                "searchKey": "app.TestEditorRedirect",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEditorRedirect(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEditorRedirect(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#TestEditorRev",
+              "documentation": {
+                "identifier": "TestEditorRev",
+                "newPage": false,
+                "searchKey": "app.TestEditorRev",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEditorRev(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEditorRev(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#TestGrafanaLicensing",
+              "documentation": {
+                "identifier": "TestGrafanaLicensing",
+                "newPage": false,
+                "searchKey": "app.TestGrafanaLicensing",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGrafanaLicensing(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGrafanaLicensing(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#TestLatestPingHandler",
+              "documentation": {
+                "identifier": "TestLatestPingHandler",
+                "newPage": false,
+                "searchKey": "app.TestLatestPingHandler",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLatestPingHandler(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLatestPingHandler(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#TestParseGoSymbolURLPath",
+              "documentation": {
+                "identifier": "TestParseGoSymbolURLPath",
+                "newPage": false,
+                "searchKey": "app.TestParseGoSymbolURLPath",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseGoSymbolURLPath(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseGoSymbolURLPath(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#TestRobotsTxt",
+              "documentation": {
+                "identifier": "TestRobotsTxt",
+                "newPage": false,
+                "searchKey": "app.TestRobotsTxt",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRobotsTxt(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRobotsTxt(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#TestSymbolLocation",
+              "documentation": {
+                "identifier": "TestSymbolLocation",
+                "newPage": false,
+                "searchKey": "app.TestSymbolLocation",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSymbolLocation(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSymbolLocation(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#TestUsageStatsArchiveHandler",
+              "documentation": {
+                "identifier": "TestUsageStatsArchiveHandler",
+                "newPage": false,
+                "searchKey": "app.TestUsageStatsArchiveHandler",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUsageStatsArchiveHandler(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUsageStatsArchiveHandler(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#Test_prometheusValidator",
+              "documentation": {
+                "identifier": "Test_prometheusValidator",
+                "newPage": false,
+                "searchKey": "app.Test_prometheusValidator",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Test_prometheusValidator(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Test_prometheusValidator(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#UriToPath",
+              "documentation": {
+                "identifier": "UriToPath",
+                "newPage": false,
+                "searchKey": "app.UriToPath",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func UriToPath(uri lsp.DocumentURI) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc UriToPath(uri lsp.DocumentURI) string\n```\n\nUriToPath converts given file URI to path \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#UriToRealPath",
+              "documentation": {
+                "identifier": "UriToRealPath",
+                "newPage": false,
+                "searchKey": "app.UriToRealPath",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func UriToRealPath(uri lsp.DocumentURI) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc UriToRealPath(uri lsp.DocumentURI) string\n```\n\nUriToRealPath converts the given file URI to the platform specific path \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#addDebugHandlers",
+              "documentation": {
+                "identifier": "addDebugHandlers",
+                "newPage": false,
+                "searchKey": "app.addDebugHandlers",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addDebugHandlers(r *mux.Router, db dbutil.DB)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addDebugHandlers(r *mux.Router, db dbutil.DB)\n```\n\naddDebugHandlers registers the reverse proxies to each services debug endpoints. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#addGrafana",
+              "documentation": {
+                "identifier": "addGrafana",
+                "newPage": false,
+                "searchKey": "app.addGrafana",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addGrafana(r *mux.Router, db dbutil.DB)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addGrafana(r *mux.Router, db dbutil.DB)\n```\n\naddReverseProxyForService registers a reverse proxy for the specified service. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#addGrafanaNotLicensedHandler",
+              "documentation": {
+                "identifier": "addGrafanaNotLicensedHandler",
+                "newPage": false,
+                "searchKey": "app.addGrafanaNotLicensedHandler",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addGrafanaNotLicensedHandler(r *mux.Router, db dbutil.DB)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addGrafanaNotLicensedHandler(r *mux.Router, db dbutil.DB)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#addJaeger",
+              "documentation": {
+                "identifier": "addJaeger",
+                "newPage": false,
+                "searchKey": "app.addJaeger",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addJaeger(r *mux.Router, db dbutil.DB)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addJaeger(r *mux.Router, db dbutil.DB)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#addNoGrafanaHandler",
+              "documentation": {
+                "identifier": "addNoGrafanaHandler",
+                "newPage": false,
+                "searchKey": "app.addNoGrafanaHandler",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addNoGrafanaHandler(r *mux.Router, db dbutil.DB)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addNoGrafanaHandler(r *mux.Router, db dbutil.DB)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#addNoJaegerHandler",
+              "documentation": {
+                "identifier": "addNoJaegerHandler",
+                "newPage": false,
+                "searchKey": "app.addNoJaegerHandler",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addNoJaegerHandler(r *mux.Router, db dbutil.DB)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addNoJaegerHandler(r *mux.Router, db dbutil.DB)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#addNoK8sClientHandler",
+              "documentation": {
+                "identifier": "addNoK8sClientHandler",
+                "newPage": false,
+                "searchKey": "app.addNoK8sClientHandler",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addNoK8sClientHandler(r *mux.Router, db dbutil.DB)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addNoK8sClientHandler(r *mux.Router, db dbutil.DB)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#adminOnly",
+              "documentation": {
+                "identifier": "adminOnly",
+                "newPage": false,
+                "searchKey": "app.adminOnly",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func adminOnly(next http.Handler, db dbutil.DB) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc adminOnly(next http.Handler, db dbutil.DB) http.Handler\n```\n\nadminOnly is a HTTP middleware which only allows requests by admins. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/app#badgeValue",
               "documentation": {
                 "identifier": "badgeValue",
                 "newPage": false,
                 "searchKey": "app.badgeValue",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -728,6 +1436,7 @@
                 "newPage": false,
                 "searchKey": "app.badgeValueFmt",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -744,386 +1453,13 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app#serveRepoBadge",
-              "documentation": {
-                "identifier": "serveRepoBadge",
-                "newPage": false,
-                "searchKey": "app.serveRepoBadge",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func serveRepoBadge(w http.ResponseWriter, r *http.Request) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc serveRepoBadge(w http.ResponseWriter, r *http.Request) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#init.debug.go",
-              "documentation": {
-                "identifier": "init.debug.go",
-                "newPage": false,
-                "searchKey": "app.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#addNoK8sClientHandler",
-              "documentation": {
-                "identifier": "addNoK8sClientHandler",
-                "newPage": false,
-                "searchKey": "app.addNoK8sClientHandler",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func addNoK8sClientHandler(r *mux.Router, db dbutil.DB)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc addNoK8sClientHandler(r *mux.Router, db dbutil.DB)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#addDebugHandlers",
-              "documentation": {
-                "identifier": "addDebugHandlers",
-                "newPage": false,
-                "searchKey": "app.addDebugHandlers",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func addDebugHandlers(r *mux.Router, db dbutil.DB)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc addDebugHandlers(r *mux.Router, db dbutil.DB)\n```\n\naddDebugHandlers registers the reverse proxies to each services debug endpoints. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#addNoGrafanaHandler",
-              "documentation": {
-                "identifier": "addNoGrafanaHandler",
-                "newPage": false,
-                "searchKey": "app.addNoGrafanaHandler",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func addNoGrafanaHandler(r *mux.Router, db dbutil.DB)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc addNoGrafanaHandler(r *mux.Router, db dbutil.DB)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#addGrafanaNotLicensedHandler",
-              "documentation": {
-                "identifier": "addGrafanaNotLicensedHandler",
-                "newPage": false,
-                "searchKey": "app.addGrafanaNotLicensedHandler",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func addGrafanaNotLicensedHandler(r *mux.Router, db dbutil.DB)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc addGrafanaNotLicensedHandler(r *mux.Router, db dbutil.DB)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#addGrafana",
-              "documentation": {
-                "identifier": "addGrafana",
-                "newPage": false,
-                "searchKey": "app.addGrafana",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func addGrafana(r *mux.Router, db dbutil.DB)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc addGrafana(r *mux.Router, db dbutil.DB)\n```\n\naddReverseProxyForService registers a reverse proxy for the specified service. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#addNoJaegerHandler",
-              "documentation": {
-                "identifier": "addNoJaegerHandler",
-                "newPage": false,
-                "searchKey": "app.addNoJaegerHandler",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func addNoJaegerHandler(r *mux.Router, db dbutil.DB)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc addNoJaegerHandler(r *mux.Router, db dbutil.DB)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#addJaeger",
-              "documentation": {
-                "identifier": "addJaeger",
-                "newPage": false,
-                "searchKey": "app.addJaeger",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func addJaeger(r *mux.Router, db dbutil.DB)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc addJaeger(r *mux.Router, db dbutil.DB)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#adminOnly",
-              "documentation": {
-                "identifier": "adminOnly",
-                "newPage": false,
-                "searchKey": "app.adminOnly",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func adminOnly(next http.Handler, db dbutil.DB) http.Handler"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc adminOnly(next http.Handler, db dbutil.DB) http.Handler\n```\n\nadminOnly is a HTTP middleware which only allows requests by admins. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#newPrometheusValidator",
-              "documentation": {
-                "identifier": "newPrometheusValidator",
-                "newPage": false,
-                "searchKey": "app.newPrometheusValidator",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func newPrometheusValidator(prom srcprometheus.Client, promErr error) conf.Validator"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc newPrometheusValidator(prom srcprometheus.Client, promErr error) conf.Validator\n```\n\nnewPrometheusValidator renders problems with the Prometheus deployment and relevant site configuration as reported by `prom-wrapper` inside the `sourcegraph/prometheus` container if Prometheus is enabled. \n\nIt also accepts the error from creating `srcprometheus.Client` as an parameter, to validate Prometheus configuration. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#editorRev",
-              "documentation": {
-                "identifier": "editorRev",
-                "newPage": false,
-                "searchKey": "app.editorRev",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func editorRev(ctx context.Context, repoName api.RepoName, rev string, beExplicit bool) (string, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc editorRev(ctx context.Context, repoName api.RepoName, rev string, beExplicit bool) (string, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#serveEditor",
-              "documentation": {
-                "identifier": "serveEditor",
-                "newPage": false,
-                "searchKey": "app.serveEditor",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func serveEditor(w http.ResponseWriter, r *http.Request) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc serveEditor(w http.ResponseWriter, r *http.Request) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#isGoRepoPath",
-              "documentation": {
-                "identifier": "isGoRepoPath",
-                "newPage": false,
-                "searchKey": "app.isGoRepoPath",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func isGoRepoPath(pkg string) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc isGoRepoPath(pkg string) bool\n```\n\nisGoRepoPath returns whether pkg is (likely to be) a Go stdlib package import path. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#serveGDDORefs",
-              "documentation": {
-                "identifier": "serveGDDORefs",
-                "newPage": false,
-                "searchKey": "app.serveGDDORefs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func serveGDDORefs(w http.ResponseWriter, r *http.Request) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc serveGDDORefs(w http.ResponseWriter, r *http.Request) error\n```\n\nserveGDDORefs handles requests referred from godoc.org refs links. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#serveGoSymbolURL",
-              "documentation": {
-                "identifier": "serveGoSymbolURL",
-                "newPage": false,
-                "searchKey": "app.serveGoSymbolURL",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func serveGoSymbolURL(w http.ResponseWriter, r *http.Request) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc serveGoSymbolURL(w http.ResponseWriter, r *http.Request) error\n```\n\nserveGoSymbolURL handles Go symbol URLs (e.g., [https://sourcegraph.com/go/github.com/gorilla/mux/-/Vars](https://sourcegraph.com/go/github.com/gorilla/mux/-/Vars)) by redirecting them to the file and line/column URL of the definition. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#symbolLocation",
-              "documentation": {
-                "identifier": "symbolLocation",
-                "newPage": false,
-                "searchKey": "app.symbolLocation",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func symbolLocation(ctx context.Context, vfs ctxvfs.FileSystem, commitID api.CommitID, symbolSpec *goSymbolSpec, pkgPath string) (*lsp.Location, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc symbolLocation(ctx context.Context, vfs ctxvfs.FileSystem, commitID api.CommitID, symbolSpec *goSymbolSpec, pkgPath string) (*lsp.Location, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/app#buildContextFromVFS",
               "documentation": {
                 "identifier": "buildContextFromVFS",
                 "newPage": false,
                 "searchKey": "app.buildContextFromVFS",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1140,374 +1476,23 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app#repoVFS",
+              "pathID": "/cmd/frontend/internal/app#editorRev",
               "documentation": {
-                "identifier": "repoVFS",
+                "identifier": "editorRev",
                 "newPage": false,
-                "searchKey": "app.repoVFS",
+                "searchKey": "app.editorRev",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func repoVFS(ctx context.Context, name api.RepoName, rev api.CommitID) (ctxvfs.FileSystem, error)"
+                "value": "func editorRev(ctx context.Context, repoName api.RepoName, rev string, beExplicit bool) (string, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc repoVFS(ctx context.Context, name api.RepoName, rev api.CommitID) (ctxvfs.FileSystem, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#parseFiles",
-              "documentation": {
-                "identifier": "parseFiles",
-                "newPage": false,
-                "searchKey": "app.parseFiles",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func parseFiles(fset *token.FileSet, bctx *build.Context, importPath, srcDir string) (*ast.Package, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc parseFiles(fset *token.FileSet, bctx *build.Context, importPath, srcDir string) (*ast.Package, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#PrepareContext",
-              "documentation": {
-                "identifier": "PrepareContext",
-                "newPage": false,
-                "searchKey": "app.PrepareContext",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func PrepareContext(bctx *build.Context, ctx context.Context, vfs ctxvfs.FileSystem)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc PrepareContext(bctx *build.Context, ctx context.Context, vfs ctxvfs.FileSystem)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#trimFilePrefix",
-              "documentation": {
-                "identifier": "trimFilePrefix",
-                "newPage": false,
-                "searchKey": "app.trimFilePrefix",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func trimFilePrefix(s string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc trimFilePrefix(s string) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#normalizePath",
-              "documentation": {
-                "identifier": "normalizePath",
-                "newPage": false,
-                "searchKey": "app.normalizePath",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func normalizePath(s string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc normalizePath(s string) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#PathHasPrefix",
-              "documentation": {
-                "identifier": "PathHasPrefix",
-                "newPage": false,
-                "searchKey": "app.PathHasPrefix",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func PathHasPrefix(s, prefix string) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc PathHasPrefix(s, prefix string) bool\n```\n\nPathHasPrefix returns true if s is starts with the given prefix \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#PathTrimPrefix",
-              "documentation": {
-                "identifier": "PathTrimPrefix",
-                "newPage": false,
-                "searchKey": "app.PathTrimPrefix",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func PathTrimPrefix(s, prefix string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc PathTrimPrefix(s, prefix string) string\n```\n\nPathTrimPrefix removes the prefix from s \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#PathEqual",
-              "documentation": {
-                "identifier": "PathEqual",
-                "newPage": false,
-                "searchKey": "app.PathEqual",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func PathEqual(a, b string) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc PathEqual(a, b string) bool\n```\n\nPathEqual returns true if both a and b are equal \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#IsVendorDir",
-              "documentation": {
-                "identifier": "IsVendorDir",
-                "newPage": false,
-                "searchKey": "app.IsVendorDir",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IsVendorDir(dir string) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IsVendorDir(dir string) bool\n```\n\nIsVendorDir tells if the specified directory is a vendor directory. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#IsURI",
-              "documentation": {
-                "identifier": "IsURI",
-                "newPage": false,
-                "searchKey": "app.IsURI",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IsURI(s lsp.DocumentURI) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IsURI(s lsp.DocumentURI) bool\n```\n\nIsURI tells if s denotes an URI \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#isURI",
-              "documentation": {
-                "identifier": "isURI",
-                "newPage": false,
-                "searchKey": "app.isURI",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func isURI(s string) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc isURI(s string) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#PathToURI",
-              "documentation": {
-                "identifier": "PathToURI",
-                "newPage": false,
-                "searchKey": "app.PathToURI",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func PathToURI(path string) lsp.DocumentURI"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc PathToURI(path string) lsp.DocumentURI\n```\n\nPathToURI converts given absolute path to file URI \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#UriToPath",
-              "documentation": {
-                "identifier": "UriToPath",
-                "newPage": false,
-                "searchKey": "app.UriToPath",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func UriToPath(uri lsp.DocumentURI) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc UriToPath(uri lsp.DocumentURI) string\n```\n\nUriToPath converts given file URI to path \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#UriToRealPath",
-              "documentation": {
-                "identifier": "UriToRealPath",
-                "newPage": false,
-                "searchKey": "app.UriToRealPath",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func UriToRealPath(uri lsp.DocumentURI) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc UriToRealPath(uri lsp.DocumentURI) string\n```\n\nUriToRealPath converts the given file URI to the platform specific path \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#IsAbs",
-              "documentation": {
-                "identifier": "IsAbs",
-                "newPage": false,
-                "searchKey": "app.IsAbs",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IsAbs(path string) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IsAbs(path string) bool\n```\n\nIsAbs returns true if the given path is absolute \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#Panicf",
-              "documentation": {
-                "identifier": "Panicf",
-                "newPage": false,
-                "searchKey": "app.Panicf",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Panicf(r interface{}, format string, v ...interface{}) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Panicf(r interface{}, format string, v ...interface{}) error\n```\n\nPanicf takes the return value of recover() and outputs data to the log with the stack trace appended. Arguments are handled in the manner of fmt.Printf. Arguments should format to a string which identifies what the panic code was doing. Returns a non-nil error if it recovered from a panic. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#robotsTxt",
-              "documentation": {
-                "identifier": "robotsTxt",
-                "newPage": false,
-                "searchKey": "app.robotsTxt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func robotsTxt(w http.ResponseWriter, r *http.Request)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc robotsTxt(w http.ResponseWriter, r *http.Request)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#robotsTxtHelper",
-              "documentation": {
-                "identifier": "robotsTxtHelper",
-                "newPage": false,
-                "searchKey": "app.robotsTxtHelper",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func robotsTxtHelper(w io.Writer, allowRobots bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc robotsTxtHelper(w io.Writer, allowRobots bool)\n```\n\n"
+                "value": "```Go\nfunc editorRev(ctx context.Context, repoName api.RepoName, rev string, beExplicit bool) (string, error)\n```\n\n"
               },
               "children": null
             }
@@ -1520,6 +1505,7 @@
                 "newPage": false,
                 "searchKey": "app.favicon",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1536,164 +1522,13 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app#openSearch",
-              "documentation": {
-                "identifier": "openSearch",
-                "newPage": false,
-                "searchKey": "app.openSearch",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func openSearch(w http.ResponseWriter, r *http.Request)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc openSearch(w http.ResponseWriter, r *http.Request)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#latestPingHandler",
-              "documentation": {
-                "identifier": "latestPingHandler",
-                "newPage": false,
-                "searchKey": "app.latestPingHandler",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func latestPingHandler(db dbutil.DB) func(w http.ResponseWriter, r *http.Request)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc latestPingHandler(db dbutil.DB) func(w http.ResponseWriter, r *http.Request)\n```\n\nlatestPingHandler fetches the most recent ping data from the event log (if any is present) and returns it as JSON. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#RegisterSSOSignOutHandler",
-              "documentation": {
-                "identifier": "RegisterSSOSignOutHandler",
-                "newPage": false,
-                "searchKey": "app.RegisterSSOSignOutHandler",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func RegisterSSOSignOutHandler(f func(w http.ResponseWriter, r *http.Request))"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc RegisterSSOSignOutHandler(f func(w http.ResponseWriter, r *http.Request))\n```\n\nRegisterSSOSignOutHandler registers a SSO sign-out handler that takes care of cleaning up SSO session state, both on Sourcegraph and on the SSO provider. This function should only be called once from an init function. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#serveSignOutHandler",
-              "documentation": {
-                "identifier": "serveSignOutHandler",
-                "newPage": false,
-                "searchKey": "app.serveSignOutHandler",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func serveSignOutHandler(db dbutil.DB) func(w http.ResponseWriter, r *http.Request)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc serveSignOutHandler(db dbutil.DB) func(w http.ResponseWriter, r *http.Request)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#logSignOutEvent",
-              "documentation": {
-                "identifier": "logSignOutEvent",
-                "newPage": false,
-                "searchKey": "app.logSignOutEvent",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func logSignOutEvent(r *http.Request, db dbutil.DB, name string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc logSignOutEvent(r *http.Request, db dbutil.DB, name string)\n```\n\nlogSignOutEvent records an event into the security event log. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#usageStatsArchiveHandler",
-              "documentation": {
-                "identifier": "usageStatsArchiveHandler",
-                "newPage": false,
-                "searchKey": "app.usageStatsArchiveHandler",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func usageStatsArchiveHandler(db dbutil.DB) func(w http.ResponseWriter, r *http.Request)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc usageStatsArchiveHandler(db dbutil.DB) func(w http.ResponseWriter, r *http.Request)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#serveVerifyEmail",
-              "documentation": {
-                "identifier": "serveVerifyEmail",
-                "newPage": false,
-                "searchKey": "app.serveVerifyEmail",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func serveVerifyEmail(w http.ResponseWriter, r *http.Request)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc serveVerifyEmail(w http.ResponseWriter, r *http.Request)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/app#httpLogAndError",
               "documentation": {
                 "identifier": "httpLogAndError",
                 "newPage": false,
                 "searchKey": "app.httpLogAndError",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1716,6 +1551,7 @@
                 "newPage": false,
                 "searchKey": "app.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1732,110 +1568,161 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app#Test_prometheusValidator",
+              "pathID": "/cmd/frontend/internal/app#init.debug.go",
               "documentation": {
-                "identifier": "Test_prometheusValidator",
+                "identifier": "init.debug.go",
                 "newPage": false,
-                "searchKey": "app.Test_prometheusValidator",
+                "searchKey": "app.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func Test_prometheusValidator(t *testing.T)"
+                "value": "func init()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc Test_prometheusValidator(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc init()\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app#TestGrafanaLicensing",
+              "pathID": "/cmd/frontend/internal/app#init.ping_test.go",
               "documentation": {
-                "identifier": "TestGrafanaLicensing",
+                "identifier": "init.ping_test.go",
                 "newPage": false,
-                "searchKey": "app.TestGrafanaLicensing",
+                "searchKey": "app.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestGrafanaLicensing(t *testing.T)"
+                "value": "func init()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestGrafanaLicensing(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc init()\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app#TestEditorRev",
+              "pathID": "/cmd/frontend/internal/app#init.usage_stats_test.go",
               "documentation": {
-                "identifier": "TestEditorRev",
+                "identifier": "init.usage_stats_test.go",
                 "newPage": false,
-                "searchKey": "app.TestEditorRev",
+                "searchKey": "app.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestEditorRev(t *testing.T)"
+                "value": "func init()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestEditorRev(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc init()\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app#TestEditorRedirect",
+              "pathID": "/cmd/frontend/internal/app#isGoRepoPath",
               "documentation": {
-                "identifier": "TestEditorRedirect",
+                "identifier": "isGoRepoPath",
                 "newPage": false,
-                "searchKey": "app.TestEditorRedirect",
+                "searchKey": "app.isGoRepoPath",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestEditorRedirect(t *testing.T)"
+                "value": "func isGoRepoPath(pkg string) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestEditorRedirect(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc isGoRepoPath(pkg string) bool\n```\n\nisGoRepoPath returns whether pkg is (likely to be) a Go stdlib package import path. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app#TestParseGoSymbolURLPath",
+              "pathID": "/cmd/frontend/internal/app#isURI",
               "documentation": {
-                "identifier": "TestParseGoSymbolURLPath",
+                "identifier": "isURI",
                 "newPage": false,
-                "searchKey": "app.TestParseGoSymbolURLPath",
+                "searchKey": "app.isURI",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestParseGoSymbolURLPath(t *testing.T)"
+                "value": "func isURI(s string) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestParseGoSymbolURLPath(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc isURI(s string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#latestPingHandler",
+              "documentation": {
+                "identifier": "latestPingHandler",
+                "newPage": false,
+                "searchKey": "app.latestPingHandler",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func latestPingHandler(db dbutil.DB) func(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc latestPingHandler(db dbutil.DB) func(w http.ResponseWriter, r *http.Request)\n```\n\nlatestPingHandler fetches the most recent ping data from the event log (if any is present) and returns it as JSON. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#logSignOutEvent",
+              "documentation": {
+                "identifier": "logSignOutEvent",
+                "newPage": false,
+                "searchKey": "app.logSignOutEvent",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func logSignOutEvent(r *http.Request, db dbutil.DB, name string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc logSignOutEvent(r *http.Request, db dbutil.DB, name string)\n```\n\nlogSignOutEvent records an event into the security event log. \n\n"
               },
               "children": null
             }
@@ -1848,6 +1735,7 @@
                 "newPage": false,
                 "searchKey": "app.mkLocation",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1864,12 +1752,312 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/app#newPrometheusValidator",
+              "documentation": {
+                "identifier": "newPrometheusValidator",
+                "newPage": false,
+                "searchKey": "app.newPrometheusValidator",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newPrometheusValidator(prom srcprometheus.Client, promErr error) conf.Validator"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newPrometheusValidator(prom srcprometheus.Client, promErr error) conf.Validator\n```\n\nnewPrometheusValidator renders problems with the Prometheus deployment and relevant site configuration as reported by `prom-wrapper` inside the `sourcegraph/prometheus` container if Prometheus is enabled. \n\nIt also accepts the error from creating `srcprometheus.Client` as an parameter, to validate Prometheus configuration. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#normalizePath",
+              "documentation": {
+                "identifier": "normalizePath",
+                "newPage": false,
+                "searchKey": "app.normalizePath",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func normalizePath(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc normalizePath(s string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#openSearch",
+              "documentation": {
+                "identifier": "openSearch",
+                "newPage": false,
+                "searchKey": "app.openSearch",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func openSearch(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc openSearch(w http.ResponseWriter, r *http.Request)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#parseFiles",
+              "documentation": {
+                "identifier": "parseFiles",
+                "newPage": false,
+                "searchKey": "app.parseFiles",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseFiles(fset *token.FileSet, bctx *build.Context, importPath, srcDir string) (*ast.Package, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseFiles(fset *token.FileSet, bctx *build.Context, importPath, srcDir string) (*ast.Package, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#repoVFS",
+              "documentation": {
+                "identifier": "repoVFS",
+                "newPage": false,
+                "searchKey": "app.repoVFS",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func repoVFS(ctx context.Context, name api.RepoName, rev api.CommitID) (ctxvfs.FileSystem, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc repoVFS(ctx context.Context, name api.RepoName, rev api.CommitID) (ctxvfs.FileSystem, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#robotsTxt",
+              "documentation": {
+                "identifier": "robotsTxt",
+                "newPage": false,
+                "searchKey": "app.robotsTxt",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func robotsTxt(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc robotsTxt(w http.ResponseWriter, r *http.Request)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#robotsTxtHelper",
+              "documentation": {
+                "identifier": "robotsTxtHelper",
+                "newPage": false,
+                "searchKey": "app.robotsTxtHelper",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func robotsTxtHelper(w io.Writer, allowRobots bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc robotsTxtHelper(w io.Writer, allowRobots bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#serveEditor",
+              "documentation": {
+                "identifier": "serveEditor",
+                "newPage": false,
+                "searchKey": "app.serveEditor",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveEditor(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveEditor(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#serveGDDORefs",
+              "documentation": {
+                "identifier": "serveGDDORefs",
+                "newPage": false,
+                "searchKey": "app.serveGDDORefs",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveGDDORefs(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveGDDORefs(w http.ResponseWriter, r *http.Request) error\n```\n\nserveGDDORefs handles requests referred from godoc.org refs links. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#serveGoSymbolURL",
+              "documentation": {
+                "identifier": "serveGoSymbolURL",
+                "newPage": false,
+                "searchKey": "app.serveGoSymbolURL",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveGoSymbolURL(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveGoSymbolURL(w http.ResponseWriter, r *http.Request) error\n```\n\nserveGoSymbolURL handles Go symbol URLs (e.g., [https://sourcegraph.com/go/github.com/gorilla/mux/-/Vars](https://sourcegraph.com/go/github.com/gorilla/mux/-/Vars)) by redirecting them to the file and line/column URL of the definition. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#serveRepoBadge",
+              "documentation": {
+                "identifier": "serveRepoBadge",
+                "newPage": false,
+                "searchKey": "app.serveRepoBadge",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveRepoBadge(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveRepoBadge(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#serveSignOutHandler",
+              "documentation": {
+                "identifier": "serveSignOutHandler",
+                "newPage": false,
+                "searchKey": "app.serveSignOutHandler",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveSignOutHandler(db dbutil.DB) func(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveSignOutHandler(db dbutil.DB) func(w http.ResponseWriter, r *http.Request)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app#serveVerifyEmail",
+              "documentation": {
+                "identifier": "serveVerifyEmail",
+                "newPage": false,
+                "searchKey": "app.serveVerifyEmail",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveVerifyEmail(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveVerifyEmail(w http.ResponseWriter, r *http.Request)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/app#strptr",
               "documentation": {
                 "identifier": "strptr",
                 "newPage": false,
                 "searchKey": "app.strptr",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1886,132 +2074,69 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app#TestSymbolLocation",
+              "pathID": "/cmd/frontend/internal/app#symbolLocation",
               "documentation": {
-                "identifier": "TestSymbolLocation",
+                "identifier": "symbolLocation",
                 "newPage": false,
-                "searchKey": "app.TestSymbolLocation",
+                "searchKey": "app.symbolLocation",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestSymbolLocation(t *testing.T)"
+                "value": "func symbolLocation(ctx context.Context, vfs ctxvfs.FileSystem, commitID api.CommitID, symbolSpec *goSymbolSpec, pkgPath string) (*lsp.Location, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestSymbolLocation(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc symbolLocation(ctx context.Context, vfs ctxvfs.FileSystem, commitID api.CommitID, symbolSpec *goSymbolSpec, pkgPath string) (*lsp.Location, error)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app#TestRobotsTxt",
+              "pathID": "/cmd/frontend/internal/app#trimFilePrefix",
               "documentation": {
-                "identifier": "TestRobotsTxt",
+                "identifier": "trimFilePrefix",
                 "newPage": false,
-                "searchKey": "app.TestRobotsTxt",
+                "searchKey": "app.trimFilePrefix",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestRobotsTxt(t *testing.T)"
+                "value": "func trimFilePrefix(s string) string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestRobotsTxt(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc trimFilePrefix(s string) string\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app#init.ping_test.go",
+              "pathID": "/cmd/frontend/internal/app#usageStatsArchiveHandler",
               "documentation": {
-                "identifier": "init.ping_test.go",
+                "identifier": "usageStatsArchiveHandler",
                 "newPage": false,
-                "searchKey": "app.init",
+                "searchKey": "app.usageStatsArchiveHandler",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func init()"
+                "value": "func usageStatsArchiveHandler(db dbutil.DB) func(w http.ResponseWriter, r *http.Request)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#TestLatestPingHandler",
-              "documentation": {
-                "identifier": "TestLatestPingHandler",
-                "newPage": false,
-                "searchKey": "app.TestLatestPingHandler",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestLatestPingHandler(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestLatestPingHandler(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#init.usage_stats_test.go",
-              "documentation": {
-                "identifier": "init.usage_stats_test.go",
-                "newPage": false,
-                "searchKey": "app.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app#TestUsageStatsArchiveHandler",
-              "documentation": {
-                "identifier": "TestUsageStatsArchiveHandler",
-                "newPage": false,
-                "searchKey": "app.TestUsageStatsArchiveHandler",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUsageStatsArchiveHandler(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUsageStatsArchiveHandler(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc usageStatsArchiveHandler(db dbutil.DB) func(w http.ResponseWriter, r *http.Request)\n```\n\n"
               },
               "children": null
             }

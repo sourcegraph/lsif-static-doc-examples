@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/internal/insights/discovery",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "discovery.settingsExample",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -84,52 +89,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/internal/insights/discovery#DefaultRepoLister",
-              "documentation": {
-                "identifier": "DefaultRepoLister",
-                "newPage": false,
-                "searchKey": "discovery.DefaultRepoLister",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type DefaultRepoLister interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype DefaultRepoLister interface {\n\tList(ctx context.Context) ([]types.RepoName, error)\n}\n```\n\nDefaultRepoLister is a subset of the API exposed by the backend.CachedDefaultRepoLister. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/discovery#RepoStore",
-              "documentation": {
-                "identifier": "RepoStore",
-                "newPage": false,
-                "searchKey": "discovery.RepoStore",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RepoStore interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RepoStore interface {\n\tList(ctx context.Context, opt database.ReposListOptions) (results []*types.Repo, err error)\n}\n```\n\nRepoStore is a subset of the API exposed by the database.Repos() store. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/insights/discovery#AllReposIterator",
               "documentation": {
                 "identifier": "AllReposIterator",
                 "newPage": false,
                 "searchKey": "discovery.AllReposIterator",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -142,34 +109,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#AllReposIterator.timeSince",
-                    "documentation": {
-                      "identifier": "AllReposIterator.timeSince",
-                      "newPage": false,
-                      "searchKey": "discovery.AllReposIterator.timeSince",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (a *AllReposIterator) timeSince(t time.Time) time.Duration"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (a *AllReposIterator) timeSince(t time.Time) time.Duration\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/internal/insights/discovery#AllReposIterator.ForEach",
                     "documentation": {
                       "identifier": "AllReposIterator.ForEach",
                       "newPage": false,
                       "searchKey": "discovery.AllReposIterator.ForEach",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -190,6 +137,7 @@
                       "newPage": false,
                       "searchKey": "discovery.AllReposIterator.cachedRepoStoreList",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -203,131 +151,53 @@
                     },
                     "children": null
                   }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/discovery#AllReposIterator.timeSince",
+                    "documentation": {
+                      "identifier": "AllReposIterator.timeSince",
+                      "newPage": false,
+                      "searchKey": "discovery.AllReposIterator.timeSince",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *AllReposIterator) timeSince(t time.Time) time.Duration"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *AllReposIterator) timeSince(t time.Time) time.Duration\n```\n\n"
+                    },
+                    "children": null
+                  }
                 }
               ]
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/insights/discovery#cachedPageRequest",
+              "pathID": "/enterprise/internal/insights/discovery#DefaultRepoLister",
               "documentation": {
-                "identifier": "cachedPageRequest",
+                "identifier": "DefaultRepoLister",
                 "newPage": false,
-                "searchKey": "discovery.cachedPageRequest",
+                "searchKey": "discovery.DefaultRepoLister",
                 "tags": [
-                  "private"
+                  "interface"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type cachedPageRequest struct"
+                "value": "type DefaultRepoLister interface"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype cachedPageRequest struct {\n\tage     time.Time\n\tresults []*types.Repo\n}\n```\n\n"
+                "value": "```Go\ntype DefaultRepoLister interface {\n\tList(ctx context.Context) ([]types.RepoName, error)\n}\n```\n\nDefaultRepoLister is a subset of the API exposed by the backend.CachedDefaultRepoLister. \n\n"
               },
               "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/discovery#SettingStore",
-              "documentation": {
-                "identifier": "SettingStore",
-                "newPage": false,
-                "searchKey": "discovery.SettingStore",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type SettingStore interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype SettingStore interface {\n\tGetLatest(context.Context, api.SettingsSubject) (*api.Settings, error)\n\tGetLastestSchemaSettings(context.Context, api.SettingsSubject) (*schema.Settings, error)\n}\n```\n\nSettingStore is a subset of the API exposed by the database.Settings() store. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/discovery#MockDefaultRepoLister",
-              "documentation": {
-                "identifier": "MockDefaultRepoLister",
-                "newPage": false,
-                "searchKey": "discovery.MockDefaultRepoLister",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type MockDefaultRepoLister struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype MockDefaultRepoLister struct {\n\t// ListFunc is an instance of a mock function object controlling the\n\t// behavior of the method List.\n\tListFunc *DefaultRepoListerListFunc\n}\n```\n\nMockDefaultRepoLister is a mock implementation of the DefaultRepoLister interface (from the package github.com/sourcegraph/sourcegraph/enterprise/internal/insights/discovery) used for unit testing. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#NewMockDefaultRepoLister",
-                    "documentation": {
-                      "identifier": "NewMockDefaultRepoLister",
-                      "newPage": false,
-                      "searchKey": "discovery.NewMockDefaultRepoLister",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewMockDefaultRepoLister() *MockDefaultRepoLister"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewMockDefaultRepoLister() *MockDefaultRepoLister\n```\n\nNewMockDefaultRepoLister creates a new mock of the DefaultRepoLister interface. All methods return zero values for all results, unless overwritten. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#NewMockDefaultRepoListerFrom",
-                    "documentation": {
-                      "identifier": "NewMockDefaultRepoListerFrom",
-                      "newPage": false,
-                      "searchKey": "discovery.NewMockDefaultRepoListerFrom",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewMockDefaultRepoListerFrom(i DefaultRepoLister) *MockDefaultRepoLister"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewMockDefaultRepoListerFrom(i DefaultRepoLister) *MockDefaultRepoLister\n```\n\nNewMockDefaultRepoListerFrom creates a new mock of the MockDefaultRepoLister interface. All methods delegate to the given implementation, unless overwritten. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#MockDefaultRepoLister.List",
-                    "documentation": {
-                      "identifier": "MockDefaultRepoLister.List",
-                      "newPage": false,
-                      "searchKey": "discovery.MockDefaultRepoLister.List",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *MockDefaultRepoLister) List(v0 context.Context) ([]types.RepoName, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *MockDefaultRepoLister) List(v0 context.Context) ([]types.RepoName, error)\n```\n\nList delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
             }
           },
           {
@@ -337,7 +207,9 @@
                 "identifier": "DefaultRepoListerListFunc",
                 "newPage": false,
                 "searchKey": "discovery.DefaultRepoListerListFunc",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -350,20 +222,22 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#DefaultRepoListerListFunc.SetDefaultHook",
+                    "pathID": "/enterprise/internal/insights/discovery#DefaultRepoListerListFunc.History",
                     "documentation": {
-                      "identifier": "DefaultRepoListerListFunc.SetDefaultHook",
+                      "identifier": "DefaultRepoListerListFunc.History",
                       "newPage": false,
-                      "searchKey": "discovery.DefaultRepoListerListFunc.SetDefaultHook",
-                      "tags": null
+                      "searchKey": "discovery.DefaultRepoListerListFunc.History",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *DefaultRepoListerListFunc) SetDefaultHook(hook func(context.Context) ([]types.RepoName, error))"
+                      "value": "func (f *DefaultRepoListerListFunc) History() []DefaultRepoListerListFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *DefaultRepoListerListFunc) SetDefaultHook(hook func(context.Context) ([]types.RepoName, error))\n```\n\nSetDefaultHook sets function that is called when the List method of the parent MockDefaultRepoLister instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *DefaultRepoListerListFunc) History() []DefaultRepoListerListFuncCall\n```\n\nHistory returns a sequence of DefaultRepoListerListFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -375,7 +249,9 @@
                       "identifier": "DefaultRepoListerListFunc.PushHook",
                       "newPage": false,
                       "searchKey": "discovery.DefaultRepoListerListFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -390,32 +266,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#DefaultRepoListerListFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "DefaultRepoListerListFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "discovery.DefaultRepoListerListFunc.SetDefaultReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *DefaultRepoListerListFunc) SetDefaultReturn(r0 []types.RepoName, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *DefaultRepoListerListFunc) SetDefaultReturn(r0 []types.RepoName, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/internal/insights/discovery#DefaultRepoListerListFunc.PushReturn",
                     "documentation": {
                       "identifier": "DefaultRepoListerListFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "discovery.DefaultRepoListerListFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -430,22 +288,44 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#DefaultRepoListerListFunc.nextHook",
+                    "pathID": "/enterprise/internal/insights/discovery#DefaultRepoListerListFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "DefaultRepoListerListFunc.nextHook",
+                      "identifier": "DefaultRepoListerListFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "discovery.DefaultRepoListerListFunc.nextHook",
+                      "searchKey": "discovery.DefaultRepoListerListFunc.SetDefaultHook",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *DefaultRepoListerListFunc) nextHook() func(context.Context) ([]types.RepoName, error)"
+                      "value": "func (f *DefaultRepoListerListFunc) SetDefaultHook(hook func(context.Context) ([]types.RepoName, error))"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *DefaultRepoListerListFunc) nextHook() func(context.Context) ([]types.RepoName, error)\n```\n\n"
+                      "value": "```Go\nfunc (f *DefaultRepoListerListFunc) SetDefaultHook(hook func(context.Context) ([]types.RepoName, error))\n```\n\nSetDefaultHook sets function that is called when the List method of the parent MockDefaultRepoLister instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/discovery#DefaultRepoListerListFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "DefaultRepoListerListFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "discovery.DefaultRepoListerListFunc.SetDefaultReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DefaultRepoListerListFunc) SetDefaultReturn(r0 []types.RepoName, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DefaultRepoListerListFunc) SetDefaultReturn(r0 []types.RepoName, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -458,6 +338,7 @@
                       "newPage": false,
                       "searchKey": "discovery.DefaultRepoListerListFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -474,20 +355,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#DefaultRepoListerListFunc.History",
+                    "pathID": "/enterprise/internal/insights/discovery#DefaultRepoListerListFunc.nextHook",
                     "documentation": {
-                      "identifier": "DefaultRepoListerListFunc.History",
+                      "identifier": "DefaultRepoListerListFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "discovery.DefaultRepoListerListFunc.History",
-                      "tags": null
+                      "searchKey": "discovery.DefaultRepoListerListFunc.nextHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *DefaultRepoListerListFunc) History() []DefaultRepoListerListFuncCall"
+                      "value": "func (f *DefaultRepoListerListFunc) nextHook() func(context.Context) ([]types.RepoName, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *DefaultRepoListerListFunc) History() []DefaultRepoListerListFuncCall\n```\n\nHistory returns a sequence of DefaultRepoListerListFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *DefaultRepoListerListFunc) nextHook() func(context.Context) ([]types.RepoName, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -502,7 +386,9 @@
                 "identifier": "DefaultRepoListerListFuncCall",
                 "newPage": false,
                 "searchKey": "discovery.DefaultRepoListerListFuncCall",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -520,7 +406,9 @@
                       "identifier": "DefaultRepoListerListFuncCall.Args",
                       "newPage": false,
                       "searchKey": "discovery.DefaultRepoListerListFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -540,7 +428,9 @@
                       "identifier": "DefaultRepoListerListFuncCall.Results",
                       "newPage": false,
                       "searchKey": "discovery.DefaultRepoListerListFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -558,12 +448,103 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/insights/discovery#MockDefaultRepoLister",
+              "documentation": {
+                "identifier": "MockDefaultRepoLister",
+                "newPage": false,
+                "searchKey": "discovery.MockDefaultRepoLister",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockDefaultRepoLister struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockDefaultRepoLister struct {\n\t// ListFunc is an instance of a mock function object controlling the\n\t// behavior of the method List.\n\tListFunc *DefaultRepoListerListFunc\n}\n```\n\nMockDefaultRepoLister is a mock implementation of the DefaultRepoLister interface (from the package github.com/sourcegraph/sourcegraph/enterprise/internal/insights/discovery) used for unit testing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/discovery#NewMockDefaultRepoLister",
+                    "documentation": {
+                      "identifier": "NewMockDefaultRepoLister",
+                      "newPage": false,
+                      "searchKey": "discovery.NewMockDefaultRepoLister",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockDefaultRepoLister() *MockDefaultRepoLister"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockDefaultRepoLister() *MockDefaultRepoLister\n```\n\nNewMockDefaultRepoLister creates a new mock of the DefaultRepoLister interface. All methods return zero values for all results, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/discovery#NewMockDefaultRepoListerFrom",
+                    "documentation": {
+                      "identifier": "NewMockDefaultRepoListerFrom",
+                      "newPage": false,
+                      "searchKey": "discovery.NewMockDefaultRepoListerFrom",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockDefaultRepoListerFrom(i DefaultRepoLister) *MockDefaultRepoLister"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockDefaultRepoListerFrom(i DefaultRepoLister) *MockDefaultRepoLister\n```\n\nNewMockDefaultRepoListerFrom creates a new mock of the MockDefaultRepoLister interface. All methods delegate to the given implementation, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/discovery#MockDefaultRepoLister.List",
+                    "documentation": {
+                      "identifier": "MockDefaultRepoLister.List",
+                      "newPage": false,
+                      "searchKey": "discovery.MockDefaultRepoLister.List",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockDefaultRepoLister) List(v0 context.Context) ([]types.RepoName, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockDefaultRepoLister) List(v0 context.Context) ([]types.RepoName, error)\n```\n\nList delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/insights/discovery#MockRepoStore",
               "documentation": {
                 "identifier": "MockRepoStore",
                 "newPage": false,
                 "searchKey": "discovery.MockRepoStore",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -581,7 +562,9 @@
                       "identifier": "NewMockRepoStore",
                       "newPage": false,
                       "searchKey": "discovery.NewMockRepoStore",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -601,7 +584,9 @@
                       "identifier": "NewMockRepoStoreFrom",
                       "newPage": false,
                       "searchKey": "discovery.NewMockRepoStoreFrom",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -621,7 +606,9 @@
                       "identifier": "MockRepoStore.List",
                       "newPage": false,
                       "searchKey": "discovery.MockRepoStore.List",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -639,238 +626,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/insights/discovery#RepoStoreListFunc",
-              "documentation": {
-                "identifier": "RepoStoreListFunc",
-                "newPage": false,
-                "searchKey": "discovery.RepoStoreListFunc",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RepoStoreListFunc struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RepoStoreListFunc struct {\n\tdefaultHook func(context.Context, database.ReposListOptions) ([]*types.Repo, error)\n\thooks       []func(context.Context, database.ReposListOptions) ([]*types.Repo, error)\n\thistory     []RepoStoreListFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nRepoStoreListFunc describes the behavior when the List method of the parent MockRepoStore instance is invoked. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#RepoStoreListFunc.SetDefaultHook",
-                    "documentation": {
-                      "identifier": "RepoStoreListFunc.SetDefaultHook",
-                      "newPage": false,
-                      "searchKey": "discovery.RepoStoreListFunc.SetDefaultHook",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *RepoStoreListFunc) SetDefaultHook(hook func(context.Context, database.ReposListOptions) ([]*types.Repo, error))"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *RepoStoreListFunc) SetDefaultHook(hook func(context.Context, database.ReposListOptions) ([]*types.Repo, error))\n```\n\nSetDefaultHook sets function that is called when the List method of the parent MockRepoStore instance is invoked and the hook queue is empty. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#RepoStoreListFunc.PushHook",
-                    "documentation": {
-                      "identifier": "RepoStoreListFunc.PushHook",
-                      "newPage": false,
-                      "searchKey": "discovery.RepoStoreListFunc.PushHook",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *RepoStoreListFunc) PushHook(hook func(context.Context, database.ReposListOptions) ([]*types.Repo, error))"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *RepoStoreListFunc) PushHook(hook func(context.Context, database.ReposListOptions) ([]*types.Repo, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the List method of the parent MockRepoStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#RepoStoreListFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "RepoStoreListFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "discovery.RepoStoreListFunc.SetDefaultReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *RepoStoreListFunc) SetDefaultReturn(r0 []*types.Repo, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *RepoStoreListFunc) SetDefaultReturn(r0 []*types.Repo, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#RepoStoreListFunc.PushReturn",
-                    "documentation": {
-                      "identifier": "RepoStoreListFunc.PushReturn",
-                      "newPage": false,
-                      "searchKey": "discovery.RepoStoreListFunc.PushReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *RepoStoreListFunc) PushReturn(r0 []*types.Repo, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *RepoStoreListFunc) PushReturn(r0 []*types.Repo, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#RepoStoreListFunc.nextHook",
-                    "documentation": {
-                      "identifier": "RepoStoreListFunc.nextHook",
-                      "newPage": false,
-                      "searchKey": "discovery.RepoStoreListFunc.nextHook",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *RepoStoreListFunc) nextHook() func(context.Context, database.ReposListOptions) ([]*types.Repo, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *RepoStoreListFunc) nextHook() func(context.Context, database.ReposListOptions) ([]*types.Repo, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#RepoStoreListFunc.appendCall",
-                    "documentation": {
-                      "identifier": "RepoStoreListFunc.appendCall",
-                      "newPage": false,
-                      "searchKey": "discovery.RepoStoreListFunc.appendCall",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *RepoStoreListFunc) appendCall(r0 RepoStoreListFuncCall)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *RepoStoreListFunc) appendCall(r0 RepoStoreListFuncCall)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#RepoStoreListFunc.History",
-                    "documentation": {
-                      "identifier": "RepoStoreListFunc.History",
-                      "newPage": false,
-                      "searchKey": "discovery.RepoStoreListFunc.History",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *RepoStoreListFunc) History() []RepoStoreListFuncCall"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *RepoStoreListFunc) History() []RepoStoreListFuncCall\n```\n\nHistory returns a sequence of RepoStoreListFuncCall objects describing the invocations of this function. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/insights/discovery#RepoStoreListFuncCall",
-              "documentation": {
-                "identifier": "RepoStoreListFuncCall",
-                "newPage": false,
-                "searchKey": "discovery.RepoStoreListFuncCall",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RepoStoreListFuncCall struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RepoStoreListFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 database.ReposListOptions\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 []*types.Repo\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nRepoStoreListFuncCall is an object that describes an invocation of method List on an instance of MockRepoStore. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#RepoStoreListFuncCall.Args",
-                    "documentation": {
-                      "identifier": "RepoStoreListFuncCall.Args",
-                      "newPage": false,
-                      "searchKey": "discovery.RepoStoreListFuncCall.Args",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c RepoStoreListFuncCall) Args() []interface{}"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c RepoStoreListFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#RepoStoreListFuncCall.Results",
-                    "documentation": {
-                      "identifier": "RepoStoreListFuncCall.Results",
-                      "newPage": false,
-                      "searchKey": "discovery.RepoStoreListFuncCall.Results",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c RepoStoreListFuncCall) Results() []interface{}"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c RepoStoreListFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/insights/discovery#MockSettingStore",
               "documentation": {
                 "identifier": "MockSettingStore",
                 "newPage": false,
                 "searchKey": "discovery.MockSettingStore",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -888,7 +651,9 @@
                       "identifier": "NewMockSettingStore",
                       "newPage": false,
                       "searchKey": "discovery.NewMockSettingStore",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -908,7 +673,9 @@
                       "identifier": "NewMockSettingStoreFrom",
                       "newPage": false,
                       "searchKey": "discovery.NewMockSettingStoreFrom",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -928,7 +695,9 @@
                       "identifier": "MockSettingStore.GetLastestSchemaSettings",
                       "newPage": false,
                       "searchKey": "discovery.MockSettingStore.GetLastestSchemaSettings",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -948,7 +717,9 @@
                       "identifier": "MockSettingStore.GetLatest",
                       "newPage": false,
                       "searchKey": "discovery.MockSettingStore.GetLatest",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -966,12 +737,304 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/insights/discovery#RepoStore",
+              "documentation": {
+                "identifier": "RepoStore",
+                "newPage": false,
+                "searchKey": "discovery.RepoStore",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoStore interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoStore interface {\n\tList(ctx context.Context, opt database.ReposListOptions) (results []*types.Repo, err error)\n}\n```\n\nRepoStore is a subset of the API exposed by the database.Repos() store. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/discovery#RepoStoreListFunc",
+              "documentation": {
+                "identifier": "RepoStoreListFunc",
+                "newPage": false,
+                "searchKey": "discovery.RepoStoreListFunc",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoStoreListFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoStoreListFunc struct {\n\tdefaultHook func(context.Context, database.ReposListOptions) ([]*types.Repo, error)\n\thooks       []func(context.Context, database.ReposListOptions) ([]*types.Repo, error)\n\thistory     []RepoStoreListFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nRepoStoreListFunc describes the behavior when the List method of the parent MockRepoStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/discovery#RepoStoreListFunc.History",
+                    "documentation": {
+                      "identifier": "RepoStoreListFunc.History",
+                      "newPage": false,
+                      "searchKey": "discovery.RepoStoreListFunc.History",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RepoStoreListFunc) History() []RepoStoreListFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RepoStoreListFunc) History() []RepoStoreListFuncCall\n```\n\nHistory returns a sequence of RepoStoreListFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/discovery#RepoStoreListFunc.PushHook",
+                    "documentation": {
+                      "identifier": "RepoStoreListFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "discovery.RepoStoreListFunc.PushHook",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RepoStoreListFunc) PushHook(hook func(context.Context, database.ReposListOptions) ([]*types.Repo, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RepoStoreListFunc) PushHook(hook func(context.Context, database.ReposListOptions) ([]*types.Repo, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the List method of the parent MockRepoStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/discovery#RepoStoreListFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "RepoStoreListFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "discovery.RepoStoreListFunc.PushReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RepoStoreListFunc) PushReturn(r0 []*types.Repo, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RepoStoreListFunc) PushReturn(r0 []*types.Repo, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/discovery#RepoStoreListFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "RepoStoreListFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "discovery.RepoStoreListFunc.SetDefaultHook",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RepoStoreListFunc) SetDefaultHook(hook func(context.Context, database.ReposListOptions) ([]*types.Repo, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RepoStoreListFunc) SetDefaultHook(hook func(context.Context, database.ReposListOptions) ([]*types.Repo, error))\n```\n\nSetDefaultHook sets function that is called when the List method of the parent MockRepoStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/discovery#RepoStoreListFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "RepoStoreListFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "discovery.RepoStoreListFunc.SetDefaultReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RepoStoreListFunc) SetDefaultReturn(r0 []*types.Repo, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RepoStoreListFunc) SetDefaultReturn(r0 []*types.Repo, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/discovery#RepoStoreListFunc.appendCall",
+                    "documentation": {
+                      "identifier": "RepoStoreListFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "discovery.RepoStoreListFunc.appendCall",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RepoStoreListFunc) appendCall(r0 RepoStoreListFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RepoStoreListFunc) appendCall(r0 RepoStoreListFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/discovery#RepoStoreListFunc.nextHook",
+                    "documentation": {
+                      "identifier": "RepoStoreListFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "discovery.RepoStoreListFunc.nextHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RepoStoreListFunc) nextHook() func(context.Context, database.ReposListOptions) ([]*types.Repo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RepoStoreListFunc) nextHook() func(context.Context, database.ReposListOptions) ([]*types.Repo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/discovery#RepoStoreListFuncCall",
+              "documentation": {
+                "identifier": "RepoStoreListFuncCall",
+                "newPage": false,
+                "searchKey": "discovery.RepoStoreListFuncCall",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoStoreListFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoStoreListFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 database.ReposListOptions\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 []*types.Repo\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nRepoStoreListFuncCall is an object that describes an invocation of method List on an instance of MockRepoStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/discovery#RepoStoreListFuncCall.Args",
+                    "documentation": {
+                      "identifier": "RepoStoreListFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "discovery.RepoStoreListFuncCall.Args",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c RepoStoreListFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c RepoStoreListFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/discovery#RepoStoreListFuncCall.Results",
+                    "documentation": {
+                      "identifier": "RepoStoreListFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "discovery.RepoStoreListFuncCall.Results",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c RepoStoreListFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c RepoStoreListFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/discovery#SettingStore",
+              "documentation": {
+                "identifier": "SettingStore",
+                "newPage": false,
+                "searchKey": "discovery.SettingStore",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SettingStore interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SettingStore interface {\n\tGetLatest(context.Context, api.SettingsSubject) (*api.Settings, error)\n\tGetLastestSchemaSettings(context.Context, api.SettingsSubject) (*schema.Settings, error)\n}\n```\n\nSettingStore is a subset of the API exposed by the database.Settings() store. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/insights/discovery#SettingStoreGetLastestSchemaSettingsFunc",
               "documentation": {
                 "identifier": "SettingStoreGetLastestSchemaSettingsFunc",
                 "newPage": false,
                 "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFunc",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -984,20 +1047,22 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#SettingStoreGetLastestSchemaSettingsFunc.SetDefaultHook",
+                    "pathID": "/enterprise/internal/insights/discovery#SettingStoreGetLastestSchemaSettingsFunc.History",
                     "documentation": {
-                      "identifier": "SettingStoreGetLastestSchemaSettingsFunc.SetDefaultHook",
+                      "identifier": "SettingStoreGetLastestSchemaSettingsFunc.History",
                       "newPage": false,
-                      "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFunc.SetDefaultHook",
-                      "tags": null
+                      "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFunc.History",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *SettingStoreGetLastestSchemaSettingsFunc) SetDefaultHook(hook func(context.Context, api.SettingsSubject) (*schema.Settings, error))"
+                      "value": "func (f *SettingStoreGetLastestSchemaSettingsFunc) History() []SettingStoreGetLastestSchemaSettingsFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *SettingStoreGetLastestSchemaSettingsFunc) SetDefaultHook(hook func(context.Context, api.SettingsSubject) (*schema.Settings, error))\n```\n\nSetDefaultHook sets function that is called when the GetLastestSchemaSettings method of the parent MockSettingStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *SettingStoreGetLastestSchemaSettingsFunc) History() []SettingStoreGetLastestSchemaSettingsFuncCall\n```\n\nHistory returns a sequence of SettingStoreGetLastestSchemaSettingsFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -1009,7 +1074,9 @@
                       "identifier": "SettingStoreGetLastestSchemaSettingsFunc.PushHook",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1024,32 +1091,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#SettingStoreGetLastestSchemaSettingsFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "SettingStoreGetLastestSchemaSettingsFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFunc.SetDefaultReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *SettingStoreGetLastestSchemaSettingsFunc) SetDefaultReturn(r0 *schema.Settings, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *SettingStoreGetLastestSchemaSettingsFunc) SetDefaultReturn(r0 *schema.Settings, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/internal/insights/discovery#SettingStoreGetLastestSchemaSettingsFunc.PushReturn",
                     "documentation": {
                       "identifier": "SettingStoreGetLastestSchemaSettingsFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1064,22 +1113,44 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#SettingStoreGetLastestSchemaSettingsFunc.nextHook",
+                    "pathID": "/enterprise/internal/insights/discovery#SettingStoreGetLastestSchemaSettingsFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "SettingStoreGetLastestSchemaSettingsFunc.nextHook",
+                      "identifier": "SettingStoreGetLastestSchemaSettingsFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFunc.nextHook",
+                      "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFunc.SetDefaultHook",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *SettingStoreGetLastestSchemaSettingsFunc) nextHook() func(context.Context, api.SettingsSubject) (*schema.Settings, error)"
+                      "value": "func (f *SettingStoreGetLastestSchemaSettingsFunc) SetDefaultHook(hook func(context.Context, api.SettingsSubject) (*schema.Settings, error))"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *SettingStoreGetLastestSchemaSettingsFunc) nextHook() func(context.Context, api.SettingsSubject) (*schema.Settings, error)\n```\n\n"
+                      "value": "```Go\nfunc (f *SettingStoreGetLastestSchemaSettingsFunc) SetDefaultHook(hook func(context.Context, api.SettingsSubject) (*schema.Settings, error))\n```\n\nSetDefaultHook sets function that is called when the GetLastestSchemaSettings method of the parent MockSettingStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/discovery#SettingStoreGetLastestSchemaSettingsFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "SettingStoreGetLastestSchemaSettingsFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFunc.SetDefaultReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *SettingStoreGetLastestSchemaSettingsFunc) SetDefaultReturn(r0 *schema.Settings, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *SettingStoreGetLastestSchemaSettingsFunc) SetDefaultReturn(r0 *schema.Settings, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -1092,6 +1163,7 @@
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1108,20 +1180,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#SettingStoreGetLastestSchemaSettingsFunc.History",
+                    "pathID": "/enterprise/internal/insights/discovery#SettingStoreGetLastestSchemaSettingsFunc.nextHook",
                     "documentation": {
-                      "identifier": "SettingStoreGetLastestSchemaSettingsFunc.History",
+                      "identifier": "SettingStoreGetLastestSchemaSettingsFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFunc.History",
-                      "tags": null
+                      "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFunc.nextHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *SettingStoreGetLastestSchemaSettingsFunc) History() []SettingStoreGetLastestSchemaSettingsFuncCall"
+                      "value": "func (f *SettingStoreGetLastestSchemaSettingsFunc) nextHook() func(context.Context, api.SettingsSubject) (*schema.Settings, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *SettingStoreGetLastestSchemaSettingsFunc) History() []SettingStoreGetLastestSchemaSettingsFuncCall\n```\n\nHistory returns a sequence of SettingStoreGetLastestSchemaSettingsFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *SettingStoreGetLastestSchemaSettingsFunc) nextHook() func(context.Context, api.SettingsSubject) (*schema.Settings, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1136,7 +1211,9 @@
                 "identifier": "SettingStoreGetLastestSchemaSettingsFuncCall",
                 "newPage": false,
                 "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFuncCall",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1154,7 +1231,9 @@
                       "identifier": "SettingStoreGetLastestSchemaSettingsFuncCall.Args",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1174,7 +1253,9 @@
                       "identifier": "SettingStoreGetLastestSchemaSettingsFuncCall.Results",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLastestSchemaSettingsFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1197,7 +1278,9 @@
                 "identifier": "SettingStoreGetLatestFunc",
                 "newPage": false,
                 "searchKey": "discovery.SettingStoreGetLatestFunc",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1210,20 +1293,22 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#SettingStoreGetLatestFunc.SetDefaultHook",
+                    "pathID": "/enterprise/internal/insights/discovery#SettingStoreGetLatestFunc.History",
                     "documentation": {
-                      "identifier": "SettingStoreGetLatestFunc.SetDefaultHook",
+                      "identifier": "SettingStoreGetLatestFunc.History",
                       "newPage": false,
-                      "searchKey": "discovery.SettingStoreGetLatestFunc.SetDefaultHook",
-                      "tags": null
+                      "searchKey": "discovery.SettingStoreGetLatestFunc.History",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *SettingStoreGetLatestFunc) SetDefaultHook(hook func(context.Context, api.SettingsSubject) (*api.Settings, error))"
+                      "value": "func (f *SettingStoreGetLatestFunc) History() []SettingStoreGetLatestFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *SettingStoreGetLatestFunc) SetDefaultHook(hook func(context.Context, api.SettingsSubject) (*api.Settings, error))\n```\n\nSetDefaultHook sets function that is called when the GetLatest method of the parent MockSettingStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *SettingStoreGetLatestFunc) History() []SettingStoreGetLatestFuncCall\n```\n\nHistory returns a sequence of SettingStoreGetLatestFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -1235,7 +1320,9 @@
                       "identifier": "SettingStoreGetLatestFunc.PushHook",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLatestFunc.PushHook",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1250,32 +1337,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#SettingStoreGetLatestFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "SettingStoreGetLatestFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "discovery.SettingStoreGetLatestFunc.SetDefaultReturn",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *SettingStoreGetLatestFunc) SetDefaultReturn(r0 *api.Settings, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *SettingStoreGetLatestFunc) SetDefaultReturn(r0 *api.Settings, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/internal/insights/discovery#SettingStoreGetLatestFunc.PushReturn",
                     "documentation": {
                       "identifier": "SettingStoreGetLatestFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLatestFunc.PushReturn",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1290,22 +1359,44 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#SettingStoreGetLatestFunc.nextHook",
+                    "pathID": "/enterprise/internal/insights/discovery#SettingStoreGetLatestFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "SettingStoreGetLatestFunc.nextHook",
+                      "identifier": "SettingStoreGetLatestFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "discovery.SettingStoreGetLatestFunc.nextHook",
+                      "searchKey": "discovery.SettingStoreGetLatestFunc.SetDefaultHook",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *SettingStoreGetLatestFunc) nextHook() func(context.Context, api.SettingsSubject) (*api.Settings, error)"
+                      "value": "func (f *SettingStoreGetLatestFunc) SetDefaultHook(hook func(context.Context, api.SettingsSubject) (*api.Settings, error))"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *SettingStoreGetLatestFunc) nextHook() func(context.Context, api.SettingsSubject) (*api.Settings, error)\n```\n\n"
+                      "value": "```Go\nfunc (f *SettingStoreGetLatestFunc) SetDefaultHook(hook func(context.Context, api.SettingsSubject) (*api.Settings, error))\n```\n\nSetDefaultHook sets function that is called when the GetLatest method of the parent MockSettingStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/discovery#SettingStoreGetLatestFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "SettingStoreGetLatestFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "discovery.SettingStoreGetLatestFunc.SetDefaultReturn",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *SettingStoreGetLatestFunc) SetDefaultReturn(r0 *api.Settings, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *SettingStoreGetLatestFunc) SetDefaultReturn(r0 *api.Settings, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -1318,6 +1409,7 @@
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLatestFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1334,20 +1426,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/insights/discovery#SettingStoreGetLatestFunc.History",
+                    "pathID": "/enterprise/internal/insights/discovery#SettingStoreGetLatestFunc.nextHook",
                     "documentation": {
-                      "identifier": "SettingStoreGetLatestFunc.History",
+                      "identifier": "SettingStoreGetLatestFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "discovery.SettingStoreGetLatestFunc.History",
-                      "tags": null
+                      "searchKey": "discovery.SettingStoreGetLatestFunc.nextHook",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *SettingStoreGetLatestFunc) History() []SettingStoreGetLatestFuncCall"
+                      "value": "func (f *SettingStoreGetLatestFunc) nextHook() func(context.Context, api.SettingsSubject) (*api.Settings, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *SettingStoreGetLatestFunc) History() []SettingStoreGetLatestFuncCall\n```\n\nHistory returns a sequence of SettingStoreGetLatestFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *SettingStoreGetLatestFunc) nextHook() func(context.Context, api.SettingsSubject) (*api.Settings, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1362,7 +1457,9 @@
                 "identifier": "SettingStoreGetLatestFuncCall",
                 "newPage": false,
                 "searchKey": "discovery.SettingStoreGetLatestFuncCall",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1380,7 +1477,9 @@
                       "identifier": "SettingStoreGetLatestFuncCall.Args",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLatestFuncCall.Args",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1400,7 +1499,9 @@
                       "identifier": "SettingStoreGetLatestFuncCall.Results",
                       "newPage": false,
                       "searchKey": "discovery.SettingStoreGetLatestFuncCall.Results",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1415,6 +1516,29 @@
                 }
               ]
             }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/discovery#cachedPageRequest",
+              "documentation": {
+                "identifier": "cachedPageRequest",
+                "newPage": false,
+                "searchKey": "discovery.cachedPageRequest",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type cachedPageRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype cachedPageRequest struct {\n\tage     time.Time\n\tresults []*types.Repo\n}\n```\n\n"
+              },
+              "children": null
+            }
           }
         ]
       }
@@ -1427,6 +1551,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -1446,7 +1571,9 @@
                 "identifier": "Discover",
                 "newPage": false,
                 "searchKey": "discovery.Discover",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1461,34 +1588,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/insights/discovery#parseUserSettings",
-              "documentation": {
-                "identifier": "parseUserSettings",
-                "newPage": false,
-                "searchKey": "discovery.parseUserSettings",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func parseUserSettings(settings *api.Settings) (*schema.Settings, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc parseUserSettings(settings *api.Settings) (*schema.Settings, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/insights/discovery#EncodeSeriesID",
               "documentation": {
                 "identifier": "EncodeSeriesID",
                 "newPage": false,
                 "searchKey": "discovery.EncodeSeriesID",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1503,35 +1610,15 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/insights/discovery#sha256String",
-              "documentation": {
-                "identifier": "sha256String",
-                "newPage": false,
-                "searchKey": "discovery.sha256String",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func sha256String(s string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc sha256String(s string) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/insights/discovery#TestAllReposIterator",
               "documentation": {
                 "identifier": "TestAllReposIterator",
                 "newPage": false,
                 "searchKey": "discovery.TestAllReposIterator",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1553,7 +1640,9 @@
                 "newPage": false,
                 "searchKey": "discovery.TestAllReposIterator_DotCom",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1575,7 +1664,9 @@
                 "newPage": false,
                 "searchKey": "discovery.TestDiscover",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1591,13 +1682,39 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/insights/discovery#TestEncodeSeriesID",
+              "documentation": {
+                "identifier": "TestEncodeSeriesID",
+                "newPage": false,
+                "searchKey": "discovery.TestEncodeSeriesID",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncodeSeriesID(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncodeSeriesID(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/insights/discovery#Test_parseUserSettings",
               "documentation": {
                 "identifier": "Test_parseUserSettings",
                 "newPage": false,
                 "searchKey": "discovery.Test_parseUserSettings",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1613,22 +1730,46 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/insights/discovery#TestEncodeSeriesID",
+              "pathID": "/enterprise/internal/insights/discovery#parseUserSettings",
               "documentation": {
-                "identifier": "TestEncodeSeriesID",
+                "identifier": "parseUserSettings",
                 "newPage": false,
-                "searchKey": "discovery.TestEncodeSeriesID",
+                "searchKey": "discovery.parseUserSettings",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestEncodeSeriesID(t *testing.T)"
+                "value": "func parseUserSettings(settings *api.Settings) (*schema.Settings, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestEncodeSeriesID(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc parseUserSettings(settings *api.Settings) (*schema.Settings, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/discovery#sha256String",
+              "documentation": {
+                "identifier": "sha256String",
+                "newPage": false,
+                "searchKey": "discovery.sha256String",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sha256String(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sha256String(s string) string\n```\n\n"
               },
               "children": null
             }

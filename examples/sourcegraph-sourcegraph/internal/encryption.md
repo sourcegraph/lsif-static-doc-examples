@@ -12,22 +12,22 @@
 * [Variables](#var)
     * [var MockGenerateRSAKey](#MockGenerateRSAKey)
 * [Types](#type)
+    * [type Decrypter interface](#Decrypter)
+    * [type Encrypter interface](#Encrypter)
     * [type Key interface](#Key)
     * [type KeyVersion struct](#KeyVersion)
         * [func (v KeyVersion) JSON() string](#KeyVersion.JSON)
-    * [type Encrypter interface](#Encrypter)
-    * [type Decrypter interface](#Decrypter)
-    * [type Secret struct](#Secret)
-        * [func NewSecret(v string) Secret](#NewSecret)
-        * [func (s Secret) String() string](#Secret.String)
-        * [func (s Secret) Secret() string](#Secret.Secret)
-        * [func (s Secret) MarshalJSON() ([]byte, error)](#Secret.MarshalJSON)
     * [type NoopKey struct{}](#NoopKey)
-        * [func (k *NoopKey) Version(ctx context.Context) (KeyVersion, error)](#NoopKey.Version)
-        * [func (k *NoopKey) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)](#NoopKey.Encrypt)
         * [func (k *NoopKey) Decrypt(ctx context.Context, ciphertext []byte) (*Secret, error)](#NoopKey.Decrypt)
+        * [func (k *NoopKey) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)](#NoopKey.Encrypt)
+        * [func (k *NoopKey) Version(ctx context.Context) (KeyVersion, error)](#NoopKey.Version)
     * [type RSAKey struct](#RSAKey)
         * [func GenerateRSAKey() (key *RSAKey, err error)](#GenerateRSAKey)
+    * [type Secret struct](#Secret)
+        * [func NewSecret(v string) Secret](#NewSecret)
+        * [func (s Secret) MarshalJSON() ([]byte, error)](#Secret.MarshalJSON)
+        * [func (s Secret) Secret() string](#Secret.Secret)
+        * [func (s Secret) String() string](#Secret.String)
 * [Functions](#func)
     * [func TestGenerateKey(t *testing.T)](#TestGenerateKey)
 
@@ -35,13 +35,14 @@
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="MockGenerateRSAKey" href="#MockGenerateRSAKey">var MockGenerateRSAKey</a>
 
 ```
 searchKey: encryption.MockGenerateRSAKey
+tags: [variable function]
 ```
 
 ```Go
@@ -53,13 +54,44 @@ MockGenerateRSAKey can be used in tests to speed up key generation.
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
+
+### <a id="Decrypter" href="#Decrypter">type Decrypter interface</a>
+
+```
+searchKey: encryption.Decrypter
+tags: [interface]
+```
+
+```Go
+type Decrypter interface {
+	Decrypt(ctx context.Context, cipherText []byte) (*Secret, error)
+}
+```
+
+Decrypter is anything that can decrypt a value 
+
+### <a id="Encrypter" href="#Encrypter">type Encrypter interface</a>
+
+```
+searchKey: encryption.Encrypter
+tags: [interface]
+```
+
+```Go
+type Encrypter interface {
+	Encrypt(ctx context.Context, value []byte) ([]byte, error)
+}
+```
+
+Encrypter is anything that can encrypt a value 
 
 ### <a id="Key" href="#Key">type Key interface</a>
 
 ```
 searchKey: encryption.Key
+tags: [interface]
 ```
 
 ```Go
@@ -79,6 +111,7 @@ Key combines the Encrypter & Decrypter interfaces.
 
 ```
 searchKey: encryption.KeyVersion
+tags: [struct]
 ```
 
 ```Go
@@ -94,144 +127,62 @@ type KeyVersion struct {
 
 ```
 searchKey: encryption.KeyVersion.JSON
+tags: [function]
 ```
 
 ```Go
 func (v KeyVersion) JSON() string
 ```
 
-### <a id="Encrypter" href="#Encrypter">type Encrypter interface</a>
-
-```
-searchKey: encryption.Encrypter
-```
-
-```Go
-type Encrypter interface {
-	Encrypt(ctx context.Context, value []byte) ([]byte, error)
-}
-```
-
-Encrypter is anything that can encrypt a value 
-
-### <a id="Decrypter" href="#Decrypter">type Decrypter interface</a>
-
-```
-searchKey: encryption.Decrypter
-```
-
-```Go
-type Decrypter interface {
-	Decrypt(ctx context.Context, cipherText []byte) (*Secret, error)
-}
-```
-
-Decrypter is anything that can decrypt a value 
-
-### <a id="Secret" href="#Secret">type Secret struct</a>
-
-```
-searchKey: encryption.Secret
-```
-
-```Go
-type Secret struct {
-	value string
-}
-```
-
-Secret is a utility type to make it harder to accidentally leak secret values in logs. The actual value is unexported inside a struct, making harder to leak via reflection, the string value is only ever returned on explicit Secret() calls, meaning we can statically analyse secret usage and statically detect leaks. 
-
-#### <a id="NewSecret" href="#NewSecret">func NewSecret(v string) Secret</a>
-
-```
-searchKey: encryption.NewSecret
-```
-
-```Go
-func NewSecret(v string) Secret
-```
-
-#### <a id="Secret.String" href="#Secret.String">func (s Secret) String() string</a>
-
-```
-searchKey: encryption.Secret.String
-```
-
-```Go
-func (s Secret) String() string
-```
-
-String implements stringer, obfuscating the value 
-
-#### <a id="Secret.Secret" href="#Secret.Secret">func (s Secret) Secret() string</a>
-
-```
-searchKey: encryption.Secret.Secret
-```
-
-```Go
-func (s Secret) Secret() string
-```
-
-Secret returns the unobfuscated value 
-
-#### <a id="Secret.MarshalJSON" href="#Secret.MarshalJSON">func (s Secret) MarshalJSON() ([]byte, error)</a>
-
-```
-searchKey: encryption.Secret.MarshalJSON
-```
-
-```Go
-func (s Secret) MarshalJSON() ([]byte, error)
-```
-
-MarshalJSON overrides the default JSON marshaling implementation, obfuscating the value in any marshaled JSON 
-
 ### <a id="NoopKey" href="#NoopKey">type NoopKey struct{}</a>
 
 ```
 searchKey: encryption.NoopKey
+tags: [struct]
 ```
 
 ```Go
 type NoopKey struct{}
 ```
 
-#### <a id="NoopKey.Version" href="#NoopKey.Version">func (k *NoopKey) Version(ctx context.Context) (KeyVersion, error)</a>
-
-```
-searchKey: encryption.NoopKey.Version
-```
-
-```Go
-func (k *NoopKey) Version(ctx context.Context) (KeyVersion, error)
-```
-
-#### <a id="NoopKey.Encrypt" href="#NoopKey.Encrypt">func (k *NoopKey) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)</a>
-
-```
-searchKey: encryption.NoopKey.Encrypt
-```
-
-```Go
-func (k *NoopKey) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)
-```
-
 #### <a id="NoopKey.Decrypt" href="#NoopKey.Decrypt">func (k *NoopKey) Decrypt(ctx context.Context, ciphertext []byte) (*Secret, error)</a>
 
 ```
 searchKey: encryption.NoopKey.Decrypt
+tags: [method]
 ```
 
 ```Go
 func (k *NoopKey) Decrypt(ctx context.Context, ciphertext []byte) (*Secret, error)
 ```
 
+#### <a id="NoopKey.Encrypt" href="#NoopKey.Encrypt">func (k *NoopKey) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)</a>
+
+```
+searchKey: encryption.NoopKey.Encrypt
+tags: [method]
+```
+
+```Go
+func (k *NoopKey) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)
+```
+
+#### <a id="NoopKey.Version" href="#NoopKey.Version">func (k *NoopKey) Version(ctx context.Context) (KeyVersion, error)</a>
+
+```
+searchKey: encryption.NoopKey.Version
+tags: [method]
+```
+
+```Go
+func (k *NoopKey) Version(ctx context.Context) (KeyVersion, error)
+```
+
 ### <a id="RSAKey" href="#RSAKey">type RSAKey struct</a>
 
 ```
 searchKey: encryption.RSAKey
+tags: [struct]
 ```
 
 ```Go
@@ -246,6 +197,7 @@ type RSAKey struct {
 
 ```
 searchKey: encryption.GenerateRSAKey
+tags: [function]
 ```
 
 ```Go
@@ -254,17 +206,82 @@ func GenerateRSAKey() (key *RSAKey, err error)
 
 GenerateRSAKey generates an RSA key pair and encrypts the private key with a passphrase. 
 
+### <a id="Secret" href="#Secret">type Secret struct</a>
+
+```
+searchKey: encryption.Secret
+tags: [struct]
+```
+
+```Go
+type Secret struct {
+	value string
+}
+```
+
+Secret is a utility type to make it harder to accidentally leak secret values in logs. The actual value is unexported inside a struct, making harder to leak via reflection, the string value is only ever returned on explicit Secret() calls, meaning we can statically analyse secret usage and statically detect leaks. 
+
+#### <a id="NewSecret" href="#NewSecret">func NewSecret(v string) Secret</a>
+
+```
+searchKey: encryption.NewSecret
+tags: [method]
+```
+
+```Go
+func NewSecret(v string) Secret
+```
+
+#### <a id="Secret.MarshalJSON" href="#Secret.MarshalJSON">func (s Secret) MarshalJSON() ([]byte, error)</a>
+
+```
+searchKey: encryption.Secret.MarshalJSON
+tags: [function]
+```
+
+```Go
+func (s Secret) MarshalJSON() ([]byte, error)
+```
+
+MarshalJSON overrides the default JSON marshaling implementation, obfuscating the value in any marshaled JSON 
+
+#### <a id="Secret.Secret" href="#Secret.Secret">func (s Secret) Secret() string</a>
+
+```
+searchKey: encryption.Secret.Secret
+tags: [function]
+```
+
+```Go
+func (s Secret) Secret() string
+```
+
+Secret returns the unobfuscated value 
+
+#### <a id="Secret.String" href="#Secret.String">func (s Secret) String() string</a>
+
+```
+searchKey: encryption.Secret.String
+tags: [function]
+```
+
+```Go
+func (s Secret) String() string
+```
+
+String implements stringer, obfuscating the value 
+
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="TestGenerateKey" href="#TestGenerateKey">func TestGenerateKey(t *testing.T)</a>
 
 ```
 searchKey: encryption.TestGenerateKey
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go

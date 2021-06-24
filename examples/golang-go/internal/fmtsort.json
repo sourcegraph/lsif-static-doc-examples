@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/fmtsort",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,9 @@
                 "identifier": "SortedMap",
                 "newPage": false,
                 "searchKey": "fmtsort.SortedMap",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +66,9 @@
                       "identifier": "Sort",
                       "newPage": false,
                       "searchKey": "fmtsort.Sort",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,7 +88,9 @@
                       "identifier": "SortedMap.Len",
                       "newPage": false,
                       "searchKey": "fmtsort.SortedMap.Len",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -102,7 +110,9 @@
                       "identifier": "SortedMap.Less",
                       "newPage": false,
                       "searchKey": "fmtsort.SortedMap.Less",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -122,7 +132,9 @@
                       "identifier": "SortedMap.Swap",
                       "newPage": false,
                       "searchKey": "fmtsort.SortedMap.Swap",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -149,6 +161,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -163,12 +176,36 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/fmtsort#Compare",
+              "documentation": {
+                "identifier": "Compare",
+                "newPage": false,
+                "searchKey": "fmtsort.Compare",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Compare(a, b reflect.Value) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Compare(a, b reflect.Value) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/fmtsort#compare",
               "documentation": {
                 "identifier": "compare",
                 "newPage": false,
                 "searchKey": "fmtsort.compare",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -185,34 +222,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/fmtsort#nilCompare",
-              "documentation": {
-                "identifier": "nilCompare",
-                "newPage": false,
-                "searchKey": "fmtsort.nilCompare",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func nilCompare(aVal, bVal reflect.Value) (int, bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc nilCompare(aVal, bVal reflect.Value) (int, bool)\n```\n\nnilCompare checks whether either value is nil. If not, the boolean is false. If either value is nil, the boolean is true and the integer is the comparison value. The comparison is defined to be 0 if both are nil, otherwise the one nil value compares low. Both arguments must represent a chan, func, interface, map, pointer, or slice. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/fmtsort#floatCompare",
               "documentation": {
                 "identifier": "floatCompare",
                 "newPage": false,
                 "searchKey": "fmtsort.floatCompare",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -235,6 +251,7 @@
                 "newPage": false,
                 "searchKey": "fmtsort.isNaN",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -251,22 +268,23 @@
           },
           {
             "node": {
-              "pathID": "/internal/fmtsort#Compare",
+              "pathID": "/internal/fmtsort#nilCompare",
               "documentation": {
-                "identifier": "Compare",
+                "identifier": "nilCompare",
                 "newPage": false,
-                "searchKey": "fmtsort.Compare",
+                "searchKey": "fmtsort.nilCompare",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func Compare(a, b reflect.Value) int"
+                "value": "func nilCompare(aVal, bVal reflect.Value) (int, bool)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc Compare(a, b reflect.Value) int\n```\n\n"
+                "value": "```Go\nfunc nilCompare(aVal, bVal reflect.Value) (int, bool)\n```\n\nnilCompare checks whether either value is nil. If not, the boolean is false. If either value is nil, the boolean is true and the integer is the comparison value. The comparison is defined to be 0 if both are nil, otherwise the one nil value compares low. Both arguments must represent a chan, func, interface, map, pointer, or slice. \n\n"
               },
               "children": null
             }

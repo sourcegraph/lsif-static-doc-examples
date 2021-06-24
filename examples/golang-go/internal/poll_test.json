@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/poll_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,9 @@
                 "newPage": false,
                 "searchKey": "poll_test.eofErrorTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -70,6 +75,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -84,12 +90,253 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/poll_test#TestConsume",
+              "documentation": {
+                "identifier": "TestConsume",
+                "newPage": false,
+                "searchKey": "poll_test.TestConsume",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestConsume(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestConsume(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll_test#TestEOFError",
+              "documentation": {
+                "identifier": "TestEOFError",
+                "newPage": false,
+                "searchKey": "poll_test.TestEOFError",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEOFError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEOFError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll_test#TestMutexClose",
+              "documentation": {
+                "identifier": "TestMutexClose",
+                "newPage": false,
+                "searchKey": "poll_test.TestMutexClose",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMutexClose(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMutexClose(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll_test#TestMutexCloseUnblock",
+              "documentation": {
+                "identifier": "TestMutexCloseUnblock",
+                "newPage": false,
+                "searchKey": "poll_test.TestMutexCloseUnblock",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMutexCloseUnblock(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMutexCloseUnblock(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll_test#TestMutexLock",
+              "documentation": {
+                "identifier": "TestMutexLock",
+                "newPage": false,
+                "searchKey": "poll_test.TestMutexLock",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMutexLock(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMutexLock(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll_test#TestMutexOverflowPanic",
+              "documentation": {
+                "identifier": "TestMutexOverflowPanic",
+                "newPage": false,
+                "searchKey": "poll_test.TestMutexOverflowPanic",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMutexOverflowPanic(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMutexOverflowPanic(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll_test#TestMutexPanic",
+              "documentation": {
+                "identifier": "TestMutexPanic",
+                "newPage": false,
+                "searchKey": "poll_test.TestMutexPanic",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMutexPanic(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMutexPanic(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll_test#TestMutexStress",
+              "documentation": {
+                "identifier": "TestMutexStress",
+                "newPage": false,
+                "searchKey": "poll_test.TestMutexStress",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMutexStress(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMutexStress(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll_test#TestRead",
+              "documentation": {
+                "identifier": "TestRead",
+                "newPage": false,
+                "searchKey": "poll_test.TestRead",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRead(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRead(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll_test#TestReadError",
+              "documentation": {
+                "identifier": "TestReadError",
+                "newPage": false,
+                "searchKey": "poll_test.TestReadError",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/poll_test#badStateFile",
               "documentation": {
                 "identifier": "badStateFile",
                 "newPage": false,
                 "searchKey": "poll_test.badStateFile",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -112,6 +359,7 @@
                 "newPage": false,
                 "searchKey": "poll_test.isBadStateFileError",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -128,34 +376,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/poll_test#TestReadError",
-              "documentation": {
-                "identifier": "TestReadError",
-                "newPage": false,
-                "searchKey": "poll_test.TestReadError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReadError(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReadError(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/poll_test#parseReadError",
               "documentation": {
                 "identifier": "parseReadError",
                 "newPage": false,
                 "searchKey": "poll_test.parseReadError",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -172,188 +399,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/poll_test#TestMutexLock",
-              "documentation": {
-                "identifier": "TestMutexLock",
-                "newPage": false,
-                "searchKey": "poll_test.TestMutexLock",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMutexLock(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMutexLock(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/poll_test#TestMutexClose",
-              "documentation": {
-                "identifier": "TestMutexClose",
-                "newPage": false,
-                "searchKey": "poll_test.TestMutexClose",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMutexClose(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMutexClose(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/poll_test#TestMutexCloseUnblock",
-              "documentation": {
-                "identifier": "TestMutexCloseUnblock",
-                "newPage": false,
-                "searchKey": "poll_test.TestMutexCloseUnblock",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMutexCloseUnblock(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMutexCloseUnblock(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/poll_test#TestMutexPanic",
-              "documentation": {
-                "identifier": "TestMutexPanic",
-                "newPage": false,
-                "searchKey": "poll_test.TestMutexPanic",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMutexPanic(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMutexPanic(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/poll_test#TestMutexOverflowPanic",
-              "documentation": {
-                "identifier": "TestMutexOverflowPanic",
-                "newPage": false,
-                "searchKey": "poll_test.TestMutexOverflowPanic",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMutexOverflowPanic(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMutexOverflowPanic(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/poll_test#TestMutexStress",
-              "documentation": {
-                "identifier": "TestMutexStress",
-                "newPage": false,
-                "searchKey": "poll_test.TestMutexStress",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMutexStress(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMutexStress(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/poll_test#TestEOFError",
-              "documentation": {
-                "identifier": "TestEOFError",
-                "newPage": false,
-                "searchKey": "poll_test.TestEOFError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEOFError(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEOFError(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/poll_test#TestRead",
-              "documentation": {
-                "identifier": "TestRead",
-                "newPage": false,
-                "searchKey": "poll_test.TestRead",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRead(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRead(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/poll_test#specialFiles",
               "documentation": {
                 "identifier": "specialFiles",
                 "newPage": false,
                 "searchKey": "poll_test.specialFiles",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -364,28 +416,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc specialFiles() []string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/poll_test#TestConsume",
-              "documentation": {
-                "identifier": "TestConsume",
-                "newPage": false,
-                "searchKey": "poll_test.TestConsume",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestConsume(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestConsume(t *testing.T)\n```\n\n"
               },
               "children": null
             }

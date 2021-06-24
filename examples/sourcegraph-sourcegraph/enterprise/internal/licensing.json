@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/internal/licensing",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,100 +41,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/internal/licensing#oldEnterpriseStarter",
-              "documentation": {
-                "identifier": "oldEnterpriseStarter",
-                "newPage": false,
-                "searchKey": "licensing.oldEnterpriseStarter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const oldEnterpriseStarter"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst oldEnterpriseStarter Plan = \"old-starter-0\"\n```\n\nThe list of plans. \n\noldEnterpriseStarter is the old \"Enterprise Starter\" plan. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#oldEnterprise",
-              "documentation": {
-                "identifier": "oldEnterprise",
-                "newPage": false,
-                "searchKey": "licensing.oldEnterprise",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const oldEnterprise"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst oldEnterprise Plan = \"old-enterprise-0\"\n```\n\nThe list of plans. \n\noldEnterprise is the old \"Enterprise\" plan. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#team",
-              "documentation": {
-                "identifier": "team",
-                "newPage": false,
-                "searchKey": "licensing.team",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const team"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst team Plan = \"team-0\"\n```\n\nThe list of plans. \n\nteam is the \"Team\" plan. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#enterprise",
-              "documentation": {
-                "identifier": "enterprise",
-                "newPage": false,
-                "searchKey": "licensing.enterprise",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const enterprise"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst enterprise Plan = \"enterprise-0\"\n```\n\nThe list of plans. \n\nenterprise is the \"Enterprise\" plan. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/licensing#FeatureACLs",
               "documentation": {
                 "identifier": "FeatureACLs",
                 "newPage": false,
                 "searchKey": "licensing.FeatureACLs",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -147,40 +64,46 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/licensing#FeatureExtensionRegistry",
+              "pathID": "/enterprise/internal/licensing#FeatureBackupAndRestore",
               "documentation": {
-                "identifier": "FeatureExtensionRegistry",
+                "identifier": "FeatureBackupAndRestore",
                 "newPage": false,
-                "searchKey": "licensing.FeatureExtensionRegistry",
-                "tags": null
+                "searchKey": "licensing.FeatureBackupAndRestore",
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const FeatureExtensionRegistry"
+                "value": "const FeatureBackupAndRestore"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst FeatureExtensionRegistry Feature = \"private-extension-registry\"\n```\n\nThe list of features. For each feature, add a new const here and the checking logic in isFeatureEnabled. \n\nFeatureExtensionRegistry is whether publishing extensions to this Sourcegraph instance has been purchased. If not, then extensions must be published to Sourcegraph.com. All instances may use extensions published to Sourcegraph.com. \n\n"
+                "value": "```Go\nconst FeatureBackupAndRestore Feature = \"backup-and-restore\"\n```\n\nThe list of features. For each feature, add a new const here and the checking logic in isFeatureEnabled. \n\nFeatureBackupAndRestore is whether builtin backup and restore on this Sourcegraph instance has been purchased. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/licensing#FeatureRemoteExtensionsAllowDisallow",
+              "pathID": "/enterprise/internal/licensing#FeatureBatchChanges",
               "documentation": {
-                "identifier": "FeatureRemoteExtensionsAllowDisallow",
+                "identifier": "FeatureBatchChanges",
                 "newPage": false,
-                "searchKey": "licensing.FeatureRemoteExtensionsAllowDisallow",
-                "tags": null
+                "searchKey": "licensing.FeatureBatchChanges",
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const FeatureRemoteExtensionsAllowDisallow"
+                "value": "const FeatureBatchChanges"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst FeatureRemoteExtensionsAllowDisallow Feature = \"remote-extensions-allow-disallow\"\n```\n\nThe list of features. For each feature, add a new const here and the checking logic in isFeatureEnabled. \n\nFeatureRemoteExtensionsAllowDisallow is whether explicitly specify a list of allowed remote extensions and prevent any other remote extensions from being used has been purchased. It does not apply to locally published extensions. \n\n"
+                "value": "```Go\nconst FeatureBatchChanges Feature = \"batch-changes\"\n```\n\nThe list of features. For each feature, add a new const here and the checking logic in isFeatureEnabled. \n\nFeatureBatchChanges is whether Batch Changes on this Sourcegraph instance has been purchased. \n\n"
               },
               "children": null
             }
@@ -192,7 +115,10 @@
                 "identifier": "FeatureBranding",
                 "newPage": false,
                 "searchKey": "licensing.FeatureBranding",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -213,6 +139,8 @@
                 "newPage": false,
                 "searchKey": "licensing.FeatureCampaigns",
                 "tags": [
+                  "constant",
+                  "string",
                   "deprecated"
                 ]
               },
@@ -229,20 +157,23 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/licensing#FeatureBatchChanges",
+              "pathID": "/enterprise/internal/licensing#FeatureExtensionRegistry",
               "documentation": {
-                "identifier": "FeatureBatchChanges",
+                "identifier": "FeatureExtensionRegistry",
                 "newPage": false,
-                "searchKey": "licensing.FeatureBatchChanges",
-                "tags": null
+                "searchKey": "licensing.FeatureExtensionRegistry",
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const FeatureBatchChanges"
+                "value": "const FeatureExtensionRegistry"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst FeatureBatchChanges Feature = \"batch-changes\"\n```\n\nThe list of features. For each feature, add a new const here and the checking logic in isFeatureEnabled. \n\nFeatureBatchChanges is whether Batch Changes on this Sourcegraph instance has been purchased. \n\n"
+                "value": "```Go\nconst FeatureExtensionRegistry Feature = \"private-extension-registry\"\n```\n\nThe list of features. For each feature, add a new const here and the checking logic in isFeatureEnabled. \n\nFeatureExtensionRegistry is whether publishing extensions to this Sourcegraph instance has been purchased. If not, then extensions must be published to Sourcegraph.com. All instances may use extensions published to Sourcegraph.com. \n\n"
               },
               "children": null
             }
@@ -254,7 +185,10 @@
                 "identifier": "FeatureMonitoring",
                 "newPage": false,
                 "searchKey": "licensing.FeatureMonitoring",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -269,20 +203,46 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/licensing#FeatureBackupAndRestore",
+              "pathID": "/enterprise/internal/licensing#FeatureRemoteExtensionsAllowDisallow",
               "documentation": {
-                "identifier": "FeatureBackupAndRestore",
+                "identifier": "FeatureRemoteExtensionsAllowDisallow",
                 "newPage": false,
-                "searchKey": "licensing.FeatureBackupAndRestore",
-                "tags": null
+                "searchKey": "licensing.FeatureRemoteExtensionsAllowDisallow",
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const FeatureBackupAndRestore"
+                "value": "const FeatureRemoteExtensionsAllowDisallow"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst FeatureBackupAndRestore Feature = \"backup-and-restore\"\n```\n\nThe list of features. For each feature, add a new const here and the checking logic in isFeatureEnabled. \n\nFeatureBackupAndRestore is whether builtin backup and restore on this Sourcegraph instance has been purchased. \n\n"
+                "value": "```Go\nconst FeatureRemoteExtensionsAllowDisallow Feature = \"remote-extensions-allow-disallow\"\n```\n\nThe list of features. For each feature, add a new const here and the checking logic in isFeatureEnabled. \n\nFeatureRemoteExtensionsAllowDisallow is whether explicitly specify a list of allowed remote extensions and prevent any other remote extensions from being used has been purchased. It does not apply to locally published extensions. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#NoLicenseMaximumAllowedUserCount",
+              "documentation": {
+                "identifier": "NoLicenseMaximumAllowedUserCount",
+                "newPage": false,
+                "searchKey": "licensing.NoLicenseMaximumAllowedUserCount",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const NoLicenseMaximumAllowedUserCount"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst NoLicenseMaximumAllowedUserCount int32 = 10\n```\n\nNoLicenseMaximumAllowedUserCount is the maximum number of user accounts that may exist when running without a license. Exceeding this number of user accounts requires a license. \n\n"
               },
               "children": null
             }
@@ -294,7 +254,10 @@
                 "identifier": "NoLicenseMaximumExternalServiceCount",
                 "newPage": false,
                 "searchKey": "licensing.NoLicenseMaximumExternalServiceCount",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -309,12 +272,84 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/licensing#NoLicenseWarningUserCount",
+              "documentation": {
+                "identifier": "NoLicenseWarningUserCount",
+                "newPage": false,
+                "searchKey": "licensing.NoLicenseWarningUserCount",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const NoLicenseWarningUserCount"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst NoLicenseWarningUserCount int32 = 10\n```\n\nNoLicenseWarningUserCount is the number of user accounts when all users are shown a warning (when running without a license). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#TrueUpUserCountTag",
+              "documentation": {
+                "identifier": "TrueUpUserCountTag",
+                "newPage": false,
+                "searchKey": "licensing.TrueUpUserCountTag",
+                "tags": [
+                  "constant",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TrueUpUserCountTag"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TrueUpUserCountTag = \"true-up\"\n```\n\nTrueUpUserCountTag is the license tag that indicates that the licensed user count can be exceeded and will be charged later. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#enterprise",
+              "documentation": {
+                "identifier": "enterprise",
+                "newPage": false,
+                "searchKey": "licensing.enterprise",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const enterprise"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst enterprise Plan = \"enterprise-0\"\n```\n\nThe list of plans. \n\nenterprise is the \"Enterprise\" plan. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/licensing#licenseGenerationPrivateKeyURL",
               "documentation": {
                 "identifier": "licenseGenerationPrivateKeyURL",
                 "newPage": false,
                 "searchKey": "licensing.licenseGenerationPrivateKeyURL",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -331,12 +366,62 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/licensing#oldEnterprise",
+              "documentation": {
+                "identifier": "oldEnterprise",
+                "newPage": false,
+                "searchKey": "licensing.oldEnterprise",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const oldEnterprise"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst oldEnterprise Plan = \"old-enterprise-0\"\n```\n\nThe list of plans. \n\noldEnterprise is the old \"Enterprise\" plan. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#oldEnterpriseStarter",
+              "documentation": {
+                "identifier": "oldEnterpriseStarter",
+                "newPage": false,
+                "searchKey": "licensing.oldEnterpriseStarter",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const oldEnterpriseStarter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst oldEnterpriseStarter Plan = \"old-starter-0\"\n```\n\nThe list of plans. \n\noldEnterpriseStarter is the old \"Enterprise Starter\" plan. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/licensing#planTagPrefix",
               "documentation": {
                 "identifier": "planTagPrefix",
                 "newPage": false,
                 "searchKey": "licensing.planTagPrefix",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -353,60 +438,24 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/licensing#TrueUpUserCountTag",
+              "pathID": "/enterprise/internal/licensing#team",
               "documentation": {
-                "identifier": "TrueUpUserCountTag",
+                "identifier": "team",
                 "newPage": false,
-                "searchKey": "licensing.TrueUpUserCountTag",
-                "tags": null
+                "searchKey": "licensing.team",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const TrueUpUserCountTag"
+                "value": "const team"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst TrueUpUserCountTag = \"true-up\"\n```\n\nTrueUpUserCountTag is the license tag that indicates that the licensed user count can be exceeded and will be charged later. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#NoLicenseMaximumAllowedUserCount",
-              "documentation": {
-                "identifier": "NoLicenseMaximumAllowedUserCount",
-                "newPage": false,
-                "searchKey": "licensing.NoLicenseMaximumAllowedUserCount",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const NoLicenseMaximumAllowedUserCount"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst NoLicenseMaximumAllowedUserCount int32 = 10\n```\n\nNoLicenseMaximumAllowedUserCount is the maximum number of user accounts that may exist when running without a license. Exceeding this number of user accounts requires a license. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#NoLicenseWarningUserCount",
-              "documentation": {
-                "identifier": "NoLicenseWarningUserCount",
-                "newPage": false,
-                "searchKey": "licensing.NoLicenseWarningUserCount",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const NoLicenseWarningUserCount"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst NoLicenseWarningUserCount int32 = 10\n```\n\nNoLicenseWarningUserCount is the number of user accounts when all users are shown a warning (when running without a license). \n\n"
+                "value": "```Go\nconst team Plan = \"team-0\"\n```\n\nThe list of plans. \n\nteam is the \"Team\" plan. \n\n"
               },
               "children": null
             }
@@ -419,6 +468,8 @@
                 "newPage": false,
                 "searchKey": "licensing.testPlan",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -444,6 +495,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -458,56 +510,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/internal/licensing#allPlans",
-              "documentation": {
-                "identifier": "allPlans",
-                "newPage": false,
-                "searchKey": "licensing.allPlans",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var allPlans"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar allPlans = []Plan{\n\toldEnterpriseStarter,\n\toldEnterprise,\n\tteam,\n\tenterprise,\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#planFeatures",
-              "documentation": {
-                "identifier": "planFeatures",
-                "newPage": false,
-                "searchKey": "licensing.planFeatures",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var planFeatures"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar planFeatures = ...\n```\n\nplanFeatures defines the features that are enabled for each plan. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/licensing#EnforceTiers",
               "documentation": {
                 "identifier": "EnforceTiers",
                 "newPage": false,
                 "searchKey": "licensing.EnforceTiers",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "boolean"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -527,7 +538,10 @@
                 "identifier": "MockCheckFeature",
                 "newPage": false,
                 "searchKey": "licensing.MockCheckFeature",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -542,142 +556,15 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/licensing#publicKey",
-              "documentation": {
-                "identifier": "publicKey",
-                "newPage": false,
-                "searchKey": "licensing.publicKey",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var publicKey"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar publicKey = ...\n```\n\npublicKey is the public key used to verify product license keys. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#MockParseProductLicenseKeyWithBuiltinOrGenerationKey",
-              "documentation": {
-                "identifier": "MockParseProductLicenseKeyWithBuiltinOrGenerationKey",
-                "newPage": false,
-                "searchKey": "licensing.MockParseProductLicenseKeyWithBuiltinOrGenerationKey",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var MockParseProductLicenseKeyWithBuiltinOrGenerationKey"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar MockParseProductLicenseKeyWithBuiltinOrGenerationKey func(licenseKey string) (*Info, string, error) = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#mu",
-              "documentation": {
-                "identifier": "mu",
-                "newPage": false,
-                "searchKey": "licensing.mu",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var mu"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar mu sync.Mutex\n```\n\nCache the parsing of the license key because public key crypto can be slow. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#lastKeyText",
-              "documentation": {
-                "identifier": "lastKeyText",
-                "newPage": false,
-                "searchKey": "licensing.lastKeyText",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var lastKeyText"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar lastKeyText string\n```\n\nCache the parsing of the license key because public key crypto can be slow. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#lastInfo",
-              "documentation": {
-                "identifier": "lastInfo",
-                "newPage": false,
-                "searchKey": "licensing.lastInfo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var lastInfo"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar lastInfo *Info\n```\n\nCache the parsing of the license key because public key crypto can be slow. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#lastSignature",
-              "documentation": {
-                "identifier": "lastSignature",
-                "newPage": false,
-                "searchKey": "licensing.lastSignature",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var lastSignature"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar lastSignature string\n```\n\nCache the parsing of the license key because public key crypto can be slow. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/licensing#MockGetConfiguredProductLicenseInfo",
               "documentation": {
                 "identifier": "MockGetConfiguredProductLicenseInfo",
                 "newPage": false,
                 "searchKey": "licensing.MockGetConfiguredProductLicenseInfo",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -692,12 +579,62 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/licensing#MockParseProductLicenseKeyWithBuiltinOrGenerationKey",
+              "documentation": {
+                "identifier": "MockParseProductLicenseKeyWithBuiltinOrGenerationKey",
+                "newPage": false,
+                "searchKey": "licensing.MockParseProductLicenseKeyWithBuiltinOrGenerationKey",
+                "tags": [
+                  "variable",
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockParseProductLicenseKeyWithBuiltinOrGenerationKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockParseProductLicenseKeyWithBuiltinOrGenerationKey func(licenseKey string) (*Info, string, error) = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#allPlans",
+              "documentation": {
+                "identifier": "allPlans",
+                "newPage": false,
+                "searchKey": "licensing.allPlans",
+                "tags": [
+                  "variable",
+                  "array",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var allPlans"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar allPlans = []Plan{\n\toldEnterpriseStarter,\n\toldEnterprise,\n\tteam,\n\tenterprise,\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/licensing#envLicenseGenerationPrivateKey",
               "documentation": {
                 "identifier": "envLicenseGenerationPrivateKey",
                 "newPage": false,
                 "searchKey": "licensing.envLicenseGenerationPrivateKey",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -714,56 +651,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/licensing#licenseGenerationPrivateKey",
-              "documentation": {
-                "identifier": "licenseGenerationPrivateKey",
-                "newPage": false,
-                "searchKey": "licensing.licenseGenerationPrivateKey",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var licenseGenerationPrivateKey"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar licenseGenerationPrivateKey = ...\n```\n\nlicenseGenerationPrivateKey is the private key used to generate license keys. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#pool",
-              "documentation": {
-                "identifier": "pool",
-                "newPage": false,
-                "searchKey": "licensing.pool",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var pool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar pool = redispool.Store\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/licensing#keyPrefix",
               "documentation": {
                 "identifier": "keyPrefix",
                 "newPage": false,
                 "searchKey": "licensing.keyPrefix",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -780,12 +675,206 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/licensing#lastInfo",
+              "documentation": {
+                "identifier": "lastInfo",
+                "newPage": false,
+                "searchKey": "licensing.lastInfo",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var lastInfo"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar lastInfo *Info\n```\n\nCache the parsing of the license key because public key crypto can be slow. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#lastKeyText",
+              "documentation": {
+                "identifier": "lastKeyText",
+                "newPage": false,
+                "searchKey": "licensing.lastKeyText",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var lastKeyText"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar lastKeyText string\n```\n\nCache the parsing of the license key because public key crypto can be slow. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#lastSignature",
+              "documentation": {
+                "identifier": "lastSignature",
+                "newPage": false,
+                "searchKey": "licensing.lastSignature",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var lastSignature"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar lastSignature string\n```\n\nCache the parsing of the license key because public key crypto can be slow. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#licenseGenerationPrivateKey",
+              "documentation": {
+                "identifier": "licenseGenerationPrivateKey",
+                "newPage": false,
+                "searchKey": "licensing.licenseGenerationPrivateKey",
+                "tags": [
+                  "variable",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var licenseGenerationPrivateKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar licenseGenerationPrivateKey = ...\n```\n\nlicenseGenerationPrivateKey is the private key used to generate license keys. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#mu",
+              "documentation": {
+                "identifier": "mu",
+                "newPage": false,
+                "searchKey": "licensing.mu",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var mu"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar mu sync.Mutex\n```\n\nCache the parsing of the license key because public key crypto can be slow. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#planFeatures",
+              "documentation": {
+                "identifier": "planFeatures",
+                "newPage": false,
+                "searchKey": "licensing.planFeatures",
+                "tags": [
+                  "variable",
+                  "object",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var planFeatures"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar planFeatures = ...\n```\n\nplanFeatures defines the features that are enabled for each plan. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#pool",
+              "documentation": {
+                "identifier": "pool",
+                "newPage": false,
+                "searchKey": "licensing.pool",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var pool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar pool = redispool.Store\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#publicKey",
+              "documentation": {
+                "identifier": "publicKey",
+                "newPage": false,
+                "searchKey": "licensing.publicKey",
+                "tags": [
+                  "variable",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var publicKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar publicKey = ...\n```\n\npublicKey is the public key used to verify product license keys. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/licensing#started",
               "documentation": {
                 "identifier": "started",
                 "newPage": false,
                 "searchKey": "licensing.started",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
@@ -811,6 +900,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -830,7 +920,9 @@
                 "identifier": "Feature",
                 "newPage": false,
                 "searchKey": "licensing.Feature",
-                "tags": null
+                "tags": [
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -845,55 +937,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/licensing#featureNotActivatedError",
-              "documentation": {
-                "identifier": "featureNotActivatedError",
-                "newPage": false,
-                "searchKey": "licensing.featureNotActivatedError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type featureNotActivatedError struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype featureNotActivatedError struct{ errcode.PresentationError }\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/licensing#NewFeatureNotActivatedError",
-                    "documentation": {
-                      "identifier": "NewFeatureNotActivatedError",
-                      "newPage": false,
-                      "searchKey": "licensing.NewFeatureNotActivatedError",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewFeatureNotActivatedError(message string) featureNotActivatedError"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewFeatureNotActivatedError(message string) featureNotActivatedError\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/licensing#Info",
               "documentation": {
                 "identifier": "Info",
                 "newPage": false,
                 "searchKey": "licensing.Info",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -906,74 +957,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/licensing#toInfo",
-                    "documentation": {
-                      "identifier": "toInfo",
-                      "newPage": false,
-                      "searchKey": "licensing.toInfo",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func toInfo(origInfo *license.Info, origSignature string, origErr error) (info *Info, signature string, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc toInfo(origInfo *license.Info, origSignature string, origErr error) (info *Info, signature string, err error)\n```\n\ntoInfo converts from the return type of license.ParseSignedKey to the return type of this package's methods (which use the Info wrapper type). \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/licensing#ParseProductLicenseKey",
-                    "documentation": {
-                      "identifier": "ParseProductLicenseKey",
-                      "newPage": false,
-                      "searchKey": "licensing.ParseProductLicenseKey",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func ParseProductLicenseKey(licenseKey string) (info *Info, signature string, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc ParseProductLicenseKey(licenseKey string) (info *Info, signature string, err error)\n```\n\nParseProductLicenseKey parses and verifies the license key using the license verification public key (publicKey in this package). \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/licensing#ParseProductLicenseKeyWithBuiltinOrGenerationKey",
-                    "documentation": {
-                      "identifier": "ParseProductLicenseKeyWithBuiltinOrGenerationKey",
-                      "newPage": false,
-                      "searchKey": "licensing.ParseProductLicenseKeyWithBuiltinOrGenerationKey",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func ParseProductLicenseKeyWithBuiltinOrGenerationKey(licenseKey string) (*Info, string, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc ParseProductLicenseKeyWithBuiltinOrGenerationKey(licenseKey string) (*Info, string, error)\n```\n\nParseProductLicenseKeyWithBuiltinOrGenerationKey is like ParseProductLicenseKey, except it tries parsing and verifying the license key with the license generation key (if set), instead of always using the builtin license key. \n\nIt is useful for local development when using a test license generation key (whose signatures aren't considered valid when verified using the builtin public key). \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/internal/licensing#GetConfiguredProductLicenseInfo",
                     "documentation": {
                       "identifier": "GetConfiguredProductLicenseInfo",
                       "newPage": false,
                       "searchKey": "licensing.GetConfiguredProductLicenseInfo",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -993,7 +984,9 @@
                       "identifier": "GetConfiguredProductLicenseInfoWithSignature",
                       "newPage": false,
                       "searchKey": "licensing.GetConfiguredProductLicenseInfoWithSignature",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1008,12 +1001,81 @@
                 },
                 {
                   "node": {
+                    "pathID": "/enterprise/internal/licensing#ParseProductLicenseKey",
+                    "documentation": {
+                      "identifier": "ParseProductLicenseKey",
+                      "newPage": false,
+                      "searchKey": "licensing.ParseProductLicenseKey",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ParseProductLicenseKey(licenseKey string) (info *Info, signature string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ParseProductLicenseKey(licenseKey string) (info *Info, signature string, err error)\n```\n\nParseProductLicenseKey parses and verifies the license key using the license verification public key (publicKey in this package). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/licensing#ParseProductLicenseKeyWithBuiltinOrGenerationKey",
+                    "documentation": {
+                      "identifier": "ParseProductLicenseKeyWithBuiltinOrGenerationKey",
+                      "newPage": false,
+                      "searchKey": "licensing.ParseProductLicenseKeyWithBuiltinOrGenerationKey",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ParseProductLicenseKeyWithBuiltinOrGenerationKey(licenseKey string) (*Info, string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ParseProductLicenseKeyWithBuiltinOrGenerationKey(licenseKey string) (*Info, string, error)\n```\n\nParseProductLicenseKeyWithBuiltinOrGenerationKey is like ParseProductLicenseKey, except it tries parsing and verifying the license key with the license generation key (if set), instead of always using the builtin license key. \n\nIt is useful for local development when using a test license generation key (whose signatures aren't considered valid when verified using the builtin public key). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/licensing#toInfo",
+                    "documentation": {
+                      "identifier": "toInfo",
+                      "newPage": false,
+                      "searchKey": "licensing.toInfo",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func toInfo(origInfo *license.Info, origSignature string, origErr error) (info *Info, signature string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc toInfo(origInfo *license.Info, origSignature string, origErr error) (info *Info, signature string, err error)\n```\n\ntoInfo converts from the return type of license.ParseSignedKey to the return type of this package's methods (which use the Info wrapper type). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/enterprise/internal/licensing#Info.Plan",
                     "documentation": {
                       "identifier": "Info.Plan",
                       "newPage": false,
                       "searchKey": "licensing.Info.Plan",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1034,6 +1096,7 @@
                       "newPage": false,
                       "searchKey": "licensing.Info.hasUnknownPlan",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1058,7 +1121,9 @@
                 "identifier": "Plan",
                 "newPage": false,
                 "searchKey": "licensing.Plan",
-                "tags": null
+                "tags": [
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1076,7 +1141,9 @@
                       "identifier": "Plan.HasFeature",
                       "newPage": false,
                       "searchKey": "licensing.Plan.HasFeature",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1091,22 +1158,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/licensing#Plan.tag",
+                    "pathID": "/enterprise/internal/licensing#Plan.MaxExternalServiceCount",
                     "documentation": {
-                      "identifier": "Plan.tag",
+                      "identifier": "Plan.MaxExternalServiceCount",
                       "newPage": false,
-                      "searchKey": "licensing.Plan.tag",
+                      "searchKey": "licensing.Plan.MaxExternalServiceCount",
                       "tags": [
-                        "private"
+                        "function"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (p Plan) tag() string"
+                      "value": "func (p Plan) MaxExternalServiceCount() int"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (p Plan) tag() string\n```\n\ntag is the representation of the plan as a tag in a license key. \n\n"
+                      "value": "```Go\nfunc (p Plan) MaxExternalServiceCount() int\n```\n\nMaxExternalServiceCount returns the number of external services that the plan supports. We treat 0 as \"unlimited\". \n\n"
                     },
                     "children": null
                   }
@@ -1119,6 +1186,7 @@
                       "newPage": false,
                       "searchKey": "licensing.Plan.isKnown",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1135,20 +1203,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/licensing#Plan.MaxExternalServiceCount",
+                    "pathID": "/enterprise/internal/licensing#Plan.tag",
                     "documentation": {
-                      "identifier": "Plan.MaxExternalServiceCount",
+                      "identifier": "Plan.tag",
                       "newPage": false,
-                      "searchKey": "licensing.Plan.MaxExternalServiceCount",
-                      "tags": null
+                      "searchKey": "licensing.Plan.tag",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (p Plan) MaxExternalServiceCount() int"
+                      "value": "func (p Plan) tag() string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (p Plan) MaxExternalServiceCount() int\n```\n\nMaxExternalServiceCount returns the number of external services that the plan supports. We treat 0 as \"unlimited\". \n\n"
+                      "value": "```Go\nfunc (p Plan) tag() string\n```\n\ntag is the representation of the plan as a tag in a license key. \n\n"
                     },
                     "children": null
                   }
@@ -1163,7 +1234,9 @@
                 "identifier": "UsersStore",
                 "newPage": false,
                 "searchKey": "licensing.UsersStore",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1174,6 +1247,52 @@
                 "value": "```Go\ntype UsersStore interface {\n\t// Count returns the total count of active Sourcegraph users.\n\tCount(context.Context) (int, error)\n}\n```\n\nA UsersStore captures the necessary methods for the licensing package to query Sourcegraph users. It allows decoupling this package from the OSS database package. \n\n"
               },
               "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#featureNotActivatedError",
+              "documentation": {
+                "identifier": "featureNotActivatedError",
+                "newPage": false,
+                "searchKey": "licensing.featureNotActivatedError",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type featureNotActivatedError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype featureNotActivatedError struct{ errcode.PresentationError }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/licensing#NewFeatureNotActivatedError",
+                    "documentation": {
+                      "identifier": "NewFeatureNotActivatedError",
+                      "newPage": false,
+                      "searchKey": "licensing.NewFeatureNotActivatedError",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewFeatureNotActivatedError(message string) featureNotActivatedError"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewFeatureNotActivatedError(message string) featureNotActivatedError\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
             }
           }
         ]
@@ -1187,6 +1306,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -1201,22 +1321,44 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/internal/licensing#init.conf.go",
+              "pathID": "/enterprise/internal/licensing#ActualUserCount",
               "documentation": {
-                "identifier": "init.conf.go",
+                "identifier": "ActualUserCount",
                 "newPage": false,
-                "searchKey": "licensing.init",
+                "searchKey": "licensing.ActualUserCount",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func init()"
+                "value": "func ActualUserCount(ctx context.Context) (int32, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
+                "value": "```Go\nfunc ActualUserCount(ctx context.Context) (int32, error)\n```\n\nActualUserCount returns the actual max number of users that have had accounts on the Sourcegraph instance, under the current license. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#ActualUserCountDate",
+              "documentation": {
+                "identifier": "ActualUserCountDate",
+                "newPage": false,
+                "searchKey": "licensing.ActualUserCountDate",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ActualUserCountDate(ctx context.Context) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ActualUserCountDate(ctx context.Context) (string, error)\n```\n\nActualUserCountDate returns the timestamp when the actual max number of users that have had accounts on the Sourcegraph instance, under the current license, was reached. \n\n"
               },
               "children": null
             }
@@ -1228,7 +1370,9 @@
                 "identifier": "Check",
                 "newPage": false,
                 "searchKey": "licensing.Check",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1243,12 +1387,287 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/licensing#GenerateProductLicenseKey",
+              "documentation": {
+                "identifier": "GenerateProductLicenseKey",
+                "newPage": false,
+                "searchKey": "licensing.GenerateProductLicenseKey",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GenerateProductLicenseKey(info license.Info) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GenerateProductLicenseKey(info license.Info) (string, error)\n```\n\nGenerateProductLicenseKey generates a product license key using the license generation private key configured in site configuration. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#GetMaxUsers",
+              "documentation": {
+                "identifier": "GetMaxUsers",
+                "newPage": false,
+                "searchKey": "licensing.GetMaxUsers",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetMaxUsers(signature string) (int, string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetMaxUsers(signature string) (int, string, error)\n```\n\nGetMaxUsers gets the max users associated with a license key. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#IsFeatureEnabledLenient",
+              "documentation": {
+                "identifier": "IsFeatureEnabledLenient",
+                "newPage": false,
+                "searchKey": "licensing.IsFeatureEnabledLenient",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsFeatureEnabledLenient(feature Feature) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsFeatureEnabledLenient(feature Feature) bool\n```\n\nIsFeatureEnabledLenient reports whether the current license enables the given feature. If there is an error reading the license, it is lenient and returns true. \n\nThis is useful for callers who don't want to handle errors (usually because the user would be prevented from getting to this point if license verification had failed, so it's not necessary to handle license verification errors here). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#IsFeatureNotActivated",
+              "documentation": {
+                "identifier": "IsFeatureNotActivated",
+                "newPage": false,
+                "searchKey": "licensing.IsFeatureNotActivated",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsFeatureNotActivated(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsFeatureNotActivated(err error) bool\n```\n\nIsFeatureNotActivated reports whether err indicates that the license is valid but does not activate the feature. \n\nIt is used to distinguish between the multiple reasons for errors from Check: either failed license verification, or a valid license that does not activate a feature (e.g., Enterprise Starter not including an Enterprise-only feature). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#ProductNameWithBrand",
+              "documentation": {
+                "identifier": "ProductNameWithBrand",
+                "newPage": false,
+                "searchKey": "licensing.ProductNameWithBrand",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ProductNameWithBrand(hasLicense bool, licenseTags []string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ProductNameWithBrand(hasLicense bool, licenseTags []string) string\n```\n\nProductNameWithBrand returns the product name with brand (e.g., \"Sourcegraph Enterprise\") based on the license info. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#StartMaxUserCount",
+              "documentation": {
+                "identifier": "StartMaxUserCount",
+                "newPage": false,
+                "searchKey": "licensing.StartMaxUserCount",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func StartMaxUserCount(s UsersStore)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc StartMaxUserCount(s UsersStore)\n```\n\nStartMaxUserCount starts checking for a new count of max user accounts periodically. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#TestCheckFeature",
+              "documentation": {
+                "identifier": "TestCheckFeature",
+                "newPage": false,
+                "searchKey": "licensing.TestCheckFeature",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCheckFeature(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCheckFeature(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#TestInfo_Plan",
+              "documentation": {
+                "identifier": "TestInfo_Plan",
+                "newPage": false,
+                "searchKey": "licensing.TestInfo_Plan",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInfo_Plan(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInfo_Plan(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#TestInfo_hasUnknownPlan",
+              "documentation": {
+                "identifier": "TestInfo_hasUnknownPlan",
+                "newPage": false,
+                "searchKey": "licensing.TestInfo_hasUnknownPlan",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInfo_hasUnknownPlan(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInfo_hasUnknownPlan(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#TestPlan_isKnown",
+              "documentation": {
+                "identifier": "TestPlan_isKnown",
+                "newPage": false,
+                "searchKey": "licensing.TestPlan_isKnown",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPlan_isKnown(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPlan_isKnown(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#TestProductNameWithBrand",
+              "documentation": {
+                "identifier": "TestProductNameWithBrand",
+                "newPage": false,
+                "searchKey": "licensing.TestProductNameWithBrand",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestProductNameWithBrand(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestProductNameWithBrand(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#TestingSkipFeatureChecks",
+              "documentation": {
+                "identifier": "TestingSkipFeatureChecks",
+                "newPage": false,
+                "searchKey": "licensing.TestingSkipFeatureChecks",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestingSkipFeatureChecks() func()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestingSkipFeatureChecks() func()\n```\n\nTestingSkipFeatureChecks is for tests that want to mock Check to always return nil (i.e., behave as though the current license enables all features). \n\nIt returns a cleanup func so callers can use `defer TestingSkipFeatureChecks()()` in a test body. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/licensing#checkFeature",
               "documentation": {
                 "identifier": "checkFeature",
                 "newPage": false,
                 "searchKey": "licensing.checkFeature",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1265,176 +1684,13 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/licensing#TestingSkipFeatureChecks",
-              "documentation": {
-                "identifier": "TestingSkipFeatureChecks",
-                "newPage": false,
-                "searchKey": "licensing.TestingSkipFeatureChecks",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestingSkipFeatureChecks() func()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestingSkipFeatureChecks() func()\n```\n\nTestingSkipFeatureChecks is for tests that want to mock Check to always return nil (i.e., behave as though the current license enables all features). \n\nIt returns a cleanup func so callers can use `defer TestingSkipFeatureChecks()()` in a test body. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#IsFeatureNotActivated",
-              "documentation": {
-                "identifier": "IsFeatureNotActivated",
-                "newPage": false,
-                "searchKey": "licensing.IsFeatureNotActivated",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IsFeatureNotActivated(err error) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IsFeatureNotActivated(err error) bool\n```\n\nIsFeatureNotActivated reports whether err indicates that the license is valid but does not activate the feature. \n\nIt is used to distinguish between the multiple reasons for errors from Check: either failed license verification, or a valid license that does not activate a feature (e.g., Enterprise Starter not including an Enterprise-only feature). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#IsFeatureEnabledLenient",
-              "documentation": {
-                "identifier": "IsFeatureEnabledLenient",
-                "newPage": false,
-                "searchKey": "licensing.IsFeatureEnabledLenient",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IsFeatureEnabledLenient(feature Feature) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IsFeatureEnabledLenient(feature Feature) bool\n```\n\nIsFeatureEnabledLenient reports whether the current license enables the given feature. If there is an error reading the license, it is lenient and returns true. \n\nThis is useful for callers who don't want to handle errors (usually because the user would be prevented from getting to this point if license verification had failed, so it's not necessary to handle license verification errors here). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#GenerateProductLicenseKey",
-              "documentation": {
-                "identifier": "GenerateProductLicenseKey",
-                "newPage": false,
-                "searchKey": "licensing.GenerateProductLicenseKey",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GenerateProductLicenseKey(info license.Info) (string, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GenerateProductLicenseKey(info license.Info) (string, error)\n```\n\nGenerateProductLicenseKey generates a product license key using the license generation private key configured in site configuration. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#ProductNameWithBrand",
-              "documentation": {
-                "identifier": "ProductNameWithBrand",
-                "newPage": false,
-                "searchKey": "licensing.ProductNameWithBrand",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ProductNameWithBrand(hasLicense bool, licenseTags []string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ProductNameWithBrand(hasLicense bool, licenseTags []string) string\n```\n\nProductNameWithBrand returns the product name with brand (e.g., \"Sourcegraph Enterprise\") based on the license info. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#setMaxUsers",
-              "documentation": {
-                "identifier": "setMaxUsers",
-                "newPage": false,
-                "searchKey": "licensing.setMaxUsers",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func setMaxUsers(key string, count int) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc setMaxUsers(key string, count int) error\n```\n\nsetMaxUsers sets the max users associated with a license key if the new max count is greater than the previous max. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#GetMaxUsers",
-              "documentation": {
-                "identifier": "GetMaxUsers",
-                "newPage": false,
-                "searchKey": "licensing.GetMaxUsers",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetMaxUsers(signature string) (int, string, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetMaxUsers(signature string) (int, string, error)\n```\n\nGetMaxUsers gets the max users associated with a license key. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#getMaxUsers",
-              "documentation": {
-                "identifier": "getMaxUsers",
-                "newPage": false,
-                "searchKey": "licensing.getMaxUsers",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func getMaxUsers(c redis.Conn, key string) (int, string, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc getMaxUsers(c redis.Conn, key string) (int, string, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/licensing#checkMaxUsers",
               "documentation": {
                 "identifier": "checkMaxUsers",
                 "newPage": false,
                 "searchKey": "licensing.checkMaxUsers",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1451,12 +1707,82 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/licensing#getMaxUsers",
+              "documentation": {
+                "identifier": "getMaxUsers",
+                "newPage": false,
+                "searchKey": "licensing.getMaxUsers",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getMaxUsers(c redis.Conn, key string) (int, string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getMaxUsers(c redis.Conn, key string) (int, string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#init.conf.go",
+              "documentation": {
+                "identifier": "init.conf.go",
+                "newPage": false,
+                "searchKey": "licensing.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/licensing#init.plans_test.go",
+              "documentation": {
+                "identifier": "init.plans_test.go",
+                "newPage": false,
+                "searchKey": "licensing.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/licensing#maxUsersKey",
               "documentation": {
                 "identifier": "maxUsersKey",
                 "newPage": false,
                 "searchKey": "licensing.maxUsersKey",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1479,6 +1805,7 @@
                 "newPage": false,
                 "searchKey": "licensing.maxUsersTimeKey",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1495,192 +1822,23 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/licensing#ActualUserCount",
+              "pathID": "/enterprise/internal/licensing#setMaxUsers",
               "documentation": {
-                "identifier": "ActualUserCount",
+                "identifier": "setMaxUsers",
                 "newPage": false,
-                "searchKey": "licensing.ActualUserCount",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ActualUserCount(ctx context.Context) (int32, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ActualUserCount(ctx context.Context) (int32, error)\n```\n\nActualUserCount returns the actual max number of users that have had accounts on the Sourcegraph instance, under the current license. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#ActualUserCountDate",
-              "documentation": {
-                "identifier": "ActualUserCountDate",
-                "newPage": false,
-                "searchKey": "licensing.ActualUserCountDate",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ActualUserCountDate(ctx context.Context) (string, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ActualUserCountDate(ctx context.Context) (string, error)\n```\n\nActualUserCountDate returns the timestamp when the actual max number of users that have had accounts on the Sourcegraph instance, under the current license, was reached. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#StartMaxUserCount",
-              "documentation": {
-                "identifier": "StartMaxUserCount",
-                "newPage": false,
-                "searchKey": "licensing.StartMaxUserCount",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func StartMaxUserCount(s UsersStore)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc StartMaxUserCount(s UsersStore)\n```\n\nStartMaxUserCount starts checking for a new count of max user accounts periodically. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#TestCheckFeature",
-              "documentation": {
-                "identifier": "TestCheckFeature",
-                "newPage": false,
-                "searchKey": "licensing.TestCheckFeature",
+                "searchKey": "licensing.setMaxUsers",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestCheckFeature(t *testing.T)"
+                "value": "func setMaxUsers(key string, count int) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestCheckFeature(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#init.plans_test.go",
-              "documentation": {
-                "identifier": "init.plans_test.go",
-                "newPage": false,
-                "searchKey": "licensing.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#TestPlan_isKnown",
-              "documentation": {
-                "identifier": "TestPlan_isKnown",
-                "newPage": false,
-                "searchKey": "licensing.TestPlan_isKnown",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestPlan_isKnown(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestPlan_isKnown(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#TestInfo_Plan",
-              "documentation": {
-                "identifier": "TestInfo_Plan",
-                "newPage": false,
-                "searchKey": "licensing.TestInfo_Plan",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestInfo_Plan(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestInfo_Plan(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#TestInfo_hasUnknownPlan",
-              "documentation": {
-                "identifier": "TestInfo_hasUnknownPlan",
-                "newPage": false,
-                "searchKey": "licensing.TestInfo_hasUnknownPlan",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestInfo_hasUnknownPlan(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestInfo_hasUnknownPlan(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/licensing#TestProductNameWithBrand",
-              "documentation": {
-                "identifier": "TestProductNameWithBrand",
-                "newPage": false,
-                "searchKey": "licensing.TestProductNameWithBrand",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestProductNameWithBrand(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestProductNameWithBrand(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc setMaxUsers(key string, count int) error\n```\n\nsetMaxUsers sets the max users associated with a license key if the new max count is greater than the previous max. \n\n"
               },
               "children": null
             }

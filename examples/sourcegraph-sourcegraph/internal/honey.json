@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/honey",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "honey.apiKey",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -89,7 +94,9 @@
                 "identifier": "SearchEventArgs",
                 "newPage": false,
                 "searchKey": "honey.SearchEventArgs",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -113,6 +120,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -127,12 +135,36 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/honey#Builder",
+              "documentation": {
+                "identifier": "Builder",
+                "newPage": false,
+                "searchKey": "honey.Builder",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Builder(dataset string) *libhoney.Builder"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Builder(dataset string) *libhoney.Builder\n```\n\nBuilder creates a builder for logging to a dataset. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/honey#Enabled",
               "documentation": {
                 "identifier": "Enabled",
                 "newPage": false,
                 "searchKey": "honey.Enabled",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -152,7 +184,9 @@
                 "identifier": "Event",
                 "newPage": false,
                 "searchKey": "honey.Event",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -172,7 +206,9 @@
                 "identifier": "EventWithFields",
                 "newPage": false,
                 "searchKey": "honey.EventWithFields",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -187,20 +223,22 @@
           },
           {
             "node": {
-              "pathID": "/internal/honey#Builder",
+              "pathID": "/internal/honey#SearchEvent",
               "documentation": {
-                "identifier": "Builder",
+                "identifier": "SearchEvent",
                 "newPage": false,
-                "searchKey": "honey.Builder",
-                "tags": null
+                "searchKey": "honey.SearchEvent",
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func Builder(dataset string) *libhoney.Builder"
+                "value": "func SearchEvent(ctx context.Context, args SearchEventArgs) *libhoney.Event"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc Builder(dataset string) *libhoney.Builder\n```\n\nBuilder creates a builder for logging to a dataset. \n\n"
+                "value": "```Go\nfunc SearchEvent(ctx context.Context, args SearchEventArgs) *libhoney.Event\n```\n\nSearchEvent returns a honey event for the dataset \"search\". \n\n"
               },
               "children": null
             }
@@ -213,6 +251,7 @@
                 "newPage": false,
                 "searchKey": "honey.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -223,26 +262,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/honey#SearchEvent",
-              "documentation": {
-                "identifier": "SearchEvent",
-                "newPage": false,
-                "searchKey": "honey.SearchEvent",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SearchEvent(ctx context.Context, args SearchEventArgs) *libhoney.Event"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SearchEvent(ctx context.Context, args SearchEventArgs) *libhoney.Event\n```\n\nSearchEvent returns a honey event for the dataset \"search\". \n\n"
               },
               "children": null
             }

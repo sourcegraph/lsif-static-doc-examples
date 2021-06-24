@@ -5,11 +5,11 @@ Package router contains the route names for our app UI.
 ## Index
 
 * [Constants](#const)
+    * [const RoutePasswordReset](#RoutePasswordReset)
+    * [const RoutePingFromSelfHosted](#RoutePingFromSelfHosted)
+    * [const RouteRaw](#RouteRaw)
     * [const RouteSignIn](#RouteSignIn)
     * [const RouteSignUp](#RouteSignUp)
-    * [const RoutePasswordReset](#RoutePasswordReset)
-    * [const RouteRaw](#RouteRaw)
-    * [const RoutePingFromSelfHosted](#RoutePingFromSelfHosted)
 * [Variables](#var)
     * [var Router](#Router)
 * [Functions](#func)
@@ -20,13 +20,53 @@ Package router contains the route names for our app UI.
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
+
+### <a id="RoutePasswordReset" href="#RoutePasswordReset">const RoutePasswordReset</a>
+
+```
+searchKey: router.RoutePasswordReset
+tags: [constant string]
+```
+
+```Go
+const RoutePasswordReset = "password-reset"
+```
+
+These route names are used by other packages that can't import the ../ui package without creating an import cycle. 
+
+### <a id="RoutePingFromSelfHosted" href="#RoutePingFromSelfHosted">const RoutePingFromSelfHosted</a>
+
+```
+searchKey: router.RoutePingFromSelfHosted
+tags: [constant string]
+```
+
+```Go
+const RoutePingFromSelfHosted = "ping-from-self-hosted"
+```
+
+These route names are used by other packages that can't import the ../ui package without creating an import cycle. 
+
+### <a id="RouteRaw" href="#RouteRaw">const RouteRaw</a>
+
+```
+searchKey: router.RouteRaw
+tags: [constant string]
+```
+
+```Go
+const RouteRaw = "raw"
+```
+
+These route names are used by other packages that can't import the ../ui package without creating an import cycle. 
 
 ### <a id="RouteSignIn" href="#RouteSignIn">const RouteSignIn</a>
 
 ```
 searchKey: router.RouteSignIn
+tags: [constant string]
 ```
 
 ```Go
@@ -39,6 +79,7 @@ These route names are used by other packages that can't import the ../ui package
 
 ```
 searchKey: router.RouteSignUp
+tags: [constant string]
 ```
 
 ```Go
@@ -47,52 +88,17 @@ const RouteSignUp = "sign-up"
 
 These route names are used by other packages that can't import the ../ui package without creating an import cycle. 
 
-### <a id="RoutePasswordReset" href="#RoutePasswordReset">const RoutePasswordReset</a>
-
-```
-searchKey: router.RoutePasswordReset
-```
-
-```Go
-const RoutePasswordReset = "password-reset"
-```
-
-These route names are used by other packages that can't import the ../ui package without creating an import cycle. 
-
-### <a id="RouteRaw" href="#RouteRaw">const RouteRaw</a>
-
-```
-searchKey: router.RouteRaw
-```
-
-```Go
-const RouteRaw = "raw"
-```
-
-These route names are used by other packages that can't import the ../ui package without creating an import cycle. 
-
-### <a id="RoutePingFromSelfHosted" href="#RoutePingFromSelfHosted">const RoutePingFromSelfHosted</a>
-
-```
-searchKey: router.RoutePingFromSelfHosted
-```
-
-```Go
-const RoutePingFromSelfHosted = "ping-from-self-hosted"
-```
-
-These route names are used by other packages that can't import the ../ui package without creating an import cycle. 
-
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Router" href="#Router">var Router</a>
 
 ```
 searchKey: router.Router
+tags: [variable struct]
 ```
 
 ```Go
@@ -106,13 +112,14 @@ It is used by packages that can't import the ../ui package without creating an i
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Extension" href="#Extension">func Extension(extensionID string) string</a>
 
 ```
 searchKey: router.Extension
+tags: [method]
 ```
 
 ```Go
@@ -123,6 +130,7 @@ func Extension(extensionID string) string
 
 ```
 searchKey: router.RegistryPublisherExtensions
+tags: [method]
 ```
 
 ```Go

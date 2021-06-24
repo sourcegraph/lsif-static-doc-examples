@@ -9,77 +9,69 @@ Note that the examples in this package assume a Unix system. They may not run on
 ## Index
 
 * [Variables](#var)
-    * [var skipStdinCopyError](#skipStdinCopyError)
     * [var ErrNotFound](#ErrNotFound)
     * [var nonExistentPaths](#nonExistentPaths)
+    * [var skipStdinCopyError](#skipStdinCopyError)
 * [Types](#type)
-    * [type Error struct](#Error)
-        * [func (e *Error) Error() string](#Error.Error)
-        * [func (e *Error) Unwrap() error](#Error.Unwrap)
     * [type Cmd struct](#Cmd)
         * [func Command(name string, arg ...string) *Cmd](#Command)
         * [func CommandContext(ctx context.Context, name string, arg ...string) *Cmd](#CommandContext)
-        * [func (c *Cmd) String() string](#Cmd.String)
-        * [func (c *Cmd) envv() ([]string, error)](#Cmd.envv)
-        * [func (c *Cmd) argv() []string](#Cmd.argv)
-        * [func (c *Cmd) stdin() (f *os.File, err error)](#Cmd.stdin)
-        * [func (c *Cmd) stdout() (f *os.File, err error)](#Cmd.stdout)
-        * [func (c *Cmd) stderr() (f *os.File, err error)](#Cmd.stderr)
-        * [func (c *Cmd) writerDescriptor(w io.Writer) (f *os.File, err error)](#Cmd.writerDescriptor)
-        * [func (c *Cmd) closeDescriptors(closers []io.Closer)](#Cmd.closeDescriptors)
+        * [func (c *Cmd) CombinedOutput() ([]byte, error)](#Cmd.CombinedOutput)
+        * [func (c *Cmd) Output() ([]byte, error)](#Cmd.Output)
         * [func (c *Cmd) Run() error](#Cmd.Run)
         * [func (c *Cmd) Start() error](#Cmd.Start)
-        * [func (c *Cmd) Wait() error](#Cmd.Wait)
-        * [func (c *Cmd) Output() ([]byte, error)](#Cmd.Output)
-        * [func (c *Cmd) CombinedOutput() ([]byte, error)](#Cmd.CombinedOutput)
+        * [func (c *Cmd) StderrPipe() (io.ReadCloser, error)](#Cmd.StderrPipe)
         * [func (c *Cmd) StdinPipe() (io.WriteCloser, error)](#Cmd.StdinPipe)
         * [func (c *Cmd) StdoutPipe() (io.ReadCloser, error)](#Cmd.StdoutPipe)
-        * [func (c *Cmd) StderrPipe() (io.ReadCloser, error)](#Cmd.StderrPipe)
+        * [func (c *Cmd) String() string](#Cmd.String)
+        * [func (c *Cmd) Wait() error](#Cmd.Wait)
+        * [func (c *Cmd) argv() []string](#Cmd.argv)
+        * [func (c *Cmd) closeDescriptors(closers []io.Closer)](#Cmd.closeDescriptors)
+        * [func (c *Cmd) envv() ([]string, error)](#Cmd.envv)
+        * [func (c *Cmd) stderr() (f *os.File, err error)](#Cmd.stderr)
+        * [func (c *Cmd) stdin() (f *os.File, err error)](#Cmd.stdin)
+        * [func (c *Cmd) stdout() (f *os.File, err error)](#Cmd.stdout)
+        * [func (c *Cmd) writerDescriptor(w io.Writer) (f *os.File, err error)](#Cmd.writerDescriptor)
+    * [type Error struct](#Error)
+        * [func (e *Error) Error() string](#Error.Error)
+        * [func (e *Error) Unwrap() error](#Error.Unwrap)
     * [type ExitError struct](#ExitError)
         * [func (e *ExitError) Error() string](#ExitError.Error)
     * [type closeOnce struct](#closeOnce)
         * [func (c *closeOnce) Close() error](#closeOnce.Close)
         * [func (c *closeOnce) close()](#closeOnce.close)
     * [type prefixSuffixSaver struct](#prefixSuffixSaver)
+        * [func (w *prefixSuffixSaver) Bytes() []byte](#prefixSuffixSaver.Bytes)
         * [func (w *prefixSuffixSaver) Write(p []byte) (n int, err error)](#prefixSuffixSaver.Write)
         * [func (w *prefixSuffixSaver) fill(dst *[]byte, p []byte) (pRemain []byte)](#prefixSuffixSaver.fill)
-        * [func (w *prefixSuffixSaver) Bytes() []byte](#prefixSuffixSaver.Bytes)
 * [Functions](#func)
+    * [func BenchmarkExecHostname(b *testing.B)](#BenchmarkExecHostname)
+    * [func LookPath(file string) (string, error)](#LookPath)
+    * [func TestDedupEnv(t *testing.T)](#TestDedupEnv)
+    * [func TestLookPathNotFound(t *testing.T)](#TestLookPathNotFound)
+    * [func TestLookPathUnixEmptyPath(t *testing.T)](#TestLookPathUnixEmptyPath)
+    * [func TestPrefixSuffixSaver(t *testing.T)](#TestPrefixSuffixSaver)
+    * [func addCriticalEnv(env []string) []string](#addCriticalEnv)
+    * [func dedupEnv(env []string) []string](#dedupEnv)
+    * [func dedupEnvCase(caseInsensitive bool, env []string) []string](#dedupEnvCase)
+    * [func findExecutable(file string) error](#findExecutable)
+    * [func init()](#init.exec_unix.go)
     * [func interfaceEqual(a, b interface{}) bool](#interfaceEqual)
     * [func lookExtensions(path, dir string) (string, error)](#lookExtensions)
     * [func minInt(a, b int) int](#minInt)
-    * [func dedupEnv(env []string) []string](#dedupEnv)
-    * [func dedupEnvCase(caseInsensitive bool, env []string) []string](#dedupEnvCase)
-    * [func addCriticalEnv(env []string) []string](#addCriticalEnv)
-    * [func init()](#init.exec_unix.go)
-    * [func findExecutable(file string) error](#findExecutable)
-    * [func LookPath(file string) (string, error)](#LookPath)
-    * [func BenchmarkExecHostname(b *testing.B)](#BenchmarkExecHostname)
-    * [func TestDedupEnv(t *testing.T)](#TestDedupEnv)
-    * [func TestPrefixSuffixSaver(t *testing.T)](#TestPrefixSuffixSaver)
-    * [func TestLookPathNotFound(t *testing.T)](#TestLookPathNotFound)
-    * [func TestLookPathUnixEmptyPath(t *testing.T)](#TestLookPathUnixEmptyPath)
 
 
 ## <a id="var" href="#var">Variables</a>
 
-### <a id="skipStdinCopyError" href="#skipStdinCopyError">var skipStdinCopyError</a>
-
 ```
-searchKey: exec.skipStdinCopyError
-tags: [private]
+tags: [package]
 ```
-
-```Go
-var skipStdinCopyError func(error) bool
-```
-
-skipStdinCopyError optionally specifies a function which reports whether the provided stdin copy error should be ignored. 
 
 ### <a id="ErrNotFound" href="#ErrNotFound">var ErrNotFound</a>
 
 ```
 searchKey: exec.ErrNotFound
+tags: [variable interface]
 ```
 
 ```Go
@@ -92,7 +84,7 @@ ErrNotFound is the error resulting if a path search failed to find an executable
 
 ```
 searchKey: exec.nonExistentPaths
-tags: [private]
+tags: [variable array string private]
 ```
 
 ```Go
@@ -102,49 +94,30 @@ var nonExistentPaths = []string{
 }
 ```
 
+### <a id="skipStdinCopyError" href="#skipStdinCopyError">var skipStdinCopyError</a>
+
+```
+searchKey: exec.skipStdinCopyError
+tags: [variable function private]
+```
+
+```Go
+var skipStdinCopyError func(error) bool
+```
+
+skipStdinCopyError optionally specifies a function which reports whether the provided stdin copy error should be ignored. 
+
 ## <a id="type" href="#type">Types</a>
 
-### <a id="Error" href="#Error">type Error struct</a>
-
 ```
-searchKey: exec.Error
-```
-
-```Go
-type Error struct {
-	// Name is the file name for which the error occurred.
-	Name string
-	// Err is the underlying error.
-	Err error
-}
-```
-
-Error is returned by LookPath when it fails to classify a file as an executable. 
-
-#### <a id="Error.Error" href="#Error.Error">func (e *Error) Error() string</a>
-
-```
-searchKey: exec.Error.Error
-```
-
-```Go
-func (e *Error) Error() string
-```
-
-#### <a id="Error.Unwrap" href="#Error.Unwrap">func (e *Error) Unwrap() error</a>
-
-```
-searchKey: exec.Error.Unwrap
-```
-
-```Go
-func (e *Error) Unwrap() error
+tags: [package]
 ```
 
 ### <a id="Cmd" href="#Cmd">type Cmd struct</a>
 
 ```
 searchKey: exec.Cmd
+tags: [struct]
 ```
 
 ```Go
@@ -247,6 +220,7 @@ A Cmd cannot be reused after calling its Run, Output or CombinedOutput methods.
 
 ```
 searchKey: exec.Command
+tags: [method]
 ```
 
 ```Go
@@ -267,6 +241,7 @@ On Windows, processes receive the whole command line as a single string and do t
 
 ```
 searchKey: exec.CommandContext
+tags: [method]
 ```
 
 ```Go
@@ -277,99 +252,37 @@ CommandContext is like Command but includes a context.
 
 The provided context is used to kill the process (by calling os.Process.Kill) if the context becomes done before the command completes on its own. 
 
-#### <a id="Cmd.String" href="#Cmd.String">func (c *Cmd) String() string</a>
+#### <a id="Cmd.CombinedOutput" href="#Cmd.CombinedOutput">func (c *Cmd) CombinedOutput() ([]byte, error)</a>
 
 ```
-searchKey: exec.Cmd.String
-```
-
-```Go
-func (c *Cmd) String() string
-```
-
-String returns a human-readable description of c. It is intended only for debugging. In particular, it is not suitable for use as input to a shell. The output of String may vary across Go releases. 
-
-#### <a id="Cmd.envv" href="#Cmd.envv">func (c *Cmd) envv() ([]string, error)</a>
-
-```
-searchKey: exec.Cmd.envv
-tags: [private]
+searchKey: exec.Cmd.CombinedOutput
+tags: [function]
 ```
 
 ```Go
-func (c *Cmd) envv() ([]string, error)
+func (c *Cmd) CombinedOutput() ([]byte, error)
 ```
 
-#### <a id="Cmd.argv" href="#Cmd.argv">func (c *Cmd) argv() []string</a>
+CombinedOutput runs the command and returns its combined standard output and standard error. 
+
+#### <a id="Cmd.Output" href="#Cmd.Output">func (c *Cmd) Output() ([]byte, error)</a>
 
 ```
-searchKey: exec.Cmd.argv
-tags: [private]
-```
-
-```Go
-func (c *Cmd) argv() []string
-```
-
-#### <a id="Cmd.stdin" href="#Cmd.stdin">func (c *Cmd) stdin() (f *os.File, err error)</a>
-
-```
-searchKey: exec.Cmd.stdin
-tags: [private]
+searchKey: exec.Cmd.Output
+tags: [function]
 ```
 
 ```Go
-func (c *Cmd) stdin() (f *os.File, err error)
+func (c *Cmd) Output() ([]byte, error)
 ```
 
-#### <a id="Cmd.stdout" href="#Cmd.stdout">func (c *Cmd) stdout() (f *os.File, err error)</a>
-
-```
-searchKey: exec.Cmd.stdout
-tags: [private]
-```
-
-```Go
-func (c *Cmd) stdout() (f *os.File, err error)
-```
-
-#### <a id="Cmd.stderr" href="#Cmd.stderr">func (c *Cmd) stderr() (f *os.File, err error)</a>
-
-```
-searchKey: exec.Cmd.stderr
-tags: [private]
-```
-
-```Go
-func (c *Cmd) stderr() (f *os.File, err error)
-```
-
-#### <a id="Cmd.writerDescriptor" href="#Cmd.writerDescriptor">func (c *Cmd) writerDescriptor(w io.Writer) (f *os.File, err error)</a>
-
-```
-searchKey: exec.Cmd.writerDescriptor
-tags: [private]
-```
-
-```Go
-func (c *Cmd) writerDescriptor(w io.Writer) (f *os.File, err error)
-```
-
-#### <a id="Cmd.closeDescriptors" href="#Cmd.closeDescriptors">func (c *Cmd) closeDescriptors(closers []io.Closer)</a>
-
-```
-searchKey: exec.Cmd.closeDescriptors
-tags: [private]
-```
-
-```Go
-func (c *Cmd) closeDescriptors(closers []io.Closer)
-```
+Output runs the command and returns its standard output. Any returned error will usually be of type *ExitError. If c.Stderr was nil, Output populates ExitError.Stderr. 
 
 #### <a id="Cmd.Run" href="#Cmd.Run">func (c *Cmd) Run() error</a>
 
 ```
 searchKey: exec.Cmd.Run
+tags: [function]
 ```
 
 ```Go
@@ -388,6 +301,7 @@ If the calling goroutine has locked the operating system thread with runtime.Loc
 
 ```
 searchKey: exec.Cmd.Start
+tags: [function]
 ```
 
 ```Go
@@ -400,10 +314,67 @@ If Start returns successfully, the c.Process field will be set.
 
 The Wait method will return the exit code and release associated resources once the command exits. 
 
+#### <a id="Cmd.StderrPipe" href="#Cmd.StderrPipe">func (c *Cmd) StderrPipe() (io.ReadCloser, error)</a>
+
+```
+searchKey: exec.Cmd.StderrPipe
+tags: [function]
+```
+
+```Go
+func (c *Cmd) StderrPipe() (io.ReadCloser, error)
+```
+
+StderrPipe returns a pipe that will be connected to the command's standard error when the command starts. 
+
+Wait will close the pipe after seeing the command exit, so most callers need not close the pipe themselves. It is thus incorrect to call Wait before all reads from the pipe have completed. For the same reason, it is incorrect to use Run when using StderrPipe. See the StdoutPipe example for idiomatic usage. 
+
+#### <a id="Cmd.StdinPipe" href="#Cmd.StdinPipe">func (c *Cmd) StdinPipe() (io.WriteCloser, error)</a>
+
+```
+searchKey: exec.Cmd.StdinPipe
+tags: [function]
+```
+
+```Go
+func (c *Cmd) StdinPipe() (io.WriteCloser, error)
+```
+
+StdinPipe returns a pipe that will be connected to the command's standard input when the command starts. The pipe will be closed automatically after Wait sees the command exit. A caller need only call Close to force the pipe to close sooner. For example, if the command being run will not exit until standard input is closed, the caller must close the pipe. 
+
+#### <a id="Cmd.StdoutPipe" href="#Cmd.StdoutPipe">func (c *Cmd) StdoutPipe() (io.ReadCloser, error)</a>
+
+```
+searchKey: exec.Cmd.StdoutPipe
+tags: [function]
+```
+
+```Go
+func (c *Cmd) StdoutPipe() (io.ReadCloser, error)
+```
+
+StdoutPipe returns a pipe that will be connected to the command's standard output when the command starts. 
+
+Wait will close the pipe after seeing the command exit, so most callers need not close the pipe themselves. It is thus incorrect to call Wait before all reads from the pipe have completed. For the same reason, it is incorrect to call Run when using StdoutPipe. See the example for idiomatic usage. 
+
+#### <a id="Cmd.String" href="#Cmd.String">func (c *Cmd) String() string</a>
+
+```
+searchKey: exec.Cmd.String
+tags: [function]
+```
+
+```Go
+func (c *Cmd) String() string
+```
+
+String returns a human-readable description of c. It is intended only for debugging. In particular, it is not suitable for use as input to a shell. The output of String may vary across Go releases. 
+
 #### <a id="Cmd.Wait" href="#Cmd.Wait">func (c *Cmd) Wait() error</a>
 
 ```
 searchKey: exec.Cmd.Wait
+tags: [function]
 ```
 
 ```Go
@@ -422,74 +393,128 @@ If any of c.Stdin, c.Stdout or c.Stderr are not an *os.File, Wait also waits for
 
 Wait releases any resources associated with the Cmd. 
 
-#### <a id="Cmd.Output" href="#Cmd.Output">func (c *Cmd) Output() ([]byte, error)</a>
+#### <a id="Cmd.argv" href="#Cmd.argv">func (c *Cmd) argv() []string</a>
 
 ```
-searchKey: exec.Cmd.Output
-```
-
-```Go
-func (c *Cmd) Output() ([]byte, error)
-```
-
-Output runs the command and returns its standard output. Any returned error will usually be of type *ExitError. If c.Stderr was nil, Output populates ExitError.Stderr. 
-
-#### <a id="Cmd.CombinedOutput" href="#Cmd.CombinedOutput">func (c *Cmd) CombinedOutput() ([]byte, error)</a>
-
-```
-searchKey: exec.Cmd.CombinedOutput
+searchKey: exec.Cmd.argv
+tags: [function private]
 ```
 
 ```Go
-func (c *Cmd) CombinedOutput() ([]byte, error)
+func (c *Cmd) argv() []string
 ```
 
-CombinedOutput runs the command and returns its combined standard output and standard error. 
-
-#### <a id="Cmd.StdinPipe" href="#Cmd.StdinPipe">func (c *Cmd) StdinPipe() (io.WriteCloser, error)</a>
+#### <a id="Cmd.closeDescriptors" href="#Cmd.closeDescriptors">func (c *Cmd) closeDescriptors(closers []io.Closer)</a>
 
 ```
-searchKey: exec.Cmd.StdinPipe
-```
-
-```Go
-func (c *Cmd) StdinPipe() (io.WriteCloser, error)
-```
-
-StdinPipe returns a pipe that will be connected to the command's standard input when the command starts. The pipe will be closed automatically after Wait sees the command exit. A caller need only call Close to force the pipe to close sooner. For example, if the command being run will not exit until standard input is closed, the caller must close the pipe. 
-
-#### <a id="Cmd.StdoutPipe" href="#Cmd.StdoutPipe">func (c *Cmd) StdoutPipe() (io.ReadCloser, error)</a>
-
-```
-searchKey: exec.Cmd.StdoutPipe
+searchKey: exec.Cmd.closeDescriptors
+tags: [method private]
 ```
 
 ```Go
-func (c *Cmd) StdoutPipe() (io.ReadCloser, error)
+func (c *Cmd) closeDescriptors(closers []io.Closer)
 ```
 
-StdoutPipe returns a pipe that will be connected to the command's standard output when the command starts. 
-
-Wait will close the pipe after seeing the command exit, so most callers need not close the pipe themselves. It is thus incorrect to call Wait before all reads from the pipe have completed. For the same reason, it is incorrect to call Run when using StdoutPipe. See the example for idiomatic usage. 
-
-#### <a id="Cmd.StderrPipe" href="#Cmd.StderrPipe">func (c *Cmd) StderrPipe() (io.ReadCloser, error)</a>
+#### <a id="Cmd.envv" href="#Cmd.envv">func (c *Cmd) envv() ([]string, error)</a>
 
 ```
-searchKey: exec.Cmd.StderrPipe
+searchKey: exec.Cmd.envv
+tags: [function private]
 ```
 
 ```Go
-func (c *Cmd) StderrPipe() (io.ReadCloser, error)
+func (c *Cmd) envv() ([]string, error)
 ```
 
-StderrPipe returns a pipe that will be connected to the command's standard error when the command starts. 
+#### <a id="Cmd.stderr" href="#Cmd.stderr">func (c *Cmd) stderr() (f *os.File, err error)</a>
 
-Wait will close the pipe after seeing the command exit, so most callers need not close the pipe themselves. It is thus incorrect to call Wait before all reads from the pipe have completed. For the same reason, it is incorrect to use Run when using StderrPipe. See the StdoutPipe example for idiomatic usage. 
+```
+searchKey: exec.Cmd.stderr
+tags: [function private]
+```
+
+```Go
+func (c *Cmd) stderr() (f *os.File, err error)
+```
+
+#### <a id="Cmd.stdin" href="#Cmd.stdin">func (c *Cmd) stdin() (f *os.File, err error)</a>
+
+```
+searchKey: exec.Cmd.stdin
+tags: [function private]
+```
+
+```Go
+func (c *Cmd) stdin() (f *os.File, err error)
+```
+
+#### <a id="Cmd.stdout" href="#Cmd.stdout">func (c *Cmd) stdout() (f *os.File, err error)</a>
+
+```
+searchKey: exec.Cmd.stdout
+tags: [function private]
+```
+
+```Go
+func (c *Cmd) stdout() (f *os.File, err error)
+```
+
+#### <a id="Cmd.writerDescriptor" href="#Cmd.writerDescriptor">func (c *Cmd) writerDescriptor(w io.Writer) (f *os.File, err error)</a>
+
+```
+searchKey: exec.Cmd.writerDescriptor
+tags: [method private]
+```
+
+```Go
+func (c *Cmd) writerDescriptor(w io.Writer) (f *os.File, err error)
+```
+
+### <a id="Error" href="#Error">type Error struct</a>
+
+```
+searchKey: exec.Error
+tags: [struct]
+```
+
+```Go
+type Error struct {
+	// Name is the file name for which the error occurred.
+	Name string
+	// Err is the underlying error.
+	Err error
+}
+```
+
+Error is returned by LookPath when it fails to classify a file as an executable. 
+
+#### <a id="Error.Error" href="#Error.Error">func (e *Error) Error() string</a>
+
+```
+searchKey: exec.Error.Error
+tags: [function]
+```
+
+```Go
+func (e *Error) Error() string
+```
+
+#### <a id="Error.Unwrap" href="#Error.Unwrap">func (e *Error) Unwrap() error</a>
+
+```
+searchKey: exec.Error.Unwrap
+tags: [function]
+```
+
+```Go
+func (e *Error) Unwrap() error
+```
 
 ### <a id="ExitError" href="#ExitError">type ExitError struct</a>
 
 ```
 searchKey: exec.ExitError
+tags: [struct]
 ```
 
 ```Go
@@ -516,6 +541,7 @@ An ExitError reports an unsuccessful exit by a command.
 
 ```
 searchKey: exec.ExitError.Error
+tags: [function]
 ```
 
 ```Go
@@ -526,7 +552,7 @@ func (e *ExitError) Error() string
 
 ```
 searchKey: exec.closeOnce
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -542,7 +568,7 @@ type closeOnce struct {
 
 ```
 searchKey: exec.closeOnce.Close
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -553,7 +579,7 @@ func (c *closeOnce) Close() error
 
 ```
 searchKey: exec.closeOnce.close
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -564,7 +590,7 @@ func (c *closeOnce) close()
 
 ```
 searchKey: exec.prefixSuffixSaver
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -579,11 +605,22 @@ type prefixSuffixSaver struct {
 
 prefixSuffixSaver is an io.Writer which retains the first N bytes and the last N bytes written to it. The Bytes() methods reconstructs it with a pretty error message. 
 
+#### <a id="prefixSuffixSaver.Bytes" href="#prefixSuffixSaver.Bytes">func (w *prefixSuffixSaver) Bytes() []byte</a>
+
+```
+searchKey: exec.prefixSuffixSaver.Bytes
+tags: [function private]
+```
+
+```Go
+func (w *prefixSuffixSaver) Bytes() []byte
+```
+
 #### <a id="prefixSuffixSaver.Write" href="#prefixSuffixSaver.Write">func (w *prefixSuffixSaver) Write(p []byte) (n int, err error)</a>
 
 ```
 searchKey: exec.prefixSuffixSaver.Write
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -594,7 +631,7 @@ func (w *prefixSuffixSaver) Write(p []byte) (n int, err error)
 
 ```
 searchKey: exec.prefixSuffixSaver.fill
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -603,61 +640,98 @@ func (w *prefixSuffixSaver) fill(dst *[]byte, p []byte) (pRemain []byte)
 
 fill appends up to len(p) bytes of p to *dst, such that *dst does not grow larger than w.N. It returns the un-appended suffix of p. 
 
-#### <a id="prefixSuffixSaver.Bytes" href="#prefixSuffixSaver.Bytes">func (w *prefixSuffixSaver) Bytes() []byte</a>
-
-```
-searchKey: exec.prefixSuffixSaver.Bytes
-tags: [private]
-```
-
-```Go
-func (w *prefixSuffixSaver) Bytes() []byte
-```
-
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="interfaceEqual" href="#interfaceEqual">func interfaceEqual(a, b interface{}) bool</a>
-
 ```
-searchKey: exec.interfaceEqual
-tags: [private]
+tags: [package]
 ```
 
-```Go
-func interfaceEqual(a, b interface{}) bool
-```
-
-interfaceEqual protects against panics from doing equality tests on two interfaces with non-comparable underlying types. 
-
-### <a id="lookExtensions" href="#lookExtensions">func lookExtensions(path, dir string) (string, error)</a>
+### <a id="BenchmarkExecHostname" href="#BenchmarkExecHostname">func BenchmarkExecHostname(b *testing.B)</a>
 
 ```
-searchKey: exec.lookExtensions
-tags: [private]
+searchKey: exec.BenchmarkExecHostname
+tags: [method private benchmark]
 ```
 
 ```Go
-func lookExtensions(path, dir string) (string, error)
+func BenchmarkExecHostname(b *testing.B)
 ```
 
-lookExtensions finds windows executable by its dir and path. It uses LookPath to try appropriate extensions. lookExtensions does not search PATH, instead it converts `prog` into `.\prog`. 
-
-### <a id="minInt" href="#minInt">func minInt(a, b int) int</a>
+### <a id="LookPath" href="#LookPath">func LookPath(file string) (string, error)</a>
 
 ```
-searchKey: exec.minInt
-tags: [private]
+searchKey: exec.LookPath
+tags: [method]
 ```
 
 ```Go
-func minInt(a, b int) int
+func LookPath(file string) (string, error)
 ```
+
+LookPath searches for an executable named file in the directories named by the PATH environment variable. If file contains a slash, it is tried directly and the PATH is not consulted. The result may be an absolute path or a path relative to the current directory. 
+
+### <a id="TestDedupEnv" href="#TestDedupEnv">func TestDedupEnv(t *testing.T)</a>
+
+```
+searchKey: exec.TestDedupEnv
+tags: [method private test]
+```
+
+```Go
+func TestDedupEnv(t *testing.T)
+```
+
+### <a id="TestLookPathNotFound" href="#TestLookPathNotFound">func TestLookPathNotFound(t *testing.T)</a>
+
+```
+searchKey: exec.TestLookPathNotFound
+tags: [method private test]
+```
+
+```Go
+func TestLookPathNotFound(t *testing.T)
+```
+
+### <a id="TestLookPathUnixEmptyPath" href="#TestLookPathUnixEmptyPath">func TestLookPathUnixEmptyPath(t *testing.T)</a>
+
+```
+searchKey: exec.TestLookPathUnixEmptyPath
+tags: [method private test]
+```
+
+```Go
+func TestLookPathUnixEmptyPath(t *testing.T)
+```
+
+### <a id="TestPrefixSuffixSaver" href="#TestPrefixSuffixSaver">func TestPrefixSuffixSaver(t *testing.T)</a>
+
+```
+searchKey: exec.TestPrefixSuffixSaver
+tags: [method private test]
+```
+
+```Go
+func TestPrefixSuffixSaver(t *testing.T)
+```
+
+### <a id="addCriticalEnv" href="#addCriticalEnv">func addCriticalEnv(env []string) []string</a>
+
+```
+searchKey: exec.addCriticalEnv
+tags: [method private]
+```
+
+```Go
+func addCriticalEnv(env []string) []string
+```
+
+addCriticalEnv adds any critical environment variables that are required (or at least almost always required) on the operating system. Currently this is only used for Windows. 
 
 ### <a id="dedupEnv" href="#dedupEnv">func dedupEnv(env []string) []string</a>
 
 ```
 searchKey: exec.dedupEnv
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -670,7 +744,7 @@ dedupEnv returns a copy of env with any duplicates removed, in favor of later va
 
 ```
 searchKey: exec.dedupEnvCase
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -679,105 +753,62 @@ func dedupEnvCase(caseInsensitive bool, env []string) []string
 
 dedupEnvCase is dedupEnv with a case option for testing. If caseInsensitive is true, the case of keys is ignored. 
 
-### <a id="addCriticalEnv" href="#addCriticalEnv">func addCriticalEnv(env []string) []string</a>
-
-```
-searchKey: exec.addCriticalEnv
-tags: [private]
-```
-
-```Go
-func addCriticalEnv(env []string) []string
-```
-
-addCriticalEnv adds any critical environment variables that are required (or at least almost always required) on the operating system. Currently this is only used for Windows. 
-
-### <a id="init.exec_unix.go" href="#init.exec_unix.go">func init()</a>
-
-```
-searchKey: exec.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
 ### <a id="findExecutable" href="#findExecutable">func findExecutable(file string) error</a>
 
 ```
 searchKey: exec.findExecutable
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func findExecutable(file string) error
 ```
 
-### <a id="LookPath" href="#LookPath">func LookPath(file string) (string, error)</a>
+### <a id="init.exec_unix.go" href="#init.exec_unix.go">func init()</a>
 
 ```
-searchKey: exec.LookPath
-```
-
-```Go
-func LookPath(file string) (string, error)
-```
-
-LookPath searches for an executable named file in the directories named by the PATH environment variable. If file contains a slash, it is tried directly and the PATH is not consulted. The result may be an absolute path or a path relative to the current directory. 
-
-### <a id="BenchmarkExecHostname" href="#BenchmarkExecHostname">func BenchmarkExecHostname(b *testing.B)</a>
-
-```
-searchKey: exec.BenchmarkExecHostname
-tags: [private]
+searchKey: exec.init
+tags: [function private]
 ```
 
 ```Go
-func BenchmarkExecHostname(b *testing.B)
+func init()
 ```
 
-### <a id="TestDedupEnv" href="#TestDedupEnv">func TestDedupEnv(t *testing.T)</a>
+### <a id="interfaceEqual" href="#interfaceEqual">func interfaceEqual(a, b interface{}) bool</a>
 
 ```
-searchKey: exec.TestDedupEnv
-tags: [private]
-```
-
-```Go
-func TestDedupEnv(t *testing.T)
-```
-
-### <a id="TestPrefixSuffixSaver" href="#TestPrefixSuffixSaver">func TestPrefixSuffixSaver(t *testing.T)</a>
-
-```
-searchKey: exec.TestPrefixSuffixSaver
-tags: [private]
+searchKey: exec.interfaceEqual
+tags: [method private]
 ```
 
 ```Go
-func TestPrefixSuffixSaver(t *testing.T)
+func interfaceEqual(a, b interface{}) bool
 ```
 
-### <a id="TestLookPathNotFound" href="#TestLookPathNotFound">func TestLookPathNotFound(t *testing.T)</a>
+interfaceEqual protects against panics from doing equality tests on two interfaces with non-comparable underlying types. 
+
+### <a id="lookExtensions" href="#lookExtensions">func lookExtensions(path, dir string) (string, error)</a>
 
 ```
-searchKey: exec.TestLookPathNotFound
-tags: [private]
-```
-
-```Go
-func TestLookPathNotFound(t *testing.T)
-```
-
-### <a id="TestLookPathUnixEmptyPath" href="#TestLookPathUnixEmptyPath">func TestLookPathUnixEmptyPath(t *testing.T)</a>
-
-```
-searchKey: exec.TestLookPathUnixEmptyPath
-tags: [private]
+searchKey: exec.lookExtensions
+tags: [method private]
 ```
 
 ```Go
-func TestLookPathUnixEmptyPath(t *testing.T)
+func lookExtensions(path, dir string) (string, error)
+```
+
+lookExtensions finds windows executable by its dir and path. It uses LookPath to try appropriate extensions. lookExtensions does not search PATH, instead it converts `prog` into `.\prog`. 
+
+### <a id="minInt" href="#minInt">func minInt(a, b int) int</a>
+
+```
+searchKey: exec.minInt
+tags: [method private]
+```
+
+```Go
+func minInt(a, b int) int
 ```
 

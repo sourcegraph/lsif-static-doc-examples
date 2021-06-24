@@ -3,120 +3,128 @@
 ## Index
 
 * [Variables](#var)
-    * [var client](#client)
-    * [var long](#long)
     * [var baseURL](#baseURL)
-    * [var email](#email)
-    * [var username](#username)
-    * [var password](#password)
-    * [var githubToken](#githubToken)
+    * [var client](#client)
     * [var dotcom](#dotcom)
+    * [var email](#email)
+    * [var githubToken](#githubToken)
+    * [var long](#long)
+    * [var password](#password)
+    * [var username](#username)
 * [Functions](#func)
     * [func TestCodeIntelEndpoints(t *testing.T)](#TestCodeIntelEndpoints)
     * [func TestMain(m *testing.M)](#TestMain)
-    * [func mustMarshalJSONString(v interface{}) string](#mustMarshalJSONString)
     * [func TestOrganization(t *testing.T)](#TestOrganization)
     * [func TestRepository(t *testing.T)](#TestRepository)
     * [func TestSiteAdminEndpoints(t *testing.T)](#TestSiteAdminEndpoints)
+    * [func mustMarshalJSONString(v interface{}) string](#mustMarshalJSONString)
 
 
 ## <a id="var" href="#var">Variables</a>
 
-### <a id="client" href="#client">var client</a>
-
 ```
-searchKey: authtest.client
-tags: [private]
-```
-
-```Go
-var client *gqltestutil.Client
-```
-
-### <a id="long" href="#long">var long</a>
-
-```
-searchKey: authtest.long
-tags: [private]
-```
-
-```Go
-var long = ...
+tags: [package]
 ```
 
 ### <a id="baseURL" href="#baseURL">var baseURL</a>
 
 ```
 searchKey: authtest.baseURL
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
 var baseURL = ...
 ```
 
-### <a id="email" href="#email">var email</a>
+### <a id="client" href="#client">var client</a>
 
 ```
-searchKey: authtest.email
-tags: [private]
-```
-
-```Go
-var email = flag.String("email", "authtest@sourcegraph.com", "The email of the admin user")
-```
-
-### <a id="username" href="#username">var username</a>
-
-```
-searchKey: authtest.username
-tags: [private]
+searchKey: authtest.client
+tags: [variable struct private]
 ```
 
 ```Go
-var username = flag.String("username", "authtest-admin", "The username of the admin user")
-```
-
-### <a id="password" href="#password">var password</a>
-
-```
-searchKey: authtest.password
-tags: [private]
-```
-
-```Go
-var password = flag.String("password", "supersecurepassword", "The password of the admin user")
-```
-
-### <a id="githubToken" href="#githubToken">var githubToken</a>
-
-```
-searchKey: authtest.githubToken
-tags: [private]
-```
-
-```Go
-var githubToken = ...
+var client *gqltestutil.Client
 ```
 
 ### <a id="dotcom" href="#dotcom">var dotcom</a>
 
 ```
 searchKey: authtest.dotcom
-tags: [private]
+tags: [variable boolean private]
 ```
 
 ```Go
 var dotcom = flag.Bool("dotcom", false, "Whether to test dotcom specific constraints")
 ```
 
+### <a id="email" href="#email">var email</a>
+
+```
+searchKey: authtest.email
+tags: [variable string private]
+```
+
+```Go
+var email = flag.String("email", "authtest@sourcegraph.com", "The email of the admin user")
+```
+
+### <a id="githubToken" href="#githubToken">var githubToken</a>
+
+```
+searchKey: authtest.githubToken
+tags: [variable string private]
+```
+
+```Go
+var githubToken = ...
+```
+
+### <a id="long" href="#long">var long</a>
+
+```
+searchKey: authtest.long
+tags: [variable boolean private]
+```
+
+```Go
+var long = ...
+```
+
+### <a id="password" href="#password">var password</a>
+
+```
+searchKey: authtest.password
+tags: [variable string private]
+```
+
+```Go
+var password = flag.String("password", "supersecurepassword", "The password of the admin user")
+```
+
+### <a id="username" href="#username">var username</a>
+
+```
+searchKey: authtest.username
+tags: [variable string private]
+```
+
+```Go
+var username = flag.String("username", "authtest-admin", "The username of the admin user")
+```
+
 ## <a id="func" href="#func">Functions</a>
+
+```
+tags: [package]
+```
 
 ### <a id="TestCodeIntelEndpoints" href="#TestCodeIntelEndpoints">func TestCodeIntelEndpoints(t *testing.T)</a>
 
 ```
 searchKey: authtest.TestCodeIntelEndpoints
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -127,29 +135,18 @@ func TestCodeIntelEndpoints(t *testing.T)
 
 ```
 searchKey: authtest.TestMain
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestMain(m *testing.M)
 ```
 
-### <a id="mustMarshalJSONString" href="#mustMarshalJSONString">func mustMarshalJSONString(v interface{}) string</a>
-
-```
-searchKey: authtest.mustMarshalJSONString
-tags: [private]
-```
-
-```Go
-func mustMarshalJSONString(v interface{}) string
-```
-
 ### <a id="TestOrganization" href="#TestOrganization">func TestOrganization(t *testing.T)</a>
 
 ```
 searchKey: authtest.TestOrganization
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -160,7 +157,7 @@ func TestOrganization(t *testing.T)
 
 ```
 searchKey: authtest.TestRepository
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -171,10 +168,21 @@ func TestRepository(t *testing.T)
 
 ```
 searchKey: authtest.TestSiteAdminEndpoints
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestSiteAdminEndpoints(t *testing.T)
+```
+
+### <a id="mustMarshalJSONString" href="#mustMarshalJSONString">func mustMarshalJSONString(v interface{}) string</a>
+
+```
+searchKey: authtest.mustMarshalJSONString
+tags: [method private]
+```
+
+```Go
+func mustMarshalJSONString(v interface{}) string
 ```
 

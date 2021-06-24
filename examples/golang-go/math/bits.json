@@ -4,7 +4,9 @@
     "identifier": "bits",
     "newPage": true,
     "searchKey": "math/bits",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,22 +39,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/math/bits#uintSize",
+              "pathID": "/math/bits#DeBruijn64",
               "documentation": {
-                "identifier": "uintSize",
+                "identifier": "DeBruijn64",
                 "newPage": false,
-                "searchKey": "bits.uintSize",
+                "searchKey": "bits.DeBruijn64",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const uintSize"
+                "value": "const DeBruijn64"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst uintSize = 32 << (^uint(0) >> 63) // 32 or 64\n\n```\n\n"
+                "value": "```Go\nconst DeBruijn64 = deBruijn64\n```\n\n"
               },
               "children": null
             }
@@ -62,7 +68,10 @@
                 "identifier": "UintSize",
                 "newPage": false,
                 "searchKey": "bits.UintSize",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -83,6 +92,8 @@
                 "newPage": false,
                 "searchKey": "bits.deBruijn32",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -105,6 +116,8 @@
                 "newPage": false,
                 "searchKey": "bits.deBruijn64",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -121,12 +134,38 @@
           },
           {
             "node": {
+              "pathID": "/math/bits#len8tab",
+              "documentation": {
+                "identifier": "len8tab",
+                "newPage": false,
+                "searchKey": "bits.len8tab",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const len8tab"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst len8tab = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/bits#m0",
               "documentation": {
                 "identifier": "m0",
                 "newPage": false,
                 "searchKey": "bits.m0",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -149,6 +188,8 @@
                 "newPage": false,
                 "searchKey": "bits.m1",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -171,6 +212,8 @@
                 "newPage": false,
                 "searchKey": "bits.m2",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -193,6 +236,8 @@
                 "newPage": false,
                 "searchKey": "bits.m3",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -215,6 +260,8 @@
                 "newPage": false,
                 "searchKey": "bits.m4",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -237,6 +284,8 @@
                 "newPage": false,
                 "searchKey": "bits.ntz8tab",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -259,6 +308,8 @@
                 "newPage": false,
                 "searchKey": "bits.pop8tab",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -281,6 +332,8 @@
                 "newPage": false,
                 "searchKey": "bits.rev8tab",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -297,44 +350,24 @@
           },
           {
             "node": {
-              "pathID": "/math/bits#len8tab",
+              "pathID": "/math/bits#uintSize",
               "documentation": {
-                "identifier": "len8tab",
+                "identifier": "uintSize",
                 "newPage": false,
-                "searchKey": "bits.len8tab",
+                "searchKey": "bits.uintSize",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const len8tab"
+                "value": "const uintSize"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst len8tab = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#DeBruijn64",
-              "documentation": {
-                "identifier": "DeBruijn64",
-                "newPage": false,
-                "searchKey": "bits.DeBruijn64",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const DeBruijn64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst DeBruijn64 = deBruijn64\n```\n\n"
+                "value": "```Go\nconst uintSize = 32 << (^uint(0) >> 63) // 32 or 64\n\n```\n\n"
               },
               "children": null
             }
@@ -349,7 +382,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -368,6 +403,9 @@
                 "newPage": false,
                 "searchKey": "bits.deBruijn32tab",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -390,6 +428,9 @@
                 "newPage": false,
                 "searchKey": "bits.deBruijn64tab",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -406,34 +447,14 @@
           },
           {
             "node": {
-              "pathID": "/math/bits#overflowError",
-              "documentation": {
-                "identifier": "overflowError",
-                "newPage": false,
-                "searchKey": "bits.overflowError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var overflowError"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar overflowError error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/math/bits#divideError",
               "documentation": {
                 "identifier": "divideError",
                 "newPage": false,
                 "searchKey": "bits.divideError",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -444,6 +465,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar divideError error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#overflowError",
+              "documentation": {
+                "identifier": "overflowError",
+                "newPage": false,
+                "searchKey": "bits.overflowError",
+                "tags": [
+                  "variable",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var overflowError"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar overflowError error\n```\n\n"
               },
               "children": null
             }
@@ -458,7 +503,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -471,692 +518,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/math/bits#LeadingZeros",
-              "documentation": {
-                "identifier": "LeadingZeros",
-                "newPage": false,
-                "searchKey": "bits.LeadingZeros",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func LeadingZeros(x uint) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc LeadingZeros(x uint) int\n```\n\nLeadingZeros returns the number of leading zero bits in x; the result is UintSize for x == 0. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#LeadingZeros8",
-              "documentation": {
-                "identifier": "LeadingZeros8",
-                "newPage": false,
-                "searchKey": "bits.LeadingZeros8",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func LeadingZeros8(x uint8) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc LeadingZeros8(x uint8) int\n```\n\nLeadingZeros8 returns the number of leading zero bits in x; the result is 8 for x == 0. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#LeadingZeros16",
-              "documentation": {
-                "identifier": "LeadingZeros16",
-                "newPage": false,
-                "searchKey": "bits.LeadingZeros16",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func LeadingZeros16(x uint16) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc LeadingZeros16(x uint16) int\n```\n\nLeadingZeros16 returns the number of leading zero bits in x; the result is 16 for x == 0. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#LeadingZeros32",
-              "documentation": {
-                "identifier": "LeadingZeros32",
-                "newPage": false,
-                "searchKey": "bits.LeadingZeros32",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func LeadingZeros32(x uint32) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc LeadingZeros32(x uint32) int\n```\n\nLeadingZeros32 returns the number of leading zero bits in x; the result is 32 for x == 0. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#LeadingZeros64",
-              "documentation": {
-                "identifier": "LeadingZeros64",
-                "newPage": false,
-                "searchKey": "bits.LeadingZeros64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func LeadingZeros64(x uint64) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc LeadingZeros64(x uint64) int\n```\n\nLeadingZeros64 returns the number of leading zero bits in x; the result is 64 for x == 0. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#TrailingZeros",
-              "documentation": {
-                "identifier": "TrailingZeros",
-                "newPage": false,
-                "searchKey": "bits.TrailingZeros",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TrailingZeros(x uint) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TrailingZeros(x uint) int\n```\n\nTrailingZeros returns the number of trailing zero bits in x; the result is UintSize for x == 0. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#TrailingZeros8",
-              "documentation": {
-                "identifier": "TrailingZeros8",
-                "newPage": false,
-                "searchKey": "bits.TrailingZeros8",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TrailingZeros8(x uint8) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TrailingZeros8(x uint8) int\n```\n\nTrailingZeros8 returns the number of trailing zero bits in x; the result is 8 for x == 0. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#TrailingZeros16",
-              "documentation": {
-                "identifier": "TrailingZeros16",
-                "newPage": false,
-                "searchKey": "bits.TrailingZeros16",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TrailingZeros16(x uint16) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TrailingZeros16(x uint16) int\n```\n\nTrailingZeros16 returns the number of trailing zero bits in x; the result is 16 for x == 0. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#TrailingZeros32",
-              "documentation": {
-                "identifier": "TrailingZeros32",
-                "newPage": false,
-                "searchKey": "bits.TrailingZeros32",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TrailingZeros32(x uint32) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TrailingZeros32(x uint32) int\n```\n\nTrailingZeros32 returns the number of trailing zero bits in x; the result is 32 for x == 0. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#TrailingZeros64",
-              "documentation": {
-                "identifier": "TrailingZeros64",
-                "newPage": false,
-                "searchKey": "bits.TrailingZeros64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TrailingZeros64(x uint64) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TrailingZeros64(x uint64) int\n```\n\nTrailingZeros64 returns the number of trailing zero bits in x; the result is 64 for x == 0. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#OnesCount",
-              "documentation": {
-                "identifier": "OnesCount",
-                "newPage": false,
-                "searchKey": "bits.OnesCount",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func OnesCount(x uint) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc OnesCount(x uint) int\n```\n\nOnesCount returns the number of one bits (\"population count\") in x. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#OnesCount8",
-              "documentation": {
-                "identifier": "OnesCount8",
-                "newPage": false,
-                "searchKey": "bits.OnesCount8",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func OnesCount8(x uint8) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc OnesCount8(x uint8) int\n```\n\nOnesCount8 returns the number of one bits (\"population count\") in x. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#OnesCount16",
-              "documentation": {
-                "identifier": "OnesCount16",
-                "newPage": false,
-                "searchKey": "bits.OnesCount16",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func OnesCount16(x uint16) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc OnesCount16(x uint16) int\n```\n\nOnesCount16 returns the number of one bits (\"population count\") in x. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#OnesCount32",
-              "documentation": {
-                "identifier": "OnesCount32",
-                "newPage": false,
-                "searchKey": "bits.OnesCount32",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func OnesCount32(x uint32) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc OnesCount32(x uint32) int\n```\n\nOnesCount32 returns the number of one bits (\"population count\") in x. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#OnesCount64",
-              "documentation": {
-                "identifier": "OnesCount64",
-                "newPage": false,
-                "searchKey": "bits.OnesCount64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func OnesCount64(x uint64) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc OnesCount64(x uint64) int\n```\n\nOnesCount64 returns the number of one bits (\"population count\") in x. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#RotateLeft",
-              "documentation": {
-                "identifier": "RotateLeft",
-                "newPage": false,
-                "searchKey": "bits.RotateLeft",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func RotateLeft(x uint, k int) uint"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc RotateLeft(x uint, k int) uint\n```\n\nRotateLeft returns the value of x rotated left by (k mod UintSize) bits. To rotate x right by k bits, call RotateLeft(x, -k). \n\nThis function's execution time does not depend on the inputs. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#RotateLeft8",
-              "documentation": {
-                "identifier": "RotateLeft8",
-                "newPage": false,
-                "searchKey": "bits.RotateLeft8",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func RotateLeft8(x uint8, k int) uint8"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc RotateLeft8(x uint8, k int) uint8\n```\n\nRotateLeft8 returns the value of x rotated left by (k mod 8) bits. To rotate x right by k bits, call RotateLeft8(x, -k). \n\nThis function's execution time does not depend on the inputs. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#RotateLeft16",
-              "documentation": {
-                "identifier": "RotateLeft16",
-                "newPage": false,
-                "searchKey": "bits.RotateLeft16",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func RotateLeft16(x uint16, k int) uint16"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc RotateLeft16(x uint16, k int) uint16\n```\n\nRotateLeft16 returns the value of x rotated left by (k mod 16) bits. To rotate x right by k bits, call RotateLeft16(x, -k). \n\nThis function's execution time does not depend on the inputs. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#RotateLeft32",
-              "documentation": {
-                "identifier": "RotateLeft32",
-                "newPage": false,
-                "searchKey": "bits.RotateLeft32",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func RotateLeft32(x uint32, k int) uint32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc RotateLeft32(x uint32, k int) uint32\n```\n\nRotateLeft32 returns the value of x rotated left by (k mod 32) bits. To rotate x right by k bits, call RotateLeft32(x, -k). \n\nThis function's execution time does not depend on the inputs. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#RotateLeft64",
-              "documentation": {
-                "identifier": "RotateLeft64",
-                "newPage": false,
-                "searchKey": "bits.RotateLeft64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func RotateLeft64(x uint64, k int) uint64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc RotateLeft64(x uint64, k int) uint64\n```\n\nRotateLeft64 returns the value of x rotated left by (k mod 64) bits. To rotate x right by k bits, call RotateLeft64(x, -k). \n\nThis function's execution time does not depend on the inputs. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#Reverse",
-              "documentation": {
-                "identifier": "Reverse",
-                "newPage": false,
-                "searchKey": "bits.Reverse",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Reverse(x uint) uint"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Reverse(x uint) uint\n```\n\nReverse returns the value of x with its bits in reversed order. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#Reverse8",
-              "documentation": {
-                "identifier": "Reverse8",
-                "newPage": false,
-                "searchKey": "bits.Reverse8",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Reverse8(x uint8) uint8"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Reverse8(x uint8) uint8\n```\n\nReverse8 returns the value of x with its bits in reversed order. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#Reverse16",
-              "documentation": {
-                "identifier": "Reverse16",
-                "newPage": false,
-                "searchKey": "bits.Reverse16",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Reverse16(x uint16) uint16"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Reverse16(x uint16) uint16\n```\n\nReverse16 returns the value of x with its bits in reversed order. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#Reverse32",
-              "documentation": {
-                "identifier": "Reverse32",
-                "newPage": false,
-                "searchKey": "bits.Reverse32",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Reverse32(x uint32) uint32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Reverse32(x uint32) uint32\n```\n\nReverse32 returns the value of x with its bits in reversed order. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#Reverse64",
-              "documentation": {
-                "identifier": "Reverse64",
-                "newPage": false,
-                "searchKey": "bits.Reverse64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Reverse64(x uint64) uint64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Reverse64(x uint64) uint64\n```\n\nReverse64 returns the value of x with its bits in reversed order. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#ReverseBytes",
-              "documentation": {
-                "identifier": "ReverseBytes",
-                "newPage": false,
-                "searchKey": "bits.ReverseBytes",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ReverseBytes(x uint) uint"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ReverseBytes(x uint) uint\n```\n\nReverseBytes returns the value of x with its bytes in reversed order. \n\nThis function's execution time does not depend on the inputs. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#ReverseBytes16",
-              "documentation": {
-                "identifier": "ReverseBytes16",
-                "newPage": false,
-                "searchKey": "bits.ReverseBytes16",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ReverseBytes16(x uint16) uint16"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ReverseBytes16(x uint16) uint16\n```\n\nReverseBytes16 returns the value of x with its bytes in reversed order. \n\nThis function's execution time does not depend on the inputs. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#ReverseBytes32",
-              "documentation": {
-                "identifier": "ReverseBytes32",
-                "newPage": false,
-                "searchKey": "bits.ReverseBytes32",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ReverseBytes32(x uint32) uint32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ReverseBytes32(x uint32) uint32\n```\n\nReverseBytes32 returns the value of x with its bytes in reversed order. \n\nThis function's execution time does not depend on the inputs. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#ReverseBytes64",
-              "documentation": {
-                "identifier": "ReverseBytes64",
-                "newPage": false,
-                "searchKey": "bits.ReverseBytes64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ReverseBytes64(x uint64) uint64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ReverseBytes64(x uint64) uint64\n```\n\nReverseBytes64 returns the value of x with its bytes in reversed order. \n\nThis function's execution time does not depend on the inputs. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#Len",
-              "documentation": {
-                "identifier": "Len",
-                "newPage": false,
-                "searchKey": "bits.Len",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Len(x uint) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Len(x uint) int\n```\n\nLen returns the minimum number of bits required to represent x; the result is 0 for x == 0. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#Len8",
-              "documentation": {
-                "identifier": "Len8",
-                "newPage": false,
-                "searchKey": "bits.Len8",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Len8(x uint8) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Len8(x uint8) int\n```\n\nLen8 returns the minimum number of bits required to represent x; the result is 0 for x == 0. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#Len16",
-              "documentation": {
-                "identifier": "Len16",
-                "newPage": false,
-                "searchKey": "bits.Len16",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Len16(x uint16) (n int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Len16(x uint16) (n int)\n```\n\nLen16 returns the minimum number of bits required to represent x; the result is 0 for x == 0. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#Len32",
-              "documentation": {
-                "identifier": "Len32",
-                "newPage": false,
-                "searchKey": "bits.Len32",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Len32(x uint32) (n int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Len32(x uint32) (n int)\n```\n\nLen32 returns the minimum number of bits required to represent x; the result is 0 for x == 0. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#Len64",
-              "documentation": {
-                "identifier": "Len64",
-                "newPage": false,
-                "searchKey": "bits.Len64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Len64(x uint64) (n int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Len64(x uint64) (n int)\n```\n\nLen64 returns the minimum number of bits required to represent x; the result is 0 for x == 0. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/math/bits#Add",
               "documentation": {
                 "identifier": "Add",
                 "newPage": false,
                 "searchKey": "bits.Add",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1176,7 +545,9 @@
                 "identifier": "Add32",
                 "newPage": false,
                 "searchKey": "bits.Add32",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1196,7 +567,9 @@
                 "identifier": "Add64",
                 "newPage": false,
                 "searchKey": "bits.Add64",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1211,132 +584,14 @@
           },
           {
             "node": {
-              "pathID": "/math/bits#Sub",
-              "documentation": {
-                "identifier": "Sub",
-                "newPage": false,
-                "searchKey": "bits.Sub",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Sub(x, y, borrow uint) (diff, borrowOut uint)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Sub(x, y, borrow uint) (diff, borrowOut uint)\n```\n\nSub returns the difference of x, y and borrow: diff = x - y - borrow. The borrow input must be 0 or 1; otherwise the behavior is undefined. The borrowOut output is guaranteed to be 0 or 1. \n\nThis function's execution time does not depend on the inputs. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#Sub32",
-              "documentation": {
-                "identifier": "Sub32",
-                "newPage": false,
-                "searchKey": "bits.Sub32",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Sub32(x, y, borrow uint32) (diff, borrowOut uint32)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Sub32(x, y, borrow uint32) (diff, borrowOut uint32)\n```\n\nSub32 returns the difference of x, y and borrow, diff = x - y - borrow. The borrow input must be 0 or 1; otherwise the behavior is undefined. The borrowOut output is guaranteed to be 0 or 1. \n\nThis function's execution time does not depend on the inputs. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#Sub64",
-              "documentation": {
-                "identifier": "Sub64",
-                "newPage": false,
-                "searchKey": "bits.Sub64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Sub64(x, y, borrow uint64) (diff, borrowOut uint64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Sub64(x, y, borrow uint64) (diff, borrowOut uint64)\n```\n\nSub64 returns the difference of x, y and borrow: diff = x - y - borrow. The borrow input must be 0 or 1; otherwise the behavior is undefined. The borrowOut output is guaranteed to be 0 or 1. \n\nThis function's execution time does not depend on the inputs. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#Mul",
-              "documentation": {
-                "identifier": "Mul",
-                "newPage": false,
-                "searchKey": "bits.Mul",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Mul(x, y uint) (hi, lo uint)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Mul(x, y uint) (hi, lo uint)\n```\n\nMul returns the full-width product of x and y: (hi, lo) = x * y with the product bits' upper half returned in hi and the lower half returned in lo. \n\nThis function's execution time does not depend on the inputs. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#Mul32",
-              "documentation": {
-                "identifier": "Mul32",
-                "newPage": false,
-                "searchKey": "bits.Mul32",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Mul32(x, y uint32) (hi, lo uint32)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Mul32(x, y uint32) (hi, lo uint32)\n```\n\nMul32 returns the 64-bit product of x and y: (hi, lo) = x * y with the product bits' upper half returned in hi and the lower half returned in lo. \n\nThis function's execution time does not depend on the inputs. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/math/bits#Mul64",
-              "documentation": {
-                "identifier": "Mul64",
-                "newPage": false,
-                "searchKey": "bits.Mul64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Mul64(x, y uint64) (hi, lo uint64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Mul64(x, y uint64) (hi, lo uint64)\n```\n\nMul64 returns the 128-bit product of x and y: (hi, lo) = x * y with the product bits' upper half returned in hi and the lower half returned in lo. \n\nThis function's execution time does not depend on the inputs. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/math/bits#Div",
               "documentation": {
                 "identifier": "Div",
                 "newPage": false,
                 "searchKey": "bits.Div",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1356,7 +611,9 @@
                 "identifier": "Div32",
                 "newPage": false,
                 "searchKey": "bits.Div32",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1376,7 +633,9 @@
                 "identifier": "Div64",
                 "newPage": false,
                 "searchKey": "bits.Div64",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1391,12 +650,410 @@
           },
           {
             "node": {
+              "pathID": "/math/bits#LeadingZeros",
+              "documentation": {
+                "identifier": "LeadingZeros",
+                "newPage": false,
+                "searchKey": "bits.LeadingZeros",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func LeadingZeros(x uint) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc LeadingZeros(x uint) int\n```\n\nLeadingZeros returns the number of leading zero bits in x; the result is UintSize for x == 0. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#LeadingZeros16",
+              "documentation": {
+                "identifier": "LeadingZeros16",
+                "newPage": false,
+                "searchKey": "bits.LeadingZeros16",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func LeadingZeros16(x uint16) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc LeadingZeros16(x uint16) int\n```\n\nLeadingZeros16 returns the number of leading zero bits in x; the result is 16 for x == 0. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#LeadingZeros32",
+              "documentation": {
+                "identifier": "LeadingZeros32",
+                "newPage": false,
+                "searchKey": "bits.LeadingZeros32",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func LeadingZeros32(x uint32) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc LeadingZeros32(x uint32) int\n```\n\nLeadingZeros32 returns the number of leading zero bits in x; the result is 32 for x == 0. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#LeadingZeros64",
+              "documentation": {
+                "identifier": "LeadingZeros64",
+                "newPage": false,
+                "searchKey": "bits.LeadingZeros64",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func LeadingZeros64(x uint64) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc LeadingZeros64(x uint64) int\n```\n\nLeadingZeros64 returns the number of leading zero bits in x; the result is 64 for x == 0. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#LeadingZeros8",
+              "documentation": {
+                "identifier": "LeadingZeros8",
+                "newPage": false,
+                "searchKey": "bits.LeadingZeros8",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func LeadingZeros8(x uint8) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc LeadingZeros8(x uint8) int\n```\n\nLeadingZeros8 returns the number of leading zero bits in x; the result is 8 for x == 0. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#Len",
+              "documentation": {
+                "identifier": "Len",
+                "newPage": false,
+                "searchKey": "bits.Len",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Len(x uint) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Len(x uint) int\n```\n\nLen returns the minimum number of bits required to represent x; the result is 0 for x == 0. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#Len16",
+              "documentation": {
+                "identifier": "Len16",
+                "newPage": false,
+                "searchKey": "bits.Len16",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Len16(x uint16) (n int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Len16(x uint16) (n int)\n```\n\nLen16 returns the minimum number of bits required to represent x; the result is 0 for x == 0. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#Len32",
+              "documentation": {
+                "identifier": "Len32",
+                "newPage": false,
+                "searchKey": "bits.Len32",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Len32(x uint32) (n int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Len32(x uint32) (n int)\n```\n\nLen32 returns the minimum number of bits required to represent x; the result is 0 for x == 0. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#Len64",
+              "documentation": {
+                "identifier": "Len64",
+                "newPage": false,
+                "searchKey": "bits.Len64",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Len64(x uint64) (n int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Len64(x uint64) (n int)\n```\n\nLen64 returns the minimum number of bits required to represent x; the result is 0 for x == 0. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#Len8",
+              "documentation": {
+                "identifier": "Len8",
+                "newPage": false,
+                "searchKey": "bits.Len8",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Len8(x uint8) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Len8(x uint8) int\n```\n\nLen8 returns the minimum number of bits required to represent x; the result is 0 for x == 0. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#Mul",
+              "documentation": {
+                "identifier": "Mul",
+                "newPage": false,
+                "searchKey": "bits.Mul",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Mul(x, y uint) (hi, lo uint)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Mul(x, y uint) (hi, lo uint)\n```\n\nMul returns the full-width product of x and y: (hi, lo) = x * y with the product bits' upper half returned in hi and the lower half returned in lo. \n\nThis function's execution time does not depend on the inputs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#Mul32",
+              "documentation": {
+                "identifier": "Mul32",
+                "newPage": false,
+                "searchKey": "bits.Mul32",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Mul32(x, y uint32) (hi, lo uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Mul32(x, y uint32) (hi, lo uint32)\n```\n\nMul32 returns the 64-bit product of x and y: (hi, lo) = x * y with the product bits' upper half returned in hi and the lower half returned in lo. \n\nThis function's execution time does not depend on the inputs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#Mul64",
+              "documentation": {
+                "identifier": "Mul64",
+                "newPage": false,
+                "searchKey": "bits.Mul64",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Mul64(x, y uint64) (hi, lo uint64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Mul64(x, y uint64) (hi, lo uint64)\n```\n\nMul64 returns the 128-bit product of x and y: (hi, lo) = x * y with the product bits' upper half returned in hi and the lower half returned in lo. \n\nThis function's execution time does not depend on the inputs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#OnesCount",
+              "documentation": {
+                "identifier": "OnesCount",
+                "newPage": false,
+                "searchKey": "bits.OnesCount",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func OnesCount(x uint) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc OnesCount(x uint) int\n```\n\nOnesCount returns the number of one bits (\"population count\") in x. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#OnesCount16",
+              "documentation": {
+                "identifier": "OnesCount16",
+                "newPage": false,
+                "searchKey": "bits.OnesCount16",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func OnesCount16(x uint16) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc OnesCount16(x uint16) int\n```\n\nOnesCount16 returns the number of one bits (\"population count\") in x. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#OnesCount32",
+              "documentation": {
+                "identifier": "OnesCount32",
+                "newPage": false,
+                "searchKey": "bits.OnesCount32",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func OnesCount32(x uint32) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc OnesCount32(x uint32) int\n```\n\nOnesCount32 returns the number of one bits (\"population count\") in x. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#OnesCount64",
+              "documentation": {
+                "identifier": "OnesCount64",
+                "newPage": false,
+                "searchKey": "bits.OnesCount64",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func OnesCount64(x uint64) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc OnesCount64(x uint64) int\n```\n\nOnesCount64 returns the number of one bits (\"population count\") in x. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#OnesCount8",
+              "documentation": {
+                "identifier": "OnesCount8",
+                "newPage": false,
+                "searchKey": "bits.OnesCount8",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func OnesCount8(x uint8) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc OnesCount8(x uint8) int\n```\n\nOnesCount8 returns the number of one bits (\"population count\") in x. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/math/bits#Rem",
               "documentation": {
                 "identifier": "Rem",
                 "newPage": false,
                 "searchKey": "bits.Rem",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1416,7 +1073,9 @@
                 "identifier": "Rem32",
                 "newPage": false,
                 "searchKey": "bits.Rem32",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1436,7 +1095,9 @@
                 "identifier": "Rem64",
                 "newPage": false,
                 "searchKey": "bits.Rem64",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1445,6 +1106,490 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc Rem64(hi, lo, y uint64) uint64\n```\n\nRem64 returns the remainder of (hi, lo) divided by y. Rem64 panics for y == 0 (division by zero) but, unlike Div64, it doesn't panic on a quotient overflow. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#Reverse",
+              "documentation": {
+                "identifier": "Reverse",
+                "newPage": false,
+                "searchKey": "bits.Reverse",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Reverse(x uint) uint"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Reverse(x uint) uint\n```\n\nReverse returns the value of x with its bits in reversed order. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#Reverse16",
+              "documentation": {
+                "identifier": "Reverse16",
+                "newPage": false,
+                "searchKey": "bits.Reverse16",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Reverse16(x uint16) uint16"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Reverse16(x uint16) uint16\n```\n\nReverse16 returns the value of x with its bits in reversed order. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#Reverse32",
+              "documentation": {
+                "identifier": "Reverse32",
+                "newPage": false,
+                "searchKey": "bits.Reverse32",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Reverse32(x uint32) uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Reverse32(x uint32) uint32\n```\n\nReverse32 returns the value of x with its bits in reversed order. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#Reverse64",
+              "documentation": {
+                "identifier": "Reverse64",
+                "newPage": false,
+                "searchKey": "bits.Reverse64",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Reverse64(x uint64) uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Reverse64(x uint64) uint64\n```\n\nReverse64 returns the value of x with its bits in reversed order. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#Reverse8",
+              "documentation": {
+                "identifier": "Reverse8",
+                "newPage": false,
+                "searchKey": "bits.Reverse8",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Reverse8(x uint8) uint8"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Reverse8(x uint8) uint8\n```\n\nReverse8 returns the value of x with its bits in reversed order. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#ReverseBytes",
+              "documentation": {
+                "identifier": "ReverseBytes",
+                "newPage": false,
+                "searchKey": "bits.ReverseBytes",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ReverseBytes(x uint) uint"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ReverseBytes(x uint) uint\n```\n\nReverseBytes returns the value of x with its bytes in reversed order. \n\nThis function's execution time does not depend on the inputs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#ReverseBytes16",
+              "documentation": {
+                "identifier": "ReverseBytes16",
+                "newPage": false,
+                "searchKey": "bits.ReverseBytes16",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ReverseBytes16(x uint16) uint16"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ReverseBytes16(x uint16) uint16\n```\n\nReverseBytes16 returns the value of x with its bytes in reversed order. \n\nThis function's execution time does not depend on the inputs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#ReverseBytes32",
+              "documentation": {
+                "identifier": "ReverseBytes32",
+                "newPage": false,
+                "searchKey": "bits.ReverseBytes32",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ReverseBytes32(x uint32) uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ReverseBytes32(x uint32) uint32\n```\n\nReverseBytes32 returns the value of x with its bytes in reversed order. \n\nThis function's execution time does not depend on the inputs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#ReverseBytes64",
+              "documentation": {
+                "identifier": "ReverseBytes64",
+                "newPage": false,
+                "searchKey": "bits.ReverseBytes64",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ReverseBytes64(x uint64) uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ReverseBytes64(x uint64) uint64\n```\n\nReverseBytes64 returns the value of x with its bytes in reversed order. \n\nThis function's execution time does not depend on the inputs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#RotateLeft",
+              "documentation": {
+                "identifier": "RotateLeft",
+                "newPage": false,
+                "searchKey": "bits.RotateLeft",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RotateLeft(x uint, k int) uint"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RotateLeft(x uint, k int) uint\n```\n\nRotateLeft returns the value of x rotated left by (k mod UintSize) bits. To rotate x right by k bits, call RotateLeft(x, -k). \n\nThis function's execution time does not depend on the inputs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#RotateLeft16",
+              "documentation": {
+                "identifier": "RotateLeft16",
+                "newPage": false,
+                "searchKey": "bits.RotateLeft16",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RotateLeft16(x uint16, k int) uint16"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RotateLeft16(x uint16, k int) uint16\n```\n\nRotateLeft16 returns the value of x rotated left by (k mod 16) bits. To rotate x right by k bits, call RotateLeft16(x, -k). \n\nThis function's execution time does not depend on the inputs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#RotateLeft32",
+              "documentation": {
+                "identifier": "RotateLeft32",
+                "newPage": false,
+                "searchKey": "bits.RotateLeft32",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RotateLeft32(x uint32, k int) uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RotateLeft32(x uint32, k int) uint32\n```\n\nRotateLeft32 returns the value of x rotated left by (k mod 32) bits. To rotate x right by k bits, call RotateLeft32(x, -k). \n\nThis function's execution time does not depend on the inputs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#RotateLeft64",
+              "documentation": {
+                "identifier": "RotateLeft64",
+                "newPage": false,
+                "searchKey": "bits.RotateLeft64",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RotateLeft64(x uint64, k int) uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RotateLeft64(x uint64, k int) uint64\n```\n\nRotateLeft64 returns the value of x rotated left by (k mod 64) bits. To rotate x right by k bits, call RotateLeft64(x, -k). \n\nThis function's execution time does not depend on the inputs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#RotateLeft8",
+              "documentation": {
+                "identifier": "RotateLeft8",
+                "newPage": false,
+                "searchKey": "bits.RotateLeft8",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RotateLeft8(x uint8, k int) uint8"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RotateLeft8(x uint8, k int) uint8\n```\n\nRotateLeft8 returns the value of x rotated left by (k mod 8) bits. To rotate x right by k bits, call RotateLeft8(x, -k). \n\nThis function's execution time does not depend on the inputs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#Sub",
+              "documentation": {
+                "identifier": "Sub",
+                "newPage": false,
+                "searchKey": "bits.Sub",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Sub(x, y, borrow uint) (diff, borrowOut uint)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Sub(x, y, borrow uint) (diff, borrowOut uint)\n```\n\nSub returns the difference of x, y and borrow: diff = x - y - borrow. The borrow input must be 0 or 1; otherwise the behavior is undefined. The borrowOut output is guaranteed to be 0 or 1. \n\nThis function's execution time does not depend on the inputs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#Sub32",
+              "documentation": {
+                "identifier": "Sub32",
+                "newPage": false,
+                "searchKey": "bits.Sub32",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Sub32(x, y, borrow uint32) (diff, borrowOut uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Sub32(x, y, borrow uint32) (diff, borrowOut uint32)\n```\n\nSub32 returns the difference of x, y and borrow, diff = x - y - borrow. The borrow input must be 0 or 1; otherwise the behavior is undefined. The borrowOut output is guaranteed to be 0 or 1. \n\nThis function's execution time does not depend on the inputs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#Sub64",
+              "documentation": {
+                "identifier": "Sub64",
+                "newPage": false,
+                "searchKey": "bits.Sub64",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Sub64(x, y, borrow uint64) (diff, borrowOut uint64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Sub64(x, y, borrow uint64) (diff, borrowOut uint64)\n```\n\nSub64 returns the difference of x, y and borrow: diff = x - y - borrow. The borrow input must be 0 or 1; otherwise the behavior is undefined. The borrowOut output is guaranteed to be 0 or 1. \n\nThis function's execution time does not depend on the inputs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#TrailingZeros",
+              "documentation": {
+                "identifier": "TrailingZeros",
+                "newPage": false,
+                "searchKey": "bits.TrailingZeros",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TrailingZeros(x uint) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TrailingZeros(x uint) int\n```\n\nTrailingZeros returns the number of trailing zero bits in x; the result is UintSize for x == 0. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#TrailingZeros16",
+              "documentation": {
+                "identifier": "TrailingZeros16",
+                "newPage": false,
+                "searchKey": "bits.TrailingZeros16",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TrailingZeros16(x uint16) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TrailingZeros16(x uint16) int\n```\n\nTrailingZeros16 returns the number of trailing zero bits in x; the result is 16 for x == 0. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#TrailingZeros32",
+              "documentation": {
+                "identifier": "TrailingZeros32",
+                "newPage": false,
+                "searchKey": "bits.TrailingZeros32",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TrailingZeros32(x uint32) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TrailingZeros32(x uint32) int\n```\n\nTrailingZeros32 returns the number of trailing zero bits in x; the result is 32 for x == 0. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#TrailingZeros64",
+              "documentation": {
+                "identifier": "TrailingZeros64",
+                "newPage": false,
+                "searchKey": "bits.TrailingZeros64",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TrailingZeros64(x uint64) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TrailingZeros64(x uint64) int\n```\n\nTrailingZeros64 returns the number of trailing zero bits in x; the result is 64 for x == 0. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/bits#TrailingZeros8",
+              "documentation": {
+                "identifier": "TrailingZeros8",
+                "newPage": false,
+                "searchKey": "bits.TrailingZeros8",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TrailingZeros8(x uint8) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TrailingZeros8(x uint8) int\n```\n\nTrailingZeros8 returns the number of trailing zero bits in x; the result is 8 for x == 0. \n\n"
               },
               "children": null
             }

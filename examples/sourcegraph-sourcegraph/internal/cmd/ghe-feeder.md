@@ -3,123 +3,123 @@
 ## Index
 
 * [Variables](#var)
-    * [var reposProcessedCounter](#reposProcessedCounter)
-    * [var reposFailedCounter](#reposFailedCounter)
-    * [var reposSucceededCounter](#reposSucceededCounter)
-    * [var reposAlreadyDoneCounter](#reposAlreadyDoneCounter)
-    * [var remainingWorkGauge](#remainingWorkGauge)
     * [var left](#left)
+    * [var remainingWorkGauge](#remainingWorkGauge)
+    * [var reposAlreadyDoneCounter](#reposAlreadyDoneCounter)
+    * [var reposFailedCounter](#reposFailedCounter)
+    * [var reposProcessedCounter](#reposProcessedCounter)
+    * [var reposSucceededCounter](#reposSucceededCounter)
     * [var right](#right)
 * [Types](#type)
     * [type feederDB struct](#feederDB)
         * [func newFeederDB(path string) (*feederDB, error)](#newFeederDB)
+        * [func (fdr *feederDB) declareOrg(org string) error](#feederDB.declareOrg)
         * [func (fdr *feederDB) declareRepo(ownerRepo string) (alreadyDone bool, err error)](#feederDB.declareRepo)
         * [func (fdr *feederDB) failed(ownerRepo string, errType string) error](#feederDB.failed)
         * [func (fdr *feederDB) succeeded(ownerRepo string, org string) error](#feederDB.succeeded)
-        * [func (fdr *feederDB) declareOrg(org string) error](#feederDB.declareOrg)
-    * [type producer struct](#producer)
-        * [func (prdc *producer) pumpFile(ctx context.Context, path string) error](#producer.pumpFile)
-        * [func (prdc *producer) pump(ctx context.Context) error](#producer.pump)
     * [type feederError struct](#feederError)
         * [func (e *feederError) Error() string](#feederError.Error)
         * [func (e *feederError) Unwrap() error](#feederError.Unwrap)
+    * [type producer struct](#producer)
+        * [func (prdc *producer) pump(ctx context.Context) error](#producer.pump)
+        * [func (prdc *producer) pumpFile(ctx context.Context, path string) error](#producer.pumpFile)
     * [type worker struct](#worker)
-        * [func (wkr *worker) run(ctx context.Context)](#worker.run)
-        * [func (wkr *worker) process(ctx context.Context, owner, repo string) error](#worker.process)
-        * [func (wkr *worker) cloneRepo(ctx context.Context, owner, repo string) error](#worker.cloneRepo)
-        * [func (wkr *worker) addRemote(ctx context.Context, gheRepo *github.Repository, owner, repo string) error](#worker.addRemote)
-        * [func (wkr *worker) pushToGHE(ctx context.Context, owner, repo string) error](#worker.pushToGHE)
         * [func (wkr *worker) addGHEOrg(ctx context.Context) error](#worker.addGHEOrg)
         * [func (wkr *worker) addGHERepo(ctx context.Context, owner, repo string) (*github.Repository, error)](#worker.addGHERepo)
+        * [func (wkr *worker) addRemote(ctx context.Context, gheRepo *github.Repository, owner, repo string) error](#worker.addRemote)
+        * [func (wkr *worker) cloneRepo(ctx context.Context, owner, repo string) error](#worker.cloneRepo)
+        * [func (wkr *worker) process(ctx context.Context, owner, repo string) error](#worker.process)
+        * [func (wkr *worker) pushToGHE(ctx context.Context, owner, repo string) error](#worker.pushToGHE)
+        * [func (wkr *worker) run(ctx context.Context)](#worker.run)
 * [Functions](#func)
-    * [func main()](#main)
-    * [func stats(wkrs []*worker, prdc *producer) string](#stats)
-    * [func getRandomName(retry int) string](#getRandomName)
     * [func extractOwnerRepoFromCSVLine(line string) string](#extractOwnerRepoFromCSVLine)
+    * [func getRandomName(retry int) string](#getRandomName)
+    * [func init()](#init.worker.go)
+    * [func main()](#main)
+    * [func newGHEClient(ctx context.Context, baseURL, uploadURL, token string) (*github.Client, error)](#newGHEClient)
     * [func numLinesInFile(path string, skipNumLines int64) (int64, int64, error)](#numLinesInFile)
     * [func numLinesTotal(skipNumLines int64) (int64, error)](#numLinesTotal)
-    * [func newGHEClient(ctx context.Context, baseURL, uploadURL, token string) (*github.Client, error)](#newGHEClient)
-    * [func init()](#init.worker.go)
     * [func randomOrgNameAndSize() (string, int)](#randomOrgNameAndSize)
+    * [func stats(wkrs []*worker, prdc *producer) string](#stats)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
-```
-
-### <a id="reposProcessedCounter" href="#reposProcessedCounter">var reposProcessedCounter</a>
-
-```
-searchKey: main.reposProcessedCounter
-tags: [private]
-```
-
-```Go
-var reposProcessedCounter = ...
-```
-
-### <a id="reposFailedCounter" href="#reposFailedCounter">var reposFailedCounter</a>
-
-```
-searchKey: main.reposFailedCounter
-tags: [private]
-```
-
-```Go
-var reposFailedCounter = ...
-```
-
-### <a id="reposSucceededCounter" href="#reposSucceededCounter">var reposSucceededCounter</a>
-
-```
-searchKey: main.reposSucceededCounter
-tags: [private]
-```
-
-```Go
-var reposSucceededCounter = ...
-```
-
-### <a id="reposAlreadyDoneCounter" href="#reposAlreadyDoneCounter">var reposAlreadyDoneCounter</a>
-
-```
-searchKey: main.reposAlreadyDoneCounter
-tags: [private]
-```
-
-```Go
-var reposAlreadyDoneCounter = ...
-```
-
-### <a id="remainingWorkGauge" href="#remainingWorkGauge">var remainingWorkGauge</a>
-
-```
-searchKey: main.remainingWorkGauge
-tags: [private]
-```
-
-```Go
-var remainingWorkGauge = ...
+tags: [package private]
 ```
 
 ### <a id="left" href="#left">var left</a>
 
 ```
 searchKey: main.left
-tags: [private]
+tags: [variable array string private]
 ```
 
 ```Go
 var left = ...
 ```
 
+### <a id="remainingWorkGauge" href="#remainingWorkGauge">var remainingWorkGauge</a>
+
+```
+searchKey: main.remainingWorkGauge
+tags: [variable interface private]
+```
+
+```Go
+var remainingWorkGauge = ...
+```
+
+### <a id="reposAlreadyDoneCounter" href="#reposAlreadyDoneCounter">var reposAlreadyDoneCounter</a>
+
+```
+searchKey: main.reposAlreadyDoneCounter
+tags: [variable interface private]
+```
+
+```Go
+var reposAlreadyDoneCounter = ...
+```
+
+### <a id="reposFailedCounter" href="#reposFailedCounter">var reposFailedCounter</a>
+
+```
+searchKey: main.reposFailedCounter
+tags: [variable struct private]
+```
+
+```Go
+var reposFailedCounter = ...
+```
+
+### <a id="reposProcessedCounter" href="#reposProcessedCounter">var reposProcessedCounter</a>
+
+```
+searchKey: main.reposProcessedCounter
+tags: [variable struct private]
+```
+
+```Go
+var reposProcessedCounter = ...
+```
+
+### <a id="reposSucceededCounter" href="#reposSucceededCounter">var reposSucceededCounter</a>
+
+```
+searchKey: main.reposSucceededCounter
+tags: [variable interface private]
+```
+
+```Go
+var reposSucceededCounter = ...
+```
+
 ### <a id="right" href="#right">var right</a>
 
 ```
 searchKey: main.right
-tags: [private]
+tags: [variable array string private]
 ```
 
 ```Go
@@ -131,14 +131,14 @@ Docker, starting from 0.7.x, generates names from notable scientists and hackers
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="feederDB" href="#feederDB">type feederDB struct</a>
 
 ```
 searchKey: main.feederDB
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -160,7 +160,7 @@ feederDB is a front to a sqlite DB that records ownerRepo processed, orgs create
 
 ```
 searchKey: main.newFeederDB
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -169,11 +169,24 @@ func newFeederDB(path string) (*feederDB, error)
 
 newFeederDB creates or opens the DB, creating the two tables if necessary 
 
+#### <a id="feederDB.declareOrg" href="#feederDB.declareOrg">func (fdr *feederDB) declareOrg(org string) error</a>
+
+```
+searchKey: main.feederDB.declareOrg
+tags: [method private]
+```
+
+```Go
+func (fdr *feederDB) declareOrg(org string) error
+```
+
+declareOrg adds a newly created org from one of the workers. 
+
 #### <a id="feederDB.declareRepo" href="#feederDB.declareRepo">func (fdr *feederDB) declareRepo(ownerRepo string) (alreadyDone bool, err error)</a>
 
 ```
 searchKey: main.feederDB.declareRepo
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -186,7 +199,7 @@ declareRepo adds the ownerRepo to the DB when it gets pumped into the pipe and m
 
 ```
 searchKey: main.feederDB.failed
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -199,7 +212,7 @@ failed records the fact that the worker processing the specified ownerRepo faile
 
 ```
 searchKey: main.feederDB.succeeded
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -208,24 +221,51 @@ func (fdr *feederDB) succeeded(ownerRepo string, org string) error
 
 succeeded records that a worker has successfully processed the specified ownerRepo. 
 
-#### <a id="feederDB.declareOrg" href="#feederDB.declareOrg">func (fdr *feederDB) declareOrg(org string) error</a>
+### <a id="feederError" href="#feederError">type feederError struct</a>
 
 ```
-searchKey: main.feederDB.declareOrg
-tags: [private]
+searchKey: main.feederError
+tags: [struct private]
 ```
 
 ```Go
-func (fdr *feederDB) declareOrg(org string) error
+type feederError struct {
+	// one of: api, clone, push, unknown
+	errType string
+	// underlying error
+	err error
+}
 ```
 
-declareOrg adds a newly created org from one of the workers. 
+feederError is an error while processing an ownerRepo line. errType partitions the errors in 4 major categories to use in metrics in logging: api, clone, push and unknown. 
+
+#### <a id="feederError.Error" href="#feederError.Error">func (e *feederError) Error() string</a>
+
+```
+searchKey: main.feederError.Error
+tags: [function private]
+```
+
+```Go
+func (e *feederError) Error() string
+```
+
+#### <a id="feederError.Unwrap" href="#feederError.Unwrap">func (e *feederError) Unwrap() error</a>
+
+```
+searchKey: main.feederError.Unwrap
+tags: [function private]
+```
+
+```Go
+func (e *feederError) Unwrap() error
+```
 
 ### <a id="producer" href="#producer">type producer struct</a>
 
 ```
 searchKey: main.producer
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -249,24 +289,11 @@ type producer struct {
 
 producer is pumping input line by line into the pipe channel for processing by the workers. 
 
-#### <a id="producer.pumpFile" href="#producer.pumpFile">func (prdc *producer) pumpFile(ctx context.Context, path string) error</a>
-
-```
-searchKey: main.producer.pumpFile
-tags: [private]
-```
-
-```Go
-func (prdc *producer) pumpFile(ctx context.Context, path string) error
-```
-
-pumpFile reads the specified file line by line and feeds ownerRepo strings into the pipe 
-
 #### <a id="producer.pump" href="#producer.pump">func (prdc *producer) pump(ctx context.Context) error</a>
 
 ```
 searchKey: main.producer.pump
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -275,51 +302,24 @@ func (prdc *producer) pump(ctx context.Context) error
 
 pump finds all the input files specified as command line by recursively going through all specified directories and looking for '*.csv', '*.json' and '*.txt' files. 
 
-### <a id="feederError" href="#feederError">type feederError struct</a>
+#### <a id="producer.pumpFile" href="#producer.pumpFile">func (prdc *producer) pumpFile(ctx context.Context, path string) error</a>
 
 ```
-searchKey: main.feederError
-tags: [private]
-```
-
-```Go
-type feederError struct {
-	// one of: api, clone, push, unknown
-	errType string
-	// underlying error
-	err error
-}
-```
-
-feederError is an error while processing an ownerRepo line. errType partitions the errors in 4 major categories to use in metrics in logging: api, clone, push and unknown. 
-
-#### <a id="feederError.Error" href="#feederError.Error">func (e *feederError) Error() string</a>
-
-```
-searchKey: main.feederError.Error
-tags: [private]
+searchKey: main.producer.pumpFile
+tags: [method private]
 ```
 
 ```Go
-func (e *feederError) Error() string
+func (prdc *producer) pumpFile(ctx context.Context, path string) error
 ```
 
-#### <a id="feederError.Unwrap" href="#feederError.Unwrap">func (e *feederError) Unwrap() error</a>
-
-```
-searchKey: main.feederError.Unwrap
-tags: [private]
-```
-
-```Go
-func (e *feederError) Unwrap() error
-```
+pumpFile reads the specified file line by line and feeds ownerRepo strings into the pipe 
 
 ### <a id="worker" href="#worker">type worker struct</a>
 
 ```
 searchKey: main.worker
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -376,76 +376,11 @@ type worker struct {
 
 worker processes ownerRepo strings, feeding them to GHE instance. it declares orgs if needed, clones from github.com, adds GHE as a remote, declares repo in GHE through API and does a git push to the GHE. there's many workers working at the same time, taking work from a work channel fed by a pump that reads lines from the input. 
 
-#### <a id="worker.run" href="#worker.run">func (wkr *worker) run(ctx context.Context)</a>
-
-```
-searchKey: main.worker.run
-tags: [private]
-```
-
-```Go
-func (wkr *worker) run(ctx context.Context)
-```
-
-run spins until work channel closes or context cancels 
-
-#### <a id="worker.process" href="#worker.process">func (wkr *worker) process(ctx context.Context, owner, repo string) error</a>
-
-```
-searchKey: main.worker.process
-tags: [private]
-```
-
-```Go
-func (wkr *worker) process(ctx context.Context, owner, repo string) error
-```
-
-process does the necessary work for one ownerRepo string: clone, declare repo in GHE through API, add remote and push 
-
-#### <a id="worker.cloneRepo" href="#worker.cloneRepo">func (wkr *worker) cloneRepo(ctx context.Context, owner, repo string) error</a>
-
-```
-searchKey: main.worker.cloneRepo
-tags: [private]
-```
-
-```Go
-func (wkr *worker) cloneRepo(ctx context.Context, owner, repo string) error
-```
-
-cloneRepo clones the specified repo from github.com into the scratchDir 
-
-#### <a id="worker.addRemote" href="#worker.addRemote">func (wkr *worker) addRemote(ctx context.Context, gheRepo *github.Repository, owner, repo string) error</a>
-
-```
-searchKey: main.worker.addRemote
-tags: [private]
-```
-
-```Go
-func (wkr *worker) addRemote(ctx context.Context, gheRepo *github.Repository, owner, repo string) error
-```
-
-addRemote declares the GHE as a remote to the cloned repo 
-
-#### <a id="worker.pushToGHE" href="#worker.pushToGHE">func (wkr *worker) pushToGHE(ctx context.Context, owner, repo string) error</a>
-
-```
-searchKey: main.worker.pushToGHE
-tags: [private]
-```
-
-```Go
-func (wkr *worker) pushToGHE(ctx context.Context, owner, repo string) error
-```
-
-pushToGHE does a `git push` command to the GHE remote 
-
 #### <a id="worker.addGHEOrg" href="#worker.addGHEOrg">func (wkr *worker) addGHEOrg(ctx context.Context) error</a>
 
 ```
 searchKey: main.worker.addGHEOrg
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -458,7 +393,7 @@ addGHEOrg uses the GHE API to declare the org at the GHE
 
 ```
 searchKey: main.worker.addGHERepo
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -467,52 +402,82 @@ func (wkr *worker) addGHERepo(ctx context.Context, owner, repo string) (*github.
 
 addGHEOrg uses the GHE API to declare the repo at the GHE 
 
+#### <a id="worker.addRemote" href="#worker.addRemote">func (wkr *worker) addRemote(ctx context.Context, gheRepo *github.Repository, owner, repo string) error</a>
+
+```
+searchKey: main.worker.addRemote
+tags: [method private]
+```
+
+```Go
+func (wkr *worker) addRemote(ctx context.Context, gheRepo *github.Repository, owner, repo string) error
+```
+
+addRemote declares the GHE as a remote to the cloned repo 
+
+#### <a id="worker.cloneRepo" href="#worker.cloneRepo">func (wkr *worker) cloneRepo(ctx context.Context, owner, repo string) error</a>
+
+```
+searchKey: main.worker.cloneRepo
+tags: [method private]
+```
+
+```Go
+func (wkr *worker) cloneRepo(ctx context.Context, owner, repo string) error
+```
+
+cloneRepo clones the specified repo from github.com into the scratchDir 
+
+#### <a id="worker.process" href="#worker.process">func (wkr *worker) process(ctx context.Context, owner, repo string) error</a>
+
+```
+searchKey: main.worker.process
+tags: [method private]
+```
+
+```Go
+func (wkr *worker) process(ctx context.Context, owner, repo string) error
+```
+
+process does the necessary work for one ownerRepo string: clone, declare repo in GHE through API, add remote and push 
+
+#### <a id="worker.pushToGHE" href="#worker.pushToGHE">func (wkr *worker) pushToGHE(ctx context.Context, owner, repo string) error</a>
+
+```
+searchKey: main.worker.pushToGHE
+tags: [method private]
+```
+
+```Go
+func (wkr *worker) pushToGHE(ctx context.Context, owner, repo string) error
+```
+
+pushToGHE does a `git push` command to the GHE remote 
+
+#### <a id="worker.run" href="#worker.run">func (wkr *worker) run(ctx context.Context)</a>
+
+```
+searchKey: main.worker.run
+tags: [method private]
+```
+
+```Go
+func (wkr *worker) run(ctx context.Context)
+```
+
+run spins until work channel closes or context cancels 
+
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
-
-### <a id="main" href="#main">func main()</a>
-
-```
-searchKey: main.main
-tags: [private]
-```
-
-```Go
-func main()
-```
-
-### <a id="stats" href="#stats">func stats(wkrs []*worker, prdc *producer) string</a>
-
-```
-searchKey: main.stats
-tags: [private]
-```
-
-```Go
-func stats(wkrs []*worker, prdc *producer) string
-```
-
-### <a id="getRandomName" href="#getRandomName">func getRandomName(retry int) string</a>
-
-```
-searchKey: main.getRandomName
-tags: [private]
-```
-
-```Go
-func getRandomName(retry int) string
-```
-
-GetRandomName generates a random name from the list of adjectives and surnames in this package formatted as "adjective_surname". For example 'focused_turing'. If retry is non-zero, a random integer between 0 and 10 will be added to the end of the name, e.g `focused_turing3` 
 
 ### <a id="extractOwnerRepoFromCSVLine" href="#extractOwnerRepoFromCSVLine">func extractOwnerRepoFromCSVLine(line string) string</a>
 
 ```
 searchKey: main.extractOwnerRepoFromCSVLine
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -521,11 +486,57 @@ func extractOwnerRepoFromCSVLine(line string) string
 
 extractOwnerRepoFromCSVLine extracts the owner and repo from a line that comes from a CSV file that a GHE instance created in a repo report (so it has a certain number of fields). for example: 2019-05-23 15:24:16 -0700,4,Organization,sourcegraph,9,tsenart-vegeta,public,1.64 MB,1683,0,false,false we're looking for field number 6 (tsenart-vegeta in the example) and split it into owner/repo by replacing the first '-' with a '/' (the owner and repo were merged when added, this is the owner on github.com, not in the GHE) 
 
+### <a id="getRandomName" href="#getRandomName">func getRandomName(retry int) string</a>
+
+```
+searchKey: main.getRandomName
+tags: [method private]
+```
+
+```Go
+func getRandomName(retry int) string
+```
+
+GetRandomName generates a random name from the list of adjectives and surnames in this package formatted as "adjective_surname". For example 'focused_turing'. If retry is non-zero, a random integer between 0 and 10 will be added to the end of the name, e.g `focused_turing3` 
+
+### <a id="init.worker.go" href="#init.worker.go">func init()</a>
+
+```
+searchKey: main.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="main" href="#main">func main()</a>
+
+```
+searchKey: main.main
+tags: [function private]
+```
+
+```Go
+func main()
+```
+
+### <a id="newGHEClient" href="#newGHEClient">func newGHEClient(ctx context.Context, baseURL, uploadURL, token string) (*github.Client, error)</a>
+
+```
+searchKey: main.newGHEClient
+tags: [method private]
+```
+
+```Go
+func newGHEClient(ctx context.Context, baseURL, uploadURL, token string) (*github.Client, error)
+```
+
 ### <a id="numLinesInFile" href="#numLinesInFile">func numLinesInFile(path string, skipNumLines int64) (int64, int64, error)</a>
 
 ```
 searchKey: main.numLinesInFile
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -538,7 +549,7 @@ numLinesInFile counts how many lines are in the specified file (it starts counti
 
 ```
 searchKey: main.numLinesTotal
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -547,33 +558,11 @@ func numLinesTotal(skipNumLines int64) (int64, error)
 
 numLinesTotal goes through all the inputs and counts how many lines are available for processing. 
 
-### <a id="newGHEClient" href="#newGHEClient">func newGHEClient(ctx context.Context, baseURL, uploadURL, token string) (*github.Client, error)</a>
-
-```
-searchKey: main.newGHEClient
-tags: [private]
-```
-
-```Go
-func newGHEClient(ctx context.Context, baseURL, uploadURL, token string) (*github.Client, error)
-```
-
-### <a id="init.worker.go" href="#init.worker.go">func init()</a>
-
-```
-searchKey: main.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
 ### <a id="randomOrgNameAndSize" href="#randomOrgNameAndSize">func randomOrgNameAndSize() (string, int)</a>
 
 ```
 searchKey: main.randomOrgNameAndSize
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -581,4 +570,15 @@ func randomOrgNameAndSize() (string, int)
 ```
 
 randomOrgNameAndSize returns a random, unique name for an org and a random size of repos it should have 
+
+### <a id="stats" href="#stats">func stats(wkrs []*worker, prdc *producer) string</a>
+
+```
+searchKey: main.stats
+tags: [method private]
+```
+
+```Go
+func stats(wkrs []*worker, prdc *producer) string
+```
 

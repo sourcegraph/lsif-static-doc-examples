@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "go/types_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/go/types_test#genericPkg",
-              "documentation": {
-                "identifier": "genericPkg",
-                "newPage": false,
-                "searchKey": "types_test.genericPkg",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const genericPkg"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst genericPkg = \"package generic_\"\n```\n\ngenericPkg is a prefix for packages that should be type checked with generics. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/types_test#filename",
               "documentation": {
                 "identifier": "filename",
                 "newPage": false,
                 "searchKey": "types_test.filename",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -77,6 +59,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst filename = \"<src>\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#genericPkg",
+              "documentation": {
+                "identifier": "genericPkg",
+                "newPage": false,
+                "searchKey": "types_test.genericPkg",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const genericPkg"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst genericPkg = \"package generic_\"\n```\n\ngenericPkg is a prefix for packages that should be type checked with generics. \n\n"
               },
               "children": null
             }
@@ -92,6 +98,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -106,210 +113,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/go/types_test#builtinCalls",
-              "documentation": {
-                "identifier": "builtinCalls",
-                "newPage": false,
-                "searchKey": "types_test.builtinCalls",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var builtinCalls"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar builtinCalls = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#haltOnError",
-              "documentation": {
-                "identifier": "haltOnError",
-                "newPage": false,
-                "searchKey": "types_test.haltOnError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var haltOnError"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar haltOnError = flag.Bool(\"halt\", false, \"halt on error\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#verifyErrors",
-              "documentation": {
-                "identifier": "verifyErrors",
-                "newPage": false,
-                "searchKey": "types_test.verifyErrors",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var verifyErrors"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar verifyErrors = flag.Bool(\"verify\", false, \"verify errors (rather than list them) in TestManual\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#goVersion",
-              "documentation": {
-                "identifier": "goVersion",
-                "newPage": false,
-                "searchKey": "types_test.goVersion",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var goVersion"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar goVersion = flag.String(\"lang\", \"\", \"Go language version (e.g. \\\"go1.12\\\") for TestManual\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#fset",
-              "documentation": {
-                "identifier": "fset",
-                "newPage": false,
-                "searchKey": "types_test.fset",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var fset"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar fset = token.NewFileSet()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#posMsgRx",
-              "documentation": {
-                "identifier": "posMsgRx",
-                "newPage": false,
-                "searchKey": "types_test.posMsgRx",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var posMsgRx"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar posMsgRx = regexp.MustCompile(`^(.*:[0-9]+:[0-9]+): *(.*)`)\n```\n\nPositioned errors are of the form filename:line:column: message . \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#errRx",
-              "documentation": {
-                "identifier": "errRx",
-                "newPage": false,
-                "searchKey": "types_test.errRx",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var errRx"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar errRx = regexp.MustCompile(`^ *ERROR *(HERE)? *\"?([^\"]*)\"?`)\n```\n\nERROR comments must start with text `ERROR \"rx\"` or `ERROR rx` where rx is a regular expression that matches the expected error message. Space around \"rx\" or rx is ignored. Use the form `ERROR HERE \"rx\"` for error messages that are located immediately after rather than at a token's position. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#goVersionRx",
-              "documentation": {
-                "identifier": "goVersionRx",
-                "newPage": false,
-                "searchKey": "types_test.goVersionRx",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var goVersionRx"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar goVersionRx = regexp.MustCompile(`^go[1-9][0-9]*_(0|[1-9][0-9]*)$`)\n```\n\ngoVersionRx matches a Go version string using '_', e.g. \"go1_12\". \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#testExprs",
-              "documentation": {
-                "identifier": "testExprs",
-                "newPage": false,
-                "searchKey": "types_test.testExprs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var testExprs"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar testExprs = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/types_test#H",
               "documentation": {
                 "identifier": "H",
                 "newPage": false,
                 "searchKey": "types_test.H",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -326,44 +137,74 @@
           },
           {
             "node": {
-              "pathID": "/go/types_test#out",
+              "pathID": "/go/types_test#builtinCalls",
               "documentation": {
-                "identifier": "out",
+                "identifier": "builtinCalls",
                 "newPage": false,
-                "searchKey": "types_test.out",
+                "searchKey": "types_test.builtinCalls",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var out"
+                "value": "var builtinCalls"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar out = flag.String(\"out\", \"\", \"write generated program to out\")\n```\n\n"
+                "value": "```Go\nvar builtinCalls = ...\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#stdLibImporter",
+              "pathID": "/go/types_test#dependentTestTypes",
               "documentation": {
-                "identifier": "stdLibImporter",
+                "identifier": "dependentTestTypes",
                 "newPage": false,
-                "searchKey": "types_test.stdLibImporter",
+                "searchKey": "types_test.dependentTestTypes",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var stdLibImporter"
+                "value": "var dependentTestTypes"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar stdLibImporter = importer.Default()\n```\n\nUse the same importer for all std lib tests to avoid repeated importing of the same packages. \n\n"
+                "value": "```Go\nvar dependentTestTypes = ...\n```\n\ntypes that depend on other type declarations (src in TestTypes) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#errRx",
+              "documentation": {
+                "identifier": "errRx",
+                "newPage": false,
+                "searchKey": "types_test.errRx",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errRx"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errRx = regexp.MustCompile(`^ *ERROR *(HERE)? *\"?([^\"]*)\"?`)\n```\n\nERROR comments must start with text `ERROR \"rx\"` or `ERROR rx` where rx is a regular expression that matches the expected error message. Space around \"rx\" or rx is ignored. Use the form `ERROR HERE \"rx\"` for error messages that are located immediately after rather than at a token's position. \n\n"
               },
               "children": null
             }
@@ -376,6 +217,8 @@
                 "newPage": false,
                 "searchKey": "types_test.excluded",
                 "tags": [
+                  "variable",
+                  "object",
                   "private"
                 ]
               },
@@ -392,12 +235,111 @@
           },
           {
             "node": {
+              "pathID": "/go/types_test#fset",
+              "documentation": {
+                "identifier": "fset",
+                "newPage": false,
+                "searchKey": "types_test.fset",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var fset"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar fset = token.NewFileSet()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#goVersion",
+              "documentation": {
+                "identifier": "goVersion",
+                "newPage": false,
+                "searchKey": "types_test.goVersion",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var goVersion"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar goVersion = flag.String(\"lang\", \"\", \"Go language version (e.g. \\\"go1.12\\\") for TestManual\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#goVersionRx",
+              "documentation": {
+                "identifier": "goVersionRx",
+                "newPage": false,
+                "searchKey": "types_test.goVersionRx",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var goVersionRx"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar goVersionRx = regexp.MustCompile(`^go[1-9][0-9]*_(0|[1-9][0-9]*)$`)\n```\n\ngoVersionRx matches a Go version string using '_', e.g. \"go1_12\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#haltOnError",
+              "documentation": {
+                "identifier": "haltOnError",
+                "newPage": false,
+                "searchKey": "types_test.haltOnError",
+                "tags": [
+                  "variable",
+                  "boolean",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var haltOnError"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar haltOnError = flag.Bool(\"halt\", false, \"halt on error\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/go/types_test#independentTestTypes",
               "documentation": {
                 "identifier": "independentTestTypes",
                 "newPage": false,
                 "searchKey": "types_test.independentTestTypes",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -414,22 +356,121 @@
           },
           {
             "node": {
-              "pathID": "/go/types_test#dependentTestTypes",
+              "pathID": "/go/types_test#out",
               "documentation": {
-                "identifier": "dependentTestTypes",
+                "identifier": "out",
                 "newPage": false,
-                "searchKey": "types_test.dependentTestTypes",
+                "searchKey": "types_test.out",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var dependentTestTypes"
+                "value": "var out"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar dependentTestTypes = ...\n```\n\ntypes that depend on other type declarations (src in TestTypes) \n\n"
+                "value": "```Go\nvar out = flag.String(\"out\", \"\", \"write generated program to out\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#posMsgRx",
+              "documentation": {
+                "identifier": "posMsgRx",
+                "newPage": false,
+                "searchKey": "types_test.posMsgRx",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var posMsgRx"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar posMsgRx = regexp.MustCompile(`^(.*:[0-9]+:[0-9]+): *(.*)`)\n```\n\nPositioned errors are of the form filename:line:column: message . \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#stdLibImporter",
+              "documentation": {
+                "identifier": "stdLibImporter",
+                "newPage": false,
+                "searchKey": "types_test.stdLibImporter",
+                "tags": [
+                  "variable",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var stdLibImporter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar stdLibImporter = importer.Default()\n```\n\nUse the same importer for all std lib tests to avoid repeated importing of the same packages. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#testExprs",
+              "documentation": {
+                "identifier": "testExprs",
+                "newPage": false,
+                "searchKey": "types_test.testExprs",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testExprs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testExprs = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#verifyErrors",
+              "documentation": {
+                "identifier": "verifyErrors",
+                "newPage": false,
+                "searchKey": "types_test.verifyErrors",
+                "tags": [
+                  "variable",
+                  "boolean",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var verifyErrors"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar verifyErrors = flag.Bool(\"verify\", false, \"verify errors (rather than list them) in TestManual\")\n```\n\n"
               },
               "children": null
             }
@@ -445,6 +486,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -459,57 +501,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/go/types_test#testImporter",
-              "documentation": {
-                "identifier": "testImporter",
-                "newPage": false,
-                "searchKey": "types_test.testImporter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type testImporter map[string]*types.Package"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype testImporter map[string]*Package\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/go/types_test#testImporter.Import",
-                    "documentation": {
-                      "identifier": "testImporter.Import",
-                      "newPage": false,
-                      "searchKey": "types_test.testImporter.Import",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m testImporter) Import(path string) (*Package, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m testImporter) Import(path string) (*Package, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/types_test#gen",
               "documentation": {
                 "identifier": "gen",
                 "newPage": false,
                 "searchKey": "types_test.gen",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -524,144 +522,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/go/types_test#gen.p",
-                    "documentation": {
-                      "identifier": "gen.p",
-                      "newPage": false,
-                      "searchKey": "types_test.gen.p",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (g *gen) p(format string, args ...interface{})"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (g *gen) p(format string, args ...interface{})\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/types_test#gen.hilbert",
-                    "documentation": {
-                      "identifier": "gen.hilbert",
-                      "newPage": false,
-                      "searchKey": "types_test.gen.hilbert",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (g *gen) hilbert(n int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (g *gen) hilbert(n int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/types_test#gen.inverse",
-                    "documentation": {
-                      "identifier": "gen.inverse",
-                      "newPage": false,
-                      "searchKey": "types_test.gen.inverse",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (g *gen) inverse(n int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (g *gen) inverse(n int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/types_test#gen.product",
-                    "documentation": {
-                      "identifier": "gen.product",
-                      "newPage": false,
-                      "searchKey": "types_test.gen.product",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (g *gen) product(n int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (g *gen) product(n int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/types_test#gen.verify",
-                    "documentation": {
-                      "identifier": "gen.verify",
-                      "newPage": false,
-                      "searchKey": "types_test.gen.verify",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (g *gen) verify(n int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (g *gen) verify(n int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/types_test#gen.printProduct",
-                    "documentation": {
-                      "identifier": "gen.printProduct",
-                      "newPage": false,
-                      "searchKey": "types_test.gen.printProduct",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (g *gen) printProduct(n int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (g *gen) printProduct(n int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/go/types_test#gen.binomials",
                     "documentation": {
                       "identifier": "gen.binomials",
                       "newPage": false,
                       "searchKey": "types_test.gen.binomials",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -684,6 +551,7 @@
                       "newPage": false,
                       "searchKey": "types_test.gen.factorials",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -694,6 +562,144 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (g *gen) factorials(n int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/types_test#gen.hilbert",
+                    "documentation": {
+                      "identifier": "gen.hilbert",
+                      "newPage": false,
+                      "searchKey": "types_test.gen.hilbert",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (g *gen) hilbert(n int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (g *gen) hilbert(n int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/types_test#gen.inverse",
+                    "documentation": {
+                      "identifier": "gen.inverse",
+                      "newPage": false,
+                      "searchKey": "types_test.gen.inverse",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (g *gen) inverse(n int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (g *gen) inverse(n int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/types_test#gen.p",
+                    "documentation": {
+                      "identifier": "gen.p",
+                      "newPage": false,
+                      "searchKey": "types_test.gen.p",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (g *gen) p(format string, args ...interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (g *gen) p(format string, args ...interface{})\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/types_test#gen.printProduct",
+                    "documentation": {
+                      "identifier": "gen.printProduct",
+                      "newPage": false,
+                      "searchKey": "types_test.gen.printProduct",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (g *gen) printProduct(n int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (g *gen) printProduct(n int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/types_test#gen.product",
+                    "documentation": {
+                      "identifier": "gen.product",
+                      "newPage": false,
+                      "searchKey": "types_test.gen.product",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (g *gen) product(n int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (g *gen) product(n int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/types_test#gen.verify",
+                    "documentation": {
+                      "identifier": "gen.verify",
+                      "newPage": false,
+                      "searchKey": "types_test.gen.verify",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (g *gen) verify(n int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (g *gen) verify(n int)\n```\n\n"
                     },
                     "children": null
                   }
@@ -709,6 +715,7 @@
                 "newPage": false,
                 "searchKey": "types_test.importHelper",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -729,6 +736,7 @@
                       "newPage": false,
                       "searchKey": "types_test.importHelper.Import",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -754,6 +762,7 @@
                 "newPage": false,
                 "searchKey": "types_test.resolveTestImporter",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -774,6 +783,7 @@
                       "newPage": false,
                       "searchKey": "types_test.resolveTestImporter.Import",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -796,6 +806,7 @@
                       "newPage": false,
                       "searchKey": "types_test.resolveTestImporter.ImportFrom",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -815,57 +826,13 @@
           },
           {
             "node": {
-              "pathID": "/go/types_test#walker",
-              "documentation": {
-                "identifier": "walker",
-                "newPage": false,
-                "searchKey": "types_test.walker",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type walker struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype walker struct {\n\tstart time.Time\n\tdmax  time.Duration\n\tpkgh  func(dir string, filenames []string)\n\terrh  func(args ...interface{})\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/go/types_test#walker.walk",
-                    "documentation": {
-                      "identifier": "walker.walk",
-                      "newPage": false,
-                      "searchKey": "types_test.walker.walk",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (w *walker) walk(dir string)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (w *walker) walk(dir string)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/types_test#testEntry",
               "documentation": {
                 "identifier": "testEntry",
                 "newPage": false,
                 "searchKey": "types_test.testEntry",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -886,6 +853,7 @@
                       "newPage": false,
                       "searchKey": "types_test.dup",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -896,6 +864,100 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc dup(s string) testEntry\n```\n\ndup returns a testEntry where both src and str are the same. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#testImporter",
+              "documentation": {
+                "identifier": "testImporter",
+                "newPage": false,
+                "searchKey": "types_test.testImporter",
+                "tags": [
+                  "object",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type testImporter map[string]*types.Package"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype testImporter map[string]*Package\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/go/types_test#testImporter.Import",
+                    "documentation": {
+                      "identifier": "testImporter.Import",
+                      "newPage": false,
+                      "searchKey": "types_test.testImporter.Import",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m testImporter) Import(path string) (*Package, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m testImporter) Import(path string) (*Package, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#walker",
+              "documentation": {
+                "identifier": "walker",
+                "newPage": false,
+                "searchKey": "types_test.walker",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type walker struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype walker struct {\n\tstart time.Time\n\tdmax  time.Duration\n\tpkgh  func(dir string, filenames []string)\n\terrh  func(args ...interface{})\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/go/types_test#walker.walk",
+                    "documentation": {
+                      "identifier": "walker.walk",
+                      "newPage": false,
+                      "searchKey": "types_test.walker.walk",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *walker) walk(dir string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *walker) walk(dir string)\n```\n\n"
                     },
                     "children": null
                   }
@@ -914,6 +976,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -928,462 +991,117 @@
         "children": [
           {
             "node": {
-              "pathID": "/go/types_test#pkgFor",
+              "pathID": "/go/types_test#BenchmarkCheck",
               "documentation": {
-                "identifier": "pkgFor",
+                "identifier": "BenchmarkCheck",
                 "newPage": false,
-                "searchKey": "types_test.pkgFor",
+                "searchKey": "types_test.BenchmarkCheck",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func pkgFor(path, source string, info *Info) (*Package, error)"
+                "value": "func BenchmarkCheck(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc pkgFor(path, source string, info *Info) (*Package, error)\n```\n\npkgFor parses and type checks the package specified by path and source, populating info if provided. \n\nIf source begins with \"package generic_\" and type parameters are enabled, generic code is permitted. \n\n"
+                "value": "```Go\nfunc BenchmarkCheck(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#mustTypecheck",
+              "pathID": "/go/types_test#ExampleInfo",
               "documentation": {
-                "identifier": "mustTypecheck",
+                "identifier": "ExampleInfo",
                 "newPage": false,
-                "searchKey": "types_test.mustTypecheck",
+                "searchKey": "types_test.ExampleInfo",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func mustTypecheck(t *testing.T, path, source string, info *Info) string"
+                "value": "func ExampleInfo()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc mustTypecheck(t *testing.T, path, source string, info *Info) string\n```\n\n"
+                "value": "```Go\nfunc ExampleInfo()\n```\n\nExampleInfo prints various facts recorded by the type checker in a types.Info struct: definitions of and references to each named object, and the type, value, and mode of every expression in the package. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#modeForSource",
+              "pathID": "/go/types_test#ExampleMethodSet",
               "documentation": {
-                "identifier": "modeForSource",
+                "identifier": "ExampleMethodSet",
                 "newPage": false,
-                "searchKey": "types_test.modeForSource",
+                "searchKey": "types_test.ExampleMethodSet",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func modeForSource(src string) parser.Mode"
+                "value": "func ExampleMethodSet()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc modeForSource(src string) parser.Mode\n```\n\n"
+                "value": "```Go\nfunc ExampleMethodSet()\n```\n\nExampleMethodSet prints the method sets of various types. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#mayTypecheck",
+              "pathID": "/go/types_test#ExampleScope",
               "documentation": {
-                "identifier": "mayTypecheck",
+                "identifier": "ExampleScope",
                 "newPage": false,
-                "searchKey": "types_test.mayTypecheck",
+                "searchKey": "types_test.ExampleScope",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func mayTypecheck(t *testing.T, path, source string, info *Info) (string, error)"
+                "value": "func ExampleScope()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc mayTypecheck(t *testing.T, path, source string, info *Info) (string, error)\n```\n\n"
+                "value": "```Go\nfunc ExampleScope()\n```\n\nExampleScope prints the tree of Scopes of a package created from a set of parsed files. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#TestValuesInfo",
+              "pathID": "/go/types_test#TestAlignofNaclSlice",
               "documentation": {
-                "identifier": "TestValuesInfo",
+                "identifier": "TestAlignofNaclSlice",
                 "newPage": false,
-                "searchKey": "types_test.TestValuesInfo",
+                "searchKey": "types_test.TestAlignofNaclSlice",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestValuesInfo(t *testing.T)"
+                "value": "func TestAlignofNaclSlice(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestValuesInfo(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestTypesInfo",
-              "documentation": {
-                "identifier": "TestTypesInfo",
-                "newPage": false,
-                "searchKey": "types_test.TestTypesInfo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTypesInfo(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTypesInfo(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestDefsInfo",
-              "documentation": {
-                "identifier": "TestDefsInfo",
-                "newPage": false,
-                "searchKey": "types_test.TestDefsInfo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDefsInfo(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDefsInfo(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestUsesInfo",
-              "documentation": {
-                "identifier": "TestUsesInfo",
-                "newPage": false,
-                "searchKey": "types_test.TestUsesInfo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUsesInfo(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUsesInfo(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestImplicitsInfo",
-              "documentation": {
-                "identifier": "TestImplicitsInfo",
-                "newPage": false,
-                "searchKey": "types_test.TestImplicitsInfo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestImplicitsInfo(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestImplicitsInfo(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#predString",
-              "documentation": {
-                "identifier": "predString",
-                "newPage": false,
-                "searchKey": "types_test.predString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func predString(tv TypeAndValue) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc predString(tv TypeAndValue) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestPredicatesInfo",
-              "documentation": {
-                "identifier": "TestPredicatesInfo",
-                "newPage": false,
-                "searchKey": "types_test.TestPredicatesInfo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestPredicatesInfo(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestPredicatesInfo(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestScopesInfo",
-              "documentation": {
-                "identifier": "TestScopesInfo",
-                "newPage": false,
-                "searchKey": "types_test.TestScopesInfo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestScopesInfo(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestScopesInfo(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestInitOrderInfo",
-              "documentation": {
-                "identifier": "TestInitOrderInfo",
-                "newPage": false,
-                "searchKey": "types_test.TestInitOrderInfo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestInitOrderInfo(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestInitOrderInfo(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestMultiFileInitOrder",
-              "documentation": {
-                "identifier": "TestMultiFileInitOrder",
-                "newPage": false,
-                "searchKey": "types_test.TestMultiFileInitOrder",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMultiFileInitOrder(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMultiFileInitOrder(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestFiles",
-              "documentation": {
-                "identifier": "TestFiles",
-                "newPage": false,
-                "searchKey": "types_test.TestFiles",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestFiles(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestFiles(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestSelection",
-              "documentation": {
-                "identifier": "TestSelection",
-                "newPage": false,
-                "searchKey": "types_test.TestSelection",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSelection(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSelection(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestIssue8518",
-              "documentation": {
-                "identifier": "TestIssue8518",
-                "newPage": false,
-                "searchKey": "types_test.TestIssue8518",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIssue8518(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIssue8518(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestLookupFieldOrMethod",
-              "documentation": {
-                "identifier": "TestLookupFieldOrMethod",
-                "newPage": false,
-                "searchKey": "types_test.TestLookupFieldOrMethod",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestLookupFieldOrMethod(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestLookupFieldOrMethod(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#sameSlice",
-              "documentation": {
-                "identifier": "sameSlice",
-                "newPage": false,
-                "searchKey": "types_test.sameSlice",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func sameSlice(a, b []int) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc sameSlice(a, b []int) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestScopeLookupParent",
-              "documentation": {
-                "identifier": "TestScopeLookupParent",
-                "newPage": false,
-                "searchKey": "types_test.TestScopeLookupParent",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestScopeLookupParent(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestScopeLookupParent(t *testing.T)\n```\n\nTestScopeLookupParent ensures that (*Scope).LookupParent returns the correct result at various positions with the source. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestConvertibleTo",
-              "documentation": {
-                "identifier": "TestConvertibleTo",
-                "newPage": false,
-                "searchKey": "types_test.TestConvertibleTo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestConvertibleTo(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestConvertibleTo(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestAlignofNaclSlice(t *testing.T)\n```\n\nIssue 16464 \n\n"
               },
               "children": null
             }
@@ -1396,7 +1114,9 @@
                 "newPage": false,
                 "searchKey": "types_test.TestAssignableTo",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1412,123 +1132,15 @@
           },
           {
             "node": {
-              "pathID": "/go/types_test#TestIdentical_issue15173",
-              "documentation": {
-                "identifier": "TestIdentical_issue15173",
-                "newPage": false,
-                "searchKey": "types_test.TestIdentical_issue15173",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIdentical_issue15173(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIdentical_issue15173(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestIssue15305",
-              "documentation": {
-                "identifier": "TestIssue15305",
-                "newPage": false,
-                "searchKey": "types_test.TestIssue15305",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIssue15305(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIssue15305(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestCompositeLitTypes",
-              "documentation": {
-                "identifier": "TestCompositeLitTypes",
-                "newPage": false,
-                "searchKey": "types_test.TestCompositeLitTypes",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCompositeLitTypes(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCompositeLitTypes(t *testing.T)\n```\n\nTestCompositeLitTypes verifies that Info.Types registers the correct types for composite literal expressions and composite literal type expressions. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestObjectParents",
-              "documentation": {
-                "identifier": "TestObjectParents",
-                "newPage": false,
-                "searchKey": "types_test.TestObjectParents",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestObjectParents(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestObjectParents(t *testing.T)\n```\n\nTestObjectParents verifies that objects have parent scopes or not as specified by the Object interface. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestFailedImport",
-              "documentation": {
-                "identifier": "TestFailedImport",
-                "newPage": false,
-                "searchKey": "types_test.TestFailedImport",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestFailedImport(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestFailedImport(t *testing.T)\n```\n\nTestFailedImport tests that we don't get follow-on errors elsewhere in a package due to failing to import a package. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/types_test#TestBuiltinSignatures",
               "documentation": {
                 "identifier": "TestBuiltinSignatures",
                 "newPage": false,
                 "searchKey": "types_test.TestBuiltinSignatures",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1544,255 +1156,15 @@
           },
           {
             "node": {
-              "pathID": "/go/types_test#testBuiltinSignature",
-              "documentation": {
-                "identifier": "testBuiltinSignature",
-                "newPage": false,
-                "searchKey": "types_test.testBuiltinSignature",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testBuiltinSignature(t *testing.T, name, src0, want string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testBuiltinSignature(t *testing.T, name, src0, want string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#splitError",
-              "documentation": {
-                "identifier": "splitError",
-                "newPage": false,
-                "searchKey": "types_test.splitError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func splitError(err error) (pos, msg string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc splitError(err error) (pos, msg string)\n```\n\nsplitError splits an error's error message into a position string and the actual error message. If there's no position information, pos is the empty string, and msg is the entire error message. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#parseFiles",
-              "documentation": {
-                "identifier": "parseFiles",
-                "newPage": false,
-                "searchKey": "types_test.parseFiles",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func parseFiles(t *testing.T, filenames []string, srcs [][]byte, mode parser.Mode) ([]*ast.File, []error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc parseFiles(t *testing.T, filenames []string, srcs [][]byte, mode parser.Mode) ([]*ast.File, []error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#errMap",
-              "documentation": {
-                "identifier": "errMap",
-                "newPage": false,
-                "searchKey": "types_test.errMap",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func errMap(t *testing.T, files []*ast.File, srcs [][]byte) map[string][]string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc errMap(t *testing.T, files []*ast.File, srcs [][]byte) map[string][]string\n```\n\nerrMap collects the regular expressions of ERROR comments found in files and returns them as a map of error positions to error messages. \n\nsrcs must be a slice of the same length as files, containing the original source for the parsed AST. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#eliminate",
-              "documentation": {
-                "identifier": "eliminate",
-                "newPage": false,
-                "searchKey": "types_test.eliminate",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func eliminate(t *testing.T, errmap map[string][]string, errlist []error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc eliminate(t *testing.T, errmap map[string][]string, errlist []error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#asGoVersion",
-              "documentation": {
-                "identifier": "asGoVersion",
-                "newPage": false,
-                "searchKey": "types_test.asGoVersion",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func asGoVersion(s string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc asGoVersion(s string) string\n```\n\nasGoVersion returns a regular Go language version string if s is a Go version string using '_' rather than '.' to separate the major and minor version numbers (e.g. \"go1_12\"). Otherwise it returns the empty string. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#checkFiles",
-              "documentation": {
-                "identifier": "checkFiles",
-                "newPage": false,
-                "searchKey": "types_test.checkFiles",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func checkFiles(t *testing.T, sizes Sizes, goVersion string, filenames []string, srcs [][]byte, manual bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc checkFiles(t *testing.T, sizes Sizes, goVersion string, filenames []string, srcs [][]byte, manual bool)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestManual",
-              "documentation": {
-                "identifier": "TestManual",
-                "newPage": false,
-                "searchKey": "types_test.TestManual",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestManual(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestManual(t *testing.T)\n```\n\nTestManual is for manual testing of input files, provided as a list of arguments after the test arguments (and a separating \"--\"). For instance, to check the files foo.go and bar.go, use: \n\n```\ngo test -run Manual -- foo.go bar.go\n\n```\nProvide the -verify flag to verify errors against ERROR comments in the input files rather than having a list of errors reported. The accepted Go language version can be controlled with the -lang flag. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestLongConstants",
-              "documentation": {
-                "identifier": "TestLongConstants",
-                "newPage": false,
-                "searchKey": "types_test.TestLongConstants",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestLongConstants(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestLongConstants(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestIndexRepresentability",
-              "documentation": {
-                "identifier": "TestIndexRepresentability",
-                "newPage": false,
-                "searchKey": "types_test.TestIndexRepresentability",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIndexRepresentability(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIndexRepresentability(t *testing.T)\n```\n\nTestIndexRepresentability tests that constant index operands must be representable as int even if they already have a type that can represent larger values. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestIssue46453",
-              "documentation": {
-                "identifier": "TestIssue46453",
-                "newPage": false,
-                "searchKey": "types_test.TestIssue46453",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIssue46453(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIssue46453(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/types_test#TestCheck",
               "documentation": {
                 "identifier": "TestCheck",
                 "newPage": false,
                 "searchKey": "types_test.TestCheck",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1808,88 +1180,96 @@
           },
           {
             "node": {
-              "pathID": "/go/types_test#TestExamples",
+              "pathID": "/go/types_test#TestCheckExpr",
               "documentation": {
-                "identifier": "TestExamples",
+                "identifier": "TestCheckExpr",
                 "newPage": false,
-                "searchKey": "types_test.TestExamples",
+                "searchKey": "types_test.TestCheckExpr",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestExamples(t *testing.T)"
+                "value": "func TestCheckExpr(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestExamples(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestCheckExpr(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#TestFixedbugs",
+              "pathID": "/go/types_test#TestCompositeLitTypes",
               "documentation": {
-                "identifier": "TestFixedbugs",
+                "identifier": "TestCompositeLitTypes",
                 "newPage": false,
-                "searchKey": "types_test.TestFixedbugs",
+                "searchKey": "types_test.TestCompositeLitTypes",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestFixedbugs(t *testing.T)"
+                "value": "func TestCompositeLitTypes(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestFixedbugs(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestCompositeLitTypes(t *testing.T)\n```\n\nTestCompositeLitTypes verifies that Info.Types registers the correct types for composite literal expressions and composite literal type expressions. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#testDir",
+              "pathID": "/go/types_test#TestConvertibleTo",
               "documentation": {
-                "identifier": "testDir",
+                "identifier": "TestConvertibleTo",
                 "newPage": false,
-                "searchKey": "types_test.testDir",
+                "searchKey": "types_test.TestConvertibleTo",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func testDir(t *testing.T, dir string)"
+                "value": "func TestConvertibleTo(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc testDir(t *testing.T, dir string)\n```\n\n"
+                "value": "```Go\nfunc TestConvertibleTo(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#testPkg",
+              "pathID": "/go/types_test#TestDefsInfo",
               "documentation": {
-                "identifier": "testPkg",
+                "identifier": "TestDefsInfo",
                 "newPage": false,
-                "searchKey": "types_test.testPkg",
+                "searchKey": "types_test.TestDefsInfo",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func testPkg(t *testing.T, filenames []string, goVersion string, manual bool)"
+                "value": "func TestDefsInfo(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc testPkg(t *testing.T, filenames []string, goVersion string, manual bool)\n```\n\nTODO(rFindley) reconcile the different test setup in go/types with types2. \n\n"
+                "value": "```Go\nfunc TestDefsInfo(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1902,7 +1282,9 @@
                 "newPage": false,
                 "searchKey": "types_test.TestErrorCodeExamples",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1918,79 +1300,15 @@
           },
           {
             "node": {
-              "pathID": "/go/types_test#walkCodes",
-              "documentation": {
-                "identifier": "walkCodes",
-                "newPage": false,
-                "searchKey": "types_test.walkCodes",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func walkCodes(t *testing.T, f func(string, int, *ast.ValueSpec))"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc walkCodes(t *testing.T, f func(string, int, *ast.ValueSpec))\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#readCode",
-              "documentation": {
-                "identifier": "readCode",
-                "newPage": false,
-                "searchKey": "types_test.readCode",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func readCode(err Error) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc readCode(err Error) int\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#checkExample",
-              "documentation": {
-                "identifier": "checkExample",
-                "newPage": false,
-                "searchKey": "types_test.checkExample",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func checkExample(t *testing.T, example string) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc checkExample(t *testing.T, example string) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/types_test#TestErrorCodeStyle",
               "documentation": {
                 "identifier": "TestErrorCodeStyle",
                 "newPage": false,
                 "searchKey": "types_test.TestErrorCodeStyle",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2006,22 +1324,24 @@
           },
           {
             "node": {
-              "pathID": "/go/types_test#testEval",
+              "pathID": "/go/types_test#TestEvalArith",
               "documentation": {
-                "identifier": "testEval",
+                "identifier": "TestEvalArith",
                 "newPage": false,
-                "searchKey": "types_test.testEval",
+                "searchKey": "types_test.TestEvalArith",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func testEval(t *testing.T, fset *token.FileSet, pkg *Package, pos token.Pos, expr string, typ Type, typStr, valStr string)"
+                "value": "func TestEvalArith(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc testEval(t *testing.T, fset *token.FileSet, pkg *Package, pos token.Pos, expr string, typ Type, typStr, valStr string)\n```\n\n"
+                "value": "```Go\nfunc TestEvalArith(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -2034,7 +1354,9 @@
                 "newPage": false,
                 "searchKey": "types_test.TestEvalBasic",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2056,7 +1378,9 @@
                 "newPage": false,
                 "searchKey": "types_test.TestEvalComposite",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2072,35 +1396,15 @@
           },
           {
             "node": {
-              "pathID": "/go/types_test#TestEvalArith",
-              "documentation": {
-                "identifier": "TestEvalArith",
-                "newPage": false,
-                "searchKey": "types_test.TestEvalArith",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEvalArith(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEvalArith(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/types_test#TestEvalPos",
               "documentation": {
                 "identifier": "TestEvalPos",
                 "newPage": false,
                 "searchKey": "types_test.TestEvalPos",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2116,154 +1420,24 @@
           },
           {
             "node": {
-              "pathID": "/go/types_test#split",
+              "pathID": "/go/types_test#TestExamples",
               "documentation": {
-                "identifier": "split",
+                "identifier": "TestExamples",
                 "newPage": false,
-                "searchKey": "types_test.split",
+                "searchKey": "types_test.TestExamples",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func split(s, sep string) (string, string)"
+                "value": "func TestExamples(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc split(s, sep string) (string, string)\n```\n\nsplit splits string s at the first occurrence of s. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestCheckExpr",
-              "documentation": {
-                "identifier": "TestCheckExpr",
-                "newPage": false,
-                "searchKey": "types_test.TestCheckExpr",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCheckExpr(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCheckExpr(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#ExampleScope",
-              "documentation": {
-                "identifier": "ExampleScope",
-                "newPage": false,
-                "searchKey": "types_test.ExampleScope",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleScope()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleScope()\n```\n\nExampleScope prints the tree of Scopes of a package created from a set of parsed files. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#ExampleMethodSet",
-              "documentation": {
-                "identifier": "ExampleMethodSet",
-                "newPage": false,
-                "searchKey": "types_test.ExampleMethodSet",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleMethodSet()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleMethodSet()\n```\n\nExampleMethodSet prints the method sets of various types. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#ExampleInfo",
-              "documentation": {
-                "identifier": "ExampleInfo",
-                "newPage": false,
-                "searchKey": "types_test.ExampleInfo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleInfo()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleInfo()\n```\n\nExampleInfo prints various facts recorded by the type checker in a types.Info struct: definitions of and references to each named object, and the type, value, and mode of every expression in the package. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#mode",
-              "documentation": {
-                "identifier": "mode",
-                "newPage": false,
-                "searchKey": "types_test.mode",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func mode(tv types.TypeAndValue) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc mode(tv types.TypeAndValue) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#exprString",
-              "documentation": {
-                "identifier": "exprString",
-                "newPage": false,
-                "searchKey": "types_test.exprString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func exprString(fset *token.FileSet, expr ast.Expr) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc exprString(fset *token.FileSet, expr ast.Expr) string\n```\n\n"
+                "value": "```Go\nfunc TestExamples(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -2276,7 +1450,9 @@
                 "newPage": false,
                 "searchKey": "types_test.TestExprString",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2292,13 +1468,87 @@
           },
           {
             "node": {
+              "pathID": "/go/types_test#TestFailedImport",
+              "documentation": {
+                "identifier": "TestFailedImport",
+                "newPage": false,
+                "searchKey": "types_test.TestFailedImport",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFailedImport(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFailedImport(t *testing.T)\n```\n\nTestFailedImport tests that we don't get follow-on errors elsewhere in a package due to failing to import a package. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#TestFiles",
+              "documentation": {
+                "identifier": "TestFiles",
+                "newPage": false,
+                "searchKey": "types_test.TestFiles",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFiles(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFiles(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#TestFixedbugs",
+              "documentation": {
+                "identifier": "TestFixedbugs",
+                "newPage": false,
+                "searchKey": "types_test.TestFixedbugs",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFixedbugs(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFixedbugs(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/go/types_test#TestHilbert",
               "documentation": {
                 "identifier": "TestHilbert",
                 "newPage": false,
                 "searchKey": "types_test.TestHilbert",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2314,154 +1564,120 @@
           },
           {
             "node": {
-              "pathID": "/go/types_test#program",
+              "pathID": "/go/types_test#TestIdentical_issue15173",
               "documentation": {
-                "identifier": "program",
+                "identifier": "TestIdentical_issue15173",
                 "newPage": false,
-                "searchKey": "types_test.program",
+                "searchKey": "types_test.TestIdentical_issue15173",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func program(n int, out string) []byte"
+                "value": "func TestIdentical_issue15173(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc program(n int, out string) []byte\n```\n\n"
+                "value": "```Go\nfunc TestIdentical_issue15173(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#mustParse",
+              "pathID": "/go/types_test#TestImplicitsInfo",
               "documentation": {
-                "identifier": "mustParse",
+                "identifier": "TestImplicitsInfo",
                 "newPage": false,
-                "searchKey": "types_test.mustParse",
+                "searchKey": "types_test.TestImplicitsInfo",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func mustParse(t *testing.T, src string) *ast.File"
+                "value": "func TestImplicitsInfo(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc mustParse(t *testing.T, src string) *ast.File\n```\n\n"
+                "value": "```Go\nfunc TestImplicitsInfo(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#TestIssue5770",
+              "pathID": "/go/types_test#TestIncompleteInterfaces",
               "documentation": {
-                "identifier": "TestIssue5770",
+                "identifier": "TestIncompleteInterfaces",
                 "newPage": false,
-                "searchKey": "types_test.TestIssue5770",
+                "searchKey": "types_test.TestIncompleteInterfaces",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestIssue5770(t *testing.T)"
+                "value": "func TestIncompleteInterfaces(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestIssue5770(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestIncompleteInterfaces(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#TestIssue5849",
+              "pathID": "/go/types_test#TestIndexRepresentability",
               "documentation": {
-                "identifier": "TestIssue5849",
+                "identifier": "TestIndexRepresentability",
                 "newPage": false,
-                "searchKey": "types_test.TestIssue5849",
+                "searchKey": "types_test.TestIndexRepresentability",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestIssue5849(t *testing.T)"
+                "value": "func TestIndexRepresentability(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestIssue5849(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestIndexRepresentability(t *testing.T)\n```\n\nTestIndexRepresentability tests that constant index operands must be representable as int even if they already have a type that can represent larger values. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#TestIssue6413",
+              "pathID": "/go/types_test#TestInitOrderInfo",
               "documentation": {
-                "identifier": "TestIssue6413",
+                "identifier": "TestInitOrderInfo",
                 "newPage": false,
-                "searchKey": "types_test.TestIssue6413",
+                "searchKey": "types_test.TestInitOrderInfo",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestIssue6413(t *testing.T)"
+                "value": "func TestInitOrderInfo(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestIssue6413(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestIssue7245",
-              "documentation": {
-                "identifier": "TestIssue7245",
-                "newPage": false,
-                "searchKey": "types_test.TestIssue7245",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIssue7245(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIssue7245(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/types_test#TestIssue7827",
-              "documentation": {
-                "identifier": "TestIssue7827",
-                "newPage": false,
-                "searchKey": "types_test.TestIssue7827",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIssue7827(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIssue7827(t *testing.T)\n```\n\nThis tests that uses of existing vars on the LHS of an assignment are Uses, not Defs; and also that the (illegal) use of a non-var on the LHS of an assignment is a Use nonetheless. \n\n"
+                "value": "```Go\nfunc TestInitOrderInfo(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -2474,7 +1690,9 @@
                 "newPage": false,
                 "searchKey": "types_test.TestIssue13898",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2490,13 +1708,63 @@
           },
           {
             "node": {
+              "pathID": "/go/types_test#TestIssue15305",
+              "documentation": {
+                "identifier": "TestIssue15305",
+                "newPage": false,
+                "searchKey": "types_test.TestIssue15305",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue15305(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue15305(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#TestIssue16902",
+              "documentation": {
+                "identifier": "TestIssue16902",
+                "newPage": false,
+                "searchKey": "types_test.TestIssue16902",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue16902(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue16902(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/go/types_test#TestIssue22525",
               "documentation": {
                 "identifier": "TestIssue22525",
                 "newPage": false,
                 "searchKey": "types_test.TestIssue22525",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2518,7 +1786,9 @@
                 "newPage": false,
                 "searchKey": "types_test.TestIssue25627",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2540,7 +1810,9 @@
                 "newPage": false,
                 "searchKey": "types_test.TestIssue28005",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2562,7 +1834,9 @@
                 "newPage": false,
                 "searchKey": "types_test.TestIssue28282",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2584,7 +1858,9 @@
                 "newPage": false,
                 "searchKey": "types_test.TestIssue29029",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2606,7 +1882,9 @@
                 "newPage": false,
                 "searchKey": "types_test.TestIssue34151",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2628,7 +1906,9 @@
                 "newPage": false,
                 "searchKey": "types_test.TestIssue34921",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2650,7 +1930,9 @@
                 "newPage": false,
                 "searchKey": "types_test.TestIssue43088",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2666,35 +1948,15 @@
           },
           {
             "node": {
-              "pathID": "/go/types_test#TestIssue44515",
-              "documentation": {
-                "identifier": "TestIssue44515",
-                "newPage": false,
-                "searchKey": "types_test.TestIssue44515",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIssue44515(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIssue44515(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/types_test#TestIssue43124",
               "documentation": {
                 "identifier": "TestIssue43124",
                 "newPage": false,
                 "searchKey": "types_test.TestIssue43124",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2710,154 +1972,288 @@
           },
           {
             "node": {
-              "pathID": "/go/types_test#TestNewMethodSet",
+              "pathID": "/go/types_test#TestIssue44515",
               "documentation": {
-                "identifier": "TestNewMethodSet",
+                "identifier": "TestIssue44515",
                 "newPage": false,
-                "searchKey": "types_test.TestNewMethodSet",
+                "searchKey": "types_test.TestIssue44515",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestNewMethodSet(t *testing.T)"
+                "value": "func TestIssue44515(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestNewMethodSet(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestIssue44515(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#TestResolveIdents",
+              "pathID": "/go/types_test#TestIssue46453",
               "documentation": {
-                "identifier": "TestResolveIdents",
+                "identifier": "TestIssue46453",
                 "newPage": false,
-                "searchKey": "types_test.TestResolveIdents",
+                "searchKey": "types_test.TestIssue46453",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestResolveIdents(t *testing.T)"
+                "value": "func TestIssue46453(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestResolveIdents(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestIssue46453(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#TestSelf",
+              "pathID": "/go/types_test#TestIssue5770",
               "documentation": {
-                "identifier": "TestSelf",
+                "identifier": "TestIssue5770",
                 "newPage": false,
-                "searchKey": "types_test.TestSelf",
+                "searchKey": "types_test.TestIssue5770",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestSelf(t *testing.T)"
+                "value": "func TestIssue5770(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestSelf(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestIssue5770(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#BenchmarkCheck",
+              "pathID": "/go/types_test#TestIssue5849",
               "documentation": {
-                "identifier": "BenchmarkCheck",
+                "identifier": "TestIssue5849",
                 "newPage": false,
-                "searchKey": "types_test.BenchmarkCheck",
+                "searchKey": "types_test.TestIssue5849",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkCheck(b *testing.B)"
+                "value": "func TestIssue5849(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkCheck(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc TestIssue5849(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#runbench",
+              "pathID": "/go/types_test#TestIssue6413",
               "documentation": {
-                "identifier": "runbench",
+                "identifier": "TestIssue6413",
                 "newPage": false,
-                "searchKey": "types_test.runbench",
+                "searchKey": "types_test.TestIssue6413",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func runbench(b *testing.B, path string, ignoreFuncBodies, writeInfo bool)"
+                "value": "func TestIssue6413(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc runbench(b *testing.B, path string, ignoreFuncBodies, writeInfo bool)\n```\n\n"
+                "value": "```Go\nfunc TestIssue6413(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#pkgFiles",
+              "pathID": "/go/types_test#TestIssue7245",
               "documentation": {
-                "identifier": "pkgFiles",
+                "identifier": "TestIssue7245",
                 "newPage": false,
-                "searchKey": "types_test.pkgFiles",
+                "searchKey": "types_test.TestIssue7245",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func pkgFiles(fset *token.FileSet, path string, mode parser.Mode) ([]*ast.File, error)"
+                "value": "func TestIssue7245(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc pkgFiles(fset *token.FileSet, path string, mode parser.Mode) ([]*ast.File, error)\n```\n\n"
+                "value": "```Go\nfunc TestIssue7245(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#findStructType",
+              "pathID": "/go/types_test#TestIssue7827",
               "documentation": {
-                "identifier": "findStructType",
+                "identifier": "TestIssue7827",
                 "newPage": false,
-                "searchKey": "types_test.findStructType",
+                "searchKey": "types_test.TestIssue7827",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func findStructType(t *testing.T, src string) *types.Struct"
+                "value": "func TestIssue7827(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc findStructType(t *testing.T, src string) *types.Struct\n```\n\nfindStructType typechecks src and returns the first struct type encountered. \n\n"
+                "value": "```Go\nfunc TestIssue7827(t *testing.T)\n```\n\nThis tests that uses of existing vars on the LHS of an assignment are Uses, not Defs; and also that the (illegal) use of a non-var on the LHS of an assignment is a Use nonetheless. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#TestIssue8518",
+              "documentation": {
+                "identifier": "TestIssue8518",
+                "newPage": false,
+                "searchKey": "types_test.TestIssue8518",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue8518(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue8518(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#TestLongConstants",
+              "documentation": {
+                "identifier": "TestLongConstants",
+                "newPage": false,
+                "searchKey": "types_test.TestLongConstants",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLongConstants(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLongConstants(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#TestLookupFieldOrMethod",
+              "documentation": {
+                "identifier": "TestLookupFieldOrMethod",
+                "newPage": false,
+                "searchKey": "types_test.TestLookupFieldOrMethod",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLookupFieldOrMethod(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLookupFieldOrMethod(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#TestManual",
+              "documentation": {
+                "identifier": "TestManual",
+                "newPage": false,
+                "searchKey": "types_test.TestManual",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestManual(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestManual(t *testing.T)\n```\n\nTestManual is for manual testing of input files, provided as a list of arguments after the test arguments (and a separating \"--\"). For instance, to check the files foo.go and bar.go, use: \n\n```\ngo test -run Manual -- foo.go bar.go\n\n```\nProvide the -verify flag to verify errors against ERROR comments in the input files rather than having a list of errors reported. The accepted Go language version can be controlled with the -lang flag. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#TestMultiFileInitOrder",
+              "documentation": {
+                "identifier": "TestMultiFileInitOrder",
+                "newPage": false,
+                "searchKey": "types_test.TestMultiFileInitOrder",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMultiFileInitOrder(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMultiFileInitOrder(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -2870,7 +2266,9 @@
                 "newPage": false,
                 "searchKey": "types_test.TestMultipleSizeUse",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -2886,132 +2284,216 @@
           },
           {
             "node": {
-              "pathID": "/go/types_test#TestAlignofNaclSlice",
+              "pathID": "/go/types_test#TestNewMethodSet",
               "documentation": {
-                "identifier": "TestAlignofNaclSlice",
+                "identifier": "TestNewMethodSet",
                 "newPage": false,
-                "searchKey": "types_test.TestAlignofNaclSlice",
+                "searchKey": "types_test.TestNewMethodSet",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestAlignofNaclSlice(t *testing.T)"
+                "value": "func TestNewMethodSet(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestAlignofNaclSlice(t *testing.T)\n```\n\nIssue 16464 \n\n"
+                "value": "```Go\nfunc TestNewMethodSet(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#TestIssue16902",
+              "pathID": "/go/types_test#TestObjectParents",
               "documentation": {
-                "identifier": "TestIssue16902",
+                "identifier": "TestObjectParents",
                 "newPage": false,
-                "searchKey": "types_test.TestIssue16902",
+                "searchKey": "types_test.TestObjectParents",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestIssue16902(t *testing.T)"
+                "value": "func TestObjectParents(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestIssue16902(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestObjectParents(t *testing.T)\n```\n\nTestObjectParents verifies that objects have parent scopes or not as specified by the Object interface. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#TestStdlib",
+              "pathID": "/go/types_test#TestPredicatesInfo",
               "documentation": {
-                "identifier": "TestStdlib",
+                "identifier": "TestPredicatesInfo",
                 "newPage": false,
-                "searchKey": "types_test.TestStdlib",
+                "searchKey": "types_test.TestPredicatesInfo",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestStdlib(t *testing.T)"
+                "value": "func TestPredicatesInfo(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestStdlib(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestPredicatesInfo(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#firstComment",
+              "pathID": "/go/types_test#TestQualifiedTypeString",
               "documentation": {
-                "identifier": "firstComment",
+                "identifier": "TestQualifiedTypeString",
                 "newPage": false,
-                "searchKey": "types_test.firstComment",
+                "searchKey": "types_test.TestQualifiedTypeString",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func firstComment(filename string) string"
+                "value": "func TestQualifiedTypeString(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc firstComment(filename string) string\n```\n\nfirstComment returns the contents of the first non-empty comment in the given file, \"skip\", or the empty string. No matter the present comments, if any of them contains a build tag, the result is always \"skip\". Only comments before the \"package\" token and within the first 4K of the file are considered. \n\n"
+                "value": "```Go\nfunc TestQualifiedTypeString(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#testTestDir",
+              "pathID": "/go/types_test#TestResolveIdents",
               "documentation": {
-                "identifier": "testTestDir",
+                "identifier": "TestResolveIdents",
                 "newPage": false,
-                "searchKey": "types_test.testTestDir",
+                "searchKey": "types_test.TestResolveIdents",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func testTestDir(t *testing.T, path string, ignore ...string)"
+                "value": "func TestResolveIdents(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc testTestDir(t *testing.T, path string, ignore ...string)\n```\n\n"
+                "value": "```Go\nfunc TestResolveIdents(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#TestStdTest",
+              "pathID": "/go/types_test#TestScopeLookupParent",
               "documentation": {
-                "identifier": "TestStdTest",
+                "identifier": "TestScopeLookupParent",
                 "newPage": false,
-                "searchKey": "types_test.TestStdTest",
+                "searchKey": "types_test.TestScopeLookupParent",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestStdTest(t *testing.T)"
+                "value": "func TestScopeLookupParent(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestStdTest(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestScopeLookupParent(t *testing.T)\n```\n\nTestScopeLookupParent ensures that (*Scope).LookupParent returns the correct result at various positions with the source. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#TestScopesInfo",
+              "documentation": {
+                "identifier": "TestScopesInfo",
+                "newPage": false,
+                "searchKey": "types_test.TestScopesInfo",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScopesInfo(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScopesInfo(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#TestSelection",
+              "documentation": {
+                "identifier": "TestSelection",
+                "newPage": false,
+                "searchKey": "types_test.TestSelection",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSelection(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSelection(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#TestSelf",
+              "documentation": {
+                "identifier": "TestSelf",
+                "newPage": false,
+                "searchKey": "types_test.TestSelf",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSelf(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSelf(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -3024,7 +2506,9 @@
                 "newPage": false,
                 "searchKey": "types_test.TestStdFixed",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -3046,7 +2530,9 @@
                 "newPage": false,
                 "searchKey": "types_test.TestStdKen",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -3062,66 +2548,328 @@
           },
           {
             "node": {
-              "pathID": "/go/types_test#typecheck",
+              "pathID": "/go/types_test#TestStdTest",
               "documentation": {
-                "identifier": "typecheck",
+                "identifier": "TestStdTest",
                 "newPage": false,
-                "searchKey": "types_test.typecheck",
+                "searchKey": "types_test.TestStdTest",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func typecheck(t *testing.T, path string, filenames []string)"
+                "value": "func TestStdTest(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc typecheck(t *testing.T, path string, filenames []string)\n```\n\ntypecheck typechecks the given package files. \n\n"
+                "value": "```Go\nfunc TestStdTest(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#pkgFilenames",
+              "pathID": "/go/types_test#TestStdlib",
               "documentation": {
-                "identifier": "pkgFilenames",
+                "identifier": "TestStdlib",
                 "newPage": false,
-                "searchKey": "types_test.pkgFilenames",
+                "searchKey": "types_test.TestStdlib",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func pkgFilenames(dir string) ([]string, error)"
+                "value": "func TestStdlib(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc pkgFilenames(dir string) ([]string, error)\n```\n\npkgFilenames returns the list of package filenames for the given directory. \n\n"
+                "value": "```Go\nfunc TestStdlib(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#walkPkgDirs",
+              "pathID": "/go/types_test#TestTypeString",
               "documentation": {
-                "identifier": "walkPkgDirs",
+                "identifier": "TestTypeString",
                 "newPage": false,
-                "searchKey": "types_test.walkPkgDirs",
+                "searchKey": "types_test.TestTypeString",
                 "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTypeString(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTypeString(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#TestTypesInfo",
+              "documentation": {
+                "identifier": "TestTypesInfo",
+                "newPage": false,
+                "searchKey": "types_test.TestTypesInfo",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTypesInfo(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTypesInfo(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#TestUsesInfo",
+              "documentation": {
+                "identifier": "TestUsesInfo",
+                "newPage": false,
+                "searchKey": "types_test.TestUsesInfo",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUsesInfo(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUsesInfo(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#TestValuesInfo",
+              "documentation": {
+                "identifier": "TestValuesInfo",
+                "newPage": false,
+                "searchKey": "types_test.TestValuesInfo",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestValuesInfo(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestValuesInfo(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#asGoVersion",
+              "documentation": {
+                "identifier": "asGoVersion",
+                "newPage": false,
+                "searchKey": "types_test.asGoVersion",
+                "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func walkPkgDirs(dir string, pkgh func(dir string, filenames []string), errh func(args ...interface{})) time.Duration"
+                "value": "func asGoVersion(s string) string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc walkPkgDirs(dir string, pkgh func(dir string, filenames []string), errh func(args ...interface{})) time.Duration\n```\n\n"
+                "value": "```Go\nfunc asGoVersion(s string) string\n```\n\nasGoVersion returns a regular Go language version string if s is a Go version string using '_' rather than '.' to separate the major and minor version numbers (e.g. \"go1_12\"). Otherwise it returns the empty string. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#checkExample",
+              "documentation": {
+                "identifier": "checkExample",
+                "newPage": false,
+                "searchKey": "types_test.checkExample",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkExample(t *testing.T, example string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkExample(t *testing.T, example string) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#checkFiles",
+              "documentation": {
+                "identifier": "checkFiles",
+                "newPage": false,
+                "searchKey": "types_test.checkFiles",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkFiles(t *testing.T, sizes Sizes, goVersion string, filenames []string, srcs [][]byte, manual bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkFiles(t *testing.T, sizes Sizes, goVersion string, filenames []string, srcs [][]byte, manual bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#eliminate",
+              "documentation": {
+                "identifier": "eliminate",
+                "newPage": false,
+                "searchKey": "types_test.eliminate",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func eliminate(t *testing.T, errmap map[string][]string, errlist []error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc eliminate(t *testing.T, errmap map[string][]string, errlist []error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#errMap",
+              "documentation": {
+                "identifier": "errMap",
+                "newPage": false,
+                "searchKey": "types_test.errMap",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func errMap(t *testing.T, files []*ast.File, srcs [][]byte) map[string][]string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc errMap(t *testing.T, files []*ast.File, srcs [][]byte) map[string][]string\n```\n\nerrMap collects the regular expressions of ERROR comments found in files and returns them as a map of error positions to error messages. \n\nsrcs must be a slice of the same length as files, containing the original source for the parsed AST. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#exprString",
+              "documentation": {
+                "identifier": "exprString",
+                "newPage": false,
+                "searchKey": "types_test.exprString",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func exprString(fset *token.FileSet, expr ast.Expr) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc exprString(fset *token.FileSet, expr ast.Expr) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#findStructType",
+              "documentation": {
+                "identifier": "findStructType",
+                "newPage": false,
+                "searchKey": "types_test.findStructType",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func findStructType(t *testing.T, src string) *types.Struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc findStructType(t *testing.T, src string) *types.Struct\n```\n\nfindStructType typechecks src and returns the first struct type encountered. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#firstComment",
+              "documentation": {
+                "identifier": "firstComment",
+                "newPage": false,
+                "searchKey": "types_test.firstComment",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func firstComment(filename string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc firstComment(filename string) string\n```\n\nfirstComment returns the contents of the first non-empty comment in the given file, \"skip\", or the empty string. No matter the present comments, if any of them contains a build tag, the result is always \"skip\". Only comments before the \"package\" token and within the first 4K of the file are considered. \n\n"
               },
               "children": null
             }
@@ -3134,6 +2882,7 @@
                 "newPage": false,
                 "searchKey": "types_test.makePkg",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -3150,44 +2899,115 @@
           },
           {
             "node": {
-              "pathID": "/go/types_test#TestTypeString",
+              "pathID": "/go/types_test#mayTypecheck",
               "documentation": {
-                "identifier": "TestTypeString",
+                "identifier": "mayTypecheck",
                 "newPage": false,
-                "searchKey": "types_test.TestTypeString",
+                "searchKey": "types_test.mayTypecheck",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestTypeString(t *testing.T)"
+                "value": "func mayTypecheck(t *testing.T, path, source string, info *Info) (string, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestTypeString(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc mayTypecheck(t *testing.T, path, source string, info *Info) (string, error)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/types_test#TestIncompleteInterfaces",
+              "pathID": "/go/types_test#mode",
               "documentation": {
-                "identifier": "TestIncompleteInterfaces",
+                "identifier": "mode",
                 "newPage": false,
-                "searchKey": "types_test.TestIncompleteInterfaces",
+                "searchKey": "types_test.mode",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestIncompleteInterfaces(t *testing.T)"
+                "value": "func mode(tv types.TypeAndValue) string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestIncompleteInterfaces(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc mode(tv types.TypeAndValue) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#modeForSource",
+              "documentation": {
+                "identifier": "modeForSource",
+                "newPage": false,
+                "searchKey": "types_test.modeForSource",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func modeForSource(src string) parser.Mode"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc modeForSource(src string) parser.Mode\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#mustParse",
+              "documentation": {
+                "identifier": "mustParse",
+                "newPage": false,
+                "searchKey": "types_test.mustParse",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustParse(t *testing.T, src string) *ast.File"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustParse(t *testing.T, src string) *ast.File\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#mustTypecheck",
+              "documentation": {
+                "identifier": "mustTypecheck",
+                "newPage": false,
+                "searchKey": "types_test.mustTypecheck",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustTypecheck(t *testing.T, path, source string, info *Info) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustTypecheck(t *testing.T, path, source string, info *Info) string\n```\n\n"
               },
               "children": null
             }
@@ -3200,6 +3020,7 @@
                 "newPage": false,
                 "searchKey": "types_test.newDefined",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -3216,22 +3037,437 @@
           },
           {
             "node": {
-              "pathID": "/go/types_test#TestQualifiedTypeString",
+              "pathID": "/go/types_test#parseFiles",
               "documentation": {
-                "identifier": "TestQualifiedTypeString",
+                "identifier": "parseFiles",
                 "newPage": false,
-                "searchKey": "types_test.TestQualifiedTypeString",
+                "searchKey": "types_test.parseFiles",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestQualifiedTypeString(t *testing.T)"
+                "value": "func parseFiles(t *testing.T, filenames []string, srcs [][]byte, mode parser.Mode) ([]*ast.File, []error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestQualifiedTypeString(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc parseFiles(t *testing.T, filenames []string, srcs [][]byte, mode parser.Mode) ([]*ast.File, []error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#pkgFilenames",
+              "documentation": {
+                "identifier": "pkgFilenames",
+                "newPage": false,
+                "searchKey": "types_test.pkgFilenames",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func pkgFilenames(dir string) ([]string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc pkgFilenames(dir string) ([]string, error)\n```\n\npkgFilenames returns the list of package filenames for the given directory. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#pkgFiles",
+              "documentation": {
+                "identifier": "pkgFiles",
+                "newPage": false,
+                "searchKey": "types_test.pkgFiles",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func pkgFiles(fset *token.FileSet, path string, mode parser.Mode) ([]*ast.File, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc pkgFiles(fset *token.FileSet, path string, mode parser.Mode) ([]*ast.File, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#pkgFor",
+              "documentation": {
+                "identifier": "pkgFor",
+                "newPage": false,
+                "searchKey": "types_test.pkgFor",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func pkgFor(path, source string, info *Info) (*Package, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc pkgFor(path, source string, info *Info) (*Package, error)\n```\n\npkgFor parses and type checks the package specified by path and source, populating info if provided. \n\nIf source begins with \"package generic_\" and type parameters are enabled, generic code is permitted. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#predString",
+              "documentation": {
+                "identifier": "predString",
+                "newPage": false,
+                "searchKey": "types_test.predString",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func predString(tv TypeAndValue) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc predString(tv TypeAndValue) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#program",
+              "documentation": {
+                "identifier": "program",
+                "newPage": false,
+                "searchKey": "types_test.program",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func program(n int, out string) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc program(n int, out string) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#readCode",
+              "documentation": {
+                "identifier": "readCode",
+                "newPage": false,
+                "searchKey": "types_test.readCode",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readCode(err Error) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readCode(err Error) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#runbench",
+              "documentation": {
+                "identifier": "runbench",
+                "newPage": false,
+                "searchKey": "types_test.runbench",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runbench(b *testing.B, path string, ignoreFuncBodies, writeInfo bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runbench(b *testing.B, path string, ignoreFuncBodies, writeInfo bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#sameSlice",
+              "documentation": {
+                "identifier": "sameSlice",
+                "newPage": false,
+                "searchKey": "types_test.sameSlice",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sameSlice(a, b []int) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sameSlice(a, b []int) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#split",
+              "documentation": {
+                "identifier": "split",
+                "newPage": false,
+                "searchKey": "types_test.split",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func split(s, sep string) (string, string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc split(s, sep string) (string, string)\n```\n\nsplit splits string s at the first occurrence of s. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#splitError",
+              "documentation": {
+                "identifier": "splitError",
+                "newPage": false,
+                "searchKey": "types_test.splitError",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func splitError(err error) (pos, msg string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc splitError(err error) (pos, msg string)\n```\n\nsplitError splits an error's error message into a position string and the actual error message. If there's no position information, pos is the empty string, and msg is the entire error message. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#testBuiltinSignature",
+              "documentation": {
+                "identifier": "testBuiltinSignature",
+                "newPage": false,
+                "searchKey": "types_test.testBuiltinSignature",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testBuiltinSignature(t *testing.T, name, src0, want string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testBuiltinSignature(t *testing.T, name, src0, want string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#testDir",
+              "documentation": {
+                "identifier": "testDir",
+                "newPage": false,
+                "searchKey": "types_test.testDir",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testDir(t *testing.T, dir string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testDir(t *testing.T, dir string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#testEval",
+              "documentation": {
+                "identifier": "testEval",
+                "newPage": false,
+                "searchKey": "types_test.testEval",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testEval(t *testing.T, fset *token.FileSet, pkg *Package, pos token.Pos, expr string, typ Type, typStr, valStr string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testEval(t *testing.T, fset *token.FileSet, pkg *Package, pos token.Pos, expr string, typ Type, typStr, valStr string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#testPkg",
+              "documentation": {
+                "identifier": "testPkg",
+                "newPage": false,
+                "searchKey": "types_test.testPkg",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testPkg(t *testing.T, filenames []string, goVersion string, manual bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testPkg(t *testing.T, filenames []string, goVersion string, manual bool)\n```\n\nTODO(rFindley) reconcile the different test setup in go/types with types2. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#testTestDir",
+              "documentation": {
+                "identifier": "testTestDir",
+                "newPage": false,
+                "searchKey": "types_test.testTestDir",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testTestDir(t *testing.T, path string, ignore ...string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testTestDir(t *testing.T, path string, ignore ...string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#typecheck",
+              "documentation": {
+                "identifier": "typecheck",
+                "newPage": false,
+                "searchKey": "types_test.typecheck",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func typecheck(t *testing.T, path string, filenames []string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc typecheck(t *testing.T, path string, filenames []string)\n```\n\ntypecheck typechecks the given package files. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#walkCodes",
+              "documentation": {
+                "identifier": "walkCodes",
+                "newPage": false,
+                "searchKey": "types_test.walkCodes",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func walkCodes(t *testing.T, f func(string, int, *ast.ValueSpec))"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc walkCodes(t *testing.T, f func(string, int, *ast.ValueSpec))\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/types_test#walkPkgDirs",
+              "documentation": {
+                "identifier": "walkPkgDirs",
+                "newPage": false,
+                "searchKey": "types_test.walkPkgDirs",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func walkPkgDirs(dir string, pkgh func(dir string, filenames []string), errh func(args ...interface{})) time.Duration"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc walkPkgDirs(dir string, pkgh func(dir string, filenames []string), errh func(args ...interface{})) time.Duration\n```\n\n"
               },
               "children": null
             }

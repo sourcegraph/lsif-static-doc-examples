@@ -6,70 +6,77 @@
   * [internal/vcs/git](vcs/git.md)
   * [internal/vcs/util](vcs/util.md)
 * [Constants](#const)
-    * [const usernameRe](#usernameRe)
-    * [const urlRe](#urlRe)
-    * [const repoRe](#repoRe)
-    * [const formatStdlib](#formatStdlib)
-    * [const formatRsync](#formatRsync)
     * [const formatLocal](#formatLocal)
+    * [const formatRsync](#formatRsync)
+    * [const formatStdlib](#formatStdlib)
+    * [const repoRe](#repoRe)
+    * [const urlRe](#urlRe)
+    * [const usernameRe](#usernameRe)
 * [Variables](#var)
     * [var schemes](#schemes)
     * [var scpSyntax](#scpSyntax)
 * [Types](#type)
     * [type RepoNotExistError struct](#RepoNotExistError)
-        * [func (RepoNotExistError) NotFound() bool](#RepoNotExistError.NotFound)
         * [func (e *RepoNotExistError) Error() string](#RepoNotExistError.Error)
+        * [func (RepoNotExistError) NotFound() bool](#RepoNotExistError.NotFound)
     * [type URL struct](#URL)
         * [func ParseURL(rawurl string) (u *URL, err error)](#ParseURL)
+        * [func parseLocal(rawurl string) (*URL, error)](#parseLocal)
         * [func parseScheme(rawurl string) (*URL, error)](#parseScheme)
         * [func parseScp(rawurl string) (*URL, error)](#parseScp)
-        * [func parseLocal(rawurl string) (*URL, error)](#parseLocal)
-        * [func (u *URL) String() string](#URL.String)
         * [func (u *URL) IsSSH() bool](#URL.IsSSH)
+        * [func (u *URL) String() string](#URL.String)
     * [type urlFormat int](#urlFormat)
 * [Functions](#func)
-    * [func IsRepoNotExist(err error) bool](#IsRepoNotExist)
     * [func IsCloneInProgress(err error) bool](#IsCloneInProgress)
+    * [func IsRepoNotExist(err error) bool](#IsRepoNotExist)
     * [func TestParseURL(t *testing.T)](#TestParseURL)
 
 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
-### <a id="usernameRe" href="#usernameRe">const usernameRe</a>
+### <a id="formatLocal" href="#formatLocal">const formatLocal</a>
 
 ```
-searchKey: vcs.usernameRe
-tags: [private]
-```
-
-```Go
-const usernameRe = "([a-zA-Z0-9-._~]+@)"
-```
-
-usernameRe is the regexp for the username part in a repo URL. Eg: sourcegraph@ 
-
-### <a id="urlRe" href="#urlRe">const urlRe</a>
-
-```
-searchKey: vcs.urlRe
-tags: [private]
+searchKey: vcs.formatLocal
+tags: [constant number private]
 ```
 
 ```Go
-const urlRe = "([a-zA-Z0-9._-]+)"
+const formatLocal
 ```
 
-urlRe is the regexp for the url part in a repo URL. Eg: github.com 
+### <a id="formatRsync" href="#formatRsync">const formatRsync</a>
+
+```
+searchKey: vcs.formatRsync
+tags: [constant number private]
+```
+
+```Go
+const formatRsync
+```
+
+### <a id="formatStdlib" href="#formatStdlib">const formatStdlib</a>
+
+```
+searchKey: vcs.formatStdlib
+tags: [constant number private]
+```
+
+```Go
+const formatStdlib urlFormat = iota
+```
 
 ### <a id="repoRe" href="#repoRe">const repoRe</a>
 
 ```
 searchKey: vcs.repoRe
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -78,50 +85,43 @@ const repoRe = `([a-zA-Z0-9\@./._-]+)(?:\?||$)(.*)`
 
 repoRe is the regexp for the repo in a repo URL. Eg: sourcegraph/sourcegraph 
 
-### <a id="formatStdlib" href="#formatStdlib">const formatStdlib</a>
+### <a id="urlRe" href="#urlRe">const urlRe</a>
 
 ```
-searchKey: vcs.formatStdlib
-tags: [private]
-```
-
-```Go
-const formatStdlib urlFormat = iota
-```
-
-### <a id="formatRsync" href="#formatRsync">const formatRsync</a>
-
-```
-searchKey: vcs.formatRsync
-tags: [private]
+searchKey: vcs.urlRe
+tags: [constant string private]
 ```
 
 ```Go
-const formatRsync
+const urlRe = "([a-zA-Z0-9._-]+)"
 ```
 
-### <a id="formatLocal" href="#formatLocal">const formatLocal</a>
+urlRe is the regexp for the url part in a repo URL. Eg: github.com 
+
+### <a id="usernameRe" href="#usernameRe">const usernameRe</a>
 
 ```
-searchKey: vcs.formatLocal
-tags: [private]
+searchKey: vcs.usernameRe
+tags: [constant string private]
 ```
 
 ```Go
-const formatLocal
+const usernameRe = "([a-zA-Z0-9-._~]+@)"
 ```
+
+usernameRe is the regexp for the username part in a repo URL. Eg: sourcegraph@ 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="schemes" href="#schemes">var schemes</a>
 
 ```
 searchKey: vcs.schemes
-tags: [private]
+tags: [variable object private]
 ```
 
 ```Go
@@ -132,7 +132,7 @@ var schemes = ...
 
 ```
 searchKey: vcs.scpSyntax
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -144,13 +144,14 @@ scpSyntax was modified from [https://golang.org/src/cmd/go/vcs.go](https://golan
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="RepoNotExistError" href="#RepoNotExistError">type RepoNotExistError struct</a>
 
 ```
 searchKey: vcs.RepoNotExistError
+tags: [struct]
 ```
 
 ```Go
@@ -167,30 +168,33 @@ type RepoNotExistError struct {
 
 RepoNotExistError is an error that reports a repository doesn't exist. 
 
-#### <a id="RepoNotExistError.NotFound" href="#RepoNotExistError.NotFound">func (RepoNotExistError) NotFound() bool</a>
-
-```
-searchKey: vcs.RepoNotExistError.NotFound
-```
-
-```Go
-func (RepoNotExistError) NotFound() bool
-```
-
 #### <a id="RepoNotExistError.Error" href="#RepoNotExistError.Error">func (e *RepoNotExistError) Error() string</a>
 
 ```
 searchKey: vcs.RepoNotExistError.Error
+tags: [function]
 ```
 
 ```Go
 func (e *RepoNotExistError) Error() string
 ```
 
+#### <a id="RepoNotExistError.NotFound" href="#RepoNotExistError.NotFound">func (RepoNotExistError) NotFound() bool</a>
+
+```
+searchKey: vcs.RepoNotExistError.NotFound
+tags: [function]
+```
+
+```Go
+func (RepoNotExistError) NotFound() bool
+```
+
 ### <a id="URL" href="#URL">type URL struct</a>
 
 ```
 searchKey: vcs.URL
+tags: [struct]
 ```
 
 ```Go
@@ -207,6 +211,7 @@ URL wraps url.URL to provide rsync format compatible `String()` functionality. e
 
 ```
 searchKey: vcs.ParseURL
+tags: [method]
 ```
 
 ```Go
@@ -217,11 +222,24 @@ ParseURL parses rawurl into a URL structure. Parse first attempts to find a stan
 
 Code copied and modified from github.com/whilp/git-urls to support perforce scheme. 
 
+#### <a id="parseLocal" href="#parseLocal">func parseLocal(rawurl string) (*URL, error)</a>
+
+```
+searchKey: vcs.parseLocal
+tags: [method private]
+```
+
+```Go
+func parseLocal(rawurl string) (*URL, error)
+```
+
+parseLocal parses rawurl into a URL object with a "file" scheme. This will effectively never return an error. 
+
 #### <a id="parseScheme" href="#parseScheme">func parseScheme(rawurl string) (*URL, error)</a>
 
 ```
 searchKey: vcs.parseScheme
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -232,7 +250,7 @@ func parseScheme(rawurl string) (*URL, error)
 
 ```
 searchKey: vcs.parseScp
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -241,35 +259,11 @@ func parseScp(rawurl string) (*URL, error)
 
 parseScp parses rawurl into a URL object. The rawurl must be an SCP-like URL, otherwise ParseScp returns an error. 
 
-#### <a id="parseLocal" href="#parseLocal">func parseLocal(rawurl string) (*URL, error)</a>
-
-```
-searchKey: vcs.parseLocal
-tags: [private]
-```
-
-```Go
-func parseLocal(rawurl string) (*URL, error)
-```
-
-parseLocal parses rawurl into a URL object with a "file" scheme. This will effectively never return an error. 
-
-#### <a id="URL.String" href="#URL.String">func (u *URL) String() string</a>
-
-```
-searchKey: vcs.URL.String
-```
-
-```Go
-func (u *URL) String() string
-```
-
-String will return standard url.URL.String() if the url has a .Scheme set, but if not it will produce an rsync format URL, eg `git@foo.com:foo/bar.git` 
-
 #### <a id="URL.IsSSH" href="#URL.IsSSH">func (u *URL) IsSSH() bool</a>
 
 ```
 searchKey: vcs.URL.IsSSH
+tags: [function]
 ```
 
 ```Go
@@ -278,11 +272,24 @@ func (u *URL) IsSSH() bool
 
 IsSSH returns whether this URL is SSH based, which for vcs.URL means if the scheme is either empty or `ssh`, this is because of rsync format urls being cloned over SSH, but not including a scheme. 
 
+#### <a id="URL.String" href="#URL.String">func (u *URL) String() string</a>
+
+```
+searchKey: vcs.URL.String
+tags: [function]
+```
+
+```Go
+func (u *URL) String() string
+```
+
+String will return standard url.URL.String() if the url has a .Scheme set, but if not it will produce an rsync format URL, eg `git@foo.com:foo/bar.git` 
+
 ### <a id="urlFormat" href="#urlFormat">type urlFormat int</a>
 
 ```
 searchKey: vcs.urlFormat
-tags: [private]
+tags: [number private]
 ```
 
 ```Go
@@ -292,25 +299,14 @@ type urlFormat int
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
-
-### <a id="IsRepoNotExist" href="#IsRepoNotExist">func IsRepoNotExist(err error) bool</a>
-
-```
-searchKey: vcs.IsRepoNotExist
-```
-
-```Go
-func IsRepoNotExist(err error) bool
-```
-
-IsRepoNotExist reports if err is a RepoNotExistError. 
 
 ### <a id="IsCloneInProgress" href="#IsCloneInProgress">func IsCloneInProgress(err error) bool</a>
 
 ```
 searchKey: vcs.IsCloneInProgress
+tags: [method]
 ```
 
 ```Go
@@ -319,11 +315,24 @@ func IsCloneInProgress(err error) bool
 
 IsCloneInProgress reports if err is a RepoNotExistError which has a clone in progress. 
 
+### <a id="IsRepoNotExist" href="#IsRepoNotExist">func IsRepoNotExist(err error) bool</a>
+
+```
+searchKey: vcs.IsRepoNotExist
+tags: [method]
+```
+
+```Go
+func IsRepoNotExist(err error) bool
+```
+
+IsRepoNotExist reports if err is a RepoNotExistError. 
+
 ### <a id="TestParseURL" href="#TestParseURL">func TestParseURL(t *testing.T)</a>
 
 ```
 searchKey: vcs.TestParseURL
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go

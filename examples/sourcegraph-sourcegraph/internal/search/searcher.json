@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/search/searcher",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,12 +41,37 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/search/searcher#MockSearch",
+              "documentation": {
+                "identifier": "MockSearch",
+                "newPage": false,
+                "searchKey": "searcher.MockSearch",
+                "tags": [
+                  "variable",
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockSearch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockSearch func(ctx context.Context, repo api.RepoName, commit api.CommitID, p *search.TextPatternInfo, fetchTimeout time.Duration) (matches []*protocol.FileMatch, limitHit bool, err error) = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/search/searcher#requestCounter",
               "documentation": {
                 "identifier": "requestCounter",
                 "newPage": false,
                 "searchKey": "searcher.requestCounter",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -67,6 +94,8 @@
                 "newPage": false,
                 "searchKey": "searcher.searchHTTPClient",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -77,26 +106,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar searchHTTPClient = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/search/searcher#MockSearch",
-              "documentation": {
-                "identifier": "MockSearch",
-                "newPage": false,
-                "searchKey": "searcher.MockSearch",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var MockSearch"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar MockSearch func(ctx context.Context, repo api.RepoName, commit api.CommitID, p *search.TextPatternInfo, fetchTimeout time.Duration) (matches []*protocol.FileMatch, limitHit bool, err error) = ...\n```\n\n"
               },
               "children": null
             }
@@ -112,6 +121,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -132,6 +142,7 @@
                 "newPage": false,
                 "searchKey": "searcher.searcherError",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -152,6 +163,7 @@
                       "newPage": false,
                       "searchKey": "searcher.searcherError.BadRequest",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -168,34 +180,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/search/searcher#searcherError.Temporary",
-                    "documentation": {
-                      "identifier": "searcherError.Temporary",
-                      "newPage": false,
-                      "searchKey": "searcher.searcherError.Temporary",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *searcherError) Temporary() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *searcherError) Temporary() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/search/searcher#searcherError.Error",
                     "documentation": {
                       "identifier": "searcherError.Error",
                       "newPage": false,
                       "searchKey": "searcher.searcherError.Error",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -206,6 +197,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (e *searcherError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/searcher#searcherError.Temporary",
+                    "documentation": {
+                      "identifier": "searcherError.Temporary",
+                      "newPage": false,
+                      "searchKey": "searcher.searcherError.Temporary",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *searcherError) Temporary() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *searcherError) Temporary() bool\n```\n\n"
                     },
                     "children": null
                   }
@@ -224,6 +238,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -243,7 +258,9 @@
                 "identifier": "Search",
                 "newPage": false,
                 "searchKey": "searcher.Search",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -264,6 +281,7 @@
                 "newPage": false,
                 "searchKey": "searcher.textSearchURL",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },

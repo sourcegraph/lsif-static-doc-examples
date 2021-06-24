@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/symbols",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,12 +41,37 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/symbols#DefaultClient",
+              "documentation": {
+                "identifier": "DefaultClient",
+                "newPage": false,
+                "searchKey": "symbols.DefaultClient",
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var DefaultClient"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar DefaultClient = ...\n```\n\nDefaultClient is the default Client. Unless overwritten, it is connected to the server specified by the SYMBOLS_URL environment variable. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/symbols#symbolsURL",
               "documentation": {
                 "identifier": "symbolsURL",
                 "newPage": false,
                 "searchKey": "symbols.symbolsURL",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -55,26 +82,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar symbolsURL = env.Get(\"SYMBOLS_URL\", \"k8s+http://symbols:3184\", \"symbols service URL\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/symbols#DefaultClient",
-              "documentation": {
-                "identifier": "DefaultClient",
-                "newPage": false,
-                "searchKey": "symbols.DefaultClient",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var DefaultClient"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar DefaultClient = ...\n```\n\nDefaultClient is the default Client. Unless overwritten, it is connected to the server specified by the SYMBOLS_URL environment variable. \n\n"
               },
               "children": null
             }
@@ -90,6 +97,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -109,7 +117,9 @@
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "symbols.Client",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -122,34 +132,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/symbols#Client.url",
-                    "documentation": {
-                      "identifier": "Client.url",
-                      "newPage": false,
-                      "searchKey": "symbols.Client.url",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) url(key key) (string, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) url(key key) (string, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/symbols#Client.Search",
                     "documentation": {
                       "identifier": "Client.Search",
                       "newPage": false,
                       "searchKey": "symbols.Client.Search",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -170,6 +160,7 @@
                       "newPage": false,
                       "searchKey": "symbols.Client.httpPost",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -180,6 +171,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (c *Client) httpPost(ctx context.Context, method string, key key, payload interface{}) (resp *http.Response, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/symbols#Client.url",
+                    "documentation": {
+                      "identifier": "Client.url",
+                      "newPage": false,
+                      "searchKey": "symbols.Client.url",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) url(key key) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) url(key key) (string, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -195,6 +209,7 @@
                 "newPage": false,
                 "searchKey": "symbols.key",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },

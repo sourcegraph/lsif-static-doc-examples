@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/codeintel/httpapi",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "httpapi.testCommit",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -90,6 +95,8 @@
                 "newPage": false,
                 "searchKey": "httpapi.githubURL",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -112,6 +119,8 @@
                 "newPage": false,
                 "searchKey": "httpapi.revhashPattern",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -137,6 +146,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -156,7 +166,9 @@
                 "identifier": "ClientError",
                 "newPage": false,
                 "searchKey": "httpapi.ClientError",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -174,7 +186,9 @@
                       "identifier": "ClientError.Error",
                       "newPage": false,
                       "searchKey": "httpapi.ClientError.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -197,7 +211,9 @@
                 "identifier": "DBStore",
                 "newPage": false,
                 "searchKey": "httpapi.DBStore",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -212,491 +228,13 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreShim",
-              "documentation": {
-                "identifier": "DBStoreShim",
-                "newPage": false,
-                "searchKey": "httpapi.DBStoreShim",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type DBStoreShim struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype DBStoreShim struct {\n\t*dbstore.Store\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreShim.Transact",
-                    "documentation": {
-                      "identifier": "DBStoreShim.Transact",
-                      "newPage": false,
-                      "searchKey": "httpapi.DBStoreShim.Transact",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *DBStoreShim) Transact(ctx context.Context) (DBStore, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *DBStoreShim) Transact(ctx context.Context) (DBStore, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#UploadHandler",
-              "documentation": {
-                "identifier": "UploadHandler",
-                "newPage": false,
-                "searchKey": "httpapi.UploadHandler",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type UploadHandler struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype UploadHandler struct {\n\tdbStore     DBStore\n\tuploadStore uploadstore.Store\n\tinternal    bool\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#UploadHandler.handleEnqueue",
-                    "documentation": {
-                      "identifier": "UploadHandler.handleEnqueue",
-                      "newPage": false,
-                      "searchKey": "httpapi.UploadHandler.handleEnqueue",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *UploadHandler) handleEnqueue(w http.ResponseWriter, r *http.Request)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *UploadHandler) handleEnqueue(w http.ResponseWriter, r *http.Request)\n```\n\nPOST /upload \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#UploadHandler.handleEnqueueErr",
-                    "documentation": {
-                      "identifier": "UploadHandler.handleEnqueueErr",
-                      "newPage": false,
-                      "searchKey": "httpapi.UploadHandler.handleEnqueueErr",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *UploadHandler) handleEnqueueErr(w http.ResponseWriter, r *http.Request, repositoryID int) (interface{}, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *UploadHandler) handleEnqueueErr(w http.ResponseWriter, r *http.Request, repositoryID int) (interface{}, error)\n```\n\nhandleEnqueueErr dispatches to the correct handler function based on query args. Running the `src lsif upload` command will cause one of two sequences of requests to occur. For uploads that are small enough repos (that can be uploaded in one-shot), only one request will be made: \n\n```\n- POST `/upload?repositoryId,commit,root,indexerName`\n\n```\nFor larger uploads, the requests are broken up into a setup request, a serires of upload requests, and a finalization request: \n\n```\n- POST `/upload?repositoryId,commit,root,indexerName,multiPart=true,numParts={n}`\n- POST `/upload?uploadId={id},index={i}`\n- POST `/upload?uploadId={id},done=true`\n\n```\nSee the functions the following functions for details on how each request is handled: \n\n```\n- handleEnqueueSinglePayload\n- handleEnqueueMultipartSetup\n- handleEnqueueMultipartUpload\n- handleEnqueueMultipartFinalize\n\n```\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#UploadHandler.handleEnqueueSinglePayload",
-                    "documentation": {
-                      "identifier": "UploadHandler.handleEnqueueSinglePayload",
-                      "newPage": false,
-                      "searchKey": "httpapi.UploadHandler.handleEnqueueSinglePayload",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *UploadHandler) handleEnqueueSinglePayload(r *http.Request, uploadArgs UploadArgs) (interface{}, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *UploadHandler) handleEnqueueSinglePayload(r *http.Request, uploadArgs UploadArgs) (interface{}, error)\n```\n\nhandleEnqueueSinglePayload handles a non-multipart upload. This creates an upload record with state 'queued', proxies the data to the bundle manager, and returns the generated ID. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#UploadHandler.handleEnqueueMultipartSetup",
-                    "documentation": {
-                      "identifier": "UploadHandler.handleEnqueueMultipartSetup",
-                      "newPage": false,
-                      "searchKey": "httpapi.UploadHandler.handleEnqueueMultipartSetup",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *UploadHandler) handleEnqueueMultipartSetup(r *http.Request, uploadArgs UploadArgs, numParts int) (interface{}, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *UploadHandler) handleEnqueueMultipartSetup(r *http.Request, uploadArgs UploadArgs, numParts int) (interface{}, error)\n```\n\nhandleEnqueueMultipartSetup handles the first request in a multipart upload. This creates a new upload record with state 'uploading' and returns the generated ID to be used in subsequent requests for the same upload. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#UploadHandler.handleEnqueueMultipartUpload",
-                    "documentation": {
-                      "identifier": "UploadHandler.handleEnqueueMultipartUpload",
-                      "newPage": false,
-                      "searchKey": "httpapi.UploadHandler.handleEnqueueMultipartUpload",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *UploadHandler) handleEnqueueMultipartUpload(r *http.Request, upload store.Upload, partIndex int) (interface{}, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *UploadHandler) handleEnqueueMultipartUpload(r *http.Request, upload store.Upload, partIndex int) (interface{}, error)\n```\n\nhandleEnqueueMultipartUpload handles a partial upload in a multipart upload. This proxies the data to the bundle manager and marks the part index in the upload record. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#UploadHandler.handleEnqueueMultipartFinalize",
-                    "documentation": {
-                      "identifier": "UploadHandler.handleEnqueueMultipartFinalize",
-                      "newPage": false,
-                      "searchKey": "httpapi.UploadHandler.handleEnqueueMultipartFinalize",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *UploadHandler) handleEnqueueMultipartFinalize(r *http.Request, upload store.Upload) (interface{}, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *UploadHandler) handleEnqueueMultipartFinalize(r *http.Request, upload store.Upload) (interface{}, error)\n```\n\nhandleEnqueueMultipartFinalize handles the final request of a multipart upload. This transitions the upload from 'uploading' to 'queued', then instructs the bundle manager to concatenate all of the part files together. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#UploadHandler.markUploadAsFailed",
-                    "documentation": {
-                      "identifier": "UploadHandler.markUploadAsFailed",
-                      "newPage": false,
-                      "searchKey": "httpapi.UploadHandler.markUploadAsFailed",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *UploadHandler) markUploadAsFailed(ctx context.Context, tx DBStore, uploadID int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *UploadHandler) markUploadAsFailed(ctx context.Context, tx DBStore, uploadID int, err error)\n```\n\nmarkUploadAsFailed attempts to mark the given upload as failed, extracting a human-meaningful error message from the given error. We assume this method to whenever an error occurs when interacting with the upload store so that the status of the upload is accurately reflected in the UI. \n\nThis method does not return an error as it's best-effort cleanup. If an error occurs when trying to modify the record, it will be logged but will not be directly visible to the user. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#UploadArgs",
-              "documentation": {
-                "identifier": "UploadArgs",
-                "newPage": false,
-                "searchKey": "httpapi.UploadArgs",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type UploadArgs struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype UploadArgs struct {\n\tCommit            string\n\tRoot              string\n\tRepositoryID      int\n\tIndexer           string\n\tAssociatedIndexID int\n}\n```\n\nUploadArgs are common arguments required to enqueue an upload for both single-payload and multipart uploads. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#enqueuePayload",
-              "documentation": {
-                "identifier": "enqueuePayload",
-                "newPage": false,
-                "searchKey": "httpapi.enqueuePayload",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type enqueuePayload struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype enqueuePayload struct {\n\tID string `json:\"id\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#MockDBStore",
-              "documentation": {
-                "identifier": "MockDBStore",
-                "newPage": false,
-                "searchKey": "httpapi.MockDBStore",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type MockDBStore struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype MockDBStore struct {\n\t// AddUploadPartFunc is an instance of a mock function object\n\t// controlling the behavior of the method AddUploadPart.\n\tAddUploadPartFunc *DBStoreAddUploadPartFunc\n\t// DoneFunc is an instance of a mock function object controlling the\n\t// behavior of the method Done.\n\tDoneFunc *DBStoreDoneFunc\n\t// GetUploadByIDFunc is an instance of a mock function object\n\t// controlling the behavior of the method GetUploadByID.\n\tGetUploadByIDFunc *DBStoreGetUploadByIDFunc\n\t// InsertUploadFunc is an instance of a mock function object controlling\n\t// the behavior of the method InsertUpload.\n\tInsertUploadFunc *DBStoreInsertUploadFunc\n\t// MarkFailedFunc is an instance of a mock function object controlling\n\t// the behavior of the method MarkFailed.\n\tMarkFailedFunc *DBStoreMarkFailedFunc\n\t// MarkQueuedFunc is an instance of a mock function object controlling\n\t// the behavior of the method MarkQueued.\n\tMarkQueuedFunc *DBStoreMarkQueuedFunc\n\t// TransactFunc is an instance of a mock function object controlling the\n\t// behavior of the method Transact.\n\tTransactFunc *DBStoreTransactFunc\n}\n```\n\nMockDBStore is a mock implementation of the DBStore interface (from the package github.com/sourcegraph/sourcegraph/enterprise/cmd/frontend/internal/codeintel/httpapi) used for unit testing. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#NewMockDBStore",
-                    "documentation": {
-                      "identifier": "NewMockDBStore",
-                      "newPage": false,
-                      "searchKey": "httpapi.NewMockDBStore",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewMockDBStore() *MockDBStore"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewMockDBStore() *MockDBStore\n```\n\nNewMockDBStore creates a new mock of the DBStore interface. All methods return zero values for all results, unless overwritten. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#NewMockDBStoreFrom",
-                    "documentation": {
-                      "identifier": "NewMockDBStoreFrom",
-                      "newPage": false,
-                      "searchKey": "httpapi.NewMockDBStoreFrom",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func NewMockDBStoreFrom(i DBStore) *MockDBStore"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc NewMockDBStoreFrom(i DBStore) *MockDBStore\n```\n\nNewMockDBStoreFrom creates a new mock of the MockDBStore interface. All methods delegate to the given implementation, unless overwritten. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#MockDBStore.AddUploadPart",
-                    "documentation": {
-                      "identifier": "MockDBStore.AddUploadPart",
-                      "newPage": false,
-                      "searchKey": "httpapi.MockDBStore.AddUploadPart",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *MockDBStore) AddUploadPart(v0 context.Context, v1 int, v2 int) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *MockDBStore) AddUploadPart(v0 context.Context, v1 int, v2 int) error\n```\n\nAddUploadPart delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#MockDBStore.Done",
-                    "documentation": {
-                      "identifier": "MockDBStore.Done",
-                      "newPage": false,
-                      "searchKey": "httpapi.MockDBStore.Done",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *MockDBStore) Done(v0 error) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *MockDBStore) Done(v0 error) error\n```\n\nDone delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#MockDBStore.GetUploadByID",
-                    "documentation": {
-                      "identifier": "MockDBStore.GetUploadByID",
-                      "newPage": false,
-                      "searchKey": "httpapi.MockDBStore.GetUploadByID",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *MockDBStore) GetUploadByID(v0 context.Context, v1 int) (dbstore.Upload, bool, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *MockDBStore) GetUploadByID(v0 context.Context, v1 int) (dbstore.Upload, bool, error)\n```\n\nGetUploadByID delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#MockDBStore.InsertUpload",
-                    "documentation": {
-                      "identifier": "MockDBStore.InsertUpload",
-                      "newPage": false,
-                      "searchKey": "httpapi.MockDBStore.InsertUpload",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *MockDBStore) InsertUpload(v0 context.Context, v1 dbstore.Upload) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *MockDBStore) InsertUpload(v0 context.Context, v1 dbstore.Upload) (int, error)\n```\n\nInsertUpload delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#MockDBStore.MarkFailed",
-                    "documentation": {
-                      "identifier": "MockDBStore.MarkFailed",
-                      "newPage": false,
-                      "searchKey": "httpapi.MockDBStore.MarkFailed",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *MockDBStore) MarkFailed(v0 context.Context, v1 int, v2 string) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *MockDBStore) MarkFailed(v0 context.Context, v1 int, v2 string) error\n```\n\nMarkFailed delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#MockDBStore.MarkQueued",
-                    "documentation": {
-                      "identifier": "MockDBStore.MarkQueued",
-                      "newPage": false,
-                      "searchKey": "httpapi.MockDBStore.MarkQueued",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *MockDBStore) MarkQueued(v0 context.Context, v1 int, v2 *int64) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *MockDBStore) MarkQueued(v0 context.Context, v1 int, v2 *int64) error\n```\n\nMarkQueued delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#MockDBStore.Transact",
-                    "documentation": {
-                      "identifier": "MockDBStore.Transact",
-                      "newPage": false,
-                      "searchKey": "httpapi.MockDBStore.Transact",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *MockDBStore) Transact(v0 context.Context) (DBStore, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *MockDBStore) Transact(v0 context.Context) (DBStore, error)\n```\n\nTransact delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreAddUploadPartFunc",
               "documentation": {
                 "identifier": "DBStoreAddUploadPartFunc",
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreAddUploadPartFunc",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -711,22 +249,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreAddUploadPartFunc.SetDefaultHook",
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreAddUploadPartFunc.History",
                     "documentation": {
-                      "identifier": "DBStoreAddUploadPartFunc.SetDefaultHook",
+                      "identifier": "DBStoreAddUploadPartFunc.History",
                       "newPage": false,
-                      "searchKey": "httpapi.DBStoreAddUploadPartFunc.SetDefaultHook",
+                      "searchKey": "httpapi.DBStoreAddUploadPartFunc.History",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *DBStoreAddUploadPartFunc) SetDefaultHook(hook func(context.Context, int, int) error)"
+                      "value": "func (f *DBStoreAddUploadPartFunc) History() []DBStoreAddUploadPartFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreAddUploadPartFunc) SetDefaultHook(hook func(context.Context, int, int) error)\n```\n\nSetDefaultHook sets function that is called when the AddUploadPart method of the parent MockDBStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *DBStoreAddUploadPartFunc) History() []DBStoreAddUploadPartFuncCall\n```\n\nHistory returns a sequence of DBStoreAddUploadPartFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -739,6 +278,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreAddUploadPartFunc.PushHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -755,34 +295,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreAddUploadPartFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "DBStoreAddUploadPartFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "httpapi.DBStoreAddUploadPartFunc.SetDefaultReturn",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *DBStoreAddUploadPartFunc) SetDefaultReturn(r0 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreAddUploadPartFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreAddUploadPartFunc.PushReturn",
                     "documentation": {
                       "identifier": "DBStoreAddUploadPartFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreAddUploadPartFunc.PushReturn",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -799,22 +318,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreAddUploadPartFunc.nextHook",
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreAddUploadPartFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "DBStoreAddUploadPartFunc.nextHook",
+                      "identifier": "DBStoreAddUploadPartFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "httpapi.DBStoreAddUploadPartFunc.nextHook",
+                      "searchKey": "httpapi.DBStoreAddUploadPartFunc.SetDefaultHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *DBStoreAddUploadPartFunc) nextHook() func(context.Context, int, int) error"
+                      "value": "func (f *DBStoreAddUploadPartFunc) SetDefaultHook(hook func(context.Context, int, int) error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreAddUploadPartFunc) nextHook() func(context.Context, int, int) error\n```\n\n"
+                      "value": "```Go\nfunc (f *DBStoreAddUploadPartFunc) SetDefaultHook(hook func(context.Context, int, int) error)\n```\n\nSetDefaultHook sets function that is called when the AddUploadPart method of the parent MockDBStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreAddUploadPartFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "DBStoreAddUploadPartFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "httpapi.DBStoreAddUploadPartFunc.SetDefaultReturn",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreAddUploadPartFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreAddUploadPartFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -827,6 +370,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreAddUploadPartFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -843,22 +387,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreAddUploadPartFunc.History",
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreAddUploadPartFunc.nextHook",
                     "documentation": {
-                      "identifier": "DBStoreAddUploadPartFunc.History",
+                      "identifier": "DBStoreAddUploadPartFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "httpapi.DBStoreAddUploadPartFunc.History",
+                      "searchKey": "httpapi.DBStoreAddUploadPartFunc.nextHook",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *DBStoreAddUploadPartFunc) History() []DBStoreAddUploadPartFuncCall"
+                      "value": "func (f *DBStoreAddUploadPartFunc) nextHook() func(context.Context, int, int) error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreAddUploadPartFunc) History() []DBStoreAddUploadPartFuncCall\n```\n\nHistory returns a sequence of DBStoreAddUploadPartFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *DBStoreAddUploadPartFunc) nextHook() func(context.Context, int, int) error\n```\n\n"
                     },
                     "children": null
                   }
@@ -874,6 +419,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreAddUploadPartFuncCall",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -894,6 +440,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreAddUploadPartFuncCall.Args",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -916,6 +463,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreAddUploadPartFuncCall.Results",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -941,6 +489,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreDoneFunc",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -955,22 +504,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreDoneFunc.SetDefaultHook",
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreDoneFunc.History",
                     "documentation": {
-                      "identifier": "DBStoreDoneFunc.SetDefaultHook",
+                      "identifier": "DBStoreDoneFunc.History",
                       "newPage": false,
-                      "searchKey": "httpapi.DBStoreDoneFunc.SetDefaultHook",
+                      "searchKey": "httpapi.DBStoreDoneFunc.History",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *DBStoreDoneFunc) SetDefaultHook(hook func(error) error)"
+                      "value": "func (f *DBStoreDoneFunc) History() []DBStoreDoneFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreDoneFunc) SetDefaultHook(hook func(error) error)\n```\n\nSetDefaultHook sets function that is called when the Done method of the parent MockDBStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *DBStoreDoneFunc) History() []DBStoreDoneFuncCall\n```\n\nHistory returns a sequence of DBStoreDoneFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -983,6 +533,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreDoneFunc.PushHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -999,34 +550,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreDoneFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "DBStoreDoneFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "httpapi.DBStoreDoneFunc.SetDefaultReturn",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *DBStoreDoneFunc) SetDefaultReturn(r0 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreDoneFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreDoneFunc.PushReturn",
                     "documentation": {
                       "identifier": "DBStoreDoneFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreDoneFunc.PushReturn",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1043,22 +573,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreDoneFunc.nextHook",
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreDoneFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "DBStoreDoneFunc.nextHook",
+                      "identifier": "DBStoreDoneFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "httpapi.DBStoreDoneFunc.nextHook",
+                      "searchKey": "httpapi.DBStoreDoneFunc.SetDefaultHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *DBStoreDoneFunc) nextHook() func(error) error"
+                      "value": "func (f *DBStoreDoneFunc) SetDefaultHook(hook func(error) error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreDoneFunc) nextHook() func(error) error\n```\n\n"
+                      "value": "```Go\nfunc (f *DBStoreDoneFunc) SetDefaultHook(hook func(error) error)\n```\n\nSetDefaultHook sets function that is called when the Done method of the parent MockDBStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreDoneFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "DBStoreDoneFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "httpapi.DBStoreDoneFunc.SetDefaultReturn",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreDoneFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreDoneFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -1071,6 +625,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreDoneFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1087,22 +642,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreDoneFunc.History",
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreDoneFunc.nextHook",
                     "documentation": {
-                      "identifier": "DBStoreDoneFunc.History",
+                      "identifier": "DBStoreDoneFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "httpapi.DBStoreDoneFunc.History",
+                      "searchKey": "httpapi.DBStoreDoneFunc.nextHook",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *DBStoreDoneFunc) History() []DBStoreDoneFuncCall"
+                      "value": "func (f *DBStoreDoneFunc) nextHook() func(error) error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreDoneFunc) History() []DBStoreDoneFuncCall\n```\n\nHistory returns a sequence of DBStoreDoneFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *DBStoreDoneFunc) nextHook() func(error) error\n```\n\n"
                     },
                     "children": null
                   }
@@ -1118,6 +674,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreDoneFuncCall",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1138,6 +695,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreDoneFuncCall.Args",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1160,6 +718,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreDoneFuncCall.Results",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1185,6 +744,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreGetUploadByIDFunc",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1199,22 +759,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreGetUploadByIDFunc.SetDefaultHook",
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreGetUploadByIDFunc.History",
                     "documentation": {
-                      "identifier": "DBStoreGetUploadByIDFunc.SetDefaultHook",
+                      "identifier": "DBStoreGetUploadByIDFunc.History",
                       "newPage": false,
-                      "searchKey": "httpapi.DBStoreGetUploadByIDFunc.SetDefaultHook",
+                      "searchKey": "httpapi.DBStoreGetUploadByIDFunc.History",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *DBStoreGetUploadByIDFunc) SetDefaultHook(hook func(context.Context, int) (dbstore.Upload, bool, error))"
+                      "value": "func (f *DBStoreGetUploadByIDFunc) History() []DBStoreGetUploadByIDFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreGetUploadByIDFunc) SetDefaultHook(hook func(context.Context, int) (dbstore.Upload, bool, error))\n```\n\nSetDefaultHook sets function that is called when the GetUploadByID method of the parent MockDBStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *DBStoreGetUploadByIDFunc) History() []DBStoreGetUploadByIDFuncCall\n```\n\nHistory returns a sequence of DBStoreGetUploadByIDFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -1227,6 +788,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreGetUploadByIDFunc.PushHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1243,34 +805,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreGetUploadByIDFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "DBStoreGetUploadByIDFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "httpapi.DBStoreGetUploadByIDFunc.SetDefaultReturn",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *DBStoreGetUploadByIDFunc) SetDefaultReturn(r0 dbstore.Upload, r1 bool, r2 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreGetUploadByIDFunc) SetDefaultReturn(r0 dbstore.Upload, r1 bool, r2 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreGetUploadByIDFunc.PushReturn",
                     "documentation": {
                       "identifier": "DBStoreGetUploadByIDFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreGetUploadByIDFunc.PushReturn",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1287,22 +828,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreGetUploadByIDFunc.nextHook",
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreGetUploadByIDFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "DBStoreGetUploadByIDFunc.nextHook",
+                      "identifier": "DBStoreGetUploadByIDFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "httpapi.DBStoreGetUploadByIDFunc.nextHook",
+                      "searchKey": "httpapi.DBStoreGetUploadByIDFunc.SetDefaultHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *DBStoreGetUploadByIDFunc) nextHook() func(context.Context, int) (dbstore.Upload, bool, error)"
+                      "value": "func (f *DBStoreGetUploadByIDFunc) SetDefaultHook(hook func(context.Context, int) (dbstore.Upload, bool, error))"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreGetUploadByIDFunc) nextHook() func(context.Context, int) (dbstore.Upload, bool, error)\n```\n\n"
+                      "value": "```Go\nfunc (f *DBStoreGetUploadByIDFunc) SetDefaultHook(hook func(context.Context, int) (dbstore.Upload, bool, error))\n```\n\nSetDefaultHook sets function that is called when the GetUploadByID method of the parent MockDBStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreGetUploadByIDFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "DBStoreGetUploadByIDFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "httpapi.DBStoreGetUploadByIDFunc.SetDefaultReturn",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreGetUploadByIDFunc) SetDefaultReturn(r0 dbstore.Upload, r1 bool, r2 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreGetUploadByIDFunc) SetDefaultReturn(r0 dbstore.Upload, r1 bool, r2 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -1315,6 +880,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreGetUploadByIDFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1331,22 +897,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreGetUploadByIDFunc.History",
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreGetUploadByIDFunc.nextHook",
                     "documentation": {
-                      "identifier": "DBStoreGetUploadByIDFunc.History",
+                      "identifier": "DBStoreGetUploadByIDFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "httpapi.DBStoreGetUploadByIDFunc.History",
+                      "searchKey": "httpapi.DBStoreGetUploadByIDFunc.nextHook",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *DBStoreGetUploadByIDFunc) History() []DBStoreGetUploadByIDFuncCall"
+                      "value": "func (f *DBStoreGetUploadByIDFunc) nextHook() func(context.Context, int) (dbstore.Upload, bool, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreGetUploadByIDFunc) History() []DBStoreGetUploadByIDFuncCall\n```\n\nHistory returns a sequence of DBStoreGetUploadByIDFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *DBStoreGetUploadByIDFunc) nextHook() func(context.Context, int) (dbstore.Upload, bool, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1362,6 +929,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreGetUploadByIDFuncCall",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1382,6 +950,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreGetUploadByIDFuncCall.Args",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1404,6 +973,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreGetUploadByIDFuncCall.Results",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1429,6 +999,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreInsertUploadFunc",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1443,22 +1014,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreInsertUploadFunc.SetDefaultHook",
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreInsertUploadFunc.History",
                     "documentation": {
-                      "identifier": "DBStoreInsertUploadFunc.SetDefaultHook",
+                      "identifier": "DBStoreInsertUploadFunc.History",
                       "newPage": false,
-                      "searchKey": "httpapi.DBStoreInsertUploadFunc.SetDefaultHook",
+                      "searchKey": "httpapi.DBStoreInsertUploadFunc.History",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *DBStoreInsertUploadFunc) SetDefaultHook(hook func(context.Context, dbstore.Upload) (int, error))"
+                      "value": "func (f *DBStoreInsertUploadFunc) History() []DBStoreInsertUploadFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreInsertUploadFunc) SetDefaultHook(hook func(context.Context, dbstore.Upload) (int, error))\n```\n\nSetDefaultHook sets function that is called when the InsertUpload method of the parent MockDBStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *DBStoreInsertUploadFunc) History() []DBStoreInsertUploadFuncCall\n```\n\nHistory returns a sequence of DBStoreInsertUploadFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -1471,6 +1043,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreInsertUploadFunc.PushHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1487,34 +1060,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreInsertUploadFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "DBStoreInsertUploadFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "httpapi.DBStoreInsertUploadFunc.SetDefaultReturn",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *DBStoreInsertUploadFunc) SetDefaultReturn(r0 int, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreInsertUploadFunc) SetDefaultReturn(r0 int, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreInsertUploadFunc.PushReturn",
                     "documentation": {
                       "identifier": "DBStoreInsertUploadFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreInsertUploadFunc.PushReturn",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1531,22 +1083,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreInsertUploadFunc.nextHook",
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreInsertUploadFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "DBStoreInsertUploadFunc.nextHook",
+                      "identifier": "DBStoreInsertUploadFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "httpapi.DBStoreInsertUploadFunc.nextHook",
+                      "searchKey": "httpapi.DBStoreInsertUploadFunc.SetDefaultHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *DBStoreInsertUploadFunc) nextHook() func(context.Context, dbstore.Upload) (int, error)"
+                      "value": "func (f *DBStoreInsertUploadFunc) SetDefaultHook(hook func(context.Context, dbstore.Upload) (int, error))"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreInsertUploadFunc) nextHook() func(context.Context, dbstore.Upload) (int, error)\n```\n\n"
+                      "value": "```Go\nfunc (f *DBStoreInsertUploadFunc) SetDefaultHook(hook func(context.Context, dbstore.Upload) (int, error))\n```\n\nSetDefaultHook sets function that is called when the InsertUpload method of the parent MockDBStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreInsertUploadFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "DBStoreInsertUploadFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "httpapi.DBStoreInsertUploadFunc.SetDefaultReturn",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreInsertUploadFunc) SetDefaultReturn(r0 int, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreInsertUploadFunc) SetDefaultReturn(r0 int, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -1559,6 +1135,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreInsertUploadFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1575,22 +1152,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreInsertUploadFunc.History",
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreInsertUploadFunc.nextHook",
                     "documentation": {
-                      "identifier": "DBStoreInsertUploadFunc.History",
+                      "identifier": "DBStoreInsertUploadFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "httpapi.DBStoreInsertUploadFunc.History",
+                      "searchKey": "httpapi.DBStoreInsertUploadFunc.nextHook",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *DBStoreInsertUploadFunc) History() []DBStoreInsertUploadFuncCall"
+                      "value": "func (f *DBStoreInsertUploadFunc) nextHook() func(context.Context, dbstore.Upload) (int, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreInsertUploadFunc) History() []DBStoreInsertUploadFuncCall\n```\n\nHistory returns a sequence of DBStoreInsertUploadFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *DBStoreInsertUploadFunc) nextHook() func(context.Context, dbstore.Upload) (int, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1606,6 +1184,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreInsertUploadFuncCall",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1626,6 +1205,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreInsertUploadFuncCall.Args",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1648,6 +1228,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreInsertUploadFuncCall.Results",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1673,6 +1254,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreMarkFailedFunc",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1687,22 +1269,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreMarkFailedFunc.SetDefaultHook",
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreMarkFailedFunc.History",
                     "documentation": {
-                      "identifier": "DBStoreMarkFailedFunc.SetDefaultHook",
+                      "identifier": "DBStoreMarkFailedFunc.History",
                       "newPage": false,
-                      "searchKey": "httpapi.DBStoreMarkFailedFunc.SetDefaultHook",
+                      "searchKey": "httpapi.DBStoreMarkFailedFunc.History",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *DBStoreMarkFailedFunc) SetDefaultHook(hook func(context.Context, int, string) error)"
+                      "value": "func (f *DBStoreMarkFailedFunc) History() []DBStoreMarkFailedFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreMarkFailedFunc) SetDefaultHook(hook func(context.Context, int, string) error)\n```\n\nSetDefaultHook sets function that is called when the MarkFailed method of the parent MockDBStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *DBStoreMarkFailedFunc) History() []DBStoreMarkFailedFuncCall\n```\n\nHistory returns a sequence of DBStoreMarkFailedFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -1715,6 +1298,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkFailedFunc.PushHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1731,34 +1315,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreMarkFailedFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "DBStoreMarkFailedFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "httpapi.DBStoreMarkFailedFunc.SetDefaultReturn",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *DBStoreMarkFailedFunc) SetDefaultReturn(r0 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreMarkFailedFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreMarkFailedFunc.PushReturn",
                     "documentation": {
                       "identifier": "DBStoreMarkFailedFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkFailedFunc.PushReturn",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1775,22 +1338,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreMarkFailedFunc.nextHook",
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreMarkFailedFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "DBStoreMarkFailedFunc.nextHook",
+                      "identifier": "DBStoreMarkFailedFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "httpapi.DBStoreMarkFailedFunc.nextHook",
+                      "searchKey": "httpapi.DBStoreMarkFailedFunc.SetDefaultHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *DBStoreMarkFailedFunc) nextHook() func(context.Context, int, string) error"
+                      "value": "func (f *DBStoreMarkFailedFunc) SetDefaultHook(hook func(context.Context, int, string) error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreMarkFailedFunc) nextHook() func(context.Context, int, string) error\n```\n\n"
+                      "value": "```Go\nfunc (f *DBStoreMarkFailedFunc) SetDefaultHook(hook func(context.Context, int, string) error)\n```\n\nSetDefaultHook sets function that is called when the MarkFailed method of the parent MockDBStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreMarkFailedFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "DBStoreMarkFailedFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "httpapi.DBStoreMarkFailedFunc.SetDefaultReturn",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreMarkFailedFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreMarkFailedFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -1803,6 +1390,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkFailedFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1819,22 +1407,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreMarkFailedFunc.History",
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreMarkFailedFunc.nextHook",
                     "documentation": {
-                      "identifier": "DBStoreMarkFailedFunc.History",
+                      "identifier": "DBStoreMarkFailedFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "httpapi.DBStoreMarkFailedFunc.History",
+                      "searchKey": "httpapi.DBStoreMarkFailedFunc.nextHook",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *DBStoreMarkFailedFunc) History() []DBStoreMarkFailedFuncCall"
+                      "value": "func (f *DBStoreMarkFailedFunc) nextHook() func(context.Context, int, string) error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreMarkFailedFunc) History() []DBStoreMarkFailedFuncCall\n```\n\nHistory returns a sequence of DBStoreMarkFailedFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *DBStoreMarkFailedFunc) nextHook() func(context.Context, int, string) error\n```\n\n"
                     },
                     "children": null
                   }
@@ -1850,6 +1439,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreMarkFailedFuncCall",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1870,6 +1460,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkFailedFuncCall.Args",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1892,6 +1483,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkFailedFuncCall.Results",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1917,6 +1509,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreMarkQueuedFunc",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1931,22 +1524,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreMarkQueuedFunc.SetDefaultHook",
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreMarkQueuedFunc.History",
                     "documentation": {
-                      "identifier": "DBStoreMarkQueuedFunc.SetDefaultHook",
+                      "identifier": "DBStoreMarkQueuedFunc.History",
                       "newPage": false,
-                      "searchKey": "httpapi.DBStoreMarkQueuedFunc.SetDefaultHook",
+                      "searchKey": "httpapi.DBStoreMarkQueuedFunc.History",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *DBStoreMarkQueuedFunc) SetDefaultHook(hook func(context.Context, int, *int64) error)"
+                      "value": "func (f *DBStoreMarkQueuedFunc) History() []DBStoreMarkQueuedFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreMarkQueuedFunc) SetDefaultHook(hook func(context.Context, int, *int64) error)\n```\n\nSetDefaultHook sets function that is called when the MarkQueued method of the parent MockDBStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *DBStoreMarkQueuedFunc) History() []DBStoreMarkQueuedFuncCall\n```\n\nHistory returns a sequence of DBStoreMarkQueuedFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -1959,6 +1553,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkQueuedFunc.PushHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1975,34 +1570,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreMarkQueuedFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "DBStoreMarkQueuedFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "httpapi.DBStoreMarkQueuedFunc.SetDefaultReturn",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *DBStoreMarkQueuedFunc) SetDefaultReturn(r0 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreMarkQueuedFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreMarkQueuedFunc.PushReturn",
                     "documentation": {
                       "identifier": "DBStoreMarkQueuedFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkQueuedFunc.PushReturn",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -2019,22 +1593,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreMarkQueuedFunc.nextHook",
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreMarkQueuedFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "DBStoreMarkQueuedFunc.nextHook",
+                      "identifier": "DBStoreMarkQueuedFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "httpapi.DBStoreMarkQueuedFunc.nextHook",
+                      "searchKey": "httpapi.DBStoreMarkQueuedFunc.SetDefaultHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *DBStoreMarkQueuedFunc) nextHook() func(context.Context, int, *int64) error"
+                      "value": "func (f *DBStoreMarkQueuedFunc) SetDefaultHook(hook func(context.Context, int, *int64) error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreMarkQueuedFunc) nextHook() func(context.Context, int, *int64) error\n```\n\n"
+                      "value": "```Go\nfunc (f *DBStoreMarkQueuedFunc) SetDefaultHook(hook func(context.Context, int, *int64) error)\n```\n\nSetDefaultHook sets function that is called when the MarkQueued method of the parent MockDBStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreMarkQueuedFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "DBStoreMarkQueuedFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "httpapi.DBStoreMarkQueuedFunc.SetDefaultReturn",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreMarkQueuedFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreMarkQueuedFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -2047,6 +1645,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkQueuedFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -2063,22 +1662,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreMarkQueuedFunc.History",
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreMarkQueuedFunc.nextHook",
                     "documentation": {
-                      "identifier": "DBStoreMarkQueuedFunc.History",
+                      "identifier": "DBStoreMarkQueuedFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "httpapi.DBStoreMarkQueuedFunc.History",
+                      "searchKey": "httpapi.DBStoreMarkQueuedFunc.nextHook",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *DBStoreMarkQueuedFunc) History() []DBStoreMarkQueuedFuncCall"
+                      "value": "func (f *DBStoreMarkQueuedFunc) nextHook() func(context.Context, int, *int64) error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreMarkQueuedFunc) History() []DBStoreMarkQueuedFuncCall\n```\n\nHistory returns a sequence of DBStoreMarkQueuedFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *DBStoreMarkQueuedFunc) nextHook() func(context.Context, int, *int64) error\n```\n\n"
                     },
                     "children": null
                   }
@@ -2094,6 +1694,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreMarkQueuedFuncCall",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -2114,6 +1715,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkQueuedFuncCall.Args",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -2136,6 +1738,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreMarkQueuedFuncCall.Results",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -2155,12 +1758,58 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreShim",
+              "documentation": {
+                "identifier": "DBStoreShim",
+                "newPage": false,
+                "searchKey": "httpapi.DBStoreShim",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DBStoreShim struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DBStoreShim struct {\n\t*dbstore.Store\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreShim.Transact",
+                    "documentation": {
+                      "identifier": "DBStoreShim.Transact",
+                      "newPage": false,
+                      "searchKey": "httpapi.DBStoreShim.Transact",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *DBStoreShim) Transact(ctx context.Context) (DBStore, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *DBStoreShim) Transact(ctx context.Context) (DBStore, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreTransactFunc",
               "documentation": {
                 "identifier": "DBStoreTransactFunc",
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreTransactFunc",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -2175,22 +1824,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreTransactFunc.SetDefaultHook",
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreTransactFunc.History",
                     "documentation": {
-                      "identifier": "DBStoreTransactFunc.SetDefaultHook",
+                      "identifier": "DBStoreTransactFunc.History",
                       "newPage": false,
-                      "searchKey": "httpapi.DBStoreTransactFunc.SetDefaultHook",
+                      "searchKey": "httpapi.DBStoreTransactFunc.History",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *DBStoreTransactFunc) SetDefaultHook(hook func(context.Context) (DBStore, error))"
+                      "value": "func (f *DBStoreTransactFunc) History() []DBStoreTransactFuncCall"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreTransactFunc) SetDefaultHook(hook func(context.Context) (DBStore, error))\n```\n\nSetDefaultHook sets function that is called when the Transact method of the parent MockDBStore instance is invoked and the hook queue is empty. \n\n"
+                      "value": "```Go\nfunc (f *DBStoreTransactFunc) History() []DBStoreTransactFuncCall\n```\n\nHistory returns a sequence of DBStoreTransactFuncCall objects describing the invocations of this function. \n\n"
                     },
                     "children": null
                   }
@@ -2203,6 +1853,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreTransactFunc.PushHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -2219,34 +1870,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreTransactFunc.SetDefaultReturn",
-                    "documentation": {
-                      "identifier": "DBStoreTransactFunc.SetDefaultReturn",
-                      "newPage": false,
-                      "searchKey": "httpapi.DBStoreTransactFunc.SetDefaultReturn",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *DBStoreTransactFunc) SetDefaultReturn(r0 DBStore, r1 error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreTransactFunc) SetDefaultReturn(r0 DBStore, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreTransactFunc.PushReturn",
                     "documentation": {
                       "identifier": "DBStoreTransactFunc.PushReturn",
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreTransactFunc.PushReturn",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -2263,22 +1893,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreTransactFunc.nextHook",
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreTransactFunc.SetDefaultHook",
                     "documentation": {
-                      "identifier": "DBStoreTransactFunc.nextHook",
+                      "identifier": "DBStoreTransactFunc.SetDefaultHook",
                       "newPage": false,
-                      "searchKey": "httpapi.DBStoreTransactFunc.nextHook",
+                      "searchKey": "httpapi.DBStoreTransactFunc.SetDefaultHook",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *DBStoreTransactFunc) nextHook() func(context.Context) (DBStore, error)"
+                      "value": "func (f *DBStoreTransactFunc) SetDefaultHook(hook func(context.Context) (DBStore, error))"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreTransactFunc) nextHook() func(context.Context) (DBStore, error)\n```\n\n"
+                      "value": "```Go\nfunc (f *DBStoreTransactFunc) SetDefaultHook(hook func(context.Context) (DBStore, error))\n```\n\nSetDefaultHook sets function that is called when the Transact method of the parent MockDBStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreTransactFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "DBStoreTransactFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "httpapi.DBStoreTransactFunc.SetDefaultReturn",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreTransactFunc) SetDefaultReturn(r0 DBStore, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreTransactFunc) SetDefaultReturn(r0 DBStore, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
                     },
                     "children": null
                   }
@@ -2291,6 +1945,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreTransactFunc.appendCall",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -2307,22 +1962,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreTransactFunc.History",
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#DBStoreTransactFunc.nextHook",
                     "documentation": {
-                      "identifier": "DBStoreTransactFunc.History",
+                      "identifier": "DBStoreTransactFunc.nextHook",
                       "newPage": false,
-                      "searchKey": "httpapi.DBStoreTransactFunc.History",
+                      "searchKey": "httpapi.DBStoreTransactFunc.nextHook",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *DBStoreTransactFunc) History() []DBStoreTransactFuncCall"
+                      "value": "func (f *DBStoreTransactFunc) nextHook() func(context.Context) (DBStore, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *DBStoreTransactFunc) History() []DBStoreTransactFuncCall\n```\n\nHistory returns a sequence of DBStoreTransactFuncCall objects describing the invocations of this function. \n\n"
+                      "value": "```Go\nfunc (f *DBStoreTransactFunc) nextHook() func(context.Context) (DBStore, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -2338,6 +1994,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.DBStoreTransactFuncCall",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -2358,6 +2015,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreTransactFuncCall.Args",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -2380,6 +2038,7 @@
                       "newPage": false,
                       "searchKey": "httpapi.DBStoreTransactFuncCall.Results",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -2396,6 +2055,466 @@
                 }
               ]
             }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#MockDBStore",
+              "documentation": {
+                "identifier": "MockDBStore",
+                "newPage": false,
+                "searchKey": "httpapi.MockDBStore",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockDBStore struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockDBStore struct {\n\t// AddUploadPartFunc is an instance of a mock function object\n\t// controlling the behavior of the method AddUploadPart.\n\tAddUploadPartFunc *DBStoreAddUploadPartFunc\n\t// DoneFunc is an instance of a mock function object controlling the\n\t// behavior of the method Done.\n\tDoneFunc *DBStoreDoneFunc\n\t// GetUploadByIDFunc is an instance of a mock function object\n\t// controlling the behavior of the method GetUploadByID.\n\tGetUploadByIDFunc *DBStoreGetUploadByIDFunc\n\t// InsertUploadFunc is an instance of a mock function object controlling\n\t// the behavior of the method InsertUpload.\n\tInsertUploadFunc *DBStoreInsertUploadFunc\n\t// MarkFailedFunc is an instance of a mock function object controlling\n\t// the behavior of the method MarkFailed.\n\tMarkFailedFunc *DBStoreMarkFailedFunc\n\t// MarkQueuedFunc is an instance of a mock function object controlling\n\t// the behavior of the method MarkQueued.\n\tMarkQueuedFunc *DBStoreMarkQueuedFunc\n\t// TransactFunc is an instance of a mock function object controlling the\n\t// behavior of the method Transact.\n\tTransactFunc *DBStoreTransactFunc\n}\n```\n\nMockDBStore is a mock implementation of the DBStore interface (from the package github.com/sourcegraph/sourcegraph/enterprise/cmd/frontend/internal/codeintel/httpapi) used for unit testing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#NewMockDBStore",
+                    "documentation": {
+                      "identifier": "NewMockDBStore",
+                      "newPage": false,
+                      "searchKey": "httpapi.NewMockDBStore",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockDBStore() *MockDBStore"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockDBStore() *MockDBStore\n```\n\nNewMockDBStore creates a new mock of the DBStore interface. All methods return zero values for all results, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#NewMockDBStoreFrom",
+                    "documentation": {
+                      "identifier": "NewMockDBStoreFrom",
+                      "newPage": false,
+                      "searchKey": "httpapi.NewMockDBStoreFrom",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockDBStoreFrom(i DBStore) *MockDBStore"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockDBStoreFrom(i DBStore) *MockDBStore\n```\n\nNewMockDBStoreFrom creates a new mock of the MockDBStore interface. All methods delegate to the given implementation, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#MockDBStore.AddUploadPart",
+                    "documentation": {
+                      "identifier": "MockDBStore.AddUploadPart",
+                      "newPage": false,
+                      "searchKey": "httpapi.MockDBStore.AddUploadPart",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockDBStore) AddUploadPart(v0 context.Context, v1 int, v2 int) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockDBStore) AddUploadPart(v0 context.Context, v1 int, v2 int) error\n```\n\nAddUploadPart delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#MockDBStore.Done",
+                    "documentation": {
+                      "identifier": "MockDBStore.Done",
+                      "newPage": false,
+                      "searchKey": "httpapi.MockDBStore.Done",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockDBStore) Done(v0 error) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockDBStore) Done(v0 error) error\n```\n\nDone delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#MockDBStore.GetUploadByID",
+                    "documentation": {
+                      "identifier": "MockDBStore.GetUploadByID",
+                      "newPage": false,
+                      "searchKey": "httpapi.MockDBStore.GetUploadByID",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockDBStore) GetUploadByID(v0 context.Context, v1 int) (dbstore.Upload, bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockDBStore) GetUploadByID(v0 context.Context, v1 int) (dbstore.Upload, bool, error)\n```\n\nGetUploadByID delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#MockDBStore.InsertUpload",
+                    "documentation": {
+                      "identifier": "MockDBStore.InsertUpload",
+                      "newPage": false,
+                      "searchKey": "httpapi.MockDBStore.InsertUpload",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockDBStore) InsertUpload(v0 context.Context, v1 dbstore.Upload) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockDBStore) InsertUpload(v0 context.Context, v1 dbstore.Upload) (int, error)\n```\n\nInsertUpload delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#MockDBStore.MarkFailed",
+                    "documentation": {
+                      "identifier": "MockDBStore.MarkFailed",
+                      "newPage": false,
+                      "searchKey": "httpapi.MockDBStore.MarkFailed",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockDBStore) MarkFailed(v0 context.Context, v1 int, v2 string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockDBStore) MarkFailed(v0 context.Context, v1 int, v2 string) error\n```\n\nMarkFailed delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#MockDBStore.MarkQueued",
+                    "documentation": {
+                      "identifier": "MockDBStore.MarkQueued",
+                      "newPage": false,
+                      "searchKey": "httpapi.MockDBStore.MarkQueued",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockDBStore) MarkQueued(v0 context.Context, v1 int, v2 *int64) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockDBStore) MarkQueued(v0 context.Context, v1 int, v2 *int64) error\n```\n\nMarkQueued delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#MockDBStore.Transact",
+                    "documentation": {
+                      "identifier": "MockDBStore.Transact",
+                      "newPage": false,
+                      "searchKey": "httpapi.MockDBStore.Transact",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockDBStore) Transact(v0 context.Context) (DBStore, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockDBStore) Transact(v0 context.Context) (DBStore, error)\n```\n\nTransact delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#UploadArgs",
+              "documentation": {
+                "identifier": "UploadArgs",
+                "newPage": false,
+                "searchKey": "httpapi.UploadArgs",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UploadArgs struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UploadArgs struct {\n\tCommit            string\n\tRoot              string\n\tRepositoryID      int\n\tIndexer           string\n\tAssociatedIndexID int\n}\n```\n\nUploadArgs are common arguments required to enqueue an upload for both single-payload and multipart uploads. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#UploadHandler",
+              "documentation": {
+                "identifier": "UploadHandler",
+                "newPage": false,
+                "searchKey": "httpapi.UploadHandler",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UploadHandler struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UploadHandler struct {\n\tdbStore     DBStore\n\tuploadStore uploadstore.Store\n\tinternal    bool\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#UploadHandler.handleEnqueue",
+                    "documentation": {
+                      "identifier": "UploadHandler.handleEnqueue",
+                      "newPage": false,
+                      "searchKey": "httpapi.UploadHandler.handleEnqueue",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *UploadHandler) handleEnqueue(w http.ResponseWriter, r *http.Request)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *UploadHandler) handleEnqueue(w http.ResponseWriter, r *http.Request)\n```\n\nPOST /upload \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#UploadHandler.handleEnqueueErr",
+                    "documentation": {
+                      "identifier": "UploadHandler.handleEnqueueErr",
+                      "newPage": false,
+                      "searchKey": "httpapi.UploadHandler.handleEnqueueErr",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *UploadHandler) handleEnqueueErr(w http.ResponseWriter, r *http.Request, repositoryID int) (interface{}, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *UploadHandler) handleEnqueueErr(w http.ResponseWriter, r *http.Request, repositoryID int) (interface{}, error)\n```\n\nhandleEnqueueErr dispatches to the correct handler function based on query args. Running the `src lsif upload` command will cause one of two sequences of requests to occur. For uploads that are small enough repos (that can be uploaded in one-shot), only one request will be made: \n\n```\n- POST `/upload?repositoryId,commit,root,indexerName`\n\n```\nFor larger uploads, the requests are broken up into a setup request, a serires of upload requests, and a finalization request: \n\n```\n- POST `/upload?repositoryId,commit,root,indexerName,multiPart=true,numParts={n}`\n- POST `/upload?uploadId={id},index={i}`\n- POST `/upload?uploadId={id},done=true`\n\n```\nSee the functions the following functions for details on how each request is handled: \n\n```\n- handleEnqueueSinglePayload\n- handleEnqueueMultipartSetup\n- handleEnqueueMultipartUpload\n- handleEnqueueMultipartFinalize\n\n```\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#UploadHandler.handleEnqueueMultipartFinalize",
+                    "documentation": {
+                      "identifier": "UploadHandler.handleEnqueueMultipartFinalize",
+                      "newPage": false,
+                      "searchKey": "httpapi.UploadHandler.handleEnqueueMultipartFinalize",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *UploadHandler) handleEnqueueMultipartFinalize(r *http.Request, upload store.Upload) (interface{}, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *UploadHandler) handleEnqueueMultipartFinalize(r *http.Request, upload store.Upload) (interface{}, error)\n```\n\nhandleEnqueueMultipartFinalize handles the final request of a multipart upload. This transitions the upload from 'uploading' to 'queued', then instructs the bundle manager to concatenate all of the part files together. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#UploadHandler.handleEnqueueMultipartSetup",
+                    "documentation": {
+                      "identifier": "UploadHandler.handleEnqueueMultipartSetup",
+                      "newPage": false,
+                      "searchKey": "httpapi.UploadHandler.handleEnqueueMultipartSetup",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *UploadHandler) handleEnqueueMultipartSetup(r *http.Request, uploadArgs UploadArgs, numParts int) (interface{}, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *UploadHandler) handleEnqueueMultipartSetup(r *http.Request, uploadArgs UploadArgs, numParts int) (interface{}, error)\n```\n\nhandleEnqueueMultipartSetup handles the first request in a multipart upload. This creates a new upload record with state 'uploading' and returns the generated ID to be used in subsequent requests for the same upload. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#UploadHandler.handleEnqueueMultipartUpload",
+                    "documentation": {
+                      "identifier": "UploadHandler.handleEnqueueMultipartUpload",
+                      "newPage": false,
+                      "searchKey": "httpapi.UploadHandler.handleEnqueueMultipartUpload",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *UploadHandler) handleEnqueueMultipartUpload(r *http.Request, upload store.Upload, partIndex int) (interface{}, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *UploadHandler) handleEnqueueMultipartUpload(r *http.Request, upload store.Upload, partIndex int) (interface{}, error)\n```\n\nhandleEnqueueMultipartUpload handles a partial upload in a multipart upload. This proxies the data to the bundle manager and marks the part index in the upload record. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#UploadHandler.handleEnqueueSinglePayload",
+                    "documentation": {
+                      "identifier": "UploadHandler.handleEnqueueSinglePayload",
+                      "newPage": false,
+                      "searchKey": "httpapi.UploadHandler.handleEnqueueSinglePayload",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *UploadHandler) handleEnqueueSinglePayload(r *http.Request, uploadArgs UploadArgs) (interface{}, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *UploadHandler) handleEnqueueSinglePayload(r *http.Request, uploadArgs UploadArgs) (interface{}, error)\n```\n\nhandleEnqueueSinglePayload handles a non-multipart upload. This creates an upload record with state 'queued', proxies the data to the bundle manager, and returns the generated ID. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#UploadHandler.markUploadAsFailed",
+                    "documentation": {
+                      "identifier": "UploadHandler.markUploadAsFailed",
+                      "newPage": false,
+                      "searchKey": "httpapi.UploadHandler.markUploadAsFailed",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *UploadHandler) markUploadAsFailed(ctx context.Context, tx DBStore, uploadID int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *UploadHandler) markUploadAsFailed(ctx context.Context, tx DBStore, uploadID int, err error)\n```\n\nmarkUploadAsFailed attempts to mark the given upload as failed, extracting a human-meaningful error message from the given error. We assume this method to whenever an error occurs when interacting with the upload store so that the status of the upload is accurately reflected in the UI. \n\nThis method does not return an error as it's best-effort cleanup. If an error occurs when trying to modify the record, it will be logged but will not be directly visible to the user. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#enqueuePayload",
+              "documentation": {
+                "identifier": "enqueuePayload",
+                "newPage": false,
+                "searchKey": "httpapi.enqueuePayload",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type enqueuePayload struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype enqueuePayload struct {\n\tID string `json:\"id\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
           }
         ]
       }
@@ -2408,6 +2527,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -2422,22 +2542,236 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#isSiteAdmin",
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#NewUploadHandler",
               "documentation": {
-                "identifier": "isSiteAdmin",
+                "identifier": "NewUploadHandler",
                 "newPage": false,
-                "searchKey": "httpapi.isSiteAdmin",
+                "searchKey": "httpapi.NewUploadHandler",
                 "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewUploadHandler(dbStore DBStore, uploadStore uploadstore.Store, internal bool) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewUploadHandler(dbStore DBStore, uploadStore uploadstore.Store, internal bool) http.Handler\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#TestHandleEnqueueMultipartFinalize",
+              "documentation": {
+                "identifier": "TestHandleEnqueueMultipartFinalize",
+                "newPage": false,
+                "searchKey": "httpapi.TestHandleEnqueueMultipartFinalize",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHandleEnqueueMultipartFinalize(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHandleEnqueueMultipartFinalize(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#TestHandleEnqueueMultipartFinalizeIncompleteUpload",
+              "documentation": {
+                "identifier": "TestHandleEnqueueMultipartFinalizeIncompleteUpload",
+                "newPage": false,
+                "searchKey": "httpapi.TestHandleEnqueueMultipartFinalizeIncompleteUpload",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHandleEnqueueMultipartFinalizeIncompleteUpload(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHandleEnqueueMultipartFinalizeIncompleteUpload(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#TestHandleEnqueueMultipartSetup",
+              "documentation": {
+                "identifier": "TestHandleEnqueueMultipartSetup",
+                "newPage": false,
+                "searchKey": "httpapi.TestHandleEnqueueMultipartSetup",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHandleEnqueueMultipartSetup(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHandleEnqueueMultipartSetup(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#TestHandleEnqueueMultipartUpload",
+              "documentation": {
+                "identifier": "TestHandleEnqueueMultipartUpload",
+                "newPage": false,
+                "searchKey": "httpapi.TestHandleEnqueueMultipartUpload",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHandleEnqueueMultipartUpload(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHandleEnqueueMultipartUpload(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#TestHandleEnqueueSinglePayload",
+              "documentation": {
+                "identifier": "TestHandleEnqueueSinglePayload",
+                "newPage": false,
+                "searchKey": "httpapi.TestHandleEnqueueSinglePayload",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHandleEnqueueSinglePayload(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHandleEnqueueSinglePayload(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#TestHandleEnqueueSinglePayloadNoIndexerName",
+              "documentation": {
+                "identifier": "TestHandleEnqueueSinglePayloadNoIndexerName",
+                "newPage": false,
+                "searchKey": "httpapi.TestHandleEnqueueSinglePayloadNoIndexerName",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHandleEnqueueSinglePayloadNoIndexerName(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHandleEnqueueSinglePayloadNoIndexerName(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#TestMain",
+              "documentation": {
+                "identifier": "TestMain",
+                "newPage": false,
+                "searchKey": "httpapi.TestMain",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMain(m *testing.M)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#clientError",
+              "documentation": {
+                "identifier": "clientError",
+                "newPage": false,
+                "searchKey": "httpapi.clientError",
+                "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func isSiteAdmin(ctx context.Context) bool"
+                "value": "func clientError(message string, vals ...interface{}) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc isSiteAdmin(ctx context.Context) bool\n```\n\n"
+                "value": "```Go\nfunc clientError(message string, vals ...interface{}) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#copyAll",
+              "documentation": {
+                "identifier": "copyAll",
+                "newPage": false,
+                "searchKey": "httpapi.copyAll",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func copyAll(w http.ResponseWriter, r io.Reader)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc copyAll(w http.ResponseWriter, r io.Reader)\n```\n\ncopyAll writes the contents of r to w and logs on write failure. \n\n"
               },
               "children": null
             }
@@ -2450,6 +2784,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.enforceAuth",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2472,6 +2807,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.enforceAuthGithub",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2488,76 +2824,13 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#clientError",
-              "documentation": {
-                "identifier": "clientError",
-                "newPage": false,
-                "searchKey": "httpapi.clientError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func clientError(message string, vals ...interface{}) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc clientError(message string, vals ...interface{}) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#NewUploadHandler",
-              "documentation": {
-                "identifier": "NewUploadHandler",
-                "newPage": false,
-                "searchKey": "httpapi.NewUploadHandler",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func NewUploadHandler(dbStore DBStore, uploadStore uploadstore.Store, internal bool) http.Handler"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc NewUploadHandler(dbStore DBStore, uploadStore uploadstore.Store, internal bool) http.Handler\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#inferIndexer",
-              "documentation": {
-                "identifier": "inferIndexer",
-                "newPage": false,
-                "searchKey": "httpapi.inferIndexer",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func inferIndexer(r *http.Request) (string, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc inferIndexer(r *http.Request) (string, error)\n```\n\ninferIndexer returns the tool name from the metadata vertex at the start of the the given input stream. This method must destructively read the request body, but will re-assign the Body field with a reader that holds the same information as the original request. \n\nNewer versions of src-cli will do this same check before uploading the file. However, older versions of src-cli will not guarantee that the index name query parameter is sent. Requiring it now will break valid workflows. We only need ot maintain backwards compatibility on single payload uploads, as everything else is as new as the version of src-cli that always sends the indexer name. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#ensureRepoAndCommitExist",
               "documentation": {
                 "identifier": "ensureRepoAndCommitExist",
                 "newPage": false,
                 "searchKey": "httpapi.ensureRepoAndCommitExist",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2580,6 +2853,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.formatAWSError",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2596,56 +2870,13 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#sanitizeRoot",
-              "documentation": {
-                "identifier": "sanitizeRoot",
-                "newPage": false,
-                "searchKey": "httpapi.sanitizeRoot",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func sanitizeRoot(s string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc sanitizeRoot(s string) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#hasQuery",
-              "documentation": {
-                "identifier": "hasQuery",
-                "newPage": false,
-                "searchKey": "httpapi.hasQuery",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func hasQuery(r *http.Request, name string) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc hasQuery(r *http.Request, name string) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#getQuery",
               "documentation": {
                 "identifier": "getQuery",
                 "newPage": false,
                 "searchKey": "httpapi.getQuery",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2668,6 +2899,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.getQueryInt",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2684,198 +2916,92 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#copyAll",
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#hasQuery",
               "documentation": {
-                "identifier": "copyAll",
+                "identifier": "hasQuery",
                 "newPage": false,
-                "searchKey": "httpapi.copyAll",
+                "searchKey": "httpapi.hasQuery",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func copyAll(w http.ResponseWriter, r io.Reader)"
+                "value": "func hasQuery(r *http.Request, name string) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc copyAll(w http.ResponseWriter, r io.Reader)\n```\n\ncopyAll writes the contents of r to w and logs on write failure. \n\n"
+                "value": "```Go\nfunc hasQuery(r *http.Request, name string) bool\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#writeJSON",
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#inferIndexer",
               "documentation": {
-                "identifier": "writeJSON",
+                "identifier": "inferIndexer",
                 "newPage": false,
-                "searchKey": "httpapi.writeJSON",
+                "searchKey": "httpapi.inferIndexer",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func writeJSON(w http.ResponseWriter, payload interface{})"
+                "value": "func inferIndexer(r *http.Request) (string, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc writeJSON(w http.ResponseWriter, payload interface{})\n```\n\nwriteJSON writes the JSON-encoded payload to w and logs on write failure. If there is an encoding error, then a 500-level status is written to w. \n\n"
+                "value": "```Go\nfunc inferIndexer(r *http.Request) (string, error)\n```\n\ninferIndexer returns the tool name from the metadata vertex at the start of the the given input stream. This method must destructively read the request body, but will re-assign the Body field with a reader that holds the same information as the original request. \n\nNewer versions of src-cli will do this same check before uploading the file. However, older versions of src-cli will not guarantee that the index name query parameter is sent. Requiring it now will break valid workflows. We only need ot maintain backwards compatibility on single payload uploads, as everything else is as new as the version of src-cli that always sends the indexer name. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#TestMain",
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#isSiteAdmin",
               "documentation": {
-                "identifier": "TestMain",
+                "identifier": "isSiteAdmin",
                 "newPage": false,
-                "searchKey": "httpapi.TestMain",
+                "searchKey": "httpapi.isSiteAdmin",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestMain(m *testing.M)"
+                "value": "func isSiteAdmin(ctx context.Context) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
+                "value": "```Go\nfunc isSiteAdmin(ctx context.Context) bool\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#TestHandleEnqueueSinglePayload",
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#sanitizeRoot",
               "documentation": {
-                "identifier": "TestHandleEnqueueSinglePayload",
+                "identifier": "sanitizeRoot",
                 "newPage": false,
-                "searchKey": "httpapi.TestHandleEnqueueSinglePayload",
+                "searchKey": "httpapi.sanitizeRoot",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestHandleEnqueueSinglePayload(t *testing.T)"
+                "value": "func sanitizeRoot(s string) string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestHandleEnqueueSinglePayload(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#TestHandleEnqueueSinglePayloadNoIndexerName",
-              "documentation": {
-                "identifier": "TestHandleEnqueueSinglePayloadNoIndexerName",
-                "newPage": false,
-                "searchKey": "httpapi.TestHandleEnqueueSinglePayloadNoIndexerName",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestHandleEnqueueSinglePayloadNoIndexerName(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestHandleEnqueueSinglePayloadNoIndexerName(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#TestHandleEnqueueMultipartSetup",
-              "documentation": {
-                "identifier": "TestHandleEnqueueMultipartSetup",
-                "newPage": false,
-                "searchKey": "httpapi.TestHandleEnqueueMultipartSetup",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestHandleEnqueueMultipartSetup(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestHandleEnqueueMultipartSetup(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#TestHandleEnqueueMultipartUpload",
-              "documentation": {
-                "identifier": "TestHandleEnqueueMultipartUpload",
-                "newPage": false,
-                "searchKey": "httpapi.TestHandleEnqueueMultipartUpload",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestHandleEnqueueMultipartUpload(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestHandleEnqueueMultipartUpload(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#TestHandleEnqueueMultipartFinalize",
-              "documentation": {
-                "identifier": "TestHandleEnqueueMultipartFinalize",
-                "newPage": false,
-                "searchKey": "httpapi.TestHandleEnqueueMultipartFinalize",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestHandleEnqueueMultipartFinalize(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestHandleEnqueueMultipartFinalize(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#TestHandleEnqueueMultipartFinalizeIncompleteUpload",
-              "documentation": {
-                "identifier": "TestHandleEnqueueMultipartFinalizeIncompleteUpload",
-                "newPage": false,
-                "searchKey": "httpapi.TestHandleEnqueueMultipartFinalizeIncompleteUpload",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestHandleEnqueueMultipartFinalizeIncompleteUpload(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestHandleEnqueueMultipartFinalizeIncompleteUpload(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc sanitizeRoot(s string) string\n```\n\n"
               },
               "children": null
             }
@@ -2888,6 +3014,7 @@
                 "newPage": false,
                 "searchKey": "httpapi.setupRepoMocks",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2898,6 +3025,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc setupRepoMocks(t testing.TB)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi#writeJSON",
+              "documentation": {
+                "identifier": "writeJSON",
+                "newPage": false,
+                "searchKey": "httpapi.writeJSON",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func writeJSON(w http.ResponseWriter, payload interface{})"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc writeJSON(w http.ResponseWriter, payload interface{})\n```\n\nwriteJSON writes the JSON-encoded payload to w and logs on write failure. If there is an encoding error, then a 500-level status is written to w. \n\n"
               },
               "children": null
             }

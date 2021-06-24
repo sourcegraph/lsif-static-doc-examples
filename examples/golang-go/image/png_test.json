@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "image/png_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "png_test.gopher",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -84,34 +89,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/image/png_test#gopherPNG",
-              "documentation": {
-                "identifier": "gopherPNG",
-                "newPage": false,
-                "searchKey": "png_test.gopherPNG",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func gopherPNG() io.Reader"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc gopherPNG() io.Reader\n```\n\ngopherPNG creates an io.Reader by decoding the base64 encoded image data string in the gopher constant. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/image/png_test#ExampleDecode",
               "documentation": {
                 "identifier": "ExampleDecode",
                 "newPage": false,
                 "searchKey": "png_test.ExampleDecode",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -134,6 +118,7 @@
                 "newPage": false,
                 "searchKey": "png_test.ExampleEncode",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -144,6 +129,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc ExampleEncode()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/png_test#gopherPNG",
+              "documentation": {
+                "identifier": "gopherPNG",
+                "newPage": false,
+                "searchKey": "png_test.gopherPNG",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func gopherPNG() io.Reader"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc gopherPNG() io.Reader\n```\n\ngopherPNG creates an io.Reader by decoding the base64 encoded image data string in the gopher constant. \n\n"
               },
               "children": null
             }

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/goreman",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,32 +41,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/goreman#Shutdown",
-              "documentation": {
-                "identifier": "Shutdown",
-                "newPage": false,
-                "searchKey": "goreman.Shutdown",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const Shutdown"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst Shutdown ProcDiedAction = iota\n```\n\nShutdown will shutdown Goreman if any process shuts down with a non-zero exit code. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/goreman#Ignore",
               "documentation": {
                 "identifier": "Ignore",
                 "newPage": false,
                 "searchKey": "goreman.Ignore",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -73,6 +58,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst Ignore\n```\n\nIgnore will continue running Goreman and will leave not restart the dead process. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goreman#Shutdown",
+              "documentation": {
+                "identifier": "Shutdown",
+                "newPage": false,
+                "searchKey": "goreman.Shutdown",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Shutdown"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Shutdown ProcDiedAction = iota\n```\n\nShutdown will shutdown Goreman if any process shuts down with a non-zero exit code. \n\n"
               },
               "children": null
             }
@@ -88,6 +96,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -102,100 +111,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/goreman#procs",
-              "documentation": {
-                "identifier": "procs",
-                "newPage": false,
-                "searchKey": "goreman.procs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var procs"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar procs map[string]*procInfo\n```\n\nprocess informations named with proc. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/goreman#maxProcNameLength",
-              "documentation": {
-                "identifier": "maxProcNameLength",
-                "newPage": false,
-                "searchKey": "goreman.maxProcNameLength",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var maxProcNameLength"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar maxProcNameLength int\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/goreman#procDiedAction",
-              "documentation": {
-                "identifier": "procDiedAction",
-                "newPage": false,
-                "searchKey": "goreman.procDiedAction",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var procDiedAction"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar procDiedAction ProcDiedAction\n```\n\nprocDiedAction is the ProcDiedAction to take. Goreman still is globals everywhere \\o/ \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/goreman#colors",
-              "documentation": {
-                "identifier": "colors",
-                "newPage": false,
-                "searchKey": "goreman.colors",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var colors"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar colors = []ct.Color{\n\tct.Green,\n\tct.Cyan,\n\tct.Magenta,\n\tct.Yellow,\n\tct.Blue,\n\tct.Red,\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/goreman#ci",
               "documentation": {
                 "identifier": "ci",
                 "newPage": false,
                 "searchKey": "goreman.ci",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -212,12 +135,63 @@
           },
           {
             "node": {
+              "pathID": "/internal/goreman#colors",
+              "documentation": {
+                "identifier": "colors",
+                "newPage": false,
+                "searchKey": "goreman.colors",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var colors"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar colors = []ct.Color{\n\tct.Green,\n\tct.Cyan,\n\tct.Magenta,\n\tct.Yellow,\n\tct.Blue,\n\tct.Red,\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goreman#maxProcNameLength",
+              "documentation": {
+                "identifier": "maxProcNameLength",
+                "newPage": false,
+                "searchKey": "goreman.maxProcNameLength",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var maxProcNameLength"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar maxProcNameLength int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/goreman#mutex",
               "documentation": {
                 "identifier": "mutex",
                 "newPage": false,
                 "searchKey": "goreman.mutex",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -234,22 +208,48 @@
           },
           {
             "node": {
-              "pathID": "/internal/goreman#wg",
+              "pathID": "/internal/goreman#procDiedAction",
               "documentation": {
-                "identifier": "wg",
+                "identifier": "procDiedAction",
                 "newPage": false,
-                "searchKey": "goreman.wg",
+                "searchKey": "goreman.procDiedAction",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var wg"
+                "value": "var procDiedAction"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar wg sync.WaitGroup\n```\n\n"
+                "value": "```Go\nvar procDiedAction ProcDiedAction\n```\n\nprocDiedAction is the ProcDiedAction to take. Goreman still is globals everywhere \\o/ \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goreman#procs",
+              "documentation": {
+                "identifier": "procs",
+                "newPage": false,
+                "searchKey": "goreman.procs",
+                "tags": [
+                  "variable",
+                  "object",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var procs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar procs map[string]*procInfo\n```\n\nprocess informations named with proc. \n\n"
               },
               "children": null
             }
@@ -262,6 +262,7 @@
                 "newPage": false,
                 "searchKey": "goreman.signals",
                 "tags": [
+                  "variable",
                   "private"
                 ]
               },
@@ -272,6 +273,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar signals = make(chan os.Signal, 10)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goreman#wg",
+              "documentation": {
+                "identifier": "wg",
+                "newPage": false,
+                "searchKey": "goreman.wg",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var wg"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar wg sync.WaitGroup\n```\n\n"
               },
               "children": null
             }
@@ -287,6 +312,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -301,44 +327,47 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/goreman#procInfo",
+              "pathID": "/internal/goreman#Goreman",
               "documentation": {
-                "identifier": "procInfo",
+                "identifier": "Goreman",
                 "newPage": false,
-                "searchKey": "goreman.procInfo",
+                "searchKey": "goreman.Goreman",
                 "tags": [
-                  "private"
+                  "struct"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type procInfo struct"
+                "value": "type Goreman struct{}"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype procInfo struct {\n\tproc    string\n\tcmdline string\n\tstopped bool // true if we stopped it\n\tcmd     *exec.Cmd\n\tmu      sync.Mutex\n\tcond    *sync.Cond\n\twaitErr error\n}\n```\n\n-- process information structure. \n\n"
+                "value": "```Go\ntype Goreman struct{}\n```\n\n"
               },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/goreman#ProcDiedAction",
-              "documentation": {
-                "identifier": "ProcDiedAction",
-                "newPage": false,
-                "searchKey": "goreman.ProcDiedAction",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ProcDiedAction uint"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ProcDiedAction uint\n```\n\nProcDiedAction specifies the behaviour Goreman takes if a process exits with a non-zero exit code. \n\n"
-              },
-              "children": null
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goreman#Goreman.RestartAll",
+                    "documentation": {
+                      "identifier": "Goreman.RestartAll",
+                      "newPage": false,
+                      "searchKey": "goreman.Goreman.RestartAll",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (Goreman) RestartAll(args struct{}, ret *string) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (Goreman) RestartAll(args struct{}, ret *string) (err error)\n```\n\nrpc: restart all (stop all, then start all) \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
             }
           },
           {
@@ -348,7 +377,9 @@
                 "identifier": "Options",
                 "newPage": false,
                 "searchKey": "goreman.Options",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -363,12 +394,35 @@
           },
           {
             "node": {
+              "pathID": "/internal/goreman#ProcDiedAction",
+              "documentation": {
+                "identifier": "ProcDiedAction",
+                "newPage": false,
+                "searchKey": "goreman.ProcDiedAction",
+                "tags": [
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ProcDiedAction uint"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ProcDiedAction uint\n```\n\nProcDiedAction specifies the behaviour Goreman takes if a process exits with a non-zero exit code. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/goreman#clogger",
               "documentation": {
                 "identifier": "clogger",
                 "newPage": false,
                 "searchKey": "goreman.clogger",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -389,6 +443,7 @@
                       "newPage": false,
                       "searchKey": "goreman.createLogger",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -405,12 +460,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/goreman#clogger.Write",
+                    "documentation": {
+                      "identifier": "clogger.Write",
+                      "newPage": false,
+                      "searchKey": "goreman.clogger.Write",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *clogger) Write(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *clogger) Write(p []byte) (int, error)\n```\n\nwrite handler of logger. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/goreman#clogger.writeBuffers",
                     "documentation": {
                       "identifier": "clogger.writeBuffers",
                       "newPage": false,
                       "searchKey": "goreman.clogger.writeBuffers",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -433,6 +512,7 @@
                       "newPage": false,
                       "searchKey": "goreman.clogger.writeLines",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -446,71 +526,31 @@
                     },
                     "children": null
                   }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/goreman#clogger.Write",
-                    "documentation": {
-                      "identifier": "clogger.Write",
-                      "newPage": false,
-                      "searchKey": "goreman.clogger.Write",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (l *clogger) Write(p []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (l *clogger) Write(p []byte) (int, error)\n```\n\nwrite handler of logger. \n\n"
-                    },
-                    "children": null
-                  }
                 }
               ]
             }
           },
           {
             "node": {
-              "pathID": "/internal/goreman#Goreman",
+              "pathID": "/internal/goreman#procInfo",
               "documentation": {
-                "identifier": "Goreman",
+                "identifier": "procInfo",
                 "newPage": false,
-                "searchKey": "goreman.Goreman",
-                "tags": null
+                "searchKey": "goreman.procInfo",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type Goreman struct{}"
+                "value": "type procInfo struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype Goreman struct{}\n```\n\n"
+                "value": "```Go\ntype procInfo struct {\n\tproc    string\n\tcmdline string\n\tstopped bool // true if we stopped it\n\tcmd     *exec.Cmd\n\tmu      sync.Mutex\n\tcond    *sync.Cond\n\twaitErr error\n}\n```\n\n-- process information structure. \n\n"
               },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/goreman#Goreman.RestartAll",
-                    "documentation": {
-                      "identifier": "Goreman.RestartAll",
-                      "newPage": false,
-                      "searchKey": "goreman.Goreman.RestartAll",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (Goreman) RestartAll(args struct{}, ret *string) (err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (Goreman) RestartAll(args struct{}, ret *string) (err error)\n```\n\nrpc: restart all (stop all, then start all) \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
+              "children": null
             }
           }
         ]
@@ -524,6 +564,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -538,12 +579,35 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/goreman#Start",
+              "documentation": {
+                "identifier": "Start",
+                "newPage": false,
+                "searchKey": "goreman.Start",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Start(contents []byte, opts Options) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Start(contents []byte, opts Options) error\n```\n\nStart starts up the Procfile. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/goreman#readProcfile",
               "documentation": {
                 "identifier": "readProcfile",
                 "newPage": false,
                 "searchKey": "goreman.readProcfile",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -560,42 +624,23 @@
           },
           {
             "node": {
-              "pathID": "/internal/goreman#Start",
+              "pathID": "/internal/goreman#spawnProc",
               "documentation": {
-                "identifier": "Start",
+                "identifier": "spawnProc",
                 "newPage": false,
-                "searchKey": "goreman.Start",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Start(contents []byte, opts Options) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Start(contents []byte, opts Options) error\n```\n\nStart starts up the Procfile. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/goreman#stopProc",
-              "documentation": {
-                "identifier": "stopProc",
-                "newPage": false,
-                "searchKey": "goreman.stopProc",
+                "searchKey": "goreman.spawnProc",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func stopProc(proc string, kill bool) error"
+                "value": "func spawnProc(proc string) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc stopProc(proc string, kill bool) error\n```\n\nstop specified proc. \n\n"
+                "value": "```Go\nfunc spawnProc(proc string) bool\n```\n\nspawn command that specified as proc. Returns true if it stopped due to goreman stopping it. \n\n"
               },
               "children": null
             }
@@ -608,6 +653,7 @@
                 "newPage": false,
                 "searchKey": "goreman.startProc",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -630,6 +676,7 @@
                 "newPage": false,
                 "searchKey": "goreman.startProcs",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -646,22 +693,46 @@
           },
           {
             "node": {
-              "pathID": "/internal/goreman#waitProcs",
+              "pathID": "/internal/goreman#startServer",
               "documentation": {
-                "identifier": "waitProcs",
+                "identifier": "startServer",
                 "newPage": false,
-                "searchKey": "goreman.waitProcs",
+                "searchKey": "goreman.startServer",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func waitProcs() error"
+                "value": "func startServer(addr string) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc waitProcs() error\n```\n\nwaitProcs waits for processes to complete. \n\n"
+                "value": "```Go\nfunc startServer(addr string) error\n```\n\nstart rpc server. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goreman#stopProc",
+              "documentation": {
+                "identifier": "stopProc",
+                "newPage": false,
+                "searchKey": "goreman.stopProc",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func stopProc(proc string, kill bool) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc stopProc(proc string, kill bool) error\n```\n\nstop specified proc. \n\n"
               },
               "children": null
             }
@@ -674,6 +745,7 @@
                 "newPage": false,
                 "searchKey": "goreman.stopProcs",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -690,34 +762,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/goreman#spawnProc",
-              "documentation": {
-                "identifier": "spawnProc",
-                "newPage": false,
-                "searchKey": "goreman.spawnProc",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func spawnProc(proc string) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc spawnProc(proc string) bool\n```\n\nspawn command that specified as proc. Returns true if it stopped due to goreman stopping it. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/goreman#terminateProc",
               "documentation": {
                 "identifier": "terminateProc",
                 "newPage": false,
                 "searchKey": "goreman.terminateProc",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -734,22 +785,23 @@
           },
           {
             "node": {
-              "pathID": "/internal/goreman#startServer",
+              "pathID": "/internal/goreman#waitProcs",
               "documentation": {
-                "identifier": "startServer",
+                "identifier": "waitProcs",
                 "newPage": false,
-                "searchKey": "goreman.startServer",
+                "searchKey": "goreman.waitProcs",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func startServer(addr string) error"
+                "value": "func waitProcs() error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc startServer(addr string) error\n```\n\nstart rpc server. \n\n"
+                "value": "```Go\nfunc waitProcs() error\n```\n\nwaitProcs waits for processes to complete. \n\n"
               },
               "children": null
             }

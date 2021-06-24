@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/lazytemplate",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "lazytemplate.inTest",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -89,7 +94,9 @@
                 "identifier": "Template",
                 "newPage": false,
                 "searchKey": "lazytemplate.Template",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -107,7 +114,9 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "lazytemplate.New",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -122,22 +131,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/lazytemplate#Template.tp",
+                    "pathID": "/internal/lazytemplate#Template.Execute",
                     "documentation": {
-                      "identifier": "Template.tp",
+                      "identifier": "Template.Execute",
                       "newPage": false,
-                      "searchKey": "lazytemplate.Template.tp",
+                      "searchKey": "lazytemplate.Template.Execute",
                       "tags": [
-                        "private"
+                        "method"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (r *Template) tp() *template.Template"
+                      "value": "func (r *Template) Execute(w io.Writer, data interface{}) error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (r *Template) tp() *template.Template\n```\n\n"
+                      "value": "```Go\nfunc (r *Template) Execute(w io.Writer, data interface{}) error\n```\n\n"
                     },
                     "children": null
                   }
@@ -150,6 +159,7 @@
                       "newPage": false,
                       "searchKey": "lazytemplate.Template.build",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -166,20 +176,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/lazytemplate#Template.Execute",
+                    "pathID": "/internal/lazytemplate#Template.tp",
                     "documentation": {
-                      "identifier": "Template.Execute",
+                      "identifier": "Template.tp",
                       "newPage": false,
-                      "searchKey": "lazytemplate.Template.Execute",
-                      "tags": null
+                      "searchKey": "lazytemplate.Template.tp",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (r *Template) Execute(w io.Writer, data interface{}) error"
+                      "value": "func (r *Template) tp() *template.Template"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (r *Template) Execute(w io.Writer, data interface{}) error\n```\n\n"
+                      "value": "```Go\nfunc (r *Template) tp() *template.Template\n```\n\n"
                     },
                     "children": null
                   }

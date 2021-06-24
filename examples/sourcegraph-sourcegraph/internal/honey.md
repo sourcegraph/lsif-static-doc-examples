@@ -9,25 +9,25 @@ package honey is a lightweight wrapper around libhoney which initializes honeyco
 * [Types](#type)
     * [type SearchEventArgs struct](#SearchEventArgs)
 * [Functions](#func)
+    * [func Builder(dataset string) *libhoney.Builder](#Builder)
     * [func Enabled() bool](#Enabled)
     * [func Event(dataset string) *libhoney.Event](#Event)
     * [func EventWithFields(dataset string, fields map[string]interface{}) *libhoney.Event](#EventWithFields)
-    * [func Builder(dataset string) *libhoney.Builder](#Builder)
-    * [func init()](#init.honey.go)
     * [func SearchEvent(ctx context.Context, args SearchEventArgs) *libhoney.Event](#SearchEvent)
+    * [func init()](#init.honey.go)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="apiKey" href="#apiKey">var apiKey</a>
 
 ```
 searchKey: honey.apiKey
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
@@ -37,13 +37,14 @@ var apiKey = env.Get("HONEYCOMB_TEAM", "", "The key used for Honeycomb event tra
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="SearchEventArgs" href="#SearchEventArgs">type SearchEventArgs struct</a>
 
 ```
 searchKey: honey.SearchEventArgs
+tags: [struct]
 ```
 
 ```Go
@@ -61,13 +62,27 @@ type SearchEventArgs struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
+
+### <a id="Builder" href="#Builder">func Builder(dataset string) *libhoney.Builder</a>
+
+```
+searchKey: honey.Builder
+tags: [method]
+```
+
+```Go
+func Builder(dataset string) *libhoney.Builder
+```
+
+Builder creates a builder for logging to a dataset. 
 
 ### <a id="Enabled" href="#Enabled">func Enabled() bool</a>
 
 ```
 searchKey: honey.Enabled
+tags: [function]
 ```
 
 ```Go
@@ -80,6 +95,7 @@ Enabled returns true if honeycomb has been configured to run.
 
 ```
 searchKey: honey.Event
+tags: [method]
 ```
 
 ```Go
@@ -92,6 +108,7 @@ Event creates an event for logging to dataset. Event.Send will only work if Enab
 
 ```
 searchKey: honey.EventWithFields
+tags: [method]
 ```
 
 ```Go
@@ -100,33 +117,11 @@ func EventWithFields(dataset string, fields map[string]interface{}) *libhoney.Ev
 
 EventWithFields creates an event for logging to the given dataset. The given fields are assigned to the event. 
 
-### <a id="Builder" href="#Builder">func Builder(dataset string) *libhoney.Builder</a>
-
-```
-searchKey: honey.Builder
-```
-
-```Go
-func Builder(dataset string) *libhoney.Builder
-```
-
-Builder creates a builder for logging to a dataset. 
-
-### <a id="init.honey.go" href="#init.honey.go">func init()</a>
-
-```
-searchKey: honey.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
 ### <a id="SearchEvent" href="#SearchEvent">func SearchEvent(ctx context.Context, args SearchEventArgs) *libhoney.Event</a>
 
 ```
 searchKey: honey.SearchEvent
+tags: [method]
 ```
 
 ```Go
@@ -134,4 +129,15 @@ func SearchEvent(ctx context.Context, args SearchEventArgs) *libhoney.Event
 ```
 
 SearchEvent returns a honey event for the dataset "search". 
+
+### <a id="init.honey.go" href="#init.honey.go">func init()</a>
+
+```
+searchKey: honey.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
 

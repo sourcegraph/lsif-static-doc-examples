@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "flag_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "flag_test.defaultOutput",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -84,34 +89,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/flag_test#species",
-              "documentation": {
-                "identifier": "species",
-                "newPage": false,
-                "searchKey": "flag_test.species",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var species"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar species = flag.String(\"species\", \"gopher\", \"the species we are studying\")\n```\n\nExample 1: A single string flag called \"species\" with default value \"gopher\". \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/flag_test#gopherType",
               "documentation": {
                 "identifier": "gopherType",
                 "newPage": false,
                 "searchKey": "flag_test.gopherType",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -134,6 +119,9 @@
                 "newPage": false,
                 "searchKey": "flag_test.intervalFlag",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -150,12 +138,38 @@
           },
           {
             "node": {
+              "pathID": "/flag_test#species",
+              "documentation": {
+                "identifier": "species",
+                "newPage": false,
+                "searchKey": "flag_test.species",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var species"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar species = flag.String(\"species\", \"gopher\", \"the species we are studying\")\n```\n\nExample 1: A single string flag called \"species\" with default value \"gopher\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/flag_test#u",
               "documentation": {
                 "identifier": "u",
                 "newPage": false,
                 "searchKey": "flag_test.u",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -181,6 +195,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -195,79 +210,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/flag_test#interval",
-              "documentation": {
-                "identifier": "interval",
-                "newPage": false,
-                "searchKey": "flag_test.interval",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type interval []time.Duration"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype interval []time.Duration\n```\n\nExample 3: A user-defined flag type, a slice of durations. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/flag_test#interval.String",
-                    "documentation": {
-                      "identifier": "interval.String",
-                      "newPage": false,
-                      "searchKey": "flag_test.interval.String",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (i *interval) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (i *interval) String() string\n```\n\nString is the method to format the flag's value, part of the flag.Value interface. The String method's output will be used in diagnostics. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/flag_test#interval.Set",
-                    "documentation": {
-                      "identifier": "interval.Set",
-                      "newPage": false,
-                      "searchKey": "flag_test.interval.Set",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (i *interval) Set(value string) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (i *interval) Set(value string) error\n```\n\nSet is the method to set the flag value, part of the flag.Value interface. Set's argument is a string to be parsed to set the flag. It's a comma-separated list, so we split it. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/flag_test#URLValue",
               "documentation": {
                 "identifier": "URLValue",
                 "newPage": false,
                 "searchKey": "flag_test.URLValue",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -282,34 +231,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/flag_test#URLValue.String",
-                    "documentation": {
-                      "identifier": "URLValue.String",
-                      "newPage": false,
-                      "searchKey": "flag_test.URLValue.String",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (v URLValue) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (v URLValue) String() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/flag_test#URLValue.Set",
                     "documentation": {
                       "identifier": "URLValue.Set",
                       "newPage": false,
                       "searchKey": "flag_test.URLValue.Set",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -323,70 +251,26 @@
                     },
                     "children": null
                   }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/flag_test#flagVar",
-              "documentation": {
-                "identifier": "flagVar",
-                "newPage": false,
-                "searchKey": "flag_test.flagVar",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type flagVar []string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype flagVar []string\n```\n\nDeclare a user-defined flag type. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/flag_test#flagVar.String",
-                    "documentation": {
-                      "identifier": "flagVar.String",
-                      "newPage": false,
-                      "searchKey": "flag_test.flagVar.String",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *flagVar) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *flagVar) String() string\n```\n\n"
-                    },
-                    "children": null
-                  }
                 },
                 {
                   "node": {
-                    "pathID": "/flag_test#flagVar.Set",
+                    "pathID": "/flag_test#URLValue.String",
                     "documentation": {
-                      "identifier": "flagVar.Set",
+                      "identifier": "URLValue.String",
                       "newPage": false,
-                      "searchKey": "flag_test.flagVar.Set",
+                      "searchKey": "flag_test.URLValue.String",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *flagVar) Set(value string) error"
+                      "value": "func (v URLValue) String() string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *flagVar) Set(value string) error\n```\n\n"
+                      "value": "```Go\nfunc (v URLValue) String() string\n```\n\n"
                     },
                     "children": null
                   }
@@ -402,6 +286,7 @@
                 "newPage": false,
                 "searchKey": "flag_test.boolFlagVar",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -416,22 +301,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/flag_test#boolFlagVar.String",
+                    "pathID": "/flag_test#boolFlagVar.IsBoolFlag",
                     "documentation": {
-                      "identifier": "boolFlagVar.String",
+                      "identifier": "boolFlagVar.IsBoolFlag",
                       "newPage": false,
-                      "searchKey": "flag_test.boolFlagVar.String",
+                      "searchKey": "flag_test.boolFlagVar.IsBoolFlag",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (b *boolFlagVar) String() string"
+                      "value": "func (b *boolFlagVar) IsBoolFlag() bool"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (b *boolFlagVar) String() string\n```\n\n"
+                      "value": "```Go\nfunc (b *boolFlagVar) IsBoolFlag() bool\n```\n\n"
                     },
                     "children": null
                   }
@@ -444,6 +330,7 @@
                       "newPage": false,
                       "searchKey": "flag_test.boolFlagVar.Set",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -460,22 +347,165 @@
                 },
                 {
                   "node": {
-                    "pathID": "/flag_test#boolFlagVar.IsBoolFlag",
+                    "pathID": "/flag_test#boolFlagVar.String",
                     "documentation": {
-                      "identifier": "boolFlagVar.IsBoolFlag",
+                      "identifier": "boolFlagVar.String",
                       "newPage": false,
-                      "searchKey": "flag_test.boolFlagVar.IsBoolFlag",
+                      "searchKey": "flag_test.boolFlagVar.String",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (b *boolFlagVar) IsBoolFlag() bool"
+                      "value": "func (b *boolFlagVar) String() string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (b *boolFlagVar) IsBoolFlag() bool\n```\n\n"
+                      "value": "```Go\nfunc (b *boolFlagVar) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/flag_test#flagVar",
+              "documentation": {
+                "identifier": "flagVar",
+                "newPage": false,
+                "searchKey": "flag_test.flagVar",
+                "tags": [
+                  "array",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type flagVar []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype flagVar []string\n```\n\nDeclare a user-defined flag type. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/flag_test#flagVar.Set",
+                    "documentation": {
+                      "identifier": "flagVar.Set",
+                      "newPage": false,
+                      "searchKey": "flag_test.flagVar.Set",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *flagVar) Set(value string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *flagVar) Set(value string) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/flag_test#flagVar.String",
+                    "documentation": {
+                      "identifier": "flagVar.String",
+                      "newPage": false,
+                      "searchKey": "flag_test.flagVar.String",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *flagVar) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *flagVar) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/flag_test#interval",
+              "documentation": {
+                "identifier": "interval",
+                "newPage": false,
+                "searchKey": "flag_test.interval",
+                "tags": [
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type interval []time.Duration"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype interval []time.Duration\n```\n\nExample 3: A user-defined flag type, a slice of durations. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/flag_test#interval.Set",
+                    "documentation": {
+                      "identifier": "interval.Set",
+                      "newPage": false,
+                      "searchKey": "flag_test.interval.Set",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i *interval) Set(value string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i *interval) Set(value string) error\n```\n\nSet is the method to set the flag value, part of the flag.Value interface. Set's argument is a string to be parsed to set the flag. It's a comma-separated list, so we split it. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/flag_test#interval.String",
+                    "documentation": {
+                      "identifier": "interval.String",
+                      "newPage": false,
+                      "searchKey": "flag_test.interval.String",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i *interval) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i *interval) String() string\n```\n\nString is the method to format the flag's value, part of the flag.Value interface. The String method's output will be used in diagnostics. \n\n"
                     },
                     "children": null
                   }
@@ -494,6 +524,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -508,78 +539,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/flag_test#ExampleFunc",
-              "documentation": {
-                "identifier": "ExampleFunc",
-                "newPage": false,
-                "searchKey": "flag_test.ExampleFunc",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleFunc()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleFunc()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/flag_test#init.example_test.go",
-              "documentation": {
-                "identifier": "init.example_test.go",
-                "newPage": false,
-                "searchKey": "flag_test.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/flag_test#init.example_test.go.0xc056cbfbc8",
-              "documentation": {
-                "identifier": "init.example_test.go.0xc056cbfbc8",
-                "newPage": false,
-                "searchKey": "flag_test.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/flag_test#Example",
               "documentation": {
                 "identifier": "Example",
                 "newPage": false,
                 "searchKey": "flag_test.Example",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -596,12 +562,36 @@
           },
           {
             "node": {
+              "pathID": "/flag_test#ExampleFunc",
+              "documentation": {
+                "identifier": "ExampleFunc",
+                "newPage": false,
+                "searchKey": "flag_test.ExampleFunc",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleFunc()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleFunc()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/flag_test#ExampleValue",
               "documentation": {
                 "identifier": "ExampleValue",
                 "newPage": false,
                 "searchKey": "flag_test.ExampleValue",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -618,12 +608,517 @@
           },
           {
             "node": {
+              "pathID": "/flag_test#TestChangingArgs",
+              "documentation": {
+                "identifier": "TestChangingArgs",
+                "newPage": false,
+                "searchKey": "flag_test.TestChangingArgs",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestChangingArgs(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestChangingArgs(t *testing.T)\n```\n\nThis tests that one can reset the flags. This still works but not well, and is superseded by FlagSet. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/flag_test#TestEverything",
+              "documentation": {
+                "identifier": "TestEverything",
+                "newPage": false,
+                "searchKey": "flag_test.TestEverything",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEverything(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEverything(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/flag_test#TestExitCode",
+              "documentation": {
+                "identifier": "TestExitCode",
+                "newPage": false,
+                "searchKey": "flag_test.TestExitCode",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExitCode(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExitCode(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/flag_test#TestFlagSetParse",
+              "documentation": {
+                "identifier": "TestFlagSetParse",
+                "newPage": false,
+                "searchKey": "flag_test.TestFlagSetParse",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFlagSetParse(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFlagSetParse(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/flag_test#TestGet",
+              "documentation": {
+                "identifier": "TestGet",
+                "newPage": false,
+                "searchKey": "flag_test.TestGet",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGet(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGet(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/flag_test#TestGetters",
+              "documentation": {
+                "identifier": "TestGetters",
+                "newPage": false,
+                "searchKey": "flag_test.TestGetters",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetters(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetters(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/flag_test#TestHelp",
+              "documentation": {
+                "identifier": "TestHelp",
+                "newPage": false,
+                "searchKey": "flag_test.TestHelp",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHelp(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHelp(t *testing.T)\n```\n\nTest that -help invokes the usage message and returns ErrHelp. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/flag_test#TestIntFlagOverflow",
+              "documentation": {
+                "identifier": "TestIntFlagOverflow",
+                "newPage": false,
+                "searchKey": "flag_test.TestIntFlagOverflow",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIntFlagOverflow(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIntFlagOverflow(t *testing.T)\n```\n\nIssue 19230: validate range of Int and Uint flag values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/flag_test#TestInvalidFlags",
+              "documentation": {
+                "identifier": "TestInvalidFlags",
+                "newPage": false,
+                "searchKey": "flag_test.TestInvalidFlags",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInvalidFlags(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInvalidFlags(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/flag_test#TestParse",
+              "documentation": {
+                "identifier": "TestParse",
+                "newPage": false,
+                "searchKey": "flag_test.TestParse",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParse(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParse(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/flag_test#TestParseError",
+              "documentation": {
+                "identifier": "TestParseError",
+                "newPage": false,
+                "searchKey": "flag_test.TestParseError",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/flag_test#TestPrintDefaults",
+              "documentation": {
+                "identifier": "TestPrintDefaults",
+                "newPage": false,
+                "searchKey": "flag_test.TestPrintDefaults",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPrintDefaults(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPrintDefaults(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/flag_test#TestRangeError",
+              "documentation": {
+                "identifier": "TestRangeError",
+                "newPage": false,
+                "searchKey": "flag_test.TestRangeError",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRangeError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRangeError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/flag_test#TestRedefinedFlags",
+              "documentation": {
+                "identifier": "TestRedefinedFlags",
+                "newPage": false,
+                "searchKey": "flag_test.TestRedefinedFlags",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRedefinedFlags(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRedefinedFlags(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/flag_test#TestSetOutput",
+              "documentation": {
+                "identifier": "TestSetOutput",
+                "newPage": false,
+                "searchKey": "flag_test.TestSetOutput",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSetOutput(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSetOutput(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/flag_test#TestUsage",
+              "documentation": {
+                "identifier": "TestUsage",
+                "newPage": false,
+                "searchKey": "flag_test.TestUsage",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUsage(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUsage(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/flag_test#TestUsageOutput",
+              "documentation": {
+                "identifier": "TestUsageOutput",
+                "newPage": false,
+                "searchKey": "flag_test.TestUsageOutput",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUsageOutput(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUsageOutput(t *testing.T)\n```\n\nIssue 20998: Usage should respect CommandLine.output. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/flag_test#TestUserDefined",
+              "documentation": {
+                "identifier": "TestUserDefined",
+                "newPage": false,
+                "searchKey": "flag_test.TestUserDefined",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUserDefined(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUserDefined(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/flag_test#TestUserDefinedBool",
+              "documentation": {
+                "identifier": "TestUserDefinedBool",
+                "newPage": false,
+                "searchKey": "flag_test.TestUserDefinedBool",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUserDefinedBool(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUserDefinedBool(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/flag_test#TestUserDefinedForCommandLine",
+              "documentation": {
+                "identifier": "TestUserDefinedForCommandLine",
+                "newPage": false,
+                "searchKey": "flag_test.TestUserDefinedForCommandLine",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUserDefinedForCommandLine(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUserDefinedForCommandLine(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/flag_test#TestUserDefinedFunc",
+              "documentation": {
+                "identifier": "TestUserDefinedFunc",
+                "newPage": false,
+                "searchKey": "flag_test.TestUserDefinedFunc",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUserDefinedFunc(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUserDefinedFunc(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/flag_test#boolString",
               "documentation": {
                 "identifier": "boolString",
                 "newPage": false,
                 "searchKey": "flag_test.boolString",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -640,440 +1135,46 @@
           },
           {
             "node": {
-              "pathID": "/flag_test#TestEverything",
+              "pathID": "/flag_test#init.example_test.go",
               "documentation": {
-                "identifier": "TestEverything",
+                "identifier": "init.example_test.go",
                 "newPage": false,
-                "searchKey": "flag_test.TestEverything",
+                "searchKey": "flag_test.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestEverything(t *testing.T)"
+                "value": "func init()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestEverything(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc init()\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/flag_test#TestGet",
+              "pathID": "/flag_test#init.example_test.go.0xc0297a6eb8",
               "documentation": {
-                "identifier": "TestGet",
+                "identifier": "init.example_test.go.0xc0297a6eb8",
                 "newPage": false,
-                "searchKey": "flag_test.TestGet",
+                "searchKey": "flag_test.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestGet(t *testing.T)"
+                "value": "func init()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestGet(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/flag_test#TestUsage",
-              "documentation": {
-                "identifier": "TestUsage",
-                "newPage": false,
-                "searchKey": "flag_test.TestUsage",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUsage(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUsage(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/flag_test#testParse",
-              "documentation": {
-                "identifier": "testParse",
-                "newPage": false,
-                "searchKey": "flag_test.testParse",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testParse(f *FlagSet, t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testParse(f *FlagSet, t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/flag_test#TestParse",
-              "documentation": {
-                "identifier": "TestParse",
-                "newPage": false,
-                "searchKey": "flag_test.TestParse",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestParse(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestParse(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/flag_test#TestFlagSetParse",
-              "documentation": {
-                "identifier": "TestFlagSetParse",
-                "newPage": false,
-                "searchKey": "flag_test.TestFlagSetParse",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestFlagSetParse(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestFlagSetParse(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/flag_test#TestUserDefined",
-              "documentation": {
-                "identifier": "TestUserDefined",
-                "newPage": false,
-                "searchKey": "flag_test.TestUserDefined",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUserDefined(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUserDefined(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/flag_test#TestUserDefinedFunc",
-              "documentation": {
-                "identifier": "TestUserDefinedFunc",
-                "newPage": false,
-                "searchKey": "flag_test.TestUserDefinedFunc",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUserDefinedFunc(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUserDefinedFunc(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/flag_test#TestUserDefinedForCommandLine",
-              "documentation": {
-                "identifier": "TestUserDefinedForCommandLine",
-                "newPage": false,
-                "searchKey": "flag_test.TestUserDefinedForCommandLine",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUserDefinedForCommandLine(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUserDefinedForCommandLine(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/flag_test#TestUserDefinedBool",
-              "documentation": {
-                "identifier": "TestUserDefinedBool",
-                "newPage": false,
-                "searchKey": "flag_test.TestUserDefinedBool",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUserDefinedBool(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUserDefinedBool(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/flag_test#TestSetOutput",
-              "documentation": {
-                "identifier": "TestSetOutput",
-                "newPage": false,
-                "searchKey": "flag_test.TestSetOutput",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSetOutput(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSetOutput(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/flag_test#TestChangingArgs",
-              "documentation": {
-                "identifier": "TestChangingArgs",
-                "newPage": false,
-                "searchKey": "flag_test.TestChangingArgs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestChangingArgs(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestChangingArgs(t *testing.T)\n```\n\nThis tests that one can reset the flags. This still works but not well, and is superseded by FlagSet. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/flag_test#TestHelp",
-              "documentation": {
-                "identifier": "TestHelp",
-                "newPage": false,
-                "searchKey": "flag_test.TestHelp",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestHelp(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestHelp(t *testing.T)\n```\n\nTest that -help invokes the usage message and returns ErrHelp. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/flag_test#TestPrintDefaults",
-              "documentation": {
-                "identifier": "TestPrintDefaults",
-                "newPage": false,
-                "searchKey": "flag_test.TestPrintDefaults",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestPrintDefaults(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestPrintDefaults(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/flag_test#TestIntFlagOverflow",
-              "documentation": {
-                "identifier": "TestIntFlagOverflow",
-                "newPage": false,
-                "searchKey": "flag_test.TestIntFlagOverflow",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIntFlagOverflow(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIntFlagOverflow(t *testing.T)\n```\n\nIssue 19230: validate range of Int and Uint flag values. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/flag_test#TestUsageOutput",
-              "documentation": {
-                "identifier": "TestUsageOutput",
-                "newPage": false,
-                "searchKey": "flag_test.TestUsageOutput",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUsageOutput(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUsageOutput(t *testing.T)\n```\n\nIssue 20998: Usage should respect CommandLine.output. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/flag_test#TestGetters",
-              "documentation": {
-                "identifier": "TestGetters",
-                "newPage": false,
-                "searchKey": "flag_test.TestGetters",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGetters(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGetters(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/flag_test#TestParseError",
-              "documentation": {
-                "identifier": "TestParseError",
-                "newPage": false,
-                "searchKey": "flag_test.TestParseError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestParseError(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestParseError(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/flag_test#TestRangeError",
-              "documentation": {
-                "identifier": "TestRangeError",
-                "newPage": false,
-                "searchKey": "flag_test.TestRangeError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRangeError(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRangeError(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/flag_test#TestExitCode",
-              "documentation": {
-                "identifier": "TestExitCode",
-                "newPage": false,
-                "searchKey": "flag_test.TestExitCode",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestExitCode(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestExitCode(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc init()\n```\n\n"
               },
               "children": null
             }
@@ -1086,6 +1187,7 @@
                 "newPage": false,
                 "searchKey": "flag_test.mustPanic",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1102,44 +1204,23 @@
           },
           {
             "node": {
-              "pathID": "/flag_test#TestInvalidFlags",
+              "pathID": "/flag_test#testParse",
               "documentation": {
-                "identifier": "TestInvalidFlags",
+                "identifier": "testParse",
                 "newPage": false,
-                "searchKey": "flag_test.TestInvalidFlags",
+                "searchKey": "flag_test.testParse",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestInvalidFlags(t *testing.T)"
+                "value": "func testParse(f *FlagSet, t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestInvalidFlags(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/flag_test#TestRedefinedFlags",
-              "documentation": {
-                "identifier": "TestRedefinedFlags",
-                "newPage": false,
-                "searchKey": "flag_test.TestRedefinedFlags",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRedefinedFlags(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRedefinedFlags(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc testParse(f *FlagSet, t *testing.T)\n```\n\n"
               },
               "children": null
             }

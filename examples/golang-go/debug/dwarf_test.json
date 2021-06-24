@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "debug/dwarf_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "dwarf_test.file1C",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -67,6 +71,8 @@
                 "newPage": false,
                 "searchKey": "dwarf_test.file1H",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -89,6 +95,8 @@
                 "newPage": false,
                 "searchKey": "dwarf_test.file2C",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -111,6 +119,9 @@
                 "newPage": false,
                 "searchKey": "dwarf_test.joinTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -127,34 +138,14 @@
           },
           {
             "node": {
-              "pathID": "/debug/dwarf_test#typedefTests",
-              "documentation": {
-                "identifier": "typedefTests",
-                "newPage": false,
-                "searchKey": "dwarf_test.typedefTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var typedefTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar typedefTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/debug/dwarf_test#machoBug",
               "documentation": {
                 "identifier": "machoBug",
                 "newPage": false,
                 "searchKey": "dwarf_test.machoBug",
                 "tags": [
+                  "variable",
+                  "object",
                   "private"
                 ]
               },
@@ -171,12 +162,39 @@
           },
           {
             "node": {
+              "pathID": "/debug/dwarf_test#typedefTests",
+              "documentation": {
+                "identifier": "typedefTests",
+                "newPage": false,
+                "searchKey": "dwarf_test.typedefTests",
+                "tags": [
+                  "variable",
+                  "object",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var typedefTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar typedefTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/debug/dwarf_test#unsupportedTypeTests",
               "documentation": {
                 "identifier": "unsupportedTypeTests",
                 "newPage": false,
                 "searchKey": "dwarf_test.unsupportedTypeTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
@@ -202,6 +220,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -216,34 +235,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/debug/dwarf_test#wantRange",
-              "documentation": {
-                "identifier": "wantRange",
-                "newPage": false,
-                "searchKey": "dwarf_test.wantRange",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type wantRange struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype wantRange struct {\n\tpc     uint64\n\tranges [][2]uint64\n}\n```\n\nwantRange maps from a PC to the ranges of the compilation unit containing that PC. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/debug/dwarf_test#joinTest",
               "documentation": {
                 "identifier": "joinTest",
                 "newPage": false,
                 "searchKey": "dwarf_test.joinTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -254,6 +252,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\ntype joinTest struct {\n\tdirname, filename string\n\tpath              string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/dwarf_test#wantRange",
+              "documentation": {
+                "identifier": "wantRange",
+                "newPage": false,
+                "searchKey": "dwarf_test.wantRange",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type wantRange struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype wantRange struct {\n\tpc     uint64\n\tranges [][2]uint64\n}\n```\n\nwantRange maps from a PC to the ranges of the compilation unit containing that PC. \n\n"
               },
               "children": null
             }
@@ -269,6 +290,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -283,145 +305,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/debug/dwarf_test#TestSplit",
-              "documentation": {
-                "identifier": "TestSplit",
-                "newPage": false,
-                "searchKey": "dwarf_test.TestSplit",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSplit(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSplit(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/dwarf_test#TestReaderSeek",
-              "documentation": {
-                "identifier": "TestReaderSeek",
-                "newPage": false,
-                "searchKey": "dwarf_test.TestReaderSeek",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReaderSeek(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReaderSeek(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/dwarf_test#TestRangesSection",
-              "documentation": {
-                "identifier": "TestRangesSection",
-                "newPage": false,
-                "searchKey": "dwarf_test.TestRangesSection",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRangesSection(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRangesSection(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/dwarf_test#TestRangesRnglistx",
-              "documentation": {
-                "identifier": "TestRangesRnglistx",
-                "newPage": false,
-                "searchKey": "dwarf_test.TestRangesRnglistx",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRangesRnglistx(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRangesRnglistx(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/dwarf_test#testRanges",
-              "documentation": {
-                "identifier": "testRanges",
-                "newPage": false,
-                "searchKey": "dwarf_test.testRanges",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testRanges(t *testing.T, name string, want []wantRange)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testRanges(t *testing.T, name string, want []wantRange)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/dwarf_test#TestReaderRanges",
-              "documentation": {
-                "identifier": "TestReaderRanges",
-                "newPage": false,
-                "searchKey": "dwarf_test.TestReaderRanges",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReaderRanges(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReaderRanges(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/debug/dwarf_test#Test64Bit",
               "documentation": {
                 "identifier": "Test64Bit",
                 "newPage": false,
                 "searchKey": "dwarf_test.Test64Bit",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -437,22 +329,24 @@
           },
           {
             "node": {
-              "pathID": "/debug/dwarf_test#TestUnitIteration",
+              "pathID": "/debug/dwarf_test#TestLineELFClang",
               "documentation": {
-                "identifier": "TestUnitIteration",
+                "identifier": "TestLineELFClang",
                 "newPage": false,
-                "searchKey": "dwarf_test.TestUnitIteration",
+                "searchKey": "dwarf_test.TestLineELFClang",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestUnitIteration(t *testing.T)"
+                "value": "func TestLineELFClang(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestUnitIteration(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestLineELFClang(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -465,7 +359,9 @@
                 "newPage": false,
                 "searchKey": "dwarf_test.TestLineELFGCC",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -487,7 +383,9 @@
                 "newPage": false,
                 "searchKey": "dwarf_test.TestLineGCCWindows",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -503,35 +401,15 @@
           },
           {
             "node": {
-              "pathID": "/debug/dwarf_test#TestLineELFClang",
-              "documentation": {
-                "identifier": "TestLineELFClang",
-                "newPage": false,
-                "searchKey": "dwarf_test.TestLineELFClang",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestLineELFClang(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestLineELFClang(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/debug/dwarf_test#TestLineRnglists",
               "documentation": {
                 "identifier": "TestLineRnglists",
                 "newPage": false,
                 "searchKey": "dwarf_test.TestLineRnglists",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -553,7 +431,9 @@
                 "newPage": false,
                 "searchKey": "dwarf_test.TestLineSeek",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -569,22 +449,288 @@
           },
           {
             "node": {
-              "pathID": "/debug/dwarf_test#testLineTable",
+              "pathID": "/debug/dwarf_test#TestPathJoin",
               "documentation": {
-                "identifier": "testLineTable",
+                "identifier": "TestPathJoin",
                 "newPage": false,
-                "searchKey": "dwarf_test.testLineTable",
+                "searchKey": "dwarf_test.TestPathJoin",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func testLineTable(t *testing.T, want []LineEntry, files [][]*LineFile, d *Data)"
+                "value": "func TestPathJoin(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc testLineTable(t *testing.T, want []LineEntry, files [][]*LineFile, d *Data)\n```\n\n"
+                "value": "```Go\nfunc TestPathJoin(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/dwarf_test#TestRangesRnglistx",
+              "documentation": {
+                "identifier": "TestRangesRnglistx",
+                "newPage": false,
+                "searchKey": "dwarf_test.TestRangesRnglistx",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRangesRnglistx(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRangesRnglistx(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/dwarf_test#TestRangesSection",
+              "documentation": {
+                "identifier": "TestRangesSection",
+                "newPage": false,
+                "searchKey": "dwarf_test.TestRangesSection",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRangesSection(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRangesSection(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/dwarf_test#TestReaderRanges",
+              "documentation": {
+                "identifier": "TestReaderRanges",
+                "newPage": false,
+                "searchKey": "dwarf_test.TestReaderRanges",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReaderRanges(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReaderRanges(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/dwarf_test#TestReaderSeek",
+              "documentation": {
+                "identifier": "TestReaderSeek",
+                "newPage": false,
+                "searchKey": "dwarf_test.TestReaderSeek",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReaderSeek(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReaderSeek(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/dwarf_test#TestSplit",
+              "documentation": {
+                "identifier": "TestSplit",
+                "newPage": false,
+                "searchKey": "dwarf_test.TestSplit",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSplit(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSplit(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/dwarf_test#TestTypedefCycle",
+              "documentation": {
+                "identifier": "TestTypedefCycle",
+                "newPage": false,
+                "searchKey": "dwarf_test.TestTypedefCycle",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTypedefCycle(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTypedefCycle(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/dwarf_test#TestTypedefsELF",
+              "documentation": {
+                "identifier": "TestTypedefsELF",
+                "newPage": false,
+                "searchKey": "dwarf_test.TestTypedefsELF",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTypedefsELF(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTypedefsELF(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/dwarf_test#TestTypedefsELFDwarf4",
+              "documentation": {
+                "identifier": "TestTypedefsELFDwarf4",
+                "newPage": false,
+                "searchKey": "dwarf_test.TestTypedefsELFDwarf4",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTypedefsELFDwarf4(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTypedefsELFDwarf4(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/dwarf_test#TestTypedefsMachO",
+              "documentation": {
+                "identifier": "TestTypedefsMachO",
+                "newPage": false,
+                "searchKey": "dwarf_test.TestTypedefsMachO",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTypedefsMachO(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTypedefsMachO(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/dwarf_test#TestUnitIteration",
+              "documentation": {
+                "identifier": "TestUnitIteration",
+                "newPage": false,
+                "searchKey": "dwarf_test.TestUnitIteration",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnitIteration(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnitIteration(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/dwarf_test#TestUnsupportedTypes",
+              "documentation": {
+                "identifier": "TestUnsupportedTypes",
+                "newPage": false,
+                "searchKey": "dwarf_test.TestUnsupportedTypes",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnsupportedTypes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnsupportedTypes(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -597,6 +743,7 @@
                 "newPage": false,
                 "searchKey": "dwarf_test.compareFiles",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -613,34 +760,13 @@
           },
           {
             "node": {
-              "pathID": "/debug/dwarf_test#dumpFiles",
-              "documentation": {
-                "identifier": "dumpFiles",
-                "newPage": false,
-                "searchKey": "dwarf_test.dumpFiles",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func dumpFiles(t *testing.T, files []*LineFile)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc dumpFiles(t *testing.T, files []*LineFile)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/debug/dwarf_test#compareLines",
               "documentation": {
                 "identifier": "compareLines",
                 "newPage": false,
                 "searchKey": "dwarf_test.compareLines",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -657,12 +783,36 @@
           },
           {
             "node": {
+              "pathID": "/debug/dwarf_test#dumpFiles",
+              "documentation": {
+                "identifier": "dumpFiles",
+                "newPage": false,
+                "searchKey": "dwarf_test.dumpFiles",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func dumpFiles(t *testing.T, files []*LineFile)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc dumpFiles(t *testing.T, files []*LineFile)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/debug/dwarf_test#dumpLines",
               "documentation": {
                 "identifier": "dumpLines",
                 "newPage": false,
                 "searchKey": "dwarf_test.dumpLines",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -679,34 +829,13 @@
           },
           {
             "node": {
-              "pathID": "/debug/dwarf_test#TestPathJoin",
-              "documentation": {
-                "identifier": "TestPathJoin",
-                "newPage": false,
-                "searchKey": "dwarf_test.TestPathJoin",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestPathJoin(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestPathJoin(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/debug/dwarf_test#elfData",
               "documentation": {
                 "identifier": "elfData",
                 "newPage": false,
                 "searchKey": "dwarf_test.elfData",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -729,6 +858,7 @@
                 "newPage": false,
                 "searchKey": "dwarf_test.machoData",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -751,6 +881,7 @@
                 "newPage": false,
                 "searchKey": "dwarf_test.peData",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -767,66 +898,46 @@
           },
           {
             "node": {
-              "pathID": "/debug/dwarf_test#TestTypedefsELF",
+              "pathID": "/debug/dwarf_test#testLineTable",
               "documentation": {
-                "identifier": "TestTypedefsELF",
+                "identifier": "testLineTable",
                 "newPage": false,
-                "searchKey": "dwarf_test.TestTypedefsELF",
+                "searchKey": "dwarf_test.testLineTable",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestTypedefsELF(t *testing.T)"
+                "value": "func testLineTable(t *testing.T, want []LineEntry, files [][]*LineFile, d *Data)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestTypedefsELF(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc testLineTable(t *testing.T, want []LineEntry, files [][]*LineFile, d *Data)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/debug/dwarf_test#TestTypedefsMachO",
+              "pathID": "/debug/dwarf_test#testRanges",
               "documentation": {
-                "identifier": "TestTypedefsMachO",
+                "identifier": "testRanges",
                 "newPage": false,
-                "searchKey": "dwarf_test.TestTypedefsMachO",
+                "searchKey": "dwarf_test.testRanges",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestTypedefsMachO(t *testing.T)"
+                "value": "func testRanges(t *testing.T, name string, want []wantRange)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestTypedefsMachO(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/dwarf_test#TestTypedefsELFDwarf4",
-              "documentation": {
-                "identifier": "TestTypedefsELFDwarf4",
-                "newPage": false,
-                "searchKey": "dwarf_test.TestTypedefsELFDwarf4",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTypedefsELFDwarf4(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTypedefsELFDwarf4(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc testRanges(t *testing.T, name string, want []wantRange)\n```\n\n"
               },
               "children": null
             }
@@ -839,6 +950,7 @@
                 "newPage": false,
                 "searchKey": "dwarf_test.testTypedefs",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -849,50 +961,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc testTypedefs(t *testing.T, d *Data, kind string)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/dwarf_test#TestTypedefCycle",
-              "documentation": {
-                "identifier": "TestTypedefCycle",
-                "newPage": false,
-                "searchKey": "dwarf_test.TestTypedefCycle",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTypedefCycle(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTypedefCycle(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/dwarf_test#TestUnsupportedTypes",
-              "documentation": {
-                "identifier": "TestUnsupportedTypes",
-                "newPage": false,
-                "searchKey": "dwarf_test.TestUnsupportedTypes",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUnsupportedTypes(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUnsupportedTypes(t *testing.T)\n```\n\n"
               },
               "children": null
             }

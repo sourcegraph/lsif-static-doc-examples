@@ -4,7 +4,9 @@
     "identifier": "hubspot",
     "newPage": true,
     "searchKey": "cmd/frontend/hubspot",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,12 +39,263 @@
         "children": [
           {
             "node": {
+              "pathID": "/cmd/frontend/hubspot#Client",
+              "documentation": {
+                "identifier": "Client",
+                "newPage": false,
+                "searchKey": "hubspot.Client",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Client struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Client struct {\n\tportalID string\n\thapiKey  string\n}\n```\n\nClient is a HubSpot API client \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/hubspot#New",
+                    "documentation": {
+                      "identifier": "New",
+                      "newPage": false,
+                      "searchKey": "hubspot.New",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func New(portalID, hapiKey string) *Client"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc New(portalID, hapiKey string) *Client\n```\n\nNew returns a new HubSpot client using the given Portal ID. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/hubspot#Client.CreateOrUpdateContact",
+                    "documentation": {
+                      "identifier": "Client.CreateOrUpdateContact",
+                      "newPage": false,
+                      "searchKey": "hubspot.Client.CreateOrUpdateContact",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) CreateOrUpdateContact(email string, params *ContactProperties) (*ContactResponse, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) CreateOrUpdateContact(email string, params *ContactProperties) (*ContactResponse, error)\n```\n\nCreateOrUpdateContact creates or updates a HubSpot contact (with email as primary key) \n\nThe endpoint returns 200 with the contact's VID and an isNew field on success, or a 409 Conflict if we attempt to change a user's email address to a new one that is already taken \n\n[http://developers.hubspot.com/docs/methods/contacts/create_or_update](http://developers.hubspot.com/docs/methods/contacts/create_or_update) \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/hubspot#Client.LogEvent",
+                    "documentation": {
+                      "identifier": "Client.LogEvent",
+                      "newPage": false,
+                      "searchKey": "hubspot.Client.LogEvent",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) LogEvent(email string, eventID string, params map[string]string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) LogEvent(email string, eventID string, params map[string]string) error\n```\n\nLogEvent logs a user action or event. The response will have a status code of 200 with no data in the body \n\n[http://developers.hubspot.com/docs/methods/enterprise_events/http_api](http://developers.hubspot.com/docs/methods/enterprise_events/http_api) \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/hubspot#Client.SubmitForm",
+                    "documentation": {
+                      "identifier": "Client.SubmitForm",
+                      "newPage": false,
+                      "searchKey": "hubspot.Client.SubmitForm",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) SubmitForm(formID string, params interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) SubmitForm(formID string, params interface{}) error\n```\n\nSubmitForm submits form data.  Form submissions return an empty body with status code 204 or 302 if submission was successful. \n\n`params` must be a map[string]string or a struct convertible to a URL querystring using query.Values(). The keys (or `url` tags in the struct) must be snake case, per HubSpot conventions. \n\nSee [https://developers.hubspot.com/docs/methods/forms/submit_form](https://developers.hubspot.com/docs/methods/forms/submit_form). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/hubspot#Client.baseContactURL",
+                    "documentation": {
+                      "identifier": "Client.baseContactURL",
+                      "newPage": false,
+                      "searchKey": "hubspot.Client.baseContactURL",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) baseContactURL(email string) *url.URL"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) baseContactURL(email string) *url.URL\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/hubspot#Client.baseEventURL",
+                    "documentation": {
+                      "identifier": "Client.baseEventURL",
+                      "newPage": false,
+                      "searchKey": "hubspot.Client.baseEventURL",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) baseEventURL() *url.URL"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) baseEventURL() *url.URL\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/hubspot#Client.baseFormURL",
+                    "documentation": {
+                      "identifier": "Client.baseFormURL",
+                      "newPage": false,
+                      "searchKey": "hubspot.Client.baseFormURL",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) baseFormURL() *url.URL"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) baseFormURL() *url.URL\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/hubspot#Client.get",
+                    "documentation": {
+                      "identifier": "Client.get",
+                      "newPage": false,
+                      "searchKey": "hubspot.Client.get",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) get(methodName string, baseURL *url.URL, suffix string, params map[string]string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) get(methodName string, baseURL *url.URL, suffix string, params map[string]string) error\n```\n\nSend a GET request to HubSpot APIs that accept JSON in a querystring (e.g. the Events API) \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/hubspot#Client.postForm",
+                    "documentation": {
+                      "identifier": "Client.postForm",
+                      "newPage": false,
+                      "searchKey": "hubspot.Client.postForm",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) postForm(methodName string, baseURL *url.URL, suffix string, body interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) postForm(methodName string, baseURL *url.URL, suffix string, body interface{}) error\n```\n\nSend a POST request with form data to HubSpot APIs that accept application/x-www-form-urlencoded data (e.g. the Forms API) \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/hubspot#Client.postJSON",
+                    "documentation": {
+                      "identifier": "Client.postJSON",
+                      "newPage": false,
+                      "searchKey": "hubspot.Client.postJSON",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) postJSON(methodName string, baseURL *url.URL, reqPayload, respPayload interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) postJSON(methodName string, baseURL *url.URL, reqPayload, respPayload interface{}) error\n```\n\nSend a POST request with JSON data to HubSpot APIs that accept JSON (e.g. the Contacts, Lists, etc APIs) \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/hubspot#ContactProperties",
               "documentation": {
                 "identifier": "ContactProperties",
                 "newPage": false,
                 "searchKey": "hubspot.ContactProperties",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +315,9 @@
                 "identifier": "ContactResponse",
                 "newPage": false,
                 "searchKey": "hubspot.ContactResponse",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -81,6 +338,7 @@
                 "newPage": false,
                 "searchKey": "hubspot.apiProperties",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -101,6 +359,7 @@
                       "newPage": false,
                       "searchKey": "hubspot.newAPIValues",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -123,6 +382,7 @@
                       "newPage": false,
                       "searchKey": "hubspot.apiProperties.set",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -148,6 +408,7 @@
                 "newPage": false,
                 "searchKey": "hubspot.apiProperty",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -161,239 +422,6 @@
               },
               "children": null
             }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/hubspot#Client",
-              "documentation": {
-                "identifier": "Client",
-                "newPage": false,
-                "searchKey": "hubspot.Client",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Client struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Client struct {\n\tportalID string\n\thapiKey  string\n}\n```\n\nClient is a HubSpot API client \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/hubspot#New",
-                    "documentation": {
-                      "identifier": "New",
-                      "newPage": false,
-                      "searchKey": "hubspot.New",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func New(portalID, hapiKey string) *Client"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc New(portalID, hapiKey string) *Client\n```\n\nNew returns a new HubSpot client using the given Portal ID. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/hubspot#Client.CreateOrUpdateContact",
-                    "documentation": {
-                      "identifier": "Client.CreateOrUpdateContact",
-                      "newPage": false,
-                      "searchKey": "hubspot.Client.CreateOrUpdateContact",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) CreateOrUpdateContact(email string, params *ContactProperties) (*ContactResponse, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) CreateOrUpdateContact(email string, params *ContactProperties) (*ContactResponse, error)\n```\n\nCreateOrUpdateContact creates or updates a HubSpot contact (with email as primary key) \n\nThe endpoint returns 200 with the contact's VID and an isNew field on success, or a 409 Conflict if we attempt to change a user's email address to a new one that is already taken \n\n[http://developers.hubspot.com/docs/methods/contacts/create_or_update](http://developers.hubspot.com/docs/methods/contacts/create_or_update) \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/hubspot#Client.baseContactURL",
-                    "documentation": {
-                      "identifier": "Client.baseContactURL",
-                      "newPage": false,
-                      "searchKey": "hubspot.Client.baseContactURL",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) baseContactURL(email string) *url.URL"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) baseContactURL(email string) *url.URL\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/hubspot#Client.LogEvent",
-                    "documentation": {
-                      "identifier": "Client.LogEvent",
-                      "newPage": false,
-                      "searchKey": "hubspot.Client.LogEvent",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) LogEvent(email string, eventID string, params map[string]string) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) LogEvent(email string, eventID string, params map[string]string) error\n```\n\nLogEvent logs a user action or event. The response will have a status code of 200 with no data in the body \n\n[http://developers.hubspot.com/docs/methods/enterprise_events/http_api](http://developers.hubspot.com/docs/methods/enterprise_events/http_api) \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/hubspot#Client.baseEventURL",
-                    "documentation": {
-                      "identifier": "Client.baseEventURL",
-                      "newPage": false,
-                      "searchKey": "hubspot.Client.baseEventURL",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) baseEventURL() *url.URL"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) baseEventURL() *url.URL\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/hubspot#Client.SubmitForm",
-                    "documentation": {
-                      "identifier": "Client.SubmitForm",
-                      "newPage": false,
-                      "searchKey": "hubspot.Client.SubmitForm",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) SubmitForm(formID string, params interface{}) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) SubmitForm(formID string, params interface{}) error\n```\n\nSubmitForm submits form data.  Form submissions return an empty body with status code 204 or 302 if submission was successful. \n\n`params` must be a map[string]string or a struct convertible to a URL querystring using query.Values(). The keys (or `url` tags in the struct) must be snake case, per HubSpot conventions. \n\nSee [https://developers.hubspot.com/docs/methods/forms/submit_form](https://developers.hubspot.com/docs/methods/forms/submit_form). \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/hubspot#Client.baseFormURL",
-                    "documentation": {
-                      "identifier": "Client.baseFormURL",
-                      "newPage": false,
-                      "searchKey": "hubspot.Client.baseFormURL",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) baseFormURL() *url.URL"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) baseFormURL() *url.URL\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/hubspot#Client.postForm",
-                    "documentation": {
-                      "identifier": "Client.postForm",
-                      "newPage": false,
-                      "searchKey": "hubspot.Client.postForm",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) postForm(methodName string, baseURL *url.URL, suffix string, body interface{}) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) postForm(methodName string, baseURL *url.URL, suffix string, body interface{}) error\n```\n\nSend a POST request with form data to HubSpot APIs that accept application/x-www-form-urlencoded data (e.g. the Forms API) \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/hubspot#Client.postJSON",
-                    "documentation": {
-                      "identifier": "Client.postJSON",
-                      "newPage": false,
-                      "searchKey": "hubspot.Client.postJSON",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) postJSON(methodName string, baseURL *url.URL, reqPayload, respPayload interface{}) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) postJSON(methodName string, baseURL *url.URL, reqPayload, respPayload interface{}) error\n```\n\nSend a POST request with JSON data to HubSpot APIs that accept JSON (e.g. the Contacts, Lists, etc APIs) \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/hubspot#Client.get",
-                    "documentation": {
-                      "identifier": "Client.get",
-                      "newPage": false,
-                      "searchKey": "hubspot.Client.get",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) get(methodName string, baseURL *url.URL, suffix string, params map[string]string) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) get(methodName string, baseURL *url.URL, suffix string, params map[string]string) error\n```\n\nSend a GET request to HubSpot APIs that accept JSON in a querystring (e.g. the Events API) \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
           }
         ]
       }
@@ -405,7 +433,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -424,6 +454,7 @@
                 "newPage": false,
                 "searchKey": "hubspot.wrapError",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },

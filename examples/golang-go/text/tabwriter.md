@@ -9,50 +9,115 @@ The text/tabwriter package is frozen and is not accepting new features.
 ## Index
 
 * [Constants](#const)
+    * [const AlignRight](#AlignRight)
+    * [const Debug](#Debug)
+    * [const DiscardEmptyColumns](#DiscardEmptyColumns)
+    * [const Escape](#Escape)
     * [const FilterHTML](#FilterHTML)
     * [const StripEscape](#StripEscape)
-    * [const AlignRight](#AlignRight)
-    * [const DiscardEmptyColumns](#DiscardEmptyColumns)
     * [const TabIndent](#TabIndent)
-    * [const Debug](#Debug)
-    * [const Escape](#Escape)
 * [Variables](#var)
+    * [var hbar](#hbar)
     * [var newline](#newline)
     * [var tabs](#tabs)
     * [var vbar](#vbar)
-    * [var hbar](#hbar)
 * [Types](#type)
-    * [type cell struct](#cell)
     * [type Writer struct](#Writer)
         * [func NewWriter(output io.Writer, minwidth, tabwidth, padding int, padchar byte, flags uint) *Writer](#NewWriter)
-        * [func (b *Writer) addLine(flushed bool)](#Writer.addLine)
-        * [func (b *Writer) reset()](#Writer.reset)
-        * [func (b *Writer) Init(output io.Writer, minwidth, tabwidth, padding int, padchar byte, flags uint) *Writer](#Writer.Init)
-        * [func (b *Writer) dump()](#Writer.dump)
-        * [func (b *Writer) write0(buf []byte)](#Writer.write0)
-        * [func (b *Writer) writeN(src []byte, n int)](#Writer.writeN)
-        * [func (b *Writer) writePadding(textw, cellw int, useTabs bool)](#Writer.writePadding)
-        * [func (b *Writer) writeLines(pos0 int, line0, line1 int) (pos int)](#Writer.writeLines)
-        * [func (b *Writer) format(pos0 int, line0, line1 int) (pos int)](#Writer.format)
-        * [func (b *Writer) append(text []byte)](#Writer.append)
-        * [func (b *Writer) updateWidth()](#Writer.updateWidth)
-        * [func (b *Writer) startEscape(ch byte)](#Writer.startEscape)
-        * [func (b *Writer) endEscape()](#Writer.endEscape)
-        * [func (b *Writer) terminateCell(htab bool) int](#Writer.terminateCell)
-        * [func (b *Writer) handlePanic(err *error, op string)](#Writer.handlePanic)
         * [func (b *Writer) Flush() error](#Writer.Flush)
+        * [func (b *Writer) Init(output io.Writer, minwidth, tabwidth, padding int, padchar byte, flags uint) *Writer](#Writer.Init)
+        * [func (b *Writer) Write(buf []byte) (n int, err error)](#Writer.Write)
+        * [func (b *Writer) addLine(flushed bool)](#Writer.addLine)
+        * [func (b *Writer) append(text []byte)](#Writer.append)
+        * [func (b *Writer) dump()](#Writer.dump)
+        * [func (b *Writer) endEscape()](#Writer.endEscape)
         * [func (b *Writer) flush() (err error)](#Writer.flush)
         * [func (b *Writer) flushNoDefers()](#Writer.flushNoDefers)
-        * [func (b *Writer) Write(buf []byte) (n int, err error)](#Writer.Write)
+        * [func (b *Writer) format(pos0 int, line0, line1 int) (pos int)](#Writer.format)
+        * [func (b *Writer) handlePanic(err *error, op string)](#Writer.handlePanic)
+        * [func (b *Writer) reset()](#Writer.reset)
+        * [func (b *Writer) startEscape(ch byte)](#Writer.startEscape)
+        * [func (b *Writer) terminateCell(htab bool) int](#Writer.terminateCell)
+        * [func (b *Writer) updateWidth()](#Writer.updateWidth)
+        * [func (b *Writer) write0(buf []byte)](#Writer.write0)
+        * [func (b *Writer) writeLines(pos0 int, line0, line1 int) (pos int)](#Writer.writeLines)
+        * [func (b *Writer) writeN(src []byte, n int)](#Writer.writeN)
+        * [func (b *Writer) writePadding(textw, cellw int, useTabs bool)](#Writer.writePadding)
+    * [type cell struct](#cell)
     * [type osError struct](#osError)
 
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [package]
+```
+
+### <a id="AlignRight" href="#AlignRight">const AlignRight</a>
+
+```
+searchKey: tabwriter.AlignRight
+tags: [constant number]
+```
+
+```Go
+const AlignRight
+```
+
+Formatting can be controlled with these flags. 
+
+Force right-alignment of cell content. Default is left-alignment. 
+
+### <a id="Debug" href="#Debug">const Debug</a>
+
+```
+searchKey: tabwriter.Debug
+tags: [constant number]
+```
+
+```Go
+const Debug
+```
+
+Formatting can be controlled with these flags. 
+
+Print a vertical bar ('|') between columns (after formatting). Discarded columns appear as zero-width columns ("||"). 
+
+### <a id="DiscardEmptyColumns" href="#DiscardEmptyColumns">const DiscardEmptyColumns</a>
+
+```
+searchKey: tabwriter.DiscardEmptyColumns
+tags: [constant number]
+```
+
+```Go
+const DiscardEmptyColumns
+```
+
+Formatting can be controlled with these flags. 
+
+Handle empty columns as if they were not present in the input in the first place. 
+
+### <a id="Escape" href="#Escape">const Escape</a>
+
+```
+searchKey: tabwriter.Escape
+tags: [constant number]
+```
+
+```Go
+const Escape = '\xff'
+```
+
+To escape a text segment, bracket it with Escape characters. For instance, the tab in this string "Ignore this tab: \xff\t\xff" does not terminate a cell and constitutes a single character of width one for formatting purposes. 
+
+The value 0xff was chosen because it cannot appear in a valid UTF-8 sequence. 
+
 ### <a id="FilterHTML" href="#FilterHTML">const FilterHTML</a>
 
 ```
 searchKey: tabwriter.FilterHTML
+tags: [constant number]
 ```
 
 ```Go
@@ -67,6 +132,7 @@ Ignore html tags and treat entities (starting with '&' and ending in ';') as sin
 
 ```
 searchKey: tabwriter.StripEscape
+tags: [constant number]
 ```
 
 ```Go
@@ -77,38 +143,11 @@ Formatting can be controlled with these flags.
 
 Strip Escape characters bracketing escaped text segments instead of passing them through unchanged with the text. 
 
-### <a id="AlignRight" href="#AlignRight">const AlignRight</a>
-
-```
-searchKey: tabwriter.AlignRight
-```
-
-```Go
-const AlignRight
-```
-
-Formatting can be controlled with these flags. 
-
-Force right-alignment of cell content. Default is left-alignment. 
-
-### <a id="DiscardEmptyColumns" href="#DiscardEmptyColumns">const DiscardEmptyColumns</a>
-
-```
-searchKey: tabwriter.DiscardEmptyColumns
-```
-
-```Go
-const DiscardEmptyColumns
-```
-
-Formatting can be controlled with these flags. 
-
-Handle empty columns as if they were not present in the input in the first place. 
-
 ### <a id="TabIndent" href="#TabIndent">const TabIndent</a>
 
 ```
 searchKey: tabwriter.TabIndent
+tags: [constant number]
 ```
 
 ```Go
@@ -119,41 +158,28 @@ Formatting can be controlled with these flags.
 
 Always use tabs for indentation columns (i.e., padding of leading empty cells on the left) independent of padchar. 
 
-### <a id="Debug" href="#Debug">const Debug</a>
-
-```
-searchKey: tabwriter.Debug
-```
-
-```Go
-const Debug
-```
-
-Formatting can be controlled with these flags. 
-
-Print a vertical bar ('|') between columns (after formatting). Discarded columns appear as zero-width columns ("||"). 
-
-### <a id="Escape" href="#Escape">const Escape</a>
-
-```
-searchKey: tabwriter.Escape
-```
-
-```Go
-const Escape = '\xff'
-```
-
-To escape a text segment, bracket it with Escape characters. For instance, the tab in this string "Ignore this tab: \xff\t\xff" does not terminate a cell and constitutes a single character of width one for formatting purposes. 
-
-The value 0xff was chosen because it cannot appear in a valid UTF-8 sequence. 
-
 ## <a id="var" href="#var">Variables</a>
+
+```
+tags: [package]
+```
+
+### <a id="hbar" href="#hbar">var hbar</a>
+
+```
+searchKey: tabwriter.hbar
+tags: [variable array number private]
+```
+
+```Go
+var hbar = []byte("---\n")
+```
 
 ### <a id="newline" href="#newline">var newline</a>
 
 ```
 searchKey: tabwriter.newline
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -164,7 +190,7 @@ var newline = []byte{'\n'}
 
 ```
 searchKey: tabwriter.tabs
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
@@ -175,47 +201,24 @@ var tabs = []byte("\t\t\t\t\t\t\t\t")
 
 ```
 searchKey: tabwriter.vbar
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
 var vbar = []byte{'|'}
 ```
 
-### <a id="hbar" href="#hbar">var hbar</a>
-
-```
-searchKey: tabwriter.hbar
-tags: [private]
-```
-
-```Go
-var hbar = []byte("---\n")
-```
-
 ## <a id="type" href="#type">Types</a>
 
-### <a id="cell" href="#cell">type cell struct</a>
-
 ```
-searchKey: tabwriter.cell
-tags: [private]
+tags: [package]
 ```
-
-```Go
-type cell struct {
-	size  int  // cell size in bytes
-	width int  // cell width in runes
-	htab  bool // true if the cell is terminated by an htab ('\t')
-}
-```
-
-A cell represents a segment of text terminated by tabs or line breaks. The text itself is stored in a separate buffer; cell only describes the segment's size in bytes, its width in runes, and whether it's an htab ('\t') terminated cell. 
 
 ### <a id="Writer" href="#Writer">type Writer struct</a>
 
 ```
 searchKey: tabwriter.Writer
+tags: [struct]
 ```
 
 ```Go
@@ -269,6 +272,7 @@ The Writer must buffer input internally, because proper spacing of one line may 
 
 ```
 searchKey: tabwriter.NewWriter
+tags: [method]
 ```
 
 ```Go
@@ -277,36 +281,24 @@ func NewWriter(output io.Writer, minwidth, tabwidth, padding int, padchar byte, 
 
 NewWriter allocates and initializes a new tabwriter.Writer. The parameters are the same as for the Init function. 
 
-#### <a id="Writer.addLine" href="#Writer.addLine">func (b *Writer) addLine(flushed bool)</a>
+#### <a id="Writer.Flush" href="#Writer.Flush">func (b *Writer) Flush() error</a>
 
 ```
-searchKey: tabwriter.Writer.addLine
-tags: [private]
-```
-
-```Go
-func (b *Writer) addLine(flushed bool)
-```
-
-addLine adds a new line. flushed is a hint indicating whether the underlying writer was just flushed. If so, the previous line is not likely to be a good indicator of the new line's cells. 
-
-#### <a id="Writer.reset" href="#Writer.reset">func (b *Writer) reset()</a>
-
-```
-searchKey: tabwriter.Writer.reset
-tags: [private]
+searchKey: tabwriter.Writer.Flush
+tags: [function]
 ```
 
 ```Go
-func (b *Writer) reset()
+func (b *Writer) Flush() error
 ```
 
-Reset the current state. 
+Flush should be called after the last call to Write to ensure that any data buffered in the Writer is written to output. Any incomplete escape sequence at the end is considered complete for formatting purposes. 
 
 #### <a id="Writer.Init" href="#Writer.Init">func (b *Writer) Init(output io.Writer, minwidth, tabwidth, padding int, padchar byte, flags uint) *Writer</a>
 
 ```
 searchKey: tabwriter.Writer.Init
+tags: [method]
 ```
 
 ```Go
@@ -328,81 +320,37 @@ padchar		ASCII char used for padding
 flags		formatting control
 
 ```
-#### <a id="Writer.dump" href="#Writer.dump">func (b *Writer) dump()</a>
+#### <a id="Writer.Write" href="#Writer.Write">func (b *Writer) Write(buf []byte) (n int, err error)</a>
 
 ```
-searchKey: tabwriter.Writer.dump
-tags: [private]
-```
-
-```Go
-func (b *Writer) dump()
-```
-
-debugging support (keep code around) 
-
-#### <a id="Writer.write0" href="#Writer.write0">func (b *Writer) write0(buf []byte)</a>
-
-```
-searchKey: tabwriter.Writer.write0
-tags: [private]
+searchKey: tabwriter.Writer.Write
+tags: [method]
 ```
 
 ```Go
-func (b *Writer) write0(buf []byte)
+func (b *Writer) Write(buf []byte) (n int, err error)
 ```
 
-#### <a id="Writer.writeN" href="#Writer.writeN">func (b *Writer) writeN(src []byte, n int)</a>
+Write writes buf to the writer b. The only errors returned are ones encountered while writing to the underlying output stream. 
+
+#### <a id="Writer.addLine" href="#Writer.addLine">func (b *Writer) addLine(flushed bool)</a>
 
 ```
-searchKey: tabwriter.Writer.writeN
-tags: [private]
-```
-
-```Go
-func (b *Writer) writeN(src []byte, n int)
-```
-
-#### <a id="Writer.writePadding" href="#Writer.writePadding">func (b *Writer) writePadding(textw, cellw int, useTabs bool)</a>
-
-```
-searchKey: tabwriter.Writer.writePadding
-tags: [private]
+searchKey: tabwriter.Writer.addLine
+tags: [method private]
 ```
 
 ```Go
-func (b *Writer) writePadding(textw, cellw int, useTabs bool)
+func (b *Writer) addLine(flushed bool)
 ```
 
-#### <a id="Writer.writeLines" href="#Writer.writeLines">func (b *Writer) writeLines(pos0 int, line0, line1 int) (pos int)</a>
-
-```
-searchKey: tabwriter.Writer.writeLines
-tags: [private]
-```
-
-```Go
-func (b *Writer) writeLines(pos0 int, line0, line1 int) (pos int)
-```
-
-#### <a id="Writer.format" href="#Writer.format">func (b *Writer) format(pos0 int, line0, line1 int) (pos int)</a>
-
-```
-searchKey: tabwriter.Writer.format
-tags: [private]
-```
-
-```Go
-func (b *Writer) format(pos0 int, line0, line1 int) (pos int)
-```
-
-Format the text between line0 and line1 (excluding line1); pos is the buffer position corresponding to the beginning of line0. Returns the buffer position corresponding to the beginning of line1 and an error, if any. 
+addLine adds a new line. flushed is a hint indicating whether the underlying writer was just flushed. If so, the previous line is not likely to be a good indicator of the new line's cells. 
 
 #### <a id="Writer.append" href="#Writer.append">func (b *Writer) append(text []byte)</a>
 
 ```
 searchKey: tabwriter.Writer.append
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -411,37 +359,24 @@ func (b *Writer) append(text []byte)
 
 Append text to current cell. 
 
-#### <a id="Writer.updateWidth" href="#Writer.updateWidth">func (b *Writer) updateWidth()</a>
+#### <a id="Writer.dump" href="#Writer.dump">func (b *Writer) dump()</a>
 
 ```
-searchKey: tabwriter.Writer.updateWidth
-tags: [private]
-```
-
-```Go
-func (b *Writer) updateWidth()
-```
-
-Update the cell width. 
-
-#### <a id="Writer.startEscape" href="#Writer.startEscape">func (b *Writer) startEscape(ch byte)</a>
-
-```
-searchKey: tabwriter.Writer.startEscape
-tags: [private]
+searchKey: tabwriter.Writer.dump
+tags: [function private]
 ```
 
 ```Go
-func (b *Writer) startEscape(ch byte)
+func (b *Writer) dump()
 ```
 
-Start escaped mode. 
+debugging support (keep code around) 
 
 #### <a id="Writer.endEscape" href="#Writer.endEscape">func (b *Writer) endEscape()</a>
 
 ```
 searchKey: tabwriter.Writer.endEscape
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -450,47 +385,11 @@ func (b *Writer) endEscape()
 
 Terminate escaped mode. If the escaped text was an HTML tag, its width is assumed to be zero for formatting purposes; if it was an HTML entity, its width is assumed to be one. In all other cases, the width is the unicode width of the text. 
 
-#### <a id="Writer.terminateCell" href="#Writer.terminateCell">func (b *Writer) terminateCell(htab bool) int</a>
-
-```
-searchKey: tabwriter.Writer.terminateCell
-tags: [private]
-```
-
-```Go
-func (b *Writer) terminateCell(htab bool) int
-```
-
-Terminate the current cell by adding it to the list of cells of the current line. Returns the number of cells in that line. 
-
-#### <a id="Writer.handlePanic" href="#Writer.handlePanic">func (b *Writer) handlePanic(err *error, op string)</a>
-
-```
-searchKey: tabwriter.Writer.handlePanic
-tags: [private]
-```
-
-```Go
-func (b *Writer) handlePanic(err *error, op string)
-```
-
-#### <a id="Writer.Flush" href="#Writer.Flush">func (b *Writer) Flush() error</a>
-
-```
-searchKey: tabwriter.Writer.Flush
-```
-
-```Go
-func (b *Writer) Flush() error
-```
-
-Flush should be called after the last call to Write to ensure that any data buffered in the Writer is written to output. Any incomplete escape sequence at the end is considered complete for formatting purposes. 
-
 #### <a id="Writer.flush" href="#Writer.flush">func (b *Writer) flush() (err error)</a>
 
 ```
 searchKey: tabwriter.Writer.flush
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -503,7 +402,7 @@ flush is the internal version of Flush, with a named return value which we don't
 
 ```
 searchKey: tabwriter.Writer.flushNoDefers
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -512,23 +411,148 @@ func (b *Writer) flushNoDefers()
 
 flushNoDefers is like flush, but without a deferred handlePanic call. This can be called from other methods which already have their own deferred handlePanic calls, such as Write, and avoid the extra defer work. 
 
-#### <a id="Writer.Write" href="#Writer.Write">func (b *Writer) Write(buf []byte) (n int, err error)</a>
+#### <a id="Writer.format" href="#Writer.format">func (b *Writer) format(pos0 int, line0, line1 int) (pos int)</a>
 
 ```
-searchKey: tabwriter.Writer.Write
+searchKey: tabwriter.Writer.format
+tags: [method private]
 ```
 
 ```Go
-func (b *Writer) Write(buf []byte) (n int, err error)
+func (b *Writer) format(pos0 int, line0, line1 int) (pos int)
 ```
 
-Write writes buf to the writer b. The only errors returned are ones encountered while writing to the underlying output stream. 
+Format the text between line0 and line1 (excluding line1); pos is the buffer position corresponding to the beginning of line0. Returns the buffer position corresponding to the beginning of line1 and an error, if any. 
+
+#### <a id="Writer.handlePanic" href="#Writer.handlePanic">func (b *Writer) handlePanic(err *error, op string)</a>
+
+```
+searchKey: tabwriter.Writer.handlePanic
+tags: [method private]
+```
+
+```Go
+func (b *Writer) handlePanic(err *error, op string)
+```
+
+#### <a id="Writer.reset" href="#Writer.reset">func (b *Writer) reset()</a>
+
+```
+searchKey: tabwriter.Writer.reset
+tags: [function private]
+```
+
+```Go
+func (b *Writer) reset()
+```
+
+Reset the current state. 
+
+#### <a id="Writer.startEscape" href="#Writer.startEscape">func (b *Writer) startEscape(ch byte)</a>
+
+```
+searchKey: tabwriter.Writer.startEscape
+tags: [method private]
+```
+
+```Go
+func (b *Writer) startEscape(ch byte)
+```
+
+Start escaped mode. 
+
+#### <a id="Writer.terminateCell" href="#Writer.terminateCell">func (b *Writer) terminateCell(htab bool) int</a>
+
+```
+searchKey: tabwriter.Writer.terminateCell
+tags: [method private]
+```
+
+```Go
+func (b *Writer) terminateCell(htab bool) int
+```
+
+Terminate the current cell by adding it to the list of cells of the current line. Returns the number of cells in that line. 
+
+#### <a id="Writer.updateWidth" href="#Writer.updateWidth">func (b *Writer) updateWidth()</a>
+
+```
+searchKey: tabwriter.Writer.updateWidth
+tags: [function private]
+```
+
+```Go
+func (b *Writer) updateWidth()
+```
+
+Update the cell width. 
+
+#### <a id="Writer.write0" href="#Writer.write0">func (b *Writer) write0(buf []byte)</a>
+
+```
+searchKey: tabwriter.Writer.write0
+tags: [method private]
+```
+
+```Go
+func (b *Writer) write0(buf []byte)
+```
+
+#### <a id="Writer.writeLines" href="#Writer.writeLines">func (b *Writer) writeLines(pos0 int, line0, line1 int) (pos int)</a>
+
+```
+searchKey: tabwriter.Writer.writeLines
+tags: [method private]
+```
+
+```Go
+func (b *Writer) writeLines(pos0 int, line0, line1 int) (pos int)
+```
+
+#### <a id="Writer.writeN" href="#Writer.writeN">func (b *Writer) writeN(src []byte, n int)</a>
+
+```
+searchKey: tabwriter.Writer.writeN
+tags: [method private]
+```
+
+```Go
+func (b *Writer) writeN(src []byte, n int)
+```
+
+#### <a id="Writer.writePadding" href="#Writer.writePadding">func (b *Writer) writePadding(textw, cellw int, useTabs bool)</a>
+
+```
+searchKey: tabwriter.Writer.writePadding
+tags: [method private]
+```
+
+```Go
+func (b *Writer) writePadding(textw, cellw int, useTabs bool)
+```
+
+### <a id="cell" href="#cell">type cell struct</a>
+
+```
+searchKey: tabwriter.cell
+tags: [struct private]
+```
+
+```Go
+type cell struct {
+	size  int  // cell size in bytes
+	width int  // cell width in runes
+	htab  bool // true if the cell is terminated by an htab ('\t')
+}
+```
+
+A cell represents a segment of text terminated by tabs or line breaks. The text itself is stored in a separate buffer; cell only describes the segment's size in bytes, its width in runes, and whether it's an htab ('\t') terminated cell. 
 
 ### <a id="osError" href="#osError">type osError struct</a>
 
 ```
 searchKey: tabwriter.osError
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/pubsub",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,32 +41,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/pubsub#PubSubProjectID",
-              "documentation": {
-                "identifier": "PubSubProjectID",
-                "newPage": false,
-                "searchKey": "pubsub.PubSubProjectID",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var PubSubProjectID"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar PubSubProjectID = ...\n```\n\nPubSubProjectID is used to create a new pubsub client. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/pubsub#PubSubCredentialsFile",
               "documentation": {
                 "identifier": "PubSubCredentialsFile",
                 "newPage": false,
                 "searchKey": "pubsub.PubSubCredentialsFile",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -79,12 +64,37 @@
           },
           {
             "node": {
+              "pathID": "/internal/pubsub#PubSubProjectID",
+              "documentation": {
+                "identifier": "PubSubProjectID",
+                "newPage": false,
+                "searchKey": "pubsub.PubSubProjectID",
+                "tags": [
+                  "variable",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var PubSubProjectID"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar PubSubProjectID = ...\n```\n\nPubSubProjectID is used to create a new pubsub client. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/pubsub#client",
               "documentation": {
                 "identifier": "client",
                 "newPage": false,
                 "searchKey": "pubsub.client",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -110,6 +120,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -129,7 +140,9 @@
                 "identifier": "Enabled",
                 "newPage": false,
                 "searchKey": "pubsub.Enabled",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -144,12 +157,35 @@
           },
           {
             "node": {
+              "pathID": "/internal/pubsub#Publish",
+              "documentation": {
+                "identifier": "Publish",
+                "newPage": false,
+                "searchKey": "pubsub.Publish",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Publish(topic string, msg string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Publish(topic string, msg string) error\n```\n\nPublish publishes msg to the topic asynchronously. Messages are batched and sent according to the topic's PublishSettings. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/pubsub#init.publish.go",
               "documentation": {
                 "identifier": "init.publish.go",
                 "newPage": false,
                 "searchKey": "pubsub.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -160,26 +196,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/pubsub#Publish",
-              "documentation": {
-                "identifier": "Publish",
-                "newPage": false,
-                "searchKey": "pubsub.Publish",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Publish(topic string, msg string) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Publish(topic string, msg string) error\n```\n\nPublish publishes msg to the topic asynchronously. Messages are batched and sent according to the topic's PublishSettings. \n\n"
               },
               "children": null
             }

@@ -5,38 +5,55 @@ Package pathmatch provides helpers for matching paths against globs and regular 
 ## Index
 
 * [Types](#type)
+    * [type CompileOptions struct](#CompileOptions)
     * [type PathMatcher interface](#PathMatcher)
+        * [func CompilePathPatterns(includePatterns []string, excludePattern string, options CompileOptions) (PathMatcher, error)](#CompilePathPatterns)
         * [func CompilePattern(pattern string, options CompileOptions) (PathMatcher, error)](#CompilePattern)
         * [func CompilePatterns(patterns []string, options CompileOptions) (PathMatcher, error)](#CompilePatterns)
-        * [func CompilePathPatterns(includePatterns []string, excludePattern string, options CompileOptions) (PathMatcher, error)](#CompilePathPatterns)
-    * [type pathMatcherFunc struct](#pathMatcherFunc)
-        * [func (f *pathMatcherFunc) MatchPath(path string) bool](#pathMatcherFunc.MatchPath)
-        * [func (f *pathMatcherFunc) String() string](#pathMatcherFunc.String)
-    * [type regexpMatcher regexp.Regexp](#regexpMatcher)
-        * [func (m *regexpMatcher) MatchPath(path string) bool](#regexpMatcher.MatchPath)
-        * [func (m *regexpMatcher) String() string](#regexpMatcher.String)
-    * [type CompileOptions struct](#CompileOptions)
     * [type pathMatcherAnd []pathmatch.PathMatcher](#pathMatcherAnd)
         * [func (pm pathMatcherAnd) MatchPath(path string) bool](#pathMatcherAnd.MatchPath)
         * [func (pm pathMatcherAnd) String() string](#pathMatcherAnd.String)
+    * [type pathMatcherFunc struct](#pathMatcherFunc)
+        * [func (f *pathMatcherFunc) MatchPath(path string) bool](#pathMatcherFunc.MatchPath)
+        * [func (f *pathMatcherFunc) String() string](#pathMatcherFunc.String)
     * [type pathMatcherIncludeExclude struct](#pathMatcherIncludeExclude)
         * [func (pm pathMatcherIncludeExclude) MatchPath(path string) bool](#pathMatcherIncludeExclude.MatchPath)
         * [func (pm pathMatcherIncludeExclude) String() string](#pathMatcherIncludeExclude.String)
+    * [type regexpMatcher regexp.Regexp](#regexpMatcher)
+        * [func (m *regexpMatcher) MatchPath(path string) bool](#regexpMatcher.MatchPath)
+        * [func (m *regexpMatcher) String() string](#regexpMatcher.String)
 * [Functions](#func)
-    * [func TestCompilePattern(t *testing.T)](#TestCompilePattern)
     * [func TestCompilePathPatterns(t *testing.T)](#TestCompilePathPatterns)
+    * [func TestCompilePattern(t *testing.T)](#TestCompilePattern)
 
 
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
+
+### <a id="CompileOptions" href="#CompileOptions">type CompileOptions struct</a>
+
+```
+searchKey: pathmatch.CompileOptions
+tags: [struct]
+```
+
+```Go
+type CompileOptions struct {
+	RegExp        bool // whether the patterns are regular expressions (false means globs)
+	CaseSensitive bool // whether the patterns are case sensitive
+}
+```
+
+CompileOptions specifies options about the patterns to compile. 
 
 ### <a id="PathMatcher" href="#PathMatcher">type PathMatcher interface</a>
 
 ```
 searchKey: pathmatch.PathMatcher
+tags: [interface]
 ```
 
 ```Go
@@ -50,34 +67,11 @@ type PathMatcher interface {
 
 PathMatcher reports whether the path was matched. 
 
-#### <a id="CompilePattern" href="#CompilePattern">func CompilePattern(pattern string, options CompileOptions) (PathMatcher, error)</a>
-
-```
-searchKey: pathmatch.CompilePattern
-```
-
-```Go
-func CompilePattern(pattern string, options CompileOptions) (PathMatcher, error)
-```
-
-CompilePattern compiles pattern into a PathMatcher func. 
-
-#### <a id="CompilePatterns" href="#CompilePatterns">func CompilePatterns(patterns []string, options CompileOptions) (PathMatcher, error)</a>
-
-```
-searchKey: pathmatch.CompilePatterns
-```
-
-```Go
-func CompilePatterns(patterns []string, options CompileOptions) (PathMatcher, error)
-```
-
-CompilePatterns compiles the patterns into a PathMatcher func that matches a path iff all patterns match the path. 
-
 #### <a id="CompilePathPatterns" href="#CompilePathPatterns">func CompilePathPatterns(includePatterns []string, excludePattern string, options CompileOptions) (PathMatcher, error)</a>
 
 ```
 searchKey: pathmatch.CompilePathPatterns
+tags: [method]
 ```
 
 ```Go
@@ -90,11 +84,72 @@ CompilePathPatterns returns a PathMatcher func that matches a path iff:
 
 This is the most common behavior for include/exclude paths in a search interface. 
 
+#### <a id="CompilePattern" href="#CompilePattern">func CompilePattern(pattern string, options CompileOptions) (PathMatcher, error)</a>
+
+```
+searchKey: pathmatch.CompilePattern
+tags: [method]
+```
+
+```Go
+func CompilePattern(pattern string, options CompileOptions) (PathMatcher, error)
+```
+
+CompilePattern compiles pattern into a PathMatcher func. 
+
+#### <a id="CompilePatterns" href="#CompilePatterns">func CompilePatterns(patterns []string, options CompileOptions) (PathMatcher, error)</a>
+
+```
+searchKey: pathmatch.CompilePatterns
+tags: [method]
+```
+
+```Go
+func CompilePatterns(patterns []string, options CompileOptions) (PathMatcher, error)
+```
+
+CompilePatterns compiles the patterns into a PathMatcher func that matches a path iff all patterns match the path. 
+
+### <a id="pathMatcherAnd" href="#pathMatcherAnd">type pathMatcherAnd []pathmatch.PathMatcher</a>
+
+```
+searchKey: pathmatch.pathMatcherAnd
+tags: [array interface private]
+```
+
+```Go
+type pathMatcherAnd []PathMatcher
+```
+
+pathMatcherAnd is a PathMatcher that matches a path iff all of the underlying matchers match the path. 
+
+#### <a id="pathMatcherAnd.MatchPath" href="#pathMatcherAnd.MatchPath">func (pm pathMatcherAnd) MatchPath(path string) bool</a>
+
+```
+searchKey: pathmatch.pathMatcherAnd.MatchPath
+tags: [method private]
+```
+
+```Go
+func (pm pathMatcherAnd) MatchPath(path string) bool
+```
+
+#### <a id="pathMatcherAnd.String" href="#pathMatcherAnd.String">func (pm pathMatcherAnd) String() string</a>
+
+```
+searchKey: pathmatch.pathMatcherAnd.String
+tags: [function private]
+```
+
+```Go
+func (pm pathMatcherAnd) String() string
+```
+
 ### <a id="pathMatcherFunc" href="#pathMatcherFunc">type pathMatcherFunc struct</a>
 
 ```
 searchKey: pathmatch.pathMatcherFunc
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -108,7 +163,7 @@ type pathMatcherFunc struct {
 
 ```
 searchKey: pathmatch.pathMatcherFunc.MatchPath
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -119,103 +174,18 @@ func (f *pathMatcherFunc) MatchPath(path string) bool
 
 ```
 searchKey: pathmatch.pathMatcherFunc.String
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (f *pathMatcherFunc) String() string
 ```
 
-### <a id="regexpMatcher" href="#regexpMatcher">type regexpMatcher regexp.Regexp</a>
-
-```
-searchKey: pathmatch.regexpMatcher
-tags: [private]
-```
-
-```Go
-type regexpMatcher regexp.Regexp
-```
-
-regexpMatcher is a PathMatcher backed by a regexp. 
-
-#### <a id="regexpMatcher.MatchPath" href="#regexpMatcher.MatchPath">func (m *regexpMatcher) MatchPath(path string) bool</a>
-
-```
-searchKey: pathmatch.regexpMatcher.MatchPath
-tags: [private]
-```
-
-```Go
-func (m *regexpMatcher) MatchPath(path string) bool
-```
-
-#### <a id="regexpMatcher.String" href="#regexpMatcher.String">func (m *regexpMatcher) String() string</a>
-
-```
-searchKey: pathmatch.regexpMatcher.String
-tags: [private]
-```
-
-```Go
-func (m *regexpMatcher) String() string
-```
-
-### <a id="CompileOptions" href="#CompileOptions">type CompileOptions struct</a>
-
-```
-searchKey: pathmatch.CompileOptions
-```
-
-```Go
-type CompileOptions struct {
-	RegExp        bool // whether the patterns are regular expressions (false means globs)
-	CaseSensitive bool // whether the patterns are case sensitive
-}
-```
-
-CompileOptions specifies options about the patterns to compile. 
-
-### <a id="pathMatcherAnd" href="#pathMatcherAnd">type pathMatcherAnd []pathmatch.PathMatcher</a>
-
-```
-searchKey: pathmatch.pathMatcherAnd
-tags: [private]
-```
-
-```Go
-type pathMatcherAnd []PathMatcher
-```
-
-pathMatcherAnd is a PathMatcher that matches a path iff all of the underlying matchers match the path. 
-
-#### <a id="pathMatcherAnd.MatchPath" href="#pathMatcherAnd.MatchPath">func (pm pathMatcherAnd) MatchPath(path string) bool</a>
-
-```
-searchKey: pathmatch.pathMatcherAnd.MatchPath
-tags: [private]
-```
-
-```Go
-func (pm pathMatcherAnd) MatchPath(path string) bool
-```
-
-#### <a id="pathMatcherAnd.String" href="#pathMatcherAnd.String">func (pm pathMatcherAnd) String() string</a>
-
-```
-searchKey: pathmatch.pathMatcherAnd.String
-tags: [private]
-```
-
-```Go
-func (pm pathMatcherAnd) String() string
-```
-
 ### <a id="pathMatcherIncludeExclude" href="#pathMatcherIncludeExclude">type pathMatcherIncludeExclude struct</a>
 
 ```
 searchKey: pathmatch.pathMatcherIncludeExclude
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -231,7 +201,7 @@ pathMatcherIncludeExclude is a PathMatcher that matches a path iff it matches th
 
 ```
 searchKey: pathmatch.pathMatcherIncludeExclude.MatchPath
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -242,38 +212,73 @@ func (pm pathMatcherIncludeExclude) MatchPath(path string) bool
 
 ```
 searchKey: pathmatch.pathMatcherIncludeExclude.String
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (pm pathMatcherIncludeExclude) String() string
 ```
 
-## <a id="func" href="#func">Functions</a>
+### <a id="regexpMatcher" href="#regexpMatcher">type regexpMatcher regexp.Regexp</a>
 
 ```
-tags: [private]
-```
-
-### <a id="TestCompilePattern" href="#TestCompilePattern">func TestCompilePattern(t *testing.T)</a>
-
-```
-searchKey: pathmatch.TestCompilePattern
-tags: [private]
+searchKey: pathmatch.regexpMatcher
+tags: [struct private]
 ```
 
 ```Go
-func TestCompilePattern(t *testing.T)
+type regexpMatcher regexp.Regexp
+```
+
+regexpMatcher is a PathMatcher backed by a regexp. 
+
+#### <a id="regexpMatcher.MatchPath" href="#regexpMatcher.MatchPath">func (m *regexpMatcher) MatchPath(path string) bool</a>
+
+```
+searchKey: pathmatch.regexpMatcher.MatchPath
+tags: [method private]
+```
+
+```Go
+func (m *regexpMatcher) MatchPath(path string) bool
+```
+
+#### <a id="regexpMatcher.String" href="#regexpMatcher.String">func (m *regexpMatcher) String() string</a>
+
+```
+searchKey: pathmatch.regexpMatcher.String
+tags: [function private]
+```
+
+```Go
+func (m *regexpMatcher) String() string
+```
+
+## <a id="func" href="#func">Functions</a>
+
+```
+tags: [package private]
 ```
 
 ### <a id="TestCompilePathPatterns" href="#TestCompilePathPatterns">func TestCompilePathPatterns(t *testing.T)</a>
 
 ```
 searchKey: pathmatch.TestCompilePathPatterns
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestCompilePathPatterns(t *testing.T)
+```
+
+### <a id="TestCompilePattern" href="#TestCompilePattern">func TestCompilePattern(t *testing.T)</a>
+
+```
+searchKey: pathmatch.TestCompilePattern
+tags: [method private test]
+```
+
+```Go
+func TestCompilePattern(t *testing.T)
 ```
 

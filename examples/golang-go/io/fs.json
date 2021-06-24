@@ -4,7 +4,9 @@
     "identifier": "fs",
     "newPage": true,
     "searchKey": "io/fs",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,32 +39,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/io/fs#ModeDir",
-              "documentation": {
-                "identifier": "ModeDir",
-                "newPage": false,
-                "searchKey": "fs.ModeDir",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const ModeDir"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst ModeDir FileMode = 1 << (32 - 1 - iota) // d: is a directory\n\n```\n\nThe defined file mode bits are the most significant bits of the FileMode. The nine least-significant bits are the standard Unix rwxrwxrwx permissions. The values of these bits should be considered part of the public API and may be used in wire protocols or disk representations: they must not be changed, although new bits might be added. \n\nThe single letters are the abbreviations used by the String method's formatting. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/io/fs#ModeAppend",
               "documentation": {
                 "identifier": "ModeAppend",
                 "newPage": false,
                 "searchKey": "fs.ModeAppend",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -75,172 +62,15 @@
           },
           {
             "node": {
-              "pathID": "/io/fs#ModeExclusive",
-              "documentation": {
-                "identifier": "ModeExclusive",
-                "newPage": false,
-                "searchKey": "fs.ModeExclusive",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const ModeExclusive"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst ModeExclusive // l: exclusive use\n\n```\n\nThe defined file mode bits are the most significant bits of the FileMode. The nine least-significant bits are the standard Unix rwxrwxrwx permissions. The values of these bits should be considered part of the public API and may be used in wire protocols or disk representations: they must not be changed, although new bits might be added. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/fs#ModeTemporary",
-              "documentation": {
-                "identifier": "ModeTemporary",
-                "newPage": false,
-                "searchKey": "fs.ModeTemporary",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const ModeTemporary"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst ModeTemporary // T: temporary file; Plan 9 only\n\n```\n\nThe defined file mode bits are the most significant bits of the FileMode. The nine least-significant bits are the standard Unix rwxrwxrwx permissions. The values of these bits should be considered part of the public API and may be used in wire protocols or disk representations: they must not be changed, although new bits might be added. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/fs#ModeSymlink",
-              "documentation": {
-                "identifier": "ModeSymlink",
-                "newPage": false,
-                "searchKey": "fs.ModeSymlink",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const ModeSymlink"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst ModeSymlink // L: symbolic link\n\n```\n\nThe defined file mode bits are the most significant bits of the FileMode. The nine least-significant bits are the standard Unix rwxrwxrwx permissions. The values of these bits should be considered part of the public API and may be used in wire protocols or disk representations: they must not be changed, although new bits might be added. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/fs#ModeDevice",
-              "documentation": {
-                "identifier": "ModeDevice",
-                "newPage": false,
-                "searchKey": "fs.ModeDevice",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const ModeDevice"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst ModeDevice // D: device file\n\n```\n\nThe defined file mode bits are the most significant bits of the FileMode. The nine least-significant bits are the standard Unix rwxrwxrwx permissions. The values of these bits should be considered part of the public API and may be used in wire protocols or disk representations: they must not be changed, although new bits might be added. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/fs#ModeNamedPipe",
-              "documentation": {
-                "identifier": "ModeNamedPipe",
-                "newPage": false,
-                "searchKey": "fs.ModeNamedPipe",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const ModeNamedPipe"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst ModeNamedPipe // p: named pipe (FIFO)\n\n```\n\nThe defined file mode bits are the most significant bits of the FileMode. The nine least-significant bits are the standard Unix rwxrwxrwx permissions. The values of these bits should be considered part of the public API and may be used in wire protocols or disk representations: they must not be changed, although new bits might be added. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/fs#ModeSocket",
-              "documentation": {
-                "identifier": "ModeSocket",
-                "newPage": false,
-                "searchKey": "fs.ModeSocket",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const ModeSocket"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst ModeSocket // S: Unix domain socket\n\n```\n\nThe defined file mode bits are the most significant bits of the FileMode. The nine least-significant bits are the standard Unix rwxrwxrwx permissions. The values of these bits should be considered part of the public API and may be used in wire protocols or disk representations: they must not be changed, although new bits might be added. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/fs#ModeSetuid",
-              "documentation": {
-                "identifier": "ModeSetuid",
-                "newPage": false,
-                "searchKey": "fs.ModeSetuid",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const ModeSetuid"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst ModeSetuid // u: setuid\n\n```\n\nThe defined file mode bits are the most significant bits of the FileMode. The nine least-significant bits are the standard Unix rwxrwxrwx permissions. The values of these bits should be considered part of the public API and may be used in wire protocols or disk representations: they must not be changed, although new bits might be added. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/fs#ModeSetgid",
-              "documentation": {
-                "identifier": "ModeSetgid",
-                "newPage": false,
-                "searchKey": "fs.ModeSetgid",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const ModeSetgid"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst ModeSetgid // g: setgid\n\n```\n\nThe defined file mode bits are the most significant bits of the FileMode. The nine least-significant bits are the standard Unix rwxrwxrwx permissions. The values of these bits should be considered part of the public API and may be used in wire protocols or disk representations: they must not be changed, although new bits might be added. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/io/fs#ModeCharDevice",
               "documentation": {
                 "identifier": "ModeCharDevice",
                 "newPage": false,
                 "searchKey": "fs.ModeCharDevice",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -255,20 +85,69 @@
           },
           {
             "node": {
-              "pathID": "/io/fs#ModeSticky",
+              "pathID": "/io/fs#ModeDevice",
               "documentation": {
-                "identifier": "ModeSticky",
+                "identifier": "ModeDevice",
                 "newPage": false,
-                "searchKey": "fs.ModeSticky",
-                "tags": null
+                "searchKey": "fs.ModeDevice",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const ModeSticky"
+                "value": "const ModeDevice"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst ModeSticky // t: sticky\n\n```\n\nThe defined file mode bits are the most significant bits of the FileMode. The nine least-significant bits are the standard Unix rwxrwxrwx permissions. The values of these bits should be considered part of the public API and may be used in wire protocols or disk representations: they must not be changed, although new bits might be added. \n\n"
+                "value": "```Go\nconst ModeDevice // D: device file\n\n```\n\nThe defined file mode bits are the most significant bits of the FileMode. The nine least-significant bits are the standard Unix rwxrwxrwx permissions. The values of these bits should be considered part of the public API and may be used in wire protocols or disk representations: they must not be changed, although new bits might be added. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/fs#ModeDir",
+              "documentation": {
+                "identifier": "ModeDir",
+                "newPage": false,
+                "searchKey": "fs.ModeDir",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ModeDir"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ModeDir FileMode = 1 << (32 - 1 - iota) // d: is a directory\n\n```\n\nThe defined file mode bits are the most significant bits of the FileMode. The nine least-significant bits are the standard Unix rwxrwxrwx permissions. The values of these bits should be considered part of the public API and may be used in wire protocols or disk representations: they must not be changed, although new bits might be added. \n\nThe single letters are the abbreviations used by the String method's formatting. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/fs#ModeExclusive",
+              "documentation": {
+                "identifier": "ModeExclusive",
+                "newPage": false,
+                "searchKey": "fs.ModeExclusive",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ModeExclusive"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ModeExclusive // l: exclusive use\n\n```\n\nThe defined file mode bits are the most significant bits of the FileMode. The nine least-significant bits are the standard Unix rwxrwxrwx permissions. The values of these bits should be considered part of the public API and may be used in wire protocols or disk representations: they must not be changed, although new bits might be added. \n\n"
               },
               "children": null
             }
@@ -280,7 +159,10 @@
                 "identifier": "ModeIrregular",
                 "newPage": false,
                 "searchKey": "fs.ModeIrregular",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -295,20 +177,23 @@
           },
           {
             "node": {
-              "pathID": "/io/fs#ModeType",
+              "pathID": "/io/fs#ModeNamedPipe",
               "documentation": {
-                "identifier": "ModeType",
+                "identifier": "ModeNamedPipe",
                 "newPage": false,
-                "searchKey": "fs.ModeType",
-                "tags": null
+                "searchKey": "fs.ModeNamedPipe",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const ModeType"
+                "value": "const ModeNamedPipe"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst ModeType = ...\n```\n\nThe defined file mode bits are the most significant bits of the FileMode. The nine least-significant bits are the standard Unix rwxrwxrwx permissions. The values of these bits should be considered part of the public API and may be used in wire protocols or disk representations: they must not be changed, although new bits might be added. \n\nMask for the type bits. For regular files, none will be set. \n\n"
+                "value": "```Go\nconst ModeNamedPipe // p: named pipe (FIFO)\n\n```\n\nThe defined file mode bits are the most significant bits of the FileMode. The nine least-significant bits are the standard Unix rwxrwxrwx permissions. The values of these bits should be considered part of the public API and may be used in wire protocols or disk representations: they must not be changed, although new bits might be added. \n\n"
               },
               "children": null
             }
@@ -320,7 +205,10 @@
                 "identifier": "ModePerm",
                 "newPage": false,
                 "searchKey": "fs.ModePerm",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -329,6 +217,167 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst ModePerm FileMode = 0777 // Unix permission bits\n\n```\n\nThe defined file mode bits are the most significant bits of the FileMode. The nine least-significant bits are the standard Unix rwxrwxrwx permissions. The values of these bits should be considered part of the public API and may be used in wire protocols or disk representations: they must not be changed, although new bits might be added. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/fs#ModeSetgid",
+              "documentation": {
+                "identifier": "ModeSetgid",
+                "newPage": false,
+                "searchKey": "fs.ModeSetgid",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ModeSetgid"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ModeSetgid // g: setgid\n\n```\n\nThe defined file mode bits are the most significant bits of the FileMode. The nine least-significant bits are the standard Unix rwxrwxrwx permissions. The values of these bits should be considered part of the public API and may be used in wire protocols or disk representations: they must not be changed, although new bits might be added. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/fs#ModeSetuid",
+              "documentation": {
+                "identifier": "ModeSetuid",
+                "newPage": false,
+                "searchKey": "fs.ModeSetuid",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ModeSetuid"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ModeSetuid // u: setuid\n\n```\n\nThe defined file mode bits are the most significant bits of the FileMode. The nine least-significant bits are the standard Unix rwxrwxrwx permissions. The values of these bits should be considered part of the public API and may be used in wire protocols or disk representations: they must not be changed, although new bits might be added. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/fs#ModeSocket",
+              "documentation": {
+                "identifier": "ModeSocket",
+                "newPage": false,
+                "searchKey": "fs.ModeSocket",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ModeSocket"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ModeSocket // S: Unix domain socket\n\n```\n\nThe defined file mode bits are the most significant bits of the FileMode. The nine least-significant bits are the standard Unix rwxrwxrwx permissions. The values of these bits should be considered part of the public API and may be used in wire protocols or disk representations: they must not be changed, although new bits might be added. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/fs#ModeSticky",
+              "documentation": {
+                "identifier": "ModeSticky",
+                "newPage": false,
+                "searchKey": "fs.ModeSticky",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ModeSticky"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ModeSticky // t: sticky\n\n```\n\nThe defined file mode bits are the most significant bits of the FileMode. The nine least-significant bits are the standard Unix rwxrwxrwx permissions. The values of these bits should be considered part of the public API and may be used in wire protocols or disk representations: they must not be changed, although new bits might be added. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/fs#ModeSymlink",
+              "documentation": {
+                "identifier": "ModeSymlink",
+                "newPage": false,
+                "searchKey": "fs.ModeSymlink",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ModeSymlink"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ModeSymlink // L: symbolic link\n\n```\n\nThe defined file mode bits are the most significant bits of the FileMode. The nine least-significant bits are the standard Unix rwxrwxrwx permissions. The values of these bits should be considered part of the public API and may be used in wire protocols or disk representations: they must not be changed, although new bits might be added. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/fs#ModeTemporary",
+              "documentation": {
+                "identifier": "ModeTemporary",
+                "newPage": false,
+                "searchKey": "fs.ModeTemporary",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ModeTemporary"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ModeTemporary // T: temporary file; Plan 9 only\n\n```\n\nThe defined file mode bits are the most significant bits of the FileMode. The nine least-significant bits are the standard Unix rwxrwxrwx permissions. The values of these bits should be considered part of the public API and may be used in wire protocols or disk representations: they must not be changed, although new bits might be added. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/fs#ModeType",
+              "documentation": {
+                "identifier": "ModeType",
+                "newPage": false,
+                "searchKey": "fs.ModeType",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ModeType"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ModeType = ...\n```\n\nThe defined file mode bits are the most significant bits of the FileMode. The nine least-significant bits are the standard Unix rwxrwxrwx permissions. The values of these bits should be considered part of the public API and may be used in wire protocols or disk representations: they must not be changed, although new bits might be added. \n\nMask for the type bits. For regular files, none will be set. \n\n"
               },
               "children": null
             }
@@ -343,7 +392,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -356,92 +407,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/io/fs#ErrInvalid",
-              "documentation": {
-                "identifier": "ErrInvalid",
-                "newPage": false,
-                "searchKey": "fs.ErrInvalid",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ErrInvalid"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ErrInvalid = errInvalid() // \"invalid argument\"\n\n```\n\nGeneric file system errors. Errors returned by file systems can be tested against these errors using errors.Is. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/fs#ErrPermission",
-              "documentation": {
-                "identifier": "ErrPermission",
-                "newPage": false,
-                "searchKey": "fs.ErrPermission",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ErrPermission"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ErrPermission = errPermission() // \"permission denied\"\n\n```\n\nGeneric file system errors. Errors returned by file systems can be tested against these errors using errors.Is. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/fs#ErrExist",
-              "documentation": {
-                "identifier": "ErrExist",
-                "newPage": false,
-                "searchKey": "fs.ErrExist",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ErrExist"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ErrExist = errExist() // \"file already exists\"\n\n```\n\nGeneric file system errors. Errors returned by file systems can be tested against these errors using errors.Is. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/fs#ErrNotExist",
-              "documentation": {
-                "identifier": "ErrNotExist",
-                "newPage": false,
-                "searchKey": "fs.ErrNotExist",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ErrNotExist"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ErrNotExist = errNotExist() // \"file does not exist\"\n\n```\n\nGeneric file system errors. Errors returned by file systems can be tested against these errors using errors.Is. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/io/fs#ErrClosed",
               "documentation": {
                 "identifier": "ErrClosed",
                 "newPage": false,
                 "searchKey": "fs.ErrClosed",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -456,12 +430,107 @@
           },
           {
             "node": {
+              "pathID": "/io/fs#ErrExist",
+              "documentation": {
+                "identifier": "ErrExist",
+                "newPage": false,
+                "searchKey": "fs.ErrExist",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrExist"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrExist = errExist() // \"file already exists\"\n\n```\n\nGeneric file system errors. Errors returned by file systems can be tested against these errors using errors.Is. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/fs#ErrInvalid",
+              "documentation": {
+                "identifier": "ErrInvalid",
+                "newPage": false,
+                "searchKey": "fs.ErrInvalid",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrInvalid"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrInvalid = errInvalid() // \"invalid argument\"\n\n```\n\nGeneric file system errors. Errors returned by file systems can be tested against these errors using errors.Is. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/fs#ErrNotExist",
+              "documentation": {
+                "identifier": "ErrNotExist",
+                "newPage": false,
+                "searchKey": "fs.ErrNotExist",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrNotExist"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrNotExist = errNotExist() // \"file does not exist\"\n\n```\n\nGeneric file system errors. Errors returned by file systems can be tested against these errors using errors.Is. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/fs#ErrPermission",
+              "documentation": {
+                "identifier": "ErrPermission",
+                "newPage": false,
+                "searchKey": "fs.ErrPermission",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrPermission"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrPermission = errPermission() // \"permission denied\"\n\n```\n\nGeneric file system errors. Errors returned by file systems can be tested against these errors using errors.Is. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/io/fs#SkipDir",
               "documentation": {
                 "identifier": "SkipDir",
                 "newPage": false,
                 "searchKey": "fs.SkipDir",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -484,7 +553,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -497,12 +568,59 @@
         "children": [
           {
             "node": {
+              "pathID": "/io/fs#DirEntry",
+              "documentation": {
+                "identifier": "DirEntry",
+                "newPage": false,
+                "searchKey": "fs.DirEntry",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DirEntry interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DirEntry interface {\n\t// Name returns the name of the file (or subdirectory) described by the entry.\n\t// This name is only the final element of the path (the base name), not the entire path.\n\t// For example, Name would return \"hello.go\" not \"/home/gopher/hello.go\".\n\tName() string\n\n\t// IsDir reports whether the entry describes a directory.\n\tIsDir() bool\n\n\t// Type returns the type bits for the entry.\n\t// The type bits are a subset of the usual FileMode bits, those returned by the FileMode.Type method.\n\tType() FileMode\n\n\t// Info returns the FileInfo for the file or subdirectory described by the entry.\n\t// The returned FileInfo may be from the time of the original directory read\n\t// or from the time of the call to Info. If the file has been removed or renamed\n\t// since the directory read, Info may return an error satisfying errors.Is(err, ErrNotExist).\n\t// If the entry denotes a symbolic link, Info reports the information about the link itself,\n\t// not the link's target.\n\tInfo() (FileInfo, error)\n}\n```\n\nA DirEntry is an entry read from a directory (using the ReadDir function or a ReadDirFile's ReadDir method). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io/fs#FileInfoToDirEntry",
+                    "documentation": {
+                      "identifier": "FileInfoToDirEntry",
+                      "newPage": false,
+                      "searchKey": "fs.FileInfoToDirEntry",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func FileInfoToDirEntry(info FileInfo) DirEntry"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc FileInfoToDirEntry(info FileInfo) DirEntry\n```\n\nFileInfoToDirEntry returns a DirEntry that returns information from info. If info is nil, FileInfoToDirEntry returns nil. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/io/fs#FS",
               "documentation": {
                 "identifier": "FS",
                 "newPage": false,
                 "searchKey": "fs.FS",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -520,7 +638,9 @@
                       "identifier": "Sub",
                       "newPage": false,
                       "searchKey": "fs.Sub",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -543,7 +663,9 @@
                 "identifier": "File",
                 "newPage": false,
                 "searchKey": "fs.File",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -558,73 +680,14 @@
           },
           {
             "node": {
-              "pathID": "/io/fs#DirEntry",
-              "documentation": {
-                "identifier": "DirEntry",
-                "newPage": false,
-                "searchKey": "fs.DirEntry",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type DirEntry interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype DirEntry interface {\n\t// Name returns the name of the file (or subdirectory) described by the entry.\n\t// This name is only the final element of the path (the base name), not the entire path.\n\t// For example, Name would return \"hello.go\" not \"/home/gopher/hello.go\".\n\tName() string\n\n\t// IsDir reports whether the entry describes a directory.\n\tIsDir() bool\n\n\t// Type returns the type bits for the entry.\n\t// The type bits are a subset of the usual FileMode bits, those returned by the FileMode.Type method.\n\tType() FileMode\n\n\t// Info returns the FileInfo for the file or subdirectory described by the entry.\n\t// The returned FileInfo may be from the time of the original directory read\n\t// or from the time of the call to Info. If the file has been removed or renamed\n\t// since the directory read, Info may return an error satisfying errors.Is(err, ErrNotExist).\n\t// If the entry denotes a symbolic link, Info reports the information about the link itself,\n\t// not the link's target.\n\tInfo() (FileInfo, error)\n}\n```\n\nA DirEntry is an entry read from a directory (using the ReadDir function or a ReadDirFile's ReadDir method). \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/io/fs#FileInfoToDirEntry",
-                    "documentation": {
-                      "identifier": "FileInfoToDirEntry",
-                      "newPage": false,
-                      "searchKey": "fs.FileInfoToDirEntry",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func FileInfoToDirEntry(info FileInfo) DirEntry"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc FileInfoToDirEntry(info FileInfo) DirEntry\n```\n\nFileInfoToDirEntry returns a DirEntry that returns information from info. If info is nil, FileInfoToDirEntry returns nil. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/fs#ReadDirFile",
-              "documentation": {
-                "identifier": "ReadDirFile",
-                "newPage": false,
-                "searchKey": "fs.ReadDirFile",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ReadDirFile interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ReadDirFile interface {\n\tFile\n\n\t// ReadDir reads the contents of the directory and returns\n\t// a slice of up to n DirEntry values in directory order.\n\t// Subsequent calls on the same file will yield further DirEntry values.\n\t//\n\t// If n > 0, ReadDir returns at most n DirEntry structures.\n\t// In this case, if ReadDir returns an empty slice, it will return\n\t// a non-nil error explaining why.\n\t// At the end of a directory, the error is io.EOF.\n\t//\n\t// If n <= 0, ReadDir returns all the DirEntry values from the directory\n\t// in a single slice. In this case, if ReadDir succeeds (reads all the way\n\t// to the end of the directory), it returns the slice and a nil error.\n\t// If it encounters an error before the end of the directory,\n\t// ReadDir returns the DirEntry list read until that point and a non-nil error.\n\tReadDir(n int) ([]DirEntry, error)\n}\n```\n\nA ReadDirFile is a directory file whose entries can be read with the ReadDir method. Every directory file should implement this interface. (It is permissible for any file to implement this interface, but if so ReadDir should return an error for non-directories.) \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/io/fs#FileInfo",
               "documentation": {
                 "identifier": "FileInfo",
                 "newPage": false,
                 "searchKey": "fs.FileInfo",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -642,7 +705,9 @@
                       "identifier": "Stat",
                       "newPage": false,
                       "searchKey": "fs.Stat",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -665,7 +730,9 @@
                 "identifier": "FileMode",
                 "newPage": false,
                 "searchKey": "fs.FileMode",
-                "tags": null
+                "tags": [
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -678,32 +745,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/io/fs#FileMode.String",
-                    "documentation": {
-                      "identifier": "FileMode.String",
-                      "newPage": false,
-                      "searchKey": "fs.FileMode.String",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m FileMode) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m FileMode) String() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/io/fs#FileMode.IsDir",
                     "documentation": {
                       "identifier": "FileMode.IsDir",
                       "newPage": false,
                       "searchKey": "fs.FileMode.IsDir",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -723,7 +772,9 @@
                       "identifier": "FileMode.IsRegular",
                       "newPage": false,
                       "searchKey": "fs.FileMode.IsRegular",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -743,7 +794,9 @@
                       "identifier": "FileMode.Perm",
                       "newPage": false,
                       "searchKey": "fs.FileMode.Perm",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -758,12 +811,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/io/fs#FileMode.String",
+                    "documentation": {
+                      "identifier": "FileMode.String",
+                      "newPage": false,
+                      "searchKey": "fs.FileMode.String",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m FileMode) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m FileMode) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/io/fs#FileMode.Type",
                     "documentation": {
                       "identifier": "FileMode.Type",
                       "newPage": false,
                       "searchKey": "fs.FileMode.Type",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -781,12 +858,36 @@
           },
           {
             "node": {
+              "pathID": "/io/fs#GlobFS",
+              "documentation": {
+                "identifier": "GlobFS",
+                "newPage": false,
+                "searchKey": "fs.GlobFS",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GlobFS interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GlobFS interface {\n\tFS\n\n\t// Glob returns the names of all files matching pattern,\n\t// providing an implementation of the top-level\n\t// Glob function.\n\tGlob(pattern string) ([]string, error)\n}\n```\n\nA GlobFS is a file system with a Glob method. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/io/fs#PathError",
               "documentation": {
                 "identifier": "PathError",
                 "newPage": false,
                 "searchKey": "fs.PathError",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -804,7 +905,9 @@
                       "identifier": "PathError.Error",
                       "newPage": false,
                       "searchKey": "fs.PathError.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -819,32 +922,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/io/fs#PathError.Unwrap",
-                    "documentation": {
-                      "identifier": "PathError.Unwrap",
-                      "newPage": false,
-                      "searchKey": "fs.PathError.Unwrap",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *PathError) Unwrap() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *PathError) Unwrap() error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/io/fs#PathError.Timeout",
                     "documentation": {
                       "identifier": "PathError.Timeout",
                       "newPage": false,
                       "searchKey": "fs.PathError.Timeout",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -856,28 +941,30 @@
                     },
                     "children": null
                   }
+                },
+                {
+                  "node": {
+                    "pathID": "/io/fs#PathError.Unwrap",
+                    "documentation": {
+                      "identifier": "PathError.Unwrap",
+                      "newPage": false,
+                      "searchKey": "fs.PathError.Unwrap",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *PathError) Unwrap() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *PathError) Unwrap() error\n```\n\n"
+                    },
+                    "children": null
+                  }
                 }
               ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/fs#GlobFS",
-              "documentation": {
-                "identifier": "GlobFS",
-                "newPage": false,
-                "searchKey": "fs.GlobFS",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type GlobFS interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype GlobFS interface {\n\tFS\n\n\t// Glob returns the names of all files matching pattern,\n\t// providing an implementation of the top-level\n\t// Glob function.\n\tGlob(pattern string) ([]string, error)\n}\n```\n\nA GlobFS is a file system with a Glob method. \n\n"
-              },
-              "children": null
             }
           },
           {
@@ -887,7 +974,9 @@
                 "identifier": "ReadDirFS",
                 "newPage": false,
                 "searchKey": "fs.ReadDirFS",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -902,113 +991,24 @@
           },
           {
             "node": {
-              "pathID": "/io/fs#dirInfo",
+              "pathID": "/io/fs#ReadDirFile",
               "documentation": {
-                "identifier": "dirInfo",
+                "identifier": "ReadDirFile",
                 "newPage": false,
-                "searchKey": "fs.dirInfo",
+                "searchKey": "fs.ReadDirFile",
                 "tags": [
-                  "private"
+                  "interface"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type dirInfo struct"
+                "value": "type ReadDirFile interface"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype dirInfo struct {\n\tfileInfo FileInfo\n}\n```\n\ndirInfo is a DirEntry based on a FileInfo. \n\n"
+                "value": "```Go\ntype ReadDirFile interface {\n\tFile\n\n\t// ReadDir reads the contents of the directory and returns\n\t// a slice of up to n DirEntry values in directory order.\n\t// Subsequent calls on the same file will yield further DirEntry values.\n\t//\n\t// If n > 0, ReadDir returns at most n DirEntry structures.\n\t// In this case, if ReadDir returns an empty slice, it will return\n\t// a non-nil error explaining why.\n\t// At the end of a directory, the error is io.EOF.\n\t//\n\t// If n <= 0, ReadDir returns all the DirEntry values from the directory\n\t// in a single slice. In this case, if ReadDir succeeds (reads all the way\n\t// to the end of the directory), it returns the slice and a nil error.\n\t// If it encounters an error before the end of the directory,\n\t// ReadDir returns the DirEntry list read until that point and a non-nil error.\n\tReadDir(n int) ([]DirEntry, error)\n}\n```\n\nA ReadDirFile is a directory file whose entries can be read with the ReadDir method. Every directory file should implement this interface. (It is permissible for any file to implement this interface, but if so ReadDir should return an error for non-directories.) \n\n"
               },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/io/fs#dirInfo.IsDir",
-                    "documentation": {
-                      "identifier": "dirInfo.IsDir",
-                      "newPage": false,
-                      "searchKey": "fs.dirInfo.IsDir",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (di dirInfo) IsDir() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (di dirInfo) IsDir() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/io/fs#dirInfo.Type",
-                    "documentation": {
-                      "identifier": "dirInfo.Type",
-                      "newPage": false,
-                      "searchKey": "fs.dirInfo.Type",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (di dirInfo) Type() FileMode"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (di dirInfo) Type() FileMode\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/io/fs#dirInfo.Info",
-                    "documentation": {
-                      "identifier": "dirInfo.Info",
-                      "newPage": false,
-                      "searchKey": "fs.dirInfo.Info",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (di dirInfo) Info() (FileInfo, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (di dirInfo) Info() (FileInfo, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/io/fs#dirInfo.Name",
-                    "documentation": {
-                      "identifier": "dirInfo.Name",
-                      "newPage": false,
-                      "searchKey": "fs.dirInfo.Name",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (di dirInfo) Name() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (di dirInfo) Name() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
+              "children": null
             }
           },
           {
@@ -1018,7 +1018,9 @@
                 "identifier": "ReadFileFS",
                 "newPage": false,
                 "searchKey": "fs.ReadFileFS",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1038,7 +1040,9 @@
                 "identifier": "StatFS",
                 "newPage": false,
                 "searchKey": "fs.StatFS",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1058,7 +1062,9 @@
                 "identifier": "SubFS",
                 "newPage": false,
                 "searchKey": "fs.SubFS",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1073,12 +1079,267 @@
           },
           {
             "node": {
+              "pathID": "/io/fs#WalkDirFunc",
+              "documentation": {
+                "identifier": "WalkDirFunc",
+                "newPage": false,
+                "searchKey": "fs.WalkDirFunc",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type WalkDirFunc func(path string, d std/io/fs.DirEntry, err error) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype WalkDirFunc func(path string, d DirEntry, err error) error\n```\n\nWalkDirFunc is the type of the function called by WalkDir to visit each file or directory. \n\nThe path argument contains the argument to WalkDir as a prefix. That is, if WalkDir is called with root argument \"dir\" and finds a file named \"a\" in that directory, the walk function will be called with argument \"dir/a\". \n\nThe d argument is the fs.DirEntry for the named path. \n\nThe error result returned by the function controls how WalkDir continues. If the function returns the special value SkipDir, WalkDir skips the current directory (path if d.IsDir() is true, otherwise path's parent directory). Otherwise, if the function returns a non-nil error, WalkDir stops entirely and returns that error. \n\nThe err argument reports an error related to path, signaling that WalkDir will not walk into that directory. The function can decide how to handle that error; as described earlier, returning the error will cause WalkDir to stop walking the entire tree. \n\nWalkDir calls the function with a non-nil err argument in two cases. \n\nFirst, if the initial fs.Stat on the root directory fails, WalkDir calls the function with path set to root, d set to nil, and err set to the error from fs.Stat. \n\nSecond, if a directory's ReadDir method fails, WalkDir calls the function with path set to the directory's path, d set to an fs.DirEntry describing the directory, and err set to the error from ReadDir. In this second case, the function is called twice with the path of the directory: the first call is before the directory read is attempted and has err set to nil, giving the function a chance to return SkipDir and avoid the ReadDir entirely. The second call is after a failed ReadDir and reports the error from ReadDir. (If ReadDir succeeds, there is no second call.) \n\nThe differences between WalkDirFunc compared to filepath.WalkFunc are: \n\n```\n- The second argument has type fs.DirEntry instead of fs.FileInfo.\n- The function is called before reading a directory, to allow SkipDir\n  to bypass the directory read entirely.\n- If a directory read fails, the function is called a second time\n  for that directory to report the error.\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/fs#dirInfo",
+              "documentation": {
+                "identifier": "dirInfo",
+                "newPage": false,
+                "searchKey": "fs.dirInfo",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type dirInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype dirInfo struct {\n\tfileInfo FileInfo\n}\n```\n\ndirInfo is a DirEntry based on a FileInfo. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io/fs#dirInfo.Info",
+                    "documentation": {
+                      "identifier": "dirInfo.Info",
+                      "newPage": false,
+                      "searchKey": "fs.dirInfo.Info",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (di dirInfo) Info() (FileInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (di dirInfo) Info() (FileInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io/fs#dirInfo.IsDir",
+                    "documentation": {
+                      "identifier": "dirInfo.IsDir",
+                      "newPage": false,
+                      "searchKey": "fs.dirInfo.IsDir",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (di dirInfo) IsDir() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (di dirInfo) IsDir() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io/fs#dirInfo.Name",
+                    "documentation": {
+                      "identifier": "dirInfo.Name",
+                      "newPage": false,
+                      "searchKey": "fs.dirInfo.Name",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (di dirInfo) Name() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (di dirInfo) Name() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io/fs#dirInfo.Type",
+                    "documentation": {
+                      "identifier": "dirInfo.Type",
+                      "newPage": false,
+                      "searchKey": "fs.dirInfo.Type",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (di dirInfo) Type() FileMode"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (di dirInfo) Type() FileMode\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/fs#statDirEntry",
+              "documentation": {
+                "identifier": "statDirEntry",
+                "newPage": false,
+                "searchKey": "fs.statDirEntry",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type statDirEntry struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype statDirEntry struct {\n\tinfo FileInfo\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io/fs#statDirEntry.Info",
+                    "documentation": {
+                      "identifier": "statDirEntry.Info",
+                      "newPage": false,
+                      "searchKey": "fs.statDirEntry.Info",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *statDirEntry) Info() (FileInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *statDirEntry) Info() (FileInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io/fs#statDirEntry.IsDir",
+                    "documentation": {
+                      "identifier": "statDirEntry.IsDir",
+                      "newPage": false,
+                      "searchKey": "fs.statDirEntry.IsDir",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *statDirEntry) IsDir() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *statDirEntry) IsDir() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io/fs#statDirEntry.Name",
+                    "documentation": {
+                      "identifier": "statDirEntry.Name",
+                      "newPage": false,
+                      "searchKey": "fs.statDirEntry.Name",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *statDirEntry) Name() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *statDirEntry) Name() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io/fs#statDirEntry.Type",
+                    "documentation": {
+                      "identifier": "statDirEntry.Type",
+                      "newPage": false,
+                      "searchKey": "fs.statDirEntry.Type",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *statDirEntry) Type() FileMode"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *statDirEntry) Type() FileMode\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/io/fs#subFS",
               "documentation": {
                 "identifier": "subFS",
                 "newPage": false,
                 "searchKey": "fs.subFS",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1093,66 +1354,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/io/fs#subFS.fullName",
+                    "pathID": "/io/fs#subFS.Glob",
                     "documentation": {
-                      "identifier": "subFS.fullName",
+                      "identifier": "subFS.Glob",
                       "newPage": false,
-                      "searchKey": "fs.subFS.fullName",
+                      "searchKey": "fs.subFS.Glob",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (f *subFS) fullName(op string, name string) (string, error)"
+                      "value": "func (f *subFS) Glob(pattern string) ([]string, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (f *subFS) fullName(op string, name string) (string, error)\n```\n\nfullName maps name to the fully-qualified name dir/name. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/io/fs#subFS.shorten",
-                    "documentation": {
-                      "identifier": "subFS.shorten",
-                      "newPage": false,
-                      "searchKey": "fs.subFS.shorten",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *subFS) shorten(name string) (rel string, ok bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *subFS) shorten(name string) (rel string, ok bool)\n```\n\nshorten maps name, which should start with f.dir, back to the suffix after f.dir. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/io/fs#subFS.fixErr",
-                    "documentation": {
-                      "identifier": "subFS.fixErr",
-                      "newPage": false,
-                      "searchKey": "fs.subFS.fixErr",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *subFS) fixErr(err error) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *subFS) fixErr(err error) error\n```\n\nfixErr shortens any reported names in PathErrors by stripping f.dir. \n\n"
+                      "value": "```Go\nfunc (f *subFS) Glob(pattern string) ([]string, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1165,6 +1383,7 @@
                       "newPage": false,
                       "searchKey": "fs.subFS.Open",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1187,6 +1406,7 @@
                       "newPage": false,
                       "searchKey": "fs.subFS.ReadDir",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1209,6 +1429,7 @@
                       "newPage": false,
                       "searchKey": "fs.subFS.ReadFile",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1225,34 +1446,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/io/fs#subFS.Glob",
-                    "documentation": {
-                      "identifier": "subFS.Glob",
-                      "newPage": false,
-                      "searchKey": "fs.subFS.Glob",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *subFS) Glob(pattern string) ([]string, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *subFS) Glob(pattern string) ([]string, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/io/fs#subFS.Sub",
                     "documentation": {
                       "identifier": "subFS.Sub",
                       "newPage": false,
                       "searchKey": "fs.subFS.Sub",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1266,134 +1466,72 @@
                     },
                     "children": null
                   }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/fs#WalkDirFunc",
-              "documentation": {
-                "identifier": "WalkDirFunc",
-                "newPage": false,
-                "searchKey": "fs.WalkDirFunc",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type WalkDirFunc func(path string, d std/io/fs.DirEntry, err error) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype WalkDirFunc func(path string, d DirEntry, err error) error\n```\n\nWalkDirFunc is the type of the function called by WalkDir to visit each file or directory. \n\nThe path argument contains the argument to WalkDir as a prefix. That is, if WalkDir is called with root argument \"dir\" and finds a file named \"a\" in that directory, the walk function will be called with argument \"dir/a\". \n\nThe d argument is the fs.DirEntry for the named path. \n\nThe error result returned by the function controls how WalkDir continues. If the function returns the special value SkipDir, WalkDir skips the current directory (path if d.IsDir() is true, otherwise path's parent directory). Otherwise, if the function returns a non-nil error, WalkDir stops entirely and returns that error. \n\nThe err argument reports an error related to path, signaling that WalkDir will not walk into that directory. The function can decide how to handle that error; as described earlier, returning the error will cause WalkDir to stop walking the entire tree. \n\nWalkDir calls the function with a non-nil err argument in two cases. \n\nFirst, if the initial fs.Stat on the root directory fails, WalkDir calls the function with path set to root, d set to nil, and err set to the error from fs.Stat. \n\nSecond, if a directory's ReadDir method fails, WalkDir calls the function with path set to the directory's path, d set to an fs.DirEntry describing the directory, and err set to the error from ReadDir. In this second case, the function is called twice with the path of the directory: the first call is before the directory read is attempted and has err set to nil, giving the function a chance to return SkipDir and avoid the ReadDir entirely. The second call is after a failed ReadDir and reports the error from ReadDir. (If ReadDir succeeds, there is no second call.) \n\nThe differences between WalkDirFunc compared to filepath.WalkFunc are: \n\n```\n- The second argument has type fs.DirEntry instead of fs.FileInfo.\n- The function is called before reading a directory, to allow SkipDir\n  to bypass the directory read entirely.\n- If a directory read fails, the function is called a second time\n  for that directory to report the error.\n\n```\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/fs#statDirEntry",
-              "documentation": {
-                "identifier": "statDirEntry",
-                "newPage": false,
-                "searchKey": "fs.statDirEntry",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type statDirEntry struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype statDirEntry struct {\n\tinfo FileInfo\n}\n```\n\n"
-              },
-              "children": [
+                },
                 {
                   "node": {
-                    "pathID": "/io/fs#statDirEntry.Name",
+                    "pathID": "/io/fs#subFS.fixErr",
                     "documentation": {
-                      "identifier": "statDirEntry.Name",
+                      "identifier": "subFS.fixErr",
                       "newPage": false,
-                      "searchKey": "fs.statDirEntry.Name",
+                      "searchKey": "fs.subFS.fixErr",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (d *statDirEntry) Name() string"
+                      "value": "func (f *subFS) fixErr(err error) error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (d *statDirEntry) Name() string\n```\n\n"
+                      "value": "```Go\nfunc (f *subFS) fixErr(err error) error\n```\n\nfixErr shortens any reported names in PathErrors by stripping f.dir. \n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/io/fs#statDirEntry.IsDir",
+                    "pathID": "/io/fs#subFS.fullName",
                     "documentation": {
-                      "identifier": "statDirEntry.IsDir",
+                      "identifier": "subFS.fullName",
                       "newPage": false,
-                      "searchKey": "fs.statDirEntry.IsDir",
+                      "searchKey": "fs.subFS.fullName",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (d *statDirEntry) IsDir() bool"
+                      "value": "func (f *subFS) fullName(op string, name string) (string, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (d *statDirEntry) IsDir() bool\n```\n\n"
+                      "value": "```Go\nfunc (f *subFS) fullName(op string, name string) (string, error)\n```\n\nfullName maps name to the fully-qualified name dir/name. \n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/io/fs#statDirEntry.Type",
+                    "pathID": "/io/fs#subFS.shorten",
                     "documentation": {
-                      "identifier": "statDirEntry.Type",
+                      "identifier": "subFS.shorten",
                       "newPage": false,
-                      "searchKey": "fs.statDirEntry.Type",
+                      "searchKey": "fs.subFS.shorten",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (d *statDirEntry) Type() FileMode"
+                      "value": "func (f *subFS) shorten(name string) (rel string, ok bool)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (d *statDirEntry) Type() FileMode\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/io/fs#statDirEntry.Info",
-                    "documentation": {
-                      "identifier": "statDirEntry.Info",
-                      "newPage": false,
-                      "searchKey": "fs.statDirEntry.Info",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *statDirEntry) Info() (FileInfo, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *statDirEntry) Info() (FileInfo, error)\n```\n\n"
+                      "value": "```Go\nfunc (f *subFS) shorten(name string) (rel string, ok bool)\n```\n\nshorten maps name, which should start with f.dir, back to the suffix after f.dir. \n\n"
                     },
                     "children": null
                   }
@@ -1411,7 +1549,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1424,142 +1564,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/io/fs#ValidPath",
-              "documentation": {
-                "identifier": "ValidPath",
-                "newPage": false,
-                "searchKey": "fs.ValidPath",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ValidPath(name string) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ValidPath(name string) bool\n```\n\nValidPath reports whether the given path name is valid for use in a call to Open. \n\nPath names passed to open are UTF-8-encoded, unrooted, slash-separated sequences of path elements, like “x/y/z”. Path names must not contain an element that is “.” or “..” or the empty string, except for the special case that the root directory is named “.”. Paths must not start or end with a slash: “/x” and “x/” are invalid. \n\nNote that paths are slash-separated on all systems, even Windows. Paths containing other characters such as backslash and colon are accepted as valid, but those characters must never be interpreted by an FS implementation as path element separators. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/fs#errInvalid",
-              "documentation": {
-                "identifier": "errInvalid",
-                "newPage": false,
-                "searchKey": "fs.errInvalid",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func errInvalid() error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc errInvalid() error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/fs#errPermission",
-              "documentation": {
-                "identifier": "errPermission",
-                "newPage": false,
-                "searchKey": "fs.errPermission",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func errPermission() error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc errPermission() error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/fs#errExist",
-              "documentation": {
-                "identifier": "errExist",
-                "newPage": false,
-                "searchKey": "fs.errExist",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func errExist() error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc errExist() error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/fs#errNotExist",
-              "documentation": {
-                "identifier": "errNotExist",
-                "newPage": false,
-                "searchKey": "fs.errNotExist",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func errNotExist() error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc errNotExist() error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/fs#errClosed",
-              "documentation": {
-                "identifier": "errClosed",
-                "newPage": false,
-                "searchKey": "fs.errClosed",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func errClosed() error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc errClosed() error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/io/fs#Glob",
               "documentation": {
                 "identifier": "Glob",
                 "newPage": false,
                 "searchKey": "fs.Glob",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1574,12 +1586,101 @@
           },
           {
             "node": {
+              "pathID": "/io/fs#ReadDir",
+              "documentation": {
+                "identifier": "ReadDir",
+                "newPage": false,
+                "searchKey": "fs.ReadDir",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ReadDir(fsys FS, name string) ([]DirEntry, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ReadDir(fsys FS, name string) ([]DirEntry, error)\n```\n\nReadDir reads the named directory and returns a list of directory entries sorted by filename. \n\nIf fs implements ReadDirFS, ReadDir calls fs.ReadDir. Otherwise ReadDir calls fs.Open and uses ReadDir and Close on the returned file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/fs#ReadFile",
+              "documentation": {
+                "identifier": "ReadFile",
+                "newPage": false,
+                "searchKey": "fs.ReadFile",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ReadFile(fsys FS, name string) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ReadFile(fsys FS, name string) ([]byte, error)\n```\n\nReadFile reads the named file from the file system fs and returns its contents. A successful call returns a nil error, not io.EOF. (Because ReadFile reads the whole file, the expected EOF from the final Read is not treated as an error to be reported.) \n\nIf fs implements ReadFileFS, ReadFile calls fs.ReadFile. Otherwise ReadFile calls fs.Open and uses Read and Close on the returned file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/fs#ValidPath",
+              "documentation": {
+                "identifier": "ValidPath",
+                "newPage": false,
+                "searchKey": "fs.ValidPath",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ValidPath(name string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ValidPath(name string) bool\n```\n\nValidPath reports whether the given path name is valid for use in a call to Open. \n\nPath names passed to open are UTF-8-encoded, unrooted, slash-separated sequences of path elements, like “x/y/z”. Path names must not contain an element that is “.” or “..” or the empty string, except for the special case that the root directory is named “.”. Paths must not start or end with a slash: “/x” and “x/” are invalid. \n\nNote that paths are slash-separated on all systems, even Windows. Paths containing other characters such as backslash and colon are accepted as valid, but those characters must never be interpreted by an FS implementation as path element separators. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/fs#WalkDir",
+              "documentation": {
+                "identifier": "WalkDir",
+                "newPage": false,
+                "searchKey": "fs.WalkDir",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WalkDir(fsys FS, root string, fn WalkDirFunc) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WalkDir(fsys FS, root string, fn WalkDirFunc) error\n```\n\nWalkDir walks the file tree rooted at root, calling fn for each file or directory in the tree, including root. \n\nAll errors that arise visiting files and directories are filtered by fn: see the fs.WalkDirFunc documentation for details. \n\nThe files are walked in lexical order, which makes the output deterministic but requires WalkDir to read an entire directory into memory before proceeding to walk that directory. \n\nWalkDir does not follow symbolic links found in directories, but if root itself is a symbolic link, its target will be walked. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/io/fs#cleanGlobPath",
               "documentation": {
                 "identifier": "cleanGlobPath",
                 "newPage": false,
                 "searchKey": "fs.cleanGlobPath",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1596,12 +1697,128 @@
           },
           {
             "node": {
+              "pathID": "/io/fs#errClosed",
+              "documentation": {
+                "identifier": "errClosed",
+                "newPage": false,
+                "searchKey": "fs.errClosed",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func errClosed() error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc errClosed() error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/fs#errExist",
+              "documentation": {
+                "identifier": "errExist",
+                "newPage": false,
+                "searchKey": "fs.errExist",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func errExist() error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc errExist() error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/fs#errInvalid",
+              "documentation": {
+                "identifier": "errInvalid",
+                "newPage": false,
+                "searchKey": "fs.errInvalid",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func errInvalid() error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc errInvalid() error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/fs#errNotExist",
+              "documentation": {
+                "identifier": "errNotExist",
+                "newPage": false,
+                "searchKey": "fs.errNotExist",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func errNotExist() error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc errNotExist() error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io/fs#errPermission",
+              "documentation": {
+                "identifier": "errPermission",
+                "newPage": false,
+                "searchKey": "fs.errPermission",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func errPermission() error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc errPermission() error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/io/fs#glob",
               "documentation": {
                 "identifier": "glob",
                 "newPage": false,
                 "searchKey": "fs.glob",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1624,6 +1841,7 @@
                 "newPage": false,
                 "searchKey": "fs.hasMeta",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1640,52 +1858,13 @@
           },
           {
             "node": {
-              "pathID": "/io/fs#ReadDir",
-              "documentation": {
-                "identifier": "ReadDir",
-                "newPage": false,
-                "searchKey": "fs.ReadDir",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ReadDir(fsys FS, name string) ([]DirEntry, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ReadDir(fsys FS, name string) ([]DirEntry, error)\n```\n\nReadDir reads the named directory and returns a list of directory entries sorted by filename. \n\nIf fs implements ReadDirFS, ReadDir calls fs.ReadDir. Otherwise ReadDir calls fs.Open and uses ReadDir and Close on the returned file. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/fs#ReadFile",
-              "documentation": {
-                "identifier": "ReadFile",
-                "newPage": false,
-                "searchKey": "fs.ReadFile",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ReadFile(fsys FS, name string) ([]byte, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ReadFile(fsys FS, name string) ([]byte, error)\n```\n\nReadFile reads the named file from the file system fs and returns its contents. A successful call returns a nil error, not io.EOF. (Because ReadFile reads the whole file, the expected EOF from the final Read is not treated as an error to be reported.) \n\nIf fs implements ReadFileFS, ReadFile calls fs.ReadFile. Otherwise ReadFile calls fs.Open and uses Read and Close on the returned file. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/io/fs#walkDir",
               "documentation": {
                 "identifier": "walkDir",
                 "newPage": false,
                 "searchKey": "fs.walkDir",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1696,26 +1875,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc walkDir(fsys FS, name string, d DirEntry, walkDirFn WalkDirFunc) error\n```\n\nwalkDir recursively descends path, calling walkDirFn. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/io/fs#WalkDir",
-              "documentation": {
-                "identifier": "WalkDir",
-                "newPage": false,
-                "searchKey": "fs.WalkDir",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func WalkDir(fsys FS, root string, fn WalkDirFunc) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc WalkDir(fsys FS, root string, fn WalkDirFunc) error\n```\n\nWalkDir walks the file tree rooted at root, calling fn for each file or directory in the tree, including root. \n\nAll errors that arise visiting files and directories are filtered by fn: see the fs.WalkDirFunc documentation for details. \n\nThe files are walked in lexical order, which makes the output deterministic but requires WalkDir to read an entire directory into memory before proceeding to walk that directory. \n\nWalkDir does not follow symbolic links found in directories, but if root itself is a symbolic link, its target will be walked. \n\n"
               },
               "children": null
             }

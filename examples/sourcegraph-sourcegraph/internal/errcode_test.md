@@ -14,14 +14,14 @@
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="notFoundErr" href="#notFoundErr">type notFoundErr struct{}</a>
 
 ```
 searchKey: errcode_test.notFoundErr
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -32,7 +32,7 @@ type notFoundErr struct{}
 
 ```
 searchKey: errcode_test.notFoundErr.Error
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -43,7 +43,7 @@ func (e *notFoundErr) Error() string
 
 ```
 searchKey: errcode_test.notFoundErr.NotFound
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -53,14 +53,14 @@ func (e *notFoundErr) NotFound() bool
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="TestHTTP" href="#TestHTTP">func TestHTTP(t *testing.T)</a>
 
 ```
 searchKey: errcode_test.TestHTTP
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -71,7 +71,7 @@ func TestHTTP(t *testing.T)
 
 ```
 searchKey: errcode_test.TestMakeNonRetryable
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go

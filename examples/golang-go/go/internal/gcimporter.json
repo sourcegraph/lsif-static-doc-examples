@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "go/internal/gcimporter",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,122 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/go/internal/gcimporter#debug",
-              "documentation": {
-                "identifier": "debug",
-                "newPage": false,
-                "searchKey": "gcimporter.debug",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const debug"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst debug = false\n```\n\ndebugging/development support \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#predeclReserved",
-              "documentation": {
-                "identifier": "predeclReserved",
-                "newPage": false,
-                "searchKey": "gcimporter.predeclReserved",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const predeclReserved"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst predeclReserved = 32\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#definedType",
-              "documentation": {
-                "identifier": "definedType",
-                "newPage": false,
-                "searchKey": "gcimporter.definedType",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const definedType"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst definedType itag = iota\n```\n\nTypes \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#pointerType",
-              "documentation": {
-                "identifier": "pointerType",
-                "newPage": false,
-                "searchKey": "gcimporter.pointerType",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const pointerType"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst pointerType\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#sliceType",
-              "documentation": {
-                "identifier": "sliceType",
-                "newPage": false,
-                "searchKey": "gcimporter.sliceType",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const sliceType"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst sliceType\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/internal/gcimporter#arrayType",
               "documentation": {
                 "identifier": "arrayType",
                 "newPage": false,
                 "searchKey": "gcimporter.arrayType",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -177,6 +71,8 @@
                 "newPage": false,
                 "searchKey": "gcimporter.chanType",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -193,88 +89,48 @@
           },
           {
             "node": {
-              "pathID": "/go/internal/gcimporter#mapType",
+              "pathID": "/go/internal/gcimporter#debug",
               "documentation": {
-                "identifier": "mapType",
+                "identifier": "debug",
                 "newPage": false,
-                "searchKey": "gcimporter.mapType",
+                "searchKey": "gcimporter.debug",
                 "tags": [
+                  "constant",
+                  "boolean",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const mapType"
+                "value": "const debug"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst mapType\n```\n\n"
+                "value": "```Go\nconst debug = false\n```\n\ndebugging/development support \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gcimporter#signatureType",
+              "pathID": "/go/internal/gcimporter#definedType",
               "documentation": {
-                "identifier": "signatureType",
+                "identifier": "definedType",
                 "newPage": false,
-                "searchKey": "gcimporter.signatureType",
+                "searchKey": "gcimporter.definedType",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const signatureType"
+                "value": "const definedType"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst signatureType\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#structType",
-              "documentation": {
-                "identifier": "structType",
-                "newPage": false,
-                "searchKey": "gcimporter.structType",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const structType"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst structType\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#interfaceType",
-              "documentation": {
-                "identifier": "interfaceType",
-                "newPage": false,
-                "searchKey": "gcimporter.interfaceType",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const interfaceType"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst interfaceType\n```\n\n"
+                "value": "```Go\nconst definedType itag = iota\n```\n\nTypes \n\n"
               },
               "children": null
             }
@@ -287,6 +143,8 @@
                 "newPage": false,
                 "searchKey": "gcimporter.deltaNewFile",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -303,12 +161,62 @@
           },
           {
             "node": {
+              "pathID": "/go/internal/gcimporter#interfaceType",
+              "documentation": {
+                "identifier": "interfaceType",
+                "newPage": false,
+                "searchKey": "gcimporter.interfaceType",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const interfaceType"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst interfaceType\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#mapType",
+              "documentation": {
+                "identifier": "mapType",
+                "newPage": false,
+                "searchKey": "gcimporter.mapType",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const mapType"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst mapType\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/go/internal/gcimporter#maxTime",
               "documentation": {
                 "identifier": "maxTime",
                 "newPage": false,
                 "searchKey": "gcimporter.maxTime",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -319,6 +227,126 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst maxTime = 30 * time.Second\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#pointerType",
+              "documentation": {
+                "identifier": "pointerType",
+                "newPage": false,
+                "searchKey": "gcimporter.pointerType",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const pointerType"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst pointerType\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#predeclReserved",
+              "documentation": {
+                "identifier": "predeclReserved",
+                "newPage": false,
+                "searchKey": "gcimporter.predeclReserved",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const predeclReserved"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst predeclReserved = 32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#signatureType",
+              "documentation": {
+                "identifier": "signatureType",
+                "newPage": false,
+                "searchKey": "gcimporter.signatureType",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const signatureType"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst signatureType\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#sliceType",
+              "documentation": {
+                "identifier": "sliceType",
+                "newPage": false,
+                "searchKey": "gcimporter.sliceType",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const sliceType"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst sliceType\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#structType",
+              "documentation": {
+                "identifier": "structType",
+                "newPage": false,
+                "searchKey": "gcimporter.structType",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const structType"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst structType\n```\n\n"
               },
               "children": null
             }
@@ -334,6 +362,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -348,34 +377,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/go/internal/gcimporter#pkgExts",
-              "documentation": {
-                "identifier": "pkgExts",
-                "newPage": false,
-                "searchKey": "gcimporter.pkgExts",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var pkgExts"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar pkgExts = [...]string{\".a\", \".o\"}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/internal/gcimporter#fakeLines",
               "documentation": {
                 "identifier": "fakeLines",
                 "newPage": false,
                 "searchKey": "gcimporter.fakeLines",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -398,6 +408,8 @@
                 "newPage": false,
                 "searchKey": "gcimporter.fakeLinesOnce",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -414,34 +426,15 @@
           },
           {
             "node": {
-              "pathID": "/go/internal/gcimporter#predeclared",
-              "documentation": {
-                "identifier": "predeclared",
-                "newPage": false,
-                "searchKey": "gcimporter.predeclared",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var predeclared"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar predeclared = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/internal/gcimporter#importedObjectTests",
               "documentation": {
                 "identifier": "importedObjectTests",
                 "newPage": false,
                 "searchKey": "gcimporter.importedObjectTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -452,6 +445,56 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar importedObjectTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#pkgExts",
+              "documentation": {
+                "identifier": "pkgExts",
+                "newPage": false,
+                "searchKey": "gcimporter.pkgExts",
+                "tags": [
+                  "variable",
+                  "array",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var pkgExts"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar pkgExts = [...]string{\".a\", \".o\"}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#predeclared",
+              "documentation": {
+                "identifier": "predeclared",
+                "newPage": false,
+                "searchKey": "gcimporter.predeclared",
+                "tags": [
+                  "variable",
+                  "array",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var predeclared"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar predeclared = ...\n```\n\n"
               },
               "children": null
             }
@@ -467,6 +510,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -481,12 +525,84 @@
         "children": [
           {
             "node": {
+              "pathID": "/go/internal/gcimporter#anyType",
+              "documentation": {
+                "identifier": "anyType",
+                "newPage": false,
+                "searchKey": "gcimporter.anyType",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type anyType struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype anyType struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/go/internal/gcimporter#anyType.String",
+                    "documentation": {
+                      "identifier": "anyType.String",
+                      "newPage": false,
+                      "searchKey": "gcimporter.anyType.String",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t anyType) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t anyType) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gcimporter#anyType.Underlying",
+                    "documentation": {
+                      "identifier": "anyType.Underlying",
+                      "newPage": false,
+                      "searchKey": "gcimporter.anyType.Underlying",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t anyType) Underlying() types.Type"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t anyType) Underlying() types.Type\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/go/internal/gcimporter#byPath",
               "documentation": {
                 "identifier": "byPath",
                 "newPage": false,
                 "searchKey": "gcimporter.byPath",
                 "tags": [
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -507,6 +623,7 @@
                       "newPage": false,
                       "searchKey": "gcimporter.byPath.Len",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -523,34 +640,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/go/internal/gcimporter#byPath.Swap",
-                    "documentation": {
-                      "identifier": "byPath.Swap",
-                      "newPage": false,
-                      "searchKey": "gcimporter.byPath.Swap",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (a byPath) Swap(i, j int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (a byPath) Swap(i, j int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/go/internal/gcimporter#byPath.Less",
                     "documentation": {
                       "identifier": "byPath.Less",
                       "newPage": false,
                       "searchKey": "gcimporter.byPath.Less",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -564,97 +660,78 @@
                     },
                     "children": null
                   }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gcimporter#byPath.Swap",
+                    "documentation": {
+                      "identifier": "byPath.Swap",
+                      "newPage": false,
+                      "searchKey": "gcimporter.byPath.Swap",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a byPath) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a byPath) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
                 }
               ]
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gcimporter#intReader",
+              "pathID": "/go/internal/gcimporter#fakeFileSet",
               "documentation": {
-                "identifier": "intReader",
+                "identifier": "fakeFileSet",
                 "newPage": false,
-                "searchKey": "gcimporter.intReader",
+                "searchKey": "gcimporter.fakeFileSet",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type intReader struct"
+                "value": "type fakeFileSet struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype intReader struct {\n\t*bufio.Reader\n\tpath string\n}\n```\n\n"
+                "value": "```Go\ntype fakeFileSet struct {\n\tfset  *token.FileSet\n\tfiles map[string]*token.File\n}\n```\n\nSynthesize a token.Pos \n\n"
               },
               "children": [
                 {
                   "node": {
-                    "pathID": "/go/internal/gcimporter#intReader.int64",
+                    "pathID": "/go/internal/gcimporter#fakeFileSet.pos",
                     "documentation": {
-                      "identifier": "intReader.int64",
+                      "identifier": "fakeFileSet.pos",
                       "newPage": false,
-                      "searchKey": "gcimporter.intReader.int64",
+                      "searchKey": "gcimporter.fakeFileSet.pos",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (r *intReader) int64() int64"
+                      "value": "func (s *fakeFileSet) pos(file string, line, column int) token.Pos"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (r *intReader) int64() int64\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gcimporter#intReader.uint64",
-                    "documentation": {
-                      "identifier": "intReader.uint64",
-                      "newPage": false,
-                      "searchKey": "gcimporter.intReader.uint64",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *intReader) uint64() uint64"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *intReader) uint64() uint64\n```\n\n"
+                      "value": "```Go\nfunc (s *fakeFileSet) pos(file string, line, column int) token.Pos\n```\n\n"
                     },
                     "children": null
                   }
                 }
               ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#itag",
-              "documentation": {
-                "identifier": "itag",
-                "newPage": false,
-                "searchKey": "gcimporter.itag",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type itag uint64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype itag uint64\n```\n\n"
-              },
-              "children": null
             }
           },
           {
@@ -665,6 +742,7 @@
                 "newPage": false,
                 "searchKey": "gcimporter.iimporter",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -685,6 +763,7 @@
                       "newPage": false,
                       "searchKey": "gcimporter.iimporter.doDecl",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -701,34 +780,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/go/internal/gcimporter#iimporter.stringAt",
-                    "documentation": {
-                      "identifier": "iimporter.stringAt",
-                      "newPage": false,
-                      "searchKey": "gcimporter.iimporter.stringAt",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *iimporter) stringAt(off uint64) string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *iimporter) stringAt(off uint64) string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/go/internal/gcimporter#iimporter.pkgAt",
                     "documentation": {
                       "identifier": "iimporter.pkgAt",
                       "newPage": false,
                       "searchKey": "gcimporter.iimporter.pkgAt",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -745,12 +803,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/go/internal/gcimporter#iimporter.stringAt",
+                    "documentation": {
+                      "identifier": "iimporter.stringAt",
+                      "newPage": false,
+                      "searchKey": "gcimporter.iimporter.stringAt",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *iimporter) stringAt(off uint64) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *iimporter) stringAt(off uint64) string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/go/internal/gcimporter#iimporter.typAt",
                     "documentation": {
                       "identifier": "iimporter.typAt",
                       "newPage": false,
                       "searchKey": "gcimporter.iimporter.typAt",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -776,6 +858,7 @@
                 "newPage": false,
                 "searchKey": "gcimporter.importReader",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -790,22 +873,46 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/go/internal/gcimporter#importReader.obj",
+                    "pathID": "/go/internal/gcimporter#importReader.bool",
                     "documentation": {
-                      "identifier": "importReader.obj",
+                      "identifier": "importReader.bool",
                       "newPage": false,
-                      "searchKey": "gcimporter.importReader.obj",
+                      "searchKey": "gcimporter.importReader.bool",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (r *importReader) obj(name string)"
+                      "value": "func (r *importReader) bool() bool"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (r *importReader) obj(name string)\n```\n\n"
+                      "value": "```Go\nfunc (r *importReader) bool() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gcimporter#importReader.byte",
+                    "documentation": {
+                      "identifier": "importReader.byte",
+                      "newPage": false,
+                      "searchKey": "gcimporter.importReader.byte",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *importReader) byte() byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *importReader) byte() byte\n```\n\n"
                     },
                     "children": null
                   }
@@ -818,6 +925,7 @@
                       "newPage": false,
                       "searchKey": "gcimporter.importReader.declare",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -834,66 +942,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/go/internal/gcimporter#importReader.value",
+                    "pathID": "/go/internal/gcimporter#importReader.doType",
                     "documentation": {
-                      "identifier": "importReader.value",
+                      "identifier": "importReader.doType",
                       "newPage": false,
-                      "searchKey": "gcimporter.importReader.value",
+                      "searchKey": "gcimporter.importReader.doType",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (r *importReader) value() (typ types.Type, val constant.Value)"
+                      "value": "func (r *importReader) doType(base *types.Named) types.Type"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (r *importReader) value() (typ types.Type, val constant.Value)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gcimporter#importReader.mpint",
-                    "documentation": {
-                      "identifier": "importReader.mpint",
-                      "newPage": false,
-                      "searchKey": "gcimporter.importReader.mpint",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *importReader) mpint(x *big.Int, typ *types.Basic)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *importReader) mpint(x *big.Int, typ *types.Basic)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gcimporter#importReader.mpfloat",
-                    "documentation": {
-                      "identifier": "importReader.mpfloat",
-                      "newPage": false,
-                      "searchKey": "gcimporter.importReader.mpfloat",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *importReader) mpfloat(typ *types.Basic) constant.Value"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *importReader) mpfloat(typ *types.Basic) constant.Value\n```\n\n"
+                      "value": "```Go\nfunc (r *importReader) doType(base *types.Named) types.Type\n```\n\n"
                     },
                     "children": null
                   }
@@ -906,6 +971,7 @@
                       "newPage": false,
                       "searchKey": "gcimporter.importReader.ident",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -922,22 +988,184 @@
                 },
                 {
                   "node": {
-                    "pathID": "/go/internal/gcimporter#importReader.qualifiedIdent",
+                    "pathID": "/go/internal/gcimporter#importReader.int64",
                     "documentation": {
-                      "identifier": "importReader.qualifiedIdent",
+                      "identifier": "importReader.int64",
                       "newPage": false,
-                      "searchKey": "gcimporter.importReader.qualifiedIdent",
+                      "searchKey": "gcimporter.importReader.int64",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (r *importReader) qualifiedIdent() (*types.Package, string)"
+                      "value": "func (r *importReader) int64() int64"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (r *importReader) qualifiedIdent() (*types.Package, string)\n```\n\n"
+                      "value": "```Go\nfunc (r *importReader) int64() int64\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gcimporter#importReader.kind",
+                    "documentation": {
+                      "identifier": "importReader.kind",
+                      "newPage": false,
+                      "searchKey": "gcimporter.importReader.kind",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *importReader) kind() itag"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *importReader) kind() itag\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gcimporter#importReader.mpfloat",
+                    "documentation": {
+                      "identifier": "importReader.mpfloat",
+                      "newPage": false,
+                      "searchKey": "gcimporter.importReader.mpfloat",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *importReader) mpfloat(typ *types.Basic) constant.Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *importReader) mpfloat(typ *types.Basic) constant.Value\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gcimporter#importReader.mpint",
+                    "documentation": {
+                      "identifier": "importReader.mpint",
+                      "newPage": false,
+                      "searchKey": "gcimporter.importReader.mpint",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *importReader) mpint(x *big.Int, typ *types.Basic)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *importReader) mpint(x *big.Int, typ *types.Basic)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gcimporter#importReader.obj",
+                    "documentation": {
+                      "identifier": "importReader.obj",
+                      "newPage": false,
+                      "searchKey": "gcimporter.importReader.obj",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *importReader) obj(name string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *importReader) obj(name string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gcimporter#importReader.param",
+                    "documentation": {
+                      "identifier": "importReader.param",
+                      "newPage": false,
+                      "searchKey": "gcimporter.importReader.param",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *importReader) param() *types.Var"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *importReader) param() *types.Var\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gcimporter#importReader.paramList",
+                    "documentation": {
+                      "identifier": "importReader.paramList",
+                      "newPage": false,
+                      "searchKey": "gcimporter.importReader.paramList",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *importReader) paramList() *types.Tuple"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *importReader) paramList() *types.Tuple\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/gcimporter#importReader.pkg",
+                    "documentation": {
+                      "identifier": "importReader.pkg",
+                      "newPage": false,
+                      "searchKey": "gcimporter.importReader.pkg",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *importReader) pkg() *types.Package"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *importReader) pkg() *types.Package\n```\n\n"
                     },
                     "children": null
                   }
@@ -950,6 +1178,7 @@
                       "newPage": false,
                       "searchKey": "gcimporter.importReader.pos",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -972,6 +1201,7 @@
                       "newPage": false,
                       "searchKey": "gcimporter.importReader.posv0",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -994,6 +1224,7 @@
                       "newPage": false,
                       "searchKey": "gcimporter.importReader.posv1",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1010,110 +1241,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/go/internal/gcimporter#importReader.typ",
+                    "pathID": "/go/internal/gcimporter#importReader.qualifiedIdent",
                     "documentation": {
-                      "identifier": "importReader.typ",
+                      "identifier": "importReader.qualifiedIdent",
                       "newPage": false,
-                      "searchKey": "gcimporter.importReader.typ",
+                      "searchKey": "gcimporter.importReader.qualifiedIdent",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (r *importReader) typ() types.Type"
+                      "value": "func (r *importReader) qualifiedIdent() (*types.Package, string)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (r *importReader) typ() types.Type\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gcimporter#importReader.pkg",
-                    "documentation": {
-                      "identifier": "importReader.pkg",
-                      "newPage": false,
-                      "searchKey": "gcimporter.importReader.pkg",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *importReader) pkg() *types.Package"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *importReader) pkg() *types.Package\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gcimporter#importReader.string",
-                    "documentation": {
-                      "identifier": "importReader.string",
-                      "newPage": false,
-                      "searchKey": "gcimporter.importReader.string",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *importReader) string() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *importReader) string() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gcimporter#importReader.doType",
-                    "documentation": {
-                      "identifier": "importReader.doType",
-                      "newPage": false,
-                      "searchKey": "gcimporter.importReader.doType",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *importReader) doType(base *types.Named) types.Type"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *importReader) doType(base *types.Named) types.Type\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gcimporter#importReader.kind",
-                    "documentation": {
-                      "identifier": "importReader.kind",
-                      "newPage": false,
-                      "searchKey": "gcimporter.importReader.kind",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *importReader) kind() itag"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *importReader) kind() itag\n```\n\n"
+                      "value": "```Go\nfunc (r *importReader) qualifiedIdent() (*types.Package, string)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1126,6 +1270,7 @@
                       "newPage": false,
                       "searchKey": "gcimporter.importReader.signature",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1142,88 +1287,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/go/internal/gcimporter#importReader.paramList",
+                    "pathID": "/go/internal/gcimporter#importReader.string",
                     "documentation": {
-                      "identifier": "importReader.paramList",
+                      "identifier": "importReader.string",
                       "newPage": false,
-                      "searchKey": "gcimporter.importReader.paramList",
+                      "searchKey": "gcimporter.importReader.string",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (r *importReader) paramList() *types.Tuple"
+                      "value": "func (r *importReader) string() string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (r *importReader) paramList() *types.Tuple\n```\n\n"
+                      "value": "```Go\nfunc (r *importReader) string() string\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/go/internal/gcimporter#importReader.param",
+                    "pathID": "/go/internal/gcimporter#importReader.typ",
                     "documentation": {
-                      "identifier": "importReader.param",
+                      "identifier": "importReader.typ",
                       "newPage": false,
-                      "searchKey": "gcimporter.importReader.param",
+                      "searchKey": "gcimporter.importReader.typ",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (r *importReader) param() *types.Var"
+                      "value": "func (r *importReader) typ() types.Type"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (r *importReader) param() *types.Var\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gcimporter#importReader.bool",
-                    "documentation": {
-                      "identifier": "importReader.bool",
-                      "newPage": false,
-                      "searchKey": "gcimporter.importReader.bool",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *importReader) bool() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *importReader) bool() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/go/internal/gcimporter#importReader.int64",
-                    "documentation": {
-                      "identifier": "importReader.int64",
-                      "newPage": false,
-                      "searchKey": "gcimporter.importReader.int64",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *importReader) int64() int64"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *importReader) int64() int64\n```\n\n"
+                      "value": "```Go\nfunc (r *importReader) typ() types.Type\n```\n\n"
                     },
                     "children": null
                   }
@@ -1236,6 +1339,7 @@
                       "newPage": false,
                       "searchKey": "gcimporter.importReader.uint64",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1252,22 +1356,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/go/internal/gcimporter#importReader.byte",
+                    "pathID": "/go/internal/gcimporter#importReader.value",
                     "documentation": {
-                      "identifier": "importReader.byte",
+                      "identifier": "importReader.value",
                       "newPage": false,
-                      "searchKey": "gcimporter.importReader.byte",
+                      "searchKey": "gcimporter.importReader.value",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (r *importReader) byte() byte"
+                      "value": "func (r *importReader) value() (typ types.Type, val constant.Value)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (r *importReader) byte() byte\n```\n\n"
+                      "value": "```Go\nfunc (r *importReader) value() (typ types.Type, val constant.Value)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1277,114 +1382,95 @@
           },
           {
             "node": {
-              "pathID": "/go/internal/gcimporter#fakeFileSet",
+              "pathID": "/go/internal/gcimporter#intReader",
               "documentation": {
-                "identifier": "fakeFileSet",
+                "identifier": "intReader",
                 "newPage": false,
-                "searchKey": "gcimporter.fakeFileSet",
+                "searchKey": "gcimporter.intReader",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type fakeFileSet struct"
+                "value": "type intReader struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype fakeFileSet struct {\n\tfset  *token.FileSet\n\tfiles map[string]*token.File\n}\n```\n\nSynthesize a token.Pos \n\n"
+                "value": "```Go\ntype intReader struct {\n\t*bufio.Reader\n\tpath string\n}\n```\n\n"
               },
               "children": [
                 {
                   "node": {
-                    "pathID": "/go/internal/gcimporter#fakeFileSet.pos",
+                    "pathID": "/go/internal/gcimporter#intReader.int64",
                     "documentation": {
-                      "identifier": "fakeFileSet.pos",
+                      "identifier": "intReader.int64",
                       "newPage": false,
-                      "searchKey": "gcimporter.fakeFileSet.pos",
+                      "searchKey": "gcimporter.intReader.int64",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (s *fakeFileSet) pos(file string, line, column int) token.Pos"
+                      "value": "func (r *intReader) int64() int64"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (s *fakeFileSet) pos(file string, line, column int) token.Pos\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#anyType",
-              "documentation": {
-                "identifier": "anyType",
-                "newPage": false,
-                "searchKey": "gcimporter.anyType",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type anyType struct{}"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype anyType struct{}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/go/internal/gcimporter#anyType.Underlying",
-                    "documentation": {
-                      "identifier": "anyType.Underlying",
-                      "newPage": false,
-                      "searchKey": "gcimporter.anyType.Underlying",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t anyType) Underlying() types.Type"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t anyType) Underlying() types.Type\n```\n\n"
+                      "value": "```Go\nfunc (r *intReader) int64() int64\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/go/internal/gcimporter#anyType.String",
+                    "pathID": "/go/internal/gcimporter#intReader.uint64",
                     "documentation": {
-                      "identifier": "anyType.String",
+                      "identifier": "intReader.uint64",
                       "newPage": false,
-                      "searchKey": "gcimporter.anyType.String",
+                      "searchKey": "gcimporter.intReader.uint64",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (t anyType) String() string"
+                      "value": "func (r *intReader) uint64() uint64"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (t anyType) String() string\n```\n\n"
+                      "value": "```Go\nfunc (r *intReader) uint64() uint64\n```\n\n"
                     },
                     "children": null
                   }
                 }
               ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#itag",
+              "documentation": {
+                "identifier": "itag",
+                "newPage": false,
+                "searchKey": "gcimporter.itag",
+                "tags": [
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type itag uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype itag uint64\n```\n\n"
+              },
+              "children": null
             }
           }
         ]
@@ -1398,6 +1484,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -1412,34 +1499,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/go/internal/gcimporter#readGopackHeader",
-              "documentation": {
-                "identifier": "readGopackHeader",
-                "newPage": false,
-                "searchKey": "gcimporter.readGopackHeader",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func readGopackHeader(r *bufio.Reader) (name string, size int, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc readGopackHeader(r *bufio.Reader) (name string, size int, err error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/internal/gcimporter#FindExportData",
               "documentation": {
                 "identifier": "FindExportData",
                 "newPage": false,
                 "searchKey": "gcimporter.FindExportData",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1459,7 +1526,9 @@
                 "identifier": "FindPkg",
                 "newPage": false,
                 "searchKey": "gcimporter.FindPkg",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1479,7 +1548,9 @@
                 "identifier": "Import",
                 "newPage": false,
                 "searchKey": "gcimporter.Import",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1494,12 +1565,417 @@
           },
           {
             "node": {
+              "pathID": "/go/internal/gcimporter#TestCorrectMethodPackage",
+              "documentation": {
+                "identifier": "TestCorrectMethodPackage",
+                "newPage": false,
+                "searchKey": "gcimporter.TestCorrectMethodPackage",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCorrectMethodPackage(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCorrectMethodPackage(t *testing.T)\n```\n\nSmoke test to ensure that imported methods get the correct package. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#TestImportStdLib",
+              "documentation": {
+                "identifier": "TestImportStdLib",
+                "newPage": false,
+                "searchKey": "gcimporter.TestImportStdLib",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestImportStdLib(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestImportStdLib(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#TestImportTestdata",
+              "documentation": {
+                "identifier": "TestImportTestdata",
+                "newPage": false,
+                "searchKey": "gcimporter.TestImportTestdata",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestImportTestdata(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestImportTestdata(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#TestImportedTypes",
+              "documentation": {
+                "identifier": "TestImportedTypes",
+                "newPage": false,
+                "searchKey": "gcimporter.TestImportedTypes",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestImportedTypes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestImportedTypes(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#TestIssue13566",
+              "documentation": {
+                "identifier": "TestIssue13566",
+                "newPage": false,
+                "searchKey": "gcimporter.TestIssue13566",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue13566(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue13566(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#TestIssue13898",
+              "documentation": {
+                "identifier": "TestIssue13898",
+                "newPage": false,
+                "searchKey": "gcimporter.TestIssue13898",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue13898(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue13898(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#TestIssue15517",
+              "documentation": {
+                "identifier": "TestIssue15517",
+                "newPage": false,
+                "searchKey": "gcimporter.TestIssue15517",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue15517(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue15517(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#TestIssue15920",
+              "documentation": {
+                "identifier": "TestIssue15920",
+                "newPage": false,
+                "searchKey": "gcimporter.TestIssue15920",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue15920(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue15920(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#TestIssue20046",
+              "documentation": {
+                "identifier": "TestIssue20046",
+                "newPage": false,
+                "searchKey": "gcimporter.TestIssue20046",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue20046(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue20046(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#TestIssue25301",
+              "documentation": {
+                "identifier": "TestIssue25301",
+                "newPage": false,
+                "searchKey": "gcimporter.TestIssue25301",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue25301(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue25301(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#TestIssue25596",
+              "documentation": {
+                "identifier": "TestIssue25596",
+                "newPage": false,
+                "searchKey": "gcimporter.TestIssue25596",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue25596(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue25596(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#TestIssue5815",
+              "documentation": {
+                "identifier": "TestIssue5815",
+                "newPage": false,
+                "searchKey": "gcimporter.TestIssue5815",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue5815(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue5815(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#TestVersionHandling",
+              "documentation": {
+                "identifier": "TestVersionHandling",
+                "newPage": false,
+                "searchKey": "gcimporter.TestVersionHandling",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestVersionHandling(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestVersionHandling(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#chanDir",
+              "documentation": {
+                "identifier": "chanDir",
+                "newPage": false,
+                "searchKey": "gcimporter.chanDir",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func chanDir(d int) types.ChanDir"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc chanDir(d int) types.ChanDir\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#compile",
+              "documentation": {
+                "identifier": "compile",
+                "newPage": false,
+                "searchKey": "gcimporter.compile",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func compile(t *testing.T, dirname, filename, outdirname string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc compile(t *testing.T, dirname, filename, outdirname string) string\n```\n\ncompile runs the compiler on filename, with dirname as the working directory, and writes the output file to outdirname. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#compileAndImportPkg",
+              "documentation": {
+                "identifier": "compileAndImportPkg",
+                "newPage": false,
+                "searchKey": "gcimporter.compileAndImportPkg",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func compileAndImportPkg(t *testing.T, name string) *types.Package"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc compileAndImportPkg(t *testing.T, name string) *types.Package\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/gcimporter#errorf",
+              "documentation": {
+                "identifier": "errorf",
+                "newPage": false,
+                "searchKey": "gcimporter.errorf",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func errorf(format string, args ...interface{})"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc errorf(format string, args ...interface{})\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/go/internal/gcimporter#iImportData",
               "documentation": {
                 "identifier": "iImportData",
                 "newPage": false,
                 "searchKey": "gcimporter.iImportData",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1516,12 +1992,36 @@
           },
           {
             "node": {
+              "pathID": "/go/internal/gcimporter#importPkg",
+              "documentation": {
+                "identifier": "importPkg",
+                "newPage": false,
+                "searchKey": "gcimporter.importPkg",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func importPkg(t *testing.T, path, srcDir string) *types.Package"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc importPkg(t *testing.T, path, srcDir string) *types.Package\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/go/internal/gcimporter#intSize",
               "documentation": {
                 "identifier": "intSize",
                 "newPage": false,
                 "searchKey": "gcimporter.intSize",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1544,6 +2044,7 @@
                 "newPage": false,
                 "searchKey": "gcimporter.isInterface",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1560,132 +2061,23 @@
           },
           {
             "node": {
-              "pathID": "/go/internal/gcimporter#errorf",
+              "pathID": "/go/internal/gcimporter#lookupObj",
               "documentation": {
-                "identifier": "errorf",
+                "identifier": "lookupObj",
                 "newPage": false,
-                "searchKey": "gcimporter.errorf",
+                "searchKey": "gcimporter.lookupObj",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func errorf(format string, args ...interface{})"
+                "value": "func lookupObj(t *testing.T, scope *types.Scope, name string) types.Object"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc errorf(format string, args ...interface{})\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#chanDir",
-              "documentation": {
-                "identifier": "chanDir",
-                "newPage": false,
-                "searchKey": "gcimporter.chanDir",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func chanDir(d int) types.ChanDir"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc chanDir(d int) types.ChanDir\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#skipSpecialPlatforms",
-              "documentation": {
-                "identifier": "skipSpecialPlatforms",
-                "newPage": false,
-                "searchKey": "gcimporter.skipSpecialPlatforms",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func skipSpecialPlatforms(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc skipSpecialPlatforms(t *testing.T)\n```\n\nskipSpecialPlatforms causes the test to be skipped for platforms where builders (build.golang.org) don't have access to compiled packages for import. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#compile",
-              "documentation": {
-                "identifier": "compile",
-                "newPage": false,
-                "searchKey": "gcimporter.compile",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func compile(t *testing.T, dirname, filename, outdirname string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc compile(t *testing.T, dirname, filename, outdirname string) string\n```\n\ncompile runs the compiler on filename, with dirname as the working directory, and writes the output file to outdirname. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#testPath",
-              "documentation": {
-                "identifier": "testPath",
-                "newPage": false,
-                "searchKey": "gcimporter.testPath",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testPath(t *testing.T, path, srcDir string) *types.Package"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testPath(t *testing.T, path, srcDir string) *types.Package\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#testDir",
-              "documentation": {
-                "identifier": "testDir",
-                "newPage": false,
-                "searchKey": "gcimporter.testDir",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testDir(t *testing.T, dir string, endTime time.Time) (nimports int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testDir(t *testing.T, dir string, endTime time.Time) (nimports int)\n```\n\n"
+                "value": "```Go\nfunc lookupObj(t *testing.T, scope *types.Scope, name string) types.Object\n```\n\n"
               },
               "children": null
             }
@@ -1698,6 +2090,7 @@
                 "newPage": false,
                 "searchKey": "gcimporter.mktmpdir",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1714,88 +2107,92 @@
           },
           {
             "node": {
-              "pathID": "/go/internal/gcimporter#TestImportTestdata",
+              "pathID": "/go/internal/gcimporter#readGopackHeader",
               "documentation": {
-                "identifier": "TestImportTestdata",
+                "identifier": "readGopackHeader",
                 "newPage": false,
-                "searchKey": "gcimporter.TestImportTestdata",
+                "searchKey": "gcimporter.readGopackHeader",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestImportTestdata(t *testing.T)"
+                "value": "func readGopackHeader(r *bufio.Reader) (name string, size int, err error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestImportTestdata(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc readGopackHeader(r *bufio.Reader) (name string, size int, err error)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gcimporter#TestVersionHandling",
+              "pathID": "/go/internal/gcimporter#skipSpecialPlatforms",
               "documentation": {
-                "identifier": "TestVersionHandling",
+                "identifier": "skipSpecialPlatforms",
                 "newPage": false,
-                "searchKey": "gcimporter.TestVersionHandling",
+                "searchKey": "gcimporter.skipSpecialPlatforms",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestVersionHandling(t *testing.T)"
+                "value": "func skipSpecialPlatforms(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestVersionHandling(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc skipSpecialPlatforms(t *testing.T)\n```\n\nskipSpecialPlatforms causes the test to be skipped for platforms where builders (build.golang.org) don't have access to compiled packages for import. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gcimporter#TestImportStdLib",
+              "pathID": "/go/internal/gcimporter#testDir",
               "documentation": {
-                "identifier": "TestImportStdLib",
+                "identifier": "testDir",
                 "newPage": false,
-                "searchKey": "gcimporter.TestImportStdLib",
+                "searchKey": "gcimporter.testDir",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestImportStdLib(t *testing.T)"
+                "value": "func testDir(t *testing.T, dir string, endTime time.Time) (nimports int)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestImportStdLib(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc testDir(t *testing.T, dir string, endTime time.Time) (nimports int)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/internal/gcimporter#TestImportedTypes",
+              "pathID": "/go/internal/gcimporter#testPath",
               "documentation": {
-                "identifier": "TestImportedTypes",
+                "identifier": "testPath",
                 "newPage": false,
-                "searchKey": "gcimporter.TestImportedTypes",
+                "searchKey": "gcimporter.testPath",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestImportedTypes(t *testing.T)"
+                "value": "func testPath(t *testing.T, path, srcDir string) *types.Package"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestImportedTypes(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc testPath(t *testing.T, path, srcDir string) *types.Package\n```\n\n"
               },
               "children": null
             }
@@ -1808,6 +2205,7 @@
                 "newPage": false,
                 "searchKey": "gcimporter.verifyInterfaceMethodRecvs",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1818,270 +2216,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc verifyInterfaceMethodRecvs(t *testing.T, named *types.Named, level int)\n```\n\nverifyInterfaceMethodRecvs verifies that method receiver types are named if the methods belong to a named interface type. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#TestIssue5815",
-              "documentation": {
-                "identifier": "TestIssue5815",
-                "newPage": false,
-                "searchKey": "gcimporter.TestIssue5815",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIssue5815(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIssue5815(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#TestCorrectMethodPackage",
-              "documentation": {
-                "identifier": "TestCorrectMethodPackage",
-                "newPage": false,
-                "searchKey": "gcimporter.TestCorrectMethodPackage",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCorrectMethodPackage(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCorrectMethodPackage(t *testing.T)\n```\n\nSmoke test to ensure that imported methods get the correct package. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#TestIssue13566",
-              "documentation": {
-                "identifier": "TestIssue13566",
-                "newPage": false,
-                "searchKey": "gcimporter.TestIssue13566",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIssue13566(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIssue13566(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#TestIssue13898",
-              "documentation": {
-                "identifier": "TestIssue13898",
-                "newPage": false,
-                "searchKey": "gcimporter.TestIssue13898",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIssue13898(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIssue13898(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#TestIssue15517",
-              "documentation": {
-                "identifier": "TestIssue15517",
-                "newPage": false,
-                "searchKey": "gcimporter.TestIssue15517",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIssue15517(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIssue15517(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#TestIssue15920",
-              "documentation": {
-                "identifier": "TestIssue15920",
-                "newPage": false,
-                "searchKey": "gcimporter.TestIssue15920",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIssue15920(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIssue15920(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#TestIssue20046",
-              "documentation": {
-                "identifier": "TestIssue20046",
-                "newPage": false,
-                "searchKey": "gcimporter.TestIssue20046",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIssue20046(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIssue20046(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#TestIssue25301",
-              "documentation": {
-                "identifier": "TestIssue25301",
-                "newPage": false,
-                "searchKey": "gcimporter.TestIssue25301",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIssue25301(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIssue25301(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#TestIssue25596",
-              "documentation": {
-                "identifier": "TestIssue25596",
-                "newPage": false,
-                "searchKey": "gcimporter.TestIssue25596",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIssue25596(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIssue25596(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#importPkg",
-              "documentation": {
-                "identifier": "importPkg",
-                "newPage": false,
-                "searchKey": "gcimporter.importPkg",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func importPkg(t *testing.T, path, srcDir string) *types.Package"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc importPkg(t *testing.T, path, srcDir string) *types.Package\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#compileAndImportPkg",
-              "documentation": {
-                "identifier": "compileAndImportPkg",
-                "newPage": false,
-                "searchKey": "gcimporter.compileAndImportPkg",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func compileAndImportPkg(t *testing.T, name string) *types.Package"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc compileAndImportPkg(t *testing.T, name string) *types.Package\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/internal/gcimporter#lookupObj",
-              "documentation": {
-                "identifier": "lookupObj",
-                "newPage": false,
-                "searchKey": "gcimporter.lookupObj",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func lookupObj(t *testing.T, scope *types.Scope, name string) types.Object"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc lookupObj(t *testing.T, scope *types.Scope, name string) types.Object\n```\n\n"
               },
               "children": null
             }

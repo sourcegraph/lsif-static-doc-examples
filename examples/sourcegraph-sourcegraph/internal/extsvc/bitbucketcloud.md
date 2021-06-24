@@ -3,50 +3,67 @@
 ## Index
 
 * [Constants](#const)
-    * [const rateLimitRequestsPerSecond](#rateLimitRequestsPerSecond)
     * [const RateLimitMaxBurstRequests](#RateLimitMaxBurstRequests)
+    * [const rateLimitRequestsPerSecond](#rateLimitRequestsPerSecond)
 * [Variables](#var)
-    * [var requestCounter](#requestCounter)
     * [var normalizer](#normalizer)
+    * [var requestCounter](#requestCounter)
     * [var update](#update)
 * [Types](#type)
     * [type Client struct](#Client)
         * [func NewClient(apiURL *url.URL, httpClient httpcli.Doer) *Client](#NewClient)
         * [func NewTestClient(t testing.TB, name string, update bool, apiURL *url.URL) (*Client, func())](#NewTestClient)
         * [func (c *Client) Repos(ctx context.Context, pageToken *PageToken, accountName string) ([]*Repo, *PageToken, error)](#Client.Repos)
+        * [func (c *Client) authenticate(req *http.Request) error](#Client.authenticate)
+        * [func (c *Client) do(ctx context.Context, req *http.Request, result interface{}) error](#Client.do)
         * [func (c *Client) page(ctx context.Context, path string, qry url.Values, token *PageToken, results interface{}) (*PageToken, error)](#Client.page)
         * [func (c *Client) reqPage(ctx context.Context, url string, results interface{}) (*PageToken, error)](#Client.reqPage)
-        * [func (c *Client) do(ctx context.Context, req *http.Request, result interface{}) error](#Client.do)
-        * [func (c *Client) authenticate(req *http.Request) error](#Client.authenticate)
+    * [type CloneLinks []struct](#CloneLinks)
+        * [func (cl CloneLinks) HTTPS() (string, error)](#CloneLinks.HTTPS)
+    * [type Link struct](#Link)
+    * [type Links struct](#Links)
     * [type PageToken struct](#PageToken)
         * [func (t *PageToken) HasMore() bool](#PageToken.HasMore)
         * [func (t *PageToken) Values() url.Values](#PageToken.Values)
     * [type Repo struct](#Repo)
-    * [type Links struct](#Links)
-    * [type CloneLinks []struct](#CloneLinks)
-        * [func (cl CloneLinks) HTTPS() (string, error)](#CloneLinks.HTTPS)
-    * [type Link struct](#Link)
     * [type httpError struct](#httpError)
         * [func (e *httpError) Error() string](#httpError.Error)
-        * [func (e *httpError) Unauthorized() bool](#httpError.Unauthorized)
         * [func (e *httpError) NotFound() bool](#httpError.NotFound)
+        * [func (e *httpError) Unauthorized() bool](#httpError.Unauthorized)
 * [Functions](#func)
     * [func GetenvTestBitbucketCloudUsername() string](#GetenvTestBitbucketCloudUsername)
-    * [func normalize(path string) string](#normalize)
     * [func TestClient_Repos(t *testing.T)](#TestClient_Repos)
+    * [func normalize(path string) string](#normalize)
 
 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
+
+### <a id="RateLimitMaxBurstRequests" href="#RateLimitMaxBurstRequests">const RateLimitMaxBurstRequests</a>
+
+```
+searchKey: bitbucketcloud.RateLimitMaxBurstRequests
+tags: [constant number]
+```
+
+```Go
+const RateLimitMaxBurstRequests = 500
+```
+
+These fields define the self-imposed Bitbucket rate limit (since Bitbucket Cloud does not have a concept of rate limiting in HTTP response headers). 
+
+See [https://godoc.org/golang.org/x/time/rate#Limiter](https://godoc.org/golang.org/x/time/rate#Limiter) for an explanation of these fields. 
+
+The limits chosen here are based on the following logic: Bitbucket Cloud restricts "List all repositories" requests (which are a good portion of our requests) to 1,000/hr, and they restrict "List a user or team's repositories" requests (which are roughly equal to our repository lookup requests) to 1,000/hr. See `pkg/extsvc/bitbucketserver/client.go` for the calculations behind these limits` 
 
 ### <a id="rateLimitRequestsPerSecond" href="#rateLimitRequestsPerSecond">const rateLimitRequestsPerSecond</a>
 
 ```
 searchKey: bitbucketcloud.rateLimitRequestsPerSecond
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -60,55 +77,39 @@ See [https://godoc.org/golang.org/x/time/rate#Limiter](https://godoc.org/golang.
 
 The limits chosen here are based on the following logic: Bitbucket Cloud restricts "List all repositories" requests (which are a good portion of our requests) to 1,000/hr, and they restrict "List a user or team's repositories" requests (which are roughly equal to our repository lookup requests) to 1,000/hr. See `pkg/extsvc/bitbucketserver/client.go` for the calculations behind these limits` 
 
-### <a id="RateLimitMaxBurstRequests" href="#RateLimitMaxBurstRequests">const RateLimitMaxBurstRequests</a>
-
-```
-searchKey: bitbucketcloud.RateLimitMaxBurstRequests
-```
-
-```Go
-const RateLimitMaxBurstRequests = 500
-```
-
-These fields define the self-imposed Bitbucket rate limit (since Bitbucket Cloud does not have a concept of rate limiting in HTTP response headers). 
-
-See [https://godoc.org/golang.org/x/time/rate#Limiter](https://godoc.org/golang.org/x/time/rate#Limiter) for an explanation of these fields. 
-
-The limits chosen here are based on the following logic: Bitbucket Cloud restricts "List all repositories" requests (which are a good portion of our requests) to 1,000/hr, and they restrict "List a user or team's repositories" requests (which are roughly equal to our repository lookup requests) to 1,000/hr. See `pkg/extsvc/bitbucketserver/client.go` for the calculations behind these limits` 
-
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
-```
-
-### <a id="requestCounter" href="#requestCounter">var requestCounter</a>
-
-```
-searchKey: bitbucketcloud.requestCounter
-tags: [private]
-```
-
-```Go
-var requestCounter = ...
+tags: [package private]
 ```
 
 ### <a id="normalizer" href="#normalizer">var normalizer</a>
 
 ```
 searchKey: bitbucketcloud.normalizer
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
 var normalizer = lazyregexp.New("[^A-Za-z0-9-]+")
 ```
 
+### <a id="requestCounter" href="#requestCounter">var requestCounter</a>
+
+```
+searchKey: bitbucketcloud.requestCounter
+tags: [variable struct private]
+```
+
+```Go
+var requestCounter = ...
+```
+
 ### <a id="update" href="#update">var update</a>
 
 ```
 searchKey: bitbucketcloud.update
-tags: [private]
+tags: [variable boolean private]
 ```
 
 ```Go
@@ -118,13 +119,14 @@ var update = flag.Bool("update", false, "update testdata")
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Client" href="#Client">type Client struct</a>
 
 ```
 searchKey: bitbucketcloud.Client
+tags: [struct]
 ```
 
 ```Go
@@ -150,6 +152,7 @@ Client access a Bitbucket Cloud via the REST API 2.0.
 
 ```
 searchKey: bitbucketcloud.NewClient
+tags: [method]
 ```
 
 ```Go
@@ -162,6 +165,7 @@ NewClient creates a new Bitbucket Cloud API client with given apiURL. If a nil h
 
 ```
 searchKey: bitbucketcloud.NewTestClient
+tags: [method]
 ```
 
 ```Go
@@ -174,6 +178,7 @@ NewTestClient returns a bitbucketcloud.Client that records its interactions to t
 
 ```
 searchKey: bitbucketcloud.Client.Repos
+tags: [method]
 ```
 
 ```Go
@@ -182,11 +187,33 @@ func (c *Client) Repos(ctx context.Context, pageToken *PageToken, accountName st
 
 Repos returns a list of repositories that are fetched and populated based on given account name and pagination criteria. If the account requested is a team, results will be filtered down to the ones that the app password's user has access to. If the argument pageToken.Next is not empty, it will be used directly as the URL to make the request. The PageToken it returns may also contain the URL to the next page for succeeding requests if any. 
 
+#### <a id="Client.authenticate" href="#Client.authenticate">func (c *Client) authenticate(req *http.Request) error</a>
+
+```
+searchKey: bitbucketcloud.Client.authenticate
+tags: [method private]
+```
+
+```Go
+func (c *Client) authenticate(req *http.Request) error
+```
+
+#### <a id="Client.do" href="#Client.do">func (c *Client) do(ctx context.Context, req *http.Request, result interface{}) error</a>
+
+```
+searchKey: bitbucketcloud.Client.do
+tags: [method private]
+```
+
+```Go
+func (c *Client) do(ctx context.Context, req *http.Request, result interface{}) error
+```
+
 #### <a id="Client.page" href="#Client.page">func (c *Client) page(ctx context.Context, path string, qry url.Values, token *PageToken, results interface{}) (*PageToken, error)</a>
 
 ```
 searchKey: bitbucketcloud.Client.page
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -197,7 +224,7 @@ func (c *Client) page(ctx context.Context, path string, qry url.Values, token *P
 
 ```
 searchKey: bitbucketcloud.Client.reqPage
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -206,32 +233,65 @@ func (c *Client) reqPage(ctx context.Context, url string, results interface{}) (
 
 reqPage directly requests resources from given URL assuming all attributes have been included in the URL parameter. This is particular useful since the Bitbucket Cloud API 2.0 pagination renders the full link of next page in the response. See more at [https://developer.atlassian.com/bitbucket/api/2/reference/meta/pagination](https://developer.atlassian.com/bitbucket/api/2/reference/meta/pagination) However, for the very first request, use method page instead. 
 
-#### <a id="Client.do" href="#Client.do">func (c *Client) do(ctx context.Context, req *http.Request, result interface{}) error</a>
+### <a id="CloneLinks" href="#CloneLinks">type CloneLinks []struct</a>
 
 ```
-searchKey: bitbucketcloud.Client.do
-tags: [private]
-```
-
-```Go
-func (c *Client) do(ctx context.Context, req *http.Request, result interface{}) error
-```
-
-#### <a id="Client.authenticate" href="#Client.authenticate">func (c *Client) authenticate(req *http.Request) error</a>
-
-```
-searchKey: bitbucketcloud.Client.authenticate
-tags: [private]
+searchKey: bitbucketcloud.CloneLinks
+tags: [array struct]
 ```
 
 ```Go
-func (c *Client) authenticate(req *http.Request) error
+type CloneLinks []struct {
+	Href string `json:"href"`
+	Name string `json:"name"`
+}
+```
+
+#### <a id="CloneLinks.HTTPS" href="#CloneLinks.HTTPS">func (cl CloneLinks) HTTPS() (string, error)</a>
+
+```
+searchKey: bitbucketcloud.CloneLinks.HTTPS
+tags: [function]
+```
+
+```Go
+func (cl CloneLinks) HTTPS() (string, error)
+```
+
+HTTPS returns clone link named "https", it returns an error if not found. 
+
+### <a id="Link" href="#Link">type Link struct</a>
+
+```
+searchKey: bitbucketcloud.Link
+tags: [struct]
+```
+
+```Go
+type Link struct {
+	Href string `json:"href"`
+}
+```
+
+### <a id="Links" href="#Links">type Links struct</a>
+
+```
+searchKey: bitbucketcloud.Links
+tags: [struct]
+```
+
+```Go
+type Links struct {
+	Clone CloneLinks `json:"clone"`
+	HTML  Link       `json:"html"`
+}
 ```
 
 ### <a id="PageToken" href="#PageToken">type PageToken struct</a>
 
 ```
 searchKey: bitbucketcloud.PageToken
+tags: [struct]
 ```
 
 ```Go
@@ -247,6 +307,7 @@ type PageToken struct {
 
 ```
 searchKey: bitbucketcloud.PageToken.HasMore
+tags: [function]
 ```
 
 ```Go
@@ -257,6 +318,7 @@ func (t *PageToken) HasMore() bool
 
 ```
 searchKey: bitbucketcloud.PageToken.Values
+tags: [function]
 ```
 
 ```Go
@@ -267,6 +329,7 @@ func (t *PageToken) Values() url.Values
 
 ```
 searchKey: bitbucketcloud.Repo
+tags: [struct]
 ```
 
 ```Go
@@ -283,61 +346,11 @@ type Repo struct {
 }
 ```
 
-### <a id="Links" href="#Links">type Links struct</a>
-
-```
-searchKey: bitbucketcloud.Links
-```
-
-```Go
-type Links struct {
-	Clone CloneLinks `json:"clone"`
-	HTML  Link       `json:"html"`
-}
-```
-
-### <a id="CloneLinks" href="#CloneLinks">type CloneLinks []struct</a>
-
-```
-searchKey: bitbucketcloud.CloneLinks
-```
-
-```Go
-type CloneLinks []struct {
-	Href string `json:"href"`
-	Name string `json:"name"`
-}
-```
-
-#### <a id="CloneLinks.HTTPS" href="#CloneLinks.HTTPS">func (cl CloneLinks) HTTPS() (string, error)</a>
-
-```
-searchKey: bitbucketcloud.CloneLinks.HTTPS
-```
-
-```Go
-func (cl CloneLinks) HTTPS() (string, error)
-```
-
-HTTPS returns clone link named "https", it returns an error if not found. 
-
-### <a id="Link" href="#Link">type Link struct</a>
-
-```
-searchKey: bitbucketcloud.Link
-```
-
-```Go
-type Link struct {
-	Href string `json:"href"`
-}
-```
-
 ### <a id="httpError" href="#httpError">type httpError struct</a>
 
 ```
 searchKey: bitbucketcloud.httpError
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -352,70 +365,71 @@ type httpError struct {
 
 ```
 searchKey: bitbucketcloud.httpError.Error
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (e *httpError) Error() string
 ```
 
-#### <a id="httpError.Unauthorized" href="#httpError.Unauthorized">func (e *httpError) Unauthorized() bool</a>
-
-```
-searchKey: bitbucketcloud.httpError.Unauthorized
-tags: [private]
-```
-
-```Go
-func (e *httpError) Unauthorized() bool
-```
-
 #### <a id="httpError.NotFound" href="#httpError.NotFound">func (e *httpError) NotFound() bool</a>
 
 ```
 searchKey: bitbucketcloud.httpError.NotFound
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (e *httpError) NotFound() bool
 ```
 
+#### <a id="httpError.Unauthorized" href="#httpError.Unauthorized">func (e *httpError) Unauthorized() bool</a>
+
+```
+searchKey: bitbucketcloud.httpError.Unauthorized
+tags: [function private]
+```
+
+```Go
+func (e *httpError) Unauthorized() bool
+```
+
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="GetenvTestBitbucketCloudUsername" href="#GetenvTestBitbucketCloudUsername">func GetenvTestBitbucketCloudUsername() string</a>
 
 ```
 searchKey: bitbucketcloud.GetenvTestBitbucketCloudUsername
+tags: [function]
 ```
 
 ```Go
 func GetenvTestBitbucketCloudUsername() string
 ```
 
-### <a id="normalize" href="#normalize">func normalize(path string) string</a>
-
-```
-searchKey: bitbucketcloud.normalize
-tags: [private]
-```
-
-```Go
-func normalize(path string) string
-```
-
 ### <a id="TestClient_Repos" href="#TestClient_Repos">func TestClient_Repos(t *testing.T)</a>
 
 ```
 searchKey: bitbucketcloud.TestClient_Repos
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestClient_Repos(t *testing.T)
+```
+
+### <a id="normalize" href="#normalize">func normalize(path string) string</a>
+
+```
+searchKey: bitbucketcloud.normalize
+tags: [method private]
+```
+
+```Go
+func normalize(path string) string
 ```
 

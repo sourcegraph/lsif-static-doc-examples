@@ -3,118 +3,131 @@
 ## Index
 
 * [Constants](#const)
-    * [const TextRequest](#TextRequest)
     * [const SymbolRequest](#SymbolRequest)
-    * [const maxUnindexedRepoRevSearchesPerQuery](#maxUnindexedRepoRevSearchesPerQuery)
+    * [const TextRequest](#TextRequest)
     * [const defaultMaxSearchResults](#defaultMaxSearchResults)
+    * [const maxUnindexedRepoRevSearchesPerQuery](#maxUnindexedRepoRevSearchesPerQuery)
 * [Variables](#var)
-    * [var headBranch](#headBranch)
     * [var defaultTimeout](#defaultTimeout)
+    * [var headBranch](#headBranch)
 * [Types](#type)
-    * [type IndexedRequestType string](#IndexedRequestType)
     * [type IndexedRepoRevs struct](#IndexedRepoRevs)
         * [func zoektIndexedRepos(indexedSet map[string]*zoekt.Repository, revs []*search.RepositoryRevisions, filter func(*zoekt.Repository) bool) (indexed *IndexedRepoRevs, unindexed []*search.RepositoryRevisions)](#zoektIndexedRepos)
         * [func (rb *IndexedRepoRevs) add(reporev *search.RepositoryRevisions, repo *zoekt.Repository) []search.RevisionSpecifier](#IndexedRepoRevs.add)
         * [func (rb *IndexedRepoRevs) getRepoInputRev(file *zoekt.FileMatch) (repo types.RepoName, inputRevs []string)](#IndexedRepoRevs.getRepoInputRev)
+    * [type IndexedRequestType string](#IndexedRequestType)
     * [type IndexedSearchRequest struct](#IndexedSearchRequest)
         * [func NewIndexedSearchRequest(ctx context.Context, args *search.TextParameters, typ IndexedRequestType, stream streaming.Sender) (_ *IndexedSearchRequest, err error)](#NewIndexedSearchRequest)
         * [func (s *IndexedSearchRequest) Repos() map[string]*search.RepositoryRevisions](#IndexedSearchRequest.Repos)
         * [func (s *IndexedSearchRequest) Search(ctx context.Context, c streaming.Sender) error](#IndexedSearchRequest.Search)
     * [type repoRevFunc func(file *github.com/google/zoekt.FileMatch) (repo github.com/sourcegraph/sourcegraph/internal/types.RepoName, revs []string, ok bool)](#repoRevFunc)
 * [Functions](#func)
-    * [func zoektSearch(ctx context.Context, args *search.TextParameters, repos *IndexedRepoRevs, typ IndexedRequestType, since func(t time.Time) time.Duration, c streaming.Sender) error](#zoektSearch)
-    * [func getRepos(ctx context.Context, p *search.Promise) ([]*search.RepositoryRevisions, error)](#getRepos)
-    * [func bufferedSender(cap int, sender zoekt.Sender) (zoekt.Sender, func())](#bufferedSender)
-    * [func zoektSearchReposOnly(ctx context.Context, client zoekt.Streamer, query zoektquery.Q, c streaming.Sender, getRepoRevMap func() map[string]*search.RepositoryRevisions) error](#zoektSearchReposOnly)
-    * [func zoektFileMatchToLineMatches(file *zoekt.FileMatch) []*result.LineMatch](#zoektFileMatchToLineMatches)
-    * [func escape(s string) string](#escape)
-    * [func zoektFileMatchToSymbolResults(repoName types.RepoName, inputRev string, file *zoekt.FileMatch) []*result.SymbolMatch](#zoektFileMatchToSymbolResults)
-    * [func contextWithoutDeadline(cOld context.Context) (context.Context, context.CancelFunc)](#contextWithoutDeadline)
-    * [func queryToZoektQuery(query *search.TextPatternInfo, typ IndexedRequestType) (zoektquery.Q, error)](#queryToZoektQuery)
-    * [func limitUnindexedRepos(unindexed []*search.RepositoryRevisions, limit int, stream streaming.Sender) []*search.RepositoryRevisions](#limitUnindexedRepos)
     * [func FileRe(pattern string, queryIsCaseSensitive bool) (zoektquery.Q, error)](#FileRe)
-    * [func noOpAnyChar(re *syntax.Regexp)](#noOpAnyChar)
-    * [func parseRe(pattern string, filenameOnly bool, contentOnly bool, queryIsCaseSensitive bool) (zoektquery.Q, error)](#parseRe)
-    * [func getSpanContext(ctx context.Context) (shouldTrace bool, spanContext map[string]string)](#getSpanContext)
-    * [func SearchOpts(ctx context.Context, k int, query *search.TextPatternInfo) zoekt.SearchOptions](#SearchOpts)
     * [func ResultCountFactor(numRepos int, fileMatchLimit int32, globalSearch bool) (k int)](#ResultCountFactor)
-    * [func TestIndexedSearch(t *testing.T)](#TestIndexedSearch)
-    * [func mkStatusMap(m map[string]search.RepoStatus) search.RepoStatusMap](#mkStatusMap)
-    * [func TestZoektIndexedRepos(t *testing.T)](#TestZoektIndexedRepos)
-    * [func TestZoektResultCountFactor(t *testing.T)](#TestZoektResultCountFactor)
-    * [func TestQueryToZoektQuery(t *testing.T)](#TestQueryToZoektQuery)
-    * [func queryEqual(a, b zoektquery.Q) bool](#queryEqual)
-    * [func generateZoektMatches(count int) []zoekt.FileMatch](#generateZoektMatches)
-    * [func TestZoektIndexedRepos_single(t *testing.T)](#TestZoektIndexedRepos_single)
-    * [func TestZoektFileMatchToSymbolResults(t *testing.T)](#TestZoektFileMatchToSymbolResults)
-    * [func repoRevsSliceToMap(rs []*search.RepositoryRevisions) map[string]*search.RepositoryRevisions](#repoRevsSliceToMap)
+    * [func SearchOpts(ctx context.Context, k int, query *search.TextPatternInfo) zoekt.SearchOptions](#SearchOpts)
+    * [func TestBufferedSender(t *testing.T)](#TestBufferedSender)
     * [func TestContextWithoutDeadline(t *testing.T)](#TestContextWithoutDeadline)
     * [func TestContextWithoutDeadline_cancel(t *testing.T)](#TestContextWithoutDeadline_cancel)
-    * [func TestBufferedSender(t *testing.T)](#TestBufferedSender)
+    * [func TestIndexedSearch(t *testing.T)](#TestIndexedSearch)
+    * [func TestQueryToZoektQuery(t *testing.T)](#TestQueryToZoektQuery)
+    * [func TestZoektFileMatchToSymbolResults(t *testing.T)](#TestZoektFileMatchToSymbolResults)
+    * [func TestZoektIndexedRepos(t *testing.T)](#TestZoektIndexedRepos)
+    * [func TestZoektIndexedRepos_single(t *testing.T)](#TestZoektIndexedRepos_single)
+    * [func TestZoektResultCountFactor(t *testing.T)](#TestZoektResultCountFactor)
+    * [func bufferedSender(cap int, sender zoekt.Sender) (zoekt.Sender, func())](#bufferedSender)
+    * [func contextWithoutDeadline(cOld context.Context) (context.Context, context.CancelFunc)](#contextWithoutDeadline)
+    * [func escape(s string) string](#escape)
+    * [func generateZoektMatches(count int) []zoekt.FileMatch](#generateZoektMatches)
+    * [func getRepos(ctx context.Context, p *search.Promise) ([]*search.RepositoryRevisions, error)](#getRepos)
+    * [func getSpanContext(ctx context.Context) (shouldTrace bool, spanContext map[string]string)](#getSpanContext)
+    * [func limitUnindexedRepos(unindexed []*search.RepositoryRevisions, limit int, stream streaming.Sender) []*search.RepositoryRevisions](#limitUnindexedRepos)
     * [func makeRepositoryRevisions(repos ...string) []*search.RepositoryRevisions](#makeRepositoryRevisions)
-    * [func mkRepos(names ...string) []types.RepoName](#mkRepos)
     * [func matchesToFileMatches(matches []result.Match) ([]*result.FileMatch, error)](#matchesToFileMatches)
+    * [func mkRepos(names ...string) []types.RepoName](#mkRepos)
+    * [func mkStatusMap(m map[string]search.RepoStatus) search.RepoStatusMap](#mkStatusMap)
+    * [func noOpAnyChar(re *syntax.Regexp)](#noOpAnyChar)
+    * [func parseRe(pattern string, filenameOnly bool, contentOnly bool, queryIsCaseSensitive bool) (zoektquery.Q, error)](#parseRe)
+    * [func queryEqual(a, b zoektquery.Q) bool](#queryEqual)
+    * [func queryToZoektQuery(query *search.TextPatternInfo, typ IndexedRequestType) (zoektquery.Q, error)](#queryToZoektQuery)
+    * [func repoRevsSliceToMap(rs []*search.RepositoryRevisions) map[string]*search.RepositoryRevisions](#repoRevsSliceToMap)
+    * [func zoektFileMatchToLineMatches(file *zoekt.FileMatch) []*result.LineMatch](#zoektFileMatchToLineMatches)
+    * [func zoektFileMatchToSymbolResults(repoName types.RepoName, inputRev string, file *zoekt.FileMatch) []*result.SymbolMatch](#zoektFileMatchToSymbolResults)
+    * [func zoektSearch(ctx context.Context, args *search.TextParameters, repos *IndexedRepoRevs, typ IndexedRequestType, since func(t time.Time) time.Duration, c streaming.Sender) error](#zoektSearch)
+    * [func zoektSearchReposOnly(ctx context.Context, client zoekt.Streamer, query zoektquery.Q, c streaming.Sender, getRepoRevMap func() map[string]*search.RepositoryRevisions) error](#zoektSearchReposOnly)
 
 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
-```
-
-### <a id="TextRequest" href="#TextRequest">const TextRequest</a>
-
-```
-searchKey: zoekt.TextRequest
-```
-
-```Go
-const TextRequest IndexedRequestType = "text"
+tags: [package private]
 ```
 
 ### <a id="SymbolRequest" href="#SymbolRequest">const SymbolRequest</a>
 
 ```
 searchKey: zoekt.SymbolRequest
+tags: [constant string]
 ```
 
 ```Go
 const SymbolRequest IndexedRequestType = "symbol"
 ```
 
-### <a id="maxUnindexedRepoRevSearchesPerQuery" href="#maxUnindexedRepoRevSearchesPerQuery">const maxUnindexedRepoRevSearchesPerQuery</a>
+### <a id="TextRequest" href="#TextRequest">const TextRequest</a>
 
 ```
-searchKey: zoekt.maxUnindexedRepoRevSearchesPerQuery
-tags: [private]
+searchKey: zoekt.TextRequest
+tags: [constant string]
 ```
 
 ```Go
-const maxUnindexedRepoRevSearchesPerQuery = 200
+const TextRequest IndexedRequestType = "text"
 ```
 
 ### <a id="defaultMaxSearchResults" href="#defaultMaxSearchResults">const defaultMaxSearchResults</a>
 
 ```
 searchKey: zoekt.defaultMaxSearchResults
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
 const defaultMaxSearchResults = 30
 ```
 
+### <a id="maxUnindexedRepoRevSearchesPerQuery" href="#maxUnindexedRepoRevSearchesPerQuery">const maxUnindexedRepoRevSearchesPerQuery</a>
+
+```
+searchKey: zoekt.maxUnindexedRepoRevSearchesPerQuery
+tags: [constant number private]
+```
+
+```Go
+const maxUnindexedRepoRevSearchesPerQuery = 200
+```
+
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
+```
+
+### <a id="defaultTimeout" href="#defaultTimeout">var defaultTimeout</a>
+
+```
+searchKey: zoekt.defaultTimeout
+tags: [variable number private]
+```
+
+```Go
+var defaultTimeout = 20 * time.Second
 ```
 
 ### <a id="headBranch" href="#headBranch">var headBranch</a>
 
 ```
 searchKey: zoekt.headBranch
-tags: [private]
+tags: [variable array string private]
 ```
 
 ```Go
@@ -123,37 +136,17 @@ var headBranch = []string{"HEAD"}
 
 headBranch is used as a singleton of the indexedRepoRevs.repoBranches to save common-case allocations within indexedRepoRevs.Add. 
 
-### <a id="defaultTimeout" href="#defaultTimeout">var defaultTimeout</a>
-
-```
-searchKey: zoekt.defaultTimeout
-tags: [private]
-```
-
-```Go
-var defaultTimeout = 20 * time.Second
-```
-
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
-```
-
-### <a id="IndexedRequestType" href="#IndexedRequestType">type IndexedRequestType string</a>
-
-```
-searchKey: zoekt.IndexedRequestType
-```
-
-```Go
-type IndexedRequestType string
+tags: [package private]
 ```
 
 ### <a id="IndexedRepoRevs" href="#IndexedRepoRevs">type IndexedRepoRevs struct</a>
 
 ```
 searchKey: zoekt.IndexedRepoRevs
+tags: [struct]
 ```
 
 ```Go
@@ -177,7 +170,7 @@ indexedRepoRevs creates both the Sourcegraph and Zoekt representation of a list 
 
 ```
 searchKey: zoekt.zoektIndexedRepos
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -190,7 +183,7 @@ zoektIndexedRepos splits the revs into two parts: (1) the repository revisions i
 
 ```
 searchKey: zoekt.IndexedRepoRevs.add
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -203,7 +196,7 @@ add will add reporev and repo to the list of repository and branches to search i
 
 ```
 searchKey: zoekt.IndexedRepoRevs.getRepoInputRev
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -212,10 +205,22 @@ func (rb *IndexedRepoRevs) getRepoInputRev(file *zoekt.FileMatch) (repo types.Re
 
 getRepoInputRev returns the repo and inputRev associated with file. 
 
+### <a id="IndexedRequestType" href="#IndexedRequestType">type IndexedRequestType string</a>
+
+```
+searchKey: zoekt.IndexedRequestType
+tags: [string]
+```
+
+```Go
+type IndexedRequestType string
+```
+
 ### <a id="IndexedSearchRequest" href="#IndexedSearchRequest">type IndexedSearchRequest struct</a>
 
 ```
 searchKey: zoekt.IndexedSearchRequest
+tags: [struct]
 ```
 
 ```Go
@@ -255,6 +260,7 @@ IndexedSearchRequest is responsible for translating a Sourcegraph search query i
 
 ```
 searchKey: zoekt.NewIndexedSearchRequest
+tags: [method]
 ```
 
 ```Go
@@ -265,6 +271,7 @@ func NewIndexedSearchRequest(ctx context.Context, args *search.TextParameters, t
 
 ```
 searchKey: zoekt.IndexedSearchRequest.Repos
+tags: [function]
 ```
 
 ```Go
@@ -277,6 +284,7 @@ Repos is a map of repository revisions that are indexed and will be searched by 
 
 ```
 searchKey: zoekt.IndexedSearchRequest.Search
+tags: [method]
 ```
 
 ```Go
@@ -289,7 +297,7 @@ Search streams 0 or more events to c.
 
 ```
 searchKey: zoekt.repoRevFunc
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -301,42 +309,146 @@ repoRevFunc is a function which maps repository names returned from Zoekt into t
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
-### <a id="zoektSearch" href="#zoektSearch">func zoektSearch(ctx context.Context, args *search.TextParameters, repos *IndexedRepoRevs, typ IndexedRequestType, since func(t time.Time) time.Duration, c streaming.Sender) error</a>
+### <a id="FileRe" href="#FileRe">func FileRe(pattern string, queryIsCaseSensitive bool) (zoektquery.Q, error)</a>
 
 ```
-searchKey: zoekt.zoektSearch
-tags: [private]
-```
-
-```Go
-func zoektSearch(ctx context.Context, args *search.TextParameters, repos *IndexedRepoRevs, typ IndexedRequestType, since func(t time.Time) time.Duration, c streaming.Sender) error
-```
-
-zoektSearch searches repositories using zoekt. 
-
-Timeouts are reported through the context, and as a special case errNoResultsInTimeout is returned if no results are found in the given timeout (instead of the more common case of finding partial or full results in the given timeout). 
-
-### <a id="getRepos" href="#getRepos">func getRepos(ctx context.Context, p *search.Promise) ([]*search.RepositoryRevisions, error)</a>
-
-```
-searchKey: zoekt.getRepos
-tags: [private]
+searchKey: zoekt.FileRe
+tags: [method]
 ```
 
 ```Go
-func getRepos(ctx context.Context, p *search.Promise) ([]*search.RepositoryRevisions, error)
+func FileRe(pattern string, queryIsCaseSensitive bool) (zoektquery.Q, error)
 ```
 
-getRepos is a wrapper around p.Get. It returns an error if the promise contains an underlying type other than []*search.RepositoryRevisions. 
+### <a id="ResultCountFactor" href="#ResultCountFactor">func ResultCountFactor(numRepos int, fileMatchLimit int32, globalSearch bool) (k int)</a>
+
+```
+searchKey: zoekt.ResultCountFactor
+tags: [method]
+```
+
+```Go
+func ResultCountFactor(numRepos int, fileMatchLimit int32, globalSearch bool) (k int)
+```
+
+### <a id="SearchOpts" href="#SearchOpts">func SearchOpts(ctx context.Context, k int, query *search.TextPatternInfo) zoekt.SearchOptions</a>
+
+```
+searchKey: zoekt.SearchOpts
+tags: [method]
+```
+
+```Go
+func SearchOpts(ctx context.Context, k int, query *search.TextPatternInfo) zoekt.SearchOptions
+```
+
+### <a id="TestBufferedSender" href="#TestBufferedSender">func TestBufferedSender(t *testing.T)</a>
+
+```
+searchKey: zoekt.TestBufferedSender
+tags: [method private test]
+```
+
+```Go
+func TestBufferedSender(t *testing.T)
+```
+
+### <a id="TestContextWithoutDeadline" href="#TestContextWithoutDeadline">func TestContextWithoutDeadline(t *testing.T)</a>
+
+```
+searchKey: zoekt.TestContextWithoutDeadline
+tags: [method private test]
+```
+
+```Go
+func TestContextWithoutDeadline(t *testing.T)
+```
+
+### <a id="TestContextWithoutDeadline_cancel" href="#TestContextWithoutDeadline_cancel">func TestContextWithoutDeadline_cancel(t *testing.T)</a>
+
+```
+searchKey: zoekt.TestContextWithoutDeadline_cancel
+tags: [method private test]
+```
+
+```Go
+func TestContextWithoutDeadline_cancel(t *testing.T)
+```
+
+### <a id="TestIndexedSearch" href="#TestIndexedSearch">func TestIndexedSearch(t *testing.T)</a>
+
+```
+searchKey: zoekt.TestIndexedSearch
+tags: [method private test]
+```
+
+```Go
+func TestIndexedSearch(t *testing.T)
+```
+
+### <a id="TestQueryToZoektQuery" href="#TestQueryToZoektQuery">func TestQueryToZoektQuery(t *testing.T)</a>
+
+```
+searchKey: zoekt.TestQueryToZoektQuery
+tags: [method private test]
+```
+
+```Go
+func TestQueryToZoektQuery(t *testing.T)
+```
+
+### <a id="TestZoektFileMatchToSymbolResults" href="#TestZoektFileMatchToSymbolResults">func TestZoektFileMatchToSymbolResults(t *testing.T)</a>
+
+```
+searchKey: zoekt.TestZoektFileMatchToSymbolResults
+tags: [method private test]
+```
+
+```Go
+func TestZoektFileMatchToSymbolResults(t *testing.T)
+```
+
+### <a id="TestZoektIndexedRepos" href="#TestZoektIndexedRepos">func TestZoektIndexedRepos(t *testing.T)</a>
+
+```
+searchKey: zoekt.TestZoektIndexedRepos
+tags: [method private test]
+```
+
+```Go
+func TestZoektIndexedRepos(t *testing.T)
+```
+
+### <a id="TestZoektIndexedRepos_single" href="#TestZoektIndexedRepos_single">func TestZoektIndexedRepos_single(t *testing.T)</a>
+
+```
+searchKey: zoekt.TestZoektIndexedRepos_single
+tags: [method private test]
+```
+
+```Go
+func TestZoektIndexedRepos_single(t *testing.T)
+```
+
+### <a id="TestZoektResultCountFactor" href="#TestZoektResultCountFactor">func TestZoektResultCountFactor(t *testing.T)</a>
+
+```
+searchKey: zoekt.TestZoektResultCountFactor
+tags: [method private test]
+```
+
+```Go
+func TestZoektResultCountFactor(t *testing.T)
+```
 
 ### <a id="bufferedSender" href="#bufferedSender">func bufferedSender(cap int, sender zoekt.Sender) (zoekt.Sender, func())</a>
 
 ```
 searchKey: zoekt.bufferedSender
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -345,57 +457,11 @@ func bufferedSender(cap int, sender zoekt.Sender) (zoekt.Sender, func())
 
 bufferedSender returns a buffered Sender with capacity cap, and a cleanup function which blocks until the buffer is drained. The cleanup function may only be called once. For cap=0, bufferedSender returns the input sender. 
 
-### <a id="zoektSearchReposOnly" href="#zoektSearchReposOnly">func zoektSearchReposOnly(ctx context.Context, client zoekt.Streamer, query zoektquery.Q, c streaming.Sender, getRepoRevMap func() map[string]*search.RepositoryRevisions) error</a>
-
-```
-searchKey: zoekt.zoektSearchReposOnly
-tags: [private]
-```
-
-```Go
-func zoektSearchReposOnly(ctx context.Context, client zoekt.Streamer, query zoektquery.Q, c streaming.Sender, getRepoRevMap func() map[string]*search.RepositoryRevisions) error
-```
-
-zoektSearchReposOnly is used when select:repo is set, in which case we can ask zoekt only for the repos that contain matches for the query. This is a performance optimization, and not required for proper function of select:repo. 
-
-### <a id="zoektFileMatchToLineMatches" href="#zoektFileMatchToLineMatches">func zoektFileMatchToLineMatches(file *zoekt.FileMatch) []*result.LineMatch</a>
-
-```
-searchKey: zoekt.zoektFileMatchToLineMatches
-tags: [private]
-```
-
-```Go
-func zoektFileMatchToLineMatches(file *zoekt.FileMatch) []*result.LineMatch
-```
-
-### <a id="escape" href="#escape">func escape(s string) string</a>
-
-```
-searchKey: zoekt.escape
-tags: [private]
-```
-
-```Go
-func escape(s string) string
-```
-
-### <a id="zoektFileMatchToSymbolResults" href="#zoektFileMatchToSymbolResults">func zoektFileMatchToSymbolResults(repoName types.RepoName, inputRev string, file *zoekt.FileMatch) []*result.SymbolMatch</a>
-
-```
-searchKey: zoekt.zoektFileMatchToSymbolResults
-tags: [private]
-```
-
-```Go
-func zoektFileMatchToSymbolResults(repoName types.RepoName, inputRev string, file *zoekt.FileMatch) []*result.SymbolMatch
-```
-
 ### <a id="contextWithoutDeadline" href="#contextWithoutDeadline">func contextWithoutDeadline(cOld context.Context) (context.Context, context.CancelFunc)</a>
 
 ```
 searchKey: zoekt.contextWithoutDeadline
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -404,22 +470,57 @@ func contextWithoutDeadline(cOld context.Context) (context.Context, context.Canc
 
 contextWithoutDeadline returns a context which will cancel if the cOld is canceled. 
 
-### <a id="queryToZoektQuery" href="#queryToZoektQuery">func queryToZoektQuery(query *search.TextPatternInfo, typ IndexedRequestType) (zoektquery.Q, error)</a>
+### <a id="escape" href="#escape">func escape(s string) string</a>
 
 ```
-searchKey: zoekt.queryToZoektQuery
-tags: [private]
+searchKey: zoekt.escape
+tags: [method private]
 ```
 
 ```Go
-func queryToZoektQuery(query *search.TextPatternInfo, typ IndexedRequestType) (zoektquery.Q, error)
+func escape(s string) string
+```
+
+### <a id="generateZoektMatches" href="#generateZoektMatches">func generateZoektMatches(count int) []zoekt.FileMatch</a>
+
+```
+searchKey: zoekt.generateZoektMatches
+tags: [method private]
+```
+
+```Go
+func generateZoektMatches(count int) []zoekt.FileMatch
+```
+
+### <a id="getRepos" href="#getRepos">func getRepos(ctx context.Context, p *search.Promise) ([]*search.RepositoryRevisions, error)</a>
+
+```
+searchKey: zoekt.getRepos
+tags: [method private]
+```
+
+```Go
+func getRepos(ctx context.Context, p *search.Promise) ([]*search.RepositoryRevisions, error)
+```
+
+getRepos is a wrapper around p.Get. It returns an error if the promise contains an underlying type other than []*search.RepositoryRevisions. 
+
+### <a id="getSpanContext" href="#getSpanContext">func getSpanContext(ctx context.Context) (shouldTrace bool, spanContext map[string]string)</a>
+
+```
+searchKey: zoekt.getSpanContext
+tags: [method private]
+```
+
+```Go
+func getSpanContext(ctx context.Context) (shouldTrace bool, spanContext map[string]string)
 ```
 
 ### <a id="limitUnindexedRepos" href="#limitUnindexedRepos">func limitUnindexedRepos(unindexed []*search.RepositoryRevisions, limit int, stream streaming.Sender) []*search.RepositoryRevisions</a>
 
 ```
 searchKey: zoekt.limitUnindexedRepos
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -432,21 +533,55 @@ It returns the new repositories destined for the unindexed searcher code path, a
 
 A slice to the input list is returned, it is not copied. 
 
-### <a id="FileRe" href="#FileRe">func FileRe(pattern string, queryIsCaseSensitive bool) (zoektquery.Q, error)</a>
+### <a id="makeRepositoryRevisions" href="#makeRepositoryRevisions">func makeRepositoryRevisions(repos ...string) []*search.RepositoryRevisions</a>
 
 ```
-searchKey: zoekt.FileRe
+searchKey: zoekt.makeRepositoryRevisions
+tags: [method private]
 ```
 
 ```Go
-func FileRe(pattern string, queryIsCaseSensitive bool) (zoektquery.Q, error)
+func makeRepositoryRevisions(repos ...string) []*search.RepositoryRevisions
+```
+
+### <a id="matchesToFileMatches" href="#matchesToFileMatches">func matchesToFileMatches(matches []result.Match) ([]*result.FileMatch, error)</a>
+
+```
+searchKey: zoekt.matchesToFileMatches
+tags: [method private]
+```
+
+```Go
+func matchesToFileMatches(matches []result.Match) ([]*result.FileMatch, error)
+```
+
+### <a id="mkRepos" href="#mkRepos">func mkRepos(names ...string) []types.RepoName</a>
+
+```
+searchKey: zoekt.mkRepos
+tags: [method private]
+```
+
+```Go
+func mkRepos(names ...string) []types.RepoName
+```
+
+### <a id="mkStatusMap" href="#mkStatusMap">func mkStatusMap(m map[string]search.RepoStatus) search.RepoStatusMap</a>
+
+```
+searchKey: zoekt.mkStatusMap
+tags: [method private]
+```
+
+```Go
+func mkStatusMap(m map[string]search.RepoStatus) search.RepoStatusMap
 ```
 
 ### <a id="noOpAnyChar" href="#noOpAnyChar">func noOpAnyChar(re *syntax.Regexp)</a>
 
 ```
 searchKey: zoekt.noOpAnyChar
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -457,217 +592,93 @@ func noOpAnyChar(re *syntax.Regexp)
 
 ```
 searchKey: zoekt.parseRe
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func parseRe(pattern string, filenameOnly bool, contentOnly bool, queryIsCaseSensitive bool) (zoektquery.Q, error)
 ```
 
-### <a id="getSpanContext" href="#getSpanContext">func getSpanContext(ctx context.Context) (shouldTrace bool, spanContext map[string]string)</a>
-
-```
-searchKey: zoekt.getSpanContext
-tags: [private]
-```
-
-```Go
-func getSpanContext(ctx context.Context) (shouldTrace bool, spanContext map[string]string)
-```
-
-### <a id="SearchOpts" href="#SearchOpts">func SearchOpts(ctx context.Context, k int, query *search.TextPatternInfo) zoekt.SearchOptions</a>
-
-```
-searchKey: zoekt.SearchOpts
-```
-
-```Go
-func SearchOpts(ctx context.Context, k int, query *search.TextPatternInfo) zoekt.SearchOptions
-```
-
-### <a id="ResultCountFactor" href="#ResultCountFactor">func ResultCountFactor(numRepos int, fileMatchLimit int32, globalSearch bool) (k int)</a>
-
-```
-searchKey: zoekt.ResultCountFactor
-```
-
-```Go
-func ResultCountFactor(numRepos int, fileMatchLimit int32, globalSearch bool) (k int)
-```
-
-### <a id="TestIndexedSearch" href="#TestIndexedSearch">func TestIndexedSearch(t *testing.T)</a>
-
-```
-searchKey: zoekt.TestIndexedSearch
-tags: [private]
-```
-
-```Go
-func TestIndexedSearch(t *testing.T)
-```
-
-### <a id="mkStatusMap" href="#mkStatusMap">func mkStatusMap(m map[string]search.RepoStatus) search.RepoStatusMap</a>
-
-```
-searchKey: zoekt.mkStatusMap
-tags: [private]
-```
-
-```Go
-func mkStatusMap(m map[string]search.RepoStatus) search.RepoStatusMap
-```
-
-### <a id="TestZoektIndexedRepos" href="#TestZoektIndexedRepos">func TestZoektIndexedRepos(t *testing.T)</a>
-
-```
-searchKey: zoekt.TestZoektIndexedRepos
-tags: [private]
-```
-
-```Go
-func TestZoektIndexedRepos(t *testing.T)
-```
-
-### <a id="TestZoektResultCountFactor" href="#TestZoektResultCountFactor">func TestZoektResultCountFactor(t *testing.T)</a>
-
-```
-searchKey: zoekt.TestZoektResultCountFactor
-tags: [private]
-```
-
-```Go
-func TestZoektResultCountFactor(t *testing.T)
-```
-
-### <a id="TestQueryToZoektQuery" href="#TestQueryToZoektQuery">func TestQueryToZoektQuery(t *testing.T)</a>
-
-```
-searchKey: zoekt.TestQueryToZoektQuery
-tags: [private]
-```
-
-```Go
-func TestQueryToZoektQuery(t *testing.T)
-```
-
 ### <a id="queryEqual" href="#queryEqual">func queryEqual(a, b zoektquery.Q) bool</a>
 
 ```
 searchKey: zoekt.queryEqual
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func queryEqual(a, b zoektquery.Q) bool
 ```
 
-### <a id="generateZoektMatches" href="#generateZoektMatches">func generateZoektMatches(count int) []zoekt.FileMatch</a>
+### <a id="queryToZoektQuery" href="#queryToZoektQuery">func queryToZoektQuery(query *search.TextPatternInfo, typ IndexedRequestType) (zoektquery.Q, error)</a>
 
 ```
-searchKey: zoekt.generateZoektMatches
-tags: [private]
-```
-
-```Go
-func generateZoektMatches(count int) []zoekt.FileMatch
-```
-
-### <a id="TestZoektIndexedRepos_single" href="#TestZoektIndexedRepos_single">func TestZoektIndexedRepos_single(t *testing.T)</a>
-
-```
-searchKey: zoekt.TestZoektIndexedRepos_single
-tags: [private]
+searchKey: zoekt.queryToZoektQuery
+tags: [method private]
 ```
 
 ```Go
-func TestZoektIndexedRepos_single(t *testing.T)
-```
-
-### <a id="TestZoektFileMatchToSymbolResults" href="#TestZoektFileMatchToSymbolResults">func TestZoektFileMatchToSymbolResults(t *testing.T)</a>
-
-```
-searchKey: zoekt.TestZoektFileMatchToSymbolResults
-tags: [private]
-```
-
-```Go
-func TestZoektFileMatchToSymbolResults(t *testing.T)
+func queryToZoektQuery(query *search.TextPatternInfo, typ IndexedRequestType) (zoektquery.Q, error)
 ```
 
 ### <a id="repoRevsSliceToMap" href="#repoRevsSliceToMap">func repoRevsSliceToMap(rs []*search.RepositoryRevisions) map[string]*search.RepositoryRevisions</a>
 
 ```
 searchKey: zoekt.repoRevsSliceToMap
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func repoRevsSliceToMap(rs []*search.RepositoryRevisions) map[string]*search.RepositoryRevisions
 ```
 
-### <a id="TestContextWithoutDeadline" href="#TestContextWithoutDeadline">func TestContextWithoutDeadline(t *testing.T)</a>
+### <a id="zoektFileMatchToLineMatches" href="#zoektFileMatchToLineMatches">func zoektFileMatchToLineMatches(file *zoekt.FileMatch) []*result.LineMatch</a>
 
 ```
-searchKey: zoekt.TestContextWithoutDeadline
-tags: [private]
-```
-
-```Go
-func TestContextWithoutDeadline(t *testing.T)
-```
-
-### <a id="TestContextWithoutDeadline_cancel" href="#TestContextWithoutDeadline_cancel">func TestContextWithoutDeadline_cancel(t *testing.T)</a>
-
-```
-searchKey: zoekt.TestContextWithoutDeadline_cancel
-tags: [private]
+searchKey: zoekt.zoektFileMatchToLineMatches
+tags: [method private]
 ```
 
 ```Go
-func TestContextWithoutDeadline_cancel(t *testing.T)
+func zoektFileMatchToLineMatches(file *zoekt.FileMatch) []*result.LineMatch
 ```
 
-### <a id="TestBufferedSender" href="#TestBufferedSender">func TestBufferedSender(t *testing.T)</a>
+### <a id="zoektFileMatchToSymbolResults" href="#zoektFileMatchToSymbolResults">func zoektFileMatchToSymbolResults(repoName types.RepoName, inputRev string, file *zoekt.FileMatch) []*result.SymbolMatch</a>
 
 ```
-searchKey: zoekt.TestBufferedSender
-tags: [private]
-```
-
-```Go
-func TestBufferedSender(t *testing.T)
-```
-
-### <a id="makeRepositoryRevisions" href="#makeRepositoryRevisions">func makeRepositoryRevisions(repos ...string) []*search.RepositoryRevisions</a>
-
-```
-searchKey: zoekt.makeRepositoryRevisions
-tags: [private]
+searchKey: zoekt.zoektFileMatchToSymbolResults
+tags: [method private]
 ```
 
 ```Go
-func makeRepositoryRevisions(repos ...string) []*search.RepositoryRevisions
+func zoektFileMatchToSymbolResults(repoName types.RepoName, inputRev string, file *zoekt.FileMatch) []*result.SymbolMatch
 ```
 
-### <a id="mkRepos" href="#mkRepos">func mkRepos(names ...string) []types.RepoName</a>
+### <a id="zoektSearch" href="#zoektSearch">func zoektSearch(ctx context.Context, args *search.TextParameters, repos *IndexedRepoRevs, typ IndexedRequestType, since func(t time.Time) time.Duration, c streaming.Sender) error</a>
 
 ```
-searchKey: zoekt.mkRepos
-tags: [private]
-```
-
-```Go
-func mkRepos(names ...string) []types.RepoName
-```
-
-### <a id="matchesToFileMatches" href="#matchesToFileMatches">func matchesToFileMatches(matches []result.Match) ([]*result.FileMatch, error)</a>
-
-```
-searchKey: zoekt.matchesToFileMatches
-tags: [private]
+searchKey: zoekt.zoektSearch
+tags: [method private]
 ```
 
 ```Go
-func matchesToFileMatches(matches []result.Match) ([]*result.FileMatch, error)
+func zoektSearch(ctx context.Context, args *search.TextParameters, repos *IndexedRepoRevs, typ IndexedRequestType, since func(t time.Time) time.Duration, c streaming.Sender) error
 ```
+
+zoektSearch searches repositories using zoekt. 
+
+Timeouts are reported through the context, and as a special case errNoResultsInTimeout is returned if no results are found in the given timeout (instead of the more common case of finding partial or full results in the given timeout). 
+
+### <a id="zoektSearchReposOnly" href="#zoektSearchReposOnly">func zoektSearchReposOnly(ctx context.Context, client zoekt.Streamer, query zoektquery.Q, c streaming.Sender, getRepoRevMap func() map[string]*search.RepositoryRevisions) error</a>
+
+```
+searchKey: zoekt.zoektSearchReposOnly
+tags: [method private]
+```
+
+```Go
+func zoektSearchReposOnly(ctx context.Context, client zoekt.Streamer, query zoektquery.Q, c streaming.Sender, getRepoRevMap func() map[string]*search.RepositoryRevisions) error
+```
+
+zoektSearchReposOnly is used when select:repo is set, in which case we can ask zoekt only for the repos that contain matches for the query. This is a performance optimization, and not required for proper function of select:repo. 
 

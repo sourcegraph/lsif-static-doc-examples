@@ -5,76 +5,71 @@ Package protocol contains structures used by the searcher API.
 ## Index
 
 * [Types](#type)
-    * [type Request struct](#Request)
-    * [type PatternInfo struct](#PatternInfo)
-        * [func (p *PatternInfo) String() string](#PatternInfo.String)
-    * [type Response struct](#Response)
     * [type FileMatch struct](#FileMatch)
     * [type LineMatch struct](#LineMatch)
+    * [type PatternInfo struct](#PatternInfo)
+        * [func (p *PatternInfo) String() string](#PatternInfo.String)
+    * [type Request struct](#Request)
+    * [type Response struct](#Response)
 
 
 ## <a id="type" href="#type">Types</a>
 
-### <a id="Request" href="#Request">type Request struct</a>
+```
+tags: [package]
+```
+
+### <a id="FileMatch" href="#FileMatch">type FileMatch struct</a>
 
 ```
-searchKey: protocol.Request
+searchKey: protocol.FileMatch
+tags: [struct]
 ```
 
 ```Go
-type Request struct {
-	// Repo is the name of the repository to search. eg "github.com/gorilla/mux"
-	Repo api.RepoName
+type FileMatch struct {
+	Path        string
+	LineMatches []LineMatch
+	// MatchCount is the number of matches. Different from len(LineMatches), as multiple lines may correspond to one logical match.
+	MatchCount int
 
-	// URL specifies the repository's Git remote URL (for gitserver). It is optional. See
-	// (gitserver.ExecRequest).URL for documentation on what it is used for.
-	URL string
-
-	// Commit is which commit to search. It is required to be resolved,
-	// not a ref like HEAD or master. eg
-	// "599cba5e7b6137d46ddf58fb1765f5d928e69604"
-	Commit api.CommitID
-
-	// Branch is used for structural search as an alternative to Commit
-	// because Zoekt only takes branch names
-	Branch string
-
-	PatternInfo
-
-	// The amount of time to wait for a repo archive to fetch.
-	// It is parsed with time.ParseDuration.
-	//
-	// This timeout should be low when searching across many repos
-	// so that unfetched repos don't delay the search, and because we are likely
-	// to get results from the repos that have already been fetched.
-	//
-	// This timeout should be high when searching across a single repo
-	// because returning results slowly is better than returning no results at all.
-	//
-	// This only times out how long we wait for the fetch request;
-	// the fetch will still happen in the background so future requests don't have to wait.
-	FetchTimeout string
-
-	// The deadline for the search request.
-	// It is parsed with time.Time.UnmarshalText.
-	Deadline string
-
-	// Endpoint(s) for reaching Zoekt. See description in
-	// endpoint.go:Static(...)
-	IndexerEndpoints []string
-
-	// Whether the revision to be searched is indexed or unindexed. This matters for
-	// structural search because it will query Zoekt for indexed structural search.
-	Indexed bool
+	// LimitHit is true if LineMatches may not include all LineMatches.
+	LimitHit bool
 }
 ```
 
-Request represents a request to searcher 
+FileMatch is the struct used by vscode to receive search results 
+
+### <a id="LineMatch" href="#LineMatch">type LineMatch struct</a>
+
+```
+searchKey: protocol.LineMatch
+tags: [struct]
+```
+
+```Go
+type LineMatch struct {
+	// Preview is the matched line.
+	Preview string
+
+	// LineNumber is the 0-based line number. Note: Our editors present
+	// 1-based line numbers, but internally vscode uses 0-based.
+	LineNumber int
+
+	// OffsetAndLengths is a slice of 2-tuples (Offset, Length)
+	// representing each match on a line.
+	// Offsets and lengths are measured in characters, not bytes.
+	OffsetAndLengths [][2]int
+}
+```
+
+LineMatch is the struct used by vscode to receive search results for a line. 
 
 ### <a id="PatternInfo" href="#PatternInfo">type PatternInfo struct</a>
 
 ```
 searchKey: protocol.PatternInfo
+tags: [struct]
 ```
 
 ```Go
@@ -156,16 +151,75 @@ PatternInfo describes a search request on a repo. Most of the fields are based o
 
 ```
 searchKey: protocol.PatternInfo.String
+tags: [function]
 ```
 
 ```Go
 func (p *PatternInfo) String() string
 ```
 
+### <a id="Request" href="#Request">type Request struct</a>
+
+```
+searchKey: protocol.Request
+tags: [struct]
+```
+
+```Go
+type Request struct {
+	// Repo is the name of the repository to search. eg "github.com/gorilla/mux"
+	Repo api.RepoName
+
+	// URL specifies the repository's Git remote URL (for gitserver). It is optional. See
+	// (gitserver.ExecRequest).URL for documentation on what it is used for.
+	URL string
+
+	// Commit is which commit to search. It is required to be resolved,
+	// not a ref like HEAD or master. eg
+	// "599cba5e7b6137d46ddf58fb1765f5d928e69604"
+	Commit api.CommitID
+
+	// Branch is used for structural search as an alternative to Commit
+	// because Zoekt only takes branch names
+	Branch string
+
+	PatternInfo
+
+	// The amount of time to wait for a repo archive to fetch.
+	// It is parsed with time.ParseDuration.
+	//
+	// This timeout should be low when searching across many repos
+	// so that unfetched repos don't delay the search, and because we are likely
+	// to get results from the repos that have already been fetched.
+	//
+	// This timeout should be high when searching across a single repo
+	// because returning results slowly is better than returning no results at all.
+	//
+	// This only times out how long we wait for the fetch request;
+	// the fetch will still happen in the background so future requests don't have to wait.
+	FetchTimeout string
+
+	// The deadline for the search request.
+	// It is parsed with time.Time.UnmarshalText.
+	Deadline string
+
+	// Endpoint(s) for reaching Zoekt. See description in
+	// endpoint.go:Static(...)
+	IndexerEndpoints []string
+
+	// Whether the revision to be searched is indexed or unindexed. This matters for
+	// structural search because it will query Zoekt for indexed structural search.
+	Indexed bool
+}
+```
+
+Request represents a request to searcher 
+
 ### <a id="Response" href="#Response">type Response struct</a>
 
 ```
 searchKey: protocol.Response
+tags: [struct]
 ```
 
 ```Go
@@ -181,48 +235,4 @@ type Response struct {
 ```
 
 Response represents the response from a Search request. 
-
-### <a id="FileMatch" href="#FileMatch">type FileMatch struct</a>
-
-```
-searchKey: protocol.FileMatch
-```
-
-```Go
-type FileMatch struct {
-	Path        string
-	LineMatches []LineMatch
-	// MatchCount is the number of matches. Different from len(LineMatches), as multiple lines may correspond to one logical match.
-	MatchCount int
-
-	// LimitHit is true if LineMatches may not include all LineMatches.
-	LimitHit bool
-}
-```
-
-FileMatch is the struct used by vscode to receive search results 
-
-### <a id="LineMatch" href="#LineMatch">type LineMatch struct</a>
-
-```
-searchKey: protocol.LineMatch
-```
-
-```Go
-type LineMatch struct {
-	// Preview is the matched line.
-	Preview string
-
-	// LineNumber is the 0-based line number. Note: Our editors present
-	// 1-based line numbers, but internally vscode uses 0-based.
-	LineNumber int
-
-	// OffsetAndLengths is a slice of 2-tuples (Offset, Length)
-	// representing each match on a line.
-	// Offsets and lengths are measured in characters, not bytes.
-	OffsetAndLengths [][2]int
-}
-```
-
-LineMatch is the struct used by vscode to receive search results for a line. 
 

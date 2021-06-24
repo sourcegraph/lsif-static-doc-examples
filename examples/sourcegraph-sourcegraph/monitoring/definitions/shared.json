@@ -4,7 +4,9 @@
     "identifier": "shared",
     "newPage": true,
     "searchKey": "monitoring/definitions/shared",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,10 @@
                 "identifier": "TitleContainerMonitoring",
                 "newPage": false,
                 "searchKey": "shared.TitleContainerMonitoring",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +67,10 @@
                 "identifier": "TitleGolangMonitoring",
                 "newPage": false,
                 "searchKey": "shared.TitleGolangMonitoring",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +90,10 @@
                 "identifier": "TitleKubernetesMonitoring",
                 "newPage": false,
                 "searchKey": "shared.TitleKubernetesMonitoring",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +113,10 @@
                 "identifier": "TitleProvisioningIndicators",
                 "newPage": false,
                 "searchKey": "shared.TitleProvisioningIndicators",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -123,7 +139,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -136,52 +154,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/monitoring/definitions/shared#ContainerMissing",
-              "documentation": {
-                "identifier": "ContainerMissing",
-                "newPage": false,
-                "searchKey": "shared.ContainerMissing",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ContainerMissing"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ContainerMissing sharedObservable = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/monitoring/definitions/shared#ContainerMemoryUsage",
-              "documentation": {
-                "identifier": "ContainerMemoryUsage",
-                "newPage": false,
-                "searchKey": "shared.ContainerMemoryUsage",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ContainerMemoryUsage"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ContainerMemoryUsage sharedObservable = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/monitoring/definitions/shared#ContainerCPUUsage",
               "documentation": {
                 "identifier": "ContainerCPUUsage",
                 "newPage": false,
                 "searchKey": "shared.ContainerCPUUsage",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -201,7 +182,10 @@
                 "identifier": "ContainerIOUsage",
                 "newPage": false,
                 "searchKey": "shared.ContainerIOUsage",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -216,12 +200,61 @@
           },
           {
             "node": {
+              "pathID": "/monitoring/definitions/shared#ContainerMemoryUsage",
+              "documentation": {
+                "identifier": "ContainerMemoryUsage",
+                "newPage": false,
+                "searchKey": "shared.ContainerMemoryUsage",
+                "tags": [
+                  "variable",
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ContainerMemoryUsage"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ContainerMemoryUsage sharedObservable = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions/shared#ContainerMissing",
+              "documentation": {
+                "identifier": "ContainerMissing",
+                "newPage": false,
+                "searchKey": "shared.ContainerMissing",
+                "tags": [
+                  "variable",
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ContainerMissing"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ContainerMissing sharedObservable = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/monitoring/definitions/shared#FrontendInternalAPIErrorResponses",
               "documentation": {
                 "identifier": "FrontendInternalAPIErrorResponses",
                 "newPage": false,
                 "searchKey": "shared.FrontendInternalAPIErrorResponses",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -236,32 +269,15 @@
           },
           {
             "node": {
-              "pathID": "/monitoring/definitions/shared#GoGoroutines",
-              "documentation": {
-                "identifier": "GoGoroutines",
-                "newPage": false,
-                "searchKey": "shared.GoGoroutines",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var GoGoroutines"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar GoGoroutines sharedObservable = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/monitoring/definitions/shared#GoGcDuration",
               "documentation": {
                 "identifier": "GoGcDuration",
                 "newPage": false,
                 "searchKey": "shared.GoGcDuration",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -276,12 +292,38 @@
           },
           {
             "node": {
+              "pathID": "/monitoring/definitions/shared#GoGoroutines",
+              "documentation": {
+                "identifier": "GoGoroutines",
+                "newPage": false,
+                "searchKey": "shared.GoGoroutines",
+                "tags": [
+                  "variable",
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var GoGoroutines"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar GoGoroutines sharedObservable = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/monitoring/definitions/shared#KubernetesPodsAvailable",
               "documentation": {
                 "identifier": "KubernetesPodsAvailable",
                 "newPage": false,
                 "searchKey": "shared.KubernetesPodsAvailable",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -301,7 +343,10 @@
                 "identifier": "ProvisioningCPUUsageLongTerm",
                 "newPage": false,
                 "searchKey": "shared.ProvisioningCPUUsageLongTerm",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -316,32 +361,15 @@
           },
           {
             "node": {
-              "pathID": "/monitoring/definitions/shared#ProvisioningMemoryUsageLongTerm",
-              "documentation": {
-                "identifier": "ProvisioningMemoryUsageLongTerm",
-                "newPage": false,
-                "searchKey": "shared.ProvisioningMemoryUsageLongTerm",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ProvisioningMemoryUsageLongTerm"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ProvisioningMemoryUsageLongTerm sharedObservable = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/monitoring/definitions/shared#ProvisioningCPUUsageShortTerm",
               "documentation": {
                 "identifier": "ProvisioningCPUUsageShortTerm",
                 "newPage": false,
                 "searchKey": "shared.ProvisioningCPUUsageShortTerm",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -356,12 +384,38 @@
           },
           {
             "node": {
+              "pathID": "/monitoring/definitions/shared#ProvisioningMemoryUsageLongTerm",
+              "documentation": {
+                "identifier": "ProvisioningMemoryUsageLongTerm",
+                "newPage": false,
+                "searchKey": "shared.ProvisioningMemoryUsageLongTerm",
+                "tags": [
+                  "variable",
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ProvisioningMemoryUsageLongTerm"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ProvisioningMemoryUsageLongTerm sharedObservable = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/monitoring/definitions/shared#ProvisioningMemoryUsageShortTerm",
               "documentation": {
                 "identifier": "ProvisioningMemoryUsageShortTerm",
                 "newPage": false,
                 "searchKey": "shared.ProvisioningMemoryUsageShortTerm",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -384,7 +438,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -402,7 +458,9 @@
                 "identifier": "Observable",
                 "newPage": false,
                 "searchKey": "shared.Observable",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -420,7 +478,9 @@
                       "identifier": "Observable.Observable",
                       "newPage": false,
                       "searchKey": "shared.Observable.Observable",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -435,32 +495,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/monitoring/definitions/shared#Observable.WithWarning",
-                    "documentation": {
-                      "identifier": "Observable.WithWarning",
-                      "newPage": false,
-                      "searchKey": "shared.Observable.WithWarning",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (o Observable) WithWarning(a *monitoring.ObservableAlertDefinition) Observable"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (o Observable) WithWarning(a *monitoring.ObservableAlertDefinition) Observable\n```\n\nWithWarning overrides this Observable's warning-level alert with the given alert. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/monitoring/definitions/shared#Observable.WithCritical",
                     "documentation": {
                       "identifier": "Observable.WithCritical",
                       "newPage": false,
                       "searchKey": "shared.Observable.WithCritical",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -480,7 +522,9 @@
                       "identifier": "Observable.WithNoAlerts",
                       "newPage": false,
                       "searchKey": "shared.Observable.WithNoAlerts",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -489,6 +533,28 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (o Observable) WithNoAlerts(interpretation string) Observable\n```\n\nWithNoAlerts disables alerting on this Observable and sets the given interpretation instead. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/definitions/shared#Observable.WithWarning",
+                    "documentation": {
+                      "identifier": "Observable.WithWarning",
+                      "newPage": false,
+                      "searchKey": "shared.Observable.WithWarning",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (o Observable) WithWarning(a *monitoring.ObservableAlertDefinition) Observable"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (o Observable) WithWarning(a *monitoring.ObservableAlertDefinition) Observable\n```\n\nWithWarning overrides this Observable's warning-level alert with the given alert. \n\n"
                     },
                     "children": null
                   }
@@ -504,6 +570,7 @@
                 "newPage": false,
                 "searchKey": "shared.sharedObservable",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -528,7 +595,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -546,7 +615,9 @@
                 "identifier": "CadvisorNameMatcher",
                 "newPage": false,
                 "searchKey": "shared.CadvisorNameMatcher",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",

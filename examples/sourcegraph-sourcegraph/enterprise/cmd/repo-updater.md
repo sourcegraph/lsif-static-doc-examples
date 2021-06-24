@@ -5,29 +5,22 @@
 * Subpages
   * [enterprise/cmd/repo-updater/internal](repo-updater/internal.md)
 * [Functions](#func)
-    * [func main()](#main)
     * [func enterpriseInit(db *sql.DB,...](#enterpriseInit)
+    * [func main()](#main)
     * [func startBackgroundPermsSync(ctx context.Context, syncer *authz.PermsSyncer, db dbutil.DB)](#startBackgroundPermsSync)
 
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="main" href="#main">func main()</a>
-
 ```
-searchKey: main.main
-tags: [private]
-```
-
-```Go
-func main()
+tags: [package]
 ```
 
 ### <a id="enterpriseInit" href="#enterpriseInit">func enterpriseInit(db *sql.DB,...</a>
 
 ```
 searchKey: main.enterpriseInit
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -40,11 +33,22 @@ func enterpriseInit(
 ) (debugDumpers []debugserver.Dumper)
 ```
 
+### <a id="main" href="#main">func main()</a>
+
+```
+searchKey: main.main
+tags: [function private]
+```
+
+```Go
+func main()
+```
+
 ### <a id="startBackgroundPermsSync" href="#startBackgroundPermsSync">func startBackgroundPermsSync(ctx context.Context, syncer *authz.PermsSyncer, db dbutil.DB)</a>
 
 ```
 searchKey: main.startBackgroundPermsSync
-tags: [private]
+tags: [method private]
 ```
 
 ```Go

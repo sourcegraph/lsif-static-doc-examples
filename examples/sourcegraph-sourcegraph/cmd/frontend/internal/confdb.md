@@ -19,24 +19,25 @@ All other users should go through the conf package and NOT interact with the dat
     * [type queryable interface](#queryable)
         * [func newTransaction(ctx context.Context) (tx queryable, done func(), err error)](#newTransaction)
 * [Functions](#func)
-    * [func addDefault(ctx context.Context, tx queryable, contents string) (newLastID *int32, err error)](#addDefault)
-    * [func parseQueryRows(ctx context.Context, rows *sql.Rows) ([]*SiteConfig, error)](#parseQueryRows)
-    * [func TestSiteGetLatestDefault(t *testing.T)](#TestSiteGetLatestDefault)
-    * [func TestSiteCreate_RejectInvalidJSON(t *testing.T)](#TestSiteCreate_RejectInvalidJSON)
     * [func TestSiteCreateIfUpToDate(t *testing.T)](#TestSiteCreateIfUpToDate)
+    * [func TestSiteCreate_RejectInvalidJSON(t *testing.T)](#TestSiteCreate_RejectInvalidJSON)
+    * [func TestSiteGetLatestDefault(t *testing.T)](#TestSiteGetLatestDefault)
+    * [func addDefault(ctx context.Context, tx queryable, contents string) (newLastID *int32, err error)](#addDefault)
     * [func init()](#init.db_test.go)
+    * [func parseQueryRows(ctx context.Context, rows *sql.Rows) ([]*SiteConfig, error)](#parseQueryRows)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="ErrNewerEdit" href="#ErrNewerEdit">var ErrNewerEdit</a>
 
 ```
 searchKey: confdb.ErrNewerEdit
+tags: [variable interface]
 ```
 
 ```Go
@@ -48,13 +49,14 @@ ErrNewerEdit is returned by SiteCreateIfUpToDate when a newer edit has already b
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="SiteConfig" href="#SiteConfig">type SiteConfig struct</a>
 
 ```
 searchKey: confdb.SiteConfig
+tags: [struct]
 ```
 
 ```Go
@@ -72,6 +74,7 @@ SiteConfig contains the contents of a site config along with associated metadata
 
 ```
 searchKey: confdb.SiteCreateIfUpToDate
+tags: [method]
 ```
 
 ```Go
@@ -88,6 +91,7 @@ The site config that was most recently saved to the database is returned. An err
 
 ```
 searchKey: confdb.SiteGetLatest
+tags: [method]
 ```
 
 ```Go
@@ -102,7 +106,7 @@ SiteGetLatest returns the site config that was most recently saved to the databa
 
 ```
 searchKey: confdb.createIfUpToDate
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -113,7 +117,7 @@ func createIfUpToDate(ctx context.Context, tx queryable, lastID *int32, contents
 
 ```
 searchKey: confdb.getLatest
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -124,7 +128,7 @@ func getLatest(ctx context.Context, tx queryable) (*SiteConfig, error)
 
 ```
 searchKey: confdb.queryable
-tags: [private]
+tags: [interface private]
 ```
 
 ```Go
@@ -140,7 +144,7 @@ queryable allows us to reuse the same logic for certain operations both inside a
 
 ```
 searchKey: confdb.newTransaction
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -150,72 +154,72 @@ func newTransaction(ctx context.Context) (tx queryable, done func(), err error)
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
-```
-
-### <a id="addDefault" href="#addDefault">func addDefault(ctx context.Context, tx queryable, contents string) (newLastID *int32, err error)</a>
-
-```
-searchKey: confdb.addDefault
-tags: [private]
-```
-
-```Go
-func addDefault(ctx context.Context, tx queryable, contents string) (newLastID *int32, err error)
-```
-
-### <a id="parseQueryRows" href="#parseQueryRows">func parseQueryRows(ctx context.Context, rows *sql.Rows) ([]*SiteConfig, error)</a>
-
-```
-searchKey: confdb.parseQueryRows
-tags: [private]
-```
-
-```Go
-func parseQueryRows(ctx context.Context, rows *sql.Rows) ([]*SiteConfig, error)
-```
-
-### <a id="TestSiteGetLatestDefault" href="#TestSiteGetLatestDefault">func TestSiteGetLatestDefault(t *testing.T)</a>
-
-```
-searchKey: confdb.TestSiteGetLatestDefault
-tags: [private]
-```
-
-```Go
-func TestSiteGetLatestDefault(t *testing.T)
-```
-
-### <a id="TestSiteCreate_RejectInvalidJSON" href="#TestSiteCreate_RejectInvalidJSON">func TestSiteCreate_RejectInvalidJSON(t *testing.T)</a>
-
-```
-searchKey: confdb.TestSiteCreate_RejectInvalidJSON
-tags: [private]
-```
-
-```Go
-func TestSiteCreate_RejectInvalidJSON(t *testing.T)
+tags: [package private]
 ```
 
 ### <a id="TestSiteCreateIfUpToDate" href="#TestSiteCreateIfUpToDate">func TestSiteCreateIfUpToDate(t *testing.T)</a>
 
 ```
 searchKey: confdb.TestSiteCreateIfUpToDate
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestSiteCreateIfUpToDate(t *testing.T)
 ```
 
+### <a id="TestSiteCreate_RejectInvalidJSON" href="#TestSiteCreate_RejectInvalidJSON">func TestSiteCreate_RejectInvalidJSON(t *testing.T)</a>
+
+```
+searchKey: confdb.TestSiteCreate_RejectInvalidJSON
+tags: [method private test]
+```
+
+```Go
+func TestSiteCreate_RejectInvalidJSON(t *testing.T)
+```
+
+### <a id="TestSiteGetLatestDefault" href="#TestSiteGetLatestDefault">func TestSiteGetLatestDefault(t *testing.T)</a>
+
+```
+searchKey: confdb.TestSiteGetLatestDefault
+tags: [method private test]
+```
+
+```Go
+func TestSiteGetLatestDefault(t *testing.T)
+```
+
+### <a id="addDefault" href="#addDefault">func addDefault(ctx context.Context, tx queryable, contents string) (newLastID *int32, err error)</a>
+
+```
+searchKey: confdb.addDefault
+tags: [method private]
+```
+
+```Go
+func addDefault(ctx context.Context, tx queryable, contents string) (newLastID *int32, err error)
+```
+
 ### <a id="init.db_test.go" href="#init.db_test.go">func init()</a>
 
 ```
 searchKey: confdb.init
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func init()
+```
+
+### <a id="parseQueryRows" href="#parseQueryRows">func parseQueryRows(ctx context.Context, rows *sql.Rows) ([]*SiteConfig, error)</a>
+
+```
+searchKey: confdb.parseQueryRows
+tags: [method private]
+```
+
+```Go
+func parseQueryRows(ctx context.Context, rows *sql.Rows) ([]*SiteConfig, error)
 ```
 

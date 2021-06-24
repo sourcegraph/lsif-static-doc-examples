@@ -11,13 +11,14 @@ Package imageutil contains code shared by image-related packages.
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="DrawYCbCr" href="#DrawYCbCr">func DrawYCbCr(dst *image.RGBA, r image.Rectangle, src *image.YCbCr, sp image.Point) (ok bool)</a>
 
 ```
 searchKey: imageutil.DrawYCbCr
+tags: [method]
 ```
 
 ```Go

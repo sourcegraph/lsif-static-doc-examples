@@ -7,8 +7,8 @@ SHA-1 is cryptographically broken and should not be used for secure applications
 ## Index
 
 * [Constants](#const)
-    * [const Size](#Size)
     * [const BlockSize](#BlockSize)
+    * [const Size](#Size)
     * [const chunk](#chunk)
     * [const init0](#init0)
     * [const init1](#init1)
@@ -22,69 +22,62 @@ SHA-1 is cryptographically broken and should not be used for secure applications
     * [const _K2](#_K2)
     * [const _K3](#_K3)
 * [Variables](#var)
-    * [var useAVX2](#useAVX2)
-    * [var golden](#golden)
-    * [var largeUnmarshalTests](#largeUnmarshalTests)
     * [var bench](#bench)
     * [var buf](#buf)
+    * [var golden](#golden)
+    * [var largeUnmarshalTests](#largeUnmarshalTests)
+    * [var useAVX2](#useAVX2)
 * [Types](#type)
     * [type digest struct](#digest)
+        * [func (d *digest) BlockSize() int](#digest.BlockSize)
+        * [func (d *digest) ConstantTimeSum(in []byte) []byte](#digest.ConstantTimeSum)
         * [func (d *digest) MarshalBinary() ([]byte, error)](#digest.MarshalBinary)
-        * [func (d *digest) UnmarshalBinary(b []byte) error](#digest.UnmarshalBinary)
         * [func (d *digest) Reset()](#digest.Reset)
         * [func (d *digest) Size() int](#digest.Size)
-        * [func (d *digest) BlockSize() int](#digest.BlockSize)
-        * [func (d *digest) Write(p []byte) (nn int, err error)](#digest.Write)
         * [func (d *digest) Sum(in []byte) []byte](#digest.Sum)
+        * [func (d *digest) UnmarshalBinary(b []byte) error](#digest.UnmarshalBinary)
+        * [func (d *digest) Write(p []byte) (nn int, err error)](#digest.Write)
         * [func (d *digest) checkSum() [Size]byte](#digest.checkSum)
-        * [func (d *digest) ConstantTimeSum(in []byte) []byte](#digest.ConstantTimeSum)
         * [func (d *digest) constSum() [Size]byte](#digest.constSum)
     * [type sha1Test struct](#sha1Test)
     * [type unmarshalTest struct](#unmarshalTest)
 * [Functions](#func)
-    * [func init()](#init.sha1.go)
-    * [func appendUint64(b []byte, x uint64) []byte](#appendUint64)
-    * [func appendUint32(b []byte, x uint32) []byte](#appendUint32)
-    * [func consumeUint64(b []byte) ([]byte, uint64)](#consumeUint64)
-    * [func consumeUint32(b []byte) ([]byte, uint32)](#consumeUint32)
+    * [func BenchmarkHash1K(b *testing.B)](#BenchmarkHash1K)
+    * [func BenchmarkHash320Bytes(b *testing.B)](#BenchmarkHash320Bytes)
+    * [func BenchmarkHash8Bytes(b *testing.B)](#BenchmarkHash8Bytes)
+    * [func BenchmarkHash8K(b *testing.B)](#BenchmarkHash8K)
     * [func New() hash.Hash](#New)
     * [func Sum(data []byte) [Size]byte](#Sum)
-    * [func blockGeneric(dig *digest, p []byte)](#blockGeneric)
-    * [func blockAVX2(dig *digest, p []byte)](#blockAVX2)
-    * [func blockAMD64(dig *digest, p []byte)](#blockAMD64)
-    * [func block(dig *digest, p []byte)](#block)
+    * [func TestBlockGeneric(t *testing.T)](#TestBlockGeneric)
+    * [func TestBlockSize(t *testing.T)](#TestBlockSize)
     * [func TestGolden(t *testing.T)](#TestGolden)
     * [func TestGoldenMarshal(t *testing.T)](#TestGoldenMarshal)
-    * [func TestSize(t *testing.T)](#TestSize)
-    * [func TestBlockSize(t *testing.T)](#TestBlockSize)
-    * [func TestBlockGeneric(t *testing.T)](#TestBlockGeneric)
-    * [func safeSum(h hash.Hash) (sum []byte, err error)](#safeSum)
     * [func TestLargeHashes(t *testing.T)](#TestLargeHashes)
+    * [func TestSize(t *testing.T)](#TestSize)
+    * [func appendUint32(b []byte, x uint32) []byte](#appendUint32)
+    * [func appendUint64(b []byte, x uint64) []byte](#appendUint64)
     * [func benchmarkSize(b *testing.B, size int)](#benchmarkSize)
-    * [func BenchmarkHash8Bytes(b *testing.B)](#BenchmarkHash8Bytes)
-    * [func BenchmarkHash320Bytes(b *testing.B)](#BenchmarkHash320Bytes)
-    * [func BenchmarkHash1K(b *testing.B)](#BenchmarkHash1K)
-    * [func BenchmarkHash8K(b *testing.B)](#BenchmarkHash8K)
+    * [func block(dig *digest, p []byte)](#block)
+    * [func blockAMD64(dig *digest, p []byte)](#blockAMD64)
+    * [func blockAVX2(dig *digest, p []byte)](#blockAVX2)
+    * [func blockGeneric(dig *digest, p []byte)](#blockGeneric)
+    * [func consumeUint32(b []byte) ([]byte, uint32)](#consumeUint32)
+    * [func consumeUint64(b []byte) ([]byte, uint64)](#consumeUint64)
+    * [func init()](#init.sha1.go)
+    * [func safeSum(h hash.Hash) (sum []byte, err error)](#safeSum)
 
 
 ## <a id="const" href="#const">Constants</a>
 
-### <a id="Size" href="#Size">const Size</a>
-
 ```
-searchKey: sha1.Size
+tags: [package]
 ```
-
-```Go
-const Size = 20
-```
-
-The size of a SHA-1 checksum in bytes. 
 
 ### <a id="BlockSize" href="#BlockSize">const BlockSize</a>
 
 ```
 searchKey: sha1.BlockSize
+tags: [constant number]
 ```
 
 ```Go
@@ -93,11 +86,24 @@ const BlockSize = 64
 
 The blocksize of SHA-1 in bytes. 
 
+### <a id="Size" href="#Size">const Size</a>
+
+```
+searchKey: sha1.Size
+tags: [constant number]
+```
+
+```Go
+const Size = 20
+```
+
+The size of a SHA-1 checksum in bytes. 
+
 ### <a id="chunk" href="#chunk">const chunk</a>
 
 ```
 searchKey: sha1.chunk
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -108,7 +114,7 @@ const chunk = 64
 
 ```
 searchKey: sha1.init0
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -119,7 +125,7 @@ const init0 = 0x67452301
 
 ```
 searchKey: sha1.init1
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -130,7 +136,7 @@ const init1 = 0xEFCDAB89
 
 ```
 searchKey: sha1.init2
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -141,7 +147,7 @@ const init2 = 0x98BADCFE
 
 ```
 searchKey: sha1.init3
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -152,7 +158,7 @@ const init3 = 0x10325476
 
 ```
 searchKey: sha1.init4
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -163,7 +169,7 @@ const init4 = 0xC3D2E1F0
 
 ```
 searchKey: sha1.magic
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -174,7 +180,7 @@ const magic = "sha\x01"
 
 ```
 searchKey: sha1.marshaledSize
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -185,7 +191,7 @@ const marshaledSize = len(magic) + 5*4 + chunk + 8
 
 ```
 searchKey: sha1._K0
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -196,7 +202,7 @@ const _K0 = 0x5A827999
 
 ```
 searchKey: sha1._K1
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -207,7 +213,7 @@ const _K1 = 0x6ED9EBA1
 
 ```
 searchKey: sha1._K2
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -218,7 +224,7 @@ const _K2 = 0x8F1BBCDC
 
 ```
 searchKey: sha1._K3
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -227,44 +233,15 @@ const _K3 = 0xCA62C1D6
 
 ## <a id="var" href="#var">Variables</a>
 
-### <a id="useAVX2" href="#useAVX2">var useAVX2</a>
-
 ```
-searchKey: sha1.useAVX2
-tags: [private]
-```
-
-```Go
-var useAVX2 = cpu.X86.HasAVX2 && cpu.X86.HasBMI1 && cpu.X86.HasBMI2
-```
-
-### <a id="golden" href="#golden">var golden</a>
-
-```
-searchKey: sha1.golden
-tags: [private]
-```
-
-```Go
-var golden = ...
-```
-
-### <a id="largeUnmarshalTests" href="#largeUnmarshalTests">var largeUnmarshalTests</a>
-
-```
-searchKey: sha1.largeUnmarshalTests
-tags: [private]
-```
-
-```Go
-var largeUnmarshalTests = ...
+tags: [package]
 ```
 
 ### <a id="bench" href="#bench">var bench</a>
 
 ```
 searchKey: sha1.bench
-tags: [private]
+tags: [variable interface private]
 ```
 
 ```Go
@@ -275,20 +252,57 @@ var bench = New()
 
 ```
 searchKey: sha1.buf
-tags: [private]
+tags: [variable array number private]
 ```
 
 ```Go
 var buf = make([]byte, 8192)
 ```
 
+### <a id="golden" href="#golden">var golden</a>
+
+```
+searchKey: sha1.golden
+tags: [variable array struct private]
+```
+
+```Go
+var golden = ...
+```
+
+### <a id="largeUnmarshalTests" href="#largeUnmarshalTests">var largeUnmarshalTests</a>
+
+```
+searchKey: sha1.largeUnmarshalTests
+tags: [variable array struct private]
+```
+
+```Go
+var largeUnmarshalTests = ...
+```
+
+### <a id="useAVX2" href="#useAVX2">var useAVX2</a>
+
+```
+searchKey: sha1.useAVX2
+tags: [variable boolean private]
+```
+
+```Go
+var useAVX2 = cpu.X86.HasAVX2 && cpu.X86.HasBMI1 && cpu.X86.HasBMI2
+```
+
 ## <a id="type" href="#type">Types</a>
+
+```
+tags: [package]
+```
 
 ### <a id="digest" href="#digest">type digest struct</a>
 
 ```
 searchKey: sha1.digest
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -302,33 +316,46 @@ type digest struct {
 
 digest represents the partial evaluation of a checksum. 
 
+#### <a id="digest.BlockSize" href="#digest.BlockSize">func (d *digest) BlockSize() int</a>
+
+```
+searchKey: sha1.digest.BlockSize
+tags: [function private]
+```
+
+```Go
+func (d *digest) BlockSize() int
+```
+
+#### <a id="digest.ConstantTimeSum" href="#digest.ConstantTimeSum">func (d *digest) ConstantTimeSum(in []byte) []byte</a>
+
+```
+searchKey: sha1.digest.ConstantTimeSum
+tags: [method private]
+```
+
+```Go
+func (d *digest) ConstantTimeSum(in []byte) []byte
+```
+
+ConstantTimeSum computes the same result of Sum() but in constant time 
+
 #### <a id="digest.MarshalBinary" href="#digest.MarshalBinary">func (d *digest) MarshalBinary() ([]byte, error)</a>
 
 ```
 searchKey: sha1.digest.MarshalBinary
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (d *digest) MarshalBinary() ([]byte, error)
 ```
 
-#### <a id="digest.UnmarshalBinary" href="#digest.UnmarshalBinary">func (d *digest) UnmarshalBinary(b []byte) error</a>
-
-```
-searchKey: sha1.digest.UnmarshalBinary
-tags: [private]
-```
-
-```Go
-func (d *digest) UnmarshalBinary(b []byte) error
-```
-
 #### <a id="digest.Reset" href="#digest.Reset">func (d *digest) Reset()</a>
 
 ```
 searchKey: sha1.digest.Reset
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -339,75 +366,62 @@ func (d *digest) Reset()
 
 ```
 searchKey: sha1.digest.Size
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (d *digest) Size() int
 ```
 
-#### <a id="digest.BlockSize" href="#digest.BlockSize">func (d *digest) BlockSize() int</a>
-
-```
-searchKey: sha1.digest.BlockSize
-tags: [private]
-```
-
-```Go
-func (d *digest) BlockSize() int
-```
-
-#### <a id="digest.Write" href="#digest.Write">func (d *digest) Write(p []byte) (nn int, err error)</a>
-
-```
-searchKey: sha1.digest.Write
-tags: [private]
-```
-
-```Go
-func (d *digest) Write(p []byte) (nn int, err error)
-```
-
 #### <a id="digest.Sum" href="#digest.Sum">func (d *digest) Sum(in []byte) []byte</a>
 
 ```
 searchKey: sha1.digest.Sum
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (d *digest) Sum(in []byte) []byte
 ```
 
+#### <a id="digest.UnmarshalBinary" href="#digest.UnmarshalBinary">func (d *digest) UnmarshalBinary(b []byte) error</a>
+
+```
+searchKey: sha1.digest.UnmarshalBinary
+tags: [method private]
+```
+
+```Go
+func (d *digest) UnmarshalBinary(b []byte) error
+```
+
+#### <a id="digest.Write" href="#digest.Write">func (d *digest) Write(p []byte) (nn int, err error)</a>
+
+```
+searchKey: sha1.digest.Write
+tags: [method private]
+```
+
+```Go
+func (d *digest) Write(p []byte) (nn int, err error)
+```
+
 #### <a id="digest.checkSum" href="#digest.checkSum">func (d *digest) checkSum() [Size]byte</a>
 
 ```
 searchKey: sha1.digest.checkSum
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (d *digest) checkSum() [Size]byte
 ```
 
-#### <a id="digest.ConstantTimeSum" href="#digest.ConstantTimeSum">func (d *digest) ConstantTimeSum(in []byte) []byte</a>
-
-```
-searchKey: sha1.digest.ConstantTimeSum
-tags: [private]
-```
-
-```Go
-func (d *digest) ConstantTimeSum(in []byte) []byte
-```
-
-ConstantTimeSum computes the same result of Sum() but in constant time 
-
 #### <a id="digest.constSum" href="#digest.constSum">func (d *digest) constSum() [Size]byte</a>
 
 ```
 searchKey: sha1.digest.constSum
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -418,7 +432,7 @@ func (d *digest) constSum() [Size]byte
 
 ```
 searchKey: sha1.sha1Test
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -433,7 +447,7 @@ type sha1Test struct {
 
 ```
 searchKey: sha1.unmarshalTest
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -447,65 +461,59 @@ Tests for unmarshaling hashes that have hashed a large amount of data The initia
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="init.sha1.go" href="#init.sha1.go">func init()</a>
-
 ```
-searchKey: sha1.init
-tags: [private]
+tags: [package]
 ```
 
-```Go
-func init()
-```
-
-### <a id="appendUint64" href="#appendUint64">func appendUint64(b []byte, x uint64) []byte</a>
+### <a id="BenchmarkHash1K" href="#BenchmarkHash1K">func BenchmarkHash1K(b *testing.B)</a>
 
 ```
-searchKey: sha1.appendUint64
-tags: [private]
+searchKey: sha1.BenchmarkHash1K
+tags: [method private benchmark]
 ```
 
 ```Go
-func appendUint64(b []byte, x uint64) []byte
+func BenchmarkHash1K(b *testing.B)
 ```
 
-### <a id="appendUint32" href="#appendUint32">func appendUint32(b []byte, x uint32) []byte</a>
+### <a id="BenchmarkHash320Bytes" href="#BenchmarkHash320Bytes">func BenchmarkHash320Bytes(b *testing.B)</a>
 
 ```
-searchKey: sha1.appendUint32
-tags: [private]
-```
-
-```Go
-func appendUint32(b []byte, x uint32) []byte
-```
-
-### <a id="consumeUint64" href="#consumeUint64">func consumeUint64(b []byte) ([]byte, uint64)</a>
-
-```
-searchKey: sha1.consumeUint64
-tags: [private]
+searchKey: sha1.BenchmarkHash320Bytes
+tags: [method private benchmark]
 ```
 
 ```Go
-func consumeUint64(b []byte) ([]byte, uint64)
+func BenchmarkHash320Bytes(b *testing.B)
 ```
 
-### <a id="consumeUint32" href="#consumeUint32">func consumeUint32(b []byte) ([]byte, uint32)</a>
+### <a id="BenchmarkHash8Bytes" href="#BenchmarkHash8Bytes">func BenchmarkHash8Bytes(b *testing.B)</a>
 
 ```
-searchKey: sha1.consumeUint32
-tags: [private]
+searchKey: sha1.BenchmarkHash8Bytes
+tags: [method private benchmark]
 ```
 
 ```Go
-func consumeUint32(b []byte) ([]byte, uint32)
+func BenchmarkHash8Bytes(b *testing.B)
+```
+
+### <a id="BenchmarkHash8K" href="#BenchmarkHash8K">func BenchmarkHash8K(b *testing.B)</a>
+
+```
+searchKey: sha1.BenchmarkHash8K
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkHash8K(b *testing.B)
 ```
 
 ### <a id="New" href="#New">func New() hash.Hash</a>
 
 ```
 searchKey: sha1.New
+tags: [function]
 ```
 
 ```Go
@@ -518,6 +526,7 @@ New returns a new hash.Hash computing the SHA1 checksum. The Hash also implement
 
 ```
 searchKey: sha1.Sum
+tags: [method]
 ```
 
 ```Go
@@ -526,57 +535,35 @@ func Sum(data []byte) [Size]byte
 
 Sum returns the SHA-1 checksum of the data. 
 
-### <a id="blockGeneric" href="#blockGeneric">func blockGeneric(dig *digest, p []byte)</a>
+### <a id="TestBlockGeneric" href="#TestBlockGeneric">func TestBlockGeneric(t *testing.T)</a>
 
 ```
-searchKey: sha1.blockGeneric
-tags: [private]
-```
-
-```Go
-func blockGeneric(dig *digest, p []byte)
-```
-
-blockGeneric is a portable, pure Go version of the SHA-1 block step. It's used by sha1block_generic.go and tests. 
-
-### <a id="blockAVX2" href="#blockAVX2">func blockAVX2(dig *digest, p []byte)</a>
-
-```
-searchKey: sha1.blockAVX2
-tags: [private]
+searchKey: sha1.TestBlockGeneric
+tags: [method private test]
 ```
 
 ```Go
-func blockAVX2(dig *digest, p []byte)
+func TestBlockGeneric(t *testing.T)
 ```
 
-### <a id="blockAMD64" href="#blockAMD64">func blockAMD64(dig *digest, p []byte)</a>
+Tests that blockGeneric (pure Go) and block (in assembly for some architectures) match. 
+
+### <a id="TestBlockSize" href="#TestBlockSize">func TestBlockSize(t *testing.T)</a>
 
 ```
-searchKey: sha1.blockAMD64
-tags: [private]
-```
-
-```Go
-func blockAMD64(dig *digest, p []byte)
-```
-
-### <a id="block" href="#block">func block(dig *digest, p []byte)</a>
-
-```
-searchKey: sha1.block
-tags: [private]
+searchKey: sha1.TestBlockSize
+tags: [method private test]
 ```
 
 ```Go
-func block(dig *digest, p []byte)
+func TestBlockSize(t *testing.T)
 ```
 
 ### <a id="TestGolden" href="#TestGolden">func TestGolden(t *testing.T)</a>
 
 ```
 searchKey: sha1.TestGolden
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -587,122 +574,155 @@ func TestGolden(t *testing.T)
 
 ```
 searchKey: sha1.TestGoldenMarshal
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestGoldenMarshal(t *testing.T)
 ```
 
-### <a id="TestSize" href="#TestSize">func TestSize(t *testing.T)</a>
-
-```
-searchKey: sha1.TestSize
-tags: [private]
-```
-
-```Go
-func TestSize(t *testing.T)
-```
-
-### <a id="TestBlockSize" href="#TestBlockSize">func TestBlockSize(t *testing.T)</a>
-
-```
-searchKey: sha1.TestBlockSize
-tags: [private]
-```
-
-```Go
-func TestBlockSize(t *testing.T)
-```
-
-### <a id="TestBlockGeneric" href="#TestBlockGeneric">func TestBlockGeneric(t *testing.T)</a>
-
-```
-searchKey: sha1.TestBlockGeneric
-tags: [private]
-```
-
-```Go
-func TestBlockGeneric(t *testing.T)
-```
-
-Tests that blockGeneric (pure Go) and block (in assembly for some architectures) match. 
-
-### <a id="safeSum" href="#safeSum">func safeSum(h hash.Hash) (sum []byte, err error)</a>
-
-```
-searchKey: sha1.safeSum
-tags: [private]
-```
-
-```Go
-func safeSum(h hash.Hash) (sum []byte, err error)
-```
-
 ### <a id="TestLargeHashes" href="#TestLargeHashes">func TestLargeHashes(t *testing.T)</a>
 
 ```
 searchKey: sha1.TestLargeHashes
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestLargeHashes(t *testing.T)
 ```
 
+### <a id="TestSize" href="#TestSize">func TestSize(t *testing.T)</a>
+
+```
+searchKey: sha1.TestSize
+tags: [method private test]
+```
+
+```Go
+func TestSize(t *testing.T)
+```
+
+### <a id="appendUint32" href="#appendUint32">func appendUint32(b []byte, x uint32) []byte</a>
+
+```
+searchKey: sha1.appendUint32
+tags: [method private]
+```
+
+```Go
+func appendUint32(b []byte, x uint32) []byte
+```
+
+### <a id="appendUint64" href="#appendUint64">func appendUint64(b []byte, x uint64) []byte</a>
+
+```
+searchKey: sha1.appendUint64
+tags: [method private]
+```
+
+```Go
+func appendUint64(b []byte, x uint64) []byte
+```
+
 ### <a id="benchmarkSize" href="#benchmarkSize">func benchmarkSize(b *testing.B, size int)</a>
 
 ```
 searchKey: sha1.benchmarkSize
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func benchmarkSize(b *testing.B, size int)
 ```
 
-### <a id="BenchmarkHash8Bytes" href="#BenchmarkHash8Bytes">func BenchmarkHash8Bytes(b *testing.B)</a>
+### <a id="block" href="#block">func block(dig *digest, p []byte)</a>
 
 ```
-searchKey: sha1.BenchmarkHash8Bytes
-tags: [private]
-```
-
-```Go
-func BenchmarkHash8Bytes(b *testing.B)
-```
-
-### <a id="BenchmarkHash320Bytes" href="#BenchmarkHash320Bytes">func BenchmarkHash320Bytes(b *testing.B)</a>
-
-```
-searchKey: sha1.BenchmarkHash320Bytes
-tags: [private]
+searchKey: sha1.block
+tags: [method private]
 ```
 
 ```Go
-func BenchmarkHash320Bytes(b *testing.B)
+func block(dig *digest, p []byte)
 ```
 
-### <a id="BenchmarkHash1K" href="#BenchmarkHash1K">func BenchmarkHash1K(b *testing.B)</a>
+### <a id="blockAMD64" href="#blockAMD64">func blockAMD64(dig *digest, p []byte)</a>
 
 ```
-searchKey: sha1.BenchmarkHash1K
-tags: [private]
-```
-
-```Go
-func BenchmarkHash1K(b *testing.B)
-```
-
-### <a id="BenchmarkHash8K" href="#BenchmarkHash8K">func BenchmarkHash8K(b *testing.B)</a>
-
-```
-searchKey: sha1.BenchmarkHash8K
-tags: [private]
+searchKey: sha1.blockAMD64
+tags: [method private]
 ```
 
 ```Go
-func BenchmarkHash8K(b *testing.B)
+func blockAMD64(dig *digest, p []byte)
+```
+
+### <a id="blockAVX2" href="#blockAVX2">func blockAVX2(dig *digest, p []byte)</a>
+
+```
+searchKey: sha1.blockAVX2
+tags: [method private]
+```
+
+```Go
+func blockAVX2(dig *digest, p []byte)
+```
+
+### <a id="blockGeneric" href="#blockGeneric">func blockGeneric(dig *digest, p []byte)</a>
+
+```
+searchKey: sha1.blockGeneric
+tags: [method private]
+```
+
+```Go
+func blockGeneric(dig *digest, p []byte)
+```
+
+blockGeneric is a portable, pure Go version of the SHA-1 block step. It's used by sha1block_generic.go and tests. 
+
+### <a id="consumeUint32" href="#consumeUint32">func consumeUint32(b []byte) ([]byte, uint32)</a>
+
+```
+searchKey: sha1.consumeUint32
+tags: [method private]
+```
+
+```Go
+func consumeUint32(b []byte) ([]byte, uint32)
+```
+
+### <a id="consumeUint64" href="#consumeUint64">func consumeUint64(b []byte) ([]byte, uint64)</a>
+
+```
+searchKey: sha1.consumeUint64
+tags: [method private]
+```
+
+```Go
+func consumeUint64(b []byte) ([]byte, uint64)
+```
+
+### <a id="init.sha1.go" href="#init.sha1.go">func init()</a>
+
+```
+searchKey: sha1.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="safeSum" href="#safeSum">func safeSum(h hash.Hash) (sum []byte, err error)</a>
+
+```
+searchKey: sha1.safeSum
+tags: [method private]
+```
+
+```Go
+func safeSum(h hash.Hash) (sum []byte, err error)
 ```
 

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/rcache",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,12 +41,38 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/rcache#DefaultMutexDelay",
+              "documentation": {
+                "identifier": "DefaultMutexDelay",
+                "newPage": false,
+                "searchKey": "rcache.DefaultMutexDelay",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const DefaultMutexDelay"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst DefaultMutexDelay = 512 * time.Millisecond\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/rcache#DefaultMutexExpiry",
               "documentation": {
                 "identifier": "DefaultMutexExpiry",
                 "newPage": false,
                 "searchKey": "rcache.DefaultMutexExpiry",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +92,10 @@
                 "identifier": "DefaultMutexTries",
                 "newPage": false,
                 "searchKey": "rcache.DefaultMutexTries",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -79,32 +110,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/rcache#DefaultMutexDelay",
-              "documentation": {
-                "identifier": "DefaultMutexDelay",
-                "newPage": false,
-                "searchKey": "rcache.DefaultMutexDelay",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const DefaultMutexDelay"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst DefaultMutexDelay = 512 * time.Millisecond\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/rcache#dataVersion",
               "documentation": {
                 "identifier": "dataVersion",
                 "newPage": false,
                 "searchKey": "rcache.dataVersion",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -127,6 +140,8 @@
                 "newPage": false,
                 "searchKey": "rcache.dataVersionToDelete",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -152,6 +167,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -172,6 +188,8 @@
                 "newPage": false,
                 "searchKey": "rcache.deleteBatchSize",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -188,34 +206,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/rcache#pool",
-              "documentation": {
-                "identifier": "pool",
-                "newPage": false,
-                "searchKey": "rcache.pool",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var pool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar pool = redispool.Cache\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/rcache#globalPrefix",
               "documentation": {
                 "identifier": "globalPrefix",
                 "newPage": false,
                 "searchKey": "rcache.globalPrefix",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -226,6 +224,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar globalPrefix = dataVersion\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/rcache#pool",
+              "documentation": {
+                "identifier": "pool",
+                "newPage": false,
+                "searchKey": "rcache.pool",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var pool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar pool = redispool.Cache\n```\n\n"
               },
               "children": null
             }
@@ -241,6 +263,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -255,32 +278,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/rcache#MutexOptions",
-              "documentation": {
-                "identifier": "MutexOptions",
-                "newPage": false,
-                "searchKey": "rcache.MutexOptions",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type MutexOptions struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype MutexOptions struct {\n\t// Expiry sets how long a lock should be held. Under normal\n\t// operation it will be extended on an interval of (Expiry / 2)\n\tExpiry time.Duration\n\t// Tries is how many tries we have before we give up acquiring a\n\t// lock.\n\tTries int\n\t// RetryDelay is how long to sleep between attempts to lock\n\tRetryDelay time.Duration\n}\n```\n\nMutexOptions hold options passed to TryAcquireMutex. It is safe to pass zero values in which case defaults will be used instead. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/rcache#Cache",
               "documentation": {
                 "identifier": "Cache",
                 "newPage": false,
                 "searchKey": "rcache.Cache",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -298,7 +303,9 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "rcache.New",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -318,7 +325,9 @@
                       "identifier": "NewWithTTL",
                       "newPage": false,
                       "searchKey": "rcache.NewWithTTL",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -333,92 +342,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/rcache#Cache.GetMulti",
-                    "documentation": {
-                      "identifier": "Cache.GetMulti",
-                      "newPage": false,
-                      "searchKey": "rcache.Cache.GetMulti",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Cache) GetMulti(keys ...string) [][]byte"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Cache) GetMulti(keys ...string) [][]byte\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/rcache#Cache.SetMulti",
-                    "documentation": {
-                      "identifier": "Cache.SetMulti",
-                      "newPage": false,
-                      "searchKey": "rcache.Cache.SetMulti",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Cache) SetMulti(keyvals ...[2]string)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Cache) SetMulti(keyvals ...[2]string)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/rcache#Cache.Get",
-                    "documentation": {
-                      "identifier": "Cache.Get",
-                      "newPage": false,
-                      "searchKey": "rcache.Cache.Get",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Cache) Get(key string) ([]byte, bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Cache) Get(key string) ([]byte, bool)\n```\n\nGet implements httpcache.Cache.Get \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/rcache#Cache.Set",
-                    "documentation": {
-                      "identifier": "Cache.Set",
-                      "newPage": false,
-                      "searchKey": "rcache.Cache.Set",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *Cache) Set(key string, b []byte)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *Cache) Set(key string, b []byte)\n```\n\nSet implements httpcache.Cache.Set \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/rcache#Cache.Delete",
                     "documentation": {
                       "identifier": "Cache.Delete",
                       "newPage": false,
                       "searchKey": "rcache.Cache.Delete",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -433,12 +364,101 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/rcache#Cache.Get",
+                    "documentation": {
+                      "identifier": "Cache.Get",
+                      "newPage": false,
+                      "searchKey": "rcache.Cache.Get",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Cache) Get(key string) ([]byte, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Cache) Get(key string) ([]byte, bool)\n```\n\nGet implements httpcache.Cache.Get \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/rcache#Cache.GetMulti",
+                    "documentation": {
+                      "identifier": "Cache.GetMulti",
+                      "newPage": false,
+                      "searchKey": "rcache.Cache.GetMulti",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Cache) GetMulti(keys ...string) [][]byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Cache) GetMulti(keys ...string) [][]byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/rcache#Cache.Set",
+                    "documentation": {
+                      "identifier": "Cache.Set",
+                      "newPage": false,
+                      "searchKey": "rcache.Cache.Set",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Cache) Set(key string, b []byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Cache) Set(key string, b []byte)\n```\n\nSet implements httpcache.Cache.Set \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/rcache#Cache.SetMulti",
+                    "documentation": {
+                      "identifier": "Cache.SetMulti",
+                      "newPage": false,
+                      "searchKey": "rcache.Cache.SetMulti",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Cache) SetMulti(keyvals ...[2]string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Cache) SetMulti(keyvals ...[2]string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/rcache#Cache.rkeyPrefix",
                     "documentation": {
                       "identifier": "Cache.rkeyPrefix",
                       "newPage": false,
                       "searchKey": "rcache.Cache.rkeyPrefix",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -458,12 +478,36 @@
           },
           {
             "node": {
+              "pathID": "/internal/rcache#MutexOptions",
+              "documentation": {
+                "identifier": "MutexOptions",
+                "newPage": false,
+                "searchKey": "rcache.MutexOptions",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MutexOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MutexOptions struct {\n\t// Expiry sets how long a lock should be held. Under normal\n\t// operation it will be extended on an interval of (Expiry / 2)\n\tExpiry time.Duration\n\t// Tries is how many tries we have before we give up acquiring a\n\t// lock.\n\tTries int\n\t// RetryDelay is how long to sleep between attempts to lock\n\tRetryDelay time.Duration\n}\n```\n\nMutexOptions hold options passed to TryAcquireMutex. It is safe to pass zero values in which case defaults will be used instead. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/rcache#TB",
               "documentation": {
                 "identifier": "TB",
                 "newPage": false,
                 "searchKey": "rcache.TB",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -487,6 +531,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -501,32 +546,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/rcache#TryAcquireMutex",
-              "documentation": {
-                "identifier": "TryAcquireMutex",
-                "newPage": false,
-                "searchKey": "rcache.TryAcquireMutex",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TryAcquireMutex(ctx context.Context, name string, options MutexOptions) (context.Context, func(), bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TryAcquireMutex(ctx context.Context, name string, options MutexOptions) (context.Context, func(), bool)\n```\n\nTryAcquireMutex tries to Lock a distributed mutex. If the mutex is already locked, it will return `ctx, nil, false`. Otherwise it returns `ctx, release, true`. Release must be called to free the lock. The lock has a 1 minute lifetime, but a background routine extends it every 30 seconds. If, on release, we are unable to unlock the mutex it will continue to be locked until it is expired by Redis. The returned context will be cancelled if any of the following occur: * The parent context in cancelled * The release function is called * There is an error extending the lock expiry or the expiry can't be extended because \n\n```\nthey key no longer exists in Redis\n\n```\nA caller can therefore assume that they are the sole holder of the lock as long as the context has not been cancelled. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/rcache#DeleteOldCacheData",
               "documentation": {
                 "identifier": "DeleteOldCacheData",
                 "newPage": false,
                 "searchKey": "rcache.DeleteOldCacheData",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -546,7 +573,9 @@
                 "identifier": "SetupForTest",
                 "newPage": false,
                 "searchKey": "rcache.SetupForTest",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -561,44 +590,48 @@
           },
           {
             "node": {
-              "pathID": "/internal/rcache#deleteKeysWithPrefix",
+              "pathID": "/internal/rcache#TestCache_deleteKeysWithPrefix",
               "documentation": {
-                "identifier": "deleteKeysWithPrefix",
+                "identifier": "TestCache_deleteKeysWithPrefix",
                 "newPage": false,
-                "searchKey": "rcache.deleteKeysWithPrefix",
+                "searchKey": "rcache.TestCache_deleteKeysWithPrefix",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func deleteKeysWithPrefix(c redis.Conn, prefix string) error"
+                "value": "func TestCache_deleteKeysWithPrefix(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc deleteKeysWithPrefix(c redis.Conn, prefix string) error\n```\n\n"
+                "value": "```Go\nfunc TestCache_deleteKeysWithPrefix(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/rcache#TestTryAcquireMutex",
+              "pathID": "/internal/rcache#TestCache_multi",
               "documentation": {
-                "identifier": "TestTryAcquireMutex",
+                "identifier": "TestCache_multi",
                 "newPage": false,
-                "searchKey": "rcache.TestTryAcquireMutex",
+                "searchKey": "rcache.TestCache_multi",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestTryAcquireMutex(t *testing.T)"
+                "value": "func TestCache_multi(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestTryAcquireMutex(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestCache_multi(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -611,7 +644,9 @@
                 "newPage": false,
                 "searchKey": "rcache.TestCache_namespace",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -633,7 +668,9 @@
                 "newPage": false,
                 "searchKey": "rcache.TestCache_simple",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -649,44 +686,46 @@
           },
           {
             "node": {
-              "pathID": "/internal/rcache#TestCache_multi",
+              "pathID": "/internal/rcache#TestTryAcquireMutex",
               "documentation": {
-                "identifier": "TestCache_multi",
+                "identifier": "TestTryAcquireMutex",
                 "newPage": false,
-                "searchKey": "rcache.TestCache_multi",
+                "searchKey": "rcache.TestTryAcquireMutex",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestCache_multi(t *testing.T)"
+                "value": "func TestTryAcquireMutex(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestCache_multi(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestTryAcquireMutex(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/rcache#TestCache_deleteKeysWithPrefix",
+              "pathID": "/internal/rcache#TryAcquireMutex",
               "documentation": {
-                "identifier": "TestCache_deleteKeysWithPrefix",
+                "identifier": "TryAcquireMutex",
                 "newPage": false,
-                "searchKey": "rcache.TestCache_deleteKeysWithPrefix",
+                "searchKey": "rcache.TryAcquireMutex",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestCache_deleteKeysWithPrefix(t *testing.T)"
+                "value": "func TryAcquireMutex(ctx context.Context, name string, options MutexOptions) (context.Context, func(), bool)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestCache_deleteKeysWithPrefix(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TryAcquireMutex(ctx context.Context, name string, options MutexOptions) (context.Context, func(), bool)\n```\n\nTryAcquireMutex tries to Lock a distributed mutex. If the mutex is already locked, it will return `ctx, nil, false`. Otherwise it returns `ctx, release, true`. Release must be called to free the lock. The lock has a 1 minute lifetime, but a background routine extends it every 30 seconds. If, on release, we are unable to unlock the mutex it will continue to be locked until it is expired by Redis. The returned context will be cancelled if any of the following occur: * The parent context in cancelled * The release function is called * There is an error extending the lock expiry or the expiry can't be extended because \n\n```\nthey key no longer exists in Redis\n\n```\nA caller can therefore assume that they are the sole holder of the lock as long as the context has not been cancelled. \n\n"
               },
               "children": null
             }
@@ -699,6 +738,7 @@
                 "newPage": false,
                 "searchKey": "rcache.bytes",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -709,6 +749,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc bytes(s ...string) [][]byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/rcache#deleteKeysWithPrefix",
+              "documentation": {
+                "identifier": "deleteKeysWithPrefix",
+                "newPage": false,
+                "searchKey": "rcache.deleteKeysWithPrefix",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func deleteKeysWithPrefix(c redis.Conn, prefix string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc deleteKeysWithPrefix(c redis.Conn, prefix string) error\n```\n\n"
               },
               "children": null
             }

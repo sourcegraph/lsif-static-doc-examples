@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/encryption/keyring",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/encryption/keyring#mu",
-              "documentation": {
-                "identifier": "mu",
-                "newPage": false,
-                "searchKey": "keyring.mu",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var mu"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar mu sync.RWMutex\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/encryption/keyring#defaultRing",
               "documentation": {
                 "identifier": "defaultRing",
                 "newPage": false,
                 "searchKey": "keyring.defaultRing",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -77,6 +59,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar defaultRing Ring\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption/keyring#mu",
+              "documentation": {
+                "identifier": "mu",
+                "newPage": false,
+                "searchKey": "keyring.mu",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var mu"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar mu sync.RWMutex\n```\n\n"
               },
               "children": null
             }
@@ -92,6 +98,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -111,7 +118,9 @@
                 "identifier": "Ring",
                 "newPage": false,
                 "searchKey": "keyring.Ring",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -129,7 +138,9 @@
                       "identifier": "Default",
                       "newPage": false,
                       "searchKey": "keyring.Default",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -149,7 +160,9 @@
                       "identifier": "NewRing",
                       "newPage": false,
                       "searchKey": "keyring.NewRing",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -176,6 +189,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -190,32 +204,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/encryption/keyring#MockDefault",
-              "documentation": {
-                "identifier": "MockDefault",
-                "newPage": false,
-                "searchKey": "keyring.MockDefault",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func MockDefault(r Ring)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc MockDefault(r Ring)\n```\n\nMockDefault overrides the default keyring. Note: This function is defined for testing purpose. Use Init to correctly setup a keyring. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/encryption/keyring#Init",
               "documentation": {
                 "identifier": "Init",
                 "newPage": false,
                 "searchKey": "keyring.Init",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -230,12 +226,36 @@
           },
           {
             "node": {
+              "pathID": "/internal/encryption/keyring#MockDefault",
+              "documentation": {
+                "identifier": "MockDefault",
+                "newPage": false,
+                "searchKey": "keyring.MockDefault",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MockDefault(r Ring)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MockDefault(r Ring)\n```\n\nMockDefault overrides the default keyring. Note: This function is defined for testing purpose. Use Init to correctly setup a keyring. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/encryption/keyring#NewKey",
               "documentation": {
                 "identifier": "NewKey",
                 "newPage": false,
                 "searchKey": "keyring.NewKey",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",

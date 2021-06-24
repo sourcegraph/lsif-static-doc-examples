@@ -12,24 +12,24 @@ Package srcprometheus defines an API to interact with Sourcegraph Prometheus, in
     * [var ErrPrometheusUnavailable](#ErrPrometheusUnavailable)
     * [var PrometheusURL](#PrometheusURL)
 * [Types](#type)
+    * [type AlertsHistory struct](#AlertsHistory)
+    * [type AlertsStatus struct](#AlertsStatus)
     * [type Client interface](#Client)
         * [func NewClient(prometheusURL string) (Client, error)](#NewClient)
-    * [type client struct](#client)
-        * [func (c *client) newRequest(endpoint string, query url.Values) (*http.Request, error)](#client.newRequest)
-        * [func (c *client) do(ctx context.Context, req *http.Request) (*http.Response, error)](#client.do)
-        * [func (c *client) GetAlertsStatus(ctx context.Context) (*AlertsStatus, error)](#client.GetAlertsStatus)
-        * [func (c *client) GetAlertsHistory(ctx context.Context, timespan time.Duration) (*AlertsHistory, error)](#client.GetAlertsHistory)
-        * [func (c *client) GetConfigStatus(ctx context.Context) (*ConfigStatus, error)](#client.GetConfigStatus)
-    * [type roundTripper struct{}](#roundTripper)
-        * [func (r *roundTripper) RoundTrip(req *http.Request) (*http.Response, error)](#roundTripper.RoundTrip)
-    * [type AlertsStatus struct](#AlertsStatus)
+    * [type ConfigStatus struct](#ConfigStatus)
     * [type MonitoringAlert struct](#MonitoringAlert)
     * [type MonitoringAlerts []*srcprometheus.MonitoringAlert](#MonitoringAlerts)
+        * [func (a MonitoringAlerts) Len() int](#MonitoringAlerts.Len)
         * [func (a MonitoringAlerts) Less(i, j int) bool](#MonitoringAlerts.Less)
         * [func (a MonitoringAlerts) Swap(i, j int)](#MonitoringAlerts.Swap)
-        * [func (a MonitoringAlerts) Len() int](#MonitoringAlerts.Len)
-    * [type AlertsHistory struct](#AlertsHistory)
-    * [type ConfigStatus struct](#ConfigStatus)
+    * [type client struct](#client)
+        * [func (c *client) GetAlertsHistory(ctx context.Context, timespan time.Duration) (*AlertsHistory, error)](#client.GetAlertsHistory)
+        * [func (c *client) GetAlertsStatus(ctx context.Context) (*AlertsStatus, error)](#client.GetAlertsStatus)
+        * [func (c *client) GetConfigStatus(ctx context.Context) (*ConfigStatus, error)](#client.GetConfigStatus)
+        * [func (c *client) do(ctx context.Context, req *http.Request) (*http.Response, error)](#client.do)
+        * [func (c *client) newRequest(endpoint string, query url.Values) (*http.Request, error)](#client.newRequest)
+    * [type roundTripper struct{}](#roundTripper)
+        * [func (r *roundTripper) RoundTrip(req *http.Request) (*http.Response, error)](#roundTripper.RoundTrip)
 * [Functions](#func)
     * [func Test_roundTripper_PrometheusUnavailable(t *testing.T)](#Test_roundTripper_PrometheusUnavailable)
 
@@ -37,13 +37,14 @@ Package srcprometheus defines an API to interact with Sourcegraph Prometheus, in
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="EndpointAlertsStatus" href="#EndpointAlertsStatus">const EndpointAlertsStatus</a>
 
 ```
 searchKey: srcprometheus.EndpointAlertsStatus
+tags: [constant string]
 ```
 
 ```Go
@@ -54,6 +55,7 @@ const EndpointAlertsStatus = "/prom-wrapper/alerts-status"
 
 ```
 searchKey: srcprometheus.EndpointAlertsStatusHistory
+tags: [constant string]
 ```
 
 ```Go
@@ -64,6 +66,7 @@ const EndpointAlertsStatusHistory = EndpointAlertsStatus + "/history"
 
 ```
 searchKey: srcprometheus.EndpointConfigSubscriber
+tags: [constant string]
 ```
 
 ```Go
@@ -73,13 +76,14 @@ const EndpointConfigSubscriber = "/prom-wrapper/config-subscriber"
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="ErrPrometheusUnavailable" href="#ErrPrometheusUnavailable">var ErrPrometheusUnavailable</a>
 
 ```
 searchKey: srcprometheus.ErrPrometheusUnavailable
+tags: [variable interface]
 ```
 
 ```Go
@@ -92,6 +96,7 @@ ErrPrometheusUnavailable is raised specifically when prometheusURL is unset or w
 
 ```
 searchKey: srcprometheus.PrometheusURL
+tags: [variable string]
 ```
 
 ```Go
@@ -103,13 +108,43 @@ PrometheusURL is the configured Prometheus instance.
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
+```
+
+### <a id="AlertsHistory" href="#AlertsHistory">type AlertsHistory struct</a>
+
+```
+searchKey: srcprometheus.AlertsHistory
+tags: [struct]
+```
+
+```Go
+type AlertsHistory struct {
+	Alerts MonitoringAlerts `json:"alerts"`
+}
+```
+
+### <a id="AlertsStatus" href="#AlertsStatus">type AlertsStatus struct</a>
+
+```
+searchKey: srcprometheus.AlertsStatus
+tags: [struct]
+```
+
+```Go
+type AlertsStatus struct {
+	Warning          int `json:"warning"`
+	Silenced         int `json:"silenced"`
+	Critical         int `json:"critical"`
+	ServicesCritical int `json:"services_critical"`
+}
 ```
 
 ### <a id="Client" href="#Client">type Client interface</a>
 
 ```
 searchKey: srcprometheus.Client
+tags: [interface]
 ```
 
 ```Go
@@ -126,6 +161,7 @@ Client provides the interface for interacting with Sourcegraph Prometheus, inclu
 
 ```
 searchKey: srcprometheus.NewClient
+tags: [method]
 ```
 
 ```Go
@@ -136,115 +172,16 @@ NewClient provides a client for interacting with Sourcegraph Prometheus. It erro
 
 See [https://docs.sourcegraph.com/dev/background-information/observability/prometheus](https://docs.sourcegraph.com/dev/background-information/observability/prometheus) 
 
-### <a id="client" href="#client">type client struct</a>
+### <a id="ConfigStatus" href="#ConfigStatus">type ConfigStatus struct</a>
 
 ```
-searchKey: srcprometheus.client
-tags: [private]
-```
-
-```Go
-type client struct {
-	http    http.Client
-	promURL url.URL
-}
-```
-
-#### <a id="client.newRequest" href="#client.newRequest">func (c *client) newRequest(endpoint string, query url.Values) (*http.Request, error)</a>
-
-```
-searchKey: srcprometheus.client.newRequest
-tags: [private]
+searchKey: srcprometheus.ConfigStatus
+tags: [struct]
 ```
 
 ```Go
-func (c *client) newRequest(endpoint string, query url.Values) (*http.Request, error)
-```
-
-#### <a id="client.do" href="#client.do">func (c *client) do(ctx context.Context, req *http.Request) (*http.Response, error)</a>
-
-```
-searchKey: srcprometheus.client.do
-tags: [private]
-```
-
-```Go
-func (c *client) do(ctx context.Context, req *http.Request) (*http.Response, error)
-```
-
-#### <a id="client.GetAlertsStatus" href="#client.GetAlertsStatus">func (c *client) GetAlertsStatus(ctx context.Context) (*AlertsStatus, error)</a>
-
-```
-searchKey: srcprometheus.client.GetAlertsStatus
-tags: [private]
-```
-
-```Go
-func (c *client) GetAlertsStatus(ctx context.Context) (*AlertsStatus, error)
-```
-
-GetAlertsStatus retrieves an overview of current alerts 
-
-#### <a id="client.GetAlertsHistory" href="#client.GetAlertsHistory">func (c *client) GetAlertsHistory(ctx context.Context, timespan time.Duration) (*AlertsHistory, error)</a>
-
-```
-searchKey: srcprometheus.client.GetAlertsHistory
-tags: [private]
-```
-
-```Go
-func (c *client) GetAlertsHistory(ctx context.Context, timespan time.Duration) (*AlertsHistory, error)
-```
-
-GetAlertsHistory retrieves a historical summary of all alerts 
-
-#### <a id="client.GetConfigStatus" href="#client.GetConfigStatus">func (c *client) GetConfigStatus(ctx context.Context) (*ConfigStatus, error)</a>
-
-```
-searchKey: srcprometheus.client.GetConfigStatus
-tags: [private]
-```
-
-```Go
-func (c *client) GetConfigStatus(ctx context.Context) (*ConfigStatus, error)
-```
-
-### <a id="roundTripper" href="#roundTripper">type roundTripper struct{}</a>
-
-```
-searchKey: srcprometheus.roundTripper
-tags: [private]
-```
-
-```Go
-type roundTripper struct{}
-```
-
-roundTripper treats certain connection errors as `ErrPrometheusUnavailable` which can be handled explicitly for environments without Prometheus available. 
-
-#### <a id="roundTripper.RoundTrip" href="#roundTripper.RoundTrip">func (r *roundTripper) RoundTrip(req *http.Request) (*http.Response, error)</a>
-
-```
-searchKey: srcprometheus.roundTripper.RoundTrip
-tags: [private]
-```
-
-```Go
-func (r *roundTripper) RoundTrip(req *http.Request) (*http.Response, error)
-```
-
-### <a id="AlertsStatus" href="#AlertsStatus">type AlertsStatus struct</a>
-
-```
-searchKey: srcprometheus.AlertsStatus
-```
-
-```Go
-type AlertsStatus struct {
-	Warning          int `json:"warning"`
-	Silenced         int `json:"silenced"`
-	Critical         int `json:"critical"`
-	ServicesCritical int `json:"services_critical"`
+type ConfigStatus struct {
+	Problems conf.Problems `json:"problems"`
 }
 ```
 
@@ -252,6 +189,7 @@ type AlertsStatus struct {
 
 ```
 searchKey: srcprometheus.MonitoringAlert
+tags: [struct]
 ```
 
 ```Go
@@ -273,16 +211,29 @@ Internal fields named to accomodate GraphQL getters and setters, see grapqhlback
 
 ```
 searchKey: srcprometheus.MonitoringAlerts
+tags: [array struct]
 ```
 
 ```Go
 type MonitoringAlerts []*MonitoringAlert
 ```
 
+#### <a id="MonitoringAlerts.Len" href="#MonitoringAlerts.Len">func (a MonitoringAlerts) Len() int</a>
+
+```
+searchKey: srcprometheus.MonitoringAlerts.Len
+tags: [function]
+```
+
+```Go
+func (a MonitoringAlerts) Len() int
+```
+
 #### <a id="MonitoringAlerts.Less" href="#MonitoringAlerts.Less">func (a MonitoringAlerts) Less(i, j int) bool</a>
 
 ```
 searchKey: srcprometheus.MonitoringAlerts.Less
+tags: [method]
 ```
 
 ```Go
@@ -295,57 +246,121 @@ Less determined by timestamp -> serviceName -> alert name
 
 ```
 searchKey: srcprometheus.MonitoringAlerts.Swap
+tags: [method]
 ```
 
 ```Go
 func (a MonitoringAlerts) Swap(i, j int)
 ```
 
-#### <a id="MonitoringAlerts.Len" href="#MonitoringAlerts.Len">func (a MonitoringAlerts) Len() int</a>
+### <a id="client" href="#client">type client struct</a>
 
 ```
-searchKey: srcprometheus.MonitoringAlerts.Len
-```
-
-```Go
-func (a MonitoringAlerts) Len() int
-```
-
-### <a id="AlertsHistory" href="#AlertsHistory">type AlertsHistory struct</a>
-
-```
-searchKey: srcprometheus.AlertsHistory
+searchKey: srcprometheus.client
+tags: [struct private]
 ```
 
 ```Go
-type AlertsHistory struct {
-	Alerts MonitoringAlerts `json:"alerts"`
+type client struct {
+	http    http.Client
+	promURL url.URL
 }
 ```
 
-### <a id="ConfigStatus" href="#ConfigStatus">type ConfigStatus struct</a>
+#### <a id="client.GetAlertsHistory" href="#client.GetAlertsHistory">func (c *client) GetAlertsHistory(ctx context.Context, timespan time.Duration) (*AlertsHistory, error)</a>
 
 ```
-searchKey: srcprometheus.ConfigStatus
+searchKey: srcprometheus.client.GetAlertsHistory
+tags: [method private]
 ```
 
 ```Go
-type ConfigStatus struct {
-	Problems conf.Problems `json:"problems"`
-}
+func (c *client) GetAlertsHistory(ctx context.Context, timespan time.Duration) (*AlertsHistory, error)
+```
+
+GetAlertsHistory retrieves a historical summary of all alerts 
+
+#### <a id="client.GetAlertsStatus" href="#client.GetAlertsStatus">func (c *client) GetAlertsStatus(ctx context.Context) (*AlertsStatus, error)</a>
+
+```
+searchKey: srcprometheus.client.GetAlertsStatus
+tags: [method private]
+```
+
+```Go
+func (c *client) GetAlertsStatus(ctx context.Context) (*AlertsStatus, error)
+```
+
+GetAlertsStatus retrieves an overview of current alerts 
+
+#### <a id="client.GetConfigStatus" href="#client.GetConfigStatus">func (c *client) GetConfigStatus(ctx context.Context) (*ConfigStatus, error)</a>
+
+```
+searchKey: srcprometheus.client.GetConfigStatus
+tags: [method private]
+```
+
+```Go
+func (c *client) GetConfigStatus(ctx context.Context) (*ConfigStatus, error)
+```
+
+#### <a id="client.do" href="#client.do">func (c *client) do(ctx context.Context, req *http.Request) (*http.Response, error)</a>
+
+```
+searchKey: srcprometheus.client.do
+tags: [method private]
+```
+
+```Go
+func (c *client) do(ctx context.Context, req *http.Request) (*http.Response, error)
+```
+
+#### <a id="client.newRequest" href="#client.newRequest">func (c *client) newRequest(endpoint string, query url.Values) (*http.Request, error)</a>
+
+```
+searchKey: srcprometheus.client.newRequest
+tags: [method private]
+```
+
+```Go
+func (c *client) newRequest(endpoint string, query url.Values) (*http.Request, error)
+```
+
+### <a id="roundTripper" href="#roundTripper">type roundTripper struct{}</a>
+
+```
+searchKey: srcprometheus.roundTripper
+tags: [struct private]
+```
+
+```Go
+type roundTripper struct{}
+```
+
+roundTripper treats certain connection errors as `ErrPrometheusUnavailable` which can be handled explicitly for environments without Prometheus available. 
+
+#### <a id="roundTripper.RoundTrip" href="#roundTripper.RoundTrip">func (r *roundTripper) RoundTrip(req *http.Request) (*http.Response, error)</a>
+
+```
+searchKey: srcprometheus.roundTripper.RoundTrip
+tags: [method private]
+```
+
+```Go
+func (r *roundTripper) RoundTrip(req *http.Request) (*http.Response, error)
 ```
 
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Test_roundTripper_PrometheusUnavailable" href="#Test_roundTripper_PrometheusUnavailable">func Test_roundTripper_PrometheusUnavailable(t *testing.T)</a>
 
 ```
 searchKey: srcprometheus.Test_roundTripper_PrometheusUnavailable
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go

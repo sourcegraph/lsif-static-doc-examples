@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/cmd/executor-queue/internal/queues/codeintel",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,32 +41,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#StalledJobMaximumAge",
-              "documentation": {
-                "identifier": "StalledJobMaximumAge",
-                "newPage": false,
-                "searchKey": "codeintel.StalledJobMaximumAge",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const StalledJobMaximumAge"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst StalledJobMaximumAge = time.Second * 5\n```\n\nStalledJobMaximumAge is the maximum allowable duration between updating the state of a job as \"processing\" and locking the record during processing. An unlocked row that is marked as processing likely indicates that the executor that dequeued the job has died. There should be a nearly-zero delay between these states during normal operation. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#MaximumNumResets",
               "documentation": {
                 "identifier": "MaximumNumResets",
                 "newPage": false,
                 "searchKey": "codeintel.MaximumNumResets",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -79,12 +64,37 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#StalledJobMaximumAge",
+              "documentation": {
+                "identifier": "StalledJobMaximumAge",
+                "newPage": false,
+                "searchKey": "codeintel.StalledJobMaximumAge",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const StalledJobMaximumAge"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst StalledJobMaximumAge = time.Second * 5\n```\n\nStalledJobMaximumAge is the maximum allowable duration between updating the state of a job as \"processing\" and locking the record during processing. An unlocked row that is marked as processing likely indicates that the executor that dequeued the job has died. There should be a nearly-zero delay between these states during normal operation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#defaultOutfile",
               "documentation": {
                 "identifier": "defaultOutfile",
                 "newPage": false,
                 "searchKey": "codeintel.defaultOutfile",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -107,6 +117,8 @@
                 "newPage": false,
                 "searchKey": "codeintel.uploadRoute",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -132,6 +144,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -151,7 +164,9 @@
                 "identifier": "Config",
                 "newPage": false,
                 "searchKey": "codeintel.Config",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -169,7 +184,9 @@
                       "identifier": "Config.Load",
                       "newPage": false,
                       "searchKey": "codeintel.Config.Load",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -196,6 +213,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -215,7 +233,9 @@
                 "identifier": "QueueOptions",
                 "newPage": false,
                 "searchKey": "codeintel.QueueOptions",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -230,12 +250,84 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#TestTransformRecord",
+              "documentation": {
+                "identifier": "TestTransformRecord",
+                "newPage": false,
+                "searchKey": "codeintel.TestTransformRecord",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTransformRecord(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTransformRecord(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#TestTransformRecordWithoutIndexer",
+              "documentation": {
+                "identifier": "TestTransformRecordWithoutIndexer",
+                "newPage": false,
+                "searchKey": "codeintel.TestTransformRecordWithoutIndexer",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTransformRecordWithoutIndexer(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTransformRecordWithoutIndexer(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#makeURL",
+              "documentation": {
+                "identifier": "makeURL",
+                "newPage": false,
+                "searchKey": "codeintel.makeURL",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeURL(base, username, password string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeURL(base, username, password string) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#newWorkerStore",
               "documentation": {
                 "identifier": "newWorkerStore",
                 "newPage": false,
                 "searchKey": "codeintel.newWorkerStore",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -258,6 +350,7 @@
                 "newPage": false,
                 "searchKey": "codeintel.transformRecord",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -268,72 +361,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc transformRecord(index store.Index, config *Config) (apiclient.Job, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#makeURL",
-              "documentation": {
-                "identifier": "makeURL",
-                "newPage": false,
-                "searchKey": "codeintel.makeURL",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func makeURL(base, username, password string) (string, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc makeURL(base, username, password string) (string, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#TestTransformRecord",
-              "documentation": {
-                "identifier": "TestTransformRecord",
-                "newPage": false,
-                "searchKey": "codeintel.TestTransformRecord",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTransformRecord(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTransformRecord(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#TestTransformRecordWithoutIndexer",
-              "documentation": {
-                "identifier": "TestTransformRecordWithoutIndexer",
-                "newPage": false,
-                "searchKey": "codeintel.TestTransformRecordWithoutIndexer",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTransformRecordWithoutIndexer(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTransformRecordWithoutIndexer(t *testing.T)\n```\n\n"
               },
               "children": null
             }

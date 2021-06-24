@@ -4,7 +4,9 @@
     "identifier": "executor",
     "newPage": true,
     "searchKey": "enterprise/cmd/executor",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -25,7 +27,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -44,6 +48,8 @@
                 "newPage": false,
                 "searchKey": "main.addr",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -68,7 +74,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -86,7 +94,9 @@
                 "identifier": "Config",
                 "newPage": false,
                 "searchKey": "main.Config",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -99,32 +109,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/executor#Config.Load",
-                    "documentation": {
-                      "identifier": "Config.Load",
-                      "newPage": false,
-                      "searchKey": "main.Config.Load",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Config) Load()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Config) Load()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/cmd/executor#Config.APIWorkerOptions",
                     "documentation": {
                       "identifier": "Config.APIWorkerOptions",
                       "newPage": false,
                       "searchKey": "main.Config.APIWorkerOptions",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -139,92 +131,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/executor#Config.WorkerOptions",
-                    "documentation": {
-                      "identifier": "Config.WorkerOptions",
-                      "newPage": false,
-                      "searchKey": "main.Config.WorkerOptions",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Config) WorkerOptions() workerutil.WorkerOptions"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Config) WorkerOptions() workerutil.WorkerOptions\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor#Config.FirecrackerOptions",
-                    "documentation": {
-                      "identifier": "Config.FirecrackerOptions",
-                      "newPage": false,
-                      "searchKey": "main.Config.FirecrackerOptions",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Config) FirecrackerOptions() command.FirecrackerOptions"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Config) FirecrackerOptions() command.FirecrackerOptions\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor#Config.ResourceOptions",
-                    "documentation": {
-                      "identifier": "Config.ResourceOptions",
-                      "newPage": false,
-                      "searchKey": "main.Config.ResourceOptions",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Config) ResourceOptions() command.ResourceOptions"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Config) ResourceOptions() command.ResourceOptions\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor#Config.ClientOptions",
-                    "documentation": {
-                      "identifier": "Config.ClientOptions",
-                      "newPage": false,
-                      "searchKey": "main.Config.ClientOptions",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Config) ClientOptions(transport http.RoundTripper) apiclient.Options"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Config) ClientOptions(transport http.RoundTripper) apiclient.Options\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/cmd/executor#Config.BaseClientOptions",
                     "documentation": {
                       "identifier": "Config.BaseClientOptions",
                       "newPage": false,
                       "searchKey": "main.Config.BaseClientOptions",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -239,12 +153,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/enterprise/cmd/executor#Config.ClientOptions",
+                    "documentation": {
+                      "identifier": "Config.ClientOptions",
+                      "newPage": false,
+                      "searchKey": "main.Config.ClientOptions",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Config) ClientOptions(transport http.RoundTripper) apiclient.Options"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Config) ClientOptions(transport http.RoundTripper) apiclient.Options\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/enterprise/cmd/executor#Config.EndpointOptions",
                     "documentation": {
                       "identifier": "Config.EndpointOptions",
                       "newPage": false,
                       "searchKey": "main.Config.EndpointOptions",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -253,6 +191,94 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (c *Config) EndpointOptions() apiclient.EndpointOptions\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor#Config.FirecrackerOptions",
+                    "documentation": {
+                      "identifier": "Config.FirecrackerOptions",
+                      "newPage": false,
+                      "searchKey": "main.Config.FirecrackerOptions",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Config) FirecrackerOptions() command.FirecrackerOptions"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Config) FirecrackerOptions() command.FirecrackerOptions\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor#Config.Load",
+                    "documentation": {
+                      "identifier": "Config.Load",
+                      "newPage": false,
+                      "searchKey": "main.Config.Load",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Config) Load()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Config) Load()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor#Config.ResourceOptions",
+                    "documentation": {
+                      "identifier": "Config.ResourceOptions",
+                      "newPage": false,
+                      "searchKey": "main.Config.ResourceOptions",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Config) ResourceOptions() command.ResourceOptions"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Config) ResourceOptions() command.ResourceOptions\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor#Config.WorkerOptions",
+                    "documentation": {
+                      "identifier": "Config.WorkerOptions",
+                      "newPage": false,
+                      "searchKey": "main.Config.WorkerOptions",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Config) WorkerOptions() workerutil.WorkerOptions"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Config) WorkerOptions() workerutil.WorkerOptions\n```\n\n"
                     },
                     "children": null
                   }
@@ -270,7 +296,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -289,6 +317,7 @@
                 "newPage": false,
                 "searchKey": "main.main",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -311,6 +340,7 @@
                 "newPage": false,
                 "searchKey": "main.makeWorkerMetrics",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },

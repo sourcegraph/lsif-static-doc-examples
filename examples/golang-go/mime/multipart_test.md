@@ -9,14 +9,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="ExampleNewReader" href="#ExampleNewReader">func ExampleNewReader()</a>
 
 ```
 searchKey: multipart_test.ExampleNewReader
-tags: [private]
+tags: [function private]
 ```
 
 ```Go

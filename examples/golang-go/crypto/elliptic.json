@@ -4,7 +4,9 @@
     "identifier": "elliptic",
     "newPage": true,
     "searchKey": "crypto/elliptic",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -25,7 +27,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -38,144 +42,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto/elliptic#two31p3",
-              "documentation": {
-                "identifier": "two31p3",
-                "newPage": false,
-                "searchKey": "elliptic.two31p3",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const two31p3"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst two31p3 = 1<<31 + 1<<3\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#two31m3",
-              "documentation": {
-                "identifier": "two31m3",
-                "newPage": false,
-                "searchKey": "elliptic.two31m3",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const two31m3"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst two31m3 = 1<<31 - 1<<3\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#two31m15m3",
-              "documentation": {
-                "identifier": "two31m15m3",
-                "newPage": false,
-                "searchKey": "elliptic.two31m15m3",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const two31m15m3"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst two31m15m3 = 1<<31 - 1<<15 - 1<<3\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#two63p35",
-              "documentation": {
-                "identifier": "two63p35",
-                "newPage": false,
-                "searchKey": "elliptic.two63p35",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const two63p35"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst two63p35 = 1<<63 + 1<<35\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#two63m35",
-              "documentation": {
-                "identifier": "two63m35",
-                "newPage": false,
-                "searchKey": "elliptic.two63m35",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const two63m35"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst two63m35 = 1<<63 - 1<<35\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#two63m35m19",
-              "documentation": {
-                "identifier": "two63m35m19",
-                "newPage": false,
-                "searchKey": "elliptic.two63m35m19",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const two63m35m19"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst two63m35m19 = 1<<63 - 1<<35 - 1<<19\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/elliptic#bottom12Bits",
               "documentation": {
                 "identifier": "bottom12Bits",
                 "newPage": false,
                 "searchKey": "elliptic.bottom12Bits",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -198,6 +72,8 @@
                 "newPage": false,
                 "searchKey": "elliptic.bottom28Bits",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -208,6 +84,150 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst bottom28Bits = 0xfffffff\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#two31m15m3",
+              "documentation": {
+                "identifier": "two31m15m3",
+                "newPage": false,
+                "searchKey": "elliptic.two31m15m3",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const two31m15m3"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst two31m15m3 = 1<<31 - 1<<15 - 1<<3\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#two31m3",
+              "documentation": {
+                "identifier": "two31m3",
+                "newPage": false,
+                "searchKey": "elliptic.two31m3",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const two31m3"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst two31m3 = 1<<31 - 1<<3\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#two31p3",
+              "documentation": {
+                "identifier": "two31p3",
+                "newPage": false,
+                "searchKey": "elliptic.two31p3",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const two31p3"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst two31p3 = 1<<31 + 1<<3\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#two63m35",
+              "documentation": {
+                "identifier": "two63m35",
+                "newPage": false,
+                "searchKey": "elliptic.two63m35",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const two63m35"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst two63m35 = 1<<63 - 1<<35\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#two63m35m19",
+              "documentation": {
+                "identifier": "two63m35m19",
+                "newPage": false,
+                "searchKey": "elliptic.two63m35m19",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const two63m35m19"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst two63m35m19 = 1<<63 - 1<<35 - 1<<19\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#two63p35",
+              "documentation": {
+                "identifier": "two63p35",
+                "newPage": false,
+                "searchKey": "elliptic.two63p35",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const two63p35"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst two63p35 = 1<<63 + 1<<35\n```\n\n"
               },
               "children": null
             }
@@ -222,7 +242,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -235,34 +257,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto/elliptic#mask",
-              "documentation": {
-                "identifier": "mask",
-                "newPage": false,
-                "searchKey": "elliptic.mask",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var mask"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar mask = []byte{0xff, 0x1, 0x3, 0x7, 0xf, 0x1f, 0x3f, 0x7f}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/elliptic#initonce",
               "documentation": {
                 "identifier": "initonce",
                 "newPage": false,
                 "searchKey": "elliptic.initonce",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -279,22 +281,25 @@
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic#p384",
+              "pathID": "/crypto/elliptic#mask",
               "documentation": {
-                "identifier": "p384",
+                "identifier": "mask",
                 "newPage": false,
-                "searchKey": "elliptic.p384",
+                "searchKey": "elliptic.mask",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var p384"
+                "value": "var mask"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar p384 *CurveParams\n```\n\n"
+                "value": "```Go\nvar mask = []byte{0xff, 0x1, 0x3, 0x7, 0xf, 0x1f, 0x3f, 0x7f}\n```\n\n"
               },
               "children": null
             }
@@ -307,6 +312,8 @@
                 "newPage": false,
                 "searchKey": "elliptic.p224",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -323,12 +330,40 @@
           },
           {
             "node": {
+              "pathID": "/crypto/elliptic#p224BaseMultTests",
+              "documentation": {
+                "identifier": "p224BaseMultTests",
+                "newPage": false,
+                "searchKey": "elliptic.p224BaseMultTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var p224BaseMultTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar p224BaseMultTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/elliptic#p224P",
               "documentation": {
                 "identifier": "p224P",
                 "newPage": false,
                 "searchKey": "elliptic.p224P",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -351,6 +386,9 @@
                 "newPage": false,
                 "searchKey": "elliptic.p224ZeroModP31",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -373,6 +411,9 @@
                 "newPage": false,
                 "searchKey": "elliptic.p224ZeroModP63",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -395,6 +436,8 @@
                 "newPage": false,
                 "searchKey": "elliptic.p256",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -411,22 +454,25 @@
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic#rr",
+              "pathID": "/crypto/elliptic#p256MultTests",
               "documentation": {
-                "identifier": "rr",
+                "identifier": "p256MultTests",
                 "newPage": false,
-                "searchKey": "elliptic.rr",
+                "searchKey": "elliptic.p256MultTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var rr"
+                "value": "var p256MultTests"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar rr = []uint64{0x0000000000000003, 0xfffffffbffffffff, 0xfffffffffffffffe, 0x00000004fffffffd}\n```\n\np256Mul operates in a Montgomery domain with R = 2^256 mod p, where p is the underlying field of the curve. (See initP256 for the value.) Thus rr here is R×R mod p. See comment in Inverse about how this is used. \n\n"
+                "value": "```Go\nvar p256MultTests = ...\n```\n\n"
               },
               "children": null
             }
@@ -439,6 +485,10 @@
                 "newPage": false,
                 "searchKey": "elliptic.p256Precomputed",
                 "tags": [
+                  "variable",
+                  "array",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -455,12 +505,38 @@
           },
           {
             "node": {
+              "pathID": "/crypto/elliptic#p384",
+              "documentation": {
+                "identifier": "p384",
+                "newPage": false,
+                "searchKey": "elliptic.p384",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var p384"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar p384 *CurveParams\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/elliptic#p521",
               "documentation": {
                 "identifier": "p521",
                 "newPage": false,
                 "searchKey": "elliptic.p521",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -483,6 +559,8 @@
                 "newPage": false,
                 "searchKey": "elliptic.p521Params",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -499,34 +577,14 @@
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic#toFromBigTests",
-              "documentation": {
-                "identifier": "toFromBigTests",
-                "newPage": false,
-                "searchKey": "elliptic.toFromBigTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var toFromBigTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar toFromBigTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/elliptic#quickCheckConfig32",
               "documentation": {
                 "identifier": "quickCheckConfig32",
                 "newPage": false,
                 "searchKey": "elliptic.quickCheckConfig32",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -543,12 +601,65 @@
           },
           {
             "node": {
+              "pathID": "/crypto/elliptic#rr",
+              "documentation": {
+                "identifier": "rr",
+                "newPage": false,
+                "searchKey": "elliptic.rr",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var rr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar rr = []uint64{0x0000000000000003, 0xfffffffbffffffff, 0xfffffffffffffffe, 0x00000004fffffffd}\n```\n\np256Mul operates in a Montgomery domain with R = 2^256 mod p, where p is the underlying field of the curve. (See initP256 for the value.) Thus rr here is R×R mod p. See comment in Inverse about how this is used. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#toFromBigTests",
+              "documentation": {
+                "identifier": "toFromBigTests",
+                "newPage": false,
+                "searchKey": "elliptic.toFromBigTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var toFromBigTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar toFromBigTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/elliptic#weirdLimbs",
               "documentation": {
                 "identifier": "weirdLimbs",
                 "newPage": false,
                 "searchKey": "elliptic.weirdLimbs",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -559,50 +670,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar weirdLimbs = ...\n```\n\nweirdLimbs can be combined to generate a range of edge-case field elements. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p224BaseMultTests",
-              "documentation": {
-                "identifier": "p224BaseMultTests",
-                "newPage": false,
-                "searchKey": "elliptic.p224BaseMultTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var p224BaseMultTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar p224BaseMultTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p256MultTests",
-              "documentation": {
-                "identifier": "p256MultTests",
-                "newPage": false,
-                "searchKey": "elliptic.p256MultTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var p256MultTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar p256MultTests = ...\n```\n\n"
               },
               "children": null
             }
@@ -617,7 +684,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -635,7 +704,9 @@
                 "identifier": "Curve",
                 "newPage": false,
                 "searchKey": "elliptic.Curve",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -648,22 +719,22 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/crypto/elliptic#matchesSpecificCurve",
+                    "pathID": "/crypto/elliptic#P224",
                     "documentation": {
-                      "identifier": "matchesSpecificCurve",
+                      "identifier": "P224",
                       "newPage": false,
-                      "searchKey": "elliptic.matchesSpecificCurve",
+                      "searchKey": "elliptic.P224",
                       "tags": [
-                        "private"
+                        "function"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func matchesSpecificCurve(params *CurveParams, available ...Curve) (Curve, bool)"
+                      "value": "func P224() Curve"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc matchesSpecificCurve(params *CurveParams, available ...Curve) (Curve, bool)\n```\n\n"
+                      "value": "```Go\nfunc P224() Curve\n```\n\nP224 returns a Curve which implements P-224 (see FIPS 186-3, section D.2.2). \n\nThe cryptographic operations are implemented using constant-time algorithms. \n\n"
                     },
                     "children": null
                   }
@@ -675,7 +746,9 @@
                       "identifier": "P256",
                       "newPage": false,
                       "searchKey": "elliptic.P256",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -695,7 +768,9 @@
                       "identifier": "P384",
                       "newPage": false,
                       "searchKey": "elliptic.P384",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -715,7 +790,9 @@
                       "identifier": "P521",
                       "newPage": false,
                       "searchKey": "elliptic.P521",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -730,20 +807,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/crypto/elliptic#P224",
+                    "pathID": "/crypto/elliptic#matchesSpecificCurve",
                     "documentation": {
-                      "identifier": "P224",
+                      "identifier": "matchesSpecificCurve",
                       "newPage": false,
-                      "searchKey": "elliptic.P224",
-                      "tags": null
+                      "searchKey": "elliptic.matchesSpecificCurve",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func P224() Curve"
+                      "value": "func matchesSpecificCurve(params *CurveParams, available ...Curve) (Curve, bool)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc P224() Curve\n```\n\nP224 returns a Curve which implements P-224 (see FIPS 186-3, section D.2.2). \n\nThe cryptographic operations are implemented using constant-time algorithms. \n\n"
+                      "value": "```Go\nfunc matchesSpecificCurve(params *CurveParams, available ...Curve) (Curve, bool)\n```\n\n"
                     },
                     "children": null
                   }
@@ -758,7 +838,9 @@
                 "identifier": "CurveParams",
                 "newPage": false,
                 "searchKey": "elliptic.CurveParams",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -777,6 +859,7 @@
                       "newPage": false,
                       "searchKey": "elliptic.genericParamsForCurve",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -793,96 +876,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/crypto/elliptic#CurveParams.Params",
-                    "documentation": {
-                      "identifier": "CurveParams.Params",
-                      "newPage": false,
-                      "searchKey": "elliptic.CurveParams.Params",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (curve *CurveParams) Params() *CurveParams"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (curve *CurveParams) Params() *CurveParams\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/elliptic#CurveParams.polynomial",
-                    "documentation": {
-                      "identifier": "CurveParams.polynomial",
-                      "newPage": false,
-                      "searchKey": "elliptic.CurveParams.polynomial",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (curve *CurveParams) polynomial(x *big.Int) *big.Int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (curve *CurveParams) polynomial(x *big.Int) *big.Int\n```\n\npolynomial returns x³ - 3x + b. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/elliptic#CurveParams.IsOnCurve",
-                    "documentation": {
-                      "identifier": "CurveParams.IsOnCurve",
-                      "newPage": false,
-                      "searchKey": "elliptic.CurveParams.IsOnCurve",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (curve *CurveParams) IsOnCurve(x, y *big.Int) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (curve *CurveParams) IsOnCurve(x, y *big.Int) bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/elliptic#CurveParams.affineFromJacobian",
-                    "documentation": {
-                      "identifier": "CurveParams.affineFromJacobian",
-                      "newPage": false,
-                      "searchKey": "elliptic.CurveParams.affineFromJacobian",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (curve *CurveParams) affineFromJacobian(x, y, z *big.Int) (xOut, yOut *big.Int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (curve *CurveParams) affineFromJacobian(x, y, z *big.Int) (xOut, yOut *big.Int)\n```\n\naffineFromJacobian reverses the Jacobian transform. See the comment at the top of the file. If the point is ∞ it returns 0, 0. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/crypto/elliptic#CurveParams.Add",
                     "documentation": {
                       "identifier": "CurveParams.Add",
                       "newPage": false,
                       "searchKey": "elliptic.CurveParams.Add",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -897,12 +898,123 @@
                 },
                 {
                   "node": {
+                    "pathID": "/crypto/elliptic#CurveParams.Double",
+                    "documentation": {
+                      "identifier": "CurveParams.Double",
+                      "newPage": false,
+                      "searchKey": "elliptic.CurveParams.Double",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (curve *CurveParams) Double(x1, y1 *big.Int) (*big.Int, *big.Int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (curve *CurveParams) Double(x1, y1 *big.Int) (*big.Int, *big.Int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/elliptic#CurveParams.IsOnCurve",
+                    "documentation": {
+                      "identifier": "CurveParams.IsOnCurve",
+                      "newPage": false,
+                      "searchKey": "elliptic.CurveParams.IsOnCurve",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (curve *CurveParams) IsOnCurve(x, y *big.Int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (curve *CurveParams) IsOnCurve(x, y *big.Int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/elliptic#CurveParams.Params",
+                    "documentation": {
+                      "identifier": "CurveParams.Params",
+                      "newPage": false,
+                      "searchKey": "elliptic.CurveParams.Params",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (curve *CurveParams) Params() *CurveParams"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (curve *CurveParams) Params() *CurveParams\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/elliptic#CurveParams.ScalarBaseMult",
+                    "documentation": {
+                      "identifier": "CurveParams.ScalarBaseMult",
+                      "newPage": false,
+                      "searchKey": "elliptic.CurveParams.ScalarBaseMult",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (curve *CurveParams) ScalarBaseMult(k []byte) (*big.Int, *big.Int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (curve *CurveParams) ScalarBaseMult(k []byte) (*big.Int, *big.Int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/elliptic#CurveParams.ScalarMult",
+                    "documentation": {
+                      "identifier": "CurveParams.ScalarMult",
+                      "newPage": false,
+                      "searchKey": "elliptic.CurveParams.ScalarMult",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (curve *CurveParams) ScalarMult(Bx, By *big.Int, k []byte) (*big.Int, *big.Int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (curve *CurveParams) ScalarMult(Bx, By *big.Int, k []byte) (*big.Int, *big.Int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/crypto/elliptic#CurveParams.addJacobian",
                     "documentation": {
                       "identifier": "CurveParams.addJacobian",
                       "newPage": false,
                       "searchKey": "elliptic.CurveParams.addJacobian",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -919,20 +1031,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/crypto/elliptic#CurveParams.Double",
+                    "pathID": "/crypto/elliptic#CurveParams.affineFromJacobian",
                     "documentation": {
-                      "identifier": "CurveParams.Double",
+                      "identifier": "CurveParams.affineFromJacobian",
                       "newPage": false,
-                      "searchKey": "elliptic.CurveParams.Double",
-                      "tags": null
+                      "searchKey": "elliptic.CurveParams.affineFromJacobian",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (curve *CurveParams) Double(x1, y1 *big.Int) (*big.Int, *big.Int)"
+                      "value": "func (curve *CurveParams) affineFromJacobian(x, y, z *big.Int) (xOut, yOut *big.Int)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (curve *CurveParams) Double(x1, y1 *big.Int) (*big.Int, *big.Int)\n```\n\n"
+                      "value": "```Go\nfunc (curve *CurveParams) affineFromJacobian(x, y, z *big.Int) (xOut, yOut *big.Int)\n```\n\naffineFromJacobian reverses the Jacobian transform. See the comment at the top of the file. If the point is ∞ it returns 0, 0. \n\n"
                     },
                     "children": null
                   }
@@ -945,6 +1060,7 @@
                       "newPage": false,
                       "searchKey": "elliptic.CurveParams.doubleJacobian",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -961,45 +1077,51 @@
                 },
                 {
                   "node": {
-                    "pathID": "/crypto/elliptic#CurveParams.ScalarMult",
+                    "pathID": "/crypto/elliptic#CurveParams.polynomial",
                     "documentation": {
-                      "identifier": "CurveParams.ScalarMult",
+                      "identifier": "CurveParams.polynomial",
                       "newPage": false,
-                      "searchKey": "elliptic.CurveParams.ScalarMult",
-                      "tags": null
+                      "searchKey": "elliptic.CurveParams.polynomial",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (curve *CurveParams) ScalarMult(Bx, By *big.Int, k []byte) (*big.Int, *big.Int)"
+                      "value": "func (curve *CurveParams) polynomial(x *big.Int) *big.Int"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (curve *CurveParams) ScalarMult(Bx, By *big.Int, k []byte) (*big.Int, *big.Int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/elliptic#CurveParams.ScalarBaseMult",
-                    "documentation": {
-                      "identifier": "CurveParams.ScalarBaseMult",
-                      "newPage": false,
-                      "searchKey": "elliptic.CurveParams.ScalarBaseMult",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (curve *CurveParams) ScalarBaseMult(k []byte) (*big.Int, *big.Int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (curve *CurveParams) ScalarBaseMult(k []byte) (*big.Int, *big.Int)\n```\n\n"
+                      "value": "```Go\nfunc (curve *CurveParams) polynomial(x *big.Int) *big.Int\n```\n\npolynomial returns x³ - 3x + b. \n\n"
                     },
                     "children": null
                   }
                 }
               ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#baseMultTest",
+              "documentation": {
+                "identifier": "baseMultTest",
+                "newPage": false,
+                "searchKey": "elliptic.baseMultTest",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type baseMultTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype baseMultTest struct {\n\tk    string\n\tx, y string\n}\n```\n\n"
+              },
+              "children": null
             }
           },
           {
@@ -1010,6 +1132,7 @@
                 "newPage": false,
                 "searchKey": "elliptic.p224Curve",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1024,56 +1147,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/crypto/elliptic#p224Curve.Params",
-                    "documentation": {
-                      "identifier": "p224Curve.Params",
-                      "newPage": false,
-                      "searchKey": "elliptic.p224Curve.Params",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (curve p224Curve) Params() *CurveParams"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (curve p224Curve) Params() *CurveParams\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/elliptic#p224Curve.IsOnCurve",
-                    "documentation": {
-                      "identifier": "p224Curve.IsOnCurve",
-                      "newPage": false,
-                      "searchKey": "elliptic.p224Curve.IsOnCurve",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (curve p224Curve) IsOnCurve(bigX, bigY *big.Int) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (curve p224Curve) IsOnCurve(bigX, bigY *big.Int) bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/crypto/elliptic#p224Curve.Add",
                     "documentation": {
                       "identifier": "p224Curve.Add",
                       "newPage": false,
                       "searchKey": "elliptic.p224Curve.Add",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1096,6 +1176,7 @@
                       "newPage": false,
                       "searchKey": "elliptic.p224Curve.Double",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1112,22 +1193,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/crypto/elliptic#p224Curve.ScalarMult",
+                    "pathID": "/crypto/elliptic#p224Curve.IsOnCurve",
                     "documentation": {
-                      "identifier": "p224Curve.ScalarMult",
+                      "identifier": "p224Curve.IsOnCurve",
                       "newPage": false,
-                      "searchKey": "elliptic.p224Curve.ScalarMult",
+                      "searchKey": "elliptic.p224Curve.IsOnCurve",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (p224Curve) ScalarMult(bigX1, bigY1 *big.Int, scalar []byte) (x, y *big.Int)"
+                      "value": "func (curve p224Curve) IsOnCurve(bigX, bigY *big.Int) bool"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (p224Curve) ScalarMult(bigX1, bigY1 *big.Int, scalar []byte) (x, y *big.Int)\n```\n\n"
+                      "value": "```Go\nfunc (curve p224Curve) IsOnCurve(bigX, bigY *big.Int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/elliptic#p224Curve.Params",
+                    "documentation": {
+                      "identifier": "p224Curve.Params",
+                      "newPage": false,
+                      "searchKey": "elliptic.p224Curve.Params",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (curve p224Curve) Params() *CurveParams"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (curve p224Curve) Params() *CurveParams\n```\n\n"
                     },
                     "children": null
                   }
@@ -1140,6 +1245,7 @@
                       "newPage": false,
                       "searchKey": "elliptic.p224Curve.ScalarBaseMult",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1150,6 +1256,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (curve p224Curve) ScalarBaseMult(scalar []byte) (x, y *big.Int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/elliptic#p224Curve.ScalarMult",
+                    "documentation": {
+                      "identifier": "p224Curve.ScalarMult",
+                      "newPage": false,
+                      "searchKey": "elliptic.p224Curve.ScalarMult",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p224Curve) ScalarMult(bigX1, bigY1 *big.Int, scalar []byte) (x, y *big.Int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p224Curve) ScalarMult(bigX1, bigY1 *big.Int, scalar []byte) (x, y *big.Int)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1165,6 +1294,8 @@
                 "newPage": false,
                 "searchKey": "elliptic.p224FieldElement",
                 "tags": [
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -1185,6 +1316,7 @@
                       "newPage": false,
                       "searchKey": "elliptic.p224FieldElement.Generate",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1210,6 +1342,8 @@
                 "newPage": false,
                 "searchKey": "elliptic.p224LargeFieldElement",
                 "tags": [
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -1232,6 +1366,7 @@
                 "newPage": false,
                 "searchKey": "elliptic.p256Curve",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1246,56 +1381,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/crypto/elliptic#p256Curve.Params",
-                    "documentation": {
-                      "identifier": "p256Curve.Params",
-                      "newPage": false,
-                      "searchKey": "elliptic.p256Curve.Params",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (curve p256Curve) Params() *CurveParams"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (curve p256Curve) Params() *CurveParams\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/elliptic#p256Curve.Inverse",
-                    "documentation": {
-                      "identifier": "p256Curve.Inverse",
-                      "newPage": false,
-                      "searchKey": "elliptic.p256Curve.Inverse",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (curve p256Curve) Inverse(k *big.Int) *big.Int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (curve p256Curve) Inverse(k *big.Int) *big.Int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/crypto/elliptic#p256Curve.CombinedMult",
                     "documentation": {
                       "identifier": "p256Curve.CombinedMult",
                       "newPage": false,
                       "searchKey": "elliptic.p256Curve.CombinedMult",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1312,12 +1404,59 @@
                 },
                 {
                   "node": {
+                    "pathID": "/crypto/elliptic#p256Curve.Inverse",
+                    "documentation": {
+                      "identifier": "p256Curve.Inverse",
+                      "newPage": false,
+                      "searchKey": "elliptic.p256Curve.Inverse",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (curve p256Curve) Inverse(k *big.Int) *big.Int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (curve p256Curve) Inverse(k *big.Int) *big.Int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/elliptic#p256Curve.Params",
+                    "documentation": {
+                      "identifier": "p256Curve.Params",
+                      "newPage": false,
+                      "searchKey": "elliptic.p256Curve.Params",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (curve p256Curve) Params() *CurveParams"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (curve p256Curve) Params() *CurveParams\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/crypto/elliptic#p256Curve.ScalarBaseMult",
                     "documentation": {
                       "identifier": "p256Curve.ScalarBaseMult",
                       "newPage": false,
                       "searchKey": "elliptic.p256Curve.ScalarBaseMult",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1340,6 +1479,7 @@
                       "newPage": false,
                       "searchKey": "elliptic.p256Curve.ScalarMult",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1365,6 +1505,7 @@
                 "newPage": false,
                 "searchKey": "elliptic.p256Point",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1379,34 +1520,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/crypto/elliptic#p256Point.p256PointToAffine",
-                    "documentation": {
-                      "identifier": "p256Point.p256PointToAffine",
-                      "newPage": false,
-                      "searchKey": "elliptic.p256Point.p256PointToAffine",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *p256Point) p256PointToAffine() (x, y *big.Int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *p256Point) p256PointToAffine() (x, y *big.Int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/crypto/elliptic#p256Point.CopyConditional",
                     "documentation": {
                       "identifier": "p256Point.CopyConditional",
                       "newPage": false,
                       "searchKey": "elliptic.p256Point.CopyConditional",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1423,34 +1543,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/crypto/elliptic#p256Point.p256StorePoint",
-                    "documentation": {
-                      "identifier": "p256Point.p256StorePoint",
-                      "newPage": false,
-                      "searchKey": "elliptic.p256Point.p256StorePoint",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *p256Point) p256StorePoint(r *[16 * 4 * 3]uint64, index int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *p256Point) p256StorePoint(r *[16 * 4 * 3]uint64, index int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/crypto/elliptic#p256Point.p256BaseMult",
                     "documentation": {
                       "identifier": "p256Point.p256BaseMult",
                       "newPage": false,
                       "searchKey": "elliptic.p256Point.p256BaseMult",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1467,12 +1566,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/crypto/elliptic#p256Point.p256PointToAffine",
+                    "documentation": {
+                      "identifier": "p256Point.p256PointToAffine",
+                      "newPage": false,
+                      "searchKey": "elliptic.p256Point.p256PointToAffine",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *p256Point) p256PointToAffine() (x, y *big.Int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *p256Point) p256PointToAffine() (x, y *big.Int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/crypto/elliptic#p256Point.p256ScalarMult",
                     "documentation": {
                       "identifier": "p256Point.p256ScalarMult",
                       "newPage": false,
                       "searchKey": "elliptic.p256Point.p256ScalarMult",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1483,6 +1606,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (p *p256Point) p256ScalarMult(scalar []uint64)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/elliptic#p256Point.p256StorePoint",
+                    "documentation": {
+                      "identifier": "p256Point.p256StorePoint",
+                      "newPage": false,
+                      "searchKey": "elliptic.p256Point.p256StorePoint",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *p256Point) p256StorePoint(r *[16 * 4 * 3]uint64, index int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *p256Point) p256StorePoint(r *[16 * 4 * 3]uint64, index int)\n```\n\n"
                     },
                     "children": null
                   }
@@ -1498,6 +1644,7 @@
                 "newPage": false,
                 "searchKey": "elliptic.p521Curve",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1512,100 +1659,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/crypto/elliptic#p521Curve.Params",
-                    "documentation": {
-                      "identifier": "p521Curve.Params",
-                      "newPage": false,
-                      "searchKey": "elliptic.p521Curve.Params",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (curve p521Curve) Params() *CurveParams"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (curve p521Curve) Params() *CurveParams\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/elliptic#p521Curve.IsOnCurve",
-                    "documentation": {
-                      "identifier": "p521Curve.IsOnCurve",
-                      "newPage": false,
-                      "searchKey": "elliptic.p521Curve.IsOnCurve",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (curve p521Curve) IsOnCurve(x, y *big.Int) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (curve p521Curve) IsOnCurve(x, y *big.Int) bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/elliptic#p521Curve.affineFromJacobian",
-                    "documentation": {
-                      "identifier": "p521Curve.affineFromJacobian",
-                      "newPage": false,
-                      "searchKey": "elliptic.p521Curve.affineFromJacobian",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (curve p521Curve) affineFromJacobian(p *p521Point) (x, y *big.Int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (curve p521Curve) affineFromJacobian(p *p521Point) (x, y *big.Int)\n```\n\naffineFromJacobian brings a point in Jacobian coordinates back to affine coordinates, with (0, 0) representing infinity by convention. It also goes back to big.Int values to match the exposed API. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/crypto/elliptic#p521Curve.jacobianFromAffine",
-                    "documentation": {
-                      "identifier": "p521Curve.jacobianFromAffine",
-                      "newPage": false,
-                      "searchKey": "elliptic.p521Curve.jacobianFromAffine",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (curve p521Curve) jacobianFromAffine(x, y *big.Int) *p521Point"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (curve p521Curve) jacobianFromAffine(x, y *big.Int) *p521Point\n```\n\njacobianFromAffine converts (x, y) affine coordinates into (x, y, z) Jacobian coordinates. It also converts from big.Int to fiat, which is necessarily a messy and variable-time operation, which we can't avoid due to the exposed API. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/crypto/elliptic#p521Curve.Add",
                     "documentation": {
                       "identifier": "p521Curve.Add",
                       "newPage": false,
                       "searchKey": "elliptic.p521Curve.Add",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1628,6 +1688,7 @@
                       "newPage": false,
                       "searchKey": "elliptic.p521Curve.Double",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1644,12 +1705,82 @@
                 },
                 {
                   "node": {
+                    "pathID": "/crypto/elliptic#p521Curve.IsOnCurve",
+                    "documentation": {
+                      "identifier": "p521Curve.IsOnCurve",
+                      "newPage": false,
+                      "searchKey": "elliptic.p521Curve.IsOnCurve",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (curve p521Curve) IsOnCurve(x, y *big.Int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (curve p521Curve) IsOnCurve(x, y *big.Int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/elliptic#p521Curve.Params",
+                    "documentation": {
+                      "identifier": "p521Curve.Params",
+                      "newPage": false,
+                      "searchKey": "elliptic.p521Curve.Params",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (curve p521Curve) Params() *CurveParams"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (curve p521Curve) Params() *CurveParams\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/elliptic#p521Curve.ScalarBaseMult",
+                    "documentation": {
+                      "identifier": "p521Curve.ScalarBaseMult",
+                      "newPage": false,
+                      "searchKey": "elliptic.p521Curve.ScalarBaseMult",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (curve p521Curve) ScalarBaseMult(k []byte) (*big.Int, *big.Int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (curve p521Curve) ScalarBaseMult(k []byte) (*big.Int, *big.Int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/crypto/elliptic#p521Curve.ScalarMult",
                     "documentation": {
                       "identifier": "p521Curve.ScalarMult",
                       "newPage": false,
                       "searchKey": "elliptic.p521Curve.ScalarMult",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1666,22 +1797,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/crypto/elliptic#p521Curve.ScalarBaseMult",
+                    "pathID": "/crypto/elliptic#p521Curve.affineFromJacobian",
                     "documentation": {
-                      "identifier": "p521Curve.ScalarBaseMult",
+                      "identifier": "p521Curve.affineFromJacobian",
                       "newPage": false,
-                      "searchKey": "elliptic.p521Curve.ScalarBaseMult",
+                      "searchKey": "elliptic.p521Curve.affineFromJacobian",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (curve p521Curve) ScalarBaseMult(k []byte) (*big.Int, *big.Int)"
+                      "value": "func (curve p521Curve) affineFromJacobian(p *p521Point) (x, y *big.Int)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (curve p521Curve) ScalarBaseMult(k []byte) (*big.Int, *big.Int)\n```\n\n"
+                      "value": "```Go\nfunc (curve p521Curve) affineFromJacobian(p *p521Point) (x, y *big.Int)\n```\n\naffineFromJacobian brings a point in Jacobian coordinates back to affine coordinates, with (0, 0) representing infinity by convention. It also goes back to big.Int values to match the exposed API. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/elliptic#p521Curve.jacobianFromAffine",
+                    "documentation": {
+                      "identifier": "p521Curve.jacobianFromAffine",
+                      "newPage": false,
+                      "searchKey": "elliptic.p521Curve.jacobianFromAffine",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (curve p521Curve) jacobianFromAffine(x, y *big.Int) *p521Point"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (curve p521Curve) jacobianFromAffine(x, y *big.Int) *p521Point\n```\n\njacobianFromAffine converts (x, y) affine coordinates into (x, y, z) Jacobian coordinates. It also converts from big.Int to fiat, which is necessarily a messy and variable-time operation, which we can't avoid due to the exposed API. \n\n"
                     },
                     "children": null
                   }
@@ -1697,6 +1852,7 @@
                 "newPage": false,
                 "searchKey": "elliptic.p521Point",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1717,6 +1873,7 @@
                       "newPage": false,
                       "searchKey": "elliptic.p521Point.addJacobian",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1739,6 +1896,7 @@
                       "newPage": false,
                       "searchKey": "elliptic.p521Point.doubleJacobian",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1758,34 +1916,13 @@
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic#baseMultTest",
-              "documentation": {
-                "identifier": "baseMultTest",
-                "newPage": false,
-                "searchKey": "elliptic.baseMultTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type baseMultTest struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype baseMultTest struct {\n\tk    string\n\tx, y string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/elliptic#scalarMultTest",
               "documentation": {
                 "identifier": "scalarMultTest",
                 "newPage": false,
                 "searchKey": "elliptic.scalarMultTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1808,6 +1945,7 @@
                 "newPage": false,
                 "searchKey": "elliptic.synthCombinedMult",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1828,6 +1966,7 @@
                       "newPage": false,
                       "searchKey": "elliptic.synthCombinedMult.CombinedMult",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1855,7 +1994,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1868,22 +2009,48 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto/elliptic#zForAffine",
+              "pathID": "/crypto/elliptic#BenchmarkScalarBaseMult",
               "documentation": {
-                "identifier": "zForAffine",
+                "identifier": "BenchmarkScalarBaseMult",
                 "newPage": false,
-                "searchKey": "elliptic.zForAffine",
+                "searchKey": "elliptic.BenchmarkScalarBaseMult",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func zForAffine(x, y *big.Int) *big.Int"
+                "value": "func BenchmarkScalarBaseMult(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc zForAffine(x, y *big.Int) *big.Int\n```\n\nzForAffine returns a Jacobian Z value for the affine point (x, y). If x and y are zero, it assumes that they represent the point at infinity because (0, 0) is not on the any of the curves handled here. \n\n"
+                "value": "```Go\nfunc BenchmarkScalarBaseMult(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#BenchmarkScalarMult",
+              "documentation": {
+                "identifier": "BenchmarkScalarMult",
+                "newPage": false,
+                "searchKey": "elliptic.BenchmarkScalarMult",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkScalarMult(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkScalarMult(b *testing.B)\n```\n\n"
               },
               "children": null
             }
@@ -1895,7 +2062,9 @@
                 "identifier": "GenerateKey",
                 "newPage": false,
                 "searchKey": "elliptic.GenerateKey",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1915,7 +2084,9 @@
                 "identifier": "Marshal",
                 "newPage": false,
                 "searchKey": "elliptic.Marshal",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1935,7 +2106,9 @@
                 "identifier": "MarshalCompressed",
                 "newPage": false,
                 "searchKey": "elliptic.MarshalCompressed",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1950,12 +2123,542 @@
           },
           {
             "node": {
+              "pathID": "/crypto/elliptic#TestFuzz",
+              "documentation": {
+                "identifier": "TestFuzz",
+                "newPage": false,
+                "searchKey": "elliptic.TestFuzz",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFuzz(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFuzz(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#TestInfinity",
+              "documentation": {
+                "identifier": "TestInfinity",
+                "newPage": false,
+                "searchKey": "elliptic.TestInfinity",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInfinity(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInfinity(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#TestMarshal",
+              "documentation": {
+                "identifier": "TestMarshal",
+                "newPage": false,
+                "searchKey": "elliptic.TestMarshal",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMarshal(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMarshal(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#TestMarshalCompressed",
+              "documentation": {
+                "identifier": "TestMarshalCompressed",
+                "newPage": false,
+                "searchKey": "elliptic.TestMarshalCompressed",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMarshalCompressed(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMarshalCompressed(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#TestOffCurve",
+              "documentation": {
+                "identifier": "TestOffCurve",
+                "newPage": false,
+                "searchKey": "elliptic.TestOffCurve",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOffCurve(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOffCurve(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#TestOnCurve",
+              "documentation": {
+                "identifier": "TestOnCurve",
+                "newPage": false,
+                "searchKey": "elliptic.TestOnCurve",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOnCurve(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOnCurve(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#TestP224Add",
+              "documentation": {
+                "identifier": "TestP224Add",
+                "newPage": false,
+                "searchKey": "elliptic.TestP224Add",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestP224Add(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestP224Add(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#TestP224BaseMult",
+              "documentation": {
+                "identifier": "TestP224BaseMult",
+                "newPage": false,
+                "searchKey": "elliptic.TestP224BaseMult",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestP224BaseMult(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestP224BaseMult(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#TestP224Contract",
+              "documentation": {
+                "identifier": "TestP224Contract",
+                "newPage": false,
+                "searchKey": "elliptic.TestP224Contract",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestP224Contract(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestP224Contract(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#TestP224GenericBaseMult",
+              "documentation": {
+                "identifier": "TestP224GenericBaseMult",
+                "newPage": false,
+                "searchKey": "elliptic.TestP224GenericBaseMult",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestP224GenericBaseMult(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestP224GenericBaseMult(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#TestP224Invert",
+              "documentation": {
+                "identifier": "TestP224Invert",
+                "newPage": false,
+                "searchKey": "elliptic.TestP224Invert",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestP224Invert(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestP224Invert(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#TestP224IsZero",
+              "documentation": {
+                "identifier": "TestP224IsZero",
+                "newPage": false,
+                "searchKey": "elliptic.TestP224IsZero",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestP224IsZero(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestP224IsZero(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#TestP224Mul",
+              "documentation": {
+                "identifier": "TestP224Mul",
+                "newPage": false,
+                "searchKey": "elliptic.TestP224Mul",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestP224Mul(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestP224Mul(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#TestP224Overflow",
+              "documentation": {
+                "identifier": "TestP224Overflow",
+                "newPage": false,
+                "searchKey": "elliptic.TestP224Overflow",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestP224Overflow(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestP224Overflow(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#TestP224Reduce",
+              "documentation": {
+                "identifier": "TestP224Reduce",
+                "newPage": false,
+                "searchKey": "elliptic.TestP224Reduce",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestP224Reduce(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestP224Reduce(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#TestP224Square",
+              "documentation": {
+                "identifier": "TestP224Square",
+                "newPage": false,
+                "searchKey": "elliptic.TestP224Square",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestP224Square(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestP224Square(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#TestP224ToFromBig",
+              "documentation": {
+                "identifier": "TestP224ToFromBig",
+                "newPage": false,
+                "searchKey": "elliptic.TestP224ToFromBig",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestP224ToFromBig(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestP224ToFromBig(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#TestP256BaseMult",
+              "documentation": {
+                "identifier": "TestP256BaseMult",
+                "newPage": false,
+                "searchKey": "elliptic.TestP256BaseMult",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestP256BaseMult(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestP256BaseMult(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#TestP256CombinedMult",
+              "documentation": {
+                "identifier": "TestP256CombinedMult",
+                "newPage": false,
+                "searchKey": "elliptic.TestP256CombinedMult",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestP256CombinedMult(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestP256CombinedMult(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#TestP256Mult",
+              "documentation": {
+                "identifier": "TestP256Mult",
+                "newPage": false,
+                "searchKey": "elliptic.TestP256Mult",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestP256Mult(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestP256Mult(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#TestP256PrecomputedTable",
+              "documentation": {
+                "identifier": "TestP256PrecomputedTable",
+                "newPage": false,
+                "searchKey": "elliptic.TestP256PrecomputedTable",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestP256PrecomputedTable(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestP256PrecomputedTable(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#TestUnmarshalToLargeCoordinates",
+              "documentation": {
+                "identifier": "TestUnmarshalToLargeCoordinates",
+                "newPage": false,
+                "searchKey": "elliptic.TestUnmarshalToLargeCoordinates",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnmarshalToLargeCoordinates(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnmarshalToLargeCoordinates(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/elliptic#Unmarshal",
               "documentation": {
                 "identifier": "Unmarshal",
                 "newPage": false,
                 "searchKey": "elliptic.Unmarshal",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1975,7 +2678,9 @@
                 "identifier": "UnmarshalCompressed",
                 "newPage": false,
                 "searchKey": "elliptic.UnmarshalCompressed",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1990,902 +2695,46 @@
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic#initAll",
+              "pathID": "/crypto/elliptic#benchmarkAllCurves",
               "documentation": {
-                "identifier": "initAll",
+                "identifier": "benchmarkAllCurves",
                 "newPage": false,
-                "searchKey": "elliptic.initAll",
+                "searchKey": "elliptic.benchmarkAllCurves",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func initAll()"
+                "value": "func benchmarkAllCurves(t *testing.B, f func(*testing.B, Curve))"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc initAll()\n```\n\n"
+                "value": "```Go\nfunc benchmarkAllCurves(t *testing.B, f func(*testing.B, Curve))\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic#initP384",
+              "pathID": "/crypto/elliptic#bigIntToFiatP521",
               "documentation": {
-                "identifier": "initP384",
+                "identifier": "bigIntToFiatP521",
                 "newPage": false,
-                "searchKey": "elliptic.initP384",
+                "searchKey": "elliptic.bigIntToFiatP521",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func initP384()"
+                "value": "func bigIntToFiatP521(x *big.Int) *fiat.P521Element"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc initP384()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#initP224",
-              "documentation": {
-                "identifier": "initP224",
-                "newPage": false,
-                "searchKey": "elliptic.initP224",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func initP224()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc initP224()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p224IsZero",
-              "documentation": {
-                "identifier": "p224IsZero",
-                "newPage": false,
-                "searchKey": "elliptic.p224IsZero",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p224IsZero(a *p224FieldElement) uint32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p224IsZero(a *p224FieldElement) uint32\n```\n\np224IsZero returns 1 if a == 0 mod p and 0 otherwise. \n\na[i] < 2**29 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p224Add",
-              "documentation": {
-                "identifier": "p224Add",
-                "newPage": false,
-                "searchKey": "elliptic.p224Add",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p224Add(out, a, b *p224FieldElement)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p224Add(out, a, b *p224FieldElement)\n```\n\np224Add computes *out = a+b \n\na[i] + b[i] < 2**32 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p224Sub",
-              "documentation": {
-                "identifier": "p224Sub",
-                "newPage": false,
-                "searchKey": "elliptic.p224Sub",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p224Sub(out, a, b *p224FieldElement)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p224Sub(out, a, b *p224FieldElement)\n```\n\np224Sub computes *out = a-b \n\na[i], b[i] < 2**30 out[i] < 2**32 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p224Mul",
-              "documentation": {
-                "identifier": "p224Mul",
-                "newPage": false,
-                "searchKey": "elliptic.p224Mul",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p224Mul(out, a, b *p224FieldElement, tmp *p224LargeFieldElement)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p224Mul(out, a, b *p224FieldElement, tmp *p224LargeFieldElement)\n```\n\np224Mul computes *out = a*b \n\na[i] < 2**29, b[i] < 2**30 (or vice versa) out[i] < 2**29 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p224Square",
-              "documentation": {
-                "identifier": "p224Square",
-                "newPage": false,
-                "searchKey": "elliptic.p224Square",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p224Square(out, a *p224FieldElement, tmp *p224LargeFieldElement)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p224Square(out, a *p224FieldElement, tmp *p224LargeFieldElement)\n```\n\nSquare computes *out = a*a \n\na[i] < 2**29 out[i] < 2**29 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p224ReduceLarge",
-              "documentation": {
-                "identifier": "p224ReduceLarge",
-                "newPage": false,
-                "searchKey": "elliptic.p224ReduceLarge",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p224ReduceLarge(out *p224FieldElement, in *p224LargeFieldElement)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p224ReduceLarge(out *p224FieldElement, in *p224LargeFieldElement)\n```\n\nReduceLarge converts a p224LargeFieldElement to a p224FieldElement. \n\nin[i] < 2**62 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p224Reduce",
-              "documentation": {
-                "identifier": "p224Reduce",
-                "newPage": false,
-                "searchKey": "elliptic.p224Reduce",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p224Reduce(a *p224FieldElement)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p224Reduce(a *p224FieldElement)\n```\n\nReduce reduces the coefficients of a to smaller bounds. \n\nOn entry: a[i] < 2**31 + 2**30 On exit: a[i] < 2**29 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p224Invert",
-              "documentation": {
-                "identifier": "p224Invert",
-                "newPage": false,
-                "searchKey": "elliptic.p224Invert",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p224Invert(out, in *p224FieldElement)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p224Invert(out, in *p224FieldElement)\n```\n\np224Invert calculates *out = in**-1 by computing in**(2**224 - 2**96 - 1), i.e. Fermat's little theorem. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p224Contract",
-              "documentation": {
-                "identifier": "p224Contract",
-                "newPage": false,
-                "searchKey": "elliptic.p224Contract",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p224Contract(out, in *p224FieldElement)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p224Contract(out, in *p224FieldElement)\n```\n\np224Contract converts a FieldElement to its unique, minimal form. \n\nOn entry, in[i] < 2**29 On exit, out[i] < 2**28 and out < p \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p224AddJacobian",
-              "documentation": {
-                "identifier": "p224AddJacobian",
-                "newPage": false,
-                "searchKey": "elliptic.p224AddJacobian",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p224AddJacobian(x3, y3, z3, x1, y1, z1, x2, y2, z2 *p224FieldElement)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p224AddJacobian(x3, y3, z3, x1, y1, z1, x2, y2, z2 *p224FieldElement)\n```\n\np224AddJacobian computes *out = a+b where a != b. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p224DoubleJacobian",
-              "documentation": {
-                "identifier": "p224DoubleJacobian",
-                "newPage": false,
-                "searchKey": "elliptic.p224DoubleJacobian",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p224DoubleJacobian(x3, y3, z3, x1, y1, z1 *p224FieldElement)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p224DoubleJacobian(x3, y3, z3, x1, y1, z1 *p224FieldElement)\n```\n\np224DoubleJacobian computes *out = a+a. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p224CopyConditional",
-              "documentation": {
-                "identifier": "p224CopyConditional",
-                "newPage": false,
-                "searchKey": "elliptic.p224CopyConditional",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p224CopyConditional(out, in *p224FieldElement, control uint32)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p224CopyConditional(out, in *p224FieldElement, control uint32)\n```\n\np224CopyConditional sets *out = *in iff the least-significant-bit of control is true, and it runs in constant time. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p224ScalarMult",
-              "documentation": {
-                "identifier": "p224ScalarMult",
-                "newPage": false,
-                "searchKey": "elliptic.p224ScalarMult",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p224ScalarMult(outX, outY, outZ, inX, inY, inZ *p224FieldElement, scalar []byte)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p224ScalarMult(outX, outY, outZ, inX, inY, inZ *p224FieldElement, scalar []byte)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p224ToAffine",
-              "documentation": {
-                "identifier": "p224ToAffine",
-                "newPage": false,
-                "searchKey": "elliptic.p224ToAffine",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p224ToAffine(x, y, z *p224FieldElement) (*big.Int, *big.Int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p224ToAffine(x, y, z *p224FieldElement) (*big.Int, *big.Int)\n```\n\np224ToAffine converts from Jacobian to affine form. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#get28BitsFromEnd",
-              "documentation": {
-                "identifier": "get28BitsFromEnd",
-                "newPage": false,
-                "searchKey": "elliptic.get28BitsFromEnd",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func get28BitsFromEnd(buf []byte, shift uint) (uint32, []byte)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc get28BitsFromEnd(buf []byte, shift uint) (uint32, []byte)\n```\n\nget28BitsFromEnd returns the least-significant 28 bits from buf>>shift, where buf is interpreted as a big-endian number. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p224FromBig",
-              "documentation": {
-                "identifier": "p224FromBig",
-                "newPage": false,
-                "searchKey": "elliptic.p224FromBig",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p224FromBig(out *p224FieldElement, in *big.Int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p224FromBig(out *p224FieldElement, in *big.Int)\n```\n\np224FromBig sets *out = *in. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p224ToBig",
-              "documentation": {
-                "identifier": "p224ToBig",
-                "newPage": false,
-                "searchKey": "elliptic.p224ToBig",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p224ToBig(in *p224FieldElement) *big.Int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p224ToBig(in *p224FieldElement) *big.Int\n```\n\np224ToBig returns in as a big.Int. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#initP256",
-              "documentation": {
-                "identifier": "initP256",
-                "newPage": false,
-                "searchKey": "elliptic.initP256",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func initP256()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc initP256()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p256Mul",
-              "documentation": {
-                "identifier": "p256Mul",
-                "newPage": false,
-                "searchKey": "elliptic.p256Mul",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p256Mul(res, in1, in2 []uint64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p256Mul(res, in1, in2 []uint64)\n```\n\nFunctions implemented in p256_asm_*64.s Montgomery multiplication modulo P256 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p256Sqr",
-              "documentation": {
-                "identifier": "p256Sqr",
-                "newPage": false,
-                "searchKey": "elliptic.p256Sqr",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p256Sqr(res, in []uint64, n int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p256Sqr(res, in []uint64, n int)\n```\n\nMontgomery square modulo P256, repeated n times (n >= 1) \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p256FromMont",
-              "documentation": {
-                "identifier": "p256FromMont",
-                "newPage": false,
-                "searchKey": "elliptic.p256FromMont",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p256FromMont(res, in []uint64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p256FromMont(res, in []uint64)\n```\n\nMontgomery multiplication by 1 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p256NegCond",
-              "documentation": {
-                "identifier": "p256NegCond",
-                "newPage": false,
-                "searchKey": "elliptic.p256NegCond",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p256NegCond(val []uint64, cond int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p256NegCond(val []uint64, cond int)\n```\n\niff cond == 1  val <- -val \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p256MovCond",
-              "documentation": {
-                "identifier": "p256MovCond",
-                "newPage": false,
-                "searchKey": "elliptic.p256MovCond",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p256MovCond(res, a, b []uint64, cond int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p256MovCond(res, a, b []uint64, cond int)\n```\n\nif cond == 0 res <- b; else res <- a \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p256BigToLittle",
-              "documentation": {
-                "identifier": "p256BigToLittle",
-                "newPage": false,
-                "searchKey": "elliptic.p256BigToLittle",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p256BigToLittle(res []uint64, in []byte)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p256BigToLittle(res []uint64, in []byte)\n```\n\nEndianness swap \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p256LittleToBig",
-              "documentation": {
-                "identifier": "p256LittleToBig",
-                "newPage": false,
-                "searchKey": "elliptic.p256LittleToBig",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p256LittleToBig(res []byte, in []uint64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p256LittleToBig(res []byte, in []uint64)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p256Select",
-              "documentation": {
-                "identifier": "p256Select",
-                "newPage": false,
-                "searchKey": "elliptic.p256Select",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p256Select(point, table []uint64, idx int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p256Select(point, table []uint64, idx int)\n```\n\nConstant time table access \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p256SelectBase",
-              "documentation": {
-                "identifier": "p256SelectBase",
-                "newPage": false,
-                "searchKey": "elliptic.p256SelectBase",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p256SelectBase(point, table []uint64, idx int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p256SelectBase(point, table []uint64, idx int)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p256OrdMul",
-              "documentation": {
-                "identifier": "p256OrdMul",
-                "newPage": false,
-                "searchKey": "elliptic.p256OrdMul",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p256OrdMul(res, in1, in2 []uint64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p256OrdMul(res, in1, in2 []uint64)\n```\n\nMontgomery multiplication modulo Ord(G) \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p256OrdSqr",
-              "documentation": {
-                "identifier": "p256OrdSqr",
-                "newPage": false,
-                "searchKey": "elliptic.p256OrdSqr",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p256OrdSqr(res, in []uint64, n int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p256OrdSqr(res, in []uint64, n int)\n```\n\nMontgomery square modulo Ord(G), repeated n times \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p256PointAddAffineAsm",
-              "documentation": {
-                "identifier": "p256PointAddAffineAsm",
-                "newPage": false,
-                "searchKey": "elliptic.p256PointAddAffineAsm",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p256PointAddAffineAsm(res, in1, in2 []uint64, sign, sel, zero int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p256PointAddAffineAsm(res, in1, in2 []uint64, sign, sel, zero int)\n```\n\nPoint add with in2 being affine point If sign == 1 -> in2 = -in2 If sel == 0 -> res = in1 if zero == 0 -> res = in2 \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p256PointAddAsm",
-              "documentation": {
-                "identifier": "p256PointAddAsm",
-                "newPage": false,
-                "searchKey": "elliptic.p256PointAddAsm",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p256PointAddAsm(res, in1, in2 []uint64) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p256PointAddAsm(res, in1, in2 []uint64) int\n```\n\nPoint add. Returns one if the two input points were equal and zero otherwise. (Note that, due to the way that the equations work out, some representations of ∞ are considered equal to everything by this function.) \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p256PointDoubleAsm",
-              "documentation": {
-                "identifier": "p256PointDoubleAsm",
-                "newPage": false,
-                "searchKey": "elliptic.p256PointDoubleAsm",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p256PointDoubleAsm(res, in []uint64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p256PointDoubleAsm(res, in []uint64)\n```\n\nPoint double \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#fromBig",
-              "documentation": {
-                "identifier": "fromBig",
-                "newPage": false,
-                "searchKey": "elliptic.fromBig",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func fromBig(out []uint64, big *big.Int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc fromBig(out []uint64, big *big.Int)\n```\n\nfromBig converts a *big.Int into a format used by this code. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p256GetScalar",
-              "documentation": {
-                "identifier": "p256GetScalar",
-                "newPage": false,
-                "searchKey": "elliptic.p256GetScalar",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p256GetScalar(out []uint64, in []byte)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p256GetScalar(out []uint64, in []byte)\n```\n\np256GetScalar endian-swaps the big-endian scalar value from in and writes it to out. If the scalar is equal or greater than the order of the group, it's reduced modulo that order. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#maybeReduceModP",
-              "documentation": {
-                "identifier": "maybeReduceModP",
-                "newPage": false,
-                "searchKey": "elliptic.maybeReduceModP",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func maybeReduceModP(in *big.Int) *big.Int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc maybeReduceModP(in *big.Int) *big.Int\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#uint64IsZero",
-              "documentation": {
-                "identifier": "uint64IsZero",
-                "newPage": false,
-                "searchKey": "elliptic.uint64IsZero",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func uint64IsZero(x uint64) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc uint64IsZero(x uint64) int\n```\n\nuint64IsZero returns 1 if x is zero and zero otherwise. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#scalarIsZero",
-              "documentation": {
-                "identifier": "scalarIsZero",
-                "newPage": false,
-                "searchKey": "elliptic.scalarIsZero",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func scalarIsZero(scalar []uint64) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc scalarIsZero(scalar []uint64) int\n```\n\nscalarIsZero returns 1 if scalar represents the zero value, and zero otherwise. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p256Inverse",
-              "documentation": {
-                "identifier": "p256Inverse",
-                "newPage": false,
-                "searchKey": "elliptic.p256Inverse",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p256Inverse(out, in []uint64)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p256Inverse(out, in []uint64)\n```\n\np256Inverse sets out to in^-1 mod p. \n\n"
+                "value": "```Go\nfunc bigIntToFiatP521(x *big.Int) *fiat.P521Element\n```\n\n"
               },
               "children": null
             }
@@ -2898,6 +2747,7 @@
                 "newPage": false,
                 "searchKey": "elliptic.boothW5",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2920,6 +2770,7 @@
                 "newPage": false,
                 "searchKey": "elliptic.boothW6",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2936,34 +2787,13 @@
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic#initP521",
-              "documentation": {
-                "identifier": "initP521",
-                "newPage": false,
-                "searchKey": "elliptic.initP521",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func initP521()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc initP521()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/elliptic#fiatP521ToBigInt",
               "documentation": {
                 "identifier": "fiatP521ToBigInt",
                 "newPage": false,
                 "searchKey": "elliptic.fiatP521ToBigInt",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2980,374 +2810,23 @@
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic#bigIntToFiatP521",
+              "pathID": "/crypto/elliptic#fromBig",
               "documentation": {
-                "identifier": "bigIntToFiatP521",
+                "identifier": "fromBig",
                 "newPage": false,
-                "searchKey": "elliptic.bigIntToFiatP521",
+                "searchKey": "elliptic.fromBig",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func bigIntToFiatP521(x *big.Int) *fiat.P521Element"
+                "value": "func fromBig(out []uint64, big *big.Int)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc bigIntToFiatP521(x *big.Int) *fiat.P521Element\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#testAllCurves",
-              "documentation": {
-                "identifier": "testAllCurves",
-                "newPage": false,
-                "searchKey": "elliptic.testAllCurves",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testAllCurves(t *testing.T, f func(*testing.T, Curve))"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testAllCurves(t *testing.T, f func(*testing.T, Curve))\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#TestOnCurve",
-              "documentation": {
-                "identifier": "TestOnCurve",
-                "newPage": false,
-                "searchKey": "elliptic.TestOnCurve",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestOnCurve(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestOnCurve(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#TestOffCurve",
-              "documentation": {
-                "identifier": "TestOffCurve",
-                "newPage": false,
-                "searchKey": "elliptic.TestOffCurve",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestOffCurve(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestOffCurve(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#TestInfinity",
-              "documentation": {
-                "identifier": "TestInfinity",
-                "newPage": false,
-                "searchKey": "elliptic.TestInfinity",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestInfinity(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestInfinity(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#testInfinity",
-              "documentation": {
-                "identifier": "testInfinity",
-                "newPage": false,
-                "searchKey": "elliptic.testInfinity",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testInfinity(t *testing.T, curve Curve)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testInfinity(t *testing.T, curve Curve)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#TestMarshal",
-              "documentation": {
-                "identifier": "TestMarshal",
-                "newPage": false,
-                "searchKey": "elliptic.TestMarshal",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMarshal(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMarshal(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#TestUnmarshalToLargeCoordinates",
-              "documentation": {
-                "identifier": "TestUnmarshalToLargeCoordinates",
-                "newPage": false,
-                "searchKey": "elliptic.TestUnmarshalToLargeCoordinates",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUnmarshalToLargeCoordinates(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUnmarshalToLargeCoordinates(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#testUnmarshalToLargeCoordinates",
-              "documentation": {
-                "identifier": "testUnmarshalToLargeCoordinates",
-                "newPage": false,
-                "searchKey": "elliptic.testUnmarshalToLargeCoordinates",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testUnmarshalToLargeCoordinates(t *testing.T, curve Curve)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testUnmarshalToLargeCoordinates(t *testing.T, curve Curve)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#TestMarshalCompressed",
-              "documentation": {
-                "identifier": "TestMarshalCompressed",
-                "newPage": false,
-                "searchKey": "elliptic.TestMarshalCompressed",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMarshalCompressed(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMarshalCompressed(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#testMarshalCompressed",
-              "documentation": {
-                "identifier": "testMarshalCompressed",
-                "newPage": false,
-                "searchKey": "elliptic.testMarshalCompressed",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testMarshalCompressed(t *testing.T, curve Curve, x, y *big.Int, want []byte)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testMarshalCompressed(t *testing.T, curve Curve, x, y *big.Int, want []byte)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#benchmarkAllCurves",
-              "documentation": {
-                "identifier": "benchmarkAllCurves",
-                "newPage": false,
-                "searchKey": "elliptic.benchmarkAllCurves",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func benchmarkAllCurves(t *testing.B, f func(*testing.B, Curve))"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc benchmarkAllCurves(t *testing.B, f func(*testing.B, Curve))\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#BenchmarkScalarBaseMult",
-              "documentation": {
-                "identifier": "BenchmarkScalarBaseMult",
-                "newPage": false,
-                "searchKey": "elliptic.BenchmarkScalarBaseMult",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkScalarBaseMult(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkScalarBaseMult(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#BenchmarkScalarMult",
-              "documentation": {
-                "identifier": "BenchmarkScalarMult",
-                "newPage": false,
-                "searchKey": "elliptic.BenchmarkScalarMult",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkScalarMult(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkScalarMult(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#TestFuzz",
-              "documentation": {
-                "identifier": "TestFuzz",
-                "newPage": false,
-                "searchKey": "elliptic.TestFuzz",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestFuzz(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestFuzz(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#p224AlternativeToBig",
-              "documentation": {
-                "identifier": "p224AlternativeToBig",
-                "newPage": false,
-                "searchKey": "elliptic.p224AlternativeToBig",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func p224AlternativeToBig(in *p224FieldElement) *big.Int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc p224AlternativeToBig(in *p224FieldElement) *big.Int\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/elliptic#TestP224ToFromBig",
-              "documentation": {
-                "identifier": "TestP224ToFromBig",
-                "newPage": false,
-                "searchKey": "elliptic.TestP224ToFromBig",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestP224ToFromBig(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestP224ToFromBig(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc fromBig(out []uint64, big *big.Int)\n```\n\nfromBig converts a *big.Int into a format used by this code. \n\n"
               },
               "children": null
             }
@@ -3360,6 +2839,7 @@
                 "newPage": false,
                 "searchKey": "elliptic.generateLimb",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -3376,12 +2856,151 @@
           },
           {
             "node": {
+              "pathID": "/crypto/elliptic#get28BitsFromEnd",
+              "documentation": {
+                "identifier": "get28BitsFromEnd",
+                "newPage": false,
+                "searchKey": "elliptic.get28BitsFromEnd",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func get28BitsFromEnd(buf []byte, shift uint) (uint32, []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc get28BitsFromEnd(buf []byte, shift uint) (uint32, []byte)\n```\n\nget28BitsFromEnd returns the least-significant 28 bits from buf>>shift, where buf is interpreted as a big-endian number. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#initAll",
+              "documentation": {
+                "identifier": "initAll",
+                "newPage": false,
+                "searchKey": "elliptic.initAll",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func initAll()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc initAll()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#initP224",
+              "documentation": {
+                "identifier": "initP224",
+                "newPage": false,
+                "searchKey": "elliptic.initP224",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func initP224()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc initP224()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#initP256",
+              "documentation": {
+                "identifier": "initP256",
+                "newPage": false,
+                "searchKey": "elliptic.initP256",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func initP256()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc initP256()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#initP384",
+              "documentation": {
+                "identifier": "initP384",
+                "newPage": false,
+                "searchKey": "elliptic.initP384",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func initP384()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc initP384()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#initP521",
+              "documentation": {
+                "identifier": "initP521",
+                "newPage": false,
+                "searchKey": "elliptic.initP521",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func initP521()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc initP521()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/elliptic#isInBounds",
               "documentation": {
                 "identifier": "isInBounds",
                 "newPage": false,
                 "searchKey": "elliptic.isInBounds",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -3398,308 +3017,943 @@
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic#TestP224Mul",
+              "pathID": "/crypto/elliptic#maybeReduceModP",
               "documentation": {
-                "identifier": "TestP224Mul",
+                "identifier": "maybeReduceModP",
                 "newPage": false,
-                "searchKey": "elliptic.TestP224Mul",
+                "searchKey": "elliptic.maybeReduceModP",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestP224Mul(t *testing.T)"
+                "value": "func maybeReduceModP(in *big.Int) *big.Int"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestP224Mul(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc maybeReduceModP(in *big.Int) *big.Int\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic#TestP224Square",
+              "pathID": "/crypto/elliptic#p224Add",
               "documentation": {
-                "identifier": "TestP224Square",
+                "identifier": "p224Add",
                 "newPage": false,
-                "searchKey": "elliptic.TestP224Square",
+                "searchKey": "elliptic.p224Add",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestP224Square(t *testing.T)"
+                "value": "func p224Add(out, a, b *p224FieldElement)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestP224Square(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc p224Add(out, a, b *p224FieldElement)\n```\n\np224Add computes *out = a+b \n\na[i] + b[i] < 2**32 \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic#TestP224Add",
+              "pathID": "/crypto/elliptic#p224AddJacobian",
               "documentation": {
-                "identifier": "TestP224Add",
+                "identifier": "p224AddJacobian",
                 "newPage": false,
-                "searchKey": "elliptic.TestP224Add",
+                "searchKey": "elliptic.p224AddJacobian",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestP224Add(t *testing.T)"
+                "value": "func p224AddJacobian(x3, y3, z3, x1, y1, z1, x2, y2, z2 *p224FieldElement)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestP224Add(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc p224AddJacobian(x3, y3, z3, x1, y1, z1, x2, y2, z2 *p224FieldElement)\n```\n\np224AddJacobian computes *out = a+b where a != b. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic#TestP224Reduce",
+              "pathID": "/crypto/elliptic#p224AlternativeToBig",
               "documentation": {
-                "identifier": "TestP224Reduce",
+                "identifier": "p224AlternativeToBig",
                 "newPage": false,
-                "searchKey": "elliptic.TestP224Reduce",
+                "searchKey": "elliptic.p224AlternativeToBig",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestP224Reduce(t *testing.T)"
+                "value": "func p224AlternativeToBig(in *p224FieldElement) *big.Int"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestP224Reduce(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc p224AlternativeToBig(in *p224FieldElement) *big.Int\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic#TestP224Contract",
+              "pathID": "/crypto/elliptic#p224Contract",
               "documentation": {
-                "identifier": "TestP224Contract",
+                "identifier": "p224Contract",
                 "newPage": false,
-                "searchKey": "elliptic.TestP224Contract",
+                "searchKey": "elliptic.p224Contract",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestP224Contract(t *testing.T)"
+                "value": "func p224Contract(out, in *p224FieldElement)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestP224Contract(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc p224Contract(out, in *p224FieldElement)\n```\n\np224Contract converts a FieldElement to its unique, minimal form. \n\nOn entry, in[i] < 2**29 On exit, out[i] < 2**28 and out < p \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic#TestP224IsZero",
+              "pathID": "/crypto/elliptic#p224CopyConditional",
               "documentation": {
-                "identifier": "TestP224IsZero",
+                "identifier": "p224CopyConditional",
                 "newPage": false,
-                "searchKey": "elliptic.TestP224IsZero",
+                "searchKey": "elliptic.p224CopyConditional",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestP224IsZero(t *testing.T)"
+                "value": "func p224CopyConditional(out, in *p224FieldElement, control uint32)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestP224IsZero(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc p224CopyConditional(out, in *p224FieldElement, control uint32)\n```\n\np224CopyConditional sets *out = *in iff the least-significant-bit of control is true, and it runs in constant time. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic#TestP224Invert",
+              "pathID": "/crypto/elliptic#p224DoubleJacobian",
               "documentation": {
-                "identifier": "TestP224Invert",
+                "identifier": "p224DoubleJacobian",
                 "newPage": false,
-                "searchKey": "elliptic.TestP224Invert",
+                "searchKey": "elliptic.p224DoubleJacobian",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestP224Invert(t *testing.T)"
+                "value": "func p224DoubleJacobian(x3, y3, z3, x1, y1, z1 *p224FieldElement)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestP224Invert(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc p224DoubleJacobian(x3, y3, z3, x1, y1, z1 *p224FieldElement)\n```\n\np224DoubleJacobian computes *out = a+a. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic#TestP224BaseMult",
+              "pathID": "/crypto/elliptic#p224FromBig",
               "documentation": {
-                "identifier": "TestP224BaseMult",
+                "identifier": "p224FromBig",
                 "newPage": false,
-                "searchKey": "elliptic.TestP224BaseMult",
+                "searchKey": "elliptic.p224FromBig",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestP224BaseMult(t *testing.T)"
+                "value": "func p224FromBig(out *p224FieldElement, in *big.Int)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestP224BaseMult(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc p224FromBig(out *p224FieldElement, in *big.Int)\n```\n\np224FromBig sets *out = *in. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic#TestP224GenericBaseMult",
+              "pathID": "/crypto/elliptic#p224Invert",
               "documentation": {
-                "identifier": "TestP224GenericBaseMult",
+                "identifier": "p224Invert",
                 "newPage": false,
-                "searchKey": "elliptic.TestP224GenericBaseMult",
+                "searchKey": "elliptic.p224Invert",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestP224GenericBaseMult(t *testing.T)"
+                "value": "func p224Invert(out, in *p224FieldElement)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestP224GenericBaseMult(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc p224Invert(out, in *p224FieldElement)\n```\n\np224Invert calculates *out = in**-1 by computing in**(2**224 - 2**96 - 1), i.e. Fermat's little theorem. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic#TestP224Overflow",
+              "pathID": "/crypto/elliptic#p224IsZero",
               "documentation": {
-                "identifier": "TestP224Overflow",
+                "identifier": "p224IsZero",
                 "newPage": false,
-                "searchKey": "elliptic.TestP224Overflow",
+                "searchKey": "elliptic.p224IsZero",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestP224Overflow(t *testing.T)"
+                "value": "func p224IsZero(a *p224FieldElement) uint32"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestP224Overflow(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc p224IsZero(a *p224FieldElement) uint32\n```\n\np224IsZero returns 1 if a == 0 mod p and 0 otherwise. \n\na[i] < 2**29 \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic#TestP256PrecomputedTable",
+              "pathID": "/crypto/elliptic#p224Mul",
               "documentation": {
-                "identifier": "TestP256PrecomputedTable",
+                "identifier": "p224Mul",
                 "newPage": false,
-                "searchKey": "elliptic.TestP256PrecomputedTable",
+                "searchKey": "elliptic.p224Mul",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestP256PrecomputedTable(t *testing.T)"
+                "value": "func p224Mul(out, a, b *p224FieldElement, tmp *p224LargeFieldElement)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestP256PrecomputedTable(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc p224Mul(out, a, b *p224FieldElement, tmp *p224LargeFieldElement)\n```\n\np224Mul computes *out = a*b \n\na[i] < 2**29, b[i] < 2**30 (or vice versa) out[i] < 2**29 \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic#TestP256BaseMult",
+              "pathID": "/crypto/elliptic#p224Reduce",
               "documentation": {
-                "identifier": "TestP256BaseMult",
+                "identifier": "p224Reduce",
                 "newPage": false,
-                "searchKey": "elliptic.TestP256BaseMult",
+                "searchKey": "elliptic.p224Reduce",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestP256BaseMult(t *testing.T)"
+                "value": "func p224Reduce(a *p224FieldElement)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestP256BaseMult(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc p224Reduce(a *p224FieldElement)\n```\n\nReduce reduces the coefficients of a to smaller bounds. \n\nOn entry: a[i] < 2**31 + 2**30 On exit: a[i] < 2**29 \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic#TestP256Mult",
+              "pathID": "/crypto/elliptic#p224ReduceLarge",
               "documentation": {
-                "identifier": "TestP256Mult",
+                "identifier": "p224ReduceLarge",
                 "newPage": false,
-                "searchKey": "elliptic.TestP256Mult",
+                "searchKey": "elliptic.p224ReduceLarge",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestP256Mult(t *testing.T)"
+                "value": "func p224ReduceLarge(out *p224FieldElement, in *p224LargeFieldElement)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestP256Mult(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc p224ReduceLarge(out *p224FieldElement, in *p224LargeFieldElement)\n```\n\nReduceLarge converts a p224LargeFieldElement to a p224FieldElement. \n\nin[i] < 2**62 \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/elliptic#TestP256CombinedMult",
+              "pathID": "/crypto/elliptic#p224ScalarMult",
               "documentation": {
-                "identifier": "TestP256CombinedMult",
+                "identifier": "p224ScalarMult",
                 "newPage": false,
-                "searchKey": "elliptic.TestP256CombinedMult",
+                "searchKey": "elliptic.p224ScalarMult",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestP256CombinedMult(t *testing.T)"
+                "value": "func p224ScalarMult(outX, outY, outZ, inX, inY, inZ *p224FieldElement, scalar []byte)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestP256CombinedMult(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc p224ScalarMult(outX, outY, outZ, inX, inY, inZ *p224FieldElement, scalar []byte)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#p224Square",
+              "documentation": {
+                "identifier": "p224Square",
+                "newPage": false,
+                "searchKey": "elliptic.p224Square",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func p224Square(out, a *p224FieldElement, tmp *p224LargeFieldElement)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc p224Square(out, a *p224FieldElement, tmp *p224LargeFieldElement)\n```\n\nSquare computes *out = a*a \n\na[i] < 2**29 out[i] < 2**29 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#p224Sub",
+              "documentation": {
+                "identifier": "p224Sub",
+                "newPage": false,
+                "searchKey": "elliptic.p224Sub",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func p224Sub(out, a, b *p224FieldElement)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc p224Sub(out, a, b *p224FieldElement)\n```\n\np224Sub computes *out = a-b \n\na[i], b[i] < 2**30 out[i] < 2**32 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#p224ToAffine",
+              "documentation": {
+                "identifier": "p224ToAffine",
+                "newPage": false,
+                "searchKey": "elliptic.p224ToAffine",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func p224ToAffine(x, y, z *p224FieldElement) (*big.Int, *big.Int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc p224ToAffine(x, y, z *p224FieldElement) (*big.Int, *big.Int)\n```\n\np224ToAffine converts from Jacobian to affine form. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#p224ToBig",
+              "documentation": {
+                "identifier": "p224ToBig",
+                "newPage": false,
+                "searchKey": "elliptic.p224ToBig",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func p224ToBig(in *p224FieldElement) *big.Int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc p224ToBig(in *p224FieldElement) *big.Int\n```\n\np224ToBig returns in as a big.Int. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#p256BigToLittle",
+              "documentation": {
+                "identifier": "p256BigToLittle",
+                "newPage": false,
+                "searchKey": "elliptic.p256BigToLittle",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func p256BigToLittle(res []uint64, in []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc p256BigToLittle(res []uint64, in []byte)\n```\n\nEndianness swap \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#p256FromMont",
+              "documentation": {
+                "identifier": "p256FromMont",
+                "newPage": false,
+                "searchKey": "elliptic.p256FromMont",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func p256FromMont(res, in []uint64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc p256FromMont(res, in []uint64)\n```\n\nMontgomery multiplication by 1 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#p256GetScalar",
+              "documentation": {
+                "identifier": "p256GetScalar",
+                "newPage": false,
+                "searchKey": "elliptic.p256GetScalar",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func p256GetScalar(out []uint64, in []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc p256GetScalar(out []uint64, in []byte)\n```\n\np256GetScalar endian-swaps the big-endian scalar value from in and writes it to out. If the scalar is equal or greater than the order of the group, it's reduced modulo that order. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#p256Inverse",
+              "documentation": {
+                "identifier": "p256Inverse",
+                "newPage": false,
+                "searchKey": "elliptic.p256Inverse",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func p256Inverse(out, in []uint64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc p256Inverse(out, in []uint64)\n```\n\np256Inverse sets out to in^-1 mod p. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#p256LittleToBig",
+              "documentation": {
+                "identifier": "p256LittleToBig",
+                "newPage": false,
+                "searchKey": "elliptic.p256LittleToBig",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func p256LittleToBig(res []byte, in []uint64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc p256LittleToBig(res []byte, in []uint64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#p256MovCond",
+              "documentation": {
+                "identifier": "p256MovCond",
+                "newPage": false,
+                "searchKey": "elliptic.p256MovCond",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func p256MovCond(res, a, b []uint64, cond int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc p256MovCond(res, a, b []uint64, cond int)\n```\n\nif cond == 0 res <- b; else res <- a \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#p256Mul",
+              "documentation": {
+                "identifier": "p256Mul",
+                "newPage": false,
+                "searchKey": "elliptic.p256Mul",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func p256Mul(res, in1, in2 []uint64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc p256Mul(res, in1, in2 []uint64)\n```\n\nFunctions implemented in p256_asm_*64.s Montgomery multiplication modulo P256 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#p256NegCond",
+              "documentation": {
+                "identifier": "p256NegCond",
+                "newPage": false,
+                "searchKey": "elliptic.p256NegCond",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func p256NegCond(val []uint64, cond int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc p256NegCond(val []uint64, cond int)\n```\n\niff cond == 1  val <- -val \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#p256OrdMul",
+              "documentation": {
+                "identifier": "p256OrdMul",
+                "newPage": false,
+                "searchKey": "elliptic.p256OrdMul",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func p256OrdMul(res, in1, in2 []uint64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc p256OrdMul(res, in1, in2 []uint64)\n```\n\nMontgomery multiplication modulo Ord(G) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#p256OrdSqr",
+              "documentation": {
+                "identifier": "p256OrdSqr",
+                "newPage": false,
+                "searchKey": "elliptic.p256OrdSqr",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func p256OrdSqr(res, in []uint64, n int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc p256OrdSqr(res, in []uint64, n int)\n```\n\nMontgomery square modulo Ord(G), repeated n times \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#p256PointAddAffineAsm",
+              "documentation": {
+                "identifier": "p256PointAddAffineAsm",
+                "newPage": false,
+                "searchKey": "elliptic.p256PointAddAffineAsm",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func p256PointAddAffineAsm(res, in1, in2 []uint64, sign, sel, zero int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc p256PointAddAffineAsm(res, in1, in2 []uint64, sign, sel, zero int)\n```\n\nPoint add with in2 being affine point If sign == 1 -> in2 = -in2 If sel == 0 -> res = in1 if zero == 0 -> res = in2 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#p256PointAddAsm",
+              "documentation": {
+                "identifier": "p256PointAddAsm",
+                "newPage": false,
+                "searchKey": "elliptic.p256PointAddAsm",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func p256PointAddAsm(res, in1, in2 []uint64) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc p256PointAddAsm(res, in1, in2 []uint64) int\n```\n\nPoint add. Returns one if the two input points were equal and zero otherwise. (Note that, due to the way that the equations work out, some representations of ∞ are considered equal to everything by this function.) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#p256PointDoubleAsm",
+              "documentation": {
+                "identifier": "p256PointDoubleAsm",
+                "newPage": false,
+                "searchKey": "elliptic.p256PointDoubleAsm",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func p256PointDoubleAsm(res, in []uint64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc p256PointDoubleAsm(res, in []uint64)\n```\n\nPoint double \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#p256Select",
+              "documentation": {
+                "identifier": "p256Select",
+                "newPage": false,
+                "searchKey": "elliptic.p256Select",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func p256Select(point, table []uint64, idx int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc p256Select(point, table []uint64, idx int)\n```\n\nConstant time table access \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#p256SelectBase",
+              "documentation": {
+                "identifier": "p256SelectBase",
+                "newPage": false,
+                "searchKey": "elliptic.p256SelectBase",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func p256SelectBase(point, table []uint64, idx int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc p256SelectBase(point, table []uint64, idx int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#p256Sqr",
+              "documentation": {
+                "identifier": "p256Sqr",
+                "newPage": false,
+                "searchKey": "elliptic.p256Sqr",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func p256Sqr(res, in []uint64, n int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc p256Sqr(res, in []uint64, n int)\n```\n\nMontgomery square modulo P256, repeated n times (n >= 1) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#scalarIsZero",
+              "documentation": {
+                "identifier": "scalarIsZero",
+                "newPage": false,
+                "searchKey": "elliptic.scalarIsZero",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func scalarIsZero(scalar []uint64) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc scalarIsZero(scalar []uint64) int\n```\n\nscalarIsZero returns 1 if scalar represents the zero value, and zero otherwise. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#testAllCurves",
+              "documentation": {
+                "identifier": "testAllCurves",
+                "newPage": false,
+                "searchKey": "elliptic.testAllCurves",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testAllCurves(t *testing.T, f func(*testing.T, Curve))"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testAllCurves(t *testing.T, f func(*testing.T, Curve))\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#testInfinity",
+              "documentation": {
+                "identifier": "testInfinity",
+                "newPage": false,
+                "searchKey": "elliptic.testInfinity",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testInfinity(t *testing.T, curve Curve)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testInfinity(t *testing.T, curve Curve)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#testMarshalCompressed",
+              "documentation": {
+                "identifier": "testMarshalCompressed",
+                "newPage": false,
+                "searchKey": "elliptic.testMarshalCompressed",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testMarshalCompressed(t *testing.T, curve Curve, x, y *big.Int, want []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testMarshalCompressed(t *testing.T, curve Curve, x, y *big.Int, want []byte)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#testUnmarshalToLargeCoordinates",
+              "documentation": {
+                "identifier": "testUnmarshalToLargeCoordinates",
+                "newPage": false,
+                "searchKey": "elliptic.testUnmarshalToLargeCoordinates",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testUnmarshalToLargeCoordinates(t *testing.T, curve Curve)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testUnmarshalToLargeCoordinates(t *testing.T, curve Curve)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#uint64IsZero",
+              "documentation": {
+                "identifier": "uint64IsZero",
+                "newPage": false,
+                "searchKey": "elliptic.uint64IsZero",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func uint64IsZero(x uint64) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc uint64IsZero(x uint64) int\n```\n\nuint64IsZero returns 1 if x is zero and zero otherwise. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/elliptic#zForAffine",
+              "documentation": {
+                "identifier": "zForAffine",
+                "newPage": false,
+                "searchKey": "elliptic.zForAffine",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func zForAffine(x, y *big.Int) *big.Int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc zForAffine(x, y *big.Int) *big.Int\n```\n\nzForAffine returns a Jacobian Z value for the affine point (x, y). If x and y are zero, it assumes that they represent the point at infinity because (0, 0) is not on the any of the curves handled here. \n\n"
               },
               "children": null
             }

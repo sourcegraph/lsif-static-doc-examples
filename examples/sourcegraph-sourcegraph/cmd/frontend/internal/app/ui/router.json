@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "cmd/frontend/internal/app/ui/router",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,12 +41,84 @@
         "children": [
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/app/ui/router#RoutePasswordReset",
+              "documentation": {
+                "identifier": "RoutePasswordReset",
+                "newPage": false,
+                "searchKey": "router.RoutePasswordReset",
+                "tags": [
+                  "constant",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RoutePasswordReset"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RoutePasswordReset = \"password-reset\"\n```\n\nThese route names are used by other packages that can't import the ../ui package without creating an import cycle. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui/router#RoutePingFromSelfHosted",
+              "documentation": {
+                "identifier": "RoutePingFromSelfHosted",
+                "newPage": false,
+                "searchKey": "router.RoutePingFromSelfHosted",
+                "tags": [
+                  "constant",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RoutePingFromSelfHosted"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RoutePingFromSelfHosted = \"ping-from-self-hosted\"\n```\n\nThese route names are used by other packages that can't import the ../ui package without creating an import cycle. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui/router#RouteRaw",
+              "documentation": {
+                "identifier": "RouteRaw",
+                "newPage": false,
+                "searchKey": "router.RouteRaw",
+                "tags": [
+                  "constant",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RouteRaw"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RouteRaw = \"raw\"\n```\n\nThese route names are used by other packages that can't import the ../ui package without creating an import cycle. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/app/ui/router#RouteSignIn",
               "documentation": {
                 "identifier": "RouteSignIn",
                 "newPage": false,
                 "searchKey": "router.RouteSignIn",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +138,10 @@
                 "identifier": "RouteSignUp",
                 "newPage": false,
                 "searchKey": "router.RouteSignUp",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -73,66 +150,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst RouteSignUp = \"sign-up\"\n```\n\nThese route names are used by other packages that can't import the ../ui package without creating an import cycle. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app/ui/router#RoutePasswordReset",
-              "documentation": {
-                "identifier": "RoutePasswordReset",
-                "newPage": false,
-                "searchKey": "router.RoutePasswordReset",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const RoutePasswordReset"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst RoutePasswordReset = \"password-reset\"\n```\n\nThese route names are used by other packages that can't import the ../ui package without creating an import cycle. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app/ui/router#RouteRaw",
-              "documentation": {
-                "identifier": "RouteRaw",
-                "newPage": false,
-                "searchKey": "router.RouteRaw",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const RouteRaw"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst RouteRaw = \"raw\"\n```\n\nThese route names are used by other packages that can't import the ../ui package without creating an import cycle. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/app/ui/router#RoutePingFromSelfHosted",
-              "documentation": {
-                "identifier": "RoutePingFromSelfHosted",
-                "newPage": false,
-                "searchKey": "router.RoutePingFromSelfHosted",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const RoutePingFromSelfHosted"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst RoutePingFromSelfHosted = \"ping-from-self-hosted\"\n```\n\nThese route names are used by other packages that can't import the ../ui package without creating an import cycle. \n\n"
               },
               "children": null
             }
@@ -148,6 +165,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -167,7 +185,10 @@
                 "identifier": "Router",
                 "newPage": false,
                 "searchKey": "router.Router",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -191,6 +212,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -210,7 +232,9 @@
                 "identifier": "Extension",
                 "newPage": false,
                 "searchKey": "router.Extension",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -230,7 +254,9 @@
                 "identifier": "RegistryPublisherExtensions",
                 "newPage": false,
                 "searchKey": "router.RegistryPublisherExtensions",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",

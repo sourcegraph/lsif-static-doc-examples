@@ -12,18 +12,23 @@ Packages that import unsafe may be non-portable and are not protected by the Go 
     * [type Pointer *unsafe.ArbitraryType](#Pointer)
         * [func Add(ptr Pointer, len IntegerType) Pointer](#Add)
 * [Functions](#func)
-    * [func Sizeof(x ArbitraryType) uintptr](#Sizeof)
-    * [func Offsetof(x ArbitraryType) uintptr](#Offsetof)
     * [func Alignof(x ArbitraryType) uintptr](#Alignof)
+    * [func Offsetof(x ArbitraryType) uintptr](#Offsetof)
+    * [func Sizeof(x ArbitraryType) uintptr](#Sizeof)
     * [func Slice(ptr *ArbitraryType, len IntegerType) []ArbitraryType](#Slice)
 
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [package]
+```
+
 ### <a id="ArbitraryType" href="#ArbitraryType">type ArbitraryType int</a>
 
 ```
 searchKey: unsafe.ArbitraryType
+tags: [number]
 ```
 
 ```Go
@@ -36,6 +41,7 @@ ArbitraryType is here for the purposes of documentation only and is not actually
 
 ```
 searchKey: unsafe.IntegerType
+tags: [number]
 ```
 
 ```Go
@@ -48,6 +54,7 @@ IntegerType is here for the purposes of documentation only and is not actually p
 
 ```
 searchKey: unsafe.Pointer
+tags: [number]
 ```
 
 ```Go
@@ -203,6 +210,7 @@ s := *(*string)(unsafe.Pointer(&hdr)) // p possibly already lost
 
 ```
 searchKey: unsafe.Add
+tags: [method]
 ```
 
 ```Go
@@ -213,34 +221,15 @@ The function Add adds len to ptr and returns the updated pointer Pointer(uintptr
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="Sizeof" href="#Sizeof">func Sizeof(x ArbitraryType) uintptr</a>
-
 ```
-searchKey: unsafe.Sizeof
+tags: [package]
 ```
-
-```Go
-func Sizeof(x ArbitraryType) uintptr
-```
-
-Sizeof takes an expression x of any type and returns the size in bytes of a hypothetical variable v as if v was declared via var v = x. The size does not include any memory possibly referenced by x. For instance, if x is a slice, Sizeof returns the size of the slice descriptor, not the size of the memory referenced by the slice. The return value of Sizeof is a Go constant. 
-
-### <a id="Offsetof" href="#Offsetof">func Offsetof(x ArbitraryType) uintptr</a>
-
-```
-searchKey: unsafe.Offsetof
-```
-
-```Go
-func Offsetof(x ArbitraryType) uintptr
-```
-
-Offsetof returns the offset within the struct of the field represented by x, which must be of the form structValue.field. In other words, it returns the number of bytes between the start of the struct and the start of the field. The return value of Offsetof is a Go constant. 
 
 ### <a id="Alignof" href="#Alignof">func Alignof(x ArbitraryType) uintptr</a>
 
 ```
 searchKey: unsafe.Alignof
+tags: [method]
 ```
 
 ```Go
@@ -249,10 +238,37 @@ func Alignof(x ArbitraryType) uintptr
 
 Alignof takes an expression x of any type and returns the required alignment of a hypothetical variable v as if v was declared via var v = x. It is the largest value m such that the address of v is always zero mod m. It is the same as the value returned by reflect.TypeOf(x).Align(). As a special case, if a variable s is of struct type and f is a field within that struct, then Alignof(s.f) will return the required alignment of a field of that type within a struct. This case is the same as the value returned by reflect.TypeOf(s.f).FieldAlign(). The return value of Alignof is a Go constant. 
 
+### <a id="Offsetof" href="#Offsetof">func Offsetof(x ArbitraryType) uintptr</a>
+
+```
+searchKey: unsafe.Offsetof
+tags: [method]
+```
+
+```Go
+func Offsetof(x ArbitraryType) uintptr
+```
+
+Offsetof returns the offset within the struct of the field represented by x, which must be of the form structValue.field. In other words, it returns the number of bytes between the start of the struct and the start of the field. The return value of Offsetof is a Go constant. 
+
+### <a id="Sizeof" href="#Sizeof">func Sizeof(x ArbitraryType) uintptr</a>
+
+```
+searchKey: unsafe.Sizeof
+tags: [method]
+```
+
+```Go
+func Sizeof(x ArbitraryType) uintptr
+```
+
+Sizeof takes an expression x of any type and returns the size in bytes of a hypothetical variable v as if v was declared via var v = x. The size does not include any memory possibly referenced by x. For instance, if x is a slice, Sizeof returns the size of the slice descriptor, not the size of the memory referenced by the slice. The return value of Sizeof is a Go constant. 
+
 ### <a id="Slice" href="#Slice">func Slice(ptr *ArbitraryType, len IntegerType) []ArbitraryType</a>
 
 ```
 searchKey: unsafe.Slice
+tags: [method]
 ```
 
 ```Go

@@ -4,7 +4,9 @@
     "identifier": "adler32",
     "newPage": true,
     "searchKey": "hash/adler32",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,56 +39,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/hash/adler32#mod",
-              "documentation": {
-                "identifier": "mod",
-                "newPage": false,
-                "searchKey": "adler32.mod",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const mod"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst mod = 65521\n```\n\nmod is the largest prime that is less than 65536. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/adler32#nmax",
-              "documentation": {
-                "identifier": "nmax",
-                "newPage": false,
-                "searchKey": "adler32.nmax",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const nmax"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst nmax = 5552\n```\n\nnmax is the largest n such that 255 * n * (n+1) / 2 + (n+1) * (mod-1) <= 2^32-1. It is mentioned in RFC 1950 (search for \"5552\"). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/hash/adler32#Size",
               "documentation": {
                 "identifier": "Size",
                 "newPage": false,
                 "searchKey": "adler32.Size",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -105,6 +68,8 @@
                 "newPage": false,
                 "searchKey": "adler32.magic",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -127,6 +92,8 @@
                 "newPage": false,
                 "searchKey": "adler32.marshaledSize",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -137,6 +104,54 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst marshaledSize = len(magic) + 4\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/adler32#mod",
+              "documentation": {
+                "identifier": "mod",
+                "newPage": false,
+                "searchKey": "adler32.mod",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const mod"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst mod = 65521\n```\n\nmod is the largest prime that is less than 65536. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/adler32#nmax",
+              "documentation": {
+                "identifier": "nmax",
+                "newPage": false,
+                "searchKey": "adler32.nmax",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const nmax"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst nmax = 5552\n```\n\nnmax is the largest n such that 255 * n * (n+1) / 2 + (n+1) * (mod-1) <= 2^32-1. It is mentioned in RFC 1950 (search for \"5552\"). \n\n"
               },
               "children": null
             }
@@ -151,7 +166,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -170,6 +187,9 @@
                 "newPage": false,
                 "searchKey": "adler32.golden",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -194,7 +214,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -213,6 +235,7 @@
                 "newPage": false,
                 "searchKey": "adler32.digest",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -233,6 +256,7 @@
                       "newPage": false,
                       "searchKey": "adler32.update",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -249,56 +273,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/hash/adler32#digest.Reset",
-                    "documentation": {
-                      "identifier": "digest.Reset",
-                      "newPage": false,
-                      "searchKey": "adler32.digest.Reset",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *digest) Reset()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *digest) Reset()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/adler32#digest.Size",
-                    "documentation": {
-                      "identifier": "digest.Size",
-                      "newPage": false,
-                      "searchKey": "adler32.digest.Size",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *digest) Size() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *digest) Size() int\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/hash/adler32#digest.BlockSize",
                     "documentation": {
                       "identifier": "digest.BlockSize",
                       "newPage": false,
                       "searchKey": "adler32.digest.BlockSize",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -321,6 +302,7 @@
                       "newPage": false,
                       "searchKey": "adler32.digest.MarshalBinary",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -337,12 +319,105 @@
                 },
                 {
                   "node": {
+                    "pathID": "/hash/adler32#digest.Reset",
+                    "documentation": {
+                      "identifier": "digest.Reset",
+                      "newPage": false,
+                      "searchKey": "adler32.digest.Reset",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) Reset()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) Reset()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/adler32#digest.Size",
+                    "documentation": {
+                      "identifier": "digest.Size",
+                      "newPage": false,
+                      "searchKey": "adler32.digest.Size",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) Size() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) Size() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/adler32#digest.Sum",
+                    "documentation": {
+                      "identifier": "digest.Sum",
+                      "newPage": false,
+                      "searchKey": "adler32.digest.Sum",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) Sum(in []byte) []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) Sum(in []byte) []byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/adler32#digest.Sum32",
+                    "documentation": {
+                      "identifier": "digest.Sum32",
+                      "newPage": false,
+                      "searchKey": "adler32.digest.Sum32",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) Sum32() uint32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) Sum32() uint32\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/hash/adler32#digest.UnmarshalBinary",
                     "documentation": {
                       "identifier": "digest.UnmarshalBinary",
                       "newPage": false,
                       "searchKey": "adler32.digest.UnmarshalBinary",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -365,6 +440,7 @@
                       "newPage": false,
                       "searchKey": "adler32.digest.Write",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -375,50 +451,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (d *digest) Write(p []byte) (nn int, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/adler32#digest.Sum32",
-                    "documentation": {
-                      "identifier": "digest.Sum32",
-                      "newPage": false,
-                      "searchKey": "adler32.digest.Sum32",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *digest) Sum32() uint32"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *digest) Sum32() uint32\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/hash/adler32#digest.Sum",
-                    "documentation": {
-                      "identifier": "digest.Sum",
-                      "newPage": false,
-                      "searchKey": "adler32.digest.Sum",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *digest) Sum(in []byte) []byte"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *digest) Sum(in []byte) []byte\n```\n\n"
                     },
                     "children": null
                   }
@@ -436,7 +468,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -449,64 +483,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/hash/adler32#New",
+              "pathID": "/hash/adler32#BenchmarkAdler32KB",
               "documentation": {
-                "identifier": "New",
+                "identifier": "BenchmarkAdler32KB",
                 "newPage": false,
-                "searchKey": "adler32.New",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func New() hash.Hash32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc New() hash.Hash32\n```\n\nNew returns a new hash.Hash32 computing the Adler-32 checksum. Its Sum method will lay the value out in big-endian byte order. The returned Hash32 also implements encoding.BinaryMarshaler and encoding.BinaryUnmarshaler to marshal and unmarshal the internal state of the hash. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/adler32#appendUint32",
-              "documentation": {
-                "identifier": "appendUint32",
-                "newPage": false,
-                "searchKey": "adler32.appendUint32",
+                "searchKey": "adler32.BenchmarkAdler32KB",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func appendUint32(b []byte, x uint32) []byte"
+                "value": "func BenchmarkAdler32KB(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc appendUint32(b []byte, x uint32) []byte\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/hash/adler32#readUint32",
-              "documentation": {
-                "identifier": "readUint32",
-                "newPage": false,
-                "searchKey": "adler32.readUint32",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func readUint32(b []byte) uint32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc readUint32(b []byte) uint32\n```\n\n"
+                "value": "```Go\nfunc BenchmarkAdler32KB(b *testing.B)\n```\n\n"
               },
               "children": null
             }
@@ -518,7 +512,9 @@
                 "identifier": "Checksum",
                 "newPage": false,
                 "searchKey": "adler32.Checksum",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -533,22 +529,22 @@
           },
           {
             "node": {
-              "pathID": "/hash/adler32#checksum",
+              "pathID": "/hash/adler32#New",
               "documentation": {
-                "identifier": "checksum",
+                "identifier": "New",
                 "newPage": false,
-                "searchKey": "adler32.checksum",
+                "searchKey": "adler32.New",
                 "tags": [
-                  "private"
+                  "function"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func checksum(p []byte) uint32"
+                "value": "func New() hash.Hash32"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc checksum(p []byte) uint32\n```\n\nchecksum is a slow but simple implementation of the Adler-32 checksum. It is a straight port of the sample code in RFC 1950 section 9. \n\n"
+                "value": "```Go\nfunc New() hash.Hash32\n```\n\nNew returns a new hash.Hash32 computing the Adler-32 checksum. Its Sum method will lay the value out in big-endian byte order. The returned Hash32 also implements encoding.BinaryMarshaler and encoding.BinaryUnmarshaler to marshal and unmarshal the internal state of the hash. \n\n"
               },
               "children": null
             }
@@ -561,7 +557,9 @@
                 "newPage": false,
                 "searchKey": "adler32.TestGolden",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -583,7 +581,9 @@
                 "newPage": false,
                 "searchKey": "adler32.TestGoldenMarshal",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -599,22 +599,69 @@
           },
           {
             "node": {
-              "pathID": "/hash/adler32#BenchmarkAdler32KB",
+              "pathID": "/hash/adler32#appendUint32",
               "documentation": {
-                "identifier": "BenchmarkAdler32KB",
+                "identifier": "appendUint32",
                 "newPage": false,
-                "searchKey": "adler32.BenchmarkAdler32KB",
+                "searchKey": "adler32.appendUint32",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkAdler32KB(b *testing.B)"
+                "value": "func appendUint32(b []byte, x uint32) []byte"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkAdler32KB(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc appendUint32(b []byte, x uint32) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/adler32#checksum",
+              "documentation": {
+                "identifier": "checksum",
+                "newPage": false,
+                "searchKey": "adler32.checksum",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checksum(p []byte) uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checksum(p []byte) uint32\n```\n\nchecksum is a slow but simple implementation of the Adler-32 checksum. It is a straight port of the sample code in RFC 1950 section 9. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/adler32#readUint32",
+              "documentation": {
+                "identifier": "readUint32",
+                "newPage": false,
+                "searchKey": "adler32.readUint32",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readUint32(b []byte) uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readUint32(b []byte) uint32\n```\n\n"
               },
               "children": null
             }

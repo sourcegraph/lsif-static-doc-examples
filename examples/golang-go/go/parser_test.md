@@ -9,14 +9,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="ExampleParseFile" href="#ExampleParseFile">func ExampleParseFile()</a>
 
 ```
 searchKey: parser_test.ExampleParseFile
-tags: [private]
+tags: [function private]
 ```
 
 ```Go

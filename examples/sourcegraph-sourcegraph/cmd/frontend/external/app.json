@@ -4,7 +4,9 @@
     "identifier": "app",
     "newPage": true,
     "searchKey": "cmd/frontend/external/app",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,10 @@
                 "identifier": "RegisterSSOSignOutHandler",
                 "newPage": false,
                 "searchKey": "app.RegisterSSOSignOutHandler",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -63,7 +70,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -81,7 +90,9 @@
                 "identifier": "SignOutURL",
                 "newPage": false,
                 "searchKey": "app.SignOutURL",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,7 +115,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -122,7 +135,9 @@
                 "identifier": "SetBillingPublishableKey",
                 "newPage": false,
                 "searchKey": "app.SetBillingPublishableKey",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -142,7 +157,9 @@
                 "identifier": "SetPreMountGrafanaHook",
                 "newPage": false,
                 "searchKey": "app.SetPreMountGrafanaHook",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",

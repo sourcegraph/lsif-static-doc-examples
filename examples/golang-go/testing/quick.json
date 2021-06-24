@@ -4,7 +4,9 @@
     "identifier": "quick",
     "newPage": true,
     "searchKey": "testing/quick",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -41,6 +45,8 @@
                 "newPage": false,
                 "searchKey": "quick.complexSize",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -65,7 +71,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -78,34 +86,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/testing/quick#defaultMaxCount",
-              "documentation": {
-                "identifier": "defaultMaxCount",
-                "newPage": false,
-                "searchKey": "quick.defaultMaxCount",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var defaultMaxCount"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar defaultMaxCount *int = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/testing/quick#defaultConfig",
               "documentation": {
                 "identifier": "defaultConfig",
                 "newPage": false,
                 "searchKey": "quick.defaultConfig",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -116,6 +104,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar defaultConfig Config\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing/quick#defaultMaxCount",
+              "documentation": {
+                "identifier": "defaultMaxCount",
+                "newPage": false,
+                "searchKey": "quick.defaultMaxCount",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var defaultMaxCount"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar defaultMaxCount *int = ...\n```\n\n"
               },
               "children": null
             }
@@ -130,7 +142,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -143,169 +157,48 @@
         "children": [
           {
             "node": {
-              "pathID": "/testing/quick#Generator",
+              "pathID": "/testing/quick#A",
               "documentation": {
-                "identifier": "Generator",
+                "identifier": "A",
                 "newPage": false,
-                "searchKey": "quick.Generator",
-                "tags": null
+                "searchKey": "quick.A",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type Generator interface"
+                "value": "type A struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype Generator interface {\n\t// Generate returns a random instance of the type on which it is a\n\t// method using the size as a size hint.\n\tGenerate(rand *rand.Rand, size int) reflect.Value\n}\n```\n\nA Generator can generate random values of its own type. \n\n"
+                "value": "```Go\ntype A struct{ B *B }\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/testing/quick#Config",
+              "pathID": "/testing/quick#B",
               "documentation": {
-                "identifier": "Config",
+                "identifier": "B",
                 "newPage": false,
-                "searchKey": "quick.Config",
-                "tags": null
+                "searchKey": "quick.B",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type Config struct"
+                "value": "type B struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype Config struct {\n\t// MaxCount sets the maximum number of iterations.\n\t// If zero, MaxCountScale is used.\n\tMaxCount int\n\t// MaxCountScale is a non-negative scale factor applied to the\n\t// default maximum.\n\t// A count of zero implies the default, which is usually 100\n\t// but can be set by the -quickchecks flag.\n\tMaxCountScale float64\n\t// Rand specifies a source of random numbers.\n\t// If nil, a default pseudo-random source will be used.\n\tRand *rand.Rand\n\t// Values specifies a function to generate a slice of\n\t// arbitrary reflect.Values that are congruent with the\n\t// arguments to the function being tested.\n\t// If nil, the top-level Value function is used to generate them.\n\tValues func([]reflect.Value, *rand.Rand)\n}\n```\n\nA Config structure contains options for running a test. \n\n"
+                "value": "```Go\ntype B struct{ A *A }\n```\n\n"
               },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/testing/quick#Config.getRand",
-                    "documentation": {
-                      "identifier": "Config.getRand",
-                      "newPage": false,
-                      "searchKey": "quick.Config.getRand",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Config) getRand() *rand.Rand"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Config) getRand() *rand.Rand\n```\n\ngetRand returns the *rand.Rand to use for a given Config. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/testing/quick#Config.getMaxCount",
-                    "documentation": {
-                      "identifier": "Config.getMaxCount",
-                      "newPage": false,
-                      "searchKey": "quick.Config.getMaxCount",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Config) getMaxCount() (maxCount int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Config) getMaxCount() (maxCount int)\n```\n\ngetMaxCount returns the maximum number of iterations to run for a given Config. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing/quick#SetupError",
-              "documentation": {
-                "identifier": "SetupError",
-                "newPage": false,
-                "searchKey": "quick.SetupError",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type SetupError string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype SetupError string\n```\n\nA SetupError is the result of an error in the way that check is being used, independent of the functions being tested. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/testing/quick#SetupError.Error",
-                    "documentation": {
-                      "identifier": "SetupError.Error",
-                      "newPage": false,
-                      "searchKey": "quick.SetupError.Error",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s SetupError) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s SetupError) Error() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing/quick#CheckError",
-              "documentation": {
-                "identifier": "CheckError",
-                "newPage": false,
-                "searchKey": "quick.CheckError",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type CheckError struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype CheckError struct {\n\tCount int\n\tIn    []interface{}\n}\n```\n\nA CheckError is the result of Check finding an error. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/testing/quick#CheckError.Error",
-                    "documentation": {
-                      "identifier": "CheckError.Error",
-                      "newPage": false,
-                      "searchKey": "quick.CheckError.Error",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *CheckError) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *CheckError) Error() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
+              "children": null
             }
           },
           {
@@ -315,7 +208,9 @@
                 "identifier": "CheckEqualError",
                 "newPage": false,
                 "searchKey": "quick.CheckEqualError",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -333,7 +228,9 @@
                       "identifier": "CheckEqualError.Error",
                       "newPage": false,
                       "searchKey": "quick.CheckEqualError.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -351,12 +248,195 @@
           },
           {
             "node": {
+              "pathID": "/testing/quick#CheckError",
+              "documentation": {
+                "identifier": "CheckError",
+                "newPage": false,
+                "searchKey": "quick.CheckError",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CheckError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CheckError struct {\n\tCount int\n\tIn    []interface{}\n}\n```\n\nA CheckError is the result of Check finding an error. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/testing/quick#CheckError.Error",
+                    "documentation": {
+                      "identifier": "CheckError.Error",
+                      "newPage": false,
+                      "searchKey": "quick.CheckError.Error",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *CheckError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *CheckError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing/quick#Config",
+              "documentation": {
+                "identifier": "Config",
+                "newPage": false,
+                "searchKey": "quick.Config",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Config struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Config struct {\n\t// MaxCount sets the maximum number of iterations.\n\t// If zero, MaxCountScale is used.\n\tMaxCount int\n\t// MaxCountScale is a non-negative scale factor applied to the\n\t// default maximum.\n\t// A count of zero implies the default, which is usually 100\n\t// but can be set by the -quickchecks flag.\n\tMaxCountScale float64\n\t// Rand specifies a source of random numbers.\n\t// If nil, a default pseudo-random source will be used.\n\tRand *rand.Rand\n\t// Values specifies a function to generate a slice of\n\t// arbitrary reflect.Values that are congruent with the\n\t// arguments to the function being tested.\n\t// If nil, the top-level Value function is used to generate them.\n\tValues func([]reflect.Value, *rand.Rand)\n}\n```\n\nA Config structure contains options for running a test. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/testing/quick#Config.getMaxCount",
+                    "documentation": {
+                      "identifier": "Config.getMaxCount",
+                      "newPage": false,
+                      "searchKey": "quick.Config.getMaxCount",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Config) getMaxCount() (maxCount int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Config) getMaxCount() (maxCount int)\n```\n\ngetMaxCount returns the maximum number of iterations to run for a given Config. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/testing/quick#Config.getRand",
+                    "documentation": {
+                      "identifier": "Config.getRand",
+                      "newPage": false,
+                      "searchKey": "quick.Config.getRand",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Config) getRand() *rand.Rand"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Config) getRand() *rand.Rand\n```\n\ngetRand returns the *rand.Rand to use for a given Config. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing/quick#Generator",
+              "documentation": {
+                "identifier": "Generator",
+                "newPage": false,
+                "searchKey": "quick.Generator",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Generator interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Generator interface {\n\t// Generate returns a random instance of the type on which it is a\n\t// method using the size as a size hint.\n\tGenerate(rand *rand.Rand, size int) reflect.Value\n}\n```\n\nA Generator can generate random values of its own type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing/quick#SetupError",
+              "documentation": {
+                "identifier": "SetupError",
+                "newPage": false,
+                "searchKey": "quick.SetupError",
+                "tags": [
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SetupError string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SetupError string\n```\n\nA SetupError is the result of an error in the way that check is being used, independent of the functions being tested. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/testing/quick#SetupError.Error",
+                    "documentation": {
+                      "identifier": "SetupError.Error",
+                      "newPage": false,
+                      "searchKey": "quick.SetupError.Error",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s SetupError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s SetupError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/testing/quick#TestArrayAlias",
               "documentation": {
                 "identifier": "TestArrayAlias",
                 "newPage": false,
                 "searchKey": "quick.TestArrayAlias",
                 "tags": [
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -377,6 +457,7 @@
                       "newPage": false,
                       "searchKey": "quick.fArrayAlias",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -402,6 +483,7 @@
                 "newPage": false,
                 "searchKey": "quick.TestBoolAlias",
                 "tags": [
+                  "boolean",
                   "private"
                 ]
               },
@@ -422,6 +504,7 @@
                       "newPage": false,
                       "searchKey": "quick.fBoolAlias",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -441,12 +524,107 @@
           },
           {
             "node": {
+              "pathID": "/testing/quick#TestComplex128Alias",
+              "documentation": {
+                "identifier": "TestComplex128Alias",
+                "newPage": false,
+                "searchKey": "quick.TestComplex128Alias",
+                "tags": [
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TestComplex128Alias complex128"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TestComplex128Alias complex128\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/testing/quick#fComplex128Alias",
+                    "documentation": {
+                      "identifier": "fComplex128Alias",
+                      "newPage": false,
+                      "searchKey": "quick.fComplex128Alias",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func fComplex128Alias(a TestComplex128Alias) TestComplex128Alias"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc fComplex128Alias(a TestComplex128Alias) TestComplex128Alias\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing/quick#TestComplex64Alias",
+              "documentation": {
+                "identifier": "TestComplex64Alias",
+                "newPage": false,
+                "searchKey": "quick.TestComplex64Alias",
+                "tags": [
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TestComplex64Alias complex64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TestComplex64Alias complex64\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/testing/quick#fComplex64Alias",
+                    "documentation": {
+                      "identifier": "fComplex64Alias",
+                      "newPage": false,
+                      "searchKey": "quick.fComplex64Alias",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func fComplex64Alias(a TestComplex64Alias) TestComplex64Alias"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc fComplex64Alias(a TestComplex64Alias) TestComplex64Alias\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/testing/quick#TestFloat32Alias",
               "documentation": {
                 "identifier": "TestFloat32Alias",
                 "newPage": false,
                 "searchKey": "quick.TestFloat32Alias",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -467,6 +645,7 @@
                       "newPage": false,
                       "searchKey": "quick.fFloat32Alias",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -492,6 +671,7 @@
                 "newPage": false,
                 "searchKey": "quick.TestFloat64Alias",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -512,6 +692,7 @@
                       "newPage": false,
                       "searchKey": "quick.fFloat64Alias",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -531,102 +712,13 @@
           },
           {
             "node": {
-              "pathID": "/testing/quick#TestComplex64Alias",
-              "documentation": {
-                "identifier": "TestComplex64Alias",
-                "newPage": false,
-                "searchKey": "quick.TestComplex64Alias",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type TestComplex64Alias complex64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype TestComplex64Alias complex64\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/testing/quick#fComplex64Alias",
-                    "documentation": {
-                      "identifier": "fComplex64Alias",
-                      "newPage": false,
-                      "searchKey": "quick.fComplex64Alias",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func fComplex64Alias(a TestComplex64Alias) TestComplex64Alias"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc fComplex64Alias(a TestComplex64Alias) TestComplex64Alias\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing/quick#TestComplex128Alias",
-              "documentation": {
-                "identifier": "TestComplex128Alias",
-                "newPage": false,
-                "searchKey": "quick.TestComplex128Alias",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type TestComplex128Alias complex128"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype TestComplex128Alias complex128\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/testing/quick#fComplex128Alias",
-                    "documentation": {
-                      "identifier": "fComplex128Alias",
-                      "newPage": false,
-                      "searchKey": "quick.fComplex128Alias",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func fComplex128Alias(a TestComplex128Alias) TestComplex128Alias"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc fComplex128Alias(a TestComplex128Alias) TestComplex128Alias\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/testing/quick#TestInt16Alias",
               "documentation": {
                 "identifier": "TestInt16Alias",
                 "newPage": false,
                 "searchKey": "quick.TestInt16Alias",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -647,6 +739,7 @@
                       "newPage": false,
                       "searchKey": "quick.fInt16Alias",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -672,6 +765,7 @@
                 "newPage": false,
                 "searchKey": "quick.TestInt32Alias",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -692,6 +786,7 @@
                       "newPage": false,
                       "searchKey": "quick.fInt32Alias",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -717,6 +812,7 @@
                 "newPage": false,
                 "searchKey": "quick.TestInt64Alias",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -737,6 +833,7 @@
                       "newPage": false,
                       "searchKey": "quick.fInt64Alias",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -762,6 +859,7 @@
                 "newPage": false,
                 "searchKey": "quick.TestInt8Alias",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -782,6 +880,7 @@
                       "newPage": false,
                       "searchKey": "quick.fInt8Alias",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -807,6 +906,7 @@
                 "newPage": false,
                 "searchKey": "quick.TestIntAlias",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -827,6 +927,7 @@
                       "newPage": false,
                       "searchKey": "quick.fIntAlias",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -852,6 +953,7 @@
                 "newPage": false,
                 "searchKey": "quick.TestMapAlias",
                 "tags": [
+                  "object",
                   "private"
                 ]
               },
@@ -872,6 +974,7 @@
                       "newPage": false,
                       "searchKey": "quick.fMapAlias",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -897,6 +1000,7 @@
                 "newPage": false,
                 "searchKey": "quick.TestPtrAlias",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -917,6 +1021,7 @@
                       "newPage": false,
                       "searchKey": "quick.fPtrAlias",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -942,6 +1047,8 @@
                 "newPage": false,
                 "searchKey": "quick.TestSliceAlias",
                 "tags": [
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -962,6 +1069,7 @@
                       "newPage": false,
                       "searchKey": "quick.fSliceAlias",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -987,6 +1095,7 @@
                 "newPage": false,
                 "searchKey": "quick.TestStringAlias",
                 "tags": [
+                  "string",
                   "private"
                 ]
               },
@@ -1007,6 +1116,7 @@
                       "newPage": false,
                       "searchKey": "quick.fStringAlias",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1032,6 +1142,7 @@
                 "newPage": false,
                 "searchKey": "quick.TestStruct",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1052,6 +1163,7 @@
                       "newPage": false,
                       "searchKey": "quick.fStruct",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1077,6 +1189,7 @@
                 "newPage": false,
                 "searchKey": "quick.TestStructAlias",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1097,6 +1210,7 @@
                       "newPage": false,
                       "searchKey": "quick.fStructAlias",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1122,6 +1236,7 @@
                 "newPage": false,
                 "searchKey": "quick.TestUint16Alias",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -1142,6 +1257,7 @@
                       "newPage": false,
                       "searchKey": "quick.fUint16Alias",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1167,6 +1283,7 @@
                 "newPage": false,
                 "searchKey": "quick.TestUint32Alias",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -1187,6 +1304,7 @@
                       "newPage": false,
                       "searchKey": "quick.fUint32Alias",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1212,6 +1330,7 @@
                 "newPage": false,
                 "searchKey": "quick.TestUint64Alias",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -1232,6 +1351,7 @@
                       "newPage": false,
                       "searchKey": "quick.fUint64Alias",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1257,6 +1377,7 @@
                 "newPage": false,
                 "searchKey": "quick.TestUint8Alias",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -1277,6 +1398,7 @@
                       "newPage": false,
                       "searchKey": "quick.fUint8Alias",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1302,6 +1424,7 @@
                 "newPage": false,
                 "searchKey": "quick.TestUintAlias",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -1322,6 +1445,7 @@
                       "newPage": false,
                       "searchKey": "quick.fUintAlias",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1347,6 +1471,7 @@
                 "newPage": false,
                 "searchKey": "quick.TestUintptrAlias",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -1367,6 +1492,7 @@
                       "newPage": false,
                       "searchKey": "quick.fUintptrAlias",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1392,6 +1518,7 @@
                 "newPage": false,
                 "searchKey": "quick.myStruct",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1412,6 +1539,7 @@
                       "newPage": false,
                       "searchKey": "quick.myStruct.Generate",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1428,50 +1556,6 @@
                 }
               ]
             }
-          },
-          {
-            "node": {
-              "pathID": "/testing/quick#A",
-              "documentation": {
-                "identifier": "A",
-                "newPage": false,
-                "searchKey": "quick.A",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type A struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype A struct{ B *B }\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing/quick#B",
-              "documentation": {
-                "identifier": "B",
-                "newPage": false,
-                "searchKey": "quick.B",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type B struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype B struct{ A *A }\n```\n\n"
-              },
-              "children": null
-            }
           }
         ]
       }
@@ -1483,7 +1567,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1496,120 +1582,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/testing/quick#randFloat32",
-              "documentation": {
-                "identifier": "randFloat32",
-                "newPage": false,
-                "searchKey": "quick.randFloat32",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func randFloat32(rand *rand.Rand) float32"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc randFloat32(rand *rand.Rand) float32\n```\n\nrandFloat32 generates a random float taking the full range of a float32. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing/quick#randFloat64",
-              "documentation": {
-                "identifier": "randFloat64",
-                "newPage": false,
-                "searchKey": "quick.randFloat64",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func randFloat64(rand *rand.Rand) float64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc randFloat64(rand *rand.Rand) float64\n```\n\nrandFloat64 generates a random float taking the full range of a float64. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing/quick#randInt64",
-              "documentation": {
-                "identifier": "randInt64",
-                "newPage": false,
-                "searchKey": "quick.randInt64",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func randInt64(rand *rand.Rand) int64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc randInt64(rand *rand.Rand) int64\n```\n\nrandInt64 returns a random int64. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing/quick#Value",
-              "documentation": {
-                "identifier": "Value",
-                "newPage": false,
-                "searchKey": "quick.Value",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Value(t reflect.Type, rand *rand.Rand) (value reflect.Value, ok bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Value(t reflect.Type, rand *rand.Rand) (value reflect.Value, ok bool)\n```\n\nValue returns an arbitrary value of the given type. If the type implements the Generator interface, that will be used. Note: To create arbitrary values for structs, all the fields must be exported. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing/quick#sizedValue",
-              "documentation": {
-                "identifier": "sizedValue",
-                "newPage": false,
-                "searchKey": "quick.sizedValue",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func sizedValue(t reflect.Type, rand *rand.Rand, size int) (value reflect.Value, ok bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc sizedValue(t reflect.Type, rand *rand.Rand, size int) (value reflect.Value, ok bool)\n```\n\nsizedValue returns an arbitrary value of the given type. The size hint is used for shrinking as a function of indirection level so that recursive data structures will terminate. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/testing/quick#Check",
               "documentation": {
                 "identifier": "Check",
                 "newPage": false,
                 "searchKey": "quick.Check",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1629,7 +1609,9 @@
                 "identifier": "CheckEqual",
                 "newPage": false,
                 "searchKey": "quick.CheckEqual",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1644,12 +1626,227 @@
           },
           {
             "node": {
+              "pathID": "/testing/quick#TestCheckEqual",
+              "documentation": {
+                "identifier": "TestCheckEqual",
+                "newPage": false,
+                "searchKey": "quick.TestCheckEqual",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCheckEqual(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCheckEqual(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing/quick#TestCheckProperty",
+              "documentation": {
+                "identifier": "TestCheckProperty",
+                "newPage": false,
+                "searchKey": "quick.TestCheckProperty",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCheckProperty(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCheckProperty(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing/quick#TestEmptyStruct",
+              "documentation": {
+                "identifier": "TestEmptyStruct",
+                "newPage": false,
+                "searchKey": "quick.TestEmptyStruct",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEmptyStruct(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEmptyStruct(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing/quick#TestFailure",
+              "documentation": {
+                "identifier": "TestFailure",
+                "newPage": false,
+                "searchKey": "quick.TestFailure",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFailure(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFailure(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing/quick#TestInt64",
+              "documentation": {
+                "identifier": "TestInt64",
+                "newPage": false,
+                "searchKey": "quick.TestInt64",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInt64(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInt64(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing/quick#TestMutuallyRecursive",
+              "documentation": {
+                "identifier": "TestMutuallyRecursive",
+                "newPage": false,
+                "searchKey": "quick.TestMutuallyRecursive",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMutuallyRecursive(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMutuallyRecursive(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing/quick#TestNonZeroSliceAndMap",
+              "documentation": {
+                "identifier": "TestNonZeroSliceAndMap",
+                "newPage": false,
+                "searchKey": "quick.TestNonZeroSliceAndMap",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNonZeroSliceAndMap(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNonZeroSliceAndMap(t *testing.T)\n```\n\nSome serialization formats (e.g. encoding/pem) cannot distinguish between a nil and an empty map or slice, so avoid generating the zero value for these. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing/quick#TestRecursive",
+              "documentation": {
+                "identifier": "TestRecursive",
+                "newPage": false,
+                "searchKey": "quick.TestRecursive",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRecursive(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRecursive(t *testing.T)\n```\n\nRecursive data structures didn't terminate. Issues 8818 and 11148. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing/quick#Value",
+              "documentation": {
+                "identifier": "Value",
+                "newPage": false,
+                "searchKey": "quick.Value",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Value(t reflect.Type, rand *rand.Rand) (value reflect.Value, ok bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Value(t reflect.Type, rand *rand.Rand) (value reflect.Value, ok bool)\n```\n\nValue returns an arbitrary value of the given type. If the type implements the Generator interface, that will be used. Note: To create arbitrary values for structs, all the fields must be exported. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/testing/quick#arbitraryValues",
               "documentation": {
                 "identifier": "arbitraryValues",
                 "newPage": false,
                 "searchKey": "quick.arbitraryValues",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1666,78 +1863,13 @@
           },
           {
             "node": {
-              "pathID": "/testing/quick#functionAndType",
-              "documentation": {
-                "identifier": "functionAndType",
-                "newPage": false,
-                "searchKey": "quick.functionAndType",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func functionAndType(f interface{}) (v reflect.Value, t reflect.Type, ok bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc functionAndType(f interface{}) (v reflect.Value, t reflect.Type, ok bool)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing/quick#toInterfaces",
-              "documentation": {
-                "identifier": "toInterfaces",
-                "newPage": false,
-                "searchKey": "quick.toInterfaces",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func toInterfaces(values []reflect.Value) []interface{}"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc toInterfaces(values []reflect.Value) []interface{}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing/quick#toString",
-              "documentation": {
-                "identifier": "toString",
-                "newPage": false,
-                "searchKey": "quick.toString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func toString(interfaces []interface{}) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc toString(interfaces []interface{}) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/testing/quick#fArray",
               "documentation": {
                 "identifier": "fArray",
                 "newPage": false,
                 "searchKey": "quick.fArray",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1760,6 +1892,7 @@
                 "newPage": false,
                 "searchKey": "quick.fBool",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1776,12 +1909,59 @@
           },
           {
             "node": {
+              "pathID": "/testing/quick#fComplex128",
+              "documentation": {
+                "identifier": "fComplex128",
+                "newPage": false,
+                "searchKey": "quick.fComplex128",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fComplex128(a complex128) complex128"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fComplex128(a complex128) complex128\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/testing/quick#fComplex64",
+              "documentation": {
+                "identifier": "fComplex64",
+                "newPage": false,
+                "searchKey": "quick.fComplex64",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fComplex64(a complex64) complex64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fComplex64(a complex64) complex64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/testing/quick#fFloat32",
               "documentation": {
                 "identifier": "fFloat32",
                 "newPage": false,
                 "searchKey": "quick.fFloat32",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1804,6 +1984,7 @@
                 "newPage": false,
                 "searchKey": "quick.fFloat64",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1820,44 +2001,23 @@
           },
           {
             "node": {
-              "pathID": "/testing/quick#fComplex64",
+              "pathID": "/testing/quick#fInt",
               "documentation": {
-                "identifier": "fComplex64",
+                "identifier": "fInt",
                 "newPage": false,
-                "searchKey": "quick.fComplex64",
+                "searchKey": "quick.fInt",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func fComplex64(a complex64) complex64"
+                "value": "func fInt(a int) int"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc fComplex64(a complex64) complex64\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing/quick#fComplex128",
-              "documentation": {
-                "identifier": "fComplex128",
-                "newPage": false,
-                "searchKey": "quick.fComplex128",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func fComplex128(a complex128) complex128"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc fComplex128(a complex128) complex128\n```\n\n"
+                "value": "```Go\nfunc fInt(a int) int\n```\n\n"
               },
               "children": null
             }
@@ -1870,6 +2030,7 @@
                 "newPage": false,
                 "searchKey": "quick.fInt16",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1892,6 +2053,7 @@
                 "newPage": false,
                 "searchKey": "quick.fInt32",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1914,6 +2076,7 @@
                 "newPage": false,
                 "searchKey": "quick.fInt64",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1936,6 +2099,7 @@
                 "newPage": false,
                 "searchKey": "quick.fInt8",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1952,34 +2116,13 @@
           },
           {
             "node": {
-              "pathID": "/testing/quick#fInt",
-              "documentation": {
-                "identifier": "fInt",
-                "newPage": false,
-                "searchKey": "quick.fInt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func fInt(a int) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc fInt(a int) int\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/testing/quick#fMap",
               "documentation": {
                 "identifier": "fMap",
                 "newPage": false,
                 "searchKey": "quick.fMap",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2002,6 +2145,7 @@
                 "newPage": false,
                 "searchKey": "quick.fPtr",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2024,6 +2168,7 @@
                 "newPage": false,
                 "searchKey": "quick.fSlice",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2046,6 +2191,7 @@
                 "newPage": false,
                 "searchKey": "quick.fString",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2062,12 +2208,36 @@
           },
           {
             "node": {
+              "pathID": "/testing/quick#fUint",
+              "documentation": {
+                "identifier": "fUint",
+                "newPage": false,
+                "searchKey": "quick.fUint",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fUint(a uint) uint"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fUint(a uint) uint\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/testing/quick#fUint16",
               "documentation": {
                 "identifier": "fUint16",
                 "newPage": false,
                 "searchKey": "quick.fUint16",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2090,6 +2260,7 @@
                 "newPage": false,
                 "searchKey": "quick.fUint32",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2112,6 +2283,7 @@
                 "newPage": false,
                 "searchKey": "quick.fUint64",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2134,6 +2306,7 @@
                 "newPage": false,
                 "searchKey": "quick.fUint8",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2150,34 +2323,13 @@
           },
           {
             "node": {
-              "pathID": "/testing/quick#fUint",
-              "documentation": {
-                "identifier": "fUint",
-                "newPage": false,
-                "searchKey": "quick.fUint",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func fUint(a uint) uint"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc fUint(a uint) uint\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/testing/quick#fUintptr",
               "documentation": {
                 "identifier": "fUintptr",
                 "newPage": false,
                 "searchKey": "quick.fUintptr",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2194,44 +2346,23 @@
           },
           {
             "node": {
-              "pathID": "/testing/quick#reportError",
+              "pathID": "/testing/quick#functionAndType",
               "documentation": {
-                "identifier": "reportError",
+                "identifier": "functionAndType",
                 "newPage": false,
-                "searchKey": "quick.reportError",
+                "searchKey": "quick.functionAndType",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func reportError(property string, err error, t *testing.T)"
+                "value": "func functionAndType(f interface{}) (v reflect.Value, t reflect.Type, ok bool)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc reportError(property string, err error, t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/testing/quick#TestCheckEqual",
-              "documentation": {
-                "identifier": "TestCheckEqual",
-                "newPage": false,
-                "searchKey": "quick.TestCheckEqual",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCheckEqual(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCheckEqual(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc functionAndType(f interface{}) (v reflect.Value, t reflect.Type, ok bool)\n```\n\n"
               },
               "children": null
             }
@@ -2244,6 +2375,7 @@
                 "newPage": false,
                 "searchKey": "quick.myStructProperty",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -2260,154 +2392,161 @@
           },
           {
             "node": {
-              "pathID": "/testing/quick#TestCheckProperty",
+              "pathID": "/testing/quick#randFloat32",
               "documentation": {
-                "identifier": "TestCheckProperty",
+                "identifier": "randFloat32",
                 "newPage": false,
-                "searchKey": "quick.TestCheckProperty",
+                "searchKey": "quick.randFloat32",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestCheckProperty(t *testing.T)"
+                "value": "func randFloat32(rand *rand.Rand) float32"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestCheckProperty(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc randFloat32(rand *rand.Rand) float32\n```\n\nrandFloat32 generates a random float taking the full range of a float32. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/testing/quick#TestFailure",
+              "pathID": "/testing/quick#randFloat64",
               "documentation": {
-                "identifier": "TestFailure",
+                "identifier": "randFloat64",
                 "newPage": false,
-                "searchKey": "quick.TestFailure",
+                "searchKey": "quick.randFloat64",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestFailure(t *testing.T)"
+                "value": "func randFloat64(rand *rand.Rand) float64"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestFailure(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc randFloat64(rand *rand.Rand) float64\n```\n\nrandFloat64 generates a random float taking the full range of a float64. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/testing/quick#TestRecursive",
+              "pathID": "/testing/quick#randInt64",
               "documentation": {
-                "identifier": "TestRecursive",
+                "identifier": "randInt64",
                 "newPage": false,
-                "searchKey": "quick.TestRecursive",
+                "searchKey": "quick.randInt64",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestRecursive(t *testing.T)"
+                "value": "func randInt64(rand *rand.Rand) int64"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestRecursive(t *testing.T)\n```\n\nRecursive data structures didn't terminate. Issues 8818 and 11148. \n\n"
+                "value": "```Go\nfunc randInt64(rand *rand.Rand) int64\n```\n\nrandInt64 returns a random int64. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/testing/quick#TestEmptyStruct",
+              "pathID": "/testing/quick#reportError",
               "documentation": {
-                "identifier": "TestEmptyStruct",
+                "identifier": "reportError",
                 "newPage": false,
-                "searchKey": "quick.TestEmptyStruct",
+                "searchKey": "quick.reportError",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestEmptyStruct(t *testing.T)"
+                "value": "func reportError(property string, err error, t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestEmptyStruct(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc reportError(property string, err error, t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/testing/quick#TestMutuallyRecursive",
+              "pathID": "/testing/quick#sizedValue",
               "documentation": {
-                "identifier": "TestMutuallyRecursive",
+                "identifier": "sizedValue",
                 "newPage": false,
-                "searchKey": "quick.TestMutuallyRecursive",
+                "searchKey": "quick.sizedValue",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestMutuallyRecursive(t *testing.T)"
+                "value": "func sizedValue(t reflect.Type, rand *rand.Rand, size int) (value reflect.Value, ok bool)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestMutuallyRecursive(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc sizedValue(t reflect.Type, rand *rand.Rand, size int) (value reflect.Value, ok bool)\n```\n\nsizedValue returns an arbitrary value of the given type. The size hint is used for shrinking as a function of indirection level so that recursive data structures will terminate. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/testing/quick#TestNonZeroSliceAndMap",
+              "pathID": "/testing/quick#toInterfaces",
               "documentation": {
-                "identifier": "TestNonZeroSliceAndMap",
+                "identifier": "toInterfaces",
                 "newPage": false,
-                "searchKey": "quick.TestNonZeroSliceAndMap",
+                "searchKey": "quick.toInterfaces",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestNonZeroSliceAndMap(t *testing.T)"
+                "value": "func toInterfaces(values []reflect.Value) []interface{}"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestNonZeroSliceAndMap(t *testing.T)\n```\n\nSome serialization formats (e.g. encoding/pem) cannot distinguish between a nil and an empty map or slice, so avoid generating the zero value for these. \n\n"
+                "value": "```Go\nfunc toInterfaces(values []reflect.Value) []interface{}\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/testing/quick#TestInt64",
+              "pathID": "/testing/quick#toString",
               "documentation": {
-                "identifier": "TestInt64",
+                "identifier": "toString",
                 "newPage": false,
-                "searchKey": "quick.TestInt64",
+                "searchKey": "quick.toString",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestInt64(t *testing.T)"
+                "value": "func toString(interfaces []interface{}) string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestInt64(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc toString(interfaces []interface{}) string\n```\n\n"
               },
               "children": null
             }

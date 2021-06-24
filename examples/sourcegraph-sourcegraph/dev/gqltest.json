@@ -4,7 +4,9 @@
     "identifier": "gqltest",
     "newPage": true,
     "searchKey": "dev/gqltest",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,166 +39,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/dev/gqltest#client",
-              "documentation": {
-                "identifier": "client",
-                "newPage": false,
-                "searchKey": "main.client",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var client"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar client *gqltestutil.Client\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/dev/gqltest#long",
-              "documentation": {
-                "identifier": "long",
-                "newPage": false,
-                "searchKey": "main.long",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var long"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar long = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/dev/gqltest#baseURL",
-              "documentation": {
-                "identifier": "baseURL",
-                "newPage": false,
-                "searchKey": "main.baseURL",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var baseURL"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar baseURL = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/dev/gqltest#email",
-              "documentation": {
-                "identifier": "email",
-                "newPage": false,
-                "searchKey": "main.email",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var email"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar email = flag.String(\"email\", \"gqltest@sourcegraph.com\", \"The email of the admin user\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/dev/gqltest#username",
-              "documentation": {
-                "identifier": "username",
-                "newPage": false,
-                "searchKey": "main.username",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var username"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar username = flag.String(\"username\", \"gqltest-admin\", \"The username of the admin user\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/dev/gqltest#password",
-              "documentation": {
-                "identifier": "password",
-                "newPage": false,
-                "searchKey": "main.password",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var password"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar password = flag.String(\"password\", \"supersecurepassword\", \"The password of the admin user\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/dev/gqltest#githubToken",
-              "documentation": {
-                "identifier": "githubToken",
-                "newPage": false,
-                "searchKey": "main.githubToken",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var githubToken"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar githubToken = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/dev/gqltest#awsAccessKeyID",
               "documentation": {
                 "identifier": "awsAccessKeyID",
                 "newPage": false,
                 "searchKey": "main.awsAccessKeyID",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -211,56 +63,14 @@
           },
           {
             "node": {
-              "pathID": "/dev/gqltest#awsSecretAccessKey",
-              "documentation": {
-                "identifier": "awsSecretAccessKey",
-                "newPage": false,
-                "searchKey": "main.awsSecretAccessKey",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var awsSecretAccessKey"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar awsSecretAccessKey = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/dev/gqltest#awsCodeCommitUsername",
-              "documentation": {
-                "identifier": "awsCodeCommitUsername",
-                "newPage": false,
-                "searchKey": "main.awsCodeCommitUsername",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var awsCodeCommitUsername"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar awsCodeCommitUsername = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/dev/gqltest#awsCodeCommitPassword",
               "documentation": {
                 "identifier": "awsCodeCommitPassword",
                 "newPage": false,
                 "searchKey": "main.awsCodeCommitPassword",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -277,66 +87,72 @@
           },
           {
             "node": {
-              "pathID": "/dev/gqltest#bbsURL",
+              "pathID": "/dev/gqltest#awsCodeCommitUsername",
               "documentation": {
-                "identifier": "bbsURL",
+                "identifier": "awsCodeCommitUsername",
                 "newPage": false,
-                "searchKey": "main.bbsURL",
+                "searchKey": "main.awsCodeCommitUsername",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var bbsURL"
+                "value": "var awsCodeCommitUsername"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar bbsURL = flag.String(\"bbs-url\", os.Getenv(\"BITBUCKET_SERVER_URL\"), \"The Bitbucket Server URL\")\n```\n\n"
+                "value": "```Go\nvar awsCodeCommitUsername = ...\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/dev/gqltest#bbsToken",
+              "pathID": "/dev/gqltest#awsSecretAccessKey",
               "documentation": {
-                "identifier": "bbsToken",
+                "identifier": "awsSecretAccessKey",
                 "newPage": false,
-                "searchKey": "main.bbsToken",
+                "searchKey": "main.awsSecretAccessKey",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var bbsToken"
+                "value": "var awsSecretAccessKey"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar bbsToken = ...\n```\n\n"
+                "value": "```Go\nvar awsSecretAccessKey = ...\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/dev/gqltest#bbsUsername",
+              "pathID": "/dev/gqltest#azureDevOpsToken",
               "documentation": {
-                "identifier": "bbsUsername",
+                "identifier": "azureDevOpsToken",
                 "newPage": false,
-                "searchKey": "main.bbsUsername",
+                "searchKey": "main.azureDevOpsToken",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var bbsUsername"
+                "value": "var azureDevOpsToken"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar bbsUsername = ...\n```\n\n"
+                "value": "```Go\nvar azureDevOpsToken = ...\n```\n\n"
               },
               "children": null
             }
@@ -349,6 +165,8 @@
                 "newPage": false,
                 "searchKey": "main.azureDevOpsUsername",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -365,22 +183,240 @@
           },
           {
             "node": {
-              "pathID": "/dev/gqltest#azureDevOpsToken",
+              "pathID": "/dev/gqltest#baseURL",
               "documentation": {
-                "identifier": "azureDevOpsToken",
+                "identifier": "baseURL",
                 "newPage": false,
-                "searchKey": "main.azureDevOpsToken",
+                "searchKey": "main.baseURL",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var azureDevOpsToken"
+                "value": "var baseURL"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar azureDevOpsToken = ...\n```\n\n"
+                "value": "```Go\nvar baseURL = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/gqltest#bbsToken",
+              "documentation": {
+                "identifier": "bbsToken",
+                "newPage": false,
+                "searchKey": "main.bbsToken",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var bbsToken"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar bbsToken = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/gqltest#bbsURL",
+              "documentation": {
+                "identifier": "bbsURL",
+                "newPage": false,
+                "searchKey": "main.bbsURL",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var bbsURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar bbsURL = flag.String(\"bbs-url\", os.Getenv(\"BITBUCKET_SERVER_URL\"), \"The Bitbucket Server URL\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/gqltest#bbsUsername",
+              "documentation": {
+                "identifier": "bbsUsername",
+                "newPage": false,
+                "searchKey": "main.bbsUsername",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var bbsUsername"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar bbsUsername = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/gqltest#client",
+              "documentation": {
+                "identifier": "client",
+                "newPage": false,
+                "searchKey": "main.client",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var client"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar client *gqltestutil.Client\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/gqltest#email",
+              "documentation": {
+                "identifier": "email",
+                "newPage": false,
+                "searchKey": "main.email",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var email"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar email = flag.String(\"email\", \"gqltest@sourcegraph.com\", \"The email of the admin user\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/gqltest#githubToken",
+              "documentation": {
+                "identifier": "githubToken",
+                "newPage": false,
+                "searchKey": "main.githubToken",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var githubToken"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar githubToken = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/gqltest#long",
+              "documentation": {
+                "identifier": "long",
+                "newPage": false,
+                "searchKey": "main.long",
+                "tags": [
+                  "variable",
+                  "boolean",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var long"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar long = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/gqltest#password",
+              "documentation": {
+                "identifier": "password",
+                "newPage": false,
+                "searchKey": "main.password",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var password"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar password = flag.String(\"password\", \"supersecurepassword\", \"The password of the admin user\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/gqltest#username",
+              "documentation": {
+                "identifier": "username",
+                "newPage": false,
+                "searchKey": "main.username",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var username"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar username = flag.String(\"username\", \"gqltest-admin\", \"The username of the admin user\")\n```\n\n"
               },
               "children": null
             }
@@ -395,7 +431,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -414,6 +452,7 @@
                 "newPage": false,
                 "searchKey": "main.searchClient",
                 "tags": [
+                  "interface",
                   "private"
                 ]
               },
@@ -438,7 +477,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -457,7 +498,9 @@
                 "newPage": false,
                 "searchKey": "main.TestAccessToken",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -479,7 +522,9 @@
                 "newPage": false,
                 "searchKey": "main.TestExternalService",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -501,7 +546,9 @@
                 "newPage": false,
                 "searchKey": "main.TestExternalService_AWSCodeCommit",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -523,7 +570,9 @@
                 "newPage": false,
                 "searchKey": "main.TestExternalService_BitbucketServer",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -545,7 +594,9 @@
                 "newPage": false,
                 "searchKey": "main.TestFeatureFlags",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -567,7 +618,9 @@
                 "newPage": false,
                 "searchKey": "main.TestMain",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -583,35 +636,15 @@
           },
           {
             "node": {
-              "pathID": "/dev/gqltest#mustMarshalJSONString",
-              "documentation": {
-                "identifier": "mustMarshalJSONString",
-                "newPage": false,
-                "searchKey": "main.mustMarshalJSONString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func mustMarshalJSONString(v interface{}) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc mustMarshalJSONString(v interface{}) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/dev/gqltest#TestOrganization",
               "documentation": {
                 "identifier": "TestOrganization",
                 "newPage": false,
                 "searchKey": "main.TestOrganization",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -633,7 +666,9 @@
                 "newPage": false,
                 "searchKey": "main.TestRepository",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -655,7 +690,9 @@
                 "newPage": false,
                 "searchKey": "main.TestRepository_NameWithSpace",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -677,7 +714,9 @@
                 "newPage": false,
                 "searchKey": "main.TestSearch",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -693,66 +732,47 @@
           },
           {
             "node": {
-              "pathID": "/dev/gqltest#testSearchClient",
+              "pathID": "/dev/gqltest#TestSiteConfig",
               "documentation": {
-                "identifier": "testSearchClient",
+                "identifier": "TestSiteConfig",
                 "newPage": false,
-                "searchKey": "main.testSearchClient",
+                "searchKey": "main.TestSiteConfig",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func testSearchClient(t *testing.T, client searchClient)"
+                "value": "func TestSiteConfig(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc testSearchClient(t *testing.T, client searchClient)\n```\n\n"
+                "value": "```Go\nfunc TestSiteConfig(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/dev/gqltest#testSearchOther",
+              "pathID": "/dev/gqltest#mustMarshalJSONString",
               "documentation": {
-                "identifier": "testSearchOther",
+                "identifier": "mustMarshalJSONString",
                 "newPage": false,
-                "searchKey": "main.testSearchOther",
+                "searchKey": "main.mustMarshalJSONString",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func testSearchOther(t *testing.T)"
+                "value": "func mustMarshalJSONString(v interface{}) string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc testSearchOther(t *testing.T)\n```\n\ntestSearchOther other contains search tests for parts of the GraphQL API which are not replicated in the streaming API (statistics and suggestions). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/dev/gqltest#testSearchContextsCRUD",
-              "documentation": {
-                "identifier": "testSearchContextsCRUD",
-                "newPage": false,
-                "searchKey": "main.testSearchContextsCRUD",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testSearchContextsCRUD(t *testing.T, client *gqltestutil.Client)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testSearchContextsCRUD(t *testing.T, client *gqltestutil.Client)\n```\n\n"
+                "value": "```Go\nfunc mustMarshalJSONString(v interface{}) string\n```\n\n"
               },
               "children": null
             }
@@ -765,6 +785,7 @@
                 "newPage": false,
                 "searchKey": "main.testListingSearchContexts",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -781,22 +802,69 @@
           },
           {
             "node": {
-              "pathID": "/dev/gqltest#TestSiteConfig",
+              "pathID": "/dev/gqltest#testSearchClient",
               "documentation": {
-                "identifier": "TestSiteConfig",
+                "identifier": "testSearchClient",
                 "newPage": false,
-                "searchKey": "main.TestSiteConfig",
+                "searchKey": "main.testSearchClient",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestSiteConfig(t *testing.T)"
+                "value": "func testSearchClient(t *testing.T, client searchClient)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestSiteConfig(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc testSearchClient(t *testing.T, client searchClient)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/gqltest#testSearchContextsCRUD",
+              "documentation": {
+                "identifier": "testSearchContextsCRUD",
+                "newPage": false,
+                "searchKey": "main.testSearchContextsCRUD",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testSearchContextsCRUD(t *testing.T, client *gqltestutil.Client)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testSearchContextsCRUD(t *testing.T, client *gqltestutil.Client)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/gqltest#testSearchOther",
+              "documentation": {
+                "identifier": "testSearchOther",
+                "newPage": false,
+                "searchKey": "main.testSearchOther",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testSearchOther(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testSearchOther(t *testing.T)\n```\n\ntestSearchOther other contains search tests for parts of the GraphQL API which are not replicated in the streaming API (statistics and suggestions). \n\n"
               },
               "children": null
             }

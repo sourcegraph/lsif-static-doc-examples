@@ -9,13 +9,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Init" href="#Init">func Init() error</a>
 
 ```
 searchKey: profiler.Init
+tags: [function]
 ```
 
 ```Go

@@ -4,7 +4,9 @@
     "identifier": "exec",
     "newPage": true,
     "searchKey": "os/exec",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,34 +39,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/os/exec#skipStdinCopyError",
-              "documentation": {
-                "identifier": "skipStdinCopyError",
-                "newPage": false,
-                "searchKey": "exec.skipStdinCopyError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var skipStdinCopyError"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar skipStdinCopyError func(error) bool\n```\n\nskipStdinCopyError optionally specifies a function which reports whether the provided stdin copy error should be ignored. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/os/exec#ErrNotFound",
               "documentation": {
                 "identifier": "ErrNotFound",
                 "newPage": false,
                 "searchKey": "exec.ErrNotFound",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -83,6 +68,9 @@
                 "newPage": false,
                 "searchKey": "exec.nonExistentPaths",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
@@ -93,6 +81,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar nonExistentPaths = []string{\n\t\"some-non-existent-path\",\n\t\"non-existent-path/slashed\",\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/exec#skipStdinCopyError",
+              "documentation": {
+                "identifier": "skipStdinCopyError",
+                "newPage": false,
+                "searchKey": "exec.skipStdinCopyError",
+                "tags": [
+                  "variable",
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var skipStdinCopyError"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar skipStdinCopyError func(error) bool\n```\n\nskipStdinCopyError optionally specifies a function which reports whether the provided stdin copy error should be ignored. \n\n"
               },
               "children": null
             }
@@ -107,7 +119,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -120,73 +134,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/os/exec#Error",
-              "documentation": {
-                "identifier": "Error",
-                "newPage": false,
-                "searchKey": "exec.Error",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Error struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Error struct {\n\t// Name is the file name for which the error occurred.\n\tName string\n\t// Err is the underlying error.\n\tErr error\n}\n```\n\nError is returned by LookPath when it fails to classify a file as an executable. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/os/exec#Error.Error",
-                    "documentation": {
-                      "identifier": "Error.Error",
-                      "newPage": false,
-                      "searchKey": "exec.Error.Error",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *Error) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *Error) Error() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/os/exec#Error.Unwrap",
-                    "documentation": {
-                      "identifier": "Error.Unwrap",
-                      "newPage": false,
-                      "searchKey": "exec.Error.Unwrap",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *Error) Unwrap() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *Error) Unwrap() error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/os/exec#Cmd",
               "documentation": {
                 "identifier": "Cmd",
                 "newPage": false,
                 "searchKey": "exec.Cmd",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -204,7 +159,9 @@
                       "identifier": "Command",
                       "newPage": false,
                       "searchKey": "exec.Command",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -224,7 +181,9 @@
                       "identifier": "CommandContext",
                       "newPage": false,
                       "searchKey": "exec.CommandContext",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -239,12 +198,168 @@
                 },
                 {
                   "node": {
+                    "pathID": "/os/exec#Cmd.CombinedOutput",
+                    "documentation": {
+                      "identifier": "Cmd.CombinedOutput",
+                      "newPage": false,
+                      "searchKey": "exec.Cmd.CombinedOutput",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Cmd) CombinedOutput() ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Cmd) CombinedOutput() ([]byte, error)\n```\n\nCombinedOutput runs the command and returns its combined standard output and standard error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/os/exec#Cmd.Output",
+                    "documentation": {
+                      "identifier": "Cmd.Output",
+                      "newPage": false,
+                      "searchKey": "exec.Cmd.Output",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Cmd) Output() ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Cmd) Output() ([]byte, error)\n```\n\nOutput runs the command and returns its standard output. Any returned error will usually be of type *ExitError. If c.Stderr was nil, Output populates ExitError.Stderr. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/os/exec#Cmd.Run",
+                    "documentation": {
+                      "identifier": "Cmd.Run",
+                      "newPage": false,
+                      "searchKey": "exec.Cmd.Run",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Cmd) Run() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Cmd) Run() error\n```\n\nRun starts the specified command and waits for it to complete. \n\nThe returned error is nil if the command runs, has no problems copying stdin, stdout, and stderr, and exits with a zero exit status. \n\nIf the command starts but does not complete successfully, the error is of type *ExitError. Other error types may be returned for other situations. \n\nIf the calling goroutine has locked the operating system thread with runtime.LockOSThread and modified any inheritable OS-level thread state (for example, Linux or Plan 9 name spaces), the new process will inherit the caller's thread state. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/os/exec#Cmd.Start",
+                    "documentation": {
+                      "identifier": "Cmd.Start",
+                      "newPage": false,
+                      "searchKey": "exec.Cmd.Start",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Cmd) Start() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Cmd) Start() error\n```\n\nStart starts the specified command but does not wait for it to complete. \n\nIf Start returns successfully, the c.Process field will be set. \n\nThe Wait method will return the exit code and release associated resources once the command exits. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/os/exec#Cmd.StderrPipe",
+                    "documentation": {
+                      "identifier": "Cmd.StderrPipe",
+                      "newPage": false,
+                      "searchKey": "exec.Cmd.StderrPipe",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Cmd) StderrPipe() (io.ReadCloser, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Cmd) StderrPipe() (io.ReadCloser, error)\n```\n\nStderrPipe returns a pipe that will be connected to the command's standard error when the command starts. \n\nWait will close the pipe after seeing the command exit, so most callers need not close the pipe themselves. It is thus incorrect to call Wait before all reads from the pipe have completed. For the same reason, it is incorrect to use Run when using StderrPipe. See the StdoutPipe example for idiomatic usage. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/os/exec#Cmd.StdinPipe",
+                    "documentation": {
+                      "identifier": "Cmd.StdinPipe",
+                      "newPage": false,
+                      "searchKey": "exec.Cmd.StdinPipe",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Cmd) StdinPipe() (io.WriteCloser, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Cmd) StdinPipe() (io.WriteCloser, error)\n```\n\nStdinPipe returns a pipe that will be connected to the command's standard input when the command starts. The pipe will be closed automatically after Wait sees the command exit. A caller need only call Close to force the pipe to close sooner. For example, if the command being run will not exit until standard input is closed, the caller must close the pipe. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/os/exec#Cmd.StdoutPipe",
+                    "documentation": {
+                      "identifier": "Cmd.StdoutPipe",
+                      "newPage": false,
+                      "searchKey": "exec.Cmd.StdoutPipe",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Cmd) StdoutPipe() (io.ReadCloser, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Cmd) StdoutPipe() (io.ReadCloser, error)\n```\n\nStdoutPipe returns a pipe that will be connected to the command's standard output when the command starts. \n\nWait will close the pipe after seeing the command exit, so most callers need not close the pipe themselves. It is thus incorrect to call Wait before all reads from the pipe have completed. For the same reason, it is incorrect to call Run when using StdoutPipe. See the example for idiomatic usage. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/os/exec#Cmd.String",
                     "documentation": {
                       "identifier": "Cmd.String",
                       "newPage": false,
                       "searchKey": "exec.Cmd.String",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -259,22 +374,22 @@
                 },
                 {
                   "node": {
-                    "pathID": "/os/exec#Cmd.envv",
+                    "pathID": "/os/exec#Cmd.Wait",
                     "documentation": {
-                      "identifier": "Cmd.envv",
+                      "identifier": "Cmd.Wait",
                       "newPage": false,
-                      "searchKey": "exec.Cmd.envv",
+                      "searchKey": "exec.Cmd.Wait",
                       "tags": [
-                        "private"
+                        "function"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (c *Cmd) envv() ([]string, error)"
+                      "value": "func (c *Cmd) Wait() error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (c *Cmd) envv() ([]string, error)\n```\n\n"
+                      "value": "```Go\nfunc (c *Cmd) Wait() error\n```\n\nWait waits for the command to exit and waits for any copying to stdin or copying from stdout or stderr to complete. \n\nThe command must have been started by Start. \n\nThe returned error is nil if the command runs, has no problems copying stdin, stdout, and stderr, and exits with a zero exit status. \n\nIf the command fails to run or doesn't complete successfully, the error is of type *ExitError. Other error types may be returned for I/O problems. \n\nIf any of c.Stdin, c.Stdout or c.Stderr are not an *os.File, Wait also waits for the respective I/O loop copying to or from the process to complete. \n\nWait releases any resources associated with the Cmd. \n\n"
                     },
                     "children": null
                   }
@@ -287,6 +402,7 @@
                       "newPage": false,
                       "searchKey": "exec.Cmd.argv",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -303,12 +419,82 @@
                 },
                 {
                   "node": {
+                    "pathID": "/os/exec#Cmd.closeDescriptors",
+                    "documentation": {
+                      "identifier": "Cmd.closeDescriptors",
+                      "newPage": false,
+                      "searchKey": "exec.Cmd.closeDescriptors",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Cmd) closeDescriptors(closers []io.Closer)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Cmd) closeDescriptors(closers []io.Closer)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/os/exec#Cmd.envv",
+                    "documentation": {
+                      "identifier": "Cmd.envv",
+                      "newPage": false,
+                      "searchKey": "exec.Cmd.envv",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Cmd) envv() ([]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Cmd) envv() ([]string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/os/exec#Cmd.stderr",
+                    "documentation": {
+                      "identifier": "Cmd.stderr",
+                      "newPage": false,
+                      "searchKey": "exec.Cmd.stderr",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Cmd) stderr() (f *os.File, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Cmd) stderr() (f *os.File, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/os/exec#Cmd.stdin",
                     "documentation": {
                       "identifier": "Cmd.stdin",
                       "newPage": false,
                       "searchKey": "exec.Cmd.stdin",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -331,6 +517,7 @@
                       "newPage": false,
                       "searchKey": "exec.Cmd.stdout",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -347,34 +534,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/os/exec#Cmd.stderr",
-                    "documentation": {
-                      "identifier": "Cmd.stderr",
-                      "newPage": false,
-                      "searchKey": "exec.Cmd.stderr",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Cmd) stderr() (f *os.File, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Cmd) stderr() (f *os.File, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/os/exec#Cmd.writerDescriptor",
                     "documentation": {
                       "identifier": "Cmd.writerDescriptor",
                       "newPage": false,
                       "searchKey": "exec.Cmd.writerDescriptor",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -388,185 +554,70 @@
                     },
                     "children": null
                   }
-                },
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/exec#Error",
+              "documentation": {
+                "identifier": "Error",
+                "newPage": false,
+                "searchKey": "exec.Error",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Error struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Error struct {\n\t// Name is the file name for which the error occurred.\n\tName string\n\t// Err is the underlying error.\n\tErr error\n}\n```\n\nError is returned by LookPath when it fails to classify a file as an executable. \n\n"
+              },
+              "children": [
                 {
                   "node": {
-                    "pathID": "/os/exec#Cmd.closeDescriptors",
+                    "pathID": "/os/exec#Error.Error",
                     "documentation": {
-                      "identifier": "Cmd.closeDescriptors",
+                      "identifier": "Error.Error",
                       "newPage": false,
-                      "searchKey": "exec.Cmd.closeDescriptors",
+                      "searchKey": "exec.Error.Error",
                       "tags": [
-                        "private"
+                        "function"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (c *Cmd) closeDescriptors(closers []io.Closer)"
+                      "value": "func (e *Error) Error() string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (c *Cmd) closeDescriptors(closers []io.Closer)\n```\n\n"
+                      "value": "```Go\nfunc (e *Error) Error() string\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/os/exec#Cmd.Run",
+                    "pathID": "/os/exec#Error.Unwrap",
                     "documentation": {
-                      "identifier": "Cmd.Run",
+                      "identifier": "Error.Unwrap",
                       "newPage": false,
-                      "searchKey": "exec.Cmd.Run",
-                      "tags": null
+                      "searchKey": "exec.Error.Unwrap",
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (c *Cmd) Run() error"
+                      "value": "func (e *Error) Unwrap() error"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (c *Cmd) Run() error\n```\n\nRun starts the specified command and waits for it to complete. \n\nThe returned error is nil if the command runs, has no problems copying stdin, stdout, and stderr, and exits with a zero exit status. \n\nIf the command starts but does not complete successfully, the error is of type *ExitError. Other error types may be returned for other situations. \n\nIf the calling goroutine has locked the operating system thread with runtime.LockOSThread and modified any inheritable OS-level thread state (for example, Linux or Plan 9 name spaces), the new process will inherit the caller's thread state. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/os/exec#Cmd.Start",
-                    "documentation": {
-                      "identifier": "Cmd.Start",
-                      "newPage": false,
-                      "searchKey": "exec.Cmd.Start",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Cmd) Start() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Cmd) Start() error\n```\n\nStart starts the specified command but does not wait for it to complete. \n\nIf Start returns successfully, the c.Process field will be set. \n\nThe Wait method will return the exit code and release associated resources once the command exits. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/os/exec#Cmd.Wait",
-                    "documentation": {
-                      "identifier": "Cmd.Wait",
-                      "newPage": false,
-                      "searchKey": "exec.Cmd.Wait",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Cmd) Wait() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Cmd) Wait() error\n```\n\nWait waits for the command to exit and waits for any copying to stdin or copying from stdout or stderr to complete. \n\nThe command must have been started by Start. \n\nThe returned error is nil if the command runs, has no problems copying stdin, stdout, and stderr, and exits with a zero exit status. \n\nIf the command fails to run or doesn't complete successfully, the error is of type *ExitError. Other error types may be returned for I/O problems. \n\nIf any of c.Stdin, c.Stdout or c.Stderr are not an *os.File, Wait also waits for the respective I/O loop copying to or from the process to complete. \n\nWait releases any resources associated with the Cmd. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/os/exec#Cmd.Output",
-                    "documentation": {
-                      "identifier": "Cmd.Output",
-                      "newPage": false,
-                      "searchKey": "exec.Cmd.Output",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Cmd) Output() ([]byte, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Cmd) Output() ([]byte, error)\n```\n\nOutput runs the command and returns its standard output. Any returned error will usually be of type *ExitError. If c.Stderr was nil, Output populates ExitError.Stderr. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/os/exec#Cmd.CombinedOutput",
-                    "documentation": {
-                      "identifier": "Cmd.CombinedOutput",
-                      "newPage": false,
-                      "searchKey": "exec.Cmd.CombinedOutput",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Cmd) CombinedOutput() ([]byte, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Cmd) CombinedOutput() ([]byte, error)\n```\n\nCombinedOutput runs the command and returns its combined standard output and standard error. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/os/exec#Cmd.StdinPipe",
-                    "documentation": {
-                      "identifier": "Cmd.StdinPipe",
-                      "newPage": false,
-                      "searchKey": "exec.Cmd.StdinPipe",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Cmd) StdinPipe() (io.WriteCloser, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Cmd) StdinPipe() (io.WriteCloser, error)\n```\n\nStdinPipe returns a pipe that will be connected to the command's standard input when the command starts. The pipe will be closed automatically after Wait sees the command exit. A caller need only call Close to force the pipe to close sooner. For example, if the command being run will not exit until standard input is closed, the caller must close the pipe. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/os/exec#Cmd.StdoutPipe",
-                    "documentation": {
-                      "identifier": "Cmd.StdoutPipe",
-                      "newPage": false,
-                      "searchKey": "exec.Cmd.StdoutPipe",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Cmd) StdoutPipe() (io.ReadCloser, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Cmd) StdoutPipe() (io.ReadCloser, error)\n```\n\nStdoutPipe returns a pipe that will be connected to the command's standard output when the command starts. \n\nWait will close the pipe after seeing the command exit, so most callers need not close the pipe themselves. It is thus incorrect to call Wait before all reads from the pipe have completed. For the same reason, it is incorrect to call Run when using StdoutPipe. See the example for idiomatic usage. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/os/exec#Cmd.StderrPipe",
-                    "documentation": {
-                      "identifier": "Cmd.StderrPipe",
-                      "newPage": false,
-                      "searchKey": "exec.Cmd.StderrPipe",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Cmd) StderrPipe() (io.ReadCloser, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Cmd) StderrPipe() (io.ReadCloser, error)\n```\n\nStderrPipe returns a pipe that will be connected to the command's standard error when the command starts. \n\nWait will close the pipe after seeing the command exit, so most callers need not close the pipe themselves. It is thus incorrect to call Wait before all reads from the pipe have completed. For the same reason, it is incorrect to use Run when using StderrPipe. See the StdoutPipe example for idiomatic usage. \n\n"
+                      "value": "```Go\nfunc (e *Error) Unwrap() error\n```\n\n"
                     },
                     "children": null
                   }
@@ -581,7 +632,9 @@
                 "identifier": "ExitError",
                 "newPage": false,
                 "searchKey": "exec.ExitError",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -599,7 +652,9 @@
                       "identifier": "ExitError.Error",
                       "newPage": false,
                       "searchKey": "exec.ExitError.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -623,6 +678,7 @@
                 "newPage": false,
                 "searchKey": "exec.closeOnce",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -643,6 +699,7 @@
                       "newPage": false,
                       "searchKey": "exec.closeOnce.Close",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -665,6 +722,7 @@
                       "newPage": false,
                       "searchKey": "exec.closeOnce.close",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -690,6 +748,7 @@
                 "newPage": false,
                 "searchKey": "exec.prefixSuffixSaver",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -704,12 +763,36 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/os/exec#prefixSuffixSaver.Bytes",
+                    "documentation": {
+                      "identifier": "prefixSuffixSaver.Bytes",
+                      "newPage": false,
+                      "searchKey": "exec.prefixSuffixSaver.Bytes",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *prefixSuffixSaver) Bytes() []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *prefixSuffixSaver) Bytes() []byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/os/exec#prefixSuffixSaver.Write",
                     "documentation": {
                       "identifier": "prefixSuffixSaver.Write",
                       "newPage": false,
                       "searchKey": "exec.prefixSuffixSaver.Write",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -732,6 +815,7 @@
                       "newPage": false,
                       "searchKey": "exec.prefixSuffixSaver.fill",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -742,28 +826,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (w *prefixSuffixSaver) fill(dst *[]byte, p []byte) (pRemain []byte)\n```\n\nfill appends up to len(p) bytes of p to *dst, such that *dst does not grow larger than w.N. It returns the un-appended suffix of p. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/os/exec#prefixSuffixSaver.Bytes",
-                    "documentation": {
-                      "identifier": "prefixSuffixSaver.Bytes",
-                      "newPage": false,
-                      "searchKey": "exec.prefixSuffixSaver.Bytes",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (w *prefixSuffixSaver) Bytes() []byte"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (w *prefixSuffixSaver) Bytes() []byte\n```\n\n"
                     },
                     "children": null
                   }
@@ -781,7 +843,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -794,66 +858,165 @@
         "children": [
           {
             "node": {
-              "pathID": "/os/exec#interfaceEqual",
+              "pathID": "/os/exec#BenchmarkExecHostname",
               "documentation": {
-                "identifier": "interfaceEqual",
+                "identifier": "BenchmarkExecHostname",
                 "newPage": false,
-                "searchKey": "exec.interfaceEqual",
+                "searchKey": "exec.BenchmarkExecHostname",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func interfaceEqual(a, b interface{}) bool"
+                "value": "func BenchmarkExecHostname(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc interfaceEqual(a, b interface{}) bool\n```\n\ninterfaceEqual protects against panics from doing equality tests on two interfaces with non-comparable underlying types. \n\n"
+                "value": "```Go\nfunc BenchmarkExecHostname(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/os/exec#lookExtensions",
+              "pathID": "/os/exec#LookPath",
               "documentation": {
-                "identifier": "lookExtensions",
+                "identifier": "LookPath",
                 "newPage": false,
-                "searchKey": "exec.lookExtensions",
+                "searchKey": "exec.LookPath",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func lookExtensions(path, dir string) (string, error)"
+                "value": "func LookPath(file string) (string, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc lookExtensions(path, dir string) (string, error)\n```\n\nlookExtensions finds windows executable by its dir and path. It uses LookPath to try appropriate extensions. lookExtensions does not search PATH, instead it converts `prog` into `.\\prog`. \n\n"
+                "value": "```Go\nfunc LookPath(file string) (string, error)\n```\n\nLookPath searches for an executable named file in the directories named by the PATH environment variable. If file contains a slash, it is tried directly and the PATH is not consulted. The result may be an absolute path or a path relative to the current directory. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/os/exec#minInt",
+              "pathID": "/os/exec#TestDedupEnv",
               "documentation": {
-                "identifier": "minInt",
+                "identifier": "TestDedupEnv",
                 "newPage": false,
-                "searchKey": "exec.minInt",
+                "searchKey": "exec.TestDedupEnv",
                 "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDedupEnv(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDedupEnv(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/exec#TestLookPathNotFound",
+              "documentation": {
+                "identifier": "TestLookPathNotFound",
+                "newPage": false,
+                "searchKey": "exec.TestLookPathNotFound",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLookPathNotFound(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLookPathNotFound(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/exec#TestLookPathUnixEmptyPath",
+              "documentation": {
+                "identifier": "TestLookPathUnixEmptyPath",
+                "newPage": false,
+                "searchKey": "exec.TestLookPathUnixEmptyPath",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLookPathUnixEmptyPath(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLookPathUnixEmptyPath(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/exec#TestPrefixSuffixSaver",
+              "documentation": {
+                "identifier": "TestPrefixSuffixSaver",
+                "newPage": false,
+                "searchKey": "exec.TestPrefixSuffixSaver",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPrefixSuffixSaver(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPrefixSuffixSaver(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/exec#addCriticalEnv",
+              "documentation": {
+                "identifier": "addCriticalEnv",
+                "newPage": false,
+                "searchKey": "exec.addCriticalEnv",
+                "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func minInt(a, b int) int"
+                "value": "func addCriticalEnv(env []string) []string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc minInt(a, b int) int\n```\n\n"
+                "value": "```Go\nfunc addCriticalEnv(env []string) []string\n```\n\naddCriticalEnv adds any critical environment variables that are required (or at least almost always required) on the operating system. Currently this is only used for Windows. \n\n"
               },
               "children": null
             }
@@ -866,6 +1029,7 @@
                 "newPage": false,
                 "searchKey": "exec.dedupEnv",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -888,6 +1052,7 @@
                 "newPage": false,
                 "searchKey": "exec.dedupEnvCase",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -904,56 +1069,13 @@
           },
           {
             "node": {
-              "pathID": "/os/exec#addCriticalEnv",
-              "documentation": {
-                "identifier": "addCriticalEnv",
-                "newPage": false,
-                "searchKey": "exec.addCriticalEnv",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func addCriticalEnv(env []string) []string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc addCriticalEnv(env []string) []string\n```\n\naddCriticalEnv adds any critical environment variables that are required (or at least almost always required) on the operating system. Currently this is only used for Windows. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/os/exec#init.exec_unix.go",
-              "documentation": {
-                "identifier": "init.exec_unix.go",
-                "newPage": false,
-                "searchKey": "exec.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/os/exec#findExecutable",
               "documentation": {
                 "identifier": "findExecutable",
                 "newPage": false,
                 "searchKey": "exec.findExecutable",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -970,130 +1092,92 @@
           },
           {
             "node": {
-              "pathID": "/os/exec#LookPath",
+              "pathID": "/os/exec#init.exec_unix.go",
               "documentation": {
-                "identifier": "LookPath",
+                "identifier": "init.exec_unix.go",
                 "newPage": false,
-                "searchKey": "exec.LookPath",
-                "tags": null
+                "searchKey": "exec.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func LookPath(file string) (string, error)"
+                "value": "func init()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc LookPath(file string) (string, error)\n```\n\nLookPath searches for an executable named file in the directories named by the PATH environment variable. If file contains a slash, it is tried directly and the PATH is not consulted. The result may be an absolute path or a path relative to the current directory. \n\n"
+                "value": "```Go\nfunc init()\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/os/exec#BenchmarkExecHostname",
+              "pathID": "/os/exec#interfaceEqual",
               "documentation": {
-                "identifier": "BenchmarkExecHostname",
+                "identifier": "interfaceEqual",
                 "newPage": false,
-                "searchKey": "exec.BenchmarkExecHostname",
+                "searchKey": "exec.interfaceEqual",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkExecHostname(b *testing.B)"
+                "value": "func interfaceEqual(a, b interface{}) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkExecHostname(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc interfaceEqual(a, b interface{}) bool\n```\n\ninterfaceEqual protects against panics from doing equality tests on two interfaces with non-comparable underlying types. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/os/exec#TestDedupEnv",
+              "pathID": "/os/exec#lookExtensions",
               "documentation": {
-                "identifier": "TestDedupEnv",
+                "identifier": "lookExtensions",
                 "newPage": false,
-                "searchKey": "exec.TestDedupEnv",
+                "searchKey": "exec.lookExtensions",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestDedupEnv(t *testing.T)"
+                "value": "func lookExtensions(path, dir string) (string, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestDedupEnv(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc lookExtensions(path, dir string) (string, error)\n```\n\nlookExtensions finds windows executable by its dir and path. It uses LookPath to try appropriate extensions. lookExtensions does not search PATH, instead it converts `prog` into `.\\prog`. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/os/exec#TestPrefixSuffixSaver",
+              "pathID": "/os/exec#minInt",
               "documentation": {
-                "identifier": "TestPrefixSuffixSaver",
+                "identifier": "minInt",
                 "newPage": false,
-                "searchKey": "exec.TestPrefixSuffixSaver",
+                "searchKey": "exec.minInt",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestPrefixSuffixSaver(t *testing.T)"
+                "value": "func minInt(a, b int) int"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestPrefixSuffixSaver(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/os/exec#TestLookPathNotFound",
-              "documentation": {
-                "identifier": "TestLookPathNotFound",
-                "newPage": false,
-                "searchKey": "exec.TestLookPathNotFound",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestLookPathNotFound(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestLookPathNotFound(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/os/exec#TestLookPathUnixEmptyPath",
-              "documentation": {
-                "identifier": "TestLookPathUnixEmptyPath",
-                "newPage": false,
-                "searchKey": "exec.TestLookPathUnixEmptyPath",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestLookPathUnixEmptyPath(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestLookPathUnixEmptyPath(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc minInt(a, b int) int\n```\n\n"
               },
               "children": null
             }

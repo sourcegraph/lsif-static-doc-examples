@@ -22,90 +22,60 @@ r.Close()
 ## Index
 
 * [Constants](#const)
-    * [const zlibDeflate](#zlibDeflate)
-    * [const NoCompression](#NoCompression)
-    * [const BestSpeed](#BestSpeed)
     * [const BestCompression](#BestCompression)
+    * [const BestSpeed](#BestSpeed)
     * [const DefaultCompression](#DefaultCompression)
     * [const HuffmanOnly](#HuffmanOnly)
+    * [const NoCompression](#NoCompression)
+    * [const zlibDeflate](#zlibDeflate)
 * [Variables](#var)
     * [var ErrChecksum](#ErrChecksum)
     * [var ErrDictionary](#ErrDictionary)
     * [var ErrHeader](#ErrHeader)
-    * [var zlibTests](#zlibTests)
-    * [var filenames](#filenames)
     * [var data](#data)
+    * [var filenames](#filenames)
+    * [var zlibTests](#zlibTests)
 * [Types](#type)
-    * [type reader struct](#reader)
-        * [func (z *reader) Read(p []byte) (int, error)](#reader.Read)
-        * [func (z *reader) Close() error](#reader.Close)
-        * [func (z *reader) Reset(r io.Reader, dict []byte) error](#reader.Reset)
     * [type Resetter interface](#Resetter)
     * [type Writer struct](#Writer)
         * [func NewWriter(w io.Writer) *Writer](#NewWriter)
         * [func NewWriterLevel(w io.Writer, level int) (*Writer, error)](#NewWriterLevel)
         * [func NewWriterLevelDict(w io.Writer, level int, dict []byte) (*Writer, error)](#NewWriterLevelDict)
-        * [func (z *Writer) Reset(w io.Writer)](#Writer.Reset)
-        * [func (z *Writer) writeHeader() (err error)](#Writer.writeHeader)
-        * [func (z *Writer) Write(p []byte) (n int, err error)](#Writer.Write)
-        * [func (z *Writer) Flush() error](#Writer.Flush)
         * [func (z *Writer) Close() error](#Writer.Close)
+        * [func (z *Writer) Flush() error](#Writer.Flush)
+        * [func (z *Writer) Reset(w io.Writer)](#Writer.Reset)
+        * [func (z *Writer) Write(p []byte) (n int, err error)](#Writer.Write)
+        * [func (z *Writer) writeHeader() (err error)](#Writer.writeHeader)
+    * [type reader struct](#reader)
+        * [func (z *reader) Close() error](#reader.Close)
+        * [func (z *reader) Read(p []byte) (int, error)](#reader.Read)
+        * [func (z *reader) Reset(r io.Reader, dict []byte) error](#reader.Reset)
     * [type zlibTest struct](#zlibTest)
 * [Functions](#func)
     * [func NewReader(r io.Reader) (io.ReadCloser, error)](#NewReader)
     * [func NewReaderDict(r io.Reader, dict []byte) (io.ReadCloser, error)](#NewReaderDict)
     * [func TestDecompressor(t *testing.T)](#TestDecompressor)
-    * [func testFileLevelDict(t *testing.T, fn string, level int, d string)](#testFileLevelDict)
-    * [func testLevelDict(t *testing.T, fn string, b0 []byte, level int, d string)](#testLevelDict)
-    * [func testFileLevelDictReset(t *testing.T, fn string, level int, dict []byte)](#testFileLevelDictReset)
     * [func TestWriter(t *testing.T)](#TestWriter)
     * [func TestWriterBig(t *testing.T)](#TestWriterBig)
     * [func TestWriterDict(t *testing.T)](#TestWriterDict)
-    * [func TestWriterReset(t *testing.T)](#TestWriterReset)
     * [func TestWriterDictIsUsed(t *testing.T)](#TestWriterDictIsUsed)
+    * [func TestWriterReset(t *testing.T)](#TestWriterReset)
+    * [func testFileLevelDict(t *testing.T, fn string, level int, d string)](#testFileLevelDict)
+    * [func testFileLevelDictReset(t *testing.T, fn string, level int, dict []byte)](#testFileLevelDictReset)
+    * [func testLevelDict(t *testing.T, fn string, b0 []byte, level int, d string)](#testLevelDict)
 
 
 ## <a id="const" href="#const">Constants</a>
 
-### <a id="zlibDeflate" href="#zlibDeflate">const zlibDeflate</a>
-
 ```
-searchKey: zlib.zlibDeflate
-tags: [private]
+tags: [package]
 ```
-
-```Go
-const zlibDeflate = 8
-```
-
-### <a id="NoCompression" href="#NoCompression">const NoCompression</a>
-
-```
-searchKey: zlib.NoCompression
-```
-
-```Go
-const NoCompression = flate.NoCompression
-```
-
-These constants are copied from the flate package, so that code that imports "compress/zlib" does not also have to import "compress/flate". 
-
-### <a id="BestSpeed" href="#BestSpeed">const BestSpeed</a>
-
-```
-searchKey: zlib.BestSpeed
-```
-
-```Go
-const BestSpeed = flate.BestSpeed
-```
-
-These constants are copied from the flate package, so that code that imports "compress/zlib" does not also have to import "compress/flate". 
 
 ### <a id="BestCompression" href="#BestCompression">const BestCompression</a>
 
 ```
 searchKey: zlib.BestCompression
+tags: [constant number]
 ```
 
 ```Go
@@ -114,10 +84,24 @@ const BestCompression = flate.BestCompression
 
 These constants are copied from the flate package, so that code that imports "compress/zlib" does not also have to import "compress/flate". 
 
+### <a id="BestSpeed" href="#BestSpeed">const BestSpeed</a>
+
+```
+searchKey: zlib.BestSpeed
+tags: [constant number]
+```
+
+```Go
+const BestSpeed = flate.BestSpeed
+```
+
+These constants are copied from the flate package, so that code that imports "compress/zlib" does not also have to import "compress/flate". 
+
 ### <a id="DefaultCompression" href="#DefaultCompression">const DefaultCompression</a>
 
 ```
 searchKey: zlib.DefaultCompression
+tags: [constant number]
 ```
 
 ```Go
@@ -130,6 +114,7 @@ These constants are copied from the flate package, so that code that imports "co
 
 ```
 searchKey: zlib.HuffmanOnly
+tags: [constant number]
 ```
 
 ```Go
@@ -138,12 +123,41 @@ const HuffmanOnly = flate.HuffmanOnly
 
 These constants are copied from the flate package, so that code that imports "compress/zlib" does not also have to import "compress/flate". 
 
+### <a id="NoCompression" href="#NoCompression">const NoCompression</a>
+
+```
+searchKey: zlib.NoCompression
+tags: [constant number]
+```
+
+```Go
+const NoCompression = flate.NoCompression
+```
+
+These constants are copied from the flate package, so that code that imports "compress/zlib" does not also have to import "compress/flate". 
+
+### <a id="zlibDeflate" href="#zlibDeflate">const zlibDeflate</a>
+
+```
+searchKey: zlib.zlibDeflate
+tags: [constant number private]
+```
+
+```Go
+const zlibDeflate = 8
+```
+
 ## <a id="var" href="#var">Variables</a>
+
+```
+tags: [package]
+```
 
 ### <a id="ErrChecksum" href="#ErrChecksum">var ErrChecksum</a>
 
 ```
 searchKey: zlib.ErrChecksum
+tags: [variable interface]
 ```
 
 ```Go
@@ -156,6 +170,7 @@ ErrChecksum is returned when reading ZLIB data that has an invalid checksum.
 
 ```
 searchKey: zlib.ErrDictionary
+tags: [variable interface]
 ```
 
 ```Go
@@ -168,6 +183,7 @@ ErrDictionary is returned when reading ZLIB data that has an invalid dictionary.
 
 ```
 searchKey: zlib.ErrHeader
+tags: [variable interface]
 ```
 
 ```Go
@@ -176,33 +192,11 @@ var ErrHeader = errors.New("zlib: invalid header")
 
 ErrHeader is returned when reading ZLIB data that has an invalid header. 
 
-### <a id="zlibTests" href="#zlibTests">var zlibTests</a>
-
-```
-searchKey: zlib.zlibTests
-tags: [private]
-```
-
-```Go
-var zlibTests = ...
-```
-
-### <a id="filenames" href="#filenames">var filenames</a>
-
-```
-searchKey: zlib.filenames
-tags: [private]
-```
-
-```Go
-var filenames = ...
-```
-
 ### <a id="data" href="#data">var data</a>
 
 ```
 searchKey: zlib.data
-tags: [private]
+tags: [variable array string private]
 ```
 
 ```Go
@@ -211,64 +205,39 @@ var data = []string{
 }
 ```
 
+### <a id="filenames" href="#filenames">var filenames</a>
+
+```
+searchKey: zlib.filenames
+tags: [variable array string private]
+```
+
+```Go
+var filenames = ...
+```
+
+### <a id="zlibTests" href="#zlibTests">var zlibTests</a>
+
+```
+searchKey: zlib.zlibTests
+tags: [variable array struct private]
+```
+
+```Go
+var zlibTests = ...
+```
+
 ## <a id="type" href="#type">Types</a>
 
-### <a id="reader" href="#reader">type reader struct</a>
-
 ```
-searchKey: zlib.reader
-tags: [private]
-```
-
-```Go
-type reader struct {
-	r            flate.Reader
-	decompressor io.ReadCloser
-	digest       hash.Hash32
-	err          error
-	scratch      [4]byte
-}
-```
-
-#### <a id="reader.Read" href="#reader.Read">func (z *reader) Read(p []byte) (int, error)</a>
-
-```
-searchKey: zlib.reader.Read
-tags: [private]
-```
-
-```Go
-func (z *reader) Read(p []byte) (int, error)
-```
-
-#### <a id="reader.Close" href="#reader.Close">func (z *reader) Close() error</a>
-
-```
-searchKey: zlib.reader.Close
-tags: [private]
-```
-
-```Go
-func (z *reader) Close() error
-```
-
-Calling Close does not close the wrapped io.Reader originally passed to NewReader. In order for the ZLIB checksum to be verified, the reader must be fully consumed until the io.EOF. 
-
-#### <a id="reader.Reset" href="#reader.Reset">func (z *reader) Reset(r io.Reader, dict []byte) error</a>
-
-```
-searchKey: zlib.reader.Reset
-tags: [private]
-```
-
-```Go
-func (z *reader) Reset(r io.Reader, dict []byte) error
+tags: [package]
 ```
 
 ### <a id="Resetter" href="#Resetter">type Resetter interface</a>
 
 ```
 searchKey: zlib.Resetter
+tags: [interface]
 ```
 
 ```Go
@@ -285,6 +254,7 @@ Resetter resets a ReadCloser returned by NewReader or NewReaderDict to switch to
 
 ```
 searchKey: zlib.Writer
+tags: [struct]
 ```
 
 ```Go
@@ -306,6 +276,7 @@ A Writer takes data written to it and writes the compressed form of that data to
 
 ```
 searchKey: zlib.NewWriter
+tags: [method]
 ```
 
 ```Go
@@ -320,6 +291,7 @@ It is the caller's responsibility to call Close on the Writer when done. Writes 
 
 ```
 searchKey: zlib.NewWriterLevel
+tags: [method]
 ```
 
 ```Go
@@ -334,6 +306,7 @@ The compression level can be DefaultCompression, NoCompression, HuffmanOnly or a
 
 ```
 searchKey: zlib.NewWriterLevelDict
+tags: [method]
 ```
 
 ```Go
@@ -344,59 +317,11 @@ NewWriterLevelDict is like NewWriterLevel but specifies a dictionary to compress
 
 The dictionary may be nil. If not, its contents should not be modified until the Writer is closed. 
 
-#### <a id="Writer.Reset" href="#Writer.Reset">func (z *Writer) Reset(w io.Writer)</a>
-
-```
-searchKey: zlib.Writer.Reset
-```
-
-```Go
-func (z *Writer) Reset(w io.Writer)
-```
-
-Reset clears the state of the Writer z such that it is equivalent to its initial state from NewWriterLevel or NewWriterLevelDict, but instead writing to w. 
-
-#### <a id="Writer.writeHeader" href="#Writer.writeHeader">func (z *Writer) writeHeader() (err error)</a>
-
-```
-searchKey: zlib.Writer.writeHeader
-tags: [private]
-```
-
-```Go
-func (z *Writer) writeHeader() (err error)
-```
-
-writeHeader writes the ZLIB header. 
-
-#### <a id="Writer.Write" href="#Writer.Write">func (z *Writer) Write(p []byte) (n int, err error)</a>
-
-```
-searchKey: zlib.Writer.Write
-```
-
-```Go
-func (z *Writer) Write(p []byte) (n int, err error)
-```
-
-Write writes a compressed form of p to the underlying io.Writer. The compressed bytes are not necessarily flushed until the Writer is closed or explicitly flushed. 
-
-#### <a id="Writer.Flush" href="#Writer.Flush">func (z *Writer) Flush() error</a>
-
-```
-searchKey: zlib.Writer.Flush
-```
-
-```Go
-func (z *Writer) Flush() error
-```
-
-Flush flushes the Writer to its underlying io.Writer. 
-
 #### <a id="Writer.Close" href="#Writer.Close">func (z *Writer) Close() error</a>
 
 ```
 searchKey: zlib.Writer.Close
+tags: [function]
 ```
 
 ```Go
@@ -405,11 +330,115 @@ func (z *Writer) Close() error
 
 Close closes the Writer, flushing any unwritten data to the underlying io.Writer, but does not close the underlying io.Writer. 
 
+#### <a id="Writer.Flush" href="#Writer.Flush">func (z *Writer) Flush() error</a>
+
+```
+searchKey: zlib.Writer.Flush
+tags: [function]
+```
+
+```Go
+func (z *Writer) Flush() error
+```
+
+Flush flushes the Writer to its underlying io.Writer. 
+
+#### <a id="Writer.Reset" href="#Writer.Reset">func (z *Writer) Reset(w io.Writer)</a>
+
+```
+searchKey: zlib.Writer.Reset
+tags: [method]
+```
+
+```Go
+func (z *Writer) Reset(w io.Writer)
+```
+
+Reset clears the state of the Writer z such that it is equivalent to its initial state from NewWriterLevel or NewWriterLevelDict, but instead writing to w. 
+
+#### <a id="Writer.Write" href="#Writer.Write">func (z *Writer) Write(p []byte) (n int, err error)</a>
+
+```
+searchKey: zlib.Writer.Write
+tags: [method]
+```
+
+```Go
+func (z *Writer) Write(p []byte) (n int, err error)
+```
+
+Write writes a compressed form of p to the underlying io.Writer. The compressed bytes are not necessarily flushed until the Writer is closed or explicitly flushed. 
+
+#### <a id="Writer.writeHeader" href="#Writer.writeHeader">func (z *Writer) writeHeader() (err error)</a>
+
+```
+searchKey: zlib.Writer.writeHeader
+tags: [function private]
+```
+
+```Go
+func (z *Writer) writeHeader() (err error)
+```
+
+writeHeader writes the ZLIB header. 
+
+### <a id="reader" href="#reader">type reader struct</a>
+
+```
+searchKey: zlib.reader
+tags: [struct private]
+```
+
+```Go
+type reader struct {
+	r            flate.Reader
+	decompressor io.ReadCloser
+	digest       hash.Hash32
+	err          error
+	scratch      [4]byte
+}
+```
+
+#### <a id="reader.Close" href="#reader.Close">func (z *reader) Close() error</a>
+
+```
+searchKey: zlib.reader.Close
+tags: [function private]
+```
+
+```Go
+func (z *reader) Close() error
+```
+
+Calling Close does not close the wrapped io.Reader originally passed to NewReader. In order for the ZLIB checksum to be verified, the reader must be fully consumed until the io.EOF. 
+
+#### <a id="reader.Read" href="#reader.Read">func (z *reader) Read(p []byte) (int, error)</a>
+
+```
+searchKey: zlib.reader.Read
+tags: [method private]
+```
+
+```Go
+func (z *reader) Read(p []byte) (int, error)
+```
+
+#### <a id="reader.Reset" href="#reader.Reset">func (z *reader) Reset(r io.Reader, dict []byte) error</a>
+
+```
+searchKey: zlib.reader.Reset
+tags: [method private]
+```
+
+```Go
+func (z *reader) Reset(r io.Reader, dict []byte) error
+```
+
 ### <a id="zlibTest" href="#zlibTest">type zlibTest struct</a>
 
 ```
 searchKey: zlib.zlibTest
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -424,10 +453,15 @@ type zlibTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [package]
+```
+
 ### <a id="NewReader" href="#NewReader">func NewReader(r io.Reader) (io.ReadCloser, error)</a>
 
 ```
 searchKey: zlib.NewReader
+tags: [method]
 ```
 
 ```Go
@@ -442,6 +476,7 @@ The ReadCloser returned by NewReader also implements Resetter.
 
 ```
 searchKey: zlib.NewReaderDict
+tags: [method]
 ```
 
 ```Go
@@ -456,53 +491,18 @@ The ReadCloser returned by NewReaderDict also implements Resetter.
 
 ```
 searchKey: zlib.TestDecompressor
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestDecompressor(t *testing.T)
 ```
 
-### <a id="testFileLevelDict" href="#testFileLevelDict">func testFileLevelDict(t *testing.T, fn string, level int, d string)</a>
-
-```
-searchKey: zlib.testFileLevelDict
-tags: [private]
-```
-
-```Go
-func testFileLevelDict(t *testing.T, fn string, level int, d string)
-```
-
-Tests that compressing and then decompressing the given file at the given compression level and dictionary yields equivalent bytes to the original file. 
-
-### <a id="testLevelDict" href="#testLevelDict">func testLevelDict(t *testing.T, fn string, b0 []byte, level int, d string)</a>
-
-```
-searchKey: zlib.testLevelDict
-tags: [private]
-```
-
-```Go
-func testLevelDict(t *testing.T, fn string, b0 []byte, level int, d string)
-```
-
-### <a id="testFileLevelDictReset" href="#testFileLevelDictReset">func testFileLevelDictReset(t *testing.T, fn string, level int, dict []byte)</a>
-
-```
-searchKey: zlib.testFileLevelDictReset
-tags: [private]
-```
-
-```Go
-func testFileLevelDictReset(t *testing.T, fn string, level int, dict []byte)
-```
-
 ### <a id="TestWriter" href="#TestWriter">func TestWriter(t *testing.T)</a>
 
 ```
 searchKey: zlib.TestWriter
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -513,7 +513,7 @@ func TestWriter(t *testing.T)
 
 ```
 searchKey: zlib.TestWriterBig
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -524,32 +524,67 @@ func TestWriterBig(t *testing.T)
 
 ```
 searchKey: zlib.TestWriterDict
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestWriterDict(t *testing.T)
 ```
 
+### <a id="TestWriterDictIsUsed" href="#TestWriterDictIsUsed">func TestWriterDictIsUsed(t *testing.T)</a>
+
+```
+searchKey: zlib.TestWriterDictIsUsed
+tags: [method private test]
+```
+
+```Go
+func TestWriterDictIsUsed(t *testing.T)
+```
+
 ### <a id="TestWriterReset" href="#TestWriterReset">func TestWriterReset(t *testing.T)</a>
 
 ```
 searchKey: zlib.TestWriterReset
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestWriterReset(t *testing.T)
 ```
 
-### <a id="TestWriterDictIsUsed" href="#TestWriterDictIsUsed">func TestWriterDictIsUsed(t *testing.T)</a>
+### <a id="testFileLevelDict" href="#testFileLevelDict">func testFileLevelDict(t *testing.T, fn string, level int, d string)</a>
 
 ```
-searchKey: zlib.TestWriterDictIsUsed
-tags: [private]
+searchKey: zlib.testFileLevelDict
+tags: [method private]
 ```
 
 ```Go
-func TestWriterDictIsUsed(t *testing.T)
+func testFileLevelDict(t *testing.T, fn string, level int, d string)
+```
+
+Tests that compressing and then decompressing the given file at the given compression level and dictionary yields equivalent bytes to the original file. 
+
+### <a id="testFileLevelDictReset" href="#testFileLevelDictReset">func testFileLevelDictReset(t *testing.T, fn string, level int, dict []byte)</a>
+
+```
+searchKey: zlib.testFileLevelDictReset
+tags: [method private]
+```
+
+```Go
+func testFileLevelDictReset(t *testing.T, fn string, level int, dict []byte)
+```
+
+### <a id="testLevelDict" href="#testLevelDict">func testLevelDict(t *testing.T, fn string, b0 []byte, level int, d string)</a>
+
+```
+searchKey: zlib.testLevelDict
+tags: [method private]
+```
+
+```Go
+func testLevelDict(t *testing.T, fn string, b0 []byte, level int, d string)
 ```
 

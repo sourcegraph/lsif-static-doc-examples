@@ -7,28 +7,28 @@ Package phabricator is a package to interact with a Phabricator instance and its
 * [Variables](#var)
     * [var requestDuration](#requestDuration)
 * [Types](#type)
-    * [type meteredConn struct](#meteredConn)
-        * [func (mc *meteredConn) CallContext(ctx context.Context,...](#meteredConn.CallContext)
     * [type Client struct](#Client)
         * [func NewClient(ctx context.Context, phabUrl, token string, cli httpcli.Doer) (*Client, error)](#NewClient)
-        * [func (c *Client) ListRepos(ctx context.Context, args ListReposArgs) ([]*Repo, *Cursor, error)](#Client.ListRepos)
-        * [func (c *Client) GetRawDiff(ctx context.Context, diffID int) (diff string, err error)](#Client.GetRawDiff)
         * [func (c *Client) GetDiffInfo(ctx context.Context, diffID int) (*DiffInfo, error)](#Client.GetDiffInfo)
+        * [func (c *Client) GetRawDiff(ctx context.Context, diffID int) (diff string, err error)](#Client.GetRawDiff)
+        * [func (c *Client) ListRepos(ctx context.Context, args ListReposArgs) ([]*Repo, *Cursor, error)](#Client.ListRepos)
+    * [type Cursor struct](#Cursor)
+    * [type DiffInfo struct](#DiffInfo)
+    * [type ListReposArgs struct](#ListReposArgs)
     * [type Repo struct](#Repo)
     * [type URI struct](#URI)
     * [type apiRepo struct](#apiRepo)
         * [func (a *apiRepo) ToRepo() *Repo](#apiRepo.ToRepo)
+    * [type apiRepoAttachments struct](#apiRepoAttachments)
     * [type apiRepoFields struct](#apiRepoFields)
     * [type apiRepoPolicy struct](#apiRepoPolicy)
-    * [type apiRepoAttachments struct](#apiRepoAttachments)
-    * [type apiURIsContainer struct](#apiURIsContainer)
     * [type apiURI struct](#apiURI)
+    * [type apiURIBultin struct](#apiURIBultin)
     * [type apiURIFields struct](#apiURIFields)
     * [type apiURIs struct](#apiURIs)
-    * [type apiURIBultin struct](#apiURIBultin)
-    * [type Cursor struct](#Cursor)
-    * [type ListReposArgs struct](#ListReposArgs)
-    * [type DiffInfo struct](#DiffInfo)
+    * [type apiURIsContainer struct](#apiURIsContainer)
+    * [type meteredConn struct](#meteredConn)
+        * [func (mc *meteredConn) CallContext(ctx context.Context,...](#meteredConn.CallContext)
     * [type unixTime struct](#unixTime)
         * [func (d *unixTime) UnmarshalJSON(data []byte) error](#unixTime.UnmarshalJSON)
 * [Functions](#func)
@@ -38,14 +38,14 @@ Package phabricator is a package to interact with a Phabricator instance and its
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="requestDuration" href="#requestDuration">var requestDuration</a>
 
 ```
 searchKey: phabricator.requestDuration
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
@@ -55,42 +55,14 @@ var requestDuration = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
-```
-
-### <a id="meteredConn" href="#meteredConn">type meteredConn struct</a>
-
-```
-searchKey: phabricator.meteredConn
-tags: [private]
-```
-
-```Go
-type meteredConn struct {
-	gonduit.Conn
-}
-```
-
-#### <a id="meteredConn.CallContext" href="#meteredConn.CallContext">func (mc *meteredConn) CallContext(ctx context.Context,...</a>
-
-```
-searchKey: phabricator.meteredConn.CallContext
-tags: [private]
-```
-
-```Go
-func (mc *meteredConn) CallContext(
-	ctx context.Context,
-	method string,
-	params interface{},
-	result interface{},
-) error
+tags: [package private]
 ```
 
 ### <a id="Client" href="#Client">type Client struct</a>
 
 ```
 searchKey: phabricator.Client
+tags: [struct]
 ```
 
 ```Go
@@ -105,6 +77,7 @@ A Client provides high level methods to a Phabricator Conduit API.
 
 ```
 searchKey: phabricator.NewClient
+tags: [method]
 ```
 
 ```Go
@@ -113,34 +86,11 @@ func NewClient(ctx context.Context, phabUrl, token string, cli httpcli.Doer) (*C
 
 NewClient returns an authenticated Client, using the given URL and token. If provided, cli will be used to perform the underlying HTTP requests. This constructor needs a context because it calls the Conduit API to negotiate capabilities as part of the dial process. 
 
-#### <a id="Client.ListRepos" href="#Client.ListRepos">func (c *Client) ListRepos(ctx context.Context, args ListReposArgs) ([]*Repo, *Cursor, error)</a>
-
-```
-searchKey: phabricator.Client.ListRepos
-```
-
-```Go
-func (c *Client) ListRepos(ctx context.Context, args ListReposArgs) ([]*Repo, *Cursor, error)
-```
-
-ListRepos lists all repositories matching the given arguments. 
-
-#### <a id="Client.GetRawDiff" href="#Client.GetRawDiff">func (c *Client) GetRawDiff(ctx context.Context, diffID int) (diff string, err error)</a>
-
-```
-searchKey: phabricator.Client.GetRawDiff
-```
-
-```Go
-func (c *Client) GetRawDiff(ctx context.Context, diffID int) (diff string, err error)
-```
-
-GetRawDiff retrieves the raw diff of the diff with the given id. 
-
 #### <a id="Client.GetDiffInfo" href="#Client.GetDiffInfo">func (c *Client) GetDiffInfo(ctx context.Context, diffID int) (*DiffInfo, error)</a>
 
 ```
 searchKey: phabricator.Client.GetDiffInfo
+tags: [method]
 ```
 
 ```Go
@@ -149,10 +99,89 @@ func (c *Client) GetDiffInfo(ctx context.Context, diffID int) (*DiffInfo, error)
 
 GetDiffInfo retrieves the DiffInfo of the diff with the given id. 
 
+#### <a id="Client.GetRawDiff" href="#Client.GetRawDiff">func (c *Client) GetRawDiff(ctx context.Context, diffID int) (diff string, err error)</a>
+
+```
+searchKey: phabricator.Client.GetRawDiff
+tags: [method]
+```
+
+```Go
+func (c *Client) GetRawDiff(ctx context.Context, diffID int) (diff string, err error)
+```
+
+GetRawDiff retrieves the raw diff of the diff with the given id. 
+
+#### <a id="Client.ListRepos" href="#Client.ListRepos">func (c *Client) ListRepos(ctx context.Context, args ListReposArgs) ([]*Repo, *Cursor, error)</a>
+
+```
+searchKey: phabricator.Client.ListRepos
+tags: [method]
+```
+
+```Go
+func (c *Client) ListRepos(ctx context.Context, args ListReposArgs) ([]*Repo, *Cursor, error)
+```
+
+ListRepos lists all repositories matching the given arguments. 
+
+### <a id="Cursor" href="#Cursor">type Cursor struct</a>
+
+```
+searchKey: phabricator.Cursor
+tags: [struct]
+```
+
+```Go
+type Cursor struct {
+	Limit  uint64 `json:"limit,omitempty"`
+	After  string `json:"after,omitempty"`
+	Before string `json:"before,omitempty"`
+	Order  string `json:"order,omitempty"`
+}
+```
+
+Cursor represents the pagination cursor on many responses. 
+
+### <a id="DiffInfo" href="#DiffInfo">type DiffInfo struct</a>
+
+```
+searchKey: phabricator.DiffInfo
+tags: [struct]
+```
+
+```Go
+type DiffInfo struct {
+	Message     string    `json:"description"`
+	AuthorName  string    `json:"authorName"`
+	AuthorEmail string    `json:"authorEmail"`
+	DateCreated string    `json:"dateCreated"`
+	Date        time.Time `json:"omitempty"`
+}
+```
+
+DiffInfo contains information for a diff such as the author 
+
+### <a id="ListReposArgs" href="#ListReposArgs">type ListReposArgs struct</a>
+
+```
+searchKey: phabricator.ListReposArgs
+tags: [struct]
+```
+
+```Go
+type ListReposArgs struct {
+	*Cursor
+}
+```
+
+ListReposArgs defines the constraints to be satisfied by the ListRepos method. 
+
 ### <a id="Repo" href="#Repo">type Repo struct</a>
 
 ```
 searchKey: phabricator.Repo
+tags: [struct]
 ```
 
 ```Go
@@ -178,6 +207,7 @@ Repo represents a single code repository.
 
 ```
 searchKey: phabricator.URI
+tags: [struct]
 ```
 
 ```Go
@@ -205,7 +235,7 @@ URI of a Repository
 
 ```
 searchKey: phabricator.apiRepo
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -221,18 +251,31 @@ type apiRepo struct {
 
 ```
 searchKey: phabricator.apiRepo.ToRepo
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (a *apiRepo) ToRepo() *Repo
 ```
 
+### <a id="apiRepoAttachments" href="#apiRepoAttachments">type apiRepoAttachments struct</a>
+
+```
+searchKey: phabricator.apiRepoAttachments
+tags: [struct private]
+```
+
+```Go
+type apiRepoAttachments struct {
+	URIs apiURIsContainer `json:"uris"`
+}
+```
+
 ### <a id="apiRepoFields" href="#apiRepoFields">type apiRepoFields struct</a>
 
 ```
 searchKey: phabricator.apiRepoFields
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -252,7 +295,7 @@ type apiRepoFields struct {
 
 ```
 searchKey: phabricator.apiRepoPolicy
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -262,37 +305,11 @@ type apiRepoPolicy struct {
 }
 ```
 
-### <a id="apiRepoAttachments" href="#apiRepoAttachments">type apiRepoAttachments struct</a>
-
-```
-searchKey: phabricator.apiRepoAttachments
-tags: [private]
-```
-
-```Go
-type apiRepoAttachments struct {
-	URIs apiURIsContainer `json:"uris"`
-}
-```
-
-### <a id="apiURIsContainer" href="#apiURIsContainer">type apiURIsContainer struct</a>
-
-```
-searchKey: phabricator.apiURIsContainer
-tags: [private]
-```
-
-```Go
-type apiURIsContainer struct {
-	URIs []apiURI `json:"uris"`
-}
-```
-
 ### <a id="apiURI" href="#apiURI">type apiURI struct</a>
 
 ```
 searchKey: phabricator.apiURI
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -303,11 +320,25 @@ type apiURI struct {
 }
 ```
 
+### <a id="apiURIBultin" href="#apiURIBultin">type apiURIBultin struct</a>
+
+```
+searchKey: phabricator.apiURIBultin
+tags: [struct private]
+```
+
+```Go
+type apiURIBultin struct {
+	Protocol   string `json:"protocol"`
+	Identifier string `json:"identifier"`
+}
+```
+
 ### <a id="apiURIFields" href="#apiURIFields">type apiURIFields struct</a>
 
 ```
 searchKey: phabricator.apiURIFields
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -324,7 +355,7 @@ type apiURIFields struct {
 
 ```
 searchKey: phabricator.apiURIs
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -335,74 +366,53 @@ type apiURIs struct {
 }
 ```
 
-### <a id="apiURIBultin" href="#apiURIBultin">type apiURIBultin struct</a>
+### <a id="apiURIsContainer" href="#apiURIsContainer">type apiURIsContainer struct</a>
 
 ```
-searchKey: phabricator.apiURIBultin
-tags: [private]
-```
-
-```Go
-type apiURIBultin struct {
-	Protocol   string `json:"protocol"`
-	Identifier string `json:"identifier"`
-}
-```
-
-### <a id="Cursor" href="#Cursor">type Cursor struct</a>
-
-```
-searchKey: phabricator.Cursor
+searchKey: phabricator.apiURIsContainer
+tags: [struct private]
 ```
 
 ```Go
-type Cursor struct {
-	Limit  uint64 `json:"limit,omitempty"`
-	After  string `json:"after,omitempty"`
-	Before string `json:"before,omitempty"`
-	Order  string `json:"order,omitempty"`
+type apiURIsContainer struct {
+	URIs []apiURI `json:"uris"`
 }
 ```
 
-Cursor represents the pagination cursor on many responses. 
-
-### <a id="ListReposArgs" href="#ListReposArgs">type ListReposArgs struct</a>
+### <a id="meteredConn" href="#meteredConn">type meteredConn struct</a>
 
 ```
-searchKey: phabricator.ListReposArgs
+searchKey: phabricator.meteredConn
+tags: [struct private]
 ```
 
 ```Go
-type ListReposArgs struct {
-	*Cursor
+type meteredConn struct {
+	gonduit.Conn
 }
 ```
 
-ListReposArgs defines the constraints to be satisfied by the ListRepos method. 
-
-### <a id="DiffInfo" href="#DiffInfo">type DiffInfo struct</a>
+#### <a id="meteredConn.CallContext" href="#meteredConn.CallContext">func (mc *meteredConn) CallContext(ctx context.Context,...</a>
 
 ```
-searchKey: phabricator.DiffInfo
+searchKey: phabricator.meteredConn.CallContext
+tags: [method private]
 ```
 
 ```Go
-type DiffInfo struct {
-	Message     string    `json:"description"`
-	AuthorName  string    `json:"authorName"`
-	AuthorEmail string    `json:"authorEmail"`
-	DateCreated string    `json:"dateCreated"`
-	Date        time.Time `json:"omitempty"`
-}
+func (mc *meteredConn) CallContext(
+	ctx context.Context,
+	method string,
+	params interface{},
+	result interface{},
+) error
 ```
-
-DiffInfo contains information for a diff such as the author 
 
 ### <a id="unixTime" href="#unixTime">type unixTime struct</a>
 
 ```
 searchKey: phabricator.unixTime
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -413,7 +423,7 @@ type unixTime struct{ t *time.Time }
 
 ```
 searchKey: phabricator.unixTime.UnmarshalJSON
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -423,13 +433,14 @@ func (d *unixTime) UnmarshalJSON(data []byte) error
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="ParseDate" href="#ParseDate">func ParseDate(secStr string) (*time.Time, error)</a>
 
 ```
 searchKey: phabricator.ParseDate
+tags: [method]
 ```
 
 ```Go

@@ -7,137 +7,139 @@ The implementation is sufficient for HTTP (RFC 2388) and the multipart bodies ge
 ## Index
 
 * [Constants](#const)
-    * [const peekBufferSize](#peekBufferSize)
+    * [const boundary](#boundary)
     * [const fileaContents](#fileaContents)
     * [const filebContents](#filebContents)
-    * [const textaValue](#textaValue)
-    * [const textbValue](#textbValue)
-    * [const boundary](#boundary)
+    * [const maxReadThreshold](#maxReadThreshold)
+    * [const message](#message)
     * [const messageWithFileWithoutName](#messageWithFileWithoutName)
     * [const messageWithTextContentType](#messageWithTextContentType)
-    * [const message](#message)
-    * [const maxReadThreshold](#maxReadThreshold)
+    * [const peekBufferSize](#peekBufferSize)
+    * [const textaValue](#textaValue)
+    * [const textbValue](#textbValue)
 * [Variables](#var)
     * [var ErrMessageTooLarge](#ErrMessageTooLarge)
     * [var emptyParams](#emptyParams)
-    * [var quoteEscaper](#quoteEscaper)
     * [var longLine](#longLine)
     * [var parseTests](#parseTests)
+    * [var quoteEscaper](#quoteEscaper)
 * [Types](#type)
-    * [type Form struct](#Form)
-        * [func (f *Form) RemoveAll() error](#Form.RemoveAll)
-    * [type FileHeader struct](#FileHeader)
-        * [func (fh *FileHeader) Open() (File, error)](#FileHeader.Open)
     * [type File interface](#File)
         * [func testFile(t *testing.T, fh *FileHeader, efn, econtent string) File](#testFile)
-    * [type sectionReadCloser struct](#sectionReadCloser)
-        * [func (rc sectionReadCloser) Close() error](#sectionReadCloser.Close)
+    * [type FileHeader struct](#FileHeader)
+        * [func (fh *FileHeader) Open() (File, error)](#FileHeader.Open)
+    * [type Form struct](#Form)
+        * [func (f *Form) RemoveAll() error](#Form.RemoveAll)
     * [type Part struct](#Part)
         * [func newPart(mr *Reader, rawPart bool) (*Part, error)](#newPart)
-        * [func (p *Part) FormName() string](#Part.FormName)
+        * [func (p *Part) Close() error](#Part.Close)
         * [func (p *Part) FileName() string](#Part.FileName)
+        * [func (p *Part) FormName() string](#Part.FormName)
+        * [func (p *Part) Read(d []byte) (n int, err error)](#Part.Read)
         * [func (p *Part) parseContentDisposition()](#Part.parseContentDisposition)
         * [func (bp *Part) populateHeaders() error](#Part.populateHeaders)
-        * [func (p *Part) Read(d []byte) (n int, err error)](#Part.Read)
-        * [func (p *Part) Close() error](#Part.Close)
-    * [type stickyErrorReader struct](#stickyErrorReader)
-        * [func (r *stickyErrorReader) Read(p []byte) (n int, _ error)](#stickyErrorReader.Read)
-    * [type partReader struct](#partReader)
-        * [func (pr partReader) Read(d []byte) (int, error)](#partReader.Read)
     * [type Reader struct](#Reader)
         * [func NewReader(r io.Reader, boundary string) *Reader](#NewReader)
-        * [func (r *Reader) ReadForm(maxMemory int64) (*Form, error)](#Reader.ReadForm)
-        * [func (r *Reader) readForm(maxMemory int64) (_ *Form, err error)](#Reader.readForm)
         * [func (r *Reader) NextPart() (*Part, error)](#Reader.NextPart)
         * [func (r *Reader) NextRawPart() (*Part, error)](#Reader.NextRawPart)
-        * [func (r *Reader) nextPart(rawPart bool) (*Part, error)](#Reader.nextPart)
-        * [func (mr *Reader) isFinalBoundary(line []byte) bool](#Reader.isFinalBoundary)
+        * [func (r *Reader) ReadForm(maxMemory int64) (*Form, error)](#Reader.ReadForm)
         * [func (mr *Reader) isBoundaryDelimiterLine(line []byte) (ret bool)](#Reader.isBoundaryDelimiterLine)
+        * [func (mr *Reader) isFinalBoundary(line []byte) bool](#Reader.isFinalBoundary)
+        * [func (r *Reader) nextPart(rawPart bool) (*Part, error)](#Reader.nextPart)
+        * [func (r *Reader) readForm(maxMemory int64) (_ *Form, err error)](#Reader.readForm)
     * [type Writer struct](#Writer)
         * [func NewWriter(w io.Writer) *Writer](#NewWriter)
         * [func (w *Writer) Boundary() string](#Writer.Boundary)
-        * [func (w *Writer) SetBoundary(boundary string) error](#Writer.SetBoundary)
-        * [func (w *Writer) FormDataContentType() string](#Writer.FormDataContentType)
-        * [func (w *Writer) CreatePart(header textproto.MIMEHeader) (io.Writer, error)](#Writer.CreatePart)
-        * [func (w *Writer) CreateFormFile(fieldname, filename string) (io.Writer, error)](#Writer.CreateFormFile)
-        * [func (w *Writer) CreateFormField(fieldname string) (io.Writer, error)](#Writer.CreateFormField)
-        * [func (w *Writer) WriteField(fieldname, value string) error](#Writer.WriteField)
         * [func (w *Writer) Close() error](#Writer.Close)
-    * [type part struct](#part)
-        * [func (p *part) close() error](#part.close)
-        * [func (p *part) Write(d []byte) (n int, err error)](#part.Write)
+        * [func (w *Writer) CreateFormField(fieldname string) (io.Writer, error)](#Writer.CreateFormField)
+        * [func (w *Writer) CreateFormFile(fieldname, filename string) (io.Writer, error)](#Writer.CreateFormFile)
+        * [func (w *Writer) CreatePart(header textproto.MIMEHeader) (io.Writer, error)](#Writer.CreatePart)
+        * [func (w *Writer) FormDataContentType() string](#Writer.FormDataContentType)
+        * [func (w *Writer) SetBoundary(boundary string) error](#Writer.SetBoundary)
+        * [func (w *Writer) WriteField(fieldname, value string) error](#Writer.WriteField)
     * [type failOnReadAfterErrorReader struct](#failOnReadAfterErrorReader)
         * [func (r *failOnReadAfterErrorReader) Read(p []byte) (n int, err error)](#failOnReadAfterErrorReader.Read)
-    * [type maliciousReader struct](#maliciousReader)
-        * [func (mr *maliciousReader) Read(b []byte) (n int, err error)](#maliciousReader.Read)
-    * [type slowReader struct](#slowReader)
-        * [func (s *slowReader) Read(p []byte) (int, error)](#slowReader.Read)
-    * [type sentinelReader struct](#sentinelReader)
-        * [func (s *sentinelReader) Read([]byte) (int, error)](#sentinelReader.Read)
     * [type headerBody struct](#headerBody)
         * [func formData(key, value string) headerBody](#formData)
+    * [type maliciousReader struct](#maliciousReader)
+        * [func (mr *maliciousReader) Read(b []byte) (n int, err error)](#maliciousReader.Read)
     * [type parseTest struct](#parseTest)
         * [func roundTripParseTest() parseTest](#roundTripParseTest)
+    * [type part struct](#part)
+        * [func (p *part) Write(d []byte) (n int, err error)](#part.Write)
+        * [func (p *part) close() error](#part.close)
+    * [type partReader struct](#partReader)
+        * [func (pr partReader) Read(d []byte) (int, error)](#partReader.Read)
+    * [type sectionReadCloser struct](#sectionReadCloser)
+        * [func (rc sectionReadCloser) Close() error](#sectionReadCloser.Close)
+    * [type sentinelReader struct](#sentinelReader)
+        * [func (s *sentinelReader) Read([]byte) (int, error)](#sentinelReader.Read)
+    * [type slowReader struct](#slowReader)
+        * [func (s *slowReader) Read(p []byte) (int, error)](#slowReader.Read)
+    * [type stickyErrorReader struct](#stickyErrorReader)
+        * [func (r *stickyErrorReader) Read(p []byte) (n int, _ error)](#stickyErrorReader.Read)
 * [Functions](#func)
-    * [func scanUntilBoundary(buf, dashBoundary, nlDashBoundary []byte, total int64, readErr error) (int, error)](#scanUntilBoundary)
-    * [func matchAfterPrefix(buf, prefix []byte, readErr error) int](#matchAfterPrefix)
-    * [func skipLWSPChar(b []byte) []byte](#skipLWSPChar)
-    * [func randomBoundary() string](#randomBoundary)
-    * [func escapeQuotes(s string) string](#escapeQuotes)
-    * [func TestReadForm(t *testing.T)](#TestReadForm)
-    * [func TestReadFormWithNamelessFile(t *testing.T)](#TestReadFormWithNamelessFile)
-    * [func TestReadFormMaxMemoryOverflow(t *testing.T)](#TestReadFormMaxMemoryOverflow)
-    * [func TestReadFormWithTextContentType(t *testing.T)](#TestReadFormWithTextContentType)
-    * [func TestReadForm_NoReadAfterEOF(t *testing.T)](#TestReadForm_NoReadAfterEOF)
-    * [func TestReadForm_NonFileMaxMemory(t *testing.T)](#TestReadForm_NonFileMaxMemory)
     * [func TestBoundaryLine(t *testing.T)](#TestBoundaryLine)
-    * [func escapeString(v string) string](#escapeString)
-    * [func expectEq(t *testing.T, expected, actual, what string)](#expectEq)
-    * [func TestNameAccessors(t *testing.T)](#TestNameAccessors)
-    * [func testMultipartBody(sep string) string](#testMultipartBody)
+    * [func TestLineContinuation(t *testing.T)](#TestLineContinuation)
+    * [func TestLineLimit(t *testing.T)](#TestLineLimit)
     * [func TestMultipart(t *testing.T)](#TestMultipart)
     * [func TestMultipartOnlyNewlines(t *testing.T)](#TestMultipartOnlyNewlines)
     * [func TestMultipartSlowInput(t *testing.T)](#TestMultipartSlowInput)
-    * [func testMultipart(t *testing.T, r io.Reader, onlyNewlines bool)](#testMultipart)
-    * [func TestVariousTextLineEndings(t *testing.T)](#TestVariousTextLineEndings)
-    * [func TestLineLimit(t *testing.T)](#TestLineLimit)
-    * [func TestMultipartTruncated(t *testing.T)](#TestMultipartTruncated)
     * [func TestMultipartStreamReadahead(t *testing.T)](#TestMultipartStreamReadahead)
-    * [func TestLineContinuation(t *testing.T)](#TestLineContinuation)
-    * [func TestQuotedPrintableEncoding(t *testing.T)](#TestQuotedPrintableEncoding)
-    * [func testQuotedPrintableEncoding(t *testing.T, cte string)](#testQuotedPrintableEncoding)
-    * [func TestRawPart(t *testing.T)](#TestRawPart)
+    * [func TestMultipartTruncated(t *testing.T)](#TestMultipartTruncated)
+    * [func TestNameAccessors(t *testing.T)](#TestNameAccessors)
     * [func TestNested(t *testing.T)](#TestNested)
-    * [func TestParse(t *testing.T)](#TestParse)
-    * [func partsFromReader(r *Reader) ([]headerBody, error)](#partsFromReader)
-    * [func TestParseAllSizes(t *testing.T)](#TestParseAllSizes)
     * [func TestNoBoundary(t *testing.T)](#TestNoBoundary)
-    * [func TestWriter(t *testing.T)](#TestWriter)
-    * [func TestWriterSetBoundary(t *testing.T)](#TestWriterSetBoundary)
-    * [func TestWriterBoundaryGoroutines(t *testing.T)](#TestWriterBoundaryGoroutines)
+    * [func TestParse(t *testing.T)](#TestParse)
+    * [func TestParseAllSizes(t *testing.T)](#TestParseAllSizes)
+    * [func TestQuotedPrintableEncoding(t *testing.T)](#TestQuotedPrintableEncoding)
+    * [func TestRawPart(t *testing.T)](#TestRawPart)
+    * [func TestReadForm(t *testing.T)](#TestReadForm)
+    * [func TestReadFormMaxMemoryOverflow(t *testing.T)](#TestReadFormMaxMemoryOverflow)
+    * [func TestReadFormWithNamelessFile(t *testing.T)](#TestReadFormWithNamelessFile)
+    * [func TestReadFormWithTextContentType(t *testing.T)](#TestReadFormWithTextContentType)
+    * [func TestReadForm_NoReadAfterEOF(t *testing.T)](#TestReadForm_NoReadAfterEOF)
+    * [func TestReadForm_NonFileMaxMemory(t *testing.T)](#TestReadForm_NonFileMaxMemory)
     * [func TestSortedHeader(t *testing.T)](#TestSortedHeader)
+    * [func TestVariousTextLineEndings(t *testing.T)](#TestVariousTextLineEndings)
+    * [func TestWriter(t *testing.T)](#TestWriter)
+    * [func TestWriterBoundaryGoroutines(t *testing.T)](#TestWriterBoundaryGoroutines)
+    * [func TestWriterSetBoundary(t *testing.T)](#TestWriterSetBoundary)
+    * [func escapeQuotes(s string) string](#escapeQuotes)
+    * [func escapeString(v string) string](#escapeString)
+    * [func expectEq(t *testing.T, expected, actual, what string)](#expectEq)
+    * [func matchAfterPrefix(buf, prefix []byte, readErr error) int](#matchAfterPrefix)
+    * [func partsFromReader(r *Reader) ([]headerBody, error)](#partsFromReader)
+    * [func randomBoundary() string](#randomBoundary)
+    * [func scanUntilBoundary(buf, dashBoundary, nlDashBoundary []byte, total int64, readErr error) (int, error)](#scanUntilBoundary)
+    * [func skipLWSPChar(b []byte) []byte](#skipLWSPChar)
+    * [func testMultipart(t *testing.T, r io.Reader, onlyNewlines bool)](#testMultipart)
+    * [func testMultipartBody(sep string) string](#testMultipartBody)
+    * [func testQuotedPrintableEncoding(t *testing.T, cte string)](#testQuotedPrintableEncoding)
 
 
 ## <a id="const" href="#const">Constants</a>
 
-### <a id="peekBufferSize" href="#peekBufferSize">const peekBufferSize</a>
+```
+tags: [package]
+```
+
+### <a id="boundary" href="#boundary">const boundary</a>
 
 ```
-searchKey: multipart.peekBufferSize
-tags: [private]
+searchKey: multipart.boundary
+tags: [constant string private]
 ```
 
 ```Go
-const peekBufferSize = 4096
+const boundary = `MyBoundary`
 ```
-
-This constant needs to be at least 76 for this package to work correctly. This is because \r\n--separator_of_len_70- would fill the buffer and it wouldn't be safe to consume a single byte from it. 
 
 ### <a id="fileaContents" href="#fileaContents">const fileaContents</a>
 
 ```
 searchKey: multipart.fileaContents
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -148,51 +150,40 @@ const fileaContents = "This is a test file."
 
 ```
 searchKey: multipart.filebContents
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
 const filebContents = "Another test file."
 ```
 
-### <a id="textaValue" href="#textaValue">const textaValue</a>
+### <a id="maxReadThreshold" href="#maxReadThreshold">const maxReadThreshold</a>
 
 ```
-searchKey: multipart.textaValue
-tags: [private]
-```
-
-```Go
-const textaValue = "foo"
-```
-
-### <a id="textbValue" href="#textbValue">const textbValue</a>
-
-```
-searchKey: multipart.textbValue
-tags: [private]
+searchKey: multipart.maxReadThreshold
+tags: [constant number private]
 ```
 
 ```Go
-const textbValue = "bar"
+const maxReadThreshold = 1 << 20
 ```
 
-### <a id="boundary" href="#boundary">const boundary</a>
+### <a id="message" href="#message">const message</a>
 
 ```
-searchKey: multipart.boundary
-tags: [private]
+searchKey: multipart.message
+tags: [constant string private]
 ```
 
 ```Go
-const boundary = `MyBoundary`
+const message = ...
 ```
 
 ### <a id="messageWithFileWithoutName" href="#messageWithFileWithoutName">const messageWithFileWithoutName</a>
 
 ```
 searchKey: multipart.messageWithFileWithoutName
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -203,41 +194,59 @@ const messageWithFileWithoutName = ...
 
 ```
 searchKey: multipart.messageWithTextContentType
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
 const messageWithTextContentType = ...
 ```
 
-### <a id="message" href="#message">const message</a>
+### <a id="peekBufferSize" href="#peekBufferSize">const peekBufferSize</a>
 
 ```
-searchKey: multipart.message
-tags: [private]
-```
-
-```Go
-const message = ...
-```
-
-### <a id="maxReadThreshold" href="#maxReadThreshold">const maxReadThreshold</a>
-
-```
-searchKey: multipart.maxReadThreshold
-tags: [private]
+searchKey: multipart.peekBufferSize
+tags: [constant number private]
 ```
 
 ```Go
-const maxReadThreshold = 1 << 20
+const peekBufferSize = 4096
+```
+
+This constant needs to be at least 76 for this package to work correctly. This is because \r\n--separator_of_len_70- would fill the buffer and it wouldn't be safe to consume a single byte from it. 
+
+### <a id="textaValue" href="#textaValue">const textaValue</a>
+
+```
+searchKey: multipart.textaValue
+tags: [constant string private]
+```
+
+```Go
+const textaValue = "foo"
+```
+
+### <a id="textbValue" href="#textbValue">const textbValue</a>
+
+```
+searchKey: multipart.textbValue
+tags: [constant string private]
+```
+
+```Go
+const textbValue = "bar"
 ```
 
 ## <a id="var" href="#var">Variables</a>
+
+```
+tags: [package]
+```
 
 ### <a id="ErrMessageTooLarge" href="#ErrMessageTooLarge">var ErrMessageTooLarge</a>
 
 ```
 searchKey: multipart.ErrMessageTooLarge
+tags: [variable interface]
 ```
 
 ```Go
@@ -250,29 +259,18 @@ ErrMessageTooLarge is returned by ReadForm if the message form data is too large
 
 ```
 searchKey: multipart.emptyParams
-tags: [private]
+tags: [variable object private]
 ```
 
 ```Go
 var emptyParams = make(map[string]string)
 ```
 
-### <a id="quoteEscaper" href="#quoteEscaper">var quoteEscaper</a>
-
-```
-searchKey: multipart.quoteEscaper
-tags: [private]
-```
-
-```Go
-var quoteEscaper = strings.NewReplacer("\\", "\\\\", `"`, "\\\"")
-```
-
 ### <a id="longLine" href="#longLine">var longLine</a>
 
 ```
 searchKey: multipart.longLine
-tags: [private]
+tags: [variable string private]
 ```
 
 ```Go
@@ -283,46 +281,64 @@ var longLine = strings.Repeat("\n\n\r\r\r\n\r\000", (1<<20)/8)
 
 ```
 searchKey: multipart.parseTests
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
 var parseTests = ...
 ```
 
-## <a id="type" href="#type">Types</a>
-
-### <a id="Form" href="#Form">type Form struct</a>
+### <a id="quoteEscaper" href="#quoteEscaper">var quoteEscaper</a>
 
 ```
-searchKey: multipart.Form
+searchKey: multipart.quoteEscaper
+tags: [variable struct private]
 ```
 
 ```Go
-type Form struct {
-	Value map[string][]string
-	File  map[string][]*FileHeader
+var quoteEscaper = strings.NewReplacer("\\", "\\\\", `"`, "\\\"")
+```
+
+## <a id="type" href="#type">Types</a>
+
+```
+tags: [package]
+```
+
+### <a id="File" href="#File">type File interface</a>
+
+```
+searchKey: multipart.File
+tags: [interface]
+```
+
+```Go
+type File interface {
+	io.Reader
+	io.ReaderAt
+	io.Seeker
+	io.Closer
 }
 ```
 
-Form is a parsed multipart form. Its File parts are stored either in memory or on disk, and are accessible via the *FileHeader's Open method. Its Value parts are stored as strings. Both are keyed by field name. 
+File is an interface to access the file part of a multipart message. Its contents may be either stored in memory or on disk. If stored on disk, the File's underlying concrete type will be an *os.File. 
 
-#### <a id="Form.RemoveAll" href="#Form.RemoveAll">func (f *Form) RemoveAll() error</a>
+#### <a id="testFile" href="#testFile">func testFile(t *testing.T, fh *FileHeader, efn, econtent string) File</a>
 
 ```
-searchKey: multipart.Form.RemoveAll
+searchKey: multipart.testFile
+tags: [method private]
 ```
 
 ```Go
-func (f *Form) RemoveAll() error
+func testFile(t *testing.T, fh *FileHeader, efn, econtent string) File
 ```
-
-RemoveAll removes any temporary files associated with a Form. 
 
 ### <a id="FileHeader" href="#FileHeader">type FileHeader struct</a>
 
 ```
 searchKey: multipart.FileHeader
+tags: [struct]
 ```
 
 ```Go
@@ -342,6 +358,7 @@ A FileHeader describes a file part of a multipart request.
 
 ```
 searchKey: multipart.FileHeader.Open
+tags: [function]
 ```
 
 ```Go
@@ -350,62 +367,40 @@ func (fh *FileHeader) Open() (File, error)
 
 Open opens and returns the FileHeader's associated File. 
 
-### <a id="File" href="#File">type File interface</a>
+### <a id="Form" href="#Form">type Form struct</a>
 
 ```
-searchKey: multipart.File
+searchKey: multipart.Form
+tags: [struct]
 ```
 
 ```Go
-type File interface {
-	io.Reader
-	io.ReaderAt
-	io.Seeker
-	io.Closer
+type Form struct {
+	Value map[string][]string
+	File  map[string][]*FileHeader
 }
 ```
 
-File is an interface to access the file part of a multipart message. Its contents may be either stored in memory or on disk. If stored on disk, the File's underlying concrete type will be an *os.File. 
+Form is a parsed multipart form. Its File parts are stored either in memory or on disk, and are accessible via the *FileHeader's Open method. Its Value parts are stored as strings. Both are keyed by field name. 
 
-#### <a id="testFile" href="#testFile">func testFile(t *testing.T, fh *FileHeader, efn, econtent string) File</a>
-
-```
-searchKey: multipart.testFile
-tags: [private]
-```
-
-```Go
-func testFile(t *testing.T, fh *FileHeader, efn, econtent string) File
-```
-
-### <a id="sectionReadCloser" href="#sectionReadCloser">type sectionReadCloser struct</a>
+#### <a id="Form.RemoveAll" href="#Form.RemoveAll">func (f *Form) RemoveAll() error</a>
 
 ```
-searchKey: multipart.sectionReadCloser
-tags: [private]
+searchKey: multipart.Form.RemoveAll
+tags: [function]
 ```
 
 ```Go
-type sectionReadCloser struct {
-	*io.SectionReader
-}
+func (f *Form) RemoveAll() error
 ```
 
-#### <a id="sectionReadCloser.Close" href="#sectionReadCloser.Close">func (rc sectionReadCloser) Close() error</a>
-
-```
-searchKey: multipart.sectionReadCloser.Close
-tags: [private]
-```
-
-```Go
-func (rc sectionReadCloser) Close() error
-```
+RemoveAll removes any temporary files associated with a Form. 
 
 ### <a id="Part" href="#Part">type Part struct</a>
 
 ```
 searchKey: multipart.Part
+tags: [struct]
 ```
 
 ```Go
@@ -438,29 +433,29 @@ A Part represents a single part in a multipart body.
 
 ```
 searchKey: multipart.newPart
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func newPart(mr *Reader, rawPart bool) (*Part, error)
 ```
 
-#### <a id="Part.FormName" href="#Part.FormName">func (p *Part) FormName() string</a>
+#### <a id="Part.Close" href="#Part.Close">func (p *Part) Close() error</a>
 
 ```
-searchKey: multipart.Part.FormName
+searchKey: multipart.Part.Close
+tags: [function]
 ```
 
 ```Go
-func (p *Part) FormName() string
+func (p *Part) Close() error
 ```
-
-FormName returns the name parameter if p has a Content-Disposition of type "form-data".  Otherwise it returns the empty string. 
 
 #### <a id="Part.FileName" href="#Part.FileName">func (p *Part) FileName() string</a>
 
 ```
 searchKey: multipart.Part.FileName
+tags: [function]
 ```
 
 ```Go
@@ -469,11 +464,37 @@ func (p *Part) FileName() string
 
 FileName returns the filename parameter of the Part's Content-Disposition header. If not empty, the filename is passed through filepath.Base (which is platform dependent) before being returned. 
 
+#### <a id="Part.FormName" href="#Part.FormName">func (p *Part) FormName() string</a>
+
+```
+searchKey: multipart.Part.FormName
+tags: [function]
+```
+
+```Go
+func (p *Part) FormName() string
+```
+
+FormName returns the name parameter if p has a Content-Disposition of type "form-data".  Otherwise it returns the empty string. 
+
+#### <a id="Part.Read" href="#Part.Read">func (p *Part) Read(d []byte) (n int, err error)</a>
+
+```
+searchKey: multipart.Part.Read
+tags: [method]
+```
+
+```Go
+func (p *Part) Read(d []byte) (n int, err error)
+```
+
+Read reads the body of a part, after its headers and before the next part (if any) begins. 
+
 #### <a id="Part.parseContentDisposition" href="#Part.parseContentDisposition">func (p *Part) parseContentDisposition()</a>
 
 ```
 searchKey: multipart.Part.parseContentDisposition
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -484,92 +505,18 @@ func (p *Part) parseContentDisposition()
 
 ```
 searchKey: multipart.Part.populateHeaders
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (bp *Part) populateHeaders() error
 ```
 
-#### <a id="Part.Read" href="#Part.Read">func (p *Part) Read(d []byte) (n int, err error)</a>
-
-```
-searchKey: multipart.Part.Read
-```
-
-```Go
-func (p *Part) Read(d []byte) (n int, err error)
-```
-
-Read reads the body of a part, after its headers and before the next part (if any) begins. 
-
-#### <a id="Part.Close" href="#Part.Close">func (p *Part) Close() error</a>
-
-```
-searchKey: multipart.Part.Close
-```
-
-```Go
-func (p *Part) Close() error
-```
-
-### <a id="stickyErrorReader" href="#stickyErrorReader">type stickyErrorReader struct</a>
-
-```
-searchKey: multipart.stickyErrorReader
-tags: [private]
-```
-
-```Go
-type stickyErrorReader struct {
-	r   io.Reader
-	err error
-}
-```
-
-stickyErrorReader is an io.Reader which never calls Read on its underlying Reader once an error has been seen. (the io.Reader interface's contract promises nothing about the return values of Read calls after an error, yet this package does do multiple Reads after error) 
-
-#### <a id="stickyErrorReader.Read" href="#stickyErrorReader.Read">func (r *stickyErrorReader) Read(p []byte) (n int, _ error)</a>
-
-```
-searchKey: multipart.stickyErrorReader.Read
-tags: [private]
-```
-
-```Go
-func (r *stickyErrorReader) Read(p []byte) (n int, _ error)
-```
-
-### <a id="partReader" href="#partReader">type partReader struct</a>
-
-```
-searchKey: multipart.partReader
-tags: [private]
-```
-
-```Go
-type partReader struct {
-	p *Part
-}
-```
-
-partReader implements io.Reader by reading raw bytes directly from the wrapped *Part, without doing any Transfer-Encoding decoding. 
-
-#### <a id="partReader.Read" href="#partReader.Read">func (pr partReader) Read(d []byte) (int, error)</a>
-
-```
-searchKey: multipart.partReader.Read
-tags: [private]
-```
-
-```Go
-func (pr partReader) Read(d []byte) (int, error)
-```
-
 ### <a id="Reader" href="#Reader">type Reader struct</a>
 
 ```
 searchKey: multipart.Reader
+tags: [struct]
 ```
 
 ```Go
@@ -592,6 +539,7 @@ Reader is an iterator over parts in a MIME multipart body. Reader's underlying p
 
 ```
 searchKey: multipart.NewReader
+tags: [method]
 ```
 
 ```Go
@@ -602,33 +550,11 @@ NewReader creates a new multipart Reader reading from r using the given MIME bou
 
 The boundary is usually obtained from the "boundary" parameter of the message's "Content-Type" header. Use mime.ParseMediaType to parse such headers. 
 
-#### <a id="Reader.ReadForm" href="#Reader.ReadForm">func (r *Reader) ReadForm(maxMemory int64) (*Form, error)</a>
-
-```
-searchKey: multipart.Reader.ReadForm
-```
-
-```Go
-func (r *Reader) ReadForm(maxMemory int64) (*Form, error)
-```
-
-ReadForm parses an entire multipart message whose parts have a Content-Disposition of "form-data". It stores up to maxMemory bytes + 10MB (reserved for non-file parts) in memory. File parts which can't be stored in memory will be stored on disk in temporary files. It returns ErrMessageTooLarge if all non-file parts can't be stored in memory. 
-
-#### <a id="Reader.readForm" href="#Reader.readForm">func (r *Reader) readForm(maxMemory int64) (_ *Form, err error)</a>
-
-```
-searchKey: multipart.Reader.readForm
-tags: [private]
-```
-
-```Go
-func (r *Reader) readForm(maxMemory int64) (_ *Form, err error)
-```
-
 #### <a id="Reader.NextPart" href="#Reader.NextPart">func (r *Reader) NextPart() (*Part, error)</a>
 
 ```
 searchKey: multipart.Reader.NextPart
+tags: [function]
 ```
 
 ```Go
@@ -643,6 +569,7 @@ As a special case, if the "Content-Transfer-Encoding" header has a value of "quo
 
 ```
 searchKey: multipart.Reader.NextRawPart
+tags: [function]
 ```
 
 ```Go
@@ -653,22 +580,35 @@ NextRawPart returns the next part in the multipart or an error. When there are n
 
 Unlike NextPart, it does not have special handling for "Content-Transfer-Encoding: quoted-printable". 
 
-#### <a id="Reader.nextPart" href="#Reader.nextPart">func (r *Reader) nextPart(rawPart bool) (*Part, error)</a>
+#### <a id="Reader.ReadForm" href="#Reader.ReadForm">func (r *Reader) ReadForm(maxMemory int64) (*Form, error)</a>
 
 ```
-searchKey: multipart.Reader.nextPart
-tags: [private]
+searchKey: multipart.Reader.ReadForm
+tags: [method]
 ```
 
 ```Go
-func (r *Reader) nextPart(rawPart bool) (*Part, error)
+func (r *Reader) ReadForm(maxMemory int64) (*Form, error)
+```
+
+ReadForm parses an entire multipart message whose parts have a Content-Disposition of "form-data". It stores up to maxMemory bytes + 10MB (reserved for non-file parts) in memory. File parts which can't be stored in memory will be stored on disk in temporary files. It returns ErrMessageTooLarge if all non-file parts can't be stored in memory. 
+
+#### <a id="Reader.isBoundaryDelimiterLine" href="#Reader.isBoundaryDelimiterLine">func (mr *Reader) isBoundaryDelimiterLine(line []byte) (ret bool)</a>
+
+```
+searchKey: multipart.Reader.isBoundaryDelimiterLine
+tags: [method private]
+```
+
+```Go
+func (mr *Reader) isBoundaryDelimiterLine(line []byte) (ret bool)
 ```
 
 #### <a id="Reader.isFinalBoundary" href="#Reader.isFinalBoundary">func (mr *Reader) isFinalBoundary(line []byte) bool</a>
 
 ```
 searchKey: multipart.Reader.isFinalBoundary
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -677,21 +617,33 @@ func (mr *Reader) isFinalBoundary(line []byte) bool
 
 isFinalBoundary reports whether line is the final boundary line indicating that all parts are over. It matches `^--boundary--[ \t]*(\r\n)?$` 
 
-#### <a id="Reader.isBoundaryDelimiterLine" href="#Reader.isBoundaryDelimiterLine">func (mr *Reader) isBoundaryDelimiterLine(line []byte) (ret bool)</a>
+#### <a id="Reader.nextPart" href="#Reader.nextPart">func (r *Reader) nextPart(rawPart bool) (*Part, error)</a>
 
 ```
-searchKey: multipart.Reader.isBoundaryDelimiterLine
-tags: [private]
+searchKey: multipart.Reader.nextPart
+tags: [method private]
 ```
 
 ```Go
-func (mr *Reader) isBoundaryDelimiterLine(line []byte) (ret bool)
+func (r *Reader) nextPart(rawPart bool) (*Part, error)
+```
+
+#### <a id="Reader.readForm" href="#Reader.readForm">func (r *Reader) readForm(maxMemory int64) (_ *Form, err error)</a>
+
+```
+searchKey: multipart.Reader.readForm
+tags: [method private]
+```
+
+```Go
+func (r *Reader) readForm(maxMemory int64) (_ *Form, err error)
 ```
 
 ### <a id="Writer" href="#Writer">type Writer struct</a>
 
 ```
 searchKey: multipart.Writer
+tags: [struct]
 ```
 
 ```Go
@@ -708,6 +660,7 @@ A Writer generates multipart messages.
 
 ```
 searchKey: multipart.NewWriter
+tags: [method]
 ```
 
 ```Go
@@ -720,6 +673,7 @@ NewWriter returns a new multipart Writer with a random boundary, writing to w.
 
 ```
 searchKey: multipart.Writer.Boundary
+tags: [function]
 ```
 
 ```Go
@@ -728,10 +682,76 @@ func (w *Writer) Boundary() string
 
 Boundary returns the Writer's boundary. 
 
+#### <a id="Writer.Close" href="#Writer.Close">func (w *Writer) Close() error</a>
+
+```
+searchKey: multipart.Writer.Close
+tags: [function]
+```
+
+```Go
+func (w *Writer) Close() error
+```
+
+Close finishes the multipart message and writes the trailing boundary end line to the output. 
+
+#### <a id="Writer.CreateFormField" href="#Writer.CreateFormField">func (w *Writer) CreateFormField(fieldname string) (io.Writer, error)</a>
+
+```
+searchKey: multipart.Writer.CreateFormField
+tags: [method]
+```
+
+```Go
+func (w *Writer) CreateFormField(fieldname string) (io.Writer, error)
+```
+
+CreateFormField calls CreatePart with a header using the given field name. 
+
+#### <a id="Writer.CreateFormFile" href="#Writer.CreateFormFile">func (w *Writer) CreateFormFile(fieldname, filename string) (io.Writer, error)</a>
+
+```
+searchKey: multipart.Writer.CreateFormFile
+tags: [method]
+```
+
+```Go
+func (w *Writer) CreateFormFile(fieldname, filename string) (io.Writer, error)
+```
+
+CreateFormFile is a convenience wrapper around CreatePart. It creates a new form-data header with the provided field name and file name. 
+
+#### <a id="Writer.CreatePart" href="#Writer.CreatePart">func (w *Writer) CreatePart(header textproto.MIMEHeader) (io.Writer, error)</a>
+
+```
+searchKey: multipart.Writer.CreatePart
+tags: [method]
+```
+
+```Go
+func (w *Writer) CreatePart(header textproto.MIMEHeader) (io.Writer, error)
+```
+
+CreatePart creates a new multipart section with the provided header. The body of the part should be written to the returned Writer. After calling CreatePart, any previous part may no longer be written to. 
+
+#### <a id="Writer.FormDataContentType" href="#Writer.FormDataContentType">func (w *Writer) FormDataContentType() string</a>
+
+```
+searchKey: multipart.Writer.FormDataContentType
+tags: [function]
+```
+
+```Go
+func (w *Writer) FormDataContentType() string
+```
+
+FormDataContentType returns the Content-Type for an HTTP multipart/form-data with this Writer's Boundary. 
+
 #### <a id="Writer.SetBoundary" href="#Writer.SetBoundary">func (w *Writer) SetBoundary(boundary string) error</a>
 
 ```
 searchKey: multipart.Writer.SetBoundary
+tags: [method]
 ```
 
 ```Go
@@ -742,58 +762,11 @@ SetBoundary overrides the Writer's default randomly-generated boundary separator
 
 SetBoundary must be called before any parts are created, may only contain certain ASCII characters, and must be non-empty and at most 70 bytes long. 
 
-#### <a id="Writer.FormDataContentType" href="#Writer.FormDataContentType">func (w *Writer) FormDataContentType() string</a>
-
-```
-searchKey: multipart.Writer.FormDataContentType
-```
-
-```Go
-func (w *Writer) FormDataContentType() string
-```
-
-FormDataContentType returns the Content-Type for an HTTP multipart/form-data with this Writer's Boundary. 
-
-#### <a id="Writer.CreatePart" href="#Writer.CreatePart">func (w *Writer) CreatePart(header textproto.MIMEHeader) (io.Writer, error)</a>
-
-```
-searchKey: multipart.Writer.CreatePart
-```
-
-```Go
-func (w *Writer) CreatePart(header textproto.MIMEHeader) (io.Writer, error)
-```
-
-CreatePart creates a new multipart section with the provided header. The body of the part should be written to the returned Writer. After calling CreatePart, any previous part may no longer be written to. 
-
-#### <a id="Writer.CreateFormFile" href="#Writer.CreateFormFile">func (w *Writer) CreateFormFile(fieldname, filename string) (io.Writer, error)</a>
-
-```
-searchKey: multipart.Writer.CreateFormFile
-```
-
-```Go
-func (w *Writer) CreateFormFile(fieldname, filename string) (io.Writer, error)
-```
-
-CreateFormFile is a convenience wrapper around CreatePart. It creates a new form-data header with the provided field name and file name. 
-
-#### <a id="Writer.CreateFormField" href="#Writer.CreateFormField">func (w *Writer) CreateFormField(fieldname string) (io.Writer, error)</a>
-
-```
-searchKey: multipart.Writer.CreateFormField
-```
-
-```Go
-func (w *Writer) CreateFormField(fieldname string) (io.Writer, error)
-```
-
-CreateFormField calls CreatePart with a header using the given field name. 
-
 #### <a id="Writer.WriteField" href="#Writer.WriteField">func (w *Writer) WriteField(fieldname, value string) error</a>
 
 ```
 searchKey: multipart.Writer.WriteField
+tags: [method]
 ```
 
 ```Go
@@ -802,60 +775,11 @@ func (w *Writer) WriteField(fieldname, value string) error
 
 WriteField calls CreateFormField and then writes the given value. 
 
-#### <a id="Writer.Close" href="#Writer.Close">func (w *Writer) Close() error</a>
-
-```
-searchKey: multipart.Writer.Close
-```
-
-```Go
-func (w *Writer) Close() error
-```
-
-Close finishes the multipart message and writes the trailing boundary end line to the output. 
-
-### <a id="part" href="#part">type part struct</a>
-
-```
-searchKey: multipart.part
-tags: [private]
-```
-
-```Go
-type part struct {
-	mw     *Writer
-	closed bool
-	we     error // last error that occurred writing
-}
-```
-
-#### <a id="part.close" href="#part.close">func (p *part) close() error</a>
-
-```
-searchKey: multipart.part.close
-tags: [private]
-```
-
-```Go
-func (p *part) close() error
-```
-
-#### <a id="part.Write" href="#part.Write">func (p *part) Write(d []byte) (n int, err error)</a>
-
-```
-searchKey: multipart.part.Write
-tags: [private]
-```
-
-```Go
-func (p *part) Write(d []byte) (n int, err error)
-```
-
 ### <a id="failOnReadAfterErrorReader" href="#failOnReadAfterErrorReader">type failOnReadAfterErrorReader struct</a>
 
 ```
 searchKey: multipart.failOnReadAfterErrorReader
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -872,92 +796,18 @@ failOnReadAfterErrorReader is an io.Reader wrapping r. It fails t if any Read is
 
 ```
 searchKey: multipart.failOnReadAfterErrorReader.Read
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (r *failOnReadAfterErrorReader) Read(p []byte) (n int, err error)
 ```
 
-### <a id="maliciousReader" href="#maliciousReader">type maliciousReader struct</a>
-
-```
-searchKey: multipart.maliciousReader
-tags: [private]
-```
-
-```Go
-type maliciousReader struct {
-	t *testing.T
-	n int
-}
-```
-
-#### <a id="maliciousReader.Read" href="#maliciousReader.Read">func (mr *maliciousReader) Read(b []byte) (n int, err error)</a>
-
-```
-searchKey: multipart.maliciousReader.Read
-tags: [private]
-```
-
-```Go
-func (mr *maliciousReader) Read(b []byte) (n int, err error)
-```
-
-### <a id="slowReader" href="#slowReader">type slowReader struct</a>
-
-```
-searchKey: multipart.slowReader
-tags: [private]
-```
-
-```Go
-type slowReader struct {
-	r io.Reader
-}
-```
-
-#### <a id="slowReader.Read" href="#slowReader.Read">func (s *slowReader) Read(p []byte) (int, error)</a>
-
-```
-searchKey: multipart.slowReader.Read
-tags: [private]
-```
-
-```Go
-func (s *slowReader) Read(p []byte) (int, error)
-```
-
-### <a id="sentinelReader" href="#sentinelReader">type sentinelReader struct</a>
-
-```
-searchKey: multipart.sentinelReader
-tags: [private]
-```
-
-```Go
-type sentinelReader struct {
-	// done is closed when this reader is read from.
-	done chan struct{}
-}
-```
-
-#### <a id="sentinelReader.Read" href="#sentinelReader.Read">func (s *sentinelReader) Read([]byte) (int, error)</a>
-
-```
-searchKey: multipart.sentinelReader.Read
-tags: [private]
-```
-
-```Go
-func (s *sentinelReader) Read([]byte) (int, error)
-```
-
 ### <a id="headerBody" href="#headerBody">type headerBody struct</a>
 
 ```
 searchKey: multipart.headerBody
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -971,18 +821,43 @@ type headerBody struct {
 
 ```
 searchKey: multipart.formData
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func formData(key, value string) headerBody
 ```
 
+### <a id="maliciousReader" href="#maliciousReader">type maliciousReader struct</a>
+
+```
+searchKey: multipart.maliciousReader
+tags: [struct private]
+```
+
+```Go
+type maliciousReader struct {
+	t *testing.T
+	n int
+}
+```
+
+#### <a id="maliciousReader.Read" href="#maliciousReader.Read">func (mr *maliciousReader) Read(b []byte) (n int, err error)</a>
+
+```
+searchKey: multipart.maliciousReader.Read
+tags: [method private]
+```
+
+```Go
+func (mr *maliciousReader) Read(b []byte) (n int, err error)
+```
+
 ### <a id="parseTest" href="#parseTest">type parseTest struct</a>
 
 ```
 searchKey: multipart.parseTest
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -997,33 +872,514 @@ type parseTest struct {
 
 ```
 searchKey: multipart.roundTripParseTest
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func roundTripParseTest() parseTest
 ```
 
-## <a id="func" href="#func">Functions</a>
-
-### <a id="scanUntilBoundary" href="#scanUntilBoundary">func scanUntilBoundary(buf, dashBoundary, nlDashBoundary []byte, total int64, readErr error) (int, error)</a>
+### <a id="part" href="#part">type part struct</a>
 
 ```
-searchKey: multipart.scanUntilBoundary
-tags: [private]
+searchKey: multipart.part
+tags: [struct private]
 ```
 
 ```Go
-func scanUntilBoundary(buf, dashBoundary, nlDashBoundary []byte, total int64, readErr error) (int, error)
+type part struct {
+	mw     *Writer
+	closed bool
+	we     error // last error that occurred writing
+}
 ```
 
-scanUntilBoundary scans buf to identify how much of it can be safely returned as part of the Part body. dashBoundary is "--boundary". nlDashBoundary is "\r\n--boundary" or "\n--boundary", depending on what mode we are in. The comments below (and the name) assume "\n--boundary", but either is accepted. total is the number of bytes read out so far. If total == 0, then a leading "--boundary" is recognized. readErr is the read error, if any, that followed reading the bytes in buf. scanUntilBoundary returns the number of data bytes from buf that can be returned as part of the Part body and also the error to return (if any) once those data bytes are done. 
+#### <a id="part.Write" href="#part.Write">func (p *part) Write(d []byte) (n int, err error)</a>
+
+```
+searchKey: multipart.part.Write
+tags: [method private]
+```
+
+```Go
+func (p *part) Write(d []byte) (n int, err error)
+```
+
+#### <a id="part.close" href="#part.close">func (p *part) close() error</a>
+
+```
+searchKey: multipart.part.close
+tags: [function private]
+```
+
+```Go
+func (p *part) close() error
+```
+
+### <a id="partReader" href="#partReader">type partReader struct</a>
+
+```
+searchKey: multipart.partReader
+tags: [struct private]
+```
+
+```Go
+type partReader struct {
+	p *Part
+}
+```
+
+partReader implements io.Reader by reading raw bytes directly from the wrapped *Part, without doing any Transfer-Encoding decoding. 
+
+#### <a id="partReader.Read" href="#partReader.Read">func (pr partReader) Read(d []byte) (int, error)</a>
+
+```
+searchKey: multipart.partReader.Read
+tags: [method private]
+```
+
+```Go
+func (pr partReader) Read(d []byte) (int, error)
+```
+
+### <a id="sectionReadCloser" href="#sectionReadCloser">type sectionReadCloser struct</a>
+
+```
+searchKey: multipart.sectionReadCloser
+tags: [struct private]
+```
+
+```Go
+type sectionReadCloser struct {
+	*io.SectionReader
+}
+```
+
+#### <a id="sectionReadCloser.Close" href="#sectionReadCloser.Close">func (rc sectionReadCloser) Close() error</a>
+
+```
+searchKey: multipart.sectionReadCloser.Close
+tags: [function private]
+```
+
+```Go
+func (rc sectionReadCloser) Close() error
+```
+
+### <a id="sentinelReader" href="#sentinelReader">type sentinelReader struct</a>
+
+```
+searchKey: multipart.sentinelReader
+tags: [struct private]
+```
+
+```Go
+type sentinelReader struct {
+	// done is closed when this reader is read from.
+	done chan struct{}
+}
+```
+
+#### <a id="sentinelReader.Read" href="#sentinelReader.Read">func (s *sentinelReader) Read([]byte) (int, error)</a>
+
+```
+searchKey: multipart.sentinelReader.Read
+tags: [method private]
+```
+
+```Go
+func (s *sentinelReader) Read([]byte) (int, error)
+```
+
+### <a id="slowReader" href="#slowReader">type slowReader struct</a>
+
+```
+searchKey: multipart.slowReader
+tags: [struct private]
+```
+
+```Go
+type slowReader struct {
+	r io.Reader
+}
+```
+
+#### <a id="slowReader.Read" href="#slowReader.Read">func (s *slowReader) Read(p []byte) (int, error)</a>
+
+```
+searchKey: multipart.slowReader.Read
+tags: [method private]
+```
+
+```Go
+func (s *slowReader) Read(p []byte) (int, error)
+```
+
+### <a id="stickyErrorReader" href="#stickyErrorReader">type stickyErrorReader struct</a>
+
+```
+searchKey: multipart.stickyErrorReader
+tags: [struct private]
+```
+
+```Go
+type stickyErrorReader struct {
+	r   io.Reader
+	err error
+}
+```
+
+stickyErrorReader is an io.Reader which never calls Read on its underlying Reader once an error has been seen. (the io.Reader interface's contract promises nothing about the return values of Read calls after an error, yet this package does do multiple Reads after error) 
+
+#### <a id="stickyErrorReader.Read" href="#stickyErrorReader.Read">func (r *stickyErrorReader) Read(p []byte) (n int, _ error)</a>
+
+```
+searchKey: multipart.stickyErrorReader.Read
+tags: [method private]
+```
+
+```Go
+func (r *stickyErrorReader) Read(p []byte) (n int, _ error)
+```
+
+## <a id="func" href="#func">Functions</a>
+
+```
+tags: [package]
+```
+
+### <a id="TestBoundaryLine" href="#TestBoundaryLine">func TestBoundaryLine(t *testing.T)</a>
+
+```
+searchKey: multipart.TestBoundaryLine
+tags: [method private test]
+```
+
+```Go
+func TestBoundaryLine(t *testing.T)
+```
+
+### <a id="TestLineContinuation" href="#TestLineContinuation">func TestLineContinuation(t *testing.T)</a>
+
+```
+searchKey: multipart.TestLineContinuation
+tags: [method private test]
+```
+
+```Go
+func TestLineContinuation(t *testing.T)
+```
+
+### <a id="TestLineLimit" href="#TestLineLimit">func TestLineLimit(t *testing.T)</a>
+
+```
+searchKey: multipart.TestLineLimit
+tags: [method private test]
+```
+
+```Go
+func TestLineLimit(t *testing.T)
+```
+
+### <a id="TestMultipart" href="#TestMultipart">func TestMultipart(t *testing.T)</a>
+
+```
+searchKey: multipart.TestMultipart
+tags: [method private test]
+```
+
+```Go
+func TestMultipart(t *testing.T)
+```
+
+### <a id="TestMultipartOnlyNewlines" href="#TestMultipartOnlyNewlines">func TestMultipartOnlyNewlines(t *testing.T)</a>
+
+```
+searchKey: multipart.TestMultipartOnlyNewlines
+tags: [method private test]
+```
+
+```Go
+func TestMultipartOnlyNewlines(t *testing.T)
+```
+
+### <a id="TestMultipartSlowInput" href="#TestMultipartSlowInput">func TestMultipartSlowInput(t *testing.T)</a>
+
+```
+searchKey: multipart.TestMultipartSlowInput
+tags: [method private test]
+```
+
+```Go
+func TestMultipartSlowInput(t *testing.T)
+```
+
+### <a id="TestMultipartStreamReadahead" href="#TestMultipartStreamReadahead">func TestMultipartStreamReadahead(t *testing.T)</a>
+
+```
+searchKey: multipart.TestMultipartStreamReadahead
+tags: [method private test]
+```
+
+```Go
+func TestMultipartStreamReadahead(t *testing.T)
+```
+
+TestMultipartStreamReadahead tests that PartReader does not block on reading past the end of a part, ensuring that it can be used on a stream like multipart/x-mixed-replace. See golang.org/issue/15431 
+
+### <a id="TestMultipartTruncated" href="#TestMultipartTruncated">func TestMultipartTruncated(t *testing.T)</a>
+
+```
+searchKey: multipart.TestMultipartTruncated
+tags: [method private test]
+```
+
+```Go
+func TestMultipartTruncated(t *testing.T)
+```
+
+### <a id="TestNameAccessors" href="#TestNameAccessors">func TestNameAccessors(t *testing.T)</a>
+
+```
+searchKey: multipart.TestNameAccessors
+tags: [method private test]
+```
+
+```Go
+func TestNameAccessors(t *testing.T)
+```
+
+### <a id="TestNested" href="#TestNested">func TestNested(t *testing.T)</a>
+
+```
+searchKey: multipart.TestNested
+tags: [method private test]
+```
+
+```Go
+func TestNested(t *testing.T)
+```
+
+Test parsing an image attachment from gmail, which previously failed. 
+
+### <a id="TestNoBoundary" href="#TestNoBoundary">func TestNoBoundary(t *testing.T)</a>
+
+```
+searchKey: multipart.TestNoBoundary
+tags: [method private test]
+```
+
+```Go
+func TestNoBoundary(t *testing.T)
+```
+
+### <a id="TestParse" href="#TestParse">func TestParse(t *testing.T)</a>
+
+```
+searchKey: multipart.TestParse
+tags: [method private test]
+```
+
+```Go
+func TestParse(t *testing.T)
+```
+
+### <a id="TestParseAllSizes" href="#TestParseAllSizes">func TestParseAllSizes(t *testing.T)</a>
+
+```
+searchKey: multipart.TestParseAllSizes
+tags: [method private test]
+```
+
+```Go
+func TestParseAllSizes(t *testing.T)
+```
+
+### <a id="TestQuotedPrintableEncoding" href="#TestQuotedPrintableEncoding">func TestQuotedPrintableEncoding(t *testing.T)</a>
+
+```
+searchKey: multipart.TestQuotedPrintableEncoding
+tags: [method private test]
+```
+
+```Go
+func TestQuotedPrintableEncoding(t *testing.T)
+```
+
+### <a id="TestRawPart" href="#TestRawPart">func TestRawPart(t *testing.T)</a>
+
+```
+searchKey: multipart.TestRawPart
+tags: [method private test]
+```
+
+```Go
+func TestRawPart(t *testing.T)
+```
+
+### <a id="TestReadForm" href="#TestReadForm">func TestReadForm(t *testing.T)</a>
+
+```
+searchKey: multipart.TestReadForm
+tags: [method private test]
+```
+
+```Go
+func TestReadForm(t *testing.T)
+```
+
+### <a id="TestReadFormMaxMemoryOverflow" href="#TestReadFormMaxMemoryOverflow">func TestReadFormMaxMemoryOverflow(t *testing.T)</a>
+
+```
+searchKey: multipart.TestReadFormMaxMemoryOverflow
+tags: [method private test]
+```
+
+```Go
+func TestReadFormMaxMemoryOverflow(t *testing.T)
+```
+
+Issue 40430: Handle ReadForm(math.MaxInt64) 
+
+### <a id="TestReadFormWithNamelessFile" href="#TestReadFormWithNamelessFile">func TestReadFormWithNamelessFile(t *testing.T)</a>
+
+```
+searchKey: multipart.TestReadFormWithNamelessFile
+tags: [method private test]
+```
+
+```Go
+func TestReadFormWithNamelessFile(t *testing.T)
+```
+
+### <a id="TestReadFormWithTextContentType" href="#TestReadFormWithTextContentType">func TestReadFormWithTextContentType(t *testing.T)</a>
+
+```
+searchKey: multipart.TestReadFormWithTextContentType
+tags: [method private test]
+```
+
+```Go
+func TestReadFormWithTextContentType(t *testing.T)
+```
+
+### <a id="TestReadForm_NoReadAfterEOF" href="#TestReadForm_NoReadAfterEOF">func TestReadForm_NoReadAfterEOF(t *testing.T)</a>
+
+```
+searchKey: multipart.TestReadForm_NoReadAfterEOF
+tags: [method private test]
+```
+
+```Go
+func TestReadForm_NoReadAfterEOF(t *testing.T)
+```
+
+### <a id="TestReadForm_NonFileMaxMemory" href="#TestReadForm_NonFileMaxMemory">func TestReadForm_NonFileMaxMemory(t *testing.T)</a>
+
+```
+searchKey: multipart.TestReadForm_NonFileMaxMemory
+tags: [method private test]
+```
+
+```Go
+func TestReadForm_NonFileMaxMemory(t *testing.T)
+```
+
+TestReadForm_NonFileMaxMemory asserts that the ReadForm maxMemory limit is applied while processing non-file form data as well as file form data. 
+
+### <a id="TestSortedHeader" href="#TestSortedHeader">func TestSortedHeader(t *testing.T)</a>
+
+```
+searchKey: multipart.TestSortedHeader
+tags: [method private test]
+```
+
+```Go
+func TestSortedHeader(t *testing.T)
+```
+
+### <a id="TestVariousTextLineEndings" href="#TestVariousTextLineEndings">func TestVariousTextLineEndings(t *testing.T)</a>
+
+```
+searchKey: multipart.TestVariousTextLineEndings
+tags: [method private test]
+```
+
+```Go
+func TestVariousTextLineEndings(t *testing.T)
+```
+
+### <a id="TestWriter" href="#TestWriter">func TestWriter(t *testing.T)</a>
+
+```
+searchKey: multipart.TestWriter
+tags: [method private test]
+```
+
+```Go
+func TestWriter(t *testing.T)
+```
+
+### <a id="TestWriterBoundaryGoroutines" href="#TestWriterBoundaryGoroutines">func TestWriterBoundaryGoroutines(t *testing.T)</a>
+
+```
+searchKey: multipart.TestWriterBoundaryGoroutines
+tags: [method private test]
+```
+
+```Go
+func TestWriterBoundaryGoroutines(t *testing.T)
+```
+
+### <a id="TestWriterSetBoundary" href="#TestWriterSetBoundary">func TestWriterSetBoundary(t *testing.T)</a>
+
+```
+searchKey: multipart.TestWriterSetBoundary
+tags: [method private test]
+```
+
+```Go
+func TestWriterSetBoundary(t *testing.T)
+```
+
+### <a id="escapeQuotes" href="#escapeQuotes">func escapeQuotes(s string) string</a>
+
+```
+searchKey: multipart.escapeQuotes
+tags: [method private]
+```
+
+```Go
+func escapeQuotes(s string) string
+```
+
+### <a id="escapeString" href="#escapeString">func escapeString(v string) string</a>
+
+```
+searchKey: multipart.escapeString
+tags: [method private]
+```
+
+```Go
+func escapeString(v string) string
+```
+
+### <a id="expectEq" href="#expectEq">func expectEq(t *testing.T, expected, actual, what string)</a>
+
+```
+searchKey: multipart.expectEq
+tags: [method private]
+```
+
+```Go
+func expectEq(t *testing.T, expected, actual, what string)
+```
 
 ### <a id="matchAfterPrefix" href="#matchAfterPrefix">func matchAfterPrefix(buf, prefix []byte, readErr error) int</a>
 
 ```
 searchKey: multipart.matchAfterPrefix
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1034,11 +1390,46 @@ matchAfterPrefix checks whether buf should be considered to match the boundary. 
 
 matchAfterPrefix returns +1 if the buffer does match the boundary, meaning the prefix is followed by a dash, space, tab, cr, nl, or end of input. It returns -1 if the buffer definitely does NOT match the boundary, meaning the prefix is followed by some other character. For example, "--foobar" does not match "--foo". It returns 0 more input needs to be read to make the decision, meaning that len(buf) == len(prefix) and readErr == nil. 
 
+### <a id="partsFromReader" href="#partsFromReader">func partsFromReader(r *Reader) ([]headerBody, error)</a>
+
+```
+searchKey: multipart.partsFromReader
+tags: [method private]
+```
+
+```Go
+func partsFromReader(r *Reader) ([]headerBody, error)
+```
+
+### <a id="randomBoundary" href="#randomBoundary">func randomBoundary() string</a>
+
+```
+searchKey: multipart.randomBoundary
+tags: [function private]
+```
+
+```Go
+func randomBoundary() string
+```
+
+### <a id="scanUntilBoundary" href="#scanUntilBoundary">func scanUntilBoundary(buf, dashBoundary, nlDashBoundary []byte, total int64, readErr error) (int, error)</a>
+
+```
+searchKey: multipart.scanUntilBoundary
+tags: [method private]
+```
+
+```Go
+func scanUntilBoundary(buf, dashBoundary, nlDashBoundary []byte, total int64, readErr error) (int, error)
+```
+
+scanUntilBoundary scans buf to identify how much of it can be safely returned as part of the Part body. dashBoundary is "--boundary". nlDashBoundary is "\r\n--boundary" or "\n--boundary", depending on what mode we are in. The comments below (and the name) assume "\n--boundary", but either is accepted. total is the number of bytes read out so far. If total == 0, then a leading "--boundary" is recognized. readErr is the read error, if any, that followed reading the bytes in buf. scanUntilBoundary returns the number of data bytes from buf that can be returned as part of the Part body and also the error to return (if any) once those data bytes are done. 
+
 ### <a id="skipLWSPChar" href="#skipLWSPChar">func skipLWSPChar(b []byte) []byte</a>
 
 ```
 searchKey: multipart.skipLWSPChar
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1051,385 +1442,36 @@ skipLWSPChar returns b with leading spaces and tabs removed. RFC 822 defines:
 LWSP-char = SPACE / HTAB
 
 ```
-### <a id="randomBoundary" href="#randomBoundary">func randomBoundary() string</a>
-
-```
-searchKey: multipart.randomBoundary
-tags: [private]
-```
-
-```Go
-func randomBoundary() string
-```
-
-### <a id="escapeQuotes" href="#escapeQuotes">func escapeQuotes(s string) string</a>
-
-```
-searchKey: multipart.escapeQuotes
-tags: [private]
-```
-
-```Go
-func escapeQuotes(s string) string
-```
-
-### <a id="TestReadForm" href="#TestReadForm">func TestReadForm(t *testing.T)</a>
-
-```
-searchKey: multipart.TestReadForm
-tags: [private]
-```
-
-```Go
-func TestReadForm(t *testing.T)
-```
-
-### <a id="TestReadFormWithNamelessFile" href="#TestReadFormWithNamelessFile">func TestReadFormWithNamelessFile(t *testing.T)</a>
-
-```
-searchKey: multipart.TestReadFormWithNamelessFile
-tags: [private]
-```
-
-```Go
-func TestReadFormWithNamelessFile(t *testing.T)
-```
-
-### <a id="TestReadFormMaxMemoryOverflow" href="#TestReadFormMaxMemoryOverflow">func TestReadFormMaxMemoryOverflow(t *testing.T)</a>
-
-```
-searchKey: multipart.TestReadFormMaxMemoryOverflow
-tags: [private]
-```
-
-```Go
-func TestReadFormMaxMemoryOverflow(t *testing.T)
-```
-
-Issue 40430: Handle ReadForm(math.MaxInt64) 
-
-### <a id="TestReadFormWithTextContentType" href="#TestReadFormWithTextContentType">func TestReadFormWithTextContentType(t *testing.T)</a>
-
-```
-searchKey: multipart.TestReadFormWithTextContentType
-tags: [private]
-```
-
-```Go
-func TestReadFormWithTextContentType(t *testing.T)
-```
-
-### <a id="TestReadForm_NoReadAfterEOF" href="#TestReadForm_NoReadAfterEOF">func TestReadForm_NoReadAfterEOF(t *testing.T)</a>
-
-```
-searchKey: multipart.TestReadForm_NoReadAfterEOF
-tags: [private]
-```
-
-```Go
-func TestReadForm_NoReadAfterEOF(t *testing.T)
-```
-
-### <a id="TestReadForm_NonFileMaxMemory" href="#TestReadForm_NonFileMaxMemory">func TestReadForm_NonFileMaxMemory(t *testing.T)</a>
-
-```
-searchKey: multipart.TestReadForm_NonFileMaxMemory
-tags: [private]
-```
-
-```Go
-func TestReadForm_NonFileMaxMemory(t *testing.T)
-```
-
-TestReadForm_NonFileMaxMemory asserts that the ReadForm maxMemory limit is applied while processing non-file form data as well as file form data. 
-
-### <a id="TestBoundaryLine" href="#TestBoundaryLine">func TestBoundaryLine(t *testing.T)</a>
-
-```
-searchKey: multipart.TestBoundaryLine
-tags: [private]
-```
-
-```Go
-func TestBoundaryLine(t *testing.T)
-```
-
-### <a id="escapeString" href="#escapeString">func escapeString(v string) string</a>
-
-```
-searchKey: multipart.escapeString
-tags: [private]
-```
-
-```Go
-func escapeString(v string) string
-```
-
-### <a id="expectEq" href="#expectEq">func expectEq(t *testing.T, expected, actual, what string)</a>
-
-```
-searchKey: multipart.expectEq
-tags: [private]
-```
-
-```Go
-func expectEq(t *testing.T, expected, actual, what string)
-```
-
-### <a id="TestNameAccessors" href="#TestNameAccessors">func TestNameAccessors(t *testing.T)</a>
-
-```
-searchKey: multipart.TestNameAccessors
-tags: [private]
-```
-
-```Go
-func TestNameAccessors(t *testing.T)
-```
-
-### <a id="testMultipartBody" href="#testMultipartBody">func testMultipartBody(sep string) string</a>
-
-```
-searchKey: multipart.testMultipartBody
-tags: [private]
-```
-
-```Go
-func testMultipartBody(sep string) string
-```
-
-### <a id="TestMultipart" href="#TestMultipart">func TestMultipart(t *testing.T)</a>
-
-```
-searchKey: multipart.TestMultipart
-tags: [private]
-```
-
-```Go
-func TestMultipart(t *testing.T)
-```
-
-### <a id="TestMultipartOnlyNewlines" href="#TestMultipartOnlyNewlines">func TestMultipartOnlyNewlines(t *testing.T)</a>
-
-```
-searchKey: multipart.TestMultipartOnlyNewlines
-tags: [private]
-```
-
-```Go
-func TestMultipartOnlyNewlines(t *testing.T)
-```
-
-### <a id="TestMultipartSlowInput" href="#TestMultipartSlowInput">func TestMultipartSlowInput(t *testing.T)</a>
-
-```
-searchKey: multipart.TestMultipartSlowInput
-tags: [private]
-```
-
-```Go
-func TestMultipartSlowInput(t *testing.T)
-```
-
 ### <a id="testMultipart" href="#testMultipart">func testMultipart(t *testing.T, r io.Reader, onlyNewlines bool)</a>
 
 ```
 searchKey: multipart.testMultipart
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func testMultipart(t *testing.T, r io.Reader, onlyNewlines bool)
 ```
 
-### <a id="TestVariousTextLineEndings" href="#TestVariousTextLineEndings">func TestVariousTextLineEndings(t *testing.T)</a>
+### <a id="testMultipartBody" href="#testMultipartBody">func testMultipartBody(sep string) string</a>
 
 ```
-searchKey: multipart.TestVariousTextLineEndings
-tags: [private]
-```
-
-```Go
-func TestVariousTextLineEndings(t *testing.T)
-```
-
-### <a id="TestLineLimit" href="#TestLineLimit">func TestLineLimit(t *testing.T)</a>
-
-```
-searchKey: multipart.TestLineLimit
-tags: [private]
+searchKey: multipart.testMultipartBody
+tags: [method private]
 ```
 
 ```Go
-func TestLineLimit(t *testing.T)
-```
-
-### <a id="TestMultipartTruncated" href="#TestMultipartTruncated">func TestMultipartTruncated(t *testing.T)</a>
-
-```
-searchKey: multipart.TestMultipartTruncated
-tags: [private]
-```
-
-```Go
-func TestMultipartTruncated(t *testing.T)
-```
-
-### <a id="TestMultipartStreamReadahead" href="#TestMultipartStreamReadahead">func TestMultipartStreamReadahead(t *testing.T)</a>
-
-```
-searchKey: multipart.TestMultipartStreamReadahead
-tags: [private]
-```
-
-```Go
-func TestMultipartStreamReadahead(t *testing.T)
-```
-
-TestMultipartStreamReadahead tests that PartReader does not block on reading past the end of a part, ensuring that it can be used on a stream like multipart/x-mixed-replace. See golang.org/issue/15431 
-
-### <a id="TestLineContinuation" href="#TestLineContinuation">func TestLineContinuation(t *testing.T)</a>
-
-```
-searchKey: multipart.TestLineContinuation
-tags: [private]
-```
-
-```Go
-func TestLineContinuation(t *testing.T)
-```
-
-### <a id="TestQuotedPrintableEncoding" href="#TestQuotedPrintableEncoding">func TestQuotedPrintableEncoding(t *testing.T)</a>
-
-```
-searchKey: multipart.TestQuotedPrintableEncoding
-tags: [private]
-```
-
-```Go
-func TestQuotedPrintableEncoding(t *testing.T)
+func testMultipartBody(sep string) string
 ```
 
 ### <a id="testQuotedPrintableEncoding" href="#testQuotedPrintableEncoding">func testQuotedPrintableEncoding(t *testing.T, cte string)</a>
 
 ```
 searchKey: multipart.testQuotedPrintableEncoding
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func testQuotedPrintableEncoding(t *testing.T, cte string)
-```
-
-### <a id="TestRawPart" href="#TestRawPart">func TestRawPart(t *testing.T)</a>
-
-```
-searchKey: multipart.TestRawPart
-tags: [private]
-```
-
-```Go
-func TestRawPart(t *testing.T)
-```
-
-### <a id="TestNested" href="#TestNested">func TestNested(t *testing.T)</a>
-
-```
-searchKey: multipart.TestNested
-tags: [private]
-```
-
-```Go
-func TestNested(t *testing.T)
-```
-
-Test parsing an image attachment from gmail, which previously failed. 
-
-### <a id="TestParse" href="#TestParse">func TestParse(t *testing.T)</a>
-
-```
-searchKey: multipart.TestParse
-tags: [private]
-```
-
-```Go
-func TestParse(t *testing.T)
-```
-
-### <a id="partsFromReader" href="#partsFromReader">func partsFromReader(r *Reader) ([]headerBody, error)</a>
-
-```
-searchKey: multipart.partsFromReader
-tags: [private]
-```
-
-```Go
-func partsFromReader(r *Reader) ([]headerBody, error)
-```
-
-### <a id="TestParseAllSizes" href="#TestParseAllSizes">func TestParseAllSizes(t *testing.T)</a>
-
-```
-searchKey: multipart.TestParseAllSizes
-tags: [private]
-```
-
-```Go
-func TestParseAllSizes(t *testing.T)
-```
-
-### <a id="TestNoBoundary" href="#TestNoBoundary">func TestNoBoundary(t *testing.T)</a>
-
-```
-searchKey: multipart.TestNoBoundary
-tags: [private]
-```
-
-```Go
-func TestNoBoundary(t *testing.T)
-```
-
-### <a id="TestWriter" href="#TestWriter">func TestWriter(t *testing.T)</a>
-
-```
-searchKey: multipart.TestWriter
-tags: [private]
-```
-
-```Go
-func TestWriter(t *testing.T)
-```
-
-### <a id="TestWriterSetBoundary" href="#TestWriterSetBoundary">func TestWriterSetBoundary(t *testing.T)</a>
-
-```
-searchKey: multipart.TestWriterSetBoundary
-tags: [private]
-```
-
-```Go
-func TestWriterSetBoundary(t *testing.T)
-```
-
-### <a id="TestWriterBoundaryGoroutines" href="#TestWriterBoundaryGoroutines">func TestWriterBoundaryGoroutines(t *testing.T)</a>
-
-```
-searchKey: multipart.TestWriterBoundaryGoroutines
-tags: [private]
-```
-
-```Go
-func TestWriterBoundaryGoroutines(t *testing.T)
-```
-
-### <a id="TestSortedHeader" href="#TestSortedHeader">func TestSortedHeader(t *testing.T)</a>
-
-```
-searchKey: multipart.TestSortedHeader
-tags: [private]
-```
-
-```Go
-func TestSortedHeader(t *testing.T)
 ```
 

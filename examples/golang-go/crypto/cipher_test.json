@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "crypto/cipher_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "cipher_test.almost1K",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -67,6 +71,8 @@
                 "newPage": false,
                 "searchKey": "cipher_test.almost8K",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -92,6 +98,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -106,12 +113,40 @@
         "children": [
           {
             "node": {
+              "pathID": "/crypto/cipher_test#aesGCMTests",
+              "documentation": {
+                "identifier": "aesGCMTests",
+                "newPage": false,
+                "searchKey": "cipher_test.aesGCMTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var aesGCMTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar aesGCMTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/cipher_test#cbcAESTests",
               "documentation": {
                 "identifier": "cbcAESTests",
                 "newPage": false,
                 "searchKey": "cipher_test.cbcAESTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -134,6 +169,9 @@
                 "newPage": false,
                 "searchKey": "cipher_test.cfbTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -150,12 +188,65 @@
           },
           {
             "node": {
+              "pathID": "/crypto/cipher_test#commonCounter",
+              "documentation": {
+                "identifier": "commonCounter",
+                "newPage": false,
+                "searchKey": "cipher_test.commonCounter",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var commonCounter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar commonCounter = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/cipher_test#commonIV",
+              "documentation": {
+                "identifier": "commonIV",
+                "newPage": false,
+                "searchKey": "cipher_test.commonIV",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var commonIV"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar commonIV = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/cipher_test#commonInput",
               "documentation": {
                 "identifier": "commonInput",
                 "newPage": false,
                 "searchKey": "cipher_test.commonInput",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -178,6 +269,9 @@
                 "newPage": false,
                 "searchKey": "cipher_test.commonKey128",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -200,6 +294,9 @@
                 "newPage": false,
                 "searchKey": "cipher_test.commonKey192",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -222,6 +319,9 @@
                 "newPage": false,
                 "searchKey": "cipher_test.commonKey256",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -238,56 +338,15 @@
           },
           {
             "node": {
-              "pathID": "/crypto/cipher_test#commonIV",
-              "documentation": {
-                "identifier": "commonIV",
-                "newPage": false,
-                "searchKey": "cipher_test.commonIV",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var commonIV"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar commonIV = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/cipher_test#commonCounter",
-              "documentation": {
-                "identifier": "commonCounter",
-                "newPage": false,
-                "searchKey": "cipher_test.commonCounter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var commonCounter"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar commonCounter = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/cipher_test#ctrAESTests",
               "documentation": {
                 "identifier": "ctrAESTests",
                 "newPage": false,
                 "searchKey": "cipher_test.ctrAESTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -304,34 +363,15 @@
           },
           {
             "node": {
-              "pathID": "/crypto/cipher_test#aesGCMTests",
-              "documentation": {
-                "identifier": "aesGCMTests",
-                "newPage": false,
-                "searchKey": "cipher_test.aesGCMTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var aesGCMTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar aesGCMTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/cipher_test#ofbTests",
               "documentation": {
                 "identifier": "ofbTests",
                 "newPage": false,
                 "searchKey": "cipher_test.ofbTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -357,6 +397,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -377,6 +418,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.noopBlock",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -397,6 +439,7 @@
                       "newPage": false,
                       "searchKey": "cipher_test.noopBlock.BlockSize",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -413,34 +456,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/crypto/cipher_test#noopBlock.Encrypt",
-                    "documentation": {
-                      "identifier": "noopBlock.Encrypt",
-                      "newPage": false,
-                      "searchKey": "cipher_test.noopBlock.Encrypt",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (noopBlock) Encrypt(dst, src []byte)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (noopBlock) Encrypt(dst, src []byte)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/crypto/cipher_test#noopBlock.Decrypt",
                     "documentation": {
                       "identifier": "noopBlock.Decrypt",
                       "newPage": false,
                       "searchKey": "cipher_test.noopBlock.Decrypt",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -454,8 +476,54 @@
                     },
                     "children": null
                   }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/cipher_test#noopBlock.Encrypt",
+                    "documentation": {
+                      "identifier": "noopBlock.Encrypt",
+                      "newPage": false,
+                      "searchKey": "cipher_test.noopBlock.Encrypt",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (noopBlock) Encrypt(dst, src []byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (noopBlock) Encrypt(dst, src []byte)\n```\n\n"
+                    },
+                    "children": null
+                  }
                 }
               ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/cipher_test#ofbTest",
+              "documentation": {
+                "identifier": "ofbTest",
+                "newPage": false,
+                "searchKey": "cipher_test.ofbTest",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ofbTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ofbTest struct {\n\tname string\n\tkey  []byte\n\tiv   []byte\n\tin   []byte\n\tout  []byte\n}\n```\n\n"
+              },
+              "children": null
             }
           },
           {
@@ -466,6 +534,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.wrapper",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -486,6 +555,7 @@
                       "newPage": false,
                       "searchKey": "cipher_test.wrapper.BlockSize",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -502,34 +572,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/crypto/cipher_test#wrapper.Encrypt",
-                    "documentation": {
-                      "identifier": "wrapper.Encrypt",
-                      "newPage": false,
-                      "searchKey": "cipher_test.wrapper.Encrypt",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (w *wrapper) Encrypt(dst, src []byte)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (w *wrapper) Encrypt(dst, src []byte)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/crypto/cipher_test#wrapper.Decrypt",
                     "documentation": {
                       "identifier": "wrapper.Decrypt",
                       "newPage": false,
                       "searchKey": "cipher_test.wrapper.Decrypt",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -543,30 +592,31 @@
                     },
                     "children": null
                   }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/cipher_test#wrapper.Encrypt",
+                    "documentation": {
+                      "identifier": "wrapper.Encrypt",
+                      "newPage": false,
+                      "searchKey": "cipher_test.wrapper.Encrypt",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *wrapper) Encrypt(dst, src []byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *wrapper) Encrypt(dst, src []byte)\n```\n\n"
+                    },
+                    "children": null
+                  }
                 }
               ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/cipher_test#ofbTest",
-              "documentation": {
-                "identifier": "ofbTest",
-                "newPage": false,
-                "searchKey": "cipher_test.ofbTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ofbTest struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ofbTest struct {\n\tname string\n\tkey  []byte\n\tiv   []byte\n\tin   []byte\n\tout  []byte\n}\n```\n\n"
-              },
-              "children": null
             }
           }
         ]
@@ -580,6 +630,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -594,110 +645,48 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto/cipher_test#benchmarkAESGCMSeal",
+              "pathID": "/crypto/cipher_test#BenchmarkAESCBCDecrypt1K",
               "documentation": {
-                "identifier": "benchmarkAESGCMSeal",
+                "identifier": "BenchmarkAESCBCDecrypt1K",
                 "newPage": false,
-                "searchKey": "cipher_test.benchmarkAESGCMSeal",
+                "searchKey": "cipher_test.BenchmarkAESCBCDecrypt1K",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func benchmarkAESGCMSeal(b *testing.B, buf []byte, keySize int)"
+                "value": "func BenchmarkAESCBCDecrypt1K(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc benchmarkAESGCMSeal(b *testing.B, buf []byte, keySize int)\n```\n\n"
+                "value": "```Go\nfunc BenchmarkAESCBCDecrypt1K(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/cipher_test#benchmarkAESGCMOpen",
+              "pathID": "/crypto/cipher_test#BenchmarkAESCBCEncrypt1K",
               "documentation": {
-                "identifier": "benchmarkAESGCMOpen",
+                "identifier": "BenchmarkAESCBCEncrypt1K",
                 "newPage": false,
-                "searchKey": "cipher_test.benchmarkAESGCMOpen",
+                "searchKey": "cipher_test.BenchmarkAESCBCEncrypt1K",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func benchmarkAESGCMOpen(b *testing.B, buf []byte, keySize int)"
+                "value": "func BenchmarkAESCBCEncrypt1K(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc benchmarkAESGCMOpen(b *testing.B, buf []byte, keySize int)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/cipher_test#BenchmarkAESGCM",
-              "documentation": {
-                "identifier": "BenchmarkAESGCM",
-                "newPage": false,
-                "searchKey": "cipher_test.BenchmarkAESGCM",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkAESGCM(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkAESGCM(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/cipher_test#benchmarkAESStream",
-              "documentation": {
-                "identifier": "benchmarkAESStream",
-                "newPage": false,
-                "searchKey": "cipher_test.benchmarkAESStream",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func benchmarkAESStream(b *testing.B, mode func(cipher.Block, []byte) cipher.Stream, buf []byte)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc benchmarkAESStream(b *testing.B, mode func(cipher.Block, []byte) cipher.Stream, buf []byte)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/cipher_test#BenchmarkAESCFBEncrypt1K",
-              "documentation": {
-                "identifier": "BenchmarkAESCFBEncrypt1K",
-                "newPage": false,
-                "searchKey": "cipher_test.BenchmarkAESCFBEncrypt1K",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkAESCFBEncrypt1K(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkAESCFBEncrypt1K(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc BenchmarkAESCBCEncrypt1K(b *testing.B)\n```\n\n"
               },
               "children": null
             }
@@ -710,7 +699,9 @@
                 "newPage": false,
                 "searchKey": "cipher_test.BenchmarkAESCFBDecrypt1K",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -732,7 +723,9 @@
                 "newPage": false,
                 "searchKey": "cipher_test.BenchmarkAESCFBDecrypt8K",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -748,22 +741,24 @@
           },
           {
             "node": {
-              "pathID": "/crypto/cipher_test#BenchmarkAESOFB1K",
+              "pathID": "/crypto/cipher_test#BenchmarkAESCFBEncrypt1K",
               "documentation": {
-                "identifier": "BenchmarkAESOFB1K",
+                "identifier": "BenchmarkAESCFBEncrypt1K",
                 "newPage": false,
-                "searchKey": "cipher_test.BenchmarkAESOFB1K",
+                "searchKey": "cipher_test.BenchmarkAESCFBEncrypt1K",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkAESOFB1K(b *testing.B)"
+                "value": "func BenchmarkAESCFBEncrypt1K(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkAESOFB1K(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc BenchmarkAESCFBEncrypt1K(b *testing.B)\n```\n\n"
               },
               "children": null
             }
@@ -776,7 +771,9 @@
                 "newPage": false,
                 "searchKey": "cipher_test.BenchmarkAESCTR1K",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -798,7 +795,9 @@
                 "newPage": false,
                 "searchKey": "cipher_test.BenchmarkAESCTR8K",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -814,330 +813,72 @@
           },
           {
             "node": {
-              "pathID": "/crypto/cipher_test#BenchmarkAESCBCEncrypt1K",
+              "pathID": "/crypto/cipher_test#BenchmarkAESGCM",
               "documentation": {
-                "identifier": "BenchmarkAESCBCEncrypt1K",
+                "identifier": "BenchmarkAESGCM",
                 "newPage": false,
-                "searchKey": "cipher_test.BenchmarkAESCBCEncrypt1K",
+                "searchKey": "cipher_test.BenchmarkAESGCM",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkAESCBCEncrypt1K(b *testing.B)"
+                "value": "func BenchmarkAESGCM(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkAESCBCEncrypt1K(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc BenchmarkAESGCM(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/cipher_test#BenchmarkAESCBCDecrypt1K",
+              "pathID": "/crypto/cipher_test#BenchmarkAESOFB1K",
               "documentation": {
-                "identifier": "BenchmarkAESCBCDecrypt1K",
+                "identifier": "BenchmarkAESOFB1K",
                 "newPage": false,
-                "searchKey": "cipher_test.BenchmarkAESCBCDecrypt1K",
+                "searchKey": "cipher_test.BenchmarkAESOFB1K",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkAESCBCDecrypt1K(b *testing.B)"
+                "value": "func BenchmarkAESOFB1K(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkAESCBCDecrypt1K(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc BenchmarkAESOFB1K(b *testing.B)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/cipher_test#TestCBCEncrypterAES",
+              "pathID": "/crypto/cipher_test#BenchmarkXORBytes",
               "documentation": {
-                "identifier": "TestCBCEncrypterAES",
+                "identifier": "BenchmarkXORBytes",
                 "newPage": false,
-                "searchKey": "cipher_test.TestCBCEncrypterAES",
+                "searchKey": "cipher_test.BenchmarkXORBytes",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestCBCEncrypterAES(t *testing.T)"
+                "value": "func BenchmarkXORBytes(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestCBCEncrypterAES(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/cipher_test#TestCBCDecrypterAES",
-              "documentation": {
-                "identifier": "TestCBCDecrypterAES",
-                "newPage": false,
-                "searchKey": "cipher_test.TestCBCDecrypterAES",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCBCDecrypterAES(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCBCDecrypterAES(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/cipher_test#TestCFBVectors",
-              "documentation": {
-                "identifier": "TestCFBVectors",
-                "newPage": false,
-                "searchKey": "cipher_test.TestCFBVectors",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCFBVectors(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCFBVectors(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/cipher_test#TestCFBInverse",
-              "documentation": {
-                "identifier": "TestCFBInverse",
-                "newPage": false,
-                "searchKey": "cipher_test.TestCFBInverse",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCFBInverse(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCFBInverse(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/cipher_test#TestCryptBlocks",
-              "documentation": {
-                "identifier": "TestCryptBlocks",
-                "newPage": false,
-                "searchKey": "cipher_test.TestCryptBlocks",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCryptBlocks(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCryptBlocks(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/cipher_test#mustPanic",
-              "documentation": {
-                "identifier": "mustPanic",
-                "newPage": false,
-                "searchKey": "cipher_test.mustPanic",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func mustPanic(t *testing.T, msg string, f func())"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc mustPanic(t *testing.T, msg string, f func())\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/cipher_test#TestEmptyPlaintext",
-              "documentation": {
-                "identifier": "TestEmptyPlaintext",
-                "newPage": false,
-                "searchKey": "cipher_test.TestEmptyPlaintext",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEmptyPlaintext(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEmptyPlaintext(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/cipher_test#TestCTR_AES",
-              "documentation": {
-                "identifier": "TestCTR_AES",
-                "newPage": false,
-                "searchKey": "cipher_test.TestCTR_AES",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCTR_AES(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCTR_AES(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/cipher_test#inc",
-              "documentation": {
-                "identifier": "inc",
-                "newPage": false,
-                "searchKey": "cipher_test.inc",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func inc(b []byte)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc inc(b []byte)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/cipher_test#xor",
-              "documentation": {
-                "identifier": "xor",
-                "newPage": false,
-                "searchKey": "cipher_test.xor",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func xor(a, b []byte)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc xor(a, b []byte)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/cipher_test#TestCTR",
-              "documentation": {
-                "identifier": "TestCTR",
-                "newPage": false,
-                "searchKey": "cipher_test.TestCTR",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCTR(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCTR(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/cipher_test#ExampleNewGCM_encrypt",
-              "documentation": {
-                "identifier": "ExampleNewGCM_encrypt",
-                "newPage": false,
-                "searchKey": "cipher_test.ExampleNewGCM_encrypt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleNewGCM_encrypt()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleNewGCM_encrypt()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/cipher_test#ExampleNewGCM_decrypt",
-              "documentation": {
-                "identifier": "ExampleNewGCM_decrypt",
-                "newPage": false,
-                "searchKey": "cipher_test.ExampleNewGCM_decrypt",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleNewGCM_decrypt()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleNewGCM_decrypt()\n```\n\n"
+                "value": "```Go\nfunc BenchmarkXORBytes(b *testing.B)\n```\n\n"
               },
               "children": null
             }
@@ -1150,6 +891,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.ExampleNewCBCDecrypter",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1172,6 +914,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.ExampleNewCBCEncrypter",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1194,6 +937,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.ExampleNewCFBDecrypter",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1216,6 +960,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.ExampleNewCFBEncrypter",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1238,6 +983,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.ExampleNewCTR",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1254,12 +1000,59 @@
           },
           {
             "node": {
+              "pathID": "/crypto/cipher_test#ExampleNewGCM_decrypt",
+              "documentation": {
+                "identifier": "ExampleNewGCM_decrypt",
+                "newPage": false,
+                "searchKey": "cipher_test.ExampleNewGCM_decrypt",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleNewGCM_decrypt()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleNewGCM_decrypt()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/cipher_test#ExampleNewGCM_encrypt",
+              "documentation": {
+                "identifier": "ExampleNewGCM_encrypt",
+                "newPage": false,
+                "searchKey": "cipher_test.ExampleNewGCM_encrypt",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleNewGCM_encrypt()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleNewGCM_encrypt()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/cipher_test#ExampleNewOFB",
               "documentation": {
                 "identifier": "ExampleNewOFB",
                 "newPage": false,
                 "searchKey": "cipher_test.ExampleNewOFB",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1282,6 +1075,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.ExampleStreamReader",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1304,6 +1098,7 @@
                 "newPage": false,
                 "searchKey": "cipher_test.ExampleStreamWriter",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1326,7 +1121,9 @@
                 "newPage": false,
                 "searchKey": "cipher_test.TestAESGCM",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1342,88 +1139,192 @@
           },
           {
             "node": {
-              "pathID": "/crypto/cipher_test#TestGCMInvalidTagSize",
+              "pathID": "/crypto/cipher_test#TestCBCDecrypterAES",
               "documentation": {
-                "identifier": "TestGCMInvalidTagSize",
+                "identifier": "TestCBCDecrypterAES",
                 "newPage": false,
-                "searchKey": "cipher_test.TestGCMInvalidTagSize",
+                "searchKey": "cipher_test.TestCBCDecrypterAES",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestGCMInvalidTagSize(t *testing.T)"
+                "value": "func TestCBCDecrypterAES(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestGCMInvalidTagSize(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestCBCDecrypterAES(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/cipher_test#TestTagFailureOverwrite",
+              "pathID": "/crypto/cipher_test#TestCBCEncrypterAES",
               "documentation": {
-                "identifier": "TestTagFailureOverwrite",
+                "identifier": "TestCBCEncrypterAES",
                 "newPage": false,
-                "searchKey": "cipher_test.TestTagFailureOverwrite",
+                "searchKey": "cipher_test.TestCBCEncrypterAES",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestTagFailureOverwrite(t *testing.T)"
+                "value": "func TestCBCEncrypterAES(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestTagFailureOverwrite(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestCBCEncrypterAES(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/cipher_test#TestGCMCounterWrap",
+              "pathID": "/crypto/cipher_test#TestCFBInverse",
               "documentation": {
-                "identifier": "TestGCMCounterWrap",
+                "identifier": "TestCFBInverse",
                 "newPage": false,
-                "searchKey": "cipher_test.TestGCMCounterWrap",
+                "searchKey": "cipher_test.TestCFBInverse",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestGCMCounterWrap(t *testing.T)"
+                "value": "func TestCFBInverse(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestGCMCounterWrap(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestCFBInverse(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/crypto/cipher_test#wrap",
+              "pathID": "/crypto/cipher_test#TestCFBVectors",
               "documentation": {
-                "identifier": "wrap",
+                "identifier": "TestCFBVectors",
                 "newPage": false,
-                "searchKey": "cipher_test.wrap",
+                "searchKey": "cipher_test.TestCFBVectors",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func wrap(b cipher.Block) cipher.Block"
+                "value": "func TestCFBVectors(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc wrap(b cipher.Block) cipher.Block\n```\n\nwrap wraps the Block interface so that it does not fulfill any optimizing interfaces such as gcmAble. \n\n"
+                "value": "```Go\nfunc TestCFBVectors(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/cipher_test#TestCTR",
+              "documentation": {
+                "identifier": "TestCTR",
+                "newPage": false,
+                "searchKey": "cipher_test.TestCTR",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCTR(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCTR(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/cipher_test#TestCTR_AES",
+              "documentation": {
+                "identifier": "TestCTR_AES",
+                "newPage": false,
+                "searchKey": "cipher_test.TestCTR_AES",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCTR_AES(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCTR_AES(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/cipher_test#TestCryptBlocks",
+              "documentation": {
+                "identifier": "TestCryptBlocks",
+                "newPage": false,
+                "searchKey": "cipher_test.TestCryptBlocks",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCryptBlocks(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCryptBlocks(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/cipher_test#TestEmptyPlaintext",
+              "documentation": {
+                "identifier": "TestEmptyPlaintext",
+                "newPage": false,
+                "searchKey": "cipher_test.TestEmptyPlaintext",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEmptyPlaintext(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEmptyPlaintext(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1436,7 +1337,9 @@
                 "newPage": false,
                 "searchKey": "cipher_test.TestGCMAsm",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1452,13 +1355,63 @@
           },
           {
             "node": {
+              "pathID": "/crypto/cipher_test#TestGCMCounterWrap",
+              "documentation": {
+                "identifier": "TestGCMCounterWrap",
+                "newPage": false,
+                "searchKey": "cipher_test.TestGCMCounterWrap",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGCMCounterWrap(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGCMCounterWrap(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/cipher_test#TestGCMInvalidTagSize",
+              "documentation": {
+                "identifier": "TestGCMInvalidTagSize",
+                "newPage": false,
+                "searchKey": "cipher_test.TestGCMInvalidTagSize",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGCMInvalidTagSize(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGCMInvalidTagSize(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/cipher_test#TestOFB",
               "documentation": {
                 "identifier": "TestOFB",
                 "newPage": false,
                 "searchKey": "cipher_test.TestOFB",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1474,13 +1427,39 @@
           },
           {
             "node": {
+              "pathID": "/crypto/cipher_test#TestTagFailureOverwrite",
+              "documentation": {
+                "identifier": "TestTagFailureOverwrite",
+                "newPage": false,
+                "searchKey": "cipher_test.TestTagFailureOverwrite",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTagFailureOverwrite(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTagFailureOverwrite(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/cipher_test#TestXOR",
               "documentation": {
                 "identifier": "TestXOR",
                 "newPage": false,
                 "searchKey": "cipher_test.TestXOR",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1496,12 +1475,105 @@
           },
           {
             "node": {
+              "pathID": "/crypto/cipher_test#benchmarkAESGCMOpen",
+              "documentation": {
+                "identifier": "benchmarkAESGCMOpen",
+                "newPage": false,
+                "searchKey": "cipher_test.benchmarkAESGCMOpen",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmarkAESGCMOpen(b *testing.B, buf []byte, keySize int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmarkAESGCMOpen(b *testing.B, buf []byte, keySize int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/cipher_test#benchmarkAESGCMSeal",
+              "documentation": {
+                "identifier": "benchmarkAESGCMSeal",
+                "newPage": false,
+                "searchKey": "cipher_test.benchmarkAESGCMSeal",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmarkAESGCMSeal(b *testing.B, buf []byte, keySize int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmarkAESGCMSeal(b *testing.B, buf []byte, keySize int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/cipher_test#benchmarkAESStream",
+              "documentation": {
+                "identifier": "benchmarkAESStream",
+                "newPage": false,
+                "searchKey": "cipher_test.benchmarkAESStream",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmarkAESStream(b *testing.B, mode func(cipher.Block, []byte) cipher.Stream, buf []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmarkAESStream(b *testing.B, mode func(cipher.Block, []byte) cipher.Stream, buf []byte)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/cipher_test#inc",
+              "documentation": {
+                "identifier": "inc",
+                "newPage": false,
+                "searchKey": "cipher_test.inc",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func inc(b []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc inc(b []byte)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/cipher_test#min",
               "documentation": {
                 "identifier": "min",
                 "newPage": false,
                 "searchKey": "cipher_test.min",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1518,22 +1590,69 @@
           },
           {
             "node": {
-              "pathID": "/crypto/cipher_test#BenchmarkXORBytes",
+              "pathID": "/crypto/cipher_test#mustPanic",
               "documentation": {
-                "identifier": "BenchmarkXORBytes",
+                "identifier": "mustPanic",
                 "newPage": false,
-                "searchKey": "cipher_test.BenchmarkXORBytes",
+                "searchKey": "cipher_test.mustPanic",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkXORBytes(b *testing.B)"
+                "value": "func mustPanic(t *testing.T, msg string, f func())"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkXORBytes(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc mustPanic(t *testing.T, msg string, f func())\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/cipher_test#wrap",
+              "documentation": {
+                "identifier": "wrap",
+                "newPage": false,
+                "searchKey": "cipher_test.wrap",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func wrap(b cipher.Block) cipher.Block"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc wrap(b cipher.Block) cipher.Block\n```\n\nwrap wraps the Block interface so that it does not fulfill any optimizing interfaces such as gcmAble. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/cipher_test#xor",
+              "documentation": {
+                "identifier": "xor",
+                "newPage": false,
+                "searchKey": "cipher_test.xor",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func xor(a, b []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc xor(a, b []byte)\n```\n\n"
               },
               "children": null
             }

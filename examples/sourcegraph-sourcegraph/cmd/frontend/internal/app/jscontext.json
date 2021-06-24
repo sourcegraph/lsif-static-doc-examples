@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "cmd/frontend/internal/app/jscontext",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,10 @@
                 "identifier": "BillingPublishableKey",
                 "newPage": false,
                 "searchKey": "jscontext.BillingPublishableKey",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -65,6 +70,8 @@
                 "newPage": false,
                 "searchKey": "jscontext.isBotPat",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -90,6 +97,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -104,34 +112,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app/jscontext#authProviderInfo",
-              "documentation": {
-                "identifier": "authProviderInfo",
-                "newPage": false,
-                "searchKey": "jscontext.authProviderInfo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type authProviderInfo struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype authProviderInfo struct {\n\tIsBuiltin         bool   `json:\"isBuiltin\"`\n\tDisplayName       string `json:\"displayName\"`\n\tServiceType       string `json:\"serviceType\"`\n\tAuthenticationURL string `json:\"authenticationURL\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/app/jscontext#JSContext",
               "documentation": {
                 "identifier": "JSContext",
                 "newPage": false,
                 "searchKey": "jscontext.JSContext",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -149,7 +137,9 @@
                       "identifier": "NewJSContextFromRequest",
                       "newPage": false,
                       "searchKey": "jscontext.NewJSContextFromRequest",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -164,6 +154,29 @@
                 }
               ]
             }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/jscontext#authProviderInfo",
+              "documentation": {
+                "identifier": "authProviderInfo",
+                "newPage": false,
+                "searchKey": "jscontext.authProviderInfo",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type authProviderInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype authProviderInfo struct {\n\tIsBuiltin         bool   `json:\"isBuiltin\"`\n\tDisplayName       string `json:\"displayName\"`\n\tServiceType       string `json:\"serviceType\"`\n\tAuthenticationURL string `json:\"authenticationURL\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
           }
         ]
       }
@@ -176,6 +189,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -190,22 +204,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app/jscontext#publicSiteConfiguration",
+              "pathID": "/cmd/frontend/internal/app/jscontext#TestIsBot",
               "documentation": {
-                "identifier": "publicSiteConfiguration",
+                "identifier": "TestIsBot",
                 "newPage": false,
-                "searchKey": "jscontext.publicSiteConfiguration",
+                "searchKey": "jscontext.TestIsBot",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func publicSiteConfiguration() schema.SiteConfiguration"
+                "value": "func TestIsBot(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc publicSiteConfiguration() schema.SiteConfiguration\n```\n\npublicSiteConfiguration is the subset of the site.schema.json site configuration that is necessary for the web app and is not sensitive/secret. \n\n"
+                "value": "```Go\nfunc TestIsBot(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -218,6 +234,7 @@
                 "newPage": false,
                 "searchKey": "jscontext.isBot",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -240,6 +257,7 @@
                 "newPage": false,
                 "searchKey": "jscontext.likelyDockerOnMac",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -256,22 +274,23 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/app/jscontext#TestIsBot",
+              "pathID": "/cmd/frontend/internal/app/jscontext#publicSiteConfiguration",
               "documentation": {
-                "identifier": "TestIsBot",
+                "identifier": "publicSiteConfiguration",
                 "newPage": false,
-                "searchKey": "jscontext.TestIsBot",
+                "searchKey": "jscontext.publicSiteConfiguration",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestIsBot(t *testing.T)"
+                "value": "func publicSiteConfiguration() schema.SiteConfiguration"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestIsBot(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc publicSiteConfiguration() schema.SiteConfiguration\n```\n\npublicSiteConfiguration is the subset of the site.schema.json site configuration that is necessary for the web app and is not sensitive/secret. \n\n"
               },
               "children": null
             }

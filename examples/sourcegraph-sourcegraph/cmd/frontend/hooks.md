@@ -10,10 +10,15 @@ Package hooks allow hooking into the frontend.
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [package]
+```
+
 ### <a id="PostAuthMiddleware" href="#PostAuthMiddleware">var PostAuthMiddleware</a>
 
 ```
 searchKey: hooks.PostAuthMiddleware
+tags: [variable function]
 ```
 
 ```Go

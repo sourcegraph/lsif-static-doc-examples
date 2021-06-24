@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/encryption/testing",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,93 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/encryption/testing#TestKey",
-              "documentation": {
-                "identifier": "TestKey",
-                "newPage": false,
-                "searchKey": "testing.TestKey",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type TestKey struct{}"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype TestKey struct{}\n```\n\nTestKey is an encryption.Key that just base64 encodes the plaintext, to make sure the data is actually transformed, so as to be unreadable by misconfigured Stores, but doesn't do any encryption. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/encryption/testing#TestKey.Encrypt",
-                    "documentation": {
-                      "identifier": "TestKey.Encrypt",
-                      "newPage": false,
-                      "searchKey": "testing.TestKey.Encrypt",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (k TestKey) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (k TestKey) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/encryption/testing#TestKey.Decrypt",
-                    "documentation": {
-                      "identifier": "TestKey.Decrypt",
-                      "newPage": false,
-                      "searchKey": "testing.TestKey.Decrypt",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (k TestKey) Decrypt(ctx context.Context, ciphertext []byte) (*encryption.Secret, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (k TestKey) Decrypt(ctx context.Context, ciphertext []byte) (*encryption.Secret, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/encryption/testing#TestKey.Version",
-                    "documentation": {
-                      "identifier": "TestKey.Version",
-                      "newPage": false,
-                      "searchKey": "testing.TestKey.Version",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (k TestKey) Version(ctx context.Context) (encryption.KeyVersion, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (k TestKey) Version(ctx context.Context) (encryption.KeyVersion, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/encryption/testing#BadKey",
               "documentation": {
                 "identifier": "BadKey",
                 "newPage": false,
                 "searchKey": "testing.BadKey",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -138,32 +61,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/encryption/testing#BadKey.Encrypt",
-                    "documentation": {
-                      "identifier": "BadKey.Encrypt",
-                      "newPage": false,
-                      "searchKey": "testing.BadKey.Encrypt",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (k *BadKey) Encrypt(context.Context, []byte) ([]byte, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (k *BadKey) Encrypt(context.Context, []byte) ([]byte, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/encryption/testing#BadKey.Decrypt",
                     "documentation": {
                       "identifier": "BadKey.Decrypt",
                       "newPage": false,
                       "searchKey": "testing.BadKey.Decrypt",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -178,12 +83,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/encryption/testing#BadKey.Encrypt",
+                    "documentation": {
+                      "identifier": "BadKey.Encrypt",
+                      "newPage": false,
+                      "searchKey": "testing.BadKey.Encrypt",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k *BadKey) Encrypt(context.Context, []byte) ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k *BadKey) Encrypt(context.Context, []byte) ([]byte, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/encryption/testing#BadKey.Version",
                     "documentation": {
                       "identifier": "BadKey.Version",
                       "newPage": false,
                       "searchKey": "testing.BadKey.Version",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -201,12 +130,103 @@
           },
           {
             "node": {
+              "pathID": "/internal/encryption/testing#TestKey",
+              "documentation": {
+                "identifier": "TestKey",
+                "newPage": false,
+                "searchKey": "testing.TestKey",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TestKey struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TestKey struct{}\n```\n\nTestKey is an encryption.Key that just base64 encodes the plaintext, to make sure the data is actually transformed, so as to be unreadable by misconfigured Stores, but doesn't do any encryption. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/encryption/testing#TestKey.Decrypt",
+                    "documentation": {
+                      "identifier": "TestKey.Decrypt",
+                      "newPage": false,
+                      "searchKey": "testing.TestKey.Decrypt",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k TestKey) Decrypt(ctx context.Context, ciphertext []byte) (*encryption.Secret, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k TestKey) Decrypt(ctx context.Context, ciphertext []byte) (*encryption.Secret, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/encryption/testing#TestKey.Encrypt",
+                    "documentation": {
+                      "identifier": "TestKey.Encrypt",
+                      "newPage": false,
+                      "searchKey": "testing.TestKey.Encrypt",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k TestKey) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k TestKey) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/encryption/testing#TestKey.Version",
+                    "documentation": {
+                      "identifier": "TestKey.Version",
+                      "newPage": false,
+                      "searchKey": "testing.TestKey.Version",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k TestKey) Version(ctx context.Context) (encryption.KeyVersion, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k TestKey) Version(ctx context.Context) (encryption.KeyVersion, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/encryption/testing#TransparentKey",
               "documentation": {
                 "identifier": "TransparentKey",
                 "newPage": false,
                 "searchKey": "testing.TransparentKey",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -224,7 +244,9 @@
                       "identifier": "NewTransparentKey",
                       "newPage": false,
                       "searchKey": "testing.NewTransparentKey",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -244,7 +266,9 @@
                       "identifier": "TransparentKey.Decrypt",
                       "newPage": false,
                       "searchKey": "testing.TransparentKey.Decrypt",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -264,7 +288,9 @@
                       "identifier": "TransparentKey.Encrypt",
                       "newPage": false,
                       "searchKey": "testing.TransparentKey.Encrypt",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -284,7 +310,9 @@
                       "identifier": "TransparentKey.Version",
                       "newPage": false,
                       "searchKey": "testing.TransparentKey.Version",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",

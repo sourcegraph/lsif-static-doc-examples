@@ -17,35 +17,36 @@ Deprecated: DSA is a legacy algorithm, and modern alternatives such as Ed25519 (
 * [Variables](#var)
     * [var ErrInvalidPublicKey](#ErrInvalidPublicKey)
 * [Types](#type)
-    * [type Parameters struct](#Parameters)
-    * [type PublicKey struct](#PublicKey)
-    * [type PrivateKey struct](#PrivateKey)
     * [type ParameterSizes int](#ParameterSizes)
+    * [type Parameters struct](#Parameters)
+    * [type PrivateKey struct](#PrivateKey)
+    * [type PublicKey struct](#PublicKey)
 * [Functions](#func)
-    * [func GenerateParameters(params *Parameters, rand io.Reader, sizes ParameterSizes) error](#GenerateParameters)
     * [func GenerateKey(priv *PrivateKey, rand io.Reader) error](#GenerateKey)
-    * [func fermatInverse(k, P *big.Int) *big.Int](#fermatInverse)
+    * [func GenerateParameters(params *Parameters, rand io.Reader, sizes ParameterSizes) error](#GenerateParameters)
     * [func Sign(rand io.Reader, priv *PrivateKey, hash []byte) (r, s *big.Int, err error)](#Sign)
-    * [func Verify(pub *PublicKey, hash []byte, r, s *big.Int) bool](#Verify)
-    * [func testSignAndVerify(t *testing.T, i int, priv *PrivateKey)](#testSignAndVerify)
-    * [func testParameterGeneration(t *testing.T, sizes ParameterSizes, L, N int)](#testParameterGeneration)
     * [func TestParameterGeneration(t *testing.T)](#TestParameterGeneration)
-    * [func fromHex(s string) *big.Int](#fromHex)
     * [func TestSignAndVerify(t *testing.T)](#TestSignAndVerify)
     * [func TestSignAndVerifyWithBadPublicKey(t *testing.T)](#TestSignAndVerifyWithBadPublicKey)
     * [func TestSigningWithDegenerateKeys(t *testing.T)](#TestSigningWithDegenerateKeys)
+    * [func Verify(pub *PublicKey, hash []byte, r, s *big.Int) bool](#Verify)
+    * [func fermatInverse(k, P *big.Int) *big.Int](#fermatInverse)
+    * [func fromHex(s string) *big.Int](#fromHex)
+    * [func testParameterGeneration(t *testing.T, sizes ParameterSizes, L, N int)](#testParameterGeneration)
+    * [func testSignAndVerify(t *testing.T, i int, priv *PrivateKey)](#testSignAndVerify)
 
 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [deprecated]
+tags: [package deprecated]
 ```
 
 ### <a id="L1024N160" href="#L1024N160">const L1024N160</a>
 
 ```
 searchKey: dsa.L1024N160
+tags: [constant number]
 ```
 
 ```Go
@@ -56,6 +57,7 @@ const L1024N160 ParameterSizes = iota
 
 ```
 searchKey: dsa.L2048N224
+tags: [constant number]
 ```
 
 ```Go
@@ -66,6 +68,7 @@ const L2048N224
 
 ```
 searchKey: dsa.L2048N256
+tags: [constant number]
 ```
 
 ```Go
@@ -76,6 +79,7 @@ const L2048N256
 
 ```
 searchKey: dsa.L3072N256
+tags: [constant number]
 ```
 
 ```Go
@@ -86,7 +90,7 @@ const L3072N256
 
 ```
 searchKey: dsa.numMRTests
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -98,13 +102,14 @@ numMRTests is the number of Miller-Rabin primality tests that we perform. We pic
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [deprecated]
+tags: [package deprecated]
 ```
 
 ### <a id="ErrInvalidPublicKey" href="#ErrInvalidPublicKey">var ErrInvalidPublicKey</a>
 
 ```
 searchKey: dsa.ErrInvalidPublicKey
+tags: [variable interface]
 ```
 
 ```Go
@@ -116,13 +121,27 @@ ErrInvalidPublicKey results when a public key is not usable by this code. FIPS i
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [deprecated]
+tags: [package deprecated]
 ```
+
+### <a id="ParameterSizes" href="#ParameterSizes">type ParameterSizes int</a>
+
+```
+searchKey: dsa.ParameterSizes
+tags: [number]
+```
+
+```Go
+type ParameterSizes int
+```
+
+ParameterSizes is an enumeration of the acceptable bit lengths of the primes in a set of DSA parameters. See FIPS 186-3, section 4.2. 
 
 ### <a id="Parameters" href="#Parameters">type Parameters struct</a>
 
 ```
 searchKey: dsa.Parameters
+tags: [struct]
 ```
 
 ```Go
@@ -133,25 +152,11 @@ type Parameters struct {
 
 Parameters represents the domain parameters for a key. These parameters can be shared across many keys. The bit length of Q must be a multiple of 8. 
 
-### <a id="PublicKey" href="#PublicKey">type PublicKey struct</a>
-
-```
-searchKey: dsa.PublicKey
-```
-
-```Go
-type PublicKey struct {
-	Parameters
-	Y *big.Int
-}
-```
-
-PublicKey represents a DSA public key. 
-
 ### <a id="PrivateKey" href="#PrivateKey">type PrivateKey struct</a>
 
 ```
 searchKey: dsa.PrivateKey
+tags: [struct]
 ```
 
 ```Go
@@ -163,40 +168,33 @@ type PrivateKey struct {
 
 PrivateKey represents a DSA private key. 
 
-### <a id="ParameterSizes" href="#ParameterSizes">type ParameterSizes int</a>
+### <a id="PublicKey" href="#PublicKey">type PublicKey struct</a>
 
 ```
-searchKey: dsa.ParameterSizes
+searchKey: dsa.PublicKey
+tags: [struct]
 ```
 
 ```Go
-type ParameterSizes int
+type PublicKey struct {
+	Parameters
+	Y *big.Int
+}
 ```
 
-ParameterSizes is an enumeration of the acceptable bit lengths of the primes in a set of DSA parameters. See FIPS 186-3, section 4.2. 
+PublicKey represents a DSA public key. 
 
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [deprecated]
+tags: [package deprecated]
 ```
-
-### <a id="GenerateParameters" href="#GenerateParameters">func GenerateParameters(params *Parameters, rand io.Reader, sizes ParameterSizes) error</a>
-
-```
-searchKey: dsa.GenerateParameters
-```
-
-```Go
-func GenerateParameters(params *Parameters, rand io.Reader, sizes ParameterSizes) error
-```
-
-GenerateParameters puts a random, valid set of DSA parameters into params. This function can take many seconds, even on fast machines. 
 
 ### <a id="GenerateKey" href="#GenerateKey">func GenerateKey(priv *PrivateKey, rand io.Reader) error</a>
 
 ```
 searchKey: dsa.GenerateKey
+tags: [method]
 ```
 
 ```Go
@@ -205,23 +203,24 @@ func GenerateKey(priv *PrivateKey, rand io.Reader) error
 
 GenerateKey generates a public&private key pair. The Parameters of the PrivateKey must already be valid (see GenerateParameters). 
 
-### <a id="fermatInverse" href="#fermatInverse">func fermatInverse(k, P *big.Int) *big.Int</a>
+### <a id="GenerateParameters" href="#GenerateParameters">func GenerateParameters(params *Parameters, rand io.Reader, sizes ParameterSizes) error</a>
 
 ```
-searchKey: dsa.fermatInverse
-tags: [private]
+searchKey: dsa.GenerateParameters
+tags: [method]
 ```
 
 ```Go
-func fermatInverse(k, P *big.Int) *big.Int
+func GenerateParameters(params *Parameters, rand io.Reader, sizes ParameterSizes) error
 ```
 
-fermatInverse calculates the inverse of k in GF(P) using Fermat's method. This has better constant-time properties than Euclid's method (implemented in math/big.Int.ModInverse) although math/big itself isn't strictly constant-time so it's not perfect. 
+GenerateParameters puts a random, valid set of DSA parameters into params. This function can take many seconds, even on fast machines. 
 
 ### <a id="Sign" href="#Sign">func Sign(rand io.Reader, priv *PrivateKey, hash []byte) (r, s *big.Int, err error)</a>
 
 ```
 searchKey: dsa.Sign
+tags: [method]
 ```
 
 ```Go
@@ -234,69 +233,22 @@ Note that FIPS 186-3 section 4.6 specifies that the hash should be truncated to 
 
 Be aware that calling Sign with an attacker-controlled PrivateKey may require an arbitrary amount of CPU. 
 
-### <a id="Verify" href="#Verify">func Verify(pub *PublicKey, hash []byte, r, s *big.Int) bool</a>
-
-```
-searchKey: dsa.Verify
-```
-
-```Go
-func Verify(pub *PublicKey, hash []byte, r, s *big.Int) bool
-```
-
-Verify verifies the signature in r, s of hash using the public key, pub. It reports whether the signature is valid. 
-
-Note that FIPS 186-3 section 4.6 specifies that the hash should be truncated to the byte-length of the subgroup. This function does not perform that truncation itself. 
-
-### <a id="testSignAndVerify" href="#testSignAndVerify">func testSignAndVerify(t *testing.T, i int, priv *PrivateKey)</a>
-
-```
-searchKey: dsa.testSignAndVerify
-tags: [private]
-```
-
-```Go
-func testSignAndVerify(t *testing.T, i int, priv *PrivateKey)
-```
-
-### <a id="testParameterGeneration" href="#testParameterGeneration">func testParameterGeneration(t *testing.T, sizes ParameterSizes, L, N int)</a>
-
-```
-searchKey: dsa.testParameterGeneration
-tags: [private]
-```
-
-```Go
-func testParameterGeneration(t *testing.T, sizes ParameterSizes, L, N int)
-```
-
 ### <a id="TestParameterGeneration" href="#TestParameterGeneration">func TestParameterGeneration(t *testing.T)</a>
 
 ```
 searchKey: dsa.TestParameterGeneration
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestParameterGeneration(t *testing.T)
 ```
 
-### <a id="fromHex" href="#fromHex">func fromHex(s string) *big.Int</a>
-
-```
-searchKey: dsa.fromHex
-tags: [private]
-```
-
-```Go
-func fromHex(s string) *big.Int
-```
-
 ### <a id="TestSignAndVerify" href="#TestSignAndVerify">func TestSignAndVerify(t *testing.T)</a>
 
 ```
 searchKey: dsa.TestSignAndVerify
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -307,7 +259,7 @@ func TestSignAndVerify(t *testing.T)
 
 ```
 searchKey: dsa.TestSignAndVerifyWithBadPublicKey
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -318,10 +270,71 @@ func TestSignAndVerifyWithBadPublicKey(t *testing.T)
 
 ```
 searchKey: dsa.TestSigningWithDegenerateKeys
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestSigningWithDegenerateKeys(t *testing.T)
+```
+
+### <a id="Verify" href="#Verify">func Verify(pub *PublicKey, hash []byte, r, s *big.Int) bool</a>
+
+```
+searchKey: dsa.Verify
+tags: [method]
+```
+
+```Go
+func Verify(pub *PublicKey, hash []byte, r, s *big.Int) bool
+```
+
+Verify verifies the signature in r, s of hash using the public key, pub. It reports whether the signature is valid. 
+
+Note that FIPS 186-3 section 4.6 specifies that the hash should be truncated to the byte-length of the subgroup. This function does not perform that truncation itself. 
+
+### <a id="fermatInverse" href="#fermatInverse">func fermatInverse(k, P *big.Int) *big.Int</a>
+
+```
+searchKey: dsa.fermatInverse
+tags: [method private]
+```
+
+```Go
+func fermatInverse(k, P *big.Int) *big.Int
+```
+
+fermatInverse calculates the inverse of k in GF(P) using Fermat's method. This has better constant-time properties than Euclid's method (implemented in math/big.Int.ModInverse) although math/big itself isn't strictly constant-time so it's not perfect. 
+
+### <a id="fromHex" href="#fromHex">func fromHex(s string) *big.Int</a>
+
+```
+searchKey: dsa.fromHex
+tags: [method private]
+```
+
+```Go
+func fromHex(s string) *big.Int
+```
+
+### <a id="testParameterGeneration" href="#testParameterGeneration">func testParameterGeneration(t *testing.T, sizes ParameterSizes, L, N int)</a>
+
+```
+searchKey: dsa.testParameterGeneration
+tags: [method private]
+```
+
+```Go
+func testParameterGeneration(t *testing.T, sizes ParameterSizes, L, N int)
+```
+
+### <a id="testSignAndVerify" href="#testSignAndVerify">func testSignAndVerify(t *testing.T, i int, priv *PrivateKey)</a>
+
+```
+searchKey: dsa.testSignAndVerify
+tags: [method private]
+```
+
+```Go
+func testSignAndVerify(t *testing.T, i int, priv *PrivateKey)
 ```
 

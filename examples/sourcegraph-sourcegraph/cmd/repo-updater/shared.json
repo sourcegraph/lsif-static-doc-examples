@@ -4,7 +4,9 @@
     "identifier": "shared",
     "newPage": true,
     "searchKey": "cmd/repo-updater/shared",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -41,6 +45,8 @@
                 "newPage": false,
                 "searchKey": "shared.port",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -65,7 +71,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -84,6 +92,8 @@
                 "newPage": false,
                 "searchKey": "shared.stateHTMLTemplate",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -108,7 +118,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -126,7 +138,9 @@
                 "identifier": "EnterpriseInit",
                 "newPage": false,
                 "searchKey": "shared.EnterpriseInit",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -147,6 +161,7 @@
                 "newPage": false,
                 "searchKey": "shared.scheduler",
                 "tags": [
+                  "interface",
                   "private"
                 ]
               },
@@ -171,7 +186,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -189,7 +206,9 @@
                 "identifier": "Main",
                 "newPage": false,
                 "searchKey": "shared.Main",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -204,34 +223,13 @@
           },
           {
             "node": {
-              "pathID": "/cmd/repo-updater/shared#watchSyncer",
-              "documentation": {
-                "identifier": "watchSyncer",
-                "newPage": false,
-                "searchKey": "shared.watchSyncer",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func watchSyncer(ctx context.Context, syncer *repos.Syncer, sched scheduler, gps *repos.GitolitePhabricatorMetadataSyncer)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc watchSyncer(ctx context.Context, syncer *repos.Syncer, sched scheduler, gps *repos.GitolitePhabricatorMetadataSyncer)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/repo-updater/shared#syncScheduler",
               "documentation": {
                 "identifier": "syncScheduler",
                 "newPage": false,
                 "searchKey": "shared.syncScheduler",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -242,6 +240,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc syncScheduler(ctx context.Context, sched scheduler, gitserverClient *gitserver.Client, store *repos.Store)\n```\n\nsyncScheduler will periodically list the cloned repositories on gitserver and update the scheduler with the list. It also ensures that if any of our default repos are missing from the cloned list they will be added for cloning ASAP. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/repo-updater/shared#watchSyncer",
+              "documentation": {
+                "identifier": "watchSyncer",
+                "newPage": false,
+                "searchKey": "shared.watchSyncer",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func watchSyncer(ctx context.Context, syncer *repos.Syncer, sched scheduler, gps *repos.GitolitePhabricatorMetadataSyncer)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc watchSyncer(ctx context.Context, syncer *repos.Syncer, sched scheduler, gps *repos.GitolitePhabricatorMetadataSyncer)\n```\n\n"
               },
               "children": null
             }

@@ -7,76 +7,76 @@ Package saml provides HTTP middleware that provides the necessary endpoints for 
 * [Constants](#const)
     * [const authPrefix](#authPrefix)
     * [const providerType](#providerType)
+    * [const testAuthnResponse](#testAuthnResponse)
     * [const testSAMLSPCert](#testSAMLSPCert)
     * [const testSAMLSPKey](#testSAMLSPKey)
-    * [const testAuthnResponse](#testAuthnResponse)
 * [Variables](#var)
-    * [var mockGetProviderValue](#mockGetProviderValue)
-    * [var traceLogEnabled](#traceLogEnabled)
     * [var Middleware](#Middleware)
     * [var idpCert](#idpCert)
-    * [var idpKey](#idpKey)
     * [var idpCert2](#idpCert2)
+    * [var idpKey](#idpKey)
+    * [var mockGetProviderValue](#mockGetProviderValue)
+    * [var traceLogEnabled](#traceLogEnabled)
 * [Types](#type)
-    * [type relayState struct](#relayState)
-        * [func (s *relayState) encode() string](#relayState.encode)
-        * [func (s *relayState) decode(encoded string)](#relayState.decode)
+    * [type authnResponseInfo struct](#authnResponseInfo)
+        * [func readAuthnResponse(p *provider, encodedResp string) (*authnResponseInfo, error)](#readAuthnResponse)
+    * [type entitiesDescriptor struct](#entitiesDescriptor)
     * [type provider struct](#provider)
         * [func getProvider(pcID string) *provider](#getProvider)
         * [func handleGetProvider(ctx context.Context, w http.ResponseWriter, pcID string) (p *provider, handled bool)](#handleGetProvider)
-        * [func (p *provider) ConfigID() providers.ConfigID](#provider.ConfigID)
+        * [func (p *provider) CachedInfo() *providers.Info](#provider.CachedInfo)
         * [func (p *provider) Config() schema.AuthProviders](#provider.Config)
+        * [func (p *provider) ConfigID() providers.ConfigID](#provider.ConfigID)
         * [func (p *provider) Refresh(ctx context.Context) error](#provider.Refresh)
         * [func (p *provider) getCachedInfoAndError() (*providers.Info, error)](#provider.getCachedInfoAndError)
-        * [func (p *provider) CachedInfo() *providers.Info](#provider.CachedInfo)
-    * [type entitiesDescriptor struct](#entitiesDescriptor)
     * [type providerConfig struct](#providerConfig)
         * [func readProviderConfig(pc *schema.SAMLAuthProvider) (*providerConfig, error)](#readProviderConfig)
-    * [type authnResponseInfo struct](#authnResponseInfo)
-        * [func readAuthnResponse(p *provider, encodedResp string) (*authnResponseInfo, error)](#readAuthnResponse)
+    * [type relayState struct](#relayState)
+        * [func (s *relayState) decode(encoded string)](#relayState.decode)
+        * [func (s *relayState) encode() string](#relayState.encode)
     * [type samlAssertionValues saml2.Values](#samlAssertionValues)
         * [func (v samlAssertionValues) Get(key string) string](#samlAssertionValues.Get)
 * [Functions](#func)
+    * [func SignOut(w http.ResponseWriter, r *http.Request) (logoutURL string, err error)](#SignOut)
+    * [func TestMiddleware(t *testing.T)](#TestMiddleware)
+    * [func TestProviderConfigID(t *testing.T)](#TestProviderConfigID)
+    * [func TestReadAuthnResponse(t *testing.T)](#TestReadAuthnResponse)
+    * [func TestValidateCustom(t *testing.T)](#TestValidateCustom)
+    * [func authHandler(w http.ResponseWriter, r *http.Request, next http.Handler, isAPIRequest bool)](#authHandler)
+    * [func buildAuthURLRedirect(p *provider, relayState relayState) (string, error)](#buildAuthURLRedirect)
+    * [func getFirstProviderConfig() (pc *schema.SAMLAuthProvider, multiple bool)](#getFirstProviderConfig)
+    * [func getNameIDFormat(pc *schema.SAMLAuthProvider) string](#getNameIDFormat)
+    * [func getOrCreateUser(ctx context.Context, allowSignup bool, info *authnResponseInfo) (_ *actor.Actor, safeErrMsg string, err error)](#getOrCreateUser)
+    * [func getProviders() []providers.Provider](#getProviders)
+    * [func getServiceProvider(ctx context.Context, pc *schema.SAMLAuthProvider) (*saml2.SAMLServiceProvider, error)](#getServiceProvider)
     * [func init()](#init.config.go)
+    * [func init()](#init.config_watch.go)
+    * [func mightBeEmail(s string) bool](#mightBeEmail)
+    * [func newLogoutRequest(p *provider) (*etree.Document, error)](#newLogoutRequest)
+    * [func newSAMLIDPServer(t *testing.T) (*httptest.Server, *samlidp.Server)](#newSAMLIDPServer)
+    * [func providerConfigID(pc *schema.SAMLAuthProvider, multiple bool) string](#providerConfigID)
+    * [func providerIDQuery(pc *schema.SAMLAuthProvider, multiple bool) url.Values](#providerIDQuery)
+    * [func readIdentityProviderMetadata(ctx context.Context, c *providerConfig) ([]byte, error)](#readIdentityProviderMetadata)
+    * [func redirectToAuthURL(w http.ResponseWriter, r *http.Request, p *provider, returnToURL string)](#redirectToAuthURL)
+    * [func samlSPHandler(w http.ResponseWriter, r *http.Request)](#samlSPHandler)
+    * [func traceLog(description, body string)](#traceLog)
+    * [func unexpiredCookies(resp *http.Response) (cookies []*http.Cookie)](#unexpiredCookies)
+    * [func unmarshalEntityDescriptor(data []byte) (*types.EntityDescriptor, error)](#unmarshalEntityDescriptor)
     * [func validateConfig(c conf.Unified) (problems conf.Problems)](#validateConfig)
     * [func withConfigDefaults(pc *schema.SAMLAuthProvider) *schema.SAMLAuthProvider](#withConfigDefaults)
-    * [func getNameIDFormat(pc *schema.SAMLAuthProvider) string](#getNameIDFormat)
-    * [func providerConfigID(pc *schema.SAMLAuthProvider, multiple bool) string](#providerConfigID)
-    * [func traceLog(description, body string)](#traceLog)
-    * [func getProviders() []providers.Provider](#getProviders)
-    * [func init()](#init.config_watch.go)
-    * [func authHandler(w http.ResponseWriter, r *http.Request, next http.Handler, isAPIRequest bool)](#authHandler)
-    * [func samlSPHandler(w http.ResponseWriter, r *http.Request)](#samlSPHandler)
-    * [func redirectToAuthURL(w http.ResponseWriter, r *http.Request, p *provider, returnToURL string)](#redirectToAuthURL)
-    * [func buildAuthURLRedirect(p *provider, relayState relayState) (string, error)](#buildAuthURLRedirect)
-    * [func providerIDQuery(pc *schema.SAMLAuthProvider, multiple bool) url.Values](#providerIDQuery)
-    * [func getServiceProvider(ctx context.Context, pc *schema.SAMLAuthProvider) (*saml2.SAMLServiceProvider, error)](#getServiceProvider)
-    * [func unmarshalEntityDescriptor(data []byte) (*types.EntityDescriptor, error)](#unmarshalEntityDescriptor)
-    * [func readIdentityProviderMetadata(ctx context.Context, c *providerConfig) ([]byte, error)](#readIdentityProviderMetadata)
-    * [func SignOut(w http.ResponseWriter, r *http.Request) (logoutURL string, err error)](#SignOut)
-    * [func getFirstProviderConfig() (pc *schema.SAMLAuthProvider, multiple bool)](#getFirstProviderConfig)
-    * [func newLogoutRequest(p *provider) (*etree.Document, error)](#newLogoutRequest)
-    * [func getOrCreateUser(ctx context.Context, allowSignup bool, info *authnResponseInfo) (_ *actor.Actor, safeErrMsg string, err error)](#getOrCreateUser)
-    * [func mightBeEmail(s string) bool](#mightBeEmail)
-    * [func TestValidateCustom(t *testing.T)](#TestValidateCustom)
-    * [func TestProviderConfigID(t *testing.T)](#TestProviderConfigID)
-    * [func newSAMLIDPServer(t *testing.T) (*httptest.Server, *samlidp.Server)](#newSAMLIDPServer)
-    * [func TestMiddleware(t *testing.T)](#TestMiddleware)
-    * [func unexpiredCookies(resp *http.Response) (cookies []*http.Cookie)](#unexpiredCookies)
-    * [func TestReadAuthnResponse(t *testing.T)](#TestReadAuthnResponse)
 
 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="authPrefix" href="#authPrefix">const authPrefix</a>
 
 ```
 searchKey: saml.authPrefix
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -89,18 +89,29 @@ All SAML endpoints are under this path prefix.
 
 ```
 searchKey: saml.providerType
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
 const providerType = "saml"
 ```
 
+### <a id="testAuthnResponse" href="#testAuthnResponse">const testAuthnResponse</a>
+
+```
+searchKey: saml.testAuthnResponse
+tags: [constant string private]
+```
+
+```Go
+const testAuthnResponse = ...
+```
+
 ### <a id="testSAMLSPCert" href="#testSAMLSPCert">const testSAMLSPCert</a>
 
 ```
 searchKey: saml.testSAMLSPCert
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -111,56 +122,24 @@ const testSAMLSPCert = ...
 
 ```
 searchKey: saml.testSAMLSPKey
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
 const testSAMLSPKey = ...
 ```
 
-### <a id="testAuthnResponse" href="#testAuthnResponse">const testAuthnResponse</a>
-
-```
-searchKey: saml.testAuthnResponse
-tags: [private]
-```
-
-```Go
-const testAuthnResponse = ...
-```
-
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
-```
-
-### <a id="mockGetProviderValue" href="#mockGetProviderValue">var mockGetProviderValue</a>
-
-```
-searchKey: saml.mockGetProviderValue
-tags: [private]
-```
-
-```Go
-var mockGetProviderValue *provider
-```
-
-### <a id="traceLogEnabled" href="#traceLogEnabled">var traceLogEnabled</a>
-
-```
-searchKey: saml.traceLogEnabled
-tags: [private]
-```
-
-```Go
-var traceLogEnabled, _ = ...
+tags: [package private]
 ```
 
 ### <a id="Middleware" href="#Middleware">var Middleware</a>
 
 ```
 searchKey: saml.Middleware
+tags: [variable struct]
 ```
 
 ```Go
@@ -175,46 +154,250 @@ Middleware is middleware for SAML authentication, adding endpoints under the aut
 
 ```
 searchKey: saml.idpCert
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
 var idpCert = ...
 ```
 
-### <a id="idpKey" href="#idpKey">var idpKey</a>
-
-```
-searchKey: saml.idpKey
-tags: [private]
-```
-
-```Go
-var idpKey = ...
-```
-
 ### <a id="idpCert2" href="#idpCert2">var idpCert2</a>
 
 ```
 searchKey: saml.idpCert2
-tags: [private]
+tags: [variable struct private]
 ```
 
 ```Go
 var idpCert2 = ...
 ```
 
+### <a id="idpKey" href="#idpKey">var idpKey</a>
+
+```
+searchKey: saml.idpKey
+tags: [variable interface private]
+```
+
+```Go
+var idpKey = ...
+```
+
+### <a id="mockGetProviderValue" href="#mockGetProviderValue">var mockGetProviderValue</a>
+
+```
+searchKey: saml.mockGetProviderValue
+tags: [variable struct private]
+```
+
+```Go
+var mockGetProviderValue *provider
+```
+
+### <a id="traceLogEnabled" href="#traceLogEnabled">var traceLogEnabled</a>
+
+```
+searchKey: saml.traceLogEnabled
+tags: [variable boolean private]
+```
+
+```Go
+var traceLogEnabled, _ = ...
+```
+
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
+```
+
+### <a id="authnResponseInfo" href="#authnResponseInfo">type authnResponseInfo struct</a>
+
+```
+searchKey: saml.authnResponseInfo
+tags: [struct private]
+```
+
+```Go
+type authnResponseInfo struct {
+	spec                 extsvc.AccountSpec
+	email, displayName   string
+	unnormalizedUsername string
+	accountData          interface{}
+}
+```
+
+#### <a id="readAuthnResponse" href="#readAuthnResponse">func readAuthnResponse(p *provider, encodedResp string) (*authnResponseInfo, error)</a>
+
+```
+searchKey: saml.readAuthnResponse
+tags: [method private]
+```
+
+```Go
+func readAuthnResponse(p *provider, encodedResp string) (*authnResponseInfo, error)
+```
+
+### <a id="entitiesDescriptor" href="#entitiesDescriptor">type entitiesDescriptor struct</a>
+
+```
+searchKey: saml.entitiesDescriptor
+tags: [struct private]
+```
+
+```Go
+type entitiesDescriptor struct {
+	XMLName             xml.Name       `xml:"urn:oasis:names:tc:SAML:2.0:metadata EntitiesDescriptor"`
+	ID                  *string        `xml:",attr,omitempty"`
+	ValidUntil          *time.Time     `xml:"validUntil,attr,omitempty"`
+	CacheDuration       *time.Duration `xml:"cacheDuration,attr,omitempty"`
+	Name                *string        `xml:",attr,omitempty"`
+	Signature           *etree.Element
+	EntitiesDescriptors []entitiesDescriptor     `xml:"urn:oasis:names:tc:SAML:2.0:metadata EntitiesDescriptor"`
+	EntityDescriptors   []types.EntityDescriptor `xml:"urn:oasis:names:tc:SAML:2.0:metadata EntityDescriptor"`
+}
+```
+
+entitiesDescriptor represents the SAML EntitiesDescriptor object. 
+
+### <a id="provider" href="#provider">type provider struct</a>
+
+```
+searchKey: saml.provider
+tags: [struct private]
+```
+
+```Go
+type provider struct {
+	config   schema.SAMLAuthProvider
+	multiple bool // whether there are multiple SAML auth providers
+
+	mu         sync.Mutex
+	samlSP     *saml2.SAMLServiceProvider
+	refreshErr error
+}
+```
+
+#### <a id="getProvider" href="#getProvider">func getProvider(pcID string) *provider</a>
+
+```
+searchKey: saml.getProvider
+tags: [method private]
+```
+
+```Go
+func getProvider(pcID string) *provider
+```
+
+getProvider looks up the registered saml auth provider with the given ID. 
+
+#### <a id="handleGetProvider" href="#handleGetProvider">func handleGetProvider(ctx context.Context, w http.ResponseWriter, pcID string) (p *provider, handled bool)</a>
+
+```
+searchKey: saml.handleGetProvider
+tags: [method private]
+```
+
+```Go
+func handleGetProvider(ctx context.Context, w http.ResponseWriter, pcID string) (p *provider, handled bool)
+```
+
+#### <a id="provider.CachedInfo" href="#provider.CachedInfo">func (p *provider) CachedInfo() *providers.Info</a>
+
+```
+searchKey: saml.provider.CachedInfo
+tags: [function private]
+```
+
+```Go
+func (p *provider) CachedInfo() *providers.Info
+```
+
+CachedInfo implements providers.Provider. 
+
+#### <a id="provider.Config" href="#provider.Config">func (p *provider) Config() schema.AuthProviders</a>
+
+```
+searchKey: saml.provider.Config
+tags: [function private]
+```
+
+```Go
+func (p *provider) Config() schema.AuthProviders
+```
+
+Config implements providers.Provider. 
+
+#### <a id="provider.ConfigID" href="#provider.ConfigID">func (p *provider) ConfigID() providers.ConfigID</a>
+
+```
+searchKey: saml.provider.ConfigID
+tags: [function private]
+```
+
+```Go
+func (p *provider) ConfigID() providers.ConfigID
+```
+
+ConfigID implements providers.Provider. 
+
+#### <a id="provider.Refresh" href="#provider.Refresh">func (p *provider) Refresh(ctx context.Context) error</a>
+
+```
+searchKey: saml.provider.Refresh
+tags: [method private]
+```
+
+```Go
+func (p *provider) Refresh(ctx context.Context) error
+```
+
+Refresh implements providers.Provider. 
+
+#### <a id="provider.getCachedInfoAndError" href="#provider.getCachedInfoAndError">func (p *provider) getCachedInfoAndError() (*providers.Info, error)</a>
+
+```
+searchKey: saml.provider.getCachedInfoAndError
+tags: [function private]
+```
+
+```Go
+func (p *provider) getCachedInfoAndError() (*providers.Info, error)
+```
+
+### <a id="providerConfig" href="#providerConfig">type providerConfig struct</a>
+
+```
+searchKey: saml.providerConfig
+tags: [struct private]
+```
+
+```Go
+type providerConfig struct {
+	keyPair *tls.Certificate
+
+	// Exactly 1 of these is set:
+	identityProviderMetadataURL *url.URL
+	identityProviderMetadata    []byte
+}
+```
+
+#### <a id="readProviderConfig" href="#readProviderConfig">func readProviderConfig(pc *schema.SAMLAuthProvider) (*providerConfig, error)</a>
+
+```
+searchKey: saml.readProviderConfig
+tags: [method private]
+```
+
+```Go
+func readProviderConfig(pc *schema.SAMLAuthProvider) (*providerConfig, error)
 ```
 
 ### <a id="relayState" href="#relayState">type relayState struct</a>
 
 ```
 searchKey: saml.relayState
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -239,24 +422,11 @@ the RelayState.
 is the desired post-login redirect URL in plain text.
 
 ```
-#### <a id="relayState.encode" href="#relayState.encode">func (s *relayState) encode() string</a>
-
-```
-searchKey: saml.relayState.encode
-tags: [private]
-```
-
-```Go
-func (s *relayState) encode() string
-```
-
-encode returns the base64-encoded JSON representation of the relay state. 
-
 #### <a id="relayState.decode" href="#relayState.decode">func (s *relayState) decode(encoded string)</a>
 
 ```
 searchKey: saml.relayState.decode
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -265,193 +435,24 @@ func (s *relayState) decode(encoded string)
 
 Decode decodes the base64-encoded JSON representation of the relay state into the receiver. 
 
-### <a id="provider" href="#provider">type provider struct</a>
+#### <a id="relayState.encode" href="#relayState.encode">func (s *relayState) encode() string</a>
 
 ```
-searchKey: saml.provider
-tags: [private]
-```
-
-```Go
-type provider struct {
-	config   schema.SAMLAuthProvider
-	multiple bool // whether there are multiple SAML auth providers
-
-	mu         sync.Mutex
-	samlSP     *saml2.SAMLServiceProvider
-	refreshErr error
-}
-```
-
-#### <a id="getProvider" href="#getProvider">func getProvider(pcID string) *provider</a>
-
-```
-searchKey: saml.getProvider
-tags: [private]
+searchKey: saml.relayState.encode
+tags: [function private]
 ```
 
 ```Go
-func getProvider(pcID string) *provider
+func (s *relayState) encode() string
 ```
 
-getProvider looks up the registered saml auth provider with the given ID. 
-
-#### <a id="handleGetProvider" href="#handleGetProvider">func handleGetProvider(ctx context.Context, w http.ResponseWriter, pcID string) (p *provider, handled bool)</a>
-
-```
-searchKey: saml.handleGetProvider
-tags: [private]
-```
-
-```Go
-func handleGetProvider(ctx context.Context, w http.ResponseWriter, pcID string) (p *provider, handled bool)
-```
-
-#### <a id="provider.ConfigID" href="#provider.ConfigID">func (p *provider) ConfigID() providers.ConfigID</a>
-
-```
-searchKey: saml.provider.ConfigID
-tags: [private]
-```
-
-```Go
-func (p *provider) ConfigID() providers.ConfigID
-```
-
-ConfigID implements providers.Provider. 
-
-#### <a id="provider.Config" href="#provider.Config">func (p *provider) Config() schema.AuthProviders</a>
-
-```
-searchKey: saml.provider.Config
-tags: [private]
-```
-
-```Go
-func (p *provider) Config() schema.AuthProviders
-```
-
-Config implements providers.Provider. 
-
-#### <a id="provider.Refresh" href="#provider.Refresh">func (p *provider) Refresh(ctx context.Context) error</a>
-
-```
-searchKey: saml.provider.Refresh
-tags: [private]
-```
-
-```Go
-func (p *provider) Refresh(ctx context.Context) error
-```
-
-Refresh implements providers.Provider. 
-
-#### <a id="provider.getCachedInfoAndError" href="#provider.getCachedInfoAndError">func (p *provider) getCachedInfoAndError() (*providers.Info, error)</a>
-
-```
-searchKey: saml.provider.getCachedInfoAndError
-tags: [private]
-```
-
-```Go
-func (p *provider) getCachedInfoAndError() (*providers.Info, error)
-```
-
-#### <a id="provider.CachedInfo" href="#provider.CachedInfo">func (p *provider) CachedInfo() *providers.Info</a>
-
-```
-searchKey: saml.provider.CachedInfo
-tags: [private]
-```
-
-```Go
-func (p *provider) CachedInfo() *providers.Info
-```
-
-CachedInfo implements providers.Provider. 
-
-### <a id="entitiesDescriptor" href="#entitiesDescriptor">type entitiesDescriptor struct</a>
-
-```
-searchKey: saml.entitiesDescriptor
-tags: [private]
-```
-
-```Go
-type entitiesDescriptor struct {
-	XMLName             xml.Name       `xml:"urn:oasis:names:tc:SAML:2.0:metadata EntitiesDescriptor"`
-	ID                  *string        `xml:",attr,omitempty"`
-	ValidUntil          *time.Time     `xml:"validUntil,attr,omitempty"`
-	CacheDuration       *time.Duration `xml:"cacheDuration,attr,omitempty"`
-	Name                *string        `xml:",attr,omitempty"`
-	Signature           *etree.Element
-	EntitiesDescriptors []entitiesDescriptor     `xml:"urn:oasis:names:tc:SAML:2.0:metadata EntitiesDescriptor"`
-	EntityDescriptors   []types.EntityDescriptor `xml:"urn:oasis:names:tc:SAML:2.0:metadata EntityDescriptor"`
-}
-```
-
-entitiesDescriptor represents the SAML EntitiesDescriptor object. 
-
-### <a id="providerConfig" href="#providerConfig">type providerConfig struct</a>
-
-```
-searchKey: saml.providerConfig
-tags: [private]
-```
-
-```Go
-type providerConfig struct {
-	keyPair *tls.Certificate
-
-	// Exactly 1 of these is set:
-	identityProviderMetadataURL *url.URL
-	identityProviderMetadata    []byte
-}
-```
-
-#### <a id="readProviderConfig" href="#readProviderConfig">func readProviderConfig(pc *schema.SAMLAuthProvider) (*providerConfig, error)</a>
-
-```
-searchKey: saml.readProviderConfig
-tags: [private]
-```
-
-```Go
-func readProviderConfig(pc *schema.SAMLAuthProvider) (*providerConfig, error)
-```
-
-### <a id="authnResponseInfo" href="#authnResponseInfo">type authnResponseInfo struct</a>
-
-```
-searchKey: saml.authnResponseInfo
-tags: [private]
-```
-
-```Go
-type authnResponseInfo struct {
-	spec                 extsvc.AccountSpec
-	email, displayName   string
-	unnormalizedUsername string
-	accountData          interface{}
-}
-```
-
-#### <a id="readAuthnResponse" href="#readAuthnResponse">func readAuthnResponse(p *provider, encodedResp string) (*authnResponseInfo, error)</a>
-
-```
-searchKey: saml.readAuthnResponse
-tags: [private]
-```
-
-```Go
-func readAuthnResponse(p *provider, encodedResp string) (*authnResponseInfo, error)
-```
+encode returns the base64-encoded JSON representation of the relay state. 
 
 ### <a id="samlAssertionValues" href="#samlAssertionValues">type samlAssertionValues saml2.Values</a>
 
 ```
 searchKey: saml.samlAssertionValues
-tags: [private]
+tags: [object private]
 ```
 
 ```Go
@@ -462,7 +463,7 @@ type samlAssertionValues saml2.Values
 
 ```
 searchKey: saml.samlAssertionValues.Get
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -472,106 +473,71 @@ func (v samlAssertionValues) Get(key string) string
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
-### <a id="init.config.go" href="#init.config.go">func init()</a>
+### <a id="SignOut" href="#SignOut">func SignOut(w http.ResponseWriter, r *http.Request) (logoutURL string, err error)</a>
 
 ```
-searchKey: saml.init
-tags: [private]
-```
-
-```Go
-func init()
-```
-
-### <a id="validateConfig" href="#validateConfig">func validateConfig(c conf.Unified) (problems conf.Problems)</a>
-
-```
-searchKey: saml.validateConfig
-tags: [private]
+searchKey: saml.SignOut
+tags: [method]
 ```
 
 ```Go
-func validateConfig(c conf.Unified) (problems conf.Problems)
+func SignOut(w http.ResponseWriter, r *http.Request) (logoutURL string, err error)
 ```
 
-### <a id="withConfigDefaults" href="#withConfigDefaults">func withConfigDefaults(pc *schema.SAMLAuthProvider) *schema.SAMLAuthProvider</a>
+SignOut returns the URL where the user can initiate a logout from the SAML IdentityProvider, if it has a SingleLogoutService. 
+
+### <a id="TestMiddleware" href="#TestMiddleware">func TestMiddleware(t *testing.T)</a>
 
 ```
-searchKey: saml.withConfigDefaults
-tags: [private]
-```
-
-```Go
-func withConfigDefaults(pc *schema.SAMLAuthProvider) *schema.SAMLAuthProvider
-```
-
-### <a id="getNameIDFormat" href="#getNameIDFormat">func getNameIDFormat(pc *schema.SAMLAuthProvider) string</a>
-
-```
-searchKey: saml.getNameIDFormat
-tags: [private]
+searchKey: saml.TestMiddleware
+tags: [method private test]
 ```
 
 ```Go
-func getNameIDFormat(pc *schema.SAMLAuthProvider) string
+func TestMiddleware(t *testing.T)
 ```
 
-### <a id="providerConfigID" href="#providerConfigID">func providerConfigID(pc *schema.SAMLAuthProvider, multiple bool) string</a>
+### <a id="TestProviderConfigID" href="#TestProviderConfigID">func TestProviderConfigID(t *testing.T)</a>
 
 ```
-searchKey: saml.providerConfigID
-tags: [private]
-```
-
-```Go
-func providerConfigID(pc *schema.SAMLAuthProvider, multiple bool) string
-```
-
-providerConfigID produces a semi-stable identifier for a saml auth provider config object. It is used to distinguish between multiple auth providers of the same type when in multi-step auth flows. Its value is never persisted, and it must be deterministic. 
-
-If there is only a single saml auth provider, it returns the empty string because that satisfies the requirements above. 
-
-### <a id="traceLog" href="#traceLog">func traceLog(description, body string)</a>
-
-```
-searchKey: saml.traceLog
-tags: [private]
+searchKey: saml.TestProviderConfigID
+tags: [method private test]
 ```
 
 ```Go
-func traceLog(description, body string)
+func TestProviderConfigID(t *testing.T)
 ```
 
-### <a id="getProviders" href="#getProviders">func getProviders() []providers.Provider</a>
+### <a id="TestReadAuthnResponse" href="#TestReadAuthnResponse">func TestReadAuthnResponse(t *testing.T)</a>
 
 ```
-searchKey: saml.getProviders
-tags: [private]
-```
-
-```Go
-func getProviders() []providers.Provider
-```
-
-### <a id="init.config_watch.go" href="#init.config_watch.go">func init()</a>
-
-```
-searchKey: saml.init
-tags: [private]
+searchKey: saml.TestReadAuthnResponse
+tags: [method private test]
 ```
 
 ```Go
-func init()
+func TestReadAuthnResponse(t *testing.T)
+```
+
+### <a id="TestValidateCustom" href="#TestValidateCustom">func TestValidateCustom(t *testing.T)</a>
+
+```
+searchKey: saml.TestValidateCustom
+tags: [method private test]
+```
+
+```Go
+func TestValidateCustom(t *testing.T)
 ```
 
 ### <a id="authHandler" href="#authHandler">func authHandler(w http.ResponseWriter, r *http.Request, next http.Handler, isAPIRequest bool)</a>
 
 ```
 searchKey: saml.authHandler
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -582,66 +548,221 @@ authHandler is the new SAML HTTP auth handler.
 
 It uses github.com/russelhaering/gosaml2 and (unlike authHandler1) makes it possible to support multiple auth providers with SAML and expose more SAML functionality. 
 
-### <a id="samlSPHandler" href="#samlSPHandler">func samlSPHandler(w http.ResponseWriter, r *http.Request)</a>
-
-```
-searchKey: saml.samlSPHandler
-tags: [private]
-```
-
-```Go
-func samlSPHandler(w http.ResponseWriter, r *http.Request)
-```
-
-### <a id="redirectToAuthURL" href="#redirectToAuthURL">func redirectToAuthURL(w http.ResponseWriter, r *http.Request, p *provider, returnToURL string)</a>
-
-```
-searchKey: saml.redirectToAuthURL
-tags: [private]
-```
-
-```Go
-func redirectToAuthURL(w http.ResponseWriter, r *http.Request, p *provider, returnToURL string)
-```
-
 ### <a id="buildAuthURLRedirect" href="#buildAuthURLRedirect">func buildAuthURLRedirect(p *provider, relayState relayState) (string, error)</a>
 
 ```
 searchKey: saml.buildAuthURLRedirect
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func buildAuthURLRedirect(p *provider, relayState relayState) (string, error)
 ```
 
-### <a id="providerIDQuery" href="#providerIDQuery">func providerIDQuery(pc *schema.SAMLAuthProvider, multiple bool) url.Values</a>
+### <a id="getFirstProviderConfig" href="#getFirstProviderConfig">func getFirstProviderConfig() (pc *schema.SAMLAuthProvider, multiple bool)</a>
 
 ```
-searchKey: saml.providerIDQuery
-tags: [private]
+searchKey: saml.getFirstProviderConfig
+tags: [function private]
 ```
 
 ```Go
-func providerIDQuery(pc *schema.SAMLAuthProvider, multiple bool) url.Values
+func getFirstProviderConfig() (pc *schema.SAMLAuthProvider, multiple bool)
+```
+
+getFirstProviderConfig returns the SAML auth provider config. At most 1 can be specified in site config; if there is more than 1, it returns multiple == true (which the caller should handle by returning an error and refusing to proceed with auth). 
+
+### <a id="getNameIDFormat" href="#getNameIDFormat">func getNameIDFormat(pc *schema.SAMLAuthProvider) string</a>
+
+```
+searchKey: saml.getNameIDFormat
+tags: [method private]
+```
+
+```Go
+func getNameIDFormat(pc *schema.SAMLAuthProvider) string
+```
+
+### <a id="getOrCreateUser" href="#getOrCreateUser">func getOrCreateUser(ctx context.Context, allowSignup bool, info *authnResponseInfo) (_ *actor.Actor, safeErrMsg string, err error)</a>
+
+```
+searchKey: saml.getOrCreateUser
+tags: [method private]
+```
+
+```Go
+func getOrCreateUser(ctx context.Context, allowSignup bool, info *authnResponseInfo) (_ *actor.Actor, safeErrMsg string, err error)
+```
+
+getOrCreateUser gets or creates a user account based on the SAML claims. It returns the authenticated actor if successful; otherwise it returns an friendly error message (safeErrMsg) that is safe to display to users, and a non-nil err with lower-level error details. 
+
+### <a id="getProviders" href="#getProviders">func getProviders() []providers.Provider</a>
+
+```
+searchKey: saml.getProviders
+tags: [function private]
+```
+
+```Go
+func getProviders() []providers.Provider
 ```
 
 ### <a id="getServiceProvider" href="#getServiceProvider">func getServiceProvider(ctx context.Context, pc *schema.SAMLAuthProvider) (*saml2.SAMLServiceProvider, error)</a>
 
 ```
 searchKey: saml.getServiceProvider
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func getServiceProvider(ctx context.Context, pc *schema.SAMLAuthProvider) (*saml2.SAMLServiceProvider, error)
 ```
 
+### <a id="init.config.go" href="#init.config.go">func init()</a>
+
+```
+searchKey: saml.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="init.config_watch.go" href="#init.config_watch.go">func init()</a>
+
+```
+searchKey: saml.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="mightBeEmail" href="#mightBeEmail">func mightBeEmail(s string) bool</a>
+
+```
+searchKey: saml.mightBeEmail
+tags: [method private]
+```
+
+```Go
+func mightBeEmail(s string) bool
+```
+
+### <a id="newLogoutRequest" href="#newLogoutRequest">func newLogoutRequest(p *provider) (*etree.Document, error)</a>
+
+```
+searchKey: saml.newLogoutRequest
+tags: [method private]
+```
+
+```Go
+func newLogoutRequest(p *provider) (*etree.Document, error)
+```
+
+### <a id="newSAMLIDPServer" href="#newSAMLIDPServer">func newSAMLIDPServer(t *testing.T) (*httptest.Server, *samlidp.Server)</a>
+
+```
+searchKey: saml.newSAMLIDPServer
+tags: [method private]
+```
+
+```Go
+func newSAMLIDPServer(t *testing.T) (*httptest.Server, *samlidp.Server)
+```
+
+newSAMLIDPServer returns a new running SAML IDP server. It is the caller's responsibility to call Close(). 
+
+### <a id="providerConfigID" href="#providerConfigID">func providerConfigID(pc *schema.SAMLAuthProvider, multiple bool) string</a>
+
+```
+searchKey: saml.providerConfigID
+tags: [method private]
+```
+
+```Go
+func providerConfigID(pc *schema.SAMLAuthProvider, multiple bool) string
+```
+
+providerConfigID produces a semi-stable identifier for a saml auth provider config object. It is used to distinguish between multiple auth providers of the same type when in multi-step auth flows. Its value is never persisted, and it must be deterministic. 
+
+If there is only a single saml auth provider, it returns the empty string because that satisfies the requirements above. 
+
+### <a id="providerIDQuery" href="#providerIDQuery">func providerIDQuery(pc *schema.SAMLAuthProvider, multiple bool) url.Values</a>
+
+```
+searchKey: saml.providerIDQuery
+tags: [method private]
+```
+
+```Go
+func providerIDQuery(pc *schema.SAMLAuthProvider, multiple bool) url.Values
+```
+
+### <a id="readIdentityProviderMetadata" href="#readIdentityProviderMetadata">func readIdentityProviderMetadata(ctx context.Context, c *providerConfig) ([]byte, error)</a>
+
+```
+searchKey: saml.readIdentityProviderMetadata
+tags: [method private]
+```
+
+```Go
+func readIdentityProviderMetadata(ctx context.Context, c *providerConfig) ([]byte, error)
+```
+
+### <a id="redirectToAuthURL" href="#redirectToAuthURL">func redirectToAuthURL(w http.ResponseWriter, r *http.Request, p *provider, returnToURL string)</a>
+
+```
+searchKey: saml.redirectToAuthURL
+tags: [method private]
+```
+
+```Go
+func redirectToAuthURL(w http.ResponseWriter, r *http.Request, p *provider, returnToURL string)
+```
+
+### <a id="samlSPHandler" href="#samlSPHandler">func samlSPHandler(w http.ResponseWriter, r *http.Request)</a>
+
+```
+searchKey: saml.samlSPHandler
+tags: [method private]
+```
+
+```Go
+func samlSPHandler(w http.ResponseWriter, r *http.Request)
+```
+
+### <a id="traceLog" href="#traceLog">func traceLog(description, body string)</a>
+
+```
+searchKey: saml.traceLog
+tags: [method private]
+```
+
+```Go
+func traceLog(description, body string)
+```
+
+### <a id="unexpiredCookies" href="#unexpiredCookies">func unexpiredCookies(resp *http.Response) (cookies []*http.Cookie)</a>
+
+```
+searchKey: saml.unexpiredCookies
+tags: [method private]
+```
+
+```Go
+func unexpiredCookies(resp *http.Response) (cookies []*http.Cookie)
+```
+
+unexpiredCookies returns the list of unexpired cookies set by the response 
+
 ### <a id="unmarshalEntityDescriptor" href="#unmarshalEntityDescriptor">func unmarshalEntityDescriptor(data []byte) (*types.EntityDescriptor, error)</a>
 
 ```
 searchKey: saml.unmarshalEntityDescriptor
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -652,144 +773,25 @@ unmarshalEntityDescriptor unmarshals from an XML root <EntityDescriptor> or <Ent
 
 Taken from github.com/crewjam/saml. 
 
-### <a id="readIdentityProviderMetadata" href="#readIdentityProviderMetadata">func readIdentityProviderMetadata(ctx context.Context, c *providerConfig) ([]byte, error)</a>
+### <a id="validateConfig" href="#validateConfig">func validateConfig(c conf.Unified) (problems conf.Problems)</a>
 
 ```
-searchKey: saml.readIdentityProviderMetadata
-tags: [private]
-```
-
-```Go
-func readIdentityProviderMetadata(ctx context.Context, c *providerConfig) ([]byte, error)
-```
-
-### <a id="SignOut" href="#SignOut">func SignOut(w http.ResponseWriter, r *http.Request) (logoutURL string, err error)</a>
-
-```
-searchKey: saml.SignOut
+searchKey: saml.validateConfig
+tags: [method private]
 ```
 
 ```Go
-func SignOut(w http.ResponseWriter, r *http.Request) (logoutURL string, err error)
+func validateConfig(c conf.Unified) (problems conf.Problems)
 ```
 
-SignOut returns the URL where the user can initiate a logout from the SAML IdentityProvider, if it has a SingleLogoutService. 
-
-### <a id="getFirstProviderConfig" href="#getFirstProviderConfig">func getFirstProviderConfig() (pc *schema.SAMLAuthProvider, multiple bool)</a>
+### <a id="withConfigDefaults" href="#withConfigDefaults">func withConfigDefaults(pc *schema.SAMLAuthProvider) *schema.SAMLAuthProvider</a>
 
 ```
-searchKey: saml.getFirstProviderConfig
-tags: [private]
-```
-
-```Go
-func getFirstProviderConfig() (pc *schema.SAMLAuthProvider, multiple bool)
-```
-
-getFirstProviderConfig returns the SAML auth provider config. At most 1 can be specified in site config; if there is more than 1, it returns multiple == true (which the caller should handle by returning an error and refusing to proceed with auth). 
-
-### <a id="newLogoutRequest" href="#newLogoutRequest">func newLogoutRequest(p *provider) (*etree.Document, error)</a>
-
-```
-searchKey: saml.newLogoutRequest
-tags: [private]
+searchKey: saml.withConfigDefaults
+tags: [method private]
 ```
 
 ```Go
-func newLogoutRequest(p *provider) (*etree.Document, error)
-```
-
-### <a id="getOrCreateUser" href="#getOrCreateUser">func getOrCreateUser(ctx context.Context, allowSignup bool, info *authnResponseInfo) (_ *actor.Actor, safeErrMsg string, err error)</a>
-
-```
-searchKey: saml.getOrCreateUser
-tags: [private]
-```
-
-```Go
-func getOrCreateUser(ctx context.Context, allowSignup bool, info *authnResponseInfo) (_ *actor.Actor, safeErrMsg string, err error)
-```
-
-getOrCreateUser gets or creates a user account based on the SAML claims. It returns the authenticated actor if successful; otherwise it returns an friendly error message (safeErrMsg) that is safe to display to users, and a non-nil err with lower-level error details. 
-
-### <a id="mightBeEmail" href="#mightBeEmail">func mightBeEmail(s string) bool</a>
-
-```
-searchKey: saml.mightBeEmail
-tags: [private]
-```
-
-```Go
-func mightBeEmail(s string) bool
-```
-
-### <a id="TestValidateCustom" href="#TestValidateCustom">func TestValidateCustom(t *testing.T)</a>
-
-```
-searchKey: saml.TestValidateCustom
-tags: [private]
-```
-
-```Go
-func TestValidateCustom(t *testing.T)
-```
-
-### <a id="TestProviderConfigID" href="#TestProviderConfigID">func TestProviderConfigID(t *testing.T)</a>
-
-```
-searchKey: saml.TestProviderConfigID
-tags: [private]
-```
-
-```Go
-func TestProviderConfigID(t *testing.T)
-```
-
-### <a id="newSAMLIDPServer" href="#newSAMLIDPServer">func newSAMLIDPServer(t *testing.T) (*httptest.Server, *samlidp.Server)</a>
-
-```
-searchKey: saml.newSAMLIDPServer
-tags: [private]
-```
-
-```Go
-func newSAMLIDPServer(t *testing.T) (*httptest.Server, *samlidp.Server)
-```
-
-newSAMLIDPServer returns a new running SAML IDP server. It is the caller's responsibility to call Close(). 
-
-### <a id="TestMiddleware" href="#TestMiddleware">func TestMiddleware(t *testing.T)</a>
-
-```
-searchKey: saml.TestMiddleware
-tags: [private]
-```
-
-```Go
-func TestMiddleware(t *testing.T)
-```
-
-### <a id="unexpiredCookies" href="#unexpiredCookies">func unexpiredCookies(resp *http.Response) (cookies []*http.Cookie)</a>
-
-```
-searchKey: saml.unexpiredCookies
-tags: [private]
-```
-
-```Go
-func unexpiredCookies(resp *http.Response) (cookies []*http.Cookie)
-```
-
-unexpiredCookies returns the list of unexpired cookies set by the response 
-
-### <a id="TestReadAuthnResponse" href="#TestReadAuthnResponse">func TestReadAuthnResponse(t *testing.T)</a>
-
-```
-searchKey: saml.TestReadAuthnResponse
-tags: [private]
-```
-
-```Go
-func TestReadAuthnResponse(t *testing.T)
+func withConfigDefaults(pc *schema.SAMLAuthProvider) *schema.SAMLAuthProvider
 ```
 

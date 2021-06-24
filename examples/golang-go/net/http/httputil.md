@@ -7,20 +7,58 @@ Package httputil provides HTTP utility functions, complementing the more common 
 * [Constants](#const)
     * [const fakeHopHeader](#fakeHopHeader)
 * [Variables](#var)
-    * [var reqWriteExcludeHeaderDump](#reqWriteExcludeHeaderDump)
-    * [var errNoBody](#errNoBody)
-    * [var emptyBody](#emptyBody)
+    * [var ErrClosed](#ErrClosed)
     * [var ErrLineTooLong](#ErrLineTooLong)
     * [var ErrPersistEOF](#ErrPersistEOF)
-    * [var ErrClosed](#ErrClosed)
     * [var ErrPipeline](#ErrPipeline)
+    * [var dumpResTests](#dumpResTests)
+    * [var dumpTests](#dumpTests)
+    * [var emptyBody](#emptyBody)
     * [var errClosed](#errClosed)
+    * [var errNoBody](#errNoBody)
     * [var hopHeaders](#hopHeaders)
     * [var inOurTests](#inOurTests)
-    * [var dumpTests](#dumpTests)
-    * [var dumpResTests](#dumpResTests)
     * [var proxyQueryTests](#proxyQueryTests)
+    * [var reqWriteExcludeHeaderDump](#reqWriteExcludeHeaderDump)
 * [Types](#type)
+    * [type BufferPool interface](#BufferPool)
+    * [type ClientConn struct](#ClientConn)
+        * [func NewClientConn(c net.Conn, r *bufio.Reader) *ClientConn](#NewClientConn)
+        * [func NewProxyClientConn(c net.Conn, r *bufio.Reader) *ClientConn](#NewProxyClientConn)
+        * [func (cc *ClientConn) Close() error](#ClientConn.Close)
+        * [func (cc *ClientConn) Do(req *http.Request) (*http.Response, error)](#ClientConn.Do)
+        * [func (cc *ClientConn) Hijack() (c net.Conn, r *bufio.Reader)](#ClientConn.Hijack)
+        * [func (cc *ClientConn) Pending() int](#ClientConn.Pending)
+        * [func (cc *ClientConn) Read(req *http.Request) (resp *http.Response, err error)](#ClientConn.Read)
+        * [func (cc *ClientConn) Write(req *http.Request) error](#ClientConn.Write)
+    * [type ReverseProxy struct](#ReverseProxy)
+        * [func NewSingleHostReverseProxy(target *url.URL) *ReverseProxy](#NewSingleHostReverseProxy)
+        * [func (p *ReverseProxy) ServeHTTP(rw http.ResponseWriter, req *http.Request)](#ReverseProxy.ServeHTTP)
+        * [func (p *ReverseProxy) copyBuffer(dst io.Writer, src io.Reader, buf []byte) (int64, error)](#ReverseProxy.copyBuffer)
+        * [func (p *ReverseProxy) copyResponse(dst io.Writer, src io.Reader, flushInterval time.Duration) error](#ReverseProxy.copyResponse)
+        * [func (p *ReverseProxy) defaultErrorHandler(rw http.ResponseWriter, req *http.Request, err error)](#ReverseProxy.defaultErrorHandler)
+        * [func (p *ReverseProxy) flushInterval(res *http.Response) time.Duration](#ReverseProxy.flushInterval)
+        * [func (p *ReverseProxy) getErrorHandler() func(http.ResponseWriter, *http.Request, error)](#ReverseProxy.getErrorHandler)
+        * [func (p *ReverseProxy) handleUpgradeResponse(rw http.ResponseWriter, req *http.Request, res *http.Response)](#ReverseProxy.handleUpgradeResponse)
+        * [func (p *ReverseProxy) logf(format string, args ...interface{})](#ReverseProxy.logf)
+        * [func (p *ReverseProxy) modifyResponse(rw http.ResponseWriter, res *http.Response, req *http.Request) bool](#ReverseProxy.modifyResponse)
+    * [type RoundTripperFunc func(*net/http.Request) (*net/http.Response, error)](#RoundTripperFunc)
+        * [func (fn RoundTripperFunc) RoundTrip(req *http.Request) (*http.Response, error)](#RoundTripperFunc.RoundTrip)
+    * [type ServerConn struct](#ServerConn)
+        * [func NewServerConn(c net.Conn, r *bufio.Reader) *ServerConn](#NewServerConn)
+        * [func (sc *ServerConn) Close() error](#ServerConn.Close)
+        * [func (sc *ServerConn) Hijack() (net.Conn, *bufio.Reader)](#ServerConn.Hijack)
+        * [func (sc *ServerConn) Pending() int](#ServerConn.Pending)
+        * [func (sc *ServerConn) Read() (*http.Request, error)](#ServerConn.Read)
+        * [func (sc *ServerConn) Write(req *http.Request, resp *http.Response) error](#ServerConn.Write)
+    * [type bufferPool struct](#bufferPool)
+        * [func (bp bufferPool) Get() []byte](#bufferPool.Get)
+        * [func (bp bufferPool) Put(v []byte)](#bufferPool.Put)
+    * [type checkCloser struct](#checkCloser)
+        * [func (cc *checkCloser) Close() error](#checkCloser.Close)
+        * [func (cc *checkCloser) Read(b []byte) (int, error)](#checkCloser.Read)
+    * [type delegateReader struct](#delegateReader)
+        * [func (r *delegateReader) Read(p []byte) (int, error)](#delegateReader.Read)
     * [type dumpConn struct](#dumpConn)
         * [func (c *dumpConn) Close() error](#dumpConn.Close)
         * [func (c *dumpConn) LocalAddr() net.Addr](#dumpConn.LocalAddr)
@@ -28,132 +66,98 @@ Package httputil provides HTTP utility functions, complementing the more common 
         * [func (c *dumpConn) SetDeadline(t time.Time) error](#dumpConn.SetDeadline)
         * [func (c *dumpConn) SetReadDeadline(t time.Time) error](#dumpConn.SetReadDeadline)
         * [func (c *dumpConn) SetWriteDeadline(t time.Time) error](#dumpConn.SetWriteDeadline)
-    * [type neverEnding byte](#neverEnding)
-        * [func (b neverEnding) Read(p []byte) (n int, err error)](#neverEnding.Read)
-    * [type delegateReader struct](#delegateReader)
-        * [func (r *delegateReader) Read(p []byte) (int, error)](#delegateReader.Read)
+    * [type dumpTest struct](#dumpTest)
+    * [type eofReader struct{}](#eofReader)
+        * [func (n eofReader) Close() error](#eofReader.Close)
+        * [func (n eofReader) Read([]byte) (int, error)](#eofReader.Read)
+    * [type failingRoundTripper struct{}](#failingRoundTripper)
+        * [func (failingRoundTripper) RoundTrip(*http.Request) (*http.Response, error)](#failingRoundTripper.RoundTrip)
     * [type failureToReadBody struct{}](#failureToReadBody)
-        * [func (failureToReadBody) Read([]byte) (int, error)](#failureToReadBody.Read)
         * [func (failureToReadBody) Close() error](#failureToReadBody.Close)
-    * [type ServerConn struct](#ServerConn)
-        * [func NewServerConn(c net.Conn, r *bufio.Reader) *ServerConn](#NewServerConn)
-        * [func (sc *ServerConn) Hijack() (net.Conn, *bufio.Reader)](#ServerConn.Hijack)
-        * [func (sc *ServerConn) Close() error](#ServerConn.Close)
-        * [func (sc *ServerConn) Read() (*http.Request, error)](#ServerConn.Read)
-        * [func (sc *ServerConn) Pending() int](#ServerConn.Pending)
-        * [func (sc *ServerConn) Write(req *http.Request, resp *http.Response) error](#ServerConn.Write)
-    * [type ClientConn struct](#ClientConn)
-        * [func NewClientConn(c net.Conn, r *bufio.Reader) *ClientConn](#NewClientConn)
-        * [func NewProxyClientConn(c net.Conn, r *bufio.Reader) *ClientConn](#NewProxyClientConn)
-        * [func (cc *ClientConn) Hijack() (c net.Conn, r *bufio.Reader)](#ClientConn.Hijack)
-        * [func (cc *ClientConn) Close() error](#ClientConn.Close)
-        * [func (cc *ClientConn) Write(req *http.Request) error](#ClientConn.Write)
-        * [func (cc *ClientConn) Pending() int](#ClientConn.Pending)
-        * [func (cc *ClientConn) Read(req *http.Request) (resp *http.Response, err error)](#ClientConn.Read)
-        * [func (cc *ClientConn) Do(req *http.Request) (*http.Response, error)](#ClientConn.Do)
-    * [type ReverseProxy struct](#ReverseProxy)
-        * [func NewSingleHostReverseProxy(target *url.URL) *ReverseProxy](#NewSingleHostReverseProxy)
-        * [func (p *ReverseProxy) defaultErrorHandler(rw http.ResponseWriter, req *http.Request, err error)](#ReverseProxy.defaultErrorHandler)
-        * [func (p *ReverseProxy) getErrorHandler() func(http.ResponseWriter, *http.Request, error)](#ReverseProxy.getErrorHandler)
-        * [func (p *ReverseProxy) modifyResponse(rw http.ResponseWriter, res *http.Response, req *http.Request) bool](#ReverseProxy.modifyResponse)
-        * [func (p *ReverseProxy) ServeHTTP(rw http.ResponseWriter, req *http.Request)](#ReverseProxy.ServeHTTP)
-        * [func (p *ReverseProxy) flushInterval(res *http.Response) time.Duration](#ReverseProxy.flushInterval)
-        * [func (p *ReverseProxy) copyResponse(dst io.Writer, src io.Reader, flushInterval time.Duration) error](#ReverseProxy.copyResponse)
-        * [func (p *ReverseProxy) copyBuffer(dst io.Writer, src io.Reader, buf []byte) (int64, error)](#ReverseProxy.copyBuffer)
-        * [func (p *ReverseProxy) logf(format string, args ...interface{})](#ReverseProxy.logf)
-        * [func (p *ReverseProxy) handleUpgradeResponse(rw http.ResponseWriter, req *http.Request, res *http.Response)](#ReverseProxy.handleUpgradeResponse)
-    * [type BufferPool interface](#BufferPool)
-    * [type writeFlusher interface](#writeFlusher)
+        * [func (failureToReadBody) Read([]byte) (int, error)](#failureToReadBody.Read)
     * [type maxLatencyWriter struct](#maxLatencyWriter)
         * [func (m *maxLatencyWriter) Write(p []byte) (n int, err error)](#maxLatencyWriter.Write)
         * [func (m *maxLatencyWriter) delayedFlush()](#maxLatencyWriter.delayedFlush)
         * [func (m *maxLatencyWriter) stop()](#maxLatencyWriter.stop)
-    * [type switchProtocolCopier struct](#switchProtocolCopier)
-        * [func (c switchProtocolCopier) copyFromBackend(errc chan<- error)](#switchProtocolCopier.copyFromBackend)
-        * [func (c switchProtocolCopier) copyToBackend(errc chan<- error)](#switchProtocolCopier.copyToBackend)
-    * [type eofReader struct{}](#eofReader)
-        * [func (n eofReader) Close() error](#eofReader.Close)
-        * [func (n eofReader) Read([]byte) (int, error)](#eofReader.Read)
-    * [type dumpTest struct](#dumpTest)
-    * [type bufferPool struct](#bufferPool)
-        * [func (bp bufferPool) Get() []byte](#bufferPool.Get)
-        * [func (bp bufferPool) Put(v []byte)](#bufferPool.Put)
-    * [type RoundTripperFunc func(*net/http.Request) (*net/http.Response, error)](#RoundTripperFunc)
-        * [func (fn RoundTripperFunc) RoundTrip(req *http.Request) (*http.Response, error)](#RoundTripperFunc.RoundTrip)
-    * [type failingRoundTripper struct{}](#failingRoundTripper)
-        * [func (failingRoundTripper) RoundTrip(*http.Request) (*http.Response, error)](#failingRoundTripper.RoundTrip)
+    * [type neverEnding byte](#neverEnding)
+        * [func (b neverEnding) Read(p []byte) (n int, err error)](#neverEnding.Read)
+    * [type roundTripperFunc func(req *net/http.Request) (*net/http.Response, error)](#roundTripperFunc)
+        * [func (fn roundTripperFunc) RoundTrip(req *http.Request) (*http.Response, error)](#roundTripperFunc.RoundTrip)
     * [type staticResponseRoundTripper struct](#staticResponseRoundTripper)
         * [func (rt staticResponseRoundTripper) RoundTrip(*http.Request) (*http.Response, error)](#staticResponseRoundTripper.RoundTrip)
     * [type staticTransport struct](#staticTransport)
         * [func (t *staticTransport) RoundTrip(r *http.Request) (*http.Response, error)](#staticTransport.RoundTrip)
-    * [type roundTripperFunc func(req *net/http.Request) (*net/http.Response, error)](#roundTripperFunc)
-        * [func (fn roundTripperFunc) RoundTrip(req *http.Request) (*http.Response, error)](#roundTripperFunc.RoundTrip)
-    * [type checkCloser struct](#checkCloser)
-        * [func (cc *checkCloser) Close() error](#checkCloser.Close)
-        * [func (cc *checkCloser) Read(b []byte) (int, error)](#checkCloser.Read)
+    * [type switchProtocolCopier struct](#switchProtocolCopier)
+        * [func (c switchProtocolCopier) copyFromBackend(errc chan<- error)](#switchProtocolCopier.copyFromBackend)
+        * [func (c switchProtocolCopier) copyToBackend(errc chan<- error)](#switchProtocolCopier.copyToBackend)
+    * [type writeFlusher interface](#writeFlusher)
 * [Functions](#func)
-    * [func drainBody(b io.ReadCloser) (r1, r2 io.ReadCloser, err error)](#drainBody)
-    * [func outgoingLength(req *http.Request) int64](#outgoingLength)
-    * [func DumpRequestOut(req *http.Request, body bool) ([]byte, error)](#DumpRequestOut)
-    * [func valueOrDefault(value, def string) string](#valueOrDefault)
+    * [func BenchmarkServeHTTP(b *testing.B)](#BenchmarkServeHTTP)
     * [func DumpRequest(req *http.Request, body bool) ([]byte, error)](#DumpRequest)
+    * [func DumpRequestOut(req *http.Request, body bool) ([]byte, error)](#DumpRequestOut)
     * [func DumpResponse(resp *http.Response, body bool) ([]byte, error)](#DumpResponse)
     * [func NewChunkedReader(r io.Reader) io.Reader](#NewChunkedReader)
     * [func NewChunkedWriter(w io.Writer) io.WriteCloser](#NewChunkedWriter)
-    * [func singleJoiningSlash(a, b string) string](#singleJoiningSlash)
-    * [func joinURLPath(a, b *url.URL) (path, rawpath string)](#joinURLPath)
-    * [func copyHeader(dst, src http.Header)](#copyHeader)
-    * [func shouldPanicOnCopyError(req *http.Request) bool](#shouldPanicOnCopyError)
-    * [func removeConnectionHeaders(h http.Header)](#removeConnectionHeaders)
-    * [func upgradeType(h http.Header) string](#upgradeType)
+    * [func TestClonesRequestHeaders(t *testing.T)](#TestClonesRequestHeaders)
     * [func TestDumpRequest(t *testing.T)](#TestDumpRequest)
-    * [func deadline(t *testing.T, defaultDelay, needed time.Duration) time.Time](#deadline)
-    * [func chunk(s string) string](#chunk)
-    * [func mustParseURL(s string) *url.URL](#mustParseURL)
-    * [func mustNewRequest(method, url string, body io.Reader) *http.Request](#mustNewRequest)
-    * [func mustReadRequest(s string) *http.Request](#mustReadRequest)
-    * [func TestDumpResponse(t *testing.T)](#TestDumpResponse)
     * [func TestDumpRequestOutIssue38352(t *testing.T)](#TestDumpRequestOutIssue38352)
-    * [func init()](#init.reverseproxy_test.go)
+    * [func TestDumpResponse(t *testing.T)](#TestDumpResponse)
+    * [func TestJoinURLPath(t *testing.T)](#TestJoinURLPath)
+    * [func TestModifyResponseClosesBody(t *testing.T)](#TestModifyResponseClosesBody)
+    * [func TestNilBody(t *testing.T)](#TestNilBody)
     * [func TestReverseProxy(t *testing.T)](#TestReverseProxy)
-    * [func TestReverseProxyStripHeadersPresentInConnection(t *testing.T)](#TestReverseProxyStripHeadersPresentInConnection)
-    * [func TestReverseProxyStripEmptyConnection(t *testing.T)](#TestReverseProxyStripEmptyConnection)
-    * [func TestXForwardedFor(t *testing.T)](#TestXForwardedFor)
-    * [func TestXForwardedFor_Omit(t *testing.T)](#TestXForwardedFor_Omit)
-    * [func TestReverseProxyQuery(t *testing.T)](#TestReverseProxyQuery)
+    * [func TestReverseProxyCancellation(t *testing.T)](#TestReverseProxyCancellation)
+    * [func TestReverseProxyErrorHandler(t *testing.T)](#TestReverseProxyErrorHandler)
     * [func TestReverseProxyFlushInterval(t *testing.T)](#TestReverseProxyFlushInterval)
     * [func TestReverseProxyFlushIntervalHeaders(t *testing.T)](#TestReverseProxyFlushIntervalHeaders)
-    * [func TestReverseProxyCancellation(t *testing.T)](#TestReverseProxyCancellation)
-    * [func req(t *testing.T, v string) *http.Request](#req)
-    * [func TestNilBody(t *testing.T)](#TestNilBody)
-    * [func TestUserAgentHeader(t *testing.T)](#TestUserAgentHeader)
     * [func TestReverseProxyGetPutBuffer(t *testing.T)](#TestReverseProxyGetPutBuffer)
-    * [func TestReverseProxy_Post(t *testing.T)](#TestReverseProxy_Post)
-    * [func TestReverseProxy_NilBody(t *testing.T)](#TestReverseProxy_NilBody)
-    * [func TestReverseProxy_AllocatedHeader(t *testing.T)](#TestReverseProxy_AllocatedHeader)
     * [func TestReverseProxyModifyResponse(t *testing.T)](#TestReverseProxyModifyResponse)
-    * [func TestReverseProxyErrorHandler(t *testing.T)](#TestReverseProxyErrorHandler)
-    * [func TestReverseProxy_CopyBuffer(t *testing.T)](#TestReverseProxy_CopyBuffer)
-    * [func BenchmarkServeHTTP(b *testing.B)](#BenchmarkServeHTTP)
-    * [func TestServeHTTPDeepCopy(t *testing.T)](#TestServeHTTPDeepCopy)
-    * [func TestClonesRequestHeaders(t *testing.T)](#TestClonesRequestHeaders)
-    * [func TestModifyResponseClosesBody(t *testing.T)](#TestModifyResponseClosesBody)
-    * [func TestReverseProxy_PanicBodyError(t *testing.T)](#TestReverseProxy_PanicBodyError)
-    * [func TestSelectFlushInterval(t *testing.T)](#TestSelectFlushInterval)
+    * [func TestReverseProxyQuery(t *testing.T)](#TestReverseProxyQuery)
+    * [func TestReverseProxyStripEmptyConnection(t *testing.T)](#TestReverseProxyStripEmptyConnection)
+    * [func TestReverseProxyStripHeadersPresentInConnection(t *testing.T)](#TestReverseProxyStripHeadersPresentInConnection)
     * [func TestReverseProxyWebSocket(t *testing.T)](#TestReverseProxyWebSocket)
     * [func TestReverseProxyWebSocketCancellation(t *testing.T)](#TestReverseProxyWebSocketCancellation)
-    * [func TestUnannouncedTrailer(t *testing.T)](#TestUnannouncedTrailer)
+    * [func TestReverseProxy_AllocatedHeader(t *testing.T)](#TestReverseProxy_AllocatedHeader)
+    * [func TestReverseProxy_CopyBuffer(t *testing.T)](#TestReverseProxy_CopyBuffer)
+    * [func TestReverseProxy_NilBody(t *testing.T)](#TestReverseProxy_NilBody)
+    * [func TestReverseProxy_PanicBodyError(t *testing.T)](#TestReverseProxy_PanicBodyError)
+    * [func TestReverseProxy_Post(t *testing.T)](#TestReverseProxy_Post)
+    * [func TestSelectFlushInterval(t *testing.T)](#TestSelectFlushInterval)
+    * [func TestServeHTTPDeepCopy(t *testing.T)](#TestServeHTTPDeepCopy)
     * [func TestSingleJoinSlash(t *testing.T)](#TestSingleJoinSlash)
-    * [func TestJoinURLPath(t *testing.T)](#TestJoinURLPath)
+    * [func TestUnannouncedTrailer(t *testing.T)](#TestUnannouncedTrailer)
+    * [func TestUserAgentHeader(t *testing.T)](#TestUserAgentHeader)
+    * [func TestXForwardedFor(t *testing.T)](#TestXForwardedFor)
+    * [func TestXForwardedFor_Omit(t *testing.T)](#TestXForwardedFor_Omit)
+    * [func chunk(s string) string](#chunk)
+    * [func copyHeader(dst, src http.Header)](#copyHeader)
+    * [func deadline(t *testing.T, defaultDelay, needed time.Duration) time.Time](#deadline)
+    * [func drainBody(b io.ReadCloser) (r1, r2 io.ReadCloser, err error)](#drainBody)
+    * [func init()](#init.reverseproxy_test.go)
+    * [func joinURLPath(a, b *url.URL) (path, rawpath string)](#joinURLPath)
+    * [func mustNewRequest(method, url string, body io.Reader) *http.Request](#mustNewRequest)
+    * [func mustParseURL(s string) *url.URL](#mustParseURL)
+    * [func mustReadRequest(s string) *http.Request](#mustReadRequest)
+    * [func outgoingLength(req *http.Request) int64](#outgoingLength)
+    * [func removeConnectionHeaders(h http.Header)](#removeConnectionHeaders)
+    * [func req(t *testing.T, v string) *http.Request](#req)
+    * [func shouldPanicOnCopyError(req *http.Request) bool](#shouldPanicOnCopyError)
+    * [func singleJoiningSlash(a, b string) string](#singleJoiningSlash)
+    * [func upgradeType(h http.Header) string](#upgradeType)
+    * [func valueOrDefault(value, def string) string](#valueOrDefault)
 
 
 ## <a id="const" href="#const">Constants</a>
+
+```
+tags: [package]
+```
 
 ### <a id="fakeHopHeader" href="#fakeHopHeader">const fakeHopHeader</a>
 
 ```
 searchKey: httputil.fakeHopHeader
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -162,47 +166,28 @@ const fakeHopHeader = "X-Fake-Hop-Header-For-Test"
 
 ## <a id="var" href="#var">Variables</a>
 
-### <a id="reqWriteExcludeHeaderDump" href="#reqWriteExcludeHeaderDump">var reqWriteExcludeHeaderDump</a>
-
 ```
-searchKey: httputil.reqWriteExcludeHeaderDump
-tags: [private]
+tags: [package]
 ```
 
-```Go
-var reqWriteExcludeHeaderDump = ...
-```
-
-### <a id="errNoBody" href="#errNoBody">var errNoBody</a>
+### <a id="ErrClosed" href="#ErrClosed">var ErrClosed</a>
 
 ```
-searchKey: httputil.errNoBody
-tags: [private]
+searchKey: httputil.ErrClosed
+tags: [variable struct deprecated]
 ```
 
 ```Go
-var errNoBody = errors.New("sentinel error value")
+var ErrClosed = &http.ProtocolError{ErrorString: "connection closed by user"}
 ```
 
-errNoBody is a sentinel error value used by failureToReadBody so we can detect that the lack of body was intentional. 
-
-### <a id="emptyBody" href="#emptyBody">var emptyBody</a>
-
-```
-searchKey: httputil.emptyBody
-tags: [private]
-```
-
-```Go
-var emptyBody = io.NopCloser(strings.NewReader(""))
-```
-
-emptyBody is an instance of empty reader. 
+Deprecated: No longer used. 
 
 ### <a id="ErrLineTooLong" href="#ErrLineTooLong">var ErrLineTooLong</a>
 
 ```
 searchKey: httputil.ErrLineTooLong
+tags: [variable interface]
 ```
 
 ```Go
@@ -215,7 +200,7 @@ ErrLineTooLong is returned when reading malformed chunked data with lines that a
 
 ```
 searchKey: httputil.ErrPersistEOF
-tags: [deprecated]
+tags: [variable struct deprecated]
 ```
 
 ```Go
@@ -224,24 +209,11 @@ var ErrPersistEOF = &http.ProtocolError{ErrorString: "persistent connection clos
 
 Deprecated: No longer used. 
 
-### <a id="ErrClosed" href="#ErrClosed">var ErrClosed</a>
-
-```
-searchKey: httputil.ErrClosed
-tags: [deprecated]
-```
-
-```Go
-var ErrClosed = &http.ProtocolError{ErrorString: "connection closed by user"}
-```
-
-Deprecated: No longer used. 
-
 ### <a id="ErrPipeline" href="#ErrPipeline">var ErrPipeline</a>
 
 ```
 searchKey: httputil.ErrPipeline
-tags: [deprecated]
+tags: [variable struct deprecated]
 ```
 
 ```Go
@@ -250,11 +222,46 @@ var ErrPipeline = &http.ProtocolError{ErrorString: "pipeline error"}
 
 Deprecated: No longer used. 
 
+### <a id="dumpResTests" href="#dumpResTests">var dumpResTests</a>
+
+```
+searchKey: httputil.dumpResTests
+tags: [variable array struct private]
+```
+
+```Go
+var dumpResTests = ...
+```
+
+### <a id="dumpTests" href="#dumpTests">var dumpTests</a>
+
+```
+searchKey: httputil.dumpTests
+tags: [variable array struct private]
+```
+
+```Go
+var dumpTests = ...
+```
+
+### <a id="emptyBody" href="#emptyBody">var emptyBody</a>
+
+```
+searchKey: httputil.emptyBody
+tags: [variable interface private]
+```
+
+```Go
+var emptyBody = io.NopCloser(strings.NewReader(""))
+```
+
+emptyBody is an instance of empty reader. 
+
 ### <a id="errClosed" href="#errClosed">var errClosed</a>
 
 ```
 searchKey: httputil.errClosed
-tags: [private]
+tags: [variable interface private]
 ```
 
 ```Go
@@ -263,11 +270,24 @@ var errClosed = errors.New("i/o operation on closed connection")
 
 This is an API usage error - the local side is closed. ErrPersistEOF (above) reports that the remote side is closed. 
 
+### <a id="errNoBody" href="#errNoBody">var errNoBody</a>
+
+```
+searchKey: httputil.errNoBody
+tags: [variable interface private]
+```
+
+```Go
+var errNoBody = errors.New("sentinel error value")
+```
+
+errNoBody is a sentinel error value used by failureToReadBody so we can detect that the lack of body was intentional. 
+
 ### <a id="hopHeaders" href="#hopHeaders">var hopHeaders</a>
 
 ```
 searchKey: httputil.hopHeaders
-tags: [private]
+tags: [variable array string private]
 ```
 
 ```Go
@@ -280,7 +300,7 @@ Hop-by-hop headers. These are removed when sent to the backend. As of RFC 7230, 
 
 ```
 searchKey: httputil.inOurTests
-tags: [private]
+tags: [variable boolean private]
 ```
 
 ```Go
@@ -288,311 +308,55 @@ var inOurTests bool // whether we're in our own tests
 
 ```
 
-### <a id="dumpTests" href="#dumpTests">var dumpTests</a>
-
-```
-searchKey: httputil.dumpTests
-tags: [private]
-```
-
-```Go
-var dumpTests = ...
-```
-
-### <a id="dumpResTests" href="#dumpResTests">var dumpResTests</a>
-
-```
-searchKey: httputil.dumpResTests
-tags: [private]
-```
-
-```Go
-var dumpResTests = ...
-```
-
 ### <a id="proxyQueryTests" href="#proxyQueryTests">var proxyQueryTests</a>
 
 ```
 searchKey: httputil.proxyQueryTests
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
 var proxyQueryTests = ...
 ```
 
+### <a id="reqWriteExcludeHeaderDump" href="#reqWriteExcludeHeaderDump">var reqWriteExcludeHeaderDump</a>
+
+```
+searchKey: httputil.reqWriteExcludeHeaderDump
+tags: [variable object private]
+```
+
+```Go
+var reqWriteExcludeHeaderDump = ...
+```
+
 ## <a id="type" href="#type">Types</a>
 
-### <a id="dumpConn" href="#dumpConn">type dumpConn struct</a>
+```
+tags: [package]
+```
+
+### <a id="BufferPool" href="#BufferPool">type BufferPool interface</a>
 
 ```
-searchKey: httputil.dumpConn
-tags: [private]
+searchKey: httputil.BufferPool
+tags: [interface]
 ```
 
 ```Go
-type dumpConn struct {
-	io.Writer
-	io.Reader
+type BufferPool interface {
+	Get() []byte
+	Put([]byte)
 }
 ```
 
-dumpConn is a net.Conn which writes to Writer and reads from Reader 
-
-#### <a id="dumpConn.Close" href="#dumpConn.Close">func (c *dumpConn) Close() error</a>
-
-```
-searchKey: httputil.dumpConn.Close
-tags: [private]
-```
-
-```Go
-func (c *dumpConn) Close() error
-```
-
-#### <a id="dumpConn.LocalAddr" href="#dumpConn.LocalAddr">func (c *dumpConn) LocalAddr() net.Addr</a>
-
-```
-searchKey: httputil.dumpConn.LocalAddr
-tags: [private]
-```
-
-```Go
-func (c *dumpConn) LocalAddr() net.Addr
-```
-
-#### <a id="dumpConn.RemoteAddr" href="#dumpConn.RemoteAddr">func (c *dumpConn) RemoteAddr() net.Addr</a>
-
-```
-searchKey: httputil.dumpConn.RemoteAddr
-tags: [private]
-```
-
-```Go
-func (c *dumpConn) RemoteAddr() net.Addr
-```
-
-#### <a id="dumpConn.SetDeadline" href="#dumpConn.SetDeadline">func (c *dumpConn) SetDeadline(t time.Time) error</a>
-
-```
-searchKey: httputil.dumpConn.SetDeadline
-tags: [private]
-```
-
-```Go
-func (c *dumpConn) SetDeadline(t time.Time) error
-```
-
-#### <a id="dumpConn.SetReadDeadline" href="#dumpConn.SetReadDeadline">func (c *dumpConn) SetReadDeadline(t time.Time) error</a>
-
-```
-searchKey: httputil.dumpConn.SetReadDeadline
-tags: [private]
-```
-
-```Go
-func (c *dumpConn) SetReadDeadline(t time.Time) error
-```
-
-#### <a id="dumpConn.SetWriteDeadline" href="#dumpConn.SetWriteDeadline">func (c *dumpConn) SetWriteDeadline(t time.Time) error</a>
-
-```
-searchKey: httputil.dumpConn.SetWriteDeadline
-tags: [private]
-```
-
-```Go
-func (c *dumpConn) SetWriteDeadline(t time.Time) error
-```
-
-### <a id="neverEnding" href="#neverEnding">type neverEnding byte</a>
-
-```
-searchKey: httputil.neverEnding
-tags: [private]
-```
-
-```Go
-type neverEnding byte
-```
-
-#### <a id="neverEnding.Read" href="#neverEnding.Read">func (b neverEnding) Read(p []byte) (n int, err error)</a>
-
-```
-searchKey: httputil.neverEnding.Read
-tags: [private]
-```
-
-```Go
-func (b neverEnding) Read(p []byte) (n int, err error)
-```
-
-### <a id="delegateReader" href="#delegateReader">type delegateReader struct</a>
-
-```
-searchKey: httputil.delegateReader
-tags: [private]
-```
-
-```Go
-type delegateReader struct {
-	c   chan io.Reader
-	err error     // only used if r is nil and c is closed.
-	r   io.Reader // nil until received from c
-}
-```
-
-delegateReader is a reader that delegates to another reader, once it arrives on a channel. 
-
-#### <a id="delegateReader.Read" href="#delegateReader.Read">func (r *delegateReader) Read(p []byte) (int, error)</a>
-
-```
-searchKey: httputil.delegateReader.Read
-tags: [private]
-```
-
-```Go
-func (r *delegateReader) Read(p []byte) (int, error)
-```
-
-### <a id="failureToReadBody" href="#failureToReadBody">type failureToReadBody struct{}</a>
-
-```
-searchKey: httputil.failureToReadBody
-tags: [private]
-```
-
-```Go
-type failureToReadBody struct{}
-```
-
-failureToReadBody is a io.ReadCloser that just returns errNoBody on Read. It's swapped in when we don't actually want to consume the body, but need a non-nil one, and want to distinguish the error from reading the dummy body. 
-
-#### <a id="failureToReadBody.Read" href="#failureToReadBody.Read">func (failureToReadBody) Read([]byte) (int, error)</a>
-
-```
-searchKey: httputil.failureToReadBody.Read
-tags: [private]
-```
-
-```Go
-func (failureToReadBody) Read([]byte) (int, error)
-```
-
-#### <a id="failureToReadBody.Close" href="#failureToReadBody.Close">func (failureToReadBody) Close() error</a>
-
-```
-searchKey: httputil.failureToReadBody.Close
-tags: [private]
-```
-
-```Go
-func (failureToReadBody) Close() error
-```
-
-### <a id="ServerConn" href="#ServerConn">type ServerConn struct</a>
-
-```
-searchKey: httputil.ServerConn
-```
-
-```Go
-type ServerConn struct {
-	mu              sync.Mutex // read-write protects the following fields
-	c               net.Conn
-	r               *bufio.Reader
-	re, we          error // read/write errors
-	lastbody        io.ReadCloser
-	nread, nwritten int
-	pipereq         map[*http.Request]uint
-
-	pipe textproto.Pipeline
-}
-```
-
-ServerConn is an artifact of Go's early HTTP implementation. It is low-level, old, and unused by Go's current HTTP stack. We should have deleted it before Go 1. 
-
-Deprecated: Use the Server in package net/http instead. 
-
-#### <a id="NewServerConn" href="#NewServerConn">func NewServerConn(c net.Conn, r *bufio.Reader) *ServerConn</a>
-
-```
-searchKey: httputil.NewServerConn
-tags: [deprecated]
-```
-
-```Go
-func NewServerConn(c net.Conn, r *bufio.Reader) *ServerConn
-```
-
-NewServerConn is an artifact of Go's early HTTP implementation. It is low-level, old, and unused by Go's current HTTP stack. We should have deleted it before Go 1. 
-
-Deprecated: Use the Server in package net/http instead. 
-
-#### <a id="ServerConn.Hijack" href="#ServerConn.Hijack">func (sc *ServerConn) Hijack() (net.Conn, *bufio.Reader)</a>
-
-```
-searchKey: httputil.ServerConn.Hijack
-```
-
-```Go
-func (sc *ServerConn) Hijack() (net.Conn, *bufio.Reader)
-```
-
-Hijack detaches the ServerConn and returns the underlying connection as well as the read-side bufio which may have some left over data. Hijack may be called before Read has signaled the end of the keep-alive logic. The user should not call Hijack while Read or Write is in progress. 
-
-#### <a id="ServerConn.Close" href="#ServerConn.Close">func (sc *ServerConn) Close() error</a>
-
-```
-searchKey: httputil.ServerConn.Close
-```
-
-```Go
-func (sc *ServerConn) Close() error
-```
-
-Close calls Hijack and then also closes the underlying connection. 
-
-#### <a id="ServerConn.Read" href="#ServerConn.Read">func (sc *ServerConn) Read() (*http.Request, error)</a>
-
-```
-searchKey: httputil.ServerConn.Read
-```
-
-```Go
-func (sc *ServerConn) Read() (*http.Request, error)
-```
-
-Read returns the next request on the wire. An ErrPersistEOF is returned if it is gracefully determined that there are no more requests (e.g. after the first request on an HTTP/1.0 connection, or after a Connection:close on a HTTP/1.1 connection). 
-
-#### <a id="ServerConn.Pending" href="#ServerConn.Pending">func (sc *ServerConn) Pending() int</a>
-
-```
-searchKey: httputil.ServerConn.Pending
-```
-
-```Go
-func (sc *ServerConn) Pending() int
-```
-
-Pending returns the number of unanswered requests that have been received on the connection. 
-
-#### <a id="ServerConn.Write" href="#ServerConn.Write">func (sc *ServerConn) Write(req *http.Request, resp *http.Response) error</a>
-
-```
-searchKey: httputil.ServerConn.Write
-```
-
-```Go
-func (sc *ServerConn) Write(req *http.Request, resp *http.Response) error
-```
-
-Write writes resp in response to req. To close the connection gracefully, set the Response.Close field to true. Write should be considered operational until it returns an error, regardless of any errors returned on the Read side. 
+A BufferPool is an interface for getting and returning temporary byte slices for use by io.CopyBuffer. 
 
 ### <a id="ClientConn" href="#ClientConn">type ClientConn struct</a>
 
 ```
 searchKey: httputil.ClientConn
+tags: [struct]
 ```
 
 ```Go
@@ -618,7 +382,7 @@ Deprecated: Use Client or Transport in package net/http instead.
 
 ```
 searchKey: httputil.NewClientConn
-tags: [deprecated]
+tags: [method deprecated]
 ```
 
 ```Go
@@ -633,7 +397,7 @@ Deprecated: Use the Client or Transport in package net/http instead.
 
 ```
 searchKey: httputil.NewProxyClientConn
-tags: [deprecated]
+tags: [method deprecated]
 ```
 
 ```Go
@@ -644,22 +408,11 @@ NewProxyClientConn is an artifact of Go's early HTTP implementation. It is low-l
 
 Deprecated: Use the Client or Transport in package net/http instead. 
 
-#### <a id="ClientConn.Hijack" href="#ClientConn.Hijack">func (cc *ClientConn) Hijack() (c net.Conn, r *bufio.Reader)</a>
-
-```
-searchKey: httputil.ClientConn.Hijack
-```
-
-```Go
-func (cc *ClientConn) Hijack() (c net.Conn, r *bufio.Reader)
-```
-
-Hijack detaches the ClientConn and returns the underlying connection as well as the read-side bufio which may have some left over data. Hijack may be called before the user or Read have signaled the end of the keep-alive logic. The user should not call Hijack while Read or Write is in progress. 
-
 #### <a id="ClientConn.Close" href="#ClientConn.Close">func (cc *ClientConn) Close() error</a>
 
 ```
 searchKey: httputil.ClientConn.Close
+tags: [function]
 ```
 
 ```Go
@@ -668,22 +421,37 @@ func (cc *ClientConn) Close() error
 
 Close calls Hijack and then also closes the underlying connection. 
 
-#### <a id="ClientConn.Write" href="#ClientConn.Write">func (cc *ClientConn) Write(req *http.Request) error</a>
+#### <a id="ClientConn.Do" href="#ClientConn.Do">func (cc *ClientConn) Do(req *http.Request) (*http.Response, error)</a>
 
 ```
-searchKey: httputil.ClientConn.Write
+searchKey: httputil.ClientConn.Do
+tags: [method]
 ```
 
 ```Go
-func (cc *ClientConn) Write(req *http.Request) error
+func (cc *ClientConn) Do(req *http.Request) (*http.Response, error)
 ```
 
-Write writes a request. An ErrPersistEOF error is returned if the connection has been closed in an HTTP keep-alive sense. If req.Close equals true, the keep-alive connection is logically closed after this request and the opposing server is informed. An ErrUnexpectedEOF indicates the remote closed the underlying TCP connection, which is usually considered as graceful close. 
+Do is convenience method that writes a request and reads a response. 
+
+#### <a id="ClientConn.Hijack" href="#ClientConn.Hijack">func (cc *ClientConn) Hijack() (c net.Conn, r *bufio.Reader)</a>
+
+```
+searchKey: httputil.ClientConn.Hijack
+tags: [function]
+```
+
+```Go
+func (cc *ClientConn) Hijack() (c net.Conn, r *bufio.Reader)
+```
+
+Hijack detaches the ClientConn and returns the underlying connection as well as the read-side bufio which may have some left over data. Hijack may be called before the user or Read have signaled the end of the keep-alive logic. The user should not call Hijack while Read or Write is in progress. 
 
 #### <a id="ClientConn.Pending" href="#ClientConn.Pending">func (cc *ClientConn) Pending() int</a>
 
 ```
 searchKey: httputil.ClientConn.Pending
+tags: [function]
 ```
 
 ```Go
@@ -696,6 +464,7 @@ Pending returns the number of unanswered requests that have been sent on the con
 
 ```
 searchKey: httputil.ClientConn.Read
+tags: [method]
 ```
 
 ```Go
@@ -704,22 +473,24 @@ func (cc *ClientConn) Read(req *http.Request) (resp *http.Response, err error)
 
 Read reads the next response from the wire. A valid response might be returned together with an ErrPersistEOF, which means that the remote requested that this be the last request serviced. Read can be called concurrently with Write, but not with another Read. 
 
-#### <a id="ClientConn.Do" href="#ClientConn.Do">func (cc *ClientConn) Do(req *http.Request) (*http.Response, error)</a>
+#### <a id="ClientConn.Write" href="#ClientConn.Write">func (cc *ClientConn) Write(req *http.Request) error</a>
 
 ```
-searchKey: httputil.ClientConn.Do
+searchKey: httputil.ClientConn.Write
+tags: [method]
 ```
 
 ```Go
-func (cc *ClientConn) Do(req *http.Request) (*http.Response, error)
+func (cc *ClientConn) Write(req *http.Request) error
 ```
 
-Do is convenience method that writes a request and reads a response. 
+Write writes a request. An ErrPersistEOF error is returned if the connection has been closed in an HTTP keep-alive sense. If req.Close equals true, the keep-alive connection is logically closed after this request and the opposing server is informed. An ErrUnexpectedEOF indicates the remote closed the underlying TCP connection, which is usually considered as graceful close. 
 
 ### <a id="ReverseProxy" href="#ReverseProxy">type ReverseProxy struct</a>
 
 ```
 searchKey: httputil.ReverseProxy
+tags: [struct]
 ```
 
 ```Go
@@ -790,6 +561,7 @@ To prevent IP spoofing, be sure to delete any pre-existing X-Forwarded-For heade
 
 ```
 searchKey: httputil.NewSingleHostReverseProxy
+tags: [method]
 ```
 
 ```Go
@@ -798,80 +570,22 @@ func NewSingleHostReverseProxy(target *url.URL) *ReverseProxy
 
 NewSingleHostReverseProxy returns a new ReverseProxy that routes URLs to the scheme, host, and base path provided in target. If the target's path is "/base" and the incoming request was for "/dir", the target request will be for /base/dir. NewSingleHostReverseProxy does not rewrite the Host header. To rewrite Host headers, use ReverseProxy directly with a custom Director policy. 
 
-#### <a id="ReverseProxy.defaultErrorHandler" href="#ReverseProxy.defaultErrorHandler">func (p *ReverseProxy) defaultErrorHandler(rw http.ResponseWriter, req *http.Request, err error)</a>
-
-```
-searchKey: httputil.ReverseProxy.defaultErrorHandler
-tags: [private]
-```
-
-```Go
-func (p *ReverseProxy) defaultErrorHandler(rw http.ResponseWriter, req *http.Request, err error)
-```
-
-#### <a id="ReverseProxy.getErrorHandler" href="#ReverseProxy.getErrorHandler">func (p *ReverseProxy) getErrorHandler() func(http.ResponseWriter, *http.Request, error)</a>
-
-```
-searchKey: httputil.ReverseProxy.getErrorHandler
-tags: [private]
-```
-
-```Go
-func (p *ReverseProxy) getErrorHandler() func(http.ResponseWriter, *http.Request, error)
-```
-
-#### <a id="ReverseProxy.modifyResponse" href="#ReverseProxy.modifyResponse">func (p *ReverseProxy) modifyResponse(rw http.ResponseWriter, res *http.Response, req *http.Request) bool</a>
-
-```
-searchKey: httputil.ReverseProxy.modifyResponse
-tags: [private]
-```
-
-```Go
-func (p *ReverseProxy) modifyResponse(rw http.ResponseWriter, res *http.Response, req *http.Request) bool
-```
-
-modifyResponse conditionally runs the optional ModifyResponse hook and reports whether the request should proceed. 
-
 #### <a id="ReverseProxy.ServeHTTP" href="#ReverseProxy.ServeHTTP">func (p *ReverseProxy) ServeHTTP(rw http.ResponseWriter, req *http.Request)</a>
 
 ```
 searchKey: httputil.ReverseProxy.ServeHTTP
+tags: [method]
 ```
 
 ```Go
 func (p *ReverseProxy) ServeHTTP(rw http.ResponseWriter, req *http.Request)
 ```
 
-#### <a id="ReverseProxy.flushInterval" href="#ReverseProxy.flushInterval">func (p *ReverseProxy) flushInterval(res *http.Response) time.Duration</a>
-
-```
-searchKey: httputil.ReverseProxy.flushInterval
-tags: [private]
-```
-
-```Go
-func (p *ReverseProxy) flushInterval(res *http.Response) time.Duration
-```
-
-flushInterval returns the p.FlushInterval value, conditionally overriding its value for a specific request/response. 
-
-#### <a id="ReverseProxy.copyResponse" href="#ReverseProxy.copyResponse">func (p *ReverseProxy) copyResponse(dst io.Writer, src io.Reader, flushInterval time.Duration) error</a>
-
-```
-searchKey: httputil.ReverseProxy.copyResponse
-tags: [private]
-```
-
-```Go
-func (p *ReverseProxy) copyResponse(dst io.Writer, src io.Reader, flushInterval time.Duration) error
-```
-
 #### <a id="ReverseProxy.copyBuffer" href="#ReverseProxy.copyBuffer">func (p *ReverseProxy) copyBuffer(dst io.Writer, src io.Reader, buf []byte) (int64, error)</a>
 
 ```
 searchKey: httputil.ReverseProxy.copyBuffer
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -880,183 +594,400 @@ func (p *ReverseProxy) copyBuffer(dst io.Writer, src io.Reader, buf []byte) (int
 
 copyBuffer returns any write errors or non-EOF read errors, and the amount of bytes written. 
 
-#### <a id="ReverseProxy.logf" href="#ReverseProxy.logf">func (p *ReverseProxy) logf(format string, args ...interface{})</a>
+#### <a id="ReverseProxy.copyResponse" href="#ReverseProxy.copyResponse">func (p *ReverseProxy) copyResponse(dst io.Writer, src io.Reader, flushInterval time.Duration) error</a>
 
 ```
-searchKey: httputil.ReverseProxy.logf
-tags: [private]
+searchKey: httputil.ReverseProxy.copyResponse
+tags: [method private]
 ```
 
 ```Go
-func (p *ReverseProxy) logf(format string, args ...interface{})
+func (p *ReverseProxy) copyResponse(dst io.Writer, src io.Reader, flushInterval time.Duration) error
+```
+
+#### <a id="ReverseProxy.defaultErrorHandler" href="#ReverseProxy.defaultErrorHandler">func (p *ReverseProxy) defaultErrorHandler(rw http.ResponseWriter, req *http.Request, err error)</a>
+
+```
+searchKey: httputil.ReverseProxy.defaultErrorHandler
+tags: [method private]
+```
+
+```Go
+func (p *ReverseProxy) defaultErrorHandler(rw http.ResponseWriter, req *http.Request, err error)
+```
+
+#### <a id="ReverseProxy.flushInterval" href="#ReverseProxy.flushInterval">func (p *ReverseProxy) flushInterval(res *http.Response) time.Duration</a>
+
+```
+searchKey: httputil.ReverseProxy.flushInterval
+tags: [method private]
+```
+
+```Go
+func (p *ReverseProxy) flushInterval(res *http.Response) time.Duration
+```
+
+flushInterval returns the p.FlushInterval value, conditionally overriding its value for a specific request/response. 
+
+#### <a id="ReverseProxy.getErrorHandler" href="#ReverseProxy.getErrorHandler">func (p *ReverseProxy) getErrorHandler() func(http.ResponseWriter, *http.Request, error)</a>
+
+```
+searchKey: httputil.ReverseProxy.getErrorHandler
+tags: [function private]
+```
+
+```Go
+func (p *ReverseProxy) getErrorHandler() func(http.ResponseWriter, *http.Request, error)
 ```
 
 #### <a id="ReverseProxy.handleUpgradeResponse" href="#ReverseProxy.handleUpgradeResponse">func (p *ReverseProxy) handleUpgradeResponse(rw http.ResponseWriter, req *http.Request, res *http.Response)</a>
 
 ```
 searchKey: httputil.ReverseProxy.handleUpgradeResponse
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (p *ReverseProxy) handleUpgradeResponse(rw http.ResponseWriter, req *http.Request, res *http.Response)
 ```
 
-### <a id="BufferPool" href="#BufferPool">type BufferPool interface</a>
+#### <a id="ReverseProxy.logf" href="#ReverseProxy.logf">func (p *ReverseProxy) logf(format string, args ...interface{})</a>
 
 ```
-searchKey: httputil.BufferPool
+searchKey: httputil.ReverseProxy.logf
+tags: [method private]
 ```
 
 ```Go
-type BufferPool interface {
-	Get() []byte
-	Put([]byte)
+func (p *ReverseProxy) logf(format string, args ...interface{})
+```
+
+#### <a id="ReverseProxy.modifyResponse" href="#ReverseProxy.modifyResponse">func (p *ReverseProxy) modifyResponse(rw http.ResponseWriter, res *http.Response, req *http.Request) bool</a>
+
+```
+searchKey: httputil.ReverseProxy.modifyResponse
+tags: [method private]
+```
+
+```Go
+func (p *ReverseProxy) modifyResponse(rw http.ResponseWriter, res *http.Response, req *http.Request) bool
+```
+
+modifyResponse conditionally runs the optional ModifyResponse hook and reports whether the request should proceed. 
+
+### <a id="RoundTripperFunc" href="#RoundTripperFunc">type RoundTripperFunc func(*net/http.Request) (*net/http.Response, error)</a>
+
+```
+searchKey: httputil.RoundTripperFunc
+tags: [function private]
+```
+
+```Go
+type RoundTripperFunc func(*http.Request) (*http.Response, error)
+```
+
+#### <a id="RoundTripperFunc.RoundTrip" href="#RoundTripperFunc.RoundTrip">func (fn RoundTripperFunc) RoundTrip(req *http.Request) (*http.Response, error)</a>
+
+```
+searchKey: httputil.RoundTripperFunc.RoundTrip
+tags: [method private]
+```
+
+```Go
+func (fn RoundTripperFunc) RoundTrip(req *http.Request) (*http.Response, error)
+```
+
+### <a id="ServerConn" href="#ServerConn">type ServerConn struct</a>
+
+```
+searchKey: httputil.ServerConn
+tags: [struct]
+```
+
+```Go
+type ServerConn struct {
+	mu              sync.Mutex // read-write protects the following fields
+	c               net.Conn
+	r               *bufio.Reader
+	re, we          error // read/write errors
+	lastbody        io.ReadCloser
+	nread, nwritten int
+	pipereq         map[*http.Request]uint
+
+	pipe textproto.Pipeline
 }
 ```
 
-A BufferPool is an interface for getting and returning temporary byte slices for use by io.CopyBuffer. 
+ServerConn is an artifact of Go's early HTTP implementation. It is low-level, old, and unused by Go's current HTTP stack. We should have deleted it before Go 1. 
 
-### <a id="writeFlusher" href="#writeFlusher">type writeFlusher interface</a>
+Deprecated: Use the Server in package net/http instead. 
+
+#### <a id="NewServerConn" href="#NewServerConn">func NewServerConn(c net.Conn, r *bufio.Reader) *ServerConn</a>
 
 ```
-searchKey: httputil.writeFlusher
-tags: [private]
+searchKey: httputil.NewServerConn
+tags: [method deprecated]
 ```
 
 ```Go
-type writeFlusher interface {
+func NewServerConn(c net.Conn, r *bufio.Reader) *ServerConn
+```
+
+NewServerConn is an artifact of Go's early HTTP implementation. It is low-level, old, and unused by Go's current HTTP stack. We should have deleted it before Go 1. 
+
+Deprecated: Use the Server in package net/http instead. 
+
+#### <a id="ServerConn.Close" href="#ServerConn.Close">func (sc *ServerConn) Close() error</a>
+
+```
+searchKey: httputil.ServerConn.Close
+tags: [function]
+```
+
+```Go
+func (sc *ServerConn) Close() error
+```
+
+Close calls Hijack and then also closes the underlying connection. 
+
+#### <a id="ServerConn.Hijack" href="#ServerConn.Hijack">func (sc *ServerConn) Hijack() (net.Conn, *bufio.Reader)</a>
+
+```
+searchKey: httputil.ServerConn.Hijack
+tags: [function]
+```
+
+```Go
+func (sc *ServerConn) Hijack() (net.Conn, *bufio.Reader)
+```
+
+Hijack detaches the ServerConn and returns the underlying connection as well as the read-side bufio which may have some left over data. Hijack may be called before Read has signaled the end of the keep-alive logic. The user should not call Hijack while Read or Write is in progress. 
+
+#### <a id="ServerConn.Pending" href="#ServerConn.Pending">func (sc *ServerConn) Pending() int</a>
+
+```
+searchKey: httputil.ServerConn.Pending
+tags: [function]
+```
+
+```Go
+func (sc *ServerConn) Pending() int
+```
+
+Pending returns the number of unanswered requests that have been received on the connection. 
+
+#### <a id="ServerConn.Read" href="#ServerConn.Read">func (sc *ServerConn) Read() (*http.Request, error)</a>
+
+```
+searchKey: httputil.ServerConn.Read
+tags: [function]
+```
+
+```Go
+func (sc *ServerConn) Read() (*http.Request, error)
+```
+
+Read returns the next request on the wire. An ErrPersistEOF is returned if it is gracefully determined that there are no more requests (e.g. after the first request on an HTTP/1.0 connection, or after a Connection:close on a HTTP/1.1 connection). 
+
+#### <a id="ServerConn.Write" href="#ServerConn.Write">func (sc *ServerConn) Write(req *http.Request, resp *http.Response) error</a>
+
+```
+searchKey: httputil.ServerConn.Write
+tags: [method]
+```
+
+```Go
+func (sc *ServerConn) Write(req *http.Request, resp *http.Response) error
+```
+
+Write writes resp in response to req. To close the connection gracefully, set the Response.Close field to true. Write should be considered operational until it returns an error, regardless of any errors returned on the Read side. 
+
+### <a id="bufferPool" href="#bufferPool">type bufferPool struct</a>
+
+```
+searchKey: httputil.bufferPool
+tags: [struct private]
+```
+
+```Go
+type bufferPool struct {
+	get func() []byte
+	put func([]byte)
+}
+```
+
+#### <a id="bufferPool.Get" href="#bufferPool.Get">func (bp bufferPool) Get() []byte</a>
+
+```
+searchKey: httputil.bufferPool.Get
+tags: [function private]
+```
+
+```Go
+func (bp bufferPool) Get() []byte
+```
+
+#### <a id="bufferPool.Put" href="#bufferPool.Put">func (bp bufferPool) Put(v []byte)</a>
+
+```
+searchKey: httputil.bufferPool.Put
+tags: [method private]
+```
+
+```Go
+func (bp bufferPool) Put(v []byte)
+```
+
+### <a id="checkCloser" href="#checkCloser">type checkCloser struct</a>
+
+```
+searchKey: httputil.checkCloser
+tags: [struct private]
+```
+
+```Go
+type checkCloser struct {
+	closed bool
+}
+```
+
+#### <a id="checkCloser.Close" href="#checkCloser.Close">func (cc *checkCloser) Close() error</a>
+
+```
+searchKey: httputil.checkCloser.Close
+tags: [function private]
+```
+
+```Go
+func (cc *checkCloser) Close() error
+```
+
+#### <a id="checkCloser.Read" href="#checkCloser.Read">func (cc *checkCloser) Read(b []byte) (int, error)</a>
+
+```
+searchKey: httputil.checkCloser.Read
+tags: [method private]
+```
+
+```Go
+func (cc *checkCloser) Read(b []byte) (int, error)
+```
+
+### <a id="delegateReader" href="#delegateReader">type delegateReader struct</a>
+
+```
+searchKey: httputil.delegateReader
+tags: [struct private]
+```
+
+```Go
+type delegateReader struct {
+	c   chan io.Reader
+	err error     // only used if r is nil and c is closed.
+	r   io.Reader // nil until received from c
+}
+```
+
+delegateReader is a reader that delegates to another reader, once it arrives on a channel. 
+
+#### <a id="delegateReader.Read" href="#delegateReader.Read">func (r *delegateReader) Read(p []byte) (int, error)</a>
+
+```
+searchKey: httputil.delegateReader.Read
+tags: [method private]
+```
+
+```Go
+func (r *delegateReader) Read(p []byte) (int, error)
+```
+
+### <a id="dumpConn" href="#dumpConn">type dumpConn struct</a>
+
+```
+searchKey: httputil.dumpConn
+tags: [struct private]
+```
+
+```Go
+type dumpConn struct {
 	io.Writer
-	http.Flusher
+	io.Reader
 }
 ```
 
-### <a id="maxLatencyWriter" href="#maxLatencyWriter">type maxLatencyWriter struct</a>
+dumpConn is a net.Conn which writes to Writer and reads from Reader 
+
+#### <a id="dumpConn.Close" href="#dumpConn.Close">func (c *dumpConn) Close() error</a>
 
 ```
-searchKey: httputil.maxLatencyWriter
-tags: [private]
-```
-
-```Go
-type maxLatencyWriter struct {
-	dst     writeFlusher
-	latency time.Duration // non-zero; negative means to flush immediately
-
-	mu           sync.Mutex // protects t, flushPending, and dst.Flush
-	t            *time.Timer
-	flushPending bool
-}
-```
-
-#### <a id="maxLatencyWriter.Write" href="#maxLatencyWriter.Write">func (m *maxLatencyWriter) Write(p []byte) (n int, err error)</a>
-
-```
-searchKey: httputil.maxLatencyWriter.Write
-tags: [private]
+searchKey: httputil.dumpConn.Close
+tags: [function private]
 ```
 
 ```Go
-func (m *maxLatencyWriter) Write(p []byte) (n int, err error)
+func (c *dumpConn) Close() error
 ```
 
-#### <a id="maxLatencyWriter.delayedFlush" href="#maxLatencyWriter.delayedFlush">func (m *maxLatencyWriter) delayedFlush()</a>
+#### <a id="dumpConn.LocalAddr" href="#dumpConn.LocalAddr">func (c *dumpConn) LocalAddr() net.Addr</a>
 
 ```
-searchKey: httputil.maxLatencyWriter.delayedFlush
-tags: [private]
-```
-
-```Go
-func (m *maxLatencyWriter) delayedFlush()
-```
-
-#### <a id="maxLatencyWriter.stop" href="#maxLatencyWriter.stop">func (m *maxLatencyWriter) stop()</a>
-
-```
-searchKey: httputil.maxLatencyWriter.stop
-tags: [private]
+searchKey: httputil.dumpConn.LocalAddr
+tags: [function private]
 ```
 
 ```Go
-func (m *maxLatencyWriter) stop()
+func (c *dumpConn) LocalAddr() net.Addr
 ```
 
-### <a id="switchProtocolCopier" href="#switchProtocolCopier">type switchProtocolCopier struct</a>
+#### <a id="dumpConn.RemoteAddr" href="#dumpConn.RemoteAddr">func (c *dumpConn) RemoteAddr() net.Addr</a>
 
 ```
-searchKey: httputil.switchProtocolCopier
-tags: [private]
-```
-
-```Go
-type switchProtocolCopier struct {
-	user, backend io.ReadWriter
-}
-```
-
-switchProtocolCopier exists so goroutines proxying data back and forth have nice names in stacks. 
-
-#### <a id="switchProtocolCopier.copyFromBackend" href="#switchProtocolCopier.copyFromBackend">func (c switchProtocolCopier) copyFromBackend(errc chan<- error)</a>
-
-```
-searchKey: httputil.switchProtocolCopier.copyFromBackend
-tags: [private]
+searchKey: httputil.dumpConn.RemoteAddr
+tags: [function private]
 ```
 
 ```Go
-func (c switchProtocolCopier) copyFromBackend(errc chan<- error)
+func (c *dumpConn) RemoteAddr() net.Addr
 ```
 
-#### <a id="switchProtocolCopier.copyToBackend" href="#switchProtocolCopier.copyToBackend">func (c switchProtocolCopier) copyToBackend(errc chan<- error)</a>
+#### <a id="dumpConn.SetDeadline" href="#dumpConn.SetDeadline">func (c *dumpConn) SetDeadline(t time.Time) error</a>
 
 ```
-searchKey: httputil.switchProtocolCopier.copyToBackend
-tags: [private]
-```
-
-```Go
-func (c switchProtocolCopier) copyToBackend(errc chan<- error)
-```
-
-### <a id="eofReader" href="#eofReader">type eofReader struct{}</a>
-
-```
-searchKey: httputil.eofReader
-tags: [private]
+searchKey: httputil.dumpConn.SetDeadline
+tags: [method private]
 ```
 
 ```Go
-type eofReader struct{}
+func (c *dumpConn) SetDeadline(t time.Time) error
 ```
 
-#### <a id="eofReader.Close" href="#eofReader.Close">func (n eofReader) Close() error</a>
+#### <a id="dumpConn.SetReadDeadline" href="#dumpConn.SetReadDeadline">func (c *dumpConn) SetReadDeadline(t time.Time) error</a>
 
 ```
-searchKey: httputil.eofReader.Close
-tags: [private]
-```
-
-```Go
-func (n eofReader) Close() error
-```
-
-#### <a id="eofReader.Read" href="#eofReader.Read">func (n eofReader) Read([]byte) (int, error)</a>
-
-```
-searchKey: httputil.eofReader.Read
-tags: [private]
+searchKey: httputil.dumpConn.SetReadDeadline
+tags: [method private]
 ```
 
 ```Go
-func (n eofReader) Read([]byte) (int, error)
+func (c *dumpConn) SetReadDeadline(t time.Time) error
+```
+
+#### <a id="dumpConn.SetWriteDeadline" href="#dumpConn.SetWriteDeadline">func (c *dumpConn) SetWriteDeadline(t time.Time) error</a>
+
+```
+searchKey: httputil.dumpConn.SetWriteDeadline
+tags: [method private]
+```
+
+```Go
+func (c *dumpConn) SetWriteDeadline(t time.Time) error
 ```
 
 ### <a id="dumpTest" href="#dumpTest">type dumpTest struct</a>
 
 ```
 searchKey: httputil.dumpTest
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -1074,69 +1005,44 @@ type dumpTest struct {
 }
 ```
 
-### <a id="bufferPool" href="#bufferPool">type bufferPool struct</a>
+### <a id="eofReader" href="#eofReader">type eofReader struct{}</a>
 
 ```
-searchKey: httputil.bufferPool
-tags: [private]
-```
-
-```Go
-type bufferPool struct {
-	get func() []byte
-	put func([]byte)
-}
-```
-
-#### <a id="bufferPool.Get" href="#bufferPool.Get">func (bp bufferPool) Get() []byte</a>
-
-```
-searchKey: httputil.bufferPool.Get
-tags: [private]
+searchKey: httputil.eofReader
+tags: [struct private]
 ```
 
 ```Go
-func (bp bufferPool) Get() []byte
+type eofReader struct{}
 ```
 
-#### <a id="bufferPool.Put" href="#bufferPool.Put">func (bp bufferPool) Put(v []byte)</a>
+#### <a id="eofReader.Close" href="#eofReader.Close">func (n eofReader) Close() error</a>
 
 ```
-searchKey: httputil.bufferPool.Put
-tags: [private]
-```
-
-```Go
-func (bp bufferPool) Put(v []byte)
-```
-
-### <a id="RoundTripperFunc" href="#RoundTripperFunc">type RoundTripperFunc func(*net/http.Request) (*net/http.Response, error)</a>
-
-```
-searchKey: httputil.RoundTripperFunc
-tags: [private]
+searchKey: httputil.eofReader.Close
+tags: [function private]
 ```
 
 ```Go
-type RoundTripperFunc func(*http.Request) (*http.Response, error)
+func (n eofReader) Close() error
 ```
 
-#### <a id="RoundTripperFunc.RoundTrip" href="#RoundTripperFunc.RoundTrip">func (fn RoundTripperFunc) RoundTrip(req *http.Request) (*http.Response, error)</a>
+#### <a id="eofReader.Read" href="#eofReader.Read">func (n eofReader) Read([]byte) (int, error)</a>
 
 ```
-searchKey: httputil.RoundTripperFunc.RoundTrip
-tags: [private]
+searchKey: httputil.eofReader.Read
+tags: [method private]
 ```
 
 ```Go
-func (fn RoundTripperFunc) RoundTrip(req *http.Request) (*http.Response, error)
+func (n eofReader) Read([]byte) (int, error)
 ```
 
 ### <a id="failingRoundTripper" href="#failingRoundTripper">type failingRoundTripper struct{}</a>
 
 ```
 searchKey: httputil.failingRoundTripper
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -1147,18 +1053,148 @@ type failingRoundTripper struct{}
 
 ```
 searchKey: httputil.failingRoundTripper.RoundTrip
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (failingRoundTripper) RoundTrip(*http.Request) (*http.Response, error)
 ```
 
+### <a id="failureToReadBody" href="#failureToReadBody">type failureToReadBody struct{}</a>
+
+```
+searchKey: httputil.failureToReadBody
+tags: [struct private]
+```
+
+```Go
+type failureToReadBody struct{}
+```
+
+failureToReadBody is a io.ReadCloser that just returns errNoBody on Read. It's swapped in when we don't actually want to consume the body, but need a non-nil one, and want to distinguish the error from reading the dummy body. 
+
+#### <a id="failureToReadBody.Close" href="#failureToReadBody.Close">func (failureToReadBody) Close() error</a>
+
+```
+searchKey: httputil.failureToReadBody.Close
+tags: [function private]
+```
+
+```Go
+func (failureToReadBody) Close() error
+```
+
+#### <a id="failureToReadBody.Read" href="#failureToReadBody.Read">func (failureToReadBody) Read([]byte) (int, error)</a>
+
+```
+searchKey: httputil.failureToReadBody.Read
+tags: [method private]
+```
+
+```Go
+func (failureToReadBody) Read([]byte) (int, error)
+```
+
+### <a id="maxLatencyWriter" href="#maxLatencyWriter">type maxLatencyWriter struct</a>
+
+```
+searchKey: httputil.maxLatencyWriter
+tags: [struct private]
+```
+
+```Go
+type maxLatencyWriter struct {
+	dst     writeFlusher
+	latency time.Duration // non-zero; negative means to flush immediately
+
+	mu           sync.Mutex // protects t, flushPending, and dst.Flush
+	t            *time.Timer
+	flushPending bool
+}
+```
+
+#### <a id="maxLatencyWriter.Write" href="#maxLatencyWriter.Write">func (m *maxLatencyWriter) Write(p []byte) (n int, err error)</a>
+
+```
+searchKey: httputil.maxLatencyWriter.Write
+tags: [method private]
+```
+
+```Go
+func (m *maxLatencyWriter) Write(p []byte) (n int, err error)
+```
+
+#### <a id="maxLatencyWriter.delayedFlush" href="#maxLatencyWriter.delayedFlush">func (m *maxLatencyWriter) delayedFlush()</a>
+
+```
+searchKey: httputil.maxLatencyWriter.delayedFlush
+tags: [function private]
+```
+
+```Go
+func (m *maxLatencyWriter) delayedFlush()
+```
+
+#### <a id="maxLatencyWriter.stop" href="#maxLatencyWriter.stop">func (m *maxLatencyWriter) stop()</a>
+
+```
+searchKey: httputil.maxLatencyWriter.stop
+tags: [function private]
+```
+
+```Go
+func (m *maxLatencyWriter) stop()
+```
+
+### <a id="neverEnding" href="#neverEnding">type neverEnding byte</a>
+
+```
+searchKey: httputil.neverEnding
+tags: [number private]
+```
+
+```Go
+type neverEnding byte
+```
+
+#### <a id="neverEnding.Read" href="#neverEnding.Read">func (b neverEnding) Read(p []byte) (n int, err error)</a>
+
+```
+searchKey: httputil.neverEnding.Read
+tags: [method private]
+```
+
+```Go
+func (b neverEnding) Read(p []byte) (n int, err error)
+```
+
+### <a id="roundTripperFunc" href="#roundTripperFunc">type roundTripperFunc func(req *net/http.Request) (*net/http.Response, error)</a>
+
+```
+searchKey: httputil.roundTripperFunc
+tags: [function private]
+```
+
+```Go
+type roundTripperFunc func(req *http.Request) (*http.Response, error)
+```
+
+#### <a id="roundTripperFunc.RoundTrip" href="#roundTripperFunc.RoundTrip">func (fn roundTripperFunc) RoundTrip(req *http.Request) (*http.Response, error)</a>
+
+```
+searchKey: httputil.roundTripperFunc.RoundTrip
+tags: [method private]
+```
+
+```Go
+func (fn roundTripperFunc) RoundTrip(req *http.Request) (*http.Response, error)
+```
+
 ### <a id="staticResponseRoundTripper" href="#staticResponseRoundTripper">type staticResponseRoundTripper struct</a>
 
 ```
 searchKey: httputil.staticResponseRoundTripper
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -1169,7 +1205,7 @@ type staticResponseRoundTripper struct{ res *http.Response }
 
 ```
 searchKey: httputil.staticResponseRoundTripper.RoundTrip
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1180,7 +1216,7 @@ func (rt staticResponseRoundTripper) RoundTrip(*http.Request) (*http.Response, e
 
 ```
 searchKey: httputil.staticTransport
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -1193,129 +1229,86 @@ type staticTransport struct {
 
 ```
 searchKey: httputil.staticTransport.RoundTrip
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (t *staticTransport) RoundTrip(r *http.Request) (*http.Response, error)
 ```
 
-### <a id="roundTripperFunc" href="#roundTripperFunc">type roundTripperFunc func(req *net/http.Request) (*net/http.Response, error)</a>
+### <a id="switchProtocolCopier" href="#switchProtocolCopier">type switchProtocolCopier struct</a>
 
 ```
-searchKey: httputil.roundTripperFunc
-tags: [private]
-```
-
-```Go
-type roundTripperFunc func(req *http.Request) (*http.Response, error)
-```
-
-#### <a id="roundTripperFunc.RoundTrip" href="#roundTripperFunc.RoundTrip">func (fn roundTripperFunc) RoundTrip(req *http.Request) (*http.Response, error)</a>
-
-```
-searchKey: httputil.roundTripperFunc.RoundTrip
-tags: [private]
+searchKey: httputil.switchProtocolCopier
+tags: [struct private]
 ```
 
 ```Go
-func (fn roundTripperFunc) RoundTrip(req *http.Request) (*http.Response, error)
-```
-
-### <a id="checkCloser" href="#checkCloser">type checkCloser struct</a>
-
-```
-searchKey: httputil.checkCloser
-tags: [private]
-```
-
-```Go
-type checkCloser struct {
-	closed bool
+type switchProtocolCopier struct {
+	user, backend io.ReadWriter
 }
 ```
 
-#### <a id="checkCloser.Close" href="#checkCloser.Close">func (cc *checkCloser) Close() error</a>
+switchProtocolCopier exists so goroutines proxying data back and forth have nice names in stacks. 
+
+#### <a id="switchProtocolCopier.copyFromBackend" href="#switchProtocolCopier.copyFromBackend">func (c switchProtocolCopier) copyFromBackend(errc chan<- error)</a>
 
 ```
-searchKey: httputil.checkCloser.Close
-tags: [private]
-```
-
-```Go
-func (cc *checkCloser) Close() error
-```
-
-#### <a id="checkCloser.Read" href="#checkCloser.Read">func (cc *checkCloser) Read(b []byte) (int, error)</a>
-
-```
-searchKey: httputil.checkCloser.Read
-tags: [private]
+searchKey: httputil.switchProtocolCopier.copyFromBackend
+tags: [method private]
 ```
 
 ```Go
-func (cc *checkCloser) Read(b []byte) (int, error)
+func (c switchProtocolCopier) copyFromBackend(errc chan<- error)
+```
+
+#### <a id="switchProtocolCopier.copyToBackend" href="#switchProtocolCopier.copyToBackend">func (c switchProtocolCopier) copyToBackend(errc chan<- error)</a>
+
+```
+searchKey: httputil.switchProtocolCopier.copyToBackend
+tags: [method private]
+```
+
+```Go
+func (c switchProtocolCopier) copyToBackend(errc chan<- error)
+```
+
+### <a id="writeFlusher" href="#writeFlusher">type writeFlusher interface</a>
+
+```
+searchKey: httputil.writeFlusher
+tags: [interface private]
+```
+
+```Go
+type writeFlusher interface {
+	io.Writer
+	http.Flusher
+}
 ```
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="drainBody" href="#drainBody">func drainBody(b io.ReadCloser) (r1, r2 io.ReadCloser, err error)</a>
-
 ```
-searchKey: httputil.drainBody
-tags: [private]
+tags: [package]
 ```
 
-```Go
-func drainBody(b io.ReadCloser) (r1, r2 io.ReadCloser, err error)
-```
-
-drainBody reads all of b to memory and then returns two equivalent ReadClosers yielding the same bytes. 
-
-It returns an error if the initial slurp of all bytes fails. It does not attempt to make the returned ReadClosers have identical error-matching behavior. 
-
-### <a id="outgoingLength" href="#outgoingLength">func outgoingLength(req *http.Request) int64</a>
+### <a id="BenchmarkServeHTTP" href="#BenchmarkServeHTTP">func BenchmarkServeHTTP(b *testing.B)</a>
 
 ```
-searchKey: httputil.outgoingLength
-tags: [private]
+searchKey: httputil.BenchmarkServeHTTP
+tags: [method private benchmark]
 ```
 
 ```Go
-func outgoingLength(req *http.Request) int64
+func BenchmarkServeHTTP(b *testing.B)
 ```
-
-outGoingLength is a copy of the unexported (*http.Request).outgoingLength method. 
-
-### <a id="DumpRequestOut" href="#DumpRequestOut">func DumpRequestOut(req *http.Request, body bool) ([]byte, error)</a>
-
-```
-searchKey: httputil.DumpRequestOut
-```
-
-```Go
-func DumpRequestOut(req *http.Request, body bool) ([]byte, error)
-```
-
-DumpRequestOut is like DumpRequest but for outgoing client requests. It includes any headers that the standard http.Transport adds, such as User-Agent. 
-
-### <a id="valueOrDefault" href="#valueOrDefault">func valueOrDefault(value, def string) string</a>
-
-```
-searchKey: httputil.valueOrDefault
-tags: [private]
-```
-
-```Go
-func valueOrDefault(value, def string) string
-```
-
-Return value if nonempty, def otherwise. 
 
 ### <a id="DumpRequest" href="#DumpRequest">func DumpRequest(req *http.Request, body bool) ([]byte, error)</a>
 
 ```
 searchKey: httputil.DumpRequest
+tags: [method]
 ```
 
 ```Go
@@ -1328,10 +1321,24 @@ If body is true, DumpRequest also returns the body. To do so, it consumes req.Bo
 
 The documentation for http.Request.Write details which fields of req are included in the dump. 
 
+### <a id="DumpRequestOut" href="#DumpRequestOut">func DumpRequestOut(req *http.Request, body bool) ([]byte, error)</a>
+
+```
+searchKey: httputil.DumpRequestOut
+tags: [method]
+```
+
+```Go
+func DumpRequestOut(req *http.Request, body bool) ([]byte, error)
+```
+
+DumpRequestOut is like DumpRequest but for outgoing client requests. It includes any headers that the standard http.Transport adds, such as User-Agent. 
+
 ### <a id="DumpResponse" href="#DumpResponse">func DumpResponse(resp *http.Response, body bool) ([]byte, error)</a>
 
 ```
 searchKey: httputil.DumpResponse
+tags: [method]
 ```
 
 ```Go
@@ -1344,6 +1351,7 @@ DumpResponse is like DumpRequest but dumps a response.
 
 ```
 searchKey: httputil.NewChunkedReader
+tags: [method]
 ```
 
 ```Go
@@ -1358,6 +1366,7 @@ NewChunkedReader is not needed by normal applications. The http package automati
 
 ```
 searchKey: httputil.NewChunkedWriter
+tags: [method]
 ```
 
 ```Go
@@ -1368,160 +1377,35 @@ NewChunkedWriter returns a new chunkedWriter that translates writes into HTTP "c
 
 NewChunkedWriter is not needed by normal applications. The http package adds chunking automatically if handlers don't set a Content-Length header. Using NewChunkedWriter inside a handler would result in double chunking or chunking with a Content-Length length, both of which are wrong. 
 
-### <a id="singleJoiningSlash" href="#singleJoiningSlash">func singleJoiningSlash(a, b string) string</a>
+### <a id="TestClonesRequestHeaders" href="#TestClonesRequestHeaders">func TestClonesRequestHeaders(t *testing.T)</a>
 
 ```
-searchKey: httputil.singleJoiningSlash
-tags: [private]
-```
-
-```Go
-func singleJoiningSlash(a, b string) string
-```
-
-### <a id="joinURLPath" href="#joinURLPath">func joinURLPath(a, b *url.URL) (path, rawpath string)</a>
-
-```
-searchKey: httputil.joinURLPath
-tags: [private]
+searchKey: httputil.TestClonesRequestHeaders
+tags: [method private test]
 ```
 
 ```Go
-func joinURLPath(a, b *url.URL) (path, rawpath string)
+func TestClonesRequestHeaders(t *testing.T)
 ```
 
-### <a id="copyHeader" href="#copyHeader">func copyHeader(dst, src http.Header)</a>
-
-```
-searchKey: httputil.copyHeader
-tags: [private]
-```
-
-```Go
-func copyHeader(dst, src http.Header)
-```
-
-### <a id="shouldPanicOnCopyError" href="#shouldPanicOnCopyError">func shouldPanicOnCopyError(req *http.Request) bool</a>
-
-```
-searchKey: httputil.shouldPanicOnCopyError
-tags: [private]
-```
-
-```Go
-func shouldPanicOnCopyError(req *http.Request) bool
-```
-
-shouldPanicOnCopyError reports whether the reverse proxy should panic with http.ErrAbortHandler. This is the right thing to do by default, but Go 1.10 and earlier did not, so existing unit tests weren't expecting panics. Only panic in our own tests, or when running under the HTTP server. 
-
-### <a id="removeConnectionHeaders" href="#removeConnectionHeaders">func removeConnectionHeaders(h http.Header)</a>
-
-```
-searchKey: httputil.removeConnectionHeaders
-tags: [private]
-```
-
-```Go
-func removeConnectionHeaders(h http.Header)
-```
-
-removeConnectionHeaders removes hop-by-hop headers listed in the "Connection" header of h. See RFC 7230, section 6.1 
-
-### <a id="upgradeType" href="#upgradeType">func upgradeType(h http.Header) string</a>
-
-```
-searchKey: httputil.upgradeType
-tags: [private]
-```
-
-```Go
-func upgradeType(h http.Header) string
-```
+Issue 18327: verify we always do a deep copy of the Request.Header map before any mutations. 
 
 ### <a id="TestDumpRequest" href="#TestDumpRequest">func TestDumpRequest(t *testing.T)</a>
 
 ```
 searchKey: httputil.TestDumpRequest
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestDumpRequest(t *testing.T)
 ```
 
-### <a id="deadline" href="#deadline">func deadline(t *testing.T, defaultDelay, needed time.Duration) time.Time</a>
-
-```
-searchKey: httputil.deadline
-tags: [private]
-```
-
-```Go
-func deadline(t *testing.T, defaultDelay, needed time.Duration) time.Time
-```
-
-deadline returns the time which is needed before t.Deadline() if one is configured and it is s greater than needed in the future, otherwise defaultDelay from the current time. 
-
-### <a id="chunk" href="#chunk">func chunk(s string) string</a>
-
-```
-searchKey: httputil.chunk
-tags: [private]
-```
-
-```Go
-func chunk(s string) string
-```
-
-### <a id="mustParseURL" href="#mustParseURL">func mustParseURL(s string) *url.URL</a>
-
-```
-searchKey: httputil.mustParseURL
-tags: [private]
-```
-
-```Go
-func mustParseURL(s string) *url.URL
-```
-
-### <a id="mustNewRequest" href="#mustNewRequest">func mustNewRequest(method, url string, body io.Reader) *http.Request</a>
-
-```
-searchKey: httputil.mustNewRequest
-tags: [private]
-```
-
-```Go
-func mustNewRequest(method, url string, body io.Reader) *http.Request
-```
-
-### <a id="mustReadRequest" href="#mustReadRequest">func mustReadRequest(s string) *http.Request</a>
-
-```
-searchKey: httputil.mustReadRequest
-tags: [private]
-```
-
-```Go
-func mustReadRequest(s string) *http.Request
-```
-
-### <a id="TestDumpResponse" href="#TestDumpResponse">func TestDumpResponse(t *testing.T)</a>
-
-```
-searchKey: httputil.TestDumpResponse
-tags: [private]
-```
-
-```Go
-func TestDumpResponse(t *testing.T)
-```
-
 ### <a id="TestDumpRequestOutIssue38352" href="#TestDumpRequestOutIssue38352">func TestDumpRequestOutIssue38352(t *testing.T)</a>
 
 ```
 searchKey: httputil.TestDumpRequestOutIssue38352
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -1530,92 +1414,90 @@ func TestDumpRequestOutIssue38352(t *testing.T)
 
 Issue 38352: Check for deadlock on canceled requests. 
 
-### <a id="init.reverseproxy_test.go" href="#init.reverseproxy_test.go">func init()</a>
+### <a id="TestDumpResponse" href="#TestDumpResponse">func TestDumpResponse(t *testing.T)</a>
 
 ```
-searchKey: httputil.init
-tags: [private]
+searchKey: httputil.TestDumpResponse
+tags: [method private test]
 ```
 
 ```Go
-func init()
+func TestDumpResponse(t *testing.T)
 ```
+
+### <a id="TestJoinURLPath" href="#TestJoinURLPath">func TestJoinURLPath(t *testing.T)</a>
+
+```
+searchKey: httputil.TestJoinURLPath
+tags: [method private test]
+```
+
+```Go
+func TestJoinURLPath(t *testing.T)
+```
+
+### <a id="TestModifyResponseClosesBody" href="#TestModifyResponseClosesBody">func TestModifyResponseClosesBody(t *testing.T)</a>
+
+```
+searchKey: httputil.TestModifyResponseClosesBody
+tags: [method private test]
+```
+
+```Go
+func TestModifyResponseClosesBody(t *testing.T)
+```
+
+### <a id="TestNilBody" href="#TestNilBody">func TestNilBody(t *testing.T)</a>
+
+```
+searchKey: httputil.TestNilBody
+tags: [method private test]
+```
+
+```Go
+func TestNilBody(t *testing.T)
+```
+
+Issue 12344 
 
 ### <a id="TestReverseProxy" href="#TestReverseProxy">func TestReverseProxy(t *testing.T)</a>
 
 ```
 searchKey: httputil.TestReverseProxy
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestReverseProxy(t *testing.T)
 ```
 
-### <a id="TestReverseProxyStripHeadersPresentInConnection" href="#TestReverseProxyStripHeadersPresentInConnection">func TestReverseProxyStripHeadersPresentInConnection(t *testing.T)</a>
+### <a id="TestReverseProxyCancellation" href="#TestReverseProxyCancellation">func TestReverseProxyCancellation(t *testing.T)</a>
 
 ```
-searchKey: httputil.TestReverseProxyStripHeadersPresentInConnection
-tags: [private]
-```
-
-```Go
-func TestReverseProxyStripHeadersPresentInConnection(t *testing.T)
-```
-
-Issue 16875: remove any proxied headers mentioned in the "Connection" header value. 
-
-### <a id="TestReverseProxyStripEmptyConnection" href="#TestReverseProxyStripEmptyConnection">func TestReverseProxyStripEmptyConnection(t *testing.T)</a>
-
-```
-searchKey: httputil.TestReverseProxyStripEmptyConnection
-tags: [private]
+searchKey: httputil.TestReverseProxyCancellation
+tags: [method private test]
 ```
 
 ```Go
-func TestReverseProxyStripEmptyConnection(t *testing.T)
+func TestReverseProxyCancellation(t *testing.T)
 ```
 
-### <a id="TestXForwardedFor" href="#TestXForwardedFor">func TestXForwardedFor(t *testing.T)</a>
+### <a id="TestReverseProxyErrorHandler" href="#TestReverseProxyErrorHandler">func TestReverseProxyErrorHandler(t *testing.T)</a>
 
 ```
-searchKey: httputil.TestXForwardedFor
-tags: [private]
-```
-
-```Go
-func TestXForwardedFor(t *testing.T)
-```
-
-### <a id="TestXForwardedFor_Omit" href="#TestXForwardedFor_Omit">func TestXForwardedFor_Omit(t *testing.T)</a>
-
-```
-searchKey: httputil.TestXForwardedFor_Omit
-tags: [private]
+searchKey: httputil.TestReverseProxyErrorHandler
+tags: [method private test]
 ```
 
 ```Go
-func TestXForwardedFor_Omit(t *testing.T)
-```
-
-Issue 38079: don't append to X-Forwarded-For if it's present but nil 
-
-### <a id="TestReverseProxyQuery" href="#TestReverseProxyQuery">func TestReverseProxyQuery(t *testing.T)</a>
-
-```
-searchKey: httputil.TestReverseProxyQuery
-tags: [private]
-```
-
-```Go
-func TestReverseProxyQuery(t *testing.T)
+func TestReverseProxyErrorHandler(t *testing.T)
 ```
 
 ### <a id="TestReverseProxyFlushInterval" href="#TestReverseProxyFlushInterval">func TestReverseProxyFlushInterval(t *testing.T)</a>
 
 ```
 searchKey: httputil.TestReverseProxyFlushInterval
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -1626,114 +1508,29 @@ func TestReverseProxyFlushInterval(t *testing.T)
 
 ```
 searchKey: httputil.TestReverseProxyFlushIntervalHeaders
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestReverseProxyFlushIntervalHeaders(t *testing.T)
 ```
 
-### <a id="TestReverseProxyCancellation" href="#TestReverseProxyCancellation">func TestReverseProxyCancellation(t *testing.T)</a>
-
-```
-searchKey: httputil.TestReverseProxyCancellation
-tags: [private]
-```
-
-```Go
-func TestReverseProxyCancellation(t *testing.T)
-```
-
-### <a id="req" href="#req">func req(t *testing.T, v string) *http.Request</a>
-
-```
-searchKey: httputil.req
-tags: [private]
-```
-
-```Go
-func req(t *testing.T, v string) *http.Request
-```
-
-### <a id="TestNilBody" href="#TestNilBody">func TestNilBody(t *testing.T)</a>
-
-```
-searchKey: httputil.TestNilBody
-tags: [private]
-```
-
-```Go
-func TestNilBody(t *testing.T)
-```
-
-Issue 12344 
-
-### <a id="TestUserAgentHeader" href="#TestUserAgentHeader">func TestUserAgentHeader(t *testing.T)</a>
-
-```
-searchKey: httputil.TestUserAgentHeader
-tags: [private]
-```
-
-```Go
-func TestUserAgentHeader(t *testing.T)
-```
-
-Issue 15524 
-
 ### <a id="TestReverseProxyGetPutBuffer" href="#TestReverseProxyGetPutBuffer">func TestReverseProxyGetPutBuffer(t *testing.T)</a>
 
 ```
 searchKey: httputil.TestReverseProxyGetPutBuffer
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestReverseProxyGetPutBuffer(t *testing.T)
 ```
 
-### <a id="TestReverseProxy_Post" href="#TestReverseProxy_Post">func TestReverseProxy_Post(t *testing.T)</a>
-
-```
-searchKey: httputil.TestReverseProxy_Post
-tags: [private]
-```
-
-```Go
-func TestReverseProxy_Post(t *testing.T)
-```
-
-### <a id="TestReverseProxy_NilBody" href="#TestReverseProxy_NilBody">func TestReverseProxy_NilBody(t *testing.T)</a>
-
-```
-searchKey: httputil.TestReverseProxy_NilBody
-tags: [private]
-```
-
-```Go
-func TestReverseProxy_NilBody(t *testing.T)
-```
-
-Issue 16036: send a Request with a nil Body when possible 
-
-### <a id="TestReverseProxy_AllocatedHeader" href="#TestReverseProxy_AllocatedHeader">func TestReverseProxy_AllocatedHeader(t *testing.T)</a>
-
-```
-searchKey: httputil.TestReverseProxy_AllocatedHeader
-tags: [private]
-```
-
-```Go
-func TestReverseProxy_AllocatedHeader(t *testing.T)
-```
-
-Issue 33142: always allocate the request headers 
-
 ### <a id="TestReverseProxyModifyResponse" href="#TestReverseProxyModifyResponse">func TestReverseProxyModifyResponse(t *testing.T)</a>
 
 ```
 searchKey: httputil.TestReverseProxyModifyResponse
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -1742,105 +1539,46 @@ func TestReverseProxyModifyResponse(t *testing.T)
 
 Issue 14237. Test ModifyResponse and that an error from it causes the proxy to return StatusBadGateway, or StatusOK otherwise. 
 
-### <a id="TestReverseProxyErrorHandler" href="#TestReverseProxyErrorHandler">func TestReverseProxyErrorHandler(t *testing.T)</a>
+### <a id="TestReverseProxyQuery" href="#TestReverseProxyQuery">func TestReverseProxyQuery(t *testing.T)</a>
 
 ```
-searchKey: httputil.TestReverseProxyErrorHandler
-tags: [private]
-```
-
-```Go
-func TestReverseProxyErrorHandler(t *testing.T)
-```
-
-### <a id="TestReverseProxy_CopyBuffer" href="#TestReverseProxy_CopyBuffer">func TestReverseProxy_CopyBuffer(t *testing.T)</a>
-
-```
-searchKey: httputil.TestReverseProxy_CopyBuffer
-tags: [private]
+searchKey: httputil.TestReverseProxyQuery
+tags: [method private test]
 ```
 
 ```Go
-func TestReverseProxy_CopyBuffer(t *testing.T)
+func TestReverseProxyQuery(t *testing.T)
 ```
 
-Issue 16659: log errors from short read 
-
-### <a id="BenchmarkServeHTTP" href="#BenchmarkServeHTTP">func BenchmarkServeHTTP(b *testing.B)</a>
+### <a id="TestReverseProxyStripEmptyConnection" href="#TestReverseProxyStripEmptyConnection">func TestReverseProxyStripEmptyConnection(t *testing.T)</a>
 
 ```
-searchKey: httputil.BenchmarkServeHTTP
-tags: [private]
-```
-
-```Go
-func BenchmarkServeHTTP(b *testing.B)
-```
-
-### <a id="TestServeHTTPDeepCopy" href="#TestServeHTTPDeepCopy">func TestServeHTTPDeepCopy(t *testing.T)</a>
-
-```
-searchKey: httputil.TestServeHTTPDeepCopy
-tags: [private]
+searchKey: httputil.TestReverseProxyStripEmptyConnection
+tags: [method private test]
 ```
 
 ```Go
-func TestServeHTTPDeepCopy(t *testing.T)
+func TestReverseProxyStripEmptyConnection(t *testing.T)
 ```
 
-### <a id="TestClonesRequestHeaders" href="#TestClonesRequestHeaders">func TestClonesRequestHeaders(t *testing.T)</a>
+### <a id="TestReverseProxyStripHeadersPresentInConnection" href="#TestReverseProxyStripHeadersPresentInConnection">func TestReverseProxyStripHeadersPresentInConnection(t *testing.T)</a>
 
 ```
-searchKey: httputil.TestClonesRequestHeaders
-tags: [private]
-```
-
-```Go
-func TestClonesRequestHeaders(t *testing.T)
-```
-
-Issue 18327: verify we always do a deep copy of the Request.Header map before any mutations. 
-
-### <a id="TestModifyResponseClosesBody" href="#TestModifyResponseClosesBody">func TestModifyResponseClosesBody(t *testing.T)</a>
-
-```
-searchKey: httputil.TestModifyResponseClosesBody
-tags: [private]
+searchKey: httputil.TestReverseProxyStripHeadersPresentInConnection
+tags: [method private test]
 ```
 
 ```Go
-func TestModifyResponseClosesBody(t *testing.T)
+func TestReverseProxyStripHeadersPresentInConnection(t *testing.T)
 ```
 
-### <a id="TestReverseProxy_PanicBodyError" href="#TestReverseProxy_PanicBodyError">func TestReverseProxy_PanicBodyError(t *testing.T)</a>
-
-```
-searchKey: httputil.TestReverseProxy_PanicBodyError
-tags: [private]
-```
-
-```Go
-func TestReverseProxy_PanicBodyError(t *testing.T)
-```
-
-Issue 23643: panic on body copy error 
-
-### <a id="TestSelectFlushInterval" href="#TestSelectFlushInterval">func TestSelectFlushInterval(t *testing.T)</a>
-
-```
-searchKey: httputil.TestSelectFlushInterval
-tags: [private]
-```
-
-```Go
-func TestSelectFlushInterval(t *testing.T)
-```
+Issue 16875: remove any proxied headers mentioned in the "Connection" header value. 
 
 ### <a id="TestReverseProxyWebSocket" href="#TestReverseProxyWebSocket">func TestReverseProxyWebSocket(t *testing.T)</a>
 
 ```
 searchKey: httputil.TestReverseProxyWebSocket
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -1851,43 +1589,344 @@ func TestReverseProxyWebSocket(t *testing.T)
 
 ```
 searchKey: httputil.TestReverseProxyWebSocketCancellation
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestReverseProxyWebSocketCancellation(t *testing.T)
 ```
 
-### <a id="TestUnannouncedTrailer" href="#TestUnannouncedTrailer">func TestUnannouncedTrailer(t *testing.T)</a>
+### <a id="TestReverseProxy_AllocatedHeader" href="#TestReverseProxy_AllocatedHeader">func TestReverseProxy_AllocatedHeader(t *testing.T)</a>
 
 ```
-searchKey: httputil.TestUnannouncedTrailer
-tags: [private]
+searchKey: httputil.TestReverseProxy_AllocatedHeader
+tags: [method private test]
 ```
 
 ```Go
-func TestUnannouncedTrailer(t *testing.T)
+func TestReverseProxy_AllocatedHeader(t *testing.T)
+```
+
+Issue 33142: always allocate the request headers 
+
+### <a id="TestReverseProxy_CopyBuffer" href="#TestReverseProxy_CopyBuffer">func TestReverseProxy_CopyBuffer(t *testing.T)</a>
+
+```
+searchKey: httputil.TestReverseProxy_CopyBuffer
+tags: [method private test]
+```
+
+```Go
+func TestReverseProxy_CopyBuffer(t *testing.T)
+```
+
+Issue 16659: log errors from short read 
+
+### <a id="TestReverseProxy_NilBody" href="#TestReverseProxy_NilBody">func TestReverseProxy_NilBody(t *testing.T)</a>
+
+```
+searchKey: httputil.TestReverseProxy_NilBody
+tags: [method private test]
+```
+
+```Go
+func TestReverseProxy_NilBody(t *testing.T)
+```
+
+Issue 16036: send a Request with a nil Body when possible 
+
+### <a id="TestReverseProxy_PanicBodyError" href="#TestReverseProxy_PanicBodyError">func TestReverseProxy_PanicBodyError(t *testing.T)</a>
+
+```
+searchKey: httputil.TestReverseProxy_PanicBodyError
+tags: [method private test]
+```
+
+```Go
+func TestReverseProxy_PanicBodyError(t *testing.T)
+```
+
+Issue 23643: panic on body copy error 
+
+### <a id="TestReverseProxy_Post" href="#TestReverseProxy_Post">func TestReverseProxy_Post(t *testing.T)</a>
+
+```
+searchKey: httputil.TestReverseProxy_Post
+tags: [method private test]
+```
+
+```Go
+func TestReverseProxy_Post(t *testing.T)
+```
+
+### <a id="TestSelectFlushInterval" href="#TestSelectFlushInterval">func TestSelectFlushInterval(t *testing.T)</a>
+
+```
+searchKey: httputil.TestSelectFlushInterval
+tags: [method private test]
+```
+
+```Go
+func TestSelectFlushInterval(t *testing.T)
+```
+
+### <a id="TestServeHTTPDeepCopy" href="#TestServeHTTPDeepCopy">func TestServeHTTPDeepCopy(t *testing.T)</a>
+
+```
+searchKey: httputil.TestServeHTTPDeepCopy
+tags: [method private test]
+```
+
+```Go
+func TestServeHTTPDeepCopy(t *testing.T)
 ```
 
 ### <a id="TestSingleJoinSlash" href="#TestSingleJoinSlash">func TestSingleJoinSlash(t *testing.T)</a>
 
 ```
 searchKey: httputil.TestSingleJoinSlash
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestSingleJoinSlash(t *testing.T)
 ```
 
-### <a id="TestJoinURLPath" href="#TestJoinURLPath">func TestJoinURLPath(t *testing.T)</a>
+### <a id="TestUnannouncedTrailer" href="#TestUnannouncedTrailer">func TestUnannouncedTrailer(t *testing.T)</a>
 
 ```
-searchKey: httputil.TestJoinURLPath
-tags: [private]
+searchKey: httputil.TestUnannouncedTrailer
+tags: [method private test]
 ```
 
 ```Go
-func TestJoinURLPath(t *testing.T)
+func TestUnannouncedTrailer(t *testing.T)
 ```
+
+### <a id="TestUserAgentHeader" href="#TestUserAgentHeader">func TestUserAgentHeader(t *testing.T)</a>
+
+```
+searchKey: httputil.TestUserAgentHeader
+tags: [method private test]
+```
+
+```Go
+func TestUserAgentHeader(t *testing.T)
+```
+
+Issue 15524 
+
+### <a id="TestXForwardedFor" href="#TestXForwardedFor">func TestXForwardedFor(t *testing.T)</a>
+
+```
+searchKey: httputil.TestXForwardedFor
+tags: [method private test]
+```
+
+```Go
+func TestXForwardedFor(t *testing.T)
+```
+
+### <a id="TestXForwardedFor_Omit" href="#TestXForwardedFor_Omit">func TestXForwardedFor_Omit(t *testing.T)</a>
+
+```
+searchKey: httputil.TestXForwardedFor_Omit
+tags: [method private test]
+```
+
+```Go
+func TestXForwardedFor_Omit(t *testing.T)
+```
+
+Issue 38079: don't append to X-Forwarded-For if it's present but nil 
+
+### <a id="chunk" href="#chunk">func chunk(s string) string</a>
+
+```
+searchKey: httputil.chunk
+tags: [method private]
+```
+
+```Go
+func chunk(s string) string
+```
+
+### <a id="copyHeader" href="#copyHeader">func copyHeader(dst, src http.Header)</a>
+
+```
+searchKey: httputil.copyHeader
+tags: [method private]
+```
+
+```Go
+func copyHeader(dst, src http.Header)
+```
+
+### <a id="deadline" href="#deadline">func deadline(t *testing.T, defaultDelay, needed time.Duration) time.Time</a>
+
+```
+searchKey: httputil.deadline
+tags: [method private]
+```
+
+```Go
+func deadline(t *testing.T, defaultDelay, needed time.Duration) time.Time
+```
+
+deadline returns the time which is needed before t.Deadline() if one is configured and it is s greater than needed in the future, otherwise defaultDelay from the current time. 
+
+### <a id="drainBody" href="#drainBody">func drainBody(b io.ReadCloser) (r1, r2 io.ReadCloser, err error)</a>
+
+```
+searchKey: httputil.drainBody
+tags: [method private]
+```
+
+```Go
+func drainBody(b io.ReadCloser) (r1, r2 io.ReadCloser, err error)
+```
+
+drainBody reads all of b to memory and then returns two equivalent ReadClosers yielding the same bytes. 
+
+It returns an error if the initial slurp of all bytes fails. It does not attempt to make the returned ReadClosers have identical error-matching behavior. 
+
+### <a id="init.reverseproxy_test.go" href="#init.reverseproxy_test.go">func init()</a>
+
+```
+searchKey: httputil.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
+### <a id="joinURLPath" href="#joinURLPath">func joinURLPath(a, b *url.URL) (path, rawpath string)</a>
+
+```
+searchKey: httputil.joinURLPath
+tags: [method private]
+```
+
+```Go
+func joinURLPath(a, b *url.URL) (path, rawpath string)
+```
+
+### <a id="mustNewRequest" href="#mustNewRequest">func mustNewRequest(method, url string, body io.Reader) *http.Request</a>
+
+```
+searchKey: httputil.mustNewRequest
+tags: [method private]
+```
+
+```Go
+func mustNewRequest(method, url string, body io.Reader) *http.Request
+```
+
+### <a id="mustParseURL" href="#mustParseURL">func mustParseURL(s string) *url.URL</a>
+
+```
+searchKey: httputil.mustParseURL
+tags: [method private]
+```
+
+```Go
+func mustParseURL(s string) *url.URL
+```
+
+### <a id="mustReadRequest" href="#mustReadRequest">func mustReadRequest(s string) *http.Request</a>
+
+```
+searchKey: httputil.mustReadRequest
+tags: [method private]
+```
+
+```Go
+func mustReadRequest(s string) *http.Request
+```
+
+### <a id="outgoingLength" href="#outgoingLength">func outgoingLength(req *http.Request) int64</a>
+
+```
+searchKey: httputil.outgoingLength
+tags: [method private]
+```
+
+```Go
+func outgoingLength(req *http.Request) int64
+```
+
+outGoingLength is a copy of the unexported (*http.Request).outgoingLength method. 
+
+### <a id="removeConnectionHeaders" href="#removeConnectionHeaders">func removeConnectionHeaders(h http.Header)</a>
+
+```
+searchKey: httputil.removeConnectionHeaders
+tags: [method private]
+```
+
+```Go
+func removeConnectionHeaders(h http.Header)
+```
+
+removeConnectionHeaders removes hop-by-hop headers listed in the "Connection" header of h. See RFC 7230, section 6.1 
+
+### <a id="req" href="#req">func req(t *testing.T, v string) *http.Request</a>
+
+```
+searchKey: httputil.req
+tags: [method private]
+```
+
+```Go
+func req(t *testing.T, v string) *http.Request
+```
+
+### <a id="shouldPanicOnCopyError" href="#shouldPanicOnCopyError">func shouldPanicOnCopyError(req *http.Request) bool</a>
+
+```
+searchKey: httputil.shouldPanicOnCopyError
+tags: [method private]
+```
+
+```Go
+func shouldPanicOnCopyError(req *http.Request) bool
+```
+
+shouldPanicOnCopyError reports whether the reverse proxy should panic with http.ErrAbortHandler. This is the right thing to do by default, but Go 1.10 and earlier did not, so existing unit tests weren't expecting panics. Only panic in our own tests, or when running under the HTTP server. 
+
+### <a id="singleJoiningSlash" href="#singleJoiningSlash">func singleJoiningSlash(a, b string) string</a>
+
+```
+searchKey: httputil.singleJoiningSlash
+tags: [method private]
+```
+
+```Go
+func singleJoiningSlash(a, b string) string
+```
+
+### <a id="upgradeType" href="#upgradeType">func upgradeType(h http.Header) string</a>
+
+```
+searchKey: httputil.upgradeType
+tags: [method private]
+```
+
+```Go
+func upgradeType(h http.Header) string
+```
+
+### <a id="valueOrDefault" href="#valueOrDefault">func valueOrDefault(value, def string) string</a>
+
+```
+searchKey: httputil.valueOrDefault
+tags: [method private]
+```
+
+```Go
+func valueOrDefault(value, def string) string
+```
+
+Return value if nonempty, def otherwise. 
 

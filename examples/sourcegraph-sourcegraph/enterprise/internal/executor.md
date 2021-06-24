@@ -3,27 +3,113 @@
 ## Index
 
 * [Types](#type)
-    * [type Job struct](#Job)
-        * [func (j Job) RecordID() int](#Job.RecordID)
-    * [type DockerStep struct](#DockerStep)
+    * [type AddExecutionLogEntryRequest struct](#AddExecutionLogEntryRequest)
     * [type CliStep struct](#CliStep)
     * [type DequeueRequest struct](#DequeueRequest)
-    * [type AddExecutionLogEntryRequest struct](#AddExecutionLogEntryRequest)
+    * [type DockerStep struct](#DockerStep)
+    * [type HeartbeatRequest struct](#HeartbeatRequest)
+    * [type Job struct](#Job)
+        * [func (j Job) RecordID() int](#Job.RecordID)
     * [type MarkCompleteRequest struct](#MarkCompleteRequest)
     * [type MarkErroredRequest struct](#MarkErroredRequest)
-    * [type HeartbeatRequest struct](#HeartbeatRequest)
 
 
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
+```
+
+### <a id="AddExecutionLogEntryRequest" href="#AddExecutionLogEntryRequest">type AddExecutionLogEntryRequest struct</a>
+
+```
+searchKey: executor.AddExecutionLogEntryRequest
+tags: [struct]
+```
+
+```Go
+type AddExecutionLogEntryRequest struct {
+	ExecutorName string `json:"executorName"`
+	JobID        int    `json:"jobId"`
+	workerutil.ExecutionLogEntry
+}
+```
+
+### <a id="CliStep" href="#CliStep">type CliStep struct</a>
+
+```
+searchKey: executor.CliStep
+tags: [struct]
+```
+
+```Go
+type CliStep struct {
+	// Commands specifies the arguments supplied to the src command.
+	Commands []string `json:"command"`
+
+	// Dir specifies the target working directory.
+	Dir string `json:"dir"`
+
+	// Env specifies a set of NAME=value pairs to supply to the src command.
+	Env []string `json:"env"`
+}
+```
+
+### <a id="DequeueRequest" href="#DequeueRequest">type DequeueRequest struct</a>
+
+```
+searchKey: executor.DequeueRequest
+tags: [struct]
+```
+
+```Go
+type DequeueRequest struct {
+	ExecutorName string `json:"executorName"`
+}
+```
+
+### <a id="DockerStep" href="#DockerStep">type DockerStep struct</a>
+
+```
+searchKey: executor.DockerStep
+tags: [struct]
+```
+
+```Go
+type DockerStep struct {
+	// Image specifies the docker image.
+	Image string `json:"image"`
+
+	// Commands specifies the arguments supplied to the end of a docker run command.
+	Commands []string `json:"commands"`
+
+	// Dir specifies the target working directory.
+	Dir string `json:"dir"`
+
+	// Env specifies a set of NAME=value pairs to supply to the docker command.
+	Env []string `json:"env"`
+}
+```
+
+### <a id="HeartbeatRequest" href="#HeartbeatRequest">type HeartbeatRequest struct</a>
+
+```
+searchKey: executor.HeartbeatRequest
+tags: [struct]
+```
+
+```Go
+type HeartbeatRequest struct {
+	ExecutorName string `json:"executorName"`
+	JobIDs       []int  `json:"jobIds"`
+}
 ```
 
 ### <a id="Job" href="#Job">type Job struct</a>
 
 ```
 searchKey: executor.Job
+tags: [struct]
 ```
 
 ```Go
@@ -67,83 +153,18 @@ Job describes a series of steps to perform within an executor.
 
 ```
 searchKey: executor.Job.RecordID
+tags: [function]
 ```
 
 ```Go
 func (j Job) RecordID() int
 ```
 
-### <a id="DockerStep" href="#DockerStep">type DockerStep struct</a>
-
-```
-searchKey: executor.DockerStep
-```
-
-```Go
-type DockerStep struct {
-	// Image specifies the docker image.
-	Image string `json:"image"`
-
-	// Commands specifies the arguments supplied to the end of a docker run command.
-	Commands []string `json:"commands"`
-
-	// Dir specifies the target working directory.
-	Dir string `json:"dir"`
-
-	// Env specifies a set of NAME=value pairs to supply to the docker command.
-	Env []string `json:"env"`
-}
-```
-
-### <a id="CliStep" href="#CliStep">type CliStep struct</a>
-
-```
-searchKey: executor.CliStep
-```
-
-```Go
-type CliStep struct {
-	// Commands specifies the arguments supplied to the src command.
-	Commands []string `json:"command"`
-
-	// Dir specifies the target working directory.
-	Dir string `json:"dir"`
-
-	// Env specifies a set of NAME=value pairs to supply to the src command.
-	Env []string `json:"env"`
-}
-```
-
-### <a id="DequeueRequest" href="#DequeueRequest">type DequeueRequest struct</a>
-
-```
-searchKey: executor.DequeueRequest
-```
-
-```Go
-type DequeueRequest struct {
-	ExecutorName string `json:"executorName"`
-}
-```
-
-### <a id="AddExecutionLogEntryRequest" href="#AddExecutionLogEntryRequest">type AddExecutionLogEntryRequest struct</a>
-
-```
-searchKey: executor.AddExecutionLogEntryRequest
-```
-
-```Go
-type AddExecutionLogEntryRequest struct {
-	ExecutorName string `json:"executorName"`
-	JobID        int    `json:"jobId"`
-	workerutil.ExecutionLogEntry
-}
-```
-
 ### <a id="MarkCompleteRequest" href="#MarkCompleteRequest">type MarkCompleteRequest struct</a>
 
 ```
 searchKey: executor.MarkCompleteRequest
+tags: [struct]
 ```
 
 ```Go
@@ -157,6 +178,7 @@ type MarkCompleteRequest struct {
 
 ```
 searchKey: executor.MarkErroredRequest
+tags: [struct]
 ```
 
 ```Go
@@ -164,19 +186,6 @@ type MarkErroredRequest struct {
 	ExecutorName string `json:"executorName"`
 	JobID        int    `json:"jobId"`
 	ErrorMessage string `json:"errorMessage"`
-}
-```
-
-### <a id="HeartbeatRequest" href="#HeartbeatRequest">type HeartbeatRequest struct</a>
-
-```
-searchKey: executor.HeartbeatRequest
-```
-
-```Go
-type HeartbeatRequest struct {
-	ExecutorName string `json:"executorName"`
-	JobIDs       []int  `json:"jobIds"`
 }
 ```
 

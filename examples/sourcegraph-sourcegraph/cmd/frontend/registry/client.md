@@ -7,35 +7,40 @@ Package client contains a partial implementation of the extension registry.
 * [Constants](#const)
     * [const APIVersion](#APIVersion)
     * [const AcceptHeader](#AcceptHeader)
-    * [const MediaTypeHeaderName](#MediaTypeHeaderName)
     * [const MediaType](#MediaType)
+    * [const MediaTypeHeaderName](#MediaTypeHeaderName)
     * [const remoteRegistryErrorMessage](#remoteRegistryErrorMessage)
 * [Types](#type)
-    * [type notFoundError struct](#notFoundError)
-        * [func (notFoundError) NotFound() bool](#notFoundError.NotFound)
-        * [func (e *notFoundError) Error() string](#notFoundError.Error)
-    * [type httpError int](#httpError)
-        * [func (e httpError) Error() string](#httpError.Error)
     * [type Extension struct](#Extension)
-        * [func GetByUUID(ctx context.Context, registry *url.URL, uuidStr string) (*Extension, error)](#GetByUUID)
         * [func GetByExtensionID(ctx context.Context, registry *url.URL, extensionID string) (*Extension, error)](#GetByExtensionID)
+        * [func GetByUUID(ctx context.Context, registry *url.URL, uuidStr string) (*Extension, error)](#GetByUUID)
         * [func getBy(ctx context.Context, registry *url.URL, op, field, value string) (*Extension, error)](#getBy)
     * [type Publisher struct](#Publisher)
+    * [type httpError int](#httpError)
+        * [func (e httpError) Error() string](#httpError.Error)
+    * [type notFoundError struct](#notFoundError)
+        * [func (e *notFoundError) Error() string](#notFoundError.Error)
+        * [func (notFoundError) NotFound() bool](#notFoundError.NotFound)
 * [Functions](#func)
-    * [func List(ctx context.Context, registry *url.URL, query string) ([]*Extension, error)](#List)
     * [func GetFeaturedExtensions(ctx context.Context, registry *url.URL) ([]*Extension, error)](#GetFeaturedExtensions)
-    * [func httpGet(ctx context.Context, op, urlStr string, result interface{}) (err error)](#httpGet)
     * [func IsRemoteRegistryError(err error) bool](#IsRemoteRegistryError)
+    * [func List(ctx context.Context, registry *url.URL, query string) ([]*Extension, error)](#List)
     * [func Name(registry *url.URL) string](#Name)
+    * [func httpGet(ctx context.Context, op, urlStr string, result interface{}) (err error)](#httpGet)
     * [func toURL(registry *url.URL, pathStr string, query url.Values) string](#toURL)
 
 
 ## <a id="const" href="#const">Constants</a>
 
+```
+tags: [package]
+```
+
 ### <a id="APIVersion" href="#APIVersion">const APIVersion</a>
 
 ```
 searchKey: client.APIVersion
+tags: [constant string]
 ```
 
 ```Go
@@ -48,6 +53,7 @@ APIVersion is a string that uniquely identifies this API version.
 
 ```
 searchKey: client.AcceptHeader
+tags: [constant string]
 ```
 
 ```Go
@@ -56,22 +62,11 @@ const AcceptHeader = "application/vnd.sourcegraph.api+json;version=" + APIVersio
 
 AcceptHeader is the value of the "Accept" HTTP request header sent by the client. 
 
-### <a id="MediaTypeHeaderName" href="#MediaTypeHeaderName">const MediaTypeHeaderName</a>
-
-```
-searchKey: client.MediaTypeHeaderName
-```
-
-```Go
-const MediaTypeHeaderName = "X-Sourcegraph-Media-Type"
-```
-
-MediaTypeHeaderName is the name of the HTTP response header whose value the client expects to equal MediaType. 
-
 ### <a id="MediaType" href="#MediaType">const MediaType</a>
 
 ```
 searchKey: client.MediaType
+tags: [constant string]
 ```
 
 ```Go
@@ -80,11 +75,24 @@ const MediaType = "sourcegraph.v" + APIVersion + "; format=json"
 
 MediaType is the client's expected value for the MediaTypeHeaderName HTTP response header. 
 
+### <a id="MediaTypeHeaderName" href="#MediaTypeHeaderName">const MediaTypeHeaderName</a>
+
+```
+searchKey: client.MediaTypeHeaderName
+tags: [constant string]
+```
+
+```Go
+const MediaTypeHeaderName = "X-Sourcegraph-Media-Type"
+```
+
+MediaTypeHeaderName is the name of the HTTP response header whose value the client expects to equal MediaType. 
+
 ### <a id="remoteRegistryErrorMessage" href="#remoteRegistryErrorMessage">const remoteRegistryErrorMessage</a>
 
 ```
 searchKey: client.remoteRegistryErrorMessage
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -93,65 +101,15 @@ const remoteRegistryErrorMessage = "unable to contact extension registry"
 
 ## <a id="type" href="#type">Types</a>
 
-### <a id="notFoundError" href="#notFoundError">type notFoundError struct</a>
-
 ```
-searchKey: client.notFoundError
-tags: [private]
-```
-
-```Go
-type notFoundError struct{ field, value string }
-```
-
-#### <a id="notFoundError.NotFound" href="#notFoundError.NotFound">func (notFoundError) NotFound() bool</a>
-
-```
-searchKey: client.notFoundError.NotFound
-tags: [private]
-```
-
-```Go
-func (notFoundError) NotFound() bool
-```
-
-#### <a id="notFoundError.Error" href="#notFoundError.Error">func (e *notFoundError) Error() string</a>
-
-```
-searchKey: client.notFoundError.Error
-tags: [private]
-```
-
-```Go
-func (e *notFoundError) Error() string
-```
-
-### <a id="httpError" href="#httpError">type httpError int</a>
-
-```
-searchKey: client.httpError
-tags: [private]
-```
-
-```Go
-type httpError int
-```
-
-#### <a id="httpError.Error" href="#httpError.Error">func (e httpError) Error() string</a>
-
-```
-searchKey: client.httpError.Error
-tags: [private]
-```
-
-```Go
-func (e httpError) Error() string
+tags: [package]
 ```
 
 ### <a id="Extension" href="#Extension">type Extension struct</a>
 
 ```
 searchKey: client.Extension
+tags: [struct]
 ```
 
 ```Go
@@ -176,22 +134,11 @@ Extension describes an extension in the extension registry.
 
 It is the external form of github.com/sourcegraph/sourcegraph/cmd/frontend/types.RegistryExtension (which is the internal DB type). These types should generally be kept in sync, but registry.Extension updates require backcompat. 
 
-#### <a id="GetByUUID" href="#GetByUUID">func GetByUUID(ctx context.Context, registry *url.URL, uuidStr string) (*Extension, error)</a>
-
-```
-searchKey: client.GetByUUID
-```
-
-```Go
-func GetByUUID(ctx context.Context, registry *url.URL, uuidStr string) (*Extension, error)
-```
-
-GetByUUID gets the extension from the remote registry with the given UUID. If the remote registry reports that the extension is not found, the returned error implements errcode.NotFounder. 
-
 #### <a id="GetByExtensionID" href="#GetByExtensionID">func GetByExtensionID(ctx context.Context, registry *url.URL, extensionID string) (*Extension, error)</a>
 
 ```
 searchKey: client.GetByExtensionID
+tags: [method]
 ```
 
 ```Go
@@ -200,11 +147,24 @@ func GetByExtensionID(ctx context.Context, registry *url.URL, extensionID string
 
 GetByExtensionID gets the extension from the remote registry with the given extension ID. If the remote registry reports that the extension is not found, the returned error implements errcode.NotFounder. 
 
+#### <a id="GetByUUID" href="#GetByUUID">func GetByUUID(ctx context.Context, registry *url.URL, uuidStr string) (*Extension, error)</a>
+
+```
+searchKey: client.GetByUUID
+tags: [method]
+```
+
+```Go
+func GetByUUID(ctx context.Context, registry *url.URL, uuidStr string) (*Extension, error)
+```
+
+GetByUUID gets the extension from the remote registry with the given UUID. If the remote registry reports that the extension is not found, the returned error implements errcode.NotFounder. 
+
 #### <a id="getBy" href="#getBy">func getBy(ctx context.Context, registry *url.URL, op, field, value string) (*Extension, error)</a>
 
 ```
 searchKey: client.getBy
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -215,6 +175,7 @@ func getBy(ctx context.Context, registry *url.URL, op, field, value string) (*Ex
 
 ```
 searchKey: client.Publisher
+tags: [struct]
 ```
 
 ```Go
@@ -226,45 +187,83 @@ type Publisher struct {
 
 Publisher describes a publisher in the extension registry. 
 
-## <a id="func" href="#func">Functions</a>
-
-### <a id="List" href="#List">func List(ctx context.Context, registry *url.URL, query string) ([]*Extension, error)</a>
+### <a id="httpError" href="#httpError">type httpError int</a>
 
 ```
-searchKey: client.List
+searchKey: client.httpError
+tags: [number private]
 ```
 
 ```Go
-func List(ctx context.Context, registry *url.URL, query string) ([]*Extension, error)
+type httpError int
 ```
 
-List lists extensions on the remote registry matching the query (or all if the query is empty). 
+#### <a id="httpError.Error" href="#httpError.Error">func (e httpError) Error() string</a>
+
+```
+searchKey: client.httpError.Error
+tags: [function private]
+```
+
+```Go
+func (e httpError) Error() string
+```
+
+### <a id="notFoundError" href="#notFoundError">type notFoundError struct</a>
+
+```
+searchKey: client.notFoundError
+tags: [struct private]
+```
+
+```Go
+type notFoundError struct{ field, value string }
+```
+
+#### <a id="notFoundError.Error" href="#notFoundError.Error">func (e *notFoundError) Error() string</a>
+
+```
+searchKey: client.notFoundError.Error
+tags: [function private]
+```
+
+```Go
+func (e *notFoundError) Error() string
+```
+
+#### <a id="notFoundError.NotFound" href="#notFoundError.NotFound">func (notFoundError) NotFound() bool</a>
+
+```
+searchKey: client.notFoundError.NotFound
+tags: [function private]
+```
+
+```Go
+func (notFoundError) NotFound() bool
+```
+
+## <a id="func" href="#func">Functions</a>
+
+```
+tags: [package]
+```
 
 ### <a id="GetFeaturedExtensions" href="#GetFeaturedExtensions">func GetFeaturedExtensions(ctx context.Context, registry *url.URL) ([]*Extension, error)</a>
 
 ```
 searchKey: client.GetFeaturedExtensions
+tags: [method]
 ```
 
 ```Go
 func GetFeaturedExtensions(ctx context.Context, registry *url.URL) ([]*Extension, error)
 ```
 
-### <a id="httpGet" href="#httpGet">func httpGet(ctx context.Context, op, urlStr string, result interface{}) (err error)</a>
-
-```
-searchKey: client.httpGet
-tags: [private]
-```
-
-```Go
-func httpGet(ctx context.Context, op, urlStr string, result interface{}) (err error)
-```
-
 ### <a id="IsRemoteRegistryError" href="#IsRemoteRegistryError">func IsRemoteRegistryError(err error) bool</a>
 
 ```
 searchKey: client.IsRemoteRegistryError
+tags: [method]
 ```
 
 ```Go
@@ -273,10 +272,24 @@ func IsRemoteRegistryError(err error) bool
 
 IsRemoteRegistryError reports whether the err is (likely) from this package's interaction with the remote registry. 
 
+### <a id="List" href="#List">func List(ctx context.Context, registry *url.URL, query string) ([]*Extension, error)</a>
+
+```
+searchKey: client.List
+tags: [method]
+```
+
+```Go
+func List(ctx context.Context, registry *url.URL, query string) ([]*Extension, error)
+```
+
+List lists extensions on the remote registry matching the query (or all if the query is empty). 
+
 ### <a id="Name" href="#Name">func Name(registry *url.URL) string</a>
 
 ```
 searchKey: client.Name
+tags: [method]
 ```
 
 ```Go
@@ -285,11 +298,22 @@ func Name(registry *url.URL) string
 
 Name returns the registry name given its URL. 
 
+### <a id="httpGet" href="#httpGet">func httpGet(ctx context.Context, op, urlStr string, result interface{}) (err error)</a>
+
+```
+searchKey: client.httpGet
+tags: [method private]
+```
+
+```Go
+func httpGet(ctx context.Context, op, urlStr string, result interface{}) (err error)
+```
+
 ### <a id="toURL" href="#toURL">func toURL(registry *url.URL, pathStr string, query url.Values) string</a>
 
 ```
 searchKey: client.toURL
-tags: [private]
+tags: [method private]
 ```
 
 ```Go

@@ -4,7 +4,9 @@
     "identifier": "ed25519",
     "newPage": true,
     "searchKey": "crypto/ed25519",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -25,7 +27,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -38,32 +42,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto/ed25519#PublicKeySize",
-              "documentation": {
-                "identifier": "PublicKeySize",
-                "newPage": false,
-                "searchKey": "ed25519.PublicKeySize",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const PublicKeySize"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst PublicKeySize = 32\n```\n\nPublicKeySize is the size, in bytes, of public keys as used in this package. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/ed25519#PrivateKeySize",
               "documentation": {
                 "identifier": "PrivateKeySize",
                 "newPage": false,
                 "searchKey": "ed25519.PrivateKeySize",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -78,20 +65,23 @@
           },
           {
             "node": {
-              "pathID": "/crypto/ed25519#SignatureSize",
+              "pathID": "/crypto/ed25519#PublicKeySize",
               "documentation": {
-                "identifier": "SignatureSize",
+                "identifier": "PublicKeySize",
                 "newPage": false,
-                "searchKey": "ed25519.SignatureSize",
-                "tags": null
+                "searchKey": "ed25519.PublicKeySize",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const SignatureSize"
+                "value": "const PublicKeySize"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst SignatureSize = 64\n```\n\nSignatureSize is the size, in bytes, of signatures generated and verified by this package. \n\n"
+                "value": "```Go\nconst PublicKeySize = 32\n```\n\nPublicKeySize is the size, in bytes, of public keys as used in this package. \n\n"
               },
               "children": null
             }
@@ -103,7 +93,10 @@
                 "identifier": "SeedSize",
                 "newPage": false,
                 "searchKey": "ed25519.SeedSize",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -112,6 +105,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst SeedSize = 32\n```\n\nSeedSize is the size, in bytes, of private key seeds. These are the private key representations used by RFC 8032. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519#SignatureSize",
+              "documentation": {
+                "identifier": "SignatureSize",
+                "newPage": false,
+                "searchKey": "ed25519.SignatureSize",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SignatureSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SignatureSize = 64\n```\n\nSignatureSize is the size, in bytes, of signatures generated and verified by this package. \n\n"
               },
               "children": null
             }
@@ -126,7 +142,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -139,20 +157,23 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto/ed25519#PublicKey",
+              "pathID": "/crypto/ed25519#PrivateKey",
               "documentation": {
-                "identifier": "PublicKey",
+                "identifier": "PrivateKey",
                 "newPage": false,
-                "searchKey": "ed25519.PublicKey",
-                "tags": null
+                "searchKey": "ed25519.PrivateKey",
+                "tags": [
+                  "array",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type PublicKey []byte"
+                "value": "type PrivateKey []byte"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype PublicKey []byte\n```\n\nPublicKey is the type of Ed25519 public keys. \n\n"
+                "value": "```Go\ntype PrivateKey []byte\n```\n\nPrivateKey is the type of Ed25519 private keys. It implements crypto.Signer. \n\n"
               },
               "children": [
                 {
@@ -162,7 +183,9 @@
                       "identifier": "GenerateKey",
                       "newPage": false,
                       "searchKey": "ed25519.GenerateKey",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -177,53 +200,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/crypto/ed25519#PublicKey.Equal",
-                    "documentation": {
-                      "identifier": "PublicKey.Equal",
-                      "newPage": false,
-                      "searchKey": "ed25519.PublicKey.Equal",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (pub PublicKey) Equal(x crypto.PublicKey) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (pub PublicKey) Equal(x crypto.PublicKey) bool\n```\n\nEqual reports whether pub and x have the same value. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519#PrivateKey",
-              "documentation": {
-                "identifier": "PrivateKey",
-                "newPage": false,
-                "searchKey": "ed25519.PrivateKey",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type PrivateKey []byte"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype PrivateKey []byte\n```\n\nPrivateKey is the type of Ed25519 private keys. It implements crypto.Signer. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
                     "pathID": "/crypto/ed25519#NewKeyFromSeed",
                     "documentation": {
                       "identifier": "NewKeyFromSeed",
                       "newPage": false,
                       "searchKey": "ed25519.NewKeyFromSeed",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -238,32 +222,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/crypto/ed25519#PrivateKey.Public",
-                    "documentation": {
-                      "identifier": "PrivateKey.Public",
-                      "newPage": false,
-                      "searchKey": "ed25519.PrivateKey.Public",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (priv PrivateKey) Public() crypto.PublicKey"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (priv PrivateKey) Public() crypto.PublicKey\n```\n\nPublic returns the PublicKey corresponding to priv. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/crypto/ed25519#PrivateKey.Equal",
                     "documentation": {
                       "identifier": "PrivateKey.Equal",
                       "newPage": false,
                       "searchKey": "ed25519.PrivateKey.Equal",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -278,12 +244,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/crypto/ed25519#PrivateKey.Public",
+                    "documentation": {
+                      "identifier": "PrivateKey.Public",
+                      "newPage": false,
+                      "searchKey": "ed25519.PrivateKey.Public",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (priv PrivateKey) Public() crypto.PublicKey"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (priv PrivateKey) Public() crypto.PublicKey\n```\n\nPublic returns the PublicKey corresponding to priv. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/crypto/ed25519#PrivateKey.Seed",
                     "documentation": {
                       "identifier": "PrivateKey.Seed",
                       "newPage": false,
                       "searchKey": "ed25519.PrivateKey.Seed",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -303,7 +293,9 @@
                       "identifier": "PrivateKey.Sign",
                       "newPage": false,
                       "searchKey": "ed25519.PrivateKey.Sign",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -321,12 +313,59 @@
           },
           {
             "node": {
+              "pathID": "/crypto/ed25519#PublicKey",
+              "documentation": {
+                "identifier": "PublicKey",
+                "newPage": false,
+                "searchKey": "ed25519.PublicKey",
+                "tags": [
+                  "array",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PublicKey []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PublicKey []byte\n```\n\nPublicKey is the type of Ed25519 public keys. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519#PublicKey.Equal",
+                    "documentation": {
+                      "identifier": "PublicKey.Equal",
+                      "newPage": false,
+                      "searchKey": "ed25519.PublicKey.Equal",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pub PublicKey) Equal(x crypto.PublicKey) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pub PublicKey) Equal(x crypto.PublicKey) bool\n```\n\nEqual reports whether pub and x have the same value. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/crypto/ed25519#zeroReader",
               "documentation": {
                 "identifier": "zeroReader",
                 "newPage": false,
                 "searchKey": "ed25519.zeroReader",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -347,6 +386,7 @@
                       "newPage": false,
                       "searchKey": "ed25519.zeroReader.Read",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -374,7 +414,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -387,229 +429,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/crypto/ed25519#newKeyFromSeed",
-              "documentation": {
-                "identifier": "newKeyFromSeed",
-                "newPage": false,
-                "searchKey": "ed25519.newKeyFromSeed",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func newKeyFromSeed(privateKey, seed []byte)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc newKeyFromSeed(privateKey, seed []byte)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519#Sign",
-              "documentation": {
-                "identifier": "Sign",
-                "newPage": false,
-                "searchKey": "ed25519.Sign",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Sign(privateKey PrivateKey, message []byte) []byte"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Sign(privateKey PrivateKey, message []byte) []byte\n```\n\nSign signs the message with privateKey and returns a signature. It will panic if len(privateKey) is not PrivateKeySize. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519#sign",
-              "documentation": {
-                "identifier": "sign",
-                "newPage": false,
-                "searchKey": "ed25519.sign",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func sign(signature, privateKey, message []byte)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc sign(signature, privateKey, message []byte)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519#Verify",
-              "documentation": {
-                "identifier": "Verify",
-                "newPage": false,
-                "searchKey": "ed25519.Verify",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Verify(publicKey PublicKey, message, sig []byte) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Verify(publicKey PublicKey, message, sig []byte) bool\n```\n\nVerify reports whether sig is a valid signature of message by publicKey. It will panic if len(publicKey) is not PublicKeySize. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519#TestSignVerify",
-              "documentation": {
-                "identifier": "TestSignVerify",
-                "newPage": false,
-                "searchKey": "ed25519.TestSignVerify",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestSignVerify(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestSignVerify(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519#TestCryptoSigner",
-              "documentation": {
-                "identifier": "TestCryptoSigner",
-                "newPage": false,
-                "searchKey": "ed25519.TestCryptoSigner",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCryptoSigner(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCryptoSigner(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519#TestEqual",
-              "documentation": {
-                "identifier": "TestEqual",
-                "newPage": false,
-                "searchKey": "ed25519.TestEqual",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEqual(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEqual(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519#TestGolden",
-              "documentation": {
-                "identifier": "TestGolden",
-                "newPage": false,
-                "searchKey": "ed25519.TestGolden",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGolden(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGolden(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519#TestMalleability",
-              "documentation": {
-                "identifier": "TestMalleability",
-                "newPage": false,
-                "searchKey": "ed25519.TestMalleability",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMalleability(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMalleability(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/crypto/ed25519#TestAllocations",
-              "documentation": {
-                "identifier": "TestAllocations",
-                "newPage": false,
-                "searchKey": "ed25519.TestAllocations",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAllocations(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAllocations(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/crypto/ed25519#BenchmarkKeyGeneration",
               "documentation": {
                 "identifier": "BenchmarkKeyGeneration",
                 "newPage": false,
                 "searchKey": "ed25519.BenchmarkKeyGeneration",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -631,7 +459,9 @@
                 "newPage": false,
                 "searchKey": "ed25519.BenchmarkNewKeyFromSeed",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -653,7 +483,9 @@
                 "newPage": false,
                 "searchKey": "ed25519.BenchmarkSigning",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -675,7 +507,9 @@
                 "newPage": false,
                 "searchKey": "ed25519.BenchmarkVerification",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -685,6 +519,240 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc BenchmarkVerification(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519#Sign",
+              "documentation": {
+                "identifier": "Sign",
+                "newPage": false,
+                "searchKey": "ed25519.Sign",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Sign(privateKey PrivateKey, message []byte) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Sign(privateKey PrivateKey, message []byte) []byte\n```\n\nSign signs the message with privateKey and returns a signature. It will panic if len(privateKey) is not PrivateKeySize. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519#TestAllocations",
+              "documentation": {
+                "identifier": "TestAllocations",
+                "newPage": false,
+                "searchKey": "ed25519.TestAllocations",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAllocations(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAllocations(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519#TestCryptoSigner",
+              "documentation": {
+                "identifier": "TestCryptoSigner",
+                "newPage": false,
+                "searchKey": "ed25519.TestCryptoSigner",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCryptoSigner(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCryptoSigner(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519#TestEqual",
+              "documentation": {
+                "identifier": "TestEqual",
+                "newPage": false,
+                "searchKey": "ed25519.TestEqual",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEqual(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEqual(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519#TestGolden",
+              "documentation": {
+                "identifier": "TestGolden",
+                "newPage": false,
+                "searchKey": "ed25519.TestGolden",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGolden(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGolden(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519#TestMalleability",
+              "documentation": {
+                "identifier": "TestMalleability",
+                "newPage": false,
+                "searchKey": "ed25519.TestMalleability",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMalleability(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMalleability(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519#TestSignVerify",
+              "documentation": {
+                "identifier": "TestSignVerify",
+                "newPage": false,
+                "searchKey": "ed25519.TestSignVerify",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSignVerify(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSignVerify(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519#Verify",
+              "documentation": {
+                "identifier": "Verify",
+                "newPage": false,
+                "searchKey": "ed25519.Verify",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Verify(publicKey PublicKey, message, sig []byte) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Verify(publicKey PublicKey, message, sig []byte) bool\n```\n\nVerify reports whether sig is a valid signature of message by publicKey. It will panic if len(publicKey) is not PublicKeySize. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519#newKeyFromSeed",
+              "documentation": {
+                "identifier": "newKeyFromSeed",
+                "newPage": false,
+                "searchKey": "ed25519.newKeyFromSeed",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newKeyFromSeed(privateKey, seed []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newKeyFromSeed(privateKey, seed []byte)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519#sign",
+              "documentation": {
+                "identifier": "sign",
+                "newPage": false,
+                "searchKey": "ed25519.sign",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sign(signature, privateKey, message []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sign(signature, privateKey, message []byte)\n```\n\n"
               },
               "children": null
             }

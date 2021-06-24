@@ -4,7 +4,9 @@
     "identifier": "cgo",
     "newPage": true,
     "searchKey": "runtime/cgo",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,320 +39,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/runtime/cgo#x_cgo_init",
-              "documentation": {
-                "identifier": "x_cgo_init",
-                "newPage": false,
-                "searchKey": "cgo.x_cgo_init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var x_cgo_init"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar x_cgo_init byte\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/cgo#_cgo_init",
-              "documentation": {
-                "identifier": "_cgo_init",
-                "newPage": false,
-                "searchKey": "cgo._cgo_init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var _cgo_init"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar _cgo_init = &x_cgo_init\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/cgo#x_cgo_thread_start",
-              "documentation": {
-                "identifier": "x_cgo_thread_start",
-                "newPage": false,
-                "searchKey": "cgo.x_cgo_thread_start",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var x_cgo_thread_start"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar x_cgo_thread_start byte\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/cgo#_cgo_thread_start",
-              "documentation": {
-                "identifier": "_cgo_thread_start",
-                "newPage": false,
-                "searchKey": "cgo._cgo_thread_start",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var _cgo_thread_start"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar _cgo_thread_start = &x_cgo_thread_start\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/cgo#x_cgo_sys_thread_create",
-              "documentation": {
-                "identifier": "x_cgo_sys_thread_create",
-                "newPage": false,
-                "searchKey": "cgo.x_cgo_sys_thread_create",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var x_cgo_sys_thread_create"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar x_cgo_sys_thread_create byte\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/cgo#_cgo_sys_thread_create",
-              "documentation": {
-                "identifier": "_cgo_sys_thread_create",
-                "newPage": false,
-                "searchKey": "cgo._cgo_sys_thread_create",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var _cgo_sys_thread_create"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar _cgo_sys_thread_create = &x_cgo_sys_thread_create\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/cgo#x_cgo_notify_runtime_init_done",
-              "documentation": {
-                "identifier": "x_cgo_notify_runtime_init_done",
-                "newPage": false,
-                "searchKey": "cgo.x_cgo_notify_runtime_init_done",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var x_cgo_notify_runtime_init_done"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar x_cgo_notify_runtime_init_done byte\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/cgo#_cgo_notify_runtime_init_done",
-              "documentation": {
-                "identifier": "_cgo_notify_runtime_init_done",
-                "newPage": false,
-                "searchKey": "cgo._cgo_notify_runtime_init_done",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var _cgo_notify_runtime_init_done"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar _cgo_notify_runtime_init_done = &x_cgo_notify_runtime_init_done\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/cgo#x_cgo_set_context_function",
-              "documentation": {
-                "identifier": "x_cgo_set_context_function",
-                "newPage": false,
-                "searchKey": "cgo.x_cgo_set_context_function",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var x_cgo_set_context_function"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar x_cgo_set_context_function byte\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/cgo#_cgo_set_context_function",
-              "documentation": {
-                "identifier": "_cgo_set_context_function",
-                "newPage": false,
-                "searchKey": "cgo._cgo_set_context_function",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var _cgo_set_context_function"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar _cgo_set_context_function = &x_cgo_set_context_function\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/cgo#_cgo_yield",
-              "documentation": {
-                "identifier": "_cgo_yield",
-                "newPage": false,
-                "searchKey": "cgo._cgo_yield",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var _cgo_yield"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar _cgo_yield unsafe.Pointer\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/cgo#x_cgo_callers",
-              "documentation": {
-                "identifier": "x_cgo_callers",
-                "newPage": false,
-                "searchKey": "cgo.x_cgo_callers",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var x_cgo_callers"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar x_cgo_callers byte\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/cgo#_cgo_callers",
-              "documentation": {
-                "identifier": "_cgo_callers",
-                "newPage": false,
-                "searchKey": "cgo._cgo_callers",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var _cgo_callers"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar _cgo_callers = &x_cgo_callers\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/cgo#handles",
-              "documentation": {
-                "identifier": "handles",
-                "newPage": false,
-                "searchKey": "cgo.handles",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var handles"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar handles = sync.Map{} // map[Handle]interface{}\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/runtime/cgo#handleIdx",
               "documentation": {
                 "identifier": "handleIdx",
                 "newPage": false,
                 "searchKey": "cgo.handleIdx",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -365,22 +63,120 @@
           },
           {
             "node": {
-              "pathID": "/runtime/cgo#_iscgo",
+              "pathID": "/runtime/cgo#handles",
               "documentation": {
-                "identifier": "_iscgo",
+                "identifier": "handles",
                 "newPage": false,
-                "searchKey": "cgo._iscgo",
+                "searchKey": "cgo.handles",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var _iscgo"
+                "value": "var handles"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar _iscgo bool = true\n```\n\n"
+                "value": "```Go\nvar handles = sync.Map{} // map[Handle]interface{}\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/cgo#x_cgo_callers",
+              "documentation": {
+                "identifier": "x_cgo_callers",
+                "newPage": false,
+                "searchKey": "cgo.x_cgo_callers",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var x_cgo_callers"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar x_cgo_callers byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/cgo#x_cgo_init",
+              "documentation": {
+                "identifier": "x_cgo_init",
+                "newPage": false,
+                "searchKey": "cgo.x_cgo_init",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var x_cgo_init"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar x_cgo_init byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/cgo#x_cgo_notify_runtime_init_done",
+              "documentation": {
+                "identifier": "x_cgo_notify_runtime_init_done",
+                "newPage": false,
+                "searchKey": "cgo.x_cgo_notify_runtime_init_done",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var x_cgo_notify_runtime_init_done"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar x_cgo_notify_runtime_init_done byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/cgo#x_cgo_set_context_function",
+              "documentation": {
+                "identifier": "x_cgo_set_context_function",
+                "newPage": false,
+                "searchKey": "cgo.x_cgo_set_context_function",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var x_cgo_set_context_function"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar x_cgo_set_context_function byte\n```\n\n"
               },
               "children": null
             }
@@ -393,6 +189,8 @@
                 "newPage": false,
                 "searchKey": "cgo.x_cgo_setenv",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -409,22 +207,48 @@
           },
           {
             "node": {
-              "pathID": "/runtime/cgo#_cgo_setenv",
+              "pathID": "/runtime/cgo#x_cgo_sys_thread_create",
               "documentation": {
-                "identifier": "_cgo_setenv",
+                "identifier": "x_cgo_sys_thread_create",
                 "newPage": false,
-                "searchKey": "cgo._cgo_setenv",
+                "searchKey": "cgo.x_cgo_sys_thread_create",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var _cgo_setenv"
+                "value": "var x_cgo_sys_thread_create"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar _cgo_setenv = &x_cgo_setenv\n```\n\n"
+                "value": "```Go\nvar x_cgo_sys_thread_create byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/cgo#x_cgo_thread_start",
+              "documentation": {
+                "identifier": "x_cgo_thread_start",
+                "newPage": false,
+                "searchKey": "cgo.x_cgo_thread_start",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var x_cgo_thread_start"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar x_cgo_thread_start byte\n```\n\n"
               },
               "children": null
             }
@@ -437,6 +261,8 @@
                 "newPage": false,
                 "searchKey": "cgo.x_cgo_unsetenv",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -453,12 +279,182 @@
           },
           {
             "node": {
+              "pathID": "/runtime/cgo#_cgo_callers",
+              "documentation": {
+                "identifier": "_cgo_callers",
+                "newPage": false,
+                "searchKey": "cgo._cgo_callers",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var _cgo_callers"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar _cgo_callers = &x_cgo_callers\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/cgo#_cgo_init",
+              "documentation": {
+                "identifier": "_cgo_init",
+                "newPage": false,
+                "searchKey": "cgo._cgo_init",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var _cgo_init"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar _cgo_init = &x_cgo_init\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/cgo#_cgo_notify_runtime_init_done",
+              "documentation": {
+                "identifier": "_cgo_notify_runtime_init_done",
+                "newPage": false,
+                "searchKey": "cgo._cgo_notify_runtime_init_done",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var _cgo_notify_runtime_init_done"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar _cgo_notify_runtime_init_done = &x_cgo_notify_runtime_init_done\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/cgo#_cgo_set_context_function",
+              "documentation": {
+                "identifier": "_cgo_set_context_function",
+                "newPage": false,
+                "searchKey": "cgo._cgo_set_context_function",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var _cgo_set_context_function"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar _cgo_set_context_function = &x_cgo_set_context_function\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/cgo#_cgo_setenv",
+              "documentation": {
+                "identifier": "_cgo_setenv",
+                "newPage": false,
+                "searchKey": "cgo._cgo_setenv",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var _cgo_setenv"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar _cgo_setenv = &x_cgo_setenv\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/cgo#_cgo_sys_thread_create",
+              "documentation": {
+                "identifier": "_cgo_sys_thread_create",
+                "newPage": false,
+                "searchKey": "cgo._cgo_sys_thread_create",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var _cgo_sys_thread_create"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar _cgo_sys_thread_create = &x_cgo_sys_thread_create\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/cgo#_cgo_thread_start",
+              "documentation": {
+                "identifier": "_cgo_thread_start",
+                "newPage": false,
+                "searchKey": "cgo._cgo_thread_start",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var _cgo_thread_start"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar _cgo_thread_start = &x_cgo_thread_start\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/runtime/cgo#_cgo_unsetenv",
               "documentation": {
                 "identifier": "_cgo_unsetenv",
                 "newPage": false,
                 "searchKey": "cgo._cgo_unsetenv",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -469,6 +465,54 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar _cgo_unsetenv = &x_cgo_unsetenv\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/cgo#_cgo_yield",
+              "documentation": {
+                "identifier": "_cgo_yield",
+                "newPage": false,
+                "searchKey": "cgo._cgo_yield",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var _cgo_yield"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar _cgo_yield unsafe.Pointer\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/cgo#_iscgo",
+              "documentation": {
+                "identifier": "_iscgo",
+                "newPage": false,
+                "searchKey": "cgo._iscgo",
+                "tags": [
+                  "variable",
+                  "boolean",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var _iscgo"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar _iscgo bool = true\n```\n\n"
               },
               "children": null
             }
@@ -483,7 +527,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -501,7 +547,9 @@
                 "identifier": "Handle",
                 "newPage": false,
                 "searchKey": "cgo.Handle",
-                "tags": null
+                "tags": [
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -519,7 +567,9 @@
                       "identifier": "NewHandle",
                       "newPage": false,
                       "searchKey": "cgo.NewHandle",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -534,32 +584,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/runtime/cgo#Handle.Value",
-                    "documentation": {
-                      "identifier": "Handle.Value",
-                      "newPage": false,
-                      "searchKey": "cgo.Handle.Value",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h Handle) Value() interface{}"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h Handle) Value() interface{}\n```\n\nValue returns the associated Go value for a valid handle. \n\nThe method panics if the handle is invalid. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/runtime/cgo#Handle.Delete",
                     "documentation": {
                       "identifier": "Handle.Delete",
                       "newPage": false,
                       "searchKey": "cgo.Handle.Delete",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -568,6 +600,28 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (h Handle) Delete()\n```\n\nDelete invalidates a handle. This method should only be called once the program no longer needs to pass the handle to C and the C code no longer has a copy of the handle value. \n\nThe method panics if the handle is invalid. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/runtime/cgo#Handle.Value",
+                    "documentation": {
+                      "identifier": "Handle.Value",
+                      "newPage": false,
+                      "searchKey": "cgo.Handle.Value",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h Handle) Value() interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h Handle) Value() interface{}\n```\n\nValue returns the associated Go value for a valid handle. \n\nThe method panics if the handle is invalid. \n\n"
                     },
                     "children": null
                   }
@@ -585,7 +639,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -598,44 +654,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/runtime/cgo#_runtime_cgo_panic_internal",
+              "pathID": "/runtime/cgo#BenchmarkHandle",
               "documentation": {
-                "identifier": "_runtime_cgo_panic_internal",
+                "identifier": "BenchmarkHandle",
                 "newPage": false,
-                "searchKey": "cgo._runtime_cgo_panic_internal",
+                "searchKey": "cgo.BenchmarkHandle",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func _runtime_cgo_panic_internal(p *byte)"
+                "value": "func BenchmarkHandle(b *testing.B)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc _runtime_cgo_panic_internal(p *byte)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/cgo#_cgo_panic",
-              "documentation": {
-                "identifier": "_cgo_panic",
-                "newPage": false,
-                "searchKey": "cgo._cgo_panic",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func _cgo_panic(a *struct{ cstr *byte })"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc _cgo_panic(a *struct{ cstr *byte })\n```\n\n"
+                "value": "```Go\nfunc BenchmarkHandle(b *testing.B)\n```\n\n"
               },
               "children": null
             }
@@ -648,7 +684,9 @@
                 "newPage": false,
                 "searchKey": "cgo.TestHandle",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -670,7 +708,9 @@
                 "newPage": false,
                 "searchKey": "cgo.TestInvalidHandle",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -686,22 +726,46 @@
           },
           {
             "node": {
-              "pathID": "/runtime/cgo#BenchmarkHandle",
+              "pathID": "/runtime/cgo#_cgo_panic",
               "documentation": {
-                "identifier": "BenchmarkHandle",
+                "identifier": "_cgo_panic",
                 "newPage": false,
-                "searchKey": "cgo.BenchmarkHandle",
+                "searchKey": "cgo._cgo_panic",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkHandle(b *testing.B)"
+                "value": "func _cgo_panic(a *struct{ cstr *byte })"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkHandle(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc _cgo_panic(a *struct{ cstr *byte })\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/cgo#_runtime_cgo_panic_internal",
+              "documentation": {
+                "identifier": "_runtime_cgo_panic_internal",
+                "newPage": false,
+                "searchKey": "cgo._runtime_cgo_panic_internal",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func _runtime_cgo_panic_internal(p *byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc _runtime_cgo_panic_internal(p *byte)\n```\n\n"
               },
               "children": null
             }

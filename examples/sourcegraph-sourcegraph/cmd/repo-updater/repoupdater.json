@@ -4,7 +4,9 @@
     "identifier": "repoupdater",
     "newPage": true,
     "searchKey": "cmd/repo-updater/repoupdater",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,34 +39,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/repo-updater/repoupdater#mockRepoLookup",
-              "documentation": {
-                "identifier": "mockRepoLookup",
-                "newPage": false,
-                "searchKey": "repoupdater.mockRepoLookup",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var mockRepoLookup"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar mockRepoLookup func(protocol.RepoLookupArgs) (*protocol.RepoLookupResult, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/repo-updater/repoupdater#dsn",
               "documentation": {
                 "identifier": "dsn",
                 "newPage": false,
                 "searchKey": "repoupdater.dsn",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -73,6 +57,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar dsn = flag.String(\"dsn\", \"\", \"Database connection string to use in integration tests\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/repo-updater/repoupdater#mockRepoLookup",
+              "documentation": {
+                "identifier": "mockRepoLookup",
+                "newPage": false,
+                "searchKey": "repoupdater.mockRepoLookup",
+                "tags": [
+                  "variable",
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var mockRepoLookup"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar mockRepoLookup func(protocol.RepoLookupArgs) (*protocol.RepoLookupResult, error)\n```\n\n"
               },
               "children": null
             }
@@ -87,7 +95,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -105,7 +115,9 @@
                 "identifier": "HandlerMetrics",
                 "newPage": false,
                 "searchKey": "repoupdater.HandlerMetrics",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -123,7 +135,9 @@
                       "identifier": "NewHandlerMetrics",
                       "newPage": false,
                       "searchKey": "repoupdater.NewHandlerMetrics",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -143,7 +157,9 @@
                       "identifier": "HandlerMetrics.MustRegister",
                       "newPage": false,
                       "searchKey": "repoupdater.HandlerMetrics.MustRegister",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -161,124 +177,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/repo-updater/repoupdater#observedHandler",
-              "documentation": {
-                "identifier": "observedHandler",
-                "newPage": false,
-                "searchKey": "repoupdater.observedHandler",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type observedHandler struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype observedHandler struct {\n\tnext    http.Handler\n\tlog     log15.Logger\n\tmetrics HandlerMetrics\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/repo-updater/repoupdater#observedHandler.ServeHTTP",
-                    "documentation": {
-                      "identifier": "observedHandler.ServeHTTP",
-                      "newPage": false,
-                      "searchKey": "repoupdater.observedHandler.ServeHTTP",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *observedHandler) ServeHTTP(w http.ResponseWriter, r *http.Request)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *observedHandler) ServeHTTP(w http.ResponseWriter, r *http.Request)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/repo-updater/repoupdater#responseRecorder",
-              "documentation": {
-                "identifier": "responseRecorder",
-                "newPage": false,
-                "searchKey": "repoupdater.responseRecorder",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type responseRecorder struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype responseRecorder struct {\n\thttp.ResponseWriter\n\tcode    int\n\twritten int64\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/repo-updater/repoupdater#responseRecorder.WriteHeader",
-                    "documentation": {
-                      "identifier": "responseRecorder.WriteHeader",
-                      "newPage": false,
-                      "searchKey": "repoupdater.responseRecorder.WriteHeader",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (w *responseRecorder) WriteHeader(code int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (w *responseRecorder) WriteHeader(code int)\n```\n\nWriteHeader may not be explicitly called, so care must be taken to initialize w.code to its default value of http.StatusOK. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/repo-updater/repoupdater#responseRecorder.Write",
-                    "documentation": {
-                      "identifier": "responseRecorder.Write",
-                      "newPage": false,
-                      "searchKey": "repoupdater.responseRecorder.Write",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (w *responseRecorder) Write(p []byte) (int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (w *responseRecorder) Write(p []byte) (int, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/repo-updater/repoupdater#Server",
               "documentation": {
                 "identifier": "Server",
                 "newPage": false,
                 "searchKey": "repoupdater.Server",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -296,7 +202,9 @@
                       "identifier": "Server.Handler",
                       "newPage": false,
                       "searchKey": "repoupdater.Server.Handler",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -311,78 +219,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/cmd/repo-updater/repoupdater#Server.handleRepoUpdateSchedulerInfo",
-                    "documentation": {
-                      "identifier": "Server.handleRepoUpdateSchedulerInfo",
-                      "newPage": false,
-                      "searchKey": "repoupdater.Server.handleRepoUpdateSchedulerInfo",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Server) handleRepoUpdateSchedulerInfo(w http.ResponseWriter, r *http.Request)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Server) handleRepoUpdateSchedulerInfo(w http.ResponseWriter, r *http.Request)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/repo-updater/repoupdater#Server.handleRepoLookup",
-                    "documentation": {
-                      "identifier": "Server.handleRepoLookup",
-                      "newPage": false,
-                      "searchKey": "repoupdater.Server.handleRepoLookup",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Server) handleRepoLookup(w http.ResponseWriter, r *http.Request)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Server) handleRepoLookup(w http.ResponseWriter, r *http.Request)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/repo-updater/repoupdater#Server.handleEnqueueRepoUpdate",
-                    "documentation": {
-                      "identifier": "Server.handleEnqueueRepoUpdate",
-                      "newPage": false,
-                      "searchKey": "repoupdater.Server.handleEnqueueRepoUpdate",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Server) handleEnqueueRepoUpdate(w http.ResponseWriter, r *http.Request)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Server) handleEnqueueRepoUpdate(w http.ResponseWriter, r *http.Request)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/cmd/repo-updater/repoupdater#Server.enqueueRepoUpdate",
                     "documentation": {
                       "identifier": "Server.enqueueRepoUpdate",
                       "newPage": false,
                       "searchKey": "repoupdater.Server.enqueueRepoUpdate",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -399,78 +242,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/cmd/repo-updater/repoupdater#Server.handleExternalServiceSync",
-                    "documentation": {
-                      "identifier": "Server.handleExternalServiceSync",
-                      "newPage": false,
-                      "searchKey": "repoupdater.Server.handleExternalServiceSync",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Server) handleExternalServiceSync(w http.ResponseWriter, r *http.Request)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Server) handleExternalServiceSync(w http.ResponseWriter, r *http.Request)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/repo-updater/repoupdater#Server.repoLookup",
-                    "documentation": {
-                      "identifier": "Server.repoLookup",
-                      "newPage": false,
-                      "searchKey": "repoupdater.Server.repoLookup",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Server) repoLookup(ctx context.Context, args protocol.RepoLookupArgs) (result *protocol.RepoLookupResult, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Server) repoLookup(ctx context.Context, args protocol.RepoLookupArgs) (result *protocol.RepoLookupResult, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/repo-updater/repoupdater#Server.remoteRepoSync",
-                    "documentation": {
-                      "identifier": "Server.remoteRepoSync",
-                      "newPage": false,
-                      "searchKey": "repoupdater.Server.remoteRepoSync",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Server) remoteRepoSync(ctx context.Context, codehost *extsvc.CodeHost, remoteName string) (*protocol.RepoLookupResult, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Server) remoteRepoSync(ctx context.Context, codehost *extsvc.CodeHost, remoteName string) (*protocol.RepoLookupResult, error)\n```\n\nremoteRepoSync is used by Sourcegraph.com to incrementally sync metadata for remoteName on codehost. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/cmd/repo-updater/repoupdater#Server.handleEnqueueChangesetSync",
                     "documentation": {
                       "identifier": "Server.handleEnqueueChangesetSync",
                       "newPage": false,
                       "searchKey": "repoupdater.Server.handleEnqueueChangesetSync",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -487,12 +265,105 @@
                 },
                 {
                   "node": {
+                    "pathID": "/cmd/repo-updater/repoupdater#Server.handleEnqueueRepoUpdate",
+                    "documentation": {
+                      "identifier": "Server.handleEnqueueRepoUpdate",
+                      "newPage": false,
+                      "searchKey": "repoupdater.Server.handleEnqueueRepoUpdate",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) handleEnqueueRepoUpdate(w http.ResponseWriter, r *http.Request)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) handleEnqueueRepoUpdate(w http.ResponseWriter, r *http.Request)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/repo-updater/repoupdater#Server.handleExternalServiceSync",
+                    "documentation": {
+                      "identifier": "Server.handleExternalServiceSync",
+                      "newPage": false,
+                      "searchKey": "repoupdater.Server.handleExternalServiceSync",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) handleExternalServiceSync(w http.ResponseWriter, r *http.Request)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) handleExternalServiceSync(w http.ResponseWriter, r *http.Request)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/repo-updater/repoupdater#Server.handleRepoLookup",
+                    "documentation": {
+                      "identifier": "Server.handleRepoLookup",
+                      "newPage": false,
+                      "searchKey": "repoupdater.Server.handleRepoLookup",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) handleRepoLookup(w http.ResponseWriter, r *http.Request)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) handleRepoLookup(w http.ResponseWriter, r *http.Request)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/repo-updater/repoupdater#Server.handleRepoUpdateSchedulerInfo",
+                    "documentation": {
+                      "identifier": "Server.handleRepoUpdateSchedulerInfo",
+                      "newPage": false,
+                      "searchKey": "repoupdater.Server.handleRepoUpdateSchedulerInfo",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) handleRepoUpdateSchedulerInfo(w http.ResponseWriter, r *http.Request)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) handleRepoUpdateSchedulerInfo(w http.ResponseWriter, r *http.Request)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/cmd/repo-updater/repoupdater#Server.handleSchedulePermsSync",
                     "documentation": {
                       "identifier": "Server.handleSchedulePermsSync",
                       "newPage": false,
                       "searchKey": "repoupdater.Server.handleSchedulePermsSync",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -503,6 +374,122 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (s *Server) handleSchedulePermsSync(w http.ResponseWriter, r *http.Request)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/repo-updater/repoupdater#Server.remoteRepoSync",
+                    "documentation": {
+                      "identifier": "Server.remoteRepoSync",
+                      "newPage": false,
+                      "searchKey": "repoupdater.Server.remoteRepoSync",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) remoteRepoSync(ctx context.Context, codehost *extsvc.CodeHost, remoteName string) (*protocol.RepoLookupResult, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) remoteRepoSync(ctx context.Context, codehost *extsvc.CodeHost, remoteName string) (*protocol.RepoLookupResult, error)\n```\n\nremoteRepoSync is used by Sourcegraph.com to incrementally sync metadata for remoteName on codehost. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/repo-updater/repoupdater#Server.repoLookup",
+                    "documentation": {
+                      "identifier": "Server.repoLookup",
+                      "newPage": false,
+                      "searchKey": "repoupdater.Server.repoLookup",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) repoLookup(ctx context.Context, args protocol.RepoLookupArgs) (result *protocol.RepoLookupResult, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) repoLookup(ctx context.Context, args protocol.RepoLookupArgs) (result *protocol.RepoLookupResult, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/repo-updater/repoupdater#fakePermsSyncer",
+              "documentation": {
+                "identifier": "fakePermsSyncer",
+                "newPage": false,
+                "searchKey": "repoupdater.fakePermsSyncer",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type fakePermsSyncer struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype fakePermsSyncer struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/repo-updater/repoupdater#fakePermsSyncer.ScheduleRepos",
+                    "documentation": {
+                      "identifier": "fakePermsSyncer.ScheduleRepos",
+                      "newPage": false,
+                      "searchKey": "repoupdater.fakePermsSyncer.ScheduleRepos",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*fakePermsSyncer) ScheduleRepos(ctx context.Context, repoIDs ...api.RepoID)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*fakePermsSyncer) ScheduleRepos(ctx context.Context, repoIDs ...api.RepoID)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/repo-updater/repoupdater#fakePermsSyncer.ScheduleUsers",
+                    "documentation": {
+                      "identifier": "fakePermsSyncer.ScheduleUsers",
+                      "newPage": false,
+                      "searchKey": "repoupdater.fakePermsSyncer.ScheduleUsers",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*fakePermsSyncer) ScheduleUsers(ctx context.Context, userIDs ...int32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*fakePermsSyncer) ScheduleUsers(ctx context.Context, userIDs ...int32)\n```\n\n"
                     },
                     "children": null
                   }
@@ -518,6 +505,7 @@
                 "newPage": false,
                 "searchKey": "repoupdater.fakeRepoSource",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -538,6 +526,7 @@
                       "newPage": false,
                       "searchKey": "repoupdater.fakeRepoSource.GetRepo",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -563,6 +552,7 @@
                 "newPage": false,
                 "searchKey": "repoupdater.fakeScheduler",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -577,34 +567,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/cmd/repo-updater/repoupdater#fakeScheduler.UpdateOnce",
-                    "documentation": {
-                      "identifier": "fakeScheduler.UpdateOnce",
-                      "newPage": false,
-                      "searchKey": "repoupdater.fakeScheduler.UpdateOnce",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *fakeScheduler) UpdateOnce(_ api.RepoID, _ api.RepoName)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *fakeScheduler) UpdateOnce(_ api.RepoID, _ api.RepoName)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/cmd/repo-updater/repoupdater#fakeScheduler.ScheduleInfo",
                     "documentation": {
                       "identifier": "fakeScheduler.ScheduleInfo",
                       "newPage": false,
                       "searchKey": "repoupdater.fakeScheduler.ScheduleInfo",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -618,70 +587,143 @@
                     },
                     "children": null
                   }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/repo-updater/repoupdater#fakeScheduler.UpdateOnce",
+                    "documentation": {
+                      "identifier": "fakeScheduler.UpdateOnce",
+                      "newPage": false,
+                      "searchKey": "repoupdater.fakeScheduler.UpdateOnce",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *fakeScheduler) UpdateOnce(_ api.RepoID, _ api.RepoName)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *fakeScheduler) UpdateOnce(_ api.RepoID, _ api.RepoName)\n```\n\n"
+                    },
+                    "children": null
+                  }
                 }
               ]
             }
           },
           {
             "node": {
-              "pathID": "/cmd/repo-updater/repoupdater#fakePermsSyncer",
+              "pathID": "/cmd/repo-updater/repoupdater#observedHandler",
               "documentation": {
-                "identifier": "fakePermsSyncer",
+                "identifier": "observedHandler",
                 "newPage": false,
-                "searchKey": "repoupdater.fakePermsSyncer",
+                "searchKey": "repoupdater.observedHandler",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type fakePermsSyncer struct{}"
+                "value": "type observedHandler struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype fakePermsSyncer struct{}\n```\n\n"
+                "value": "```Go\ntype observedHandler struct {\n\tnext    http.Handler\n\tlog     log15.Logger\n\tmetrics HandlerMetrics\n}\n```\n\n"
               },
               "children": [
                 {
                   "node": {
-                    "pathID": "/cmd/repo-updater/repoupdater#fakePermsSyncer.ScheduleUsers",
+                    "pathID": "/cmd/repo-updater/repoupdater#observedHandler.ServeHTTP",
                     "documentation": {
-                      "identifier": "fakePermsSyncer.ScheduleUsers",
+                      "identifier": "observedHandler.ServeHTTP",
                       "newPage": false,
-                      "searchKey": "repoupdater.fakePermsSyncer.ScheduleUsers",
+                      "searchKey": "repoupdater.observedHandler.ServeHTTP",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (*fakePermsSyncer) ScheduleUsers(ctx context.Context, userIDs ...int32)"
+                      "value": "func (h *observedHandler) ServeHTTP(w http.ResponseWriter, r *http.Request)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (*fakePermsSyncer) ScheduleUsers(ctx context.Context, userIDs ...int32)\n```\n\n"
+                      "value": "```Go\nfunc (h *observedHandler) ServeHTTP(w http.ResponseWriter, r *http.Request)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/repo-updater/repoupdater#responseRecorder",
+              "documentation": {
+                "identifier": "responseRecorder",
+                "newPage": false,
+                "searchKey": "repoupdater.responseRecorder",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type responseRecorder struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype responseRecorder struct {\n\thttp.ResponseWriter\n\tcode    int\n\twritten int64\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/repo-updater/repoupdater#responseRecorder.Write",
+                    "documentation": {
+                      "identifier": "responseRecorder.Write",
+                      "newPage": false,
+                      "searchKey": "repoupdater.responseRecorder.Write",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *responseRecorder) Write(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *responseRecorder) Write(p []byte) (int, error)\n```\n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/cmd/repo-updater/repoupdater#fakePermsSyncer.ScheduleRepos",
+                    "pathID": "/cmd/repo-updater/repoupdater#responseRecorder.WriteHeader",
                     "documentation": {
-                      "identifier": "fakePermsSyncer.ScheduleRepos",
+                      "identifier": "responseRecorder.WriteHeader",
                       "newPage": false,
-                      "searchKey": "repoupdater.fakePermsSyncer.ScheduleRepos",
+                      "searchKey": "repoupdater.responseRecorder.WriteHeader",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (*fakePermsSyncer) ScheduleRepos(ctx context.Context, repoIDs ...api.RepoID)"
+                      "value": "func (w *responseRecorder) WriteHeader(code int)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (*fakePermsSyncer) ScheduleRepos(ctx context.Context, repoIDs ...api.RepoID)\n```\n\n"
+                      "value": "```Go\nfunc (w *responseRecorder) WriteHeader(code int)\n```\n\nWriteHeader may not be explicitly called, so care must be taken to initialize w.code to its default value of http.StatusOK. \n\n"
                     },
                     "children": null
                   }
@@ -697,6 +739,7 @@
                 "newPage": false,
                 "searchKey": "repoupdater.testSource",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -711,34 +754,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/cmd/repo-updater/repoupdater#testSource.ListRepos",
-                    "documentation": {
-                      "identifier": "testSource.ListRepos",
-                      "newPage": false,
-                      "searchKey": "repoupdater.testSource.ListRepos",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t testSource) ListRepos(ctx context.Context, results chan repos.SourceResult)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t testSource) ListRepos(ctx context.Context, results chan repos.SourceResult)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/cmd/repo-updater/repoupdater#testSource.ExternalServices",
                     "documentation": {
                       "identifier": "testSource.ExternalServices",
                       "newPage": false,
                       "searchKey": "repoupdater.testSource.ExternalServices",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -755,22 +777,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/cmd/repo-updater/repoupdater#testSource.WithAuthenticator",
+                    "pathID": "/cmd/repo-updater/repoupdater#testSource.ListRepos",
                     "documentation": {
-                      "identifier": "testSource.WithAuthenticator",
+                      "identifier": "testSource.ListRepos",
                       "newPage": false,
-                      "searchKey": "repoupdater.testSource.WithAuthenticator",
+                      "searchKey": "repoupdater.testSource.ListRepos",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (t testSource) WithAuthenticator(a auth.Authenticator) (repos.Source, error)"
+                      "value": "func (t testSource) ListRepos(ctx context.Context, results chan repos.SourceResult)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (t testSource) WithAuthenticator(a auth.Authenticator) (repos.Source, error)\n```\n\n"
+                      "value": "```Go\nfunc (t testSource) ListRepos(ctx context.Context, results chan repos.SourceResult)\n```\n\n"
                     },
                     "children": null
                   }
@@ -783,6 +806,7 @@
                       "newPage": false,
                       "searchKey": "repoupdater.testSource.ValidateAuthenticator",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -793,6 +817,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (t testSource) ValidateAuthenticator(ctx context.Context) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/repo-updater/repoupdater#testSource.WithAuthenticator",
+                    "documentation": {
+                      "identifier": "testSource.WithAuthenticator",
+                      "newPage": false,
+                      "searchKey": "repoupdater.testSource.WithAuthenticator",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t testSource) WithAuthenticator(a auth.Authenticator) (repos.Source, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t testSource) WithAuthenticator(a auth.Authenticator) (repos.Source, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -810,7 +857,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -828,7 +877,9 @@
                 "identifier": "ObservedHandler",
                 "newPage": false,
                 "searchKey": "repoupdater.ObservedHandler",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -843,22 +894,120 @@
           },
           {
             "node": {
-              "pathID": "/cmd/repo-updater/repoupdater#respond",
+              "pathID": "/cmd/repo-updater/repoupdater#TestExternalServiceValidate_ValidatesToken",
               "documentation": {
-                "identifier": "respond",
+                "identifier": "TestExternalServiceValidate_ValidatesToken",
                 "newPage": false,
-                "searchKey": "repoupdater.respond",
+                "searchKey": "repoupdater.TestExternalServiceValidate_ValidatesToken",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func respond(w http.ResponseWriter, code int, v interface{})"
+                "value": "func TestExternalServiceValidate_ValidatesToken(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc respond(w http.ResponseWriter, code int, v interface{})\n```\n\nTODO(tsenart): Reuse this function in all handlers. \n\n"
+                "value": "```Go\nfunc TestExternalServiceValidate_ValidatesToken(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/repo-updater/repoupdater#TestIntegration",
+              "documentation": {
+                "identifier": "TestIntegration",
+                "newPage": false,
+                "searchKey": "repoupdater.TestIntegration",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIntegration(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIntegration(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/repo-updater/repoupdater#TestMain",
+              "documentation": {
+                "identifier": "TestMain",
+                "newPage": false,
+                "searchKey": "repoupdater.TestMain",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMain(m *testing.M)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/repo-updater/repoupdater#TestServer_handleRepoLookup",
+              "documentation": {
+                "identifier": "TestServer_handleRepoLookup",
+                "newPage": false,
+                "searchKey": "repoupdater.TestServer_handleRepoLookup",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestServer_handleRepoLookup(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestServer_handleRepoLookup(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/repo-updater/repoupdater#TestServer_handleSchedulePermsSync",
+              "documentation": {
+                "identifier": "TestServer_handleSchedulePermsSync",
+                "newPage": false,
+                "searchKey": "repoupdater.TestServer_handleSchedulePermsSync",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestServer_handleSchedulePermsSync(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestServer_handleSchedulePermsSync(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -871,6 +1020,7 @@
                 "newPage": false,
                 "searchKey": "repoupdater.externalServiceValidate",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -887,12 +1037,59 @@
           },
           {
             "node": {
+              "pathID": "/cmd/repo-updater/repoupdater#isTemporarilyUnavailable",
+              "documentation": {
+                "identifier": "isTemporarilyUnavailable",
+                "newPage": false,
+                "searchKey": "repoupdater.isTemporarilyUnavailable",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isTemporarilyUnavailable(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isTemporarilyUnavailable(err error) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/repo-updater/repoupdater#isUnauthorized",
+              "documentation": {
+                "identifier": "isUnauthorized",
+                "newPage": false,
+                "searchKey": "repoupdater.isUnauthorized",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isUnauthorized(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isUnauthorized(err error) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/repo-updater/repoupdater#newRepoInfo",
               "documentation": {
                 "identifier": "newRepoInfo",
                 "newPage": false,
                 "searchKey": "repoupdater.newRepoInfo",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -915,6 +1112,7 @@
                 "newPage": false,
                 "searchKey": "repoupdater.pathAppend",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -931,132 +1129,23 @@
           },
           {
             "node": {
-              "pathID": "/cmd/repo-updater/repoupdater#isUnauthorized",
+              "pathID": "/cmd/repo-updater/repoupdater#respond",
               "documentation": {
-                "identifier": "isUnauthorized",
+                "identifier": "respond",
                 "newPage": false,
-                "searchKey": "repoupdater.isUnauthorized",
+                "searchKey": "repoupdater.respond",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func isUnauthorized(err error) bool"
+                "value": "func respond(w http.ResponseWriter, code int, v interface{})"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc isUnauthorized(err error) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/repo-updater/repoupdater#isTemporarilyUnavailable",
-              "documentation": {
-                "identifier": "isTemporarilyUnavailable",
-                "newPage": false,
-                "searchKey": "repoupdater.isTemporarilyUnavailable",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func isTemporarilyUnavailable(err error) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc isTemporarilyUnavailable(err error) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/repo-updater/repoupdater#TestMain",
-              "documentation": {
-                "identifier": "TestMain",
-                "newPage": false,
-                "searchKey": "repoupdater.TestMain",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMain(m *testing.M)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/repo-updater/repoupdater#TestIntegration",
-              "documentation": {
-                "identifier": "TestIntegration",
-                "newPage": false,
-                "searchKey": "repoupdater.TestIntegration",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestIntegration(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestIntegration(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/repo-updater/repoupdater#TestServer_handleRepoLookup",
-              "documentation": {
-                "identifier": "TestServer_handleRepoLookup",
-                "newPage": false,
-                "searchKey": "repoupdater.TestServer_handleRepoLookup",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestServer_handleRepoLookup(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestServer_handleRepoLookup(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/repo-updater/repoupdater#testServerEnqueueRepoUpdate",
-              "documentation": {
-                "identifier": "testServerEnqueueRepoUpdate",
-                "newPage": false,
-                "searchKey": "repoupdater.testServerEnqueueRepoUpdate",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testServerEnqueueRepoUpdate(t *testing.T, store *repos.Store) func(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testServerEnqueueRepoUpdate(t *testing.T, store *repos.Store) func(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc respond(w http.ResponseWriter, code int, v interface{})\n```\n\nTODO(tsenart): Reuse this function in all handlers. \n\n"
               },
               "children": null
             }
@@ -1069,6 +1158,7 @@
                 "newPage": false,
                 "searchKey": "repoupdater.testRepoLookup",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1085,44 +1175,23 @@
           },
           {
             "node": {
-              "pathID": "/cmd/repo-updater/repoupdater#TestServer_handleSchedulePermsSync",
+              "pathID": "/cmd/repo-updater/repoupdater#testServerEnqueueRepoUpdate",
               "documentation": {
-                "identifier": "TestServer_handleSchedulePermsSync",
+                "identifier": "testServerEnqueueRepoUpdate",
                 "newPage": false,
-                "searchKey": "repoupdater.TestServer_handleSchedulePermsSync",
+                "searchKey": "repoupdater.testServerEnqueueRepoUpdate",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestServer_handleSchedulePermsSync(t *testing.T)"
+                "value": "func testServerEnqueueRepoUpdate(t *testing.T, store *repos.Store) func(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestServer_handleSchedulePermsSync(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/repo-updater/repoupdater#TestExternalServiceValidate_ValidatesToken",
-              "documentation": {
-                "identifier": "TestExternalServiceValidate_ValidatesToken",
-                "newPage": false,
-                "searchKey": "repoupdater.TestExternalServiceValidate_ValidatesToken",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestExternalServiceValidate_ValidatesToken(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestExternalServiceValidate_ValidatesToken(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc testServerEnqueueRepoUpdate(t *testing.T, store *repos.Store) func(t *testing.T)\n```\n\n"
               },
               "children": null
             }

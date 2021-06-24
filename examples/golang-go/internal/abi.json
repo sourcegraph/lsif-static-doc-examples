@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/abi",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,20 +41,23 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/abi#IntArgRegs",
+              "pathID": "/internal/abi#EffectiveFloatRegSize",
               "documentation": {
-                "identifier": "IntArgRegs",
+                "identifier": "EffectiveFloatRegSize",
                 "newPage": false,
-                "searchKey": "abi.IntArgRegs",
-                "tags": null
+                "searchKey": "abi.EffectiveFloatRegSize",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const IntArgRegs"
+                "value": "const EffectiveFloatRegSize"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst IntArgRegs = 0\n```\n\nIntArgRegs is the number of registers dedicated to passing integer argument values. Result registers are identical to argument registers, so this number is used for those too. \n\n"
+                "value": "```Go\nconst EffectiveFloatRegSize = 0\n```\n\nEffectiveFloatRegSize describes the width of floating point registers on the current platform from the ABI's perspective. \n\nSince Go only supports 32-bit and 64-bit floating point primitives, this number should be either 0, 4, or 8. 0 indicates no floating point registers for the ABI or that floating point values will be passed via the softfloat ABI. \n\nFor platforms that support larger floating point register widths, such as x87's 80-bit \"registers\" (not that we support x87 currently), use 8. \n\n"
               },
               "children": null
             }
@@ -64,7 +69,10 @@
                 "identifier": "FloatArgRegs",
                 "newPage": false,
                 "searchKey": "abi.FloatArgRegs",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -79,20 +87,23 @@
           },
           {
             "node": {
-              "pathID": "/internal/abi#EffectiveFloatRegSize",
+              "pathID": "/internal/abi#IntArgRegs",
               "documentation": {
-                "identifier": "EffectiveFloatRegSize",
+                "identifier": "IntArgRegs",
                 "newPage": false,
-                "searchKey": "abi.EffectiveFloatRegSize",
-                "tags": null
+                "searchKey": "abi.IntArgRegs",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const EffectiveFloatRegSize"
+                "value": "const IntArgRegs"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst EffectiveFloatRegSize = 0\n```\n\nEffectiveFloatRegSize describes the width of floating point registers on the current platform from the ABI's perspective. \n\nSince Go only supports 32-bit and 64-bit floating point primitives, this number should be either 0, 4, or 8. 0 indicates no floating point registers for the ABI or that floating point values will be passed via the softfloat ABI. \n\nFor platforms that support larger floating point register widths, such as x87's 80-bit \"registers\" (not that we support x87 currently), use 8. \n\n"
+                "value": "```Go\nconst IntArgRegs = 0\n```\n\nIntArgRegs is the number of registers dedicated to passing integer argument values. Result registers are identical to argument registers, so this number is used for those too. \n\n"
               },
               "children": null
             }
@@ -108,6 +119,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -128,6 +140,8 @@
                 "newPage": false,
                 "searchKey": "abi.FuncPCTestFnAddr",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -153,6 +167,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -167,32 +182,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/abi#RegArgs",
-              "documentation": {
-                "identifier": "RegArgs",
-                "newPage": false,
-                "searchKey": "abi.RegArgs",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RegArgs struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RegArgs struct {\n\tInts   [IntArgRegs]uintptr  // untyped integer registers\n\tFloats [FloatArgRegs]uint64 // untyped float registers\n\n\t// Ptrs is a space that duplicates Ints but with pointer type,\n\t// used to make pointers passed or returned  in registers\n\t// visible to the GC by making the type unsafe.Pointer.\n\tPtrs [IntArgRegs]unsafe.Pointer\n\n\t// ReturnIsPtr is a bitmap that indicates which registers\n\t// contain or will contain pointers on the return path from\n\t// a reflectcall. The i'th bit indicates whether the i'th\n\t// register contains or will contain a valid Go pointer.\n\tReturnIsPtr IntArgRegBitmap\n}\n```\n\nRegArgs is a struct that has space for each argument and return value register on the current architecture. \n\nAssembly code knows the layout of the first two fields of RegArgs. \n\nRegArgs also contains additional space to hold pointers when it may not be safe to keep them only in the integer register space otherwise. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/abi#IntArgRegBitmap",
               "documentation": {
                 "identifier": "IntArgRegBitmap",
                 "newPage": false,
                 "searchKey": "abi.IntArgRegBitmap",
-                "tags": null
+                "tags": [
+                  "array",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -205,32 +203,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/abi#IntArgRegBitmap.Set",
-                    "documentation": {
-                      "identifier": "IntArgRegBitmap.Set",
-                      "newPage": false,
-                      "searchKey": "abi.IntArgRegBitmap.Set",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (b *IntArgRegBitmap) Set(i int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (b *IntArgRegBitmap) Set(i int)\n```\n\nSet sets the i'th bit of the bitmap to 1. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/abi#IntArgRegBitmap.Get",
                     "documentation": {
                       "identifier": "IntArgRegBitmap.Get",
                       "newPage": false,
                       "searchKey": "abi.IntArgRegBitmap.Get",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -242,8 +222,52 @@
                     },
                     "children": null
                   }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/abi#IntArgRegBitmap.Set",
+                    "documentation": {
+                      "identifier": "IntArgRegBitmap.Set",
+                      "newPage": false,
+                      "searchKey": "abi.IntArgRegBitmap.Set",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *IntArgRegBitmap) Set(i int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *IntArgRegBitmap) Set(i int)\n```\n\nSet sets the i'th bit of the bitmap to 1. \n\n"
+                    },
+                    "children": null
+                  }
                 }
               ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/abi#RegArgs",
+              "documentation": {
+                "identifier": "RegArgs",
+                "newPage": false,
+                "searchKey": "abi.RegArgs",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RegArgs struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RegArgs struct {\n\tInts   [IntArgRegs]uintptr  // untyped integer registers\n\tFloats [FloatArgRegs]uint64 // untyped float registers\n\n\t// Ptrs is a space that duplicates Ints but with pointer type,\n\t// used to make pointers passed or returned  in registers\n\t// visible to the GC by making the type unsafe.Pointer.\n\tPtrs [IntArgRegs]unsafe.Pointer\n\n\t// ReturnIsPtr is a bitmap that indicates which registers\n\t// contain or will contain pointers on the return path from\n\t// a reflectcall. The i'th bit indicates whether the i'th\n\t// register contains or will contain a valid Go pointer.\n\tReturnIsPtr IntArgRegBitmap\n}\n```\n\nRegArgs is a struct that has space for each argument and return value register on the current architecture. \n\nAssembly code knows the layout of the first two fields of RegArgs. \n\nRegArgs also contains additional space to hold pointers when it may not be safe to keep them only in the integer register space otherwise. \n\n"
+              },
+              "children": null
             }
           }
         ]
@@ -257,6 +281,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -276,7 +301,9 @@
                 "identifier": "FuncPCABI0",
                 "newPage": false,
                 "searchKey": "abi.FuncPCABI0",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -296,7 +323,9 @@
                 "identifier": "FuncPCABIInternal",
                 "newPage": false,
                 "searchKey": "abi.FuncPCABIInternal",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -311,34 +340,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/abi#FuncPCTestFn",
-              "documentation": {
-                "identifier": "FuncPCTestFn",
-                "newPage": false,
-                "searchKey": "abi.FuncPCTestFn",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func FuncPCTestFn()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc FuncPCTestFn()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/abi#FuncPCTest",
               "documentation": {
                 "identifier": "FuncPCTest",
                 "newPage": false,
                 "searchKey": "abi.FuncPCTest",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -349,6 +357,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc FuncPCTest() uintptr\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/abi#FuncPCTestFn",
+              "documentation": {
+                "identifier": "FuncPCTestFn",
+                "newPage": false,
+                "searchKey": "abi.FuncPCTestFn",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func FuncPCTestFn()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc FuncPCTestFn()\n```\n\n"
               },
               "children": null
             }

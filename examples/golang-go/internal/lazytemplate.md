@@ -9,22 +9,22 @@ Package lazytemplate is a thin wrapper over text/template, allowing the use of g
 * [Types](#type)
     * [type Template struct](#Template)
         * [func New(name, text string) *Template](#New)
-        * [func (r *Template) tp() *template.Template](#Template.tp)
-        * [func (r *Template) build()](#Template.build)
         * [func (r *Template) Execute(w io.Writer, data interface{}) error](#Template.Execute)
+        * [func (r *Template) build()](#Template.build)
+        * [func (r *Template) tp() *template.Template](#Template.tp)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="inTest" href="#inTest">var inTest</a>
 
 ```
 searchKey: lazytemplate.inTest
-tags: [private]
+tags: [variable boolean private]
 ```
 
 ```Go
@@ -34,13 +34,14 @@ var inTest = len(os.Args) > 0 && strings.HasSuffix(strings.TrimSuffix(os.Args[0]
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Template" href="#Template">type Template struct</a>
 
 ```
 searchKey: lazytemplate.Template
+tags: [struct]
 ```
 
 ```Go
@@ -58,6 +59,7 @@ Template is a wrapper around text/template.Template, where the underlying templa
 
 ```
 searchKey: lazytemplate.New
+tags: [method]
 ```
 
 ```Go
@@ -66,35 +68,36 @@ func New(name, text string) *Template
 
 New creates a new lazy template, delaying the parsing work until it is first needed. If the code is being run as part of tests, the template parsing will happen immediately. 
 
-#### <a id="Template.tp" href="#Template.tp">func (r *Template) tp() *template.Template</a>
+#### <a id="Template.Execute" href="#Template.Execute">func (r *Template) Execute(w io.Writer, data interface{}) error</a>
 
 ```
-searchKey: lazytemplate.Template.tp
-tags: [private]
+searchKey: lazytemplate.Template.Execute
+tags: [method]
 ```
 
 ```Go
-func (r *Template) tp() *template.Template
+func (r *Template) Execute(w io.Writer, data interface{}) error
 ```
 
 #### <a id="Template.build" href="#Template.build">func (r *Template) build()</a>
 
 ```
 searchKey: lazytemplate.Template.build
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (r *Template) build()
 ```
 
-#### <a id="Template.Execute" href="#Template.Execute">func (r *Template) Execute(w io.Writer, data interface{}) error</a>
+#### <a id="Template.tp" href="#Template.tp">func (r *Template) tp() *template.Template</a>
 
 ```
-searchKey: lazytemplate.Template.Execute
+searchKey: lazytemplate.Template.tp
+tags: [function private]
 ```
 
 ```Go
-func (r *Template) Execute(w io.Writer, data interface{}) error
+func (r *Template) tp() *template.Template
 ```
 

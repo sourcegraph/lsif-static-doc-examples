@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/encryption/cache",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,9 @@
                 "identifier": "Key",
                 "newPage": false,
                 "searchKey": "cache.Key",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +66,9 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "cache.New",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,7 +88,9 @@
                       "identifier": "Key.Decrypt",
                       "newPage": false,
                       "searchKey": "cache.Key.Decrypt",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -106,6 +114,7 @@
                 "newPage": false,
                 "searchKey": "cache.testKey",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -126,6 +135,7 @@
                       "newPage": false,
                       "searchKey": "cache.testKey.Decrypt",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -154,6 +164,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -168,12 +179,37 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/encryption/cache#TestCacheKey",
+              "documentation": {
+                "identifier": "TestCacheKey",
+                "newPage": false,
+                "searchKey": "cache.TestCacheKey",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCacheKey(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCacheKey(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/encryption/cache#hash",
               "documentation": {
                 "identifier": "hash",
                 "newPage": false,
                 "searchKey": "cache.hash",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -184,28 +220,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc hash(v []byte) uint64\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/encryption/cache#TestCacheKey",
-              "documentation": {
-                "identifier": "TestCacheKey",
-                "newPage": false,
-                "searchKey": "cache.TestCacheKey",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCacheKey(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCacheKey(t *testing.T)\n```\n\n"
               },
               "children": null
             }

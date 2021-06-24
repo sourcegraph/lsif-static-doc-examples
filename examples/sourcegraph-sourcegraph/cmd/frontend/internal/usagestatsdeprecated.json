@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "cmd/frontend/internal/usagestatsdeprecated",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,110 +41,72 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#fSearchOccurred",
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#defaultDays",
               "documentation": {
-                "identifier": "fSearchOccurred",
+                "identifier": "defaultDays",
                 "newPage": false,
-                "searchKey": "usagestatsdeprecated.fSearchOccurred",
+                "searchKey": "usagestatsdeprecated.defaultDays",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const fSearchOccurred"
+                "value": "const defaultDays"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst fSearchOccurred = \"searchoccurred\"\n```\n\n"
+                "value": "```Go\nconst defaultDays = 14\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#fFindRefsOccurred",
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#defaultMonths",
               "documentation": {
-                "identifier": "fFindRefsOccurred",
+                "identifier": "defaultMonths",
                 "newPage": false,
-                "searchKey": "usagestatsdeprecated.fFindRefsOccurred",
+                "searchKey": "usagestatsdeprecated.defaultMonths",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const fFindRefsOccurred"
+                "value": "const defaultMonths"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst fFindRefsOccurred = \"findrefsoccurred\"\n```\n\n"
+                "value": "```Go\nconst defaultMonths = 3\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#fPageViews",
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#defaultWeeks",
               "documentation": {
-                "identifier": "fPageViews",
+                "identifier": "defaultWeeks",
                 "newPage": false,
-                "searchKey": "usagestatsdeprecated.fPageViews",
+                "searchKey": "usagestatsdeprecated.defaultWeeks",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const fPageViews"
+                "value": "const defaultWeeks"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst fPageViews = \"pageviews\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#fLastActive",
-              "documentation": {
-                "identifier": "fLastActive",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.fLastActive",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const fLastActive"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst fLastActive = \"lastactive\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#fSearchQueries",
-              "documentation": {
-                "identifier": "fSearchQueries",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.fSearchQueries",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const fSearchQueries"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst fSearchQueries = \"searchqueries\"\n```\n\n"
+                "value": "```Go\nconst defaultWeeks = 10\n```\n\n"
               },
               "children": null
             }
@@ -155,6 +119,8 @@
                 "newPage": false,
                 "searchKey": "usagestatsdeprecated.fCodeIntelActions",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -177,6 +143,8 @@
                 "newPage": false,
                 "searchKey": "usagestatsdeprecated.fFindRefsActions",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -193,12 +161,62 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#fFindRefsOccurred",
+              "documentation": {
+                "identifier": "fFindRefsOccurred",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.fFindRefsOccurred",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fFindRefsOccurred"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fFindRefsOccurred = \"findrefsoccurred\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#fLastActive",
+              "documentation": {
+                "identifier": "fLastActive",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.fLastActive",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fLastActive"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fLastActive = \"lastactive\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/usagestatsdeprecated#fLastActiveCodeHostIntegration",
               "documentation": {
                 "identifier": "fLastActiveCodeHostIntegration",
                 "newPage": false,
                 "searchKey": "usagestatsdeprecated.fLastActiveCodeHostIntegration",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -215,12 +233,86 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#fPageViews",
+              "documentation": {
+                "identifier": "fPageViews",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.fPageViews",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fPageViews"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fPageViews = \"pageviews\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#fSearchOccurred",
+              "documentation": {
+                "identifier": "fSearchOccurred",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.fSearchOccurred",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fSearchOccurred"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fSearchOccurred = \"searchoccurred\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#fSearchQueries",
+              "documentation": {
+                "identifier": "fSearchQueries",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.fSearchQueries",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fSearchQueries"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fSearchQueries = \"searchqueries\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/usagestatsdeprecated#fUsersActive",
               "documentation": {
                 "identifier": "fUsersActive",
                 "newPage": false,
                 "searchKey": "usagestatsdeprecated.fUsersActive",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -237,78 +329,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#defaultDays",
-              "documentation": {
-                "identifier": "defaultDays",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.defaultDays",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const defaultDays"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst defaultDays = 14\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#defaultWeeks",
-              "documentation": {
-                "identifier": "defaultWeeks",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.defaultWeeks",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const defaultWeeks"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst defaultWeeks = 10\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#defaultMonths",
-              "documentation": {
-                "identifier": "defaultMonths",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.defaultMonths",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const defaultMonths"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst defaultMonths = 3\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/usagestatsdeprecated#maxStorageDays",
               "documentation": {
                 "identifier": "maxStorageDays",
                 "newPage": false,
                 "searchKey": "usagestatsdeprecated.maxStorageDays",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -334,6 +362,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -348,44 +377,23 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#searchOccurred",
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#MockGetByUserID",
               "documentation": {
-                "identifier": "searchOccurred",
+                "identifier": "MockGetByUserID",
                 "newPage": false,
-                "searchKey": "usagestatsdeprecated.searchOccurred",
+                "searchKey": "usagestatsdeprecated.MockGetByUserID",
                 "tags": [
-                  "private"
+                  "variable",
+                  "function"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var searchOccurred"
+                "value": "var MockGetByUserID"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar searchOccurred = false\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#findRefsOccurred",
-              "documentation": {
-                "identifier": "findRefsOccurred",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.findRefsOccurred",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var findRefsOccurred"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar findRefsOccurred = false\n```\n\n"
+                "value": "```Go\nvar MockGetByUserID func(userID int32) (*types.UserUsageStatistics, error)\n```\n\n"
               },
               "children": null
             }
@@ -398,6 +406,8 @@
                 "newPage": false,
                 "searchKey": "usagestatsdeprecated.eventHandlers",
                 "tags": [
+                  "variable",
+                  "object",
                   "private"
                 ]
               },
@@ -414,88 +424,96 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#logSiteSearchOccurred",
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#findRefsOccurred",
               "documentation": {
-                "identifier": "logSiteSearchOccurred",
+                "identifier": "findRefsOccurred",
                 "newPage": false,
-                "searchKey": "usagestatsdeprecated.logSiteSearchOccurred",
+                "searchKey": "usagestatsdeprecated.findRefsOccurred",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var logSiteSearchOccurred"
+                "value": "var findRefsOccurred"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar logSiteSearchOccurred = ...\n```\n\nlogSiteSearchOccurred records that a search has occurred on the Sourcegraph instance. \n\n"
+                "value": "```Go\nvar findRefsOccurred = false\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#logSiteFindRefsOccurred",
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#gcOnce",
               "documentation": {
-                "identifier": "logSiteFindRefsOccurred",
+                "identifier": "gcOnce",
                 "newPage": false,
-                "searchKey": "usagestatsdeprecated.logSiteFindRefsOccurred",
+                "searchKey": "usagestatsdeprecated.gcOnce",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var logSiteFindRefsOccurred"
+                "value": "var gcOnce"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar logSiteFindRefsOccurred = ...\n```\n\nlogSiteFindRefsOccurred records that a search has occurred on the Sourcegraph instance. \n\n"
+                "value": "```Go\nvar gcOnce sync.Once // ensures we only have 1 redis gc goroutine\n\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#logSearchQuery",
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#keyPrefix",
               "documentation": {
-                "identifier": "logSearchQuery",
+                "identifier": "keyPrefix",
                 "newPage": false,
-                "searchKey": "usagestatsdeprecated.logSearchQuery",
+                "searchKey": "usagestatsdeprecated.keyPrefix",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var logSearchQuery"
+                "value": "var keyPrefix"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar logSearchQuery = ...\n```\n\nlogSearchQuery increments a user's search query count. \n\n"
+                "value": "```Go\nvar keyPrefix = \"user_activity:\"\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#logPageView",
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#logCodeHostIntegrationUsage",
               "documentation": {
-                "identifier": "logPageView",
+                "identifier": "logCodeHostIntegrationUsage",
                 "newPage": false,
-                "searchKey": "usagestatsdeprecated.logPageView",
+                "searchKey": "usagestatsdeprecated.logCodeHostIntegrationUsage",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var logPageView"
+                "value": "var logCodeHostIntegrationUsage"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar logPageView = ...\n```\n\nlogPageView increments a user's pageview count. \n\n"
+                "value": "```Go\nvar logCodeHostIntegrationUsage = ...\n```\n\nlogCodeHostIntegrationUsage logs the last time a user was active on a code host integration. \n\n"
               },
               "children": null
             }
@@ -508,6 +526,8 @@
                 "newPage": false,
                 "searchKey": "usagestatsdeprecated.logCodeIntelAction",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
@@ -530,6 +550,8 @@
                 "newPage": false,
                 "searchKey": "usagestatsdeprecated.logCodeIntelRefsAction",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
@@ -546,22 +568,96 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#logCodeHostIntegrationUsage",
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#logPageView",
               "documentation": {
-                "identifier": "logCodeHostIntegrationUsage",
+                "identifier": "logPageView",
                 "newPage": false,
-                "searchKey": "usagestatsdeprecated.logCodeHostIntegrationUsage",
+                "searchKey": "usagestatsdeprecated.logPageView",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var logCodeHostIntegrationUsage"
+                "value": "var logPageView"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar logCodeHostIntegrationUsage = ...\n```\n\nlogCodeHostIntegrationUsage logs the last time a user was active on a code host integration. \n\n"
+                "value": "```Go\nvar logPageView = ...\n```\n\nlogPageView increments a user's pageview count. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#logSearchQuery",
+              "documentation": {
+                "identifier": "logSearchQuery",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.logSearchQuery",
+                "tags": [
+                  "variable",
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var logSearchQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar logSearchQuery = ...\n```\n\nlogSearchQuery increments a user's search query count. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#logSiteFindRefsOccurred",
+              "documentation": {
+                "identifier": "logSiteFindRefsOccurred",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.logSiteFindRefsOccurred",
+                "tags": [
+                  "variable",
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var logSiteFindRefsOccurred"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar logSiteFindRefsOccurred = ...\n```\n\nlogSiteFindRefsOccurred records that a search has occurred on the Sourcegraph instance. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#logSiteSearchOccurred",
+              "documentation": {
+                "identifier": "logSiteSearchOccurred",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.logSiteSearchOccurred",
+                "tags": [
+                  "variable",
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var logSiteSearchOccurred"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar logSiteSearchOccurred = ...\n```\n\nlogSiteSearchOccurred records that a search has occurred on the Sourcegraph instance. \n\n"
               },
               "children": null
             }
@@ -574,6 +670,8 @@
                 "newPage": false,
                 "searchKey": "usagestatsdeprecated.logStageEvent",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
@@ -590,56 +688,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#keyPrefix",
-              "documentation": {
-                "identifier": "keyPrefix",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.keyPrefix",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var keyPrefix"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar keyPrefix = \"user_activity:\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#gcOnce",
-              "documentation": {
-                "identifier": "gcOnce",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.gcOnce",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var gcOnce"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar gcOnce sync.Once // ensures we only have 1 redis gc goroutine\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/usagestatsdeprecated#pool",
               "documentation": {
                 "identifier": "pool",
                 "newPage": false,
                 "searchKey": "usagestatsdeprecated.pool",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -656,12 +712,38 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#searchOccurred",
+              "documentation": {
+                "identifier": "searchOccurred",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.searchOccurred",
+                "tags": [
+                  "variable",
+                  "boolean",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var searchOccurred"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar searchOccurred = false\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/usagestatsdeprecated#timeNow",
               "documentation": {
                 "identifier": "timeNow",
                 "newPage": false,
                 "searchKey": "usagestatsdeprecated.timeNow",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
@@ -672,26 +754,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar timeNow = time.Now\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#MockGetByUserID",
-              "documentation": {
-                "identifier": "MockGetByUserID",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.MockGetByUserID",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var MockGetByUserID"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar MockGetByUserID func(userID int32) (*types.UserUsageStatistics, error)\n```\n\n"
               },
               "children": null
             }
@@ -707,6 +769,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -721,24 +784,48 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#eventHandler",
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#ActiveUsers",
               "documentation": {
-                "identifier": "eventHandler",
+                "identifier": "ActiveUsers",
                 "newPage": false,
-                "searchKey": "usagestatsdeprecated.eventHandler",
+                "searchKey": "usagestatsdeprecated.ActiveUsers",
                 "tags": [
-                  "private"
+                  "struct"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type eventHandler func(userID int32, event string, isAuthenticated bool) error"
+                "value": "type ActiveUsers struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype eventHandler = func(userID int32, event string, isAuthenticated bool) error\n```\n\nCustom event handlers \n\n"
+                "value": "```Go\ntype ActiveUsers struct {\n\tAll              []string\n\tRegistered       []string\n\tAnonymous        []string\n\tUsedIntegrations []string\n}\n```\n\nActiveUsers contains sets of unique user IDs. \n\n"
               },
-              "children": null
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/usagestatsdeprecated#uniques",
+                    "documentation": {
+                      "identifier": "uniques",
+                      "newPage": false,
+                      "searchKey": "usagestatsdeprecated.uniques",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func uniques(dayStart time.Time, period *UsageDuration) (*ActiveUsers, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc uniques(dayStart time.Time, period *UsageDuration) (*ActiveUsers, error)\n```\n\nuniques calculates the list of unique users starting at 00:00:00 on a given UTC date over a period of time. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
             }
           },
           {
@@ -748,7 +835,9 @@
                 "identifier": "SiteUsageStatisticsOptions",
                 "newPage": false,
                 "searchKey": "usagestatsdeprecated.SiteUsageStatisticsOptions",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -768,7 +857,9 @@
                 "identifier": "UsageDuration",
                 "newPage": false,
                 "searchKey": "usagestatsdeprecated.UsageDuration",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -783,45 +874,25 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#ActiveUsers",
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#eventHandler",
               "documentation": {
-                "identifier": "ActiveUsers",
+                "identifier": "eventHandler",
                 "newPage": false,
-                "searchKey": "usagestatsdeprecated.ActiveUsers",
-                "tags": null
+                "searchKey": "usagestatsdeprecated.eventHandler",
+                "tags": [
+                  "function",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type ActiveUsers struct"
+                "value": "type eventHandler func(userID int32, event string, isAuthenticated bool) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype ActiveUsers struct {\n\tAll              []string\n\tRegistered       []string\n\tAnonymous        []string\n\tUsedIntegrations []string\n}\n```\n\nActiveUsers contains sets of unique user IDs. \n\n"
+                "value": "```Go\ntype eventHandler = func(userID int32, event string, isAuthenticated bool) error\n```\n\nCustom event handlers \n\n"
               },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/internal/usagestatsdeprecated#uniques",
-                    "documentation": {
-                      "identifier": "uniques",
-                      "newPage": false,
-                      "searchKey": "usagestatsdeprecated.uniques",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func uniques(dayStart time.Time, period *UsageDuration) (*ActiveUsers, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc uniques(dayStart time.Time, period *UsageDuration) (*ActiveUsers, error)\n```\n\nuniques calculates the list of unique users starting at 00:00:00 on a given UTC date over a period of time. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
+              "children": null
             }
           }
         ]
@@ -835,6 +906,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -849,52 +921,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#LogActivity",
-              "documentation": {
-                "identifier": "LogActivity",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.LogActivity",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func LogActivity(isAuthenticated bool, userID int32, userCookieID, event string) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc LogActivity(isAuthenticated bool, userID int32, userCookieID, event string) error\n```\n\nLogActivity logs any user activity (page view, integration usage, etc) to their \"last active\" time, and adds their unique ID to the set of active users \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#LogEvent",
-              "documentation": {
-                "identifier": "LogEvent",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.LogEvent",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func LogEvent(ctx context.Context, db dbutil.DB, name, url string, userID int32, userCookieID, source string, argument json.RawMessage, featureFlags featureflag.FlagSet) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc LogEvent(ctx context.Context, db dbutil.DB, name, url string, userID int32, userCookieID, source string, argument json.RawMessage, featureFlags featureflag.FlagSet) error\n```\n\nLogEvent logs users events. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/usagestatsdeprecated#GetByUserID",
               "documentation": {
                 "identifier": "GetByUserID",
                 "newPage": false,
                 "searchKey": "usagestatsdeprecated.GetByUserID",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -914,7 +948,9 @@
                 "identifier": "GetSiteUsageStatistics",
                 "newPage": false,
                 "searchKey": "usagestatsdeprecated.GetSiteUsageStatistics",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -934,7 +970,9 @@
                 "identifier": "GetUsersActiveTodayCount",
                 "newPage": false,
                 "searchKey": "usagestatsdeprecated.GetUsersActiveTodayCount",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -949,22 +987,212 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#uniquesCount",
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#LogActivity",
               "documentation": {
-                "identifier": "uniquesCount",
+                "identifier": "LogActivity",
                 "newPage": false,
-                "searchKey": "usagestatsdeprecated.uniquesCount",
+                "searchKey": "usagestatsdeprecated.LogActivity",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func uniquesCount(dayStart time.Time, period *UsageDuration) (*types.SiteActivityPeriod, error)"
+                "value": "func LogActivity(isAuthenticated bool, userID int32, userCookieID, event string) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc uniquesCount(dayStart time.Time, period *UsageDuration) (*types.SiteActivityPeriod, error)\n```\n\nuniquesCount calculates the number of unique users starting at 00:00:00 on a given UTC date over a period of time (years, months, and days). \n\n"
+                "value": "```Go\nfunc LogActivity(isAuthenticated bool, userID int32, userCookieID, event string) error\n```\n\nLogActivity logs any user activity (page view, integration usage, etc) to their \"last active\" time, and adds their unique ID to the set of active users \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#LogEvent",
+              "documentation": {
+                "identifier": "LogEvent",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.LogEvent",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func LogEvent(ctx context.Context, db dbutil.DB, name, url string, userID int32, userCookieID, source string, argument json.RawMessage, featureFlags featureflag.FlagSet) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc LogEvent(ctx context.Context, db dbutil.DB, name, url string, userID int32, userCookieID, source string, argument json.RawMessage, featureFlags featureflag.FlagSet) error\n```\n\nLogEvent logs users events. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#TestUserUsageStatistics_DAUs_WAUs_MAUs",
+              "documentation": {
+                "identifier": "TestUserUsageStatistics_DAUs_WAUs_MAUs",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.TestUserUsageStatistics_DAUs_WAUs_MAUs",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUserUsageStatistics_DAUs_WAUs_MAUs(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUserUsageStatistics_DAUs_WAUs_MAUs(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#TestUserUsageStatistics_LogCodeHostIntegrationUsage",
+              "documentation": {
+                "identifier": "TestUserUsageStatistics_LogCodeHostIntegrationUsage",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.TestUserUsageStatistics_LogCodeHostIntegrationUsage",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUserUsageStatistics_LogCodeHostIntegrationUsage(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUserUsageStatistics_LogCodeHostIntegrationUsage(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#TestUserUsageStatistics_LogCodeIntelAction",
+              "documentation": {
+                "identifier": "TestUserUsageStatistics_LogCodeIntelAction",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.TestUserUsageStatistics_LogCodeIntelAction",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUserUsageStatistics_LogCodeIntelAction(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUserUsageStatistics_LogCodeIntelAction(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#TestUserUsageStatistics_LogPageView",
+              "documentation": {
+                "identifier": "TestUserUsageStatistics_LogPageView",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.TestUserUsageStatistics_LogPageView",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUserUsageStatistics_LogPageView(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUserUsageStatistics_LogPageView(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#TestUserUsageStatistics_LogSearchQuery",
+              "documentation": {
+                "identifier": "TestUserUsageStatistics_LogSearchQuery",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.TestUserUsageStatistics_LogSearchQuery",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUserUsageStatistics_LogSearchQuery(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUserUsageStatistics_LogSearchQuery(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#TestUserUsageStatistics_None",
+              "documentation": {
+                "identifier": "TestUserUsageStatistics_None",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.TestUserUsageStatistics_None",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUserUsageStatistics_None(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUserUsageStatistics_None(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#TestUserUsageStatistics_getUsersActiveToday",
+              "documentation": {
+                "identifier": "TestUserUsageStatistics_getUsersActiveToday",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.TestUserUsageStatistics_getUsersActiveToday",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUserUsageStatistics_getUsersActiveToday(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUserUsageStatistics_getUsersActiveToday(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -977,6 +1205,7 @@
                 "newPage": false,
                 "searchKey": "usagestatsdeprecated.daus",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -993,56 +1222,13 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#waus",
-              "documentation": {
-                "identifier": "waus",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.waus",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func waus(weekPeriods int) ([]*types.SiteActivityPeriod, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc waus(weekPeriods int) ([]*types.SiteActivityPeriod, error)\n```\n\nwaus returns a count of daily active users for the last weeksCount calendar weeks (including the current, partial week). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#maus",
-              "documentation": {
-                "identifier": "maus",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.maus",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func maus(monthPeriods int) ([]*types.SiteActivityPeriod, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc maus(monthPeriods int) ([]*types.SiteActivityPeriod, error)\n```\n\nmaus returns a count of daily active users for the last monthsCount calendar months (including the current, partial month). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/usagestatsdeprecated#gc",
               "documentation": {
                 "identifier": "gc",
                 "newPage": false,
                 "searchKey": "usagestatsdeprecated.gc",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1059,12 +1245,59 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#incrementUserCounter",
+              "documentation": {
+                "identifier": "incrementUserCounter",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.incrementUserCounter",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func incrementUserCounter(userID int32, isAuthenticated bool, counterKey string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc incrementUserCounter(userID int32, isAuthenticated bool, counterKey string) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#init.usage_stats_test.go",
+              "documentation": {
+                "identifier": "init.usage_stats_test.go",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/usagestatsdeprecated#keyFromDate",
               "documentation": {
                 "identifier": "keyFromDate",
                 "newPage": false,
                 "searchKey": "usagestatsdeprecated.keyFromDate",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1081,12 +1314,289 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#keyFromStage",
+              "documentation": {
+                "identifier": "keyFromStage",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.keyFromStage",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func keyFromStage(stage string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc keyFromStage(stage string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#keys",
+              "documentation": {
+                "identifier": "keys",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.keys",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func keys(m map[string]bool) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc keys(m map[string]bool) []string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#maus",
+              "documentation": {
+                "identifier": "maus",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.maus",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func maus(monthPeriods int) ([]*types.SiteActivityPeriod, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc maus(monthPeriods int) ([]*types.SiteActivityPeriod, error)\n```\n\nmaus returns a count of daily active users for the last monthsCount calendar months (including the current, partial month). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#minIntOrZero",
+              "documentation": {
+                "identifier": "minIntOrZero",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.minIntOrZero",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func minIntOrZero(a, b int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc minIntOrZero(a, b int) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#mockTimeNow",
+              "documentation": {
+                "identifier": "mockTimeNow",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.mockTimeNow",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mockTimeNow(t time.Time)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mockTimeNow(t time.Time)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#setupForTest",
+              "documentation": {
+                "identifier": "setupForTest",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.setupForTest",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func setupForTest(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc setupForTest(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#siteActivityCompare",
+              "documentation": {
+                "identifier": "siteActivityCompare",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.siteActivityCompare",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func siteActivityCompare(a, b *types.SiteUsageStatistics) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc siteActivityCompare(a, b *types.SiteUsageStatistics) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#siteActivityPeriodCompare",
+              "documentation": {
+                "identifier": "siteActivityPeriodCompare",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.siteActivityPeriodCompare",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func siteActivityPeriodCompare(label string, a, b *types.SiteActivityPeriod) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc siteActivityPeriodCompare(label string, a, b *types.SiteActivityPeriod) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#siteActivityPeriodSliceCompare",
+              "documentation": {
+                "identifier": "siteActivityPeriodSliceCompare",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.siteActivityPeriodSliceCompare",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func siteActivityPeriodSliceCompare(label string, a, b []*types.SiteActivityPeriod) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc siteActivityPeriodSliceCompare(label string, a, b []*types.SiteActivityPeriod) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#startOfMonth",
+              "documentation": {
+                "identifier": "startOfMonth",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.startOfMonth",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func startOfMonth(monthsAgo int) time.Time"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc startOfMonth(monthsAgo int) time.Time\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#startOfWeek",
+              "documentation": {
+                "identifier": "startOfWeek",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.startOfWeek",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func startOfWeek(weeksAgo int) time.Time"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc startOfWeek(weeksAgo int) time.Time\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#uniquesCount",
+              "documentation": {
+                "identifier": "uniquesCount",
+                "newPage": false,
+                "searchKey": "usagestatsdeprecated.uniquesCount",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func uniquesCount(dayStart time.Time, period *UsageDuration) (*types.SiteActivityPeriod, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc uniquesCount(dayStart time.Time, period *UsageDuration) (*types.SiteActivityPeriod, error)\n```\n\nuniquesCount calculates the number of unique users starting at 00:00:00 on a given UTC date over a period of time (years, months, and days). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/usagestatsdeprecated#usersActiveKeyFromDate",
               "documentation": {
                 "identifier": "usersActiveKeyFromDate",
                 "newPage": false,
                 "searchKey": "usagestatsdeprecated.usersActiveKeyFromDate",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1109,6 +1619,7 @@
                 "newPage": false,
                 "searchKey": "usagestatsdeprecated.usersActiveKeyFromDaysAgo",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1125,418 +1636,23 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#startOfWeek",
+              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#waus",
               "documentation": {
-                "identifier": "startOfWeek",
+                "identifier": "waus",
                 "newPage": false,
-                "searchKey": "usagestatsdeprecated.startOfWeek",
+                "searchKey": "usagestatsdeprecated.waus",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func startOfWeek(weeksAgo int) time.Time"
+                "value": "func waus(weekPeriods int) ([]*types.SiteActivityPeriod, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc startOfWeek(weeksAgo int) time.Time\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#startOfMonth",
-              "documentation": {
-                "identifier": "startOfMonth",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.startOfMonth",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func startOfMonth(monthsAgo int) time.Time"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc startOfMonth(monthsAgo int) time.Time\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#keys",
-              "documentation": {
-                "identifier": "keys",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.keys",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func keys(m map[string]bool) []string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc keys(m map[string]bool) []string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#minIntOrZero",
-              "documentation": {
-                "identifier": "minIntOrZero",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.minIntOrZero",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func minIntOrZero(a, b int) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc minIntOrZero(a, b int) int\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#incrementUserCounter",
-              "documentation": {
-                "identifier": "incrementUserCounter",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.incrementUserCounter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func incrementUserCounter(userID int32, isAuthenticated bool, counterKey string) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc incrementUserCounter(userID int32, isAuthenticated bool, counterKey string) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#keyFromStage",
-              "documentation": {
-                "identifier": "keyFromStage",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.keyFromStage",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func keyFromStage(stage string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc keyFromStage(stage string) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#init.usage_stats_test.go",
-              "documentation": {
-                "identifier": "init.usage_stats_test.go",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#TestUserUsageStatistics_None",
-              "documentation": {
-                "identifier": "TestUserUsageStatistics_None",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.TestUserUsageStatistics_None",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUserUsageStatistics_None(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUserUsageStatistics_None(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#TestUserUsageStatistics_LogPageView",
-              "documentation": {
-                "identifier": "TestUserUsageStatistics_LogPageView",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.TestUserUsageStatistics_LogPageView",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUserUsageStatistics_LogPageView(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUserUsageStatistics_LogPageView(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#TestUserUsageStatistics_LogSearchQuery",
-              "documentation": {
-                "identifier": "TestUserUsageStatistics_LogSearchQuery",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.TestUserUsageStatistics_LogSearchQuery",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUserUsageStatistics_LogSearchQuery(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUserUsageStatistics_LogSearchQuery(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#TestUserUsageStatistics_LogCodeIntelAction",
-              "documentation": {
-                "identifier": "TestUserUsageStatistics_LogCodeIntelAction",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.TestUserUsageStatistics_LogCodeIntelAction",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUserUsageStatistics_LogCodeIntelAction(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUserUsageStatistics_LogCodeIntelAction(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#TestUserUsageStatistics_LogCodeHostIntegrationUsage",
-              "documentation": {
-                "identifier": "TestUserUsageStatistics_LogCodeHostIntegrationUsage",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.TestUserUsageStatistics_LogCodeHostIntegrationUsage",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUserUsageStatistics_LogCodeHostIntegrationUsage(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUserUsageStatistics_LogCodeHostIntegrationUsage(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#TestUserUsageStatistics_getUsersActiveToday",
-              "documentation": {
-                "identifier": "TestUserUsageStatistics_getUsersActiveToday",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.TestUserUsageStatistics_getUsersActiveToday",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUserUsageStatistics_getUsersActiveToday(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUserUsageStatistics_getUsersActiveToday(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#TestUserUsageStatistics_DAUs_WAUs_MAUs",
-              "documentation": {
-                "identifier": "TestUserUsageStatistics_DAUs_WAUs_MAUs",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.TestUserUsageStatistics_DAUs_WAUs_MAUs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestUserUsageStatistics_DAUs_WAUs_MAUs(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestUserUsageStatistics_DAUs_WAUs_MAUs(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#setupForTest",
-              "documentation": {
-                "identifier": "setupForTest",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.setupForTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func setupForTest(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc setupForTest(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#mockTimeNow",
-              "documentation": {
-                "identifier": "mockTimeNow",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.mockTimeNow",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func mockTimeNow(t time.Time)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc mockTimeNow(t time.Time)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#siteActivityCompare",
-              "documentation": {
-                "identifier": "siteActivityCompare",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.siteActivityCompare",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func siteActivityCompare(a, b *types.SiteUsageStatistics) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc siteActivityCompare(a, b *types.SiteUsageStatistics) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#siteActivityPeriodSliceCompare",
-              "documentation": {
-                "identifier": "siteActivityPeriodSliceCompare",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.siteActivityPeriodSliceCompare",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func siteActivityPeriodSliceCompare(label string, a, b []*types.SiteActivityPeriod) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc siteActivityPeriodSliceCompare(label string, a, b []*types.SiteActivityPeriod) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/usagestatsdeprecated#siteActivityPeriodCompare",
-              "documentation": {
-                "identifier": "siteActivityPeriodCompare",
-                "newPage": false,
-                "searchKey": "usagestatsdeprecated.siteActivityPeriodCompare",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func siteActivityPeriodCompare(label string, a, b *types.SiteActivityPeriod) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc siteActivityPeriodCompare(label string, a, b *types.SiteActivityPeriod) error\n```\n\n"
+                "value": "```Go\nfunc waus(weekPeriods int) ([]*types.SiteActivityPeriod, error)\n```\n\nwaus returns a count of daily active users for the last weeksCount calendar weeks (including the current, partial week). \n\n"
               },
               "children": null
             }

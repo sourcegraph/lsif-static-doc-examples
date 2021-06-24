@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "unicode/utf8_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,66 +41,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/unicode/utf8_test#utf8map",
+              "pathID": "/unicode/utf8_test#boolSink",
               "documentation": {
-                "identifier": "utf8map",
+                "identifier": "boolSink",
                 "newPage": false,
-                "searchKey": "utf8_test.utf8map",
+                "searchKey": "utf8_test.boolSink",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var utf8map"
+                "value": "var boolSink"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar utf8map = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf8_test#surrogateMap",
-              "documentation": {
-                "identifier": "surrogateMap",
-                "newPage": false,
-                "searchKey": "utf8_test.surrogateMap",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var surrogateMap"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar surrogateMap = []Utf8Map{\n\t{0xd800, \"\\xed\\xa0\\x80\"},\n\t{0xdfff, \"\\xed\\xbf\\xbf\"},\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf8_test#testStrings",
-              "documentation": {
-                "identifier": "testStrings",
-                "newPage": false,
-                "searchKey": "utf8_test.testStrings",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var testStrings"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar testStrings = ...\n```\n\n"
+                "value": "```Go\nvar boolSink bool\n```\n\nboolSink is used to reference the return value of benchmarked functions to avoid dead code elimination. \n\n"
               },
               "children": null
             }
@@ -111,6 +71,9 @@
                 "newPage": false,
                 "searchKey": "utf8_test.invalidSequenceTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
@@ -133,6 +96,9 @@
                 "newPage": false,
                 "searchKey": "utf8_test.runecounttests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -155,6 +121,9 @@
                 "newPage": false,
                 "searchKey": "utf8_test.runelentests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -171,12 +140,90 @@
           },
           {
             "node": {
+              "pathID": "/unicode/utf8_test#surrogateMap",
+              "documentation": {
+                "identifier": "surrogateMap",
+                "newPage": false,
+                "searchKey": "utf8_test.surrogateMap",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var surrogateMap"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar surrogateMap = []Utf8Map{\n\t{0xd800, \"\\xed\\xa0\\x80\"},\n\t{0xdfff, \"\\xed\\xbf\\xbf\"},\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf8_test#testStrings",
+              "documentation": {
+                "identifier": "testStrings",
+                "newPage": false,
+                "searchKey": "utf8_test.testStrings",
+                "tags": [
+                  "variable",
+                  "array",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testStrings"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testStrings = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf8_test#utf8map",
+              "documentation": {
+                "identifier": "utf8map",
+                "newPage": false,
+                "searchKey": "utf8_test.utf8map",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var utf8map"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar utf8map = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/unicode/utf8_test#validTests",
               "documentation": {
                 "identifier": "validTests",
                 "newPage": false,
                 "searchKey": "utf8_test.validTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -199,6 +246,9 @@
                 "newPage": false,
                 "searchKey": "utf8_test.validrunetests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -209,28 +259,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar validrunetests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf8_test#boolSink",
-              "documentation": {
-                "identifier": "boolSink",
-                "newPage": false,
-                "searchKey": "utf8_test.boolSink",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var boolSink"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar boolSink bool\n```\n\nboolSink is used to reference the return value of benchmarked functions to avoid dead code elimination. \n\n"
               },
               "children": null
             }
@@ -246,6 +274,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -260,34 +289,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/unicode/utf8_test#Utf8Map",
-              "documentation": {
-                "identifier": "Utf8Map",
-                "newPage": false,
-                "searchKey": "utf8_test.Utf8Map",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Utf8Map struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Utf8Map struct {\n\tr   rune\n\tstr string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/unicode/utf8_test#RuneCountTest",
               "documentation": {
                 "identifier": "RuneCountTest",
                 "newPage": false,
                 "searchKey": "utf8_test.RuneCountTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -310,6 +318,7 @@
                 "newPage": false,
                 "searchKey": "utf8_test.RuneLenTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -326,22 +335,23 @@
           },
           {
             "node": {
-              "pathID": "/unicode/utf8_test#ValidTest",
+              "pathID": "/unicode/utf8_test#Utf8Map",
               "documentation": {
-                "identifier": "ValidTest",
+                "identifier": "Utf8Map",
                 "newPage": false,
-                "searchKey": "utf8_test.ValidTest",
+                "searchKey": "utf8_test.Utf8Map",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type ValidTest struct"
+                "value": "type Utf8Map struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype ValidTest struct {\n\tin  string\n\tout bool\n}\n```\n\n"
+                "value": "```Go\ntype Utf8Map struct {\n\tr   rune\n\tstr string\n}\n```\n\n"
               },
               "children": null
             }
@@ -354,6 +364,7 @@
                 "newPage": false,
                 "searchKey": "utf8_test.ValidRuneTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -364,6 +375,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\ntype ValidRuneTest struct {\n\tr  rune\n\tok bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf8_test#ValidTest",
+              "documentation": {
+                "identifier": "ValidTest",
+                "newPage": false,
+                "searchKey": "utf8_test.ValidTest",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ValidTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ValidTest struct {\n\tin  string\n\tout bool\n}\n```\n\n"
               },
               "children": null
             }
@@ -379,6 +413,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -393,12 +428,325 @@
         "children": [
           {
             "node": {
+              "pathID": "/unicode/utf8_test#BenchmarkDecodeASCIIRune",
+              "documentation": {
+                "identifier": "BenchmarkDecodeASCIIRune",
+                "newPage": false,
+                "searchKey": "utf8_test.BenchmarkDecodeASCIIRune",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkDecodeASCIIRune(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkDecodeASCIIRune(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf8_test#BenchmarkDecodeJapaneseRune",
+              "documentation": {
+                "identifier": "BenchmarkDecodeJapaneseRune",
+                "newPage": false,
+                "searchKey": "utf8_test.BenchmarkDecodeJapaneseRune",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkDecodeJapaneseRune(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkDecodeJapaneseRune(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf8_test#BenchmarkEncodeASCIIRune",
+              "documentation": {
+                "identifier": "BenchmarkEncodeASCIIRune",
+                "newPage": false,
+                "searchKey": "utf8_test.BenchmarkEncodeASCIIRune",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEncodeASCIIRune(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEncodeASCIIRune(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf8_test#BenchmarkEncodeJapaneseRune",
+              "documentation": {
+                "identifier": "BenchmarkEncodeJapaneseRune",
+                "newPage": false,
+                "searchKey": "utf8_test.BenchmarkEncodeJapaneseRune",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEncodeJapaneseRune(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEncodeJapaneseRune(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf8_test#BenchmarkFullRune",
+              "documentation": {
+                "identifier": "BenchmarkFullRune",
+                "newPage": false,
+                "searchKey": "utf8_test.BenchmarkFullRune",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkFullRune(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkFullRune(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf8_test#BenchmarkRuneCountInStringTenASCIIChars",
+              "documentation": {
+                "identifier": "BenchmarkRuneCountInStringTenASCIIChars",
+                "newPage": false,
+                "searchKey": "utf8_test.BenchmarkRuneCountInStringTenASCIIChars",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkRuneCountInStringTenASCIIChars(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkRuneCountInStringTenASCIIChars(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf8_test#BenchmarkRuneCountInStringTenJapaneseChars",
+              "documentation": {
+                "identifier": "BenchmarkRuneCountInStringTenJapaneseChars",
+                "newPage": false,
+                "searchKey": "utf8_test.BenchmarkRuneCountInStringTenJapaneseChars",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkRuneCountInStringTenJapaneseChars(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkRuneCountInStringTenJapaneseChars(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf8_test#BenchmarkRuneCountTenASCIIChars",
+              "documentation": {
+                "identifier": "BenchmarkRuneCountTenASCIIChars",
+                "newPage": false,
+                "searchKey": "utf8_test.BenchmarkRuneCountTenASCIIChars",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkRuneCountTenASCIIChars(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkRuneCountTenASCIIChars(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf8_test#BenchmarkRuneCountTenJapaneseChars",
+              "documentation": {
+                "identifier": "BenchmarkRuneCountTenJapaneseChars",
+                "newPage": false,
+                "searchKey": "utf8_test.BenchmarkRuneCountTenJapaneseChars",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkRuneCountTenJapaneseChars(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkRuneCountTenJapaneseChars(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf8_test#BenchmarkValidStringTenASCIIChars",
+              "documentation": {
+                "identifier": "BenchmarkValidStringTenASCIIChars",
+                "newPage": false,
+                "searchKey": "utf8_test.BenchmarkValidStringTenASCIIChars",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkValidStringTenASCIIChars(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkValidStringTenASCIIChars(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf8_test#BenchmarkValidStringTenJapaneseChars",
+              "documentation": {
+                "identifier": "BenchmarkValidStringTenJapaneseChars",
+                "newPage": false,
+                "searchKey": "utf8_test.BenchmarkValidStringTenJapaneseChars",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkValidStringTenJapaneseChars(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkValidStringTenJapaneseChars(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf8_test#BenchmarkValidTenASCIIChars",
+              "documentation": {
+                "identifier": "BenchmarkValidTenASCIIChars",
+                "newPage": false,
+                "searchKey": "utf8_test.BenchmarkValidTenASCIIChars",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkValidTenASCIIChars(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkValidTenASCIIChars(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf8_test#BenchmarkValidTenJapaneseChars",
+              "documentation": {
+                "identifier": "BenchmarkValidTenJapaneseChars",
+                "newPage": false,
+                "searchKey": "utf8_test.BenchmarkValidTenJapaneseChars",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkValidTenJapaneseChars(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkValidTenJapaneseChars(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/unicode/utf8_test#ExampleDecodeLastRune",
               "documentation": {
                 "identifier": "ExampleDecodeLastRune",
                 "newPage": false,
                 "searchKey": "utf8_test.ExampleDecodeLastRune",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -421,6 +769,7 @@
                 "newPage": false,
                 "searchKey": "utf8_test.ExampleDecodeLastRuneInString",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -443,6 +792,7 @@
                 "newPage": false,
                 "searchKey": "utf8_test.ExampleDecodeRune",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -465,6 +815,7 @@
                 "newPage": false,
                 "searchKey": "utf8_test.ExampleDecodeRuneInString",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -487,6 +838,7 @@
                 "newPage": false,
                 "searchKey": "utf8_test.ExampleEncodeRune",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -509,6 +861,7 @@
                 "newPage": false,
                 "searchKey": "utf8_test.ExampleEncodeRune_outOfRange",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -531,6 +884,7 @@
                 "newPage": false,
                 "searchKey": "utf8_test.ExampleFullRune",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -553,6 +907,7 @@
                 "newPage": false,
                 "searchKey": "utf8_test.ExampleFullRuneInString",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -575,6 +930,7 @@
                 "newPage": false,
                 "searchKey": "utf8_test.ExampleRuneCount",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -597,6 +953,7 @@
                 "newPage": false,
                 "searchKey": "utf8_test.ExampleRuneCountInString",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -619,6 +976,7 @@
                 "newPage": false,
                 "searchKey": "utf8_test.ExampleRuneLen",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -641,6 +999,7 @@
                 "newPage": false,
                 "searchKey": "utf8_test.ExampleRuneStart",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -663,6 +1022,7 @@
                 "newPage": false,
                 "searchKey": "utf8_test.ExampleValid",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -685,6 +1045,7 @@
                 "newPage": false,
                 "searchKey": "utf8_test.ExampleValidRune",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -707,6 +1068,7 @@
                 "newPage": false,
                 "searchKey": "utf8_test.ExampleValidString",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -723,35 +1085,15 @@
           },
           {
             "node": {
-              "pathID": "/unicode/utf8_test#init.utf8_test.go",
-              "documentation": {
-                "identifier": "init.utf8_test.go",
-                "newPage": false,
-                "searchKey": "utf8_test.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\nValidate the constants redefined from unicode. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/unicode/utf8_test#TestConstants",
               "documentation": {
                 "identifier": "TestConstants",
                 "newPage": false,
                 "searchKey": "utf8_test.TestConstants",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -767,44 +1109,24 @@
           },
           {
             "node": {
-              "pathID": "/unicode/utf8_test#TestFullRune",
+              "pathID": "/unicode/utf8_test#TestDecodeInvalidSequence",
               "documentation": {
-                "identifier": "TestFullRune",
+                "identifier": "TestDecodeInvalidSequence",
                 "newPage": false,
-                "searchKey": "utf8_test.TestFullRune",
+                "searchKey": "utf8_test.TestDecodeInvalidSequence",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestFullRune(t *testing.T)"
+                "value": "func TestDecodeInvalidSequence(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestFullRune(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf8_test#TestEncodeRune",
-              "documentation": {
-                "identifier": "TestEncodeRune",
-                "newPage": false,
-                "searchKey": "utf8_test.TestEncodeRune",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestEncodeRune(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestEncodeRune(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestDecodeInvalidSequence(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -817,7 +1139,9 @@
                 "newPage": false,
                 "searchKey": "utf8_test.TestDecodeRune",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -839,7 +1163,9 @@
                 "newPage": false,
                 "searchKey": "utf8_test.TestDecodeSurrogateRune",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -855,132 +1181,48 @@
           },
           {
             "node": {
-              "pathID": "/unicode/utf8_test#TestSequencing",
+              "pathID": "/unicode/utf8_test#TestEncodeRune",
               "documentation": {
-                "identifier": "TestSequencing",
+                "identifier": "TestEncodeRune",
                 "newPage": false,
-                "searchKey": "utf8_test.TestSequencing",
+                "searchKey": "utf8_test.TestEncodeRune",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestSequencing(t *testing.T)"
+                "value": "func TestEncodeRune(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestSequencing(t *testing.T)\n```\n\nCheck that DecodeRune and DecodeLastRune correspond to the equivalent range loop. \n\n"
+                "value": "```Go\nfunc TestEncodeRune(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/unicode/utf8_test#runtimeRuneCount",
+              "pathID": "/unicode/utf8_test#TestFullRune",
               "documentation": {
-                "identifier": "runtimeRuneCount",
+                "identifier": "TestFullRune",
                 "newPage": false,
-                "searchKey": "utf8_test.runtimeRuneCount",
+                "searchKey": "utf8_test.TestFullRune",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func runtimeRuneCount(s string) int"
+                "value": "func TestFullRune(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc runtimeRuneCount(s string) int\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf8_test#TestRuntimeConversion",
-              "documentation": {
-                "identifier": "TestRuntimeConversion",
-                "newPage": false,
-                "searchKey": "utf8_test.TestRuntimeConversion",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRuntimeConversion(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRuntimeConversion(t *testing.T)\n```\n\nCheck that a range loop, len([]rune(string)) optimization and []rune conversions visit the same runes. Not really a test of this package, but the assumption is used here and it's good to verify. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf8_test#runtimeDecodeRune",
-              "documentation": {
-                "identifier": "runtimeDecodeRune",
-                "newPage": false,
-                "searchKey": "utf8_test.runtimeDecodeRune",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func runtimeDecodeRune(s string) rune"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc runtimeDecodeRune(s string) rune\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf8_test#TestDecodeInvalidSequence",
-              "documentation": {
-                "identifier": "TestDecodeInvalidSequence",
-                "newPage": false,
-                "searchKey": "utf8_test.TestDecodeInvalidSequence",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDecodeInvalidSequence(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDecodeInvalidSequence(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf8_test#testSequence",
-              "documentation": {
-                "identifier": "testSequence",
-                "newPage": false,
-                "searchKey": "utf8_test.testSequence",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testSequence(t *testing.T, s string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testSequence(t *testing.T, s string)\n```\n\n"
+                "value": "```Go\nfunc TestFullRune(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -993,7 +1235,9 @@
                 "newPage": false,
                 "searchKey": "utf8_test.TestNegativeRune",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1015,7 +1259,9 @@
                 "newPage": false,
                 "searchKey": "utf8_test.TestRuneCount",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1037,7 +1283,9 @@
                 "newPage": false,
                 "searchKey": "utf8_test.TestRuneLen",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1053,13 +1301,63 @@
           },
           {
             "node": {
+              "pathID": "/unicode/utf8_test#TestRuntimeConversion",
+              "documentation": {
+                "identifier": "TestRuntimeConversion",
+                "newPage": false,
+                "searchKey": "utf8_test.TestRuntimeConversion",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRuntimeConversion(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRuntimeConversion(t *testing.T)\n```\n\nCheck that a range loop, len([]rune(string)) optimization and []rune conversions visit the same runes. Not really a test of this package, but the assumption is used here and it's good to verify. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf8_test#TestSequencing",
+              "documentation": {
+                "identifier": "TestSequencing",
+                "newPage": false,
+                "searchKey": "utf8_test.TestSequencing",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSequencing(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSequencing(t *testing.T)\n```\n\nCheck that DecodeRune and DecodeLastRune correspond to the equivalent range loop. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/unicode/utf8_test#TestValid",
               "documentation": {
                 "identifier": "TestValid",
                 "newPage": false,
                 "searchKey": "utf8_test.TestValid",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1081,7 +1379,9 @@
                 "newPage": false,
                 "searchKey": "utf8_test.TestValidRune",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1097,286 +1397,92 @@
           },
           {
             "node": {
-              "pathID": "/unicode/utf8_test#BenchmarkRuneCountTenASCIIChars",
+              "pathID": "/unicode/utf8_test#init.utf8_test.go",
               "documentation": {
-                "identifier": "BenchmarkRuneCountTenASCIIChars",
+                "identifier": "init.utf8_test.go",
                 "newPage": false,
-                "searchKey": "utf8_test.BenchmarkRuneCountTenASCIIChars",
+                "searchKey": "utf8_test.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkRuneCountTenASCIIChars(b *testing.B)"
+                "value": "func init()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkRuneCountTenASCIIChars(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc init()\n```\n\nValidate the constants redefined from unicode. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/unicode/utf8_test#BenchmarkRuneCountTenJapaneseChars",
+              "pathID": "/unicode/utf8_test#runtimeDecodeRune",
               "documentation": {
-                "identifier": "BenchmarkRuneCountTenJapaneseChars",
+                "identifier": "runtimeDecodeRune",
                 "newPage": false,
-                "searchKey": "utf8_test.BenchmarkRuneCountTenJapaneseChars",
+                "searchKey": "utf8_test.runtimeDecodeRune",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkRuneCountTenJapaneseChars(b *testing.B)"
+                "value": "func runtimeDecodeRune(s string) rune"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkRuneCountTenJapaneseChars(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc runtimeDecodeRune(s string) rune\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/unicode/utf8_test#BenchmarkRuneCountInStringTenASCIIChars",
+              "pathID": "/unicode/utf8_test#runtimeRuneCount",
               "documentation": {
-                "identifier": "BenchmarkRuneCountInStringTenASCIIChars",
+                "identifier": "runtimeRuneCount",
                 "newPage": false,
-                "searchKey": "utf8_test.BenchmarkRuneCountInStringTenASCIIChars",
+                "searchKey": "utf8_test.runtimeRuneCount",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkRuneCountInStringTenASCIIChars(b *testing.B)"
+                "value": "func runtimeRuneCount(s string) int"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkRuneCountInStringTenASCIIChars(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc runtimeRuneCount(s string) int\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/unicode/utf8_test#BenchmarkRuneCountInStringTenJapaneseChars",
+              "pathID": "/unicode/utf8_test#testSequence",
               "documentation": {
-                "identifier": "BenchmarkRuneCountInStringTenJapaneseChars",
+                "identifier": "testSequence",
                 "newPage": false,
-                "searchKey": "utf8_test.BenchmarkRuneCountInStringTenJapaneseChars",
+                "searchKey": "utf8_test.testSequence",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func BenchmarkRuneCountInStringTenJapaneseChars(b *testing.B)"
+                "value": "func testSequence(t *testing.T, s string)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkRuneCountInStringTenJapaneseChars(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf8_test#BenchmarkValidTenASCIIChars",
-              "documentation": {
-                "identifier": "BenchmarkValidTenASCIIChars",
-                "newPage": false,
-                "searchKey": "utf8_test.BenchmarkValidTenASCIIChars",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkValidTenASCIIChars(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkValidTenASCIIChars(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf8_test#BenchmarkValidTenJapaneseChars",
-              "documentation": {
-                "identifier": "BenchmarkValidTenJapaneseChars",
-                "newPage": false,
-                "searchKey": "utf8_test.BenchmarkValidTenJapaneseChars",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkValidTenJapaneseChars(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkValidTenJapaneseChars(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf8_test#BenchmarkValidStringTenASCIIChars",
-              "documentation": {
-                "identifier": "BenchmarkValidStringTenASCIIChars",
-                "newPage": false,
-                "searchKey": "utf8_test.BenchmarkValidStringTenASCIIChars",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkValidStringTenASCIIChars(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkValidStringTenASCIIChars(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf8_test#BenchmarkValidStringTenJapaneseChars",
-              "documentation": {
-                "identifier": "BenchmarkValidStringTenJapaneseChars",
-                "newPage": false,
-                "searchKey": "utf8_test.BenchmarkValidStringTenJapaneseChars",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkValidStringTenJapaneseChars(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkValidStringTenJapaneseChars(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf8_test#BenchmarkEncodeASCIIRune",
-              "documentation": {
-                "identifier": "BenchmarkEncodeASCIIRune",
-                "newPage": false,
-                "searchKey": "utf8_test.BenchmarkEncodeASCIIRune",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkEncodeASCIIRune(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkEncodeASCIIRune(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf8_test#BenchmarkEncodeJapaneseRune",
-              "documentation": {
-                "identifier": "BenchmarkEncodeJapaneseRune",
-                "newPage": false,
-                "searchKey": "utf8_test.BenchmarkEncodeJapaneseRune",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkEncodeJapaneseRune(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkEncodeJapaneseRune(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf8_test#BenchmarkDecodeASCIIRune",
-              "documentation": {
-                "identifier": "BenchmarkDecodeASCIIRune",
-                "newPage": false,
-                "searchKey": "utf8_test.BenchmarkDecodeASCIIRune",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkDecodeASCIIRune(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkDecodeASCIIRune(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf8_test#BenchmarkDecodeJapaneseRune",
-              "documentation": {
-                "identifier": "BenchmarkDecodeJapaneseRune",
-                "newPage": false,
-                "searchKey": "utf8_test.BenchmarkDecodeJapaneseRune",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkDecodeJapaneseRune(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkDecodeJapaneseRune(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf8_test#BenchmarkFullRune",
-              "documentation": {
-                "identifier": "BenchmarkFullRune",
-                "newPage": false,
-                "searchKey": "utf8_test.BenchmarkFullRune",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkFullRune(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkFullRune(b *testing.B)\n```\n\n"
+                "value": "```Go\nfunc testSequence(t *testing.T, s string)\n```\n\n"
               },
               "children": null
             }

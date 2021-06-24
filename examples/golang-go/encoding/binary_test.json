@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "encoding/binary_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,122 +41,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/encoding/binary_test#ExampleWrite",
-              "documentation": {
-                "identifier": "ExampleWrite",
-                "newPage": false,
-                "searchKey": "binary_test.ExampleWrite",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleWrite()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleWrite()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/binary_test#ExampleWrite_multi",
-              "documentation": {
-                "identifier": "ExampleWrite_multi",
-                "newPage": false,
-                "searchKey": "binary_test.ExampleWrite_multi",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleWrite_multi()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleWrite_multi()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/binary_test#ExampleRead",
-              "documentation": {
-                "identifier": "ExampleRead",
-                "newPage": false,
-                "searchKey": "binary_test.ExampleRead",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRead()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRead()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/binary_test#ExampleRead_multi",
-              "documentation": {
-                "identifier": "ExampleRead_multi",
-                "newPage": false,
-                "searchKey": "binary_test.ExampleRead_multi",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleRead_multi()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleRead_multi()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/encoding/binary_test#ExampleByteOrder_put",
-              "documentation": {
-                "identifier": "ExampleByteOrder_put",
-                "newPage": false,
-                "searchKey": "binary_test.ExampleByteOrder_put",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleByteOrder_put()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleByteOrder_put()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/encoding/binary_test#ExampleByteOrder_get",
               "documentation": {
                 "identifier": "ExampleByteOrder_get",
                 "newPage": false,
                 "searchKey": "binary_test.ExampleByteOrder_get",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -171,12 +64,36 @@
           },
           {
             "node": {
+              "pathID": "/encoding/binary_test#ExampleByteOrder_put",
+              "documentation": {
+                "identifier": "ExampleByteOrder_put",
+                "newPage": false,
+                "searchKey": "binary_test.ExampleByteOrder_put",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleByteOrder_put()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleByteOrder_put()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/encoding/binary_test#ExamplePutUvarint",
               "documentation": {
                 "identifier": "ExamplePutUvarint",
                 "newPage": false,
                 "searchKey": "binary_test.ExamplePutUvarint",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -199,6 +116,7 @@
                 "newPage": false,
                 "searchKey": "binary_test.ExamplePutVarint",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -215,12 +133,59 @@
           },
           {
             "node": {
+              "pathID": "/encoding/binary_test#ExampleRead",
+              "documentation": {
+                "identifier": "ExampleRead",
+                "newPage": false,
+                "searchKey": "binary_test.ExampleRead",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRead()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRead()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary_test#ExampleRead_multi",
+              "documentation": {
+                "identifier": "ExampleRead_multi",
+                "newPage": false,
+                "searchKey": "binary_test.ExampleRead_multi",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRead_multi()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRead_multi()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/encoding/binary_test#ExampleUvarint",
               "documentation": {
                 "identifier": "ExampleUvarint",
                 "newPage": false,
                 "searchKey": "binary_test.ExampleUvarint",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -243,6 +208,7 @@
                 "newPage": false,
                 "searchKey": "binary_test.ExampleVarint",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -253,6 +219,52 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc ExampleVarint()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary_test#ExampleWrite",
+              "documentation": {
+                "identifier": "ExampleWrite",
+                "newPage": false,
+                "searchKey": "binary_test.ExampleWrite",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleWrite()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleWrite()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary_test#ExampleWrite_multi",
+              "documentation": {
+                "identifier": "ExampleWrite_multi",
+                "newPage": false,
+                "searchKey": "binary_test.ExampleWrite_multi",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleWrite_multi()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleWrite_multi()\n```\n\n"
               },
               "children": null
             }

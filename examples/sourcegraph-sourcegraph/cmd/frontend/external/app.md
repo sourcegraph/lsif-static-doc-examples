@@ -15,10 +15,15 @@ Package app exports symbols from frontend/internal/app. See the parent package g
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [package]
+```
+
 ### <a id="RegisterSSOSignOutHandler" href="#RegisterSSOSignOutHandler">var RegisterSSOSignOutHandler</a>
 
 ```
 searchKey: app.RegisterSSOSignOutHandler
+tags: [variable function]
 ```
 
 ```Go
@@ -27,10 +32,15 @@ var RegisterSSOSignOutHandler = app.RegisterSSOSignOutHandler
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [package]
+```
+
 ### <a id="SignOutURL" href="#SignOutURL">type SignOutURL app.SignOutURL</a>
 
 ```
 searchKey: app.SignOutURL
+tags: [struct]
 ```
 
 ```Go
@@ -39,10 +49,15 @@ type SignOutURL = app.SignOutURL
 
 ## <a id="func" href="#func">Functions</a>
 
+```
+tags: [package]
+```
+
 ### <a id="SetBillingPublishableKey" href="#SetBillingPublishableKey">func SetBillingPublishableKey(value string)</a>
 
 ```
 searchKey: app.SetBillingPublishableKey
+tags: [method]
 ```
 
 ```Go
@@ -53,6 +68,7 @@ func SetBillingPublishableKey(value string)
 
 ```
 searchKey: app.SetPreMountGrafanaHook
+tags: [method]
 ```
 
 ```Go

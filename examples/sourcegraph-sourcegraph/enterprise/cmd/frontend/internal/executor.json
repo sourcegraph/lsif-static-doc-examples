@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/executor",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,78 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/executor#queueURL",
-              "documentation": {
-                "identifier": "queueURL",
-                "newPage": false,
-                "searchKey": "executor.queueURL",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var queueURL"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar queueURL = env.Get(\"EXECUTOR_QUEUE_URL\", \"\", \"HTTP address for the internal executor-queue.\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/executor#sharedUsername",
-              "documentation": {
-                "identifier": "sharedUsername",
-                "newPage": false,
-                "searchKey": "executor.sharedUsername",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var sharedUsername"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar sharedUsername = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/executor#sharedPassword",
-              "documentation": {
-                "identifier": "sharedPassword",
-                "newPage": false,
-                "searchKey": "executor.sharedPassword",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var sharedPassword"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar sharedPassword = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/executor#client",
               "documentation": {
                 "identifier": "client",
                 "newPage": false,
                 "searchKey": "executor.client",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -133,6 +71,8 @@
                 "newPage": false,
                 "searchKey": "executor.getRest",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
@@ -143,6 +83,78 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar getRest = func(r *http.Request) string {\n\treturn mux.Vars(r)[\"rest\"]\n}\n```\n\ngetRest returns the \"rest\" segment of the request's URL. This is a function variable so we can swap it out easily during testing. The gorilla/mux does have a testing function to set variables on a request context, but the context gets lost somewhere between construction of the request and the default client's handling of the request. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/executor#queueURL",
+              "documentation": {
+                "identifier": "queueURL",
+                "newPage": false,
+                "searchKey": "executor.queueURL",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var queueURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar queueURL = env.Get(\"EXECUTOR_QUEUE_URL\", \"\", \"HTTP address for the internal executor-queue.\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/executor#sharedPassword",
+              "documentation": {
+                "identifier": "sharedPassword",
+                "newPage": false,
+                "searchKey": "executor.sharedPassword",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sharedPassword"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sharedPassword = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/executor#sharedUsername",
+              "documentation": {
+                "identifier": "sharedUsername",
+                "newPage": false,
+                "searchKey": "executor.sharedUsername",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sharedUsername"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sharedUsername = ...\n```\n\n"
               },
               "children": null
             }
@@ -158,6 +170,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -177,7 +190,9 @@
                 "identifier": "Init",
                 "newPage": false,
                 "searchKey": "executor.Init",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -192,22 +207,120 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/executor#newInternalProxyHandler",
+              "pathID": "/enterprise/cmd/frontend/internal/executor#TestInternalProxyAuthTokenMiddleware",
               "documentation": {
-                "identifier": "newInternalProxyHandler",
+                "identifier": "TestInternalProxyAuthTokenMiddleware",
                 "newPage": false,
-                "searchKey": "executor.newInternalProxyHandler",
+                "searchKey": "executor.TestInternalProxyAuthTokenMiddleware",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func newInternalProxyHandler(uploadHandler http.Handler) (func() http.Handler, error)"
+                "value": "func TestInternalProxyAuthTokenMiddleware(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc newInternalProxyHandler(uploadHandler http.Handler) (func() http.Handler, error)\n```\n\n"
+                "value": "```Go\nfunc TestInternalProxyAuthTokenMiddleware(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/executor#TestReverseProxyHeaders",
+              "documentation": {
+                "identifier": "TestReverseProxyHeaders",
+                "newPage": false,
+                "searchKey": "executor.TestReverseProxyHeaders",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReverseProxyHeaders(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReverseProxyHeaders(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/executor#TestReverseProxyRedirectWithPayload",
+              "documentation": {
+                "identifier": "TestReverseProxyRedirectWithPayload",
+                "newPage": false,
+                "searchKey": "executor.TestReverseProxyRedirectWithPayload",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReverseProxyRedirectWithPayload(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReverseProxyRedirectWithPayload(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/executor#TestReverseProxySimple",
+              "documentation": {
+                "identifier": "TestReverseProxySimple",
+                "newPage": false,
+                "searchKey": "executor.TestReverseProxySimple",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReverseProxySimple(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReverseProxySimple(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/executor#TestReverseProxyTargetPath",
+              "documentation": {
+                "identifier": "TestReverseProxyTargetPath",
+                "newPage": false,
+                "searchKey": "executor.TestReverseProxyTargetPath",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReverseProxyTargetPath(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReverseProxyTargetPath(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -220,6 +333,7 @@
                 "newPage": false,
                 "searchKey": "executor.basicAuthMiddleware",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -236,56 +350,13 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/executor#reverseProxy",
-              "documentation": {
-                "identifier": "reverseProxy",
-                "newPage": false,
-                "searchKey": "executor.reverseProxy",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func reverseProxy(target *url.URL) http.Handler"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc reverseProxy(target *url.URL) http.Handler\n```\n\nreverseProxy creates an HTTP handler that will proxy requests to the given target URL. See makeProxyRequest for details on how the request URI is constructed. \n\nNote that we do not use httputil.ReverseProxy. We need to ensure that there are no redirect requests to unreachable (internal) routes sent back to the client, and the built-in reverse proxy does not give sufficient control over redirects. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/executor#makeProxyRequest",
-              "documentation": {
-                "identifier": "makeProxyRequest",
-                "newPage": false,
-                "searchKey": "executor.makeProxyRequest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func makeProxyRequest(r *http.Request, target *url.URL) (*http.Request, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc makeProxyRequest(r *http.Request, target *url.URL) (*http.Request, error)\n```\n\nmakeProxyRequest returns a new HTTP request object with the given HTTP request's headers and body. The resulting request's URL is a URL constructed with the given target URL as a base, and the text matching the \"{rest:.*}\" portion of the given request's route as the additional path segment. The resulting request's GetBody field is populated so that a 307 Temporary Redirect can be followed when making POST requests. This is necessary to properly proxy git service operations without being redirected to an inaccessible API. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/executor#copyHeader",
               "documentation": {
                 "identifier": "copyHeader",
                 "newPage": false,
                 "searchKey": "executor.copyHeader",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -308,6 +379,7 @@
                 "newPage": false,
                 "searchKey": "executor.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -324,110 +396,69 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/executor#TestInternalProxyAuthTokenMiddleware",
+              "pathID": "/enterprise/cmd/frontend/internal/executor#makeProxyRequest",
               "documentation": {
-                "identifier": "TestInternalProxyAuthTokenMiddleware",
+                "identifier": "makeProxyRequest",
                 "newPage": false,
-                "searchKey": "executor.TestInternalProxyAuthTokenMiddleware",
+                "searchKey": "executor.makeProxyRequest",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestInternalProxyAuthTokenMiddleware(t *testing.T)"
+                "value": "func makeProxyRequest(r *http.Request, target *url.URL) (*http.Request, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestInternalProxyAuthTokenMiddleware(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc makeProxyRequest(r *http.Request, target *url.URL) (*http.Request, error)\n```\n\nmakeProxyRequest returns a new HTTP request object with the given HTTP request's headers and body. The resulting request's URL is a URL constructed with the given target URL as a base, and the text matching the \"{rest:.*}\" portion of the given request's route as the additional path segment. The resulting request's GetBody field is populated so that a 307 Temporary Redirect can be followed when making POST requests. This is necessary to properly proxy git service operations without being redirected to an inaccessible API. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/executor#TestReverseProxySimple",
+              "pathID": "/enterprise/cmd/frontend/internal/executor#newInternalProxyHandler",
               "documentation": {
-                "identifier": "TestReverseProxySimple",
+                "identifier": "newInternalProxyHandler",
                 "newPage": false,
-                "searchKey": "executor.TestReverseProxySimple",
+                "searchKey": "executor.newInternalProxyHandler",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestReverseProxySimple(t *testing.T)"
+                "value": "func newInternalProxyHandler(uploadHandler http.Handler) (func() http.Handler, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestReverseProxySimple(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc newInternalProxyHandler(uploadHandler http.Handler) (func() http.Handler, error)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/executor#TestReverseProxyTargetPath",
+              "pathID": "/enterprise/cmd/frontend/internal/executor#reverseProxy",
               "documentation": {
-                "identifier": "TestReverseProxyTargetPath",
+                "identifier": "reverseProxy",
                 "newPage": false,
-                "searchKey": "executor.TestReverseProxyTargetPath",
+                "searchKey": "executor.reverseProxy",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestReverseProxyTargetPath(t *testing.T)"
+                "value": "func reverseProxy(target *url.URL) http.Handler"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestReverseProxyTargetPath(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/executor#TestReverseProxyHeaders",
-              "documentation": {
-                "identifier": "TestReverseProxyHeaders",
-                "newPage": false,
-                "searchKey": "executor.TestReverseProxyHeaders",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReverseProxyHeaders(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReverseProxyHeaders(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/executor#TestReverseProxyRedirectWithPayload",
-              "documentation": {
-                "identifier": "TestReverseProxyRedirectWithPayload",
-                "newPage": false,
-                "searchKey": "executor.TestReverseProxyRedirectWithPayload",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestReverseProxyRedirectWithPayload(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestReverseProxyRedirectWithPayload(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc reverseProxy(target *url.URL) http.Handler\n```\n\nreverseProxy creates an HTTP handler that will proxy requests to the given target URL. See makeProxyRequest for details on how the request URI is constructed. \n\nNote that we do not use httputil.ReverseProxy. We need to ensure that there are no redirect requests to unreachable (internal) routes sent back to the client, and the built-in reverse proxy does not give sufficient control over redirects. \n\n"
               },
               "children": null
             }

@@ -4,7 +4,9 @@
     "identifier": "client",
     "newPage": true,
     "searchKey": "cmd/frontend/registry/client",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -40,7 +44,10 @@
                 "identifier": "APIVersion",
                 "newPage": false,
                 "searchKey": "client.APIVersion",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -60,7 +67,10 @@
                 "identifier": "AcceptHeader",
                 "newPage": false,
                 "searchKey": "client.AcceptHeader",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -75,32 +85,15 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/registry/client#MediaTypeHeaderName",
-              "documentation": {
-                "identifier": "MediaTypeHeaderName",
-                "newPage": false,
-                "searchKey": "client.MediaTypeHeaderName",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const MediaTypeHeaderName"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst MediaTypeHeaderName = \"X-Sourcegraph-Media-Type\"\n```\n\nMediaTypeHeaderName is the name of the HTTP response header whose value the client expects to equal MediaType. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/registry/client#MediaType",
               "documentation": {
                 "identifier": "MediaType",
                 "newPage": false,
                 "searchKey": "client.MediaType",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -115,12 +108,37 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/registry/client#MediaTypeHeaderName",
+              "documentation": {
+                "identifier": "MediaTypeHeaderName",
+                "newPage": false,
+                "searchKey": "client.MediaTypeHeaderName",
+                "tags": [
+                  "constant",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MediaTypeHeaderName"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MediaTypeHeaderName = \"X-Sourcegraph-Media-Type\"\n```\n\nMediaTypeHeaderName is the name of the HTTP response header whose value the client expects to equal MediaType. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/registry/client#remoteRegistryErrorMessage",
               "documentation": {
                 "identifier": "remoteRegistryErrorMessage",
                 "newPage": false,
                 "searchKey": "client.remoteRegistryErrorMessage",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -145,7 +163,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -158,124 +178,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/registry/client#notFoundError",
-              "documentation": {
-                "identifier": "notFoundError",
-                "newPage": false,
-                "searchKey": "client.notFoundError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type notFoundError struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype notFoundError struct{ field, value string }\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/registry/client#notFoundError.NotFound",
-                    "documentation": {
-                      "identifier": "notFoundError.NotFound",
-                      "newPage": false,
-                      "searchKey": "client.notFoundError.NotFound",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (notFoundError) NotFound() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (notFoundError) NotFound() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/registry/client#notFoundError.Error",
-                    "documentation": {
-                      "identifier": "notFoundError.Error",
-                      "newPage": false,
-                      "searchKey": "client.notFoundError.Error",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *notFoundError) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *notFoundError) Error() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/registry/client#httpError",
-              "documentation": {
-                "identifier": "httpError",
-                "newPage": false,
-                "searchKey": "client.httpError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type httpError int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype httpError int\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/registry/client#httpError.Error",
-                    "documentation": {
-                      "identifier": "httpError.Error",
-                      "newPage": false,
-                      "searchKey": "client.httpError.Error",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e httpError) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e httpError) Error() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/registry/client#Extension",
               "documentation": {
                 "identifier": "Extension",
                 "newPage": false,
                 "searchKey": "client.Extension",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -288,32 +198,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/cmd/frontend/registry/client#GetByUUID",
-                    "documentation": {
-                      "identifier": "GetByUUID",
-                      "newPage": false,
-                      "searchKey": "client.GetByUUID",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func GetByUUID(ctx context.Context, registry *url.URL, uuidStr string) (*Extension, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc GetByUUID(ctx context.Context, registry *url.URL, uuidStr string) (*Extension, error)\n```\n\nGetByUUID gets the extension from the remote registry with the given UUID. If the remote registry reports that the extension is not found, the returned error implements errcode.NotFounder. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/cmd/frontend/registry/client#GetByExtensionID",
                     "documentation": {
                       "identifier": "GetByExtensionID",
                       "newPage": false,
                       "searchKey": "client.GetByExtensionID",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -328,12 +220,35 @@
                 },
                 {
                   "node": {
+                    "pathID": "/cmd/frontend/registry/client#GetByUUID",
+                    "documentation": {
+                      "identifier": "GetByUUID",
+                      "newPage": false,
+                      "searchKey": "client.GetByUUID",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func GetByUUID(ctx context.Context, registry *url.URL, uuidStr string) (*Extension, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc GetByUUID(ctx context.Context, registry *url.URL, uuidStr string) (*Extension, error)\n```\n\nGetByUUID gets the extension from the remote registry with the given UUID. If the remote registry reports that the extension is not found, the returned error implements errcode.NotFounder. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/cmd/frontend/registry/client#getBy",
                     "documentation": {
                       "identifier": "getBy",
                       "newPage": false,
                       "searchKey": "client.getBy",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -358,7 +273,9 @@
                 "identifier": "Publisher",
                 "newPage": false,
                 "searchKey": "client.Publisher",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -369,6 +286,123 @@
                 "value": "```Go\ntype Publisher struct {\n\tName string `json:\"name\"`\n\tURL  string `json:\"url\"`\n}\n```\n\nPublisher describes a publisher in the extension registry. \n\n"
               },
               "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/client#httpError",
+              "documentation": {
+                "identifier": "httpError",
+                "newPage": false,
+                "searchKey": "client.httpError",
+                "tags": [
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type httpError int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype httpError int\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/client#httpError.Error",
+                    "documentation": {
+                      "identifier": "httpError.Error",
+                      "newPage": false,
+                      "searchKey": "client.httpError.Error",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e httpError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e httpError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/client#notFoundError",
+              "documentation": {
+                "identifier": "notFoundError",
+                "newPage": false,
+                "searchKey": "client.notFoundError",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type notFoundError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype notFoundError struct{ field, value string }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/client#notFoundError.Error",
+                    "documentation": {
+                      "identifier": "notFoundError.Error",
+                      "newPage": false,
+                      "searchKey": "client.notFoundError.Error",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *notFoundError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *notFoundError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/client#notFoundError.NotFound",
+                    "documentation": {
+                      "identifier": "notFoundError.NotFound",
+                      "newPage": false,
+                      "searchKey": "client.notFoundError.NotFound",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (notFoundError) NotFound() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (notFoundError) NotFound() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
             }
           }
         ]
@@ -381,7 +415,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -394,32 +430,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/frontend/registry/client#List",
-              "documentation": {
-                "identifier": "List",
-                "newPage": false,
-                "searchKey": "client.List",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func List(ctx context.Context, registry *url.URL, query string) ([]*Extension, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc List(ctx context.Context, registry *url.URL, query string) ([]*Extension, error)\n```\n\nList lists extensions on the remote registry matching the query (or all if the query is empty). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/registry/client#GetFeaturedExtensions",
               "documentation": {
                 "identifier": "GetFeaturedExtensions",
                 "newPage": false,
                 "searchKey": "client.GetFeaturedExtensions",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -434,12 +452,79 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/registry/client#IsRemoteRegistryError",
+              "documentation": {
+                "identifier": "IsRemoteRegistryError",
+                "newPage": false,
+                "searchKey": "client.IsRemoteRegistryError",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsRemoteRegistryError(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsRemoteRegistryError(err error) bool\n```\n\nIsRemoteRegistryError reports whether the err is (likely) from this package's interaction with the remote registry. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/client#List",
+              "documentation": {
+                "identifier": "List",
+                "newPage": false,
+                "searchKey": "client.List",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func List(ctx context.Context, registry *url.URL, query string) ([]*Extension, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc List(ctx context.Context, registry *url.URL, query string) ([]*Extension, error)\n```\n\nList lists extensions on the remote registry matching the query (or all if the query is empty). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/client#Name",
+              "documentation": {
+                "identifier": "Name",
+                "newPage": false,
+                "searchKey": "client.Name",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Name(registry *url.URL) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Name(registry *url.URL) string\n```\n\nName returns the registry name given its URL. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/registry/client#httpGet",
               "documentation": {
                 "identifier": "httpGet",
                 "newPage": false,
                 "searchKey": "client.httpGet",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -456,52 +541,13 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/registry/client#IsRemoteRegistryError",
-              "documentation": {
-                "identifier": "IsRemoteRegistryError",
-                "newPage": false,
-                "searchKey": "client.IsRemoteRegistryError",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IsRemoteRegistryError(err error) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IsRemoteRegistryError(err error) bool\n```\n\nIsRemoteRegistryError reports whether the err is (likely) from this package's interaction with the remote registry. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/registry/client#Name",
-              "documentation": {
-                "identifier": "Name",
-                "newPage": false,
-                "searchKey": "client.Name",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Name(registry *url.URL) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Name(registry *url.URL) string\n```\n\nName returns the registry name given its URL. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/registry/client#toURL",
               "documentation": {
                 "identifier": "toURL",
                 "newPage": false,
                 "searchKey": "client.toURL",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },

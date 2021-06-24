@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/internal/batches/types/scheduler/config",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "config.config",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -67,6 +71,8 @@
                 "newPage": false,
                 "searchKey": "config.mu",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -92,6 +98,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -112,6 +119,7 @@
                 "newPage": false,
                 "searchKey": "config.configuration",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -132,6 +140,7 @@
                       "newPage": false,
                       "searchKey": "config.ensureConfig",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -154,6 +163,7 @@
                       "newPage": false,
                       "searchKey": "config.newConfiguration",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -176,6 +186,7 @@
                       "newPage": false,
                       "searchKey": "config.configuration.Active",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -198,6 +209,7 @@
                       "newPage": false,
                       "searchKey": "config.configuration.Subscribe",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -220,6 +232,7 @@
                       "newPage": false,
                       "searchKey": "config.configuration.Unsubscribe",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -242,6 +255,7 @@
                       "newPage": false,
                       "searchKey": "config.configuration.notify",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -270,6 +284,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -289,7 +304,9 @@
                 "identifier": "ActiveWindow",
                 "newPage": false,
                 "searchKey": "config.ActiveWindow",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -304,52 +321,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/config#Subscribe",
-              "documentation": {
-                "identifier": "Subscribe",
-                "newPage": false,
-                "searchKey": "config.Subscribe",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Subscribe() chan *window.Configuration"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Subscribe() chan *window.Configuration\n```\n\nSubscribe returns a channel that will receive a message with the new configuration each time it is updated. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/config#Unsubscribe",
-              "documentation": {
-                "identifier": "Unsubscribe",
-                "newPage": false,
-                "searchKey": "config.Unsubscribe",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Unsubscribe(ch chan *window.Configuration)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Unsubscribe(ch chan *window.Configuration)\n```\n\nUnsubscribe removes a channel returned from Subscribe() from the notification list. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/batches/types/scheduler/config#Reset",
               "documentation": {
                 "identifier": "Reset",
                 "newPage": false,
                 "searchKey": "config.Reset",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -364,22 +343,22 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/config#sameConfiguration",
+              "pathID": "/enterprise/internal/batches/types/scheduler/config#Subscribe",
               "documentation": {
-                "identifier": "sameConfiguration",
+                "identifier": "Subscribe",
                 "newPage": false,
-                "searchKey": "config.sameConfiguration",
+                "searchKey": "config.Subscribe",
                 "tags": [
-                  "private"
+                  "function"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func sameConfiguration(prev, next *[]*schema.BatchChangeRolloutWindow) bool"
+                "value": "func Subscribe() chan *window.Configuration"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc sameConfiguration(prev, next *[]*schema.BatchChangeRolloutWindow) bool\n```\n\n"
+                "value": "```Go\nfunc Subscribe() chan *window.Configuration\n```\n\nSubscribe returns a channel that will receive a message with the new configuration each time it is updated. \n\n"
               },
               "children": null
             }
@@ -392,7 +371,9 @@
                 "newPage": false,
                 "searchKey": "config.TestConfiguration",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -402,6 +383,51 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc TestConfiguration(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/config#Unsubscribe",
+              "documentation": {
+                "identifier": "Unsubscribe",
+                "newPage": false,
+                "searchKey": "config.Unsubscribe",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Unsubscribe(ch chan *window.Configuration)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Unsubscribe(ch chan *window.Configuration)\n```\n\nUnsubscribe removes a channel returned from Subscribe() from the notification list. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/config#sameConfiguration",
+              "documentation": {
+                "identifier": "sameConfiguration",
+                "newPage": false,
+                "searchKey": "config.sameConfiguration",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sameConfiguration(prev, next *[]*schema.BatchChangeRolloutWindow) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sameConfiguration(prev, next *[]*schema.BatchChangeRolloutWindow) bool\n```\n\n"
               },
               "children": null
             }

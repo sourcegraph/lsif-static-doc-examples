@@ -4,7 +4,9 @@
     "identifier": "plan9obj",
     "newPage": true,
     "searchKey": "debug/plan9obj",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,32 +39,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/debug/plan9obj#Magic64",
-              "documentation": {
-                "identifier": "Magic64",
-                "newPage": false,
-                "searchKey": "plan9obj.Magic64",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const Magic64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst Magic64 = 0x8000 // 64-bit expanded header\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/debug/plan9obj#Magic386",
               "documentation": {
                 "identifier": "Magic386",
                 "newPage": false,
                 "searchKey": "plan9obj.Magic386",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -75,12 +62,38 @@
           },
           {
             "node": {
+              "pathID": "/debug/plan9obj#Magic64",
+              "documentation": {
+                "identifier": "Magic64",
+                "newPage": false,
+                "searchKey": "plan9obj.Magic64",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Magic64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Magic64 = 0x8000 // 64-bit expanded header\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/debug/plan9obj#MagicAMD64",
               "documentation": {
                 "identifier": "MagicAMD64",
                 "newPage": false,
                 "searchKey": "plan9obj.MagicAMD64",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -100,7 +113,10 @@
                 "identifier": "MagicARM",
                 "newPage": false,
                 "searchKey": "plan9obj.MagicARM",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -123,7 +139,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -142,6 +160,9 @@
                 "newPage": false,
                 "searchKey": "plan9obj.fileTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -166,7 +187,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -179,32 +202,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/debug/plan9obj#FileHeader",
-              "documentation": {
-                "identifier": "FileHeader",
-                "newPage": false,
-                "searchKey": "plan9obj.FileHeader",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type FileHeader struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype FileHeader struct {\n\tMagic       uint32\n\tBss         uint32\n\tEntry       uint64\n\tPtrSize     int\n\tLoadAddress uint64\n\tHdrSize     uint64\n}\n```\n\nA FileHeader represents a Plan 9 a.out file header. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/debug/plan9obj#File",
               "documentation": {
                 "identifier": "File",
                 "newPage": false,
                 "searchKey": "plan9obj.File",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -217,32 +222,14 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/debug/plan9obj#Open",
-                    "documentation": {
-                      "identifier": "Open",
-                      "newPage": false,
-                      "searchKey": "plan9obj.Open",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func Open(name string) (*File, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc Open(name string) (*File, error)\n```\n\nOpen opens the named file using os.Open and prepares it for use as a Plan 9 a.out binary. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/debug/plan9obj#NewFile",
                     "documentation": {
                       "identifier": "NewFile",
                       "newPage": false,
                       "searchKey": "plan9obj.NewFile",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -257,12 +244,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/debug/plan9obj#Open",
+                    "documentation": {
+                      "identifier": "Open",
+                      "newPage": false,
+                      "searchKey": "plan9obj.Open",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Open(name string) (*File, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Open(name string) (*File, error)\n```\n\nOpen opens the named file using os.Open and prepares it for use as a Plan 9 a.out binary. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/debug/plan9obj#File.Close",
                     "documentation": {
                       "identifier": "File.Close",
                       "newPage": false,
                       "searchKey": "plan9obj.File.Close",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -277,32 +288,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/debug/plan9obj#File.Symbols",
-                    "documentation": {
-                      "identifier": "File.Symbols",
-                      "newPage": false,
-                      "searchKey": "plan9obj.File.Symbols",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (f *File) Symbols() ([]Sym, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (f *File) Symbols() ([]Sym, error)\n```\n\nSymbols returns the symbol table for f. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/debug/plan9obj#File.Section",
                     "documentation": {
                       "identifier": "File.Section",
                       "newPage": false,
                       "searchKey": "plan9obj.File.Section",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -314,26 +307,50 @@
                     },
                     "children": null
                   }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/plan9obj#File.Symbols",
+                    "documentation": {
+                      "identifier": "File.Symbols",
+                      "newPage": false,
+                      "searchKey": "plan9obj.File.Symbols",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *File) Symbols() ([]Sym, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *File) Symbols() ([]Sym, error)\n```\n\nSymbols returns the symbol table for f. \n\n"
+                    },
+                    "children": null
+                  }
                 }
               ]
             }
           },
           {
             "node": {
-              "pathID": "/debug/plan9obj#SectionHeader",
+              "pathID": "/debug/plan9obj#FileHeader",
               "documentation": {
-                "identifier": "SectionHeader",
+                "identifier": "FileHeader",
                 "newPage": false,
-                "searchKey": "plan9obj.SectionHeader",
-                "tags": null
+                "searchKey": "plan9obj.FileHeader",
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type SectionHeader struct"
+                "value": "type FileHeader struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype SectionHeader struct {\n\tName   string\n\tSize   uint32\n\tOffset uint32\n}\n```\n\nA SectionHeader represents a single Plan 9 a.out section header. This structure doesn't exist on-disk, but eases navigation through the object file. \n\n"
+                "value": "```Go\ntype FileHeader struct {\n\tMagic       uint32\n\tBss         uint32\n\tEntry       uint64\n\tPtrSize     int\n\tLoadAddress uint64\n\tHdrSize     uint64\n}\n```\n\nA FileHeader represents a Plan 9 a.out file header. \n\n"
               },
               "children": null
             }
@@ -345,7 +362,9 @@
                 "identifier": "Section",
                 "newPage": false,
                 "searchKey": "plan9obj.Section",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -363,7 +382,9 @@
                       "identifier": "Section.Data",
                       "newPage": false,
                       "searchKey": "plan9obj.Section.Data",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -383,7 +404,9 @@
                       "identifier": "Section.Open",
                       "newPage": false,
                       "searchKey": "plan9obj.Section.Open",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -401,12 +424,36 @@
           },
           {
             "node": {
+              "pathID": "/debug/plan9obj#SectionHeader",
+              "documentation": {
+                "identifier": "SectionHeader",
+                "newPage": false,
+                "searchKey": "plan9obj.SectionHeader",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SectionHeader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SectionHeader struct {\n\tName   string\n\tSize   uint32\n\tOffset uint32\n}\n```\n\nA SectionHeader represents a single Plan 9 a.out section header. This structure doesn't exist on-disk, but eases navigation through the object file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/debug/plan9obj#Sym",
               "documentation": {
                 "identifier": "Sym",
                 "newPage": false,
                 "searchKey": "plan9obj.Sym",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -421,12 +468,36 @@
           },
           {
             "node": {
+              "pathID": "/debug/plan9obj#fileTest",
+              "documentation": {
+                "identifier": "fileTest",
+                "newPage": false,
+                "searchKey": "plan9obj.fileTest",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type fileTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype fileTest struct {\n\tfile     string\n\thdr      FileHeader\n\tsections []*SectionHeader\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/debug/plan9obj#formatError",
               "documentation": {
                 "identifier": "formatError",
                 "newPage": false,
                 "searchKey": "plan9obj.formatError",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -447,6 +518,7 @@
                       "newPage": false,
                       "searchKey": "plan9obj.formatError.Error",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -472,6 +544,7 @@
                 "newPage": false,
                 "searchKey": "plan9obj.prog",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -494,6 +567,7 @@
                 "newPage": false,
                 "searchKey": "plan9obj.sym",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -504,28 +578,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\ntype sym struct {\n\tvalue uint64\n\ttyp   byte\n\tname  []byte\n}\n```\n\nPlan 9 symbol table entries. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/plan9obj#fileTest",
-              "documentation": {
-                "identifier": "fileTest",
-                "newPage": false,
-                "searchKey": "plan9obj.fileTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type fileTest struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype fileTest struct {\n\tfile     string\n\thdr      FileHeader\n\tsections []*SectionHeader\n}\n```\n\n"
               },
               "children": null
             }
@@ -540,7 +592,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -553,12 +607,84 @@
         "children": [
           {
             "node": {
+              "pathID": "/debug/plan9obj#TestOpen",
+              "documentation": {
+                "identifier": "TestOpen",
+                "newPage": false,
+                "searchKey": "plan9obj.TestOpen",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOpen(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOpen(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/plan9obj#TestOpenFailure",
+              "documentation": {
+                "identifier": "TestOpenFailure",
+                "newPage": false,
+                "searchKey": "plan9obj.TestOpenFailure",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOpenFailure(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOpenFailure(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/plan9obj#newTable",
+              "documentation": {
+                "identifier": "newTable",
+                "newPage": false,
+                "searchKey": "plan9obj.newTable",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newTable(symtab []byte, ptrsz int) ([]Sym, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newTable(symtab []byte, ptrsz int) ([]Sym, error)\n```\n\nNewTable decodes the Go symbol table in data, returning an in-memory representation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/debug/plan9obj#parseMagic",
               "documentation": {
                 "identifier": "parseMagic",
                 "newPage": false,
                 "searchKey": "plan9obj.parseMagic",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -581,6 +707,7 @@
                 "newPage": false,
                 "searchKey": "plan9obj.walksymtab",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -591,72 +718,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc walksymtab(data []byte, ptrsz int, fn func(sym) error) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/plan9obj#newTable",
-              "documentation": {
-                "identifier": "newTable",
-                "newPage": false,
-                "searchKey": "plan9obj.newTable",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func newTable(symtab []byte, ptrsz int) ([]Sym, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc newTable(symtab []byte, ptrsz int) ([]Sym, error)\n```\n\nNewTable decodes the Go symbol table in data, returning an in-memory representation. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/plan9obj#TestOpen",
-              "documentation": {
-                "identifier": "TestOpen",
-                "newPage": false,
-                "searchKey": "plan9obj.TestOpen",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestOpen(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestOpen(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/debug/plan9obj#TestOpenFailure",
-              "documentation": {
-                "identifier": "TestOpenFailure",
-                "newPage": false,
-                "searchKey": "plan9obj.TestOpenFailure",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestOpenFailure(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestOpenFailure(t *testing.T)\n```\n\n"
               },
               "children": null
             }

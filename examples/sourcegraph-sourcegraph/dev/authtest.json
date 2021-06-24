@@ -4,7 +4,9 @@
     "identifier": "authtest",
     "newPage": true,
     "searchKey": "dev/authtest",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,56 +39,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/dev/authtest#client",
-              "documentation": {
-                "identifier": "client",
-                "newPage": false,
-                "searchKey": "authtest.client",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var client"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar client *gqltestutil.Client\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/dev/authtest#long",
-              "documentation": {
-                "identifier": "long",
-                "newPage": false,
-                "searchKey": "authtest.long",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var long"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar long = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/dev/authtest#baseURL",
               "documentation": {
                 "identifier": "baseURL",
                 "newPage": false,
                 "searchKey": "authtest.baseURL",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -101,12 +63,62 @@
           },
           {
             "node": {
+              "pathID": "/dev/authtest#client",
+              "documentation": {
+                "identifier": "client",
+                "newPage": false,
+                "searchKey": "authtest.client",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var client"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar client *gqltestutil.Client\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/authtest#dotcom",
+              "documentation": {
+                "identifier": "dotcom",
+                "newPage": false,
+                "searchKey": "authtest.dotcom",
+                "tags": [
+                  "variable",
+                  "boolean",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var dotcom"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar dotcom = flag.Bool(\"dotcom\", false, \"Whether to test dotcom specific constraints\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/dev/authtest#email",
               "documentation": {
                 "identifier": "email",
                 "newPage": false,
                 "searchKey": "authtest.email",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -123,56 +135,14 @@
           },
           {
             "node": {
-              "pathID": "/dev/authtest#username",
-              "documentation": {
-                "identifier": "username",
-                "newPage": false,
-                "searchKey": "authtest.username",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var username"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar username = flag.String(\"username\", \"authtest-admin\", \"The username of the admin user\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/dev/authtest#password",
-              "documentation": {
-                "identifier": "password",
-                "newPage": false,
-                "searchKey": "authtest.password",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var password"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar password = flag.String(\"password\", \"supersecurepassword\", \"The password of the admin user\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/dev/authtest#githubToken",
               "documentation": {
                 "identifier": "githubToken",
                 "newPage": false,
                 "searchKey": "authtest.githubToken",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -189,22 +159,72 @@
           },
           {
             "node": {
-              "pathID": "/dev/authtest#dotcom",
+              "pathID": "/dev/authtest#long",
               "documentation": {
-                "identifier": "dotcom",
+                "identifier": "long",
                 "newPage": false,
-                "searchKey": "authtest.dotcom",
+                "searchKey": "authtest.long",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var dotcom"
+                "value": "var long"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar dotcom = flag.Bool(\"dotcom\", false, \"Whether to test dotcom specific constraints\")\n```\n\n"
+                "value": "```Go\nvar long = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/authtest#password",
+              "documentation": {
+                "identifier": "password",
+                "newPage": false,
+                "searchKey": "authtest.password",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var password"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar password = flag.String(\"password\", \"supersecurepassword\", \"The password of the admin user\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/authtest#username",
+              "documentation": {
+                "identifier": "username",
+                "newPage": false,
+                "searchKey": "authtest.username",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var username"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar username = flag.String(\"username\", \"authtest-admin\", \"The username of the admin user\")\n```\n\n"
               },
               "children": null
             }
@@ -219,7 +239,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -238,7 +260,9 @@
                 "newPage": false,
                 "searchKey": "authtest.TestCodeIntelEndpoints",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -260,7 +284,9 @@
                 "newPage": false,
                 "searchKey": "authtest.TestMain",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -276,35 +302,15 @@
           },
           {
             "node": {
-              "pathID": "/dev/authtest#mustMarshalJSONString",
-              "documentation": {
-                "identifier": "mustMarshalJSONString",
-                "newPage": false,
-                "searchKey": "authtest.mustMarshalJSONString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func mustMarshalJSONString(v interface{}) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc mustMarshalJSONString(v interface{}) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/dev/authtest#TestOrganization",
               "documentation": {
                 "identifier": "TestOrganization",
                 "newPage": false,
                 "searchKey": "authtest.TestOrganization",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -326,7 +332,9 @@
                 "newPage": false,
                 "searchKey": "authtest.TestRepository",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -348,7 +356,9 @@
                 "newPage": false,
                 "searchKey": "authtest.TestSiteAdminEndpoints",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -358,6 +368,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc TestSiteAdminEndpoints(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/authtest#mustMarshalJSONString",
+              "documentation": {
+                "identifier": "mustMarshalJSONString",
+                "newPage": false,
+                "searchKey": "authtest.mustMarshalJSONString",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustMarshalJSONString(v interface{}) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustMarshalJSONString(v interface{}) string\n```\n\n"
               },
               "children": null
             }

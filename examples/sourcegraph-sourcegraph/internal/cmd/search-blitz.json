@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/cmd/search-blitz",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,56 +41,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/cmd/search-blitz#envToken",
-              "documentation": {
-                "identifier": "envToken",
-                "newPage": false,
-                "searchKey": "main.envToken",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const envToken"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst envToken = \"SOURCEGRAPH_TOKEN\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/search-blitz#envEndpoint",
-              "documentation": {
-                "identifier": "envEndpoint",
-                "newPage": false,
-                "searchKey": "main.envEndpoint",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const envEndpoint"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst envEndpoint = \"SOURCEGRAPH_ENDPOINT\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/cmd/search-blitz#Batch",
               "documentation": {
                 "identifier": "Batch",
                 "newPage": false,
                 "searchKey": "main.Batch",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -108,7 +69,10 @@
                 "identifier": "Stream",
                 "newPage": false,
                 "searchKey": "main.Stream",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -123,34 +87,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/search-blitz#port",
-              "documentation": {
-                "identifier": "port",
-                "newPage": false,
-                "searchKey": "main.port",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const port"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst port = \"8080\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/cmd/search-blitz#envConfig",
               "documentation": {
                 "identifier": "envConfig",
                 "newPage": false,
                 "searchKey": "main.envConfig",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -167,12 +111,38 @@
           },
           {
             "node": {
+              "pathID": "/internal/cmd/search-blitz#envEndpoint",
+              "documentation": {
+                "identifier": "envEndpoint",
+                "newPage": false,
+                "searchKey": "main.envEndpoint",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const envEndpoint"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst envEndpoint = \"SOURCEGRAPH_ENDPOINT\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/cmd/search-blitz#envLogDir",
               "documentation": {
                 "identifier": "envLogDir",
                 "newPage": false,
                 "searchKey": "main.envLogDir",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -183,6 +153,54 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst envLogDir = \"LOG_DIR\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/search-blitz#envToken",
+              "documentation": {
+                "identifier": "envToken",
+                "newPage": false,
+                "searchKey": "main.envToken",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const envToken"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst envToken = \"SOURCEGRAPH_TOKEN\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/search-blitz#port",
+              "documentation": {
+                "identifier": "port",
+                "newPage": false,
+                "searchKey": "main.port",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const port"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst port = \"8080\"\n```\n\n"
               },
               "children": null
             }
@@ -198,6 +216,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -212,12 +231,39 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/cmd/search-blitz#UserLatencyBuckets",
+              "documentation": {
+                "identifier": "UserLatencyBuckets",
+                "newPage": false,
+                "searchKey": "main.UserLatencyBuckets",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var UserLatencyBuckets"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar UserLatencyBuckets = []float64{100, 200, 300, 400, 500, 1000, 2000, 5000, 10000, 30000}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/cmd/search-blitz#allProtocols",
               "documentation": {
                 "identifier": "allProtocols",
                 "newPage": false,
                 "searchKey": "main.allProtocols",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -234,32 +280,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/search-blitz#UserLatencyBuckets",
-              "documentation": {
-                "identifier": "UserLatencyBuckets",
-                "newPage": false,
-                "searchKey": "main.UserLatencyBuckets",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var UserLatencyBuckets"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar UserLatencyBuckets = []float64{100, 200, 300, 400, 500, 1000, 2000, 5000, 10000, 30000}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/cmd/search-blitz#durationSearchHistogram",
               "documentation": {
                 "identifier": "durationSearchHistogram",
                 "newPage": false,
                 "searchKey": "main.durationSearchHistogram",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -282,6 +310,8 @@
                 "newPage": false,
                 "searchKey": "main.graphQLQuery",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -307,6 +337,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -321,12 +352,148 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/cmd/search-blitz#Config",
+              "documentation": {
+                "identifier": "Config",
+                "newPage": false,
+                "searchKey": "main.Config",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Config struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Config struct {\n\tGroups []QueryGroupConfig\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/search-blitz#loadQueries",
+                    "documentation": {
+                      "identifier": "loadQueries",
+                      "newPage": false,
+                      "searchKey": "main.loadQueries",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func loadQueries(path string) (*Config, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc loadQueries(path string) (*Config, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/search-blitz#Protocol",
+              "documentation": {
+                "identifier": "Protocol",
+                "newPage": false,
+                "searchKey": "main.Protocol",
+                "tags": [
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Protocol uint8"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Protocol uint8\n```\n\nProtocol represents either the graphQL Protocol or the streaming Protocol \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/search-blitz#Protocol.UnmarshalYAML",
+                    "documentation": {
+                      "identifier": "Protocol.UnmarshalYAML",
+                      "newPage": false,
+                      "searchKey": "main.Protocol.UnmarshalYAML",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Protocol) UnmarshalYAML(unmarshal func(interface{}) error) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Protocol) UnmarshalYAML(unmarshal func(interface{}) error) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/search-blitz#QueryConfig",
+              "documentation": {
+                "identifier": "QueryConfig",
+                "newPage": false,
+                "searchKey": "main.QueryConfig",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type QueryConfig struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype QueryConfig struct {\n\tQuery string\n\tName  string\n\n\t// An unset interval defaults to 1m\n\tInterval time.Duration\n\n\t// An empty value for Protocols means \"all\"\n\tProtocols []Protocol\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/search-blitz#QueryGroupConfig",
+              "documentation": {
+                "identifier": "QueryGroupConfig",
+                "newPage": false,
+                "searchKey": "main.QueryGroupConfig",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type QueryGroupConfig struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype QueryGroupConfig struct {\n\tName    string\n\tQueries []QueryConfig\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/cmd/search-blitz#client",
               "documentation": {
                 "identifier": "client",
                 "newPage": false,
                 "searchKey": "main.client",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -347,6 +514,7 @@
                       "newPage": false,
                       "searchKey": "main.newClient",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -363,12 +531,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/cmd/search-blitz#client.clientType",
+                    "documentation": {
+                      "identifier": "client.clientType",
+                      "newPage": false,
+                      "searchKey": "main.client.clientType",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *client) clientType() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *client) clientType() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/cmd/search-blitz#client.search",
                     "documentation": {
                       "identifier": "client.search",
                       "newPage": false,
                       "searchKey": "main.client.search",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -391,6 +583,7 @@
                       "newPage": false,
                       "searchKey": "main.client.url",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -401,152 +594,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (s *client) url() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/search-blitz#client.clientType",
-                    "documentation": {
-                      "identifier": "client.clientType",
-                      "newPage": false,
-                      "searchKey": "main.client.clientType",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *client) clientType() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *client) clientType() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/search-blitz#Config",
-              "documentation": {
-                "identifier": "Config",
-                "newPage": false,
-                "searchKey": "main.Config",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Config struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Config struct {\n\tGroups []QueryGroupConfig\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/search-blitz#loadQueries",
-                    "documentation": {
-                      "identifier": "loadQueries",
-                      "newPage": false,
-                      "searchKey": "main.loadQueries",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func loadQueries(path string) (*Config, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc loadQueries(path string) (*Config, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/search-blitz#QueryGroupConfig",
-              "documentation": {
-                "identifier": "QueryGroupConfig",
-                "newPage": false,
-                "searchKey": "main.QueryGroupConfig",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type QueryGroupConfig struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype QueryGroupConfig struct {\n\tName    string\n\tQueries []QueryConfig\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/search-blitz#QueryConfig",
-              "documentation": {
-                "identifier": "QueryConfig",
-                "newPage": false,
-                "searchKey": "main.QueryConfig",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type QueryConfig struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype QueryConfig struct {\n\tQuery string\n\tName  string\n\n\t// An unset interval defaults to 1m\n\tInterval time.Duration\n\n\t// An empty value for Protocols means \"all\"\n\tProtocols []Protocol\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/search-blitz#Protocol",
-              "documentation": {
-                "identifier": "Protocol",
-                "newPage": false,
-                "searchKey": "main.Protocol",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Protocol uint8"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Protocol uint8\n```\n\nProtocol represents either the graphQL Protocol or the streaming Protocol \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/search-blitz#Protocol.UnmarshalYAML",
-                    "documentation": {
-                      "identifier": "Protocol.UnmarshalYAML",
-                      "newPage": false,
-                      "searchKey": "main.Protocol.UnmarshalYAML",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Protocol) UnmarshalYAML(unmarshal func(interface{}) error) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Protocol) UnmarshalYAML(unmarshal func(interface{}) error) error\n```\n\n"
                     },
                     "children": null
                   }
@@ -562,6 +609,7 @@
                 "newPage": false,
                 "searchKey": "main.genericClient",
                 "tags": [
+                  "interface",
                   "private"
                 ]
               },
@@ -578,12 +626,36 @@
           },
           {
             "node": {
+              "pathID": "/internal/cmd/search-blitz#metrics",
+              "documentation": {
+                "identifier": "metrics",
+                "newPage": false,
+                "searchKey": "main.metrics",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type metrics struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype metrics struct {\n\ttook  int64\n\ttrace string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/cmd/search-blitz#rawResult",
               "documentation": {
                 "identifier": "rawResult",
                 "newPage": false,
                 "searchKey": "main.rawResult",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -606,6 +678,7 @@
                 "newPage": false,
                 "searchKey": "main.result",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -628,6 +701,7 @@
                 "newPage": false,
                 "searchKey": "main.searchResults",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -650,6 +724,7 @@
                 "newPage": false,
                 "searchKey": "main.searchResultsAlert",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -666,34 +741,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/search-blitz#metrics",
-              "documentation": {
-                "identifier": "metrics",
-                "newPage": false,
-                "searchKey": "main.metrics",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type metrics struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype metrics struct {\n\ttook  int64\n\ttrace string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/cmd/search-blitz#streamClient",
               "documentation": {
                 "identifier": "streamClient",
                 "newPage": false,
                 "searchKey": "main.streamClient",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -714,6 +768,7 @@
                       "newPage": false,
                       "searchKey": "main.newStreamClient",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -730,34 +785,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/cmd/search-blitz#streamClient.search",
-                    "documentation": {
-                      "identifier": "streamClient.search",
-                      "newPage": false,
-                      "searchKey": "main.streamClient.search",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *streamClient) search(ctx context.Context, query, queryName string) (*metrics, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *streamClient) search(ctx context.Context, query, queryName string) (*metrics, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/cmd/search-blitz#streamClient.clientType",
                     "documentation": {
                       "identifier": "streamClient.clientType",
                       "newPage": false,
                       "searchKey": "main.streamClient.clientType",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -768,6 +802,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (s *streamClient) clientType() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/search-blitz#streamClient.search",
+                    "documentation": {
+                      "identifier": "streamClient.search",
+                      "newPage": false,
+                      "searchKey": "main.streamClient.search",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *streamClient) search(ctx context.Context, query, queryName string) (*metrics, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *streamClient) search(ctx context.Context, query, queryName string) (*metrics, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -786,6 +843,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -800,12 +858,35 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/cmd/search-blitz#SignalSensitiveContext",
+              "documentation": {
+                "identifier": "SignalSensitiveContext",
+                "newPage": false,
+                "searchKey": "main.SignalSensitiveContext",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SignalSensitiveContext() (ctx context.Context, cleanup func())"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SignalSensitiveContext() (ctx context.Context, cleanup func())\n```\n\nSignalSensitiveContext returns a background context that is canceled after receiving an interrupt or terminate signal. A second signal will abort the program. This function returns the context and a function that should be  deferred by the caller to clean up internal channels. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/cmd/search-blitz#health",
               "documentation": {
                 "identifier": "health",
                 "newPage": false,
                 "searchKey": "main.health",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -822,12 +903,59 @@
           },
           {
             "node": {
+              "pathID": "/internal/cmd/search-blitz#init.prometheus.go",
+              "documentation": {
+                "identifier": "init.prometheus.go",
+                "newPage": false,
+                "searchKey": "main.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/search-blitz#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/cmd/search-blitz#run",
               "documentation": {
                 "identifier": "run",
                 "newPage": false,
                 "searchKey": "main.run",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -850,6 +978,7 @@
                 "newPage": false,
                 "searchKey": "main.startServer",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -860,70 +989,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc startServer(wg *sync.WaitGroup) *http.Server\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/search-blitz#main",
-              "documentation": {
-                "identifier": "main",
-                "newPage": false,
-                "searchKey": "main.main",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func main()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc main()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/search-blitz#SignalSensitiveContext",
-              "documentation": {
-                "identifier": "SignalSensitiveContext",
-                "newPage": false,
-                "searchKey": "main.SignalSensitiveContext",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SignalSensitiveContext() (ctx context.Context, cleanup func())"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SignalSensitiveContext() (ctx context.Context, cleanup func())\n```\n\nSignalSensitiveContext returns a background context that is canceled after receiving an interrupt or terminate signal. A second signal will abort the program. This function returns the context and a function that should be  deferred by the caller to clean up internal channels. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/search-blitz#init.prometheus.go",
-              "documentation": {
-                "identifier": "init.prometheus.go",
-                "newPage": false,
-                "searchKey": "main.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
               },
               "children": null
             }

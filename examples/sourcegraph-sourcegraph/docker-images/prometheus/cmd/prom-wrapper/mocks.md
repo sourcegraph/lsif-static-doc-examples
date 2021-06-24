@@ -3,6 +3,204 @@
 ## Index
 
 * [Types](#type)
+    * [type APIAlertManagersFunc struct](#APIAlertManagersFunc)
+        * [func (f *APIAlertManagersFunc) History() []APIAlertManagersFuncCall](#APIAlertManagersFunc.History)
+        * [func (f *APIAlertManagersFunc) PushHook(hook func(context.Context) (v1.AlertManagersResult, error))](#APIAlertManagersFunc.PushHook)
+        * [func (f *APIAlertManagersFunc) PushReturn(r0 v1.AlertManagersResult, r1 error)](#APIAlertManagersFunc.PushReturn)
+        * [func (f *APIAlertManagersFunc) SetDefaultHook(hook func(context.Context) (v1.AlertManagersResult, error))](#APIAlertManagersFunc.SetDefaultHook)
+        * [func (f *APIAlertManagersFunc) SetDefaultReturn(r0 v1.AlertManagersResult, r1 error)](#APIAlertManagersFunc.SetDefaultReturn)
+        * [func (f *APIAlertManagersFunc) appendCall(r0 APIAlertManagersFuncCall)](#APIAlertManagersFunc.appendCall)
+        * [func (f *APIAlertManagersFunc) nextHook() func(context.Context) (v1.AlertManagersResult, error)](#APIAlertManagersFunc.nextHook)
+    * [type APIAlertManagersFuncCall struct](#APIAlertManagersFuncCall)
+        * [func (c APIAlertManagersFuncCall) Args() []interface{}](#APIAlertManagersFuncCall.Args)
+        * [func (c APIAlertManagersFuncCall) Results() []interface{}](#APIAlertManagersFuncCall.Results)
+    * [type APIAlertsFunc struct](#APIAlertsFunc)
+        * [func (f *APIAlertsFunc) History() []APIAlertsFuncCall](#APIAlertsFunc.History)
+        * [func (f *APIAlertsFunc) PushHook(hook func(context.Context) (v1.AlertsResult, error))](#APIAlertsFunc.PushHook)
+        * [func (f *APIAlertsFunc) PushReturn(r0 v1.AlertsResult, r1 error)](#APIAlertsFunc.PushReturn)
+        * [func (f *APIAlertsFunc) SetDefaultHook(hook func(context.Context) (v1.AlertsResult, error))](#APIAlertsFunc.SetDefaultHook)
+        * [func (f *APIAlertsFunc) SetDefaultReturn(r0 v1.AlertsResult, r1 error)](#APIAlertsFunc.SetDefaultReturn)
+        * [func (f *APIAlertsFunc) appendCall(r0 APIAlertsFuncCall)](#APIAlertsFunc.appendCall)
+        * [func (f *APIAlertsFunc) nextHook() func(context.Context) (v1.AlertsResult, error)](#APIAlertsFunc.nextHook)
+    * [type APIAlertsFuncCall struct](#APIAlertsFuncCall)
+        * [func (c APIAlertsFuncCall) Args() []interface{}](#APIAlertsFuncCall.Args)
+        * [func (c APIAlertsFuncCall) Results() []interface{}](#APIAlertsFuncCall.Results)
+    * [type APICleanTombstonesFunc struct](#APICleanTombstonesFunc)
+        * [func (f *APICleanTombstonesFunc) History() []APICleanTombstonesFuncCall](#APICleanTombstonesFunc.History)
+        * [func (f *APICleanTombstonesFunc) PushHook(hook func(context.Context) error)](#APICleanTombstonesFunc.PushHook)
+        * [func (f *APICleanTombstonesFunc) PushReturn(r0 error)](#APICleanTombstonesFunc.PushReturn)
+        * [func (f *APICleanTombstonesFunc) SetDefaultHook(hook func(context.Context) error)](#APICleanTombstonesFunc.SetDefaultHook)
+        * [func (f *APICleanTombstonesFunc) SetDefaultReturn(r0 error)](#APICleanTombstonesFunc.SetDefaultReturn)
+        * [func (f *APICleanTombstonesFunc) appendCall(r0 APICleanTombstonesFuncCall)](#APICleanTombstonesFunc.appendCall)
+        * [func (f *APICleanTombstonesFunc) nextHook() func(context.Context) error](#APICleanTombstonesFunc.nextHook)
+    * [type APICleanTombstonesFuncCall struct](#APICleanTombstonesFuncCall)
+        * [func (c APICleanTombstonesFuncCall) Args() []interface{}](#APICleanTombstonesFuncCall.Args)
+        * [func (c APICleanTombstonesFuncCall) Results() []interface{}](#APICleanTombstonesFuncCall.Results)
+    * [type APIConfigFunc struct](#APIConfigFunc)
+        * [func (f *APIConfigFunc) History() []APIConfigFuncCall](#APIConfigFunc.History)
+        * [func (f *APIConfigFunc) PushHook(hook func(context.Context) (v1.ConfigResult, error))](#APIConfigFunc.PushHook)
+        * [func (f *APIConfigFunc) PushReturn(r0 v1.ConfigResult, r1 error)](#APIConfigFunc.PushReturn)
+        * [func (f *APIConfigFunc) SetDefaultHook(hook func(context.Context) (v1.ConfigResult, error))](#APIConfigFunc.SetDefaultHook)
+        * [func (f *APIConfigFunc) SetDefaultReturn(r0 v1.ConfigResult, r1 error)](#APIConfigFunc.SetDefaultReturn)
+        * [func (f *APIConfigFunc) appendCall(r0 APIConfigFuncCall)](#APIConfigFunc.appendCall)
+        * [func (f *APIConfigFunc) nextHook() func(context.Context) (v1.ConfigResult, error)](#APIConfigFunc.nextHook)
+    * [type APIConfigFuncCall struct](#APIConfigFuncCall)
+        * [func (c APIConfigFuncCall) Args() []interface{}](#APIConfigFuncCall.Args)
+        * [func (c APIConfigFuncCall) Results() []interface{}](#APIConfigFuncCall.Results)
+    * [type APIDeleteSeriesFunc struct](#APIDeleteSeriesFunc)
+        * [func (f *APIDeleteSeriesFunc) History() []APIDeleteSeriesFuncCall](#APIDeleteSeriesFunc.History)
+        * [func (f *APIDeleteSeriesFunc) PushHook(hook func(context.Context, []string, time.Time, time.Time) error)](#APIDeleteSeriesFunc.PushHook)
+        * [func (f *APIDeleteSeriesFunc) PushReturn(r0 error)](#APIDeleteSeriesFunc.PushReturn)
+        * [func (f *APIDeleteSeriesFunc) SetDefaultHook(hook func(context.Context, []string, time.Time, time.Time) error)](#APIDeleteSeriesFunc.SetDefaultHook)
+        * [func (f *APIDeleteSeriesFunc) SetDefaultReturn(r0 error)](#APIDeleteSeriesFunc.SetDefaultReturn)
+        * [func (f *APIDeleteSeriesFunc) appendCall(r0 APIDeleteSeriesFuncCall)](#APIDeleteSeriesFunc.appendCall)
+        * [func (f *APIDeleteSeriesFunc) nextHook() func(context.Context, []string, time.Time, time.Time) error](#APIDeleteSeriesFunc.nextHook)
+    * [type APIDeleteSeriesFuncCall struct](#APIDeleteSeriesFuncCall)
+        * [func (c APIDeleteSeriesFuncCall) Args() []interface{}](#APIDeleteSeriesFuncCall.Args)
+        * [func (c APIDeleteSeriesFuncCall) Results() []interface{}](#APIDeleteSeriesFuncCall.Results)
+    * [type APIFlagsFunc struct](#APIFlagsFunc)
+        * [func (f *APIFlagsFunc) History() []APIFlagsFuncCall](#APIFlagsFunc.History)
+        * [func (f *APIFlagsFunc) PushHook(hook func(context.Context) (v1.FlagsResult, error))](#APIFlagsFunc.PushHook)
+        * [func (f *APIFlagsFunc) PushReturn(r0 v1.FlagsResult, r1 error)](#APIFlagsFunc.PushReturn)
+        * [func (f *APIFlagsFunc) SetDefaultHook(hook func(context.Context) (v1.FlagsResult, error))](#APIFlagsFunc.SetDefaultHook)
+        * [func (f *APIFlagsFunc) SetDefaultReturn(r0 v1.FlagsResult, r1 error)](#APIFlagsFunc.SetDefaultReturn)
+        * [func (f *APIFlagsFunc) appendCall(r0 APIFlagsFuncCall)](#APIFlagsFunc.appendCall)
+        * [func (f *APIFlagsFunc) nextHook() func(context.Context) (v1.FlagsResult, error)](#APIFlagsFunc.nextHook)
+    * [type APIFlagsFuncCall struct](#APIFlagsFuncCall)
+        * [func (c APIFlagsFuncCall) Args() []interface{}](#APIFlagsFuncCall.Args)
+        * [func (c APIFlagsFuncCall) Results() []interface{}](#APIFlagsFuncCall.Results)
+    * [type APILabelNamesFunc struct](#APILabelNamesFunc)
+        * [func (f *APILabelNamesFunc) History() []APILabelNamesFuncCall](#APILabelNamesFunc.History)
+        * [func (f *APILabelNamesFunc) PushHook(hook func(context.Context, time.Time, time.Time) ([]string, v1.Warnings, error))](#APILabelNamesFunc.PushHook)
+        * [func (f *APILabelNamesFunc) PushReturn(r0 []string, r1 v1.Warnings, r2 error)](#APILabelNamesFunc.PushReturn)
+        * [func (f *APILabelNamesFunc) SetDefaultHook(hook func(context.Context, time.Time, time.Time) ([]string, v1.Warnings, error))](#APILabelNamesFunc.SetDefaultHook)
+        * [func (f *APILabelNamesFunc) SetDefaultReturn(r0 []string, r1 v1.Warnings, r2 error)](#APILabelNamesFunc.SetDefaultReturn)
+        * [func (f *APILabelNamesFunc) appendCall(r0 APILabelNamesFuncCall)](#APILabelNamesFunc.appendCall)
+        * [func (f *APILabelNamesFunc) nextHook() func(context.Context, time.Time, time.Time) ([]string, v1.Warnings, error)](#APILabelNamesFunc.nextHook)
+    * [type APILabelNamesFuncCall struct](#APILabelNamesFuncCall)
+        * [func (c APILabelNamesFuncCall) Args() []interface{}](#APILabelNamesFuncCall.Args)
+        * [func (c APILabelNamesFuncCall) Results() []interface{}](#APILabelNamesFuncCall.Results)
+    * [type APILabelValuesFunc struct](#APILabelValuesFunc)
+        * [func (f *APILabelValuesFunc) History() []APILabelValuesFuncCall](#APILabelValuesFunc.History)
+        * [func (f *APILabelValuesFunc) PushHook(hook func(context.Context, string, time.Time, time.Time) (model.LabelValues, v1.Warnings, error))](#APILabelValuesFunc.PushHook)
+        * [func (f *APILabelValuesFunc) PushReturn(r0 model.LabelValues, r1 v1.Warnings, r2 error)](#APILabelValuesFunc.PushReturn)
+        * [func (f *APILabelValuesFunc) SetDefaultHook(hook func(context.Context, string, time.Time, time.Time) (model.LabelValues, v1.Warnings, error))](#APILabelValuesFunc.SetDefaultHook)
+        * [func (f *APILabelValuesFunc) SetDefaultReturn(r0 model.LabelValues, r1 v1.Warnings, r2 error)](#APILabelValuesFunc.SetDefaultReturn)
+        * [func (f *APILabelValuesFunc) appendCall(r0 APILabelValuesFuncCall)](#APILabelValuesFunc.appendCall)
+        * [func (f *APILabelValuesFunc) nextHook() func(context.Context, string, time.Time, time.Time) (model.LabelValues, v1.Warnings, error)](#APILabelValuesFunc.nextHook)
+    * [type APILabelValuesFuncCall struct](#APILabelValuesFuncCall)
+        * [func (c APILabelValuesFuncCall) Args() []interface{}](#APILabelValuesFuncCall.Args)
+        * [func (c APILabelValuesFuncCall) Results() []interface{}](#APILabelValuesFuncCall.Results)
+    * [type APIMetadataFunc struct](#APIMetadataFunc)
+        * [func (f *APIMetadataFunc) History() []APIMetadataFuncCall](#APIMetadataFunc.History)
+        * [func (f *APIMetadataFunc) PushHook(hook func(context.Context, string, string) (map[string][]v1.Metadata, error))](#APIMetadataFunc.PushHook)
+        * [func (f *APIMetadataFunc) PushReturn(r0 map[string][]v1.Metadata, r1 error)](#APIMetadataFunc.PushReturn)
+        * [func (f *APIMetadataFunc) SetDefaultHook(hook func(context.Context, string, string) (map[string][]v1.Metadata, error))](#APIMetadataFunc.SetDefaultHook)
+        * [func (f *APIMetadataFunc) SetDefaultReturn(r0 map[string][]v1.Metadata, r1 error)](#APIMetadataFunc.SetDefaultReturn)
+        * [func (f *APIMetadataFunc) appendCall(r0 APIMetadataFuncCall)](#APIMetadataFunc.appendCall)
+        * [func (f *APIMetadataFunc) nextHook() func(context.Context, string, string) (map[string][]v1.Metadata, error)](#APIMetadataFunc.nextHook)
+    * [type APIMetadataFuncCall struct](#APIMetadataFuncCall)
+        * [func (c APIMetadataFuncCall) Args() []interface{}](#APIMetadataFuncCall.Args)
+        * [func (c APIMetadataFuncCall) Results() []interface{}](#APIMetadataFuncCall.Results)
+    * [type APIQueryFunc struct](#APIQueryFunc)
+        * [func (f *APIQueryFunc) History() []APIQueryFuncCall](#APIQueryFunc.History)
+        * [func (f *APIQueryFunc) PushHook(hook func(context.Context, string, time.Time) (model.Value, v1.Warnings, error))](#APIQueryFunc.PushHook)
+        * [func (f *APIQueryFunc) PushReturn(r0 model.Value, r1 v1.Warnings, r2 error)](#APIQueryFunc.PushReturn)
+        * [func (f *APIQueryFunc) SetDefaultHook(hook func(context.Context, string, time.Time) (model.Value, v1.Warnings, error))](#APIQueryFunc.SetDefaultHook)
+        * [func (f *APIQueryFunc) SetDefaultReturn(r0 model.Value, r1 v1.Warnings, r2 error)](#APIQueryFunc.SetDefaultReturn)
+        * [func (f *APIQueryFunc) appendCall(r0 APIQueryFuncCall)](#APIQueryFunc.appendCall)
+        * [func (f *APIQueryFunc) nextHook() func(context.Context, string, time.Time) (model.Value, v1.Warnings, error)](#APIQueryFunc.nextHook)
+    * [type APIQueryFuncCall struct](#APIQueryFuncCall)
+        * [func (c APIQueryFuncCall) Args() []interface{}](#APIQueryFuncCall.Args)
+        * [func (c APIQueryFuncCall) Results() []interface{}](#APIQueryFuncCall.Results)
+    * [type APIQueryRangeFunc struct](#APIQueryRangeFunc)
+        * [func (f *APIQueryRangeFunc) History() []APIQueryRangeFuncCall](#APIQueryRangeFunc.History)
+        * [func (f *APIQueryRangeFunc) PushHook(hook func(context.Context, string, v1.Range) (model.Value, v1.Warnings, error))](#APIQueryRangeFunc.PushHook)
+        * [func (f *APIQueryRangeFunc) PushReturn(r0 model.Value, r1 v1.Warnings, r2 error)](#APIQueryRangeFunc.PushReturn)
+        * [func (f *APIQueryRangeFunc) SetDefaultHook(hook func(context.Context, string, v1.Range) (model.Value, v1.Warnings, error))](#APIQueryRangeFunc.SetDefaultHook)
+        * [func (f *APIQueryRangeFunc) SetDefaultReturn(r0 model.Value, r1 v1.Warnings, r2 error)](#APIQueryRangeFunc.SetDefaultReturn)
+        * [func (f *APIQueryRangeFunc) appendCall(r0 APIQueryRangeFuncCall)](#APIQueryRangeFunc.appendCall)
+        * [func (f *APIQueryRangeFunc) nextHook() func(context.Context, string, v1.Range) (model.Value, v1.Warnings, error)](#APIQueryRangeFunc.nextHook)
+    * [type APIQueryRangeFuncCall struct](#APIQueryRangeFuncCall)
+        * [func (c APIQueryRangeFuncCall) Args() []interface{}](#APIQueryRangeFuncCall.Args)
+        * [func (c APIQueryRangeFuncCall) Results() []interface{}](#APIQueryRangeFuncCall.Results)
+    * [type APIRulesFunc struct](#APIRulesFunc)
+        * [func (f *APIRulesFunc) History() []APIRulesFuncCall](#APIRulesFunc.History)
+        * [func (f *APIRulesFunc) PushHook(hook func(context.Context) (v1.RulesResult, error))](#APIRulesFunc.PushHook)
+        * [func (f *APIRulesFunc) PushReturn(r0 v1.RulesResult, r1 error)](#APIRulesFunc.PushReturn)
+        * [func (f *APIRulesFunc) SetDefaultHook(hook func(context.Context) (v1.RulesResult, error))](#APIRulesFunc.SetDefaultHook)
+        * [func (f *APIRulesFunc) SetDefaultReturn(r0 v1.RulesResult, r1 error)](#APIRulesFunc.SetDefaultReturn)
+        * [func (f *APIRulesFunc) appendCall(r0 APIRulesFuncCall)](#APIRulesFunc.appendCall)
+        * [func (f *APIRulesFunc) nextHook() func(context.Context) (v1.RulesResult, error)](#APIRulesFunc.nextHook)
+    * [type APIRulesFuncCall struct](#APIRulesFuncCall)
+        * [func (c APIRulesFuncCall) Args() []interface{}](#APIRulesFuncCall.Args)
+        * [func (c APIRulesFuncCall) Results() []interface{}](#APIRulesFuncCall.Results)
+    * [type APIRuntimeinfoFunc struct](#APIRuntimeinfoFunc)
+        * [func (f *APIRuntimeinfoFunc) History() []APIRuntimeinfoFuncCall](#APIRuntimeinfoFunc.History)
+        * [func (f *APIRuntimeinfoFunc) PushHook(hook func(context.Context) (v1.RuntimeinfoResult, error))](#APIRuntimeinfoFunc.PushHook)
+        * [func (f *APIRuntimeinfoFunc) PushReturn(r0 v1.RuntimeinfoResult, r1 error)](#APIRuntimeinfoFunc.PushReturn)
+        * [func (f *APIRuntimeinfoFunc) SetDefaultHook(hook func(context.Context) (v1.RuntimeinfoResult, error))](#APIRuntimeinfoFunc.SetDefaultHook)
+        * [func (f *APIRuntimeinfoFunc) SetDefaultReturn(r0 v1.RuntimeinfoResult, r1 error)](#APIRuntimeinfoFunc.SetDefaultReturn)
+        * [func (f *APIRuntimeinfoFunc) appendCall(r0 APIRuntimeinfoFuncCall)](#APIRuntimeinfoFunc.appendCall)
+        * [func (f *APIRuntimeinfoFunc) nextHook() func(context.Context) (v1.RuntimeinfoResult, error)](#APIRuntimeinfoFunc.nextHook)
+    * [type APIRuntimeinfoFuncCall struct](#APIRuntimeinfoFuncCall)
+        * [func (c APIRuntimeinfoFuncCall) Args() []interface{}](#APIRuntimeinfoFuncCall.Args)
+        * [func (c APIRuntimeinfoFuncCall) Results() []interface{}](#APIRuntimeinfoFuncCall.Results)
+    * [type APISeriesFunc struct](#APISeriesFunc)
+        * [func (f *APISeriesFunc) History() []APISeriesFuncCall](#APISeriesFunc.History)
+        * [func (f *APISeriesFunc) PushHook(hook func(context.Context, []string, time.Time, time.Time) ([]model.LabelSet, v1.Warnings, error))](#APISeriesFunc.PushHook)
+        * [func (f *APISeriesFunc) PushReturn(r0 []model.LabelSet, r1 v1.Warnings, r2 error)](#APISeriesFunc.PushReturn)
+        * [func (f *APISeriesFunc) SetDefaultHook(hook func(context.Context, []string, time.Time, time.Time) ([]model.LabelSet, v1.Warnings, error))](#APISeriesFunc.SetDefaultHook)
+        * [func (f *APISeriesFunc) SetDefaultReturn(r0 []model.LabelSet, r1 v1.Warnings, r2 error)](#APISeriesFunc.SetDefaultReturn)
+        * [func (f *APISeriesFunc) appendCall(r0 APISeriesFuncCall)](#APISeriesFunc.appendCall)
+        * [func (f *APISeriesFunc) nextHook() func(context.Context, []string, time.Time, time.Time) ([]model.LabelSet, v1.Warnings, error)](#APISeriesFunc.nextHook)
+    * [type APISeriesFuncCall struct](#APISeriesFuncCall)
+        * [func (c APISeriesFuncCall) Args() []interface{}](#APISeriesFuncCall.Args)
+        * [func (c APISeriesFuncCall) Results() []interface{}](#APISeriesFuncCall.Results)
+    * [type APISnapshotFunc struct](#APISnapshotFunc)
+        * [func (f *APISnapshotFunc) History() []APISnapshotFuncCall](#APISnapshotFunc.History)
+        * [func (f *APISnapshotFunc) PushHook(hook func(context.Context, bool) (v1.SnapshotResult, error))](#APISnapshotFunc.PushHook)
+        * [func (f *APISnapshotFunc) PushReturn(r0 v1.SnapshotResult, r1 error)](#APISnapshotFunc.PushReturn)
+        * [func (f *APISnapshotFunc) SetDefaultHook(hook func(context.Context, bool) (v1.SnapshotResult, error))](#APISnapshotFunc.SetDefaultHook)
+        * [func (f *APISnapshotFunc) SetDefaultReturn(r0 v1.SnapshotResult, r1 error)](#APISnapshotFunc.SetDefaultReturn)
+        * [func (f *APISnapshotFunc) appendCall(r0 APISnapshotFuncCall)](#APISnapshotFunc.appendCall)
+        * [func (f *APISnapshotFunc) nextHook() func(context.Context, bool) (v1.SnapshotResult, error)](#APISnapshotFunc.nextHook)
+    * [type APISnapshotFuncCall struct](#APISnapshotFuncCall)
+        * [func (c APISnapshotFuncCall) Args() []interface{}](#APISnapshotFuncCall.Args)
+        * [func (c APISnapshotFuncCall) Results() []interface{}](#APISnapshotFuncCall.Results)
+    * [type APITSDBFunc struct](#APITSDBFunc)
+        * [func (f *APITSDBFunc) History() []APITSDBFuncCall](#APITSDBFunc.History)
+        * [func (f *APITSDBFunc) PushHook(hook func(context.Context) (v1.TSDBResult, error))](#APITSDBFunc.PushHook)
+        * [func (f *APITSDBFunc) PushReturn(r0 v1.TSDBResult, r1 error)](#APITSDBFunc.PushReturn)
+        * [func (f *APITSDBFunc) SetDefaultHook(hook func(context.Context) (v1.TSDBResult, error))](#APITSDBFunc.SetDefaultHook)
+        * [func (f *APITSDBFunc) SetDefaultReturn(r0 v1.TSDBResult, r1 error)](#APITSDBFunc.SetDefaultReturn)
+        * [func (f *APITSDBFunc) appendCall(r0 APITSDBFuncCall)](#APITSDBFunc.appendCall)
+        * [func (f *APITSDBFunc) nextHook() func(context.Context) (v1.TSDBResult, error)](#APITSDBFunc.nextHook)
+    * [type APITSDBFuncCall struct](#APITSDBFuncCall)
+        * [func (c APITSDBFuncCall) Args() []interface{}](#APITSDBFuncCall.Args)
+        * [func (c APITSDBFuncCall) Results() []interface{}](#APITSDBFuncCall.Results)
+    * [type APITargetsFunc struct](#APITargetsFunc)
+        * [func (f *APITargetsFunc) History() []APITargetsFuncCall](#APITargetsFunc.History)
+        * [func (f *APITargetsFunc) PushHook(hook func(context.Context) (v1.TargetsResult, error))](#APITargetsFunc.PushHook)
+        * [func (f *APITargetsFunc) PushReturn(r0 v1.TargetsResult, r1 error)](#APITargetsFunc.PushReturn)
+        * [func (f *APITargetsFunc) SetDefaultHook(hook func(context.Context) (v1.TargetsResult, error))](#APITargetsFunc.SetDefaultHook)
+        * [func (f *APITargetsFunc) SetDefaultReturn(r0 v1.TargetsResult, r1 error)](#APITargetsFunc.SetDefaultReturn)
+        * [func (f *APITargetsFunc) appendCall(r0 APITargetsFuncCall)](#APITargetsFunc.appendCall)
+        * [func (f *APITargetsFunc) nextHook() func(context.Context) (v1.TargetsResult, error)](#APITargetsFunc.nextHook)
+    * [type APITargetsFuncCall struct](#APITargetsFuncCall)
+        * [func (c APITargetsFuncCall) Args() []interface{}](#APITargetsFuncCall.Args)
+        * [func (c APITargetsFuncCall) Results() []interface{}](#APITargetsFuncCall.Results)
+    * [type APITargetsMetadataFunc struct](#APITargetsMetadataFunc)
+        * [func (f *APITargetsMetadataFunc) History() []APITargetsMetadataFuncCall](#APITargetsMetadataFunc.History)
+        * [func (f *APITargetsMetadataFunc) PushHook(hook func(context.Context, string, string, string) ([]v1.MetricMetadata, error))](#APITargetsMetadataFunc.PushHook)
+        * [func (f *APITargetsMetadataFunc) PushReturn(r0 []v1.MetricMetadata, r1 error)](#APITargetsMetadataFunc.PushReturn)
+        * [func (f *APITargetsMetadataFunc) SetDefaultHook(hook func(context.Context, string, string, string) ([]v1.MetricMetadata, error))](#APITargetsMetadataFunc.SetDefaultHook)
+        * [func (f *APITargetsMetadataFunc) SetDefaultReturn(r0 []v1.MetricMetadata, r1 error)](#APITargetsMetadataFunc.SetDefaultReturn)
+        * [func (f *APITargetsMetadataFunc) appendCall(r0 APITargetsMetadataFuncCall)](#APITargetsMetadataFunc.appendCall)
+        * [func (f *APITargetsMetadataFunc) nextHook() func(context.Context, string, string, string) ([]v1.MetricMetadata, error)](#APITargetsMetadataFunc.nextHook)
+    * [type APITargetsMetadataFuncCall struct](#APITargetsMetadataFuncCall)
+        * [func (c APITargetsMetadataFuncCall) Args() []interface{}](#APITargetsMetadataFuncCall.Args)
+        * [func (c APITargetsMetadataFuncCall) Results() []interface{}](#APITargetsMetadataFuncCall.Results)
     * [type MockAPI struct](#MockAPI)
         * [func NewMockAPI() *MockAPI](#NewMockAPI)
         * [func NewMockAPIFrom(i v1.API) *MockAPI](#NewMockAPIFrom)
@@ -24,212 +222,2863 @@
         * [func (m *MockAPI) TSDB(v0 context.Context) (v1.TSDBResult, error)](#MockAPI.TSDB)
         * [func (m *MockAPI) Targets(v0 context.Context) (v1.TargetsResult, error)](#MockAPI.Targets)
         * [func (m *MockAPI) TargetsMetadata(v0 context.Context, v1 string, v2 string, v3 string) ([]v1.MetricMetadata, error)](#MockAPI.TargetsMetadata)
-    * [type APIAlertManagersFunc struct](#APIAlertManagersFunc)
-        * [func (f *APIAlertManagersFunc) SetDefaultHook(hook func(context.Context) (v1.AlertManagersResult, error))](#APIAlertManagersFunc.SetDefaultHook)
-        * [func (f *APIAlertManagersFunc) PushHook(hook func(context.Context) (v1.AlertManagersResult, error))](#APIAlertManagersFunc.PushHook)
-        * [func (f *APIAlertManagersFunc) SetDefaultReturn(r0 v1.AlertManagersResult, r1 error)](#APIAlertManagersFunc.SetDefaultReturn)
-        * [func (f *APIAlertManagersFunc) PushReturn(r0 v1.AlertManagersResult, r1 error)](#APIAlertManagersFunc.PushReturn)
-        * [func (f *APIAlertManagersFunc) nextHook() func(context.Context) (v1.AlertManagersResult, error)](#APIAlertManagersFunc.nextHook)
-        * [func (f *APIAlertManagersFunc) appendCall(r0 APIAlertManagersFuncCall)](#APIAlertManagersFunc.appendCall)
-        * [func (f *APIAlertManagersFunc) History() []APIAlertManagersFuncCall](#APIAlertManagersFunc.History)
-    * [type APIAlertManagersFuncCall struct](#APIAlertManagersFuncCall)
-        * [func (c APIAlertManagersFuncCall) Args() []interface{}](#APIAlertManagersFuncCall.Args)
-        * [func (c APIAlertManagersFuncCall) Results() []interface{}](#APIAlertManagersFuncCall.Results)
-    * [type APIAlertsFunc struct](#APIAlertsFunc)
-        * [func (f *APIAlertsFunc) SetDefaultHook(hook func(context.Context) (v1.AlertsResult, error))](#APIAlertsFunc.SetDefaultHook)
-        * [func (f *APIAlertsFunc) PushHook(hook func(context.Context) (v1.AlertsResult, error))](#APIAlertsFunc.PushHook)
-        * [func (f *APIAlertsFunc) SetDefaultReturn(r0 v1.AlertsResult, r1 error)](#APIAlertsFunc.SetDefaultReturn)
-        * [func (f *APIAlertsFunc) PushReturn(r0 v1.AlertsResult, r1 error)](#APIAlertsFunc.PushReturn)
-        * [func (f *APIAlertsFunc) nextHook() func(context.Context) (v1.AlertsResult, error)](#APIAlertsFunc.nextHook)
-        * [func (f *APIAlertsFunc) appendCall(r0 APIAlertsFuncCall)](#APIAlertsFunc.appendCall)
-        * [func (f *APIAlertsFunc) History() []APIAlertsFuncCall](#APIAlertsFunc.History)
-    * [type APIAlertsFuncCall struct](#APIAlertsFuncCall)
-        * [func (c APIAlertsFuncCall) Args() []interface{}](#APIAlertsFuncCall.Args)
-        * [func (c APIAlertsFuncCall) Results() []interface{}](#APIAlertsFuncCall.Results)
-    * [type APICleanTombstonesFunc struct](#APICleanTombstonesFunc)
-        * [func (f *APICleanTombstonesFunc) SetDefaultHook(hook func(context.Context) error)](#APICleanTombstonesFunc.SetDefaultHook)
-        * [func (f *APICleanTombstonesFunc) PushHook(hook func(context.Context) error)](#APICleanTombstonesFunc.PushHook)
-        * [func (f *APICleanTombstonesFunc) SetDefaultReturn(r0 error)](#APICleanTombstonesFunc.SetDefaultReturn)
-        * [func (f *APICleanTombstonesFunc) PushReturn(r0 error)](#APICleanTombstonesFunc.PushReturn)
-        * [func (f *APICleanTombstonesFunc) nextHook() func(context.Context) error](#APICleanTombstonesFunc.nextHook)
-        * [func (f *APICleanTombstonesFunc) appendCall(r0 APICleanTombstonesFuncCall)](#APICleanTombstonesFunc.appendCall)
-        * [func (f *APICleanTombstonesFunc) History() []APICleanTombstonesFuncCall](#APICleanTombstonesFunc.History)
-    * [type APICleanTombstonesFuncCall struct](#APICleanTombstonesFuncCall)
-        * [func (c APICleanTombstonesFuncCall) Args() []interface{}](#APICleanTombstonesFuncCall.Args)
-        * [func (c APICleanTombstonesFuncCall) Results() []interface{}](#APICleanTombstonesFuncCall.Results)
-    * [type APIConfigFunc struct](#APIConfigFunc)
-        * [func (f *APIConfigFunc) SetDefaultHook(hook func(context.Context) (v1.ConfigResult, error))](#APIConfigFunc.SetDefaultHook)
-        * [func (f *APIConfigFunc) PushHook(hook func(context.Context) (v1.ConfigResult, error))](#APIConfigFunc.PushHook)
-        * [func (f *APIConfigFunc) SetDefaultReturn(r0 v1.ConfigResult, r1 error)](#APIConfigFunc.SetDefaultReturn)
-        * [func (f *APIConfigFunc) PushReturn(r0 v1.ConfigResult, r1 error)](#APIConfigFunc.PushReturn)
-        * [func (f *APIConfigFunc) nextHook() func(context.Context) (v1.ConfigResult, error)](#APIConfigFunc.nextHook)
-        * [func (f *APIConfigFunc) appendCall(r0 APIConfigFuncCall)](#APIConfigFunc.appendCall)
-        * [func (f *APIConfigFunc) History() []APIConfigFuncCall](#APIConfigFunc.History)
-    * [type APIConfigFuncCall struct](#APIConfigFuncCall)
-        * [func (c APIConfigFuncCall) Args() []interface{}](#APIConfigFuncCall.Args)
-        * [func (c APIConfigFuncCall) Results() []interface{}](#APIConfigFuncCall.Results)
-    * [type APIDeleteSeriesFunc struct](#APIDeleteSeriesFunc)
-        * [func (f *APIDeleteSeriesFunc) SetDefaultHook(hook func(context.Context, []string, time.Time, time.Time) error)](#APIDeleteSeriesFunc.SetDefaultHook)
-        * [func (f *APIDeleteSeriesFunc) PushHook(hook func(context.Context, []string, time.Time, time.Time) error)](#APIDeleteSeriesFunc.PushHook)
-        * [func (f *APIDeleteSeriesFunc) SetDefaultReturn(r0 error)](#APIDeleteSeriesFunc.SetDefaultReturn)
-        * [func (f *APIDeleteSeriesFunc) PushReturn(r0 error)](#APIDeleteSeriesFunc.PushReturn)
-        * [func (f *APIDeleteSeriesFunc) nextHook() func(context.Context, []string, time.Time, time.Time) error](#APIDeleteSeriesFunc.nextHook)
-        * [func (f *APIDeleteSeriesFunc) appendCall(r0 APIDeleteSeriesFuncCall)](#APIDeleteSeriesFunc.appendCall)
-        * [func (f *APIDeleteSeriesFunc) History() []APIDeleteSeriesFuncCall](#APIDeleteSeriesFunc.History)
-    * [type APIDeleteSeriesFuncCall struct](#APIDeleteSeriesFuncCall)
-        * [func (c APIDeleteSeriesFuncCall) Args() []interface{}](#APIDeleteSeriesFuncCall.Args)
-        * [func (c APIDeleteSeriesFuncCall) Results() []interface{}](#APIDeleteSeriesFuncCall.Results)
-    * [type APIFlagsFunc struct](#APIFlagsFunc)
-        * [func (f *APIFlagsFunc) SetDefaultHook(hook func(context.Context) (v1.FlagsResult, error))](#APIFlagsFunc.SetDefaultHook)
-        * [func (f *APIFlagsFunc) PushHook(hook func(context.Context) (v1.FlagsResult, error))](#APIFlagsFunc.PushHook)
-        * [func (f *APIFlagsFunc) SetDefaultReturn(r0 v1.FlagsResult, r1 error)](#APIFlagsFunc.SetDefaultReturn)
-        * [func (f *APIFlagsFunc) PushReturn(r0 v1.FlagsResult, r1 error)](#APIFlagsFunc.PushReturn)
-        * [func (f *APIFlagsFunc) nextHook() func(context.Context) (v1.FlagsResult, error)](#APIFlagsFunc.nextHook)
-        * [func (f *APIFlagsFunc) appendCall(r0 APIFlagsFuncCall)](#APIFlagsFunc.appendCall)
-        * [func (f *APIFlagsFunc) History() []APIFlagsFuncCall](#APIFlagsFunc.History)
-    * [type APIFlagsFuncCall struct](#APIFlagsFuncCall)
-        * [func (c APIFlagsFuncCall) Args() []interface{}](#APIFlagsFuncCall.Args)
-        * [func (c APIFlagsFuncCall) Results() []interface{}](#APIFlagsFuncCall.Results)
-    * [type APILabelNamesFunc struct](#APILabelNamesFunc)
-        * [func (f *APILabelNamesFunc) SetDefaultHook(hook func(context.Context, time.Time, time.Time) ([]string, v1.Warnings, error))](#APILabelNamesFunc.SetDefaultHook)
-        * [func (f *APILabelNamesFunc) PushHook(hook func(context.Context, time.Time, time.Time) ([]string, v1.Warnings, error))](#APILabelNamesFunc.PushHook)
-        * [func (f *APILabelNamesFunc) SetDefaultReturn(r0 []string, r1 v1.Warnings, r2 error)](#APILabelNamesFunc.SetDefaultReturn)
-        * [func (f *APILabelNamesFunc) PushReturn(r0 []string, r1 v1.Warnings, r2 error)](#APILabelNamesFunc.PushReturn)
-        * [func (f *APILabelNamesFunc) nextHook() func(context.Context, time.Time, time.Time) ([]string, v1.Warnings, error)](#APILabelNamesFunc.nextHook)
-        * [func (f *APILabelNamesFunc) appendCall(r0 APILabelNamesFuncCall)](#APILabelNamesFunc.appendCall)
-        * [func (f *APILabelNamesFunc) History() []APILabelNamesFuncCall](#APILabelNamesFunc.History)
-    * [type APILabelNamesFuncCall struct](#APILabelNamesFuncCall)
-        * [func (c APILabelNamesFuncCall) Args() []interface{}](#APILabelNamesFuncCall.Args)
-        * [func (c APILabelNamesFuncCall) Results() []interface{}](#APILabelNamesFuncCall.Results)
-    * [type APILabelValuesFunc struct](#APILabelValuesFunc)
-        * [func (f *APILabelValuesFunc) SetDefaultHook(hook func(context.Context, string, time.Time, time.Time) (model.LabelValues, v1.Warnings, error))](#APILabelValuesFunc.SetDefaultHook)
-        * [func (f *APILabelValuesFunc) PushHook(hook func(context.Context, string, time.Time, time.Time) (model.LabelValues, v1.Warnings, error))](#APILabelValuesFunc.PushHook)
-        * [func (f *APILabelValuesFunc) SetDefaultReturn(r0 model.LabelValues, r1 v1.Warnings, r2 error)](#APILabelValuesFunc.SetDefaultReturn)
-        * [func (f *APILabelValuesFunc) PushReturn(r0 model.LabelValues, r1 v1.Warnings, r2 error)](#APILabelValuesFunc.PushReturn)
-        * [func (f *APILabelValuesFunc) nextHook() func(context.Context, string, time.Time, time.Time) (model.LabelValues, v1.Warnings, error)](#APILabelValuesFunc.nextHook)
-        * [func (f *APILabelValuesFunc) appendCall(r0 APILabelValuesFuncCall)](#APILabelValuesFunc.appendCall)
-        * [func (f *APILabelValuesFunc) History() []APILabelValuesFuncCall](#APILabelValuesFunc.History)
-    * [type APILabelValuesFuncCall struct](#APILabelValuesFuncCall)
-        * [func (c APILabelValuesFuncCall) Args() []interface{}](#APILabelValuesFuncCall.Args)
-        * [func (c APILabelValuesFuncCall) Results() []interface{}](#APILabelValuesFuncCall.Results)
-    * [type APIMetadataFunc struct](#APIMetadataFunc)
-        * [func (f *APIMetadataFunc) SetDefaultHook(hook func(context.Context, string, string) (map[string][]v1.Metadata, error))](#APIMetadataFunc.SetDefaultHook)
-        * [func (f *APIMetadataFunc) PushHook(hook func(context.Context, string, string) (map[string][]v1.Metadata, error))](#APIMetadataFunc.PushHook)
-        * [func (f *APIMetadataFunc) SetDefaultReturn(r0 map[string][]v1.Metadata, r1 error)](#APIMetadataFunc.SetDefaultReturn)
-        * [func (f *APIMetadataFunc) PushReturn(r0 map[string][]v1.Metadata, r1 error)](#APIMetadataFunc.PushReturn)
-        * [func (f *APIMetadataFunc) nextHook() func(context.Context, string, string) (map[string][]v1.Metadata, error)](#APIMetadataFunc.nextHook)
-        * [func (f *APIMetadataFunc) appendCall(r0 APIMetadataFuncCall)](#APIMetadataFunc.appendCall)
-        * [func (f *APIMetadataFunc) History() []APIMetadataFuncCall](#APIMetadataFunc.History)
-    * [type APIMetadataFuncCall struct](#APIMetadataFuncCall)
-        * [func (c APIMetadataFuncCall) Args() []interface{}](#APIMetadataFuncCall.Args)
-        * [func (c APIMetadataFuncCall) Results() []interface{}](#APIMetadataFuncCall.Results)
-    * [type APIQueryFunc struct](#APIQueryFunc)
-        * [func (f *APIQueryFunc) SetDefaultHook(hook func(context.Context, string, time.Time) (model.Value, v1.Warnings, error))](#APIQueryFunc.SetDefaultHook)
-        * [func (f *APIQueryFunc) PushHook(hook func(context.Context, string, time.Time) (model.Value, v1.Warnings, error))](#APIQueryFunc.PushHook)
-        * [func (f *APIQueryFunc) SetDefaultReturn(r0 model.Value, r1 v1.Warnings, r2 error)](#APIQueryFunc.SetDefaultReturn)
-        * [func (f *APIQueryFunc) PushReturn(r0 model.Value, r1 v1.Warnings, r2 error)](#APIQueryFunc.PushReturn)
-        * [func (f *APIQueryFunc) nextHook() func(context.Context, string, time.Time) (model.Value, v1.Warnings, error)](#APIQueryFunc.nextHook)
-        * [func (f *APIQueryFunc) appendCall(r0 APIQueryFuncCall)](#APIQueryFunc.appendCall)
-        * [func (f *APIQueryFunc) History() []APIQueryFuncCall](#APIQueryFunc.History)
-    * [type APIQueryFuncCall struct](#APIQueryFuncCall)
-        * [func (c APIQueryFuncCall) Args() []interface{}](#APIQueryFuncCall.Args)
-        * [func (c APIQueryFuncCall) Results() []interface{}](#APIQueryFuncCall.Results)
-    * [type APIQueryRangeFunc struct](#APIQueryRangeFunc)
-        * [func (f *APIQueryRangeFunc) SetDefaultHook(hook func(context.Context, string, v1.Range) (model.Value, v1.Warnings, error))](#APIQueryRangeFunc.SetDefaultHook)
-        * [func (f *APIQueryRangeFunc) PushHook(hook func(context.Context, string, v1.Range) (model.Value, v1.Warnings, error))](#APIQueryRangeFunc.PushHook)
-        * [func (f *APIQueryRangeFunc) SetDefaultReturn(r0 model.Value, r1 v1.Warnings, r2 error)](#APIQueryRangeFunc.SetDefaultReturn)
-        * [func (f *APIQueryRangeFunc) PushReturn(r0 model.Value, r1 v1.Warnings, r2 error)](#APIQueryRangeFunc.PushReturn)
-        * [func (f *APIQueryRangeFunc) nextHook() func(context.Context, string, v1.Range) (model.Value, v1.Warnings, error)](#APIQueryRangeFunc.nextHook)
-        * [func (f *APIQueryRangeFunc) appendCall(r0 APIQueryRangeFuncCall)](#APIQueryRangeFunc.appendCall)
-        * [func (f *APIQueryRangeFunc) History() []APIQueryRangeFuncCall](#APIQueryRangeFunc.History)
-    * [type APIQueryRangeFuncCall struct](#APIQueryRangeFuncCall)
-        * [func (c APIQueryRangeFuncCall) Args() []interface{}](#APIQueryRangeFuncCall.Args)
-        * [func (c APIQueryRangeFuncCall) Results() []interface{}](#APIQueryRangeFuncCall.Results)
-    * [type APIRulesFunc struct](#APIRulesFunc)
-        * [func (f *APIRulesFunc) SetDefaultHook(hook func(context.Context) (v1.RulesResult, error))](#APIRulesFunc.SetDefaultHook)
-        * [func (f *APIRulesFunc) PushHook(hook func(context.Context) (v1.RulesResult, error))](#APIRulesFunc.PushHook)
-        * [func (f *APIRulesFunc) SetDefaultReturn(r0 v1.RulesResult, r1 error)](#APIRulesFunc.SetDefaultReturn)
-        * [func (f *APIRulesFunc) PushReturn(r0 v1.RulesResult, r1 error)](#APIRulesFunc.PushReturn)
-        * [func (f *APIRulesFunc) nextHook() func(context.Context) (v1.RulesResult, error)](#APIRulesFunc.nextHook)
-        * [func (f *APIRulesFunc) appendCall(r0 APIRulesFuncCall)](#APIRulesFunc.appendCall)
-        * [func (f *APIRulesFunc) History() []APIRulesFuncCall](#APIRulesFunc.History)
-    * [type APIRulesFuncCall struct](#APIRulesFuncCall)
-        * [func (c APIRulesFuncCall) Args() []interface{}](#APIRulesFuncCall.Args)
-        * [func (c APIRulesFuncCall) Results() []interface{}](#APIRulesFuncCall.Results)
-    * [type APIRuntimeinfoFunc struct](#APIRuntimeinfoFunc)
-        * [func (f *APIRuntimeinfoFunc) SetDefaultHook(hook func(context.Context) (v1.RuntimeinfoResult, error))](#APIRuntimeinfoFunc.SetDefaultHook)
-        * [func (f *APIRuntimeinfoFunc) PushHook(hook func(context.Context) (v1.RuntimeinfoResult, error))](#APIRuntimeinfoFunc.PushHook)
-        * [func (f *APIRuntimeinfoFunc) SetDefaultReturn(r0 v1.RuntimeinfoResult, r1 error)](#APIRuntimeinfoFunc.SetDefaultReturn)
-        * [func (f *APIRuntimeinfoFunc) PushReturn(r0 v1.RuntimeinfoResult, r1 error)](#APIRuntimeinfoFunc.PushReturn)
-        * [func (f *APIRuntimeinfoFunc) nextHook() func(context.Context) (v1.RuntimeinfoResult, error)](#APIRuntimeinfoFunc.nextHook)
-        * [func (f *APIRuntimeinfoFunc) appendCall(r0 APIRuntimeinfoFuncCall)](#APIRuntimeinfoFunc.appendCall)
-        * [func (f *APIRuntimeinfoFunc) History() []APIRuntimeinfoFuncCall](#APIRuntimeinfoFunc.History)
-    * [type APIRuntimeinfoFuncCall struct](#APIRuntimeinfoFuncCall)
-        * [func (c APIRuntimeinfoFuncCall) Args() []interface{}](#APIRuntimeinfoFuncCall.Args)
-        * [func (c APIRuntimeinfoFuncCall) Results() []interface{}](#APIRuntimeinfoFuncCall.Results)
-    * [type APISeriesFunc struct](#APISeriesFunc)
-        * [func (f *APISeriesFunc) SetDefaultHook(hook func(context.Context, []string, time.Time, time.Time) ([]model.LabelSet, v1.Warnings, error))](#APISeriesFunc.SetDefaultHook)
-        * [func (f *APISeriesFunc) PushHook(hook func(context.Context, []string, time.Time, time.Time) ([]model.LabelSet, v1.Warnings, error))](#APISeriesFunc.PushHook)
-        * [func (f *APISeriesFunc) SetDefaultReturn(r0 []model.LabelSet, r1 v1.Warnings, r2 error)](#APISeriesFunc.SetDefaultReturn)
-        * [func (f *APISeriesFunc) PushReturn(r0 []model.LabelSet, r1 v1.Warnings, r2 error)](#APISeriesFunc.PushReturn)
-        * [func (f *APISeriesFunc) nextHook() func(context.Context, []string, time.Time, time.Time) ([]model.LabelSet, v1.Warnings, error)](#APISeriesFunc.nextHook)
-        * [func (f *APISeriesFunc) appendCall(r0 APISeriesFuncCall)](#APISeriesFunc.appendCall)
-        * [func (f *APISeriesFunc) History() []APISeriesFuncCall](#APISeriesFunc.History)
-    * [type APISeriesFuncCall struct](#APISeriesFuncCall)
-        * [func (c APISeriesFuncCall) Args() []interface{}](#APISeriesFuncCall.Args)
-        * [func (c APISeriesFuncCall) Results() []interface{}](#APISeriesFuncCall.Results)
-    * [type APISnapshotFunc struct](#APISnapshotFunc)
-        * [func (f *APISnapshotFunc) SetDefaultHook(hook func(context.Context, bool) (v1.SnapshotResult, error))](#APISnapshotFunc.SetDefaultHook)
-        * [func (f *APISnapshotFunc) PushHook(hook func(context.Context, bool) (v1.SnapshotResult, error))](#APISnapshotFunc.PushHook)
-        * [func (f *APISnapshotFunc) SetDefaultReturn(r0 v1.SnapshotResult, r1 error)](#APISnapshotFunc.SetDefaultReturn)
-        * [func (f *APISnapshotFunc) PushReturn(r0 v1.SnapshotResult, r1 error)](#APISnapshotFunc.PushReturn)
-        * [func (f *APISnapshotFunc) nextHook() func(context.Context, bool) (v1.SnapshotResult, error)](#APISnapshotFunc.nextHook)
-        * [func (f *APISnapshotFunc) appendCall(r0 APISnapshotFuncCall)](#APISnapshotFunc.appendCall)
-        * [func (f *APISnapshotFunc) History() []APISnapshotFuncCall](#APISnapshotFunc.History)
-    * [type APISnapshotFuncCall struct](#APISnapshotFuncCall)
-        * [func (c APISnapshotFuncCall) Args() []interface{}](#APISnapshotFuncCall.Args)
-        * [func (c APISnapshotFuncCall) Results() []interface{}](#APISnapshotFuncCall.Results)
-    * [type APITSDBFunc struct](#APITSDBFunc)
-        * [func (f *APITSDBFunc) SetDefaultHook(hook func(context.Context) (v1.TSDBResult, error))](#APITSDBFunc.SetDefaultHook)
-        * [func (f *APITSDBFunc) PushHook(hook func(context.Context) (v1.TSDBResult, error))](#APITSDBFunc.PushHook)
-        * [func (f *APITSDBFunc) SetDefaultReturn(r0 v1.TSDBResult, r1 error)](#APITSDBFunc.SetDefaultReturn)
-        * [func (f *APITSDBFunc) PushReturn(r0 v1.TSDBResult, r1 error)](#APITSDBFunc.PushReturn)
-        * [func (f *APITSDBFunc) nextHook() func(context.Context) (v1.TSDBResult, error)](#APITSDBFunc.nextHook)
-        * [func (f *APITSDBFunc) appendCall(r0 APITSDBFuncCall)](#APITSDBFunc.appendCall)
-        * [func (f *APITSDBFunc) History() []APITSDBFuncCall](#APITSDBFunc.History)
-    * [type APITSDBFuncCall struct](#APITSDBFuncCall)
-        * [func (c APITSDBFuncCall) Args() []interface{}](#APITSDBFuncCall.Args)
-        * [func (c APITSDBFuncCall) Results() []interface{}](#APITSDBFuncCall.Results)
-    * [type APITargetsFunc struct](#APITargetsFunc)
-        * [func (f *APITargetsFunc) SetDefaultHook(hook func(context.Context) (v1.TargetsResult, error))](#APITargetsFunc.SetDefaultHook)
-        * [func (f *APITargetsFunc) PushHook(hook func(context.Context) (v1.TargetsResult, error))](#APITargetsFunc.PushHook)
-        * [func (f *APITargetsFunc) SetDefaultReturn(r0 v1.TargetsResult, r1 error)](#APITargetsFunc.SetDefaultReturn)
-        * [func (f *APITargetsFunc) PushReturn(r0 v1.TargetsResult, r1 error)](#APITargetsFunc.PushReturn)
-        * [func (f *APITargetsFunc) nextHook() func(context.Context) (v1.TargetsResult, error)](#APITargetsFunc.nextHook)
-        * [func (f *APITargetsFunc) appendCall(r0 APITargetsFuncCall)](#APITargetsFunc.appendCall)
-        * [func (f *APITargetsFunc) History() []APITargetsFuncCall](#APITargetsFunc.History)
-    * [type APITargetsFuncCall struct](#APITargetsFuncCall)
-        * [func (c APITargetsFuncCall) Args() []interface{}](#APITargetsFuncCall.Args)
-        * [func (c APITargetsFuncCall) Results() []interface{}](#APITargetsFuncCall.Results)
-    * [type APITargetsMetadataFunc struct](#APITargetsMetadataFunc)
-        * [func (f *APITargetsMetadataFunc) SetDefaultHook(hook func(context.Context, string, string, string) ([]v1.MetricMetadata, error))](#APITargetsMetadataFunc.SetDefaultHook)
-        * [func (f *APITargetsMetadataFunc) PushHook(hook func(context.Context, string, string, string) ([]v1.MetricMetadata, error))](#APITargetsMetadataFunc.PushHook)
-        * [func (f *APITargetsMetadataFunc) SetDefaultReturn(r0 []v1.MetricMetadata, r1 error)](#APITargetsMetadataFunc.SetDefaultReturn)
-        * [func (f *APITargetsMetadataFunc) PushReturn(r0 []v1.MetricMetadata, r1 error)](#APITargetsMetadataFunc.PushReturn)
-        * [func (f *APITargetsMetadataFunc) nextHook() func(context.Context, string, string, string) ([]v1.MetricMetadata, error)](#APITargetsMetadataFunc.nextHook)
-        * [func (f *APITargetsMetadataFunc) appendCall(r0 APITargetsMetadataFuncCall)](#APITargetsMetadataFunc.appendCall)
-        * [func (f *APITargetsMetadataFunc) History() []APITargetsMetadataFuncCall](#APITargetsMetadataFunc.History)
-    * [type APITargetsMetadataFuncCall struct](#APITargetsMetadataFuncCall)
-        * [func (c APITargetsMetadataFuncCall) Args() []interface{}](#APITargetsMetadataFuncCall.Args)
-        * [func (c APITargetsMetadataFuncCall) Results() []interface{}](#APITargetsMetadataFuncCall.Results)
 
 
 ## <a id="type" href="#type">Types</a>
+
+```
+tags: [package]
+```
+
+### <a id="APIAlertManagersFunc" href="#APIAlertManagersFunc">type APIAlertManagersFunc struct</a>
+
+```
+searchKey: mocks.APIAlertManagersFunc
+tags: [struct]
+```
+
+```Go
+type APIAlertManagersFunc struct {
+	defaultHook func(context.Context) (v1.AlertManagersResult, error)
+	hooks       []func(context.Context) (v1.AlertManagersResult, error)
+	history     []APIAlertManagersFuncCall
+	mutex       sync.Mutex
+}
+```
+
+APIAlertManagersFunc describes the behavior when the AlertManagers method of the parent MockAPI instance is invoked. 
+
+#### <a id="APIAlertManagersFunc.History" href="#APIAlertManagersFunc.History">func (f *APIAlertManagersFunc) History() []APIAlertManagersFuncCall</a>
+
+```
+searchKey: mocks.APIAlertManagersFunc.History
+tags: [function]
+```
+
+```Go
+func (f *APIAlertManagersFunc) History() []APIAlertManagersFuncCall
+```
+
+History returns a sequence of APIAlertManagersFuncCall objects describing the invocations of this function. 
+
+#### <a id="APIAlertManagersFunc.PushHook" href="#APIAlertManagersFunc.PushHook">func (f *APIAlertManagersFunc) PushHook(hook func(context.Context) (v1.AlertManagersResult, error))</a>
+
+```
+searchKey: mocks.APIAlertManagersFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *APIAlertManagersFunc) PushHook(hook func(context.Context) (v1.AlertManagersResult, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the AlertManagers method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="APIAlertManagersFunc.PushReturn" href="#APIAlertManagersFunc.PushReturn">func (f *APIAlertManagersFunc) PushReturn(r0 v1.AlertManagersResult, r1 error)</a>
+
+```
+searchKey: mocks.APIAlertManagersFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *APIAlertManagersFunc) PushReturn(r0 v1.AlertManagersResult, r1 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="APIAlertManagersFunc.SetDefaultHook" href="#APIAlertManagersFunc.SetDefaultHook">func (f *APIAlertManagersFunc) SetDefaultHook(hook func(context.Context) (v1.AlertManagersResult, error))</a>
+
+```
+searchKey: mocks.APIAlertManagersFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *APIAlertManagersFunc) SetDefaultHook(hook func(context.Context) (v1.AlertManagersResult, error))
+```
+
+SetDefaultHook sets function that is called when the AlertManagers method of the parent MockAPI instance is invoked and the hook queue is empty. 
+
+#### <a id="APIAlertManagersFunc.SetDefaultReturn" href="#APIAlertManagersFunc.SetDefaultReturn">func (f *APIAlertManagersFunc) SetDefaultReturn(r0 v1.AlertManagersResult, r1 error)</a>
+
+```
+searchKey: mocks.APIAlertManagersFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *APIAlertManagersFunc) SetDefaultReturn(r0 v1.AlertManagersResult, r1 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="APIAlertManagersFunc.appendCall" href="#APIAlertManagersFunc.appendCall">func (f *APIAlertManagersFunc) appendCall(r0 APIAlertManagersFuncCall)</a>
+
+```
+searchKey: mocks.APIAlertManagersFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *APIAlertManagersFunc) appendCall(r0 APIAlertManagersFuncCall)
+```
+
+#### <a id="APIAlertManagersFunc.nextHook" href="#APIAlertManagersFunc.nextHook">func (f *APIAlertManagersFunc) nextHook() func(context.Context) (v1.AlertManagersResult, error)</a>
+
+```
+searchKey: mocks.APIAlertManagersFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *APIAlertManagersFunc) nextHook() func(context.Context) (v1.AlertManagersResult, error)
+```
+
+### <a id="APIAlertManagersFuncCall" href="#APIAlertManagersFuncCall">type APIAlertManagersFuncCall struct</a>
+
+```
+searchKey: mocks.APIAlertManagersFuncCall
+tags: [struct]
+```
+
+```Go
+type APIAlertManagersFuncCall struct {
+	// Arg0 is the value of the 1st argument passed to this method
+	// invocation.
+	Arg0 context.Context
+	// Result0 is the value of the 1st result returned from this method
+	// invocation.
+	Result0 v1.AlertManagersResult
+	// Result1 is the value of the 2nd result returned from this method
+	// invocation.
+	Result1 error
+}
+```
+
+APIAlertManagersFuncCall is an object that describes an invocation of method AlertManagers on an instance of MockAPI. 
+
+#### <a id="APIAlertManagersFuncCall.Args" href="#APIAlertManagersFuncCall.Args">func (c APIAlertManagersFuncCall) Args() []interface{}</a>
+
+```
+searchKey: mocks.APIAlertManagersFuncCall.Args
+tags: [function]
+```
+
+```Go
+func (c APIAlertManagersFuncCall) Args() []interface{}
+```
+
+Args returns an interface slice containing the arguments of this invocation. 
+
+#### <a id="APIAlertManagersFuncCall.Results" href="#APIAlertManagersFuncCall.Results">func (c APIAlertManagersFuncCall) Results() []interface{}</a>
+
+```
+searchKey: mocks.APIAlertManagersFuncCall.Results
+tags: [function]
+```
+
+```Go
+func (c APIAlertManagersFuncCall) Results() []interface{}
+```
+
+Results returns an interface slice containing the results of this invocation. 
+
+### <a id="APIAlertsFunc" href="#APIAlertsFunc">type APIAlertsFunc struct</a>
+
+```
+searchKey: mocks.APIAlertsFunc
+tags: [struct]
+```
+
+```Go
+type APIAlertsFunc struct {
+	defaultHook func(context.Context) (v1.AlertsResult, error)
+	hooks       []func(context.Context) (v1.AlertsResult, error)
+	history     []APIAlertsFuncCall
+	mutex       sync.Mutex
+}
+```
+
+APIAlertsFunc describes the behavior when the Alerts method of the parent MockAPI instance is invoked. 
+
+#### <a id="APIAlertsFunc.History" href="#APIAlertsFunc.History">func (f *APIAlertsFunc) History() []APIAlertsFuncCall</a>
+
+```
+searchKey: mocks.APIAlertsFunc.History
+tags: [function]
+```
+
+```Go
+func (f *APIAlertsFunc) History() []APIAlertsFuncCall
+```
+
+History returns a sequence of APIAlertsFuncCall objects describing the invocations of this function. 
+
+#### <a id="APIAlertsFunc.PushHook" href="#APIAlertsFunc.PushHook">func (f *APIAlertsFunc) PushHook(hook func(context.Context) (v1.AlertsResult, error))</a>
+
+```
+searchKey: mocks.APIAlertsFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *APIAlertsFunc) PushHook(hook func(context.Context) (v1.AlertsResult, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the Alerts method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="APIAlertsFunc.PushReturn" href="#APIAlertsFunc.PushReturn">func (f *APIAlertsFunc) PushReturn(r0 v1.AlertsResult, r1 error)</a>
+
+```
+searchKey: mocks.APIAlertsFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *APIAlertsFunc) PushReturn(r0 v1.AlertsResult, r1 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="APIAlertsFunc.SetDefaultHook" href="#APIAlertsFunc.SetDefaultHook">func (f *APIAlertsFunc) SetDefaultHook(hook func(context.Context) (v1.AlertsResult, error))</a>
+
+```
+searchKey: mocks.APIAlertsFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *APIAlertsFunc) SetDefaultHook(hook func(context.Context) (v1.AlertsResult, error))
+```
+
+SetDefaultHook sets function that is called when the Alerts method of the parent MockAPI instance is invoked and the hook queue is empty. 
+
+#### <a id="APIAlertsFunc.SetDefaultReturn" href="#APIAlertsFunc.SetDefaultReturn">func (f *APIAlertsFunc) SetDefaultReturn(r0 v1.AlertsResult, r1 error)</a>
+
+```
+searchKey: mocks.APIAlertsFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *APIAlertsFunc) SetDefaultReturn(r0 v1.AlertsResult, r1 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="APIAlertsFunc.appendCall" href="#APIAlertsFunc.appendCall">func (f *APIAlertsFunc) appendCall(r0 APIAlertsFuncCall)</a>
+
+```
+searchKey: mocks.APIAlertsFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *APIAlertsFunc) appendCall(r0 APIAlertsFuncCall)
+```
+
+#### <a id="APIAlertsFunc.nextHook" href="#APIAlertsFunc.nextHook">func (f *APIAlertsFunc) nextHook() func(context.Context) (v1.AlertsResult, error)</a>
+
+```
+searchKey: mocks.APIAlertsFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *APIAlertsFunc) nextHook() func(context.Context) (v1.AlertsResult, error)
+```
+
+### <a id="APIAlertsFuncCall" href="#APIAlertsFuncCall">type APIAlertsFuncCall struct</a>
+
+```
+searchKey: mocks.APIAlertsFuncCall
+tags: [struct]
+```
+
+```Go
+type APIAlertsFuncCall struct {
+	// Arg0 is the value of the 1st argument passed to this method
+	// invocation.
+	Arg0 context.Context
+	// Result0 is the value of the 1st result returned from this method
+	// invocation.
+	Result0 v1.AlertsResult
+	// Result1 is the value of the 2nd result returned from this method
+	// invocation.
+	Result1 error
+}
+```
+
+APIAlertsFuncCall is an object that describes an invocation of method Alerts on an instance of MockAPI. 
+
+#### <a id="APIAlertsFuncCall.Args" href="#APIAlertsFuncCall.Args">func (c APIAlertsFuncCall) Args() []interface{}</a>
+
+```
+searchKey: mocks.APIAlertsFuncCall.Args
+tags: [function]
+```
+
+```Go
+func (c APIAlertsFuncCall) Args() []interface{}
+```
+
+Args returns an interface slice containing the arguments of this invocation. 
+
+#### <a id="APIAlertsFuncCall.Results" href="#APIAlertsFuncCall.Results">func (c APIAlertsFuncCall) Results() []interface{}</a>
+
+```
+searchKey: mocks.APIAlertsFuncCall.Results
+tags: [function]
+```
+
+```Go
+func (c APIAlertsFuncCall) Results() []interface{}
+```
+
+Results returns an interface slice containing the results of this invocation. 
+
+### <a id="APICleanTombstonesFunc" href="#APICleanTombstonesFunc">type APICleanTombstonesFunc struct</a>
+
+```
+searchKey: mocks.APICleanTombstonesFunc
+tags: [struct]
+```
+
+```Go
+type APICleanTombstonesFunc struct {
+	defaultHook func(context.Context) error
+	hooks       []func(context.Context) error
+	history     []APICleanTombstonesFuncCall
+	mutex       sync.Mutex
+}
+```
+
+APICleanTombstonesFunc describes the behavior when the CleanTombstones method of the parent MockAPI instance is invoked. 
+
+#### <a id="APICleanTombstonesFunc.History" href="#APICleanTombstonesFunc.History">func (f *APICleanTombstonesFunc) History() []APICleanTombstonesFuncCall</a>
+
+```
+searchKey: mocks.APICleanTombstonesFunc.History
+tags: [function]
+```
+
+```Go
+func (f *APICleanTombstonesFunc) History() []APICleanTombstonesFuncCall
+```
+
+History returns a sequence of APICleanTombstonesFuncCall objects describing the invocations of this function. 
+
+#### <a id="APICleanTombstonesFunc.PushHook" href="#APICleanTombstonesFunc.PushHook">func (f *APICleanTombstonesFunc) PushHook(hook func(context.Context) error)</a>
+
+```
+searchKey: mocks.APICleanTombstonesFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *APICleanTombstonesFunc) PushHook(hook func(context.Context) error)
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the CleanTombstones method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="APICleanTombstonesFunc.PushReturn" href="#APICleanTombstonesFunc.PushReturn">func (f *APICleanTombstonesFunc) PushReturn(r0 error)</a>
+
+```
+searchKey: mocks.APICleanTombstonesFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *APICleanTombstonesFunc) PushReturn(r0 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="APICleanTombstonesFunc.SetDefaultHook" href="#APICleanTombstonesFunc.SetDefaultHook">func (f *APICleanTombstonesFunc) SetDefaultHook(hook func(context.Context) error)</a>
+
+```
+searchKey: mocks.APICleanTombstonesFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *APICleanTombstonesFunc) SetDefaultHook(hook func(context.Context) error)
+```
+
+SetDefaultHook sets function that is called when the CleanTombstones method of the parent MockAPI instance is invoked and the hook queue is empty. 
+
+#### <a id="APICleanTombstonesFunc.SetDefaultReturn" href="#APICleanTombstonesFunc.SetDefaultReturn">func (f *APICleanTombstonesFunc) SetDefaultReturn(r0 error)</a>
+
+```
+searchKey: mocks.APICleanTombstonesFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *APICleanTombstonesFunc) SetDefaultReturn(r0 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="APICleanTombstonesFunc.appendCall" href="#APICleanTombstonesFunc.appendCall">func (f *APICleanTombstonesFunc) appendCall(r0 APICleanTombstonesFuncCall)</a>
+
+```
+searchKey: mocks.APICleanTombstonesFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *APICleanTombstonesFunc) appendCall(r0 APICleanTombstonesFuncCall)
+```
+
+#### <a id="APICleanTombstonesFunc.nextHook" href="#APICleanTombstonesFunc.nextHook">func (f *APICleanTombstonesFunc) nextHook() func(context.Context) error</a>
+
+```
+searchKey: mocks.APICleanTombstonesFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *APICleanTombstonesFunc) nextHook() func(context.Context) error
+```
+
+### <a id="APICleanTombstonesFuncCall" href="#APICleanTombstonesFuncCall">type APICleanTombstonesFuncCall struct</a>
+
+```
+searchKey: mocks.APICleanTombstonesFuncCall
+tags: [struct]
+```
+
+```Go
+type APICleanTombstonesFuncCall struct {
+	// Arg0 is the value of the 1st argument passed to this method
+	// invocation.
+	Arg0 context.Context
+	// Result0 is the value of the 1st result returned from this method
+	// invocation.
+	Result0 error
+}
+```
+
+APICleanTombstonesFuncCall is an object that describes an invocation of method CleanTombstones on an instance of MockAPI. 
+
+#### <a id="APICleanTombstonesFuncCall.Args" href="#APICleanTombstonesFuncCall.Args">func (c APICleanTombstonesFuncCall) Args() []interface{}</a>
+
+```
+searchKey: mocks.APICleanTombstonesFuncCall.Args
+tags: [function]
+```
+
+```Go
+func (c APICleanTombstonesFuncCall) Args() []interface{}
+```
+
+Args returns an interface slice containing the arguments of this invocation. 
+
+#### <a id="APICleanTombstonesFuncCall.Results" href="#APICleanTombstonesFuncCall.Results">func (c APICleanTombstonesFuncCall) Results() []interface{}</a>
+
+```
+searchKey: mocks.APICleanTombstonesFuncCall.Results
+tags: [function]
+```
+
+```Go
+func (c APICleanTombstonesFuncCall) Results() []interface{}
+```
+
+Results returns an interface slice containing the results of this invocation. 
+
+### <a id="APIConfigFunc" href="#APIConfigFunc">type APIConfigFunc struct</a>
+
+```
+searchKey: mocks.APIConfigFunc
+tags: [struct]
+```
+
+```Go
+type APIConfigFunc struct {
+	defaultHook func(context.Context) (v1.ConfigResult, error)
+	hooks       []func(context.Context) (v1.ConfigResult, error)
+	history     []APIConfigFuncCall
+	mutex       sync.Mutex
+}
+```
+
+APIConfigFunc describes the behavior when the Config method of the parent MockAPI instance is invoked. 
+
+#### <a id="APIConfigFunc.History" href="#APIConfigFunc.History">func (f *APIConfigFunc) History() []APIConfigFuncCall</a>
+
+```
+searchKey: mocks.APIConfigFunc.History
+tags: [function]
+```
+
+```Go
+func (f *APIConfigFunc) History() []APIConfigFuncCall
+```
+
+History returns a sequence of APIConfigFuncCall objects describing the invocations of this function. 
+
+#### <a id="APIConfigFunc.PushHook" href="#APIConfigFunc.PushHook">func (f *APIConfigFunc) PushHook(hook func(context.Context) (v1.ConfigResult, error))</a>
+
+```
+searchKey: mocks.APIConfigFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *APIConfigFunc) PushHook(hook func(context.Context) (v1.ConfigResult, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the Config method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="APIConfigFunc.PushReturn" href="#APIConfigFunc.PushReturn">func (f *APIConfigFunc) PushReturn(r0 v1.ConfigResult, r1 error)</a>
+
+```
+searchKey: mocks.APIConfigFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *APIConfigFunc) PushReturn(r0 v1.ConfigResult, r1 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="APIConfigFunc.SetDefaultHook" href="#APIConfigFunc.SetDefaultHook">func (f *APIConfigFunc) SetDefaultHook(hook func(context.Context) (v1.ConfigResult, error))</a>
+
+```
+searchKey: mocks.APIConfigFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *APIConfigFunc) SetDefaultHook(hook func(context.Context) (v1.ConfigResult, error))
+```
+
+SetDefaultHook sets function that is called when the Config method of the parent MockAPI instance is invoked and the hook queue is empty. 
+
+#### <a id="APIConfigFunc.SetDefaultReturn" href="#APIConfigFunc.SetDefaultReturn">func (f *APIConfigFunc) SetDefaultReturn(r0 v1.ConfigResult, r1 error)</a>
+
+```
+searchKey: mocks.APIConfigFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *APIConfigFunc) SetDefaultReturn(r0 v1.ConfigResult, r1 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="APIConfigFunc.appendCall" href="#APIConfigFunc.appendCall">func (f *APIConfigFunc) appendCall(r0 APIConfigFuncCall)</a>
+
+```
+searchKey: mocks.APIConfigFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *APIConfigFunc) appendCall(r0 APIConfigFuncCall)
+```
+
+#### <a id="APIConfigFunc.nextHook" href="#APIConfigFunc.nextHook">func (f *APIConfigFunc) nextHook() func(context.Context) (v1.ConfigResult, error)</a>
+
+```
+searchKey: mocks.APIConfigFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *APIConfigFunc) nextHook() func(context.Context) (v1.ConfigResult, error)
+```
+
+### <a id="APIConfigFuncCall" href="#APIConfigFuncCall">type APIConfigFuncCall struct</a>
+
+```
+searchKey: mocks.APIConfigFuncCall
+tags: [struct]
+```
+
+```Go
+type APIConfigFuncCall struct {
+	// Arg0 is the value of the 1st argument passed to this method
+	// invocation.
+	Arg0 context.Context
+	// Result0 is the value of the 1st result returned from this method
+	// invocation.
+	Result0 v1.ConfigResult
+	// Result1 is the value of the 2nd result returned from this method
+	// invocation.
+	Result1 error
+}
+```
+
+APIConfigFuncCall is an object that describes an invocation of method Config on an instance of MockAPI. 
+
+#### <a id="APIConfigFuncCall.Args" href="#APIConfigFuncCall.Args">func (c APIConfigFuncCall) Args() []interface{}</a>
+
+```
+searchKey: mocks.APIConfigFuncCall.Args
+tags: [function]
+```
+
+```Go
+func (c APIConfigFuncCall) Args() []interface{}
+```
+
+Args returns an interface slice containing the arguments of this invocation. 
+
+#### <a id="APIConfigFuncCall.Results" href="#APIConfigFuncCall.Results">func (c APIConfigFuncCall) Results() []interface{}</a>
+
+```
+searchKey: mocks.APIConfigFuncCall.Results
+tags: [function]
+```
+
+```Go
+func (c APIConfigFuncCall) Results() []interface{}
+```
+
+Results returns an interface slice containing the results of this invocation. 
+
+### <a id="APIDeleteSeriesFunc" href="#APIDeleteSeriesFunc">type APIDeleteSeriesFunc struct</a>
+
+```
+searchKey: mocks.APIDeleteSeriesFunc
+tags: [struct]
+```
+
+```Go
+type APIDeleteSeriesFunc struct {
+	defaultHook func(context.Context, []string, time.Time, time.Time) error
+	hooks       []func(context.Context, []string, time.Time, time.Time) error
+	history     []APIDeleteSeriesFuncCall
+	mutex       sync.Mutex
+}
+```
+
+APIDeleteSeriesFunc describes the behavior when the DeleteSeries method of the parent MockAPI instance is invoked. 
+
+#### <a id="APIDeleteSeriesFunc.History" href="#APIDeleteSeriesFunc.History">func (f *APIDeleteSeriesFunc) History() []APIDeleteSeriesFuncCall</a>
+
+```
+searchKey: mocks.APIDeleteSeriesFunc.History
+tags: [function]
+```
+
+```Go
+func (f *APIDeleteSeriesFunc) History() []APIDeleteSeriesFuncCall
+```
+
+History returns a sequence of APIDeleteSeriesFuncCall objects describing the invocations of this function. 
+
+#### <a id="APIDeleteSeriesFunc.PushHook" href="#APIDeleteSeriesFunc.PushHook">func (f *APIDeleteSeriesFunc) PushHook(hook func(context.Context, []string, time.Time, time.Time) error)</a>
+
+```
+searchKey: mocks.APIDeleteSeriesFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *APIDeleteSeriesFunc) PushHook(hook func(context.Context, []string, time.Time, time.Time) error)
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the DeleteSeries method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="APIDeleteSeriesFunc.PushReturn" href="#APIDeleteSeriesFunc.PushReturn">func (f *APIDeleteSeriesFunc) PushReturn(r0 error)</a>
+
+```
+searchKey: mocks.APIDeleteSeriesFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *APIDeleteSeriesFunc) PushReturn(r0 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="APIDeleteSeriesFunc.SetDefaultHook" href="#APIDeleteSeriesFunc.SetDefaultHook">func (f *APIDeleteSeriesFunc) SetDefaultHook(hook func(context.Context, []string, time.Time, time.Time) error)</a>
+
+```
+searchKey: mocks.APIDeleteSeriesFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *APIDeleteSeriesFunc) SetDefaultHook(hook func(context.Context, []string, time.Time, time.Time) error)
+```
+
+SetDefaultHook sets function that is called when the DeleteSeries method of the parent MockAPI instance is invoked and the hook queue is empty. 
+
+#### <a id="APIDeleteSeriesFunc.SetDefaultReturn" href="#APIDeleteSeriesFunc.SetDefaultReturn">func (f *APIDeleteSeriesFunc) SetDefaultReturn(r0 error)</a>
+
+```
+searchKey: mocks.APIDeleteSeriesFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *APIDeleteSeriesFunc) SetDefaultReturn(r0 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="APIDeleteSeriesFunc.appendCall" href="#APIDeleteSeriesFunc.appendCall">func (f *APIDeleteSeriesFunc) appendCall(r0 APIDeleteSeriesFuncCall)</a>
+
+```
+searchKey: mocks.APIDeleteSeriesFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *APIDeleteSeriesFunc) appendCall(r0 APIDeleteSeriesFuncCall)
+```
+
+#### <a id="APIDeleteSeriesFunc.nextHook" href="#APIDeleteSeriesFunc.nextHook">func (f *APIDeleteSeriesFunc) nextHook() func(context.Context, []string, time.Time, time.Time) error</a>
+
+```
+searchKey: mocks.APIDeleteSeriesFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *APIDeleteSeriesFunc) nextHook() func(context.Context, []string, time.Time, time.Time) error
+```
+
+### <a id="APIDeleteSeriesFuncCall" href="#APIDeleteSeriesFuncCall">type APIDeleteSeriesFuncCall struct</a>
+
+```
+searchKey: mocks.APIDeleteSeriesFuncCall
+tags: [struct]
+```
+
+```Go
+type APIDeleteSeriesFuncCall struct {
+	// Arg0 is the value of the 1st argument passed to this method
+	// invocation.
+	Arg0 context.Context
+	// Arg1 is the value of the 2nd argument passed to this method
+	// invocation.
+	Arg1 []string
+	// Arg2 is the value of the 3rd argument passed to this method
+	// invocation.
+	Arg2 time.Time
+	// Arg3 is the value of the 4th argument passed to this method
+	// invocation.
+	Arg3 time.Time
+	// Result0 is the value of the 1st result returned from this method
+	// invocation.
+	Result0 error
+}
+```
+
+APIDeleteSeriesFuncCall is an object that describes an invocation of method DeleteSeries on an instance of MockAPI. 
+
+#### <a id="APIDeleteSeriesFuncCall.Args" href="#APIDeleteSeriesFuncCall.Args">func (c APIDeleteSeriesFuncCall) Args() []interface{}</a>
+
+```
+searchKey: mocks.APIDeleteSeriesFuncCall.Args
+tags: [function]
+```
+
+```Go
+func (c APIDeleteSeriesFuncCall) Args() []interface{}
+```
+
+Args returns an interface slice containing the arguments of this invocation. 
+
+#### <a id="APIDeleteSeriesFuncCall.Results" href="#APIDeleteSeriesFuncCall.Results">func (c APIDeleteSeriesFuncCall) Results() []interface{}</a>
+
+```
+searchKey: mocks.APIDeleteSeriesFuncCall.Results
+tags: [function]
+```
+
+```Go
+func (c APIDeleteSeriesFuncCall) Results() []interface{}
+```
+
+Results returns an interface slice containing the results of this invocation. 
+
+### <a id="APIFlagsFunc" href="#APIFlagsFunc">type APIFlagsFunc struct</a>
+
+```
+searchKey: mocks.APIFlagsFunc
+tags: [struct]
+```
+
+```Go
+type APIFlagsFunc struct {
+	defaultHook func(context.Context) (v1.FlagsResult, error)
+	hooks       []func(context.Context) (v1.FlagsResult, error)
+	history     []APIFlagsFuncCall
+	mutex       sync.Mutex
+}
+```
+
+APIFlagsFunc describes the behavior when the Flags method of the parent MockAPI instance is invoked. 
+
+#### <a id="APIFlagsFunc.History" href="#APIFlagsFunc.History">func (f *APIFlagsFunc) History() []APIFlagsFuncCall</a>
+
+```
+searchKey: mocks.APIFlagsFunc.History
+tags: [function]
+```
+
+```Go
+func (f *APIFlagsFunc) History() []APIFlagsFuncCall
+```
+
+History returns a sequence of APIFlagsFuncCall objects describing the invocations of this function. 
+
+#### <a id="APIFlagsFunc.PushHook" href="#APIFlagsFunc.PushHook">func (f *APIFlagsFunc) PushHook(hook func(context.Context) (v1.FlagsResult, error))</a>
+
+```
+searchKey: mocks.APIFlagsFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *APIFlagsFunc) PushHook(hook func(context.Context) (v1.FlagsResult, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the Flags method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="APIFlagsFunc.PushReturn" href="#APIFlagsFunc.PushReturn">func (f *APIFlagsFunc) PushReturn(r0 v1.FlagsResult, r1 error)</a>
+
+```
+searchKey: mocks.APIFlagsFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *APIFlagsFunc) PushReturn(r0 v1.FlagsResult, r1 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="APIFlagsFunc.SetDefaultHook" href="#APIFlagsFunc.SetDefaultHook">func (f *APIFlagsFunc) SetDefaultHook(hook func(context.Context) (v1.FlagsResult, error))</a>
+
+```
+searchKey: mocks.APIFlagsFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *APIFlagsFunc) SetDefaultHook(hook func(context.Context) (v1.FlagsResult, error))
+```
+
+SetDefaultHook sets function that is called when the Flags method of the parent MockAPI instance is invoked and the hook queue is empty. 
+
+#### <a id="APIFlagsFunc.SetDefaultReturn" href="#APIFlagsFunc.SetDefaultReturn">func (f *APIFlagsFunc) SetDefaultReturn(r0 v1.FlagsResult, r1 error)</a>
+
+```
+searchKey: mocks.APIFlagsFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *APIFlagsFunc) SetDefaultReturn(r0 v1.FlagsResult, r1 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="APIFlagsFunc.appendCall" href="#APIFlagsFunc.appendCall">func (f *APIFlagsFunc) appendCall(r0 APIFlagsFuncCall)</a>
+
+```
+searchKey: mocks.APIFlagsFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *APIFlagsFunc) appendCall(r0 APIFlagsFuncCall)
+```
+
+#### <a id="APIFlagsFunc.nextHook" href="#APIFlagsFunc.nextHook">func (f *APIFlagsFunc) nextHook() func(context.Context) (v1.FlagsResult, error)</a>
+
+```
+searchKey: mocks.APIFlagsFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *APIFlagsFunc) nextHook() func(context.Context) (v1.FlagsResult, error)
+```
+
+### <a id="APIFlagsFuncCall" href="#APIFlagsFuncCall">type APIFlagsFuncCall struct</a>
+
+```
+searchKey: mocks.APIFlagsFuncCall
+tags: [struct]
+```
+
+```Go
+type APIFlagsFuncCall struct {
+	// Arg0 is the value of the 1st argument passed to this method
+	// invocation.
+	Arg0 context.Context
+	// Result0 is the value of the 1st result returned from this method
+	// invocation.
+	Result0 v1.FlagsResult
+	// Result1 is the value of the 2nd result returned from this method
+	// invocation.
+	Result1 error
+}
+```
+
+APIFlagsFuncCall is an object that describes an invocation of method Flags on an instance of MockAPI. 
+
+#### <a id="APIFlagsFuncCall.Args" href="#APIFlagsFuncCall.Args">func (c APIFlagsFuncCall) Args() []interface{}</a>
+
+```
+searchKey: mocks.APIFlagsFuncCall.Args
+tags: [function]
+```
+
+```Go
+func (c APIFlagsFuncCall) Args() []interface{}
+```
+
+Args returns an interface slice containing the arguments of this invocation. 
+
+#### <a id="APIFlagsFuncCall.Results" href="#APIFlagsFuncCall.Results">func (c APIFlagsFuncCall) Results() []interface{}</a>
+
+```
+searchKey: mocks.APIFlagsFuncCall.Results
+tags: [function]
+```
+
+```Go
+func (c APIFlagsFuncCall) Results() []interface{}
+```
+
+Results returns an interface slice containing the results of this invocation. 
+
+### <a id="APILabelNamesFunc" href="#APILabelNamesFunc">type APILabelNamesFunc struct</a>
+
+```
+searchKey: mocks.APILabelNamesFunc
+tags: [struct]
+```
+
+```Go
+type APILabelNamesFunc struct {
+	defaultHook func(context.Context, time.Time, time.Time) ([]string, v1.Warnings, error)
+	hooks       []func(context.Context, time.Time, time.Time) ([]string, v1.Warnings, error)
+	history     []APILabelNamesFuncCall
+	mutex       sync.Mutex
+}
+```
+
+APILabelNamesFunc describes the behavior when the LabelNames method of the parent MockAPI instance is invoked. 
+
+#### <a id="APILabelNamesFunc.History" href="#APILabelNamesFunc.History">func (f *APILabelNamesFunc) History() []APILabelNamesFuncCall</a>
+
+```
+searchKey: mocks.APILabelNamesFunc.History
+tags: [function]
+```
+
+```Go
+func (f *APILabelNamesFunc) History() []APILabelNamesFuncCall
+```
+
+History returns a sequence of APILabelNamesFuncCall objects describing the invocations of this function. 
+
+#### <a id="APILabelNamesFunc.PushHook" href="#APILabelNamesFunc.PushHook">func (f *APILabelNamesFunc) PushHook(hook func(context.Context, time.Time, time.Time) ([]string, v1.Warnings, error))</a>
+
+```
+searchKey: mocks.APILabelNamesFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *APILabelNamesFunc) PushHook(hook func(context.Context, time.Time, time.Time) ([]string, v1.Warnings, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the LabelNames method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="APILabelNamesFunc.PushReturn" href="#APILabelNamesFunc.PushReturn">func (f *APILabelNamesFunc) PushReturn(r0 []string, r1 v1.Warnings, r2 error)</a>
+
+```
+searchKey: mocks.APILabelNamesFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *APILabelNamesFunc) PushReturn(r0 []string, r1 v1.Warnings, r2 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="APILabelNamesFunc.SetDefaultHook" href="#APILabelNamesFunc.SetDefaultHook">func (f *APILabelNamesFunc) SetDefaultHook(hook func(context.Context, time.Time, time.Time) ([]string, v1.Warnings, error))</a>
+
+```
+searchKey: mocks.APILabelNamesFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *APILabelNamesFunc) SetDefaultHook(hook func(context.Context, time.Time, time.Time) ([]string, v1.Warnings, error))
+```
+
+SetDefaultHook sets function that is called when the LabelNames method of the parent MockAPI instance is invoked and the hook queue is empty. 
+
+#### <a id="APILabelNamesFunc.SetDefaultReturn" href="#APILabelNamesFunc.SetDefaultReturn">func (f *APILabelNamesFunc) SetDefaultReturn(r0 []string, r1 v1.Warnings, r2 error)</a>
+
+```
+searchKey: mocks.APILabelNamesFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *APILabelNamesFunc) SetDefaultReturn(r0 []string, r1 v1.Warnings, r2 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="APILabelNamesFunc.appendCall" href="#APILabelNamesFunc.appendCall">func (f *APILabelNamesFunc) appendCall(r0 APILabelNamesFuncCall)</a>
+
+```
+searchKey: mocks.APILabelNamesFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *APILabelNamesFunc) appendCall(r0 APILabelNamesFuncCall)
+```
+
+#### <a id="APILabelNamesFunc.nextHook" href="#APILabelNamesFunc.nextHook">func (f *APILabelNamesFunc) nextHook() func(context.Context, time.Time, time.Time) ([]string, v1.Warnings, error)</a>
+
+```
+searchKey: mocks.APILabelNamesFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *APILabelNamesFunc) nextHook() func(context.Context, time.Time, time.Time) ([]string, v1.Warnings, error)
+```
+
+### <a id="APILabelNamesFuncCall" href="#APILabelNamesFuncCall">type APILabelNamesFuncCall struct</a>
+
+```
+searchKey: mocks.APILabelNamesFuncCall
+tags: [struct]
+```
+
+```Go
+type APILabelNamesFuncCall struct {
+	// Arg0 is the value of the 1st argument passed to this method
+	// invocation.
+	Arg0 context.Context
+	// Arg1 is the value of the 2nd argument passed to this method
+	// invocation.
+	Arg1 time.Time
+	// Arg2 is the value of the 3rd argument passed to this method
+	// invocation.
+	Arg2 time.Time
+	// Result0 is the value of the 1st result returned from this method
+	// invocation.
+	Result0 []string
+	// Result1 is the value of the 2nd result returned from this method
+	// invocation.
+	Result1 v1.Warnings
+	// Result2 is the value of the 3rd result returned from this method
+	// invocation.
+	Result2 error
+}
+```
+
+APILabelNamesFuncCall is an object that describes an invocation of method LabelNames on an instance of MockAPI. 
+
+#### <a id="APILabelNamesFuncCall.Args" href="#APILabelNamesFuncCall.Args">func (c APILabelNamesFuncCall) Args() []interface{}</a>
+
+```
+searchKey: mocks.APILabelNamesFuncCall.Args
+tags: [function]
+```
+
+```Go
+func (c APILabelNamesFuncCall) Args() []interface{}
+```
+
+Args returns an interface slice containing the arguments of this invocation. 
+
+#### <a id="APILabelNamesFuncCall.Results" href="#APILabelNamesFuncCall.Results">func (c APILabelNamesFuncCall) Results() []interface{}</a>
+
+```
+searchKey: mocks.APILabelNamesFuncCall.Results
+tags: [function]
+```
+
+```Go
+func (c APILabelNamesFuncCall) Results() []interface{}
+```
+
+Results returns an interface slice containing the results of this invocation. 
+
+### <a id="APILabelValuesFunc" href="#APILabelValuesFunc">type APILabelValuesFunc struct</a>
+
+```
+searchKey: mocks.APILabelValuesFunc
+tags: [struct]
+```
+
+```Go
+type APILabelValuesFunc struct {
+	defaultHook func(context.Context, string, time.Time, time.Time) (model.LabelValues, v1.Warnings, error)
+	hooks       []func(context.Context, string, time.Time, time.Time) (model.LabelValues, v1.Warnings, error)
+	history     []APILabelValuesFuncCall
+	mutex       sync.Mutex
+}
+```
+
+APILabelValuesFunc describes the behavior when the LabelValues method of the parent MockAPI instance is invoked. 
+
+#### <a id="APILabelValuesFunc.History" href="#APILabelValuesFunc.History">func (f *APILabelValuesFunc) History() []APILabelValuesFuncCall</a>
+
+```
+searchKey: mocks.APILabelValuesFunc.History
+tags: [function]
+```
+
+```Go
+func (f *APILabelValuesFunc) History() []APILabelValuesFuncCall
+```
+
+History returns a sequence of APILabelValuesFuncCall objects describing the invocations of this function. 
+
+#### <a id="APILabelValuesFunc.PushHook" href="#APILabelValuesFunc.PushHook">func (f *APILabelValuesFunc) PushHook(hook func(context.Context, string, time.Time, time.Time) (model.LabelValues, v1.Warnings, error))</a>
+
+```
+searchKey: mocks.APILabelValuesFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *APILabelValuesFunc) PushHook(hook func(context.Context, string, time.Time, time.Time) (model.LabelValues, v1.Warnings, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the LabelValues method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="APILabelValuesFunc.PushReturn" href="#APILabelValuesFunc.PushReturn">func (f *APILabelValuesFunc) PushReturn(r0 model.LabelValues, r1 v1.Warnings, r2 error)</a>
+
+```
+searchKey: mocks.APILabelValuesFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *APILabelValuesFunc) PushReturn(r0 model.LabelValues, r1 v1.Warnings, r2 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="APILabelValuesFunc.SetDefaultHook" href="#APILabelValuesFunc.SetDefaultHook">func (f *APILabelValuesFunc) SetDefaultHook(hook func(context.Context, string, time.Time, time.Time) (model.LabelValues, v1.Warnings, error))</a>
+
+```
+searchKey: mocks.APILabelValuesFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *APILabelValuesFunc) SetDefaultHook(hook func(context.Context, string, time.Time, time.Time) (model.LabelValues, v1.Warnings, error))
+```
+
+SetDefaultHook sets function that is called when the LabelValues method of the parent MockAPI instance is invoked and the hook queue is empty. 
+
+#### <a id="APILabelValuesFunc.SetDefaultReturn" href="#APILabelValuesFunc.SetDefaultReturn">func (f *APILabelValuesFunc) SetDefaultReturn(r0 model.LabelValues, r1 v1.Warnings, r2 error)</a>
+
+```
+searchKey: mocks.APILabelValuesFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *APILabelValuesFunc) SetDefaultReturn(r0 model.LabelValues, r1 v1.Warnings, r2 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="APILabelValuesFunc.appendCall" href="#APILabelValuesFunc.appendCall">func (f *APILabelValuesFunc) appendCall(r0 APILabelValuesFuncCall)</a>
+
+```
+searchKey: mocks.APILabelValuesFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *APILabelValuesFunc) appendCall(r0 APILabelValuesFuncCall)
+```
+
+#### <a id="APILabelValuesFunc.nextHook" href="#APILabelValuesFunc.nextHook">func (f *APILabelValuesFunc) nextHook() func(context.Context, string, time.Time, time.Time) (model.LabelValues, v1.Warnings, error)</a>
+
+```
+searchKey: mocks.APILabelValuesFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *APILabelValuesFunc) nextHook() func(context.Context, string, time.Time, time.Time) (model.LabelValues, v1.Warnings, error)
+```
+
+### <a id="APILabelValuesFuncCall" href="#APILabelValuesFuncCall">type APILabelValuesFuncCall struct</a>
+
+```
+searchKey: mocks.APILabelValuesFuncCall
+tags: [struct]
+```
+
+```Go
+type APILabelValuesFuncCall struct {
+	// Arg0 is the value of the 1st argument passed to this method
+	// invocation.
+	Arg0 context.Context
+	// Arg1 is the value of the 2nd argument passed to this method
+	// invocation.
+	Arg1 string
+	// Arg2 is the value of the 3rd argument passed to this method
+	// invocation.
+	Arg2 time.Time
+	// Arg3 is the value of the 4th argument passed to this method
+	// invocation.
+	Arg3 time.Time
+	// Result0 is the value of the 1st result returned from this method
+	// invocation.
+	Result0 model.LabelValues
+	// Result1 is the value of the 2nd result returned from this method
+	// invocation.
+	Result1 v1.Warnings
+	// Result2 is the value of the 3rd result returned from this method
+	// invocation.
+	Result2 error
+}
+```
+
+APILabelValuesFuncCall is an object that describes an invocation of method LabelValues on an instance of MockAPI. 
+
+#### <a id="APILabelValuesFuncCall.Args" href="#APILabelValuesFuncCall.Args">func (c APILabelValuesFuncCall) Args() []interface{}</a>
+
+```
+searchKey: mocks.APILabelValuesFuncCall.Args
+tags: [function]
+```
+
+```Go
+func (c APILabelValuesFuncCall) Args() []interface{}
+```
+
+Args returns an interface slice containing the arguments of this invocation. 
+
+#### <a id="APILabelValuesFuncCall.Results" href="#APILabelValuesFuncCall.Results">func (c APILabelValuesFuncCall) Results() []interface{}</a>
+
+```
+searchKey: mocks.APILabelValuesFuncCall.Results
+tags: [function]
+```
+
+```Go
+func (c APILabelValuesFuncCall) Results() []interface{}
+```
+
+Results returns an interface slice containing the results of this invocation. 
+
+### <a id="APIMetadataFunc" href="#APIMetadataFunc">type APIMetadataFunc struct</a>
+
+```
+searchKey: mocks.APIMetadataFunc
+tags: [struct]
+```
+
+```Go
+type APIMetadataFunc struct {
+	defaultHook func(context.Context, string, string) (map[string][]v1.Metadata, error)
+	hooks       []func(context.Context, string, string) (map[string][]v1.Metadata, error)
+	history     []APIMetadataFuncCall
+	mutex       sync.Mutex
+}
+```
+
+APIMetadataFunc describes the behavior when the Metadata method of the parent MockAPI instance is invoked. 
+
+#### <a id="APIMetadataFunc.History" href="#APIMetadataFunc.History">func (f *APIMetadataFunc) History() []APIMetadataFuncCall</a>
+
+```
+searchKey: mocks.APIMetadataFunc.History
+tags: [function]
+```
+
+```Go
+func (f *APIMetadataFunc) History() []APIMetadataFuncCall
+```
+
+History returns a sequence of APIMetadataFuncCall objects describing the invocations of this function. 
+
+#### <a id="APIMetadataFunc.PushHook" href="#APIMetadataFunc.PushHook">func (f *APIMetadataFunc) PushHook(hook func(context.Context, string, string) (map[string][]v1.Metadata, error))</a>
+
+```
+searchKey: mocks.APIMetadataFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *APIMetadataFunc) PushHook(hook func(context.Context, string, string) (map[string][]v1.Metadata, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the Metadata method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="APIMetadataFunc.PushReturn" href="#APIMetadataFunc.PushReturn">func (f *APIMetadataFunc) PushReturn(r0 map[string][]v1.Metadata, r1 error)</a>
+
+```
+searchKey: mocks.APIMetadataFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *APIMetadataFunc) PushReturn(r0 map[string][]v1.Metadata, r1 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="APIMetadataFunc.SetDefaultHook" href="#APIMetadataFunc.SetDefaultHook">func (f *APIMetadataFunc) SetDefaultHook(hook func(context.Context, string, string) (map[string][]v1.Metadata, error))</a>
+
+```
+searchKey: mocks.APIMetadataFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *APIMetadataFunc) SetDefaultHook(hook func(context.Context, string, string) (map[string][]v1.Metadata, error))
+```
+
+SetDefaultHook sets function that is called when the Metadata method of the parent MockAPI instance is invoked and the hook queue is empty. 
+
+#### <a id="APIMetadataFunc.SetDefaultReturn" href="#APIMetadataFunc.SetDefaultReturn">func (f *APIMetadataFunc) SetDefaultReturn(r0 map[string][]v1.Metadata, r1 error)</a>
+
+```
+searchKey: mocks.APIMetadataFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *APIMetadataFunc) SetDefaultReturn(r0 map[string][]v1.Metadata, r1 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="APIMetadataFunc.appendCall" href="#APIMetadataFunc.appendCall">func (f *APIMetadataFunc) appendCall(r0 APIMetadataFuncCall)</a>
+
+```
+searchKey: mocks.APIMetadataFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *APIMetadataFunc) appendCall(r0 APIMetadataFuncCall)
+```
+
+#### <a id="APIMetadataFunc.nextHook" href="#APIMetadataFunc.nextHook">func (f *APIMetadataFunc) nextHook() func(context.Context, string, string) (map[string][]v1.Metadata, error)</a>
+
+```
+searchKey: mocks.APIMetadataFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *APIMetadataFunc) nextHook() func(context.Context, string, string) (map[string][]v1.Metadata, error)
+```
+
+### <a id="APIMetadataFuncCall" href="#APIMetadataFuncCall">type APIMetadataFuncCall struct</a>
+
+```
+searchKey: mocks.APIMetadataFuncCall
+tags: [struct]
+```
+
+```Go
+type APIMetadataFuncCall struct {
+	// Arg0 is the value of the 1st argument passed to this method
+	// invocation.
+	Arg0 context.Context
+	// Arg1 is the value of the 2nd argument passed to this method
+	// invocation.
+	Arg1 string
+	// Arg2 is the value of the 3rd argument passed to this method
+	// invocation.
+	Arg2 string
+	// Result0 is the value of the 1st result returned from this method
+	// invocation.
+	Result0 map[string][]v1.Metadata
+	// Result1 is the value of the 2nd result returned from this method
+	// invocation.
+	Result1 error
+}
+```
+
+APIMetadataFuncCall is an object that describes an invocation of method Metadata on an instance of MockAPI. 
+
+#### <a id="APIMetadataFuncCall.Args" href="#APIMetadataFuncCall.Args">func (c APIMetadataFuncCall) Args() []interface{}</a>
+
+```
+searchKey: mocks.APIMetadataFuncCall.Args
+tags: [function]
+```
+
+```Go
+func (c APIMetadataFuncCall) Args() []interface{}
+```
+
+Args returns an interface slice containing the arguments of this invocation. 
+
+#### <a id="APIMetadataFuncCall.Results" href="#APIMetadataFuncCall.Results">func (c APIMetadataFuncCall) Results() []interface{}</a>
+
+```
+searchKey: mocks.APIMetadataFuncCall.Results
+tags: [function]
+```
+
+```Go
+func (c APIMetadataFuncCall) Results() []interface{}
+```
+
+Results returns an interface slice containing the results of this invocation. 
+
+### <a id="APIQueryFunc" href="#APIQueryFunc">type APIQueryFunc struct</a>
+
+```
+searchKey: mocks.APIQueryFunc
+tags: [struct]
+```
+
+```Go
+type APIQueryFunc struct {
+	defaultHook func(context.Context, string, time.Time) (model.Value, v1.Warnings, error)
+	hooks       []func(context.Context, string, time.Time) (model.Value, v1.Warnings, error)
+	history     []APIQueryFuncCall
+	mutex       sync.Mutex
+}
+```
+
+APIQueryFunc describes the behavior when the Query method of the parent MockAPI instance is invoked. 
+
+#### <a id="APIQueryFunc.History" href="#APIQueryFunc.History">func (f *APIQueryFunc) History() []APIQueryFuncCall</a>
+
+```
+searchKey: mocks.APIQueryFunc.History
+tags: [function]
+```
+
+```Go
+func (f *APIQueryFunc) History() []APIQueryFuncCall
+```
+
+History returns a sequence of APIQueryFuncCall objects describing the invocations of this function. 
+
+#### <a id="APIQueryFunc.PushHook" href="#APIQueryFunc.PushHook">func (f *APIQueryFunc) PushHook(hook func(context.Context, string, time.Time) (model.Value, v1.Warnings, error))</a>
+
+```
+searchKey: mocks.APIQueryFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *APIQueryFunc) PushHook(hook func(context.Context, string, time.Time) (model.Value, v1.Warnings, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the Query method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="APIQueryFunc.PushReturn" href="#APIQueryFunc.PushReturn">func (f *APIQueryFunc) PushReturn(r0 model.Value, r1 v1.Warnings, r2 error)</a>
+
+```
+searchKey: mocks.APIQueryFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *APIQueryFunc) PushReturn(r0 model.Value, r1 v1.Warnings, r2 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="APIQueryFunc.SetDefaultHook" href="#APIQueryFunc.SetDefaultHook">func (f *APIQueryFunc) SetDefaultHook(hook func(context.Context, string, time.Time) (model.Value, v1.Warnings, error))</a>
+
+```
+searchKey: mocks.APIQueryFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *APIQueryFunc) SetDefaultHook(hook func(context.Context, string, time.Time) (model.Value, v1.Warnings, error))
+```
+
+SetDefaultHook sets function that is called when the Query method of the parent MockAPI instance is invoked and the hook queue is empty. 
+
+#### <a id="APIQueryFunc.SetDefaultReturn" href="#APIQueryFunc.SetDefaultReturn">func (f *APIQueryFunc) SetDefaultReturn(r0 model.Value, r1 v1.Warnings, r2 error)</a>
+
+```
+searchKey: mocks.APIQueryFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *APIQueryFunc) SetDefaultReturn(r0 model.Value, r1 v1.Warnings, r2 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="APIQueryFunc.appendCall" href="#APIQueryFunc.appendCall">func (f *APIQueryFunc) appendCall(r0 APIQueryFuncCall)</a>
+
+```
+searchKey: mocks.APIQueryFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *APIQueryFunc) appendCall(r0 APIQueryFuncCall)
+```
+
+#### <a id="APIQueryFunc.nextHook" href="#APIQueryFunc.nextHook">func (f *APIQueryFunc) nextHook() func(context.Context, string, time.Time) (model.Value, v1.Warnings, error)</a>
+
+```
+searchKey: mocks.APIQueryFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *APIQueryFunc) nextHook() func(context.Context, string, time.Time) (model.Value, v1.Warnings, error)
+```
+
+### <a id="APIQueryFuncCall" href="#APIQueryFuncCall">type APIQueryFuncCall struct</a>
+
+```
+searchKey: mocks.APIQueryFuncCall
+tags: [struct]
+```
+
+```Go
+type APIQueryFuncCall struct {
+	// Arg0 is the value of the 1st argument passed to this method
+	// invocation.
+	Arg0 context.Context
+	// Arg1 is the value of the 2nd argument passed to this method
+	// invocation.
+	Arg1 string
+	// Arg2 is the value of the 3rd argument passed to this method
+	// invocation.
+	Arg2 time.Time
+	// Result0 is the value of the 1st result returned from this method
+	// invocation.
+	Result0 model.Value
+	// Result1 is the value of the 2nd result returned from this method
+	// invocation.
+	Result1 v1.Warnings
+	// Result2 is the value of the 3rd result returned from this method
+	// invocation.
+	Result2 error
+}
+```
+
+APIQueryFuncCall is an object that describes an invocation of method Query on an instance of MockAPI. 
+
+#### <a id="APIQueryFuncCall.Args" href="#APIQueryFuncCall.Args">func (c APIQueryFuncCall) Args() []interface{}</a>
+
+```
+searchKey: mocks.APIQueryFuncCall.Args
+tags: [function]
+```
+
+```Go
+func (c APIQueryFuncCall) Args() []interface{}
+```
+
+Args returns an interface slice containing the arguments of this invocation. 
+
+#### <a id="APIQueryFuncCall.Results" href="#APIQueryFuncCall.Results">func (c APIQueryFuncCall) Results() []interface{}</a>
+
+```
+searchKey: mocks.APIQueryFuncCall.Results
+tags: [function]
+```
+
+```Go
+func (c APIQueryFuncCall) Results() []interface{}
+```
+
+Results returns an interface slice containing the results of this invocation. 
+
+### <a id="APIQueryRangeFunc" href="#APIQueryRangeFunc">type APIQueryRangeFunc struct</a>
+
+```
+searchKey: mocks.APIQueryRangeFunc
+tags: [struct]
+```
+
+```Go
+type APIQueryRangeFunc struct {
+	defaultHook func(context.Context, string, v1.Range) (model.Value, v1.Warnings, error)
+	hooks       []func(context.Context, string, v1.Range) (model.Value, v1.Warnings, error)
+	history     []APIQueryRangeFuncCall
+	mutex       sync.Mutex
+}
+```
+
+APIQueryRangeFunc describes the behavior when the QueryRange method of the parent MockAPI instance is invoked. 
+
+#### <a id="APIQueryRangeFunc.History" href="#APIQueryRangeFunc.History">func (f *APIQueryRangeFunc) History() []APIQueryRangeFuncCall</a>
+
+```
+searchKey: mocks.APIQueryRangeFunc.History
+tags: [function]
+```
+
+```Go
+func (f *APIQueryRangeFunc) History() []APIQueryRangeFuncCall
+```
+
+History returns a sequence of APIQueryRangeFuncCall objects describing the invocations of this function. 
+
+#### <a id="APIQueryRangeFunc.PushHook" href="#APIQueryRangeFunc.PushHook">func (f *APIQueryRangeFunc) PushHook(hook func(context.Context, string, v1.Range) (model.Value, v1.Warnings, error))</a>
+
+```
+searchKey: mocks.APIQueryRangeFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *APIQueryRangeFunc) PushHook(hook func(context.Context, string, v1.Range) (model.Value, v1.Warnings, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the QueryRange method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="APIQueryRangeFunc.PushReturn" href="#APIQueryRangeFunc.PushReturn">func (f *APIQueryRangeFunc) PushReturn(r0 model.Value, r1 v1.Warnings, r2 error)</a>
+
+```
+searchKey: mocks.APIQueryRangeFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *APIQueryRangeFunc) PushReturn(r0 model.Value, r1 v1.Warnings, r2 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="APIQueryRangeFunc.SetDefaultHook" href="#APIQueryRangeFunc.SetDefaultHook">func (f *APIQueryRangeFunc) SetDefaultHook(hook func(context.Context, string, v1.Range) (model.Value, v1.Warnings, error))</a>
+
+```
+searchKey: mocks.APIQueryRangeFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *APIQueryRangeFunc) SetDefaultHook(hook func(context.Context, string, v1.Range) (model.Value, v1.Warnings, error))
+```
+
+SetDefaultHook sets function that is called when the QueryRange method of the parent MockAPI instance is invoked and the hook queue is empty. 
+
+#### <a id="APIQueryRangeFunc.SetDefaultReturn" href="#APIQueryRangeFunc.SetDefaultReturn">func (f *APIQueryRangeFunc) SetDefaultReturn(r0 model.Value, r1 v1.Warnings, r2 error)</a>
+
+```
+searchKey: mocks.APIQueryRangeFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *APIQueryRangeFunc) SetDefaultReturn(r0 model.Value, r1 v1.Warnings, r2 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="APIQueryRangeFunc.appendCall" href="#APIQueryRangeFunc.appendCall">func (f *APIQueryRangeFunc) appendCall(r0 APIQueryRangeFuncCall)</a>
+
+```
+searchKey: mocks.APIQueryRangeFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *APIQueryRangeFunc) appendCall(r0 APIQueryRangeFuncCall)
+```
+
+#### <a id="APIQueryRangeFunc.nextHook" href="#APIQueryRangeFunc.nextHook">func (f *APIQueryRangeFunc) nextHook() func(context.Context, string, v1.Range) (model.Value, v1.Warnings, error)</a>
+
+```
+searchKey: mocks.APIQueryRangeFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *APIQueryRangeFunc) nextHook() func(context.Context, string, v1.Range) (model.Value, v1.Warnings, error)
+```
+
+### <a id="APIQueryRangeFuncCall" href="#APIQueryRangeFuncCall">type APIQueryRangeFuncCall struct</a>
+
+```
+searchKey: mocks.APIQueryRangeFuncCall
+tags: [struct]
+```
+
+```Go
+type APIQueryRangeFuncCall struct {
+	// Arg0 is the value of the 1st argument passed to this method
+	// invocation.
+	Arg0 context.Context
+	// Arg1 is the value of the 2nd argument passed to this method
+	// invocation.
+	Arg1 string
+	// Arg2 is the value of the 3rd argument passed to this method
+	// invocation.
+	Arg2 v1.Range
+	// Result0 is the value of the 1st result returned from this method
+	// invocation.
+	Result0 model.Value
+	// Result1 is the value of the 2nd result returned from this method
+	// invocation.
+	Result1 v1.Warnings
+	// Result2 is the value of the 3rd result returned from this method
+	// invocation.
+	Result2 error
+}
+```
+
+APIQueryRangeFuncCall is an object that describes an invocation of method QueryRange on an instance of MockAPI. 
+
+#### <a id="APIQueryRangeFuncCall.Args" href="#APIQueryRangeFuncCall.Args">func (c APIQueryRangeFuncCall) Args() []interface{}</a>
+
+```
+searchKey: mocks.APIQueryRangeFuncCall.Args
+tags: [function]
+```
+
+```Go
+func (c APIQueryRangeFuncCall) Args() []interface{}
+```
+
+Args returns an interface slice containing the arguments of this invocation. 
+
+#### <a id="APIQueryRangeFuncCall.Results" href="#APIQueryRangeFuncCall.Results">func (c APIQueryRangeFuncCall) Results() []interface{}</a>
+
+```
+searchKey: mocks.APIQueryRangeFuncCall.Results
+tags: [function]
+```
+
+```Go
+func (c APIQueryRangeFuncCall) Results() []interface{}
+```
+
+Results returns an interface slice containing the results of this invocation. 
+
+### <a id="APIRulesFunc" href="#APIRulesFunc">type APIRulesFunc struct</a>
+
+```
+searchKey: mocks.APIRulesFunc
+tags: [struct]
+```
+
+```Go
+type APIRulesFunc struct {
+	defaultHook func(context.Context) (v1.RulesResult, error)
+	hooks       []func(context.Context) (v1.RulesResult, error)
+	history     []APIRulesFuncCall
+	mutex       sync.Mutex
+}
+```
+
+APIRulesFunc describes the behavior when the Rules method of the parent MockAPI instance is invoked. 
+
+#### <a id="APIRulesFunc.History" href="#APIRulesFunc.History">func (f *APIRulesFunc) History() []APIRulesFuncCall</a>
+
+```
+searchKey: mocks.APIRulesFunc.History
+tags: [function]
+```
+
+```Go
+func (f *APIRulesFunc) History() []APIRulesFuncCall
+```
+
+History returns a sequence of APIRulesFuncCall objects describing the invocations of this function. 
+
+#### <a id="APIRulesFunc.PushHook" href="#APIRulesFunc.PushHook">func (f *APIRulesFunc) PushHook(hook func(context.Context) (v1.RulesResult, error))</a>
+
+```
+searchKey: mocks.APIRulesFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *APIRulesFunc) PushHook(hook func(context.Context) (v1.RulesResult, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the Rules method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="APIRulesFunc.PushReturn" href="#APIRulesFunc.PushReturn">func (f *APIRulesFunc) PushReturn(r0 v1.RulesResult, r1 error)</a>
+
+```
+searchKey: mocks.APIRulesFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *APIRulesFunc) PushReturn(r0 v1.RulesResult, r1 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="APIRulesFunc.SetDefaultHook" href="#APIRulesFunc.SetDefaultHook">func (f *APIRulesFunc) SetDefaultHook(hook func(context.Context) (v1.RulesResult, error))</a>
+
+```
+searchKey: mocks.APIRulesFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *APIRulesFunc) SetDefaultHook(hook func(context.Context) (v1.RulesResult, error))
+```
+
+SetDefaultHook sets function that is called when the Rules method of the parent MockAPI instance is invoked and the hook queue is empty. 
+
+#### <a id="APIRulesFunc.SetDefaultReturn" href="#APIRulesFunc.SetDefaultReturn">func (f *APIRulesFunc) SetDefaultReturn(r0 v1.RulesResult, r1 error)</a>
+
+```
+searchKey: mocks.APIRulesFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *APIRulesFunc) SetDefaultReturn(r0 v1.RulesResult, r1 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="APIRulesFunc.appendCall" href="#APIRulesFunc.appendCall">func (f *APIRulesFunc) appendCall(r0 APIRulesFuncCall)</a>
+
+```
+searchKey: mocks.APIRulesFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *APIRulesFunc) appendCall(r0 APIRulesFuncCall)
+```
+
+#### <a id="APIRulesFunc.nextHook" href="#APIRulesFunc.nextHook">func (f *APIRulesFunc) nextHook() func(context.Context) (v1.RulesResult, error)</a>
+
+```
+searchKey: mocks.APIRulesFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *APIRulesFunc) nextHook() func(context.Context) (v1.RulesResult, error)
+```
+
+### <a id="APIRulesFuncCall" href="#APIRulesFuncCall">type APIRulesFuncCall struct</a>
+
+```
+searchKey: mocks.APIRulesFuncCall
+tags: [struct]
+```
+
+```Go
+type APIRulesFuncCall struct {
+	// Arg0 is the value of the 1st argument passed to this method
+	// invocation.
+	Arg0 context.Context
+	// Result0 is the value of the 1st result returned from this method
+	// invocation.
+	Result0 v1.RulesResult
+	// Result1 is the value of the 2nd result returned from this method
+	// invocation.
+	Result1 error
+}
+```
+
+APIRulesFuncCall is an object that describes an invocation of method Rules on an instance of MockAPI. 
+
+#### <a id="APIRulesFuncCall.Args" href="#APIRulesFuncCall.Args">func (c APIRulesFuncCall) Args() []interface{}</a>
+
+```
+searchKey: mocks.APIRulesFuncCall.Args
+tags: [function]
+```
+
+```Go
+func (c APIRulesFuncCall) Args() []interface{}
+```
+
+Args returns an interface slice containing the arguments of this invocation. 
+
+#### <a id="APIRulesFuncCall.Results" href="#APIRulesFuncCall.Results">func (c APIRulesFuncCall) Results() []interface{}</a>
+
+```
+searchKey: mocks.APIRulesFuncCall.Results
+tags: [function]
+```
+
+```Go
+func (c APIRulesFuncCall) Results() []interface{}
+```
+
+Results returns an interface slice containing the results of this invocation. 
+
+### <a id="APIRuntimeinfoFunc" href="#APIRuntimeinfoFunc">type APIRuntimeinfoFunc struct</a>
+
+```
+searchKey: mocks.APIRuntimeinfoFunc
+tags: [struct]
+```
+
+```Go
+type APIRuntimeinfoFunc struct {
+	defaultHook func(context.Context) (v1.RuntimeinfoResult, error)
+	hooks       []func(context.Context) (v1.RuntimeinfoResult, error)
+	history     []APIRuntimeinfoFuncCall
+	mutex       sync.Mutex
+}
+```
+
+APIRuntimeinfoFunc describes the behavior when the Runtimeinfo method of the parent MockAPI instance is invoked. 
+
+#### <a id="APIRuntimeinfoFunc.History" href="#APIRuntimeinfoFunc.History">func (f *APIRuntimeinfoFunc) History() []APIRuntimeinfoFuncCall</a>
+
+```
+searchKey: mocks.APIRuntimeinfoFunc.History
+tags: [function]
+```
+
+```Go
+func (f *APIRuntimeinfoFunc) History() []APIRuntimeinfoFuncCall
+```
+
+History returns a sequence of APIRuntimeinfoFuncCall objects describing the invocations of this function. 
+
+#### <a id="APIRuntimeinfoFunc.PushHook" href="#APIRuntimeinfoFunc.PushHook">func (f *APIRuntimeinfoFunc) PushHook(hook func(context.Context) (v1.RuntimeinfoResult, error))</a>
+
+```
+searchKey: mocks.APIRuntimeinfoFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *APIRuntimeinfoFunc) PushHook(hook func(context.Context) (v1.RuntimeinfoResult, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the Runtimeinfo method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="APIRuntimeinfoFunc.PushReturn" href="#APIRuntimeinfoFunc.PushReturn">func (f *APIRuntimeinfoFunc) PushReturn(r0 v1.RuntimeinfoResult, r1 error)</a>
+
+```
+searchKey: mocks.APIRuntimeinfoFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *APIRuntimeinfoFunc) PushReturn(r0 v1.RuntimeinfoResult, r1 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="APIRuntimeinfoFunc.SetDefaultHook" href="#APIRuntimeinfoFunc.SetDefaultHook">func (f *APIRuntimeinfoFunc) SetDefaultHook(hook func(context.Context) (v1.RuntimeinfoResult, error))</a>
+
+```
+searchKey: mocks.APIRuntimeinfoFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *APIRuntimeinfoFunc) SetDefaultHook(hook func(context.Context) (v1.RuntimeinfoResult, error))
+```
+
+SetDefaultHook sets function that is called when the Runtimeinfo method of the parent MockAPI instance is invoked and the hook queue is empty. 
+
+#### <a id="APIRuntimeinfoFunc.SetDefaultReturn" href="#APIRuntimeinfoFunc.SetDefaultReturn">func (f *APIRuntimeinfoFunc) SetDefaultReturn(r0 v1.RuntimeinfoResult, r1 error)</a>
+
+```
+searchKey: mocks.APIRuntimeinfoFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *APIRuntimeinfoFunc) SetDefaultReturn(r0 v1.RuntimeinfoResult, r1 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="APIRuntimeinfoFunc.appendCall" href="#APIRuntimeinfoFunc.appendCall">func (f *APIRuntimeinfoFunc) appendCall(r0 APIRuntimeinfoFuncCall)</a>
+
+```
+searchKey: mocks.APIRuntimeinfoFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *APIRuntimeinfoFunc) appendCall(r0 APIRuntimeinfoFuncCall)
+```
+
+#### <a id="APIRuntimeinfoFunc.nextHook" href="#APIRuntimeinfoFunc.nextHook">func (f *APIRuntimeinfoFunc) nextHook() func(context.Context) (v1.RuntimeinfoResult, error)</a>
+
+```
+searchKey: mocks.APIRuntimeinfoFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *APIRuntimeinfoFunc) nextHook() func(context.Context) (v1.RuntimeinfoResult, error)
+```
+
+### <a id="APIRuntimeinfoFuncCall" href="#APIRuntimeinfoFuncCall">type APIRuntimeinfoFuncCall struct</a>
+
+```
+searchKey: mocks.APIRuntimeinfoFuncCall
+tags: [struct]
+```
+
+```Go
+type APIRuntimeinfoFuncCall struct {
+	// Arg0 is the value of the 1st argument passed to this method
+	// invocation.
+	Arg0 context.Context
+	// Result0 is the value of the 1st result returned from this method
+	// invocation.
+	Result0 v1.RuntimeinfoResult
+	// Result1 is the value of the 2nd result returned from this method
+	// invocation.
+	Result1 error
+}
+```
+
+APIRuntimeinfoFuncCall is an object that describes an invocation of method Runtimeinfo on an instance of MockAPI. 
+
+#### <a id="APIRuntimeinfoFuncCall.Args" href="#APIRuntimeinfoFuncCall.Args">func (c APIRuntimeinfoFuncCall) Args() []interface{}</a>
+
+```
+searchKey: mocks.APIRuntimeinfoFuncCall.Args
+tags: [function]
+```
+
+```Go
+func (c APIRuntimeinfoFuncCall) Args() []interface{}
+```
+
+Args returns an interface slice containing the arguments of this invocation. 
+
+#### <a id="APIRuntimeinfoFuncCall.Results" href="#APIRuntimeinfoFuncCall.Results">func (c APIRuntimeinfoFuncCall) Results() []interface{}</a>
+
+```
+searchKey: mocks.APIRuntimeinfoFuncCall.Results
+tags: [function]
+```
+
+```Go
+func (c APIRuntimeinfoFuncCall) Results() []interface{}
+```
+
+Results returns an interface slice containing the results of this invocation. 
+
+### <a id="APISeriesFunc" href="#APISeriesFunc">type APISeriesFunc struct</a>
+
+```
+searchKey: mocks.APISeriesFunc
+tags: [struct]
+```
+
+```Go
+type APISeriesFunc struct {
+	defaultHook func(context.Context, []string, time.Time, time.Time) ([]model.LabelSet, v1.Warnings, error)
+	hooks       []func(context.Context, []string, time.Time, time.Time) ([]model.LabelSet, v1.Warnings, error)
+	history     []APISeriesFuncCall
+	mutex       sync.Mutex
+}
+```
+
+APISeriesFunc describes the behavior when the Series method of the parent MockAPI instance is invoked. 
+
+#### <a id="APISeriesFunc.History" href="#APISeriesFunc.History">func (f *APISeriesFunc) History() []APISeriesFuncCall</a>
+
+```
+searchKey: mocks.APISeriesFunc.History
+tags: [function]
+```
+
+```Go
+func (f *APISeriesFunc) History() []APISeriesFuncCall
+```
+
+History returns a sequence of APISeriesFuncCall objects describing the invocations of this function. 
+
+#### <a id="APISeriesFunc.PushHook" href="#APISeriesFunc.PushHook">func (f *APISeriesFunc) PushHook(hook func(context.Context, []string, time.Time, time.Time) ([]model.LabelSet, v1.Warnings, error))</a>
+
+```
+searchKey: mocks.APISeriesFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *APISeriesFunc) PushHook(hook func(context.Context, []string, time.Time, time.Time) ([]model.LabelSet, v1.Warnings, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the Series method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="APISeriesFunc.PushReturn" href="#APISeriesFunc.PushReturn">func (f *APISeriesFunc) PushReturn(r0 []model.LabelSet, r1 v1.Warnings, r2 error)</a>
+
+```
+searchKey: mocks.APISeriesFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *APISeriesFunc) PushReturn(r0 []model.LabelSet, r1 v1.Warnings, r2 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="APISeriesFunc.SetDefaultHook" href="#APISeriesFunc.SetDefaultHook">func (f *APISeriesFunc) SetDefaultHook(hook func(context.Context, []string, time.Time, time.Time) ([]model.LabelSet, v1.Warnings, error))</a>
+
+```
+searchKey: mocks.APISeriesFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *APISeriesFunc) SetDefaultHook(hook func(context.Context, []string, time.Time, time.Time) ([]model.LabelSet, v1.Warnings, error))
+```
+
+SetDefaultHook sets function that is called when the Series method of the parent MockAPI instance is invoked and the hook queue is empty. 
+
+#### <a id="APISeriesFunc.SetDefaultReturn" href="#APISeriesFunc.SetDefaultReturn">func (f *APISeriesFunc) SetDefaultReturn(r0 []model.LabelSet, r1 v1.Warnings, r2 error)</a>
+
+```
+searchKey: mocks.APISeriesFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *APISeriesFunc) SetDefaultReturn(r0 []model.LabelSet, r1 v1.Warnings, r2 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="APISeriesFunc.appendCall" href="#APISeriesFunc.appendCall">func (f *APISeriesFunc) appendCall(r0 APISeriesFuncCall)</a>
+
+```
+searchKey: mocks.APISeriesFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *APISeriesFunc) appendCall(r0 APISeriesFuncCall)
+```
+
+#### <a id="APISeriesFunc.nextHook" href="#APISeriesFunc.nextHook">func (f *APISeriesFunc) nextHook() func(context.Context, []string, time.Time, time.Time) ([]model.LabelSet, v1.Warnings, error)</a>
+
+```
+searchKey: mocks.APISeriesFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *APISeriesFunc) nextHook() func(context.Context, []string, time.Time, time.Time) ([]model.LabelSet, v1.Warnings, error)
+```
+
+### <a id="APISeriesFuncCall" href="#APISeriesFuncCall">type APISeriesFuncCall struct</a>
+
+```
+searchKey: mocks.APISeriesFuncCall
+tags: [struct]
+```
+
+```Go
+type APISeriesFuncCall struct {
+	// Arg0 is the value of the 1st argument passed to this method
+	// invocation.
+	Arg0 context.Context
+	// Arg1 is the value of the 2nd argument passed to this method
+	// invocation.
+	Arg1 []string
+	// Arg2 is the value of the 3rd argument passed to this method
+	// invocation.
+	Arg2 time.Time
+	// Arg3 is the value of the 4th argument passed to this method
+	// invocation.
+	Arg3 time.Time
+	// Result0 is the value of the 1st result returned from this method
+	// invocation.
+	Result0 []model.LabelSet
+	// Result1 is the value of the 2nd result returned from this method
+	// invocation.
+	Result1 v1.Warnings
+	// Result2 is the value of the 3rd result returned from this method
+	// invocation.
+	Result2 error
+}
+```
+
+APISeriesFuncCall is an object that describes an invocation of method Series on an instance of MockAPI. 
+
+#### <a id="APISeriesFuncCall.Args" href="#APISeriesFuncCall.Args">func (c APISeriesFuncCall) Args() []interface{}</a>
+
+```
+searchKey: mocks.APISeriesFuncCall.Args
+tags: [function]
+```
+
+```Go
+func (c APISeriesFuncCall) Args() []interface{}
+```
+
+Args returns an interface slice containing the arguments of this invocation. 
+
+#### <a id="APISeriesFuncCall.Results" href="#APISeriesFuncCall.Results">func (c APISeriesFuncCall) Results() []interface{}</a>
+
+```
+searchKey: mocks.APISeriesFuncCall.Results
+tags: [function]
+```
+
+```Go
+func (c APISeriesFuncCall) Results() []interface{}
+```
+
+Results returns an interface slice containing the results of this invocation. 
+
+### <a id="APISnapshotFunc" href="#APISnapshotFunc">type APISnapshotFunc struct</a>
+
+```
+searchKey: mocks.APISnapshotFunc
+tags: [struct]
+```
+
+```Go
+type APISnapshotFunc struct {
+	defaultHook func(context.Context, bool) (v1.SnapshotResult, error)
+	hooks       []func(context.Context, bool) (v1.SnapshotResult, error)
+	history     []APISnapshotFuncCall
+	mutex       sync.Mutex
+}
+```
+
+APISnapshotFunc describes the behavior when the Snapshot method of the parent MockAPI instance is invoked. 
+
+#### <a id="APISnapshotFunc.History" href="#APISnapshotFunc.History">func (f *APISnapshotFunc) History() []APISnapshotFuncCall</a>
+
+```
+searchKey: mocks.APISnapshotFunc.History
+tags: [function]
+```
+
+```Go
+func (f *APISnapshotFunc) History() []APISnapshotFuncCall
+```
+
+History returns a sequence of APISnapshotFuncCall objects describing the invocations of this function. 
+
+#### <a id="APISnapshotFunc.PushHook" href="#APISnapshotFunc.PushHook">func (f *APISnapshotFunc) PushHook(hook func(context.Context, bool) (v1.SnapshotResult, error))</a>
+
+```
+searchKey: mocks.APISnapshotFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *APISnapshotFunc) PushHook(hook func(context.Context, bool) (v1.SnapshotResult, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the Snapshot method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="APISnapshotFunc.PushReturn" href="#APISnapshotFunc.PushReturn">func (f *APISnapshotFunc) PushReturn(r0 v1.SnapshotResult, r1 error)</a>
+
+```
+searchKey: mocks.APISnapshotFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *APISnapshotFunc) PushReturn(r0 v1.SnapshotResult, r1 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="APISnapshotFunc.SetDefaultHook" href="#APISnapshotFunc.SetDefaultHook">func (f *APISnapshotFunc) SetDefaultHook(hook func(context.Context, bool) (v1.SnapshotResult, error))</a>
+
+```
+searchKey: mocks.APISnapshotFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *APISnapshotFunc) SetDefaultHook(hook func(context.Context, bool) (v1.SnapshotResult, error))
+```
+
+SetDefaultHook sets function that is called when the Snapshot method of the parent MockAPI instance is invoked and the hook queue is empty. 
+
+#### <a id="APISnapshotFunc.SetDefaultReturn" href="#APISnapshotFunc.SetDefaultReturn">func (f *APISnapshotFunc) SetDefaultReturn(r0 v1.SnapshotResult, r1 error)</a>
+
+```
+searchKey: mocks.APISnapshotFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *APISnapshotFunc) SetDefaultReturn(r0 v1.SnapshotResult, r1 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="APISnapshotFunc.appendCall" href="#APISnapshotFunc.appendCall">func (f *APISnapshotFunc) appendCall(r0 APISnapshotFuncCall)</a>
+
+```
+searchKey: mocks.APISnapshotFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *APISnapshotFunc) appendCall(r0 APISnapshotFuncCall)
+```
+
+#### <a id="APISnapshotFunc.nextHook" href="#APISnapshotFunc.nextHook">func (f *APISnapshotFunc) nextHook() func(context.Context, bool) (v1.SnapshotResult, error)</a>
+
+```
+searchKey: mocks.APISnapshotFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *APISnapshotFunc) nextHook() func(context.Context, bool) (v1.SnapshotResult, error)
+```
+
+### <a id="APISnapshotFuncCall" href="#APISnapshotFuncCall">type APISnapshotFuncCall struct</a>
+
+```
+searchKey: mocks.APISnapshotFuncCall
+tags: [struct]
+```
+
+```Go
+type APISnapshotFuncCall struct {
+	// Arg0 is the value of the 1st argument passed to this method
+	// invocation.
+	Arg0 context.Context
+	// Arg1 is the value of the 2nd argument passed to this method
+	// invocation.
+	Arg1 bool
+	// Result0 is the value of the 1st result returned from this method
+	// invocation.
+	Result0 v1.SnapshotResult
+	// Result1 is the value of the 2nd result returned from this method
+	// invocation.
+	Result1 error
+}
+```
+
+APISnapshotFuncCall is an object that describes an invocation of method Snapshot on an instance of MockAPI. 
+
+#### <a id="APISnapshotFuncCall.Args" href="#APISnapshotFuncCall.Args">func (c APISnapshotFuncCall) Args() []interface{}</a>
+
+```
+searchKey: mocks.APISnapshotFuncCall.Args
+tags: [function]
+```
+
+```Go
+func (c APISnapshotFuncCall) Args() []interface{}
+```
+
+Args returns an interface slice containing the arguments of this invocation. 
+
+#### <a id="APISnapshotFuncCall.Results" href="#APISnapshotFuncCall.Results">func (c APISnapshotFuncCall) Results() []interface{}</a>
+
+```
+searchKey: mocks.APISnapshotFuncCall.Results
+tags: [function]
+```
+
+```Go
+func (c APISnapshotFuncCall) Results() []interface{}
+```
+
+Results returns an interface slice containing the results of this invocation. 
+
+### <a id="APITSDBFunc" href="#APITSDBFunc">type APITSDBFunc struct</a>
+
+```
+searchKey: mocks.APITSDBFunc
+tags: [struct]
+```
+
+```Go
+type APITSDBFunc struct {
+	defaultHook func(context.Context) (v1.TSDBResult, error)
+	hooks       []func(context.Context) (v1.TSDBResult, error)
+	history     []APITSDBFuncCall
+	mutex       sync.Mutex
+}
+```
+
+APITSDBFunc describes the behavior when the TSDB method of the parent MockAPI instance is invoked. 
+
+#### <a id="APITSDBFunc.History" href="#APITSDBFunc.History">func (f *APITSDBFunc) History() []APITSDBFuncCall</a>
+
+```
+searchKey: mocks.APITSDBFunc.History
+tags: [function]
+```
+
+```Go
+func (f *APITSDBFunc) History() []APITSDBFuncCall
+```
+
+History returns a sequence of APITSDBFuncCall objects describing the invocations of this function. 
+
+#### <a id="APITSDBFunc.PushHook" href="#APITSDBFunc.PushHook">func (f *APITSDBFunc) PushHook(hook func(context.Context) (v1.TSDBResult, error))</a>
+
+```
+searchKey: mocks.APITSDBFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *APITSDBFunc) PushHook(hook func(context.Context) (v1.TSDBResult, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the TSDB method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="APITSDBFunc.PushReturn" href="#APITSDBFunc.PushReturn">func (f *APITSDBFunc) PushReturn(r0 v1.TSDBResult, r1 error)</a>
+
+```
+searchKey: mocks.APITSDBFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *APITSDBFunc) PushReturn(r0 v1.TSDBResult, r1 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="APITSDBFunc.SetDefaultHook" href="#APITSDBFunc.SetDefaultHook">func (f *APITSDBFunc) SetDefaultHook(hook func(context.Context) (v1.TSDBResult, error))</a>
+
+```
+searchKey: mocks.APITSDBFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *APITSDBFunc) SetDefaultHook(hook func(context.Context) (v1.TSDBResult, error))
+```
+
+SetDefaultHook sets function that is called when the TSDB method of the parent MockAPI instance is invoked and the hook queue is empty. 
+
+#### <a id="APITSDBFunc.SetDefaultReturn" href="#APITSDBFunc.SetDefaultReturn">func (f *APITSDBFunc) SetDefaultReturn(r0 v1.TSDBResult, r1 error)</a>
+
+```
+searchKey: mocks.APITSDBFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *APITSDBFunc) SetDefaultReturn(r0 v1.TSDBResult, r1 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="APITSDBFunc.appendCall" href="#APITSDBFunc.appendCall">func (f *APITSDBFunc) appendCall(r0 APITSDBFuncCall)</a>
+
+```
+searchKey: mocks.APITSDBFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *APITSDBFunc) appendCall(r0 APITSDBFuncCall)
+```
+
+#### <a id="APITSDBFunc.nextHook" href="#APITSDBFunc.nextHook">func (f *APITSDBFunc) nextHook() func(context.Context) (v1.TSDBResult, error)</a>
+
+```
+searchKey: mocks.APITSDBFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *APITSDBFunc) nextHook() func(context.Context) (v1.TSDBResult, error)
+```
+
+### <a id="APITSDBFuncCall" href="#APITSDBFuncCall">type APITSDBFuncCall struct</a>
+
+```
+searchKey: mocks.APITSDBFuncCall
+tags: [struct]
+```
+
+```Go
+type APITSDBFuncCall struct {
+	// Arg0 is the value of the 1st argument passed to this method
+	// invocation.
+	Arg0 context.Context
+	// Result0 is the value of the 1st result returned from this method
+	// invocation.
+	Result0 v1.TSDBResult
+	// Result1 is the value of the 2nd result returned from this method
+	// invocation.
+	Result1 error
+}
+```
+
+APITSDBFuncCall is an object that describes an invocation of method TSDB on an instance of MockAPI. 
+
+#### <a id="APITSDBFuncCall.Args" href="#APITSDBFuncCall.Args">func (c APITSDBFuncCall) Args() []interface{}</a>
+
+```
+searchKey: mocks.APITSDBFuncCall.Args
+tags: [function]
+```
+
+```Go
+func (c APITSDBFuncCall) Args() []interface{}
+```
+
+Args returns an interface slice containing the arguments of this invocation. 
+
+#### <a id="APITSDBFuncCall.Results" href="#APITSDBFuncCall.Results">func (c APITSDBFuncCall) Results() []interface{}</a>
+
+```
+searchKey: mocks.APITSDBFuncCall.Results
+tags: [function]
+```
+
+```Go
+func (c APITSDBFuncCall) Results() []interface{}
+```
+
+Results returns an interface slice containing the results of this invocation. 
+
+### <a id="APITargetsFunc" href="#APITargetsFunc">type APITargetsFunc struct</a>
+
+```
+searchKey: mocks.APITargetsFunc
+tags: [struct]
+```
+
+```Go
+type APITargetsFunc struct {
+	defaultHook func(context.Context) (v1.TargetsResult, error)
+	hooks       []func(context.Context) (v1.TargetsResult, error)
+	history     []APITargetsFuncCall
+	mutex       sync.Mutex
+}
+```
+
+APITargetsFunc describes the behavior when the Targets method of the parent MockAPI instance is invoked. 
+
+#### <a id="APITargetsFunc.History" href="#APITargetsFunc.History">func (f *APITargetsFunc) History() []APITargetsFuncCall</a>
+
+```
+searchKey: mocks.APITargetsFunc.History
+tags: [function]
+```
+
+```Go
+func (f *APITargetsFunc) History() []APITargetsFuncCall
+```
+
+History returns a sequence of APITargetsFuncCall objects describing the invocations of this function. 
+
+#### <a id="APITargetsFunc.PushHook" href="#APITargetsFunc.PushHook">func (f *APITargetsFunc) PushHook(hook func(context.Context) (v1.TargetsResult, error))</a>
+
+```
+searchKey: mocks.APITargetsFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *APITargetsFunc) PushHook(hook func(context.Context) (v1.TargetsResult, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the Targets method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="APITargetsFunc.PushReturn" href="#APITargetsFunc.PushReturn">func (f *APITargetsFunc) PushReturn(r0 v1.TargetsResult, r1 error)</a>
+
+```
+searchKey: mocks.APITargetsFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *APITargetsFunc) PushReturn(r0 v1.TargetsResult, r1 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="APITargetsFunc.SetDefaultHook" href="#APITargetsFunc.SetDefaultHook">func (f *APITargetsFunc) SetDefaultHook(hook func(context.Context) (v1.TargetsResult, error))</a>
+
+```
+searchKey: mocks.APITargetsFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *APITargetsFunc) SetDefaultHook(hook func(context.Context) (v1.TargetsResult, error))
+```
+
+SetDefaultHook sets function that is called when the Targets method of the parent MockAPI instance is invoked and the hook queue is empty. 
+
+#### <a id="APITargetsFunc.SetDefaultReturn" href="#APITargetsFunc.SetDefaultReturn">func (f *APITargetsFunc) SetDefaultReturn(r0 v1.TargetsResult, r1 error)</a>
+
+```
+searchKey: mocks.APITargetsFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *APITargetsFunc) SetDefaultReturn(r0 v1.TargetsResult, r1 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="APITargetsFunc.appendCall" href="#APITargetsFunc.appendCall">func (f *APITargetsFunc) appendCall(r0 APITargetsFuncCall)</a>
+
+```
+searchKey: mocks.APITargetsFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *APITargetsFunc) appendCall(r0 APITargetsFuncCall)
+```
+
+#### <a id="APITargetsFunc.nextHook" href="#APITargetsFunc.nextHook">func (f *APITargetsFunc) nextHook() func(context.Context) (v1.TargetsResult, error)</a>
+
+```
+searchKey: mocks.APITargetsFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *APITargetsFunc) nextHook() func(context.Context) (v1.TargetsResult, error)
+```
+
+### <a id="APITargetsFuncCall" href="#APITargetsFuncCall">type APITargetsFuncCall struct</a>
+
+```
+searchKey: mocks.APITargetsFuncCall
+tags: [struct]
+```
+
+```Go
+type APITargetsFuncCall struct {
+	// Arg0 is the value of the 1st argument passed to this method
+	// invocation.
+	Arg0 context.Context
+	// Result0 is the value of the 1st result returned from this method
+	// invocation.
+	Result0 v1.TargetsResult
+	// Result1 is the value of the 2nd result returned from this method
+	// invocation.
+	Result1 error
+}
+```
+
+APITargetsFuncCall is an object that describes an invocation of method Targets on an instance of MockAPI. 
+
+#### <a id="APITargetsFuncCall.Args" href="#APITargetsFuncCall.Args">func (c APITargetsFuncCall) Args() []interface{}</a>
+
+```
+searchKey: mocks.APITargetsFuncCall.Args
+tags: [function]
+```
+
+```Go
+func (c APITargetsFuncCall) Args() []interface{}
+```
+
+Args returns an interface slice containing the arguments of this invocation. 
+
+#### <a id="APITargetsFuncCall.Results" href="#APITargetsFuncCall.Results">func (c APITargetsFuncCall) Results() []interface{}</a>
+
+```
+searchKey: mocks.APITargetsFuncCall.Results
+tags: [function]
+```
+
+```Go
+func (c APITargetsFuncCall) Results() []interface{}
+```
+
+Results returns an interface slice containing the results of this invocation. 
+
+### <a id="APITargetsMetadataFunc" href="#APITargetsMetadataFunc">type APITargetsMetadataFunc struct</a>
+
+```
+searchKey: mocks.APITargetsMetadataFunc
+tags: [struct]
+```
+
+```Go
+type APITargetsMetadataFunc struct {
+	defaultHook func(context.Context, string, string, string) ([]v1.MetricMetadata, error)
+	hooks       []func(context.Context, string, string, string) ([]v1.MetricMetadata, error)
+	history     []APITargetsMetadataFuncCall
+	mutex       sync.Mutex
+}
+```
+
+APITargetsMetadataFunc describes the behavior when the TargetsMetadata method of the parent MockAPI instance is invoked. 
+
+#### <a id="APITargetsMetadataFunc.History" href="#APITargetsMetadataFunc.History">func (f *APITargetsMetadataFunc) History() []APITargetsMetadataFuncCall</a>
+
+```
+searchKey: mocks.APITargetsMetadataFunc.History
+tags: [function]
+```
+
+```Go
+func (f *APITargetsMetadataFunc) History() []APITargetsMetadataFuncCall
+```
+
+History returns a sequence of APITargetsMetadataFuncCall objects describing the invocations of this function. 
+
+#### <a id="APITargetsMetadataFunc.PushHook" href="#APITargetsMetadataFunc.PushHook">func (f *APITargetsMetadataFunc) PushHook(hook func(context.Context, string, string, string) ([]v1.MetricMetadata, error))</a>
+
+```
+searchKey: mocks.APITargetsMetadataFunc.PushHook
+tags: [method]
+```
+
+```Go
+func (f *APITargetsMetadataFunc) PushHook(hook func(context.Context, string, string, string) ([]v1.MetricMetadata, error))
+```
+
+PushHook adds a function to the end of hook queue. Each invocation of the TargetsMetadata method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
+
+#### <a id="APITargetsMetadataFunc.PushReturn" href="#APITargetsMetadataFunc.PushReturn">func (f *APITargetsMetadataFunc) PushReturn(r0 []v1.MetricMetadata, r1 error)</a>
+
+```
+searchKey: mocks.APITargetsMetadataFunc.PushReturn
+tags: [method]
+```
+
+```Go
+func (f *APITargetsMetadataFunc) PushReturn(r0 []v1.MetricMetadata, r1 error)
+```
+
+PushReturn calls PushDefaultHook with a function that returns the given values. 
+
+#### <a id="APITargetsMetadataFunc.SetDefaultHook" href="#APITargetsMetadataFunc.SetDefaultHook">func (f *APITargetsMetadataFunc) SetDefaultHook(hook func(context.Context, string, string, string) ([]v1.MetricMetadata, error))</a>
+
+```
+searchKey: mocks.APITargetsMetadataFunc.SetDefaultHook
+tags: [method]
+```
+
+```Go
+func (f *APITargetsMetadataFunc) SetDefaultHook(hook func(context.Context, string, string, string) ([]v1.MetricMetadata, error))
+```
+
+SetDefaultHook sets function that is called when the TargetsMetadata method of the parent MockAPI instance is invoked and the hook queue is empty. 
+
+#### <a id="APITargetsMetadataFunc.SetDefaultReturn" href="#APITargetsMetadataFunc.SetDefaultReturn">func (f *APITargetsMetadataFunc) SetDefaultReturn(r0 []v1.MetricMetadata, r1 error)</a>
+
+```
+searchKey: mocks.APITargetsMetadataFunc.SetDefaultReturn
+tags: [method]
+```
+
+```Go
+func (f *APITargetsMetadataFunc) SetDefaultReturn(r0 []v1.MetricMetadata, r1 error)
+```
+
+SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
+
+#### <a id="APITargetsMetadataFunc.appendCall" href="#APITargetsMetadataFunc.appendCall">func (f *APITargetsMetadataFunc) appendCall(r0 APITargetsMetadataFuncCall)</a>
+
+```
+searchKey: mocks.APITargetsMetadataFunc.appendCall
+tags: [method private]
+```
+
+```Go
+func (f *APITargetsMetadataFunc) appendCall(r0 APITargetsMetadataFuncCall)
+```
+
+#### <a id="APITargetsMetadataFunc.nextHook" href="#APITargetsMetadataFunc.nextHook">func (f *APITargetsMetadataFunc) nextHook() func(context.Context, string, string, string) ([]v1.MetricMetadata, error)</a>
+
+```
+searchKey: mocks.APITargetsMetadataFunc.nextHook
+tags: [function private]
+```
+
+```Go
+func (f *APITargetsMetadataFunc) nextHook() func(context.Context, string, string, string) ([]v1.MetricMetadata, error)
+```
+
+### <a id="APITargetsMetadataFuncCall" href="#APITargetsMetadataFuncCall">type APITargetsMetadataFuncCall struct</a>
+
+```
+searchKey: mocks.APITargetsMetadataFuncCall
+tags: [struct]
+```
+
+```Go
+type APITargetsMetadataFuncCall struct {
+	// Arg0 is the value of the 1st argument passed to this method
+	// invocation.
+	Arg0 context.Context
+	// Arg1 is the value of the 2nd argument passed to this method
+	// invocation.
+	Arg1 string
+	// Arg2 is the value of the 3rd argument passed to this method
+	// invocation.
+	Arg2 string
+	// Arg3 is the value of the 4th argument passed to this method
+	// invocation.
+	Arg3 string
+	// Result0 is the value of the 1st result returned from this method
+	// invocation.
+	Result0 []v1.MetricMetadata
+	// Result1 is the value of the 2nd result returned from this method
+	// invocation.
+	Result1 error
+}
+```
+
+APITargetsMetadataFuncCall is an object that describes an invocation of method TargetsMetadata on an instance of MockAPI. 
+
+#### <a id="APITargetsMetadataFuncCall.Args" href="#APITargetsMetadataFuncCall.Args">func (c APITargetsMetadataFuncCall) Args() []interface{}</a>
+
+```
+searchKey: mocks.APITargetsMetadataFuncCall.Args
+tags: [function]
+```
+
+```Go
+func (c APITargetsMetadataFuncCall) Args() []interface{}
+```
+
+Args returns an interface slice containing the arguments of this invocation. 
+
+#### <a id="APITargetsMetadataFuncCall.Results" href="#APITargetsMetadataFuncCall.Results">func (c APITargetsMetadataFuncCall) Results() []interface{}</a>
+
+```
+searchKey: mocks.APITargetsMetadataFuncCall.Results
+tags: [function]
+```
+
+```Go
+func (c APITargetsMetadataFuncCall) Results() []interface{}
+```
+
+Results returns an interface slice containing the results of this invocation. 
 
 ### <a id="MockAPI" href="#MockAPI">type MockAPI struct</a>
 
 ```
 searchKey: mocks.MockAPI
+tags: [struct]
 ```
 
 ```Go
@@ -297,6 +3146,7 @@ MockAPI is a mock implementation of the API interface (from the package github.c
 
 ```
 searchKey: mocks.NewMockAPI
+tags: [function]
 ```
 
 ```Go
@@ -309,6 +3159,7 @@ NewMockAPI creates a new mock of the API interface. All methods return zero valu
 
 ```
 searchKey: mocks.NewMockAPIFrom
+tags: [method]
 ```
 
 ```Go
@@ -321,6 +3172,7 @@ NewMockAPIFrom creates a new mock of the MockAPI interface. All methods delegate
 
 ```
 searchKey: mocks.MockAPI.AlertManagers
+tags: [method]
 ```
 
 ```Go
@@ -333,6 +3185,7 @@ AlertManagers delegates to the next hook function in the queue and stores the pa
 
 ```
 searchKey: mocks.MockAPI.Alerts
+tags: [method]
 ```
 
 ```Go
@@ -345,6 +3198,7 @@ Alerts delegates to the next hook function in the queue and stores the parameter
 
 ```
 searchKey: mocks.MockAPI.CleanTombstones
+tags: [method]
 ```
 
 ```Go
@@ -357,6 +3211,7 @@ CleanTombstones delegates to the next hook function in the queue and stores the 
 
 ```
 searchKey: mocks.MockAPI.Config
+tags: [method]
 ```
 
 ```Go
@@ -369,6 +3224,7 @@ Config delegates to the next hook function in the queue and stores the parameter
 
 ```
 searchKey: mocks.MockAPI.DeleteSeries
+tags: [method]
 ```
 
 ```Go
@@ -381,6 +3237,7 @@ DeleteSeries delegates to the next hook function in the queue and stores the par
 
 ```
 searchKey: mocks.MockAPI.Flags
+tags: [method]
 ```
 
 ```Go
@@ -393,6 +3250,7 @@ Flags delegates to the next hook function in the queue and stores the parameter 
 
 ```
 searchKey: mocks.MockAPI.LabelNames
+tags: [method]
 ```
 
 ```Go
@@ -405,6 +3263,7 @@ LabelNames delegates to the next hook function in the queue and stores the param
 
 ```
 searchKey: mocks.MockAPI.LabelValues
+tags: [method]
 ```
 
 ```Go
@@ -417,6 +3276,7 @@ LabelValues delegates to the next hook function in the queue and stores the para
 
 ```
 searchKey: mocks.MockAPI.Metadata
+tags: [method]
 ```
 
 ```Go
@@ -429,6 +3289,7 @@ Metadata delegates to the next hook function in the queue and stores the paramet
 
 ```
 searchKey: mocks.MockAPI.Query
+tags: [method]
 ```
 
 ```Go
@@ -441,6 +3302,7 @@ Query delegates to the next hook function in the queue and stores the parameter 
 
 ```
 searchKey: mocks.MockAPI.QueryRange
+tags: [method]
 ```
 
 ```Go
@@ -453,6 +3315,7 @@ QueryRange delegates to the next hook function in the queue and stores the param
 
 ```
 searchKey: mocks.MockAPI.Rules
+tags: [method]
 ```
 
 ```Go
@@ -465,6 +3328,7 @@ Rules delegates to the next hook function in the queue and stores the parameter 
 
 ```
 searchKey: mocks.MockAPI.Runtimeinfo
+tags: [method]
 ```
 
 ```Go
@@ -477,6 +3341,7 @@ Runtimeinfo delegates to the next hook function in the queue and stores the para
 
 ```
 searchKey: mocks.MockAPI.Series
+tags: [method]
 ```
 
 ```Go
@@ -489,6 +3354,7 @@ Series delegates to the next hook function in the queue and stores the parameter
 
 ```
 searchKey: mocks.MockAPI.Snapshot
+tags: [method]
 ```
 
 ```Go
@@ -501,6 +3367,7 @@ Snapshot delegates to the next hook function in the queue and stores the paramet
 
 ```
 searchKey: mocks.MockAPI.TSDB
+tags: [method]
 ```
 
 ```Go
@@ -513,6 +3380,7 @@ TSDB delegates to the next hook function in the queue and stores the parameter a
 
 ```
 searchKey: mocks.MockAPI.Targets
+tags: [method]
 ```
 
 ```Go
@@ -525,6 +3393,7 @@ Targets delegates to the next hook function in the queue and stores the paramete
 
 ```
 searchKey: mocks.MockAPI.TargetsMetadata
+tags: [method]
 ```
 
 ```Go
@@ -532,2686 +3401,4 @@ func (m *MockAPI) TargetsMetadata(v0 context.Context, v1 string, v2 string, v3 s
 ```
 
 TargetsMetadata delegates to the next hook function in the queue and stores the parameter and result values of this invocation. 
-
-### <a id="APIAlertManagersFunc" href="#APIAlertManagersFunc">type APIAlertManagersFunc struct</a>
-
-```
-searchKey: mocks.APIAlertManagersFunc
-```
-
-```Go
-type APIAlertManagersFunc struct {
-	defaultHook func(context.Context) (v1.AlertManagersResult, error)
-	hooks       []func(context.Context) (v1.AlertManagersResult, error)
-	history     []APIAlertManagersFuncCall
-	mutex       sync.Mutex
-}
-```
-
-APIAlertManagersFunc describes the behavior when the AlertManagers method of the parent MockAPI instance is invoked. 
-
-#### <a id="APIAlertManagersFunc.SetDefaultHook" href="#APIAlertManagersFunc.SetDefaultHook">func (f *APIAlertManagersFunc) SetDefaultHook(hook func(context.Context) (v1.AlertManagersResult, error))</a>
-
-```
-searchKey: mocks.APIAlertManagersFunc.SetDefaultHook
-```
-
-```Go
-func (f *APIAlertManagersFunc) SetDefaultHook(hook func(context.Context) (v1.AlertManagersResult, error))
-```
-
-SetDefaultHook sets function that is called when the AlertManagers method of the parent MockAPI instance is invoked and the hook queue is empty. 
-
-#### <a id="APIAlertManagersFunc.PushHook" href="#APIAlertManagersFunc.PushHook">func (f *APIAlertManagersFunc) PushHook(hook func(context.Context) (v1.AlertManagersResult, error))</a>
-
-```
-searchKey: mocks.APIAlertManagersFunc.PushHook
-```
-
-```Go
-func (f *APIAlertManagersFunc) PushHook(hook func(context.Context) (v1.AlertManagersResult, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the AlertManagers method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="APIAlertManagersFunc.SetDefaultReturn" href="#APIAlertManagersFunc.SetDefaultReturn">func (f *APIAlertManagersFunc) SetDefaultReturn(r0 v1.AlertManagersResult, r1 error)</a>
-
-```
-searchKey: mocks.APIAlertManagersFunc.SetDefaultReturn
-```
-
-```Go
-func (f *APIAlertManagersFunc) SetDefaultReturn(r0 v1.AlertManagersResult, r1 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="APIAlertManagersFunc.PushReturn" href="#APIAlertManagersFunc.PushReturn">func (f *APIAlertManagersFunc) PushReturn(r0 v1.AlertManagersResult, r1 error)</a>
-
-```
-searchKey: mocks.APIAlertManagersFunc.PushReturn
-```
-
-```Go
-func (f *APIAlertManagersFunc) PushReturn(r0 v1.AlertManagersResult, r1 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="APIAlertManagersFunc.nextHook" href="#APIAlertManagersFunc.nextHook">func (f *APIAlertManagersFunc) nextHook() func(context.Context) (v1.AlertManagersResult, error)</a>
-
-```
-searchKey: mocks.APIAlertManagersFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *APIAlertManagersFunc) nextHook() func(context.Context) (v1.AlertManagersResult, error)
-```
-
-#### <a id="APIAlertManagersFunc.appendCall" href="#APIAlertManagersFunc.appendCall">func (f *APIAlertManagersFunc) appendCall(r0 APIAlertManagersFuncCall)</a>
-
-```
-searchKey: mocks.APIAlertManagersFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *APIAlertManagersFunc) appendCall(r0 APIAlertManagersFuncCall)
-```
-
-#### <a id="APIAlertManagersFunc.History" href="#APIAlertManagersFunc.History">func (f *APIAlertManagersFunc) History() []APIAlertManagersFuncCall</a>
-
-```
-searchKey: mocks.APIAlertManagersFunc.History
-```
-
-```Go
-func (f *APIAlertManagersFunc) History() []APIAlertManagersFuncCall
-```
-
-History returns a sequence of APIAlertManagersFuncCall objects describing the invocations of this function. 
-
-### <a id="APIAlertManagersFuncCall" href="#APIAlertManagersFuncCall">type APIAlertManagersFuncCall struct</a>
-
-```
-searchKey: mocks.APIAlertManagersFuncCall
-```
-
-```Go
-type APIAlertManagersFuncCall struct {
-	// Arg0 is the value of the 1st argument passed to this method
-	// invocation.
-	Arg0 context.Context
-	// Result0 is the value of the 1st result returned from this method
-	// invocation.
-	Result0 v1.AlertManagersResult
-	// Result1 is the value of the 2nd result returned from this method
-	// invocation.
-	Result1 error
-}
-```
-
-APIAlertManagersFuncCall is an object that describes an invocation of method AlertManagers on an instance of MockAPI. 
-
-#### <a id="APIAlertManagersFuncCall.Args" href="#APIAlertManagersFuncCall.Args">func (c APIAlertManagersFuncCall) Args() []interface{}</a>
-
-```
-searchKey: mocks.APIAlertManagersFuncCall.Args
-```
-
-```Go
-func (c APIAlertManagersFuncCall) Args() []interface{}
-```
-
-Args returns an interface slice containing the arguments of this invocation. 
-
-#### <a id="APIAlertManagersFuncCall.Results" href="#APIAlertManagersFuncCall.Results">func (c APIAlertManagersFuncCall) Results() []interface{}</a>
-
-```
-searchKey: mocks.APIAlertManagersFuncCall.Results
-```
-
-```Go
-func (c APIAlertManagersFuncCall) Results() []interface{}
-```
-
-Results returns an interface slice containing the results of this invocation. 
-
-### <a id="APIAlertsFunc" href="#APIAlertsFunc">type APIAlertsFunc struct</a>
-
-```
-searchKey: mocks.APIAlertsFunc
-```
-
-```Go
-type APIAlertsFunc struct {
-	defaultHook func(context.Context) (v1.AlertsResult, error)
-	hooks       []func(context.Context) (v1.AlertsResult, error)
-	history     []APIAlertsFuncCall
-	mutex       sync.Mutex
-}
-```
-
-APIAlertsFunc describes the behavior when the Alerts method of the parent MockAPI instance is invoked. 
-
-#### <a id="APIAlertsFunc.SetDefaultHook" href="#APIAlertsFunc.SetDefaultHook">func (f *APIAlertsFunc) SetDefaultHook(hook func(context.Context) (v1.AlertsResult, error))</a>
-
-```
-searchKey: mocks.APIAlertsFunc.SetDefaultHook
-```
-
-```Go
-func (f *APIAlertsFunc) SetDefaultHook(hook func(context.Context) (v1.AlertsResult, error))
-```
-
-SetDefaultHook sets function that is called when the Alerts method of the parent MockAPI instance is invoked and the hook queue is empty. 
-
-#### <a id="APIAlertsFunc.PushHook" href="#APIAlertsFunc.PushHook">func (f *APIAlertsFunc) PushHook(hook func(context.Context) (v1.AlertsResult, error))</a>
-
-```
-searchKey: mocks.APIAlertsFunc.PushHook
-```
-
-```Go
-func (f *APIAlertsFunc) PushHook(hook func(context.Context) (v1.AlertsResult, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the Alerts method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="APIAlertsFunc.SetDefaultReturn" href="#APIAlertsFunc.SetDefaultReturn">func (f *APIAlertsFunc) SetDefaultReturn(r0 v1.AlertsResult, r1 error)</a>
-
-```
-searchKey: mocks.APIAlertsFunc.SetDefaultReturn
-```
-
-```Go
-func (f *APIAlertsFunc) SetDefaultReturn(r0 v1.AlertsResult, r1 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="APIAlertsFunc.PushReturn" href="#APIAlertsFunc.PushReturn">func (f *APIAlertsFunc) PushReturn(r0 v1.AlertsResult, r1 error)</a>
-
-```
-searchKey: mocks.APIAlertsFunc.PushReturn
-```
-
-```Go
-func (f *APIAlertsFunc) PushReturn(r0 v1.AlertsResult, r1 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="APIAlertsFunc.nextHook" href="#APIAlertsFunc.nextHook">func (f *APIAlertsFunc) nextHook() func(context.Context) (v1.AlertsResult, error)</a>
-
-```
-searchKey: mocks.APIAlertsFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *APIAlertsFunc) nextHook() func(context.Context) (v1.AlertsResult, error)
-```
-
-#### <a id="APIAlertsFunc.appendCall" href="#APIAlertsFunc.appendCall">func (f *APIAlertsFunc) appendCall(r0 APIAlertsFuncCall)</a>
-
-```
-searchKey: mocks.APIAlertsFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *APIAlertsFunc) appendCall(r0 APIAlertsFuncCall)
-```
-
-#### <a id="APIAlertsFunc.History" href="#APIAlertsFunc.History">func (f *APIAlertsFunc) History() []APIAlertsFuncCall</a>
-
-```
-searchKey: mocks.APIAlertsFunc.History
-```
-
-```Go
-func (f *APIAlertsFunc) History() []APIAlertsFuncCall
-```
-
-History returns a sequence of APIAlertsFuncCall objects describing the invocations of this function. 
-
-### <a id="APIAlertsFuncCall" href="#APIAlertsFuncCall">type APIAlertsFuncCall struct</a>
-
-```
-searchKey: mocks.APIAlertsFuncCall
-```
-
-```Go
-type APIAlertsFuncCall struct {
-	// Arg0 is the value of the 1st argument passed to this method
-	// invocation.
-	Arg0 context.Context
-	// Result0 is the value of the 1st result returned from this method
-	// invocation.
-	Result0 v1.AlertsResult
-	// Result1 is the value of the 2nd result returned from this method
-	// invocation.
-	Result1 error
-}
-```
-
-APIAlertsFuncCall is an object that describes an invocation of method Alerts on an instance of MockAPI. 
-
-#### <a id="APIAlertsFuncCall.Args" href="#APIAlertsFuncCall.Args">func (c APIAlertsFuncCall) Args() []interface{}</a>
-
-```
-searchKey: mocks.APIAlertsFuncCall.Args
-```
-
-```Go
-func (c APIAlertsFuncCall) Args() []interface{}
-```
-
-Args returns an interface slice containing the arguments of this invocation. 
-
-#### <a id="APIAlertsFuncCall.Results" href="#APIAlertsFuncCall.Results">func (c APIAlertsFuncCall) Results() []interface{}</a>
-
-```
-searchKey: mocks.APIAlertsFuncCall.Results
-```
-
-```Go
-func (c APIAlertsFuncCall) Results() []interface{}
-```
-
-Results returns an interface slice containing the results of this invocation. 
-
-### <a id="APICleanTombstonesFunc" href="#APICleanTombstonesFunc">type APICleanTombstonesFunc struct</a>
-
-```
-searchKey: mocks.APICleanTombstonesFunc
-```
-
-```Go
-type APICleanTombstonesFunc struct {
-	defaultHook func(context.Context) error
-	hooks       []func(context.Context) error
-	history     []APICleanTombstonesFuncCall
-	mutex       sync.Mutex
-}
-```
-
-APICleanTombstonesFunc describes the behavior when the CleanTombstones method of the parent MockAPI instance is invoked. 
-
-#### <a id="APICleanTombstonesFunc.SetDefaultHook" href="#APICleanTombstonesFunc.SetDefaultHook">func (f *APICleanTombstonesFunc) SetDefaultHook(hook func(context.Context) error)</a>
-
-```
-searchKey: mocks.APICleanTombstonesFunc.SetDefaultHook
-```
-
-```Go
-func (f *APICleanTombstonesFunc) SetDefaultHook(hook func(context.Context) error)
-```
-
-SetDefaultHook sets function that is called when the CleanTombstones method of the parent MockAPI instance is invoked and the hook queue is empty. 
-
-#### <a id="APICleanTombstonesFunc.PushHook" href="#APICleanTombstonesFunc.PushHook">func (f *APICleanTombstonesFunc) PushHook(hook func(context.Context) error)</a>
-
-```
-searchKey: mocks.APICleanTombstonesFunc.PushHook
-```
-
-```Go
-func (f *APICleanTombstonesFunc) PushHook(hook func(context.Context) error)
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the CleanTombstones method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="APICleanTombstonesFunc.SetDefaultReturn" href="#APICleanTombstonesFunc.SetDefaultReturn">func (f *APICleanTombstonesFunc) SetDefaultReturn(r0 error)</a>
-
-```
-searchKey: mocks.APICleanTombstonesFunc.SetDefaultReturn
-```
-
-```Go
-func (f *APICleanTombstonesFunc) SetDefaultReturn(r0 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="APICleanTombstonesFunc.PushReturn" href="#APICleanTombstonesFunc.PushReturn">func (f *APICleanTombstonesFunc) PushReturn(r0 error)</a>
-
-```
-searchKey: mocks.APICleanTombstonesFunc.PushReturn
-```
-
-```Go
-func (f *APICleanTombstonesFunc) PushReturn(r0 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="APICleanTombstonesFunc.nextHook" href="#APICleanTombstonesFunc.nextHook">func (f *APICleanTombstonesFunc) nextHook() func(context.Context) error</a>
-
-```
-searchKey: mocks.APICleanTombstonesFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *APICleanTombstonesFunc) nextHook() func(context.Context) error
-```
-
-#### <a id="APICleanTombstonesFunc.appendCall" href="#APICleanTombstonesFunc.appendCall">func (f *APICleanTombstonesFunc) appendCall(r0 APICleanTombstonesFuncCall)</a>
-
-```
-searchKey: mocks.APICleanTombstonesFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *APICleanTombstonesFunc) appendCall(r0 APICleanTombstonesFuncCall)
-```
-
-#### <a id="APICleanTombstonesFunc.History" href="#APICleanTombstonesFunc.History">func (f *APICleanTombstonesFunc) History() []APICleanTombstonesFuncCall</a>
-
-```
-searchKey: mocks.APICleanTombstonesFunc.History
-```
-
-```Go
-func (f *APICleanTombstonesFunc) History() []APICleanTombstonesFuncCall
-```
-
-History returns a sequence of APICleanTombstonesFuncCall objects describing the invocations of this function. 
-
-### <a id="APICleanTombstonesFuncCall" href="#APICleanTombstonesFuncCall">type APICleanTombstonesFuncCall struct</a>
-
-```
-searchKey: mocks.APICleanTombstonesFuncCall
-```
-
-```Go
-type APICleanTombstonesFuncCall struct {
-	// Arg0 is the value of the 1st argument passed to this method
-	// invocation.
-	Arg0 context.Context
-	// Result0 is the value of the 1st result returned from this method
-	// invocation.
-	Result0 error
-}
-```
-
-APICleanTombstonesFuncCall is an object that describes an invocation of method CleanTombstones on an instance of MockAPI. 
-
-#### <a id="APICleanTombstonesFuncCall.Args" href="#APICleanTombstonesFuncCall.Args">func (c APICleanTombstonesFuncCall) Args() []interface{}</a>
-
-```
-searchKey: mocks.APICleanTombstonesFuncCall.Args
-```
-
-```Go
-func (c APICleanTombstonesFuncCall) Args() []interface{}
-```
-
-Args returns an interface slice containing the arguments of this invocation. 
-
-#### <a id="APICleanTombstonesFuncCall.Results" href="#APICleanTombstonesFuncCall.Results">func (c APICleanTombstonesFuncCall) Results() []interface{}</a>
-
-```
-searchKey: mocks.APICleanTombstonesFuncCall.Results
-```
-
-```Go
-func (c APICleanTombstonesFuncCall) Results() []interface{}
-```
-
-Results returns an interface slice containing the results of this invocation. 
-
-### <a id="APIConfigFunc" href="#APIConfigFunc">type APIConfigFunc struct</a>
-
-```
-searchKey: mocks.APIConfigFunc
-```
-
-```Go
-type APIConfigFunc struct {
-	defaultHook func(context.Context) (v1.ConfigResult, error)
-	hooks       []func(context.Context) (v1.ConfigResult, error)
-	history     []APIConfigFuncCall
-	mutex       sync.Mutex
-}
-```
-
-APIConfigFunc describes the behavior when the Config method of the parent MockAPI instance is invoked. 
-
-#### <a id="APIConfigFunc.SetDefaultHook" href="#APIConfigFunc.SetDefaultHook">func (f *APIConfigFunc) SetDefaultHook(hook func(context.Context) (v1.ConfigResult, error))</a>
-
-```
-searchKey: mocks.APIConfigFunc.SetDefaultHook
-```
-
-```Go
-func (f *APIConfigFunc) SetDefaultHook(hook func(context.Context) (v1.ConfigResult, error))
-```
-
-SetDefaultHook sets function that is called when the Config method of the parent MockAPI instance is invoked and the hook queue is empty. 
-
-#### <a id="APIConfigFunc.PushHook" href="#APIConfigFunc.PushHook">func (f *APIConfigFunc) PushHook(hook func(context.Context) (v1.ConfigResult, error))</a>
-
-```
-searchKey: mocks.APIConfigFunc.PushHook
-```
-
-```Go
-func (f *APIConfigFunc) PushHook(hook func(context.Context) (v1.ConfigResult, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the Config method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="APIConfigFunc.SetDefaultReturn" href="#APIConfigFunc.SetDefaultReturn">func (f *APIConfigFunc) SetDefaultReturn(r0 v1.ConfigResult, r1 error)</a>
-
-```
-searchKey: mocks.APIConfigFunc.SetDefaultReturn
-```
-
-```Go
-func (f *APIConfigFunc) SetDefaultReturn(r0 v1.ConfigResult, r1 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="APIConfigFunc.PushReturn" href="#APIConfigFunc.PushReturn">func (f *APIConfigFunc) PushReturn(r0 v1.ConfigResult, r1 error)</a>
-
-```
-searchKey: mocks.APIConfigFunc.PushReturn
-```
-
-```Go
-func (f *APIConfigFunc) PushReturn(r0 v1.ConfigResult, r1 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="APIConfigFunc.nextHook" href="#APIConfigFunc.nextHook">func (f *APIConfigFunc) nextHook() func(context.Context) (v1.ConfigResult, error)</a>
-
-```
-searchKey: mocks.APIConfigFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *APIConfigFunc) nextHook() func(context.Context) (v1.ConfigResult, error)
-```
-
-#### <a id="APIConfigFunc.appendCall" href="#APIConfigFunc.appendCall">func (f *APIConfigFunc) appendCall(r0 APIConfigFuncCall)</a>
-
-```
-searchKey: mocks.APIConfigFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *APIConfigFunc) appendCall(r0 APIConfigFuncCall)
-```
-
-#### <a id="APIConfigFunc.History" href="#APIConfigFunc.History">func (f *APIConfigFunc) History() []APIConfigFuncCall</a>
-
-```
-searchKey: mocks.APIConfigFunc.History
-```
-
-```Go
-func (f *APIConfigFunc) History() []APIConfigFuncCall
-```
-
-History returns a sequence of APIConfigFuncCall objects describing the invocations of this function. 
-
-### <a id="APIConfigFuncCall" href="#APIConfigFuncCall">type APIConfigFuncCall struct</a>
-
-```
-searchKey: mocks.APIConfigFuncCall
-```
-
-```Go
-type APIConfigFuncCall struct {
-	// Arg0 is the value of the 1st argument passed to this method
-	// invocation.
-	Arg0 context.Context
-	// Result0 is the value of the 1st result returned from this method
-	// invocation.
-	Result0 v1.ConfigResult
-	// Result1 is the value of the 2nd result returned from this method
-	// invocation.
-	Result1 error
-}
-```
-
-APIConfigFuncCall is an object that describes an invocation of method Config on an instance of MockAPI. 
-
-#### <a id="APIConfigFuncCall.Args" href="#APIConfigFuncCall.Args">func (c APIConfigFuncCall) Args() []interface{}</a>
-
-```
-searchKey: mocks.APIConfigFuncCall.Args
-```
-
-```Go
-func (c APIConfigFuncCall) Args() []interface{}
-```
-
-Args returns an interface slice containing the arguments of this invocation. 
-
-#### <a id="APIConfigFuncCall.Results" href="#APIConfigFuncCall.Results">func (c APIConfigFuncCall) Results() []interface{}</a>
-
-```
-searchKey: mocks.APIConfigFuncCall.Results
-```
-
-```Go
-func (c APIConfigFuncCall) Results() []interface{}
-```
-
-Results returns an interface slice containing the results of this invocation. 
-
-### <a id="APIDeleteSeriesFunc" href="#APIDeleteSeriesFunc">type APIDeleteSeriesFunc struct</a>
-
-```
-searchKey: mocks.APIDeleteSeriesFunc
-```
-
-```Go
-type APIDeleteSeriesFunc struct {
-	defaultHook func(context.Context, []string, time.Time, time.Time) error
-	hooks       []func(context.Context, []string, time.Time, time.Time) error
-	history     []APIDeleteSeriesFuncCall
-	mutex       sync.Mutex
-}
-```
-
-APIDeleteSeriesFunc describes the behavior when the DeleteSeries method of the parent MockAPI instance is invoked. 
-
-#### <a id="APIDeleteSeriesFunc.SetDefaultHook" href="#APIDeleteSeriesFunc.SetDefaultHook">func (f *APIDeleteSeriesFunc) SetDefaultHook(hook func(context.Context, []string, time.Time, time.Time) error)</a>
-
-```
-searchKey: mocks.APIDeleteSeriesFunc.SetDefaultHook
-```
-
-```Go
-func (f *APIDeleteSeriesFunc) SetDefaultHook(hook func(context.Context, []string, time.Time, time.Time) error)
-```
-
-SetDefaultHook sets function that is called when the DeleteSeries method of the parent MockAPI instance is invoked and the hook queue is empty. 
-
-#### <a id="APIDeleteSeriesFunc.PushHook" href="#APIDeleteSeriesFunc.PushHook">func (f *APIDeleteSeriesFunc) PushHook(hook func(context.Context, []string, time.Time, time.Time) error)</a>
-
-```
-searchKey: mocks.APIDeleteSeriesFunc.PushHook
-```
-
-```Go
-func (f *APIDeleteSeriesFunc) PushHook(hook func(context.Context, []string, time.Time, time.Time) error)
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the DeleteSeries method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="APIDeleteSeriesFunc.SetDefaultReturn" href="#APIDeleteSeriesFunc.SetDefaultReturn">func (f *APIDeleteSeriesFunc) SetDefaultReturn(r0 error)</a>
-
-```
-searchKey: mocks.APIDeleteSeriesFunc.SetDefaultReturn
-```
-
-```Go
-func (f *APIDeleteSeriesFunc) SetDefaultReturn(r0 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="APIDeleteSeriesFunc.PushReturn" href="#APIDeleteSeriesFunc.PushReturn">func (f *APIDeleteSeriesFunc) PushReturn(r0 error)</a>
-
-```
-searchKey: mocks.APIDeleteSeriesFunc.PushReturn
-```
-
-```Go
-func (f *APIDeleteSeriesFunc) PushReturn(r0 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="APIDeleteSeriesFunc.nextHook" href="#APIDeleteSeriesFunc.nextHook">func (f *APIDeleteSeriesFunc) nextHook() func(context.Context, []string, time.Time, time.Time) error</a>
-
-```
-searchKey: mocks.APIDeleteSeriesFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *APIDeleteSeriesFunc) nextHook() func(context.Context, []string, time.Time, time.Time) error
-```
-
-#### <a id="APIDeleteSeriesFunc.appendCall" href="#APIDeleteSeriesFunc.appendCall">func (f *APIDeleteSeriesFunc) appendCall(r0 APIDeleteSeriesFuncCall)</a>
-
-```
-searchKey: mocks.APIDeleteSeriesFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *APIDeleteSeriesFunc) appendCall(r0 APIDeleteSeriesFuncCall)
-```
-
-#### <a id="APIDeleteSeriesFunc.History" href="#APIDeleteSeriesFunc.History">func (f *APIDeleteSeriesFunc) History() []APIDeleteSeriesFuncCall</a>
-
-```
-searchKey: mocks.APIDeleteSeriesFunc.History
-```
-
-```Go
-func (f *APIDeleteSeriesFunc) History() []APIDeleteSeriesFuncCall
-```
-
-History returns a sequence of APIDeleteSeriesFuncCall objects describing the invocations of this function. 
-
-### <a id="APIDeleteSeriesFuncCall" href="#APIDeleteSeriesFuncCall">type APIDeleteSeriesFuncCall struct</a>
-
-```
-searchKey: mocks.APIDeleteSeriesFuncCall
-```
-
-```Go
-type APIDeleteSeriesFuncCall struct {
-	// Arg0 is the value of the 1st argument passed to this method
-	// invocation.
-	Arg0 context.Context
-	// Arg1 is the value of the 2nd argument passed to this method
-	// invocation.
-	Arg1 []string
-	// Arg2 is the value of the 3rd argument passed to this method
-	// invocation.
-	Arg2 time.Time
-	// Arg3 is the value of the 4th argument passed to this method
-	// invocation.
-	Arg3 time.Time
-	// Result0 is the value of the 1st result returned from this method
-	// invocation.
-	Result0 error
-}
-```
-
-APIDeleteSeriesFuncCall is an object that describes an invocation of method DeleteSeries on an instance of MockAPI. 
-
-#### <a id="APIDeleteSeriesFuncCall.Args" href="#APIDeleteSeriesFuncCall.Args">func (c APIDeleteSeriesFuncCall) Args() []interface{}</a>
-
-```
-searchKey: mocks.APIDeleteSeriesFuncCall.Args
-```
-
-```Go
-func (c APIDeleteSeriesFuncCall) Args() []interface{}
-```
-
-Args returns an interface slice containing the arguments of this invocation. 
-
-#### <a id="APIDeleteSeriesFuncCall.Results" href="#APIDeleteSeriesFuncCall.Results">func (c APIDeleteSeriesFuncCall) Results() []interface{}</a>
-
-```
-searchKey: mocks.APIDeleteSeriesFuncCall.Results
-```
-
-```Go
-func (c APIDeleteSeriesFuncCall) Results() []interface{}
-```
-
-Results returns an interface slice containing the results of this invocation. 
-
-### <a id="APIFlagsFunc" href="#APIFlagsFunc">type APIFlagsFunc struct</a>
-
-```
-searchKey: mocks.APIFlagsFunc
-```
-
-```Go
-type APIFlagsFunc struct {
-	defaultHook func(context.Context) (v1.FlagsResult, error)
-	hooks       []func(context.Context) (v1.FlagsResult, error)
-	history     []APIFlagsFuncCall
-	mutex       sync.Mutex
-}
-```
-
-APIFlagsFunc describes the behavior when the Flags method of the parent MockAPI instance is invoked. 
-
-#### <a id="APIFlagsFunc.SetDefaultHook" href="#APIFlagsFunc.SetDefaultHook">func (f *APIFlagsFunc) SetDefaultHook(hook func(context.Context) (v1.FlagsResult, error))</a>
-
-```
-searchKey: mocks.APIFlagsFunc.SetDefaultHook
-```
-
-```Go
-func (f *APIFlagsFunc) SetDefaultHook(hook func(context.Context) (v1.FlagsResult, error))
-```
-
-SetDefaultHook sets function that is called when the Flags method of the parent MockAPI instance is invoked and the hook queue is empty. 
-
-#### <a id="APIFlagsFunc.PushHook" href="#APIFlagsFunc.PushHook">func (f *APIFlagsFunc) PushHook(hook func(context.Context) (v1.FlagsResult, error))</a>
-
-```
-searchKey: mocks.APIFlagsFunc.PushHook
-```
-
-```Go
-func (f *APIFlagsFunc) PushHook(hook func(context.Context) (v1.FlagsResult, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the Flags method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="APIFlagsFunc.SetDefaultReturn" href="#APIFlagsFunc.SetDefaultReturn">func (f *APIFlagsFunc) SetDefaultReturn(r0 v1.FlagsResult, r1 error)</a>
-
-```
-searchKey: mocks.APIFlagsFunc.SetDefaultReturn
-```
-
-```Go
-func (f *APIFlagsFunc) SetDefaultReturn(r0 v1.FlagsResult, r1 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="APIFlagsFunc.PushReturn" href="#APIFlagsFunc.PushReturn">func (f *APIFlagsFunc) PushReturn(r0 v1.FlagsResult, r1 error)</a>
-
-```
-searchKey: mocks.APIFlagsFunc.PushReturn
-```
-
-```Go
-func (f *APIFlagsFunc) PushReturn(r0 v1.FlagsResult, r1 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="APIFlagsFunc.nextHook" href="#APIFlagsFunc.nextHook">func (f *APIFlagsFunc) nextHook() func(context.Context) (v1.FlagsResult, error)</a>
-
-```
-searchKey: mocks.APIFlagsFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *APIFlagsFunc) nextHook() func(context.Context) (v1.FlagsResult, error)
-```
-
-#### <a id="APIFlagsFunc.appendCall" href="#APIFlagsFunc.appendCall">func (f *APIFlagsFunc) appendCall(r0 APIFlagsFuncCall)</a>
-
-```
-searchKey: mocks.APIFlagsFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *APIFlagsFunc) appendCall(r0 APIFlagsFuncCall)
-```
-
-#### <a id="APIFlagsFunc.History" href="#APIFlagsFunc.History">func (f *APIFlagsFunc) History() []APIFlagsFuncCall</a>
-
-```
-searchKey: mocks.APIFlagsFunc.History
-```
-
-```Go
-func (f *APIFlagsFunc) History() []APIFlagsFuncCall
-```
-
-History returns a sequence of APIFlagsFuncCall objects describing the invocations of this function. 
-
-### <a id="APIFlagsFuncCall" href="#APIFlagsFuncCall">type APIFlagsFuncCall struct</a>
-
-```
-searchKey: mocks.APIFlagsFuncCall
-```
-
-```Go
-type APIFlagsFuncCall struct {
-	// Arg0 is the value of the 1st argument passed to this method
-	// invocation.
-	Arg0 context.Context
-	// Result0 is the value of the 1st result returned from this method
-	// invocation.
-	Result0 v1.FlagsResult
-	// Result1 is the value of the 2nd result returned from this method
-	// invocation.
-	Result1 error
-}
-```
-
-APIFlagsFuncCall is an object that describes an invocation of method Flags on an instance of MockAPI. 
-
-#### <a id="APIFlagsFuncCall.Args" href="#APIFlagsFuncCall.Args">func (c APIFlagsFuncCall) Args() []interface{}</a>
-
-```
-searchKey: mocks.APIFlagsFuncCall.Args
-```
-
-```Go
-func (c APIFlagsFuncCall) Args() []interface{}
-```
-
-Args returns an interface slice containing the arguments of this invocation. 
-
-#### <a id="APIFlagsFuncCall.Results" href="#APIFlagsFuncCall.Results">func (c APIFlagsFuncCall) Results() []interface{}</a>
-
-```
-searchKey: mocks.APIFlagsFuncCall.Results
-```
-
-```Go
-func (c APIFlagsFuncCall) Results() []interface{}
-```
-
-Results returns an interface slice containing the results of this invocation. 
-
-### <a id="APILabelNamesFunc" href="#APILabelNamesFunc">type APILabelNamesFunc struct</a>
-
-```
-searchKey: mocks.APILabelNamesFunc
-```
-
-```Go
-type APILabelNamesFunc struct {
-	defaultHook func(context.Context, time.Time, time.Time) ([]string, v1.Warnings, error)
-	hooks       []func(context.Context, time.Time, time.Time) ([]string, v1.Warnings, error)
-	history     []APILabelNamesFuncCall
-	mutex       sync.Mutex
-}
-```
-
-APILabelNamesFunc describes the behavior when the LabelNames method of the parent MockAPI instance is invoked. 
-
-#### <a id="APILabelNamesFunc.SetDefaultHook" href="#APILabelNamesFunc.SetDefaultHook">func (f *APILabelNamesFunc) SetDefaultHook(hook func(context.Context, time.Time, time.Time) ([]string, v1.Warnings, error))</a>
-
-```
-searchKey: mocks.APILabelNamesFunc.SetDefaultHook
-```
-
-```Go
-func (f *APILabelNamesFunc) SetDefaultHook(hook func(context.Context, time.Time, time.Time) ([]string, v1.Warnings, error))
-```
-
-SetDefaultHook sets function that is called when the LabelNames method of the parent MockAPI instance is invoked and the hook queue is empty. 
-
-#### <a id="APILabelNamesFunc.PushHook" href="#APILabelNamesFunc.PushHook">func (f *APILabelNamesFunc) PushHook(hook func(context.Context, time.Time, time.Time) ([]string, v1.Warnings, error))</a>
-
-```
-searchKey: mocks.APILabelNamesFunc.PushHook
-```
-
-```Go
-func (f *APILabelNamesFunc) PushHook(hook func(context.Context, time.Time, time.Time) ([]string, v1.Warnings, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the LabelNames method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="APILabelNamesFunc.SetDefaultReturn" href="#APILabelNamesFunc.SetDefaultReturn">func (f *APILabelNamesFunc) SetDefaultReturn(r0 []string, r1 v1.Warnings, r2 error)</a>
-
-```
-searchKey: mocks.APILabelNamesFunc.SetDefaultReturn
-```
-
-```Go
-func (f *APILabelNamesFunc) SetDefaultReturn(r0 []string, r1 v1.Warnings, r2 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="APILabelNamesFunc.PushReturn" href="#APILabelNamesFunc.PushReturn">func (f *APILabelNamesFunc) PushReturn(r0 []string, r1 v1.Warnings, r2 error)</a>
-
-```
-searchKey: mocks.APILabelNamesFunc.PushReturn
-```
-
-```Go
-func (f *APILabelNamesFunc) PushReturn(r0 []string, r1 v1.Warnings, r2 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="APILabelNamesFunc.nextHook" href="#APILabelNamesFunc.nextHook">func (f *APILabelNamesFunc) nextHook() func(context.Context, time.Time, time.Time) ([]string, v1.Warnings, error)</a>
-
-```
-searchKey: mocks.APILabelNamesFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *APILabelNamesFunc) nextHook() func(context.Context, time.Time, time.Time) ([]string, v1.Warnings, error)
-```
-
-#### <a id="APILabelNamesFunc.appendCall" href="#APILabelNamesFunc.appendCall">func (f *APILabelNamesFunc) appendCall(r0 APILabelNamesFuncCall)</a>
-
-```
-searchKey: mocks.APILabelNamesFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *APILabelNamesFunc) appendCall(r0 APILabelNamesFuncCall)
-```
-
-#### <a id="APILabelNamesFunc.History" href="#APILabelNamesFunc.History">func (f *APILabelNamesFunc) History() []APILabelNamesFuncCall</a>
-
-```
-searchKey: mocks.APILabelNamesFunc.History
-```
-
-```Go
-func (f *APILabelNamesFunc) History() []APILabelNamesFuncCall
-```
-
-History returns a sequence of APILabelNamesFuncCall objects describing the invocations of this function. 
-
-### <a id="APILabelNamesFuncCall" href="#APILabelNamesFuncCall">type APILabelNamesFuncCall struct</a>
-
-```
-searchKey: mocks.APILabelNamesFuncCall
-```
-
-```Go
-type APILabelNamesFuncCall struct {
-	// Arg0 is the value of the 1st argument passed to this method
-	// invocation.
-	Arg0 context.Context
-	// Arg1 is the value of the 2nd argument passed to this method
-	// invocation.
-	Arg1 time.Time
-	// Arg2 is the value of the 3rd argument passed to this method
-	// invocation.
-	Arg2 time.Time
-	// Result0 is the value of the 1st result returned from this method
-	// invocation.
-	Result0 []string
-	// Result1 is the value of the 2nd result returned from this method
-	// invocation.
-	Result1 v1.Warnings
-	// Result2 is the value of the 3rd result returned from this method
-	// invocation.
-	Result2 error
-}
-```
-
-APILabelNamesFuncCall is an object that describes an invocation of method LabelNames on an instance of MockAPI. 
-
-#### <a id="APILabelNamesFuncCall.Args" href="#APILabelNamesFuncCall.Args">func (c APILabelNamesFuncCall) Args() []interface{}</a>
-
-```
-searchKey: mocks.APILabelNamesFuncCall.Args
-```
-
-```Go
-func (c APILabelNamesFuncCall) Args() []interface{}
-```
-
-Args returns an interface slice containing the arguments of this invocation. 
-
-#### <a id="APILabelNamesFuncCall.Results" href="#APILabelNamesFuncCall.Results">func (c APILabelNamesFuncCall) Results() []interface{}</a>
-
-```
-searchKey: mocks.APILabelNamesFuncCall.Results
-```
-
-```Go
-func (c APILabelNamesFuncCall) Results() []interface{}
-```
-
-Results returns an interface slice containing the results of this invocation. 
-
-### <a id="APILabelValuesFunc" href="#APILabelValuesFunc">type APILabelValuesFunc struct</a>
-
-```
-searchKey: mocks.APILabelValuesFunc
-```
-
-```Go
-type APILabelValuesFunc struct {
-	defaultHook func(context.Context, string, time.Time, time.Time) (model.LabelValues, v1.Warnings, error)
-	hooks       []func(context.Context, string, time.Time, time.Time) (model.LabelValues, v1.Warnings, error)
-	history     []APILabelValuesFuncCall
-	mutex       sync.Mutex
-}
-```
-
-APILabelValuesFunc describes the behavior when the LabelValues method of the parent MockAPI instance is invoked. 
-
-#### <a id="APILabelValuesFunc.SetDefaultHook" href="#APILabelValuesFunc.SetDefaultHook">func (f *APILabelValuesFunc) SetDefaultHook(hook func(context.Context, string, time.Time, time.Time) (model.LabelValues, v1.Warnings, error))</a>
-
-```
-searchKey: mocks.APILabelValuesFunc.SetDefaultHook
-```
-
-```Go
-func (f *APILabelValuesFunc) SetDefaultHook(hook func(context.Context, string, time.Time, time.Time) (model.LabelValues, v1.Warnings, error))
-```
-
-SetDefaultHook sets function that is called when the LabelValues method of the parent MockAPI instance is invoked and the hook queue is empty. 
-
-#### <a id="APILabelValuesFunc.PushHook" href="#APILabelValuesFunc.PushHook">func (f *APILabelValuesFunc) PushHook(hook func(context.Context, string, time.Time, time.Time) (model.LabelValues, v1.Warnings, error))</a>
-
-```
-searchKey: mocks.APILabelValuesFunc.PushHook
-```
-
-```Go
-func (f *APILabelValuesFunc) PushHook(hook func(context.Context, string, time.Time, time.Time) (model.LabelValues, v1.Warnings, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the LabelValues method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="APILabelValuesFunc.SetDefaultReturn" href="#APILabelValuesFunc.SetDefaultReturn">func (f *APILabelValuesFunc) SetDefaultReturn(r0 model.LabelValues, r1 v1.Warnings, r2 error)</a>
-
-```
-searchKey: mocks.APILabelValuesFunc.SetDefaultReturn
-```
-
-```Go
-func (f *APILabelValuesFunc) SetDefaultReturn(r0 model.LabelValues, r1 v1.Warnings, r2 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="APILabelValuesFunc.PushReturn" href="#APILabelValuesFunc.PushReturn">func (f *APILabelValuesFunc) PushReturn(r0 model.LabelValues, r1 v1.Warnings, r2 error)</a>
-
-```
-searchKey: mocks.APILabelValuesFunc.PushReturn
-```
-
-```Go
-func (f *APILabelValuesFunc) PushReturn(r0 model.LabelValues, r1 v1.Warnings, r2 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="APILabelValuesFunc.nextHook" href="#APILabelValuesFunc.nextHook">func (f *APILabelValuesFunc) nextHook() func(context.Context, string, time.Time, time.Time) (model.LabelValues, v1.Warnings, error)</a>
-
-```
-searchKey: mocks.APILabelValuesFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *APILabelValuesFunc) nextHook() func(context.Context, string, time.Time, time.Time) (model.LabelValues, v1.Warnings, error)
-```
-
-#### <a id="APILabelValuesFunc.appendCall" href="#APILabelValuesFunc.appendCall">func (f *APILabelValuesFunc) appendCall(r0 APILabelValuesFuncCall)</a>
-
-```
-searchKey: mocks.APILabelValuesFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *APILabelValuesFunc) appendCall(r0 APILabelValuesFuncCall)
-```
-
-#### <a id="APILabelValuesFunc.History" href="#APILabelValuesFunc.History">func (f *APILabelValuesFunc) History() []APILabelValuesFuncCall</a>
-
-```
-searchKey: mocks.APILabelValuesFunc.History
-```
-
-```Go
-func (f *APILabelValuesFunc) History() []APILabelValuesFuncCall
-```
-
-History returns a sequence of APILabelValuesFuncCall objects describing the invocations of this function. 
-
-### <a id="APILabelValuesFuncCall" href="#APILabelValuesFuncCall">type APILabelValuesFuncCall struct</a>
-
-```
-searchKey: mocks.APILabelValuesFuncCall
-```
-
-```Go
-type APILabelValuesFuncCall struct {
-	// Arg0 is the value of the 1st argument passed to this method
-	// invocation.
-	Arg0 context.Context
-	// Arg1 is the value of the 2nd argument passed to this method
-	// invocation.
-	Arg1 string
-	// Arg2 is the value of the 3rd argument passed to this method
-	// invocation.
-	Arg2 time.Time
-	// Arg3 is the value of the 4th argument passed to this method
-	// invocation.
-	Arg3 time.Time
-	// Result0 is the value of the 1st result returned from this method
-	// invocation.
-	Result0 model.LabelValues
-	// Result1 is the value of the 2nd result returned from this method
-	// invocation.
-	Result1 v1.Warnings
-	// Result2 is the value of the 3rd result returned from this method
-	// invocation.
-	Result2 error
-}
-```
-
-APILabelValuesFuncCall is an object that describes an invocation of method LabelValues on an instance of MockAPI. 
-
-#### <a id="APILabelValuesFuncCall.Args" href="#APILabelValuesFuncCall.Args">func (c APILabelValuesFuncCall) Args() []interface{}</a>
-
-```
-searchKey: mocks.APILabelValuesFuncCall.Args
-```
-
-```Go
-func (c APILabelValuesFuncCall) Args() []interface{}
-```
-
-Args returns an interface slice containing the arguments of this invocation. 
-
-#### <a id="APILabelValuesFuncCall.Results" href="#APILabelValuesFuncCall.Results">func (c APILabelValuesFuncCall) Results() []interface{}</a>
-
-```
-searchKey: mocks.APILabelValuesFuncCall.Results
-```
-
-```Go
-func (c APILabelValuesFuncCall) Results() []interface{}
-```
-
-Results returns an interface slice containing the results of this invocation. 
-
-### <a id="APIMetadataFunc" href="#APIMetadataFunc">type APIMetadataFunc struct</a>
-
-```
-searchKey: mocks.APIMetadataFunc
-```
-
-```Go
-type APIMetadataFunc struct {
-	defaultHook func(context.Context, string, string) (map[string][]v1.Metadata, error)
-	hooks       []func(context.Context, string, string) (map[string][]v1.Metadata, error)
-	history     []APIMetadataFuncCall
-	mutex       sync.Mutex
-}
-```
-
-APIMetadataFunc describes the behavior when the Metadata method of the parent MockAPI instance is invoked. 
-
-#### <a id="APIMetadataFunc.SetDefaultHook" href="#APIMetadataFunc.SetDefaultHook">func (f *APIMetadataFunc) SetDefaultHook(hook func(context.Context, string, string) (map[string][]v1.Metadata, error))</a>
-
-```
-searchKey: mocks.APIMetadataFunc.SetDefaultHook
-```
-
-```Go
-func (f *APIMetadataFunc) SetDefaultHook(hook func(context.Context, string, string) (map[string][]v1.Metadata, error))
-```
-
-SetDefaultHook sets function that is called when the Metadata method of the parent MockAPI instance is invoked and the hook queue is empty. 
-
-#### <a id="APIMetadataFunc.PushHook" href="#APIMetadataFunc.PushHook">func (f *APIMetadataFunc) PushHook(hook func(context.Context, string, string) (map[string][]v1.Metadata, error))</a>
-
-```
-searchKey: mocks.APIMetadataFunc.PushHook
-```
-
-```Go
-func (f *APIMetadataFunc) PushHook(hook func(context.Context, string, string) (map[string][]v1.Metadata, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the Metadata method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="APIMetadataFunc.SetDefaultReturn" href="#APIMetadataFunc.SetDefaultReturn">func (f *APIMetadataFunc) SetDefaultReturn(r0 map[string][]v1.Metadata, r1 error)</a>
-
-```
-searchKey: mocks.APIMetadataFunc.SetDefaultReturn
-```
-
-```Go
-func (f *APIMetadataFunc) SetDefaultReturn(r0 map[string][]v1.Metadata, r1 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="APIMetadataFunc.PushReturn" href="#APIMetadataFunc.PushReturn">func (f *APIMetadataFunc) PushReturn(r0 map[string][]v1.Metadata, r1 error)</a>
-
-```
-searchKey: mocks.APIMetadataFunc.PushReturn
-```
-
-```Go
-func (f *APIMetadataFunc) PushReturn(r0 map[string][]v1.Metadata, r1 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="APIMetadataFunc.nextHook" href="#APIMetadataFunc.nextHook">func (f *APIMetadataFunc) nextHook() func(context.Context, string, string) (map[string][]v1.Metadata, error)</a>
-
-```
-searchKey: mocks.APIMetadataFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *APIMetadataFunc) nextHook() func(context.Context, string, string) (map[string][]v1.Metadata, error)
-```
-
-#### <a id="APIMetadataFunc.appendCall" href="#APIMetadataFunc.appendCall">func (f *APIMetadataFunc) appendCall(r0 APIMetadataFuncCall)</a>
-
-```
-searchKey: mocks.APIMetadataFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *APIMetadataFunc) appendCall(r0 APIMetadataFuncCall)
-```
-
-#### <a id="APIMetadataFunc.History" href="#APIMetadataFunc.History">func (f *APIMetadataFunc) History() []APIMetadataFuncCall</a>
-
-```
-searchKey: mocks.APIMetadataFunc.History
-```
-
-```Go
-func (f *APIMetadataFunc) History() []APIMetadataFuncCall
-```
-
-History returns a sequence of APIMetadataFuncCall objects describing the invocations of this function. 
-
-### <a id="APIMetadataFuncCall" href="#APIMetadataFuncCall">type APIMetadataFuncCall struct</a>
-
-```
-searchKey: mocks.APIMetadataFuncCall
-```
-
-```Go
-type APIMetadataFuncCall struct {
-	// Arg0 is the value of the 1st argument passed to this method
-	// invocation.
-	Arg0 context.Context
-	// Arg1 is the value of the 2nd argument passed to this method
-	// invocation.
-	Arg1 string
-	// Arg2 is the value of the 3rd argument passed to this method
-	// invocation.
-	Arg2 string
-	// Result0 is the value of the 1st result returned from this method
-	// invocation.
-	Result0 map[string][]v1.Metadata
-	// Result1 is the value of the 2nd result returned from this method
-	// invocation.
-	Result1 error
-}
-```
-
-APIMetadataFuncCall is an object that describes an invocation of method Metadata on an instance of MockAPI. 
-
-#### <a id="APIMetadataFuncCall.Args" href="#APIMetadataFuncCall.Args">func (c APIMetadataFuncCall) Args() []interface{}</a>
-
-```
-searchKey: mocks.APIMetadataFuncCall.Args
-```
-
-```Go
-func (c APIMetadataFuncCall) Args() []interface{}
-```
-
-Args returns an interface slice containing the arguments of this invocation. 
-
-#### <a id="APIMetadataFuncCall.Results" href="#APIMetadataFuncCall.Results">func (c APIMetadataFuncCall) Results() []interface{}</a>
-
-```
-searchKey: mocks.APIMetadataFuncCall.Results
-```
-
-```Go
-func (c APIMetadataFuncCall) Results() []interface{}
-```
-
-Results returns an interface slice containing the results of this invocation. 
-
-### <a id="APIQueryFunc" href="#APIQueryFunc">type APIQueryFunc struct</a>
-
-```
-searchKey: mocks.APIQueryFunc
-```
-
-```Go
-type APIQueryFunc struct {
-	defaultHook func(context.Context, string, time.Time) (model.Value, v1.Warnings, error)
-	hooks       []func(context.Context, string, time.Time) (model.Value, v1.Warnings, error)
-	history     []APIQueryFuncCall
-	mutex       sync.Mutex
-}
-```
-
-APIQueryFunc describes the behavior when the Query method of the parent MockAPI instance is invoked. 
-
-#### <a id="APIQueryFunc.SetDefaultHook" href="#APIQueryFunc.SetDefaultHook">func (f *APIQueryFunc) SetDefaultHook(hook func(context.Context, string, time.Time) (model.Value, v1.Warnings, error))</a>
-
-```
-searchKey: mocks.APIQueryFunc.SetDefaultHook
-```
-
-```Go
-func (f *APIQueryFunc) SetDefaultHook(hook func(context.Context, string, time.Time) (model.Value, v1.Warnings, error))
-```
-
-SetDefaultHook sets function that is called when the Query method of the parent MockAPI instance is invoked and the hook queue is empty. 
-
-#### <a id="APIQueryFunc.PushHook" href="#APIQueryFunc.PushHook">func (f *APIQueryFunc) PushHook(hook func(context.Context, string, time.Time) (model.Value, v1.Warnings, error))</a>
-
-```
-searchKey: mocks.APIQueryFunc.PushHook
-```
-
-```Go
-func (f *APIQueryFunc) PushHook(hook func(context.Context, string, time.Time) (model.Value, v1.Warnings, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the Query method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="APIQueryFunc.SetDefaultReturn" href="#APIQueryFunc.SetDefaultReturn">func (f *APIQueryFunc) SetDefaultReturn(r0 model.Value, r1 v1.Warnings, r2 error)</a>
-
-```
-searchKey: mocks.APIQueryFunc.SetDefaultReturn
-```
-
-```Go
-func (f *APIQueryFunc) SetDefaultReturn(r0 model.Value, r1 v1.Warnings, r2 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="APIQueryFunc.PushReturn" href="#APIQueryFunc.PushReturn">func (f *APIQueryFunc) PushReturn(r0 model.Value, r1 v1.Warnings, r2 error)</a>
-
-```
-searchKey: mocks.APIQueryFunc.PushReturn
-```
-
-```Go
-func (f *APIQueryFunc) PushReturn(r0 model.Value, r1 v1.Warnings, r2 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="APIQueryFunc.nextHook" href="#APIQueryFunc.nextHook">func (f *APIQueryFunc) nextHook() func(context.Context, string, time.Time) (model.Value, v1.Warnings, error)</a>
-
-```
-searchKey: mocks.APIQueryFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *APIQueryFunc) nextHook() func(context.Context, string, time.Time) (model.Value, v1.Warnings, error)
-```
-
-#### <a id="APIQueryFunc.appendCall" href="#APIQueryFunc.appendCall">func (f *APIQueryFunc) appendCall(r0 APIQueryFuncCall)</a>
-
-```
-searchKey: mocks.APIQueryFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *APIQueryFunc) appendCall(r0 APIQueryFuncCall)
-```
-
-#### <a id="APIQueryFunc.History" href="#APIQueryFunc.History">func (f *APIQueryFunc) History() []APIQueryFuncCall</a>
-
-```
-searchKey: mocks.APIQueryFunc.History
-```
-
-```Go
-func (f *APIQueryFunc) History() []APIQueryFuncCall
-```
-
-History returns a sequence of APIQueryFuncCall objects describing the invocations of this function. 
-
-### <a id="APIQueryFuncCall" href="#APIQueryFuncCall">type APIQueryFuncCall struct</a>
-
-```
-searchKey: mocks.APIQueryFuncCall
-```
-
-```Go
-type APIQueryFuncCall struct {
-	// Arg0 is the value of the 1st argument passed to this method
-	// invocation.
-	Arg0 context.Context
-	// Arg1 is the value of the 2nd argument passed to this method
-	// invocation.
-	Arg1 string
-	// Arg2 is the value of the 3rd argument passed to this method
-	// invocation.
-	Arg2 time.Time
-	// Result0 is the value of the 1st result returned from this method
-	// invocation.
-	Result0 model.Value
-	// Result1 is the value of the 2nd result returned from this method
-	// invocation.
-	Result1 v1.Warnings
-	// Result2 is the value of the 3rd result returned from this method
-	// invocation.
-	Result2 error
-}
-```
-
-APIQueryFuncCall is an object that describes an invocation of method Query on an instance of MockAPI. 
-
-#### <a id="APIQueryFuncCall.Args" href="#APIQueryFuncCall.Args">func (c APIQueryFuncCall) Args() []interface{}</a>
-
-```
-searchKey: mocks.APIQueryFuncCall.Args
-```
-
-```Go
-func (c APIQueryFuncCall) Args() []interface{}
-```
-
-Args returns an interface slice containing the arguments of this invocation. 
-
-#### <a id="APIQueryFuncCall.Results" href="#APIQueryFuncCall.Results">func (c APIQueryFuncCall) Results() []interface{}</a>
-
-```
-searchKey: mocks.APIQueryFuncCall.Results
-```
-
-```Go
-func (c APIQueryFuncCall) Results() []interface{}
-```
-
-Results returns an interface slice containing the results of this invocation. 
-
-### <a id="APIQueryRangeFunc" href="#APIQueryRangeFunc">type APIQueryRangeFunc struct</a>
-
-```
-searchKey: mocks.APIQueryRangeFunc
-```
-
-```Go
-type APIQueryRangeFunc struct {
-	defaultHook func(context.Context, string, v1.Range) (model.Value, v1.Warnings, error)
-	hooks       []func(context.Context, string, v1.Range) (model.Value, v1.Warnings, error)
-	history     []APIQueryRangeFuncCall
-	mutex       sync.Mutex
-}
-```
-
-APIQueryRangeFunc describes the behavior when the QueryRange method of the parent MockAPI instance is invoked. 
-
-#### <a id="APIQueryRangeFunc.SetDefaultHook" href="#APIQueryRangeFunc.SetDefaultHook">func (f *APIQueryRangeFunc) SetDefaultHook(hook func(context.Context, string, v1.Range) (model.Value, v1.Warnings, error))</a>
-
-```
-searchKey: mocks.APIQueryRangeFunc.SetDefaultHook
-```
-
-```Go
-func (f *APIQueryRangeFunc) SetDefaultHook(hook func(context.Context, string, v1.Range) (model.Value, v1.Warnings, error))
-```
-
-SetDefaultHook sets function that is called when the QueryRange method of the parent MockAPI instance is invoked and the hook queue is empty. 
-
-#### <a id="APIQueryRangeFunc.PushHook" href="#APIQueryRangeFunc.PushHook">func (f *APIQueryRangeFunc) PushHook(hook func(context.Context, string, v1.Range) (model.Value, v1.Warnings, error))</a>
-
-```
-searchKey: mocks.APIQueryRangeFunc.PushHook
-```
-
-```Go
-func (f *APIQueryRangeFunc) PushHook(hook func(context.Context, string, v1.Range) (model.Value, v1.Warnings, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the QueryRange method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="APIQueryRangeFunc.SetDefaultReturn" href="#APIQueryRangeFunc.SetDefaultReturn">func (f *APIQueryRangeFunc) SetDefaultReturn(r0 model.Value, r1 v1.Warnings, r2 error)</a>
-
-```
-searchKey: mocks.APIQueryRangeFunc.SetDefaultReturn
-```
-
-```Go
-func (f *APIQueryRangeFunc) SetDefaultReturn(r0 model.Value, r1 v1.Warnings, r2 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="APIQueryRangeFunc.PushReturn" href="#APIQueryRangeFunc.PushReturn">func (f *APIQueryRangeFunc) PushReturn(r0 model.Value, r1 v1.Warnings, r2 error)</a>
-
-```
-searchKey: mocks.APIQueryRangeFunc.PushReturn
-```
-
-```Go
-func (f *APIQueryRangeFunc) PushReturn(r0 model.Value, r1 v1.Warnings, r2 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="APIQueryRangeFunc.nextHook" href="#APIQueryRangeFunc.nextHook">func (f *APIQueryRangeFunc) nextHook() func(context.Context, string, v1.Range) (model.Value, v1.Warnings, error)</a>
-
-```
-searchKey: mocks.APIQueryRangeFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *APIQueryRangeFunc) nextHook() func(context.Context, string, v1.Range) (model.Value, v1.Warnings, error)
-```
-
-#### <a id="APIQueryRangeFunc.appendCall" href="#APIQueryRangeFunc.appendCall">func (f *APIQueryRangeFunc) appendCall(r0 APIQueryRangeFuncCall)</a>
-
-```
-searchKey: mocks.APIQueryRangeFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *APIQueryRangeFunc) appendCall(r0 APIQueryRangeFuncCall)
-```
-
-#### <a id="APIQueryRangeFunc.History" href="#APIQueryRangeFunc.History">func (f *APIQueryRangeFunc) History() []APIQueryRangeFuncCall</a>
-
-```
-searchKey: mocks.APIQueryRangeFunc.History
-```
-
-```Go
-func (f *APIQueryRangeFunc) History() []APIQueryRangeFuncCall
-```
-
-History returns a sequence of APIQueryRangeFuncCall objects describing the invocations of this function. 
-
-### <a id="APIQueryRangeFuncCall" href="#APIQueryRangeFuncCall">type APIQueryRangeFuncCall struct</a>
-
-```
-searchKey: mocks.APIQueryRangeFuncCall
-```
-
-```Go
-type APIQueryRangeFuncCall struct {
-	// Arg0 is the value of the 1st argument passed to this method
-	// invocation.
-	Arg0 context.Context
-	// Arg1 is the value of the 2nd argument passed to this method
-	// invocation.
-	Arg1 string
-	// Arg2 is the value of the 3rd argument passed to this method
-	// invocation.
-	Arg2 v1.Range
-	// Result0 is the value of the 1st result returned from this method
-	// invocation.
-	Result0 model.Value
-	// Result1 is the value of the 2nd result returned from this method
-	// invocation.
-	Result1 v1.Warnings
-	// Result2 is the value of the 3rd result returned from this method
-	// invocation.
-	Result2 error
-}
-```
-
-APIQueryRangeFuncCall is an object that describes an invocation of method QueryRange on an instance of MockAPI. 
-
-#### <a id="APIQueryRangeFuncCall.Args" href="#APIQueryRangeFuncCall.Args">func (c APIQueryRangeFuncCall) Args() []interface{}</a>
-
-```
-searchKey: mocks.APIQueryRangeFuncCall.Args
-```
-
-```Go
-func (c APIQueryRangeFuncCall) Args() []interface{}
-```
-
-Args returns an interface slice containing the arguments of this invocation. 
-
-#### <a id="APIQueryRangeFuncCall.Results" href="#APIQueryRangeFuncCall.Results">func (c APIQueryRangeFuncCall) Results() []interface{}</a>
-
-```
-searchKey: mocks.APIQueryRangeFuncCall.Results
-```
-
-```Go
-func (c APIQueryRangeFuncCall) Results() []interface{}
-```
-
-Results returns an interface slice containing the results of this invocation. 
-
-### <a id="APIRulesFunc" href="#APIRulesFunc">type APIRulesFunc struct</a>
-
-```
-searchKey: mocks.APIRulesFunc
-```
-
-```Go
-type APIRulesFunc struct {
-	defaultHook func(context.Context) (v1.RulesResult, error)
-	hooks       []func(context.Context) (v1.RulesResult, error)
-	history     []APIRulesFuncCall
-	mutex       sync.Mutex
-}
-```
-
-APIRulesFunc describes the behavior when the Rules method of the parent MockAPI instance is invoked. 
-
-#### <a id="APIRulesFunc.SetDefaultHook" href="#APIRulesFunc.SetDefaultHook">func (f *APIRulesFunc) SetDefaultHook(hook func(context.Context) (v1.RulesResult, error))</a>
-
-```
-searchKey: mocks.APIRulesFunc.SetDefaultHook
-```
-
-```Go
-func (f *APIRulesFunc) SetDefaultHook(hook func(context.Context) (v1.RulesResult, error))
-```
-
-SetDefaultHook sets function that is called when the Rules method of the parent MockAPI instance is invoked and the hook queue is empty. 
-
-#### <a id="APIRulesFunc.PushHook" href="#APIRulesFunc.PushHook">func (f *APIRulesFunc) PushHook(hook func(context.Context) (v1.RulesResult, error))</a>
-
-```
-searchKey: mocks.APIRulesFunc.PushHook
-```
-
-```Go
-func (f *APIRulesFunc) PushHook(hook func(context.Context) (v1.RulesResult, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the Rules method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="APIRulesFunc.SetDefaultReturn" href="#APIRulesFunc.SetDefaultReturn">func (f *APIRulesFunc) SetDefaultReturn(r0 v1.RulesResult, r1 error)</a>
-
-```
-searchKey: mocks.APIRulesFunc.SetDefaultReturn
-```
-
-```Go
-func (f *APIRulesFunc) SetDefaultReturn(r0 v1.RulesResult, r1 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="APIRulesFunc.PushReturn" href="#APIRulesFunc.PushReturn">func (f *APIRulesFunc) PushReturn(r0 v1.RulesResult, r1 error)</a>
-
-```
-searchKey: mocks.APIRulesFunc.PushReturn
-```
-
-```Go
-func (f *APIRulesFunc) PushReturn(r0 v1.RulesResult, r1 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="APIRulesFunc.nextHook" href="#APIRulesFunc.nextHook">func (f *APIRulesFunc) nextHook() func(context.Context) (v1.RulesResult, error)</a>
-
-```
-searchKey: mocks.APIRulesFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *APIRulesFunc) nextHook() func(context.Context) (v1.RulesResult, error)
-```
-
-#### <a id="APIRulesFunc.appendCall" href="#APIRulesFunc.appendCall">func (f *APIRulesFunc) appendCall(r0 APIRulesFuncCall)</a>
-
-```
-searchKey: mocks.APIRulesFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *APIRulesFunc) appendCall(r0 APIRulesFuncCall)
-```
-
-#### <a id="APIRulesFunc.History" href="#APIRulesFunc.History">func (f *APIRulesFunc) History() []APIRulesFuncCall</a>
-
-```
-searchKey: mocks.APIRulesFunc.History
-```
-
-```Go
-func (f *APIRulesFunc) History() []APIRulesFuncCall
-```
-
-History returns a sequence of APIRulesFuncCall objects describing the invocations of this function. 
-
-### <a id="APIRulesFuncCall" href="#APIRulesFuncCall">type APIRulesFuncCall struct</a>
-
-```
-searchKey: mocks.APIRulesFuncCall
-```
-
-```Go
-type APIRulesFuncCall struct {
-	// Arg0 is the value of the 1st argument passed to this method
-	// invocation.
-	Arg0 context.Context
-	// Result0 is the value of the 1st result returned from this method
-	// invocation.
-	Result0 v1.RulesResult
-	// Result1 is the value of the 2nd result returned from this method
-	// invocation.
-	Result1 error
-}
-```
-
-APIRulesFuncCall is an object that describes an invocation of method Rules on an instance of MockAPI. 
-
-#### <a id="APIRulesFuncCall.Args" href="#APIRulesFuncCall.Args">func (c APIRulesFuncCall) Args() []interface{}</a>
-
-```
-searchKey: mocks.APIRulesFuncCall.Args
-```
-
-```Go
-func (c APIRulesFuncCall) Args() []interface{}
-```
-
-Args returns an interface slice containing the arguments of this invocation. 
-
-#### <a id="APIRulesFuncCall.Results" href="#APIRulesFuncCall.Results">func (c APIRulesFuncCall) Results() []interface{}</a>
-
-```
-searchKey: mocks.APIRulesFuncCall.Results
-```
-
-```Go
-func (c APIRulesFuncCall) Results() []interface{}
-```
-
-Results returns an interface slice containing the results of this invocation. 
-
-### <a id="APIRuntimeinfoFunc" href="#APIRuntimeinfoFunc">type APIRuntimeinfoFunc struct</a>
-
-```
-searchKey: mocks.APIRuntimeinfoFunc
-```
-
-```Go
-type APIRuntimeinfoFunc struct {
-	defaultHook func(context.Context) (v1.RuntimeinfoResult, error)
-	hooks       []func(context.Context) (v1.RuntimeinfoResult, error)
-	history     []APIRuntimeinfoFuncCall
-	mutex       sync.Mutex
-}
-```
-
-APIRuntimeinfoFunc describes the behavior when the Runtimeinfo method of the parent MockAPI instance is invoked. 
-
-#### <a id="APIRuntimeinfoFunc.SetDefaultHook" href="#APIRuntimeinfoFunc.SetDefaultHook">func (f *APIRuntimeinfoFunc) SetDefaultHook(hook func(context.Context) (v1.RuntimeinfoResult, error))</a>
-
-```
-searchKey: mocks.APIRuntimeinfoFunc.SetDefaultHook
-```
-
-```Go
-func (f *APIRuntimeinfoFunc) SetDefaultHook(hook func(context.Context) (v1.RuntimeinfoResult, error))
-```
-
-SetDefaultHook sets function that is called when the Runtimeinfo method of the parent MockAPI instance is invoked and the hook queue is empty. 
-
-#### <a id="APIRuntimeinfoFunc.PushHook" href="#APIRuntimeinfoFunc.PushHook">func (f *APIRuntimeinfoFunc) PushHook(hook func(context.Context) (v1.RuntimeinfoResult, error))</a>
-
-```
-searchKey: mocks.APIRuntimeinfoFunc.PushHook
-```
-
-```Go
-func (f *APIRuntimeinfoFunc) PushHook(hook func(context.Context) (v1.RuntimeinfoResult, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the Runtimeinfo method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="APIRuntimeinfoFunc.SetDefaultReturn" href="#APIRuntimeinfoFunc.SetDefaultReturn">func (f *APIRuntimeinfoFunc) SetDefaultReturn(r0 v1.RuntimeinfoResult, r1 error)</a>
-
-```
-searchKey: mocks.APIRuntimeinfoFunc.SetDefaultReturn
-```
-
-```Go
-func (f *APIRuntimeinfoFunc) SetDefaultReturn(r0 v1.RuntimeinfoResult, r1 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="APIRuntimeinfoFunc.PushReturn" href="#APIRuntimeinfoFunc.PushReturn">func (f *APIRuntimeinfoFunc) PushReturn(r0 v1.RuntimeinfoResult, r1 error)</a>
-
-```
-searchKey: mocks.APIRuntimeinfoFunc.PushReturn
-```
-
-```Go
-func (f *APIRuntimeinfoFunc) PushReturn(r0 v1.RuntimeinfoResult, r1 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="APIRuntimeinfoFunc.nextHook" href="#APIRuntimeinfoFunc.nextHook">func (f *APIRuntimeinfoFunc) nextHook() func(context.Context) (v1.RuntimeinfoResult, error)</a>
-
-```
-searchKey: mocks.APIRuntimeinfoFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *APIRuntimeinfoFunc) nextHook() func(context.Context) (v1.RuntimeinfoResult, error)
-```
-
-#### <a id="APIRuntimeinfoFunc.appendCall" href="#APIRuntimeinfoFunc.appendCall">func (f *APIRuntimeinfoFunc) appendCall(r0 APIRuntimeinfoFuncCall)</a>
-
-```
-searchKey: mocks.APIRuntimeinfoFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *APIRuntimeinfoFunc) appendCall(r0 APIRuntimeinfoFuncCall)
-```
-
-#### <a id="APIRuntimeinfoFunc.History" href="#APIRuntimeinfoFunc.History">func (f *APIRuntimeinfoFunc) History() []APIRuntimeinfoFuncCall</a>
-
-```
-searchKey: mocks.APIRuntimeinfoFunc.History
-```
-
-```Go
-func (f *APIRuntimeinfoFunc) History() []APIRuntimeinfoFuncCall
-```
-
-History returns a sequence of APIRuntimeinfoFuncCall objects describing the invocations of this function. 
-
-### <a id="APIRuntimeinfoFuncCall" href="#APIRuntimeinfoFuncCall">type APIRuntimeinfoFuncCall struct</a>
-
-```
-searchKey: mocks.APIRuntimeinfoFuncCall
-```
-
-```Go
-type APIRuntimeinfoFuncCall struct {
-	// Arg0 is the value of the 1st argument passed to this method
-	// invocation.
-	Arg0 context.Context
-	// Result0 is the value of the 1st result returned from this method
-	// invocation.
-	Result0 v1.RuntimeinfoResult
-	// Result1 is the value of the 2nd result returned from this method
-	// invocation.
-	Result1 error
-}
-```
-
-APIRuntimeinfoFuncCall is an object that describes an invocation of method Runtimeinfo on an instance of MockAPI. 
-
-#### <a id="APIRuntimeinfoFuncCall.Args" href="#APIRuntimeinfoFuncCall.Args">func (c APIRuntimeinfoFuncCall) Args() []interface{}</a>
-
-```
-searchKey: mocks.APIRuntimeinfoFuncCall.Args
-```
-
-```Go
-func (c APIRuntimeinfoFuncCall) Args() []interface{}
-```
-
-Args returns an interface slice containing the arguments of this invocation. 
-
-#### <a id="APIRuntimeinfoFuncCall.Results" href="#APIRuntimeinfoFuncCall.Results">func (c APIRuntimeinfoFuncCall) Results() []interface{}</a>
-
-```
-searchKey: mocks.APIRuntimeinfoFuncCall.Results
-```
-
-```Go
-func (c APIRuntimeinfoFuncCall) Results() []interface{}
-```
-
-Results returns an interface slice containing the results of this invocation. 
-
-### <a id="APISeriesFunc" href="#APISeriesFunc">type APISeriesFunc struct</a>
-
-```
-searchKey: mocks.APISeriesFunc
-```
-
-```Go
-type APISeriesFunc struct {
-	defaultHook func(context.Context, []string, time.Time, time.Time) ([]model.LabelSet, v1.Warnings, error)
-	hooks       []func(context.Context, []string, time.Time, time.Time) ([]model.LabelSet, v1.Warnings, error)
-	history     []APISeriesFuncCall
-	mutex       sync.Mutex
-}
-```
-
-APISeriesFunc describes the behavior when the Series method of the parent MockAPI instance is invoked. 
-
-#### <a id="APISeriesFunc.SetDefaultHook" href="#APISeriesFunc.SetDefaultHook">func (f *APISeriesFunc) SetDefaultHook(hook func(context.Context, []string, time.Time, time.Time) ([]model.LabelSet, v1.Warnings, error))</a>
-
-```
-searchKey: mocks.APISeriesFunc.SetDefaultHook
-```
-
-```Go
-func (f *APISeriesFunc) SetDefaultHook(hook func(context.Context, []string, time.Time, time.Time) ([]model.LabelSet, v1.Warnings, error))
-```
-
-SetDefaultHook sets function that is called when the Series method of the parent MockAPI instance is invoked and the hook queue is empty. 
-
-#### <a id="APISeriesFunc.PushHook" href="#APISeriesFunc.PushHook">func (f *APISeriesFunc) PushHook(hook func(context.Context, []string, time.Time, time.Time) ([]model.LabelSet, v1.Warnings, error))</a>
-
-```
-searchKey: mocks.APISeriesFunc.PushHook
-```
-
-```Go
-func (f *APISeriesFunc) PushHook(hook func(context.Context, []string, time.Time, time.Time) ([]model.LabelSet, v1.Warnings, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the Series method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="APISeriesFunc.SetDefaultReturn" href="#APISeriesFunc.SetDefaultReturn">func (f *APISeriesFunc) SetDefaultReturn(r0 []model.LabelSet, r1 v1.Warnings, r2 error)</a>
-
-```
-searchKey: mocks.APISeriesFunc.SetDefaultReturn
-```
-
-```Go
-func (f *APISeriesFunc) SetDefaultReturn(r0 []model.LabelSet, r1 v1.Warnings, r2 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="APISeriesFunc.PushReturn" href="#APISeriesFunc.PushReturn">func (f *APISeriesFunc) PushReturn(r0 []model.LabelSet, r1 v1.Warnings, r2 error)</a>
-
-```
-searchKey: mocks.APISeriesFunc.PushReturn
-```
-
-```Go
-func (f *APISeriesFunc) PushReturn(r0 []model.LabelSet, r1 v1.Warnings, r2 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="APISeriesFunc.nextHook" href="#APISeriesFunc.nextHook">func (f *APISeriesFunc) nextHook() func(context.Context, []string, time.Time, time.Time) ([]model.LabelSet, v1.Warnings, error)</a>
-
-```
-searchKey: mocks.APISeriesFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *APISeriesFunc) nextHook() func(context.Context, []string, time.Time, time.Time) ([]model.LabelSet, v1.Warnings, error)
-```
-
-#### <a id="APISeriesFunc.appendCall" href="#APISeriesFunc.appendCall">func (f *APISeriesFunc) appendCall(r0 APISeriesFuncCall)</a>
-
-```
-searchKey: mocks.APISeriesFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *APISeriesFunc) appendCall(r0 APISeriesFuncCall)
-```
-
-#### <a id="APISeriesFunc.History" href="#APISeriesFunc.History">func (f *APISeriesFunc) History() []APISeriesFuncCall</a>
-
-```
-searchKey: mocks.APISeriesFunc.History
-```
-
-```Go
-func (f *APISeriesFunc) History() []APISeriesFuncCall
-```
-
-History returns a sequence of APISeriesFuncCall objects describing the invocations of this function. 
-
-### <a id="APISeriesFuncCall" href="#APISeriesFuncCall">type APISeriesFuncCall struct</a>
-
-```
-searchKey: mocks.APISeriesFuncCall
-```
-
-```Go
-type APISeriesFuncCall struct {
-	// Arg0 is the value of the 1st argument passed to this method
-	// invocation.
-	Arg0 context.Context
-	// Arg1 is the value of the 2nd argument passed to this method
-	// invocation.
-	Arg1 []string
-	// Arg2 is the value of the 3rd argument passed to this method
-	// invocation.
-	Arg2 time.Time
-	// Arg3 is the value of the 4th argument passed to this method
-	// invocation.
-	Arg3 time.Time
-	// Result0 is the value of the 1st result returned from this method
-	// invocation.
-	Result0 []model.LabelSet
-	// Result1 is the value of the 2nd result returned from this method
-	// invocation.
-	Result1 v1.Warnings
-	// Result2 is the value of the 3rd result returned from this method
-	// invocation.
-	Result2 error
-}
-```
-
-APISeriesFuncCall is an object that describes an invocation of method Series on an instance of MockAPI. 
-
-#### <a id="APISeriesFuncCall.Args" href="#APISeriesFuncCall.Args">func (c APISeriesFuncCall) Args() []interface{}</a>
-
-```
-searchKey: mocks.APISeriesFuncCall.Args
-```
-
-```Go
-func (c APISeriesFuncCall) Args() []interface{}
-```
-
-Args returns an interface slice containing the arguments of this invocation. 
-
-#### <a id="APISeriesFuncCall.Results" href="#APISeriesFuncCall.Results">func (c APISeriesFuncCall) Results() []interface{}</a>
-
-```
-searchKey: mocks.APISeriesFuncCall.Results
-```
-
-```Go
-func (c APISeriesFuncCall) Results() []interface{}
-```
-
-Results returns an interface slice containing the results of this invocation. 
-
-### <a id="APISnapshotFunc" href="#APISnapshotFunc">type APISnapshotFunc struct</a>
-
-```
-searchKey: mocks.APISnapshotFunc
-```
-
-```Go
-type APISnapshotFunc struct {
-	defaultHook func(context.Context, bool) (v1.SnapshotResult, error)
-	hooks       []func(context.Context, bool) (v1.SnapshotResult, error)
-	history     []APISnapshotFuncCall
-	mutex       sync.Mutex
-}
-```
-
-APISnapshotFunc describes the behavior when the Snapshot method of the parent MockAPI instance is invoked. 
-
-#### <a id="APISnapshotFunc.SetDefaultHook" href="#APISnapshotFunc.SetDefaultHook">func (f *APISnapshotFunc) SetDefaultHook(hook func(context.Context, bool) (v1.SnapshotResult, error))</a>
-
-```
-searchKey: mocks.APISnapshotFunc.SetDefaultHook
-```
-
-```Go
-func (f *APISnapshotFunc) SetDefaultHook(hook func(context.Context, bool) (v1.SnapshotResult, error))
-```
-
-SetDefaultHook sets function that is called when the Snapshot method of the parent MockAPI instance is invoked and the hook queue is empty. 
-
-#### <a id="APISnapshotFunc.PushHook" href="#APISnapshotFunc.PushHook">func (f *APISnapshotFunc) PushHook(hook func(context.Context, bool) (v1.SnapshotResult, error))</a>
-
-```
-searchKey: mocks.APISnapshotFunc.PushHook
-```
-
-```Go
-func (f *APISnapshotFunc) PushHook(hook func(context.Context, bool) (v1.SnapshotResult, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the Snapshot method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="APISnapshotFunc.SetDefaultReturn" href="#APISnapshotFunc.SetDefaultReturn">func (f *APISnapshotFunc) SetDefaultReturn(r0 v1.SnapshotResult, r1 error)</a>
-
-```
-searchKey: mocks.APISnapshotFunc.SetDefaultReturn
-```
-
-```Go
-func (f *APISnapshotFunc) SetDefaultReturn(r0 v1.SnapshotResult, r1 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="APISnapshotFunc.PushReturn" href="#APISnapshotFunc.PushReturn">func (f *APISnapshotFunc) PushReturn(r0 v1.SnapshotResult, r1 error)</a>
-
-```
-searchKey: mocks.APISnapshotFunc.PushReturn
-```
-
-```Go
-func (f *APISnapshotFunc) PushReturn(r0 v1.SnapshotResult, r1 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="APISnapshotFunc.nextHook" href="#APISnapshotFunc.nextHook">func (f *APISnapshotFunc) nextHook() func(context.Context, bool) (v1.SnapshotResult, error)</a>
-
-```
-searchKey: mocks.APISnapshotFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *APISnapshotFunc) nextHook() func(context.Context, bool) (v1.SnapshotResult, error)
-```
-
-#### <a id="APISnapshotFunc.appendCall" href="#APISnapshotFunc.appendCall">func (f *APISnapshotFunc) appendCall(r0 APISnapshotFuncCall)</a>
-
-```
-searchKey: mocks.APISnapshotFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *APISnapshotFunc) appendCall(r0 APISnapshotFuncCall)
-```
-
-#### <a id="APISnapshotFunc.History" href="#APISnapshotFunc.History">func (f *APISnapshotFunc) History() []APISnapshotFuncCall</a>
-
-```
-searchKey: mocks.APISnapshotFunc.History
-```
-
-```Go
-func (f *APISnapshotFunc) History() []APISnapshotFuncCall
-```
-
-History returns a sequence of APISnapshotFuncCall objects describing the invocations of this function. 
-
-### <a id="APISnapshotFuncCall" href="#APISnapshotFuncCall">type APISnapshotFuncCall struct</a>
-
-```
-searchKey: mocks.APISnapshotFuncCall
-```
-
-```Go
-type APISnapshotFuncCall struct {
-	// Arg0 is the value of the 1st argument passed to this method
-	// invocation.
-	Arg0 context.Context
-	// Arg1 is the value of the 2nd argument passed to this method
-	// invocation.
-	Arg1 bool
-	// Result0 is the value of the 1st result returned from this method
-	// invocation.
-	Result0 v1.SnapshotResult
-	// Result1 is the value of the 2nd result returned from this method
-	// invocation.
-	Result1 error
-}
-```
-
-APISnapshotFuncCall is an object that describes an invocation of method Snapshot on an instance of MockAPI. 
-
-#### <a id="APISnapshotFuncCall.Args" href="#APISnapshotFuncCall.Args">func (c APISnapshotFuncCall) Args() []interface{}</a>
-
-```
-searchKey: mocks.APISnapshotFuncCall.Args
-```
-
-```Go
-func (c APISnapshotFuncCall) Args() []interface{}
-```
-
-Args returns an interface slice containing the arguments of this invocation. 
-
-#### <a id="APISnapshotFuncCall.Results" href="#APISnapshotFuncCall.Results">func (c APISnapshotFuncCall) Results() []interface{}</a>
-
-```
-searchKey: mocks.APISnapshotFuncCall.Results
-```
-
-```Go
-func (c APISnapshotFuncCall) Results() []interface{}
-```
-
-Results returns an interface slice containing the results of this invocation. 
-
-### <a id="APITSDBFunc" href="#APITSDBFunc">type APITSDBFunc struct</a>
-
-```
-searchKey: mocks.APITSDBFunc
-```
-
-```Go
-type APITSDBFunc struct {
-	defaultHook func(context.Context) (v1.TSDBResult, error)
-	hooks       []func(context.Context) (v1.TSDBResult, error)
-	history     []APITSDBFuncCall
-	mutex       sync.Mutex
-}
-```
-
-APITSDBFunc describes the behavior when the TSDB method of the parent MockAPI instance is invoked. 
-
-#### <a id="APITSDBFunc.SetDefaultHook" href="#APITSDBFunc.SetDefaultHook">func (f *APITSDBFunc) SetDefaultHook(hook func(context.Context) (v1.TSDBResult, error))</a>
-
-```
-searchKey: mocks.APITSDBFunc.SetDefaultHook
-```
-
-```Go
-func (f *APITSDBFunc) SetDefaultHook(hook func(context.Context) (v1.TSDBResult, error))
-```
-
-SetDefaultHook sets function that is called when the TSDB method of the parent MockAPI instance is invoked and the hook queue is empty. 
-
-#### <a id="APITSDBFunc.PushHook" href="#APITSDBFunc.PushHook">func (f *APITSDBFunc) PushHook(hook func(context.Context) (v1.TSDBResult, error))</a>
-
-```
-searchKey: mocks.APITSDBFunc.PushHook
-```
-
-```Go
-func (f *APITSDBFunc) PushHook(hook func(context.Context) (v1.TSDBResult, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the TSDB method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="APITSDBFunc.SetDefaultReturn" href="#APITSDBFunc.SetDefaultReturn">func (f *APITSDBFunc) SetDefaultReturn(r0 v1.TSDBResult, r1 error)</a>
-
-```
-searchKey: mocks.APITSDBFunc.SetDefaultReturn
-```
-
-```Go
-func (f *APITSDBFunc) SetDefaultReturn(r0 v1.TSDBResult, r1 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="APITSDBFunc.PushReturn" href="#APITSDBFunc.PushReturn">func (f *APITSDBFunc) PushReturn(r0 v1.TSDBResult, r1 error)</a>
-
-```
-searchKey: mocks.APITSDBFunc.PushReturn
-```
-
-```Go
-func (f *APITSDBFunc) PushReturn(r0 v1.TSDBResult, r1 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="APITSDBFunc.nextHook" href="#APITSDBFunc.nextHook">func (f *APITSDBFunc) nextHook() func(context.Context) (v1.TSDBResult, error)</a>
-
-```
-searchKey: mocks.APITSDBFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *APITSDBFunc) nextHook() func(context.Context) (v1.TSDBResult, error)
-```
-
-#### <a id="APITSDBFunc.appendCall" href="#APITSDBFunc.appendCall">func (f *APITSDBFunc) appendCall(r0 APITSDBFuncCall)</a>
-
-```
-searchKey: mocks.APITSDBFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *APITSDBFunc) appendCall(r0 APITSDBFuncCall)
-```
-
-#### <a id="APITSDBFunc.History" href="#APITSDBFunc.History">func (f *APITSDBFunc) History() []APITSDBFuncCall</a>
-
-```
-searchKey: mocks.APITSDBFunc.History
-```
-
-```Go
-func (f *APITSDBFunc) History() []APITSDBFuncCall
-```
-
-History returns a sequence of APITSDBFuncCall objects describing the invocations of this function. 
-
-### <a id="APITSDBFuncCall" href="#APITSDBFuncCall">type APITSDBFuncCall struct</a>
-
-```
-searchKey: mocks.APITSDBFuncCall
-```
-
-```Go
-type APITSDBFuncCall struct {
-	// Arg0 is the value of the 1st argument passed to this method
-	// invocation.
-	Arg0 context.Context
-	// Result0 is the value of the 1st result returned from this method
-	// invocation.
-	Result0 v1.TSDBResult
-	// Result1 is the value of the 2nd result returned from this method
-	// invocation.
-	Result1 error
-}
-```
-
-APITSDBFuncCall is an object that describes an invocation of method TSDB on an instance of MockAPI. 
-
-#### <a id="APITSDBFuncCall.Args" href="#APITSDBFuncCall.Args">func (c APITSDBFuncCall) Args() []interface{}</a>
-
-```
-searchKey: mocks.APITSDBFuncCall.Args
-```
-
-```Go
-func (c APITSDBFuncCall) Args() []interface{}
-```
-
-Args returns an interface slice containing the arguments of this invocation. 
-
-#### <a id="APITSDBFuncCall.Results" href="#APITSDBFuncCall.Results">func (c APITSDBFuncCall) Results() []interface{}</a>
-
-```
-searchKey: mocks.APITSDBFuncCall.Results
-```
-
-```Go
-func (c APITSDBFuncCall) Results() []interface{}
-```
-
-Results returns an interface slice containing the results of this invocation. 
-
-### <a id="APITargetsFunc" href="#APITargetsFunc">type APITargetsFunc struct</a>
-
-```
-searchKey: mocks.APITargetsFunc
-```
-
-```Go
-type APITargetsFunc struct {
-	defaultHook func(context.Context) (v1.TargetsResult, error)
-	hooks       []func(context.Context) (v1.TargetsResult, error)
-	history     []APITargetsFuncCall
-	mutex       sync.Mutex
-}
-```
-
-APITargetsFunc describes the behavior when the Targets method of the parent MockAPI instance is invoked. 
-
-#### <a id="APITargetsFunc.SetDefaultHook" href="#APITargetsFunc.SetDefaultHook">func (f *APITargetsFunc) SetDefaultHook(hook func(context.Context) (v1.TargetsResult, error))</a>
-
-```
-searchKey: mocks.APITargetsFunc.SetDefaultHook
-```
-
-```Go
-func (f *APITargetsFunc) SetDefaultHook(hook func(context.Context) (v1.TargetsResult, error))
-```
-
-SetDefaultHook sets function that is called when the Targets method of the parent MockAPI instance is invoked and the hook queue is empty. 
-
-#### <a id="APITargetsFunc.PushHook" href="#APITargetsFunc.PushHook">func (f *APITargetsFunc) PushHook(hook func(context.Context) (v1.TargetsResult, error))</a>
-
-```
-searchKey: mocks.APITargetsFunc.PushHook
-```
-
-```Go
-func (f *APITargetsFunc) PushHook(hook func(context.Context) (v1.TargetsResult, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the Targets method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="APITargetsFunc.SetDefaultReturn" href="#APITargetsFunc.SetDefaultReturn">func (f *APITargetsFunc) SetDefaultReturn(r0 v1.TargetsResult, r1 error)</a>
-
-```
-searchKey: mocks.APITargetsFunc.SetDefaultReturn
-```
-
-```Go
-func (f *APITargetsFunc) SetDefaultReturn(r0 v1.TargetsResult, r1 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="APITargetsFunc.PushReturn" href="#APITargetsFunc.PushReturn">func (f *APITargetsFunc) PushReturn(r0 v1.TargetsResult, r1 error)</a>
-
-```
-searchKey: mocks.APITargetsFunc.PushReturn
-```
-
-```Go
-func (f *APITargetsFunc) PushReturn(r0 v1.TargetsResult, r1 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="APITargetsFunc.nextHook" href="#APITargetsFunc.nextHook">func (f *APITargetsFunc) nextHook() func(context.Context) (v1.TargetsResult, error)</a>
-
-```
-searchKey: mocks.APITargetsFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *APITargetsFunc) nextHook() func(context.Context) (v1.TargetsResult, error)
-```
-
-#### <a id="APITargetsFunc.appendCall" href="#APITargetsFunc.appendCall">func (f *APITargetsFunc) appendCall(r0 APITargetsFuncCall)</a>
-
-```
-searchKey: mocks.APITargetsFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *APITargetsFunc) appendCall(r0 APITargetsFuncCall)
-```
-
-#### <a id="APITargetsFunc.History" href="#APITargetsFunc.History">func (f *APITargetsFunc) History() []APITargetsFuncCall</a>
-
-```
-searchKey: mocks.APITargetsFunc.History
-```
-
-```Go
-func (f *APITargetsFunc) History() []APITargetsFuncCall
-```
-
-History returns a sequence of APITargetsFuncCall objects describing the invocations of this function. 
-
-### <a id="APITargetsFuncCall" href="#APITargetsFuncCall">type APITargetsFuncCall struct</a>
-
-```
-searchKey: mocks.APITargetsFuncCall
-```
-
-```Go
-type APITargetsFuncCall struct {
-	// Arg0 is the value of the 1st argument passed to this method
-	// invocation.
-	Arg0 context.Context
-	// Result0 is the value of the 1st result returned from this method
-	// invocation.
-	Result0 v1.TargetsResult
-	// Result1 is the value of the 2nd result returned from this method
-	// invocation.
-	Result1 error
-}
-```
-
-APITargetsFuncCall is an object that describes an invocation of method Targets on an instance of MockAPI. 
-
-#### <a id="APITargetsFuncCall.Args" href="#APITargetsFuncCall.Args">func (c APITargetsFuncCall) Args() []interface{}</a>
-
-```
-searchKey: mocks.APITargetsFuncCall.Args
-```
-
-```Go
-func (c APITargetsFuncCall) Args() []interface{}
-```
-
-Args returns an interface slice containing the arguments of this invocation. 
-
-#### <a id="APITargetsFuncCall.Results" href="#APITargetsFuncCall.Results">func (c APITargetsFuncCall) Results() []interface{}</a>
-
-```
-searchKey: mocks.APITargetsFuncCall.Results
-```
-
-```Go
-func (c APITargetsFuncCall) Results() []interface{}
-```
-
-Results returns an interface slice containing the results of this invocation. 
-
-### <a id="APITargetsMetadataFunc" href="#APITargetsMetadataFunc">type APITargetsMetadataFunc struct</a>
-
-```
-searchKey: mocks.APITargetsMetadataFunc
-```
-
-```Go
-type APITargetsMetadataFunc struct {
-	defaultHook func(context.Context, string, string, string) ([]v1.MetricMetadata, error)
-	hooks       []func(context.Context, string, string, string) ([]v1.MetricMetadata, error)
-	history     []APITargetsMetadataFuncCall
-	mutex       sync.Mutex
-}
-```
-
-APITargetsMetadataFunc describes the behavior when the TargetsMetadata method of the parent MockAPI instance is invoked. 
-
-#### <a id="APITargetsMetadataFunc.SetDefaultHook" href="#APITargetsMetadataFunc.SetDefaultHook">func (f *APITargetsMetadataFunc) SetDefaultHook(hook func(context.Context, string, string, string) ([]v1.MetricMetadata, error))</a>
-
-```
-searchKey: mocks.APITargetsMetadataFunc.SetDefaultHook
-```
-
-```Go
-func (f *APITargetsMetadataFunc) SetDefaultHook(hook func(context.Context, string, string, string) ([]v1.MetricMetadata, error))
-```
-
-SetDefaultHook sets function that is called when the TargetsMetadata method of the parent MockAPI instance is invoked and the hook queue is empty. 
-
-#### <a id="APITargetsMetadataFunc.PushHook" href="#APITargetsMetadataFunc.PushHook">func (f *APITargetsMetadataFunc) PushHook(hook func(context.Context, string, string, string) ([]v1.MetricMetadata, error))</a>
-
-```
-searchKey: mocks.APITargetsMetadataFunc.PushHook
-```
-
-```Go
-func (f *APITargetsMetadataFunc) PushHook(hook func(context.Context, string, string, string) ([]v1.MetricMetadata, error))
-```
-
-PushHook adds a function to the end of hook queue. Each invocation of the TargetsMetadata method of the parent MockAPI instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. 
-
-#### <a id="APITargetsMetadataFunc.SetDefaultReturn" href="#APITargetsMetadataFunc.SetDefaultReturn">func (f *APITargetsMetadataFunc) SetDefaultReturn(r0 []v1.MetricMetadata, r1 error)</a>
-
-```
-searchKey: mocks.APITargetsMetadataFunc.SetDefaultReturn
-```
-
-```Go
-func (f *APITargetsMetadataFunc) SetDefaultReturn(r0 []v1.MetricMetadata, r1 error)
-```
-
-SetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. 
-
-#### <a id="APITargetsMetadataFunc.PushReturn" href="#APITargetsMetadataFunc.PushReturn">func (f *APITargetsMetadataFunc) PushReturn(r0 []v1.MetricMetadata, r1 error)</a>
-
-```
-searchKey: mocks.APITargetsMetadataFunc.PushReturn
-```
-
-```Go
-func (f *APITargetsMetadataFunc) PushReturn(r0 []v1.MetricMetadata, r1 error)
-```
-
-PushReturn calls PushDefaultHook with a function that returns the given values. 
-
-#### <a id="APITargetsMetadataFunc.nextHook" href="#APITargetsMetadataFunc.nextHook">func (f *APITargetsMetadataFunc) nextHook() func(context.Context, string, string, string) ([]v1.MetricMetadata, error)</a>
-
-```
-searchKey: mocks.APITargetsMetadataFunc.nextHook
-tags: [private]
-```
-
-```Go
-func (f *APITargetsMetadataFunc) nextHook() func(context.Context, string, string, string) ([]v1.MetricMetadata, error)
-```
-
-#### <a id="APITargetsMetadataFunc.appendCall" href="#APITargetsMetadataFunc.appendCall">func (f *APITargetsMetadataFunc) appendCall(r0 APITargetsMetadataFuncCall)</a>
-
-```
-searchKey: mocks.APITargetsMetadataFunc.appendCall
-tags: [private]
-```
-
-```Go
-func (f *APITargetsMetadataFunc) appendCall(r0 APITargetsMetadataFuncCall)
-```
-
-#### <a id="APITargetsMetadataFunc.History" href="#APITargetsMetadataFunc.History">func (f *APITargetsMetadataFunc) History() []APITargetsMetadataFuncCall</a>
-
-```
-searchKey: mocks.APITargetsMetadataFunc.History
-```
-
-```Go
-func (f *APITargetsMetadataFunc) History() []APITargetsMetadataFuncCall
-```
-
-History returns a sequence of APITargetsMetadataFuncCall objects describing the invocations of this function. 
-
-### <a id="APITargetsMetadataFuncCall" href="#APITargetsMetadataFuncCall">type APITargetsMetadataFuncCall struct</a>
-
-```
-searchKey: mocks.APITargetsMetadataFuncCall
-```
-
-```Go
-type APITargetsMetadataFuncCall struct {
-	// Arg0 is the value of the 1st argument passed to this method
-	// invocation.
-	Arg0 context.Context
-	// Arg1 is the value of the 2nd argument passed to this method
-	// invocation.
-	Arg1 string
-	// Arg2 is the value of the 3rd argument passed to this method
-	// invocation.
-	Arg2 string
-	// Arg3 is the value of the 4th argument passed to this method
-	// invocation.
-	Arg3 string
-	// Result0 is the value of the 1st result returned from this method
-	// invocation.
-	Result0 []v1.MetricMetadata
-	// Result1 is the value of the 2nd result returned from this method
-	// invocation.
-	Result1 error
-}
-```
-
-APITargetsMetadataFuncCall is an object that describes an invocation of method TargetsMetadata on an instance of MockAPI. 
-
-#### <a id="APITargetsMetadataFuncCall.Args" href="#APITargetsMetadataFuncCall.Args">func (c APITargetsMetadataFuncCall) Args() []interface{}</a>
-
-```
-searchKey: mocks.APITargetsMetadataFuncCall.Args
-```
-
-```Go
-func (c APITargetsMetadataFuncCall) Args() []interface{}
-```
-
-Args returns an interface slice containing the arguments of this invocation. 
-
-#### <a id="APITargetsMetadataFuncCall.Results" href="#APITargetsMetadataFuncCall.Results">func (c APITargetsMetadataFuncCall) Results() []interface{}</a>
-
-```
-searchKey: mocks.APITargetsMetadataFuncCall.Results
-```
-
-```Go
-func (c APITargetsMetadataFuncCall) Results() []interface{}
-```
-
-Results returns an interface slice containing the results of this invocation. 
 

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/vcs/util",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,9 @@
                 "identifier": "FileInfo",
                 "newPage": false,
                 "searchKey": "util.FileInfo",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -57,12 +61,80 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/internal/vcs/util#FileInfo.IsDir",
+                    "documentation": {
+                      "identifier": "FileInfo.IsDir",
+                      "newPage": false,
+                      "searchKey": "util.FileInfo.IsDir",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fi *FileInfo) IsDir() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fi *FileInfo) IsDir() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/vcs/util#FileInfo.ModTime",
+                    "documentation": {
+                      "identifier": "FileInfo.ModTime",
+                      "newPage": false,
+                      "searchKey": "util.FileInfo.ModTime",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fi *FileInfo) ModTime() time.Time"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fi *FileInfo) ModTime() time.Time\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/vcs/util#FileInfo.Mode",
+                    "documentation": {
+                      "identifier": "FileInfo.Mode",
+                      "newPage": false,
+                      "searchKey": "util.FileInfo.Mode",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fi *FileInfo) Mode() os.FileMode"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fi *FileInfo) Mode() os.FileMode\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/vcs/util#FileInfo.Name",
                     "documentation": {
                       "identifier": "FileInfo.Name",
                       "newPage": false,
                       "searchKey": "util.FileInfo.Name",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,7 +154,9 @@
                       "identifier": "FileInfo.Size",
                       "newPage": false,
                       "searchKey": "util.FileInfo.Size",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -97,72 +171,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/vcs/util#FileInfo.Mode",
-                    "documentation": {
-                      "identifier": "FileInfo.Mode",
-                      "newPage": false,
-                      "searchKey": "util.FileInfo.Mode",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (fi *FileInfo) Mode() os.FileMode"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (fi *FileInfo) Mode() os.FileMode\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/vcs/util#FileInfo.ModTime",
-                    "documentation": {
-                      "identifier": "FileInfo.ModTime",
-                      "newPage": false,
-                      "searchKey": "util.FileInfo.ModTime",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (fi *FileInfo) ModTime() time.Time"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (fi *FileInfo) ModTime() time.Time\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/vcs/util#FileInfo.IsDir",
-                    "documentation": {
-                      "identifier": "FileInfo.IsDir",
-                      "newPage": false,
-                      "searchKey": "util.FileInfo.IsDir",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (fi *FileInfo) IsDir() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (fi *FileInfo) IsDir() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/vcs/util#FileInfo.Sys",
                     "documentation": {
                       "identifier": "FileInfo.Sys",
                       "newPage": false,
                       "searchKey": "util.FileInfo.Sys",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -186,6 +202,8 @@
                 "newPage": false,
                 "searchKey": "util.fileInfosByName",
                 "tags": [
+                  "array",
+                  "interface",
                   "private"
                 ]
               },
@@ -206,6 +224,7 @@
                       "newPage": false,
                       "searchKey": "util.fileInfosByName.Len",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -228,6 +247,7 @@
                       "newPage": false,
                       "searchKey": "util.fileInfosByName.Less",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -250,6 +270,7 @@
                       "newPage": false,
                       "searchKey": "util.fileInfosByName.Swap",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -278,6 +299,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -292,32 +314,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/vcs/util#SortFileInfosByName",
-              "documentation": {
-                "identifier": "SortFileInfosByName",
-                "newPage": false,
-                "searchKey": "util.SortFileInfosByName",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SortFileInfosByName(fis []fs.FileInfo)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SortFileInfosByName(fis []fs.FileInfo)\n```\n\nSortFileInfosByName sorts fis by name, alphabetically. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/vcs/util#Rel",
               "documentation": {
                 "identifier": "Rel",
                 "newPage": false,
                 "searchKey": "util.Rel",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -337,7 +341,9 @@
                 "identifier": "ScriptFile",
                 "newPage": false,
                 "searchKey": "util.ScriptFile",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -352,20 +358,22 @@
           },
           {
             "node": {
-              "pathID": "/internal/vcs/util#WriteFileWithPermissions",
+              "pathID": "/internal/vcs/util#SortFileInfosByName",
               "documentation": {
-                "identifier": "WriteFileWithPermissions",
+                "identifier": "SortFileInfosByName",
                 "newPage": false,
-                "searchKey": "util.WriteFileWithPermissions",
-                "tags": null
+                "searchKey": "util.SortFileInfosByName",
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func WriteFileWithPermissions(file string, content []byte, perm os.FileMode) error"
+                "value": "func SortFileInfosByName(fis []fs.FileInfo)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc WriteFileWithPermissions(file string, content []byte, perm os.FileMode) error\n```\n\nWrapper around os.WriteFile that updates permissions regardless if file existed before \n\n"
+                "value": "```Go\nfunc SortFileInfosByName(fis []fs.FileInfo)\n```\n\nSortFileInfosByName sorts fis by name, alphabetically. \n\n"
               },
               "children": null
             }
@@ -378,7 +386,9 @@
                 "newPage": false,
                 "searchKey": "util.TestScriptFile",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -388,6 +398,28 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc TestScriptFile(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/vcs/util#WriteFileWithPermissions",
+              "documentation": {
+                "identifier": "WriteFileWithPermissions",
+                "newPage": false,
+                "searchKey": "util.WriteFileWithPermissions",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WriteFileWithPermissions(file string, content []byte, perm os.FileMode) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WriteFileWithPermissions(file string, content []byte, perm os.FileMode) error\n```\n\nWrapper around os.WriteFile that updates permissions regardless if file existed before \n\n"
               },
               "children": null
             }

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/database/dbconn",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "dbconn.bulkInsertionKey",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -84,12 +89,84 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/database/dbconn#CodeInsights",
+              "documentation": {
+                "identifier": "CodeInsights",
+                "newPage": false,
+                "searchKey": "dbconn.CodeInsights",
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var CodeInsights"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar CodeInsights = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbconn#CodeIntel",
+              "documentation": {
+                "identifier": "CodeIntel",
+                "newPage": false,
+                "searchKey": "dbconn.CodeIntel",
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var CodeIntel"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar CodeIntel = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbconn#Frontend",
+              "documentation": {
+                "identifier": "Frontend",
+                "newPage": false,
+                "searchKey": "dbconn.Frontend",
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Frontend"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Frontend = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/database/dbconn#Global",
               "documentation": {
                 "identifier": "Global",
                 "newPage": false,
                 "searchKey": "dbconn.Global",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -104,34 +181,14 @@
           },
           {
             "node": {
-              "pathID": "/internal/database/dbconn#defaultDataSource",
-              "documentation": {
-                "identifier": "defaultDataSource",
-                "newPage": false,
-                "searchKey": "dbconn.defaultDataSource",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var defaultDataSource"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar defaultDataSource = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/database/dbconn#defaultApplicationName",
               "documentation": {
                 "identifier": "defaultApplicationName",
                 "newPage": false,
                 "searchKey": "dbconn.defaultApplicationName",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -148,66 +205,24 @@
           },
           {
             "node": {
-              "pathID": "/internal/database/dbconn#versionPattern",
+              "pathID": "/internal/database/dbconn#defaultDataSource",
               "documentation": {
-                "identifier": "versionPattern",
+                "identifier": "defaultDataSource",
                 "newPage": false,
-                "searchKey": "dbconn.versionPattern",
+                "searchKey": "dbconn.defaultDataSource",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var versionPattern"
+                "value": "var defaultDataSource"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar versionPattern = lazyregexp.New(`^PostgreSQL (\\d+)\\.`)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/dbconn#startupTimeout",
-              "documentation": {
-                "identifier": "startupTimeout",
-                "newPage": false,
-                "searchKey": "dbconn.startupTimeout",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var startupTimeout"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar startupTimeout = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/dbconn#registerOnce",
-              "documentation": {
-                "identifier": "registerOnce",
-                "newPage": false,
-                "searchKey": "dbconn.registerOnce",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var registerOnce"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar registerOnce sync.Once\n```\n\n"
+                "value": "```Go\nvar defaultDataSource = ...\n```\n\n"
               },
               "children": null
             }
@@ -220,6 +235,8 @@
                 "newPage": false,
                 "searchKey": "dbconn.postgresBulkInsertRowsPattern",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -242,6 +259,9 @@
                 "newPage": false,
                 "searchKey": "dbconn.postgresBulkInsertRowsReplacement",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -258,60 +278,72 @@
           },
           {
             "node": {
-              "pathID": "/internal/database/dbconn#Frontend",
+              "pathID": "/internal/database/dbconn#registerOnce",
               "documentation": {
-                "identifier": "Frontend",
+                "identifier": "registerOnce",
                 "newPage": false,
-                "searchKey": "dbconn.Frontend",
-                "tags": null
+                "searchKey": "dbconn.registerOnce",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var Frontend"
+                "value": "var registerOnce"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar Frontend = ...\n```\n\n"
+                "value": "```Go\nvar registerOnce sync.Once\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/database/dbconn#CodeIntel",
+              "pathID": "/internal/database/dbconn#startupTimeout",
               "documentation": {
-                "identifier": "CodeIntel",
+                "identifier": "startupTimeout",
                 "newPage": false,
-                "searchKey": "dbconn.CodeIntel",
-                "tags": null
+                "searchKey": "dbconn.startupTimeout",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var CodeIntel"
+                "value": "var startupTimeout"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar CodeIntel = ...\n```\n\n"
+                "value": "```Go\nvar startupTimeout = ...\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/database/dbconn#CodeInsights",
+              "pathID": "/internal/database/dbconn#versionPattern",
               "documentation": {
-                "identifier": "CodeInsights",
+                "identifier": "versionPattern",
                 "newPage": false,
-                "searchKey": "dbconn.CodeInsights",
-                "tags": null
+                "searchKey": "dbconn.versionPattern",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var CodeInsights"
+                "value": "var versionPattern"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar CodeInsights = ...\n```\n\n"
+                "value": "```Go\nvar versionPattern = lazyregexp.New(`^PostgreSQL (\\d+)\\.`)\n```\n\n"
               },
               "children": null
             }
@@ -327,6 +359,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -341,22 +374,22 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/database/dbconn#key",
+              "pathID": "/internal/database/dbconn#Database",
               "documentation": {
-                "identifier": "key",
+                "identifier": "Database",
                 "newPage": false,
-                "searchKey": "dbconn.key",
+                "searchKey": "dbconn.Database",
                 "tags": [
-                  "private"
+                  "struct"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type key int"
+                "value": "type Database struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype key int\n```\n\n"
+                "value": "```Go\ntype Database struct {\n\t// Name is the name of the database.\n\tName string\n\n\t// MigrationsTable is the migrations SQL table name.\n\tMigrationsTable string\n\n\t// FS describes the raw migration assets to run to migrate the target schema to a new\n\t// version.\n\tFS fs.FS\n\n\t// TargetsTimescaleDB indicates if the database targets TimescaleDB. Otherwise, Postgres.\n\tTargetsTimescaleDB bool\n}\n```\n\nDatabase describes one of our Postgres (or Postgres-like) databases. \n\n"
               },
               "children": null
             }
@@ -369,6 +402,7 @@
                 "newPage": false,
                 "searchKey": "dbconn.hook",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -383,34 +417,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/internal/database/dbconn#hook.Before",
-                    "documentation": {
-                      "identifier": "hook.Before",
-                      "newPage": false,
-                      "searchKey": "dbconn.hook.Before",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *hook) Before(ctx context.Context, query string, args ...interface{}) (context.Context, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *hook) Before(ctx context.Context, query string, args ...interface{}) (context.Context, error)\n```\n\nBefore implements sqlhooks.Hooks \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/database/dbconn#hook.After",
                     "documentation": {
                       "identifier": "hook.After",
                       "newPage": false,
                       "searchKey": "dbconn.hook.After",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -427,12 +440,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/database/dbconn#hook.Before",
+                    "documentation": {
+                      "identifier": "hook.Before",
+                      "newPage": false,
+                      "searchKey": "dbconn.hook.Before",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *hook) Before(ctx context.Context, query string, args ...interface{}) (context.Context, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *hook) Before(ctx context.Context, query string, args ...interface{}) (context.Context, error)\n```\n\nBefore implements sqlhooks.Hooks \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/database/dbconn#hook.OnError",
                     "documentation": {
                       "identifier": "hook.OnError",
                       "newPage": false,
                       "searchKey": "dbconn.hook.OnError",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -452,20 +489,23 @@
           },
           {
             "node": {
-              "pathID": "/internal/database/dbconn#Database",
+              "pathID": "/internal/database/dbconn#key",
               "documentation": {
-                "identifier": "Database",
+                "identifier": "key",
                 "newPage": false,
-                "searchKey": "dbconn.Database",
-                "tags": null
+                "searchKey": "dbconn.key",
+                "tags": [
+                  "number",
+                  "private"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type Database struct"
+                "value": "type key int"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype Database struct {\n\t// Name is the name of the database.\n\tName string\n\n\t// MigrationsTable is the migrations SQL table name.\n\tMigrationsTable string\n\n\t// FS describes the raw migration assets to run to migrate the target schema to a new\n\t// version.\n\tFS fs.FS\n\n\t// TargetsTimescaleDB indicates if the database targets TimescaleDB. Otherwise, Postgres.\n\tTargetsTimescaleDB bool\n}\n```\n\nDatabase describes one of our Postgres (or Postgres-like) databases. \n\n"
+                "value": "```Go\ntype key int\n```\n\n"
               },
               "children": null
             }
@@ -478,6 +518,7 @@
                 "newPage": false,
                 "searchKey": "dbconn.stdoutLogger",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -498,6 +539,7 @@
                       "newPage": false,
                       "searchKey": "dbconn.stdoutLogger.Printf",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -520,6 +562,7 @@
                       "newPage": false,
                       "searchKey": "dbconn.stdoutLogger.Verbose",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -548,6 +591,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -562,20 +606,66 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/database/dbconn#SetupGlobalConnection",
+              "pathID": "/internal/database/dbconn#BulkInsertion",
               "documentation": {
-                "identifier": "SetupGlobalConnection",
+                "identifier": "BulkInsertion",
                 "newPage": false,
-                "searchKey": "dbconn.SetupGlobalConnection",
-                "tags": null
+                "searchKey": "dbconn.BulkInsertion",
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func SetupGlobalConnection(dataSource string) (err error)"
+                "value": "func BulkInsertion(ctx context.Context) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc SetupGlobalConnection(dataSource string) (err error)\n```\n\nSetupGlobalConnection connects to the given data source and stores the handle globally. \n\nNote: github.com/jackc/pgx parses the environment as well. This function will also use the value of PGDATASOURCE if supplied and dataSource is the empty string. \n\n"
+                "value": "```Go\nfunc BulkInsertion(ctx context.Context) bool\n```\n\nBulkInsertion returns true if the bulkInsertionKey context value is true. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbconn#DoMigrate",
+              "documentation": {
+                "identifier": "DoMigrate",
+                "newPage": false,
+                "searchKey": "dbconn.DoMigrate",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DoMigrate(m *migrate.Migrate) (err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DoMigrate(m *migrate.Migrate) (err error)\n```\n\nDoMigrate runs all up migrations. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbconn#MigrateDB",
+              "documentation": {
+                "identifier": "MigrateDB",
+                "newPage": false,
+                "searchKey": "dbconn.MigrateDB",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MigrateDB(db *sql.DB, database *Database) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MigrateDB(db *sql.DB, database *Database) error\n```\n\n"
               },
               "children": null
             }
@@ -587,7 +677,9 @@
                 "identifier": "New",
                 "newPage": false,
                 "searchKey": "dbconn.New",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -602,12 +694,36 @@
           },
           {
             "node": {
+              "pathID": "/internal/database/dbconn#NewMigrate",
+              "documentation": {
+                "identifier": "NewMigrate",
+                "newPage": false,
+                "searchKey": "dbconn.NewMigrate",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewMigrate(db *sql.DB, database *Database) (*migrate.Migrate, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewMigrate(db *sql.DB, database *Database) (*migrate.Migrate, error)\n```\n\nNewMigrate returns a new configured migration object for the given database. The migration can be subsequently run by invoking `dbconn.DoMigrate`. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/database/dbconn#NewRaw",
               "documentation": {
                 "identifier": "NewRaw",
                 "newPage": false,
                 "searchKey": "dbconn.NewRaw",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -622,22 +738,112 @@
           },
           {
             "node": {
-              "pathID": "/internal/database/dbconn#checkVersion",
+              "pathID": "/internal/database/dbconn#Open",
               "documentation": {
-                "identifier": "checkVersion",
+                "identifier": "Open",
                 "newPage": false,
-                "searchKey": "dbconn.checkVersion",
+                "searchKey": "dbconn.Open",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func checkVersion(db *sql.DB) error"
+                "value": "func Open(dataSource string) (*sql.DB, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc checkVersion(db *sql.DB) error\n```\n\n"
+                "value": "```Go\nfunc Open(dataSource string) (*sql.DB, error)\n```\n\nOpen creates a new DB handle with the given schema by connecting to the database identified by dataSource (e.g., \"dbname=mypgdb\" or blank to use the PG* env vars). \n\nOpen assumes that the database already exists. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbconn#Ping",
+              "documentation": {
+                "identifier": "Ping",
+                "newPage": false,
+                "searchKey": "dbconn.Ping",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Ping(ctx context.Context) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Ping(ctx context.Context) error\n```\n\nPing attempts to contact the database and returns a non-nil error upon failure. It is intended to be used by health checks. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbconn#SetupGlobalConnection",
+              "documentation": {
+                "identifier": "SetupGlobalConnection",
+                "newPage": false,
+                "searchKey": "dbconn.SetupGlobalConnection",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SetupGlobalConnection(dataSource string) (err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SetupGlobalConnection(dataSource string) (err error)\n```\n\nSetupGlobalConnection connects to the given data source and stores the handle globally. \n\nNote: github.com/jackc/pgx parses the environment as well. This function will also use the value of PGDATASOURCE if supplied and dataSource is the empty string. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbconn#TestBuildConfig",
+              "documentation": {
+                "identifier": "TestBuildConfig",
+                "newPage": false,
+                "searchKey": "dbconn.TestBuildConfig",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBuildConfig(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBuildConfig(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbconn#WithBulkInsertion",
+              "documentation": {
+                "identifier": "WithBulkInsertion",
+                "newPage": false,
+                "searchKey": "dbconn.WithBulkInsertion",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WithBulkInsertion(ctx context.Context, bulkInsertion bool) context.Context"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WithBulkInsertion(ctx context.Context, bulkInsertion bool) context.Context\n```\n\nWithBulkInsertion sets the bulkInsertionKey context value. \n\n"
               },
               "children": null
             }
@@ -650,6 +856,7 @@
                 "newPage": false,
                 "searchKey": "dbconn.buildConfig",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -666,168 +873,23 @@
           },
           {
             "node": {
-              "pathID": "/internal/database/dbconn#openDBWithStartupWait",
+              "pathID": "/internal/database/dbconn#checkVersion",
               "documentation": {
-                "identifier": "openDBWithStartupWait",
+                "identifier": "checkVersion",
                 "newPage": false,
-                "searchKey": "dbconn.openDBWithStartupWait",
+                "searchKey": "dbconn.checkVersion",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func openDBWithStartupWait(cfg *pgx.ConnConfig) (db *sql.DB, err error)"
+                "value": "func checkVersion(db *sql.DB) error"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc openDBWithStartupWait(cfg *pgx.ConnConfig) (db *sql.DB, err error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/dbconn#isDatabaseLikelyStartingUp",
-              "documentation": {
-                "identifier": "isDatabaseLikelyStartingUp",
-                "newPage": false,
-                "searchKey": "dbconn.isDatabaseLikelyStartingUp",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func isDatabaseLikelyStartingUp(err error) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc isDatabaseLikelyStartingUp(err error) bool\n```\n\nisDatabaseLikelyStartingUp returns whether the err likely just means the PostgreSQL database is starting up, and it should not be treated as a fatal error during program initialization. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/dbconn#Open",
-              "documentation": {
-                "identifier": "Open",
-                "newPage": false,
-                "searchKey": "dbconn.Open",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Open(dataSource string) (*sql.DB, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Open(dataSource string) (*sql.DB, error)\n```\n\nOpen creates a new DB handle with the given schema by connecting to the database identified by dataSource (e.g., \"dbname=mypgdb\" or blank to use the PG* env vars). \n\nOpen assumes that the database already exists. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/dbconn#open",
-              "documentation": {
-                "identifier": "open",
-                "newPage": false,
-                "searchKey": "dbconn.open",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func open(cfg *pgx.ConnConfig) (*sql.DB, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc open(cfg *pgx.ConnConfig) (*sql.DB, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/dbconn#Ping",
-              "documentation": {
-                "identifier": "Ping",
-                "newPage": false,
-                "searchKey": "dbconn.Ping",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Ping(ctx context.Context) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Ping(ctx context.Context) error\n```\n\nPing attempts to contact the database and returns a non-nil error upon failure. It is intended to be used by health checks. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/dbconn#BulkInsertion",
-              "documentation": {
-                "identifier": "BulkInsertion",
-                "newPage": false,
-                "searchKey": "dbconn.BulkInsertion",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BulkInsertion(ctx context.Context) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BulkInsertion(ctx context.Context) bool\n```\n\nBulkInsertion returns true if the bulkInsertionKey context value is true. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/dbconn#WithBulkInsertion",
-              "documentation": {
-                "identifier": "WithBulkInsertion",
-                "newPage": false,
-                "searchKey": "dbconn.WithBulkInsertion",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func WithBulkInsertion(ctx context.Context, bulkInsertion bool) context.Context"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc WithBulkInsertion(ctx context.Context, bulkInsertion bool) context.Context\n```\n\nWithBulkInsertion sets the bulkInsertionKey context value. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/dbconn#registerPrometheusCollector",
-              "documentation": {
-                "identifier": "registerPrometheusCollector",
-                "newPage": false,
-                "searchKey": "dbconn.registerPrometheusCollector",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func registerPrometheusCollector(db *sql.DB, dbNameSuffix string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc registerPrometheusCollector(db *sql.DB, dbNameSuffix string)\n```\n\n"
+                "value": "```Go\nfunc checkVersion(db *sql.DB) error\n```\n\n"
               },
               "children": null
             }
@@ -840,6 +902,7 @@
                 "newPage": false,
                 "searchKey": "dbconn.configureConnectionPool",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -856,82 +919,92 @@
           },
           {
             "node": {
-              "pathID": "/internal/database/dbconn#MigrateDB",
+              "pathID": "/internal/database/dbconn#isDatabaseLikelyStartingUp",
               "documentation": {
-                "identifier": "MigrateDB",
+                "identifier": "isDatabaseLikelyStartingUp",
                 "newPage": false,
-                "searchKey": "dbconn.MigrateDB",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func MigrateDB(db *sql.DB, database *Database) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc MigrateDB(db *sql.DB, database *Database) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/dbconn#NewMigrate",
-              "documentation": {
-                "identifier": "NewMigrate",
-                "newPage": false,
-                "searchKey": "dbconn.NewMigrate",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func NewMigrate(db *sql.DB, database *Database) (*migrate.Migrate, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc NewMigrate(db *sql.DB, database *Database) (*migrate.Migrate, error)\n```\n\nNewMigrate returns a new configured migration object for the given database. The migration can be subsequently run by invoking `dbconn.DoMigrate`. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/dbconn#DoMigrate",
-              "documentation": {
-                "identifier": "DoMigrate",
-                "newPage": false,
-                "searchKey": "dbconn.DoMigrate",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func DoMigrate(m *migrate.Migrate) (err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc DoMigrate(m *migrate.Migrate) (err error)\n```\n\nDoMigrate runs all up migrations. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/dbconn#TestBuildConfig",
-              "documentation": {
-                "identifier": "TestBuildConfig",
-                "newPage": false,
-                "searchKey": "dbconn.TestBuildConfig",
+                "searchKey": "dbconn.isDatabaseLikelyStartingUp",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestBuildConfig(t *testing.T)"
+                "value": "func isDatabaseLikelyStartingUp(err error) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestBuildConfig(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc isDatabaseLikelyStartingUp(err error) bool\n```\n\nisDatabaseLikelyStartingUp returns whether the err likely just means the PostgreSQL database is starting up, and it should not be treated as a fatal error during program initialization. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbconn#open",
+              "documentation": {
+                "identifier": "open",
+                "newPage": false,
+                "searchKey": "dbconn.open",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func open(cfg *pgx.ConnConfig) (*sql.DB, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc open(cfg *pgx.ConnConfig) (*sql.DB, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbconn#openDBWithStartupWait",
+              "documentation": {
+                "identifier": "openDBWithStartupWait",
+                "newPage": false,
+                "searchKey": "dbconn.openDBWithStartupWait",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func openDBWithStartupWait(cfg *pgx.ConnConfig) (db *sql.DB, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc openDBWithStartupWait(cfg *pgx.ConnConfig) (db *sql.DB, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbconn#registerPrometheusCollector",
+              "documentation": {
+                "identifier": "registerPrometheusCollector",
+                "newPage": false,
+                "searchKey": "dbconn.registerPrometheusCollector",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func registerPrometheusCollector(db *sql.DB, dbNameSuffix string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc registerPrometheusCollector(db *sql.DB, dbNameSuffix string)\n```\n\n"
               },
               "children": null
             }

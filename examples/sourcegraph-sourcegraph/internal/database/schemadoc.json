@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/database/schemadoc",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/database/schemadoc#databaseNamePrefix",
-              "documentation": {
-                "identifier": "databaseNamePrefix",
-                "newPage": false,
-                "searchKey": "main.databaseNamePrefix",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const databaseNamePrefix"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst databaseNamePrefix = \"schemadoc-gen-temp-\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/database/schemadoc#containerName",
               "documentation": {
                 "identifier": "containerName",
                 "newPage": false,
                 "searchKey": "main.containerName",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -77,6 +59,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst containerName = \"schemadoc\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/schemadoc#databaseNamePrefix",
+              "documentation": {
+                "identifier": "databaseNamePrefix",
+                "newPage": false,
+                "searchKey": "main.databaseNamePrefix",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const databaseNamePrefix"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst databaseNamePrefix = \"schemadoc-gen-temp-\"\n```\n\n"
               },
               "children": null
             }
@@ -92,6 +98,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -106,12 +113,38 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/database/schemadoc#databases",
+              "documentation": {
+                "identifier": "databases",
+                "newPage": false,
+                "searchKey": "main.databases",
+                "tags": [
+                  "variable",
+                  "object",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var databases"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar databases = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/database/schemadoc#logger",
               "documentation": {
                 "identifier": "logger",
                 "newPage": false,
                 "searchKey": "main.logger",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -134,6 +167,8 @@
                 "newPage": false,
                 "searchKey": "main.versionRe",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -144,28 +179,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar versionRe = lazyregexp.New(fmt.Sprintf(`\\b%s\\b`, regexp.QuoteMeta(`12\\.\\d+`)))\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/schemadoc#databases",
-              "documentation": {
-                "identifier": "databases",
-                "newPage": false,
-                "searchKey": "main.databases",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var databases"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar databases = ...\n```\n\n"
               },
               "children": null
             }
@@ -181,6 +194,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -201,6 +215,7 @@
                 "newPage": false,
                 "searchKey": "main.runFunc",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -221,6 +236,7 @@
                       "newPage": false,
                       "searchKey": "main.runWithPrefix",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -246,6 +262,7 @@
                 "newPage": false,
                 "searchKey": "main.table",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -271,6 +288,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -285,12 +303,197 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/database/schemadoc#describeTable",
+              "documentation": {
+                "identifier": "describeTable",
+                "newPage": false,
+                "searchKey": "main.describeTable",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func describeTable(db *sql.DB, databaseName string, table table, run runFunc) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc describeTable(db *sql.DB, databaseName string, table table, run runFunc) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/schemadoc#describeTypes",
+              "documentation": {
+                "identifier": "describeTypes",
+                "newPage": false,
+                "searchKey": "main.describeTypes",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func describeTypes(db *sql.DB) (map[string][]string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc describeTypes(db *sql.DB) (map[string][]string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/schemadoc#generateAndWrite",
+              "documentation": {
+                "identifier": "generateAndWrite",
+                "newPage": false,
+                "searchKey": "main.generateAndWrite",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func generateAndWrite(database *dbconn.Database, dataSource string, commandPrefix []string, destinationFile string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc generateAndWrite(database *dbconn.Database, dataSource string, commandPrefix []string, destinationFile string) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/schemadoc#generateInternal",
+              "documentation": {
+                "identifier": "generateInternal",
+                "newPage": false,
+                "searchKey": "main.generateInternal",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func generateInternal(database *dbconn.Database, dataSource string, run runFunc) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc generateInternal(database *dbconn.Database, dataSource string, run runFunc) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/schemadoc#getColumnComments",
+              "documentation": {
+                "identifier": "getColumnComments",
+                "newPage": false,
+                "searchKey": "main.getColumnComments",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getColumnComments(db *sql.DB, table string) (map[string]string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getColumnComments(db *sql.DB, table string) (map[string]string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/schemadoc#getTableComment",
+              "documentation": {
+                "identifier": "getTableComment",
+                "newPage": false,
+                "searchKey": "main.getTableComment",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getTableComment(db *sql.DB, table string) (comment string, _ error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getTableComment(db *sql.DB, table string) (comment string, _ error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/schemadoc#getTables",
+              "documentation": {
+                "identifier": "getTables",
+                "newPage": false,
+                "searchKey": "main.getTables",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getTables(db *sql.DB) (tables []table, _ error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getTables(db *sql.DB) (tables []table, _ error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/schemadoc#getViewQuery",
+              "documentation": {
+                "identifier": "getViewQuery",
+                "newPage": false,
+                "searchKey": "main.getViewQuery",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getViewQuery(db *sql.DB, view string) (query string, _ error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getViewQuery(db *sql.DB, view string) (query string, _ error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/database/schemadoc#main",
               "documentation": {
                 "identifier": "main",
                 "newPage": false,
                 "searchKey": "main.main",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -307,12 +510,36 @@
           },
           {
             "node": {
+              "pathID": "/internal/database/schemadoc#mainContainer",
+              "documentation": {
+                "identifier": "mainContainer",
+                "newPage": false,
+                "searchKey": "main.mainContainer",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mainContainer() error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mainContainer() error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/database/schemadoc#mainErr",
               "documentation": {
                 "identifier": "mainErr",
                 "newPage": false,
                 "searchKey": "main.mainErr",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -335,6 +562,7 @@
                 "newPage": false,
                 "searchKey": "main.mainLocal",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -351,56 +579,13 @@
           },
           {
             "node": {
-              "pathID": "/internal/database/schemadoc#mainContainer",
-              "documentation": {
-                "identifier": "mainContainer",
-                "newPage": false,
-                "searchKey": "main.mainContainer",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func mainContainer() error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc mainContainer() error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/schemadoc#generateAndWrite",
-              "documentation": {
-                "identifier": "generateAndWrite",
-                "newPage": false,
-                "searchKey": "main.generateAndWrite",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func generateAndWrite(database *dbconn.Database, dataSource string, commandPrefix []string, destinationFile string) error"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc generateAndWrite(database *dbconn.Database, dataSource string, commandPrefix []string, destinationFile string) error\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/database/schemadoc#startDocker",
               "documentation": {
                 "identifier": "startDocker",
                 "newPage": false,
                 "searchKey": "main.startDocker",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -411,160 +596,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc startDocker() (commandPrefix []string, shutdown func(), _ error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/schemadoc#generateInternal",
-              "documentation": {
-                "identifier": "generateInternal",
-                "newPage": false,
-                "searchKey": "main.generateInternal",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func generateInternal(database *dbconn.Database, dataSource string, run runFunc) (string, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc generateInternal(database *dbconn.Database, dataSource string, run runFunc) (string, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/schemadoc#getTables",
-              "documentation": {
-                "identifier": "getTables",
-                "newPage": false,
-                "searchKey": "main.getTables",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func getTables(db *sql.DB) (tables []table, _ error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc getTables(db *sql.DB) (tables []table, _ error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/schemadoc#describeTable",
-              "documentation": {
-                "identifier": "describeTable",
-                "newPage": false,
-                "searchKey": "main.describeTable",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func describeTable(db *sql.DB, databaseName string, table table, run runFunc) (string, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc describeTable(db *sql.DB, databaseName string, table table, run runFunc) (string, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/schemadoc#getTableComment",
-              "documentation": {
-                "identifier": "getTableComment",
-                "newPage": false,
-                "searchKey": "main.getTableComment",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func getTableComment(db *sql.DB, table string) (comment string, _ error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc getTableComment(db *sql.DB, table string) (comment string, _ error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/schemadoc#getViewQuery",
-              "documentation": {
-                "identifier": "getViewQuery",
-                "newPage": false,
-                "searchKey": "main.getViewQuery",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func getViewQuery(db *sql.DB, view string) (query string, _ error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc getViewQuery(db *sql.DB, view string) (query string, _ error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/schemadoc#getColumnComments",
-              "documentation": {
-                "identifier": "getColumnComments",
-                "newPage": false,
-                "searchKey": "main.getColumnComments",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func getColumnComments(db *sql.DB, table string) (map[string]string, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc getColumnComments(db *sql.DB, table string) (map[string]string, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/database/schemadoc#describeTypes",
-              "documentation": {
-                "identifier": "describeTypes",
-                "newPage": false,
-                "searchKey": "main.describeTypes",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func describeTypes(db *sql.DB) (map[string][]string, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc describeTypes(db *sql.DB) (map[string][]string, error)\n```\n\n"
               },
               "children": null
             }

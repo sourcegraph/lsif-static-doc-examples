@@ -5,8 +5,8 @@ Package randutil contains internal randomness utilities for various crypto packa
 ## Index
 
 * [Variables](#var)
-    * [var closedChanOnce](#closedChanOnce)
     * [var closedChan](#closedChan)
+    * [var closedChanOnce](#closedChanOnce)
 * [Functions](#func)
     * [func MaybeReadByte(r io.Reader)](#MaybeReadByte)
 
@@ -14,41 +14,42 @@ Package randutil contains internal randomness utilities for various crypto packa
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
-```
-
-### <a id="closedChanOnce" href="#closedChanOnce">var closedChanOnce</a>
-
-```
-searchKey: randutil.closedChanOnce
-tags: [private]
-```
-
-```Go
-var closedChanOnce sync.Once
+tags: [package private]
 ```
 
 ### <a id="closedChan" href="#closedChan">var closedChan</a>
 
 ```
 searchKey: randutil.closedChan
-tags: [private]
+tags: [variable private]
 ```
 
 ```Go
 var closedChan chan struct{}
 ```
 
+### <a id="closedChanOnce" href="#closedChanOnce">var closedChanOnce</a>
+
+```
+searchKey: randutil.closedChanOnce
+tags: [variable struct private]
+```
+
+```Go
+var closedChanOnce sync.Once
+```
+
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="MaybeReadByte" href="#MaybeReadByte">func MaybeReadByte(r io.Reader)</a>
 
 ```
 searchKey: randutil.MaybeReadByte
+tags: [method]
 ```
 
 ```Go

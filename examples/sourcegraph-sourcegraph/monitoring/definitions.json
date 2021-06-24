@@ -4,7 +4,9 @@
     "identifier": "definitions",
     "newPage": true,
     "searchKey": "monitoring/definitions",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -41,6 +45,9 @@
                 "newPage": false,
                 "searchKey": "definitions.workerJobs",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -65,7 +72,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -83,7 +92,9 @@
                 "identifier": "ExecutorQueue",
                 "newPage": false,
                 "searchKey": "definitions.ExecutorQueue",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -103,7 +114,9 @@
                 "identifier": "Frontend",
                 "newPage": false,
                 "searchKey": "definitions.Frontend",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -118,32 +131,14 @@
           },
           {
             "node": {
-              "pathID": "/monitoring/definitions#GitServer",
-              "documentation": {
-                "identifier": "GitServer",
-                "newPage": false,
-                "searchKey": "definitions.GitServer",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GitServer() *monitoring.Container"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GitServer() *monitoring.Container\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/monitoring/definitions#GitHubProxy",
               "documentation": {
                 "identifier": "GitHubProxy",
                 "newPage": false,
                 "searchKey": "definitions.GitHubProxy",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -158,12 +153,36 @@
           },
           {
             "node": {
+              "pathID": "/monitoring/definitions#GitServer",
+              "documentation": {
+                "identifier": "GitServer",
+                "newPage": false,
+                "searchKey": "definitions.GitServer",
+                "tags": [
+                  "function"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GitServer() *monitoring.Container"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GitServer() *monitoring.Container\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/monitoring/definitions#Postgres",
               "documentation": {
                 "identifier": "Postgres",
                 "newPage": false,
                 "searchKey": "definitions.Postgres",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -183,7 +202,9 @@
                 "identifier": "PreciseCodeIntelIndexer",
                 "newPage": false,
                 "searchKey": "definitions.PreciseCodeIntelIndexer",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -203,7 +224,9 @@
                 "identifier": "PreciseCodeIntelWorker",
                 "newPage": false,
                 "searchKey": "definitions.PreciseCodeIntelWorker",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -223,7 +246,9 @@
                 "identifier": "Prometheus",
                 "newPage": false,
                 "searchKey": "definitions.Prometheus",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -243,7 +268,9 @@
                 "identifier": "QueryRunner",
                 "newPage": false,
                 "searchKey": "definitions.QueryRunner",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -263,7 +290,9 @@
                 "identifier": "RepoUpdater",
                 "newPage": false,
                 "searchKey": "definitions.RepoUpdater",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -283,7 +312,9 @@
                 "identifier": "Searcher",
                 "newPage": false,
                 "searchKey": "definitions.Searcher",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -303,7 +334,9 @@
                 "identifier": "Symbols",
                 "newPage": false,
                 "searchKey": "definitions.Symbols",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -323,7 +356,9 @@
                 "identifier": "SyntectServer",
                 "newPage": false,
                 "searchKey": "definitions.SyntectServer",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -343,7 +378,9 @@
                 "identifier": "Worker",
                 "newPage": false,
                 "searchKey": "definitions.Worker",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -358,34 +395,14 @@
           },
           {
             "node": {
-              "pathID": "/monitoring/definitions#createWorkerActiveJobRows",
-              "documentation": {
-                "identifier": "createWorkerActiveJobRows",
-                "newPage": false,
-                "searchKey": "definitions.createWorkerActiveJobRows",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func createWorkerActiveJobRows() []monitoring.Row"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc createWorkerActiveJobRows() []monitoring.Row\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/monitoring/definitions#ZoektIndexServer",
               "documentation": {
                 "identifier": "ZoektIndexServer",
                 "newPage": false,
                 "searchKey": "definitions.ZoektIndexServer",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -405,7 +422,9 @@
                 "identifier": "ZoektWebServer",
                 "newPage": false,
                 "searchKey": "definitions.ZoektWebServer",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -414,6 +433,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc ZoektWebServer() *monitoring.Container\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions#createWorkerActiveJobRows",
+              "documentation": {
+                "identifier": "createWorkerActiveJobRows",
+                "newPage": false,
+                "searchKey": "definitions.createWorkerActiveJobRows",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func createWorkerActiveJobRows() []monitoring.Row"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc createWorkerActiveJobRows() []monitoring.Row\n```\n\n"
               },
               "children": null
             }

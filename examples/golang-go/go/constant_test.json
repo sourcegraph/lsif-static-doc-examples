@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "go/constant_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/go/constant_test#Example_complexNumbers",
-              "documentation": {
-                "identifier": "Example_complexNumbers",
-                "newPage": false,
-                "searchKey": "constant_test.Example_complexNumbers",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func Example_complexNumbers()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc Example_complexNumbers()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/constant_test#ExampleBinaryOp",
               "documentation": {
                 "identifier": "ExampleBinaryOp",
                 "newPage": false,
                 "searchKey": "constant_test.ExampleBinaryOp",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -83,34 +64,13 @@
           },
           {
             "node": {
-              "pathID": "/go/constant_test#ExampleUnaryOp",
-              "documentation": {
-                "identifier": "ExampleUnaryOp",
-                "newPage": false,
-                "searchKey": "constant_test.ExampleUnaryOp",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ExampleUnaryOp()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ExampleUnaryOp()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/go/constant_test#ExampleCompare",
               "documentation": {
                 "identifier": "ExampleCompare",
                 "newPage": false,
                 "searchKey": "constant_test.ExampleCompare",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -133,6 +93,7 @@
                 "newPage": false,
                 "searchKey": "constant_test.ExampleSign",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -149,12 +110,36 @@
           },
           {
             "node": {
+              "pathID": "/go/constant_test#ExampleUnaryOp",
+              "documentation": {
+                "identifier": "ExampleUnaryOp",
+                "newPage": false,
+                "searchKey": "constant_test.ExampleUnaryOp",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleUnaryOp()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleUnaryOp()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/go/constant_test#ExampleVal",
               "documentation": {
                 "identifier": "ExampleVal",
                 "newPage": false,
                 "searchKey": "constant_test.ExampleVal",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -165,6 +150,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc ExampleVal()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/constant_test#Example_complexNumbers",
+              "documentation": {
+                "identifier": "Example_complexNumbers",
+                "newPage": false,
+                "searchKey": "constant_test.Example_complexNumbers",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_complexNumbers()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_complexNumbers()\n```\n\n"
               },
               "children": null
             }

@@ -11,26 +11,26 @@ This example demonstrates decoding a JPEG image and examining its pixels.
 * [Types](#type)
     * [type imageTest struct](#imageTest)
 * [Functions](#func)
-    * [func Example_decodeConfig()](#Example_decodeConfig)
     * [func Example()](#Example)
+    * [func Example_decodeConfig()](#Example_decodeConfig)
+    * [func TestDecode(t *testing.T)](#TestDecode)
     * [func decode(filename string) (image.Image, string, error)](#decode)
     * [func decodeConfig(filename string) (image.Config, string, error)](#decodeConfig)
     * [func delta(u0, u1 uint32) int](#delta)
     * [func withinTolerance(c0, c1 color.Color, tolerance int) bool](#withinTolerance)
-    * [func TestDecode(t *testing.T)](#TestDecode)
 
 
 ## <a id="const" href="#const">Constants</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="data" href="#data">const data</a>
 
 ```
 searchKey: image_test.data
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -40,14 +40,14 @@ const data = ...
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="imageTests" href="#imageTests">var imageTests</a>
 
 ```
 searchKey: image_test.imageTests
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
@@ -57,14 +57,14 @@ var imageTests = ...
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="imageTest" href="#imageTest">type imageTest struct</a>
 
 ```
 searchKey: image_test.imageTest
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -78,36 +78,47 @@ type imageTest struct {
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
-```
-
-### <a id="Example_decodeConfig" href="#Example_decodeConfig">func Example_decodeConfig()</a>
-
-```
-searchKey: image_test.Example_decodeConfig
-tags: [private]
-```
-
-```Go
-func Example_decodeConfig()
+tags: [package private]
 ```
 
 ### <a id="Example" href="#Example">func Example()</a>
 
 ```
 searchKey: image_test.Example
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func Example()
 ```
 
+### <a id="Example_decodeConfig" href="#Example_decodeConfig">func Example_decodeConfig()</a>
+
+```
+searchKey: image_test.Example_decodeConfig
+tags: [function private]
+```
+
+```Go
+func Example_decodeConfig()
+```
+
+### <a id="TestDecode" href="#TestDecode">func TestDecode(t *testing.T)</a>
+
+```
+searchKey: image_test.TestDecode
+tags: [method private test]
+```
+
+```Go
+func TestDecode(t *testing.T)
+```
+
 ### <a id="decode" href="#decode">func decode(filename string) (image.Image, string, error)</a>
 
 ```
 searchKey: image_test.decode
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -118,7 +129,7 @@ func decode(filename string) (image.Image, string, error)
 
 ```
 searchKey: image_test.decodeConfig
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -129,7 +140,7 @@ func decodeConfig(filename string) (image.Config, string, error)
 
 ```
 searchKey: image_test.delta
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -140,21 +151,10 @@ func delta(u0, u1 uint32) int
 
 ```
 searchKey: image_test.withinTolerance
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func withinTolerance(c0, c1 color.Color, tolerance int) bool
-```
-
-### <a id="TestDecode" href="#TestDecode">func TestDecode(t *testing.T)</a>
-
-```
-searchKey: image_test.TestDecode
-tags: [private]
-```
-
-```Go
-func TestDecode(t *testing.T)
 ```
 

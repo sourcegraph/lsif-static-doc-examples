@@ -9,14 +9,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="ExampleErrReader" href="#ExampleErrReader">func ExampleErrReader()</a>
 
 ```
 searchKey: iotest_test.ExampleErrReader
-tags: [private]
+tags: [function private]
 ```
 
 ```Go

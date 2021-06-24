@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/cmd/executor-queue/internal/server",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,32 +41,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/cmd/executor-queue/internal/server#ErrUnknownQueue",
-              "documentation": {
-                "identifier": "ErrUnknownQueue",
-                "newPage": false,
-                "searchKey": "server.ErrUnknownQueue",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var ErrUnknownQueue"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar ErrUnknownQueue = errors.New(\"unknown queue\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/executor-queue/internal/server#ErrUnknownJob",
               "documentation": {
                 "identifier": "ErrUnknownJob",
                 "newPage": false,
                 "searchKey": "server.ErrUnknownJob",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -79,12 +64,37 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/server#ErrUnknownQueue",
+              "documentation": {
+                "identifier": "ErrUnknownQueue",
+                "newPage": false,
+                "searchKey": "server.ErrUnknownQueue",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrUnknownQueue"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrUnknownQueue = errors.New(\"unknown queue\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/executor-queue/internal/server#shutdownErr",
               "documentation": {
                 "identifier": "shutdownErr",
                 "newPage": false,
                 "searchKey": "server.shutdownErr",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -110,6 +120,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -124,12 +135,149 @@
         "children": [
           {
             "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/server#Options",
+              "documentation": {
+                "identifier": "Options",
+                "newPage": false,
+                "searchKey": "server.Options",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Options struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Options struct {\n\t// Port is the port on which to listen for HTTP connections.\n\tPort int\n\n\t// QueueOptions is a map from queue name to options specific to that queue.\n\tQueueOptions map[string]QueueOptions\n\n\t// MaximumNumTransactions is the maximum number of active records that can be given out\n\t// to executors from this machine. The dequeue method will stop returning records while\n\t// the number of outstanding transactions is at or above this threshold.\n\tMaximumNumTransactions int\n\n\t// RequeueDelay controls how far into the future to make a job record visible to the job\n\t// queue once the currently processing executor has become unresponsive.\n\tRequeueDelay time.Duration\n\n\t// UnreportedMaxAge is the maximum time between a record being dequeued and it appearing\n\t// in the executor's heartbeat requests before it being considered lost.\n\tUnreportedMaxAge time.Duration\n\n\t// DeathThreshold is the minimum time since the last heartbeat of an executor before that\n\t// executor can be considered as unresponsive. This should be configured to be longer than\n\t// the duration between heartbeat interval.\n\tDeathThreshold time.Duration\n\n\t// CleanupInterval is the duration between periodic invocations of Cleanup, which will\n\t// requeue any records that are \"lost\" according to the thresholds described above.\n\tCleanupInterval time.Duration\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/server#QueueMetrics",
+              "documentation": {
+                "identifier": "QueueMetrics",
+                "newPage": false,
+                "searchKey": "server.QueueMetrics",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type QueueMetrics struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype QueueMetrics struct {\n\tNumJobs      *prometheus.GaugeVec\n\tNumExecutors *prometheus.GaugeVec\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor-queue/internal/server#newQueueMetrics",
+                    "documentation": {
+                      "identifier": "newQueueMetrics",
+                      "newPage": false,
+                      "searchKey": "server.newQueueMetrics",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newQueueMetrics(observationContext *observation.Context) *QueueMetrics"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newQueueMetrics(observationContext *observation.Context) *QueueMetrics\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/server#QueueOptions",
+              "documentation": {
+                "identifier": "QueueOptions",
+                "newPage": false,
+                "searchKey": "server.QueueOptions",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type QueueOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype QueueOptions struct {\n\t// Store is a required dbworker store store for each registered queue.\n\tStore store.Store\n\n\t// RecordTransformer is a required hook for each registered queue that transforms a generic\n\t// record from that queue into the job to be given to an executor.\n\tRecordTransformer func(record workerutil.Record) (apiclient.Job, error)\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/server#errorResponse",
+              "documentation": {
+                "identifier": "errorResponse",
+                "newPage": false,
+                "searchKey": "server.errorResponse",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type errorResponse struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype errorResponse struct {\n\tError string `json:\"error\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/server#executorMeta",
+              "documentation": {
+                "identifier": "executorMeta",
+                "newPage": false,
+                "searchKey": "server.executorMeta",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type executorMeta struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype executorMeta struct {\n\tlastUpdate time.Time\n\tjobs       []jobMeta\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/executor-queue/internal/server#handler",
               "documentation": {
                 "identifier": "handler",
                 "newPage": false,
                 "searchKey": "server.handler",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -150,6 +298,7 @@
                       "newPage": false,
                       "searchKey": "server.newHandler",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -172,6 +321,7 @@
                       "newPage": false,
                       "searchKey": "server.newHandlerWithMetrics",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -188,34 +338,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.dequeue",
-                    "documentation": {
-                      "identifier": "handler.dequeue",
-                      "newPage": false,
-                      "searchKey": "server.handler.dequeue",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *handler) dequeue(ctx context.Context, queueName, executorName string) (_ apiclient.Job, dequeued bool, _ error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *handler) dequeue(ctx context.Context, queueName, executorName string) (_ apiclient.Job, dequeued bool, _ error)\n```\n\ndequeue selects a job record from the database and stashes metadata including the job record and the locking transaction. If no job is available for processing, or the server has hit its maximum transactions, a false-valued flag is returned. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.addExecutionLogEntry",
                     "documentation": {
                       "identifier": "handler.addExecutionLogEntry",
                       "newPage": false,
                       "searchKey": "server.handler.addExecutionLogEntry",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -232,100 +361,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.markComplete",
-                    "documentation": {
-                      "identifier": "handler.markComplete",
-                      "newPage": false,
-                      "searchKey": "server.handler.markComplete",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *handler) markComplete(ctx context.Context, queueName, executorName string, jobID int) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *handler) markComplete(ctx context.Context, queueName, executorName string, jobID int) error\n```\n\nmarkComplete calls MarkComplete for the given job, then commits the job's transaction. The job is removed from the executor's job list on success. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.markErrored",
-                    "documentation": {
-                      "identifier": "handler.markErrored",
-                      "newPage": false,
-                      "searchKey": "server.handler.markErrored",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *handler) markErrored(ctx context.Context, queueName, executorName string, jobID int, errorMessage string) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *handler) markErrored(ctx context.Context, queueName, executorName string, jobID int, errorMessage string) error\n```\n\nmarkErrored calls MarkErrored for the given job, then commits the job's transaction. The job is removed from the executor's job list on success. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.markFailed",
-                    "documentation": {
-                      "identifier": "handler.markFailed",
-                      "newPage": false,
-                      "searchKey": "server.handler.markFailed",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *handler) markFailed(ctx context.Context, queueName, executorName string, jobID int, errorMessage string) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *handler) markFailed(ctx context.Context, queueName, executorName string, jobID int, errorMessage string) error\n```\n\nmarkFailed calls MarkFailed for the given job, then commits the job's transaction. The job is removed from the executor's job list on success. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.findMeta",
-                    "documentation": {
-                      "identifier": "handler.findMeta",
-                      "newPage": false,
-                      "searchKey": "server.handler.findMeta",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *handler) findMeta(queueName, executorName string, jobID int, remove bool) (jobMeta, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *handler) findMeta(queueName, executorName string, jobID int, remove bool) (jobMeta, error)\n```\n\nfindMeta returns the job with the given id and executor name. If the job is unknown, an error is returned. If the remove parameter is true, the job will be removed from the executor's job list on success. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.addMeta",
                     "documentation": {
                       "identifier": "handler.addMeta",
                       "newPage": false,
                       "searchKey": "server.handler.addMeta",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -342,56 +384,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.updateMetrics",
-                    "documentation": {
-                      "identifier": "handler.updateMetrics",
-                      "newPage": false,
-                      "searchKey": "server.handler.updateMetrics",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *handler) updateMetrics()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *handler) updateMetrics()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.heartbeat",
-                    "documentation": {
-                      "identifier": "handler.heartbeat",
-                      "newPage": false,
-                      "searchKey": "server.handler.heartbeat",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *handler) heartbeat(ctx context.Context, executorName string, jobIDs []int) ([]int, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *handler) heartbeat(ctx context.Context, executorName string, jobIDs []int) ([]int, error)\n```\n\nheartbeat will release the transaction for any job that is not confirmed to be in-progress by the given executor. This method is called when the executor POSTs its in-progress job identifiers to the /heartbeat route. This method returns the set of identifiers which the executor erroneously claims to hold (and are sent back as a hint to stop processing). \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.cleanup",
                     "documentation": {
                       "identifier": "handler.cleanup",
                       "newPage": false,
                       "searchKey": "server.handler.cleanup",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -408,176 +407,46 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.shutdown",
+                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.dequeue",
                     "documentation": {
-                      "identifier": "handler.shutdown",
+                      "identifier": "handler.dequeue",
                       "newPage": false,
-                      "searchKey": "server.handler.shutdown",
+                      "searchKey": "server.handler.dequeue",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (h *handler) shutdown()"
+                      "value": "func (m *handler) dequeue(ctx context.Context, queueName, executorName string) (_ apiclient.Job, dequeued bool, _ error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (h *handler) shutdown()\n```\n\nshutdown releases all transactions. This method is called on process shutdown. \n\n"
+                      "value": "```Go\nfunc (m *handler) dequeue(ctx context.Context, queueName, executorName string) (_ apiclient.Job, dequeued bool, _ error)\n```\n\ndequeue selects a job record from the database and stashes metadata including the job record and the locking transaction. If no job is available for processing, or the server has hit its maximum transactions, a false-valued flag is returned. \n\n"
                     },
                     "children": null
                   }
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.unknownJobs",
+                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.findMeta",
                     "documentation": {
-                      "identifier": "handler.unknownJobs",
+                      "identifier": "handler.findMeta",
                       "newPage": false,
-                      "searchKey": "server.handler.unknownJobs",
+                      "searchKey": "server.handler.findMeta",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (h *handler) unknownJobs(executorName string, ids []int) []int"
+                      "value": "func (m *handler) findMeta(queueName, executorName string, jobID int, remove bool) (jobMeta, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (h *handler) unknownJobs(executorName string, ids []int) []int\n```\n\nunknownJobs returns the set of job identifiers reported by the executor which do not have an associated transaction held by this instance of the executor queue. This can occur when the executor-queue restarts and loses its transaction state. We send these identifiers back to the executor as a hint to stop processing. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.pruneJobs",
-                    "documentation": {
-                      "identifier": "handler.pruneJobs",
-                      "newPage": false,
-                      "searchKey": "server.handler.pruneJobs",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *handler) pruneJobs(executorName string, ids []int) (dead []jobMeta)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *handler) pruneJobs(executorName string, ids []int) (dead []jobMeta)\n```\n\npruneJobs updates the set of job identifiers assigned to the given executor and returns any job that was known to us but not reported by the executor. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.pruneExecutors",
-                    "documentation": {
-                      "identifier": "handler.pruneExecutors",
-                      "newPage": false,
-                      "searchKey": "server.handler.pruneExecutors",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *handler) pruneExecutors() (jobs []jobMeta)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *handler) pruneExecutors() (jobs []jobMeta)\n```\n\npruneExecutors will release the transactions held by any executor that has not sent a heartbeat in a while and return the attached jobs. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.requeueJobs",
-                    "documentation": {
-                      "identifier": "handler.requeueJobs",
-                      "newPage": false,
-                      "searchKey": "server.handler.requeueJobs",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *handler) requeueJobs(ctx context.Context, jobs []jobMeta) (errs error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *handler) requeueJobs(ctx context.Context, jobs []jobMeta) (errs error)\n```\n\nrequeueJobs releases and requeues each of the given jobs. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.requeueJob",
-                    "documentation": {
-                      "identifier": "handler.requeueJob",
-                      "newPage": false,
-                      "searchKey": "server.handler.requeueJob",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *handler) requeueJob(ctx context.Context, job jobMeta) error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *handler) requeueJob(ctx context.Context, job jobMeta) error\n```\n\nrequeueJob requeues the given job and releases the associated transaction. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.setupRoutes",
-                    "documentation": {
-                      "identifier": "handler.setupRoutes",
-                      "newPage": false,
-                      "searchKey": "server.handler.setupRoutes",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *handler) setupRoutes(router *mux.Router)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *handler) setupRoutes(router *mux.Router)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.handleDequeue",
-                    "documentation": {
-                      "identifier": "handler.handleDequeue",
-                      "newPage": false,
-                      "searchKey": "server.handler.handleDequeue",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (h *handler) handleDequeue(w http.ResponseWriter, r *http.Request)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (h *handler) handleDequeue(w http.ResponseWriter, r *http.Request)\n```\n\nPOST /{queueName}/dequeue \n\n"
+                      "value": "```Go\nfunc (m *handler) findMeta(queueName, executorName string, jobID int, remove bool) (jobMeta, error)\n```\n\nfindMeta returns the job with the given id and executor name. If the job is unknown, an error is returned. If the remove parameter is true, the job will be removed from the executor's job list on success. \n\n"
                     },
                     "children": null
                   }
@@ -590,6 +459,7 @@
                       "newPage": false,
                       "searchKey": "server.handler.handleAddExecutionLogEntry",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -606,12 +476,59 @@
                 },
                 {
                   "node": {
+                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.handleDequeue",
+                    "documentation": {
+                      "identifier": "handler.handleDequeue",
+                      "newPage": false,
+                      "searchKey": "server.handler.handleDequeue",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *handler) handleDequeue(w http.ResponseWriter, r *http.Request)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *handler) handleDequeue(w http.ResponseWriter, r *http.Request)\n```\n\nPOST /{queueName}/dequeue \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.handleHeartbeat",
+                    "documentation": {
+                      "identifier": "handler.handleHeartbeat",
+                      "newPage": false,
+                      "searchKey": "server.handler.handleHeartbeat",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *handler) handleHeartbeat(w http.ResponseWriter, r *http.Request)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *handler) handleHeartbeat(w http.ResponseWriter, r *http.Request)\n```\n\nPOST /heartbeat \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.handleMarkComplete",
                     "documentation": {
                       "identifier": "handler.handleMarkComplete",
                       "newPage": false,
                       "searchKey": "server.handler.handleMarkComplete",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -634,6 +551,7 @@
                       "newPage": false,
                       "searchKey": "server.handler.handleMarkErrored",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -656,6 +574,7 @@
                       "newPage": false,
                       "searchKey": "server.handler.handleMarkFailed",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -672,22 +591,276 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.handleHeartbeat",
+                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.heartbeat",
                     "documentation": {
-                      "identifier": "handler.handleHeartbeat",
+                      "identifier": "handler.heartbeat",
                       "newPage": false,
-                      "searchKey": "server.handler.handleHeartbeat",
+                      "searchKey": "server.handler.heartbeat",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (h *handler) handleHeartbeat(w http.ResponseWriter, r *http.Request)"
+                      "value": "func (h *handler) heartbeat(ctx context.Context, executorName string, jobIDs []int) ([]int, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (h *handler) handleHeartbeat(w http.ResponseWriter, r *http.Request)\n```\n\nPOST /heartbeat \n\n"
+                      "value": "```Go\nfunc (h *handler) heartbeat(ctx context.Context, executorName string, jobIDs []int) ([]int, error)\n```\n\nheartbeat will release the transaction for any job that is not confirmed to be in-progress by the given executor. This method is called when the executor POSTs its in-progress job identifiers to the /heartbeat route. This method returns the set of identifiers which the executor erroneously claims to hold (and are sent back as a hint to stop processing). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.markComplete",
+                    "documentation": {
+                      "identifier": "handler.markComplete",
+                      "newPage": false,
+                      "searchKey": "server.handler.markComplete",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *handler) markComplete(ctx context.Context, queueName, executorName string, jobID int) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *handler) markComplete(ctx context.Context, queueName, executorName string, jobID int) error\n```\n\nmarkComplete calls MarkComplete for the given job, then commits the job's transaction. The job is removed from the executor's job list on success. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.markErrored",
+                    "documentation": {
+                      "identifier": "handler.markErrored",
+                      "newPage": false,
+                      "searchKey": "server.handler.markErrored",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *handler) markErrored(ctx context.Context, queueName, executorName string, jobID int, errorMessage string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *handler) markErrored(ctx context.Context, queueName, executorName string, jobID int, errorMessage string) error\n```\n\nmarkErrored calls MarkErrored for the given job, then commits the job's transaction. The job is removed from the executor's job list on success. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.markFailed",
+                    "documentation": {
+                      "identifier": "handler.markFailed",
+                      "newPage": false,
+                      "searchKey": "server.handler.markFailed",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *handler) markFailed(ctx context.Context, queueName, executorName string, jobID int, errorMessage string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *handler) markFailed(ctx context.Context, queueName, executorName string, jobID int, errorMessage string) error\n```\n\nmarkFailed calls MarkFailed for the given job, then commits the job's transaction. The job is removed from the executor's job list on success. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.pruneExecutors",
+                    "documentation": {
+                      "identifier": "handler.pruneExecutors",
+                      "newPage": false,
+                      "searchKey": "server.handler.pruneExecutors",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *handler) pruneExecutors() (jobs []jobMeta)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *handler) pruneExecutors() (jobs []jobMeta)\n```\n\npruneExecutors will release the transactions held by any executor that has not sent a heartbeat in a while and return the attached jobs. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.pruneJobs",
+                    "documentation": {
+                      "identifier": "handler.pruneJobs",
+                      "newPage": false,
+                      "searchKey": "server.handler.pruneJobs",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *handler) pruneJobs(executorName string, ids []int) (dead []jobMeta)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *handler) pruneJobs(executorName string, ids []int) (dead []jobMeta)\n```\n\npruneJobs updates the set of job identifiers assigned to the given executor and returns any job that was known to us but not reported by the executor. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.requeueJob",
+                    "documentation": {
+                      "identifier": "handler.requeueJob",
+                      "newPage": false,
+                      "searchKey": "server.handler.requeueJob",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *handler) requeueJob(ctx context.Context, job jobMeta) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *handler) requeueJob(ctx context.Context, job jobMeta) error\n```\n\nrequeueJob requeues the given job and releases the associated transaction. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.requeueJobs",
+                    "documentation": {
+                      "identifier": "handler.requeueJobs",
+                      "newPage": false,
+                      "searchKey": "server.handler.requeueJobs",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *handler) requeueJobs(ctx context.Context, jobs []jobMeta) (errs error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *handler) requeueJobs(ctx context.Context, jobs []jobMeta) (errs error)\n```\n\nrequeueJobs releases and requeues each of the given jobs. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.setupRoutes",
+                    "documentation": {
+                      "identifier": "handler.setupRoutes",
+                      "newPage": false,
+                      "searchKey": "server.handler.setupRoutes",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *handler) setupRoutes(router *mux.Router)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *handler) setupRoutes(router *mux.Router)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.shutdown",
+                    "documentation": {
+                      "identifier": "handler.shutdown",
+                      "newPage": false,
+                      "searchKey": "server.handler.shutdown",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *handler) shutdown()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *handler) shutdown()\n```\n\nshutdown releases all transactions. This method is called on process shutdown. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.unknownJobs",
+                    "documentation": {
+                      "identifier": "handler.unknownJobs",
+                      "newPage": false,
+                      "searchKey": "server.handler.unknownJobs",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *handler) unknownJobs(executorName string, ids []int) []int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *handler) unknownJobs(executorName string, ids []int) []int\n```\n\nunknownJobs returns the set of job identifiers reported by the executor which do not have an associated transaction held by this instance of the executor queue. This can occur when the executor-queue restarts and loses its transaction state. We send these identifiers back to the executor as a hint to stop processing. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor-queue/internal/server#handler.updateMetrics",
+                    "documentation": {
+                      "identifier": "handler.updateMetrics",
+                      "newPage": false,
+                      "searchKey": "server.handler.updateMetrics",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *handler) updateMetrics()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *handler) updateMetrics()\n```\n\n"
                     },
                     "children": null
                   }
@@ -700,6 +873,7 @@
                       "newPage": false,
                       "searchKey": "server.handler.wrapHandler",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -719,161 +893,13 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/executor-queue/internal/server#Options",
-              "documentation": {
-                "identifier": "Options",
-                "newPage": false,
-                "searchKey": "server.Options",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Options struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Options struct {\n\t// Port is the port on which to listen for HTTP connections.\n\tPort int\n\n\t// QueueOptions is a map from queue name to options specific to that queue.\n\tQueueOptions map[string]QueueOptions\n\n\t// MaximumNumTransactions is the maximum number of active records that can be given out\n\t// to executors from this machine. The dequeue method will stop returning records while\n\t// the number of outstanding transactions is at or above this threshold.\n\tMaximumNumTransactions int\n\n\t// RequeueDelay controls how far into the future to make a job record visible to the job\n\t// queue once the currently processing executor has become unresponsive.\n\tRequeueDelay time.Duration\n\n\t// UnreportedMaxAge is the maximum time between a record being dequeued and it appearing\n\t// in the executor's heartbeat requests before it being considered lost.\n\tUnreportedMaxAge time.Duration\n\n\t// DeathThreshold is the minimum time since the last heartbeat of an executor before that\n\t// executor can be considered as unresponsive. This should be configured to be longer than\n\t// the duration between heartbeat interval.\n\tDeathThreshold time.Duration\n\n\t// CleanupInterval is the duration between periodic invocations of Cleanup, which will\n\t// requeue any records that are \"lost\" according to the thresholds described above.\n\tCleanupInterval time.Duration\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor-queue/internal/server#QueueOptions",
-              "documentation": {
-                "identifier": "QueueOptions",
-                "newPage": false,
-                "searchKey": "server.QueueOptions",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type QueueOptions struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype QueueOptions struct {\n\t// Store is a required dbworker store store for each registered queue.\n\tStore store.Store\n\n\t// RecordTransformer is a required hook for each registered queue that transforms a generic\n\t// record from that queue into the job to be given to an executor.\n\tRecordTransformer func(record workerutil.Record) (apiclient.Job, error)\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor-queue/internal/server#executorMeta",
-              "documentation": {
-                "identifier": "executorMeta",
-                "newPage": false,
-                "searchKey": "server.executorMeta",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type executorMeta struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype executorMeta struct {\n\tlastUpdate time.Time\n\tjobs       []jobMeta\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor-queue/internal/server#jobMeta",
-              "documentation": {
-                "identifier": "jobMeta",
-                "newPage": false,
-                "searchKey": "server.jobMeta",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type jobMeta struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype jobMeta struct {\n\tqueueName string\n\trecord    workerutil.Record\n\ttx        store.Store\n\tstarted   time.Time\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor-queue/internal/server#QueueMetrics",
-              "documentation": {
-                "identifier": "QueueMetrics",
-                "newPage": false,
-                "searchKey": "server.QueueMetrics",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type QueueMetrics struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype QueueMetrics struct {\n\tNumJobs      *prometheus.GaugeVec\n\tNumExecutors *prometheus.GaugeVec\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/executor-queue/internal/server#newQueueMetrics",
-                    "documentation": {
-                      "identifier": "newQueueMetrics",
-                      "newPage": false,
-                      "searchKey": "server.newQueueMetrics",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func newQueueMetrics(observationContext *observation.Context) *QueueMetrics"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc newQueueMetrics(observationContext *observation.Context) *QueueMetrics\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor-queue/internal/server#errorResponse",
-              "documentation": {
-                "identifier": "errorResponse",
-                "newPage": false,
-                "searchKey": "server.errorResponse",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type errorResponse struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype errorResponse struct {\n\tError string `json:\"error\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/executor-queue/internal/server#handlerWrapper",
               "documentation": {
                 "identifier": "handlerWrapper",
                 "newPage": false,
                 "searchKey": "server.handlerWrapper",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -894,6 +920,7 @@
                       "newPage": false,
                       "searchKey": "server.handlerWrapper.Handle",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -916,6 +943,7 @@
                       "newPage": false,
                       "searchKey": "server.handlerWrapper.HandleError",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -938,6 +966,7 @@
                       "newPage": false,
                       "searchKey": "server.handlerWrapper.OnShutdown",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -957,12 +986,36 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/server#jobMeta",
+              "documentation": {
+                "identifier": "jobMeta",
+                "newPage": false,
+                "searchKey": "server.jobMeta",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type jobMeta struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype jobMeta struct {\n\tqueueName string\n\trecord    workerutil.Record\n\ttx        store.Store\n\tstarted   time.Time\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/executor-queue/internal/server#testRecord",
               "documentation": {
                 "identifier": "testRecord",
                 "newPage": false,
                 "searchKey": "server.testRecord",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -983,6 +1036,7 @@
                       "newPage": false,
                       "searchKey": "server.testRecord.RecordID",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1011,6 +1065,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -1030,7 +1085,9 @@
                 "identifier": "NewServer",
                 "newPage": false,
                 "searchKey": "server.NewServer",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1045,13 +1102,111 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/server#TestAddExecutionLogEntry",
+              "documentation": {
+                "identifier": "TestAddExecutionLogEntry",
+                "newPage": false,
+                "searchKey": "server.TestAddExecutionLogEntry",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAddExecutionLogEntry(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAddExecutionLogEntry(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/server#TestAddExecutionLogEntryUnknownJob",
+              "documentation": {
+                "identifier": "TestAddExecutionLogEntryUnknownJob",
+                "newPage": false,
+                "searchKey": "server.TestAddExecutionLogEntryUnknownJob",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAddExecutionLogEntryUnknownJob(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAddExecutionLogEntryUnknownJob(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/server#TestAddExecutionLogEntryUnknownQueue",
+              "documentation": {
+                "identifier": "TestAddExecutionLogEntryUnknownQueue",
+                "newPage": false,
+                "searchKey": "server.TestAddExecutionLogEntryUnknownQueue",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAddExecutionLogEntryUnknownQueue(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAddExecutionLogEntryUnknownQueue(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/server#TestCleanup",
+              "documentation": {
+                "identifier": "TestCleanup",
+                "newPage": false,
+                "searchKey": "server.TestCleanup",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCleanup(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCleanup(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/executor-queue/internal/server#TestDequeue",
               "documentation": {
                 "identifier": "TestDequeue",
                 "newPage": false,
                 "searchKey": "server.TestDequeue",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1067,13 +1222,39 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/server#TestDequeueMaxTransactions",
+              "documentation": {
+                "identifier": "TestDequeueMaxTransactions",
+                "newPage": false,
+                "searchKey": "server.TestDequeueMaxTransactions",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDequeueMaxTransactions(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDequeueMaxTransactions(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/executor-queue/internal/server#TestDequeueNoRecord",
               "documentation": {
                 "identifier": "TestDequeueNoRecord",
                 "newPage": false,
                 "searchKey": "server.TestDequeueNoRecord",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1095,7 +1276,9 @@
                 "newPage": false,
                 "searchKey": "server.TestDequeueUnknownQueue",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1111,88 +1294,24 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/executor-queue/internal/server#TestDequeueMaxTransactions",
+              "pathID": "/enterprise/cmd/executor-queue/internal/server#TestHeartbeat",
               "documentation": {
-                "identifier": "TestDequeueMaxTransactions",
+                "identifier": "TestHeartbeat",
                 "newPage": false,
-                "searchKey": "server.TestDequeueMaxTransactions",
+                "searchKey": "server.TestHeartbeat",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestDequeueMaxTransactions(t *testing.T)"
+                "value": "func TestHeartbeat(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestDequeueMaxTransactions(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor-queue/internal/server#TestAddExecutionLogEntry",
-              "documentation": {
-                "identifier": "TestAddExecutionLogEntry",
-                "newPage": false,
-                "searchKey": "server.TestAddExecutionLogEntry",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAddExecutionLogEntry(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAddExecutionLogEntry(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor-queue/internal/server#TestAddExecutionLogEntryUnknownQueue",
-              "documentation": {
-                "identifier": "TestAddExecutionLogEntryUnknownQueue",
-                "newPage": false,
-                "searchKey": "server.TestAddExecutionLogEntryUnknownQueue",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAddExecutionLogEntryUnknownQueue(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAddExecutionLogEntryUnknownQueue(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor-queue/internal/server#TestAddExecutionLogEntryUnknownJob",
-              "documentation": {
-                "identifier": "TestAddExecutionLogEntryUnknownJob",
-                "newPage": false,
-                "searchKey": "server.TestAddExecutionLogEntryUnknownJob",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestAddExecutionLogEntryUnknownJob(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestAddExecutionLogEntryUnknownJob(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestHeartbeat(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -1205,7 +1324,9 @@
                 "newPage": false,
                 "searchKey": "server.TestMarkComplete",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1227,7 +1348,9 @@
                 "newPage": false,
                 "searchKey": "server.TestMarkCompleteUnknownJob",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1249,7 +1372,9 @@
                 "newPage": false,
                 "searchKey": "server.TestMarkCompleteUnknownQueue",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1271,7 +1396,9 @@
                 "newPage": false,
                 "searchKey": "server.TestMarkErrored",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1293,7 +1420,9 @@
                 "newPage": false,
                 "searchKey": "server.TestMarkErroredUnknownJob",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1315,7 +1444,9 @@
                 "newPage": false,
                 "searchKey": "server.TestMarkErroredUnknownQueue",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1337,7 +1468,9 @@
                 "newPage": false,
                 "searchKey": "server.TestMarkFailed",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1347,50 +1480,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc TestMarkFailed(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor-queue/internal/server#TestHeartbeat",
-              "documentation": {
-                "identifier": "TestHeartbeat",
-                "newPage": false,
-                "searchKey": "server.TestHeartbeat",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestHeartbeat(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestHeartbeat(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor-queue/internal/server#TestCleanup",
-              "documentation": {
-                "identifier": "TestCleanup",
-                "newPage": false,
-                "searchKey": "server.TestCleanup",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCleanup(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCleanup(t *testing.T)\n```\n\n"
               },
               "children": null
             }

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/extsvc/gitolite",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,32 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/extsvc/gitolite#Repo",
-              "documentation": {
-                "identifier": "Repo",
-                "newPage": false,
-                "searchKey": "gitolite.Repo",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Repo struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Repo struct {\n\t// Name is the name of the repository as it is returned by `ssh git@GITOLITE_HOST info`\n\tName string\n\n\t// URL is the clone URL of the repository.\n\tURL string\n}\n```\n\nRepo is the repository metadata returned by the Gitolite API. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/extsvc/gitolite#Client",
               "documentation": {
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "gitolite.Client",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -82,7 +66,9 @@
                       "identifier": "NewClient",
                       "newPage": false,
                       "searchKey": "gitolite.NewClient",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -102,7 +88,9 @@
                       "identifier": "Client.ListRepos",
                       "newPage": false,
                       "searchKey": "gitolite.Client.ListRepos",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -120,12 +108,35 @@
           },
           {
             "node": {
+              "pathID": "/internal/extsvc/gitolite#Repo",
+              "documentation": {
+                "identifier": "Repo",
+                "newPage": false,
+                "searchKey": "gitolite.Repo",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Repo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Repo struct {\n\t// Name is the name of the repository as it is returned by `ssh git@GITOLITE_HOST info`\n\tName string\n\n\t// URL is the clone URL of the repository.\n\tURL string\n}\n```\n\nRepo is the repository metadata returned by the Gitolite API. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/extsvc/gitolite#errUnauthorized",
               "documentation": {
                 "identifier": "errUnauthorized",
                 "newPage": false,
                 "searchKey": "gitolite.errUnauthorized",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -146,6 +157,7 @@
                       "newPage": false,
                       "searchKey": "gitolite.errUnauthorized.Unauthorized",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -174,6 +186,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -188,12 +201,36 @@
         "children": [
           {
             "node": {
+              "pathID": "/internal/extsvc/gitolite#CloneURL",
+              "documentation": {
+                "identifier": "CloneURL",
+                "newPage": false,
+                "searchKey": "gitolite.CloneURL",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CloneURL(externalRepoSpec api.ExternalRepoSpec) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CloneURL(externalRepoSpec api.ExternalRepoSpec) string\n```\n\nCloneURL returns the clone URL of the external repository. The external repo spec must be of type \"gitolite\"; otherwise, this will return an empty string. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/internal/extsvc/gitolite#ExternalRepoSpec",
               "documentation": {
                 "identifier": "ExternalRepoSpec",
                 "newPage": false,
                 "searchKey": "gitolite.ExternalRepoSpec",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -213,7 +250,9 @@
                 "identifier": "ServiceID",
                 "newPage": false,
                 "searchKey": "gitolite.ServiceID",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -228,20 +267,48 @@
           },
           {
             "node": {
-              "pathID": "/internal/extsvc/gitolite#CloneURL",
+              "pathID": "/internal/extsvc/gitolite#TestDecodeRepos",
               "documentation": {
-                "identifier": "CloneURL",
+                "identifier": "TestDecodeRepos",
                 "newPage": false,
-                "searchKey": "gitolite.CloneURL",
-                "tags": null
+                "searchKey": "gitolite.TestDecodeRepos",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func CloneURL(externalRepoSpec api.ExternalRepoSpec) string"
+                "value": "func TestDecodeRepos(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc CloneURL(externalRepoSpec api.ExternalRepoSpec) string\n```\n\nCloneURL returns the clone URL of the external repository. The external repo spec must be of type \"gitolite\"; otherwise, this will return an empty string. \n\n"
+                "value": "```Go\nfunc TestDecodeRepos(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitolite#TestMaybeUnauthorized",
+              "documentation": {
+                "identifier": "TestMaybeUnauthorized",
+                "newPage": false,
+                "searchKey": "gitolite.TestMaybeUnauthorized",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMaybeUnauthorized(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMaybeUnauthorized(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -254,6 +321,7 @@
                 "newPage": false,
                 "searchKey": "gitolite.decodeRepos",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -276,6 +344,7 @@
                 "newPage": false,
                 "searchKey": "gitolite.maybeUnauthorized",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -286,50 +355,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc maybeUnauthorized(err error) error\n```\n\nnewErrUnauthorized will return an errUnauthorized wrapping err if there is permission issue. Otherwise, it return err unchanged This ensures that we implement the unauthorizeder interface from the errcode package \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc/gitolite#TestDecodeRepos",
-              "documentation": {
-                "identifier": "TestDecodeRepos",
-                "newPage": false,
-                "searchKey": "gitolite.TestDecodeRepos",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDecodeRepos(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDecodeRepos(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/extsvc/gitolite#TestMaybeUnauthorized",
-              "documentation": {
-                "identifier": "TestMaybeUnauthorized",
-                "newPage": false,
-                "searchKey": "gitolite.TestMaybeUnauthorized",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMaybeUnauthorized(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMaybeUnauthorized(t *testing.T)\n```\n\n"
               },
               "children": null
             }

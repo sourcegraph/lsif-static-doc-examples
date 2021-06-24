@@ -59,67 +59,71 @@ field`, `comma is ,`}
 * [Constants](#const)
     * [const benchmarkCSVData](#benchmarkCSVData)
 * [Variables](#var)
-    * [var ErrTrailingComma](#ErrTrailingComma)
     * [var ErrBareQuote](#ErrBareQuote)
-    * [var ErrQuote](#ErrQuote)
     * [var ErrFieldCount](#ErrFieldCount)
+    * [var ErrQuote](#ErrQuote)
+    * [var ErrTrailingComma](#ErrTrailingComma)
+    * [var benchmarkWriteData](#benchmarkWriteData)
     * [var errInvalidDelim](#errInvalidDelim)
     * [var readTests](#readTests)
     * [var writeTests](#writeTests)
-    * [var benchmarkWriteData](#benchmarkWriteData)
 * [Types](#type)
     * [type ParseError struct](#ParseError)
         * [func (e *ParseError) Error() string](#ParseError.Error)
         * [func (e *ParseError) Unwrap() error](#ParseError.Unwrap)
     * [type Reader struct](#Reader)
         * [func NewReader(r io.Reader) *Reader](#NewReader)
-        * [func (r *Reader) Read() (record []string, err error)](#Reader.Read)
         * [func (r *Reader) FieldPos(field int) (line, column int)](#Reader.FieldPos)
+        * [func (r *Reader) Read() (record []string, err error)](#Reader.Read)
         * [func (r *Reader) ReadAll() (records [][]string, err error)](#Reader.ReadAll)
         * [func (r *Reader) readLine() ([]byte, error)](#Reader.readLine)
         * [func (r *Reader) readRecord(dst []string) ([]string, error)](#Reader.readRecord)
-    * [type position struct](#position)
     * [type Writer struct](#Writer)
         * [func NewWriter(w io.Writer) *Writer](#NewWriter)
-        * [func (w *Writer) Write(record []string) error](#Writer.Write)
-        * [func (w *Writer) Flush()](#Writer.Flush)
         * [func (w *Writer) Error() error](#Writer.Error)
+        * [func (w *Writer) Flush()](#Writer.Flush)
+        * [func (w *Writer) Write(record []string) error](#Writer.Write)
         * [func (w *Writer) WriteAll(records [][]string) error](#Writer.WriteAll)
         * [func (w *Writer) fieldNeedsQuotes(field string) bool](#Writer.fieldNeedsQuotes)
-    * [type readTest struct](#readTest)
-    * [type nTimes struct](#nTimes)
-        * [func (r *nTimes) Read(p []byte) (n int, err error)](#nTimes.Read)
     * [type errorWriter struct{}](#errorWriter)
         * [func (e errorWriter) Write(b []byte) (int, error)](#errorWriter.Write)
+    * [type nTimes struct](#nTimes)
+        * [func (r *nTimes) Read(p []byte) (n int, err error)](#nTimes.Read)
+    * [type position struct](#position)
+    * [type readTest struct](#readTest)
 * [Functions](#func)
-    * [func validDelim(r rune) bool](#validDelim)
-    * [func lengthNL(b []byte) int](#lengthNL)
-    * [func nextRune(b []byte) rune](#nextRune)
-    * [func TestRead(t *testing.T)](#TestRead)
-    * [func firstError(errs []error, positions [][][2]int, errPositions map[int][2]int) error](#firstError)
-    * [func errorWithPosition(err error, recNum int, positions [][][2]int, errPositions map[int][2]int) error](#errorWithPosition)
-    * [func makePositions(text string) ([][][2]int, map[int][2]int, string)](#makePositions)
-    * [func benchmarkRead(b *testing.B, initReader func(*Reader), rows string)](#benchmarkRead)
     * [func BenchmarkRead(b *testing.B)](#BenchmarkRead)
-    * [func BenchmarkReadWithFieldsPerRecord(b *testing.B)](#BenchmarkReadWithFieldsPerRecord)
-    * [func BenchmarkReadWithoutFieldsPerRecord(b *testing.B)](#BenchmarkReadWithoutFieldsPerRecord)
     * [func BenchmarkReadLargeFields(b *testing.B)](#BenchmarkReadLargeFields)
     * [func BenchmarkReadReuseRecord(b *testing.B)](#BenchmarkReadReuseRecord)
+    * [func BenchmarkReadReuseRecordLargeFields(b *testing.B)](#BenchmarkReadReuseRecordLargeFields)
     * [func BenchmarkReadReuseRecordWithFieldsPerRecord(b *testing.B)](#BenchmarkReadReuseRecordWithFieldsPerRecord)
     * [func BenchmarkReadReuseRecordWithoutFieldsPerRecord(b *testing.B)](#BenchmarkReadReuseRecordWithoutFieldsPerRecord)
-    * [func BenchmarkReadReuseRecordLargeFields(b *testing.B)](#BenchmarkReadReuseRecordLargeFields)
-    * [func TestWrite(t *testing.T)](#TestWrite)
-    * [func TestError(t *testing.T)](#TestError)
+    * [func BenchmarkReadWithFieldsPerRecord(b *testing.B)](#BenchmarkReadWithFieldsPerRecord)
+    * [func BenchmarkReadWithoutFieldsPerRecord(b *testing.B)](#BenchmarkReadWithoutFieldsPerRecord)
     * [func BenchmarkWrite(b *testing.B)](#BenchmarkWrite)
+    * [func TestError(t *testing.T)](#TestError)
+    * [func TestRead(t *testing.T)](#TestRead)
+    * [func TestWrite(t *testing.T)](#TestWrite)
+    * [func benchmarkRead(b *testing.B, initReader func(*Reader), rows string)](#benchmarkRead)
+    * [func errorWithPosition(err error, recNum int, positions [][][2]int, errPositions map[int][2]int) error](#errorWithPosition)
+    * [func firstError(errs []error, positions [][][2]int, errPositions map[int][2]int) error](#firstError)
+    * [func lengthNL(b []byte) int](#lengthNL)
+    * [func makePositions(text string) ([][][2]int, map[int][2]int, string)](#makePositions)
+    * [func nextRune(b []byte) rune](#nextRune)
+    * [func validDelim(r rune) bool](#validDelim)
 
 
 ## <a id="const" href="#const">Constants</a>
+
+```
+tags: [package]
+```
 
 ### <a id="benchmarkCSVData" href="#benchmarkCSVData">const benchmarkCSVData</a>
 
 ```
 searchKey: csv.benchmarkCSVData
-tags: [private]
+tags: [constant string private]
 ```
 
 ```Go
@@ -128,10 +132,54 @@ const benchmarkCSVData = ...
 
 ## <a id="var" href="#var">Variables</a>
 
+```
+tags: [package]
+```
+
+### <a id="ErrBareQuote" href="#ErrBareQuote">var ErrBareQuote</a>
+
+```
+searchKey: csv.ErrBareQuote
+tags: [variable interface]
+```
+
+```Go
+var ErrBareQuote = errors.New("bare \" in non-quoted-field")
+```
+
+These are the errors that can be returned in ParseError.Err. 
+
+### <a id="ErrFieldCount" href="#ErrFieldCount">var ErrFieldCount</a>
+
+```
+searchKey: csv.ErrFieldCount
+tags: [variable interface]
+```
+
+```Go
+var ErrFieldCount = errors.New("wrong number of fields")
+```
+
+These are the errors that can be returned in ParseError.Err. 
+
+### <a id="ErrQuote" href="#ErrQuote">var ErrQuote</a>
+
+```
+searchKey: csv.ErrQuote
+tags: [variable interface]
+```
+
+```Go
+var ErrQuote = errors.New("extraneous or missing \" in quoted-field")
+```
+
+These are the errors that can be returned in ParseError.Err. 
+
 ### <a id="ErrTrailingComma" href="#ErrTrailingComma">var ErrTrailingComma</a>
 
 ```
 searchKey: csv.ErrTrailingComma
+tags: [variable interface]
 ```
 
 ```Go
@@ -141,47 +189,22 @@ var ErrTrailingComma = errors.New("extra delimiter at end of line") // Deprecate
 
 These are the errors that can be returned in ParseError.Err. 
 
-### <a id="ErrBareQuote" href="#ErrBareQuote">var ErrBareQuote</a>
+### <a id="benchmarkWriteData" href="#benchmarkWriteData">var benchmarkWriteData</a>
 
 ```
-searchKey: csv.ErrBareQuote
-```
-
-```Go
-var ErrBareQuote = errors.New("bare \" in non-quoted-field")
-```
-
-These are the errors that can be returned in ParseError.Err. 
-
-### <a id="ErrQuote" href="#ErrQuote">var ErrQuote</a>
-
-```
-searchKey: csv.ErrQuote
+searchKey: csv.benchmarkWriteData
+tags: [variable array array string private]
 ```
 
 ```Go
-var ErrQuote = errors.New("extraneous or missing \" in quoted-field")
+var benchmarkWriteData = ...
 ```
-
-These are the errors that can be returned in ParseError.Err. 
-
-### <a id="ErrFieldCount" href="#ErrFieldCount">var ErrFieldCount</a>
-
-```
-searchKey: csv.ErrFieldCount
-```
-
-```Go
-var ErrFieldCount = errors.New("wrong number of fields")
-```
-
-These are the errors that can be returned in ParseError.Err. 
 
 ### <a id="errInvalidDelim" href="#errInvalidDelim">var errInvalidDelim</a>
 
 ```
 searchKey: csv.errInvalidDelim
-tags: [private]
+tags: [variable interface private]
 ```
 
 ```Go
@@ -192,7 +215,7 @@ var errInvalidDelim = errors.New("csv: invalid field or comment delimiter")
 
 ```
 searchKey: csv.readTests
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
@@ -203,30 +226,24 @@ var readTests = ...
 
 ```
 searchKey: csv.writeTests
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
 var writeTests = ...
 ```
 
-### <a id="benchmarkWriteData" href="#benchmarkWriteData">var benchmarkWriteData</a>
-
-```
-searchKey: csv.benchmarkWriteData
-tags: [private]
-```
-
-```Go
-var benchmarkWriteData = ...
-```
-
 ## <a id="type" href="#type">Types</a>
+
+```
+tags: [package]
+```
 
 ### <a id="ParseError" href="#ParseError">type ParseError struct</a>
 
 ```
 searchKey: csv.ParseError
+tags: [struct]
 ```
 
 ```Go
@@ -244,6 +261,7 @@ A ParseError is returned for parsing errors. Line numbers are 1-indexed and colu
 
 ```
 searchKey: csv.ParseError.Error
+tags: [function]
 ```
 
 ```Go
@@ -254,6 +272,7 @@ func (e *ParseError) Error() string
 
 ```
 searchKey: csv.ParseError.Unwrap
+tags: [function]
 ```
 
 ```Go
@@ -264,6 +283,7 @@ func (e *ParseError) Unwrap() error
 
 ```
 searchKey: csv.Reader
+tags: [struct]
 ```
 
 ```Go
@@ -343,6 +363,7 @@ The Reader converts all \r\n sequences in its input to plain \n, including in mu
 
 ```
 searchKey: csv.NewReader
+tags: [method]
 ```
 
 ```Go
@@ -351,22 +372,11 @@ func NewReader(r io.Reader) *Reader
 
 NewReader returns a new Reader that reads from r. 
 
-#### <a id="Reader.Read" href="#Reader.Read">func (r *Reader) Read() (record []string, err error)</a>
-
-```
-searchKey: csv.Reader.Read
-```
-
-```Go
-func (r *Reader) Read() (record []string, err error)
-```
-
-Read reads one record (a slice of fields) from r. If the record has an unexpected number of fields, Read returns the record along with the error ErrFieldCount. Except for that case, Read always returns either a non-nil record or a non-nil error, but not both. If there is no data left to be read, Read returns nil, io.EOF. If ReuseRecord is true, the returned slice may be shared between multiple calls to Read. 
-
 #### <a id="Reader.FieldPos" href="#Reader.FieldPos">func (r *Reader) FieldPos(field int) (line, column int)</a>
 
 ```
 searchKey: csv.Reader.FieldPos
+tags: [method]
 ```
 
 ```Go
@@ -377,10 +387,24 @@ FieldPos returns the line and column corresponding to the start of the field wit
 
 If this is called with an out-of-bounds index, it panics. 
 
+#### <a id="Reader.Read" href="#Reader.Read">func (r *Reader) Read() (record []string, err error)</a>
+
+```
+searchKey: csv.Reader.Read
+tags: [function]
+```
+
+```Go
+func (r *Reader) Read() (record []string, err error)
+```
+
+Read reads one record (a slice of fields) from r. If the record has an unexpected number of fields, Read returns the record along with the error ErrFieldCount. Except for that case, Read always returns either a non-nil record or a non-nil error, but not both. If there is no data left to be read, Read returns nil, io.EOF. If ReuseRecord is true, the returned slice may be shared between multiple calls to Read. 
+
 #### <a id="Reader.ReadAll" href="#Reader.ReadAll">func (r *Reader) ReadAll() (records [][]string, err error)</a>
 
 ```
 searchKey: csv.Reader.ReadAll
+tags: [function]
 ```
 
 ```Go
@@ -393,7 +417,7 @@ ReadAll reads all the remaining records from r. Each record is a slice of fields
 
 ```
 searchKey: csv.Reader.readLine
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -406,32 +430,18 @@ readLine reads the next line (with the trailing endline). If EOF is hit without 
 
 ```
 searchKey: csv.Reader.readRecord
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (r *Reader) readRecord(dst []string) ([]string, error)
 ```
 
-### <a id="position" href="#position">type position struct</a>
-
-```
-searchKey: csv.position
-tags: [private]
-```
-
-```Go
-type position struct {
-	line, col int
-}
-```
-
-pos holds the position of a field in the current line. 
-
 ### <a id="Writer" href="#Writer">type Writer struct</a>
 
 ```
 searchKey: csv.Writer
+tags: [struct]
 ```
 
 ```Go
@@ -456,6 +466,7 @@ The writes of individual records are buffered. After all data has been written, 
 
 ```
 searchKey: csv.NewWriter
+tags: [method]
 ```
 
 ```Go
@@ -464,34 +475,11 @@ func NewWriter(w io.Writer) *Writer
 
 NewWriter returns a new Writer that writes to w. 
 
-#### <a id="Writer.Write" href="#Writer.Write">func (w *Writer) Write(record []string) error</a>
-
-```
-searchKey: csv.Writer.Write
-```
-
-```Go
-func (w *Writer) Write(record []string) error
-```
-
-Write writes a single CSV record to w along with any necessary quoting. A record is a slice of strings with each string being one field. Writes are buffered, so Flush must eventually be called to ensure that the record is written to the underlying io.Writer. 
-
-#### <a id="Writer.Flush" href="#Writer.Flush">func (w *Writer) Flush()</a>
-
-```
-searchKey: csv.Writer.Flush
-```
-
-```Go
-func (w *Writer) Flush()
-```
-
-Flush writes any buffered data to the underlying io.Writer. To check if an error occurred during the Flush, call Error. 
-
 #### <a id="Writer.Error" href="#Writer.Error">func (w *Writer) Error() error</a>
 
 ```
 searchKey: csv.Writer.Error
+tags: [function]
 ```
 
 ```Go
@@ -500,10 +488,37 @@ func (w *Writer) Error() error
 
 Error reports any error that has occurred during a previous Write or Flush. 
 
+#### <a id="Writer.Flush" href="#Writer.Flush">func (w *Writer) Flush()</a>
+
+```
+searchKey: csv.Writer.Flush
+tags: [function]
+```
+
+```Go
+func (w *Writer) Flush()
+```
+
+Flush writes any buffered data to the underlying io.Writer. To check if an error occurred during the Flush, call Error. 
+
+#### <a id="Writer.Write" href="#Writer.Write">func (w *Writer) Write(record []string) error</a>
+
+```
+searchKey: csv.Writer.Write
+tags: [method]
+```
+
+```Go
+func (w *Writer) Write(record []string) error
+```
+
+Write writes a single CSV record to w along with any necessary quoting. A record is a slice of strings with each string being one field. Writes are buffered, so Flush must eventually be called to ensure that the record is written to the underlying io.Writer. 
+
 #### <a id="Writer.WriteAll" href="#Writer.WriteAll">func (w *Writer) WriteAll(records [][]string) error</a>
 
 ```
 searchKey: csv.Writer.WriteAll
+tags: [method]
 ```
 
 ```Go
@@ -516,7 +531,7 @@ WriteAll writes multiple CSV records to w using Write and then calls Flush, retu
 
 ```
 searchKey: csv.Writer.fieldNeedsQuotes
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -525,11 +540,76 @@ func (w *Writer) fieldNeedsQuotes(field string) bool
 
 fieldNeedsQuotes reports whether our field must be enclosed in quotes. Fields with a Comma, fields with a quote or newline, and fields which start with a space must be enclosed in quotes. We used to quote empty strings, but we do not anymore (as of Go 1.4). The two representations should be equivalent, but Postgres distinguishes quoted vs non-quoted empty string during database imports, and it has an option to force the quoted behavior for non-quoted CSV but it has no option to force the non-quoted behavior for quoted CSV, making CSV with quoted empty strings strictly less useful. Not quoting the empty string also makes this package match the behavior of Microsoft Excel and Google Drive. For Postgres, quote the data terminating string `\.`. 
 
+### <a id="errorWriter" href="#errorWriter">type errorWriter struct{}</a>
+
+```
+searchKey: csv.errorWriter
+tags: [struct private]
+```
+
+```Go
+type errorWriter struct{}
+```
+
+#### <a id="errorWriter.Write" href="#errorWriter.Write">func (e errorWriter) Write(b []byte) (int, error)</a>
+
+```
+searchKey: csv.errorWriter.Write
+tags: [method private]
+```
+
+```Go
+func (e errorWriter) Write(b []byte) (int, error)
+```
+
+### <a id="nTimes" href="#nTimes">type nTimes struct</a>
+
+```
+searchKey: csv.nTimes
+tags: [struct private]
+```
+
+```Go
+type nTimes struct {
+	s   string
+	n   int
+	off int
+}
+```
+
+nTimes is an io.Reader which yields the string s n times. 
+
+#### <a id="nTimes.Read" href="#nTimes.Read">func (r *nTimes) Read(p []byte) (n int, err error)</a>
+
+```
+searchKey: csv.nTimes.Read
+tags: [method private]
+```
+
+```Go
+func (r *nTimes) Read(p []byte) (n int, err error)
+```
+
+### <a id="position" href="#position">type position struct</a>
+
+```
+searchKey: csv.position
+tags: [struct private]
+```
+
+```Go
+type position struct {
+	line, col int
+}
+```
+
+pos holds the position of a field in the current line. 
+
 ### <a id="readTest" href="#readTest">type readTest struct</a>
 
 ```
 searchKey: csv.readTest
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -551,196 +631,28 @@ type readTest struct {
 }
 ```
 
-### <a id="nTimes" href="#nTimes">type nTimes struct</a>
-
-```
-searchKey: csv.nTimes
-tags: [private]
-```
-
-```Go
-type nTimes struct {
-	s   string
-	n   int
-	off int
-}
-```
-
-nTimes is an io.Reader which yields the string s n times. 
-
-#### <a id="nTimes.Read" href="#nTimes.Read">func (r *nTimes) Read(p []byte) (n int, err error)</a>
-
-```
-searchKey: csv.nTimes.Read
-tags: [private]
-```
-
-```Go
-func (r *nTimes) Read(p []byte) (n int, err error)
-```
-
-### <a id="errorWriter" href="#errorWriter">type errorWriter struct{}</a>
-
-```
-searchKey: csv.errorWriter
-tags: [private]
-```
-
-```Go
-type errorWriter struct{}
-```
-
-#### <a id="errorWriter.Write" href="#errorWriter.Write">func (e errorWriter) Write(b []byte) (int, error)</a>
-
-```
-searchKey: csv.errorWriter.Write
-tags: [private]
-```
-
-```Go
-func (e errorWriter) Write(b []byte) (int, error)
-```
-
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="validDelim" href="#validDelim">func validDelim(r rune) bool</a>
-
 ```
-searchKey: csv.validDelim
-tags: [private]
+tags: [package]
 ```
-
-```Go
-func validDelim(r rune) bool
-```
-
-### <a id="lengthNL" href="#lengthNL">func lengthNL(b []byte) int</a>
-
-```
-searchKey: csv.lengthNL
-tags: [private]
-```
-
-```Go
-func lengthNL(b []byte) int
-```
-
-lengthNL reports the number of bytes for the trailing \n. 
-
-### <a id="nextRune" href="#nextRune">func nextRune(b []byte) rune</a>
-
-```
-searchKey: csv.nextRune
-tags: [private]
-```
-
-```Go
-func nextRune(b []byte) rune
-```
-
-nextRune returns the next rune in b or utf8.RuneError. 
-
-### <a id="TestRead" href="#TestRead">func TestRead(t *testing.T)</a>
-
-```
-searchKey: csv.TestRead
-tags: [private]
-```
-
-```Go
-func TestRead(t *testing.T)
-```
-
-### <a id="firstError" href="#firstError">func firstError(errs []error, positions [][][2]int, errPositions map[int][2]int) error</a>
-
-```
-searchKey: csv.firstError
-tags: [private]
-```
-
-```Go
-func firstError(errs []error, positions [][][2]int, errPositions map[int][2]int) error
-```
-
-firstError returns the first non-nil error in errs, with the position adjusted according to the error's index inside positions. 
-
-### <a id="errorWithPosition" href="#errorWithPosition">func errorWithPosition(err error, recNum int, positions [][][2]int, errPositions map[int][2]int) error</a>
-
-```
-searchKey: csv.errorWithPosition
-tags: [private]
-```
-
-```Go
-func errorWithPosition(err error, recNum int, positions [][][2]int, errPositions map[int][2]int) error
-```
-
-### <a id="makePositions" href="#makePositions">func makePositions(text string) ([][][2]int, map[int][2]int, string)</a>
-
-```
-searchKey: csv.makePositions
-tags: [private]
-```
-
-```Go
-func makePositions(text string) ([][][2]int, map[int][2]int, string)
-```
-
-makePositions returns the expected field positions of all the fields in text, the positions of any errors, and the text with the position markers removed. 
-
-The start of each field is marked with a § symbol; CSV lines are separated by ¶ symbols; Error positions are marked with ∑ symbols. 
-
-### <a id="benchmarkRead" href="#benchmarkRead">func benchmarkRead(b *testing.B, initReader func(*Reader), rows string)</a>
-
-```
-searchKey: csv.benchmarkRead
-tags: [private]
-```
-
-```Go
-func benchmarkRead(b *testing.B, initReader func(*Reader), rows string)
-```
-
-benchmarkRead measures reading the provided CSV rows data. initReader, if non-nil, modifies the Reader before it's used. 
 
 ### <a id="BenchmarkRead" href="#BenchmarkRead">func BenchmarkRead(b *testing.B)</a>
 
 ```
 searchKey: csv.BenchmarkRead
-tags: [private]
+tags: [method private benchmark]
 ```
 
 ```Go
 func BenchmarkRead(b *testing.B)
 ```
 
-### <a id="BenchmarkReadWithFieldsPerRecord" href="#BenchmarkReadWithFieldsPerRecord">func BenchmarkReadWithFieldsPerRecord(b *testing.B)</a>
-
-```
-searchKey: csv.BenchmarkReadWithFieldsPerRecord
-tags: [private]
-```
-
-```Go
-func BenchmarkReadWithFieldsPerRecord(b *testing.B)
-```
-
-### <a id="BenchmarkReadWithoutFieldsPerRecord" href="#BenchmarkReadWithoutFieldsPerRecord">func BenchmarkReadWithoutFieldsPerRecord(b *testing.B)</a>
-
-```
-searchKey: csv.BenchmarkReadWithoutFieldsPerRecord
-tags: [private]
-```
-
-```Go
-func BenchmarkReadWithoutFieldsPerRecord(b *testing.B)
-```
-
 ### <a id="BenchmarkReadLargeFields" href="#BenchmarkReadLargeFields">func BenchmarkReadLargeFields(b *testing.B)</a>
 
 ```
 searchKey: csv.BenchmarkReadLargeFields
-tags: [private]
+tags: [method private benchmark]
 ```
 
 ```Go
@@ -751,18 +663,29 @@ func BenchmarkReadLargeFields(b *testing.B)
 
 ```
 searchKey: csv.BenchmarkReadReuseRecord
-tags: [private]
+tags: [method private benchmark]
 ```
 
 ```Go
 func BenchmarkReadReuseRecord(b *testing.B)
 ```
 
+### <a id="BenchmarkReadReuseRecordLargeFields" href="#BenchmarkReadReuseRecordLargeFields">func BenchmarkReadReuseRecordLargeFields(b *testing.B)</a>
+
+```
+searchKey: csv.BenchmarkReadReuseRecordLargeFields
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkReadReuseRecordLargeFields(b *testing.B)
+```
+
 ### <a id="BenchmarkReadReuseRecordWithFieldsPerRecord" href="#BenchmarkReadReuseRecordWithFieldsPerRecord">func BenchmarkReadReuseRecordWithFieldsPerRecord(b *testing.B)</a>
 
 ```
 searchKey: csv.BenchmarkReadReuseRecordWithFieldsPerRecord
-tags: [private]
+tags: [method private benchmark]
 ```
 
 ```Go
@@ -773,54 +696,165 @@ func BenchmarkReadReuseRecordWithFieldsPerRecord(b *testing.B)
 
 ```
 searchKey: csv.BenchmarkReadReuseRecordWithoutFieldsPerRecord
-tags: [private]
+tags: [method private benchmark]
 ```
 
 ```Go
 func BenchmarkReadReuseRecordWithoutFieldsPerRecord(b *testing.B)
 ```
 
-### <a id="BenchmarkReadReuseRecordLargeFields" href="#BenchmarkReadReuseRecordLargeFields">func BenchmarkReadReuseRecordLargeFields(b *testing.B)</a>
+### <a id="BenchmarkReadWithFieldsPerRecord" href="#BenchmarkReadWithFieldsPerRecord">func BenchmarkReadWithFieldsPerRecord(b *testing.B)</a>
 
 ```
-searchKey: csv.BenchmarkReadReuseRecordLargeFields
-tags: [private]
-```
-
-```Go
-func BenchmarkReadReuseRecordLargeFields(b *testing.B)
-```
-
-### <a id="TestWrite" href="#TestWrite">func TestWrite(t *testing.T)</a>
-
-```
-searchKey: csv.TestWrite
-tags: [private]
+searchKey: csv.BenchmarkReadWithFieldsPerRecord
+tags: [method private benchmark]
 ```
 
 ```Go
-func TestWrite(t *testing.T)
+func BenchmarkReadWithFieldsPerRecord(b *testing.B)
 ```
 
-### <a id="TestError" href="#TestError">func TestError(t *testing.T)</a>
+### <a id="BenchmarkReadWithoutFieldsPerRecord" href="#BenchmarkReadWithoutFieldsPerRecord">func BenchmarkReadWithoutFieldsPerRecord(b *testing.B)</a>
 
 ```
-searchKey: csv.TestError
-tags: [private]
+searchKey: csv.BenchmarkReadWithoutFieldsPerRecord
+tags: [method private benchmark]
 ```
 
 ```Go
-func TestError(t *testing.T)
+func BenchmarkReadWithoutFieldsPerRecord(b *testing.B)
 ```
 
 ### <a id="BenchmarkWrite" href="#BenchmarkWrite">func BenchmarkWrite(b *testing.B)</a>
 
 ```
 searchKey: csv.BenchmarkWrite
-tags: [private]
+tags: [method private benchmark]
 ```
 
 ```Go
 func BenchmarkWrite(b *testing.B)
+```
+
+### <a id="TestError" href="#TestError">func TestError(t *testing.T)</a>
+
+```
+searchKey: csv.TestError
+tags: [method private test]
+```
+
+```Go
+func TestError(t *testing.T)
+```
+
+### <a id="TestRead" href="#TestRead">func TestRead(t *testing.T)</a>
+
+```
+searchKey: csv.TestRead
+tags: [method private test]
+```
+
+```Go
+func TestRead(t *testing.T)
+```
+
+### <a id="TestWrite" href="#TestWrite">func TestWrite(t *testing.T)</a>
+
+```
+searchKey: csv.TestWrite
+tags: [method private test]
+```
+
+```Go
+func TestWrite(t *testing.T)
+```
+
+### <a id="benchmarkRead" href="#benchmarkRead">func benchmarkRead(b *testing.B, initReader func(*Reader), rows string)</a>
+
+```
+searchKey: csv.benchmarkRead
+tags: [method private]
+```
+
+```Go
+func benchmarkRead(b *testing.B, initReader func(*Reader), rows string)
+```
+
+benchmarkRead measures reading the provided CSV rows data. initReader, if non-nil, modifies the Reader before it's used. 
+
+### <a id="errorWithPosition" href="#errorWithPosition">func errorWithPosition(err error, recNum int, positions [][][2]int, errPositions map[int][2]int) error</a>
+
+```
+searchKey: csv.errorWithPosition
+tags: [method private]
+```
+
+```Go
+func errorWithPosition(err error, recNum int, positions [][][2]int, errPositions map[int][2]int) error
+```
+
+### <a id="firstError" href="#firstError">func firstError(errs []error, positions [][][2]int, errPositions map[int][2]int) error</a>
+
+```
+searchKey: csv.firstError
+tags: [method private]
+```
+
+```Go
+func firstError(errs []error, positions [][][2]int, errPositions map[int][2]int) error
+```
+
+firstError returns the first non-nil error in errs, with the position adjusted according to the error's index inside positions. 
+
+### <a id="lengthNL" href="#lengthNL">func lengthNL(b []byte) int</a>
+
+```
+searchKey: csv.lengthNL
+tags: [method private]
+```
+
+```Go
+func lengthNL(b []byte) int
+```
+
+lengthNL reports the number of bytes for the trailing \n. 
+
+### <a id="makePositions" href="#makePositions">func makePositions(text string) ([][][2]int, map[int][2]int, string)</a>
+
+```
+searchKey: csv.makePositions
+tags: [method private]
+```
+
+```Go
+func makePositions(text string) ([][][2]int, map[int][2]int, string)
+```
+
+makePositions returns the expected field positions of all the fields in text, the positions of any errors, and the text with the position markers removed. 
+
+The start of each field is marked with a § symbol; CSV lines are separated by ¶ symbols; Error positions are marked with ∑ symbols. 
+
+### <a id="nextRune" href="#nextRune">func nextRune(b []byte) rune</a>
+
+```
+searchKey: csv.nextRune
+tags: [method private]
+```
+
+```Go
+func nextRune(b []byte) rune
+```
+
+nextRune returns the next rune in b or utf8.RuneError. 
+
+### <a id="validDelim" href="#validDelim">func validDelim(r rune) bool</a>
+
+```
+searchKey: csv.validDelim
+tags: [method private]
+```
+
+```Go
+func validDelim(r rune) bool
 ```
 

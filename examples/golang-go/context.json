@@ -4,7 +4,9 @@
     "identifier": "context",
     "newPage": true,
     "searchKey": "context",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -41,6 +45,8 @@
                 "newPage": false,
                 "searchKey": "context.shortDuration",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -63,6 +69,8 @@
                 "newPage": false,
                 "searchKey": "context.veryLongDuration",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -87,7 +95,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -105,7 +115,10 @@
                 "identifier": "Canceled",
                 "newPage": false,
                 "searchKey": "context.Canceled",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -125,7 +138,10 @@
                 "identifier": "DeadlineExceeded",
                 "newPage": false,
                 "searchKey": "context.DeadlineExceeded",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -146,6 +162,8 @@
                 "newPage": false,
                 "searchKey": "context.background",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -162,56 +180,14 @@
           },
           {
             "node": {
-              "pathID": "/context#todo",
-              "documentation": {
-                "identifier": "todo",
-                "newPage": false,
-                "searchKey": "context.todo",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var todo"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar todo = new(emptyCtx)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#goroutines",
-              "documentation": {
-                "identifier": "goroutines",
-                "newPage": false,
-                "searchKey": "context.goroutines",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var goroutines"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar goroutines int32\n```\n\ngoroutines counts the number of goroutines ever created; for testing. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/context#cancelCtxKey",
               "documentation": {
                 "identifier": "cancelCtxKey",
                 "newPage": false,
                 "searchKey": "context.cancelCtxKey",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -234,6 +210,7 @@
                 "newPage": false,
                 "searchKey": "context.closedchan",
                 "tags": [
+                  "variable",
                   "private"
                 ]
               },
@@ -250,12 +227,38 @@
           },
           {
             "node": {
+              "pathID": "/context#goroutines",
+              "documentation": {
+                "identifier": "goroutines",
+                "newPage": false,
+                "searchKey": "context.goroutines",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var goroutines"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar goroutines int32\n```\n\ngoroutines counts the number of goroutines ever created; for testing. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/context#k1",
               "documentation": {
                 "identifier": "k1",
                 "newPage": false,
                 "searchKey": "context.k1",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -278,6 +281,8 @@
                 "newPage": false,
                 "searchKey": "context.k2",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -300,6 +305,8 @@
                 "newPage": false,
                 "searchKey": "context.k3",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -310,6 +317,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar k3 = key2(3) // same type as k2, different int\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#todo",
+              "documentation": {
+                "identifier": "todo",
+                "newPage": false,
+                "searchKey": "context.todo",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var todo"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar todo = new(emptyCtx)\n```\n\n"
               },
               "children": null
             }
@@ -324,7 +355,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -337,62 +370,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/context#Context",
+              "pathID": "/context#CancelFunc",
               "documentation": {
-                "identifier": "Context",
+                "identifier": "CancelFunc",
                 "newPage": false,
-                "searchKey": "context.Context",
-                "tags": null
+                "searchKey": "context.CancelFunc",
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type Context interface"
+                "value": "type CancelFunc func()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype Context interface {\n\t// Deadline returns the time when work done on behalf of this context\n\t// should be canceled. Deadline returns ok==false when no deadline is\n\t// set. Successive calls to Deadline return the same results.\n\tDeadline() (deadline time.Time, ok bool)\n\n\t// Done returns a channel that's closed when work done on behalf of this\n\t// context should be canceled. Done may return nil if this context can\n\t// never be canceled. Successive calls to Done return the same value.\n\t// The close of the Done channel may happen asynchronously,\n\t// after the cancel function returns.\n\t//\n\t// WithCancel arranges for Done to be closed when cancel is called;\n\t// WithDeadline arranges for Done to be closed when the deadline\n\t// expires; WithTimeout arranges for Done to be closed when the timeout\n\t// elapses.\n\t//\n\t// Done is provided for use in select statements:\n\t//\n\t//  // Stream generates values with DoSomething and sends them to out\n\t//  // until DoSomething returns an error or ctx.Done is closed.\n\t//  func Stream(ctx context.Context, out chan<- Value) error {\n\t//  \tfor {\n\t//  \t\tv, err := DoSomething(ctx)\n\t//  \t\tif err != nil {\n\t//  \t\t\treturn err\n\t//  \t\t}\n\t//  \t\tselect {\n\t//  \t\tcase <-ctx.Done():\n\t//  \t\t\treturn ctx.Err()\n\t//  \t\tcase out <- v:\n\t//  \t\t}\n\t//  \t}\n\t//  }\n\t//\n\t// See https://blog.golang.org/pipelines for more examples of how to use\n\t// a Done channel for cancellation.\n\tDone() <-chan struct{}\n\n\t// If Done is not yet closed, Err returns nil.\n\t// If Done is closed, Err returns a non-nil error explaining why:\n\t// Canceled if the context was canceled\n\t// or DeadlineExceeded if the context's deadline passed.\n\t// After Err returns a non-nil error, successive calls to Err return the same error.\n\tErr() error\n\n\t// Value returns the value associated with this context for key, or nil\n\t// if no value is associated with key. Successive calls to Value with\n\t// the same key returns the same result.\n\t//\n\t// Use context values only for request-scoped data that transits\n\t// processes and API boundaries, not for passing optional parameters to\n\t// functions.\n\t//\n\t// A key identifies a specific value in a Context. Functions that wish\n\t// to store values in Context typically allocate a key in a global\n\t// variable then use that key as the argument to context.WithValue and\n\t// Context.Value. A key can be any type that supports equality;\n\t// packages should define keys as an unexported type to avoid\n\t// collisions.\n\t//\n\t// Packages that define a Context key should provide type-safe accessors\n\t// for the values stored using that key:\n\t//\n\t// \t// Package user defines a User type that's stored in Contexts.\n\t// \tpackage user\n\t//\n\t// \timport \"context\"\n\t//\n\t// \t// User is the type of value stored in the Contexts.\n\t// \ttype User struct {...}\n\t//\n\t// \t// key is an unexported type for keys defined in this package.\n\t// \t// This prevents collisions with keys defined in other packages.\n\t// \ttype key int\n\t//\n\t// \t// userKey is the key for user.User values in Contexts. It is\n\t// \t// unexported; clients use user.NewContext and user.FromContext\n\t// \t// instead of using this key directly.\n\t// \tvar userKey key\n\t//\n\t// \t// NewContext returns a new Context that carries value u.\n\t// \tfunc NewContext(ctx context.Context, u *User) context.Context {\n\t// \t\treturn context.WithValue(ctx, userKey, u)\n\t// \t}\n\t//\n\t// \t// FromContext returns the User value stored in ctx, if any.\n\t// \tfunc FromContext(ctx context.Context) (*User, bool) {\n\t// \t\tu, ok := ctx.Value(userKey).(*User)\n\t// \t\treturn u, ok\n\t// \t}\n\tValue(key interface{}) interface{}\n}\n```\n\nA Context carries a deadline, a cancellation signal, and other values across API boundaries. \n\nContext's methods may be called by multiple goroutines simultaneously. \n\n"
+                "value": "```Go\ntype CancelFunc func()\n```\n\nA CancelFunc tells an operation to abandon its work. A CancelFunc does not wait for the work to stop. A CancelFunc may be called by multiple goroutines simultaneously. After the first call, subsequent calls to a CancelFunc do nothing. \n\n"
               },
               "children": [
-                {
-                  "node": {
-                    "pathID": "/context#Background",
-                    "documentation": {
-                      "identifier": "Background",
-                      "newPage": false,
-                      "searchKey": "context.Background",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func Background() Context"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc Background() Context\n```\n\nBackground returns a non-nil, empty Context. It is never canceled, has no values, and has no deadline. It is typically used by the main function, initialization, and tests, and as the top-level Context for incoming requests. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/context#TODO",
-                    "documentation": {
-                      "identifier": "TODO",
-                      "newPage": false,
-                      "searchKey": "context.TODO",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func TODO() Context"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc TODO() Context\n```\n\nTODO returns a non-nil, empty Context. Code should use context.TODO when it's unclear which Context to use or it is not yet available (because the surrounding function has not yet been extended to accept a Context parameter). \n\n"
-                    },
-                    "children": null
-                  }
-                },
                 {
                   "node": {
                     "pathID": "/context#WithCancel",
@@ -400,7 +395,9 @@
                       "identifier": "WithCancel",
                       "newPage": false,
                       "searchKey": "context.WithCancel",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -420,7 +417,9 @@
                       "identifier": "WithDeadline",
                       "newPage": false,
                       "searchKey": "context.WithDeadline",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -440,7 +439,9 @@
                       "identifier": "WithTimeout",
                       "newPage": false,
                       "searchKey": "context.WithTimeout",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -452,6 +453,73 @@
                     },
                     "children": null
                   }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#Context",
+              "documentation": {
+                "identifier": "Context",
+                "newPage": false,
+                "searchKey": "context.Context",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Context interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Context interface {\n\t// Deadline returns the time when work done on behalf of this context\n\t// should be canceled. Deadline returns ok==false when no deadline is\n\t// set. Successive calls to Deadline return the same results.\n\tDeadline() (deadline time.Time, ok bool)\n\n\t// Done returns a channel that's closed when work done on behalf of this\n\t// context should be canceled. Done may return nil if this context can\n\t// never be canceled. Successive calls to Done return the same value.\n\t// The close of the Done channel may happen asynchronously,\n\t// after the cancel function returns.\n\t//\n\t// WithCancel arranges for Done to be closed when cancel is called;\n\t// WithDeadline arranges for Done to be closed when the deadline\n\t// expires; WithTimeout arranges for Done to be closed when the timeout\n\t// elapses.\n\t//\n\t// Done is provided for use in select statements:\n\t//\n\t//  // Stream generates values with DoSomething and sends them to out\n\t//  // until DoSomething returns an error or ctx.Done is closed.\n\t//  func Stream(ctx context.Context, out chan<- Value) error {\n\t//  \tfor {\n\t//  \t\tv, err := DoSomething(ctx)\n\t//  \t\tif err != nil {\n\t//  \t\t\treturn err\n\t//  \t\t}\n\t//  \t\tselect {\n\t//  \t\tcase <-ctx.Done():\n\t//  \t\t\treturn ctx.Err()\n\t//  \t\tcase out <- v:\n\t//  \t\t}\n\t//  \t}\n\t//  }\n\t//\n\t// See https://blog.golang.org/pipelines for more examples of how to use\n\t// a Done channel for cancellation.\n\tDone() <-chan struct{}\n\n\t// If Done is not yet closed, Err returns nil.\n\t// If Done is closed, Err returns a non-nil error explaining why:\n\t// Canceled if the context was canceled\n\t// or DeadlineExceeded if the context's deadline passed.\n\t// After Err returns a non-nil error, successive calls to Err return the same error.\n\tErr() error\n\n\t// Value returns the value associated with this context for key, or nil\n\t// if no value is associated with key. Successive calls to Value with\n\t// the same key returns the same result.\n\t//\n\t// Use context values only for request-scoped data that transits\n\t// processes and API boundaries, not for passing optional parameters to\n\t// functions.\n\t//\n\t// A key identifies a specific value in a Context. Functions that wish\n\t// to store values in Context typically allocate a key in a global\n\t// variable then use that key as the argument to context.WithValue and\n\t// Context.Value. A key can be any type that supports equality;\n\t// packages should define keys as an unexported type to avoid\n\t// collisions.\n\t//\n\t// Packages that define a Context key should provide type-safe accessors\n\t// for the values stored using that key:\n\t//\n\t// \t// Package user defines a User type that's stored in Contexts.\n\t// \tpackage user\n\t//\n\t// \timport \"context\"\n\t//\n\t// \t// User is the type of value stored in the Contexts.\n\t// \ttype User struct {...}\n\t//\n\t// \t// key is an unexported type for keys defined in this package.\n\t// \t// This prevents collisions with keys defined in other packages.\n\t// \ttype key int\n\t//\n\t// \t// userKey is the key for user.User values in Contexts. It is\n\t// \t// unexported; clients use user.NewContext and user.FromContext\n\t// \t// instead of using this key directly.\n\t// \tvar userKey key\n\t//\n\t// \t// NewContext returns a new Context that carries value u.\n\t// \tfunc NewContext(ctx context.Context, u *User) context.Context {\n\t// \t\treturn context.WithValue(ctx, userKey, u)\n\t// \t}\n\t//\n\t// \t// FromContext returns the User value stored in ctx, if any.\n\t// \tfunc FromContext(ctx context.Context) (*User, bool) {\n\t// \t\tu, ok := ctx.Value(userKey).(*User)\n\t// \t\treturn u, ok\n\t// \t}\n\tValue(key interface{}) interface{}\n}\n```\n\nA Context carries a deadline, a cancellation signal, and other values across API boundaries. \n\nContext's methods may be called by multiple goroutines simultaneously. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/context#Background",
+                    "documentation": {
+                      "identifier": "Background",
+                      "newPage": false,
+                      "searchKey": "context.Background",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Background() Context"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Background() Context\n```\n\nBackground returns a non-nil, empty Context. It is never canceled, has no values, and has no deadline. It is typically used by the main function, initialization, and tests, and as the top-level Context for incoming requests. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/context#TODO",
+                    "documentation": {
+                      "identifier": "TODO",
+                      "newPage": false,
+                      "searchKey": "context.TODO",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func TODO() Context"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc TODO() Context\n```\n\nTODO returns a non-nil, empty Context. Code should use context.TODO when it's unclear which Context to use or it is not yet available (because the surrounding function has not yet been extended to accept a Context parameter). \n\n"
+                    },
+                    "children": null
+                  }
                 },
                 {
                   "node": {
@@ -460,7 +528,9 @@
                       "identifier": "WithValue",
                       "newPage": false,
                       "searchKey": "context.WithValue",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -478,276 +548,13 @@
           },
           {
             "node": {
-              "pathID": "/context#deadlineExceededError",
-              "documentation": {
-                "identifier": "deadlineExceededError",
-                "newPage": false,
-                "searchKey": "context.deadlineExceededError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type deadlineExceededError struct{}"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype deadlineExceededError struct{}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/context#deadlineExceededError.Error",
-                    "documentation": {
-                      "identifier": "deadlineExceededError.Error",
-                      "newPage": false,
-                      "searchKey": "context.deadlineExceededError.Error",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (deadlineExceededError) Error() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (deadlineExceededError) Error() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/context#deadlineExceededError.Timeout",
-                    "documentation": {
-                      "identifier": "deadlineExceededError.Timeout",
-                      "newPage": false,
-                      "searchKey": "context.deadlineExceededError.Timeout",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (deadlineExceededError) Timeout() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (deadlineExceededError) Timeout() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/context#deadlineExceededError.Temporary",
-                    "documentation": {
-                      "identifier": "deadlineExceededError.Temporary",
-                      "newPage": false,
-                      "searchKey": "context.deadlineExceededError.Temporary",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (deadlineExceededError) Temporary() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (deadlineExceededError) Temporary() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#emptyCtx",
-              "documentation": {
-                "identifier": "emptyCtx",
-                "newPage": false,
-                "searchKey": "context.emptyCtx",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type emptyCtx int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype emptyCtx int\n```\n\nAn emptyCtx is never canceled, has no values, and has no deadline. It is not struct{}, since vars of this type must have distinct addresses. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/context#emptyCtx.Deadline",
-                    "documentation": {
-                      "identifier": "emptyCtx.Deadline",
-                      "newPage": false,
-                      "searchKey": "context.emptyCtx.Deadline",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*emptyCtx) Deadline() (deadline time.Time, ok bool)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*emptyCtx) Deadline() (deadline time.Time, ok bool)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/context#emptyCtx.Done",
-                    "documentation": {
-                      "identifier": "emptyCtx.Done",
-                      "newPage": false,
-                      "searchKey": "context.emptyCtx.Done",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*emptyCtx) Done() <-chan struct{}"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*emptyCtx) Done() <-chan struct{}\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/context#emptyCtx.Err",
-                    "documentation": {
-                      "identifier": "emptyCtx.Err",
-                      "newPage": false,
-                      "searchKey": "context.emptyCtx.Err",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*emptyCtx) Err() error"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*emptyCtx) Err() error\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/context#emptyCtx.Value",
-                    "documentation": {
-                      "identifier": "emptyCtx.Value",
-                      "newPage": false,
-                      "searchKey": "context.emptyCtx.Value",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (*emptyCtx) Value(key interface{}) interface{}"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (*emptyCtx) Value(key interface{}) interface{}\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/context#emptyCtx.String",
-                    "documentation": {
-                      "identifier": "emptyCtx.String",
-                      "newPage": false,
-                      "searchKey": "context.emptyCtx.String",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (e *emptyCtx) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (e *emptyCtx) String() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#CancelFunc",
-              "documentation": {
-                "identifier": "CancelFunc",
-                "newPage": false,
-                "searchKey": "context.CancelFunc",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type CancelFunc func()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype CancelFunc func()\n```\n\nA CancelFunc tells an operation to abandon its work. A CancelFunc does not wait for the work to stop. A CancelFunc may be called by multiple goroutines simultaneously. After the first call, subsequent calls to a CancelFunc do nothing. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#canceler",
-              "documentation": {
-                "identifier": "canceler",
-                "newPage": false,
-                "searchKey": "context.canceler",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type canceler interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype canceler interface {\n\tcancel(removeFromParent bool, err error)\n\tDone() <-chan struct{}\n}\n```\n\nA canceler is a context type that can be canceled directly. The implementations are *cancelCtx and *timerCtx. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/context#cancelCtx",
               "documentation": {
                 "identifier": "cancelCtx",
                 "newPage": false,
                 "searchKey": "context.cancelCtx",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -768,6 +575,7 @@
                       "newPage": false,
                       "searchKey": "context.newCancelCtx",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -790,6 +598,7 @@
                       "newPage": false,
                       "searchKey": "context.parentCancelCtx",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -806,34 +615,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/context#cancelCtx.Value",
-                    "documentation": {
-                      "identifier": "cancelCtx.Value",
-                      "newPage": false,
-                      "searchKey": "context.cancelCtx.Value",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *cancelCtx) Value(key interface{}) interface{}"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *cancelCtx) Value(key interface{}) interface{}\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/context#cancelCtx.Done",
                     "documentation": {
                       "identifier": "cancelCtx.Done",
                       "newPage": false,
                       "searchKey": "context.cancelCtx.Done",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -856,6 +644,7 @@
                       "newPage": false,
                       "searchKey": "context.cancelCtx.Err",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -878,6 +667,7 @@
                       "newPage": false,
                       "searchKey": "context.cancelCtx.String",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -894,12 +684,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/context#cancelCtx.Value",
+                    "documentation": {
+                      "identifier": "cancelCtx.Value",
+                      "newPage": false,
+                      "searchKey": "context.cancelCtx.Value",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *cancelCtx) Value(key interface{}) interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *cancelCtx) Value(key interface{}) interface{}\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/context#cancelCtx.cancel",
                     "documentation": {
                       "identifier": "cancelCtx.cancel",
                       "newPage": false,
                       "searchKey": "context.cancelCtx.cancel",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -919,12 +733,407 @@
           },
           {
             "node": {
+              "pathID": "/context#canceler",
+              "documentation": {
+                "identifier": "canceler",
+                "newPage": false,
+                "searchKey": "context.canceler",
+                "tags": [
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type canceler interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype canceler interface {\n\tcancel(removeFromParent bool, err error)\n\tDone() <-chan struct{}\n}\n```\n\nA canceler is a context type that can be canceled directly. The implementations are *cancelCtx and *timerCtx. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#deadlineExceededError",
+              "documentation": {
+                "identifier": "deadlineExceededError",
+                "newPage": false,
+                "searchKey": "context.deadlineExceededError",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type deadlineExceededError struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype deadlineExceededError struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/context#deadlineExceededError.Error",
+                    "documentation": {
+                      "identifier": "deadlineExceededError.Error",
+                      "newPage": false,
+                      "searchKey": "context.deadlineExceededError.Error",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (deadlineExceededError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (deadlineExceededError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/context#deadlineExceededError.Temporary",
+                    "documentation": {
+                      "identifier": "deadlineExceededError.Temporary",
+                      "newPage": false,
+                      "searchKey": "context.deadlineExceededError.Temporary",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (deadlineExceededError) Temporary() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (deadlineExceededError) Temporary() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/context#deadlineExceededError.Timeout",
+                    "documentation": {
+                      "identifier": "deadlineExceededError.Timeout",
+                      "newPage": false,
+                      "searchKey": "context.deadlineExceededError.Timeout",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (deadlineExceededError) Timeout() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (deadlineExceededError) Timeout() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#emptyCtx",
+              "documentation": {
+                "identifier": "emptyCtx",
+                "newPage": false,
+                "searchKey": "context.emptyCtx",
+                "tags": [
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type emptyCtx int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype emptyCtx int\n```\n\nAn emptyCtx is never canceled, has no values, and has no deadline. It is not struct{}, since vars of this type must have distinct addresses. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/context#emptyCtx.Deadline",
+                    "documentation": {
+                      "identifier": "emptyCtx.Deadline",
+                      "newPage": false,
+                      "searchKey": "context.emptyCtx.Deadline",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*emptyCtx) Deadline() (deadline time.Time, ok bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*emptyCtx) Deadline() (deadline time.Time, ok bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/context#emptyCtx.Done",
+                    "documentation": {
+                      "identifier": "emptyCtx.Done",
+                      "newPage": false,
+                      "searchKey": "context.emptyCtx.Done",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*emptyCtx) Done() <-chan struct{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*emptyCtx) Done() <-chan struct{}\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/context#emptyCtx.Err",
+                    "documentation": {
+                      "identifier": "emptyCtx.Err",
+                      "newPage": false,
+                      "searchKey": "context.emptyCtx.Err",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*emptyCtx) Err() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*emptyCtx) Err() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/context#emptyCtx.String",
+                    "documentation": {
+                      "identifier": "emptyCtx.String",
+                      "newPage": false,
+                      "searchKey": "context.emptyCtx.String",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *emptyCtx) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *emptyCtx) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/context#emptyCtx.Value",
+                    "documentation": {
+                      "identifier": "emptyCtx.Value",
+                      "newPage": false,
+                      "searchKey": "context.emptyCtx.Value",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*emptyCtx) Value(key interface{}) interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*emptyCtx) Value(key interface{}) interface{}\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#key1",
+              "documentation": {
+                "identifier": "key1",
+                "newPage": false,
+                "searchKey": "context.key1",
+                "tags": [
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type key1 int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype key1 int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#key2",
+              "documentation": {
+                "identifier": "key2",
+                "newPage": false,
+                "searchKey": "context.key2",
+                "tags": [
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type key2 int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype key2 int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#myCtx",
+              "documentation": {
+                "identifier": "myCtx",
+                "newPage": false,
+                "searchKey": "context.myCtx",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type myCtx struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype myCtx struct {\n\tContext\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#myDoneCtx",
+              "documentation": {
+                "identifier": "myDoneCtx",
+                "newPage": false,
+                "searchKey": "context.myDoneCtx",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type myDoneCtx struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype myDoneCtx struct {\n\tContext\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/context#myDoneCtx.Done",
+                    "documentation": {
+                      "identifier": "myDoneCtx.Done",
+                      "newPage": false,
+                      "searchKey": "context.myDoneCtx.Done",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *myDoneCtx) Done() <-chan struct{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *myDoneCtx) Done() <-chan struct{}\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#otherContext",
+              "documentation": {
+                "identifier": "otherContext",
+                "newPage": false,
+                "searchKey": "context.otherContext",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type otherContext struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype otherContext struct {\n\tContext\n}\n```\n\notherContext is a Context that's not one of the types defined in context.go. This lets us test code paths that differ based on the underlying type of the Context. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/context#stringer",
               "documentation": {
                 "identifier": "stringer",
                 "newPage": false,
                 "searchKey": "context.stringer",
                 "tags": [
+                  "interface",
                   "private"
                 ]
               },
@@ -941,12 +1150,36 @@
           },
           {
             "node": {
+              "pathID": "/context#testingT",
+              "documentation": {
+                "identifier": "testingT",
+                "newPage": false,
+                "searchKey": "context.testingT",
+                "tags": [
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type testingT interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype testingT interface {\n\tDeadline() (time.Time, bool)\n\tError(args ...interface{})\n\tErrorf(format string, args ...interface{})\n\tFail()\n\tFailNow()\n\tFailed() bool\n\tFatal(args ...interface{})\n\tFatalf(format string, args ...interface{})\n\tHelper()\n\tLog(args ...interface{})\n\tLogf(format string, args ...interface{})\n\tName() string\n\tParallel()\n\tSkip(args ...interface{})\n\tSkipNow()\n\tSkipf(format string, args ...interface{})\n\tSkipped() bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/context#timerCtx",
               "documentation": {
                 "identifier": "timerCtx",
                 "newPage": false,
                 "searchKey": "context.timerCtx",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -967,6 +1200,7 @@
                       "newPage": false,
                       "searchKey": "context.timerCtx.Deadline",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -989,6 +1223,7 @@
                       "newPage": false,
                       "searchKey": "context.timerCtx.String",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1011,6 +1246,7 @@
                       "newPage": false,
                       "searchKey": "context.timerCtx.cancel",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1036,6 +1272,7 @@
                 "newPage": false,
                 "searchKey": "context.valueCtx",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1056,6 +1293,7 @@
                       "newPage": false,
                       "searchKey": "context.valueCtx.String",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1078,6 +1316,7 @@
                       "newPage": false,
                       "searchKey": "context.valueCtx.Value",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1088,161 +1327,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (c *valueCtx) Value(key interface{}) interface{}\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#testingT",
-              "documentation": {
-                "identifier": "testingT",
-                "newPage": false,
-                "searchKey": "context.testingT",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type testingT interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype testingT interface {\n\tDeadline() (time.Time, bool)\n\tError(args ...interface{})\n\tErrorf(format string, args ...interface{})\n\tFail()\n\tFailNow()\n\tFailed() bool\n\tFatal(args ...interface{})\n\tFatalf(format string, args ...interface{})\n\tHelper()\n\tLog(args ...interface{})\n\tLogf(format string, args ...interface{})\n\tName() string\n\tParallel()\n\tSkip(args ...interface{})\n\tSkipNow()\n\tSkipf(format string, args ...interface{})\n\tSkipped() bool\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#otherContext",
-              "documentation": {
-                "identifier": "otherContext",
-                "newPage": false,
-                "searchKey": "context.otherContext",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type otherContext struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype otherContext struct {\n\tContext\n}\n```\n\notherContext is a Context that's not one of the types defined in context.go. This lets us test code paths that differ based on the underlying type of the Context. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#key1",
-              "documentation": {
-                "identifier": "key1",
-                "newPage": false,
-                "searchKey": "context.key1",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type key1 int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype key1 int\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#key2",
-              "documentation": {
-                "identifier": "key2",
-                "newPage": false,
-                "searchKey": "context.key2",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type key2 int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype key2 int\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#myCtx",
-              "documentation": {
-                "identifier": "myCtx",
-                "newPage": false,
-                "searchKey": "context.myCtx",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type myCtx struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype myCtx struct {\n\tContext\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#myDoneCtx",
-              "documentation": {
-                "identifier": "myDoneCtx",
-                "newPage": false,
-                "searchKey": "context.myDoneCtx",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type myDoneCtx struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype myDoneCtx struct {\n\tContext\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/context#myDoneCtx.Done",
-                    "documentation": {
-                      "identifier": "myDoneCtx.Done",
-                      "newPage": false,
-                      "searchKey": "context.myDoneCtx.Done",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d *myDoneCtx) Done() <-chan struct{}"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d *myDoneCtx) Done() <-chan struct{}\n```\n\n"
                     },
                     "children": null
                   }
@@ -1260,7 +1344,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1273,386 +1359,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/context#propagateCancel",
-              "documentation": {
-                "identifier": "propagateCancel",
-                "newPage": false,
-                "searchKey": "context.propagateCancel",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func propagateCancel(parent Context, child canceler)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc propagateCancel(parent Context, child canceler)\n```\n\npropagateCancel arranges for child to be canceled when parent is. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#removeChild",
-              "documentation": {
-                "identifier": "removeChild",
-                "newPage": false,
-                "searchKey": "context.removeChild",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func removeChild(parent Context, child canceler)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc removeChild(parent Context, child canceler)\n```\n\nremoveChild removes a context from its parent. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#init.context.go",
-              "documentation": {
-                "identifier": "init.context.go",
-                "newPage": false,
-                "searchKey": "context.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#contextName",
-              "documentation": {
-                "identifier": "contextName",
-                "newPage": false,
-                "searchKey": "context.contextName",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func contextName(c Context) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc contextName(c Context) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#stringify",
-              "documentation": {
-                "identifier": "stringify",
-                "newPage": false,
-                "searchKey": "context.stringify",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func stringify(v interface{}) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc stringify(v interface{}) string\n```\n\nstringify tries a bit to stringify v, without using fmt, since we don't want context depending on the unicode tables. This is only used by *valueCtx.String(). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#quiescent",
-              "documentation": {
-                "identifier": "quiescent",
-                "newPage": false,
-                "searchKey": "context.quiescent",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func quiescent(t testingT) time.Duration"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc quiescent(t testingT) time.Duration\n```\n\nquiescent returns an arbitrary duration by which the program should have completed any remaining work and reached a steady (idle) state. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#XTestBackground",
-              "documentation": {
-                "identifier": "XTestBackground",
-                "newPage": false,
-                "searchKey": "context.XTestBackground",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func XTestBackground(t testingT)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc XTestBackground(t testingT)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#XTestTODO",
-              "documentation": {
-                "identifier": "XTestTODO",
-                "newPage": false,
-                "searchKey": "context.XTestTODO",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func XTestTODO(t testingT)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc XTestTODO(t testingT)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#XTestWithCancel",
-              "documentation": {
-                "identifier": "XTestWithCancel",
-                "newPage": false,
-                "searchKey": "context.XTestWithCancel",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func XTestWithCancel(t testingT)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc XTestWithCancel(t testingT)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#contains",
-              "documentation": {
-                "identifier": "contains",
-                "newPage": false,
-                "searchKey": "context.contains",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func contains(m map[canceler]struct{}, key canceler) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc contains(m map[canceler]struct{}, key canceler) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#XTestParentFinishesChild",
-              "documentation": {
-                "identifier": "XTestParentFinishesChild",
-                "newPage": false,
-                "searchKey": "context.XTestParentFinishesChild",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func XTestParentFinishesChild(t testingT)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc XTestParentFinishesChild(t testingT)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#XTestChildFinishesFirst",
-              "documentation": {
-                "identifier": "XTestChildFinishesFirst",
-                "newPage": false,
-                "searchKey": "context.XTestChildFinishesFirst",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func XTestChildFinishesFirst(t testingT)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc XTestChildFinishesFirst(t testingT)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#testDeadline",
-              "documentation": {
-                "identifier": "testDeadline",
-                "newPage": false,
-                "searchKey": "context.testDeadline",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func testDeadline(c Context, name string, t testingT)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc testDeadline(c Context, name string, t testingT)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#XTestDeadline",
-              "documentation": {
-                "identifier": "XTestDeadline",
-                "newPage": false,
-                "searchKey": "context.XTestDeadline",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func XTestDeadline(t testingT)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc XTestDeadline(t testingT)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#XTestTimeout",
-              "documentation": {
-                "identifier": "XTestTimeout",
-                "newPage": false,
-                "searchKey": "context.XTestTimeout",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func XTestTimeout(t testingT)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc XTestTimeout(t testingT)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#XTestCanceledTimeout",
-              "documentation": {
-                "identifier": "XTestCanceledTimeout",
-                "newPage": false,
-                "searchKey": "context.XTestCanceledTimeout",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func XTestCanceledTimeout(t testingT)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc XTestCanceledTimeout(t testingT)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context#XTestValues",
-              "documentation": {
-                "identifier": "XTestValues",
-                "newPage": false,
-                "searchKey": "context.XTestValues",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func XTestValues(t testingT)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc XTestValues(t testingT)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/context#XTestAllocs",
               "documentation": {
                 "identifier": "XTestAllocs",
                 "newPage": false,
                 "searchKey": "context.XTestAllocs",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1669,22 +1382,161 @@
           },
           {
             "node": {
-              "pathID": "/context#XTestSimultaneousCancels",
+              "pathID": "/context#XTestBackground",
               "documentation": {
-                "identifier": "XTestSimultaneousCancels",
+                "identifier": "XTestBackground",
                 "newPage": false,
-                "searchKey": "context.XTestSimultaneousCancels",
+                "searchKey": "context.XTestBackground",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func XTestSimultaneousCancels(t testingT)"
+                "value": "func XTestBackground(t testingT)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc XTestSimultaneousCancels(t testingT)\n```\n\n"
+                "value": "```Go\nfunc XTestBackground(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#XTestCancelRemoves",
+              "documentation": {
+                "identifier": "XTestCancelRemoves",
+                "newPage": false,
+                "searchKey": "context.XTestCancelRemoves",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestCancelRemoves(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestCancelRemoves(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#XTestCanceledTimeout",
+              "documentation": {
+                "identifier": "XTestCanceledTimeout",
+                "newPage": false,
+                "searchKey": "context.XTestCanceledTimeout",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestCanceledTimeout(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestCanceledTimeout(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#XTestChildFinishesFirst",
+              "documentation": {
+                "identifier": "XTestChildFinishesFirst",
+                "newPage": false,
+                "searchKey": "context.XTestChildFinishesFirst",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestChildFinishesFirst(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestChildFinishesFirst(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#XTestCustomContextGoroutines",
+              "documentation": {
+                "identifier": "XTestCustomContextGoroutines",
+                "newPage": false,
+                "searchKey": "context.XTestCustomContextGoroutines",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestCustomContextGoroutines(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestCustomContextGoroutines(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#XTestDeadline",
+              "documentation": {
+                "identifier": "XTestDeadline",
+                "newPage": false,
+                "searchKey": "context.XTestDeadline",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestDeadline(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestDeadline(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#XTestDeadlineExceededSupportsTimeout",
+              "documentation": {
+                "identifier": "XTestDeadlineExceededSupportsTimeout",
+                "newPage": false,
+                "searchKey": "context.XTestDeadlineExceededSupportsTimeout",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestDeadlineExceededSupportsTimeout(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestDeadlineExceededSupportsTimeout(t testingT)\n```\n\n"
               },
               "children": null
             }
@@ -1697,6 +1549,7 @@
                 "newPage": false,
                 "searchKey": "context.XTestInterlockedCancels",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1713,12 +1566,36 @@
           },
           {
             "node": {
+              "pathID": "/context#XTestInvalidDerivedFail",
+              "documentation": {
+                "identifier": "XTestInvalidDerivedFail",
+                "newPage": false,
+                "searchKey": "context.XTestInvalidDerivedFail",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestInvalidDerivedFail(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestInvalidDerivedFail(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/context#XTestLayersCancel",
               "documentation": {
                 "identifier": "XTestLayersCancel",
                 "newPage": false,
                 "searchKey": "context.XTestLayersCancel",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1741,6 +1618,7 @@
                 "newPage": false,
                 "searchKey": "context.XTestLayersTimeout",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1757,44 +1635,138 @@
           },
           {
             "node": {
-              "pathID": "/context#testLayers",
+              "pathID": "/context#XTestParentFinishesChild",
               "documentation": {
-                "identifier": "testLayers",
+                "identifier": "XTestParentFinishesChild",
                 "newPage": false,
-                "searchKey": "context.testLayers",
+                "searchKey": "context.XTestParentFinishesChild",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func testLayers(t testingT, seed int64, testTimeout bool)"
+                "value": "func XTestParentFinishesChild(t testingT)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc testLayers(t testingT, seed int64, testTimeout bool)\n```\n\n"
+                "value": "```Go\nfunc XTestParentFinishesChild(t testingT)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/context#XTestCancelRemoves",
+              "pathID": "/context#XTestSimultaneousCancels",
               "documentation": {
-                "identifier": "XTestCancelRemoves",
+                "identifier": "XTestSimultaneousCancels",
                 "newPage": false,
-                "searchKey": "context.XTestCancelRemoves",
+                "searchKey": "context.XTestSimultaneousCancels",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func XTestCancelRemoves(t testingT)"
+                "value": "func XTestSimultaneousCancels(t testingT)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc XTestCancelRemoves(t testingT)\n```\n\n"
+                "value": "```Go\nfunc XTestSimultaneousCancels(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#XTestTODO",
+              "documentation": {
+                "identifier": "XTestTODO",
+                "newPage": false,
+                "searchKey": "context.XTestTODO",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestTODO(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestTODO(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#XTestTimeout",
+              "documentation": {
+                "identifier": "XTestTimeout",
+                "newPage": false,
+                "searchKey": "context.XTestTimeout",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestTimeout(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestTimeout(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#XTestValues",
+              "documentation": {
+                "identifier": "XTestValues",
+                "newPage": false,
+                "searchKey": "context.XTestValues",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestValues(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestValues(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#XTestWithCancel",
+              "documentation": {
+                "identifier": "XTestWithCancel",
+                "newPage": false,
+                "searchKey": "context.XTestWithCancel",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestWithCancel(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestWithCancel(t testingT)\n```\n\n"
               },
               "children": null
             }
@@ -1807,6 +1779,7 @@
                 "newPage": false,
                 "searchKey": "context.XTestWithCancelCanceledParent",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1829,6 +1802,7 @@
                 "newPage": false,
                 "searchKey": "context.XTestWithValueChecksKey",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1845,22 +1819,115 @@
           },
           {
             "node": {
-              "pathID": "/context#XTestInvalidDerivedFail",
+              "pathID": "/context#contains",
               "documentation": {
-                "identifier": "XTestInvalidDerivedFail",
+                "identifier": "contains",
                 "newPage": false,
-                "searchKey": "context.XTestInvalidDerivedFail",
+                "searchKey": "context.contains",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func XTestInvalidDerivedFail(t testingT)"
+                "value": "func contains(m map[canceler]struct{}, key canceler) bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc XTestInvalidDerivedFail(t testingT)\n```\n\n"
+                "value": "```Go\nfunc contains(m map[canceler]struct{}, key canceler) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#contextName",
+              "documentation": {
+                "identifier": "contextName",
+                "newPage": false,
+                "searchKey": "context.contextName",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func contextName(c Context) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc contextName(c Context) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#init.context.go",
+              "documentation": {
+                "identifier": "init.context.go",
+                "newPage": false,
+                "searchKey": "context.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#propagateCancel",
+              "documentation": {
+                "identifier": "propagateCancel",
+                "newPage": false,
+                "searchKey": "context.propagateCancel",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func propagateCancel(parent Context, child canceler)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc propagateCancel(parent Context, child canceler)\n```\n\npropagateCancel arranges for child to be canceled when parent is. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#quiescent",
+              "documentation": {
+                "identifier": "quiescent",
+                "newPage": false,
+                "searchKey": "context.quiescent",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func quiescent(t testingT) time.Duration"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc quiescent(t testingT) time.Duration\n```\n\nquiescent returns an arbitrary duration by which the program should have completed any remaining work and reached a steady (idle) state. \n\n"
               },
               "children": null
             }
@@ -1873,6 +1940,7 @@
                 "newPage": false,
                 "searchKey": "context.recoveredValue",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1889,44 +1957,92 @@
           },
           {
             "node": {
-              "pathID": "/context#XTestDeadlineExceededSupportsTimeout",
+              "pathID": "/context#removeChild",
               "documentation": {
-                "identifier": "XTestDeadlineExceededSupportsTimeout",
+                "identifier": "removeChild",
                 "newPage": false,
-                "searchKey": "context.XTestDeadlineExceededSupportsTimeout",
+                "searchKey": "context.removeChild",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func XTestDeadlineExceededSupportsTimeout(t testingT)"
+                "value": "func removeChild(parent Context, child canceler)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc XTestDeadlineExceededSupportsTimeout(t testingT)\n```\n\n"
+                "value": "```Go\nfunc removeChild(parent Context, child canceler)\n```\n\nremoveChild removes a context from its parent. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/context#XTestCustomContextGoroutines",
+              "pathID": "/context#stringify",
               "documentation": {
-                "identifier": "XTestCustomContextGoroutines",
+                "identifier": "stringify",
                 "newPage": false,
-                "searchKey": "context.XTestCustomContextGoroutines",
+                "searchKey": "context.stringify",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func XTestCustomContextGoroutines(t testingT)"
+                "value": "func stringify(v interface{}) string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc XTestCustomContextGoroutines(t testingT)\n```\n\n"
+                "value": "```Go\nfunc stringify(v interface{}) string\n```\n\nstringify tries a bit to stringify v, without using fmt, since we don't want context depending on the unicode tables. This is only used by *valueCtx.String(). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#testDeadline",
+              "documentation": {
+                "identifier": "testDeadline",
+                "newPage": false,
+                "searchKey": "context.testDeadline",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testDeadline(c Context, name string, t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testDeadline(c Context, name string, t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context#testLayers",
+              "documentation": {
+                "identifier": "testLayers",
+                "newPage": false,
+                "searchKey": "context.testLayers",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testLayers(t testingT, seed int64, testTimeout bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testLayers(t testingT, seed int64, testTimeout bool)\n```\n\n"
               },
               "children": null
             }

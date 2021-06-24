@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "cmd/frontend/internal/auth/userpasswd",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "userpasswd.providerType",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -90,6 +95,8 @@
                 "newPage": false,
                 "searchKey": "userpasswd.resetPasswordEmailTemplates",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -112,6 +119,8 @@
                 "newPage": false,
                 "searchKey": "userpasswd.setPasswordEmailTemplates",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -137,6 +146,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -157,6 +167,7 @@
                 "newPage": false,
                 "searchKey": "userpasswd.credentials",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -179,6 +190,7 @@
                 "newPage": false,
                 "searchKey": "userpasswd.provider",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -193,22 +205,23 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/cmd/frontend/internal/auth/userpasswd#provider.ConfigID",
+                    "pathID": "/cmd/frontend/internal/auth/userpasswd#provider.CachedInfo",
                     "documentation": {
-                      "identifier": "provider.ConfigID",
+                      "identifier": "provider.CachedInfo",
                       "newPage": false,
-                      "searchKey": "userpasswd.provider.ConfigID",
+                      "searchKey": "userpasswd.provider.CachedInfo",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (provider) ConfigID() providers.ConfigID"
+                      "value": "func (p provider) CachedInfo() *providers.Info"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (provider) ConfigID() providers.ConfigID\n```\n\nConfigID implements providers.Provider. \n\n"
+                      "value": "```Go\nfunc (p provider) CachedInfo() *providers.Info\n```\n\nCachedInfo implements providers.Provider. \n\n"
                     },
                     "children": null
                   }
@@ -221,6 +234,7 @@
                       "newPage": false,
                       "searchKey": "userpasswd.provider.Config",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -237,12 +251,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/cmd/frontend/internal/auth/userpasswd#provider.ConfigID",
+                    "documentation": {
+                      "identifier": "provider.ConfigID",
+                      "newPage": false,
+                      "searchKey": "userpasswd.provider.ConfigID",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (provider) ConfigID() providers.ConfigID"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (provider) ConfigID() providers.ConfigID\n```\n\nConfigID implements providers.Provider. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/cmd/frontend/internal/auth/userpasswd#provider.Refresh",
                     "documentation": {
                       "identifier": "provider.Refresh",
                       "newPage": false,
                       "searchKey": "userpasswd.provider.Refresh",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -253,28 +291,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (p provider) Refresh(context.Context) error\n```\n\nRefresh implements providers.Provider. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/cmd/frontend/internal/auth/userpasswd#provider.CachedInfo",
-                    "documentation": {
-                      "identifier": "provider.CachedInfo",
-                      "newPage": false,
-                      "searchKey": "userpasswd.provider.CachedInfo",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p provider) CachedInfo() *providers.Info"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p provider) CachedInfo() *providers.Info\n```\n\nCachedInfo implements providers.Provider. \n\n"
                     },
                     "children": null
                   }
@@ -293,6 +309,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -307,12 +324,168 @@
         "children": [
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/auth/userpasswd#HandleCheckUsernameTaken",
+              "documentation": {
+                "identifier": "HandleCheckUsernameTaken",
+                "newPage": false,
+                "searchKey": "userpasswd.HandleCheckUsernameTaken",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HandleCheckUsernameTaken(db dbutil.DB) func(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HandleCheckUsernameTaken(db dbutil.DB) func(w http.ResponseWriter, r *http.Request)\n```\n\nCheck availability of username for signup form \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/auth/userpasswd#HandleResetPasswordCode",
+              "documentation": {
+                "identifier": "HandleResetPasswordCode",
+                "newPage": false,
+                "searchKey": "userpasswd.HandleResetPasswordCode",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HandleResetPasswordCode(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HandleResetPasswordCode(w http.ResponseWriter, r *http.Request)\n```\n\nHandleResetPasswordCode resets the password if the correct code is provided. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/auth/userpasswd#HandleResetPasswordInit",
+              "documentation": {
+                "identifier": "HandleResetPasswordInit",
+                "newPage": false,
+                "searchKey": "userpasswd.HandleResetPasswordInit",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HandleResetPasswordInit(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HandleResetPasswordInit(w http.ResponseWriter, r *http.Request)\n```\n\nHandleResetPasswordInit initiates the builtin-auth password reset flow by sending a password-reset email. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/auth/userpasswd#HandleSetPasswordEmail",
+              "documentation": {
+                "identifier": "HandleSetPasswordEmail",
+                "newPage": false,
+                "searchKey": "userpasswd.HandleSetPasswordEmail",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HandleSetPasswordEmail(ctx context.Context, id int32) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HandleSetPasswordEmail(ctx context.Context, id int32) (string, error)\n```\n\nHandleSetPasswordEmail sends the password reset email directly to the user for users created by site admins. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/auth/userpasswd#HandleSignIn",
+              "documentation": {
+                "identifier": "HandleSignIn",
+                "newPage": false,
+                "searchKey": "userpasswd.HandleSignIn",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HandleSignIn(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HandleSignIn(w http.ResponseWriter, r *http.Request)\n```\n\nHandleSignIn accepts a POST containing username-password credentials and authenticates the current session if the credentials are valid. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/auth/userpasswd#HandleSignUp",
+              "documentation": {
+                "identifier": "HandleSignUp",
+                "newPage": false,
+                "searchKey": "userpasswd.HandleSignUp",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HandleSignUp(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HandleSignUp(w http.ResponseWriter, r *http.Request)\n```\n\nHandleSignUp handles submission of the user signup form. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/auth/userpasswd#HandleSiteInit",
+              "documentation": {
+                "identifier": "HandleSiteInit",
+                "newPage": false,
+                "searchKey": "userpasswd.HandleSiteInit",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HandleSiteInit(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HandleSiteInit(w http.ResponseWriter, r *http.Request)\n```\n\nHandleSiteInit handles submission of the site initialization form, where the initial site admin user is created. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/auth/userpasswd#ResetPasswordEnabled",
               "documentation": {
                 "identifier": "ResetPasswordEnabled",
                 "newPage": false,
                 "searchKey": "userpasswd.ResetPasswordEnabled",
-                "tags": null
+                "tags": [
+                  "function"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -327,12 +500,131 @@
           },
           {
             "node": {
+              "pathID": "/cmd/frontend/internal/auth/userpasswd#TestCheckEmailAbuse",
+              "documentation": {
+                "identifier": "TestCheckEmailAbuse",
+                "newPage": false,
+                "searchKey": "userpasswd.TestCheckEmailAbuse",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCheckEmailAbuse(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCheckEmailAbuse(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/auth/userpasswd#TestHandleSetPasswordEmail",
+              "documentation": {
+                "identifier": "TestHandleSetPasswordEmail",
+                "newPage": false,
+                "searchKey": "userpasswd.TestHandleSetPasswordEmail",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHandleSetPasswordEmail(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHandleSetPasswordEmail(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/auth/userpasswd#TestValidateCustom",
+              "documentation": {
+                "identifier": "TestValidateCustom",
+                "newPage": false,
+                "searchKey": "userpasswd.TestValidateCustom",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestValidateCustom(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestValidateCustom(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/auth/userpasswd#checkEmailAbuse",
+              "documentation": {
+                "identifier": "checkEmailAbuse",
+                "newPage": false,
+                "searchKey": "userpasswd.checkEmailAbuse",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkEmailAbuse(ctx context.Context, addr string) (abused bool, reason string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkEmailAbuse(ctx context.Context, addr string) (abused bool, reason string, err error)\n```\n\ncheckEmailAbuse performs abuse prevention checks to prevent email abuse, i.e. users using emails of other people whom they want to annoy. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/auth/userpasswd#getByEmailOrUsername",
+              "documentation": {
+                "identifier": "getByEmailOrUsername",
+                "newPage": false,
+                "searchKey": "userpasswd.getByEmailOrUsername",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getByEmailOrUsername(ctx context.Context, emailOrUsername string) (*types.User, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getByEmailOrUsername(ctx context.Context, emailOrUsername string) (*types.User, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/frontend/internal/auth/userpasswd#getProviderConfig",
               "documentation": {
                 "identifier": "getProviderConfig",
                 "newPage": false,
                 "searchKey": "userpasswd.getProviderConfig",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -355,6 +647,7 @@
                 "newPage": false,
                 "searchKey": "userpasswd.handleEnabledCheck",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -371,306 +664,13 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/auth/userpasswd#init.config.go",
-              "documentation": {
-                "identifier": "init.config.go",
-                "newPage": false,
-                "searchKey": "userpasswd.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/auth/userpasswd#validateConfig",
-              "documentation": {
-                "identifier": "validateConfig",
-                "newPage": false,
-                "searchKey": "userpasswd.validateConfig",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func validateConfig(c conf.Unified) (problems conf.Problems)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc validateConfig(c conf.Unified) (problems conf.Problems)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/auth/userpasswd#init.config_watch.go",
-              "documentation": {
-                "identifier": "init.config_watch.go",
-                "newPage": false,
-                "searchKey": "userpasswd.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\nWatch for configuration changes related to the builtin auth provider. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/auth/userpasswd#HandleSignUp",
-              "documentation": {
-                "identifier": "HandleSignUp",
-                "newPage": false,
-                "searchKey": "userpasswd.HandleSignUp",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func HandleSignUp(w http.ResponseWriter, r *http.Request)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc HandleSignUp(w http.ResponseWriter, r *http.Request)\n```\n\nHandleSignUp handles submission of the user signup form. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/auth/userpasswd#HandleSiteInit",
-              "documentation": {
-                "identifier": "HandleSiteInit",
-                "newPage": false,
-                "searchKey": "userpasswd.HandleSiteInit",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func HandleSiteInit(w http.ResponseWriter, r *http.Request)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc HandleSiteInit(w http.ResponseWriter, r *http.Request)\n```\n\nHandleSiteInit handles submission of the site initialization form, where the initial site admin user is created. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/auth/userpasswd#checkEmailAbuse",
-              "documentation": {
-                "identifier": "checkEmailAbuse",
-                "newPage": false,
-                "searchKey": "userpasswd.checkEmailAbuse",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func checkEmailAbuse(ctx context.Context, addr string) (abused bool, reason string, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc checkEmailAbuse(ctx context.Context, addr string) (abused bool, reason string, err error)\n```\n\ncheckEmailAbuse performs abuse prevention checks to prevent email abuse, i.e. users using emails of other people whom they want to annoy. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/auth/userpasswd#handleSignUp",
-              "documentation": {
-                "identifier": "handleSignUp",
-                "newPage": false,
-                "searchKey": "userpasswd.handleSignUp",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func handleSignUp(w http.ResponseWriter, r *http.Request, failIfNewUserIsNotInitialSiteAdmin bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc handleSignUp(w http.ResponseWriter, r *http.Request, failIfNewUserIsNotInitialSiteAdmin bool)\n```\n\ndoServeSignUp is called to create a new user account. It is called for the normal user signup process (where a non-admin user is created) and for the site initialization process (where the initial site admin user account is created). \n\n🚨 SECURITY: Any change to this function could introduce security exploits and/or break sign up / initial admin account creation. Be careful. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/auth/userpasswd#getByEmailOrUsername",
-              "documentation": {
-                "identifier": "getByEmailOrUsername",
-                "newPage": false,
-                "searchKey": "userpasswd.getByEmailOrUsername",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func getByEmailOrUsername(ctx context.Context, emailOrUsername string) (*types.User, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc getByEmailOrUsername(ctx context.Context, emailOrUsername string) (*types.User, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/auth/userpasswd#HandleSignIn",
-              "documentation": {
-                "identifier": "HandleSignIn",
-                "newPage": false,
-                "searchKey": "userpasswd.HandleSignIn",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func HandleSignIn(w http.ResponseWriter, r *http.Request)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc HandleSignIn(w http.ResponseWriter, r *http.Request)\n```\n\nHandleSignIn accepts a POST containing username-password credentials and authenticates the current session if the credentials are valid. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/auth/userpasswd#HandleCheckUsernameTaken",
-              "documentation": {
-                "identifier": "HandleCheckUsernameTaken",
-                "newPage": false,
-                "searchKey": "userpasswd.HandleCheckUsernameTaken",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func HandleCheckUsernameTaken(db dbutil.DB) func(w http.ResponseWriter, r *http.Request)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc HandleCheckUsernameTaken(db dbutil.DB) func(w http.ResponseWriter, r *http.Request)\n```\n\nCheck availability of username for signup form \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/auth/userpasswd#httpLogAndError",
-              "documentation": {
-                "identifier": "httpLogAndError",
-                "newPage": false,
-                "searchKey": "userpasswd.httpLogAndError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func httpLogAndError(w http.ResponseWriter, msg string, code int, errArgs ...interface{})"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc httpLogAndError(w http.ResponseWriter, msg string, code int, errArgs ...interface{})\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/auth/userpasswd#HandleResetPasswordInit",
-              "documentation": {
-                "identifier": "HandleResetPasswordInit",
-                "newPage": false,
-                "searchKey": "userpasswd.HandleResetPasswordInit",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func HandleResetPasswordInit(w http.ResponseWriter, r *http.Request)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc HandleResetPasswordInit(w http.ResponseWriter, r *http.Request)\n```\n\nHandleResetPasswordInit initiates the builtin-auth password reset flow by sending a password-reset email. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/auth/userpasswd#HandleSetPasswordEmail",
-              "documentation": {
-                "identifier": "HandleSetPasswordEmail",
-                "newPage": false,
-                "searchKey": "userpasswd.HandleSetPasswordEmail",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func HandleSetPasswordEmail(ctx context.Context, id int32) (string, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc HandleSetPasswordEmail(ctx context.Context, id int32) (string, error)\n```\n\nHandleSetPasswordEmail sends the password reset email directly to the user for users created by site admins. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/cmd/frontend/internal/auth/userpasswd#HandleResetPasswordCode",
-              "documentation": {
-                "identifier": "HandleResetPasswordCode",
-                "newPage": false,
-                "searchKey": "userpasswd.HandleResetPasswordCode",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func HandleResetPasswordCode(w http.ResponseWriter, r *http.Request)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc HandleResetPasswordCode(w http.ResponseWriter, r *http.Request)\n```\n\nHandleResetPasswordCode resets the password if the correct code is provided. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/frontend/internal/auth/userpasswd#handleNotAuthenticatedCheck",
               "documentation": {
                 "identifier": "handleNotAuthenticatedCheck",
                 "newPage": false,
                 "searchKey": "userpasswd.handleNotAuthenticatedCheck",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -687,66 +687,115 @@
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/auth/userpasswd#TestValidateCustom",
+              "pathID": "/cmd/frontend/internal/auth/userpasswd#handleSignUp",
               "documentation": {
-                "identifier": "TestValidateCustom",
+                "identifier": "handleSignUp",
                 "newPage": false,
-                "searchKey": "userpasswd.TestValidateCustom",
+                "searchKey": "userpasswd.handleSignUp",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestValidateCustom(t *testing.T)"
+                "value": "func handleSignUp(w http.ResponseWriter, r *http.Request, failIfNewUserIsNotInitialSiteAdmin bool)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestValidateCustom(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc handleSignUp(w http.ResponseWriter, r *http.Request, failIfNewUserIsNotInitialSiteAdmin bool)\n```\n\ndoServeSignUp is called to create a new user account. It is called for the normal user signup process (where a non-admin user is created) and for the site initialization process (where the initial site admin user account is created). \n\n🚨 SECURITY: Any change to this function could introduce security exploits and/or break sign up / initial admin account creation. Be careful. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/auth/userpasswd#TestCheckEmailAbuse",
+              "pathID": "/cmd/frontend/internal/auth/userpasswd#httpLogAndError",
               "documentation": {
-                "identifier": "TestCheckEmailAbuse",
+                "identifier": "httpLogAndError",
                 "newPage": false,
-                "searchKey": "userpasswd.TestCheckEmailAbuse",
+                "searchKey": "userpasswd.httpLogAndError",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestCheckEmailAbuse(t *testing.T)"
+                "value": "func httpLogAndError(w http.ResponseWriter, msg string, code int, errArgs ...interface{})"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestCheckEmailAbuse(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc httpLogAndError(w http.ResponseWriter, msg string, code int, errArgs ...interface{})\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/cmd/frontend/internal/auth/userpasswd#TestHandleSetPasswordEmail",
+              "pathID": "/cmd/frontend/internal/auth/userpasswd#init.config.go",
               "documentation": {
-                "identifier": "TestHandleSetPasswordEmail",
+                "identifier": "init.config.go",
                 "newPage": false,
-                "searchKey": "userpasswd.TestHandleSetPasswordEmail",
+                "searchKey": "userpasswd.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestHandleSetPasswordEmail(t *testing.T)"
+                "value": "func init()"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestHandleSetPasswordEmail(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/auth/userpasswd#init.config_watch.go",
+              "documentation": {
+                "identifier": "init.config_watch.go",
+                "newPage": false,
+                "searchKey": "userpasswd.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\nWatch for configuration changes related to the builtin auth provider. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/auth/userpasswd#validateConfig",
+              "documentation": {
+                "identifier": "validateConfig",
+                "newPage": false,
+                "searchKey": "userpasswd.validateConfig",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func validateConfig(c conf.Unified) (problems conf.Problems)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc validateConfig(c conf.Unified) (problems conf.Problems)\n```\n\n"
               },
               "children": null
             }

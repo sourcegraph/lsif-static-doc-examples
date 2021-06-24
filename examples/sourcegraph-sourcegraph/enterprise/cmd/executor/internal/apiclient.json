@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/cmd/executor/internal/apiclient",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,9 @@
                 "identifier": "BaseClient",
                 "newPage": false,
                 "searchKey": "apiclient.BaseClient",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -62,7 +66,9 @@
                       "identifier": "NewBaseClient",
                       "newPage": false,
                       "searchKey": "apiclient.NewBaseClient",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -82,7 +88,9 @@
                       "identifier": "BaseClient.Do",
                       "newPage": false,
                       "searchKey": "apiclient.BaseClient.Do",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -102,7 +110,9 @@
                       "identifier": "BaseClient.DoAndDecode",
                       "newPage": false,
                       "searchKey": "apiclient.BaseClient.DoAndDecode",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -122,7 +132,9 @@
                       "identifier": "BaseClient.DoAndDrop",
                       "newPage": false,
                       "searchKey": "apiclient.BaseClient.DoAndDrop",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -145,7 +157,9 @@
                 "identifier": "BaseClientOptions",
                 "newPage": false,
                 "searchKey": "apiclient.BaseClientOptions",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -165,7 +179,9 @@
                 "identifier": "Client",
                 "newPage": false,
                 "searchKey": "apiclient.Client",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -183,7 +199,9 @@
                       "identifier": "New",
                       "newPage": false,
                       "searchKey": "apiclient.New",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -198,32 +216,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/executor/internal/apiclient#Client.Dequeue",
-                    "documentation": {
-                      "identifier": "Client.Dequeue",
-                      "newPage": false,
-                      "searchKey": "apiclient.Client.Dequeue",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) Dequeue(ctx context.Context, queueName string, job *executor.Job) (_ bool, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) Dequeue(ctx context.Context, queueName string, job *executor.Job) (_ bool, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/cmd/executor/internal/apiclient#Client.AddExecutionLogEntry",
                     "documentation": {
                       "identifier": "Client.AddExecutionLogEntry",
                       "newPage": false,
                       "searchKey": "apiclient.Client.AddExecutionLogEntry",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -238,12 +238,58 @@
                 },
                 {
                   "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/apiclient#Client.Dequeue",
+                    "documentation": {
+                      "identifier": "Client.Dequeue",
+                      "newPage": false,
+                      "searchKey": "apiclient.Client.Dequeue",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) Dequeue(ctx context.Context, queueName string, job *executor.Job) (_ bool, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) Dequeue(ctx context.Context, queueName string, job *executor.Job) (_ bool, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/apiclient#Client.Heartbeat",
+                    "documentation": {
+                      "identifier": "Client.Heartbeat",
+                      "newPage": false,
+                      "searchKey": "apiclient.Client.Heartbeat",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) Heartbeat(ctx context.Context, jobIDs []int) (unknownIDs []int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) Heartbeat(ctx context.Context, jobIDs []int) (unknownIDs []int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/enterprise/cmd/executor/internal/apiclient#Client.MarkComplete",
                     "documentation": {
                       "identifier": "Client.MarkComplete",
                       "newPage": false,
                       "searchKey": "apiclient.Client.MarkComplete",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -263,7 +309,9 @@
                       "identifier": "Client.MarkErrored",
                       "newPage": false,
                       "searchKey": "apiclient.Client.MarkErrored",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -283,7 +331,9 @@
                       "identifier": "Client.MarkFailed",
                       "newPage": false,
                       "searchKey": "apiclient.Client.MarkFailed",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -303,7 +353,9 @@
                       "identifier": "Client.Ping",
                       "newPage": false,
                       "searchKey": "apiclient.Client.Ping",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -318,32 +370,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/executor/internal/apiclient#Client.Heartbeat",
-                    "documentation": {
-                      "identifier": "Client.Heartbeat",
-                      "newPage": false,
-                      "searchKey": "apiclient.Client.Heartbeat",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (c *Client) Heartbeat(ctx context.Context, jobIDs []int) (unknownIDs []int, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (c *Client) Heartbeat(ctx context.Context, jobIDs []int) (unknownIDs []int, err error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/cmd/executor/internal/apiclient#Client.makeRequest",
                     "documentation": {
                       "identifier": "Client.makeRequest",
                       "newPage": false,
                       "searchKey": "apiclient.Client.makeRequest",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -363,32 +396,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/executor/internal/apiclient#Options",
-              "documentation": {
-                "identifier": "Options",
-                "newPage": false,
-                "searchKey": "apiclient.Options",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Options struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Options struct {\n\t// ExecutorName is a unique identifier for the requesting executor.\n\tExecutorName string\n\n\t// PathPrefix is the path prefix added to all requests.\n\tPathPrefix string\n\n\t// EndpointOptions configures the target request URL.\n\tEndpointOptions EndpointOptions\n\n\t// BaseClientOptions configures the underlying HTTP client behavior.\n\tBaseClientOptions BaseClientOptions\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/executor/internal/apiclient#EndpointOptions",
               "documentation": {
                 "identifier": "EndpointOptions",
                 "newPage": false,
                 "searchKey": "apiclient.EndpointOptions",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -403,12 +418,35 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/cmd/executor/internal/apiclient#Options",
+              "documentation": {
+                "identifier": "Options",
+                "newPage": false,
+                "searchKey": "apiclient.Options",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Options struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Options struct {\n\t// ExecutorName is a unique identifier for the requesting executor.\n\tExecutorName string\n\n\t// PathPrefix is the path prefix added to all requests.\n\tPathPrefix string\n\n\t// EndpointOptions configures the target request URL.\n\tEndpointOptions EndpointOptions\n\n\t// BaseClientOptions configures the underlying HTTP client behavior.\n\tBaseClientOptions BaseClientOptions\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/executor/internal/apiclient#operations",
               "documentation": {
                 "identifier": "operations",
                 "newPage": false,
                 "searchKey": "apiclient.operations",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -429,6 +467,7 @@
                       "newPage": false,
                       "searchKey": "apiclient.newOperations",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -454,6 +493,7 @@
                 "newPage": false,
                 "searchKey": "apiclient.routeSpec",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -479,6 +519,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -498,7 +539,9 @@
                 "identifier": "MakeJSONRequest",
                 "newPage": false,
                 "searchKey": "apiclient.MakeJSONRequest",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -513,167 +556,15 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/executor/internal/apiclient#makeHTTPClient",
-              "documentation": {
-                "identifier": "makeHTTPClient",
-                "newPage": false,
-                "searchKey": "apiclient.makeHTTPClient",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func makeHTTPClient(transport http.RoundTripper) *http.Client"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc makeHTTPClient(transport http.RoundTripper) *http.Client\n```\n\nmakeHTTPClient creates an HTTP client with the given round tripper. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/apiclient#makeURL",
-              "documentation": {
-                "identifier": "makeURL",
-                "newPage": false,
-                "searchKey": "apiclient.makeURL",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func makeURL(base, username, password string, path ...string) (*url.URL, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc makeURL(base, username, password string, path ...string) (*url.URL, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/apiclient#makeRelativeURL",
-              "documentation": {
-                "identifier": "makeRelativeURL",
-                "newPage": false,
-                "searchKey": "apiclient.makeRelativeURL",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func makeRelativeURL(base string, path ...string) (*url.URL, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc makeRelativeURL(base string, path ...string) (*url.URL, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/apiclient#intsToString",
-              "documentation": {
-                "identifier": "intsToString",
-                "newPage": false,
-                "searchKey": "apiclient.intsToString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func intsToString(ints []int) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc intsToString(ints []int) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/apiclient#TestDequeue",
-              "documentation": {
-                "identifier": "TestDequeue",
-                "newPage": false,
-                "searchKey": "apiclient.TestDequeue",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDequeue(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDequeue(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/apiclient#TestDequeueNoRecord",
-              "documentation": {
-                "identifier": "TestDequeueNoRecord",
-                "newPage": false,
-                "searchKey": "apiclient.TestDequeueNoRecord",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDequeueNoRecord(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDequeueNoRecord(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/apiclient#TestDequeueBadResponse",
-              "documentation": {
-                "identifier": "TestDequeueBadResponse",
-                "newPage": false,
-                "searchKey": "apiclient.TestDequeueBadResponse",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDequeueBadResponse(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDequeueBadResponse(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/executor/internal/apiclient#TestAddExecutionLogEntry",
               "documentation": {
                 "identifier": "TestAddExecutionLogEntry",
                 "newPage": false,
                 "searchKey": "apiclient.TestAddExecutionLogEntry",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -695,7 +586,9 @@
                 "newPage": false,
                 "searchKey": "apiclient.TestAddExecutionLogEntryBadResponse",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -711,110 +604,72 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/executor/internal/apiclient#TestMarkComplete",
+              "pathID": "/enterprise/cmd/executor/internal/apiclient#TestDequeue",
               "documentation": {
-                "identifier": "TestMarkComplete",
+                "identifier": "TestDequeue",
                 "newPage": false,
-                "searchKey": "apiclient.TestMarkComplete",
+                "searchKey": "apiclient.TestDequeue",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestMarkComplete(t *testing.T)"
+                "value": "func TestDequeue(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestMarkComplete(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestDequeue(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/executor/internal/apiclient#TestMarkCompleteBadResponse",
+              "pathID": "/enterprise/cmd/executor/internal/apiclient#TestDequeueBadResponse",
               "documentation": {
-                "identifier": "TestMarkCompleteBadResponse",
+                "identifier": "TestDequeueBadResponse",
                 "newPage": false,
-                "searchKey": "apiclient.TestMarkCompleteBadResponse",
+                "searchKey": "apiclient.TestDequeueBadResponse",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestMarkCompleteBadResponse(t *testing.T)"
+                "value": "func TestDequeueBadResponse(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestMarkCompleteBadResponse(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestDequeueBadResponse(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/executor/internal/apiclient#TestMarkErrored",
+              "pathID": "/enterprise/cmd/executor/internal/apiclient#TestDequeueNoRecord",
               "documentation": {
-                "identifier": "TestMarkErrored",
+                "identifier": "TestDequeueNoRecord",
                 "newPage": false,
-                "searchKey": "apiclient.TestMarkErrored",
+                "searchKey": "apiclient.TestDequeueNoRecord",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestMarkErrored(t *testing.T)"
+                "value": "func TestDequeueNoRecord(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestMarkErrored(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/apiclient#TestMarkErroredBadResponse",
-              "documentation": {
-                "identifier": "TestMarkErroredBadResponse",
-                "newPage": false,
-                "searchKey": "apiclient.TestMarkErroredBadResponse",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMarkErroredBadResponse(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMarkErroredBadResponse(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/apiclient#TestMarkFailed",
-              "documentation": {
-                "identifier": "TestMarkFailed",
-                "newPage": false,
-                "searchKey": "apiclient.TestMarkFailed",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMarkFailed(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMarkFailed(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestDequeueNoRecord(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -827,7 +682,9 @@
                 "newPage": false,
                 "searchKey": "apiclient.TestHeartbeat",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -849,7 +706,9 @@
                 "newPage": false,
                 "searchKey": "apiclient.TestHeartbeatBadResponse",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -865,12 +724,248 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/cmd/executor/internal/apiclient#TestMarkComplete",
+              "documentation": {
+                "identifier": "TestMarkComplete",
+                "newPage": false,
+                "searchKey": "apiclient.TestMarkComplete",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMarkComplete(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMarkComplete(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/apiclient#TestMarkCompleteBadResponse",
+              "documentation": {
+                "identifier": "TestMarkCompleteBadResponse",
+                "newPage": false,
+                "searchKey": "apiclient.TestMarkCompleteBadResponse",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMarkCompleteBadResponse(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMarkCompleteBadResponse(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/apiclient#TestMarkErrored",
+              "documentation": {
+                "identifier": "TestMarkErrored",
+                "newPage": false,
+                "searchKey": "apiclient.TestMarkErrored",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMarkErrored(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMarkErrored(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/apiclient#TestMarkErroredBadResponse",
+              "documentation": {
+                "identifier": "TestMarkErroredBadResponse",
+                "newPage": false,
+                "searchKey": "apiclient.TestMarkErroredBadResponse",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMarkErroredBadResponse(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMarkErroredBadResponse(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/apiclient#TestMarkFailed",
+              "documentation": {
+                "identifier": "TestMarkFailed",
+                "newPage": false,
+                "searchKey": "apiclient.TestMarkFailed",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMarkFailed(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMarkFailed(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/apiclient#intsToString",
+              "documentation": {
+                "identifier": "intsToString",
+                "newPage": false,
+                "searchKey": "apiclient.intsToString",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func intsToString(ints []int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc intsToString(ints []int) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/apiclient#makeHTTPClient",
+              "documentation": {
+                "identifier": "makeHTTPClient",
+                "newPage": false,
+                "searchKey": "apiclient.makeHTTPClient",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeHTTPClient(transport http.RoundTripper) *http.Client"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeHTTPClient(transport http.RoundTripper) *http.Client\n```\n\nmakeHTTPClient creates an HTTP client with the given round tripper. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/apiclient#makeRelativeURL",
+              "documentation": {
+                "identifier": "makeRelativeURL",
+                "newPage": false,
+                "searchKey": "apiclient.makeRelativeURL",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeRelativeURL(base string, path ...string) (*url.URL, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeRelativeURL(base string, path ...string) (*url.URL, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/apiclient#makeURL",
+              "documentation": {
+                "identifier": "makeURL",
+                "newPage": false,
+                "searchKey": "apiclient.makeURL",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeURL(base, username, password string, path ...string) (*url.URL, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeURL(base, username, password string, path ...string) (*url.URL, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/apiclient#normalizeJSON",
+              "documentation": {
+                "identifier": "normalizeJSON",
+                "newPage": false,
+                "searchKey": "apiclient.normalizeJSON",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func normalizeJSON(v []byte) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc normalizeJSON(v []byte) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/executor/internal/apiclient#testRoute",
               "documentation": {
                 "identifier": "testRoute",
                 "newPage": false,
                 "searchKey": "apiclient.testRoute",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -893,6 +988,7 @@
                 "newPage": false,
                 "searchKey": "apiclient.testServer",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -903,28 +999,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc testServer(t *testing.T, spec routeSpec) *httptest.Server\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/executor/internal/apiclient#normalizeJSON",
-              "documentation": {
-                "identifier": "normalizeJSON",
-                "newPage": false,
-                "searchKey": "apiclient.normalizeJSON",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func normalizeJSON(v []byte) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc normalizeJSON(v []byte) string\n```\n\n"
               },
               "children": null
             }

@@ -4,7 +4,9 @@
     "identifier": "utf16",
     "newPage": true,
     "searchKey": "unicode/utf16",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,144 +39,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/unicode/utf16#replacementChar",
-              "documentation": {
-                "identifier": "replacementChar",
-                "newPage": false,
-                "searchKey": "utf16.replacementChar",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const replacementChar"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst replacementChar = '\\uFFFD' // Unicode replacement character\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf16#maxRune",
-              "documentation": {
-                "identifier": "maxRune",
-                "newPage": false,
-                "searchKey": "utf16.maxRune",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const maxRune"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst maxRune = '\\U0010FFFF' // Maximum valid Unicode code point.\n\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf16#surr1",
-              "documentation": {
-                "identifier": "surr1",
-                "newPage": false,
-                "searchKey": "utf16.surr1",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const surr1"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst surr1 = 0xd800\n```\n\n0xd800-0xdc00 encodes the high 10 bits of a pair. 0xdc00-0xe000 encodes the low 10 bits of a pair. the value is those 20 bits plus 0x10000. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf16#surr2",
-              "documentation": {
-                "identifier": "surr2",
-                "newPage": false,
-                "searchKey": "utf16.surr2",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const surr2"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst surr2 = 0xdc00\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf16#surr3",
-              "documentation": {
-                "identifier": "surr3",
-                "newPage": false,
-                "searchKey": "utf16.surr3",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const surr3"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst surr3 = 0xe000\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/unicode/utf16#surrSelf",
-              "documentation": {
-                "identifier": "surrSelf",
-                "newPage": false,
-                "searchKey": "utf16.surrSelf",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const surrSelf"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst surrSelf = 0x10000\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/unicode/utf16#MaxRune",
               "documentation": {
                 "identifier": "MaxRune",
                 "newPage": false,
                 "searchKey": "utf16.MaxRune",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -195,6 +69,8 @@
                 "newPage": false,
                 "searchKey": "utf16.ReplacementChar",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -205,6 +81,150 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst ReplacementChar = replacementChar\n```\n\nExtra names for constants so we can validate them during testing. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf16#maxRune",
+              "documentation": {
+                "identifier": "maxRune",
+                "newPage": false,
+                "searchKey": "utf16.maxRune",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxRune"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxRune = '\\U0010FFFF' // Maximum valid Unicode code point.\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf16#replacementChar",
+              "documentation": {
+                "identifier": "replacementChar",
+                "newPage": false,
+                "searchKey": "utf16.replacementChar",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const replacementChar"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst replacementChar = '\\uFFFD' // Unicode replacement character\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf16#surr1",
+              "documentation": {
+                "identifier": "surr1",
+                "newPage": false,
+                "searchKey": "utf16.surr1",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const surr1"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst surr1 = 0xd800\n```\n\n0xd800-0xdc00 encodes the high 10 bits of a pair. 0xdc00-0xe000 encodes the low 10 bits of a pair. the value is those 20 bits plus 0x10000. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf16#surr2",
+              "documentation": {
+                "identifier": "surr2",
+                "newPage": false,
+                "searchKey": "utf16.surr2",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const surr2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst surr2 = 0xdc00\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf16#surr3",
+              "documentation": {
+                "identifier": "surr3",
+                "newPage": false,
+                "searchKey": "utf16.surr3",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const surr3"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst surr3 = 0xe000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf16#surrSelf",
+              "documentation": {
+                "identifier": "surrSelf",
+                "newPage": false,
+                "searchKey": "utf16.surrSelf",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const surrSelf"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst surrSelf = 0x10000\n```\n\n"
               },
               "children": null
             }
@@ -219,7 +239,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -232,20 +254,22 @@
         "children": [
           {
             "node": {
-              "pathID": "/unicode/utf16#IsSurrogate",
+              "pathID": "/unicode/utf16#Decode",
               "documentation": {
-                "identifier": "IsSurrogate",
+                "identifier": "Decode",
                 "newPage": false,
-                "searchKey": "utf16.IsSurrogate",
-                "tags": null
+                "searchKey": "utf16.Decode",
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func IsSurrogate(r rune) bool"
+                "value": "func Decode(s []uint16) []rune"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc IsSurrogate(r rune) bool\n```\n\nIsSurrogate reports whether the specified Unicode code point can appear in a surrogate pair. \n\n"
+                "value": "```Go\nfunc Decode(s []uint16) []rune\n```\n\nDecode returns the Unicode code point sequence represented by the UTF-16 encoding s. \n\n"
               },
               "children": null
             }
@@ -257,7 +281,9 @@
                 "identifier": "DecodeRune",
                 "newPage": false,
                 "searchKey": "utf16.DecodeRune",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -272,32 +298,14 @@
           },
           {
             "node": {
-              "pathID": "/unicode/utf16#EncodeRune",
-              "documentation": {
-                "identifier": "EncodeRune",
-                "newPage": false,
-                "searchKey": "utf16.EncodeRune",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func EncodeRune(r rune) (r1, r2 rune)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc EncodeRune(r rune) (r1, r2 rune)\n```\n\nEncodeRune returns the UTF-16 surrogate pair r1, r2 for the given rune. If the rune is not a valid Unicode code point or does not need encoding, EncodeRune returns U+FFFD, U+FFFD. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/unicode/utf16#Encode",
               "documentation": {
                 "identifier": "Encode",
                 "newPage": false,
                 "searchKey": "utf16.Encode",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -312,20 +320,44 @@
           },
           {
             "node": {
-              "pathID": "/unicode/utf16#Decode",
+              "pathID": "/unicode/utf16#EncodeRune",
               "documentation": {
-                "identifier": "Decode",
+                "identifier": "EncodeRune",
                 "newPage": false,
-                "searchKey": "utf16.Decode",
-                "tags": null
+                "searchKey": "utf16.EncodeRune",
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func Decode(s []uint16) []rune"
+                "value": "func EncodeRune(r rune) (r1, r2 rune)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc Decode(s []uint16) []rune\n```\n\nDecode returns the Unicode code point sequence represented by the UTF-16 encoding s. \n\n"
+                "value": "```Go\nfunc EncodeRune(r rune) (r1, r2 rune)\n```\n\nEncodeRune returns the UTF-16 surrogate pair r1, r2 for the given rune. If the rune is not a valid Unicode code point or does not need encoding, EncodeRune returns U+FFFD, U+FFFD. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/unicode/utf16#IsSurrogate",
+              "documentation": {
+                "identifier": "IsSurrogate",
+                "newPage": false,
+                "searchKey": "utf16.IsSurrogate",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsSurrogate(r rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsSurrogate(r rune) bool\n```\n\nIsSurrogate reports whether the specified Unicode code point can appear in a surrogate pair. \n\n"
               },
               "children": null
             }

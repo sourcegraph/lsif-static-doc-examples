@@ -10,14 +10,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="ExampleEscapeString" href="#ExampleEscapeString">func ExampleEscapeString()</a>
 
 ```
 searchKey: html_test.ExampleEscapeString
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -28,7 +28,7 @@ func ExampleEscapeString()
 
 ```
 searchKey: html_test.ExampleUnescapeString
-tags: [private]
+tags: [function private]
 ```
 
 ```Go

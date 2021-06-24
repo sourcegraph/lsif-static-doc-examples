@@ -5,67 +5,31 @@ Package redispool exports pools to specific redis instances.
 ## Index
 
 * [Variables](#var)
+    * [var Cache](#Cache)
+    * [var Store](#Store)
     * [var addrCache](#addrCache)
     * [var addrStore](#addrStore)
     * [var schemeMatcher](#schemeMatcher)
-    * [var Cache](#Cache)
-    * [var Store](#Store)
     * [var timeout](#timeout)
 * [Functions](#func)
-    * [func init()](#init.redispool.go)
+    * [func TestSchemeMatcher(t *testing.T)](#TestSchemeMatcher)
     * [func dialRedis(rawEndpoint string) (redis.Conn, error)](#dialRedis)
+    * [func init()](#init.redispool.go)
     * [func init()](#init.sysreq.go)
     * [func redisCheck(name, addr string, timeout time.Duration, pool *redis.Pool) sysreq.CheckFunc](#redisCheck)
-    * [func TestSchemeMatcher(t *testing.T)](#TestSchemeMatcher)
 
 
 ## <a id="var" href="#var">Variables</a>
 
 ```
-tags: [private]
-```
-
-### <a id="addrCache" href="#addrCache">var addrCache</a>
-
-```
-searchKey: redispool.addrCache
-tags: [private]
-```
-
-```Go
-var addrCache string
-```
-
-addrCache is the network address of redis cache. 
-
-### <a id="addrStore" href="#addrStore">var addrStore</a>
-
-```
-searchKey: redispool.addrStore
-tags: [private]
-```
-
-```Go
-var addrStore string
-```
-
-addrStore is the network address of redis store. 
-
-### <a id="schemeMatcher" href="#schemeMatcher">var schemeMatcher</a>
-
-```
-searchKey: redispool.schemeMatcher
-tags: [private]
-```
-
-```Go
-var schemeMatcher = lazyregexp.New(`^[A-Za-z][A-Za-z0-9\+\-\.]*://`)
+tags: [package private]
 ```
 
 ### <a id="Cache" href="#Cache">var Cache</a>
 
 ```
 searchKey: redispool.Cache
+tags: [variable struct]
 ```
 
 ```Go
@@ -80,6 +44,7 @@ In Kubernetes the service is called redis-cache.
 
 ```
 searchKey: redispool.Store
+tags: [variable struct]
 ```
 
 ```Go
@@ -90,11 +55,48 @@ Store is a redis configured for persisting data. Do not abuse this pool, only us
 
 In Kubernetes the service is called redis-store. 
 
+### <a id="addrCache" href="#addrCache">var addrCache</a>
+
+```
+searchKey: redispool.addrCache
+tags: [variable string private]
+```
+
+```Go
+var addrCache string
+```
+
+addrCache is the network address of redis cache. 
+
+### <a id="addrStore" href="#addrStore">var addrStore</a>
+
+```
+searchKey: redispool.addrStore
+tags: [variable string private]
+```
+
+```Go
+var addrStore string
+```
+
+addrStore is the network address of redis store. 
+
+### <a id="schemeMatcher" href="#schemeMatcher">var schemeMatcher</a>
+
+```
+searchKey: redispool.schemeMatcher
+tags: [variable struct private]
+```
+
+```Go
+var schemeMatcher = lazyregexp.New(`^[A-Za-z][A-Za-z0-9\+\-\.]*://`)
+```
+
 ### <a id="timeout" href="#timeout">var timeout</a>
 
 ```
 searchKey: redispool.timeout
-tags: [private]
+tags: [variable number private]
 ```
 
 ```Go
@@ -104,25 +106,25 @@ var timeout, _ = ...
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
-### <a id="init.redispool.go" href="#init.redispool.go">func init()</a>
+### <a id="TestSchemeMatcher" href="#TestSchemeMatcher">func TestSchemeMatcher(t *testing.T)</a>
 
 ```
-searchKey: redispool.init
-tags: [private]
+searchKey: redispool.TestSchemeMatcher
+tags: [method private test]
 ```
 
 ```Go
-func init()
+func TestSchemeMatcher(t *testing.T)
 ```
 
 ### <a id="dialRedis" href="#dialRedis">func dialRedis(rawEndpoint string) (redis.Conn, error)</a>
 
 ```
 searchKey: redispool.dialRedis
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -137,11 +139,22 @@ must be of the format specified in [https://www.iana.org/assignments/uri-schemes
 ```
 2) Otherwise, it is assumed to be of the format $HOSTNAME:$PORT. 
 
+### <a id="init.redispool.go" href="#init.redispool.go">func init()</a>
+
+```
+searchKey: redispool.init
+tags: [function private]
+```
+
+```Go
+func init()
+```
+
 ### <a id="init.sysreq.go" href="#init.sysreq.go">func init()</a>
 
 ```
 searchKey: redispool.init
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -152,21 +165,10 @@ func init()
 
 ```
 searchKey: redispool.redisCheck
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func redisCheck(name, addr string, timeout time.Duration, pool *redis.Pool) sysreq.CheckFunc
-```
-
-### <a id="TestSchemeMatcher" href="#TestSchemeMatcher">func TestSchemeMatcher(t *testing.T)</a>
-
-```
-searchKey: redispool.TestSchemeMatcher
-tags: [private]
-```
-
-```Go
-func TestSchemeMatcher(t *testing.T)
 ```
 

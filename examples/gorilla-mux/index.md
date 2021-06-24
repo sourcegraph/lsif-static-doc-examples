@@ -325,12 +325,12 @@ Note: The handler chain will be stopped if your middleware doesn't call `next.Se
 * Subpages
   * [mux_test](mux_test.md)
 * [Constants](#const)
-    * [const varsKey](#varsKey)
-    * [const routeKey](#routeKey)
-    * [const regexpTypePath](#regexpTypePath)
     * [const regexpTypeHost](#regexpTypeHost)
+    * [const regexpTypePath](#regexpTypePath)
     * [const regexpTypePrefix](#regexpTypePrefix)
     * [const regexpTypeQuery](#regexpTypeQuery)
+    * [const routeKey](#routeKey)
+    * [const varsKey](#varsKey)
 * [Variables](#var)
     * [var ErrMethodMismatch](#ErrMethodMismatch)
     * [var ErrNotFound](#ErrNotFound)
@@ -342,284 +342,266 @@ Note: The handler chain will be stopped if your middleware doesn't call `next.Se
     * [var schemeMatcherTests](#schemeMatcherTests)
     * [var urlBuildingTests](#urlBuildingTests)
 * [Types](#type)
+    * [type BuildVarsFunc func(map[string]string) map[string]string](#BuildVarsFunc)
+    * [type MatcherFunc func(*net/http.Request, *github.com/gorilla/mux.RouteMatch) bool](#MatcherFunc)
+        * [func (m MatcherFunc) Match(r *http.Request, match *RouteMatch) bool](#MatcherFunc.Match)
     * [type MiddlewareFunc func(net/http.Handler) net/http.Handler](#MiddlewareFunc)
         * [func CORSMethodMiddleware(r *Router) MiddlewareFunc](#CORSMethodMiddleware)
         * [func (mw MiddlewareFunc) Middleware(handler http.Handler) http.Handler](#MiddlewareFunc.Middleware)
-    * [type middleware interface](#middleware)
-    * [type Router struct](#Router)
-        * [func NewRouter() *Router](#NewRouter)
-        * [func (r *Router) Use(mwf ...MiddlewareFunc)](#Router.Use)
-        * [func (r *Router) useInterface(mw middleware)](#Router.useInterface)
-        * [func (r *Router) Match(req *http.Request, match *RouteMatch) bool](#Router.Match)
-        * [func (r *Router) ServeHTTP(w http.ResponseWriter, req *http.Request)](#Router.ServeHTTP)
-        * [func (r *Router) Get(name string) *Route](#Router.Get)
-        * [func (r *Router) GetRoute(name string) *Route](#Router.GetRoute)
-        * [func (r *Router) StrictSlash(value bool) *Router](#Router.StrictSlash)
-        * [func (r *Router) SkipClean(value bool) *Router](#Router.SkipClean)
-        * [func (r *Router) UseEncodedPath() *Router](#Router.UseEncodedPath)
-        * [func (r *Router) NewRoute() *Route](#Router.NewRoute)
-        * [func (r *Router) Name(name string) *Route](#Router.Name)
-        * [func (r *Router) Handle(path string, handler http.Handler) *Route](#Router.Handle)
-        * [func (r *Router) HandleFunc(path string, f func(http.ResponseWriter,...](#Router.HandleFunc)
-        * [func (r *Router) Headers(pairs ...string) *Route](#Router.Headers)
-        * [func (r *Router) Host(tpl string) *Route](#Router.Host)
-        * [func (r *Router) MatcherFunc(f MatcherFunc) *Route](#Router.MatcherFunc)
-        * [func (r *Router) Methods(methods ...string) *Route](#Router.Methods)
-        * [func (r *Router) Path(tpl string) *Route](#Router.Path)
-        * [func (r *Router) PathPrefix(tpl string) *Route](#Router.PathPrefix)
-        * [func (r *Router) Queries(pairs ...string) *Route](#Router.Queries)
-        * [func (r *Router) Schemes(schemes ...string) *Route](#Router.Schemes)
-        * [func (r *Router) BuildVarsFunc(f BuildVarsFunc) *Route](#Router.BuildVarsFunc)
-        * [func (r *Router) Walk(walkFn WalkFunc) error](#Router.Walk)
-        * [func (r *Router) walk(walkFn WalkFunc, ancestors []*Route) error](#Router.walk)
-    * [type routeConf struct](#routeConf)
-        * [func copyRouteConf(r routeConf) routeConf](#copyRouteConf)
-    * [type WalkFunc func(route *github.com/gorilla/mux.Route, router *github.com/gorilla/mux.Router, ancestors []*github.com/gorilla/mux.Route) error](#WalkFunc)
-    * [type RouteMatch struct](#RouteMatch)
-    * [type contextKey int](#contextKey)
-    * [type routeRegexpOptions struct](#routeRegexpOptions)
-    * [type regexpType int](#regexpType)
-    * [type routeRegexp struct](#routeRegexp)
-        * [func copyRouteRegexp(r *routeRegexp) *routeRegexp](#copyRouteRegexp)
-        * [func newRouteRegexp(tpl string, typ regexpType, options routeRegexpOptions) (*routeRegexp, error)](#newRouteRegexp)
-        * [func (r *routeRegexp) Match(req *http.Request, match *RouteMatch) bool](#routeRegexp.Match)
-        * [func (r *routeRegexp) url(values map[string]string) (string, error)](#routeRegexp.url)
-        * [func (r *routeRegexp) getURLQuery(req *http.Request) string](#routeRegexp.getURLQuery)
-        * [func (r *routeRegexp) matchQueryString(req *http.Request) bool](#routeRegexp.matchQueryString)
-        * [func (r *routeRegexp) GoString() string](#routeRegexp.GoString)
-    * [type routeRegexpGroup struct](#routeRegexpGroup)
-        * [func (v routeRegexpGroup) setMatch(req *http.Request, m *RouteMatch, r *Route)](#routeRegexpGroup.setMatch)
+    * [type ResponseRecorder struct](#ResponseRecorder)
+        * [func NewRecorder() *ResponseRecorder](#NewRecorder)
+        * [func (rw *ResponseRecorder) Flush()](#ResponseRecorder.Flush)
+        * [func (rw *ResponseRecorder) Header() http.Header](#ResponseRecorder.Header)
+        * [func (rw *ResponseRecorder) Write(buf []byte) (int, error)](#ResponseRecorder.Write)
+        * [func (rw *ResponseRecorder) WriteHeader(code int)](#ResponseRecorder.WriteHeader)
     * [type Route struct](#Route)
         * [func CurrentRoute(r *http.Request) *Route](#CurrentRoute)
-        * [func (r *Route) SkipClean() bool](#Route.SkipClean)
-        * [func (r *Route) Match(req *http.Request, match *RouteMatch) bool](#Route.Match)
-        * [func (r *Route) GetError() error](#Route.GetError)
         * [func (r *Route) BuildOnly() *Route](#Route.BuildOnly)
+        * [func (r *Route) BuildVarsFunc(f BuildVarsFunc) *Route](#Route.BuildVarsFunc)
+        * [func (r *Route) GetError() error](#Route.GetError)
+        * [func (r *Route) GetHandler() http.Handler](#Route.GetHandler)
+        * [func (r *Route) GetHostTemplate() (string, error)](#Route.GetHostTemplate)
+        * [func (r *Route) GetMethods() ([]string, error)](#Route.GetMethods)
+        * [func (r *Route) GetName() string](#Route.GetName)
+        * [func (r *Route) GetPathRegexp() (string, error)](#Route.GetPathRegexp)
+        * [func (r *Route) GetPathTemplate() (string, error)](#Route.GetPathTemplate)
+        * [func (r *Route) GetQueriesRegexp() ([]string, error)](#Route.GetQueriesRegexp)
+        * [func (r *Route) GetQueriesTemplates() ([]string, error)](#Route.GetQueriesTemplates)
+        * [func (r *Route) GoString() string](#Route.GoString)
         * [func (r *Route) Handler(handler http.Handler) *Route](#Route.Handler)
         * [func (r *Route) HandlerFunc(f func(http.ResponseWriter, *http.Request)) *Route](#Route.HandlerFunc)
-        * [func (r *Route) GetHandler() http.Handler](#Route.GetHandler)
-        * [func (r *Route) Name(name string) *Route](#Route.Name)
-        * [func (r *Route) GetName() string](#Route.GetName)
-        * [func (r *Route) addMatcher(m matcher) *Route](#Route.addMatcher)
-        * [func (r *Route) addRegexpMatcher(tpl string, typ regexpType) error](#Route.addRegexpMatcher)
         * [func (r *Route) Headers(pairs ...string) *Route](#Route.Headers)
         * [func (r *Route) HeadersRegexp(pairs ...string) *Route](#Route.HeadersRegexp)
         * [func (r *Route) Host(tpl string) *Route](#Route.Host)
+        * [func (r *Route) Match(req *http.Request, match *RouteMatch) bool](#Route.Match)
         * [func (r *Route) MatcherFunc(f MatcherFunc) *Route](#Route.MatcherFunc)
         * [func (r *Route) Methods(methods ...string) *Route](#Route.Methods)
+        * [func (r *Route) Name(name string) *Route](#Route.Name)
         * [func (r *Route) Path(tpl string) *Route](#Route.Path)
         * [func (r *Route) PathPrefix(tpl string) *Route](#Route.PathPrefix)
         * [func (r *Route) Queries(pairs ...string) *Route](#Route.Queries)
         * [func (r *Route) Schemes(schemes ...string) *Route](#Route.Schemes)
-        * [func (r *Route) BuildVarsFunc(f BuildVarsFunc) *Route](#Route.BuildVarsFunc)
+        * [func (r *Route) SkipClean() bool](#Route.SkipClean)
         * [func (r *Route) Subrouter() *Router](#Route.Subrouter)
         * [func (r *Route) URL(pairs ...string) (*url.URL, error)](#Route.URL)
         * [func (r *Route) URLHost(pairs ...string) (*url.URL, error)](#Route.URLHost)
         * [func (r *Route) URLPath(pairs ...string) (*url.URL, error)](#Route.URLPath)
-        * [func (r *Route) GetPathTemplate() (string, error)](#Route.GetPathTemplate)
-        * [func (r *Route) GetPathRegexp() (string, error)](#Route.GetPathRegexp)
-        * [func (r *Route) GetQueriesRegexp() ([]string, error)](#Route.GetQueriesRegexp)
-        * [func (r *Route) GetQueriesTemplates() ([]string, error)](#Route.GetQueriesTemplates)
-        * [func (r *Route) GetMethods() ([]string, error)](#Route.GetMethods)
-        * [func (r *Route) GetHostTemplate() (string, error)](#Route.GetHostTemplate)
-        * [func (r *Route) prepareVars(pairs ...string) (map[string]string, error)](#Route.prepareVars)
+        * [func (r *Route) addMatcher(m matcher) *Route](#Route.addMatcher)
+        * [func (r *Route) addRegexpMatcher(tpl string, typ regexpType) error](#Route.addRegexpMatcher)
         * [func (r *Route) buildVars(m map[string]string) map[string]string](#Route.buildVars)
-        * [func (r *Route) GoString() string](#Route.GoString)
-    * [type matcher interface](#matcher)
-    * [type headerMatcher map[string]string](#headerMatcher)
-        * [func (m headerMatcher) Match(r *http.Request, match *RouteMatch) bool](#headerMatcher.Match)
-    * [type headerRegexMatcher map[string]*regexp.Regexp](#headerRegexMatcher)
-        * [func (m headerRegexMatcher) Match(r *http.Request, match *RouteMatch) bool](#headerRegexMatcher.Match)
-    * [type MatcherFunc func(*net/http.Request, *github.com/gorilla/mux.RouteMatch) bool](#MatcherFunc)
-        * [func (m MatcherFunc) Match(r *http.Request, match *RouteMatch) bool](#MatcherFunc.Match)
-    * [type methodMatcher []string](#methodMatcher)
-        * [func (m methodMatcher) Match(r *http.Request, match *RouteMatch) bool](#methodMatcher.Match)
-    * [type schemeMatcher []string](#schemeMatcher)
-        * [func (m schemeMatcher) Match(r *http.Request, match *RouteMatch) bool](#schemeMatcher.Match)
-    * [type BuildVarsFunc func(map[string]string) map[string]string](#BuildVarsFunc)
-    * [type testMiddleware struct](#testMiddleware)
-        * [func (tm *testMiddleware) Middleware(h http.Handler) http.Handler](#testMiddleware.Middleware)
-    * [type routeTest struct](#routeTest)
+        * [func (r *Route) prepareVars(pairs ...string) (map[string]string, error)](#Route.prepareVars)
+    * [type RouteMatch struct](#RouteMatch)
+    * [type Router struct](#Router)
+        * [func NewRouter() *Router](#NewRouter)
+        * [func (r *Router) BuildVarsFunc(f BuildVarsFunc) *Route](#Router.BuildVarsFunc)
+        * [func (r *Router) Get(name string) *Route](#Router.Get)
+        * [func (r *Router) GetRoute(name string) *Route](#Router.GetRoute)
+        * [func (r *Router) Handle(path string, handler http.Handler) *Route](#Router.Handle)
+        * [func (r *Router) HandleFunc(path string, f func(http.ResponseWriter,...](#Router.HandleFunc)
+        * [func (r *Router) Headers(pairs ...string) *Route](#Router.Headers)
+        * [func (r *Router) Host(tpl string) *Route](#Router.Host)
+        * [func (r *Router) Match(req *http.Request, match *RouteMatch) bool](#Router.Match)
+        * [func (r *Router) MatcherFunc(f MatcherFunc) *Route](#Router.MatcherFunc)
+        * [func (r *Router) Methods(methods ...string) *Route](#Router.Methods)
+        * [func (r *Router) Name(name string) *Route](#Router.Name)
+        * [func (r *Router) NewRoute() *Route](#Router.NewRoute)
+        * [func (r *Router) Path(tpl string) *Route](#Router.Path)
+        * [func (r *Router) PathPrefix(tpl string) *Route](#Router.PathPrefix)
+        * [func (r *Router) Queries(pairs ...string) *Route](#Router.Queries)
+        * [func (r *Router) Schemes(schemes ...string) *Route](#Router.Schemes)
+        * [func (r *Router) ServeHTTP(w http.ResponseWriter, req *http.Request)](#Router.ServeHTTP)
+        * [func (r *Router) SkipClean(value bool) *Router](#Router.SkipClean)
+        * [func (r *Router) StrictSlash(value bool) *Router](#Router.StrictSlash)
+        * [func (r *Router) Use(mwf ...MiddlewareFunc)](#Router.Use)
+        * [func (r *Router) UseEncodedPath() *Router](#Router.UseEncodedPath)
+        * [func (r *Router) Walk(walkFn WalkFunc) error](#Router.Walk)
+        * [func (r *Router) useInterface(mw middleware)](#Router.useInterface)
+        * [func (r *Router) walk(walkFn WalkFunc, ancestors []*Route) error](#Router.walk)
     * [type TestA301ResponseWriter struct](#TestA301ResponseWriter)
         * [func (ho *TestA301ResponseWriter) Header() http.Header](#TestA301ResponseWriter.Header)
         * [func (ho *TestA301ResponseWriter) Write(b []byte) (int, error)](#TestA301ResponseWriter.Write)
         * [func (ho *TestA301ResponseWriter) WriteHeader(code int)](#TestA301ResponseWriter.WriteHeader)
-    * [type methodsSubrouterTest struct](#methodsSubrouterTest)
+    * [type WalkFunc func(route *github.com/gorilla/mux.Route, router *github.com/gorilla/mux.Router, ancestors []*github.com/gorilla/mux.Route) error](#WalkFunc)
+    * [type contextKey int](#contextKey)
     * [type customMethodNotAllowedHandler struct](#customMethodNotAllowedHandler)
         * [func (h customMethodNotAllowedHandler) ServeHTTP(w http.ResponseWriter, r *http.Request)](#customMethodNotAllowedHandler.ServeHTTP)
-    * [type ResponseRecorder struct](#ResponseRecorder)
-        * [func NewRecorder() *ResponseRecorder](#NewRecorder)
-        * [func (rw *ResponseRecorder) Header() http.Header](#ResponseRecorder.Header)
-        * [func (rw *ResponseRecorder) Write(buf []byte) (int, error)](#ResponseRecorder.Write)
-        * [func (rw *ResponseRecorder) WriteHeader(code int)](#ResponseRecorder.WriteHeader)
-        * [func (rw *ResponseRecorder) Flush()](#ResponseRecorder.Flush)
+    * [type headerMatcher map[string]string](#headerMatcher)
+        * [func (m headerMatcher) Match(r *http.Request, match *RouteMatch) bool](#headerMatcher.Match)
     * [type headerMatcherTest struct](#headerMatcherTest)
+    * [type headerRegexMatcher map[string]*regexp.Regexp](#headerRegexMatcher)
+        * [func (m headerRegexMatcher) Match(r *http.Request, match *RouteMatch) bool](#headerRegexMatcher.Match)
     * [type hostMatcherTest struct](#hostMatcherTest)
+    * [type matcher interface](#matcher)
+    * [type methodMatcher []string](#methodMatcher)
+        * [func (m methodMatcher) Match(r *http.Request, match *RouteMatch) bool](#methodMatcher.Match)
     * [type methodMatcherTest struct](#methodMatcherTest)
+    * [type methodsSubrouterTest struct](#methodsSubrouterTest)
+    * [type middleware interface](#middleware)
     * [type pathMatcherTest struct](#pathMatcherTest)
+    * [type regexpType int](#regexpType)
+    * [type routeConf struct](#routeConf)
+        * [func copyRouteConf(r routeConf) routeConf](#copyRouteConf)
+    * [type routeRegexp struct](#routeRegexp)
+        * [func copyRouteRegexp(r *routeRegexp) *routeRegexp](#copyRouteRegexp)
+        * [func newRouteRegexp(tpl string, typ regexpType, options routeRegexpOptions) (*routeRegexp, error)](#newRouteRegexp)
+        * [func (r *routeRegexp) GoString() string](#routeRegexp.GoString)
+        * [func (r *routeRegexp) Match(req *http.Request, match *RouteMatch) bool](#routeRegexp.Match)
+        * [func (r *routeRegexp) getURLQuery(req *http.Request) string](#routeRegexp.getURLQuery)
+        * [func (r *routeRegexp) matchQueryString(req *http.Request) bool](#routeRegexp.matchQueryString)
+        * [func (r *routeRegexp) url(values map[string]string) (string, error)](#routeRegexp.url)
+    * [type routeRegexpGroup struct](#routeRegexpGroup)
+        * [func (v routeRegexpGroup) setMatch(req *http.Request, m *RouteMatch, r *Route)](#routeRegexpGroup.setMatch)
+    * [type routeRegexpOptions struct](#routeRegexpOptions)
+    * [type routeTest struct](#routeTest)
+    * [type schemeMatcher []string](#schemeMatcher)
+        * [func (m schemeMatcher) Match(r *http.Request, match *RouteMatch) bool](#schemeMatcher.Match)
     * [type schemeMatcherTest struct](#schemeMatcherTest)
+    * [type testMiddleware struct](#testMiddleware)
+        * [func (tm *testMiddleware) Middleware(h http.Handler) http.Handler](#testMiddleware.Middleware)
     * [type urlBuildingTest struct](#urlBuildingTest)
 * [Functions](#func)
-    * [func getAllMethodsForRoute(r *Router, req *http.Request) ([]string, error)](#getAllMethodsForRoute)
-    * [func Vars(r *http.Request) map[string]string](#Vars)
-    * [func requestWithVars(r *http.Request, vars map[string]string) *http.Request](#requestWithVars)
-    * [func requestWithRoute(r *http.Request, route *Route) *http.Request](#requestWithRoute)
-    * [func cleanPath(p string) string](#cleanPath)
-    * [func uniqueVars(s1, s2 []string) error](#uniqueVars)
-    * [func checkPairs(pairs ...string) (int, error)](#checkPairs)
-    * [func mapFromPairsToString(pairs ...string) (map[string]string, error)](#mapFromPairsToString)
-    * [func mapFromPairsToRegex(pairs ...string) (map[string]*regexp.Regexp, error)](#mapFromPairsToRegex)
-    * [func matchInArray(arr []string, value string) bool](#matchInArray)
-    * [func matchMapWithString(toCheck map[string]string, toMatch map[string][]string, canonicalKey bool) bool](#matchMapWithString)
-    * [func matchMapWithRegex(toCheck map[string]*regexp.Regexp, toMatch map[string][]string, canonicalKey bool) bool](#matchMapWithRegex)
-    * [func methodNotAllowed(w http.ResponseWriter, r *http.Request)](#methodNotAllowed)
-    * [func methodNotAllowedHandler() http.Handler](#methodNotAllowedHandler)
-    * [func findFirstQueryKey(rawQuery, key string) (value string, ok bool)](#findFirstQueryKey)
-    * [func braceIndices(s string) ([]int, error)](#braceIndices)
-    * [func varGroupName(idx int) string](#varGroupName)
-    * [func getHost(r *http.Request) string](#getHost)
-    * [func extractVars(input string, matches []int, names []string, output map[string]string)](#extractVars)
-    * [func SetURLVars(r *http.Request, val map[string]string) *http.Request](#SetURLVars)
+    * [func BenchmarkManyPathVariables(b *testing.B)](#BenchmarkManyPathVariables)
     * [func BenchmarkMux(b *testing.B)](#BenchmarkMux)
     * [func BenchmarkMuxAlternativeInRegexp(b *testing.B)](#BenchmarkMuxAlternativeInRegexp)
-    * [func BenchmarkManyPathVariables(b *testing.B)](#BenchmarkManyPathVariables)
-    * [func dummyHandler(w http.ResponseWriter, r *http.Request)](#dummyHandler)
-    * [func TestMiddlewareAdd(t *testing.T)](#TestMiddlewareAdd)
-    * [func TestMiddleware(t *testing.T)](#TestMiddleware)
-    * [func TestMiddlewareSubrouter(t *testing.T)](#TestMiddlewareSubrouter)
-    * [func TestMiddlewareExecution(t *testing.T)](#TestMiddlewareExecution)
-    * [func TestMiddlewareNotFound(t *testing.T)](#TestMiddlewareNotFound)
-    * [func TestMiddlewareMethodMismatch(t *testing.T)](#TestMiddlewareMethodMismatch)
-    * [func TestMiddlewareNotFoundSubrouter(t *testing.T)](#TestMiddlewareNotFoundSubrouter)
-    * [func TestMiddlewareMethodMismatchSubrouter(t *testing.T)](#TestMiddlewareMethodMismatchSubrouter)
-    * [func TestCORSMethodMiddleware(t *testing.T)](#TestCORSMethodMiddleware)
-    * [func TestCORSMethodMiddlewareSubrouter(t *testing.T)](#TestCORSMethodMiddlewareSubrouter)
-    * [func TestMiddlewareOnMultiSubrouter(t *testing.T)](#TestMiddlewareOnMultiSubrouter)
-    * [func TestSchemeMatchers(t *testing.T)](#TestSchemeMatchers)
-    * [func TestHost(t *testing.T)](#TestHost)
-    * [func TestPath(t *testing.T)](#TestPath)
-    * [func TestPathPrefix(t *testing.T)](#TestPathPrefix)
-    * [func TestSchemeHostPath(t *testing.T)](#TestSchemeHostPath)
-    * [func TestHeaders(t *testing.T)](#TestHeaders)
-    * [func TestMethods(t *testing.T)](#TestMethods)
-    * [func TestQueries(t *testing.T)](#TestQueries)
-    * [func TestSchemes(t *testing.T)](#TestSchemes)
-    * [func TestMatcherFunc(t *testing.T)](#TestMatcherFunc)
-    * [func TestBuildVarsFunc(t *testing.T)](#TestBuildVarsFunc)
-    * [func TestSubRouter(t *testing.T)](#TestSubRouter)
-    * [func TestNamedRoutes(t *testing.T)](#TestNamedRoutes)
-    * [func TestNameMultipleCalls(t *testing.T)](#TestNameMultipleCalls)
-    * [func TestStrictSlash(t *testing.T)](#TestStrictSlash)
-    * [func TestUseEncodedPath(t *testing.T)](#TestUseEncodedPath)
-    * [func TestWalkSingleDepth(t *testing.T)](#TestWalkSingleDepth)
-    * [func TestWalkNested(t *testing.T)](#TestWalkNested)
-    * [func TestWalkSubrouters(t *testing.T)](#TestWalkSubrouters)
-    * [func TestWalkErrorRoute(t *testing.T)](#TestWalkErrorRoute)
-    * [func TestWalkErrorMatcher(t *testing.T)](#TestWalkErrorMatcher)
-    * [func TestWalkErrorHandler(t *testing.T)](#TestWalkErrorHandler)
-    * [func TestSubrouterErrorHandling(t *testing.T)](#TestSubrouterErrorHandling)
-    * [func TestPanicOnCapturingGroups(t *testing.T)](#TestPanicOnCapturingGroups)
-    * [func getRouteTemplate(route *Route) string](#getRouteTemplate)
-    * [func testRoute(t *testing.T, test routeTest)](#testRoute)
-    * [func testUseEscapedRoute(t *testing.T, test routeTest)](#testUseEscapedRoute)
-    * [func testTemplate(t *testing.T, test routeTest)](#testTemplate)
-    * [func testMethods(t *testing.T, test routeTest)](#testMethods)
-    * [func testRegexp(t *testing.T, test routeTest)](#testRegexp)
-    * [func testQueriesRegexp(t *testing.T, test routeTest)](#testQueriesRegexp)
-    * [func testQueriesTemplates(t *testing.T, test routeTest)](#testQueriesTemplates)
-    * [func Test301Redirect(t *testing.T)](#Test301Redirect)
-    * [func TestSkipClean(t *testing.T)](#TestSkipClean)
-    * [func TestSubrouterHeader(t *testing.T)](#TestSubrouterHeader)
-    * [func TestNoMatchMethodErrorHandler(t *testing.T)](#TestNoMatchMethodErrorHandler)
-    * [func TestErrMatchNotFound(t *testing.T)](#TestErrMatchNotFound)
-    * [func methodHandler(method string) http.HandlerFunc](#methodHandler)
-    * [func TestMethodsSubrouterCatchall(t *testing.T)](#TestMethodsSubrouterCatchall)
-    * [func TestMethodsSubrouterStrictSlash(t *testing.T)](#TestMethodsSubrouterStrictSlash)
-    * [func TestMethodsSubrouterPathPrefix(t *testing.T)](#TestMethodsSubrouterPathPrefix)
-    * [func TestMethodsSubrouterSubrouter(t *testing.T)](#TestMethodsSubrouterSubrouter)
-    * [func TestMethodsSubrouterPathVariable(t *testing.T)](#TestMethodsSubrouterPathVariable)
-    * [func ExampleSetURLVars()](#ExampleSetURLVars)
-    * [func testMethodsSubrouter(t *testing.T, test methodsSubrouterTest)](#testMethodsSubrouter)
-    * [func TestSubrouterMatching(t *testing.T)](#TestSubrouterMatching)
-    * [func Test_copyRouteConf(t *testing.T)](#Test_copyRouteConf)
-    * [func TestMethodNotAllowed(t *testing.T)](#TestMethodNotAllowed)
-    * [func TestSubrouterCustomMethodNotAllowed(t *testing.T)](#TestSubrouterCustomMethodNotAllowed)
-    * [func TestSubrouterNotFound(t *testing.T)](#TestSubrouterNotFound)
-    * [func TestContextMiddleware(t *testing.T)](#TestContextMiddleware)
-    * [func mapToPairs(m map[string]string) []string](#mapToPairs)
-    * [func stringMapEqual(m1, m2 map[string]string) bool](#stringMapEqual)
-    * [func stringHandler(s string) http.HandlerFunc](#stringHandler)
-    * [func newRequest(method, url string) *http.Request](#newRequest)
-    * [func newRequestWithHeaders(method, url string, headers ...string) *http.Request](#newRequestWithHeaders)
-    * [func newRequestHost(method, url, host string) *http.Request](#newRequestHost)
-    * [func TestRouteMatchers(t *testing.T)](#TestRouteMatchers)
-    * [func TestHeaderMatcher(t *testing.T)](#TestHeaderMatcher)
-    * [func TestHostMatcher(t *testing.T)](#TestHostMatcher)
-    * [func TestMethodMatcher(t *testing.T)](#TestMethodMatcher)
-    * [func TestPathMatcher(t *testing.T)](#TestPathMatcher)
-    * [func TestSchemeMatcher(t *testing.T)](#TestSchemeMatcher)
-    * [func TestUrlBuilding(t *testing.T)](#TestUrlBuilding)
-    * [func TestMatchedRouteName(t *testing.T)](#TestMatchedRouteName)
-    * [func TestSubRouting(t *testing.T)](#TestSubRouting)
-    * [func TestVariableNames(t *testing.T)](#TestVariableNames)
-    * [func TestRedirectSlash(t *testing.T)](#TestRedirectSlash)
-    * [func TestNewRegexp(t *testing.T)](#TestNewRegexp)
-    * [func Test_findFirstQueryKey(t *testing.T)](#Test_findFirstQueryKey)
     * [func Benchmark_findQueryKey(b *testing.B)](#Benchmark_findQueryKey)
     * [func Benchmark_findQueryKeyGoLib(b *testing.B)](#Benchmark_findQueryKeyGoLib)
+    * [func ExampleSetURLVars()](#ExampleSetURLVars)
+    * [func SetURLVars(r *http.Request, val map[string]string) *http.Request](#SetURLVars)
+    * [func Test301Redirect(t *testing.T)](#Test301Redirect)
+    * [func TestBuildVarsFunc(t *testing.T)](#TestBuildVarsFunc)
+    * [func TestCORSMethodMiddleware(t *testing.T)](#TestCORSMethodMiddleware)
+    * [func TestCORSMethodMiddlewareSubrouter(t *testing.T)](#TestCORSMethodMiddlewareSubrouter)
+    * [func TestContextMiddleware(t *testing.T)](#TestContextMiddleware)
+    * [func TestErrMatchNotFound(t *testing.T)](#TestErrMatchNotFound)
+    * [func TestHeaderMatcher(t *testing.T)](#TestHeaderMatcher)
+    * [func TestHeaders(t *testing.T)](#TestHeaders)
+    * [func TestHost(t *testing.T)](#TestHost)
+    * [func TestHostMatcher(t *testing.T)](#TestHostMatcher)
+    * [func TestMatchedRouteName(t *testing.T)](#TestMatchedRouteName)
+    * [func TestMatcherFunc(t *testing.T)](#TestMatcherFunc)
+    * [func TestMethodMatcher(t *testing.T)](#TestMethodMatcher)
+    * [func TestMethodNotAllowed(t *testing.T)](#TestMethodNotAllowed)
+    * [func TestMethods(t *testing.T)](#TestMethods)
+    * [func TestMethodsSubrouterCatchall(t *testing.T)](#TestMethodsSubrouterCatchall)
+    * [func TestMethodsSubrouterPathPrefix(t *testing.T)](#TestMethodsSubrouterPathPrefix)
+    * [func TestMethodsSubrouterPathVariable(t *testing.T)](#TestMethodsSubrouterPathVariable)
+    * [func TestMethodsSubrouterStrictSlash(t *testing.T)](#TestMethodsSubrouterStrictSlash)
+    * [func TestMethodsSubrouterSubrouter(t *testing.T)](#TestMethodsSubrouterSubrouter)
+    * [func TestMiddleware(t *testing.T)](#TestMiddleware)
+    * [func TestMiddlewareAdd(t *testing.T)](#TestMiddlewareAdd)
+    * [func TestMiddlewareExecution(t *testing.T)](#TestMiddlewareExecution)
+    * [func TestMiddlewareMethodMismatch(t *testing.T)](#TestMiddlewareMethodMismatch)
+    * [func TestMiddlewareMethodMismatchSubrouter(t *testing.T)](#TestMiddlewareMethodMismatchSubrouter)
+    * [func TestMiddlewareNotFound(t *testing.T)](#TestMiddlewareNotFound)
+    * [func TestMiddlewareNotFoundSubrouter(t *testing.T)](#TestMiddlewareNotFoundSubrouter)
+    * [func TestMiddlewareOnMultiSubrouter(t *testing.T)](#TestMiddlewareOnMultiSubrouter)
+    * [func TestMiddlewareSubrouter(t *testing.T)](#TestMiddlewareSubrouter)
+    * [func TestNameMultipleCalls(t *testing.T)](#TestNameMultipleCalls)
+    * [func TestNamedRoutes(t *testing.T)](#TestNamedRoutes)
+    * [func TestNewRegexp(t *testing.T)](#TestNewRegexp)
+    * [func TestNoMatchMethodErrorHandler(t *testing.T)](#TestNoMatchMethodErrorHandler)
+    * [func TestPanicOnCapturingGroups(t *testing.T)](#TestPanicOnCapturingGroups)
+    * [func TestPath(t *testing.T)](#TestPath)
+    * [func TestPathMatcher(t *testing.T)](#TestPathMatcher)
+    * [func TestPathPrefix(t *testing.T)](#TestPathPrefix)
+    * [func TestQueries(t *testing.T)](#TestQueries)
+    * [func TestRedirectSlash(t *testing.T)](#TestRedirectSlash)
+    * [func TestRouteMatchers(t *testing.T)](#TestRouteMatchers)
+    * [func TestSchemeHostPath(t *testing.T)](#TestSchemeHostPath)
+    * [func TestSchemeMatcher(t *testing.T)](#TestSchemeMatcher)
+    * [func TestSchemeMatchers(t *testing.T)](#TestSchemeMatchers)
+    * [func TestSchemes(t *testing.T)](#TestSchemes)
+    * [func TestSkipClean(t *testing.T)](#TestSkipClean)
+    * [func TestStrictSlash(t *testing.T)](#TestStrictSlash)
+    * [func TestSubRouter(t *testing.T)](#TestSubRouter)
+    * [func TestSubRouting(t *testing.T)](#TestSubRouting)
+    * [func TestSubrouterCustomMethodNotAllowed(t *testing.T)](#TestSubrouterCustomMethodNotAllowed)
+    * [func TestSubrouterErrorHandling(t *testing.T)](#TestSubrouterErrorHandling)
+    * [func TestSubrouterHeader(t *testing.T)](#TestSubrouterHeader)
+    * [func TestSubrouterMatching(t *testing.T)](#TestSubrouterMatching)
+    * [func TestSubrouterNotFound(t *testing.T)](#TestSubrouterNotFound)
+    * [func TestUrlBuilding(t *testing.T)](#TestUrlBuilding)
+    * [func TestUseEncodedPath(t *testing.T)](#TestUseEncodedPath)
+    * [func TestVariableNames(t *testing.T)](#TestVariableNames)
+    * [func TestWalkErrorHandler(t *testing.T)](#TestWalkErrorHandler)
+    * [func TestWalkErrorMatcher(t *testing.T)](#TestWalkErrorMatcher)
+    * [func TestWalkErrorRoute(t *testing.T)](#TestWalkErrorRoute)
+    * [func TestWalkNested(t *testing.T)](#TestWalkNested)
+    * [func TestWalkSingleDepth(t *testing.T)](#TestWalkSingleDepth)
+    * [func TestWalkSubrouters(t *testing.T)](#TestWalkSubrouters)
+    * [func Test_copyRouteConf(t *testing.T)](#Test_copyRouteConf)
+    * [func Test_findFirstQueryKey(t *testing.T)](#Test_findFirstQueryKey)
+    * [func Vars(r *http.Request) map[string]string](#Vars)
+    * [func braceIndices(s string) ([]int, error)](#braceIndices)
+    * [func checkPairs(pairs ...string) (int, error)](#checkPairs)
+    * [func cleanPath(p string) string](#cleanPath)
+    * [func dummyHandler(w http.ResponseWriter, r *http.Request)](#dummyHandler)
+    * [func extractVars(input string, matches []int, names []string, output map[string]string)](#extractVars)
+    * [func findFirstQueryKey(rawQuery, key string) (value string, ok bool)](#findFirstQueryKey)
+    * [func getAllMethodsForRoute(r *Router, req *http.Request) ([]string, error)](#getAllMethodsForRoute)
+    * [func getHost(r *http.Request) string](#getHost)
+    * [func getRouteTemplate(route *Route) string](#getRouteTemplate)
+    * [func mapFromPairsToRegex(pairs ...string) (map[string]*regexp.Regexp, error)](#mapFromPairsToRegex)
+    * [func mapFromPairsToString(pairs ...string) (map[string]string, error)](#mapFromPairsToString)
+    * [func mapToPairs(m map[string]string) []string](#mapToPairs)
+    * [func matchInArray(arr []string, value string) bool](#matchInArray)
+    * [func matchMapWithRegex(toCheck map[string]*regexp.Regexp, toMatch map[string][]string, canonicalKey bool) bool](#matchMapWithRegex)
+    * [func matchMapWithString(toCheck map[string]string, toMatch map[string][]string, canonicalKey bool) bool](#matchMapWithString)
+    * [func methodHandler(method string) http.HandlerFunc](#methodHandler)
+    * [func methodNotAllowed(w http.ResponseWriter, r *http.Request)](#methodNotAllowed)
+    * [func methodNotAllowedHandler() http.Handler](#methodNotAllowedHandler)
+    * [func newRequest(method, url string) *http.Request](#newRequest)
+    * [func newRequestHost(method, url, host string) *http.Request](#newRequestHost)
+    * [func newRequestWithHeaders(method, url string, headers ...string) *http.Request](#newRequestWithHeaders)
+    * [func requestWithRoute(r *http.Request, route *Route) *http.Request](#requestWithRoute)
+    * [func requestWithVars(r *http.Request, vars map[string]string) *http.Request](#requestWithVars)
+    * [func stringHandler(s string) http.HandlerFunc](#stringHandler)
+    * [func stringMapEqual(m1, m2 map[string]string) bool](#stringMapEqual)
+    * [func testMethods(t *testing.T, test routeTest)](#testMethods)
+    * [func testMethodsSubrouter(t *testing.T, test methodsSubrouterTest)](#testMethodsSubrouter)
+    * [func testQueriesRegexp(t *testing.T, test routeTest)](#testQueriesRegexp)
+    * [func testQueriesTemplates(t *testing.T, test routeTest)](#testQueriesTemplates)
+    * [func testRegexp(t *testing.T, test routeTest)](#testRegexp)
+    * [func testRoute(t *testing.T, test routeTest)](#testRoute)
+    * [func testTemplate(t *testing.T, test routeTest)](#testTemplate)
+    * [func testUseEscapedRoute(t *testing.T, test routeTest)](#testUseEscapedRoute)
+    * [func uniqueVars(s1, s2 []string) error](#uniqueVars)
+    * [func varGroupName(idx int) string](#varGroupName)
 
 
 ## <a id="const" href="#const">Constants</a>
 
-### <a id="varsKey" href="#varsKey">const varsKey</a>
-
 ```
-searchKey: mux.varsKey
-tags: [private]
-```
-
-```Go
-const varsKey contextKey = iota
-```
-
-### <a id="routeKey" href="#routeKey">const routeKey</a>
-
-```
-searchKey: mux.routeKey
-tags: [private]
-```
-
-```Go
-const routeKey
-```
-
-### <a id="regexpTypePath" href="#regexpTypePath">const regexpTypePath</a>
-
-```
-searchKey: mux.regexpTypePath
-tags: [private]
-```
-
-```Go
-const regexpTypePath regexpType = 0
+tags: [package]
 ```
 
 ### <a id="regexpTypeHost" href="#regexpTypeHost">const regexpTypeHost</a>
 
 ```
 searchKey: mux.regexpTypeHost
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
 const regexpTypeHost regexpType = 1
 ```
 
+### <a id="regexpTypePath" href="#regexpTypePath">const regexpTypePath</a>
+
+```
+searchKey: mux.regexpTypePath
+tags: [constant number private]
+```
+
+```Go
+const regexpTypePath regexpType = 0
+```
+
 ### <a id="regexpTypePrefix" href="#regexpTypePrefix">const regexpTypePrefix</a>
 
 ```
 searchKey: mux.regexpTypePrefix
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
@@ -630,19 +612,46 @@ const regexpTypePrefix regexpType = 2
 
 ```
 searchKey: mux.regexpTypeQuery
-tags: [private]
+tags: [constant number private]
 ```
 
 ```Go
 const regexpTypeQuery regexpType = 3
 ```
 
+### <a id="routeKey" href="#routeKey">const routeKey</a>
+
+```
+searchKey: mux.routeKey
+tags: [constant number private]
+```
+
+```Go
+const routeKey
+```
+
+### <a id="varsKey" href="#varsKey">const varsKey</a>
+
+```
+searchKey: mux.varsKey
+tags: [constant number private]
+```
+
+```Go
+const varsKey contextKey = iota
+```
+
 ## <a id="var" href="#var">Variables</a>
+
+```
+tags: [package]
+```
 
 ### <a id="ErrMethodMismatch" href="#ErrMethodMismatch">var ErrMethodMismatch</a>
 
 ```
 searchKey: mux.ErrMethodMismatch
+tags: [variable interface]
 ```
 
 ```Go
@@ -655,6 +664,7 @@ ErrMethodMismatch is returned when the method in the request does not match the 
 
 ```
 searchKey: mux.ErrNotFound
+tags: [variable interface]
 ```
 
 ```Go
@@ -667,6 +677,7 @@ ErrNotFound is returned when no route match is found.
 
 ```
 searchKey: mux.SkipRouter
+tags: [variable interface]
 ```
 
 ```Go
@@ -679,7 +690,7 @@ SkipRouter is used as a return value from WalkFuncs to indicate that the router 
 
 ```
 searchKey: mux.headerMatcherTests
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
@@ -690,7 +701,7 @@ var headerMatcherTests = ...
 
 ```
 searchKey: mux.hostMatcherTests
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
@@ -701,7 +712,7 @@ var hostMatcherTests = ...
 
 ```
 searchKey: mux.methodMatcherTests
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
@@ -712,7 +723,7 @@ var methodMatcherTests = ...
 
 ```
 searchKey: mux.pathMatcherTests
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
@@ -723,7 +734,7 @@ var pathMatcherTests = ...
 
 ```
 searchKey: mux.schemeMatcherTests
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
@@ -734,7 +745,7 @@ var schemeMatcherTests = ...
 
 ```
 searchKey: mux.urlBuildingTests
-tags: [private]
+tags: [variable array struct private]
 ```
 
 ```Go
@@ -743,10 +754,54 @@ var urlBuildingTests = ...
 
 ## <a id="type" href="#type">Types</a>
 
+```
+tags: [package]
+```
+
+### <a id="BuildVarsFunc" href="#BuildVarsFunc">type BuildVarsFunc func(map[string]string) map[string]string</a>
+
+```
+searchKey: mux.BuildVarsFunc
+tags: [function]
+```
+
+```Go
+type BuildVarsFunc func(map[string]string) map[string]string
+```
+
+BuildVarsFunc is the function signature used by custom build variable functions (which can modify route variables before a route's URL is built). 
+
+### <a id="MatcherFunc" href="#MatcherFunc">type MatcherFunc func(*net/http.Request, *github.com/gorilla/mux.RouteMatch) bool</a>
+
+```
+searchKey: mux.MatcherFunc
+tags: [function]
+```
+
+```Go
+type MatcherFunc func(*http.Request, *RouteMatch) bool
+```
+
+MatcherFunc is the function signature used by custom matchers. 
+
+#### <a id="MatcherFunc.Match" href="#MatcherFunc.Match">func (m MatcherFunc) Match(r *http.Request, match *RouteMatch) bool</a>
+
+```
+searchKey: mux.MatcherFunc.Match
+tags: [method]
+```
+
+```Go
+func (m MatcherFunc) Match(r *http.Request, match *RouteMatch) bool
+```
+
+Match returns the match for a given request. 
+
 ### <a id="MiddlewareFunc" href="#MiddlewareFunc">type MiddlewareFunc func(net/http.Handler) net/http.Handler</a>
 
 ```
 searchKey: mux.MiddlewareFunc
+tags: [function]
 ```
 
 ```Go
@@ -759,6 +814,7 @@ MiddlewareFunc is a function which receives an http.Handler and returns another 
 
 ```
 searchKey: mux.CORSMethodMiddleware
+tags: [method]
 ```
 
 ```Go
@@ -771,6 +827,7 @@ CORSMethodMiddleware automatically sets the Access-Control-Allow-Methods respons
 
 ```
 searchKey: mux.MiddlewareFunc.Middleware
+tags: [method]
 ```
 
 ```Go
@@ -779,667 +836,94 @@ func (mw MiddlewareFunc) Middleware(handler http.Handler) http.Handler
 
 Middleware allows MiddlewareFunc to implement the middleware interface. 
 
-### <a id="middleware" href="#middleware">type middleware interface</a>
+### <a id="ResponseRecorder" href="#ResponseRecorder">type ResponseRecorder struct</a>
 
 ```
-searchKey: mux.middleware
-tags: [private]
+searchKey: mux.ResponseRecorder
+tags: [struct private]
 ```
 
 ```Go
-type middleware interface {
-	Middleware(handler http.Handler) http.Handler
+type ResponseRecorder struct {
+	Code      int           // the HTTP response code from WriteHeader
+	HeaderMap http.Header   // the HTTP response headers
+	Body      *bytes.Buffer // if non-nil, the bytes.Buffer to append written data to
+	Flushed   bool
 }
 ```
 
-middleware interface is anything which implements a MiddlewareFunc named Middleware. 
+ResponseRecorder is an implementation of http.ResponseWriter that records its mutations for later inspection in tests. 
 
-### <a id="Router" href="#Router">type Router struct</a>
-
-```
-searchKey: mux.Router
-```
-
-```Go
-type Router struct {
-	// Configurable Handler to be used when no route matches.
-	NotFoundHandler http.Handler
-
-	// Configurable Handler to be used when the request method does not match the route.
-	MethodNotAllowedHandler http.Handler
-
-	// Routes to be matched, in order.
-	routes []*Route
-
-	// Routes by name for URL building.
-	namedRoutes map[string]*Route
-
-	// If true, do not clear the request context after handling the request.
-	//
-	// Deprecated: No effect, since the context is stored on the request itself.
-	KeepContext bool
-
-	// Slice of middlewares to be called after a match is found
-	middlewares []middleware
-
-	// configuration shared with `Route`
-	routeConf
-}
-```
-
-Router registers routes to be matched and dispatches a handler. 
-
-It implements the http.Handler interface, so it can be registered to serve requests: 
+#### <a id="NewRecorder" href="#NewRecorder">func NewRecorder() *ResponseRecorder</a>
 
 ```
-var router = mux.NewRouter()
-
-func main() {
-    http.Handle("/", router)
-}
-
-```
-Or, for Google App Engine, register it in a init() function: 
-
-```
-func init() {
-    http.Handle("/", router)
-}
-
-```
-This will send all incoming requests to the router. 
-
-#### <a id="NewRouter" href="#NewRouter">func NewRouter() *Router</a>
-
-```
-searchKey: mux.NewRouter
+searchKey: mux.NewRecorder
+tags: [function private]
 ```
 
 ```Go
-func NewRouter() *Router
+func NewRecorder() *ResponseRecorder
 ```
 
-NewRouter returns a new router instance. 
+NewRecorder returns an initialized ResponseRecorder. 
 
-#### <a id="Router.Use" href="#Router.Use">func (r *Router) Use(mwf ...MiddlewareFunc)</a>
-
-```
-searchKey: mux.Router.Use
-```
-
-```Go
-func (r *Router) Use(mwf ...MiddlewareFunc)
-```
-
-Use appends a MiddlewareFunc to the chain. Middleware can be used to intercept or otherwise modify requests and/or responses, and are executed in the order that they are applied to the Router. 
-
-#### <a id="Router.useInterface" href="#Router.useInterface">func (r *Router) useInterface(mw middleware)</a>
+#### <a id="ResponseRecorder.Flush" href="#ResponseRecorder.Flush">func (rw *ResponseRecorder) Flush()</a>
 
 ```
-searchKey: mux.Router.useInterface
-tags: [private]
+searchKey: mux.ResponseRecorder.Flush
+tags: [function private]
 ```
 
 ```Go
-func (r *Router) useInterface(mw middleware)
+func (rw *ResponseRecorder) Flush()
 ```
 
-useInterface appends a middleware to the chain. Middleware can be used to intercept or otherwise modify requests and/or responses, and are executed in the order that they are applied to the Router. 
+Flush sets rw.Flushed to true. 
 
-#### <a id="Router.Match" href="#Router.Match">func (r *Router) Match(req *http.Request, match *RouteMatch) bool</a>
-
-```
-searchKey: mux.Router.Match
-```
-
-```Go
-func (r *Router) Match(req *http.Request, match *RouteMatch) bool
-```
-
-Match attempts to match the given request against the router's registered routes. 
-
-If the request matches a route of this router or one of its subrouters the Route, Handler, and Vars fields of the the match argument are filled and this function returns true. 
-
-If the request does not match any of this router's or its subrouters' routes then this function returns false. If available, a reason for the match failure will be filled in the match argument's MatchErr field. If the match failure type (eg: not found) has a registered handler, the handler is assigned to the Handler field of the match argument. 
-
-#### <a id="Router.ServeHTTP" href="#Router.ServeHTTP">func (r *Router) ServeHTTP(w http.ResponseWriter, req *http.Request)</a>
+#### <a id="ResponseRecorder.Header" href="#ResponseRecorder.Header">func (rw *ResponseRecorder) Header() http.Header</a>
 
 ```
-searchKey: mux.Router.ServeHTTP
+searchKey: mux.ResponseRecorder.Header
+tags: [function private]
 ```
 
 ```Go
-func (r *Router) ServeHTTP(w http.ResponseWriter, req *http.Request)
+func (rw *ResponseRecorder) Header() http.Header
 ```
 
-ServeHTTP dispatches the handler registered in the matched route. 
+Header returns the response headers. 
 
-When there is a match, the route variables can be retrieved calling mux.Vars(request). 
-
-#### <a id="Router.Get" href="#Router.Get">func (r *Router) Get(name string) *Route</a>
+#### <a id="ResponseRecorder.Write" href="#ResponseRecorder.Write">func (rw *ResponseRecorder) Write(buf []byte) (int, error)</a>
 
 ```
-searchKey: mux.Router.Get
-```
-
-```Go
-func (r *Router) Get(name string) *Route
-```
-
-Get returns a route registered with the given name. 
-
-#### <a id="Router.GetRoute" href="#Router.GetRoute">func (r *Router) GetRoute(name string) *Route</a>
-
-```
-searchKey: mux.Router.GetRoute
+searchKey: mux.ResponseRecorder.Write
+tags: [method private]
 ```
 
 ```Go
-func (r *Router) GetRoute(name string) *Route
+func (rw *ResponseRecorder) Write(buf []byte) (int, error)
 ```
 
-GetRoute returns a route registered with the given name. This method was renamed to Get() and remains here for backwards compatibility. 
+Write always succeeds and writes to rw.Body, if not nil. 
 
-#### <a id="Router.StrictSlash" href="#Router.StrictSlash">func (r *Router) StrictSlash(value bool) *Router</a>
-
-```
-searchKey: mux.Router.StrictSlash
-```
-
-```Go
-func (r *Router) StrictSlash(value bool) *Router
-```
-
-StrictSlash defines the trailing slash behavior for new routes. The initial value is false. 
-
-When true, if the route path is "/path/", accessing "/path" will perform a redirect to the former and vice versa. In other words, your application will always see the path as specified in the route. 
-
-When false, if the route path is "/path", accessing "/path/" will not match this route and vice versa. 
-
-The re-direct is a HTTP 301 (Moved Permanently). Note that when this is set for routes with a non-idempotent method (e.g. POST, PUT), the subsequent re-directed request will be made as a GET by most clients. Use middleware or client settings to modify this behaviour as needed. 
-
-Special case: when a route sets a path prefix using the PathPrefix() method, strict slash is ignored for that route because the redirect behavior can't be determined from a prefix alone. However, any subrouters created from that route inherit the original StrictSlash setting. 
-
-#### <a id="Router.SkipClean" href="#Router.SkipClean">func (r *Router) SkipClean(value bool) *Router</a>
+#### <a id="ResponseRecorder.WriteHeader" href="#ResponseRecorder.WriteHeader">func (rw *ResponseRecorder) WriteHeader(code int)</a>
 
 ```
-searchKey: mux.Router.SkipClean
+searchKey: mux.ResponseRecorder.WriteHeader
+tags: [method private]
 ```
 
 ```Go
-func (r *Router) SkipClean(value bool) *Router
+func (rw *ResponseRecorder) WriteHeader(code int)
 ```
 
-SkipClean defines the path cleaning behaviour for new routes. The initial value is false. Users should be careful about which routes are not cleaned 
-
-When true, if the route path is "/path//to", it will remain with the double slash. This is helpful if you have a route like: /fetch/[http://xkcd.com/534/](http://xkcd.com/534/) 
-
-When false, the path will be cleaned, so /fetch/[http://xkcd.com/534/](http://xkcd.com/534/) will become /fetch/http/xkcd.com/534 
-
-#### <a id="Router.UseEncodedPath" href="#Router.UseEncodedPath">func (r *Router) UseEncodedPath() *Router</a>
-
-```
-searchKey: mux.Router.UseEncodedPath
-```
-
-```Go
-func (r *Router) UseEncodedPath() *Router
-```
-
-UseEncodedPath tells the router to match the encoded original path to the routes. For eg. "/path/foo%2Fbar/to" will match the path "/path/{var}/to". 
-
-If not called, the router will match the unencoded path to the routes. For eg. "/path/foo%2Fbar/to" will match the path "/path/foo/bar/to" 
-
-#### <a id="Router.NewRoute" href="#Router.NewRoute">func (r *Router) NewRoute() *Route</a>
-
-```
-searchKey: mux.Router.NewRoute
-```
-
-```Go
-func (r *Router) NewRoute() *Route
-```
-
-NewRoute registers an empty route. 
-
-#### <a id="Router.Name" href="#Router.Name">func (r *Router) Name(name string) *Route</a>
-
-```
-searchKey: mux.Router.Name
-```
-
-```Go
-func (r *Router) Name(name string) *Route
-```
-
-Name registers a new route with a name. See Route.Name(). 
-
-#### <a id="Router.Handle" href="#Router.Handle">func (r *Router) Handle(path string, handler http.Handler) *Route</a>
-
-```
-searchKey: mux.Router.Handle
-```
-
-```Go
-func (r *Router) Handle(path string, handler http.Handler) *Route
-```
-
-Handle registers a new route with a matcher for the URL path. See Route.Path() and Route.Handler(). 
-
-#### <a id="Router.HandleFunc" href="#Router.HandleFunc">func (r *Router) HandleFunc(path string, f func(http.ResponseWriter,...</a>
-
-```
-searchKey: mux.Router.HandleFunc
-```
-
-```Go
-func (r *Router) HandleFunc(path string, f func(http.ResponseWriter,
-	*http.Request)) *Route
-```
-
-HandleFunc registers a new route with a matcher for the URL path. See Route.Path() and Route.HandlerFunc(). 
-
-#### <a id="Router.Headers" href="#Router.Headers">func (r *Router) Headers(pairs ...string) *Route</a>
-
-```
-searchKey: mux.Router.Headers
-```
-
-```Go
-func (r *Router) Headers(pairs ...string) *Route
-```
-
-Headers registers a new route with a matcher for request header values. See Route.Headers(). 
-
-#### <a id="Router.Host" href="#Router.Host">func (r *Router) Host(tpl string) *Route</a>
-
-```
-searchKey: mux.Router.Host
-```
-
-```Go
-func (r *Router) Host(tpl string) *Route
-```
-
-Host registers a new route with a matcher for the URL host. See Route.Host(). 
-
-#### <a id="Router.MatcherFunc" href="#Router.MatcherFunc">func (r *Router) MatcherFunc(f MatcherFunc) *Route</a>
-
-```
-searchKey: mux.Router.MatcherFunc
-```
-
-```Go
-func (r *Router) MatcherFunc(f MatcherFunc) *Route
-```
-
-MatcherFunc registers a new route with a custom matcher function. See Route.MatcherFunc(). 
-
-#### <a id="Router.Methods" href="#Router.Methods">func (r *Router) Methods(methods ...string) *Route</a>
-
-```
-searchKey: mux.Router.Methods
-```
-
-```Go
-func (r *Router) Methods(methods ...string) *Route
-```
-
-Methods registers a new route with a matcher for HTTP methods. See Route.Methods(). 
-
-#### <a id="Router.Path" href="#Router.Path">func (r *Router) Path(tpl string) *Route</a>
-
-```
-searchKey: mux.Router.Path
-```
-
-```Go
-func (r *Router) Path(tpl string) *Route
-```
-
-Path registers a new route with a matcher for the URL path. See Route.Path(). 
-
-#### <a id="Router.PathPrefix" href="#Router.PathPrefix">func (r *Router) PathPrefix(tpl string) *Route</a>
-
-```
-searchKey: mux.Router.PathPrefix
-```
-
-```Go
-func (r *Router) PathPrefix(tpl string) *Route
-```
-
-PathPrefix registers a new route with a matcher for the URL path prefix. See Route.PathPrefix(). 
-
-#### <a id="Router.Queries" href="#Router.Queries">func (r *Router) Queries(pairs ...string) *Route</a>
-
-```
-searchKey: mux.Router.Queries
-```
-
-```Go
-func (r *Router) Queries(pairs ...string) *Route
-```
-
-Queries registers a new route with a matcher for URL query values. See Route.Queries(). 
-
-#### <a id="Router.Schemes" href="#Router.Schemes">func (r *Router) Schemes(schemes ...string) *Route</a>
-
-```
-searchKey: mux.Router.Schemes
-```
-
-```Go
-func (r *Router) Schemes(schemes ...string) *Route
-```
-
-Schemes registers a new route with a matcher for URL schemes. See Route.Schemes(). 
-
-#### <a id="Router.BuildVarsFunc" href="#Router.BuildVarsFunc">func (r *Router) BuildVarsFunc(f BuildVarsFunc) *Route</a>
-
-```
-searchKey: mux.Router.BuildVarsFunc
-```
-
-```Go
-func (r *Router) BuildVarsFunc(f BuildVarsFunc) *Route
-```
-
-BuildVarsFunc registers a new route with a custom function for modifying route variables before building a URL. 
-
-#### <a id="Router.Walk" href="#Router.Walk">func (r *Router) Walk(walkFn WalkFunc) error</a>
-
-```
-searchKey: mux.Router.Walk
-```
-
-```Go
-func (r *Router) Walk(walkFn WalkFunc) error
-```
-
-Walk walks the router and all its sub-routers, calling walkFn for each route in the tree. The routes are walked in the order they were added. Sub-routers are explored depth-first. 
-
-#### <a id="Router.walk" href="#Router.walk">func (r *Router) walk(walkFn WalkFunc, ancestors []*Route) error</a>
-
-```
-searchKey: mux.Router.walk
-tags: [private]
-```
-
-```Go
-func (r *Router) walk(walkFn WalkFunc, ancestors []*Route) error
-```
-
-### <a id="routeConf" href="#routeConf">type routeConf struct</a>
-
-```
-searchKey: mux.routeConf
-tags: [private]
-```
-
-```Go
-type routeConf struct {
-	// If true, "/path/foo%2Fbar/to" will match the path "/path/{var}/to"
-	useEncodedPath bool
-
-	// If true, when the path pattern is "/path/", accessing "/path" will
-	// redirect to the former and vice versa.
-	strictSlash bool
-
-	// If true, when the path pattern is "/path//to", accessing "/path//to"
-	// will not redirect
-	skipClean bool
-
-	// Manager for the variables from host and path.
-	regexp routeRegexpGroup
-
-	// List of matchers.
-	matchers []matcher
-
-	// The scheme used when building URLs.
-	buildScheme string
-
-	buildVarsFunc BuildVarsFunc
-}
-```
-
-common route configuration shared between `Router` and `Route` 
-
-#### <a id="copyRouteConf" href="#copyRouteConf">func copyRouteConf(r routeConf) routeConf</a>
-
-```
-searchKey: mux.copyRouteConf
-tags: [private]
-```
-
-```Go
-func copyRouteConf(r routeConf) routeConf
-```
-
-returns an effective deep copy of `routeConf` 
-
-### <a id="WalkFunc" href="#WalkFunc">type WalkFunc func(route *github.com/gorilla/mux.Route, router *github.com/gorilla/mux.Router, ancestors []*github.com/gorilla/mux.Route) error</a>
-
-```
-searchKey: mux.WalkFunc
-```
-
-```Go
-type WalkFunc func(route *Route, router *Router, ancestors []*Route) error
-```
-
-WalkFunc is the type of the function called for each route visited by Walk. At every invocation, it is given the current route, and the current router, and a list of ancestor routes that lead to the current route. 
-
-### <a id="RouteMatch" href="#RouteMatch">type RouteMatch struct</a>
-
-```
-searchKey: mux.RouteMatch
-```
-
-```Go
-type RouteMatch struct {
-	Route   *Route
-	Handler http.Handler
-	Vars    map[string]string
-
-	// MatchErr is set to appropriate matching error
-	// It is set to ErrMethodMismatch if there is a mismatch in
-	// the request method and route method
-	MatchErr error
-}
-```
-
-RouteMatch stores information about a matched route. 
-
-### <a id="contextKey" href="#contextKey">type contextKey int</a>
-
-```
-searchKey: mux.contextKey
-tags: [private]
-```
-
-```Go
-type contextKey int
-```
-
-### <a id="routeRegexpOptions" href="#routeRegexpOptions">type routeRegexpOptions struct</a>
-
-```
-searchKey: mux.routeRegexpOptions
-tags: [private]
-```
-
-```Go
-type routeRegexpOptions struct {
-	strictSlash    bool
-	useEncodedPath bool
-}
-```
-
-### <a id="regexpType" href="#regexpType">type regexpType int</a>
-
-```
-searchKey: mux.regexpType
-tags: [private]
-```
-
-```Go
-type regexpType int
-```
-
-### <a id="routeRegexp" href="#routeRegexp">type routeRegexp struct</a>
-
-```
-searchKey: mux.routeRegexp
-tags: [private]
-```
-
-```Go
-type routeRegexp struct {
-	// The unmodified template.
-	template string
-	// The type of match
-	regexpType regexpType
-	// Options for matching
-	options routeRegexpOptions
-	// Expanded regexp.
-	regexp *regexp.Regexp
-	// Reverse template.
-	reverse string
-	// Variable names.
-	varsN []string
-	// Variable regexps (validators).
-	varsR []*regexp.Regexp
-	// Wildcard host-port (no strict port match in hostname)
-	wildcardHostPort bool
-}
-```
-
-routeRegexp stores a regexp to match a host or path and information to collect and validate route variables. 
-
-#### <a id="copyRouteRegexp" href="#copyRouteRegexp">func copyRouteRegexp(r *routeRegexp) *routeRegexp</a>
-
-```
-searchKey: mux.copyRouteRegexp
-tags: [private]
-```
-
-```Go
-func copyRouteRegexp(r *routeRegexp) *routeRegexp
-```
-
-#### <a id="newRouteRegexp" href="#newRouteRegexp">func newRouteRegexp(tpl string, typ regexpType, options routeRegexpOptions) (*routeRegexp, error)</a>
-
-```
-searchKey: mux.newRouteRegexp
-tags: [private]
-```
-
-```Go
-func newRouteRegexp(tpl string, typ regexpType, options routeRegexpOptions) (*routeRegexp, error)
-```
-
-newRouteRegexp parses a route template and returns a routeRegexp, used to match a host, a path or a query string. 
-
-It will extract named variables, assemble a regexp to be matched, create a "reverse" template to build URLs and compile regexps to validate variable values used in URL building. 
-
-Previously we accepted only Python-like identifiers for variable names ([a-zA-Z_][a-zA-Z0-9_]*), but currently the only restriction is that name and pattern can't be empty, and names can't contain a colon. 
-
-#### <a id="routeRegexp.Match" href="#routeRegexp.Match">func (r *routeRegexp) Match(req *http.Request, match *RouteMatch) bool</a>
-
-```
-searchKey: mux.routeRegexp.Match
-tags: [private]
-```
-
-```Go
-func (r *routeRegexp) Match(req *http.Request, match *RouteMatch) bool
-```
-
-Match matches the regexp against the URL host or path. 
-
-#### <a id="routeRegexp.url" href="#routeRegexp.url">func (r *routeRegexp) url(values map[string]string) (string, error)</a>
-
-```
-searchKey: mux.routeRegexp.url
-tags: [private]
-```
-
-```Go
-func (r *routeRegexp) url(values map[string]string) (string, error)
-```
-
-url builds a URL part using the given values. 
-
-#### <a id="routeRegexp.getURLQuery" href="#routeRegexp.getURLQuery">func (r *routeRegexp) getURLQuery(req *http.Request) string</a>
-
-```
-searchKey: mux.routeRegexp.getURLQuery
-tags: [private]
-```
-
-```Go
-func (r *routeRegexp) getURLQuery(req *http.Request) string
-```
-
-getURLQuery returns a single query parameter from a request URL. For a URL with foo=bar&baz=ding, we return only the relevant key value pair for the routeRegexp. 
-
-#### <a id="routeRegexp.matchQueryString" href="#routeRegexp.matchQueryString">func (r *routeRegexp) matchQueryString(req *http.Request) bool</a>
-
-```
-searchKey: mux.routeRegexp.matchQueryString
-tags: [private]
-```
-
-```Go
-func (r *routeRegexp) matchQueryString(req *http.Request) bool
-```
-
-#### <a id="routeRegexp.GoString" href="#routeRegexp.GoString">func (r *routeRegexp) GoString() string</a>
-
-```
-searchKey: mux.routeRegexp.GoString
-tags: [private]
-```
-
-```Go
-func (r *routeRegexp) GoString() string
-```
-
-### <a id="routeRegexpGroup" href="#routeRegexpGroup">type routeRegexpGroup struct</a>
-
-```
-searchKey: mux.routeRegexpGroup
-tags: [private]
-```
-
-```Go
-type routeRegexpGroup struct {
-	host    *routeRegexp
-	path    *routeRegexp
-	queries []*routeRegexp
-}
-```
-
-routeRegexpGroup groups the route matchers that carry variables. 
-
-#### <a id="routeRegexpGroup.setMatch" href="#routeRegexpGroup.setMatch">func (v routeRegexpGroup) setMatch(req *http.Request, m *RouteMatch, r *Route)</a>
-
-```
-searchKey: mux.routeRegexpGroup.setMatch
-tags: [private]
-```
-
-```Go
-func (v routeRegexpGroup) setMatch(req *http.Request, m *RouteMatch, r *Route)
-```
-
-setMatch extracts the variables from the URL once a route matches. 
+WriteHeader sets rw.Code. 
 
 ### <a id="Route" href="#Route">type Route struct</a>
 
 ```
 searchKey: mux.Route
+tags: [struct]
 ```
 
 ```Go
@@ -1467,6 +951,7 @@ Route stores information to match a request and build URLs.
 
 ```
 searchKey: mux.CurrentRoute
+tags: [method]
 ```
 
 ```Go
@@ -1475,46 +960,11 @@ func CurrentRoute(r *http.Request) *Route
 
 CurrentRoute returns the matched route for the current request, if any. This only works when called inside the handler of the matched route because the matched route is stored in the request context which is cleared after the handler returns. 
 
-#### <a id="Route.SkipClean" href="#Route.SkipClean">func (r *Route) SkipClean() bool</a>
-
-```
-searchKey: mux.Route.SkipClean
-```
-
-```Go
-func (r *Route) SkipClean() bool
-```
-
-SkipClean reports whether path cleaning is enabled for this route via Router.SkipClean. 
-
-#### <a id="Route.Match" href="#Route.Match">func (r *Route) Match(req *http.Request, match *RouteMatch) bool</a>
-
-```
-searchKey: mux.Route.Match
-```
-
-```Go
-func (r *Route) Match(req *http.Request, match *RouteMatch) bool
-```
-
-Match matches the route against the request. 
-
-#### <a id="Route.GetError" href="#Route.GetError">func (r *Route) GetError() error</a>
-
-```
-searchKey: mux.Route.GetError
-```
-
-```Go
-func (r *Route) GetError() error
-```
-
-GetError returns an error resulted from building the route, if any. 
-
 #### <a id="Route.BuildOnly" href="#Route.BuildOnly">func (r *Route) BuildOnly() *Route</a>
 
 ```
 searchKey: mux.Route.BuildOnly
+tags: [function]
 ```
 
 ```Go
@@ -1523,10 +973,152 @@ func (r *Route) BuildOnly() *Route
 
 BuildOnly sets the route to never match: it is only used to build URLs. 
 
+#### <a id="Route.BuildVarsFunc" href="#Route.BuildVarsFunc">func (r *Route) BuildVarsFunc(f BuildVarsFunc) *Route</a>
+
+```
+searchKey: mux.Route.BuildVarsFunc
+tags: [method]
+```
+
+```Go
+func (r *Route) BuildVarsFunc(f BuildVarsFunc) *Route
+```
+
+BuildVarsFunc adds a custom function to be used to modify build variables before a route's URL is built. 
+
+#### <a id="Route.GetError" href="#Route.GetError">func (r *Route) GetError() error</a>
+
+```
+searchKey: mux.Route.GetError
+tags: [function]
+```
+
+```Go
+func (r *Route) GetError() error
+```
+
+GetError returns an error resulted from building the route, if any. 
+
+#### <a id="Route.GetHandler" href="#Route.GetHandler">func (r *Route) GetHandler() http.Handler</a>
+
+```
+searchKey: mux.Route.GetHandler
+tags: [function]
+```
+
+```Go
+func (r *Route) GetHandler() http.Handler
+```
+
+GetHandler returns the handler for the route, if any. 
+
+#### <a id="Route.GetHostTemplate" href="#Route.GetHostTemplate">func (r *Route) GetHostTemplate() (string, error)</a>
+
+```
+searchKey: mux.Route.GetHostTemplate
+tags: [function]
+```
+
+```Go
+func (r *Route) GetHostTemplate() (string, error)
+```
+
+GetHostTemplate returns the template used to build the route match. This is useful for building simple REST API documentation and for instrumentation against third-party services. An error will be returned if the route does not define a host. 
+
+#### <a id="Route.GetMethods" href="#Route.GetMethods">func (r *Route) GetMethods() ([]string, error)</a>
+
+```
+searchKey: mux.Route.GetMethods
+tags: [function]
+```
+
+```Go
+func (r *Route) GetMethods() ([]string, error)
+```
+
+GetMethods returns the methods the route matches against This is useful for building simple REST API documentation and for instrumentation against third-party services. An error will be returned if route does not have methods. 
+
+#### <a id="Route.GetName" href="#Route.GetName">func (r *Route) GetName() string</a>
+
+```
+searchKey: mux.Route.GetName
+tags: [function]
+```
+
+```Go
+func (r *Route) GetName() string
+```
+
+GetName returns the name for the route, if any. 
+
+#### <a id="Route.GetPathRegexp" href="#Route.GetPathRegexp">func (r *Route) GetPathRegexp() (string, error)</a>
+
+```
+searchKey: mux.Route.GetPathRegexp
+tags: [function]
+```
+
+```Go
+func (r *Route) GetPathRegexp() (string, error)
+```
+
+GetPathRegexp returns the expanded regular expression used to match route path. This is useful for building simple REST API documentation and for instrumentation against third-party services. An error will be returned if the route does not define a path. 
+
+#### <a id="Route.GetPathTemplate" href="#Route.GetPathTemplate">func (r *Route) GetPathTemplate() (string, error)</a>
+
+```
+searchKey: mux.Route.GetPathTemplate
+tags: [function]
+```
+
+```Go
+func (r *Route) GetPathTemplate() (string, error)
+```
+
+GetPathTemplate returns the template used to build the route match. This is useful for building simple REST API documentation and for instrumentation against third-party services. An error will be returned if the route does not define a path. 
+
+#### <a id="Route.GetQueriesRegexp" href="#Route.GetQueriesRegexp">func (r *Route) GetQueriesRegexp() ([]string, error)</a>
+
+```
+searchKey: mux.Route.GetQueriesRegexp
+tags: [function]
+```
+
+```Go
+func (r *Route) GetQueriesRegexp() ([]string, error)
+```
+
+GetQueriesRegexp returns the expanded regular expressions used to match the route queries. This is useful for building simple REST API documentation and for instrumentation against third-party services. An error will be returned if the route does not have queries. 
+
+#### <a id="Route.GetQueriesTemplates" href="#Route.GetQueriesTemplates">func (r *Route) GetQueriesTemplates() ([]string, error)</a>
+
+```
+searchKey: mux.Route.GetQueriesTemplates
+tags: [function]
+```
+
+```Go
+func (r *Route) GetQueriesTemplates() ([]string, error)
+```
+
+GetQueriesTemplates returns the templates used to build the query matching. This is useful for building simple REST API documentation and for instrumentation against third-party services. An error will be returned if the route does not define queries. 
+
+#### <a id="Route.GoString" href="#Route.GoString">func (r *Route) GoString() string</a>
+
+```
+searchKey: mux.Route.GoString
+tags: [function private]
+```
+
+```Go
+func (r *Route) GoString() string
+```
+
 #### <a id="Route.Handler" href="#Route.Handler">func (r *Route) Handler(handler http.Handler) *Route</a>
 
 ```
 searchKey: mux.Route.Handler
+tags: [method]
 ```
 
 ```Go
@@ -1539,6 +1131,7 @@ Handler sets a handler for the route.
 
 ```
 searchKey: mux.Route.HandlerFunc
+tags: [method]
 ```
 
 ```Go
@@ -1547,72 +1140,11 @@ func (r *Route) HandlerFunc(f func(http.ResponseWriter, *http.Request)) *Route
 
 HandlerFunc sets a handler function for the route. 
 
-#### <a id="Route.GetHandler" href="#Route.GetHandler">func (r *Route) GetHandler() http.Handler</a>
-
-```
-searchKey: mux.Route.GetHandler
-```
-
-```Go
-func (r *Route) GetHandler() http.Handler
-```
-
-GetHandler returns the handler for the route, if any. 
-
-#### <a id="Route.Name" href="#Route.Name">func (r *Route) Name(name string) *Route</a>
-
-```
-searchKey: mux.Route.Name
-```
-
-```Go
-func (r *Route) Name(name string) *Route
-```
-
-Name sets the name for the route, used to build URLs. It is an error to call Name more than once on a route. 
-
-#### <a id="Route.GetName" href="#Route.GetName">func (r *Route) GetName() string</a>
-
-```
-searchKey: mux.Route.GetName
-```
-
-```Go
-func (r *Route) GetName() string
-```
-
-GetName returns the name for the route, if any. 
-
-#### <a id="Route.addMatcher" href="#Route.addMatcher">func (r *Route) addMatcher(m matcher) *Route</a>
-
-```
-searchKey: mux.Route.addMatcher
-tags: [private]
-```
-
-```Go
-func (r *Route) addMatcher(m matcher) *Route
-```
-
-addMatcher adds a matcher to the route. 
-
-#### <a id="Route.addRegexpMatcher" href="#Route.addRegexpMatcher">func (r *Route) addRegexpMatcher(tpl string, typ regexpType) error</a>
-
-```
-searchKey: mux.Route.addRegexpMatcher
-tags: [private]
-```
-
-```Go
-func (r *Route) addRegexpMatcher(tpl string, typ regexpType) error
-```
-
-addRegexpMatcher adds a host or path matcher and builder to a route. 
-
 #### <a id="Route.Headers" href="#Route.Headers">func (r *Route) Headers(pairs ...string) *Route</a>
 
 ```
 searchKey: mux.Route.Headers
+tags: [method]
 ```
 
 ```Go
@@ -1633,6 +1165,7 @@ The above route will only match if both request header values match. If the valu
 
 ```
 searchKey: mux.Route.HeadersRegexp
+tags: [method]
 ```
 
 ```Go
@@ -1653,6 +1186,7 @@ The above route will only match if both the request header matches both regular 
 
 ```
 searchKey: mux.Route.Host
+tags: [method]
 ```
 
 ```Go
@@ -1676,10 +1210,24 @@ r.Host("{subdomain:[a-z]+}.domain.com")
 ```
 Variable names must be unique in a given route. They can be retrieved calling mux.Vars(request). 
 
+#### <a id="Route.Match" href="#Route.Match">func (r *Route) Match(req *http.Request, match *RouteMatch) bool</a>
+
+```
+searchKey: mux.Route.Match
+tags: [method]
+```
+
+```Go
+func (r *Route) Match(req *http.Request, match *RouteMatch) bool
+```
+
+Match matches the route against the request. 
+
 #### <a id="Route.MatcherFunc" href="#Route.MatcherFunc">func (r *Route) MatcherFunc(f MatcherFunc) *Route</a>
 
 ```
 searchKey: mux.Route.MatcherFunc
+tags: [method]
 ```
 
 ```Go
@@ -1692,6 +1240,7 @@ MatcherFunc adds a custom function to be used as request matcher.
 
 ```
 searchKey: mux.Route.Methods
+tags: [method]
 ```
 
 ```Go
@@ -1700,10 +1249,24 @@ func (r *Route) Methods(methods ...string) *Route
 
 Methods adds a matcher for HTTP methods. It accepts a sequence of one or more methods to be matched, e.g.: "GET", "POST", "PUT". 
 
+#### <a id="Route.Name" href="#Route.Name">func (r *Route) Name(name string) *Route</a>
+
+```
+searchKey: mux.Route.Name
+tags: [method]
+```
+
+```Go
+func (r *Route) Name(name string) *Route
+```
+
+Name sets the name for the route, used to build URLs. It is an error to call Name more than once on a route. 
+
 #### <a id="Route.Path" href="#Route.Path">func (r *Route) Path(tpl string) *Route</a>
 
 ```
 searchKey: mux.Route.Path
+tags: [method]
 ```
 
 ```Go
@@ -1732,6 +1295,7 @@ Variable names must be unique in a given route. They can be retrieved calling mu
 
 ```
 searchKey: mux.Route.PathPrefix
+tags: [method]
 ```
 
 ```Go
@@ -1748,6 +1312,7 @@ Also note that the setting of Router.StrictSlash() has no effect on routes with 
 
 ```
 searchKey: mux.Route.Queries
+tags: [method]
 ```
 
 ```Go
@@ -1775,6 +1340,7 @@ Variables can define an optional regexp pattern to be matched:
 
 ```
 searchKey: mux.Route.Schemes
+tags: [method]
 ```
 
 ```Go
@@ -1783,22 +1349,24 @@ func (r *Route) Schemes(schemes ...string) *Route
 
 Schemes adds a matcher for URL schemes. It accepts a sequence of schemes to be matched, e.g.: "http", "https". If the request's URL has a scheme set, it will be matched against. Generally, the URL scheme will only be set if a previous handler set it, such as the ProxyHeaders handler from gorilla/handlers. If unset, the scheme will be determined based on the request's TLS termination state. The first argument to Schemes will be used when constructing a route URL. 
 
-#### <a id="Route.BuildVarsFunc" href="#Route.BuildVarsFunc">func (r *Route) BuildVarsFunc(f BuildVarsFunc) *Route</a>
+#### <a id="Route.SkipClean" href="#Route.SkipClean">func (r *Route) SkipClean() bool</a>
 
 ```
-searchKey: mux.Route.BuildVarsFunc
+searchKey: mux.Route.SkipClean
+tags: [function]
 ```
 
 ```Go
-func (r *Route) BuildVarsFunc(f BuildVarsFunc) *Route
+func (r *Route) SkipClean() bool
 ```
 
-BuildVarsFunc adds a custom function to be used to modify build variables before a route's URL is built. 
+SkipClean reports whether path cleaning is enabled for this route via Router.SkipClean. 
 
 #### <a id="Route.Subrouter" href="#Route.Subrouter">func (r *Route) Subrouter() *Router</a>
 
 ```
 searchKey: mux.Route.Subrouter
+tags: [function]
 ```
 
 ```Go
@@ -1823,6 +1391,7 @@ Here, the routes registered in the subrouter won't be tested if the host doesn't
 
 ```
 searchKey: mux.Route.URL
+tags: [method]
 ```
 
 ```Go
@@ -1880,6 +1449,7 @@ All variables defined in the route are required, and their values must conform t
 
 ```
 searchKey: mux.Route.URLHost
+tags: [method]
 ```
 
 ```Go
@@ -1894,6 +1464,7 @@ The route must have a host defined.
 
 ```
 searchKey: mux.Route.URLPath
+tags: [method]
 ```
 
 ```Go
@@ -1904,83 +1475,48 @@ URLPath builds the path part of the URL for a route. See Route.URL().
 
 The route must have a path defined. 
 
-#### <a id="Route.GetPathTemplate" href="#Route.GetPathTemplate">func (r *Route) GetPathTemplate() (string, error)</a>
+#### <a id="Route.addMatcher" href="#Route.addMatcher">func (r *Route) addMatcher(m matcher) *Route</a>
 
 ```
-searchKey: mux.Route.GetPathTemplate
-```
-
-```Go
-func (r *Route) GetPathTemplate() (string, error)
-```
-
-GetPathTemplate returns the template used to build the route match. This is useful for building simple REST API documentation and for instrumentation against third-party services. An error will be returned if the route does not define a path. 
-
-#### <a id="Route.GetPathRegexp" href="#Route.GetPathRegexp">func (r *Route) GetPathRegexp() (string, error)</a>
-
-```
-searchKey: mux.Route.GetPathRegexp
+searchKey: mux.Route.addMatcher
+tags: [method private]
 ```
 
 ```Go
-func (r *Route) GetPathRegexp() (string, error)
+func (r *Route) addMatcher(m matcher) *Route
 ```
 
-GetPathRegexp returns the expanded regular expression used to match route path. This is useful for building simple REST API documentation and for instrumentation against third-party services. An error will be returned if the route does not define a path. 
+addMatcher adds a matcher to the route. 
 
-#### <a id="Route.GetQueriesRegexp" href="#Route.GetQueriesRegexp">func (r *Route) GetQueriesRegexp() ([]string, error)</a>
-
-```
-searchKey: mux.Route.GetQueriesRegexp
-```
-
-```Go
-func (r *Route) GetQueriesRegexp() ([]string, error)
-```
-
-GetQueriesRegexp returns the expanded regular expressions used to match the route queries. This is useful for building simple REST API documentation and for instrumentation against third-party services. An error will be returned if the route does not have queries. 
-
-#### <a id="Route.GetQueriesTemplates" href="#Route.GetQueriesTemplates">func (r *Route) GetQueriesTemplates() ([]string, error)</a>
+#### <a id="Route.addRegexpMatcher" href="#Route.addRegexpMatcher">func (r *Route) addRegexpMatcher(tpl string, typ regexpType) error</a>
 
 ```
-searchKey: mux.Route.GetQueriesTemplates
+searchKey: mux.Route.addRegexpMatcher
+tags: [method private]
 ```
 
 ```Go
-func (r *Route) GetQueriesTemplates() ([]string, error)
+func (r *Route) addRegexpMatcher(tpl string, typ regexpType) error
 ```
 
-GetQueriesTemplates returns the templates used to build the query matching. This is useful for building simple REST API documentation and for instrumentation against third-party services. An error will be returned if the route does not define queries. 
+addRegexpMatcher adds a host or path matcher and builder to a route. 
 
-#### <a id="Route.GetMethods" href="#Route.GetMethods">func (r *Route) GetMethods() ([]string, error)</a>
-
-```
-searchKey: mux.Route.GetMethods
-```
-
-```Go
-func (r *Route) GetMethods() ([]string, error)
-```
-
-GetMethods returns the methods the route matches against This is useful for building simple REST API documentation and for instrumentation against third-party services. An error will be returned if route does not have methods. 
-
-#### <a id="Route.GetHostTemplate" href="#Route.GetHostTemplate">func (r *Route) GetHostTemplate() (string, error)</a>
+#### <a id="Route.buildVars" href="#Route.buildVars">func (r *Route) buildVars(m map[string]string) map[string]string</a>
 
 ```
-searchKey: mux.Route.GetHostTemplate
+searchKey: mux.Route.buildVars
+tags: [method private]
 ```
 
 ```Go
-func (r *Route) GetHostTemplate() (string, error)
+func (r *Route) buildVars(m map[string]string) map[string]string
 ```
-
-GetHostTemplate returns the template used to build the route match. This is useful for building simple REST API documentation and for instrumentation against third-party services. An error will be returned if the route does not define a host. 
 
 #### <a id="Route.prepareVars" href="#Route.prepareVars">func (r *Route) prepareVars(pairs ...string) (map[string]string, error)</a>
 
 ```
 searchKey: mux.Route.prepareVars
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -1989,48 +1525,528 @@ func (r *Route) prepareVars(pairs ...string) (map[string]string, error)
 
 prepareVars converts the route variable pairs into a map. If the route has a BuildVarsFunc, it is invoked. 
 
-#### <a id="Route.buildVars" href="#Route.buildVars">func (r *Route) buildVars(m map[string]string) map[string]string</a>
+### <a id="RouteMatch" href="#RouteMatch">type RouteMatch struct</a>
 
 ```
-searchKey: mux.Route.buildVars
-tags: [private]
-```
-
-```Go
-func (r *Route) buildVars(m map[string]string) map[string]string
-```
-
-#### <a id="Route.GoString" href="#Route.GoString">func (r *Route) GoString() string</a>
-
-```
-searchKey: mux.Route.GoString
-tags: [private]
+searchKey: mux.RouteMatch
+tags: [struct]
 ```
 
 ```Go
-func (r *Route) GoString() string
-```
+type RouteMatch struct {
+	Route   *Route
+	Handler http.Handler
+	Vars    map[string]string
 
-### <a id="matcher" href="#matcher">type matcher interface</a>
-
-```
-searchKey: mux.matcher
-tags: [private]
-```
-
-```Go
-type matcher interface {
-	Match(*http.Request, *RouteMatch) bool
+	// MatchErr is set to appropriate matching error
+	// It is set to ErrMethodMismatch if there is a mismatch in
+	// the request method and route method
+	MatchErr error
 }
 ```
 
-matcher types try to match a request. 
+RouteMatch stores information about a matched route. 
+
+### <a id="Router" href="#Router">type Router struct</a>
+
+```
+searchKey: mux.Router
+tags: [struct]
+```
+
+```Go
+type Router struct {
+	// Configurable Handler to be used when no route matches.
+	NotFoundHandler http.Handler
+
+	// Configurable Handler to be used when the request method does not match the route.
+	MethodNotAllowedHandler http.Handler
+
+	// Routes to be matched, in order.
+	routes []*Route
+
+	// Routes by name for URL building.
+	namedRoutes map[string]*Route
+
+	// If true, do not clear the request context after handling the request.
+	//
+	// Deprecated: No effect, since the context is stored on the request itself.
+	KeepContext bool
+
+	// Slice of middlewares to be called after a match is found
+	middlewares []middleware
+
+	// configuration shared with `Route`
+	routeConf
+}
+```
+
+Router registers routes to be matched and dispatches a handler. 
+
+It implements the http.Handler interface, so it can be registered to serve requests: 
+
+```
+var router = mux.NewRouter()
+
+func main() {
+    http.Handle("/", router)
+}
+
+```
+Or, for Google App Engine, register it in a init() function: 
+
+```
+func init() {
+    http.Handle("/", router)
+}
+
+```
+This will send all incoming requests to the router. 
+
+#### <a id="NewRouter" href="#NewRouter">func NewRouter() *Router</a>
+
+```
+searchKey: mux.NewRouter
+tags: [function]
+```
+
+```Go
+func NewRouter() *Router
+```
+
+NewRouter returns a new router instance. 
+
+#### <a id="Router.BuildVarsFunc" href="#Router.BuildVarsFunc">func (r *Router) BuildVarsFunc(f BuildVarsFunc) *Route</a>
+
+```
+searchKey: mux.Router.BuildVarsFunc
+tags: [method]
+```
+
+```Go
+func (r *Router) BuildVarsFunc(f BuildVarsFunc) *Route
+```
+
+BuildVarsFunc registers a new route with a custom function for modifying route variables before building a URL. 
+
+#### <a id="Router.Get" href="#Router.Get">func (r *Router) Get(name string) *Route</a>
+
+```
+searchKey: mux.Router.Get
+tags: [method]
+```
+
+```Go
+func (r *Router) Get(name string) *Route
+```
+
+Get returns a route registered with the given name. 
+
+#### <a id="Router.GetRoute" href="#Router.GetRoute">func (r *Router) GetRoute(name string) *Route</a>
+
+```
+searchKey: mux.Router.GetRoute
+tags: [method]
+```
+
+```Go
+func (r *Router) GetRoute(name string) *Route
+```
+
+GetRoute returns a route registered with the given name. This method was renamed to Get() and remains here for backwards compatibility. 
+
+#### <a id="Router.Handle" href="#Router.Handle">func (r *Router) Handle(path string, handler http.Handler) *Route</a>
+
+```
+searchKey: mux.Router.Handle
+tags: [method]
+```
+
+```Go
+func (r *Router) Handle(path string, handler http.Handler) *Route
+```
+
+Handle registers a new route with a matcher for the URL path. See Route.Path() and Route.Handler(). 
+
+#### <a id="Router.HandleFunc" href="#Router.HandleFunc">func (r *Router) HandleFunc(path string, f func(http.ResponseWriter,...</a>
+
+```
+searchKey: mux.Router.HandleFunc
+tags: [method]
+```
+
+```Go
+func (r *Router) HandleFunc(path string, f func(http.ResponseWriter,
+	*http.Request)) *Route
+```
+
+HandleFunc registers a new route with a matcher for the URL path. See Route.Path() and Route.HandlerFunc(). 
+
+#### <a id="Router.Headers" href="#Router.Headers">func (r *Router) Headers(pairs ...string) *Route</a>
+
+```
+searchKey: mux.Router.Headers
+tags: [method]
+```
+
+```Go
+func (r *Router) Headers(pairs ...string) *Route
+```
+
+Headers registers a new route with a matcher for request header values. See Route.Headers(). 
+
+#### <a id="Router.Host" href="#Router.Host">func (r *Router) Host(tpl string) *Route</a>
+
+```
+searchKey: mux.Router.Host
+tags: [method]
+```
+
+```Go
+func (r *Router) Host(tpl string) *Route
+```
+
+Host registers a new route with a matcher for the URL host. See Route.Host(). 
+
+#### <a id="Router.Match" href="#Router.Match">func (r *Router) Match(req *http.Request, match *RouteMatch) bool</a>
+
+```
+searchKey: mux.Router.Match
+tags: [method]
+```
+
+```Go
+func (r *Router) Match(req *http.Request, match *RouteMatch) bool
+```
+
+Match attempts to match the given request against the router's registered routes. 
+
+If the request matches a route of this router or one of its subrouters the Route, Handler, and Vars fields of the the match argument are filled and this function returns true. 
+
+If the request does not match any of this router's or its subrouters' routes then this function returns false. If available, a reason for the match failure will be filled in the match argument's MatchErr field. If the match failure type (eg: not found) has a registered handler, the handler is assigned to the Handler field of the match argument. 
+
+#### <a id="Router.MatcherFunc" href="#Router.MatcherFunc">func (r *Router) MatcherFunc(f MatcherFunc) *Route</a>
+
+```
+searchKey: mux.Router.MatcherFunc
+tags: [method]
+```
+
+```Go
+func (r *Router) MatcherFunc(f MatcherFunc) *Route
+```
+
+MatcherFunc registers a new route with a custom matcher function. See Route.MatcherFunc(). 
+
+#### <a id="Router.Methods" href="#Router.Methods">func (r *Router) Methods(methods ...string) *Route</a>
+
+```
+searchKey: mux.Router.Methods
+tags: [method]
+```
+
+```Go
+func (r *Router) Methods(methods ...string) *Route
+```
+
+Methods registers a new route with a matcher for HTTP methods. See Route.Methods(). 
+
+#### <a id="Router.Name" href="#Router.Name">func (r *Router) Name(name string) *Route</a>
+
+```
+searchKey: mux.Router.Name
+tags: [method]
+```
+
+```Go
+func (r *Router) Name(name string) *Route
+```
+
+Name registers a new route with a name. See Route.Name(). 
+
+#### <a id="Router.NewRoute" href="#Router.NewRoute">func (r *Router) NewRoute() *Route</a>
+
+```
+searchKey: mux.Router.NewRoute
+tags: [function]
+```
+
+```Go
+func (r *Router) NewRoute() *Route
+```
+
+NewRoute registers an empty route. 
+
+#### <a id="Router.Path" href="#Router.Path">func (r *Router) Path(tpl string) *Route</a>
+
+```
+searchKey: mux.Router.Path
+tags: [method]
+```
+
+```Go
+func (r *Router) Path(tpl string) *Route
+```
+
+Path registers a new route with a matcher for the URL path. See Route.Path(). 
+
+#### <a id="Router.PathPrefix" href="#Router.PathPrefix">func (r *Router) PathPrefix(tpl string) *Route</a>
+
+```
+searchKey: mux.Router.PathPrefix
+tags: [method]
+```
+
+```Go
+func (r *Router) PathPrefix(tpl string) *Route
+```
+
+PathPrefix registers a new route with a matcher for the URL path prefix. See Route.PathPrefix(). 
+
+#### <a id="Router.Queries" href="#Router.Queries">func (r *Router) Queries(pairs ...string) *Route</a>
+
+```
+searchKey: mux.Router.Queries
+tags: [method]
+```
+
+```Go
+func (r *Router) Queries(pairs ...string) *Route
+```
+
+Queries registers a new route with a matcher for URL query values. See Route.Queries(). 
+
+#### <a id="Router.Schemes" href="#Router.Schemes">func (r *Router) Schemes(schemes ...string) *Route</a>
+
+```
+searchKey: mux.Router.Schemes
+tags: [method]
+```
+
+```Go
+func (r *Router) Schemes(schemes ...string) *Route
+```
+
+Schemes registers a new route with a matcher for URL schemes. See Route.Schemes(). 
+
+#### <a id="Router.ServeHTTP" href="#Router.ServeHTTP">func (r *Router) ServeHTTP(w http.ResponseWriter, req *http.Request)</a>
+
+```
+searchKey: mux.Router.ServeHTTP
+tags: [method]
+```
+
+```Go
+func (r *Router) ServeHTTP(w http.ResponseWriter, req *http.Request)
+```
+
+ServeHTTP dispatches the handler registered in the matched route. 
+
+When there is a match, the route variables can be retrieved calling mux.Vars(request). 
+
+#### <a id="Router.SkipClean" href="#Router.SkipClean">func (r *Router) SkipClean(value bool) *Router</a>
+
+```
+searchKey: mux.Router.SkipClean
+tags: [method]
+```
+
+```Go
+func (r *Router) SkipClean(value bool) *Router
+```
+
+SkipClean defines the path cleaning behaviour for new routes. The initial value is false. Users should be careful about which routes are not cleaned 
+
+When true, if the route path is "/path//to", it will remain with the double slash. This is helpful if you have a route like: /fetch/[http://xkcd.com/534/](http://xkcd.com/534/) 
+
+When false, the path will be cleaned, so /fetch/[http://xkcd.com/534/](http://xkcd.com/534/) will become /fetch/http/xkcd.com/534 
+
+#### <a id="Router.StrictSlash" href="#Router.StrictSlash">func (r *Router) StrictSlash(value bool) *Router</a>
+
+```
+searchKey: mux.Router.StrictSlash
+tags: [method]
+```
+
+```Go
+func (r *Router) StrictSlash(value bool) *Router
+```
+
+StrictSlash defines the trailing slash behavior for new routes. The initial value is false. 
+
+When true, if the route path is "/path/", accessing "/path" will perform a redirect to the former and vice versa. In other words, your application will always see the path as specified in the route. 
+
+When false, if the route path is "/path", accessing "/path/" will not match this route and vice versa. 
+
+The re-direct is a HTTP 301 (Moved Permanently). Note that when this is set for routes with a non-idempotent method (e.g. POST, PUT), the subsequent re-directed request will be made as a GET by most clients. Use middleware or client settings to modify this behaviour as needed. 
+
+Special case: when a route sets a path prefix using the PathPrefix() method, strict slash is ignored for that route because the redirect behavior can't be determined from a prefix alone. However, any subrouters created from that route inherit the original StrictSlash setting. 
+
+#### <a id="Router.Use" href="#Router.Use">func (r *Router) Use(mwf ...MiddlewareFunc)</a>
+
+```
+searchKey: mux.Router.Use
+tags: [method]
+```
+
+```Go
+func (r *Router) Use(mwf ...MiddlewareFunc)
+```
+
+Use appends a MiddlewareFunc to the chain. Middleware can be used to intercept or otherwise modify requests and/or responses, and are executed in the order that they are applied to the Router. 
+
+#### <a id="Router.UseEncodedPath" href="#Router.UseEncodedPath">func (r *Router) UseEncodedPath() *Router</a>
+
+```
+searchKey: mux.Router.UseEncodedPath
+tags: [function]
+```
+
+```Go
+func (r *Router) UseEncodedPath() *Router
+```
+
+UseEncodedPath tells the router to match the encoded original path to the routes. For eg. "/path/foo%2Fbar/to" will match the path "/path/{var}/to". 
+
+If not called, the router will match the unencoded path to the routes. For eg. "/path/foo%2Fbar/to" will match the path "/path/foo/bar/to" 
+
+#### <a id="Router.Walk" href="#Router.Walk">func (r *Router) Walk(walkFn WalkFunc) error</a>
+
+```
+searchKey: mux.Router.Walk
+tags: [method]
+```
+
+```Go
+func (r *Router) Walk(walkFn WalkFunc) error
+```
+
+Walk walks the router and all its sub-routers, calling walkFn for each route in the tree. The routes are walked in the order they were added. Sub-routers are explored depth-first. 
+
+#### <a id="Router.useInterface" href="#Router.useInterface">func (r *Router) useInterface(mw middleware)</a>
+
+```
+searchKey: mux.Router.useInterface
+tags: [method private]
+```
+
+```Go
+func (r *Router) useInterface(mw middleware)
+```
+
+useInterface appends a middleware to the chain. Middleware can be used to intercept or otherwise modify requests and/or responses, and are executed in the order that they are applied to the Router. 
+
+#### <a id="Router.walk" href="#Router.walk">func (r *Router) walk(walkFn WalkFunc, ancestors []*Route) error</a>
+
+```
+searchKey: mux.Router.walk
+tags: [method private]
+```
+
+```Go
+func (r *Router) walk(walkFn WalkFunc, ancestors []*Route) error
+```
+
+### <a id="TestA301ResponseWriter" href="#TestA301ResponseWriter">type TestA301ResponseWriter struct</a>
+
+```
+searchKey: mux.TestA301ResponseWriter
+tags: [struct private]
+```
+
+```Go
+type TestA301ResponseWriter struct {
+	hh     http.Header
+	status int
+}
+```
+
+#### <a id="TestA301ResponseWriter.Header" href="#TestA301ResponseWriter.Header">func (ho *TestA301ResponseWriter) Header() http.Header</a>
+
+```
+searchKey: mux.TestA301ResponseWriter.Header
+tags: [function private]
+```
+
+```Go
+func (ho *TestA301ResponseWriter) Header() http.Header
+```
+
+#### <a id="TestA301ResponseWriter.Write" href="#TestA301ResponseWriter.Write">func (ho *TestA301ResponseWriter) Write(b []byte) (int, error)</a>
+
+```
+searchKey: mux.TestA301ResponseWriter.Write
+tags: [method private]
+```
+
+```Go
+func (ho *TestA301ResponseWriter) Write(b []byte) (int, error)
+```
+
+#### <a id="TestA301ResponseWriter.WriteHeader" href="#TestA301ResponseWriter.WriteHeader">func (ho *TestA301ResponseWriter) WriteHeader(code int)</a>
+
+```
+searchKey: mux.TestA301ResponseWriter.WriteHeader
+tags: [method private]
+```
+
+```Go
+func (ho *TestA301ResponseWriter) WriteHeader(code int)
+```
+
+### <a id="WalkFunc" href="#WalkFunc">type WalkFunc func(route *github.com/gorilla/mux.Route, router *github.com/gorilla/mux.Router, ancestors []*github.com/gorilla/mux.Route) error</a>
+
+```
+searchKey: mux.WalkFunc
+tags: [function]
+```
+
+```Go
+type WalkFunc func(route *Route, router *Router, ancestors []*Route) error
+```
+
+WalkFunc is the type of the function called for each route visited by Walk. At every invocation, it is given the current route, and the current router, and a list of ancestor routes that lead to the current route. 
+
+### <a id="contextKey" href="#contextKey">type contextKey int</a>
+
+```
+searchKey: mux.contextKey
+tags: [number private]
+```
+
+```Go
+type contextKey int
+```
+
+### <a id="customMethodNotAllowedHandler" href="#customMethodNotAllowedHandler">type customMethodNotAllowedHandler struct</a>
+
+```
+searchKey: mux.customMethodNotAllowedHandler
+tags: [struct private]
+```
+
+```Go
+type customMethodNotAllowedHandler struct {
+	msg string
+}
+```
+
+#### <a id="customMethodNotAllowedHandler.ServeHTTP" href="#customMethodNotAllowedHandler.ServeHTTP">func (h customMethodNotAllowedHandler) ServeHTTP(w http.ResponseWriter, r *http.Request)</a>
+
+```
+searchKey: mux.customMethodNotAllowedHandler.ServeHTTP
+tags: [method private]
+```
+
+```Go
+func (h customMethodNotAllowedHandler) ServeHTTP(w http.ResponseWriter, r *http.Request)
+```
 
 ### <a id="headerMatcher" href="#headerMatcher">type headerMatcher map[string]string</a>
 
 ```
 searchKey: mux.headerMatcher
-tags: [private]
+tags: [object private]
 ```
 
 ```Go
@@ -2043,18 +2059,33 @@ headerMatcher matches the request against header values.
 
 ```
 searchKey: mux.headerMatcher.Match
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (m headerMatcher) Match(r *http.Request, match *RouteMatch) bool
 ```
 
+### <a id="headerMatcherTest" href="#headerMatcherTest">type headerMatcherTest struct</a>
+
+```
+searchKey: mux.headerMatcherTest
+tags: [struct private]
+```
+
+```Go
+type headerMatcherTest struct {
+	matcher headerMatcher
+	headers map[string]string
+	result  bool
+}
+```
+
 ### <a id="headerRegexMatcher" href="#headerRegexMatcher">type headerRegexMatcher map[string]*regexp.Regexp</a>
 
 ```
 searchKey: mux.headerRegexMatcher
-tags: [private]
+tags: [object private]
 ```
 
 ```Go
@@ -2067,42 +2098,49 @@ headerRegexMatcher matches the request against the route given a regex for the h
 
 ```
 searchKey: mux.headerRegexMatcher.Match
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (m headerRegexMatcher) Match(r *http.Request, match *RouteMatch) bool
 ```
 
-### <a id="MatcherFunc" href="#MatcherFunc">type MatcherFunc func(*net/http.Request, *github.com/gorilla/mux.RouteMatch) bool</a>
+### <a id="hostMatcherTest" href="#hostMatcherTest">type hostMatcherTest struct</a>
 
 ```
-searchKey: mux.MatcherFunc
-```
-
-```Go
-type MatcherFunc func(*http.Request, *RouteMatch) bool
-```
-
-MatcherFunc is the function signature used by custom matchers. 
-
-#### <a id="MatcherFunc.Match" href="#MatcherFunc.Match">func (m MatcherFunc) Match(r *http.Request, match *RouteMatch) bool</a>
-
-```
-searchKey: mux.MatcherFunc.Match
+searchKey: mux.hostMatcherTest
+tags: [struct private]
 ```
 
 ```Go
-func (m MatcherFunc) Match(r *http.Request, match *RouteMatch) bool
+type hostMatcherTest struct {
+	matcher *Route
+	url     string
+	vars    map[string]string
+	result  bool
+}
 ```
 
-Match returns the match for a given request. 
+### <a id="matcher" href="#matcher">type matcher interface</a>
+
+```
+searchKey: mux.matcher
+tags: [interface private]
+```
+
+```Go
+type matcher interface {
+	Match(*http.Request, *RouteMatch) bool
+}
+```
+
+matcher types try to match a request. 
 
 ### <a id="methodMatcher" href="#methodMatcher">type methodMatcher []string</a>
 
 ```
 searchKey: mux.methodMatcher
-tags: [private]
+tags: [array string private]
 ```
 
 ```Go
@@ -2115,78 +2153,309 @@ methodMatcher matches the request against HTTP methods.
 
 ```
 searchKey: mux.methodMatcher.Match
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (m methodMatcher) Match(r *http.Request, match *RouteMatch) bool
 ```
 
-### <a id="schemeMatcher" href="#schemeMatcher">type schemeMatcher []string</a>
+### <a id="methodMatcherTest" href="#methodMatcherTest">type methodMatcherTest struct</a>
 
 ```
-searchKey: mux.schemeMatcher
-tags: [private]
-```
-
-```Go
-type schemeMatcher []string
-```
-
-schemeMatcher matches the request against URL schemes. 
-
-#### <a id="schemeMatcher.Match" href="#schemeMatcher.Match">func (m schemeMatcher) Match(r *http.Request, match *RouteMatch) bool</a>
-
-```
-searchKey: mux.schemeMatcher.Match
-tags: [private]
+searchKey: mux.methodMatcherTest
+tags: [struct private]
 ```
 
 ```Go
-func (m schemeMatcher) Match(r *http.Request, match *RouteMatch) bool
-```
-
-### <a id="BuildVarsFunc" href="#BuildVarsFunc">type BuildVarsFunc func(map[string]string) map[string]string</a>
-
-```
-searchKey: mux.BuildVarsFunc
-```
-
-```Go
-type BuildVarsFunc func(map[string]string) map[string]string
-```
-
-BuildVarsFunc is the function signature used by custom build variable functions (which can modify route variables before a route's URL is built). 
-
-### <a id="testMiddleware" href="#testMiddleware">type testMiddleware struct</a>
-
-```
-searchKey: mux.testMiddleware
-tags: [private]
-```
-
-```Go
-type testMiddleware struct {
-	timesCalled uint
+type methodMatcherTest struct {
+	matcher methodMatcher
+	method  string
+	result  bool
 }
 ```
 
-#### <a id="testMiddleware.Middleware" href="#testMiddleware.Middleware">func (tm *testMiddleware) Middleware(h http.Handler) http.Handler</a>
+### <a id="methodsSubrouterTest" href="#methodsSubrouterTest">type methodsSubrouterTest struct</a>
 
 ```
-searchKey: mux.testMiddleware.Middleware
-tags: [private]
+searchKey: mux.methodsSubrouterTest
+tags: [struct private]
 ```
 
 ```Go
-func (tm *testMiddleware) Middleware(h http.Handler) http.Handler
+type methodsSubrouterTest struct {
+	title    string
+	wantCode int
+	router   *Router
+	// method is the input into the request and expected response
+	method string
+	// input request path
+	path string
+	// redirectTo is the expected location path for strict-slash matches
+	redirectTo string
+}
+```
+
+methodsSubrouterTest models the data necessary for testing handler matching for subrouters created after HTTP methods matcher registration. 
+
+### <a id="middleware" href="#middleware">type middleware interface</a>
+
+```
+searchKey: mux.middleware
+tags: [interface private]
+```
+
+```Go
+type middleware interface {
+	Middleware(handler http.Handler) http.Handler
+}
+```
+
+middleware interface is anything which implements a MiddlewareFunc named Middleware. 
+
+### <a id="pathMatcherTest" href="#pathMatcherTest">type pathMatcherTest struct</a>
+
+```
+searchKey: mux.pathMatcherTest
+tags: [struct private]
+```
+
+```Go
+type pathMatcherTest struct {
+	matcher *Route
+	url     string
+	vars    map[string]string
+	result  bool
+}
+```
+
+### <a id="regexpType" href="#regexpType">type regexpType int</a>
+
+```
+searchKey: mux.regexpType
+tags: [number private]
+```
+
+```Go
+type regexpType int
+```
+
+### <a id="routeConf" href="#routeConf">type routeConf struct</a>
+
+```
+searchKey: mux.routeConf
+tags: [struct private]
+```
+
+```Go
+type routeConf struct {
+	// If true, "/path/foo%2Fbar/to" will match the path "/path/{var}/to"
+	useEncodedPath bool
+
+	// If true, when the path pattern is "/path/", accessing "/path" will
+	// redirect to the former and vice versa.
+	strictSlash bool
+
+	// If true, when the path pattern is "/path//to", accessing "/path//to"
+	// will not redirect
+	skipClean bool
+
+	// Manager for the variables from host and path.
+	regexp routeRegexpGroup
+
+	// List of matchers.
+	matchers []matcher
+
+	// The scheme used when building URLs.
+	buildScheme string
+
+	buildVarsFunc BuildVarsFunc
+}
+```
+
+common route configuration shared between `Router` and `Route` 
+
+#### <a id="copyRouteConf" href="#copyRouteConf">func copyRouteConf(r routeConf) routeConf</a>
+
+```
+searchKey: mux.copyRouteConf
+tags: [method private]
+```
+
+```Go
+func copyRouteConf(r routeConf) routeConf
+```
+
+returns an effective deep copy of `routeConf` 
+
+### <a id="routeRegexp" href="#routeRegexp">type routeRegexp struct</a>
+
+```
+searchKey: mux.routeRegexp
+tags: [struct private]
+```
+
+```Go
+type routeRegexp struct {
+	// The unmodified template.
+	template string
+	// The type of match
+	regexpType regexpType
+	// Options for matching
+	options routeRegexpOptions
+	// Expanded regexp.
+	regexp *regexp.Regexp
+	// Reverse template.
+	reverse string
+	// Variable names.
+	varsN []string
+	// Variable regexps (validators).
+	varsR []*regexp.Regexp
+	// Wildcard host-port (no strict port match in hostname)
+	wildcardHostPort bool
+}
+```
+
+routeRegexp stores a regexp to match a host or path and information to collect and validate route variables. 
+
+#### <a id="copyRouteRegexp" href="#copyRouteRegexp">func copyRouteRegexp(r *routeRegexp) *routeRegexp</a>
+
+```
+searchKey: mux.copyRouteRegexp
+tags: [method private]
+```
+
+```Go
+func copyRouteRegexp(r *routeRegexp) *routeRegexp
+```
+
+#### <a id="newRouteRegexp" href="#newRouteRegexp">func newRouteRegexp(tpl string, typ regexpType, options routeRegexpOptions) (*routeRegexp, error)</a>
+
+```
+searchKey: mux.newRouteRegexp
+tags: [method private]
+```
+
+```Go
+func newRouteRegexp(tpl string, typ regexpType, options routeRegexpOptions) (*routeRegexp, error)
+```
+
+newRouteRegexp parses a route template and returns a routeRegexp, used to match a host, a path or a query string. 
+
+It will extract named variables, assemble a regexp to be matched, create a "reverse" template to build URLs and compile regexps to validate variable values used in URL building. 
+
+Previously we accepted only Python-like identifiers for variable names ([a-zA-Z_][a-zA-Z0-9_]*), but currently the only restriction is that name and pattern can't be empty, and names can't contain a colon. 
+
+#### <a id="routeRegexp.GoString" href="#routeRegexp.GoString">func (r *routeRegexp) GoString() string</a>
+
+```
+searchKey: mux.routeRegexp.GoString
+tags: [function private]
+```
+
+```Go
+func (r *routeRegexp) GoString() string
+```
+
+#### <a id="routeRegexp.Match" href="#routeRegexp.Match">func (r *routeRegexp) Match(req *http.Request, match *RouteMatch) bool</a>
+
+```
+searchKey: mux.routeRegexp.Match
+tags: [method private]
+```
+
+```Go
+func (r *routeRegexp) Match(req *http.Request, match *RouteMatch) bool
+```
+
+Match matches the regexp against the URL host or path. 
+
+#### <a id="routeRegexp.getURLQuery" href="#routeRegexp.getURLQuery">func (r *routeRegexp) getURLQuery(req *http.Request) string</a>
+
+```
+searchKey: mux.routeRegexp.getURLQuery
+tags: [method private]
+```
+
+```Go
+func (r *routeRegexp) getURLQuery(req *http.Request) string
+```
+
+getURLQuery returns a single query parameter from a request URL. For a URL with foo=bar&baz=ding, we return only the relevant key value pair for the routeRegexp. 
+
+#### <a id="routeRegexp.matchQueryString" href="#routeRegexp.matchQueryString">func (r *routeRegexp) matchQueryString(req *http.Request) bool</a>
+
+```
+searchKey: mux.routeRegexp.matchQueryString
+tags: [method private]
+```
+
+```Go
+func (r *routeRegexp) matchQueryString(req *http.Request) bool
+```
+
+#### <a id="routeRegexp.url" href="#routeRegexp.url">func (r *routeRegexp) url(values map[string]string) (string, error)</a>
+
+```
+searchKey: mux.routeRegexp.url
+tags: [method private]
+```
+
+```Go
+func (r *routeRegexp) url(values map[string]string) (string, error)
+```
+
+url builds a URL part using the given values. 
+
+### <a id="routeRegexpGroup" href="#routeRegexpGroup">type routeRegexpGroup struct</a>
+
+```
+searchKey: mux.routeRegexpGroup
+tags: [struct private]
+```
+
+```Go
+type routeRegexpGroup struct {
+	host    *routeRegexp
+	path    *routeRegexp
+	queries []*routeRegexp
+}
+```
+
+routeRegexpGroup groups the route matchers that carry variables. 
+
+#### <a id="routeRegexpGroup.setMatch" href="#routeRegexpGroup.setMatch">func (v routeRegexpGroup) setMatch(req *http.Request, m *RouteMatch, r *Route)</a>
+
+```
+searchKey: mux.routeRegexpGroup.setMatch
+tags: [method private]
+```
+
+```Go
+func (v routeRegexpGroup) setMatch(req *http.Request, m *RouteMatch, r *Route)
+```
+
+setMatch extracts the variables from the URL once a route matches. 
+
+### <a id="routeRegexpOptions" href="#routeRegexpOptions">type routeRegexpOptions struct</a>
+
+```
+searchKey: mux.routeRegexpOptions
+tags: [struct private]
+```
+
+```Go
+type routeRegexpOptions struct {
+	strictSlash    bool
+	useEncodedPath bool
+}
 ```
 
 ### <a id="routeTest" href="#routeTest">type routeTest struct</a>
 
 ```
 searchKey: mux.routeTest
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -2210,250 +2479,35 @@ type routeTest struct {
 }
 ```
 
-### <a id="TestA301ResponseWriter" href="#TestA301ResponseWriter">type TestA301ResponseWriter struct</a>
+### <a id="schemeMatcher" href="#schemeMatcher">type schemeMatcher []string</a>
 
 ```
-searchKey: mux.TestA301ResponseWriter
-tags: [private]
-```
-
-```Go
-type TestA301ResponseWriter struct {
-	hh     http.Header
-	status int
-}
-```
-
-#### <a id="TestA301ResponseWriter.Header" href="#TestA301ResponseWriter.Header">func (ho *TestA301ResponseWriter) Header() http.Header</a>
-
-```
-searchKey: mux.TestA301ResponseWriter.Header
-tags: [private]
+searchKey: mux.schemeMatcher
+tags: [array string private]
 ```
 
 ```Go
-func (ho *TestA301ResponseWriter) Header() http.Header
+type schemeMatcher []string
 ```
 
-#### <a id="TestA301ResponseWriter.Write" href="#TestA301ResponseWriter.Write">func (ho *TestA301ResponseWriter) Write(b []byte) (int, error)</a>
+schemeMatcher matches the request against URL schemes. 
+
+#### <a id="schemeMatcher.Match" href="#schemeMatcher.Match">func (m schemeMatcher) Match(r *http.Request, match *RouteMatch) bool</a>
 
 ```
-searchKey: mux.TestA301ResponseWriter.Write
-tags: [private]
-```
-
-```Go
-func (ho *TestA301ResponseWriter) Write(b []byte) (int, error)
-```
-
-#### <a id="TestA301ResponseWriter.WriteHeader" href="#TestA301ResponseWriter.WriteHeader">func (ho *TestA301ResponseWriter) WriteHeader(code int)</a>
-
-```
-searchKey: mux.TestA301ResponseWriter.WriteHeader
-tags: [private]
+searchKey: mux.schemeMatcher.Match
+tags: [method private]
 ```
 
 ```Go
-func (ho *TestA301ResponseWriter) WriteHeader(code int)
-```
-
-### <a id="methodsSubrouterTest" href="#methodsSubrouterTest">type methodsSubrouterTest struct</a>
-
-```
-searchKey: mux.methodsSubrouterTest
-tags: [private]
-```
-
-```Go
-type methodsSubrouterTest struct {
-	title    string
-	wantCode int
-	router   *Router
-	// method is the input into the request and expected response
-	method string
-	// input request path
-	path string
-	// redirectTo is the expected location path for strict-slash matches
-	redirectTo string
-}
-```
-
-methodsSubrouterTest models the data necessary for testing handler matching for subrouters created after HTTP methods matcher registration. 
-
-### <a id="customMethodNotAllowedHandler" href="#customMethodNotAllowedHandler">type customMethodNotAllowedHandler struct</a>
-
-```
-searchKey: mux.customMethodNotAllowedHandler
-tags: [private]
-```
-
-```Go
-type customMethodNotAllowedHandler struct {
-	msg string
-}
-```
-
-#### <a id="customMethodNotAllowedHandler.ServeHTTP" href="#customMethodNotAllowedHandler.ServeHTTP">func (h customMethodNotAllowedHandler) ServeHTTP(w http.ResponseWriter, r *http.Request)</a>
-
-```
-searchKey: mux.customMethodNotAllowedHandler.ServeHTTP
-tags: [private]
-```
-
-```Go
-func (h customMethodNotAllowedHandler) ServeHTTP(w http.ResponseWriter, r *http.Request)
-```
-
-### <a id="ResponseRecorder" href="#ResponseRecorder">type ResponseRecorder struct</a>
-
-```
-searchKey: mux.ResponseRecorder
-tags: [private]
-```
-
-```Go
-type ResponseRecorder struct {
-	Code      int           // the HTTP response code from WriteHeader
-	HeaderMap http.Header   // the HTTP response headers
-	Body      *bytes.Buffer // if non-nil, the bytes.Buffer to append written data to
-	Flushed   bool
-}
-```
-
-ResponseRecorder is an implementation of http.ResponseWriter that records its mutations for later inspection in tests. 
-
-#### <a id="NewRecorder" href="#NewRecorder">func NewRecorder() *ResponseRecorder</a>
-
-```
-searchKey: mux.NewRecorder
-tags: [private]
-```
-
-```Go
-func NewRecorder() *ResponseRecorder
-```
-
-NewRecorder returns an initialized ResponseRecorder. 
-
-#### <a id="ResponseRecorder.Header" href="#ResponseRecorder.Header">func (rw *ResponseRecorder) Header() http.Header</a>
-
-```
-searchKey: mux.ResponseRecorder.Header
-tags: [private]
-```
-
-```Go
-func (rw *ResponseRecorder) Header() http.Header
-```
-
-Header returns the response headers. 
-
-#### <a id="ResponseRecorder.Write" href="#ResponseRecorder.Write">func (rw *ResponseRecorder) Write(buf []byte) (int, error)</a>
-
-```
-searchKey: mux.ResponseRecorder.Write
-tags: [private]
-```
-
-```Go
-func (rw *ResponseRecorder) Write(buf []byte) (int, error)
-```
-
-Write always succeeds and writes to rw.Body, if not nil. 
-
-#### <a id="ResponseRecorder.WriteHeader" href="#ResponseRecorder.WriteHeader">func (rw *ResponseRecorder) WriteHeader(code int)</a>
-
-```
-searchKey: mux.ResponseRecorder.WriteHeader
-tags: [private]
-```
-
-```Go
-func (rw *ResponseRecorder) WriteHeader(code int)
-```
-
-WriteHeader sets rw.Code. 
-
-#### <a id="ResponseRecorder.Flush" href="#ResponseRecorder.Flush">func (rw *ResponseRecorder) Flush()</a>
-
-```
-searchKey: mux.ResponseRecorder.Flush
-tags: [private]
-```
-
-```Go
-func (rw *ResponseRecorder) Flush()
-```
-
-Flush sets rw.Flushed to true. 
-
-### <a id="headerMatcherTest" href="#headerMatcherTest">type headerMatcherTest struct</a>
-
-```
-searchKey: mux.headerMatcherTest
-tags: [private]
-```
-
-```Go
-type headerMatcherTest struct {
-	matcher headerMatcher
-	headers map[string]string
-	result  bool
-}
-```
-
-### <a id="hostMatcherTest" href="#hostMatcherTest">type hostMatcherTest struct</a>
-
-```
-searchKey: mux.hostMatcherTest
-tags: [private]
-```
-
-```Go
-type hostMatcherTest struct {
-	matcher *Route
-	url     string
-	vars    map[string]string
-	result  bool
-}
-```
-
-### <a id="methodMatcherTest" href="#methodMatcherTest">type methodMatcherTest struct</a>
-
-```
-searchKey: mux.methodMatcherTest
-tags: [private]
-```
-
-```Go
-type methodMatcherTest struct {
-	matcher methodMatcher
-	method  string
-	result  bool
-}
-```
-
-### <a id="pathMatcherTest" href="#pathMatcherTest">type pathMatcherTest struct</a>
-
-```
-searchKey: mux.pathMatcherTest
-tags: [private]
-```
-
-```Go
-type pathMatcherTest struct {
-	matcher *Route
-	url     string
-	vars    map[string]string
-	result  bool
-}
+func (m schemeMatcher) Match(r *http.Request, match *RouteMatch) bool
 ```
 
 ### <a id="schemeMatcherTest" href="#schemeMatcherTest">type schemeMatcherTest struct</a>
 
 ```
 searchKey: mux.schemeMatcherTest
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -2464,11 +2518,35 @@ type schemeMatcherTest struct {
 }
 ```
 
+### <a id="testMiddleware" href="#testMiddleware">type testMiddleware struct</a>
+
+```
+searchKey: mux.testMiddleware
+tags: [struct private]
+```
+
+```Go
+type testMiddleware struct {
+	timesCalled uint
+}
+```
+
+#### <a id="testMiddleware.Middleware" href="#testMiddleware.Middleware">func (tm *testMiddleware) Middleware(h http.Handler) http.Handler</a>
+
+```
+searchKey: mux.testMiddleware.Middleware
+tags: [method private]
+```
+
+```Go
+func (tm *testMiddleware) Middleware(h http.Handler) http.Handler
+```
+
 ### <a id="urlBuildingTest" href="#urlBuildingTest">type urlBuildingTest struct</a>
 
 ```
 searchKey: mux.urlBuildingTest
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -2481,23 +2559,818 @@ type urlBuildingTest struct {
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="getAllMethodsForRoute" href="#getAllMethodsForRoute">func getAllMethodsForRoute(r *Router, req *http.Request) ([]string, error)</a>
+```
+tags: [package]
+```
+
+### <a id="BenchmarkManyPathVariables" href="#BenchmarkManyPathVariables">func BenchmarkManyPathVariables(b *testing.B)</a>
 
 ```
-searchKey: mux.getAllMethodsForRoute
-tags: [private]
+searchKey: mux.BenchmarkManyPathVariables
+tags: [method private benchmark]
 ```
 
 ```Go
-func getAllMethodsForRoute(r *Router, req *http.Request) ([]string, error)
+func BenchmarkManyPathVariables(b *testing.B)
 ```
 
-getAllMethodsForRoute returns all the methods from method matchers matching a given request. 
+### <a id="BenchmarkMux" href="#BenchmarkMux">func BenchmarkMux(b *testing.B)</a>
+
+```
+searchKey: mux.BenchmarkMux
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkMux(b *testing.B)
+```
+
+### <a id="BenchmarkMuxAlternativeInRegexp" href="#BenchmarkMuxAlternativeInRegexp">func BenchmarkMuxAlternativeInRegexp(b *testing.B)</a>
+
+```
+searchKey: mux.BenchmarkMuxAlternativeInRegexp
+tags: [method private benchmark]
+```
+
+```Go
+func BenchmarkMuxAlternativeInRegexp(b *testing.B)
+```
+
+### <a id="Benchmark_findQueryKey" href="#Benchmark_findQueryKey">func Benchmark_findQueryKey(b *testing.B)</a>
+
+```
+searchKey: mux.Benchmark_findQueryKey
+tags: [method private benchmark]
+```
+
+```Go
+func Benchmark_findQueryKey(b *testing.B)
+```
+
+### <a id="Benchmark_findQueryKeyGoLib" href="#Benchmark_findQueryKeyGoLib">func Benchmark_findQueryKeyGoLib(b *testing.B)</a>
+
+```
+searchKey: mux.Benchmark_findQueryKeyGoLib
+tags: [method private benchmark]
+```
+
+```Go
+func Benchmark_findQueryKeyGoLib(b *testing.B)
+```
+
+### <a id="ExampleSetURLVars" href="#ExampleSetURLVars">func ExampleSetURLVars()</a>
+
+```
+searchKey: mux.ExampleSetURLVars
+tags: [function private]
+```
+
+```Go
+func ExampleSetURLVars()
+```
+
+### <a id="SetURLVars" href="#SetURLVars">func SetURLVars(r *http.Request, val map[string]string) *http.Request</a>
+
+```
+searchKey: mux.SetURLVars
+tags: [method]
+```
+
+```Go
+func SetURLVars(r *http.Request, val map[string]string) *http.Request
+```
+
+SetURLVars sets the URL variables for the given request, to be accessed via mux.Vars for testing route behaviour. Arguments are not modified, a shallow copy is returned. 
+
+This API should only be used for testing purposes; it provides a way to inject variables into the request context. Alternatively, URL variables can be set by making a route that captures the required variables, starting a server and sending the request to that server. 
+
+### <a id="Test301Redirect" href="#Test301Redirect">func Test301Redirect(t *testing.T)</a>
+
+```
+searchKey: mux.Test301Redirect
+tags: [method private test]
+```
+
+```Go
+func Test301Redirect(t *testing.T)
+```
+
+### <a id="TestBuildVarsFunc" href="#TestBuildVarsFunc">func TestBuildVarsFunc(t *testing.T)</a>
+
+```
+searchKey: mux.TestBuildVarsFunc
+tags: [method private test]
+```
+
+```Go
+func TestBuildVarsFunc(t *testing.T)
+```
+
+### <a id="TestCORSMethodMiddleware" href="#TestCORSMethodMiddleware">func TestCORSMethodMiddleware(t *testing.T)</a>
+
+```
+searchKey: mux.TestCORSMethodMiddleware
+tags: [method private test]
+```
+
+```Go
+func TestCORSMethodMiddleware(t *testing.T)
+```
+
+### <a id="TestCORSMethodMiddlewareSubrouter" href="#TestCORSMethodMiddlewareSubrouter">func TestCORSMethodMiddlewareSubrouter(t *testing.T)</a>
+
+```
+searchKey: mux.TestCORSMethodMiddlewareSubrouter
+tags: [method private test]
+```
+
+```Go
+func TestCORSMethodMiddlewareSubrouter(t *testing.T)
+```
+
+### <a id="TestContextMiddleware" href="#TestContextMiddleware">func TestContextMiddleware(t *testing.T)</a>
+
+```
+searchKey: mux.TestContextMiddleware
+tags: [method private test]
+```
+
+```Go
+func TestContextMiddleware(t *testing.T)
+```
+
+### <a id="TestErrMatchNotFound" href="#TestErrMatchNotFound">func TestErrMatchNotFound(t *testing.T)</a>
+
+```
+searchKey: mux.TestErrMatchNotFound
+tags: [method private test]
+```
+
+```Go
+func TestErrMatchNotFound(t *testing.T)
+```
+
+### <a id="TestHeaderMatcher" href="#TestHeaderMatcher">func TestHeaderMatcher(t *testing.T)</a>
+
+```
+searchKey: mux.TestHeaderMatcher
+tags: [method private test]
+```
+
+```Go
+func TestHeaderMatcher(t *testing.T)
+```
+
+### <a id="TestHeaders" href="#TestHeaders">func TestHeaders(t *testing.T)</a>
+
+```
+searchKey: mux.TestHeaders
+tags: [method private test]
+```
+
+```Go
+func TestHeaders(t *testing.T)
+```
+
+### <a id="TestHost" href="#TestHost">func TestHost(t *testing.T)</a>
+
+```
+searchKey: mux.TestHost
+tags: [method private test]
+```
+
+```Go
+func TestHost(t *testing.T)
+```
+
+### <a id="TestHostMatcher" href="#TestHostMatcher">func TestHostMatcher(t *testing.T)</a>
+
+```
+searchKey: mux.TestHostMatcher
+tags: [method private test]
+```
+
+```Go
+func TestHostMatcher(t *testing.T)
+```
+
+### <a id="TestMatchedRouteName" href="#TestMatchedRouteName">func TestMatchedRouteName(t *testing.T)</a>
+
+```
+searchKey: mux.TestMatchedRouteName
+tags: [method private test]
+```
+
+```Go
+func TestMatchedRouteName(t *testing.T)
+```
+
+### <a id="TestMatcherFunc" href="#TestMatcherFunc">func TestMatcherFunc(t *testing.T)</a>
+
+```
+searchKey: mux.TestMatcherFunc
+tags: [method private test]
+```
+
+```Go
+func TestMatcherFunc(t *testing.T)
+```
+
+### <a id="TestMethodMatcher" href="#TestMethodMatcher">func TestMethodMatcher(t *testing.T)</a>
+
+```
+searchKey: mux.TestMethodMatcher
+tags: [method private test]
+```
+
+```Go
+func TestMethodMatcher(t *testing.T)
+```
+
+### <a id="TestMethodNotAllowed" href="#TestMethodNotAllowed">func TestMethodNotAllowed(t *testing.T)</a>
+
+```
+searchKey: mux.TestMethodNotAllowed
+tags: [method private test]
+```
+
+```Go
+func TestMethodNotAllowed(t *testing.T)
+```
+
+### <a id="TestMethods" href="#TestMethods">func TestMethods(t *testing.T)</a>
+
+```
+searchKey: mux.TestMethods
+tags: [method private test]
+```
+
+```Go
+func TestMethods(t *testing.T)
+```
+
+### <a id="TestMethodsSubrouterCatchall" href="#TestMethodsSubrouterCatchall">func TestMethodsSubrouterCatchall(t *testing.T)</a>
+
+```
+searchKey: mux.TestMethodsSubrouterCatchall
+tags: [method private test]
+```
+
+```Go
+func TestMethodsSubrouterCatchall(t *testing.T)
+```
+
+TestMethodsSubrouterCatchall matches handlers for subrouters where a catchall handler is set for a mis-matching method. 
+
+### <a id="TestMethodsSubrouterPathPrefix" href="#TestMethodsSubrouterPathPrefix">func TestMethodsSubrouterPathPrefix(t *testing.T)</a>
+
+```
+searchKey: mux.TestMethodsSubrouterPathPrefix
+tags: [method private test]
+```
+
+```Go
+func TestMethodsSubrouterPathPrefix(t *testing.T)
+```
+
+TestMethodsSubrouterPathPrefix matches handlers on subrouters created on a router with a path prefix matcher and method matcher. 
+
+### <a id="TestMethodsSubrouterPathVariable" href="#TestMethodsSubrouterPathVariable">func TestMethodsSubrouterPathVariable(t *testing.T)</a>
+
+```
+searchKey: mux.TestMethodsSubrouterPathVariable
+tags: [method private test]
+```
+
+```Go
+func TestMethodsSubrouterPathVariable(t *testing.T)
+```
+
+TestMethodsSubrouterPathVariable matches handlers on matching paths with path variables in them. 
+
+### <a id="TestMethodsSubrouterStrictSlash" href="#TestMethodsSubrouterStrictSlash">func TestMethodsSubrouterStrictSlash(t *testing.T)</a>
+
+```
+searchKey: mux.TestMethodsSubrouterStrictSlash
+tags: [method private test]
+```
+
+```Go
+func TestMethodsSubrouterStrictSlash(t *testing.T)
+```
+
+TestMethodsSubrouterStrictSlash matches handlers on subrouters with strict-slash matchers. 
+
+### <a id="TestMethodsSubrouterSubrouter" href="#TestMethodsSubrouterSubrouter">func TestMethodsSubrouterSubrouter(t *testing.T)</a>
+
+```
+searchKey: mux.TestMethodsSubrouterSubrouter
+tags: [method private test]
+```
+
+```Go
+func TestMethodsSubrouterSubrouter(t *testing.T)
+```
+
+TestMethodsSubrouterSubrouter matches handlers on subrouters produced from method matchers registered on a root subrouter. 
+
+### <a id="TestMiddleware" href="#TestMiddleware">func TestMiddleware(t *testing.T)</a>
+
+```
+searchKey: mux.TestMiddleware
+tags: [method private test]
+```
+
+```Go
+func TestMiddleware(t *testing.T)
+```
+
+### <a id="TestMiddlewareAdd" href="#TestMiddlewareAdd">func TestMiddlewareAdd(t *testing.T)</a>
+
+```
+searchKey: mux.TestMiddlewareAdd
+tags: [method private test]
+```
+
+```Go
+func TestMiddlewareAdd(t *testing.T)
+```
+
+### <a id="TestMiddlewareExecution" href="#TestMiddlewareExecution">func TestMiddlewareExecution(t *testing.T)</a>
+
+```
+searchKey: mux.TestMiddlewareExecution
+tags: [method private test]
+```
+
+```Go
+func TestMiddlewareExecution(t *testing.T)
+```
+
+### <a id="TestMiddlewareMethodMismatch" href="#TestMiddlewareMethodMismatch">func TestMiddlewareMethodMismatch(t *testing.T)</a>
+
+```
+searchKey: mux.TestMiddlewareMethodMismatch
+tags: [method private test]
+```
+
+```Go
+func TestMiddlewareMethodMismatch(t *testing.T)
+```
+
+### <a id="TestMiddlewareMethodMismatchSubrouter" href="#TestMiddlewareMethodMismatchSubrouter">func TestMiddlewareMethodMismatchSubrouter(t *testing.T)</a>
+
+```
+searchKey: mux.TestMiddlewareMethodMismatchSubrouter
+tags: [method private test]
+```
+
+```Go
+func TestMiddlewareMethodMismatchSubrouter(t *testing.T)
+```
+
+### <a id="TestMiddlewareNotFound" href="#TestMiddlewareNotFound">func TestMiddlewareNotFound(t *testing.T)</a>
+
+```
+searchKey: mux.TestMiddlewareNotFound
+tags: [method private test]
+```
+
+```Go
+func TestMiddlewareNotFound(t *testing.T)
+```
+
+### <a id="TestMiddlewareNotFoundSubrouter" href="#TestMiddlewareNotFoundSubrouter">func TestMiddlewareNotFoundSubrouter(t *testing.T)</a>
+
+```
+searchKey: mux.TestMiddlewareNotFoundSubrouter
+tags: [method private test]
+```
+
+```Go
+func TestMiddlewareNotFoundSubrouter(t *testing.T)
+```
+
+### <a id="TestMiddlewareOnMultiSubrouter" href="#TestMiddlewareOnMultiSubrouter">func TestMiddlewareOnMultiSubrouter(t *testing.T)</a>
+
+```
+searchKey: mux.TestMiddlewareOnMultiSubrouter
+tags: [method private test]
+```
+
+```Go
+func TestMiddlewareOnMultiSubrouter(t *testing.T)
+```
+
+### <a id="TestMiddlewareSubrouter" href="#TestMiddlewareSubrouter">func TestMiddlewareSubrouter(t *testing.T)</a>
+
+```
+searchKey: mux.TestMiddlewareSubrouter
+tags: [method private test]
+```
+
+```Go
+func TestMiddlewareSubrouter(t *testing.T)
+```
+
+### <a id="TestNameMultipleCalls" href="#TestNameMultipleCalls">func TestNameMultipleCalls(t *testing.T)</a>
+
+```
+searchKey: mux.TestNameMultipleCalls
+tags: [method private test]
+```
+
+```Go
+func TestNameMultipleCalls(t *testing.T)
+```
+
+### <a id="TestNamedRoutes" href="#TestNamedRoutes">func TestNamedRoutes(t *testing.T)</a>
+
+```
+searchKey: mux.TestNamedRoutes
+tags: [method private test]
+```
+
+```Go
+func TestNamedRoutes(t *testing.T)
+```
+
+### <a id="TestNewRegexp" href="#TestNewRegexp">func TestNewRegexp(t *testing.T)</a>
+
+```
+searchKey: mux.TestNewRegexp
+tags: [method private test]
+```
+
+```Go
+func TestNewRegexp(t *testing.T)
+```
+
+Test for the new regexp library, still not available in stable Go. 
+
+### <a id="TestNoMatchMethodErrorHandler" href="#TestNoMatchMethodErrorHandler">func TestNoMatchMethodErrorHandler(t *testing.T)</a>
+
+```
+searchKey: mux.TestNoMatchMethodErrorHandler
+tags: [method private test]
+```
+
+```Go
+func TestNoMatchMethodErrorHandler(t *testing.T)
+```
+
+### <a id="TestPanicOnCapturingGroups" href="#TestPanicOnCapturingGroups">func TestPanicOnCapturingGroups(t *testing.T)</a>
+
+```
+searchKey: mux.TestPanicOnCapturingGroups
+tags: [method private test]
+```
+
+```Go
+func TestPanicOnCapturingGroups(t *testing.T)
+```
+
+See: [https://github.com/gorilla/mux/issues/200](https://github.com/gorilla/mux/issues/200) 
+
+### <a id="TestPath" href="#TestPath">func TestPath(t *testing.T)</a>
+
+```
+searchKey: mux.TestPath
+tags: [method private test]
+```
+
+```Go
+func TestPath(t *testing.T)
+```
+
+### <a id="TestPathMatcher" href="#TestPathMatcher">func TestPathMatcher(t *testing.T)</a>
+
+```
+searchKey: mux.TestPathMatcher
+tags: [method private test]
+```
+
+```Go
+func TestPathMatcher(t *testing.T)
+```
+
+### <a id="TestPathPrefix" href="#TestPathPrefix">func TestPathPrefix(t *testing.T)</a>
+
+```
+searchKey: mux.TestPathPrefix
+tags: [method private test]
+```
+
+```Go
+func TestPathPrefix(t *testing.T)
+```
+
+### <a id="TestQueries" href="#TestQueries">func TestQueries(t *testing.T)</a>
+
+```
+searchKey: mux.TestQueries
+tags: [method private test]
+```
+
+```Go
+func TestQueries(t *testing.T)
+```
+
+### <a id="TestRedirectSlash" href="#TestRedirectSlash">func TestRedirectSlash(t *testing.T)</a>
+
+```
+searchKey: mux.TestRedirectSlash
+tags: [method private test]
+```
+
+```Go
+func TestRedirectSlash(t *testing.T)
+```
+
+### <a id="TestRouteMatchers" href="#TestRouteMatchers">func TestRouteMatchers(t *testing.T)</a>
+
+```
+searchKey: mux.TestRouteMatchers
+tags: [method private test]
+```
+
+```Go
+func TestRouteMatchers(t *testing.T)
+```
+
+### <a id="TestSchemeHostPath" href="#TestSchemeHostPath">func TestSchemeHostPath(t *testing.T)</a>
+
+```
+searchKey: mux.TestSchemeHostPath
+tags: [method private test]
+```
+
+```Go
+func TestSchemeHostPath(t *testing.T)
+```
+
+### <a id="TestSchemeMatcher" href="#TestSchemeMatcher">func TestSchemeMatcher(t *testing.T)</a>
+
+```
+searchKey: mux.TestSchemeMatcher
+tags: [method private test]
+```
+
+```Go
+func TestSchemeMatcher(t *testing.T)
+```
+
+### <a id="TestSchemeMatchers" href="#TestSchemeMatchers">func TestSchemeMatchers(t *testing.T)</a>
+
+```
+searchKey: mux.TestSchemeMatchers
+tags: [method private test]
+```
+
+```Go
+func TestSchemeMatchers(t *testing.T)
+```
+
+### <a id="TestSchemes" href="#TestSchemes">func TestSchemes(t *testing.T)</a>
+
+```
+searchKey: mux.TestSchemes
+tags: [method private test]
+```
+
+```Go
+func TestSchemes(t *testing.T)
+```
+
+### <a id="TestSkipClean" href="#TestSkipClean">func TestSkipClean(t *testing.T)</a>
+
+```
+searchKey: mux.TestSkipClean
+tags: [method private test]
+```
+
+```Go
+func TestSkipClean(t *testing.T)
+```
+
+### <a id="TestStrictSlash" href="#TestStrictSlash">func TestStrictSlash(t *testing.T)</a>
+
+```
+searchKey: mux.TestStrictSlash
+tags: [method private test]
+```
+
+```Go
+func TestStrictSlash(t *testing.T)
+```
+
+### <a id="TestSubRouter" href="#TestSubRouter">func TestSubRouter(t *testing.T)</a>
+
+```
+searchKey: mux.TestSubRouter
+tags: [method private test]
+```
+
+```Go
+func TestSubRouter(t *testing.T)
+```
+
+### <a id="TestSubRouting" href="#TestSubRouting">func TestSubRouting(t *testing.T)</a>
+
+```
+searchKey: mux.TestSubRouting
+tags: [method private test]
+```
+
+```Go
+func TestSubRouting(t *testing.T)
+```
+
+### <a id="TestSubrouterCustomMethodNotAllowed" href="#TestSubrouterCustomMethodNotAllowed">func TestSubrouterCustomMethodNotAllowed(t *testing.T)</a>
+
+```
+searchKey: mux.TestSubrouterCustomMethodNotAllowed
+tags: [method private test]
+```
+
+```Go
+func TestSubrouterCustomMethodNotAllowed(t *testing.T)
+```
+
+### <a id="TestSubrouterErrorHandling" href="#TestSubrouterErrorHandling">func TestSubrouterErrorHandling(t *testing.T)</a>
+
+```
+searchKey: mux.TestSubrouterErrorHandling
+tags: [method private test]
+```
+
+```Go
+func TestSubrouterErrorHandling(t *testing.T)
+```
+
+### <a id="TestSubrouterHeader" href="#TestSubrouterHeader">func TestSubrouterHeader(t *testing.T)</a>
+
+```
+searchKey: mux.TestSubrouterHeader
+tags: [method private test]
+```
+
+```Go
+func TestSubrouterHeader(t *testing.T)
+```
+
+[https://plus.google.com/101022900381697718949/posts/eWy6DjFJ6uW](https://plus.google.com/101022900381697718949/posts/eWy6DjFJ6uW) 
+
+### <a id="TestSubrouterMatching" href="#TestSubrouterMatching">func TestSubrouterMatching(t *testing.T)</a>
+
+```
+searchKey: mux.TestSubrouterMatching
+tags: [method private test]
+```
+
+```Go
+func TestSubrouterMatching(t *testing.T)
+```
+
+### <a id="TestSubrouterNotFound" href="#TestSubrouterNotFound">func TestSubrouterNotFound(t *testing.T)</a>
+
+```
+searchKey: mux.TestSubrouterNotFound
+tags: [method private test]
+```
+
+```Go
+func TestSubrouterNotFound(t *testing.T)
+```
+
+### <a id="TestUrlBuilding" href="#TestUrlBuilding">func TestUrlBuilding(t *testing.T)</a>
+
+```
+searchKey: mux.TestUrlBuilding
+tags: [method private test]
+```
+
+```Go
+func TestUrlBuilding(t *testing.T)
+```
+
+### <a id="TestUseEncodedPath" href="#TestUseEncodedPath">func TestUseEncodedPath(t *testing.T)</a>
+
+```
+searchKey: mux.TestUseEncodedPath
+tags: [method private test]
+```
+
+```Go
+func TestUseEncodedPath(t *testing.T)
+```
+
+### <a id="TestVariableNames" href="#TestVariableNames">func TestVariableNames(t *testing.T)</a>
+
+```
+searchKey: mux.TestVariableNames
+tags: [method private test]
+```
+
+```Go
+func TestVariableNames(t *testing.T)
+```
+
+### <a id="TestWalkErrorHandler" href="#TestWalkErrorHandler">func TestWalkErrorHandler(t *testing.T)</a>
+
+```
+searchKey: mux.TestWalkErrorHandler
+tags: [method private test]
+```
+
+```Go
+func TestWalkErrorHandler(t *testing.T)
+```
+
+### <a id="TestWalkErrorMatcher" href="#TestWalkErrorMatcher">func TestWalkErrorMatcher(t *testing.T)</a>
+
+```
+searchKey: mux.TestWalkErrorMatcher
+tags: [method private test]
+```
+
+```Go
+func TestWalkErrorMatcher(t *testing.T)
+```
+
+### <a id="TestWalkErrorRoute" href="#TestWalkErrorRoute">func TestWalkErrorRoute(t *testing.T)</a>
+
+```
+searchKey: mux.TestWalkErrorRoute
+tags: [method private test]
+```
+
+```Go
+func TestWalkErrorRoute(t *testing.T)
+```
+
+### <a id="TestWalkNested" href="#TestWalkNested">func TestWalkNested(t *testing.T)</a>
+
+```
+searchKey: mux.TestWalkNested
+tags: [method private test]
+```
+
+```Go
+func TestWalkNested(t *testing.T)
+```
+
+### <a id="TestWalkSingleDepth" href="#TestWalkSingleDepth">func TestWalkSingleDepth(t *testing.T)</a>
+
+```
+searchKey: mux.TestWalkSingleDepth
+tags: [method private test]
+```
+
+```Go
+func TestWalkSingleDepth(t *testing.T)
+```
+
+### <a id="TestWalkSubrouters" href="#TestWalkSubrouters">func TestWalkSubrouters(t *testing.T)</a>
+
+```
+searchKey: mux.TestWalkSubrouters
+tags: [method private test]
+```
+
+```Go
+func TestWalkSubrouters(t *testing.T)
+```
+
+### <a id="Test_copyRouteConf" href="#Test_copyRouteConf">func Test_copyRouteConf(t *testing.T)</a>
+
+```
+searchKey: mux.Test_copyRouteConf
+tags: [method private test]
+```
+
+```Go
+func Test_copyRouteConf(t *testing.T)
+```
+
+verify that copyRouteConf copies fields as expected. 
+
+### <a id="Test_findFirstQueryKey" href="#Test_findFirstQueryKey">func Test_findFirstQueryKey(t *testing.T)</a>
+
+```
+searchKey: mux.Test_findFirstQueryKey
+tags: [method private test]
+```
+
+```Go
+func Test_findFirstQueryKey(t *testing.T)
+```
 
 ### <a id="Vars" href="#Vars">func Vars(r *http.Request) map[string]string</a>
 
 ```
 searchKey: mux.Vars
+tags: [method]
 ```
 
 ```Go
@@ -2506,59 +3379,24 @@ func Vars(r *http.Request) map[string]string
 
 Vars returns the route variables for the current request, if any. 
 
-### <a id="requestWithVars" href="#requestWithVars">func requestWithVars(r *http.Request, vars map[string]string) *http.Request</a>
+### <a id="braceIndices" href="#braceIndices">func braceIndices(s string) ([]int, error)</a>
 
 ```
-searchKey: mux.requestWithVars
-tags: [private]
-```
-
-```Go
-func requestWithVars(r *http.Request, vars map[string]string) *http.Request
-```
-
-### <a id="requestWithRoute" href="#requestWithRoute">func requestWithRoute(r *http.Request, route *Route) *http.Request</a>
-
-```
-searchKey: mux.requestWithRoute
-tags: [private]
+searchKey: mux.braceIndices
+tags: [method private]
 ```
 
 ```Go
-func requestWithRoute(r *http.Request, route *Route) *http.Request
+func braceIndices(s string) ([]int, error)
 ```
 
-### <a id="cleanPath" href="#cleanPath">func cleanPath(p string) string</a>
-
-```
-searchKey: mux.cleanPath
-tags: [private]
-```
-
-```Go
-func cleanPath(p string) string
-```
-
-cleanPath returns the canonical path for p, eliminating . and .. elements. Borrowed from the net/http package. 
-
-### <a id="uniqueVars" href="#uniqueVars">func uniqueVars(s1, s2 []string) error</a>
-
-```
-searchKey: mux.uniqueVars
-tags: [private]
-```
-
-```Go
-func uniqueVars(s1, s2 []string) error
-```
-
-uniqueVars returns an error if two slices contain duplicated strings. 
+braceIndices returns the first level curly brace indices from a string. It returns an error in case of unbalanced braces. 
 
 ### <a id="checkPairs" href="#checkPairs">func checkPairs(pairs ...string) (int, error)</a>
 
 ```
 searchKey: mux.checkPairs
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -2567,24 +3405,96 @@ func checkPairs(pairs ...string) (int, error)
 
 checkPairs returns the count of strings passed in, and an error if the count is not an even number. 
 
-### <a id="mapFromPairsToString" href="#mapFromPairsToString">func mapFromPairsToString(pairs ...string) (map[string]string, error)</a>
+### <a id="cleanPath" href="#cleanPath">func cleanPath(p string) string</a>
 
 ```
-searchKey: mux.mapFromPairsToString
-tags: [private]
+searchKey: mux.cleanPath
+tags: [method private]
 ```
 
 ```Go
-func mapFromPairsToString(pairs ...string) (map[string]string, error)
+func cleanPath(p string) string
 ```
 
-mapFromPairsToString converts variadic string parameters to a string to string map. 
+cleanPath returns the canonical path for p, eliminating . and .. elements. Borrowed from the net/http package. 
+
+### <a id="dummyHandler" href="#dummyHandler">func dummyHandler(w http.ResponseWriter, r *http.Request)</a>
+
+```
+searchKey: mux.dummyHandler
+tags: [method private]
+```
+
+```Go
+func dummyHandler(w http.ResponseWriter, r *http.Request)
+```
+
+### <a id="extractVars" href="#extractVars">func extractVars(input string, matches []int, names []string, output map[string]string)</a>
+
+```
+searchKey: mux.extractVars
+tags: [method private]
+```
+
+```Go
+func extractVars(input string, matches []int, names []string, output map[string]string)
+```
+
+### <a id="findFirstQueryKey" href="#findFirstQueryKey">func findFirstQueryKey(rawQuery, key string) (value string, ok bool)</a>
+
+```
+searchKey: mux.findFirstQueryKey
+tags: [method private]
+```
+
+```Go
+func findFirstQueryKey(rawQuery, key string) (value string, ok bool)
+```
+
+findFirstQueryKey returns the same result as (*url.URL).Query()[key][0]. If key was not found, empty string and false is returned. 
+
+### <a id="getAllMethodsForRoute" href="#getAllMethodsForRoute">func getAllMethodsForRoute(r *Router, req *http.Request) ([]string, error)</a>
+
+```
+searchKey: mux.getAllMethodsForRoute
+tags: [method private]
+```
+
+```Go
+func getAllMethodsForRoute(r *Router, req *http.Request) ([]string, error)
+```
+
+getAllMethodsForRoute returns all the methods from method matchers matching a given request. 
+
+### <a id="getHost" href="#getHost">func getHost(r *http.Request) string</a>
+
+```
+searchKey: mux.getHost
+tags: [method private]
+```
+
+```Go
+func getHost(r *http.Request) string
+```
+
+getHost tries its best to return the request host. According to section 14.23 of RFC 2616 the Host header can include the port number if the default value of 80 is not used. 
+
+### <a id="getRouteTemplate" href="#getRouteTemplate">func getRouteTemplate(route *Route) string</a>
+
+```
+searchKey: mux.getRouteTemplate
+tags: [method private]
+```
+
+```Go
+func getRouteTemplate(route *Route) string
+```
 
 ### <a id="mapFromPairsToRegex" href="#mapFromPairsToRegex">func mapFromPairsToRegex(pairs ...string) (map[string]*regexp.Regexp, error)</a>
 
 ```
 searchKey: mux.mapFromPairsToRegex
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -2593,11 +3503,37 @@ func mapFromPairsToRegex(pairs ...string) (map[string]*regexp.Regexp, error)
 
 mapFromPairsToRegex converts variadic string parameters to a string to regex map. 
 
+### <a id="mapFromPairsToString" href="#mapFromPairsToString">func mapFromPairsToString(pairs ...string) (map[string]string, error)</a>
+
+```
+searchKey: mux.mapFromPairsToString
+tags: [method private]
+```
+
+```Go
+func mapFromPairsToString(pairs ...string) (map[string]string, error)
+```
+
+mapFromPairsToString converts variadic string parameters to a string to string map. 
+
+### <a id="mapToPairs" href="#mapToPairs">func mapToPairs(m map[string]string) []string</a>
+
+```
+searchKey: mux.mapToPairs
+tags: [method private]
+```
+
+```Go
+func mapToPairs(m map[string]string) []string
+```
+
+mapToPairs converts a string map to a slice of string pairs 
+
 ### <a id="matchInArray" href="#matchInArray">func matchInArray(arr []string, value string) bool</a>
 
 ```
 searchKey: mux.matchInArray
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -2606,24 +3542,11 @@ func matchInArray(arr []string, value string) bool
 
 matchInArray returns true if the given string value is in the array. 
 
-### <a id="matchMapWithString" href="#matchMapWithString">func matchMapWithString(toCheck map[string]string, toMatch map[string][]string, canonicalKey bool) bool</a>
-
-```
-searchKey: mux.matchMapWithString
-tags: [private]
-```
-
-```Go
-func matchMapWithString(toCheck map[string]string, toMatch map[string][]string, canonicalKey bool) bool
-```
-
-matchMapWithString returns true if the given key/value pairs exist in a given map. 
-
 ### <a id="matchMapWithRegex" href="#matchMapWithRegex">func matchMapWithRegex(toCheck map[string]*regexp.Regexp, toMatch map[string][]string, canonicalKey bool) bool</a>
 
 ```
 searchKey: mux.matchMapWithRegex
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -2632,11 +3555,37 @@ func matchMapWithRegex(toCheck map[string]*regexp.Regexp, toMatch map[string][]s
 
 matchMapWithRegex returns true if the given key/value pairs exist in a given map compiled against the given regex 
 
+### <a id="matchMapWithString" href="#matchMapWithString">func matchMapWithString(toCheck map[string]string, toMatch map[string][]string, canonicalKey bool) bool</a>
+
+```
+searchKey: mux.matchMapWithString
+tags: [method private]
+```
+
+```Go
+func matchMapWithString(toCheck map[string]string, toMatch map[string][]string, canonicalKey bool) bool
+```
+
+matchMapWithString returns true if the given key/value pairs exist in a given map. 
+
+### <a id="methodHandler" href="#methodHandler">func methodHandler(method string) http.HandlerFunc</a>
+
+```
+searchKey: mux.methodHandler
+tags: [method private]
+```
+
+```Go
+func methodHandler(method string) http.HandlerFunc
+```
+
+methodHandler writes the method string in response. 
+
 ### <a id="methodNotAllowed" href="#methodNotAllowed">func methodNotAllowed(w http.ResponseWriter, r *http.Request)</a>
 
 ```
 searchKey: mux.methodNotAllowed
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -2649,7 +3598,7 @@ methodNotAllowed replies to the request with an HTTP status code 405.
 
 ```
 searchKey: mux.methodNotAllowedHandler
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -2658,585 +3607,122 @@ func methodNotAllowedHandler() http.Handler
 
 methodNotAllowedHandler returns a simple request handler that replies to each request with a status code 405. 
 
-### <a id="findFirstQueryKey" href="#findFirstQueryKey">func findFirstQueryKey(rawQuery, key string) (value string, ok bool)</a>
+### <a id="newRequest" href="#newRequest">func newRequest(method, url string) *http.Request</a>
 
 ```
-searchKey: mux.findFirstQueryKey
-tags: [private]
-```
-
-```Go
-func findFirstQueryKey(rawQuery, key string) (value string, ok bool)
-```
-
-findFirstQueryKey returns the same result as (*url.URL).Query()[key][0]. If key was not found, empty string and false is returned. 
-
-### <a id="braceIndices" href="#braceIndices">func braceIndices(s string) ([]int, error)</a>
-
-```
-searchKey: mux.braceIndices
-tags: [private]
+searchKey: mux.newRequest
+tags: [method private]
 ```
 
 ```Go
-func braceIndices(s string) ([]int, error)
+func newRequest(method, url string) *http.Request
 ```
 
-braceIndices returns the first level curly brace indices from a string. It returns an error in case of unbalanced braces. 
+newRequest is a helper function to create a new request with a method and url. The request returned is a 'server' request as opposed to a 'client' one through simulated write onto the wire and read off of the wire. The differences between requests are detailed in the net/http package. 
 
-### <a id="varGroupName" href="#varGroupName">func varGroupName(idx int) string</a>
-
-```
-searchKey: mux.varGroupName
-tags: [private]
-```
-
-```Go
-func varGroupName(idx int) string
-```
-
-varGroupName builds a capturing group name for the indexed variable. 
-
-### <a id="getHost" href="#getHost">func getHost(r *http.Request) string</a>
+### <a id="newRequestHost" href="#newRequestHost">func newRequestHost(method, url, host string) *http.Request</a>
 
 ```
-searchKey: mux.getHost
-tags: [private]
+searchKey: mux.newRequestHost
+tags: [method private]
 ```
 
 ```Go
-func getHost(r *http.Request) string
+func newRequestHost(method, url, host string) *http.Request
 ```
 
-getHost tries its best to return the request host. According to section 14.23 of RFC 2616 the Host header can include the port number if the default value of 80 is not used. 
+newRequestHost a new request with a method, url, and host header 
 
-### <a id="extractVars" href="#extractVars">func extractVars(input string, matches []int, names []string, output map[string]string)</a>
-
-```
-searchKey: mux.extractVars
-tags: [private]
-```
-
-```Go
-func extractVars(input string, matches []int, names []string, output map[string]string)
-```
-
-### <a id="SetURLVars" href="#SetURLVars">func SetURLVars(r *http.Request, val map[string]string) *http.Request</a>
+### <a id="newRequestWithHeaders" href="#newRequestWithHeaders">func newRequestWithHeaders(method, url string, headers ...string) *http.Request</a>
 
 ```
-searchKey: mux.SetURLVars
+searchKey: mux.newRequestWithHeaders
+tags: [method private]
 ```
 
 ```Go
-func SetURLVars(r *http.Request, val map[string]string) *http.Request
+func newRequestWithHeaders(method, url string, headers ...string) *http.Request
 ```
 
-SetURLVars sets the URL variables for the given request, to be accessed via mux.Vars for testing route behaviour. Arguments are not modified, a shallow copy is returned. 
+create a new request with the provided headers 
 
-This API should only be used for testing purposes; it provides a way to inject variables into the request context. Alternatively, URL variables can be set by making a route that captures the required variables, starting a server and sending the request to that server. 
-
-### <a id="BenchmarkMux" href="#BenchmarkMux">func BenchmarkMux(b *testing.B)</a>
+### <a id="requestWithRoute" href="#requestWithRoute">func requestWithRoute(r *http.Request, route *Route) *http.Request</a>
 
 ```
-searchKey: mux.BenchmarkMux
-tags: [private]
-```
-
-```Go
-func BenchmarkMux(b *testing.B)
-```
-
-### <a id="BenchmarkMuxAlternativeInRegexp" href="#BenchmarkMuxAlternativeInRegexp">func BenchmarkMuxAlternativeInRegexp(b *testing.B)</a>
-
-```
-searchKey: mux.BenchmarkMuxAlternativeInRegexp
-tags: [private]
+searchKey: mux.requestWithRoute
+tags: [method private]
 ```
 
 ```Go
-func BenchmarkMuxAlternativeInRegexp(b *testing.B)
+func requestWithRoute(r *http.Request, route *Route) *http.Request
 ```
 
-### <a id="BenchmarkManyPathVariables" href="#BenchmarkManyPathVariables">func BenchmarkManyPathVariables(b *testing.B)</a>
+### <a id="requestWithVars" href="#requestWithVars">func requestWithVars(r *http.Request, vars map[string]string) *http.Request</a>
 
 ```
-searchKey: mux.BenchmarkManyPathVariables
-tags: [private]
-```
-
-```Go
-func BenchmarkManyPathVariables(b *testing.B)
-```
-
-### <a id="dummyHandler" href="#dummyHandler">func dummyHandler(w http.ResponseWriter, r *http.Request)</a>
-
-```
-searchKey: mux.dummyHandler
-tags: [private]
+searchKey: mux.requestWithVars
+tags: [method private]
 ```
 
 ```Go
-func dummyHandler(w http.ResponseWriter, r *http.Request)
+func requestWithVars(r *http.Request, vars map[string]string) *http.Request
 ```
 
-### <a id="TestMiddlewareAdd" href="#TestMiddlewareAdd">func TestMiddlewareAdd(t *testing.T)</a>
+### <a id="stringHandler" href="#stringHandler">func stringHandler(s string) http.HandlerFunc</a>
 
 ```
-searchKey: mux.TestMiddlewareAdd
-tags: [private]
-```
-
-```Go
-func TestMiddlewareAdd(t *testing.T)
-```
-
-### <a id="TestMiddleware" href="#TestMiddleware">func TestMiddleware(t *testing.T)</a>
-
-```
-searchKey: mux.TestMiddleware
-tags: [private]
+searchKey: mux.stringHandler
+tags: [method private]
 ```
 
 ```Go
-func TestMiddleware(t *testing.T)
+func stringHandler(s string) http.HandlerFunc
 ```
 
-### <a id="TestMiddlewareSubrouter" href="#TestMiddlewareSubrouter">func TestMiddlewareSubrouter(t *testing.T)</a>
+stringHandler returns a handler func that writes a message 's' to the http.ResponseWriter. 
+
+### <a id="stringMapEqual" href="#stringMapEqual">func stringMapEqual(m1, m2 map[string]string) bool</a>
 
 ```
-searchKey: mux.TestMiddlewareSubrouter
-tags: [private]
-```
-
-```Go
-func TestMiddlewareSubrouter(t *testing.T)
-```
-
-### <a id="TestMiddlewareExecution" href="#TestMiddlewareExecution">func TestMiddlewareExecution(t *testing.T)</a>
-
-```
-searchKey: mux.TestMiddlewareExecution
-tags: [private]
+searchKey: mux.stringMapEqual
+tags: [method private]
 ```
 
 ```Go
-func TestMiddlewareExecution(t *testing.T)
+func stringMapEqual(m1, m2 map[string]string) bool
 ```
 
-### <a id="TestMiddlewareNotFound" href="#TestMiddlewareNotFound">func TestMiddlewareNotFound(t *testing.T)</a>
-
-```
-searchKey: mux.TestMiddlewareNotFound
-tags: [private]
-```
-
-```Go
-func TestMiddlewareNotFound(t *testing.T)
-```
-
-### <a id="TestMiddlewareMethodMismatch" href="#TestMiddlewareMethodMismatch">func TestMiddlewareMethodMismatch(t *testing.T)</a>
-
-```
-searchKey: mux.TestMiddlewareMethodMismatch
-tags: [private]
-```
-
-```Go
-func TestMiddlewareMethodMismatch(t *testing.T)
-```
-
-### <a id="TestMiddlewareNotFoundSubrouter" href="#TestMiddlewareNotFoundSubrouter">func TestMiddlewareNotFoundSubrouter(t *testing.T)</a>
-
-```
-searchKey: mux.TestMiddlewareNotFoundSubrouter
-tags: [private]
-```
-
-```Go
-func TestMiddlewareNotFoundSubrouter(t *testing.T)
-```
-
-### <a id="TestMiddlewareMethodMismatchSubrouter" href="#TestMiddlewareMethodMismatchSubrouter">func TestMiddlewareMethodMismatchSubrouter(t *testing.T)</a>
-
-```
-searchKey: mux.TestMiddlewareMethodMismatchSubrouter
-tags: [private]
-```
-
-```Go
-func TestMiddlewareMethodMismatchSubrouter(t *testing.T)
-```
-
-### <a id="TestCORSMethodMiddleware" href="#TestCORSMethodMiddleware">func TestCORSMethodMiddleware(t *testing.T)</a>
-
-```
-searchKey: mux.TestCORSMethodMiddleware
-tags: [private]
-```
-
-```Go
-func TestCORSMethodMiddleware(t *testing.T)
-```
-
-### <a id="TestCORSMethodMiddlewareSubrouter" href="#TestCORSMethodMiddlewareSubrouter">func TestCORSMethodMiddlewareSubrouter(t *testing.T)</a>
-
-```
-searchKey: mux.TestCORSMethodMiddlewareSubrouter
-tags: [private]
-```
-
-```Go
-func TestCORSMethodMiddlewareSubrouter(t *testing.T)
-```
-
-### <a id="TestMiddlewareOnMultiSubrouter" href="#TestMiddlewareOnMultiSubrouter">func TestMiddlewareOnMultiSubrouter(t *testing.T)</a>
-
-```
-searchKey: mux.TestMiddlewareOnMultiSubrouter
-tags: [private]
-```
-
-```Go
-func TestMiddlewareOnMultiSubrouter(t *testing.T)
-```
-
-### <a id="TestSchemeMatchers" href="#TestSchemeMatchers">func TestSchemeMatchers(t *testing.T)</a>
-
-```
-searchKey: mux.TestSchemeMatchers
-tags: [private]
-```
-
-```Go
-func TestSchemeMatchers(t *testing.T)
-```
-
-### <a id="TestHost" href="#TestHost">func TestHost(t *testing.T)</a>
-
-```
-searchKey: mux.TestHost
-tags: [private]
-```
-
-```Go
-func TestHost(t *testing.T)
-```
-
-### <a id="TestPath" href="#TestPath">func TestPath(t *testing.T)</a>
-
-```
-searchKey: mux.TestPath
-tags: [private]
-```
-
-```Go
-func TestPath(t *testing.T)
-```
-
-### <a id="TestPathPrefix" href="#TestPathPrefix">func TestPathPrefix(t *testing.T)</a>
-
-```
-searchKey: mux.TestPathPrefix
-tags: [private]
-```
-
-```Go
-func TestPathPrefix(t *testing.T)
-```
-
-### <a id="TestSchemeHostPath" href="#TestSchemeHostPath">func TestSchemeHostPath(t *testing.T)</a>
-
-```
-searchKey: mux.TestSchemeHostPath
-tags: [private]
-```
-
-```Go
-func TestSchemeHostPath(t *testing.T)
-```
-
-### <a id="TestHeaders" href="#TestHeaders">func TestHeaders(t *testing.T)</a>
-
-```
-searchKey: mux.TestHeaders
-tags: [private]
-```
-
-```Go
-func TestHeaders(t *testing.T)
-```
-
-### <a id="TestMethods" href="#TestMethods">func TestMethods(t *testing.T)</a>
-
-```
-searchKey: mux.TestMethods
-tags: [private]
-```
-
-```Go
-func TestMethods(t *testing.T)
-```
-
-### <a id="TestQueries" href="#TestQueries">func TestQueries(t *testing.T)</a>
-
-```
-searchKey: mux.TestQueries
-tags: [private]
-```
-
-```Go
-func TestQueries(t *testing.T)
-```
-
-### <a id="TestSchemes" href="#TestSchemes">func TestSchemes(t *testing.T)</a>
-
-```
-searchKey: mux.TestSchemes
-tags: [private]
-```
-
-```Go
-func TestSchemes(t *testing.T)
-```
-
-### <a id="TestMatcherFunc" href="#TestMatcherFunc">func TestMatcherFunc(t *testing.T)</a>
-
-```
-searchKey: mux.TestMatcherFunc
-tags: [private]
-```
-
-```Go
-func TestMatcherFunc(t *testing.T)
-```
-
-### <a id="TestBuildVarsFunc" href="#TestBuildVarsFunc">func TestBuildVarsFunc(t *testing.T)</a>
-
-```
-searchKey: mux.TestBuildVarsFunc
-tags: [private]
-```
-
-```Go
-func TestBuildVarsFunc(t *testing.T)
-```
-
-### <a id="TestSubRouter" href="#TestSubRouter">func TestSubRouter(t *testing.T)</a>
-
-```
-searchKey: mux.TestSubRouter
-tags: [private]
-```
-
-```Go
-func TestSubRouter(t *testing.T)
-```
-
-### <a id="TestNamedRoutes" href="#TestNamedRoutes">func TestNamedRoutes(t *testing.T)</a>
-
-```
-searchKey: mux.TestNamedRoutes
-tags: [private]
-```
-
-```Go
-func TestNamedRoutes(t *testing.T)
-```
-
-### <a id="TestNameMultipleCalls" href="#TestNameMultipleCalls">func TestNameMultipleCalls(t *testing.T)</a>
-
-```
-searchKey: mux.TestNameMultipleCalls
-tags: [private]
-```
-
-```Go
-func TestNameMultipleCalls(t *testing.T)
-```
-
-### <a id="TestStrictSlash" href="#TestStrictSlash">func TestStrictSlash(t *testing.T)</a>
-
-```
-searchKey: mux.TestStrictSlash
-tags: [private]
-```
-
-```Go
-func TestStrictSlash(t *testing.T)
-```
-
-### <a id="TestUseEncodedPath" href="#TestUseEncodedPath">func TestUseEncodedPath(t *testing.T)</a>
-
-```
-searchKey: mux.TestUseEncodedPath
-tags: [private]
-```
-
-```Go
-func TestUseEncodedPath(t *testing.T)
-```
-
-### <a id="TestWalkSingleDepth" href="#TestWalkSingleDepth">func TestWalkSingleDepth(t *testing.T)</a>
-
-```
-searchKey: mux.TestWalkSingleDepth
-tags: [private]
-```
-
-```Go
-func TestWalkSingleDepth(t *testing.T)
-```
-
-### <a id="TestWalkNested" href="#TestWalkNested">func TestWalkNested(t *testing.T)</a>
-
-```
-searchKey: mux.TestWalkNested
-tags: [private]
-```
-
-```Go
-func TestWalkNested(t *testing.T)
-```
-
-### <a id="TestWalkSubrouters" href="#TestWalkSubrouters">func TestWalkSubrouters(t *testing.T)</a>
-
-```
-searchKey: mux.TestWalkSubrouters
-tags: [private]
-```
-
-```Go
-func TestWalkSubrouters(t *testing.T)
-```
-
-### <a id="TestWalkErrorRoute" href="#TestWalkErrorRoute">func TestWalkErrorRoute(t *testing.T)</a>
-
-```
-searchKey: mux.TestWalkErrorRoute
-tags: [private]
-```
-
-```Go
-func TestWalkErrorRoute(t *testing.T)
-```
-
-### <a id="TestWalkErrorMatcher" href="#TestWalkErrorMatcher">func TestWalkErrorMatcher(t *testing.T)</a>
-
-```
-searchKey: mux.TestWalkErrorMatcher
-tags: [private]
-```
-
-```Go
-func TestWalkErrorMatcher(t *testing.T)
-```
-
-### <a id="TestWalkErrorHandler" href="#TestWalkErrorHandler">func TestWalkErrorHandler(t *testing.T)</a>
-
-```
-searchKey: mux.TestWalkErrorHandler
-tags: [private]
-```
-
-```Go
-func TestWalkErrorHandler(t *testing.T)
-```
-
-### <a id="TestSubrouterErrorHandling" href="#TestSubrouterErrorHandling">func TestSubrouterErrorHandling(t *testing.T)</a>
-
-```
-searchKey: mux.TestSubrouterErrorHandling
-tags: [private]
-```
-
-```Go
-func TestSubrouterErrorHandling(t *testing.T)
-```
-
-### <a id="TestPanicOnCapturingGroups" href="#TestPanicOnCapturingGroups">func TestPanicOnCapturingGroups(t *testing.T)</a>
-
-```
-searchKey: mux.TestPanicOnCapturingGroups
-tags: [private]
-```
-
-```Go
-func TestPanicOnCapturingGroups(t *testing.T)
-```
-
-See: [https://github.com/gorilla/mux/issues/200](https://github.com/gorilla/mux/issues/200) 
-
-### <a id="getRouteTemplate" href="#getRouteTemplate">func getRouteTemplate(route *Route) string</a>
-
-```
-searchKey: mux.getRouteTemplate
-tags: [private]
-```
-
-```Go
-func getRouteTemplate(route *Route) string
-```
-
-### <a id="testRoute" href="#testRoute">func testRoute(t *testing.T, test routeTest)</a>
-
-```
-searchKey: mux.testRoute
-tags: [private]
-```
-
-```Go
-func testRoute(t *testing.T, test routeTest)
-```
-
-### <a id="testUseEscapedRoute" href="#testUseEscapedRoute">func testUseEscapedRoute(t *testing.T, test routeTest)</a>
-
-```
-searchKey: mux.testUseEscapedRoute
-tags: [private]
-```
-
-```Go
-func testUseEscapedRoute(t *testing.T, test routeTest)
-```
-
-### <a id="testTemplate" href="#testTemplate">func testTemplate(t *testing.T, test routeTest)</a>
-
-```
-searchKey: mux.testTemplate
-tags: [private]
-```
-
-```Go
-func testTemplate(t *testing.T, test routeTest)
-```
+stringMapEqual checks the equality of two string maps 
 
 ### <a id="testMethods" href="#testMethods">func testMethods(t *testing.T, test routeTest)</a>
 
 ```
 searchKey: mux.testMethods
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func testMethods(t *testing.T, test routeTest)
 ```
 
-### <a id="testRegexp" href="#testRegexp">func testRegexp(t *testing.T, test routeTest)</a>
+### <a id="testMethodsSubrouter" href="#testMethodsSubrouter">func testMethodsSubrouter(t *testing.T, test methodsSubrouterTest)</a>
 
 ```
-searchKey: mux.testRegexp
-tags: [private]
+searchKey: mux.testMethodsSubrouter
+tags: [method private]
 ```
 
 ```Go
-func testRegexp(t *testing.T, test routeTest)
+func testMethodsSubrouter(t *testing.T, test methodsSubrouterTest)
 ```
+
+testMethodsSubrouter runs an individual methodsSubrouterTest. 
 
 ### <a id="testQueriesRegexp" href="#testQueriesRegexp">func testQueriesRegexp(t *testing.T, test routeTest)</a>
 
 ```
 searchKey: mux.testQueriesRegexp
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -3247,482 +3733,80 @@ func testQueriesRegexp(t *testing.T, test routeTest)
 
 ```
 searchKey: mux.testQueriesTemplates
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func testQueriesTemplates(t *testing.T, test routeTest)
 ```
 
-### <a id="Test301Redirect" href="#Test301Redirect">func Test301Redirect(t *testing.T)</a>
+### <a id="testRegexp" href="#testRegexp">func testRegexp(t *testing.T, test routeTest)</a>
 
 ```
-searchKey: mux.Test301Redirect
-tags: [private]
-```
-
-```Go
-func Test301Redirect(t *testing.T)
-```
-
-### <a id="TestSkipClean" href="#TestSkipClean">func TestSkipClean(t *testing.T)</a>
-
-```
-searchKey: mux.TestSkipClean
-tags: [private]
+searchKey: mux.testRegexp
+tags: [method private]
 ```
 
 ```Go
-func TestSkipClean(t *testing.T)
+func testRegexp(t *testing.T, test routeTest)
 ```
 
-### <a id="TestSubrouterHeader" href="#TestSubrouterHeader">func TestSubrouterHeader(t *testing.T)</a>
+### <a id="testRoute" href="#testRoute">func testRoute(t *testing.T, test routeTest)</a>
 
 ```
-searchKey: mux.TestSubrouterHeader
-tags: [private]
-```
-
-```Go
-func TestSubrouterHeader(t *testing.T)
-```
-
-[https://plus.google.com/101022900381697718949/posts/eWy6DjFJ6uW](https://plus.google.com/101022900381697718949/posts/eWy6DjFJ6uW) 
-
-### <a id="TestNoMatchMethodErrorHandler" href="#TestNoMatchMethodErrorHandler">func TestNoMatchMethodErrorHandler(t *testing.T)</a>
-
-```
-searchKey: mux.TestNoMatchMethodErrorHandler
-tags: [private]
+searchKey: mux.testRoute
+tags: [method private]
 ```
 
 ```Go
-func TestNoMatchMethodErrorHandler(t *testing.T)
+func testRoute(t *testing.T, test routeTest)
 ```
 
-### <a id="TestErrMatchNotFound" href="#TestErrMatchNotFound">func TestErrMatchNotFound(t *testing.T)</a>
+### <a id="testTemplate" href="#testTemplate">func testTemplate(t *testing.T, test routeTest)</a>
 
 ```
-searchKey: mux.TestErrMatchNotFound
-tags: [private]
-```
-
-```Go
-func TestErrMatchNotFound(t *testing.T)
-```
-
-### <a id="methodHandler" href="#methodHandler">func methodHandler(method string) http.HandlerFunc</a>
-
-```
-searchKey: mux.methodHandler
-tags: [private]
+searchKey: mux.testTemplate
+tags: [method private]
 ```
 
 ```Go
-func methodHandler(method string) http.HandlerFunc
+func testTemplate(t *testing.T, test routeTest)
 ```
 
-methodHandler writes the method string in response. 
-
-### <a id="TestMethodsSubrouterCatchall" href="#TestMethodsSubrouterCatchall">func TestMethodsSubrouterCatchall(t *testing.T)</a>
+### <a id="testUseEscapedRoute" href="#testUseEscapedRoute">func testUseEscapedRoute(t *testing.T, test routeTest)</a>
 
 ```
-searchKey: mux.TestMethodsSubrouterCatchall
-tags: [private]
-```
-
-```Go
-func TestMethodsSubrouterCatchall(t *testing.T)
-```
-
-TestMethodsSubrouterCatchall matches handlers for subrouters where a catchall handler is set for a mis-matching method. 
-
-### <a id="TestMethodsSubrouterStrictSlash" href="#TestMethodsSubrouterStrictSlash">func TestMethodsSubrouterStrictSlash(t *testing.T)</a>
-
-```
-searchKey: mux.TestMethodsSubrouterStrictSlash
-tags: [private]
+searchKey: mux.testUseEscapedRoute
+tags: [method private]
 ```
 
 ```Go
-func TestMethodsSubrouterStrictSlash(t *testing.T)
+func testUseEscapedRoute(t *testing.T, test routeTest)
 ```
 
-TestMethodsSubrouterStrictSlash matches handlers on subrouters with strict-slash matchers. 
-
-### <a id="TestMethodsSubrouterPathPrefix" href="#TestMethodsSubrouterPathPrefix">func TestMethodsSubrouterPathPrefix(t *testing.T)</a>
+### <a id="uniqueVars" href="#uniqueVars">func uniqueVars(s1, s2 []string) error</a>
 
 ```
-searchKey: mux.TestMethodsSubrouterPathPrefix
-tags: [private]
-```
-
-```Go
-func TestMethodsSubrouterPathPrefix(t *testing.T)
-```
-
-TestMethodsSubrouterPathPrefix matches handlers on subrouters created on a router with a path prefix matcher and method matcher. 
-
-### <a id="TestMethodsSubrouterSubrouter" href="#TestMethodsSubrouterSubrouter">func TestMethodsSubrouterSubrouter(t *testing.T)</a>
-
-```
-searchKey: mux.TestMethodsSubrouterSubrouter
-tags: [private]
+searchKey: mux.uniqueVars
+tags: [method private]
 ```
 
 ```Go
-func TestMethodsSubrouterSubrouter(t *testing.T)
+func uniqueVars(s1, s2 []string) error
 ```
 
-TestMethodsSubrouterSubrouter matches handlers on subrouters produced from method matchers registered on a root subrouter. 
+uniqueVars returns an error if two slices contain duplicated strings. 
 
-### <a id="TestMethodsSubrouterPathVariable" href="#TestMethodsSubrouterPathVariable">func TestMethodsSubrouterPathVariable(t *testing.T)</a>
-
-```
-searchKey: mux.TestMethodsSubrouterPathVariable
-tags: [private]
-```
-
-```Go
-func TestMethodsSubrouterPathVariable(t *testing.T)
-```
-
-TestMethodsSubrouterPathVariable matches handlers on matching paths with path variables in them. 
-
-### <a id="ExampleSetURLVars" href="#ExampleSetURLVars">func ExampleSetURLVars()</a>
+### <a id="varGroupName" href="#varGroupName">func varGroupName(idx int) string</a>
 
 ```
-searchKey: mux.ExampleSetURLVars
-tags: [private]
+searchKey: mux.varGroupName
+tags: [method private]
 ```
 
 ```Go
-func ExampleSetURLVars()
+func varGroupName(idx int) string
 ```
 
-### <a id="testMethodsSubrouter" href="#testMethodsSubrouter">func testMethodsSubrouter(t *testing.T, test methodsSubrouterTest)</a>
-
-```
-searchKey: mux.testMethodsSubrouter
-tags: [private]
-```
-
-```Go
-func testMethodsSubrouter(t *testing.T, test methodsSubrouterTest)
-```
-
-testMethodsSubrouter runs an individual methodsSubrouterTest. 
-
-### <a id="TestSubrouterMatching" href="#TestSubrouterMatching">func TestSubrouterMatching(t *testing.T)</a>
-
-```
-searchKey: mux.TestSubrouterMatching
-tags: [private]
-```
-
-```Go
-func TestSubrouterMatching(t *testing.T)
-```
-
-### <a id="Test_copyRouteConf" href="#Test_copyRouteConf">func Test_copyRouteConf(t *testing.T)</a>
-
-```
-searchKey: mux.Test_copyRouteConf
-tags: [private]
-```
-
-```Go
-func Test_copyRouteConf(t *testing.T)
-```
-
-verify that copyRouteConf copies fields as expected. 
-
-### <a id="TestMethodNotAllowed" href="#TestMethodNotAllowed">func TestMethodNotAllowed(t *testing.T)</a>
-
-```
-searchKey: mux.TestMethodNotAllowed
-tags: [private]
-```
-
-```Go
-func TestMethodNotAllowed(t *testing.T)
-```
-
-### <a id="TestSubrouterCustomMethodNotAllowed" href="#TestSubrouterCustomMethodNotAllowed">func TestSubrouterCustomMethodNotAllowed(t *testing.T)</a>
-
-```
-searchKey: mux.TestSubrouterCustomMethodNotAllowed
-tags: [private]
-```
-
-```Go
-func TestSubrouterCustomMethodNotAllowed(t *testing.T)
-```
-
-### <a id="TestSubrouterNotFound" href="#TestSubrouterNotFound">func TestSubrouterNotFound(t *testing.T)</a>
-
-```
-searchKey: mux.TestSubrouterNotFound
-tags: [private]
-```
-
-```Go
-func TestSubrouterNotFound(t *testing.T)
-```
-
-### <a id="TestContextMiddleware" href="#TestContextMiddleware">func TestContextMiddleware(t *testing.T)</a>
-
-```
-searchKey: mux.TestContextMiddleware
-tags: [private]
-```
-
-```Go
-func TestContextMiddleware(t *testing.T)
-```
-
-### <a id="mapToPairs" href="#mapToPairs">func mapToPairs(m map[string]string) []string</a>
-
-```
-searchKey: mux.mapToPairs
-tags: [private]
-```
-
-```Go
-func mapToPairs(m map[string]string) []string
-```
-
-mapToPairs converts a string map to a slice of string pairs 
-
-### <a id="stringMapEqual" href="#stringMapEqual">func stringMapEqual(m1, m2 map[string]string) bool</a>
-
-```
-searchKey: mux.stringMapEqual
-tags: [private]
-```
-
-```Go
-func stringMapEqual(m1, m2 map[string]string) bool
-```
-
-stringMapEqual checks the equality of two string maps 
-
-### <a id="stringHandler" href="#stringHandler">func stringHandler(s string) http.HandlerFunc</a>
-
-```
-searchKey: mux.stringHandler
-tags: [private]
-```
-
-```Go
-func stringHandler(s string) http.HandlerFunc
-```
-
-stringHandler returns a handler func that writes a message 's' to the http.ResponseWriter. 
-
-### <a id="newRequest" href="#newRequest">func newRequest(method, url string) *http.Request</a>
-
-```
-searchKey: mux.newRequest
-tags: [private]
-```
-
-```Go
-func newRequest(method, url string) *http.Request
-```
-
-newRequest is a helper function to create a new request with a method and url. The request returned is a 'server' request as opposed to a 'client' one through simulated write onto the wire and read off of the wire. The differences between requests are detailed in the net/http package. 
-
-### <a id="newRequestWithHeaders" href="#newRequestWithHeaders">func newRequestWithHeaders(method, url string, headers ...string) *http.Request</a>
-
-```
-searchKey: mux.newRequestWithHeaders
-tags: [private]
-```
-
-```Go
-func newRequestWithHeaders(method, url string, headers ...string) *http.Request
-```
-
-create a new request with the provided headers 
-
-### <a id="newRequestHost" href="#newRequestHost">func newRequestHost(method, url, host string) *http.Request</a>
-
-```
-searchKey: mux.newRequestHost
-tags: [private]
-```
-
-```Go
-func newRequestHost(method, url, host string) *http.Request
-```
-
-newRequestHost a new request with a method, url, and host header 
-
-### <a id="TestRouteMatchers" href="#TestRouteMatchers">func TestRouteMatchers(t *testing.T)</a>
-
-```
-searchKey: mux.TestRouteMatchers
-tags: [private]
-```
-
-```Go
-func TestRouteMatchers(t *testing.T)
-```
-
-### <a id="TestHeaderMatcher" href="#TestHeaderMatcher">func TestHeaderMatcher(t *testing.T)</a>
-
-```
-searchKey: mux.TestHeaderMatcher
-tags: [private]
-```
-
-```Go
-func TestHeaderMatcher(t *testing.T)
-```
-
-### <a id="TestHostMatcher" href="#TestHostMatcher">func TestHostMatcher(t *testing.T)</a>
-
-```
-searchKey: mux.TestHostMatcher
-tags: [private]
-```
-
-```Go
-func TestHostMatcher(t *testing.T)
-```
-
-### <a id="TestMethodMatcher" href="#TestMethodMatcher">func TestMethodMatcher(t *testing.T)</a>
-
-```
-searchKey: mux.TestMethodMatcher
-tags: [private]
-```
-
-```Go
-func TestMethodMatcher(t *testing.T)
-```
-
-### <a id="TestPathMatcher" href="#TestPathMatcher">func TestPathMatcher(t *testing.T)</a>
-
-```
-searchKey: mux.TestPathMatcher
-tags: [private]
-```
-
-```Go
-func TestPathMatcher(t *testing.T)
-```
-
-### <a id="TestSchemeMatcher" href="#TestSchemeMatcher">func TestSchemeMatcher(t *testing.T)</a>
-
-```
-searchKey: mux.TestSchemeMatcher
-tags: [private]
-```
-
-```Go
-func TestSchemeMatcher(t *testing.T)
-```
-
-### <a id="TestUrlBuilding" href="#TestUrlBuilding">func TestUrlBuilding(t *testing.T)</a>
-
-```
-searchKey: mux.TestUrlBuilding
-tags: [private]
-```
-
-```Go
-func TestUrlBuilding(t *testing.T)
-```
-
-### <a id="TestMatchedRouteName" href="#TestMatchedRouteName">func TestMatchedRouteName(t *testing.T)</a>
-
-```
-searchKey: mux.TestMatchedRouteName
-tags: [private]
-```
-
-```Go
-func TestMatchedRouteName(t *testing.T)
-```
-
-### <a id="TestSubRouting" href="#TestSubRouting">func TestSubRouting(t *testing.T)</a>
-
-```
-searchKey: mux.TestSubRouting
-tags: [private]
-```
-
-```Go
-func TestSubRouting(t *testing.T)
-```
-
-### <a id="TestVariableNames" href="#TestVariableNames">func TestVariableNames(t *testing.T)</a>
-
-```
-searchKey: mux.TestVariableNames
-tags: [private]
-```
-
-```Go
-func TestVariableNames(t *testing.T)
-```
-
-### <a id="TestRedirectSlash" href="#TestRedirectSlash">func TestRedirectSlash(t *testing.T)</a>
-
-```
-searchKey: mux.TestRedirectSlash
-tags: [private]
-```
-
-```Go
-func TestRedirectSlash(t *testing.T)
-```
-
-### <a id="TestNewRegexp" href="#TestNewRegexp">func TestNewRegexp(t *testing.T)</a>
-
-```
-searchKey: mux.TestNewRegexp
-tags: [private]
-```
-
-```Go
-func TestNewRegexp(t *testing.T)
-```
-
-Test for the new regexp library, still not available in stable Go. 
-
-### <a id="Test_findFirstQueryKey" href="#Test_findFirstQueryKey">func Test_findFirstQueryKey(t *testing.T)</a>
-
-```
-searchKey: mux.Test_findFirstQueryKey
-tags: [private]
-```
-
-```Go
-func Test_findFirstQueryKey(t *testing.T)
-```
-
-### <a id="Benchmark_findQueryKey" href="#Benchmark_findQueryKey">func Benchmark_findQueryKey(b *testing.B)</a>
-
-```
-searchKey: mux.Benchmark_findQueryKey
-tags: [private]
-```
-
-```Go
-func Benchmark_findQueryKey(b *testing.B)
-```
-
-### <a id="Benchmark_findQueryKeyGoLib" href="#Benchmark_findQueryKeyGoLib">func Benchmark_findQueryKeyGoLib(b *testing.B)</a>
-
-```
-searchKey: mux.Benchmark_findQueryKeyGoLib
-tags: [private]
-```
-
-```Go
-func Benchmark_findQueryKeyGoLib(b *testing.B)
-```
+varGroupName builds a capturing group name for the indexed variable. 
 

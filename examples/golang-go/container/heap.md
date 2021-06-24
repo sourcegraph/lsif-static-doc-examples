@@ -11,36 +11,41 @@ A heap is a common way to implement a priority queue. To build a priority queue,
 * [Types](#type)
     * [type Interface interface](#Interface)
     * [type myHeap []int](#myHeap)
-        * [func (h *myHeap) Less(i, j int) bool](#myHeap.Less)
-        * [func (h *myHeap) Swap(i, j int)](#myHeap.Swap)
         * [func (h *myHeap) Len() int](#myHeap.Len)
+        * [func (h *myHeap) Less(i, j int) bool](#myHeap.Less)
         * [func (h *myHeap) Pop() (v interface{})](#myHeap.Pop)
         * [func (h *myHeap) Push(v interface{})](#myHeap.Push)
+        * [func (h *myHeap) Swap(i, j int)](#myHeap.Swap)
         * [func (h myHeap) verify(t *testing.T, i int)](#myHeap.verify)
 * [Functions](#func)
-    * [func Init(h Interface)](#Init)
-    * [func Push(h Interface, x interface{})](#Push)
-    * [func Pop(h Interface) interface{}](#Pop)
-    * [func Remove(h Interface, i int) interface{}](#Remove)
+    * [func BenchmarkDup(b *testing.B)](#BenchmarkDup)
     * [func Fix(h Interface, i int)](#Fix)
-    * [func up(h Interface, j int)](#up)
-    * [func down(h Interface, i0, n int) bool](#down)
+    * [func Init(h Interface)](#Init)
+    * [func Pop(h Interface) interface{}](#Pop)
+    * [func Push(h Interface, x interface{})](#Push)
+    * [func Remove(h Interface, i int) interface{}](#Remove)
+    * [func Test(t *testing.T)](#Test)
+    * [func TestFix(t *testing.T)](#TestFix)
     * [func TestInit0(t *testing.T)](#TestInit0)
     * [func TestInit1(t *testing.T)](#TestInit1)
-    * [func Test(t *testing.T)](#Test)
     * [func TestRemove0(t *testing.T)](#TestRemove0)
     * [func TestRemove1(t *testing.T)](#TestRemove1)
     * [func TestRemove2(t *testing.T)](#TestRemove2)
-    * [func BenchmarkDup(b *testing.B)](#BenchmarkDup)
-    * [func TestFix(t *testing.T)](#TestFix)
+    * [func down(h Interface, i0, n int) bool](#down)
+    * [func up(h Interface, j int)](#up)
 
 
 ## <a id="type" href="#type">Types</a>
+
+```
+tags: [package]
+```
 
 ### <a id="Interface" href="#Interface">type Interface interface</a>
 
 ```
 searchKey: heap.Interface
+tags: [interface]
 ```
 
 ```Go
@@ -63,51 +68,40 @@ Note that Push and Pop in this interface are for package heap's implementation t
 
 ```
 searchKey: heap.myHeap
-tags: [private]
+tags: [array number private]
 ```
 
 ```Go
 type myHeap []int
 ```
 
-#### <a id="myHeap.Less" href="#myHeap.Less">func (h *myHeap) Less(i, j int) bool</a>
-
-```
-searchKey: heap.myHeap.Less
-tags: [private]
-```
-
-```Go
-func (h *myHeap) Less(i, j int) bool
-```
-
-#### <a id="myHeap.Swap" href="#myHeap.Swap">func (h *myHeap) Swap(i, j int)</a>
-
-```
-searchKey: heap.myHeap.Swap
-tags: [private]
-```
-
-```Go
-func (h *myHeap) Swap(i, j int)
-```
-
 #### <a id="myHeap.Len" href="#myHeap.Len">func (h *myHeap) Len() int</a>
 
 ```
 searchKey: heap.myHeap.Len
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
 func (h *myHeap) Len() int
 ```
 
+#### <a id="myHeap.Less" href="#myHeap.Less">func (h *myHeap) Less(i, j int) bool</a>
+
+```
+searchKey: heap.myHeap.Less
+tags: [method private]
+```
+
+```Go
+func (h *myHeap) Less(i, j int) bool
+```
+
 #### <a id="myHeap.Pop" href="#myHeap.Pop">func (h *myHeap) Pop() (v interface{})</a>
 
 ```
 searchKey: heap.myHeap.Pop
-tags: [private]
+tags: [function private]
 ```
 
 ```Go
@@ -118,18 +112,29 @@ func (h *myHeap) Pop() (v interface{})
 
 ```
 searchKey: heap.myHeap.Push
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (h *myHeap) Push(v interface{})
 ```
 
+#### <a id="myHeap.Swap" href="#myHeap.Swap">func (h *myHeap) Swap(i, j int)</a>
+
+```
+searchKey: heap.myHeap.Swap
+tags: [method private]
+```
+
+```Go
+func (h *myHeap) Swap(i, j int)
+```
+
 #### <a id="myHeap.verify" href="#myHeap.verify">func (h myHeap) verify(t *testing.T, i int)</a>
 
 ```
 searchKey: heap.myHeap.verify
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
@@ -138,58 +143,26 @@ func (h myHeap) verify(t *testing.T, i int)
 
 ## <a id="func" href="#func">Functions</a>
 
-### <a id="Init" href="#Init">func Init(h Interface)</a>
-
 ```
-searchKey: heap.Init
+tags: [package]
 ```
 
-```Go
-func Init(h Interface)
-```
-
-Init establishes the heap invariants required by the other routines in this package. Init is idempotent with respect to the heap invariants and may be called whenever the heap invariants may have been invalidated. The complexity is O(n) where n = h.Len(). 
-
-### <a id="Push" href="#Push">func Push(h Interface, x interface{})</a>
+### <a id="BenchmarkDup" href="#BenchmarkDup">func BenchmarkDup(b *testing.B)</a>
 
 ```
-searchKey: heap.Push
+searchKey: heap.BenchmarkDup
+tags: [method private benchmark]
 ```
 
 ```Go
-func Push(h Interface, x interface{})
+func BenchmarkDup(b *testing.B)
 ```
-
-Push pushes the element x onto the heap. The complexity is O(log n) where n = h.Len(). 
-
-### <a id="Pop" href="#Pop">func Pop(h Interface) interface{}</a>
-
-```
-searchKey: heap.Pop
-```
-
-```Go
-func Pop(h Interface) interface{}
-```
-
-Pop removes and returns the minimum element (according to Less) from the heap. The complexity is O(log n) where n = h.Len(). Pop is equivalent to Remove(h, 0). 
-
-### <a id="Remove" href="#Remove">func Remove(h Interface, i int) interface{}</a>
-
-```
-searchKey: heap.Remove
-```
-
-```Go
-func Remove(h Interface, i int) interface{}
-```
-
-Remove removes and returns the element at index i from the heap. The complexity is O(log n) where n = h.Len(). 
 
 ### <a id="Fix" href="#Fix">func Fix(h Interface, i int)</a>
 
 ```
 searchKey: heap.Fix
+tags: [method]
 ```
 
 ```Go
@@ -198,33 +171,85 @@ func Fix(h Interface, i int)
 
 Fix re-establishes the heap ordering after the element at index i has changed its value. Changing the value of the element at index i and then calling Fix is equivalent to, but less expensive than, calling Remove(h, i) followed by a Push of the new value. The complexity is O(log n) where n = h.Len(). 
 
-### <a id="up" href="#up">func up(h Interface, j int)</a>
+### <a id="Init" href="#Init">func Init(h Interface)</a>
 
 ```
-searchKey: heap.up
-tags: [private]
-```
-
-```Go
-func up(h Interface, j int)
-```
-
-### <a id="down" href="#down">func down(h Interface, i0, n int) bool</a>
-
-```
-searchKey: heap.down
-tags: [private]
+searchKey: heap.Init
+tags: [method]
 ```
 
 ```Go
-func down(h Interface, i0, n int) bool
+func Init(h Interface)
+```
+
+Init establishes the heap invariants required by the other routines in this package. Init is idempotent with respect to the heap invariants and may be called whenever the heap invariants may have been invalidated. The complexity is O(n) where n = h.Len(). 
+
+### <a id="Pop" href="#Pop">func Pop(h Interface) interface{}</a>
+
+```
+searchKey: heap.Pop
+tags: [method]
+```
+
+```Go
+func Pop(h Interface) interface{}
+```
+
+Pop removes and returns the minimum element (according to Less) from the heap. The complexity is O(log n) where n = h.Len(). Pop is equivalent to Remove(h, 0). 
+
+### <a id="Push" href="#Push">func Push(h Interface, x interface{})</a>
+
+```
+searchKey: heap.Push
+tags: [method]
+```
+
+```Go
+func Push(h Interface, x interface{})
+```
+
+Push pushes the element x onto the heap. The complexity is O(log n) where n = h.Len(). 
+
+### <a id="Remove" href="#Remove">func Remove(h Interface, i int) interface{}</a>
+
+```
+searchKey: heap.Remove
+tags: [method]
+```
+
+```Go
+func Remove(h Interface, i int) interface{}
+```
+
+Remove removes and returns the element at index i from the heap. The complexity is O(log n) where n = h.Len(). 
+
+### <a id="Test" href="#Test">func Test(t *testing.T)</a>
+
+```
+searchKey: heap.Test
+tags: [method private test]
+```
+
+```Go
+func Test(t *testing.T)
+```
+
+### <a id="TestFix" href="#TestFix">func TestFix(t *testing.T)</a>
+
+```
+searchKey: heap.TestFix
+tags: [method private test]
+```
+
+```Go
+func TestFix(t *testing.T)
 ```
 
 ### <a id="TestInit0" href="#TestInit0">func TestInit0(t *testing.T)</a>
 
 ```
 searchKey: heap.TestInit0
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -235,29 +260,18 @@ func TestInit0(t *testing.T)
 
 ```
 searchKey: heap.TestInit1
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestInit1(t *testing.T)
 ```
 
-### <a id="Test" href="#Test">func Test(t *testing.T)</a>
-
-```
-searchKey: heap.Test
-tags: [private]
-```
-
-```Go
-func Test(t *testing.T)
-```
-
 ### <a id="TestRemove0" href="#TestRemove0">func TestRemove0(t *testing.T)</a>
 
 ```
 searchKey: heap.TestRemove0
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -268,7 +282,7 @@ func TestRemove0(t *testing.T)
 
 ```
 searchKey: heap.TestRemove1
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
@@ -279,32 +293,32 @@ func TestRemove1(t *testing.T)
 
 ```
 searchKey: heap.TestRemove2
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go
 func TestRemove2(t *testing.T)
 ```
 
-### <a id="BenchmarkDup" href="#BenchmarkDup">func BenchmarkDup(b *testing.B)</a>
+### <a id="down" href="#down">func down(h Interface, i0, n int) bool</a>
 
 ```
-searchKey: heap.BenchmarkDup
-tags: [private]
-```
-
-```Go
-func BenchmarkDup(b *testing.B)
-```
-
-### <a id="TestFix" href="#TestFix">func TestFix(t *testing.T)</a>
-
-```
-searchKey: heap.TestFix
-tags: [private]
+searchKey: heap.down
+tags: [method private]
 ```
 
 ```Go
-func TestFix(t *testing.T)
+func down(h Interface, i0, n int) bool
+```
+
+### <a id="up" href="#up">func up(h Interface, j int)</a>
+
+```
+searchKey: heap.up
+tags: [method private]
+```
+
+```Go
+func up(h Interface, j int)
 ```
 

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/internal/license",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "license.formatVersion",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -84,12 +89,38 @@
         "children": [
           {
             "node": {
+              "pathID": "/enterprise/internal/license#infoFixture",
+              "documentation": {
+                "identifier": "infoFixture",
+                "newPage": false,
+                "searchKey": "license.infoFixture",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var infoFixture"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar infoFixture = Info{Tags: []string{\"a\"}, UserCount: 123, ExpiresAt: timeFixture}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/license#privateKey",
               "documentation": {
                 "identifier": "privateKey",
                 "newPage": false,
                 "searchKey": "license.privateKey",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -112,6 +143,8 @@
                 "newPage": false,
                 "searchKey": "license.publicKey",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -134,6 +167,8 @@
                 "newPage": false,
                 "searchKey": "license.timeFixture",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -144,28 +179,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar timeFixture = time.Date(2018, time.September, 22, 21, 33, 44, 0, time.UTC)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/license#infoFixture",
-              "documentation": {
-                "identifier": "infoFixture",
-                "newPage": false,
-                "searchKey": "license.infoFixture",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var infoFixture"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar infoFixture = Info{Tags: []string{\"a\"}, UserCount: 123, ExpiresAt: timeFixture}\n```\n\n"
               },
               "children": null
             }
@@ -181,6 +194,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -200,7 +214,9 @@
                 "identifier": "Info",
                 "newPage": false,
                 "searchKey": "license.Info",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -218,7 +234,9 @@
                       "identifier": "ParseSignedKey",
                       "newPage": false,
                       "searchKey": "license.ParseSignedKey",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -233,12 +251,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/enterprise/internal/license#Info.HasTag",
+                    "documentation": {
+                      "identifier": "Info.HasTag",
+                      "newPage": false,
+                      "searchKey": "license.Info.HasTag",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l Info) HasTag(tag string) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l Info) HasTag(tag string) bool\n```\n\nHasTag reports whether tag is in l's list of tags. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/enterprise/internal/license#Info.IsExpired",
                     "documentation": {
                       "identifier": "Info.IsExpired",
                       "newPage": false,
                       "searchKey": "license.Info.IsExpired",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -258,7 +300,9 @@
                       "identifier": "Info.IsExpiredWithGracePeriod",
                       "newPage": false,
                       "searchKey": "license.Info.IsExpiredWithGracePeriod",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -273,32 +317,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/license#Info.HasTag",
-                    "documentation": {
-                      "identifier": "Info.HasTag",
-                      "newPage": false,
-                      "searchKey": "license.Info.HasTag",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (l Info) HasTag(tag string) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (l Info) HasTag(tag string) bool\n```\n\nHasTag reports whether tag is in l's list of tags. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/internal/license#Info.String",
                     "documentation": {
                       "identifier": "Info.String",
                       "newPage": false,
                       "searchKey": "license.Info.String",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -313,34 +339,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/license#Info.encode",
-                    "documentation": {
-                      "identifier": "Info.encode",
-                      "newPage": false,
-                      "searchKey": "license.Info.encode",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (l Info) encode() ([]byte, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (l Info) encode() ([]byte, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/internal/license#Info.decode",
                     "documentation": {
                       "identifier": "Info.decode",
                       "newPage": false,
                       "searchKey": "license.Info.decode",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -351,6 +356,29 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (l *Info) decode(data []byte) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/license#Info.encode",
+                    "documentation": {
+                      "identifier": "Info.encode",
+                      "newPage": false,
+                      "searchKey": "license.Info.encode",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l Info) encode() ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l Info) encode() ([]byte, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -366,6 +394,7 @@
                 "newPage": false,
                 "searchKey": "license.encodedInfo",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -388,6 +417,7 @@
                 "newPage": false,
                 "searchKey": "license.signedKey",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -413,6 +443,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -427,32 +458,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/internal/license#ParseTagsInput",
-              "documentation": {
-                "identifier": "ParseTagsInput",
-                "newPage": false,
-                "searchKey": "license.ParseTagsInput",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ParseTagsInput(tagsStr string) []string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ParseTagsInput(tagsStr string) []string\n```\n\nParseTagsInput parses a string of comma-separated tags. It removes whitespace around tags and removes empty tags before returning the list of tags. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/license#GenerateSignedKey",
               "documentation": {
                 "identifier": "GenerateSignedKey",
                 "newPage": false,
                 "searchKey": "license.GenerateSignedKey",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -467,13 +480,109 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/license#ParseTagsInput",
+              "documentation": {
+                "identifier": "ParseTagsInput",
+                "newPage": false,
+                "searchKey": "license.ParseTagsInput",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ParseTagsInput(tagsStr string) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ParseTagsInput(tagsStr string) []string\n```\n\nParseTagsInput parses a string of comma-separated tags. It removes whitespace around tags and removes empty tags before returning the list of tags. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/license#TestGenerateParseSignedKey",
+              "documentation": {
+                "identifier": "TestGenerateParseSignedKey",
+                "newPage": false,
+                "searchKey": "license.TestGenerateParseSignedKey",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGenerateParseSignedKey(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGenerateParseSignedKey(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/license#TestInfo_EncodeDecode",
+              "documentation": {
+                "identifier": "TestInfo_EncodeDecode",
+                "newPage": false,
+                "searchKey": "license.TestInfo_EncodeDecode",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInfo_EncodeDecode(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInfo_EncodeDecode(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/license#TestParseSignedKey",
+              "documentation": {
+                "identifier": "TestParseSignedKey",
+                "newPage": false,
+                "searchKey": "license.TestParseSignedKey",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseSignedKey(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseSignedKey(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/license#TestParseTagsInput",
               "documentation": {
                 "identifier": "TestParseTagsInput",
                 "newPage": false,
                 "searchKey": "license.TestParseTagsInput",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -495,6 +604,7 @@
                 "newPage": false,
                 "searchKey": "license.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -505,72 +615,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/license#TestInfo_EncodeDecode",
-              "documentation": {
-                "identifier": "TestInfo_EncodeDecode",
-                "newPage": false,
-                "searchKey": "license.TestInfo_EncodeDecode",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestInfo_EncodeDecode(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestInfo_EncodeDecode(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/license#TestGenerateParseSignedKey",
-              "documentation": {
-                "identifier": "TestGenerateParseSignedKey",
-                "newPage": false,
-                "searchKey": "license.TestGenerateParseSignedKey",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGenerateParseSignedKey(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGenerateParseSignedKey(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/license#TestParseSignedKey",
-              "documentation": {
-                "identifier": "TestParseSignedKey",
-                "newPage": false,
-                "searchKey": "license.TestParseSignedKey",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestParseSignedKey(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestParseSignedKey(t *testing.T)\n```\n\n"
               },
               "children": null
             }

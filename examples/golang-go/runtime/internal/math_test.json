@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "runtime/internal/math_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "math_test.UintptrSize",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -84,56 +89,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/runtime/internal/math_test#mulUintptrTests",
-              "documentation": {
-                "identifier": "mulUintptrTests",
-                "newPage": false,
-                "searchKey": "math_test.mulUintptrTests",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var mulUintptrTests"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar mulUintptrTests = ...\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/runtime/internal/math_test#SinkUintptr",
-              "documentation": {
-                "identifier": "SinkUintptr",
-                "newPage": false,
-                "searchKey": "math_test.SinkUintptr",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var SinkUintptr"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar SinkUintptr uintptr\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/runtime/internal/math_test#SinkBool",
               "documentation": {
                 "identifier": "SinkBool",
                 "newPage": false,
                 "searchKey": "math_test.SinkBool",
                 "tags": [
+                  "variable",
+                  "boolean",
                   "private"
                 ]
               },
@@ -150,12 +113,63 @@
           },
           {
             "node": {
+              "pathID": "/runtime/internal/math_test#SinkUintptr",
+              "documentation": {
+                "identifier": "SinkUintptr",
+                "newPage": false,
+                "searchKey": "math_test.SinkUintptr",
+                "tags": [
+                  "variable",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var SinkUintptr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar SinkUintptr uintptr\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/math_test#mulUintptrTests",
+              "documentation": {
+                "identifier": "mulUintptrTests",
+                "newPage": false,
+                "searchKey": "math_test.mulUintptrTests",
+                "tags": [
+                  "variable",
+                  "array",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var mulUintptrTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar mulUintptrTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/runtime/internal/math_test#x",
               "documentation": {
                 "identifier": "x",
                 "newPage": false,
                 "searchKey": "math_test.x",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -178,6 +192,8 @@
                 "newPage": false,
                 "searchKey": "math_test.y",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -203,6 +219,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -223,6 +240,7 @@
                 "newPage": false,
                 "searchKey": "math_test.mulUintptrTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -248,6 +266,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -262,35 +281,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/runtime/internal/math_test#TestMulUintptr",
-              "documentation": {
-                "identifier": "TestMulUintptr",
-                "newPage": false,
-                "searchKey": "math_test.TestMulUintptr",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMulUintptr(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMulUintptr(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/runtime/internal/math_test#BenchmarkMulUintptr",
               "documentation": {
                 "identifier": "BenchmarkMulUintptr",
                 "newPage": false,
                 "searchKey": "math_test.BenchmarkMulUintptr",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -300,6 +299,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc BenchmarkMulUintptr(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/math_test#TestMulUintptr",
+              "documentation": {
+                "identifier": "TestMulUintptr",
+                "newPage": false,
+                "searchKey": "math_test.TestMulUintptr",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMulUintptr(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMulUintptr(t *testing.T)\n```\n\n"
               },
               "children": null
             }

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/auth/openidconnect",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#stateCookieName",
-              "documentation": {
-                "identifier": "stateCookieName",
-                "newPage": false,
-                "searchKey": "openidconnect.stateCookieName",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const stateCookieName"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst stateCookieName = \"sg-oidc-state\"\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#authPrefix",
               "documentation": {
                 "identifier": "authPrefix",
                 "newPage": false,
                 "searchKey": "openidconnect.authPrefix",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -83,34 +65,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#stateCookieTimeout",
-              "documentation": {
-                "identifier": "stateCookieTimeout",
-                "newPage": false,
-                "searchKey": "openidconnect.stateCookieTimeout",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const stateCookieTimeout"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst stateCookieTimeout = time.Minute * 15\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#providerType",
               "documentation": {
                 "identifier": "providerType",
                 "newPage": false,
                 "searchKey": "openidconnect.providerType",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -133,6 +95,8 @@
                 "newPage": false,
                 "searchKey": "openidconnect.sessionKey",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -143,6 +107,54 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nconst sessionKey = \"oidc@0\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#stateCookieName",
+              "documentation": {
+                "identifier": "stateCookieName",
+                "newPage": false,
+                "searchKey": "openidconnect.stateCookieName",
+                "tags": [
+                  "constant",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const stateCookieName"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst stateCookieName = \"sg-oidc-state\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#stateCookieTimeout",
+              "documentation": {
+                "identifier": "stateCookieTimeout",
+                "newPage": false,
+                "searchKey": "openidconnect.stateCookieTimeout",
+                "tags": [
+                  "constant",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const stateCookieTimeout"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst stateCookieTimeout = time.Minute * 15\n```\n\n"
               },
               "children": null
             }
@@ -158,6 +170,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -172,12 +185,37 @@
         "children": [
           {
             "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#Middleware",
+              "documentation": {
+                "identifier": "Middleware",
+                "newPage": false,
+                "searchKey": "openidconnect.Middleware",
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Middleware"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Middleware = ...\n```\n\nMiddleware is middleware for OpenID Connect (OIDC) authentication, adding endpoints under the auth path prefix (\"/.auth\") to enable the login flow and requiring login for all other endpoints. \n\nThe OIDC spec ([http://openid.net/specs/openid-connect-core-1_0.html](http://openid.net/specs/openid-connect-core-1_0.html)) describes an authentication protocol that involves 3 parties: the Relying Party (e.g., Sourcegraph), the OpenID Provider (e.g., Okta, OneLogin, or another SSO provider), and the End User (e.g., a user's web browser). \n\nThis middleware implements two things: (1) the OIDC Authorization Code Flow ([http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth](http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth)) and (2) Sourcegraph-specific session management (outside the scope of the OIDC spec). Upon successful completion of the OIDC login flow, the handler will create a new session and session cookie. The expiration of the session is the expiration of the OIDC ID Token. \n\n🚨 SECURITY \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#mockGetProviderValue",
               "documentation": {
                 "identifier": "mockGetProviderValue",
                 "newPage": false,
                 "searchKey": "openidconnect.mockGetProviderValue",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -194,54 +232,14 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#Middleware",
-              "documentation": {
-                "identifier": "Middleware",
-                "newPage": false,
-                "searchKey": "openidconnect.Middleware",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var Middleware"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar Middleware = ...\n```\n\nMiddleware is middleware for OpenID Connect (OIDC) authentication, adding endpoints under the auth path prefix (\"/.auth\") to enable the login flow and requiring login for all other endpoints. \n\nThe OIDC spec ([http://openid.net/specs/openid-connect-core-1_0.html](http://openid.net/specs/openid-connect-core-1_0.html)) describes an authentication protocol that involves 3 parties: the Relying Party (e.g., Sourcegraph), the OpenID Provider (e.g., Okta, OneLogin, or another SSO provider), and the End User (e.g., a user's web browser). \n\nThis middleware implements two things: (1) the OIDC Authorization Code Flow ([http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth](http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth)) and (2) Sourcegraph-specific session management (outside the scope of the OIDC spec). Upon successful completion of the OIDC login flow, the handler will create a new session and session cookie. The expiration of the session is the expiration of the OIDC ID Token. \n\n🚨 SECURITY \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#mockVerifyIDToken",
-              "documentation": {
-                "identifier": "mockVerifyIDToken",
-                "newPage": false,
-                "searchKey": "openidconnect.mockVerifyIDToken",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var mockVerifyIDToken"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar mockVerifyIDToken func(rawIDToken string) *oidc.IDToken\n```\n\nmockVerifyIDToken mocks the OIDC ID Token verification step. It should only be set in tests. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#mockNewProvider",
               "documentation": {
                 "identifier": "mockNewProvider",
                 "newPage": false,
                 "searchKey": "openidconnect.mockNewProvider",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
@@ -258,22 +256,24 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#testOIDCUser",
+              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#mockVerifyIDToken",
               "documentation": {
-                "identifier": "testOIDCUser",
+                "identifier": "mockVerifyIDToken",
                 "newPage": false,
-                "searchKey": "openidconnect.testOIDCUser",
+                "searchKey": "openidconnect.mockVerifyIDToken",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var testOIDCUser"
+                "value": "var mockVerifyIDToken"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar testOIDCUser = \"bob-test-user\"\n```\n\n"
+                "value": "```Go\nvar mockVerifyIDToken func(rawIDToken string) *oidc.IDToken\n```\n\nmockVerifyIDToken mocks the OIDC ID Token verification step. It should only be set in tests. \n\n"
               },
               "children": null
             }
@@ -286,6 +286,8 @@
                 "newPage": false,
                 "searchKey": "openidconnect.testClientID",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -296,6 +298,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar testClientID = \"aaaaaaaaaaaaaa\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#testOIDCUser",
+              "documentation": {
+                "identifier": "testOIDCUser",
+                "newPage": false,
+                "searchKey": "openidconnect.testOIDCUser",
+                "tags": [
+                  "variable",
+                  "string",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testOIDCUser"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testOIDCUser = \"bob-test-user\"\n```\n\n"
               },
               "children": null
             }
@@ -311,6 +337,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -325,34 +352,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#userClaims",
-              "documentation": {
-                "identifier": "userClaims",
-                "newPage": false,
-                "searchKey": "openidconnect.userClaims",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type userClaims struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype userClaims struct {\n\tName              string `json:\"name\"`\n\tGivenName         string `json:\"given_name\"`\n\tFamilyName        string `json:\"family_name\"`\n\tPreferredUsername string `json:\"preferred_username\"`\n\tPicture           string `json:\"picture\"`\n\tEmailVerified     *bool  `json:\"email_verified\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#authnState",
               "documentation": {
                 "identifier": "authnState",
                 "newPage": false,
                 "searchKey": "openidconnect.authnState",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -367,12 +373,36 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#authnState.Decode",
+                    "documentation": {
+                      "identifier": "authnState.Decode",
+                      "newPage": false,
+                      "searchKey": "openidconnect.authnState.Decode",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *authnState) Decode(encoded string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *authnState) Decode(encoded string) error\n```\n\nDecode decodes the base64-encoded JSON representation of the authn state into the receiver. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#authnState.Encode",
                     "documentation": {
                       "identifier": "authnState.Encode",
                       "newPage": false,
                       "searchKey": "openidconnect.authnState.Encode",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -386,25 +416,50 @@
                     },
                     "children": null
                   }
-                },
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#oidcProvider",
+              "documentation": {
+                "identifier": "oidcProvider",
+                "newPage": false,
+                "searchKey": "openidconnect.oidcProvider",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type oidcProvider struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype oidcProvider struct {\n\toidc.Provider\n\tproviderExtraClaims\n}\n```\n\noidcProvider is an OpenID Connect oidcProvider with additional claims parsed from the service oidcProvider discovery response (beyond what github.com/coreos/go-oidc parses by default). \n\n"
+              },
+              "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#authnState.Decode",
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#newProvider",
                     "documentation": {
-                      "identifier": "authnState.Decode",
+                      "identifier": "newProvider",
                       "newPage": false,
-                      "searchKey": "openidconnect.authnState.Decode",
+                      "searchKey": "openidconnect.newProvider",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (s *authnState) Decode(encoded string) error"
+                      "value": "func newProvider(ctx context.Context, issuerURL string) (*oidcProvider, error)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (s *authnState) Decode(encoded string) error\n```\n\nDecode decodes the base64-encoded JSON representation of the authn state into the receiver. \n\n"
+                      "value": "```Go\nfunc newProvider(ctx context.Context, issuerURL string) (*oidcProvider, error)\n```\n\n"
                     },
                     "children": null
                   }
@@ -420,6 +475,7 @@
                 "newPage": false,
                 "searchKey": "openidconnect.provider",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -440,6 +496,7 @@
                       "newPage": false,
                       "searchKey": "openidconnect.getProvider",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -462,6 +519,7 @@
                       "newPage": false,
                       "searchKey": "openidconnect.handleGetProvider",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -478,22 +536,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#provider.ConfigID",
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#provider.CachedInfo",
                     "documentation": {
-                      "identifier": "provider.ConfigID",
+                      "identifier": "provider.CachedInfo",
                       "newPage": false,
-                      "searchKey": "openidconnect.provider.ConfigID",
+                      "searchKey": "openidconnect.provider.CachedInfo",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (p *provider) ConfigID() providers.ConfigID"
+                      "value": "func (p *provider) CachedInfo() *providers.Info"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (p *provider) ConfigID() providers.ConfigID\n```\n\nConfigID implements providers.Provider. \n\n"
+                      "value": "```Go\nfunc (p *provider) CachedInfo() *providers.Info\n```\n\nCachedInfo implements providers.Provider. \n\n"
                     },
                     "children": null
                   }
@@ -506,6 +565,7 @@
                       "newPage": false,
                       "searchKey": "openidconnect.provider.Config",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -522,12 +582,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#provider.ConfigID",
+                    "documentation": {
+                      "identifier": "provider.ConfigID",
+                      "newPage": false,
+                      "searchKey": "openidconnect.provider.ConfigID",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *provider) ConfigID() providers.ConfigID"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *provider) ConfigID() providers.ConfigID\n```\n\nConfigID implements providers.Provider. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#provider.Refresh",
                     "documentation": {
                       "identifier": "provider.Refresh",
                       "newPage": false,
                       "searchKey": "openidconnect.provider.Refresh",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -550,6 +634,7 @@
                       "newPage": false,
                       "searchKey": "openidconnect.provider.getCachedInfoAndError",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -566,34 +651,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#provider.CachedInfo",
-                    "documentation": {
-                      "identifier": "provider.CachedInfo",
-                      "newPage": false,
-                      "searchKey": "openidconnect.provider.CachedInfo",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *provider) CachedInfo() *providers.Info"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *provider) CachedInfo() *providers.Info\n```\n\nCachedInfo implements providers.Provider. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#provider.oauth2Config",
                     "documentation": {
                       "identifier": "provider.oauth2Config",
                       "newPage": false,
                       "searchKey": "openidconnect.provider.oauth2Config",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -613,57 +677,13 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#oidcProvider",
-              "documentation": {
-                "identifier": "oidcProvider",
-                "newPage": false,
-                "searchKey": "openidconnect.oidcProvider",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type oidcProvider struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype oidcProvider struct {\n\toidc.Provider\n\tproviderExtraClaims\n}\n```\n\noidcProvider is an OpenID Connect oidcProvider with additional claims parsed from the service oidcProvider discovery response (beyond what github.com/coreos/go-oidc parses by default). \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#newProvider",
-                    "documentation": {
-                      "identifier": "newProvider",
-                      "newPage": false,
-                      "searchKey": "openidconnect.newProvider",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func newProvider(ctx context.Context, issuerURL string) (*oidcProvider, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc newProvider(ctx context.Context, issuerURL string) (*oidcProvider, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#providerExtraClaims",
               "documentation": {
                 "identifier": "providerExtraClaims",
                 "newPage": false,
                 "searchKey": "openidconnect.providerExtraClaims",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -680,12 +700,36 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#providerJSON",
+              "documentation": {
+                "identifier": "providerJSON",
+                "newPage": false,
+                "searchKey": "openidconnect.providerJSON",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type providerJSON struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype providerJSON struct {\n\tIssuer      string `json:\"issuer\"`\n\tAuthURL     string `json:\"authorization_endpoint\"`\n\tTokenURL    string `json:\"token_endpoint\"`\n\tJWKSURL     string `json:\"jwks_uri\"`\n\tUserInfoURL string `json:\"userinfo_endpoint\"`\n}\n```\n\nproviderJSON is the JSON structure the OIDC provider returns at its discovery endpoing \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#sessionData",
               "documentation": {
                 "identifier": "sessionData",
                 "newPage": false,
                 "searchKey": "openidconnect.sessionData",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -702,22 +746,23 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#providerJSON",
+              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#userClaims",
               "documentation": {
-                "identifier": "providerJSON",
+                "identifier": "userClaims",
                 "newPage": false,
-                "searchKey": "openidconnect.providerJSON",
+                "searchKey": "openidconnect.userClaims",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type providerJSON struct"
+                "value": "type userClaims struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype providerJSON struct {\n\tIssuer      string `json:\"issuer\"`\n\tAuthURL     string `json:\"authorization_endpoint\"`\n\tTokenURL    string `json:\"token_endpoint\"`\n\tJWKSURL     string `json:\"jwks_uri\"`\n\tUserInfoURL string `json:\"userinfo_endpoint\"`\n}\n```\n\nproviderJSON is the JSON structure the OIDC provider returns at its discovery endpoing \n\n"
+                "value": "```Go\ntype userClaims struct {\n\tName              string `json:\"name\"`\n\tGivenName         string `json:\"given_name\"`\n\tFamilyName        string `json:\"family_name\"`\n\tPreferredUsername string `json:\"preferred_username\"`\n\tPicture           string `json:\"picture\"`\n\tEmailVerified     *bool  `json:\"email_verified\"`\n}\n```\n\n"
               },
               "children": null
             }
@@ -733,6 +778,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -747,132 +793,118 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#init.config.go",
+              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#SignOut",
               "documentation": {
-                "identifier": "init.config.go",
+                "identifier": "SignOut",
                 "newPage": false,
-                "searchKey": "openidconnect.init",
+                "searchKey": "openidconnect.SignOut",
                 "tags": [
-                  "private"
+                  "method"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func init()"
+                "value": "func SignOut(w http.ResponseWriter, r *http.Request) (endSessionEndpoint string, err error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
+                "value": "```Go\nfunc SignOut(w http.ResponseWriter, r *http.Request) (endSessionEndpoint string, err error)\n```\n\nSignOut clears OpenID Connect-related data from the session. If possible, it revokes the token from the OP. If there is an end-session endpoint, it returns that for the caller to present to the user. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#validateConfig",
+              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#TestMiddleware",
               "documentation": {
-                "identifier": "validateConfig",
+                "identifier": "TestMiddleware",
                 "newPage": false,
-                "searchKey": "openidconnect.validateConfig",
+                "searchKey": "openidconnect.TestMiddleware",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func validateConfig(c conf.Unified) (problems conf.Problems)"
+                "value": "func TestMiddleware(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc validateConfig(c conf.Unified) (problems conf.Problems)\n```\n\n"
+                "value": "```Go\nfunc TestMiddleware(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#providerConfigID",
+              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#TestMiddleware_NoOpenRedirect",
               "documentation": {
-                "identifier": "providerConfigID",
+                "identifier": "TestMiddleware_NoOpenRedirect",
                 "newPage": false,
-                "searchKey": "openidconnect.providerConfigID",
+                "searchKey": "openidconnect.TestMiddleware_NoOpenRedirect",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func providerConfigID(pc *schema.OpenIDConnectAuthProvider) string"
+                "value": "func TestMiddleware_NoOpenRedirect(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc providerConfigID(pc *schema.OpenIDConnectAuthProvider) string\n```\n\nproviderConfigID produces a semi-stable identifier for an openidconnect auth provider config object. It is used to distinguish between multiple auth providers of the same type when in multi-step auth flows. Its value is never persisted, and it must be deterministic. \n\n"
+                "value": "```Go\nfunc TestMiddleware_NoOpenRedirect(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#getProviders",
+              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#TestProviderConfigID",
               "documentation": {
-                "identifier": "getProviders",
+                "identifier": "TestProviderConfigID",
                 "newPage": false,
-                "searchKey": "openidconnect.getProviders",
+                "searchKey": "openidconnect.TestProviderConfigID",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func getProviders() []providers.Provider"
+                "value": "func TestProviderConfigID(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc getProviders() []providers.Provider\n```\n\n"
+                "value": "```Go\nfunc TestProviderConfigID(t *testing.T)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#init.config_watch.go",
+              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#TestValidateCustom",
               "documentation": {
-                "identifier": "init.config_watch.go",
+                "identifier": "TestValidateCustom",
                 "newPage": false,
-                "searchKey": "openidconnect.init",
+                "searchKey": "openidconnect.TestValidateCustom",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func init()"
+                "value": "func TestValidateCustom(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#handleOpenIDConnectAuth",
-              "documentation": {
-                "identifier": "handleOpenIDConnectAuth",
-                "newPage": false,
-                "searchKey": "openidconnect.handleOpenIDConnectAuth",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func handleOpenIDConnectAuth(w http.ResponseWriter, r *http.Request, next http.Handler, isAPIRequest bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc handleOpenIDConnectAuth(w http.ResponseWriter, r *http.Request, next http.Handler, isAPIRequest bool)\n```\n\nhandleOpenIDConnectAuth performs OpenID Connect authentication (if configured) for HTTP requests, both API requests and non-API requests. \n\n"
+                "value": "```Go\nfunc TestValidateCustom(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -885,6 +917,7 @@
                 "newPage": false,
                 "searchKey": "openidconnect.authHandler",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -901,12 +934,174 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#getOrCreateUser",
+              "documentation": {
+                "identifier": "getOrCreateUser",
+                "newPage": false,
+                "searchKey": "openidconnect.getOrCreateUser",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getOrCreateUser(ctx context.Context, p *provider, idToken *oidc.IDToken, userInfo *oidc.UserInfo, claims *userClaims) (_ *actor.Actor, safeErrMsg string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getOrCreateUser(ctx context.Context, p *provider, idToken *oidc.IDToken, userInfo *oidc.UserInfo, claims *userClaims) (_ *actor.Actor, safeErrMsg string, err error)\n```\n\ngetOrCreateUser gets or creates a user account based on the OpenID Connect token. It returns the authenticated actor if successful; otherwise it returns an friendly error message (safeErrMsg) that is safe to display to users, and a non-nil err with lower-level error details. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#getProviders",
+              "documentation": {
+                "identifier": "getProviders",
+                "newPage": false,
+                "searchKey": "openidconnect.getProviders",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getProviders() []providers.Provider"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getProviders() []providers.Provider\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#handleOpenIDConnectAuth",
+              "documentation": {
+                "identifier": "handleOpenIDConnectAuth",
+                "newPage": false,
+                "searchKey": "openidconnect.handleOpenIDConnectAuth",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func handleOpenIDConnectAuth(w http.ResponseWriter, r *http.Request, next http.Handler, isAPIRequest bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc handleOpenIDConnectAuth(w http.ResponseWriter, r *http.Request, next http.Handler, isAPIRequest bool)\n```\n\nhandleOpenIDConnectAuth performs OpenID Connect authentication (if configured) for HTTP requests, both API requests and non-API requests. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#init.config.go",
+              "documentation": {
+                "identifier": "init.config.go",
+                "newPage": false,
+                "searchKey": "openidconnect.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#init.config_watch.go",
+              "documentation": {
+                "identifier": "init.config_watch.go",
+                "newPage": false,
+                "searchKey": "openidconnect.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#newOIDCIDServer",
+              "documentation": {
+                "identifier": "newOIDCIDServer",
+                "newPage": false,
+                "searchKey": "openidconnect.newOIDCIDServer",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newOIDCIDServer(t *testing.T, code string, oidcProvider *schema.OpenIDConnectAuthProvider) (server *httptest.Server, emailPtr *string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newOIDCIDServer(t *testing.T, code string, oidcProvider *schema.OpenIDConnectAuthProvider) (server *httptest.Server, emailPtr *string)\n```\n\nnew OIDCIDServer returns a new running mock OIDC ID Provider service. It is the caller's responsibility to call Close(). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#providerConfigID",
+              "documentation": {
+                "identifier": "providerConfigID",
+                "newPage": false,
+                "searchKey": "openidconnect.providerConfigID",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func providerConfigID(pc *schema.OpenIDConnectAuthProvider) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc providerConfigID(pc *schema.OpenIDConnectAuthProvider) string\n```\n\nproviderConfigID produces a semi-stable identifier for an openidconnect auth provider config object. It is used to distinguish between multiple auth providers of the same type when in multi-step auth flows. Its value is never persisted, and it must be deterministic. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#redirectToAuthRequest",
               "documentation": {
                 "identifier": "redirectToAuthRequest",
                 "newPage": false,
                 "searchKey": "openidconnect.redirectToAuthRequest",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -929,6 +1124,7 @@
                 "newPage": false,
                 "searchKey": "openidconnect.revokeToken",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -945,152 +1141,23 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#SignOut",
+              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#validateConfig",
               "documentation": {
-                "identifier": "SignOut",
+                "identifier": "validateConfig",
                 "newPage": false,
-                "searchKey": "openidconnect.SignOut",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SignOut(w http.ResponseWriter, r *http.Request) (endSessionEndpoint string, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SignOut(w http.ResponseWriter, r *http.Request) (endSessionEndpoint string, err error)\n```\n\nSignOut clears OpenID Connect-related data from the session. If possible, it revokes the token from the OP. If there is an end-session endpoint, it returns that for the caller to present to the user. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#getOrCreateUser",
-              "documentation": {
-                "identifier": "getOrCreateUser",
-                "newPage": false,
-                "searchKey": "openidconnect.getOrCreateUser",
+                "searchKey": "openidconnect.validateConfig",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func getOrCreateUser(ctx context.Context, p *provider, idToken *oidc.IDToken, userInfo *oidc.UserInfo, claims *userClaims) (_ *actor.Actor, safeErrMsg string, err error)"
+                "value": "func validateConfig(c conf.Unified) (problems conf.Problems)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc getOrCreateUser(ctx context.Context, p *provider, idToken *oidc.IDToken, userInfo *oidc.UserInfo, claims *userClaims) (_ *actor.Actor, safeErrMsg string, err error)\n```\n\ngetOrCreateUser gets or creates a user account based on the OpenID Connect token. It returns the authenticated actor if successful; otherwise it returns an friendly error message (safeErrMsg) that is safe to display to users, and a non-nil err with lower-level error details. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#TestValidateCustom",
-              "documentation": {
-                "identifier": "TestValidateCustom",
-                "newPage": false,
-                "searchKey": "openidconnect.TestValidateCustom",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestValidateCustom(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestValidateCustom(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#TestProviderConfigID",
-              "documentation": {
-                "identifier": "TestProviderConfigID",
-                "newPage": false,
-                "searchKey": "openidconnect.TestProviderConfigID",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestProviderConfigID(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestProviderConfigID(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#newOIDCIDServer",
-              "documentation": {
-                "identifier": "newOIDCIDServer",
-                "newPage": false,
-                "searchKey": "openidconnect.newOIDCIDServer",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func newOIDCIDServer(t *testing.T, code string, oidcProvider *schema.OpenIDConnectAuthProvider) (server *httptest.Server, emailPtr *string)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc newOIDCIDServer(t *testing.T, code string, oidcProvider *schema.OpenIDConnectAuthProvider) (server *httptest.Server, emailPtr *string)\n```\n\nnew OIDCIDServer returns a new running mock OIDC ID Provider service. It is the caller's responsibility to call Close(). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#TestMiddleware",
-              "documentation": {
-                "identifier": "TestMiddleware",
-                "newPage": false,
-                "searchKey": "openidconnect.TestMiddleware",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMiddleware(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMiddleware(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/auth/openidconnect#TestMiddleware_NoOpenRedirect",
-              "documentation": {
-                "identifier": "TestMiddleware_NoOpenRedirect",
-                "newPage": false,
-                "searchKey": "openidconnect.TestMiddleware_NoOpenRedirect",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestMiddleware_NoOpenRedirect(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestMiddleware_NoOpenRedirect(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc validateConfig(c conf.Unified) (problems conf.Problems)\n```\n\n"
               },
               "children": null
             }

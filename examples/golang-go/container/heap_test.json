@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "container/heap_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "heap_test.IntHeap",
                 "tags": [
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -65,6 +69,7 @@
                       "newPage": false,
                       "searchKey": "heap_test.IntHeap.Len",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -87,6 +92,7 @@
                       "newPage": false,
                       "searchKey": "heap_test.IntHeap.Less",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -103,22 +109,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/container/heap_test#IntHeap.Swap",
+                    "pathID": "/container/heap_test#IntHeap.Pop",
                     "documentation": {
-                      "identifier": "IntHeap.Swap",
+                      "identifier": "IntHeap.Pop",
                       "newPage": false,
-                      "searchKey": "heap_test.IntHeap.Swap",
+                      "searchKey": "heap_test.IntHeap.Pop",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (h IntHeap) Swap(i, j int)"
+                      "value": "func (h *IntHeap) Pop() interface{}"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (h IntHeap) Swap(i, j int)\n```\n\n"
+                      "value": "```Go\nfunc (h *IntHeap) Pop() interface{}\n```\n\n"
                     },
                     "children": null
                   }
@@ -131,6 +138,7 @@
                       "newPage": false,
                       "searchKey": "heap_test.IntHeap.Push",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -147,22 +155,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/container/heap_test#IntHeap.Pop",
+                    "pathID": "/container/heap_test#IntHeap.Swap",
                     "documentation": {
-                      "identifier": "IntHeap.Pop",
+                      "identifier": "IntHeap.Swap",
                       "newPage": false,
-                      "searchKey": "heap_test.IntHeap.Pop",
+                      "searchKey": "heap_test.IntHeap.Swap",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (h *IntHeap) Pop() interface{}"
+                      "value": "func (h IntHeap) Swap(i, j int)"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (h *IntHeap) Pop() interface{}\n```\n\n"
+                      "value": "```Go\nfunc (h IntHeap) Swap(i, j int)\n```\n\n"
                     },
                     "children": null
                   }
@@ -178,6 +187,7 @@
                 "newPage": false,
                 "searchKey": "heap_test.Item",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -200,6 +210,8 @@
                 "newPage": false,
                 "searchKey": "heap_test.PriorityQueue",
                 "tags": [
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -220,6 +232,7 @@
                       "newPage": false,
                       "searchKey": "heap_test.PriorityQueue.Len",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -242,6 +255,7 @@
                       "newPage": false,
                       "searchKey": "heap_test.PriorityQueue.Less",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -258,56 +272,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/container/heap_test#PriorityQueue.Swap",
-                    "documentation": {
-                      "identifier": "PriorityQueue.Swap",
-                      "newPage": false,
-                      "searchKey": "heap_test.PriorityQueue.Swap",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (pq PriorityQueue) Swap(i, j int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (pq PriorityQueue) Swap(i, j int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/container/heap_test#PriorityQueue.Push",
-                    "documentation": {
-                      "identifier": "PriorityQueue.Push",
-                      "newPage": false,
-                      "searchKey": "heap_test.PriorityQueue.Push",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (pq *PriorityQueue) Push(x interface{})"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (pq *PriorityQueue) Push(x interface{})\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/container/heap_test#PriorityQueue.Pop",
                     "documentation": {
                       "identifier": "PriorityQueue.Pop",
                       "newPage": false,
                       "searchKey": "heap_test.PriorityQueue.Pop",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -324,12 +295,59 @@
                 },
                 {
                   "node": {
+                    "pathID": "/container/heap_test#PriorityQueue.Push",
+                    "documentation": {
+                      "identifier": "PriorityQueue.Push",
+                      "newPage": false,
+                      "searchKey": "heap_test.PriorityQueue.Push",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pq *PriorityQueue) Push(x interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pq *PriorityQueue) Push(x interface{})\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/container/heap_test#PriorityQueue.Swap",
+                    "documentation": {
+                      "identifier": "PriorityQueue.Swap",
+                      "newPage": false,
+                      "searchKey": "heap_test.PriorityQueue.Swap",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pq PriorityQueue) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pq PriorityQueue) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/container/heap_test#PriorityQueue.update",
                     "documentation": {
                       "identifier": "PriorityQueue.update",
                       "newPage": false,
                       "searchKey": "heap_test.PriorityQueue.update",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -358,6 +376,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -378,6 +397,7 @@
                 "newPage": false,
                 "searchKey": "heap_test.Example_intHeap",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -400,6 +420,7 @@
                 "newPage": false,
                 "searchKey": "heap_test.Example_priorityQueue",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },

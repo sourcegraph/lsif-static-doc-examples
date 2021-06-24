@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/cmd/frontend/internal/dotcom/billing",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,34 +41,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#dummyCustomerMu",
-              "documentation": {
-                "identifier": "dummyCustomerMu",
-                "newPage": false,
-                "searchKey": "billing.dummyCustomerMu",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var dummyCustomerMu"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar dummyCustomerMu sync.Mutex\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#dummyCustomerID",
               "documentation": {
                 "identifier": "dummyCustomerID",
                 "newPage": false,
                 "searchKey": "billing.dummyCustomerID",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -83,12 +65,38 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#dummyCustomerMu",
+              "documentation": {
+                "identifier": "dummyCustomerMu",
+                "newPage": false,
+                "searchKey": "billing.dummyCustomerMu",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var dummyCustomerMu"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar dummyCustomerMu sync.Mutex\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#mockCreateCustomerID",
               "documentation": {
                 "identifier": "mockCreateCustomerID",
                 "newPage": false,
                 "searchKey": "billing.mockCreateCustomerID",
                 "tags": [
+                  "variable",
+                  "function",
                   "private"
                 ]
               },
@@ -114,6 +122,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -128,12 +137,102 @@
         "children": [
           {
             "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#BillingResolver",
+              "documentation": {
+                "identifier": "BillingResolver",
+                "newPage": false,
+                "searchKey": "billing.BillingResolver",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type BillingResolver struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype BillingResolver struct {\n\tDB dbutil.DB\n}\n```\n\nBillingResolver implements the GraphQL Query and Mutation fields related to billing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#BillingResolver.ProductPlans",
+                    "documentation": {
+                      "identifier": "BillingResolver.ProductPlans",
+                      "newPage": false,
+                      "searchKey": "billing.BillingResolver.ProductPlans",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (BillingResolver) ProductPlans(ctx context.Context) ([]graphqlbackend.ProductPlan, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (BillingResolver) ProductPlans(ctx context.Context) ([]graphqlbackend.ProductPlan, error)\n```\n\nProductPlans implements the GraphQL field Query.dotcom.productPlans. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#BillingResolver.SetUserBilling",
+                    "documentation": {
+                      "identifier": "BillingResolver.SetUserBilling",
+                      "newPage": false,
+                      "searchKey": "billing.BillingResolver.SetUserBilling",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r BillingResolver) SetUserBilling(ctx context.Context, args *graphqlbackend.SetUserBillingArgs) (*graphqlbackend.EmptyResponse, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r BillingResolver) SetUserBilling(ctx context.Context, args *graphqlbackend.SetUserBillingArgs) (*graphqlbackend.EmptyResponse, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#BillingResolver.UserURLForSiteAdminBilling",
+                    "documentation": {
+                      "identifier": "BillingResolver.UserURLForSiteAdminBilling",
+                      "newPage": false,
+                      "searchKey": "billing.BillingResolver.UserURLForSiteAdminBilling",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r BillingResolver) UserURLForSiteAdminBilling(ctx context.Context, userID int32) (*string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r BillingResolver) UserURLForSiteAdminBilling(ctx context.Context, userID int32) (*string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#dbBilling",
               "documentation": {
                 "identifier": "dbBilling",
                 "newPage": false,
                 "searchKey": "billing.dbBilling",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -154,6 +253,7 @@
                       "newPage": false,
                       "searchKey": "billing.dbBilling.getUserBillingCustomerID",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -176,6 +276,7 @@
                       "newPage": false,
                       "searchKey": "billing.dbBilling.setUserBillingCustomerID",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -195,447 +296,13 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productSubscriptionEvent",
-              "documentation": {
-                "identifier": "productSubscriptionEvent",
-                "newPage": false,
-                "searchKey": "billing.productSubscriptionEvent",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type productSubscriptionEvent struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype productSubscriptionEvent struct {\n\tv *stripe.Event\n}\n```\n\nproductSubscriptionEvent implements the GraphQL type ProductSubscriptionEvent. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productSubscriptionEvent.ID",
-                    "documentation": {
-                      "identifier": "productSubscriptionEvent.ID",
-                      "newPage": false,
-                      "searchKey": "billing.productSubscriptionEvent.ID",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *productSubscriptionEvent) ID() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *productSubscriptionEvent) ID() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productSubscriptionEvent.Date",
-                    "documentation": {
-                      "identifier": "productSubscriptionEvent.Date",
-                      "newPage": false,
-                      "searchKey": "billing.productSubscriptionEvent.Date",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *productSubscriptionEvent) Date() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *productSubscriptionEvent) Date() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productSubscriptionEvent.Title",
-                    "documentation": {
-                      "identifier": "productSubscriptionEvent.Title",
-                      "newPage": false,
-                      "searchKey": "billing.productSubscriptionEvent.Title",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *productSubscriptionEvent) Title() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *productSubscriptionEvent) Title() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productSubscriptionEvent.Description",
-                    "documentation": {
-                      "identifier": "productSubscriptionEvent.Description",
-                      "newPage": false,
-                      "searchKey": "billing.productSubscriptionEvent.Description",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *productSubscriptionEvent) Description() *string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *productSubscriptionEvent) Description() *string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productSubscriptionEvent.URL",
-                    "documentation": {
-                      "identifier": "productSubscriptionEvent.URL",
-                      "newPage": false,
-                      "searchKey": "billing.productSubscriptionEvent.URL",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *productSubscriptionEvent) URL() *string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *productSubscriptionEvent) URL() *string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#BillingResolver",
-              "documentation": {
-                "identifier": "BillingResolver",
-                "newPage": false,
-                "searchKey": "billing.BillingResolver",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type BillingResolver struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype BillingResolver struct {\n\tDB dbutil.DB\n}\n```\n\nBillingResolver implements the GraphQL Query and Mutation fields related to billing. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#BillingResolver.UserURLForSiteAdminBilling",
-                    "documentation": {
-                      "identifier": "BillingResolver.UserURLForSiteAdminBilling",
-                      "newPage": false,
-                      "searchKey": "billing.BillingResolver.UserURLForSiteAdminBilling",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r BillingResolver) UserURLForSiteAdminBilling(ctx context.Context, userID int32) (*string, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r BillingResolver) UserURLForSiteAdminBilling(ctx context.Context, userID int32) (*string, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#BillingResolver.SetUserBilling",
-                    "documentation": {
-                      "identifier": "BillingResolver.SetUserBilling",
-                      "newPage": false,
-                      "searchKey": "billing.BillingResolver.SetUserBilling",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r BillingResolver) SetUserBilling(ctx context.Context, args *graphqlbackend.SetUserBillingArgs) (*graphqlbackend.EmptyResponse, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r BillingResolver) SetUserBilling(ctx context.Context, args *graphqlbackend.SetUserBillingArgs) (*graphqlbackend.EmptyResponse, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#BillingResolver.ProductPlans",
-                    "documentation": {
-                      "identifier": "BillingResolver.ProductPlans",
-                      "newPage": false,
-                      "searchKey": "billing.BillingResolver.ProductPlans",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (BillingResolver) ProductPlans(ctx context.Context) ([]graphqlbackend.ProductPlan, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (BillingResolver) ProductPlans(ctx context.Context) ([]graphqlbackend.ProductPlan, error)\n```\n\nProductPlans implements the GraphQL field Query.dotcom.productPlans. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productPlan",
-              "documentation": {
-                "identifier": "productPlan",
-                "newPage": false,
-                "searchKey": "billing.productPlan",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type productPlan struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype productPlan struct {\n\tbillingPlanID       string\n\tproductPlanID       string\n\tname                string\n\tpricePerUserPerYear int32\n\tminQuantity         *int32\n\tmaxQuantity         *int32\n\ttiersMode           string\n\tplanTiers           []graphqlbackend.PlanTier\n}\n```\n\nproductPlan implements the GraphQL type ProductPlan. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productPlan.ProductPlanID",
-                    "documentation": {
-                      "identifier": "productPlan.ProductPlanID",
-                      "newPage": false,
-                      "searchKey": "billing.productPlan.ProductPlanID",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *productPlan) ProductPlanID() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *productPlan) ProductPlanID() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productPlan.BillingPlanID",
-                    "documentation": {
-                      "identifier": "productPlan.BillingPlanID",
-                      "newPage": false,
-                      "searchKey": "billing.productPlan.BillingPlanID",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *productPlan) BillingPlanID() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *productPlan) BillingPlanID() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productPlan.Name",
-                    "documentation": {
-                      "identifier": "productPlan.Name",
-                      "newPage": false,
-                      "searchKey": "billing.productPlan.Name",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *productPlan) Name() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *productPlan) Name() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productPlan.NameWithBrand",
-                    "documentation": {
-                      "identifier": "productPlan.NameWithBrand",
-                      "newPage": false,
-                      "searchKey": "billing.productPlan.NameWithBrand",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *productPlan) NameWithBrand() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *productPlan) NameWithBrand() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productPlan.PricePerUserPerYear",
-                    "documentation": {
-                      "identifier": "productPlan.PricePerUserPerYear",
-                      "newPage": false,
-                      "searchKey": "billing.productPlan.PricePerUserPerYear",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *productPlan) PricePerUserPerYear() int32"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *productPlan) PricePerUserPerYear() int32\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productPlan.MinQuantity",
-                    "documentation": {
-                      "identifier": "productPlan.MinQuantity",
-                      "newPage": false,
-                      "searchKey": "billing.productPlan.MinQuantity",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *productPlan) MinQuantity() *int32"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *productPlan) MinQuantity() *int32\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productPlan.MaxQuantity",
-                    "documentation": {
-                      "identifier": "productPlan.MaxQuantity",
-                      "newPage": false,
-                      "searchKey": "billing.productPlan.MaxQuantity",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *productPlan) MaxQuantity() *int32"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *productPlan) MaxQuantity() *int32\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productPlan.TiersMode",
-                    "documentation": {
-                      "identifier": "productPlan.TiersMode",
-                      "newPage": false,
-                      "searchKey": "billing.productPlan.TiersMode",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *productPlan) TiersMode() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *productPlan) TiersMode() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productPlan.PlanTiers",
-                    "documentation": {
-                      "identifier": "productPlan.PlanTiers",
-                      "newPage": false,
-                      "searchKey": "billing.productPlan.PlanTiers",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (r *productPlan) PlanTiers() []graphqlbackend.PlanTier"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (r *productPlan) PlanTiers() []graphqlbackend.PlanTier\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#planTier",
               "documentation": {
                 "identifier": "planTier",
                 "newPage": false,
                 "searchKey": "billing.planTier",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -650,12 +317,36 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#planTier.FlatAmount",
+                    "documentation": {
+                      "identifier": "planTier.FlatAmount",
+                      "newPage": false,
+                      "searchKey": "billing.planTier.FlatAmount",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *planTier) FlatAmount() int32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *planTier) FlatAmount() int32\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#planTier.UnitAmount",
                     "documentation": {
                       "identifier": "planTier.UnitAmount",
                       "newPage": false,
                       "searchKey": "billing.planTier.UnitAmount",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -678,6 +369,7 @@
                       "newPage": false,
                       "searchKey": "billing.planTier.UpTo",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -691,25 +383,373 @@
                     },
                     "children": null
                   }
-                },
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productPlan",
+              "documentation": {
+                "identifier": "productPlan",
+                "newPage": false,
+                "searchKey": "billing.productPlan",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type productPlan struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype productPlan struct {\n\tbillingPlanID       string\n\tproductPlanID       string\n\tname                string\n\tpricePerUserPerYear int32\n\tminQuantity         *int32\n\tmaxQuantity         *int32\n\ttiersMode           string\n\tplanTiers           []graphqlbackend.PlanTier\n}\n```\n\nproductPlan implements the GraphQL type ProductPlan. \n\n"
+              },
+              "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#planTier.FlatAmount",
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productPlan.BillingPlanID",
                     "documentation": {
-                      "identifier": "planTier.FlatAmount",
+                      "identifier": "productPlan.BillingPlanID",
                       "newPage": false,
-                      "searchKey": "billing.planTier.FlatAmount",
+                      "searchKey": "billing.productPlan.BillingPlanID",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (r *planTier) FlatAmount() int32"
+                      "value": "func (r *productPlan) BillingPlanID() string"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (r *planTier) FlatAmount() int32\n```\n\n"
+                      "value": "```Go\nfunc (r *productPlan) BillingPlanID() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productPlan.MaxQuantity",
+                    "documentation": {
+                      "identifier": "productPlan.MaxQuantity",
+                      "newPage": false,
+                      "searchKey": "billing.productPlan.MaxQuantity",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productPlan) MaxQuantity() *int32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productPlan) MaxQuantity() *int32\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productPlan.MinQuantity",
+                    "documentation": {
+                      "identifier": "productPlan.MinQuantity",
+                      "newPage": false,
+                      "searchKey": "billing.productPlan.MinQuantity",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productPlan) MinQuantity() *int32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productPlan) MinQuantity() *int32\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productPlan.Name",
+                    "documentation": {
+                      "identifier": "productPlan.Name",
+                      "newPage": false,
+                      "searchKey": "billing.productPlan.Name",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productPlan) Name() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productPlan) Name() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productPlan.NameWithBrand",
+                    "documentation": {
+                      "identifier": "productPlan.NameWithBrand",
+                      "newPage": false,
+                      "searchKey": "billing.productPlan.NameWithBrand",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productPlan) NameWithBrand() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productPlan) NameWithBrand() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productPlan.PlanTiers",
+                    "documentation": {
+                      "identifier": "productPlan.PlanTiers",
+                      "newPage": false,
+                      "searchKey": "billing.productPlan.PlanTiers",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productPlan) PlanTiers() []graphqlbackend.PlanTier"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productPlan) PlanTiers() []graphqlbackend.PlanTier\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productPlan.PricePerUserPerYear",
+                    "documentation": {
+                      "identifier": "productPlan.PricePerUserPerYear",
+                      "newPage": false,
+                      "searchKey": "billing.productPlan.PricePerUserPerYear",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productPlan) PricePerUserPerYear() int32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productPlan) PricePerUserPerYear() int32\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productPlan.ProductPlanID",
+                    "documentation": {
+                      "identifier": "productPlan.ProductPlanID",
+                      "newPage": false,
+                      "searchKey": "billing.productPlan.ProductPlanID",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productPlan) ProductPlanID() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productPlan) ProductPlanID() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productPlan.TiersMode",
+                    "documentation": {
+                      "identifier": "productPlan.TiersMode",
+                      "newPage": false,
+                      "searchKey": "billing.productPlan.TiersMode",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productPlan) TiersMode() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productPlan) TiersMode() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productSubscriptionEvent",
+              "documentation": {
+                "identifier": "productSubscriptionEvent",
+                "newPage": false,
+                "searchKey": "billing.productSubscriptionEvent",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type productSubscriptionEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype productSubscriptionEvent struct {\n\tv *stripe.Event\n}\n```\n\nproductSubscriptionEvent implements the GraphQL type ProductSubscriptionEvent. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productSubscriptionEvent.Date",
+                    "documentation": {
+                      "identifier": "productSubscriptionEvent.Date",
+                      "newPage": false,
+                      "searchKey": "billing.productSubscriptionEvent.Date",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscriptionEvent) Date() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscriptionEvent) Date() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productSubscriptionEvent.Description",
+                    "documentation": {
+                      "identifier": "productSubscriptionEvent.Description",
+                      "newPage": false,
+                      "searchKey": "billing.productSubscriptionEvent.Description",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscriptionEvent) Description() *string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscriptionEvent) Description() *string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productSubscriptionEvent.ID",
+                    "documentation": {
+                      "identifier": "productSubscriptionEvent.ID",
+                      "newPage": false,
+                      "searchKey": "billing.productSubscriptionEvent.ID",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscriptionEvent) ID() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscriptionEvent) ID() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productSubscriptionEvent.Title",
+                    "documentation": {
+                      "identifier": "productSubscriptionEvent.Title",
+                      "newPage": false,
+                      "searchKey": "billing.productSubscriptionEvent.Title",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscriptionEvent) Title() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscriptionEvent) Title() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#productSubscriptionEvent.URL",
+                    "documentation": {
+                      "identifier": "productSubscriptionEvent.URL",
+                      "newPage": false,
+                      "searchKey": "billing.productSubscriptionEvent.URL",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscriptionEvent) URL() *string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscriptionEvent) URL() *string\n```\n\n"
                     },
                     "children": null
                   }
@@ -728,6 +768,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -742,32 +783,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#GetOrAssignUserCustomerID",
-              "documentation": {
-                "identifier": "GetOrAssignUserCustomerID",
-                "newPage": false,
-                "searchKey": "billing.GetOrAssignUserCustomerID",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetOrAssignUserCustomerID(ctx context.Context, userID int32) (_ string, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetOrAssignUserCustomerID(ctx context.Context, userID int32) (_ string, err error)\n```\n\nGetOrAssignUserCustomerID returns the billing customer ID associated with the user. If no billing customer ID exists for the user, a new one is created and saved on the user's DB record. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#GetDummyCustomerID",
               "documentation": {
                 "identifier": "GetDummyCustomerID",
                 "newPage": false,
                 "searchKey": "billing.GetDummyCustomerID",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -782,12 +805,215 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#GetOrAssignUserCustomerID",
+              "documentation": {
+                "identifier": "GetOrAssignUserCustomerID",
+                "newPage": false,
+                "searchKey": "billing.GetOrAssignUserCustomerID",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetOrAssignUserCustomerID(ctx context.Context, userID int32) (_ string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetOrAssignUserCustomerID(ctx context.Context, userID int32) (_ string, err error)\n```\n\nGetOrAssignUserCustomerID returns the billing customer ID associated with the user. If no billing customer ID exists for the user, a new one is created and saved on the user's DB record. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#GetSubscriptionItemIDToReplace",
+              "documentation": {
+                "identifier": "GetSubscriptionItemIDToReplace",
+                "newPage": false,
+                "searchKey": "billing.GetSubscriptionItemIDToReplace",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetSubscriptionItemIDToReplace(billingSub *stripe.Subscription, billingCustomerID string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetSubscriptionItemIDToReplace(billingSub *stripe.Subscription, billingCustomerID string) (string, error)\n```\n\nGetSubscriptionItemIDToReplace returns the ID of the billing subscription item (used when updating the subscription or previewing an invoice to do so). It also performs a good set of sanity checks on the subscription that should be performed whenever the subscription is updated. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#InfoForProductPlan",
+              "documentation": {
+                "identifier": "InfoForProductPlan",
+                "newPage": false,
+                "searchKey": "billing.InfoForProductPlan",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func InfoForProductPlan(ctx context.Context, planID string) (licenseTags []string, minQuantity, maxQuantity *int32, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc InfoForProductPlan(ctx context.Context, planID string) (licenseTags []string, minQuantity, maxQuantity *int32, err error)\n```\n\nInfoForProductPlan returns the license key tags and min/max quantities that should be used for the given product plan. \n\nLicense key tags indicate which product plan the license is for, so they are stored on the billing system in the metadata of the product plans. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#ProductPlanMinMaxQuantity",
+              "documentation": {
+                "identifier": "ProductPlanMinMaxQuantity",
+                "newPage": false,
+                "searchKey": "billing.ProductPlanMinMaxQuantity",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ProductPlanMinMaxQuantity(plan *stripe.Plan) (min, max *int32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ProductPlanMinMaxQuantity(plan *stripe.Plan) (min, max *int32)\n```\n\nProductPlanMinMaxQuantity returns the plan's product's minQuantity and maxQuantity metadata values, or nil if unset. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#TestDBUsersBillingCustomerID",
+              "documentation": {
+                "identifier": "TestDBUsersBillingCustomerID",
+                "newPage": false,
+                "searchKey": "billing.TestDBUsersBillingCustomerID",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDBUsersBillingCustomerID(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDBUsersBillingCustomerID(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#TestGetOrAssignUserCustomerID",
+              "documentation": {
+                "identifier": "TestGetOrAssignUserCustomerID",
+                "newPage": false,
+                "searchKey": "billing.TestGetOrAssignUserCustomerID",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetOrAssignUserCustomerID(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetOrAssignUserCustomerID(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#ToProductPlan",
+              "documentation": {
+                "identifier": "ToProductPlan",
+                "newPage": false,
+                "searchKey": "billing.ToProductPlan",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ToProductPlan(plan *stripe.Plan) (graphqlbackend.ProductPlan, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ToProductPlan(plan *stripe.Plan) (graphqlbackend.ProductPlan, error)\n```\n\nToProductPlan returns a resolver for the GraphQL type ProductPlan from the given billing plan. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#ToProductSubscriptionEvent",
+              "documentation": {
+                "identifier": "ToProductSubscriptionEvent",
+                "newPage": false,
+                "searchKey": "billing.ToProductSubscriptionEvent",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ToProductSubscriptionEvent(event *stripe.Event) (gqlEvent graphqlbackend.ProductSubscriptionEvent, okToShowUser bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ToProductSubscriptionEvent(event *stripe.Event) (gqlEvent graphqlbackend.ProductSubscriptionEvent, okToShowUser bool)\n```\n\nToProductSubscriptionEvent returns a resolver for the GraphQL type ProductSubscriptionEvent from the given billing event. \n\nThe okToShowUser return value reports whether the event should be shown to the user. It is false for internal events (e.g., an invoice being marked uncollectible). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#ToSubscriptionItemsParams",
+              "documentation": {
+                "identifier": "ToSubscriptionItemsParams",
+                "newPage": false,
+                "searchKey": "billing.ToSubscriptionItemsParams",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ToSubscriptionItemsParams(input graphqlbackend.ProductSubscriptionInput) *stripe.SubscriptionItemsParams"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ToSubscriptionItemsParams(input graphqlbackend.ProductSubscriptionInput) *stripe.SubscriptionItemsParams\n```\n\nToSubscriptionItemsParams converts a value of GraphQL type ProductSubscriptionInput into a subscription item parameter for the billing system. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#createCustomerID",
               "documentation": {
                 "identifier": "createCustomerID",
                 "newPage": false,
                 "searchKey": "billing.createCustomerID",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -810,6 +1036,7 @@
                 "newPage": false,
                 "searchKey": "billing.deleteCustomerID",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -826,32 +1053,13 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#ToProductSubscriptionEvent",
-              "documentation": {
-                "identifier": "ToProductSubscriptionEvent",
-                "newPage": false,
-                "searchKey": "billing.ToProductSubscriptionEvent",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ToProductSubscriptionEvent(event *stripe.Event) (gqlEvent graphqlbackend.ProductSubscriptionEvent, okToShowUser bool)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ToProductSubscriptionEvent(event *stripe.Event) (gqlEvent graphqlbackend.ProductSubscriptionEvent, okToShowUser bool)\n```\n\nToProductSubscriptionEvent returns a resolver for the GraphQL type ProductSubscriptionEvent from the given billing event. \n\nThe okToShowUser return value reports whether the event should be shown to the user. It is false for internal events (e.g., an invoice being marked uncollectible). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#getProductSubscriptionEventInfo",
               "documentation": {
                 "identifier": "getProductSubscriptionEventInfo",
                 "newPage": false,
                 "searchKey": "billing.getProductSubscriptionEventInfo",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -868,156 +1076,13 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#usdCentsToString",
-              "documentation": {
-                "identifier": "usdCentsToString",
-                "newPage": false,
-                "searchKey": "billing.usdCentsToString",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func usdCentsToString(s string) string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc usdCentsToString(s string) string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#InfoForProductPlan",
-              "documentation": {
-                "identifier": "InfoForProductPlan",
-                "newPage": false,
-                "searchKey": "billing.InfoForProductPlan",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func InfoForProductPlan(ctx context.Context, planID string) (licenseTags []string, minQuantity, maxQuantity *int32, err error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc InfoForProductPlan(ctx context.Context, planID string) (licenseTags []string, minQuantity, maxQuantity *int32, err error)\n```\n\nInfoForProductPlan returns the license key tags and min/max quantities that should be used for the given product plan. \n\nLicense key tags indicate which product plan the license is for, so they are stored on the billing system in the metadata of the product plans. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#ToProductPlan",
-              "documentation": {
-                "identifier": "ToProductPlan",
-                "newPage": false,
-                "searchKey": "billing.ToProductPlan",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ToProductPlan(plan *stripe.Plan) (graphqlbackend.ProductPlan, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ToProductPlan(plan *stripe.Plan) (graphqlbackend.ProductPlan, error)\n```\n\nToProductPlan returns a resolver for the GraphQL type ProductPlan from the given billing plan. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#ProductPlanMinMaxQuantity",
-              "documentation": {
-                "identifier": "ProductPlanMinMaxQuantity",
-                "newPage": false,
-                "searchKey": "billing.ProductPlanMinMaxQuantity",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ProductPlanMinMaxQuantity(plan *stripe.Plan) (min, max *int32)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ProductPlanMinMaxQuantity(plan *stripe.Plan) (min, max *int32)\n```\n\nProductPlanMinMaxQuantity returns the plan's product's minQuantity and maxQuantity metadata values, or nil if unset. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#ToSubscriptionItemsParams",
-              "documentation": {
-                "identifier": "ToSubscriptionItemsParams",
-                "newPage": false,
-                "searchKey": "billing.ToSubscriptionItemsParams",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func ToSubscriptionItemsParams(input graphqlbackend.ProductSubscriptionInput) *stripe.SubscriptionItemsParams"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc ToSubscriptionItemsParams(input graphqlbackend.ProductSubscriptionInput) *stripe.SubscriptionItemsParams\n```\n\nToSubscriptionItemsParams converts a value of GraphQL type ProductSubscriptionInput into a subscription item parameter for the billing system. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#GetSubscriptionItemIDToReplace",
-              "documentation": {
-                "identifier": "GetSubscriptionItemIDToReplace",
-                "newPage": false,
-                "searchKey": "billing.GetSubscriptionItemIDToReplace",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func GetSubscriptionItemIDToReplace(billingSub *stripe.Subscription, billingCustomerID string) (string, error)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc GetSubscriptionItemIDToReplace(billingSub *stripe.Subscription, billingCustomerID string) (string, error)\n```\n\nGetSubscriptionItemIDToReplace returns the ID of the billing subscription item (used when updating the subscription or previewing an invoice to do so). It also performs a good set of sanity checks on the subscription that should be performed whenever the subscription is updated. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#TestGetOrAssignUserCustomerID",
-              "documentation": {
-                "identifier": "TestGetOrAssignUserCustomerID",
-                "newPage": false,
-                "searchKey": "billing.TestGetOrAssignUserCustomerID",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestGetOrAssignUserCustomerID(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestGetOrAssignUserCustomerID(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#init.db_test.go",
               "documentation": {
                 "identifier": "init.db_test.go",
                 "newPage": false,
                 "searchKey": "billing.init",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -1034,34 +1099,13 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#TestDBUsersBillingCustomerID",
-              "documentation": {
-                "identifier": "TestDBUsersBillingCustomerID",
-                "newPage": false,
-                "searchKey": "billing.TestDBUsersBillingCustomerID",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDBUsersBillingCustomerID(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDBUsersBillingCustomerID(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#strptr",
               "documentation": {
                 "identifier": "strptr",
                 "newPage": false,
                 "searchKey": "billing.strptr",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1072,6 +1116,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc strptr(s string) *string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing#usdCentsToString",
+              "documentation": {
+                "identifier": "usdCentsToString",
+                "newPage": false,
+                "searchKey": "billing.usdCentsToString",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func usdCentsToString(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc usdCentsToString(s string) string\n```\n\n"
               },
               "children": null
             }

@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "internal/cmd/precise-code-intel-tester/util",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -44,7 +46,10 @@
                 "identifier": "MaxDisplayLines",
                 "newPage": false,
                 "searchKey": "util.MaxDisplayLines",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +69,10 @@
                 "identifier": "MaxDisplayWidth",
                 "newPage": false,
                 "searchKey": "util.MaxDisplayWidth",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -88,6 +96,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -108,6 +117,8 @@
                 "newPage": false,
                 "searchKey": "util.braille",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -133,6 +144,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -152,7 +164,9 @@
                 "identifier": "ErrorPayload",
                 "newPage": false,
                 "searchKey": "util.ErrorPayload",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -172,7 +186,9 @@
                 "identifier": "GraphQLError",
                 "newPage": false,
                 "searchKey": "util.GraphQLError",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -192,7 +208,9 @@
                 "identifier": "Limiter",
                 "newPage": false,
                 "searchKey": "util.Limiter",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -210,7 +228,9 @@
                       "identifier": "NewLimiter",
                       "newPage": false,
                       "searchKey": "util.NewLimiter",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -230,7 +250,9 @@
                       "identifier": "Limiter.Acquire",
                       "newPage": false,
                       "searchKey": "util.Limiter.Acquire",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -245,32 +267,14 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/cmd/precise-code-intel-tester/util#Limiter.Release",
-                    "documentation": {
-                      "identifier": "Limiter.Release",
-                      "newPage": false,
-                      "searchKey": "util.Limiter.Release",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (l *Limiter) Release()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (l *Limiter) Release()\n```\n\nRelease adds a value back to the limiter, unblocking one waiter. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/cmd/precise-code-intel-tester/util#Limiter.Close",
                     "documentation": {
                       "identifier": "Limiter.Close",
                       "newPage": false,
                       "searchKey": "util.Limiter.Close",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -279,6 +283,28 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (l *Limiter) Close()\n```\n\nClose closes the underlying channel. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/precise-code-intel-tester/util#Limiter.Release",
+                    "documentation": {
+                      "identifier": "Limiter.Release",
+                      "newPage": false,
+                      "searchKey": "util.Limiter.Release",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *Limiter) Release()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *Limiter) Release()\n```\n\nRelease adds a value back to the limiter, unblocking one waiter. \n\n"
                     },
                     "children": null
                   }
@@ -293,7 +319,9 @@
                 "identifier": "ParallelFn",
                 "newPage": false,
                 "searchKey": "util.ParallelFn",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -314,6 +342,7 @@
                 "newPage": false,
                 "searchKey": "util.errPair",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -336,6 +365,7 @@
                 "newPage": false,
                 "searchKey": "util.pendingMap",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -356,6 +386,7 @@
                       "newPage": false,
                       "searchKey": "util.newPendingMap",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -372,78 +403,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/internal/cmd/precise-code-intel-tester/util#pendingMap.remove",
-                    "documentation": {
-                      "identifier": "pendingMap.remove",
-                      "newPage": false,
-                      "searchKey": "util.pendingMap.remove",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *pendingMap) remove(i int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *pendingMap) remove(i int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/precise-code-intel-tester/util#pendingMap.keys",
-                    "documentation": {
-                      "identifier": "pendingMap.keys",
-                      "newPage": false,
-                      "searchKey": "util.pendingMap.keys",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *pendingMap) keys() (keys []int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *pendingMap) keys() (keys []int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/internal/cmd/precise-code-intel-tester/util#pendingMap.set",
-                    "documentation": {
-                      "identifier": "pendingMap.set",
-                      "newPage": false,
-                      "searchKey": "util.pendingMap.set",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (m *pendingMap) set(i int)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (m *pendingMap) set(i int)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/internal/cmd/precise-code-intel-tester/util#pendingMap.get",
                     "documentation": {
                       "identifier": "pendingMap.get",
                       "newPage": false,
                       "searchKey": "util.pendingMap.get",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -460,12 +426,82 @@
                 },
                 {
                   "node": {
+                    "pathID": "/internal/cmd/precise-code-intel-tester/util#pendingMap.keys",
+                    "documentation": {
+                      "identifier": "pendingMap.keys",
+                      "newPage": false,
+                      "searchKey": "util.pendingMap.keys",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *pendingMap) keys() (keys []int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *pendingMap) keys() (keys []int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/precise-code-intel-tester/util#pendingMap.remove",
+                    "documentation": {
+                      "identifier": "pendingMap.remove",
+                      "newPage": false,
+                      "searchKey": "util.pendingMap.remove",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *pendingMap) remove(i int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *pendingMap) remove(i int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/precise-code-intel-tester/util#pendingMap.set",
+                    "documentation": {
+                      "identifier": "pendingMap.set",
+                      "newPage": false,
+                      "searchKey": "util.pendingMap.set",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *pendingMap) set(i int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *pendingMap) set(i int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/internal/cmd/precise-code-intel-tester/util#pendingMap.size",
                     "documentation": {
                       "identifier": "pendingMap.size",
                       "newPage": false,
                       "searchKey": "util.pendingMap.size",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -494,6 +530,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -508,32 +545,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester/util#SignalSensitiveContext",
-              "documentation": {
-                "identifier": "SignalSensitiveContext",
-                "newPage": false,
-                "searchKey": "util.SignalSensitiveContext",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func SignalSensitiveContext() (context.Context, func())"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc SignalSensitiveContext() (context.Context, func())\n```\n\nSignalSensitiveContext returns a background context that is canceled after receiving an interrupt or terminate signal. A second signal will abort the program. This function returns the context and a function that should be  deferred by the caller to clean up internal channels. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/internal/cmd/precise-code-intel-tester/util#QueryGraphQL",
               "documentation": {
                 "identifier": "QueryGraphQL",
                 "newPage": false,
                 "searchKey": "util.QueryGraphQL",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -553,7 +572,9 @@
                 "identifier": "RunParallel",
                 "newPage": false,
                 "searchKey": "util.RunParallel",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -568,88 +589,45 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester/util#runFunctions",
+              "pathID": "/internal/cmd/precise-code-intel-tester/util#SignalSensitiveContext",
               "documentation": {
-                "identifier": "runFunctions",
+                "identifier": "SignalSensitiveContext",
                 "newPage": false,
-                "searchKey": "util.runFunctions",
+                "searchKey": "util.SignalSensitiveContext",
                 "tags": [
-                  "private"
+                  "function"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func runFunctions(ctx context.Context, fns []ParallelFn, pendingMap *pendingMap, queue <-chan int, errs chan<- errPair)"
+                "value": "func SignalSensitiveContext() (context.Context, func())"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc runFunctions(ctx context.Context, fns []ParallelFn, pendingMap *pendingMap, queue <-chan int, errs chan<- errPair)\n```\n\nrunFunctions is the worker body. It will pull an index off of the work queue, mark that index as pending, then send the index and the value resulting from the invocation of the function at that index onto the errors channel. \n\n"
+                "value": "```Go\nfunc SignalSensitiveContext() (context.Context, func())\n```\n\nSignalSensitiveContext returns a background context that is canceled after receiving an interrupt or terminate signal. A second signal will abort the program. This function returns the context and a function that should be  deferred by the caller to clean up internal channels. \n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester/util#monitor",
+              "pathID": "/internal/cmd/precise-code-intel-tester/util#digits",
               "documentation": {
-                "identifier": "monitor",
+                "identifier": "digits",
                 "newPage": false,
-                "searchKey": "util.monitor",
+                "searchKey": "util.digits",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func monitor(ctx context.Context, fns []ParallelFn, pendingMap *pendingMap, errs <-chan errPair, concurrency int) error"
+                "value": "func digits(n int) int"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc monitor(ctx context.Context, fns []ParallelFn, pendingMap *pendingMap, errs <-chan errPair, concurrency int) error\n```\n\nmonitor waits for all functions to complete, an error, or the context to be canceled. The first error encountered is returned. The current state of the pending map is periodically written to the screen. All content written to the screen is removed at exit of this function. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester/util#formatUpdate",
-              "documentation": {
-                "identifier": "formatUpdate",
-                "newPage": false,
-                "searchKey": "util.formatUpdate",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func formatUpdate(fns []ParallelFn, pendingMap *pendingMap, concurrency int) *pentimento.Content"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc formatUpdate(fns []ParallelFn, pendingMap *pendingMap, concurrency int) *pentimento.Content\n```\n\nformatUpdate constructs a content object with a number of lines indicating the in progress and head-of-queue tasks, as well as a progress bar. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester/util#numLines",
-              "documentation": {
-                "identifier": "numLines",
-                "newPage": false,
-                "searchKey": "util.numLines",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func numLines(concurrency, numTasks int) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc numLines(concurrency, numTasks int) int\n```\n\nnumLines determines how many lines to display in formatUpdate. \n\n"
+                "value": "```Go\nfunc digits(n int) int\n```\n\ndigits returns the number of digits of n. \n\n"
               },
               "children": null
             }
@@ -662,6 +640,7 @@
                 "newPage": false,
                 "searchKey": "util.formatProgressBar",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -678,22 +657,92 @@
           },
           {
             "node": {
-              "pathID": "/internal/cmd/precise-code-intel-tester/util#digits",
+              "pathID": "/internal/cmd/precise-code-intel-tester/util#formatUpdate",
               "documentation": {
-                "identifier": "digits",
+                "identifier": "formatUpdate",
                 "newPage": false,
-                "searchKey": "util.digits",
+                "searchKey": "util.formatUpdate",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func digits(n int) int"
+                "value": "func formatUpdate(fns []ParallelFn, pendingMap *pendingMap, concurrency int) *pentimento.Content"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc digits(n int) int\n```\n\ndigits returns the number of digits of n. \n\n"
+                "value": "```Go\nfunc formatUpdate(fns []ParallelFn, pendingMap *pendingMap, concurrency int) *pentimento.Content\n```\n\nformatUpdate constructs a content object with a number of lines indicating the in progress and head-of-queue tasks, as well as a progress bar. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester/util#monitor",
+              "documentation": {
+                "identifier": "monitor",
+                "newPage": false,
+                "searchKey": "util.monitor",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func monitor(ctx context.Context, fns []ParallelFn, pendingMap *pendingMap, errs <-chan errPair, concurrency int) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc monitor(ctx context.Context, fns []ParallelFn, pendingMap *pendingMap, errs <-chan errPair, concurrency int) error\n```\n\nmonitor waits for all functions to complete, an error, or the context to be canceled. The first error encountered is returned. The current state of the pending map is periodically written to the screen. All content written to the screen is removed at exit of this function. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester/util#numLines",
+              "documentation": {
+                "identifier": "numLines",
+                "newPage": false,
+                "searchKey": "util.numLines",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func numLines(concurrency, numTasks int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc numLines(concurrency, numTasks int) int\n```\n\nnumLines determines how many lines to display in formatUpdate. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/precise-code-intel-tester/util#runFunctions",
+              "documentation": {
+                "identifier": "runFunctions",
+                "newPage": false,
+                "searchKey": "util.runFunctions",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runFunctions(ctx context.Context, fns []ParallelFn, pendingMap *pendingMap, queue <-chan int, errs chan<- errPair)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runFunctions(ctx context.Context, fns []ParallelFn, pendingMap *pendingMap, queue <-chan int, errs chan<- errPair)\n```\n\nrunFunctions is the worker body. It will pull an index off of the work queue, mark that index as pending, then send the index and the value resulting from the invocation of the function at that index onto the errors channel. \n\n"
               },
               "children": null
             }

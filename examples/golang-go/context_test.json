@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "context_test",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -45,6 +47,8 @@
                 "newPage": false,
                 "searchKey": "context_test.shortDuration",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -70,6 +74,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -84,79 +89,15 @@
         "children": [
           {
             "node": {
-              "pathID": "/context_test#BenchmarkCommonParentCancel",
-              "documentation": {
-                "identifier": "BenchmarkCommonParentCancel",
-                "newPage": false,
-                "searchKey": "context_test.BenchmarkCommonParentCancel",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkCommonParentCancel(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkCommonParentCancel(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context_test#BenchmarkWithTimeout",
-              "documentation": {
-                "identifier": "BenchmarkWithTimeout",
-                "newPage": false,
-                "searchKey": "context_test.BenchmarkWithTimeout",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func BenchmarkWithTimeout(b *testing.B)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc BenchmarkWithTimeout(b *testing.B)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context_test#benchmarkWithTimeout",
-              "documentation": {
-                "identifier": "benchmarkWithTimeout",
-                "newPage": false,
-                "searchKey": "context_test.benchmarkWithTimeout",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func benchmarkWithTimeout(b *testing.B, concurrentContexts int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc benchmarkWithTimeout(b *testing.B, concurrentContexts int)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/context_test#BenchmarkCancelTree",
               "documentation": {
                 "identifier": "BenchmarkCancelTree",
                 "newPage": false,
                 "searchKey": "context_test.BenchmarkCancelTree",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -172,35 +113,15 @@
           },
           {
             "node": {
-              "pathID": "/context_test#buildContextTree",
-              "documentation": {
-                "identifier": "buildContextTree",
-                "newPage": false,
-                "searchKey": "context_test.buildContextTree",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func buildContextTree(root Context, depth int)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc buildContextTree(root Context, depth int)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/context_test#BenchmarkCheckCanceled",
               "documentation": {
                 "identifier": "BenchmarkCheckCanceled",
                 "newPage": false,
                 "searchKey": "context_test.BenchmarkCheckCanceled",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -216,13 +137,39 @@
           },
           {
             "node": {
+              "pathID": "/context_test#BenchmarkCommonParentCancel",
+              "documentation": {
+                "identifier": "BenchmarkCommonParentCancel",
+                "newPage": false,
+                "searchKey": "context_test.BenchmarkCommonParentCancel",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkCommonParentCancel(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkCommonParentCancel(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/context_test#BenchmarkContextCancelDone",
               "documentation": {
                 "identifier": "BenchmarkContextCancelDone",
                 "newPage": false,
                 "searchKey": "context_test.BenchmarkContextCancelDone",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "benchmark"
                 ]
               },
               "label": {
@@ -238,12 +185,37 @@
           },
           {
             "node": {
+              "pathID": "/context_test#BenchmarkWithTimeout",
+              "documentation": {
+                "identifier": "BenchmarkWithTimeout",
+                "newPage": false,
+                "searchKey": "context_test.BenchmarkWithTimeout",
+                "tags": [
+                  "method",
+                  "private",
+                  "benchmark"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkWithTimeout(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkWithTimeout(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/context_test#ExampleWithCancel",
               "documentation": {
                 "identifier": "ExampleWithCancel",
                 "newPage": false,
                 "searchKey": "context_test.ExampleWithCancel",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -266,6 +238,7 @@
                 "newPage": false,
                 "searchKey": "context_test.ExampleWithDeadline",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -288,6 +261,7 @@
                 "newPage": false,
                 "searchKey": "context_test.ExampleWithTimeout",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -310,6 +284,7 @@
                 "newPage": false,
                 "searchKey": "context_test.ExampleWithValue",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -326,233 +301,15 @@
           },
           {
             "node": {
-              "pathID": "/context_test#TestDeadlineExceededIsNetError",
-              "documentation": {
-                "identifier": "TestDeadlineExceededIsNetError",
-                "newPage": false,
-                "searchKey": "context_test.TestDeadlineExceededIsNetError",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDeadlineExceededIsNetError(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDeadlineExceededIsNetError(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context_test#TestBackground",
-              "documentation": {
-                "identifier": "TestBackground",
-                "newPage": false,
-                "searchKey": "context_test.TestBackground",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestBackground(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestBackground(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context_test#TestTODO",
-              "documentation": {
-                "identifier": "TestTODO",
-                "newPage": false,
-                "searchKey": "context_test.TestTODO",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTODO(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTODO(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context_test#TestWithCancel",
-              "documentation": {
-                "identifier": "TestWithCancel",
-                "newPage": false,
-                "searchKey": "context_test.TestWithCancel",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestWithCancel(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestWithCancel(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context_test#TestParentFinishesChild",
-              "documentation": {
-                "identifier": "TestParentFinishesChild",
-                "newPage": false,
-                "searchKey": "context_test.TestParentFinishesChild",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestParentFinishesChild(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestParentFinishesChild(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context_test#TestChildFinishesFirst",
-              "documentation": {
-                "identifier": "TestChildFinishesFirst",
-                "newPage": false,
-                "searchKey": "context_test.TestChildFinishesFirst",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestChildFinishesFirst(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestChildFinishesFirst(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context_test#TestDeadline",
-              "documentation": {
-                "identifier": "TestDeadline",
-                "newPage": false,
-                "searchKey": "context_test.TestDeadline",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestDeadline(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestDeadline(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context_test#TestTimeout",
-              "documentation": {
-                "identifier": "TestTimeout",
-                "newPage": false,
-                "searchKey": "context_test.TestTimeout",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTimeout(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTimeout(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context_test#TestCanceledTimeout",
-              "documentation": {
-                "identifier": "TestCanceledTimeout",
-                "newPage": false,
-                "searchKey": "context_test.TestCanceledTimeout",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCanceledTimeout(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCanceledTimeout(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context_test#TestValues",
-              "documentation": {
-                "identifier": "TestValues",
-                "newPage": false,
-                "searchKey": "context_test.TestValues",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestValues(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestValues(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/context_test#TestAllocs",
               "documentation": {
                 "identifier": "TestAllocs",
                 "newPage": false,
                 "searchKey": "context_test.TestAllocs",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -568,22 +325,192 @@
           },
           {
             "node": {
-              "pathID": "/context_test#TestSimultaneousCancels",
+              "pathID": "/context_test#TestBackground",
               "documentation": {
-                "identifier": "TestSimultaneousCancels",
+                "identifier": "TestBackground",
                 "newPage": false,
-                "searchKey": "context_test.TestSimultaneousCancels",
+                "searchKey": "context_test.TestBackground",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestSimultaneousCancels(t *testing.T)"
+                "value": "func TestBackground(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestSimultaneousCancels(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestBackground(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context_test#TestCancelRemoves",
+              "documentation": {
+                "identifier": "TestCancelRemoves",
+                "newPage": false,
+                "searchKey": "context_test.TestCancelRemoves",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCancelRemoves(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCancelRemoves(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context_test#TestCanceledTimeout",
+              "documentation": {
+                "identifier": "TestCanceledTimeout",
+                "newPage": false,
+                "searchKey": "context_test.TestCanceledTimeout",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCanceledTimeout(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCanceledTimeout(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context_test#TestChildFinishesFirst",
+              "documentation": {
+                "identifier": "TestChildFinishesFirst",
+                "newPage": false,
+                "searchKey": "context_test.TestChildFinishesFirst",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestChildFinishesFirst(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestChildFinishesFirst(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context_test#TestCustomContextGoroutines",
+              "documentation": {
+                "identifier": "TestCustomContextGoroutines",
+                "newPage": false,
+                "searchKey": "context_test.TestCustomContextGoroutines",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCustomContextGoroutines(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCustomContextGoroutines(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context_test#TestDeadline",
+              "documentation": {
+                "identifier": "TestDeadline",
+                "newPage": false,
+                "searchKey": "context_test.TestDeadline",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDeadline(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDeadline(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context_test#TestDeadlineExceededIsNetError",
+              "documentation": {
+                "identifier": "TestDeadlineExceededIsNetError",
+                "newPage": false,
+                "searchKey": "context_test.TestDeadlineExceededIsNetError",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDeadlineExceededIsNetError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDeadlineExceededIsNetError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context_test#TestDeadlineExceededSupportsTimeout",
+              "documentation": {
+                "identifier": "TestDeadlineExceededSupportsTimeout",
+                "newPage": false,
+                "searchKey": "context_test.TestDeadlineExceededSupportsTimeout",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDeadlineExceededSupportsTimeout(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDeadlineExceededSupportsTimeout(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -596,7 +523,9 @@
                 "newPage": false,
                 "searchKey": "context_test.TestInterlockedCancels",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -612,13 +541,39 @@
           },
           {
             "node": {
+              "pathID": "/context_test#TestInvalidDerivedFail",
+              "documentation": {
+                "identifier": "TestInvalidDerivedFail",
+                "newPage": false,
+                "searchKey": "context_test.TestInvalidDerivedFail",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInvalidDerivedFail(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInvalidDerivedFail(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/context_test#TestLayersCancel",
               "documentation": {
                 "identifier": "TestLayersCancel",
                 "newPage": false,
                 "searchKey": "context_test.TestLayersCancel",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -640,7 +595,9 @@
                 "newPage": false,
                 "searchKey": "context_test.TestLayersTimeout",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -656,22 +613,144 @@
           },
           {
             "node": {
-              "pathID": "/context_test#TestCancelRemoves",
+              "pathID": "/context_test#TestParentFinishesChild",
               "documentation": {
-                "identifier": "TestCancelRemoves",
+                "identifier": "TestParentFinishesChild",
                 "newPage": false,
-                "searchKey": "context_test.TestCancelRemoves",
+                "searchKey": "context_test.TestParentFinishesChild",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestCancelRemoves(t *testing.T)"
+                "value": "func TestParentFinishesChild(t *testing.T)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestCancelRemoves(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc TestParentFinishesChild(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context_test#TestSimultaneousCancels",
+              "documentation": {
+                "identifier": "TestSimultaneousCancels",
+                "newPage": false,
+                "searchKey": "context_test.TestSimultaneousCancels",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSimultaneousCancels(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSimultaneousCancels(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context_test#TestTODO",
+              "documentation": {
+                "identifier": "TestTODO",
+                "newPage": false,
+                "searchKey": "context_test.TestTODO",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTODO(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTODO(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context_test#TestTimeout",
+              "documentation": {
+                "identifier": "TestTimeout",
+                "newPage": false,
+                "searchKey": "context_test.TestTimeout",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTimeout(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTimeout(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context_test#TestValues",
+              "documentation": {
+                "identifier": "TestValues",
+                "newPage": false,
+                "searchKey": "context_test.TestValues",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestValues(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestValues(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/context_test#TestWithCancel",
+              "documentation": {
+                "identifier": "TestWithCancel",
+                "newPage": false,
+                "searchKey": "context_test.TestWithCancel",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWithCancel(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWithCancel(t *testing.T)\n```\n\n"
               },
               "children": null
             }
@@ -684,7 +763,9 @@
                 "newPage": false,
                 "searchKey": "context_test.TestWithCancelCanceledParent",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -706,7 +787,9 @@
                 "newPage": false,
                 "searchKey": "context_test.TestWithValueChecksKey",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -722,66 +805,46 @@
           },
           {
             "node": {
-              "pathID": "/context_test#TestInvalidDerivedFail",
+              "pathID": "/context_test#benchmarkWithTimeout",
               "documentation": {
-                "identifier": "TestInvalidDerivedFail",
+                "identifier": "benchmarkWithTimeout",
                 "newPage": false,
-                "searchKey": "context_test.TestInvalidDerivedFail",
+                "searchKey": "context_test.benchmarkWithTimeout",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestInvalidDerivedFail(t *testing.T)"
+                "value": "func benchmarkWithTimeout(b *testing.B, concurrentContexts int)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestInvalidDerivedFail(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc benchmarkWithTimeout(b *testing.B, concurrentContexts int)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/context_test#TestDeadlineExceededSupportsTimeout",
+              "pathID": "/context_test#buildContextTree",
               "documentation": {
-                "identifier": "TestDeadlineExceededSupportsTimeout",
+                "identifier": "buildContextTree",
                 "newPage": false,
-                "searchKey": "context_test.TestDeadlineExceededSupportsTimeout",
+                "searchKey": "context_test.buildContextTree",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestDeadlineExceededSupportsTimeout(t *testing.T)"
+                "value": "func buildContextTree(root Context, depth int)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestDeadlineExceededSupportsTimeout(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/context_test#TestCustomContextGoroutines",
-              "documentation": {
-                "identifier": "TestCustomContextGoroutines",
-                "newPage": false,
-                "searchKey": "context_test.TestCustomContextGoroutines",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestCustomContextGoroutines(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestCustomContextGoroutines(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc buildContextTree(root Context, depth int)\n```\n\n"
               },
               "children": null
             }

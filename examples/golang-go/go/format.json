@@ -4,7 +4,9 @@
     "identifier": "format",
     "newPage": true,
     "searchKey": "go/format",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,22 +39,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/go/format#tabWidth",
+              "pathID": "/go/format#parserMode",
               "documentation": {
-                "identifier": "tabWidth",
+                "identifier": "parserMode",
                 "newPage": false,
-                "searchKey": "format.tabWidth",
+                "searchKey": "format.parserMode",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const tabWidth"
+                "value": "const parserMode"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst tabWidth = 8\n```\n\nKeep these in sync with cmd/gofmt/gofmt.go. \n\n"
+                "value": "```Go\nconst parserMode = parser.ParseComments\n```\n\n"
               },
               "children": null
             }
@@ -63,6 +69,8 @@
                 "newPage": false,
                 "searchKey": "format.printerMode",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -85,6 +93,8 @@
                 "newPage": false,
                 "searchKey": "format.printerNormalizeNumbers",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -101,22 +111,24 @@
           },
           {
             "node": {
-              "pathID": "/go/format#parserMode",
+              "pathID": "/go/format#tabWidth",
               "documentation": {
-                "identifier": "parserMode",
+                "identifier": "tabWidth",
                 "newPage": false,
-                "searchKey": "format.parserMode",
+                "searchKey": "format.tabWidth",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const parserMode"
+                "value": "const tabWidth"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst parserMode = parser.ParseComments\n```\n\n"
+                "value": "```Go\nconst tabWidth = 8\n```\n\nKeep these in sync with cmd/gofmt/gofmt.go. \n\n"
               },
               "children": null
             }
@@ -129,6 +141,8 @@
                 "newPage": false,
                 "searchKey": "format.testfile",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -153,7 +167,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -172,6 +188,8 @@
                 "newPage": false,
                 "searchKey": "format.config",
                 "tags": [
+                  "variable",
+                  "struct",
                   "private"
                 ]
               },
@@ -194,6 +212,9 @@
                 "newPage": false,
                 "searchKey": "format.tests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "string",
                   "private"
                 ]
               },
@@ -218,7 +239,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -236,7 +259,9 @@
                 "identifier": "Node",
                 "newPage": false,
                 "searchKey": "format.Node",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -256,7 +281,9 @@
                 "identifier": "Source",
                 "newPage": false,
                 "searchKey": "format.Source",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -271,110 +298,23 @@
           },
           {
             "node": {
-              "pathID": "/go/format#hasUnsortedImports",
+              "pathID": "/go/format#String",
               "documentation": {
-                "identifier": "hasUnsortedImports",
+                "identifier": "String",
                 "newPage": false,
-                "searchKey": "format.hasUnsortedImports",
+                "searchKey": "format.String",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func hasUnsortedImports(file *ast.File) bool"
+                "value": "func String(s string) (string, error)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc hasUnsortedImports(file *ast.File) bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/format#parse",
-              "documentation": {
-                "identifier": "parse",
-                "newPage": false,
-                "searchKey": "format.parse",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func parse(fset *token.FileSet, filename string, src []byte, fragmentOk bool) (file *ast.File,..."
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc parse(fset *token.FileSet, filename string, src []byte, fragmentOk bool) (\n\tfile *ast.File,\n\tsourceAdj func(src []byte, indent int) []byte,\n\tindentAdj int,\n\terr error,\n)\n```\n\nparse parses src, which was read from the named file, as a Go source file, declaration, or statement list. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/format#format",
-              "documentation": {
-                "identifier": "format",
-                "newPage": false,
-                "searchKey": "format.format",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func format(fset *token.FileSet,..."
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc format(\n\tfset *token.FileSet,\n\tfile *ast.File,\n\tsourceAdj func(src []byte, indent int) []byte,\n\tindentAdj int,\n\tsrc []byte,\n\tcfg printer.Config,\n) ([]byte, error)\n```\n\nformat formats the given package file originally obtained from src and adjusts the result based on the original source via sourceAdj and indentAdj. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/format#isSpace",
-              "documentation": {
-                "identifier": "isSpace",
-                "newPage": false,
-                "searchKey": "format.isSpace",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func isSpace(b byte) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc isSpace(b byte) bool\n```\n\nisSpace reports whether the byte is a space character. isSpace defines a space as being among the following bytes: ' ', '\\t', '\\n' and '\\r'. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/go/format#diff",
-              "documentation": {
-                "identifier": "diff",
-                "newPage": false,
-                "searchKey": "format.diff",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func diff(t *testing.T, dst, src []byte)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc diff(t *testing.T, dst, src []byte)\n```\n\n"
+                "value": "```Go\nfunc String(s string) (string, error)\n```\n\n"
               },
               "children": null
             }
@@ -387,7 +327,9 @@
                 "newPage": false,
                 "searchKey": "format.TestNode",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -409,7 +351,9 @@
                 "newPage": false,
                 "searchKey": "format.TestNodeNoModify",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -425,13 +369,39 @@
           },
           {
             "node": {
+              "pathID": "/go/format#TestPartial",
+              "documentation": {
+                "identifier": "TestPartial",
+                "newPage": false,
+                "searchKey": "format.TestPartial",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPartial(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPartial(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/go/format#TestSource",
               "documentation": {
                 "identifier": "TestSource",
                 "newPage": false,
                 "searchKey": "format.TestSource",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -447,44 +417,115 @@
           },
           {
             "node": {
-              "pathID": "/go/format#String",
+              "pathID": "/go/format#diff",
               "documentation": {
-                "identifier": "String",
+                "identifier": "diff",
                 "newPage": false,
-                "searchKey": "format.String",
+                "searchKey": "format.diff",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func String(s string) (string, error)"
+                "value": "func diff(t *testing.T, dst, src []byte)"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc String(s string) (string, error)\n```\n\n"
+                "value": "```Go\nfunc diff(t *testing.T, dst, src []byte)\n```\n\n"
               },
               "children": null
             }
           },
           {
             "node": {
-              "pathID": "/go/format#TestPartial",
+              "pathID": "/go/format#format",
               "documentation": {
-                "identifier": "TestPartial",
+                "identifier": "format",
                 "newPage": false,
-                "searchKey": "format.TestPartial",
+                "searchKey": "format.format",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "func TestPartial(t *testing.T)"
+                "value": "func format(fset *token.FileSet,..."
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nfunc TestPartial(t *testing.T)\n```\n\n"
+                "value": "```Go\nfunc format(\n\tfset *token.FileSet,\n\tfile *ast.File,\n\tsourceAdj func(src []byte, indent int) []byte,\n\tindentAdj int,\n\tsrc []byte,\n\tcfg printer.Config,\n) ([]byte, error)\n```\n\nformat formats the given package file originally obtained from src and adjusts the result based on the original source via sourceAdj and indentAdj. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/format#hasUnsortedImports",
+              "documentation": {
+                "identifier": "hasUnsortedImports",
+                "newPage": false,
+                "searchKey": "format.hasUnsortedImports",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hasUnsortedImports(file *ast.File) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hasUnsortedImports(file *ast.File) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/format#isSpace",
+              "documentation": {
+                "identifier": "isSpace",
+                "newPage": false,
+                "searchKey": "format.isSpace",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isSpace(b byte) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isSpace(b byte) bool\n```\n\nisSpace reports whether the byte is a space character. isSpace defines a space as being among the following bytes: ' ', '\\t', '\\n' and '\\r'. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/format#parse",
+              "documentation": {
+                "identifier": "parse",
+                "newPage": false,
+                "searchKey": "format.parse",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parse(fset *token.FileSet, filename string, src []byte, fragmentOk bool) (file *ast.File,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parse(fset *token.FileSet, filename string, src []byte, fragmentOk bool) (\n\tfile *ast.File,\n\tsourceAdj func(src []byte, indent int) []byte,\n\tindentAdj int,\n\terr error,\n)\n```\n\nparse parses src, which was read from the named file, as a Go source file, declaration, or statement list. \n\n"
               },
               "children": null
             }

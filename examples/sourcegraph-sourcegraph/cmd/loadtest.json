@@ -4,7 +4,9 @@
     "identifier": "loadtest",
     "newPage": true,
     "searchKey": "cmd/loadtest",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -41,6 +45,8 @@
                 "newPage": false,
                 "searchKey": "main.gqlSearch",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -65,7 +71,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -83,7 +91,10 @@
                 "identifier": "FrontendHost",
                 "newPage": false,
                 "searchKey": "main.FrontendHost",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -103,7 +114,10 @@
                 "identifier": "FrontendPort",
                 "newPage": false,
                 "searchKey": "main.FrontendPort",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -118,32 +132,15 @@
           },
           {
             "node": {
-              "pathID": "/cmd/loadtest#SearchQueriesEnv",
-              "documentation": {
-                "identifier": "SearchQueriesEnv",
-                "newPage": false,
-                "searchKey": "main.SearchQueriesEnv",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var SearchQueriesEnv"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar SearchQueriesEnv = env.Get(\"loadTestSearches\", \"[]\", \"Search queries to use in load testing\")\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/loadtest#QueryPeriodMSEnv",
               "documentation": {
                 "identifier": "QueryPeriodMSEnv",
                 "newPage": false,
                 "searchKey": "main.QueryPeriodMSEnv",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "string"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -152,6 +149,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar QueryPeriodMSEnv = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/loadtest#SearchQueriesEnv",
+              "documentation": {
+                "identifier": "SearchQueriesEnv",
+                "newPage": false,
+                "searchKey": "main.SearchQueriesEnv",
+                "tags": [
+                  "variable",
+                  "string"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var SearchQueriesEnv"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar SearchQueriesEnv = env.Get(\"loadTestSearches\", \"[]\", \"Search queries to use in load testing\")\n```\n\n"
               },
               "children": null
             }
@@ -166,7 +186,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -184,7 +206,9 @@
                 "identifier": "GQLSearchVars",
                 "newPage": false,
                 "searchKey": "main.GQLSearchVars",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -199,32 +223,14 @@
           },
           {
             "node": {
-              "pathID": "/cmd/loadtest#GraphQLResponseSearch",
-              "documentation": {
-                "identifier": "GraphQLResponseSearch",
-                "newPage": false,
-                "searchKey": "main.GraphQLResponseSearch",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type GraphQLResponseSearch struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype GraphQLResponseSearch struct {\n\tData struct {\n\t\tSearch struct {\n\t\t\tResults struct {\n\t\t\t\tResults []interface{} `json:\"results\"`\n\t\t\t} `json:\"results\"`\n\t\t} `json:\"search\"`\n\t} `json:\"data\"`\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/loadtest#GraphQLQuery",
               "documentation": {
                 "identifier": "GraphQLQuery",
                 "newPage": false,
                 "searchKey": "main.GraphQLQuery",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -233,6 +239,28 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\ntype GraphQLQuery struct {\n\tQuery     string      `json:\"query\"`\n\tVariables interface{} `json:\"variables\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/loadtest#GraphQLResponseSearch",
+              "documentation": {
+                "identifier": "GraphQLResponseSearch",
+                "newPage": false,
+                "searchKey": "main.GraphQLResponseSearch",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GraphQLResponseSearch struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GraphQLResponseSearch struct {\n\tData struct {\n\t\tSearch struct {\n\t\t\tResults struct {\n\t\t\t\tResults []interface{} `json:\"results\"`\n\t\t\t} `json:\"results\"`\n\t\t} `json:\"search\"`\n\t} `json:\"data\"`\n}\n```\n\n"
               },
               "children": null
             }
@@ -247,7 +275,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -260,34 +290,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/cmd/loadtest#main",
-              "documentation": {
-                "identifier": "main",
-                "newPage": false,
-                "searchKey": "main.main",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func main()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc main()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/cmd/loadtest#frontendURL",
               "documentation": {
                 "identifier": "frontendURL",
                 "newPage": false,
                 "searchKey": "main.frontendURL",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -304,12 +313,36 @@
           },
           {
             "node": {
+              "pathID": "/cmd/loadtest#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/cmd/loadtest#run",
               "documentation": {
                 "identifier": "run",
                 "newPage": false,
                 "searchKey": "main.run",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -332,6 +365,7 @@
                 "newPage": false,
                 "searchKey": "main.search",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },

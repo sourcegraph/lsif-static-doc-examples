@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/internal/batches/search/syntax",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,12 +41,38 @@
         "children": [
           {
             "node": {
+              "pathID": "/enterprise/internal/batches/search/syntax#TokenColon",
+              "documentation": {
+                "identifier": "TokenColon",
+                "newPage": false,
+                "searchKey": "syntax.TokenColon",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TokenColon"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TokenColon\n```\n\nAll TokenType values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/batches/search/syntax#TokenEOF",
               "documentation": {
                 "identifier": "TokenEOF",
                 "newPage": false,
                 "searchKey": "syntax.TokenEOF",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -64,7 +92,10 @@
                 "identifier": "TokenError",
                 "newPage": false,
                 "searchKey": "syntax.TokenError",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -84,7 +115,10 @@
                 "identifier": "TokenLiteral",
                 "newPage": false,
                 "searchKey": "syntax.TokenLiteral",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -99,72 +133,15 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/search/syntax#TokenQuoted",
-              "documentation": {
-                "identifier": "TokenQuoted",
-                "newPage": false,
-                "searchKey": "syntax.TokenQuoted",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const TokenQuoted"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst TokenQuoted\n```\n\nAll TokenType values. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/search/syntax#TokenPattern",
-              "documentation": {
-                "identifier": "TokenPattern",
-                "newPage": false,
-                "searchKey": "syntax.TokenPattern",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const TokenPattern"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst TokenPattern\n```\n\nAll TokenType values. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/search/syntax#TokenColon",
-              "documentation": {
-                "identifier": "TokenColon",
-                "newPage": false,
-                "searchKey": "syntax.TokenColon",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "const TokenColon"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nconst TokenColon\n```\n\nAll TokenType values. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/batches/search/syntax#TokenMinus",
               "documentation": {
                 "identifier": "TokenMinus",
                 "newPage": false,
                 "searchKey": "syntax.TokenMinus",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -179,12 +156,61 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/batches/search/syntax#TokenPattern",
+              "documentation": {
+                "identifier": "TokenPattern",
+                "newPage": false,
+                "searchKey": "syntax.TokenPattern",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TokenPattern"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TokenPattern\n```\n\nAll TokenType values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/search/syntax#TokenQuoted",
+              "documentation": {
+                "identifier": "TokenQuoted",
+                "newPage": false,
+                "searchKey": "syntax.TokenQuoted",
+                "tags": [
+                  "constant",
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TokenQuoted"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TokenQuoted\n```\n\nAll TokenType values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/batches/search/syntax#TokenSep",
               "documentation": {
                 "identifier": "TokenSep",
                 "newPage": false,
                 "searchKey": "syntax.TokenSep",
-                "tags": null
+                "tags": [
+                  "constant",
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -205,6 +231,8 @@
                 "newPage": false,
                 "searchKey": "syntax._TokenType_name",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -230,6 +258,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -250,6 +279,8 @@
                 "newPage": false,
                 "searchKey": "syntax.singleCharTokens",
                 "tags": [
+                  "variable",
+                  "object",
                   "private"
                 ]
               },
@@ -272,6 +303,9 @@
                 "newPage": false,
                 "searchKey": "syntax._TokenType_index",
                 "tags": [
+                  "variable",
+                  "array",
+                  "number",
                   "private"
                 ]
               },
@@ -297,6 +331,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -311,153 +346,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/search/syntax#ParseTree",
-              "documentation": {
-                "identifier": "ParseTree",
-                "newPage": false,
-                "searchKey": "syntax.ParseTree",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ParseTree []*syntax.Expr"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ParseTree []*Expr\n```\n\nThe parse tree for search input. It is a list of expressions. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/search/syntax#Map",
-                    "documentation": {
-                      "identifier": "Map",
-                      "newPage": false,
-                      "searchKey": "syntax.Map",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func Map(p ParseTree, f func(e Expr) *Expr) ParseTree"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc Map(p ParseTree, f func(e Expr) *Expr) ParseTree\n```\n\nMap builds a new parse tree by running a function f on each expression in an existing parse tree and substituting the resulting expression. If f returns nil, the expression is removed in the new parse tree. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/search/syntax#Parse",
-                    "documentation": {
-                      "identifier": "Parse",
-                      "newPage": false,
-                      "searchKey": "syntax.Parse",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func Parse(input string) (ParseTree, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc Parse(input string) (ParseTree, error)\n```\n\nParse parses the input string and returns its parse tree. Returned errors are of type *ParseError, which includes the error position and message. \n\nBNF-ish query syntax: \n\n```\nexprList  := {exprSign} | exprSign (sep exprSign)*\nexprSign  := {\"-\"} expr\nexpr      := fieldExpr | lit | quoted | pattern\nfieldExpr := lit \":\" value\nvalue     := lit | quoted\n\n```\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/search/syntax#ParseAllowingErrors",
-                    "documentation": {
-                      "identifier": "ParseAllowingErrors",
-                      "newPage": false,
-                      "searchKey": "syntax.ParseAllowingErrors",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func ParseAllowingErrors(input string) ParseTree"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc ParseAllowingErrors(input string) ParseTree\n```\n\nParseAllowingErrors works like Parse except that any errors are returned as TokenError within the Expr slice of the returned parse tree. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/search/syntax#ParseTree.Values",
-                    "documentation": {
-                      "identifier": "ParseTree.Values",
-                      "newPage": false,
-                      "searchKey": "syntax.ParseTree.Values",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p ParseTree) Values(field string) []string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p ParseTree) Values(field string) []string\n```\n\nValues returns the raw string values associated with a field. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/search/syntax#ParseTree.WithErrorsQuoted",
-                    "documentation": {
-                      "identifier": "ParseTree.WithErrorsQuoted",
-                      "newPage": false,
-                      "searchKey": "syntax.ParseTree.WithErrorsQuoted",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p ParseTree) WithErrorsQuoted() ParseTree"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p ParseTree) WithErrorsQuoted() ParseTree\n```\n\nWithErrorsQuoted converts a search input like `f:foo b(ar` to `f:foo \"b(ar\"`. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/search/syntax#ParseTree.String",
-                    "documentation": {
-                      "identifier": "ParseTree.String",
-                      "newPage": false,
-                      "searchKey": "syntax.ParseTree.String",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p ParseTree) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p ParseTree) String() string\n```\n\nString returns a string that parses to the parse tree, where expressions are separated by a single space. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/batches/search/syntax#Expr",
               "documentation": {
                 "identifier": "Expr",
                 "newPage": false,
                 "searchKey": "syntax.Expr",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -475,7 +371,9 @@
                       "identifier": "Expr.String",
                       "newPage": false,
                       "searchKey": "syntax.Expr.String",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -495,7 +393,9 @@
                       "identifier": "Expr.WithErrorsQuoted",
                       "newPage": false,
                       "searchKey": "syntax.Expr.WithErrorsQuoted",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -518,7 +418,9 @@
                 "identifier": "ParseError",
                 "newPage": false,
                 "searchKey": "syntax.ParseError",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -536,7 +438,9 @@
                       "identifier": "ParseError.Error",
                       "newPage": false,
                       "searchKey": "syntax.ParseError.Error",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -554,12 +458,259 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/batches/search/syntax#ParseTree",
+              "documentation": {
+                "identifier": "ParseTree",
+                "newPage": false,
+                "searchKey": "syntax.ParseTree",
+                "tags": [
+                  "array",
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ParseTree []*syntax.Expr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ParseTree []*Expr\n```\n\nThe parse tree for search input. It is a list of expressions. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/search/syntax#Map",
+                    "documentation": {
+                      "identifier": "Map",
+                      "newPage": false,
+                      "searchKey": "syntax.Map",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Map(p ParseTree, f func(e Expr) *Expr) ParseTree"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Map(p ParseTree, f func(e Expr) *Expr) ParseTree\n```\n\nMap builds a new parse tree by running a function f on each expression in an existing parse tree and substituting the resulting expression. If f returns nil, the expression is removed in the new parse tree. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/search/syntax#Parse",
+                    "documentation": {
+                      "identifier": "Parse",
+                      "newPage": false,
+                      "searchKey": "syntax.Parse",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Parse(input string) (ParseTree, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Parse(input string) (ParseTree, error)\n```\n\nParse parses the input string and returns its parse tree. Returned errors are of type *ParseError, which includes the error position and message. \n\nBNF-ish query syntax: \n\n```\nexprList  := {exprSign} | exprSign (sep exprSign)*\nexprSign  := {\"-\"} expr\nexpr      := fieldExpr | lit | quoted | pattern\nfieldExpr := lit \":\" value\nvalue     := lit | quoted\n\n```\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/search/syntax#ParseAllowingErrors",
+                    "documentation": {
+                      "identifier": "ParseAllowingErrors",
+                      "newPage": false,
+                      "searchKey": "syntax.ParseAllowingErrors",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ParseAllowingErrors(input string) ParseTree"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ParseAllowingErrors(input string) ParseTree\n```\n\nParseAllowingErrors works like Parse except that any errors are returned as TokenError within the Expr slice of the returned parse tree. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/search/syntax#ParseTree.String",
+                    "documentation": {
+                      "identifier": "ParseTree.String",
+                      "newPage": false,
+                      "searchKey": "syntax.ParseTree.String",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p ParseTree) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p ParseTree) String() string\n```\n\nString returns a string that parses to the parse tree, where expressions are separated by a single space. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/search/syntax#ParseTree.Values",
+                    "documentation": {
+                      "identifier": "ParseTree.Values",
+                      "newPage": false,
+                      "searchKey": "syntax.ParseTree.Values",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p ParseTree) Values(field string) []string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p ParseTree) Values(field string) []string\n```\n\nValues returns the raw string values associated with a field. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/search/syntax#ParseTree.WithErrorsQuoted",
+                    "documentation": {
+                      "identifier": "ParseTree.WithErrorsQuoted",
+                      "newPage": false,
+                      "searchKey": "syntax.ParseTree.WithErrorsQuoted",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p ParseTree) WithErrorsQuoted() ParseTree"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p ParseTree) WithErrorsQuoted() ParseTree\n```\n\nWithErrorsQuoted converts a search input like `f:foo b(ar` to `f:foo \"b(ar\"`. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/search/syntax#Token",
+              "documentation": {
+                "identifier": "Token",
+                "newPage": false,
+                "searchKey": "syntax.Token",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Token struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Token struct {\n\tType  TokenType // type of token\n\tValue string    // string value\n\tPos   int       // starting character position\n}\n```\n\nToken is a token in a query. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/search/syntax#TokenType",
+              "documentation": {
+                "identifier": "TokenType",
+                "newPage": false,
+                "searchKey": "syntax.TokenType",
+                "tags": [
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TokenType int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TokenType int\n```\n\nTokenType is the set of lexical tokens in the query syntax. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/search/syntax#TokenType.String",
+                    "documentation": {
+                      "identifier": "TokenType.String",
+                      "newPage": false,
+                      "searchKey": "syntax.TokenType.String",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i TokenType) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i TokenType) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/search/syntax#context",
+              "documentation": {
+                "identifier": "context",
+                "newPage": false,
+                "searchKey": "syntax.context",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type context struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype context struct {\n\tfield string // name of the field currently in scope (or \"\")\n}\n```\n\ncontext holds settings active within a given scope during parsing. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/batches/search/syntax#parser",
               "documentation": {
                 "identifier": "parser",
                 "newPage": false,
                 "searchKey": "syntax.parser",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -574,34 +725,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/batches/search/syntax#parser.peek",
-                    "documentation": {
-                      "identifier": "parser.peek",
-                      "newPage": false,
-                      "searchKey": "syntax.parser.peek",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) peek() Token"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) peek() Token\n```\n\npeek returns the next token without consuming it. Peeking beyond the end of the token stream will return TokenEOF. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/internal/batches/search/syntax#parser.backup",
                     "documentation": {
                       "identifier": "parser.backup",
                       "newPage": false,
                       "searchKey": "syntax.parser.backup",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -618,12 +748,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/enterprise/internal/batches/search/syntax#parser.errorExpr",
+                    "documentation": {
+                      "identifier": "parser.errorExpr",
+                      "newPage": false,
+                      "searchKey": "syntax.parser.errorExpr",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) errorExpr(toks ...Token) *Expr"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) errorExpr(toks ...Token) *Expr\n```\n\nerrorExpr makes an Expr with type TokenError, whose value is built from the given tokens plus any others up to the next separator (space) or EOF. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/enterprise/internal/batches/search/syntax#parser.next",
                     "documentation": {
                       "identifier": "parser.next",
                       "newPage": false,
                       "searchKey": "syntax.parser.next",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -640,12 +794,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/enterprise/internal/batches/search/syntax#parser.parseExpr",
+                    "documentation": {
+                      "identifier": "parser.parseExpr",
+                      "newPage": false,
+                      "searchKey": "syntax.parser.parseExpr",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *parser) parseExpr(ctx context) (*Expr, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *parser) parseExpr(ctx context) (*Expr, error)\n```\n\nexpr := exprField | lit | quoted | pattern \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/enterprise/internal/batches/search/syntax#parser.parseExprList",
                     "documentation": {
                       "identifier": "parser.parseExprList",
                       "newPage": false,
                       "searchKey": "syntax.parser.parseExprList",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -668,6 +846,7 @@
                       "newPage": false,
                       "searchKey": "syntax.parser.parseExprSign",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -684,304 +863,23 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/batches/search/syntax#parser.parseExpr",
+                    "pathID": "/enterprise/internal/batches/search/syntax#parser.peek",
                     "documentation": {
-                      "identifier": "parser.parseExpr",
+                      "identifier": "parser.peek",
                       "newPage": false,
-                      "searchKey": "syntax.parser.parseExpr",
+                      "searchKey": "syntax.parser.peek",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (p *parser) parseExpr(ctx context) (*Expr, error)"
+                      "value": "func (p *parser) peek() Token"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) parseExpr(ctx context) (*Expr, error)\n```\n\nexpr := exprField | lit | quoted | pattern \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/search/syntax#parser.errorExpr",
-                    "documentation": {
-                      "identifier": "parser.errorExpr",
-                      "newPage": false,
-                      "searchKey": "syntax.parser.errorExpr",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (p *parser) errorExpr(toks ...Token) *Expr"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (p *parser) errorExpr(toks ...Token) *Expr\n```\n\nerrorExpr makes an Expr with type TokenError, whose value is built from the given tokens plus any others up to the next separator (space) or EOF. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/search/syntax#context",
-              "documentation": {
-                "identifier": "context",
-                "newPage": false,
-                "searchKey": "syntax.context",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type context struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype context struct {\n\tfield string // name of the field currently in scope (or \"\")\n}\n```\n\ncontext holds settings active within a given scope during parsing. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/search/syntax#TokenType",
-              "documentation": {
-                "identifier": "TokenType",
-                "newPage": false,
-                "searchKey": "syntax.TokenType",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type TokenType int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype TokenType int\n```\n\nTokenType is the set of lexical tokens in the query syntax. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/search/syntax#TokenType.String",
-                    "documentation": {
-                      "identifier": "TokenType.String",
-                      "newPage": false,
-                      "searchKey": "syntax.TokenType.String",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (i TokenType) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (i TokenType) String() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/search/syntax#Token",
-              "documentation": {
-                "identifier": "Token",
-                "newPage": false,
-                "searchKey": "syntax.Token",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Token struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Token struct {\n\tType  TokenType // type of token\n\tValue string    // string value\n\tPos   int       // starting character position\n}\n```\n\nToken is a token in a query. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/search/syntax#stateFn",
-              "documentation": {
-                "identifier": "stateFn",
-                "newPage": false,
-                "searchKey": "syntax.stateFn",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type stateFn func(*github.com/sourcegraph/sourcegraph/enterprise/internal/batches/search/syntax.scanner) github.com/sourcegraph/sourcegraph/enterprise/internal/batches/search/syntax.stateFn"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype stateFn func(*scanner) stateFn\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/search/syntax#scanDefault",
-                    "documentation": {
-                      "identifier": "scanDefault",
-                      "newPage": false,
-                      "searchKey": "syntax.scanDefault",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func scanDefault(s *scanner) stateFn"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc scanDefault(s *scanner) stateFn\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/search/syntax#scanText",
-                    "documentation": {
-                      "identifier": "scanText",
-                      "newPage": false,
-                      "searchKey": "syntax.scanText",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func scanText(s *scanner) stateFn"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc scanText(s *scanner) stateFn\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/search/syntax#scanValue",
-                    "documentation": {
-                      "identifier": "scanValue",
-                      "newPage": false,
-                      "searchKey": "syntax.scanValue",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func scanValue(s *scanner) stateFn"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc scanValue(s *scanner) stateFn\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/search/syntax#scanLiteral",
-                    "documentation": {
-                      "identifier": "scanLiteral",
-                      "newPage": false,
-                      "searchKey": "syntax.scanLiteral",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func scanLiteral(s *scanner) stateFn"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc scanLiteral(s *scanner) stateFn\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/search/syntax#scanQuoted",
-                    "documentation": {
-                      "identifier": "scanQuoted",
-                      "newPage": false,
-                      "searchKey": "syntax.scanQuoted",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func scanQuoted(s *scanner) stateFn"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc scanQuoted(s *scanner) stateFn\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/search/syntax#scanPattern",
-                    "documentation": {
-                      "identifier": "scanPattern",
-                      "newPage": false,
-                      "searchKey": "syntax.scanPattern",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func scanPattern(s *scanner) stateFn"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc scanPattern(s *scanner) stateFn\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/search/syntax#scanSpace",
-                    "documentation": {
-                      "identifier": "scanSpace",
-                      "newPage": false,
-                      "searchKey": "syntax.scanSpace",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func scanSpace(s *scanner) stateFn"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc scanSpace(s *scanner) stateFn\n```\n\n"
+                      "value": "```Go\nfunc (p *parser) peek() Token\n```\n\npeek returns the next token without consuming it. Peeking beyond the end of the token stream will return TokenEOF. \n\n"
                     },
                     "children": null
                   }
@@ -997,6 +895,7 @@
                 "newPage": false,
                 "searchKey": "syntax.scanner",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1011,78 +910,13 @@
               "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/batches/search/syntax#scanner.next",
-                    "documentation": {
-                      "identifier": "scanner.next",
-                      "newPage": false,
-                      "searchKey": "syntax.scanner.next",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *scanner) next() rune"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *scanner) next() rune\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/search/syntax#scanner.eof",
-                    "documentation": {
-                      "identifier": "scanner.eof",
-                      "newPage": false,
-                      "searchKey": "syntax.scanner.eof",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *scanner) eof() bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *scanner) eof() bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/search/syntax#scanner.ignore",
-                    "documentation": {
-                      "identifier": "scanner.ignore",
-                      "newPage": false,
-                      "searchKey": "syntax.scanner.ignore",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *scanner) ignore()"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *scanner) ignore()\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/internal/batches/search/syntax#scanner.backup",
                     "documentation": {
                       "identifier": "scanner.backup",
                       "newPage": false,
                       "searchKey": "syntax.scanner.backup",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1099,34 +933,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/batches/search/syntax#scanner.peek",
-                    "documentation": {
-                      "identifier": "scanner.peek",
-                      "newPage": false,
-                      "searchKey": "syntax.scanner.peek",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *scanner) peek() rune"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *scanner) peek() rune\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/internal/batches/search/syntax#scanner.emit",
                     "documentation": {
                       "identifier": "scanner.emit",
                       "newPage": false,
                       "searchKey": "syntax.scanner.emit",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1149,6 +962,7 @@
                       "newPage": false,
                       "searchKey": "syntax.scanner.emitError",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1159,6 +973,283 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (s *scanner) emitError(msg string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/search/syntax#scanner.eof",
+                    "documentation": {
+                      "identifier": "scanner.eof",
+                      "newPage": false,
+                      "searchKey": "syntax.scanner.eof",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *scanner) eof() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *scanner) eof() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/search/syntax#scanner.ignore",
+                    "documentation": {
+                      "identifier": "scanner.ignore",
+                      "newPage": false,
+                      "searchKey": "syntax.scanner.ignore",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *scanner) ignore()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *scanner) ignore()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/search/syntax#scanner.next",
+                    "documentation": {
+                      "identifier": "scanner.next",
+                      "newPage": false,
+                      "searchKey": "syntax.scanner.next",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *scanner) next() rune"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *scanner) next() rune\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/search/syntax#scanner.peek",
+                    "documentation": {
+                      "identifier": "scanner.peek",
+                      "newPage": false,
+                      "searchKey": "syntax.scanner.peek",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *scanner) peek() rune"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *scanner) peek() rune\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/search/syntax#stateFn",
+              "documentation": {
+                "identifier": "stateFn",
+                "newPage": false,
+                "searchKey": "syntax.stateFn",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type stateFn func(*github.com/sourcegraph/sourcegraph/enterprise/internal/batches/search/syntax.scanner) github.com/sourcegraph/sourcegraph/enterprise/internal/batches/search/syntax.stateFn"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype stateFn func(*scanner) stateFn\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/search/syntax#scanDefault",
+                    "documentation": {
+                      "identifier": "scanDefault",
+                      "newPage": false,
+                      "searchKey": "syntax.scanDefault",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func scanDefault(s *scanner) stateFn"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc scanDefault(s *scanner) stateFn\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/search/syntax#scanLiteral",
+                    "documentation": {
+                      "identifier": "scanLiteral",
+                      "newPage": false,
+                      "searchKey": "syntax.scanLiteral",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func scanLiteral(s *scanner) stateFn"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc scanLiteral(s *scanner) stateFn\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/search/syntax#scanPattern",
+                    "documentation": {
+                      "identifier": "scanPattern",
+                      "newPage": false,
+                      "searchKey": "syntax.scanPattern",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func scanPattern(s *scanner) stateFn"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc scanPattern(s *scanner) stateFn\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/search/syntax#scanQuoted",
+                    "documentation": {
+                      "identifier": "scanQuoted",
+                      "newPage": false,
+                      "searchKey": "syntax.scanQuoted",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func scanQuoted(s *scanner) stateFn"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc scanQuoted(s *scanner) stateFn\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/search/syntax#scanSpace",
+                    "documentation": {
+                      "identifier": "scanSpace",
+                      "newPage": false,
+                      "searchKey": "syntax.scanSpace",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func scanSpace(s *scanner) stateFn"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc scanSpace(s *scanner) stateFn\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/search/syntax#scanText",
+                    "documentation": {
+                      "identifier": "scanText",
+                      "newPage": false,
+                      "searchKey": "syntax.scanText",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func scanText(s *scanner) stateFn"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc scanText(s *scanner) stateFn\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/search/syntax#scanValue",
+                    "documentation": {
+                      "identifier": "scanValue",
+                      "newPage": false,
+                      "searchKey": "syntax.scanValue",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func scanValue(s *scanner) stateFn"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc scanValue(s *scanner) stateFn\n```\n\n"
                     },
                     "children": null
                   }
@@ -1177,6 +1268,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -1196,7 +1288,9 @@
                 "identifier": "Scan",
                 "newPage": false,
                 "searchKey": "syntax.Scan",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1217,7 +1311,9 @@
                 "newPage": false,
                 "searchKey": "syntax.TestExpr_String",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1233,57 +1329,15 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/search/syntax#TestQuery_WithErrorsQuoted",
-              "documentation": {
-                "identifier": "TestQuery_WithErrorsQuoted",
-                "newPage": false,
-                "searchKey": "syntax.TestQuery_WithErrorsQuoted",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestQuery_WithErrorsQuoted(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestQuery_WithErrorsQuoted(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/search/syntax#TestParser",
-              "documentation": {
-                "identifier": "TestParser",
-                "newPage": false,
-                "searchKey": "syntax.TestParser",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestParser(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestParser(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/batches/search/syntax#TestParseAllowingErrors",
               "documentation": {
                 "identifier": "TestParseAllowingErrors",
                 "newPage": false,
                 "searchKey": "syntax.TestParseAllowingErrors",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1299,13 +1353,63 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/batches/search/syntax#TestParser",
+              "documentation": {
+                "identifier": "TestParser",
+                "newPage": false,
+                "searchKey": "syntax.TestParser",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParser(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParser(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/search/syntax#TestQuery_WithErrorsQuoted",
+              "documentation": {
+                "identifier": "TestQuery_WithErrorsQuoted",
+                "newPage": false,
+                "searchKey": "syntax.TestQuery_WithErrorsQuoted",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestQuery_WithErrorsQuoted(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestQuery_WithErrorsQuoted(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/batches/search/syntax#TestScanner",
               "documentation": {
                 "identifier": "TestScanner",
                 "newPage": false,
                 "searchKey": "syntax.TestScanner",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {
@@ -1327,6 +1431,7 @@
                 "newPage": false,
                 "searchKey": "syntax.tokenTypes",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1349,6 +1454,7 @@
                 "newPage": false,
                 "searchKey": "syntax.tokenValues",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },

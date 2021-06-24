@@ -4,7 +4,9 @@
     "identifier": "searcher",
     "newPage": true,
     "searchKey": "cmd/searcher",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -41,6 +45,8 @@
                 "newPage": false,
                 "searchKey": "main.port",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -65,7 +71,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -84,6 +92,8 @@
                 "newPage": false,
                 "searchKey": "main.cacheDir",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -106,6 +116,8 @@
                 "newPage": false,
                 "searchKey": "main.cacheSizeMB",
                 "tags": [
+                  "variable",
+                  "string",
                   "private"
                 ]
               },
@@ -130,7 +142,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -149,6 +163,7 @@
                 "newPage": false,
                 "searchKey": "main.main",
                 "tags": [
+                  "function",
                   "private"
                 ]
               },
@@ -171,6 +186,7 @@
                 "newPage": false,
                 "searchKey": "main.shutdownOnSIGINT",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },

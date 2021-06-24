@@ -9,14 +9,14 @@
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="ExampleIndex_Lookup" href="#ExampleIndex_Lookup">func ExampleIndex_Lookup()</a>
 
 ```
 searchKey: suffixarray_test.ExampleIndex_Lookup
-tags: [private]
+tags: [function private]
 ```
 
 ```Go

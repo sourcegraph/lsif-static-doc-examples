@@ -4,7 +4,9 @@
     "identifier": "tzdata",
     "newPage": true,
     "searchKey": "time/tzdata",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "const",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -41,6 +45,8 @@
                 "newPage": false,
                 "searchKey": "tzdata.zipdata",
                 "tags": [
+                  "constant",
+                  "string",
                   "private"
                 ]
               },
@@ -65,7 +71,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -78,78 +86,13 @@
         "children": [
           {
             "node": {
-              "pathID": "/time/tzdata#registerLoadFromEmbeddedTZData",
-              "documentation": {
-                "identifier": "registerLoadFromEmbeddedTZData",
-                "newPage": false,
-                "searchKey": "tzdata.registerLoadFromEmbeddedTZData",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func registerLoadFromEmbeddedTZData(func(string) (string, error))"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc registerLoadFromEmbeddedTZData(func(string) (string, error))\n```\n\nregisterLoadFromEmbeddedTZData is defined in package time. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/time/tzdata#init.tzdata.go",
-              "documentation": {
-                "identifier": "init.tzdata.go",
-                "newPage": false,
-                "searchKey": "tzdata.init",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func init()"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc init()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/time/tzdata#get4s",
-              "documentation": {
-                "identifier": "get4s",
-                "newPage": false,
-                "searchKey": "tzdata.get4s",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func get4s(s string) int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc get4s(s string) int\n```\n\nget4s returns the little-endian 32-bit value at the start of s. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/time/tzdata#get2s",
               "documentation": {
                 "identifier": "get2s",
                 "newPage": false,
                 "searchKey": "tzdata.get2s",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -166,12 +109,59 @@
           },
           {
             "node": {
+              "pathID": "/time/tzdata#get4s",
+              "documentation": {
+                "identifier": "get4s",
+                "newPage": false,
+                "searchKey": "tzdata.get4s",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func get4s(s string) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc get4s(s string) int\n```\n\nget4s returns the little-endian 32-bit value at the start of s. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time/tzdata#init.tzdata.go",
+              "documentation": {
+                "identifier": "init.tzdata.go",
+                "newPage": false,
+                "searchKey": "tzdata.init",
+                "tags": [
+                  "function",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/time/tzdata#loadFromEmbeddedTZData",
               "documentation": {
                 "identifier": "loadFromEmbeddedTZData",
                 "newPage": false,
                 "searchKey": "tzdata.loadFromEmbeddedTZData",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -182,6 +172,29 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc loadFromEmbeddedTZData(name string) (string, error)\n```\n\nloadFromEmbeddedTZData returns the contents of the file with the given name in an uncompressed zip file, where the contents of the file can be found in embeddedTzdata. This is similar to time.loadTzinfoFromZip. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time/tzdata#registerLoadFromEmbeddedTZData",
+              "documentation": {
+                "identifier": "registerLoadFromEmbeddedTZData",
+                "newPage": false,
+                "searchKey": "tzdata.registerLoadFromEmbeddedTZData",
+                "tags": [
+                  "method",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func registerLoadFromEmbeddedTZData(func(string) (string, error))"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc registerLoadFromEmbeddedTZData(func(string) (string, error))\n```\n\nregisterLoadFromEmbeddedTZData is defined in package time. \n\n"
               },
               "children": null
             }

@@ -7,12 +7,12 @@ package mutablelimiter provides a Limiter (Semaphore) which supports havings its
 * [Types](#type)
     * [type Limiter struct](#Limiter)
         * [func New(limit int) *Limiter](#New)
-        * [func (l *Limiter) SetLimit(limit int)](#Limiter.SetLimit)
-        * [func (l Limiter) GetLimit() (cap, len int)](#Limiter.GetLimit)
         * [func (l *Limiter) Acquire(ctx context.Context) (context.Context, context.CancelFunc, error)](#Limiter.Acquire)
+        * [func (l Limiter) GetLimit() (cap, len int)](#Limiter.GetLimit)
+        * [func (l *Limiter) SetLimit(limit int)](#Limiter.SetLimit)
         * [func (l *Limiter) do(limit int)](#Limiter.do)
-    * [type acquireResponse struct](#acquireResponse)
     * [type acquireRequest struct](#acquireRequest)
+    * [type acquireResponse struct](#acquireResponse)
 * [Functions](#func)
     * [func TestLimiter(t *testing.T)](#TestLimiter)
 
@@ -20,13 +20,14 @@ package mutablelimiter provides a Limiter (Semaphore) which supports havings its
 ## <a id="type" href="#type">Types</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="Limiter" href="#Limiter">type Limiter struct</a>
 
 ```
 searchKey: mutablelimiter.Limiter
+tags: [struct]
 ```
 
 ```Go
@@ -45,6 +46,7 @@ Note: Each Limiter has an associated goroutine managing the semaphore state. We 
 
 ```
 searchKey: mutablelimiter.New
+tags: [method]
 ```
 
 ```Go
@@ -53,34 +55,11 @@ func New(limit int) *Limiter
 
 New returns a new Limiter (Semaphore). 
 
-#### <a id="Limiter.SetLimit" href="#Limiter.SetLimit">func (l *Limiter) SetLimit(limit int)</a>
-
-```
-searchKey: mutablelimiter.Limiter.SetLimit
-```
-
-```Go
-func (l *Limiter) SetLimit(limit int)
-```
-
-SetLimit adjusts the limit. If we currently have more than limit context acquired, then contexts are canceled until we are within limit. Contexts are canceled such that the older contexts are canceled. 
-
-#### <a id="Limiter.GetLimit" href="#Limiter.GetLimit">func (l Limiter) GetLimit() (cap, len int)</a>
-
-```
-searchKey: mutablelimiter.Limiter.GetLimit
-```
-
-```Go
-func (l Limiter) GetLimit() (cap, len int)
-```
-
-GetLimit reports the current state of the limiter, returning the capacity and length (maximum and currently-in-use). 
-
 #### <a id="Limiter.Acquire" href="#Limiter.Acquire">func (l *Limiter) Acquire(ctx context.Context) (context.Context, context.CancelFunc, error)</a>
 
 ```
 searchKey: mutablelimiter.Limiter.Acquire
+tags: [method]
 ```
 
 ```Go
@@ -91,36 +70,48 @@ Acquire tries to acquire a context. On success a child context of ctx is returne
 
 If ctx is Done before we can acquire, then the context error is returned. 
 
+#### <a id="Limiter.GetLimit" href="#Limiter.GetLimit">func (l Limiter) GetLimit() (cap, len int)</a>
+
+```
+searchKey: mutablelimiter.Limiter.GetLimit
+tags: [function]
+```
+
+```Go
+func (l Limiter) GetLimit() (cap, len int)
+```
+
+GetLimit reports the current state of the limiter, returning the capacity and length (maximum and currently-in-use). 
+
+#### <a id="Limiter.SetLimit" href="#Limiter.SetLimit">func (l *Limiter) SetLimit(limit int)</a>
+
+```
+searchKey: mutablelimiter.Limiter.SetLimit
+tags: [method]
+```
+
+```Go
+func (l *Limiter) SetLimit(limit int)
+```
+
+SetLimit adjusts the limit. If we currently have more than limit context acquired, then contexts are canceled until we are within limit. Contexts are canceled such that the older contexts are canceled. 
+
 #### <a id="Limiter.do" href="#Limiter.do">func (l *Limiter) do(limit int)</a>
 
 ```
 searchKey: mutablelimiter.Limiter.do
-tags: [private]
+tags: [method private]
 ```
 
 ```Go
 func (l *Limiter) do(limit int)
 ```
 
-### <a id="acquireResponse" href="#acquireResponse">type acquireResponse struct</a>
-
-```
-searchKey: mutablelimiter.acquireResponse
-tags: [private]
-```
-
-```Go
-type acquireResponse struct {
-	ctx    context.Context
-	cancel context.CancelFunc
-}
-```
-
 ### <a id="acquireRequest" href="#acquireRequest">type acquireRequest struct</a>
 
 ```
 searchKey: mutablelimiter.acquireRequest
-tags: [private]
+tags: [struct private]
 ```
 
 ```Go
@@ -130,17 +121,31 @@ type acquireRequest struct {
 }
 ```
 
+### <a id="acquireResponse" href="#acquireResponse">type acquireResponse struct</a>
+
+```
+searchKey: mutablelimiter.acquireResponse
+tags: [struct private]
+```
+
+```Go
+type acquireResponse struct {
+	ctx    context.Context
+	cancel context.CancelFunc
+}
+```
+
 ## <a id="func" href="#func">Functions</a>
 
 ```
-tags: [private]
+tags: [package private]
 ```
 
 ### <a id="TestLimiter" href="#TestLimiter">func TestLimiter(t *testing.T)</a>
 
 ```
 searchKey: mutablelimiter.TestLimiter
-tags: [private]
+tags: [method private test]
 ```
 
 ```Go

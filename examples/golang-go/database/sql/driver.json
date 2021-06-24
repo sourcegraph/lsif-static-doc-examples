@@ -4,7 +4,9 @@
     "identifier": "driver",
     "newPage": true,
     "searchKey": "database/sql/driver",
-    "tags": []
+    "tags": [
+      "package"
+    ]
   },
   "label": {
     "kind": "plaintext",
@@ -22,7 +24,9 @@
           "identifier": "var",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -35,20 +39,46 @@
         "children": [
           {
             "node": {
-              "pathID": "/database/sql/driver#ErrSkip",
+              "pathID": "/database/sql/driver#Bool",
               "documentation": {
-                "identifier": "ErrSkip",
+                "identifier": "Bool",
                 "newPage": false,
-                "searchKey": "driver.ErrSkip",
-                "tags": null
+                "searchKey": "driver.Bool",
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var ErrSkip"
+                "value": "var Bool"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar ErrSkip = errors.New(\"driver: skip fast-path; continue as if unimplemented\")\n```\n\nErrSkip may be returned by some optional interfaces' methods to indicate at runtime that the fast path is unavailable and the sql package should continue as if the optional interface was not implemented. ErrSkip is only supported where explicitly documented. \n\n"
+                "value": "```Go\nvar Bool boolType\n```\n\nBool is a ValueConverter that converts input values to bools. \n\nThe conversion rules are: \n\n```\n- booleans are returned unchanged\n- for integer types,\n     1 is true\n     0 is false,\n     other integers are an error\n- for strings and []byte, same rules as strconv.ParseBool\n- all other types are an error\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#DefaultParameterConverter",
+              "documentation": {
+                "identifier": "DefaultParameterConverter",
+                "newPage": false,
+                "searchKey": "driver.DefaultParameterConverter",
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var DefaultParameterConverter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar DefaultParameterConverter defaultConverter\n```\n\nDefaultParameterConverter is the default implementation of ValueConverter that's used when a Stmt doesn't implement ColumnConverter. \n\nDefaultParameterConverter returns its argument directly if IsValue(arg). Otherwise, if the argument implements Valuer, its Value method is used to return a Value. As a fallback, the provided argument's underlying type is used to convert it to a Value: underlying integer types are converted to int64, floats to float64, bool, string, and []byte to themselves. If the argument is a nil pointer, ConvertValue returns a nil Value. If the argument is a non-nil pointer, it is dereferenced and ConvertValue is called recursively. Other types are an error. \n\n"
               },
               "children": null
             }
@@ -60,7 +90,10 @@
                 "identifier": "ErrBadConn",
                 "newPage": false,
                 "searchKey": "driver.ErrBadConn",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -80,7 +113,10 @@
                 "identifier": "ErrRemoveArgument",
                 "newPage": false,
                 "searchKey": "driver.ErrRemoveArgument",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -95,40 +131,23 @@
           },
           {
             "node": {
-              "pathID": "/database/sql/driver#ResultNoRows",
+              "pathID": "/database/sql/driver#ErrSkip",
               "documentation": {
-                "identifier": "ResultNoRows",
+                "identifier": "ErrSkip",
                 "newPage": false,
-                "searchKey": "driver.ResultNoRows",
-                "tags": null
+                "searchKey": "driver.ErrSkip",
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "var ResultNoRows"
+                "value": "var ErrSkip"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nvar ResultNoRows noRows\n```\n\nResultNoRows is a pre-defined Result for drivers to return when a DDL command (such as a CREATE TABLE) succeeds. It returns an error for both LastInsertId and RowsAffected. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#Bool",
-              "documentation": {
-                "identifier": "Bool",
-                "newPage": false,
-                "searchKey": "driver.Bool",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var Bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar Bool boolType\n```\n\nBool is a ValueConverter that converts input values to bools. \n\nThe conversion rules are: \n\n```\n- booleans are returned unchanged\n- for integer types,\n     1 is true\n     0 is false,\n     other integers are an error\n- for strings and []byte, same rules as strconv.ParseBool\n- all other types are an error\n\n```\n"
+                "value": "```Go\nvar ErrSkip = errors.New(\"driver: skip fast-path; continue as if unimplemented\")\n```\n\nErrSkip may be returned by some optional interfaces' methods to indicate at runtime that the fast path is unavailable and the sql package should continue as if the optional interface was not implemented. ErrSkip is only supported where explicitly documented. \n\n"
               },
               "children": null
             }
@@ -140,7 +159,10 @@
                 "identifier": "Int32",
                 "newPage": false,
                 "searchKey": "driver.Int32",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -155,12 +177,38 @@
           },
           {
             "node": {
+              "pathID": "/database/sql/driver#ResultNoRows",
+              "documentation": {
+                "identifier": "ResultNoRows",
+                "newPage": false,
+                "searchKey": "driver.ResultNoRows",
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ResultNoRows"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ResultNoRows noRows\n```\n\nResultNoRows is a pre-defined Result for drivers to return when a DDL command (such as a CREATE TABLE) succeeds. It returns an error for both LastInsertId and RowsAffected. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/database/sql/driver#String",
               "documentation": {
                 "identifier": "String",
                 "newPage": false,
                 "searchKey": "driver.String",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -175,76 +223,14 @@
           },
           {
             "node": {
-              "pathID": "/database/sql/driver#DefaultParameterConverter",
-              "documentation": {
-                "identifier": "DefaultParameterConverter",
-                "newPage": false,
-                "searchKey": "driver.DefaultParameterConverter",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var DefaultParameterConverter"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar DefaultParameterConverter defaultConverter\n```\n\nDefaultParameterConverter is the default implementation of ValueConverter that's used when a Stmt doesn't implement ColumnConverter. \n\nDefaultParameterConverter returns its argument directly if IsValue(arg). Otherwise, if the argument implements Valuer, its Value method is used to return a Value. As a fallback, the provided argument's underlying type is used to convert it to a Value: underlying integer types are converted to int64, floats to float64, bool, string, and []byte to themselves. If the argument is a nil pointer, ConvertValue returns a nil Value. If the argument is a non-nil pointer, it is dereferenced and ConvertValue is called recursively. Other types are an error. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#valuerReflectType",
-              "documentation": {
-                "identifier": "valuerReflectType",
-                "newPage": false,
-                "searchKey": "driver.valuerReflectType",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var valuerReflectType"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar valuerReflectType = reflect.TypeOf((*Valuer)(nil)).Elem()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#now",
-              "documentation": {
-                "identifier": "now",
-                "newPage": false,
-                "searchKey": "driver.now",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var now"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar now = time.Now()\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/database/sql/driver#answer",
               "documentation": {
                 "identifier": "answer",
                 "newPage": false,
                 "searchKey": "driver.answer",
                 "tags": [
+                  "variable",
+                  "number",
                   "private"
                 ]
               },
@@ -261,12 +247,39 @@
           },
           {
             "node": {
+              "pathID": "/database/sql/driver#now",
+              "documentation": {
+                "identifier": "now",
+                "newPage": false,
+                "searchKey": "driver.now",
+                "tags": [
+                  "variable",
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var now"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar now = time.Now()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/database/sql/driver#valueConverterTests",
               "documentation": {
                 "identifier": "valueConverterTests",
                 "newPage": false,
                 "searchKey": "driver.valueConverterTests",
                 "tags": [
+                  "variable",
+                  "array",
+                  "struct",
                   "private"
                 ]
               },
@@ -277,6 +290,30 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar valueConverterTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#valuerReflectType",
+              "documentation": {
+                "identifier": "valuerReflectType",
+                "newPage": false,
+                "searchKey": "driver.valuerReflectType",
+                "tags": [
+                  "variable",
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var valuerReflectType"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar valuerReflectType = reflect.TypeOf((*Valuer)(nil)).Elem()\n```\n\n"
               },
               "children": null
             }
@@ -291,7 +328,9 @@
           "identifier": "type",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -304,63 +343,110 @@
         "children": [
           {
             "node": {
-              "pathID": "/database/sql/driver#Value",
+              "pathID": "/database/sql/driver#ColumnConverter",
               "documentation": {
-                "identifier": "Value",
+                "identifier": "ColumnConverter",
                 "newPage": false,
-                "searchKey": "driver.Value",
-                "tags": null
+                "searchKey": "driver.ColumnConverter",
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type Value interface{}"
+                "value": "type ColumnConverter interface"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype Value interface{}\n```\n\nValue is a value that drivers must be able to handle. It is either nil, a type handled by a database driver's NamedValueChecker interface, or an instance of one of these types: \n\n```\nint64\nfloat64\nbool\n[]byte\nstring\ntime.Time\n\n```\nIf the driver supports cursors, a returned Value may also implement the Rows interface in this package. This is used, for example, when a user selects a cursor such as \"select cursor(select * from my_table) from dual\". If the Rows from the select is closed, the cursor Rows will also be closed. \n\n"
+                "value": "```Go\ntype ColumnConverter interface {\n\t// ColumnConverter returns a ValueConverter for the provided\n\t// column index. If the type of a specific column isn't known\n\t// or shouldn't be handled specially, DefaultValueConverter\n\t// can be returned.\n\tColumnConverter(idx int) ValueConverter\n}\n```\n\nColumnConverter may be optionally implemented by Stmt if the statement is aware of its own columns' types and can convert from any type to a driver Value. \n\nDeprecated: Drivers should implement NamedValueChecker. \n\n"
               },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/database/sql/driver#callValuerValue",
-                    "documentation": {
-                      "identifier": "callValuerValue",
-                      "newPage": false,
-                      "searchKey": "driver.callValuerValue",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func callValuerValue(vr Valuer) (v Value, err error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc callValuerValue(vr Valuer) (v Value, err error)\n```\n\ncallValuerValue returns vr.Value(), with one exception: If vr.Value is an auto-generated method on a pointer type and the pointer is nil, it would panic at runtime in the panicwrap method. Treat it like nil instead. Issue 8415. \n\nThis is so people can implement driver.Value on value types and still use nil pointers to those types to mean nil/NULL, just like string/*string. \n\nThis function is mirrored in the database/sql package. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
+              "children": null
             }
           },
           {
             "node": {
-              "pathID": "/database/sql/driver#NamedValue",
+              "pathID": "/database/sql/driver#Conn",
               "documentation": {
-                "identifier": "NamedValue",
+                "identifier": "Conn",
                 "newPage": false,
-                "searchKey": "driver.NamedValue",
-                "tags": null
+                "searchKey": "driver.Conn",
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type NamedValue struct"
+                "value": "type Conn interface"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype NamedValue struct {\n\t// If the Name is not empty it should be used for the parameter identifier and\n\t// not the ordinal position.\n\t//\n\t// Name will not have a symbol prefix.\n\tName string\n\n\t// Ordinal position of the parameter starting from one and is always set.\n\tOrdinal int\n\n\t// Value is the parameter value.\n\tValue Value\n}\n```\n\nNamedValue holds both the value name and value. \n\n"
+                "value": "```Go\ntype Conn interface {\n\t// Prepare returns a prepared statement, bound to this connection.\n\tPrepare(query string) (Stmt, error)\n\n\t// Close invalidates and potentially stops any current\n\t// prepared statements and transactions, marking this\n\t// connection as no longer in use.\n\t//\n\t// Because the sql package maintains a free pool of\n\t// connections and only calls Close when there's a surplus of\n\t// idle connections, it shouldn't be necessary for drivers to\n\t// do their own connection caching.\n\t//\n\t// Drivers must ensure all network calls made by Close\n\t// do not block indefinitely (e.g. apply a timeout).\n\tClose() error\n\n\t// Begin starts and returns a new transaction.\n\t//\n\t// Deprecated: Drivers should implement ConnBeginTx instead (or additionally).\n\tBegin() (Tx, error)\n}\n```\n\nConn is a connection to a database. It is not used concurrently by multiple goroutines. \n\nConn is assumed to be stateful. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#ConnBeginTx",
+              "documentation": {
+                "identifier": "ConnBeginTx",
+                "newPage": false,
+                "searchKey": "driver.ConnBeginTx",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ConnBeginTx interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ConnBeginTx interface {\n\t// BeginTx starts and returns a new transaction.\n\t// If the context is canceled by the user the sql package will\n\t// call Tx.Rollback before discarding and closing the connection.\n\t//\n\t// This must check opts.Isolation to determine if there is a set\n\t// isolation level. If the driver does not support a non-default\n\t// level and one is set or if there is a non-default isolation level\n\t// that is not supported, an error must be returned.\n\t//\n\t// This must also check opts.ReadOnly to determine if the read-only\n\t// value is true to either set the read-only transaction property if supported\n\t// or return an error if it is not supported.\n\tBeginTx(ctx context.Context, opts TxOptions) (Tx, error)\n}\n```\n\nConnBeginTx enhances the Conn interface with context and TxOptions. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#ConnPrepareContext",
+              "documentation": {
+                "identifier": "ConnPrepareContext",
+                "newPage": false,
+                "searchKey": "driver.ConnPrepareContext",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ConnPrepareContext interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ConnPrepareContext interface {\n\t// PrepareContext returns a prepared statement, bound to this connection.\n\t// context is for the preparation of the statement,\n\t// it must not store the context within the statement itself.\n\tPrepareContext(ctx context.Context, query string) (Stmt, error)\n}\n```\n\nConnPrepareContext enhances the Conn interface with context. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#Connector",
+              "documentation": {
+                "identifier": "Connector",
+                "newPage": false,
+                "searchKey": "driver.Connector",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Connector interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Connector interface {\n\t// Connect returns a connection to the database.\n\t// Connect may return a cached connection (one previously\n\t// closed), but doing so is unnecessary; the sql package\n\t// maintains a pool of idle connections for efficient re-use.\n\t//\n\t// The provided context.Context is for dialing purposes only\n\t// (see net.DialContext) and should not be stored or used for\n\t// other purposes. A default timeout should still be used\n\t// when dialing as a connection pool may call Connect\n\t// asynchronously to any query.\n\t//\n\t// The returned connection is only used by one goroutine at a\n\t// time.\n\tConnect(context.Context) (Conn, error)\n\n\t// Driver returns the underlying Driver of the Connector,\n\t// mainly to maintain compatibility with the Driver method\n\t// on sql.DB.\n\tDriver() Driver\n}\n```\n\nA Connector represents a driver in a fixed configuration and can create any number of equivalent Conns for use by multiple goroutines. \n\nA Connector can be passed to sql.OpenDB, to allow drivers to implement their own sql.DB constructors, or returned by DriverContext's OpenConnector method, to allow drivers access to context and to avoid repeated parsing of driver configuration. \n\nIf a Connector implements io.Closer, the sql package's DB.Close method will call Close and return error (if any). \n\n"
               },
               "children": null
             }
@@ -372,7 +458,9 @@
                 "identifier": "Driver",
                 "newPage": false,
                 "searchKey": "driver.Driver",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -392,7 +480,9 @@
                 "identifier": "DriverContext",
                 "newPage": false,
                 "searchKey": "driver.DriverContext",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -407,52 +497,14 @@
           },
           {
             "node": {
-              "pathID": "/database/sql/driver#Connector",
-              "documentation": {
-                "identifier": "Connector",
-                "newPage": false,
-                "searchKey": "driver.Connector",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Connector interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Connector interface {\n\t// Connect returns a connection to the database.\n\t// Connect may return a cached connection (one previously\n\t// closed), but doing so is unnecessary; the sql package\n\t// maintains a pool of idle connections for efficient re-use.\n\t//\n\t// The provided context.Context is for dialing purposes only\n\t// (see net.DialContext) and should not be stored or used for\n\t// other purposes. A default timeout should still be used\n\t// when dialing as a connection pool may call Connect\n\t// asynchronously to any query.\n\t//\n\t// The returned connection is only used by one goroutine at a\n\t// time.\n\tConnect(context.Context) (Conn, error)\n\n\t// Driver returns the underlying Driver of the Connector,\n\t// mainly to maintain compatibility with the Driver method\n\t// on sql.DB.\n\tDriver() Driver\n}\n```\n\nA Connector represents a driver in a fixed configuration and can create any number of equivalent Conns for use by multiple goroutines. \n\nA Connector can be passed to sql.OpenDB, to allow drivers to implement their own sql.DB constructors, or returned by DriverContext's OpenConnector method, to allow drivers access to context and to avoid repeated parsing of driver configuration. \n\nIf a Connector implements io.Closer, the sql package's DB.Close method will call Close and return error (if any). \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#Pinger",
-              "documentation": {
-                "identifier": "Pinger",
-                "newPage": false,
-                "searchKey": "driver.Pinger",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Pinger interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Pinger interface {\n\tPing(ctx context.Context) error\n}\n```\n\nPinger is an optional interface that may be implemented by a Conn. \n\nIf a Conn does not implement Pinger, the sql package's DB.Ping and DB.PingContext will check if there is at least one Conn available. \n\nIf Conn.Ping returns ErrBadConn, DB.Ping and DB.PingContext will remove the Conn from pool. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/database/sql/driver#Execer",
               "documentation": {
                 "identifier": "Execer",
                 "newPage": false,
                 "searchKey": "driver.Execer",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -472,7 +524,9 @@
                 "identifier": "ExecerContext",
                 "newPage": false,
                 "searchKey": "driver.ExecerContext",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -487,12 +541,192 @@
           },
           {
             "node": {
+              "pathID": "/database/sql/driver#IsolationLevel",
+              "documentation": {
+                "identifier": "IsolationLevel",
+                "newPage": false,
+                "searchKey": "driver.IsolationLevel",
+                "tags": [
+                  "number"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type IsolationLevel int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype IsolationLevel int\n```\n\nIsolationLevel is the transaction isolation level stored in TxOptions. \n\nThis type should be considered identical to sql.IsolationLevel along with any values defined on it. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#NamedValue",
+              "documentation": {
+                "identifier": "NamedValue",
+                "newPage": false,
+                "searchKey": "driver.NamedValue",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NamedValue struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NamedValue struct {\n\t// If the Name is not empty it should be used for the parameter identifier and\n\t// not the ordinal position.\n\t//\n\t// Name will not have a symbol prefix.\n\tName string\n\n\t// Ordinal position of the parameter starting from one and is always set.\n\tOrdinal int\n\n\t// Value is the parameter value.\n\tValue Value\n}\n```\n\nNamedValue holds both the value name and value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#NamedValueChecker",
+              "documentation": {
+                "identifier": "NamedValueChecker",
+                "newPage": false,
+                "searchKey": "driver.NamedValueChecker",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NamedValueChecker interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NamedValueChecker interface {\n\t// CheckNamedValue is called before passing arguments to the driver\n\t// and is called in place of any ColumnConverter. CheckNamedValue must do type\n\t// validation and conversion as appropriate for the driver.\n\tCheckNamedValue(*NamedValue) error\n}\n```\n\nNamedValueChecker may be optionally implemented by Conn or Stmt. It provides the driver more control to handle Go and database types beyond the default Values types allowed. \n\nThe sql package checks for value checkers in the following order, stopping at the first found match: Stmt.NamedValueChecker, Conn.NamedValueChecker, Stmt.ColumnConverter, DefaultParameterConverter. \n\nIf CheckNamedValue returns ErrRemoveArgument, the NamedValue will not be included in the final query arguments. This may be used to pass special options to the query itself. \n\nIf ErrSkip is returned the column converter error checking path is used for the argument. Drivers may wish to return ErrSkip after they have exhausted their own special cases. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#NotNull",
+              "documentation": {
+                "identifier": "NotNull",
+                "newPage": false,
+                "searchKey": "driver.NotNull",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NotNull struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NotNull struct {\n\tConverter ValueConverter\n}\n```\n\nNotNull is a type that implements ValueConverter by disallowing nil values but otherwise delegating to another ValueConverter. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/database/sql/driver#NotNull.ConvertValue",
+                    "documentation": {
+                      "identifier": "NotNull.ConvertValue",
+                      "newPage": false,
+                      "searchKey": "driver.NotNull.ConvertValue",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n NotNull) ConvertValue(v interface{}) (Value, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n NotNull) ConvertValue(v interface{}) (Value, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#Null",
+              "documentation": {
+                "identifier": "Null",
+                "newPage": false,
+                "searchKey": "driver.Null",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Null struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Null struct {\n\tConverter ValueConverter\n}\n```\n\nNull is a type that implements ValueConverter by allowing nil values but otherwise delegating to another ValueConverter. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/database/sql/driver#Null.ConvertValue",
+                    "documentation": {
+                      "identifier": "Null.ConvertValue",
+                      "newPage": false,
+                      "searchKey": "driver.Null.ConvertValue",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n Null) ConvertValue(v interface{}) (Value, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n Null) ConvertValue(v interface{}) (Value, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#Pinger",
+              "documentation": {
+                "identifier": "Pinger",
+                "newPage": false,
+                "searchKey": "driver.Pinger",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Pinger interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Pinger interface {\n\tPing(ctx context.Context) error\n}\n```\n\nPinger is an optional interface that may be implemented by a Conn. \n\nIf a Conn does not implement Pinger, the sql package's DB.Ping and DB.PingContext will check if there is at least one Conn available. \n\nIf Conn.Ping returns ErrBadConn, DB.Ping and DB.PingContext will remove the Conn from pool. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/database/sql/driver#Queryer",
               "documentation": {
                 "identifier": "Queryer",
                 "newPage": false,
                 "searchKey": "driver.Queryer",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -512,7 +746,9 @@
                 "identifier": "QueryerContext",
                 "newPage": false,
                 "searchKey": "driver.QueryerContext",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -527,152 +763,14 @@
           },
           {
             "node": {
-              "pathID": "/database/sql/driver#Conn",
-              "documentation": {
-                "identifier": "Conn",
-                "newPage": false,
-                "searchKey": "driver.Conn",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Conn interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Conn interface {\n\t// Prepare returns a prepared statement, bound to this connection.\n\tPrepare(query string) (Stmt, error)\n\n\t// Close invalidates and potentially stops any current\n\t// prepared statements and transactions, marking this\n\t// connection as no longer in use.\n\t//\n\t// Because the sql package maintains a free pool of\n\t// connections and only calls Close when there's a surplus of\n\t// idle connections, it shouldn't be necessary for drivers to\n\t// do their own connection caching.\n\t//\n\t// Drivers must ensure all network calls made by Close\n\t// do not block indefinitely (e.g. apply a timeout).\n\tClose() error\n\n\t// Begin starts and returns a new transaction.\n\t//\n\t// Deprecated: Drivers should implement ConnBeginTx instead (or additionally).\n\tBegin() (Tx, error)\n}\n```\n\nConn is a connection to a database. It is not used concurrently by multiple goroutines. \n\nConn is assumed to be stateful. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#ConnPrepareContext",
-              "documentation": {
-                "identifier": "ConnPrepareContext",
-                "newPage": false,
-                "searchKey": "driver.ConnPrepareContext",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ConnPrepareContext interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ConnPrepareContext interface {\n\t// PrepareContext returns a prepared statement, bound to this connection.\n\t// context is for the preparation of the statement,\n\t// it must not store the context within the statement itself.\n\tPrepareContext(ctx context.Context, query string) (Stmt, error)\n}\n```\n\nConnPrepareContext enhances the Conn interface with context. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#IsolationLevel",
-              "documentation": {
-                "identifier": "IsolationLevel",
-                "newPage": false,
-                "searchKey": "driver.IsolationLevel",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type IsolationLevel int"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype IsolationLevel int\n```\n\nIsolationLevel is the transaction isolation level stored in TxOptions. \n\nThis type should be considered identical to sql.IsolationLevel along with any values defined on it. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#TxOptions",
-              "documentation": {
-                "identifier": "TxOptions",
-                "newPage": false,
-                "searchKey": "driver.TxOptions",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type TxOptions struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype TxOptions struct {\n\tIsolation IsolationLevel\n\tReadOnly  bool\n}\n```\n\nTxOptions holds the transaction options. \n\nThis type should be considered identical to sql.TxOptions. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#ConnBeginTx",
-              "documentation": {
-                "identifier": "ConnBeginTx",
-                "newPage": false,
-                "searchKey": "driver.ConnBeginTx",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ConnBeginTx interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ConnBeginTx interface {\n\t// BeginTx starts and returns a new transaction.\n\t// If the context is canceled by the user the sql package will\n\t// call Tx.Rollback before discarding and closing the connection.\n\t//\n\t// This must check opts.Isolation to determine if there is a set\n\t// isolation level. If the driver does not support a non-default\n\t// level and one is set or if there is a non-default isolation level\n\t// that is not supported, an error must be returned.\n\t//\n\t// This must also check opts.ReadOnly to determine if the read-only\n\t// value is true to either set the read-only transaction property if supported\n\t// or return an error if it is not supported.\n\tBeginTx(ctx context.Context, opts TxOptions) (Tx, error)\n}\n```\n\nConnBeginTx enhances the Conn interface with context and TxOptions. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#SessionResetter",
-              "documentation": {
-                "identifier": "SessionResetter",
-                "newPage": false,
-                "searchKey": "driver.SessionResetter",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type SessionResetter interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype SessionResetter interface {\n\t// ResetSession is called prior to executing a query on the connection\n\t// if the connection has been used before. If the driver returns ErrBadConn\n\t// the connection is discarded.\n\tResetSession(ctx context.Context) error\n}\n```\n\nSessionResetter may be implemented by Conn to allow drivers to reset the session state associated with the connection and to signal a bad connection. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#Validator",
-              "documentation": {
-                "identifier": "Validator",
-                "newPage": false,
-                "searchKey": "driver.Validator",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Validator interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Validator interface {\n\t// IsValid is called prior to placing the connection into the\n\t// connection pool. The connection will be discarded if false is returned.\n\tIsValid() bool\n}\n```\n\nValidator may be implemented by Conn to allow drivers to signal if a connection is valid or if it should be discarded. \n\nIf implemented, drivers may return the underlying error from queries, even if the connection should be discarded by the connection pool. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/database/sql/driver#Result",
               "documentation": {
                 "identifier": "Result",
                 "newPage": false,
                 "searchKey": "driver.Result",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -687,112 +785,14 @@
           },
           {
             "node": {
-              "pathID": "/database/sql/driver#Stmt",
-              "documentation": {
-                "identifier": "Stmt",
-                "newPage": false,
-                "searchKey": "driver.Stmt",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Stmt interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Stmt interface {\n\t// Close closes the statement.\n\t//\n\t// As of Go 1.1, a Stmt will not be closed if it's in use\n\t// by any queries.\n\t//\n\t// Drivers must ensure all network calls made by Close\n\t// do not block indefinitely (e.g. apply a timeout).\n\tClose() error\n\n\t// NumInput returns the number of placeholder parameters.\n\t//\n\t// If NumInput returns >= 0, the sql package will sanity check\n\t// argument counts from callers and return errors to the caller\n\t// before the statement's Exec or Query methods are called.\n\t//\n\t// NumInput may also return -1, if the driver doesn't know\n\t// its number of placeholders. In that case, the sql package\n\t// will not sanity check Exec or Query argument counts.\n\tNumInput() int\n\n\t// Exec executes a query that doesn't return rows, such\n\t// as an INSERT or UPDATE.\n\t//\n\t// Deprecated: Drivers should implement StmtExecContext instead (or additionally).\n\tExec(args []Value) (Result, error)\n\n\t// Query executes a query that may return rows, such as a\n\t// SELECT.\n\t//\n\t// Deprecated: Drivers should implement StmtQueryContext instead (or additionally).\n\tQuery(args []Value) (Rows, error)\n}\n```\n\nStmt is a prepared statement. It is bound to a Conn and not used by multiple goroutines concurrently. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#StmtExecContext",
-              "documentation": {
-                "identifier": "StmtExecContext",
-                "newPage": false,
-                "searchKey": "driver.StmtExecContext",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type StmtExecContext interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype StmtExecContext interface {\n\t// ExecContext executes a query that doesn't return rows, such\n\t// as an INSERT or UPDATE.\n\t//\n\t// ExecContext must honor the context timeout and return when it is canceled.\n\tExecContext(ctx context.Context, args []NamedValue) (Result, error)\n}\n```\n\nStmtExecContext enhances the Stmt interface by providing Exec with context. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#StmtQueryContext",
-              "documentation": {
-                "identifier": "StmtQueryContext",
-                "newPage": false,
-                "searchKey": "driver.StmtQueryContext",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type StmtQueryContext interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype StmtQueryContext interface {\n\t// QueryContext executes a query that may return rows, such as a\n\t// SELECT.\n\t//\n\t// QueryContext must honor the context timeout and return when it is canceled.\n\tQueryContext(ctx context.Context, args []NamedValue) (Rows, error)\n}\n```\n\nStmtQueryContext enhances the Stmt interface by providing Query with context. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#NamedValueChecker",
-              "documentation": {
-                "identifier": "NamedValueChecker",
-                "newPage": false,
-                "searchKey": "driver.NamedValueChecker",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type NamedValueChecker interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype NamedValueChecker interface {\n\t// CheckNamedValue is called before passing arguments to the driver\n\t// and is called in place of any ColumnConverter. CheckNamedValue must do type\n\t// validation and conversion as appropriate for the driver.\n\tCheckNamedValue(*NamedValue) error\n}\n```\n\nNamedValueChecker may be optionally implemented by Conn or Stmt. It provides the driver more control to handle Go and database types beyond the default Values types allowed. \n\nThe sql package checks for value checkers in the following order, stopping at the first found match: Stmt.NamedValueChecker, Conn.NamedValueChecker, Stmt.ColumnConverter, DefaultParameterConverter. \n\nIf CheckNamedValue returns ErrRemoveArgument, the NamedValue will not be included in the final query arguments. This may be used to pass special options to the query itself. \n\nIf ErrSkip is returned the column converter error checking path is used for the argument. Drivers may wish to return ErrSkip after they have exhausted their own special cases. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#ColumnConverter",
-              "documentation": {
-                "identifier": "ColumnConverter",
-                "newPage": false,
-                "searchKey": "driver.ColumnConverter",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ColumnConverter interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ColumnConverter interface {\n\t// ColumnConverter returns a ValueConverter for the provided\n\t// column index. If the type of a specific column isn't known\n\t// or shouldn't be handled specially, DefaultValueConverter\n\t// can be returned.\n\tColumnConverter(idx int) ValueConverter\n}\n```\n\nColumnConverter may be optionally implemented by Stmt if the statement is aware of its own columns' types and can convert from any type to a driver Value. \n\nDeprecated: Drivers should implement NamedValueChecker. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/database/sql/driver#Rows",
               "documentation": {
                 "identifier": "Rows",
                 "newPage": false,
                 "searchKey": "driver.Rows",
-                "tags": null
+                "tags": [
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -807,152 +807,14 @@
           },
           {
             "node": {
-              "pathID": "/database/sql/driver#RowsNextResultSet",
-              "documentation": {
-                "identifier": "RowsNextResultSet",
-                "newPage": false,
-                "searchKey": "driver.RowsNextResultSet",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RowsNextResultSet interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RowsNextResultSet interface {\n\tRows\n\n\t// HasNextResultSet is called at the end of the current result set and\n\t// reports whether there is another result set after the current one.\n\tHasNextResultSet() bool\n\n\t// NextResultSet advances the driver to the next result set even\n\t// if there are remaining rows in the current result set.\n\t//\n\t// NextResultSet should return io.EOF when there are no more result sets.\n\tNextResultSet() error\n}\n```\n\nRowsNextResultSet extends the Rows interface by providing a way to signal the driver to advance to the next result set. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#RowsColumnTypeScanType",
-              "documentation": {
-                "identifier": "RowsColumnTypeScanType",
-                "newPage": false,
-                "searchKey": "driver.RowsColumnTypeScanType",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RowsColumnTypeScanType interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RowsColumnTypeScanType interface {\n\tRows\n\tColumnTypeScanType(index int) reflect.Type\n}\n```\n\nRowsColumnTypeScanType may be implemented by Rows. It should return the value type that can be used to scan types into. For example, the database column type \"bigint\" this should return \"reflect.TypeOf(int64(0))\". \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#RowsColumnTypeDatabaseTypeName",
-              "documentation": {
-                "identifier": "RowsColumnTypeDatabaseTypeName",
-                "newPage": false,
-                "searchKey": "driver.RowsColumnTypeDatabaseTypeName",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RowsColumnTypeDatabaseTypeName interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RowsColumnTypeDatabaseTypeName interface {\n\tRows\n\tColumnTypeDatabaseTypeName(index int) string\n}\n```\n\nRowsColumnTypeDatabaseTypeName may be implemented by Rows. It should return the database system type name without the length. Type names should be uppercase. Examples of returned types: \"VARCHAR\", \"NVARCHAR\", \"VARCHAR2\", \"CHAR\", \"TEXT\", \"DECIMAL\", \"SMALLINT\", \"INT\", \"BIGINT\", \"BOOL\", \"[]BIGINT\", \"JSONB\", \"XML\", \"TIMESTAMP\". \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#RowsColumnTypeLength",
-              "documentation": {
-                "identifier": "RowsColumnTypeLength",
-                "newPage": false,
-                "searchKey": "driver.RowsColumnTypeLength",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RowsColumnTypeLength interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RowsColumnTypeLength interface {\n\tRows\n\tColumnTypeLength(index int) (length int64, ok bool)\n}\n```\n\nRowsColumnTypeLength may be implemented by Rows. It should return the length of the column type if the column is a variable length type. If the column is not a variable length type ok should return false. If length is not limited other than system limits, it should return math.MaxInt64. The following are examples of returned values for various types: \n\n```\nTEXT          (math.MaxInt64, true)\nvarchar(10)   (10, true)\nnvarchar(10)  (10, true)\ndecimal       (0, false)\nint           (0, false)\nbytea(30)     (30, true)\n\n```\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#RowsColumnTypeNullable",
-              "documentation": {
-                "identifier": "RowsColumnTypeNullable",
-                "newPage": false,
-                "searchKey": "driver.RowsColumnTypeNullable",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RowsColumnTypeNullable interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RowsColumnTypeNullable interface {\n\tRows\n\tColumnTypeNullable(index int) (nullable, ok bool)\n}\n```\n\nRowsColumnTypeNullable may be implemented by Rows. The nullable value should be true if it is known the column may be null, or false if the column is known to be not nullable. If the column nullability is unknown, ok should be false. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#RowsColumnTypePrecisionScale",
-              "documentation": {
-                "identifier": "RowsColumnTypePrecisionScale",
-                "newPage": false,
-                "searchKey": "driver.RowsColumnTypePrecisionScale",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type RowsColumnTypePrecisionScale interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype RowsColumnTypePrecisionScale interface {\n\tRows\n\tColumnTypePrecisionScale(index int) (precision, scale int64, ok bool)\n}\n```\n\nRowsColumnTypePrecisionScale may be implemented by Rows. It should return the precision and scale for decimal types. If not applicable, ok should be false. The following are examples of returned values for various types: \n\n```\ndecimal(38, 4)    (38, 4, true)\nint               (0, 0, false)\ndecimal           (math.MaxInt64, math.MaxInt64, true)\n\n```\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#Tx",
-              "documentation": {
-                "identifier": "Tx",
-                "newPage": false,
-                "searchKey": "driver.Tx",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Tx interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Tx interface {\n\tCommit() error\n\tRollback() error\n}\n```\n\nTx is a transaction. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/database/sql/driver#RowsAffected",
               "documentation": {
                 "identifier": "RowsAffected",
                 "newPage": false,
                 "searchKey": "driver.RowsAffected",
-                "tags": null
+                "tags": [
+                  "number"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -970,7 +832,9 @@
                       "identifier": "RowsAffected.LastInsertId",
                       "newPage": false,
                       "searchKey": "driver.RowsAffected.LastInsertId",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -990,7 +854,9 @@
                       "identifier": "RowsAffected.RowsAffected",
                       "newPage": false,
                       "searchKey": "driver.RowsAffected.RowsAffected",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -1008,12 +874,740 @@
           },
           {
             "node": {
+              "pathID": "/database/sql/driver#RowsColumnTypeDatabaseTypeName",
+              "documentation": {
+                "identifier": "RowsColumnTypeDatabaseTypeName",
+                "newPage": false,
+                "searchKey": "driver.RowsColumnTypeDatabaseTypeName",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RowsColumnTypeDatabaseTypeName interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RowsColumnTypeDatabaseTypeName interface {\n\tRows\n\tColumnTypeDatabaseTypeName(index int) string\n}\n```\n\nRowsColumnTypeDatabaseTypeName may be implemented by Rows. It should return the database system type name without the length. Type names should be uppercase. Examples of returned types: \"VARCHAR\", \"NVARCHAR\", \"VARCHAR2\", \"CHAR\", \"TEXT\", \"DECIMAL\", \"SMALLINT\", \"INT\", \"BIGINT\", \"BOOL\", \"[]BIGINT\", \"JSONB\", \"XML\", \"TIMESTAMP\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#RowsColumnTypeLength",
+              "documentation": {
+                "identifier": "RowsColumnTypeLength",
+                "newPage": false,
+                "searchKey": "driver.RowsColumnTypeLength",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RowsColumnTypeLength interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RowsColumnTypeLength interface {\n\tRows\n\tColumnTypeLength(index int) (length int64, ok bool)\n}\n```\n\nRowsColumnTypeLength may be implemented by Rows. It should return the length of the column type if the column is a variable length type. If the column is not a variable length type ok should return false. If length is not limited other than system limits, it should return math.MaxInt64. The following are examples of returned values for various types: \n\n```\nTEXT          (math.MaxInt64, true)\nvarchar(10)   (10, true)\nnvarchar(10)  (10, true)\ndecimal       (0, false)\nint           (0, false)\nbytea(30)     (30, true)\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#RowsColumnTypeNullable",
+              "documentation": {
+                "identifier": "RowsColumnTypeNullable",
+                "newPage": false,
+                "searchKey": "driver.RowsColumnTypeNullable",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RowsColumnTypeNullable interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RowsColumnTypeNullable interface {\n\tRows\n\tColumnTypeNullable(index int) (nullable, ok bool)\n}\n```\n\nRowsColumnTypeNullable may be implemented by Rows. The nullable value should be true if it is known the column may be null, or false if the column is known to be not nullable. If the column nullability is unknown, ok should be false. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#RowsColumnTypePrecisionScale",
+              "documentation": {
+                "identifier": "RowsColumnTypePrecisionScale",
+                "newPage": false,
+                "searchKey": "driver.RowsColumnTypePrecisionScale",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RowsColumnTypePrecisionScale interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RowsColumnTypePrecisionScale interface {\n\tRows\n\tColumnTypePrecisionScale(index int) (precision, scale int64, ok bool)\n}\n```\n\nRowsColumnTypePrecisionScale may be implemented by Rows. It should return the precision and scale for decimal types. If not applicable, ok should be false. The following are examples of returned values for various types: \n\n```\ndecimal(38, 4)    (38, 4, true)\nint               (0, 0, false)\ndecimal           (math.MaxInt64, math.MaxInt64, true)\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#RowsColumnTypeScanType",
+              "documentation": {
+                "identifier": "RowsColumnTypeScanType",
+                "newPage": false,
+                "searchKey": "driver.RowsColumnTypeScanType",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RowsColumnTypeScanType interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RowsColumnTypeScanType interface {\n\tRows\n\tColumnTypeScanType(index int) reflect.Type\n}\n```\n\nRowsColumnTypeScanType may be implemented by Rows. It should return the value type that can be used to scan types into. For example, the database column type \"bigint\" this should return \"reflect.TypeOf(int64(0))\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#RowsNextResultSet",
+              "documentation": {
+                "identifier": "RowsNextResultSet",
+                "newPage": false,
+                "searchKey": "driver.RowsNextResultSet",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RowsNextResultSet interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RowsNextResultSet interface {\n\tRows\n\n\t// HasNextResultSet is called at the end of the current result set and\n\t// reports whether there is another result set after the current one.\n\tHasNextResultSet() bool\n\n\t// NextResultSet advances the driver to the next result set even\n\t// if there are remaining rows in the current result set.\n\t//\n\t// NextResultSet should return io.EOF when there are no more result sets.\n\tNextResultSet() error\n}\n```\n\nRowsNextResultSet extends the Rows interface by providing a way to signal the driver to advance to the next result set. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#SessionResetter",
+              "documentation": {
+                "identifier": "SessionResetter",
+                "newPage": false,
+                "searchKey": "driver.SessionResetter",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SessionResetter interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SessionResetter interface {\n\t// ResetSession is called prior to executing a query on the connection\n\t// if the connection has been used before. If the driver returns ErrBadConn\n\t// the connection is discarded.\n\tResetSession(ctx context.Context) error\n}\n```\n\nSessionResetter may be implemented by Conn to allow drivers to reset the session state associated with the connection and to signal a bad connection. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#Stmt",
+              "documentation": {
+                "identifier": "Stmt",
+                "newPage": false,
+                "searchKey": "driver.Stmt",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Stmt interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Stmt interface {\n\t// Close closes the statement.\n\t//\n\t// As of Go 1.1, a Stmt will not be closed if it's in use\n\t// by any queries.\n\t//\n\t// Drivers must ensure all network calls made by Close\n\t// do not block indefinitely (e.g. apply a timeout).\n\tClose() error\n\n\t// NumInput returns the number of placeholder parameters.\n\t//\n\t// If NumInput returns >= 0, the sql package will sanity check\n\t// argument counts from callers and return errors to the caller\n\t// before the statement's Exec or Query methods are called.\n\t//\n\t// NumInput may also return -1, if the driver doesn't know\n\t// its number of placeholders. In that case, the sql package\n\t// will not sanity check Exec or Query argument counts.\n\tNumInput() int\n\n\t// Exec executes a query that doesn't return rows, such\n\t// as an INSERT or UPDATE.\n\t//\n\t// Deprecated: Drivers should implement StmtExecContext instead (or additionally).\n\tExec(args []Value) (Result, error)\n\n\t// Query executes a query that may return rows, such as a\n\t// SELECT.\n\t//\n\t// Deprecated: Drivers should implement StmtQueryContext instead (or additionally).\n\tQuery(args []Value) (Rows, error)\n}\n```\n\nStmt is a prepared statement. It is bound to a Conn and not used by multiple goroutines concurrently. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#StmtExecContext",
+              "documentation": {
+                "identifier": "StmtExecContext",
+                "newPage": false,
+                "searchKey": "driver.StmtExecContext",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StmtExecContext interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StmtExecContext interface {\n\t// ExecContext executes a query that doesn't return rows, such\n\t// as an INSERT or UPDATE.\n\t//\n\t// ExecContext must honor the context timeout and return when it is canceled.\n\tExecContext(ctx context.Context, args []NamedValue) (Result, error)\n}\n```\n\nStmtExecContext enhances the Stmt interface by providing Exec with context. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#StmtQueryContext",
+              "documentation": {
+                "identifier": "StmtQueryContext",
+                "newPage": false,
+                "searchKey": "driver.StmtQueryContext",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StmtQueryContext interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StmtQueryContext interface {\n\t// QueryContext executes a query that may return rows, such as a\n\t// SELECT.\n\t//\n\t// QueryContext must honor the context timeout and return when it is canceled.\n\tQueryContext(ctx context.Context, args []NamedValue) (Rows, error)\n}\n```\n\nStmtQueryContext enhances the Stmt interface by providing Query with context. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#Tx",
+              "documentation": {
+                "identifier": "Tx",
+                "newPage": false,
+                "searchKey": "driver.Tx",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Tx interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Tx interface {\n\tCommit() error\n\tRollback() error\n}\n```\n\nTx is a transaction. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#TxOptions",
+              "documentation": {
+                "identifier": "TxOptions",
+                "newPage": false,
+                "searchKey": "driver.TxOptions",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TxOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TxOptions struct {\n\tIsolation IsolationLevel\n\tReadOnly  bool\n}\n```\n\nTxOptions holds the transaction options. \n\nThis type should be considered identical to sql.TxOptions. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#Validator",
+              "documentation": {
+                "identifier": "Validator",
+                "newPage": false,
+                "searchKey": "driver.Validator",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Validator interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Validator interface {\n\t// IsValid is called prior to placing the connection into the\n\t// connection pool. The connection will be discarded if false is returned.\n\tIsValid() bool\n}\n```\n\nValidator may be implemented by Conn to allow drivers to signal if a connection is valid or if it should be discarded. \n\nIf implemented, drivers may return the underlying error from queries, even if the connection should be discarded by the connection pool. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#Value",
+              "documentation": {
+                "identifier": "Value",
+                "newPage": false,
+                "searchKey": "driver.Value",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Value interface{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Value interface{}\n```\n\nValue is a value that drivers must be able to handle. It is either nil, a type handled by a database driver's NamedValueChecker interface, or an instance of one of these types: \n\n```\nint64\nfloat64\nbool\n[]byte\nstring\ntime.Time\n\n```\nIf the driver supports cursors, a returned Value may also implement the Rows interface in this package. This is used, for example, when a user selects a cursor such as \"select cursor(select * from my_table) from dual\". If the Rows from the select is closed, the cursor Rows will also be closed. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/database/sql/driver#callValuerValue",
+                    "documentation": {
+                      "identifier": "callValuerValue",
+                      "newPage": false,
+                      "searchKey": "driver.callValuerValue",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func callValuerValue(vr Valuer) (v Value, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc callValuerValue(vr Valuer) (v Value, err error)\n```\n\ncallValuerValue returns vr.Value(), with one exception: If vr.Value is an auto-generated method on a pointer type and the pointer is nil, it would panic at runtime in the panicwrap method. Treat it like nil instead. Issue 8415. \n\nThis is so people can implement driver.Value on value types and still use nil pointers to those types to mean nil/NULL, just like string/*string. \n\nThis function is mirrored in the database/sql package. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#ValueConverter",
+              "documentation": {
+                "identifier": "ValueConverter",
+                "newPage": false,
+                "searchKey": "driver.ValueConverter",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ValueConverter interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ValueConverter interface {\n\t// ConvertValue converts a value to a driver Value.\n\tConvertValue(v interface{}) (Value, error)\n}\n```\n\nValueConverter is the interface providing the ConvertValue method. \n\nVarious implementations of ValueConverter are provided by the driver package to provide consistent implementations of conversions between drivers. The ValueConverters have several uses: \n\n```\n* converting from the Value types as provided by the sql package\n  into a database table's specific column type and making sure it\n  fits, such as making sure a particular int64 fits in a\n  table's uint16 column.\n\n* converting a value as given from the database into one of the\n  driver Value types.\n\n* by the sql package, for converting from a driver's Value type\n  to a user's type in a scan.\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#Valuer",
+              "documentation": {
+                "identifier": "Valuer",
+                "newPage": false,
+                "searchKey": "driver.Valuer",
+                "tags": [
+                  "interface"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Valuer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Valuer interface {\n\t// Value returns a driver Value.\n\t// Value must not panic.\n\tValue() (Value, error)\n}\n```\n\nValuer is the interface providing the Value method. \n\nTypes implementing Valuer interface are able to convert themselves to a driver Value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#b",
+              "documentation": {
+                "identifier": "b",
+                "newPage": false,
+                "searchKey": "driver.b",
+                "tags": [
+                  "boolean",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type b bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype b bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#boolType",
+              "documentation": {
+                "identifier": "boolType",
+                "newPage": false,
+                "searchKey": "driver.boolType",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type boolType struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype boolType struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/database/sql/driver#boolType.ConvertValue",
+                    "documentation": {
+                      "identifier": "boolType.ConvertValue",
+                      "newPage": false,
+                      "searchKey": "driver.boolType.ConvertValue",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (boolType) ConvertValue(src interface{}) (Value, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (boolType) ConvertValue(src interface{}) (Value, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/database/sql/driver#boolType.String",
+                    "documentation": {
+                      "identifier": "boolType.String",
+                      "newPage": false,
+                      "searchKey": "driver.boolType.String",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (boolType) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (boolType) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#bs",
+              "documentation": {
+                "identifier": "bs",
+                "newPage": false,
+                "searchKey": "driver.bs",
+                "tags": [
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type bs []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype bs []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#dec",
+              "documentation": {
+                "identifier": "dec",
+                "newPage": false,
+                "searchKey": "driver.dec",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type dec struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype dec struct {\n\tform        byte\n\tneg         bool\n\tcoefficient [16]byte\n\texponent    int32\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/database/sql/driver#dec.Decompose",
+                    "documentation": {
+                      "identifier": "dec.Decompose",
+                      "newPage": false,
+                      "searchKey": "driver.dec.Decompose",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d dec) Decompose(buf []byte) (form byte, negative bool, coefficient []byte, exponent int32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d dec) Decompose(buf []byte) (form byte, negative bool, coefficient []byte, exponent int32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#decimalDecompose",
+              "documentation": {
+                "identifier": "decimalDecompose",
+                "newPage": false,
+                "searchKey": "driver.decimalDecompose",
+                "tags": [
+                  "interface",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type decimalDecompose interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype decimalDecompose interface {\n\t// Decompose returns the internal decimal state into parts.\n\t// If the provided buf has sufficient capacity, buf may be returned as the coefficient with\n\t// the value set and length set as appropriate.\n\tDecompose(buf []byte) (form byte, negative bool, coefficient []byte, exponent int32)\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#defaultConverter",
+              "documentation": {
+                "identifier": "defaultConverter",
+                "newPage": false,
+                "searchKey": "driver.defaultConverter",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type defaultConverter struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype defaultConverter struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/database/sql/driver#defaultConverter.ConvertValue",
+                    "documentation": {
+                      "identifier": "defaultConverter.ConvertValue",
+                      "newPage": false,
+                      "searchKey": "driver.defaultConverter.ConvertValue",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (defaultConverter) ConvertValue(v interface{}) (Value, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (defaultConverter) ConvertValue(v interface{}) (Value, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#f",
+              "documentation": {
+                "identifier": "f",
+                "newPage": false,
+                "searchKey": "driver.f",
+                "tags": [
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type f float64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype f float64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#i",
+              "documentation": {
+                "identifier": "i",
+                "newPage": false,
+                "searchKey": "driver.i",
+                "tags": [
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type i int64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype i int64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#int32Type",
+              "documentation": {
+                "identifier": "int32Type",
+                "newPage": false,
+                "searchKey": "driver.int32Type",
+                "tags": [
+                  "struct",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type int32Type struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype int32Type struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/database/sql/driver#int32Type.ConvertValue",
+                    "documentation": {
+                      "identifier": "int32Type.ConvertValue",
+                      "newPage": false,
+                      "searchKey": "driver.int32Type.ConvertValue",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (int32Type) ConvertValue(v interface{}) (Value, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (int32Type) ConvertValue(v interface{}) (Value, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/database/sql/driver#is",
+              "documentation": {
+                "identifier": "is",
+                "newPage": false,
+                "searchKey": "driver.is",
+                "tags": [
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type is []int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype is []int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/database/sql/driver#noRows",
               "documentation": {
                 "identifier": "noRows",
                 "newPage": false,
                 "searchKey": "driver.noRows",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1034,6 +1628,7 @@
                       "newPage": false,
                       "searchKey": "driver.noRows.LastInsertId",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1056,6 +1651,7 @@
                       "newPage": false,
                       "searchKey": "driver.noRows.RowsAffected",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -1075,154 +1671,25 @@
           },
           {
             "node": {
-              "pathID": "/database/sql/driver#ValueConverter",
+              "pathID": "/database/sql/driver#s",
               "documentation": {
-                "identifier": "ValueConverter",
+                "identifier": "s",
                 "newPage": false,
-                "searchKey": "driver.ValueConverter",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type ValueConverter interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype ValueConverter interface {\n\t// ConvertValue converts a value to a driver Value.\n\tConvertValue(v interface{}) (Value, error)\n}\n```\n\nValueConverter is the interface providing the ConvertValue method. \n\nVarious implementations of ValueConverter are provided by the driver package to provide consistent implementations of conversions between drivers. The ValueConverters have several uses: \n\n```\n* converting from the Value types as provided by the sql package\n  into a database table's specific column type and making sure it\n  fits, such as making sure a particular int64 fits in a\n  table's uint16 column.\n\n* converting a value as given from the database into one of the\n  driver Value types.\n\n* by the sql package, for converting from a driver's Value type\n  to a user's type in a scan.\n\n```\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#Valuer",
-              "documentation": {
-                "identifier": "Valuer",
-                "newPage": false,
-                "searchKey": "driver.Valuer",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Valuer interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Valuer interface {\n\t// Value returns a driver Value.\n\t// Value must not panic.\n\tValue() (Value, error)\n}\n```\n\nValuer is the interface providing the Value method. \n\nTypes implementing Valuer interface are able to convert themselves to a driver Value. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#boolType",
-              "documentation": {
-                "identifier": "boolType",
-                "newPage": false,
-                "searchKey": "driver.boolType",
+                "searchKey": "driver.s",
                 "tags": [
+                  "string",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type boolType struct{}"
+                "value": "type s string"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype boolType struct{}\n```\n\n"
+                "value": "```Go\ntype s string\n```\n\n"
               },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/database/sql/driver#boolType.String",
-                    "documentation": {
-                      "identifier": "boolType.String",
-                      "newPage": false,
-                      "searchKey": "driver.boolType.String",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (boolType) String() string"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (boolType) String() string\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/database/sql/driver#boolType.ConvertValue",
-                    "documentation": {
-                      "identifier": "boolType.ConvertValue",
-                      "newPage": false,
-                      "searchKey": "driver.boolType.ConvertValue",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (boolType) ConvertValue(src interface{}) (Value, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (boolType) ConvertValue(src interface{}) (Value, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#int32Type",
-              "documentation": {
-                "identifier": "int32Type",
-                "newPage": false,
-                "searchKey": "driver.int32Type",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type int32Type struct{}"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype int32Type struct{}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/database/sql/driver#int32Type.ConvertValue",
-                    "documentation": {
-                      "identifier": "int32Type.ConvertValue",
-                      "newPage": false,
-                      "searchKey": "driver.int32Type.ConvertValue",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (int32Type) ConvertValue(v interface{}) (Value, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (int32Type) ConvertValue(v interface{}) (Value, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
+              "children": null
             }
           },
           {
@@ -1233,6 +1700,7 @@
                 "newPage": false,
                 "searchKey": "driver.stringType",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1253,6 +1721,7 @@
                       "newPage": false,
                       "searchKey": "driver.stringType.ConvertValue",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -1272,293 +1741,13 @@
           },
           {
             "node": {
-              "pathID": "/database/sql/driver#Null",
-              "documentation": {
-                "identifier": "Null",
-                "newPage": false,
-                "searchKey": "driver.Null",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Null struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Null struct {\n\tConverter ValueConverter\n}\n```\n\nNull is a type that implements ValueConverter by allowing nil values but otherwise delegating to another ValueConverter. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/database/sql/driver#Null.ConvertValue",
-                    "documentation": {
-                      "identifier": "Null.ConvertValue",
-                      "newPage": false,
-                      "searchKey": "driver.Null.ConvertValue",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (n Null) ConvertValue(v interface{}) (Value, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (n Null) ConvertValue(v interface{}) (Value, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#NotNull",
-              "documentation": {
-                "identifier": "NotNull",
-                "newPage": false,
-                "searchKey": "driver.NotNull",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type NotNull struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype NotNull struct {\n\tConverter ValueConverter\n}\n```\n\nNotNull is a type that implements ValueConverter by disallowing nil values but otherwise delegating to another ValueConverter. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/database/sql/driver#NotNull.ConvertValue",
-                    "documentation": {
-                      "identifier": "NotNull.ConvertValue",
-                      "newPage": false,
-                      "searchKey": "driver.NotNull.ConvertValue",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (n NotNull) ConvertValue(v interface{}) (Value, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (n NotNull) ConvertValue(v interface{}) (Value, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#defaultConverter",
-              "documentation": {
-                "identifier": "defaultConverter",
-                "newPage": false,
-                "searchKey": "driver.defaultConverter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type defaultConverter struct{}"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype defaultConverter struct{}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/database/sql/driver#defaultConverter.ConvertValue",
-                    "documentation": {
-                      "identifier": "defaultConverter.ConvertValue",
-                      "newPage": false,
-                      "searchKey": "driver.defaultConverter.ConvertValue",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (defaultConverter) ConvertValue(v interface{}) (Value, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (defaultConverter) ConvertValue(v interface{}) (Value, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#decimalDecompose",
-              "documentation": {
-                "identifier": "decimalDecompose",
-                "newPage": false,
-                "searchKey": "driver.decimalDecompose",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type decimalDecompose interface"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype decimalDecompose interface {\n\t// Decompose returns the internal decimal state into parts.\n\t// If the provided buf has sufficient capacity, buf may be returned as the coefficient with\n\t// the value set and length set as appropriate.\n\tDecompose(buf []byte) (form byte, negative bool, coefficient []byte, exponent int32)\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#valueConverterTest",
-              "documentation": {
-                "identifier": "valueConverterTest",
-                "newPage": false,
-                "searchKey": "driver.valueConverterTest",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type valueConverterTest struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype valueConverterTest struct {\n\tc   ValueConverter\n\tin  interface{}\n\tout interface{}\n\terr string\n}\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#i",
-              "documentation": {
-                "identifier": "i",
-                "newPage": false,
-                "searchKey": "driver.i",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type i int64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype i int64\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#f",
-              "documentation": {
-                "identifier": "f",
-                "newPage": false,
-                "searchKey": "driver.f",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type f float64"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype f float64\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#b",
-              "documentation": {
-                "identifier": "b",
-                "newPage": false,
-                "searchKey": "driver.b",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type b bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype b bool\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#bs",
-              "documentation": {
-                "identifier": "bs",
-                "newPage": false,
-                "searchKey": "driver.bs",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type bs []byte"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype bs []byte\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#s",
-              "documentation": {
-                "identifier": "s",
-                "newPage": false,
-                "searchKey": "driver.s",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type s string"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype s string\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/database/sql/driver#t",
               "documentation": {
                 "identifier": "t",
                 "newPage": false,
                 "searchKey": "driver.t",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -1575,69 +1764,25 @@
           },
           {
             "node": {
-              "pathID": "/database/sql/driver#is",
+              "pathID": "/database/sql/driver#valueConverterTest",
               "documentation": {
-                "identifier": "is",
+                "identifier": "valueConverterTest",
                 "newPage": false,
-                "searchKey": "driver.is",
+                "searchKey": "driver.valueConverterTest",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "type is []int"
+                "value": "type valueConverterTest struct"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\ntype is []int\n```\n\n"
+                "value": "```Go\ntype valueConverterTest struct {\n\tc   ValueConverter\n\tin  interface{}\n\tout interface{}\n\terr string\n}\n```\n\n"
               },
               "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/database/sql/driver#dec",
-              "documentation": {
-                "identifier": "dec",
-                "newPage": false,
-                "searchKey": "driver.dec",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type dec struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype dec struct {\n\tform        byte\n\tneg         bool\n\tcoefficient [16]byte\n\texponent    int32\n}\n```\n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/database/sql/driver#dec.Decompose",
-                    "documentation": {
-                      "identifier": "dec.Decompose",
-                      "newPage": false,
-                      "searchKey": "driver.dec.Decompose",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (d dec) Decompose(buf []byte) (form byte, negative bool, coefficient []byte, exponent int32)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (d dec) Decompose(buf []byte) (form byte, negative bool, coefficient []byte, exponent int32)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
             }
           }
         ]
@@ -1650,7 +1795,9 @@
           "identifier": "func",
           "newPage": false,
           "searchKey": "",
-          "tags": []
+          "tags": [
+            "package"
+          ]
         },
         "label": {
           "kind": "plaintext",
@@ -1663,32 +1810,14 @@
         "children": [
           {
             "node": {
-              "pathID": "/database/sql/driver#IsValue",
-              "documentation": {
-                "identifier": "IsValue",
-                "newPage": false,
-                "searchKey": "driver.IsValue",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func IsValue(v interface{}) bool"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc IsValue(v interface{}) bool\n```\n\nIsValue reports whether v is a valid Value parameter type. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
               "pathID": "/database/sql/driver#IsScanValue",
               "documentation": {
                 "identifier": "IsScanValue",
                 "newPage": false,
                 "searchKey": "driver.IsScanValue",
-                "tags": null
+                "tags": [
+                  "method"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -1703,13 +1832,37 @@
           },
           {
             "node": {
+              "pathID": "/database/sql/driver#IsValue",
+              "documentation": {
+                "identifier": "IsValue",
+                "newPage": false,
+                "searchKey": "driver.IsValue",
+                "tags": [
+                  "method"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsValue(v interface{}) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsValue(v interface{}) bool\n```\n\nIsValue reports whether v is a valid Value parameter type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/database/sql/driver#TestValueConverters",
               "documentation": {
                 "identifier": "TestValueConverters",
                 "newPage": false,
                 "searchKey": "driver.TestValueConverters",
                 "tags": [
-                  "private"
+                  "method",
+                  "private",
+                  "test"
                 ]
               },
               "label": {

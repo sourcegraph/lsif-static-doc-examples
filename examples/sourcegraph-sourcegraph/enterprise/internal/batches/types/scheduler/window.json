@@ -5,6 +5,7 @@
     "newPage": true,
     "searchKey": "enterprise/internal/batches/types/scheduler/window",
     "tags": [
+      "package",
       "private"
     ]
   },
@@ -25,6 +26,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -39,22 +41,24 @@
         "children": [
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/window#ratePerSecond",
+              "pathID": "/enterprise/internal/batches/types/scheduler/window#ratePerHour",
               "documentation": {
-                "identifier": "ratePerSecond",
+                "identifier": "ratePerHour",
                 "newPage": false,
-                "searchKey": "window.ratePerSecond",
+                "searchKey": "window.ratePerHour",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const ratePerSecond"
+                "value": "const ratePerHour"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst ratePerSecond = iota\n```\n\n"
+                "value": "```Go\nconst ratePerHour\n```\n\n"
               },
               "children": null
             }
@@ -67,6 +71,8 @@
                 "newPage": false,
                 "searchKey": "window.ratePerMinute",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
@@ -83,22 +89,24 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/window#ratePerHour",
+              "pathID": "/enterprise/internal/batches/types/scheduler/window#ratePerSecond",
               "documentation": {
-                "identifier": "ratePerHour",
+                "identifier": "ratePerSecond",
                 "newPage": false,
-                "searchKey": "window.ratePerHour",
+                "searchKey": "window.ratePerSecond",
                 "tags": [
+                  "constant",
+                  "number",
                   "private"
                 ]
               },
               "label": {
                 "kind": "plaintext",
-                "value": "const ratePerHour"
+                "value": "const ratePerSecond"
               },
               "detail": {
                 "kind": "markdown",
-                "value": "```Go\nconst ratePerHour\n```\n\n"
+                "value": "```Go\nconst ratePerSecond = iota\n```\n\n"
               },
               "children": null
             }
@@ -114,6 +122,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -133,7 +142,10 @@
                 "identifier": "ErrZeroSchedule",
                 "newPage": false,
                 "searchKey": "window.ErrZeroSchedule",
-                "tags": null
+                "tags": [
+                  "variable",
+                  "interface"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -148,12 +160,39 @@
           },
           {
             "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/window#allWeekdays",
+              "documentation": {
+                "identifier": "allWeekdays",
+                "newPage": false,
+                "searchKey": "window.allWeekdays",
+                "tags": [
+                  "variable",
+                  "array",
+                  "number",
+                  "private"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var allWeekdays"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar allWeekdays = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/batches/types/scheduler/window#cmpAllowUnexported",
               "documentation": {
                 "identifier": "cmpAllowUnexported",
                 "newPage": false,
                 "searchKey": "window.cmpAllowUnexported",
                 "tags": [
+                  "variable",
+                  "interface",
                   "private"
                 ]
               },
@@ -176,6 +215,9 @@
                 "newPage": false,
                 "searchKey": "window.cmpOptions",
                 "tags": [
+                  "variable",
+                  "array",
+                  "interface",
                   "private"
                 ]
               },
@@ -186,28 +228,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nvar cmpOptions = cmp.Options{cmpAllowUnexported}\n```\n\nWe have a bunch of tests in here that rely on unexported fields in the window structs. Since we control all of this, we're going to provide a common set of options that will allow that. \n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/window#allWeekdays",
-              "documentation": {
-                "identifier": "allWeekdays",
-                "newPage": false,
-                "searchKey": "window.allWeekdays",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "var allWeekdays"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nvar allWeekdays = ...\n```\n\n"
               },
               "children": null
             }
@@ -223,6 +243,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -242,7 +263,9 @@
                 "identifier": "Configuration",
                 "newPage": false,
                 "searchKey": "window.Configuration",
-                "tags": null
+                "tags": [
+                  "struct"
+                ]
               },
               "label": {
                 "kind": "plaintext",
@@ -260,7 +283,9 @@
                       "identifier": "NewConfiguration",
                       "newPage": false,
                       "searchKey": "window.NewConfiguration",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -280,7 +305,9 @@
                       "identifier": "Configuration.Estimate",
                       "newPage": false,
                       "searchKey": "window.Configuration.Estimate",
-                      "tags": null
+                      "tags": [
+                        "method"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -300,7 +327,9 @@
                       "identifier": "Configuration.HasRolloutWindows",
                       "newPage": false,
                       "searchKey": "window.Configuration.HasRolloutWindows",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -320,7 +349,9 @@
                       "identifier": "Configuration.Schedule",
                       "newPage": false,
                       "searchKey": "window.Configuration.Schedule",
-                      "tags": null
+                      "tags": [
+                        "function"
+                      ]
                     },
                     "label": {
                       "kind": "plaintext",
@@ -335,12 +366,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/enterprise/internal/batches/types/scheduler/window#Configuration.scheduleAt",
+                    "documentation": {
+                      "identifier": "Configuration.scheduleAt",
+                      "newPage": false,
+                      "searchKey": "window.Configuration.scheduleAt",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (cfg *Configuration) scheduleAt(at time.Time) *Schedule"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (cfg *Configuration) scheduleAt(at time.Time) *Schedule\n```\n\nscheduleAt constructs a schedule that is valid at the given time. Note that scheduleAt does _not_ check if there are rollout windows configured at all: the caller must do this. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/enterprise/internal/batches/types/scheduler/window#Configuration.windowFor",
                     "documentation": {
                       "identifier": "Configuration.windowFor",
                       "newPage": false,
                       "searchKey": "window.Configuration.windowFor",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -354,25 +409,229 @@
                     },
                     "children": null
                   }
-                },
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/window#Schedule",
+              "documentation": {
+                "identifier": "Schedule",
+                "newPage": false,
+                "searchKey": "window.Schedule",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Schedule struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Schedule struct {\n\tlimiter ratelimit.Limiter\n\n\t// until really needs to contain a monotonic time, which means that care\n\t// must be taken to construct the schedule without a time zone in production\n\t// use. (Testing doesn't really matter.) time.Now() is OK.\n\tuntil time.Time\n\n\t// Fields we need to keep around for total calculation.\n\tduration time.Duration\n\trate     rate\n}\n```\n\nSchedule represents a single Schedule in time: for a certain amount of time, this particular rate limit will be in enforced. \n\n"
+              },
+              "children": [
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/batches/types/scheduler/window#Configuration.scheduleAt",
+                    "pathID": "/enterprise/internal/batches/types/scheduler/window#newSchedule",
                     "documentation": {
-                      "identifier": "Configuration.scheduleAt",
+                      "identifier": "newSchedule",
                       "newPage": false,
-                      "searchKey": "window.Configuration.scheduleAt",
+                      "searchKey": "window.newSchedule",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
                     "label": {
                       "kind": "plaintext",
-                      "value": "func (cfg *Configuration) scheduleAt(at time.Time) *Schedule"
+                      "value": "func newSchedule(base time.Time, d time.Duration, rate rate) *Schedule"
                     },
                     "detail": {
                       "kind": "markdown",
-                      "value": "```Go\nfunc (cfg *Configuration) scheduleAt(at time.Time) *Schedule\n```\n\nscheduleAt constructs a schedule that is valid at the given time. Note that scheduleAt does _not_ check if there are rollout windows configured at all: the caller must do this. \n\n"
+                      "value": "```Go\nfunc newSchedule(base time.Time, d time.Duration, rate rate) *Schedule\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/types/scheduler/window#Schedule.Take",
+                    "documentation": {
+                      "identifier": "Schedule.Take",
+                      "newPage": false,
+                      "searchKey": "window.Schedule.Take",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Schedule) Take() (time.Time, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Schedule) Take() (time.Time, error)\n```\n\nTake blocks until a scheduling event can occur, and returns the time the event occurred. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/types/scheduler/window#Schedule.ValidUntil",
+                    "documentation": {
+                      "identifier": "Schedule.ValidUntil",
+                      "newPage": false,
+                      "searchKey": "window.Schedule.ValidUntil",
+                      "tags": [
+                        "function"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Schedule) ValidUntil() time.Time"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Schedule) ValidUntil() time.Time\n```\n\nValidUntil returns the time the schedule is valid until. After that time, a new Schedule must be created and used. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/types/scheduler/window#Schedule.total",
+                    "documentation": {
+                      "identifier": "Schedule.total",
+                      "newPage": false,
+                      "searchKey": "window.Schedule.total",
+                      "tags": [
+                        "function",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Schedule) total() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Schedule) total() int\n```\n\ntotal returns the total number of events the schedule expects to be able to handle while valid. If the schedule does not apply any rate limiting, then this will be -1. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/window#Window",
+              "documentation": {
+                "identifier": "Window",
+                "newPage": false,
+                "searchKey": "window.Window",
+                "tags": [
+                  "struct"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Window struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Window struct {\n\tdays  weekdaySet\n\tstart *timeOfDay\n\tend   *timeOfDay\n\trate  rate\n}\n```\n\nWindow represents a single rollout window configured on a site. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/types/scheduler/window#parseWindow",
+                    "documentation": {
+                      "identifier": "parseWindow",
+                      "newPage": false,
+                      "searchKey": "window.parseWindow",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func parseWindow(raw *schema.BatchChangeRolloutWindow) (Window, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc parseWindow(raw *schema.BatchChangeRolloutWindow) (Window, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/types/scheduler/window#Window.IsOpen",
+                    "documentation": {
+                      "identifier": "Window.IsOpen",
+                      "newPage": false,
+                      "searchKey": "window.Window.IsOpen",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Window) IsOpen(at time.Time) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Window) IsOpen(at time.Time) bool\n```\n\nIsOpen checks if this window is currently open. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/types/scheduler/window#Window.NextOpenAfter",
+                    "documentation": {
+                      "identifier": "Window.NextOpenAfter",
+                      "newPage": false,
+                      "searchKey": "window.Window.NextOpenAfter",
+                      "tags": [
+                        "method"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Window) NextOpenAfter(after time.Time) time.Time"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Window) NextOpenAfter(after time.Time) time.Time\n```\n\nNextOpenAfter returns the time that this window will next be open. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/types/scheduler/window#Window.covers",
+                    "documentation": {
+                      "identifier": "Window.covers",
+                      "newPage": false,
+                      "searchKey": "window.Window.covers",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Window) covers(when timeOfDay) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Window) covers(when timeOfDay) bool\n```\n\n"
                     },
                     "children": null
                   }
@@ -388,6 +647,7 @@
                 "newPage": false,
                 "searchKey": "window.rate",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -408,6 +668,7 @@
                       "newPage": false,
                       "searchKey": "window.makeUnlimitedRate",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -430,6 +691,7 @@
                       "newPage": false,
                       "searchKey": "window.parseRate",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -452,6 +714,7 @@
                       "newPage": false,
                       "searchKey": "window.rate.IsUnlimited",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -477,6 +740,7 @@
                 "newPage": false,
                 "searchKey": "window.rateUnit",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -497,6 +761,7 @@
                       "newPage": false,
                       "searchKey": "window.parseRateUnit",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -519,6 +784,7 @@
                       "newPage": false,
                       "searchKey": "window.rateUnit.AsDuration",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -538,117 +804,13 @@
           },
           {
             "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/window#Schedule",
-              "documentation": {
-                "identifier": "Schedule",
-                "newPage": false,
-                "searchKey": "window.Schedule",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Schedule struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Schedule struct {\n\tlimiter ratelimit.Limiter\n\n\t// until really needs to contain a monotonic time, which means that care\n\t// must be taken to construct the schedule without a time zone in production\n\t// use. (Testing doesn't really matter.) time.Now() is OK.\n\tuntil time.Time\n\n\t// Fields we need to keep around for total calculation.\n\tduration time.Duration\n\trate     rate\n}\n```\n\nSchedule represents a single Schedule in time: for a certain amount of time, this particular rate limit will be in enforced. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/types/scheduler/window#newSchedule",
-                    "documentation": {
-                      "identifier": "newSchedule",
-                      "newPage": false,
-                      "searchKey": "window.newSchedule",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func newSchedule(base time.Time, d time.Duration, rate rate) *Schedule"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc newSchedule(base time.Time, d time.Duration, rate rate) *Schedule\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/types/scheduler/window#Schedule.Take",
-                    "documentation": {
-                      "identifier": "Schedule.Take",
-                      "newPage": false,
-                      "searchKey": "window.Schedule.Take",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Schedule) Take() (time.Time, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Schedule) Take() (time.Time, error)\n```\n\nTake blocks until a scheduling event can occur, and returns the time the event occurred. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/types/scheduler/window#Schedule.ValidUntil",
-                    "documentation": {
-                      "identifier": "Schedule.ValidUntil",
-                      "newPage": false,
-                      "searchKey": "window.Schedule.ValidUntil",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Schedule) ValidUntil() time.Time"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Schedule) ValidUntil() time.Time\n```\n\nValidUntil returns the time the schedule is valid until. After that time, a new Schedule must be created and used. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/types/scheduler/window#Schedule.total",
-                    "documentation": {
-                      "identifier": "Schedule.total",
-                      "newPage": false,
-                      "searchKey": "window.Schedule.total",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (s *Schedule) total() int"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (s *Schedule) total() int\n```\n\ntotal returns the total number of events the schedule expects to be able to handle while valid. If the schedule does not apply any rate limiting, then this will be -1. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
               "pathID": "/enterprise/internal/batches/types/scheduler/window#timeOfDay",
               "documentation": {
                 "identifier": "timeOfDay",
                 "newPage": false,
                 "searchKey": "window.timeOfDay",
                 "tags": [
+                  "struct",
                   "private"
                 ]
               },
@@ -663,12 +825,36 @@
               "children": [
                 {
                   "node": {
+                    "pathID": "/enterprise/internal/batches/types/scheduler/window#parseWindowTime",
+                    "documentation": {
+                      "identifier": "parseWindowTime",
+                      "newPage": false,
+                      "searchKey": "window.parseWindowTime",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func parseWindowTime(raw string) (*timeOfDay, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc parseWindowTime(raw string) (*timeOfDay, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/enterprise/internal/batches/types/scheduler/window#timeOfDayFromParts",
                     "documentation": {
                       "identifier": "timeOfDayFromParts",
                       "newPage": false,
                       "searchKey": "window.timeOfDayFromParts",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -691,6 +877,7 @@
                       "newPage": false,
                       "searchKey": "window.timeOfDayFromTime",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -707,34 +894,13 @@
                 },
                 {
                   "node": {
-                    "pathID": "/enterprise/internal/batches/types/scheduler/window#parseWindowTime",
-                    "documentation": {
-                      "identifier": "parseWindowTime",
-                      "newPage": false,
-                      "searchKey": "window.parseWindowTime",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func parseWindowTime(raw string) (*timeOfDay, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc parseWindowTime(raw string) (*timeOfDay, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
                     "pathID": "/enterprise/internal/batches/types/scheduler/window#timeOfDayPtr",
                     "documentation": {
                       "identifier": "timeOfDayPtr",
                       "newPage": false,
                       "searchKey": "window.timeOfDayPtr",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -751,12 +917,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/enterprise/internal/batches/types/scheduler/window#timeOfDay.Equal",
+                    "documentation": {
+                      "identifier": "timeOfDay.Equal",
+                      "newPage": false,
+                      "searchKey": "window.timeOfDay.Equal",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t timeOfDay) Equal(other timeOfDay) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t timeOfDay) Equal(other timeOfDay) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/enterprise/internal/batches/types/scheduler/window#timeOfDay.after",
                     "documentation": {
                       "identifier": "timeOfDay.after",
                       "newPage": false,
                       "searchKey": "window.timeOfDay.after",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -779,6 +969,7 @@
                       "newPage": false,
                       "searchKey": "window.timeOfDay.before",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -789,28 +980,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (t timeOfDay) before(other timeOfDay) bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/types/scheduler/window#timeOfDay.Equal",
-                    "documentation": {
-                      "identifier": "timeOfDay.Equal",
-                      "newPage": false,
-                      "searchKey": "window.timeOfDay.Equal",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (t timeOfDay) Equal(other timeOfDay) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (t timeOfDay) Equal(other timeOfDay) bool\n```\n\n"
                     },
                     "children": null
                   }
@@ -826,6 +995,7 @@
                 "newPage": false,
                 "searchKey": "window.weekdaySet",
                 "tags": [
+                  "number",
                   "private"
                 ]
               },
@@ -846,6 +1016,7 @@
                       "newPage": false,
                       "searchKey": "window.newWeekdaySet",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -868,6 +1039,7 @@
                       "newPage": false,
                       "searchKey": "window.weekdayToBit",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -884,12 +1056,36 @@
                 },
                 {
                   "node": {
+                    "pathID": "/enterprise/internal/batches/types/scheduler/window#weekdaySet.Equal",
+                    "documentation": {
+                      "identifier": "weekdaySet.Equal",
+                      "newPage": false,
+                      "searchKey": "window.weekdaySet.Equal",
+                      "tags": [
+                        "method",
+                        "private"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ws *weekdaySet) Equal(other *weekdaySet) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ws *weekdaySet) Equal(other *weekdaySet) bool\n```\n\nEqual is needed for test purposes, but not in normal use. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
                     "pathID": "/enterprise/internal/batches/types/scheduler/window#weekdaySet.add",
                     "documentation": {
                       "identifier": "weekdaySet.add",
                       "newPage": false,
                       "searchKey": "window.weekdaySet.add",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -912,6 +1108,7 @@
                       "newPage": false,
                       "searchKey": "window.weekdaySet.all",
                       "tags": [
+                        "function",
                         "private"
                       ]
                     },
@@ -934,6 +1131,7 @@
                       "newPage": false,
                       "searchKey": "window.weekdaySet.includes",
                       "tags": [
+                        "method",
                         "private"
                       ]
                     },
@@ -944,133 +1142,6 @@
                     "detail": {
                       "kind": "markdown",
                       "value": "```Go\nfunc (ws weekdaySet) includes(day time.Weekday) bool\n```\n\nincludes returns true if the given day is included in the weekdaySet. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/types/scheduler/window#weekdaySet.Equal",
-                    "documentation": {
-                      "identifier": "weekdaySet.Equal",
-                      "newPage": false,
-                      "searchKey": "window.weekdaySet.Equal",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (ws *weekdaySet) Equal(other *weekdaySet) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (ws *weekdaySet) Equal(other *weekdaySet) bool\n```\n\nEqual is needed for test purposes, but not in normal use. \n\n"
-                    },
-                    "children": null
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/window#Window",
-              "documentation": {
-                "identifier": "Window",
-                "newPage": false,
-                "searchKey": "window.Window",
-                "tags": null
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "type Window struct"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\ntype Window struct {\n\tdays  weekdaySet\n\tstart *timeOfDay\n\tend   *timeOfDay\n\trate  rate\n}\n```\n\nWindow represents a single rollout window configured on a site. \n\n"
-              },
-              "children": [
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/types/scheduler/window#parseWindow",
-                    "documentation": {
-                      "identifier": "parseWindow",
-                      "newPage": false,
-                      "searchKey": "window.parseWindow",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func parseWindow(raw *schema.BatchChangeRolloutWindow) (Window, error)"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc parseWindow(raw *schema.BatchChangeRolloutWindow) (Window, error)\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/types/scheduler/window#Window.covers",
-                    "documentation": {
-                      "identifier": "Window.covers",
-                      "newPage": false,
-                      "searchKey": "window.Window.covers",
-                      "tags": [
-                        "private"
-                      ]
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (w *Window) covers(when timeOfDay) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (w *Window) covers(when timeOfDay) bool\n```\n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/types/scheduler/window#Window.IsOpen",
-                    "documentation": {
-                      "identifier": "Window.IsOpen",
-                      "newPage": false,
-                      "searchKey": "window.Window.IsOpen",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (w *Window) IsOpen(at time.Time) bool"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (w *Window) IsOpen(at time.Time) bool\n```\n\nIsOpen checks if this window is currently open. \n\n"
-                    },
-                    "children": null
-                  }
-                },
-                {
-                  "node": {
-                    "pathID": "/enterprise/internal/batches/types/scheduler/window#Window.NextOpenAfter",
-                    "documentation": {
-                      "identifier": "Window.NextOpenAfter",
-                      "newPage": false,
-                      "searchKey": "window.Window.NextOpenAfter",
-                      "tags": null
-                    },
-                    "label": {
-                      "kind": "plaintext",
-                      "value": "func (w *Window) NextOpenAfter(after time.Time) time.Time"
-                    },
-                    "detail": {
-                      "kind": "markdown",
-                      "value": "```Go\nfunc (w *Window) NextOpenAfter(after time.Time) time.Time\n```\n\nNextOpenAfter returns the time that this window will next be open. \n\n"
                     },
                     "children": null
                   }
@@ -1089,6 +1160,7 @@
           "newPage": false,
           "searchKey": "",
           "tags": [
+            "package",
             "private"
           ]
         },
@@ -1103,12 +1175,469 @@
         "children": [
           {
             "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestConfiguration_Estimate",
+              "documentation": {
+                "identifier": "TestConfiguration_Estimate",
+                "newPage": false,
+                "searchKey": "window.TestConfiguration_Estimate",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestConfiguration_Estimate(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestConfiguration_Estimate(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestConfiguration_Schedule",
+              "documentation": {
+                "identifier": "TestConfiguration_Schedule",
+                "newPage": false,
+                "searchKey": "window.TestConfiguration_Schedule",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestConfiguration_Schedule(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestConfiguration_Schedule(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestConfiguration_currentFor",
+              "documentation": {
+                "identifier": "TestConfiguration_currentFor",
+                "newPage": false,
+                "searchKey": "window.TestConfiguration_currentFor",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestConfiguration_currentFor(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestConfiguration_currentFor(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestParseConfiguration",
+              "documentation": {
+                "identifier": "TestParseConfiguration",
+                "newPage": false,
+                "searchKey": "window.TestParseConfiguration",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseConfiguration(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseConfiguration(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestParseRate",
+              "documentation": {
+                "identifier": "TestParseRate",
+                "newPage": false,
+                "searchKey": "window.TestParseRate",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseRate(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseRate(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestParseRateUnit",
+              "documentation": {
+                "identifier": "TestParseRateUnit",
+                "newPage": false,
+                "searchKey": "window.TestParseRateUnit",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseRateUnit(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseRateUnit(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestParseWeekday",
+              "documentation": {
+                "identifier": "TestParseWeekday",
+                "newPage": false,
+                "searchKey": "window.TestParseWeekday",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseWeekday(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseWeekday(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestParseWindow",
+              "documentation": {
+                "identifier": "TestParseWindow",
+                "newPage": false,
+                "searchKey": "window.TestParseWindow",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseWindow(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseWindow(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestParseWindowTime",
+              "documentation": {
+                "identifier": "TestParseWindowTime",
+                "newPage": false,
+                "searchKey": "window.TestParseWindowTime",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseWindowTime(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseWindowTime(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestRateUnit_AsDuration",
+              "documentation": {
+                "identifier": "TestRateUnit_AsDuration",
+                "newPage": false,
+                "searchKey": "window.TestRateUnit_AsDuration",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRateUnit_AsDuration(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRateUnit_AsDuration(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestScheduleLimited",
+              "documentation": {
+                "identifier": "TestScheduleLimited",
+                "newPage": false,
+                "searchKey": "window.TestScheduleLimited",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScheduleLimited(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScheduleLimited(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestScheduleUnlimited",
+              "documentation": {
+                "identifier": "TestScheduleUnlimited",
+                "newPage": false,
+                "searchKey": "window.TestScheduleUnlimited",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScheduleUnlimited(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScheduleUnlimited(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestScheduleZero",
+              "documentation": {
+                "identifier": "TestScheduleZero",
+                "newPage": false,
+                "searchKey": "window.TestScheduleZero",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScheduleZero(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScheduleZero(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestTimeOfDay",
+              "documentation": {
+                "identifier": "TestTimeOfDay",
+                "newPage": false,
+                "searchKey": "window.TestTimeOfDay",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTimeOfDay(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTimeOfDay(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestWeekdayBitSanity",
+              "documentation": {
+                "identifier": "TestWeekdayBitSanity",
+                "newPage": false,
+                "searchKey": "window.TestWeekdayBitSanity",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWeekdayBitSanity(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWeekdayBitSanity(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestWeekday_All",
+              "documentation": {
+                "identifier": "TestWeekday_All",
+                "newPage": false,
+                "searchKey": "window.TestWeekday_All",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWeekday_All(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWeekday_All(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestWeekday_Includes",
+              "documentation": {
+                "identifier": "TestWeekday_Includes",
+                "newPage": false,
+                "searchKey": "window.TestWeekday_Includes",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWeekday_Includes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWeekday_Includes(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestWindow_IsOpen",
+              "documentation": {
+                "identifier": "TestWindow_IsOpen",
+                "newPage": false,
+                "searchKey": "window.TestWindow_IsOpen",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWindow_IsOpen(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWindow_IsOpen(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestWindow_NextOpenAfter",
+              "documentation": {
+                "identifier": "TestWindow_NextOpenAfter",
+                "newPage": false,
+                "searchKey": "window.TestWindow_NextOpenAfter",
+                "tags": [
+                  "method",
+                  "private",
+                  "test"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWindow_NextOpenAfter(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWindow_NextOpenAfter(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
               "pathID": "/enterprise/internal/batches/types/scheduler/window#parseConfiguration",
               "documentation": {
                 "identifier": "parseConfiguration",
                 "newPage": false,
                 "searchKey": "window.parseConfiguration",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1131,6 +1660,7 @@
                 "newPage": false,
                 "searchKey": "window.parseTimePart",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1153,6 +1683,7 @@
                 "newPage": false,
                 "searchKey": "window.parseWeekday",
                 "tags": [
+                  "method",
                   "private"
                 ]
               },
@@ -1163,424 +1694,6 @@
               "detail": {
                 "kind": "markdown",
                 "value": "```Go\nfunc parseWeekday(raw string) (time.Weekday, error)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestConfiguration_Estimate",
-              "documentation": {
-                "identifier": "TestConfiguration_Estimate",
-                "newPage": false,
-                "searchKey": "window.TestConfiguration_Estimate",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestConfiguration_Estimate(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestConfiguration_Estimate(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestConfiguration_Schedule",
-              "documentation": {
-                "identifier": "TestConfiguration_Schedule",
-                "newPage": false,
-                "searchKey": "window.TestConfiguration_Schedule",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestConfiguration_Schedule(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestConfiguration_Schedule(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestConfiguration_currentFor",
-              "documentation": {
-                "identifier": "TestConfiguration_currentFor",
-                "newPage": false,
-                "searchKey": "window.TestConfiguration_currentFor",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestConfiguration_currentFor(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestConfiguration_currentFor(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestParseConfiguration",
-              "documentation": {
-                "identifier": "TestParseConfiguration",
-                "newPage": false,
-                "searchKey": "window.TestParseConfiguration",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestParseConfiguration(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestParseConfiguration(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestParseRateUnit",
-              "documentation": {
-                "identifier": "TestParseRateUnit",
-                "newPage": false,
-                "searchKey": "window.TestParseRateUnit",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestParseRateUnit(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestParseRateUnit(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestParseRate",
-              "documentation": {
-                "identifier": "TestParseRate",
-                "newPage": false,
-                "searchKey": "window.TestParseRate",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestParseRate(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestParseRate(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestRateUnit_AsDuration",
-              "documentation": {
-                "identifier": "TestRateUnit_AsDuration",
-                "newPage": false,
-                "searchKey": "window.TestRateUnit_AsDuration",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestRateUnit_AsDuration(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestRateUnit_AsDuration(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestScheduleLimited",
-              "documentation": {
-                "identifier": "TestScheduleLimited",
-                "newPage": false,
-                "searchKey": "window.TestScheduleLimited",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestScheduleLimited(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestScheduleLimited(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestScheduleUnlimited",
-              "documentation": {
-                "identifier": "TestScheduleUnlimited",
-                "newPage": false,
-                "searchKey": "window.TestScheduleUnlimited",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestScheduleUnlimited(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestScheduleUnlimited(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestScheduleZero",
-              "documentation": {
-                "identifier": "TestScheduleZero",
-                "newPage": false,
-                "searchKey": "window.TestScheduleZero",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestScheduleZero(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestScheduleZero(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestTimeOfDay",
-              "documentation": {
-                "identifier": "TestTimeOfDay",
-                "newPage": false,
-                "searchKey": "window.TestTimeOfDay",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestTimeOfDay(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestTimeOfDay(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestWeekday_All",
-              "documentation": {
-                "identifier": "TestWeekday_All",
-                "newPage": false,
-                "searchKey": "window.TestWeekday_All",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestWeekday_All(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestWeekday_All(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestWeekday_Includes",
-              "documentation": {
-                "identifier": "TestWeekday_Includes",
-                "newPage": false,
-                "searchKey": "window.TestWeekday_Includes",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestWeekday_Includes(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestWeekday_Includes(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestWeekdayBitSanity",
-              "documentation": {
-                "identifier": "TestWeekdayBitSanity",
-                "newPage": false,
-                "searchKey": "window.TestWeekdayBitSanity",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestWeekdayBitSanity(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestWeekdayBitSanity(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestWindow_IsOpen",
-              "documentation": {
-                "identifier": "TestWindow_IsOpen",
-                "newPage": false,
-                "searchKey": "window.TestWindow_IsOpen",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestWindow_IsOpen(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestWindow_IsOpen(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestWindow_NextOpenAfter",
-              "documentation": {
-                "identifier": "TestWindow_NextOpenAfter",
-                "newPage": false,
-                "searchKey": "window.TestWindow_NextOpenAfter",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestWindow_NextOpenAfter(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestWindow_NextOpenAfter(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestParseWindowTime",
-              "documentation": {
-                "identifier": "TestParseWindowTime",
-                "newPage": false,
-                "searchKey": "window.TestParseWindowTime",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestParseWindowTime(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestParseWindowTime(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestParseWeekday",
-              "documentation": {
-                "identifier": "TestParseWeekday",
-                "newPage": false,
-                "searchKey": "window.TestParseWeekday",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestParseWeekday(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestParseWeekday(t *testing.T)\n```\n\n"
-              },
-              "children": null
-            }
-          },
-          {
-            "node": {
-              "pathID": "/enterprise/internal/batches/types/scheduler/window#TestParseWindow",
-              "documentation": {
-                "identifier": "TestParseWindow",
-                "newPage": false,
-                "searchKey": "window.TestParseWindow",
-                "tags": [
-                  "private"
-                ]
-              },
-              "label": {
-                "kind": "plaintext",
-                "value": "func TestParseWindow(t *testing.T)"
-              },
-              "detail": {
-                "kind": "markdown",
-                "value": "```Go\nfunc TestParseWindow(t *testing.T)\n```\n\n"
               },
               "children": null
             }
